@@ -1,18 +1,19 @@
-# $NetBSD: options.mk,v 1.9 2008/10/24 11:35:28 hira Exp $
+# $NetBSD: options.mk,v 1.10 2008/10/25 15:18:17 hira Exp $
+#
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox firefox3 seamonkey
 # The list from completelangiso in solenv/inc/postset.mk.
-OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
-				cs cy da de dz el en-GB en-US en-ZA eo es et \
-				eu fa fi fr ga gl gu-IN he hi-IN hr hu it ja \
-				ka km kn ko ku lo lt lv mk ms ml-IN mr-IN ne \
-				nb nl nn nr ns oc or-IN pa-IN pl pt pt-BR ru \
-				rw sk sl sh sr ss st sv sw sw-TZ te-IN ti-ER \
-				ta-IN th tn tr ts tg ur-IN uk uz ve vi xh    \
-				zh-CN zh-TW zu
+OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs by \
+				ca cs cy da de dz el en-GB en-US en-ZA eo es \
+				et eu fa fi fr ga gd gl gu gu-IN he hi-IN hr \
+				hu it ja ka km kn ko ku lo lt lv mk mn ms    \
+				ml-IN mr-IN my ne nb nl nn nr ns oc or-IN    \
+				pa-IN pl pt pt-BR ru rw sk sl sh sr ss st sv \
+				sw sw-TZ te-IN ti-ER ta-IN th tn tr ts tg    \
+				ur-IN uk uz ve vi xh zh-CN zh-TW zu all
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
@@ -22,10 +23,26 @@ PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.for l in ${PKG_OPTIONS:Mlang-*}
-OO_LANGS+=	${l:S/^lang-//1}
-.endfor
+.if !empty(PKG_OPTIONS:Mlang-all)
+OO_LANGS=	ALL
+OO_BASELANG=	en-US
+OO_LANGPACKS=	${OO_SUPPORTED_LANGUAGES:S/en-US//1:S/all//1}
+.else
+.  for _l in ${PKG_OPTIONS:Mlang-*:S/lang-//g}
+OO_LANGS+=	${_l}
+OO_BASELANG?=	${_l}	# Get first one.
+.  endfor
+.endif
 OO_LANGS?=	en-US
+OO_BASELANG?=	en-US
+OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
+
+SUBST_CLASSES+=		instset
+SUBST_STAGE.instset=	post-patch
+SUBST_MESSAGE.instset=	Reduce OOo install sets.
+SUBST_FILES.instset=	instsetoo_native/util/makefile.mk
+SUBST_SED.instset+=	-e 's,@BASELANG@,${OO_BASELANG},g'
+SUBST_SED.instset+=	-e 's,@LANGPACKS@,${OO_LANGPACKS},g'
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 MOZ_FLAVOUR=		firefox

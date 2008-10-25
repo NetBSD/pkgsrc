@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/10/24 19:41:28 hira Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/25 15:18:17 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -88,6 +88,8 @@ CONFIGURE_ARGS+=	--enable-binfilter
 CONFIGURE_ARGS+=	--enable-cairo
 CONFIGURE_ARGS+=	--disable-systray
 CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--disable-odk
+CONFIGURE_ARGS+=	--disable-gcjaot
 CONFIGURE_ARGS+=	--with-system-stdlibs
 CONFIGURE_ARGS+=	--with-system-cairo
 CONFIGURE_ARGS+=	--with-system-curl
@@ -116,11 +118,7 @@ OO_EXTENSIONS+=		presenter/presenter-screen.oxt
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
 
-# Disable odk, gcjaot.
-CONFIGURE_ARGS+=	--disable-odk --disable-gcjaot
-
-# NOTE: In this version, this value should be separated by space (comma
-#       causes build error).
+# Language option.
 CONFIGURE_ARGS+=	--with-lang=${OO_LANGS:Q}
 
 .include "options.mk"
@@ -130,6 +128,7 @@ UNLIMIT_RESOURCES+=	datasize
 OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
+PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
 MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications	\
@@ -137,6 +136,7 @@ INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications	\
 
 OO_UNXNAME=	openoffice.org3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
+OO_LANGPACKPATH=${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice_languagepack/portable/install
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
 OO_PREFIX=	${DESTDIR}${PREFIX}/lib/${OO_RELEASE}
 
@@ -147,22 +147,10 @@ post-extract:
 	cp -Rp gcc3_freebsd_x86-64 gcc3_netbsd_x86-64
 
 do-build:
-	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules; build.pl -P${MAKE_JOBS:U1} --all product=full"
+	@${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c	\
+	"cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules && build.pl -P${MAKE_JOBS:U1} --all product=full && cd util && dmake ooolanguagepack"
 
 post-build:
-	cd ${WRKDIR} &&						\
-	rm -fr opt &&						\
-	for l in ${OO_LANGS}; do				\
-		for f in ${OO_PKGPATH:Q}/$${l}/*/*.sw; do	\
-			tar xpfk $$f;				\
-		done;						\
-	done
-	cd ${WRKDIR} &&						\
-	rm -fr xdg &&						\
-	mv opt/${OO_UNXNAME}/share/xdg .
-	cd ${WRKDIR}/opt/openoffice.org &&			\
-	chmod ${SHAREMODE} basis3.0/program/hid.lst		\
-			   basis3.0/program/testtoolrc
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
 	${ECHO} "exec ${OO_PREFIX}/${OO_UNXNAME}/program/soffice \"\$$@\"" \
 		>> ${WRKDIR}/${OO_UNXNAME}
@@ -171,15 +159,26 @@ post-build:
 		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
-	cd ${WRKDIR}/opt &&						\
-	tar cf - openoffice.org ${OO_UNXNAME} | tar Cxpf ${OO_PREFIX} -
+	cd ${OO_PREFIX} &&					\
+	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
+		tar xpf $$f;					\
+	done;			 				\
+	for lang in ${OO_LANGPACKS}; do				\
+		for f in ${OO_LANGPACKPATH:Q}/$$lang/*/*.sw; do	\
+			tar xpf $$f;				\
+		done;						\
+	done
+	for d in ${OO_PREFIX}/${OO_UNXNAME}/share/xdg/*; do		\
+		ln -s $$d ${DESTDIR}${PREFIX}/share/applications;	\
+	done
+	cd ${OO_PREFIX}/${OO_UNXNAME}/basis-link/program &&	\
+	chmod ${SHAREMODE} hid.lst testtoolrc
 	for f in ${OO_PROGRAMS}; do				\
 		ln -sf ${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;		\
 	done
 	cd ${WRKDIR}/${OO_TAG}/solver/300/${OPENOFFICE_OUTPATH}.pro/bin &&  \
 	${INSTALL_DATA}	${OO_EXTENSIONS} ${OO_PREFIX}/extensions
-	${INSTALL_DATA} ${WRKDIR}/xdg/* ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
 		${DESTDIR}${PREFIX}/bin
@@ -190,8 +189,6 @@ post-install:
 	sort > ${WRKDIR}/PLIST &&				\
 	find lib/${OO_RELEASE} -type d -print | sort -r |	\
 	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
-	${ECHO} bin/${OO_UNXNAME} >> ${WRKDIR}/PLIST
-	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${WRKDIR}/PLIST
 
 # OS specific Makefile
 .if exists(Makefile.${OPSYS})
