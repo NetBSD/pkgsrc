@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/25 10:26:43 adrianp Exp $
 
-DISTNAME=	syslog-ng-1.6.11
-PKGREVISION=	1
+DISTNAME=	syslog-ng-1.6.12
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.balabit.com/downloads/syslog-ng/1.6/src/
+MASTER_SITES=	http://www.balabit.com/downloads/files/syslog-ng/sources/1.6/src/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
@@ -31,6 +30,10 @@ SUBST_MESSAGE.conf=	Fixing configuration file paths.
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../sysutils/libol/buildlink3.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-full-dynamic
+.endif
 
 BUILDLINK_API_DEPENDS.libol+=	libol>=0.3.0
 
