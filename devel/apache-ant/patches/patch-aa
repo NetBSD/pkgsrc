@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/09/03 22:59:25 tonio Exp $
+$NetBSD: patch-aa,v 1.2 2008/10/25 17:43:33 adrianp Exp $
 
 --- bin/ant.orig	2005-05-19 14:37:16.000000000 +0200
 +++ bin/ant	2005-05-25 14:38:03.000000000 +0200
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1 2005/09/03 22:59:25 tonio Exp $
 +ANT_LIB="${ANT_HOME}/lib/java/ant"
 +
 +# use ${PREFIX}/bin/java (wrapper)
-+if [ "$JAVACMD" = "" ] ; then
++if [ "$JAVACMD" = "" ]  && [ -f @PREFIX@/bin/java ] ; then
 +  JAVACMD=@PREFIX@/bin/java
 +fi
  
