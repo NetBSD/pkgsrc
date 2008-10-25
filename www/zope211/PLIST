@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/20 02:14:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/25 16:21:30 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -397,6 +397,8 @@ ${ZOPE_BASE}/lib/python/BTrees/tests/testBTreesUnicode.py
 ${ZOPE_BASE}/lib/python/BTrees/tests/testBTreesUnicode.pyc
 ${ZOPE_BASE}/lib/python/BTrees/tests/testConflict.py
 ${ZOPE_BASE}/lib/python/BTrees/tests/testConflict.pyc
+${ZOPE_BASE}/lib/python/BTrees/tests/testLength.py
+${ZOPE_BASE}/lib/python/BTrees/tests/testLength.pyc
 ${ZOPE_BASE}/lib/python/BTrees/tests/testSetOps.py
 ${ZOPE_BASE}/lib/python/BTrees/tests/testSetOps.pyc
 ${ZOPE_BASE}/lib/python/BTrees/tests/test_btreesubclass.py
@@ -1731,6 +1733,8 @@ ${ZOPE_BASE}/lib/python/Products/PythonScripts/help/standard.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/help/standard.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/module_access_examples.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/module_access_examples.pyc
+${ZOPE_BASE}/lib/python/Products/PythonScripts/patches.py
+${ZOPE_BASE}/lib/python/Products/PythonScripts/patches.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/standard.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/standard.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/tests/__init__.py
@@ -2841,6 +2845,7 @@ ${ZOPE_BASE}/lib/python/ZEO/tests/deadlock.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/deadlock.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/forker.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/forker.pyc
+${ZOPE_BASE}/lib/python/ZEO/tests/invalidations_while_connecting.test
 ${ZOPE_BASE}/lib/python/ZEO/tests/multi.py
 ${ZOPE_BASE}/lib/python/ZEO/tests/multi.pyc
 ${ZOPE_BASE}/lib/python/ZEO/tests/registerDB.test
@@ -2990,6 +2995,8 @@ ${ZOPE_BASE}/lib/python/ZODB/scripts/manual_tests/testzeopack.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/manual_tests/testzeopack.pyc
 ${ZOPE_BASE}/lib/python/ZODB/scripts/migrate.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/migrate.pyc
+${ZOPE_BASE}/lib/python/ZODB/scripts/migrateblobs.py
+${ZOPE_BASE}/lib/python/ZODB/scripts/migrateblobs.pyc
 ${ZOPE_BASE}/lib/python/ZODB/scripts/netspace.py
 ${ZOPE_BASE}/lib/python/ZODB/scripts/netspace.pyc
 ${ZOPE_BASE}/lib/python/ZODB/scripts/referrers.py
@@ -3053,6 +3060,7 @@ ${ZOPE_BASE}/lib/python/ZODB/tests/blob_basic.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_connection.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_consume.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_importexport.txt
+${ZOPE_BASE}/lib/python/ZODB/tests/blob_layout.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_packing.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_tempdir.txt
 ${ZOPE_BASE}/lib/python/ZODB/tests/blob_transaction.txt
