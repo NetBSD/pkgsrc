@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2008/05/25 21:42:21 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/10/25 17:43:33 adrianp Exp $
 #
 
 DISTNAME=	apache-ant-1.7.0
+PKGREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=ant/binaries/}
 EXTRACT_SUFX=	.tar.bz2
