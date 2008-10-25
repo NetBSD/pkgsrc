@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/09/18 00:11:30 obache Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/25 06:12:06 obache Exp $
 #
 
-DISTNAME=	x11vnc-0.9.4
+DISTNAME=	x11vnc-0.9.5
 CATEGORIES=	x11 net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 
@@ -21,23 +21,12 @@ SUBST_STAGE.pthread=	pre-configure
 SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's|-lpthread||g'
 
-SUBST_CLASSES+=		libvnc
-SUBST_STAGE.libvnc=	post-configure
-SUBST_FILES.libvnc=	Makefile
-SUBST_SED.libvnc=	-e 's|libvncserver||g'
-SUBST_SED.libvnc+=	-e 's|libvncclient||g'
+.include "options.mk"
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+BUILD_DIRS=	x11vnc
+INSTALL_DIRS=	x11vnc classes
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
-.include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

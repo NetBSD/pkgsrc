@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2008/09/18 00:11:30 obache Exp $
+$NetBSD: distinfo,v 1.11 2008/10/25 06:12:06 obache Exp $
 
-SHA1 (x11vnc-0.9.4.tar.gz) = 142b6af81dee5825c993b25cfe1ed7aa7e515b0d
-RMD160 (x11vnc-0.9.4.tar.gz) = 398c2e789d164cc69f209cbe35f0f4b1efc845b6
-Size (x11vnc-0.9.4.tar.gz) = 2346158 bytes
+SHA1 (x11vnc-0.9.5.tar.gz) = 236f7b3ba6a33422cf7593de7d7843c233143129
+RMD160 (x11vnc-0.9.5.tar.gz) = ba225af1b003c4c258a0fabad5d5c792e2149770
+Size (x11vnc-0.9.5.tar.gz) = 2413415 bytes
