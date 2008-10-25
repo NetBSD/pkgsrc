@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.63 2008/07/14 22:19:11 dsainty Exp $
+$NetBSD: distinfo,v 1.64 2008/10/25 12:03:35 adrianp Exp $
 
 SHA1 (openssl-0.9.8h.tar.gz) = ced4f2da24a202e01ea22bef30ebc8aee274de86
 RMD160 (openssl-0.9.8h.tar.gz) = 676337da20c3fc3fc4001a79c6d28589cba719cd
@@ -11,3 +11,4 @@ SHA1 (patch-af) = 3c1a88329b1a1c54bdd4624ceaf723af3749ec32
 SHA1 (patch-ag) = 5f12c72b85e4b6c6a79dfcf87055e9e029fbd8c8
 SHA1 (patch-ak) = 049250b9bd42e6f155145703135dab39a7ec17e0
 SHA1 (patch-al) = 076a606352bdeaeea1cc64f16be2ac1325882302
+SHA1 (patch-am) = a2ba07bf35d53b096b3524b2d10ae26eef755da0
