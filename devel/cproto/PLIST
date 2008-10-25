@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/25 06:15:38 bjs Exp $
+bin/cproto
+man/man1/cproto.1
