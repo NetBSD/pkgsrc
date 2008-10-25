@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2658 2008/10/25 11:25:35 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2659 2008/10/25 12:03:53 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4548,3 +4548,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/deskbar-applet to 2.24.1 [wiz 2008-10-25]
 	Updated www/epiphany to 2.24.1 [wiz 2008-10-25]
 	Updated www/epiphany-extensions to 2.24.1 [wiz 2008-10-25]
+	Updated security/openssl to 0.9.8hnb2 [adrianp 2008-10-25]
