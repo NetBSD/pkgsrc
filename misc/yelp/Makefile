@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.77 2008/08/27 09:56:34 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2008/10/25 02:09:37 wiz Exp $
 #
 
-DISTNAME=		yelp-2.22.1
-PKGREVISION=	1
+DISTNAME=		yelp-2.24.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -27,7 +26,7 @@ GCONF_SCHEMAS=		yelp.schemas
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.14.0
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.14.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
