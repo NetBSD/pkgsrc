@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2639 2008/10/25 00:34:41 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2640 2008/10/25 00:36:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4529,3 +4529,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/eog to 2.24.1 [wiz 2008-10-25]
 	Updated archivers/file-roller to 2.24.1 [wiz 2008-10-25]
 	Added devel/libatomic_ops version 20081024 [bjs 2008-10-25]
+	Updated x11/fast-user-switch-applet to 2.24.0 [wiz 2008-10-25]
