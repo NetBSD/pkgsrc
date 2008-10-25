@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2008/09/11 10:26:41 adam Exp $
+# $NetBSD: Makefile,v 1.75 2008/10/25 08:26:12 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -13,7 +13,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	3.0.2
+OCTAVE_VER=	3.0.3
 CONFLICTS+=	octave-2.*
 
 .if (${MACHINE_ARCH} == "arm32")
