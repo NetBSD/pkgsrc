@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7621 2008/10/25 18:22:31 adrianp Exp $
+$NetBSD: TODO,v 1.7622 2008/10/25 18:36:06 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -1250,7 +1250,6 @@ Suggested package updates
 	o smtpfeed-1.20
 	o snd-10.1
 	o snes9x-1.51
-	o snort-2.8.3.1
 	o snownews-1.5.10
 	o solfege-3.10.4 [schmonz]
 	o sope-4.5.9
