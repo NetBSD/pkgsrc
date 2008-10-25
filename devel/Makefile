@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1045 2008/10/22 18:42:42 seb Exp $
+# $NetBSD: Makefile,v 1.1046 2008/10/25 00:32:42 bjs Exp $
 #
 
 COMMENT=	Development utilities
@@ -257,6 +257,7 @@ SUBDIR+=	libFoundation
 SUBDIR+=	libarena
 SUBDIR+=	libargparse
 SUBDIR+=	libast
+SUBDIR+=	libatomic_ops
 SUBDIR+=	libaura
 SUBDIR+=	libbegemot
 SUBDIR+=	libbinio
