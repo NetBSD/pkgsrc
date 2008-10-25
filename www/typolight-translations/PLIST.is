@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.is,v 1.2 2008/09/23 06:52:11 taca Exp $
+@comment $NetBSD: PLIST.is,v 1.3 2008/10/25 17:00:16 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/is/.htaccess
-${TL_WEBDIR}/system/modules/backend/languages/is/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/is/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/explain.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/languages.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/modules.php
@@ -21,10 +21,10 @@ ${TL_WEBDIR}/system/modules/backend/languages/is/tl_page.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_settings.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_style.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/is/tl_task.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_undo.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_user.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/tl_user_group.php
-${TL_WEBDIR}/system/modules/backend/languages/is/tl_task.php
 ${TL_WEBDIR}/system/modules/calendar/languages/is/.htaccess
 ${TL_WEBDIR}/system/modules/calendar/languages/is/default.php
 ${TL_WEBDIR}/system/modules/calendar/languages/is/modules.php
@@ -64,11 +64,11 @@ ${TL_WEBDIR}/system/modules/news/languages/is/tl_user_group.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/.htaccess
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/default.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_member.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_module.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_newsletter.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_newsletter_channel.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_newsletter_recipients.php
-${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_member.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_user.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/is/tl_user_group.php
 ${TL_WEBDIR}/system/modules/pun_bridge/languages/is/.htaccess
