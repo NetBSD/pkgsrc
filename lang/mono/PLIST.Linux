@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2008/10/25 05:27:58 kefren Exp $
+lib/libmono-profiler-logging.la
