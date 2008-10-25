@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2008/10/12 12:50:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/25 15:59:27 adrianp Exp $
 
 DISTNAME=	modsecurity-apache_2.5.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
+PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://www.modsecurity.org/download/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
+
+PKG_APACHE_ACCEPTED=	apache2 apache22
 
 .include "../../mk/apache.mk"
 .include "options.mk"
@@ -23,7 +26,6 @@ CONFIGURE_ARGS+=	--with-apr=${PREFIX}
 CONFIGURE_ARGS+=	--with-apu=${PREFIX}
 CONFIGURE_ARGS+=        --with-libxml=${PREFIX}
 
-PKG_APACHE_ACCEPTED=	apache2
 EGDIR=			${PREFIX}/share/examples/ap-modsecurity
 CONF_FILES=		${EGDIR}/modsecurity.conf-minimal \
 			${PKG_SYSCONFDIR}/httpd/modsecurity.conf
