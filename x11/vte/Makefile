@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2008/10/24 20:23:50 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2008/10/25 12:23:09 obache Exp $
 #
 
 DISTNAME=	vte-0.17.4
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.2
 USE_PKGLOCALEDIR=	yes
