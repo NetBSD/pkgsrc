@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2008/06/12 02:14:55 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2008/10/25 11:25:20 wiz Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.22.2
+DISTNAME=	epiphany-extensions-2.24.1
 CATEGORIES=	www gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -27,10 +27,9 @@ GCONF_SCHEMAS=		smart-bookmarks.schemas
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
-
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
