@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/25 00:32:23 bjs Exp $
+
+SHA1 (libatomic_ops-20081024.tar.gz) = 5180706e5f337738550b9782e175fd61937a81d6
+RMD160 (libatomic_ops-20081024.tar.gz) = 7c313b975d61632aa72594a9d060c66f7ed5afc5
+Size (libatomic_ops-20081024.tar.gz) = 193424 bytes
+SHA1 (patch-aa) = bf53ad892ba270b1d7a9bd1fa14012ca83ab5323
