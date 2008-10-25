@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2647 2008/10/25 02:10:00 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2648 2008/10/25 02:16:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4537,3 +4537,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/gnome-games to 2.24.1 [wiz 2008-10-25]
 	Updated x11/gnome-mag to 0.15.4 [wiz 2008-10-25]
 	Updated misc/yelp to 2.24.0 [wiz 2008-10-25]
+	Updated devel/libgail-gnome to 1.20.1 [wiz 2008-10-25]
