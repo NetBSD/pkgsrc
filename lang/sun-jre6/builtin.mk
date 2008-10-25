@@ -1,11 +1,11 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/24 23:19:04 adrianp Exp $
+# $NetBSD: builtin.mk,v 1.3 2008/10/25 18:05:03 adrianp Exp $
 
 BUILTIN_PKG:=	sun-jre6
 
 BUILTIN_FIND_FILES_VAR:=	JAVAVM6
 BUILTIN_FIND_FILES.JAVAVM6=	\
 	/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home \
-	/usr/jdk/instances/jdk1.6.0
+	/usr/jdk/instances/jdk1.6.0/jre
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
