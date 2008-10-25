@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2653 2008/10/25 08:27:37 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2654 2008/10/25 10:20:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4543,3 +4543,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/cproto version 4.7f [bjs 2008-10-25]
 	Updated lang/mono to 2.0.1 [kefren 2008-10-25]
 	Updated math/octave to 3.0.3 [adam 2008-10-25]
+	Updated misc/gnome-utils to 2.24.1 [wiz 2008-10-25]
