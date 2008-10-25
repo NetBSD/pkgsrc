@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2636 2008/10/25 00:12:14 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2637 2008/10/25 00:23:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4526,3 +4526,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/libspf2 to 1.2.8 [adrianp 2008-10-24]
 	Updated print/evince to 2.24.1 [wiz 2008-10-25]
 	Updated print/evince-nautilus to 2.24.1 [wiz 2008-10-25]
+	Updated graphics/eog to 2.24.1 [wiz 2008-10-25]
