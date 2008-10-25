@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2665 2008/10/25 17:43:50 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2666 2008/10/25 18:17:01 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4557,3 +4557,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/evolution-data-server to 2.24.1 [wiz 2008-10-25]
 	Updated www/typolight-translations to 20081025 [taca 2008-10-25]
 	Updated devel/apache-ant to 1.7.0nb1 [adrianp 2008-10-25]
+	Updated devel/ptlib to 2.4.2 [jmcneill 2008-10-25]
+	Updated devel/opal to 3.4.2 [jmcneill 2008-10-25]
+	Updated net/ekiga to 3.0.1 [jmcneill 2008-10-25]
