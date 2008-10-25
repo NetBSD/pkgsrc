@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2669 2008/10/25 18:59:05 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2670 2008/10/25 20:24:23 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4563,3 +4563,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/socat to 1.7.0.0 [adrianp 2008-10-25]
 	Updated net/snort to 2.8.3.1 [adrianp 2008-10-25]
 	Updated shells/mksh to 36 [ahoka 2008-10-25]
+	Added finance/p5-Algorithm-LUHN version 1.00 [abs 2008-10-25]
