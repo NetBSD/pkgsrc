@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2663 2008/10/25 16:38:38 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2664 2008/10/25 17:01:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4555,3 +4555,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/zope210 to 2.10.7 [taca 2008-10-25]
 	Updated www/zope211 to 2.11.2 [taca 2008-10-25]
 	Updated mail/evolution-data-server to 2.24.1 [wiz 2008-10-25]
+	Updated www/typolight-translations to 20081025 [taca 2008-10-25]
