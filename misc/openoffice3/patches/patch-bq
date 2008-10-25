@@ -1,18 +1,86 @@
-$NetBSD: patch-bq,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-bq,v 1.2 2008/10/25 15:18:17 hira Exp $
 
---- instsetoo_native/util/makefile.mk.orig	2008-07-26 06:07:21.000000000 +0900
-+++ instsetoo_native/util/makefile.mk	2008-07-26 06:08:22.000000000 +0900
-@@ -54,6 +54,9 @@
+--- instsetoo_native/util/makefile.mk.orig	2008-07-30 22:30:16.000000000 +0900
++++ instsetoo_native/util/makefile.mk	2008-10-26 06:58:43.000000000 +0900
+@@ -54,6 +54,12 @@
  ENABLE_DOWNLOADSETS=TRUE
  .ENDIF			# "$(FORCE_DOWNLOADSETS)"!=""
  
 +# Don't create download set with pkgsrc.
 +ENABLE_DOWNLOADSETS=
 +
++BASELANG=	@BASELANG@
++LANGPACKS=	@LANGPACKS@
++
  .EXPORT: ENABLE_DOWNLOADSETS
  .EXPORT: LAST_MINOR
  .EXPORT: PRJ
-@@ -383,10 +386,10 @@
+@@ -135,13 +141,13 @@
+ 
+ .IF "$(alllangiso)"!=""
+ 
+-openoffice: $(foreach,i,$(alllangiso) openoffice_$i)
++openoffice: openoffice_$(BASELANG)
+ 
+ openofficedev: $(foreach,i,$(alllangiso) openofficedev_$i)
+ 
+ openofficewithjre: $(foreach,i,$(alllangiso) openofficewithjre_$i)
+ 
+-ooolanguagepack : $(foreach,i,$(alllangiso) ooolanguagepack_$i)
++ooolanguagepack : $(foreach,i,$(LANGPACKS) ooolanguagepack_$i)
+ 
+ ooodevlanguagepack: $(foreach,i,$(alllangiso) ooodevlanguagepack_$i)
+ 
+@@ -183,13 +189,13 @@
+ ADDDEPS+=hack_msitemplates
+ .ENDIF
+ 
+-$(foreach,i,$(alllangiso) openoffice_$i) : $(ADDDEPS)
++openoffice_$(BASELANG) : $(ADDDEPS)
+ 
+ $(foreach,i,$(alllangiso) openofficedev_$i) : $(ADDDEPS)
+ 
+ $(foreach,i,$(alllangiso) openofficewithjre_$i) : $(ADDDEPS)
+ 
+-$(foreach,i,$(alllangiso) ooolanguagepack_$i) : $(ADDDEPS)
++$(foreach,i,$(LANGPACKS) ooolanguagepack_$i) : $(ADDDEPS)
+ 
+ $(foreach,i,$(alllangiso) ooodevlanguagepack_$i) : $(ADDDEPS)
+ 
+@@ -217,7 +223,7 @@
+ .ENDIF # "$(OS)" == "MACOSX"
+ 
+ .IF "$(PKGFORMAT)"!=""
+-$(foreach,i,$(alllangiso) openoffice_$i) : $$@{$(PKGFORMAT:^".")}
++openoffice_$(BASELANG) : $$@{$(PKGFORMAT:^".")}
+ .IF "$(MAKETARGETS)"!="" && "$(PKGFORMAT)"!=""
+ .IF "$(MAKETARGETS:e)"=="" && "$(MAKETARGETS:s/_//)"!="$(MAKETARGETS)"
+ $(MAKETARGETS) : $$@{$(PKGFORMAT:^".")}
+@@ -228,7 +234,7 @@
+ .ELSE			# "$(PKGFORMAT)"!=""
+ openoffice_% :
+ .ENDIF			# "$(PKGFORMAT)"!=""
+-	$(PERL) -w $(SOLARENV)$/bin$/make_installer.pl -f $(PRJ)$/util$/openoffice.lst -l $(subst,$(@:s/_/ /:1)_, $(@:b)) -p OpenOffice -u $(OUT) -buildid $(BUILD) -msitemplate $(MSIOFFICETEMPLATEDIR) -msilanguage $(COMMONMISC)$/win_ulffiles $(subst,xxx,$(@:e:s/.//) $(PKGFORMATSWITCH) $(VERBOSESWITCH))
++	$(PERL) -w $(SOLARENV)$/bin$/make_installer.pl -i . -f $(PRJ)$/util$/openoffice.lst -l $(subst,$(@:s/_/ /:1)_, $(@:b)) -p OpenOffice -u $(OUT) -buildid $(BUILD) -msitemplate $(MSIOFFICETEMPLATEDIR) -msilanguage $(COMMONMISC)$/win_ulffiles $(subst,xxx,$(@:e:s/.//) $(PKGFORMATSWITCH) $(VERBOSESWITCH))
+ 	$(PERL) -w $(SOLARENV)$/bin$/gen_update_info.pl --buildid $(BUILD) --arch "$(RTL_ARCH)" --os "$(RTL_OS)" --lstfile $(PRJ)$/util$/openoffice.lst --product OpenOffice --languages $(subst,$(@:s/_/ /:1)_, $(@:b)) $(PRJ)$/util$/update.xml > $(MISC)/$(@:b)_$(RTL_OS)_$(RTL_ARCH)$(@:e).update.xml
+ 
+ .IF "$(PKGFORMAT)"!=""
+@@ -249,12 +255,12 @@
+ 	$(PERL) -w $(SOLARENV)$/bin$/gen_update_info.pl --buildid $(BUILD) --arch "$(RTL_ARCH)" --os "$(RTL_OS)" --lstfile $(PRJ)$/util$/openoffice.lst --product OpenOffice_Dev --languages $(subst,$(@:s/_/ /:1)_, $(@:b)) $(PRJ)$/util$/update.xml > $(MISC)/$(@:b)_$(RTL_OS)_$(RTL_ARCH)$(@:e).update.xml
+ 
+ .IF "$(PKGFORMAT)"!=""
+-$(foreach,i,$(alllangiso) ooolanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
++$(foreach,i,$(LANGPACKS) ooolanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
+ ooolanguagepack_%{$(PKGFORMAT:^".")} :
+ .ELSE			# "$(PKGFORMAT)"!=""
+ ooolanguagepack_% :
+ .ENDIF			# "$(PKGFORMAT)"!=""
+-	$(PERL) -w $(SOLARENV)$/bin$/make_installer.pl -f $(PRJ)$/util$/openoffice.lst -l $(subst,$(@:s/_/ /:1)_, $(@:b)) -p OpenOffice -u $(OUT) -buildid $(BUILD) -msitemplate $(MSILANGPACKTEMPLATEDIR) -msilanguage $(COMMONMISC)$/win_ulffiles -languagepack $(subst,xxx,$(@:e:s/.//) $(PKGFORMATSWITCH) $(VERBOSESWITCH))
++	$(PERL) -w $(SOLARENV)$/bin$/make_installer.pl -i . -f $(PRJ)$/util$/openoffice.lst -l $(subst,$(@:s/_/ /:1)_, $(@:b)) -p OpenOffice -u $(OUT) -buildid $(BUILD) -msitemplate $(MSILANGPACKTEMPLATEDIR) -msilanguage $(COMMONMISC)$/win_ulffiles -languagepack $(subst,xxx,$(@:e:s/.//) $(PKGFORMATSWITCH) $(VERBOSESWITCH))
+ 
+ .IF "$(PKGFORMAT)"!=""
+ $(foreach,i,$(alllangiso) ooodevlanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
+@@ -380,10 +386,10 @@
  	-$(MKDIRHIER) $(MSIURETEMPLATEDIR)
  	-$(MKDIRHIER) $(MSISDKOOTEMPLATEDIR)
  #	-$(MKDIRHIER) $(MSIURETEMPLATEDIR)
