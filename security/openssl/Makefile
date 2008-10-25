@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.135 2008/09/17 00:46:58 reed Exp $
+# $NetBSD: Makefile,v 1.136 2008/10/25 12:03:35 adrianp Exp $
 
 OPENSSL_SNAPSHOT?=	# empty
 OPENSSL_STABLE?=	# empty
 OPENSSL_VERS?=		0.9.8h
-PKGREVISION=		1
+PKGREVISION=		2
 
 .if empty(OPENSSL_SNAPSHOT)
 DISTNAME=	openssl-${OPENSSL_VERS}
@@ -43,6 +43,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl
 TEST_TARGET=		tests
+MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./config
