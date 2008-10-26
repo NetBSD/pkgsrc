@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/26 09:51:52 bjs Exp $
+
+--- Makefile.orig	2001-05-22 18:13:16.000000000 -0400
++++ Makefile
+@@ -1,9 +1,6 @@
+ # Make sex
+ 
+-PROG=sex
+-PREFIX?=/usr/local
+-BINDIR=${PREFIX}/bin
+-MANDIR=${PREFIX}/man/man
+-MAN6=sex.6
++PROG=	sex
++MAN=	sex.6
+ 
+ .include <bsd.prog.mk>
