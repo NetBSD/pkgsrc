@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/26 11:43:50 obache Exp $
+
+--- install.rb.orig	2008-10-26 08:13:27.000000000 +0000
++++ install.rb
+@@ -1,10 +1,13 @@
+ require 'rbconfig'
++require 'ftools'
+ 
+ sitelibdir = Config::CONFIG.fetch("sitelibdir")
+ bindir = Config::CONFIG.fetch("bindir")
+ 
+ def copy(src, dest, mode)
+   p dest
++  dest = File.join(ENV['DESTDIR'], dest)
++  File::makedirs(File.dirname(dest))
+   open(src, "rb") do |infile|
+     open(dest, "wb") do |outfile|
+       while buf = infile.read(8192)
