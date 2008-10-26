@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2672 2008/10/26 06:14:58 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2673 2008/10/26 07:56:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4566,3 +4566,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added finance/p5-Algorithm-LUHN version 1.00 [abs 2008-10-25]
 	Updated devel/eet to 1.1.0 [minskim 2008-10-26]
 	Added devel/ruby-eet version 0.1.4 [minskim 2008-10-26]
+	Added lang/embryo version 0.9.9.050 [minskim 2008-10-26]
