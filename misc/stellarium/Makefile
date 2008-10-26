@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2008/09/16 22:51:20 markd Exp $
+# $NetBSD: Makefile,v 1.28 2008/10/26 14:03:37 adam Exp $
 
-DISTNAME=	stellarium-0.9.1
+DISTNAME=	stellarium-0.10.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stellarium/}
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.stellarium.org/
@@ -19,11 +20,11 @@ CMAKE_ARGS+= -D FreeType2_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.freetype2}/include
 CMAKE_ARGS+= -D FreeType2_LIBRARIES:PATH=${BUILDLINK_PREFIX.freetype2}/lib
 CMAKE_ARGS+= -D SDLMIXER_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.SDL}/include/SDL
 
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
