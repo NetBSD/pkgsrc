@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2008/09/12 14:59:52 taca Exp $
+# $NetBSD: options.mk,v 1.14.4.1 2008/10/26 14:42:30 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	snmp ssl \
@@ -78,15 +78,15 @@ SQUID_EXTERNAL_ACL_HELPERS?=	ip_user unix_group
 
 #
 # squid's code has preference as:
-#	ipf-transparent > pf-transparent > linux-netfilter
+#	squid-ipf > squid-pf > squid-netfilter
 # So, options.mk introduce preference as:
-#	linux-netfilter > pf-transparnet > ipf-transparent
+#	squid-netfilter > squid-pf > squid-ipf
 #
-.if !empty(PKG_OPTIONS:Mlinux-netfilter)
+.if !empty(PKG_OPTIONS:Msquid-netfilter)
 CONFIGURE_ARGS+=	--enable-linux-netfilter
-.elif !empty(PKG_OPTIONS:Mpf-transparent)
+.elif !empty(PKG_OPTIONS:Msquid-pf)
 CONFIGURE_ARGS+=	--enable-pf-transparent
-.elif !empty(PKG_OPTIONS:Mipf-transparent)
+.elif !empty(PKG_OPTIONS:Msquid-ipf)
 CONFIGURE_ARGS+=	--enable-ipf-transparent
 .endif
 
