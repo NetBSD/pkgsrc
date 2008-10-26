@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/02/29 20:53:02 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/26 22:48:43 dholland Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 
@@ -18,12 +18,14 @@ HAS_CONFIGURE=		yes
 CONFIGURE_ENV+=		OPSYS=${OPSYS:Q}
 CONFIGURE_ENV+=		CURSES_LIBS=${BUILDLINK_LDADD.ncursesw:Q}
 
+INSTALL_MAKE_FLAGS+=	PERL=${PERL5:Q}
 INSTALL_TARGET=		install install-pf
 DOCDIR=			${PREFIX}/share/doc/netmaj
 
 pre-configure:
 	cp ${FILESDIR}/configure.sh ${WRKSRC}/configure
 	chmod +x ${WRKSRC}/configure
+	chmod -x ${WRKSRC}/auto.pf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}

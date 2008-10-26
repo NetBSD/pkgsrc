@@ -1,0 +1,15 @@
+$NetBSD: patch-an,v 1.1 2008/10/26 22:48:43 dholland Exp $
+
+Fix obvious bug detected by gcc.
+
+--- pf.c~	1996-07-31 04:06:10.000000000 -0400
++++ pf.c	2008-10-26 18:40:32.000000000 -0400
+@@ -94,7 +94,7 @@ pf_init(gp,file,prog) global_t *gp; char
+ 	}
+ 	if (!pf) {
+ 		strcpy(personal_file,prog);
+-		if (p=rindex(personal_file,"/")) {
++		if (p=rindex(personal_file,'/')) {
+ 			p[1] = 0;
+ 		} else {
+ 			personal_file[0] = 0;
