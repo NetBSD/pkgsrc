@@ -1,4 +1,4 @@
-/*	$NetBSD: file_subs.c,v 1.13 2008/02/07 22:27:53 joerg Exp $	*/
+/*	$NetBSD: file_subs.c,v 1.14 2008/10/26 12:48:48 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992 Keith Muller.
@@ -48,7 +48,7 @@
 #if 0
 static char sccsid[] = "@(#)file_subs.c	8.1 (Berkeley) 5/31/93";
 #else
-__RCSID("$NetBSD: file_subs.c,v 1.13 2008/02/07 22:27:53 joerg Exp $");
+__RCSID("$NetBSD: file_subs.c,v 1.14 2008/10/26 12:48:48 joerg Exp $");
 #endif
 #endif /* not lint */
 
@@ -895,7 +895,7 @@ set_pmode(char *fnm, mode_t mode)
  *	Set 4.4BSD file flags
  */
 void
-set_chflags(char *fnm, u_int32_t flags)
+set_chflags(char *fnm, uint32_t flags)
 {
 	
 #if 0
