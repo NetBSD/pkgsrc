@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.68 2008/10/10 00:21:43 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.69 2008/10/26 12:31:30 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -251,6 +251,9 @@ AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
 	setpassent setprogname shquote snprintf statvfs strdup strerror \
 	strlcat strlcpy strmode strsep strtoll unsetenv usleep utimes warn
 ])
+
+AC_CHECK_LIB(socket, socket)
+AC_CHECK_LIB(nsl, gethostbyname)
 
 need_getaddrinfo=no
 AC_CHECK_TYPES([socklen_t], [], [], [[#include <sys/socket.h>]])
