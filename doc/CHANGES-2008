@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2683 2008/10/26 14:07:35 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2684 2008/10/26 19:15:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4584,3 +4584,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/qt4-sqlite3 to 4.4.3 [adam 2008-10-26]
 	Updated x11/qt4-tiff to 4.4.3 [adam 2008-10-26]
 	Updated misc/stellarium to 0.10.0 [adam 2008-10-26]
+	Added math/p5-Math-BaseCnv version 1.4.75 [abs 2008-10-26]
+	Added textproc/p5-XML-Tidy version 1.2.54 [abs 2008-10-26]
+	Added www/p5-ParallelUserAgent version 2.57 [abs 2008-10-26]
+	Added net/p5-eBay-API version 0.25 [abs 2008-10-26]
