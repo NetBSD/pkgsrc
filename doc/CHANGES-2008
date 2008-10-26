@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2682 2008/10/26 13:44:40 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.2683 2008/10/26 14:07:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4576,3 +4576,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-tokyotyrant version 1.2 [obache 2008-10-26]
 	Added databases/ruby-tokyotyrant version 1.0 [obache 2008-10-26]
 	Updated print/gutenprint51-lib to 5.2.1 [gdt 2008-10-26]
+	Updated x11/qt4-libs to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-tools to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-docs to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-pgsql to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-qdbus to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-sqlite3 to 4.4.3 [adam 2008-10-26]
+	Updated x11/qt4-tiff to 4.4.3 [adam 2008-10-26]
+	Updated misc/stellarium to 0.10.0 [adam 2008-10-26]
