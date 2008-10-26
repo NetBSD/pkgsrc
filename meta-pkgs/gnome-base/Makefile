@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/10/26 09:00:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.54 2008/10/26 09:03:19 jnemeth Exp $
 
 DISTNAME=	gnome-base-2.24.0
 PKGREVISION=	2
@@ -25,7 +25,7 @@ META_PACKAGE=	yes
 #DEPENDS+=	pkg-config>=0.21:../../devel/pkg-config
 #DEPENDS+=	intltool>=0.35.0:../../textproc/intltool
 DEPENDS+=	startup-notification>=0.9:../../x11/startup-notification
-DEPENDS+=	glib2>=2.18.3:../../devel/glib2
+DEPENDS+=	glib2>=2.18.2:../../devel/glib2
 DEPENDS+=	atk>=1.24.0:../../devel/atk
 DEPENDS+=	pango>=1.22.1:../../devel/pango
 DEPENDS+=	gtk2+>=2.14.4:../../x11/gtk2
