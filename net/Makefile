@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.732 2008/10/24 20:38:21 seb Exp $
+# $NetBSD: Makefile,v 1.733 2008/10/26 19:17:09 abs Exp $
 #
 
 COMMENT=	Networking tools
@@ -362,6 +362,7 @@ SUBDIR+=	p5-SNMP_Session
 SUBDIR+=	p5-SOAP-Lite
 SUBDIR+=	p5-Socket6
 SUBDIR+=	p5-X500-DN
+SUBDIR+=	p5-eBay-API 
 SUBDIR+=	p5-ispman
 SUBDIR+=	packit
 SUBDIR+=	parpd
