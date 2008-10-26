@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2670 2008/10/25 20:24:23 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2671 2008/10/26 04:49:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4564,3 +4564,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/snort to 2.8.3.1 [adrianp 2008-10-25]
 	Updated shells/mksh to 36 [ahoka 2008-10-25]
 	Added finance/p5-Algorithm-LUHN version 1.00 [abs 2008-10-25]
+	Updated devel/eet to 1.1.0 [minskim 2008-10-26]
