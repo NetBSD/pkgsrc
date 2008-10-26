@@ -1,4 +1,4 @@
-# $NetBSD: glx-config.mk,v 1.2 2008/10/21 06:46:46 bjs Exp $
+# $NetBSD: glx-config.mk,v 1.3 2008/10/26 21:03:40 bjs Exp $
 #
 # used by x11/modular-xorg-server/options.mk
 
@@ -16,7 +16,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CFLAGS.NetBSD+=	${ATOMIC_OPS_CHECK}HAVE_NETBSD_ATOMIC_OPS
 
 .  if ${OPSYS} == "NetBSD" && !target(netbsd-atomic-ops-check)
-.  PHONY:	netbsd-atomic-opts-check
+.PHONY:	netbsd-atomic-opts-check
 netbsd-atomic-ops-check:
 ATOMIC_OPS_CHECK!=\
   if ( ${NM} /usr/lib/libc.so | ${GREP} -q atomic_cas_uint ); then	\
