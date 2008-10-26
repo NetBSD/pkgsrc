@@ -1,4 +1,4 @@
-/*	$NetBSD: btree.h,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: btree.h,v 1.2 2008/10/26 12:51:59 joerg Exp $	*/
 /*	NetBSD: btree.h,v 1.16 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -44,7 +44,7 @@
 #define	F_CLR(p, f)	(p)->flags &= ~(f)
 #define	F_ISSET(p, f)	((p)->flags & (f))
 
-#include <mpool.h>
+#include <nbcompat/mpool.h>
 
 #define	DEFMINKEYPAGE	(2)		/* Minimum keys per page */
 #define	MINCACHE	(5)		/* Minimum cached pages */
