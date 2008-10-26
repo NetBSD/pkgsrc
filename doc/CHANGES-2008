@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2680 2008/10/26 11:40:54 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2681 2008/10/26 11:44:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4574,3 +4574,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/ruby-tokyocabinet to 1.16 [obache 2008-10-26]
 	Updated databases/tokyotyrant to 1.1.7 [obache 2008-10-26]
 	Added databases/p5-tokyotyrant version 1.2 [obache 2008-10-26]
+	Added databases/ruby-tokyotyrant version 1.0 [obache 2008-10-26]
