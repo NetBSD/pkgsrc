@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/26 09:51:52 bjs Exp $
+
+SHA1 (sex-1.0.tar.gz) = 12da3ac34d630f0967d09b4cbe6e73a88a8973d8
+RMD160 (sex-1.0.tar.gz) = 80c7c04f7b77329e4bf20fbf61d6c2fce54d75d6
+Size (sex-1.0.tar.gz) = 4820 bytes
+SHA1 (patch-aa) = 18dbce142a90824cadbc1b30becd0cff4ca35e03
+SHA1 (patch-ab) = 4df48147f5e6bbaf636c17be544e21a1728ec8fb

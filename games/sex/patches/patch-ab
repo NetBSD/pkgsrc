@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/26 09:51:52 bjs Exp $
+
+--- sex.c.orig	2001-04-28 18:21:29.000000000 +0100
++++ sex.c	2008-10-23 11:00:07.000000000 +0100
+@@ -252,7 +252,7 @@
+    register TABLE  *ttp;
+    register char   *cp;
+    int     getpid();
+-   long     now;
++   time_t  now;
+    char buffer[2048];
+    int pos, lastword;
+ 
