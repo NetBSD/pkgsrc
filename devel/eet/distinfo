@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/06/22 01:21:31 joerg Exp $
+$NetBSD: distinfo,v 1.4 2008/10/26 04:48:22 minskim Exp $
 
-SHA1 (eet-1.0.1.tar.bz2) = ab57c3ae7129819ea49b8b04b1812a2e848e473f
-RMD160 (eet-1.0.1.tar.bz2) = edba73a954e4e73bf3e2ecd4683200895ff7528d
-Size (eet-1.0.1.tar.bz2) = 2848049 bytes
+SHA1 (eet-1.1.0.tar.bz2) = 23d503b51ced459b6b757cc871cff47086f732c9
+RMD160 (eet-1.1.0.tar.bz2) = 3a7389bbaa336414952a96304cad81288762484f
+Size (eet-1.1.0.tar.bz2) = 4051889 bytes
+SHA1 (patch-aa) = 74ec4848309fbcdc39f112fcaab901f5eda8b1c5
