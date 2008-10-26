@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.137 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.138 2008/10/26 23:17:21 wiz Exp $
 
-DISTNAME=		evolution-2.22.3.1
-PKGREVISION=		1
+DISTNAME=		evolution-2.24.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -12,19 +11,7 @@ COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
-PKG_SUGGESTED_OPTIONS=	inet6 ssl
-PKG_SUPPORTED_OPTIONS=	inet6 krb4 krb5 ssl
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mssl) && !empty(PKG_OPTIONS:Mkrb[45])
-# If Kerberos is enabled, the libcrypto library is linked in, which causes
-# function name conflicts with libsoftokn3 provided by Mozilla NSS.  These
-# cause runtime crashes, so don't allow these options to be specified
-# together.
-PKG_FAIL_REASON+=	"Kerberos support conflicts with SSL"
-.endif
+.include "options.mk"
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -39,59 +26,13 @@ REPLACE_PERL+=		addressbook/tools/evolution-addressbook-clean.in
 CPPFLAGS+=		-I/usr/include/gssapi
 CPPFLAGS+=		-I/usr/include/krb5
 
-CONFIGURE_ARGS+=	--disable-gtk-doc
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--without-static-ldap
-CONFIGURE_ARGS+=	--enable-openssl=no
 CONFIGURE_ARGS+=	--enable-pilot-conduits=no
 CONFIGURE_ARGS+=	--with-krb4=/usr
 CONFIGURE_ARGS+=	--with-krb5=/usr
 .if defined(PKGREVISION)
 CONFIGURE_ARGS+=	--with-sub-version=nb${PKGREVISION}
-.endif
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6=yes
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mkrb4)
-CONFIGURE_ARGS+=	--with-krb4
-.else
-CONFIGURE_ARGS+=	--without-krb4
-.endif
-
-.if !empty(PKG_OPTIONS:Mkrb5)
-CONFIGURE_ARGS+=	--with-krb5
-.  include "../../mk/krb5.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-krb5
-.endif
-
-PLIST_VARS+=		smime
-.if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--enable-nss=yes
-PLIST.smime=		yes
-PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
-# XXX Workaround for the following problem: addressbook/util/libeabutil.la
-# is compiled as a static library only which uses the NSS stuff.  When other
-# parts of the program use this .la archive, they get the right -L flags
-# (from the dependency_libs variable) but not the rpaths.  buildlink3 should
-# add rpath flags to the dependency_libs, but there is an strange comment
-# in the wrapper saying that it shouldn't.
-LDFLAGS+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nss}/lib/nss
-BUILDLINK_API_DEPENDS.nss+=		nss>=3.9.2nb3
-.  include "../../devel/nspr/buildlink3.mk"
-.  include "../../devel/nss/buildlink3.mk"
-
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.nss}/include/nss/nss
-
-post-wrapper:
-	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nspr.pc mozilla-nspr.pc
-	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nss.pc mozilla-nss.pc
-.else
-CONFIGURE_ARGS+=	--disable-nss
 .endif
 
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in
@@ -109,29 +50,40 @@ GCONF_SCHEMAS+=	evolution-mail.schemas
 BUILDLINK_TRANSFORM+=	rm:-DG_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=	rm:-DGTK_DISABLE_DEPRECATED
 
-BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=1.4.1
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0nb2
-BUILDLINK_API_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ; do \
+	    mv $$f $$f.original ; \
+	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
 
 .if !exists(/usr/include/semaphore.h)
 LDFLAGS+=	-lsemaphore
 .include "../../devel/pthread-sem/buildlink3.mk"
 .endif
 .include "../../databases/openldap-client/buildlink3.mk"
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.20.3
 .include "../../devel/libbonobo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libbonoboui+=	libbonoboui>=2.4.2
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.19.91
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
+BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.23.91
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
 .include "../../net/libsoup24/buildlink3.mk"
 #.include "../../print/libgnomeprint/buildlink3.mk"
 #.include "../../print/libgnomeprintui/buildlink3.mk"
@@ -144,6 +96,7 @@ LDFLAGS+=	-lsemaphore
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/gtkhtml314/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
