@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/10/26 23:39:37 wiz Exp $
 #
 
-DISTNAME=	evolution-exchange-2.22.1
-PKGREVISION=	1
+DISTNAME=	evolution-exchange-2.24.1
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-exchange/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +16,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-EE_VER=			2.22
+EE_VER=			2.24
 PLIST_SUBST=		EE_VER=${EE_VER:Q}
 GCONF_SCHEMAS=		apps_exchange_addressbook-${EE_VER}.schemas
 
