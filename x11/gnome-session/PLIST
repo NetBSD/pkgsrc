@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/25 03:12:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/10/26 23:33:18 gdt Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-save
@@ -13,6 +13,7 @@ man/man1/gnome-wm.1
 man/man1/session-properties.1
 man/man5/default.session.5
 share/applications/session-properties.desktop
+share/doc/gnome-session/dbus/gnome-session.html
 share/gconf/schemas/gnome-session.schemas
 share/gnome-session/gsm-inhibit-dialog.glade
 share/gnome-session/session-properties.glade
