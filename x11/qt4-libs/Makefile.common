@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2008/07/24 12:55:20 markd Exp $
+# $NetBSD: Makefile.common,v 1.11 2008/10/26 14:02:33 adam Exp $
 # used by x11/qt4-libs/Makefile
 
 DISTNAME=	qt-x11-opensource-src-${QTVERSION}
@@ -38,10 +38,10 @@ CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
 LIBQT?=			-lQtCore -lQtGui
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
-MAKE_ENV+=		QTDIR=${WRKSRC:Q}
+MAKE_ENV+=		QTDIR=${WRKSRC}
 
 # avoid creating a .qt directory in the users home directory
-SCRIPTS_ENV+=		HOME=${WRKDIR:Q}
+SCRIPTS_ENV+=		HOME=${WRKDIR}
 
 .include "../../mk/compiler.mk"
 

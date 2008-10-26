@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/07/24 12:55:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/10/26 14:02:33 adam Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -15,10 +15,6 @@ qt4/bin/pixeltool
 qt4/bin/qmake
 qt4/bin/qt3to4
 qt4/bin/qtconfig
-qt4/include/QtAssistant/QAssistantClient
-qt4/include/QtAssistant/QtAssistant
-qt4/include/QtAssistant/qassistantclient.h
-qt4/include/QtAssistant/qassistantclient_global.h
 qt4/include/Qt/QtHelp
 qt4/include/Qt/qhelp_global.h
 qt4/include/Qt/qhelpcontentwidget.h
@@ -28,6 +24,10 @@ qt4/include/Qt/qhelpindexwidget.h
 qt4/include/Qt/qhelpsearchengine.h
 qt4/include/Qt/qhelpsearchquerywidget.h
 qt4/include/Qt/qhelpsearchresultwidget.h
+qt4/include/QtAssistant/QAssistantClient
+qt4/include/QtAssistant/QtAssistant
+qt4/include/QtAssistant/qassistantclient.h
+qt4/include/QtAssistant/qassistantclient_global.h
 qt4/include/QtDesigner/QAbstractExtensionFactory
 qt4/include/QtDesigner/QAbstractExtensionManager
 qt4/include/QtDesigner/QAbstractFormBuilder
@@ -112,6 +112,7 @@ qt4/include/QtHelp/QHelpContentModel
 qt4/include/QtHelp/QHelpContentWidget
 qt4/include/QtHelp/QHelpEngine
 qt4/include/QtHelp/QHelpEngineCore
+qt4/include/QtHelp/QHelpGlobal
 qt4/include/QtHelp/QHelpIndexModel
 qt4/include/QtHelp/QHelpIndexWidget
 qt4/include/QtHelp/QHelpSearchEngine
@@ -148,8 +149,8 @@ qt4/mkspecs/common/g++.conf
 qt4/mkspecs/common/linux.conf
 qt4/mkspecs/common/llvm.conf
 qt4/mkspecs/common/mac-g++.conf
-qt4/mkspecs/common/mac.conf
 qt4/mkspecs/common/mac-llvm.conf
+qt4/mkspecs/common/mac.conf
 qt4/mkspecs/common/qmake.conf
 qt4/mkspecs/common/unix.conf
 qt4/mkspecs/cygwin-g++/qmake.conf
@@ -256,6 +257,8 @@ qt4/mkspecs/hpuxi-acc-32/qmake.conf
 qt4/mkspecs/hpuxi-acc-32/qplatformdefs.h
 qt4/mkspecs/hpuxi-acc-64/qmake.conf
 qt4/mkspecs/hpuxi-acc-64/qplatformdefs.h
+qt4/mkspecs/hpuxi-g++-64/qmake.conf
+qt4/mkspecs/hpuxi-g++-64/qplatformdefs.h
 qt4/mkspecs/hurd-g++/qmake.conf
 qt4/mkspecs/hurd-g++/qplatformdefs.h
 qt4/mkspecs/interix-g++/qmake.conf
@@ -371,8 +374,6 @@ qt4/mkspecs/unixware-cc/qmake.conf
 qt4/mkspecs/unixware-cc/qplatformdefs.h
 qt4/mkspecs/unixware-g++/qmake.conf
 qt4/mkspecs/unixware-g++/qplatformdefs.h
-qt4/mkspecs/win32-borland/qmake.conf
-qt4/mkspecs/win32-borland/qplatformdefs.h
 qt4/mkspecs/win32-g++/qmake.conf
 qt4/mkspecs/win32-g++/qplatformdefs.h
 qt4/mkspecs/win32-msvc.net/qmake.conf
@@ -391,24 +392,42 @@ qt4/mkspecs/win32-msvc2008/qmake.conf
 qt4/mkspecs/win32-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-armv4i-msvc2008/qmake.conf
+qt4/mkspecs/wince50standard-armv4i-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-mipsii-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-mipsii-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsii-msvc2008/qmake.conf
+qt4/mkspecs/wince50standard-mipsii-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-mipsiv-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-mipsiv-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsiv-msvc2008/qmake.conf
+qt4/mkspecs/wince50standard-mipsiv-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-sh4-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-sh4-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-sh4-msvc2008/qmake.conf
+qt4/mkspecs/wince50standard-sh4-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-x86-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-x86-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-x86-msvc2008/qmake.conf
+qt4/mkspecs/wince50standard-x86-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince60standard-armv4i-msvc2005/qmake.conf
 qt4/mkspecs/wince60standard-armv4i-msvc2005/qplatformdefs.h
 qt4/mkspecs/wincewm50pocket-msvc2005/qmake.conf
 qt4/mkspecs/wincewm50pocket-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50pocket-msvc2008/qmake.conf
+qt4/mkspecs/wincewm50pocket-msvc2008/qplatformdefs.h
 qt4/mkspecs/wincewm50smart-msvc2005/qmake.conf
 qt4/mkspecs/wincewm50smart-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50smart-msvc2008/qmake.conf
+qt4/mkspecs/wincewm50smart-msvc2008/qplatformdefs.h
 qt4/mkspecs/wincewm60professional-msvc2005/qmake.conf
 qt4/mkspecs/wincewm60professional-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60professional-msvc2008/qmake.conf
+qt4/mkspecs/wincewm60professional-msvc2008/qplatformdefs.h
 qt4/mkspecs/wincewm60standard-msvc2005/qmake.conf
 qt4/mkspecs/wincewm60standard-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60standard-msvc2008/qmake.conf
+qt4/mkspecs/wincewm60standard-msvc2008/qplatformdefs.h
 qt4/phrasebooks/danish.qph
 qt4/phrasebooks/dutch.qph
 qt4/phrasebooks/finnish.qph
@@ -424,15 +443,24 @@ qt4/phrasebooks/swedish.qph
 qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/plugins/designer
 @dirrm qt4/phrasebooks
+@dirrm qt4/mkspecs/wincewm60standard-msvc2008
 @dirrm qt4/mkspecs/wincewm60standard-msvc2005
+@dirrm qt4/mkspecs/wincewm60professional-msvc2008
 @dirrm qt4/mkspecs/wincewm60professional-msvc2005
+@dirrm qt4/mkspecs/wincewm50smart-msvc2008
 @dirrm qt4/mkspecs/wincewm50smart-msvc2005
+@dirrm qt4/mkspecs/wincewm50pocket-msvc2008
 @dirrm qt4/mkspecs/wincewm50pocket-msvc2005
 @dirrm qt4/mkspecs/wince60standard-armv4i-msvc2005
+@dirrm qt4/mkspecs/wince50standard-x86-msvc2008
 @dirrm qt4/mkspecs/wince50standard-x86-msvc2005
+@dirrm qt4/mkspecs/wince50standard-sh4-msvc2008
 @dirrm qt4/mkspecs/wince50standard-sh4-msvc2005
+@dirrm qt4/mkspecs/wince50standard-mipsiv-msvc2008
 @dirrm qt4/mkspecs/wince50standard-mipsiv-msvc2005
+@dirrm qt4/mkspecs/wince50standard-mipsii-msvc2008
 @dirrm qt4/mkspecs/wince50standard-mipsii-msvc2005
+@dirrm qt4/mkspecs/wince50standard-armv4i-msvc2008
 @dirrm qt4/mkspecs/wince50standard-armv4i-msvc2005
 @dirrm qt4/mkspecs/win32-msvc2008
 @dirrm qt4/mkspecs/win32-msvc2005
@@ -442,7 +470,6 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/win32-msvc.net
 @dirrm qt4/mkspecs/win32-msvc
 @dirrm qt4/mkspecs/win32-g++
-@dirrm qt4/mkspecs/win32-borland
 @dirrm qt4/mkspecs/unixware-g++
 @dirrm qt4/mkspecs/unixware-cc
 @dirrm qt4/mkspecs/tru64-g++
@@ -497,6 +524,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/irix-cc
 @dirrm qt4/mkspecs/interix-g++
 @dirrm qt4/mkspecs/hurd-g++
+@dirrm qt4/mkspecs/hpuxi-g++-64
 @dirrm qt4/mkspecs/hpuxi-acc-64
 @dirrm qt4/mkspecs/hpuxi-acc-32
 @dirrm qt4/mkspecs/hpux-g++-64

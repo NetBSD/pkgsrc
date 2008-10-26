@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2008/07/24 12:55:20 markd Exp $
+$NetBSD: patch-ab,v 1.7 2008/10/26 14:02:33 adam Exp $
 
---- src/gui/painting/painting.pri.orig	2008-04-28 15:11:18.000000000 +0200
+--- src/gui/painting/painting.pri.orig	2008-09-27 10:58:47.000000000 +0200
 +++ src/gui/painting/painting.pri
-@@ -197,11 +197,11 @@ mac {
+@@ -192,11 +192,11 @@ mac {
  
      win32-g++|!win32:!*-icc* {
          mmx {
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.6 2008/07/24 12:55:20 markd Exp $
              mmx_compiler.input = MMX_SOURCES
              mmx_compiler.variable_out = OBJECTS
              mmx_compiler.name = compiling[mmx] ${QMAKE_FILE_IN}
-@@ -209,22 +209,22 @@ mac {
+@@ -204,22 +204,22 @@ mac {
              QMAKE_EXTRA_COMPILERS += mmx_compiler
          }
          3dnow {
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.6 2008/07/24 12:55:20 markd Exp $
                  sse3dnow_compiler.input = SSE3DNOW_SOURCES
                  sse3dnow_compiler.variable_out = OBJECTS
                  sse3dnow_compiler.name = compiling[sse3dnow] ${QMAKE_FILE_IN}
-@@ -233,11 +233,11 @@ mac {
+@@ -228,11 +228,11 @@ mac {
  	    }
          }
          sse {
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.6 2008/07/24 12:55:20 markd Exp $
              sse_compiler.input = SSE_SOURCES
              sse_compiler.variable_out = OBJECTS
              sse_compiler.name = compiling[sse] ${QMAKE_FILE_IN}
-@@ -245,11 +245,11 @@ mac {
+@@ -240,11 +240,11 @@ mac {
              QMAKE_EXTRA_COMPILERS += sse_compiler
          }
          sse2 {
@@ -71,7 +71,7 @@ $NetBSD: patch-ab,v 1.6 2008/07/24 12:55:20 markd Exp $
              sse2_compiler.input = SSE2_SOURCES
              sse2_compiler.variable_out = OBJECTS
              sse2_compiler.name = compiling[sse2] ${QMAKE_FILE_IN}
-@@ -257,11 +257,11 @@ mac {
+@@ -252,11 +252,11 @@ mac {
              QMAKE_EXTRA_COMPILERS += sse2_compiler
          }
          iwmmxt {
