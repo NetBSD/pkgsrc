@@ -1,0 +1,2 @@
+This module creates XML document objects (with inheritance from
+XML::XPath) to tidy mixed-content (ie. non-data) text node indenting.
