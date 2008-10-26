@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/10/26 09:03:19 jnemeth Exp $
+# $NetBSD: Makefile,v 1.55 2008/10/26 09:07:45 jnemeth Exp $
 
 DISTNAME=	gnome-base-2.24.0
 PKGREVISION=	2
@@ -72,7 +72,7 @@ DEPENDS+=	gst-plugins0.10-oss>=0.10.10:../../audio/gst-plugins0.10-oss
 DEPENDS+=	evolution-data-server>=2.24.1:../../mail/evolution-data-server
 DEPENDS+=	gnome-control-center>=2.24.0.1nb1:../../x11/gnome-control-center
 DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
-DEPENDS+=	gucharmap>=2.24.3:../../fonts/gucharmap
+DEPENDS+=	gucharmap>=2.22.3:../../fonts/gucharmap
 DEPENDS+=	gnome-applets>=2.24.0.1:../../x11/gnome-applets
 DEPENDS+=	gnome-themes>=2.22.2nb1:../../x11/gnome-themes
 DEPENDS+=	gnome-backgrounds>=2.24.0:../../graphics/gnome-backgrounds
