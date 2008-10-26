@@ -1,0 +1,11 @@
+This bundle defines all required modules for ParallelUserAgent.
+
+ExtUtils::MakeMaker - should be in perl disribution
+
+LWP::UserAgent - Base for Parallel::UserAgent
+
+LWP::RobotUA - Base for Parallel::RobotUA
+
+LWP::Protocol - Base Protocol implementations
+
+LWP::Parallel - Parallel User Agent itself
