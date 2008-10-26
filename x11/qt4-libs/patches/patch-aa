@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2008/07/24 12:55:20 markd Exp $
+$NetBSD: patch-aa,v 1.8 2008/10/26 14:02:33 adam Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2008-04-28 15:11:14.000000000 +0200
+--- qmake/generators/unix/unixmake2.cpp.orig	2008-09-27 10:58:43.000000000 +0200
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -234,6 +234,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -228,6 +228,8 @@ UnixMakefileGenerator::writeMakeParts(QT
          if(!project->isEmpty("QMAKE_BUNDLE")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2008/07/24 12:55:20 markd Exp $
          } else if(project->isEmpty("QMAKE_HPUX_SHLIB")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y.z")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
-@@ -984,8 +986,12 @@ void UnixMakefileGenerator::init2()
+@@ -978,8 +980,12 @@ void UnixMakefileGenerator::init2()
      } else if (project->isActiveConfig("staticlib")) {
          project->values("TARGET").first().prepend("lib");
          project->values("TARGET").first() += ".a";
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.7 2008/07/24 12:55:20 markd Exp $
      } else {
          project->values("TARGETA").append(project->first("DESTDIR") + "lib" + project->first("TARGET") + ".a");
          if(project->isActiveConfig("compile_libtool"))
-@@ -1436,7 +1442,7 @@ UnixMakefileGenerator::writePkgConfigFil
+@@ -1430,7 +1436,7 @@ UnixMakefileGenerator::writePkgConfigFil
              bundle = bundle.left(suffix);
          pkgConfiglibName = "-framework " + bundle + " ";
      } else {
