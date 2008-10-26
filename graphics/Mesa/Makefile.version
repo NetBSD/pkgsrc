@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.2 2008/10/21 06:25:26 bjs Exp $
+# $NetBSD: Makefile.version,v 1.3 2008/10/26 21:03:40 bjs Exp $
 #
 # When changing this version, please run "make distinfo" in the following
 # package directories:
@@ -14,7 +14,7 @@ MESA_SITES=		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 
 MESA_VERSION=		7.0.4
 MESA_PKGVERSION=	${MESA_VERSION}${MESA_PATCHLEVEL}
-MESA_PATCHFILES=	001
+MESA_PATCHFILES=	001 002
 MESA_PATCHLEVEL=	.1
 
 PATCHFILES=		${MESA_PATCHFILES:@.p.@Mesa-${MESA_VERSION}-${.p.}@}
