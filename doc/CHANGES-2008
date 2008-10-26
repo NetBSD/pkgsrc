@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2674 2008/10/26 09:21:24 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2675 2008/10/26 09:52:25 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4568,3 +4568,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/ruby-eet version 0.1.4 [minskim 2008-10-26]
 	Added lang/embryo version 0.9.9.050 [minskim 2008-10-26]
 	Updated graphics/pngcrush to 1.6.10 [adam 2008-10-26]
+	Added games/sex version 1.0 [bjs 2008-10-26]
