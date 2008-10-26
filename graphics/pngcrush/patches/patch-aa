@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2008/07/18 08:41:20 adam Exp $
+$NetBSD: patch-aa,v 1.8 2008/10/26 09:19:16 adam Exp $
 
---- pngcrush.c.orig	2008-06-13 03:50:52.000000000 +0200
+--- pngcrush.c.orig	2008-08-25 21:00:08.000000000 +0200
 +++ pngcrush.c
-@@ -624,9 +624,6 @@ void png_crc_read(png_structp png_ptr, p
+@@ -632,9 +632,6 @@ void png_crc_read(png_structp png_ptr, p
  int png_crc_error(png_structp png_ptr);
  int png_crc_finish(png_structp png_ptr, png_uint_32 skip);
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.7 2008/07/18 08:41:20 adam Exp $
  
  #ifdef PNG_USER_MEM_SUPPORTED
  png_voidp png_debug_malloc(png_structp png_ptr, png_uint_32 size);
-@@ -662,38 +659,6 @@ void print_usage(int retval);
+@@ -670,38 +667,6 @@ void print_usage(int retval);
   * ============================================================
   */
  
@@ -51,3 +51,12 @@ $NetBSD: patch-aa,v 1.7 2008/07/18 08:41:20 adam Exp $
  /* Reset the CRC variable to 32 bits of 1's.  Care must be taken
   * in case CRC is > 32 bits to leave the top bits 0.
   */
+@@ -2821,7 +2786,7 @@ int main(int argc, char *argv[])
+ #if !defined(PNG_cHRM_SUPPORTED) || !defined(PNG_hIST_SUPPORTED) || \
+     !defined(PNG_iCCP_SUPPORTED) || !defined(PNG_sCAL_SUPPORTED) || \
+     !defined(PNG_pCAL_SUPPORTED) || !defined(PNG_sPLT_SUPPORTED) || \
+-    !defined(PNG_tIME_SUPPORTED)
++    !defined(PNG_tIME_SUPPORTED) || !defined(PNG_sTER_SUPPORTED)
+                         png_byte chunk_name[5];
+                         chunk_name[4] = '\0';
+ #endif
