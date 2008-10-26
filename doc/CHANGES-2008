@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2681 2008/10/26 11:44:08 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2682 2008/10/26 13:44:40 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4575,3 +4575,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/tokyotyrant to 1.1.7 [obache 2008-10-26]
 	Added databases/p5-tokyotyrant version 1.2 [obache 2008-10-26]
 	Added databases/ruby-tokyotyrant version 1.0 [obache 2008-10-26]
+	Updated print/gutenprint51-lib to 5.2.1 [gdt 2008-10-26]
