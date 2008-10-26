@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2008/09/09 12:47:48 kefren Exp $
+# $NetBSD: Makefile,v 1.308 2008/10/26 09:53:16 bjs Exp $
 #
 
 COMMENT=	Games
@@ -213,6 +213,7 @@ SUBDIR+=	scummvm
 SUBDIR+=	scummvm-bass
 SUBDIR+=	scummvm-fotaq
 SUBDIR+=	scummvm-tools
+SUBDIR+=	sex
 SUBDIR+=	simgear
 SUBDIR+=	singularity
 SUBDIR+=	sirius
