@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2705 2008/10/27 14:37:47 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2706 2008/10/27 14:39:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4611,3 +4611,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated libspf_alt-0.4.0nb4 [tron 2008-10-27]
 	Updated x11/gnome-themes to 2.24.1 [wiz 2008-10-27]
 	Updated fonts/gucharmap to 2.24.1 [wiz 2008-10-27]
+	Updated inputmethod/tomoe-gtk to 0.6.0nb1 [wiz 2008-10-27]
