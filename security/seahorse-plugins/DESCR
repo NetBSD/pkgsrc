@@ -1,0 +1,7 @@
+Seahorse is a GNOME front-end for GnuGP.  It can be used for signing,
+encrypting, verifying and decrypting text and files.  The text can be
+taken from the clipboard, or written directly in the little editor it
+has.  Seahorse is also a keymanager, which can be used to edit almost
+all the properties of the keys stored in your keyrings.
+
+This package contains various plugins for Seahorse.
