@@ -89,6 +89,7 @@ emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
 enchant-zemberek	Add spell checking support for Turkish.
 epoll			Enable support for epoll I/O event notification facility
 esound			Enable support for the Enlightment Sound Daemon.
+evolution-data-server	Enable support for evolution-data-server.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
 exim-lookup-dnsdb	Use DNS for lookups (as general database facility).
