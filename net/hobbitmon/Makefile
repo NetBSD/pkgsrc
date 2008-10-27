@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2008/01/18 05:08:42 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2008/10/27 01:05:59 dholland Exp $
 #
 
 DISTNAME=	hobbit-4.0-beta6
 PKGNAME=	hobbit-4.0b6
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hobbitmon/}
 
@@ -14,7 +14,8 @@ COMMENT=	Network services monitor a la Big Brother
 DEPENDS+=	fping>2:../../net/fping
 
 HAS_CONFIGURE=	YES
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run
+REPLACE_PERL+=	hobbitd/maint.pl.DIST
 INSTALL_TARGET=	setup
 
 .include "../../mk/bsd.prefs.mk"
