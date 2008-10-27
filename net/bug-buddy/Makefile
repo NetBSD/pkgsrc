@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2008/10/27 01:37:05 wiz Exp $
 #
 
-DISTNAME=		bug-buddy-2.22.0
-PKGREVISION=		1
+DISTNAME=		bug-buddy-2.24.1
 CATEGORIES=		net gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/bug-buddy/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -23,11 +22,7 @@ CPPFLAGS+=	-I${LOCALBASE}/include/libelf
 
 GCONF_SCHEMAS=		bug-buddy.schemas
 
-#XXX optional?
-CONFIGURE_ARGS+=	--disable-eds
-
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.9.0
-BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.96
+.include "options.mk"
 
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../devel/GConf/schemas.mk"
@@ -39,16 +34,13 @@ BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.96
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libelf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
-#XXX optional?
-#.include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.14.2
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
