@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.106 2008/10/26 23:33:18 gdt Exp $
+# $NetBSD: Makefile,v 1.107 2008/10/27 17:22:39 gdt Exp $
 #
 
 DISTNAME=		gnome-session-2.24.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.24/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -16,6 +16,8 @@ COMMENT=		GNOME2 session management utilities
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-core<1.4.2nb4
+
+BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=		yes
