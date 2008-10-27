@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2699 2008/10/27 04:24:50 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2700 2008/10/27 04:37:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4604,3 +4604,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/bug-buddy to 2.24.1 [wiz 2008-10-27]
 	Updated devel/gdl to 2.24.0 [wiz 2008-10-27]
 	Updated x11/gnome-applets to 2.24.1 [wiz 2008-10-27]
+	Updated audio/gnome-speech to 0.4.21 [wiz 2008-10-27]
