@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2691 2008/10/27 00:01:19 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2692 2008/10/27 00:02:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4595,3 +4595,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/evolution to 2.24.1 [wiz 2008-10-26]
 	Updated mail/evolution-exchange to 2.24.1 [wiz 2008-10-26]
 	Updated time/evolution-webcal to 2.24.0 [wiz 2008-10-27]
+	Added devel/p5-MooseX-Param version 0.02 [he 2008-10-27]
