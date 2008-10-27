@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2693 2008/10/27 00:05:10 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2694 2008/10/27 00:34:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4598,3 +4598,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-MooseX-Param version 0.02 [he 2008-10-27]
 	Updated devel/p5-Class-MOP to 0.68 [seb 2008-10-27]
 	Updated devel/p5-Moose to 0.60 [seb 2008-10-27]
+	Updated misc/orca to 2.24.1 [wiz 2008-10-27]
