@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2701 2008/10/27 04:37:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2702 2008/10/27 04:54:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4606,3 +4606,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-applets to 2.24.1 [wiz 2008-10-27]
 	Updated audio/gnome-speech to 0.4.21 [wiz 2008-10-27]
 	Updated audio/gnome-speech-espeak to 0.4.21 [wiz 2008-10-27]
+	Updated x11/gtk2-engines to 2.16.1 [wiz 2008-10-27]
