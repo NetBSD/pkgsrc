@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.18 2008/04/15 19:07:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/10/27 01:37:05 wiz Exp $
 bin/bug-buddy
 lib/gtk-2.0/modules/libgnomebreakpad.la
+man/man1/bug-buddy.1
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.gtkbuilder
 share/bug-buddy/bug-buddy.menu
-share/bug-buddy/bug-buddy.png
 share/bug-buddy/bugzilla/gnome.bugzilla
 share/bug-buddy/bugzilla/gnome/config
 share/bug-buddy/bugzilla/gnome/mostfreq
@@ -15,7 +15,13 @@ share/bug-buddy/bugzilla/ximian/mostfreq
 share/bug-buddy/bugzilla/ximian/products
 share/bug-buddy/gdb-cmd
 share/gconf/schemas/bug-buddy.schemas
+share/icons/HighContrastLargePrint/48x48/apps/bug-buddy.png
+share/icons/hicolor/16x16/apps/bug-buddy.png
+share/icons/hicolor/22x22/apps/bug-buddy.png
+share/icons/hicolor/24x24/apps/bug-buddy.png
+share/icons/hicolor/32x32/apps/bug-buddy.png
 share/icons/hicolor/48x48/apps/bug-buddy.png
+share/icons/hicolor/scalable/apps/bug-buddy.svg
 share/locale/af/LC_MESSAGES/bug-buddy.mo
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
@@ -54,6 +60,7 @@ share/locale/is/LC_MESSAGES/bug-buddy.mo
 share/locale/it/LC_MESSAGES/bug-buddy.mo
 share/locale/ja/LC_MESSAGES/bug-buddy.mo
 share/locale/ka/LC_MESSAGES/bug-buddy.mo
+share/locale/kn/LC_MESSAGES/bug-buddy.mo
 share/locale/ko/LC_MESSAGES/bug-buddy.mo
 share/locale/ku/LC_MESSAGES/bug-buddy.mo
 share/locale/ky/LC_MESSAGES/bug-buddy.mo
@@ -73,6 +80,7 @@ share/locale/oc/LC_MESSAGES/bug-buddy.mo
 share/locale/or/LC_MESSAGES/bug-buddy.mo
 share/locale/pa/LC_MESSAGES/bug-buddy.mo
 share/locale/pl/LC_MESSAGES/bug-buddy.mo
+share/locale/ps/LC_MESSAGES/bug-buddy.mo
 share/locale/pt/LC_MESSAGES/bug-buddy.mo
 share/locale/pt_BR/LC_MESSAGES/bug-buddy.mo
 share/locale/ro/LC_MESSAGES/bug-buddy.mo
@@ -83,7 +91,7 @@ share/locale/sk/LC_MESSAGES/bug-buddy.mo
 share/locale/sl/LC_MESSAGES/bug-buddy.mo
 share/locale/sq/LC_MESSAGES/bug-buddy.mo
 share/locale/sr/LC_MESSAGES/bug-buddy.mo
-share/locale/sr@Latn/LC_MESSAGES/bug-buddy.mo
+share/locale/sr@latin/LC_MESSAGES/bug-buddy.mo
 share/locale/sv/LC_MESSAGES/bug-buddy.mo
 share/locale/ta/LC_MESSAGES/bug-buddy.mo
 share/locale/te/LC_MESSAGES/bug-buddy.mo
