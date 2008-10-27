@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7625 2008/10/27 16:58:33 wiz Exp $
+$NetBSD: TODO,v 1.7626 2008/10/27 17:00:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -472,6 +472,7 @@ Suggested package updates
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o capc-calc-2.12.4
 	o capistrano-2.4.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
@@ -479,6 +480,7 @@ Suggested package updates
 	o cdlabelgen-4.0.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.7.1
+	o cdrtools-2.01.01.52
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -492,6 +494,7 @@ Suggested package updates
 	o cjk-lyx-1.4.4
 	o classpath-0.97.2
 	o climm-0.6.3
+	o clisp-2.47
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.7.8
@@ -690,6 +693,9 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-bad-0.10.9
+	o gst-plugins0.10-good-0.10.11
+	o gst-plugins0.10-ugly-0.10.9
 	o gtexinfo-4.13
 	o gthumb-2.10.10
 	o gtick-0.4.2
@@ -701,7 +707,6 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o gucharmap-2.24.0
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
 	o gv-3.6.6
@@ -893,7 +898,7 @@ Suggested package updates
 	o nagios-3.0.4
 	o nano-2.0.8
 	o nap-1.5.3
-	o nasm-2.04
+	o nasm-2.05
 	o nautilus-cd-burner-2.22.1 [needs hal]
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
@@ -944,7 +949,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openssl-0.9.8i
 	o openttd-0.6.1
-	o opera-9.60
+	o opera-9.61
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -955,9 +960,10 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-DBD-Oracle-1.21
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-4.008
+	o p5-DBD-mysql-4.010
 	o p5-DateTime-Locale-0.4200
 	o p5-DateTime-TimeZone-0.82
+	o p5-Finance-Quote-1.14
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IO-Socket-SSL-1.17
 	o p5-Locale-Maketext-Lexicon-0.68
@@ -977,7 +983,8 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-Simple-0.84
 	o p5-Text-Tabs+Wrap-2006.1117
-	o p5-XML-Feed-0.21
+	o p5-XML-Atom-0.29
+	o p5-XML-Feed-0.23
 	o p5-XML-RSS-1.36
 	o p5-glib2-1.200
 	o p5-gtk2-1.201
@@ -989,14 +996,14 @@ Suggested package updates
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parpd-1.1 [pkg/39789]
-	o parrot-0.7.1
+	o parrot-0.8.0
 	o patchutils-0.3.0
 	o pcal-4.8
 	o pciutils-2.2.9
 	o pcmanfm-0.5
 	o pdmenu-1.2.87
 	o pear-1.6.2
-	o pear-Console_Table-1.1.2
+	o pear-Console_Table-1.1.3
 	o pear-DB-1.7.13
 	o pear-HTTP_Request-1.4.0
 	o pear-Image_Canvas-0.3.0
@@ -1019,8 +1026,8 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-3.0.0
-	o phppgadmin-4.2
+	o phpmyadmin-3.0.1
+	o phppgadmin-4.2.1
 	o phylip-3.65
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1095,6 +1102,7 @@ Suggested package updates
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.11
 	o py-psycopg-2.0.8
+	o py-pytz-2008h
 	o py-reportlab-2.2
 	o py-soappy-0.11.6
 	o py-sqlite2-2.5.0a
@@ -1165,6 +1173,7 @@ Suggested package updates
 	o sch-3.8.3
 	o scilab-5.0.2
 	o scm-5e5
+	o scmgit-base-1.6.0.3
 	o scons-0.98.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1273,7 +1282,7 @@ Suggested package updates
 	o ucarp-1.5
 	o ucblogo-5.5
 	o udunits-1.12.9
-	o uim-1.5.3
+	o uim-1.5.4
 	o unicap-0.9.3
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
@@ -1312,13 +1321,13 @@ Suggested package updates
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o worker-2.16.5
-	o wpa_gui-0.5.7
+	o wpa_gui-0.6.4 [pkg/39811]
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9d
 	o wxRemind-86
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20081018
+	o x264-devel-20081025
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
@@ -1370,6 +1379,7 @@ Suggested package updates
 	o xmp-2.5.1 [pkg/38499]
 	o xmule-1.12.2
 	o xnap-2.5r3
+	o xorg-util-macros-1.1.6
 	o xpad-2.13
 	o xpuyopuyo-0.9.8
 	o xrmap-anthems-1.2
