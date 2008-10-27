@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2703 2008/10/27 10:25:37 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2704 2008/10/27 13:30:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4609,3 +4609,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gtk2-engines to 2.16.1 [wiz 2008-10-27]
 	Updated mail/libspf2 to 1.2.8nb1 [tron 2008-10-27]
 	Updated libspf_alt-0.4.0nb4 [tron 2008-10-27]
+	Updated x11/gnome-themes to 2.24.1 [wiz 2008-10-27]
