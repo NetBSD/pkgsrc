@@ -1,10 +1,10 @@
-# $NetBSD: modules.mk,v 1.2 2008/10/13 08:07:02 uebayasi Exp $
+# $NetBSD: modules.mk,v 1.3 2008/10/27 15:34:46 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
 # Note to users:
 #
-#	* Users choose one favourite Emacs version (default GNU Emacs 21).
+#	* Users choose one favourite Emacs version (default GNU Emacs 22).
 #
 #	* Emacs Lisp files are installed...
 #	  	GNU emacs
