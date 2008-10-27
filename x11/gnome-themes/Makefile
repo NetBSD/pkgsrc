@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2008/08/19 13:40:10 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2008/10/27 13:30:13 wiz Exp $
 #
 
-DISTNAME=		gnome-themes-2.22.2
+DISTNAME=		gnome-themes-2.24.1
 CATEGORIES=		x11
-PKGREVISION=		1
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-themes/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -54,7 +53,7 @@ dont-pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/Crux/${f}
 .endfor
 
-BUILDLINK_API_DEPENDS.gtk2-engines+=    gtk2-engines>=2.9.0
+BUILDLINK_API_DEPENDS.gtk2-engines+=    gtk2-engines>=2.15.3
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
