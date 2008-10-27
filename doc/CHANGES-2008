@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2708 2008/10/27 16:02:34 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.2709 2008/10/27 16:52:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4613,3 +4613,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/gucharmap to 2.24.1 [wiz 2008-10-27]
 	Updated inputmethod/tomoe-gtk to 0.6.0nb1 [wiz 2008-10-27]
 	Updated x11/gnome-applets to 2.24.1nb1 [wiz 2008-10-27]
+	Updated security/seahorse to 2.24.1 [wiz 2008-10-27]
