@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: options.mk,v 1.3 2008/10/27 18:07:23 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.clisp
 
@@ -60,9 +60,8 @@ CONFIGURE_ARGS+=	--with-module=gdbm
 .if !empty(PKG_OPTIONS:Mbdb)
 # it requires version 4, not anything older
 CONFIGURE_ARGS+=	--with-module=berkeley-db
-.  include "../../databases/db4/buildlink3.mk"
-CPPFLAGS+=	-I${PREFIX}/include/db4
-LDFLAGS+=	-L${PREFIX}/lib
+BUILDLINK_TRANSFORM+=	l:db:db46
+.  include "../../databases/db46/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mpcre)
