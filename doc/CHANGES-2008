@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2694 2008/10/27 00:34:05 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2695 2008/10/27 01:06:31 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4599,3 +4599,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-MOP to 0.68 [seb 2008-10-27]
 	Updated devel/p5-Moose to 0.60 [seb 2008-10-27]
 	Updated misc/orca to 2.24.1 [wiz 2008-10-27]
+	Updated net/hobbitmon to 4.0b6nb12 [dholland 2008-10-27]
