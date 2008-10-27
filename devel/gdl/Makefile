@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/27 02:17:12 wiz Exp $
 #
 
-DISTNAME=	gdl-0.7.11
+DISTNAME=	gdl-2.24.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdl/0.7/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdl/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,7 +17,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl intltool msgfmt gmake
 
 PKGCONFIG_OVERRIDE+=	gdl-1.0.pc.in
-PKGCONFIG_OVERRIDE+=	gdl-gnome-1.0.pc.in
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
