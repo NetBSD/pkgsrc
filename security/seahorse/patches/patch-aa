@@ -1,15 +1,49 @@
-$NetBSD: patch-aa,v 1.9 2007/06/12 20:09:11 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
 
---- Makefile.am.orig	2007-06-12 19:57:32.000000000 +0000
-+++ Makefile.am
-@@ -16,8 +16,8 @@ SUBDIRS = libcryptui \
-           help \
-           pixmaps \
-           plugins \
--          $(AGENT_DIR) \
--          daemon 
-+          daemon \
-+          $(AGENT_DIR)
+--- configure.orig	2008-10-27 14:54:33.000000000 +0000
++++ configure
+@@ -17343,7 +17343,7 @@ _ACEOF
  
- EXTRA_DIST = \
-     AUTHORS \
+ fi
+ 
+- if test "$enable_pgp" == "yes"; then
++ if test "$enable_pgp" = "yes"; then
+   WITH_PGP_TRUE=
+   WITH_PGP_FALSE='#'
+ else
+@@ -18602,7 +18602,7 @@ else
+ echo "${ECHO_T}yes" >&6; }
+ 	enable_pkcs11="yes"
+ fi
+-	if test "$enable_pkcs11" == "yes"; then
++	if test "$enable_pkcs11" = "yes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define WITH_PKCS11 1
+@@ -18613,7 +18613,7 @@ _ACEOF
+ 	fi
+ fi
+ 
+- if test "$enable_pkcs11" == "yes"; then
++ if test "$enable_pkcs11" = "yes"; then
+   WITH_PKCS11_TRUE=
+   WITH_PKCS11_FALSE='#'
+ else
+@@ -18738,7 +18738,7 @@ _ACEOF
+ 
+ fi
+ 
+- if test "$enable_ssh" == "yes"; then
++ if test "$enable_ssh" = "yes"; then
+   WITH_SSH_TRUE=
+   WITH_SSH_FALSE='#'
+ else
+@@ -18795,7 +18795,7 @@ if test "$enable_tests" != "yes"; then
+     enable_tests="no"
+ fi
+ 
+- if test "$enable_tests" == "yes"; then
++ if test "$enable_tests" = "yes"; then
+   WITH_TESTS_TRUE=
+   WITH_TESTS_FALSE='#'
+ else
