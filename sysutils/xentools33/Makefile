@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2008/10/08 19:13:41 cegger Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/27 14:02:06 cegger Exp $
 #
 
 VERSION=		3.3.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools33-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=		.tar.gz
@@ -29,7 +29,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
-CONFLICTS+=		xentools30-* xentools3-* xentools32-*
+CONFLICTS+=		xentools30-* xentools3-*
 
 WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
 CHECK_PORTABILITY_SKIP=	examples/* xm-test/ramdisk/make-release.sh
@@ -148,13 +148,6 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/scripts /var/log/xen
 
 pre-build:
 	rm -f ${WRKSRC}/check/check_x11_devel
-.if ${MACHINE_ARCH} == "x86_64"
-	${MKDIR} ${WRKSRC}/include/machine
-	${TEST} -f ${WRKSRC}/include/machine/int_types.h || \
-	    ${CP} ${FILESDIR}/int_types.h ${WRKSRC}/include/machine
-	${TEST} -f ${WRKSRC}/libxc/include/elf_machdep.h || \
-	    ${CP} ${FILESDIR}/elf_machdep.h ${WRKSRC}/include/machine
-.endif
 .for s in ${BLKTAP_FILES}
 	cp ${FILESDIR}/${s} ${WRKSRC}/blktap/drivers/
 .endfor
