@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2711 2008/10/27 17:07:46 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2712 2008/10/27 18:07:53 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4618,3 +4618,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed security/seahorse-nautilus successor security/seahorse-plugins [wiz 2008-10-27]
 	Removed security/seahorse-gedit successor security/seahorse-plugins [wiz 2008-10-27]
 	Removed x11/libzvt successor x11/vte [wiz 2008-10-27]
+	Updated lang/clisp to 2.47 [tnn 2008-10-27]
