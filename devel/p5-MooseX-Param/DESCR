@@ -1,0 +1,6 @@
+This is a very simple Moose role which provides a CGI like param
+method.
+
+I found that I had written this code over and over and over and
+over again, and each time it was the same. So I thought, why not
+put it in a role?
