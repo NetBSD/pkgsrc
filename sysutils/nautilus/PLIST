@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/16 17:58:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/10/27 01:13:06 wiz Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -38,7 +38,6 @@ share/gtk-doc/html/libnautilus-extension/index.sgml
 share/gtk-doc/html/libnautilus-extension/ix01.html
 share/gtk-doc/html/libnautilus-extension/left.png
 share/gtk-doc/html/libnautilus-extension/libnautilus-extension-nautilus-column-provider.html
-share/gtk-doc/html/libnautilus-extension/libnautilus-extension-nautilus-extension-i18n.html
 share/gtk-doc/html/libnautilus-extension/libnautilus-extension-nautilus-extension-types.html
 share/gtk-doc/html/libnautilus-extension/libnautilus-extension-nautilus-file-info.html
 share/gtk-doc/html/libnautilus-extension/libnautilus-extension-nautilus-info-provider.html
@@ -220,6 +219,9 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @dirrm share/gtk-doc/html/libnautilus-extension
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/nautilus/extensions-2.0
+@dirrm lib/nautilus/extensions-1.0
+@dirrm lib/nautilus
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/nautilus/libnautilus-extension
 @dirrm include/nautilus
