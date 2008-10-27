@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2712 2008/10/27 18:07:53 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.2713 2008/10/27 19:36:54 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4608,7 +4608,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/gnome-speech-espeak to 0.4.21 [wiz 2008-10-27]
 	Updated x11/gtk2-engines to 2.16.1 [wiz 2008-10-27]
 	Updated mail/libspf2 to 1.2.8nb1 [tron 2008-10-27]
-	Updated mail/libspf-alt-0.4.0nb4 [tron 2008-10-27]
+	Updated mail/libspf-alt to 0.4.0nb4 [tron 2008-10-27]
 	Updated x11/gnome-themes to 2.24.1 [wiz 2008-10-27]
 	Updated fonts/gucharmap to 2.24.1 [wiz 2008-10-27]
 	Updated inputmethod/tomoe-gtk to 0.6.0nb1 [wiz 2008-10-27]
