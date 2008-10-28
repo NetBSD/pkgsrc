@@ -1,0 +1,268 @@
+$NetBSD: patch-ah,v 1.1 2008/10/28 22:23:40 wiz Exp $
+
+--- src/minisoup.cc.orig	2008-03-05 21:31:06.000000000 +0000
++++ src/minisoup.cc
+@@ -61,8 +61,8 @@ namespace Bmp
+     {
+       g_signal_connect (G_OBJECT (m_message), "got-chunk", G_CALLBACK (got_chunk), this);
+       g_signal_connect (G_OBJECT (m_message), "restarted", G_CALLBACK (restarted), this);
+-      soup_message_add_header_handler (m_message, "content-length", SOUP_HANDLER_PRE_BODY,
+-                                       SoupMessageCallbackFn (got_content_length), this);
++      soup_message_add_header_handler (m_message, "got-headers", "content-length",
++                                       G_CALLBACK (got_content_length), this);
+       return soup_session_send_message (m_session, m_message);
+     }
+   
+@@ -76,26 +76,26 @@ namespace Bmp
+     RequestSync::get_data ()
+     {
+       std::string buffer;
+-      buffer.append (m_message->response.body, m_message->response.length);
++      buffer.append (m_message->response_body->data, m_message->response_body->length);
+       return buffer;
+     }
+ 
+     void
+     RequestSync::get_data (std::string & buffer)
+     {
+-      buffer.append (m_message->response.body, m_message->response.length);
++      buffer.append (m_message->response_body->data, m_message->response_body->length);
+     }
+ 
+     char const*
+     RequestSync::get_data_raw ()
+     {
+-      return m_message->response.body;
++      return m_message->response_body->data;
+     }
+ 
+     guint
+     RequestSync::get_data_size ()
+     {
+-      return m_message->response.length;
++      return m_message->response_body->length;
+     }
+ 
+ 
+@@ -103,15 +103,15 @@ namespace Bmp
+     RequestSync::add_header (std::string const& name,
+                              std::string const& value) 
+     {
+-      soup_message_add_header (m_message->request_headers, name.c_str(), value.c_str());   
++      soup_message_headers_append (m_message->request_headers, name.c_str(), value.c_str());   
+     }
+ 
+     void
+     RequestSync::add_request (std::string const& type,
+                               std::string const& request)
+     {
+-      soup_message_set_request (m_message, type.c_str(), SOUP_BUFFER_SYSTEM_OWNED /* we can't rely on the std::string not being destroyed */,
+-        g_strdup (const_cast<char*>(request.c_str())), strlen (request.c_str()));
++      soup_message_set_request (m_message, type.c_str(), SOUP_MEMORY_COPY,
++        request.c_str(), strlen (request.c_str()));
+       m_post = true;
+     }
+ 
+@@ -126,11 +126,11 @@ namespace Bmp
+     }
+ 
+     void
+-    RequestSync::got_chunk (SoupMessage* message, gpointer data)
++    RequestSync::got_chunk (SoupMessage* message, SoupBuffer* chunk, gpointer data)
+     {
+       RequestSync & request = (*(reinterpret_cast<RequestSync*>(data)));
+ 
+-      request.m_read += message->response.length;
++      request.m_read += chunk->length;
+       double percent = (double (request.m_read) / double (request.m_size));
+       if(percent >= 0. && percent <= 1.)
+       {
+@@ -142,7 +142,7 @@ namespace Bmp
+     RequestSync::got_content_length (SoupMessage* message, gpointer data)
+     {
+       RequestSync & request = (*(reinterpret_cast<RequestSync*>(data)));
+-      request.m_size = g_ascii_strtoull (soup_message_get_header (message->response_headers, "content-length"), NULL, 10);
++      request.m_size = soup_message_headers_get_content_length (message->response_headers);
+     }
+ 
+ 
+@@ -181,17 +181,17 @@ namespace Bmp
+       return m_message->status_code;
+     }
+ 
+-    guint
+-    Request::message_status ()
+-    {
+-      return m_message->status;
+-    }
++    //guint
++    //Request::message_status ()
++    //{
++    //  return m_message->status;
++    //}
+ 
+     void
+     Request::run ()
+     {
+       g_signal_connect (G_OBJECT (m_message), "restarted", G_CALLBACK (restarted), this);
+-      soup_session_queue_message (m_session, m_message, SoupMessageCallbackFn (got_answer), this);
++      soup_session_queue_message (m_session, m_message, SoupSessionCallback (got_answer), this);
+     }
+ 
+     void
+@@ -200,9 +200,6 @@ namespace Bmp
+       if (G_IS_OBJECT(m_session))
+       {
+             soup_session_abort (m_session);
+-            //soup_message_set_status (m_message, SOUP_STATUS_CANCELLED);
+-            //soup_session_cancel_message (m_session, m_message);
+-            //m_message = 0;
+       }
+     }
+ 
+@@ -211,15 +208,15 @@ namespace Bmp
+     Request::add_header (std::string const& name,
+                          std::string const& value) 
+     {
+-      soup_message_add_header (m_message->request_headers, name.c_str(), value.c_str());   
++      soup_message_headers_append (m_message->request_headers, name.c_str(), value.c_str());   
+     }
+ 
+     void
+     Request::add_request (std::string const& type,
+                           std::string const& request)
+     {
+-      soup_message_set_request (m_message, type.c_str(), SOUP_BUFFER_SYSTEM_OWNED /* we can't rely on the std::string not being destroyed */,
+-        g_strdup (const_cast<char*>(request.c_str())), strlen (request.c_str()));
++      soup_message_set_request (m_message, type.c_str(), SOUP_MEMORY_COPY,
++        request.c_str(), strlen (request.c_str()));
+       m_post = true;
+     }
+ 
+@@ -231,7 +228,7 @@ namespace Bmp
+     }
+ 
+     void
+-    Request::got_answer (SoupMessage* message, gpointer data)
++    Request::got_answer (SoupSession* session, SoupMessage* message, gpointer data)
+     {
+       Request & request = (*(reinterpret_cast<Request*>(data)));
+ 
+@@ -242,15 +239,12 @@ namespace Bmp
+       if( block )
+         return;
+ 
+-      if( request.m_message->status != SOUP_MESSAGE_STATUS_FINISHED )
+-        return;
+-
+       //if( request.m_message->status_code == SOUP_STATUS_CANCELLED )
+         //return;
+ 
+       request.Signals.Callback.emit(
+-                                      request.m_message->response.body, 
+-                                      request.m_message->response.length,
++                                      request.m_message->response_body->data, 
++                                      request.m_message->response_body->length,
+                                       request.m_message->status_code
+                                     );
+     }
+@@ -270,6 +264,7 @@ namespace Bmp
+ 
+       m_session = soup_session_async_new ();
+       m_message = soup_message_new ("GET", m_url.c_str());
++      soup_message_set_flags (m_message, SOUP_MESSAGE_OVERWRITE_CHUNKS);
+     }
+ 
+     Glib::RefPtr<RequestFile>
+@@ -280,9 +275,9 @@ namespace Bmp
+ 
+     RequestFile::~RequestFile ()
+     {
+-      if (G_IS_OBJECT(m_message) && m_message->status == SOUP_MESSAGE_STATUS_RUNNING)
++      if (m_file.is_open())
+       {
+-            cancel ();
++	    cancel ();
+             Signals.Aborted.emit ((boost::format (_("Download of file '%s' was cancelled prematurely!")) % filename_to_utf8 (m_filename).c_str()).str());
+       }
+       g_object_unref (m_session);
+@@ -317,9 +312,9 @@ namespace Bmp
+     {
+       g_signal_connect (G_OBJECT (m_message), "got-chunk", G_CALLBACK (got_chunk), this);
+       g_signal_connect (G_OBJECT (m_message), "restarted", G_CALLBACK (restarted), this);
+-      soup_message_add_header_handler (m_message, "content-length", SOUP_HANDLER_PRE_BODY,
+-                                       SoupMessageCallbackFn (got_content_length), this);
+-      soup_session_queue_message (m_session, m_message, SoupMessageCallbackFn (got_answer), this);
++      soup_message_add_header_handler (m_message, "got-headers", "content-length",
++                                       G_CALLBACK (got_content_length), this);
++      soup_session_queue_message (m_session, m_message, SoupSessionCallback (got_answer), this);
+       fileOpen ();
+     }
+ 
+@@ -328,8 +323,7 @@ namespace Bmp
+     {
+       if (G_IS_OBJECT(m_message))
+       {
+-            soup_message_set_status (m_message, SOUP_STATUS_CANCELLED);
+-            soup_session_cancel_message (m_session, m_message);
++            soup_session_cancel_message (m_session, m_message, SOUP_STATUS_CANCELLED);
+             m_message = 0;
+       }
+       
+@@ -341,7 +335,7 @@ namespace Bmp
+     RequestFile::add_header (std::string const& name,
+                              std::string const& value) 
+     {
+-      soup_message_add_header (m_message->request_headers, name.c_str(), value.c_str());   
++      soup_message_headers_append (m_message->request_headers, name.c_str(), value.c_str());   
+     }
+ 
+ 
+@@ -357,7 +351,7 @@ namespace Bmp
+     }
+ 
+     void
+-    RequestFile::got_answer (SoupMessage* message, gpointer data)
++    RequestFile::got_answer (SoupSession* session, SoupMessage* message, gpointer data)
+     {
+       RequestFile & request = (*(reinterpret_cast<RequestFile*>(data)));
+       
+@@ -369,25 +363,22 @@ namespace Bmp
+         return;
+       }
+ 
+-      if( request.m_message->status != SOUP_MESSAGE_STATUS_FINISHED )
+-        return;
+-
+       if( request.m_message->status_code == SOUP_STATUS_CANCELLED)
+         return;
+ 
+-      debug("soup","%s: status: %d, status_code: %d", G_STRLOC, request.m_message->status, request.m_message->status_code);
++      debug("soup","%s: status_code: %d", G_STRLOC, request.m_message->status_code);
+       
+       request.fileClose ();
+       request.Signals.Done.emit (request.m_filename);
+     }
+ 
+     void
+-    RequestFile::got_chunk (SoupMessage* message, gpointer data)
++    RequestFile::got_chunk (SoupMessage* message, SoupBuffer* chunk, gpointer data)
+     {
+       RequestFile & request = (*(reinterpret_cast<RequestFile*>(data)));
+ 
+-      request.m_file.write (message->response.body, message->response.length);
+-      request.m_read += message->response.length;
++      request.m_file.write (chunk->data, chunk->length);
++      request.m_read += chunk->length;
+ 
+       double percent = (double (request.m_read) / double (request.m_size));
+       if(percent >= 0. && percent <= 1.)
+@@ -400,7 +391,7 @@ namespace Bmp
+     RequestFile::got_content_length (SoupMessage* message, gpointer data)
+     {
+       RequestFile & request = (*(reinterpret_cast<RequestFile*>(data)));
+-      request.m_size = g_ascii_strtoull (soup_message_get_header (message->response_headers, "content-length"), NULL, 10);
++      request.m_size = soup_message_headers_get_content_length (message->response_headers);
+     }
+   }
+ }
