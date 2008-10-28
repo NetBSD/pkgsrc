@@ -1,4 +1,4 @@
-/*	$NetBSD: db.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: db.c,v 1.2 2008/10/28 18:01:06 joerg Exp $	*/
 /*	NetBSD: db.c,v 1.16 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -33,7 +33,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: db.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: db.c,v 1.2 2008/10/28 18:01:06 joerg Exp $");
 
 #include <sys/types.h>
 
@@ -53,6 +53,13 @@ DB *
 dbopen(const char *fname, int flags, mode_t mode, DBTYPE type,
     const void *openinfo)
 {
+
+#ifndef O_EXLOCK
+#define	O_EXLOCK 0
+#endif
+#ifndef O_SHLOCK
+#define O_SHLOCK 0
+#endif
 
 #define	DB_FLAGS	(DB_LOCK | DB_SHMEM | DB_TXN)
 #define	USE_OPEN_FLAGS							\
