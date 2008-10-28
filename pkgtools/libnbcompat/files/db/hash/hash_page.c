@@ -1,4 +1,4 @@
-/*	$NetBSD: hash_page.c,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: hash_page.c,v 1.2 2008/10/28 17:57:36 joerg Exp $	*/
 /*	NetBSD: hash_page.c,v 1.23 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: hash_page.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
+__RCSID("$NetBSD: hash_page.c,v 1.2 2008/10/28 17:57:36 joerg Exp $");
 
 /*
  * PACKAGE:  hashing
@@ -63,7 +63,7 @@ __RCSID("$NetBSD: hash_page.c,v 1.1 2008/10/10 00:21:43 joerg Exp $");
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <paths.h>
+#include <nbcompat/paths.h>
 #include <assert.h>
 
 #include <nbcompat/db.h>
