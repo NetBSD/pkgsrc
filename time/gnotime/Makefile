@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2008/10/28 23:38:33 wiz Exp $
 
-DISTNAME=	gnotime-2.2.1
-PKGREVISION=	16
+DISTNAME=	gnotime-2.3.0
 CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gttr/}
 
@@ -18,8 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		gnotime.schemas
-
-BUILDLINK_DEPMETHOD.libXt?=	build
+MAKE_ENV+=		GCONF_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR:Q}
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -28,13 +26,13 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
+.include "../../devel/qof/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
-.include "../../www/gtkhtml38/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
+.include "../../www/gtkhtml314/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
