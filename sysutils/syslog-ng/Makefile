@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/25 10:26:43 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/28 15:08:01 joerg Exp $
 
 DISTNAME=	syslog-ng-1.6.12
 CATEGORIES=	sysutils
@@ -8,7 +8,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
 COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax flex
 
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		syslogng
