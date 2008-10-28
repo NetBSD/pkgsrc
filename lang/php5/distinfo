@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2008/05/04 16:50:44 adrianp Exp $
+$NetBSD: distinfo,v 1.53 2008/10/28 07:07:58 adam Exp $
 
 SHA1 (php-5.2.6/php-5.2.6.tar.bz2) = 2a2b1afa657a7739a23784c869d57c3e0a7ad6b4
 RMD160 (php-5.2.6/php-5.2.6.tar.bz2) = 27f730d4b1ceb1c42ff03618dbfa0dc87a00990b
@@ -10,6 +10,6 @@ SHA1 (patch-ah) = c7cbd4b9ea0796ea3b7491c2cffb6ddddc518587
 SHA1 (patch-aj) = 54812097499c81e5cb0196ab949cc86a4f24a9cc
 SHA1 (patch-ak) = e3c654de196dc4b693b2d95e3ee131fa147125bc
 SHA1 (patch-al) = 0ee37782cc0d3bf5ede1a583de0589c2c1316b50
-SHA1 (patch-an) = f07a08f8ee1a18f6371af9bd6c482d936e9220e4
+SHA1 (patch-an) = d0578fa2d00932d6b5d97dfff525f4c0f9586bd5
 SHA1 (patch-ap) = 5eb0e0e4244a993da93e36f8fcb5553454207fce
 SHA1 (patch-aq) = 0c9d48547da2fa80aa8357d23ad8505d1c0330df
