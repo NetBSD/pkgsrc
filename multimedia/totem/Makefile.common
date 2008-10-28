@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.41 2008/10/16 17:26:07 drochner Exp $
+# $NetBSD: Makefile.common,v 1.42 2008/10/28 10:56:04 wiz Exp $
 #
+# used by multimedia/totem-nautilus/Makefile
+# used by multimedia/totem-xine/Makefile
 
-DISTNAME=	totem-2.24.2
+DISTNAME=	totem-2.24.3
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.24/}
 
@@ -20,7 +22,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
-GCONF_SCHEMAS=		totem.schemas
+GCONF_SCHEMAS=	totem.schemas
 GCONF_SCHEMAS+=	totem-handlers.schemas
 GCONF_SCHEMAS+=	totem-video-thumbnail.schemas
 
