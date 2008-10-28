@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2006/10/09 18:48:35 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2008/10/28 11:06:38 adam Exp $
 
---- pcapsource.h.orig	2006-10-09 20:20:31.000000000 +0000
+--- pcapsource.h.orig	2008-05-19 11:51:54.000000000 +0200
 +++ pcapsource.h
-@@ -280,7 +280,7 @@ public:
+@@ -395,7 +395,7 @@ public:
  };
  #endif
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.1 2006/10/09 18:48:35 joerg Exp $
  class RadiotapBSD {
  public:
      RadiotapBSD(const char *ifname);
-@@ -455,7 +455,7 @@ int chancontrol_openbsd_prism2(const cha
+@@ -584,7 +584,7 @@ int chancontrol_openbsd_prism2(const cha
                                 void *in_ext);
  #endif
  
