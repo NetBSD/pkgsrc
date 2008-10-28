@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/10/28 12:17:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.77 2008/10/28 12:18:13 jmcneill Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -65,6 +65,7 @@ DEPENDS+=	evolution-exchange>=2.10.1:../../mail/evolution-exchange
 #DEPENDS+=	gnome-volume-manager>=2.17.0:../../sysutils/gnome-volume-manager
 #DEPENDS+=	sound-juicer>=2.16.3:../../audio/sound-juicer
 DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
+DEPENDS+=	cheese-2.22.3:../../graphics/cheese
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.18.0:../../x11/py-gnome2-desktop
 #DEPENDS+=	gnome-power-manager-2.16.0.tar.bz2
 #DEPENDS+=	gnome-sharp-2.16.0.tar.bz2
