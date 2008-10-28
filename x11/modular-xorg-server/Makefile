@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2008/09/23 11:23:56 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/10/28 05:08:52 minskim Exp $
 #
 
 DISTNAME=	xorg-server-1.4.2
 PKGNAME=	modular-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -69,6 +70,8 @@ CONFIGURE_ARGS+=	--disable-xorgcfg	# deprecated
 CONFIGURE_ARGS+=	--with-int10=x86emu
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
+
+INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
