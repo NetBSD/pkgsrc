@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/07/04 20:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/28 11:06:38 adam Exp $
 
-DISTNAME=		kismet-2006-04-R1
-PKGNAME=		kismet-2006.04.01
-PKGREVISION=		2
+DISTNAME=		kismet-2008-05-R1
+PKGNAME=		kismet-2008.05.01
 CATEGORIES=		net
 MASTER_SITES=		http://www.kismetwireless.net/code/
 
@@ -10,10 +9,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kismetwireless.net/
 COMMENT=		802.11 wireless network detector, sniffer and IDS
 
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_NCURSES=		yes # needs libpanel
 USE_TOOLS+=		gmake perl:run
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+
 REPLACE_PERL+=		scripts/gpsmap-helper-earthamaps
 LIBS.NetBSD+=		-lm
 
@@ -42,8 +43,6 @@ CONF_FILES+=		${EGDIR}/kismet_ui.conf.default		\
 				${PKG_SYSCONFDIR}/kismet_ui.conf
 OWN_DIRS_PERMS+=	${VARBASE}/log/kismet ${KISMET_USER} ${KISMET_GROUP} 0700
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-
 SUBST_CLASSES+=		user
 SUBST_MESSAGE.user=	Fixing user name.
 SUBST_STAGE.user=	pre-configure
@@ -63,9 +62,9 @@ post-install:
 
 .include "options.mk"
 
-.include "../../devel/glib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

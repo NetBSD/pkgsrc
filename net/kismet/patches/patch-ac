@@ -1,19 +1,9 @@
-$NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2008/10/28 11:06:38 adam Exp $
 
---- pcapsource.cc.orig	2006-04-02 15:13:00.000000000 +0000
+--- pcapsource.cc.orig	2008-05-21 17:56:43.000000000 +0200
 +++ pcapsource.cc
-@@ -44,7 +44,9 @@ typedef unsigned long u64;
- #include <net/if_media.h>
- #include <netinet/in.h>
- #include <netinet/if_ether.h>
-+#if defined(SYS_OPENBSD)
- #include <dev/ic/if_wi_ieee.h>
-+#endif
- 
- #ifdef HAVE_RADIOTAP
- #include <net80211/ieee80211.h>
-@@ -54,12 +56,15 @@ typedef unsigned long u64;
- 
+@@ -72,12 +72,15 @@ extern "C" {
+ }
  #endif
  
 -#ifdef SYS_FREEBSD
@@ -30,7 +20,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
  #include <net80211/ieee80211_ioctl.h>
  #include <net80211/ieee80211_radiotap.h>
  #endif
-@@ -185,7 +190,7 @@ int PcapSource::DatalinkType() {
+@@ -247,7 +250,7 @@ int PcapSource::DatalinkType() {
      datalink_type = pcap_datalink(pd);
  
      // Blow up if we're not valid 802.11 headers
@@ -39,16 +29,16 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
      if (datalink_type == DLT_EN10MB) {
          fprintf(stderr, "WARNING:  pcap reports link type of EN10MB but we'll fake "
                  "it on BSD.\n"
-@@ -983,7 +988,7 @@ int PcapSourceOpenBSDPrism::FetchChannel
+@@ -1167,7 +1170,7 @@ carrier_type PcapSourceWrt54g::IEEE80211
  }
  #endif
  
 -#if (defined(HAVE_RADIOTAP) && (defined(SYS_NETBSD) || defined(SYS_OPENBSD) || defined(SYS_FREEBSD)))
 +#if (defined(HAVE_RADIOTAP) && (defined(SYS_NETBSD) || defined(SYS_OPENBSD) || defined(SYS_FREEBSD) || defined(__DragonFly__)))
  int PcapSourceRadiotap::OpenSource() {
-     // XXX this is a hack to avoid duplicating code
-     int s = PcapSource::OpenSource();
-@@ -1097,7 +1102,7 @@ KisPacketSource *pcapsource_openbsdprism
+ 	// XXX this is a hack to avoid duplicating code
+ 	int s = PcapSource::OpenSource();
+@@ -1289,7 +1292,7 @@ KisPacketSource *pcapsource_openbsdprism
  }
  #endif
  
@@ -57,7 +47,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
  KisPacketSource *pcapsource_radiotap_registrant(string in_name, string in_device,
                                                       char *in_err) {
      return new PcapSourceRadiotap(in_name, in_device);
-@@ -2698,7 +2703,7 @@ int chancontrol_openbsd_prism2(const cha
+@@ -2997,7 +3000,7 @@ int chancontrol_openbsd_prism2(const cha
  }
  #endif
  
@@ -66,7 +56,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
  RadiotapBSD::RadiotapBSD(const char *name) : ifname(name) {
      s = -1;
  }
-@@ -2849,7 +2854,7 @@ bool RadiotapBSD::set80211(int type, int
+@@ -3148,7 +3151,7 @@ bool RadiotapBSD::set80211(int type, int
      return true;
  }
  
@@ -75,7 +65,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
  
  bool RadiotapBSD::get80211(int type, int& val, int len, u_int8_t *data) {
      struct ieee80211req ireq;
-@@ -2898,7 +2903,7 @@ bool RadiotapBSD::getifflags(int& flags)
+@@ -3198,7 +3201,7 @@ bool RadiotapBSD::getifflags(int& flags)
      }
  #if defined(SYS_FREEBSD)
      flags = (ifr.ifr_flags & 0xffff) | (ifr.ifr_flagshigh << 16);
@@ -84,7 +74,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
      flags = ifr.ifr_flags;
  #endif
      return true;
-@@ -2915,7 +2920,7 @@ bool RadiotapBSD::setifflags(int flags) 
+@@ -3215,7 +3218,7 @@ bool RadiotapBSD::setifflags(int flags) 
  #if defined(SYS_FREEBSD)
      ifr.ifr_flags = flags & 0xffff;
      ifr.ifr_flagshigh = flags >> 16;
@@ -93,7 +83,7 @@ $NetBSD: patch-ac,v 1.2 2006/10/09 18:48:35 joerg Exp $
      ifr.ifr_flags = flags;
  #endif
      if (ioctl(s, SIOCSIFFLAGS, (caddr_t)&ifr) < 0) {
-@@ -2946,7 +2951,7 @@ bool RadiotapBSD::monitor_enable(int ini
+@@ -3246,7 +3249,7 @@ bool RadiotapBSD::monitor_enable(int ini
      }
  #if defined(SYS_FREEBSD)
      if (!setifflags(prev_flags | IFF_PPROMISC | IFF_UP)) {
