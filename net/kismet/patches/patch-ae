@@ -1,25 +1,27 @@
-$NetBSD: patch-ae,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
+$NetBSD: patch-ae,v 1.2 2008/10/28 11:06:38 adam Exp $
 
---- Makefile.in.orig	2005-08-16 01:22:51.000000000 +0000
+--- Makefile.in.orig	2008-05-29 21:18:26.000000000 +0200
 +++ Makefile.in
-@@ -130,58 +130,40 @@ checkuiconfig:
+@@ -139,52 +139,36 @@ checkuiconfig:
  	fi
  
  binuserinstall:
 -	install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(PS) $(BIN)/$(PS); 
 -	install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(DRONE) $(BIN)/$(DRONE);
-+	$(BSD_INSTALL_PROGRAM) $(PS) $(BIN)/$(PS); 
-+	$(BSD_INSTALL_PROGRAM) $(DRONE) $(BIN)/$(DRONE);
++	${BSD_INSTALL_PROGRAM} $(PS) $(BIN)/$(PS); 
++	${BSD_INSTALL_PROGRAM} $(DRONE) $(BIN)/$(DRONE);
  
  binsuidinstall:
- 	install -o $(INSTUSR) -g $(INSTGRP) -s -m 4755 $(PS) $(BIN)/$(PS); 
- 	install -o $(INSTUSR) -g $(INSTGRP) -s -m 4755 $(DRONE) $(BIN)/$(DRONE);
+-	install -o $(INSTUSR) -g $(INSTGRP) -s -m 4755 $(PS) $(BIN)/$(PS); 
+-	install -o $(INSTUSR) -g $(INSTGRP) -s -m 4755 $(DRONE) $(BIN)/$(DRONE);
++	${BSD_INSTALL_PROGRAM} $(PS) $(BIN)/$(PS); 
++	${BSD_INSTALL_PROGRAM} $(DRONE) $(BIN)/$(DRONE);
  	
  commoninstall:
 -	mkdir -p $(ETC)
 -	mkdir -p $(BIN)
 -
--	install -o $(INSTUSR) -g $(INSTGRP) -m 755 scripts/kismet $(BIN)/kismet
+-	install -o $(INSTUSR) -g $(INSTGRP) -m 755 $(WRAP) $(BIN)/kismet
 -	install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(NC) $(BIN)/$(NC)
 -	# install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(HOPPER) $(BIN)/$(HOPPER)
 -	@if test "$(ZAURUS)" = "yes"; then \
@@ -37,19 +39,16 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
 -	install -o $(INSTUSR) -g $(MANGRP) -m 644 man/kismet.conf.5 $(MAN)/man5/kismet.conf.5
 -	install -o $(INSTUSR) -g $(MANGRP) -m 644 man/kismet_ui.conf.5 $(MAN)/man5/kismet_ui.conf.5
 -	install -o $(INSTUSR) -g $(MANGRP) -m 644 man/kismet_drone.conf.5 $(MAN)/man5/kismet_drone.conf.5
-+	$(BSD_INSTALL_PROGRAM_DIR) $(BIN)
-+	$(BSD_INSTALL_SCRIPT) scripts/kismet $(BIN)/kismet
-+	$(BSD_INSTALL_PROGRAM) $(NC) $(BIN)/$(NC)
-+#	@if test "$(ZAURUS)" = "yes"; then \
-+#		$(BSD_INSTALL_PROGRAM) $(BUZZER) $(BIN)/buzzme; \
-+#	fi
-+	$(BSD_INSTALL_MAN_DIR) $(MAN)/man1
-+	$(BSD_INSTALL_MAN) man/kismet.1 $(MAN)/man1/kismet.1
-+	$(BSD_INSTALL_MAN) man/kismet_drone.1 $(MAN)/man1/kismet_drone.1
-+	$(BSD_INSTALL_MAN_DIR) $(MAN)/man5
-+	$(BSD_INSTALL_MAN) man/kismet.conf.5 $(MAN)/man5/kismet.conf.5
-+	$(BSD_INSTALL_MAN) man/kismet_ui.conf.5 $(MAN)/man5/kismet_ui.conf.5
-+	$(BSD_INSTALL_MAN) man/kismet_drone.conf.5 $(MAN)/man5/kismet_drone.conf.5
++	${BSD_INSTALL_PROGRAM} $(WRAP) $(BIN)/kismet
++	${BSD_INSTALL_PROGRAM} $(NC) $(BIN)/$(NC)
++	#@if test "$(ZAURUS)" = "yes"; then \
++	#	${BSD_INSTALL_PROGRAM} $(BUZZER) $(BIN)/buzzme; \
++	#fi
++	${BSD_INSTALL_MAN} man/kismet.1 $(MAN)/man1/kismet.1
++	${BSD_INSTALL_MAN} man/kismet_drone.1 $(MAN)/man1/kismet_drone.1
++	${BSD_INSTALL_MAN} man/kismet.conf.5 $(MAN)/man5/kismet.conf.5
++	${BSD_INSTALL_MAN} man/kismet_ui.conf.5 $(MAN)/man5/kismet_ui.conf.5
++	${BSD_INSTALL_MAN} man/kismet_drone.conf.5 $(MAN)/man5/kismet_drone.conf.5
  
  	@if test "$(GPSLBUILD)" = "$(GPSL)"; then \
 -		install -o $(INSTUSR) -g $(INSTGRP) -s -m 755 $(GPSL) $(BIN)/$(GPSL); \
@@ -58,8 +57,11 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
 -		echo install -o $(INSTUSR) -g $(INSTGRP) -m 755 scripts/gpsmap-helper-earthamaps $(BIN)/gpsmap-helper-earthamaps; \
 -		install -o $(INSTUSR) -g $(MANGRP) -m 644 man/gpsmap.1 $(MAN)/man1/gpsmap.1; \
 -		echo install -o $(INSTUSR) -g $(MANGRP) -m 644 man/gpsmap.1 $(MAN)/man1/gpsmap.1; \
--	fi
--
++		${BSD_INSTALL_PROGRAM} $(GPSL) $(BIN)/$(GPSL); \
++		${BSD_INSTALL_SCRIPT} scripts/gpsmap-helper-earthamaps $(BIN)/gpsmap-helper-earthamaps; \
++		${BSD_INSTALL_MAN} man/gpsmap.1 $(MAN)/man1/gpsmap.1; \
+ 	fi
+ 
 -	mkdir -p $(WAV)
 -	install -o $(INSTUSR) -g $(INSTGRP) -m 644 wav/new_network.wav $(WAV)/new_network.wav
 -	install -o $(INSTUSR) -g $(INSTGRP) -m 644 wav/traffic.wav $(WAV)/traffic.wav
@@ -67,29 +69,19 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
 -	install -o $(INSTUSR) -g $(INSTGRP) -m 644 wav/alert.wav $(WAV)/alert.wav
 -	install -o $(INSTUSR) -g $(INSTGRP) -m 644 conf/ap_manuf $(ETC)/ap_manuf; 
 -	install -o $(INSTUSR) -g $(INSTGRP) -m 644 conf/client_manuf $(ETC)/client_manuf; 
--
--	@if test -f $(BIN)/kismet_curses; then \
--		echo "Removing old kismet_curses binary.  The panels frontend is now kismet_client."; \
--		rm $(BIN)/kismet_curses; \
-+		$(BSD_INSTALL_PROGRAM) $(GPSL) $(BIN)/$(GPSL); \
-+		$(BSD_INSTALL_SCRIPT) scripts/gpsmap-helper-earthamaps $(BIN)/gpsmap-helper-earthamaps; \
-+		$(BSD_INSTALL_MAN) man/gpsmap.1 $(MAN)/man1/gpsmap.1; \
- 	fi
++	${BSD_INSTALL_DATA_DIR} $(WAV)
++	${BSD_INSTALL_DATA} wav/new_network.wav $(WAV)/new_network.wav
++	${BSD_INSTALL_DATA} wav/traffic.wav $(WAV)/traffic.wav
++	${BSD_INSTALL_DATA} wav/junk_traffic.wav $(WAV)/junk_traffic.wav
++	${BSD_INSTALL_DATA} wav/alert.wav $(WAV)/alert.wav
  
-+	$(BSD_INSTALL_DATA_DIR) $(WAV)
-+	$(BSD_INSTALL_DATA) wav/new_network.wav $(WAV)/new_network.wav
-+	$(BSD_INSTALL_DATA) wav/traffic.wav $(WAV)/traffic.wav
-+	$(BSD_INSTALL_DATA) wav/junk_traffic.wav $(WAV)/junk_traffic.wav
-+	$(BSD_INSTALL_DATA) wav/alert.wav $(WAV)/alert.wav
-+
- suidinstall: $(PS) $(DRONE) $(NC) $(GPSLBUILD) $(ZAURUSBUILD)
- 	$(MAKE) -e commoninstall
- 	$(MAKE) -e binsuidinstall
-@@ -215,30 +197,7 @@ suidinstall: $(PS) $(DRONE) $(NC) $(GPSL
+ 	@if test -f $(BIN)/kismet_curses; then \
+ 		echo "Removing old kismet_curses binary.  The panels frontend is now kismet_client."; \
+@@ -224,30 +208,7 @@ suidinstall: $(PS) $(DRONE) $(WRAP) $(NC
  	@echo "YOUR WIRELESS NETWORK CONNECTION.  IF YOU HAVE ANY UNTRUSTED USERS ON YOUR "
  	@echo "SYSTEM DO NOT INSTALL KISMET AS SUID ROOT."
  
--install: $(PS) $(DRONE) $(NC) $(GPSLBUILD) $(ZAURUSBUILD)
+-install: $(PS) $(DRONE) $(NC) $(WRAP) $(GPSLBUILD) $(ZAURUSBUILD)
 -	$(MAKE) -e commoninstall
 -	$(MAKE) -e binuserinstall
 -	@if test -f $(ETC)/kismet.conf; then \
@@ -113,7 +105,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
 -		echo install -o $(INSTUSR) -g $(INSTGRP) -m 644 conf/kismet_ui.conf $(ETC)/kismet_ui.conf;  \
 -		echo "Installed UI config into $(ETC)/kismet_ui.conf."; \
 -	fi
-+install: $(PS) $(DRONE) $(NC) $(GPSLBUILD) $(ZAURUSBUILD) commoninstall binuserinstall
++install: $(PS) $(DRONE) $(NC) $(WRAP) $(GPSLBUILD) $(ZAURUSBUILD) commoninstall binuserinstall
  	@echo "Installed kismet into $(BIN)/."
  	@echo "If you have not done so already, read the README file and the FAQ file.  Additional"
  	@echo "documentation is in the docs/ directory.  You MUST edit $(ETC)/kismet.conf "
