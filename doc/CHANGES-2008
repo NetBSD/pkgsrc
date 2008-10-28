@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2716 2008/10/28 05:37:41 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2717 2008/10/28 06:35:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4622,3 +4622,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/milter-greylist to 4.0.1nb1 [tron 2008-10-27]
 	Updated x11/modular-xorg-server to 1.4.2nb1 [minskim 2008-10-28]
 	Updated x11/xf86-input-vmmouse to 12.5.1nb2 [minskim 2008-10-28]
+	Updated misc/gok to 2.24.0 [obache 2008-10-28]
