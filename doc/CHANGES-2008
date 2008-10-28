@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2722 2008/10/28 11:00:27 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2723 2008/10/28 11:07:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4629,3 +4629,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/totem to 2.24.3 [wiz 2008-10-28]
 	Updated multimedia/totem-nautilus to 2.24.3 [wiz 2008-10-28]
 	Updated multimedia/totem-xine to 2.24.3 [wiz 2008-10-28]
+	Updated net/kismet to 2008.05.01 [adam 2008-10-28]
