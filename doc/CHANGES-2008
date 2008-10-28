@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2728 2008/10/28 15:39:05 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2729 2008/10/28 19:05:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4661,3 +4661,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/ruby-gnome2-panelapplet to 0.18.1 [obache 2008-10-28]
 	Updated x11/ruby-gnome2-vte to 0.18.1 [obache 2008-10-28]
 	Updated net/php-yaz to 1.0.14 [seb 2008-10-28]
+	Updated devel/glibmm to 2.18.1 [wiz 2008-10-28]
