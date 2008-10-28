@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7626 2008/10/27 17:00:36 wiz Exp $
+$NetBSD: TODO,v 1.7627 2008/10/28 06:35:57 obache Exp $
 
 Suggested new packages
 ======================
@@ -677,7 +677,6 @@ Suggested package updates
 	o gocr-0.43
 	o goffice-0.7.1
 	o gogo-3.11p1
-	o gok-2.24.0
 	o golem-0.0.6
 	o gossip-0.31
 	o gourmet-0.13.3
