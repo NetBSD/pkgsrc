@@ -1,0 +1,20 @@
+QOF, the Query Object Framework, provides a set of C Language
+utilities for performing generic structured complex queries on a
+set of data held by a set of C/C++ objects. This framework is unique
+in that it does NOT require SQL or any database at all to perform
+the query. Thus, it allows programmers to add query support to
+their applications without having to hook into an SQL Database.
+
+Typically, if you have an app, and you want to add the ability to
+show a set of reports, you will need the ability to perform queries
+in order to get the data you need to show a report. Of course, you
+can always write a set of ad-hoc subroutines to return the data
+that you need. But this kind of a programming style is not extensible:
+just wait till you get a user who wants a slightly different report.
+
+The idea behind QOF is to provide a generic framework so that any
+query can be executed, including queries designed by the end-user.
+Normally, this is possible only if you use a database that supports
+SQL, and then only if you deeply embed the database into your
+application. QOF provides simpler, more natural way to work with
+objects.
