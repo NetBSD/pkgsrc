@@ -1,30 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/28 10:56:04 wiz Exp $
 #
 
-DISTNAME=	totem-2.22.2
-PKGNAME=	totem-nautilus-2.22.2
-PKGREVISION=	1
-CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.22/}
+.include "../../multimedia/totem/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/totem/
-COMMENT=	Movie player for the GNOME Desktop
+PKGNAME=	${DISTNAME:S/totem/totem-nautilus/}
+# override Makefile.common
+PLIST_SRC=      ${.CURDIR}/PLIST
+GCONF_SCHEMAS=	# none
+
+COMMENT+=	(nautilus plugin)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
-PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
-
-# this does too much, we'd need dir-target pairs
-#BUILD_DIRS=	data lib src/backend src/plugins/properties src
-
-GNU_CONFIGURE=		YES
-USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
-USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
-USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	lib/nautilus/extensions-2.0
 
@@ -32,28 +18,10 @@ do-install:
 	cd ${WRKSRC}/src && ${LIBTOOL} --mode=install ${INSTALL_DATA} \
 	 libtotem-properties-page.la ${DESTDIR}${PREFIX}/lib/nautilus/extensions-2.0
 
-BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
-BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
-BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
-.include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/iso-codes/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.shared-mime-info+=	shared-mime-info>=0.22
+.include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/totem-pl-parser/buildlink3.mk"
+.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
