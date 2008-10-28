@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/28 23:36:39 wiz Exp $
+
+SHA1 (qof-0.7.5.tar.gz) = 9d7453fca0910c401180b8c8eda7443442633803
+RMD160 (qof-0.7.5.tar.gz) = 3e0ab118c2c5c1d760f2a9445183e77659f692c7
+Size (qof-0.7.5.tar.gz) = 906010 bytes
+SHA1 (patch-aa) = 1e9abeff6dd6fdb50092c104219576fb8d080d1f

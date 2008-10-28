@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/28 23:36:39 wiz Exp $
+
+--- qof/qofdate.c.orig	2006-08-21 18:28:26.000000000 +0000
++++ qof/qofdate.c
+@@ -793,7 +793,7 @@ qof_date_offset (const QofTime *time, gl
+ 	if (qd->qd_wday < 0)
+ 		qd->qd_wday += 7;
+ 	y = 1970;
+-	while (days < 0 || days >= (__isleap (y) ? 366 : 365))
++	while (days < 0 || days >= (qof_date_isleap(y) ? 366 : 365))
+ 	{
+ 		/* Guess a corrected year, assuming 365 days per year.  */
+ 		yg = y + days / 365 - (days % 365 < 0);
