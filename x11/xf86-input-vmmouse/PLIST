@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/17 22:03:58 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/28 05:37:10 minskim Exp $
 lib/xorg/modules/input/vmmouse_drv.la
 man/man4/vmmouse.4
-@dirrm lib/xorg/modules/input
-@dirrm lib/xorg/modules
-@dirrm lib/xorg
+@comment @dirrm lib/xorg/modules/input
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
