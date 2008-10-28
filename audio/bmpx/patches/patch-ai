@@ -1,0 +1,50 @@
+$NetBSD: patch-ai,v 1.1 2008/10/28 22:23:40 wiz Exp $
+
+--- src/minisoup.hh.orig	2008-03-05 21:31:06.000000000 +0000
++++ src/minisoup.hh
+@@ -33,13 +33,7 @@
+ #include <iostream>
+ #include <fstream>
+ 
+-#ifndef LIBSOUP_HAS_EXTERN_C
+-G_BEGIN_DECLS
+-# include <libsoup/soup.h>
+-G_END_DECLS
+-#else
+-# include <libsoup/soup.h>
+-#endif // !LIBSOUP_HAS_EXTERN_C
++#include <libsoup/soup.h>
+ 
+ namespace Bmp
+ {
+@@ -111,7 +105,7 @@ namespace Bmp
+         restarted (SoupMessage* /*message*/, gpointer /*data*/);
+ 
+         static void
+-        got_chunk (SoupMessage* /*message*/, gpointer /*data*/);
++        got_chunk (SoupMessage* /*message*/, SoupBuffer* /*chunk*/, gpointer /*data*/);
+ 
+         static void
+         got_content_length (SoupMessage* /*message*/, gpointer /*data*/);
+@@ -161,7 +155,7 @@ namespace Bmp
+         restarted (SoupMessage* /*message*/, gpointer /*data*/);
+ 
+         static void
+-        got_answer (SoupMessage* /*message*/, gpointer /*data*/);
++        got_answer (SoupSession* /*session*/, SoupMessage* /*message*/, gpointer /*data*/);
+     };
+ 
+ 
+@@ -224,10 +218,10 @@ namespace Bmp
+         restarted (SoupMessage* /*message*/, gpointer /*data*/);
+ 
+         static void
+-        got_answer (SoupMessage* /*message*/, gpointer /*data*/);
++        got_answer (SoupSession* /*session*/, SoupMessage* /*message*/, gpointer /*data*/);
+                    
+         static void
+-        got_chunk (SoupMessage* /*message*/, gpointer /*data*/);
++        got_chunk (SoupMessage* /*message*/, SoupBuffer* /*chunk*/, gpointer /*data*/);
+ 
+         static void
+         got_content_length (SoupMessage* /*message*/, gpointer /*data*/);

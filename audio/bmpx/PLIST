@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/10/27 00:35:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/10/28 22:23:40 wiz Exp $
 bin/beep-media-player-2
 bin/bmp-play-files-2.0
 bin/bmp-play-uris-2.0
@@ -33,6 +33,7 @@ share/applications/bmp-2.0-offline.desktop
 share/applications/bmp-2.0.desktop
 share/applications/bmp-play-2.0.desktop
 share/bmpx/glade/dialog-add-podcast.glade
+share/bmpx/glade/dialog-bounce-adjust.glade
 share/bmpx/glade/dialog-equalizer.glade
 share/bmpx/glade/dialog-export.glade
 share/bmpx/glade/dialog-filebrowser.glade
@@ -124,7 +125,6 @@ share/bmpx/icons/tray-icons/tray-icon-playing.png
 share/bmpx/images/audio-default.png
 share/bmpx/images/cdda/audiocd-big.png
 share/bmpx/images/cdda/audiocd-unplayable.png
-share/bmpx/images/cover-frame.png
 share/bmpx/images/lastfm/artist-unknown.png
 share/bmpx/images/lastfm/audioscrobbler.png
 share/bmpx/images/lastfm/lastfm-album.png
