@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2725 2008/10/28 11:32:29 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.2726 2008/10/28 11:34:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4632,3 +4632,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/kismet to 2008.05.01 [adam 2008-10-28]
 	Updated devel/gnome-build to 2.24.1 [wiz 2008-10-28]
 	Updated textproc/p5-XML-Atom to 0.29 [kleink 2008-10-28]
+	Removed devel/glade-gnome [wiz 2008-10-28]
