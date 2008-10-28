@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2714 2008/10/27 19:40:30 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2715 2008/10/28 05:10:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4620,3 +4620,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed x11/libzvt successor x11/vte [wiz 2008-10-27]
 	Updated lang/clisp to 2.47 [tnn 2008-10-27]
 	Updated mail/milter-greylist to 4.0.1nb1 [tron 2008-10-27]
+	Updated x11/modular-xorg-server to 1.4.2nb1 [minskim 2008-10-28]
