@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2008/10/26 09:07:45 jnemeth Exp $
+# $NetBSD: Makefile,v 1.56 2008/10/28 11:03:24 wiz Exp $
 
 DISTNAME=	gnome-base-2.24.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -54,7 +54,7 @@ DEPENDS+=	libgnomeprintui>=2.18.3:../../print/libgnomeprintui
 DEPENDS+=	libgtop>=2.20.2:../../sysutils/libgtop
 DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
 DEPENDS+=	libxklavier>=3.7:../../x11/libxklavier
-DEPENDS+=	libsoup-devel>=2.2.104nb1:../../net/libsoup-devel
+DEPENDS+=	libsoup24>=2.24.1:../../net/libsoup24
 DEPENDS+=	libwnck>=2.24.1:../../devel/libwnck
 DEPENDS+=	gtkhtml314>=3.24.1:../../www/gtkhtml314
 DEPENDS+=	gtk2-engines>=2.14.3:../../x11/gtk2-engines
