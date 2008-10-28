@@ -1,16 +1,16 @@
-# $NetBSD: modules.mk,v 1.3 2008/10/27 15:34:46 uebayasi Exp $
+# $NetBSD: modules.mk,v 1.4 2008/10/28 00:17:31 uebayasi Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
 # Note to users:
 #
-#	* Users choose one favourite Emacs version (default GNU Emacs 22).
+#	* Users choose one favourite Emacs version.
 #
 #	* Emacs Lisp files are installed...
-#	  	GNU emacs
-#	  		-> ${PREFIX}/share/emacs/site-lisp/foo/...
+#		GNU emacs
+#			-> ${PREFIX}/share/emacs/site-lisp/foo/...
 #		XEmacs
-#	  		->${PREFIX}/lib/xemacs/site-packages/lisp/foo/...
+#			->${PREFIX}/lib/xemacs/site-packages/lisp/foo/...
 #
 #	* You can't install an ELP for both Emacs and XEmacs
 #	  simultaneously.
@@ -38,7 +38,8 @@
 #
 #	EMACS_TYPE
 #		Description:
-#			The user's favourite Emacs version.
+#			The user's favourite Emacs version.  The default
+#			value is set in mk/defaults/mk.conf.
 #		Possible values:
 #			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
@@ -88,7 +89,7 @@
 #			name as a subdirectory.
 #		Possible values:
 #			${PREFIX}/share
-#	  		${PREFIX}/lib/xemacs/site-packages/etc
+#			${PREFIX}/lib/xemacs/site-packages/etc
 #
 #	EMACS_FLAVOR
 #		Description:
@@ -103,7 +104,7 @@
 #			EMACS_LISPPREFIX, subdirectory is not needed.
 #		Possible values:
 #			${PREFIX}/${PKGINFODIR}
-#	  		${PREFIX}/lib/xemacs/site-packages/info
+#			${PREFIX}/lib/xemacs/site-packages/info
 #
 #	EMACS_LISPPREFIX
 #		Description:
@@ -111,7 +112,7 @@
 #			as a subdirectory.
 #		Possible values:
 #			${PREFIX}/share/emacs/site-lisp
-#	  		${PREFIX}/lib/xemacs/site-packages/lisp
+#			${PREFIX}/lib/xemacs/site-packages/lisp
 #
 #	EMACS_PKGNAME_PREFIX
 #		Description:
@@ -140,7 +141,7 @@
 #			${PREFIX} is omitted in PLIST.
 #		Possible values:
 #			share
-#	  		lib/xemacs/site-packages/etc
+#			lib/xemacs/site-packages/etc
 #
 #	EMACS_INFOPREFIX
 #		Description:
@@ -148,7 +149,7 @@
 #			${PREFIX} is omitted in PLIST.
 #		Possible values:
 #			${PKGINFODIR}
-#	  		lib/xemacs/site-packages/info
+#			lib/xemacs/site-packages/info
 #
 #	EMACS_LISPPREFIX
 #		Description:
@@ -156,7 +157,7 @@
 #			${PREFIX} is omitted in PLIST.
 #		Possible values:
 #			share/emacs/site-lisp
-#	  		lib/xemacs/site-packages/lisp
+#			lib/xemacs/site-packages/lisp
 #
 #	EMACS_VERSION
 #		Description:
@@ -297,10 +298,10 @@ _EMACS_PLIST_SUBST+=	FOR_${e}="@comment " NOTFOR_${e}=""
 .endfor
 .if empty(EMACS_TYPE:M*nox)
 _EMACS_PLIST_SUBST+=	FOR_emacs_x="" NOTFOR_emacs_x="@comment "
-_EMACS_PLIST_SUBST+=	FOR_emacs_nox="@comment " NOTFOR_emacs_nox="" 
+_EMACS_PLIST_SUBST+=	FOR_emacs_nox="@comment " NOTFOR_emacs_nox=""
 .else
 _EMACS_PLIST_SUBST+=	FOR_emacs_x="@comment " NOTFOR_emacs_x=""
-_EMACS_PLIST_SUBST+=	FOR_emacs_nox="" NOTFOR_emacs_nox="@comment " 
+_EMACS_PLIST_SUBST+=	FOR_emacs_nox="" NOTFOR_emacs_nox="@comment "
 .endif
 
 _EMACS_PLIST_SUBST+=	EMACS_FLAVOR=${EMACS_FLAVOR:Q}
