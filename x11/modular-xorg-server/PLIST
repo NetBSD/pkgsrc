@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/18 20:56:01 bjs Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/10/28 05:08:52 minskim Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -233,8 +233,12 @@ share/aclocal/xorg-server.m4
 @dirrm lib/xserver
 @dirrm lib/xorg/modules/multimedia
 @dirrm lib/xorg/modules/linux
+@exec ${MKDIR} %D/lib/xorg/modules/input
+@dirrm lib/xorg/modules/input
 @dirrm lib/xorg/modules/fonts
 @dirrm lib/xorg/modules/extensions
+@exec ${MKDIR} %D/lib/xorg/modules/drivers
+@dirrm lib/xorg/modules/drivers
 @dirrm lib/xorg/modules
 @dirrm lib/xorg
 @dirrm include/xorg
