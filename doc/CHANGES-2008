@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2719 2008/10/28 10:43:11 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2720 2008/10/28 10:56:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4626,3 +4626,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/py-ORBit to 2.24.0 [wiz 2008-10-28]
 	Updated graphics/ImageMagick to 6.4.5.0 [adam 2008-10-28]
 	Updated graphics/p5-PerlMagick to 6.4.5.0 [adam 2008-10-28]
+	Updated multimedia/totem to 2.24.3 [wiz 2008-10-28]
