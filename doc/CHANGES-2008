@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2726 2008/10/28 11:34:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2727 2008/10/28 13:47:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4633,3 +4633,30 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/gnome-build to 2.24.1 [wiz 2008-10-28]
 	Updated textproc/p5-XML-Atom to 0.29 [kleink 2008-10-28]
 	Removed devel/glade-gnome [wiz 2008-10-28]
+	Updated meta-pkgs/ruby-gnome2 to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-atk to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-bonobo to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-bonoboui to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-gconf to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-glib to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-libglade to 0.18.1 [obache 2008-10-28]
+	Updated devel/ruby-gnome2-pango to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-gnomecanvas to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-goocanvas to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-gtkglext to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-libart to 0.18.1 [obache 2008-10-28]
+	Updated graphics/ruby-gnome2-rsvg to 0.18.1 [obache 2008-10-28]
+	Updated multimedia/ruby-gnome2-gstreamer to 0.18.1 [obache 2008-10-28]
+	Updated print/ruby-gnome2-gnomeprint to 0.18.1 [obache 2008-10-28]
+	Updated print/ruby-gnome2-gnomeprintui to 0.18.1 [obache 2008-10-28]
+	Updated print/ruby-gnome2-poppler to 0.18.1 [obache 2008-10-28]
+	Updated sysutils/ruby-gnome2-gnomevfs to 0.18.1 [obache 2008-10-28]
+	Updated www/ruby-gnome2-gtkhtml2 to 0.18.1 [obache 2008-10-28]
+	Updated www/ruby-gnome2-gtkmozembed to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-gnome to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-gtk to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-gtksourceview to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-gtksourceview2 to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-panelapplet to 0.18.1 [obache 2008-10-28]
+	Updated x11/ruby-gnome2-vte to 0.18.1 [obache 2008-10-28]
