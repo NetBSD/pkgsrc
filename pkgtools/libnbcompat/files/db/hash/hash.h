@@ -1,4 +1,4 @@
-/*	$NetBSD: hash.h,v 1.1 2008/10/10 00:21:43 joerg Exp $	*/
+/*	$NetBSD: hash.h,v 1.2 2008/10/28 15:06:26 joerg Exp $	*/
 /*	NetBSD: hash.h,v 1.15 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -294,3 +294,8 @@ typedef struct htab	 {		/* Memory resident data structure */
 #define MAGIC		hdr.magic
 #define NEXT_FREE	hdr.next_free
 #define H_CHARKEY	hdr.h_charkey
+
+#include <errno.h>
+#ifndef	EFTYPE
+#define	EFTYPE		EINVAL
+#endif
