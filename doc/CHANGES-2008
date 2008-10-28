@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2730 2008/10/28 19:09:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2731 2008/10/28 22:24:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4663,3 +4663,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/php-yaz to 1.0.14 [seb 2008-10-28]
 	Updated devel/glibmm to 2.18.1 [wiz 2008-10-28]
 	Updated graphics/png to 1.2.33rc02 [wiz 2008-10-28]
+	Updated audio/bmpx to 0.40.14 [wiz 2008-10-28]
