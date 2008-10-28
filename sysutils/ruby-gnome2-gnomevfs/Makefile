@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/09/17 00:21:50 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/28 13:43:58 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomevfs-${VERSION}
@@ -17,6 +17,7 @@ do-test:
 		${SETENV} ${TEST_ENV} ${RUBY} -I ${WRKSRC}/gnomevfs/src/lib -I ${WRKSRC}/gnomevfs/src $$t; \
 	done
 
+BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"

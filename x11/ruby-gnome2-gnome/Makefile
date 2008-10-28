@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/09/17 00:21:50 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/28 13:43:58 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnome-${VERSION}
@@ -15,6 +15,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gnomecanvas>=${VERSION}:../../graphics/ruby-
 
 USE_TOOLS+=		pkg-config
 
+BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSION}
 BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"

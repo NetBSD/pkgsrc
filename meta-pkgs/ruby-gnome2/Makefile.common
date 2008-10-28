@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.7 2008/10/22 10:42:02 obache Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/10/28 13:43:57 obache Exp $
 #
 
-DISTNAME=		ruby-gnome2-all-0.18.0
+DISTNAME=		ruby-gnome2-all-0.18.1
 CATEGORIES+=		ruby
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ruby-gnome2/}
 
@@ -11,7 +11,7 @@ PATCHDIR=		${.CURDIR}/../../meta-pkgs/ruby-gnome2/patches
 MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://ruby-gnome2.sourceforge.jp/
 
-VERSION=		0.18.0
+VERSION=		0.18.1
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 
