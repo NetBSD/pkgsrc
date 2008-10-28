@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2008/10/26 23:17:21 wiz Exp $
+# $NetBSD: Makefile,v 1.139 2008/10/28 11:02:09 wiz Exp $
 
 DISTNAME=		evolution-2.24.1
 CATEGORIES=		mail time gnome
@@ -83,7 +83,6 @@ BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.19.91
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.23.91
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libsoup-devel+=		libsoup-devel>=2.2.3
 .include "../../net/libsoup24/buildlink3.mk"
 #.include "../../print/libgnomeprint/buildlink3.mk"
 #.include "../../print/libgnomeprintui/buildlink3.mk"

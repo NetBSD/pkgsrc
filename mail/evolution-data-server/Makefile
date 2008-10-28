@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/10/25 16:38:09 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2008/10/28 11:02:35 wiz Exp $
 #
 
 DISTNAME=	evolution-data-server-2.24.1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.gnome.org/projects/evolution/
 COMMENT=	Evolution data server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.3
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.1
