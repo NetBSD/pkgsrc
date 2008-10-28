@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2007/10/27 00:35:17 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2008/10/28 22:23:40 wiz Exp $
 
---- jnetlib/connection.cpp.orig	2007-10-18 17:17:06.000000000 +0000
+--- jnetlib/connection.cpp.orig	2008-03-05 21:31:04.000000000 +0000
 +++ jnetlib/connection.cpp
 @@ -224,8 +224,17 @@ void JNL_Connection::run(int max_send_by
     
