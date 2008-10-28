@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2008/10/22 14:13:04 obache Exp $
+$NetBSD: distinfo,v 1.8 2008/10/28 13:43:57 obache Exp $
 
-SHA1 (ruby-gnome2-all-0.18.0.tar.gz) = 2e0e72cae4f84e1f22e2ad01c16ff63f620ce2f2
-RMD160 (ruby-gnome2-all-0.18.0.tar.gz) = 8b708ec1ac36042f0f6ebc09d1cfe3fc559b66e5
-Size (ruby-gnome2-all-0.18.0.tar.gz) = 2231735 bytes
+SHA1 (ruby-gnome2-all-0.18.1.tar.gz) = 3d5b3666d1fe2b717c98f68019722a4a144bbc0d
+RMD160 (ruby-gnome2-all-0.18.1.tar.gz) = cd85a0ffcedcd7ca857631f8ff7aba08c98c90e6
+Size (ruby-gnome2-all-0.18.1.tar.gz) = 1501200 bytes
 SHA1 (patch-aa) = 1e3330a13df0786a1e3559a57578c99c6d3fce85
 SHA1 (patch-ab) = 3056c970276c2b6442fb7792a457b356cd1a0cb6
 SHA1 (patch-ac) = 0713a9c0255d7e08769645451ca33282c93e280f
@@ -12,4 +12,3 @@ SHA1 (patch-ag) = e46ee6839e9df605b6cdb04c5c2a2a4970563747
 SHA1 (patch-an) = fe2160188643513011c9a2db8d7a21437c1c3516
 SHA1 (patch-ao) = ec787fd91c52f8ecbf4aa6166bb4b288f35b97b5
 SHA1 (patch-ap) = d14bd0b87149d6cf68a22e5b2ad16e86d50b107c
-SHA1 (patch-aq) = ad19d05c1af1deabde9554fd63a6981e4977a11c
