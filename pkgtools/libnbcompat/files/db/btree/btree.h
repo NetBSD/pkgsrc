@@ -1,4 +1,4 @@
-/*	$NetBSD: btree.h,v 1.2 2008/10/26 12:51:59 joerg Exp $	*/
+/*	$NetBSD: btree.h,v 1.3 2008/10/28 15:06:26 joerg Exp $	*/
 /*	NetBSD: btree.h,v 1.16 2008/08/26 21:18:38 joerg Exp 	*/
 
 /*-
@@ -430,5 +430,10 @@ typedef struct _btree {
 #define	B_DB_TXN	0x10000		/* DB_TXN specified. */
 	uint32_t flags;
 } BTREE;
+
+#include <errno.h>
+#ifndef	EFTYPE
+#define	EFTYPE		EINVAL
+#endif
 
 #include "extern.h"
