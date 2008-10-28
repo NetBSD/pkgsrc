@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/28 11:28:31 wiz Exp $
 #
 
-DISTNAME=	gnome-build-0.2.0
-PKGREVISION=	1
+DISTNAME=	gnome-build-2.24.1
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-build/0.2/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-build/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/projects/devtools/
-COMMENT=	Project management components for GNOME development
+HOMEPAGE=	http://www.anjuta.org/
+COMMENT=	GNOME build tools
+
+DEPENDS+=	p5-gettext-[0-9]*:../../misc/p5-gettext
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
