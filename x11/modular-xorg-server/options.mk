@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/09/18 20:56:01 bjs Exp $
+# $NetBSD: options.mk,v 1.5 2008/10/29 22:20:28 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6
@@ -17,6 +17,7 @@ MESA_DISTFILE=		${MESA_DISTNAME}${EXTRACT_SUFX} # .tar.bz2
 DISTFILES+=		${MESA_DISTFILE}
 SITES.${MESA_DISTFILE}= ${MESA_SITES}
 MESA_SRC=		${WRKDIR}/Mesa-${MESA_VERSION}
+XSERVER_DRI_PATCHFILES=		Mesa-7.0.4-xorg-server_GL
 ###
 ### XXX Is there a better way to do this?  For now, when updating these
 ###	patches (don't forget about Mesa updates!), please ensure that
