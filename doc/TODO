@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7629 2008/10/28 11:33:41 kleink Exp $
+$NetBSD: TODO,v 1.7630 2008/10/29 01:57:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -1150,7 +1150,6 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-SDL-2.0.1b
-	o ruby-gnome-0.18.0
 	o ruby-haml-2.0.2
 	o ruby-itex2MML-1.3.5
 	o ruby-logging-0.9.1
@@ -1158,7 +1157,7 @@ Suggested package updates
 	o ruby-ming-0.2.0
 	o ruby-net-ssh-1.1.4
 	o ruby-rspec-1.1.9
-	o rubygems-1.3.0
+	o rubygems-1.3.1
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
