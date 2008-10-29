@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2008/05/15 20:01:03 tnn Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/10/29 22:34:18 tron Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
-DISTNAME=	coreutils-6.11
+DISTNAME=	coreutils-6.12
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
 
