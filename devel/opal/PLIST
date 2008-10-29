@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/25 18:14:24 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/29 21:02:02 cube Exp $
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
 include/opal/asn/h235.h
@@ -125,6 +125,7 @@ include/opal/zrtp/opalzrtp.h
 include/opal/zrtp/zrtpeventproc.h
 lib/libopal.so
 lib/libopal.so.${PKGVERSION}
+lib/libopal_s.a
 lib/${OPALLIBDIR}/codecs/audio/g726_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/gsm0610_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/gsmamrcodec_pwplugin.so
