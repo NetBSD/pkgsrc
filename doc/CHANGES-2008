@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2733 2008/10/28 23:38:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2734 2008/10/29 00:19:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4666,3 +4666,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/bmpx to 0.40.14 [wiz 2008-10-28]
 	Added devel/qof version 0.7.5 [wiz 2008-10-28]
 	Updated time/gnotime to 2.3.0 [wiz 2008-10-28]
+	Updated mail/balsa to 2.3.26 [wiz 2008-10-29]
