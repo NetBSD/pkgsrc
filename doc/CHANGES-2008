@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2744 2008/10/29 02:37:23 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2745 2008/10/29 13:25:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4677,3 +4677,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome-platform to 2.24.1 [wiz 2008-10-29]
 	Updated editors/gconf-editor to 2.24.1 [wiz 2008-10-29]
 	Updated editors/dasher to 4.9.0 [wiz 2008-10-29]
+	Updated net/parpd to 1.2 [obache 2008-10-29]
