@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/10/28 11:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/29 11:36:54 wiz Exp $
 #
 
 DISTNAME=	gnome-build-2.24.1
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.anjuta.org/
 COMMENT=	GNOME build tools
 
-DEPENDS+=	p5-gettext-[0-9]*:../../misc/p5-gettext
+DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
