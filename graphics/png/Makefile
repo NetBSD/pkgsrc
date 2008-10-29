@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.107 2008/09/10 16:18:00 wiz Exp $
+# $NetBSD: Makefile,v 1.107.4.1 2008/10/29 10:05:00 rtr Exp $
 
-DISTNAME=	libpng-1.2.32beta01
+DISTNAME=	libpng-1.2.33rc02
 PKGNAME=	${DISTNAME:S/lib//}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libpng/} \
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.libpng.org/pub/png/
+HOMEPAGE=	http://www.libpng.org/pub/png/libpng.html
 COMMENT=	Library for manipulating PNG images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
