@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2740 2008/10/29 02:06:02 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2741 2008/10/29 02:07:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4673,3 +4673,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/aria2 to 0.16.2 [bjs 2008-10-29]
 	Updated audio/rhythmbox to 0.11.6 [wiz 2008-10-29]
 	Updated net/logjam to 4.5.3nb9 [wiz 2008-10-29]
+	Removed net/libsoup-devel successor net/libsoup24 [wiz 2008-10-29]
