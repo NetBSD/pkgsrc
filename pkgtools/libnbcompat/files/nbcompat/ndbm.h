@@ -1,5 +1,4 @@
-/*	$NetBSD: ndbm.c,v 1.2 2008/10/29 11:23:17 joerg Exp $	*/
-/*	NetBSD: ndbm.c,v 1.23 2008/09/11 12:58:00 joerg Exp 	*/
+/*	$NetBSD: ndbm.h,v 1.1 2008/10/29 11:23:17 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -31,82 +30,48 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
  * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
+ *
+ *	@(#)ndbm.h	8.1 (Berkeley) 6/2/93
  */
 
-#include <nbcompat.h>
+#ifndef _NBCOMPAT_NDBM_H_
+#define	_NBCOMPAT_NDBM_H_
+
 #include <nbcompat/cdefs.h>
+#include <nbcompat/db.h>
 
-__RCSID("$NetBSD: ndbm.c,v 1.2 2008/10/29 11:23:17 joerg Exp $");
+/* Map dbm interface onto db(3). */
+#define DBM_RDONLY	O_RDONLY
 
-/*
- * This package provides a dbm compatible interface to the new hashing
- * package described in db(3).
- */
-#include <nbcompat/param.h>
-
-#include <fcntl.h>
-#include <stdio.h>
-#include <string.h>
-
-#include <nbcompat/ndbm.h>
-#include "hash.h"
+/* Flags to dbm_store(). */
+#define DBM_INSERT      0
+#define DBM_REPLACE     1
 
 /*
- * Returns:
- * 	*DBM on success
- *	 NULL on failure
+ * The db(3) support for ndbm(3) always appends this suffix to the
+ * file name to avoid overwriting the user's original database.
  */
-DBM *
-dbm_open(const char *file, int flags, mode_t mode)
-{
-	HASHINFO info;
-	char path[MAXPATHLEN];
+#define	DBM_SUFFIX	".db"
 
-	info.bsize = 4096;
-	info.ffactor = 40;
-	info.nelem = 1;
-	info.cachesize = 0;
-	info.hash = NULL;
-	info.lorder = 0;
-	(void)strncpy(path, file, sizeof(path) - 1);
-	(void)strncat(path, DBM_SUFFIX, sizeof(path) - strlen(path) - 1);
-	if ((flags & O_ACCMODE) == O_WRONLY) {
-		flags &= ~O_WRONLY;
-		flags |= O_RDWR;
-	}
-	return ((DBM *)__hash_open(path, flags, mode, &info, 0));
-}
+typedef struct {
+	void	*dptr;
+	size_t	 dsize;		/* XPG4.2 */
+} datum;
 
-void
-dbm_close(DBM *db)
-{
-	(void)(db->close)(db);
-}
+typedef DB DBM;
+#define	dbm_pagfno(a)	DBM_PAGFNO_NOT_AVAILABLE
 
-int
-dbm_error(DBM *db)
-{
-	HTAB *hp;
+__BEGIN_DECLS
+void	 dbm_close(DBM *);
+DBM	*dbm_open(const char *, int, mode_t);
+int	 dbm_error(DBM *);
+int	 dbm_clearerr(DBM *);
+int	 dbm_dirfno(DBM *);
+int	 dbm_delete(DBM *, datum)		__RENAME(__dbm_delete13);
+datum	 dbm_fetch(DBM *, datum)		__RENAME(__dbm_fetch13);
+datum	 dbm_firstkey(DBM *)			__RENAME(__dbm_firstkey13);
+datum	 dbm_nextkey(DBM *)			__RENAME(__dbm_nextkey13);
+int	 dbm_store(DBM *, datum, datum, int)	__RENAME(__dbm_store13);
+__END_DECLS
 
-	hp = db->internal;
-	return (hp->err);
-}
-
-int
-dbm_clearerr(DBM *db)
-{
-	HTAB *hp;
-
-	hp = db->internal;
-	hp->err = 0;
-	return (0);
-}
-
-int
-dbm_dirfno(DBM *db)
-{
-	HTAB *hp;
-
-	hp = db->internal;
-	return hp->fp;
-}
+#endif /* !_NDBM_H_ */
