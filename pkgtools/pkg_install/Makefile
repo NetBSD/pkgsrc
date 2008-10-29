@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152.2.3 2008/05/25 19:52:55 joerg Exp $
+# $NetBSD: Makefile,v 1.152.2.4 2008/10/29 10:38:53 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
 
 USE_FEATURES=		nbcompat
 
-NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
