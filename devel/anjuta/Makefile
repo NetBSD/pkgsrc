@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2008/09/30 15:49:03 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2008/10/29 13:30:06 wiz Exp $
 
-DISTNAME=	anjuta-2.4.2
-PKGREVISION=	1
+DISTNAME=	anjuta-2.24.1
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.24/}
 #MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -26,11 +25,12 @@ USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake:run pkg-config:run msgfmt:run perl:run sh:run
+USE_TOOLS+=		gmake:run intltool pkg-config:run msgfmt:run perl:run sh:run
 USE_TOOLS+=		bash:run
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--disable-plugin-valgrind
+CONFIGURE_ARGS+=	--enable-plugin-scintilla
 
 SUBST_CLASSES+=		unused
 SUBST_STAGE.unused=	pre-configure
