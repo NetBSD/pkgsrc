@@ -41,6 +41,7 @@ cgi			Enable CGI support
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support
 clisp			Common/C Lisp
+compface		Enable compface support.
 coqide			Enable ide support for coq.
 courier-dsn		Delivery Status Notification (DNS) mail delivery.
 courier-esmtp		ESMTP mail delivery.
