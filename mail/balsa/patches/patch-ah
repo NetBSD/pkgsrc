@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1 2007/09/20 20:50:53 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2008/10/29 00:18:51 wiz Exp $
 
---- libbalsa/imap/imap-search.c.orig	2005-06-22 22:08:59.000000000 +0200
-+++ libbalsa/imap/imap-search.c
+--- libbalsa/imap/imap_search.c.orig	2008-03-24 21:59:01.000000000 +0000
++++ libbalsa/imap/imap_search.c
 @@ -19,6 +19,7 @@
  
  #define _POSIX_C_SOURCE 199506L

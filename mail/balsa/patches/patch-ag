@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2008/07/13 13:15:29 tonnerre Exp $
+$NetBSD: patch-ag,v 1.3 2008/10/29 00:18:51 wiz Exp $
 
---- libbalsa/imap/imap-handle.c.orig	2005-12-03 14:18:37.000000000 +0100
+--- libbalsa/imap/imap-handle.c.orig	2008-09-07 18:20:03.000000000 +0000
 +++ libbalsa/imap/imap-handle.c
 @@ -20,9 +20,13 @@
  
@@ -16,12 +16,3 @@ $NetBSD: patch-ag,v 1.2 2008/07/13 13:15:29 tonnerre Exp $
  #include <netdb.h>
  #include <glib.h>
  #include <glib-object.h>
-@@ -2992,7 +2996,7 @@ ir_fetch_seq(ImapMboxHandle *h, unsigned
-   if(seqno<1 || seqno > h->exists) return IMR_PROTOCOL;
-   if(sio_getc(h->sio) != '(') return IMR_PROTOCOL;
-   do {
--    for(i=0; (c = sio_getc(h->sio)) != -1; i++) {
-+    for(i=0; ((c = sio_getc(h->sio)) != -1) && (i < LONG_STRING - 1); i++) {
-       c = toupper(c);
-       if( !( (c >='A' && c<='Z') || (c >='0' && c<='9') || c == '.') ) break;
-       atom[i] = c;
