@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/10/28 05:08:52 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2008/10/29 00:55:53 bjs Exp $
 #
 
 DISTNAME=	xorg-server-1.4.2
@@ -34,7 +34,9 @@ XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
 
+.if !empty(USE_TOOLS:Mauto*)
 BUILD_DEPENDS+=	xorg-util-macros>=1.1.5:../../devel/xorg-util-macros
+.endif
 
 DEPENDS+=	xkbcomp-[0-9]*:../../x11/xkbcomp
 DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
