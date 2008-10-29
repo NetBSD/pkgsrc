@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2750 2008/10/29 21:15:24 cube Exp $
+$NetBSD: CHANGES-2008,v 1.2751 2008/10/29 22:35:35 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4683,3 +4683,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/file to 4.26 [christos 2008-10-29]
 	Updated devel/opal to 3.4.2nb1 [cube 2008-10-29]
 	Updated pkgtools/x11-links to 0.40 [cube 2008-10-29]
+	Updated sysutils/coreutils to 6.12 [tron 2008-10-29]
+	Updated misc/gnuls to 6.12 [tron 2008-10-29]
