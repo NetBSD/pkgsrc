@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/19 14:57:36 taca Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/29 02:20:31 obache Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://sary.sourceforge.net/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sary.sourceforge.net/
 COMMENT=	Ruby Binding of Sary
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
