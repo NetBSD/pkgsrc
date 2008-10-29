@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.9 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: xorg,v 1.10 2008/10/29 21:14:01 cube Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -253,7 +253,6 @@ include/X11/extensions/Xevie.h
 include/X11/extensions/Xeviestr.h
 include/X11/extensions/Xinerama.h
 include/X11/extensions/XvMClib.h
-include/X11/extensions/Xvlib.h
 include/X11/extensions/damageproto.h
 include/X11/extensions/damagewire.h
 include/X11/extensions/dmxext.h
@@ -432,14 +431,6 @@ lib/libXtst.dylib
 lib/libXtst.so
 lib/libXtst.so.6
 lib/libXtst.so.6.1
-lib/libXv.1.0.0.dylib
-lib/libXv.1.0.dylib
-lib/libXv.1.dylib
-lib/libXv.a
-lib/libXv.dylib
-lib/libXv.so
-lib/libXv.so.1
-lib/libXv.so.1.0
 lib/libXvMC.1.0.0.dylib
 lib/libXvMC.1.dylib
 lib/libXvMC.dylib
