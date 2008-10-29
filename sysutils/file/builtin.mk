@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/04/06 06:22:45 reed Exp $
+# $NetBSD: builtin.mk,v 1.5 2008/10/29 20:50:16 christos Exp $
 
 BUILTIN_PKG:=	file
 
@@ -19,6 +19,11 @@ IS_BUILTIN.file=	yes
 .  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.file
+
+.if !defined(BUILTIN_PKG.file) && !empty(IS_BUILTIN.file:M[yY][eE][sS])
+BUILTIN_VERSION.file!=	file --version 2>&1 | ${GREP} 'file-' | ${SED} 's/file-//'
+BUILTIN_PKG.file=	file-${BUILTIN_VERSION.file}
+.endif
 
 ###
 ### Determine whether we should use the built-in implementation if it
