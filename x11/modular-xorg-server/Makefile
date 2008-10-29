@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/10/29 00:55:53 bjs Exp $
+# $NetBSD: Makefile,v 1.36 2008/10/29 22:20:28 bjs Exp $
 #
 
 DISTNAME=	xorg-server-1.4.2
@@ -8,8 +8,9 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES+=	xorg-server-1.4.2-20080917.patch.gz
-PATCH_SITES+=	${MASTER_SITE_LOCAL}
+PATCHFILES=	xorg-server-1.4.2-20080917.patch.gz
+PATCHFILES+=	${XSERVER_DRI_PATCHFILES}
+PATCH_SITES=	${MASTER_SITE_LOCAL:=xorg-server-patchfiles/}
 
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
