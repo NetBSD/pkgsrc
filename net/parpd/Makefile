@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/10/09 02:18:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/29 13:25:01 obache Exp $
 #
 
-DISTNAME=		parpd-1.0
-PKGREVISION=		1
+DISTNAME=		parpd-1.2
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/parpd/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,13 +16,6 @@ USE_LANGUAGES=		c99
 EGDIR=			${PREFIX}/share/examples
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}/man
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
-
-CONF_FILES=		${EGDIR}/parpd.conf ${PKG_SYSCONFDIR}/parpd.conf
-
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	parpd.c parpd.8
-SUBST_SED.paths=	-e 's,/etc,${PKG_SYSCONFDIR},'
-SUBST_STAGE.paths=	pre-configure
 
 RCD_SCRIPTS+=		parpd
 
