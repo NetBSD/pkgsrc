@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2742 2008/10/29 02:15:51 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2743 2008/10/29 02:21:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4675,3 +4675,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/logjam to 4.5.3nb9 [wiz 2008-10-29]
 	Removed net/libsoup-devel successor net/libsoup24 [wiz 2008-10-29]
 	Updated meta-pkgs/gnome-platform to 2.24.1 [wiz 2008-10-29]
+	Updated editors/gconf-editor to 2.24.1 [wiz 2008-10-29]
