@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2748 2008/10/29 20:59:05 christos Exp $
+$NetBSD: CHANGES-2008,v 1.2749 2008/10/29 21:03:11 cube Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4681,3 +4681,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/anjuta to 2.24.1 [wiz 2008-10-29]
 	Updated net/vino to 2.24.1 [wiz 2008-10-29]
 	Updated sysutils/file to 4.26 [christos 2008-10-29]
+	Updated devel/opal to 3.4.2nb1 [cube 2008-10-29]
