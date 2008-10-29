@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7630 2008/10/29 01:57:15 taca Exp $
+$NetBSD: TODO,v 1.7631 2008/10/29 02:39:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -178,11 +178,6 @@ Suggested new packages
 	LabelNation
 	http://www.red-bean.com/labelnation/
 	Command-line label, business card printing program.
-
-	Ekiga
-	http://www.ekiga.org/
-	Open source VoIP and video conferencing application for GNOME,
-	using both the H.323 and SIP protocols.
 
 	Enigmail
 	http://enigmail.mozdev.org/
@@ -441,7 +436,6 @@ Suggested package updates
 	o bacula-2.4.3
 	o bacula-doc-2.0.3
 	o balance-3.42
-	o balsa-2.3.26
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -523,7 +517,6 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
-	o dasher-4.9.0
 	o dbench-4.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -563,7 +556,6 @@ Suggested package updates
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
-	o ekiga-3.0.1
 	o electric-8.07
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -631,7 +623,6 @@ Suggested package updates
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
 	o gcombust-0.1.55
-	o gconf-editor-2.24.1
 	o gcpio-2.7
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
@@ -656,14 +647,12 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.3
 	o glchess-1.0.5
-	o glibmm-2.18.1
 	o global-5.7.2 [pkg/39760]
 	o gmpc-0.16.0
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.24.0
-	o gnome-build-2.24.1
 	o gnome-pilot-2.0.16
 	o gnome-system-monitor-2.24.1
 	o gnomeicu-0.99.14
@@ -1057,7 +1046,6 @@ Suggested package updates
 	o psmisc-21.9
 	o pspp-0.6.1
 	o pstoedit-3.45
-	o ptlib-2.4.2
 	o puf-0.93.3
 	o puppet-0.24.5
 	o puzzle-5.2
@@ -1066,7 +1054,6 @@ Suggested package updates
 	o py-FourSuite-1.0.2
 	o py-Gnosis-Utils-1.2.1
 	o py-HappyDoc-3.0
-	o py-ORBit-2.24.0
 	o py-Optik-1.4.1
 	o py-Scientific-2.5.5
 	o py-Scientific-doc-2.5.5
@@ -1133,7 +1120,6 @@ Suggested package updates
 	o remind-3.1.5
 	o replex-0.1.6.8
 	o resize_image-0.7
-	o rhythmbox-0.11.6
 	o rio500-0.8.1
 	o ripmime-1.4.0.7
 	o robodoc-4.99.6
