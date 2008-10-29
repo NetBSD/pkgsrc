@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.24 2007/11/29 20:24:33 drochner Exp $
-
-SHA1 (libsoup-2.2.104.tar.bz2) = 7e2e0be41dea4adef8390e115df8311a1b4c18aa
-RMD160 (libsoup-2.2.104.tar.bz2) = d66fda4f5eede0bfef392ee8b9fcb90a79f6c098
-Size (libsoup-2.2.104.tar.bz2) = 504779 bytes
