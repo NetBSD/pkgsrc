@@ -1,4 +1,4 @@
-/*	$NetBSD: ndbmdatum.c,v 1.1 2008/10/10 00:21:44 joerg Exp $	*/
+/*	$NetBSD: ndbmdatum.c,v 1.2 2008/10/29 11:23:17 joerg Exp $	*/
 /*	NetBSD: ndbmdatum.c,v 1.4 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,19 +36,19 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: ndbmdatum.c,v 1.1 2008/10/10 00:21:44 joerg Exp $");
+__RCSID("$NetBSD: ndbmdatum.c,v 1.2 2008/10/29 11:23:17 joerg Exp $");
 
 /*
  * This package provides a dbm compatible interface to the new hashing
  * package described in db(3).
  */
-#include <sys/param.h>
+#include <nbcompat/param.h>
 
 #include <fcntl.h>
 #include <stdio.h>
 #include <string.h>
 
-#include <ndbm.h>
+#include <nbcompat/ndbm.h>
 #include "hash.h"
 
 /*
