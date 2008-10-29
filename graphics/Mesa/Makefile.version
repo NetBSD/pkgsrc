@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.3 2008/10/26 21:03:40 bjs Exp $
+# $NetBSD: Makefile.version,v 1.4 2008/10/29 00:51:56 bjs Exp $
 #
 # When changing this version, please run "make distinfo" in the following
 # package directories:
@@ -17,6 +17,6 @@ MESA_PKGVERSION=	${MESA_VERSION}${MESA_PATCHLEVEL}
 MESA_PATCHFILES=	001 002
 MESA_PATCHLEVEL=	.1
 
-PATCHFILES=		${MESA_PATCHFILES:@.p.@Mesa-${MESA_VERSION}-${.p.}@}
-PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
+PATCHFILES+=		${MESA_PATCHFILES:@.p.@Mesa-${MESA_VERSION}-${.p.}@}
+PATCH_SITES+=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
 PATCH_DIST_STRIP=	-p0
