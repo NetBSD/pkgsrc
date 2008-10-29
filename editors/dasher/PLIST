@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/05/29 17:53:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/10/29 02:37:05 wiz Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -155,8 +155,10 @@ share/dasher/dasher.compose.glade
 share/dasher/dasher.direct.glade
 share/dasher/dasher.fullscreen.glade
 share/dasher/dasher.gameWIP.glade
+share/dasher/dasher.preferences.glade
 share/dasher/dasher.traditional.glade
 share/dasher/dashermaemo.glade
+share/dasher/dashermaemo.preferences.glade
 share/dasher/dashermaemofullscreen.glade
 share/dasher/training_albanian_SQ.txt
 share/dasher/training_basque_EU.txt
