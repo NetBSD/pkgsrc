@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2757 2008/10/30 08:23:42 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2758 2008/10/30 11:28:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4691,3 +4691,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/rdiff-backup to 1.2.2 [snj 2008-10-30]
 	Updated net/libpcap to 1.0.0 [adam 2008-10-30]
 	Updated devel/pango to 1.22.2 [wiz 2008-10-30]
+	Updated graphics/imlib2 to 1.4.2 [tron 2008-10-30]
