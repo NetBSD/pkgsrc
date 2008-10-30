@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2008/10/13 09:35:55 adam Exp $
+# $NetBSD: Makefile,v 1.30 2008/10/30 22:07:25 wiz Exp $
 
-DISTNAME=	loudmouth-1.4.2
+DISTNAME=	loudmouth-1.4.3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/loudmouth/1.4/} \
 		http://ftp.imendio.com/pub/imendio/loudmouth/src/
