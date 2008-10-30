@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2756 2008/10/30 08:13:44 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2757 2008/10/30 08:23:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4690,3 +4690,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/pakchois to 0.4 [bjs 2008-10-30]
 	Updated sysutils/rdiff-backup to 1.2.2 [snj 2008-10-30]
 	Updated net/libpcap to 1.0.0 [adam 2008-10-30]
+	Updated devel/pango to 1.22.2 [wiz 2008-10-30]
