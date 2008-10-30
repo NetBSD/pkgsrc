@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2008/09/07 18:00:27 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2008/10/30 14:33:45 wiz Exp $
 
---- configure.orig	2008-04-22 22:05:02.000000000 -0400
-+++ configure	2008-09-07 12:02:20.000000000 -0400
-@@ -30644,7 +30644,7 @@
+--- configure.orig	2008-10-24 21:46:18.000000000 +0000
++++ configure
+@@ -30739,7 +30739,7 @@ rm -f conftest.mmap
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/07 18:00:27 wiz Exp $
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -31937,7 +31937,7 @@
+@@ -32154,7 +32154,7 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/07 18:00:27 wiz Exp $
      then
  
    { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -36126,6 +36126,8 @@
+@@ -36493,6 +36493,8 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __sun /* Solaris */
  #include <sys/types.h>
  #include <sys/videodev2.h>
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.10 2008/09/07 18:00:27 wiz Exp $
  #else /* Linux */
  #include <linux/types.h>
  #define _LINUX_TIME_H
-@@ -36481,6 +36483,8 @@
+@@ -36848,6 +36850,8 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __sun /* Solaris */
  #include <sys/types.h>
  #include <sys/videodev2.h>
@@ -38,30 +38,3 @@ $NetBSD: patch-ab,v 1.10 2008/09/07 18:00:27 wiz Exp $
  #else /* Linux */
  #include <linux/types.h>
  #define _LINUX_TIME_H
-@@ -40419,9 +40423,9 @@
-   HAVE_FLAC=no
- 
- 
--  { echo "$as_me:$LINENO: checking for FLAC__seekable_stream_encoder_new in -lFLAC" >&5
--echo $ECHO_N "checking for FLAC__seekable_stream_encoder_new in -lFLAC... $ECHO_C" >&6; }
--if test "${ac_cv_lib_FLAC_FLAC__seekable_stream_encoder_new+set}" = set; then
-+  { echo "$as_me:$LINENO: checking for FLAC__stream_encoder_new in -lFLAC" >&5
-+echo $ECHO_N "checking for FLAC__stream_encoder_new in -lFLAC... $ECHO_C" >&6; }
-+if test "${ac_cv_lib_FLAC_FLAC__stream_encoder_new+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
-@@ -40439,11 +40443,11 @@
- #ifdef __cplusplus
- extern "C"
- #endif
--char FLAC__seekable_stream_encoder_new ();
-+char FLAC__stream_encoder_new ();
- int
- main ()
- {
--return FLAC__seekable_stream_encoder_new ();
-+return FLAC__stream_encoder_new ();
-   ;
-   return 0;
- }
