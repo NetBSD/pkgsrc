@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/30 21:06:32 bjs Exp $
 #
 
 DISTNAME=	libpciaccess-0.10.4
@@ -28,9 +28,12 @@ USE_TOOLS+=	pkg-config
 ###
 USE_TOOLS+=	autoconf automake autoreconf
 
+CONFIGURE_ARGS+=	--with-zlib
+
 PKGCONFIG_OVERRIDE+=	pciaccess.pc.in
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v -i -f
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
