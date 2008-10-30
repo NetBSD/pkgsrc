@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2008/10/19 19:17:47 he Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/30 20:59:22 he Exp $
 
-DISTNAME=	Attribute-Handlers-0.78
+DISTNAME=	Attribute-Handlers-0.80
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 SVR4_PKGNAME=	p5ah
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Attribute/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~abergman/Attribute-Handlers/
+HOMEPAGE=	http://search.cpan.org/dist/Attribute-Handlers/
 COMMENT=	Simpler definition of attribute handlers
 
-# Note: v0.78 incompatible with perl 5.10.0 (which comes with its own version)
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
