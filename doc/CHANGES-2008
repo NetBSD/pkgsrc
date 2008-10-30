@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2761 2008/10/30 13:10:26 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2762 2008/10/30 14:34:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4695,3 +4695,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/vlgothic-ttf to 20081029 [obache 2008-10-30]
 	Added mail/heirloom-mailx version 12.4 [obache 2008-10-30]
 	Removed mail/nail successor mail/heirloom-mailx [obache 2008-10-30]
+	Updated multimedia/gst-plugins0.10-good to 0.10.11 [wiz 2008-10-30]
