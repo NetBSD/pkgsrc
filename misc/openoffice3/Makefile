@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/25 15:18:17 hira Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/30 11:30:34 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -148,7 +148,7 @@ post-extract:
 
 do-build:
 	@${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c	\
-	"cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules && build.pl -P${MAKE_JOBS:U1} --all product=full && cd util && dmake ooolanguagepack"
+	"cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules && build.pl -P${MAKE_JOBS:U1} --all product=full && cd util && dmake openoffice_${OO_BASELANG} && dmake ooolanguagepack"
 
 post-build:
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}

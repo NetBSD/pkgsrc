@@ -1,62 +1,28 @@
-$NetBSD: patch-bq,v 1.2 2008/10/25 15:18:17 hira Exp $
+$NetBSD: patch-bq,v 1.3 2008/10/30 11:30:34 hira Exp $
 
 --- instsetoo_native/util/makefile.mk.orig	2008-07-30 22:30:16.000000000 +0900
-+++ instsetoo_native/util/makefile.mk	2008-10-26 06:58:43.000000000 +0900
-@@ -54,6 +54,12 @@
++++ instsetoo_native/util/makefile.mk	2008-10-30 19:14:17.000000000 +0900
+@@ -54,6 +54,9 @@
  ENABLE_DOWNLOADSETS=TRUE
  .ENDIF			# "$(FORCE_DOWNLOADSETS)"!=""
  
 +# Don't create download set with pkgsrc.
 +ENABLE_DOWNLOADSETS=
 +
-+BASELANG=	@BASELANG@
-+LANGPACKS=	@LANGPACKS@
-+
  .EXPORT: ENABLE_DOWNLOADSETS
  .EXPORT: LAST_MINOR
  .EXPORT: PRJ
-@@ -135,13 +141,13 @@
+@@ -135,7 +138,8 @@
  
  .IF "$(alllangiso)"!=""
  
 -openoffice: $(foreach,i,$(alllangiso) openoffice_$i)
-+openoffice: openoffice_$(BASELANG)
++openoffice:
++	@echo -n ""
  
  openofficedev: $(foreach,i,$(alllangiso) openofficedev_$i)
  
- openofficewithjre: $(foreach,i,$(alllangiso) openofficewithjre_$i)
- 
--ooolanguagepack : $(foreach,i,$(alllangiso) ooolanguagepack_$i)
-+ooolanguagepack : $(foreach,i,$(LANGPACKS) ooolanguagepack_$i)
- 
- ooodevlanguagepack: $(foreach,i,$(alllangiso) ooodevlanguagepack_$i)
- 
-@@ -183,13 +189,13 @@
- ADDDEPS+=hack_msitemplates
- .ENDIF
- 
--$(foreach,i,$(alllangiso) openoffice_$i) : $(ADDDEPS)
-+openoffice_$(BASELANG) : $(ADDDEPS)
- 
- $(foreach,i,$(alllangiso) openofficedev_$i) : $(ADDDEPS)
- 
- $(foreach,i,$(alllangiso) openofficewithjre_$i) : $(ADDDEPS)
- 
--$(foreach,i,$(alllangiso) ooolanguagepack_$i) : $(ADDDEPS)
-+$(foreach,i,$(LANGPACKS) ooolanguagepack_$i) : $(ADDDEPS)
- 
- $(foreach,i,$(alllangiso) ooodevlanguagepack_$i) : $(ADDDEPS)
- 
-@@ -217,7 +223,7 @@
- .ENDIF # "$(OS)" == "MACOSX"
- 
- .IF "$(PKGFORMAT)"!=""
--$(foreach,i,$(alllangiso) openoffice_$i) : $$@{$(PKGFORMAT:^".")}
-+openoffice_$(BASELANG) : $$@{$(PKGFORMAT:^".")}
- .IF "$(MAKETARGETS)"!="" && "$(PKGFORMAT)"!=""
- .IF "$(MAKETARGETS:e)"=="" && "$(MAKETARGETS:s/_//)"!="$(MAKETARGETS)"
- $(MAKETARGETS) : $$@{$(PKGFORMAT:^".")}
-@@ -228,7 +234,7 @@
+@@ -228,7 +232,7 @@
  .ELSE			# "$(PKGFORMAT)"!=""
  openoffice_% :
  .ENDIF			# "$(PKGFORMAT)"!=""
@@ -65,13 +31,7 @@ $NetBSD: patch-bq,v 1.2 2008/10/25 15:18:17 hira Exp $
  	$(PERL) -w $(SOLARENV)$/bin$/gen_update_info.pl --buildid $(BUILD) --arch "$(RTL_ARCH)" --os "$(RTL_OS)" --lstfile $(PRJ)$/util$/openoffice.lst --product OpenOffice --languages $(subst,$(@:s/_/ /:1)_, $(@:b)) $(PRJ)$/util$/update.xml > $(MISC)/$(@:b)_$(RTL_OS)_$(RTL_ARCH)$(@:e).update.xml
  
  .IF "$(PKGFORMAT)"!=""
-@@ -249,12 +255,12 @@
- 	$(PERL) -w $(SOLARENV)$/bin$/gen_update_info.pl --buildid $(BUILD) --arch "$(RTL_ARCH)" --os "$(RTL_OS)" --lstfile $(PRJ)$/util$/openoffice.lst --product OpenOffice_Dev --languages $(subst,$(@:s/_/ /:1)_, $(@:b)) $(PRJ)$/util$/update.xml > $(MISC)/$(@:b)_$(RTL_OS)_$(RTL_ARCH)$(@:e).update.xml
- 
- .IF "$(PKGFORMAT)"!=""
--$(foreach,i,$(alllangiso) ooolanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
-+$(foreach,i,$(LANGPACKS) ooolanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
- ooolanguagepack_%{$(PKGFORMAT:^".")} :
+@@ -254,7 +258,7 @@
  .ELSE			# "$(PKGFORMAT)"!=""
  ooolanguagepack_% :
  .ENDIF			# "$(PKGFORMAT)"!=""
@@ -80,7 +40,7 @@ $NetBSD: patch-bq,v 1.2 2008/10/25 15:18:17 hira Exp $
  
  .IF "$(PKGFORMAT)"!=""
  $(foreach,i,$(alllangiso) ooodevlanguagepack_$i) : $$@{$(PKGFORMAT:^".")}
-@@ -380,10 +386,10 @@
+@@ -380,10 +384,10 @@
  	-$(MKDIRHIER) $(MSIURETEMPLATEDIR)
  	-$(MKDIRHIER) $(MSISDKOOTEMPLATEDIR)
  #	-$(MKDIRHIER) $(MSIURETEMPLATEDIR)
