@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1056 2008/10/30 23:36:53 he Exp $
+# $NetBSD: Makefile,v 1.1057 2008/10/30 23:47:27 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -700,6 +700,7 @@ SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-ShipIt
 SUBDIR+=	p5-Smart-Comments
+SUBDIR+=	p5-Software-License
 SUBDIR+=	p5-Sort-Maker
 SUBDIR+=	p5-Sort-Versions
 SUBDIR+=	p5-Spiffy
