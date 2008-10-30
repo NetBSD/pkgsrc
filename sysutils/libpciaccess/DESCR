@@ -1,0 +1,2 @@
+The pciaccess library wraps platform-dependent PCI access methods
+in a convenient library.
