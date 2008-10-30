@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/30 13:06:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/30 22:12:59 wiz Exp $
 #
 
 DISTNAME=	tesseract-2.03
@@ -14,6 +14,9 @@ PKG_DESTDIR_SUPPORT=user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
+
+post-extract:
+	${RM} ${WRKSRC}/java/makefile
 
 post-build:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/tesseract.sh \

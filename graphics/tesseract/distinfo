@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/05/30 13:06:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/10/30 22:12:59 wiz Exp $
 
 SHA1 (tesseract-2.03.tar.gz) = b7859278ff98a8b64bf98b5a519688e1559cec57
 RMD160 (tesseract-2.03.tar.gz) = 7519e7f4d876444bd3264d599dbf423e22443311
 Size (tesseract-2.03.tar.gz) = 1075509 bytes
 SHA1 (patch-aa) = 6edb250b22714ffec9490602fe11cd2b284ba4bb
-SHA1 (patch-ab) = 0ddb1a61d2bd445a65c54390f877b7d1c0aa39a0
