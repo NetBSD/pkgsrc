@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/09/15 04:54:48 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2008/10/30 02:44:23 minskim Exp $
 
---- ../rake-0.8.2.gemspec.orig	2008-09-14 21:30:11.000000000 -0700
-+++ ../rake-0.8.2.gemspec
+--- ../rake-0.8.3.gemspec.orig	2008-09-14 21:30:11.000000000 -0700
++++ ../rake-0.8.3.gemspec
 @@ -115,7 +115,6 @@ files: 
  - test/data/namespace/Rakefile
  - test/data/statusreturn/Rakefile
