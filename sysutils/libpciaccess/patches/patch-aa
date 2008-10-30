@@ -1,7 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2008/10/30 21:06:32 bjs Exp $
 
 --- configure.ac.orig	2008-10-17 16:59:42.000000000 -0400
 +++ configure.ac
+@@ -93,10 +93,10 @@ case $host_os in
+ 	*netbsd*)
+ 		case $host in
+ 		*i386*)
+-			PCIACCESS_LIBS="-li386"
++			PCIACCESS_LIBS="-li386 $PCIACCESS_LIBS"
+ 			;;
+ 		*x86_64*|*amd64*)
+-			PCIACCESS_LIBS="-lx86_64"
++			PCIACCESS_LIBS="-lx86_64 $PCIACCESS_LIBS"
+ 			;;
+ 		esac
+ 		netbsd=yes
 @@ -116,7 +116,21 @@ AM_CONDITIONAL(NETBSD, [test "x$netbsd" 
  AM_CONDITIONAL(OPENBSD, [test "x$openbsd" = xyes])
  AM_CONDITIONAL(SOLARIS, [test "x$solaris" = xyes])
