@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2752 2008/10/30 01:30:10 simonb Exp $
+$NetBSD: CHANGES-2008,v 1.2753 2008/10/30 02:45:33 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4686,3 +4686,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/coreutils to 6.12 [tron 2008-10-29]
 	Updated misc/gnuls to 6.12 [tron 2008-10-29]
 	Updated www/adzap to 20080508 [simonb 2008-10-30]
+	Updated devel/rake to 0.8.3 [minskim 2008-10-30]
