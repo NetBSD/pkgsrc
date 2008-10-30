@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/10/30 14:49:41 bad Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
@@ -41,7 +41,6 @@ INSTALLATION_DIRS=	bin
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/libssh/buildlink3.mk"
-.include "../../devel/apr0/buildlink3.mk"
 
 pre-build:
 	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
