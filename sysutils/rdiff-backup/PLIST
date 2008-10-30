@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/18 13:03:15 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/30 04:40:26 snj Exp $
 bin/rdiff-backup
+bin/rdiff-backup-statistics
 ${PYSITELIB}/rdiff_backup/C.so
 ${PYSITELIB}/rdiff_backup/FilenameMapping.py
 ${PYSITELIB}/rdiff_backup/FilenameMapping.pyc
@@ -35,6 +36,9 @@ ${PYSITELIB}/rdiff_backup/_librsync.so
 ${PYSITELIB}/rdiff_backup/backup.py
 ${PYSITELIB}/rdiff_backup/backup.pyc
 ${PYSITELIB}/rdiff_backup/backup.pyo
+${PYSITELIB}/rdiff_backup/compare.py
+${PYSITELIB}/rdiff_backup/compare.pyc
+${PYSITELIB}/rdiff_backup/compare.pyo
 ${PYSITELIB}/rdiff_backup/connection.py
 ${PYSITELIB}/rdiff_backup/connection.pyc
 ${PYSITELIB}/rdiff_backup/connection.pyo
@@ -44,6 +48,9 @@ ${PYSITELIB}/rdiff_backup/eas_acls.pyo
 ${PYSITELIB}/rdiff_backup/fs_abilities.py
 ${PYSITELIB}/rdiff_backup/fs_abilities.pyc
 ${PYSITELIB}/rdiff_backup/fs_abilities.pyo
+${PYSITELIB}/rdiff_backup/hash.py
+${PYSITELIB}/rdiff_backup/hash.pyc
+${PYSITELIB}/rdiff_backup/hash.pyo
 ${PYSITELIB}/rdiff_backup/increment.py
 ${PYSITELIB}/rdiff_backup/increment.pyc
 ${PYSITELIB}/rdiff_backup/increment.pyo
@@ -59,6 +66,9 @@ ${PYSITELIB}/rdiff_backup/librsync.pyo
 ${PYSITELIB}/rdiff_backup/log.py
 ${PYSITELIB}/rdiff_backup/log.pyc
 ${PYSITELIB}/rdiff_backup/log.pyo
+${PYSITELIB}/rdiff_backup/longname.py
+${PYSITELIB}/rdiff_backup/longname.pyc
+${PYSITELIB}/rdiff_backup/longname.pyo
 ${PYSITELIB}/rdiff_backup/manage.py
 ${PYSITELIB}/rdiff_backup/manage.pyc
 ${PYSITELIB}/rdiff_backup/manage.pyo
@@ -92,7 +102,11 @@ ${PYSITELIB}/rdiff_backup/statistics.pyo
 ${PYSITELIB}/rdiff_backup/user_group.py
 ${PYSITELIB}/rdiff_backup/user_group.pyc
 ${PYSITELIB}/rdiff_backup/user_group.pyo
-man/man1/rdiff-backup.1
+${PYSITELIB}/rdiff_backup/win_acls.py
+${PYSITELIB}/rdiff_backup/win_acls.pyc
+${PYSITELIB}/rdiff_backup/win_acls.pyo
+${PKGMANDIR}/man1/rdiff-backup.1
+${PKGMANDIR}/man1/rdiff-backup-statistics.1
 share/doc/${PKGNAME}/CHANGELOG
 share/doc/${PKGNAME}/COPYING
 share/doc/${PKGNAME}/FAQ.html
