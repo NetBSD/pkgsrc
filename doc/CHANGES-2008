@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2758 2008/10/30 11:28:32 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2759 2008/10/30 12:43:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4692,3 +4692,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/libpcap to 1.0.0 [adam 2008-10-30]
 	Updated devel/pango to 1.22.2 [wiz 2008-10-30]
 	Updated graphics/imlib2 to 1.4.2 [tron 2008-10-30]
+	Updated fonts/vlgothic-ttf to 20081029 [obache 2008-10-30]
