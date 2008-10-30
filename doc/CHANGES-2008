@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2764 2008/10/30 20:58:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2765 2008/10/30 21:22:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4698,3 +4698,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gst-plugins0.10-good to 0.10.11 [wiz 2008-10-30]
 	Updated textproc/diffstat to 1.46 [snj 2008-10-30]
 	Added sysutils/libpciaccess version 0.10.4 [bjs 2008-10-30]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.9 [wiz 2008-10-30]
