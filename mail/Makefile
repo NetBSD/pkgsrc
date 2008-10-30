@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.363 2008/10/24 16:38:48 wiz Exp $
+# $NetBSD: Makefile,v 1.364 2008/10/30 13:02:42 obache Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -96,6 +96,7 @@ SUBDIR+=	gmime24
 SUBDIR+=	gnus
 SUBDIR+=	greetdelay
 SUBDIR+=	grepmail
+SUBDIR+=	heirloom-mailx
 SUBDIR+=	hypermail
 SUBDIR+=	ifile
 SUBDIR+=	ifile-procmail
