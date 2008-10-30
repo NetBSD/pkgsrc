@@ -1,4 +1,4 @@
-/*	$NetBSD: __fts13.c,v 1.9 2007/09/21 19:51:58 joerg Exp $	*/
+/*	$NetBSD: __fts13.c,v 1.10 2008/10/30 16:00:54 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993, 1994
@@ -39,7 +39,7 @@
 #if 0
 static char sccsid[] = "@(#)fts.c	8.6 (Berkeley) 8/14/94";
 #else
-__RCSID("$NetBSD: __fts13.c,v 1.9 2007/09/21 19:51:58 joerg Exp $");
+__RCSID("$NetBSD: __fts13.c,v 1.10 2008/10/30 16:00:54 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -78,12 +78,6 @@ __weak_alias(fts_read,_fts_read)
 __weak_alias(fts_set,_fts_set)
 #endif /* __LIBC12_SOURCE__ */
 #endif /* __weak_alias */
-#endif
-
-#ifdef __LIBC12_SOURCE__
-#define	STAT	stat12
-#else
-#define	STAT	stat
 #endif
 
 #if 0
@@ -897,7 +891,7 @@ fts_stat(sp, p, follow)
 	FTSENT *t;
 	dev_t dev;
 	ino_t ino;
-	struct STAT *sbp, sb;
+	struct stat *sbp, sb;
 	int saved_errno;
 
 	_DIAGASSERT(sp != NULL);
@@ -934,7 +928,7 @@ fts_stat(sp, p, follow)
 		}
 	} else if (lstat(p->fts_accpath, sbp)) {
 		p->fts_errno = errno;
-err:		memset(sbp, 0, sizeof(struct STAT));
+err:		memset(sbp, 0, sizeof(struct stat));
 		return (FTS_NS);
 	}
 
@@ -1034,19 +1028,19 @@ fts_alloc(sp, name, namelen)
 	 */
 	len = sizeof(FTSENT) + namelen;
 	if (!ISSET(FTS_NOSTAT))
-		len += sizeof(struct STAT) + ALIGNBYTES;
+		len += sizeof(struct stat) + ALIGNBYTES;
 	if ((p = malloc(len)) == NULL)
 		return (NULL);
 
 	if (!ISSET(FTS_NOSTAT))
 		p->fts_statp =
-		    (struct STAT *)ALIGN((unsigned long)(p->fts_name + namelen + 2));
+		    (struct stat *)ALIGN((unsigned long)(p->fts_name + namelen + 2));
 #else
 	if ((p = malloc(sizeof(FTSENT) + namelen)) == NULL)
 		return (NULL);
 
 	if (!ISSET(FTS_NOSTAT))
-		if ((p->fts_statp = malloc(sizeof(struct STAT))) == NULL) {
+		if ((p->fts_statp = malloc(sizeof(struct stat))) == NULL) {
 			free(p);
 			return (NULL);
 		}
@@ -1198,7 +1192,7 @@ fts_safe_changedir(sp, p, fd, path)
 	const char *path;
 {
 	int oldfd = fd, ret = -1;
-	struct STAT sb;
+	struct stat sb;
 
 	if (ISSET(FTS_NOCHDIR))
 		return 0;
