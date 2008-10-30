@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7633 2008/10/30 19:34:45 snj Exp $
+$NetBSD: TODO,v 1.7634 2008/10/30 21:14:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -1274,7 +1274,6 @@ Suggested package updates
 	o vice-2.0
 	o vicq-0.4.2
 	o vifm-0.4
-	o vim-7.2
 	o vino-2.24.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
