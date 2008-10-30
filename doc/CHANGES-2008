@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2759 2008/10/30 12:43:40 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2760 2008/10/30 13:01:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4693,3 +4693,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.22.2 [wiz 2008-10-30]
 	Updated graphics/imlib2 to 1.4.2 [tron 2008-10-30]
 	Updated fonts/vlgothic-ttf to 20081029 [obache 2008-10-30]
+	Added mail/heirloom-mailx version 12.4 [obache 2008-10-30]
