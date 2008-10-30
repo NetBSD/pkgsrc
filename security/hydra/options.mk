@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/08/31 10:54:52 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2008/10/30 14:49:42 bad Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hydra
 PKG_SUPPORTED_OPTIONS=	gtkfe svn pgsql
@@ -22,7 +22,6 @@ PLIST_SRC+=	${PKGDIR}/PLIST.xhydra
 
 .if !empty(PKG_OPTIONS:Msvn)
 .include "../../devel/subversion-base/buildlink3.mk"
-.include "../../devel/apr0/buildlink3.mk"
 CONFIGURE_ENV+=	WITH_SVN=1
 .else
 CONFIGURE_ENV+=	WITH_SVN=0
