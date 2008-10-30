@@ -1,0 +1,2 @@
+Pod::Strip is a subclass of Pod::Simple that strips all POD from
+Perl Code.
