@@ -1,14 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+$NetBSD: patch-ac,v 1.2 2008/10/30 21:00:37 bjs Exp $
 
 --- src/netbsd_pci.c.orig	2008-10-15 18:35:53.000000000 -0400
 +++ src/netbsd_pci.c
-@@ -1,5 +1,4 @@
--/*
-- * Copyright (c) 2008 Juan Romero Pardines
-+/* Copyright (c) 2008 Blair Sadewitz
-  * Copyright (c) 2008 Mark Kettenis
-  *
-  * Permission to use, copy, modify, and distribute this software for any
 @@ -20,12 +19,15 @@
  #include <sys/mman.h>
  #include <sys/types.h>
