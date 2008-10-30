@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/09/15 04:54:48 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/30 02:44:22 minskim Exp $
 
-DISTNAME=	rake-0.8.2
+DISTNAME=	rake-0.8.3
 CATEGORIES=	devel
 
 MAINTAINER=	minskim@NetBSD.org
