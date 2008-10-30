@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/10/25 15:18:17 hira Exp $
+# $NetBSD: options.mk,v 1.11 2008/10/30 11:30:34 hira Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -28,21 +28,14 @@ OO_LANGS=	ALL
 OO_BASELANG=	en-US
 OO_LANGPACKS=	${OO_SUPPORTED_LANGUAGES:S/en-US//1:S/all//1}
 .else
-.  for _l in ${PKG_OPTIONS:Mlang-*:S/lang-//g}
-OO_LANGS+=	${_l}
-OO_BASELANG?=	${_l}	# Get first one.
+.  for lang in ${PKG_OPTIONS:Mlang-*:S/lang-//g}
+OO_LANGS+=	${lang}
+OO_BASELANG?=	${lang}	# Get first one.
 .  endfor
 .endif
 OO_LANGS?=	en-US
 OO_BASELANG?=	en-US
 OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
-
-SUBST_CLASSES+=		instset
-SUBST_STAGE.instset=	post-patch
-SUBST_MESSAGE.instset=	Reduce OOo install sets.
-SUBST_FILES.instset=	instsetoo_native/util/makefile.mk
-SUBST_SED.instset+=	-e 's,@BASELANG@,${OO_BASELANG},g'
-SUBST_SED.instset+=	-e 's,@LANGPACKS@,${OO_LANGPACKS},g'
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 MOZ_FLAVOUR=		firefox
@@ -106,7 +99,7 @@ CONFIGURE_ARGS+=	--disable-gtk
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA2=		yes
-DEPENDS+=		apache-ant>=1.7.0:../../devel/apache-ant
+BUILD_DEPENDS+=		apache-ant>=1.7.0nb1:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-java
 # Extensions (MI)
 #CONFIGURE_ARGS+=	--enable-report-builder
@@ -119,9 +112,8 @@ LIB.awtlib=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
 # -rpath is missing from wip/jdk15.
 CONFIGURE_ENV+=	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${JAVA_LIB_ROOT}:${JAVA_LIB_ROOT}/xawt"
 
-# XXX: devel/apache-ant doesn't setup ${PREFIX}/bin/java.
-CONFIGURE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
-MAKE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
+CONFIGURE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME:Q}
+MAKE_ENV+=		JAVA_HOME=${PKG_JAVA_HOME:Q}
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
