@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2755 2008/10/30 04:42:15 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2756 2008/10/30 08:13:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4689,3 +4689,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/rake to 0.8.3 [minskim 2008-10-30]
 	Updated security/pakchois to 0.4 [bjs 2008-10-30]
 	Updated sysutils/rdiff-backup to 1.2.2 [snj 2008-10-30]
+	Updated net/libpcap to 1.0.0 [adam 2008-10-30]
