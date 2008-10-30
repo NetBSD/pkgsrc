@@ -1,8 +1,8 @@
-$NetBSD: patch-av,v 1.1 2007/04/27 19:45:02 christos Exp $
+$NetBSD: patch-av,v 1.2 2008/10/30 17:12:44 christos Exp $
 
---- /dev/null	2007-04-26 23:20:40.000000000 -0400
-+++ netbsd/syscalls.pl	2007-04-27 14:38:18.000000000 -0400
-@@ -0,0 +1,167 @@
+--- syscalls.pl.orig	2008-10-30 11:38:04.000000000 -0400
++++ syscalls.pl	2008-10-30 11:53:07.000000000 -0400
+@@ -0,0 +1,170 @@
 +#!/usr/pkg/bin/perl -w
 +#
 +# Copyright (c) 2000, Gaël Roualland <gael.roualland@iname.com>
@@ -30,7 +30,7 @@ $NetBSD: patch-av,v 1.1 2007/04/27 19:45:02 christos Exp $
 +# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 +# THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 +#
-+#      $Id: patch-av,v 1.1 2007/04/27 19:45:02 christos Exp $
++#      $Id: patch-av,v 1.2 2008/10/30 17:12:44 christos Exp $
 +#/
 +
 +# Buils syscall.h and syscallent.h from:
@@ -139,7 +139,8 @@ $NetBSD: patch-av,v 1.1 2007/04/27 19:45:02 christos Exp $
 +		$sysnum++;
 +	    }
 +	} elsif ($num < $sysnum) {
-+	    warn "error in master file: syscall $1 found, expecting $sysnum.";
++	    next if ($num == $sysnum - 1); # perhaps #ifdef
++	    warn "error in master file: syscall $num found, expecting $sysnum.";
 +	    next;
 +	}
 +	
@@ -170,3 +171,5 @@ $NetBSD: patch-av,v 1.1 2007/04/27 19:45:02 christos Exp $
 +	# warn "unregognized line $_";
 +    }
 +}
++close(MASTER);
++exit 0;
