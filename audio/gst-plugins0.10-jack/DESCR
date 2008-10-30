@@ -10,4 +10,3 @@ GStreamer is released under the LGPL.
 
 This package is part of the 'bad' plugins for GStreamer.  It provides
 an audio sink for the JACK Audio Connection Kit.
-

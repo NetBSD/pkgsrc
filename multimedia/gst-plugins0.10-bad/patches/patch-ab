@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.3 2008/10/30 21:21:32 wiz Exp $
+
+--- ext/x264/gstx264enc.c.orig	2008-10-10 23:13:43.000000000 +0000
++++ ext/x264/gstx264enc.c
+@@ -661,8 +661,7 @@ gst_x264_enc_header_buf (GstX264Enc * en
+   /* x264 is expected to return an SEI (some identification info),
+    * followed by an SPS and PPS */
+   if (i_nal != 3 || nal[1].i_type != 7 || nal[2].i_type != 8) {
+-    GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, NULL,
+-        ("Unexpected x264 header."));
++    GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, ("Unexpected x264 header."), (""));
+     return NULL;
+   }
+ 
+@@ -935,8 +934,7 @@ gst_x264_enc_encode_frame (GstX264Enc * 
+     duration = GST_BUFFER_DURATION (in_buf);
+     gst_buffer_unref (in_buf);
+   } else {
+-    GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, NULL,
+-        ("Timestamp queue empty."));
++    GST_ELEMENT_ERROR (encoder, STREAM, ENCODE, ("Timestamp queue empty."), (""));
+     return GST_FLOW_ERROR;
+   }
+ 
