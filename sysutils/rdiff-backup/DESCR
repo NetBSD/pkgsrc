@@ -1,8 +1,8 @@
-Rdiff-backup backs up one directory to another, possibly over a network.
+rdiff-backup backs up one directory to another, possibly over a network.
 The target directory ends up a copy of the source directory, but extra
 reverse diffs are stored in a special subdirectory of that target directory,
 so you can still recover files lost some time ago. The idea is to combine
-the best features of a mirror and an incremental backup. Rdiff-backup also
+the best features of a mirror and an incremental backup. rdiff-backup also
 preserves subdirectories, hard links, dev files, permissions, uid/gid
 ownership (if it is running as root), and modification times. Finally,
 rdiff-backup can operate in a bandwidth efficient manner over a pipe, like
