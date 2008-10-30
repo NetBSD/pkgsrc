@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/30 03:32:19 bjs Exp $
+include/pakchois/pakchois.h
+include/pakchois/pakchois11.h
+lib/libpakchois.la
+lib/pkgconfig/pakchois.pc
+@dirrm include/pakchois
