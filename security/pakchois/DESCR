@@ -1,0 +1,22 @@
+pakchois is just another PKCS#11 wrapper library.  pakchois aims to
+provide a thin wrapper over the PKCS#11 interface.
+
+The goals are:
+
+1) to offer a modern* object-oriented C interface wrapper for PKCS#11.
+
+2) to not hide or abstract away any details of the PKCS#11 interface
+itself except where absolutely necessary.
+
+3) to handle the details of loading DSOs
+
+4) to allow the caller to avoid caring about where on the system
+PKCS#11 modules might be stored, or exactly how they are named.
+
+5) to avoid any dependency on a particular cryptography toolkit.
+
+Existing PKCS#11 wrapper libraries solutions differ in at least one of
+the above goals.
+
+*: "modern" being a euphemism for not using process-global state,
+having a sane symbol namespace, etc.
