@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/07/17 08:53:12 rhaen Exp $
+$NetBSD: distinfo,v 1.3 2008/10/30 21:35:34 he Exp $
 
-SHA1 (Class-Adapter-1.04.tar.gz) = dfe0259578ee5dfb68cf6fc3315b210a4b21c50b
-RMD160 (Class-Adapter-1.04.tar.gz) = 419048bc9d9d13858020b83692e001583cb3295c
-Size (Class-Adapter-1.04.tar.gz) = 26743 bytes
+SHA1 (Class-Adapter-1.05.tar.gz) = dc143f3d3b1add7ac86532bb3923f909b0894d0e
+RMD160 (Class-Adapter-1.05.tar.gz) = f4b4349d93e265c478defd305e5f003b670c7b16
+Size (Class-Adapter-1.05.tar.gz) = 28960 bytes
