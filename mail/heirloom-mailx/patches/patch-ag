@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+
+--- v7.local.c.orig	2006-03-04 00:01:19.000000000 +0000
++++ v7.local.c
+@@ -56,6 +56,15 @@ static char sccsid[] = "@(#)v7.local.c	2
+ #include <fcntl.h>
+ #include <unistd.h>
+ 
++#ifdef HAVE_PATHS_H
++#include <paths.h>
++#endif
++
++#ifdef _PATH_MAILDIR
++#undef MAILSPOOL
++#define MAILSPOOL _PATH_MAILDIR
++#endif
++
+ /*
+  * Locate the user's mailbox file (ie, the place where new, unread
+  * mail is queued).
