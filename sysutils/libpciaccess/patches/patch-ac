@@ -1,0 +1,247 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+
+--- src/netbsd_pci.c.orig	2008-10-15 18:35:53.000000000 -0400
++++ src/netbsd_pci.c
+@@ -1,5 +1,4 @@
+-/*
+- * Copyright (c) 2008 Juan Romero Pardines
++/* Copyright (c) 2008 Blair Sadewitz
+  * Copyright (c) 2008 Mark Kettenis
+  *
+  * Permission to use, copy, modify, and distribute this software for any
+@@ -20,12 +19,15 @@
+ #include <sys/mman.h>
+ #include <sys/types.h>
+ 
++#ifdef HAVE_MTRR
+ #include <machine/sysarch.h>
+ #include <machine/mtrr.h>
++#define netbsd_set_mtrr(mr, num)	_X86_SYSARCH_L(set_mtrr)(mr, num)
++#endif
+ 
++#include <dev/pci/pcidevs.h>
+ #include <dev/pci/pciio.h>
+ #include <dev/pci/pcireg.h>
+-#include <dev/pci/pcidevs.h>
+ 
+ #include <errno.h>
+ #include <fcntl.h>
+@@ -35,6 +37,8 @@
+ #include <unistd.h>
+ 
+ 
++#include <pci.h>
++
+ #include "pciaccess.h"
+ #include "pciaccess_private.h"
+ 
+@@ -43,20 +47,12 @@ static int pcifd;
+ static int
+ pci_read(int bus, int dev, int func, uint32_t reg, uint32_t *val)
+ {
+-	struct pciio_bdf_cfgreg io;
+-	int err;
++	uint32_t rval;
+ 
+-	bzero(&io, sizeof(io));
+-	io.bus = bus;
+-	io.device = dev;
+-	io.function = func;
+-	io.cfgreg.reg = reg;
++	if (pcibus_conf_read(pcifd, bus, dev, func, reg, &rval) == -1)
++		return (-1);
+ 
+-	err = ioctl(pcifd, PCI_IOC_BDF_CFGREAD, &io);
+-	if (err)
+-		return (err);
+-
+-	*val = io.cfgreg.val;
++	*val = rval;
+ 
+ 	return 0;
+ }
+@@ -64,16 +60,7 @@ pci_read(int bus, int dev, int func, uin
+ static int
+ pci_write(int bus, int dev, int func, uint32_t reg, uint32_t val)
+ {
+-	struct pciio_bdf_cfgreg io;
+-
+-	bzero(&io, sizeof(io));
+-	io.bus = bus;
+-	io.device = dev;
+-	io.function = func;
+-	io.cfgreg.reg = reg;
+-	io.cfgreg.val = val;
+-
+-	return ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io);
++	return pcibus_conf_write(pcifd, bus, dev, func, reg, val);
+ }
+ 
+ static int
+@@ -91,70 +78,68 @@ static int
+ pci_device_netbsd_map_range(struct pci_device *dev,
+     struct pci_device_mapping *map)
+ {
+-	struct mtrr mtrr;
+-	int fd, error, nmtrr, prot = PROT_READ;
++#ifdef HAVE_MTRR
++	struct mtrr m;
++	int n = 1;
++#endif
++	int prot, fd, ret = 0;
+ 
+-	if ((fd = open("/dev/mem", O_RDWR)) == -1)
+-		return errno;
++	prot = PROT_READ;
+ 
+ 	if (map->flags & PCI_DEV_MAP_FLAG_WRITABLE)
+ 		prot |= PROT_WRITE;
+ 
+-	map->memory = mmap(NULL, map->size, prot, MAP_SHARED,
+-	    fd, map->base);
++	fd = open("/dev/mem", O_RDWR);
++	if (fd == -1)
++		return errno;
++	map->memory = mmap(NULL, map->size, prot, MAP_SHARED, fd, map->base);
+ 	if (map->memory == MAP_FAILED)
+ 		return errno;
+ 
++#ifdef HAVE_MTRR
++	memset(&m, 0, sizeof(m));
++
+ 	/* No need to set an MTRR if it's the default mode. */
+ 	if ((map->flags & PCI_DEV_MAP_FLAG_CACHABLE) ||
+ 	    (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)) {
+-		mtrr.base = map->base;
+-		mtrr.len = map->size;
+-		mtrr.flags = MTRR_VALID;
+-
+-		if (map->flags & PCI_DEV_MAP_FLAG_CACHABLE)
+-			mtrr.type = MTRR_TYPE_WB;
++		m.base = base;
++		m.flags = MTRR_VALID | MTRR_PRIVATE;
++		m.len = size;
++		m.owner = getpid();
++		if (map->flags & PCI_DEV_MAP_FLAG_CACHEABLE)
++			m.type = MTRR_TYPE_WB;
+ 		if (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)
+-			mtrr.type = MTRR_TYPE_WC;
+-#ifdef __i386__
+-		error = i386_set_mtrr(&mtrr, &nmtrr);
+-#endif
+-#ifdef __amd64__
+-		error = x86_64_set_mtrr(&mtrr, &nmtrr);
+-#endif
+-		if (error) {
+-			close(fd);
+-			return errno;
+-		}
++			m.type = MTRR_TYPE_WC;
++
++		if ((netbsd_set_mtrr(&m, &n)) == -1)
++			ret = errno;
+ 	}
++#endif
+ 
+ 	close(fd);
+ 
+-	return 0;
++	return ret;
+ }
+ 
+ static int
+ pci_device_netbsd_unmap_range(struct pci_device *dev,
+     struct pci_device_mapping *map)
+ {
+-	struct mtrr mtrr;
+-	int nmtrr, error;
++#ifdef HAVE_MTRR
++	struct mtrr m;
++	int n = 1;
++
++	memset(&m, 0, sizeof(m));
+ 
+ 	if ((map->flags & PCI_DEV_MAP_FLAG_CACHABLE) ||
+ 	    (map->flags & PCI_DEV_MAP_FLAG_WRITE_COMBINE)) {
+-		mtrr.base = map->base;
+-		mtrr.len = map->size;
+-		mtrr.type = MTRR_TYPE_UC;
+-		mtrr.flags = 0; /* clear/set MTRR */
+-#ifdef __i386__
+-		error = i386_set_mtrr(&mtrr, &nmtrr);
+-#endif
+-#ifdef __amd64__
+-		error = x86_64_set_mtrr(&mtrr, &nmtrr);
+-#endif
+-		if (error)
+-			return errno;
++		m.base = map->base;
++		m.flags = 0;
++		m.len = size;
++		m.type = MTRR_TYPE_UC;
++		(void)netbsd_set_mtrr(&m, &n);
+ 	}
++#endif
+ 
+ 	return pci_device_generic_unmap_range(dev, map);
+ }
+@@ -163,25 +148,22 @@ static int
+ pci_device_netbsd_read(struct pci_device *dev, void *data,
+     pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_read)
+ {
+-	struct pciio_bdf_cfgreg io;
+-
+-	io.bus = dev->bus;
+-	io.device = dev->dev;
+-	io.function = dev->func;
++	u_int reg, rval;
+ 
+ 	*bytes_read = 0;
+ 	while (size > 0) {
+ 		int toread = MIN(size, 4 - (offset & 0x3));
+ 
+-		io.cfgreg.reg = (offset & ~0x3);
++		reg = (offset & ~0x3);
+ 
+-		if (ioctl(pcifd, PCI_IOC_BDF_CFGREAD, &io) == -1)
++		if ((pcibus_conf_read(pcifd, dev->bus, dev->dev, dev->func,
++		    reg, &rval)) == -1)
+ 			return errno;
+ 
+-		io.cfgreg.val = htole32(io.cfgreg.val);
+-		io.cfgreg.val >>= ((offset & 0x3) * 8);
++		rval = htole32(rval);
++		rval >>= ((offset & 0x3) * 8);
+ 
+-		memcpy(data, &io.cfgreg.val, toread);
++		memcpy(data, &rval, toread);
+ 
+ 		offset += toread;
+ 		data = (char *)data + toread;
+@@ -196,21 +178,18 @@ static int
+ pci_device_netbsd_write(struct pci_device *dev, const void *data,
+     pciaddr_t offset, pciaddr_t size, pciaddr_t *bytes_written)
+ {
+-	struct pciio_bdf_cfgreg io;
++	u_int reg, val;
+ 
+ 	if ((offset % 4) == 0 || (size % 4) == 0)
+ 		return EINVAL;
+ 
+-	io.bus = dev->bus;
+-	io.device = dev->dev;
+-	io.function = dev->func;
+-
+ 	*bytes_written = 0;
+ 	while (size > 0) {
+-		io.cfgreg.reg = offset;
+-		memcpy(&io.cfgreg.val, data, 4);
++		reg = offset;
++		memcpy(&val, data, 4);
+ 
+-		if (ioctl(pcifd, PCI_IOC_BDF_CFGWRITE, &io) == -1) 
++		if ((pcibus_conf_write(pcifd, dev->bus, dev->dev, dev->func,
++		   reg, val)) == -1)
+ 			return errno;
+ 
+ 		offset += 4;
