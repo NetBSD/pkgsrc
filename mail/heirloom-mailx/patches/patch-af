@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+
+--- sendout.c.orig	2008-07-04 06:09:57.000000000 +0000
++++ sendout.c
+@@ -51,6 +51,15 @@ static char sccsid[] = "@(#)sendout.c	2.
+ #include <time.h>
+ #include "md5.h"
+ 
++#ifdef HAVE_PATHS_H
++#include <paths.h>
++#endif
++
++#ifdef _PATH_SENDMAIL
++#undef SENDMAIL
++#define SENDMAIL _PATH_SENDMAIL
++#endif
++
+ /*
+  * Mail -- a mail program
+  *
