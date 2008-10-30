@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+
+To avoid conflicts with native mailx installations create symbolic links:
+
+ ex.
+     % ln -s ${PREFIX}/bin/mailx ${PREFIX}/bin/Mailx
+     % ln -s ${PREFIX}/man/man1/mailx.1 ${PREFIX}/man/man1/Mailx.1
+
+Example configurations: ${PREFIX}/share/examples/mailx/nail.rc
+Alternate docs: ${PREFIX}/share/doc/html/mailx/mailx.1.html
+===========================================================================
