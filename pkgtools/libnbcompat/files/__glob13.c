@@ -1,4 +1,4 @@
-/*	$NetBSD: __glob13.c,v 1.2 2007/07/31 13:17:33 joerg Exp $	*/
+/*	$NetBSD: __glob13.c,v 1.3 2008/10/30 16:00:54 joerg Exp $	*/
 
 /*
  * Copyright (c) 1989, 1993
@@ -38,7 +38,7 @@
 #if 0
 static char sccsid[] = "@(#)glob.c	8.3 (Berkeley) 10/13/93";
 #else
-__RCSID("$NetBSD: __glob13.c,v 1.2 2007/07/31 13:17:33 joerg Exp $");
+__RCSID("$NetBSD: __glob13.c,v 1.3 2008/10/30 16:00:54 joerg Exp $");
 #endif
 #endif /* LIBC_SCCS and not lint */
 
@@ -100,12 +100,6 @@ __weak_alias(globfree,_globfree)
 #endif
 
 #ifdef __LIBC12_SOURCE__
-#define	STAT	stat12
-#else
-#define	STAT	stat
-#endif
-
-#ifdef __LIBC12_SOURCE__
 __warn_references(glob,
     "warning: reference to compatibility glob(); include <glob.h> for correct reference")
 __warn_references(globfree,
@@ -164,10 +158,10 @@ typedef char Char;
 
 static int	 compare __P((const void *, const void *));
 static int	 g_Ctoc __P((const Char *, char *, size_t));
-static int	 g_lstat __P((Char *, struct STAT *, glob_t *));
+static int	 g_lstat __P((Char *, struct stat *, glob_t *));
 static DIR	*g_opendir __P((Char *, glob_t *));
 static Char	*g_strchr __P((const Char *, int));
-static int	 g_stat __P((Char *, struct STAT *, glob_t *));
+static int	 g_stat __P((Char *, struct stat *, glob_t *));
 static int	 glob0 __P((const Char *, glob_t *));
 static int	 glob1 __P((Char *, glob_t *, size_t *));
 static int	 glob2 __P((Char *, Char *, Char *, Char *, glob_t *,
@@ -605,7 +599,7 @@ glob2(pathbuf, pathend, pathlim, pattern, pglob, limit)
 	glob_t *pglob;
 	size_t *limit;
 {
-	struct STAT sb;
+	struct stat sb;
 	Char *p, *q;
 	int anymeta;
 
@@ -944,7 +938,7 @@ g_opendir(str, pglob)
 static int
 g_lstat(fn, sb, pglob)
 	Char *fn;
-	struct STAT *sb;
+	struct stat *sb;
 	glob_t *pglob;
 {
 	char buf[MAXPATHLEN];
@@ -963,7 +957,7 @@ g_lstat(fn, sb, pglob)
 static int
 g_stat(fn, sb, pglob)
 	Char *fn;
-	struct STAT *sb;
+	struct stat *sb;
 	glob_t *pglob;
 {
 	char buf[MAXPATHLEN];
