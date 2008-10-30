@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+include/pciaccess.h
+lib/libpciaccess.la
+lib/pkgconfig/pciaccess.pc
