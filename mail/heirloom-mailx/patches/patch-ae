@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/10/30 13:01:00 obache Exp $
+
+--- dotlock.c.orig	2006-03-20 15:49:46.000000000 +0000
++++ dotlock.c
+@@ -52,6 +52,15 @@ static char sccsid[] = "@(#)dotlock.c	2.
+ #define O_SYNC	0
+ #endif
+ 
++#ifdef HAVE_PATHS_H
++#include <paths.h>
++#endif
++
++#ifdef _PATH_MAILDIR
++#undef MAILSPOOL
++#define MAILSPOOL _PATH_MAILDIR
++#endif
++
+ static int maildir_access(const char *fname);
+ static int perhaps_setgid(const char *name, gid_t gid);
+ static int create_exclusive(const char *fname);
