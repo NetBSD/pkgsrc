@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/10/30 07:06:03 kefren Exp $
+--- Makefile.in.orig	2008-10-30 08:52:34.000000000 +0200
++++ Makefile.in	2008-10-30 08:52:54.000000000 +0200
+@@ -187,9 +187,9 @@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = gtksourceview sample doc 
+ DISTCLEANFILES = gtksourceview-sharp-2.0.pc
+-EXTRA_DIST = nemerle.lang vbnet.lang gtksourceview-sharp-2.0.pc.in gtk-sharp.snk
++EXTRA_DIST = gtksourceview-sharp-2.0.pc.in gtk-sharp.snk
+ extra_langdir = $(gtksourceview_prefix)/share/gtksourceview-1.0/language-specs
+-extra_lang_DATA = nemerle.lang vbnet.lang
++extra_lang_DATA =
+ pkgconfigdir = $(prefix)/lib/pkgconfig
+ pkgconfig_DATA = gtksourceview-sharp-2.0.pc
+ all: all-recursive
