@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/30 20:58:11 bjs Exp $
+
+--- configure.ac.orig	2008-10-17 16:59:42.000000000 -0400
++++ configure.ac
+@@ -116,7 +116,21 @@ AM_CONDITIONAL(NETBSD, [test "x$netbsd" 
+ AM_CONDITIONAL(OPENBSD, [test "x$openbsd" = xyes])
+ AM_CONDITIONAL(SOLARIS, [test "x$solaris" = xyes])
+ 
++if test "x$netbsd" = xyes; then
++AC_CHECK_LIB([pci], [pcibus_conf_read],
++  [PCIACCESS_LIBS="-lpci $PCIACCESS_LIBS"],
++  [AC_MSG_ERROR(check for libpci failed.)])
++AC_CHECK_HEADERS([machine/sysarch.h], [],
++  [AC_MSG_ERROR(sysarch.h not found)])
++AC_CHECK_HEADERS([machine/mtrr.h], [have_mtrr_h="yes"], [have_mtrr_h="no"],
++[#ifdef HAVE_MACHINE_SYSARCH_H
++#include <sys/types.h>
++#include <machine/sysarch.h>
++#endif
++])
++else
+ AC_CHECK_HEADER([asm/mtrr.h], [have_mtrr_h="yes"], [have_mtrr_h="no"])
++fi
+ 
+ if test "x$have_mtrr_h" = xyes; then
+     AC_DEFINE(HAVE_MTRR, 1, [Use MTRRs on mappings])
