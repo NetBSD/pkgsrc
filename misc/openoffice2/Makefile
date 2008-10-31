@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/10/31 11:02:55 hira Exp $
+# $NetBSD: Makefile,v 1.56 2008/10/31 12:55:30 hira Exp $
 #
 
 OO_VER=			2.4.2
@@ -151,7 +151,7 @@ do-install:
 	cd ${OO_PREFIX} &&					\
 	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
 		tar xpf $$f;					\
-	done;
+	done;							\
 	for lang in ${OO_LANGPACKS}; do				\
 		for f in ${OO_LANGPACKPATH:Q}/$$lang/*/*.sw; do	\
 			tar xpf $$f;				\
