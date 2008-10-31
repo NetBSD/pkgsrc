@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:46 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/31 16:08:02 seb Exp $
 
-DISTNAME=	SQL-Translator-0.09000
+DISTNAME=	SQL-Translator-0.09001
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/J/JR/JROBINSON/}
 
@@ -10,13 +10,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?SQL::Translator
 COMMENT=	Manipulate structured data definitions (SQL and more)
 
+DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Base>=0:../../devel/p5-Class-Base
 DEPENDS+=	p5-Class-Data-Inheritable>=0.02:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-MakeMethods>=0:../../devel/p5-Class-MakeMethods
+DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
+DEPENDS+=	p5-Digest-SHA1>=2.0:../../security/p5-Digest-SHA1
 DEPENDS+=	p5-Log-Log4perl>=0:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-Parse-RecDescent>=1.94:../../devel/p5-Parse-RecDescent
-DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
-DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 
 BUILD_DEPENDS+=	p5-PathTools>=0:../../devel/p5-PathTools
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
