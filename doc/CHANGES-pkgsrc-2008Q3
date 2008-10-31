@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.14 2008/10/31 12:01:12 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.15 2008/10/31 21:58:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -51,3 +51,5 @@ pullup ticket #2561 - requested by wiz
 png: update package for security fix
 pullup ticket #2562 - requested by tron
 imlib2: update package for security fix
+Pullup ticket #2563 - request by hira
+openoffice2: security update
