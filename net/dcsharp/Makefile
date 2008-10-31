@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/31 12:00:04 obache Exp $
 
 DISTNAME=	dcsharp-0.11.1
 PKGREVISION=	3
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/dcsharp/
 COMMENT=	File sharing client for the Direct Connect protocol
 
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c++
 NO_CONFIGURE=	yes
 
