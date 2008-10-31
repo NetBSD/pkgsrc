@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/05/10 21:03:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/10/31 02:02:44 snj Exp $
 bin/dillo
 bin/dpid
 bin/dpidc
@@ -15,18 +15,14 @@ share/doc/dillo/Cookies.txt
 share/doc/dillo/Dillo.txt
 share/doc/dillo/Dpid.txt
 share/doc/dillo/Dw.txt
-share/doc/dillo/DwImage.txt
-share/doc/dillo/DwPage.txt
-share/doc/dillo/DwStyle.txt
-share/doc/dillo/DwTable.txt
-share/doc/dillo/DwWidget.txt
 share/doc/dillo/HtmlParser.txt
 share/doc/dillo/IO.txt
+share/doc/dillo/Imgbuf.txt
 share/doc/dillo/Images.txt
 share/doc/dillo/NC_design.txt
 share/doc/dillo/README
 share/doc/dillo/Selection.txt
-share/examples/dillo/dillorc.default
+share/examples/dillo/dillorc
 share/examples/dillo/dpidrc
 @dirrm share/examples/dillo
 @dirrm share/doc/dillo
