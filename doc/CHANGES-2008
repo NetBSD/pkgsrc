@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2780 2008/10/31 12:44:18 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2781 2008/10/31 12:47:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4729,3 +4729,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-YAML-LibYAML version 0.27 [obache 2008-10-31]
 	Updated multimedia/swfdec to 0.8.2 [wiz 2008-10-31]
 	Removed multimedia/swfdec-gtk2 successor multimedia/swfdec [wiz 2008-10-31]
+	Added multimedia/swfdec-gnome version 2.24.0 [wiz 2008-10-31]
