@@ -1,0 +1,12 @@
+Kwalitee is an automatically-measurable gauge of how good your
+software is. That's very different from quality, which a computer
+really can't measure in a general sense. (If you can, you've solved
+a hard problem in computer science.)
+
+In the world of the CPAN, the CPANTS project (CPAN Testing Service;
+also a funny acronym on its own) measures Kwalitee with several
+metrics. If you plan to release a distribution to the CPAN -- or
+even within your own organization -- testing its Kwalitee before
+creating a release can help you improve your quality as well.
+
+Test::Kwalitee and a short test file will do this for you automatically.
