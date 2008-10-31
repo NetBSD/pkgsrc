@@ -1,0 +1,9 @@
+Send file(s) via email or instant messenger.
+
+A dialog window presents a choice of carrier application and
+recipient of the file(s).  Recipent names can be selected from a
+list or autocompleted.  The selected application is then opened with
+the file(s) and recipient ready for transfer.
+
+The application is intented to integrate with nautilus and is
+written for the GNOME graphical desktop.
