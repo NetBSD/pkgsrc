@@ -1,4 +1,4 @@
-$NetBSD: patch-ch,v 1.4 2008/10/18 01:28:22 hira Exp $
+$NetBSD: patch-ch,v 1.5 2008/10/31 11:02:55 hira Exp $
 
 --- solenv/inc/unxbsdi3.mk.orig	2007-10-05 10:11:25.000000000 +0900
 +++ solenv/inc/unxbsdi3.mk	2007-10-05 10:14:03.000000000 +0900
@@ -147,10 +147,10 @@ $NetBSD: patch-ch,v 1.4 2008/10/18 01:28:22 hira Exp $
 +STDOBJVCL=$(L)$/salmain.o
 +
 +# libraries for linking applications
-+STDLIBGUIMT=${X11_LDFLAGS} -lX11 -lpthread -lm -lc -lgcc_s -lstdc++
++STDLIBGUIMT=-lX11 -lpthread -lm -lc -lgcc_s -lstdc++
 +STDLIBCUIMT=-lpthread -lm -lc -lgcc_s -lstdc++
 +# libraries for linking shared libraries
-+STDSHLGUIMT=${X11_LDFLAGS} -lX11 -lXext -lpthread -lm -lc -lgcc_s -lstdc++
++STDSHLGUIMT=-lX11 -lXext -lpthread -lm -lc -lgcc_s -lstdc++
 +STDSHLCUIMT=-lpthread -lm -lc -lgcc_s -lstdc++
 +
 +LIBSALCPPRT*=-Wl,--whole-archive -lsalcpprt -Wl,--no-whole-archive
