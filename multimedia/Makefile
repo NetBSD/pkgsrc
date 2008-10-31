@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2008/09/17 00:21:48 obache Exp $
+# $NetBSD: Makefile,v 1.124 2008/10/31 12:43:59 wiz Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -106,7 +106,6 @@ SUBDIR+=	smpeg
 SUBDIR+=	smpeg-xmms
 SUBDIR+=	subtitleeditor
 SUBDIR+=	swfdec
-SUBDIR+=	swfdec-gtk2
 SUBDIR+=	totem
 SUBDIR+=	totem-nautilus
 SUBDIR+=	totem-pl-parser
