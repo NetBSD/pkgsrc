@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/31 12:48:56 wiz Exp $
+
+SHA1 (swfdec-mozilla-0.8.2.tar.gz) = 330fc304acc8ee63f4e9af993cbf87c25d82cebf
+RMD160 (swfdec-mozilla-0.8.2.tar.gz) = c6aef5170a06477d5bb7720c8814b34d7711b8b9
+Size (swfdec-mozilla-0.8.2.tar.gz) = 381148 bytes
