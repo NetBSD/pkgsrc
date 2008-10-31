@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.13 2008/09/30 23:14:18 hira Exp $
+$NetBSD: patch-ba,v 1.14 2008/10/31 11:02:55 hira Exp $
 
 --- config_office/configure.orig	2008-05-21 01:28:55.000000000 +0900
-+++ config_office/configure	2008-09-30 22:33:09.000000000 +0900
++++ config_office/configure	2008-10-31 19:19:14.000000000 +0900
 @@ -3176,11 +3176,11 @@
  		test_cups=no
  		_os=OSF1
@@ -121,6 +121,24 @@ $NetBSD: patch-ba,v 1.13 2008/09/30 23:14:18 hira Exp $
  else
  
               CFLAGS=-I/usr/X11R6/include
+@@ -20526,7 +20529,7 @@
+     NEON_CFLAGS=
+     BUILD_TYPE="$BUILD_TYPE NEON"
+ fi
+-if test "$_os" = "Darwin" && test "$with_system_openssl" != "no"; then
++if test "$USE_BUILTIN_openssl" = "yes" && test "$_os" = "Darwin" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" && test "$with_system_openssl" != "no"; then
+    with_system_openssl=yes
+ fi
+ echo "$as_me:$LINENO: checking which libssl to use" >&5
+@@ -20537,7 +20540,7 @@
+ echo "${ECHO_T}external" >&6
+     # Mac OS builds should get out without extra stuff is the Mac porters'
+     # wish. And pkg-config is although Xcode ships a .pc for openssl
+-    if test "$_os" = "Darwin"; then
++    if test "$_os" = "Darwin" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" ; then
+         OPENSSL_CFLAGS=
+         OPENSSL_LIBS="-lssl -lcrypto"
+     else
 @@ -23949,7 +23952,7 @@
    ENABLE_REPORTDESIGN=YES
    echo "$as_me:$LINENO: checking which jfreereport libs to use" >&5

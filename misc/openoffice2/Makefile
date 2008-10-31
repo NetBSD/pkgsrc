@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/10/31 11:00:50 hira Exp $
+# $NetBSD: Makefile,v 1.55 2008/10/31 11:02:55 hira Exp $
 #
 
 OO_VER=			2.4.2
@@ -64,17 +64,21 @@ REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
-SUBST_FILES.lib=	solenv/inc/libs.mk
-.for pkg in db4 expat jpeg zlib
-SUBST_SED.lib+=		-e 's,@BLNK_PREFIX_${pkg}@,${BUILDLINK_PREFIX.${pkg}},g'
-LIBS+=			-L${BUILDLINK_PREFIX.${pkg}}/lib
-LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
+SUBST_FILES.lib=	solenv/inc/pkgsrc.mk
+SUBST_SED.lib+=		-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_SED.lib+=		-e 's|@OO_LIBDIR@|${OO_PREFIX}/program|g'
+.for pkg in db4 expat icu jpeg zlib
+LIB.${pkg}=		-L${BUILDLINK_PREFIX.${pkg}}/lib
+LIB.${pkg}+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
+SUBST_SED.lib+=		-e 's|@LIB_${pkg}@|${LIB.${pkg}}|g'
+LIBS+=			${LIB.${pkg}}
 .endfor
 
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ENV+=		BLNK_PREFIX_nas=${BUILDLINK_PREFIX.nas}
+CONFIGURE_ENV+=		USE_BUILTIN_openssl=${USE_BUILTIN.openssl}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
@@ -85,10 +89,12 @@ CONFIGURE_ARGS+=	--with-system-curl
 CONFIGURE_ARGS+=	--with-system-db
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-freetype
+CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-libxml2
 CONFIGURE_ARGS+=	--with-system-libxslt
 CONFIGURE_ARGS+=	--with-system-neon
+CONFIGURE_ARGS+=	--with-system-openssl
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
@@ -113,13 +119,16 @@ UNLIMIT_RESOURCES+=	datasize
 OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
-MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
-INSTALLATION_DIRS=	bin ${OO_RELEASE} share/applications
+PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
+MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
+MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
+INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications
 
 OO_UNXNAME=	openoffice.org2.4
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
-OO_PKGROOT=	/opt/${OO_UNXNAME}
+OO_LANGPACKPATH=${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice_languagepack/portable/install
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
+OO_PREFIX=	${DESTDIR}${PREFIX}/lib/${OO_RELEASE}
 
 post-extract:
 	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
@@ -128,48 +137,45 @@ post-extract:
 	cp -Rp gcc3_freebsd_x86-64 gcc3_netbsd_x86-64
 
 do-build:
-	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
+	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules && build.pl -P${MAKE_JOBS:U1} --all product=full && cd util && dmake openoffice_${OO_BASELANG} && dmake ooolanguagepack"
 
 post-build:
-	cd ${WRKDIR} &&						\
-	rm -fr opt &&						\
-	for l in ${OO_LANGS}; do				\
-		for f in ${OO_PKGPATH:Q}/$${l}/*/*.sw; do	\
-			tar xpfk $$f;				\
-		done;						\
-	done
-	cd ${WRKDIR} &&						\
-	rm -fr xdg &&						\
-	mv opt/${OO_UNXNAME}/share/xdg .
-	cd ${WRKDIR}${OO_PKGROOT} &&				\
-	chmod ${SHAREMODE} program/hid.lst program/testtoolrc
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
-	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/soffice \"\$$@\""	\
+	${ECHO} "exec ${OO_PREFIX}/program/soffice \"\$$@\""	\
 		>> ${WRKDIR}/${OO_UNXNAME}
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}-printeradmin
-	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/spadmin"	\
+	${ECHO} "exec ${OO_PREFIX}/program/spadmin"		\
 		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
-	cd ${WRKDIR}${OO_PKGROOT} &&				\
-	tar cf - . | tar Cxpf ${DESTDIR}${PREFIX}/${OO_RELEASE} -
-	for f in ${OO_PROGRAMS}; do				\
-		ln -sf ${DESTDIR}${PREFIX}/${OO_RELEASE}/program/$$f	\
-			${DESTDIR}${PREFIX}/bin/$$f;			\
+	cd ${OO_PREFIX} &&					\
+	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
+		tar xpf $$f;					\
+	done;
+	for lang in ${OO_LANGPACKS}; do				\
+		for f in ${OO_LANGPACKPATH:Q}/$$lang/*/*.sw; do	\
+			tar xpf $$f;				\
+		done;						\
 	done
-	${INSTALL_DATA} ${WRKDIR}/xdg/* ${DESTDIR}${PREFIX}/share/applications
+	for d in ${OO_PREFIX}/share/xdg/*; do			\
+		ln -s $$d ${DESTDIR}${PREFIX}/share/applications;	\
+	done
+	cd ${OO_PREFIX}/program &&				\
+	chmod ${SHAREMODE} hid.lst testtoolrc
+	for f in ${OO_PROGRAMS}; do				\
+		ln -sf ${OO_PREFIX}/program/$$f			\
+			${DESTDIR}${PREFIX}/bin/$$f;		\
+	done
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
 		${DESTDIR}${PREFIX}/bin
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&				\
-	find ${OO_RELEASE} \! -type d -print |			\
+	find lib/${OO_RELEASE} \! -type d -print |		\
 	sort > ${WRKDIR}/PLIST &&				\
-	find ${OO_RELEASE} -type d -print | sort -r |		\
+	find lib/${OO_RELEASE} -type d -print | sort -r |	\
 	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
-	${ECHO} bin/${OO_UNXNAME} >> ${WRKDIR}/PLIST
-	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${WRKDIR}/PLIST
 
 # OS specific Makefile
 .if exists(Makefile.${OPSYS})
@@ -187,7 +193,9 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
