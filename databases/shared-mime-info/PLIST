@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/10/17 05:51:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/10/31 14:02:18 wiz Exp $
 bin/update-mime-database
 man/man1/update-mime-database.1
 share/locale/az/LC_MESSAGES/shared-mime-info.mo
@@ -41,4 +41,4 @@ share/locale/zh_CN/LC_MESSAGES/shared-mime-info.mo
 share/locale/zh_TW/LC_MESSAGES/shared-mime-info.mo
 share/mime/packages/freedesktop.org.xml
 share/pkgconfig/shared-mime-info.pc
-@dirrm share/mime/packages
+@comment in DEINSTALL: @dirrm share/mime/packages
