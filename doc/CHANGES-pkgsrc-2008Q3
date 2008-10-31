@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.13 2008/10/29 10:05:39 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.14 2008/10/31 12:01:12 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -49,3 +49,5 @@ squid27: Fix transparent proxy option
 squid30: Fix transparent proxy option
 pullup ticket #2561 - requested by wiz
 png: update package for security fix
+pullup ticket #2562 - requested by tron
+imlib2: update package for security fix
