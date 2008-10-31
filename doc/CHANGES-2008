@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2779 2008/10/31 12:41:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2780 2008/10/31 12:44:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4728,3 +4728,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Catalyst-Plugin-AutoRestart version 0.92 [abs 2008-10-31]
 	Added textproc/p5-YAML-LibYAML version 0.27 [obache 2008-10-31]
 	Updated multimedia/swfdec to 0.8.2 [wiz 2008-10-31]
+	Removed multimedia/swfdec-gtk2 successor multimedia/swfdec [wiz 2008-10-31]
