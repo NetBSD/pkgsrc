@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2782 2008/10/31 12:49:47 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2783 2008/10/31 13:56:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4731,3 +4731,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed multimedia/swfdec-gtk2 successor multimedia/swfdec [wiz 2008-10-31]
 	Added multimedia/swfdec-gnome version 2.24.0 [wiz 2008-10-31]
 	Added multimedia/swfdec-mozilla version 0.8.2 [wiz 2008-10-31]
+	Added sysutils/nautilus-sendto version 1.1.0 [wiz 2008-10-31]
