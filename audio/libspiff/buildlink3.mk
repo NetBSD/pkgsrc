@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/06/13 05:14:00 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/10/31 22:36:28 bjs Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSPIFF_BUILDLINK3_MK:=	${LIBSPIFF_BUILDLINK3_MK}+
@@ -12,8 +12,7 @@ BUILDLINK_PACKAGES+=	libspiff
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libspiff
 
 .if ${LIBSPIFF_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libspiff+=	libspiff>=0.8.2
-BUILDLINK_ABI_DEPENDS.libspiff+=	libspiff>=0.8.3 # XXX soname
+BUILDLINK_API_DEPENDS.libspiff+=	libspiff>=1.0.0
 BUILDLINK_PKGSRCDIR.libspiff?=	../../audio/libspiff
 .endif	# LIBSPIFF_BUILDLINK3_MK
 
