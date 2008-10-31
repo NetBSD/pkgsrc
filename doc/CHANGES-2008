@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2769 2008/10/30 22:07:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2770 2008/10/31 00:38:11 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4703,3 +4703,19 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/totem-pl-parser to 2.24.2 [wiz 2008-10-30]
 	Updated fonts/gucharmap to 2.24.1.1 [wiz 2008-10-30]
 	Updated chat/loudmouth to 1.4.3 [wiz 2008-10-30]
+	Updated devel/p5-Attribute-Handlers to 0.80 [he 2008-10-30]
+	Updated devel/p5-AutoLoader to 5.67 [he 2008-10-30]
+	Updated devel/p5-Class-Adapter to 1.05 [he 2008-10-30]
+	Updated devel/p5-Data-Compare to 1.21 [he 2008-10-30]
+	Updated devel/p5-Data-Page to 2.01 [he 2008-10-30]
+	Added archivers/p5-Archive-Any version 0.0932 [he 2008-10-30]
+	Added devel/p5-CPAN-DistnameInfo version 0.06 [he 2008-10-30]
+	Added textproc/p5-Pod-Strip version 1.02 [he 2008-10-30]
+	Added devel/p5-Module-ExtractUse version 0.23 [he 2008-10-30]
+	Added devel/p5-Data-Section version 0.005 [he 2008-10-30]
+	Added devel/p5-Software-License version 0.008 [he 2008-10-30]
+	Added devel/p5-Test-YAML-Valid version 0.03 [he 2008-10-30]
+	Added devel/p5-Test-YAML-Meta version 0.11 [he 2008-10-30]
+	Added devel/p5-Array-Diff version 0.05 [he 2008-10-30]
+	Added devel/p5-Module-CPANTS-Analyse version 0.82 [he 2008-10-30]
+	Added devel/p5-Test-Kwalitee version 1.01 [he 2008-10-31]
