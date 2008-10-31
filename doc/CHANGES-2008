@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2770 2008/10/31 00:38:11 he Exp $
+$NetBSD: CHANGES-2008,v 1.2771 2008/10/31 02:04:06 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4719,3 +4719,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Array-Diff version 0.05 [he 2008-10-30]
 	Added devel/p5-Module-CPANTS-Analyse version 0.82 [he 2008-10-30]
 	Added devel/p5-Test-Kwalitee version 1.01 [he 2008-10-31]
+	Updated www/dillo to 2.0 [snj 2008-10-31]
