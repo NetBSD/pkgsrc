@@ -1,6 +1,0 @@
-Swfdec is a library for rendering Flash(R) animations and games.  It was
-originally designed as a basis library for creating Flash plugins for
-GStreamer, but it is a fully standalone library which only use the libart
-library for drawing.  Swfdec is released under the LGPL.
-
-This package provides an SWF based pixbuf-loader for GTK.
