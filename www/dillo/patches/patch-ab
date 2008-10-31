@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.13 2006/05/10 21:03:41 adam Exp $
+$NetBSD: patch-ab,v 1.14 2008/10/31 02:02:44 snj Exp $
 
---- Makefile.in.orig	2006-04-26 18:07:27.000000000 +0200
-+++ Makefile.in
-@@ -194,7 +194,7 @@ target_os = @target_os@
- target_vendor = @target_vendor@
- SUBDIRS = doc dpip src dpid dpi
- EXTRA_DIST = ChangeLog.old dillorc install-dpi-local
+--- ./Makefile.in.orig	2008-10-30 07:47:58.000000000 -0700
++++ ./Makefile.in	2008-10-30 07:48:05.000000000 -0700
+@@ -197,7 +197,7 @@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = lout dw dlib dpip src doc dpid dpi test
+ EXTRA_DIST = Doxyfile dillorc install-dpi-local
 -sysconf_DATA = dillorc
 +sysconf_DATA =
  all: config.h
