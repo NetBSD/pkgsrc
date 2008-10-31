@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/31 11:50:42 abs Exp $
+
+SHA1 (Catalyst-Plugin-AutoRestart-0.92.tar.gz) = 666448681407cd609ec6c864897da1762ed236f8
+RMD160 (Catalyst-Plugin-AutoRestart-0.92.tar.gz) = 58e472b4313feb6848ced38d92d40753f33ff2d8
+Size (Catalyst-Plugin-AutoRestart-0.92.tar.gz) = 20266 bytes
