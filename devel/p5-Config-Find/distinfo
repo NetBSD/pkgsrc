@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/31 11:51:49 obache Exp $
+
+SHA1 (Config-Find-0.23.tar.gz) = 245f04a4b95e2a1edb75530840b407d4f1f36944
+RMD160 (Config-Find-0.23.tar.gz) = 03ff2759c65a5cd32022fabb5f180a4ef6f35c51
+Size (Config-Find-0.23.tar.gz) = 10378 bytes
