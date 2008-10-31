@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2775 2008/10/31 11:43:20 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2776 2008/10/31 11:52:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4724,3 +4724,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2 to 2.4.2 [hira 2008-10-31]
 	Added mail/p5-Net-ManageSieve version 0.06 [obache 2008-10-31]
 	Added devel/p5-Term-ShellUI version 0.86 [obache 2008-10-31]
+	Added devel/p5-Config-Find version 0.23 [obache 2008-10-31]
