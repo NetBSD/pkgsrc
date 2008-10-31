@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/10/31 12:41:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/10/31 12:44:51 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SWFDEC_BUILDLINK3_MK:=	${SWFDEC_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}swfdec
 
 .if ${SWFDEC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.swfdec+=	swfdec>=0.8.2
-BUILDLINK_PKGSRCDIR.swfdec?=	../../zzz/swfdec
+BUILDLINK_PKGSRCDIR.swfdec?=	../../multimedia/swfdec
 .endif	# SWFDEC_BUILDLINK3_MK
 
 .include "../../devel/liboil/buildlink3.mk"
