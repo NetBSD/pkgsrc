@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/10/30 11:30:34 hira Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/31 09:40:58 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -82,6 +82,7 @@ CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENBRK=${PREFIX}/bin/genbrk
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCCODE=${PREFIX}/sbin/genccode
 CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCMN=${PREFIX}/sbin/gencmn
+CONFIGURE_ENV+=		USE_BUILTIN_openssl=${USE_BUILTIN.openssl}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
