@@ -1,7 +1,17 @@
-Swfdec is a library for rendering Flash(R) animations and games.  It was
-originally designed as a basis library for creating Flash plugins for
-GStreamer, but it is a fully standalone library which only use the libart
-library for drawing.  Swfdec is released under the LGPL.
+Swfdec is a decoder/renderer for Macromedia Flash animations. The
+decoding and rendering engine is provided in a library that can be
+used by other applications.
 
-This package provides the swfdec library, as well as an standalone SWF
-player.
+Swfdec is intended to be used as a replacement for the default
+Flash player.  While it is not yet a 100% complete replacement, a
+big focus is on stability and security. So it is deemed to be
+suitable for use in production applications.
+
+The library however is still in heavy development. Because of that,
+the Programming interface will change between major versions. No
+guarantees are made about the API. However, during stable release
+cycles, the API and ABI are guaranteed to stay stable.
+
+An additional library named swfdec-gtk is provided for easy
+integration of Swfdec into Gtk applications. This library is what
+developers most likely want to target their applications at.
