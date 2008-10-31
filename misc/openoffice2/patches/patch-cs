@@ -1,4 +1,4 @@
-$NetBSD: patch-cs,v 1.1 2007/10/12 15:41:43 hira Exp $
+$NetBSD: patch-cs,v 1.1.12.1 2008/10/31 21:55:54 tron Exp $
 
 --- solenv/inc/unxbsdx3.mk.orig	2007-10-13 00:24:19.000000000 +0900
 +++ solenv/inc/unxbsdx3.mk	2007-10-13 00:28:56.000000000 +0900
@@ -18,7 +18,7 @@ $NetBSD: patch-cs,v 1.1 2007/10/12 15:41:43 hira Exp $
 +#LINKOUTPUT_FILTER=" |& $(SOLARENV)$/bin$/msg_filter"
 +
 +# _PTHREADS is needed for the stl
-+CDEFS+= -DX86 $(PTHREAD_CFLAGS) -D_PTHREADS -D_REENTRANT -DNEW_SOLAR -D_USE_NAMESPACE=1 -DSTLPORT_VERSION=450
++CDEFS+= -DX86_64 $(PTHREAD_CFLAGS) -D_PTHREADS -D_REENTRANT -DNEW_SOLAR -D_USE_NAMESPACE=1 -DSTLPORT_VERSION=450
 +
 +# enable visibility define in "sal/types.h"
 +.IF "$(HAVE_GCC_VISIBILITY_FEATURE)" == "TRUE"
@@ -91,7 +91,7 @@ $NetBSD: patch-cs,v 1.1 2007/10/12 15:41:43 hira Exp $
 +# reduce to -O1 to avoid optimization problems
 +CFLAGSOPT=-O1
 +# Compiler flags for disabling optimizations
-+CFLAGSNOOPT=-O
++CFLAGSNOOPT=-O0
 +# Compiler flags for describing the output path
 +CFLAGSOUTOBJ=-o
 +
@@ -111,9 +111,9 @@ $NetBSD: patch-cs,v 1.1 2007/10/12 15:41:43 hira Exp $
 +LINKC*=$(CC)
 +
 +# default linker flags
-+LINKFLAGSDEFS*=-z defs
++LINKFLAGSDEFS*=-Wl,-z,defs
 +LINKFLAGSRUNPATH*=-Wl,-rpath,\''$$ORIGIN'\'
-+LINKFLAGS=-z combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
++LINKFLAGS=-Wl,-z,combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
 +
 +# linker flags for linking applications
 +LINKFLAGSAPPGUI= -Wl,-export-dynamic 

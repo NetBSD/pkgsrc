@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2008/10/02 17:57:45 joerg Exp $
+# $NetBSD: Makefile,v 1.51.2.1 2008/10/31 21:55:54 tron Exp $
 #
 
-OO_VER=			2.4.1
-PKGREVISION=		3
+OO_VER=			2.4.2
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -30,7 +29,7 @@ DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOH680_m17
+WRKSRC=			${WRKDIR}/OOH680_m18
 CONFIGURE_DIRS=		config_office
 
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
@@ -44,6 +43,7 @@ PTHREAD_AUTO_VARS=	yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
+CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
