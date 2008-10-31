@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7634 2008/10/30 21:14:38 snj Exp $
+$NetBSD: TODO,v 1.7635 2008/10/31 02:04:06 snj Exp $
 
 Suggested new packages
 ======================
@@ -527,7 +527,6 @@ Suggested package updates
 	o devIL-1.7.1
 	o dhid-5.3
 	o dictem-1.0.0
-	o dillo-2.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0
