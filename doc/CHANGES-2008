@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2777 2008/10/31 11:53:41 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2778 2008/10/31 12:12:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4726,3 +4726,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Term-ShellUI version 0.86 [obache 2008-10-31]
 	Added devel/p5-Config-Find version 0.23 [obache 2008-10-31]
 	Added www/p5-Catalyst-Plugin-AutoRestart version 0.92 [abs 2008-10-31]
+	Added textproc/p5-YAML-LibYAML version 0.27 [obache 2008-10-31]
