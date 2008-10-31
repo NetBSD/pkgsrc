@@ -1,0 +1,7 @@
+Every OS has different rules for configuration files placement, this module
+allows to easily find and create your app configuration filess following
+those rules.
+
+Config::Find references configuration files by the application name or by the
+application name and the configuration file name when the app uses several
+application files, i.e emacs, profile, apache/httpd, apache/ssl.
