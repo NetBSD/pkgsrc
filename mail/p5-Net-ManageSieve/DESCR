@@ -1,0 +1,2 @@
+Net::ManageSieve implements a client interface to the ManageSieve protocol
+(http://tools.ietf.org/html/draft-martin-managesieve-09).
