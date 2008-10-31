@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.44 2008/10/03 09:09:16 hira Exp $
+$NetBSD: distinfo,v 1.44.2.1 2008/10/31 21:55:54 tron Exp $
 
-SHA1 (openoffice-2.4.1/OOo_2.4.1_src_binfilter.tar.bz2) = a50c7f317643b756c2b0e8937fa9d64b99f05ed9
-RMD160 (openoffice-2.4.1/OOo_2.4.1_src_binfilter.tar.bz2) = 04ffce167f94a250f94f05923a70af0b0744c417
-Size (openoffice-2.4.1/OOo_2.4.1_src_binfilter.tar.bz2) = 6674779 bytes
-SHA1 (openoffice-2.4.1/OOo_2.4.1_src_core.tar.bz2) = 170642263c32f614ee7e9439a8af30410e00d318
-RMD160 (openoffice-2.4.1/OOo_2.4.1_src_core.tar.bz2) = 64f43d426005b6c5f464cf55e72df41fe833620b
-Size (openoffice-2.4.1/OOo_2.4.1_src_core.tar.bz2) = 153573457 bytes
-SHA1 (openoffice-2.4.1/OOo_2.4.1_src_l10n.tar.bz2) = b21f4531ea8182d87ff6f5f68809086c1c063295
-RMD160 (openoffice-2.4.1/OOo_2.4.1_src_l10n.tar.bz2) = d41f43b27e84ae5a4620b591e46d884e0c94a72c
-Size (openoffice-2.4.1/OOo_2.4.1_src_l10n.tar.bz2) = 81193580 bytes
-SHA1 (openoffice-2.4.1/OOo_2.4.1_src_system.tar.bz2) = d42b8345b55ef6f0f2a4adb575c815bbb23ec00d
-RMD160 (openoffice-2.4.1/OOo_2.4.1_src_system.tar.bz2) = e476e4ca0804c58e4c8249b6f17f100094ad030d
-Size (openoffice-2.4.1/OOo_2.4.1_src_system.tar.bz2) = 44069977 bytes
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 1c7f652c71ad3364a98d79d4f6751db00c7daa99
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 09662444f359f86bb7eeec0c035ae29360e989e5
+Size (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 6674731 bytes
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = f84782887062011f34c5c8f0279c40d159051a34
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = d29ed7d23a7616b05d855c172e6f148aeb0f4b69
+Size (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = 153673147 bytes
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = c59fefaf9f7e3372fbeb2a1e468270613b7b1fa6
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = 7a2bf7cbe404b7fe8cb61c670717f54046e1cab9
+Size (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = 81193726 bytes
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_system.tar.bz2) = 67dd2af4c25a311c2e83a7dcd3a8229378ee1625
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_system.tar.bz2) = 172fcde006f5e81f3be526ab50dbb10a67d277b3
+Size (openoffice-2.4.2/OOo_2.4.2_src_system.tar.bz2) = 44071903 bytes
 SHA1 (patch-ac) = ed6d84d40c3543eed754d74a5e65caf137f31c3d
 SHA1 (patch-ad) = f26b60c05bf061c9d1f245826954cb642861dd98
 SHA1 (patch-ag) = 6c2f17424cfc85b5bc923a650167f14b7acabfd4
@@ -49,14 +49,14 @@ SHA1 (patch-bv) = bc035bdbc8420666a52417f2226e3e687d199e33
 SHA1 (patch-bw) = e0d438f886e97c0342f56ba155ebb6a7e9414093
 SHA1 (patch-bx) = 157878e1fb4297f118ed0bbf06009506666fbc1c
 SHA1 (patch-by) = 1612b765467e51ca7498497d38a0bb6ac694f9a6
-SHA1 (patch-ch) = 5785607cff893f32b16bb5bcd30dc6c3942633e0
+SHA1 (patch-ch) = be68bf0e05b2d80102fb098f703bf80bb4fa6abc
 SHA1 (patch-ci) = 4743cee1c391e04a53bd83f6ae7e58e737d08d1e
 SHA1 (patch-cj) = 45ff359ec795e5ef5c692e954d88912c74017162
 SHA1 (patch-cn) = 67afccde1d7bfa42ec4082067189da23ada97190
 SHA1 (patch-cp) = 35151ba658859c9d116ccdf44ec372c9e66435b1
 SHA1 (patch-cq) = 6691fd7fa330db000ec5a9319bf9030b83aa593d
 SHA1 (patch-cr) = aa797461919635c3e6aaa30678a7585d5640dedd
-SHA1 (patch-cs) = 76c55cd6150076022d9b773486232417ed069643
+SHA1 (patch-cs) = 55f2296e74c80f32ea548d38c4bbd9114e403fd3
 SHA1 (patch-ct) = a06c5cbc543acecb4f18e858cd844302bbdb50b4
 SHA1 (patch-cu) = b930fd94413c2bdf23ea94b074e3bb5e93784009
 SHA1 (patch-cv) = 2e14a54d369a255ee39fcec7d4f1d2b11a8f4d2e
