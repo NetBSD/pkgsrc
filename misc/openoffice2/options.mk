@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2008/10/01 22:30:35 hira Exp $
+# $NetBSD: options.mk,v 1.21 2008/10/31 11:02:55 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -12,7 +12,7 @@ OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 				nb nl nn nr ns oc or-IN pa-IN pl pt pt-BR ru \
 				rw sk sl sh sr ss st sv sw sw-TZ te-IN ti-ER \
 				ta-IN th tn tr ts tg ur-IN uk ve vi xh zh-CN \
-				zh-TW zu
+				zh-TW zu all
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
@@ -22,10 +22,19 @@ PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.for l in ${PKG_OPTIONS:Mlang-*}
-OO_LANGS+=	${l:S/^lang-//1}
-.endfor
+.if !empty(PKG_OPTIONS:Mlang-all)
+OO_LANGS=	ALL
+OO_BASELANG=	en-US
+OO_LANGPACKS=	${OO_SUPPORTED_LANGUAGES:S/en-US//1:S/all//1}
+.else
+.  for lang in ${PKG_OPTIONS:Mlang-*:S/lang-//g}
+OO_LANGS+=	${lang}
+OO_BASELANG?=	${lang} # Get first one.
+.  endfor
+.endif
 OO_LANGS?=	en-US
+OO_BASELANG?=	en-US
+OO_LANGPACKS?=	${OO_LANGS:S/${OO_BASELANG}//1}
 
 .if !empty(PKG_OPTIONS:Mfirefox)
 CONFIGURE_ARGS+=	--with-system-mozilla=firefox
@@ -46,6 +55,12 @@ CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .else
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
+
+SUBST_CLASSES+=		browser
+SUBST_STAGE.browser=	post-patch
+SUBST_MESSAGE.browser=	Adding MOZ_FLAVOUR
+SUBST_FILES.browser=	shell/source/unix/misc/open-url.sh
+SUBST_SED.browser+=	-e 's,@MOZ_FLAVOUR@,${MOZ_FLAVOUR},g'
 
 .if !empty(PKG_OPTIONS:Mooo-external-libwpd)
 CONFIGURE_ARGS+=	--with-system-libwpd
@@ -68,7 +83,9 @@ CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
 
+PLIST_VARS+=		gtk2
 .if !empty(PKG_OPTIONS:Mgtk2)
+PLIST.gtk2=		yes
 CONFIGURE_ARGS+=	--enable-gtk
 .include "../../x11/gtk2/buildlink3.mk"
 .else

@@ -1,43 +1,8 @@
-$NetBSD: patch-cx,v 1.3 2007/12/12 10:07:55 hira Exp $
+$NetBSD: patch-cx,v 1.4 2008/10/31 11:02:55 hira Exp $
 
---- solenv/inc/libs.mk.orig	2007-07-31 22:06:06.000000000 +0900
-+++ solenv/inc/libs.mk	2007-12-12 17:04:33.000000000 +0900
-@@ -187,14 +187,14 @@
- LINGULIB=$(HM2LIBST)
- LNGLIB=-llng$(OFFICEUPD)$(DLLPOSTFIX)
- .IF "$(SYSTEM_EXPAT)"=="YES"
--EXPAT3RDLIB=-lexpat
--EXPATASCII3RDLIB=-lexpat
-+EXPAT3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
-+EXPATASCII3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
- .ELSE
- EXPAT3RDLIB=-lexpat_xmlparse -lexpat_xmltok
- EXPATASCII3RDLIB=-lascii_expat_xmlparse -lexpat_xmltok
- .ENDIF
- .IF "$(SYSTEM_ZLIB)"=="YES"
--ZLIB3RDLIB=-lz
-+ZLIB3RDLIB="-L@BLNK_PREFIX_zlib@/lib -Wl,-R@BLNK_PREFIX_zlib@/lib -lz"
- .ELSE
- ZLIB3RDLIB=-lzlib
- .ENDIF
-@@ -209,7 +209,7 @@
- JPEG3RDLIB=/usr/lib/libjpeg.so
- .ENDIF
- .ELSE
--JPEG3RDLIB=-ljpeg
-+JPEG3RDLIB="-L@BLNK_PREFIX_jpeg@/lib -Wl,-R@BLNK_PREFIX_jpeg@/lib -ljpeg"
- .ENDIF
- .ELSE
- JPEG3RDLIB=-ljpeglib
-@@ -221,13 +221,17 @@
- CURLLIB=-lcurl-3
- .ELSE			# "$(GUI)$(COM)"=="WNTGCC"
- .IF "$(SYSTEM_DB)" == "YES"
--BERKELEYLIB=-ldb
--BERKELEYCPPLIB=-ldb_cxx
-+BERKELEYLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4"
-+BERKELEYCPPLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4_cxx"
- .ELSE
+--- solenv/inc/libs.mk.orig	2008-10-31 19:38:26.000000000 +0900
++++ solenv/inc/libs.mk	2008-10-31 19:39:20.000000000 +0900
+@@ -238,7 +238,11 @@
  BERKELEYLIB=-ldb-4.2
  BERKELEYCPPLIB=-ldb_cxx-4.2
  .ENDIF
