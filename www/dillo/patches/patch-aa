@@ -1,15 +1,25 @@
-$NetBSD: patch-aa,v 1.6 2006/05/10 21:03:41 adam Exp $
+$NetBSD: patch-aa,v 1.7 2008/10/31 02:02:44 snj Exp $
 
---- dpid/Makefile.in.orig	2006-04-26 18:07:18.000000000 +0200
-+++ dpid/Makefile.in
-@@ -481,8 +481,8 @@ uninstall-am: uninstall-binPROGRAMS unin
+--- ./dpid/Makefile.in.orig	2008-10-30 07:40:38.000000000 -0700
++++ dpid/Makefile.in	2008-10-30 07:46:09.000000000 -0700
+@@ -485,13 +485,13 @@
  
  
  install-data-local :
 -	$(mkinstalldirs) $(DESTDIR)$(sysconfdir)
 -	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(sysconfdir)/dpidrc
+-	echo >> $(DESTDIR)$(sysconfdir)/dpidrc
+-	echo "proto.file=file/file.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
+-	echo "proto.ftp=ftp/ftp.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
+-	echo "proto.https=https/https.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
+-	echo "proto.data=datauri/datauri.filter.dpi" >> $(DESTDIR)$(sysconfdir)/dpidrc
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/$(PACKAGE)
 +	echo dpi_dir=$(libdir)/dillo/dpi > $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
++	echo >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
++	echo "proto.file=file/file.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
++	echo "proto.ftp=ftp/ftp.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
++	echo "proto.https=https/https.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
++	echo "proto.data=datauri/datauri.filter.dpi" >> $(DESTDIR)$(datadir)/examples/$(PACKAGE)/dpidrc
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
  .NOEXPORT:
