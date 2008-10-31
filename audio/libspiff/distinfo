@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/06/13 05:14:00 bjs Exp $
+$NetBSD: distinfo,v 1.3 2008/10/31 22:36:28 bjs Exp $
 
-SHA1 (libspiff-0.8.3.tar.bz2) = c07302788685490ca8aebef7536618401e204182
-RMD160 (libspiff-0.8.3.tar.bz2) = 1def8c41ad656b3fee53adbb7bb153063962448d
-Size (libspiff-0.8.3.tar.bz2) = 510030 bytes
+SHA1 (libspiff-1.0.0.tar.bz2) = 4e69677fb16a35ee4158bedb9965345e1f530a28
+RMD160 (libspiff-1.0.0.tar.bz2) = 89fee7e0c8a8de59452494251a2121a858824c85
+Size (libspiff-1.0.0.tar.bz2) = 385061 bytes
