@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2008/10/17 05:51:57 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2008/10/31 14:02:18 wiz Exp $
 #
 
 DISTNAME=	shared-mime-info-0.51
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://people.freedesktop.org/~hadess/
 EXTRACT_SUFX=	.tar.bz2
