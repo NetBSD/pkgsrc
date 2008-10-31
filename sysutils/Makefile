@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.442 2008/10/30 20:58:33 bjs Exp $
+# $NetBSD: Makefile,v 1.443 2008/10/31 13:57:28 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -181,6 +181,7 @@ SUBDIR+=	munin-node
 SUBDIR+=	munin-server
 SUBDIR+=	nautilus
 SUBDIR+=	nautilus-cd-burner
+SUBDIR+=	nautilus-sendto
 SUBDIR+=	ndesk-dbus
 SUBDIR+=	ndesk-dbus-glib
 SUBDIR+=	news
