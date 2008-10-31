@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/31 00:36:19 he Exp $
+
+SHA1 (Test-Kwalitee-1.01.tar.gz) = 8f99765f3a5e563b50638d082b90e6129d6fee7a
+RMD160 (Test-Kwalitee-1.01.tar.gz) = b13158ed18a5c97417c5a8d2274b856f1f14ba5e
+Size (Test-Kwalitee-1.01.tar.gz) = 4211 bytes
