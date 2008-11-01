@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2008/09/08 07:42:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/01 17:42:48 wiz Exp $
 #
 
 DISTNAME=	generator-0.35-cbiere-r4
 PKGNAME=	generator-cbiere-0.35r4
 CATEGORIES=	emulators
-MASTER_SITES=	http://www.ghostwhitecrab.de/generator/
+MASTER_SITES=	http://www.squish.net/generator/cbiere/generator/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.ghostwhitecrab.de/generator/
+HOMEPAGE=	http://squish.net/generator/
 COMMENT=	Sega Mega drive genesis emulator (Improved)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
