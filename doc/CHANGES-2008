@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2787 2008/10/31 22:48:15 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2788 2008/11/01 05:16:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4736,3 +4736,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-SQL-Translator to 0.09001 [seb 2008-10-31]
 	Updated audio/libspiff to 1.0.0 [bjs 2008-10-31]
 	Updated audio/herrie to 2.2 [bjs 2008-10-31]
+	Updated emulators/simh to 3.8.0 [obache 2008-11-01]
