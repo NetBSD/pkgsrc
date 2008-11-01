@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/10/29 00:41:44 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/11/01 22:14:13 ahoka Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -15,6 +15,7 @@ ${PLIST.x11}lib/vlc/video_output/libxvideo_plugin.la
 ${PLIST.x11}lib/vlc/video_output/libglx_plugin.la
 ${PLIST.x11}lib/vlc/video_output/libopengl_plugin.la
 ${PLIST.x11}lib/vlc/misc/libosd_parser_plugin.la
+${PLIST.x11}lib/vlc/access/libscreen_plugin.la
 ${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.la
 ${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.la
 ${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.la
