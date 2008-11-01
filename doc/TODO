@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7638 2008/10/31 22:48:45 bjs Exp $
+$NetBSD: TODO,v 1.7639 2008/11/01 05:16:34 obache Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ Suggested package updates
 	o silc-client-1.1.6
 	o silc-server-1.1.14
 	o silc-toolkit-1.1.8
-	o simh-3.8.0 [pkg/38750]
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
 	o sitecopy-0.16.5
