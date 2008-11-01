@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.25 2008/01/15 23:42:25 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2008/11/01 13:40:34 gdt Exp $
 
 DISTNAME=	lcms-1.17
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.littlecms.com/
-COMMENT=	Light Color Management System -- a color management library
+COMMENT=	Little Color Management System -- a color management library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -14,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
+
+# This is very MIT-like, but perhaps not the exact text.
+#LICENSE=	lcms-license
 
 # lcms does not need zlib, but will look for it and link it to tifficc
 # if present.  Therefore, we don't enjoin lcms from finding zlib, but
