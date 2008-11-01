@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7639 2008/11/01 05:16:34 obache Exp $
+$NetBSD: TODO,v 1.7640 2008/11/01 13:36:53 tonio Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o biew-5.6.4
 	o binutils-2.19
 	o bioperl-1.5.0
-	o bitlbee-1.2.3
 	o bittorrent-5.0.5
 	o blender-2.48
 	o blur6ex-0.3.462
