@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/10/18 11:43:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/11/01 09:51:59 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -61,7 +61,7 @@ include/fontforge/unicoderange.h
 include/fontforge/ustring.h
 include/fontforge/utype.h
 lib/libfontforge.la
-lib/libgdraw.la
+${PLIST.x11}lib/libgdraw.la
 lib/libgioftp.la
 lib/libgunicode.la
 lib/libgutils.la

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/11/17 21:20:49 adam Exp $
+$NetBSD: patch-aa,v 1.7 2008/11/01 09:51:59 adam Exp $
 
---- fontforge/Makefile.dynamic.in.orig	2007-10-28 05:06:05.000000000 +0100
+--- fontforge/Makefile.dynamic.in.orig	2008-09-15 00:27:24.000000000 +0200
 +++ fontforge/Makefile.dynamic.in
 @@ -15,7 +15,7 @@ CC = @CC@
  O = @O_EXTENSION@
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.6 2007/11/17 21:20:49 adam Exp $
  X_11LIB = @X_11LIB@
  X_EXTRA_LIBS = @X_EXTRA_LIBS@
  X_PRE_LIBS = @X_PRE_LIBS@
+@@ -73,7 +73,7 @@ LIBLIBS = -rpath $(libdir) ../libgutils.
+     @LIBS@ $(STATIC_LIBS) -lm
+ DLIBS = -rpath $(libdir) ../libgunicode.la @LIBS@ $(STATIC_LIBS) -lm
+ 
+-all: @FINAL_TARGET@ @MACAPP@ sfddiff fontimage fontlint
++all: @FINAL_TARGET@ sfddiff fontimage fontlint
+ 
+ fontforge: $(@exeOBJECTS@) $(fontforge_LIBOBJECTS) exelibstamp.pre libstamp.pre
+ 	sed -e '1,$$ s/REPLACE_ME_WITH_MAJOR_VERSION/$(FF_VERSION)/' -e '1,$$ s/REPLACE_ME_WITH_MINOR_VERSION/$(FF_REVISION)/' < exelibstamp.pre > exelibstamp.c
