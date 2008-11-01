@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/10/18 11:43:45 adam Exp $
+# $NetBSD: Makefile,v 1.53 2008/11/01 09:51:59 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
@@ -26,9 +26,7 @@ CONFIGURE_ARGS+=	--without-python
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BROKEN_GETTEXT_DETECTION=	yes
 
-# checks for X11/Intrinsic.h
-BUILDLINK_DEPMETHOD.libXt?=	build
-.include "../../x11/libXt/buildlink3.mk"
+.include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -38,6 +36,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
