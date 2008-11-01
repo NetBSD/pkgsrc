@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2791 2008/11/01 14:34:25 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2792 2008/11/01 19:49:53 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4740,3 +4740,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added time/ocaml-calendar version 2.0.4 [obache 2008-11-01]
 	Updated chat/bitlbee to 1.2.3 [tonio 2008-11-01]
 	Updated graphics/png to 1.2.33 [wiz 2008-11-01]
+	Updated www/apache22 to 2.2.10 [tron 2008-11-01]
