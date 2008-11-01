@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/01/04 21:45:05 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/11/01 05:15:42 obache Exp $
 #
 
-DISTNAME=	simhv33-0
-PKGNAME=	simh-3.3.0
-PKGREVISION=	1
+DISTNAME=	simhv38-0
+PKGNAME=	simh-3.8.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://simh.trailing-edge.com/sources/
 EXTRACT_SUFX=	.zip
@@ -23,22 +22,23 @@ WRKSRC=			${WRKDIR}
 .include "../../mk/bsd.prefs.mk"
 
 .if (${MACHINE_ARCH} == "arm")
-.if (${CFLAGS:M-O2} == "-O2")
-CFLAGS:=	${CFLAGS:S/-O2//}
-.endif
+BUILDLINK_TRANSFORM+=	rm:-O2
 .endif
 
 INSTALLATION_DIRS=	bin share/simh share/doc/simh
 
+MAKE_FILE=		makefile
+
 post-extract:
 	${MKDIR} ${WRKSRC}/BIN
-	${MV} ${WRKSRC}/makefile ${WRKSRC}/Makefile
 
 do-install:
 	(cd ${WRKSRC}/BIN && for BIN in *; do				\
 		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN;	\
 	done)
-	${INSTALL_DATA} ${WRKSRC}/VAX/ka655.bin ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/simh
 	(cd ${WRKSRC} && for TXT in *.txt */*.txt; do			\
 		${INSTALL_DATA} $$TXT ${DESTDIR}${PREFIX}/share/doc/simh;		\
 	done)

@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.5 2004/12/22 21:07:01 skrll Exp $
+$NetBSD: patch-ab,v 1.6 2008/11/01 05:15:42 obache Exp $
 
---- sim_ether.c.orig	2004-03-31 13:38:58.000000000 +0100
+--- sim_ether.c.orig	2007-05-17 12:08:20.000000000 +0200
 +++ sim_ether.c
-@@ -830,6 +830,15 @@ void eth_callback(u_char* info, const st
+@@ -1131,6 +1131,15 @@ void eth_callback(u_char* info, const st
+     /* set data in passed read packet */
      tmp_packet.len = header->len;
      memcpy(tmp_packet.msg, data, header->len);
- 
 +    /*
 +     * Pad packet to minimum ethernet len, in case it comes from the local
 +     * host.
@@ -15,26 +15,26 @@ $NetBSD: patch-ab,v 1.5 2004/12/22 21:07:01 skrll Exp $
 +        memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
 +    }
 +
-     eth_packet_trace (dev, tmp_packet.msg, tmp_packet.len, "rcvqd");
+     if (dev->need_crc)
+       eth_add_crc32(&tmp_packet);
  
-     pthread_mutex_lock (&dev->lock);
-@@ -840,6 +849,15 @@ void eth_callback(u_char* info, const st
+@@ -1143,6 +1152,15 @@ void eth_callback(u_char* info, const st
+     /* set data in passed read packet */
      dev->read_packet->len = header->len;
      memcpy(dev->read_packet->msg, data, header->len);
- 
 +    /*
 +     * Pad packet to minimum ethernet len, in case it comes from the local
 +     * host.
 +     */
 +    if (header->len <60) {
 +        dev->read_packet->len = 60;
-+        memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
++         memset(dev->read_packet->msg + header->len, 0, 60 - header->len);
 +    }
-+
-     eth_packet_trace (dev, dev->read_packet->msg, dev->read_packet->len, "reading");
++ 
+     if (dev->need_crc)
+       eth_add_crc32(dev->read_packet);
  
-     /* call optional read callback function */
-@@ -1080,8 +1098,10 @@ int eth_host_devices(int used, int max, 
+@@ -1431,8 +1449,10 @@ int eth_host_devices(int used, int max, 
  
  int eth_devices(int max, ETH_LIST* list)
  {
