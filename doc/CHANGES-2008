@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2790 2008/11/01 13:36:53 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.2791 2008/11/01 14:34:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4739,3 +4739,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/simh to 3.8.0 [obache 2008-11-01]
 	Added time/ocaml-calendar version 2.0.4 [obache 2008-11-01]
 	Updated chat/bitlbee to 1.2.3 [tonio 2008-11-01]
+	Updated graphics/png to 1.2.33 [wiz 2008-11-01]
