@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/10/23 04:40:55 schmonz Exp $
+$NetBSD: patch-aa,v 1.4 2008/11/02 20:51:40 schmonz Exp $
 
---- configure.sh.orig	2008-06-11 13:33:56.000000000 -0400
+--- configure.sh.orig	2008-08-27 09:11:14.000000000 -0400
 +++ configure.sh
-@@ -75,6 +75,13 @@ LUAFLAGS=${LUAFLAGS:-""}
+@@ -76,6 +76,13 @@ LUAFLAGS=${LUAFLAGS:-""}
  OSX_SDK=${OSX_SDK:-""}
  }
  
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.3 2008/10/23 04:40:55 schmonz Exp $
  set_linux() {
  set_default
  OS=Linux
-@@ -253,6 +260,9 @@ case $1 in
+@@ -255,6 +262,9 @@ case $1 in
  		usage
  		exit 1
  	;;
