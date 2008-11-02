@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/07/29 19:49:12 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2008/11/02 21:50:21 snj Exp $
 
 DISTNAME=		obconf-2.0.3
 CATEGORIES=		wm
@@ -6,7 +6,7 @@ MASTER_SITES=		http://icculus.org/openbox/obconf/
 # PR pkg/36489
 MASTER_SITES+=		http://offload1.icculus.org/openbox/obconf/
 
-MAINTAINER=		snj@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://icculus.org/openbox/obconf/
 COMMENT=		Tool for configuring the Openbox window manager
 
