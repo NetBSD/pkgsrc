@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2804 2008/11/02 17:25:36 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2805 2008/11/02 20:51:50 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4753,3 +4753,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/dovecot to 1.1.6 [adrianp 2008-11-02]
 	Updated math/gtklife to 5.1 [snj 2008-11-02]
 	Updated devel/mantis to 1.1.4 [adrianp 2008-11-02]
+	Updated mail/freepops to 0.2.8 [schmonz 2008-11-02]
