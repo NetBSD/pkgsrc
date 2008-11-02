@@ -1,0 +1,5 @@
+This module provides a c api for XS modules to hook into the
+callbacks of PL_check.
+
+ExtUtils::Depends is used to export all functions for other XS
+modules to use.
