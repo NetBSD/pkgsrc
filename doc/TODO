@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7641 2008/11/01 19:49:53 tron Exp $
+$NetBSD: TODO,v 1.7642 2008/11/02 16:57:11 snj Exp $
 
 Suggested new packages
 ======================
@@ -681,7 +681,6 @@ Suggested package updates
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
-	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
