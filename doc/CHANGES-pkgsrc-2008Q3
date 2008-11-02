@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.15 2008/10/31 21:58:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.16 2008/11/02 12:45:14 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -53,3 +53,7 @@ pullup ticket #2562 - requested by tron
 imlib2: update package for security fix
 Pullup ticket #2563 - request by hira
 openoffice2: security update
+Pullup ticket #2564 - requested by is
+liblive: build fix for Solaris
+Pullup ticket #2565 - requested by is
+libcdio: build fix for Solaris
