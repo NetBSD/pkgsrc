@@ -1,0 +1,37 @@
+$NetBSD: patch-ba,v 1.1.2.2 2008/11/02 12:04:47 tron Exp $
+
+--- config.solaris.orig	2008-07-25 02:40:05.000000000 +0200
++++ config.solaris
+@@ -1,17 +1,20 @@
+-COMPILE_OPTS =		$(INCLUDES) -I. -O -DSOLARIS -DSOCKLEN_T=socklen_t
++.SUFFIXES: .la .lo .cpp
++COMPILE_OPTS =		${INCLUDES} -I. ${CPPFLAGS} -O -DSOLARIS -DSOCKLEN_T=socklen_t
+ C =			c
+-C_COMPILER =		cc
+-C_FLAGS =		$(COMPILE_OPTS)
++C_COMPILER =		${LIBTOOL} --mode=compile ${CC}
++C_FLAGS =		${COMPILE_OPTS}
+ CPP =			cpp
+-CPLUSPLUS_COMPILER =	c++
+-CPLUSPLUS_FLAGS =	$(COMPILE_OPTS) -Wall
+-OBJ =			o
+-LINK =			c++ -o
+-LINK_OPTS =		-L.
+-CONSOLE_LINK_OPTS =	$(LINK_OPTS)
+-LIBRARY_LINK =		ld -o
+-LIBRARY_LINK_OPTS =	$(LINK_OPTS) -r -dn
+-LIB_SUFFIX =			a
++CPLUSPLUS_COMPILER =	${LIBTOOL} --mode=compile c++
++CPLUSPLUS_FLAGS =	${COMPILE_OPTS} -Wall
++OBJ =			lo
++LINK =			${LIBTOOL} --mode=link c++ -o
++LINK+=			# this is needed to add a space!
++LINK_OPTS =		-Wl,-R${PREFIX}/lib -lm
++CONSOLE_LINK_OPTS =	${LINK_OPTS}
++LIBRARY_LINK =		${LIBTOOL} --mode=link c++ -rpath ${PREFIX}/lib -version-info 0:0 -o
++LIBRARY_LINK+=		# this is needed to add a space!
++LIBRARY_LINK_OPTS =	${LINK_OPTS}  -r -dn
++LIB_SUFFIX =		la
+ LIBS_FOR_CONSOLE_APPLICATION = -lsocket -lnsl
+ LIBS_FOR_GUI_APPLICATION = $(LIBS_FOR_CONSOLE_APPLICATION)
+ EXE =
