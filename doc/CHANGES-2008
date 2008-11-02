@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2807 2008/11/02 22:25:56 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2808 2008/11/02 23:35:54 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4756,3 +4756,14 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/freepops to 0.2.8 [schmonz 2008-11-02]
 	Updated net/p5-NetAddr-IP to 4.014 [seb 2008-11-02]
 	Updated audio/musicpd to 0.13.1nb2 [snj 2008-11-02]
+	Updated devel/p5-Data-Serializer to 0.48 [he 2008-11-02]
+	Added devel/p5-IO-TieCombine version 1.000 [he 2008-11-02]
+	Updated devel/p5-App-Cmd to 0.202 [he 2008-11-02]
+	Updated devel/p5-Data-Taxi to 0.95 [he 2008-11-02]
+	Updated devel/p5-Data-UUID to 1.149 [he 2008-11-02]
+	Updated devel/p5-Data-Visitor to 0.21 [he 2008-11-02]
+	Added devel/p5-B-Hooks-OP-Check version 0.12 [he 2008-11-02]
+	Added devel/p5-B-Hooks-EndOfScope version 0.04 [he 2008-11-02]
+	Updated devel/p5-B-Hooks-OP-Check to 0.12nb1 [he 2008-11-02]
+	Updated devel/p5-B-Hooks-OP-Check to 0.12nb2 [he 2008-11-02]
+	Updated devel/p5-Devel-Declare to 0.003003 [he 2008-11-02]
