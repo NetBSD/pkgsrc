@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2799 2008/11/02 08:31:49 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2800 2008/11/02 13:17:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4748,3 +4748,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/ruby-RMagick to 2.7.1 [obache 2008-11-02]
 	Updated net/gift to 0.11.8.1nb2 [bjs 2008-11-02]
 	Updated net/net-snmp to 5.4.2.1 [adam 2008-11-02]
+	Added audio/libao-nas version 0.8.8 [obache 2008-11-02]
