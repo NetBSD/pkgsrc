@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.2.2 2008/11/02 12:15:38 tron Exp $
+
+--- src/cddb.h.orig	2007-06-16 22:12:16.000000000 +0200
++++ src/cddb.h
+@@ -38,7 +38,7 @@ cddb_opts_t cddb_opts;
+       the total length of the disk, and 
+       the number of tracks.
+ */
+-u_int32_t cddb_discid(CdIo_t *p_cdio, track_t i_tracks);
++uint32_t cddb_discid(CdIo_t *p_cdio, track_t i_tracks);
+ 
+ #ifdef HAVE_CDDB
+ #include <cddb/cddb.h>
