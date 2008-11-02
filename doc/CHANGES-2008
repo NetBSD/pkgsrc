@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2796 2008/11/02 00:12:44 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2797 2008/11/02 01:29:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4745,3 +4745,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gtksourceview2 to 2.4.1 [wiz 2008-11-01]
 	Updated devel/p5-Mouse to 0.10 [seb 2008-11-01]
 	Removed misc/bidwatcher [snj 2008-11-02]
+	Updated graphics/ruby-RMagick to 2.7.1 [obache 2008-11-02]
