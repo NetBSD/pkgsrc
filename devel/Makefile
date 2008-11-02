@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1064 2008/10/31 11:52:41 obache Exp $
+# $NetBSD: Makefile,v 1.1065 2008/11/02 14:49:38 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -586,6 +586,7 @@ SUBDIR+=	p5-IO-Prompt
 SUBDIR+=	p5-IO-String
 SUBDIR+=	p5-IO-Stty
 SUBDIR+=	p5-IO-Tee
+SUBDIR+=	p5-IO-TieCombine
 SUBDIR+=	p5-IO-Tty
 SUBDIR+=	p5-IO-Util
 SUBDIR+=	p5-IO-Zlib
