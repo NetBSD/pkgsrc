@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.4 2008/10/23 04:40:55 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2008/11/02 20:51:40 schmonz Exp $
 
-SHA1 (freepops-0.2.7.tar.gz) = ea6e5836d26388080b3624aa07808abc1917879c
-RMD160 (freepops-0.2.7.tar.gz) = 8504d1e2be40a44955c8ad0907f98dcea9d1a6ac
-Size (freepops-0.2.7.tar.gz) = 1955240 bytes
-SHA1 (patch-aa) = e5fd37ed3009fda5cc033fe9768b97f3023d6200
+SHA1 (freepops-0.2.8.tar.gz) = 5bbf5ed41916c2fee04938abb0c440d98b325710
+RMD160 (freepops-0.2.8.tar.gz) = e209a2b2f289e5b431c1d5ab3aaf5d5b09a87135
+Size (freepops-0.2.8.tar.gz) = 2062296 bytes
+SHA1 (patch-aa) = ebe6913847ac9c7a9746496705b6ac45ace6eeef
 SHA1 (patch-ab) = 59faa97775853f795f024585e194a060a3f3ee94
 SHA1 (patch-ac) = ca0c136b6cee3c164c9382227bcbd534e382927b
 SHA1 (patch-ad) = 90a2313b2e9a3a2321778df515c076e603955502
 SHA1 (patch-ae) = 389693569e978395f2d1e286003ad7d20ce59a14
-SHA1 (patch-af) = 68bacbbb3dca7b7e676caee54fc7610c6b280f10
-SHA1 (patch-ag) = 6be408e7c065d9cf32f727e1cbd016b7ce60e202
-SHA1 (patch-ah) = e54224faa6e803e0dd858211416fb5be151d7474
-SHA1 (patch-ai) = 36285e7b1fe68511ad65302a94f2c71e8f348323
+SHA1 (patch-af) = b0a084f1db0f39a4f29cd071765b7d4e6bf21198
+SHA1 (patch-ag) = 9c7f944d0f2f5a5303e692844b729e933655f9f4

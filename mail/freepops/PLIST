@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/23 04:40:55 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/02 20:51:40 schmonz Exp $
 bin/freepopsd
 man/man1/freepopsd.1
 share/doc/freepops/MANUAL.txt
@@ -36,6 +36,7 @@ share/freepops/lua/popforward.lua
 share/freepops/lua/psock.lua
 share/freepops/lua/serial.lua
 share/freepops/lua/skeleton.lua
+share/freepops/lua/smartlog.lua
 share/freepops/lua/soap/http.lua
 share/freepops/lua/soap/soap.lua
 share/freepops/lua/socket.lua
@@ -50,6 +51,7 @@ share/freepops/lua/updater.lua
 share/freepops/lua/updater_common.lua
 share/freepops/lua/updater_php.lua
 share/freepops/lua/version_comparer.lua
+share/freepops/lua/wel.lua
 share/freepops/lua/xml2table.lua
 share/freepops/lua/xml2tex.lua
 share/freepops/lua/yahoo.lua
