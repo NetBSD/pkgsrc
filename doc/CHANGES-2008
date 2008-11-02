@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2795 2008/11/01 21:45:56 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2796 2008/11/02 00:12:44 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4744,3 +4744,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/phpmyadmin to 2.11.9.3 [tron 2008-11-01]
 	Updated x11/gtksourceview2 to 2.4.1 [wiz 2008-11-01]
 	Updated devel/p5-Mouse to 0.10 [seb 2008-11-01]
+	Removed misc/bidwatcher [snj 2008-11-02]
