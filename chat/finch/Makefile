@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/07/11 07:39:20 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2008/11/02 13:02:51 obache Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
 PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 
 CONFIGURE_ARGS+=	--enable-consoleui
+CONFIGURE_ENV+=		ac_cv_path_pythonpath=
 
 #CONFIGURE_ARGS+=	--disable-plugins
 
