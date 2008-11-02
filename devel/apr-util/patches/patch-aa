@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2007/04/28 06:23:04 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/02 15:05:11 cube Exp $
 
 --- configure.in.orig	2005-05-05 12:24:29.000000000 -0700
 +++ configure.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2007/04/28 06:23:04 minskim Exp $
     $mkdir_p build
  fi
 -cp $APR_BUILD_DIR/apr_rules.mk $abs_builddir/build/rules.mk
-+sed -e 's:^LIBTOOL=.*:LIBTOOL=$(WRAPPER_DIR)/bin/libtool:' $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
++sed -e 's:^LIBTOOL=.*:LIBTOOL=$(WRAPPER_DIR)/bin/libtool:' -e "s:^LDFLAGS=.*:LDFLAGS=${LDFLAGS}:" $APR_BUILD_DIR/apr_rules.mk > $abs_builddir/build/rules.mk
  
  dnl
  dnl BSD/OS (BSDi) needs to use a different include syntax in the Makefiles
