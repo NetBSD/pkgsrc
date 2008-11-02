@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2008/11/02 22:25:09 snj Exp $
+
+--- src/audioOutputs/audioOutput_oss.c.orig	2008-11-02 12:53:23.000000000 -0800
++++ src/audioOutputs/audioOutput_oss.c	2008-11-02 12:53:46.000000000 -0800
+@@ -405,7 +405,7 @@
+ 	freeOssData(od);
+ }
+ 
+-static int setParam(OssData * od, int param, int *value)
++static int setParam(OssData * od, unsigned long param, int *value)
+ {
+ 	int val = *value;
+ 	int copy;
