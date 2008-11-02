@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2806 2008/11/02 21:41:53 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2807 2008/11/02 22:25:56 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4755,3 +4755,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mantis to 1.1.4 [adrianp 2008-11-02]
 	Updated mail/freepops to 0.2.8 [schmonz 2008-11-02]
 	Updated net/p5-NetAddr-IP to 4.014 [seb 2008-11-02]
+	Updated audio/musicpd to 0.13.1nb2 [snj 2008-11-02]
