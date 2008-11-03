@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/04/17 13:46:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/03 22:05:50 bjs Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk2-/}
-PKGREVISION=	4
+PKGREVISION=	5
 .include "../../graphics/nvtv/Makefile.common"
 
 CONFLICTS=	nvtv-[0-9]*
