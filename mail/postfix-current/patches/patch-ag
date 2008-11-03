@@ -1,14 +1,17 @@
-$NetBSD: patch-ag,v 1.18 2008/09/17 13:44:16 joerg Exp $
+$NetBSD: patch-ag,v 1.19 2008/11/03 00:47:36 taca Exp $
 
 Only define HAS_DB if it hasn't been defined.
+Add support for NetBSD 5.x and DragonFly BSD.
 
---- src/util/sys_defs.h.orig	2008-01-15 02:51:44 +0200
-+++ src/util/sys_defs.h	2008-07-18 22:24:22 +0300
-@@ -29,7 +29,7 @@
+--- src/util/sys_defs.h.orig	2008-08-23 05:47:16.000000000 +0900
++++ src/util/sys_defs.h
+@@ -28,8 +28,8 @@
+     || defined(BSDI2) || defined(BSDI3) || defined(BSDI4) \
      || defined(OPENBSD2) || defined(OPENBSD3) || defined(OPENBSD4) \
      || defined(NETBSD1) || defined(NETBSD2) || defined(NETBSD3) \
-     || defined(NETBSD4) \
+-    || defined(NETBSD4) \
 -    || defined(EKKOBSD1)
++    || defined(NETBSD4) || defined(NETBSD5) \
 +    || defined(EKKOBSD1) || defined(DRAGONFLY)
  #define SUPPORTED
  #include <sys/types.h>

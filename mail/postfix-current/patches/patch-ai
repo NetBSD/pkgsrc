@@ -1,10 +1,11 @@
-$NetBSD: patch-ai,v 1.21 2008/09/17 13:44:16 joerg Exp $
+$NetBSD: patch-ai,v 1.22 2008/11/03 00:47:36 taca Exp $
 
 Make this pkgsrc friendly.
+Add support for NetBSD 5.x and DragonFly BSD.
 
---- makedefs.orig	2007-08-19 14:28:11.000000000 +0000
-+++ makedefs	2007-10-22 05:50:31.000000000 +0000
-@@ -132,6 +132,8 @@
+--- makedefs.orig	2008-09-04 08:46:54.000000000 +0900
++++ makedefs
+@@ -144,6 +144,8 @@ case "$SYSTEM.$RELEASE" in
  		;;
    FreeBSD.7*)	SYSTYPE=FREEBSD7
  		;;
@@ -13,7 +14,16 @@ Make this pkgsrc friendly.
    OpenBSD.2*)	SYSTYPE=OPENBSD2
  		;;
    OpenBSD.3*)	SYSTYPE=OPENBSD3
-@@ -198,13 +200,6 @@
+@@ -160,6 +162,8 @@ case "$SYSTEM.$RELEASE" in
+ 		;;
+    NetBSD.4*)	SYSTYPE=NETBSD4
+ 		;;
++   NetBSD.5*)	SYSTYPE=NETBSD5
++		;;
+    BSD/OS.2*)	SYSTYPE=BSDI2
+ 		;;
+    BSD/OS.3*)	SYSTYPE=BSDI3
+@@ -210,13 +214,6 @@ case "$SYSTEM.$RELEASE" in
  		esac
  		;;
     ULTRIX.4*)	SYSTYPE=ULTRIX4
@@ -27,7 +37,7 @@ Make this pkgsrc friendly.
  		for l in syslog resolv; do
  		    if [ -f /usr/local/lib/lib$l.a ]; then
  			SYSLIBS="$SYSLIBS -l$l"
-@@ -236,25 +231,8 @@
+@@ -248,25 +245,8 @@ case "$SYSTEM.$RELEASE" in
  		esac;;
  		# Tested with RedHat 3.03 on 20020729.
      Linux.1*)	SYSTYPE=LINUX1
@@ -53,7 +63,7 @@ Make this pkgsrc friendly.
  		# GDBM locks the DBM .pag file after open. This breaks postmap.
  		# if [ -f /usr/include/gdbm-ndbm.h ]
  		# then
-@@ -265,7 +243,6 @@
+@@ -277,7 +257,6 @@ case "$SYSTEM.$RELEASE" in
  		#     CCARGS="$CCARGS -DHAS_DBM -DPATH_NDBM_H='<gdbm/ndbm.h>'"
  		#     GDBM_LIBS=gdbm
  		# fi
@@ -61,7 +71,7 @@ Make this pkgsrc friendly.
  		for name in nsl resolv $GDBM_LIBS
  		do
  		    for lib in /usr/lib64 /lib64 /usr/lib /lib
-@@ -360,25 +337,13 @@
+@@ -370,25 +349,13 @@ EOF
  HP-UX.A.09.*)	SYSTYPE=HPUX9
  		SYSLIBS=-ldbm
  		CCARGS="$CCARGS -DMISSING_USLEEP"
