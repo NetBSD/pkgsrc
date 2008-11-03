@@ -1,48 +1,98 @@
-$NetBSD: patch-aa,v 1.3 2007/10/26 15:06:19 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/11/03 22:01:29 bjs Exp $
 
---- Makefile.orig	2003-01-04 13:53:01.000000000 +0100
+--- Makefile.orig	2008-09-19 14:09:09.000000000 -0400
 +++ Makefile
-@@ -10,13 +10,15 @@ VERSION=2.1.11
- #SUFFIX=-pre2
- DATE=2003-01-04
+@@ -1,8 +1,7 @@
+ # Makefile for The PCI Utilities
+ # (c) 1998--2008 Martin Mares <mj@ucw.cz>
  
+-OPT=-O2
+-CFLAGS=$(OPT) -Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
++CFLAGS+=-Wall -W -Wno-parentheses -Wstrict-prototypes -Wmissing-prototypes
+ 
+ VERSION=3.0.2
+ DATE=2008-09-19
+@@ -12,7 +11,7 @@ HOST=
+ RELEASE=
+ 
+ # Support for compressed pci.ids (yes/no, default: detect)
+-ZLIB=
++ZLIB=no
+ 
+ # Support for resolving ID's by DNS (yes/no, default: detect)
+ DNS=
+@@ -21,22 +20,22 @@ DNS=
+ SHARED=no
+ 
+ # ABI version suffix in the name of the shared library
+-ABI_VERSION=.3
++ABI_VERSION=-version-info 3:0
+ 
+ # Installation directories
 -PREFIX=/usr/local
 +#PREFIX=/usr/local
  SBINDIR=$(PREFIX)/sbin
 -SHAREDIR=$(PREFIX)/share
--MANDIR=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
 +SHAREDIR=$(PREFIX)/share/pciutils
-+MANDIR=$(PREFIX)/${PKGMANDIR}
- INSTALL=install
--DIRINSTALL=install -d
-+DIRINSTALL=$(INSTALL) -d
- PCILIB=libpci.a
-+LIBDIR=$(PREFIX)/lib
-+INCLUDEDIR=$(PREFIX)/include/pciutils
+ IDSDIR=$(SHAREDIR)
+-MANDIR:=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
+-INCDIR=$(PREFIX)/include
++MANDIR=$(PREFIX)/$(PKGMANDIR)
++INCDIR=$(PREFIX)/include/pciutils
+ LIBDIR=$(PREFIX)/lib
+ PKGCFDIR=$(LIBDIR)/pkgconfig
  
- ifeq ($(shell uname),NetBSD)
- PCILIB=libpciutils.a
-@@ -58,11 +60,18 @@ clean:
+ # Commands
+-INSTALL=install
+-DIRINSTALL=install -d
+-STRIP=-s
++#INSTALL=install
++#DIRINSTALL=$(INSTALL) -d
++#STRIP=-s
+ AR=ar
+ RANLIB=ranlib
+ 
+@@ -90,23 +89,31 @@ distclean: clean
  
  install: all
  # -c is ignored on Linux, but required on FreeBSD
--	$(DIRINSTALL) -m 755 $(SBINDIR) $(SHAREDIR) $(MANDIR)/man8
--	$(INSTALL) -c -m 755 -s lspci setpci $(SBINDIR)
--	$(INSTALL) -c -m 755 update-pciids $(SBINDIR)
--	$(INSTALL) -c -m 644 pci.ids $(SHAREDIR)
--	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(MANDIR)/man8
-+	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR)
-+	$(DIRINSTALL) -m 755 $(DESTDIR)$(SHAREDIR)
-+	$(DIRINSTALL) -m 755 $(DESTDIR)$(MANDIR)/man8
-+	$(DIRINSTALL) -m 755 $(DESTDIR)$(LIBDIR)
-+	$(DIRINSTALL) -m 755 $(DESTDIR)$(INCLUDEDIR)
-+	$(INSTALL) -c -m 755 -s lspci setpci $(DESTDIR)$(SBINDIR)
-+	$(INSTALL) -c -m 755 update-pciids $(DESTDIR)$(SBINDIR)
-+	$(INSTALL) -c -m 644 pci.ids $(DESTDIR)$(SHAREDIR)
-+	$(INSTALL) -c -m 644 README $(DESTDIR)$(SHAREDIR)
-+	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(DESTDIR)$(MANDIR)/man8
-+	$(INSTALL) -c -m 444 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
-+	$(INSTALL) -c -m 644 lib/pci.h lib/header.h lib/config.h $(DESTDIR)$(INCLUDEDIR)
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7
+-	$(INSTALL) -c -m 755 $(STRIP) lspci setpci $(DESTDIR)$(SBINDIR)
+-	$(INSTALL) -c -m 755 update-pciids $(DESTDIR)$(SBINDIR)
+-	$(INSTALL) -c -m 644 $(PCI_IDS) $(DESTDIR)$(IDSDIR)
+-	$(INSTALL) -c -m 644 lspci.8 setpci.8 update-pciids.8 $(DESTDIR)$(MANDIR)/man8
+-	$(INSTALL) -c -m 644 pcilib.7 $(DESTDIR)$(MANDIR)/man7
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(IDSDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man8
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MANDIR)/man7
++	$(BSD_INSTALL_PROGRAM) lspci $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) setpci $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_SCRIPT) update-pciids $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_DATA) $(PCI_IDS) $(DESTDIR)$(IDSDIR)
++	for fn in lspci.8 setpci.8 update-pciids.8; do \
++		$(BSD_INSTALL_MAN) $$fn $(DESTDIR)$(MANDIR)/man8;	\
++	done
++	$(BSD_INSTALL_MAN) pcilib.7 $(DESTDIR)$(MANDIR)/man7
+ ifeq ($(SHARED),yes)
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(LIBDIR)
+-	$(INSTALL) -c -m 644 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
+ 	ln -sf $(PCILIB) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so$(ABI_VERSION)
+ endif
  
- uninstall: all
- 	rm -f $(SBINDIR)/lspci $(SBINDIR)/setpci $(SBINDIR)/update-pciids
+ install-lib: $(PCIINC_INS) lib/$(PCILIB) lib/$(PCILIBPC)
+-	$(DIRINSTALL) -m 755 $(DESTDIR)$(INCDIR)/pci $(DESTDIR)$(LIBDIR) $(DESTDIR)$(PKGCFDIR)
+-	$(INSTALL) -c -m 644 $(PCIINC_INS) $(DESTDIR)$(INCDIR)/pci
+-	$(INSTALL) -c -m 644 lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
+-	$(INSTALL) -c -m 644 lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCDIR) 
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PKGCFDIR)
++	$(BSD_INSTALL_DATA) $(PCIINC_INS) $(DESTDIR)$(INCDIR)
++	$(BSD_INSTALL_LIB) lib/$(PCILIB) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_DATA) lib/$(PCILIBPC) $(DESTDIR)$(PKGCFDIR)
+ ifeq ($(SHARED),yes)
+ 	ln -sf $(LIBNAME).so$(ABI_VERSION) $(DESTDIR)$(LIBDIR)/$(LIBNAME).so
+ endif
