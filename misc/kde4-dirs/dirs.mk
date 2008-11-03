@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.1.1.1 2008/11/03 10:27:54 markd Exp $
+# $NetBSD: dirs.mk,v 1.2 2008/11/03 10:29:27 markd Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -105,7 +105,7 @@ KDE4_DIRS+=	share/kde4/services/kresources/kcal
 KDE4_DIRS+=	share/kde4/servicetypes
 
 .if defined(_USE_KDE4_DIRS) && !empty(_USE_KDE4_DIRS)
-DEPENDS+=	kde4-dirs>=${_USE_KDE4_DIRS}:../../wip/kde4-dirs
+DEPENDS+=	kde4-dirs>=${_USE_KDE4_DIRS}:../../misc/kde4-dirs
 
 .  for dir in ${KDE4_DIRS}
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
