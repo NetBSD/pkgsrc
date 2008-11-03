@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.17 2008/11/02 23:48:09 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.18 2008/11/03 03:38:40 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -59,3 +59,5 @@ Pullup ticket #2565 - requested by is
 libcdio: build fix for Solaris
 pullup ticket #2566 - requested by tron 
 phpmyadmin: update package for security fixes
+pullup ticket #2567 - requested by adrianp
+drupal: update package for security fixes
