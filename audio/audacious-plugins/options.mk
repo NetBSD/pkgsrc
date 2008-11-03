@@ -1,17 +1,17 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/10/20 09:32:19 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2008/11/03 06:52:59 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.audacious-plugins
 PKG_SUPPORTED_OPTIONS=	arts esound inet6 jack midi # pulse sid
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Msid)
-.  include "../../wip/resid-builder/buildlink3.mk"
-PLIST_SUBST+=		SID=""
-.else
-CONFIGURE_ARGS+=	--disable-sid
-PLIST_SUBST+=		SID="@comment "
-.endif
+#.if !empty(PKG_OPTIONS:Msid)
+#.  include "../../wip/resid-builder/buildlink3.mk"
+#PLIST_SUBST+=		SID=""
+#.else
+#CONFIGURE_ARGS+=	--disable-sid
+#PLIST_SUBST+=		SID="@comment "
+#.endif
 
 .if !empty(PKG_OPTIONS:Marts)
 .  include "../../audio/arts/buildlink3.mk"
@@ -49,10 +49,10 @@ CONFIGURE_ARGS+=	--disable-timidity
 PLIST_SUBST+=		MIDI="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mpulse)
-.  include "../../wip/pulseaudio/buildlink3.mk"
-PLIST_SUBST+=		PULSE=""
-.else
-CONFIGURE_ARGS+=	--disable-pulse
-PLIST_SUBST+=		PULSE="@comment "
-.endif
+#.if !empty(PKG_OPTIONS:Mpulse)
+#.  include "../../wip/pulseaudio/buildlink3.mk"
+#PLIST_SUBST+=		PULSE=""
+#.else
+#CONFIGURE_ARGS+=	--disable-pulse
+#PLIST_SUBST+=		PULSE="@comment "
+#.endif
