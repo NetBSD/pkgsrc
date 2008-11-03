@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2815 2008/11/03 22:06:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2816 2008/11/03 22:06:58 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4777,3 +4777,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/nvtv to 0.4.7nb4 [bjs 2008-11-03]
 	Updated graphics/nvtv-gtk2 to 0.4.7nb5 [bjs 2008-11-03]
 	Updated sysutils/pciutils to 3.0.2 [bjs 2008-11-03]
+	Updated sysutils/radeontool to 1.5nb4 [bjs 2008-11-03]
