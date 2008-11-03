@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/11/03 22:01:29 bjs Exp $
+
+--- lib/configure.orig	2008-09-19 14:04:37.000000000 -0400
++++ lib/configure
+@@ -179,7 +179,7 @@ else
+ 		echo >>$m 'SONAME=-Wl,-soname,$(LIBNAME).so$(ABI_VERSION)'
+ 	fi
+ fi
+-echo >>$m 'PCILIBPC=$(LIBNAME).pc'
++echo >>$m 'PCILIBPC=libpci.pc'
+ 
+ echo >>$c "#define PCILIB_VERSION \"$VERSION\""
+ sed '/"/{s/^#define \([^ ]*\) "\(.*\)"$/\1=\2/;p;d;};s/^#define \(.*\)/\1=1/' <$c >>$m
