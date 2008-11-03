@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.365 2008/10/31 11:36:16 obache Exp $
+# $NetBSD: Makefile,v 1.366 2008/11/03 04:54:41 obache Exp $
 #
 
 COMMENT=	Electronic mail utilities
 
 SUBDIR+=	GNUMail
+SUBDIR+=	OSBF-lua
 SUBDIR+=	Pantomime
 SUBDIR+=	YoSucker
 SUBDIR+=	alpine
@@ -149,7 +150,6 @@ SUBDIR+=	msmtp
 SUBDIR+=	mush
 SUBDIR+=	mutt
 SUBDIR+=	mutt-devel
-SUBDIR+=	nail
 SUBDIR+=	netbiff
 SUBDIR+=	newmail
 SUBDIR+=	newspipe
@@ -157,7 +157,6 @@ SUBDIR+=	nmh
 SUBDIR+=	nullmailer
 SUBDIR+=	oe2mbx
 SUBDIR+=	offlineimap
-SUBDIR+=	OSBF-lua
 SUBDIR+=	p5-Catalyst-View-Email
 SUBDIR+=	p5-Email-Abstract
 SUBDIR+=	p5-Email-Address
