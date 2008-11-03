@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2808 2008/11/02 23:35:54 he Exp $
+$NetBSD: CHANGES-2008,v 1.2809 2008/11/03 11:30:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4767,3 +4767,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-B-Hooks-OP-Check to 0.12nb1 [he 2008-11-02]
 	Updated devel/p5-B-Hooks-OP-Check to 0.12nb2 [he 2008-11-02]
 	Updated devel/p5-Devel-Declare to 0.003003 [he 2008-11-02]
+	Updated x11/qt4-libs to 4.4.3nb1 [adam 2008-11-03]
