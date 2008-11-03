@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2007/10/26 15:06:19 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/03 22:01:29 bjs Exp $
 
-DISTNAME=	pciutils-2.1.11
-PKGREVISION=	1
+DISTNAME=	pciutils-3.0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://atrey.karlin.mff.cuni.cz/pub/linux/pci/ \
 		ftp://ftp.kernel.org/pub/software/utils/pciutils/ \
@@ -13,19 +12,30 @@ COMMENT=	PCI bus manipulation utility similar to NetBSD pcictl(8)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# subdir build in libs, followed by linking with it, without .WAIT
-MAKE_JOBS_SAFE=	NO
+MAKE_JOBS_SAFE=		no
+ONLY_FOR_PLATFORM=	AIX-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 
-USE_TOOLS+=	gmake
+INSTALL_TARGET=		install install-lib
+USE_TOOLS+=		gmake pkg-config
+REPLACE_SH=		*.sh
 
-ONLY_FOR_PLATFORM+=	AIX-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
+PKGCONFIG_OVERRIDE=	lib/libpci.pc.in
+
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
-PLIST_SUBST+=	PCIUTILS_LIBNAME="pciutils"
+PCIUTILS_LIBNAME=	pciutils
 .else
-PLIST_SUBST+=	PCIUTILS_LIBNAME="pci"
+PCIUTILS_LIBNAME=	pci
 .endif
+
+PLIST_SUBST+=		PCIUTILS_LIBNAME=${PCIUTILS_LIBNAME}
+
+SUBST_CLASSES=		pc
+SUBST_FILES.pc=		lib/libpci.pc.in
+SUBST_MESSAGE.pc=	Fixing library link specification in pkg-config file.
+SUBST_STAGE.pc=		pre-configure
+SUBST_VARS.pc=		PCIUTILS_LIBNAME
 
 .include "../../mk/bsd.pkg.mk"

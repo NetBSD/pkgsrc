@@ -1,15 +1,17 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/19 09:30:43 cube Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/03 22:01:29 bjs Exp $
 include/pciutils/config.h
 include/pciutils/header.h
 include/pciutils/pci.h
+include/pciutils/types.h
 lib/lib${PCIUTILS_LIBNAME}.a
+lib/pkgconfig/libpci.pc
+man/man7/pcilib.7
 man/man8/lspci.8
 man/man8/setpci.8
 man/man8/update-pciids.8
 sbin/lspci
 sbin/setpci
 sbin/update-pciids
-share/pciutils/README
 share/pciutils/pci.ids
 @dirrm share/pciutils
 @dirrm include/pciutils
