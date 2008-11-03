@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2008/07/24 12:55:20 markd Exp $
+# $NetBSD: Makefile,v 1.25 2008/11/03 11:28:21 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-libs-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 BUILD_TARGET=		sub-src
@@ -20,9 +21,13 @@ PLIST_SRC=		${WRKDIR}/PLIST ${PKGDIR}/PLIST
 CONFIGURE_ARGS+=	-no-sql-sqlite
 CONFIGURE_ARGS+=	-no-libtiff
 
-INSTALLATION_DIRS=	lib/pkgconfig ${QTPREFIX}/bin ${QTPREFIX}/include \
-	${QTPREFIX}/lib ${QTPREFIX}/plugins/accessible \
-	${QTPREFIX}/plugins/imageformats
+INSTALLATION_DIRS=	lib/pkgconfig
+INSTALLATION_DIRS+=	${QTPREFIX}/bin
+INSTALLATION_DIRS+=	${QTPREFIX}/include
+INSTALLATION_DIRS+=	${QTPREFIX}/lib
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/accessible
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/imageformats
+INSTALLATION_DIRS+=	${QTPREFIX}/plugins/inputmethods
 
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR:Q}
 
@@ -56,6 +61,9 @@ do-install:
 		${WRKSRC}/plugins/imageformats/lib${plug}.la \
 		${DESTDIR}${QTPREFIX}/plugins/imageformats/
 .endfor
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
+		${WRKSRC}/plugins/inputmethods/libqimsw-multi.la \
+		${DESTDIR}/${QTPREFIX}/plugins/inputmethods/
 
 .if ${OPSYS} == "Darwin" && empty(MACHINE_PLATFORM:MDarwin-[567].*)
 SUBST_CLASSES+=		socklen
