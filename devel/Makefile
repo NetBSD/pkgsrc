@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1067 2008/11/02 22:15:31 he Exp $
+# $NetBSD: Makefile,v 1.1068 2008/11/03 04:57:37 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -618,8 +618,8 @@ SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
 SUBDIR+=	p5-Module-Build
-SUBDIR+=	p5-Module-CoreList
 SUBDIR+=	p5-Module-CPANTS-Analyse
+SUBDIR+=	p5-Module-CoreList
 SUBDIR+=	p5-Module-Dependency
 SUBDIR+=	p5-Module-ExtractUse
 SUBDIR+=	p5-Module-Find
@@ -765,9 +765,9 @@ SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-Tester
 SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Test-WWW-Selenium
+SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
-SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tie-File
