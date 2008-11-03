@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.284 2008/10/26 11:46:42 obache Exp $
+# $NetBSD: Makefile,v 1.285 2008/11/03 04:58:55 obache Exp $
 #
 
 COMMENT=	Databases
@@ -127,13 +127,13 @@ SUBDIR+=	p5-Rose-DBx-Garden
 SUBDIR+=	p5-Rose-DBx-Garden-Catalyst
 SUBDIR+=	p5-Rose-DBx-Object-MoreHelpers
 SUBDIR+=	p5-Rose-DBx-TestDB
-SUBDIR+=	p5-Search-QueryParser
-SUBDIR+=	p5-Search-QueryParser-SQL
 SUBDIR+=	p5-SQL-Abstract
 SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-SQL-ReservedWords
 SUBDIR+=	p5-SQL-Statement
 SUBDIR+=	p5-SQL-Translator
+SUBDIR+=	p5-Search-QueryParser
+SUBDIR+=	p5-Search-QueryParser-SQL
 SUBDIR+=	p5-Sort-SQL
 SUBDIR+=	p5-gdbm
 SUBDIR+=	p5-perl-ldap
