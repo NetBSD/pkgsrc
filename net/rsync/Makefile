@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2008/10/02 08:17:15 tron Exp $
+# $NetBSD: Makefile,v 1.79 2008/11/03 11:55:01 tron Exp $
 
 DISTNAME=	rsync-3.0.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
@@ -30,4 +31,5 @@ SUBST_FILES.paths=	rsync.1 rsyncd.conf.5
 SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
 SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
