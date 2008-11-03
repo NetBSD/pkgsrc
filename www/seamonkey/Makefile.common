@@ -1,15 +1,13 @@
-# $NetBSD: Makefile.common,v 1.30 2008/05/19 10:43:02 tnn Exp $
+# $NetBSD: Makefile.common,v 1.31 2008/11/03 14:18:42 ghen Exp $
 # used by mail/thunderbird/Makefile-thunderbird.common
 # used by www/seamonkey/Makefile-seamonkey.common
+# used by time/sunbird/Makefile-sunbird.common
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
 PKGNAME=		${MOZILLA}-${MOZ_VER}
 MASTER_SITES?=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 CATEGORIES?=		www
-
-MAINTAINER?=		ghen@NetBSD.org
-HOMEPAGE?=		http://www.mozilla.org/projects/seamonkey/
 
 FILESDIR=		${.CURDIR}/../../www/seamonkey/files
 
