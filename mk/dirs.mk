@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.13 2007/12/12 05:14:15 markd Exp $
+# $NetBSD: dirs.mk,v 1.14 2008/11/03 10:31:46 markd Exp $
 #
 
 .if !defined(DIRS_MK)
@@ -55,7 +55,7 @@ _USE_XDG_X11_DIRS:=	${ver}
 .endif
 
 .if !empty(_USE_KDE4_DIRS)
-.  include "../../wip/kde4-dirs/dirs.mk"
+.  include "../../misc/kde4-dirs/dirs.mk"
 .endif
 
 .if !empty(_USE_TEXMF_DIRS)
