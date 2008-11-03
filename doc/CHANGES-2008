@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2812 2008/11/03 17:05:08 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2813 2008/11/03 22:06:16 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4774,3 +4774,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/akonadi version 1.0.0 [markd 2008-11-03]
 	Updated net/rsync to 3.0.4nb1 [tron 2008-11-03]
 	Updated multimedia/mediatomb to 0.11.0nb2 [tron 2008-11-03]
+	Updated graphics/nvtv to 0.4.7nb4 [bjs 2008-11-03]
