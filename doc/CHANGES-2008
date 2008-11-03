@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2809 2008/11/03 11:30:49 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2810 2008/11/03 11:40:08 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4768,3 +4768,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-B-Hooks-OP-Check to 0.12nb2 [he 2008-11-02]
 	Updated devel/p5-Devel-Declare to 0.003003 [he 2008-11-02]
 	Updated x11/qt4-libs to 4.4.3nb1 [adam 2008-11-03]
+	Added misc/kde4-dirs version 1.0 [markd 2008-11-03]
+	Added devel/automoc4 version 0.9.84 [markd 2008-11-03]
+	Added multimedia/phonon version 4.2.0 [markd 2008-11-03]
+	Added mail/akonadi version 1.0.0 [markd 2008-11-03]
