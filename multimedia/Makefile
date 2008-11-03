@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2008/11/03 04:52:22 obache Exp $
+# $NetBSD: Makefile,v 1.128 2008/11/03 11:01:32 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -95,6 +95,7 @@ SUBDIR+=	ogmtools
 SUBDIR+=	openquicktime
 SUBDIR+=	p5-xmltv
 SUBDIR+=	php-ming
+SUBDIR+=	phonon
 SUBDIR+=	py-gstreamer0.10
 SUBDIR+=	py-ming
 SUBDIR+=	realplayer-codecs
