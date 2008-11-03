@@ -1,0 +1,7 @@
+Akonadi is a new personal information management (PIM) framework for KDE 4 and
+is set to be included in the 4.1 release. Akonadi will function as an extensible
+data storage for all PIM applications. In KDE 3 all PIM applications had
+different data storage and handling methods, which lead to several
+implementations of essentially the same thing.  Besides data storage, Akonadi
+has several other components including search, and a library (cache) for easy
+access and notification of data changes.
