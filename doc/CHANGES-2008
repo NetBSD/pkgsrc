@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2825 2008/11/04 21:43:17 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.2826 2008/11/04 21:48:51 jwise Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4816,3 +4816,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/strigi version 0.5.10 [markd 2008-11-04]
 	Updated editors/ed to 1.1 [reed 2008-11-04]
 	Updated net/ktorrent to 2.2.8 [obache 2008-11-04]
+	Removed www/spfc [jwise 2008-11-04]
