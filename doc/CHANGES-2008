@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2822 2008/11/04 11:28:48 markd Exp $
+$NetBSD: CHANGES-2008,v 1.2823 2008/11/04 14:29:20 reed Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4814,3 +4814,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/libclucene version 0.9.21nb1 [markd 2008-11-04]
 	Added textproc/soprano version 2.1 [markd 2008-11-04]
 	Added sysutils/strigi version 0.5.10 [markd 2008-11-04]
+	Updated editors/ed to 1.1 [reed 2008-11-04]
