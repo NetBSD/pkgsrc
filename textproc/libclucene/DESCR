@@ -1,0 +1,10 @@
+CLucene is a high-performance, scalable, cross platform, full-featured,
+open-source indexing and searching API. It is written in C++.
+
+CLucene is a port of the very popular Java Lucene text search engine API.
+Specifically, CLucene is the guts of a search engine, the hard stuff.
+You write the easy stuff, the UI and the process of selecting and parsing your
+data files to pump them into the search engine yourself.
+
+CLucene aims to be a good alternative to Java Lucene when performance really
+matters or if you want to stick to good old C++.
