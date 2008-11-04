@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/04 10:35:22 markd Exp $
+bin/rasqal-config
+bin/roqet
+include/rasqal.h
+lib/librasqal.la
+lib/pkgconfig/rasqal.pc
+man/man1/rasqal-config.1
+man/man1/roqet.1
+man/man3/librasqal.3
+share/gtk-doc/html/rasqal/home.png
+share/gtk-doc/html/rasqal/index.html
+share/gtk-doc/html/rasqal/index.sgml
+share/gtk-doc/html/rasqal/ix01.html
+share/gtk-doc/html/rasqal/left.png
+share/gtk-doc/html/rasqal/pt01.html
+share/gtk-doc/html/rasqal/rasqal-section-data.html
+share/gtk-doc/html/rasqal/rasqal-section-expression.html
+share/gtk-doc/html/rasqal/rasqal-section-general.html
+share/gtk-doc/html/rasqal/rasqal-section-graph-pattern.html
+share/gtk-doc/html/rasqal/rasqal-section-literal.html
+share/gtk-doc/html/rasqal/rasqal-section-prefix.html
+share/gtk-doc/html/rasqal/rasqal-section-query-results-formatter.html
+share/gtk-doc/html/rasqal/rasqal-section-query-results.html
+share/gtk-doc/html/rasqal/rasqal-section-query.html
+share/gtk-doc/html/rasqal/rasqal-section-triple.html
+share/gtk-doc/html/rasqal/rasqal-section-triples-source.html
+share/gtk-doc/html/rasqal/rasqal-section-variable.html
+share/gtk-doc/html/rasqal/rasqal-section-xsd.html
+share/gtk-doc/html/rasqal/rasqal.devhelp
+share/gtk-doc/html/rasqal/rasqal.devhelp2
+share/gtk-doc/html/rasqal/rasqal.html
+share/gtk-doc/html/rasqal/right.png
+share/gtk-doc/html/rasqal/style.css
+share/gtk-doc/html/rasqal/up.png
+@dirrm share/gtk-doc/html/rasqal
