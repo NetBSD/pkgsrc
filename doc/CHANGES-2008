@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2828 2008/11/04 21:55:32 jwise Exp $
+$NetBSD: CHANGES-2008,v 1.2829 2008/11/04 21:58:13 jwise Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4819,3 +4819,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed www/spfc [jwise 2008-11-04]
 	Removed www/jssi [jwise 2008-11-04]
 	Removed www/jsdk20 [jwise 2008-11-04]
+	Removed www/jakarta-servletapi [jwise 2008-11-04]
