@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2827 2008/11/04 21:52:16 jwise Exp $
+$NetBSD: CHANGES-2008,v 1.2828 2008/11/04 21:55:32 jwise Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4818,3 +4818,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/ktorrent to 2.2.8 [obache 2008-11-04]
 	Removed www/spfc [jwise 2008-11-04]
 	Removed www/jssi [jwise 2008-11-04]
+	Removed www/jsdk20 [jwise 2008-11-04]
