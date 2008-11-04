@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.14 2008/10/10 22:51:41 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.15 2008/11/04 16:14:24 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -417,7 +417,7 @@ fetchParseURL(const char *URL)
 		}
 		URL += 2;
 		p = URL;
-		goto find_hostname;
+		goto find_user;
 	}
 	if (strncmp(URL, "ftp:", 4) == 0) {
 		pre_quoted = 1;
@@ -446,7 +446,7 @@ find_user:
 
 		/* password */
 		if (*q == ':') {
-			for (q++, i = 0; (*q != ':') && (*q != '@'); q++)
+			for (q++, i = 0; (*q != '@'); q++)
 				if (i < URL_PWDLEN)
 					u->pwd[i++] = *q;
 		}
@@ -456,7 +456,6 @@ find_user:
 		p = URL;
 	}
 
-find_hostname:
 	/* hostname */
 #ifdef INET6
 	if (*p == '[' && (q = strchr(p + 1, ']')) != NULL &&
