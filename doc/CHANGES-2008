@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2823 2008/11/04 14:29:20 reed Exp $
+$NetBSD: CHANGES-2008,v 1.2824 2008/11/04 16:07:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4815,3 +4815,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/soprano version 2.1 [markd 2008-11-04]
 	Added sysutils/strigi version 0.5.10 [markd 2008-11-04]
 	Updated editors/ed to 1.1 [reed 2008-11-04]
+	Updated net/ktorrent to 2.2.8 [obache 2008-11-04]
