@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19.2.1 2008/10/21 21:51:03 tron Exp $
+@comment $NetBSD: PLIST,v 1.19.2.2 2008/11/04 12:46:36 tron Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -12,6 +12,10 @@ ${PLIST.x11}lib/vlc/video_filter/libosdmenu_plugin.la
 ${PLIST.x11}lib/vlc/video_filter/libpanoramix_plugin.la
 ${PLIST.x11}lib/vlc/video_output/libx11_plugin.la
 ${PLIST.x11}lib/vlc/video_output/libxvideo_plugin.la
+${PLIST.x11}lib/vlc/video_output/libglx_plugin.la
+${PLIST.x11}lib/vlc/video_output/libopengl_plugin.la
+${PLIST.x11}lib/vlc/misc/libosd_parser_plugin.la
+${PLIST.x11}lib/vlc/access/libscreen_plugin.la
 ${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.la
 ${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.la
 ${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.la
@@ -114,7 +118,6 @@ lib/vlc/access/libaccess_udp_plugin.la
 lib/vlc/access/libcddax_plugin.la
 lib/vlc/access/libdvdnav_plugin.la
 lib/vlc/access/libdvdread_plugin.la
-lib/vlc/access/libscreen_plugin.la
 lib/vlc/access_filter/libaccess_filter_bandwidth_plugin.la
 lib/vlc/access_filter/libaccess_filter_dump_plugin.la
 lib/vlc/access_filter/libaccess_filter_record_plugin.la
@@ -167,7 +170,6 @@ lib/vlc/codec/libflac_plugin.la
 lib/vlc/codec/liblibmpeg2_plugin.la
 lib/vlc/codec/liblpcm_plugin.la
 lib/vlc/codec/libmpeg_audio_plugin.la
-lib/vlc/codec/libpng_plugin.la
 lib/vlc/codec/librawvideo_plugin.la
 lib/vlc/codec/libspudec_plugin.la
 lib/vlc/codec/libsubsdec_plugin.la
@@ -235,7 +237,6 @@ lib/vlc/misc/libexport_plugin.la
 lib/vlc/misc/libgnutls_plugin.la
 lib/vlc/misc/liblogger_plugin.la
 lib/vlc/misc/libmemcpy_plugin.la
-lib/vlc/misc/libosd_parser_plugin.la
 lib/vlc/misc/libscreensaver_plugin.la
 lib/vlc/misc/libstats_plugin.la
 lib/vlc/misc/libvod_rtsp_plugin.la
@@ -305,8 +306,6 @@ lib/vlc/video_filter/libmosaic_plugin.la
 lib/vlc/video_filter/libmotionblur_plugin.la
 lib/vlc/video_filter/libmotiondetect_plugin.la
 lib/vlc/video_filter/libnoise_plugin.la
-lib/vlc/video_filter/libosdmenu_plugin.la
-lib/vlc/video_filter/libpanoramix_plugin.la
 lib/vlc/video_filter/libpostproc_plugin.la
 lib/vlc/video_filter/libpsychedelic_plugin.la
 lib/vlc/video_filter/libpuzzle_plugin.la
@@ -321,13 +320,9 @@ lib/vlc/video_filter/libswscale_plugin.la
 lib/vlc/video_filter/libtransform_plugin.la
 lib/vlc/video_filter/libwall_plugin.la
 lib/vlc/video_filter/libwave_plugin.la
-lib/vlc/video_output/libglx_plugin.la
 lib/vlc/video_output/libimage_plugin.la
-lib/vlc/video_output/libopengl_plugin.la
 lib/vlc/video_output/libsnapshot_plugin.la
 lib/vlc/video_output/libvmem_plugin.la
-lib/vlc/video_output/libx11_plugin.la
-lib/vlc/video_output/libxvideo_plugin.la
 lib/vlc/visualization/libvisual_plugin.la
 lib/vlc/demux/libmpc_plugin.la
 lib/vlc/misc/libgnutls_plugin.la
