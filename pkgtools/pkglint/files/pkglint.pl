@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.779 2008/10/20 11:09:07 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.780 2008/11/04 21:45:13 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1141,6 +1141,24 @@ sub mtime($)			{ return shift()->[MTIME]; }
 sub tag($)			{ return shift()->[TAG]; }
 #== End of CVS_Entry ======================================================
 
+package PkgLint::Change;
+#==========================================================================
+# A change entry from doc/CHANGES-*
+#==========================================================================
+
+sub new($$$$$$) {
+	my ($class, $line, $action, $pkgpath, $version, $author, $date) = @_;
+	my $self = [ $line, $action, $pkgpath, $version, $author, $date ];
+	bless($self, $class);
+	return $self;
+}
+sub line($)			{ return shift()->[0]; }
+sub action($)			{ return shift()->[1]; }
+sub pkgpath($)			{ return shift()->[2]; }
+sub version($)			{ return shift()->[3]; }
+sub author($)			{ return shift()->[4]; }
+sub date($)			{ return shift()->[5]; }
+#== End of PkgLint::Change ================================================
 
 package main;
 #==========================================================================
@@ -2201,6 +2219,70 @@ sub get_wip_TODO_updates() {
 		$get_wip_TODO_updates_result = load_doc_TODO_updates("${cwd_pkgsrcdir}/wip/TODO");
 	}
 	return $get_wip_TODO_updates_result;
+}
+
+my $get_doc_CHANGES_docs = undef; # [ $fname, undef or $lines ]
+sub get_doc_CHANGES($) {
+	my ($pkgpath) = @_;
+
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "get_doc_CHANGES(\"$pkgpath\")");
+
+	# Make a reversed list of all the CHANGES-* files, but don't load
+	# them yet.
+	if (!defined($get_doc_CHANGES_docs)) {
+		opendir(DIR, "${cwd_pkgsrcdir}/doc") or die;
+		my @files = readdir(DIR);
+		closedir(DIR) or die;
+		foreach my $file (reverse sort @files) {
+			if ($file =~ m"^CHANGES-\d+$") {
+				push(@$get_doc_CHANGES_docs, [ $file, undef ]);
+			}
+		}
+		$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "Found " . (scalar @$get_doc_CHANGES_docs) . " changes files.");
+	}
+
+	# Scan the *-CHANGES files in reverse order until some action
+	# matches the package directory.
+	my @result = ();
+	foreach my $doc (@$get_doc_CHANGES_docs) {
+		if (!defined($doc->[1])) {
+			$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "loading $doc->[0]");
+			my $lines = load_file("${cwd_pkgsrcdir}/doc/$doc->[0]") or die;
+
+			my @changes = ();
+			foreach my $line (@$lines) {
+				my $text = $line->text;
+				next unless $text =~ m"^\t[A-Z]";
+
+				if ($text =~ m"^\t(Updated) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+				} elsif ($text =~ m"^\t(Added) (\S+) version (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+				} elsif ($text =~ m"^\t(Removed) (\S+) (?:successor (\S+) )?\[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+					push(@changes, PkgLint::Change->new($line, $1, $2, undef, $3, $4));
+				} elsif ($text =~ m"^\t(Downgraded) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+				} elsif ($text =~ m"^\t(Renamed|Moved) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+				} else {
+					$line->log_warning("Unknown doc/CHANGES line: " . $line->text);
+					$line->explain_warning(
+"Maybe some developer didn't stick to the conventions that have been",
+"established by mk/misc/developer.mk?");
+				}
+			}
+			$doc->[1] = \@changes;
+		}
+
+		foreach my $change (@{$doc->[1]}) {
+			next unless $pkgpath eq $change->pkgpath;
+			push(@result, $change);
+		}
+		if (@result != 0) {
+			return @result;
+		}
+	}
+	return ();
 }
 
 sub get_suggested_package_updates() {
@@ -3394,6 +3476,31 @@ sub checkword_absolute_pathname($$) {
 "the programs see later when they are executed. Usually it is empty, so",
 "if anything after that variable starts with a slash, it is considered",
 "an absolute pathname.");
+	}
+}
+
+sub checkpackage_possible_downgrade() {
+
+	$opt_debug_trace and log_debug(NO_FILE, NO_LINES, "checkpackage_possible_downgrade");
+
+	return unless defined $effective_pkgname;
+	return unless $effective_pkgname =~ regex_pkgname;
+	my ($pkgbase, $pkgversion) = ($1, $2);
+	my $line = $effective_pkgname_line;
+
+	my @changes = get_doc_CHANGES($pkgpath);
+	if (@changes == 0) {
+		$opt_debug_misc and $line->log_debug("No changes have been recorded for package $pkgpath.");
+		return;
+	}
+
+	my $last_change = $changes[-1];
+	return unless $last_change->action eq "Updated";
+
+	my $last_version = $last_change->version;
+
+	if (dewey_cmp($pkgversion, "<", $last_version)) {
+		$line->log_warning("The package is being downgraded from $last_version to $pkgversion.");
 	}
 }
 
@@ -6788,6 +6895,8 @@ sub checkfile_package_Makefile($$$) {
 	if (defined($effective_pkgname_line)) {
 		$opt_debug_misc and $effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
 	}
+
+	checkpackage_possible_downgrade();
 
 	if (!exists($pkgctx_vardef->{"COMMENT"})) {
 		log_warning($fname, NO_LINE_NUMBER, "No COMMENT given.");
