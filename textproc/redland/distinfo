@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/04 10:39:40 markd Exp $
+
+SHA1 (redland-1.0.7.tar.gz) = 9ba444859709a6e5defb0b7a2294684e2fe06707
+RMD160 (redland-1.0.7.tar.gz) = 64a61ebbfa14a3cc8e3468f2993677105da16562
+Size (redland-1.0.7.tar.gz) = 3739013 bytes
