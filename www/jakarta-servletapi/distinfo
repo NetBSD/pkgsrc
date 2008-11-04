@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/01/23 16:22:00 joerg Exp $
-
-SHA1 (jakarta-servletapi-3.2.4-src.tar.gz) = 3c70d36813b30fafae3b65438a629c6331b53432
-RMD160 (jakarta-servletapi-3.2.4-src.tar.gz) = 76d88508a2971e10ad063f9a0aa0dbe8da1c7d1c
-Size (jakarta-servletapi-3.2.4-src.tar.gz) = 101506 bytes
-SHA1 (patch-aa) = 083bcfde2d480f9b15e6c71d5525bd0e32e5410d
