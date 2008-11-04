@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/04 11:11:50 markd Exp $
+
+SHA1 (strigi-0.5.10.tar.bz2) = 02efd6bd7c815148fa9c9134287175b8aec0409b
+RMD160 (strigi-0.5.10.tar.bz2) = 2af9870ccd86744450e0ab93e0c34a1aefb01e1a
+Size (strigi-0.5.10.tar.bz2) = 876957 bytes
+SHA1 (patch-aa) = 6329b5787e2abb402e0c4f723b98dba925578bce
