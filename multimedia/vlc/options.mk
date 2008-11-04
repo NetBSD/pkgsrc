@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8.2.1 2008/10/21 21:51:03 tron Exp $
+# $NetBSD: options.mk,v 1.8.2.2 2008/11/04 12:46:36 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad arts dbus skins sdl esound x11 gnome
@@ -83,12 +83,14 @@ DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../x11/qt4-libs/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-qt4 \
 			--enable-x11 \
-			--enable-glx
+			--enable-glx \
+			--enable-snapshot
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11 \
 			--disable-qt4 \
-			--disable-glx
+			--disable-glx \
+			--disable-snapshot
 .endif
 
 ## FAAD support (faad is non-redistributable)
