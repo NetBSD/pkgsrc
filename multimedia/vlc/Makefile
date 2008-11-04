@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61.2.1 2008/10/21 21:51:03 tron Exp $
+# $NetBSD: Makefile,v 1.61.2.2 2008/11/04 12:46:36 tron Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		0.9.4
+VLC_VERSION=		0.9.5
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
@@ -45,7 +45,6 @@ CONFIGURE_ARGS+=	--enable-cddax \
 			--enable-flac \
 			--enable-lame \
 			--enable-live555 \
-			--enable-snapshot
 
 # Build optimalized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
