@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.20 2008/11/04 11:45:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.21 2008/11/04 12:07:17 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -67,3 +67,5 @@ Pullup ticket #2569 - requested by adrianp
 mantis: security update
 pullup ticket #2570 - requested by adrianp
 dovecot: update package for security fixes
+pullup ticket #2573 - requested by martti
+clamav: update package for bug fixes
