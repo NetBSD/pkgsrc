@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2821 2008/11/04 10:00:48 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2822 2008/11/04 11:28:48 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4808,3 +4808,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql83-plperl to 8.3.5 [adam 2008-11-04]
 	Updated databases/postgresql83-plpython to 8.3.5 [adam 2008-11-04]
 	Updated databases/postgresql83-pltcl to 8.3.5 [adam 2008-11-04]
+	Added graphics/qimageblitz version 0.0.4 [markd 2008-11-04]
+	Added textproc/rasqal version 0.9.15 [markd 2008-11-04]
+	Added textproc/redland version 1.0.7 [markd 2008-11-04]
+	Added textproc/libclucene version 0.9.21nb1 [markd 2008-11-04]
+	Added textproc/soprano version 2.1 [markd 2008-11-04]
+	Added sysutils/strigi version 0.5.10 [markd 2008-11-04]
