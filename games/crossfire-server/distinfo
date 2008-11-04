@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.2 2006/06/11 11:36:47 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2008/11/04 08:36:34 adam Exp $
 
-SHA1 (crossfire-1.9.0.tar.gz) = 7f8ef84f4d465736fc854b4be4e32f39ed415eaf
-RMD160 (crossfire-1.9.0.tar.gz) = 6069e1d566a738c73756096240694d8f62ab8ce4
-Size (crossfire-1.9.0.tar.gz) = 5317109 bytes
-SHA1 (patch-aa) = 7102244e70498f89dc2f0a600415f06dcb93853f
-SHA1 (patch-ab) = b50c940ab25f3b2361afa6ae49be6edab498f43e
-SHA1 (patch-ae) = 4f9aee487d8cff1bb6295f3661d0194d045b328c
+SHA1 (crossfire-1.11.0.arch.tar.gz) = 29a3ea7cfd5df4dc5a375f5b4302aebb4d609964
+RMD160 (crossfire-1.11.0.arch.tar.gz) = 8fa48ef33a83f1ed158a957db664a9deed96e1fc
+Size (crossfire-1.11.0.arch.tar.gz) = 3306459 bytes
+SHA1 (crossfire-1.11.0.maps.tar.bz2) = 21c376d4d570b341f4554b35ea0904157aca8c30
+RMD160 (crossfire-1.11.0.maps.tar.bz2) = fc582ccca34f2d0b5ee868b145ae59694ddf2847
+Size (crossfire-1.11.0.maps.tar.bz2) = 16707137 bytes
+SHA1 (crossfire-1.11.0.tar.gz) = 5ba3f6e8ac39f7d02cf2d133ed6069c789502c25
+RMD160 (crossfire-1.11.0.tar.gz) = c71c429896ccfecc98b5f52559377bb01b33c1c0
+Size (crossfire-1.11.0.tar.gz) = 6302656 bytes
+SHA1 (patch-aa) = b4a855a8aee117b42d6edbb7c6fd2819b6b33180
+SHA1 (patch-ab) = 2cf11e9901f72cf018f162e4bf4d2980257a0bbf
+SHA1 (patch-ae) = 1c9d973c932d5c6ee6ee642611d64850e05e3985
