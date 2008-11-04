@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.780 2008/11/04 21:45:13 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.781 2008/11/04 22:27:00 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3759,12 +3759,8 @@ sub checkline_cpp_macro_names($$) {
 		"__svr4__" => "__SVR4",
 	};
 
-	use constant spellcheck_macros => {
-		"__NetBSD_Version" => "__NetBSD_Version__",
-	};
-
 	$rest = $text;
-	while ($rest =~ s/defined\((__[\w_]+)\)//) {
+	while ($rest =~ s/defined\((__[\w_]+)\)// || $rest =~ s/\b(_\w+)\(//) {
 		my ($macro) = ($1);
 
 		if (exists(good_macros->{$macro})) {
@@ -3773,8 +3769,17 @@ sub checkline_cpp_macro_names($$) {
 			$line->log_warning("The macro \"${macro}\" is not portable enough. Please use \"".bad_macros->{$macro}."\" instead.");
 			$line->explain_warning("See the pkgsrc guide, section \"CPP defines\" for details.");
 
-		} elsif (exists(spellcheck_macros->{$macro})) {
-			$line->log_warning("Misspelled variant \"${macro}\" of \"".spellcheck_macros->{$macro}."\".");
+		} elsif ($macro eq "__NetBSD_Prereq__") {
+			$line->log_warning("Please use __NetBSD_Version__ instead of __NetBSD_Prereq__.");
+			$line->explain_warning(
+"The __NetBSD_Prereq__ macro is pretty new. It was born in NetBSD",
+"4.99.3, and maybe it won't survive for long. A better (and compatible)",
+"way is to compare __NetBSD_Version__ directly to the required version",
+"number.");
+
+		} elsif ($macro =~ m"^_+NetBSD_+Version_+$"i && $macro ne "__NetBSD_Version__") {
+			$line->log_warning("Misspelled variant \"${macro}\" of \"__NetBSD_Version__\".");
+
 		} else {
 			$opt_debug_unchecked and $line->log_debug("Unchecked macro \"${macro}\".");
 		}
