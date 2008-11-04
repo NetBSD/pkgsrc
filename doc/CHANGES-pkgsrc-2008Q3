@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.18 2008/11/03 03:38:40 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.19 2008/11/04 11:20:36 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -61,3 +61,5 @@ pullup ticket #2566 - requested by tron
 phpmyadmin: update package for security fixes
 pullup ticket #2567 - requested by adrianp
 drupal: update package for security fixes
+pullup ticket #2570 - requested by adrianp
+dovecot: update package for security fixes
