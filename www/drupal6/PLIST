@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/06 10:15:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.8.1 2008/11/04 22:16:02 tron Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -475,8 +475,6 @@ share/examples/drupal/drupal.conf
 @dirrm share/drupal/themes/chameleon
 @dirrm share/drupal/themes/bluemarine
 @dirrm share/drupal/themes
-@dirrm share/drupal/sites/all
-@dirrm share/drupal/sites
 @dirrm share/drupal/scripts
 @dirrm share/drupal/modules/user
 @dirrm share/drupal/modules/upload
@@ -517,6 +515,8 @@ share/examples/drupal/drupal.conf
 @dirrm share/drupal/misc
 @dirrm share/drupal/includes
 @exec ${MKDIR} %D/share/drupal/files
+@unexec ${RMDIR} %D/share/drupal/sites/all 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/drupal/sites 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/drupal/files 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/drupal 2>/dev/null || ${TRUE}
 @dirrm share/doc/drupal
