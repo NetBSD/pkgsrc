@@ -1,0 +1,16 @@
+Redland is a set of free software libraries that provide support for the
+Resource Description Framework (RDF).
+* Modular, object based libraries and APIs for manipulating the RDF graph,
+  triples, URIs and Literals.
+* Storage for graphs in memory and persistently with Sleepycat/Berkeley DB,
+  MySQL 3-5, PostgreSQL, AKT Triplestore, SQLite, files or URIs.
+* Support for multiple syntaxes for reading and writing RDF as RDF/XML,
+  N-Triples and Turtle Terse RDF Triple Language, RSS and Atom syntaxes via
+  the Raptor RDF Parser Toolkit.
+* Querying with SPARQL and RDQL using the Rasqal RDF Query Library.
+* Data aggregation and recording provenance support with Redland contexts.
+* Language Bindings in Perl, PHP, Python and Ruby via the Redland Bindings
+  package.
+* Command line utility programs rdfproc (RDF), rapper (parsing) and roqet
+  (query).
+* Portable, fast and with no known memory leaks.
