@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/22 11:29:07 rillig Exp $
-
-SHA1 (ApacheJSSI-1.1.2.tar.gz) = 8f57d1a663ae0fd0767921ec9915ecd9e776a584
-RMD160 (ApacheJSSI-1.1.2.tar.gz) = 8297f1df1e75333c837f9b8ad845525978adacf6
-Size (ApacheJSSI-1.1.2.tar.gz) = 76962 bytes
-SHA1 (patch-aa) = 259550b86d63ae4dfc4f6604df2e105de64078ee
