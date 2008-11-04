@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.439 2008/11/04 10:41:55 markd Exp $
+# $NetBSD: Makefile,v 1.440 2008/11/04 11:04:56 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -148,6 +148,7 @@ SUBDIR+=	kakasi
 SUBDIR+=	kbanner
 SUBDIR+=	kdoc
 SUBDIR+=	latex2html
+SUBDIR+=	libclucene
 SUBDIR+=	libcroco
 SUBDIR+=	liblrdf
 SUBDIR+=	libpathan
@@ -410,6 +411,7 @@ SUBDIR+=	sary
 SUBDIR+=	saxon
 SUBDIR+=	scew
 #SUBDIR+=	scrollkeeper	# incomplete package (only provides omf.mk)
+SUBDIR+=	soprano
 SUBDIR+=	source-highlight
 SUBDIR+=	stardic
 SUBDIR+=	subtitleripper
