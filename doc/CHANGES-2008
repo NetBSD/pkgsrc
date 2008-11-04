@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2819 2008/11/04 07:16:29 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2820 2008/11/04 09:59:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4781,3 +4781,30 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/vbetool to 0.7.1nb2 [bjs 2008-11-03]
 	Updated devel/p5-Mouse to 0.11 [seb 2008-11-04]
 	Updated mail/clamav to 0.94.1 [martti 2008-11-04]
+	Removed games/crossfire-maps [adam 2008-11-04]
+	Updated games/crossfire-server to 1.11.0 [adam 2008-11-04]
+	Updated games/crossfire-client to 1.11.0 [adam 2008-11-04]
+	Updated games/crossfire-client-gtk to 1.11.0 [adam 2008-11-04]
+	Updated games/crossfire-client-gtk2 to 1.11.0 [adam 2008-11-04]
+	Update databases/postgresql81 to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-client to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-server to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-plperl to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-plpython to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-pltcl to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql81-tsearch2 to 8.1.15 [adam 2008-11-04]
+	Update databases/postgresql82 to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-client to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-server to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-adminpack to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-plperl to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-plpython to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-pltcl to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql82-tsearch2 to 8.2.11 [adam 2008-11-04]
+	Update databases/postgresql83 to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-client to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-server to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-adminpack to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-plperl to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-plpython to 8.3.5 [adam 2008-11-04]
+	Update databases/postgresql83-pltcl to 8.3.5 [adam 2008-11-04]

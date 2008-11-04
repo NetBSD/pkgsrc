@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7644 2008/11/03 22:07:47 bjs Exp $
+$NetBSD: TODO,v 1.7645 2008/11/04 09:59:01 adam Exp $
 
 Suggested new packages
 ======================
@@ -498,9 +498,6 @@ Suggested package updates
 	o cpmtools-2.6
 	o cppunit-1.12.0
 	o cross-h8300-hms-binutils-2.17
-	o crossfire-client-1.10.0
-	o crossfire-maps-1.10.0
-	o crossfire-server-1.10.0
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
