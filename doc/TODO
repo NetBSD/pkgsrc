@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7646 2008/11/04 13:07:31 obache Exp $
+$NetBSD: TODO,v 1.7647 2008/11/04 16:44:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -757,7 +757,6 @@ Suggested package updates
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
-	o ktorrent-2.2.8
 	o lapack-20070226
 	o latd-1.21
 	o latex2rtf-1.9.19
