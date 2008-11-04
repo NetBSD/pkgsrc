@@ -1,48 +1,90 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/04 08:36:34 adam Exp $
 
-DISTNAME=	crossfire-1.9.0
-PKGNAME=	crossfire-server-1.9.0
-PKGREVISION=	4
+DISTNAME=	crossfire-1.11.0
+PKGNAME=	crossfire-server-1.11.0
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=	${DISTNAME}.arch.tar.gz ${DISTNAME}.maps.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_SYSCONFSUBDIR=	crossfire
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run bash:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}/games
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/games
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ENV+=		ac_cv_path_GZIP=${GZIP_CMD:Q}
+PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
+INSTALLATION_DIRS=	share/crossfire/arch
+INSTALLATION_DIRS+=	share/crossfire/maps
+
+# crossfire
 REPLACE_BASH+=	utils/crossloop.web.in
-
-REPLACE_PERL+=	doc/include_html.pl doc/playbook/make_index.pl
-REPLACE_PERL+=	doc/scripts/items-extract.pl doc/scripts/makeps.pl
-REPLACE_PERL+=	doc/scripts/monster-extract.pl lib/adm/archsearch.pl
-REPLACE_PERL+=	lib/adm/collect_images.pl lib/adm/map_expand.pl
-REPLACE_PERL+=	lib/adm/mapslitter.pl lib/checkarch.pl
-REPLACE_PERL+=	lib/collect.pl lib/util.pl utils/metaserver.pl
-REPLACE_PERL+=	utils/player_dl.pl.in utils/metaserver.pl.in
-REPLACE_PERL+=	utils/mktable.script lib/adm/map_info
+REPLACE_PERL+=	doc/include_html.pl
+REPLACE_PERL+=	doc/playbook/make_index.pl
+REPLACE_PERL+=	doc/scripts/items-extract.pl
+REPLACE_PERL+=	doc/scripts/makeps.pl
+REPLACE_PERL+=	doc/scripts/monster-extract.pl
+REPLACE_PERL+=	lib/adm/archsearch.pl
+REPLACE_PERL+=	lib/adm/collect_images.pl
+REPLACE_PERL+=	lib/adm/map_expand.pl
+REPLACE_PERL+=	lib/adm/mapslitter.pl
+REPLACE_PERL+=	lib/checkarch.pl
+REPLACE_PERL+=	lib/collect.pl
+REPLACE_PERL+=	lib/util.pl
+REPLACE_PERL+=	utils/metaserver.pl
+REPLACE_PERL+=	utils/player_dl.pl.in
+REPLACE_PERL+=	utils/metaserver.pl.in
+REPLACE_PERL+=	utils/mktable.script
+REPLACE_PERL+=	lib/adm/map_info
+# arch
+REPLACE_PERL+=	../arch/dev/scripts/update_armor.pl
+REPLACE_PERL+=	../arch/dev/scripts/update_body.pl
+REPLACE_PERL+=	../arch/dev/scripts/update_monster.pl
+REPLACE_PERL+=	../arch/dev/scripts/update_object.pl
+REPLACE_PERL+=	../arch/dev/scripts/update_shield.pl
+REPLACE_PERL+=	../arch/dev/split-png-linux.pl
+REPLACE_PERL+=	../arch/dev/splitter-png.pl
+REPLACE_PERL+=	../arch/dev/splitter.pl
+# maps
+REPLACE_BASH+=	../maps/brest/pshops/pshop_copier
+REPLACE_PERL+=	../maps/Info/combine.pl
+REPLACE_PERL+=	../maps/Info/map_sed.pl
+REPLACE_PERL+=	../maps/Info/rewrite_exits.pl
+REPLACE_PERL+=	../maps/Info/rewrite_styles.pl
+REPLACE_PERL+=	../maps/Info/update_apart.pl
+REPLACE_PERL+=	../maps/Info/update_exits.pl
 
 EGDIR=		${PREFIX}/share/examples/crossfire
-CONF_FILES+=	${EGDIR:Q}/ban_file ${PKG_SYSCONFDIR:Q}/crossfire/ban_file
-CONF_FILES+=	${EGDIR:Q}/dm_file ${PKG_SYSCONFDIR:Q}/crossfire/dm_file
-CONF_FILES+=	${EGDIR:Q}/exp_table ${PKG_SYSCONFDIR:Q}/crossfire/exp_table
-CONF_FILES+=	${EGDIR:Q}/forbid ${PKG_SYSCONFDIR:Q}/crossfire/forbid
-CONF_FILES+=	${EGDIR:Q}/motd ${PKG_SYSCONFDIR:Q}/crossfire/motd
-CONF_FILES+=	${EGDIR:Q}/news ${PKG_SYSCONFDIR:Q}/crossfire/news
-CONF_FILES+=	${EGDIR:Q}/rules ${PKG_SYSCONFDIR:Q}/crossfire/rules
-CONF_FILES+=	${EGDIR:Q}/settings ${PKG_SYSCONFDIR:Q}/crossfire/settings
+CONF_FILES+=	${EGDIR}/ban_file ${PKG_SYSCONFDIR}/ban_file
+CONF_FILES+=	${EGDIR}/dm_file ${PKG_SYSCONFDIR}/dm_file
+CONF_FILES+=	${EGDIR}/exp_table ${PKG_SYSCONFDIR}/exp_table
+CONF_FILES+=	${EGDIR}/forbid ${PKG_SYSCONFDIR}/forbid
+CONF_FILES+=	${EGDIR}/metaserver2 ${PKG_SYSCONFDIR}/metaserver2
+CONF_FILES+=	${EGDIR}/motd ${PKG_SYSCONFDIR}/motd
+CONF_FILES+=	${EGDIR}/news ${PKG_SYSCONFDIR}/news
+CONF_FILES+=	${EGDIR}/rules ${PKG_SYSCONFDIR}/rules
+CONF_FILES+=	${EGDIR}/settings ${PKG_SYSCONFDIR}/settings
+
+post-install:
+	cd ${WRKDIR} && cp -R arch maps ${DESTDIR}${PREFIX}/share/crossfire
+	cd ${DESTDIR}${PREFIX} && \
+		${FIND} share/crossfire/arch -type f -print >> ${WRKDIR}/PLIST
+	cd ${DESTDIR}${PREFIX} && \
+		${FIND} share/crossfire/maps -type f -print >> ${WRKDIR}/PLIST
+
+.include "options.mk"
 
 .include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+
 .include "../../lang/python/application.mk"
-.include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
