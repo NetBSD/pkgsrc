@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.14 2008/10/20 10:19:18 rillig Exp $
+# $NetBSD: developer.mk,v 1.15 2008/11/05 08:21:56 rillig Exp $
 #
 # Public targets for developers:
 #
@@ -12,7 +12,9 @@
 #
 #	CTYPE
 #		The type of entry to add. Must be one of "Added",
-#		"Updated", "Renamed", "Moved", or "Removed".
+#		"Updated", "Renamed" (when the PKGNAME has changed),
+#		"Moved" (when the package has a new directory, but the
+#		PKGNAME is still the same), or "Removed".
 #		The default is "Updated".
 #
 #	TO
@@ -62,14 +64,15 @@ _CE_MSG1=	Removed ${PKGPATH}
 .elif !empty(CTYPE:tl:Madd*)				# added
 _CE_MSG1=	Added ${PKGPATH} version ${PKGVERSION}
 .elif !empty(CTYPE:tl:Mren*) || !empty(CTYPE:tl:Mmov*) || !empty(CTYPE:tl:Mmv)
-.  if defined(TO)
-.    if exists(${PKGSRCDIR}/${TO})
-_CE_MSG1=	${CTYPE} ${PKGPATH} to ${TO}
-.    else
-_CE_ERRORS+=	"[developer.mk] The package ${TO} does not exist."
-.    endif
-.  else
+.  if !defined(TO)
 _CE_ERRORS+=	"[developer.mk] The TO variable must be set."
+.  elif !exists(${PKGSRCDIR}/${TO})
+_CE_ERRORS+=	"[developer.mk] The package directory ${TO} does not exist."
+.  endif
+.  if !empty(CTYPE:M[Mm]*)
+_CE_MSG1=	Moved ${PKGPATH} to ${TO}
+.  else
+_CE_MSG1=	Renamed ${PKGPATH} to ${TO}
 .  endif
 .else
 _CE_ERRORS+=	"[developer.mk] Invalid value "${CTYPE:Q}" for CTYPE."
