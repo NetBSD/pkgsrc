@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2008/11/05 12:29:04 wiz Exp $
+
+--- cdb.C.orig	2008-10-11 14:57:21.000000000 +0000
++++ cdb.C
+@@ -394,6 +394,9 @@ void close_region ()
+ 
+ lookup_t *Lookup (Symbol s, bool tagged, RegionPtr r)
+ {
++	if (s == -1)
++		return NULL;
++
+ 	lookup_t *t = lookup_table [s - SYMBASE];
+ 
+ 	if (tagged) for (; t; t = t->next) {
+@@ -1175,6 +1178,7 @@ void aeqn::prstruct (RegionPtr p)
+ 		txt [txti++] = UNI;
+ 	for (m = regions [p].first; m; m=m->next) {
+ 		L = Lookup (m->s, false, p);
++		if (!L) continue;
+ 		txt [txti++] = m->s;
+ 		base = base_of (L->info.tdf);
+ 		spec = spec_of (L->info.tdf);

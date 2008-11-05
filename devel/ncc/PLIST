@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/05 12:29:04 wiz Exp $
 bin/ncc
 bin/nccar
 bin/nccc++
 bin/nccld
 bin/nccnav
 bin/nccnavi
+bin/nccstrip2.py
 man/man1/ncc.1
 share/doc/ncc/KEYS.txt
 share/doc/ncc/README
