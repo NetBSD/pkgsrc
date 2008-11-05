@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
+$NetBSD: patch-ab,v 1.16 2008/11/05 19:58:25 wiz Exp $
 
---- dns.c.orig	2008-08-19 18:07:33.000000000 +0100
-+++ dns.c	2008-08-24 13:22:55.000000000 +0100
-@@ -310,6 +310,17 @@
+--- dns.c.orig	2008-09-18 12:36:50.000000000 +0000
++++ dns.c
+@@ -310,6 +310,17 @@ char nullstring[] = "";
  
  int use_dns = 1;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
  
  /* Code */
  #ifdef CorruptCheck
-@@ -484,14 +495,14 @@
+@@ -484,14 +495,14 @@ void dns_open(void)
  {
    int option,i;
  
@@ -40,7 +40,7 @@ $NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
    resfd = socket(AF_INET, SOCK_DGRAM, 0);
    if (resfd == -1) {
      fprintf(stderr,"Unable to allocate socket for nameserver communication: %s\n",
-@@ -874,17 +885,17 @@
+@@ -874,17 +885,17 @@ void dorequest(char *s,int type,word id)
  {
    packetheader *hp;
    int r,i;
@@ -62,7 +62,7 @@ $NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
  		 sizeof(struct sockaddr));
  }
  
-@@ -1240,18 +1251,18 @@
+@@ -1240,18 +1251,18 @@ void dns_ack(void)
      /* Check to see if this server is actually one we sent to */
      if ( addrcmp( (void *) &(from4->sin_addr), (void *) &localhost,
                    (int) AF_INET ) == 0 ) {
@@ -84,6 +84,6 @@ $NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
  	  break;
 -    if (i == _res.nscount) {
 +    if (i == myres.nscount) {
-       sprintf(tempstring,"Resolver error: Received reply from unknown source: %s",
+       snprintf(tempstring, sizeof(tempstring), "Resolver error: Received reply from unknown source: %s",
  	      inet_ntoa(from4->sin_addr ));
        restell(tempstring);
