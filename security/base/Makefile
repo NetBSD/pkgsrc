@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/11/05 22:47:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.21 2008/11/05 22:50:00 adrianp Exp $
 #
 
 DISTNAME=	base-1.4.1
@@ -31,7 +31,8 @@ WRKSRC=		${WRKDIR}/base-php4
 .include "../../mk/bsd.prefs.mk"
 
 DOC_FILES=		CHANGELOG CREDITS README README.mssql TODO \
-			UPGRADE base_faq.rtf
+			UPGRADE base_faq.rtf INSTALL INSTALL.rtf \
+			README.country_support README.graph_alert_data
 BASE_DIR=		${PREFIX}/share/base
 EGDIR=			${PREFIX}/share/examples/base
 MESSAGE_SUBST+= 	EGDIR=${EGDIR:Q} BASE_DIR=${BASE_DIR:Q}
