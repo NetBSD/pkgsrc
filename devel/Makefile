@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1069 2008/11/03 10:52:15 markd Exp $
+# $NetBSD: Makefile,v 1.1070 2008/11/05 15:37:38 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -469,6 +469,7 @@ SUBDIR+=	p5-Class-XPath
 SUBDIR+=	p5-Clone
 SUBDIR+=	p5-Clone-PP
 SUBDIR+=	p5-Compress-PPMd
+SUBDIR+=	p5-Compress-Raw-Bzip2
 SUBDIR+=	p5-Compress-Raw-Zlib
 SUBDIR+=	p5-Compress-Zlib
 SUBDIR+=	p5-Config-Any
