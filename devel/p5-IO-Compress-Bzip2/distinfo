@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/05 15:41:14 wiz Exp $
+
+SHA1 (IO-Compress-Bzip2-2.015.tar.gz) = 379e8d8d112d1255a3b9974f70f5e1ed78479c7a
+RMD160 (IO-Compress-Bzip2-2.015.tar.gz) = 4b17cb5ae76cd4b24ebcb15d1f928394897030b4
+Size (IO-Compress-Bzip2-2.015.tar.gz) = 75388 bytes

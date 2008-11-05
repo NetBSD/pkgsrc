@@ -1,0 +1,2 @@
+This module provides a Perl interface to allow reading and writing
+of bzip2 files/buffers.
