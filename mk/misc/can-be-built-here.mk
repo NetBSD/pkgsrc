@@ -1,4 +1,4 @@
-# $NetBSD: can-be-built-here.mk,v 1.5 2008/05/26 22:05:46 tnn Exp $
+# $NetBSD: can-be-built-here.mk,v 1.6 2008/11/05 08:24:23 rillig Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
@@ -13,7 +13,7 @@
 #
 # NO_SKIP
 #	When defined, the checks in this file are skipped. It is called
-#	NO_SKIP because the code that skips builting the package should
+#	NO_SKIP because the code that skips building the package should
 #	_not_ be run.
 #
 #	XXX: It's weird to have three negations in such a short variable
