@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2008/11/03 04:50:45 obache Exp $
+# $NetBSD: Makefile,v 1.736 2008/11/05 15:21:16 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -304,6 +304,7 @@ SUBDIR+=	p5-Geo-IP
 SUBDIR+=	p5-Geo-IPfree
 SUBDIR+=	p5-INET6
 SUBDIR+=	p5-IO-Interface
+SUBDIR+=	p5-IO-Socket-INET6
 SUBDIR+=	p5-IO-Socket-Multicast
 SUBDIR+=	p5-IP-Country
 SUBDIR+=	p5-Net
