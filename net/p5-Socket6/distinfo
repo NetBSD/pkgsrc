@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/08/17 18:44:13 he Exp $
+$NetBSD: distinfo,v 1.9 2008/11/05 14:58:20 wiz Exp $
 
-SHA1 (Socket6-0.21.tar.gz) = 1ebbf02d2e5caa10756af1a7439498f13047dbcf
-RMD160 (Socket6-0.21.tar.gz) = 81d79fbd33f8f8508c8e62bbef7f4cb3b0d1aa74
-Size (Socket6-0.21.tar.gz) = 57322 bytes
+SHA1 (Socket6-0.23.tar.gz) = f6598055e40d71fe3bab9881d38995f8677ee90a
+RMD160 (Socket6-0.23.tar.gz) = c45f3024e64cd3b1d43226fdc44f1f7dd54ddcaf
+Size (Socket6-0.23.tar.gz) = 57859 bytes
