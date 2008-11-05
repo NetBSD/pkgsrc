@@ -1,15 +1,13 @@
-# $NetBSD: Makefile.common,v 1.8 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/11/05 16:12:38 wiz Exp $
+#
+# used by devel/ncursesw/Makefile
 
 DISTNAME=	ncurses-${NC_VERS}
-NC_VERS=	5.6
+NC_VERS=	5.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=ncurses/} \
 		ftp://dickey.his.com/ncurses/ \
 		ftp://dickey.his.com/ncurses/${NC_VERS}/
-
-PATCH_SITES=		${MASTER_SITES:M*${NC_VERS}*}
-PATCHFILES=		${DISTNAME}-coverity.patch.gz
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dickey.his.com/ncurses/ncurses.html
