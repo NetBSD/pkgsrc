@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/06/14 10:53:23 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/05 11:42:53 wiz Exp $
 
---- gst-libs/ext/ffmpeg/doc/Makefile.in.orig	2006-04-30 15:59:25.000000000 +0200
+--- gst-libs/ext/ffmpeg/doc/Makefile.in.orig	2007-12-04 20:51:59.000000000 +0000
 +++ gst-libs/ext/ffmpeg/doc/Makefile.in
-@@ -827,7 +827,7 @@ uninstall-man: uninstall-man1
+@@ -464,7 +464,7 @@ uninstall-man: uninstall-man1
  	$(TEXI2HTML) -monolithic -number $<
  
  %.pod: %-doc.texi
