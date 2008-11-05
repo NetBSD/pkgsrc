@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2855 2008/11/05 19:49:20 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2856 2008/11/05 19:58:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4846,3 +4846,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/kipi-plugins to 0.1.6 [wiz 2008-11-05]
 	Updated sysutils/cdrtools to 2.01.01.53 [wiz 2008-11-05]
 	Removed sysutils/cdrtools-ossdvd successor sysutils/cdrtools [wiz 2008-11-05]
+	Updated net/mtr to 0.75 [wiz 2008-11-05]
