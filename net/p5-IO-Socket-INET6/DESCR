@@ -1,0 +1,10 @@
+IO::Socket::INET6 provides an object interface to creating and
+using sockets in both AF_INET|AF_INET6 domain. It is built upon
+the IO::Socket interface and inherits all the methods defined by
+IO::Socket.
+
+WARNING: You should use this module mainly to program IPv6 domain.
+Most pobably future releases will not support AF_INET | AF_UNSPEC
+options, as the module seems to fail on some given corner cases.
+If you require IPv4, you are encouraged to use IO::Socket::INET
+from the application level. Be warned.
