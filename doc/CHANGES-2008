@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2835 2008/11/05 13:07:44 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2836 2008/11/05 13:12:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4826,3 +4826,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/ncc to 2.8nb1 [wiz 2008-11-05]
 	Updated devel/nasm to 2.05.01 [wiz 2008-11-05]
 	Added textproc/json-glib version 0.6.2 [obache 2008-11-05]
+	Updated multimedia/libtheora to 1.0 [wiz 2008-11-05]
