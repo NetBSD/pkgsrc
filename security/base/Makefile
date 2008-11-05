@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/11/05 22:47:13 adrianp Exp $
 #
 
-DISTNAME=	base-1.3.9
+DISTNAME=	base-1.4.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 
@@ -26,25 +26,26 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Image_Graph-[0-9]*:../../graphics/pear-Image_Gr
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.4:../../www/ap-php
 
 NO_BUILD=	YES
+WRKSRC=		${WRKDIR}/base-php4
 
 .include "../../mk/bsd.prefs.mk"
 
-DOC_FILES=	CHANGELOG CREDITS README README.mssql TODO UPGRADE base_faq.rtf
-BASE_DIR=	${PREFIX}/share/base
-EGDIR=		${PREFIX}/share/examples/base
-MESSAGE_SUBST+= EGDIR=${EGDIR:Q} BASE_DIR=${BASE_DIR:Q}
-PAX_DIRS=	admin help images includes languages scripts setup sql styles
-WWW_USER?=	${APACHE_USER}
-WWW_GROUP?=	${APACHE_GROUP}
-USE_TOOLS+=	pax perl:run
-REPLACE_PERL+=	scripts/base_maintenance.pl
-
-# SKIP_PORTABILITY_CHECK=	YES
+DOC_FILES=		CHANGELOG CREDITS README README.mssql TODO \
+			UPGRADE base_faq.rtf
+BASE_DIR=		${PREFIX}/share/base
+EGDIR=			${PREFIX}/share/examples/base
+MESSAGE_SUBST+= 	EGDIR=${EGDIR:Q} BASE_DIR=${BASE_DIR:Q}
+PAX_DIRS=		admin help images includes languages scripts setup \
+			sql styles
+WWW_USER?=		${APACHE_USER}
+WWW_GROUP?=		${APACHE_GROUP}
+USE_TOOLS+=		pax perl:run
+REPLACE_PERL+=		scripts/base_maintenance.pl
 
 PKG_GROUPS_VARS+=	WWW_GROUP
 PKG_USERS_VARS+=	WWW_USER
 
-CONF_FILES=	${EGDIR}/base.conf ${PKG_SYSCONFDIR}/base.conf
+CONF_FILES=		${EGDIR}/base.conf ${PKG_SYSCONFDIR}/base.conf
 
 CONF_FILES_PERMS=	${EGDIR}/base_conf.php ${BASE_DIR}/base_conf.php \
 			${WWW_USER} ${WWW_GROUP} 0600
