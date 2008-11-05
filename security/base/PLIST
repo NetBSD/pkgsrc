@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/10/20 23:22:09 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/05 22:47:13 adrianp Exp $
 share/base/admin/base_roleadmin.php
 share/base/admin/base_useradmin.php
 share/base/admin/index.php
@@ -50,6 +50,7 @@ share/base/includes/base_capabilities.php
 share/base/includes/base_constants.inc.php
 share/base/includes/base_db.inc.php
 share/base/includes/base_include.inc.php
+share/base/includes/base_iso3166.inc.php
 share/base/includes/base_log_error.inc.php
 share/base/includes/base_log_timing.inc.php
 share/base/includes/base_net.inc.php
