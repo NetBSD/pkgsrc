@@ -1,4 +1,4 @@
-# $NetBSD: warnings.mk,v 1.1 2007/07/20 14:08:19 rillig Exp $
+# $NetBSD: warnings.mk,v 1.2 2008/11/05 08:23:41 rillig Exp $
 
 # This file prints the warnings that have been detected while loading
 # the package Makefile. Whichever part of pkgsrc (user, package, system)
@@ -7,6 +7,8 @@
 #
 # Example:
 #	WARNINGS+=	"[warnings.mk] This is an example warning."
+#
+# Keywords: warning warnings
 #
 
 WARNINGS?=	# none
