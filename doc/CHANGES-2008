@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2842 2008/11/05 15:10:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2843 2008/11/05 15:21:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4833,3 +4833,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Socket6 to 0.23nb1 [wiz 2008-11-05]
 	Updated databases/p5-DBD-mysql to 4.010 [wiz 2008-11-05]
 	Updated devel/p5-Test-Simple to 0.84 [wiz 2008-11-05]
+	Added net/p5-IO-Socket-INET6 version 2.56 [wiz 2008-11-05]
