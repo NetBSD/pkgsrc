@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2849 2008/11/05 16:13:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2850 2008/11/05 16:15:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4840,3 +4840,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/p5-Archive-Tar to 1.40 [wiz 2008-11-05]
 	Updated devel/ncurses to 5.7 [wiz 2008-11-05]
 	Updated devel/ncursesw to 5.7 [wiz 2008-11-05]
+	Updated devel/libidn to 1.11 [wiz 2008-11-05]
