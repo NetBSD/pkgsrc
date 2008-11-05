@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2844 2008/11/05 15:24:54 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2845 2008/11/05 15:38:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4835,3 +4835,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Simple to 0.84 [wiz 2008-11-05]
 	Added net/p5-IO-Socket-INET6 version 2.56 [wiz 2008-11-05]
 	Updated security/p5-IO-Socket-SSL to 1.17 [wiz 2008-11-05]
+	Added devel/p5-Compress-Raw-Bzip2 version 2.015 [wiz 2008-11-05]
