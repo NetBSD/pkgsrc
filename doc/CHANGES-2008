@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2847 2008/11/05 15:48:58 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2848 2008/11/05 16:13:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4838,3 +4838,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Compress-Raw-Bzip2 version 2.015 [wiz 2008-11-05]
 	Added devel/p5-IO-Compress-Bzip2 version 2.015 [wiz 2008-11-05]
 	Updated archivers/p5-Archive-Tar to 1.40 [wiz 2008-11-05]
+	Updated devel/ncurses to 5.7 [wiz 2008-11-05]
