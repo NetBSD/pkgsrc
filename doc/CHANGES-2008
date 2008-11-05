@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2857 2008/11/05 22:50:16 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2858 2008/11/05 23:18:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4848,3 +4848,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed sysutils/cdrtools-ossdvd successor sysutils/cdrtools [wiz 2008-11-05]
 	Updated net/mtr to 0.75 [wiz 2008-11-05]
 	Updated security/base to 1.4.1 [adrianp 2008-11-05]
+	Updated pkgtools/pkgdiff to 0.121 [wiz 2008-11-05]
