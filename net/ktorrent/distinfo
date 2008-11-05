@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2008/07/30 13:27:10 obache Exp $
+$NetBSD: distinfo,v 1.11.4.1 2008/11/05 13:51:28 tron Exp $
 
-SHA1 (ktorrent-2.2.7.tar.bz2) = ee671eca8d7b2f90ad6023f966219db7e3fec368
-RMD160 (ktorrent-2.2.7.tar.bz2) = c7e563bcb273318eb26a32339ec536389b94f257
-Size (ktorrent-2.2.7.tar.bz2) = 2653798 bytes
+SHA1 (ktorrent-2.2.8.tar.bz2) = c816700e776d219432f20e7116c8e9f4f1af681a
+RMD160 (ktorrent-2.2.8.tar.bz2) = eda2304caf3407ec8bc85cd358dfa7a9b854ddc3
+Size (ktorrent-2.2.8.tar.bz2) = 2715406 bytes
 SHA1 (patch-ab) = 7deeb27c42d10f104852d227cacd5ddd54e46f49
