@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2837 2008/11/05 13:25:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2838 2008/11/05 14:25:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4828,3 +4828,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/json-glib version 0.6.2 [obache 2008-11-05]
 	Updated multimedia/libtheora to 1.0 [wiz 2008-11-05]
 	Updated www/mimetex to 1.70 [obache 2008-11-05]
+	Updated multimedia/libtheora to 1.0nb1 [wiz 2008-11-05]
