@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/09/08 15:14:21 ahoka Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/05 11:44:22 wiz Exp $
 #
 
 DISTNAME=		gst-ffmpeg-0.10.3
@@ -21,7 +21,9 @@ PKGSRC_MAKE_ENV+=	PERL=${PERL5}
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-#the bundled one is newer
+# the upstream developers only want to support building against
+# the included ffmpeg version, since the ffmpeg API/ABI is unstable
+# and there are no releases
 #.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
