@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2008/09/07 14:09:40 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2008/11/05 12:48:35 wiz Exp $
 
---- doc/Makefile.in.orig	2008-06-17 06:31:16.000000000 +0200
+--- doc/Makefile.in.orig	2008-10-29 17:57:33.000000000 +0000
 +++ doc/Makefile.in
 @@ -8,7 +8,8 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
@@ -12,23 +12,25 @@ $NetBSD: patch-ab,v 1.5 2008/09/07 14:09:40 wiz Exp $
  infodir		= @infodir@
  datarootdir	= @datarootdir@
  
-@@ -16,13 +17,12 @@ INSTALL		= @INSTALL@
+@@ -16,7 +17,7 @@ INSTALL		= @INSTALL@
  INSTALL_PROGRAM	= @INSTALL_PROGRAM@
  INSTALL_DATA	= @INSTALL_DATA@
  
 -PERL		= perl
--MAKEINFO	= makeinfo
 +PERL		= ${PERL5}
+ MAKEINFO	= makeinfo
  TEXI2DVI        = texi2dvi
- PS2PDF          = ps2pdf		# Part of GhostScript
+ TEXI2IPF	= texi2ipf
+@@ -27,7 +28,7 @@ PSTOPDF		= @PSTOPDF@		# BSD/MacOS X util
+ PS2PDF          = @PS2PDF@		# Part of GhostScript
  
- SRCS		= nasmdoc.src
+ SRCS		= nasmdoc.src inslist.src changes.src
 -OUT		= info html nasmdoc.txt nasmdoc.ps nasmdoc.pdf
 +OUT		= info html nasmdoc.txt nasmdoc.ps # nasmdoc.pdf
  
  # exports
  export srcdir
-@@ -88,7 +88,8 @@ spotless: clean
+@@ -95,7 +96,8 @@ spotless: clean
  	-rm -f nasmdoc*.ps inslist.src
  
  install: all

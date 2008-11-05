@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/03/12 21:16:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/11/05 12:48:35 wiz Exp $
 bin/ldrdf
 bin/nasm
 bin/ndisasm
@@ -19,6 +19,7 @@ man/man1/rdflib.1
 man/man1/rdx.1
 share/doc/nasm/html/nasmdo10.html
 share/doc/nasm/html/nasmdo11.html
+share/doc/nasm/html/nasmdo12.html
 share/doc/nasm/html/nasmdoc0.html
 share/doc/nasm/html/nasmdoc1.html
 share/doc/nasm/html/nasmdoc2.html
@@ -31,6 +32,7 @@ share/doc/nasm/html/nasmdoc8.html
 share/doc/nasm/html/nasmdoc9.html
 share/doc/nasm/html/nasmdoca.html
 share/doc/nasm/html/nasmdocb.html
+share/doc/nasm/html/nasmdocc.html
 share/doc/nasm/html/nasmdoci.html
 share/doc/nasm/nasmdoc.ps
 share/doc/nasm/nasmdoc.txt
