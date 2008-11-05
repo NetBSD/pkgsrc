@@ -1,30 +1,22 @@
-# $NetBSD: Makefile,v 1.19 2008/11/05 13:11:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/11/05 14:23:44 wiz Exp $
 #
 
-DISTNAME=	libtheora-1.0
-PKGNAME=	libtheora-1.0
-CATEGORIES=	multimedia
-MASTER_SITES=	http://downloads.xiph.org/releases/theora/
-EXTRACT_SUFX=	.tar.bz2
+.include "Makefile.common"
 
-MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://www.theora.org/
-COMMENT=	Video codec for Ogg multimedia streaming
+PKGREVISION=		1
 
-BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	theora.pc.in theoradec.pc.in theoraenc.pc.in
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
-CONFIGURE_ARGS+=	--disable-examples
-# disable player
-CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
+# disable doxygen, see libtheora-docs package
+CONFIGURE_ENV+=		HAVE_DOXYGEN=no
 
-PLIST_SUBST+=		SUBDIR=${DISTNAME}
+# avoid installing docs
+do-install:
+	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE} install-pkgconfigDATA
+	cd ${WRKSRC}/include && ${MAKE_ENV} ${MAKE} install
+	cd ${WRKSRC}/lib && ${MAKE_ENV} ${MAKE} install
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,5 +26,4 @@ CONFIGURE_ARGS+=	--disable-asm
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
