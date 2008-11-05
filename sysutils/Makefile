@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.444 2008/11/04 11:13:20 markd Exp $
+# $NetBSD: Makefile,v 1.445 2008/11/05 19:48:51 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -42,7 +42,6 @@ SUBDIR+=	cdbkup
 SUBDIR+=	cdrdao
 SUBDIR+=	cdrkit
 SUBDIR+=	cdrtools
-SUBDIR+=	cdrtools-ossdvd
 SUBDIR+=	cfengine2
 SUBDIR+=	checkpassword
 SUBDIR+=	checkpassword-pam
