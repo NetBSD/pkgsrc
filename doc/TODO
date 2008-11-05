@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7650 2008/11/05 16:16:48 wiz Exp $
+$NetBSD: TODO,v 1.7651 2008/11/05 21:52:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -471,7 +471,6 @@ Suggested package updates
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
-	o cdrtools-2.01.01.53
 	o cfitsio-3.100
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -720,10 +719,8 @@ Suggested package updates
 	o ikiwiki-2.67
 	o imap-uw-2007d
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
-	o imlib2-1.4.1
 	o instiki-0.13
 	o intercal-0.24
-	o ion3-20081002
 	o ircII-20080314
 	o ircservices-5.1.12
 	o irrd-2.3.4 [pkg/36813|38002]
@@ -755,7 +752,6 @@ Suggested package updates
 	o kdrill-6.5
 	o kid3-1.1
 	o kinput2-3.1
-	o kipi-plugins-0.1.6
 	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-0.9
@@ -793,7 +789,6 @@ Suggested package updates
 	o libgnomedb-3.1.2
 	o libgtop-2.24.0
 	o libhydrogen-0.9.2
-	o libkdcraw-0.1.6
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
@@ -806,6 +801,7 @@ Suggested package updates
 	o libpciaccess-0.10.5
 	o libshout-2.2.2
 	o libsoup-2.24.1
+	o libspf2-1.2.9
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -859,7 +855,7 @@ Suggested package updates
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
-	o modular-xorg-server-1.5.2
+	o modular-xorg-server-1.5.3
 	o monodevelop-1.9
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
@@ -870,7 +866,6 @@ Suggested package updates
 	o mpop-1.0.15
 	o mserv-devel-0.41
 	o msf-2.7
-	o mtr-0.75
 	o multitail-5.2.2
 	o munin-1.3.4
 	o muse-0.9.2
@@ -906,7 +901,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
-	o nspluginwrapper-1.1.2
 	o nspr-4.7.1
 	o nss-3.11.7
 	o ntp-4.2.4p5
@@ -943,7 +937,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DateTime-Locale-0.4200
 	o p5-DateTime-TimeZone-0.83
-	o p5-Finance-Quote-1.15
 	o p5-HTTPD-User-Manage-1.62
 	o p5-Locale-Maketext-Lexicon-0.68
 	o p5-MARC-1.38
@@ -1138,6 +1131,7 @@ Suggested package updates
 	o sablecc-3.2
 	o samba-3.2.4
 	o sarg-2.2.5
+	o sbcl-1.0.22
 	o scamper-20070201
 	o scapy-2.0.0.10
 	o scew-0.4.0
@@ -1298,6 +1292,7 @@ Suggested package updates
 	o x11perf-1.5
 	o x264-devel-20081101
 	o xanalyser-1.30
+	o xapian-1.0.9
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
