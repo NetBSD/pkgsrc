@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/10/09 19:46:55 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/05 13:11:48 wiz Exp $
 #
 
-DISTNAME=	libtheora-1.0RC1
-PKGNAME=	libtheora-1.0rc1
+DISTNAME=	libtheora-1.0
+PKGNAME=	libtheora-1.0
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xiph.org/releases/theora/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.theora.org/
 COMMENT=	Video codec for Ogg multimedia streaming
+
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -19,16 +21,10 @@ USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--disable-examples
-CONFIGURE_ARGS+=	HAVE_DOXYGEN=false
 # disable player
 CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
-CONFIGURE_ENV+=		ac_cv_prog_HAVE_DOXYGEN=no
-CONFIGURE_ENV+=		ac_cv_prog_HAVE_PDFLATEX=no
 
 PLIST_SUBST+=		SUBDIR=${DISTNAME}
-
-post-extract:
-	${CP} ${FILESDIR}/dct_decode_mmx.c ${WRKSRC}/lib/enc/x86_64
 
 .include "../../mk/bsd.prefs.mk"
 
