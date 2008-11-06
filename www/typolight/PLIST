@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/06 14:02:05 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/06 11:23:15 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/news.xml
@@ -6,6 +6,7 @@ ${TL_EGDIR}/print.css
 ${TL_EGDIR}/system/config/config.php
 ${TL_EGDIR}/system/config/countries.php
 ${TL_EGDIR}/system/config/dcaconfig.php
+${TL_EGDIR}/system/config/langconfig.php
 ${TL_EGDIR}/system/config/languages.php
 ${TL_EGDIR}/system/config/localconfig.php
 ${TL_EGDIR}/system/config/tcpdf.php
@@ -1116,6 +1117,7 @@ ${TL_WEBDIR}/system/modules/frontend/Hybrid.php
 ${TL_WEBDIR}/system/modules/frontend/Module.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleArticle.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleArticleList.php
+${TL_WEBDIR}/system/modules/frontend/ModuleArticleNav.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleBreadcrumb.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleCustomnav.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleFlash.php
@@ -1189,6 +1191,7 @@ ${TL_WEBDIR}/system/modules/frontend/templates/member_default.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/member_grouped.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article_list.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_article_nav.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article_plain.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article_teaser.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_breadcrumb.tpl
@@ -1231,6 +1234,27 @@ ${TL_WEBDIR}/system/modules/listing/languages/en/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/templates/.htaccess
 ${TL_WEBDIR}/system/modules/listing/templates/info_default.tpl
 ${TL_WEBDIR}/system/modules/listing/templates/list_default.tpl
+${TL_WEBDIR}/system/modules/memberlist/ModuleMemberlist.php
+${TL_WEBDIR}/system/modules/memberlist/config/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/config/config.php
+${TL_WEBDIR}/system/modules/memberlist/config/database.sql
+${TL_WEBDIR}/system/modules/memberlist/dca/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/dca/tl_member.php
+${TL_WEBDIR}/system/modules/memberlist/dca/tl_module.php
+${TL_WEBDIR}/system/modules/memberlist/html/details.gif
+${TL_WEBDIR}/system/modules/memberlist/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/languages/de/default.php
+${TL_WEBDIR}/system/modules/memberlist/languages/de/modules.php
+${TL_WEBDIR}/system/modules/memberlist/languages/de/tl_member.php
+${TL_WEBDIR}/system/modules/memberlist/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/memberlist/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/languages/en/default.php
+${TL_WEBDIR}/system/modules/memberlist/languages/en/modules.php
+${TL_WEBDIR}/system/modules/memberlist/languages/en/tl_member.php
+${TL_WEBDIR}/system/modules/memberlist/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/memberlist/templates/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/templates/mod_memberlist.tpl
+${TL_WEBDIR}/system/modules/memberlist/templates/mod_memberlist_detail.tpl
 ${TL_WEBDIR}/system/modules/news/Comments.php
 ${TL_WEBDIR}/system/modules/news/ModuleNews.php
 ${TL_WEBDIR}/system/modules/news/ModuleNewsArchive.php
@@ -1354,6 +1378,68 @@ ${TL_WEBDIR}/system/modules/registration/languages/en/tl_module.php
 ${TL_WEBDIR}/system/modules/registration/templates/.htaccess
 ${TL_WEBDIR}/system/modules/registration/templates/mod_message.tpl
 ${TL_WEBDIR}/system/modules/registration/templates/mod_password.tpl
+${TL_WEBDIR}/system/modules/rep_base/GPL3.txt
+${TL_WEBDIR}/system/modules/rep_base/LGPL3.txt
+${TL_WEBDIR}/system/modules/rep_base/LICENSE.txt
+${TL_WEBDIR}/system/modules/rep_base/Repository.php
+${TL_WEBDIR}/system/modules/rep_base/RepositorySettings.php
+${TL_WEBDIR}/system/modules/rep_base/dca/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/dca/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_base/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/languages/de/modules.php
+${TL_WEBDIR}/system/modules/rep_base/languages/de/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_base/languages/de/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_base/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/languages/en/modules.php
+${TL_WEBDIR}/system/modules/rep_base/languages/en/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_base/languages/en/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/DatabaseInstaller.php
+${TL_WEBDIR}/system/modules/rep_client/RepositoryBackendModule.php
+${TL_WEBDIR}/system/modules/rep_client/RepositoryBackendTheme.php
+${TL_WEBDIR}/system/modules/rep_client/RepositoryCatalog.php
+${TL_WEBDIR}/system/modules/rep_client/RepositoryManager.php
+${TL_WEBDIR}/system/modules/rep_client/config/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/config/config.php
+${TL_WEBDIR}/system/modules/rep_client/config/database.sql
+${TL_WEBDIR}/system/modules/rep_client/dca/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/dca/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/languages/de/modules.php
+${TL_WEBDIR}/system/modules/rep_client/languages/de/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_client/languages/de/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/languages/en/modules.php
+${TL_WEBDIR}/system/modules/rep_client/languages/en/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_client/languages/en/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/templates/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_catlist.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_catview.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_mgredit.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_mgrinst.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_mgrlist.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_mgruist.tpl
+${TL_WEBDIR}/system/modules/rep_client/templates/repository_mgrupdt.tpl
+${TL_WEBDIR}/system/modules/rep_client/themes/default/backend.css
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/alpha16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/back.gif
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/back16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/beta16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/blank16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/catalog16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/dbcheck16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/default.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/edit.gif
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/edit16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/forum16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/info.gif
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/info16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/install16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/manual16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/rc16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/stable16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/stop128.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/uninst16.png
+${TL_WEBDIR}/system/modules/rep_client/themes/default/images/uninstall.gif
 ${TL_WEBDIR}/system/modules/rss_reader/ModuleRssReader.php
 ${TL_WEBDIR}/system/modules/rss_reader/config/.htaccess
 ${TL_WEBDIR}/system/modules/rss_reader/config/config.php
@@ -1405,6 +1491,7 @@ ${TL_WEBDIR}/system/themes/default/images/below.gif
 ${TL_WEBDIR}/system/themes/default/images/cache.gif
 ${TL_WEBDIR}/system/themes/default/images/changelog.gif
 ${TL_WEBDIR}/system/themes/default/images/clipboard.gif
+${TL_WEBDIR}/system/themes/default/images/close.gif
 ${TL_WEBDIR}/system/themes/default/images/collapse.gif
 ${TL_WEBDIR}/system/themes/default/images/copy.gif
 ${TL_WEBDIR}/system/themes/default/images/copy_.gif
@@ -1566,7 +1653,6 @@ ${TL_WEBDIR}/typolight/switch.php
 ${TL_WEBDIR}/typolight/typolight.js
 ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/typolight
-@unexec ${RMDIR} %D/${TL_WEBDIR}/templates 2>/dev/null || ${TRUE}
 @dirrm ${TL_WEBDIR}/system/themes/default/src
 @dirrm ${TL_WEBDIR}/system/themes/default/images
 @dirrm ${TL_WEBDIR}/system/themes/default
@@ -1585,6 +1671,21 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/dca
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/config
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/themes/default/images
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/themes/default
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/themes
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/templates
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/dca
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/config
+@dirrm ${TL_WEBDIR}/system/modules/rep_client
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/dca
+@dirrm ${TL_WEBDIR}/system/modules/rep_base
 @dirrm ${TL_WEBDIR}/system/modules/registration/templates
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/en
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/de
@@ -1614,6 +1715,14 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/news/dca
 @dirrm ${TL_WEBDIR}/system/modules/news/config
 @dirrm ${TL_WEBDIR}/system/modules/news
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/templates
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/html
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/dca
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/config
+@dirrm ${TL_WEBDIR}/system/modules/memberlist
 @dirrm ${TL_WEBDIR}/system/modules/listing/templates
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/en
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/de
@@ -1676,14 +1785,6 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/backend/dca
 @dirrm ${TL_WEBDIR}/system/modules/backend/config
 @dirrm ${TL_WEBDIR}/system/modules/backend
-@unexec ${RMDIR} %D/${TL_WEBDIR}/system/modules 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${TL_WEBDIR}/system/logs 2>/dev/null || ${TRUE}
-@dirrm ${TL_WEBDIR}/system/libraries
-@unexec ${RM} -fr %D/${TL_WEBDIR}/system/html
-@dirrm ${TL_WEBDIR}/system/drivers
-@unexec ${RMDIR} %D/${TL_WEBDIR}/system/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${TL_WEBDIR}/system 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/${TL_WEBDIR} 2>/dev/null || ${TRUE}
 @dirrm ${TL_WEBDIR}/plugins/ufo
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/utils
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7/img
