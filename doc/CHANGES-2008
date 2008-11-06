@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2860 2008/11/06 02:16:18 jschauma Exp $
+$NetBSD: CHANGES-2008,v 1.2861 2008/11/06 08:33:49 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4856,3 +4856,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-ExtUtils-Depends to 0.301 [he 2008-11-05]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.48 [he 2008-11-05]
 	Updated pkgtools/mtree to 20081105 [jschauma 2008-11-05]
+	Updated www/elinks to 0.12rc2 [bjs 2008-11-06]
