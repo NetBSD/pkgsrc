@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2866 2008/11/06 16:57:51 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2867 2008/11/06 17:01:05 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3185,6 +3185,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-MailTools to 2.04 [wiz 2008-08-12]
 	Updated mail/p5-MIME-tools to 5.427 [wiz 2008-08-12]
 	Updated devel/p5-Class-Data-Accessor to 0.04004 [he 2008-08-12]
+	Updated net/chrony to 1.23 [sborrill 2008-08-12]
 	Updated mail/postfix-current to 2.6.20080726 [martti 2008-08-13]
 	Updated devel/readline to 5.2nb2 [he 2008-08-13]
 	Added x11/docker version 1.5 [ahoka 2008-08-13]
