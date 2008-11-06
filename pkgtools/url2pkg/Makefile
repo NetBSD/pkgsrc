@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/03/01 19:07:27 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2008/11/06 12:25:17 obache Exp $
 #
 
 DISTNAME=	url2pkg-2.7
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/creating.html
 COMMENT=	Tool to automate initial steps in building a package
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
@@ -37,8 +38,8 @@ SUBST_SED.up+=		-e 's,@PKGSRCDIR@,${PKGSRCDIR},g'
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${PREFIX}/bin/url2pkg
-	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${PREFIX}/lib/url2pkg/ExtUtils/
+	${INSTALL_SCRIPT} ${WRKSRC}/url2pkg.pl ${DESTDIR}${PREFIX}/bin/url2pkg
+	${INSTALL_MAN} ${FILESDIR}/url2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/MakeMaker.pm ${DESTDIR}${PREFIX}/lib/url2pkg/ExtUtils/
 
 .include "../../mk/bsd.pkg.mk"
