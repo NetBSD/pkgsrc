@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/06 13:39:54 obache Exp $
+
+SHA1 (GStreamer-0.11.tar.gz) = 4f5b2cc4ab75a86820e12c68493dc22c34c4977e
+RMD160 (GStreamer-0.11.tar.gz) = 7067998d7a17912b55a54dbdce1518d9b3e6c457
+Size (GStreamer-0.11.tar.gz) = 67106 bytes
