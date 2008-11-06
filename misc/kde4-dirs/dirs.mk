@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.2 2008/11/03 10:29:27 markd Exp $
+# $NetBSD: dirs.mk,v 1.3 2008/11/06 11:01:21 markd Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -71,16 +71,21 @@ KDE4_DIRS+=	share/kde/apps/kdesktop/programs
 KDE4_DIRS+=	share/kde/apps/kdm
 KDE4_DIRS+=	share/kde/apps/kdm/pics
 KDE4_DIRS+=	share/kde/apps/kdm/pics/users
+KDE4_DIRS+=	share/kde/apps/khangman
 KDE4_DIRS+=	share/kde/apps/khtml
 KDE4_DIRS+=	share/kde/apps/khtml/kpartplugins
 KDE4_DIRS+=	share/kde/apps/kicker
 KDE4_DIRS+=	share/kde/apps/kicker/applets
+KDE4_DIRS+=	share/kde/apps/klettres
 KDE4_DIRS+=	share/kde/apps/konqueror
 KDE4_DIRS+=	share/kde/apps/konqsidebartng
 KDE4_DIRS+=	share/kde/apps/konqsidebartng/virtual_folders
 KDE4_DIRS+=	share/kde/apps/konqsidebartng/virtual_folders/services
 KDE4_DIRS+=	share/kde/apps/kstyle
 KDE4_DIRS+=	share/kde/apps/kstyle/themes
+KDE4_DIRS+=	share/kde/apps/ktuberling
+KDE4_DIRS+=	share/kde/apps/ktuberling/sounds
+KDE4_DIRS+=	share/kde/apps/kvtml
 KDE4_DIRS+=	share/kde/apps/kwin
 KDE4_DIRS+=	share/kde/apps/kworldclock
 KDE4_DIRS+=	share/kde/apps/kworldclock/maps
