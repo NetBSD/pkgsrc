@@ -1,4 +1,4 @@
-/*	$NetBSD: verify.c,v 1.4 2004/08/21 04:10:45 jlam Exp $	*/
+/*	$NetBSD: verify.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)verify.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: verify.c,v 1.4 2004/08/21 04:10:45 jlam Exp $");
+__RCSID("$NetBSD: verify.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -149,10 +149,12 @@ vwalk(void)
 				if (compare(ep, p))
 					rval = MISMATCHEXIT;
 				if (!(ep->flags & F_IGN) &&
-				    ep->child && ep->type == F_DIR &&
+				    ep->type == F_DIR &&
 				    p->fts_info == FTS_D) {
-					level = ep->child;
-					++specdepth;
+					if (ep->child) {
+						level = ep->child;
+						++specdepth;
+					}
 				} else
 					fts_set(t, p, FTS_SKIP);
 				break;
@@ -298,7 +300,7 @@ miss(NODE *p, char *tail)
 				printf("%s: permissions not set: %s\n",
 				    path, strerror(errno));
 		}
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 		if ((p->flags & F_FLAGS) && p->st_flags) {
 			if (iflag)
 				flags = p->st_flags;
@@ -308,6 +310,6 @@ miss(NODE *p, char *tail)
 				printf("%s: file flags not set: %s\n",
 				    path, strerror(errno));
 		}
-#endif	/* HAVE_FILE_FLAGS */
+#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
 	}
 }
