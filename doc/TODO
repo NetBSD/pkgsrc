@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7669 2008/11/06 21:57:42 snj Exp $
+$NetBSD: TODO,v 1.7670 2008/11/06 22:37:41 snj Exp $
 
 Suggested new packages
 ======================
@@ -110,10 +110,6 @@ Suggested new packages
 	wired
 	http://bloodshed.net/wired/
 	Professional music production and creation software
-
-	Blackdown JDK/JRE 1.4
-	http://www.blackdown.org/java-linux/java2-status/jdk1.4-status.html
-	1.4 version of Blackdown's Java for Linux
 
 	ices-mp3-v2
 	http://www.icecast.org/ices.php
