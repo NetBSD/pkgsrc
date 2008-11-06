@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/02/20 19:13:12 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2008/11/06 21:15:24 snj Exp $
 #
 
 COMMENT=	Communication utilities
@@ -15,7 +15,6 @@ SUBDIR+=	conserver8
 SUBDIR+=	dl-ezkit
 SUBDIR+=	efax
 SUBDIR+=	efax-gtk
-SUBDIR+=	esms
 SUBDIR+=	estic
 SUBDIR+=	fidogate
 SUBDIR+=	gkermit
@@ -34,7 +33,6 @@ SUBDIR+=	libopensync-plugin-file
 SUBDIR+=	libopensync-plugin-kdepim
 SUBDIR+=	libopensync-plugin-syncml
 SUBDIR+=	libsyncml
-SUBDIR+=	linuxsms
 SUBDIR+=	lrzsz
 SUBDIR+=	malsync
 SUBDIR+=	mgetty+sendfax
