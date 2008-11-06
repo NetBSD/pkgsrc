@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7652 2008/11/06 04:40:06 obache Exp $
+$NetBSD: TODO,v 1.7653 2008/11/06 08:36:29 bjs Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ Suggested package updates
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elinks-0.12
 	o elm-me-2.4pl124b
 	o elscreen-1.4.6
 	o emacs-wiki-2.72
