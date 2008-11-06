@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7651 2008/11/05 21:52:26 wiz Exp $
+$NetBSD: TODO,v 1.7652 2008/11/06 04:40:06 obache Exp $
 
 Suggested new packages
 ======================
@@ -877,6 +877,7 @@ Suggested package updates
 	o nano-2.0.8
 	o nap-1.5.3
 	o nautilus-cd-burner-2.22.1 [needs hal]
+	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
 	o ncview-1.93b
