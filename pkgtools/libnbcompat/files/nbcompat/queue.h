@@ -1,4 +1,4 @@
-/*	$NetBSD: queue.h,v 1.5 2008/10/28 15:15:18 joerg Exp $	*/
+/*	$NetBSD: queue.h,v 1.6 2008/11/06 00:25:42 joerg Exp $	*/
 
 /*
  * Copyright (c) 1991, 1993
@@ -316,20 +316,26 @@ struct {								\
 #define	TAILQ_NEXT(elm, field)		((elm)->field.tqe_next)
 #endif
 
+#ifndef CIRCLEQ_HEAD
 #define	CIRCLEQ_HEAD(name, type)					\
 struct name {								\
 	struct type *cqh_first;		/* first element */		\
 	struct type *cqh_last;		/* last element */		\
 }
+#endif
 
+#ifndef CIRCLEQ_HEAD_INITIALIZER
 #define	CIRCLEQ_HEAD_INITIALIZER(head)					\
 	{ (void *)&head, (void *)&head }
+#endif
 
+#ifndef CIRCLEQ_ENTRY
 #define	CIRCLEQ_ENTRY(type)						\
 struct {								\
 	struct type *cqe_next;		/* next element */		\
 	struct type *cqe_prev;		/* previous element */		\
 }
+#endif
 
 /*
  * Circular queue functions.
