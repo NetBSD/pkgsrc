@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2008/10/02 17:15:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/11/06 02:14:52 jschauma Exp $
 #
 # This Makefile fragment is included by:
 #
@@ -6,7 +6,7 @@
 #	pkgsrc/sysutils/mtree/Makefile
 #
 
-DISTNAME=		mtree-20070710
+DISTNAME=		mtree-20081105
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
@@ -16,7 +16,7 @@ COMMENT=		Utility for mapping and checking directory hierarchies
 
 GNU_CONFIGURE=		yes
 
-USE_FEATURES=	nbcompat
+USE_FEATURES=		nbcompat
 
 FILESDIR=		${.CURDIR}/../../pkgtools/mtree/files
 PKGDIR=			${.CURDIR}/../../pkgtools/mtree

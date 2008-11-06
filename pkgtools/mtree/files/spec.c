@@ -1,4 +1,4 @@
-/*	$NetBSD: spec.c,v 1.4 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: spec.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -44,6 +44,13 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *        This product includes software developed by the NetBSD
+ *        Foundation, Inc. and its contributors.
+ * 4. Neither the name of The NetBSD Foundation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -73,7 +80,7 @@
 #if 0
 static char sccsid[] = "@(#)spec.c	8.2 (Berkeley) 4/28/95";
 #else
-__RCSID("$NetBSD: spec.c,v 1.4 2008/04/29 05:46:08 martin Exp $");
+__RCSID("$NetBSD: spec.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -145,7 +152,7 @@ spec(FILE *fp)
 	memset(&ginfo, 0, sizeof(ginfo));
 	for (mtree_lineno = 0;
 	    (buf = fparseln(fp, NULL, &mtree_lineno, NULL,
-		FPARSELN_UNESCCOMM | FPARSELN_UNESCCONT | FPARSELN_UNESCESC));
+		FPARSELN_UNESCCOMM));
 	    free(buf)) {
 		/* Skip leading whitespace. */
 		for (p = buf; *p && isspace((unsigned char)*p); ++p)
@@ -316,6 +323,9 @@ free_nodes(NODE *root)
 		REPLACEPTR(cur->md5digest, NULL);
 		REPLACEPTR(cur->rmd160digest, NULL);
 		REPLACEPTR(cur->sha1digest, NULL);
+		REPLACEPTR(cur->sha256digest, NULL);
+		REPLACEPTR(cur->sha384digest, NULL);
+		REPLACEPTR(cur->sha512digest, NULL);
 		REPLACEPTR(cur->tags, NULL);
 		REPLACEPTR(cur, NULL);
 	}
@@ -371,7 +381,7 @@ dump_nodes(const char *dir, NODE *root, int pathlast)
 		if (MATCHFLAG(F_NLINK))
 			printf("nlink=%d ", cur->st_nlink);
 		if (MATCHFLAG(F_SLINK))
-			printf("link=%s ", cur->slink);
+			printf("link=%s ", vispath(cur->slink));
 		if (MATCHFLAG(F_SIZE))
 			printf("size=%lld ", (long long)cur->st_size);
 		if (MATCHFLAG(F_TIME))
@@ -385,6 +395,12 @@ dump_nodes(const char *dir, NODE *root, int pathlast)
 			printf("rmd160=%s ", cur->rmd160digest);
 		if (MATCHFLAG(F_SHA1))
 			printf("sha1=%s ", cur->sha1digest);
+		if (MATCHFLAG(F_SHA256))
+			printf("sha256=%s ", cur->sha256digest);
+		if (MATCHFLAG(F_SHA384))
+			printf("sha384=%s ", cur->sha384digest);
+		if (MATCHFLAG(F_SHA512))
+			printf("sha512=%s ", cur->sha512digest);
 		if (MATCHFLAG(F_FLAGS))
 			printf("flags=%s ",
 			    flags_to_string(cur->st_flags, "none"));
@@ -485,6 +501,13 @@ replacenode(NODE *cur, NODE *new)
 	REPLACE(st_size);
 	REPLACE(st_mtimespec);
 	REPLACESTR(slink);
+	if (cur->slink != NULL) {
+		if ((cur->slink = strdup(new->slink)) == NULL)
+			mtree_err("memory allocation error");
+		if (strunvis(cur->slink, new->slink) == -1)
+			mtree_err("strunvis failed on `%s'", new->slink);
+		free(new->slink);
+	}
 	REPLACE(st_uid);
 	REPLACE(st_gid);
 	REPLACE(st_mode);
@@ -495,6 +518,9 @@ replacenode(NODE *cur, NODE *new)
 	REPLACESTR(md5digest);
 	REPLACESTR(rmd160digest);
 	REPLACESTR(sha1digest);
+	REPLACESTR(sha256digest);
+	REPLACESTR(sha384digest);
+	REPLACESTR(sha512digest);
 	REPLACESTR(tags);
 	REPLACE(lineno);
 	REPLACE(flags);
@@ -510,21 +536,20 @@ set(char *t, NODE *ip)
 	char	*kw, *val, *md, *ep;
 	void	*m;
 
-	val = NULL;
 	while ((kw = strsep(&t, "= \t")) != NULL) {
 		if (*kw == '\0')
 			continue;
 		if (strcmp(kw, "all") == 0)
 			mtree_err("invalid keyword `all'");
 		ip->flags |= type = parsekey(kw, &value);
-		if (value) {
-			while ((val = strsep(&t, " \t")) != NULL &&
-			    *val == '\0')
-				continue;
-			if (val == NULL)
-				mtree_err("missing value");
-		}
-		switch(type) {
+		if (!value)
+			/* Just set flag bit (F_IGN and F_OPT) */
+			continue;
+		while ((val = strsep(&t, " \t")) != NULL && *val == '\0')
+			continue;
+		if (val == NULL)
+			mtree_err("missing value");
+		switch (type) {
 		case F_CKSUM:
 			ip->cksum = strtoul(val, &ep, 10);
 			if (*ep)
@@ -552,9 +577,6 @@ set(char *t, NODE *ip)
 				mtree_err("unknown group `%s'", val);
 			ip->st_gid = gid;
 			break;
-		case F_IGN:
-			/* just set flag bit */
-			break;
 		case F_MD5:
 			if (val[0]=='0' && val[1]=='x')
 				md=&val[2];
@@ -565,7 +587,8 @@ set(char *t, NODE *ip)
 			break;
 		case F_MODE:
 			if ((m = setmode(val)) == NULL)
-				mtree_err("invalid file mode `%s'", val);
+				mtree_err("cannot set file mode `%s' (%s)",
+				    val, strerror(errno));
 			ip->st_mode = getmode(m, 0);
 			free(m);
 			break;
@@ -573,9 +596,6 @@ set(char *t, NODE *ip)
 			ip->st_nlink = (nlink_t)strtoul(val, &ep, 10);
 			if (*ep)
 				mtree_err("invalid link count `%s'", val);
-			break;
-		case F_OPT:
-			/* just set flag bit */
 			break;
 		case F_RMD160:
 			if (val[0]=='0' && val[1]=='x')
@@ -601,6 +621,8 @@ set(char *t, NODE *ip)
 		case F_SLINK:
 			if ((ip->slink = strdup(val)) == NULL)
 				mtree_err("memory allocation error");
+			if (strunvis(ip->slink, val) == -1)
+				mtree_err("strunvis failed on `%s'", val);
 			break;
 		case F_TAGS:
 			len = strlen(val) + 3;	/* "," + str + ",\0" */
@@ -632,6 +654,30 @@ set(char *t, NODE *ip)
 			if (uid_from_user(val, &uid) == -1)
 				mtree_err("unknown user `%s'", val);
 			ip->st_uid = uid;
+			break;
+		case F_SHA256:
+			if (val[0]=='0' && val[1]=='x')
+				md=&val[2];
+			else
+				md=val;
+			if ((ip->sha256digest = strdup(md)) == NULL)
+				mtree_err("memory allocation error");
+			break;
+		case F_SHA384:
+			if (val[0]=='0' && val[1]=='x')
+				md=&val[2];
+			else
+				md=val;
+			if ((ip->sha384digest = strdup(md)) == NULL)
+				mtree_err("memory allocation error");
+			break;
+		case F_SHA512:
+			if (val[0]=='0' && val[1]=='x')
+				md=&val[2];
+			else
+				md=val;
+			if ((ip->sha512digest = strdup(md)) == NULL)
+				mtree_err("memory allocation error");
 			break;
 		default:
 			mtree_err(
