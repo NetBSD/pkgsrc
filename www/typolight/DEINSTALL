@@ -1,0 +1,20 @@
+# $NetBSD: DEINSTALL,v 1.1 2008/11/06 11:23:14 taca Exp $
+
+TL_WEBDIR="@PREFIX@/@TL_WEBDIR@"
+
+case ${STAGE} in
+DEINSTALL)
+	${FIND} ${TL_WEBDIR}/system/html -type f ! -name index.html \
+		-exec ${RM} -f {} \;
+	;;
+POST-DEINSTALL)
+	${RMDIR} ${TL_WEBDIR}/templates 2>/dev/null
+	${RMDIR} ${TL_WEBDIR}/system/drivers 2>/dev/null
+	${RMDIR} ${TL_WEBDIR}/system/libraries
+	${RMDIR} ${TL_WEBDIR}/system/logs
+	${RMDIR} ${TL_WEBDIR}/system/modules
+	${RMDIR} ${TL_WEBDIR}/system/themes 2>/dev/null
+	${RMDIR} ${TL_WEBDIR}/system/config
+	${RMDIR} -p ${TL_WEBDIR}/system
+	;;
+esac
