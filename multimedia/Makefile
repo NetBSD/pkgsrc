@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2008/11/05 14:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2008/11/06 13:41:12 obache Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -94,6 +94,7 @@ SUBDIR+=	ogle
 SUBDIR+=	ogle_gui
 SUBDIR+=	ogmtools
 SUBDIR+=	openquicktime
+SUBDIR+=	p5-GStreamer
 SUBDIR+=	p5-xmltv
 SUBDIR+=	php-ming
 SUBDIR+=	phonon
