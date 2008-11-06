@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2858 2008/11/05 23:18:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2859 2008/11/06 00:00:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4849,3 +4849,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mtr to 0.75 [wiz 2008-11-05]
 	Updated security/base to 1.4.1 [adrianp 2008-11-05]
 	Updated pkgtools/pkgdiff to 0.121 [wiz 2008-11-05]
+	Updated devel/p5-Event-RPC to 1.01 [he 2008-11-05]
+	Updated devel/p5-Devel-StackTrace to 1.2000 [he 2008-11-05]
+	Updated devel/p5-Exception-Class to 1.26 [he 2008-11-05]
+	Updated devel/p5-ExtUtils-Command to 1.15 [he 2008-11-05]
+	Updated devel/p5-ExtUtils-Depends to 0.301 [he 2008-11-05]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.48 [he 2008-11-05]
