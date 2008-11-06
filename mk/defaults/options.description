@@ -24,6 +24,7 @@ batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
 bittorrent		Enable bittorrent support
 blender-exppython	Enable the Experimental Python support.
+boehm-gc		Use Boehm's garbage collector for memory allocation.
 bozohttpd-do-htpasswd	Enable .htpasswd file processing in bozohttpd.
 bugzilla-charts		Enable generation of charts.
 bugzilla-imagemagick	Compress .BMPs to save space.
