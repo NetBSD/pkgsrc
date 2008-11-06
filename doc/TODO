@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7653 2008/11/06 08:36:29 bjs Exp $
+$NetBSD: TODO,v 1.7654 2008/11/06 15:27:22 tron Exp $
 
 Suggested new packages
 ======================
@@ -716,7 +716,6 @@ Suggested package updates
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o ikiwiki-2.67
-	o imap-uw-2007d
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.13
 	o intercal-0.24
