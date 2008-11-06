@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/10/31 12:55:30 hira Exp $
+# $NetBSD: Makefile,v 1.57 2008/11/06 16:00:09 hira Exp $
 #
 
 OO_VER=			2.4.2
@@ -78,6 +78,9 @@ CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ENV+=		BLNK_PREFIX_nas=${BUILDLINK_PREFIX.nas}
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENBRK=${PREFIX}/bin/genbrk
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCCODE=${PREFIX}/sbin/genccode
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCMN=${PREFIX}/sbin/gencmn
 CONFIGURE_ENV+=		USE_BUILTIN_openssl=${USE_BUILTIN.openssl}
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
