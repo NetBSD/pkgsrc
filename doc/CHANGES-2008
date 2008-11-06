@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2869 2008/11/06 19:07:41 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2870 2008/11/06 20:00:19 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4865,3 +4865,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/spamdyke to 4.0.8 [schmonz 2008-11-06]
 	Updated devel/cxref to 1.6b [snj 2008-11-06]
 	Updated editors/hexedit to 1.2.12 [snj 2008-11-06]
+	Updated chat/climm to 0.6.3 [snj 2008-11-06]
