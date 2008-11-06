@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2008/05/31 11:45:45 gdt Exp $
+$NetBSD: distinfo,v 1.16 2008/11/06 11:28:09 gdt Exp $
 
-SHA1 (Image-ExifTool-7.30.tar.gz) = 6567020dc78c476487dd630f72ece8d6ce796a47
-RMD160 (Image-ExifTool-7.30.tar.gz) = 1e6c80089ffb651e3e2b1c531452ecaf78300ead
-Size (Image-ExifTool-7.30.tar.gz) = 1620455 bytes
+SHA1 (Image-ExifTool-7.51.tar.gz) = 79acbae33c0af6d4219d337fe38ada9c136f030a
+RMD160 (Image-ExifTool-7.51.tar.gz) = 2b908e82a7ed90ea5040be4af84ee0f8bcfba5eb
+Size (Image-ExifTool-7.51.tar.gz) = 1747046 bytes
