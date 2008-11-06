@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2865 2008/11/06 15:27:22 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2866 2008/11/06 16:57:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4861,3 +4861,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-Image-ExifTool to 7.51nb1 [gdt 2008-11-06]
 	Added multimedia/p5-GStreamer version 0.11 [obache 2008-11-06]
 	Updated mail/imap-uw to 2007d [tron 2008-11-06]
+	Updated mail/spamdyke to 4.0.8 [schmonz 2008-11-06]
