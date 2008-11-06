@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7655 2008/11/06 15:53:25 snj Exp $
+$NetBSD: TODO,v 1.7656 2008/11/06 16:03:37 snj Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ Suggested package updates
 	o duplicity-0.5.02
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.0
-	o dvipng-1.11
 	o dwm-5.2
 	o eagle-4.16
 	o easymenu-0.7.2p1
