@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2008/10/24 21:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2008/11/06 09:54:38 wiz Exp $
 
 DISTNAME=		gtk+-2.14.4
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -15,10 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		gtk2-engines<2.6.0
 CONFLICTS+=		gail-[0-9]*
-
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.13.5
-BUILDLINK_API_DEPENDS.pango+=	pango>=1.17.3
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
@@ -91,11 +87,15 @@ pre-install:
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/which
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
+BUILDLINK_API_DEPENDS.atk+=	atk>=1.13.0
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.6
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pango+=	pango>=1.20.0
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
