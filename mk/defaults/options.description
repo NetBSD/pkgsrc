@@ -379,6 +379,7 @@ tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
 trn-inn			Use INN as NNTP client.
 trn-nntpclnt		Use nntpclnt as NNTP client.
+typolight-liveupdate	Allow using TYPOlight Live Update service.
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 uim			Enable UIM support.
