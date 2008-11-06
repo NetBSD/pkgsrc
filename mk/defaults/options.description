@@ -284,6 +284,7 @@ oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
+opengrok-build		Enable building of OpenGrok from source
 openldap		Enable OpenLDAP support.
 oracle			Enable Oracle support.
 oss			Enable support for the Open Sound System audio library.
