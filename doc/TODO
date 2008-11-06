@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7661 2008/11/06 17:47:00 snj Exp $
+$NetBSD: TODO,v 1.7662 2008/11/06 17:50:22 snj Exp $
 
 Suggested new packages
 ======================
@@ -536,7 +536,6 @@ Suggested package updates
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-1.1
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
