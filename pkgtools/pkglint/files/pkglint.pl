@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.782 2008/11/04 23:13:05 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.783 2008/11/06 14:46:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2234,7 +2234,7 @@ sub get_doc_CHANGES($) {
 		my @files = readdir(DIR);
 		closedir(DIR) or die;
 		foreach my $file (reverse sort @files) {
-			if ($file =~ m"^CHANGES-\d+$") {
+			if ($file =~ m"^CHANGES-(\d+)$" && (0 + $1 >= 2008)) {
 				push(@$get_doc_CHANGES_docs, [ $file, undef ]);
 			}
 		}
