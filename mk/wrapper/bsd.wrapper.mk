@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.77 2008/10/30 18:56:22 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.78 2008/11/06 21:34:16 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -230,12 +230,6 @@ _WRAP_SKIP_TRANSFORM.${_wrappee_}?=	${_WRAP_SKIP_TRANSFORM}
 _WRAP_TYPE.${_wrappee_}?=		${_wrappee_}
 .endfor	# _WRAPPEES
 
-.if !empty(PKGSRC_COMPILER:Maix-xlc)
-_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
-_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
-_WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
-.endif
-
 .if !empty(PKGSRC_COMPILER:Micc)
 .  if !empty(CC_VERSION:M8.1) || !empty(CC_VERSION:M9.0)
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-icc81-cc
@@ -287,12 +281,20 @@ _WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mxlc)
+.  if ${OPSYS} == "AIX"
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
+.  elif ${OPSYS} == "Darwin"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-xlc-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-xlc-cc
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.  else
+PKG_FAIL_REASON+=	"xlc unsupported on ${OPSYS}"
+.  endif
 .endif
 
 .if !empty(PKGSRC_COMPILER:Mccc)
