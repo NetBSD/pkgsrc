@@ -1,4 +1,4 @@
-/*	$NetBSD: mtree.h,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
+/*	$NetBSD: mtree.h,v 1.3 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -39,6 +39,9 @@
 
 #define	MISMATCHEXIT	2
 
+/* Max. length of hash -- update this if needed when adding a new algorithm. */
+#define	MAXHASHLEN	128 /* SHA512 */
+
 typedef struct _node {
 	struct _node	*parent, *child;	/* up, down */
 	struct _node	*prev, *next;		/* left, right */
@@ -56,6 +59,9 @@ typedef struct _node {
 	char	*md5digest;			/* MD5 digest */
 	char	*rmd160digest;			/* RMD-160 digest */
 	char	*sha1digest;			/* SHA1 digest */
+	char	*sha256digest;			/* SHA256 digest */
+	char	*sha384digest;			/* SHA384 digest */
+	char	*sha512digest;			/* SHA512 digest */
 	char	*tags;				/* tags, comma delimited */
 	size_t	lineno;				/* line # entry came from */
 
@@ -81,6 +87,9 @@ typedef struct _node {
 #define	F_UID		0x00080000		/* uid */
 #define	F_UNAME		0x00100000		/* user name */
 #define	F_VISIT		0x00200000		/* file visited */
+#define	F_SHA256	0x00800000		/* SHA256 digest */
+#define	F_SHA384	0x01000000		/* SHA384 digest */
+#define	F_SHA512	0x02000000		/* SHA512 digest */
 
 	int	flags;				/* items set */
 
@@ -91,6 +100,7 @@ typedef struct _node {
 #define	F_FILE	0x010				/* regular file */
 #define	F_LINK	0x020				/* symbolic link */
 #define	F_SOCK	0x040				/* socket */
+#define	F_DOOR	0x080				/* door */
 	int	type;				/* file type */
 
 	char	name[1];			/* file name (must be last) */

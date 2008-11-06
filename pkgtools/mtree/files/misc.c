@@ -1,4 +1,4 @@
-/*	$NetBSD: misc.c,v 1.2 2004/08/21 04:10:45 jlam Exp $	*/
+/*	$NetBSD: misc.c,v 1.3 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1991, 1993
@@ -43,7 +43,7 @@
 #include <sys/cdefs.h>
 #endif
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: misc.c,v 1.2 2004/08/21 04:10:45 jlam Exp $");
+__RCSID("$NetBSD: misc.c,v 1.3 2008/11/06 02:14:52 jschauma Exp $");
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
@@ -94,6 +94,12 @@ static KEY keylist[] = {
 	{"rmd160digest",F_RMD160,	NEEDVALUE},
 	{"sha1",	F_SHA1,		NEEDVALUE},
 	{"sha1digest",	F_SHA1,		NEEDVALUE},
+	{"sha256",	F_SHA256,	NEEDVALUE},
+	{"sha256digest",F_SHA256,	NEEDVALUE},
+	{"sha384",	F_SHA384,	NEEDVALUE},
+	{"sha384digest",F_SHA384,	NEEDVALUE},
+	{"sha512",	F_SHA512,	NEEDVALUE},
+	{"sha512digest",F_SHA512,	NEEDVALUE},
 	{"size",	F_SIZE,		NEEDVALUE},
 	{"tags",	F_TAGS,		NEEDVALUE},
 	{"time",	F_TIME,		NEEDVALUE},
@@ -103,13 +109,16 @@ static KEY keylist[] = {
 };
 
 static KEY typelist[] = {
-	{"block",	F_BLOCK,	},
-	{"char",	F_CHAR,		},
-	{"dir",		F_DIR,		},
-	{"fifo",	F_FIFO,		},
-	{"file",	F_FILE,		},
-	{"link",	F_LINK,		},
-	{"socket",	F_SOCK,		},
+	{"block",	F_BLOCK,	0},
+	{"char",	F_CHAR,		0},
+	{"dir",		F_DIR,		0},
+#ifdef S_IFDOOR
+	{"door",	F_DOOR,		0},
+#endif
+	{"fifo",	F_FIFO,		0},
+	{"file",	F_FILE,		0},
+	{"link",	F_LINK,		0},
+	{"socket",	F_SOCK,		0},
 };
 
 slist_t	excludetags, includetags;
@@ -305,6 +314,10 @@ inotype(u_int type)
 #ifdef S_IFSOCK
 	case S_IFSOCK:
 		return ("socket");
+#endif
+#ifdef S_IFDOOR
+	case S_IFDOOR:
+		return ("door");
 #endif
 	default:
 		return ("unknown");

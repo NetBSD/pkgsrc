@@ -1,4 +1,4 @@
-/*	$NetBSD: create.c,v 1.5 2007/11/19 08:41:25 rillig Exp $	*/
+/*	$NetBSD: create.c,v 1.6 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -36,9 +36,7 @@
 #include "nbtool_config.h"
 #endif
 
-#if HAVE_NBCOMPAT_H
 #include <nbcompat.h>
-#endif
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
@@ -46,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)create.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: create.c,v 1.5 2007/11/19 08:41:25 rillig Exp $");
+__RCSID("$NetBSD: create.c,v 1.6 2008/11/06 02:14:52 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -107,6 +105,11 @@ __RCSID("$NetBSD: create.c,v 1.5 2007/11/19 08:41:25 rillig Exp $");
 #ifndef NO_SHA1
 #if HAVE_SHA1_H
 #include <sha1.h>
+#endif
+#endif
+#ifndef NO_SHA2
+#if HAVE_SHA2_H
+#include <sha2.h>
 #endif
 #endif
 
@@ -185,14 +188,13 @@ statf(FTSENT *p)
 {
 	u_int32_t len, val;
 	int fd, indent;
-	const char *name, *path;
-#if !defined(NO_MD5) || !defined(NO_RMD160) || !defined(NO_SHA1)
-	char digestbuf[41];	/* large enough for {MD5,RMD160,SHA1}File() */
+	const char *name;
+#if !defined(NO_MD5) || !defined(NO_RMD160) || !defined(NO_SHA1) || !defined(NO_SHA2)
+	char digestbuf[MAXHASHLEN + 1];
 #endif
 
-	path = vispath(p->fts_name);
 	indent = printf("%s%s",
-	    S_ISDIR(p->fts_statp->st_mode) ? "" : "    ", path);
+	    S_ISDIR(p->fts_statp->st_mode) ? "" : "    ", vispath(p->fts_name));
 
 	if (indent > INDENTNAMELEN)
 		indent = MAXLINELEN;
@@ -224,8 +226,8 @@ statf(FTSENT *p)
 		output(&indent, "nlink=%u", p->fts_statp->st_nlink);
 	if (keys & F_SIZE && S_ISREG(p->fts_statp->st_mode))
 		output(&indent, "size=%lld", (long long)p->fts_statp->st_size);
-	if (keys & F_TIME)
 #if defined(BSD4_4) && !defined(HAVE_NBTOOL_CONFIG_H)
+	if (keys & F_TIME)
 		output(&indent, "time=%ld.%ld",
 		    (long)p->fts_statp->st_mtimespec.tv_sec,
 		    p->fts_statp->st_mtimespec.tv_nsec);
@@ -261,10 +263,27 @@ statf(FTSENT *p)
 		output(&indent, "sha1=%s", digestbuf);
 	}
 #endif	/* ! NO_SHA1 */
+#ifndef NO_SHA2
+	if (keys & F_SHA256 && S_ISREG(p->fts_statp->st_mode)) {
+		if (SHA256_File(p->fts_accpath, digestbuf) == NULL)
+			mtree_err("%s: %s", p->fts_accpath, "SHA256_File");
+		output(&indent, "sha256=%s", digestbuf);
+	}
+	if (keys & F_SHA384 && S_ISREG(p->fts_statp->st_mode)) {
+		if (SHA384_File(p->fts_accpath, digestbuf) == NULL)
+			mtree_err("%s: %s", p->fts_accpath, "SHA384_File");
+		output(&indent, "sha384=%s", digestbuf);
+	}
+	if (keys & F_SHA512 && S_ISREG(p->fts_statp->st_mode)) {
+		if (SHA512_File(p->fts_accpath, digestbuf) == NULL)
+			mtree_err("%s: %s", p->fts_accpath, "SHA512_File");
+		output(&indent, "sha512=%s", digestbuf);
+	}
+#endif	/* ! NO_SHA2 */
 	if (keys & F_SLINK &&
 	    (p->fts_info == FTS_SL || p->fts_info == FTS_SLNONE))
-		output(&indent, "link=%s", rlink(p->fts_accpath));
-#if HAVE_FILE_FLAGS
+		output(&indent, "link=%s", vispath(rlink(p->fts_accpath)));
+#if HAVE_STRUCT_STAT_ST_FLAGS
 	if (keys & F_FLAGS && p->fts_statp->st_flags != flags)
 		output(&indent, "flags=%s",
 		    flags_to_string(p->fts_statp->st_flags, "none"));
@@ -281,7 +300,7 @@ statf(FTSENT *p)
 #define	MTREE_MAXGID	5000
 #define	MTREE_MAXUID	5000
 #define	MTREE_MAXMODE	(MBITS + 1)
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 #define	MTREE_MAXFLAGS  (FLAGS2INDEX(CH_MASK) + 1)   /* 1808 */
 #else
 #define MTREE_MAXFLAGS	1
@@ -340,7 +359,7 @@ statd(FTS *t, FTSENT *parent, uid_t *puid, gid_t *pgid, mode_t *pmode,
 			maxuid = u[suid];
 		}
 
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 		sflags = FLAGS2INDEX(p->fts_statp->st_flags);
 		if (sflags < MTREE_MAXFLAGS && ++f[sflags] > maxflags) {
 			saveflags = p->fts_statp->st_flags;
