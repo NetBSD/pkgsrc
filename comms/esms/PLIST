@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/06/17 20:00:36 tron Exp $
-bin/esms
-man/man1/esms.1
