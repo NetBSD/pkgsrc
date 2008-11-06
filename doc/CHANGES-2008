@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2864 2008/11/06 13:40:16 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2865 2008/11/06 15:27:22 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4860,3 +4860,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight to 2.6.2 [taca 2008-11-06]
 	Updated graphics/p5-Image-ExifTool to 7.51nb1 [gdt 2008-11-06]
 	Added multimedia/p5-GStreamer version 0.11 [obache 2008-11-06]
+	Updated mail/imap-uw to 2007d [tron 2008-11-06]
