@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/10/25 18:11:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/06 23:18:34 adrianp Exp $
 #
 
 DISTNAME=	opengrok-0.7
@@ -40,7 +40,7 @@ pre-build:
 	${CP} ${PREFIX}/lib/java/JFlex.jar ${WRKSRC}/lib
 
 do-build:
-	cd ${WRKSRC} && ${PREFIX}/bin/ant 
+	cd ${WRKSRC} && ${PREFIX}/bin/ant
 
 post-build:
 	${RM} -f ${WRKSRC}/lib/*.jar
