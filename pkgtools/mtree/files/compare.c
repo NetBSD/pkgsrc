@@ -1,4 +1,4 @@
-/*	$NetBSD: compare.c,v 1.4 2004/08/21 04:10:45 jlam Exp $	*/
+/*	$NetBSD: compare.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -44,7 +44,7 @@
 #if 0
 static char sccsid[] = "@(#)compare.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: compare.c,v 1.4 2004/08/21 04:10:45 jlam Exp $");
+__RCSID("$NetBSD: compare.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $");
 #endif
 #endif /* not lint */
 
@@ -86,6 +86,11 @@ __RCSID("$NetBSD: compare.c,v 1.4 2004/08/21 04:10:45 jlam Exp $");
 #include <sha1.h>
 #endif
 #endif
+#ifndef NO_SHA2
+#if HAVE_SHA2_H
+#include <sha2.h>
+#endif
+#endif
 
 #include "extern.h"
 
@@ -103,7 +108,7 @@ do {									\
 } while (0)
 #define	LABEL if (!label++) MARK
 
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 
 
 #define CHANGEFLAGS							\
@@ -141,7 +146,7 @@ do {									\
 	flags = (~(s->st_flags & (mask)) & CH_MASK) & (pflags);		\
 	CHANGEFLAGS;							\
 } while (0)
-#endif	/* HAVE_FILE_FLAGS */
+#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
 
 int
 compare(NODE *s, FTSENT *p)
@@ -149,8 +154,8 @@ compare(NODE *s, FTSENT *p)
 	u_int32_t len, val, flags;
 	int fd, label;
 	const char *cp, *tab;
-#if !defined(NO_MD5) || !defined(NO_RMD160) || !defined(NO_SHA1)
-	char digestbuf[41];	/* large enough for {MD5,RMD160,SHA1}File() */
+#if !defined(NO_MD5) || !defined(NO_RMD160) || !defined(NO_SHA1) || !defined(NO_SHA2)
+	char digestbuf[MAXHASHLEN + 1];
 #endif
 
 	tab = NULL;
@@ -193,7 +198,7 @@ typeerr:		LABEL;
 	}
 	if (mtree_Wflag)
 		goto afterpermwhack;
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 	if (iflag && !uflag) {
 		if (s->flags & F_FLAGS)
 		    SETFLAGS(p->fts_statp->st_flags, SP_FLGS);
@@ -349,7 +354,7 @@ typeerr:		LABEL;
 			tab = "\t";
 		}
 	}
-#if HAVE_FILE_FLAGS
+#if HAVE_STRUCT_STAT_ST_FLAGS
 	/*
 	 * XXX
 	 * since lchflags(2) will reset file times, the utimes() above
@@ -376,7 +381,7 @@ typeerr:		LABEL;
 			printf(")\n");
 		tab = "\t";
 	}
-#endif	/* HAVE_FILE_FLAGS */
+#endif	/* HAVE_STRUCT_STAT_ST_FLAGS */
 
 	/*
 	 * from this point, no more permission checking or whacking
@@ -456,6 +461,53 @@ typeerr:		LABEL;
 		}
 	}
 #endif	/* ! NO_SHA1 */
+#ifndef NO_SHA2
+	if (s->flags & F_SHA256) {
+		if (SHA256_File(p->fts_accpath, digestbuf) == NULL) {
+			LABEL;
+			printf("%ssha256: %s: %s\n",
+			    tab, p->fts_accpath, strerror(errno));
+			tab = "\t";
+		} else {
+			if (strcmp(s->sha256digest, digestbuf)) {
+				LABEL;
+				printf("%ssha256 (0x%s, 0x%s)\n",
+				    tab, s->sha256digest, digestbuf);
+			}
+			tab = "\t";
+		}
+	}
+	if (s->flags & F_SHA384) {
+		if (SHA384_File(p->fts_accpath, digestbuf) == NULL) {
+			LABEL;
+			printf("%ssha384: %s: %s\n",
+			    tab, p->fts_accpath, strerror(errno));
+			tab = "\t";
+		} else {
+			if (strcmp(s->sha384digest, digestbuf)) {
+				LABEL;
+				printf("%ssha384 (0x%s, 0x%s)\n",
+				    tab, s->sha384digest, digestbuf);
+			}
+			tab = "\t";
+		}
+	}
+	if (s->flags & F_SHA512) {
+		if (SHA512_File(p->fts_accpath, digestbuf) == NULL) {
+			LABEL;
+			printf("%ssha512: %s: %s\n",
+			    tab, p->fts_accpath, strerror(errno));
+			tab = "\t";
+		} else {
+			if (strcmp(s->sha512digest, digestbuf)) {
+				LABEL;
+				printf("%ssha512 (0x%s, 0x%s)\n",
+				    tab, s->sha512digest, digestbuf);
+			}
+			tab = "\t";
+		}
+	}
+#endif	/* ! NO_SHA2 */
 	if (s->flags & F_SLINK &&
 	    strcmp(cp = rlink(p->fts_accpath), s->slink)) {
 		LABEL;

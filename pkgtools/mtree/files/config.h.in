@@ -81,6 +81,9 @@
 /* Define to 1 if <wchar.h> declares mbstate_t. */
 #undef HAVE_MBSTATE_T
 
+/* Define to 1 if you have the <md5global.h> header file. */
+#undef HAVE_MD5GLOBAL_H
+
 /* Define to 1 if you have the <md5.h> header file. */
 #undef HAVE_MD5_H
 
