@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7666 2008/11/06 20:00:19 snj Exp $
+$NetBSD: TODO,v 1.7667 2008/11/06 21:06:11 snj Exp $
 
 Suggested new packages
 ======================
@@ -20,11 +20,6 @@ Suggested new packages
 	Fast JSP server. (I will import this when we have a native
 	Java 2 -- it can't be built with our native jdk. [jwise])
 	http://www.caucho.com/products/resin/index.xtp
-
-	smsclient
-	Send SMS messages to mobile phones and pagers on wide range
-	of providers. [pkg/16430 is relevant]
-	http://www.smsclient.org/
 
 	SquirrelMail plugins
 	SquirrelMail has a plugin feature and several plugins exist.
