@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7668 2008/11/06 21:16:46 snj Exp $
+$NetBSD: TODO,v 1.7669 2008/11/06 21:57:42 snj Exp $
 
 Suggested new packages
 ======================
@@ -856,7 +856,6 @@ Suggested package updates
 	o mysql-5.2.3
 	o mysqlcc-0.9.8
 	o nagios-3.0.5
-	o nano-2.0.8
 	o nap-1.5.3
 	o nautilus-cd-burner-2.22.1 [needs hal]
 	o navi2ch-1.8.1

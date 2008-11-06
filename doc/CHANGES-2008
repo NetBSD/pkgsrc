@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2871 2008/11/06 21:16:46 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2872 2008/11/06 21:57:42 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4868,3 +4868,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/climm to 0.6.3 [snj 2008-11-06]
 	Removed comms/esms [snj 2008-11-06]
 	Removed comms/linuxsms [snj 2008-11-06]
+	Updated editors/nano to 2.0.8 [snj 2008-11-06]
