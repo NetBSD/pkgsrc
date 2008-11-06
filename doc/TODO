@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7657 2008/11/06 16:09:57 snj Exp $
+$NetBSD: TODO,v 1.7658 2008/11/06 17:01:05 snj Exp $
 
 Suggested new packages
 ======================
@@ -477,7 +477,6 @@ Suggested package updates
 	o cheese-2.24.1
 	o chemtool-1.6.11
 	o cherokee-0.10.1
-	o chrony-1.23
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
