@@ -1,7 +1,7 @@
 MTREE(8)                NetBSD System Manager's Manual                MTREE(8)
 
 NNAAMMEE
-     mmttrreeee - map a directory hierarchy
+     mmttrreeee -- map a directory hierarchy
 
 SSYYNNOOPPSSIISS
      mmttrreeee [--ccCCddDDeellLLMMPPrruuUUWWxx] [--ii | --mm] [--ff _s_p_e_c] [--pp _p_a_t_h] [--kk _k_e_y_w_o_r_d_s]
@@ -9,8 +9,8 @@ SSYYNNOOPPSSIISS
            [--ss _s_e_e_d] [--XX _e_x_c_l_u_d_e_-_f_i_l_e]
 
 DDEESSCCRRIIPPTTIIOONN
-     The mmttrreeee utility compares the file hierarchy rooted in the current di-
-     rectory against a specification read from the standard input.  Messages
+     The mmttrreeee utility compares the file hierarchy rooted in the current
+     directory against a specification read from the standard input.  Messages
      are written to the standard output for any files whose characteristics do
      not match the specification, or which are missing from either the file
      hierarchy or the specification.
@@ -40,14 +40,14 @@ DDEESSCCRRIIPPTTIIOONN
            in the specification.
 
      --ff _s_p_e_c
-           Read the specification from _f_i_l_e, instead of from the standard in-
-           put.
+           Read the specification from _f_i_l_e, instead of from the standard
+           input.
 
      --II _t_a_g_s
            Add the comma separated tags to the ``inclusion'' list.  Non-direc-
            tories with tags which are in the inclusion list are printed with
-           --DD. If no inclusion list is provided, the default is to display all
-           files.
+           --DD.  If no inclusion list is provided, the default is to display
+           all files.
 
      --ii    If specified, set the schg and/or sappnd flags.
 
@@ -59,7 +59,8 @@ DDEESSCCRRIIPPTTIIOONN
      --kk _k_e_y_w_o_r_d_s
            Use the ttyyppee keyword plus the specified (whitespace or comma sepa-
            rated) keywords instead of the current set of keywords.  If `all'
-           is specified, use all of the other keywords.
+           is specified, use all of the other keywords.  If the ttyyppee keyword
+           is not desired, suppress it with --RR _t_y_p_e.
 
      --ll    Do ``loose'' permissions checks, in which more stringent permis-
            sions will match less stringent ones. For example, a file marked
@@ -72,7 +73,7 @@ DDEESSCCRRIIPPTTIIOONN
      --LL    Follow all symbolic links in the file hierarchy.
 
      --mm    If the schg and/or sappnd flags are specified, reset these flags.
-           Note that this is only possible with securelevel less than 1 (i. e.
+           Note that this is only possible with securelevel less than 1 (i.e.
            in single user mode or while the system is running in insecure
            mode). See init(8) for information on security levels.
 
@@ -85,8 +86,8 @@ DDEESSCCRRIIPPTTIIOONN
            system's getpwnam(3) and getgrnam(3) (and related) library calls.
 
      --pp _p_a_t_h
-           Use the file hierarchy rooted in _p_a_t_h, instead of the current di-
-           rectory.
+           Use the file hierarchy rooted in _p_a_t_h, instead of the current
+           directory.
 
      --PP    Don't follow symbolic links in the file hierarchy, instead consider
            the symbolic link itself in any comparisons.  This is the default.
@@ -118,9 +119,9 @@ DDEESSCCRRIIPPTTIIOONN
            if it was corrected.
 
      --WW    Don't attempt to set various file attributes such as the ownership,
-           mode, flags, or time when creating new directories or changing ex-
-           isting entries.  This option will be most useful when used in con-
-           junction with --uu or --UU.
+           mode, flags, or time when creating new directories or changing
+           existing entries.  This option will be most useful when used in
+           conjunction with --uu or --UU.
 
      --xx    Don't descend below mount points in the file hierarchy.
 
@@ -150,8 +151,8 @@ DDEESSCCRRIIPPTTIIOONN
 
              _f_o_r_m_a_t,_m_a_j_o_r,_u_n_i_t,_s_u_b_u_n_i_t
                    A device with _m_a_j_o_r, _u_n_i_t, and _s_u_b_u_n_i_t fields, for an oper-
-                   ating system specified with _f_o_r_m_a_t.  (Currently this is on-
-                   ly supported by the bbssddooss format.)
+                   ating system specified with _f_o_r_m_a_t.  (Currently this is
+                   only supported by the bbssddooss format.)
 
              _n_u_m_b_e_r
                    Opaque number (as stored on the file system).
@@ -165,8 +166,8 @@ DDEESSCCRRIIPPTTIIOONN
      ffllaaggss   The file flags as a symbolic name.  See chflags(1) for informa-
              tion on these names.  If no flags are to be set the string `none'
              may be used to override the current default.  Note that the schg
-             and sappnd flags are treated specially (see the --ii and --mm op-
-             tions).
+             and sappnd flags are treated specially (see the --ii and --mm
+             options).
 
      iiggnnoorree  Ignore any file hierarchy below this file.
 
@@ -200,9 +201,24 @@ DDEESSCCRRIIPPTTIIOONN
      sshhaa11ddiiggeesstt
              Synonym for sshhaa11.
 
+     sshhaa225566  The 256-bits SHA-2 cryptographic message digest of the file.
+
+     sshhaa225566ddiiggeesstt
+             Synonym for sshhaa225566.
+
+     sshhaa338844  The 384-bits SHA-2 cryptographic message digest of the file.
+
+     sshhaa338844ddiiggeesstt
+             Synonym for sshhaa338844.
+
+     sshhaa551122  The 512-bits SHA-2 cryptographic message digest of the file.
+
+     sshhaa551122ddiiggeesstt
+             Synonym for sshhaa551122.
+
      ssiizzee    The size, in bytes, of the file.
 
-     ttaaggss    Comma delimited tags to be matched with --EE and --II. These may be
+     ttaaggss    Comma delimited tags to be matched with --EE and --II.  These may be
              specified without leading or trailing commas, but will be stored
              internally with them.
 
@@ -231,16 +247,16 @@ DDEESSCCRRIIPPTTIIOONN
           followed by whitespace, followed by sets of keyword/value pairs,
           separated by whitespace.  Keyword/value pairs consist of a keyword,
           followed by an equals sign (`='), followed by a value, without
-          whitespace characters.  Once a keyword has been set, its value re-
-          mains unchanged until either reset or unset.
+          whitespace characters.  Once a keyword has been set, its value
+          remains unchanged until either reset or unset.
 
      2.   Unset global values for a keyword.  This consists of the string
           `/unset', followed by whitespace, followed by one or more keywords,
           separated by whitespace.  If `all' is specified, unset all of the
           keywords.
 
-     3.   A file specification, consisting of a path name, followed by whites-
-          pace, followed by zero or more whitespace separated keyword/value
+     3.   A file specification, consisting of a path name, followed by white-
+          space, followed by zero or more whitespace separated keyword/value
           pairs.
 
           The path name may be preceded by whitespace characters.  The path
@@ -254,9 +270,9 @@ DDEESSCCRRIIPPTTIIOONN
           from comments.
 
           Each of the keyword/value pairs consist of a keyword, followed by an
-          equals sign (`='), followed by the keyword's value, without whites-
-          pace characters.  These values override, without changing, the glob-
-          al value of the corresponding keyword.
+          equals sign (`='), followed by the keyword's value, without white-
+          space characters.  These values override, without changing, the
+          global value of the corresponding keyword.
 
           The first path name entry listed must be a directory named `.', as
           this ensures that intermixing full and relative path names will work
@@ -266,25 +282,25 @@ DDEESSCCRRIIPPTTIIOONN
 
           A path name that contains a slash (`/') that is not the first char-
           acter will be treated as a full path (relative to the root of the
-          tree).  All parent directories referenced in the path name must ex-
-          ist.  The current directory path used by relative path names will be
-          updated appropriately.  Multiple entries for the same full path are
-          permitted if the types are the same (unless --MM is given, and then
-          the types may differ); in this case the settings for the last entry
-          take precedence.
+          tree).  All parent directories referenced in the path name must
+          exist.  The current directory path used by relative path names will
+          be updated appropriately.  Multiple entries for the same full path
+          are permitted if the types are the same (unless --MM is given, and
+          then the types may differ); in this case the settings for the last
+          entry take precedence.
 
           A path name that does not contain a slash will be treated as a rela-
           tive path.  Specifying a directory will cause subsequent files to be
           searched for in that directory hierarchy.
 
-     4.   A line containing only the string `..' which causes the current di-
-          rectory path (used by relative paths) to ascend one level.
+     4.   A line containing only the string `..' which causes the current
+          directory path (used by relative paths) to ascend one level.
 
      Empty lines and lines whose first non-whitespace character is a hash mark
      (`#') are ignored.
 
-     The mmttrreeee utility exits with a status of 0 on success, 1 if any error oc-
-     curred, and 2 if the file hierarchy did not match the specification.
+     The mmttrreeee utility exits with a status of 0 on success, 1 if any error
+     occurred, and 2 if the file hierarchy did not match the specification.
 
 FFIILLEESS
      /etc/mtree  system specification directory
@@ -294,27 +310,28 @@ EEXXAAMMPPLLEESS
      mended that mmttrreeee be run on the file systems, and a copy of the results
      stored on a different machine, or, at least, in encrypted form.  The seed
      for the --ss option should not be an obvious value and the final checksum
-     should not be stored on-line under any circumstances!  Then, periodical-
-     ly, mmttrreeee should be run against the on-line specifications and the final
-     checksum compared with the previous value.  While it is possible for the
-     bad guys to change the on-line specifications to conform to their modi-
-     fied binaries, it shouldn't be possible for them to make it produce the
-     same final checksum value.  If the final checksum value changes, the off-
-     line copies of the specification can be used to detect which of the bina-
-     ries have actually been modified.
+     should not be stored on-line under any circumstances!  Then, periodi-
+     cally, mmttrreeee should be run against the on-line specifications and the
+     final checksum compared with the previous value.  While it is possible
+     for the bad guys to change the on-line specifications to conform to their
+     modified binaries, it shouldn't be possible for them to make it produce
+     the same final checksum value.  If the final checksum value changes, the
+     off-line copies of the specification can be used to detect which of the
+     binaries have actually been modified.
 
-     The --dd and --uu options can be used in combination to create directory hi-
-     erarchies for distributions and other such things.
+     The --dd and --uu options can be used in combination to create directory
+     hierarchies for distributions and other such things.
 
 SSEEEE AALLSSOO
-     chflags(1), chgrp(1), chmod(1), cksum(1), md5(1), stat(2), fnmatch(3),
-     fts(3), strsvis(3), chown(8), mknod(8)
+     chflags(1), chgrp(1), chmod(1), cksum(1), stat(2), fnmatch(3), fts(3),
+     strsvis(3), chown(8), mknod(8)
 
 HHIISSTTOORRYY
      The mmttrreeee utility appeared in 4.3BSD-Reno.  The ooppttiioonnaall keyword appeared
      in NetBSD 1.2.  The --UU flag appeared in NetBSD 1.3.  The ffllaaggss and mmdd55
      keywords, and --ii and --mm flags appeared in NetBSD 1.4.  The ddeevviiccee,
      rrmmdd116600, sshhaa11, ttaaggss, and aallll keywords, --DD, --EE, --II, --ll, --LL, --NN, --PP, --RR, --WW,
-     and --XX flags, and support for full paths appeared in NetBSD 1.6.
+     and --XX flags, and support for full paths appeared in NetBSD 1.6.  The
+     sshhaa225566, sshhaa338844, and sshhaa551122 keywords appeared in NetBSD 3.0.
 
-NetBSD 1.6.2                     July 22, 2004                               5
+NetBSD 3.0                    September 12, 2006                    NetBSD 3.0

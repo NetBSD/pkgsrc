@@ -1,4 +1,4 @@
-/*	$NetBSD: pack_dev.c,v 1.4 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: pack_dev.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $	*/
 
 /*-
  * Copyright (c) 1998, 2001 The NetBSD Foundation, Inc.
@@ -15,6 +15,13 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
+ * 3. All advertising materials mentioning features or use of this software
+ *    must display the following acknowledgement:
+ *        This product includes software developed by the NetBSD
+ *        Foundation, Inc. and its contributors.
+ * 4. Neither the name of The NetBSD Foundation nor the names of its
+ *    contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -41,7 +48,7 @@
 #include <sys/cdefs.h>
 #endif
 #if !defined(lint)
-__RCSID("$NetBSD: pack_dev.c,v 1.4 2008/04/29 05:46:08 martin Exp $");
+__RCSID("$NetBSD: pack_dev.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $");
 #endif /* not lint */
 
 #if HAVE_SYS_TYPES_H
@@ -66,9 +73,6 @@ __RCSID("$NetBSD: pack_dev.c,v 1.4 2008/04/29 05:46:08 martin Exp $");
 #if HAVE_UNISTD_H
 #include <unistd.h>
 #endif
-#ifdef __QNXNTO__
-#include <sys/netmgr.h>
-#endif
 
 #include "pack_dev.h"
 
@@ -92,11 +96,7 @@ pack_native(int n, u_long numbers[], const char **error)
 	portdev_t dev = 0;
 
 	if (n == 2) {
-#ifdef __QNXNTO__
-		dev = makedev(ND_LOCAL_NODE, numbers[0], numbers[1]);
-#else
 		dev = makedev(numbers[0], numbers[1]);
-#endif
 		if (major(dev) != numbers[0])
 			*error = iMajorError;
 		else if (minor(dev) != numbers[1])
