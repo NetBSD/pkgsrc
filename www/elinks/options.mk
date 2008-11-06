@@ -1,12 +1,16 @@
-# $NetBSD: options.mk,v 1.8 2008/02/06 04:30:37 bjs Exp $
+# $NetBSD: options.mk,v 1.9 2008/11/06 08:33:31 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp javascript finger gopher
-PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-fastmem elinks-exmode expat
+PKG_SUPPORTED_OPTIONS+=	inet6 x11 elinks-exmode expat
 PKG_SUPPORTED_OPTIONS+= elinks-html-highlight elinks-root-exec
+PKG_SUPPORTED_OPTIONS+=	kerberos
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
+PKG_OPTIONS_GROUP.malloc=	boehm-gc elinks-fastmem
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_OPTIONS_OPTIONAL_GROUPS=	malloc
+PKG_SUGGESTED_OPTIONS=	ssl javascript elinks-html-highlight elinks-exmode
+PKG_SUGGESTED_OPTIONS+=	expat boehm-gc
 
 PKG_OPTIONS_LEGACY_OPTS= spidermonkey:javascript
 
@@ -43,12 +47,14 @@ CONFIGURE_ARGS+=	--disable-nntp
 
 .if !empty(PKG_OPTIONS:Mjavascript)
 
-.include "../../lang/ossp-js/buildlink3.mk"
+.include "../../lang/see/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-spidermonkey=${BUILDLINK_PREFIX.ossp-js:Q}
+CONFIGURE_ARGS+=	--with-see=${BUILDLINK_PREFIX.see:Q}
+CONFIGURE_ARGS+=	--without-spidermonkey
 CONFIGURE_ARGS+=	--enable-sm-scripting
 .else
 CONFIGURE_ARGS+=	--without-spidermonkey
+CONFIGURE_ARGS+=	--without-see
 CONFIGURE_ARGS+=	--disable-sm-scripting
 .endif
 
@@ -96,12 +102,6 @@ CONFIGURE_ARGS+=	--enable-xbel
 CONFIGURE_ARGS+=	--disable-xbel
 .endif
 
-.if !empty(PKG_OPTIONS:Melinks-fastmem)
-CONFIGURE_ARGS+=	--enable-fastmem
-.else
-CONFIGURE_ARGS+=	--disable-fastmem
-.endif
-
 .if !empty(PKG_OPTIONS:Melinks-html-highlight)
 CONFIGURE_ARGS+=	--enable-html-highlight
 .else
@@ -118,4 +118,18 @@ CONFIGURE_ARGS+=	--disable-exmode
 CONFIGURE_ARGS+=	--disable-no-root
 .else
 CONFIGURE_ARGS+=	--enable-no-root
+.endif
+
+.if !empty(PKG_OPTIONS:Mboehm-gc)
+CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc:Q}
+.  include "../../devel/boehm-gc/buildlink3.mk"
+.elif !empty(PKG_OPTIONS:Melinks-fastmem)
+CONFIGURE_ARGS+=	--enable-fastmem
+.endif
+
+.if !empty(PKG_OPTIONS:Mkerberos)
+CONFIGURE_ARGS+=	--with-gssapi
+.  include "../../mk/krb5.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gssapi
 .endif

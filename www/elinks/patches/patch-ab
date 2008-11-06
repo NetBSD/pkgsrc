@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2008/01/09 03:48:07 bjs Exp $
+$NetBSD: patch-ab,v 1.7 2008/11/06 08:33:31 bjs Exp $
 
---- src/scripting/lua/core.c.orig	2008-01-08 18:35:08.000000000 -0500
+--- src/scripting/lua/core.c.orig	2008-09-21 04:45:22.000000000 -0400
 +++ src/scripting/lua/core.c
-@@ -641,7 +641,7 @@ do_hooks_file(LS, unsigned char *prefix,
+@@ -658,7 +658,7 @@ do_hooks_file(LS, unsigned char *prefix,
  	if (file_can_read(file)) {
  		int oldtop = lua_gettop(S);
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2008/01/09 03:48:07 bjs Exp $
  			sleep(3); /* Let some time to see error messages. */
  		lua_settop(S, oldtop);
  	}
-@@ -652,13 +652,24 @@ do_hooks_file(LS, unsigned char *prefix,
+@@ -669,13 +669,24 @@ do_hooks_file(LS, unsigned char *prefix,
  void
  init_lua(struct module *module)
  {
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.6 2008/01/09 03:48:07 bjs Exp $
  
  	lua_register(L, LUA_ALERT, l_alert);
  	lua_register(L, "current_url", l_current_url);
-@@ -763,7 +774,7 @@ handle_ret_eval(struct session *ses)
+@@ -780,7 +791,7 @@ handle_ret_eval(struct session *ses)
  		int oldtop = lua_gettop(L);
  
  		if (prepare_lua(ses) == 0) {
