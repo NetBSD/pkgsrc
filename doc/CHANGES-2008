@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2867 2008/11/06 17:01:05 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2868 2008/11/06 17:47:00 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4863,3 +4863,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added multimedia/p5-GStreamer version 0.11 [obache 2008-11-06]
 	Updated mail/imap-uw to 2007d [tron 2008-11-06]
 	Updated mail/spamdyke to 4.0.8 [schmonz 2008-11-06]
+	Updated devel/cxref to 1.6b [snj 2008-11-06]
