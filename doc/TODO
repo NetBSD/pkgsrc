@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7663 2008/11/06 18:04:02 snj Exp $
+$NetBSD: TODO,v 1.7664 2008/11/06 18:07:34 snj Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,6 @@ Suggested package updates
 	o findutils-4.4.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
-	o flightgear-1.0.0 [pkg/38160]
 	o flpsed-0.4.4
 	o fltk-1.1.9
 	o fluxbox-1.1.0
