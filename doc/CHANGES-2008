@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2885 2008/11/07 18:42:39 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2886 2008/11/07 20:03:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4880,3 +4880,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed meta-pkgs/gnome-devel [wiz 2008-11-07]
 	Removed math/octave-current [jwise 2008-11-07]
 	Updated security/gsasl to 0.2.29 [adam 2008-11-07]
+	Updated math/glpk to 4.33 [adam 2008-11-07]
