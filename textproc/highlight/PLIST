@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/07 21:12:12 snj Exp $
 bin/highlight
 man/man1/highlight.1
 share/doc/highlight/AUTHORS
@@ -11,6 +11,9 @@ share/doc/highlight/README_INDENT
 share/doc/highlight/README_LANGLIST
 share/doc/highlight/README_REGEX
 share/doc/highlight/README_SWIG
+share/doc/highlight/examples/highlight_pipe.php
+share/doc/highlight/examples/highlight_pipe.pm
+share/doc/highlight/examples/highlight_pipe.py
 share/doc/highlight/examples/plugins/dokuwiki/syntax.php
 share/doc/highlight/examples/plugins/movabletype/README
 share/doc/highlight/examples/plugins/movabletype/highlight.pl
@@ -27,6 +30,7 @@ share/highlight/helpmsg/de.help
 share/highlight/helpmsg/en.help
 share/highlight/helpmsg/es.help
 share/highlight/helpmsg/fr.help
+share/highlight/helpmsg/ja.help
 share/highlight/indentSchemes/acid.indent
 share/highlight/indentSchemes/ansi.indent
 share/highlight/indentSchemes/gnu.indent
@@ -41,6 +45,7 @@ share/highlight/langDefs/agda.lang
 share/highlight/langDefs/ampl.lang
 share/highlight/langDefs/amtrix.lang
 share/highlight/langDefs/applescript.lang
+share/highlight/langDefs/arc.lang
 share/highlight/langDefs/arm.lang
 share/highlight/langDefs/as.lang
 share/highlight/langDefs/asm.lang
@@ -88,11 +93,14 @@ share/highlight/langDefs/js.lang
 share/highlight/langDefs/jsp.lang
 share/highlight/langDefs/lbn.lang
 share/highlight/langDefs/ldif.lang
+share/highlight/langDefs/lgt.lang
+share/highlight/langDefs/lhs.lang
 share/highlight/langDefs/lisp.lang
 share/highlight/langDefs/lotos.lang
 share/highlight/langDefs/ls.lang
 share/highlight/langDefs/lsl.lang
 share/highlight/langDefs/lua.lang
+share/highlight/langDefs/ly.lang
 share/highlight/langDefs/m.lang
 share/highlight/langDefs/make.lang
 share/highlight/langDefs/mel.lang
@@ -142,7 +150,7 @@ share/highlight/langDefs/sh.lang
 share/highlight/langDefs/sma.lang
 share/highlight/langDefs/smalltalk.lang
 share/highlight/langDefs/sml.lang
-share/highlight/langDefs/snobol.lang
+share/highlight/langDefs/sno.lang
 share/highlight/langDefs/spec.lang
 share/highlight/langDefs/spn.lang
 share/highlight/langDefs/sql.lang
@@ -153,6 +161,7 @@ share/highlight/langDefs/test_re.lang
 share/highlight/langDefs/tex.lang
 share/highlight/langDefs/ttcn3.lang
 share/highlight/langDefs/txt.lang
+share/highlight/langDefs/vala.lang
 share/highlight/langDefs/vb.lang
 share/highlight/langDefs/verilog.lang
 share/highlight/langDefs/vhd.lang
