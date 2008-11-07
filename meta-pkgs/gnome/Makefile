@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2008/11/07 15:09:42 wiz Exp $
+# $NetBSD: Makefile,v 1.79 2008/11/07 21:54:58 jnemeth Exp $
 
 DISTNAME=	gnome-2.24.0.90
 CATEGORIES=	meta-pkgs x11 gnome
@@ -8,9 +8,9 @@ MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNOME desktop
 
-.include "../../lang/python/pyversion.mk"
-
 META_PACKAGE=	yes
+
+.include "../../lang/python/pyversion.mk"
 
 # see http://ftp.gnome.org/pub/GNOME/desktop/2.24/2.24.1/sources/
 
