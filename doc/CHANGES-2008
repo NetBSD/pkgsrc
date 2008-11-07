@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2872 2008/11/06 21:57:42 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2873 2008/11/07 08:52:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4869,3 +4869,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed comms/esms [snj 2008-11-06]
 	Removed comms/linuxsms [snj 2008-11-06]
 	Updated editors/nano to 2.0.8 [snj 2008-11-06]
+	Updated graphics/gthumb to 2.10.10 [wiz 2008-11-07]
