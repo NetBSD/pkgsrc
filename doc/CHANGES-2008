@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2893 2008/11/07 22:42:57 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2894 2008/11/07 23:37:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4888,3 +4888,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-Text-DHCPLeases version 0.7 [seb 2008-11-07]
 	Updated mail/evolution-data-server to 2.24.1.1 [wiz 2008-11-07]
 	Updated www/gtkhtml314 to 3.24.1.1 [wiz 2008-11-07]
+	Updated mail/evolution to 2.24.1.1 [wiz 2008-11-07]
