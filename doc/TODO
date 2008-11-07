@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7675 2008/11/07 20:03:05 adam Exp $
+$NetBSD: TODO,v 1.7676 2008/11/07 21:13:25 snj Exp $
 
 Suggested new packages
 ======================
@@ -669,7 +669,6 @@ Suggested package updates
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.4.0
-	o highlight-2.6.14
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
