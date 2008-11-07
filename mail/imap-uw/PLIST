@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/08/05 04:51:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.14.14.1 2008/11/07 09:58:38 rtr Exp $
 bin/dmail
 bin/mailutil
 bin/mlock
@@ -70,7 +70,6 @@ share/doc/imap-uw/rfc/rfc2087.txt
 share/doc/imap-uw/rfc/rfc2088.txt
 share/doc/imap-uw/rfc/rfc2177.txt
 share/doc/imap-uw/rfc/rfc2180.txt
-share/doc/imap-uw/rfc/rfc2192.txt
 share/doc/imap-uw/rfc/rfc2193.txt
 share/doc/imap-uw/rfc/rfc2195.txt
 share/doc/imap-uw/rfc/rfc2221.txt
@@ -84,7 +83,6 @@ share/doc/imap-uw/rfc/rfc3503.txt
 share/doc/imap-uw/rfc/rfc3516.txt
 share/doc/imap-uw/rfc/rfc3656.txt
 share/doc/imap-uw/rfc/rfc3691.txt
-share/doc/imap-uw/rfc/rfc4234.txt
 share/doc/imap-uw/rfc/rfc4314.txt
 share/doc/imap-uw/rfc/rfc4315.txt
 share/doc/imap-uw/rfc/rfc4422.txt
@@ -99,6 +97,14 @@ share/doc/imap-uw/rfc/rfc4616.txt
 share/doc/imap-uw/rfc/rfc4731.txt
 share/doc/imap-uw/rfc/rfc4752.txt
 share/doc/imap-uw/rfc/rfc4790.txt
+share/doc/imap-uw/rfc/rfc4959.txt
+share/doc/imap-uw/rfc/rfc4978.txt
+share/doc/imap-uw/rfc/rfc5032.txt
+share/doc/imap-uw/rfc/rfc5051.txt
+share/doc/imap-uw/rfc/rfc5092.txt
+share/doc/imap-uw/rfc/rfc5161.txt
+share/doc/imap-uw/rfc/rfc5162.txt
+share/doc/imap-uw/rfc/rfc5234.txt
 @dirrm share/doc/imap-uw/rfc
 @dirrm share/doc/imap-uw/draft
 @dirrm share/doc/imap-uw
