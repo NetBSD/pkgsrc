@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.27 2008/11/05 22:50:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.28 2008/11/07 09:59:21 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -81,3 +81,5 @@ Pullup ticket #2576 - requested by obache
 ktorrent: security update
 Pullup ticket #2577 - requested by obache
 acroread8: security update
+pullup ticket #2578 - requested by tron
+imap-uw: update package for security and bug fixes
