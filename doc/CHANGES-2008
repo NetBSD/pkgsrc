@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2891 2008/11/07 22:24:39 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2892 2008/11/07 22:26:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4886,3 +4886,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-ScanDeps to 0.89 [seb 2008-11-07]
 	Updated textproc/highlight to 2.6.14 [snj 2008-11-07]
 	Added textproc/p5-Text-DHCPLeases version 0.7 [seb 2008-11-07]
+	Updated mail/evolution-data-server to 2.24.1.1 [wiz 2008-11-07]
