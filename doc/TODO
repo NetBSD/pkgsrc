@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7673 2008/11/07 15:43:28 wiz Exp $
+$NetBSD: TODO,v 1.7674 2008/11/07 18:42:39 adam Exp $
 
 Suggested new packages
 ======================
@@ -650,7 +650,6 @@ Suggested package updates
 	o gramofile-1.6P
 	o granulate-0.2
 	o graphviz-2.20.3
-	o gsasl-0.2.29
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
