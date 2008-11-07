@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2882 2008/11/07 15:18:51 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2883 2008/11/07 15:26:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4877,3 +4877,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome-platform to 2.24.1nb2 [wiz 2008-11-07]
 	Updated www/typolight-translations to 20081107 [taca 2008-11-07]
 	Removed meta-pkgs/gnome-base [wiz 2008-11-07]
+	Removed meta-pkgs/gnome-devel [wiz 2008-11-07]
