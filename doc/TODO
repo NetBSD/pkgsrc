@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7672 2008/11/07 09:20:50 wiz Exp $
+$NetBSD: TODO,v 1.7673 2008/11/07 15:43:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -435,7 +435,6 @@ Suggested package updates
 	o biew-5.6.4
 	o binutils-2.19
 	o bioperl-1.5.0
-	o bison-2.4
 	o bittorrent-5.0.5
 	o blender-2.48
 	o blur6ex-0.3.462
@@ -770,6 +769,7 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmcs-0.7
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -1170,7 +1170,7 @@ Suggested package updates
 	o streamripper-1.63.0
 	o subtitleeditor-0.26.0
 	o subversion-1.5.4
-	o sunbird-0.5 [ghen]
+	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
 	o swfdec-0.8.2
 	o swi-prolog-5.6.31
