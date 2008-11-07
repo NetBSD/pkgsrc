@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/11/04 21:01:51 abs Exp $
+# $NetBSD: Makefile,v 1.45 2008/11/07 11:51:10 abs Exp $
 
 DISTNAME=	libpcap-1.0.0
 PKGREVISION=	1
@@ -14,6 +14,7 @@ NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+INSTALLATION_DIRS=	bin
 
 USE_TOOLS+=		bison gm4 lex
 USE_LIBTOOL=		yes
@@ -24,9 +25,6 @@ GNU_CONFIGURE=		yes
 .if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
-
-pre-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pcap-int.h ${DESTDIR}${PREFIX}/include
