@@ -1,12 +1,12 @@
-$NetBSD: patch-bb,v 1.2 2007/08/03 17:03:32 obache Exp $
+$NetBSD: patch-bb,v 1.2.14.1 2008/11/07 09:58:39 rtr Exp $
 
---- src/mailutil/mailutil.c.orig	2007-05-21 23:24:47.000000000 +0000
-+++ src/mailutil/mailutil.c
-@@ -29,7 +29,6 @@
+--- src/mailutil/mailutil.c.orig	2008-06-04 19:18:34.000000000 +0100
++++ src/mailutil/mailutil.c	2008-11-06 13:35:58.000000000 +0000
+@@ -27,7 +27,6 @@
  
  #include <stdio.h>
  #include <errno.h>
 -extern int errno;		/* just in case */
- #include "mail.h"
- #include "osdep.h"
- #include "misc.h"
+ #include "c-client.h"
+ #ifdef SYSCONFIG		/* defined in env_unix.h */
+ #include <pwd.h>

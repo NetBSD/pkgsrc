@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2008/05/26 22:01:07 tron Exp $
+# $NetBSD: Makefile,v 1.124.8.1 2008/11/07 09:58:38 rtr Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -9,9 +9,8 @@
 # The most common reason to install this package is as a prerequisite for pine.
 # If you upgrade this package, you *must* test mail/pine with the new version.
 
-DISTNAME=	imap-2006j2
+DISTNAME=	imap-2007d
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -56,9 +55,6 @@ BUILD_TARGET.IRIX=	sgi
 .endif
 BUILD_TARGET.OSF1=	osf
 BUILD_TARGET.OpenBSD=	bso
-.if ${OPSYS} == NetBSD && exists(/usr/include/security/pam_appl.h)
-BUILD_TARGET.NetBSD=	nep
-.endif
 BUILD_TARGET.*=		neb
 MESSAGE_SRC=		${PKGDIR}/MESSAGE
 
