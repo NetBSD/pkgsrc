@@ -1,76 +1,131 @@
-# $NetBSD: Makefile,v 1.77 2008/10/28 12:18:13 jmcneill Exp $
+# $NetBSD: Makefile,v 1.78 2008/11/07 15:09:42 wiz Exp $
 
-DISTNAME=	gnome-2.18.1
-PKGREVISION=	1
+DISTNAME=	gnome-2.24.0.90
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
-DISTFILES=	# empty
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
-COMMENT=	Meta-package for the GNU Network Object Model Environment
-
-META_PACKAGE=	yes
+COMMENT=	Meta-package for the GNOME desktop
 
 .include "../../lang/python/pyversion.mk"
 
-# The dependencies listed here are in an order such as a package in a line
-# can be installed if all the packages listed above it are installed.
-#
-# Keep this order as it helps in updating the whole GNOME Desktop to a
-# newer version.  Note that the list includes all the packages listed as
-# part of either the GNOME Desktop and the GNOME Platform; nothing else
-# should be included here.
-#
-# Packages commented out are either because they are just build time
-# dependencies or because they are not yet ready to be enabled.
-DEPENDS+=	gnome-base>=2.18.1:../../meta-pkgs/gnome-base
-DEPENDS+=	at-spi>=1.18.1:../../devel/at-spi
-DEPENDS+=	libgail-gnome>=1.1.3:../../devel/libgail-gnome
-DEPENDS+=	gtksourceview>=1.8.5:../../x11/gtksourceview
-DEPENDS+=	zenity>=2.18.1:../../x11/zenity
-DEPENDS+=	gdm>=2.18.1:../../x11/gdm
-DEPENDS+=	gnome-screensaver>=2.18.1:../../x11/gnome-screensaver
-DEPENDS+=	fast-user-switch-applet>=2.18.0:../../x11/fast-user-switch-applet
-DEPENDS+=	epiphany>=2.18.1:../../www/epiphany
-DEPENDS+=	yelp>=2.18.1:../../misc/yelp
-DEPENDS+=	bug-buddy>=2.18.1:../../net/bug-buddy
-DEPENDS+=	gnome-speech>=0.4.11:../../audio/gnome-speech
-DEPENDS+=	dasher>=4.4.1:../../editors/dasher
-DEPENDS+=	eog>=2.18.1:../../graphics/eog
-DEPENDS+=	file-roller>=2.18.2:../../archivers/file-roller
-DEPENDS+=	gcalctool>=5.9.14:../../math/gcalctool
-DEPENDS+=	gconf-editor>=2.18.0:../../editors/gconf-editor
-DEPENDS+=	gedit>=2.18.1:../../editors/gedit
-DEPENDS+=	evince>=0.8.1:../../print/evince
-DEPENDS+=	gok>=1.2.3:../../misc/gok
-DEPENDS+=	gnome-mag>=0.14.3:../../x11/gnome-mag
-DEPENDS+=	gnome-games>=2.18.1:../../games/gnome-games
-#DEPENDS+=	nautilus-cd-burner>=2.18.0:../../sysutils/nautilus-cd-burner
-DEPENDS+=	gnome-media>=2.18.0:../../multimedia/gnome-media
-DEPENDS+=	gnome-netstatus>=2.12.1:../../net/gnome-netstatus
-#DEPENDS+=	gnome2-system-monitor>=2.18.1.1:../../sysutils/gnome2-system-monitor
-DEPENDS+=	gnome-utils>=2.18.1:../../misc/gnome-utils
-DEPENDS+=	gnome-user-docs>=2.18.1:../../misc/gnome-user-docs
-DEPENDS+=	vino>=2.18.1:../../net/vino
-DEPENDS+=	{totem>=2.18.1,totem-xine>=2.18.1}:../../multimedia/totem
-DEPENDS+=	gnome-keyring-manager>=2.18.0:../../security/gnome-keyring-manager
-DEPENDS+=	deskbar-applet>=2.18.1:../../misc/deskbar-applet
-DEPENDS+=	evolution-webcal>=2.10.0:../../time/evolution-webcal
-DEPENDS+=	evolution>=2.10.1:../../mail/evolution
-DEPENDS+=	evolution-exchange>=2.10.1:../../mail/evolution-exchange
-#DEPENDS+=	gnome-nettool>=2.18.0:../../net/gnome-nettool
-#DEPENDS+=	system-tools-backends>=2.2.1:../../sysutils/system-tools-backends
-#DEPENDS+=	gnome-system-tools>=2.18.1:../../sysutils/gnome-system-tools
-#DEPENDS+=	gnome-volume-manager>=2.17.0:../../sysutils/gnome-volume-manager
-#DEPENDS+=	sound-juicer>=2.16.3:../../audio/sound-juicer
+META_PACKAGE=	yes
+
+# see http://ftp.gnome.org/pub/GNOME/desktop/2.24/2.24.1/sources/
+
+# too old
+#DEPENDS+=	alacarte>=0.11.6:../../x11/alacarte
+DEPENDS+=	alacarte-[0-9]*:../../x11/alacarte
+DEPENDS+=	bug-buddy>=2.24.1:../../net/bug-buddy
+# too old
+#DEPENDS+=	cheese>=2.24.1:../../graphics/cheese
+DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
+DEPENDS+=	dasher>=4.9.0:../../editors/dasher
+DEPENDS+=	deskbar-applet>=2.24.1:../../misc/deskbar-applet
+DEPENDS+=	eel>=2.24.1:../../devel/eel
 DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
-DEPENDS+=	cheese-2.22.3:../../graphics/cheese
-DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.18.0:../../x11/py-gnome2-desktop
-#DEPENDS+=	gnome-power-manager-2.16.0.tar.bz2
-#DEPENDS+=	gnome-sharp-2.16.0.tar.bz2
-DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-#DEPENDS+=	orca-1.0.0.tar.bz2
-#DEPENDS+=	tomboy-0.4.0.tar.bz2
+# unpackaged
+#DEPENDS+=	empathy>=2.24.1:../../*/empathy
+DEPENDS+=	eog>=2.24.1:../../graphics/eog
+DEPENDS+=	epiphany>=2.24.1:../../www/epiphany
+DEPENDS+=	evince>=2.24.1:../../print/evince
+DEPENDS+=	evolution>=2.24.1:../../mail/evolution
+DEPENDS+=	evolution-data-server>=2.24.1:../../mail/evolution-data-server
+DEPENDS+=	evolution-exchange>=2.24.1:../../mail/evolution-exchange
+DEPENDS+=	evolution-webcal>=2.24.0:../../time/evolution-webcal
+DEPENDS+=	file-roller>=2.24.1:../../archivers/file-roller
+DEPENDS+=	gcalctool>=5.24.1:../../math/gcalctool
+DEPENDS+=	gconf-editor>=2.24.1:../../editors/gconf-editor
+# too old
+#DEPENDS+=	gdm>=2.24.0:../../x11/gdm
+DEPENDS+=	gdm-[0-9]*:../../x11/gdm
+DEPENDS+=	gedit>=2.24.0:../../editors/gedit
+DEPENDS+=	gnome-applets>=2.24.1:../../x11/gnome-applets
+DEPENDS+=	gnome-backgrounds>=2.24.0:../../graphics/gnome-backgrounds
+DEPENDS+=	gnome-control-center>=2.24.0.1:../../x11/gnome-control-center
+DEPENDS+=	gnome-desktop>=2.24.1:../../x11/gnome-desktop
+DEPENDS+=	gnome-desktop-sharp>=2.24.0:../../x11/gnome-desktop-sharp
+DEPENDS+=	gnome-doc-utils>=0.14.0:../../textproc/gnome-doc-utils
+DEPENDS+=	gnome-games>=2.24.1:../../games/gnome-games
+DEPENDS+=	gnome-icon-theme>=2.24.0:../../graphics/gnome-icon-theme
+DEPENDS+=	gnome-keyring>=2.24.1:../../security/gnome-keyring
+DEPENDS+=	gnome-mag>=0.15.4:../../x11/gnome-mag
+DEPENDS+=	gnome-media>=2.24.0.1:../../multimedia/gnome-media
+DEPENDS+=	gnome-menus>=2.24.1:../../sysutils/gnome-menus
+# too old
+#DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
+DEPENDS+=	gnome-netstatus-[0-9]*:../../net/gnome-netstatus
+# unpackaged
+#DEPENDS+=	gnome-nettool>=2.22.1:../../*/gnome-nettool
+DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
+# unpackaged
+#DEPENDS+=	gnome-power-manager>=2.24.1:../../*/gnome-power-manager
+DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
+DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.1:../../x11/py-gnome2-desktop
+DEPENDS+=	gnome-screensaver>=2.24.0:../../x11/gnome-screensaver
+DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
+DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
+DEPENDS+=	gnome-sharp>=2.24.0:../../x11/gnome-sharp
+DEPENDS+=	gnome-speech>=0.4.21:../../audio/gnome-speech
+# too old
+#DEPENDS+=	gnome-system-monitor>=2.24.1:../../sysutils/gnome-system-monitor
+DEPENDS+=	gnome-system-monitor-[0-9]*:../../sysutils/gnome-system-monitor
+# unpackaged
+#DEPENDS+=	gnome-system-tools>=2.22.1:../../*/gnome-system-tools
+DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
+DEPENDS+=	gnome-themes>=2.24.1.1:../../x11/gnome-themes
+DEPENDS+=	gnome-user-docs>=2.24.0:../../misc/gnome-user-docs
+DEPENDS+=	gnome-utils>=2.24.1:../../misc/gnome-utils
+# unpackaged
+#DEPENDS+=	gnome-volume-manager>=2.24.0:../../*/gnome-volume-manager
+DEPENDS+=	gok>=2.24.0:../../misc/gok
+DEPENDS+=	gst-plugins0.10-base>=0.10.21:../../multimedia/gst-plugins0.10-base
+DEPENDS+=	gst-plugins0.10-good>=0.10.10:../../multimedia/gst-plugins0.10-good
+DEPENDS+=	gstreamer0.10>=0.10.21:../../multimedia/gstreamer0.10
+DEPENDS+=	gtk2-engines>=2.16.1:../../x11/gtk2-engines
+DEPENDS+=	gtkhtml314>=3.24.1:../../www/gtkhtml314
+DEPENDS+=	gtksourceview2>=2.4.0:../../x11/gtksourceview2
+DEPENDS+=	gucharmap>=2.24.1:../../fonts/gucharmap
+DEPENDS+=	gvfs>=1.0.2:../../sysutils/gvfs
+# unpackaged
+#DEPENDS+=	hamster-applet>=2.24.1:../../*/hamster-applet
+DEPENDS+=	libgail-gnome>=1.20.1:../../devel/libgail-gnome
+DEPENDS+=	libgnomekbd>=2.24.0:../../x11/libgnomekbd
+DEPENDS+=	libgnomeprint>=2.18.5:../../print/libgnomeprint
+DEPENDS+=	libgnomeprintui>=2.18.3:../../print/libgnomeprintui
+# too old
+#DEPENDS+=	libgtop>=2.24.0:../../sysutils/libgtop
+DEPENDS+=	libgtop-[0-9]*:../../sysutils/libgtop
+DEPENDS+=	libgweather>=2.24.1:../../devel/libgweather
+# unpackaged
+#DEPENDS+=	liboobs>=2.22.0:../../*/liboobs
+DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
+DEPENDS+=	libsoup24>=2.24.1:../../net/libsoup24
+DEPENDS+=	libwnck>=2.24.1:../../devel/libwnck
+DEPENDS+=	metacity>=2.24.0:../../wm/metacity
+# unpackaged
+#DEPENDS+=	mousetweaks>=2.24.1:../../*/mousetweaks
+DEPENDS+=	nautilus>=2.24.1:../../sysutils/nautilus
+# too old
+#DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
+DEPENDS+=	nautilus-cd-burner-[0-9]*:../../sysutils/nautilus-cd-burner
+DEPENDS+=	orca>=2.24.1:../../misc/orca
+# unpackaged
+#DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../*/py-gtksourceview
+DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
+DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
+DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
+DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
+# unpackaged
+#DEPENDS+=	tomboy>=0.12.1:../../*/tomboy
+DEPENDS+=	totem>=2.24.2:../../multimedia/totem
+DEPENDS+=	totem-pl-parser>=2.24.1:../../multimedia/totem-pl-parser
+# unpackaged
+#DEPENDS+=	vinagre>=2.24.1:../../*/vinagre
+DEPENDS+=	vino>=2.24.1:../../net/vino
+DEPENDS+=	vte>=0.17.4:../../x11/vte
+DEPENDS+=	yelp>=2.24.0:../../misc/yelp
+DEPENDS+=	zenity>=2.24.0:../../x11/zenity
 
 .include "../../mk/bsd.pkg.mk"
