@@ -1,0 +1,9 @@
+GNOME is the GNU Network Object Model Environment.
+
+The GNOME project intends to build a complete, easy-to-use desktop
+environment for the user, and a powerful application framework for
+the software developer.
+
+This is a meta package for the second major version of the GNOME
+project.  It provides the main GNOME applications, defined by the
+project as the "GNOME desktop".
