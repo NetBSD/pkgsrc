@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7671 2008/11/07 09:15:23 wiz Exp $
+$NetBSD: TODO,v 1.7672 2008/11/07 09:20:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1071,10 +1071,12 @@ Suggested package updates
 	o raine-0.50.15
 	o randread-0.2
 	o rapidsvn-0.9.6
+	o rasqal-0.9.16
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
+	o redland-1.0.8.1
 	o regionset-0.2
 	o remind-3.1.5
 	o replex-0.1.6.8
