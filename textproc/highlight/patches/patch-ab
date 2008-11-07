@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/07 21:12:12 snj Exp $
 
---- src/makefile.orig	2008-02-19 09:38:29.000000000 +1000
-+++ src/makefile
-@@ -13,9 +13,7 @@
- # Add -DUSE_FN_MATCH to enable better wildcard support with the --batch-recursive option.
- # See "man 3 fnmatch" for details.
+--- src/makefile.orig	2008-10-23 19:08:29.000000000 -0700
++++ src/makefile	2008-11-07 11:56:04.000000000 -0800
+@@ -10,9 +10,7 @@
+ # Add -DCONFIG_FILE_PATH=\"/your/path/.highlightrc\" if you want to define a
+ # custom path to the highlight configuration file (default: $HOME/.highlightrc)
  
 -CXX=c++
  
