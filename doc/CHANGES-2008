@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2886 2008/11/07 20:03:05 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2887 2008/11/07 20:12:20 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4881,3 +4881,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed math/octave-current [jwise 2008-11-07]
 	Updated security/gsasl to 0.2.29 [adam 2008-11-07]
 	Updated math/glpk to 4.33 [adam 2008-11-07]
+	Updated graphics/gtkam to 0.1.16 [sborrill 2008-11-07]
