@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7670 2008/11/06 22:37:41 snj Exp $
+$NetBSD: TODO,v 1.7671 2008/11/07 09:15:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -656,7 +656,6 @@ Suggested package updates
 	o gsm-1.0.12
 	o gss-0.0.22
 	o gtexinfo-4.13
-	o gthumb-2.10.10
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
@@ -1081,7 +1080,7 @@ Suggested package updates
 	o replex-0.1.6.8
 	o resize_image-0.7
 	o rio500-0.8.1
-	o ripmime-1.4.0.7
+	o ripmime-1.4.0.9
 	o robodoc-4.99.6
 	o root-5.14.0
 	o root-tail-1.2
