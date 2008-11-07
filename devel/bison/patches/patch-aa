@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.9 2003/01/01 13:15:48 cjep Exp $
+$NetBSD: patch-aa,v 1.10 2008/11/07 12:32:32 wiz Exp $
 
---- src/Makefile.in.orig	Wed Jan  1 09:06:42 2003
+--- src/Makefile.in.orig	2008-11-02 21:59:45.000000000 +0000
 +++ src/Makefile.in
-@@ -573,9 +573,9 @@ uninstall-am: uninstall-binPROGRAMS unin
+@@ -913,9 +913,9 @@ uninstall-am: uninstall-binPROGRAMS unin
  
  
  yacc:
 -	echo '#! /bin/sh' >$@
--	echo 'exec $(bindir)/bison -y "$$@"' >>$@
+-	echo "exec '$(bindir)/bison' -y "'"$$@"' >>$@
 -	chmod a+x $@
 +#	echo '#! /bin/sh' >$@
-+#	echo 'exec $(bindir)/bison -y "$$@"' >>$@
++#	echo "exec '$(bindir)/bison' -y "'"$$@"' >>$@
 +#	chmod a+x $@
  
  echo:
