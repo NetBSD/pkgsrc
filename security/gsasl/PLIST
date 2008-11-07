@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/08 08:58:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/11/07 18:40:52 adam Exp $
 bin/gsasl
 include/gsasl-compat.h
 include/gsasl-mech.h
@@ -116,6 +116,7 @@ man/man3/gsasl_simple_getpass.3
 man/man3/gsasl_step.3
 man/man3/gsasl_step64.3
 man/man3/gsasl_strerror.3
+man/man3/gsasl_strerror_name.3
 man/man3/gsasl_stringprep_nfkc.3
 man/man3/gsasl_stringprep_saslprep.3
 man/man3/gsasl_stringprep_trace.3
@@ -130,6 +131,7 @@ share/locale/fr/LC_MESSAGES/libgsasl.mo
 share/locale/ga/LC_MESSAGES/gsasl.mo
 share/locale/ga/LC_MESSAGES/libgsasl.mo
 share/locale/id/LC_MESSAGES/gsasl.mo
+share/locale/id/LC_MESSAGES/libgsasl.mo
 share/locale/nl/LC_MESSAGES/gsasl.mo
 share/locale/nl/LC_MESSAGES/libgsasl.mo
 share/locale/pl/LC_MESSAGES/gsasl.mo
