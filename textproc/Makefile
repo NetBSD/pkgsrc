@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.441 2008/11/05 13:09:00 obache Exp $
+# $NetBSD: Makefile,v 1.442 2008/11/07 22:22:37 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -231,6 +231,7 @@ SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-ChaSen
 SUBDIR+=	p5-Text-CharWidth
 SUBDIR+=	p5-Text-Context-EitherSide
+SUBDIR+=	p5-Text-DHCPLeases
 SUBDIR+=	p5-Text-DelimMatch
 SUBDIR+=	p5-Text-Diff
 SUBDIR+=	p5-Text-Diff-HTML
