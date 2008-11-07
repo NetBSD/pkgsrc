@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2889 2008/11/07 20:59:49 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2890 2008/11/07 21:13:24 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4884,3 +4884,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gtkam to 0.1.16 [sborrill 2008-11-07]
 	Added security/p5-Crypt-Eksblowfish version 0.005 [abs 2008-11-07]
 	Updated devel/p5-Module-ScanDeps to 0.89 [seb 2008-11-07]
+	Updated textproc/highlight to 2.6.14 [snj 2008-11-07]
