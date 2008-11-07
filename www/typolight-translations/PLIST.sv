@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sv,v 1.3 2008/10/25 17:00:16 taca Exp $
+@comment $NetBSD: PLIST.sv,v 1.4 2008/11/07 15:16:02 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/sv/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/sv/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/sv/default.php
@@ -58,6 +58,11 @@ ${TL_WEBDIR}/system/modules/listing/languages/sv/.htaccess
 ${TL_WEBDIR}/system/modules/listing/languages/sv/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/sv/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/sv/tl_module.php
+${TL_WEBDIR}/system/modules/memberlist/languages/sv/.htaccess
+${TL_WEBDIR}/system/modules/memberlist/languages/sv/default.php
+${TL_WEBDIR}/system/modules/memberlist/languages/sv/modules.php
+${TL_WEBDIR}/system/modules/memberlist/languages/sv/tl_member.php
+${TL_WEBDIR}/system/modules/memberlist/languages/sv/tl_module.php
 ${TL_WEBDIR}/system/modules/news/languages/sv/.htaccess
 ${TL_WEBDIR}/system/modules/news/languages/sv/default.php
 ${TL_WEBDIR}/system/modules/news/languages/sv/modules.php
@@ -83,6 +88,14 @@ ${TL_WEBDIR}/system/modules/registration/languages/sv/.htaccess
 ${TL_WEBDIR}/system/modules/registration/languages/sv/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/sv/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/sv/tl_module.php
+${TL_WEBDIR}/system/modules/rep_base/languages/sv/.htaccess
+${TL_WEBDIR}/system/modules/rep_base/languages/sv/modules.php
+${TL_WEBDIR}/system/modules/rep_base/languages/sv/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_base/languages/sv/tl_settings.php
+${TL_WEBDIR}/system/modules/rep_client/languages/sv/.htaccess
+${TL_WEBDIR}/system/modules/rep_client/languages/sv/modules.php
+${TL_WEBDIR}/system/modules/rep_client/languages/sv/tl_repository.php
+${TL_WEBDIR}/system/modules/rep_client/languages/sv/tl_settings.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/sv/.htaccess
 ${TL_WEBDIR}/system/modules/rss_reader/languages/sv/modules.php
 ${TL_WEBDIR}/system/modules/rss_reader/languages/sv/tl_module.php
@@ -91,10 +104,13 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/sv/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/sv/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/sv
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/sv
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/sv
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/sv
 @dirrm ${TL_WEBDIR}/system/modules/faq/languages/sv
