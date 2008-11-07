@@ -1,0 +1,6 @@
+The Perl 5 module Text::DHCPLeases provides an object-oriented
+interface to ISC DHCPD leases files. The goal is to objectify all
+declarations, as defined by the ISC dhcpd package man pages.  This
+interface is useful for analyzing, reporting, converting lease
+files, or as a tool for other applications that need to import dhcpd
+lease data structures.
