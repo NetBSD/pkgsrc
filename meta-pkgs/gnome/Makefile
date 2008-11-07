@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2008/11/07 21:54:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.80 2008/11/07 23:33:29 jnemeth Exp $
 
 DISTNAME=	gnome-2.24.0.90
 CATEGORIES=	meta-pkgs x11 gnome
@@ -62,7 +62,7 @@ DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
 # unpackaged
 #DEPENDS+=	gnome-power-manager>=2.24.1:../../*/gnome-power-manager
 DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
-DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.1:../../x11/py-gnome2-desktop
+DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.24.0:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
 DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
