@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/07 21:12:12 snj Exp $
 
---- makefile.orig	2008-01-30 12:38:21.000000000 +1000
-+++ makefile
-@@ -7,7 +7,6 @@
- DESTDIR = 
+--- makefile.orig	2008-10-28 21:53:41.000000000 -0700
++++ makefile	2008-11-07 11:55:20.000000000 -0800
+@@ -8,7 +8,6 @@
+ DESTDIR =
  
  # Root directory for final installation
 -PREFIX = /usr
  
  # Location of the highlight data files:
  data_dir = ${PREFIX}/share/highlight/
-@@ -16,7 +15,7 @@ data_dir = ${PREFIX}/share/highlight/
+@@ -17,7 +16,7 @@ data_dir = ${PREFIX}/share/highlight/
  bin_dir = ${PREFIX}/bin/
  
  # Location of the highlight man page:
@@ -19,12 +19,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
  
  # Location of the highlight documentation:
  doc_dir = ${PREFIX}/share/doc/highlight/
-@@ -25,13 +24,13 @@ doc_dir = ${PREFIX}/share/doc/highlight/
+@@ -26,17 +25,17 @@ doc_dir = ${PREFIX}/share/doc/highlight/
  examples_dir = ${PREFIX}/share/doc/highlight/examples/
  
  # Location of the highlight config files:
--conf_dir = ${PREFIX}/etc/highlight/
+-conf_dir = /etc/highlight/
 +conf_dir = ${PREFIX}/share/examples/highlight/
+ #conf_dir = ${PREFIX}/etc/highlight/
+ 
+ desktop_apps = ${PREFIX}/share/applications/
+ desktop_pixmaps = ${PREFIX}/share/pixmaps/
  
  # Commands:
 -INSTALL_DATA=install -m644
@@ -38,7 +42,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
  
  all:
  	${MAKE} -C ./src -f ./makefile HL_DATA_DIR=${data_dir} HL_CONFIG_DIR=${conf_dir}
-@@ -67,7 +66,7 @@ install:
+@@ -77,7 +76,7 @@ install:
  		${DESTDIR}${data_dir}langDefs \
  		${DESTDIR}${data_dir}indentSchemes \
  		${DESTDIR}${data_dir}helpmsg
@@ -47,7 +51,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
  	${MKDIR} ${DESTDIR}${bin_dir}
  
  	${INSTALL_DATA} ./langDefs/*.lang ${DESTDIR}${data_dir}langDefs/
-@@ -75,7 +74,7 @@ install:
+@@ -85,7 +84,7 @@ install:
  	${INSTALL_DATA} ./themes/*.style ${DESTDIR}${data_dir}themes/
  	${INSTALL_DATA} ./indentSchemes/*.indent ${DESTDIR}${data_dir}indentSchemes/
  	${INSTALL_DATA} ./helpmsg/*.help ${DESTDIR}${data_dir}helpmsg/
@@ -56,12 +60,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
  	${INSTALL_DATA} ./AUTHORS ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README ${DESTDIR}${doc_dir}
  	${INSTALL_DATA} ./README_DE ${DESTDIR}${doc_dir}
-@@ -118,7 +117,7 @@ uninstall:
- 	${RMDIR} ${DESTDIR}${data_dir}
+@@ -132,7 +131,7 @@ uninstall:
  	${RMDIR} ${DESTDIR}${doc_dir}
  	${RMDIR} ${DESTDIR}${conf_dir}
+ 	${RMDIR} ${DESTDIR}${examples_dir}
 -	rm ${DESTDIR}${man_dir}highlight.1.gz
 +	rm ${DESTDIR}${man_dir}highlight.1*
  	rm ${DESTDIR}${bin_dir}highlight
  	rm ${DESTDIR}${bin_dir}highlight-gui
- 	@echo "Done. Have a nice day!"
+ 	rm ${DESTDIR}${desktop_apps}highlight.desktop
