@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2890 2008/11/07 21:13:24 snj Exp $
+$NetBSD: CHANGES-2008,v 1.2891 2008/11/07 22:24:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4885,3 +4885,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/p5-Crypt-Eksblowfish version 0.005 [abs 2008-11-07]
 	Updated devel/p5-Module-ScanDeps to 0.89 [seb 2008-11-07]
 	Updated textproc/highlight to 2.6.14 [snj 2008-11-07]
+	Added textproc/p5-Text-DHCPLeases version 0.7 [seb 2008-11-07]
