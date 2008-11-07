@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2008/11/07 12:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2008/11/07 22:01:48 abs Exp $
 
 DISTNAME=		bison-2.4
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +22,10 @@ INFO_FILES=		# PLIST
 CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
 
 TEST_TARGET=		check
+
+# Avoid rebuilding manpage
+pre-build:
+	${TOUCH} ${WRKSRC}/doc/bison.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
