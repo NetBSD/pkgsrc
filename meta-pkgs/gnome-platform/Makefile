@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/11/07 14:16:53 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/07 15:14:54 wiz Exp $
 
 DISTNAME=	gnome-platform-2.24.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -35,9 +35,5 @@ DEPENDS+=	libgnome>=2.24.1:../../devel/libgnome
 DEPENDS+=	libgnomecanvas>=2.20.1.1:../../graphics/libgnomecanvas
 DEPENDS+=	libgnomeui>=2.24.0:../../devel/libgnomeui
 DEPENDS+=	pango>=1.22.1:../../devel/pango
-
-# XXX gnome-keyring is distributed with the "desktop" set, but is required
-# by libgnomeui. List it here to avoid circular dependency.
-DEPENDS+=	gnome-keyring>=2.24.1:../../security/gnome-keyring
 
 .include "../../mk/bsd.pkg.mk"
