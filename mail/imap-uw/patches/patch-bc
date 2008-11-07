@@ -1,12 +1,12 @@
-$NetBSD: patch-bc,v 1.2 2007/08/03 17:03:32 obache Exp $
+$NetBSD: patch-bc,v 1.2.14.1 2008/11/07 09:58:39 rtr Exp $
 
---- src/imapd/imapd.c.orig	2007-07-11 20:08:16.000000000 +0000
-+++ src/imapd/imapd.c
-@@ -31,7 +31,6 @@
+--- src/imapd/imapd.c.orig	2008-06-04 19:39:54.000000000 +0100
++++ src/imapd/imapd.c	2008-11-06 13:37:04.000000000 +0000
+@@ -29,7 +29,6 @@
  #include <stdio.h>
  #include <ctype.h>
  #include <errno.h>
 -extern int errno;		/* just in case */
  #include <signal.h>
+ #include <setjmp.h>
  #include <time.h>
- #include "c-client.h"

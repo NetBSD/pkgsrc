@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
+$NetBSD: patch-ab,v 1.22.14.1 2008/11/07 09:58:39 rtr Exp $
 
---- src/osdep/unix/Makefile.orig	2007-06-17 15:37:44.000000000 +0000
-+++ src/osdep/unix/Makefile
-@@ -48,7 +48,7 @@ GCCOPTLEVEL= -O2
+--- src/osdep/unix/Makefile.orig	2008-06-04 19:18:34.000000000 +0100
++++ src/osdep/unix/Makefile	2008-11-06 13:57:35.000000000 +0000
+@@ -48,7 +48,7 @@
  # Try to have some consistency in GCC builds.  We want optimization, but we
  # also want to be able to debug.
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  GCC4CFLAGS= $(GCCCFLAGS) -Wno-pointer-sign
  
  
-@@ -144,7 +144,7 @@ CHUNKSIZE=65536
+@@ -149,7 +149,7 @@
  
  # Normally no need to change any of these
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  BINARIES=osdep.o mail.o misc.o newsrc.o smanager.o utf8.o utf8aux.o siglocal.o \
   dummy.o pseudo.o netmsg.o flstring.o fdstring.o \
   rfc822.o nntp.o smtp.o imap4r1.o pop3.o \
-@@ -425,7 +425,7 @@ gso:	os_sol.h	# GCC Solaris
+@@ -430,7 +430,7 @@
  	 RSHPATH=/usr/bin/rsh \
  	 BASECFLAGS="$(GCCCFLAGS)" \
  	 BASELDFLAGS="-lsocket -lnsl -lgen" \
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  
  gsu:	# GCC SUN-OS
  	$(BUILD) `$(CAT) SPECIALS` OS=sun \
-@@ -524,7 +524,7 @@ neb:	# NetBSD
+@@ -529,7 +529,7 @@
  	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
  	 CRXTYPE=nfs \
  	 SPOOLDIR=/var \
@@ -38,24 +38,7 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  	 RSHPATH=/usr/bin/rsh \
  	 BASECFLAGS="$(GCCCFLAGS)" \
  	 BASELDFLAGS="-lcrypt"
-@@ -539,6 +539,16 @@ nec:	# NEC UX
- 	 BASELDFLAGS="-lsocket -lnsl -lgen" \
- 	 RANLIB=true CC=/usr/abiccs/bin/cc
- 
-+nep:	# NetBSD with PAM
-+	$(BUILD) `$(CAT) SPECIALS` OS=bsi \
-+	 CHECKPW=pam \
-+	 CRXTYPE=nfs \
-+	 SPOOLDIR=/var \
-+	 ACTIVEFILE=/var/news/db/active \
-+	 RSHPATH=/usr/bin/rsh \
-+	 BASECFLAGS="$(GCCCFLAGS)" \
-+	 BASELDFLAGS="-lpam"
-+
- nto:	# QNX Neutrino RTP
- 	$(BUILD) `$(CAT) SPECIALS` OS=$@ \
- 	 CRXTYPE=nfs \
-@@ -850,7 +860,7 @@ $(ARCHIVE): $(BINARIES)
+@@ -855,7 +855,7 @@
  	@$(SH) ARCHIVE
  
  .c.o:
@@ -64,7 +47,7 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  
  
  # Cleanup
-@@ -910,7 +920,7 @@ osdep.o:mail.h misc.h env.h fs.h ftl.h n
+@@ -915,7 +915,7 @@
  	@echo pem.h, buffer.h, bio.h, and crypto.h, that means that OpenSSL
  	@echo is not installed on your system.  Either install OpenSSL first
  	@echo or build with command: make `$(CAT) OSTYPE` SSLTYPE=none
@@ -73,9 +56,9 @@ $NetBSD: patch-ab,v 1.22 2007/08/03 17:03:30 obache Exp $
  
  osdep.c: osdepbas.c osdepckp.c osdeplog.c osdepssl.c
  	$(CAT) osdepbas.c osdepckp.c osdeplog.c osdepssl.c > osdep.c
-@@ -961,7 +971,7 @@ onceenv:
- 	 -DACTIVEFILE=\"$(ACTIVEFILE)\" -DNEWSSPOOL=\"$(NEWSSPOOL)\" \
- 	 -DRSHPATH=\"$(RSHPATH)\" -DLOCKPGM=\"$(LOCKPGM)\" > OSCFLAGS
+@@ -968,7 +968,7 @@
+ 	 -DLOCKPGM1=\"$(LOCKPGM1)\" -DLOCKPGM2=\"$(LOCKPGM2)\" \
+ 	 -DLOCKPGM3=\"$(LOCKPGM3)\" > OSCFLAGS
  	echo $(BASELDFLAGS) $(EXTRALDFLAGS) > LDFLAGS
 -	echo "$(ARRC) $(ARCHIVE) $(BINARIES);$(RANLIB) $(ARCHIVE)" > ARCHIVE
 +	echo "$(LTLINK) $(CC) -o $(ARCHIVE) $(BINARIES:.o=.lo) -rpath $(PREFIX)/lib -version-info $(CCLIENT_MAJOR):$(CCLIENT_MINOR) \`$(CAT) LDFLAGS\`" > ARCHIVE

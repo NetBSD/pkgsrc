@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.17 2007/08/03 17:03:30 obache Exp $
+$NetBSD: patch-ae,v 1.17.14.1 2008/11/07 09:58:39 rtr Exp $
 
---- src/tmail/Makefile.orig	2006-08-31 00:27:38.000000000 +0000
-+++ src/tmail/Makefile
+--- src/tmail/Makefile.orig	2008-06-04 19:18:34.000000000 +0100
++++ src/tmail/Makefile	2008-11-06 13:32:39.000000000 +0000
 @@ -26,7 +26,7 @@
  
  
@@ -11,12 +11,12 @@ $NetBSD: patch-ae,v 1.17 2007/08/03 17:03:30 obache Exp $
  SHELL = /bin/sh
  
  # Get local definitions from c-client directory
-@@ -36,7 +36,7 @@ CFLAGS = -I$C `cat $C/CFLAGS`
+@@ -36,7 +36,7 @@
  LDFLAGS = $(CCLIENTLIB) `cat $C/LDFLAGS`
  
- tmail: $(CCLIENTLIB) tmail.o
--	$(CC) $(CFLAGS) -o tmail tmail.o $(LDFLAGS)
-+	$(LTLINK) $(CC) $(CFLAGS) -o tmail tmail.o $(LDFLAGS)
+ tmail: $(CCLIENTLIB) tmail.o tquota.o
+-	$(CC) $(CFLAGS) -o tmail tmail.o tquota.o $(LDFLAGS)
++	$(LTLINK) $(CC) $(CFLAGS) -o tmail tmail.o tquota.o $(LDFLAGS)
  
- tmail.o: $C/mail.h $C/misc.h $C/osdep.h
+ tmail.o: $C/mail.h $C/misc.h $C/osdep.h tquota.h
  
