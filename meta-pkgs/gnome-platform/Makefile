@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/10/29 02:15:37 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/07 14:16:53 wiz Exp $
 
 DISTNAME=	gnome-platform-2.24.1
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -9,6 +10,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for core platform libraries of the GNOME desktop
 
 META_PACKAGE=	yes
+
+# see http://ftp.gnome.org/pub/GNOME/platform/2.24/2.24.1/sources/
 
 DEPENDS+=	GConf>=2.24.0:../../devel/GConf
 DEPENDS+=	ORBit2>=2.14.16:../../net/ORBit2
@@ -29,8 +32,7 @@ DEPENDS+=	libbonobo>=2.24.0:../../devel/libbonobo
 DEPENDS+=	libbonoboui>=2.24.0:../../devel/libbonoboui
 DEPENDS+=	libglade>=2.6.3:../../devel/libglade
 DEPENDS+=	libgnome>=2.24.1:../../devel/libgnome
-# not updated since 2.20, so assume it got dropped
-#DEPENDS+=	libgnomecanvas>=2.20.1.1:../../graphics/libgnomecanvas
+DEPENDS+=	libgnomecanvas>=2.20.1.1:../../graphics/libgnomecanvas
 DEPENDS+=	libgnomeui>=2.24.0:../../devel/libgnomeui
 DEPENDS+=	pango>=1.22.1:../../devel/pango
 
