@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7674 2008/11/07 18:42:39 adam Exp $
+$NetBSD: TODO,v 1.7675 2008/11/07 20:03:05 adam Exp $
 
 Suggested new packages
 ======================
@@ -515,8 +515,6 @@ Suggested package updates
 	o dnstracer-1.9
 	o doxygen-1.5.7.1
 	o drscheme-4.0.2
-	o drupal-5.12 [Security: http://drupal.org/node/324824]
-	o drupal-6.6 [Security: http://drupal.org/node/324824]
 	o duplicity-0.5.02
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.0
@@ -620,7 +618,6 @@ Suggested package updates
 	o glchess-1.0.5
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
-	o glpk-4.33
 	o gmpc-0.16.0
 	o gnash-0.8.4
 	o gnet1-1.1.9
