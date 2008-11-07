@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/07 22:20:11 seb Exp $
+
+SHA1 (Text-DHCPLeases-v0.7.tar.gz) = 79b8d77f0f16936d01b2eb97ce223701c1774aa0
+RMD160 (Text-DHCPLeases-v0.7.tar.gz) = 390d224fb979488729280c81b934449ac5264855
+Size (Text-DHCPLeases-v0.7.tar.gz) = 7880 bytes
