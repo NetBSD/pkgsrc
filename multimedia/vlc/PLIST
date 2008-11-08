@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19.2.2 2008/11/04 12:46:36 tron Exp $
+@comment $NetBSD: PLIST,v 1.19.2.3 2008/11/08 23:06:38 tron Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -383,6 +383,7 @@ share/locale/tet/LC_MESSAGES/vlc.mo
 share/locale/th/LC_MESSAGES/vlc.mo
 share/locale/tl/LC_MESSAGES/vlc.mo
 share/locale/tr/LC_MESSAGES/vlc.mo
+share/locale/uk/LC_MESSAGES/vlc.mo
 share/locale/zh_CN/LC_MESSAGES/vlc.mo
 share/locale/zh_TW/LC_MESSAGES/vlc.mo
 share/vlc/http/.hosts

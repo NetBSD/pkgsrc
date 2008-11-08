@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61.2.2 2008/11/04 12:46:36 tron Exp $
+# $NetBSD: Makefile,v 1.61.2.3 2008/11/08 23:06:38 tron Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		0.9.5
+VLC_VERSION=		0.9.6
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
@@ -15,7 +15,8 @@ COMMENT=		VLC media player and streaming server
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake perl pkg-config autoconf
+USE_TOOLS+=		gmake perl pkg-config \
+			aclocal autoconf automake autoheader
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
@@ -43,7 +44,6 @@ CONFIGURE_ARGS+=	--disable-smb
 CONFIGURE_ARGS+=	--enable-cddax \
 			--enable-dvdread \
 			--enable-flac \
-			--enable-lame \
 			--enable-live555 \
 
 # Build optimalized modules
@@ -84,7 +84,7 @@ INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/skins2/fonts
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoreconf
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
@@ -122,7 +122,6 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 
 .include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
-.include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
