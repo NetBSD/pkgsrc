@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2900 2008/11/08 12:55:39 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2901 2008/11/08 13:20:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4897,3 +4897,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Moved www/p5-CGI_Lite to www/p5-CGI-Lite [wiz 2008-11-08]
 	Updated devel/tig to 0.12.1 [bjs 2008-11-08]
 	Updated security/mhash to 0.9.9nb1 [bjs 2008-11-08]
+	Updated devel/cmake to 2.6.2 [wiz 2008-11-08]
