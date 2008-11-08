@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/07/10 14:55:56 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/08 21:13:27 bjs Exp $
 #
 
 DISTNAME=	AlephOne-20071103
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
