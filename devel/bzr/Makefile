@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2008/09/06 05:32:08 epg Exp $
+# $NetBSD: Makefile,v 1.30 2008/11/08 02:50:15 epg Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
-MASTER_SITES=		http://launchpad.net/bzr/1.6/${VER}/+download/
-VER=			1.6.1
+MASTER_SITES=		http://launchpad.net/bzr/1.9/${VER}/+download/
+VER=			1.9
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://bazaar-vcs.org/
