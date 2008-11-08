@@ -10506,7 +10506,12 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+
 #include <sys/socket.h>
+
 
 int
 main ()
@@ -10541,7 +10546,12 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+
 #include <sys/socket.h>
+
 
 int
 main ()
@@ -10716,7 +10726,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <netinet/in.h>
+
 
 int
 main ()
@@ -10751,7 +10765,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <netinet/in.h>
+
 
 int
 main ()
@@ -10821,7 +10839,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <netinet/in.h>
+
 
 int
 main ()
@@ -10856,7 +10878,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <netinet/in.h>
+
 
 int
 main ()
@@ -10926,7 +10952,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <sys/socket.h>
+
 
 int
 main ()
@@ -10961,7 +10991,11 @@ _ACEOF
 cat confdefs.h >>conftest.$ac_ext
 cat >>conftest.$ac_ext <<_ACEOF
 /* end confdefs.h.  */
+#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
 #include <sys/socket.h>
+
 
 int
 main ()
