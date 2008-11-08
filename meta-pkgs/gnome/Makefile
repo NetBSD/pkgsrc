@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2008/11/07 23:33:29 jnemeth Exp $
+# $NetBSD: Makefile,v 1.81 2008/11/08 11:44:42 jnemeth Exp $
 
 DISTNAME=	gnome-2.24.0.90
 CATEGORIES=	meta-pkgs x11 gnome
@@ -61,9 +61,8 @@ DEPENDS+=	gnome-netstatus-[0-9]*:../../net/gnome-netstatus
 DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
 # unpackaged
 #DEPENDS+=	gnome-power-manager>=2.24.1:../../*/gnome-power-manager
-DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
-DEPENDS+=	gnome-screensaver>=2.24.0:../../x11/gnome-screensaver
+DEPENDS+=	gnome-screensaver>=2.22.0:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
 DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
 DEPENDS+=	gnome-sharp>=2.24.0:../../x11/gnome-sharp
@@ -74,7 +73,7 @@ DEPENDS+=	gnome-system-monitor-[0-9]*:../../sysutils/gnome-system-monitor
 # unpackaged
 #DEPENDS+=	gnome-system-tools>=2.22.1:../../*/gnome-system-tools
 DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
-DEPENDS+=	gnome-themes>=2.24.1.1:../../x11/gnome-themes
+DEPENDS+=	gnome-themes>=2.24.1:../../x11/gnome-themes
 DEPENDS+=	gnome-user-docs>=2.24.0:../../misc/gnome-user-docs
 DEPENDS+=	gnome-utils>=2.24.1:../../misc/gnome-utils
 # unpackaged
