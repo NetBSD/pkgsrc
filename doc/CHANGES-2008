@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2895 2008/11/08 00:16:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2896 2008/11/08 00:35:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4890,3 +4890,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/gtkhtml314 to 3.24.1.1 [wiz 2008-11-07]
 	Updated mail/evolution to 2.24.1.1 [wiz 2008-11-07]
 	Updated mail/evolution-exchange to 2.24.1.1 [wiz 2008-11-08]
+	Added mail/evolution-sharp version 0.18.1 [wiz 2008-11-08]
