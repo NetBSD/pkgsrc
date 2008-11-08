@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.367 2008/11/03 11:21:50 markd Exp $
+# $NetBSD: Makefile,v 1.368 2008/11/08 00:36:12 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -77,6 +77,7 @@ SUBDIR+=	etpan
 SUBDIR+=	evolution
 SUBDIR+=	evolution-data-server
 SUBDIR+=	evolution-exchange
+SUBDIR+=	evolution-sharp
 SUBDIR+=	exim
 SUBDIR+=	exim-html
 SUBDIR+=	exim3
