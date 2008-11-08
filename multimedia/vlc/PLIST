@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/11/07 20:03:13 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/11/08 19:00:15 ahoka Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -178,6 +178,7 @@ lib/vlc/codec/libsvcdsub_plugin.la
 lib/vlc/codec/libt140_plugin.la
 lib/vlc/codec/libtelx_plugin.la
 lib/vlc/codec/libvorbis_plugin.la
+lib/vlc/codec/libtheora_plugin.la
 lib/vlc/codec/libx264_plugin.la
 lib/vlc/control/libgestures_plugin.la
 lib/vlc/control/libhotkeys_plugin.la

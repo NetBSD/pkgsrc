@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/11/01 22:14:13 ahoka Exp $
+# $NetBSD: options.mk,v 1.11 2008/11/08 19:00:15 ahoka Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad arts dbus skins sdl esound x11 gnome
@@ -75,9 +75,11 @@ CONFIGURE_ARGS+=	--disable-skins2
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXvMC/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXpm/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
