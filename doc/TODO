@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7677 2008/11/08 02:53:33 epg Exp $
+$NetBSD: TODO,v 1.7678 2008/11/08 10:45:06 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1192,7 +1192,6 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.0
-	o tig-0.12.1
 	o tile-0.7.4
 	o tinyproxy-1.7.0
 	o tk-8.5.5
