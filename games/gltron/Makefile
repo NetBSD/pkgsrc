@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/11/08 21:13:28 bjs Exp $
 #
 
 DISTNAME=	gltron-0.70-source
 PKGNAME=	${DISTNAME:S/-source$//}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gltron/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/07/31 04:02:40 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/08 21:13:27 bjs Exp $
 
 DISTNAME=		moc-2.5.0-alpha3
 PKGNAME=		${DISTNAME:S/-alpha/./:moc%=moc-devel%}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.daper.net/pub/soft/moc/unstable/
 EXTRACT_SUFX=		.tar.bz2
