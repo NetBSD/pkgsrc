@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7678 2008/11/08 10:45:06 bjs Exp $
+$NetBSD: TODO,v 1.7679 2008/11/08 12:59:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -446,6 +446,7 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.5
 	o btpd-0.13 [pkg/38144]
+	o bugzilla-3.0.6
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -471,6 +472,7 @@ Suggested package updates
 	o cjk-lyx-1.4.4
 	o classpath-0.97.2
 	o clisp-2.47
+	o cmake-2.6.2
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.7.8
@@ -693,7 +695,7 @@ Suggested package updates
 	o instiki-0.13
 	o intercal-0.24
 	o ircII-20080314
-	o ircservices-5.1.12
+	o ircservices-5.1.13
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
@@ -1109,7 +1111,7 @@ Suggested package updates
 	o scapy-2.0.0.10
 	o scew-0.4.0
 	o sch-3.8.3
-	o scilab-5.0.2
+	o scilab-5.0.3
 	o scm-5e5
 	o scmgit-base-1.6.0.3
 	o scons-0.98.1
