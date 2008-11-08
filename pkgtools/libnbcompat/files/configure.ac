@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.69 2008/10/26 12:31:30 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.70 2008/11/08 21:35:58 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -256,11 +256,28 @@ AC_CHECK_LIB(socket, socket)
 AC_CHECK_LIB(nsl, gethostbyname)
 
 need_getaddrinfo=no
-AC_CHECK_TYPES([socklen_t], [], [], [[#include <sys/socket.h>]])
+AC_CHECK_TYPES([socklen_t], [], [], [[#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+
+#include <sys/socket.h>
+]])
 AC_CHECK_TYPES([struct addrinfo], [], [], [[#include <netdb.h>]])
-AC_CHECK_TYPES([struct in6_addr], [], [], [[#include <netinet/in.h>]])
-AC_CHECK_TYPES([struct sockaddr_in6], [], [], [[#include <netinet/in.h>]])
-AC_CHECK_TYPES([struct sockaddr_storage], [], [], [[#include <sys/socket.h>]])
+AC_CHECK_TYPES([struct in6_addr], [], [], [[#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+#include <netinet/in.h>
+]])
+AC_CHECK_TYPES([struct sockaddr_in6], [], [], [[#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+#include <netinet/in.h>
+]])
+AC_CHECK_TYPES([struct sockaddr_storage], [], [], [[#ifdef HAVE_SYS_TYPES_H
+# include <sys/types.h>
+#endif
+#include <sys/socket.h>
+]])
 dnl Assume that freeaddrinfo is only missing if getaddrinfo is also missing
 AC_CHECK_FUNCS([getnameinfo gai_strerror getaddrinfo], [:],
     [need_getaddrinfo=yes])
