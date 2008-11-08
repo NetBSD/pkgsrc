@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2914 2008/11/08 21:18:35 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2915 2008/11/08 23:41:24 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4926,3 +4926,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/alephone to 20071103nb5 [bjs 2008-11-08]
 	Updated games/gltron to 0.70nb9 [bjs 2008-11-08]
 	Updated multimedia/xine-lib to 1.1.15nb2 [bjs 2008-11-08]
+	Updated net/p5-Net-OpenID-Consumer to 1.02 [heinz 2008-11-08]
