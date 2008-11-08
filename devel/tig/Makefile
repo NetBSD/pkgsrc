@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/04/06 05:13:45 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/08 10:44:12 bjs Exp $
 #
 
-DISTNAME=	tig-0.10.1
+DISTNAME=	tig-0.12.1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://jonas.nitro.dk/tig/releases/
 
@@ -19,6 +19,9 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_NCURSES=	yes
 
+CONF_FILES=	${EGDIR}/tigrc ${PKG_SYSCONFDIR}/tigrc
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+
 GIT_CONFIG=	${PREFIX}/bin/git-config
 CONFIGURE_ENV+=	GIT_CONFIG=${GIT_CONFIG:Q}
 
@@ -28,6 +31,11 @@ CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 BUILD_TARGET=	all doc
 INSTALL_TARGET=	install install-doc
 
-.include "../../devel/ncurses/buildlink3.mk"
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}/${EGDIR} && \
+	${INSTALL_DATA} ${WRKSRC}/contrib/tigrc ${DESTDIR}/${EGDIR}
+
+.include "options.mk"
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
