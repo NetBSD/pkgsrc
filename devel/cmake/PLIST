@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/08/26 11:37:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/11/08 13:20:17 wiz Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -14,6 +14,7 @@ man/man1/cmakevars.1
 man/man1/cpack.1
 man/man1/ctest.1
 share/cmake-${CMAKE_API}/Modules/AddFileDependencies.cmake
+share/cmake-${CMAKE_API}/Modules/BundleUtilities.cmake
 share/cmake-${CMAKE_API}/Modules/CMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM-ATTInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASMCompiler.cmake.in
@@ -241,6 +242,7 @@ share/cmake-${CMAKE_API}/Modules/ITKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
 share/cmake-${CMAKE_API}/Modules/KDE3Macros.cmake
 share/cmake-${CMAKE_API}/Modules/MacOSXBundleInfo.plist.in
+share/cmake-${CMAKE_API}/Modules/MacOSXFrameworkInfo.plist.in
 share/cmake-${CMAKE_API}/Modules/MacroAddFileDependencies.cmake
 share/cmake-${CMAKE_API}/Modules/NSIS.InstallOptions.ini.in
 share/cmake-${CMAKE_API}/Modules/NSIS.template.in
