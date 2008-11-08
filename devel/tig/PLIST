@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/16 07:41:11 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/08 10:44:12 bjs Exp $
 bin/tig
 man/man1/tig.1
 man/man5/tigrc.5
+share/doc/tig/NEWS.html
 share/doc/tig/README.html
 share/doc/tig/manual.html
 share/doc/tig/tig.1.html
 share/doc/tig/tigrc.5.html
+share/examples/tig/tigrc
+@dirrm share/examples/tig
 @dirrm share/doc/tig
