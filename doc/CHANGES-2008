@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2908 2008/11/08 18:42:20 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2909 2008/11/08 18:47:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4906,3 +4906,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/gnome-netstatus to 2.12.2 [wiz 2008-11-08]
 	Updated x11/gnome-themes to 2.24.1nb1 [wiz 2008-11-08]
 	Updated meta-pkgs/gnome to 2.24.0.92 [wiz 2008-11-08]
+	Removed meta-pkgs/gtk2-extras [wiz 2008-11-08]
