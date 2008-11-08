@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2911 2008/11/08 19:57:36 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2912 2008/11/08 20:00:22 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4908,4 +4908,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome to 2.24.0.92 [wiz 2008-11-08]
 	Removed meta-pkgs/gtk2-extras [wiz 2008-11-08]
 	Updated x11/gtk-sharp to 2.12.6 [wiz 2008-11-08]
+	Updated devel/xdelta to 1.1.4 [heinz 2008-11-08]
 	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.3 [rhaen 2008-11-08]
+	Updated devel/xdelta3 to 3.0u [heinz 2008-11-08]
