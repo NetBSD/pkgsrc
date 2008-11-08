@@ -1,6 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2008/08/26 01:12:07 epg Exp $
+$NetBSD: MESSAGE,v 1.2 2008/11/08 02:56:14 epg Exp $
 
-bzr requires devel/py-paramiko in order to push branches over sftp.
+bzr requires security/py-paramiko in order to push branches over sftp.
 
 ===========================================================================
