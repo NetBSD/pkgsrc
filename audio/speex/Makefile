@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2008/04/29 20:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/11/08 21:06:46 bjs Exp $
 #
 
-DISTNAME=	speex-1.0.5
-PKGREVISION=	1
+DISTNAME=	speex-1.2rc1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 
@@ -15,17 +14,20 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	speex.pc.in
+PKGCONFIG_OVERRIDE=	speexdsp.pc.in
 USE_TOOLS+=		pkg-config
 
 # previous versions of the package were called Speex
 CONFLICTS=	Speex-[0-9]*
 
-CONFIGURE_ARGS+=	--with-ogg-dir="${BUILDLINK_PREFIX.libogg}"
+CONFIGURE_ARGS+=	--with-ogg-dir=${BUILDLINK_PREFIX.libogg:Q}
 
 # Avoid an ICE in gcc2 on sparc64
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 BUILDLINK_TRANSFORM+=	l:gnugetopt:getopt
+
+.include "options.mk"
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
