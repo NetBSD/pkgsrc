@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/10/27 16:51:59 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2008/11/08 23:46:00 jnemeth Exp $
 
 DISTNAME=	seahorse-2.24.1
 CATEGORIES=	security
@@ -54,6 +54,7 @@ post-patch:
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
+.include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
