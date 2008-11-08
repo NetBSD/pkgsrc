@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2008/09/06 15:06:53 wiz Exp $
+$NetBSD: distinfo,v 1.16 2008/11/08 11:18:14 tnn Exp $
 
 SHA1 (libIDL-0.8.11.tar.bz2) = 6e0c5ef5716a96bcad5193853b7c3bf417c680e6
 RMD160 (libIDL-0.8.11.tar.bz2) = 1ffe518c0b63996fb01013d0a5af7b043156ab6a
 Size (libIDL-0.8.11.tar.bz2) = 407443 bytes
+SHA1 (patch-aa) = ecc10e1079722af7927449bfb0a98bff34fd92b7
