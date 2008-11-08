@@ -1,18 +1,31 @@
-$NetBSD: patch-aa,v 1.1 2008/11/08 12:55:21 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/08 13:47:11 bjs Exp $
 
-Code could rely on the definition of 'VERSION'--and *not* define
-it in installed headers!
-
-If this patch causes a problem, something is not right.
+These are now defined in config.h.in to avoid namespace pollution.
 
 --- include/mutils/mhash_config.h.in.orig	2007-04-04 22:21:23.000000000 -0400
 +++ include/mutils/mhash_config.h.in
-@@ -224,7 +224,7 @@
- #undef USE_DMALLOC
+@@ -181,24 +181,6 @@
+ /* Define to 1 if your C compiler doesn't accept -c and -o together. */
+ #undef NO_MINUS_C_MINUS_O
  
- /* Version number of package */
--#undef VERSION
-+/* #undef VERSION */
+-/* Name of package */
+-#undef PACKAGE
+-
+-/* Define to the address where bug reports for this package should be sent. */
+-#undef PACKAGE_BUGREPORT
+-
+-/* Define to the full name of this package. */
+-#undef PACKAGE_NAME
+-
+-/* Define to the full name and version of this package. */
+-#undef PACKAGE_STRING
+-
+-/* Define to the one symbol short name of this package. */
+-#undef PACKAGE_TARNAME
+-
+-/* Define to the version of this package. */
+-#undef PACKAGE_VERSION
+-
+ /* Define to 1 if the C compiler supports function prototypes. */
+ #undef PROTOTYPES
  
- /* Define if using the dmalloc debugging malloc package */
- #undef WITH_DMALLOC
