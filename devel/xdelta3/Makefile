@@ -1,21 +1,27 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 18:26:21 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/08 19:57:48 heinz Exp $
 #
 
-DISTNAME=		xdelta30q
-PKGNAME=		xdelta3-3.0q
+DISTNAME=		xdelta3.0u
+PKGNAME=		xdelta3-3.0u
 CATEGORIES=		devel
 MASTER_SITES=		http://xdelta.googlecode.com/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://code.google.com/p/xdelta/
+HOMEPAGE=		http://xdelta.org/
 COMMENT=		Enhanced diff that works on binary files (version 3.x)
+
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		xdelta3
+USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xdelta3 ${DESTDIR}${PREFIX}/bin/xdelta3
+
+do-test:
+	${WRKSRC}/xdelta3 test
 
 .include "../../mk/bsd.pkg.mk"
