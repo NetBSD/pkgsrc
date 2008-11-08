@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/07/21 09:17:27 rhaen Exp $
+$NetBSD: distinfo,v 1.3 2008/11/08 19:56:28 rhaen Exp $
 
-SHA1 (CGI-Application-Plugin-ValidateRM-2.2.tar.gz) = 91db3f3a7ed8377e66433fbf4f2e036adad4b9d4
-RMD160 (CGI-Application-Plugin-ValidateRM-2.2.tar.gz) = 2c0fa239eae4fa598a0a45ef253dd67e79cb0437
-Size (CGI-Application-Plugin-ValidateRM-2.2.tar.gz) = 9303 bytes
+SHA1 (CGI-Application-Plugin-ValidateRM-2.3.tar.gz) = e5455459cc69eac3f495a002ddc52c1ef0d43414
+RMD160 (CGI-Application-Plugin-ValidateRM-2.3.tar.gz) = edbe71f220b92ad007a0c2d751ab6dbddb5254af
+Size (CGI-Application-Plugin-ValidateRM-2.3.tar.gz) = 9453 bytes
