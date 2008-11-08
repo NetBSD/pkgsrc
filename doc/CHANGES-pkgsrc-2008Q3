@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.30 2008/11/08 01:42:59 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.31 2008/11/08 23:06:49 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -87,3 +87,5 @@ pullup ticket #2579 - requested by tron
 ns-flash: update package for security fixes
 pullup ticket #2580 - requested by mishka
 perl5: pullup patch that fixes build on netbsd 5
+Pullup ticket #2581 - requested by ahoka
+vlc: security update
