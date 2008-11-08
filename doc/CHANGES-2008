@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2913 2008/11/08 21:13:49 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2914 2008/11/08 21:18:35 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4912,3 +4912,17 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.3 [rhaen 2008-11-08]
 	Updated devel/xdelta3 to 3.0u [heinz 2008-11-08]
 	Updated audio/speex to 1.2rc1 [bjs 2008-11-08]
+	Updated audio/SDL_sound to 1.0.3nb1 [bjs 2008-11-08]
+	Updated audio/easytag-current to 2.1.6nb1 [bjs 2008-11-08]
+	Updated audio/gst-plugins0.10-speex to 0.10.11nb1 [bjs 2008-11-08]
+	Updated audio/icecast to 2.3.2nb1 [bjs 2008-11-08]
+	Updated audio/lmms to 0.2.0nb4 [bjs 2008-11-08]
+	Updated audio/moc to 2.4.3nb1 [bjs 2008-11-08]
+	Updated audio/moc-devel to 2.5.0.3nb3 [bjs 2008-11-08]
+	Updated audio/sweep to 0.9.3nb1 [bjs 2008-11-08]
+	Updated audio/timidity to 2.13.2nb8 [bjs 2008-11-08]
+	Updated audio/vorbis-tools to 1.2.0nb2 [bjs 2008-11-08]
+	Updated emulators/dosbox to 0.72nb3 [bjs 2008-11-08]
+	Updated games/alephone to 20071103nb5 [bjs 2008-11-08]
+	Updated games/gltron to 0.70nb9 [bjs 2008-11-08]
+	Updated multimedia/xine-lib to 1.1.15nb2 [bjs 2008-11-08]
