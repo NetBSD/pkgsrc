@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2006/03/31 05:37:09 jlam Exp $
-bin/edsio-comp
+@comment $NetBSD: PLIST,v 1.8 2008/11/08 18:50:56 heinz Exp $
 bin/xdelta
 bin/xdelta-config
 include/edsio.h
 include/edsio_edsio.h
 include/xd_edsio.h
 include/xdelta.h
-info/xdelta.info
 lib/libedsio.la
 lib/libxdelta.la
 man/man1/xdelta.1
