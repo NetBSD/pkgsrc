@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/11/07 15:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2008/11/08 18:46:53 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -14,7 +14,6 @@ SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
-SUBDIR+=	gtk2-extras
 SUBDIR+=	kde3
 SUBDIR+=	matchbox
 SUBDIR+=	modular-xorg-apps
