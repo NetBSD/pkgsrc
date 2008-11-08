@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2008/10/27 13:30:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/11/08 18:35:23 wiz Exp $
 share/icons/Crux/16x16/actions/back.png
 share/icons/Crux/16x16/actions/bottom.png
 share/icons/Crux/16x16/actions/document-open.png
@@ -1276,6 +1276,7 @@ share/icons/HighContrastLargePrint/48x48/apps/preferences-desktop-wallpaper.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-system-session.png
 share/icons/HighContrastLargePrint/48x48/apps/preferences-system-windows.png
 share/icons/HighContrastLargePrint/48x48/apps/redhat-filemanager.png
+share/icons/HighContrastLargePrint/48x48/apps/session-properties.png
 share/icons/HighContrastLargePrint/48x48/apps/smc.png
 share/icons/HighContrastLargePrint/48x48/apps/sound-juicer.png
 share/icons/HighContrastLargePrint/48x48/apps/star.png
@@ -1710,6 +1711,7 @@ share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-desktop-wallpap
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-system-session.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/preferences-system-windows.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/redhat-filemanager.png
+share/icons/HighContrastLargePrintInverse/48x48/apps/session-properties.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/smc.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/sound-juicer.png
 share/icons/HighContrastLargePrintInverse/48x48/apps/star.png
