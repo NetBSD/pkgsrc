@@ -1,0 +1,2 @@
+Tie::Array::AsHash uses some practical extracting code so
+arrays can be tied to hashes.
