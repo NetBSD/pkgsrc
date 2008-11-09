@@ -1,0 +1,6 @@
+This module is a subclass of Pod::PlainText which provides additional POD
+markup for generating README files.
+Why should one bother with this? One can simply use
+  pod2text Module.pm > README
+A problem with doing that is that the default pod2text converter will add text
+to links, so that "L<Module>" is translated to "the Module manpage"...
