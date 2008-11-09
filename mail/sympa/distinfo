@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2008/04/27 17:06:40 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2008/11/09 16:15:47 bouyer Exp $
 
-SHA1 (sympa-5.4.2.tar.gz) = 80b3de57b1809049f9a6772a0ca153c5eafef282
-RMD160 (sympa-5.4.2.tar.gz) = 7e9525e469d2611553418e6664a784067661eeb1
-Size (sympa-5.4.2.tar.gz) = 5513067 bytes
+SHA1 (sympa-5.4.3.tar.gz) = 0ca96daedb8a06782b65a6d91fe9ff56b3aa34fa
+RMD160 (sympa-5.4.3.tar.gz) = 899a7e6d7d59986379a6a0a4794f1fb671006695
+Size (sympa-5.4.3.tar.gz) = 5561253 bytes
 SHA1 (patch-aa) = 8db2096214d667d5bada0ffb97994be9e0891547
 SHA1 (patch-ab) = 404ce642a733ef7922f58613c56f449f75641a9a
 SHA1 (patch-ac) = 77802bab188da024c18810c07bf62064b28e3af1
