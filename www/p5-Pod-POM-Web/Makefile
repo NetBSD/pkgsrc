@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/09 13:46:27 seb Exp $
 
-DISTNAME=	Pod-POM-Web-1.09
+DISTNAME=	Pod-POM-Web-1.10
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 
@@ -15,9 +14,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Pod/POM/Web/.packlist
 
-DEPENDS+=	p5-Alien-GvaScript-[0-9]*:../../www/p5-Alien-GvaScript
+DEPENDS+=	p5-Alien-GvaScript>=1.1:../../www/p5-Alien-GvaScript
 DEPENDS+=	p5-Encode-[0-9]*:../../textproc/p5-Encode
 DEPENDS+=	p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
+DEPENDS+=	p5-MIME-Types-[0-9]*:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Module-CoreList-[0-9]*:../../devel/p5-Module-CoreList
 DEPENDS+=	p5-Pod-POM>=0.17:../../textproc/p5-Pod-POM
 DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
