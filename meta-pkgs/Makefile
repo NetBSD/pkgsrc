@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/11/08 18:46:53 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2008/11/09 10:41:42 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -9,6 +9,8 @@ SUBDIR+=	courier
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gnome
 SUBDIR+=	gnome-admin
+SUBDIR+=	gnome-bindings-c++
+SUBDIR+=	gnome-bindings-mono
 SUBDIR+=	gnome-devtools
 SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
@@ -23,10 +25,12 @@ SUBDIR+=	modular-xorg-libs
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
+SUBDIR+=	p5-gnome-bindings
 SUBDIR+=	php4-extensions
 SUBDIR+=	php5-extensions
 SUBDIR+=	pkg_developer
 SUBDIR+=	pkgsrc-guide-tools
+SUBDIR+=	py-gnome-bindings
 SUBDIR+=	ruby-gnome2
 SUBDIR+=	suse100
 SUBDIR+=	web-server
