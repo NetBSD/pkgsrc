@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1071 2008/11/05 15:41:50 wiz Exp $
+# $NetBSD: Makefile,v 1.1072 2008/11/09 12:51:57 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -772,6 +772,7 @@ SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Test-YAML-Meta
 SUBDIR+=	p5-Test-YAML-Valid
 SUBDIR+=	p5-Test-use-ok
+SUBDIR+=	p5-Tie-Array-AsHash
 SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tie-File
 SUBDIR+=	p5-Tie-IxHash
