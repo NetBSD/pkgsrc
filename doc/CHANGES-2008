@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2924 2008/11/09 20:09:25 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2925 2008/11/09 20:15:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4940,3 +4940,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bison to 2.4nb2 [tron 2008-11-09]
 	Updated mail/sympa to 5.4.3 [bouyer 2008-11-09]
 	Updated devel/bugzilla to 2.22.6 [adrianp 2008-11-09]
+	Updated devel/bugzilla3 to 3.0.6 [adrianp 2008-11-09]
