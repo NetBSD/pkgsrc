@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7679 2008/11/08 12:59:12 wiz Exp $
+$NetBSD: TODO,v 1.7680 2008/11/09 05:20:35 bjs Exp $
 
 Suggested new packages
 ======================
@@ -939,7 +939,6 @@ Suggested package updates
 	o pari-galdata-2.2 [pkg/38117]
 	o parpd-1.1 [pkg/39789]
 	o parrot-0.8.0
-	o patchutils-0.3.0
 	o pcal-4.8
 	o pcmanfm-0.5
 	o pdmenu-1.2.87
