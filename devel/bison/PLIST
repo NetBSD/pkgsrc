@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/11/07 12:32:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/11/09 14:28:17 tron Exp $
 bin/bison
 info/bison.info
 lib/liby.a
@@ -25,6 +25,51 @@ share/bison/xslt/xml2dot.xsl
 share/bison/xslt/xml2text.xsl
 share/bison/xslt/xml2xhtml.xsl
 share/bison/yacc.c
+share/locale/da/LC_MESSAGES/bison-runtime.mo
+share/locale/da/LC_MESSAGES/bison.mo
+share/locale/de/LC_MESSAGES/bison-runtime.mo
+share/locale/de/LC_MESSAGES/bison.mo
+share/locale/el/LC_MESSAGES/bison.mo
+share/locale/es/LC_MESSAGES/bison-runtime.mo
+share/locale/es/LC_MESSAGES/bison.mo
+share/locale/et/LC_MESSAGES/bison-runtime.mo
+share/locale/et/LC_MESSAGES/bison.mo
+share/locale/fr/LC_MESSAGES/bison-runtime.mo
+share/locale/fr/LC_MESSAGES/bison.mo
+share/locale/ga/LC_MESSAGES/bison-runtime.mo
+share/locale/ga/LC_MESSAGES/bison.mo
+share/locale/hr/LC_MESSAGES/bison-runtime.mo
+share/locale/hr/LC_MESSAGES/bison.mo
+share/locale/id/LC_MESSAGES/bison-runtime.mo
+share/locale/id/LC_MESSAGES/bison.mo
+share/locale/it/LC_MESSAGES/bison-runtime.mo
+share/locale/it/LC_MESSAGES/bison.mo
+share/locale/ja/LC_MESSAGES/bison-runtime.mo
+share/locale/ja/LC_MESSAGES/bison.mo
+share/locale/ms/LC_MESSAGES/bison-runtime.mo
+share/locale/ms/LC_MESSAGES/bison.mo
+share/locale/nb/LC_MESSAGES/bison-runtime.mo
+share/locale/nb/LC_MESSAGES/bison.mo
+share/locale/nl/LC_MESSAGES/bison-runtime.mo
+share/locale/nl/LC_MESSAGES/bison.mo
+share/locale/pl/LC_MESSAGES/bison-runtime.mo
+share/locale/pl/LC_MESSAGES/bison.mo
+share/locale/pt_BR/LC_MESSAGES/bison-runtime.mo
+share/locale/pt_BR/LC_MESSAGES/bison.mo
+share/locale/ro/LC_MESSAGES/bison-runtime.mo
+share/locale/ro/LC_MESSAGES/bison.mo
+share/locale/ru/LC_MESSAGES/bison-runtime.mo
+share/locale/ru/LC_MESSAGES/bison.mo
+share/locale/sl/LC_MESSAGES/bison-runtime.mo
+share/locale/sv/LC_MESSAGES/bison-runtime.mo
+share/locale/sv/LC_MESSAGES/bison.mo
+share/locale/tr/LC_MESSAGES/bison-runtime.mo
+share/locale/tr/LC_MESSAGES/bison.mo
+share/locale/uk/LC_MESSAGES/bison.mo
+share/locale/vi/LC_MESSAGES/bison-runtime.mo
+share/locale/vi/LC_MESSAGES/bison.mo
+share/locale/zh_TW/LC_MESSAGES/bison-runtime.mo
+share/locale/zh_TW/LC_MESSAGES/bison.mo
 @dirrm share/bison/xslt
 @dirrm share/bison/m4sugar
 @dirrm share/bison
