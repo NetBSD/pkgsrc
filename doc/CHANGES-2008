@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2918 2008/11/09 12:50:29 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2919 2008/11/09 13:06:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4933,3 +4933,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added meta-pkgs/p5-gnome-bindings version 2.24.0.90 [wiz 2008-11-09]
 	Added meta-pkgs/py-gnome-bindings version 2.24.1 [wiz 2008-11-09]
 	Added devel/p5-Tie-Array-AsHash version 0.10 [obache 2008-11-09]
+	Added textproc/p5-Pod-Readme version 0.09 [obache 2008-11-09]
