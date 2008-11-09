@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/10/19 19:18:20 he Exp $
+# $NetBSD: Makefile,v 1.34 2008/11/09 16:15:47 bouyer Exp $
 #
 
 DISTNAME=	sympa-5.4.2
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old

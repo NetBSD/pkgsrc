@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/27 17:06:40 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/11/09 16:15:47 bouyer Exp $
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
@@ -470,3 +470,5 @@ sympa/static_content/icons/unknown.png
 @dirrm share/doc/sympa
 @dirrm share/examples/sympa/sample-list
 @dirrm share/examples/sympa
+
+
