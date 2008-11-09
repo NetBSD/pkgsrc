@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2916 2008/11/09 05:20:17 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2917 2008/11/09 10:43:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4928,3 +4928,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/xine-lib to 1.1.15nb2 [bjs 2008-11-08]
 	Updated net/p5-Net-OpenID-Consumer to 1.02 [heinz 2008-11-08]
 	Updated devel/patchutils to 0.3.0 [bjs 2008-11-09]
+	Added meta-pkgs/gnome-bindings-c++ version 2.24.0.90 [wiz 2008-11-09]
+	Added meta-pkgs/gnome-bindings-mono version 2.24.1 [wiz 2008-11-09]
+	Added meta-pkgs/p5-gnome-bindings version 2.24.0.90 [wiz 2008-11-09]
+	Added meta-pkgs/py-gnome-bindings version 2.24.1 [wiz 2008-11-09]
