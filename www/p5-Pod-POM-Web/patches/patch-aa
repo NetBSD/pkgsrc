@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/11/09 13:46:27 seb Exp $
+
+Fix POD formatting.
+
+--- lib/Pod/POM/Web.pm.orig	2008-11-07 21:04:33.000000000 +0000
++++ lib/Pod/POM/Web.pm
+@@ -3,6 +3,8 @@
+   MSIE : click on TOC entry jumps and then jumps back to TOC (timeout handler)
+   Firefox: kb navigation does not scroll properly
+ 
++=end BUGS
++
+ =cut
+ 
+ 
