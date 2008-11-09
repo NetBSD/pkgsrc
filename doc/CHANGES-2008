@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2921 2008/11/09 13:48:46 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2922 2008/11/09 14:28:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4937,3 +4937,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-Pod-Spell version 1.01 [obache 2008-11-09]
 	Updated www/p5-Alien-GvaScript to 1.10 [seb 2008-11-09]
 	Updated www/p5-Pod-POM-Web to 1.10 [seb 2008-11-09]
+	Updated devel/bison to 2.4nb2 [tron 2008-11-09]
