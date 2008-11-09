@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2920 2008/11/09 13:29:10 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2921 2008/11/09 13:48:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4935,3 +4935,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Tie-Array-AsHash version 0.10 [obache 2008-11-09]
 	Added textproc/p5-Pod-Readme version 0.09 [obache 2008-11-09]
 	Added textproc/p5-Pod-Spell version 1.01 [obache 2008-11-09]
+	Updated www/p5-Alien-GvaScript to 1.10 [seb 2008-11-09]
+	Updated www/p5-Pod-POM-Web to 1.10 [seb 2008-11-09]
