@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.443 2008/11/09 13:07:05 obache Exp $
+# $NetBSD: Makefile,v 1.444 2008/11/09 13:29:44 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -212,6 +212,7 @@ SUBDIR+=	p5-Pod-Escapes
 SUBDIR+=	p5-Pod-POM
 SUBDIR+=	p5-Pod-Readme
 SUBDIR+=	p5-Pod-Simple
+SUBDIR+=	p5-Pod-Spell
 SUBDIR+=	p5-Pod-Strip
 SUBDIR+=	p5-Pod-Tests
 SUBDIR+=	p5-Pod-Tree
