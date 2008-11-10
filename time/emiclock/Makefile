@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/10 17:21:38 wiz Exp $
 #
 
 DISTNAME=	emiclock-2.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 time
 MASTER_SITES=	ftp://ftp.koba.jp/pub/EmiClock/X11/
 

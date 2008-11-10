@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2008/01/19 09:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/11/10 17:21:35 wiz Exp $
 #
 
 DISTNAME=		xbill-2.0
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=games/}
 EXTRACT_SUFX=		.tgz

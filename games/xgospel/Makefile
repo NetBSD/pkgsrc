@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2006/12/15 20:32:56 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/11/10 17:21:35 wiz Exp $
 #
 
 DISTNAME=	xgospel-1.12d
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	http://gailly.net/
 

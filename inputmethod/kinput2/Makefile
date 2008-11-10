@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/11/10 05:06:45 taca Exp $
+# $NetBSD: Makefile,v 1.18 2008/11/10 17:21:36 wiz Exp $
 
 DISTNAME=	kinput2-v3
 PKGNAME=	kinput2-3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	japanese inputmethod
 MASTER_SITES=	ftp://ftp.sra.co.jp/pub/x11/kinput2/version-3/
 

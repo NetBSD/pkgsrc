@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/12/27 13:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/10 17:21:38 wiz Exp $
 #
 
 DISTNAME=		xchrono
 PKGNAME=		xchrono-19900813
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		time x11
 MASTER_SITES=		http://www.mit.edu/afs/athena/contrib/softbone/source/src/xchrono/
 EXTRACT_SUFX=		.shar

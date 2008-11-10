@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:37 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:38 wiz Exp $
 #
 
 DISTNAME=	xdu-3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://sd.wareonearth.com/~phil/xdu/
 PATCH_SITES=	http://www.nn.iij4u.or.jp/~tutimura/xdu/

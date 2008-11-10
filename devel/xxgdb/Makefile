@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/04/14 23:31:29 rh Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/10 17:21:34 wiz Exp $
 #
 
 DISTNAME=	xxgdb-1.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 

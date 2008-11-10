@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/09/12 20:02:17 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2008/11/10 17:21:38 wiz Exp $
 #
 
 DISTNAME=		titrax-1.98
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 time
 MASTER_SITES=		${MASTER_SITE_XCONTRIB:=office/}
 
