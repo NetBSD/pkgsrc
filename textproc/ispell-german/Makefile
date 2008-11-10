@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:47 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/10 18:15:05 wiz Exp $
 #
 
-DISTNAME=	igerman98-20030222
-PKGNAME=	ispell-german-20030222
-PKGREVISION=	1
+DISTNAME=	igerman98-20081106
+PKGNAME=	ispell-german-20081106
 CATEGORIES=	textproc
 MASTER_SITES=	http://j3e.de/ispell/igerman98/dict/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,7 @@ COMMENT=	German dictionary for interactive spelling checker
 
 DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
 
-BUILD_TARGET=	german.hash
+BUILD_TARGET=	ispell/de_DE.aff ispell/de_DE.hash ispell/de_AT.aff ispell/de_AT.hash ispell/de_CH.aff ispell/de_CH.hash
 USE_TOOLS+=	gmake perl
 REPLACE_PERL=	bin/dic2iso.pl bin/grepl bin/sq.pl bin/myspellfixprefix.pl \
 		bin/clear_affix.pl bin/unsq.pl bin/uniqflag.pl
@@ -22,11 +21,7 @@ REPLACE_PERL=	bin/dic2iso.pl bin/grepl bin/sq.pl bin/myspellfixprefix.pl \
 INSTALLATION_DIRS=	lib
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/german.aff ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/german.hash ${PREFIX}/lib
-	(cd ${PREFIX}/lib && ${LN} -s german.aff deutsch.aff)
-	(cd ${PREFIX}/lib && ${LN} -s german.hash deutsch.hash)
-	(cd ${PREFIX}/lib && ${LN} -s german.aff ngerman.aff)
-	(cd ${PREFIX}/lib && ${LN} -s german.hash ngerman.hash)
+	${INSTALL_DATA} ${WRKSRC}/ispell/*.aff ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/ispell/*.hash ${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
