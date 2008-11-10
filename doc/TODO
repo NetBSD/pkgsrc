@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7685 2008/11/10 11:25:16 obache Exp $
+$NetBSD: TODO,v 1.7686 2008/11/10 15:55:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,8 +409,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o auctex-11.85
-	o audacious-1.5.1
-	o audacious-plugins-1.5.1
 	o autoconvert-0.3.16
 	o avcheck-0.91
 	o avidemux-2.4.2
@@ -767,7 +765,6 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmcs-0.7
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -835,7 +832,6 @@ Suggested package updates
 	o mono-addins-0.4
 	o monodevelop-1.9
 	o moon-buggy-1.0.51
-	o mowgli-0.7.0
 	o mp3blaster-3.2.3
 	o mp3splt-gtk-0.5.1 [schmonz]
 	o mpeg4ip-1.6.1
