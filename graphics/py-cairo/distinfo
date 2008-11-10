@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/03/12 20:54:52 drochner Exp $
+$NetBSD: distinfo,v 1.6 2008/11/10 22:10:08 wiz Exp $
 
-SHA1 (pycairo-1.4.12.tar.gz) = 580255db6f3ab4c44ac44dfe0a9f7d1f598c2ab3
-RMD160 (pycairo-1.4.12.tar.gz) = f44bb6bcc6b366568e0297689164537dc891b278
-Size (pycairo-1.4.12.tar.gz) = 490053 bytes
+SHA1 (pycairo-1.6.4.tar.gz) = d3b3ecb6e999cc7b4a6ebcad00ae8d82c253c21c
+RMD160 (pycairo-1.6.4.tar.gz) = 6197427df3d10b708847503f975670e3d02d57e5
+Size (pycairo-1.6.4.tar.gz) = 491984 bytes
