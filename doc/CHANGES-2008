@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2934 2008/11/10 12:06:26 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2935 2008/11/10 16:08:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4950,3 +4950,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/py-gstreamer0.10 to 0.10.13nb1 [obache 2008-11-10]
 	Updated audio/audacious to 1.5.1 [wiz 2008-11-10]
 	Updated audio/audacious-plugins to 1.5.1 [wiz 2008-11-10]
+	Updated devel/cmake-mode to 20080606 [wiz 2008-11-10]
