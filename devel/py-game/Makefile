@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/10 23:10:34 wiz Exp $
 #
 
-DISTNAME=		pygame-1.7.1release
-PKGNAME=		${PYPKGPREFIX}-game-1.7.1
-PKGREVISION=		4
+DISTNAME=		pygame-1.8.1release
+PKGNAME=		${PYPKGPREFIX}-game-1.8.1
 CATEGORIES=		devel
 MASTER_SITES=		http://pygame.org/ftp/
 
