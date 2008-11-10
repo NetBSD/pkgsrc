@@ -1,14 +1,41 @@
-$NetBSD: patch-ab,v 1.1 2006/07/22 13:11:28 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/10 23:01:38 wiz Exp $
 
---- xmlto.in.orig	2004-01-02 13:03:24.000000000 +0100
-+++ xmlto.in	2006-07-22 15:06:09.000000000 +0200
-@@ -321,8 +321,8 @@ if [ "$SKIP_VALIDATION" -eq 0 ] && [ "$S
+--- xmlto.in.orig	2008-05-30 13:41:31.000000000 +0000
++++ xmlto.in
+@@ -97,7 +97,7 @@ XSLTOPTS=
+ SEARCHPATH=
+ 
+ # Try to setup papersize using libpaper first ...
+-if [ -x /usr/bin/paperconf ]
++if (type paperconf 1>/dev/null 2>&1)
+ then
+   papername=`paperconf -n`
+   paperheight=`paperconf -mh | sed 's/ //g'`
+@@ -128,7 +128,7 @@ EOF
+   fi
+ 
+ # ... or use magic paper size, based on LC_PAPER
+-elif [ -x /usr/bin/locale ]
++elif (type locale 1>/dev/null 2>&1)
+ then
+   # For paper sizes we know about, specify them.
+   h=$(locale LC_PAPER 2>/dev/null | head -n 1)
+@@ -151,7 +151,7 @@ EOF
+ fi
+ 
+ # Magic encoding, based on locale
+-if [ -x /usr/bin/locale ]
++if (type locale 1>/dev/null 2>&1)
+ then
+   charmap=$(locale charmap 2>/dev/null)
+ 
+@@ -427,8 +427,8 @@ if [ "$SKIP_VALIDATION" -eq 0 ] && [ "$S
  then
    VALIDATION="${XSLT_PROCESSED_DIR}/validation-errors"
    [ "$VERBOSE" -ge 1 ] && \
--    echo >&2 "xmllint >/dev/null --xinclude --postvalid $INPUT_FILE"
+-    echo >&2 "xmllint >/dev/null --xinclude --postvalid \"$INPUT_FILE\""
 -  xmllint >/dev/null --xinclude --postvalid "$INPUT_FILE" 2>"${VALIDATION}"
-+    echo >&2 "xmllint >/dev/null --nonet --xinclude --postvalid $INPUT_FILE"
++    echo >&2 "xmllint >/dev/null --nonet --xinclude --postvalid \"$INPUT_FILE\""
 +  xmllint >/dev/null --nonet --xinclude --postvalid "$INPUT_FILE" 2>"${VALIDATION}"
    xmllint_status=$?
    if [ $xmllint_status -ne 0 ]
