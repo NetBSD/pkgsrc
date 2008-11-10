@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/28 19:43:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/10 11:58:40 obache Exp $
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
 ${PYSITELIB}/gst-0.10/gst/__init__.pyc
@@ -29,6 +29,7 @@ ${PYSITELIB}/gst-0.10/gst/interfaces.la
 ${PYSITELIB}/gst-0.10/gst/pbutils.la
 ${PYSITELIB}/pygst.pth
 ${PYSITELIB}/pygst.py
+${PYSITELIB}/gstoption.la
 share/gst-python/0.10/defs/base.defs
 share/gst-python/0.10/defs/gst-extrafuncs.defs
 share/gst-python/0.10/defs/gst-types.defs
