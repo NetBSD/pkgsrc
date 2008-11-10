@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2959 2008/11/10 23:01:50 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2960 2008/11/10 23:10:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4982,3 +4982,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.07 [rhaen 2008-11-10]
 	Updated www/p5-Catalyst-Runtime to 5.7015 [rhaen 2008-11-10]
 	Updated textproc/xmlto to 0.0.21 [wiz 2008-11-10]
+	Updated devel/py-game to 1.8.1 [wiz 2008-11-10]
