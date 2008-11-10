@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:07 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/10 22:51:47 rhaen Exp $
 
-DISTNAME=	Catalyst-Runtime-5.7014
+DISTNAME=	Catalyst-Runtime-5.7015
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MR/MRAMBERG/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://www.catalystframework.org/
 COMMENT=	The Elegant MVC Web Application Framework
 
@@ -36,9 +35,7 @@ BUILD_DEPENDS+=	p5-Test-MockObject>=0:../../devel/p5-Test-MockObject
 BUILD_DEPENDS+=	p5-Test-NoWarnings>=0.082:../../devel/p5-Test-NoWarnings
 
 MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
-USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
