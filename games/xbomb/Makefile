@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/10 17:21:35 wiz Exp $
 
 DISTNAME=	xbomb-2.1a
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.gedanken.demon.co.uk/download-xbomb/
 EXTRACT_SUFX=	.tgz

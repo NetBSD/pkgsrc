@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/06/11 19:43:38 bouyer Exp $
+# $NetBSD: Makefile,v 1.16 2008/11/10 17:21:34 wiz Exp $
 #
 
 DISTNAME=	xtel-3.3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	comms x11
 MASTER_SITES=	http://pficheux.free.fr/xtel/download/
 

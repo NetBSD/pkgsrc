@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/10 17:21:35 wiz Exp $
 
 DISTNAME=	spider
 PKGNAME=	spider-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	ftp://ftp.uni-koeln.de/windows/xcontrib/
 

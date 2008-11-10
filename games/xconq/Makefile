@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2007/04/16 18:47:19 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/11/10 17:21:35 wiz Exp $
 
 DISTNAME=		xconq-7.4.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games x11
 MASTER_SITES=		ftp://sources.redhat.com/pub/xconq/
 

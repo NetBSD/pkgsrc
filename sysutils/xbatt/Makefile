@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2008/03/06 17:24:23 hubertf Exp $
+# $NetBSD: Makefile,v 1.25 2008/11/10 17:21:38 wiz Exp $
 #
 
 DISTNAME=	xbatt-1.3pr1
 PKGNAME=	xbatt-1.3.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www2.clave.gr.jp/~eto/xbatt/
 

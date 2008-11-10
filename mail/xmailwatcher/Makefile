@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/03/17 11:49:50 obache Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/10 17:21:37 wiz Exp $
 
 DISTNAME=		xmailwatcher
 PKGNAME=		${DISTNAME}-1.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.dcs.ed.ac.uk/home/gdmr/X11/
 
