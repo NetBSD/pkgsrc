@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 21:12:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 17:21:06 wiz Exp $
 include/X11/Xaw/AllWidgets.h
 include/X11/Xaw/AsciiSink.h
 include/X11/Xaw/AsciiSinkP.h
@@ -33,8 +33,6 @@ include/X11/Xaw/Panner.h
 include/X11/Xaw/PannerP.h
 include/X11/Xaw/Porthole.h
 include/X11/Xaw/PortholeP.h
-include/X11/Xaw/Print.h
-include/X11/Xaw/PrintSP.h
 include/X11/Xaw/Repeater.h
 include/X11/Xaw/RepeaterP.h
 include/X11/Xaw/Reports.h
@@ -74,11 +72,8 @@ include/X11/Xaw/XawImP.h
 include/X11/Xaw/XawInit.h
 lib/libXaw6.la
 lib/libXaw7.la
-lib/libXaw8.la
 lib/pkgconfig/xaw6.pc
 lib/pkgconfig/xaw7.pc
-lib/pkgconfig/xaw8.pc
-share/aclocal/xaw.m4
 man/man3/Xaw.3
 @dirrm include/X11/Xaw
 @comment @dirrm include/X11

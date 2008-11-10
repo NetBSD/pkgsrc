@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/11/10 17:21:06 wiz Exp $
 #
 
-DISTNAME=		libXaw-1.0.4
-PKGREVISION=		1
+DISTNAME=		libXaw-1.0.5
 CATEGORIES=		graphics x11
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +16,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE+=	xaw6.pc.in
 PKGCONFIG_OVERRIDE+=	xaw7.pc.in
-PKGCONFIG_OVERRIDE+=	xaw8.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
@@ -26,7 +24,6 @@ CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
