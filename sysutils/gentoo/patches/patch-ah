@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2006/08/30 16:26:58 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2008/11/10 14:56:16 adam Exp $
 
---- src/dirpane.c.orig	2006-08-30 15:45:45.000000000 +0000
+--- src/dirpane.c.orig	2008-07-07 20:09:22.000000000 +0200
 +++ src/dirpane.c
-@@ -1394,7 +1394,7 @@ static void update_fs_info(DirPane *dp)
+@@ -1393,7 +1393,7 @@ static void update_fs_info(DirPane *dp)
  {
  	gint	old_errno = errno;
  
