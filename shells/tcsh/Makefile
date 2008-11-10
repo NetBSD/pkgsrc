@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2008/06/23 21:09:43 markd Exp $
-#
+# $NetBSD: Makefile,v 1.65 2008/11/10 09:45:43 adam Exp $
 
-DISTNAME=	tcsh-6.15.00
-PKGREVISION=	2
+DISTNAME=	tcsh-6.16.00
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.gw.com/pub/unix/tcsh/ \
@@ -35,9 +33,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-install:
 	@${ECHO} "Installing message catalogues"
-	cp ${PKGDIR:Q}/PLIST ${PLIST_SRC:Q}
+	cp ${PKGDIR}/PLIST ${PLIST_SRC}
 	set -e;							\
-	if [ -f ${WRKSRC:Q}/tcsh.C.cat ];				\
+	if [ -f ${WRKSRC}/tcsh.C.cat ];				\
 	then								\
 	    [ -d ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C ] ||		\
 		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/${NLSDIR:Q}/C;\
