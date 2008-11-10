@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/16 10:38:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/10 11:36:05 wiz Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -77,5 +77,5 @@ post-install:
 		${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/atheme/
 .	endfor
 
-.include "../../devel/mowgli/buildlink3.mk"
+.include "../../devel/libmowgli/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
