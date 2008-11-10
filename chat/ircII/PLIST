@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2006/07/26 02:21:35 mrg Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/11/10 19:25:27 wiz Exp $
 bin/irc
 bin/irc-${VERS}
 bin/ircbug
@@ -349,7 +349,6 @@ share/irc/help/set/dccport${GZSUFFIX}
 share/irc/help/set/debug${GZSUFFIX}
 share/irc/help/set/decrypt_program${GZSUFFIX}
 share/irc/help/set/display${GZSUFFIX}
-share/irc/help/set/display_encoding${GZSUFFIX}
 share/irc/help/set/eight_bit_characters${GZSUFFIX}
 share/irc/help/set/encrypt_program${GZSUFFIX}
 share/irc/help/set/exec_protection${GZSUFFIX}
@@ -372,12 +371,10 @@ share/irc/help/set/hold_mode${GZSUFFIX}
 share/irc/help/set/hold_mode_max${GZSUFFIX}
 share/irc/help/set/indent${GZSUFFIX}
 share/irc/help/set/input_aliases${GZSUFFIX}
-share/irc/help/set/input_encoding${GZSUFFIX}
 share/irc/help/set/input_prompt${GZSUFFIX}
 share/irc/help/set/input_protection${GZSUFFIX}
 share/irc/help/set/insert_mode${GZSUFFIX}
 share/irc/help/set/inverse_video${GZSUFFIX}
-share/irc/help/set/irc_encoding${GZSUFFIX}
 share/irc/help/set/irchost${GZSUFFIX}
 share/irc/help/set/lastlog${GZSUFFIX}
 share/irc/help/set/lastlog_level${GZSUFFIX}
@@ -438,6 +435,7 @@ share/irc/help/set/status_window${GZSUFFIX}
 share/irc/help/set/suppress_server_motd${GZSUFFIX}
 share/irc/help/set/tab${GZSUFFIX}
 share/irc/help/set/tab_max${GZSUFFIX}
+share/irc/help/set/translation${GZSUFFIX}
 share/irc/help/set/underline_video${GZSUFFIX}
 share/irc/help/set/user_information${GZSUFFIX}
 share/irc/help/set/user_wallops${GZSUFFIX}
