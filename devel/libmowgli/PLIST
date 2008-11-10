@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/10 11:34:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 12:08:17 wiz Exp $
 include/libmowgli/mowgli.h
 include/libmowgli/mowgli_alloc.h
 include/libmowgli/mowgli_allocation_policy.h
@@ -26,6 +26,7 @@ include/libmowgli/mowgli_object.h
 include/libmowgli/mowgli_object_class.h
 include/libmowgli/mowgli_object_messaging.h
 include/libmowgli/mowgli_object_metadata.h
+include/libmowgli/mowgli_patricia.h
 include/libmowgli/mowgli_queue.h
 include/libmowgli/mowgli_random.h
 include/libmowgli/mowgli_signal.h
@@ -33,7 +34,7 @@ include/libmowgli/mowgli_spinlock.h
 include/libmowgli/mowgli_stdinc.h
 include/libmowgli/mowgli_string.h
 lib/libmowgli.so
-lib/libmowgli.so.1
-lib/libmowgli.so.1.0.0
+lib/libmowgli.so.2
+lib/libmowgli.so.2.0.0
 lib/pkgconfig/libmowgli.pc
 @dirrm include/libmowgli
