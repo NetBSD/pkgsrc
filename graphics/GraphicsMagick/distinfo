@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2008/07/26 06:59:18 obache Exp $
+$NetBSD: distinfo,v 1.12 2008/11/10 11:24:27 obache Exp $
 
-SHA1 (GraphicsMagick-1.2.5.tar.gz) = 8d00059e12a00076c8cf99db524aed228e13be11
-RMD160 (GraphicsMagick-1.2.5.tar.gz) = 77186ba84b31e6dcabd1fbed1d059874a8bf86d8
-Size (GraphicsMagick-1.2.5.tar.gz) = 7119165 bytes
+SHA1 (GraphicsMagick-1.3.tar.gz) = 5a1de570defe39e11237e0997365caa76396cb87
+RMD160 (GraphicsMagick-1.3.tar.gz) = 98c024aae1f882cfa36856ff809e8355f6eee9e5
+Size (GraphicsMagick-1.3.tar.gz) = 9003206 bytes
