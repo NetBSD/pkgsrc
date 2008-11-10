@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2935 2008/11/10 16:08:28 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2936 2008/11/10 16:37:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4951,3 +4951,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/audacious to 1.5.1 [wiz 2008-11-10]
 	Updated audio/audacious-plugins to 1.5.1 [wiz 2008-11-10]
 	Updated devel/cmake-mode to 20080606 [wiz 2008-11-10]
+	Renamed meta-pkgs/gnome-bindings-c++ to meta-pkgs/c++-gnome-bindings [wiz 2008-11-10]
+	Renamed meta-pkgs/gnome-bindings-mono to meta-pkgs/mono-gnome-bindings [wiz 2008-11-10]
