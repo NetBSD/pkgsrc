@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/09 12:55:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/11/10 22:00:00 wiz Exp $
 bin/wesnoth
 man/ca_ES@valencia/man6/wesnoth.6
 man/cs/man6/wesnoth.6
 man/da/man6/wesnoth.6
 man/de/man6/wesnoth.6
 man/es/man6/wesnoth.6
+man/fi/man6/wesnoth.6
 man/fr/man6/wesnoth.6
 man/gl/man6/wesnoth.6
 man/hu/man6/wesnoth.6
@@ -35,6 +36,12 @@ share/doc/wesnoth/manual/images/fr/recruit.jpg
 share/doc/wesnoth/manual/images/fr/right_pane.jpg
 share/doc/wesnoth/manual/images/fr/top_pane.jpg
 share/doc/wesnoth/manual/images/game-screen.jpg
+share/doc/wesnoth/manual/images/gl/game-screen.jpg
+share/doc/wesnoth/manual/images/gl/main-menu.jpg
+share/doc/wesnoth/manual/images/gl/multiplayer.jpg
+share/doc/wesnoth/manual/images/gl/recruit.jpg
+share/doc/wesnoth/manual/images/gl/right_pane.jpg
+share/doc/wesnoth/manual/images/gl/top_pane.jpg
 share/doc/wesnoth/manual/images/hu/game-screen.jpg
 share/doc/wesnoth/manual/images/hu/main-menu.jpg
 share/doc/wesnoth/manual/images/hu/multiplayer.jpg
@@ -70,6 +77,7 @@ share/doc/wesnoth/manual/manual.de.html
 share/doc/wesnoth/manual/manual.en.html
 share/doc/wesnoth/manual/manual.es.html
 share/doc/wesnoth/manual/manual.et.html
+share/doc/wesnoth/manual/manual.fi.html
 share/doc/wesnoth/manual/manual.fr.html
 share/doc/wesnoth/manual/manual.gl.html
 share/doc/wesnoth/manual/manual.hu.html
@@ -2209,6 +2217,7 @@ share/wesnoth/data/core/images/portraits/Kitty/human-mage+female.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-arch+female.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-arch.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-light+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-light.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-red+female.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-red.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-silver+female.png
@@ -2217,6 +2226,7 @@ share/wesnoth/data/core/images/portraits/Kitty/human-mage-white+female.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage-white.png
 share/wesnoth/data/core/images/portraits/Kitty/human-mage.png
 share/wesnoth/data/core/images/portraits/Kitty/human-necromancer+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-necromancer.png
 share/wesnoth/data/core/images/portraits/Kitty/undead-lich.png
 share/wesnoth/data/core/images/portraits/Neoriceisgood/dwarvish_berzerker.png
 share/wesnoth/data/core/images/portraits/Neoriceisgood/orcish_grunt.png
@@ -2272,6 +2282,13 @@ share/wesnoth/data/core/images/projectiles/fire-burst-small-5.png
 share/wesnoth/data/core/images/projectiles/fire-burst-small-6.png
 share/wesnoth/data/core/images/projectiles/fire-burst-small-7.png
 share/wesnoth/data/core/images/projectiles/fire-burst-small-8.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-1.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-2.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-3.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-4.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-5.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-6.png
+share/wesnoth/data/core/images/projectiles/fireball-fail-7.png
 share/wesnoth/data/core/images/projectiles/fireball-impact-1.png
 share/wesnoth/data/core/images/projectiles/fireball-impact-10.png
 share/wesnoth/data/core/images/projectiles/fireball-impact-11.png
@@ -4217,6 +4234,15 @@ share/wesnoth/data/core/images/units/dwarves/stalwart-defend.png
 share/wesnoth/data/core/images/units/dwarves/stalwart.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-attack-mace.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-attack.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-1.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-2.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-3.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-4.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-5.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-6.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-7.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-8.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-axe-9.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-defend-1.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-defend.png
@@ -5085,6 +5111,11 @@ share/wesnoth/data/core/images/units/human-magi/arch-mage-attack-magic-2.png
 share/wesnoth/data/core/images/units/human-magi/arch-mage-attack-staff-1.png
 share/wesnoth/data/core/images/units/human-magi/arch-mage-attack-staff-2.png
 share/wesnoth/data/core/images/units/human-magi/arch-mage-defend.png
+share/wesnoth/data/core/images/units/human-magi/arch-mage-idle-1.png
+share/wesnoth/data/core/images/units/human-magi/arch-mage-idle-2.png
+share/wesnoth/data/core/images/units/human-magi/arch-mage-idle-3.png
+share/wesnoth/data/core/images/units/human-magi/arch-mage-idle-4.png
+share/wesnoth/data/core/images/units/human-magi/arch-mage-idle-5.png
 share/wesnoth/data/core/images/units/human-magi/arch-mage.png
 share/wesnoth/data/core/images/units/human-magi/great-mage+female-attack-magic-1.png
 share/wesnoth/data/core/images/units/human-magi/great-mage+female-attack-magic-2.png
@@ -5637,12 +5668,20 @@ share/wesnoth/data/core/images/units/nagas/fighter+female-attack.png
 share/wesnoth/data/core/images/units/nagas/fighter+female-defend.png
 share/wesnoth/data/core/images/units/nagas/fighter+female.png
 share/wesnoth/data/core/images/units/nagas/fighter-attack.png
+share/wesnoth/data/core/images/units/nagas/fighter-defend-1.png
+share/wesnoth/data/core/images/units/nagas/fighter-defend-2.png
 share/wesnoth/data/core/images/units/nagas/fighter-defend.png
 share/wesnoth/data/core/images/units/nagas/fighter-idle-1.png
 share/wesnoth/data/core/images/units/nagas/fighter-idle-2.png
 share/wesnoth/data/core/images/units/nagas/fighter-idle-3.png
 share/wesnoth/data/core/images/units/nagas/fighter-idle-4.png
 share/wesnoth/data/core/images/units/nagas/fighter-idle-5.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-1.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-2.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-3.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-4.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-5.png
+share/wesnoth/data/core/images/units/nagas/fighter-melee-6.png
 share/wesnoth/data/core/images/units/nagas/fighter.png
 share/wesnoth/data/core/images/units/nagas/myrmidon+female-attack.png
 share/wesnoth/data/core/images/units/nagas/myrmidon+female-defend.png
@@ -5737,6 +5776,15 @@ share/wesnoth/data/core/images/units/orcs/assassin-die-6.png
 share/wesnoth/data/core/images/units/orcs/assassin-die-7.png
 share/wesnoth/data/core/images/units/orcs/assassin-die-8.png
 share/wesnoth/data/core/images/units/orcs/assassin-die-9.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-1.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-2.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-3.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-4.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-5.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-6.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-7.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-8.png
+share/wesnoth/data/core/images/units/orcs/assassin-idle-9.png
 share/wesnoth/data/core/images/units/orcs/assassin-ranged1.png
 share/wesnoth/data/core/images/units/orcs/assassin-ranged2.png
 share/wesnoth/data/core/images/units/orcs/assassin.png
@@ -6089,6 +6137,11 @@ share/wesnoth/data/core/images/units/undead-skeletal/deathblade-dying-4.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathblade-dying-5.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathblade-dying-6.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathblade-dying-7.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathblade-idle-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathblade-idle-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathblade-idle-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathblade-idle-4.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathblade-idle-5.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathblade.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight-crossbow-attack1.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight-crossbow-attack2.png
@@ -6110,9 +6163,23 @@ share/wesnoth/data/core/images/units/undead-skeletal/draug-defend-2.png
 share/wesnoth/data/core/images/units/undead-skeletal/draug.png
 share/wesnoth/data/core/images/units/undead-skeletal/revenant-attack.png
 share/wesnoth/data/core/images/units/undead-skeletal/revenant-defend.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-4.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-5.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-6.png
+share/wesnoth/data/core/images/units/undead-skeletal/revenant-dying-7.png
 share/wesnoth/data/core/images/units/undead-skeletal/revenant.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack-4.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack-5.png
 share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attack.png
 share/wesnoth/data/core/images/units/undead-skeletal/skeleton-attackb.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-defend-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/skeleton-defend-2.png
 share/wesnoth/data/core/images/units/undead-skeletal/skeleton-defend.png
 share/wesnoth/data/core/images/units/undead-skeletal/skeleton-dying-1.png
 share/wesnoth/data/core/images/units/undead-skeletal/skeleton-dying-2.png
@@ -6254,9 +6321,11 @@ share/wesnoth/data/core/images/units/undead/soulless-saurian.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-attack-n.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-attack-s.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-attack.png
+share/wesnoth/data/core/images/units/undead/soulless-swimmer-defend.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-die-1.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-die-2.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer-die-3.png
+share/wesnoth/data/core/images/units/undead/soulless-swimmer-die-4.png
 share/wesnoth/data/core/images/units/undead/soulless-swimmer.png
 share/wesnoth/data/core/images/units/undead/soulless-troll-attack-n.png
 share/wesnoth/data/core/images/units/undead/soulless-troll-attack-s.png
@@ -6288,6 +6357,18 @@ share/wesnoth/data/core/images/units/undead/spectre.png
 share/wesnoth/data/core/images/units/undead/wraith-attack.png
 share/wesnoth/data/core/images/units/undead/wraith-attack1.png
 share/wesnoth/data/core/images/units/undead/wraith-defend.png
+share/wesnoth/data/core/images/units/undead/wraith-s-1.png
+share/wesnoth/data/core/images/units/undead/wraith-s-2.png
+share/wesnoth/data/core/images/units/undead/wraith-s-3.png
+share/wesnoth/data/core/images/units/undead/wraith-s-4.png
+share/wesnoth/data/core/images/units/undead/wraith-s-attack-1.png
+share/wesnoth/data/core/images/units/undead/wraith-s-attack-2.png
+share/wesnoth/data/core/images/units/undead/wraith-s-attack-3.png
+share/wesnoth/data/core/images/units/undead/wraith-s-attack-4.png
+share/wesnoth/data/core/images/units/undead/wraith-s-attack-5.png
+share/wesnoth/data/core/images/units/undead/wraith-s-defend-1.png
+share/wesnoth/data/core/images/units/undead/wraith-s-defend-2.png
+share/wesnoth/data/core/images/units/undead/wraith-s.png
 share/wesnoth/data/core/images/units/undead/wraith.png
 share/wesnoth/data/core/images/units/undead/zombie-attack-n.png
 share/wesnoth/data/core/images/units/undead/zombie-attack-s.png
@@ -6343,6 +6424,10 @@ share/wesnoth/data/core/images/units/undead/zombie-swimmer-attack-n.png
 share/wesnoth/data/core/images/units/undead/zombie-swimmer-attack-s.png
 share/wesnoth/data/core/images/units/undead/zombie-swimmer-attack.png
 share/wesnoth/data/core/images/units/undead/zombie-swimmer-defend.png
+share/wesnoth/data/core/images/units/undead/zombie-swimmer-die-1.png
+share/wesnoth/data/core/images/units/undead/zombie-swimmer-die-2.png
+share/wesnoth/data/core/images/units/undead/zombie-swimmer-die-3.png
+share/wesnoth/data/core/images/units/undead/zombie-swimmer-die-4.png
 share/wesnoth/data/core/images/units/undead/zombie-swimmer.png
 share/wesnoth/data/core/images/units/undead/zombie-troll-attack-n.png
 share/wesnoth/data/core/images/units/undead/zombie-troll-attack-s.png
@@ -8742,6 +8827,7 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/doc/wesnoth/manual/styles
 @dirrm share/doc/wesnoth/manual/images/tr
 @dirrm share/doc/wesnoth/manual/images/hu
+@dirrm share/doc/wesnoth/manual/images/gl
 @dirrm share/doc/wesnoth/manual/images/fr
 @dirrm share/doc/wesnoth/manual/images/de
 @dirrm share/doc/wesnoth/manual/images
