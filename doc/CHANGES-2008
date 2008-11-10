@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2958 2008/11/10 22:57:55 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2959 2008/11/10 23:01:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4981,3 +4981,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.10008 [rhaen 2008-11-10]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.07 [rhaen 2008-11-10]
 	Updated www/p5-Catalyst-Runtime to 5.7015 [rhaen 2008-11-10]
+	Updated textproc/xmlto to 0.0.21 [wiz 2008-11-10]
