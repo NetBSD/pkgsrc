@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7684 2008/11/10 10:39:54 obache Exp $
+$NetBSD: TODO,v 1.7685 2008/11/10 11:25:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -341,7 +341,6 @@ Suggested package updates
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
-	o GraphicsMagick-1.3
 	o GridSim-3.3
 	o MAMEDiff-2.29
 	o MesaLib-7.2
