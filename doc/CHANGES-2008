@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2940 2008/11/10 17:21:18 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2941 2008/11/10 17:33:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4957,3 +4957,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-LibXML to 1.68 [wiz 2008-11-10]
 	Updated textproc/p5-XML-LibXSLT to 1.68 [wiz 2008-11-10]
 	Updated x11/libXaw to 1.0.5 [wiz 2008-11-10]
+	Updated security/gnutls to 2.6.1 [wiz 2008-11-10]
