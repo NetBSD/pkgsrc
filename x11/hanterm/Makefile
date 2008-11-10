@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:15 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/11/10 17:21:38 wiz Exp $
 
 DISTNAME=	hanterm-3.1.6
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 korean
 MASTER_SITES=	http://download.kldp.net/hanterm/hanterm/3.1.6/
 

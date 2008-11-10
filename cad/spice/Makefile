@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2007/03/08 14:24:23 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/11/10 17:21:34 wiz Exp $
 
 DISTNAME=	sp3f4.kit
 PKGNAME=	spice-3f5.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	cad
 MASTER_SITES=	ftp://ic.eecs.berkeley.edu/pub/Spice3/
 EXTRACT_SUFX=	.tar.Z
