@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/20 09:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/10 11:35:33 wiz Exp $
 #
 
 DISTNAME=		audacious-1.5.0
@@ -33,7 +33,7 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libmcs/buildlink3.mk"
-.include "../../devel/mowgli/buildlink3.mk"
+.include "../../devel/libmowgli/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
