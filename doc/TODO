@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7682 2008/11/10 09:24:34 wiz Exp $
+$NetBSD: TODO,v 1.7683 2008/11/10 09:51:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -1190,7 +1190,6 @@ Suggested package updates
 	o tcpillust-1.00b
 	o tcpreplay-3.3.2
 	o tcpslice-1.2a3
-	o tcsh-6.16.00
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
