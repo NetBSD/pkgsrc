@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/07/14 12:56:06 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2008/11/10 05:06:45 taca Exp $
 
 DISTNAME=	xpaint-2.7.8.1
 PKGREVISION=	2
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_IMAKE=	yes
 USE_TOOLS+=		gmake
 MAKE_ENV+=		XMKMF=${XMKMF:Q}
+MAKE_JOBS_SAFE=		NO
 
 SUBST_CLASSES+=		foo
 SUBST_STAGE.foo=	pre-configure
