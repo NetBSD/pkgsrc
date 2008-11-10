@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/02/19 09:11:43 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/10 23:43:39 wiz Exp $
 bin/avidemux2_cli
 bin/avidemux2_gtk
 share/locale/ca/LC_MESSAGES/avidemux.mo
@@ -9,12 +9,8 @@ share/locale/es/LC_MESSAGES/avidemux.mo
 share/locale/fr/LC_MESSAGES/avidemux.mo
 share/locale/it/LC_MESSAGES/avidemux.mo
 share/locale/ja/LC_MESSAGES/avidemux.mo
-share/locale/klingon/LC_MESSAGES/avidemux.mo
 share/locale/pt_BR/LC_MESSAGES/avidemux.mo
 share/locale/ru/LC_MESSAGES/avidemux.mo
 share/locale/sr/LC_MESSAGES/avidemux.mo
 share/locale/sr@latin/LC_MESSAGES/avidemux.mo
 share/locale/tr/LC_MESSAGES/avidemux.mo
-@dirrm share/locale/sr@latin/LC_MESSAGES
-@dirrm share/locale/sr@latin
-@dirrm share/locale/klingon/LC_MESSAGES
