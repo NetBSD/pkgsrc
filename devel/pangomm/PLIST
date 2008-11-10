@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/16 18:01:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 19:47:54 wiz Exp $
 include/pangomm-1.4/pangomm.h
 include/pangomm-1.4/pangomm/attributes.h
 include/pangomm-1.4/pangomm/attriter.h
@@ -155,10 +155,10 @@ share/doc/pangomm-1.4/docs/reference/html/color_8h.html
 share/doc/pangomm-1.4/docs/reference/html/context_8h.html
 share/doc/pangomm-1.4/docs/reference/html/coverage_8h.html
 share/doc/pangomm-1.4/docs/reference/html/deprecated.html
-share/doc/pangomm-1.4/docs/reference/html/dir_7d21ecb926be72854a848286855f8631.html
-share/doc/pangomm-1.4/docs/reference/html/dir_7d21ecb926be72854a848286855f8631_dep.png
-share/doc/pangomm-1.4/docs/reference/html/dir_a27785a2abd55e4761a0af3046a7d61c.html
-share/doc/pangomm-1.4/docs/reference/html/dir_a27785a2abd55e4761a0af3046a7d61c_dep.png
+share/doc/pangomm-1.4/docs/reference/html/dir_77a866ddcf2cc43e24ab025953dddc43.html
+share/doc/pangomm-1.4/docs/reference/html/dir_77a866ddcf2cc43e24ab025953dddc43_dep.png
+share/doc/pangomm-1.4/docs/reference/html/dir_c48f21ace8cb253eb280942e813f2380.html
+share/doc/pangomm-1.4/docs/reference/html/dir_c48f21ace8cb253eb280942e813f2380_dep.png
 share/doc/pangomm-1.4/docs/reference/html/dirs.html
 share/doc/pangomm-1.4/docs/reference/html/doxygen.css
 share/doc/pangomm-1.4/docs/reference/html/doxygen.png

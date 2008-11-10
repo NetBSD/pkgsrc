@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/16 18:01:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2008/11/10 19:47:54 wiz Exp $
 
-SHA1 (pangomm-2.14.0.tar.bz2) = da6acdc8b4dc404d6c5bde648ac7d0eb4620c1b1
-RMD160 (pangomm-2.14.0.tar.bz2) = 37025760687871b4f37a5f0de2ac642d65269220
-Size (pangomm-2.14.0.tar.bz2) = 2010535 bytes
+SHA1 (pangomm-2.14.1.tar.bz2) = f439962a9e1d10ee3327cc1f393a43818f765fe3
+RMD160 (pangomm-2.14.1.tar.bz2) = 61e9c8688af762d9b859fc37d5390f7e02f70e5c
+Size (pangomm-2.14.1.tar.bz2) = 984848 bytes
