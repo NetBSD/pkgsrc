@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2927 2008/11/10 09:27:08 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2928 2008/11/10 09:51:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4943,3 +4943,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bugzilla3 to 3.0.6 [adrianp 2008-11-09]
 	Updated fonts/terminus-font to 4.28 [bjs 2008-11-09]
 	Updated graphics/digikam to 0.9.5beta1 [wiz 2008-11-10]
+	Updated shells/tcsh to 6.16.00 [adam 2008-11-10]
