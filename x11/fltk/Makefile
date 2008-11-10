@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.66 2008/11/10 19:03:15 adam Exp $
 
-DISTNAME=	fltk-1.1.7-source
+DISTNAME=	fltk-1.1.9-source
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
-PKGREVISION=	4
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
-		http://ftp.easysw.com/pub/fltk/${VERS}/ \
+MASTER_SITES=	http://ftp.easysw.com/pub/fltk/${VERS}/ \
 		http://mirror.nu6.org/ftp.easysw.com/pub/fltk/${VERS}/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/${VERS}/ \
 		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/fltk/${VERS}/
@@ -20,8 +18,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 TEST_TARGET=		test
 
 PTHREAD_OPTS+=		require

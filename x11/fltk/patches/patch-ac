@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2006/01/22 11:11:34 wiz Exp $
+$NetBSD: patch-ac,v 1.10 2008/11/10 19:03:15 adam Exp $
 
---- configure.orig	2006-01-18 02:30:52.000000000 +0000
+--- configure.orig	2008-04-27 10:28:21.000000000 +0200
 +++ configure
-@@ -856,6 +856,8 @@ Optional Features:
+@@ -1318,6 +1319,8 @@ Optional Features:
    --enable-debug          turn on debugging default=no
    --enable-gl             turn on OpenGL support default=yes
    --enable-shared         turn on shared libraries default=no
@@ -11,10 +11,10 @@ $NetBSD: patch-ac,v 1.9 2006/01/22 11:11:34 wiz Exp $
    --enable-threads        enable multi-threading support
    --enable-quartz         use Quartz instead of Quickdraw (default=no)
    --disable-largefile     omit support for large files
-@@ -1412,7 +1414,22 @@ if test "${enable_shared+set}" = set; th
-   enableval="$enable_shared"
+@@ -1870,7 +1873,22 @@ if test "${enable_shared+set}" = set; th
+   enableval=$enable_shared;
+ fi
  
- fi;
 -if test x$enable_shared = xyes; then
 +
 +# Check whether --enable-libtool or --disable-libtool was given.
@@ -35,7 +35,7 @@ $NetBSD: patch-ac,v 1.9 2006/01/22 11:11:34 wiz Exp $
      PICFLAG=1
      SHAREDSUFFIX=""
      FLUID="fluid-shared"
-@@ -1524,8 +1541,20 @@ else
+@@ -1990,8 +2008,20 @@ else
      LINKSHARED="../lib/libfltk_images.a ../lib/libfltk_forms.a ../lib/libfltk.a"
  fi
  
@@ -58,41 +58,3 @@ $NetBSD: patch-ac,v 1.9 2006/01/22 11:11:34 wiz Exp $
  
  
  
-@@ -11073,26 +11102,9 @@ esac
- 
- 
- 
--case "$uname" in
--    *BSD* | Darwin*)
--	# *BSD
--	CAT1EXT=0
--	CAT3EXT=0
--	CAT6EXT=0
--	;;
--    IRIX*)
--	# SGI IRIX
--	CAT1EXT=z
--	CAT3EXT=z
--	CAT6EXT=z
--	;;
--    *)
--	# All others
--	CAT1EXT=1
--	CAT3EXT=3
--	CAT6EXT=3
--	;;
--esac
-+CAT1EXT=1
-+CAT3EXT=3
-+CAT6EXT=6
- 
- 
- 
-@@ -12034,6 +12048,7 @@ s,@GLLIBNAME@,$GLLIBNAME,;t t
- s,@IMGLIBNAME@,$IMGLIBNAME,;t t
- s,@LIBEXT@,$LIBEXT,;t t
- s,@LIBNAME@,$LIBNAME,;t t
-+s,@LIBTOOL@,$LIBTOOL,;t t
- s,@LINKFLTK@,$LINKFLTK,;t t
- s,@LINKFLTKFORMS@,$LINKFLTKFORMS,;t t
- s,@LINKFLTKGL@,$LINKFLTKGL,;t t

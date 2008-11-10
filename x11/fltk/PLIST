@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/11/10 19:03:15 adam Exp $
 bin/fltk-config
 bin/fluid
 include/FL/Enumerations.H
@@ -137,6 +137,8 @@ include/FL/Fl_Preferences.H
 ${PLIST.cs}include/FL/Fl_Preferences.h
 include/FL/Fl_Progress.H
 ${PLIST.cs}include/FL/Fl_Progress.h
+include/FL/Fl_RGB_Image.H
+${PLIST.cs}include/FL/Fl_RGB_Image.h
 include/FL/Fl_Radio_Button.H
 ${PLIST.cs}include/FL/Fl_Radio_Button.h
 include/FL/Fl_Radio_Light_Button.H
@@ -234,12 +236,14 @@ include/FL/gl.h
 include/FL/gl2opengl.h
 include/FL/gl_draw.H
 ${PLIST.cs}include/FL/gl_draw.h
+include/FL/glu.h
 include/FL/glut.H
 ${PLIST.cs}include/FL/glut.h
 include/FL/mac.H
 ${PLIST.cs}include/FL/mac.h
 include/FL/mac.r
 include/FL/math.h
+include/FL/names.h
 include/FL/win32.H
 ${PLIST.cs}include/FL/win32.h
 include/FL/x.H
@@ -267,6 +271,7 @@ share/doc/fltk/Fl_Check_Button.gif
 share/doc/fltk/Fl_Check_Button.html
 share/doc/fltk/Fl_Choice.html
 share/doc/fltk/Fl_Clock.html
+share/doc/fltk/Fl_Clock_Output.html
 share/doc/fltk/Fl_Color_Chooser.html
 share/doc/fltk/Fl_Counter.html
 share/doc/fltk/Fl_Dial.html
@@ -337,6 +342,7 @@ share/doc/fltk/Fl_Tile.gif
 share/doc/fltk/Fl_Tile.html
 share/doc/fltk/Fl_Tiled_Image.html
 share/doc/fltk/Fl_Timer.html
+share/doc/fltk/Fl_Toggle_Button.html
 share/doc/fltk/Fl_Tooltip.html
 share/doc/fltk/Fl_Valuator.html
 share/doc/fltk/Fl_Value_Input.gif
@@ -350,6 +356,7 @@ share/doc/fltk/Fl_Wizard.html
 share/doc/fltk/Fl_XBM_Image.html
 share/doc/fltk/Fl_XPM_Image.html
 share/doc/fltk/adjuster1.gif
+share/doc/fltk/advanced.html
 share/doc/fltk/basics.html
 share/doc/fltk/boxtypes.gif
 share/doc/fltk/buttons.gif
@@ -366,6 +373,7 @@ share/doc/fltk/editor.gif
 share/doc/fltk/editor.html
 share/doc/fltk/enumerations.html
 share/doc/fltk/events.html
+share/doc/fltk/examples.html
 share/doc/fltk/fl_alert.gif
 share/doc/fltk/fl_ask.gif
 share/doc/fltk/fl_choice.gif

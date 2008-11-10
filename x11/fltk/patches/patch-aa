@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2006/01/22 11:11:34 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2008/11/10 19:03:15 adam Exp $
 
---- Makefile.orig	2006-01-15 19:36:16.000000000 +0100
+--- Makefile.orig	2007-11-20 22:15:08.000000000 +0100
 +++ Makefile
 @@ -27,7 +27,7 @@
  
@@ -9,10 +9,10 @@ $NetBSD: patch-aa,v 1.7 2006/01/22 11:11:34 wiz Exp $
 -DIRS	=	$(IMAGEDIRS) src fluid test documentation
 +DIRS	=	$(IMAGEDIRS) src fluid documentation
  
- all: makeinclude
+ all: makeinclude fltk-config
  	for dir in $(DIRS); do\
-@@ -35,6 +35,14 @@ all: makeinclude
- 		(cd $$dir; $(MAKE) $(MFLAGS)) || break;\
+@@ -35,6 +35,14 @@ all: makeinclude fltk-config
+ 		(cd $$dir; $(MAKE) $(MFLAGS)) || exit 1;\
  	done
  
 +test: makeinclude
