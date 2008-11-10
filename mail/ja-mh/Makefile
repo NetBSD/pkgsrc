@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/10 05:06:45 taca Exp $
 
 DISTNAME=	mh-6.8.4-JP-3.05
 PKGNAME=	ja-mh6-3.05
@@ -22,6 +22,7 @@ CONFLICTS=	nmh-[0-9]* ja-mh-*_JP_*
 
 .include "../../mk/bsd.prefs.mk"
 
+MAKE_JOBS_SAFE=	NO
 MANCOMPRESSED=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-batchmode
