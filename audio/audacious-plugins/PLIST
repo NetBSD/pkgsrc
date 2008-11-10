@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 09:32:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 11:08:27 wiz Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
@@ -23,13 +23,13 @@ lib/audacious/Input/console.so
 lib/audacious/Input/cuesheet.so
 lib/audacious/Input/demac.so
 lib/audacious/Input/flacng.so
+${PLIST.midi}lib/audacious/Input/libtimidity.so
 lib/audacious/Input/madplug.so
 lib/audacious/Input/metronom.so
 lib/audacious/Input/modplug.so
 lib/audacious/Input/musepack.so
 lib/audacious/Input/sexypsf.so
-${SID}lib/audacious/Input/sid.so
-${MIDI}lib/audacious/Input/libtimidity.so
+${PLIST.sid}lib/audacious/Input/sid.so
 lib/audacious/Input/sndfile.so
 lib/audacious/Input/tonegen.so
 lib/audacious/Input/tta.so
@@ -37,13 +37,13 @@ lib/audacious/Input/vorbis.so
 lib/audacious/Input/vtx.so
 lib/audacious/Input/wavpack.so
 lib/audacious/Input/wma.so
+${PLIST.esd}lib/audacious/Output/ESD.so
 lib/audacious/Output/OSS.so
 lib/audacious/Output/filewriter.so
-${ESD}lib/audacious/Output/ESD.so
-${JACK}lib/audacious/Output/libjackout.so
+${PLIST.jack}lib/audacious/Output/libjackout.so
+${PLIST.pulse}lib/audacious/Output/libpulse_audio.so
 lib/audacious/Output/null.so
-${PULSE}lib/audacious/Output/libpulse_audio.so
-${SUN}lib/audacious/Output/sun.so
+${PLIST.sun}lib/audacious/Output/sun.so
 lib/audacious/Transport/lastfm.so
 lib/audacious/Transport/mms.so
 lib/audacious/Transport/neon.so
@@ -102,6 +102,8 @@ share/locale/sk/LC_MESSAGES/audacious-plugins.mo
 share/locale/tr/LC_MESSAGES/audacious-plugins.mo
 @dirrm share/audacious/paranormal/Presets
 @dirrm share/audacious/paranormal
+@comment in audacious: @dirrm share/audacious/images
+@comment in audacious: @dirrm share/audacious
 @dirrm lib/audacious/Visualization
 @dirrm lib/audacious/Transport
 @dirrm lib/audacious/Output
@@ -109,3 +111,4 @@ share/locale/tr/LC_MESSAGES/audacious-plugins.mo
 @dirrm lib/audacious/General
 @dirrm lib/audacious/Effect
 @dirrm lib/audacious/Container
+@dirrm lib/audacious
