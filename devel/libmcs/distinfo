@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/10 15:32:48 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2008/11/10 11:39:48 wiz Exp $
 
-SHA1 (mcs-0.4.1.tgz) = b7e4df4ba1e36cb3dc1b1572105ebdc15ec62c13
-RMD160 (mcs-0.4.1.tgz) = 55051aa9084632f4e88a7b06b483fc7493d0c98e
-Size (mcs-0.4.1.tgz) = 62922 bytes
+SHA1 (libmcs-0.7.1.tgz) = 498a8ace5bc171cb8999ecf8c77cab59c6ded4bb
+RMD160 (libmcs-0.7.1.tgz) = 4deb72bd417394a484a689bb4dc58bc1a6a563ba
+Size (libmcs-0.7.1.tgz) = 107684 bytes
