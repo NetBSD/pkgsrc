@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2008/11/08 18:41:56 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2008/11/10 11:09:28 jnemeth Exp $
 
 DISTNAME=	gnome-2.24.0.92
 CATEGORIES=	meta-pkgs x11 gnome
@@ -112,7 +112,9 @@ DEPENDS+=	orca>=2.24.1:../../misc/orca
 #DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../*/py-gtksourceview
 DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
-DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
+# too old
+#DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
+DEPENDS+=	sound-juicer>=[0-9]*:../../audio/sound-juicer
 DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
 # unpackaged
 #DEPENDS+=	tomboy>=0.12.1:../../*/tomboy
