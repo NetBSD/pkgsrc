@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/09/10 15:32:48 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/11/10 11:39:48 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBMCS_BUILDLINK3_MK:=	${LIBMCS_BUILDLINK3_MK}+
@@ -12,8 +12,10 @@ BUILDLINK_PACKAGES+=	libmcs
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmcs
 
 .if ${LIBMCS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libmcs+=	libmcs>=0.4.1
+BUILDLINK_API_DEPENDS.libmcs+=	libmcs>=0.7.1
 BUILDLINK_PKGSRCDIR.libmcs?=	../../devel/libmcs
 .endif	# LIBMCS_BUILDLINK3_MK
+
+.include "../../devel/libmowgli/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
