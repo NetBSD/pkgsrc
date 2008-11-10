@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2008/10/16 21:34:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/11/10 20:39:42 wiz Exp $
 bin/gtkmm-demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -1333,18 +1333,18 @@ share/doc/gtkmm-2.4/docs/reference/html/curve_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/deprecated.html
 share/doc/gtkmm-2.4/docs/reference/html/device_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/dialog_8h.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_1a06dcdb2631643b070004c55e342414.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_1a06dcdb2631643b070004c55e342414_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_40d0bab055df2dee59735497a073ad89.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_40d0bab055df2dee59735497a073ad89_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_6ce8e84a86e8f1207ff3f63fe2aa8e9c.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_6ce8e84a86e8f1207ff3f63fe2aa8e9c_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_900e26ffc8f50fd2a75653dcf3f81f35.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_900e26ffc8f50fd2a75653dcf3f81f35_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_df3c9335eca94a70b98b85828105b68e.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_df3c9335eca94a70b98b85828105b68e_dep.png
-share/doc/gtkmm-2.4/docs/reference/html/dir_f22ece15a3348e8b45a2eead40216e7a.html
-share/doc/gtkmm-2.4/docs/reference/html/dir_f22ece15a3348e8b45a2eead40216e7a_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_10d2714506eb2f90bc6bdfa26011a2e5.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_10d2714506eb2f90bc6bdfa26011a2e5_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_683cb6bf6fc501ec2f587c0b1545ed4d.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_683cb6bf6fc501ec2f587c0b1545ed4d_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_aec23cce998621bd6546125afc6296e4.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_aec23cce998621bd6546125afc6296e4_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_b565ec9602eae256b8df093d9e111985.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_b565ec9602eae256b8df093d9e111985_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_c419baee9673d22ed0e5da687a3b59d5.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_c419baee9673d22ed0e5da687a3b59d5_dep.png
+share/doc/gtkmm-2.4/docs/reference/html/dir_d0531cbed41c6e981fcc24a8a3b3bfe7.html
+share/doc/gtkmm-2.4/docs/reference/html/dir_d0531cbed41c6e981fcc24a8a3b3bfe7_dep.png
 share/doc/gtkmm-2.4/docs/reference/html/dirs.html
 share/doc/gtkmm-2.4/docs/reference/html/display_8h.html
 share/doc/gtkmm-2.4/docs/reference/html/displaymanager_8h.html
