@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2933 2008/11/10 12:05:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2934 2008/11/10 12:06:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4949,3 +4949,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libmcs to 0.7.1 [wiz 2008-11-10]
 	Updated multimedia/py-gstreamer0.10 to 0.10.13nb1 [obache 2008-11-10]
 	Updated audio/audacious to 1.5.1 [wiz 2008-11-10]
+	Updated audio/audacious-plugins to 1.5.1 [wiz 2008-11-10]
