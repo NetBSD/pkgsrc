@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1072 2008/11/09 12:51:57 obache Exp $
+# $NetBSD: Makefile,v 1.1073 2008/11/10 11:37:29 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -303,6 +303,7 @@ SUBDIR+=	libmemcache
 SUBDIR+=	libmemmgr
 SUBDIR+=	libmimedir
 SUBDIR+=	libmm
+SUBDIR+=	libmowgli
 SUBDIR+=	libmtp
 SUBDIR+=	libnet10
 SUBDIR+=	libnet11
@@ -365,7 +366,6 @@ SUBDIR+=	monodevelop
 SUBDIR+=	monotone
 SUBDIR+=	monotone-server
 SUBDIR+=	monotone-viz
-SUBDIR+=	mowgli
 SUBDIR+=	mph
 SUBDIR+=	nana
 SUBDIR+=	nasm
