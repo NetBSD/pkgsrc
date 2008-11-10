@@ -1,40 +1,8 @@
-$NetBSD: patch-ec,v 1.1 2005/10/01 19:36:01 recht Exp $
+$NetBSD: patch-ec,v 1.2 2008/11/10 19:41:47 wiz Exp $
 
---- Modules/pypcre.c.orig	2003-10-20 16:34:47.000000000 +0200
-+++ Modules/pypcre.c	2005-10-01 21:13:56.000000000 +0200
-@@ -1163,14 +1163,31 @@
- int min = 0;
- int max = -1;
- 
-+/* Read the minimum value and do a paranoid check: a negative value indicates
-+an integer overflow. */
-+
- while ((pcre_ctypes[*p] & ctype_digit) != 0) min = min * 10 + *p++ - '0';
- 
-+if (min < 0 || min > 65535)
-+  {
-+  *errorptr = ERR5;
-+  return p;
-+  }
-+
-+/* Read the maximum value if there is one, and again do a paranoid on its size
-+. Also, max must not be less than min. */
-+
- if (*p == '}') max = min; else
-   {
-   if (*(++p) != '}')
-     {
-     max = 0;
-     while((pcre_ctypes[*p] & ctype_digit) != 0) max = max * 10 + *p++ - '0';
-+    if (max < 0 || max > 65535)
-+      {
-+      *errorptr = ERR5;
-+      return p;
-+      }
-     if (max < min)
-       {
-       *errorptr = ERR4;
-@@ -2267,6 +2284,7 @@
+--- Modules/pypcre.c.orig	2005-08-31 12:55:21.000000000 +0000
++++ Modules/pypcre.c
+@@ -2278,6 +2278,7 @@ int c, size;
  int bracount = 0;
  int brastack[200];
  int top_backref = 0;
@@ -42,7 +10,7 @@ $NetBSD: patch-ec,v 1.1 2005/10/01 19:36:01 recht Exp $
  unsigned int brastackptr = 0;
  uschar *code;
  const uschar *ptr;
-@@ -2446,6 +2464,7 @@
+@@ -2457,6 +2458,7 @@ while ((c = *(++ptr)) != 0)
      /* Brackets may be genuine groups or special things */
  
      case '(':
@@ -50,7 +18,7 @@ $NetBSD: patch-ec,v 1.1 2005/10/01 19:36:01 recht Exp $
  
      /* Handle special forms of bracket, which all start (? */
  
-@@ -2543,10 +2562,15 @@
+@@ -2554,10 +2556,15 @@ while ((c = *(++ptr)) != 0)
        continue;                      /* End of this bracket handling */
        }
  
