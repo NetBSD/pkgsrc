@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/05/28 21:27:04 abs Exp $
+$NetBSD: distinfo,v 1.7 2008/11/10 19:43:32 wiz Exp $
 
-SHA1 (Sub-Uplevel-0.1901.tar.gz) = 03abb82f2bffaaae3e22b7dd60b91bc5e87fb8b3
-RMD160 (Sub-Uplevel-0.1901.tar.gz) = 4abcccf1ca259a2f32fbbab51601bf783874ece2
-Size (Sub-Uplevel-0.1901.tar.gz) = 17417 bytes
+SHA1 (Sub-Uplevel-0.2002.tar.gz) = 0584db2e4342c038c3cacc0d7e367aef64640fe1
+RMD160 (Sub-Uplevel-0.2002.tar.gz) = 5740912a7da219c609a62cd2613b271d7cd9cb84
+Size (Sub-Uplevel-0.2002.tar.gz) = 18415 bytes
