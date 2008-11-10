@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2938 2008/11/10 16:49:42 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2939 2008/11/10 16:50:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4955,3 +4955,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Renamed meta-pkgs/gnome-bindings-mono to meta-pkgs/mono-gnome-bindings [wiz 2008-11-10]
 	Updated www/p5-libwww to 5.820 [wiz 2008-11-10]
 	Updated textproc/p5-XML-LibXML to 1.68 [wiz 2008-11-10]
+	Updated textproc/p5-XML-LibXSLT to 1.68 [wiz 2008-11-10]
