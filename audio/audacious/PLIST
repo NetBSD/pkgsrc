@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 09:28:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 12:05:24 wiz Exp $
 bin/audacious
 bin/audtool
+include/audacious/audconfig.h
 include/audacious/audctrl.h
 include/audacious/auddrct.h
 include/audacious/configdb.h
@@ -10,7 +11,6 @@ include/audacious/dbus.h
 include/audacious/discovery.h
 include/audacious/eventqueue.h
 include/audacious/flow.h
-include/audacious/formatter.h
 include/audacious/hook.h
 include/audacious/i18n.h
 include/audacious/id3tag.h
