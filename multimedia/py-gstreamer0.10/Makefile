@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/10/16 17:33:37 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/10 11:58:40 obache Exp $
 #
 
 DISTNAME=		gst-python-0.10.13
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=		.tar.bz2
@@ -25,5 +26,6 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gst-python.pc.in
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+BUILDLINK_API_DEPENDS.pygobject+=	 ${PYPKGPREFIX}-gobject>=2.15.0
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
