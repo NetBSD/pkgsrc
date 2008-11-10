@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/20 09:32:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/10 11:08:27 wiz Exp $
 #
 
 DISTNAME=		audacious-plugins-1.5.0
@@ -40,22 +40,21 @@ CONFIGURE_ARGS+=	--disable-amidiplug --disable-evdevplug \
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+PLIST_VARS+=	oss sun
+
 .if ${OPSYS} == "NetBSD"
 RAWPART_cmd=		/sbin/sysctl -n kern.rawpartition | ${TR} 0-9 a-j
 CONFIGURE_ARGS+=	--with-dev-dsp=${DEVOSSSOUND}			\
 			--with-cdda-device=/dev/rcd0${RAWPART_cmd:sh}	\
 			--with-cdda-dir=/cdrom/
-PLIST_SUBST+=		OSS=""
-PLIST_SUBST+=		SUN=""
+PLIST.oss=	yes
+PLIST.sun=	yes
 .elif ${OPSYS} == "FreeBSD"
-PLIST_SUBST+=		OSS=""
-PLIST_SUBST+=		SUN="@comment "
+PLIST.oss=	yes
 .elif ${OPSYS} == "DragonFly"
-PLIST_SUBST+=		OSS=""
-PLIST_SUBST+=		SUN="@comment "
+PLIST.oss=	yes
 .elif ${OPSYS} == "SunOS"
-PLIST_SUBST+=		OSS="@comment "
-PLIST_SUBST+=		SUN=""
+PLIST.sun=	yes
 #.elif ${OPSYS} == "Linux"
 #.  include	"../../wip/alsa-lib/buildlink3.mk"
 #PKG_SUPPORTED_OPTIONS+= lirc
