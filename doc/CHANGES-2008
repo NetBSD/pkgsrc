@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2936 2008/11/10 16:37:58 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2937 2008/11/10 16:45:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4953,3 +4953,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cmake-mode to 20080606 [wiz 2008-11-10]
 	Renamed meta-pkgs/gnome-bindings-c++ to meta-pkgs/c++-gnome-bindings [wiz 2008-11-10]
 	Renamed meta-pkgs/gnome-bindings-mono to meta-pkgs/mono-gnome-bindings [wiz 2008-11-10]
+	Updated www/p5-libwww to 5.820 [wiz 2008-11-10]
