@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2008/11/10 11:08:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/10 12:06:06 wiz Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
 lib/audacious/Effect/audiocompress.so
+lib/audacious/Effect/crystalizer.so
 lib/audacious/Effect/echo.so
 lib/audacious/Effect/ladspa.so
 lib/audacious/Effect/sndstretch.so
