@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2007/01/16 12:52:44 adam Exp $
+$NetBSD: patch-ac,v 1.5 2008/11/10 19:04:45 adam Exp $
 
---- configure.orig	2006-10-06 10:38:13.000000000 +0200
+--- configure.orig	2007-06-12 07:51:31.000000000 +0200
 +++ configure
-@@ -22317,13 +22317,13 @@ fi
+@@ -22331,13 +22331,13 @@ fi
  fi
  
  if test -z "$THREAD_LIBS"; then
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.4 2007/01/16 12:52:44 adam Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -22382,7 +22382,7 @@ fi
+@@ -22396,7 +22396,7 @@ fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
  if test $ac_cv_lib_pthread_pthread_create = yes; then
@@ -28,3 +28,12 @@ $NetBSD: patch-ac,v 1.4 2007/01/16 12:52:44 adam Exp $
  else
    echo "$as_me:$LINENO: result: none" >&5
  echo "${ECHO_T}none" >&6
+@@ -22589,7 +22589,7 @@ else
+ echo "${ECHO_T}no" >&6
+ fi
+ 
+-if test "x$PKG_CONFIG" == "xno"; then
++if test "x$PKG_CONFIG" = "xno"; then
+   { echo "$as_me:$LINENO: WARNING:
+ *** Check for pkg-config failed. Many packages requires it.
+ *** You can download it from http://pkgconfig.sourceforge.net/  ." >&5
