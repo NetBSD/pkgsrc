@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2955 2008/11/10 22:37:02 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2956 2008/11/10 22:39:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4974,3 +4974,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/py-cairo to 1.6.4 [wiz 2008-11-10]
 	Updated misc/libcdio to 0.81 [wiz 2008-11-10]
 	Updated databases/py-sqlite2 to 2.5.0a [wiz 2008-11-10]
+	Updated textproc/iso-codes to 3.4 [wiz 2008-11-10]
