@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2943 2008/11/10 18:00:50 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2944 2008/11/10 18:15:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4960,3 +4960,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnutls to 2.6.1 [wiz 2008-11-10]
 	Updated time/remind to 3.1.5 [wiz 2008-11-10]
 	Updated print/a2ps to 4.14 [wiz 2008-11-10]
+	Updated textproc/ispell-german to 20081106 [wiz 2008-11-10]
