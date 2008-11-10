@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2008/11/10 19:41:47 wiz Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -609,6 +609,7 @@ lib/python${PY_VER_SUFFIX}/email/test/data/msg_33.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_34.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_35.txt
 lib/python${PY_VER_SUFFIX}/email/test/data/msg_40.txt
+lib/python${PY_VER_SUFFIX}/email/test/data/msg_41.txt
 lib/python${PY_VER_SUFFIX}/email/test/test_email.py
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyc
 lib/python${PY_VER_SUFFIX}/email/test/test_email.pyo
