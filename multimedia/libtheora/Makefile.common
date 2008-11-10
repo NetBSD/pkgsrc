@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2008/11/05 14:23:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/11/10 00:46:33 abs Exp $
 #
 # used by multimedia/libtheora-docs/Makefile
 
@@ -11,7 +11,7 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.theora.org/
 COMMENT=	Video codec for Ogg multimedia streaming
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+# PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
