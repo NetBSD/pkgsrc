@@ -1,17 +1,29 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/12 14:52:52 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/10 23:10:34 wiz Exp $
+${PYINC}/pygame/bitmask.h
 ${PYINC}/pygame/fastevents.h
 ${PYINC}/pygame/ffmovie.h
 ${PYINC}/pygame/font.h
 ${PYINC}/pygame/mixer.h
+${PYINC}/pygame/pgopengl.h
 ${PYINC}/pygame/pygame.h
+${PYINC}/pygame/pygamedocs.h
+${PYINC}/pygame/scrap.h
+${PYINC}/pygame/surface.h
 ${PYSITELIB}/pygame/__init__.py
 ${PYSITELIB}/pygame/__init__.pyc
 ${PYSITELIB}/pygame/__init__.pyo
+${PYSITELIB}/pygame/_numericsndarray.so
+${PYSITELIB}/pygame/_numericsurfarray.so
+${PYSITELIB}/pygame/_numpysndarray.py
+${PYSITELIB}/pygame/_numpysndarray.pyc
+${PYSITELIB}/pygame/_numpysndarray.pyo
+${PYSITELIB}/pygame/_numpysurfarray.py
+${PYSITELIB}/pygame/_numpysurfarray.pyc
+${PYSITELIB}/pygame/_numpysurfarray.pyo
 ${PYSITELIB}/pygame/base.so
+${PYSITELIB}/pygame/bufferproxy.so
 ${PYSITELIB}/pygame/cdrom.so
-${PYSITELIB}/pygame/color.py
-${PYSITELIB}/pygame/color.pyc
-${PYSITELIB}/pygame/color.pyo
+${PYSITELIB}/pygame/color.so
 ${PYSITELIB}/pygame/colordict.py
 ${PYSITELIB}/pygame/colordict.pyc
 ${PYSITELIB}/pygame/colordict.pyo
@@ -25,6 +37,15 @@ ${PYSITELIB}/pygame/event.so
 ${PYSITELIB}/pygame/fastevent.so
 ${PYSITELIB}/pygame/font.so
 ${PYSITELIB}/pygame/freesansbold.ttf
+${PYSITELIB}/pygame/gp2x/__init__.py
+${PYSITELIB}/pygame/gp2x/__init__.pyc
+${PYSITELIB}/pygame/gp2x/__init__.pyo
+${PYSITELIB}/pygame/gp2x/constants.py
+${PYSITELIB}/pygame/gp2x/constants.pyc
+${PYSITELIB}/pygame/gp2x/constants.pyo
+${PYSITELIB}/pygame/gp2x/locals.py
+${PYSITELIB}/pygame/gp2x/locals.pyc
+${PYSITELIB}/pygame/gp2x/locals.pyo
 ${PYSITELIB}/pygame/image.so
 ${PYSITELIB}/pygame/imageext.so
 ${PYSITELIB}/pygame/joystick.so
@@ -32,14 +53,19 @@ ${PYSITELIB}/pygame/key.so
 ${PYSITELIB}/pygame/locals.py
 ${PYSITELIB}/pygame/locals.pyc
 ${PYSITELIB}/pygame/locals.pyo
+${PYSITELIB}/pygame/mac_scrap.py
+${PYSITELIB}/pygame/mac_scrap.pyc
+${PYSITELIB}/pygame/mac_scrap.pyo
 ${PYSITELIB}/pygame/macosx.py
 ${PYSITELIB}/pygame/macosx.pyc
 ${PYSITELIB}/pygame/macosx.pyo
+${PYSITELIB}/pygame/mask.so
 ${PYSITELIB}/pygame/mixer.so
 ${PYSITELIB}/pygame/mixer_music.so
 ${PYSITELIB}/pygame/mouse.so
 ${PYSITELIB}/pygame/movie.so
 ${PYSITELIB}/pygame/overlay.so
+${PYSITELIB}/pygame/pixelarray.so
 ${PYSITELIB}/pygame/pkgdata.py
 ${PYSITELIB}/pygame/pkgdata.pyc
 ${PYSITELIB}/pygame/pkgdata.pyo
@@ -49,20 +75,33 @@ ${PYSITELIB}/pygame/pygame_icon.icns
 ${PYSITELIB}/pygame/pygame_icon.tiff
 ${PYSITELIB}/pygame/rect.so
 ${PYSITELIB}/pygame/rwobject.so
-${PYSITELIB}/pygame/sndarray.so
+${PYSITELIB}/pygame/scrap.so
+${PYSITELIB}/pygame/sndarray.py
+${PYSITELIB}/pygame/sndarray.pyc
+${PYSITELIB}/pygame/sndarray.pyo
 ${PYSITELIB}/pygame/sprite.py
 ${PYSITELIB}/pygame/sprite.pyc
 ${PYSITELIB}/pygame/sprite.pyo
 ${PYSITELIB}/pygame/surface.so
-${PYSITELIB}/pygame/surfarray.so
+${PYSITELIB}/pygame/surfarray.py
+${PYSITELIB}/pygame/surfarray.pyc
+${PYSITELIB}/pygame/surfarray.pyo
 ${PYSITELIB}/pygame/surflock.so
 ${PYSITELIB}/pygame/sysfont.py
 ${PYSITELIB}/pygame/sysfont.pyc
 ${PYSITELIB}/pygame/sysfont.pyo
+${PYSITELIB}/pygame/threads/Py25Queue.py
+${PYSITELIB}/pygame/threads/Py25Queue.pyc
+${PYSITELIB}/pygame/threads/Py25Queue.pyo
+${PYSITELIB}/pygame/threads/__init__.py
+${PYSITELIB}/pygame/threads/__init__.pyc
+${PYSITELIB}/pygame/threads/__init__.pyo
 ${PYSITELIB}/pygame/time.so
 ${PYSITELIB}/pygame/transform.so
 ${PYSITELIB}/pygame/version.py
 ${PYSITELIB}/pygame/version.pyc
 ${PYSITELIB}/pygame/version.pyo
+@dirrm ${PYSITELIB}/pygame/threads
+@dirrm ${PYSITELIB}/pygame/gp2x
 @dirrm ${PYSITELIB}/pygame
 @dirrm ${PYINC}/pygame
