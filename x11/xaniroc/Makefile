@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/11/10 17:21:38 wiz Exp $
 
 DISTNAME=	xaniroc
 PKGNAME=	xaniroc-1.02
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.42.org/pub/orphan/
 EXTRACT_SUFX=	.src.tar.Z

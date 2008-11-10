@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/04/16 06:09:50 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/10 17:21:40 wiz Exp $
 
 DISTNAME=	xscribble
 PKGNAME=	xscribble-20000616
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.handhelds.org/download/projects/xscribble/
 EXTRACT_SUFX=	.tgz
