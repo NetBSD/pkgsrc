@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2006/10/01 08:26:56 schwarz Exp $
+$NetBSD: patch-ab,v 1.4 2008/11/10 17:46:31 wiz Exp $
 
---- src/Makefile.in.orig	2005-09-30 05:29:32.000000000 +0200
-+++ src/Makefile.in	2006-09-17 20:00:20.000000000 +0200
-@@ -15,11 +15,12 @@
+--- src/Makefile.in.orig	2008-01-26 20:36:20.000000000 +0000
++++ src/Makefile.in
+@@ -15,10 +15,11 @@ VERSION=@VERSION@
  
  INSTALL=@INSTALL@
  INSTALL_PROGRAM=@INSTALL_PROGRAM@
@@ -10,13 +10,12 @@ $NetBSD: patch-ab,v 1.3 2006/10/01 08:26:56 schwarz Exp $
  INSTALL_DATA=@INSTALL_DATA@
  
  PROGS=		remind rem2ps
- SCRIPTS=	$(srcdir)/../scripts/kall $(srcdir)/../scripts/rem \
--		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem.tcl
-+		$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem
+-SCRIPTS=	$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem.tcl
++SCRIPTS=	$(srcdir)/../scripts/tkremind $(srcdir)/../scripts/cm2rem
  
- MANS=		$(srcdir)/../man/kall.1 $(srcdir)/../man/rem.1 \
- 		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
-@@ -40,7 +41,7 @@
+ MANS=		$(srcdir)/../man/rem2ps.1 $(srcdir)/../man/remind.1 \
+ 		$(srcdir)/../man/tkremind.1 $(srcdir)/../man/cm2rem.1 \
+@@ -41,7 +42,7 @@ test: remind
  	sh ../tests/test-rem
  
  .c.o:
@@ -24,10 +23,10 @@ $NetBSD: patch-ab,v 1.3 2006/10/01 08:26:56 schwarz Exp $
 +	@CC@ -c @CFLAGS@ @CPPFLAGS@ @DEFS@ $(CEXTRA) $(LANGDEF) -I. -I$(srcdir) $<
  
  rem2ps: rem2ps.o dynbuf.o
- 	@CC@ @LDFLAGS@ -o rem2ps rem2ps.o dynbuf.o
-@@ -50,9 +51,12 @@
+ 	@CC@ @LDFLAGS@ $(LDEXTRA) -o rem2ps rem2ps.o dynbuf.o
+@@ -51,9 +52,12 @@ remind: $(REMINDOBJS)
  
- install: all
+ install-nostripped: all
  	-mkdir -p $(DESTDIR)$(bindir) || true
 -	for prog in $(PROGS) $(SCRIPTS) ; do \
 +	for prog in $(PROGS) ; do \
@@ -36,6 +35,6 @@ $NetBSD: patch-ab,v 1.3 2006/10/01 08:26:56 schwarz Exp $
 +	for prog in $(SCRIPTS) ; do \
 +		$(INSTALL_SCRIPT) $$prog $(DESTDIR)$(bindir) || exit 1; \
 +	done
- 	-strip $(DESTDIR)$(bindir)/remind || true
- 	-strip $(DESTDIR)$(bindir)/rem2ps || true
+ 	rm -f $(DESTDIR)$(bindir)/rem > /dev/null 2>&1 || true
+ 	ln -s remind $(DESTDIR)$(bindir)/rem
  	-mkdir -p $(DESTDIR)$(mandir)/man1 || true

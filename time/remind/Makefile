@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2007/09/08 21:58:01 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/10 17:46:31 wiz Exp $
 #
 
-DISTNAME=	remind-03.00.24
+DISTNAME=	remind-03.01.05
 PKGNAME=	${DISTNAME:C/0([0-9])/\1/g}
 CATEGORIES=	time
-MASTER_SITES=	http://www.roaringpenguin.com/penguin/
+MASTER_SITES=	http://www.roaringpenguin.com/files/download/
 
 MAINTAINER=	kim@tac.nyc.ny.us
-HOMEPAGE=	http://www.roaringpenguin.com/penguin/openSourceProducts/remind
+HOMEPAGE=	http://www.roaringpenguin.com/products/remind
 COMMENT=	Calendar/alarm program with interpreted input language
 
 GNU_CONFIGURE=	yes
@@ -33,15 +33,11 @@ post-install:
 			${PREFIX}/share/examples/remind; \
 		${INSTALL_DATA} examples/remind.vim \
 			${PREFIX}/share/examples/remind; \
-		${INSTALL_DATA} scripts/remind-all.csh \
-			${PREFIX}/share/examples/remind; \
-		${INSTALL_DATA} scripts/remind-all.sh \
-			${PREFIX}/share/examples/remind
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/remind
 	cd ${WRKSRC}; \
 		${INSTALL_DATA} docs/README.UNIX \
 			${PREFIX}/share/doc/remind; \
-		${INSTALL_DATA} docs/WHATSNEW.30 \
+		${INSTALL_DATA} docs/WHATSNEW \
 			${PREFIX}/share/doc/remind; \
 		${INSTALL_DATA} COPYRIGHT \
 			${PREFIX}/share/doc/remind
