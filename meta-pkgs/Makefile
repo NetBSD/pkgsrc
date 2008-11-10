@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.52 2008/11/09 10:41:42 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/11/10 16:36:57 wiz Exp $
 #
 
 COMMENT=	Collections of other packages
 
 SUBDIR+=	boost
+SUBDIR+=	c++-gnome-bindings
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gnome
 SUBDIR+=	gnome-admin
-SUBDIR+=	gnome-bindings-c++
-SUBDIR+=	gnome-bindings-mono
 SUBDIR+=	gnome-devtools
 SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
@@ -22,6 +21,7 @@ SUBDIR+=	modular-xorg-apps
 SUBDIR+=	modular-xorg-drivers
 SUBDIR+=	modular-xorg-fonts
 SUBDIR+=	modular-xorg-libs
+SUBDIR+=	mono-gnome-bindings
 SUBDIR+=	netbsd-doc
 SUBDIR+=	netbsd-doc-print
 SUBDIR+=	netbsd-www
