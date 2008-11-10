@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2944 2008/11/10 18:15:17 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2945 2008/11/10 19:07:56 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4961,3 +4961,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/remind to 3.1.5 [wiz 2008-11-10]
 	Updated print/a2ps to 4.14 [wiz 2008-11-10]
 	Updated textproc/ispell-german to 20081106 [wiz 2008-11-10]
+	Updated sysutils/gentoo to 0.11.57 [adam 2008-11-10]
+	Updated x11/fltk to 1.1.9 [adam 2008-11-10]
+	Updated graphics/cinepaint to 0.22.1 [adam 2008-11-10]

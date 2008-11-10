@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7686 2008/11/10 15:55:10 wiz Exp $
+$NetBSD: TODO,v 1.7687 2008/11/10 19:07:56 adam Exp $
 
 Suggested new packages
 ======================
@@ -565,7 +565,6 @@ Suggested package updates
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flpsed-0.4.4
-	o fltk-1.1.9
 	o fluxbox-1.1.0
 	o fmsx-3.0
 	o fondu-040927
@@ -598,7 +597,6 @@ Suggested package updates
 	o geany-0.15
 	o geda-1.4.1.20080929
 	o geeklog-1.5.0
-	o gentoo-0.11.57
 	o gettext-0.17
 	o gforth-0.7.0
 	o gfract-0.33
