@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2008/01/15 00:02:13 heinz Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/10 23:01:38 wiz Exp $
 #
 
-DISTNAME=		xmlto-0.0.18
-PKGREVISION=		4
+DISTNAME=		xmlto-0.0.21
 CATEGORIES=		textproc
-MASTER_SITES=		http://cyberelk.net/tim/data/xmlto/stable/
+MASTER_SITES=		# ftp(1) doesn't speak https: https://fedorahosted.org/xmlto/browser
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://cyberelk.net/tim/software/xmlto/
+HOMEPAGE=		https://fedorahosted.org/xmlto/
 COMMENT=		Tool to help transform XML documents into other formats
 
 PKG_DESTDIR_SUPPORT=	user-destdir

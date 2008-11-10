@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/26 15:57:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/10 23:01:38 wiz Exp $
 bin/xmlif
 bin/xmlto
 man/man1/xmlif.1
 man/man1/xmlto.1
+share/xmlto/format/docbook/awt
 share/xmlto/format/docbook/dvi
 share/xmlto/format/docbook/fo
 share/xmlto/format/docbook/html
@@ -10,14 +11,22 @@ share/xmlto/format/docbook/html-nochunks
 share/xmlto/format/docbook/htmlhelp
 share/xmlto/format/docbook/javahelp
 share/xmlto/format/docbook/man
+share/xmlto/format/docbook/mif
+share/xmlto/format/docbook/pcl
 share/xmlto/format/docbook/pdf
 share/xmlto/format/docbook/ps
+share/xmlto/format/docbook/svg
 share/xmlto/format/docbook/txt
 share/xmlto/format/docbook/xhtml
 share/xmlto/format/docbook/xhtml-nochunks
+share/xmlto/format/fo/awt
 share/xmlto/format/fo/dvi
+share/xmlto/format/fo/mif
+share/xmlto/format/fo/pcl
 share/xmlto/format/fo/pdf
 share/xmlto/format/fo/ps
+share/xmlto/format/fo/svg
+share/xmlto/format/fo/txt
 share/xmlto/xmlto.mak
 @dirrm share/xmlto/format/fo
 @dirrm share/xmlto/format/docbook
