@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/11/10 11:07:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/11/10 11:35:33 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 AUDACIOUS_BUILDLINK3_MK:=	${AUDACIOUS_BUILDLINK3_MK}+
@@ -26,7 +26,7 @@ PRINT_PLIST_AWK+=       /^@dirrm share\/audacious$$/ \
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libmcs/buildlink3.mk"
-.include "../../devel/mowgli/buildlink3.mk"
+.include "../../devel/libmowgli/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
