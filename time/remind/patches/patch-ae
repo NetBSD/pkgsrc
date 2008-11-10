@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2000/12/17 23:32:12 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2008/11/10 17:46:31 wiz Exp $
 
---- man/cm2rem.1.orig	Wed Mar 15 10:51:36 2000
-+++ man/cm2rem.1	Fri Mar 17 15:18:27 2000
-@@ -2,27 +2,27 @@
+--- man/cm2rem.1.orig	2007-08-08 16:04:25.000000000 +0000
++++ man/cm2rem.1
+@@ -1,27 +1,27 @@
  .TH CM2REM 1 "18 October 1999"
  .UC4
  .SH NAME
