@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2008/10/09 12:55:23 wiz Exp $
+$NetBSD: distinfo,v 1.31 2008/11/10 22:00:00 wiz Exp $
 
-SHA1 (wesnoth-1.4.5.tar.bz2) = 6abc3f0c9bee10dfe890c3691542ecae053908da
-RMD160 (wesnoth-1.4.5.tar.bz2) = 01981e77ec56f37dac0933691138397c2b3972dd
-Size (wesnoth-1.4.5.tar.bz2) = 153994024 bytes
+SHA1 (wesnoth-1.4.6.tar.bz2) = fb930d8a6a006a83c79338a2348699d67e857e8c
+RMD160 (wesnoth-1.4.6.tar.bz2) = 20dc2791ab3c2f362cd15a0b0027a8f0ab0efaca
+Size (wesnoth-1.4.6.tar.bz2) = 155118227 bytes
