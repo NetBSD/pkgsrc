@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2004/11/08 10:39:14 adam Exp $
+$NetBSD: patch-ab,v 1.6 2008/11/10 14:56:16 adam Exp $
 
---- configure.orig	2004-11-01 23:08:15.000000000 +0000
+--- configure.orig	2008-07-13 20:10:10.000000000 +0200
 +++ configure
-@@ -2889,7 +2889,7 @@ _ACEOF
+@@ -3416,7 +3416,7 @@ _ACEOF
  
    GENTOO_CFLAGS="$GENTOO_CFLAGS -g -pg"
  else
 -  GENTOO_CFLAGS="$GENTOO_CFLAGS -O2"
 +  GENTOO_CFLAGS="$GENTOO_CFLAGS $CFLAGS"
- fi;
+ fi
  
  
