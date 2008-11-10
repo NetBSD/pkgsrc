@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2954 2008/11/10 22:30:55 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2955 2008/11/10 22:37:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4973,3 +4973,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/wesnoth to 1.4.6 [wiz 2008-11-10]
 	Updated graphics/py-cairo to 1.6.4 [wiz 2008-11-10]
 	Updated misc/libcdio to 0.81 [wiz 2008-11-10]
+	Updated databases/py-sqlite2 to 2.5.0a [wiz 2008-11-10]
