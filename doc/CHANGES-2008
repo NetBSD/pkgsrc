@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2931 2008/11/10 11:40:48 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2932 2008/11/10 11:59:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4947,3 +4947,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/GraphicsMagick to 1.3 [obache 2008-11-10]
 	Moved devel/mowgli to devel/libmowgli [wiz 2008-11-10]
 	Updated devel/libmcs to 0.7.1 [wiz 2008-11-10]
+	Updated multimedia/py-gstreamer0.10 to 0.10.13nb1 [obache 2008-11-10]
