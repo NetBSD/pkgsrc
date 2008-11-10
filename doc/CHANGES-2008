@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2948 2008/11/10 19:43:44 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2949 2008/11/10 19:48:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4967,3 +4967,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/ircII to 20080314 [wiz 2008-11-10]
 	Updated lang/python23 to 2.3.7 [wiz 2008-11-10]
 	Updated devel/p5-Sub-Uplevel to 0.2002 [wiz 2008-11-10]
+	Updated devel/pangomm to 2.14.1 [wiz 2008-11-10]
