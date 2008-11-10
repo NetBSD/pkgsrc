@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/10/09 19:19:14 martti Exp $
+# $NetBSD: Makefile,v 1.31 2008/11/10 17:21:37 wiz Exp $
 #
 
 DISTNAME=	xipdump-1.5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://www.lse.epita.fr/twiki/pub/Projects/XipDump/
 EXTRACT_SUFX=	.tgz
