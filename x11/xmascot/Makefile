@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/05/11 05:24:50 obache Exp $
+# $NetBSD: Makefile,v 1.22 2008/11/10 17:21:39 wiz Exp $
 
 DISTNAME=	xmascot2.6a
 PKGNAME=	xmascot-2.6a
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 
