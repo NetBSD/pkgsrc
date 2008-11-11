@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2975 2008/11/11 16:19:46 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.2976 2008/11/11 16:22:24 cube Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5001,3 +5001,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/sun-jre6 to sun-jre6-6.0.5nb1 [reinoud 2008-11-11]
 	Updated lang/sun-jdk6 to sun-jdk6-6.0.5nb1 [reinoud 2008-11-11]
 
+	Updated pkgtools/x11-links to 0.41 [cube 2008-11-11]
