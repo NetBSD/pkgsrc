@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2008/10/29 21:14:01 cube Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2008/11/11 16:19:23 cube Exp $
 #
 # Don't include this file manually!  It will be included as necessary
 # by bsd.buildlink3.mk.
@@ -18,7 +18,7 @@ BUILDLINK_PACKAGES:=	x11-links ${BUILDLINK_PACKAGES}
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}x11-links
 
 .if !empty(X11_LINKS_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=0.40
+BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=0.41
 BUILDLINK_PKGSRCDIR.x11-links?=	../../pkgtools/x11-links
 BUILDLINK_DEPMETHOD.x11-links?=	build
 
