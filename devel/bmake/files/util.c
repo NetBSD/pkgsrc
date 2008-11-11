@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
+/*	$NetBSD: util.c,v 1.4 2008/11/11 19:47:38 joerg Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $
+ *	$Id: util.c,v 1.4 2008/11/11 19:47:38 joerg Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.4 2008/11/11 19:47:38 joerg Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
+__RCSID("$NetBSD: util.c,v 1.4 2008/11/11 19:47:38 joerg Exp $");
 #endif
 #endif
 
@@ -472,39 +472,6 @@ snprintf(char *s, size_t n, const char *fmt, ...)
 
 	va_start(ap, fmt);
 	rv = vsnprintf(s, n, fmt, ap);
-	va_end(ap);
-	return rv;
-}
-#endif
-
-#if !defined(HAVE_VASPRINTF)
-int
-vasprintf(char **s, const char *fmt, va_list ap)
-{
-	char buf[128];
-	int rv;
-
-	rv = vsnprintf(buf, sizeof(buf), fmt, ap);
-	if (rv < sizeof(buf))
-		*s = strdup(buf);
-	else {
-		if ((*s = malloc(rv + 1)))
-			vsnprintf(*s, rv + 1, fmt, ap);
-	}
-	va_end(ap);
-	return *s ? rv : -1;
-}
-#endif
-
-#if !defined(HAVE_ASPRINTF)
-int
-asprintf(char **s, const char *fmt, ...)
-{
-	va_list ap;
-	int rv;
-
-	va_start(ap, fmt);
-	rv = vasprintf(s, fmt, ap);
 	va_end(ap);
 	return rv;
 }
