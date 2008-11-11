@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $
+ *	$Id: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: util.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
 #endif
 #endif
 
@@ -36,84 +36,26 @@ strerror(int e)
 }
 #endif
 
-#if !defined(HAVE_STRDUP)
-#include <string.h>
+#if !defined(HAVE_SETENV) || !defined(HAVE_UNSETENV)
+extern char **environ;
 
-/* strdup
- *
- * Make a duplicate of a string.
- * For systems which lack this function.
- */
-char *
-strdup(const char *str)
+static char *
+findenv(const char *name, int *offset)
 {
-    size_t len;
-    char *p;
+	size_t i, len;
+	char *p, *q;
 
-    if (str == NULL)
+	for (i = 0; (q = environ[i]); i++) {
+		char *p = strchr(q, '=');
+		if (p == NULL)
+			continue;
+		if (strncmp(name, q, len = p - q) == 0) {
+			*offset = i;
+			return q + len + 1;
+		}
+	}
+	*offset = i;
 	return NULL;
-    len = strlen(str) + 1;
-    p = emalloc(len);
-
-    return memcpy(p, str, len);
-}
-#endif
-
-#if !defined(HAVE_EMALLOC) && !defined(HAVE_STRNDUP)
-#include <string.h>
-
-/* strndup
- *
- * Make a duplicate of a string, up to a maximum length.
- * For systems which lack this function.
- */
-char *
-strndup(const char *str, size_t maxlen)
-{
-    size_t len;
-    char *p;
-
-    if (str == NULL)
-	return NULL;
-    len = strlen(str);
-    if (len > maxlen)
-	len = maxlen;
-    p = emalloc(len + 1);
-
-    memcpy(p, str, len);
-    p[len] = '\0';
-    return p;
-}
-#endif
-
-#if !defined(HAVE_SETENV)
-int
-setenv(const char *name, const char *value, int dum)
-{
-    char *p;
-    int len = strlen(name) + strlen(value) + 2; /* = \0 */
-    char *ptr = emalloc(len);
-
-    (void) dum;
-
-    if (ptr == NULL)
-	return -1;
-
-    p = ptr;
-
-    while (*name)
-	*p++ = *name++;
-
-    *p++ = '=';
-
-    while (*value)
-	*p++ = *value++;
-
-    *p = '\0';
-
-    len = putenv(ptr);
-/*    free(ptr); */
-    return len;
 }
 #endif
 
@@ -121,9 +63,95 @@ setenv(const char *name, const char *value, int dum)
 int
 unsetenv(const char *name)
 {
-	return -1;			/* XXX not worth it? */
+	char **p;
+	int offset;
+
+	if (name == NULL || *name == '\0' || strchr(name, '=') != NULL) {
+		errno = EINVAL;
+		return -1;
+	}
+
+	while (findenv(name, &offset))	{ /* if set multiple times */
+		for (p = &environ[offset];; ++p)
+			if (!(*p = *(p + 1)))
+				break;
+	}
+	return 0;
 }
 #endif
+
+#if !defined(HAVE_SETENV)
+int
+setenv(const char *name, const char *value, int rewrite)
+{
+	static char **saveenv;	/* copy of previously allocated space */
+	char *c, **newenv;
+	const char *cc;
+	size_t l_value, size;
+	int offset;
+
+	if (name == NULL || value == NULL) {
+		errno = EINVAL;
+		return -1;
+	}
+
+	if (*value == '=')			/* no `=' in value */
+		++value;
+	l_value = strlen(value);
+
+	/* find if already exists */
+	if ((c = findenv(name, &offset))) {
+		if (!rewrite)
+			return 0;
+		if (strlen(c) >= l_value)	/* old larger; copy over */
+			goto copy;
+	} else {					/* create new slot */
+		size = sizeof(char *) * (offset + 2);
+		if (saveenv == environ) {		/* just increase size */
+			if ((newenv = realloc(saveenv, size)) == NULL)
+				return -1;
+			saveenv = newenv;
+		} else {				/* get new space */
+			/*
+			 * We don't free here because we don't know if
+			 * the first allocation is valid on all OS's
+			 */
+			if ((saveenv = malloc(size)) == NULL)
+				return -1;
+			(void)memcpy(saveenv, environ, size - sizeof(char *));
+		}
+		environ = saveenv;
+		environ[offset + 1] = NULL;
+	}
+	for (cc = name; *cc && *cc != '='; ++cc)	/* no `=' in name */
+		continue;
+	size = cc - name;
+	/* name + `=' + value */
+	if ((environ[offset] = malloc(size + l_value + 2)) == NULL)
+		return -1;
+	c = environ[offset];
+	(void)memcpy(c, name, size);
+	c += size;
+	*c++ = '=';
+copy:
+	(void)memcpy(c, value, l_value + 1);
+	return 0;
+}
+
+#ifdef TEST
+int
+main(int argc, char *argv[])
+{
+	setenv(argv[1], argv[2], 0);
+	printf("%s\n", getenv(argv[1]));
+	unsetenv(argv[1]);
+	printf("%s\n", getenv(argv[1]));
+	return 0;
+}
+#endif
+
+#endif
+
 
 #if defined(__hpux__) || defined(__hpux)
 /* strrcpy():
