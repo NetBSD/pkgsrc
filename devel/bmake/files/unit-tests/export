@@ -1,4 +1,4 @@
-# $Id: export,v 1.1.1.1 2008/03/09 19:39:35 joerg Exp $
+# $Id: export,v 1.1.1.2 2008/11/11 19:32:33 joerg Exp $
 
 UT_TEST=export
 UT_FOO=foo${BAR}
