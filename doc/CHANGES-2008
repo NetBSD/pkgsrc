@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2972 2008/11/11 09:22:59 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2973 2008/11/11 11:03:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4996,3 +4996,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/p5-Business-ISBN to 2.04 [rhaen 2008-11-11]
 	Updated misc/p5-Business-ISBN-Data to 20081020 [rhaen 2008-11-11]
 	Updated textproc/p5-CAM-PDF to 1.52 [rhaen 2008-11-11]
+	Added devel/p5-Devel-NYTProf version 2.07 [seb 2008-11-11]
