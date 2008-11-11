@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgsql.sh,v 1.1.1.1 2008/03/04 12:43:46 adam Exp $
+# $NetBSD: pgsql.sh,v 1.2 2008/11/11 13:50:50 joerg Exp $
 #
 # PostgreSQL database rc.d control script
 #
@@ -65,6 +65,8 @@ pgsql_initdb()
 {
 	initdb="@PG_PREFIX@/bin/initdb"
 
+	cd /
+
 	if [ ! -x ${initdb} ]; then
 		return 1
 	fi
@@ -88,6 +90,8 @@ pgsql_initdb()
 pgsql_doit()
 {
 	action=$1
+
+	cd /
 
 	case ${action} in
 	start|restart)
