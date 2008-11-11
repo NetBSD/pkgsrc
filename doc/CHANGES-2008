@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2978 2008/11/11 20:30:24 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.2979 2008/11/11 22:05:41 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5000,7 +5000,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/hunspell-de to 20081106 [wiz 2008-11-11]
 	Updated lang/sun-jre6 to sun-jre6-6.0.5nb1 [reinoud 2008-11-11]
 	Updated lang/sun-jdk6 to sun-jdk6-6.0.5nb1 [reinoud 2008-11-11]
-
 	Updated pkgtools/x11-links to 0.41 [cube 2008-11-11]
 	Updated www/trac to 0.11.2 [gdt 2008-11-11]
 	Updated databases/myodbc to 3.51.26r1127 [bouyer 2008-11-11]
+	Updated devel/libosip to 3.2.0 [schwarz 2008-11-11]
