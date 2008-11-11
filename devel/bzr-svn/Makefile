@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/11/08 02:51:23 epg Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/11 05:05:11 epg Exp $
 
 DISTNAME=	bzr-svn-${VER}
 #PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://launchpad.net/bzr-svn/0.4/${VER}/+download/
-VER=		0.4.14
+MASTER_SITES+=	http://samba.org/~jelmer/bzr/
+VER=		0.4.15
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
