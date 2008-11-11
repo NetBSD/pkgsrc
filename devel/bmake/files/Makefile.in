@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.10 2008/07/03 11:28:52 obache Exp $
+#	$NetBSD: Makefile.in,v 1.11 2008/11/11 14:37:05 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.10 2008/07/03 11:28:52 obache Exp $
+#	$Id: Makefile.in,v 1.11 2008/11/11 14:37:05 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -13,17 +13,13 @@ SRCS+=	lstAppend.c lstAtEnd.c lstAtFront.c lstClose.c lstConcat.c \
 	lstMember.c lstNext.c lstOpen.c lstRemove.c lstReplace.c lstSucc.c
 SRCS += lstPrev.c
 
-.if !empty(LIBOBJS)
-SRCS+= ${LIBOBJS:.o=.c}
-.endif
-
 # you can use this Makefile if you have an earlier version of bmake.
 prefix= @prefix@
 srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-BMAKE_VERSION= 20080215
+BMAKE_VERSION= 20081101
 # knowing when it was built is also handy
 BUILD_DATE!= date +%Y%m%d
 MAKE_VERSION:= bmake-${BMAKE_VERSION} build-${BUILD_DATE}
@@ -40,6 +36,10 @@ CFLAGS_main.o= "-DMAKE_VERSION=\"${MAKE_VERSION}\""
 LDFLAGS= @LDFLAGS@
 LIBOBJS= @LIBOBJS@
 LDADD= @LIBS@
+
+.if !empty(LIBOBJS)
+SRCS+= ${LIBOBJS:T:.o=.c}
+.endif
 
 .PATH:	${srcdir}
 .PATH:	${srcdir}/lst.lib
@@ -61,7 +61,7 @@ WARNS=4
 # XXX not sure if we still want this given that configure
 # lets us force or not the definition of MACHINE.
 CFLAGS_main.o+= "-DFORCE_MACHINE=\"${MACHINE}\""
-SRCS+=  getenv.c
+MANTARGET=cat
 INSTALL?=${srcdir}/install-sh
 .if (${MACHINE} == "sun386")
 # even I don't have one of these anymore :-)
@@ -126,7 +126,7 @@ install-mk:
 .ifdef TOOLDIR
 # this is a native netbsd build, 
 # use libutil rather than the local emalloc etc.
-CPPFLAGS+= -DHAVE_EMALLOC
+CPPFLAGS+= -DUSE_EMALLOC
 LDADD+=-lutil
 DPADD+=${LIBUTIL}
 .endif
