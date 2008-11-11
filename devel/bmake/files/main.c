@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.4 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.5 2008/11/11 14:37:05 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,19 +69,19 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: main.c,v 1.4 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: main.c,v 1.5 2008/11/11 14:37:05 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
-__COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\n\
-	The Regents of the University of California.  All rights reserved.\n");
+__COPYRIGHT("@(#) Copyright (c) 1988, 1989, 1990, 1993\
+ The Regents of the University of California.  All rights reserved.");
 #endif /* not lint */
 
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)main.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: main.c,v 1.4 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.5 2008/11/11 14:37:05 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -273,16 +273,15 @@ parse_debug_options(const char *argvalue)
 				fclose(debug_file);
 			if (*++modules == '+')
 				mode = "a";
-			else {
-				if (!strcmp(modules, "stdout")) {
-					debug_file = stdout;
-					return;
-				}
-				if (!strcmp(modules, "stderr")) {
-					debug_file = stderr;
-					return;
-				}
+			else
 				mode = "w";
+			if (strcmp(modules, "stdout") == 0) {
+				debug_file = stdout;
+				goto debug_setbuf;
+			}
+			if (strcmp(modules, "stderr") == 0) {
+				debug_file = stderr;
+				goto debug_setbuf;
 			}
 			len = strlen(modules);
 			fname = malloc(len + 20);
@@ -297,15 +296,22 @@ parse_debug_options(const char *argvalue)
 				usage();
 			}
 			free(fname);
-			/* Have this non-buffered */
-			setbuf(debug_file, NULL);
-			return;
+			goto debug_setbuf;
 		default:
 			(void)fprintf(stderr,
 			    "%s: illegal argument to d option -- %c\n",
 			    progname, *modules);
 			usage();
 		}
+	}
+debug_setbuf:
+	/*
+	 * Make the debug_file unbuffered, and make
+	 * stdout line buffered (unless debugfile == stdout).
+	 */
+	setvbuf(debug_file, NULL, _IONBF, 0);
+	if (debug_file != stdout) {
+		setvbuf(stdout, NULL, _IOLBF, 0);
 	}
 }
 
@@ -434,7 +440,7 @@ rearg:
 			break;
 		case 'T':
 			if (argvalue == NULL) goto noarg;
-			tracefile = estrdup(argvalue);
+			tracefile = bmake_strdup(argvalue);
 			Var_Append(MAKEFLAGS, "-T", VAR_GLOBAL);
 			Var_Append(MAKEFLAGS, argvalue, VAR_GLOBAL);
 			break;
@@ -558,7 +564,7 @@ rearg:
 				Punt("illegal (null) argument.");
 			if (*argv[1] == '-' && !dashDash)
 				goto rearg;
-			(void)Lst_AtEnd(create, estrdup(argv[1]));
+			(void)Lst_AtEnd(create, bmake_strdup(argv[1]));
 		}
 
 	return;
@@ -617,7 +623,7 @@ Main_ParseArgLine(char *line)
 			return;
 	}
 #endif
-	buf = emalloc(len = strlen(line) + strlen(argv0) + 2);
+	buf = bmake_malloc(len = strlen(line) + strlen(argv0) + 2);
 	(void)snprintf(buf, len, "%s %s", argv0, line);
 	if (p1)
 		free(p1);
@@ -723,8 +729,8 @@ main(int argc, char **argv)
 	struct utsname utsname;
 #endif
 
-	/* default to writing debug to stdout */
-	debug_file = stdout;
+	/* default to writing debug to stderr */
+	debug_file = stderr;
 
 	/*
 	 * Set the seed to produce a different random sequences
@@ -977,7 +983,7 @@ main(int argc, char **argv)
 	if (syspath == NULL || *syspath == '\0')
 		syspath = defsyspath;
 	else
-		syspath = estrdup(syspath);
+		syspath = bmake_strdup(syspath);
 
 	for (start = syspath; *start != '\0'; start = cp) {
 		for (cp = start; *cp != '\0' && *cp != ':'; cp++)
@@ -1194,7 +1200,7 @@ ReadMakefile(ClientData p, ClientData q __unused)
 	char *fname = p;		/* makefile to read */
 	int fd;
 	size_t len = MAXPATHLEN;
-	char *name, *path = emalloc(len);
+	char *name, *path = bmake_malloc(len);
 	int setMAKEFILE;
 
 	if (!strcmp(fname, "-")) {
@@ -1207,7 +1213,7 @@ ReadMakefile(ClientData p, ClientData q __unused)
 		if (strcmp(curdir, objdir) && *fname != '/') {
 			size_t plen = strlen(curdir) + strlen(fname) + 2;
 			if (len < plen)
-				path = erealloc(path, len = 2 * plen);
+				path = bmake_realloc(path, len = 2 * plen);
 			
 			(void)snprintf(path, len, "%s/%s", curdir, fname);
 			fd = open(path, O_RDONLY);
@@ -1219,7 +1225,7 @@ ReadMakefile(ClientData p, ClientData q __unused)
 			/* If curdir failed, try objdir (ala .depend) */
 			plen = strlen(objdir) + strlen(fname) + 2;
 			if (len < plen)
-				path = erealloc(path, len = 2 * plen);
+				path = bmake_realloc(path, len = 2 * plen);
 			(void)snprintf(path, len, "%s/%s", objdir, fname);
 			fd = open(path, O_RDONLY);
 			if (fd != -1) {
@@ -1588,7 +1594,7 @@ Cmd_Exec(const char *cmd, const char **errnum)
     }
     return res;
 bad:
-    res = emalloc(1);
+    res = bmake_malloc(1);
     *res = '\0';
     return res;
 }
@@ -1719,13 +1725,24 @@ Finish(int errors)
 	Fatal("%d error%s", errors, errors == 1 ? "" : "s");
 }
 
-#ifndef HAVE_EMALLOC
+#ifndef USE_EMALLOC
 /*
- * emalloc --
+ * enomem --
+ *	die when out of memory.
+ */
+static void
+enomem(void)
+{
+	(void)fprintf(stderr, "%s: %s.\n", progname, strerror(errno));
+	exit(2);
+}
+
+/*
+ * bmake_malloc --
  *	malloc, but die on error.
  */
 void *
-emalloc(size_t len)
+bmake_malloc(size_t len)
 {
 	void *p;
 
@@ -1735,54 +1752,54 @@ emalloc(size_t len)
 }
 
 /*
- * estrdup --
+ * bmake_strdup --
  *	strdup, but die on error.
  */
 char *
-estrdup(const char *str)
+bmake_strdup(const char *str)
 {
+	size_t len;
 	char *p;
 
-	if ((p = strdup(str)) == NULL)
+	len = strlen(str) + 1;
+	if ((p = malloc(len)) == NULL)
 		enomem();
-	return(p);
+	return memcpy(p, str, len);
 }
 
 /*
- * estrndup --
+ * bmake_strndup --
  *	strndup, but die on error.
  */
 char *
-estrndup(const char *str, size_t len)
+bmake_strndup(const char *str, size_t max_len)
 {
+	size_t len;
 	char *p;
 
-	if ((p = strndup(str, len)) == NULL)
-		enomem();
+	if (str == NULL)
+		return NULL;
+
+	len = strlen(str);
+	if (len > max_len)
+		len = max_len;
+	p = bmake_malloc(len + 1);
+	memcpy(p, str, len);
+	p[len] = '\0';
+
 	return(p);
 }
 
 /*
- * erealloc --
+ * bmake_realloc --
  *	realloc, but die on error.
  */
 void *
-erealloc(void *ptr, size_t size)
+bmake_realloc(void *ptr, size_t size)
 {
 	if ((ptr = realloc(ptr, size)) == NULL)
 		enomem();
 	return(ptr);
-}
-
-/*
- * enomem --
- *	die when out of memory.
- */
-void
-enomem(void)
-{
-	(void)fprintf(stderr, "%s: %s.\n", progname, strerror(errno));
-	exit(2);
 }
 #endif
 

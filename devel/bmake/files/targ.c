@@ -1,4 +1,4 @@
-/*	$NetBSD: targ.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: targ.c,v 1.3 2008/11/11 14:37:05 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: targ.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: targ.c,v 1.3 2008/11/11 14:37:05 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)targ.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: targ.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: targ.c,v 1.3 2008/11/11 14:37:05 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -233,8 +233,8 @@ Targ_NewGN(const char *name)
 {
     GNode *gn;
 
-    gn = emalloc(sizeof(GNode));
-    gn->name = estrdup(name);
+    gn = bmake_malloc(sizeof(GNode));
+    gn->name = bmake_strdup(name);
     gn->uname = NULL;
     gn->path = NULL;
     if (name[0] == '-' && name[1] == 'l') {
