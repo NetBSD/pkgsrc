@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2974 2008/11/11 14:17:48 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2975 2008/11/11 16:19:46 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4998,3 +4998,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-CAM-PDF to 1.52 [rhaen 2008-11-11]
 	Added devel/p5-Devel-NYTProf version 2.07 [seb 2008-11-11]
 	Updated textproc/hunspell-de to 20081106 [wiz 2008-11-11]
+	Updated lang/sun-jre6 to sun-jre6-6.0.5nb1 [reinoud 2008-11-11]
+	Updated lang/sun-jdk6 to sun-jdk6-6.0.5nb1 [reinoud 2008-11-11]
+
