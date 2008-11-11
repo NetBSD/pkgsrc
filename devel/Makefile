@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1073 2008/11/10 11:37:29 wiz Exp $
+# $NetBSD: Makefile,v 1.1074 2008/11/11 10:59:49 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -514,6 +514,7 @@ SUBDIR+=	p5-Devel-Events-Objects
 SUBDIR+=	p5-Devel-Gladiator
 SUBDIR+=	p5-Devel-GlobalDestruction
 SUBDIR+=	p5-Devel-LexAlias
+SUBDIR+=	p5-Devel-NYTProf
 SUBDIR+=	p5-Devel-PPPort
 SUBDIR+=	p5-Devel-Profile
 SUBDIR+=	p5-Devel-REPL
