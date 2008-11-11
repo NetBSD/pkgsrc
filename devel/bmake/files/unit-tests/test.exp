@@ -20,6 +20,10 @@ Passed:
 4 is not prime
 5 is  prime
 
+make: warning: String comparison operator should be either == or !=
+make: Bad conditional expression `"0" > 0' in "0" > 0?OK:No
+
+OK
 UT_DOLLAR=This is $UT_FU
 UT_FOO=foobar is fubar
 UT_FU=fubar
@@ -286,6 +290,7 @@ a command prefixed by '+' executes even with -n
 Now we expect an error...
 *** Error code 1 (continuing)
 `all' not remade because of errors.
+V.i386 ?= OK
 The answer is unknown
 The answer is unknown
 The answer is empty
@@ -299,4 +304,7 @@ default FU=<v>fu</v> FOO=<v>foo</v> VAR=<v></v>
 two FU=<v>bar</v> FOO=<v>goo</v> VAR=<v></v>
 three FU=<v>bar</v> FOO=<v>goo</v> VAR=<v></v>
 four FU=<v>bar</v> FOO=<v>goo</v> VAR=<v>Internal</v>
-show FU=<v>bar</v> FOO=<v>goo</v> VAR=<v>Internal</v>
+five FU=<v>bar</v> FOO=<v>goo</v> VAR=<v>Internal</v>
+five v=is x k=is x
+six v=is y k=is y
+show-v v=override k=override

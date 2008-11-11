@@ -93,6 +93,7 @@ unit-tests/modorder
 unit-tests/modts
 unit-tests/modword
 unit-tests/posix
+unit-tests/qequals
 unit-tests/ternary
 unit-tests/test.exp
 unit-tests/varcmd
