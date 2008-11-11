@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/20 02:31:48 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/11 16:00:15 reinoud Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -3113,6 +3113,9 @@ java/sun-6/man/man1/serialver.1
 java/sun-6/man/man1/wsgen.1
 java/sun-6/man/man1/wsimport.1
 java/sun-6/man/man1/xjc.1
+java/sun-6/register.html
+java/sun-6/register_ja.html
+java/sun-6/register_zh_CN.html
 java/sun-6/sample/javac/processing/src/CheckNamesProcessor.java
 java/sun-6/sample/jmx/jmx-scandir/build.properties
 java/sun-6/sample/jmx/jmx-scandir/build.xml
