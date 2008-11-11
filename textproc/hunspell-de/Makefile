@@ -1,32 +1,38 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/11 18:37:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/11 14:17:34 wiz Exp $
 #
 
-VERSION=	20070829
-# bogus by purpose
-DISTNAME=	hunspell-de-${VERSION}
+DISTNAME=	igerman98-20081106
+PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.j3e.de/hunspell/
-DISTFILES=	de_AT-${VERSION}.zip de_CH-${VERSION}.zip de_DE-${VERSION}.zip
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.j3e.de/ispell/igerman98/
 COMMENT=	German dictionaries for hunspell
 
-DIST_SUBDIR=	hunspell-dictionaries
-# don't want -L
-EXTRACT_OPTS_ZIP=	-aqo
+BUILD_DEPENDS+=	ispell-base>=3.1.20nb1:../../textproc/ispell-base
+DEPENDS+=	hunspell>=1.1.5:../../textproc/hunspell
 
-WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	share/hunspell share/doc/hunspell-de
+BUILD_TARGET=   hunspell-all
+USE_TOOLS+=     gmake perl sed
+REPLACE_PERL=   bin/clear_affix.pl bin/dic2iso.pl bin/grepl bin/lcfirst.pl \
+		bin/sq.pl bin/uniqflag.pl bin/unsq.pl bin/extractlines.pl \
+		bin/hunspell-optimize-roothelper.pl bin/myspellfixprefix.pl
 
-do-build:
+SUBST_CLASSES+=		sed
+SUBST_FILES.sed=	bin/clear_affix bin/dic2iso bin/iso2dic bin/iso2tex \
+			bin/tex2iso bin/conv_dict_de_CH
+SUBST_SED.sed=		-e "s,/bin/sed,${SED},"
+SUBST_STAGE.sed=	pre-build
+SUBST_MESSAGE.sed=	Fixing path to sed.
+
+INSTALLATION_DIRS=	share/hunspell
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/de* ${PREFIX}/share/hunspell
-	${INSTALL_DATA} ${WRKSRC}/[CR]* ${PREFIX}/share/doc/hunspell-de
-	${INSTALL_DATA} ${WRKSRC}/dict* ${PREFIX}/share/doc/hunspell-de
+	${INSTALL_DATA} ${WRKSRC}/hunspell/de*aff ${PREFIX}/share/hunspell
+	${INSTALL_DATA} ${WRKSRC}/hunspell/de*dic ${PREFIX}/share/hunspell
 
 .include "../../mk/bsd.pkg.mk"
