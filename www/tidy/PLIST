@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/12 11:52:37 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/11 00:48:37 wiz Exp $
 bin/tab2space
 bin/tidy
 include/tidy/buffio.h
@@ -11,6 +11,7 @@ share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
 share/doc/tidy/api/buffio_8h-source.html
 share/doc/tidy/api/buffio_8h.html
+share/doc/tidy/api/classes.html
 share/doc/tidy/api/deprecated.html
 share/doc/tidy/api/doxygen.css
 share/doc/tidy/api/doxygen.png
