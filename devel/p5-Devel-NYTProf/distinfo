@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/11 10:55:55 seb Exp $
+
+SHA1 (Devel-NYTProf-2.07.tar.gz) = 5d7e359cc8835cd0633fc71bde39712c3fee3667
+RMD160 (Devel-NYTProf-2.07.tar.gz) = 721c5ea254742ea53e2f90cad85e2af622e1f729
+Size (Devel-NYTProf-2.07.tar.gz) = 168280 bytes
