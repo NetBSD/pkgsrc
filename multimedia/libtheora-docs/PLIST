@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/05 14:24:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/11 00:52:20 wiz Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.xml
 share/doc/${SUBDIR}/html/annotated.html
+share/doc/${SUBDIR}/html/classes.html
 share/doc/${SUBDIR}/html/codec_8h-source.html
 share/doc/${SUBDIR}/html/codec_8h.html
 share/doc/${SUBDIR}/html/doxygen.css
