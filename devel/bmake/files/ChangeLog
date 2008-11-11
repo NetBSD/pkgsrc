@@ -1,3 +1,13 @@
+2008-11-11  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20081111
+	  Apply patch from Joerg Sonnenberge to
+	  configure.in:
+	  o remove some redundant checks
+	  o check for emlloc etc only in libutil and require the whole family.
+	  util.c:
+	  o remove [v]asprintf which is no longer used.
+	
 2008-11-04  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* Makefile.in (BMAKE_VERSION): bump version to 20081101
@@ -23,7 +33,7 @@
 	  o handle numeric expressions in any variable expansion
 	  o debug output now defaults to stderr, -dF to change it - apb
 	  o make now uses bmake_malloc etc so that it can build natively 
-	    on OS/X - wasn't an issue for bmake, but we want to keep in sync.
+	    on A/UX - wasn't an issue for bmake, but we want to keep in sync.
 
 2008-09-27  Simon J. Gerraty  <sjg@void.crufty.net>
 

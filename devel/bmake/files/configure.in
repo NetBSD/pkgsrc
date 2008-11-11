@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.7 2008/03/09 19:54:29 joerg Exp $
+dnl	$Id: configure.in,v 1.8 2008/11/11 19:47:38 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -23,14 +23,12 @@ no)    ;;
        esac])
 dnl
 dnl
+dnl Check for OS problems
+AC_USE_SYSTEM_EXTENSIONS
 dnl Checks for programs.
 AC_PROG_CC
 AC_PROG_GCC_TRADITIONAL
 AC_PROG_INSTALL
-dnl Check for OS problems
-AC_AIX
-AC_MINIX
-AC_ISC_POSIX
 dnl Executable suffix - normally empty; .exe on os2.
 AC_SUBST(ac_exe_suffix)dnl
 
@@ -92,8 +90,6 @@ AC_FUNC_VPRINTF
 AC_FUNC_WAIT3
 dnl Keep this list sorted
 AC_CHECK_FUNCS( \
-	asprintf \
-	emalloc \
 	getcwd \
 	getenv \
 	getopt \
@@ -105,15 +101,11 @@ AC_CHECK_FUNCS( \
 	sigaction \
 	sigvec \
 	snprintf \
-	strdup \
-	estrndup \
-	strndup \
 	strerror \
 	strftime \
 	strtod \
 	strtol \
 	unsetenv \
-	vasprintf \
 	vsnprintf \
 	wait3 \
 	wait4 \
@@ -121,6 +113,14 @@ AC_CHECK_FUNCS( \
 	)
 dnl AC_REPLACE_FUNCS(setenv getenv)
 AC_REPLACE_FUNCS(getenv)
+
+AC_CHECK_LIB([util], [emalloc],
+    [ AC_CHECK_LIB([util], [erealloc],
+      [ AC_CHECK_LIB([util], [estrdup],
+        [ AC_CHECK_LIB([util], [estrndup],
+	  [ LIBS="$LIBS -lutil"
+	    CPPFLAGS="$CPPFLAGS -DUSE_EMALLOC" ])])])])
+
 dnl
 dnl Structures
 dnl
