@@ -1,0 +1,12 @@
+# $NetBSD: xorg.glu,v 1.1 2008/11/11 16:18:18 cube Exp $
+#
+include/GL/glu.h
+lib/libGLU.a
+lib/libGLU.so
+lib/libGLU.so.1
+lib/libGLU.so.1.0.3
+lib/libGLU.so.1.3
+lib/libGLU.dylib
+lib/libGLU.1.dylib
+lib/libGLU.1.3.dylib
+lib/pkgconfig/glu.pc
