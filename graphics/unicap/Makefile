@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/17 15:28:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/11 14:15:12 hasso Exp $
 
 DISTNAME=	unicap-0.9.1
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ COMMENT=	Uniform interface to video capture devices
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl pkg-config gmake intltool
+USE_TOOLS+=		perl pkg-config gmake intltool msgfmt
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
