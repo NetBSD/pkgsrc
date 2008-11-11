@@ -31,7 +31,6 @@ see the boot-strap script for details.
 
 To make much use of bmake you will need the bsd.*.mk macros or my
 portable *.mk macros.  See 
-http://www.crufty.net/ftp/pub/sjg/bsd-mk.tar.gz
 http://www.crufty.net/ftp/pub/sjg/mk.tar.gz
 which will be links to the latest versions.
 

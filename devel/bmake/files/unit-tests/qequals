@@ -1,0 +1,8 @@
+# $Id: qequals,v 1.1.1.1 2008/11/11 14:28:36 joerg Exp $
+
+M= i386
+V.i386= OK
+V.$M ?= bug
+
+all:
+	@echo 'V.$M ?= ${V.$M}'
