@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/10 12:05:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/11 12:36:58 hasso Exp $
 #
 
 DISTNAME=		audacious-1.5.1
@@ -11,7 +11,7 @@ HOMEPAGE=		http://audacious-media-player.org/
 COMMENT=		Media player based on BMP and XMMS
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_DIRS+=		xdg-1.4
