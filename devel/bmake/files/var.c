@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.3 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: var.c,v 1.4 2008/11/11 14:37:05 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: var.c,v 1.3 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: var.c,v 1.4 2008/11/11 14:37:05 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)var.c	8.3 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: var.c,v 1.3 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: var.c,v 1.4 2008/11/11 14:37:05 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -191,6 +191,7 @@ typedef struct Var {
 #define VAR_REEXPORT	32	    /* Indicate if var needs re-export.
 				     * This would be true if it contains $'s
 				     */
+#define VAR_FROM_CMD	64 	    /* Variable came from command line */
 }  Var;
 
 /*
@@ -398,8 +399,8 @@ VarFind(const char *name, GNode *ctxt, int flags)
 	if ((env = getenv(name)) != NULL) {
 	    int	  	len;
 
-	    v = emalloc(sizeof(Var));
-	    v->name = estrdup(name);
+	    v = bmake_malloc(sizeof(Var));
+	    v->name = bmake_strdup(name);
 
 	    len = strlen(env);
 
@@ -480,7 +481,7 @@ VarAdd(const char *name, const char *val, GNode *ctxt)
     int	    	  len;
     Hash_Entry    *h;
 
-    v = emalloc(sizeof(Var));
+    v = bmake_malloc(sizeof(Var));
 
     len = val ? strlen(val) : 0;
     v->val = Buf_Init(len+1);
@@ -729,6 +730,8 @@ Var_Export(char *str, int isExport)
  *	VAR_CMD->context is searched. This is done to avoid the literally
  *	thousands of unnecessary strcmp's that used to be done to
  *	set, say, $(@) or $(<).
+ *	If the context is VAR_GLOBAL though, we check if the variable
+ *	was set in VAR_CMD from the command line and skip it if so.
  *-----------------------------------------------------------------------
  */
 void
@@ -746,6 +749,18 @@ Var_Set(const char *name, const char *val, GNode *ctxt, int flags)
 	name = Var_Subst(NULL, cp, ctxt, 0);
     } else
 	name = cp;
+    if (ctxt == VAR_GLOBAL) {
+	v = VarFind(name, VAR_CMD, 0);
+	if (v != (Var *)NIL) {
+	    if ((v->flags & VAR_FROM_CMD)) {
+		if (DEBUG(VAR)) {
+		    fprintf(debug_file, "%s:%s = %s ignored!\n", ctxt->name, name, val);
+		}
+		goto out;
+	    }
+	    VarFreeEnv(v, TRUE);
+	}
+    }
     v = VarFind(name, ctxt, 0);
     if (v == (Var *)NIL) {
 	VarAdd(name, val, ctxt);
@@ -765,7 +780,11 @@ Var_Set(const char *name, const char *val, GNode *ctxt, int flags)
      * to the environment (as per POSIX standard)
      */
     if (ctxt == VAR_CMD && (flags & VAR_NO_EXPORT) == 0) {
-
+	if (v == (Var *)NIL) {
+	    /* we just added it */
+	    v = VarFind(name, ctxt, 0);
+	}
+	v->flags |= VAR_FROM_CMD;
 	/*
 	 * If requested, don't export these in the environment
 	 * individually.  We still put them in MAKEOVERRIDES so
@@ -777,6 +796,7 @@ Var_Set(const char *name, const char *val, GNode *ctxt, int flags)
 
 	Var_Append(MAKEOVERRIDES, name, VAR_GLOBAL);
     }
+ out:
     if (name != cp)
 	free(UNCONST(name));
     if (v != (Var *)NIL)
@@ -872,9 +892,15 @@ Boolean
 Var_Exists(const char *name, GNode *ctxt)
 {
     Var	    	  *v;
+    char          *cp;
 
-    v = VarFind(name, ctxt, FIND_CMD|FIND_GLOBAL|FIND_ENV);
-
+    if ((cp = strchr(name, '$')) != NULL) {
+	cp = Var_Subst(NULL, name, ctxt, FALSE);
+    }
+    v = VarFind(cp ? cp : name, ctxt, FIND_CMD|FIND_GLOBAL|FIND_ENV);
+    if (cp != NULL) {
+	free(cp);
+    }
     if (v == (Var *)NIL) {
 	return(FALSE);
     } else {
@@ -1417,7 +1443,7 @@ VarREError(int errnum, regex_t *pat, const char *str)
     int errlen;
 
     errlen = regerror(errnum, pat, 0, 0);
-    errbuf = emalloc(errlen);
+    errbuf = bmake_malloc(errlen);
     regerror(errnum, pat, errbuf, errlen);
     Error("%s: %s", str, errbuf);
     free(errbuf);
@@ -1640,8 +1666,8 @@ VarSelectWords(GNode *ctx __unused, Var_Parse_State *vpstate,
     if (vpstate->oneBigWord) {
 	/* fake what brk_string() would do if there were only one word */
 	ac = 1;
-    	av = emalloc((ac + 1) * sizeof(char *));
-	as = estrdup(str);
+    	av = bmake_malloc((ac + 1) * sizeof(char *));
+	as = bmake_strdup(str);
 	av[0] = as;
 	av[1] = NULL;
     } else {
@@ -1733,8 +1759,8 @@ VarModify(GNode *ctx, Var_Parse_State *vpstate,
     if (vpstate->oneBigWord) {
 	/* fake what brk_string() would do if there were only one word */
 	ac = 1;
-    	av = emalloc((ac + 1) * sizeof(char *));
-	as = estrdup(str);
+    	av = bmake_malloc((ac + 1) * sizeof(char *));
+	as = bmake_strdup(str);
 	av[0] = as;
 	av[1] = NULL;
     } else {
@@ -2027,19 +2053,26 @@ VarQuote(char *str)
 
     Buffer  	  buf;
     /* This should cover most shells :-( */
-    static char meta[] = "\n \t'`\";&<>()|*?{}[]\\$!#^~";
+    static const char meta[] = "\n \t'`\";&<>()|*?{}[]\\$!#^~";
     const char	*newline;
+    size_t len, nlen;
 
-    newline = Shell_GetNewline();
+    if ((newline = Shell_GetNewline()) == NULL)
+	    newline = "\\\n";
+    nlen = strlen(newline);
 
     buf = Buf_Init(0);
-    for (; *str; str++) {
-	if (*str == '\n' && newline != NULL) {
-	    Buf_AddBytes(buf, strlen(newline), newline);
+    while (*str != '\0') {
+	if ((len = strcspn(str, meta)) != 0) {
+	    Buf_AddBytes(buf, len, str);
+	    str += len;
+	} else if (*str == '\n') {
+	    Buf_AddBytes(buf, nlen, newline);
+	    ++str;
 	} else {
-	    if (strchr(meta, *str) != NULL)
-		Buf_AddByte(buf, (Byte)'\\');
+	    Buf_AddByte(buf, (Byte)'\\');
 	    Buf_AddByte(buf, (Byte)*str);
+	    ++str;
 	}
     }
     Buf_AddByte(buf, (Byte)'\0');
@@ -2257,11 +2290,11 @@ ApplyModifiers(char *nstr, const char *tstr,
 		    ++tstr;
 		    if (v->flags & VAR_JUNK) {
 			/*
-			 * We need to estrdup() it incase
+			 * We need to bmake_strdup() it incase
 			 * VarGetPattern() recurses.
 			 */
 			sv_name = v->name;
-			v->name = estrdup(v->name);
+			v->name = bmake_strdup(v->name);
 		    } else if (ctxt != VAR_GLOBAL) {
 			Var *gv = VarFind(v->name, ctxt, 0);
 			if (gv == (Var *)NIL)
@@ -2421,7 +2454,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 	    {
 		if ((v->flags & VAR_JUNK) != 0)
 		    v->flags |= VAR_KEEP;
-		newStr = estrdup(v->name);
+		newStr = bmake_strdup(v->name);
 		cp = ++tstr;
 		termc = *tstr;
 		break;
@@ -2436,12 +2469,12 @@ ApplyModifiers(char *nstr, const char *tstr,
 		if (gn == NILGNODE || gn->type & OP_NOPATH) {
 		    newStr = NULL;
 		} else if (gn->path) {
-		    newStr = estrdup(gn->path);
+		    newStr = bmake_strdup(gn->path);
 		} else {
 		    newStr = Dir_FindFile(v->name, Suff_FindPath(gn));
 		}
 		if (!newStr) {
-		    newStr = estrdup(v->name);
+		    newStr = bmake_strdup(v->name);
 		}
 		cp = ++tstr;
 		termc = *tstr;
@@ -2515,7 +2548,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 		    int newStrSize =
 			(sizeof(int) * CHAR_BIT + 2) / 3 + 2;
 
-		    newStr = emalloc(newStrSize);
+		    newStr = bmake_malloc(newStrSize);
 		    if (parsestate.oneBigWord) {
 			strncpy(newStr, "1", newStrSize);
 		    } else {
@@ -2761,7 +2794,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 		     * cp - tstr takes the null byte into account) and
 		     * compress the pattern into the space.
 		     */
-		    pattern = emalloc(cp - tstr);
+		    pattern = bmake_malloc(cp - tstr);
 		    for (cp2 = pattern, cp = tstr + 1;
 			 cp < endpat;
 			 cp++, cp2++)
@@ -2779,7 +2812,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 		     * Either Var_Subst or VarModify will need a
 		     * nul-terminated string soon, so construct one now.
 		     */
-		    pattern = estrndup(tstr+1, endpat - (tstr + 1));
+		    pattern = bmake_strndup(tstr+1, endpat - (tstr + 1));
 		    copy = TRUE;
 		}
 		if (strchr(pattern, '$') != NULL) {
@@ -2974,7 +3007,7 @@ ApplyModifiers(char *nstr, const char *tstr,
 		    pattern.nsub = 1;
 		if (pattern.nsub > 10)
 		    pattern.nsub = 10;
-		pattern.matches = emalloc(pattern.nsub *
+		pattern.matches = bmake_malloc(pattern.nsub *
 					  sizeof(regmatch_t));
 		newStr = VarModify(ctxt, &tmpparsestate, nstr,
 				   VarRESubstitute,
@@ -3450,7 +3483,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 		 */
 		*lengthPtr = tstr - start + 1;
 		if (dynamic) {
-		    char *pstr = estrndup(start, *lengthPtr);
+		    char *pstr = bmake_strndup(start, *lengthPtr);
 		    *freePtr = pstr;
 		    Buf_Destroy(buf, TRUE);
 		    return(pstr);
@@ -3463,7 +3496,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 		 * Still need to get to the end of the variable specification,
 		 * so kludge up a Var structure for the modifications
 		 */
-		v = emalloc(sizeof(Var));
+		v = bmake_malloc(sizeof(Var));
 		v->name = UNCONST(str);
 		v->val = Buf_Init(1);
 		v->flags = VAR_JUNK;
@@ -3538,7 +3571,7 @@ Var_Parse(const char *str, GNode *ctxt, Boolean errnum, int *lengthPtr,
 		*freePtr = NULL;
 	    }
 	    if (dynamic) {
-		nstr = estrndup(start, *lengthPtr);
+		nstr = bmake_strndup(start, *lengthPtr);
 		*freePtr = nstr;
 	    } else {
 		nstr = var_Error;

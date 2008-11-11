@@ -1,4 +1,4 @@
-/*	$NetBSD: job.c,v 1.6 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: job.c,v 1.7 2008/11/11 14:37:05 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: job.c,v 1.6 2008/03/09 19:54:29 joerg Exp $";
+static char rcsid[] = "$NetBSD: job.c,v 1.7 2008/11/11 14:37:05 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)job.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: job.c,v 1.6 2008/03/09 19:54:29 joerg Exp $");
+__RCSID("$NetBSD: job.c,v 1.7 2008/11/11 14:37:05 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -753,7 +753,7 @@ JobPrintCommand(ClientData cmdp, ClientData jobp)
 
     if (!commandShell->hasErrCtl) {
 	/* Worst that could happen is every char needs escaping. */
-	escCmd = emalloc((strlen(cmd) * 2) + 1);
+	escCmd = bmake_malloc((strlen(cmd) * 2) + 1);
 	for (i = 0, j= 0; cmd[i] != '\0'; i++, j++) {
 		if (cmd[i] == '$' || cmd[i] == '`' || cmd[i] == '\\' || 
 			cmd[i] == '"')
@@ -2132,7 +2132,7 @@ Job_Init(void)
     GNode         *begin;     /* node for commands to do at the very start */
 
     /* Allocate space for all the job info */
-    job_table = emalloc(maxJobs * sizeof *job_table);
+    job_table = bmake_malloc(maxJobs * sizeof *job_table);
     memset(job_table, 0, maxJobs * sizeof *job_table);
     job_table_end = job_table + maxJobs;
     wantToken =	0;
@@ -2174,8 +2174,8 @@ Job_Init(void)
     JobCreatePipe(&childExitJob, 3);
 
     /* We can only need to wait for tokens, children and output from each job */
-    fds = emalloc(sizeof (*fds) * (2 + maxJobs));
-    jobfds = emalloc(sizeof (*jobfds) * (2 + maxJobs));
+    fds = bmake_malloc(sizeof (*fds) * (2 + maxJobs));
+    jobfds = bmake_malloc(sizeof (*jobfds) * (2 + maxJobs));
 
     /* These are permanent entries and take slots 0 and 1 */
     watchfd(&tokenWaitJob);
@@ -2437,7 +2437,7 @@ Job_ParseShell(char *line)
 	    }
 	    commandShell = sh;
 	} else {
-	    commandShell = emalloc(sizeof(Shell));
+	    commandShell = bmake_malloc(sizeof(Shell));
 	    *commandShell = newShell;
 	}
     }
@@ -2544,7 +2544,9 @@ JobInterrupt(int runINTERRUPT, int signo)
 int
 Job_Finish(void)
 {
-    if (postCommands != NILGNODE && !Lst_IsEmpty(postCommands->commands)) {
+    if (postCommands != NILGNODE &&
+	(!Lst_IsEmpty(postCommands->commands) ||
+	 !Lst_IsEmpty(postCommands->children))) {
 	if (errors) {
 	    Error("Errors reported so .END ignored");
 	} else {

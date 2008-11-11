@@ -1,3 +1,62 @@
+2008-11-04  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20081101
+	* Merge with NetBSD make, pick up:
+	  o util.c: avoid use of putenv() - christos
+
+2008-10-30  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20081030
+	  pick up man page tweaks.
+
+2008-10-29  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in: move processing of LIBOBJS to after is definition!
+	  thus we'll have getenv.c in SRCS only if needed.
+
+	* make.1: add examples of how to use :?
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20081029
+	* Merge with NetBSD make, pick up:
+	  o fix for .END processing with -j
+	  o segfault from Parse_Error when no makefile is open
+	  o handle numeric expressions in any variable expansion
+	  o debug output now defaults to stderr, -dF to change it - apb
+	  o make now uses bmake_malloc etc so that it can build natively 
+	    on OS/X - wasn't an issue for bmake, but we want to keep in sync.
+
+2008-09-27  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20080808
+	* Merge with NetBSD make, pick up:
+	  o fix for PR/38840: Pierre Pronchery: make crashes while parsing
+	    long lines in Makefiles 
+	  o optimizations for VarQuote by joerg
+	  o fix for PR/38756: dominik: make dumps core on invalid makefile
+	
+2008-05-15  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20080515
+	* Merge with NetBSD make, pick up:
+	  o fix skip setting vars in VAR_GLOBAL context, to handle
+	    cases where VAR_CMD is used for other than command line vars.
+
+2008-05-14  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* boot-strap (make_version): we may need to look in
+	$prefix/share/mk for sys.mk 
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20080514
+	* Merge with NetBSD make, pick up:
+	  o skip setting vars in VAR_GLOBAL context, when already set in
+	  VAR_CMD which takes precedence.
+
+2008-03-30  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION):  bump version to 20080330
+	* Merge with NetBSD make, pick up:
+	  o fix for ?= when LHS contains variable reference.
+
 2008-02-15  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* merge some patches from NetBSD pkgsrc.

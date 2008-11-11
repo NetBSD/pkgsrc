@@ -1,4 +1,4 @@
-/*	$NetBSD: lstInt.h,v 1.4 2008/03/09 19:54:29 joerg Exp $	*/
+/*	$NetBSD: lstInt.h,v 1.5 2008/11/11 14:37:06 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -86,7 +86,7 @@ typedef struct	List {
  * PAlloc (var, ptype) --
  *	Allocate a pointer-typedef structure 'ptype' into the variable 'var'
  */
-#define	PAlloc(var,ptype)	var = (ptype) emalloc(sizeof *(var))
+#define	PAlloc(var,ptype)	var = (ptype) bmake_malloc(sizeof *(var))
 
 /*
  * LstValid (l) --

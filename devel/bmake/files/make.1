@@ -1,4 +1,4 @@
-.\"	$NetBSD: make.1,v 1.2 2008/03/09 19:54:29 joerg Exp $
+.\"	$NetBSD: make.1,v 1.3 2008/11/11 14:37:05 joerg Exp $
 .\"
 .\" Copyright (c) 1990, 1993
 .\"	The Regents of the University of California.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"	from: @(#)make.1	8.4 (Berkeley) 3/19/94
 .\"
-.Dd November 19, 2006
+.Dd October 29, 2008
 .Dt MAKE 1
 .Os
 .Sh NAME
@@ -117,6 +117,13 @@ Unless the flags are preceded by
 they are added to the
 .Va MAKEFLAGS
 environment variable and will be processed by any child make processes.
+By default, debugging information is printed to standard error,
+but this can be changed using the
+.Ar F
+debugging flag.
+The debugging output is always unbuffered; in addition, if debugging
+is enabled but debugging output is not directed to standard output,
+then the standard output is line buffered.
 .Ar Flags
 is one or more of the following:
 .Bl -tag -width Ds
@@ -131,11 +138,27 @@ Print debugging information about conditional evaluation.
 Print debugging information about directory searching and caching.
 .It Ar e
 Print debugging information about failed commands and targets.
-.It Ar F
-Use the rest of
-.Ql flags
-as the name of the file to which the debug output is written.
-If the filename ends
+.It Ar F Ns Oo Sy \&+ Oc Ns Ar filename
+Specify where debugging output is written.
+This must be the last flag, because it consumes the remainder of
+the argument.
+If the character immediately after the
+.Ql F
+flag is
+.Ql \&+ ,
+then the file will be opened in append mode;
+otherwise the file will be overwritten.
+If the file name is
+.Ql stdout
+or
+.Ql stderr
+then debugging output will be written to the
+standard output or standard error output file descriptors respectively
+(and the
+.Ql \&+
+option has no effect).
+Otherwise, the output will be written to the named file.
+If the file name ends
 .Ql .%d
 then the
 .Ql %d
@@ -153,7 +176,7 @@ Print the input graph before exiting on error.
 Print debugging information about running multiple shells.
 .It Ar l
 Print commands in Makefiles regardless of whether or not they are prefixed by
-.Ql @ 
+.Ql @
 or other "quiet" flags.
 Also known as "loud" behavior.
 .It Ar m
@@ -345,7 +368,9 @@ line are compressed into a single space.
 .Sh FILE DEPENDENCY SPECIFICATIONS
 Dependency lines consist of one or more targets, an operator, and zero
 or more sources.
-This creates a relationship where the targets ``depend'' on the sources
+This creates a relationship where the targets
+.Dq depend
+on the sources
 and are usually created from them.
 The exact relationship between the target and the source is determined
 by the operator that separates them.
@@ -499,9 +524,12 @@ The list of all sources for this target; also known as
 .It Va .ARCHIVE
 The name of the archive file.
 .It Va .IMPSRC
-The name/path of the source from which the target is to be transformed
-(the ``implied'' source); also known as
+In suffix-transformation rules, the name/path of the source from which the
+target is to be transformed (the
+.Dq implied
+source); also known as
 .Ql Va \&\*[Lt] .
+It is not defined in explicit rules.
 .It Va .MEMBER
 The name of the archive member.
 .It Va .OODATE
@@ -594,22 +622,22 @@ The list of makefiles read by
 which is useful for tracking dependencies.
 Each makefile is recorded only once, regardless of the number of times read.
 .It Va .MAKE.PID
-The process-id of 
+The process-id of
 .Nm .
 .It Va .MAKE.PPID
-The parent process-id of 
+The parent process-id of
 .Nm .
 .It Va .MAKE.JOB.PREFIX
-If 
+If
 .Nm
 is run with
 .Ar j
-then output for each target is prefixed with a token 
+then output for each target is prefixed with a token
 .Ql --- target ---
 the first part of which can be controlled via
 .Va .MAKE.JOB.PREFIX .
 .br
-For example: 
+For example:
 .Li .MAKE.JOB.PREFIX=${.newline}---${.MAKE:T}[${.MAKE.PID}]
 would produce tokens like
 .Ql ---make[1234] target ---
@@ -694,7 +722,7 @@ may be used.
 .Pp
 .Ql Va .OBJDIR
 may be modified in the makefile as a global variable.
-In all cases, 
+In all cases,
 .Nm
 will
 .Xr chdir 2
@@ -754,7 +782,9 @@ executes.
 .El
 .Ss Variable modifiers
 Variable expansion may be modified to select or modify each word of the
-variable (where a ``word'' is white-space delimited sequence of characters).
+variable (where a
+.Dq word
+is white-space delimited sequence of characters).
 The general format of a variable expansion is as follows:
 .Pp
 .Dl ${variable[:modifier[:...]]}
@@ -968,6 +998,40 @@ evaluates to true, return as its value the
 .Ar true_string ,
 otherwise return the
 .Ar false_string .
+The expression parser needs careful feeding to avoid surprises.
+For example the following all do what one might expect,
+.Dl ${"${NUMBERS:M42}":?match:no}
+.Dl ${${NUMBER:U0} > 0:?set:zero}
+.Dl ${empty(NUMBER):?empty:set}
+The first case expands to
+.Ql match
+if
+.Dv NUMBERS
+contains the value 42 (the quotes are important).
+The second expands to
+.Ql zero
+unless
+.Dv NUMBER
+is set to a value greater than 0.
+The last case expands to
+.Ql empty
+or
+.Ql set
+depending on whether
+.Dv NUMBER
+is empty.
+In this example, use of
+.Ql {}
+rather than
+.Ql ()
+is important to avoid the parser getting confused.
+By contrast, the following examples will
+.Em not
+behave as expected.
+.Dl ${"1 < 0":?always:no}
+.Dl ${NUMBERS:M42:?always:no}
+in both cases the expansion will always be
+.Ql always .
 .It Ar :old_string=new_string
 This is the
 .At V
@@ -1369,18 +1433,23 @@ of a string comparison.
 When
 .Nm
 is evaluating one of these conditional expression, and it encounters
-a word it doesn't recognize, either the ``make'' or ``defined''
+a word it doesn't recognize, either the
+.Dq make
+or
+.Dq defined
 expression is applied to it, depending on the form of the conditional.
 If the form is
 .Ql Ic .ifdef
 or
 .Ql Ic .ifndef ,
-the ``defined'' expression
-is applied.
+the
+.Dq defined
+expression is applied.
 Similarly, if the form is
 .Ql Ic .ifmake
 or
-.Ql Ic .ifnmake , the ``make''
+.Ql Ic .ifnmake , the
+.Dq make
 expression is applied.
 .Pp
 If the conditional evaluates to true the parsing of the makefile continues
@@ -1692,6 +1761,14 @@ command in the file.
 Each source specifies a suffix to
 .Nm .
 If no sources are specified, any previously specified suffixes are deleted.
+It allows the creation of suffix-transformation rules.
+.Pp
+Example:
+.Bd -literal
+\&.SUFFIXES: .o
+\&.c.o:
+	cc -o ${.TARGET} -c ${.IMPSRC}
+.Ed
 .El
 .Sh ENVIRONMENT
 .Nm
