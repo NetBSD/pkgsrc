@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2962 2008/11/11 00:44:29 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2963 2008/11/11 00:48:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4985,3 +4985,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-game to 1.8.1 [wiz 2008-11-10]
 	Updated multimedia/avidemux to 2.4.3 [wiz 2008-11-10]
 	Updated devel/doxygen to 1.5.7.1 [wiz 2008-11-11]
+	Updated www/tidy to 20081014 [wiz 2008-11-11]
