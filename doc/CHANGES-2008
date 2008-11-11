@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2968 2008/11/11 09:02:57 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2969 2008/11/11 09:07:11 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4991,3 +4991,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bzr-svn to 0.4.15 [epg 2008-11-11]
 	Updated devel/p5-Log-Dispatch-FileRotate to 1.19 [rhaen 2008-11-11]
 	Updated devel/p5-Log-Log4perl to 1.19 [rhaen 2008-11-11]
+	Updated devel/p5-SVN-Notify to 2.78 [rhaen 2008-11-11]
