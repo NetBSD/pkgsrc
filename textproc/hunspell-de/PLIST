@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/11 18:37:27 wiz Exp $
-share/doc/hunspell-de/COPYING
-share/doc/hunspell-de/COPYING_OASIS
-share/doc/hunspell-de/Copyright
-share/doc/hunspell-de/dictionary.lst.example
-share/doc/hunspell-de/README_de_AT.txt
-share/doc/hunspell-de/README_de_CH.txt
-share/doc/hunspell-de/README_de_DE.txt
+@comment $NetBSD: PLIST,v 1.2 2008/11/11 14:17:34 wiz Exp $
 share/hunspell/de_AT.aff
 share/hunspell/de_AT.dic
+share/hunspell/de_AT_small.aff
+share/hunspell/de_AT_small.dic
 share/hunspell/de_CH.aff
 share/hunspell/de_CH.dic
+share/hunspell/de_CH_small.aff
+share/hunspell/de_CH_small.dic
 share/hunspell/de_DE.aff
 share/hunspell/de_DE.dic
+share/hunspell/de_DE_small.aff
+share/hunspell/de_DE_small.dic
 @unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
-@dirrm share/doc/hunspell-de

@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2008/11/11 14:17:34 wiz Exp $
+
+--- Makefile.orig	2008-11-06 20:04:26.000000000 +0100
++++ Makefile
+@@ -192,7 +192,7 @@ myspell/$(1).dic: $$(WORDS_$(1)) $$(WORD
+ 	cat $$(WORDS_$(1)) $$(WORDS_de_all) dicts/abkuerzpunkt.txt \
+ 		| (test -e ./bin/conv_dict_$(1) && ./bin/conv_dict_$(1) || cat) \
+ 		| ./bin/myspell-generic-process.sh  > $$@.tmp
+-	wc -l < $$@.tmp > $$@
++	wc -l < $$@.tmp | sed "s/^ *//" > $$@
+ 	cat myspell/de_all.dic.header | $(SED) "s/AFF_VERSION_REPLACE/$(VERSION_STRING)/;s/LANG_REPLACE/$(1)/" >> $$@
+ 	./bin/dic2iso < $$@.tmp >> $$@
+ 	$(RM_OR_NOT) $$@.tmp
+@@ -297,7 +297,7 @@ hunspell/$(1)_small.dic: $$(HUNSPELL_DIC
+ 		| (test -e ./bin/conv_dict_$(1) && ./bin/conv_dict_$(1) || cat) \
+ 		| ./bin/hunspell-generic-process.sh \
+ 		> $$@.tmp
+-	wc -l < $$@.tmp > $$@
++	wc -l < $$@.tmp | sed "s/^ *//" > $$@
+ 	cat myspell/de_all.dic.header | \
+ 		$(SED) "s/AFF_VERSION_REPLACE/$(VERSION_STRING)/;s/LANG_REPLACE/$(1)/;s/Myspell/Hunspell/" >> $$@
+ 	./bin/dic2iso < $$@.tmp >> $$@
+@@ -314,7 +314,7 @@ hunspell/$(1).dic: $$(HUNSPELL_DICTS_ALL
+ 		| ./bin/hunspell-generic-process.sh	\
+ 		| ./bin/hunspell-optimize-roothelper.pl	\
+ 		> $$@.tmp
+-	wc -l < $$@.tmp > $$@
++	wc -l < $$@.tmp | sed "s/^ *//" > $$@
+ 	cat myspell/de_all.dic.header | $(SED) "s/AFF_VERSION_REPLACE/$$(VERSION_STRING)/;s/LANG_REPLACE/$(1)/;s/Myspell/Hunspell/" >> $$@
+ 	./bin/dic2iso < $$@.tmp >> $$@
+ 	$(RM_OR_NOT) $$@.tmp
+@@ -365,7 +365,7 @@ huntest: hunspell/hunspell-test.txt
+ 	# so this is the lesser evil. No perfect solution found so far...
+ 	cat hunspell/hunspell-test.txt |$(HUNSPELL) -L -d hunspell/de_DE > $@.tmp 2>&1
+ 	@if `grep -q "^0 " $@.tmp`;then echo "Huntest NICHT bestanden:"; cat $@.tmp; exit 1;fi
+-	@if ! test "`wc -l < $@.tmp`" = "`tail -n 1 $@.tmp | cut -f1 -d:`";then echo "Huntest NICHT bestanden (Zu viele als korrekt erkannte Wörter):"; cat $@.tmp; exit 1;fi
++	@if ! test "`wc -l < $@.tmp | sed 's/^ *//'`" = "`tail -n 1 $@.tmp | cut -f1 -d:`";then echo "Huntest NICHT bestanden (Zu viele als korrekt erkannte Wörter):"; cat $@.tmp; exit 1;fi
+ 
+ 
+ ###
