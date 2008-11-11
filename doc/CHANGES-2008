@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2964 2008/11/11 00:52:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2965 2008/11/11 01:31:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4987,3 +4987,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/doxygen to 1.5.7.1 [wiz 2008-11-11]
 	Updated www/tidy to 20081014 [wiz 2008-11-11]
 	Updated multimedia/libtheora-docs to 1.0nb1 [wiz 2008-11-11]
+	Updated www/ja-trac to 0.11.1pl2 [obache 2008-11-11]
