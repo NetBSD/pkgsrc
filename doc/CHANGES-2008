@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2971 2008/11/11 09:16:40 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2972 2008/11/11 09:22:59 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4995,3 +4995,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/uriparser to 0.7.3 [bjs 2008-11-11]
 	Updated misc/p5-Business-ISBN to 2.04 [rhaen 2008-11-11]
 	Updated misc/p5-Business-ISBN-Data to 20081020 [rhaen 2008-11-11]
+	Updated textproc/p5-CAM-PDF to 1.52 [rhaen 2008-11-11]
