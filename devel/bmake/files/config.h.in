@@ -9,9 +9,6 @@
 /* Define to 1 if you have the <ar.h> header file. */
 #undef HAVE_AR_H
 
-/* Define to 1 if you have the `asprintf' function. */
-#undef HAVE_ASPRINTF
-
 /* Define to 1 if you have the declaration of `sys_siglist', and to 0 if you
    don't. */
 #undef HAVE_DECL_SYS_SIGLIST
@@ -22,12 +19,6 @@
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 #undef HAVE_DOPRNT
-
-/* Define to 1 if you have the `emalloc' function. */
-#undef HAVE_EMALLOC
-
-/* Define to 1 if you have the `estrndup' function. */
-#undef HAVE_ESTRNDUP
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
@@ -92,9 +83,6 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #undef HAVE_STDLIB_H
 
-/* Define to 1 if you have the `strdup' function. */
-#undef HAVE_STRDUP
-
 /* Define to 1 if you have the `strerror' function. */
 #undef HAVE_STRERROR
 
@@ -106,9 +94,6 @@
 
 /* Define to 1 if you have the <string.h> header file. */
 #undef HAVE_STRING_H
-
-/* Define to 1 if you have the `strndup' function. */
-#undef HAVE_STRNDUP
 
 /* Define to 1 if you have the `strtod' function. */
 #undef HAVE_STRTOD
@@ -160,9 +145,6 @@
 
 /* Define to 1 if you have the <utime.h> header file. */
 #undef HAVE_UTIME_H
-
-/* Define to 1 if you have the `vasprintf' function. */
-#undef HAVE_VASPRINTF
 
 /* Define to 1 if you have the `vfork' function. */
 #undef HAVE_VFORK
