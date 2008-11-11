@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/08/19 16:35:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/11/11 00:44:12 wiz Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -13,6 +13,7 @@ share/doc/doxygen/examples/afterdoc/html/afterdoc_8h-source.html
 share/doc/doxygen/examples/afterdoc/html/annotated.html
 share/doc/doxygen/examples/afterdoc/html/class_test-members.html
 share/doc/doxygen/examples/afterdoc/html/class_test.html
+share/doc/doxygen/examples/afterdoc/html/classes.html
 share/doc/doxygen/examples/afterdoc/html/doxygen.css
 share/doc/doxygen/examples/afterdoc/html/doxygen.png
 share/doc/doxygen/examples/afterdoc/html/files.html
@@ -31,6 +32,7 @@ share/doc/doxygen/examples/author.cpp
 share/doc/doxygen/examples/author/html/annotated.html
 share/doc/doxygen/examples/author/html/bug.html
 share/doc/doxygen/examples/author/html/class_windows_n_t.html
+share/doc/doxygen/examples/author/html/classes.html
 share/doc/doxygen/examples/author/html/doxygen.css
 share/doc/doxygen/examples/author/html/doxygen.png
 share/doc/doxygen/examples/author/html/index.html
@@ -45,6 +47,7 @@ share/doc/doxygen/examples/autolink/html/annotated.html
 share/doc/doxygen/examples/autolink/html/autolink_8cpp.html
 share/doc/doxygen/examples/autolink/html/class_test-members.html
 share/doc/doxygen/examples/autolink/html/class_test.html
+share/doc/doxygen/examples/autolink/html/classes.html
 share/doc/doxygen/examples/autolink/html/doxygen.css
 share/doc/doxygen/examples/autolink/html/doxygen.png
 share/doc/doxygen/examples/autolink/html/files.html
@@ -69,6 +72,7 @@ share/doc/doxygen/examples/class.h
 share/doc/doxygen/examples/class/html/annotated.html
 share/doc/doxygen/examples/class/html/class_8h-source.html
 share/doc/doxygen/examples/class/html/class_test.html
+share/doc/doxygen/examples/class/html/classes.html
 share/doc/doxygen/examples/class/html/doxygen.css
 share/doc/doxygen/examples/class/html/doxygen.png
 share/doc/doxygen/examples/class/html/files.html
@@ -133,6 +137,7 @@ share/doc/doxygen/examples/diagrams/html/class_e__coll__graph.png
 share/doc/doxygen/examples/diagrams/html/class_e__inherit__graph.map
 share/doc/doxygen/examples/diagrams/html/class_e__inherit__graph.md5
 share/doc/doxygen/examples/diagrams/html/class_e__inherit__graph.png
+share/doc/doxygen/examples/diagrams/html/classes.html
 share/doc/doxygen/examples/diagrams/html/diagrams__a_8h-source.html
 share/doc/doxygen/examples/diagrams/html/diagrams__a_8h.html
 share/doc/doxygen/examples/diagrams/html/diagrams__a_8h__dep__incl.map
@@ -191,9 +196,10 @@ share/doc/doxygen/examples/docstring.cfg
 share/doc/doxygen/examples/docstring.py
 share/doc/doxygen/examples/docstring/html/annotated.html
 ${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass-members.html
-${PLIST.ci}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class-members.html
 ${PLIST.cs}share/doc/doxygen/examples/docstring/html/classdocstring_1_1PyClass.html
+${PLIST.ci}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class-members.html
 ${PLIST.ci}share/doc/doxygen/examples/docstring/html/classdocstring_1_1_py_class.html
+share/doc/doxygen/examples/docstring/html/classes.html
 share/doc/doxygen/examples/docstring/html/docstring_8py.html
 share/doc/doxygen/examples/docstring/html/doxygen.css
 share/doc/doxygen/examples/docstring/html/doxygen.png
@@ -214,6 +220,7 @@ share/doc/doxygen/examples/enum.h
 share/doc/doxygen/examples/enum/html/annotated.html
 share/doc/doxygen/examples/enum/html/class_test-members.html
 share/doc/doxygen/examples/enum/html/class_test.html
+share/doc/doxygen/examples/enum/html/classes.html
 share/doc/doxygen/examples/enum/html/doxygen.css
 share/doc/doxygen/examples/enum/html/doxygen.png
 share/doc/doxygen/examples/enum/html/enum_8h-source.html
@@ -232,6 +239,7 @@ share/doc/doxygen/examples/example.tag
 share/doc/doxygen/examples/example/html/annotated.html
 share/doc/doxygen/examples/example/html/class_test-members.html
 share/doc/doxygen/examples/example/html/class_test.html
+share/doc/doxygen/examples/example/html/classes.html
 share/doc/doxygen/examples/example/html/doxygen.css
 share/doc/doxygen/examples/example/html/doxygen.png
 share/doc/doxygen/examples/example/html/example__test_8cpp-example.html
@@ -263,6 +271,7 @@ share/doc/doxygen/examples/func.h
 share/doc/doxygen/examples/func/html/annotated.html
 share/doc/doxygen/examples/func/html/class_test-members.html
 share/doc/doxygen/examples/func/html/class_test.html
+share/doc/doxygen/examples/func/html/classes.html
 share/doc/doxygen/examples/func/html/doxygen.css
 share/doc/doxygen/examples/func/html/doxygen.png
 share/doc/doxygen/examples/func/html/files.html
@@ -282,6 +291,7 @@ share/doc/doxygen/examples/group/html/class_c2.html
 share/doc/doxygen/examples/group/html/class_c3.html
 share/doc/doxygen/examples/group/html/class_c4.html
 share/doc/doxygen/examples/group/html/class_c5.html
+share/doc/doxygen/examples/group/html/classes.html
 share/doc/doxygen/examples/group/html/doxygen.css
 share/doc/doxygen/examples/group/html/doxygen.png
 share/doc/doxygen/examples/group/html/files.html
@@ -306,6 +316,7 @@ share/doc/doxygen/examples/include.cpp
 share/doc/doxygen/examples/include/html/annotated.html
 share/doc/doxygen/examples/include/html/class_test-members.html
 share/doc/doxygen/examples/include/html/class_test.html
+share/doc/doxygen/examples/include/html/classes.html
 share/doc/doxygen/examples/include/html/doxygen.css
 share/doc/doxygen/examples/include/html/doxygen.png
 share/doc/doxygen/examples/include/html/example.html
@@ -322,6 +333,7 @@ share/doc/doxygen/examples/jdstyle.cpp
 share/doc/doxygen/examples/jdstyle/html/annotated.html
 share/doc/doxygen/examples/jdstyle/html/class_test-members.html
 share/doc/doxygen/examples/jdstyle/html/class_test.html
+share/doc/doxygen/examples/jdstyle/html/classes.html
 share/doc/doxygen/examples/jdstyle/html/doxygen.css
 share/doc/doxygen/examples/jdstyle/html/doxygen.png
 share/doc/doxygen/examples/jdstyle/html/functions.html
@@ -334,11 +346,44 @@ share/doc/doxygen/examples/jdstyle/html/tab_b.gif
 share/doc/doxygen/examples/jdstyle/html/tab_l.gif
 share/doc/doxygen/examples/jdstyle/html/tab_r.gif
 share/doc/doxygen/examples/jdstyle/html/tabs.css
+share/doc/doxygen/examples/manual.c
+share/doc/doxygen/examples/manual.cfg
+share/doc/doxygen/examples/manual/html/annotated.html
+share/doc/doxygen/examples/manual/html/classes.html
+share/doc/doxygen/examples/manual/html/doxygen.css
+share/doc/doxygen/examples/manual/html/doxygen.png
+share/doc/doxygen/examples/manual/html/files.html
+share/doc/doxygen/examples/manual/html/functions.html
+share/doc/doxygen/examples/manual/html/functions_func.html
+share/doc/doxygen/examples/manual/html/functions_vars.html
+share/doc/doxygen/examples/manual/html/globals.html
+share/doc/doxygen/examples/manual/html/globals_func.html
+share/doc/doxygen/examples/manual/html/globals_type.html
+share/doc/doxygen/examples/manual/html/hierarchy.html
+share/doc/doxygen/examples/manual/html/index.html
+share/doc/doxygen/examples/manual/html/manual_8c.html
+share/doc/doxygen/examples/manual/html/struct_car-members.html
+share/doc/doxygen/examples/manual/html/struct_car.html
+share/doc/doxygen/examples/manual/html/struct_car.png
+share/doc/doxygen/examples/manual/html/struct_object-members.html
+share/doc/doxygen/examples/manual/html/struct_object.html
+share/doc/doxygen/examples/manual/html/struct_object.png
+share/doc/doxygen/examples/manual/html/struct_truck-members.html
+share/doc/doxygen/examples/manual/html/struct_truck.html
+share/doc/doxygen/examples/manual/html/struct_truck.png
+share/doc/doxygen/examples/manual/html/struct_vehicle-members.html
+share/doc/doxygen/examples/manual/html/struct_vehicle.html
+share/doc/doxygen/examples/manual/html/struct_vehicle.png
+share/doc/doxygen/examples/manual/html/tab_b.gif
+share/doc/doxygen/examples/manual/html/tab_l.gif
+share/doc/doxygen/examples/manual/html/tab_r.gif
+share/doc/doxygen/examples/manual/html/tabs.css
 share/doc/doxygen/examples/memgrp.cfg
 share/doc/doxygen/examples/memgrp.cpp
 share/doc/doxygen/examples/memgrp/html/annotated.html
 share/doc/doxygen/examples/memgrp/html/class_test-members.html
 share/doc/doxygen/examples/memgrp/html/class_test.html
+share/doc/doxygen/examples/memgrp/html/classes.html
 share/doc/doxygen/examples/memgrp/html/doxygen.css
 share/doc/doxygen/examples/memgrp/html/doxygen.png
 share/doc/doxygen/examples/memgrp/html/files.html
@@ -356,6 +401,7 @@ share/doc/doxygen/examples/memgrp/html/tabs.css
 share/doc/doxygen/examples/mux.cfg
 share/doc/doxygen/examples/mux.vhdl
 share/doc/doxygen/examples/mux/html/annotated.html
+share/doc/doxygen/examples/mux/html/classes.html
 share/doc/doxygen/examples/mux/html/classmux__using__with-members.html
 share/doc/doxygen/examples/mux/html/classmux__using__with.html
 share/doc/doxygen/examples/mux/html/classmux__using__with.png
@@ -378,6 +424,7 @@ share/doc/doxygen/examples/overload.cpp
 share/doc/doxygen/examples/overload/html/annotated.html
 share/doc/doxygen/examples/overload/html/class_test-members.html
 share/doc/doxygen/examples/overload/html/class_test.html
+share/doc/doxygen/examples/overload/html/classes.html
 share/doc/doxygen/examples/overload/html/doxygen.css
 share/doc/doxygen/examples/overload/html/doxygen.png
 share/doc/doxygen/examples/overload/html/functions.html
@@ -403,6 +450,7 @@ share/doc/doxygen/examples/par.cfg
 share/doc/doxygen/examples/par.cpp
 share/doc/doxygen/examples/par/html/annotated.html
 share/doc/doxygen/examples/par/html/class_test.html
+share/doc/doxygen/examples/par/html/classes.html
 share/doc/doxygen/examples/par/html/doxygen.css
 share/doc/doxygen/examples/par/html/doxygen.png
 share/doc/doxygen/examples/par/html/index.html
@@ -413,9 +461,10 @@ share/doc/doxygen/examples/par/html/tabs.css
 share/doc/doxygen/examples/pyexample.cfg
 share/doc/doxygen/examples/pyexample.py
 share/doc/doxygen/examples/pyexample/html/annotated.html
+share/doc/doxygen/examples/pyexample/html/classes.html
 ${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
-${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
 ${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
+${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
 ${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
 share/doc/doxygen/examples/pyexample/html/doxygen.css
 share/doc/doxygen/examples/pyexample/html/doxygen.png
@@ -436,6 +485,7 @@ share/doc/doxygen/examples/qtstyle.cpp
 share/doc/doxygen/examples/qtstyle/html/annotated.html
 share/doc/doxygen/examples/qtstyle/html/class_test-members.html
 share/doc/doxygen/examples/qtstyle/html/class_test.html
+share/doc/doxygen/examples/qtstyle/html/classes.html
 share/doc/doxygen/examples/qtstyle/html/doxygen.css
 share/doc/doxygen/examples/qtstyle/html/doxygen.png
 share/doc/doxygen/examples/qtstyle/html/functions.html
@@ -453,6 +503,7 @@ share/doc/doxygen/examples/relates.cpp
 share/doc/doxygen/examples/relates/html/annotated.html
 share/doc/doxygen/examples/relates/html/class_string-members.html
 share/doc/doxygen/examples/relates/html/class_string.html
+share/doc/doxygen/examples/relates/html/classes.html
 share/doc/doxygen/examples/relates/html/doxygen.css
 share/doc/doxygen/examples/relates/html/doxygen.png
 share/doc/doxygen/examples/relates/html/functions.html
@@ -466,6 +517,7 @@ share/doc/doxygen/examples/relates/html/tabs.css
 share/doc/doxygen/examples/restypedef.cfg
 share/doc/doxygen/examples/restypedef.cpp
 share/doc/doxygen/examples/restypedef/html/annotated.html
+share/doc/doxygen/examples/restypedef/html/classes.html
 share/doc/doxygen/examples/restypedef/html/doxygen.css
 share/doc/doxygen/examples/restypedef/html/doxygen.png
 share/doc/doxygen/examples/restypedef/html/files.html
@@ -505,6 +557,7 @@ share/doc/doxygen/examples/tag/html/annotated.html
 share/doc/doxygen/examples/tag/html/class_tag-members.html
 share/doc/doxygen/examples/tag/html/class_tag.html
 share/doc/doxygen/examples/tag/html/class_tag.png
+share/doc/doxygen/examples/tag/html/classes.html
 share/doc/doxygen/examples/tag/html/doxygen.css
 share/doc/doxygen/examples/tag/html/doxygen.png
 share/doc/doxygen/examples/tag/html/functions.html
@@ -527,6 +580,7 @@ share/doc/doxygen/examples/template/html/class_test_3_01_t_01_5_01_4.png
 share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4-members.html
 share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4.html
 share/doc/doxygen/examples/template/html/class_test_3_01void_01_5_00_01200_01_4.png
+share/doc/doxygen/examples/template/html/classes.html
 share/doc/doxygen/examples/template/html/doxygen.css
 share/doc/doxygen/examples/template/html/doxygen.png
 share/doc/doxygen/examples/template/html/functions.html
@@ -543,6 +597,7 @@ share/doc/doxygen/html/autolink.html
 share/doc/doxygen/html/commands.html
 share/doc/doxygen/html/config.html
 share/doc/doxygen/html/custcmd.html
+share/doc/doxygen/html/customize.html
 share/doc/doxygen/html/diagrams.html
 share/doc/doxygen/html/docblocks.html
 share/doc/doxygen/html/doxygen.css
@@ -568,6 +623,8 @@ share/doc/doxygen/html/form_2.png
 share/doc/doxygen/html/form_3.png
 share/doc/doxygen/html/form_4.png
 share/doc/doxygen/html/form_5.png
+share/doc/doxygen/html/form_6.png
+share/doc/doxygen/html/form_7.png
 share/doc/doxygen/html/formula.repository
 share/doc/doxygen/html/formulas.html
 share/doc/doxygen/html/grouping.html
@@ -619,6 +676,8 @@ share/doc/doxygen/html/xmlcmds.html
 @dirrm share/doc/doxygen/examples/mux
 @dirrm share/doc/doxygen/examples/memgrp/html
 @dirrm share/doc/doxygen/examples/memgrp
+@dirrm share/doc/doxygen/examples/manual/html
+@dirrm share/doc/doxygen/examples/manual
 @dirrm share/doc/doxygen/examples/jdstyle/html
 @dirrm share/doc/doxygen/examples/jdstyle
 @dirrm share/doc/doxygen/examples/include/html

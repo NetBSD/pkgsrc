@@ -1,40 +1,36 @@
-$NetBSD: patch-ab,v 1.10 2008/06/04 15:05:39 dsainty Exp $
+$NetBSD: patch-ab,v 1.11 2008/11/11 00:44:12 wiz Exp $
 
---- Makefile.in.orig	2008-06-04 15:03:17.373765859 +1200
-+++ Makefile.in	2008-06-04 15:22:33.471205326 +1200
-@@ -53,25 +53,25 @@
+--- Makefile.in.orig	2008-10-04 13:49:57.000000000 +0000
++++ Makefile.in
+@@ -55,23 +55,23 @@ DATE=$(shell date "+%B %Y")
  MAN1DIR = man/man1
  
  install: doxywizard_install 
--	$(INSTTOOL) -d $(INSTALL)/bin
--	$(INSTTOOL) -m 755 bin/doxygen    $(INSTALL)/bin
--	$(INSTTOOL) -m 755 bin/doxytag    $(INSTALL)/bin
--	$(INSTTOOL) -d $(INSTALL)/$(MAN1DIR)
-+	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(INSTALL)/bin
-+	$(BSD_INSTALL_PROGRAM) bin/doxygen ${DESTDIR}$(INSTALL)/bin
-+	$(BSD_INSTALL_PROGRAM) bin/doxytag ${DESTDIR}$(INSTALL)/bin
-+	$(BSD_INSTALL_MAN_DIR) ${DESTDIR}$(INSTALL)/$(MAN1DIR)
+-	$(INSTTOOL) -d $(DESTDIR)/$(INSTALL)/bin
+-	$(INSTTOOL) -m 755 bin/doxygen    $(DESTDIR)/$(INSTALL)/bin
+-	$(INSTTOOL) -m 755 bin/doxytag    $(DESTDIR)/$(INSTALL)/bin
+-	$(INSTTOOL) -d $(DESTDIR)/$(INSTALL)/$(MAN1DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(INSTALL)/bin
++	$(BSD_INSTALL_PROGRAM) -m 755 bin/doxygen    $(DESTDIR)/$(INSTALL)/bin
++	$(BSD_INSTALL_PROGRAM) -m 755 bin/doxytag    $(DESTDIR)/$(INSTALL)/bin
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)/$(INSTALL)/$(MAN1DIR)
  	cat doc/doxygen.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > doxygen.1 
--	$(INSTTOOL) -m 644 doxygen.1 $(INSTALL)/$(MAN1DIR)/doxygen.1
-+	$(BSD_INSTALL_MAN) doxygen.1 ${DESTDIR}$(INSTALL)/$(MAN1DIR)/doxygen.1
+-	$(INSTTOOL) -m 644 doxygen.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxygen.1
++	$(BSD_INSTALL_MAN) doxygen.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxygen.1
  	rm doxygen.1
  	cat doc/doxytag.1    | sed -e "s/DATE/$(DATE)/g" -e "s/VERSION/$(VERSION)/g" > doxytag.1
--	$(INSTTOOL) -m 644 doxytag.1 $(INSTALL)/$(MAN1DIR)/doxytag.1
-+	$(BSD_INSTALL_MAN) doxytag.1 ${DESTDIR}$(INSTALL)/$(MAN1DIR)/doxytag.1
+-	$(INSTTOOL) -m 644 doxytag.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxytag.1
++	$(BSD_INSTALL_MAN) doxytag.1 $(DESTDIR)/$(INSTALL)/$(MAN1DIR)/doxytag.1
  	rm doxytag.1
  
  install_docs: 
--	$(INSTTOOL) -d $(DOCDIR)
-+	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(DOCDIR)
+-	$(INSTTOOL) -d $(DESTDIR)/$(DOCDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/$(DOCDIR)
  	$(MAKE) -C examples
  	$(MAKE) -C doc 
  	$(MAKE) -C latex 
--	$(INSTTOOL) -m 644 latex/doxygen_manual.pdf $(DOCDIR)
--	cp -r examples $(DOCDIR)
--	cp -r html $(DOCDIR)
-+	$(BSD_INSTALL_DATA) latex/doxygen_manual.pdf ${DESTDIR}$(DOCDIR)
-+	cp -r examples ${DESTDIR}$(DOCDIR)
-+	cp -r html ${DESTDIR}$(DOCDIR)
+-	$(INSTTOOL) -m 644 latex/doxygen_manual.pdf $(DESTDIR)/$(DOCDIR)
++	$(BSD_INSTALL_DATA) -m 644 latex/doxygen_manual.pdf $(DESTDIR)/$(DOCDIR)
+ 	cp -r examples $(DESTDIR)/$(DOCDIR)
+ 	cp -r html $(DESTDIR)/$(DOCDIR)
  
- docs: FORCE
- 	cd examples ; $(MAKE)

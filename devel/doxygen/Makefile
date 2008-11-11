@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2008/08/19 16:35:25 tron Exp $
+# $NetBSD: Makefile,v 1.64 2008/11/11 00:44:12 wiz Exp $
 
-DISTNAME=	doxygen-1.5.6.src
-PKGNAME=	doxygen-1.5.6
+DISTNAME=	doxygen-1.5.7.1.src
+PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--perl ${PERL5}
 CONFIGURE_ARGS+=	--install ${INSTALL}
 CONFIGURE_ARGS+=	--dot ${PREFIX}/bin/dot
 CONFIGURE_ARGS+=	--prefix ${PREFIX}
-CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc
+CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc/doxygen
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
