@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2008/07/28 22:46:38 adam Exp $
+$NetBSD: patch-aa,v 1.10 2008/11/12 18:45:04 adam Exp $
 
---- Makefile.orig	2007-11-10 20:01:12.000000000 +0100
+--- Makefile.orig	2008-11-12 19:29:05.000000000 +0100
 +++ Makefile
-@@ -0,0 +1,37 @@
-+OBJS=	optipng.o opngreduc.o cbitset.o osys.o strutil.o pngxio.o pngxmem.o \
-+	pngxrbmp.o pngxread.o pngxrgif.o pngxrjpg.o pngxrpnm.o pngxrtif.o \
-+	pngxset.o pngxwrite.o gifread.o pnmin.o pnmout.o pnmutil.o \
+@@ -0,0 +1,38 @@
++OBJS=	optipng.o opngoptim.o opngreduc.o cbitset.o osys.o strutil.o pngxio.o \
++	pngxmem.o pngxrbmp.o pngxread.o pngxrgif.o pngxrjpg.o pngxrpnm.o \
++	pngxrtif.o pngxset.o pngxwrite.o gifread.o pnmin.o pnmout.o pnmutil.o \
 +	png_write_sig.o minitiff.o tiffread.o tiffwrite.o
 +
 +CPPFLAGS=	`libpng-config --cflags` -Ilib/pngxtern -Isrc
@@ -13,29 +13,30 @@ $NetBSD: patch-aa,v 1.9 2008/07/28 22:46:38 adam Exp $
 +all: $(OBJS)
 +	$(CC) -o optipng $(LDFLAGS) $(OBJS) -lz `libpng-config --ldflags`
 +
-+optipng.o:   src/optipng.c   src/opngreduc.h src/osys.h src/cbitset.h src/cexcept.h
-+opngreduc.o: src/opngreduc.c src/opngreduc.h
-+cbitset.o:   src/cbitset.c   src/cbitset.h
-+osys.o:      src/osys.c      src/osys.h
-+strutil.o:   src/strutil.c   src/strutil.h
++optipng.o:   src/optipng.c
++opngoptim.o: src/opngoptim.c
++opngreduc.o: src/opngreduc.c
++cbitset.o:   src/cbitset.c
++osys.o:      src/osys.c
++strutil.o:   src/strutil.c
 +
-+pngxio.o:    lib/pngxtern/pngxio.c		lib/pngxtern/pngxtern.h
-+pngxmem.o:   lib/pngxtern/pngxmem.c		lib/pngxtern/pngxtern.h
-+pngxrbmp.o:  lib/pngxtern/pngxrbmp.c		lib/pngxtern/pngxtern.h 
-+pngxread.o:  lib/pngxtern/pngxread.c		lib/pngxtern/pngxtern.h
-+pngxrgif.o:  lib/pngxtern/pngxrgif.c		lib/pngxtern/pngxtern.h 
-+pngxrjpg.o:  lib/pngxtern/pngxrjpg.c		lib/pngxtern/pngxtern.h 
-+pngxrpnm.o:  lib/pngxtern/pngxrpnm.c		lib/pngxtern/pngxtern.h 
-+pngxrtif.o:  lib/pngxtern/pngxrtif.c		lib/pngxtern/pngxtern.h 
-+pngxset.o:   lib/pngxtern/pngxset.c		lib/pngxtern/pngxtern.h 
-+pngxwrite.o: lib/pngxtern/pngxwrite.c		lib/pngxtern/pngxtern.h 
-+gifread.o:   lib/pngxtern/gif/gifread.c	lib/pngxtern/gif/gifread.h
-+pnmin.o:     lib/pngxtern/pnm/pnmin.c		lib/pngxtern/pnm/pnmio.h
-+pnmout.o:    lib/pngxtern/pnm/pnmout.c		lib/pngxtern/pnm/pnmio.h
-+pnmutil.o:   lib/pngxtern/pnm/pnmutil.c	lib/pngxtern/pnm/pnmio.h
-+minitiff.o:  lib/pngxtern/minitiff/minitiff.c	lib/pngxtern/minitiff/minitiff.h
-+tiffread.o:  lib/pngxtern/minitiff/tiffread.c	lib/pngxtern/minitiff/tiffdef.h
-+tiffwrite.o: lib/pngxtern/minitiff/tiffwrite.c	lib/pngxtern/minitiff/tiffdef.h
++pngxio.o:    lib/pngxtern/pngxio.c
++pngxmem.o:   lib/pngxtern/pngxmem.c
++pngxrbmp.o:  lib/pngxtern/pngxrbmp.c
++pngxread.o:  lib/pngxtern/pngxread.c
++pngxrgif.o:  lib/pngxtern/pngxrgif.c
++pngxrjpg.o:  lib/pngxtern/pngxrjpg.c
++pngxrpnm.o:  lib/pngxtern/pngxrpnm.c
++pngxrtif.o:  lib/pngxtern/pngxrtif.c
++pngxset.o:   lib/pngxtern/pngxset.c
++pngxwrite.o: lib/pngxtern/pngxwrite.c
++gifread.o:   lib/pngxtern/gif/gifread.c
++pnmin.o:     lib/pngxtern/pnm/pnmin.c
++pnmout.o:    lib/pngxtern/pnm/pnmout.c
++pnmutil.o:   lib/pngxtern/pnm/pnmutil.c
++minitiff.o:  lib/pngxtern/minitiff/minitiff.c
++tiffread.o:  lib/pngxtern/minitiff/tiffread.c
++tiffwrite.o: lib/pngxtern/minitiff/tiffwrite.c
 +
 +install:
 +	${BSD_INSTALL_PROGRAM} optipng "${DESTDIR}${PREFIX}/bin"
