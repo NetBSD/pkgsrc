@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2983 2008/11/12 12:20:04 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2984 2008/11/12 12:27:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5009,3 +5009,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/ap22-authn-sasl version 1.0.2 [martti 2008-11-12]
 	Updated net/ekiga to 3.0.1nb1 [dsainty 2008-11-12]
 	Updated x11/xf86-video-radeonhd to 1.2.3 [abs 2008-11-12]
+	Updated textproc/dictem to 1.0.0 [obache 2008-11-12]
