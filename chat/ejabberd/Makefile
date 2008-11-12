@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/04/24 08:04:59 martti Exp $
+# $NetBSD: Makefile,v 1.6 2008/11/12 13:13:59 martti Exp $
 
-DISTNAME=	ejabberd-2.0.0
-PKGREVISION=	2
+DISTNAME=	ejabberd-2.0.2
+#PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.2/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
@@ -14,6 +14,7 @@ CONFLICTS+=	jabberd-[0-9]*
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 # much prefer to be explicit about the configure settings rather than
 # depending on the defaults to continue to be sane or same between versions
 CONFIGURE_ARGS+=	--enable-odbc
@@ -75,8 +76,8 @@ PKG_USERS+=		${EJABBERD_USER}:${EJABBERD_GROUP}
 
 EGDIR=			${PREFIX}/${EJABBERD_EXDIR}
 
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}/api
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME_NOREV}
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME_NOREV}/api
 INSTALLATION_DIRS+=	${EGDIR}
 
 CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
@@ -84,10 +85,10 @@ CONF_FILES+=		${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg
 CONF_FILES+=		${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${DISTNAME}
-	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${DISTNAME}
-	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${PREFIX}/share/doc/${DISTNAME}
-	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${PREFIX}/share/doc/${DISTNAME}/api
+	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${PREFIX}/share/doc/${PKGNAME_NOREV}/api
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
