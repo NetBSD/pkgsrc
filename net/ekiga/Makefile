@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/25 18:15:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/12 11:44:29 dsainty Exp $
 #
 
 DISTNAME=		ekiga-3.0.1
+PKGREVISION=		1
 COMMENT=		VoIP and video conferencing application for GNOME
 CATEGORIES=		net comms
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -16,6 +17,7 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--disable-avahi
+CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client:Q}
 
 GCONF_SCHEMAS=		ekiga.schemas
 
@@ -23,6 +25,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
