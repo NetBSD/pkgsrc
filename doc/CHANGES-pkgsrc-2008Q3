@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.33 2008/11/12 07:08:36 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.34 2008/11/12 07:12:00 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -93,3 +93,5 @@ Pullup ticket #2582 - requested by heinz
 esniper: compatibility update
 pullup ticket #2584 - requested by obache
 ja-trac: update package for security and bug fixes
+pullup ticket #2583 - requested by bouyer
+myodbc: update package for bug fixes
