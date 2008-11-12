@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1 2008/11/12 11:44:29 dsainty Exp $
+
+Hash is a directive prefix - comment out the comments.
+
+--- lib/pixops/composite_line_22_4a4_mmx.S.orig	2008-10-01 15:21:01.215158522 +1300
++++ lib/pixops/composite_line_22_4a4_mmx.S	2008-10-01 15:21:39.685738842 +1300
+@@ -189,8 +189,8 @@
+ 
+ 	shll $2, %edx
+ 
+-#	%mm4 will always be already clear here	
+-#	pxor %mm4, %mm4
++/*	%mm4 will always be already clear here	
++	pxor %mm4, %mm4 */
+ 
+ 	movl 16(%ebp),%edi
+ 	movl (%edi, %edx), %eax

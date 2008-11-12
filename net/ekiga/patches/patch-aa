@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2008/11/12 11:44:29 dsainty Exp $
+
+Hash is a directive prefix - comment out the comments.
+
+--- lib/pixops/have_mmx.S.orig	2008-10-01 14:04:34.155963777 +1300
++++ lib/pixops/have_mmx.S	2008-10-01 14:05:04.806426133 +1300
+@@ -42,7 +42,7 @@
+ 	
+ 	push	%ebx
+ 
+-# Check if bit 21 in flags word is writeable
++/* Check if bit 21 in flags word is writeable */
+ 
+ 	pushfl	
+ 	popl	%eax
+@@ -57,7 +57,7 @@
+ 
+ 	je .notfound
+ 
+-# OK, we have CPUID
++/* OK, we have CPUID */
+ 
+ 	movl	$1, %eax
+ 	cpuid
