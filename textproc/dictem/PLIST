@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/10 14:53:11 obache Exp $
-share/doc/${PKGBASE}/COPYING
-share/doc/${PKGBASE}/ChangeLog
-share/doc/${PKGBASE}/NEWS
-share/doc/${PKGBASE}/README
+@comment $NetBSD: PLIST,v 1.2 2008/11/12 12:25:27 obache Exp $
+share/doc/dictem/COPYING
+share/doc/dictem/ChangeLog
+share/doc/dictem/NEWS
+share/doc/dictem/README
 ${EMACS_LISPPREFIX}/dictem.el
 ${EMACS_LISPPREFIX}/dictem.elc
-@dirrm share/doc/${PKGBASE}
+@dirrm share/doc/dictem
