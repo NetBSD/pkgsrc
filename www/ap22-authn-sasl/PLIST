@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/12 09:10:00 martti Exp $
+lib/httpd/mod_authn_sasl.so
