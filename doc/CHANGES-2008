@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2987 2008/11/12 18:46:35 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2988 2008/11/12 22:11:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5013,3 +5013,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/ejabberd to 2.0.2 [martti 2008-11-12]
 	Updated editors/vim-share to 7.2.37 [martti 2008-11-12]
 	Updated graphics/optipng to 0.6.2 [adam 2008-11-12]
+	Updated devel/p5-MooseX-ClassAttribute to 0.07 [seb 2008-11-12]
