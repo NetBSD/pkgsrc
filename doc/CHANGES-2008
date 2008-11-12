@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2981 2008/11/12 09:13:54 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2982 2008/11/12 11:46:37 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5007,3 +5007,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/libetpan to 0.57nb1 [cube 2008-11-11]
 	Updated www/ap22-authnz-external to 3.2.1 [martti 2008-11-12]
 	Added www/ap22-authn-sasl version 1.0.2 [martti 2008-11-12]
+	Updated net/ekiga to 3.0.1nb1 [dsainty 2008-11-12]
