@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7689 2008/11/12 12:20:05 abs Exp $
+$NetBSD: TODO,v 1.7690 2008/11/12 12:28:26 obache Exp $
 
 Suggested new packages
 ======================
@@ -500,7 +500,6 @@ Suggested package updates
 	o delegate-9.7.5
 	o devIL-1.7.1
 	o dhid-5.3
-	o dictem-1.0.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0
