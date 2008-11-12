@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/12 09:10:00 martti Exp $
+
+SHA1 (mod_authn_sasl-1.0.2.tar.bz2) = 83beef4940cd4e7bb771245c66001a37abe05841
+RMD160 (mod_authn_sasl-1.0.2.tar.bz2) = 6e9ee7d9c1d710e9b395e8d9e99bff712cee61f2
+Size (mod_authn_sasl-1.0.2.tar.bz2) = 244838 bytes
