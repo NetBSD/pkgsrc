@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2007/01/14 14:37:44 obache Exp $
+# $NetBSD: Makefile,v 1.17.18.1 2008/11/12 07:11:34 rtr Exp $
 #
 
-DISTNAME=	mysql-connector-odbc-3.51.12
+DISTNAME=	mysql-connector-odbc-3.51.26r1127
 PKGNAME=	${DISTNAME:S/mysql-connector-odbc/myodbc/}
-PKGREVISION=	3
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_MYSQL:=MyODBC3/}
+MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-ODBC/3.51/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mysql.com/
@@ -16,15 +15,13 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS+=	--with-mysql-path=${BUILDLINK_PREFIX.mysql-client}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 CONFIGURE_ARGS+=	--disable-gui
 CONFIGURE_ARGS+=	--disable-myodbc3i
 CONFIGURE_ARGS+=	--without-samples
 CONFIGURE_ARGS+=	--disable-test
 
-INSTALLATION_DIRS=	share/doc/myodbc
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README* ${PREFIX}/share/doc/myodbc
+INSTALLATION_DIRS=	share/doc/mysql-connector-odbc
 
 .include "options.mk"
 .include "../../devel/libltdl/buildlink3.mk"
