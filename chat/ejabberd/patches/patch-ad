@@ -1,140 +1,93 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/03/10 08:58:32 martti Exp $
+$NetBSD: patch-ad,v 1.2 2008/11/12 13:13:59 martti Exp $
 
-Patch from Fabrice Colliot: support for multiple listeners on same port
-number (eg IPv4 and IPv6 simultaneously).
+Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
 
---- src/ejabberd_listener.erl.orig	2008-01-16 12:33:27.000000000 +0200
-+++ src/ejabberd_listener.erl	2008-02-14 15:25:12.000000000 +0200
-@@ -27,12 +27,12 @@
- -module(ejabberd_listener).
- -author('alexey@process-one.net').
+--- src/ejabberd.cfg.example.orig	2008-11-12 15:15:04.000000000 +0200
++++ src/ejabberd.cfg.example
+@@ -107,10 +107,9 @@
+  [
  
---export([start_link/0, init/1, start/3,
--	 init/3,
--	 init_ssl/4,
--	 start_listener/3,
-+-export([start_link/0, init/1, start/4,
-+	 init/4,
-+	 init_ssl/5,
-+	 start_listener/4,
- 	 stop_listener/1,
--	 add_listener/3,
-+	 add_listener/4,
- 	 delete_listener/1
- 	]).
+   {5222, ejabberd_c2s, [
+-
+ 			%%
+ 			%% If TLS is compiled and you installed a SSL
+-			%% certificate, put the correct path to the 
++			%% certificate, put the correct path to the
+ 			%% file and uncomment this line:
+ 			%%
+ 			%%{certfile, "/path/to/ssl.pem"}, starttls,
+@@ -123,12 +122,12 @@
+   %%
+   %% To enable the old SSL connection method in port 5223:
+   %%
+-  %%{5223, ejabberd_c2s, [
+-  %%			{access, c2s},
+-  %%			{shaper, c2s_shaper},
+-  %%			{certfile, "/path/to/ssl.pem"}, tls,
+-  %%			{max_stanza_size, 65536}
+-  %%		       ]},
++  {5223, ejabberd_c2s, [
++			{access, c2s},
++			{shaper, c2s_shaper},
++			{certfile, "/path/to/ssl.pem"}, tls,
++			{max_stanza_size, 65536}
++		       ]},
  
-@@ -49,9 +49,9 @@
- 	Ls ->
- 	    {ok, {{one_for_one, 10, 1},
- 		  lists:map(
--		    fun({Port, Module, Opts}) ->
--			    {Port,
--			     {?MODULE, start, [Port, Module, Opts]},
-+		    fun({ListenerID, Port, Module, Opts}) ->
-+			    {ListenerID,
-+			     {?MODULE, start, [ListenerID, Port, Module, Opts]},
- 			     transient,
- 			     brutal_kill,
- 			     worker,
-@@ -60,7 +60,7 @@
-     end.
+   {5269, ejabberd_s2s_in, [
+ 			   {shaper, s2s_shaper},
+@@ -138,14 +137,14 @@
+   %%
+   %% ejabberd_service: Interact with external components (transports...)
+   %%
+-  %%{8888, ejabberd_service, [
+-  %%			    {access, all}, 
+-  %%			    {shaper_rule, fast},
+-  %%			    {ip, {127, 0, 0, 1}},
+-  %%			    {hosts, ["icq.example.org", "sms.example.org"],
+-  %%			     [{password, "secret"}]
+-  %%			    }
+-  %%			   ]},
++  %%{{8888, "127.0.0.1"},
++  %% ejabberd_service, [
++  %%		      {access, all}, 
++  %%		      {shaper_rule, fast},
++  %%		      {hosts, ["icq.example.org", "sms.example.org"],
++  %%		       [{password, "secret"}]
++  %%		      }
++  %%		     ]},
  
+   {5280, ejabberd_http, [
+ 			 http_poll, 
+@@ -224,17 +223,26 @@
+ %% List of LDAP servers:
+ %%{ldap_servers, ["localhost"]}.    
+ %%
+-%% LDAP attribute that holds user ID:
+-%%{ldap_uids, [{"mail", "%u@mail.example.org"}]}. 
++%% Encryption of connection to LDAP servers:
++%%{ldap_encrypt, tls}.
+ %%
+-%% Search base of LDAP directory:
+-%%{ldap_base, "dc=example,dc=com"}. 
++%% Port connect to LDAP server:
++%%{ldap_port, 636}.
+ %%
+ %% LDAP manager:
+-%%{ldap_rootdn, "dc=example,dc=com"}. 
++%%{ldap_rootdn, "dc=example,dc=com"}.
+ %%
+ %% Password to LDAP manager:
+-%%{ldap_password, "******"}. 
++%%{ldap_password, "******"}.
++%%
++%% Search base of LDAP directory:
++%%{ldap_base, "dc=example,dc=com"}.
++%%
++%% LDAP attribute that holds user ID:
++%%{ldap_uids, [{"mail", "%u@mail.example.org"}]}.
++%%
++%% LDAP filter:
++%%{ldap_filter, "(objectClass=shadowAccount)"}.
  
--start(Port, Module, Opts) ->
-+start(ListenerID, Port, Module, Opts) ->
-     SSLError = "There is a problem with your ejabberd configuration file: the option 'ssl' for listening sockets is no longer available. To get SSL encryption use the option 'tls'.",
-     case lists:keysearch(ssl, 1, Opts) of
- 	{value, {ssl, _SSLOpts}} ->
-@@ -77,11 +77,11 @@
- 		    {error, SSLError};
- 		false ->
- 		    {ok, proc_lib:spawn_link(?MODULE, init,
--					     [Port, Module, Opts])}
-+					     [ListenerID, Port, Module, Opts])}
- 	    end
-     end.
- 
--init(Port, Module, Opts) ->
-+init(ListenerID, Port, Module, Opts) ->
-     SockOpts = lists:filter(fun({ip, _}) -> true;
- 			       (inet6) -> true;
- 			       (inet) -> true;
-@@ -100,7 +100,7 @@
- 	    accept(ListenSocket, Module, Opts);
- 	{error, Reason} ->
- 	    ?ERROR_MSG("Failed to open socket for ~p: ~p",
--		       [{Port, Module, Opts}, Reason]),
-+		       [{ListenerID, Port, Module, Opts}, Reason]),
- 	    error
-     end.
- 
-@@ -128,7 +128,7 @@
-     end.
- 
- 
--init_ssl(Port, Module, Opts, SSLOpts) ->
-+init_ssl(ListenerID, Port, Module, Opts, SSLOpts) ->
-     SockOpts = lists:filter(fun({ip, _}) -> true;
- 			       (inet6) -> true;
- 			       (inet) -> true;
-@@ -151,7 +151,7 @@
- 	    accept_ssl(ListenSocket, Module, Opts);
- 	{error, Reason} ->
- 	    ?ERROR_MSG("Failed to open socket for ~p: ~p",
--		       [{Port, Module, Opts}, Reason]),
-+		       [{ListenerID, Port, Module, Opts}, Reason]),
- 	    error
-     end.
- 
-@@ -178,8 +178,8 @@
-     end.
- 
- 
--start_listener(Port, Module, Opts) ->
--    ChildSpec = {Port,
-+start_listener(ListenerID, Port, Module, Opts) ->
-+    ChildSpec = {ListenerID,
- 		 {?MODULE, start, [Port, Module, Opts]},
- 		 transient,
- 		 brutal_kill,
-@@ -187,30 +187,30 @@
- 		 [?MODULE]},
-     supervisor:start_child(ejabberd_listeners, ChildSpec).
- 
--stop_listener(Port) ->
--    supervisor:terminate_child(ejabberd_listeners, Port),
--    supervisor:delete_child(ejabberd_listeners, Port).
-+stop_listener(ListenerID) ->
-+    supervisor:terminate_child(ejabberd_listeners, ListenerID),
-+    supervisor:delete_child(ejabberd_listeners, ListenerID).
- 
--add_listener(Port, Module, Opts) ->
-+add_listener(ListenerID, Port, Module, Opts) ->
-     Ports = case ejabberd_config:get_local_option(listen) of
- 		undefined ->
- 		    [];
- 		Ls ->
- 		    Ls
- 	    end,
--    Ports1 = lists:keydelete(Port, 1, Ports),
--    Ports2 = [{Port, Module, Opts} | Ports1],
-+    Ports1 = lists:keydelete(ListenerID, 1, Ports),
-+    Ports2 = [{ListenerID, Port, Module, Opts} | Ports1],
-     ejabberd_config:add_local_option(listen, Ports2),
--    start_listener(Port, Module, Opts).
-+    start_listener(ListenerID, Port, Module, Opts).
- 
--delete_listener(Port) ->
-+delete_listener(ListenerID) ->
-     Ports = case ejabberd_config:get_local_option(listen) of
- 		undefined ->
- 		    [];
- 		Ls ->
- 		    Ls
- 	    end,
--    Ports1 = lists:keydelete(Port, 1, Ports),
-+    Ports1 = lists:keydelete(ListenerID, 1, Ports),
-     ejabberd_config:add_local_option(listen, Ports1),
--    stop_listener(Port).
-+    stop_listener(ListenerID).
- 
+ %%
+ %% Anonymous login support:

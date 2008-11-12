@@ -1,0 +1,50 @@
+$NetBSD: patch-ah,v 1.1 2008/11/12 13:13:59 martti Exp $
+
+Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
+
+--- src/mod_proxy65/mod_proxy65_service.erl.orig	2008-08-27 12:37:52.000000000 +0300
++++ src/mod_proxy65/mod_proxy65_service.erl
+@@ -52,6 +52,7 @@
+ 	  name,
+ 	  stream_addr,
+ 	  port,
++	  ip,
+ 	  acl
+ 	 }).
+ 
+@@ -69,14 +70,14 @@ start_link(Host, Opts) ->
+     gen_server:start_link({local, Proc}, ?MODULE, [Host, Opts], []).
+ 
+ init([Host, Opts]) ->
+-    {IP, State} = parse_options(Host, Opts),
+-    NewOpts = [Host, {ip, IP} | Opts],
+-    ejabberd_listener:add_listener(State#state.port, mod_proxy65_stream, NewOpts),
++    State = parse_options(Host, Opts),
++    NewOpts = [Host | Opts],
++    ejabberd_listener:add_listener({State#state.port, State#state.ip}, mod_proxy65_stream, NewOpts),
+     ejabberd_router:register_route(State#state.myhost),
+     {ok, State}.
+ 
+-terminate(_Reason, #state{myhost=MyHost, port=Port}) ->
+-    catch ejabberd_listener:delete_listener(Port),
++terminate(_Reason, #state{myhost=MyHost, port=Port, ip=IP}) ->
++    catch ejabberd_listener:delete_listener({Port, IP}),
+     ejabberd_router:unregister_route(MyHost),
+     ok.
+ 
+@@ -203,12 +204,13 @@ parse_options(ServerHost, Opts) ->
+ 	     end,
+     StrIP = inet_parse:ntoa(IP),
+     StreamAddr = [{"jid", MyHost}, {"host", StrIP}, {"port", integer_to_list(Port)}],
+-    {IP, #state{myhost      = MyHost,
++    #state{myhost      = MyHost,
+ 		serverhost  = ServerHost,
+ 		name        = Name,
+ 		port        = Port,
++		ip          = IP,
+ 		stream_addr = StreamAddr, 
+-		acl         = ACL}}.
++		acl         = ACL}.
+ 
+ %% Return the IP of the proxy host, or if not found, the ip of the xmpp domain
+ get_proxy_or_domainip(ServerHost, MyHost) ->
