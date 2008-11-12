@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2008/09/18 20:57:51 bjs Exp $
+# $NetBSD: Makefile,v 1.10 2008/11/12 12:19:28 abs Exp $
 #
 
-DISTNAME=	xf86-video-radeonhd-1.2.1
-PKGREVISION=	1
+DISTNAME=	xf86-video-radeonhd-1.2.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	http://ati.amd.com/
+HOMEPAGE=	http://wiki.x.org/wiki/radeonhd
 COMMENT=	Modular X.org driver for Radeon HD series
 
 PKG_DESTDIR_SUPPORT=    user-destdir
@@ -20,6 +19,7 @@ USE_TOOLS+=     gmake pkg-config
 CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_atombios_h=yes
 CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_Decoder_h=yes
 
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
