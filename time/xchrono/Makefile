@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/10 17:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/12 13:18:50 obache Exp $
 #
 
 DISTNAME=		xchrono
@@ -9,7 +9,6 @@ MASTER_SITES=		http://www.mit.edu/afs/athena/contrib/softbone/source/src/xchrono
 EXTRACT_SUFX=		.shar
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://infoshako.sk.tsukuba.ac.jp/jdoc/X-utilities/xchrono
 COMMENT=		Multi-timezone X11-based clock
 
 USE_IMAKE=		yes
