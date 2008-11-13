@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2992 2008/11/13 08:16:44 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2993 2008/11/13 10:12:39 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5018,3 +5018,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/libsieve to 2.2.7 [obache 2008-11-13]
 	Updated editors/vim-share to 7.2.40 [martti 2008-11-13]
 	Updated security/EasyPG to 0.0.16 [minskim 2008-11-13]
+	Updated www/firefox to 2.0.0.18 [ghen 2008-11-13]
+	Updated www/firefox-bin to 2.0.0.18 [ghen 2008-11-13]
+	Updated www/firefox-gtk1 to 2.0.0.18 [ghen 2008-11-13]
