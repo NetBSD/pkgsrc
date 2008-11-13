@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/13 19:23:56 adrianp Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -55,8 +55,8 @@ do-install:
 	done
 	cd ${WRKSRC}/docs && pax -rw . \
 		${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html
-	${FIND} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html -type d |
-	${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html -type d | \
+		${XARGS} ${CHMOD} ${PKGDIRMODE}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
