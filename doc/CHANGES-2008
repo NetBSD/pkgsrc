@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2995 2008/11/13 13:29:43 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2996 2008/11/13 14:28:05 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5023,3 +5023,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-gtk1 to 2.0.0.18 [ghen 2008-11-13]
 	Updated textproc/xmlto to 0.0.21nb1 [wiz 2008-11-13]
 	Updated www/typo3 to 4.2.3 [taca 2008-11-13]
+	Updated mail/imap-uw to 2007dnb1 [tron 2008-11-13]
+	Updated mail/php-imap to 5.2.6nb4 [tron 2008-11-13]
+	Updated mail/pine to 4.64nb5 [tron 2008-11-13]
+	Updated mail/prayer to 1.0.18nb5 [tron 2008-11-13]
+	Updated mail/mailsync to 5.2.1nb4 [tron 2008-11-13]
