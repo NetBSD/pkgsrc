@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2996 2008/11/13 14:28:05 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2997 2008/11/13 14:44:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5028,3 +5028,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/pine to 4.64nb5 [tron 2008-11-13]
 	Updated mail/prayer to 1.0.18nb5 [tron 2008-11-13]
 	Updated mail/mailsync to 5.2.1nb4 [tron 2008-11-13]
+	Updated www/firefox3 to 3.0.4 [tron 2008-11-13]
