@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/09/22 04:40:56 obache Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2008/11/13 15:12:21 tron Exp $
 bin/trac-admin
 bin/tracd
 libexec/trac/trac.cgi
@@ -510,6 +510,7 @@ ${PYSITELIB}/trac/wiki/default-pages/TracInterfaceCustomization
 ${PYSITELIB}/trac/wiki/default-pages/TracLinks
 ${PYSITELIB}/trac/wiki/default-pages/TracLogging
 ${PYSITELIB}/trac/wiki/default-pages/TracModPython
+${PYSITELIB}/trac/wiki/default-pages/TracModWSGI
 ${PYSITELIB}/trac/wiki/default-pages/TracNavigation
 ${PYSITELIB}/trac/wiki/default-pages/TracNotification
 ${PYSITELIB}/trac/wiki/default-pages/TracPermissions
