@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2999 2008/11/13 22:31:44 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3000 2008/11/13 23:46:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5031,3 +5031,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox3 to 3.0.4 [tron 2008-11-13]
 	Removed www/grail [snj 2008-11-13]
 	Updated textproc/p5-XML-Feed to 0.3 [abs 2008-11-13]
+	Updated net/ekiga to 3.0.1nb2 [wiz 2008-11-13]
