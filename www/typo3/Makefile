@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/12 06:41:39 taca Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/13 13:28:37 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-VER=		4.2.2
+VER=		4.2.3
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
@@ -84,6 +84,12 @@ PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
 SITEDIR?=	www
 TYPO3DIR?=	share/typo3
 
+.if !empty(CHECK_FILES:M[yY][eE][sS])
+PAX_KEEP=	-pm
+.else
+PAX_KEEP=
+.endif
+
 post-extract:
 	${CP} ${FILESDIR}/README ${WRKDIR}
 
@@ -91,9 +97,10 @@ pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
 
 do-install:
-	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
+	cd ${WRKSRC}; \
+	    pax -rw ${PAX_KEEP} . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
-		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
+		pax -rw ${PAX_KEEP} . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
 		${DESTDIR}${PREFIX}/${EGDIR}
