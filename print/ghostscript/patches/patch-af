@@ -1,8 +1,26 @@
-$NetBSD: patch-af,v 1.3 2008/09/03 21:31:12 markd Exp $
+$NetBSD: patch-af,v 1.4 2008/11/13 17:36:54 chuck Exp $
 
---- src/unix-dll.mak.orig	2007-11-28 11:58:40.000000000 +1300
-+++ src/unix-dll.mak
-@@ -79,11 +79,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
+--- src/unix-dll.mak.orig	2007-11-27 17:58:40.000000000 -0500
++++ src/unix-dll.mak	2008-11-13 10:50:06.000000000 -0500
+@@ -52,12 +52,12 @@
+ LDFLAGS_SO=-shared -Wl,-soname=$(GS_SONAME_MAJOR)
+ 
+ # MacOS X
+-#GS_SOEXT=dylib
++#Darwin#GS_SOEXT=dylib
+-#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
++#Darwin#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
+-#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
++#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
+-#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
++#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
+ #LDFLAGS_SO=-dynamiclib -flat-namespace
+-#LDFLAGS_SO=-dynamiclib -install-name $(GS_SONAME_MAJOR_MINOR)
++#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ #LDFLAGS_SO=-dynamiclib
+ 
+ GS_SO=$(BINDIR)/$(GS_SONAME)
+@@ -79,11 +79,11 @@
  # Build the small Ghostscript loaders, with Gtk+ and without
  
  $(GSSOC_XE): $(GS_SO) $(GLSRC)$(SOC_LOADER)
