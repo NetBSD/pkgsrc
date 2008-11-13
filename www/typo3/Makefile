@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/09/28 02:24:27 taca Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2008/11/13 15:29:28 tron Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
-PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -17,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-VER=		4.2.1
+VER=		4.2.2
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
@@ -65,6 +64,21 @@ SUBST_SED.conf+=        -e 's|@TYPO3DIR@|${TYPO3DIR:Q}|g'
 SUBST_SED.conf+=        -e 's|@SITEDIR@|${SITEDIR:Q}|g'
 SUBST_STAGE.conf=	post-configure
 
+PRINT_PLIST_AWK+=	/^${EGDIR:S|/|\\/|g}/ \
+			{ gsub(/${EGDIR:S|/|\\/|g}/, "$${EGDIR}") }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
+			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/, \
+				"$${TYPO3DIR}/$${TYPO3NAME}") }
+PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/ \
+			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${TYPO3NAME}/, \
+				"$${TYPO3DIR}/$${TYPO3NAME}") }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
+			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/, \
+				"$${TYPO3DIR}/$${SITEDIR}") }
+PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
+			{ gsub(/${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/, \
+				"$${TYPO3DIR}/$${SITEDIR}") }
+
 .include "../../mk/bsd.prefs.mk"
 
 SITEDIR?=	www
@@ -80,6 +94,7 @@ do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
 		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
+	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
