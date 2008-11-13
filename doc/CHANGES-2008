@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2994 2008/11/13 11:15:28 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2995 2008/11/13 13:29:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5022,3 +5022,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-bin to 2.0.0.18 [ghen 2008-11-13]
 	Updated www/firefox-gtk1 to 2.0.0.18 [ghen 2008-11-13]
 	Updated textproc/xmlto to 0.0.21nb1 [wiz 2008-11-13]
+	Updated www/typo3 to 4.2.3 [taca 2008-11-13]
