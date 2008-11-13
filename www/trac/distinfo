@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.21 2008/09/12 10:18:11 abs Exp $
+$NetBSD: distinfo,v 1.21.4.1 2008/11/13 15:12:22 tron Exp $
 
-SHA1 (Trac-0.11.1.tar.gz) = 92be092d45bb03bc01d39983966d7a89a1b47e29
-RMD160 (Trac-0.11.1.tar.gz) = 9d6e595df064e3dfe08299da44ae18c8a51b961f
-Size (Trac-0.11.1.tar.gz) = 687225 bytes
+SHA1 (Trac-0.11.2.tar.gz) = 96a5c3e7d35e799a640aa7a3360de776c6f85074
+RMD160 (Trac-0.11.2.tar.gz) = 33cc6c098517d09d912a5e72eda1f96d3d627f3e
+Size (Trac-0.11.2.tar.gz) = 715377 bytes
