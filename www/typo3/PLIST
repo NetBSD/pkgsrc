@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/25 02:22:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2008/11/13 15:29:28 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -498,6 +498,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp__h.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp__x.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp_group.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp_readonly.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_ftp_user.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_webfolders.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/i/_icon_webfolders_ro.gif
@@ -2377,6 +2378,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/BlockStyle/locallan
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap/class.tx_rtehtmlarea_charactermap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap/skin/htmlarea.css
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap/skin/images/insertCharacter.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/ContextMenu/class.tx_rtehtmlarea_contextmenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultClean/class.tx_rtehtmlarea_defaultclean.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultColor/class.tx_rtehtmlarea_defaultcolor.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultColor/locallang.xml
@@ -3002,6 +3004,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/history2.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/history_details.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/_icon_ftp.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/_icon_ftp_2.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/_icon_ftp_readonly.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/_icon_webfolders.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/_icon_website.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/i/be_admin.gif
@@ -4108,6 +4111,7 @@ ${TYPO3DIR}/${SITEDIR}/uploads/index.html
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultColor/skin
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultColor
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/DefaultClean
+@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/ContextMenu
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap/skin/images
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap/skin
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/extensions/CharacterMap
