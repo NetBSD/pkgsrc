@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7691 2008/11/13 13:13:51 wiz Exp $
+$NetBSD: TODO,v 1.7692 2008/11/13 22:31:44 abs Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Text-Markdown-1.0.23
 	o p5-Text-Tabs+Wrap-2006.1117
-	o p5-XML-Feed-0.23
 	o p5-XML-RSS-1.36
 	o p5-glib2-1.200
 	o p5-gtk2-1.201
