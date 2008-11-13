@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/10/16 18:01:38 drochner Exp $
+# $NetBSD: Makefile,v 1.23 2008/11/13 11:17:16 wiz Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.24.0
@@ -22,7 +22,7 @@ DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 # XXX not yet, needs hal
 PLIST_VARS+=	nautilusburn
