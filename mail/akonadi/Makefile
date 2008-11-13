@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/03 11:19:56 markd Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/13 23:20:14 wiz Exp $
 
 DISTNAME=	akonadi-1.0.0
 CATEGORIES=	mail
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_DIRS+=	kde4-1.0
 USE_TOOLS+=	pkg-config
