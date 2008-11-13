@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2008/11/06 15:27:00 tron Exp $
+# $NetBSD: Makefile,v 1.127 2008/11/13 14:20:20 tron Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -11,6 +11,7 @@
 
 DISTNAME=	imap-2007d
 PKGNAME=	${DISTNAME:S/-/-uw-/}
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -67,8 +68,8 @@ BUILD_DEFS+=			IMAP_UW_CCLIENT_MBOX_FMT IMAP_UW_MAILSPOOLHOME
 
 CCLIENT_LIB=		libc-client.la
 CCLIENT_PICLIB=		libc-client_pic.a
-CCLIENT_MAJOR=		4
-CCLIENT_MINOR=		4
+CCLIENT_MAJOR=		5
+CCLIENT_MINOR=		0
 MAKE_ENV+=		CCLIENT_MAJOR=${CCLIENT_MAJOR:Q}
 MAKE_ENV+=		CCLIENT_MINOR=${CCLIENT_MINOR:Q}
 
