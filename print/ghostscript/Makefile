@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/09/05 15:50:03 tron Exp $
+# $NetBSD: Makefile,v 1.53 2008/11/13 17:36:54 chuck Exp $
 
 DISTNAME=	ghostscript-8.63
 PKGREVISION=	1
@@ -53,6 +53,10 @@ CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 .if ${OPSYS} == "NetBSD"
 CFLAGS+=		-fPIC
 .endif
+
+###.if ${OPSYS} == "Darwin"
+###MAKEFLAGS= "LDFLAGS_SO=-dynamiclib"
+###.endif
 
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
 # require linking against libiconv when it should do so.
