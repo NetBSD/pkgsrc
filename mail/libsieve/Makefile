@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2008/05/31 15:05:40 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/13 04:41:00 obache Exp $
 #
 
-DISTNAME=		libsieve-2.2.6
+DISTNAME=		libsieve-2.2.7
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libsieve/}
 
 MAINTAINER=		obache@NetBSD.org
 HOMEPAGE=		http://libsieve.sourceforge.net/
 COMMENT=		Library for parsing, sorting and filtering mail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
@@ -16,7 +18,7 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_DIRS=		src
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKGCONFIG_OVERRIDE+=	src/libsieve.pc.in
 
 SUBST_CLASSES+=			stripcr
 SUBST_STAGE.stripcr=		post-extract
