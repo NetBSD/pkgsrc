@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2008/05/06 23:50:42 markd Exp $
+# $NetBSD: Makefile,v 1.103 2008/11/14 16:03:16 wiz Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	7
@@ -53,9 +53,7 @@ post-install:
 .include "../../lang/python/pyversion.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 
-.include "../../textproc/aspell/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
@@ -63,6 +61,9 @@ post-install:
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../print/poppler-qt/buildlink3.mk"
+.include "../../textproc/aspell/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 
