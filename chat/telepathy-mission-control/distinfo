@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/14 22:59:03 wiz Exp $
+
+SHA1 (telepathy-mission-control-4.67.tar.gz) = bd0c140e735b180c316b787078b773d7b6a324f8
+RMD160 (telepathy-mission-control-4.67.tar.gz) = c0980b4761a942750b63e5c7a24d55a85d690e9f
+Size (telepathy-mission-control-4.67.tar.gz) = 659444 bytes
+SHA1 (patch-aa) = 605b62d4ec8e739f092f65aca5bfd8b633327e42
