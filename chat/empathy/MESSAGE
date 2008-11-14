@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/11/14 23:01:45 wiz Exp $
+
+For empathy to work, you need to start
+	${PREFIX}/libexec/mission-control
+
+You also need to install telepathy managers for the protocols you want
+to use, e.g. telepathy-idle for IRC or telepathy-gabble for Jabber.
+
+===========================================================================

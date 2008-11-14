@@ -1,0 +1,459 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/14 23:01:45 wiz Exp $
+bin/empathy
+bin/empathy-logs
+include/libempathy-gtk/empathy-account-chooser.h
+include/libempathy-gtk/empathy-account-widget-irc.h
+include/libempathy-gtk/empathy-account-widget-sip.h
+include/libempathy-gtk/empathy-account-widget.h
+include/libempathy-gtk/empathy-avatar-chooser.h
+include/libempathy-gtk/empathy-avatar-image.h
+include/libempathy-gtk/empathy-cell-renderer-activatable.h
+include/libempathy-gtk/empathy-cell-renderer-expander.h
+include/libempathy-gtk/empathy-cell-renderer-text.h
+include/libempathy-gtk/empathy-chat-view.h
+include/libempathy-gtk/empathy-chat.h
+include/libempathy-gtk/empathy-conf.h
+include/libempathy-gtk/empathy-contact-dialogs.h
+include/libempathy-gtk/empathy-contact-list-store.h
+include/libempathy-gtk/empathy-contact-list-view.h
+include/libempathy-gtk/empathy-contact-menu.h
+include/libempathy-gtk/empathy-contact-widget.h
+include/libempathy-gtk/empathy-geometry.h
+include/libempathy-gtk/empathy-gtk-enum-types.h
+include/libempathy-gtk/empathy-images.h
+include/libempathy-gtk/empathy-irc-network-dialog.h
+include/libempathy-gtk/empathy-log-window.h
+include/libempathy-gtk/empathy-new-message-dialog.h
+include/libempathy-gtk/empathy-presence-chooser.h
+include/libempathy-gtk/empathy-profile-chooser.h
+include/libempathy-gtk/empathy-smiley-manager.h
+include/libempathy-gtk/empathy-spell-dialog.h
+include/libempathy-gtk/empathy-spell.h
+include/libempathy-gtk/empathy-theme-boxes.h
+include/libempathy-gtk/empathy-theme-irc.h
+include/libempathy-gtk/empathy-theme-manager.h
+include/libempathy-gtk/empathy-theme.h
+include/libempathy-gtk/empathy-ui-utils.h
+include/libempathy/empathy-chatroom-manager.h
+include/libempathy/empathy-chatroom.h
+include/libempathy/empathy-contact-factory.h
+include/libempathy/empathy-contact-groups.h
+include/libempathy/empathy-contact-list.h
+include/libempathy/empathy-contact-manager.h
+include/libempathy/empathy-contact.h
+include/libempathy/empathy-debug.h
+include/libempathy/empathy-dispatcher.h
+include/libempathy/empathy-enum-types.h
+include/libempathy/empathy-idle.h
+include/libempathy/empathy-irc-network-manager.h
+include/libempathy/empathy-irc-network.h
+include/libempathy/empathy-irc-server.h
+include/libempathy/empathy-log-manager.h
+include/libempathy/empathy-message.h
+include/libempathy/empathy-status-presets.h
+include/libempathy/empathy-time.h
+include/libempathy/empathy-tp-call.h
+include/libempathy/empathy-tp-chat.h
+include/libempathy/empathy-tp-contact-factory.h
+include/libempathy/empathy-tp-contact-list.h
+include/libempathy/empathy-tp-group.h
+include/libempathy/empathy-tp-roomlist.h
+include/libempathy/empathy-tp-tube.h
+include/libempathy/empathy-tube-handler.h
+include/libempathy/empathy-utils.h
+lib/bonobo/servers/GNOME_Megaphone_Applet.server
+lib/bonobo/servers/GNOME_NotHere_Applet.server
+lib/libempathy-gtk.la
+lib/libempathy.la
+lib/pkgconfig/libempathy-gtk.pc
+lib/pkgconfig/libempathy.pc
+libexec/megaphone-applet
+libexec/nothere-applet
+man/man1/empathy.1
+share/applications/empathy.desktop
+share/empathy/GNOME_Megaphone_Applet.xml
+share/empathy/GNOME_NotHere_Applet.xml
+share/empathy/empathy-account-widget-aim.glade
+share/empathy/empathy-account-widget-generic.glade
+share/empathy/empathy-account-widget-groupwise.glade
+share/empathy/empathy-account-widget-icq.glade
+share/empathy/empathy-account-widget-irc.glade
+share/empathy/empathy-account-widget-jabber.glade
+share/empathy/empathy-account-widget-msn.glade
+share/empathy/empathy-account-widget-salut.glade
+share/empathy/empathy-account-widget-sip.glade
+share/empathy/empathy-account-widget-yahoo.glade
+share/empathy/empathy-accounts-dialog.glade
+share/empathy/empathy-call-window.glade
+share/empathy/empathy-chat-window.glade
+share/empathy/empathy-chat.glade
+share/empathy/empathy-chatroom-manager.dtd
+share/empathy/empathy-chatrooms-window.glade
+share/empathy/empathy-contact-dialogs.glade
+share/empathy/empathy-contact-groups.dtd
+share/empathy/empathy-contact-widget.glade
+share/empathy/empathy-irc-networks.dtd
+share/empathy/empathy-log-manager.xsl
+share/empathy/empathy-log-window.glade
+share/empathy/empathy-main-window.glade
+share/empathy/empathy-new-chatroom-dialog.glade
+share/empathy/empathy-new-message-dialog.glade
+share/empathy/empathy-preferences.glade
+share/empathy/empathy-presence-chooser.glade
+share/empathy/empathy-spell-dialog.glade
+share/empathy/empathy-status-icon.glade
+share/empathy/empathy-status-presets.dtd
+share/empathy/icons/hicolor/16x16/actions/im-message-new.png
+share/empathy/icons/hicolor/16x16/apps/im-ekiga.png
+share/empathy/icons/hicolor/16x16/apps/im-gadugadu.png
+share/empathy/icons/hicolor/16x16/apps/im-gizmo.png
+share/empathy/icons/hicolor/16x16/apps/im-google-talk.png
+share/empathy/icons/hicolor/16x16/apps/im-irc.png
+share/empathy/icons/hicolor/16x16/apps/im-local-xmpp.png
+share/empathy/icons/hicolor/16x16/apps/im-msn.png
+share/empathy/icons/hicolor/16x16/apps/im-qq.png
+share/empathy/icons/hicolor/16x16/apps/im-sip.png
+share/empathy/icons/hicolor/16x16/apps/im-xmpp.png
+share/empathy/icons/hicolor/16x16/status/empathy-available.png
+share/empathy/icons/hicolor/16x16/status/empathy-away.png
+share/empathy/icons/hicolor/16x16/status/empathy-busy.png
+share/empathy/icons/hicolor/16x16/status/empathy-extended-away.png
+share/empathy/icons/hicolor/16x16/status/empathy-offline.png
+share/empathy/icons/hicolor/16x16/status/empathy-pending.png
+share/empathy/icons/hicolor/16x16/status/im-message.png
+share/empathy/icons/hicolor/16x16/status/user-typing.png
+share/empathy/icons/hicolor/22x22/actions/im-message-new.png
+share/empathy/icons/hicolor/22x22/apps/im-ekiga.png
+share/empathy/icons/hicolor/22x22/apps/im-gadugadu.png
+share/empathy/icons/hicolor/22x22/apps/im-gizmo.png
+share/empathy/icons/hicolor/22x22/apps/im-google-talk.png
+share/empathy/icons/hicolor/22x22/apps/im-irc.png
+share/empathy/icons/hicolor/22x22/apps/im-local-xmpp.png
+share/empathy/icons/hicolor/22x22/apps/im-msn.png
+share/empathy/icons/hicolor/22x22/apps/im-qq.png
+share/empathy/icons/hicolor/22x22/apps/im-sip.png
+share/empathy/icons/hicolor/22x22/apps/im-xmpp.png
+share/empathy/icons/hicolor/22x22/status/empathy-available.png
+share/empathy/icons/hicolor/22x22/status/empathy-away.png
+share/empathy/icons/hicolor/22x22/status/empathy-busy.png
+share/empathy/icons/hicolor/22x22/status/empathy-extended-away.png
+share/empathy/icons/hicolor/22x22/status/empathy-offline.png
+share/empathy/icons/hicolor/22x22/status/empathy-pending.png
+share/empathy/icons/hicolor/24x24/actions/im-message-new.png
+share/empathy/icons/hicolor/24x24/apps/im-ekiga.png
+share/empathy/icons/hicolor/24x24/apps/im-gadugadu.png
+share/empathy/icons/hicolor/24x24/apps/im-gizmo.png
+share/empathy/icons/hicolor/24x24/apps/im-google-talk.png
+share/empathy/icons/hicolor/24x24/apps/im-irc.png
+share/empathy/icons/hicolor/24x24/apps/im-local-xmpp.png
+share/empathy/icons/hicolor/24x24/apps/im-msn.png
+share/empathy/icons/hicolor/24x24/apps/im-qq.png
+share/empathy/icons/hicolor/24x24/apps/im-sip.png
+share/empathy/icons/hicolor/24x24/apps/im-xmpp.png
+share/empathy/icons/hicolor/24x24/status/empathy-available.png
+share/empathy/icons/hicolor/24x24/status/empathy-away.png
+share/empathy/icons/hicolor/24x24/status/empathy-busy.png
+share/empathy/icons/hicolor/24x24/status/empathy-extended-away.png
+share/empathy/icons/hicolor/24x24/status/empathy-offline.png
+share/empathy/icons/hicolor/24x24/status/empathy-pending.png
+share/empathy/icons/hicolor/32x32/apps/im-ekiga.png
+share/empathy/icons/hicolor/32x32/apps/im-gadugadu.png
+share/empathy/icons/hicolor/32x32/apps/im-gizmo.png
+share/empathy/icons/hicolor/32x32/apps/im-google-talk.png
+share/empathy/icons/hicolor/32x32/apps/im-irc.png
+share/empathy/icons/hicolor/32x32/apps/im-local-xmpp.png
+share/empathy/icons/hicolor/32x32/apps/im-msn.png
+share/empathy/icons/hicolor/32x32/apps/im-qq.png
+share/empathy/icons/hicolor/32x32/apps/im-sip.png
+share/empathy/icons/hicolor/32x32/apps/im-xmpp.png
+share/empathy/icons/hicolor/32x32/status/empathy-available.png
+share/empathy/icons/hicolor/32x32/status/empathy-away.png
+share/empathy/icons/hicolor/32x32/status/empathy-busy.png
+share/empathy/icons/hicolor/32x32/status/empathy-extended-away.png
+share/empathy/icons/hicolor/32x32/status/empathy-offline.png
+share/empathy/icons/hicolor/32x32/status/empathy-pending.png
+share/empathy/icons/hicolor/48x48/apps/im-ekiga.png
+share/empathy/icons/hicolor/48x48/apps/im-gadugadu.png
+share/empathy/icons/hicolor/48x48/apps/im-gizmo.png
+share/empathy/icons/hicolor/48x48/apps/im-google-talk.png
+share/empathy/icons/hicolor/48x48/apps/im-irc.png
+share/empathy/icons/hicolor/48x48/apps/im-local-xmpp.png
+share/empathy/icons/hicolor/48x48/apps/im-msn.png
+share/empathy/icons/hicolor/48x48/apps/im-qq.png
+share/empathy/icons/hicolor/48x48/apps/im-sip.png
+share/empathy/icons/hicolor/48x48/apps/im-xmpp.png
+share/empathy/icons/hicolor/48x48/status/empathy-available.png
+share/empathy/icons/hicolor/48x48/status/empathy-away.png
+share/empathy/icons/hicolor/48x48/status/empathy-busy.png
+share/empathy/icons/hicolor/48x48/status/empathy-extended-away.png
+share/empathy/icons/hicolor/48x48/status/empathy-offline.png
+share/empathy/icons/hicolor/48x48/status/empathy-pending.png
+share/empathy/icons/hicolor/scalable/apps/im-ekiga.svg
+share/empathy/icons/hicolor/scalable/apps/im-gadugadu.svg
+share/empathy/icons/hicolor/scalable/apps/im-gizmo.svg
+share/empathy/icons/hicolor/scalable/apps/im-google-talk.svg
+share/empathy/icons/hicolor/scalable/apps/im-irc.svg
+share/empathy/icons/hicolor/scalable/apps/im-local-xmpp.svg
+share/empathy/icons/hicolor/scalable/apps/im-msn.svg
+share/empathy/icons/hicolor/scalable/apps/im-qq.svg
+share/empathy/icons/hicolor/scalable/apps/im-sip.svg
+share/empathy/icons/hicolor/scalable/apps/im-xmpp.svg
+share/empathy/icons/hicolor/scalable/status/empathy-available.svg
+share/empathy/icons/hicolor/scalable/status/empathy-away.svg
+share/empathy/icons/hicolor/scalable/status/empathy-busy.svg
+share/empathy/icons/hicolor/scalable/status/empathy-extended-away.svg
+share/empathy/icons/hicolor/scalable/status/empathy-offline.svg
+share/empathy/icons/hicolor/scalable/status/empathy-pending.svg
+share/empathy/irc-networks.xml
+share/gconf/schemas/GNOME_Megaphone_Applet.schemas
+share/gconf/schemas/empathy.schemas
+share/gnome/help/empathy/C/empathy.xml
+share/gnome/help/empathy/C/figures/empathy-main-window.png
+share/gnome/help/empathy/C/figures/empathy-new-account.png
+share/gnome/help/empathy/C/legal.xml
+share/gnome/help/empathy/cs/empathy.xml
+share/gnome/help/empathy/cs/figures/empathy-main-window.png
+share/gnome/help/empathy/cs/figures/empathy-new-account.png
+share/gnome/help/empathy/de/empathy.xml
+share/gnome/help/empathy/de/figures/empathy-main-window.png
+share/gnome/help/empathy/de/figures/empathy-new-account.png
+share/gnome/help/empathy/es/empathy.xml
+share/gnome/help/empathy/es/figures/empathy-main-window.png
+share/gnome/help/empathy/es/figures/empathy-new-account.png
+share/gnome/help/empathy/fr/empathy.xml
+share/gnome/help/empathy/fr/figures/empathy-main-window.png
+share/gnome/help/empathy/fr/figures/empathy-new-account.png
+share/gnome/help/empathy/it/empathy.xml
+share/gnome/help/empathy/it/figures/empathy-main-window.png
+share/gnome/help/empathy/it/figures/empathy-new-account.png
+share/gnome/help/empathy/sv/empathy.xml
+share/gnome/help/empathy/sv/figures/empathy-main-window.png
+share/gnome/help/empathy/sv/figures/empathy-new-account.png
+share/gtk-doc/html/libempathy-gtk/EmpathyAccountChooser.html
+share/gtk-doc/html/libempathy-gtk/EmpathyAvatarChooser.html
+share/gtk-doc/html/libempathy-gtk/EmpathyAvatarImage.html
+share/gtk-doc/html/libempathy-gtk/EmpathyCellRendererActivatable.html
+share/gtk-doc/html/libempathy-gtk/EmpathyCellRendererExpander.html
+share/gtk-doc/html/libempathy-gtk/EmpathyCellRendererText.html
+share/gtk-doc/html/libempathy-gtk/EmpathyChat.html
+share/gtk-doc/html/libempathy-gtk/EmpathyChatView.html
+share/gtk-doc/html/libempathy-gtk/EmpathyConf.html
+share/gtk-doc/html/libempathy-gtk/EmpathyContactListStore.html
+share/gtk-doc/html/libempathy-gtk/EmpathyContactListView.html
+share/gtk-doc/html/libempathy-gtk/EmpathyPresenceChooser.html
+share/gtk-doc/html/libempathy-gtk/EmpathySmileyManager.html
+share/gtk-doc/html/libempathy-gtk/EmpathyTheme.html
+share/gtk-doc/html/libempathy-gtk/EmpathyThemeBoxes.html
+share/gtk-doc/html/libempathy-gtk/EmpathyThemeIrc.html
+share/gtk-doc/html/libempathy-gtk/EmpathyThemeManager.html
+share/gtk-doc/html/libempathy-gtk/home.png
+share/gtk-doc/html/libempathy-gtk/index.html
+share/gtk-doc/html/libempathy-gtk/index.sgml
+share/gtk-doc/html/libempathy-gtk/ix01.html
+share/gtk-doc/html/libempathy-gtk/left.png
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-account-widget-irc.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-account-widget-sip.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-account-widget.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-contact-dialogs.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-contact-menu.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-contact-widget.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-geometry.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-images.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-irc-network-dialog.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-log-window.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-new-message-dialog.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-profile-chooser.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-spell-dialog.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-spell.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-empathy-ui-utils.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk-hierarchy.html
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk.devhelp
+share/gtk-doc/html/libempathy-gtk/libempathy-gtk.devhelp2
+share/gtk-doc/html/libempathy-gtk/libempathy_api.html
+share/gtk-doc/html/libempathy-gtk/pt01.html
+share/gtk-doc/html/libempathy-gtk/pt02.html
+share/gtk-doc/html/libempathy-gtk/right.png
+share/gtk-doc/html/libempathy-gtk/style.css
+share/gtk-doc/html/libempathy-gtk/up.png
+share/gtk-doc/html/libempathy/EmpathyChatroom.html
+share/gtk-doc/html/libempathy/EmpathyChatroomManager.html
+share/gtk-doc/html/libempathy/EmpathyContact.html
+share/gtk-doc/html/libempathy/EmpathyContactFactory.html
+share/gtk-doc/html/libempathy/EmpathyContactManager.html
+share/gtk-doc/html/libempathy/EmpathyDispatcher.html
+share/gtk-doc/html/libempathy/EmpathyIdle.html
+share/gtk-doc/html/libempathy/EmpathyIrcNetwork.html
+share/gtk-doc/html/libempathy/EmpathyIrcNetworkManager.html
+share/gtk-doc/html/libempathy/EmpathyIrcServer.html
+share/gtk-doc/html/libempathy/EmpathyLogManager.html
+share/gtk-doc/html/libempathy/EmpathyMessage.html
+share/gtk-doc/html/libempathy/EmpathyTpCall.html
+share/gtk-doc/html/libempathy/EmpathyTpChat.html
+share/gtk-doc/html/libempathy/EmpathyTpContactFactory.html
+share/gtk-doc/html/libempathy/EmpathyTpContactList.html
+share/gtk-doc/html/libempathy/EmpathyTpGroup.html
+share/gtk-doc/html/libempathy/EmpathyTpRoomlist.html
+share/gtk-doc/html/libempathy/EmpathyTpTube.html
+share/gtk-doc/html/libempathy/EmpathyTubeHandler.html
+share/gtk-doc/html/libempathy/home.png
+share/gtk-doc/html/libempathy/index.html
+share/gtk-doc/html/libempathy/index.sgml
+share/gtk-doc/html/libempathy/ix01.html
+share/gtk-doc/html/libempathy/left.png
+share/gtk-doc/html/libempathy/libempathy-empathy-contact-groups.html
+share/gtk-doc/html/libempathy/libempathy-empathy-contact-list.html
+share/gtk-doc/html/libempathy/libempathy-empathy-status-presets.html
+share/gtk-doc/html/libempathy/libempathy-empathy-time.html
+share/gtk-doc/html/libempathy/libempathy-empathy-utils.html
+share/gtk-doc/html/libempathy/libempathy-hierarchy.html
+share/gtk-doc/html/libempathy/libempathy.devhelp
+share/gtk-doc/html/libempathy/libempathy.devhelp2
+share/gtk-doc/html/libempathy/libempathy_api.html
+share/gtk-doc/html/libempathy/pt01.html
+share/gtk-doc/html/libempathy/pt02.html
+share/gtk-doc/html/libempathy/right.png
+share/gtk-doc/html/libempathy/style.css
+share/gtk-doc/html/libempathy/up.png
+share/icons/hicolor/16x16/apps/empathy.png
+share/icons/hicolor/22x22/apps/empathy.png
+share/icons/hicolor/24x24/apps/empathy.png
+share/icons/hicolor/32x32/apps/empathy.png
+share/icons/hicolor/48x48/apps/empathy.png
+share/icons/hicolor/icon-theme.cache
+share/icons/hicolor/scalable/apps/empathy.svg
+share/locale/ar/LC_MESSAGES/empathy.mo
+share/locale/az/LC_MESSAGES/empathy.mo
+share/locale/bg/LC_MESSAGES/empathy.mo
+share/locale/bn_IN/LC_MESSAGES/empathy.mo
+share/locale/ca/LC_MESSAGES/empathy.mo
+share/locale/cs/LC_MESSAGES/empathy.mo
+share/locale/cy/LC_MESSAGES/empathy.mo
+share/locale/da/LC_MESSAGES/empathy.mo
+share/locale/de/LC_MESSAGES/empathy.mo
+share/locale/dz/LC_MESSAGES/empathy.mo
+share/locale/el/LC_MESSAGES/empathy.mo
+share/locale/en_CA/LC_MESSAGES/empathy.mo
+share/locale/en_GB/LC_MESSAGES/empathy.mo
+share/locale/eo/LC_MESSAGES/empathy.mo
+share/locale/es/LC_MESSAGES/empathy.mo
+share/locale/eu/LC_MESSAGES/empathy.mo
+share/locale/fi/LC_MESSAGES/empathy.mo
+share/locale/fr/LC_MESSAGES/empathy.mo
+share/locale/ga/LC_MESSAGES/empathy.mo
+share/locale/gl/LC_MESSAGES/empathy.mo
+share/locale/gu/LC_MESSAGES/empathy.mo
+share/locale/he/LC_MESSAGES/empathy.mo
+share/locale/hi/LC_MESSAGES/empathy.mo
+share/locale/hr/LC_MESSAGES/empathy.mo
+share/locale/hu/LC_MESSAGES/empathy.mo
+share/locale/it/LC_MESSAGES/empathy.mo
+share/locale/ja/LC_MESSAGES/empathy.mo
+share/locale/kn/LC_MESSAGES/empathy.mo
+share/locale/ko/LC_MESSAGES/empathy.mo
+share/locale/lt/LC_MESSAGES/empathy.mo
+share/locale/mk/LC_MESSAGES/empathy.mo
+share/locale/ml/LC_MESSAGES/empathy.mo
+share/locale/mr/LC_MESSAGES/empathy.mo
+share/locale/ms/LC_MESSAGES/empathy.mo
+share/locale/nb/LC_MESSAGES/empathy.mo
+share/locale/ne/LC_MESSAGES/empathy.mo
+share/locale/nl/LC_MESSAGES/empathy.mo
+share/locale/oc/LC_MESSAGES/empathy.mo
+share/locale/pa/LC_MESSAGES/empathy.mo
+share/locale/pl/LC_MESSAGES/empathy.mo
+share/locale/pt/LC_MESSAGES/empathy.mo
+share/locale/pt_BR/LC_MESSAGES/empathy.mo
+share/locale/ru/LC_MESSAGES/empathy.mo
+share/locale/sl/LC_MESSAGES/empathy.mo
+share/locale/sq/LC_MESSAGES/empathy.mo
+share/locale/sr/LC_MESSAGES/empathy.mo
+share/locale/sr@latin/LC_MESSAGES/empathy.mo
+share/locale/sv/LC_MESSAGES/empathy.mo
+share/locale/th/LC_MESSAGES/empathy.mo
+share/locale/tr/LC_MESSAGES/empathy.mo
+share/locale/uk/LC_MESSAGES/empathy.mo
+share/locale/vi/LC_MESSAGES/empathy.mo
+share/locale/zh_CN/LC_MESSAGES/empathy.mo
+share/locale/zh_HK/LC_MESSAGES/empathy.mo
+share/locale/zh_TW/LC_MESSAGES/empathy.mo
+share/mission-control/profiles/aim.profile
+share/mission-control/profiles/ekiga.profile
+share/mission-control/profiles/fwd.profile
+share/mission-control/profiles/gadugadu.profile
+share/mission-control/profiles/groupwise.profile
+share/mission-control/profiles/gtalk.profile
+share/mission-control/profiles/icq.profile
+share/mission-control/profiles/irc.profile
+share/mission-control/profiles/jabber.profile
+share/mission-control/profiles/msn-haze.profile
+share/mission-control/profiles/msn.profile
+share/mission-control/profiles/qq.profile
+share/mission-control/profiles/salut.profile
+share/mission-control/profiles/sipphone.profile
+share/mission-control/profiles/sofiasip.profile
+share/mission-control/profiles/yahoo.profile
+share/omf/empathy/empathy-C.omf
+share/omf/empathy/empathy-cs.omf
+share/omf/empathy/empathy-de.omf
+share/omf/empathy/empathy-es.omf
+share/omf/empathy/empathy-fr.omf
+share/omf/empathy/empathy-it.omf
+share/omf/empathy/empathy-sv.omf
+@dirrm share/omf/empathy
+@comment in rarian: @dirrm share/omf
+@dirrm share/mission-control/profiles
+@dirrm share/mission-control
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/libempathy-gtk
+@dirrm share/gtk-doc/html/libempathy
+@dirrm share/gnome/help/empathy/sv/figures
+@dirrm share/gnome/help/empathy/sv
+@dirrm share/gnome/help/empathy/it/figures
+@dirrm share/gnome/help/empathy/it
+@dirrm share/gnome/help/empathy/fr/figures
+@dirrm share/gnome/help/empathy/fr
+@dirrm share/gnome/help/empathy/es/figures
+@dirrm share/gnome/help/empathy/es
+@dirrm share/gnome/help/empathy/de/figures
+@dirrm share/gnome/help/empathy/de
+@dirrm share/gnome/help/empathy/cs/figures
+@dirrm share/gnome/help/empathy/cs
+@dirrm share/gnome/help/empathy/C/figures
+@dirrm share/gnome/help/empathy/C
+@dirrm share/gnome/help/empathy
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf: @dirrm share/gconf/schemas
+@dirrm share/empathy/icons/hicolor/scalable/status
+@dirrm share/empathy/icons/hicolor/scalable/apps
+@dirrm share/empathy/icons/hicolor/scalable
+@dirrm share/empathy/icons/hicolor/48x48/status
+@dirrm share/empathy/icons/hicolor/48x48/apps
+@dirrm share/empathy/icons/hicolor/48x48
+@dirrm share/empathy/icons/hicolor/32x32/status
+@dirrm share/empathy/icons/hicolor/32x32/apps
+@dirrm share/empathy/icons/hicolor/32x32
+@dirrm share/empathy/icons/hicolor/24x24/status
+@dirrm share/empathy/icons/hicolor/24x24/apps
+@dirrm share/empathy/icons/hicolor/24x24/actions
+@dirrm share/empathy/icons/hicolor/24x24
+@dirrm share/empathy/icons/hicolor/22x22/status
+@dirrm share/empathy/icons/hicolor/22x22/apps
+@dirrm share/empathy/icons/hicolor/22x22/actions
+@dirrm share/empathy/icons/hicolor/22x22
+@dirrm share/empathy/icons/hicolor/16x16/status
+@dirrm share/empathy/icons/hicolor/16x16/apps
+@dirrm share/empathy/icons/hicolor/16x16/actions
+@dirrm share/empathy/icons/hicolor/16x16
+@dirrm share/empathy/icons/hicolor
+@dirrm share/empathy/icons
+@dirrm share/empathy
+@comment in xdg-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
+@dirrm include/libempathy-gtk
+@dirrm include/libempathy
