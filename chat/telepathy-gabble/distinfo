@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/14 23:00:42 wiz Exp $
+
+SHA1 (telepathy-gabble-0.7.15.tar.gz) = 9cda9959e4928d51275992ccb52ffce9e20677fc
+RMD160 (telepathy-gabble-0.7.15.tar.gz) = 2725801ae32b2335ae54a526b9c13bdd7d59ff59
+Size (telepathy-gabble-0.7.15.tar.gz) = 1427321 bytes
+SHA1 (patch-aa) = c6f579acd92f43bd327136b4ebabce8d3a54976c
