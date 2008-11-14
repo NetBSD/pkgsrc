@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-ld,v 1.2 2005/05/16 17:54:51 jlam Exp $
+# $NetBSD: cmd-sink-aix-ld,v 1.3 2008/11/14 14:04:12 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -35,6 +35,7 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 # Empty out the command buffer and build up the command line in $cmd.
+orig_blibpath=
 blibpath=
 dynamic=
 
@@ -42,6 +43,11 @@ while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
 	$debug_log $wrapperlog "    (cmd-sink-aix-ld) pop:  $arg"
 	case $arg in
+	-blibpath:*)
+		orig_blibpath=${arg#-blibpath:}
+		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		dynamic=yes
+		;;
 	##############################################################
 	# AIX ld(1) doesn't support -Wl,-rpath,* but accumulate them
 	# into a path collection we can later append to command line
@@ -70,11 +76,15 @@ while ! queue_is_empty cmdbuf; do
 done
 
 # AIX ld(1) uses -blibpath to set the runtime library search path.
-if $test -n "$blibpath"; then
-        arg="-blibpath:/lib:/usr/lib:$blibpath"
-        $debug_log $wrapperlog "    (cmd-sink-aix-ld) pop: $arg"
-        . $buildcmd
+arg="-blibpath:/usr/usr/lib:/lib"
+if $test -n "$orig_blibpath"; then
+	arg="$arg:$orig_blibpath"
 fi
+if $test -n "$blibpath"; then
+	arg="$arg:$blibpath"
+fi
+$debug_log $wrapperlog "    (cmd-sink-aix-ld) pop: $arg"
+. $buildcmd
 
 # If we are dynamically linking, make sure the runtime linker is used.
 if $test -n "$dynamic"; then

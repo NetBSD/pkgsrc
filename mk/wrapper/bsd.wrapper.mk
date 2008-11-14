@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.78 2008/11/06 21:34:16 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.79 2008/11/14 14:04:12 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -138,6 +138,11 @@ IMAKE?=		${X11BASE}/bin/imake
 WRAPPEES+=	IMAKE
 .endif
 WRAPPEES+=	LD
+
+.if !empty(PKGSRC_COMPILER:Mxlc) && ${OPSYS} == "AIX"
+CC_R?=		${_XLC_DIR}/bin/cc_r
+WRAPPEES+=	CC_R
+.endif
 
 _WRAPPEE_UNIQUE_CMDS=	# empty
 .for _wrappee_ in ${WRAPPEES}
@@ -283,6 +288,7 @@ _WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 .if !empty(PKGSRC_COMPILER:Mxlc)
 .  if ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
+_WRAP_CMD_SINK.CC_R=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .  elif ${OPSYS} == "Darwin"
@@ -346,7 +352,9 @@ _WRAP_CMD_SINK.CC?=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
 _WRAP_CMD_SINK.CXX?=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.LD?=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
 _WRAP_CACHE_BODY.CC?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
+_WRAP_CACHE_BODY.CC_R?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
 _WRAP_TRANSFORM.CC?=	${WRAPPER_TMPDIR}/transform-aix-cc
+_WRAP_TRANSFORM.CC_R?=	${WRAPPER_TMPDIR}/transform-aix-cc
 _WRAP_CACHE_BODY.CXX?=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX?=	${_WRAP_TRANSFORM.CC}
 .elif ${OPSYS} == "IRIX"
