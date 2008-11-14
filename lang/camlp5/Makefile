@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/14 19:28:39 epg Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/14 19:30:54 epg Exp $
 #
 
 DISTNAME=	camlp5-5.09
@@ -22,17 +22,15 @@ CONFIGURE_ARGS+=	--libdir ${PREFIX}/lib/ocaml
 
 REPLACE_SH=	tools/*.sh meta/*.sh ocaml_src/tools/*.sh compile/*.sh
 
-.include "../../lang/ocaml/lib.mk"
-.if defined(OCAML_OPT) && !empty(OCAML_OPT:M[yY][eE][sS])
-BUILD_TARGET=		world.opt
-.else
-BUILD_TARGET=		world
-SUBST_CLASSES+=		camlp5-opt
-SUBST_STAGE.camlp5-opt=	post-configure
-SUBST_FILES.camlp5-opt=	config/Makefile.cnf
-SUBST_SED.camlp5-opt+=	-e 's/^OPT=.*/OPT=/'
-.endif
+.include "../../mk/bsd.prefs.mk"
 
+.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
+    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
+BUILD_TARGET=	world.opt
+PLIST_SRC+=	${PKGDIR}/PLIST.opt
+.else
+BUILD_TARGET=	world
+.endif
 PLIST_SRC+=	${PKGDIR}/PLIST
 
 .include "../../lang/ocaml/buildlink3.mk"
