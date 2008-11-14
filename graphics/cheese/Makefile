@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2008/09/16 10:36:31 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/14 11:25:28 wiz Exp $
 
-DISTNAME=	cheese-2.22.3
+DISTNAME=	cheese-2.24.1
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/cheese/2.24/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/cheese/
 COMMENT=	Use your webcam to take photos and videos
+
+BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

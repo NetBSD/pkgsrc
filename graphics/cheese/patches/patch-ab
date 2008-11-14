@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/14 11:25:28 wiz Exp $
 
---- src/cheese-webcam.c.orig	2008-06-29 12:17:43.000000000 -0400
-+++ src/cheese-webcam.c	2008-09-07 16:36:47.000000000 -0400
-@@ -31,7 +31,22 @@
+--- src/cheese-webcam.c.orig	2008-10-20 16:01:47.000000000 +0000
++++ src/cheese-webcam.c
+@@ -32,13 +32,30 @@
+ #include <gst/gst.h>
  #include <gdk-pixbuf/gdk-pixbuf.h>
  #include <X11/Xlib.h>
- #include <X11/extensions/xf86vmode.h>
 +
 +#if HAVE_HAL
  #include <libhal.h>
@@ -23,20 +23,35 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
 +#endif
 +
  
- #include "cheese-webcam.h"
+ /* for ioctl query */
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
++#ifdef __linux__
+ #include <linux/videodev.h>
++#endif
  
-@@ -233,7 +248,7 @@
+ #include "cheese-webcam.h"
+ #include "cheese-flash.h"
+@@ -234,7 +251,6 @@ cheese_webcam_bus_message_cb (GstBus *bu
+       g_print ("Received EOS message\n");
+ 
+       g_source_remove (priv->eos_timeout_id);
+-
+       g_signal_emit (webcam, webcam_signals[VIDEO_SAVED], 0);
+ 
+       cheese_webcam_change_sink (webcam, priv->video_display_bin,
+@@ -244,6 +260,7 @@ cheese_webcam_bus_message_cb (GstBus *bu
    }
  }
  
--
 +#if HAVE_HAL
  static void
  cheese_webcam_get_video_devices_from_hal (CheeseWebcam *webcam)
  {
-@@ -307,6 +322,54 @@
+@@ -394,6 +411,55 @@ fallback:
+     priv->webcam_devices[0].hal_udi = g_strdup ("cheese_fake_videodevice");
    }
-   libhal_free_string_array (udis);
  }
 +#else
 +static void
@@ -86,11 +101,12 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
 +  }
 +}
 +#endif /* !HAVE_HAL */
++
  
  static void
  cheese_webcam_get_supported_framerates (CheeseVideoFormat *video_format, GstStructure *structure)
-@@ -549,7 +612,11 @@
-   CheeseWebcamPrivate* priv = CHEESE_WEBCAM_GET_PRIVATE (webcam);
+@@ -698,7 +764,11 @@ cheese_webcam_detect_webcam_devices (Che
+ 
    int i;
  
 +#if HAVE_HAL
@@ -98,6 +114,6 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
 +#else
 +  cheese_webcam_get_video_devices_from_probe (webcam);
 +#endif
-   for (i = 0; i < priv->num_webcam_devices; i++) 
+   for (i = 0; i < priv->num_webcam_devices; i++)
    {
-     cheese_webcam_get_webcam_device_data (&(priv->webcam_devices[i]));
+     cheese_webcam_get_webcam_device_data (webcam, &(priv->webcam_devices[i]));
