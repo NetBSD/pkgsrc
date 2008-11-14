@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/11/14 01:01:51 wiz Exp $
+
+--- data/Makefile.in.orig	2008-09-23 09:43:06.000000000 +0000
++++ data/Makefile.in
+@@ -270,7 +270,7 @@ schemas_in_files = \
+ 	$(NULL)
+ 
+ schemas_DATA = $(schemas_in_files:.schemas.in=.schemas)
+-desktopdir = $(sysconfdir)/xdg/autostart
++desktopdir = $(datadir)/gnome/autostart
+ desktop_in_files = gnome-settings-daemon.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ servicedir = $(datadir)/dbus-1/services
