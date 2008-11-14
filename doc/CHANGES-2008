@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3010 2008/11/14 23:04:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3011 2008/11/14 23:06:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5047,3 +5047,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/telepathy-idle version 0.1.2 [wiz 2008-11-14]
 	Added chat/telepathy-gabble version 0.7.15 [wiz 2008-11-14]
 	Added chat/empathy version 2.24.1 [wiz 2008-11-14]
+	Updated meta-pkgs/gnome to 2.24.0.94 [wiz 2008-11-14]
