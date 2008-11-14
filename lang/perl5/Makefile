@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2008/10/21 22:46:49 rillig Exp $
+# $NetBSD: Makefile,v 1.143 2008/11/14 18:27:00 joerg Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
@@ -197,7 +197,7 @@ LOCINCPATH=		${LOCALBASE}/include
 #
 .if ${OBJECT_FMT} == "a.out"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
-.elif ${OBJECT_FMT} == "ELF"
+.elif ${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 .else
 LOCLIBRPATHFLAGS=	# empty
