@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2008/11/14 03:25:55 chuck Exp $
+
+--- src/Makefile.in.orig	2008-11-13 22:19:15.000000000 -0500
++++ src/Makefile.in	2008-11-13 22:19:30.000000000 -0500
+@@ -135,8 +135,8 @@
+ mkafmmap_SOURCES = mkafmmap.c
+ 
+ LDADD = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a -lm
+-enscript_DEPENDENCIES = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a
+-mkafmmap_DEPENDENCIES = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a
++enscript_DEPENDENCIES = ../afmlib/libafm.a @INTLDEPS@ ../compat/libcompat.a
++mkafmmap_DEPENDENCIES = ../afmlib/libafm.a @INTLDEPS@ ../compat/libcompat.a
+ 
+ noinst_HEADERS = gsint.h
+ 
