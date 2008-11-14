@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/14 17:36:57 wiz Exp $
+
+SHA1 (chest-3.19.20080412/analyse.c) = 1b9637204dfc702695bd60f41d49268efa2c24ad
+RMD160 (chest-3.19.20080412/analyse.c) = 5e9f556c9e317c8d3c3534776f6f909fcb16c904
+Size (chest-3.19.20080412/analyse.c) = 73803 bytes
+SHA1 (chest-3.19.20080412/answer.c) = 3634298294ec34f4c71d0ab3a93256ca897f2181
+RMD160 (chest-3.19.20080412/answer.c) = e67d18d6c1dc254ba09af3e4923ef606eddd0839
+Size (chest-3.19.20080412/answer.c) = 40219 bytes
+SHA1 (chest-3.19.20080412/chest-3.19.tar.gz) = 3813326d5694218e76f26fc99cc86d0b88a99e4a
+RMD160 (chest-3.19.20080412/chest-3.19.tar.gz) = 54a31212371ecae404aa3f20e7886ef34ae4df76
+Size (chest-3.19.20080412/chest-3.19.tar.gz) = 340706 bytes
+SHA1 (chest-3.19.20080412/fac.c) = 964673ad5d826ea51e43269c7471113d6ba8b8c4
+RMD160 (chest-3.19.20080412/fac.c) = 4beed24a18a45c894199bb64affb80d090e4f475
+Size (chest-3.19.20080412/fac.c) = 46431 bytes
+SHA1 (chest-3.19.20080412/input.c) = f1c4ca4ed7eb4abed1edca05bcdf131fe2acec5c
+RMD160 (chest-3.19.20080412/input.c) = 6a79dc6caf9142c96f097da1c44fe0a7425118c5
+Size (chest-3.19.20080412/input.c) = 21440 bytes
+SHA1 (chest-3.19.20080412/mate2.c) = 25cbb37245bf284b6263012056ce417e09feb5fe
+RMD160 (chest-3.19.20080412/mate2.c) = ed0e4d3357df3e72f02c789d21c91d28e9f92bfa
+Size (chest-3.19.20080412/mate2.c) = 69009 bytes

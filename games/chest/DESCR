@@ -1,0 +1,8 @@
+CHEST is an experimental program solving orthodox chess problems
+(like "white to move and mate in 5 moves").  It is written in ANSI
+C, and developed under UNIX.  There is no user interface:  CHEST
+just reads an input file and produces plain text on standard output.
+
+It is not hard to come up with a program that does the same job as
+CHEST, but it will be rather slow for non-trivial jobs.  CHEST
+tries hard to be fast but still 100% correct.
