@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.385 2008/11/02 13:18:25 obache Exp $
+# $NetBSD: Makefile,v 1.386 2008/11/14 01:26:14 jmcneill Exp $
 #
 
 COMMENT=	Audio tools
@@ -294,6 +294,7 @@ SUBDIR+=	snd
 SUBDIR+=	solfege
 SUBDIR+=	sonata
 SUBDIR+=	sound-juicer
+SUBDIR+=	sound-theme-freedesktop
 SUBDIR+=	sox
 SUBDIR+=	speex
 SUBDIR+=	spiralloops
