@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/14 22:58:06 wiz Exp $
+
+SHA1 (libtelepathy-0.3.3.tar.gz) = d5aa10a30570dedd89cfe45c4e928263bd32b888
+RMD160 (libtelepathy-0.3.3.tar.gz) = 0d51e4eac2e4bc7f196c2597c4ea30adebc34e11
+Size (libtelepathy-0.3.3.tar.gz) = 439764 bytes
