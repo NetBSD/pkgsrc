@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3008 2008/11/14 17:38:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3009 2008/11/14 19:12:41 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5040,3 +5040,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/cheese to 2.24.1 [wiz 2008-11-14]
 	Updated meta-pkgs/gnome to 2.24.0.93 [wiz 2008-11-14]
 	Added games/chest version 3.19.20080412 [wiz 2008-11-14]
+	Updated textproc/p5-XML-Atom to 0.31 [kleink 2008-11-14]
