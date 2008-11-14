@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.88 2008/11/14 11:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2008/11/14 23:06:33 wiz Exp $
 
-DISTNAME=	gnome-2.24.0.93
+DISTNAME=	gnome-2.24.0.94
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -21,8 +21,7 @@ DEPENDS+=	dasher>=4.9.0:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.24.1:../../misc/deskbar-applet
 DEPENDS+=	eel>=2.24.1:../../devel/eel
 DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
-# unpackaged
-#DEPENDS+=	empathy>=2.24.1:../../*/empathy
+DEPENDS+=	empathy>=2.24.1:../../chat/empathy
 DEPENDS+=	eog>=2.24.1:../../graphics/eog
 DEPENDS+=	epiphany>=2.24.1:../../www/epiphany
 DEPENDS+=	evince>=2.24.1:../../print/evince
