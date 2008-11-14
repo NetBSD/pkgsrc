@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.4 2007/10/05 18:19:45 joerg Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.5 2008/11/14 14:04:12 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -36,10 +36,19 @@
 
 # Empty out the command buffer and build up the command line in $cmd.
 blibpath=
+orig_blibpath=
 while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
 	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop:  $arg"
 	case $arg in
+	-blibpath:*)
+		orig_blibpath=${arg#-blibpath:}
+		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		;;
+	-Wl,-blibpath:*)
+		orig_blibpath=${arg#-Wl,-blibpath:}
+		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		;;
 	##############################################################
 	# AIX xlC doesn't support -Wl,-rpath,* but accumulate them
 	# into a path collection we can later append to command line
@@ -67,11 +76,16 @@ while ! queue_is_empty cmdbuf; do
 done
 
 # AIX xlc uses -blibpath to set the runtime library search path.
-if $test -n "$blibpath"; then
-	arg="-blibpath:$blibpath"
-	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
-	. $buildcmd
+arg="-Wl,-blibpath:/usr/usr/lib:/lib"
+if $test -n "$orig_blibpath"; then
+	arg="$arg:$orig_blibpath"
 fi
+if $test -n "$blibpath"; then
+        arg="$arg:$blibpath"
+fi
+$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
+. $buildcmd
+
 # Force dynamic linkage on AIX to get preference of dynamic libraries
 # over library archives.
 if $test "$dont_link" != "yes"; then
