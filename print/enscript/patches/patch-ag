@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/11/14 03:25:55 chuck Exp $
+
+--- states/Makefile.in.orig	2008-11-13 22:19:35.000000000 -0500
++++ states/Makefile.in	2008-11-13 22:19:48.000000000 -0500
+@@ -132,7 +132,7 @@
+ 
+ 
+ LDADD = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a @LEXLIB@
+-states_DEPENDENCIES = @INTLLIBS@ ../compat/libcompat.a
++states_DEPENDENCIES = @INTLDEPS@ ../compat/libcompat.a
+ 
+ noinst_HEADERS = defs.h gram.h
+ 
