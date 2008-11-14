@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/14 23:00:42 wiz Exp $
+
+--- src/tube-stream.c.orig	2008-11-06 09:40:19.000000000 +0000
++++ src/tube-stream.c
+@@ -24,6 +24,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
++#include <netinet/in.h>
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <errno.h>
