@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/16 14:40:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/11/14 01:01:51 wiz Exp $
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
 lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
 lib/gnome-settings-daemon-2.0/background.gnome-settings-plugin
@@ -50,6 +50,7 @@ share/gnome-settings-daemon/xrdb/General.ad
 share/gnome-settings-daemon/xrdb/Motif.ad
 share/gnome-settings-daemon/xrdb/Tk.ad
 share/gnome-settings-daemon/xrdb/Xaw.ad
+share/gnome/autostart/gnome-settings-daemon.desktop
 share/icons/hicolor/16x16/apps/gsd-xrandr.png
 share/icons/hicolor/22x22/apps/gsd-xrandr.png
 share/icons/hicolor/24x24/apps/gsd-xrandr.png
