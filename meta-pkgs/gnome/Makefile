@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.87 2008/11/14 01:27:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.88 2008/11/14 11:26:30 wiz Exp $
 
-DISTNAME=	gnome-2.24.0.92
+DISTNAME=	gnome-2.24.0.93
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -16,9 +16,7 @@ META_PACKAGE=	yes
 
 DEPENDS+=	alacarte>=0.11.6:../../x11/alacarte
 DEPENDS+=	bug-buddy>=2.24.1:../../net/bug-buddy
-# too old
-#DEPENDS+=	cheese>=2.24.1:../../graphics/cheese
-DEPENDS+=	cheese-[0-9]*:../../graphics/cheese
+DEPENDS+=	cheese>=2.24.1:../../graphics/cheese
 DEPENDS+=	dasher>=4.9.0:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.24.1:../../misc/deskbar-applet
 DEPENDS+=	eel>=2.24.1:../../devel/eel
