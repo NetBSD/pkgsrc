@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/14 11:25:28 wiz Exp $
 
---- configure.ac.orig	2008-06-29 12:17:43.000000000 -0400
+--- configure.ac.orig	2008-10-20 16:01:53.000000000 +0000
 +++ configure.ac
 @@ -17,8 +17,9 @@ AM_PROG_LIBTOOL
  
@@ -14,21 +14,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
  
  #*******************************************************************************
  # Expanded dirs
-@@ -83,18 +84,30 @@ PKG_CHECK_MODULES(CHEESE, \ 
-   libebook-1.2 >= $LIBEBOOK_REQUIRED \
+@@ -88,7 +89,6 @@ PKG_CHECK_MODULES(CHEESE, \ 
    cairo >= $CAIRO_REQUIRED \
    dbus-1 >= $DBUS_REQUIRED \
--  hal >= $HAL_REQUIRED \
    dbus-glib-1 >= $DBUS_GLIB_REQUIRED \
+-  hal >= $HAL_REQUIRED \
    pangocairo >= $PANGOCAIRO_REQUIRED \
-   librsvg-2.0 >= $LIBRSVG_REQUIRED \
-   xxf86vm)
--
+   librsvg-2.0 >= $LIBRSVG_REQUIRED)
  AC_SUBST(CHEESE_CFLAGS)
+@@ -107,6 +107,20 @@ fi
  
- CHEESE_LIBS="$CHEESE_LIBS -lgstinterfaces-0.10"
- 
- AC_SUBST(CHEESE_LIBS)
+ AM_CONDITIONAL(WITH_HILDON, test "x$enable_hildon" = "xyes")
  
 +AC_ARG_ENABLE(hal, AS_HELP_STRING([--enable-hal], [Use the HAL library (default=no)]),, enable_hal=no)
 +
