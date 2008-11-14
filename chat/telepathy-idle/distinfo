@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/14 23:00:12 wiz Exp $
+
+SHA1 (telepathy-idle-0.1.2.tar.gz) = c8ffa208b18db1a7b7f88237bbc5167c6a585f03
+RMD160 (telepathy-idle-0.1.2.tar.gz) = 124ca06ba8077016c0dea54f0635a8652049018b
+Size (telepathy-idle-0.1.2.tar.gz) = 405694 bytes
+SHA1 (patch-aa) = ae01882fdde77b13424974f6365fb3c531f0ccb6
