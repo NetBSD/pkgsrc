@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.17 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: xlc.mk,v 1.18 2008/11/14 14:04:12 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,6 +81,13 @@ _XLC_CXX=		${_XLC_DIR}/bin/xlc++
 _ALIASES.CXX=		c++ xlc++
 CXXPATH=		${XLCBASE}/bin/xlc++
 PKG_CXX:=		${_XLC_CXX}
+.endif
+.if exists(${XLCBASE}/bin/xlc)
+_XLC_VARS+=		CC_R
+_XLC_CC_R=		${_XLC_DIR}/bin/cc_r
+_ALIASES.CC_R=		cc_r xlc_r
+CC_RPATH=		${XLCBASE}/bin/xlc_r
+PKG_CC_R:=		${_XLC_CC_R}
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
 _COMPILER_RPATH_FLAG=	-Wl,-R
