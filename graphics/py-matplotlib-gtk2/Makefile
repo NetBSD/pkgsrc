@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/14 23:43:16 hasso Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
@@ -18,7 +18,7 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../lang/python/extension.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
