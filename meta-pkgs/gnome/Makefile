@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2008/11/10 11:55:54 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2008/11/14 01:27:51 jmcneill Exp $
 
 DISTNAME=	gnome-2.24.0.92
 CATEGORIES=	meta-pkgs x11 gnome
@@ -115,6 +115,7 @@ DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
 # too old
 #DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
 DEPENDS+=	sound-juicer-[0-9]*:../../audio/sound-juicer
+DEPENDS+=	sound-theme-freedesktop>=0.2:../../audio/sound-theme-freedesktop
 DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
 # unpackaged
 #DEPENDS+=	tomboy>=0.12.1:../../*/tomboy
