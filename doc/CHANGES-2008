@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3003 2008/11/14 01:26:56 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3004 2008/11/14 01:29:29 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5035,3 +5035,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/gnome-settings-daemon to 2.24.0nb2 [wiz 2008-11-14]
 	Updated textproc/redland to 1.0.7nb1 [wiz 2008-11-14]
 	Updated graphics/ruby-RMagick to 2.7.2 [obache 2008-11-14]
+	Added audio/sound-theme-freedesktop version 0.2 [jmcneill 2008-11-13]
