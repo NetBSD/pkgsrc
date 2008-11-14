@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3006 2008/11/14 11:25:44 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3007 2008/11/14 11:26:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5038,3 +5038,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/sound-theme-freedesktop version 0.2 [jmcneill 2008-11-13]
 	Updated emulators/gxemul to 0.4.6.6 [minskim 2008-11-14]
 	Updated graphics/cheese to 2.24.1 [wiz 2008-11-14]
+	Updated meta-pkgs/gnome to 2.24.0.93 [wiz 2008-11-14]
