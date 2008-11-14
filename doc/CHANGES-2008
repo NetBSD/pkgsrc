@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3009 2008/11/14 19:12:41 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.3010 2008/11/14 23:04:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5041,3 +5041,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome to 2.24.0.93 [wiz 2008-11-14]
 	Added games/chest version 3.19.20080412 [wiz 2008-11-14]
 	Updated textproc/p5-XML-Atom to 0.31 [kleink 2008-11-14]
+	Added chat/telepathy-glib version 0.7.18 [wiz 2008-11-14]
+	Added chat/libtelepathy version 0.3.3 [wiz 2008-11-14]
+	Added chat/telepathy-mission-control version 4.67 [wiz 2008-11-14]
+	Added chat/telepathy-idle version 0.1.2 [wiz 2008-11-14]
+	Added chat/telepathy-gabble version 0.7.15 [wiz 2008-11-14]
+	Added chat/empathy version 2.24.1 [wiz 2008-11-14]
