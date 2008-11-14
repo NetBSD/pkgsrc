@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/11/14 22:05:05 hasso Exp $
 #
 
 DISTNAME=	pymusique-0.5
@@ -25,7 +25,7 @@ DEPENDS+=	${PYPKGPREFIX}-mcrypt-[0-9]*:../../security/py-mcrypt
 DEPENDS+=	${PYPKGPREFIX}-libxml2-[0-9]*:../../textproc/py-libxml2
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 PYDISTUTILSPKG= yes
 

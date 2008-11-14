@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/10/16 18:00:16 drochner Exp $
+# $NetBSD: Makefile,v 1.57 2008/11/14 22:01:27 hasso Exp $
 #
 
 DISTNAME=	gnome-python-2.22.3
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		pkg-config gmake
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
