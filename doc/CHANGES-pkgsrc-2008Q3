@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.35 2008/11/13 15:30:14 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.36 2008/11/14 12:33:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -99,3 +99,7 @@ Pullup ticket #2585 - requested by gdt
 trac: security update
 Pullup ticket #2586 - requested by taca
 typo3: security update
+Pullup ticket #2589 - requested by ghen
+firefox: security update
+firefox-bin: security update
+firefox-gtk1: security update
