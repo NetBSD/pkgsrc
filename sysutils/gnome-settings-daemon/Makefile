@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/10/23 11:59:30 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/14 01:01:50 wiz Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.24.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,15 +29,16 @@ PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.3
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libgnomekbd/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
