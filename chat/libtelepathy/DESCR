@@ -1,0 +1,15 @@
+The Telepathy project is building a unified framework for many
+different kinds of real-time communications. It uses the D-Bus
+messaging system to provide a simple interface for client applications,
+allowing them to quickly take advantage of Telepathy's benefits.
+
+* Real-time: Telepathy supports instant messaging (both one-to-one
+and in groups), voice calls and video calls; it's less suited for
+store-and-forward applications like email
+
+* Unified: Many different programs can take advantage of these
+communications; Telepathy lets these programs work together
+
+* Framework: Telepathy allows the different aspects of communication
+handling to be divided between different parts of the system,
+meaning each part is simpler
