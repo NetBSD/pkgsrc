@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+
+--- oobs/oobs-ifacesconfig.c.orig	2008-11-15 09:08:28.000000000 -0500
++++ oobs/oobs-ifacesconfig.c
+@@ -20,7 +20,6 @@
+ 
+ #include <dbus/dbus.h>
+ #include <glib-object.h>
+-#include <libhal.h>
+ #include <string.h>
+ #include "oobs-session-private.h"
+ #include "oobs-list-private.h"
+@@ -35,6 +34,10 @@
+ #include "utils.h"
+ #include "config.h"
+ 
++#ifdef HAVE_HAL
++#include <libhal.h>
++#endif
++
+ #define IFACES_CONFIG_REMOTE_OBJECT "IfacesConfig"
+ #define OOBS_IFACES_CONFIG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OOBS_TYPE_IFACES_CONFIG, OobsIfacesConfigPrivate))
+ 
