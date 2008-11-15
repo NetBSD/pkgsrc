@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/15 19:36:09 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/11/15 19:37:06 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBGKSU_BUILDLINK3_MK:=	${LIBGKSU_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgksu
 
 .if ${LIBGKSU_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libgksu+=	libgksu>=2.0.7
-BUILDLINK_PKGSRCDIR.libgksu?=	../../zzz/libgksu
+BUILDLINK_PKGSRCDIR.libgksu?=	../../sysutils/libgksu
 .endif	# LIBGKSU_BUILDLINK3_MK
 
 .include "../../security/gnome-keyring/buildlink3.mk"
