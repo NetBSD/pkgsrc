@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+
+--- oobs/oobs-group.c.orig	2008-11-15 09:06:29.000000000 -0500
++++ oobs/oobs-group.c
+@@ -27,7 +27,11 @@
+ #include "oobs-usersconfig.h"
+ #include "oobs-defines.h"
+ #include "utils.h"
++#ifndef __NetBSD__
+ #include <crypt.h>
++#else
++#include <unistd.h>
++#endif
+ 
+ #define OOBS_GROUP_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), OOBS_TYPE_GROUP, OobsGroupPrivate))
+ 
