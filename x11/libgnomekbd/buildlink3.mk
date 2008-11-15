@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/04/10 19:20:37 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/11/15 09:59:59 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEKBD_BUILDLINK3_MK:=	${LIBGNOMEKBD_BUILDLINK3_MK}+
@@ -15,5 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgnomekbd
 BUILDLINK_API_DEPENDS.libgnomekbd+=	libgnomekbd>=2.18.0
 BUILDLINK_PKGSRCDIR.libgnomekbd?=	../../x11/libgnomekbd
 .endif	# LIBGNOMEKBD_BUILDLINK3_MK
+
+.include "../../x11/libxklavier/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
