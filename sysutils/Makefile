@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.446 2008/11/15 18:34:30 jmcneill Exp $
+# $NetBSD: Makefile,v 1.447 2008/11/15 19:36:52 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -148,6 +148,7 @@ SUBDIR+=	kdirstat
 SUBDIR+=	krusader
 SUBDIR+=	lambd
 SUBDIR+=	lavaps
+SUBDIR+=	libgksu
 SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libnotify
