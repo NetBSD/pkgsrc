@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2008/10/12 11:15:22 tron Exp $
+$NetBSD: distinfo,v 1.28 2008/11/15 03:59:10 chuck Exp $
 
 SHA1 (dbus-1.2.4.tar.gz) = 913d796b79802b6ee6ca2b0ef59c670f3fd79774
 RMD160 (dbus-1.2.4.tar.gz) = 0441eb8b668ed70250e484b02fe6a83c05c9a088
@@ -10,3 +10,4 @@ SHA1 (patch-ag) = 999071b782982c12329025ea8e393bfed940b654
 SHA1 (patch-ai) = a45bd8d29955e9c14a4d8b3f44b42242d70c1cd8
 SHA1 (patch-ak) = 56c0a917e770b8d6ffc37ec7ab8beb631dd8ef72
 SHA1 (patch-al) = fad2f4df4537b2a3e21aaef29138060724ba8286
+SHA1 (patch-am) = 8c794ff8b0981e90243ee20c26ae1ecc72e68de8
