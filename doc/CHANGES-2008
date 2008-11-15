@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3021 2008/11/15 14:02:03 seb Exp $
+$NetBSD: CHANGES-2008,v 1.3022 2008/11/15 14:38:11 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5059,3 +5059,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome to 2.24.0.95 [wiz 2008-11-15]
 	Updated mail/p5-Mail-Box to 2.084 [adrianp 2008-11-15]
 	Updated www/p5-Pod-POM-Web to 1.11 [seb 2008-11-15]
+	Updated textproc/p5-Text-RewriteRules to 0.14 [seb 2008-11-15]
