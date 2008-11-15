@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/11/15 19:38:53 wiz Exp $
+
+--- src/openfiles.cpp.orig	2008-09-11 19:55:34.000000000 +0000
++++ src/openfiles.cpp
+@@ -15,6 +15,10 @@
+ #include "util.h"
+ #include "gconf-keys.h"
+ 
++#ifndef NI_IDN
++#define NI_IDN	32
++#endif
++
+ enum
+ {
+ 	COL_FD,
