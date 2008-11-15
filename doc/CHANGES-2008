@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3030 2008/11/15 19:40:07 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3031 2008/11/15 23:02:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5072,3 +5072,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/libgksu version 2.0.7 [wiz 2008-11-15]
 	Updated sysutils/gnome-system-monitor to 2.24.1 [wiz 2008-11-15]
 	Updated meta-pkgs/gnome to 2.24.0.97 [wiz 2008-11-15]
+	Updated security/gnutls to 2.6.2 [wiz 2008-11-15]
