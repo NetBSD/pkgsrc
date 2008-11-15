@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3019 2008/11/15 12:22:28 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3020 2008/11/15 13:53:49 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5057,3 +5057,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/ruby-tzinfo to 0.3.12 [taca 2008-11-15]
 	Updated x11/gnome-screensaver to 2.24.1 [wiz 2008-11-15]
 	Updated meta-pkgs/gnome to 2.24.0.95 [wiz 2008-11-15]
+	Updated mail/p5-Mail-Box to 2.084 [adrianp 2008-11-15]
