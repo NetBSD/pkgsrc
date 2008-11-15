@@ -1,0 +1,65 @@
+$NetBSD: patch-ay,v 1.7 2008/11/15 01:19:08 dmcmahill Exp $
+
+Address tmp file vulnerability at http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4983
+
+--- util/scidem.orig	2002-09-02 11:14:52.000000000 +0000
++++ util/scidem
+@@ -5,34 +5,49 @@
+ # Copyright INRIA
+ echo ------------------- File $2--------------------
+ SCI1=$1
++tmpd=/tmp/scidem.$$
++mkdir -m 0700 $tmpd
++rc=$?
++if test $rc -ne 0 ; then
++	cat << EOF
++
++ERROR:  $0 failed to create the directory 
++        $tmpd
++       securily.  It either already exists or you do not have sufficient permissions
++
++EOF
++	exit 1
++fi
++
+ if [ -f $3  ]; then rm $3;fi;
+-trap "rm -f /tmp/$2.$$ /tmp/$2.$$.res /tmp/$2.$$.err /tmp/$2.$$.diff\
++trap "rm -f ${tmpd}/$2.$$ ${tmpd}/$2.$$.res ${tmpd}/$2.$$.err ${tmpd}/$2.$$.diff\
+         ;exit 1"  1 2 13 15
+ echo "clear;lines(0);deff('[]=bugmes()','write(%io(2),''error on test'')');\
+-        diary('$3');driver('Pos');" >> /tmp/$2.$$ ;
++        diary('$3');driver('Pos');" >> ${tmpd}/$2.$$ ;
+ sed     -e "s/pause,end/bugmes();quit;end/" \
+         -e "s/halt()//" \
+-        $2 >> /tmp/$2.$$ ;
+-echo "diary(0);xend();exit;" >> /tmp/$2.$$ ;
+-($SCI1/bin/scilab -nwni < /tmp/$2.$$ > /tmp/$2.$$.res ) 2> /tmp/$2.$$.err ;
++        $2 >> ${tmpd}/$2.$$ ;
++echo "diary(0);xend();exit;" >> ${tmpd}/$2.$$ ;
++($SCI1/bin/scilab -nwni < ${tmpd}/$2.$$ > ${tmpd}/$2.$$.res ) 2> ${tmpd}/$2.$$.err ;
+ sed -e "s/ \./0\./g" -e "s/E+/D+/g" -e "s/E-/D-/g" -e "s/-\./-0\./g" -e "s/^-->//g" -e "s/^-1->//g" $3 > $3.n
+ grep -v "xinit(" $3.n | grep -v "diary(" | grep -v "exec("  > $3
+ rm -f $3.n
+-if ( grep " error" /tmp/$2.$$.res >  /dev/null ) ; then 
++if ( grep " error" ${tmpd}/$2.$$.res >  /dev/null ) ; then 
+         if [ $# != 4 ]; then 
+                 echo "Test failed ERROR DETECTED  while executing $2" ;
+-        else if (grep "$4" /tmp/$2.$$.res >  /dev/null ) ; 
++        else if (grep "$4" ${tmpd}/$2.$$.res >  /dev/null ) ; 
+              then  echo Test skipped ;
+              else echo "Test failed ERROR DETECTED  while executing $2" ;
+              fi;
+         fi;
+ else if [ -f $3.ref ];then 
+-        if ( diff -w $3 $3.ref > /tmp/$2.$$.diff ) ;
++        if ( diff -w $3 $3.ref > ${tmpd}/$2.$$.diff ) ;
+         then  echo Test passed ;
+         else  echo Test Failed SEE : diff -w  $3 $3.ref ;
+         fi;
+       fi;
+ fi;
+ echo ---------------------------------------------------------- 
+-#rm -f /tmp/$2.$$ /tmp/$2.$$.res /tmp/$2.$$.err /tmp/$2.$$.diff
++#rm -f ${tmpd}/$2.$$ ${tmpd}/$2.$$.res ${tmpd}/$2.$$.err ${tmpd}/$2.$$.diff
++rm -fr ${tmpd}
+ exit 0

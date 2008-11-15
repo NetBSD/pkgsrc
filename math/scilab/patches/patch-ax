@@ -1,0 +1,66 @@
+$NetBSD: patch-ax,v 1.6 2008/11/15 01:19:08 dmcmahill Exp $
+
+Address tmp file vulnerability at http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4983
+
+--- bin/scilink.orig	2001-04-26 07:43:33.000000000 +0000
++++ bin/scilink
+@@ -15,30 +15,45 @@ export SCI
+ shift
+ LOCALPOS=`pwd`
+ cd $SCI
+-make show | grep -v make > /tmp/SciLink$$1
+-sed -e "s+routines/default+\$SD+g"  -e "s+libs+\$SL+g" -e "s+./pvm3+\$SPVM+g" /tmp/SciLink$$1 > /tmp/SciLink$$2
++
++tmpd=/tmp/SciLink$$
++mkdir -m 0700 $tmpd
++rc=$?
++if test $rc -ne 0 ; then
++	cat << EOF
++
++ERROR:  $0 failed to create the directory 
++        $tmpd
++	securily.  It either already exists or you do not have sufficient permissions
++
++EOF
++	exit 1
++fi
++
++make show | grep -v make > ${tmpd}/SciLink1
++sed -e "s+routines/default+\$SD+g"  -e "s+libs+\$SL+g" -e "s+./pvm3+\$SPVM+g" ${tmpd}/SciLink1 > ${tmpd}/SciLink2
+ for i in $*
+ do
+   x=`basename $i`
+-  sed "s+\$SD/$x++g" /tmp/SciLink$$2 > /tmp/SciLink$$3
+-  rm -f /tmp/SciLink$$2
+-  mv /tmp/SciLink$$3 /tmp/SciLink$$2
++  sed "s+\$SD/$x++g" ${tmpd}/SciLink2 > ${tmpd}/SciLink3
++  rm -f ${tmpd}/SciLink2
++  mv ${tmpd}/SciLink3 ${tmpd}/SciLink2
+ done
+-echo "#!/bin/sh" > /tmp/SciLink$$3
+-echo  SCI=$SCI >>  /tmp/SciLink$$3
+-echo "SD=\$SCI/routines/default" >>  /tmp/SciLink$$3
+-echo "SPVM=\$SCI/pvm3" >>  /tmp/SciLink$$3
+-echo "SL=\$SCI/libs" >>  /tmp/SciLink$$3
+-echo "LOCAL=\"$*\"" >>  /tmp/SciLink$$3
+-sed -e "s+\$SL+ \$LOCAL \$SL+" -e "s+show+scilex+g" /tmp/SciLink$$2 >> /tmp/SciLink$$3
++echo "#!/bin/sh" > ${tmpd}/SciLink3
++echo  SCI=$SCI >>  ${tmpd}/SciLink3
++echo "SD=\$SCI/routines/default" >>  ${tmpd}/SciLink3
++echo "SPVM=\$SCI/pvm3" >>  ${tmpd}/SciLink3
++echo "SL=\$SCI/libs" >>  ${tmpd}/SciLink3
++echo "LOCAL=\"$*\"" >>  ${tmpd}/SciLink3
++sed -e "s+\$SL+ \$LOCAL \$SL+" -e "s+show+scilex+g" ${tmpd}/SciLink2 >> ${tmpd}/SciLink3
+ cd $LOCALPOS
+-mv /tmp/SciLink$$3 Script
++mv ${tmpd}/SciLink3 Script
+ chmod +x Script 
+ echo "Linking a new Scilab with " $*
+ ./Script 
+ echo "I've created : scilex and scilab which uses that scilex"
+ sed -e "s+\$SCI/bin/scilex+`pwd`/scilex+g" $SCI/bin/scilab > scilab 
+ chmod +x scilab 
+-#rm -f /tmp/SciLink*
++rm -fr ${tmpd}
+ 
+ 
