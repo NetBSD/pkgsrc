@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2007/04/10 15:53:16 joerg Exp $
+$NetBSD: distinfo,v 1.26 2008/11/15 01:19:08 dmcmahill Exp $
 
 SHA1 (scilab-4.1-src.tar.gz) = 7a8381a9a69ce280ae718ee59f4c14001b61f4b7
 RMD160 (scilab-4.1-src.tar.gz) = 6ed27ce7dcfb9231b5f3042cb7b830015d102df7
@@ -23,3 +23,6 @@ SHA1 (patch-at) = a24eedcea09e3fc4530b305561b7a9298a2cb4a3
 SHA1 (patch-au) = 029d77b4358dbf87e9761f85840f93191294a894
 SHA1 (patch-av) = da0565e94302d79a494fb099b5b5d7c251937c94
 SHA1 (patch-aw) = 2ac72cf020562baa454c59182aae3dd1d25167df
+SHA1 (patch-ax) = b7e080f0037cc4532100fdf679844724f59d6ba6
+SHA1 (patch-ay) = e521844001d6ed4d560918fac6d026799f2c02a5
+SHA1 (patch-az) = 3b23b82750469e12ea3ee522dfb889c8935df993
