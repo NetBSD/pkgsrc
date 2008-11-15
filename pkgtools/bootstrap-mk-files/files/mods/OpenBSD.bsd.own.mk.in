@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.2 2008/11/15 13:05:09 schwarz Exp $
+#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.3 2008/11/15 13:06:42 schwarz Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -137,19 +137,6 @@ GNU_ARCH.sparc=sparc
 GNU_ARCH.sparc64=sparc64
 GNU_ARCH.vax=vax
 MACHINE_GNU_ARCH=${GNU_ARCH.${MACHINE_ARCH}}
-.endif
-
-# In order to identify NetBSD to GNU packages, we sometimes need
-# an "elf" tag for historically a.out platforms.
-.if ${OBJECT_FMT} == "ELF" && \
-    (${MACHINE_ARCH} == "arm" || \
-     ${MACHINE_ARCH} == "i386" || \
-     ${MACHINE_ARCH} == "m68k" || \
-     ${MACHINE_ARCH} == "sparc" || \
-     ${MACHINE_ARCH} == "vax")
-MACHINE_GNU_PLATFORM?= netbsdelf
-.else
-MACHINE_GNU_PLATFORM?= netbsd
 .endif
 
 # CPU model, derived from MACHINE_ARCH
