@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3023 2008/11/15 17:27:03 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3024 2008/11/15 18:17:15 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5061,3 +5061,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Pod-POM-Web to 1.11 [seb 2008-11-15]
 	Updated textproc/p5-Text-RewriteRules to 0.14 [seb 2008-11-15]
 	Updated www/plone3 to 3.1.7 [taca 2008-11-15]
+	Updated sysutils/dbus to 1.2.4nb1 [jmcneill 2008-11-15]
