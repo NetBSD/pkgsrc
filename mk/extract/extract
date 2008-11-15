@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: extract,v 1.7 2007/07/31 17:42:40 jlam Exp $
+# $NetBSD: extract,v 1.8 2008/11/15 20:25:34 minskim Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -181,6 +181,7 @@ esac
 case "$distfile" in
 *.gz|*.tgz|*.z)			_cformat=gzip ;;
 *.bz2|*.tbz|*.tbz2|*.bz)	_cformat=bzip ;;
+*.lzma)				_cformat=lzma ;;
 *.Z)				_cformat=compress ;;
 *)				_cformat=none ;;
 esac
@@ -192,13 +193,14 @@ ${TEST} -n "$cformat" || cformat="$_cformat"
 case "$cformat" in
 gzip|compress)	decompress_cat="${GZCAT}" ;;
 bzip)		decompress_cat="${BZCAT}" ;;
+lzma)		decompress_cat="${LZCAT}" ;;
 none)		decompress_cat="${CAT}" ;;
 *)		decompress_cat="${CAT}" ;;
 esac
 
 # Derive the format of the archive based on the file extension.
 case "$distfile" in
-*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.Z|*.tar.z|*.tar|*.tar.bz)
+*.tar.gz|*.tgz|*-tar.gz|*_tar.gz|*.tar.bz2|*.tbz|*.tbz2|*.tar.lzma|*.tar.Z|*.tar.z|*.tar|*.tar.bz)
 		_format=tar ;;
 *.cpio|*.cpio.gz|*.cpio.bz2)
 		_format=cpio ;;
