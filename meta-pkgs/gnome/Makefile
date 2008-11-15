@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2008/11/15 18:38:48 jmcneill Exp $
+# $NetBSD: Makefile,v 1.92 2008/11/15 19:03:28 wiz Exp $
 
 DISTNAME=	gnome-2.24.0.96
 CATEGORIES=	meta-pkgs x11 gnome
@@ -89,8 +89,7 @@ DEPENDS+=	libgnomeprintui>=2.18.3:../../print/libgnomeprintui
 #DEPENDS+=	libgtop>=2.24.0:../../sysutils/libgtop
 DEPENDS+=	libgtop-[0-9]*:../../sysutils/libgtop
 DEPENDS+=	libgweather>=2.24.1:../../devel/libgweather
-# unpackaged
-#DEPENDS+=	liboobs>=2.22.0:../../*/liboobs
+DEPENDS+=	liboobs>=2.22.0:../../sysutils/liboobs
 DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
 DEPENDS+=	libsoup24>=2.24.1:../../net/libsoup24
 DEPENDS+=	libwnck>=2.24.1:../../devel/libwnck
