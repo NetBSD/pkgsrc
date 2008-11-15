@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.90 2008/11/15 12:22:15 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2008/11/15 18:38:48 jmcneill Exp $
 
-DISTNAME=	gnome-2.24.0.95
+DISTNAME=	gnome-2.24.0.96
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -63,8 +63,7 @@ DEPENDS+=	gnome-speech>=0.4.21:../../audio/gnome-speech
 # too old
 #DEPENDS+=	gnome-system-monitor>=2.24.1:../../sysutils/gnome-system-monitor
 DEPENDS+=	gnome-system-monitor-[0-9]*:../../sysutils/gnome-system-monitor
-# unpackaged
-#DEPENDS+=	gnome-system-tools>=2.22.1:../../*/gnome-system-tools
+DEPENDS+=	gnome-system-tools>=2.22.1:../../sysutils/gnome-system-tools
 DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
 DEPENDS+=	gnome-themes>=2.24.1:../../x11/gnome-themes
 DEPENDS+=	gnome-user-docs>=2.24.0:../../misc/gnome-user-docs
