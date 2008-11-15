@@ -1,0 +1,54 @@
+$NetBSD: patch-az,v 1.4 2008/11/15 01:19:08 dmcmahill Exp $
+
+Address tmp file vulnerability at http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4983
+
+--- util/scidoc.orig	2006-01-04 14:40:34.000000000 +0000
++++ util/scidoc
+@@ -6,25 +6,40 @@
+ echo ------------------- File $2--------------------
+ SCI=$1
+ export SCI
++tmpd=/tmp/scidem.$$
++mkdir -m 0700 $tmpd
++rc=$?
++if test $rc -ne 0 ; then
++	cat << EOF
++
++ERROR:  $0 failed to create the directory 
++        $tmpd
++       securily.  It either already exists or you do not have sufficient permissions
++
++EOF
++	exit 1
++fi
++
++
+ if [ -f $3  ]; then rm $3;fi;
+-trap "rm -f /tmp/$2.$$ /tmp/$2.$$.res /tmp/$2.$$.err /tmp/$2.$$.diff\
++trap "rm -f ${tmpd}$2.$$ ${tmpd}$2.$$.res ${tmpd}$2.$$.err ${tmpd}$2.$$.diff\
+ 	;exit 1"  1 2 13 15
+ echo "clear;lines(0);deff('[]=bugmes()','write(%io(2),''error on test'')');\
+-	diary('$3');driver('Pos');" >> /tmp/$2.$$ ;
++	diary('$3');driver('Pos');" >> ${tmpd}$2.$$ ;
+ sed     -e "s/pause,end/bugmes();quit;end/" \
+ 	-e "s/halt()//" \
+-        $2 >> /tmp/$2.$$ ;
+-echo "diary(0);xend();quit;quit;quit;quit;quit;quit;" >> /tmp/$2.$$ ;
+-($SCI/bin/scilex -nw < /tmp/$2.$$ > /tmp/$2.$$.res ) 2> /tmp/$2.$$.err ;
++        $2 >> ${tmpd}$2.$$ ;
++echo "diary(0);xend();quit;quit;quit;quit;quit;quit;" >> ${tmpd}$2.$$ ;
++($SCI/bin/scilex -nw < ${tmpd}$2.$$ > ${tmpd}$2.$$.res ) 2> ${tmpd}$2.$$.err ;
+ sed -e "s/ \.[0-9]/0&/g" -e "s/0 \./0./g" -e "s/E+/D+/g" -e "s/E-/D-/g" -e "s/-\./-0\./g" $3 > $3.n
+ grep -v "xinit(" $3.n | grep -v "diary(" | grep -v "exec("  > $3
+ rm -f $3.n
+-if ( grep error /tmp/$2.$$.res >  /dev/null ) ; then 
++if ( grep error ${tmpd}$2.$$.res >  /dev/null ) ; then 
+ 	if [ $# != 4 ]; then 
+ 		echo "ERROR DETECTED  while executing $2" ;
+ 	fi;
+ fi;
+ echo ---------------------------------------------------------- 
+-rm -f /tmp/$2.$$ /tmp/$2.$$.res /tmp/$2.$$.err /tmp/$2.$$.diff
++rm -fr ${tmpd}
+ exit 0
+ 
