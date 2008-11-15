@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2008/11/15 03:59:10 chuck Exp $
+# $NetBSD: Makefile,v 1.36 2008/11/15 18:15:09 jmcneill Exp $
 
 DISTNAME=	dbus-1.2.4
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -92,6 +93,7 @@ PKG_HOME.${DBUS_USER}=	${VARBASE}/run/dbus
 FILES_SUBST+=		DBUS_USER=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
+BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 
 .include "options.mk"
 
