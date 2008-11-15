@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/15 18:28:56 jmcneill Exp $
+
+--- Time/NTP.pm.orig	2008-03-09 09:21:45.000000000 -0400
++++ Time/NTP.pm
+@@ -42,6 +42,7 @@ sub get_config_file ()
+     "pld-1.0"         => "pld-1.0",
+     "vine-3.0"        => "redhat-6.2",
+     "freebsd-5"       => "redhat-6.2",
++    "netbsd-2"        => "redhat-6.2",
+     "archlinux"       => "redhat-6.2",
+     "solaris-2.11"    => "solaris-2.11",
+   );
