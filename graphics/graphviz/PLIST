@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/11/15 01:28:41 epg Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -56,12 +56,23 @@ lib/graphviz/libgvplugin_dot_layout.la
 lib/graphviz/libgvplugin_gd.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.la
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
-${PLIST.tcl}${PLIST.guile}lib/graphviz/guile/libgv_guile.la
+${PLIST.guile}lib/graphviz/guile/libgv_guile.la
 lib/graphviz/libgvplugin_neato_layout.la
 lib/graphviz/libgvplugin_pango.la
 lib/graphviz/libgvplugin_xlib.la
 lib/graphviz/lua/gv.so
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
+${PLIST.ocaml}lib/graphviz/ocaml/META.gv
+${PLIST.ocaml}lib/graphviz/ocaml/gv.a
+${PLIST.ocaml}lib/graphviz/ocaml/gv.cma
+${PLIST.ocaml}lib/graphviz/ocaml/gv.cmi
+${PLIST.ocaml}lib/graphviz/ocaml/gv.cmo
+${PLIST.ocaml}lib/graphviz/ocaml/gv.cmx
+${PLIST.ocaml}lib/graphviz/ocaml/gv.cmxa
+${PLIST.ocaml}lib/graphviz/ocaml/gv.mli
+${PLIST.ocaml}lib/graphviz/ocaml/libgv_ocaml.a
+${PLIST.ocaml}lib/graphviz/ocaml/libgv_ocaml.la
+${PLIST.ocaml}lib/graphviz/ocaml/libgv_ocaml.so
 lib/graphviz/perl/gv.so
 lib/graphviz/pkgIndex.tcl
 lib/graphviz/python/_gv.so
@@ -72,7 +83,7 @@ lib/graphviz/r/gv.so
 lib/graphviz/ruby/gv.so
 lib/graphviz/tcl/gv.so
 ${PLIST.tcl}lib/graphviz/tcl/libgdtclft.la
-${PLIST.tcl}${PLIST.lua}lib/graphviz/tcl/libgv_tcl.la
+${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot.la
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.la
 ${PLIST.tcl}lib/graphviz/tcl/libtclplan.la
@@ -121,10 +132,11 @@ man/man3/graph.3
 man/man3/gvc.3
 man/man3/pathplan.3
 man/man7/graphviz.7
-${PLIST.tcl}man/mann/gdtclft.n
-${PLIST.tcl}${PLIST.guile}man/mann/gv_guile.n
+${PLIST.guile}man/mann/gv_guile.n
 ${PLIST.lua}man/mann/gv_lua.n
-${PLIST.tcl}${PLIST.lua}man/mann/gv_tcl.n
+${PLIST.ocaml}man/mann/gv_ocaml.n
+${PLIST.tcl}man/mann/gdtclft.n
+${PLIST.tcl}man/mann/gv_tcl.n
 ${PLIST.tcl}man/mann/tcldot.n
 ${PLIST.tcl}man/mann/tkspline.n
 ${PLIST.tcl}share/graphviz/demo/doted
