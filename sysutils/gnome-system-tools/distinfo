@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/15 18:32:14 jmcneill Exp $
+
+SHA1 (gnome-system-tools-2.22.1.tar.bz2) = 11dd2ed621deecd7a381e41c95064ca5b3201832
+RMD160 (gnome-system-tools-2.22.1.tar.bz2) = 55d6f4cc2053d676e554c7502b3d89ae362d907d
+Size (gnome-system-tools-2.22.1.tar.bz2) = 3963700 bytes
+SHA1 (patch-aa) = 19cf4b169ddb71c987abd5e15737c00e5109764a
