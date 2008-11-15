@@ -1,0 +1,48 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 19:36:09 wiz Exp $
+bin/gksu-properties
+include/libgksu/gksu.h
+include/libgksu/libgksu.h
+lib/libgksu/gksu-run-helper
+lib/libgksu2.la
+lib/pkgconfig/libgksu2.pc
+share/applications/gksu-properties.desktop
+share/gconf/schemas/gksu.schemas
+share/gtk-doc/html/libgksu/home.png
+share/gtk-doc/html/libgksu/index.html
+share/gtk-doc/html/libgksu/index.sgml
+share/gtk-doc/html/libgksu/left.png
+share/gtk-doc/html/libgksu/libgksu-API-Reference.html
+share/gtk-doc/html/libgksu/libgksu.devhelp
+share/gtk-doc/html/libgksu/libgksu.devhelp2
+share/gtk-doc/html/libgksu/right.png
+share/gtk-doc/html/libgksu/style.css
+share/gtk-doc/html/libgksu/up.png
+share/libgksu/gksu-properties.glade
+share/locale/ca/LC_MESSAGES/libgksu.mo
+share/locale/cs/LC_MESSAGES/libgksu.mo
+share/locale/da/LC_MESSAGES/libgksu.mo
+share/locale/de/LC_MESSAGES/libgksu.mo
+share/locale/es/LC_MESSAGES/libgksu.mo
+share/locale/eu/LC_MESSAGES/libgksu.mo
+share/locale/fr/LC_MESSAGES/libgksu.mo
+share/locale/hu/LC_MESSAGES/libgksu.mo
+share/locale/it/LC_MESSAGES/libgksu.mo
+share/locale/ko/LC_MESSAGES/libgksu.mo
+share/locale/lt/LC_MESSAGES/libgksu.mo
+share/locale/nb/LC_MESSAGES/libgksu.mo
+share/locale/nl/LC_MESSAGES/libgksu.mo
+share/locale/pl/LC_MESSAGES/libgksu.mo
+share/locale/pt_BR/LC_MESSAGES/libgksu.mo
+share/locale/ro/LC_MESSAGES/libgksu.mo
+share/locale/ru/LC_MESSAGES/libgksu.mo
+share/locale/sk/LC_MESSAGES/libgksu.mo
+share/locale/sv/LC_MESSAGES/libgksu.mo
+share/locale/zh_CN/LC_MESSAGES/libgksu.mo
+share/pixmaps/gksu.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/libgksu
+@dirrm share/gtk-doc/html/libgksu
+@comment in GConf: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/libgksu
+@dirrm include/libgksu
