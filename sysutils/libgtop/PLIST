@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/15 19:34:11 wiz Exp $
 ${PLIST.server}bin/libgtop_daemon2
 ${PLIST.server}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
@@ -17,6 +17,7 @@ include/libgtop-2.0/glibtop/netload.h
 include/libgtop-2.0/glibtop/open.h
 include/libgtop-2.0/glibtop/parameter.h
 include/libgtop-2.0/glibtop/ppp.h
+include/libgtop-2.0/glibtop/procaffinity.h
 include/libgtop-2.0/glibtop/procargs.h
 include/libgtop-2.0/glibtop/prockernel.h
 include/libgtop-2.0/glibtop/proclist.h
@@ -137,6 +138,7 @@ share/locale/mi/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mk/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ml/LC_MESSAGES/libgtop-2.0.mo
 share/locale/mn/LC_MESSAGES/libgtop-2.0.mo
+share/locale/mr/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ms/LC_MESSAGES/libgtop-2.0.mo
 share/locale/nb/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ne/LC_MESSAGES/libgtop-2.0.mo
@@ -155,7 +157,7 @@ share/locale/sk/LC_MESSAGES/libgtop-2.0.mo
 share/locale/sl/LC_MESSAGES/libgtop-2.0.mo
 share/locale/sq/LC_MESSAGES/libgtop-2.0.mo
 share/locale/sr/LC_MESSAGES/libgtop-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/libgtop-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/libgtop-2.0.mo
 share/locale/sv/LC_MESSAGES/libgtop-2.0.mo
 share/locale/ta/LC_MESSAGES/libgtop-2.0.mo
 share/locale/te/LC_MESSAGES/libgtop-2.0.mo

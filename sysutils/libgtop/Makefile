@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/04/12 22:43:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/15 19:34:11 wiz Exp $
 
-DISTNAME=		libgtop-2.20.2
+DISTNAME=		libgtop-2.24.0
 CATEGORIES=		sysutils gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtop/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -11,26 +11,29 @@ COMMENT=		Library to retrieve system information, used in GNOME2
 
 OSVERSION_SPECIFIC=	YES
 
+GNU_CONFIGURE=		YES
+INFO_FILES=		YES
+PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
+TEXINFO_REQD=		4.6
+USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake makeinfo msgfmt perl pkg-config intltool
-USE_LIBTOOL=		YES
-PKGCONFIG_OVERRIDE=	libgtop-2.0.pc.in
-PKGCONFIG_OVERRIDE+=	support/gnome-support-2.0.pc.in
-INFO_FILES=		YES
-TEXINFO_REQD=		4.6
+
+CONFIGURE_ARGS+=	--enable-gtk-doc
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ENV+=		LN_S="${LN} -s"
+
 CONFLICTS+=		libgtop2-[0-9]*
+
+post-patch:
+	cd ${WRKSRC}/sysdeps && \
+		${CP} freebsd/procaffinity.c bsd/procaffinity.c
 
 # The following flags are for debugging purposes.  They don't need to
 # be used unless you are actively developing/debugging libgtop.
 #CPPFLAGS+=		-DLIBGTOP_ENABLE_DEBUG -DLIBGTOP_FATAL_WARNINGS
 #CFLAGS+=		-g
 #LDFLAGS+=		-g
-
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
-CONFIGURE_ARGS+=	--with-catgets --with-libgtop-guile=no
-CONFIGURE_ARGS+=	--without-x
-CONFIGURE_ENV+=		LN_S="${LN} -s"
 
 PRINT_PLIST_AWK+=	/^bin\/libgtop_server2$$/ \
 				{ print "$${LIBGTOP_SERVER}" $$0; next }
@@ -78,10 +81,9 @@ CPPFLAGS+=	-DHAVE_STATVFS_WRITES_COUNT
 .endif
 .undef statvfs_h
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
-
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/popt/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
+.include "../../x11/libXau/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
