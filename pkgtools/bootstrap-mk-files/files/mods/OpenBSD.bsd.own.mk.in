@@ -1,4 +1,4 @@
-#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: OpenBSD.bsd.own.mk.in,v 1.2 2008/11/15 13:05:09 schwarz Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -105,7 +105,8 @@ NOPIC?=1
 #
 .if ${MACHINE_ARCH} == "alpha" || \
     ${MACHINE_ARCH} == "powerpc" || \
-    ${MACHINE_ARCH} == "sparc" 
+    ${MACHINE_ARCH} == "sparc" || \
+    ( ${MACHINE_ARCH} == "i386" && ${OS_VERSION} >= 3.4 )
 OBJECT_FMT?=ELF
 .else
 OBJECT_FMT?=a.out
