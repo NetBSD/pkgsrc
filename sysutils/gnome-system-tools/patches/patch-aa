@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/15 18:32:14 jmcneill Exp $
+
+--- src/users/user-settings.c.orig	2008-11-15 09:27:00.000000000 -0500
++++ src/users/user-settings.c
+@@ -29,7 +29,13 @@
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <stdlib.h>
++#ifndef __NetBSD__
+ #include <utmp.h>
++#define UTMP utmp
++#else
++#include <utmpx.h>
++#define UTMP utmpx
++#endif
+ #include <ctype.h>
+ 
+ #include "users-table.h"
+@@ -281,7 +287,7 @@ set_login_length (GtkWidget *entry)
+ #ifdef __FreeBSD__
+ 	max_len = UT_NAMESIZE;
+ #else
+-	struct utmp ut;
++	struct UTMP ut;
+ 
+ 	max_len = sizeof (ut.ut_user);
+ #endif
