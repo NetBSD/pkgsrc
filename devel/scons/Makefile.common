@@ -1,0 +1,19 @@
+# $NetBSD: Makefile.common,v 1.1 2008/11/15 01:16:48 bjs Exp $
+#
+# used by devel/scons/Makefile
+# used by devel/scons-devel/Makefile
+
+DISTNAME=		scons-${SCONS_VERSION}
+CATEGORIES=		devel
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scons/}
+
+MAINTAINER=		recht@NetBSD.org
+HOMEPAGE=		http://www.scons.org/
+COMMENT?=		Python-based, open-source build system
+
+PYDISTUTILSPKG=		yes
+
+MAKE_ENV+=		PKGVERSION_NOREV=${PKGVERSION_NOREV:Q}
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"

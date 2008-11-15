@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/08/28 14:42:31 tonnerre Exp $
+$NetBSD: distinfo,v 1.4 2008/11/15 01:16:49 bjs Exp $
 
-SHA1 (scons-1.0.0.tar.gz) = 0d46f078e9a58a3e1cc6d41eb4966c448463d134
-RMD160 (scons-1.0.0.tar.gz) = 0c74d061316ea73f82a0b2c316474bc33b486f23
-Size (scons-1.0.0.tar.gz) = 541330 bytes
-SHA1 (patch-aa) = 31eea83f881b369262e42a373cc2c8acb18a6d00
+SHA1 (scons-1.1.0.d20081104.tar.gz) = 3bbec44d637affa5871e467f8236ccc6ef22470a
+RMD160 (scons-1.1.0.d20081104.tar.gz) = bca3aca2482531f92121035f30d1e1ff2f62f305
+Size (scons-1.1.0.d20081104.tar.gz) = 564030 bytes
+SHA1 (patch-aa) = 791d81e8fe990249ad8aaa12e1fb5c25fdd364af
