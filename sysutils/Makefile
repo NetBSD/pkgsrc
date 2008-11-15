@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.445 2008/11/05 19:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.446 2008/11/15 18:34:30 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -113,6 +113,7 @@ SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-pkgview
 SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-system-monitor
+SUBDIR+=	gnome-system-tools
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
 SUBDIR+=	gnome-vfsmm
@@ -151,6 +152,7 @@ SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libnotify
 SUBDIR+=	libol
+SUBDIR+=	liboobs
 SUBDIR+=	libpciaccess
 SUBDIR+=	lilo
 SUBDIR+=	logfinder
@@ -264,6 +266,7 @@ SUBDIR+=	swatch
 SUBDIR+=	sysgen
 SUBDIR+=	sysinfo
 SUBDIR+=	syslog-ng
+SUBDIR+=	system-tools-backends
 SUBDIR+=	tcx
 SUBDIR+=	tdir
 SUBDIR+=	tits
