@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2008/11/15 01:28:41 epg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	guile lua ocaml swig tcl gtk
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	lua swig tcl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		guile gtk lua tcl
+PLIST_VARS+=		guile gtk lua ocaml tcl
 
 .if !empty(PKG_OPTIONS:Mguile)
 .include "../../lang/guile/buildlink3.mk"
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--disable-lua
 
 .if !empty(PKG_OPTIONS:Mocaml)
 .include "../../lang/ocaml/buildlink3.mk"
+PLIST.ocaml=		yes
 .else
 CONFIGURE_ARGS+=	--disable-ocaml
 .endif
