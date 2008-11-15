@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+
+--- oobs/oobs-user.c.orig	2008-11-15 09:03:02.000000000 -0500
++++ oobs/oobs-user.c
+@@ -23,8 +23,19 @@
+ #include <unistd.h>
+ #include <stdlib.h>
+ #include <string.h>
++#ifndef __NetBSD__
+ #include <crypt.h>
+ #include <utmp.h>
++#define UTMP utmp
++#define GETUTENT getutent
++#define ENDUTENT endutent
++#define 
++#else
++#include <utmpx.h>
++#define UTMP utmpx
++#define GETUTENT getutxent
++#define ENDUTENT endutxent
++#endif
+ 
+ #include "oobs-usersconfig.h"
+ #include "oobs-user.h"
+@@ -804,7 +815,7 @@ oobs_user_set_other_data (OobsUser *user
+ gboolean
+ oobs_user_get_active (OobsUser *user)
+ {
+-  struct utmp *entry;
++  struct UTMP *entry;
+   const gchar *login;
+   gboolean match = FALSE;
+ 
+@@ -812,14 +823,14 @@ oobs_user_get_active (OobsUser *user)
+ 
+   login = oobs_user_get_login_name (user);
+ 
+-  while (!match && (entry = getutent ()) != NULL)
++  while (!match && (entry = GETUTENT ()) != NULL)
+     {
+       match = (entry->ut_type == USER_PROCESS &&
+ 	       strcmp (entry->ut_user, login) == 0);
+     }
+ 
+   /* close utmp */
+-  endutent ();
++  ENDUTENT ();
+ 
+   return match;
+ }
