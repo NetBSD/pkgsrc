@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/12 07:07:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/11/15 17:25:39 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -3333,6 +3333,7 @@ ${PLONE_BASE}/CMFPlone/skins/plone_images/image_icon.gif.metadata
 ${PLONE_BASE}/CMFPlone/skins/plone_images/info.gif
 ${PLONE_BASE}/CMFPlone/skins/plone_images/info.gif.metadata
 ${PLONE_BASE}/CMFPlone/skins/plone_images/info_icon.gif
+${PLONE_BASE}/CMFPlone/skins/plone_images/info_icon.gif.metadata
 ${PLONE_BASE}/CMFPlone/skins/plone_images/input_background.gif
 ${PLONE_BASE}/CMFPlone/skins/plone_images/input_background.gif.metadata
 ${PLONE_BASE}/CMFPlone/skins/plone_images/linkOpaque.gif
