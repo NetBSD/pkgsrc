@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.92 2008/11/15 19:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.93 2008/11/15 19:39:54 wiz Exp $
 
-DISTNAME=	gnome-2.24.0.96
+DISTNAME=	gnome-2.24.0.97
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -60,9 +60,7 @@ DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
 DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
 DEPENDS+=	gnome-sharp>=2.24.0:../../x11/gnome-sharp
 DEPENDS+=	gnome-speech>=0.4.21:../../audio/gnome-speech
-# too old
-#DEPENDS+=	gnome-system-monitor>=2.24.1:../../sysutils/gnome-system-monitor
-DEPENDS+=	gnome-system-monitor-[0-9]*:../../sysutils/gnome-system-monitor
+DEPENDS+=	gnome-system-monitor>=2.24.1:../../sysutils/gnome-system-monitor
 DEPENDS+=	gnome-system-tools>=2.22.1:../../sysutils/gnome-system-tools
 DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
 DEPENDS+=	gnome-themes>=2.24.1:../../x11/gnome-themes
@@ -85,9 +83,7 @@ DEPENDS+=	libgail-gnome>=1.20.1:../../devel/libgail-gnome
 DEPENDS+=	libgnomekbd>=2.24.0:../../x11/libgnomekbd
 DEPENDS+=	libgnomeprint>=2.18.5:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.18.3:../../print/libgnomeprintui
-# too old
-#DEPENDS+=	libgtop>=2.24.0:../../sysutils/libgtop
-DEPENDS+=	libgtop-[0-9]*:../../sysutils/libgtop
+DEPENDS+=	libgtop>=2.24.0:../../sysutils/libgtop
 DEPENDS+=	libgweather>=2.24.1:../../devel/libgweather
 DEPENDS+=	liboobs>=2.22.0:../../sysutils/liboobs
 DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
