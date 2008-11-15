@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3012 2008/11/15 00:05:18 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3013 2008/11/15 01:17:02 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5049,3 +5049,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/empathy version 2.24.1 [wiz 2008-11-14]
 	Updated meta-pkgs/gnome to 2.24.0.94 [wiz 2008-11-14]
 	Updated x11/gtkmm to 2.14.3 [wiz 2008-11-15]
+	Updated devel/scons to 1.1.0 [bjs 2008-11-15]
