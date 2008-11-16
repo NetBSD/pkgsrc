@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/30 08:12:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/16 15:10:10 adrianp Exp $
 bin/pcap-config
 include/pcap-bpf.h
 include/pcap-int.h
@@ -70,7 +70,10 @@ man/man3/pcap_snapshot.3
 man/man3/pcap_stats.3
 man/man3/pcap_statustostr.3
 man/man3/pcap_strerror.3
-man/man5/pcap-savefile.5
-man/man7/pcap-filter.7
-man/man7/pcap-linktype.7
+${PLIST.std}man/man5/pcap-savefile.5
+${PLIST.std}man/man7/pcap-filter.7
+${PLIST.std}man/man7/pcap-linktype.7
+${PLIST.SunOS}man/man4/pcap-savefile.4
+${PLIST.SunOS}man/man5/pcap-filter.5
+${PLIST.SunOS}man/man5/pcap-linktype.5
 @dirrm include/pcap

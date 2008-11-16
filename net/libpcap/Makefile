@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2008/11/07 11:51:10 abs Exp $
+# $NetBSD: Makefile,v 1.46 2008/11/16 15:10:10 adrianp Exp $
 
 DISTNAME=	libpcap-1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 SVR4_PKGNAME=	lpcap
 CATEGORIES=	net
 MASTER_SITES=	http://www.tcpdump.org/release/
@@ -19,11 +19,18 @@ INSTALLATION_DIRS=	bin
 USE_TOOLS+=		bison gm4 lex
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PLIST_VARS+=		SunOS std
 
 .include "../../mk/bsd.prefs.mk"
 
 .if exists(/usr/include/netinet/ip6.h)
 CONFIGURE_ARGS+=	--enable-ipv6
+.endif
+
+.if ${OPSYS} == "SunOS"
+PLIST.SunOS=	yes
+.else
+PLIST.std=	yes
 .endif
 
 post-install:
