@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3043 2008/11/16 20:31:22 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3044 2008/11/16 23:53:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5084,3 +5084,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/gnome-speech to 0.4.22 [wiz 2008-11-16]
 	Updated chat/icbirc to 1.8nb1 [adrianp 2008-11-16]
 	Updated sysutils/libgtop to 2.24.0nb1 [wiz 2008-11-16]
+	Updated devel/p5-Attribute-Handlers to 0.81 [he 2008-11-16]
+	Updated devel/p5-B-Hooks-OP-Check to 0.15 [he 2008-11-16]
+	Updated devel/p5-CPAN-DistnameInfo to 0.07 [he 2008-11-16]
+	Updated devel/p5-Config-Find to 0.24 [he 2008-11-16]
+	Updated devel/p5-ExtUtils-PkgConfig to 0.12 [he 2008-11-16]
+	Updated devel/p5-FileHandle-Fmode to 0.11 [he 2008-11-16]
+	Updated devel/p5-Hook-LexWrap to 0.21 [he 2008-11-16]
