@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/04/20 22:41:57 dbj Exp $
+# $NetBSD: buildlink3.mk,v 1.14.8.1 2008/11/16 10:07:46 rtr Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
@@ -14,8 +14,8 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}imap-uw
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(IMAP_UW_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004
-BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2006j2nb5
+BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2007dnb1
+BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2007dnb1
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 . if ${OPSYS} == "Darwin"
 BUILDLINK_LDFLAGS.imap-uw+=	-flat_namespace
