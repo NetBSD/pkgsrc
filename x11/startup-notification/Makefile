@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/03/21 22:32:31 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/11/16 14:01:11 tron Exp $
 
 DISTNAME=		startup-notification-0.9
 CATEGORIES=		x11 gnome
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		X11 application startup notification library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
@@ -17,11 +18,14 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libstartup-notification-1.0.pc.in
 
+DOCDIR=			${PREFIX}/share/doc/startup-notification
+INSTALLATION_DIRS+=	${DOCDIR}
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/startup-notification
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS COPYING ChangeLog NEWS \
 		doc/startup-notification.txt \
-		${PREFIX}/share/doc/startup-notification/
+		${DESTDIR}${DOCDIR}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
