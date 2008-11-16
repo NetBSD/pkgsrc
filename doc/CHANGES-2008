@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3042 2008/11/16 20:08:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3043 2008/11/16 20:31:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5083,3 +5083,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/cairo to 1.8.4 [wiz 2008-11-16]
 	Updated audio/gnome-speech to 0.4.22 [wiz 2008-11-16]
 	Updated chat/icbirc to 1.8nb1 [adrianp 2008-11-16]
+	Updated sysutils/libgtop to 2.24.0nb1 [wiz 2008-11-16]
