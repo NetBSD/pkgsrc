@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/07/31 03:58:05 bjs Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/16 11:22:55 bjs Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -7,13 +7,16 @@ CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
-JACK_VERSION=	0.112.1
+JACK_VERSION=	0.115.1
 
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	http://www.jackaudio.org/
 COMMENT=	JACK audio connection kit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEFS+=		JACKD_DEFAULT_TMPDIR
+BUILD_DEFS+=		JACKD_PROCFS_PATH
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
@@ -36,12 +39,20 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 CONFIGURE_ENV+=		ac_cv_header_readline_chardefs_h=yes
 
 JACKD_DEFAULT_TMPDIR?=	/tmp
-JACKD_PROCFS_PATH?=	/proc
 
 .include "../../mk/bsd.prefs.mk"
 
-.if "${OPSYS:M*BSD}" != "" || ${OPSYS} == "Darwin"
-CFLAGS+=		-DJACK_HOST_HAS_BSD_POLL
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
+CFLAGS+=		-DHOST_HAS_BSD_POLL
+.endif
+###
+### XXX Is there a way to properly use the emulation framework
+###	for this?
+###
+.if exists(${PREFIX}/emul/linux/proc) && ${OPSYS} != "Linux"
+JACKD_PROCFS_PATH?=	${PREFIX}/emul/linux/proc
+.else
+JACKD_PROCFS_PATH?=	/proc
 .endif
 
 .if exists(/dev/shm) && ${OPSYS} == "Linux"
@@ -50,8 +61,15 @@ CONFIGURE_ARGS+=	--with-default-tmpdir=/dev/shm
 CONFIGURE_ARGS+=	--with-default-tmpdir=${JACKD_DEFAULT_TMPDIR:Q}
 .endif
 
-PLIST_VARS=		oss sunaudio
-
+PLIST_VARS=		coreaudio oss sunaudio
+###
+### XXX	This is untested.  Please file a PR and/or commit a fix should
+###	any problems arise.
+###
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--enable-coreaudio
+PLIST.coreaudio=	yes
+.endif
 ###
 ### XXX The sun driver is buggy on NetBSD right now.  I hope to remedy
 ###	this shortly.
@@ -74,18 +92,29 @@ CFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 CONFIGURE_ARGS+=	--disable-oss
 .endif
 
-
-SUBST_CLASSES+=	jacksrc
+SUBST_CLASSES+=		jacksrc
 SUBST_FILES.jacksrc=	libjack/unlock.c
 SUBST_MESSAGE.jacksrc=	Peforming substitutions in JACK sources.
 SUBST_STAGE.jacksrc=	pre-build
 SUBST_VARS.jacksrc=	PREFIX JACKD_PROCFS_PATH
 
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.jack
+PKG_SUPPORTED_OPTIONS=	simd
+PKG_SUGGESTED_OPTIONS=	simd
+
+.  include "../../mk/bsd.options.mk"
+
+.  if !empty(PKG_OPTIONS:Msimd)
+CONFIGURE_ARGS+=	--enable-simd
+.  else
+CONFIGURE_ARGS+=	--disable-simd
+.  endif
+.endif
+
 post-extract:
-	${RUN} \
-	    ${MKDIR} ${WRKSRC}/config/os/netbsd && \
-		${CP} ${FILESDIR}/atomicity.h \
-		    ${WRKSRC}/config/os/netbsd
+	${RUN} ${MKDIR} ${WRKSRC}/config/os/netbsd && \
+		${CP} ${FILESDIR}/atomicity.h ${WRKSRC}/config/os/netbsd
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
