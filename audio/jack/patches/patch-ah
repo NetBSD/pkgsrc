@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-ah,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
 Allow overriding the watchdog timeout.
 
---- jack/engine.h.orig	2008-07-27 08:50:29.000000000 -0400
+--- jack/engine.h.orig	2008-11-11 17:36:38.000000000 -0500
 +++ jack/engine.h
 @@ -51,8 +51,12 @@ typedef struct _jack_port_buffer_list {
      jack_port_buffer_info_t *info;	/* jack_buffer_info_t array */

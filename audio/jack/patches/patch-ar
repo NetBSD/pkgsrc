@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-ar,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
---- config/sysdeps/cycles.h.orig	2008-07-27 08:50:27.000000000 -0400
+--- config/sysdeps/cycles.h.orig	2008-11-11 17:36:35.000000000 -0500
 +++ config/sysdeps/cycles.h
 @@ -1,7 +1,11 @@
  #ifndef _jack_sysdep_cycles_h_

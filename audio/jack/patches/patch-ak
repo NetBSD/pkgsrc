@@ -1,19 +1,22 @@
-$NetBSD: patch-ak,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-ak,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
 Yuck.  At least let's attempt to make this somewhat sane.
 When I have the time and figure out the Right Thing(tm)
 to do, perhaps I'll rewrite some of the shm code.
 
---- libjack/unlock.c.orig	2008-07-27 08:50:23.000000000 -0400
+--- libjack/unlock.c.orig	2008-11-11 17:36:29.000000000 -0500
 +++ libjack/unlock.c
-@@ -48,6 +48,7 @@ static char* library_roots[] = {
- 	"/usr/X11R6/lib",
+@@ -44,8 +44,9 @@ static char* whitelist[] = {
+ static char* library_roots[] = {
+ 	"/lib",
+ 	"/usr/lib",
++	"@PREFIX@",	  /* pkgsrc prefix */
++	"@X11PREFIX@/lib",
+ 	"/usr/local/lib",
+-	"/usr/X11R6/lib",
  	"/opt/lib",       /* solaris-y */   
  	"/opt/local/lib", /* common on OS X */
-+	"@PREFIX@",	  /* pkgsrc prefix */
  	NULL
- };
- 
 @@ -63,7 +64,7 @@ cleanup_mlock ()
  	int whoknows;
  	int looks_like_library;

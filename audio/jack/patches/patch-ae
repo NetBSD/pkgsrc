@@ -1,17 +1,52 @@
-$NetBSD: patch-ae,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-ae,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
-I'm not quite sure what's going on here, but I don't think res
-should be a pointer (quells a warning, has no ill effects that
-I can detect).
+This is currently untested.  Please file a PR if there are any problems.
 
---- libjack/intclient.c.orig	2008-07-27 08:50:23.000000000 -0400
-+++ libjack/intclient.c
-@@ -167,7 +167,7 @@ jack_internal_client_load (jack_client_t
- {
- 	va_list ap;
-     va_start(ap, status);
--    jack_intclient_t* res = jack_internal_client_load_aux(client, client_name, options, status, ap);
-+    jack_intclient_t res = jack_internal_client_load_aux(client, client_name, options, status, ap);
-     va_end(ap);
-     return res;
- }
+--- tools/netsource.c.orig	2008-11-11 17:36:30.000000000 -0500
++++ tools/netsource.c
+@@ -215,10 +215,11 @@ process (jack_nframes_t nframes, void *a
+ 
+     /* ---------- Receive ---------- */
+     if (reply_port)
+-        size = netjack_recv (insockfd, (char *) packet_buf, rx_bufsize, MSG_DONTWAIT, mtu);
++        size = netjack_recv (insockfd, (char *) packet_buf, rx_bufsize, NULL, mtu);
+     else
+-        size = netjack_recv (outsockfd, (char *) packet_buf, rx_bufsize, MSG_DONTWAIT, mtu);
++        size = netjack_recv (outsockfd, (char *) packet_buf, rx_bufsize, NULL, mtu);
+     packet_header_ntoh (pkthdr);
++
+     /* Loop till we get the right packet at the right momment */
+     while (size == rx_bufsize && (framecnt - pkthdr->framecnt) > latency)
+     {
+@@ -226,9 +227,9 @@ process (jack_nframes_t nframes, void *a
+         //printf ("Frame %d  \tLate packet received with a latency of %d frames\n", framecnt, framecnt - pkthdr->framecnt);
+ 
+         if (reply_port)
+-            size = netjack_recv (insockfd, (char *) packet_buf, rx_bufsize, MSG_DONTWAIT, mtu);
++            size = netjack_recv (insockfd, (char *) packet_buf, rx_bufsize, NULL, mtu);
+         else
+-            size = netjack_recv (outsockfd, (char *) packet_buf, rx_bufsize, MSG_DONTWAIT, mtu);
++            size = netjack_recv (outsockfd, (char *) packet_buf, rx_bufsize, NULL, mtu);
+         packet_header_ntoh (pkthdr);
+     }
+ 
+@@ -376,6 +377,7 @@ main (int argc, char *argv[])
+     int peer_port = 3000;
+     jack_options_t options = JackNullOption;
+     jack_status_t status;
++    int ff;
+ 
+     /* Torben's famous state variables, aka "the reporting API" ! */
+     int statecopy_connected, statecopy_latency, statecopy_netxruns;
+@@ -481,6 +483,11 @@ main (int argc, char *argv[])
+         return 1;
+     }
+ 
++    fcntl(outsockfd, F_GETFL, &ff);
++    fcntl(outsockfd, F_SETFL, ff | O_NONBLOCK);
++    fcntl(insockfd, F_GETFL, &ff);
++    fcntl(insockfd, F_SETFL, ff | O_NONBLOCK);
++
+     /* Set up jack callbacks */
+     jack_set_process_callback (client, process, 0);
+     jack_set_sync_callback (client, sync_cb, 0);

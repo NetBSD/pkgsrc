@@ -1,6 +1,6 @@
-$NetBSD: patch-as,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-as,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
---- drivers/dummy/dummy_driver.c.orig	2008-07-27 08:50:34.000000000 -0400
+--- drivers/dummy/dummy_driver.c.orig	2008-11-11 17:36:45.000000000 -0500
 +++ drivers/dummy/dummy_driver.c
 @@ -109,6 +109,7 @@ dummy_driver_wait (dummy_driver_t *drive
  {
