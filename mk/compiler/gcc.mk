@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.94 2008/09/16 15:02:55 rillig Exp $
+# $NetBSD: gcc.mk,v 1.95 2008/11/16 17:01:53 ahoka Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -40,8 +40,8 @@ USE_NATIVE_GCC?=	no
 
 GCC_REQD+=	2.8.0
 
-# gcc2 doesn't support c99
-.if !empty(USE_LANGUAGES:Mc99)
+# gcc2 doesn't support c99 and amd64
+.if !empty(USE_LANGUAGES:Mc99) || ${MACHINE_ARCH} == "x86_64"
 GCC_REQD+=	3.0
 .endif
 
