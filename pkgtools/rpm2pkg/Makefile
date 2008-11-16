@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/05/25 20:49:39 tron Exp $
+# $NetBSD: Makefile,v 1.38 2008/11/16 10:25:34 tron Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	2
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Convert RPM archives to NetBSD packages
 
 CONFLICTS+=	suse-base<=6.4
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	YES
@@ -32,8 +34,8 @@ do-build:
 		${FILESDIR}/rpm2pkg.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${PREFIX}/sbin
-	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/rpm2pkg ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${FILESDIR}/rpm2pkg.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
