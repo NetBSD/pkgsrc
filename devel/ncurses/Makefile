@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2008/11/05 16:12:38 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2008/11/16 17:03:00 adrianp Exp $
 
 .include "Makefile.common"
 
@@ -25,6 +25,8 @@ SUBST_SED.ti+=		-e '/^screen.linux|/,/^$$/d'
 SUBST_SED.ti+=		-e '/^screen-w|/,/^$$/d'
 SUBST_SED.ti+=		-e '/^screen-16color/,/^$$/d'
 SUBST_SED.ti+=		-e '/^screen-256color/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen.mlterm/,/^$$/d'
+SUBST_SED.ti+=		-e '/^screen.rxvt/,/^$$/d'
 .endif
 
 post-configure:
