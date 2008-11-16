@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/31 11:51:49 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/16 23:27:19 he Exp $
 
-DISTNAME=	Config-Find-0.23
+DISTNAME=	Config-Find-0.24
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cf
 CATEGORIES=	devel perl5
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/config-inifiles/
+#HOMEPAGE=	http://search.cpan.org/dist/Config-Find/
 COMMENT=	Perl module for finding configuration files in the native OS fashion
 
 DEPENDS+=	p5-File-Which>=0.05:../../devel/p5-File-Which
@@ -17,6 +18,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Config/Find/.packlist
+
+post-extract:
+	cd ${WRKSRC} && chmod -x lib/Config/Find.pm lib/Config/Find/*.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
