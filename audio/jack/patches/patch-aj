@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-aj,v 1.2 2008/11/16 11:41:28 bjs Exp $
 
 Kill all of the overzealous optimization; if the user wants this,
 there is devel/cpuflags and mk.conf.
@@ -10,7 +10,7 @@ there is devel/cpuflags and mk.conf.
  _ACEOF
  
 -    COMMON_X86_OPT_FLAGS="-DREENTRANT -O3 -fomit-frame-pointer -ffast-math -funroll-loops"
-+    COMMON_X86_OPT_FLAGS="-fomit-frame-pointer -ffast-math -funroll-loops"
++    COMMON_X86_OPT_FLAGS="-D_REENTRANT -fomit-frame-pointer"
  
      if test x$with_cpu_target != x ; then
          JACK_OPT_CFLAGS="-march=$with_cpu_target"
