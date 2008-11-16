@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-aq,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
---- Makefile.in.orig	2008-07-27 09:01:05.000000000 -0400
+--- Makefile.in.orig	2008-11-11 17:43:08.000000000 -0500
 +++ Makefile.in
 @@ -233,7 +233,7 @@ MAINTAINERCLEANFILES = Makefile.in acloc
                         stamp-h.in config.log config.cache config.status
