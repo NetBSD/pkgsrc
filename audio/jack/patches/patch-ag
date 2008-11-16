@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2008/07/31 03:58:05 bjs Exp $
+$NetBSD: patch-ag,v 1.2 2008/11/16 11:22:55 bjs Exp $
 
---- jack.pc.in.orig	2008-07-27 08:50:34.000000000 -0400
+--- jack.pc.in.orig	2008-11-11 17:36:46.000000000 -0500
 +++ jack.pc.in
 @@ -6,5 +6,5 @@ includedir=@includedir@
  Name: jack
