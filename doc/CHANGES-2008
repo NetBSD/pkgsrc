@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3036 2008/11/16 11:53:09 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3037 2008/11/16 15:10:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5078,3 +5078,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed games/pysol successor games/pysolfc [snj 2008-11-16]
 	Updated graphics/gd to 2.0.35nb1 [dholland 2008-11-16]
 	Updated graphics/p5-GD to 2.35nb2 [dholland 2008-11-16]
+	Updated net/libpcap to 1.0.0nb2 [adrianp 2008-11-16]
