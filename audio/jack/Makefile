@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/16 11:22:55 bjs Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/16 11:55:19 bjs Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -43,7 +43,7 @@ JACKD_DEFAULT_TMPDIR?=	/tmp
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
-CFLAGS+=		-DHOST_HAS_BSD_POLL
+CFLAGS+=		-DJACK_HOST_HAS_BSD_POLL
 .endif
 ###
 ### XXX Is there a way to properly use the emulation framework
