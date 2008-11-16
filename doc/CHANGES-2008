@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3041 2008/11/16 19:17:15 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3042 2008/11/16 20:08:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4223,7 +4223,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/tokyotyrant to 1.1.5 [obache 2008-10-13]
 	Updated math/glpk to 4.32 [adam 2008-10-13]
 	Updated devel/glibmm to 2.18.0 [adam 2008-10-13]
-	Updated security/libtasn1 to 1.15 [adam 2008-10-13]
+	Updated security/libtasn1 to 1.5 [adam 2008-10-13]
 	Updated chat/loudmouth to 1.4.2 [adam 2008-10-13]
 	Updated math/R-CGIwithR to 0.72 [markd 2008-10-13]
 	Updated math/R-DAAG to 0.97 [markd 2008-10-13]
