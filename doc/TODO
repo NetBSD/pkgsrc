@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7697 2008/11/16 01:34:25 snj Exp $
+$NetBSD: TODO,v 1.7698 2008/11/16 07:23:51 snj Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ Suggested package updates
 	o py-yaml-3.06
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
-	o pysol-4.82
 	o python26-2.6.0
 	o qDecoder-8.0
 	o qbrew-0.3.9
