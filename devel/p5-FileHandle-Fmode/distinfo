@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/23 19:39:16 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/11/16 23:42:34 he Exp $
 
-SHA1 (FileHandle-Fmode-0.10.tar.gz) = 08e133187a3f39c772aa8b12bd0b84fcd1767523
-RMD160 (FileHandle-Fmode-0.10.tar.gz) = 4efcdd9a6af86a3ea5cc727882882525ee74aa5e
-Size (FileHandle-Fmode-0.10.tar.gz) = 5167 bytes
+SHA1 (FileHandle-Fmode-0.11.tar.gz) = 656377348c543736124bd478e26bfaa494e7cbce
+RMD160 (FileHandle-Fmode-0.11.tar.gz) = 3fcde7b51ef0cb100af407ea3ef635b51dffdc44
+Size (FileHandle-Fmode-0.11.tar.gz) = 5521 bytes
