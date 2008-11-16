@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3033 2008/11/16 07:17:09 snj Exp $
+$NetBSD: CHANGES-2008,v 1.3034 2008/11/16 07:23:51 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5075,3 +5075,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnutls to 2.6.2 [wiz 2008-11-15]
 	Updated x11/fltk to 1.1.9nb1 [dsainty 2008-11-16]
 	Added games/pysolfc version 1.1 [snj 2008-11-16]
+	Removed games/pysol [snj 2008-11-16]
