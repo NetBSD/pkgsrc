@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2008/11/10 19:03:15 adam Exp $
+# $NetBSD: Makefile,v 1.67 2008/11/16 07:13:36 dsainty Exp $
 
 DISTNAME=	fltk-1.1.9-source
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
