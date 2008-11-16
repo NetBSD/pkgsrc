@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/01/18 05:08:30 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2008/11/16 13:54:12 tron Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -15,6 +15,8 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/ssmtp/}
 MAINTAINER=	pkg@pop.707.to
 HOMEPAGE=	http://packages.debian.org/testing/mail/ssmtp.html
 COMMENT=	Extremely simple MTA to forward mail to a mail hub
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/.orig$//}
 USE_TOOLS+=		gmake
@@ -35,14 +37,18 @@ SUBST_SED.paths+=	-e 's,/etc/ssl/certs,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,/etc/ssmtp,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS+=	${EGDIR}
+
+MAKE_FLAGS+=		prefix=${DESTDIR}${PREFIX}
+MAKE_FLAGS+=		mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+
 post-extract:
 	@${RM} -rf ${WRKSRC}/RCS
 	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/ssmtp.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/revaliases ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/ssmtp.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/revaliases ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
