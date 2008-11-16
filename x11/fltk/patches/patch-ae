@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2008/11/10 19:03:15 adam Exp $
+$NetBSD: patch-ae,v 1.7 2008/11/16 07:13:37 dsainty Exp $
 
---- fluid/Makefile.orig	2008-11-10 17:29:24.000000000 +0100
-+++ fluid/Makefile
-@@ -57,7 +57,7 @@ all:	$(FLUID) fluid$(EXEEXT)
+--- fluid/Makefile.orig	2008-02-27 04:26:08.000000000 +1300
++++ fluid/Makefile	2008-11-16 19:22:46.000000000 +1300
+@@ -57,7 +57,7 @@
  fluid$(EXEEXT):		$(OBJECTS) ../lib/$(LIBNAME) ../lib/$(FLLIBNAME) \
  			../lib/$(IMGLIBNAME)
  	echo Linking $@...
@@ -11,3 +11,12 @@ $NetBSD: patch-ae,v 1.6 2008/11/10 19:03:15 adam Exp $
  	$(OSX_ONLY) $(INSTALL_BIN) fluid fluid.app/Contents/MacOS
  	$(POSTBUILD) $@ ../FL/mac.r
  
+@@ -81,7 +81,7 @@
+ install: all
+ 	echo "Installing FLUID in $(DESTDIR)$(bindir)..."
+ 	-$(INSTALL_DIR) $(DESTDIR)$(bindir)
+-	$(INSTALL_BIN) $(FLUID) $(DESTDIR)$(bindir)/fluid$(EXEEXT)
++	${LIBTOOL} --mode=install $(INSTALL_BIN) $(FLUID) $(DESTDIR)$(bindir)/fluid$(EXEEXT)
+ 
+ install-linux:
+ 	-$(INSTALL_DIR) $(DESTDIR)/usr/share/applications
