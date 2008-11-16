@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.37 2008/11/15 16:55:53 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.38 2008/11/16 10:08:20 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -107,3 +107,10 @@ Pullup ticket #2590 - requested by adrianp
 bugzilla: security update
 Pullup ticket #2591 - requested by adrianp
 bugzilla3: security update
+pullup ticket #2587 - requested by tron
+imap-uw: shared version and package version bumps
+imap-uw-utils: bump package revision  
+mailsync: bump package revision
+php-imap: bump package revision
+pine: bump package revision
+prayer: bump package revision
