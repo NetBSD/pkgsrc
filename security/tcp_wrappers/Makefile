@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/10/16 23:49:02 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2008/11/16 13:57:02 tron Exp $
 
 DISTNAME=	tcp_wrappers_7.6-ipv6.1
 PKGNAME=	tcp_wrappers-7.6.1
@@ -11,8 +11,9 @@ HOMEPAGE=	ftp://ftp.porcupine.org/pub/security/index.html
 COMMENT=	Monitor and filter incoming requests for network services
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=	yes
+USE_LIBTOOL=		yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tcp_wrappers
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -54,20 +55,22 @@ post-build:
 			$$file.BAK > $$file;				\
 	done
 
+DOCDIR=			${PREFIX}/share/doc/tcp_wrappers
+INSTALLATION_DIRS+=	${DOCDIR}
+
 do-install:
 	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
-		${INSTALL_LIB} libwrap.la ${PREFIX}/lib
+		${INSTALL_LIB} libwrap.la ${DESTDIR}${PREFIX}/lib
 	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} \
-		tcpdmatch try-from safe_finger tcpdchk ${PREFIX}/bin
-	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${PREFIX}/include
+		tcpdmatch try-from safe_finger tcpdchk ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}; ${INSTALL_DATA} tcpd.h ${DESTDIR}${PREFIX}/include
 	cd ${WRKSRC}; ${LIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} tcpd ${PREFIX}/libexec
-	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${PREFIX}/${PKGMANDIR}/man3
-	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${PREFIX}/${PKGMANDIR}/man5
-	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tcp_wrappers
+		${INSTALL_PROGRAM} tcpd ${DESTDIR}${PREFIX}/libexec
+	cd ${WRKSRC}; ${INSTALL_DATA} *.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	cd ${WRKSRC}; ${INSTALL_DATA} *.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	cd ${WRKSRC}; ${INSTALL_DATA} *.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}; ${INSTALL_DATA} README README.NIS README.ipv6 \
-		${PREFIX}/share/doc/tcp_wrappers
+		${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
