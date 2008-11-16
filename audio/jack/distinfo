@@ -1,22 +1,21 @@
-$NetBSD: distinfo,v 1.5 2008/08/09 10:33:16 bjs Exp $
+$NetBSD: distinfo,v 1.6 2008/11/16 11:22:55 bjs Exp $
 
-SHA1 (jack-audio-connection-kit-0.112.1.tar.bz2) = 9b0d5e33098873d92dcfac82bdf5cc4ec9821c91
-RMD160 (jack-audio-connection-kit-0.112.1.tar.bz2) = b7fe0d94314a298031dbb57ceefbbfc917ef4a13
-Size (jack-audio-connection-kit-0.112.1.tar.bz2) = 603111 bytes
-SHA1 (patch-aa) = 56b3efc83cd989670bdbdcaa45c72ed3b92ea731
-SHA1 (patch-ab) = 7733bbf2c406f7fd327de96368ed6c6af4f919ea
-SHA1 (patch-ac) = f4e5a43544f07118acb26aac3f402566ab6193ee
-SHA1 (patch-ad) = 7323270fdf527836bd5ceda4da7f6a4997b52fc5
-SHA1 (patch-ae) = ca18877262357a3e0d503b171fe42708b59ecec6
-SHA1 (patch-af) = 37d0895a253caed41332f4fb17e90677dfe8055f
-SHA1 (patch-ag) = 04d4ad14874c11dbd3d7c0cb2cf488c5bd6da583
-SHA1 (patch-ah) = ef3f960cb95ac13f3227d918be0b80acd5f90d48
-SHA1 (patch-ai) = 49a2d37005252714cad85609765cb1a57c8f23de
-SHA1 (patch-aj) = 2e3c4255c0400bf3999ee67ef116cf10beb8931e
-SHA1 (patch-ak) = 2309246e48a6d616a481f3bc2dda8e4644ca4adc
-SHA1 (patch-am) = 3626473f43d8169be5014b64071dc8c9c3f213c9
-SHA1 (patch-ao) = 8073ed54210ff5a75696e6b677e2eb3e48078d3d
-SHA1 (patch-ap) = 0d84a4237948573635ceb02bf70ca1568ffb423d
-SHA1 (patch-aq) = a352510f40f1fdec31af3fab3d4c034b5f115a4a
-SHA1 (patch-ar) = 128c12fcd98decd7fc626e5bf24e6ab6f4e55c38
-SHA1 (patch-as) = 1a5f7ca7cc8488a8eefaa306bd60efb2c415cce8
+SHA1 (jack-audio-connection-kit-0.115.1.tar.bz2) = 13c07dd4c9bc53475084f8e7a9c5bd9791f76838
+RMD160 (jack-audio-connection-kit-0.115.1.tar.bz2) = fa4e0eace1a21cdfb29b2fe32b38a0c12b98434a
+Size (jack-audio-connection-kit-0.115.1.tar.bz2) = 606162 bytes
+SHA1 (patch-aa) = f2346262d7590491f005af1c450f4436ec60c58e
+SHA1 (patch-ab) = 8531e1af0c3781a238d3793bdd58577ed598b67a
+SHA1 (patch-ac) = b7d6a3bdb890afa99a1849a4db694df509c9e19a
+SHA1 (patch-ad) = 4e37eaee3bd8674e20d116be80174b99dd9d6e20
+SHA1 (patch-ae) = 6e7cad554c6db5b39f14170246f29cc4a2923e3a
+SHA1 (patch-af) = 2a40f3a51a088e62352d7cdcc27eb41f3064ae7e
+SHA1 (patch-ag) = 2d64e9b454ed813308b58f888045f955d8df9d58
+SHA1 (patch-ah) = cbc69bad1548f4dc67a4fa4d81e2b6448964321a
+SHA1 (patch-ai) = 54dcc152ecf202e99eba71cad394a9a8c431d9e4
+SHA1 (patch-ak) = 8e6d8f92d496991f3de02eeb2fffc89c865a3f63
+SHA1 (patch-am) = 1453ff3a3e49359e281fcad9a4dbd4096a0b2356
+SHA1 (patch-ao) = 60930e5ecd408ebccbca8342083189b7d2d06a1b
+SHA1 (patch-ap) = 60738eae086bdab7aa1986889da95621353f7aa6
+SHA1 (patch-aq) = 212441bb56a4cf33a213bb299f42e7dbcbc33274
+SHA1 (patch-ar) = 892dcd268eef033a9dcb2251560fc48662b54916
+SHA1 (patch-as) = 46c609026d53fdebf1d46263d8f196cd8ecbac77
