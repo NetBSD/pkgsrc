@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2005/12/05 20:49:53 rillig Exp $
+$NetBSD: patch-aa,v 1.6 2008/11/16 19:16:49 adrianp Exp $
 
---- icbirc.c.orig	Thu Nov 18 16:14:28 2004
+--- icbirc.c.orig	2004-11-18 21:14:28.000000000 +0000
 +++ icbirc.c
-@@ -35,6 +35,7 @@
+@@ -35,6 +35,7 @@ static const char rcsid[] = "$Id: icbirc
  #include <sys/types.h>
  #include <sys/socket.h>
  #include <sys/stat.h>
@@ -10,3 +10,57 @@ $NetBSD: patch-aa,v 1.5 2005/12/05 20:49:53 rillig Exp $
  #include <netinet/in.h>
  #include <arpa/inet.h>
  #include <ctype.h>
+@@ -51,18 +52,42 @@ static const char rcsid[] = "$Id: icbirc
+ #include "icb.h"
+ #include "irc.h"
+ 
++#ifdef NEED_PROGNAME
++char *__progname;
++#else
++extern char *__progname;
++#endif
++
+ int		sync_write(int, const char *, int);
+ static void	usage(void);
+ static void	handle_client(int);
++char		*get_progname(char *);
+ 
+ int terminate_client;
+ static struct sockaddr_in sa_connect;
+ 
++char 
++*get_progname(char *argv0)
++{
++#ifndef NEED_PROGNAME
++	return __progname;
++#else
++	char *p;
++
++	if (argv0 == NULL)
++		return "unknown";	/* XXX */
++	p = strrchr(argv0, '/');
++	if (p == NULL)
++		p = argv0;
++	else
++		p++;
++	return p;
++#endif
++}
++
+ static void
+ usage(void)
+ {
+-	extern char *__progname;
+-
+ 	fprintf(stderr, "usage: %s [-d] [-l address] [-p port] "
+ 	    "-s server [-P port]\n", __progname);
+ 	exit(1);
+@@ -80,6 +105,8 @@ main(int argc, char *argv[])
+ 	socklen_t len;
+ 	int val;
+ 
++	__progname = get_progname(argv[0]);
++
+ 	while ((ch = getopt(argc, argv, "dl:p:s:P:")) != -1) {
+ 		switch (ch) {
+ 		case 'd':
