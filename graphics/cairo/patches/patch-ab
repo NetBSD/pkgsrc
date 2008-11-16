@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.10 2008/10/16 10:55:09 drochner Exp $
+$NetBSD: patch-ab,v 1.11 2008/11/16 17:20:14 wiz Exp $
 
---- test/Makefile.in.orig	2008-09-26 00:57:34.000000000 +0200
+--- test/Makefile.in.orig	2008-11-14 10:12:09.000000000 +0000
 +++ test/Makefile.in
-@@ -62,7 +62,7 @@ check_PROGRAMS = imagediff$(EXEEXT) png-
- @CAIRO_HAS_XLIB_SURFACE_TRUE@	xlib-surface-source$(EXEEXT)
- @CAIRO_HAS_XLIB_XRENDER_SURFACE_TRUE@am__append_8 = get-xrender-format$(EXEEXT)
- @CAIRO_HAS_MULTI_PAGE_SURFACES_TRUE@am__append_9 = multi-page$(EXEEXT)
+@@ -72,7 +72,7 @@ XFAIL_TESTS = alpha-similar$(EXEEXT) big
+ 	surface-pattern-big-scale-down$(EXEEXT) \
+ 	surface-pattern-scale-down$(EXEEXT) \
+ 	surface-pattern-scale-up$(EXEEXT)
 -@HAVE_PTHREAD_TRUE@am__append_10 = -lpthread
 +@HAVE_PTHREAD_TRUE@am__append_10 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  @BUILD_ANY2PPM_TRUE@am__append_11 = any2ppm
