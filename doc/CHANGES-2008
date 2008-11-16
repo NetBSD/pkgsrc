@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3038 2008/11/16 17:03:21 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3039 2008/11/16 17:20:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5080,3 +5080,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-GD to 2.35nb2 [dholland 2008-11-16]
 	Updated net/libpcap to 1.0.0nb2 [adrianp 2008-11-16]
 	Updated devel/ncurses to 5.7nb1 [adrianp 2008-11-16]
+	Updated graphics/cairo to 1.8.4 [wiz 2008-11-16]
