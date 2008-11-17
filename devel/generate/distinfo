@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2008/05/20 18:53:16 darcy Exp $
+$NetBSD: distinfo,v 1.13 2008/11/17 21:20:45 darcy Exp $
 
-SHA1 (generate-2.5.tgz) = 97a16994c69c4561c746d79ee60a24e7beecb4ef
-RMD160 (generate-2.5.tgz) = c5221eb291508183424f4f58787fe2e5c0644649
-Size (generate-2.5.tgz) = 28932 bytes
+SHA1 (generate-2.6.tgz) = ab97858005c03531d8d8cc57328ffcf4b8e42aec
+RMD160 (generate-2.6.tgz) = e996dd4dbf553ed3467d01907686d2cc09936db2
+Size (generate-2.6.tgz) = 29045 bytes
