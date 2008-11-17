@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/11 14:18:59 he Exp $
+$NetBSD: distinfo,v 1.2 2008/11/17 22:22:07 he Exp $
 
-SHA1 (Test-SubCalls-1.07.tar.gz) = a3f7bb0509ec14e3e2cc762323d7fbcb9f5bee24
-RMD160 (Test-SubCalls-1.07.tar.gz) = c9793ac77cc9a138ff04fdd9f60f44120a9cb50b
-Size (Test-SubCalls-1.07.tar.gz) = 22006 bytes
+SHA1 (Test-SubCalls-1.08.tar.gz) = c7b948cc1934000d5cf7ffe0171393e12686606e
+RMD160 (Test-SubCalls-1.08.tar.gz) = 0106e73ac959d0147f9a8aad9bb7be7cd01c1146
+Size (Test-SubCalls-1.08.tar.gz) = 23382 bytes
