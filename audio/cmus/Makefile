@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/07/25 14:03:30 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/17 13:30:34 ahoka Exp $
 #
 
 DISTNAME=		cmus-2.2.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://mirror.greaterscope.net/cmus/
 EXTRACT_SUFX=		.tar.bz2
