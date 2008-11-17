@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2008/10/19 19:17:59 he Exp $
+# $NetBSD: Makefile,v 1.36 2008/11/17 19:54:26 he Exp $
 #
 
-DISTNAME=	SDL_perl-1.19.2
-PKGNAME=	p5-SDL-1.19.2
-PKGREVISION=	18
+DISTNAME=	SDL_Perl-2.1.2
+PKGNAME=	p5-SDL-2.1.2
 CATEGORIES=	devel perl5
-MASTER_SITES=	ftp://sdlperl.org/SDL_perl/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DG/DGOEHRIG/}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -15,7 +14,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sdlperl.org/
 COMMENT=	Perl module for SDL
 
-PERL5_PACKLIST=		auto/SDL_perl/.packlist
+PERL5_MODULE_TYPE=	Module::Build
+
+PERL5_PACKLIST=		auto/SDL/.packlist
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
