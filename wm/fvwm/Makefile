@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/04/10 21:30:44 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/17 11:52:51 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 PKGREVISION=	2
@@ -22,11 +22,13 @@ USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES
 USE_TOOLS+=		perl:run tar
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=		FVWM_VER=${FVWM_VER:Q}
 
 INSTALLATION_DIRS+=	lib/X11/fvwm2
 INSTALLATION_DIRS+=	lib/X11/fvwm2/pixmaps
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 EVAL_PREFIX+=		XPMDIR=xpm
 CONFIGURE_ARGS+=	--without-gnome
@@ -45,21 +47,21 @@ post-extract:
 post-install:
 	${INSTALL_DATA} \
 		${WRKDIR:Q}/icons/fvwm_icons/*.xpm \
-		${PREFIX:Q}/lib/X11/fvwm2/pixmaps
+		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/pixmaps
 	${INSTALL_DATA} \
 		${WRKSRC:Q}/sample.fvwmrc/decor_examples \
 		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc-sample-* \
-		${PREFIX:Q}/lib/X11/fvwm2
+		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2
 	${INSTALL_DATA} \
 		${WRKSRC:Q}/sample.fvwmrc/system.fvwm2rc \
-		${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example
+		${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example
 	${INSTALL_SCRIPT} \
 		${WRKSRC:Q}/utils/fvwmrc_convert \
-		${PREFIX:Q}/bin/fvwmrc_convert
-	if [ ! -f ${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ]; then \
+		${DESTDIR}${PREFIX:Q}/bin/fvwmrc_convert
+	if [ ! -f ${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ]; then \
 		${INSTALL_DATA} \
-			${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example \
-			${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ; \
+			${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc.example \
+			${DESTDIR}${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
 
 .include "options.mk"
