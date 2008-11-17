@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.334 2008/11/07 20:56:11 abs Exp $
+# $NetBSD: Makefile,v 1.335 2008/11/17 20:36:29 he Exp $
 #
 
 COMMENT=	Security tools
@@ -137,6 +137,7 @@ SUBDIR+=	otpCalc
 SUBDIR+=	p0f
 SUBDIR+=	p5-Authen-CAS-Client
 SUBDIR+=	p5-Authen-PAM
+SUBDIR+=	p5-Authen-PluggableCaptcha
 SUBDIR+=	p5-Authen-SASL
 SUBDIR+=	p5-Authen-SASL-Cyrus
 SUBDIR+=	p5-Crypt-Blowfish
