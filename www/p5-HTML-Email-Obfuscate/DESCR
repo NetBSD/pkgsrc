@@ -1,0 +1,13 @@
+"Don't put emails directly on the page, they will be scraped"
+
+Stuff that, I'm sick of looking at "bob at smith dot com". Why can't
+we just write emails in a way that looks normal to people, but is
+very, very difficult to scrape off. Most email scrapers only use
+very very simple parsing methods. And it isn't as if it is hard to
+just do
+
+  # Before we search for email addresses...
+  $page =~ s/\s+at\s+/@/g;
+  $page =~ s/\s+dot\s+/./g;
+
+This is an arms war dammit, and I want nukes!
