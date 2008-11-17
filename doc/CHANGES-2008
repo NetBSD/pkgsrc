@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3046 2008/11/17 08:05:28 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.3047 2008/11/17 11:30:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5106,3 +5106,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-PHP-Serialization to 0.29 [he 2008-11-17]
 	Updated devel/p5-Params-Util to 0.35 [he 2008-11-17]
 	Updated devel/p5-Perl-Critic to 1.092 [he 2008-11-17]
+	Updated x11/libXi to 1.1.4 [wiz 2008-11-17]
