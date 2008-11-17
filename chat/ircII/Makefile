@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2008/11/10 19:25:27 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2008/11/17 08:09:19 dsainty Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
 CATEGORIES=		chat
-MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/
+MASTER_SITES=		ftp://ircii.warped.com/pub/ircII/ \
+			http://ircii.warped.com/pub/ircII/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
