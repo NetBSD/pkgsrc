@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/07/20 22:21:45 he Exp $
+$NetBSD: distinfo,v 1.4 2008/11/17 02:58:42 he Exp $
 
-SHA1 (IO-Multiplex-1.09.tar.gz) = 2fcd0cffad924a0d5eac60d3e37eae7a7e052093
-RMD160 (IO-Multiplex-1.09.tar.gz) = 8e8e98ca5772deeef2b013f8f3fce88d0a1601b3
-Size (IO-Multiplex-1.09.tar.gz) = 14666 bytes
+SHA1 (IO-Multiplex-1.10.tar.gz) = 650196dee68bbd20abade991d5c48c3ffee0ed89
+RMD160 (IO-Multiplex-1.10.tar.gz) = f53fd2d1866dcc29132d38596f49d09a92c32fce
+Size (IO-Multiplex-1.10.tar.gz) = 15222 bytes
