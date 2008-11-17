@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/28 10:16:28 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2.8.1 2008/11/17 09:57:55 rtr Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -1109,6 +1109,7 @@ include/${MOZILLA}/necko/nsIProtocolProxyCallback.h
 include/${MOZILLA}/necko/nsIProxiedProtocolHandler.h
 include/${MOZILLA}/necko/nsIProxyAutoConfig.h
 include/${MOZILLA}/necko/nsIProxyInfo.h
+include/${MOZILLA}/necko/nsITraceableChannel.h
 include/${MOZILLA}/necko/nsITransport.h
 include/${MOZILLA}/necko/nsISocketTransport.h
 include/${MOZILLA}/necko/nsISocketTransportService.h
