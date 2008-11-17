@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1 2008/11/17 19:54:26 he Exp $
+
+This is from CPAN bug #19155, adapting to the new placement
+of the C source files.
+
+--- src/SFont.xs.orig	2004-09-24 00:36:56.000000000 +0000
++++ src/SFont.xs
+@@ -23,8 +23,8 @@
+ #define HAVE_TLS_CONTEXT
+ #endif
+ 
+-#include "../defines.h"
+-#include "../SFont.h"
++#include "../src/defines.h"
++#include "../src/SFont.h"
+ 
+ #ifdef HAVE_SDL_IMAGE
+ #include <SDL_image.h>

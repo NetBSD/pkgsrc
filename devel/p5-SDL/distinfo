@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.3 2006/06/21 21:53:30 joerg Exp $
+$NetBSD: distinfo,v 1.4 2008/11/17 19:54:26 he Exp $
 
-SHA1 (SDL_perl-1.19.2.tar.gz) = 3c36b46bc533f62052c045724e3b98511fd825e1
-RMD160 (SDL_perl-1.19.2.tar.gz) = 9a657ade1b298e06ea4fa63f9a6dfb761b204165
-Size (SDL_perl-1.19.2.tar.gz) = 680136 bytes
-SHA1 (patch-aa) = ab13f9909865f3af41e54613839570525b908084
+SHA1 (SDL_Perl-2.1.2.tar.gz) = 1f2ad20ce3657073a902ddfacd1a388ff698d3db
+RMD160 (SDL_Perl-2.1.2.tar.gz) = 02ae15981e90869eba60aea68e286ba49320af55
+Size (SDL_Perl-2.1.2.tar.gz) = 783084 bytes
+SHA1 (patch-ab) = bc66b0b79ba24f681722a7833b10a88a53b8cfc3
+SHA1 (patch-ac) = d1a20f4bcb6f03d524ad4f7887cfc1edf4046635
+SHA1 (patch-ad) = a2122180e1da72c755466aa51f75bbba8607fa9e
+SHA1 (patch-ae) = 4b8c70e7ac886a7b6e6dac2bb4a1b3580d0749e3
+SHA1 (patch-af) = 755e7d4954b6ad4ace6b63c44bb3764ce116a4b6

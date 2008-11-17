@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2008/11/17 19:54:26 he Exp $
+
+This is from CPAN bug #19155, adapting to the new location
+of the C source file.
+
+--- src/SDL.xs.orig	2004-09-24 00:36:56.000000000 +0000
++++ src/SDL.xs
+@@ -69,7 +69,7 @@ static int sdl_perl_use_smpeg_audio = 0;
+ #define HAVE_TLS_CONTEXT
+ #endif
+ 
+-#include "defines.h"
++#include "src/defines.h"
+ 
+ Uint32 
+ sdl_perl_timer_callback ( Uint32 interval, void* param )
