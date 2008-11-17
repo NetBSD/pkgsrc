@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1 2008/11/17 19:54:26 he Exp $
+
+Ensure that the xs modules are installed in the right path.
+This fix is from CPAN bug #19155.
+The tweak to the module_name is from the diff in CPAN bug #32744.
+
+--- Build.PL.orig	2004-09-24 00:36:56.000000000 +0000
++++ Build.PL
+@@ -34,7 +34,7 @@ my %subsystems =
+ 	SDL => {
+ 		file      => {
+ 			from  => 'src/SDL.xs',
+-			to    => 'src/SDL_perl.xs',
++			to    => './SDL_perl.xs',
+ 		},
+ 		libraries => [qw( SDL SDL_image SDL_mixer SDL_net SDL_ttf SDL_gfx
+ 		                  png jpeg smpeg )],
+@@ -42,14 +42,14 @@ my %subsystems =
+ 	OpenGL => {
+ 		file      => {
+ 			from => 'src/OpenGL.xs',
+-			to   => 'src/SDL/OpenGL.xs', 
++			to   => 'SDL/OpenGL.xs', 
+ 		},
+ 		libraries => [qw( SDL GL GLU )],
+ 	},
+ 	SFont => {
+ 		file	=> {
+ 			from => 'src/SFont.xs',
+-			to   =>	'src/SDL/SFont.xs',
++			to   =>	'SDL/SFont.xs',
+ 		},
+ 		libraries => [qw( SDL SDL_image )],
+ 	},	
+@@ -122,6 +122,7 @@ my %xs = map { $subsystems{$_}{file}{fro
+ 	     keys %subsystems;
+ 
+ my $build   = SDL::Build->new(
++	module_name	     => 'SDL',
+ 	dist_name            => 'SDL_Perl', 
+ 	license		     => 'lgpl',
+ 	dist_version_from    => 'lib/SDL.pm',
