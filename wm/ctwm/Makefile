@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/17 08:27:11 obache Exp $
+# $NetBSD: Makefile,v 1.22 2008/11/17 10:27:57 obache Exp $
 #
 
 DISTNAME=	ctwm-3.8a
@@ -10,6 +10,8 @@ HOMEPAGE=	http://ctwm.free.lp.se/
 COMMENT=	Window manager with support for multiple virtual screens and Gnome 1.x
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	YES
 
 .include "../../mk/bsd.prefs.mk"
@@ -31,9 +33,9 @@ pre-configure:
 EXAMPLEDIR=${PREFIX}/share/examples/ctwm
 
 pre-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
 .for f in example.ctwmrc levitte.ctwmrc peterc.ctwmrc system.ctwmrc system.ctwmrc.gnome
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EXAMPLEDIR}
 .endfor
 
 .include "../../graphics/jpeg/buildlink3.mk"
