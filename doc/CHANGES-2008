@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3045 2008/11/17 05:05:58 he Exp $
+$NetBSD: CHANGES-2008,v 1.3046 2008/11/17 08:05:28 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5101,7 +5101,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Versions-Report to 1.06 [he 2008-11-17]
 	Updated devel/p5-MooseX-Types to 0.07 [he 2008-11-17]
 	Updated devel/p5-Object-InsideOut to 3.52 [he 2008-11-17]
-	Updated devel/p5-Par-Dist to 0.40 [he 2008-11-17]
+	Updated devel/p5-PAR-Dist to 0.40 [he 2008-11-17]
 	Updated devel/p5-PAR to 0.983 [he 2008-11-17]
 	Updated devel/p5-PHP-Serialization to 0.29 [he 2008-11-17]
 	Updated devel/p5-Params-Util to 0.35 [he 2008-11-17]
