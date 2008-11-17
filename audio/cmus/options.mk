@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/07/16 14:04:29 ahoka Exp $
+# $NetBSD: options.mk,v 1.6 2008/11/17 13:30:34 ahoka Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts ao mpcdec faad wavpack #alsa
@@ -129,8 +129,13 @@ CONFIGURE_ARGS+=	CONFIG_MP4=n
 ###
 ### Wide curses support; otherwise, default to using narrow curses.
 ###
-.if !empty(PKG_OPTIONS:Mwide-curses)
-.  include "../../devel/ncursesw/buildlink3.mk"
+# cmus works fine with a 5.0+ NetBSD curses
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9].*-*)
+.    include "../../mk/curses.buildlink3.mk"
 .else
-.  include "../../devel/ncurses/buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mwide-curses)
+.    include "../../devel/ncursesw/buildlink3.mk"
+.  else
+.    include "../../devel/ncurses/buildlink3.mk"
+.  endif
 .endif
