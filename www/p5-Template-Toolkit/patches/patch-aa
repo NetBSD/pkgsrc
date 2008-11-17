@@ -1,0 +1,591 @@
+--- Makefile.PL.orig	2008-08-08 12:41:15.000000000 +0200
++++ Makefile.PL	2008-09-21 16:17:36.000000000 +0200
+@@ -15,10 +15,9 @@
+ $| = 1;
+ select STDOUT;
+ 
+-use vars qw( $TT_VERSION $TT_PREFIX $TT_IMAGES 
+-             $TT_BUILD_DOCS $TT_SPLASH_DOCS $TT_EXAMPLES $TT_EXTRAS
++use vars qw( $TT_VERSION $TT_PREFIX 
+              $TT_XS_ENABLE $TT_XS_DEFAULT
+-             $TT_SPLASH_THEME $TT_QUIET $TT_ACCEPT $TT_YES );
++             $TT_QUIET $TT_ACCEPT $TT_YES );
+ 
+ # check O/S to set sensible defaults
+ 
+@@ -65,7 +64,7 @@
+ 
+   TT_XS_ENABLE   Enable XS Stash         (y)
+   TT_XS_DEFAULT  Use XS Stash by default (y)
+-  TT_QUIET       no messages	         (n)
++  TT_QUIET       no messages             (n)
+   TT_ACCEPT      accept defaults         (n)
+ 
+ By default, the Makefile.PL runs in interactive mode, 
+@@ -83,26 +82,12 @@
+ # in this script, here defaulted to sensible values
+ 
+ $TT_VERSION       = $Template::VERSION;
+-$TT_PREFIX        = '';     # $PREFIX;
+-$TT_IMAGES        = $IMAGES;
+-$TT_BUILD_DOCS    = 'n';
+-$TT_SPLASH_DOCS   = 'n';
+-$TT_EXAMPLES      = 'n';
+-$TT_EXTRAS        = 'n';
+-$TT_SPLASH_THEME  = 'default';
+ $TT_XS_ENABLE     = 'y';
+ $TT_XS_DEFAULT    = 'y';
+ $TT_QUIET         = 'n';
+ $TT_ACCEPT        = 'n';
+ 
+-my $TT_SPLASH_FG  = '';
+-my $TT_SPLASH_BG  = '';
+-my $TT_SPLASH_FT  = '';
+-my $TT_SPLASH_BT  = '';
+-
+ my $DEFAULTS_FILE   = '.defaults.cfg';
+-my $TT_DOCS_CFG     = catfile('docs','ttree.cfg');
+-my $TT_EXAMPLE_CFG  = catfile('examples','ttree.cfg');
+ my $DEFAULTS = '';
+ 
+ if (-f $DEFAULTS_FILE) {
+@@ -110,13 +95,6 @@
+     $DEFAULTS = " read from '$DEFAULTS_FILE'";
+ }
+ 
+-$TT_PREFIX        = $ttconfig{ TT_PREFIX     } if $ttconfig{ TT_PREFIX     };
+-$TT_IMAGES        = $ttconfig{ TT_IMAGES     } if $ttconfig{ TT_IMAGES     };
+-$TT_SPLASH_THEME  = $ttconfig{ TT_THEME      } if $ttconfig{ TT_THEME      };
+-$TT_BUILD_DOCS    = $ttconfig{ TT_DOCS       } if defined $ttconfig{ TT_DOCS       };
+-$TT_SPLASH_DOCS   = $ttconfig{ TT_SPLASH     } if defined $ttconfig{ TT_SPLASH     };
+-$TT_EXAMPLES      = $ttconfig{ TT_EXAMPLES   } if defined $ttconfig{ TT_EXAMPLES   };
+-$TT_EXTRAS        = $ttconfig{ TT_EXTRAS     } if defined $ttconfig{ TT_EXTRAS     };
+ $TT_XS_ENABLE     = $ttconfig{ TT_XS_ENABLE  } if defined $ttconfig{ TT_XS_ENABLE  };
+ $TT_XS_DEFAULT    = $ttconfig{ TT_XS_DEFAULT } if defined $ttconfig{ TT_XS_DEFAULT };
+ $TT_QUIET         = $ttconfig{ TT_QUIET      } if defined $ttconfig{ TT_QUIET      };
+@@ -129,25 +107,13 @@
+     $TT_ACCEPT = $ENV{PERL_MM_USE_DEFAULT} ? 'y' : 'n';
+ }
+ 
+-foreach ($TT_BUILD_DOCS, $TT_SPLASH_DOCS, $TT_EXAMPLES, 
+-	 $TT_EXTRAS, $TT_XS_ENABLE, $TT_XS_DEFAULT ) {
++foreach ($TT_XS_ENABLE, $TT_XS_DEFAULT ) {
+     $_ = 'n' if ! $_;
+ }
+ $TT_ACCEPT = 0 if $TT_ACCEPT eq 'n';
+ $TT_QUIET  = 0 if $TT_QUIET eq 'n';
+ $TT_QUIET  = 0 unless $TT_ACCEPT;
+ 
+-my $SPLASH_STYLES = {
+-    default => [ 'lilac',  'mauve'   ],
+-    aqua    => [ 'aqua',   'marine'  ],
+-    grey    => [ 'grey75', 'grey50'  ],
+-    blue    => [ 'grey75', 'blue75'  ],
+-    red     => [ 'grey75', 'red75'   ],
+-    green   => [ 'grey75', 'green75' ],
+-    leon    => [ 'red75',  'orange', 'white', 'black' ],
+-};
+-
+-
+ # define version numbers of required modules
+ my $TT_APPCONFIG_VERSION = '1.56';
+ my $TT_FILE_SPEC_VERSION = '0.8';
+@@ -160,11 +126,6 @@
+ version_check();
+ mandatory_modules();
+ optional_stash_xs();
+-#optional_extras();
+-#splash_images();
+-#html_docs();
+-#html_docstyle();
+-#html_examples();
+ write_defaults();
+ 
+ print "\n";
+@@ -174,55 +135,11 @@
+ # build options and write Makefile
+ #------------------------------------------------------------------------
+ 
+-package MY;
+-
+-sub postamble {
+-    return '' unless $main::TT_PREFIX;
+-    my $amble =<<'EOF';
+-tt2_install ::
+-	@$(PERL) bin/tt2inst -v "$(TT_PREFIX)"
+-
+-tt2_splash ::
+-	@$(PERL) -I$(INST_LIB) -I$(INST_ARCHLIB) bin/gifsplash -v -i "$(TT_PREFIX)"
+-
+-EOF
+-    $amble .=<<EOF if $main::TT_BUILD_DOCS;
+-tt2_html_docs ::
+-	\@\$(PERL) -I\$(INST_LIB) -I\$(INST_ARCHLIB) bin/ttree -v -f "\$(TT_PREFIX)/$TT_DOCS_CFG"
+-
+-EOF
+-    $amble .=<<EOF if $main::TT_EXAMPLES;
+-tt2_examples ::
+-	\@\$(PERL) -I\$(INST_LIB) -I\$(INST_ARCHLIB) bin/ttree -v -f "\$(TT_PREFIX)/$TT_EXAMPLE_CFG"
+-
+-EOF
+-    return $amble;
+-}
+-
+-sub install {
+-    my $class = shift;
+-    my $basic = $class->SUPER::install(@_);
+-    my $add   = 'tt2_install tt2_splash';
+-    $add .= ' tt2_html_docs' if $main::TT_BUILD_DOCS;
+-    $add .= ' tt2_examples' if $main::TT_EXAMPLES;
+-    $basic =~ s/^(install\s+::\s+.*)$/$1 $add/m
+-	if $main::TT_PREFIX;
+-    $basic;
+-}
+-
+-sub constants {
+-    my $class = shift;
+-    my $basic = $class->SUPER::constants(@_);
+-    $basic = "TT_PREFIX = $main::TT_PREFIX\n$basic"
+-	if $main::TT_PREFIX;
+-    $basic;
+-}
+-
+ package main;
+     
+ my %opts = (
+     %config,
+-    'NAME'	       => 'Template',
++    'NAME'             => 'Template',
+     'DISTNAME'     => 'Template-Toolkit',
+     'VERSION_FROM' => 'lib/Template.pm',
+     'EXE_FILES'    => [ 'bin/tpage', 'bin/ttree' ],
+@@ -310,7 +227,7 @@
+ sub version_check {
+     eval "use Template";
+     unless ($@ or $Template::VERSION =~ /^2/) {
+-	warn(<<EOF) unless $TT_QUIET;
++        warn(<<EOF) unless $TT_QUIET;
+ 
+ IMPORTANT NOTE:
+ 
+@@ -328,7 +245,7 @@
+     painless.  If you're feeling brave, then answer 'y', otherwise 'n'.
+ 
+ EOF
+-	exit unless ttprompt("Do you want to continue?", 'y') =~ /y/i;
++        exit unless ttprompt("Do you want to continue?", 'y') =~ /y/i;
+     }
+ }
+ 
+@@ -342,7 +259,7 @@
+ sub mandatory_modules {
+     eval "use AppConfig";
+     if ($@ or $AppConfig::VERSION < $TT_APPCONFIG_VERSION) {
+-	warn(<<EOF);
++        warn(<<EOF);
+ 
+ The Template Toolkit requires that the AppConfig module (version $TT_APPCONFIG_VERSION
+ or later) first be installed.  This is used by
+@@ -356,7 +273,7 @@
+ 
+     eval "use File::Spec";
+     if ($@ or $File::Spec::VERSION < $TT_FILE_SPEC_VERSION) {
+-	warn(<<EOF);
++        warn(<<EOF);
+ 
+ The Template Toolkit requires that the File::Spec module (version $TT_FILE_SPEC_VERSION
+ or later) first be installed.  This is used by the File plugin.  It is
+@@ -414,7 +331,7 @@
+ EOF
+ 
+     $TT_XS_ENABLE = (ttprompt('Do you want to build the XS Stash module?', 
+-			      $TT_XS_ENABLE) =~ /^y/i);
++                              $TT_XS_ENABLE) =~ /^y/i);
+ 
+     if ($TT_XS_ENABLE) {
+         $TT_XS_DEFAULT =
+@@ -428,328 +345,13 @@
+ 
+     # Actually, we would have to fix 'Config.pm' only if the XS stash is
+     # disabled. But this way, we are sure the correct module is used.
+-	fix_file(catfile('lib','Template','Config.pm'),
+-		 '$STASH', 
+-		 $TT_XS_DEFAULT ? 'Template::Stash::XS' : 'Template::Stash');
+-}
+-
+-
+-
+-
+-#------------------------------------------------------------------------
+-# optional_extras()
+-#
+-# Prompt for installation of optional libraries and other components
+-#------------------------------------------------------------------------
+-
+-sub optional_extras {
+-    message(<<EOF);
+-
+-
+-Optional Extras
+----------------
+-
+-In additional to the Perl modules and POD documentation installed in
+-the usual way, the Template Toolkit distribution also contains a
+-number of optional components:
+-
+-  * Template libaries for basic HTML, Pod -> HTML, and PostScript
+-
+-  * Splash! - a stylish HTML user interface template library / widget set
+-
+-  * HTML documentation - distributed in template form for customisation
+-
+-  * Stylesheet templates to generate docs as vanilla HTML or using Splash!
+-
+-  * Examples - numerous examples of using the template libraries
+-
+-If you want to install these optional components then you'll need to 
+-specify a separate directory for them.
+-
+-EOF
+-
+-    if ($TT_EXTRAS = (
+-        ttprompt('Do you want to install these components?',
+-            $TT_EXTRAS) =~ /^y/i)) {
+-	message(<<EOF);
+-
+-You can chose any directory for the installation of the additional
+-Template Toolkit components.  The proposed default assumes a $FLAVOUR
+-flavour to your operating system (suggestions for suitable defaults
+-for other platforms welcome).
+-
+-EOF
+-	$TT_PREFIX = ttprompt('Installation directory', $TT_PREFIX || $PREFIX);
+-        $TT_PREFIX =~ s[/$][];
+-    }
+-    else {
+-        $TT_PREFIX = '';
+-    }
+-
+-    fix_file(catfile('lib','Template','Config.pm'), '$INSTDIR', $TT_PREFIX);
+-}
+-
+-
+-
+-#------------------------------------------------------------------------
+-# splash_images()
+-#
+-# Prompt for Splash! image URL
+-#------------------------------------------------------------------------
+-
+-sub splash_images {
+-    return unless $TT_PREFIX;
+-
+-    message(<<EOF);
+-
+-
+-Splash!
+--------
+-
+-The Splash! template library uses a number of (very) small images to
+-build user interface components.  These will be installed into the
+-directory:
+-
+-    $TT_PREFIX/images  
+-EOF
+-
+-    if ($WIN32) {
+-	# default images value for Win32 to browse via file system
+-	$TT_IMAGES = "$TT_PREFIX/images";
+-	
+-	message(<<EOF);
+-	
+-If you want to use the Splash! library then you'll need to make sure
+-you can access these images via your browser.  If you want to deliver
+-pages via a web server then you'll need to specify the URL that can be
+-use to access these images.  In the general case you can accept the
+-default and access the images via the filesystem.
+-
+-EOF
+-    }
+-    else {
+-        message(<<EOF);
+-
+-If you want to use the Splash! library then you'll need to copy these
+-images, define an alias (e.g. in the httpd.conf) or create a symbolic
+-link to them so that your web server can find them.  Then you'll need
+-to specify the resulting URL which can be used to retrieve them from
+-the web server.
+-
+-Typical values might be '/tt2/images', '/images/tt2', '/~user/tt2/images'
+-or even something like 'http://www.yourhost.org/images/tt2'.
+-
+-(NOTE: If this is too much for you to think about right now, then
+-accept the default below and read the Template::Library::Splash
+-manpage at your leisure to find out more).
+-
+-EOF
+-    }
+-
+-    $TT_IMAGES = ttprompt('URL base for TT2 images?', $TT_IMAGES || $IMAGES);
+-    $TT_IMAGES =~ s[/$][]g;	# just in case
+-
+-    fix_file(catfile('templates','splash','config'), 'images', "$TT_IMAGES/splash");
+-}
+-
+-
+-
+-#------------------------------------------------------------------------
+-# html_docs()
+-#
+-# Prompt for HTML documentation build
+-#--------------------------------------------------------------------
+-
+-sub html_docs {
+-    return unless $TT_PREFIX;
+-
+-    my $style = 'plain';
+-    my $style_cfg = '';
+-
+-    message(<<EOF);
+-
+-
+-HTML Documentation
+-------------------
+-
+-The modules comprising the Template Toolkit contain comprehensive POD
+-documentation which can be browsed using 'perldoc' or 'man' (if your
+-system supports it).  In additional, the distribution also includes a
+-set of source templates and style elements for generating the same
+-documentation in HTML format.  These will be installed in the
+-directory:
+-
+-    $TT_PREFIX/docs
+-
+-The HTML documentation can be built for you at "make install" time in
+-a plain and simple HTML format or using the Splash! library.  You can
+-see examples of these different styles and browse the documentation
+-online at:
+-
+-    http://www.template-toolkit.org/docs/
+-
+-EOF
+-
+-    $TT_BUILD_DOCS = ( 
+-    	ttprompt('Do you want to build the HTML documentation?', 
+-                 $TT_BUILD_DOCS) =~ /^y/i 
+-    );
+-
++        fix_file(catfile('lib','Template','Config.pm'),
++                 '$STASH', 
++                 $TT_XS_DEFAULT ? 'Template::Stash::XS' : 'Template::Stash');
+ }
+ 
+ 
+-#--------------------------------------------------------------------
+-# html_docstyle()
+-#
+-# prompt for docs style: plain or splash
+-#--------------------------------------------------------------------
+-
+-sub html_docstyle {
+-    return unless $TT_PREFIX && $TT_BUILD_DOCS;
+-
+-    my $style = 'plain';
+-    my $style_cfg = '';
+-
+-    message(<<EOF);
+-
+-If you want to build the HTML documentation using the Splash! library
+-then you'll need to make sure you correctly defined the URL for the
+-Splash!  images above.  Otherwise, answer 'n' to the next question to
+-use plain HTML.
+-
+-EOF
+-    $TT_SPLASH_DOCS = ( 
+-    	ttprompt('Do you want to use the Splash! library?', $TT_SPLASH_DOCS) =~ /^y/i 
+-    );
+-
+-    if ($TT_SPLASH_DOCS) {
+-        my $splash_style = '';
+-        message(<<EOF);
+ 
+-Which Splash! colour scheme would you like to use to build the
+-documentation?  Acceptable values are:
+-
+-EOF
+-        unless ($TT_QUIET) {
+-            print "  Name     Colours\n  -------------------------\n";
+-    	    foreach my $t ('default', 
+-        		    grep { ! /^default$/ } sort keys %$SPLASH_STYLES) {
+-                my $v = $SPLASH_STYLES->{ $t };
+-                local $" = '/';
+-                printf("  %-8s @$v\n", $t);
+-            } 
+-            print "\n";
+-	
+-    	    while (! $splash_style) {
+-                $TT_SPLASH_THEME = ttprompt("Enter name of colour scheme: ", 
+-                                            $TT_SPLASH_THEME);
+-                message("! No such scheme\n"), $TT_SPLASH_THEME = 'default'
+-                    unless ($splash_style = $SPLASH_STYLES->{ $TT_SPLASH_THEME });
+-            }
+-
+-            ( $TT_SPLASH_BG, $TT_SPLASH_FG, $TT_SPLASH_BT, $TT_SPLASH_FT ) 
+-                = @$splash_style;
+-
+-    	    # default background (unselected) text is black, fore is white
+-            $TT_SPLASH_BT ||= 'black';
+-            $TT_SPLASH_FT ||= 'white';
+-
+-    	    $style = 'splash';
+-            $style_cfg = <<EOF;
+-
+-pre_process  = splash/config
+-define splash_fg = '$TT_SPLASH_FG'
+-define splash_bg = '$TT_SPLASH_BG'
+-define splash_ft = '$TT_SPLASH_FT'
+-define splash_bt = '$TT_SPLASH_BT'
+-EOF
+-        }
+-    }
+-
+-    #--------------------------------------------------------------------
+-    # write ttree config file for building docs
+-    #--------------------------------------------------------------------
+-
+-    open(FP, "> $TT_DOCS_CFG") || die "$TT_DOCS_CFG: $!\n";
+-    print FP <<EOF;
+-# This ttree configuration file is automatically generated by 
+-# the Makefile.PL installation script.  Feel free to edit it
+-# but be warned that re-installing the Template Toolkit will 
+-# overwrite your changes.
+-src  = $TT_PREFIX/docs/src
+-dest = $TT_PREFIX/docs/html
+-lib  = $TT_PREFIX/docs/style/$style
+-lib  = $TT_PREFIX/docs/lib
+-lib  = $TT_PREFIX/templates
+-$style_cfg
+-pre_process  = config
+-pre_process  = header
+-post_process = footer
+-recurse
+-verbose
+-EOF
+-    close(FP);
+-}
+-
+-
+-
+-
+-#--------------------------------------------------------------------
+-# html_examples()
+-#
+-# Prompt for building examples
+-#--------------------------------------------------------------------
+-
+-sub html_examples {
+-    return unless $TT_PREFIX;
+-
+-    message(<<EOF);
+-
+-
+-HTML Examples
+--------------
+-
+-A number of examples showing use of the HTML, Splash! and PostScript 
+-libraries will be installed into:
+-
+-    $TT_PREFIX/examples
+-
+-As with the documentation, the examples are provided in template form
+-and can be automatically built into HTML pages during the "make
+-install".  These pages rely on the Splash! library and expect the
+-images URL to be correctly defined for correct viewing.
+-
+-EOF
+-
+-    $TT_EXAMPLES = ( 
+-	ttprompt('Do you want to build the HTML example pages?', 
+-	       $TT_EXAMPLES) =~ /^y/i 
+-    );
+-
+-    #--------------------------------------------------------------------
+-    # write ttree config file for building examples
+-    #--------------------------------------------------------------------
+-
+-    open(FP, "> $TT_EXAMPLE_CFG") || die "$TT_EXAMPLE_CFG: $!\n";
+-    print FP <<EOF;
+-# This ttree configuration file is automatically generated by 
+-# the Makefile.PL installation script.  Feel free to edit it
+-# but be warned that re-installing the Template Toolkit will 
+-# overwrite your changes.
+-
+-src  = $TT_PREFIX/examples/src
+-dest = $TT_PREFIX/examples/html
+-lib  = $TT_PREFIX/examples/lib
+-lib  = $TT_PREFIX/templates
+-define splash_fg = '$TT_SPLASH_FG'
+-define splash_bg = '$TT_SPLASH_BG'
+-pre_process = config
+-recurse
+-verbose
+-EOF
+-
+-    close(FP);
+-}
+ 
+ 
+ #--------------------------------------------------------------------
+@@ -760,19 +362,10 @@
+ 
+ sub write_defaults {
+     open(FP, "> $DEFAULTS_FILE") || die "$DEFAULTS_FILE: $!\n";
+-    my ( $ttdocs, $ttsplash, $ttexamples, 
+-         $ttextras, $ttxs_enable, $ttxs_default ) 
+-	    = map { $_ ? 'y' : 'n' } 
+-    ( $TT_BUILD_DOCS, $TT_SPLASH_DOCS, $TT_EXAMPLES, 
+-      $TT_EXTRAS, $TT_XS_ENABLE, $TT_XS_DEFAULT );
++    my ( $ttxs_enable, $ttxs_default ) 
++            = map { $_ ? 'y' : 'n' } 
++            ( $TT_XS_ENABLE, $TT_XS_DEFAULT );
+     print FP <<EOF;
+-\$TT_PREFIX        = '$TT_PREFIX';
+-\$TT_IMAGES        = '$TT_IMAGES';
+-\$TT_BUILD_DOCS    = '$ttdocs';
+-\$TT_SPLASH_DOCS   = '$ttsplash';
+-\$TT_EXAMPLES      = '$ttexamples';
+-\$TT_EXTRAS        = '$ttextras';
+-\$TT_SPLASH_THEME  = '$TT_SPLASH_THEME';
+ \$TT_XS_ENABLE     = '$ttxs_enable';
+ \$TT_XS_DEFAULT    = '$ttxs_default';
+ \$TT_ACCEPT        = '$TT_ACCEPT';
+@@ -783,20 +376,6 @@
+ }
+ 
+ 
+-#------------------------------------------------------------------------
+-# build_docs()
+-#
+-# Echo the relevant incantation so that 'make dist' regenerates the 
+-# documentation from the template sources.
+-#------------------------------------------------------------------------
+-
+-sub build_docs {
+-    return <<EOF;
+-echo "Building documentation for version \$(VERSION)" ;           \\
+-\$(PERL) -I\$(INST_ARCHLIB) -I\$(INST_LIB) bin/ttree -f ./docs/ttdist.cfg --define version=\$(VERSION) -a;  \\
+-EOF
+-}
+-
+ 
+ 
+ #------------------------------------------------------------------------
+@@ -818,7 +397,7 @@
+     close(FP);
+ 
+     ($text =~ s/^(\s*${find}\s*=\s*)'.*?'/$1'$fix'/m)
+-	|| die "$find not found in $file\n";
++        || die "$find not found in $file\n";
+ 
+     open(FP, "> $file") || die "$file: $!\n";
+     print FP $text;
