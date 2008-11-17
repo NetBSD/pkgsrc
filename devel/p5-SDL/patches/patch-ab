@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 2008/11/17 19:54:26 he Exp $
+
+Tweak includes so that they can be found.
+Latter include is due to CPAN bug 19155.
+
+--- src/OpenGL.xs.orig	2004-09-24 00:36:56.000000000 +0000
++++ src/OpenGL.xs
+@@ -12,8 +12,8 @@
+ 
+ #include <SDL.h>
+ 
+-#include <gl.h>
+-#include <glu.h>
++#include <GL/gl.h>
++#include <GL/glu.h>
+ 
+ #ifdef USE_THREADS
+ #define HAVE_TLS_CONTEXT
+@@ -23,7 +23,7 @@
+ #define GL_ALL_CLIENT_ATTRIB_BITS 0xFFFFFFF
+ #endif /* GL_ALL_CLIENT_BITS */  
+ 
+-#include "../defines.h"
++#include "../src/defines.h"
+ 
+ SV* sdl_perl_nurbs_error_hook;
+ void

@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2008/11/17 19:54:26 he Exp $
+
+Define a missing type used in OpenGL.xs.
+
+--- typemap.orig	2004-09-24 00:36:56.000000000 +0000
++++ typemap
+@@ -54,6 +54,7 @@ GLboolean		T_U_CHAR
+ GLUnurbsObj *		T_PTR
+ GLUtesselator *		T_PTR
+ GLuint			T_UV
++GLint			T_IV
+ GLint*			T_PTR
+ float *			T_PTR
+ float			T_NV
