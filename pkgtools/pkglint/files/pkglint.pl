@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.785 2008/11/18 18:59:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.786 2008/11/18 19:18:51 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2994,7 +2994,7 @@ sub variable_needs_quoting($$$) {
 		Option
 		Pathname PkgName PkgOptionsVar PkgRevision
 		RelativePkgDir RelativePkgPath
-		URL UserGroupName
+		UserGroupName
 		Varname Version
 		WrkdirSubdirectory
 	));
@@ -3007,7 +3007,7 @@ sub variable_needs_quoting($$$) {
 	# enumerations, are expected to not require the :Q operator.
 	if (ref($type->basic_type) eq "HASH" || exists(safe_types->{$type->basic_type})) {
 		if ($type->kind_of_list == LK_NONE) {
-			return false;
+			return doesnt_matter;
 
 		} elsif ($type->kind_of_list == LK_EXTERNAL && $context->extent != VUC_EXTENT_WORD_PART) {
 			return false;
@@ -3936,9 +3936,8 @@ sub checkline_mk_varuse($$$$) {
 			$line->explain_warning("See the pkgsrc guide, section \"quoting guideline\", for details.");
 		}
 
-		if ($needs_quoting == false && $mod =~ m":Q$") {
-			$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
-			$line->explain_warning(
+		if ($mod =~ m":Q$") {
+			my @expl = (
 "Many variables in pkgsrc do not need the :Q operator, since they",
 "are not expected to contain white-space or other evil characters.",
 "",
@@ -3953,6 +3952,13 @@ sub checkline_mk_varuse($$$$) {
 "\tdemo:",
 "\t\techo \${WORD1}\${WORD2} # still 1 word");
 
+			if ($needs_quoting == false) {
+				$line->log_warning("The :Q operator should not be used for \${${varname}} here.");
+				$line->explain_warning(@expl);
+			} elsif ($needs_quoting == doesnt_matter) {
+				$line->log_note("The :Q operator isn't necessary for \${${varname}} here.");
+				$line->explain_note(@expl);
+			}
 		}
 	}
 
