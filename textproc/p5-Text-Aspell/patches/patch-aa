@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/18 05:24:43 he Exp $
+
+Trick MakeMaker into actually emitting the use of -laspell
+in the Makefile.  It'll use the library set up by buildlink
+when it's actually built.
+
+--- Makefile.PL.orig	2008-11-18 05:20:30.000000000 +0000
++++ Makefile.PL
+@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
+ WriteMakefile(
+     NAME          => 'Text::Aspell',
+     VERSION_FROM  => 'Aspell.pm',
+-    LIBS          => ['-laspell'],
++    LIBS          => ["-L$ENV{PREFIX}/lib -laspell"],
+     XSPROTOARG    => '-noprototypes',
+     PREREQ_PM     => {
+         'Test::More'    => 0,
