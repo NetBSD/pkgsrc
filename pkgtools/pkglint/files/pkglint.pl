@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.783 2008/11/06 14:46:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.784 2008/11/18 08:18:29 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2804,6 +2804,15 @@ sub extract_used_variables($$) {
 	return $result;
 }
 
+sub get_nbpart() {
+	my $line = $pkgctx_vardef->{"PKGREVISION"};
+	return "" unless defined($line);
+	my $pkgrevision = $line->get("value");
+	return "" unless $pkgrevision =~ m"^\d+$";
+	return "" unless $pkgrevision + 0 != 0;
+	return "nb$pkgrevision";
+}
+
 my $check_pkglint_version_done = false;
 sub check_pkglint_version() {
 
@@ -4174,7 +4183,10 @@ sub checkline_mk_shellword($$$) {
 
 		} elsif ($state == SWST_PLAIN) {
 
-			if ($rest =~ m"([\w_]+)=\"\`") {
+			# XXX: This is only true for the "first" word in a
+			# shell command, not for every word. For example,
+			# FOO_ENV+= VAR=`command` may be underquoted.
+			if (false && $rest =~ m"([\w_]+)=\"\`") {
 				$line->log_note("In the assignment to \"$1\", you don't need double quotes around backticks.");
 				$line->explain_note(
 "Assignments are a special context, where no double quotes are needed",
@@ -6878,6 +6890,7 @@ sub checkfile_package_Makefile($$$) {
 
 	my $distname = defined($distname_line) ? $distname_line->get("value") : undef;
 	my $pkgname = defined($pkgname_line) ? $pkgname_line->get("value") : undef;
+	my $nbpart = get_nbpart();
 
 	# Let's do some tricks to get the proper value of the package
 	# name more often.
@@ -6894,8 +6907,8 @@ sub checkfile_package_Makefile($$$) {
 	}
 
 	($effective_pkgname, $effective_pkgname_line, $effective_pkgbase, $effective_pkgversion)
-		= (defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ regex_pkgname) ? ($pkgname, $pkgname_line, $1, $2)
-		: (defined($distname) && $distname !~ regex_unresolved && $distname =~ regex_pkgname) ? ($distname, $distname_line, $1, $2)
+		= (defined($pkgname) && $pkgname !~ regex_unresolved && $pkgname =~ regex_pkgname) ? ($pkgname.$nbpart, $pkgname_line, $1, $2)
+		: (defined($distname) && $distname !~ regex_unresolved && $distname =~ regex_pkgname) ? ($distname.$nbpart, $distname_line, $1, $2)
 		: (undef, undef, undef, undef);
 	if (defined($effective_pkgname_line)) {
 		$opt_debug_misc and $effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
