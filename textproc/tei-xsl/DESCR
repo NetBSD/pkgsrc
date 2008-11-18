@@ -1,0 +1,7 @@
+This is a set of XSLT specifications to transform TEI XML documents
+to HTML, to LaTeX, and to XSL Formatting Objects.
+
+It concentrates on TEI Lite, but adding support for other modules
+is fairly easy. In the main, the setup has been used on new documents,
+i.e. reports and web pages that have been authored from scratch,
+rather than traditional TEI-encoded existing material.
