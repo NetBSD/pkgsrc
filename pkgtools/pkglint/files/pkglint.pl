@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.786 2008/11/18 19:18:51 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.787 2008/11/18 19:39:49 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6890,6 +6890,13 @@ sub checkfile_package_Makefile($$) {
 	# name more often.
 	if (defined($distname) && defined($pkgname)) {
 		$pkgname =~ s/\$\{DISTNAME\}/$distname/;
+
+		if ($pkgname =~ m"^(.*)\$\{DISTNAME:S(.)([^:]*)\2([^:]*)\2\}(.*)$") {
+			my ($before, $separator, $old, $new, $after) = ($1, $2, $3, $4, $5);
+			my $newname = $distname;
+			$newname =~ s/$old/$new/;
+			$pkgname = $before . $newname . $after;
+		}
 	}
 
 	if (defined($pkgname) && defined($distname) && $pkgname eq $distname) {
