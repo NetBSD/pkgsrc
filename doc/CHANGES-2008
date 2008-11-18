@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3062 2008/11/18 17:52:06 he Exp $
+$NetBSD: CHANGES-2008,v 1.3063 2008/11/18 19:43:45 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5161,3 +5161,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Convert-ASN1 to 0.22 [he 2008-11-18]
 	Updated textproc/p5-Lingua-Stem-Snowball to 0.952 [he 2008-11-18]
 	Updated textproc/p5-PDF-API2 to 0.72 [he 2008-11-18]
+	Updated pkgtools/pkglint to 4.90 [roland 2008-11-18]
