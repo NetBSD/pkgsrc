@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.448 2008/11/18 14:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.449 2008/11/18 14:56:15 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -430,6 +430,7 @@ SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-xml
 SUBDIR+=	tei
+SUBDIR+=	tei-p5-schema
 SUBDIR+=	tei-xsl
 SUBDIR+=	tex-xmltex
 SUBDIR+=	tex2page
