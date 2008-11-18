@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.13 2008/08/14 20:30:24 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2008/11/18 20:25:13 chuck Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -41,6 +41,7 @@ lib/libgphoto2/${PKGVERSION}/hp215.la
 lib/libgphoto2/${PKGVERSION}/iclick.la
 lib/libgphoto2/${PKGVERSION}/jamcam.la
 lib/libgphoto2/${PKGVERSION}/jd11.la
+lib/libgphoto2/${PKGVERSION}/jl2005a.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc120.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc210.la
 lib/libgphoto2/${PKGVERSION}/kodak_dc240.la
@@ -89,9 +90,12 @@ lib/pkgconfig/libgphoto2_port.pc
 man/man3/libgphoto2.3
 man/man3/libgphoto2_port.3
 share/doc/libgphoto2/AUTHORS
+share/doc/libgphoto2/ABOUT-NLS
+share/doc/libgphoto2/ChangeLog
 share/doc/libgphoto2/COPYING
 share/doc/libgphoto2/NEWS
 share/doc/libgphoto2/README
+share/doc/libgphoto2/README.packaging
 share/doc/libgphoto2/camlibs/README.9050
 share/doc/libgphoto2/camlibs/README.905C
 share/doc/libgphoto2/camlibs/README.913C
@@ -105,6 +109,7 @@ share/doc/libgphoto2/camlibs/README.enigma13
 share/doc/libgphoto2/camlibs/README.gsmart300
 share/doc/libgphoto2/camlibs/README.iclick
 share/doc/libgphoto2/camlibs/README.jamcam
+share/doc/libgphoto2/camlibs/README.jl2005a
 share/doc/libgphoto2/camlibs/README.konica
 share/doc/libgphoto2/camlibs/README.largan-lmini
 share/doc/libgphoto2/camlibs/README.lg_gsm
