@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2008/07/14 12:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/11/18 11:55:58 wiz Exp $
 #
 
-DISTNAME=	gtk-doc-1.10
+DISTNAME=	gtk-doc-1.11
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.11/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,19 +19,12 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE=	gtk-doc.pc.in
 CONFIGURE_ARGS+=	--with-xml-catalog=${XML_DEFAULT_CATALOG:Q}
 USE_DIRS+=		gnome2-1.6
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		gmake perl:run pkg-config
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gtkdoc
-PKG_SUPPORTED_OPTIONS=	sgml
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Msgml)
-DEPENDS+= dsssl-docbook-modular-[0-9]*:../../textproc/dsssl-docbook-modular
-SGML_CATALOGS= ${PREFIX}/share/sgml/gtk-doc/gtk-doc.cat
-.include "../../textproc/jade/buildlink3.mk"
-.endif
+.include "options.mk"
 
 .include "../../lang/python/application.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
