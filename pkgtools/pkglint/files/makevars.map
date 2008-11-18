@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.186 2008/11/04 23:13:05 rillig Exp $
+# $NetBSD: makevars.map,v 1.187 2008/11/18 08:04:35 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -261,7 +261,7 @@ DEVOSSSOUND		Pathname [$system]
 DISTFILES		List of Filename [$package_list]
 DISTINFO_FILE		RelativePkgPath [$package]
 DISTNAME		Filename [$package]
-DIST_SUBDIR		Filename [$package]
+DIST_SUBDIR		Pathname [$package]
 DJB_BUILD_ARGS		List of ShellWord
 DJB_BUILD_TARGETS	List of Identifier
 DJB_CONFIG_CMDS		List of ShellWord [o:s]
