@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 14:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/18 16:14:33 wiz Exp $
 #
 
 DISTNAME=	tei-p5-schema-1.2.0
@@ -12,6 +12,7 @@ COMMENT=	TEI P5 schema files
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 XML_CATALOGS=	${TEIXMLDIR}/schema/catalog.xml
 
@@ -21,7 +22,7 @@ INSTALLATION_DIRS=	${TEIXMLDIR}
 
 do-install:
 	cd ${WRKSRC}/share/xml/tei && \
-		${CP} -R schema ${TEIXMLDIR}
+		${CP} -R schema ${DESTDIR}${TEIXMLDIR}
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
