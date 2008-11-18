@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2008/07/16 20:13:29 drochner Exp $
+# $NetBSD: Makefile,v 1.144 2008/11/18 19:21:04 rillig Exp $
 #
 
 DISTNAME=	gdm-2.20.7
@@ -21,6 +21,7 @@ USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+BUILD_DEFS+=		VARBASE
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
 PKG_SUPPORTED_OPTIONS=	inet6 pam
