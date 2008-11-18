@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/09/12 05:32:38 epg Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/18 07:29:11 obache Exp $
 #
 
-DISTNAME=	Pygments-0.10
+DISTNAME=	Pygments-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/P/Pygments/	\
-		${MASTER_SITE_SOURCEFORGE:=pygments/}
+MASTER_SITES=	http://pypi.python.org/packages/source/P/Pygments/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://pygments.org/
