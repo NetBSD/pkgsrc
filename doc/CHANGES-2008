@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3058 2008/11/18 11:56:12 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3059 2008/11/18 14:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5147,3 +5147,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/p5-gnome-bindings to 2.24.0.91 [wiz 2008-11-18]
 	Updated math/fftw to 3.2 [adam 2008-11-18]
 	Updated textproc/gtk-doc to 1.11 [wiz 2008-11-18]
+	Added textproc/tei-xsl version 5.14 [wiz 2008-11-18]
+	Removed textproc/teixsl-fo successor textproc/tei-xsl [wiz 2008-11-18]
+	Removed textproc/teixsl-html successor textproc/tei-xsl [wiz 2008-11-18]
