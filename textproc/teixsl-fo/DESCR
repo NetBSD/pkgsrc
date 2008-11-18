@@ -1,3 +1,0 @@
-teixsl-html is a set of XSLT specifications to transform TEI XML
-documents to XSL Formatting Objects.  It concentrates on TEI Lite, but
-adding support for other modules is fairly easy.
