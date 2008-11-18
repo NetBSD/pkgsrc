@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2008/11/18 12:46:52 drochner Exp $
+
+--- cairo/pycairo-matrix.c.orig	2008-11-18 12:43:06.000000000 +0100
++++ cairo/pycairo-matrix.c
+@@ -206,7 +206,7 @@ matrix_transform_point (PycairoMatrix *o
+ }
+ 
+ static PyObject *
+-matrix_item (PycairoMatrix *o, Py_ssize_t i)
++matrix_item (PycairoMatrix *o, int i)
+ {
+     switch (i) {
+     case 0:
+@@ -266,14 +266,13 @@ static PyNumberMethods matrix_as_number 
+   0,	           /* nb_true_divide */
+   0,		   /* nb_inplace_floor_divide */
+   0,		   /* nb_inplace_true_divide */
+-  (unaryfunc)0,	   /* nb_index */
+ };
+ 
+ static PySequenceMethods matrix_as_sequence = {
+     0,                  		/* sq_length */
+     0,                  		/* sq_concat */
+     0,                  		/* sq_repeat */
+-    (ssizeargfunc)matrix_item,		/* sq_item */
++    (intargfunc)matrix_item,		/* sq_item */
+     0,                     		/* sq_slice */
+     0,					/* sq_ass_item */
+     0,					/* sq_ass_slice */
