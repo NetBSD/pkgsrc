@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.784 2008/11/18 08:18:29 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.785 2008/11/18 18:59:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2602,21 +2602,12 @@ sub relative_path($$) {
 	}
 }
 
-sub expand_variable($$) {
-	my ($whole, $varname) = @_;
-	my ($value, $re);
+sub expand_variable($) {
+	my ($varname) = @_;
 
-	$re = qr"\n\Q${varname}\E([+:?]?)=[ \t]*([^\n#]*)";
-	$value = undef;
-	while ($whole =~ m/$re/g) {
-		my ($op, $val) = ($1, $2);
-		if ($op ne "?" || !defined($value)) {
-			$value = $val;
-		}
-	}
-	if (!defined($value)) {
-		return undef;
-	}
+	return unless exists($pkgctx_vardef->{$varname});
+	my $line = $pkgctx_vardef->{$varname};
+	my $value = $line->get("value");
 
 	$value = resolve_relative_path($value, true);
 	if ($value =~ regex_unresolved) {
@@ -3265,7 +3256,6 @@ sub parselines_mk($) {
 sub readmakefile($$$$);
 sub readmakefile($$$$) {
 	my ($fname, $main_lines, $all_lines, $seen_Makefile_include) = @_;
-	my $contents = "";
 	my ($includefile, $dirname, $lines, $is_main_Makefile);
 
 	$lines = load_lines($fname, true);
@@ -3324,7 +3314,7 @@ sub readmakefile($$$$) {
 			}
 			if ($includefile =~ m"/mk/") {
 				# skip these files
-				$contents .= $text . "\n";
+
 			} else {
 				$dirname = dirname($fname);
 				# Only look in the directory relative to the
@@ -3338,7 +3328,7 @@ sub readmakefile($$$$) {
 				} else {
 					$opt_debug_include and $line->log_debug("Including \"$dirname/$includefile\".");
 					my $last_lineno = $#{$all_lines};
-					$contents .= readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include);
+					readmakefile("$dirname/$includefile", $main_lines, $all_lines, $seen_Makefile_include) or return false;
 
 					# Check that there is a comment in each
 					# Makefile.common that says which files
@@ -3379,25 +3369,20 @@ sub readmakefile($$$$) {
 				$opt_debug_misc and $line->log_debug("varassign(${varname}, ${op}, ${value})");
 				$pkgctx_vardef->{$varname} = $line;
 			}
-			$contents .= $text . "\n";
-
-		} else {
-			$contents .= $text . "\n";
 		}
 	}
 
-	return $contents;
+	return true;
 }
 
-sub load_package_Makefile($$$) {
-	my ($fname, $ref_whole, $ref_lines) = @_;
+sub load_package_Makefile($$) {
+	my ($fname, $ref_lines) = @_;
 	my ($subr) = "load_package_Makefile";
-	my ($whole, $lines, $all_lines, $seen_php_pecl_version);
+	my ($lines, $all_lines, $seen_php_pecl_version);
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "load_package_Makefile()");
 
-	$whole = readmakefile($fname, $lines = [], $all_lines = [], {});
-	if (!$whole) {
+	if (!readmakefile($fname, $lines = [], $all_lines = [], {})) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
@@ -3411,13 +3396,13 @@ sub load_package_Makefile($$$) {
 
 	determine_used_variables($all_lines);
 
-	$pkgdir = expand_variable($whole, "PKGDIR");
+	$pkgdir = expand_variable("PKGDIR");
 	set_default_value(\$pkgdir, ".");
-	$distinfo_file = expand_variable($whole, "DISTINFO_FILE");
+	$distinfo_file = expand_variable("DISTINFO_FILE");
 	set_default_value(\$distinfo_file, "distinfo");
-	$filesdir = expand_variable($whole, "FILESDIR");
+	$filesdir = expand_variable("FILESDIR");
 	set_default_value(\$filesdir, "files");
-	$patchdir = expand_variable($whole, "PATCHDIR");
+	$patchdir = expand_variable("PATCHDIR");
 	set_default_value(\$patchdir, "patches");
 
 	if (var_is_defined("PHPEXT_MK")) {
@@ -3434,7 +3419,6 @@ sub load_package_Makefile($$$) {
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] PATCHDIR=$patchdir");
 	$opt_debug_misc and log_debug(NO_FILE, NO_LINE_NUMBER, "[${subr}] PKGDIR=$pkgdir");
 
-	${$ref_whole} = $whole;
 	${$ref_lines} = $lines;
 	return true;
 }
@@ -4053,6 +4037,10 @@ sub checkline_mk_shellword($$$) {
 
 	if ($shellword =~ m"\$\{PREFIX\}/man(?:$|/)") {
 		$line->log_warning("Please use \${PKGMANDIR} instead of \"man\".");
+	}
+
+	if ($shellword =~ m"etc/rc\.d") {
+		$line->log_warning("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
 	# Note: SWST means [S]hell[W]ord [ST]ate
@@ -5623,6 +5611,10 @@ sub checkline_mk_varassign($$$$$) {
 		}
 	}
 
+	if ($value =~ m"/etc/rc\.d") {
+		$line->log_warning("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
+	}
+
 	if (!$is_internal && $varname =~ m"^_") {
 		$line->log_warning("Variable names starting with an underscore are reserved for internal pkgsrc use.");
 	}
@@ -6831,8 +6823,8 @@ sub checkfile_mk($) {
 	autofix($lines);
 }
 
-sub checkfile_package_Makefile($$$) {
-	my ($fname, $whole, $lines) = @_;
+sub checkfile_package_Makefile($$) {
+	my ($fname, $lines) = @_;
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_package_Makefile(..., ...)");
 
@@ -6855,10 +6847,6 @@ sub checkfile_package_Makefile($$$) {
 		if (!-f "${current_dir}/${distinfo_file}") {
 			log_warning("${current_dir}/${distinfo_file}", NO_LINE_NUMBER, "File not found. Please run '".conf_make." makesum'.");
 		}
-	}
-
-	if ($whole =~ /etc\/rc\.d/) {
-		log_warning($fname, NO_LINE_NUMBER, "Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to \${RCD_SCRIPTS_EXAMPLEDIR}.");
 	}
 
 	if (exists($pkgctx_vardef->{"REPLACE_PERL"}) && exists($pkgctx_vardef->{"NO_CONFIGURE"})) {
@@ -6898,8 +6886,8 @@ sub checkfile_package_Makefile($$$) {
 		$pkgname =~ s/\$\{DISTNAME\}/$distname/;
 	}
 
-	if (defined($pkgname) && defined($distname) && ($pkgname eq $distname || $pkgname eq "\${DISTNAME}")) {
-		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You don't need to define PKGNAME.");
+	if (defined($pkgname) && defined($distname) && $pkgname eq $distname) {
+		$pkgname_line->log_note("PKGNAME is \${DISTNAME} by default. You probably don't need to define PKGNAME.");
 	}
 
 	if (!defined($pkgname) && defined($distname) && $distname !~ regex_unresolved && $distname !~ regex_pkgname) {
@@ -7999,7 +7987,7 @@ sub checkdir_category() {
 }
 
 sub checkdir_package() {
-	my ($whole, $lines, $have_distinfo, $have_patches);
+	my ($lines, $have_distinfo, $have_patches);
 
 	# Initialize global variables
 	$pkgdir = undef;
@@ -8018,7 +8006,7 @@ sub checkdir_package() {
 	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
-	if (!load_package_Makefile("${current_dir}/Makefile", \$whole, \$lines)) {
+	if (!load_package_Makefile("${current_dir}/Makefile", \$lines)) {
 		log_error("${current_dir}/Makefile", NO_LINE_NUMBER, "Cannot be read.");
 		goto cleanup;
 	}
@@ -8049,7 +8037,7 @@ sub checkdir_package() {
 
 	foreach my $fname (@files) {
 		if ($fname eq "${current_dir}/Makefile") {
-			$opt_check_Makefile and checkfile_package_Makefile($fname, $whole, $lines);
+			$opt_check_Makefile and checkfile_package_Makefile($fname, $lines);
 		} else {
 			checkfile($fname);
 		}
