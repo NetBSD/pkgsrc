@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3059 2008/11/18 14:15:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3060 2008/11/18 14:55:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5150,3 +5150,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/tei-xsl version 5.14 [wiz 2008-11-18]
 	Removed textproc/teixsl-fo successor textproc/tei-xsl [wiz 2008-11-18]
 	Removed textproc/teixsl-html successor textproc/tei-xsl [wiz 2008-11-18]
+	Added textproc/tei-p5-schema version 1.2.0 [wiz 2008-11-18]
