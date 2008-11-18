@@ -1,8 +1,6 @@
-$NetBSD: patch-aj,v 1.2 2006/01/12 19:49:15 joerg Exp $
-
---- glib.h.orig	2001-02-27 03:44:38.000000000 +0000
-+++ glib.h
-@@ -119,8 +119,12 @@ extern "C" {
+--- glib.h.orig	2001-02-26 22:44:38.000000000 -0500
++++ glib.h	2008-11-18 12:51:35.000000000 -0500
+@@ -119,8 +119,12 @@
   *  defined then the current definition is correct.
   */
  #ifndef	NULL
@@ -15,7 +13,16 @@ $NetBSD: patch-aj,v 1.2 2006/01/12 19:49:15 joerg Exp $
  
  #ifndef	FALSE
  #define	FALSE	(0)
-@@ -271,14 +275,18 @@ extern "C" {
+@@ -204,7 +208,7 @@
+ #ifndef G_INLINE_FUNC
+ #  ifdef __GNUC__
+ #    ifdef __OPTIMIZE__
+-#      define G_INLINE_FUNC extern inline
++#      define G_INLINE_FUNC static inline
+ #    else
+ #      undef G_CAN_INLINE
+ #      define G_INLINE_FUNC extern
+@@ -271,14 +275,18 @@
  
  /* Wrap the gcc __PRETTY_FUNCTION__ and __FUNCTION__ variables with
   * macros, so we can refer to them as strings unconditionally.
