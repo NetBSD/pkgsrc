@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.449 2008/11/18 14:56:15 wiz Exp $
+# $NetBSD: Makefile,v 1.450 2008/11/18 15:46:28 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -355,6 +355,7 @@ SUBDIR+=	py-gnosis-utils
 SUBDIR+=	py-html2text
 SUBDIR+=	py-libxml2
 SUBDIR+=	py-libxslt
+SUBDIR+=	py-lxml
 SUBDIR+=	py-markdown
 SUBDIR+=	py-mecab
 SUBDIR+=	py-pygments
