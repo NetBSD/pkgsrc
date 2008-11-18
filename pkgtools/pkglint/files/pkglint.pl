@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.787 2008/11/18 19:39:49 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.788 2008/11/18 21:17:53 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6891,11 +6891,16 @@ sub checkfile_package_Makefile($$) {
 	if (defined($distname) && defined($pkgname)) {
 		$pkgname =~ s/\$\{DISTNAME\}/$distname/;
 
-		if ($pkgname =~ m"^(.*)\$\{DISTNAME:S(.)([^:]*)\2([^:]*)\2\}(.*)$") {
+		if ($pkgname =~ m"^(.*)\$\{DISTNAME:S(.)([^:]*)\2([^:]*)\2g?\}(.*)$") {
 			my ($before, $separator, $old, $new, $after) = ($1, $2, $3, $4, $5);
 			my $newname = $distname;
+			$old = quotemeta($old);
+			$old =~ s/^\\\^/^/;
+			$old =~ s/\\\$$/\$/;
 			$newname =~ s/$old/$new/;
+			$opt_debug_misc and $pkgname_line->log_debug("old pkgname=$pkgname");
 			$pkgname = $before . $newname . $after;
+			$opt_debug_misc and $pkgname_line->log_debug("new pkgname=$pkgname");
 		}
 	}
 
