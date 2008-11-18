@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.21 2008/10/19 19:18:12 he Exp $
+# $NetBSD: Makefile,v 1.22 2008/11/18 00:00:11 he Exp $
 #
 
-DISTNAME=	Mail-IMAPClient-3.08
+DISTNAME=	Mail-IMAPClient-3.11
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5mic
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~markov/Mail-IMAPClient/
+HOMEPAGE=	http://search.cpan.org/dist/Mail-IMAPClient/
 COMMENT=	Perl5 module for talking to RFC-2060 IMAP servers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
