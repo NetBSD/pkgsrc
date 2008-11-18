@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/11/18 12:46:52 drochner Exp $
+
+--- configure.orig	2008-11-18 12:40:01.000000000 +0100
++++ configure
+@@ -19384,7 +19384,7 @@ echo $ECHO_N "checking whether $PYTHON v
+       prog="import sys, string
+ # split strings by '.' and convert to numeric.  Append some zeros
+ # because we need at least 4 digits for the hex conversion.
+-minver = map(int, string.split('2.5', '.')) + [0, 0, 0]
++minver = map(int, string.split('2.4', '.')) + [0, 0, 0]
+ minverhex = 0
+ for i in xrange(0, 4): minverhex = (minverhex << 8) + minver[i]
+ sys.exit(sys.hexversion < minverhex)"
