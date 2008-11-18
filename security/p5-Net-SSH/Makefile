@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:18:46 he Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/18 16:19:04 he Exp $
 #
 
-DISTNAME=		Net-SSH-Perl-1.30
-PKGNAME=		p5-Net-SSH-1.30
-PKGREVISION=		1
+DISTNAME=		Net-SSH-Perl-1.33
+PKGNAME=		p5-Net-SSH-1.33
 SVR4_PKGNAME=		p5nsh
 CATEGORIES=		security net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
