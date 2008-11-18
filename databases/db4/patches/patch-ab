@@ -1,5 +1,5 @@
---- dist/configure.orig	2007-09-27 18:32:04 +0300
-+++ dist/configure	2008-05-09 01:20:00 +0300
+$NetBSD: patch-ab,v 1.20 2008/11/18 23:53:58 wiz Exp $
+
 --- dist/configure.orig	2008-05-15 23:12:41.000000000 +0200
 +++ dist/configure
 @@ -5913,6 +5913,7 @@ db_cv_gxx_except=no;
