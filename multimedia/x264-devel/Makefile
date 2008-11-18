@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/04/09 18:33:37 tron Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/18 22:08:32 rillig Exp $
 
 SNAPSHOT_DATE=		20071218
 
@@ -26,6 +26,9 @@ USE_LIBTOOL=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+.if ${INSTALL_UNSTRIPPED:Uno:M[Yy][Ee][Ss]}
+CONFIGURE_ARGS+=	--enable-debug
+.endif
 MAKE_ENV+=		SH=${SH:Q}
 
 BUILD_TARGET=		default
