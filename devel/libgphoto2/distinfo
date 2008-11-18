@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2008/11/14 18:55:32 chuck Exp $
+$NetBSD: distinfo,v 1.18 2008/11/18 18:05:16 chuck Exp $
 
 SHA1 (libgphoto2-2.4.3.tar.bz2) = 4fd95a933baec20ef1264b841dde5864fd00d982
 RMD160 (libgphoto2-2.4.3.tar.bz2) = 9ab2af4c8fb2cd1ed2ff6c58b32a5529285bbb69
@@ -7,3 +7,4 @@ SHA1 (patch-ab) = 921eea83471110dd85197a7171278c7d0556536b
 SHA1 (patch-aj) = 111b26861d59dddf7a8d0998cb7ae6513114fe38
 SHA1 (patch-ak) = b1e9243cf4d4c78995184b357ba36bdfb0471d76
 SHA1 (patch-al) = c5a49d96766a8c4b07d9507f0d47ed2a37f02839
+SHA1 (patch-am) = 57f781b4c7ef9898ba2016645e1b8884ba368a7d
