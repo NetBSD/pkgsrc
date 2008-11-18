@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/11/18 21:07:30 rillig Exp $
 
 DISTNAME=	upx-1.25-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -22,18 +22,18 @@ INSTALLATION_DIRS=	bin
 BUILDLINK_TRANSFORM=	rm:-mcpu=i686
 
 do-build:
-	cd ${WRKSRC:Q}/src && ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} PREFIX=${PREFIX:Q} target=netbsd	\
-			UCLDIR=${PREFIX:Q} LDLIBDIRS=-L${PREFIX:Q}/lib
-	cd ${WRKSRC:Q}/doc && ${MAKE_PROGRAM}
+	cd ${WRKSRC}/src && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} PREFIX=${PREFIX} target=netbsd	\
+			UCLDIR=${PREFIX} LDLIBDIRS=-L${PREFIX}/lib
+	cd ${WRKSRC}/doc && ${MAKE_PROGRAM}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/upx ${DESTDIR}${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/upx/
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.doc \
-		${DESTDIR}${PREFIX:Q}/share/doc/upx
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.html \
-		${DESTDIR}${PREFIX:Q}/share/doc/upx
+	${INSTALL_PROGRAM} ${WRKSRC}/src/upx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/upx/
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.doc \
+		${DESTDIR}${PREFIX}/share/doc/upx
+	${INSTALL_DATA} ${WRKSRC}/doc/upx.html \
+		${DESTDIR}${PREFIX}/share/doc/upx
 
 .include "../../devel/ucl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
