@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/01 08:31:38 obache Exp $
+$NetBSD: distinfo,v 1.2 2008/11/18 07:29:11 obache Exp $
 
-SHA1 (Pygments-0.10.tar.gz) = 09ca526b40655db993fdc9f1c1b89de525f32080
-RMD160 (Pygments-0.10.tar.gz) = 8bfe3e3f9267f8f9366ff4dd2c3ae9b10fa778d8
-Size (Pygments-0.10.tar.gz) = 836229 bytes
+SHA1 (Pygments-0.11.1.tar.gz) = 1209029a1b06c779c523e71a33d096ec7f1237d1
+RMD160 (Pygments-0.11.1.tar.gz) = a0ff959c56a4754ec17141f59c0679e7f2a073da
+Size (Pygments-0.11.1.tar.gz) = 865977 bytes
