@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2008/11/18 19:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.95 2008/11/18 23:22:23 wiz Exp $
 
-DISTNAME=	gnome-2.24.0.97
+DISTNAME=	gnome-2.24.0.98
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
-
-PKGREVISON=	1
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -56,7 +54,7 @@ DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
 DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
 # unpackaged
 #DEPENDS+=	gnome-power-manager>=2.24.1:../../*/gnome-power-manager
-#DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
+DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.24.0:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
 DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
