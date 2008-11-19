@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/11/14 22:06:37 hasso Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/19 03:39:57 hasso Exp $
 #
 
 DISTNAME=	sonata-1.5.2
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	musicpd>0:../../audio/musicpd
 
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	24 25
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 USE_DIRS+=	xdg-1.4
