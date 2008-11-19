@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/11/19 01:54:25 hira Exp $
 #
 
 OO_VER=			3.0.0
-PKGREVISION=		5
+PKGREVISION=		6
 OO_TAG=			OOO300_m9
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
@@ -130,7 +130,6 @@ OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
 PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
-MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications	\
 			lib/${OO_RELEASE}/extensions
@@ -139,7 +138,7 @@ OO_UNXNAME=	openoffice.org3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_LANGPACKPATH=${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice_languagepack/portable/install
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
-OO_PREFIX=	${DESTDIR}${PREFIX}/lib/${OO_RELEASE}
+OO_PREFIX=	${PREFIX}/lib/${OO_RELEASE}
 
 post-extract:
 	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
@@ -160,7 +159,7 @@ post-build:
 		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
-	cd ${OO_PREFIX} &&					\
+	cd ${DESTDIR}${OO_PREFIX} &&				\
 	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
 		tar xpf $$f;					\
 	done;			 				\
@@ -169,17 +168,17 @@ do-install:
 			tar xpf $$f;				\
 		done;						\
 	done
-	for d in ${OO_PREFIX}/${OO_UNXNAME}/share/xdg/*; do		\
+	for d in ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/share/xdg/*; do	\
 		ln -s $$d ${DESTDIR}${PREFIX}/share/applications;	\
 	done
-	cd ${OO_PREFIX}/${OO_UNXNAME}/basis-link/program &&	\
+	cd ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/basis-link/program &&	\
 	chmod ${SHAREMODE} hid.lst testtoolrc
-	for f in ${OO_PROGRAMS}; do				\
-		ln -sf ${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
-			${DESTDIR}${PREFIX}/bin/$$f;		\
+	for f in ${OO_PROGRAMS}; do					\
+		ln -sf ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
+			${DESTDIR}${PREFIX}/bin/$$f;			\
 	done
 	cd ${WRKDIR}/${OO_TAG}/solver/300/${OPENOFFICE_OUTPATH}.pro/bin &&  \
-	${INSTALL_DATA}	${OO_EXTENSIONS} ${OO_PREFIX}/extensions
+	${INSTALL_DATA}	${OO_EXTENSIONS} ${DESTDIR}${OO_PREFIX}/extensions
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
 		${DESTDIR}${PREFIX}/bin
