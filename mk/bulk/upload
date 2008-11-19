@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.43 2008/03/15 16:27:43 joerg Exp $
+# $NetBSD: upload,v 1.44 2008/11/19 16:27:14 sketch Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -164,7 +164,11 @@ IRIX*)  BMAKE=bmake;
 	CKSUM="cksum";
 	SYSVSUM="sum";
 	;;
-*)	BMAKE=bmake ;;
+*)	BMAKE=bmake;
+	BSDSUM="";
+	CKSUM="";
+	SYSVSUM="";
+	;;
 esac
 
 export BMAKE
@@ -230,6 +234,7 @@ packages=`cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=PACKAGES`
 distdir=`cd pkgtools/lintpkgsrc ; ${BMAKE} show-var VARNAME=DISTDIR`
 gzip_cmd=`cd pkgtools/lintpkgsrc; ${BMAKE} show-var VARNAME=GZIP_CMD USE_TOOLS=gzip`
 pkg_info=`cd pkgtools/lintpkgsrc && ${BMAKE} show-var VARNAME=PKG_INFO`
+shell=`cd pkgtools/lintpkgsrc && ${BMAKE} show-var VARNAME=TOOLS_PLATFORM.sh`
 
 # Pull in some pkgs needed
 for pkg in ${REQUIRED_PACKAGES}; do
@@ -269,7 +274,10 @@ failed=no
 cd $packages
 
 echo "upload> Checking for restricted and vulnerable packages"
-(cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" PKGVULNDIR="${distdir}" sh "${pkgsrcdir}/mk/bulk/sort-packages")
+(cd All && env PKG_INFO="${pkg_info}" OUTDIR="${TMP}" PKGVULNDIR="${distdir}" \
+               AUDIT_PACKAGES_FLAGS="${AUDIT_PACKAGES_FLAGS}" \
+	       DOWNLOAD_VULNERABILITY_LIST_FLAGS="${DOWNLOAD_VULNERABILITY_LIST_FLAGS}" \
+	       ${shell} "${pkgsrcdir}/mk/bulk/sort-packages")
 
 # Add the name of the package file, including all its symlinks to the
 # list of files to be uploaded.
@@ -343,7 +351,7 @@ chmod +x "$upload_general"
 
 if [ "$do_upload" = "yes" ]; then
 	echo "upload> Uploading non-vulnerable packages"
-	sh "$upload_general" \
+	${shell} "$upload_general" \
 	|| {
 		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_general" 1>&2
 		failed=yes
@@ -363,7 +371,7 @@ chmod +x "$upload_vulnerable"
 
 if [ "$do_upload" = "yes" ]; then
 	echo "upload> Uploading vulnerable packages"
-	sh "$upload_vulnerable" \
+	${shell} "$upload_vulnerable" \
 	|| {
 		echo "upload> ERROR: rsync failed.  To retry later, you can run $upload_vulnerable" 1>&2
 		failed=yes
