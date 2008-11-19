@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3064 2008/11/18 23:56:51 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3065 2008/11/19 01:56:35 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5162,3 +5162,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Lingua-Stem-Snowball to 0.952 [he 2008-11-18]
 	Updated textproc/p5-PDF-API2 to 0.72 [he 2008-11-18]
 	Updated pkgtools/pkglint to 4.90 [roland 2008-11-18]
+	Updated misc/openoffice3 to 3.0.0nb6 [hira 2008-11-19]
+	Updated misc/openoffice2 to 2.4.2nb2 [hira 2008-11-19]
