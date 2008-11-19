@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3065 2008/11/19 01:56:35 hira Exp $
+$NetBSD: CHANGES-2008,v 1.3066 2008/11/19 11:40:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5164,3 +5164,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkglint to 4.90 [roland 2008-11-18]
 	Updated misc/openoffice3 to 3.0.0nb6 [hira 2008-11-19]
 	Updated misc/openoffice2 to 2.4.2nb2 [hira 2008-11-19]
+	Updated graphics/libexif to 0.6.17 [adam 2008-11-19]
