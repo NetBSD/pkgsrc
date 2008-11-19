@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2008/08/07 15:51:11 joerg Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/11/19 21:16:03 minskim Exp $
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
@@ -18,8 +18,6 @@ CONFIGURE_ARGS+=	--with-epsfwin
 CONFIGURE_ARGS+=	--with-hp2627win
 CONFIGURE_ARGS+=	--with-mftalkwin
 CONFIGURE_ARGS+=	--with-x11
-CONFIGURE_ARGS+=	--with-system-wwwlib
-CONFIGURE_ARGS+=	--with-libwww-config=${LOCALBASE}/bin/libwww-config
 CONFIGURE_ARGS+=	--with-system-ncurses
 CONFIGURE_ARGS+=	--with-ncurses-include=${BUILDLINK_PREFIX.ncurses}/include
 CONFIGURE_ARGS+=	--with-ncurses-libdir=${BUILDLINK_PREFIX.ncurses}/lib
@@ -54,7 +52,6 @@ OWN_DIRS_PERMS+=	${TEXFONTSDIR}/pk ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 OWN_DIRS_PERMS+=	${TEXFONTSDIR}/source ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 OWN_DIRS_PERMS+=	${TEXFONTSDIR}/tfm ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 
-.include "../../www/libwww/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
