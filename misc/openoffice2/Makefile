@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.58 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2008/11/19 01:54:25 hira Exp $
 #
 
 OO_VER=			2.4.2
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -124,7 +124,6 @@ OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
 PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
-MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications
 
@@ -132,7 +131,7 @@ OO_UNXNAME=	openoffice.org2.4
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_LANGPACKPATH=${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice_languagepack/portable/install
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
-OO_PREFIX=	${DESTDIR}${PREFIX}/lib/${OO_RELEASE}
+OO_PREFIX=	${PREFIX}/lib/${OO_RELEASE}
 
 post-extract:
 	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
@@ -152,7 +151,7 @@ post-build:
 		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
-	cd ${OO_PREFIX} &&					\
+	cd ${DESTDIR}${OO_PREFIX} &&				\
 	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
 		tar xpf $$f;					\
 	done;							\
@@ -161,13 +160,13 @@ do-install:
 			tar xpf $$f;				\
 		done;						\
 	done
-	for d in ${OO_PREFIX}/share/xdg/*; do			\
+	for d in ${DESTDIR}${OO_PREFIX}/share/xdg/*; do			\
 		ln -s $$d ${DESTDIR}${PREFIX}/share/applications;	\
 	done
-	cd ${OO_PREFIX}/program &&				\
+	cd ${DESTDIR}${OO_PREFIX}/program &&			\
 	chmod ${SHAREMODE} hid.lst testtoolrc
 	for f in ${OO_PROGRAMS}; do				\
-		ln -sf ${OO_PREFIX}/program/$$f			\
+		ln -sf ${DESTDIR}${OO_PREFIX}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;		\
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
