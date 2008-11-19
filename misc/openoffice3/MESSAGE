@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/10/24 11:35:28 hira Exp $
+$NetBSD: MESSAGE,v 1.4 2008/11/19 01:54:25 hira Exp $
 
   OpenOffice.org has now been installed in ${OO_PREFIX}.
 
   Before using this package for the first time, each user has to run
   a setup program, which is automatically invoked at the first start.
   Thereafter, OpenOffice can be started using the
-  ${DESTDIR}${PREFIX}/bin/soffice command.
+  ${PREFIX}/bin/soffice command.
 
   And the files of platform dependent extensions have been installed in
   ${OO_PREFIX}/extensions.
@@ -14,8 +14,8 @@ $NetBSD: MESSAGE,v 1.3 2008/10/24 11:35:28 hira Exp $
   How to install/uninstall the extensions:
 
     For all users (run by root):
-      ${DESTDIR}${PREFIX}/bin/unopkg add --shared /path/to/extension.oxt
-      ${DESTDIR}${PREFIX}/bin/unopkg remove --shared extension.oxt
+      ${PREFIX}/bin/unopkg add --shared /path/to/extension.oxt
+      ${PREFIX}/bin/unopkg remove --shared extension.oxt
 
     Per user:
       Run the above commands without `--shared' or use Extension Manager.
