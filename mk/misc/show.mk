@@ -1,4 +1,4 @@
-# $NetBSD: show.mk,v 1.8 2007/10/16 21:33:00 wiz Exp $
+# $NetBSD: show.mk,v 1.9 2008/11/19 08:06:36 rillig Exp $
 #
 # This file contains some targets that print information gathered from
 # variables. They do not modify any variables.
@@ -18,6 +18,21 @@ show-tools: .PHONY
 # show-build-defs:
 #	Prints the variables that can be configured by the pkgsrc user
 #	in mk.conf, and the effects that those settings have.
+#
+# Package-settable variables:
+#
+# BUILD_DEFS
+#	The list of variables that influence the build. These variables
+#	are user-settable, and their values will be recorded in the
+#	binary package.
+#
+# System-provided variables:
+#
+# BUILD_DEFS_EFFECTS
+#	The list of variables whose values have been set depending on
+#	some of the variables in BUILD_DEFS. These variables are system-
+#	settable and therefore should not be modified directly by the
+#	pkgsrc user or a package maintainer.
 #
 
 BUILD_DEFS?=		# none
