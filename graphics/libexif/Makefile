@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2007/06/16 21:17:52 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2008/11/19 11:39:05 adam Exp $
 
-DISTNAME=	libexif-0.6.16
+DISTNAME=	libexif-0.6.17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libexif/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
 PKGCONFIG_OVERRIDE=	libexif.pc.in
