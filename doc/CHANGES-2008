@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3069 2008/11/19 14:49:28 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3070 2008/11/19 21:17:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5168,3 +5168,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/mutt-devel to 1.5.18nb1 [wiz 2008-11-19]
 	Updated net/md-whois to 4.7.28 [taca 2008-11-19]
 	Updated mail/squirrelmail to 1.4.16nb1 [taca 2008-11-19]
+	Updated print/teTeX3-bin to 3.0nb20 [minskim 2008-11-19]
