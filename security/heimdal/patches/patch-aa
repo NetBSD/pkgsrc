@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.5 2008/11/19 13:27:33 hasso Exp $
+
+--- cf/install-catman.sh.orig	2008-05-15 12:20:05 +0300
++++ cf/install-catman.sh	2008-05-15 12:21:08 +0300
+@@ -13,8 +13,9 @@ suffix="$1"; shift
+ catinstall="${INSTALL_CATPAGES-yes}"
+ 
+ for f in "$@"; do
+-	base=`echo "$f" | sed 's/\(.*\)\.\([^.]*\)$/\1/'`
+-	section=`echo "$f" | sed 's/\(.*\)\.\([^.]*\)$/\2/'`
++	echo $f
++	base=`echo "$f" | sed 's/\([^/]*\/\)*\(.*\)\.\([^.]*\)$/\2/'`
++	section=`echo "$f" | sed 's/\([^/]*\/\)*\(.*\)\.\([^.]*\)$/\3/'`
+ 	mandir="$manbase/man$section"
+ 	catdir="$manbase/cat$section"
+ 	c="$base.cat$section"
