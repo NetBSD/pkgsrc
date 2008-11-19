@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2008/10/31 11:02:55 hira Exp $
+# $NetBSD: options.mk,v 1.22 2008/11/19 01:54:25 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -16,7 +16,7 @@ OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
-PKG_SUGGESTED_OPTIONS=		gtk2 lang-en-US firefox
+PKG_SUGGESTED_OPTIONS=		firefox3 gtk2 lang-en-US
 PKG_OPTIONS_LEGACY_OPTS+=	gnome-vfs:gnome
 
 .include "../../mk/bsd.options.mk"
