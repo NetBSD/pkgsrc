@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/11/20 18:15:28 wiz Exp $
+
+--- configure.orig	2008-11-20 17:52:52.000000000 +0000
++++ configure
+@@ -27374,7 +27374,7 @@ fi
+        if test "x$GSD_ESD_LOCATION" != "x"; then
+            # Add slash so that if the ESD pkgconfig file does not
+            # specify esd_serverdir, g-s-d will look in the PATH
+-           GSD_ESD_LOCATION="$GSD_ESD_LOCATION/"
++           ESD_LOCATION="$GSD_ESD_LOCATION/"
+        fi
+ fi
+ 
