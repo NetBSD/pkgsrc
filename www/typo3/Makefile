@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/13 13:28:37 taca Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/20 15:50:56 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -84,12 +84,6 @@ PRINT_PLIST_AWK+=	/^@dirrm ${TYPO3DIR:S|/|\\/|g}\/${SITEDIR}/ \
 SITEDIR?=	www
 TYPO3DIR?=	share/typo3
 
-.if !empty(CHECK_FILES:M[yY][eE][sS])
-PAX_KEEP=	-pm
-.else
-PAX_KEEP=
-.endif
-
 post-extract:
 	${CP} ${FILESDIR}/README ${WRKDIR}
 
@@ -98,9 +92,9 @@ pre-install:
 
 do-install:
 	cd ${WRKSRC}; \
-	    pax -rw ${PAX_KEEP} . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
+	    pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
-		pax -rw ${PAX_KEEP} . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
+		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
 		${DESTDIR}${PREFIX}/${EGDIR}
