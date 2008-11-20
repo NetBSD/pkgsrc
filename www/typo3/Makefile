@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6.2.1 2008/11/13 15:29:28 tron Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2008/11/20 15:58:22 tron Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-VER=		4.2.2
+VER=		4.2.3
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
@@ -91,7 +91,8 @@ pre-install:
 	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
 
 do-install:
-	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
+	cd ${WRKSRC}; \
+	    pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
 		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
 	${RM} -f ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
