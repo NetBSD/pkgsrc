@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2006/01/02 10:33:28 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/20 02:19:26 chuck Exp $
 
---- detex.l.orig	1999-05-12 17:45:53.000000000 +0000
-+++ detex.l
-@@ -27,9 +27,7 @@ static char	rcsid[] = "$Header: /p/src/l
+--- detex.l.orig	2008-11-19 20:20:18.000000000 -0500
++++ detex.l	2008-11-19 20:20:54.000000000 -0500
+@@ -59,9 +59,7 @@
  #ifndef MAXPATHLEN
  #include <sys/param.h>
  #endif
@@ -11,9 +11,9 @@ $NetBSD: patch-ab,v 1.1 2006/01/02 10:33:28 joerg Exp $
 -#endif
  
  #define	LaBEGIN		if (fLatex) BEGIN
- #define	CITEBEGIN	if (fLatex && !fCite) BEGIN
-@@ -38,9 +36,6 @@ static char	rcsid[] = "$Header: /p/src/l
- #define	NEWLINE		if (!fWord) putchar('\n')
+ #define	IGNORE		if (fSpace && !fWord) putchar(' ')
+@@ -73,9 +71,6 @@
+ #define	CITE(x)		if (fLatex && !fCite) KILLARGS(x)
  
  char	*SafeMalloc();
 -#ifndef NO_MALLOC_DECL
