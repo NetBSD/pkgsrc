@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7700 2008/11/18 11:14:45 adam Exp $
+$NetBSD: TODO,v 1.7701 2008/11/20 17:43:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,7 @@ Suggested package updates
 	o apsfilter-7.2.8
 	o aqsis-1.4.1
 	o argtable-2.9
-	o aria2-0.16.2
+	o aria2-1.0.0
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
@@ -409,6 +409,7 @@ Suggested package updates
 	o aterm-1.0.1
 	o auctex-11.85
 	o autoconvert-0.3.16
+	o autogen-5.9.6
 	o avcheck-0.91
 	o avl-2.0.2a
 	o avr-binutils-2.17
@@ -476,7 +477,7 @@ Suggested package updates
 	o cook-2.31
 	o courier-0.60.0
 	o courier-imap-4.4.0
-	o covered-20081030
+	o covered-20081119
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -495,6 +496,7 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o ddclient-3.7.3
+	o ddrescue-1.9
 	o defendguin-0.0.11
 	o delegate-9.7.5
 	o devIL-1.7.1
@@ -591,7 +593,7 @@ Suggested package updates
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
-	o gdm-2.24.0
+	o gdm-2.24.1
 	o gdsreader-0.3.2
 	o geany-0.15
 	o geda-1.4.1.20080929
@@ -654,6 +656,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
+	o gutenprint-5.2.2
 	o gv-3.6.6
 	o gworkspace-0.8.6
 	o hackbot-2.21
@@ -722,7 +725,7 @@ Suggested package updates
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
-	o lapack-20070226
+	o lapack-3.2
 	o latd-1.21
 	o latex2rtf-1.9.19
 	o lcc-4.2
@@ -773,7 +776,7 @@ Suggested package updates
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
-	o libv4l-0.5.3
+	o libv4l-0.5.4
 	o licq-1.3.6
 	o lincvs-2.1.1 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -800,7 +803,7 @@ Suggested package updates
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.2.2
+	o mathomatic-14.2.3
 	o mcrypt-2.6.6
 	o memtestplus-2.10
 	o merb-0.9.4 (and related plugins)
@@ -933,7 +936,7 @@ Suggested package updates
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parpd-1.1 [pkg/39789]
-	o parrot-0.8.0
+	o parrot-0.8.1
 	o pcal-4.8
 	o pcmanfm-0.5
 	o pdmenu-1.2.87
@@ -1035,6 +1038,7 @@ Suggested package updates
 	o py-psycopg-2.0.8
 	o py-pytz-2008i
 	o py-reportlab-2.2
+	o py-sip-4.7.9
 	o py-soappy-0.11.6
 	o py-sybase-0.37
 	o py-textile-2.0.11
@@ -1049,6 +1053,7 @@ Suggested package updates
 	o qemu-0.9.1
 	o qnetwalk-1.3
 	o qpopper-4.0.14
+	o qt3-qscintilla-2.3.2
 	o quagga-0.99.11
 	o qvplay-0.95
 	o radiance-3.7.2
@@ -1140,7 +1145,7 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.24.0
-	o source-highlight-2.10
+	o source-highlight-2.11
 	o sox-14.2.0
 	o spcaview-20060501
 	o spim-7.3
@@ -1175,7 +1180,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-20.0.0
+	o tea-21.0.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
@@ -1196,6 +1201,8 @@ Suggested package updates
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
+	o trac-0.11.2.1
+	o transcode-1.0.7
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1211,6 +1218,7 @@ Suggested package updates
 	o udunits-1.12.9
 	o uim-1.5.4
 	o unicap-0.9.3
+	o unixodbc-2.2.13
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
 	o uriparser-0.7.3
