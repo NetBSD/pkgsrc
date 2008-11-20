@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.7 2007/08/23 14:10:29 hauke Exp $
+$NetBSD: patch-ab,v 1.8 2008/11/20 13:45:29 hauke Exp $
 
---- ra.sh.orig	2007-06-18 23:01:07.000000000 +0200
+--- ra.sh.orig	2008-06-05 02:08:07.000000000 +0200
 +++ ra.sh
-@@ -29,7 +29,7 @@ TLSLEVEL="_RADMIND_AUTHLEVEL"
- EDITOR=${EDITOR:-vi}
+@@ -30,7 +30,7 @@ EDITOR=${EDITOR:-vi}
+ PAGER=${PAGER:-cat}
  USER=${SUDO_USER:-$USER}
  TMPDIR="${TMPDIR:=/tmp}"
 -DEFAULTS="/etc/defaults/radmind"
 +DEFAULTS="_PKG_SYSCONFDIR/radmind.defaults"
  FSDIFFROOT="."
+ DEFAULTWORKDIR="/"
  FLAG="_RADMIND_DIR/client/.RadmindRunning"
- CHECKEDOUT="_RADMIND_DIR/client/.CheckedOut"
-@@ -40,7 +40,7 @@ VERSION=_RADMIND_VERSION
+@@ -42,7 +42,7 @@ VERSION=_RADMIND_VERSION
  PREAPPLY="_RADMIND_PREAPPLY"
  POSTAPPLY="_RADMIND_POSTAPPLY"
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.7 2007/08/23 14:10:29 hauke Exp $
  RETRY=10
  
  MKTEMP="_RADMIND_MKTEMP"
-@@ -56,14 +56,6 @@ fi
+@@ -58,14 +58,6 @@ fi
  LTMP="${RASHTMP}/lapply.out"
  FTMP="${RASHTMP}/fsdiff.out"
  
