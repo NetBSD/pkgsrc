@@ -1,18 +1,21 @@
-$NetBSD: patch-ac,v 1.8 2008/08/17 07:56:11 bjs Exp $
+$NetBSD: patch-ac,v 1.9 2008/11/20 16:44:45 adam Exp $
 
-Apple's gcc build >5400 (since Xcode 3.0) doesn't support GNU inline in C99 mode
-
---- gmp-h.in.orig	2008-07-23 06:22:16.000000000 -0400
+--- gmp-h.in.orig	2008-09-10 23:02:01.000000000 +0200
 +++ gmp-h.in
-@@ -423,8 +423,11 @@ typedef __mpq_struct *mpq_ptr;
+@@ -421,6 +421,8 @@ typedef __mpq_struct *mpq_ptr;
+     GCC 4.3 and above with -std=c99 or -std=gnu99 implements ISO C99
+     inline semantics, unless -fgnu89-inline is used.  */
+ #ifdef __GNUC__
++#if defined(__APPLE_CC__) && __APPLE_CC__ > 5400 && __STDC_VERSION__ >= 199901L
++#else
  #if (defined __GNUC_STDC_INLINE__) || (__GNUC__ == 4 && __GNUC_MINOR__ == 2)
  #define __GMP_EXTERN_INLINE extern __inline__ __attribute__ ((__gnu_inline__))
  #else
-+#if defined(__APPLE_CC__) && __APPLE_CC__ > 5400 && __STDC_VERSION__ >= 199901L
-+#else
- #define __GMP_EXTERN_INLINE      extern __inline__
+@@ -428,6 +430,7 @@ typedef __mpq_struct *mpq_ptr;
  #endif
-+#endif
  #define __GMP_INLINE_PROTOTYPES  1
  #endif
++#endif
  
+ /* DEC C (eg. version 5.9) supports "static __inline foo()", even in -std1
+    strict ANSI mode.  Inlining is done even when not optimizing (ie. -O0
