@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2008/09/06 14:42:53 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2008/11/20 17:42:27 wiz Exp $
 
---- audio_oss.c.orig	2008-07-15 16:00:03.000000000 +0000
+--- audio_oss.c.orig	2008-11-18 20:35:19.000000000 +0000
 +++ audio_oss.c
-@@ -19,7 +21,7 @@
+@@ -20,7 +20,7 @@
  #define ARCH_esd_audio_devices
  const char *esd_audio_devices()
  {
@@ -10,8 +10,8 @@ $NetBSD: patch-ab,v 1.7 2008/09/06 14:42:53 wiz Exp $
 +    return "/dev/audio, /dev/audio2, etc. or /dev/dsp, /dev/dsp2, etc.";
  }
  
- 
-@@ -38,7 +40,7 @@ int esd_audio_open()
+ #define NFRAGS 32
+@@ -56,7 +56,7 @@ int esd_audio_open()
      mode |= O_NONBLOCK;
  
      /* open the sound device */
