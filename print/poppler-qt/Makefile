@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/11/03 16:10:40 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/20 14:28:22 dillo Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -6,6 +6,7 @@
 PKGNAME=		poppler-qt-${POPPLER_VERS}
 
 COMMENT=		PDF rendering library (QT wrapper)
+MAINTAINER=		reed@reedmedia.net
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-cairo-output

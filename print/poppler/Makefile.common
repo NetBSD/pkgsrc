@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2008/11/10 20:59:27 wiz Exp $
+# $NetBSD: Makefile.common,v 1.23 2008/11/20 14:28:22 dillo Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-glib/Makefile
@@ -11,7 +11,6 @@ DISTNAME=		poppler-${POPPLER_VERS}
 CATEGORIES=		print
 MASTER_SITES=		http://poppler.freedesktop.org/
 
-MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://poppler.freedesktop.org/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
