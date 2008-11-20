@@ -1,0 +1,19 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/20 14:32:19 dillo Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+POPPLER_INCLUDES_BUILDLINK3_MK:=	${POPPLER_INCLUDES_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	poppler-includes
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npoppler-includes}
+BUILDLINK_PACKAGES+=	poppler-includes
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}poppler-includes
+
+.if !empty(POPPLER_INCLUDES_BUILDLINK3_MK:M+)
+BUILDLINK_API_DEPENDS.poppler-includes+=	poppler-includes>=0.10.0
+BUILDLINK_PKGSRCDIR.poppler-includes?=	../../print/poppler-includes
+.endif	# POPPLER_INCLUDES_BUILDLINK3_MK
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
