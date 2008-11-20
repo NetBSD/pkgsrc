@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3074 2008/11/20 17:42:40 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3075 2008/11/20 18:04:23 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5173,3 +5173,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/radmind to 1.13.0 [hauke 2008-11-20]
 	Added print/poppler-includes version 0.10.1 [dillo 2008-11-20]
 	Updated audio/esound to 0.2.41 [wiz 2008-11-20]
+	Updated devel/monodevelop to 1.9.1 [kefren 2008-11-20]
