@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3075 2008/11/20 18:04:23 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.3076 2008/11/20 18:15:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5174,3 +5174,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added print/poppler-includes version 0.10.1 [dillo 2008-11-20]
 	Updated audio/esound to 0.2.41 [wiz 2008-11-20]
 	Updated devel/monodevelop to 1.9.1 [kefren 2008-11-20]
+	Updated sysutils/gnome-settings-daemon to 2.24.0nb3 [wiz 2008-11-20]
