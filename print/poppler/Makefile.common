@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.23 2008/11/20 14:28:22 dillo Exp $
+# $NetBSD: Makefile.common,v 1.24 2008/11/20 14:33:00 dillo Exp $
 #
 # used by print/poppler/Makefile
 # used by print/poppler-glib/Makefile
+# used by print/poppler-includes/Makefile
 # used by print/poppler-qt/Makefile
 # used by print/poppler-qt4/Makefile
 # used by print/poppler-utils/Makefile
