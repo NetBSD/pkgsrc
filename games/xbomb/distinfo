@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2008/11/21 16:48:33 adam Exp $
 
-SHA1 (xbomb-2.1a.tgz) = 55a27717d13de310656641e675b743cc51ec4f51
-RMD160 (xbomb-2.1a.tgz) = 4e9a25ba71b32088c1ddf0fe9d129e28001d9102
-Size (xbomb-2.1a.tgz) = 23942 bytes
+SHA1 (xbomb-2.2.tgz) = 065d9283c92ff0dca844b637f237a381b1ad72c0
+RMD160 (xbomb-2.2.tgz) = 51a212d8cbe62d765e75751ae7b3d341ce6a3ada
+Size (xbomb-2.2.tgz) = 24872 bytes
 SHA1 (patch-aa) = b064540c8b092c5c317e2a91ff72a1ce1325509e
-SHA1 (patch-ab) = 4031c9e7d84560bdc449ce830eaca5277057c296
+SHA1 (patch-ab) = b9e4123e8ed936a8c4c8c5b533ffdefd7f2c0a98
