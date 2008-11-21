@@ -1,32 +1,28 @@
-# $NetBSD: Makefile,v 1.51 2008/11/10 17:21:37 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.52 2008/11/21 17:35:12 adam Exp $
 
-DISTNAME=	transcode-1.0.6
-PKGREVISION=	3
+DISTNAME=	transcode-1.0.7
 CATEGORIES=	multimedia
-MASTER_SITES=	http://fromani.exit1.org/
+MASTER_SITES=	http://download.berlios.de/tcforge/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.transcoding.org/
+HOMEPAGE=	http://tcforge.berlios.de/
 COMMENT=	Command line video-stream processing tool
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	awk:run gmake pkg-config
-USE_LANGUAGES=	c c++
-
-CONFIGURE_ENV+=		PATH_TO_AWK=${AWK:Q}
-CONFIGURE_ARGS+=	--enable-libpostproc
-CONFIGURE_ARGS+=	\
-	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
-CONFIGURE_ARGS+=	--enable-oss
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		awk:run gmake pkg-config
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-xio
+CONFIGURE_ARGS+=	--enable-libpostproc
+CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--enable-ogg
 CONFIGURE_ARGS+=	--enable-theora
 CONFIGURE_ARGS+=	--enable-vorbis
+CONFIGURE_ARGS+=	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
+CONFIGURE_ENV+=		PATH_TO_AWK=${AWK:Q}
 
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS=		require
@@ -40,8 +36,8 @@ PLIST.i386=	yes
 
 PLIST_VARS+=	i386
 
-
 .include "options.mk"
+
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
