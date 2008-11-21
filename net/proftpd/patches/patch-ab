@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.8 2008/10/03 06:52:03 martti Exp $
+$NetBSD: patch-ab,v 1.9 2008/11/21 08:00:36 martti Exp $
 
 Make this pkgsrc friendly.
 
---- configure.orig	2008-09-02 19:00:54.000000000 +0300
-+++ configure	2008-10-03 09:35:50.000000000 +0300
-@@ -36925,7 +36925,7 @@
+--- configure.orig	2008-11-19 05:54:50.000000000 +0200
++++ configure	2008-11-21 09:55:06.000000000 +0200
+@@ -37222,7 +37222,7 @@
  
  
  cat >>confdefs.h <<_ACEOF
@@ -13,7 +13,7 @@ Make this pkgsrc friendly.
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
-@@ -36933,7 +36933,7 @@
+@@ -37230,7 +37230,7 @@
  _ACEOF
  
  cat >>confdefs.h <<_ACEOF
