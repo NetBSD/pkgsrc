@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/07/10 13:54:56 dmcmahill Exp $
+# $NetBSD: options.mk,v 1.12 2008/11/21 14:09:30 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_SUPPORTED_OPTIONS=		bacula-static python 
@@ -18,11 +18,11 @@ CONFIGURE_ARGS+=	--with-sqlite3=${BUILDLINK_PREFIX.sqlite3}
 BACULA_DB=		sqlite3
 .elif !empty(PKG_OPTIONS:Mcatalog-pgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX:Q}
+CONFIGURE_ARGS+=	--with-postgresql=${PGSQL_PREFIX}
 BACULA_DB=		postgresql
 .elif !empty(PKG_OPTIONS:Mcatalog-mysql)
 .  include "../../mk/mysql.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-mysql=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-mysql=${PREFIX}
 BACULA_DB=		mysql
 .endif
 
@@ -49,4 +49,3 @@ PLIST_SUBST+=		STATIC=
 .else
 PLIST_SUBST+=		STATIC="@comment "
 .endif
-

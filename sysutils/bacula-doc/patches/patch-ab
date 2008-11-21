@@ -1,19 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2008/07/13 15:26:36 tonnerre Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/21 14:09:31 adam Exp $
 
---- manual/catmaintenance.tex.orig	2007-01-05 18:20:40.000000000 +0100
+--- manual/catmaintenance.tex.orig	2008-11-21 12:54:44.000000000 +0100
 +++ manual/catmaintenance.tex
-@@ -545,6 +545,8 @@ Job {
-   Storage = DLTDrive
-   Messages = Standard
-   Pool = Default
-+  # WARNING!!! Passing the password via the command line is insecure.
-+  # see comments in make_catalog_backup for details.
-   RunBeforeJob = "/home/kern/bacula/bin/make_catalog_backup"
-   RunAfterJob  = "/home/kern/bacula/bin/delete_catalog_backup"
-   Write Bootstrap = "/home/kern/bacula/working/BackupCatalog.bsr"
-@@ -573,6 +575,33 @@ you to quickly recover the database back
- you do not have a bootstrap file, it is still possible to recover your
- database backup, but it will be more work and take longer. 
+@@ -641,6 +641,33 @@ Only you can decide what is appropriate 
+ you with a starting point.  We hope it helps.
+ 
  
 +
 +\label{BackingUpBaculaSecurityConsiderations}
