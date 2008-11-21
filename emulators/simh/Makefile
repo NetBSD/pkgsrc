@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/11/01 05:15:42 obache Exp $
+# $NetBSD: Makefile,v 1.28 2008/11/21 17:36:43 chuck Exp $
 #
 
 DISTNAME=	simhv38-0
@@ -34,7 +34,9 @@ post-extract:
 
 do-install:
 	(cd ${WRKSRC}/BIN && for BIN in *; do				\
-		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN;	\
+		if [ -f $$BIN ] ; then					\
+		${INSTALL_PROGRAM} $$BIN ${DESTDIR}${PREFIX}/bin/simh-$$BIN; \
+		fi ;							\
 	done)
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/simh
 	${INSTALL_DATA} ${WRKSRC}/VAX/ka655x.bin ${DESTDIR}${PREFIX}/share/simh
