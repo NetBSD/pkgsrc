@@ -1,19 +1,19 @@
-$NetBSD: patch-ae,v 1.16 2008/10/18 11:43:45 adam Exp $
+$NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
 
---- configure.orig	2008-09-15 01:31:08.000000000 +0200
+--- configure.orig	2008-11-15 15:16:49.000000000 +0100
 +++ configure
-@@ -19759,8 +19759,8 @@ if test $ac_cv_file__usr_include_libxml2
+@@ -21813,8 +21813,8 @@ if test $ac_cv_file__usr_include_libxml2
    CFLAGS="$CFLAGS -I/usr/include/libxml2/"
  else
  
-- echo "$as_me:$LINENO: checking for /usr/local/include/libxml2/libxml" >&5
--echo $ECHO_N "checking for /usr/local/include/libxml2/libxml... $ECHO_C" >&6
-+ echo "$as_me:$LINENO: checking for ${PREFIX}/include/libxml2/libxml" >&5
-+echo $ECHO_N "checking for ${PREFIX}/include/libxml2/libxml... $ECHO_C" >&6
+- { echo "$as_me:$LINENO: checking for /usr/local/include/libxml2/libxml" >&5
+-echo $ECHO_N "checking for /usr/local/include/libxml2/libxml... $ECHO_C" >&6; }
++ { echo "$as_me:$LINENO: checking for ${PREFIX}/include/libxml2/libxml" >&5
++echo $ECHO_N "checking for ${PREFIX}/include/libxml2/libxml... $ECHO_C" >&6; }
  if test "${ac_cv_file__usr_local_include_libxml2_libxml+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -19768,7 +19768,7 @@ else
+@@ -21822,7 +21822,7 @@ else
    { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
  echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
     { (exit 1); exit 1; }; }
@@ -22,67 +22,37 @@ $NetBSD: patch-ae,v 1.16 2008/10/18 11:43:45 adam Exp $
    ac_cv_file__usr_local_include_libxml2_libxml=yes
  else
    ac_cv_file__usr_local_include_libxml2_libxml=no
-@@ -19777,7 +19777,7 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
- echo "${ECHO_T}$ac_cv_file__usr_local_include_libxml2_libxml" >&6
+@@ -21831,7 +21831,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
+ echo "${ECHO_T}$ac_cv_file__usr_local_include_libxml2_libxml" >&6; }
  if test $ac_cv_file__usr_local_include_libxml2_libxml = yes; then
 -  CFLAGS="$CFLAGS -I/usr/local/include -I/usr/local/include/libxml2/"
 +  CFLAGS="$CFLAGS -I${PREFIX}/include -I${PREFIX}/include/libxml2/"
  else
    cat >>confdefs.h <<\_ACEOF
  #define _NO_LIBXML 1
-@@ -22640,7 +22640,7 @@ fi
+@@ -24099,9 +24099,9 @@ else
+   :
+ fi
  
- # Standard set of common directories for X headers.
- # Check X11 before X11Rn because it is often a symlink to the current release.
--ac_x_header_dirs='
-+ac_x_header_dirs="
- /usr/X11/include
- /usr/X11R6/include
- /usr/X11R5/include
-@@ -22651,29 +22651,29 @@ ac_x_header_dirs='
- /usr/include/X11R5
- /usr/include/X11R4
- 
--/usr/local/X11/include
--/usr/local/X11R6/include
--/usr/local/X11R5/include
--/usr/local/X11R4/include
--
--/usr/local/include/X11
--/usr/local/include/X11R6
--/usr/local/include/X11R5
--/usr/local/include/X11R4
-+${prefix}/X11/include
-+${prefix}/X11R6/include
-+${prefix}/X11R5/include
-+${prefix}/X11R4/include
-+
-+${prefix}/include/X11
-+${prefix}/include/X11R6
-+${prefix}/include/X11R5
-+${prefix}/include/X11R4
- 
- /usr/X386/include
- /usr/x386/include
- /usr/XFree86/include/X11
- 
- /usr/include
--/usr/local/include
-+${prefix}/include
- /usr/unsupported/include
- /usr/athena/include
--/usr/local/x11r5/include
-+${prefix}/x11r5/include
- /usr/lpp/Xamples/include
- 
- /usr/openwin/include
--/usr/openwin/share/include'
-+/usr/openwin/share/include"
- 
- if test "$ac_x_includes" = no; then
-   # Guess where to find include files, by looking for Intrinsic.h.
-@@ -25686,7 +25686,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+-  if test "$pan_headers" != "" >& /dev/null ; then
++  if test "$pan_headers" != "" 2> /dev/null ; then
+     gww_haspango="done"
+-  elif pkg-config --libs pangoxft >& /dev/null ; then
++  elif pkg-config --libs pangoxft 2> /dev/null ; then
+     gww_CFLAGS="$CFLAGS"
+     CFLAGS="$CFLAGS $X_CFLAGS"
+     { echo "$as_me:$LINENO: checking for X11/Xft/Xft.h" >&5
+@@ -24169,7 +24169,7 @@ if test "$gww_haspango" = "yes" ; then
+  CFLAGS="$CFLAGS `pkg-config --cflags pangoxft`"
+ fi
+ if test "$gww_haspango" = "yes" -a "$gww_hascairo" = "yes" ; then
+-  if pkg-config --libs pangocairo >& /dev/null ; then
++  if pkg-config --libs pangocairo 2> /dev/null ; then
+     gww_haspangocairo="yes"
+     CFLAGS="$CFLAGS `pkg-config --cflags pangocairo`"
+   fi
+@@ -26602,7 +26602,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
