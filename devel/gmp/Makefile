@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.53 2008/10/09 10:56:16 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2008/11/21 11:27:31 bjs Exp $
 
 DISTNAME=	gmp-4.2.4
+PKGREVISION=	1
 CATEGORIES=	devel math
 MASTER_SITES=	${MASTER_SITE_GNU:=gmp/}
 EXTRACT_SUFX=	.tar.bz2
 
-#PATCHFILES=
-#PATCH_SITES+=		http://www.gmplib.org/patches/
-#PATCH_DIST_STRIP=	-p0
+PATCHFILES=		mpf_set_str.c.4.diff
+PATCHFILES+=		mpf_eq.diff
+PATCH_SITES+=		http://www.gmplib.org/patches/
+PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmplib.org/
@@ -21,7 +23,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gm4 autoconf
+USE_TOOLS+=		gm4 autoconf makeinfo
 
 CONFIGURE_ARGS+=	--enable-cxx --without-readline
 
@@ -43,13 +45,21 @@ GCC_REQD+=		3.0
 CONFIGURE_ENV+=		MPN_PATH="generic"
 .  else
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmp
-PKG_SUPPORTED_OPTIONS=	gmp-fat
-#PKG_SUGGESTED_OPTIONS=	gmp-fat		# XXX could be good for bulk builds (?)
+PKG_SUPPORTED_OPTIONS=	gmp-fat mmx simd
+PKG_SUGGESTED_OPTIONS=	gmp-fat
 .    include "../../mk/bsd.options.mk"
 ###
 ### Support for a "fat" binary on i386.  There's CPU autodetection,
 ### so we'll be safe and filter out -march/-mcpu, et. al.
 ###
+### XXX	Currently, the 'mmx' and 'simd' options imply the same thing,
+###	as cpu detection is done at runtime.  Is there a more elegant
+###	way to handle this?
+###
+.    if empty(PKG_OPTIONS:Mgmp-fat) &&	\
+        (!empty(PKG_OPTIONS:Mmmx) || !empty(PKG_OPTIONS:Msimd))
+PKG_OPTIONS+=	gmp-fat
+.    endif
 .    if !empty(PKG_OPTIONS:Mgmp-fat)
 CONFIGURE_ARGS+=	--enable-fat
 BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu
