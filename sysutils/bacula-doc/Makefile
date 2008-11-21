@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/07/13 15:26:36 tonnerre Exp $
+# $NetBSD: Makefile,v 1.17 2008/11/21 14:09:31 adam Exp $
 
-DISTNAME=		bacula-docs-2.0.2
-PKGREVISION=		1
+DISTNAME=		bacula-docs-2.4.3
 PKGNAME=		${DISTNAME:S/docs/doc/}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
@@ -17,16 +17,12 @@ NO_BUILD=		yes
 
 DOCDIR=			share/doc/bacula
 
-INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/manual ${DOCDIR}/developers
+INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/manual
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/manual/bacula/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/manual/
 	${INSTALL_DATA} ${WRKSRC}/manual/bacula/bacula.css  ${DESTDIR}${PREFIX}/${DOCDIR}/manual/
 	${INSTALL_DATA} ${WRKSRC}/manual/bacula/*.png  ${DESTDIR}${PREFIX}/${DOCDIR}/manual/
 	${INSTALL_DATA} ${WRKSRC}/manual/bacula.pdf  ${DESTDIR}${PREFIX}/${DOCDIR}/manual.pdf
-	${INSTALL_DATA} ${WRKSRC}/developers/developers/*.html ${DESTDIR}${PREFIX}/${DOCDIR}/developers/
-	${INSTALL_DATA} ${WRKSRC}/developers/developers/developers.css  ${DESTDIR}${PREFIX}/${DOCDIR}/developers/
-	${INSTALL_DATA} ${WRKSRC}/developers/developers/*.png  ${DESTDIR}${PREFIX}/${DOCDIR}/developers/
-	${INSTALL_DATA} ${WRKSRC}/developers/developers.pdf  ${DESTDIR}${PREFIX}/${DOCDIR}/developers.pdf
 
 .include "../../mk/bsd.pkg.mk"
