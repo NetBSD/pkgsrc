@@ -1,0 +1,63 @@
+$NetBSD: patch-ak,v 1.1 2008/11/21 21:09:57 chuck Exp $
+
+--- player/lib/audio/portaudio/pa_host.h.orig	2004-04-01 18:54:23.000000000 -0500
++++ player/lib/audio/portaudio/pa_host.h	2008-11-21 15:46:31.000000000 -0500
+@@ -48,18 +48,7 @@
+ #define SUPPORT_AUDIO_CAPTURE  (1)
+ #endif
+ 
+-#ifndef int32
+-    typedef long int32;
+-#endif
+-#ifndef uint32
+-    typedef unsigned long uint32;
+-#endif
+-#ifndef int16
+-    typedef short int16;
+-#endif
+-#ifndef uint16
+-    typedef unsigned short uint16;
+-#endif
++#include <inttypes.h>
+ 
+ /* Used to convert between various sample formats. */
+ typedef void (PortAudioConverter)(
+@@ -75,11 +64,11 @@
+ 
+ typedef struct internalPortAudioStream
+ {
+-    uint32                    past_Magic;  /* ID for struct to catch bugs. */
++    uint32_t                  past_Magic;  /* ID for struct to catch bugs. */
+     
+     /* Begin user specified information. */
+-    uint32                    past_FramesPerUserBuffer;
+-    uint32                    past_NumUserBuffers;
++    uint32_t                  past_FramesPerUserBuffer;
++    uint32_t                  past_NumUserBuffers;
+     double                    past_SampleRate;     /* Closest supported sample rate. */
+     int                       past_NumInputChannels;
+     int                       past_NumOutputChannels;
+@@ -89,7 +78,7 @@
+     PaSampleFormat            past_OutputSampleFormat;
+     PortAudioCallback        *past_Callback;
+     void                     *past_UserData;
+-    uint32                    past_Flags;
++    uint32_t                  past_Flags;
+     /* End user specified information. */
+     
+     void                     *past_DeviceData;
+@@ -102,11 +91,11 @@
+     volatile int              past_StopNow;       /* Background should stop playing now. */
+     /* These buffers are used when the native format does not match the user format. */
+     void                     *past_InputBuffer;
+-    uint32                    past_InputBufferSize; /* Size in bytes of the input buffer. */
++    uint32_t                  past_InputBufferSize; /* Size in bytes of the input buffer. */
+     void                     *past_OutputBuffer;
+-    uint32                    past_OutputBufferSize;
++    uint32_t                  past_OutputBufferSize;
+     /* Measurements */
+-    uint32                    past_NumCallbacks;
++    uint32_t                  past_NumCallbacks;
+     PaTimestamp               past_FrameCount;    /* Frames output to buffer. */
+     /* For measuring CPU utilization. */
+     double                    past_AverageInsideCount;
