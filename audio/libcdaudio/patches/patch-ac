@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2005/04/15 01:50:57 rh Exp $
+$NetBSD: patch-ac,v 1.2 2008/11/21 10:38:19 drochner Exp $
 
---- src/cddb.c.orig	2004-09-09 11:26:39.000000000 +1000
+--- src/cddb.c.orig	2004-09-09 03:26:39.000000000 +0200
 +++ src/cddb.c
 @@ -1052,7 +1052,7 @@ cddb_query(int cd_desc, int sock,
      }
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1 2005/04/15 01:50:57 rh Exp $
        slashed = 0;
        if(strchr(inbuffer, '/') != NULL && parse_disc_artist) {
  	index = 0;
+@@ -1679,7 +1679,7 @@ cddb_read_disc_data(int cd_desc, struct 
+       free(file);
+ 	 
+       while(!feof(cddb_data)) {
+-	fgets(inbuffer, 512, cddb_data);			   
++	fgets(inbuffer, 256, cddb_data);			   
+ 	cddb_process_line(inbuffer, data);
+       }
+ 	 
