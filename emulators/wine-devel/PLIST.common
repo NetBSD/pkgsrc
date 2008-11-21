@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2008/11/21 17:40:31 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2008/11/21 18:54:56 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -25,7 +25,6 @@ bin/winemine
 bin/winepath
 bin/wineprefixcreate
 bin/wineserver
-bin/wineshelllink
 bin/wmc
 bin/wrc
 include/wine/debug.h
@@ -594,6 +593,7 @@ lib/wine/ctl3d.dll16
 lib/wine/ctl3d32.dll.so
 lib/wine/ctl3dv2.dll16
 lib/wine/d3d10.dll.so
+lib/wine/d3d10core.dll.so
 lib/wine/d3d8.dll.so
 lib/wine/d3d9.dll.so
 lib/wine/d3dim.dll.so
@@ -709,6 +709,7 @@ lib/wine/libcryptnet.def
 lib/wine/libcryptui.def
 lib/wine/libctl3d32.def
 lib/wine/libd3d10.def
+lib/wine/libd3d10core.def
 lib/wine/libd3d8.def
 lib/wine/libd3d9.def
 lib/wine/libd3dim.def
@@ -829,6 +830,7 @@ lib/wine/libwow32.def
 lib/wine/libws2_32.def
 lib/wine/libwsock32.def
 lib/wine/libwtsapi32.def
+lib/wine/libxinput.def
 lib/wine/localspl.dll.so
 lib/wine/localui.dll.so
 lib/wine/lz32.dll.so
@@ -1055,6 +1057,10 @@ lib/wine/ws2_32.dll.so
 lib/wine/wsock32.dll.so
 lib/wine/wtsapi32.dll.so
 lib/wine/xcopy.exe.so
+lib/wine/xinput1_1.dll.so
+lib/wine/xinput1_2.dll.so
+lib/wine/xinput1_3.dll.so
+lib/wine/xinput9_1_0.dll.so
 man/de.UTF-8/man1/wine.1
 man/fr.UTF-8/man1/wine.1
 man/fr.UTF-8/man1/wineserver.1
