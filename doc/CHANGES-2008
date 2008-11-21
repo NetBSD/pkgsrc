@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3086 2008/11/21 17:36:27 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3087 2008/11/21 17:44:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5190,3 +5190,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/xbomb to 2.2 [adam 2008-11-21]
 	Updated graphics/ImageMagick to 6.4.6.0 [adam 2008-11-21]
 	Updated multimedia/transcode to 1.0.7 [adam 2008-11-21]
+	Added emulators/wine-devel version 1.1.8 [adam 2008-11-21]
