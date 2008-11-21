@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3077 2008/11/20 20:36:18 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3078 2008/11/21 00:23:04 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5176,3 +5176,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monodevelop to 1.9.1 [kefren 2008-11-20]
 	Updated sysutils/gnome-settings-daemon to 2.24.0nb3 [wiz 2008-11-20]
 	Updated mail/alpine to 2.00 [abs 2008-11-20]
+	Added net/twitux version 0.62 [jmcneill 2008-11-20]
