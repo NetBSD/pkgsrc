@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/21 14:56:24 wiz Exp $
 #
 
 DISTNAME=	compiz-bcop-0.6.0
-CATEGORIES=	wm x11
+CATEGORIES=	devel wm x11
 MASTER_SITES=	http://releases.compiz-fusion.org/0.6.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
