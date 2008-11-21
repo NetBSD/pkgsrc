@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1.1.1 2008/11/21 17:40:29 adam Exp $
+bin/wine-pthread
