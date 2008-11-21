@@ -1,18 +1,13 @@
-# $NetBSD: Makefile.common,v 1.45 2008/07/12 17:04:12 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.46 2008/11/21 14:09:30 adam Exp $
 
-DISTNAME=		bacula-2.2.4
+DISTNAME=		bacula-2.4.3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
 PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
-PATCHFILES=		2.2.4-lost-block.patch \
-			2.2.4-parse-command.patch \
-			2.2.4-poll-mount.patch \
-			2.2.4-replace.patch \
-			2.2.4-restore.patch \
-			2.2.4-sd-auth-fail.patch \
-			2.2.4-sql.patch \
-			2.2.4-verify.patch
+PATCHFILES=		2.4.3-orphaned-jobs.patch \
+			2.4.3-cancel-after-network-outage.patch \
+			2.4.3-update-slots.patch
 DIST_SUBDIR=		${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -21,6 +16,7 @@ COMMENT?=		The Network Backup Solution
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,11 +34,11 @@ BACULA_WORKINGDIR?=	${VARBASE}/spool/bacula
 
 BUILD_DEFS+=		VARBASE BACULA_PIDDIR BACULA_WORKINGDIR
 
-FILES_SUBST+=		BACULA_ETCDIR=${PKG_SYSCONFDIR:Q}
-FILES_SUBST+=		BACULA_PIDDIR=${BACULA_PIDDIR:Q}
-FILES_SUBST+=		BACULA_GROUP=${BACULA_GROUP:Q}
-FILES_SUBST+=		BACULA_DIR_USER=${BACULA_DIR_USER:Q}
-FILES_SUBST+=		BACULA_SD_USER=${BACULA_SD_USER:Q}
+FILES_SUBST+=		BACULA_ETCDIR=${PKG_SYSCONFDIR}
+FILES_SUBST+=		BACULA_PIDDIR=${BACULA_PIDDIR}
+FILES_SUBST+=		BACULA_GROUP=${BACULA_GROUP}
+FILES_SUBST+=		BACULA_DIR_USER=${BACULA_DIR_USER}
+FILES_SUBST+=		BACULA_SD_USER=${BACULA_SD_USER}
 
 SUBST_CLASSES+=		egdir
 SUBST_STAGE.egdir=	post-patch
@@ -55,11 +51,11 @@ SUBST_FILES.egdir+=	src/wx-console/Makefile.in
 SUBST_FILES.egdir+=	src/tray-monitor/Makefile.in
 SUBST_SED.egdir=	-e 's,%%EXAMPLESDIR%%,${EXAMPLESDIR},g'
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-scriptdir=${PREFIX}/libexec/bacula
 CONFIGURE_ARGS+=	--with-sbin-perm=0755
-CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR:Q}
-CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR:Q}
+CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
+CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${PREFIX}/include/readline
 
 .if ${OPSYS} == "Linux"
