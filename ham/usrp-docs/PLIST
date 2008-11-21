@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/02 13:58:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/21 23:32:50 wiz Exp $
 share/doc/gnuradio-${PKGVERSION}/usrp/ChangeLog
 share/doc/gnuradio-${PKGVERSION}/usrp/README
 share/doc/gnuradio-${PKGVERSION}/usrp/html/ad9862_8h-source.html
@@ -38,6 +38,7 @@ share/doc/gnuradio-${PKGVERSION}/usrp/html/classcircular__linked__list.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classcircular__linked__list__coll__graph.map
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classcircular__linked__list__coll__graph.md5
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classcircular__linked__list__coll__graph.png
+share/doc/gnuradio-${PKGVERSION}/usrp/html/classes.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classfusb__devhandle-members.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classfusb__devhandle.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classfusb__devhandle__coll__graph.map
@@ -148,9 +149,6 @@ share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__buffer-members.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__buffer.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__node-members.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__node.html
-share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__node__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__node__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/usrp/html/classs__node__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classusrp__basic-members.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classusrp__basic.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/classusrp__basic__coll__graph.map
