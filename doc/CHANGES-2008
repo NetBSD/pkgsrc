@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3083 2008/11/21 14:44:40 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.3084 2008/11/21 16:52:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5187,3 +5187,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/bacula-gnome-console to 2.4.3 [adam 2008-11-21]
 	Updated sysutils/bacula-tray-monitor to 2.4.3 [adam 2008-11-21]
 	Updated sysutils/bacula-wx-console to 2.4.3 [adam 2008-11-21]
+	Updated games/xbomb to 2.2 [adam 2008-11-21]
