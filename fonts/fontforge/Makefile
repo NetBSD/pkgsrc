@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/11/01 09:51:59 adam Exp $
+# $NetBSD: Makefile,v 1.54 2008/11/21 18:54:19 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20080927
+VERSION=	20081117
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -30,6 +30,8 @@ BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
