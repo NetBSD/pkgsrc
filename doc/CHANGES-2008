@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3088 2008/11/21 18:56:55 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3089 2008/11/21 23:18:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5193,3 +5193,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added emulators/wine-devel version 1.1.8 [adam 2008-11-21]
 	Updated fonts/fontforge to 20081117 [adam 2008-11-21]
 	Updated emulators/wine-devel to 1.1.9 [adam 2008-11-21]
+	Updated ham/gnuradio-core-docs to 3.0.4nb2 [wiz 2008-11-21]
