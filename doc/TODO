@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7702 2008/11/20 18:04:22 kefren Exp $
+$NetBSD: TODO,v 1.7703 2008/11/21 14:13:28 adam Exp $
 
 Suggested new packages
 ======================
@@ -417,9 +417,6 @@ Suggested package updates
 	o avrdude-5.3.1
 	o awesome-3.0
 	o baci-20040415
-	o bacula-2.2.8 [pkg/38572]
-	o bacula-2.4.3
-	o bacula-doc-2.0.3
 	o balance-3.42
 	o bbdb-2.35
 	o bbkeys-0.9.0
