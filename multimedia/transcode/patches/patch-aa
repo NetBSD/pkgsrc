@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2006/01/24 05:35:51 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2008/11/21 17:35:12 adam Exp $
 
---- Makefile.in.orig	2006-01-24 00:53:38.000000000 +0100
-+++ Makefile.in	2006-01-24 00:53:45.000000000 +0100
-@@ -405,7 +405,6 @@
+--- Makefile.in.orig	2008-11-15 10:57:34.000000000 +0100
++++ Makefile.in
+@@ -321,7 +321,6 @@ AUTOMAKE_OPTIONS = foreign
  @HAVE_PVM3_TRUE@PVM3 = pvm3
  SUBDIRS = \
  	libtc \

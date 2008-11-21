@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2008/09/15 12:46:44 abs Exp $
+$NetBSD: patch-ac,v 1.4 2008/11/21 17:35:12 adam Exp $
 
---- configure.orig	2008-07-26 10:06:43.000000000 +0200
+--- configure.orig	2008-11-15 10:57:26.000000000 +0100
 +++ configure
-@@ -9833,7 +9833,7 @@ fi
+@@ -9832,7 +9832,7 @@ fi
  
  
  case "$host_os" in
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2008/09/15 12:46:44 abs Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define SYS_BSD 1
-@@ -9865,7 +9865,7 @@ case "$host" in
+@@ -9864,7 +9864,7 @@ case "$host" in
  esac
  # let user override
  if test -n "$PTHREAD_LIBS" ; then
@@ -20,3 +20,38 @@ $NetBSD: patch-ac,v 1.3 2008/09/15 12:46:44 abs Exp $
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
+@@ -41961,7 +41961,7 @@ echo "${ECHO_T}default" >&6; }
+   for l in $imagemagick_ll ; do
+     case $l in
+       -L*) lpaths="$lpaths $l" ;;
+-      -l*) test x"$l" != x"-lMagick" && xlibs="$xlibs $l" ;;
++      -l*) test x"$l" != x"-lMagickCore" && xlibs="$xlibs $l" ;;
+         *) xlf="$xlf $l" ;;
+     esac
+   done
+@@ -41977,13 +41977,13 @@ echo "${ECHO_T}default" >&6; }
+   if test x"Magick" != x"none" ; then
+     save_LDFLAGS="$LDFLAGS"
+     LDFLAGS="$LDFLAGS $imagemagick_ll"
+-    { echo "$as_me:$LINENO: checking for InitializeMagick in -lMagick" >&5
+-echo $ECHO_N "checking for InitializeMagick in -lMagick... $ECHO_C" >&6; }
++    { echo "$as_me:$LINENO: checking for InitializeMagick in -lMagickCore" >&5
++echo $ECHO_N "checking for InitializeMagick in -lMagickCore... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_Magick_InitializeMagick+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lMagick $IMAGEMAGICK_EXTRA_LIBS $LIBS"
++LIBS="-lMagickCore $IMAGEMAGICK_EXTRA_LIBS $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -42039,7 +42039,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_Magick_InitializeMagick" >&5
+ echo "${ECHO_T}$ac_cv_lib_Magick_InitializeMagick" >&6; }
+ if test $ac_cv_lib_Magick_InitializeMagick = yes; then
+-  IMAGEMAGICK_LIBS="$imagemagick_ll -lMagick $IMAGEMAGICK_EXTRA_LIBS"
++  IMAGEMAGICK_LIBS="$imagemagick_ll -lMagickCore $IMAGEMAGICK_EXTRA_LIBS"
+ else
+ 
+ tc_pkg_err="yes"
