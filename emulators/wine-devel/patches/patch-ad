@@ -1,0 +1,85 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/21 17:40:31 adam Exp $
+
+--- dlls/iphlpapi/ipstats.c.orig	2008-07-11 17:55:55.000000000 +0200
++++ dlls/iphlpapi/ipstats.c
+@@ -28,6 +28,10 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
++#if defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++#include <unistd.h>
+ #ifdef HAVE_ALIAS_H
+ #include <alias.h>
+ #endif
+@@ -463,7 +467,7 @@ DWORD getICMPStats(MIB_ICMP *stats)
+ 
+ DWORD getIPStats(PMIB_IPSTATS stats)
+ {
+-#if defined(HAVE_SYS_SYSCTL_H) && defined(IPCTL_STATS)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(IPCTL_STATS) && !defined(__NetBSD__)
+   int mib[] = {CTL_NET, PF_INET, IPPROTO_IP, IPCTL_STATS};
+ #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
+   int ip_ttl, ip_forwarding;
+@@ -632,7 +636,7 @@ DWORD getIPStats(PMIB_IPSTATS stats)
+ 
+ DWORD getTCPStats(MIB_TCPSTATS *stats)
+ {
+-#if defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS) && !defined(__NetBSD__)
+ #ifndef TCPTV_MIN  /* got removed in Mac OS X for some reason */
+ #define TCPTV_MIN 2
+ #define TCPTV_REXMTMAX 128
+@@ -769,7 +773,7 @@ DWORD getTCPStats(MIB_TCPSTATS *stats)
+ 
+ DWORD getUDPStats(MIB_UDPSTATS *stats)
+ {
+-#if defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(UDPCTL_STATS) && !defined(__NetBSD__)
+   int mib[] = {CTL_NET, PF_INET, IPPROTO_UDP, UDPCTL_STATS};
+ #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
+   struct udpstat udp_stat;
+@@ -1011,7 +1015,11 @@ DWORD getNumRoutes(void)
+ 
+       /* Ignore all entries except for gateway routes which aren't
+          multicast */
++#if !defined(RTF_MULTICAST)
++      if (!(rtm->rtm_flags & RTF_GATEWAY))
++#else
+       if (!(rtm->rtm_flags & RTF_GATEWAY) || (rtm->rtm_flags & RTF_MULTICAST))
++#endif
+          continue;
+ 
+       RouteCount++;
+@@ -1087,8 +1095,12 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
+ 
+           /* Ignore all entries except for gateway routes which aren't
+              multicast */
++#if !defined(RTF_MULTICAST)
++          if (!(rtm->rtm_flags & RTF_GATEWAY))
++#else
+           if (!(rtm->rtm_flags & RTF_GATEWAY) ||
+               (rtm->rtm_flags & RTF_MULTICAST))
++#endif
+              continue;
+ 
+           memset (&table->table[table->dwNumEntries], 0,
+@@ -1249,7 +1261,7 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
+ 
+ DWORD getNumArpEntries(void)
+ {
+-#if defined(HAVE_SYS_SYSCTL_H) && defined(NET_RT_DUMP)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(NET_RT_DUMP) && !defined(__NetBSD__)
+   int mib[] = {CTL_NET, PF_ROUTE, 0, AF_INET, NET_RT_FLAGS, RTF_LLINFO};
+ #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
+   DWORD arpEntries = 0;
+@@ -1305,7 +1317,7 @@ DWORD getArpTable(PMIB_IPNETTABLE *ppIpN
+     if (numEntries > 1)
+       size += (numEntries - 1) * sizeof(MIB_IPNETROW);
+     table = HeapAlloc(heap, flags, size);
+-#if defined(HAVE_SYS_SYSCTL_H) && defined(NET_RT_DUMP)
++#if defined(HAVE_SYS_SYSCTL_H) && defined(NET_RT_DUMP) && !defined(__NetBSD__)
+     if (table)
+     {
+       int mib[] = {CTL_NET, PF_ROUTE, 0, AF_INET, NET_RT_FLAGS, RTF_LLINFO};

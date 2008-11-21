@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/11/21 17:40:31 adam Exp $
+
+--- dlls/ntdll/cdrom.c.orig	2008-06-27 16:24:42.000000000 +0200
++++ dlls/ntdll/cdrom.c
+@@ -65,6 +65,16 @@
+ #endif
+ #ifdef HAVE_LINUX_CDROM_H
+ # include <linux/cdrom.h>
++#else
++# ifndef CD_FRAMES
++#  define CD_FRAMES 75
++# endif
++# ifndef CDROM_MSF
++#  define CDROM_MSF 0x02
++# endif
++# ifndef CD_SECS
++#  define CD_SECS 60
++# endif
+ #endif
+ #ifdef HAVE_LINUX_UCDROM_H
+ # include <linux/ucdrom.h>
