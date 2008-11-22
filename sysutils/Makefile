@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.450 2008/11/22 15:21:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.451 2008/11/22 16:28:00 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -118,6 +118,7 @@ SUBDIR+=	gnome-system-tools
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
 SUBDIR+=	gnome-vfsmm
+SUBDIR+=	gnome-volume-manager
 SUBDIR+=	gnometoaster
 SUBDIR+=	gpart
 SUBDIR+=	grub
