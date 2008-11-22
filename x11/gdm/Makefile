@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2008/11/22 17:19:12 jmcneill Exp $
+# $NetBSD: Makefile,v 1.146 2008/11/22 17:35:15 wiz Exp $
 #
 
 DISTNAME=	gdm-2.20.7
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zenity>=2.16.0:../../x11/zenity
 
-BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
-
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -24,10 +22,7 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 BUILD_DEFS+=		VARBASE
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
-PKG_SUPPORTED_OPTIONS=	inet6 pam consolekit
-PKG_SUGGESTED_OPTIONS=	consolekit
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -93,21 +88,6 @@ GDMOWN=		daemon
 GDMGRP=		daemon
 .endif
 
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mconsolekit)
-CONFIGURE_ARGS+=	--with-console-kit=yes
-.include "../../sysutils/consolekit/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--with-console-kit=no
-.endif
-
 # The following forces the X server to start on the 5th virtual terminal.
 # This is suboptimal but matches the defaults for the xdm configuration,
 # which should work for most installations.  See the definition of
@@ -124,19 +104,6 @@ CONFIGURE_ARGS+=	--with-console-kit=no
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
-.endif
-
-PLIST_VARS+=		pam
-.if !empty(PKG_OPTIONS:Mpam)
-.  include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
-.  if ${PAM_TYPE} == "linux-pam"
-PLIST.pam=		yes
-.  endif
-.elif exists(/etc/shadow)
-CONFIGURE_ARGS+=	--enable-authentication-scheme=shadow
-.else
-CONFIGURE_ARGS+=	--enable-authentication-scheme=crypt
 .endif
 
 PLIST_VARS+=		dmx
@@ -156,6 +123,7 @@ PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
