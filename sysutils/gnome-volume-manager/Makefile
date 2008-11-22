@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 16:27:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/22 17:59:49 jmcneill Exp $
 #
 
 DISTNAME=	gnome-volume-manager-2.24.0
@@ -30,5 +30,6 @@ GCONF_SCHEMAS+=		gnome-volume-manager.schemas
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+DEPENDS+=	gnome-mount>=0.8:../../sysutils/gnome-mount
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
