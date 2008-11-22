@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+
+--- Makefile.in.orig	2008-11-22 09:25:09.000000000 -0500
++++ Makefile.in
+@@ -239,7 +239,7 @@ SUBDIRS = libhal libhal-storage partutil
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = hal.pc hal-storage.pc
+-dbusdir = $(DBUS_SYS_DIR)
++dbusdir = $(PREFIX)/share/examples/hal
+ dist_dbus_DATA = hal.conf
+ MAINTAINERCLEANFILES = ChangeLog
+ DISTCLEANFILES = hal.pc hal-storage.pc

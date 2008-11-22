@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+
+--- tools/hal-system-power-pmu.c.orig	2008-05-07 19:24:16.000000000 -0400
++++ tools/hal-system-power-pmu.c
+@@ -55,6 +55,8 @@ pmac_sleep (void)
+ {
+ #ifdef __FreeBSD__
+ 	return FALSE;			/* FIXME implement */
++#elif __NetBSD__
++	return FALSE;			/* FIXME implement */
+ #elif sun
+ 	return FALSE;			/* FIXME implement */
+ #elif __GNU__
+@@ -92,6 +94,8 @@ pmac_get_lcd_brightness (int *val)
+ {
+ #ifdef __FreeBSD__
+ 	return FALSE;			/* FIXME implement */
++#elif __NetBSD__
++	return FALSE;			/* FIXME implement */
+ #elif sun
+ 	return FALSE;			/* FIXME implement */
+ #elif __GNU__
+@@ -129,6 +133,8 @@ pmac_set_lcd_brightness (int val)
+ {
+ #ifdef __FreeBSD__
+ 	return FALSE;			/* FIXME implement */
++#elif __NetBSD__
++	return FALSE;			/* FIXME implement */
+ #elif sun
+ 	return FALSE;			/* FIXME implement */
+ #elif __GNU__

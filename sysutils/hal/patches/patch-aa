@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+
+--- tools/hal-storage-mount.c.orig	2008-05-07 19:24:23.000000000 -0400
++++ tools/hal-storage-mount.c
+@@ -41,6 +41,10 @@
+ #elif sun
+ #include <sys/mnttab.h>
+ #include <sys/vfstab.h>
++#elif __NetBSD__
++#include <fstab.h>
++#include <sys/param.h>
++#include <sys/mount.h>
+ #else
+ #include <mntent.h>
+ #endif
+@@ -58,6 +62,10 @@
+ #define MOUNT		"/sbin/mount"
+ #define MOUNT_OPTIONS	"noexec,nosuid"
+ #define MOUNT_TYPE_OPT	"-t"
++#elif __NetBSD__
++#define MOUNT		"/sbin/mount"
++#define MOUNT_OPTIONS	"noexec,nosuid,nodev"
++#define	MOUNT_TYPE_OPT	"-t"
+ #elif sun
+ #define MOUNT		"/sbin/mount"
+ #define MOUNT_OPTIONS	"noexec,nosuid"
+@@ -430,6 +438,13 @@ map_fstype (const char *fstype)
+ 		return "ext2fs";
+ 	else if (! strcmp (fstype, "vfat"))
+ 		return "msdosfs";
++#elif __NetBSD__
++	if (! strcmp (fstype, "iso9660"))
++		return "cd9660";
++	else if (! strcmp (fstype, "ext2"))
++		return "ext2fs";
++	else if (! strcmp (fstype, "vfat"))
++		return "msdosfs";
+ #elif sun
+ 	if (! strcmp (fstype, "iso9660"))
+ 		return "hsfs";

@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+
+--- tools/hal-storage-unmount.c.orig	2008-05-07 19:24:17.000000000 -0400
++++ tools/hal-storage-unmount.c
+@@ -38,6 +38,10 @@
+ #include <sys/mount.h>
+ #include <limits.h>
+ #include <pwd.h>
++#elif __NetBSD__
++#include <fstab.h>
++#include <sys/param.h>
++#include <sys/mount.h>
+ #elif sun
+ #include <fcntl.h>
+ #include <sys/mnttab.h>
