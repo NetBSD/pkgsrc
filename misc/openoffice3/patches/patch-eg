@@ -1,0 +1,8 @@
+$NetBSD: patch-eg,v 1.1 2008/11/22 07:57:03 hira Exp $
+
+--- sysui/desktop/share/openoffice.sh.orig	2008-11-22 11:15:35.000000000 +0900
++++ sysui/desktop/share/openoffice.sh	2008-11-22 11:19:10.000000000 +0900
+@@ -1,2 +1,2 @@
+ #!/bin/sh
+-exec /opt/%PREFIX/program/soffice "$@"
++exec @OO_PREFIX@/%PREFIX/program/soffice "$@"
