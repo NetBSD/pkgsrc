@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3099 2008/11/22 15:22:13 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3100 2008/11/22 16:29:19 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5215,3 +5215,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/usbids version 20081118 [jmcneill 2008-11-22]
 	Added devel/libvolume_id version 0.81.0 [jmcneill 2008-11-22]
 	Added sysutils/hal version 0.5.11 [jmcneill 2008-11-22]
+	Added sysutils/gnome-volume-manager version 2.24.0 [jmcneill 2008-11-22]
