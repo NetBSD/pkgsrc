@@ -1,8 +1,5 @@
-# $NetBSD: Makefile.NetBSD,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+# $NetBSD: Makefile.NetBSD,v 1.2 2008/11/22 07:57:03 hira Exp $
 #
-
-# This package needs native Java.
-PKG_JVMS_ACCEPTED=	jdk14 jdk15
 
 # *.pc files are required, but these don't exist on NetBSD.
 .if defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
