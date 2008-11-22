@@ -1,0 +1,3 @@
+Libvolume_id is an API for obtaining many file system related attributes
+(such as type, label, uuid, etc.) given an open file handle to a block
+special device.
