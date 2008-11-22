@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.41 2008/11/22 03:11:49 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.42 2008/11/22 03:24:04 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -118,3 +118,5 @@ Pullup ticket #2586 - requested by taca
 typo3: security update
 pullup ticket #2592 - requested by is
 slrn: fix for plist problem
+pullup ticket #2593 - requested by is
+slrn: patch makefile for formatting problem
