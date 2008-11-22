@@ -1,0 +1,108 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+bin/hal-device
+bin/hal-disable-polling
+bin/hal-find-by-capability
+bin/hal-find-by-property
+bin/hal-get-property
+bin/hal-is-caller-locked-out
+bin/hal-lock
+bin/hal-set-property
+bin/lshal
+include/hal/libhal-storage.h
+include/hal/libhal.h
+lib/hal/scripts/hal-dockstation-undock
+lib/hal/scripts/hal-functions
+lib/hal/scripts/hal-luks-remove
+lib/hal/scripts/hal-luks-setup
+lib/hal/scripts/hal-luks-teardown
+lib/hal/scripts/hal-system-killswitch-get-power
+lib/hal/scripts/hal-system-killswitch-set-power
+lib/hal/scripts/hal-system-lcd-get-brightness
+lib/hal/scripts/hal-system-lcd-set-brightness
+lib/hal/scripts/hal-system-power-hibernate
+lib/hal/scripts/hal-system-power-reboot
+lib/hal/scripts/hal-system-power-set-power-save
+lib/hal/scripts/hal-system-power-shutdown
+lib/hal/scripts/hal-system-power-suspend
+lib/hal/scripts/hal-system-power-suspend-hybrid
+lib/hal/scripts/hal-system-wol-enable
+lib/hal/scripts/hal-system-wol-enabled
+lib/hal/scripts/hal-system-wol-supported
+lib/libhal-storage.la
+lib/libhal.la
+lib/pkgconfig/hal-storage.pc
+lib/pkgconfig/hal.pc
+libexec/hal-storage-cleanup-all-mountpoints
+libexec/hal-storage-cleanup-mountpoint
+libexec/hal-storage-closetray
+libexec/hal-storage-eject
+libexec/hal-storage-mount
+libexec/hal-storage-unmount
+libexec/hal-system-power-pm-is-supported
+libexec/hal-system-power-pmu
+libexec/hal-system-setserial
+libexec/hald-generate-fdi-cache
+libexec/hald-runner
+man/man1/hal-disable-polling.1
+man/man1/hal-find-by-capability.1
+man/man1/hal-find-by-property.1
+man/man1/hal-get-property.1
+man/man1/hal-is-caller-locked-out.1
+man/man1/hal-lock.1
+man/man1/hal-set-property.1
+man/man1/lshal.1
+man/man8/hald.8
+sbin/hald
+share/examples/hal/hal.conf
+share/examples/rc.d/hal
+share/gtk-doc/html/libhal-storage/home.png
+share/gtk-doc/html/libhal-storage/index.html
+share/gtk-doc/html/libhal-storage/index.sgml
+share/gtk-doc/html/libhal-storage/ix01.html
+share/gtk-doc/html/libhal-storage/left.png
+share/gtk-doc/html/libhal-storage/libhal-storage-libhal-storage.html
+share/gtk-doc/html/libhal-storage/libhal-storage.devhelp
+share/gtk-doc/html/libhal-storage/libhal-storage.devhelp2
+share/gtk-doc/html/libhal-storage/license.html
+share/gtk-doc/html/libhal-storage/right.png
+share/gtk-doc/html/libhal-storage/rn01.html
+share/gtk-doc/html/libhal-storage/style.css
+share/gtk-doc/html/libhal-storage/up.png
+share/gtk-doc/html/libhal-storage/version.xml
+share/gtk-doc/html/libhal/home.png
+share/gtk-doc/html/libhal/index.html
+share/gtk-doc/html/libhal/index.sgml
+share/gtk-doc/html/libhal/ix01.html
+share/gtk-doc/html/libhal/left.png
+share/gtk-doc/html/libhal/libhal-libhal.html
+share/gtk-doc/html/libhal/libhal.devhelp
+share/gtk-doc/html/libhal/libhal.devhelp2
+share/gtk-doc/html/libhal/license.html
+share/gtk-doc/html/libhal/right.png
+share/gtk-doc/html/libhal/rn01.html
+share/gtk-doc/html/libhal/style.css
+share/gtk-doc/html/libhal/up.png
+share/hal/fdi/fdi.dtd
+share/hal/fdi/policy/10osvendor/10-dockstation.fdi
+share/hal/fdi/policy/10osvendor/10-input-policy.fdi
+share/hal/fdi/policy/10osvendor/10-laptop-panel-mgmt-policy.fdi
+share/hal/fdi/policy/10osvendor/10-power-mgmt-policy.fdi
+share/hal/fdi/policy/10osvendor/10-rfkill-switch.fdi
+share/hal/fdi/policy/10osvendor/10-tabletPCs.fdi
+share/hal/fdi/policy/10osvendor/10-x11-input.fdi
+share/hal/fdi/policy/10osvendor/15-storage-luks.fdi
+share/hal/fdi/policy/10osvendor/20-storage-methods.fdi
+share/hal/fdi/policy/10osvendor/30-wol.fdi
+@dirrm share/gtk-doc/html/libhal-storage
+@dirrm share/gtk-doc/html/libhal
+@dirrm lib/hal/scripts
+@dirrm lib/hal
+@dirrm include/hal
+@exec ${MKDIR} %D/etc/hal/fdi/preprobe
+@dirrm etc/hal/fdi/preprobe
+@exec ${MKDIR} %D/etc/hal/fdi/policy
+@dirrm etc/hal/fdi/policy
+@exec ${MKDIR} %D/etc/hal/fdi/information
+@dirrm etc/hal/fdi/information
+@dirrm etc/hal/fdi
+@dirrm etc/hal
