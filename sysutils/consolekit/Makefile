@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 03:32:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/22 19:33:05 jmcneill Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
 DISTNAME=		ConsoleKit-${CONSOLEKIT_VER}
 PKGNAME=		consolekit-${CONSOLEKIT_VER}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://people.freedesktop.org/~mccann/dist/
 EXTRACT_SUFX=		.tar.bz2
@@ -33,6 +34,10 @@ USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
+# TODO
+#CONFIGURE_ARGS+=	--enable-pam-module
+#.include "../../mk/pam.buildlink3.mk"
+
 post-extract:
 	cp ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
 
@@ -42,5 +47,4 @@ pre-configure:
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
