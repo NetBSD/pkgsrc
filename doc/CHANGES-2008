@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3097 2008/11/22 13:09:38 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3098 2008/11/22 13:49:52 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5213,3 +5213,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-gtk1 to 1.1.13 [ghen 2008-11-22]
 	Added sysutils/hal-info version 20081022 [jmcneill 2008-11-22]
 	Added misc/usbids version 20081118 [jmcneill 2008-11-22]
+	Added devel/libvolume_id version 0.81.0 [jmcneill 2008-11-22]
