@@ -1,0 +1,10 @@
+The grand plan with gnome-mount is to get the appropriate GNOME
+software (such as gnome-volume-manager and gnome-vfs) to use this
+instead of invoking mount(1)/umount(1)/eject(1) / invoking methods on
+HAL directly.
+
+Included in gnome-mount is also gnome-umount and gnome-eject. All
+programs utilize the methods on HAL and as such run unprivileged. The
+rationale for gnome-mount is to have a centralized place (in gconf)
+where settings (e.g. mount options, mount location) are
+maintained.
