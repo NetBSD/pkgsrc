@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/22 07:57:03 hira Exp $
+# $NetBSD: Makefile,v 1.18 2008/11/22 15:34:32 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -178,7 +178,6 @@ do-install:
 	cd ${WRKSRC}/solver/300/${OPENOFFICE_OUTPATH}.pro/bin &&  \
 	${INSTALL_DATA}	${OO_EXTENSIONS} ${DESTDIR}${OO_PREFIX}/extensions
 	cd ${WRKSRC}/sysui/${OPENOFFICE_OUTPATH}.pro/misc/openoffice.org && \
-	find ../../../desktop/icons -name '*.png' | xargs chmod -x &&	\
 	${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR} _PREFIX=${PREFIX}	\
 		GNOME=${PKG_OPTIONS:Mgnome} KDE=${PKG_OPTIONS:Mkde}	\
 		OO_PREFIX=${OO_PREFIX} ${SH} create_tree.sh
