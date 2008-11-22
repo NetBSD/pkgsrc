@@ -1,8 +1,5 @@
-# $NetBSD: Makefile.FreeBSD,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+# $NetBSD: Makefile.FreeBSD,v 1.2 2008/11/22 07:57:03 hira Exp $
 #
-
-# This package needs native Java.
-PKG_JVMS_ACCEPTED=      jdk14 jdk15
 
 BUILD_DEPENDS+=		coreutils>=*:../../sysutils/coreutils
 BUILD_DEPENDS+=		patch>=*:../../devel/patch
