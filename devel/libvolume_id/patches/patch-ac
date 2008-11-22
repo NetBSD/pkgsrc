@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/22 13:48:23 jmcneill Exp $
+
+--- util.c.orig	2008-11-22 08:34:15.000000000 -0500
++++ util.c
+@@ -28,7 +28,7 @@
+ #include "libvolume_id.h"
+ #include "util.h"
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ static size_t strnlen (const char *s, size_t maxlen)
+ {
+ 	size_t i;
