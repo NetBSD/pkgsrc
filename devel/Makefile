@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1075 2008/11/15 18:37:21 snj Exp $
+# $NetBSD: Makefile,v 1.1076 2008/11/22 13:49:01 jmcneill Exp $
 #
 
 COMMENT=	Development utilities
@@ -341,6 +341,7 @@ SUBDIR+=	libtool-base
 SUBDIR+=	libtool-info
 SUBDIR+=	libts
 SUBDIR+=	libusb
+SUBDIR+=	libvolume_id
 SUBDIR+=	libwhisker2
 SUBDIR+=	libwnck
 SUBDIR+=	lincvs
