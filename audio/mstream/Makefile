@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/10/25 15:23:38 kim Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/22 08:03:30 kim Exp $
 #
 
-DISTNAME=	mstream-1.2
+DISTNAME=	mstream-1.3
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.gw.com/pub/people/kim/
 
@@ -15,9 +15,11 @@ DEPENDS+=	p5-MP3-Info>=1.0:../../audio/p5-MP3-Info
 NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 
+DATADIR=	${LOCALBASE}/share/mstream
 MODDIR=		${LOCALBASE}/share/ices-mp3
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	DATADIR=${DATADIR:Q}
 MAKE_FLAGS+=	MODDIR=${MODDIR:Q}
 MAKE_FLAGS+=	PERL=${PERL5:Q}
 
