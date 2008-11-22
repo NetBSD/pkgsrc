@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.144 2008/11/18 19:21:04 rillig Exp $
+# $NetBSD: Makefile,v 1.145 2008/11/22 17:19:12 jmcneill Exp $
 #
 
 DISTNAME=	gdm-2.20.7
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +25,8 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 BUILD_DEFS+=		VARBASE
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gdm
-PKG_SUPPORTED_OPTIONS=	inet6 pam
+PKG_SUPPORTED_OPTIONS=	inet6 pam consolekit
+PKG_SUGGESTED_OPTIONS=	consolekit
 .include "../../mk/bsd.options.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
@@ -95,6 +97,15 @@ GDMGRP=		daemon
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mconsolekit)
+CONFIGURE_ARGS+=	--with-console-kit=yes
+.include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-console-kit=no
 .endif
 
 # The following forces the X server to start on the 5th virtual terminal.
