@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3098 2008/11/22 13:49:52 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3099 2008/11/22 15:22:13 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5214,3 +5214,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/hal-info version 20081022 [jmcneill 2008-11-22]
 	Added misc/usbids version 20081118 [jmcneill 2008-11-22]
 	Added devel/libvolume_id version 0.81.0 [jmcneill 2008-11-22]
+	Added sysutils/hal version 0.5.11 [jmcneill 2008-11-22]
