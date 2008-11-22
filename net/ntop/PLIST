@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/16 12:24:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/11/22 14:35:14 adam Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
+lib/libcpacketPlugin.a
+lib/libcpacketPlugin.so
 lib/libicmpPlugin-${PKGVERSION}.so
 lib/libicmpPlugin.a
 lib/libicmpPlugin.so
