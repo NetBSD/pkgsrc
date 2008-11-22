@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/22 13:06:40 jmcneill Exp $
+
+SHA1 (usbids-20081118.tar.gz) = 41e156cc2e1f1f5b0a221c3203d361531f67c53c
+RMD160 (usbids-20081118.tar.gz) = d6f8a58e7822efdcbee6b17048d1c158d4dc22bd
+Size (usbids-20081118.tar.gz) = 122012 bytes
