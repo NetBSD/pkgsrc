@@ -1,3 +1,5 @@
+/* $NetBSD: ck-sysdeps-netbsd.c,v 1.2 2008/11/22 19:33:05 jmcneill Exp $ */
+
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
  *
  * Copyright (C) 2006 William Jon McCann <mccann@jhu.edu>
@@ -121,16 +123,21 @@ static gboolean
 get_kinfo_proc (pid_t pid,
                 struct kinfo_proc2 *p)
 {
-        int    mib[4];
-        size_t len;
+	int name[6];
+	u_int namelen;
+	size_t sz;
 
-        len = 4;
-        sysctlnametomib ("kern.proc.pid", mib, &len);
+	sz = sizeof(*p);
+	namelen = 0;
+	name[namelen++] = CTL_KERN;
+	name[namelen++] = KERN_PROC2;
+	name[namelen++] = KERN_PROC_PID;
+	name[namelen++] = pid;
+	name[namelen++] = sz;
+	name[namelen++] = 1;
 
-        len = sizeof(struct kinfo_proc2);
-        mib[3] = pid;
-
-        if (sysctl (mib, 4, p, &len, NULL, 0) == -1) {
+        if (sysctl (name, namelen, p, &sz, NULL, 0) == -1) {
+		perror("sysctl kern.proc2.pid");
                 return FALSE;
         }
 
@@ -203,7 +210,6 @@ ck_process_stat_new_for_unix_pid (pid_t           pid,
                                   GError        **error)
 {
         gboolean       res;
-        GError        *local_error;
         CkProcessStat *proc;
 
         g_return_val_if_fail (pid > 1, FALSE);
@@ -218,7 +224,6 @@ ck_process_stat_new_for_unix_pid (pid_t           pid,
         if (res) {
                 *stat = proc;
         } else {
-                g_propagate_error (error, local_error);
                 *stat = NULL;
         }
 
