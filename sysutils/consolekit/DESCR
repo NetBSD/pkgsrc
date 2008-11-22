@@ -1,0 +1,4 @@
+ConsoleKit is a framework for keeping track of the various users, sessions,
+and seats present on a system. It provides a mechanism for software to react
+to changes of any of these items or of any of the metadata associated with
+them.
