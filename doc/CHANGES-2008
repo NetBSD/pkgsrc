@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3090 2008/11/21 23:33:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3091 2008/11/22 00:50:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5195,3 +5195,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine-devel to 1.1.9 [adam 2008-11-21]
 	Updated ham/gnuradio-core-docs to 3.0.4nb2 [wiz 2008-11-21]
 	Updated ham/usrp-docs to 3.0.4nb2 [wiz 2008-11-21]
+	Updated textproc/p5-Text-BibTeX to 0.38 [he 2008-11-22]
+	Updated textproc/p5-Text-CSV_XS to 0.58 [he 2008-11-22]
+	Updated textproc/p5-Text-Markdown to 1.0.24 [he 2008-11-22]
+	Updated textproc/p5-Text-SimpleTable to 0.05 [he 2008-11-22]
+	Updated textproc/p5-XML-AutoWriter to 0.39nb2 [he 2008-11-22]
+	Updated textproc/p5-XML-LibXML to 1.69 [he 2008-11-22]
+	Updated textproc/p5-XML-RSS to 1.37 [he 2008-11-22]
