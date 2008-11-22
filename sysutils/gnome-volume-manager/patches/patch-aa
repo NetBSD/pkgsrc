@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/22 16:27:14 jmcneill Exp $
+
+--- Makefile.in.orig	2008-09-23 17:38:05.000000000 -0400
++++ Makefile.in
+@@ -223,13 +223,13 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = src po
+ pkgdata_DATA = gnome-volume-properties.glade
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(datadir)/gconf/schemas
+ schema_in_files = gnome-volume-manager.schemas.in
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ desktopdir = $(datadir)/applications
+ desktop_in_files = gnome-volume-properties.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/gnome/autostart
+ autostart_in_files = gnome-volume-manager.desktop.in
+ autostart_in_in_files = gnome-volume-manager.desktop.in.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
