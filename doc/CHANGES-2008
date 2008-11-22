@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3092 2008/11/22 03:38:14 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3093 2008/11/22 07:58:22 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5205,3 +5205,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/consolekit version 0.3.0 [jmcneill 2008-11-21]
 	Added security/policykit version 0.9 [jmcneill 2008-11-21]
 	Added security/policykit-gnome version 0.9.2 [jmcneill 2008-11-21]
+	Updated misc/openoffice3 to 3.0.0nb7 [hira 2008-11-22]
