@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+
+--- tools/hal-luks-teardown.orig	2008-05-07 19:24:30.000000000 -0400
++++ tools/hal-luks-teardown
+@@ -47,9 +47,9 @@ fi
+ # TODO: this is a little sketchy; we should check for hal-storage-crypto-teardown-others?
+ #
+ IS_HOTPLUGGABLE=`hal-get-property --udi $HAL_PROP_BLOCK_STORAGE_DEVICE --key storage.hotpluggable`
+-if [ "$IS_HOTPLUGGABLE" == "true" ] ; then
++if [ "$IS_HOTPLUGGABLE" = "true" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-removable"
+-elif [ "$IS_HOTPLUGGABLE" == "false" ] ; then
++elif [ "$IS_HOTPLUGGABLE" = "false" ] ; then
+     ACTION="org.freedesktop.hal.storage.crypto-setup-fixed"
+ else
+     unknown_error
