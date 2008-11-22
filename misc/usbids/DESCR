@@ -1,0 +1,4 @@
+This package contains a public list of all known IDs used in USB devices;
+that is ID's of vendors, devices, subsystems and device classes.  These ID
+lists (usually in form of a usb.ids file) are used in various programs
+to display full device names instead of the numeric IDs.
