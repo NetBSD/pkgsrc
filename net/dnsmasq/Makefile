@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/11/17 23:12:12 ahoka Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/22 18:59:54 ahoka Exp $
 #
 
 DISTNAME=		dnsmasq-2.45
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
