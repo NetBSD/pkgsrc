@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2008/09/04 16:15:34 is Exp $
+$NetBSD: distinfo,v 1.12.4.1 2008/11/22 03:23:40 rtr Exp $
 
 SHA1 (slrn-0.9.9.tar.gz) = bdd6cedca404cf590d9dfdf30967f12c2f488796
 RMD160 (slrn-0.9.9.tar.gz) = a69e33d1faeef376c3193837bf0f474d10171ff4
 Size (slrn-0.9.9.tar.gz) = 1532550 bytes
 SHA1 (patch-af) = 0dbe90431bf4f4e7b8cec6c23da1ce7458a2ca38
+SHA1 (patch-ag) = 81f1b6d75d707049726d5b8dbedec1b7a4ded9ac
