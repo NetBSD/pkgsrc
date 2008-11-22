@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:18:56 he Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/22 00:15:22 he Exp $
 #
 
-DISTNAME=	Text-Markdown-1.0.21
+DISTNAME=	Text-Markdown-1.0.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BO/BOBTFISH/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Markdown/
