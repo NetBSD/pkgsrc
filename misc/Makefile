@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2008/11/03 10:30:20 markd Exp $
+# $NetBSD: Makefile,v 1.315 2008/11/22 13:07:59 jmcneill Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -207,6 +207,7 @@ SUBDIR+=	ttyrec
 SUBDIR+=	udfclient
 SUBDIR+=	ukpostcodes
 SUBDIR+=	uptimec
+SUBDIR+=	usbids
 SUBDIR+=	utftools
 SUBDIR+=	vera
 SUBDIR+=	vfu
