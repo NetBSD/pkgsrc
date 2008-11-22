@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
+
+--- Makefile.in.orig	2008-11-22 12:44:39.000000000 -0500
++++ Makefile.in
+@@ -248,7 +248,7 @@ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = src po
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(datadir)/gconf/schemas
+ schema_in_files = gnome-mount.schemas.in
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ pkgconfigdir = $(libdir)/pkgconfig

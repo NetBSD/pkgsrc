@@ -1,0 +1,126 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
+
+--- src/gnome-mount.c.orig	2008-04-16 19:41:32.000000000 -0400
++++ src/gnome-mount.c
+@@ -31,6 +31,10 @@
+ #include <string.h>
+ #include <stdlib.h>
+ 
++#ifdef __NetBSD__
++#include <locale.h>
++#endif
++
+ #include <dbus/dbus.h>
+ #include <dbus/dbus-glib-lowlevel.h>
+ #include <libhal.h>
+@@ -51,9 +55,9 @@
+ #define NOTIFY_EXPIRES_DEFAULT -1
+ #endif
+ 
+-#if !defined(sun) && !defined(__FreeBSD__)
++#if !defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ #include <mntent.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <fstab.h>
+ #include <sys/param.h>
+ #include <sys/ucred.h>
+@@ -677,7 +681,7 @@ static char *
+ get_mntent_mount_point(const char *device_file)
+ {
+ 	char *mount_point;
+-#if! defined(sun) && !defined(__FreeBSD__)
++#if! defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 	FILE *f;
+ 	struct mntent mnt;
+ 	struct mntent *mnte;
+@@ -686,6 +690,10 @@ get_mntent_mount_point(const char *devic
+ 	struct statfs *mounts;
+ 	int n_mounts;
+ 	int i;
++#elif defined(__NetBSD__)
++	struct statvfs *mounts;
++	int n_mounts;
++	int i;
+ #elif defined(sun)
+ 	FILE *f;
+ 	struct mnttab mnt;
+@@ -694,7 +702,7 @@ get_mntent_mount_point(const char *devic
+ 
+ 	mount_point = NULL;
+ 
+-#if !defined(sun) && !defined(__FreeBSD__)
++#if !defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 	if ((f = setmntent ("/proc/mounts", "r")) != NULL) {
+ 		
+ 		while ((mnte = getmntent_r (f, &mnt, buf, sizeof(buf))) != NULL) {
+@@ -717,13 +725,13 @@ get_mntent_mount_point(const char *devic
+ 		}
+ 		fclose(f);
+ 	}
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
+ 	n_mounts = getmntinfo(&mounts, MNT_NOWAIT);
+ 	for (i = 0; i < n_mounts; i++) {
+ 		if (!strcmp(mounts[i].f_mntfromname, device_file))
+ 			mount_point = g_strdup (mounts[i].f_mntonname);
+ 	}
+-#endif /* sun && __FreeBSD__ */
++#endif /* sun && __FreeBSD__ && __NetBSD__ */
+ 
+ out:
+ 	return (mount_point);
+@@ -862,7 +870,7 @@ out:
+ static gboolean
+ fstab_open (gpointer *handle)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 	return setfsent () == 1;
+ #else
+ 	*handle = fopen ("/etc/fstab", "r");
+@@ -873,7 +881,7 @@ fstab_open (gpointer *handle)
+ static char *
+ fstab_next (gpointer handle, char **mount_point)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 	struct fstab *fstab;
+ 
+ 	fstab = getfsent ();
+@@ -901,7 +909,7 @@ fstab_next (gpointer handle, char **moun
+ static void
+ fstab_close (gpointer handle)
+ {
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ 	endfsent ();
+ #else
+ 	fclose (handle);
+@@ -1116,7 +1124,7 @@ out:
+ 	return ret;
+ }
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #define MOUNT		"/sbin/mount"
+ #define UMOUNT		"/sbin/umount"
+ #else
+@@ -1451,7 +1459,7 @@ volume_mount (const char *udi, LibHalVol
+ 	if (volume == NULL && (mount_options->len == 0)) {
+ 		/* volume from a non-pollable drive, just set uid.. */
+ 		
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 		snprintf (uidbuf, sizeof (uidbuf) - 1, "uid=%u", getuid ());
+ #else
+ 		snprintf (uidbuf, sizeof (uidbuf) - 1, "-u=%u", getuid ());
+@@ -1482,7 +1490,7 @@ volume_mount (const char *udi, LibHalVol
+ 				g_debug ("read default option '%s' from gconf strlist key %s", option, key);
+ 
+ 				/* special workaround to replace "uid=" with "uid=<actual uid of caller>" */
+-#ifndef __FreeBSD__
++#if !defined(__FreeBSD__) && !defined(__NetBSD__)
+ 				if (strcmp (option, "uid=") == 0) {
+ 					g_free (option);
+ 					option = g_strdup_printf ("uid=%u", getuid ());
