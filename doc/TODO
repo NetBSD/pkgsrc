@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7706 2008/11/23 11:17:02 wiz Exp $
+$NetBSD: TODO,v 1.7707 2008/11/23 14:59:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -368,6 +368,7 @@ Suggested package updates
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
+	o akonadi-1.0.80
 	o album-4.01
 	o alee-ttf-11.2
 	o algae-4.3.6
@@ -485,6 +486,7 @@ Suggested package updates
 	o curl-7.19.2
 	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
+	o cvs2svn-2.2.0
 	o cvsd-1.0.14
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
@@ -511,7 +513,8 @@ Suggested package updates
 	o dnstracer-1.9
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.02
+	o duplicity-0.5.03
+	o dvdisaster-0.70.6 [pkg/40005]
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.0
 	o dwm-5.2
@@ -602,7 +605,7 @@ Suggested package updates
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
-	o gimp-2.6.2
+	o gimp-2.6.3
 	o gimp-docs-2.4.2
 	o gindent-2.2.9
 	o gkrellm-2.3.1
@@ -644,6 +647,7 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-ugly-0.10.10
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -734,6 +738,7 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.3 [pkg/39809]
 	o libFoundation-1.1.3
+	o libX11-1.1.99.2
 	o libast-0.7
 	o libcares-1.5.2
 	o libchewing-0.3.0
@@ -760,6 +765,7 @@ Suggested package updates
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
+	o libnotify-0.4.5
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
@@ -772,11 +778,12 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
-	o libtasn1-1.6
+	o libtasn1-1.7
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
-	o libv4l-0.5.4
+	o libtorrent-0.12.2
+	o libv4l-0.5.5
 	o licq-1.3.6
 	o lincvs-2.1.1 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -906,7 +913,9 @@ Suggested package updates
 	o p5-DateTime-TimeZone-0.83
 	o p5-Digest-MD5-2.38
 	o p5-File-Temp-0.21
+	o p5-HTML-Parser-3.58
 	o p5-HTTPD-User-Manage-1.62
+	o p5-IO-Socket-SSL-1.18
 	o p5-Locale-Maketext-Lexicon-0.68
 	o p5-MARC-1.38
 	o p5-Mail-IMAPClient-3.10
@@ -1024,6 +1033,7 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-html2text-2.35
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
@@ -1084,6 +1094,7 @@ Suggested package updates
 	o rpm-5.1.4
 	o rsnapshot-1.3.1
 	o rtcw-1.41.3
+	o rtorrent-0.8.2
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-SDL-2.0.1b
 	o ruby-haml-2.0.2
@@ -1199,6 +1210,7 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o tor-0.2.0.32
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.2.1
@@ -1260,7 +1272,7 @@ Suggested package updates
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20081108
+	o x264-devel-20081122
 	o xanalyser-1.30
 	o xapian-1.0.9
 	o xaric-0.13.2
