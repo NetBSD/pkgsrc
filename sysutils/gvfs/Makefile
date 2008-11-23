@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/10/24 21:48:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/23 03:28:50 jmcneill Exp $
 #
 
 DISTNAME=	gvfs-1.0.2
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,21 @@ USE_TOOLS+=	intltool gmake pkg-config msgfmt
 CONFIGURE_ARGS+=	--with-samba-includes=${LOCALBASE}/include
 CONFIGURE_ARGS+=	--with-samba-libs=${LOCALBASE}/lib/samba
 CONFIGURE_ARGS+=	--enable-http
+
+.include "../../mk/bsd.prefs.mk"
+
+PKG_OPTIONS_VAR=        PKG_OPTIONS.gvfs
+PKG_SUPPORTED_OPTIONS+= hal
+PKG_SUGGESTED_OPTIONS+= hal
+PLIST_VARS+=		hal
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mhal)
+.include "../../sysutils/hal/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-hal
+PLIST.hal=		yes
+.else
+CONFIGURE_ARGS+=	--disable-hal
+.endif
 
 BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.24
 
