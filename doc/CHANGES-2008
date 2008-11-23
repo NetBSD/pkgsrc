@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3108 2008/11/23 03:26:54 reed Exp $
+$NetBSD: CHANGES-2008,v 1.3109 2008/11/23 03:31:14 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5225,3 +5225,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gdm to 2.20.7nb2 [jmcneill 2008-11-22]
 	Updated sysutils/liboobs to 2.22.0nb1 [jmcneill 2008-11-22]
 	Updated shells/osh to 20081122 [reed 2008-11-23]
+	Updated sysutils/gvfs to 1.0.2nb1 [jmcneill 2008-11-22]
