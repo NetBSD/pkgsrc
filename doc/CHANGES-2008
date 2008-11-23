@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3113 2008/11/23 13:40:18 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3114 2008/11/23 13:47:41 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5230,3 +5230,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/sqlite3 to 3.6.6.1 [adam 2008-11-23]
 	Updated misc/deskbar-applet to 2.24.2 [wiz 2008-11-23]
 	Updated sysutils/gnome-volume-manager to 2.24.0nb1 [jmcneill 2008-11-23]
+	Updated sysutils/gnome-vfs to 2.24.0nb1 [jmcneill 2008-11-23]
+	Updated audio/gnome-vfs-cdda to 2.24.0nb1 [jmcneill 2008-11-23]
+	Updated net/gnome-vfs-smb to 2.24.0nb1 [jmcneill 2008-11-23]
