@@ -1,4 +1,4 @@
-/* $NetBSD: ck-sysdeps-netbsd.c,v 1.2 2008/11/22 19:33:05 jmcneill Exp $ */
+/* $NetBSD: ck-sysdeps-netbsd.c,v 1.3 2008/11/23 19:24:21 jmcneill Exp $ */
 
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*-
  *
@@ -194,7 +194,8 @@ stat2proc (pid_t        pid,
         }
 
         if (p.p_tdev == NODEV) {
-                memcpy (P->tty_text, "   ?   ", sizeof P->tty_text);
+		/* XXXJDM nasty hack */
+                memcpy (P->tty_text, "/dev/ttyE4", sizeof P->tty_text);
         }
 
         if (P->pid != pid) {
@@ -332,39 +333,12 @@ ck_unix_pid_get_login_session_id (pid_t  pid,
 gboolean
 ck_get_max_num_consoles (guint *num)
 {
-        int      max_consoles;
-        int      res;
-        gboolean ret;
-        struct ttyent *t;
-
-        ret = FALSE;
-        max_consoles = 0;
-
-        res = setttyent ();
-        if (res == 0) {
-                goto done;
-        }
-
-        while ((t = getttyent ()) != NULL) {
-                if (t->ty_status & TTY_ON && strncmp (t->ty_name, "ttyv", 4) == 0)
-                        max_consoles++;
-        }
-
-        /* Increment one more so that all consoles are properly counted
-         * this is arguable a bug in vt_add_watches().
-         */
-        max_consoles++;
-
-        ret = TRUE;
-
-        endttyent ();
-
-done:
+	/* XXXJDM how can we find out how many are configured? */
         if (num != NULL) {
-                *num = max_consoles;
+                *num = 8;
         }
 
-        return ret;
+        return TRUE;
 }
 
 char *
@@ -375,7 +349,7 @@ ck_get_console_device_for_num (guint num)
         /* The device number is always one less than the VT number. */
         num--;
 
-        device = g_strdup_printf ("/dev/ttyv%u", num);
+        device = g_strdup_printf ("/dev/ttyE%u", num);
 
         return device;
 }
@@ -394,7 +368,7 @@ ck_get_console_num_from_device (const char *device,
                 return FALSE;
         }
 
-        if (sscanf (device, "/dev/ttyv%u", &n) == 1) {
+        if (sscanf (device, "/dev/ttyE%u", &n) == 1) {
                 /* The VT number is always one more than the device number. */
                 n++;
                 ret = TRUE;
@@ -426,7 +400,7 @@ ck_get_active_console_num (int    console_fd,
                 goto out;
         }
 
-        g_debug ("Active VT is: %d (ttyv%d)", active, active - 1);
+        g_debug ("Active VT is: %d (ttyE%d)", active, active - 1);
         ret = TRUE;
 
  out:
