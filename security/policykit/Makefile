@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 03:33:38 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/23 02:00:48 jmcneill Exp $
 #
 
 POLICYKIT_VER=		0.9
 DISTNAME=		PolicyKit-${POLICYKIT_VER}
 PKGNAME=		policykit-${POLICYKIT_VER}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -39,6 +40,13 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-polkit-user=${POLICYKIT_USER}
 CONFIGURE_ARGS+=	--with-polkit-group=${POLICYKIT_GROUP}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/PolicyKit.conf.NetBSD ${EGDIR}/PolicyKit.conf
+.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
