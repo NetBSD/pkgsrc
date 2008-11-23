@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7705 2008/11/21 17:44:04 adam Exp $
+$NetBSD: TODO,v 1.7706 2008/11/23 11:17:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -488,6 +488,7 @@ Suggested package updates
 	o cvsd-1.0.14
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
+	o darcs-2.1.2
 	o dbench-4.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -647,6 +648,7 @@ Suggested package updates
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
+	o gtkimageview-1.6.3
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -763,6 +765,7 @@ Suggested package updates
 	o libopensync-0.35
 	o libowfat-0.28
 	o libpciaccess-0.10.5
+	o librep-0.17.2
 	o libshout-2.2.2
 	o libsoup-2.24.1
 	o libspf2-1.2.9
@@ -1064,6 +1067,7 @@ Suggested package updates
 	o redland-1.0.8.1
 	o regionset-0.2
 	o remind-03.01.06
+	o rep-gtk-0.18.3
 	o replex-0.1.6.8
 	o resize_image-0.7
 	o rio500-0.8.1
@@ -1253,7 +1257,7 @@ Suggested package updates
 	o wpa_gui-0.6.4 [pkg/39811]
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9d
-	o wxRemind-86
+	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
 	o x264-devel-20081108
