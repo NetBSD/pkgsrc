@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3118 2008/11/23 19:25:58 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3119 2008/11/23 21:25:48 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5238,3 +5238,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/suse100_fontconfig to 10.0nb6 [jmcneill 2008-11-23]
 	Updated x11/gnome-panel to 2.24.1nb1 [jmcneill 2008-11-23]
 	Updated sysutils/consolekit to 0.3.0nb2 [jmcneill 2008-11-23]
+	Updated security/policykit to 0.9nb2 [hasso 2008-11-23]
