@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/11/22 13:48:23 jmcneill Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/23 16:07:16 hasso Exp $
 
 --- linux_raid.c.orig	2008-11-22 08:33:51.000000000 -0500
 +++ linux_raid.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/11/22 13:48:23 jmcneill Exp $
  #include <errno.h>
  #include <ctype.h>
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/endian.h>
  #else
  #include <byteswap.h>
