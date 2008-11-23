@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/23 21:50:51 hasso Exp $
 bin/hal-device
 bin/hal-disable-polling
 bin/hal-find-by-capability
 bin/hal-find-by-property
 bin/hal-get-property
 bin/hal-is-caller-locked-out
+bin/hal-is-caller-privileged
 bin/hal-lock
 bin/hal-set-property
 bin/lshal
@@ -48,6 +49,7 @@ man/man1/hal-find-by-capability.1
 man/man1/hal-find-by-property.1
 man/man1/hal-get-property.1
 man/man1/hal-is-caller-locked-out.1
+man/man1/hal-is-caller-privileged.1
 man/man1/hal-lock.1
 man/man1/hal-set-property.1
 man/man1/lshal.1
@@ -93,6 +95,12 @@ share/hal/fdi/policy/10osvendor/10-x11-input.fdi
 share/hal/fdi/policy/10osvendor/15-storage-luks.fdi
 share/hal/fdi/policy/10osvendor/20-storage-methods.fdi
 share/hal/fdi/policy/10osvendor/30-wol.fdi
+share/PolicyKit/policy/org.freedesktop.hal.dockstation.policy
+share/PolicyKit/policy/org.freedesktop.hal.killswitch.policy
+share/PolicyKit/policy/org.freedesktop.hal.policy
+share/PolicyKit/policy/org.freedesktop.hal.power-management.policy
+share/PolicyKit/policy/org.freedesktop.hal.storage.policy
+share/PolicyKit/policy/org.freedesktop.hal.wol.policy
 @dirrm share/gtk-doc/html/libhal-storage
 @dirrm share/gtk-doc/html/libhal
 @dirrm lib/hal/scripts
