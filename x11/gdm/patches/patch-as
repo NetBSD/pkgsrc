@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2008/11/23 22:06:49 jmcneill Exp $
+
+--- daemon/getvt.h.orig	2008-11-23 16:08:55.000000000 -0500
++++ daemon/getvt.h	2008-11-23 16:09:13.000000000 -0500
+@@ -31,6 +31,10 @@
+ #define GDM_USE_CONSIO_VT
+ #endif
+ 
++#if defined(__NetBSD__)
++#define GDM_USE_WSCONS_VT
++#endif
++
+ /* gets an argument we should pass to the X server, on
+  * linux for example we get the first empty vt (higher than
+  * or equal to GDM_KEY_FIRST_VT) and then return vt<number>
