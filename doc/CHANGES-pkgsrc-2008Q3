@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.42 2008/11/22 03:24:04 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.43 2008/11/23 21:54:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -120,3 +120,7 @@ pullup ticket #2592 - requested by is
 slrn: fix for plist problem
 pullup ticket #2593 - requested by is
 slrn: patch makefile for formatting problem
+Pullup ticket #2594 - requested by ghen
+seamonkey: security update
+seamonkey-bin: security update
+seamonkey-gtk1: security update
