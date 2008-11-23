@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/15 18:28:56 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/23 16:21:05 jmcneill Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.0
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 
@@ -11,14 +12,32 @@ COMMENT=		DBus interface for system configuration
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.system-tools-backends
+PKG_SUPPORTED_OPTIONS+=	hal
+PKG_SUGGESTED_OPTIONS+=	hal
+
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mhal)
+.include "../../security/policykit/buildlink3.mk"
+.include "../../sysutils/hal/buildlink3.mk"
+.endif
+
+EGDIR=		${PREFIX}/share/examples/system-tools-backends
+CONF_FILES+=	${EGDIR}/system-tools-backends.conf ${PKG_SYSCONFDIR}/dbus-1/system.d/system-tools-backends.conf
+
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
-CONFIGURE_ARGS+=	--with-stb-group=${ROOT_GROUP}
+STB_GROUP?=		stb-admin
+PKG_GROUPS=		${STB_GROUP}
+PKG_GROUPS_VARS+=	STB_GROUP
+
+CONFIGURE_ARGS+=	--with-stb-group=${STB_GROUP}
 CONFIGURE_ARGS+=	--localstatedir=/var
+CONFIGURE_ARGS+=	--with-dbus-sys=${EGDIR}
 
 DEPENDS+=	p5-XML-Twig>=3.32:../../textproc/p5-XML-Twig
 DEPENDS+=	p5-Net-DBus>=0.33.6:../../net/p5-Net-DBus
