@@ -1,13 +1,13 @@
-# $NetBSD: generate.awk,v 1.1 2007/08/23 20:42:32 jlam Exp $
+# $NetBSD: generate.awk,v 1.2 2008/11/23 17:24:56 jmcneill Exp $
 #
 # AWK script to replace @FONTDIR_ENTRIES@ with a list of <dir></dir>
 # entries taken from the "entries" array.  We do variable replacement
-# for ${LOCALBASE} and ${X11PREFIX} using the values of LOCALBASE and
-# X11PREFIX that are passed to the script.
+# for ${LOCALBASE} and ${X11BASE} using the values of LOCALBASE and
+# X11BASE that are passed to the script.
 #
 
 BEGIN {
-	entries[0]  = "${X11PREFIX}/lib/X11/fonts"
+	entries[0]  = "${X11BASE}/lib/X11/fonts"
 	entries[1]  = "${LOCALBASE}/OpenOffice.org1.1.5/share/fonts"
 	entries[2]  = "${LOCALBASE}/openoffice.org2.2/share/fonts"
 	entries[3]  = "${LOCALBASE}/java/blackdown-1.3.1/lib/fonts"
@@ -22,14 +22,14 @@ BEGIN {
 	num_entries = 12
 
 	LOCALBASE = ENVIRON["LOCALBASE"] ? ENVIRON["LOCALBASE"] : "/usr/pkg"
-	X11PREFIX = ENVIRON["X11PREFIX"] ? ENVIRON["X11PREFIX"] : "/usr/X11R6"
+	X11BASE = ENVIRON["X11BASE"] ? ENVIRON["X11BASE"] : "/usr/X11R6"
 }
 
 /^@FONTDIR_ENTRIES@/ {
 	for (i = 0; i < num_entries; i++) {
 		entry = entries[i]
 		sub("[$]{LOCALBASE}", LOCALBASE, entry)
-		sub("[$]{X11PREFIX}", X11PREFIX, entry)
+		sub("[$]{X11BASE}", X11BASE, entry)
 		print "	<dir>" entry "</dir>"
 	}
 	next
