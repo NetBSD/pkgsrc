@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 18:28:56 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/23 16:21:05 jmcneill Exp $
 bin/system-tools-backends
-etc/dbus-1/system.d/system-tools-backends.conf
 lib/pkgconfig/system-tools-backends-2.0.pc
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.GroupsConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.HostsConfig.service
@@ -14,6 +13,7 @@ share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.TimeConfig.serv
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UserConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.UsersConfig.service
 share/dbus-1/system-services/org.freedesktop.SystemToolsBackends.service
+share/examples/system-tools-backends/system-tools-backends.conf
 share/system-tools-backends-2.0/files/general_gprs_chatscript
 share/system-tools-backends-2.0/files/general_isdn_ppp_options
 share/system-tools-backends-2.0/files/general_pppoe_ppp_options
@@ -51,6 +51,7 @@ share/system-tools-backends-2.0/scripts/Utils/Replace.pm
 share/system-tools-backends-2.0/scripts/Utils/Report.pm
 share/system-tools-backends-2.0/scripts/Utils/Util.pm
 share/system-tools-backends-2.0/scripts/Utils/XML.pm
+@dirrm share/examples/system-tools-backends
 @dirrm share/system-tools-backends-2.0/scripts/Utils
 @dirrm share/system-tools-backends-2.0/scripts/Users
 @dirrm share/system-tools-backends-2.0/scripts/Time
