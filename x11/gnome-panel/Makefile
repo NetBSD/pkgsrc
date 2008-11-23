@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2008/10/24 22:49:53 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2008/11/23 17:32:12 jmcneill Exp $
 #
 
 DISTNAME=		gnome-panel-2.24.1
+PKGREVISION=		1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +12,10 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 panel application
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+EGDIR=		${PREFIX}/share/examples/gnome-panel
+CONF_FILES+=	${PREFIX}/share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf \
+		${PKG_SYSCONFDIR}/dbus-1/system.d/org.gnome.ClockApplet.Mechanism.conf
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -37,9 +42,17 @@ BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.5.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-panel
-PKG_SUPPORTED_OPTIONS=	evolution
-PKG_SUGGESTED_OPTIONS=	evolution
+PKG_SUPPORTED_OPTIONS=	evolution hal
+PKG_SUGGESTED_OPTIONS=	evolution hal
+PLIST_VARS+=		hal
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mhal)
+.include "../../security/policykit/buildlink3.mk"
+.include "../../security/policykit-gnome/buildlink3.mk"
+.include "../../sysutils/hal/buildlink3.mk"
+PLIST.hal=		yes
+.endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

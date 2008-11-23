@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2008/10/24 22:49:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2008/11/23 17:32:12 jmcneill Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -15,10 +15,14 @@ lib/libpanel-applet-2.la
 lib/pkgconfig/libpanelapplet-2.0.pc
 libexec/clock-applet
 libexec/fish-applet-2
+${PLIST.hal}libexec/gnome-clock-applet-mechanism
 libexec/notification-area-applet
 libexec/wnck-applet
 man/man1/gnome-panel.1
+${PLIST.hal}share/PolicyKit/policy/org.gnome.clockapplet.mechanism.policy
 share/applications/gnome-panel.desktop
+${PLIST.hal}share/dbus-1/system-services/org.gnome.ClockApplet.Mechanism.service
+${PLIST.hal}share/examples/gnome-panel/org.gnome.ClockApplet.Mechanism.conf
 share/gconf/schemas/clock.schemas
 share/gconf/schemas/fish.schemas
 share/gconf/schemas/panel-compatibility.schemas
@@ -505,6 +509,7 @@ share/omf/workspace-switcher/workspace-switcher-ru.omf
 share/omf/workspace-switcher/workspace-switcher-sv.omf
 share/omf/workspace-switcher/workspace-switcher-uk.omf
 share/omf/workspace-switcher/workspace-switcher-vi.omf
+${PLIST.hal}@dirrm share/examples/gnome-panel
 @dirrm share/omf/workspace-switcher
 @dirrm share/omf/window-list
 @dirrm share/omf/gnome-panel
