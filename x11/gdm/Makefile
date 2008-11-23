@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.147 2008/11/23 02:24:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.148 2008/11/23 22:06:49 jmcneill Exp $
 #
 
 DISTNAME=	gdm-2.20.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -72,6 +72,8 @@ SUBST_SED.desktop=	-e 's/^_//g'
 SUBST_SED.desktop+=	-e 's|^User=gdm$$|User=${GDMOWN}|g'
 SUBST_SED.desktop+=	-e 's|^Group=gdm$$|Group=${GDMGRP}|g'
 SUBST_SED.desktop+=	-e 's|^\#GtkTheme=.*$$|GtkTheme=Clearlooks|g'
+SUBST_SED.desktop+=	-e 's|^\#FirstVT=.*$$|FirstVT=5|g'
+SUBST_SED.desktop+=	-e 's|^\#VTAllocation=.*$$|VTAllocation=true|g'
 .if ${OPSYS} == "NetBSD"
 SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=${PREFIX}/share/pixmaps/NetBSD.xpm|g'
 .endif
