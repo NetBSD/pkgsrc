@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/09 10:57:23 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/11/23 15:16:42 wiz Exp $
 man/man8/openvpn.8
 sbin/openvpn
 share/examples/openvpn/config/README
@@ -61,4 +61,3 @@ share/openvpn/easy-rsa/whichopensslcnf
 @dirrm share/examples/openvpn/keys
 @dirrm share/examples/openvpn/config
 @dirrm share/examples/openvpn
-@dirrm share/doc/openvpn
