@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.14 2008/10/12 11:15:22 tron Exp $
+$NetBSD: patch-ab,v 1.15 2008/11/23 01:40:26 jmcneill Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2008-10-06 22:14:50.000000000 +0100
-+++ dbus/dbus-sysdeps-unix.c	2008-10-12 12:01:54.000000000 +0100
-@@ -35,6 +35,9 @@
+--- dbus/dbus-sysdeps-unix.c.orig	2008-10-06 17:14:50.000000000 -0400
++++ dbus/dbus-sysdeps-unix.c
+@@ -23,6 +23,7 @@
+  */
+ 
+ #define _GNU_SOURCE 
++#define _NETBSD_SOURCE
+ 
+ #include "dbus-internals.h"
+ #include "dbus-sysdeps.h"
+@@ -35,6 +36,9 @@
  #include "dbus-list.h"
  #include "dbus-credentials.h"
  
@@ -12,7 +20,114 @@ $NetBSD: patch-ab,v 1.14 2008/10/12 11:15:22 tron Exp $
  #include <sys/types.h>
  #include <stdlib.h>
  #include <string.h>
-@@ -1826,7 +1829,26 @@
+@@ -71,6 +75,10 @@
+ #include <ucred.h>
+ #endif
+ 
++#ifdef __NetBSD__
++#include <sys/un.h>
++#endif
++
+ #ifdef HAVE_ADT
+ #include <bsm/adt.h>
+ #endif
+@@ -87,6 +95,32 @@
+ #define socklen_t int
+ #endif
+ 
++#ifdef LOCAL_PEEREID
++static dbus_bool_t
++dbus_nb_getpeereid(int fd, pid_t *pid, uid_t *uid, gid_t *gid)
++{
++  struct unpcbid cred;
++  socklen_t len = sizeof(cred);
++
++  _dbus_verbose ("dbus_nb_getpeereid: enter, fd=%d\n");
++  if (getsockopt (fd, 0, LOCAL_PEEREID, &cred, &len) < 0)
++    {
++      _dbus_verbose ("dbus_nb_getpeereid: getsockopt LOCAL_PEEREID failed: %s\n", strerror(errno));
++      return FALSE;
++    }
++  if (pid)
++    *pid = cred.unp_pid;
++  if (uid)
++    *uid = cred.unp_euid;
++  if (gid)
++    *gid = cred.unp_egid;
++
++  _dbus_verbose ("dbus_nb_getpeereid: returning TRUE, pid=%d uid=%d gid=%d\n",
++		 cred.unp_pid, cred.unp_euid, cred.unp_egid);
++  return TRUE;
++}
++#endif
++
+ static dbus_bool_t
+ _dbus_open_socket (int              *fd_p,
+                    int               domain,
+@@ -581,7 +615,7 @@ _dbus_set_local_creds (int fd, dbus_bool
+ {
+   dbus_bool_t retval = TRUE;
+ 
+-#if defined(HAVE_CMSGCRED)
++#if defined(HAVE_CMSGCRED) || defined(LOCAL_PEEREID)
+   /* NOOP just to make sure only one codepath is used 
+    *      and to prefer CMSGCRED
+    */
+@@ -1138,6 +1172,9 @@ _dbus_read_credentials_socket  (int     
+     struct cmsgcred cred;
+   } cmsg;
+ 
++#elif defined(LOCAL_PEEREID)
++  pid_t sockpid, sockuid, sockgid;
++
+ #elif defined(LOCAL_CREDS)
+   struct {
+     struct cmsghdr hdr;
+@@ -1170,7 +1207,7 @@ _dbus_read_credentials_socket  (int     
+   msg.msg_iov = &iov;
+   msg.msg_iovlen = 1;
+ 
+-#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
++#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
+   memset (&cmsg, 0, sizeof (cmsg));
+   msg.msg_control = &cmsg;
+   msg.msg_controllen = sizeof (cmsg);
+@@ -1210,7 +1247,7 @@ _dbus_read_credentials_socket  (int     
+       return FALSE;
+     }
+ 
+-#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
++#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
+   if (cmsg.hdr.cmsg_len < sizeof (cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS)
+     {
+       dbus_set_error (error, DBUS_ERROR_FAILED,
+@@ -1240,6 +1277,16 @@ _dbus_read_credentials_socket  (int     
+ #elif defined(HAVE_CMSGCRED)
+     pid_read = cmsg.cred.cmcred_pid;
+     uid_read = cmsg.cred.cmcred_euid;
++#elif defined(LOCAL_PEEREID)
++    if (dbus_nb_getpeereid(client_fd, &sockpid, &sockuid, &sockgid) == TRUE)
++      {
++	pid_read = sockpid;
++	uid_read = sockuid;
++      }
++    else
++      {
++        _dbus_verbose ("Failed to dbus_nb_getpeereid() credentials: %s\n", _dbus_strerror (errno));
++      }
+ #elif defined(LOCAL_CREDS)
+     pid_read = DBUS_PID_UNSET;
+     uid_read = cmsg.cred.sc_uid;
+@@ -1301,7 +1348,7 @@ _dbus_read_credentials_socket  (int     
+       }
+     if (ucred != NULL)
+       ucred_free (ucred);
+-#else /* !SO_PEERCRED && !HAVE_CMSGCRED && !HAVE_GETPEEREID && !HAVE_GETPEERUCRED */
++#else /* !SO_PEERCRED && !HAVE_CMSGCRED && !HAVE_GETPEEREID && !HAVE_GETPEERUCRED && !LOCAL_PEEREID*/
+     _dbus_verbose ("Socket credentials not supported on this OS\n");
+ #endif
+   }
+@@ -1826,7 +1873,26 @@ _dbus_parse_uid (const DBusString      *
    return TRUE;
  }
  
@@ -39,7 +154,7 @@ $NetBSD: patch-ab,v 1.14 2008/10/12 11:15:22 tron Exp $
  _DBUS_DEFINE_GLOBAL_LOCK (atomic);
  
  #if DBUS_USE_ATOMIC_INT_486_COND
-@@ -1891,6 +1913,7 @@
+@@ -1891,6 +1957,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
    return res;
  #endif
  }
@@ -47,7 +162,7 @@ $NetBSD: patch-ab,v 1.14 2008/10/12 11:15:22 tron Exp $
  
  #ifdef DBUS_BUILD_TESTS
  /** Gets our GID
-@@ -2793,8 +2816,18 @@
+@@ -2793,8 +2860,18 @@ int
  _dbus_printf_string_upper_bound (const char *format,
                                   va_list     args)
  {
