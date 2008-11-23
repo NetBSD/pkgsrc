@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/16 13:59:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/23 03:28:50 jmcneill Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -21,6 +21,7 @@ lib/gio/modules/libgiogconf.la
 lib/gio/modules/libgioremote-volume-monitor.la
 lib/gio/modules/libgvfsdbus.la
 lib/libgvfscommon.la
+${PLIST.hal}libexec/gvfs-hal-volume-monitor
 libexec/gvfsd
 libexec/gvfsd-archive
 libexec/gvfsd-burn
@@ -35,6 +36,7 @@ libexec/gvfsd-smb
 libexec/gvfsd-smb-browse
 libexec/gvfsd-trash
 share/dbus-1/services/gvfs-daemon.service
+${PLIST.hal}share/dbus-1/services/org.gtk.Private.HalVolumeMonitor.service
 share/gvfs/mounts/archive.mount
 share/gvfs/mounts/burn.mount
 share/gvfs/mounts/computer.mount
@@ -47,6 +49,7 @@ share/gvfs/mounts/sftp.mount
 share/gvfs/mounts/smb-browse.mount
 share/gvfs/mounts/smb.mount
 share/gvfs/mounts/trash.mount
+${PLIST.hal}share/gvfs/remote-volume-monitors/hal.monitor
 share/locale/ar/LC_MESSAGES/gvfs.mo
 share/locale/be@latin/LC_MESSAGES/gvfs.mo
 share/locale/bg/LC_MESSAGES/gvfs.mo
