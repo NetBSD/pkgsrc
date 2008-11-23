@@ -1,5 +1,5 @@
-Osh is a re-implementation of the old and obsolete shell version,
-which was in standard use up to UNIX 6th Edition and was supplied
-as osh with UNIX 7th Edition.  Its command language is a sparse
-subset of those of modern shells and is mostly common both to sh(1)
-and csh(1).
+Osh is an enhanced, backward-compatible port of the original sh(1)
+which was used as the standard command interpreter through Sixth
+Edition UNIX.  It was also distributed with Seventh Edition UNIX
+as osh.  Its command language is a predecessor and subset of that
+which is found in the Bourne shell and C shell.
