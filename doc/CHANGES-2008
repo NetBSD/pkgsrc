@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3119 2008/11/23 21:25:48 hasso Exp $
+$NetBSD: CHANGES-2008,v 1.3120 2008/11/23 21:54:15 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5239,3 +5239,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-panel to 2.24.1nb1 [jmcneill 2008-11-23]
 	Updated sysutils/consolekit to 0.3.0nb2 [jmcneill 2008-11-23]
 	Updated security/policykit to 0.9nb2 [hasso 2008-11-23]
+	Updated sysutils/hal to 0.5.11nb1 [hasso 2008-11-23]
