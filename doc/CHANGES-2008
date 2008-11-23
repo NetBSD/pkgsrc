@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3103 2008/11/22 19:34:41 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3104 2008/11/23 01:42:25 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5219,3 +5219,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gdm to 2.20.7nb1 [jmcneill 2008-11-22]
 	Added sysutils/gnome-mount version 0.8 [jmcneill 2008-11-22]
 	Updated sysutils/consolekit to 0.3.0nb1 [jmcneill 2008-11-22]
+	Updated sysutils/dbus to 1.2.4nb3 [jmcneill 2008-11-22]
