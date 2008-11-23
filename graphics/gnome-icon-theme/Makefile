@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2008/10/16 22:01:31 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2008/11/23 05:06:44 jmcneill Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.24.0
+PKGREVISION=		1
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -29,7 +30,13 @@ BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.6
 # so we control the subdirs not belonging to a single application.
 post-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/share/icons/gnome/48x48/mimetypes
+	${INSTALL_DATA} ${FILESDIR}/distributor-logo.svg ${DESTDIR}${PREFIX}/share/icons/gnome/scalable/places/distributor-logo.svg
+	rsvg-convert ${FILESDIR}/distributor-logo.svg -w 16 -h 16 -o ${DESTDIR}${PREFIX}/share/icons/gnome/16x16/places/distributor-logo.png
+	rsvg-convert ${FILESDIR}/distributor-logo.svg -w 22 -h 22 -o ${DESTDIR}${PREFIX}/share/icons/gnome/22x22/places/distributor-logo.png
+	rsvg-convert ${FILESDIR}/distributor-logo.svg -w 24 -h 24 -o ${DESTDIR}${PREFIX}/share/icons/gnome/24x24/places/distributor-logo.png
+	rsvg-convert ${FILESDIR}/distributor-logo.svg -w 32 -h 32 -o ${DESTDIR}${PREFIX}/share/icons/gnome/32x32/places/distributor-logo.png
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
