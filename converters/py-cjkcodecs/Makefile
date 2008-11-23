@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/23 23:37:18 snj Exp $
 #
 
 DISTNAME=	cjkcodecs-1.1.1
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
-PYTHON_VERSIONS_ACCEPTED= 23 21
+PYTHON_VERSIONS_ACCEPTED= 23 21 # included in python>=2.4
 
 post-install:
 	@strip ${PREFIX}/${PYSITELIB}/cjkcodecs/*.so
