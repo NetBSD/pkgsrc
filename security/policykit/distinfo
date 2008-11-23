@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2008/11/23 21:21:43 hasso Exp $
+$NetBSD: distinfo,v 1.3 2008/11/23 22:28:23 jmcneill Exp $
 
 SHA1 (PolicyKit-0.9.tar.gz) = ac99c580eff72f6d5df261c155fb047306439f85
 RMD160 (PolicyKit-0.9.tar.gz) = 197262d1c48e55558dd4bd57d7bbd8734666129c
@@ -12,3 +12,4 @@ SHA1 (patch-af) = c15988b60a99443469a0399935bc51f99da4b454
 SHA1 (patch-ag) = bfa1a32a26d80a3cbc90144ae137d4ad06832e61
 SHA1 (patch-ah) = a1ae419a77bb3c8be02706bb67476af9443af92a
 SHA1 (patch-ai) = 9ec3744b394b0f6181a8a3367f0ce93e32b7fc4f
+SHA1 (patch-aj) = 596b9eb54173e25176ba0f363e4b2c4c137dd89f
