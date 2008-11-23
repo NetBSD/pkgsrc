@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3115 2008/11/23 16:22:50 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3116 2008/11/23 17:26:44 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5235,3 +5235,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/gnome-vfs-smb to 2.24.0nb1 [jmcneill 2008-11-23]
 	Updated sysutils/gnome-system-tools to 2.22.1nb1 [jmcneill 2008-11-23]
 	Updated sysutils/system-tools-backends to 2.6.0nb1 [jmcneill 2008-11-23]
+	Updated emulators/suse100_fontconfig to 10.0nb6 [jmcneill 2008-11-23]
