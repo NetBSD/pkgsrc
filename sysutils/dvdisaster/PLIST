@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/23 23:40:12 heinz Exp $
 bin/dvdisaster
 share/doc/${PKGNAME}/CHANGELOG
 share/doc/${PKGNAME}/COPYING
@@ -236,6 +236,7 @@ share/doc/${PKGNAME}/images/scratch-img.jpg
 ${PKGLOCALEDIR}/locale/cs/LC_MESSAGES/dvdisaster.mo
 ${PKGLOCALEDIR}/locale/de/LC_MESSAGES/dvdisaster.mo
 ${PKGLOCALEDIR}/locale/it/LC_MESSAGES/dvdisaster.mo
+${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/dvdisaster.mo
 ${PKGLOCALEDIR}/locale/sv/LC_MESSAGES/dvdisaster.mo
 ${PKGMANDIR}/cs/man1/dvdisaster.1
 ${PKGMANDIR}/de/man1/dvdisaster.1

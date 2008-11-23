@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2007/06/08 20:19:13 heinz Exp $
+$NetBSD: patch-af,v 1.2 2008/11/23 23:40:12 heinz Exp $
 
   - Add option "--with-embedded-src-path", default value is "yes" to keep
     the current behaviour.
+    (already committed in unstable version upstream)
 
 --- configure.orig	2007-01-20 13:30:22.000000000 +0100
 +++ configure
