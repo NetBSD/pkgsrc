@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3106 2008/11/23 02:01:43 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3107 2008/11/23 02:51:32 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5222,3 +5222,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/dbus to 1.2.4nb3 [jmcneill 2008-11-22]
 	Updated x11/gnome-session to 2.24.1nb3 [jmcneill 2008-11-22]
 	Updated security/policykit to 0.9nb1 [jmcneill 2008-11-22]
+	Updated x11/gdm to 2.20.7nb2 [jmcneill 2008-11-22]
+	Updated sysutils/liboobs to 2.22.0nb1 [jmcneill 2008-11-22]
