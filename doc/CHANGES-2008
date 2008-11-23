@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3117 2008/11/23 17:33:27 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3118 2008/11/23 19:25:58 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5237,3 +5237,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/system-tools-backends to 2.6.0nb1 [jmcneill 2008-11-23]
 	Updated emulators/suse100_fontconfig to 10.0nb6 [jmcneill 2008-11-23]
 	Updated x11/gnome-panel to 2.24.1nb1 [jmcneill 2008-11-23]
+	Updated sysutils/consolekit to 0.3.0nb2 [jmcneill 2008-11-23]
