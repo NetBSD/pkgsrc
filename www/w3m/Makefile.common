@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile.common,v 1.50 2008/11/23 16:16:35 uebayasi Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -9,6 +9,7 @@ MAINTAINER=	kei@NetBSD.org, uebayasi@NetBSD.org
 HOMEPAGE=	http://w3m.sourceforge.net/
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake	# Needed for some combinations of options...
@@ -60,13 +61,14 @@ post-extract:
 post-patch:
 	@${FIND} ${WRKSRC} -type f -name '*.orig' -print | ${XARGS} ${RM}
 
+INSTALLATION_DIRS+=	${DOCDIR}
+
 post-install:
 	# Install help files.
-	@cd ${WRKSRC}; ${MAKE_PROGRAM} install-helpfile
+	@cd ${WRKSRC}; ${MAKE_PROGRAM} DESTDIR=${DESTDIR} install-helpfile
 	# Use pax to discard uid/gid.  Exclude manuals (*.1).
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 	@cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
-	    ( cd ${PREFIX}/${DOCDIR}; pax -r )
+	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
