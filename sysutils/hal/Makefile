@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/23 21:50:51 hasso Exp $
 #
 
 DISTNAME=		hal-0.5.11
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -34,6 +35,12 @@ CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids/usb.ids
 CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
 CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
+.endif
+
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
@@ -49,8 +56,6 @@ PKG_HOME.haldaemon=	${VARBASE}/run/hal
 
 FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 .include "../../devel/libusb/buildlink3.mk"
