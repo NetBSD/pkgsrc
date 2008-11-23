@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 18:32:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/23 16:20:19 jmcneill Exp $
 bin/network-admin
 bin/services-admin
 bin/shares-admin
@@ -144,7 +144,6 @@ share/icons/hicolor/32x32/apps/time-admin.png
 share/icons/hicolor/48x48/apps/time-admin.png
 share/icons/hicolor/48x48/devices/irda.png
 share/icons/hicolor/48x48/devices/plip.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/time-admin.svg
 share/locale/am/LC_MESSAGES/gnome-system-tools.mo
 share/locale/ar/LC_MESSAGES/gnome-system-tools.mo
