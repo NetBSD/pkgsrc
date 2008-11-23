@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.34 2008/09/26 13:38:47 ghen Exp $
+$NetBSD: distinfo,v 1.34.2.1 2008/11/23 21:53:43 tron Exp $
 
-SHA1 (seamonkey-1.1.12.source.tar.bz2) = 268b7aadc6e116674eb53d1f2068a084347cb53e
-RMD160 (seamonkey-1.1.12.source.tar.bz2) = 240036569a6af0149e896fbafca03fe310bbebf5
-Size (seamonkey-1.1.12.source.tar.bz2) = 38065768 bytes
+SHA1 (seamonkey-1.1.13.source.tar.bz2) = d2577f35fd397a6481b0f3d6c172a599661cf4b8
+RMD160 (seamonkey-1.1.13.source.tar.bz2) = 04831569556413a4729cbe2fe7de6b8f00627654
+Size (seamonkey-1.1.13.source.tar.bz2) = 38057960 bytes
 SHA1 (patch-aa) = 2d117311991c4c71803f3c446334d7b6f1e1067a
 SHA1 (patch-ab) = b83dc786559d010f9bbb1adde697975166e0735e
 SHA1 (patch-ac) = 393920aabf9476b668510a88af041d9a54c6019d
