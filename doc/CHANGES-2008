@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3121 2008/11/23 22:08:45 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3122 2008/11/23 22:57:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5241,3 +5241,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/policykit to 0.9nb2 [hasso 2008-11-23]
 	Updated sysutils/hal to 0.5.11nb1 [hasso 2008-11-23]
 	Updated x11/gdm to 2.20.7nb3 [jmcneill 20008-11-23]
+	Updated audio/mt-daapd to 0.2.4.2nb1 [tron 2008-11-23]
