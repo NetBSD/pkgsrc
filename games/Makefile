@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2008/11/16 07:23:51 snj Exp $
+# $NetBSD: Makefile,v 1.313 2008/11/24 18:16:33 snj Exp $
 #
 
 COMMENT=	Games
@@ -105,7 +105,6 @@ SUBDIR+=	genecys-client
 SUBDIR+=	genecys-data
 SUBDIR+=	ggz-client-libs
 SUBDIR+=	glaxium
-SUBDIR+=	glchess
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
 SUBDIR+=	gnome-games

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3157 2008/11/24 16:36:34 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3158 2008/11/24 18:16:33 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5277,3 +5277,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/gtkhtml314 to 3.24.2 [wiz 2008-11-24]
 	Updated filesystems/fs-utils to 20081124 [stacktic 2008-11-24]
 	Updated mail/evolution-data-server to 2.24.2 [wiz 2008-11-24]
+	Removed games/glchess successor games/gnome-games [snj 2008-11-24]
