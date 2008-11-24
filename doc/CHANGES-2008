@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3135 2008/11/24 09:06:50 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3136 2008/11/24 09:37:37 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5255,3 +5255,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/diffutils to 2.8.1nb3 [obache 2008-11-24]
 	Updated time/devtodo to 0.1.20nb2 [obache 2008-11-24]
 	Updated audio/kid3 to 1.1 [obache 2008-11-24]
+	Updated devel/geany to 0.15 [roland 2008-11-24]
