@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/18 09:43:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/11/24 14:03:56 wiz Exp $
 bin/meld
 lib/meld/diffutil.py
 lib/meld/diffutil.pyc
@@ -74,18 +74,6 @@ lib/meld/vcview.pyc
 lib/meld/vcview.pyo
 share/application-registry/meld.applications
 share/applications/meld.desktop
-share/ar/LC_MESSAGES/meld.mo
-share/bg/LC_MESSAGES/meld.mo
-share/ca/LC_MESSAGES/meld.mo
-share/cs/LC_MESSAGES/meld.mo
-share/de/LC_MESSAGES/meld.mo
-share/dz/LC_MESSAGES/meld.mo
-share/el/LC_MESSAGES/meld.mo
-share/en_CA/LC_MESSAGES/meld.mo
-share/en_GB/LC_MESSAGES/meld.mo
-share/es/LC_MESSAGES/meld.mo
-share/fi/LC_MESSAGES/meld.mo
-share/fr/LC_MESSAGES/meld.mo
 share/gnome/help/meld/C/figures/dirdiff.png
 share/gnome/help/meld/C/figures/filediff.png
 share/gnome/help/meld/C/meld.xml
@@ -93,12 +81,42 @@ share/gnome/help/meld/es/figures/dirdiff.png
 share/gnome/help/meld/es/figures/filediff.png
 share/gnome/help/meld/es/meld.xml
 share/gnome/help/meld/fr/meld.xml
-share/hu/LC_MESSAGES/meld.mo
-share/it/LC_MESSAGES/meld.mo
-share/ja/LC_MESSAGES/meld.mo
-share/ko/LC_MESSAGES/meld.mo
+share/locale/ar/LC_MESSAGES/meld.mo
+share/locale/bg/LC_MESSAGES/meld.mo
+share/locale/ca/LC_MESSAGES/meld.mo
+share/locale/cs/LC_MESSAGES/meld.mo
+share/locale/de/LC_MESSAGES/meld.mo
+share/locale/dz/LC_MESSAGES/meld.mo
+share/locale/el/LC_MESSAGES/meld.mo
+share/locale/en_CA/LC_MESSAGES/meld.mo
+share/locale/en_GB/LC_MESSAGES/meld.mo
+share/locale/es/LC_MESSAGES/meld.mo
+share/locale/fi/LC_MESSAGES/meld.mo
+share/locale/fr/LC_MESSAGES/meld.mo
+share/locale/hu/LC_MESSAGES/meld.mo
+share/locale/it/LC_MESSAGES/meld.mo
+share/locale/ja/LC_MESSAGES/meld.mo
+share/locale/ko/LC_MESSAGES/meld.mo
+share/locale/nb/LC_MESSAGES/meld.mo
+share/locale/ne/LC_MESSAGES/meld.mo
+share/locale/nl/LC_MESSAGES/meld.mo
+share/locale/oc/LC_MESSAGES/meld.mo
+share/locale/pa/LC_MESSAGES/meld.mo
+share/locale/pt/LC_MESSAGES/meld.mo
+share/locale/pt_BR/LC_MESSAGES/meld.mo
+share/locale/ru/LC_MESSAGES/meld.mo
+share/locale/rw/LC_MESSAGES/meld.mo
+share/locale/sr/LC_MESSAGES/meld.mo
+share/locale/sr@Latn/LC_MESSAGES/meld.mo
+share/locale/sv/LC_MESSAGES/meld.mo
+share/locale/vi/LC_MESSAGES/meld.mo
+share/locale/zh_CN/LC_MESSAGES/meld.mo
+share/locale/zh_TW/LC_MESSAGES/meld.mo
+share/meld/glade2/dirdiff-ui.xml
 share/meld/glade2/dirdiff.glade
+share/meld/glade2/filediff-ui.xml
 share/meld/glade2/filediff.glade
+share/meld/glade2/meldapp-ui.xml
 share/meld/glade2/meldapp.glade
 share/meld/glade2/pixmaps/button_apply0.xpm
 share/meld/glade2/pixmaps/button_apply1.xpm
@@ -128,65 +146,18 @@ share/meld/glade2/pixmaps/vc-commit-24.png
 share/meld/glade2/pixmaps/vc-icon.png
 share/meld/glade2/pixmaps/vc-remove-24.png
 share/meld/glade2/pixmaps/vc-update-24.png
+share/meld/glade2/vcview-ui.xml
 share/meld/glade2/vcview.glade
-share/ne/LC_MESSAGES/meld.mo
-share/nl/LC_MESSAGES/meld.mo
-share/oc/LC_MESSAGES/meld.mo
 share/omf/meld/meld-C.omf
 share/omf/meld/meld-es.omf
 share/omf/meld/meld-fr.omf
-share/pa/LC_MESSAGES/meld.mo
 share/pixmaps/meld.png
-share/pt/LC_MESSAGES/meld.mo
-share/pt_BR/LC_MESSAGES/meld.mo
-share/ru/LC_MESSAGES/meld.mo
-share/rw/LC_MESSAGES/meld.mo
-share/sr/LC_MESSAGES/meld.mo
-share/sr@Latn/LC_MESSAGES/meld.mo
-share/sv/LC_MESSAGES/meld.mo
-share/vi/LC_MESSAGES/meld.mo
-share/zh_CN/LC_MESSAGES/meld.mo
-share/zh_TW/LC_MESSAGES/meld.mo
-@dirrm share/zh_TW/LC_MESSAGES
-@dirrm share/zh_TW
-@dirrm share/zh_CN/LC_MESSAGES
-@dirrm share/zh_CN
-@dirrm share/vi/LC_MESSAGES
-@unexec ${RMDIR} %D/share/vi 2>/dev/null || ${TRUE}
-@dirrm share/sv/LC_MESSAGES
-@dirrm share/sv
-@dirrm share/sr@Latn/LC_MESSAGES
-@dirrm share/sr@Latn
-@dirrm share/sr/LC_MESSAGES
-@dirrm share/sr
-@dirrm share/rw/LC_MESSAGES
-@dirrm share/rw
-@dirrm share/ru/LC_MESSAGES
-@dirrm share/ru
-@dirrm share/pt_BR/LC_MESSAGES
-@dirrm share/pt_BR
-@dirrm share/pt/LC_MESSAGES
-@dirrm share/pt
 @comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/pa/LC_MESSAGES
-@dirrm share/pa
 @dirrm share/omf/meld
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/nl/LC_MESSAGES
-@dirrm share/nl
-@dirrm share/ne/LC_MESSAGES
-@dirrm share/ne
+@comment in rarian: @dirrm share/omf
 @dirrm share/meld/glade2/pixmaps
 @dirrm share/meld/glade2
 @dirrm share/meld
-@dirrm share/ko/LC_MESSAGES
-@dirrm share/ko
-@dirrm share/ja/LC_MESSAGES
-@dirrm share/ja
-@dirrm share/it/LC_MESSAGES
-@dirrm share/it
-@dirrm share/hu/LC_MESSAGES
-@dirrm share/hu
 @dirrm share/gnome/help/meld/fr
 @dirrm share/gnome/help/meld/es/figures
 @dirrm share/gnome/help/meld/es
@@ -194,26 +165,6 @@ share/zh_TW/LC_MESSAGES/meld.mo
 @dirrm share/gnome/help/meld/C
 @dirrm share/gnome/help/meld
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/fr/LC_MESSAGES
-@dirrm share/fr
-@dirrm share/fi/LC_MESSAGES
-@dirrm share/fi
-@dirrm share/es/LC_MESSAGES
-@dirrm share/es
-@dirrm share/en_GB/LC_MESSAGES
-@dirrm share/en_GB
-@dirrm share/en_CA/LC_MESSAGES
-@dirrm share/en_CA
-@exec ${MKDIR} %D/share/doc/meld
-@dirrm share/doc/meld
-@dirrm share/de/LC_MESSAGES
-@dirrm share/de
-@dirrm share/cs/LC_MESSAGES
-@dirrm share/cs
-@dirrm share/ca/LC_MESSAGES
-@dirrm share/ca
-@dirrm share/bg/LC_MESSAGES
-@dirrm share/bg
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
 @dirrm lib/meld/vc
