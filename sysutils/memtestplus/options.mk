@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2008/11/24 04:06:00 smb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.memtestplus
 PKG_SUPPORTED_OPTIONS=	iso serialconsole
@@ -8,7 +8,7 @@ PKG_SUGGESTED_OPTIONS=
 
 PLIST_VARS+=		iso
 .if !empty(PKG_OPTIONS:Miso)
-BUILD_TARGET=		memtest.iso
+BUILD_TARGET=		iso
 BUILD_DEPENDS+=		{cdrtools,cdrtools-ossdvd}>=2.01:../../sysutils/cdrtools
 PLIST.iso=		yes
 .endif
