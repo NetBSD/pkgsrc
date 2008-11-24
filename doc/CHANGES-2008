@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3155 2008/11/24 16:10:21 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3156 2008/11/24 16:31:23 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5275,3 +5275,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libtasn1 to 1.7 [adam 2008-11-24]
 	Updated sysutils/nautilus to 2.24.2 [wiz 2008-11-24]
 	Updated www/gtkhtml314 to 3.24.2 [wiz 2008-11-24]
+	Updated filesystems/fs-utils to 20081124 [stacktic 2008-11-24]
