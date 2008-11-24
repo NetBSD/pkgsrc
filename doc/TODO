@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7709 2008/11/24 15:37:45 adam Exp $
+$NetBSD: TODO,v 1.7710 2008/11/24 23:11:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -539,6 +539,7 @@ Suggested package updates
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
 	o epic4-2.6
+	o epiphany-2.24.2
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.2.3 [now called eric4]
@@ -548,6 +549,7 @@ Suggested package updates
 	o esmtp-1.0
 	o et-2.60
 	o etach-1.4.1
+	o evince-2.24.2
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o ezmlm-idx-5.1.2 [schmonz]
@@ -625,6 +627,7 @@ Suggested package updates
 	o gnome-2.24.0
 	o gnome-pilot-2.0.16
 	o gnome-system-monitor-2.24.1
+	o gnome-terminal-2.24.2
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -653,12 +656,14 @@ Suggested package updates
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
+	o gtk2-2.14.5
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.3
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
+	o gucharmap-2.24.2
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
@@ -901,6 +906,7 @@ Suggested package updates
 	o openssl-0.9.8i
 	o openttd-0.6.1
 	o opera-9.62
+	o orca-2.24.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -942,7 +948,6 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
-	o pango-1.22.3
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parpd-1.1 [pkg/39789]
