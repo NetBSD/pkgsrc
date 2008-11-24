@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/11/24 08:02:16 obache Exp $
+
+PR 39941
+
+--- configure.orig	2002-04-05 21:48:26.000000000 +0000
++++ configure
+@@ -3722,7 +3722,7 @@ _ACEOF
+ 
+ 
+ cat >>confdefs.h <<\_ACEOF
+-#define DEFAULT_DIFF_PROGRAM "diff"
++#define DEFAULT_DIFF_PROGRAM "%DEFAULT_DIFF_PROGRAM%"
+ _ACEOF
+ 
+ 

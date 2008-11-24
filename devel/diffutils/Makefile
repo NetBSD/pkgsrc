@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:22 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/11/24 08:02:16 obache Exp $
 #
 
 DISTNAME=		diffutils-2.8.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=diffutils/}
 
@@ -25,6 +25,11 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 .endif
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+
+SUBST_CLASSES+=		diff
+SUBST_STAGE.diff=	pre-configure
+SUBST_FILES.diff=	configure
+SUBST_SED.diff=		-e 's;%DEFAULT_DIFF_PROGRAM%;${PREFIX}/bin/${GNU_PROGRAM_PREFIX}diff;'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
