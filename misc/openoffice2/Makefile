@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2008/11/19 01:54:25 hira Exp $
+# $NetBSD: Makefile,v 1.60 2008/11/24 11:58:44 hira Exp $
 #
 
 OO_VER=			2.4.2
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -61,6 +61,13 @@ REPLACE_PERL+=		sd/res/webview/editpic.pl	\
 			sd/res/webview/show.pl		\
 			sd/res/webview/webview.pl
 REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
+
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Fixing prefix
+SUBST_FILES.prefix=	sysui/desktop/share/openoffice.sh
+SUBST_FILES.prefix+=	sysui/desktop/share/printeradmin.sh
+SUBST_SED.prefix=	-e 's|@OO_PREFIX@|${OO_PREFIX}|g'
 
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
@@ -124,6 +131,7 @@ OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
 PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
+PLIST_SUBST+=		OO_ICON_PREFIX=openofficeorg24
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications
 
@@ -142,14 +150,6 @@ post-extract:
 do-build:
 	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules && build.pl -P${MAKE_JOBS:U1} --all product=full && cd util && dmake openoffice_${OO_BASELANG} && dmake ooolanguagepack"
 
-post-build:
-	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
-	${ECHO} "exec ${OO_PREFIX}/program/soffice \"\$$@\""	\
-		>> ${WRKDIR}/${OO_UNXNAME}
-	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}-printeradmin
-	${ECHO} "exec ${OO_PREFIX}/program/spadmin"		\
-		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
-
 do-install:
 	cd ${DESTDIR}${OO_PREFIX} &&				\
 	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
@@ -160,18 +160,16 @@ do-install:
 			tar xpf $$f;				\
 		done;						\
 	done
-	for d in ${DESTDIR}${OO_PREFIX}/share/xdg/*; do			\
-		ln -s $$d ${DESTDIR}${PREFIX}/share/applications;	\
-	done
 	cd ${DESTDIR}${OO_PREFIX}/program &&			\
 	chmod ${SHAREMODE} hid.lst testtoolrc
 	for f in ${OO_PROGRAMS}; do				\
 		ln -sf ${DESTDIR}${OO_PREFIX}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;		\
 	done
-	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
-		${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/sysui/${OPENOFFICE_OUTPATH}.pro/misc/openoffice.org && \
+	${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR} _PREFIX=${PREFIX}	\
+		GNOME=${PKG_OPTIONS:Mgnome} KDE=${PKG_OPTIONS:Mkde}	\
+		OO_PREFIX=${OO_PREFIX} ${SH} create_tree.sh
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&				\
@@ -187,15 +185,16 @@ post-install:
 
 .include "../../mk/compiler.mk"
 
-.include "../../lang/python/application.mk"
-
 .include "../../databases/db4/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"

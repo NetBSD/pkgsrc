@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2008/11/19 01:54:25 hira Exp $
+# $NetBSD: options.mk,v 1.23 2008/11/24 11:58:44 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -74,7 +74,9 @@ CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--disable-cups
 .endif
 
+PLIST_VARS+=		gnome
 .if !empty(PKG_OPTIONS:Mgnome)
+PLIST.gnome=		yes
 CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
@@ -83,16 +85,16 @@ CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
 
-PLIST_VARS+=		gtk2
 .if !empty(PKG_OPTIONS:Mgtk2)
-PLIST.gtk2=		yes
 CONFIGURE_ARGS+=	--enable-gtk
 .include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gtk
 .endif
 
+PLIST_VARS+=		kde
 .if !empty(PKG_OPTIONS:Mkde)
+PLIST.kde=		yes
 CONFIGURE_ENV+=		KDEDIR=${BUILDLINK_PREFIX.kdelibs:Q}
 CONFIGURE_ARGS+=	--enable-kde --enable-kdeab
 .include "../../x11/kdelibs3/buildlink3.mk"
