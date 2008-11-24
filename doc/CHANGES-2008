@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3145 2008/11/24 13:59:34 tron Exp $
+$NetBSD: CHANGES-2008,v 1.3146 2008/11/24 14:04:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5265,3 +5265,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.22.3 [wiz 2008-11-24]
 	Updated editors/gedit to 2.24.2 [wiz 2008-11-24]
 	Updated textproc/libxml2 to 2.7.2nb2 [tron 2008-11-24]
+	Updated devel/meld to 1.2.1 [wiz 2008-11-24]
