@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3156 2008/11/24 16:31:23 stacktic Exp $
+$NetBSD: CHANGES-2008,v 1.3157 2008/11/24 16:36:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5276,3 +5276,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/nautilus to 2.24.2 [wiz 2008-11-24]
 	Updated www/gtkhtml314 to 3.24.2 [wiz 2008-11-24]
 	Updated filesystems/fs-utils to 20081124 [stacktic 2008-11-24]
+	Updated mail/evolution-data-server to 2.24.2 [wiz 2008-11-24]
