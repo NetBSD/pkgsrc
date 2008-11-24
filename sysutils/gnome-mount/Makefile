@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/24 01:16:18 jmcneill Exp $
 #
 
 DISTNAME=		gnome-mount-0.8
+PKGREVISION=		1
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -16,6 +17,12 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
 GCONF_SCHEMAS+=	gnome-mount.schemas
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+post-extract:
+	${CP} ${FILESDIR}/gnome-mount.schemas.in.NetBSD ${WRKSRC}/gnome-mount.schemas.in
+.endif
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
