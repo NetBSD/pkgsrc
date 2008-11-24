@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/24 02:09:31 minskim Exp $
+bin/sfconv
+bin/teckit_compile
+bin/txtconv
+include/teckit/TECkit_Common.h
+include/teckit/TECkit_Compiler.h
+include/teckit/TECkit_Engine.h
+lib/libTECkit.la
+lib/libTECkit_Compiler.la
+@dirrm include/teckit
