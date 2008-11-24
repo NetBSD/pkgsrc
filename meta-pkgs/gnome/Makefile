@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.95 2008/11/18 23:22:23 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2008/11/24 13:12:37 wiz Exp $
 
-DISTNAME=	gnome-2.24.0.98
+DISTNAME=	gnome-2.24.0.99
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -52,8 +52,7 @@ DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
 # unpackaged
 #DEPENDS+=	gnome-nettool>=2.22.1:../../*/gnome-nettool
 DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
-# unpackaged
-#DEPENDS+=	gnome-power-manager>=2.24.1:../../*/gnome-power-manager
+DEPENDS+=	gnome-power-manager>=2.24.1:../../sysutils/gnome-power-manager
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.24.0:../../x11/gnome-screensaver
 DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
@@ -66,8 +65,7 @@ DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
 DEPENDS+=	gnome-themes>=2.24.1:../../x11/gnome-themes
 DEPENDS+=	gnome-user-docs>=2.24.0:../../misc/gnome-user-docs
 DEPENDS+=	gnome-utils>=2.24.1:../../misc/gnome-utils
-# unpackaged
-#DEPENDS+=	gnome-volume-manager>=2.24.0:../../*/gnome-volume-manager
+DEPENDS+=	gnome-volume-manager>=2.24.0:../../sysutils/gnome-volume-manager
 DEPENDS+=	gok>=2.24.0:../../misc/gok
 DEPENDS+=	gst-plugins0.10-base>=0.10.21:../../multimedia/gst-plugins0.10-base
 DEPENDS+=	gst-plugins0.10-good>=0.10.10:../../multimedia/gst-plugins0.10-good
