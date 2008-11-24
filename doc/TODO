@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7707 2008/11/23 14:59:39 wiz Exp $
+$NetBSD: TODO,v 1.7708 2008/11/24 10:42:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -508,6 +508,7 @@ Suggested package updates
 	o distcc-3.0
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
+	o dmidecode-2.10
 	o dnsmasq-2.46
 	o dnstop-20070307
 	o dnstracer-1.9
@@ -598,6 +599,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.15
 	o geda-1.4.1.20080929
+	o gedit-2.24.2
 	o geeklog-1.5.0
 	o gettext-0.17
 	o gforth-0.7.0
@@ -720,7 +722,6 @@ Suggested package updates
 	o kapooka-0.3
 	o kdbg-2.1.0
 	o kdrill-6.5
-	o kid3-1.1
 	o kinput2-3.1
 	o kmess-1.5.1
 	o kmp-0.5
@@ -783,7 +784,7 @@ Suggested package updates
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libtorrent-0.12.2
-	o libv4l-0.5.5
+	o libv4l-0.5.6
 	o licq-1.3.6
 	o lincvs-2.1.1 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -812,6 +813,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-14.2.3
 	o mcrypt-2.6.6
+	o meld-1.2.1
 	o memtestplus-2.10
 	o merb-0.9.4 (and related plugins)
 	o mercury-0.13.1
@@ -941,6 +943,7 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
+	o pango-1.22.3
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parpd-1.1 [pkg/39789]
