@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3152 2008/11/24 15:09:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3153 2008/11/24 15:37:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5272,3 +5272,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnome-keyring to 2.24.1nb1 [jmcneill 2008-11-24]
 	Updated x11/gnome-applets to 2.24.1nb2 [jmcneill 2008-11-24]
 	Updated sysutils/gvfs to 1.0.3 [wiz 2008-11-24]
+	Updated security/libtasn1 to 1.7 [adam 2008-11-24]
