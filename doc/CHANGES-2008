@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3147 2008/11/24 14:06:45 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3148 2008/11/24 14:15:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5267,3 +5267,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/libxml2 to 2.7.2nb2 [tron 2008-11-24]
 	Updated devel/meld to 1.2.1 [wiz 2008-11-24]
 	Updated x11/gnome-control-center to 2.24.0.1nb2 [jmcneill 2008-11-24]
+	Updated x11/libxklavier to 3.8 [wiz 2008-11-24]
