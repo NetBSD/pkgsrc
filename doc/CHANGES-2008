@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3142 2008/11/24 13:12:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3143 2008/11/24 13:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5262,3 +5262,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/id3 to 0.15 [obache 2008-11-24]
 	Added sysutils/gnome-power-manager version 2.24.2 [jmcneill 2008-11-24]
 	Updated meta-pkgs/gnome to 2.24.0.99 [wiz 2008-11-24]
+	Updated devel/pango to 1.22.3 [wiz 2008-11-24]
