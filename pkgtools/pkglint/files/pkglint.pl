@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.789 2008/11/19 07:46:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.790 2008/11/24 14:59:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2221,6 +2221,35 @@ sub get_wip_TODO_updates() {
 	return $get_wip_TODO_updates_result;
 }
 
+sub load_doc_CHANGES($) {
+	my ($fname) = @_;
+	my $lines = load_file($fname) or die;
+
+	my @changes = ();
+	foreach my $line (@$lines) {
+		my $text = $line->text;
+		next unless $text =~ m"^\t[A-Z]";
+
+		if ($text =~ m"^\t(Updated) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+		} elsif ($text =~ m"^\t(Added) (\S+) version (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+		} elsif ($text =~ m"^\t(Removed) (\S+) (?:successor (\S+) )?\[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+			push(@changes, PkgLint::Change->new($line, $1, $2, undef, $3, $4));
+		} elsif ($text =~ m"^\t(Downgraded) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+		} elsif ($text =~ m"^\t(Renamed|Moved) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
+			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+		} else {
+			$line->log_warning("Unknown doc/CHANGES line: " . $line->text);
+			$line->explain_warning(
+"Maybe some developer didn't stick to the conventions that have been",
+"established by mk/misc/developer.mk?");
+		}
+	}
+	return \@changes;
+}
+
 my $get_doc_CHANGES_docs = undef; # [ $fname, undef or $lines ]
 sub get_doc_CHANGES($) {
 	my ($pkgpath) = @_;
@@ -2247,31 +2276,7 @@ sub get_doc_CHANGES($) {
 	foreach my $doc (@$get_doc_CHANGES_docs) {
 		if (!defined($doc->[1])) {
 			$opt_debug_misc and log_debug(NO_FILE, NO_LINES, "loading $doc->[0]");
-			my $lines = load_file("${cwd_pkgsrcdir}/doc/$doc->[0]") or die;
-
-			my @changes = ();
-			foreach my $line (@$lines) {
-				my $text = $line->text;
-				next unless $text =~ m"^\t[A-Z]";
-
-				if ($text =~ m"^\t(Updated) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
-				} elsif ($text =~ m"^\t(Added) (\S+) version (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
-				} elsif ($text =~ m"^\t(Removed) (\S+) (?:successor (\S+) )?\[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-					push(@changes, PkgLint::Change->new($line, $1, $2, undef, $3, $4));
-				} elsif ($text =~ m"^\t(Downgraded) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
-				} elsif ($text =~ m"^\t(Renamed|Moved) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-					push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
-				} else {
-					$line->log_warning("Unknown doc/CHANGES line: " . $line->text);
-					$line->explain_warning(
-"Maybe some developer didn't stick to the conventions that have been",
-"established by mk/misc/developer.mk?");
-				}
-			}
-			$doc->[1] = \@changes;
+			$doc->[1] = load_doc_CHANGES("${cwd_pkgsrcdir}/doc/$doc->[0]");
 		}
 
 		foreach my $change (@{$doc->[1]}) {
@@ -7733,6 +7738,9 @@ sub checkfile($) {
 
 	} elsif ($basename eq "TODO" || $basename eq "README") {
 		# Ok
+
+	} elsif ($basename =~ m"^CHANGES-.*") {
+		load_doc_CHANGES($fname);
 
 	} elsif (!-T $fname) {
 		log_warning($fname, NO_LINE_NUMBER, "Unexpectedly found a binary file.");
