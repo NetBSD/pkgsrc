@@ -1,0 +1,43 @@
+$NetBSD: patch-ak,v 1.1 2008/11/24 21:13:19 hasso Exp $
+
+--- hald/freebsd/probing/probe-volume.c.orig	2008-05-08 02:24:07 +0300
++++ hald/freebsd/probing/probe-volume.c	2008-11-24 21:30:08 +0200
+@@ -33,7 +33,9 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <sys/ioctl.h>
++#ifndef __DragonFly__
+ #include <sys/disk.h>
++#endif
+ #include <sys/cdio.h>
+ #include <sys/param.h>
+ #include <sys/types.h>
+@@ -366,6 +368,7 @@ main (int argc, char **argv)
+       is_blank = (! has_audio && ! has_data);
+     }
+ 
++#ifndef __DragonFly__
+   ioctl(fd, DIOCGMEDIASIZE, &media_size);
+ 
+   /*
+@@ -391,6 +394,7 @@ main (int argc, char **argv)
+ 	    }
+ 	}
+     }
++#endif
+ 
+   if (! has_children && ! is_swap && ! has_audio && ! has_data && ! is_blank)
+     goto end;
+@@ -582,10 +586,12 @@ main (int argc, char **argv)
+ 
+   libhal_device_set_property_string(hfp_ctx, hfp_udi, "volume.uuid", vid ? vid->uuid : "", &hfp_error);
+ 
++#ifndef __DragonFly__
+   ioctl(fd, DIOCGSECTORSIZE, &sector_size);
+ 
+   if (sector_size != 0)
+     libhal_device_set_property_uint64(hfp_ctx, hfp_udi, "volume.block_size", sector_size, &hfp_error);
++#endif
+   if (media_size != 0)
+     libhal_device_set_property_uint64(hfp_ctx, hfp_udi, "volume.size", media_size, &hfp_error);
+   if (sector_size != 0 && media_size != 0)

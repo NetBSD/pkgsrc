@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/11/24 01:23:12 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/24 21:13:19 hasso Exp $
 #
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -30,8 +30,8 @@ EGDIR=			${PREFIX}/share/examples/hal
 CONF_FILES=		${EGDIR}/hal.conf ${PREFIX}/etc/dbus-1/system.d/hal.conf
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
-CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids/pci.ids
-CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids/usb.ids
+CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids
+CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
 CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
 CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
 
@@ -39,6 +39,8 @@ CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
+CONFIGURE_ARGS+=	--with-backend=freebsd
+PLIST_SRC=		PLIST.FreeBSD PLIST
 .endif
 
 REPLACE_INTERPRETER+=	bash
