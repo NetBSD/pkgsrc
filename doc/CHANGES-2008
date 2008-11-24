@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3129 2008/11/24 02:11:45 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3130 2008/11/24 03:19:50 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5249,3 +5249,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/gnome-mount to 0.8nb1 [jmcneill 2008-11-23]
 	Updated sysutils/hal to 0.5.11nb2 [jmcneill 2008-11-23]
 	Added converters/TECkit version 2.5.1 [minskim 2008-11-24]
+	Updated x11/gtk2-engines to 2.16.1nb1 [jmcneill 2008-11-23]
