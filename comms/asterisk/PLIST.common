@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.13 2008/06/19 08:14:29 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.14 2008/11/24 09:27:29 jnemeth Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -206,20 +206,10 @@ libdata/asterisk/firmware/iax/iaxy.bin
 libdata/asterisk/images/asterisk-intro.jpg
 libdata/asterisk/keys/freeworlddialup.pub
 libdata/asterisk/keys/iaxtel.pub
+libdata/asterisk/mohmp3/LICENSE
 libdata/asterisk/mohmp3/fpm-calm-river.mp3
 libdata/asterisk/mohmp3/fpm-sunshine.mp3
 libdata/asterisk/mohmp3/fpm-world-mix.mp3
-libdata/asterisk/mohmp3/LICENSE
-libdata/asterisk/sounds/silence/1.gsm
-libdata/asterisk/sounds/silence/10.gsm
-libdata/asterisk/sounds/silence/2.gsm
-libdata/asterisk/sounds/silence/3.gsm
-libdata/asterisk/sounds/silence/4.gsm
-libdata/asterisk/sounds/silence/5.gsm
-libdata/asterisk/sounds/silence/6.gsm
-libdata/asterisk/sounds/silence/7.gsm
-libdata/asterisk/sounds/silence/8.gsm
-libdata/asterisk/sounds/silence/9.gsm
 libdata/asterisk/sounds/agent-alreadyon.gsm
 libdata/asterisk/sounds/agent-incorrect.gsm
 libdata/asterisk/sounds/agent-loggedoff.gsm
@@ -458,6 +448,16 @@ libdata/asterisk/sounds/queue-thereare.gsm
 libdata/asterisk/sounds/queue-youarenext.gsm
 libdata/asterisk/sounds/screen-callee-options.gsm
 libdata/asterisk/sounds/seconds.gsm
+libdata/asterisk/sounds/silence/1.gsm
+libdata/asterisk/sounds/silence/10.gsm
+libdata/asterisk/sounds/silence/2.gsm
+libdata/asterisk/sounds/silence/3.gsm
+libdata/asterisk/sounds/silence/4.gsm
+libdata/asterisk/sounds/silence/5.gsm
+libdata/asterisk/sounds/silence/6.gsm
+libdata/asterisk/sounds/silence/7.gsm
+libdata/asterisk/sounds/silence/8.gsm
+libdata/asterisk/sounds/silence/9.gsm
 libdata/asterisk/sounds/spy-agent.gsm
 libdata/asterisk/sounds/spy-h323.gsm
 libdata/asterisk/sounds/spy-iax.gsm

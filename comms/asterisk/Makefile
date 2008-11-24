@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2008/07/24 00:10:50 tonnerre Exp $
+# $NetBSD: Makefile,v 1.58 2008/11/24 09:27:29 jnemeth Exp $
 
 DISTNAME=	asterisk-1.2.30
+PKGREVISION=	1
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases/
@@ -19,6 +20,8 @@ REPLACE_PERL+=		agi/agi-test.agi
 
 INSTALL_TARGET=		install samples
 INSTALLATION_DIRS=	lib/pkgconfig
+
+BUILD_DEFS+=		VARBASE
 
 # Running as non-root will come later
 #ASTERISK_USER?= 	asterisk
@@ -54,7 +57,7 @@ SUBST_SED.asterisk+=	-e 's|^ *\(ASTETCDIR\)=.*|\1 = ${ASTETCDIR}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTSPOOLDIR\)=.*|\1 = ${ASTSPOOLDIR}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTLOGDIR\)=.*|\1 = ${ASTLOGDIR}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTHEADERDIR\)=.*|\1 = ${ASTHEADERDIR}|'
-SUBST_SED.asterisk+=	-e 's|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH}|'
+SUBST_SED.asterisk+=	-e 's|^ *\(ASTCONFPATH\)=.*|\1 = ${ASTCONFPATH:Q}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTBINDIR\)=.*|\1 = ${ASTBINDIR}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTSBINDIR\)=.*|\1 = ${ASTSBINDIR}|'
 SUBST_SED.asterisk+=	-e 's|^ *\(ASTVARRUNDIR\)=.*|\1 = ${ASTVARRUNDIR}|'
