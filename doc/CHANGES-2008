@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3158 2008/11/24 18:16:33 snj Exp $
+$NetBSD: CHANGES-2008,v 1.3159 2008/11/24 21:06:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5278,3 +5278,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fs-utils to 20081124 [stacktic 2008-11-24]
 	Updated mail/evolution-data-server to 2.24.2 [wiz 2008-11-24]
 	Removed games/glchess successor games/gnome-games [snj 2008-11-24]
+	Updated mail/evolution to 2.24.2 [wiz 2008-11-24]
