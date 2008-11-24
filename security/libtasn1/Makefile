@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2008/10/20 12:24:17 dsainty Exp $
+# $NetBSD: Makefile,v 1.38 2008/11/24 15:36:03 adam Exp $
 
-DISTNAME=	libtasn1-1.5
+DISTNAME=	libtasn1-1.7
 CATEGORIES=	security devel
-MASTER_SITES=	http://ftp.gnu.org/pub/gnu/gnutls/ \
+MASTER_SITES=	${MASTER_SITE_GNU:=gnutls/} \
 		ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
 		ftp://ftp.gnupg.org/gcrypt/alpha/gnutls/libtasn1/
 
@@ -23,8 +23,7 @@ INFO_FILES=		yes
 .include "../../mk/bsd.prefs.mk"
 
 # Darwin has no prototype for getopt_long and no declaration for
-# struct option, so ignore getopt_long() even though the test
-# succeeds.
+# struct option, so ignore getopt_long() even though the test succeeds.
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		ac_cv_func_getopt_long=no
 CFLAGS+=	-fno-common
