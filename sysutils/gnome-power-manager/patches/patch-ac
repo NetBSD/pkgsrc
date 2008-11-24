@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/24 13:05:45 jmcneill Exp $
+
+--- data/Makefile.in.orig	2008-11-24 07:47:19.000000000 -0500
++++ data/Makefile.in
+@@ -292,7 +292,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = icons sounds
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(datadir)/gconf/schemas
+ schema_in_files = gnome-power-manager.schemas.in
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ desktopdir = $(datadir)/applications
