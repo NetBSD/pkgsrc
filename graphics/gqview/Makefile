@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2008/06/20 01:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.66 2008/11/24 22:19:09 tnn Exp $
 
 DISTNAME=	gqview-2.0.4
 CATEGORIES=	graphics x11
@@ -14,6 +14,7 @@ USE_TOOLS+=		msgfmt pkg-config
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
+LIBS+=			-lm
 LIBS.SunOS+=		-lsocket
 
 .include "../../devel/gettext-lib/buildlink3.mk"
