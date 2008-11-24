@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.21.8.1 2008/10/31 12:00:46 rtr Exp $
+$NetBSD: distinfo,v 1.21.8.2 2008/11/24 08:43:51 rtr Exp $
 
 SHA1 (imlib2-1.4.2.tar.gz) = 769ea1da26774cd7531d1d66432cf8d7d7b30c2b
 RMD160 (imlib2-1.4.2.tar.gz) = 9b1f40ee392c1e27c6a75bbf7e8c7fb379e74695
 Size (imlib2-1.4.2.tar.gz) = 932684 bytes
+SHA1 (patch-aa) = deb91537edb7c0ff44dfb2be2ad377f960f65c06
 SHA1 (patch-ab) = 47f0165c3a4abfc6de1078768104b8e2acd2e9b5
 SHA1 (patch-ac) = bd81a8f1dfaacb43a4f62a187c4d00c43be5a7e3
 SHA1 (patch-ad) = adf301fe0179aa1ab05fc54bb7ab706ee97ab7a7
