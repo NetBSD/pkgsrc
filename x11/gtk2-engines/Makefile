@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2008/10/27 04:53:43 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2008/11/24 03:18:14 jmcneill Exp $
 
 DISTNAME=		gtk-engines-2.16.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gtk-engines/2.16/}
 EXTRACT_SUFX=		.tar.bz2
@@ -23,6 +24,8 @@ USE_TOOLS+=		gmake intltool pkg-config msgfmt
 GNU_CONFIGURE=		yes
 USE_DIRS+=		theme-1.1 xdg-1.1
 USE_LIBTOOL=		yes
+
+CONFIGURE_ARGS+=	--enable-animation
 
 PKGCONFIG_OVERRIDE=	gtk-engines-2.pc.in
 
