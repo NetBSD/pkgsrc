@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3127 2008/11/24 01:18:14 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3128 2008/11/24 01:24:03 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5247,3 +5247,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-tokyocabinet to 1.19 [obache 2008-11-24]
 	Updated databases/ruby-tokyocabinet to 1.17 [obache 2008-11-24]
 	Updated sysutils/gnome-mount to 0.8nb1 [jmcneill 2008-11-23]
+	Updated sysutils/hal to 0.5.11nb2 [jmcneill 2008-11-23]
