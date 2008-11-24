@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3137 2008/11/24 09:52:30 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.3138 2008/11/24 09:55:04 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5257,3 +5257,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/kid3 to 1.1 [obache 2008-11-24]
 	Updated devel/geany to 0.15 [roland 2008-11-24]
 	Updated comms/asterisk to 1.2.30nb1 [jnemeth 2008-11-24]
+	Updated mail/dovecot to 1.1.7 [ghen 2008-11-24]
