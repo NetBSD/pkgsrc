@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7708 2008/11/24 10:42:43 wiz Exp $
+$NetBSD: TODO,v 1.7709 2008/11/24 15:37:45 adam Exp $
 
 Suggested new packages
 ======================
@@ -779,7 +779,6 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
-	o libtasn1-1.7
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
