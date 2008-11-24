@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/11/23 03:28:50 jmcneill Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/24 15:09:02 wiz Exp $
 #
 
-DISTNAME=	gvfs-1.0.2
-PKGREVISION=	1
+DISTNAME=	gvfs-1.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,12 +34,12 @@ PLIST.hal=		yes
 CONFIGURE_ARGS+=	--disable-hal
 .endif
 
-BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.24
-
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.6
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../net/samba/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libsoup24+=	libsoup24>=2.23.91
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
