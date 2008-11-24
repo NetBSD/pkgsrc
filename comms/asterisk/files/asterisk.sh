@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: asterisk.sh,v 1.3 2008/07/10 08:23:20 sborrill Exp $
+# $NetBSD: asterisk.sh,v 1.4 2008/11/24 09:27:29 jnemeth Exp $
 #
 # PROVIDE: asterisk
 # REQUIRE: DAEMON
@@ -21,8 +21,8 @@ command="@PREFIX@/sbin/asterisk"
 required_files="@PKG_SYSCONFDIR@/asterisk.conf"
 extra_commands="reload"
 
-stop_cmd="asterisk -r -x 'stop gracefully' >/dev/null"
-reload_cmd="asterisk -r -x 'reload' >/dev/null"
+stop_cmd="$command -r -x 'stop gracefully' >/dev/null"
+reload_cmd="$command -r -x 'reload' >/dev/null"
 asterisk_nice="-20"
 
 load_rc_config $name

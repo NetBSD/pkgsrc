@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST.common_end,v 1.4 2006/12/20 11:34:55 mjl Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5 2008/11/24 09:27:29 jnemeth Exp $
 @dirrm share/examples/asterisk
-@dirrm libdata/asterisk/sounds/priv-callerintros
 @dirrm libdata/asterisk/sounds/phonetic
 @dirrm libdata/asterisk/sounds/letters
 @dirrm libdata/asterisk/sounds/digits
