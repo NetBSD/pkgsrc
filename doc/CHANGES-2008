@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3160 2008/11/24 21:17:31 hasso Exp $
+$NetBSD: CHANGES-2008,v 1.3161 2008/11/24 21:22:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5280,3 +5280,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed games/glchess successor games/gnome-games [snj 2008-11-24]
 	Updated mail/evolution to 2.24.2 [wiz 2008-11-24]
 	Updated sysutils/hal to 0.5.11nb3 [hasso 2008-11-24]
+	Updated mail/evolution-exchange to 2.24.2 [wiz 2008-11-24]
