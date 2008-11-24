@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.43 2008/11/23 21:54:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.44 2008/11/24 08:44:24 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -124,3 +124,5 @@ Pullup ticket #2594 - requested by ghen
 seamonkey: security update
 seamonkey-bin: security update
 seamonkey-gtk1: security update
+pullup ticket #2595 - requested by tron
+imlib2: add patch to fix buffer overflow 
