@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3149 2008/11/24 14:27:55 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3150 2008/11/24 14:40:10 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5269,3 +5269,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-control-center to 2.24.0.1nb2 [jmcneill 2008-11-24]
 	Updated x11/libxklavier to 3.8 [wiz 2008-11-24]
 	Updated devel/glib2 to 2.18.3 [wiz 2008-11-24]
+	Updated security/gnome-keyring to 2.24.1nb1 [jmcneill 2008-11-24]
