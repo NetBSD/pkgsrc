@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/07/21 07:53:13 abs Exp $
+$NetBSD: distinfo,v 1.5 2008/11/24 14:03:56 wiz Exp $
 
-SHA1 (meld-1.2.tar.bz2) = aa246307226332b865216d139c10de4c73562fc1
-RMD160 (meld-1.2.tar.bz2) = a06fee2f8f882a1edba329bd0be7797f89852920
-Size (meld-1.2.tar.bz2) = 616975 bytes
+SHA1 (meld-1.2.1.tar.bz2) = 8c50e2b03ebc175d771539043c9db3a128373ab8
+RMD160 (meld-1.2.1.tar.bz2) = 4b38b786bbe1551a5434c54f00b77556e2f8f8b3
+Size (meld-1.2.1.tar.bz2) = 699861 bytes
 SHA1 (patch-aa) = 49ff28a613055ead56f63e8dd5df09b986bcbea1
