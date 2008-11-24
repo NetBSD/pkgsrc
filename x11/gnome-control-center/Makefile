@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/10/24 23:45:34 jnemeth Exp $
+# $NetBSD: Makefile,v 1.18 2008/11/24 14:05:40 jmcneill Exp $
 #
 
 DISTNAME=	gnome-control-center-2.24.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,8 +20,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
 
 CONFLICTS+=		gnome2-control-center-[0-9]* control-center-[0-9]*
-
-CONFIGURE_ARGS+=	--disable-hal
 
 CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
 
@@ -49,14 +47,20 @@ BUILDLINK_API_DEPENDS.libxklavier=	libxklavier>=3.6
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-control-center
-PKG_SUPPORTED_OPTIONS=	evolution
-PKG_SUGGESTED_OPTIONS=	evolution
+PKG_SUPPORTED_OPTIONS=	evolution hal
+PKG_SUGGESTED_OPTIONS=	evolution hal
 .include "../../mk/bsd.options.mk"
 PLIST_VARS+=		evolution
 .if !empty(PKG_OPTIONS:Mevolution)
 CONFIGURE_ARGS+=	--enable-aboutme
 PLIST.evolution=	yes
 .endif
+.if !empty(PKG_OPTIONS:Mhal)
+CONFIGURE_ARGS+=	--enable-hal
+.else
+CONFIGURE_ARGS+=	--disable-hal
+.endif
+
 
 _TOOLS_USE_MSGFMT_SH=	yes
 
@@ -91,6 +95,9 @@ post-patch:
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mhal)
+.include "../../sysutils/hal/buildlink3.mk"
+.endif
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
