@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2007/09/24 12:57:04 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/24 21:48:39 wiz Exp $
 
-DISTNAME=	gamin-0.1.9
+DISTNAME=	gamin-0.1.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
 
