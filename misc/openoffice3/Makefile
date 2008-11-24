@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/11/22 15:34:32 hira Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/24 11:53:12 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -60,8 +60,7 @@ REPLACE_PERL+=		sd/res/webview/editpic.pl	\
 			sd/res/webview/poll.pl		\
 			sd/res/webview/savepic.pl	\
 			sd/res/webview/show.pl		\
-			sd/res/webview/webview.pl	\
-			sysui/desktop/share/create_mime_xml.pl
+			sd/res/webview/webview.pl
 REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
 
 SUBST_CLASSES+=		prefix
@@ -163,7 +162,7 @@ do-install:
 	cd ${DESTDIR}${OO_PREFIX} &&				\
 	for f in ${OO_PKGPATH:Q}/${OO_BASELANG}/*/*.sw; do	\
 		tar xpf $$f;					\
-	done;			 				\
+	done;							\
 	for lang in ${OO_LANGPACKS}; do				\
 		for f in ${OO_LANGPACKPATH:Q}/$$lang/*/*.sw; do	\
 			tar xpf $$f;				\
