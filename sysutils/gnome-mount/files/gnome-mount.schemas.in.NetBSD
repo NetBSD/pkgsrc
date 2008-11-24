@@ -1,0 +1,77 @@
+<gconfschemafile>
+  <!-- $NetBSD: gnome-mount.schemas.in.NetBSD,v 1.1 2008/11/24 01:16:18 jmcneill Exp $ -->
+  <schemalist>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/vfat/mount_options</key>
+        <applyto>/system/storage/default_options/vfat/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[-u=]</default>
+        <locale name="C">
+          <short>Default mount options for vfat fs</short>
+          <long>A list of default mount options for volumes formatted with the vfat file system.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/iso9660/mount_options</key>
+        <applyto>/system/storage/default_options/iso9660/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[-u=]</default>
+        <locale name="C">
+          <short>Default mount options for iso9660 fs</short>
+          <long>A list of default mount options for volumes formatted with the iso9660 file system.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/udf/mount_options</key>
+        <applyto>/system/storage/default_options/udf/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[-u=]</default>
+        <locale name="C">
+          <short>Default mount options for udf fs</short>
+          <long>A list of default mount options for volumes formatted with the udf file system.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs/mount_options</key>
+        <applyto>/system/storage/default_options/ntfs/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[-u=]</default>
+        <locale name="C">
+          <short>Default mount options for ntfs fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system.</long>
+        </locale>
+      </schema>
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs/fstype_override</key>
+        <applyto>/system/storage/default_options/ntfs/fstype_override</applyto>
+        <type>string</type>
+        <default>ntfs-3g</default>
+        <locale name="C">
+          <short>When 'ntfs' is detected, what file system driver to use by default</short>
+          <long>The name of the file system driver to use by default when 'ntfs' is detected. This is useful for configuring the system to use the 'ntfs-3g' driver for all 'ntfs' file systems by default. User can still choose to use the 'ntfs' file system driver by overriding it per-volume or on the command line.</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/system/storage/default_options/ntfs-3g/mount_options</key>
+        <applyto>/system/storage/default_options/ntfs-3g/mount_options</applyto>
+        <type>list</type>
+        <list_type>string</list_type>
+        <default>[locale=]</default>
+        <locale name="C">
+          <short>Default mount options for ntfs-3g fs</short>
+          <long>A list of default mount options for volumes formatted with the ntfs file system using ntfs-3g.</long>
+        </locale>
+      </schema>
+
+
+  </schemalist>
+</gconfschemafile>
