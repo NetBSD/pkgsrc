@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/11/20 02:05:47 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/11/24 01:13:09 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-1.3.19
+DISTNAME=	tokyocabinet-1.3.20
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
