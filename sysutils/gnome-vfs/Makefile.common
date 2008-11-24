@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2008/11/23 13:43:40 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/11/24 13:01:33 wiz Exp $
 #
 
 GNOME_VFS_VERSION=	2.24.0
@@ -70,7 +70,7 @@ CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
-DEPENDS+=	gnome-mount>=0.8:../../sysutils/gnome-mount
+MESSAGE_SRC+=	MESSAGE.hal
 .include "../../sysutils/hal/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-hal
 .else
