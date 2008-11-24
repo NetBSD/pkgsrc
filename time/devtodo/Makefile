@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2008/03/05 16:51:40 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2008/11/24 08:23:39 obache Exp $
 
 DISTNAME=	devtodo-0.1.20
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	http://swapoff.org/files/devtodo/
 
