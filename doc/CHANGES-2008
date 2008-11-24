@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3139 2008/11/24 11:59:47 hira Exp $
+$NetBSD: CHANGES-2008,v 1.3140 2008/11/24 12:04:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5259,3 +5259,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/asterisk to 1.2.30nb1 [jnemeth 2008-11-24]
 	Updated mail/dovecot to 1.1.7 [ghen 2008-11-24]
 	Updated misc/openoffice2 to 2.4.2nb3 [hira 2008-11-24]
+	Updated audio/id3 to 0.15 [obache 2008-11-24]
