@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2008/11/24 08:23:39 obache Exp $
+
+http://swapoff.org/ticket/54
+
+--- util/XML.cc.orig	2007-06-28 12:52:04.000000000 +0000
++++ util/XML.cc
+@@ -49,7 +49,7 @@ void XML::init() {
+ 	// Only initialise scanners once
+ 	if (!initialised) {
+ 		// <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+-		xmlScan.addPattern(XmlDecl, "<\\?xml.*?>[[:space:]]*");
++		xmlScan.addPattern(XmlDecl, "<\\?xml.*\\?>[[:space:]]*");
+ 		xmlScan.addPattern(XmlCommentBegin, "<!--");
+ 		xmlScan.addPattern(XmlBegin, "<[a-zA-Z0-9_-]+"
+ 			"([[:space:]]+[a-zA-Z_0-9-]+=(([/a-zA-Z_0-9,.]+)|(\"[^\"]*\")|('[^']*')))"
