@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2008/03/25 16:48:45 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/24 04:06:00 smb Exp $
 #
 
-DISTNAME=		memtest86+-1.70
-PKGNAME=		memtestplus-1.70
-PKGREVISION=
+# Note -- version number also in the do-install rule
+MAJVER=2
+MINVER=10
+
+DISTNAME=		memtest86+-${MAJVER}.${MINVER}
+PKGNAME=		memtestplus-${MAJVER}.${MINVER}
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.memtest.org/download/1.70/
+MASTER_SITES=		http://www.memtest.org/download/${MAJVER}.${MINVER}/
 
 MAINTAINER=		smb@NetBSD.org
 HOMEPAGE=		http://www.memtest.org/
@@ -14,7 +17,6 @@ COMMENT=		Thorough, stand alone memory test for x86 arch
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 NetBSD-*-x86_64 Linux-*-x86_64
 
 USE_TOOLS+=		gmake
-
 SUBST_CLASSES+=		delcr
 SUBST_STAGE.delcr=	post-build
 SUBST_MESSAGE.delcr=	Deleting CRs
@@ -31,7 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/memtestplus
 	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/memtestplus
 .if !empty(PKG_OPTIONS:Miso)
-	${INSTALL_DATA} ${WRKSRC}/memtest.iso ${PREFIX}/mdec/memtestplus.iso
+	${INSTALL_DATA} ${WRKSRC}/mt${MAJVER}${MINVER}.iso ${PREFIX}/mdec/memtestplus.iso
 .endif
 
 .include "../../mk/bsd.pkg.mk"
