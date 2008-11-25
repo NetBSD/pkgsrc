@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/23 19:24:21 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/25 13:40:05 hasso Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
@@ -47,4 +47,5 @@ pre-configure:
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
