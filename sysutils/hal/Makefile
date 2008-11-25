@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/25 23:10:23 jmcneill Exp $
+# $NetBSD: Makefile,v 1.6 2008/11/25 23:40:59 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -12,6 +12,8 @@ HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 
 BUILD_DEFS+=		VARBASE
+
+HAL_DEVELOPER?=		no
 
 HAL_USER?=		haldaemon
 HAL_GROUP?=		haldaemon
@@ -72,7 +74,11 @@ FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
 
 post-extract:
+.if !empty(HAL_DEVELOPER:Myes)
+	${LN} -sf ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
+.else
 	${CP} -r ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi
