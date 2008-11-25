@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/25 14:37:56 abs Exp $
+
+SHA1 (DBIx-Class-IntrospectableM2M-0.001001.tar.gz) = 0087aa7bf69beae23f03a8c7087f7cdbdf34382c
+RMD160 (DBIx-Class-IntrospectableM2M-0.001001.tar.gz) = 772d481f3fd081844b10f5230c616a8762d5d635
+Size (DBIx-Class-IntrospectableM2M-0.001001.tar.gz) = 14210 bytes
