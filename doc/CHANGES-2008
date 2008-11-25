@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3168 2008/11/25 18:28:49 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3169 2008/11/25 18:29:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5288,3 +5288,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBIx-Class-IntrospectableM2M version 0.001001 [abs 2008-11-25]
 	Updated net/Transmission to 1.40 [tnn 2008-11-25]
 	Updated print/if-psprint to 1.8 [abs 2008-11-25]
+	Added mail/p5-Email-Stuff version 2.06 [abs 2008-11-25]
