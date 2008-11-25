@@ -1,0 +1,14 @@
+Email::Stuff, as its name suggests, is a fairly casual module used
+to email "stuff" to people using the most common methods. It is a
+high-level module designed for ease of use when doing a very specific
+common task, but implemented on top of the tight and correct Email::
+modules.
+
+Email::Stuff is typically used to build emails and send them in a
+single statement, as seen in the synopsis. And it is certain only
+for use when creating and sending emails. As such, it contains no
+email parsing capability, and little to no modification support.
+
+To re-iterate, this is very much a module for those "slap it together
+and fire it off" situations, but that still has enough grunt behind
+the scenes to do things properly.
