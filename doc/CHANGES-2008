@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3169 2008/11/25 18:29:46 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3170 2008/11/25 22:54:17 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5289,3 +5289,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.40 [tnn 2008-11-25]
 	Updated print/if-psprint to 1.8 [abs 2008-11-25]
 	Added mail/p5-Email-Stuff version 2.06 [abs 2008-11-25]
+	Updated net/wireshark to 1.0.4nb1 [tron 2008-11-25]
