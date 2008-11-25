@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.12 2007/11/25 14:43:33 adam Exp $
-share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources/English.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/libgnustep-back-012
-share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/stamp.make
+@comment $NetBSD: PLIST,v 1.13 2008/11/25 12:52:33 adam Exp $
+share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/English.lproj/nfontFaceNames.strings
+share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Info-gnustep.plist
+share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
+share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/libgnustep-back-014
+share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/stamp.make
 share/GNUstep/System/Library/Documentation/man/man1/gpbs.1
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/FontInfo.plist
 share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019003l.afm
@@ -36,7 +36,7 @@ share/GNUstep/System/Tools/gpbs
 @dirrm share/GNUstep/System/Library/Fonts/Helvetica.nfont
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Fonts
 @comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Bundles
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources/Swedish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources/English.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-012.bundle
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Swedish.lproj
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/English.lproj
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources
+@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle
