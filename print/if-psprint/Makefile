@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2008/11/25 18:28:18 abs Exp $
 #
 
-DISTNAME=	if-psprint-1.7
-PKGREVISION=	2
+DISTNAME=	if-psprint-1.8
 CATEGORIES=	print
 MASTER_SITES=	http://www.mono.org/abs/tools/if-psprint/
 
