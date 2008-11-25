@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/11/25 13:21:48 bjs Exp $
+# $NetBSD: Makefile,v 1.14 2008/11/25 13:22:30 bjs Exp $
 #
 
 DISTNAME=	usbutil-0.5
@@ -21,7 +21,7 @@ MAKE_FLAGS+=	MKCATPAGES=no
 MAKE_FLAGS+=	MKHTML=no
 MAKE_FLAGS+=	NOGCCERROR=yes	# in keeping with original Makefile
 
-post-extract
+post-extract:
 	${RUN} ${CP} ${FILESDIR}/Makefile ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"
