@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/10/10 23:30:59 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/11/25 13:21:48 bjs Exp $
 #
 
 DISTNAME=	usbutil-0.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.augustsson.net/pub/netbsd/
 
@@ -10,5 +10,18 @@ MAINTAINER=	lennart@augustsson.net
 COMMENT=	USB developer utilities
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+AUTO_MKDIRS=		yes
+USE_BSD_MAKEFILE=	yes
+
+INSTALL_TARGET+=	maninstall install
+
+MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/sbin
+MAKE_FLAGS+=	MKCATPAGES=no
+MAKE_FLAGS+=	MKHTML=no
+MAKE_FLAGS+=	NOGCCERROR=yes	# in keeping with original Makefile
+
+post-extract
+	${RUN} ${CP} ${FILESDIR}/Makefile ${WRKSRC}/Makefile
 
 .include "../../mk/bsd.pkg.mk"
