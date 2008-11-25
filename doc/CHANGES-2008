@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3167 2008/11/25 16:32:41 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.3168 2008/11/25 18:28:49 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5287,3 +5287,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/usbutil to 0.5nb3 [bjs 2008-11-25]
 	Added databases/p5-DBIx-Class-IntrospectableM2M version 0.001001 [abs 2008-11-25]
 	Updated net/Transmission to 1.40 [tnn 2008-11-25]
+	Updated print/if-psprint to 1.8 [abs 2008-11-25]
