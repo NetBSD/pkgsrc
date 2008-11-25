@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.68 2008/10/09 16:01:51 rillig Exp $
+$NetBSD: TODO,v 1.69 2008/11/25 19:11:39 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -49,3 +49,7 @@ PLIST regexes to sets of required packages, or something.
 * To push DESTDIR support forward, it would be useful it pkglint warned
   like this if PKG_DESTDIR_SUPPORT is not defined:
   "WARN: Please consider adding DESTDIR support to the package."
+
+%
+
+if package A conflicts with B, then B should also conflict with A.
