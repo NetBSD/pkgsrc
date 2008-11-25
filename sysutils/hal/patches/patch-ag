@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2008/11/22 15:20:51 jmcneill Exp $
+$NetBSD: patch-ag,v 1.2 2008/11/25 23:10:23 jmcneill Exp $
 
---- Makefile.in.orig	2008-11-22 09:25:09.000000000 -0500
-+++ Makefile.in
-@@ -239,7 +239,7 @@ SUBDIRS = libhal libhal-storage partutil
- 
+--- Makefile.am.orig	2008-11-25 17:57:41.000000000 -0500
++++ Makefile.am	2008-11-25 17:57:56.000000000 -0500
+@@ -6,7 +6,7 @@
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = hal.pc hal-storage.pc
+ 
 -dbusdir = $(DBUS_SYS_DIR)
 +dbusdir = $(PREFIX)/share/examples/hal
  dist_dbus_DATA = hal.conf
- MAINTAINERCLEANFILES = ChangeLog
- DISTCLEANFILES = hal.pc hal-storage.pc
+ 
+ # Creating ChangeLog from git log (taken from cairo/Makefile.am):
