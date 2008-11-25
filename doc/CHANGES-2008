@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3162 2008/11/24 21:48:50 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3163 2008/11/25 10:39:27 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5282,3 +5282,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb3 [hasso 2008-11-24]
 	Updated mail/evolution-exchange to 2.24.2 [wiz 2008-11-24]
 	Updated sysutils/gamin to 0.1.10 [wiz 2008-11-24]
+	Updated textproc/p5-XML-Atom to 0.32 [kleink 2008-11-25]
