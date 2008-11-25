@@ -1,0 +1,41 @@
+$NetBSD: patch-na,v 1.1 2008/11/25 23:10:23 jmcneill Exp $
+
+--- configure.in.orig	2008-11-24 15:25:20.000000000 -0500
++++ configure.in
+@@ -448,7 +448,7 @@ AM_CONDITIONAL([HAVE_LIBPCI], [test "x$U
+ 
+ AC_ARG_WITH([backend],
+ 	    AS_HELP_STRING([--with-backend=<name>],
+-	                   [backend to use (linux/solaris/freebsd/dummy)]),
++	                   [backend to use (linux/solaris/netbsd/freebsd/dummy)]),
+ 	    [backend=$withval])
+ if ! test -z "$with_backend" ; then
+     HALD_BACKEND="$with_backend"
+@@ -457,6 +457,9 @@ else
+         *-*-solaris*)
+ 		   HALD_BACKEND="solaris"
+ 		   ;;
++        *-*-netbsd*)
++                   HALD_BACKEND="netbsd"
++		   ;;
+         *-*-freebsd*)
+                    HALD_BACKEND="freebsd"
+                    ;;
+@@ -472,6 +475,7 @@ AM_CONDITIONAL(HALD_COMPILE_DUMMY, [test
+ AM_CONDITIONAL(HALD_COMPILE_LINUX, [test x$HALD_BACKEND = xlinux], [Compiling for Linux])
+ AM_CONDITIONAL(HALD_COMPILE_FREEBSD, [test x$HALD_BACKEND = xfreebsd], [Compiling for FreeBSD])
+ AM_CONDITIONAL(HALD_COMPILE_SOLARIS, [test x$HALD_BACKEND = xsolaris], [Compiling for Solaris])
++AM_CONDITIONAL(HALD_COMPILE_NETBSD, [test x$HALD_BACKEND = xnetbsd], [Compiling for NetBSD])
+ AC_SUBST(HALD_BACKEND)
+ 
+ dnl DBUS API is subject to changes
+@@ -1004,6 +1008,9 @@ hald/linux/addons/Makefile
+ hald/solaris/Makefile
+ hald/solaris/probing/Makefile
+ hald/solaris/addons/Makefile
++hald/netbsd/Makefile
++hald/netbsd/probing/Makefile
++hald/netbsd/addons/Makefile
+ hald/freebsd/Makefile
+ hald/freebsd/probing/Makefile
+ hald/freebsd/libprobe/Makefile

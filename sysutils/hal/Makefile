@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/11/24 21:13:19 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/25 23:10:23 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -20,6 +20,7 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
+USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		YES
 
 MAKE_DIRS=		${VARBASE}/cache/hald
@@ -43,6 +44,17 @@ CONFIGURE_ARGS+=	--with-backend=freebsd
 PLIST_SRC=		PLIST.FreeBSD PLIST
 .endif
 
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
+CONFIGURE_ARGS+=	--with-backend=netbsd
+PLIST_SRC=		PLIST.NetBSD PLIST
+.endif
+
+.if ${OPSYS} == "Linux"
+.include "../../devel/libusb/buildlink3.mk"
+.include "../../sysutils/pciutils/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-backend=linux
+.endif
+
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
@@ -59,10 +71,11 @@ PKG_HOME.haldaemon=	${VARBASE}/run/hal
 FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
 
-.if ${OPSYS} == "Linux"
-.include "../../devel/libusb/buildlink3.mk"
-.include "../../sysutils/pciutils/buildlink3.mk"
-.endif
+post-extract:
+	${CP} -r ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vi
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
