@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/26 11:40:33 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/26 17:06:05 obache Exp $
 #
 
 DISTNAME=	tokyotyrant-perl-1.2
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/TokyoTyrant/.packlist
 USE_LANGUAGES=	# none
+
+REPLACE_PERL=	*.pl
 
 INSTALLATION_DIRS+=	share/tokyotyrant/doc/perl
 
