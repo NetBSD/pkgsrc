@@ -1,0 +1,24 @@
+$NetBSD: patch-ag,v 1.2.18.1 2008/11/26 11:12:10 rtr Exp $
+
+--- parser.c.orig	2008-10-03 08:40:37.000000000 +0100
++++ parser.c	2008-11-24 13:26:17.000000000 +0000
+@@ -4142,6 +4142,9 @@
+                     line = ctxt->input->line;
+                     col = ctxt->input->col;
+ 		}
++                /* something really bad happened in the SAX callback */
++                if (ctxt->instate != XML_PARSER_CONTENT)
++                    return;
+ 	    }
+ 	    ctxt->input->cur = in;
+ 	    if (*in == 0xD) {
+@@ -4222,6 +4225,9 @@
+ 		}
+ 	    }
+ 	    nbchar = 0;
++            /* something really bad happened in the SAX callback */
++            if (ctxt->instate != XML_PARSER_CONTENT)
++                return;
+ 	}
+ 	count++;
+ 	if (count > 50) {
