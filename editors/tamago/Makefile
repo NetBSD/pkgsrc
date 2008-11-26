@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/26 13:07:38 obache Exp $
 
 DISTNAME=	tamago-4.0.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}tamago-20020909
 PKGREVISION=	2
 CATEGORIES=	editors
-MASTER_SITES=	ftp://www.m17n.org/pub/tamago/
+MASTER_SITES=	http://unit.aist.go.jp/itri/itri-gist/ftp.m17n.org/pub/tamago/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.m17n.org/tamago/
