@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/11/25 23:56:30 jmcneill Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/26 19:45:32 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -47,6 +47,9 @@ PLIST_SRC=		PLIST.FreeBSD PLIST
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
 CONFIGURE_ARGS+=	--with-backend=netbsd
 PLIST_SRC=		PLIST.NetBSD PLIST
+.elif ${OPSYS} == "NetBSD"
+# Pull in the dummy backend for older NetBSD
+CONFIGURE_ARGS+=	--with-backend=dummy
 .endif
 
 .if ${OPSYS} == "Linux"
