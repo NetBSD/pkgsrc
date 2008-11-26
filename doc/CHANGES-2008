@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3176 2008/11/26 10:38:36 markd Exp $
+$NetBSD: CHANGES-2008,v 1.3177 2008/11/26 14:51:38 is Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3556,6 +3556,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/py-sqlalchemy version 0.4.7p1 [tonnerre 2008-09-04]
 	Updated www/py-django to 1.0 [tonnerre 2008-09-04]
 	Updated devel/bzr-svn to 0.4.12 [epg 2008-09-04]
+	Updated news/slrn to 0.9.9 [is 2008-09-04]
 	Added devel/p5-Test-Log4perl version 0.1001 [seb 2008-09-05]
 	Updated lang/caml-light to 0.74nb1 [dholland 2008-09-05]
 	Added x11/dri2proto version 1.1 [bjs 2008-09-05]
@@ -5195,6 +5196,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine-devel to 1.1.9 [adam 2008-11-21]
 	Updated ham/gnuradio-core-docs to 3.0.4nb2 [wiz 2008-11-21]
 	Updated ham/usrp-docs to 3.0.4nb2 [wiz 2008-11-21]
+	Updated news/slrn to 0.9.9nb2 [is 2008-11-21]
 	Updated textproc/p5-Text-BibTeX to 0.38 [he 2008-11-22]
 	Updated textproc/p5-Text-CSV_XS to 0.58 [he 2008-11-22]
 	Updated textproc/p5-Text-Markdown to 1.0.24 [he 2008-11-22]
@@ -5298,3 +5300,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/policykit to 0.9nb3 [jmcneill 2008-11-26]
 	Updated parallel/sge to 6.1.5 [markd 2008-11-26]
 	Updated editors/kile to 2.0.2 [markd 2008-11-26]
+	Updated news/slrn to 0.9.9p1 [is 2008-11-26]
