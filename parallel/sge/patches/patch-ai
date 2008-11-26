@@ -1,16 +1,16 @@
-$NetBSD: patch-ai,v 1.4 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-ai,v 1.5 2008/11/26 10:20:08 markd Exp $
 
---- source/scripts/distinst.site.orig	Mon Jan 22 22:58:31 2007
-+++ source/scripts/distinst.site	Fri May 30 11:10:46 2008
+--- source/scripts/distinst.site.orig	2008-07-04 03:10:39.000000000 +1200
++++ source/scripts/distinst.site
 @@ -32,10 +32,10 @@
  
  # Base directory where the openssl binary and libraries reside
  OPENSSLSOVERSION=0.9.7
--OPENSSLBASE=/vol2/tools/SW/openssl-0.9.7l-origin
+-OPENSSLBASE=/off_home/gridengine/openssl-0.9.7l-origin
 +OPENSSLBASE=@ssl_prefix@
  
  # Base directory where BDB resides
--BERKELEYDBBASE=/vol2/SW/db-4.4.20
+-BERKELEYDBBASE=/off_home/gridengine/db-4.4.20
 +BERKELEYDBBASE=@db4_prefix@
  
  TAR=gtar
