@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/26 12:19:58 drochner Exp $
+
+--- etc/Makefile.in.orig	2008-08-21 11:36:45.000000000 +0200
++++ etc/Makefile.in
+@@ -338,7 +338,7 @@ gimpdatadir = @gimpdatadir@
+ gimpdir = @gimpdir@
+ gimplocaledir = @gimplocaledir@
+ gimpplugindir = @gimpplugindir@
+-gimpsysconfdir = @gimpsysconfdir@
++gimpsysconfdir = $(prefix)/share/examples/gimp-2.0
+ host = @host@
+ host_alias = @host_alias@
+ host_cpu = @host_cpu@
