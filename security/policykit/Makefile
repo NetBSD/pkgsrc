@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/11/24 14:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/26 08:22:24 hasso Exp $
 #
 
 POLICYKIT_VER=		0.9
 DISTNAME=		PolicyKit-${POLICYKIT_VER}
 PKGNAME=		policykit-${POLICYKIT_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 
@@ -12,6 +12,7 @@ MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		Framework for managing admin policies and privileges
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
@@ -46,9 +47,9 @@ CONFIGURE_ARGS+=	--with-polkit-group=${POLICYKIT_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/PolicyKit.conf.NetBSD ${EGDIR}/PolicyKit.conf
+	${INSTALL_DATA} ${FILESDIR}/PolicyKit.conf.NetBSD ${DESTDIR}${EGDIR}/PolicyKit.conf
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
