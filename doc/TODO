@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7710 2008/11/24 23:11:16 wiz Exp $
+$NetBSD: TODO,v 1.7711 2008/11/26 01:24:23 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,6 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o python26-2.6.0
-	o qDecoder-8.0
 	o qbrew-0.3.9
 	o qca2-2.0.1
 	o qemu-0.9.1
