@@ -1,21 +1,40 @@
-$NetBSD: patch-af,v 1.1.2.2 2008/10/12 12:09:10 rtr Exp $
+$NetBSD: patch-af,v 1.1.2.3 2008/11/26 11:12:10 rtr Exp $
 
-Patch for CVE-2008-4409 taken from here:
-
-http://bugzilla.gnome.org/show_bug.cgi?id=554660
-http://bugzilla.gnome.org/attachment.cgi?id=119824
-
---- parser.c.orig	2008-09-01 07:22:40.000000000 +0100
-+++ parser.c	2008-10-09 15:22:55.000000000 +0100
-@@ -7225,8 +7225,10 @@
-      * Predefined entites override any extra definition
-      */
-     ent = xmlGetPredefinedEntity(name);
--    if (ent != NULL)
-+    if (ent != NULL) {
-+        *str = ptr;
-         return(ent);
-+    }
+--- SAX2.c.orig	2008-08-25 10:02:32.000000000 +0100
++++ SAX2.c	2008-11-24 13:25:21.000000000 +0000
+@@ -11,6 +11,7 @@
+ #include "libxml.h"
+ #include <stdlib.h>
+ #include <string.h>
++#include <limits.h>
+ #include <libxml/xmlmemory.h>
+ #include <libxml/tree.h>
+ #include <libxml/parser.h>
+@@ -26,6 +27,11 @@
+ #include <libxml/HTMLtree.h>
+ #include <libxml/globals.h>
  
-     /*
-      * Increate the number of entity references parsed
++/* Define SIZE_T_MAX unless defined through <limits.h>. */
++#ifndef SIZE_T_MAX
++# define SIZE_T_MAX     ((size_t)-1)
++#endif /* !SIZE_T_MAX */
++
+ /* #define DEBUG_SAX2 */
+ /* #define DEBUG_SAX2_TREE */
+ 
+@@ -2455,9 +2461,14 @@
+ 	               (xmlDictOwns(ctxt->dict, lastChild->content))) {
+ 		lastChild->content = xmlStrdup(lastChild->content);
+ 	    }
++	    if ((size_t)ctxt->nodelen > SIZE_T_MAX - (size_t)len || 
++	        (size_t)ctxt->nodemem + (size_t)len > SIZE_T_MAX / 2) {
++	            xmlSAX2ErrMemory(ctxt, "xmlSAX2Characters overflow prevented");
++	            return;
++	    }
+ 	    if (ctxt->nodelen + len >= ctxt->nodemem) {
+ 		xmlChar *newbuf;
+-		int size;
++		size_t size;
+ 
+ 		size = ctxt->nodemem + len;
+ 		size *= 2;
