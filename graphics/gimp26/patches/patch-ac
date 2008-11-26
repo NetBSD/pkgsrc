@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/11/26 12:19:58 drochner Exp $
+
+--- plug-ins/twain/Makefile.in.orig	2008-08-30 19:55:20.000000000 +0100
++++ plug-ins/twain/Makefile.in	2008-08-30 20:02:01.000000000 +0100
+@@ -67,7 +67,7 @@
+ 	$(am__DEPENDENCIES_1)
+ twain_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(twain_LDFLAGS) \
+-	$(LDFLAGS) -o $@
++	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
