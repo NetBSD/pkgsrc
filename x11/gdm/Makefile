@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.148 2008/11/23 22:06:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.149 2008/11/26 00:52:40 jmcneill Exp $
 #
 
 DISTNAME=	gdm-2.20.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -81,6 +81,12 @@ SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=${PREFIX}/share/pixmaps/NetBSD.xpm|g
 SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r now|g'
 SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
 .endif
+
+SUBST_CLASSES+=		gdmsetup
+SUBST_MESSAGE.gdmsetup=	Patching gdmsetup theme installer to use ${ROOT_USER}:${ROOT_GROUP}
+SUBST_STAGE.gdmsetup=	post-patch
+SUBST_FILES.gdmsetup=	gui/gdmsetup.c
+SUBST_SED.gdmsetup=	-e 's/root:root/${ROOT_USER}:${ROOT_GROUP}/g'
 
 .if ${OPSYS} == "SunOS"
 CFLAGS+=	-DSunOS
