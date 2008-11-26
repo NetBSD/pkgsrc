@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2006/06/10 19:43:24 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2008/11/26 01:23:40 minskim Exp $
 
---- Makefile.in.orig	2001-09-06 08:33:40.000000000 -0700
+--- Makefile.in.orig	2008-11-23 17:48:44.000000000 +0900
 +++ Makefile.in
-@@ -61,3 +61,5 @@ distclean: clean
- 		echo "===> Removing $${DIR}/Makefile"; \
+@@ -53,3 +53,5 @@ distclean: clean
  		(cd $${DIR}; rm -f Makefile); \
  	done
+ 	${RM} -f config.h
 +
 +.PHONY: install

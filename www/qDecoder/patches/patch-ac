@@ -1,0 +1,70 @@
+$NetBSD: patch-ac,v 1.1 2008/11/26 01:23:40 minskim Exp $
+
+--- examples/Makefile.in.orig	2008-11-17 16:55:45.000000000 +0900
++++ examples/Makefile.in
+@@ -30,47 +30,46 @@ DEFS	= @DEFS@
+ INCLUDE	= -I. -I../src
+ 
+ ## qDecoder Library Path
+-QLIB	= ../src/libqDecoder.a
+-#QLIB	= ../src/libqDecoder.so
++QLIB	= ../src/libqDecoder.la
+ 
+ ## Main
+ all:	query.cgi cookie.cgi multivalue.cgi upload.cgi uploadfile.cgi download.cgi streamedit.cgi session.cgi config.cgi socket.cgi obstack.cgi
+ 
+ query.cgi: ${QLIB} query.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o query.cgi query.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o query.cgi query.o ${QLIB}
+ 
+ cookie.cgi: ${QLIB} cookie.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o cookie.cgi cookie.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o cookie.cgi cookie.o ${QLIB}
+ 
+ multivalue.cgi:	${QLIB} multivalue.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o multivalue.cgi multivalue.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o multivalue.cgi multivalue.o ${QLIB}
+ 
+ upload.cgi: ${QLIB} upload.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o upload.cgi upload.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o upload.cgi upload.o ${QLIB}
+ 	chmod 6755 upload.cgi
+ 
+ uploadfile.cgi: ${QLIB} uploadfile.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o uploadfile.cgi uploadfile.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o uploadfile.cgi uploadfile.o ${QLIB}
+ 	chmod 6755 uploadfile.cgi
+ 
+ download.cgi: ${QLIB} download.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o download.cgi download.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o download.cgi download.o ${QLIB}
+ 
+ streamedit.cgi: ${QLIB} streamedit.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o streamedit.cgi streamedit.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o streamedit.cgi streamedit.o ${QLIB}
+ 
+ session.cgi: ${QLIB} session.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o session.cgi session.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o session.cgi session.o ${QLIB}
+ 	chmod 6755 session.cgi
+ 
+ config.cgi: ${QLIB} config.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o config.cgi config.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o config.cgi config.o ${QLIB}
+ 
+ socket.cgi: ${QLIB} socket.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o socket.cgi socket.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o socket.cgi socket.o ${QLIB}
+ 
+ obstack.cgi: ${QLIB} obstack.o
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o obstack.cgi obstack.o ${QLIB}
++	${LIBTOOL} --mode=link ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -o obstack.cgi obstack.o ${QLIB}
+ 
+ ${QLIB}:
+ 	(cd ../src/; make all)
+@@ -81,4 +80,4 @@ clean:
+ 
+ ## Compile Module
+ .c.o:
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<

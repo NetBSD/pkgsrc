@@ -1,9 +1,7 @@
-What's qDecoder?
-
-Being a Web Application Interface for C/C++ use, qDecoder is a solution
-product for developers. The Query Fetch algorithm of qDecoder based on the
-linked-list provides transparency with low layers by the simple library
-interface regardless of COOKIE/GET/POST(including File Upload). Thus, it
-enables the web based software to be more intuitively designed and
-implemented. qDecoder is developed according to the free software model and
-is publicly distributed.
+qDecoder is a CGI library for C/C++ and a solution product for
+developers.  The Query Fetch algorithm of qDecoder which is based on
+linked-list gives developers simpler library interface without regard
+to a method of GET or POST.  Also because it gives transparency with a
+subordinate layer, web-based softwares - CGI - is designed and
+embodied in reliability further. The source code for qDecoder is
+freely available to everyone.
