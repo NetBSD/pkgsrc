@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2008/10/13 08:07:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.29 2008/11/26 13:25:07 obache Exp $
 #
 
 DISTNAME=	semi-1.14.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/semi-1.14-for-flim-1.14/
+MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/semi/semi-1.14-for-flim-1.14/
 
 # This fix will be unnecessary for the next release.
 PATCH_SITES=		${MASTER_SITE_LOCAL}
@@ -13,7 +13,7 @@ PATCHFILES=		semi-1.14.6-pgg-gpg.patch
 PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	uebayasi@NetBSD.org
-HOMEPAGE=	http://www.m17n.org/SEMI/
+HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
