@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.608 2008/11/18 18:03:50 joerg Exp $
+# $NetBSD: Makefile,v 1.609 2008/11/26 18:13:34 martti Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -161,6 +161,7 @@ SUBDIR+=	loggerhead
 SUBDIR+=	lynx
 SUBDIR+=	mMosaic
 SUBDIR+=	make_album
+SUBDIR+=	mediawiki
 SUBDIR+=	merb
 SUBDIR+=	merb-action-args
 SUBDIR+=	merb-activerecord
