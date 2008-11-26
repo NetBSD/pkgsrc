@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3171 2008/11/25 23:11:17 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3172 2008/11/26 00:53:57 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5291,3 +5291,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-Email-Stuff version 2.06 [abs 2008-11-25]
 	Updated net/wireshark to 1.0.4nb1 [tron 2008-11-25]
 	Updated sysutils/hal to 0.5.11nb4 [jmcneill 2008-11-25]
+	Updated x11/gdm to 2.20.7nb4 [jmcneill 2008-11-25]
