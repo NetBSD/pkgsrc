@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/09/01 14:31:53 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2008/11/26 12:00:36 drochner Exp $
 
-DISTNAME=	gtkimageview-1.6.1
-PKGREVISION=	1
+DISTNAME=	gtkimageview-1.6.2
 CATEGORIES=	graphics
 # See http://trac.bjourne.webfactional.com/ticket/27
 # MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/broken
