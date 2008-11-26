@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2008/10/19 19:18:44 he Exp $
+# $NetBSD: Makefile,v 1.34 2008/11/26 10:20:08 markd Exp $
 #
 
-PKGNAME=		sge-6.1.3
-DISTNAME=		ge-V61u3_TAG-src
-PKGREVISION=		1
+PKGNAME=		sge-6.1.5
+DISTNAME=		ge-V61u5_TAG-src
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/161/
+MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/182/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gridengine.sunsource.net/
