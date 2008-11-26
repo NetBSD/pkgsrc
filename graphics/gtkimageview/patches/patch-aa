@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/11/26 12:00:36 drochner Exp $
+
+--- Makefile.in.orig	2008-11-18 16:22:16.000000000 +0100
++++ Makefile.in
+@@ -201,7 +201,7 @@ top_srcdir = @top_srcdir@
+ 
+ # src must come before docs so that gtk-doc can build an executable
+ # linked to the library.
+-SUBDIRS = src tests docs
++SUBDIRS = src docs
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = gtkimageview.pc
+ all: all-recursive
