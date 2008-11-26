@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/11/26 15:48:16 hira Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/11/26 21:55:55 hira Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
@@ -277,17 +277,6 @@ ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-drawing.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-extension.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-formula.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-master-document.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-excel-sheet-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-excel-sheet-binary-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-excel-sheet.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-excel-template-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-powerpoint-presentation-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-powerpoint-presentation.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-powerpoint-template-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-word-document-12.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-word-document.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-word-document2.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-ms-word-template-12.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-database.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-drawing-template.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-drawing.desktop
@@ -300,12 +289,6 @@ ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-spreadsheet.deskto
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-text-template.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-text.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-oasis-web-template.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-presentationml-presentation.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-presentationml-template.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-spreadsheetml-sheet.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-spreadsheetml-template.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-wordprocessingml-document.desktop
-${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-openxmlformats-officedocument-wordprocessingml-template.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-presentation-template.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-presentation.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-spreadsheet-template.desktop
