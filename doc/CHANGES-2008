@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3172 2008/11/26 00:53:57 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3173 2008/11/26 01:24:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5292,3 +5292,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/wireshark to 1.0.4nb1 [tron 2008-11-25]
 	Updated sysutils/hal to 0.5.11nb4 [jmcneill 2008-11-25]
 	Updated x11/gdm to 2.20.7nb4 [jmcneill 2008-11-25]
+	Updated www/qDecoder to 9.0 [minskim 2008-11-26]
