@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.45 2008/11/26 04:46:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.46 2008/11/26 07:47:43 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -129,3 +129,5 @@ imlib2: add patch to fix buffer overflow
 Pullup ticket #2597 - requested by is
 thunderbird: security update
 thunderbird-gtk1: security update
+pullup ticket #2598 - requested by tron
+wireshark: patch for security fixes
