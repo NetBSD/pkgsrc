@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.29 2008/10/13 08:07:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.30 2008/11/26 13:17:15 obache Exp $
 
-DISTNAME=	flim-1.14.7
+DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/flim/flim-1.14/
+MASTER_SITES=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/comp/emacsen/lisp/flim/flim-1.14/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.m17n.org/FLIM/
+HOMEPAGE=	http://www.kanji.zinbun.kyoto-u.ac.jp/~tomo/elisp/FLIM/
 COMMENT=	Emacs lisp library for message representation/encoding
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
@@ -22,7 +21,7 @@ MAKEFLAGS=	${MAKEFLAGS.${EMACS_FLAVOR}}
 
 EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 TEXINFO_REQD=	4.5
 
 BUILD_TARGET.emacs=	elc
@@ -60,5 +59,6 @@ post-install:
 
 .include "../../editors/emacs/modules.mk"
 
+BUILDLINK_API_DEPENDS.apel+=	apel>=10.7
 .include "../../devel/apel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
