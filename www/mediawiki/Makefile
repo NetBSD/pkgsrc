@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/26 18:13:18 martti Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/26 18:20:10 martti Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
 MASTER_SITES=	http://download.wikimedia.org/mediawiki/${VER}/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 #LICENSE=	gnu-gpl-v2
