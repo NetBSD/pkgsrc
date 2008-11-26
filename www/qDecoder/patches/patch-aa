@@ -1,34 +1,34 @@
-$NetBSD: patch-aa,v 1.2 2006/06/10 19:43:24 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2008/11/26 01:23:40 minskim Exp $
 
---- src/Makefile.in.orig	2001-09-06 08:33:39.000000000 -0700
+--- src/Makefile.in.orig	2008-11-23 17:42:37.000000000 +0900
 +++ src/Makefile.in
-@@ -92,24 +92,17 @@ OBJ		= qDecoder.o \
+@@ -95,19 +95,12 @@ OBJ		= qCgiRequest.o		\
+ all: qdecoder
  
- ## Make Library
- all: ${OBJ}
+ qdecoder: ${OBJ}
 -	${AR} ${ARFLAGS} ${LIBNAME} ${OBJ}
 -	${RANLIB} ${LIBNAME}
--	${LD} ${LDFLAGS} -o ${SLIBREALNAME} ${OBJ}
+-	${LD} ${LDFLAGS} ${OBJ} -o ${SLIBREALNAME}
 -	${CHMOD} 0644 ${SLIBREALNAME}
 -	${RM} -f ${SLIBNAME}
 -	${LN_S} ${SLIBREALNAME} ${SLIBNAME}
 +	${LIBTOOL} --mode=link ${CC} -o ${LIBNAME:.a=.la} ${OBJ:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info ${SLIBVERSION}:0:0
  
- ## Compile Module
- .c.o:
--	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<
-+	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<
- 
- ## Install Module
 -install: all
 +install:
- 	${INSTALL} qDecoder.h ${HEADERDIR}/qDecoder.h
--	${INSTALL} ${LIBNAME} ${LIBDIR}/${LIBNAME}
--	${INSTALL} ${SLIBREALNAME} ${LIBDIR}/${SLIBREALNAME}
+ 	${INSTALL_DATA} qDecoder.h ${HEADERDIR}/qDecoder.h
+-	${INSTALL_DATA} ${LIBNAME} ${LIBDIR}/${LIBNAME}
+-	${INSTALL_DATA} ${SLIBREALNAME} ${LIBDIR}/${SLIBREALNAME}
 -	${RM} -f ${LIBDIR}/${SLIBNAME}
 -	${LN_S} ${LIBDIR}/${SLIBREALNAME} ${LIBDIR}/${SLIBNAME}
 +	${LIBTOOL} --mode=install ${INSTALL} ${LIBNAME:.a=.la} ${LIBDIR}
  
- uninstall: deinstall
- deinstall:
+ deinstall: uninstall
+ uninstall:
+@@ -127,4 +120,4 @@ clean:
+ 
+ ## Compile
+ .c.o:
+-	${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} ${DEFS} ${INCLUDE} -c -o $@ $<
