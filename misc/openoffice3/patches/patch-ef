@@ -1,14 +1,24 @@
-$NetBSD: patch-ef,v 1.1 2008/11/22 07:57:03 hira Exp $
+$NetBSD: patch-ef,v 1.2 2008/11/26 15:33:23 hira Exp $
 
 --- sysui/desktop/share/create_tree.sh.orig	2008-05-15 18:11:15.000000000 +0900
-+++ sysui/desktop/share/create_tree.sh	2008-11-22 11:47:56.000000000 +0900
-@@ -1,46 +1,38 @@
++++ sysui/desktop/share/create_tree.sh	2008-11-26 23:56:44.000000000 +0900
+@@ -1,46 +1,41 @@
  umask 022
  
 -if [ "${KDEMAINDIR}" ]
--then
++ICON_THEMES="hicolor/??x??"
++
++if [ "${KDE}" ]
+ then
++  for i in `cat mimelnklist`; do
++    ${BSD_INSTALL_DATA} $i ${DESTDIR}${_PREFIX}/share/kde/mimelnk/application/${PREFIX}-$i
++  done
++  ICON_THEMES="${ICON_THEMES} locolor"
++fi
++
    echo Copying icons .. 
-   for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES:-hicolor/??x?? locolor} -name "*.png"`
+-  for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES:-hicolor/??x?? locolor} -name "*.png"`
++  for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES} -name "*.png"`
    do
 -    targetdir=${DESTDIR}/${KDEMAINDIR}/share/icons/`dirname $i`
 -    mkdir -p $targetdir
@@ -19,16 +29,13 @@ $NetBSD: patch-ef,v 1.1 2008/11/22 07:57:03 hira Exp $
 -    chmod 0644 $destfile
 +    ${BSD_INSTALL_DATA} ${ICON_SOURCE_DIR}/$i $destfile
    done
-   
+-  
 -  mkdir -p ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application
-+if [ "${KDE}" ]
-+then
-   for i in `cat mimelnklist`; do
+-  for i in `cat mimelnklist`; do
 -    cp $i ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application/${PREFIX}-$i
-+    cp ${BSD_INSTALL_DATA} ${DESTDIR}${_PREFIX}/share/kde/mimelnk/application/${PREFIX}-$i
-   done
+-  done
 -  chmod 0644 ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application/*  
- fi
+-fi
  
 -if [ "${GNOMEDIR}" ]
 +if [ "${GNOME}" ]
@@ -64,7 +71,7 @@ $NetBSD: patch-ef,v 1.1 2008/11/22 07:57:03 hira Exp $
    then 
      echo "Creating legacy mimetype symlinks for GNOME .."
      # add symlinks so that nautilus can identify the mime-icons 
-@@ -88,24 +80,17 @@
+@@ -88,24 +83,17 @@
        ln -sf $link_target_dir${ICON_PREFIX:-}${ICON_PREFIX:+-}extension.png                   ${link_dir}/gnome-mime-application-vnd.openofficeorg.extension.png
      done
    fi
