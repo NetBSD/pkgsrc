@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3177 2008/11/26 14:51:38 is Exp $
+$NetBSD: CHANGES-2008,v 1.3178 2008/11/26 18:15:38 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5301,3 +5301,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated parallel/sge to 6.1.5 [markd 2008-11-26]
 	Updated editors/kile to 2.0.2 [markd 2008-11-26]
 	Updated news/slrn to 0.9.9p1 [is 2008-11-26]
+	Added www/mediawiki version 1.13.2 [martti 2008-11-26]
