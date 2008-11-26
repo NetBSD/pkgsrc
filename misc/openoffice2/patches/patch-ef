@@ -1,14 +1,24 @@
-$NetBSD: patch-ef,v 1.1 2008/11/24 11:58:44 hira Exp $
+$NetBSD: patch-ef,v 1.2 2008/11/26 15:48:16 hira Exp $
 
---- sysui/desktop/share/create_tree.sh.orig	2008-11-24 16:07:39.000000000 +0900
-+++ sysui/desktop/share/create_tree.sh	2008-11-24 16:14:06.000000000 +0900
-@@ -1,46 +1,38 @@
+--- sysui/desktop/share/create_tree.sh.orig	2007-05-11 00:00:24.000000000 +0900
++++ sysui/desktop/share/create_tree.sh	2008-11-27 00:40:42.000000000 +0900
+@@ -1,46 +1,41 @@
  umask 022
  
 -if [ "${KDEMAINDIR}" ]
--then
++ICON_THEMES="hicolor/??x??"
++
++if [ "${KDE}" ]
+ then
++  for i in `cat mimelnklist`; do
++    ${BSD_INSTALL_DATA} $i ${DESTDIR}${_PREFIX}/share/kde/mimelnk/application/${PREFIX}-$i
++  done
++  ICON_THEMES="${ICON_THEMES} locolor"
++fi
++
    echo Copying icons .. 
-   for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES:-hicolor/??x?? locolor} -name "*.png"`
+-  for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES:-hicolor/??x?? locolor} -name "*.png"`
++  for i in `cd ${ICON_SOURCE_DIR}; find ${ICON_THEMES} -name "*.png"`
    do
 -    targetdir=${DESTDIR}/${KDEMAINDIR}/share/icons/`dirname $i`
 -    mkdir -p $targetdir
@@ -17,19 +27,15 @@ $NetBSD: patch-ef,v 1.1 2008/11/24 11:58:44 hira Exp $
      destfile=$targetdir/${ICON_PREFIX:-}${ICON_PREFIX:+-}`basename $i`
 -    cp ${ICON_SOURCE_DIR}/$i $destfile
 -    chmod 0644 $destfile
-+    ${BSD_INSTALL_DATA} ${ICON_SOURCE_DIR}/$i $destfile
-   done
+-  done
 -  
 -  mkdir -p ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application
-+
-+if [ "${KDE}" ]
-+then
-   for i in `cat mimelnklist`; do
+-  for i in `cat mimelnklist`; do
 -    cp $i ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application/${PREFIX}-$i
-+    ${BSD_INSTALL_DATA} $i ${DESTDIR}${_PREFIX}/share/mimelnk/application/${PREFIX}-$i
++    ${BSD_INSTALL_DATA} ${ICON_SOURCE_DIR}/$i $destfile
    done
 -  chmod 0644 ${DESTDIR}/${KDEMAINDIR}/share/mimelnk/application/*  
- fi
+-fi
  
 -if [ "${GNOMEDIR}" ]
 +if [ "${GNOME}" ]
@@ -57,15 +63,15 @@ $NetBSD: patch-ef,v 1.1 2008/11/24 11:58:44 hira Exp $
 -  chmod 0644 ${DESTDIR}/${GNOMEDIR}/share/application-registry/${PREFIX}.*
 +  ${BSD_INSTALL_DATA} openoffice.mime ${DESTDIR}${_PREFIX}/share/mime-info/${PREFIX}.mime
 +  ${BSD_INSTALL_DATA} openoffice.keys ${DESTDIR}${_PREFIX}/share/mime-info/${PREFIX}.keys
++
++  ${BSD_INSTALL_DATA} openoffice.applications ${DESTDIR}${_PREFIX}/share/application-registry/${PREFIX}.applications
  
 -  if [ "${GNOME_MIME_THEME}" ]
-+  ${BSD_INSTALL_DATA} openoffice.applications ${DESTDIR}${_PREFIX}/share/application-registry/${PREFIX}.applications
-+
 +  if [ ]
    then 
      echo "Creating legacy mimetype symlinks for GNOME .."
      # add symlinks so that nautilus can identify the mime-icons 
-@@ -88,29 +80,22 @@
+@@ -88,29 +83,22 @@
        ln -sf $link_target_dir${ICON_PREFIX:-}${ICON_PREFIX:+-}extension.png                   ${link_dir}/gnome-mime-application-vnd.openofficeorg.extension.png
      done
    fi
