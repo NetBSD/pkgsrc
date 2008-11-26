@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.46 2008/11/26 07:47:43 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.47 2008/11/26 11:12:31 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -131,3 +131,5 @@ thunderbird: security update
 thunderbird-gtk1: security update
 pullup ticket #2598 - requested by tron
 wireshark: patch for security fixes
+pullup ticket #2596 - requested by tron
+libxml2: update and patch package for security fixes
