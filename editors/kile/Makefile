@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2008/07/14 12:56:03 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2008/11/26 10:34:11 markd Exp $
 
-DISTNAME=		kile-1.9.3
-PKGREVISION=		5
+DISTNAME=		kile-2.0.2
 CATEGORIES=		editors kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kile/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,7 +19,12 @@ GNU_CONFIGURE=		yes
 REPLACE_PERL=		src/kile1.6_upd.pl \
 			src/kile1.7_upd.pl \
 			src/kile1.9_upd.pl \
-			src/kile1.9-1_upd.pl
+			src/kile1.9-1_upd.pl \
+			src/kile2.0-1_upd.pl \
+			src/kile2.0-2_upd.pl \
+			src/kile2.0-3_upd.pl \
+			src/kile2.0-4_upd.pl \
+			src/kile2.0-5_upd.pl
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
