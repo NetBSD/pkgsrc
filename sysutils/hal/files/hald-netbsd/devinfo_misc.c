@@ -9,13 +9,16 @@
  *
  **************************************************************************/
 
+#include <sys/types.h>
+#include <sys/sysctl.h>
+
 #ifdef HAVE_CONFIG_H
 #  include <config.h>
 #endif
 
+#include <sys/utsname.h>
 #include <stdio.h>
 #include <string.h>
-#include <sys/utsname.h>
 
 #include "../osspec.h"
 #include "../logger.h"
@@ -57,8 +60,10 @@ DevinfoDevHandler devinfo_default_handler = {
 static HalDevice *
 devinfo_computer_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
 {
-	HalDevice *d, *local_d;
+	HalDevice *d;
 	struct utsname un;
+	char acpi_supported_states[20];
+	size_t len = sizeof(acpi_supported_states);
 
 	if (strcmp (devnode, "mainbus0") != 0) {
 		return (NULL);
@@ -82,17 +87,19 @@ devinfo_computer_add(HalDevice *parent, const char *devnode, char *devfs_path, c
 
 	devinfo_add_enqueue (d, devfs_path, &devinfo_computer_handler);
 
-	/* all devinfo devices belong to the 'local' branch */
-	local_d = hal_device_new ();
+	if (sysctlbyname ("hw.acpi.supported_states", acpi_supported_states, &len, NULL, 0) == 0) {
+		hal_device_property_set_string (d, "power_management.type", "acpi");
+		if (strstr (acpi_supported_states, "S3") != NULL)
+			hal_device_property_set_bool (d, "power_management.can_suspend", TRUE);
+		else
+			hal_device_property_set_bool (d, "power_management.can_suspend", FALSE);
 
-	hal_device_property_set_string (local_d, "info.parent", hal_device_get_udi (d));
-        hal_device_property_set_string (local_d, "info.subsystem", "unknown");
-        hal_device_property_set_string (local_d, "info.product", "Local devices");
-	hal_device_property_set_string (local_d, "netbsd.device", devnode);
+		hal_device_property_set_bool (d, "power_management.can_hibernate", FALSE);
+	}
 
-	devinfo_add_enqueue (local_d, devnode, &devinfo_default_handler);
+	devinfo_add_enqueue (d, devnode, &devinfo_default_handler);
 
-	return (local_d);
+	return d;
 }
 
 static HalDevice *
@@ -120,21 +127,23 @@ devinfo_cpu_add(HalDevice *parent, const char *devnode, char *devfs_path, char *
 static void
 devinfo_default_apply_quirks(HalDevice *d, const char *devnode)
 {
+	HalDevice *computer = hal_device_store_match_key_value_string (hald_get_gdl (), "info.udi", "/org/freedesktop/Hal/devices/computer");
 
 /* acpiacad(4) */
 	if (strncmp (devnode, "acpiacad", 8) == 0) {
+		HAL_INFO (("%s: applying acpiacad quirks"));
 		hal_device_add_capability (d, "ac_adapter");
 
 /* acpibat(4) */
 	} else if (strncmp (devnode, "acpibat", 7) == 0) {
-		HalDevice *computer;
-
+		HAL_INFO (("%s: applying acpibat quirks"));
 		hal_device_add_capability (d, "battery");
 		hal_device_property_set_string (d, "battery.type", "primary");
 
-		computer = hal_device_store_find(hald_get_gdl (), "/org/freedesktop/Hal/devices/computer");
-		if (computer)
+		if (computer) {
+			HAL_INFO (("%s: applying acpibat computer quirks"));
 			hal_device_property_set_string (computer, "system.formfactor", "laptop");
+		}
 	}
 
 }

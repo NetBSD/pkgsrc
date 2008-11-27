@@ -1,0 +1,29 @@
+#!/bin/sh
+# $NetBSD: hal-system-power-suspend-netbsd,v 1.1 2008/11/27 03:32:19 jmcneill Exp $
+
+alarm_not_supported() {
+	echo org.freedesktop.Hal.Device.SystemPowerManagement.AlarmNotSupported >&2
+	echo Waking the system up is not supported >&2
+	exit 1
+}
+
+unsupported() {
+	echo org.freedesktop.Hal.Device.SystemPowerManagement.NotSupported >&2
+	echo No suspend method found >&2
+	exit 1
+}
+
+read seconds_to_sleep
+
+if [ -x /usr/sbin/apm ] ; then
+	if [ -e /var/run/apmdev ]; then
+		/usr/sbin/apm -z 2>/dev/null
+	else
+		/usr/sbin/apm -z -d 2>/dev/null
+	fi
+	RET=$?
+else
+	unsupported
+fi
+
+exit $RET
