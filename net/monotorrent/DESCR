@@ -1,0 +1,5 @@
+Monotorrent is an open source bittorrent library developed by Alan
+McGovern. It was initially developed as part of googles Summer of
+Code project in 2006. The main aim of this library is to provide a
+rich API for developers to connect to so they can harness BitTorrent
+for all downloading needs.
