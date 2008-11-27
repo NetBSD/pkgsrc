@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/11/26 01:23:40 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2008/11/27 21:15:36 minskim Exp $
 
---- src/Makefile.in.orig	2008-11-23 17:42:37.000000000 +0900
+--- src/Makefile.in.orig	2008-11-17 16:55:36.000000000 +0900
 +++ src/Makefile.in
-@@ -95,19 +95,12 @@ OBJ		= qCgiRequest.o		\
+@@ -95,19 +95,11 @@ OBJ		= qCgiRequest.o		\
  all: qdecoder
  
  qdecoder: ${OBJ}
@@ -15,9 +15,8 @@ $NetBSD: patch-aa,v 1.3 2008/11/26 01:23:40 minskim Exp $
 +	${LIBTOOL} --mode=link ${CC} -o ${LIBNAME:.a=.la} ${OBJ:.o=.lo} \
 +		-rpath ${PREFIX}/lib -version-info ${SLIBVERSION}:0:0
  
--install: all
-+install:
- 	${INSTALL_DATA} qDecoder.h ${HEADERDIR}/qDecoder.h
+ install: all
+-	${INSTALL_DATA} qDecoder.h ${HEADERDIR}/qDecoder.h
 -	${INSTALL_DATA} ${LIBNAME} ${LIBDIR}/${LIBNAME}
 -	${INSTALL_DATA} ${SLIBREALNAME} ${LIBDIR}/${SLIBREALNAME}
 -	${RM} -f ${LIBDIR}/${SLIBNAME}
@@ -26,7 +25,7 @@ $NetBSD: patch-aa,v 1.3 2008/11/26 01:23:40 minskim Exp $
  
  deinstall: uninstall
  uninstall:
-@@ -127,4 +120,4 @@ clean:
+@@ -127,4 +119,4 @@ clean:
  
  ## Compile
  .c.o:
