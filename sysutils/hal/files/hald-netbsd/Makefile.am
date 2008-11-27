@@ -15,7 +15,7 @@ noinst_LTLIBRARIES = libhald_netbsd.la
 endif
 
 libhald_netbsd_la_SOURCES = \
-	osspec.c drvctl.c \
+	osspec.c drvctl.c envsys.c \
 	devinfo.c devinfo_misc.c \
 	hotplug.c hal-file-monitor.c
 #	devinfo_pci.c devinfo_storage.c devinfo_usb.c
