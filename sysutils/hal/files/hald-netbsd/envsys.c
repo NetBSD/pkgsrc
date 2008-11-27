@@ -1,4 +1,4 @@
-/* $NetBSD: envsys.c,v 1.1 2008/11/27 01:45:00 jmcneill Exp $ */
+/* $NetBSD: envsys.c,v 1.2 2008/11/27 12:24:02 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -174,6 +174,8 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 	device_property_atomic_update_begin ();
 
 	hal_device_property_set_bool (d, "battery.is_rechargeable", TRUE);
+	hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
+	hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
 
 	iter = prop_array_iterator (properties);
 	while ((prop = (prop_dictionary_t)prop_object_iterator_next (iter)) != NULL) {
@@ -181,10 +183,10 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 		const char *valid;
 		int64_t intval;
 
-		if (prop_dictionary_get_cstring_nocopy (prop, "description", &descr) == false)
-			continue;
-
-		if (prop_dictionary_get_int64 (prop, "cur-value", &intval) == false)
+		if (prop_dictionary_get_cstring_nocopy (prop, "description", &descr) == false ||
+		    prop_dictionary_get_int64 (prop, "cur-value", &intval) == false ||
+		    prop_dictionary_get_cstring_nocopy (prop, "state", &valid) == false ||
+		    strcmp (valid, "valid") != 0)
 			continue;
 
 		if (strcmp (descr, "present") == 0)
@@ -204,21 +206,13 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 				hal_device_property_set_int (d, "battery.charge_level.percentage", 0);
 		}
 		else if (strcmp (descr, "charge rate") == 0) {
-			if (prop_dictionary_get_cstring_nocopy (prop, "state", &valid) == false)
-				continue;
-			if (strcmp (valid, "valid") == 0) {
-				hal_device_property_set_bool (d, "battery.rechargeable.is_charging", TRUE);
-				hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
-				hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
-			}
+			hal_device_property_set_bool (d, "battery.rechargeable.is_charging", TRUE);
+			hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
+			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
 		} else if (strcmp (descr, "discharge rate") == 0) {
-			if (prop_dictionary_get_cstring_nocopy (prop, "state", &valid) == false)
-				continue;
-			if (strcmp (valid, "valid") == 0) {
-				hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
-				hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", TRUE);
-				hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
-			}
+			hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
+			hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", TRUE);
+			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
 		}
 	}
 
