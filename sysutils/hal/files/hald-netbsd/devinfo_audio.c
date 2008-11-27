@@ -1,4 +1,4 @@
-/* $NetBSD: devinfo_audio.c,v 1.1 2008/11/27 16:07:14 jmcneill Exp $ */
+/* $NetBSD: devinfo_audio.c,v 1.2 2008/11/27 18:00:44 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -127,6 +127,7 @@ devinfo_audio_add(HalDevice *parent, const char *devnode, char *devfs_path, char
 
 	hal_device_property_set_int (d, "sound.card", unit);
 	hal_device_property_set_string (d, "sound.card_id", audiodev.name);
+	hal_device_property_set_string (d, "netbsd.sound.hardware", audiodev.config);
 
 	parent_udi = hal_device_property_get_string (parent, "info.udi");
 	if (parent_udi)
@@ -157,7 +158,7 @@ HalDevice *
 devinfo_audio_mixer_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
 {
 	HalDevice *d = NULL;
-	char *device_file, *parent_udi, *card_id;
+	char *device_file, *parent_udi, *card_id, *device_id;
 	int16_t unit;
 
 	if (strstr (devnode, "oss_mixer_") != devnode)
@@ -175,6 +176,8 @@ devinfo_audio_mixer_add(HalDevice *parent, const char *devnode, char *devfs_path
 	unit = hal_device_property_get_int (parent, "sound.card");
 	hal_device_property_set_int (d, "oss.card", unit);
 	hal_device_property_set_int (d, "oss.device", unit + 16);
+	device_id = hal_device_property_get_string (parent, "netbsd.sound.hardware");
+	hal_device_property_set_string (d, "oss.device_id", device_id);
 	hal_device_property_set_string (d, "oss.type", "mixer");
 
 	device_file = g_strdup_printf (_PATH_MIXER "%d", unit);
@@ -194,7 +197,7 @@ HalDevice *
 devinfo_audio_dsp_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
 {
 	HalDevice *d = NULL;
-	char *device_file, *parent_udi, *card_id;
+	char *device_file, *parent_udi, *card_id, *device_id;
 	int16_t unit;
 
 	if (strstr (devnode, "oss_dsp_") != devnode)
@@ -212,7 +215,9 @@ devinfo_audio_dsp_add(HalDevice *parent, const char *devnode, char *devfs_path, 
 	unit = hal_device_property_get_int (parent, "sound.card");
 	hal_device_property_set_int (d, "oss.card", unit);
 	hal_device_property_set_int (d, "oss.device", unit);
-	hal_device_property_set_string (d, "oss.type", "dsp");
+	device_id = hal_device_property_get_string (parent, "netbsd.sound.hardware");
+	hal_device_property_set_string (d, "oss.device_id", device_id);
+	hal_device_property_set_string (d, "oss.type", "pcm");
 
 	device_file = g_strdup_printf (_PATH_SOUND "%d", unit);
 	hal_device_property_set_string (d, "oss.device_file", device_file);
