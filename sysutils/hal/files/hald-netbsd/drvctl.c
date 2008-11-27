@@ -208,8 +208,12 @@ drvctl_find_device(const gchar *devnode, prop_dictionary_t *properties)
 		return FALSE;
 	}
 
-	if (properties)
-		*properties = prop_dictionary_get (results_dict, "drvctl-result-data");
+	if (properties) {
+		prop_dictionary_t result_data;
+		result_data = prop_dictionary_get (results_dict, "drvctl-result-data");
+		if (result_data)
+			*properties = prop_dictionary_copy (result_data);
+	}
 
 	prop_object_release (results_dict);
 
