@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.79 2008/11/14 14:04:12 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.80 2008/11/27 18:00:06 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -290,7 +290,6 @@ _WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
 _WRAP_CMD_SINK.CC_R=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
-_WRAP_CMD_SINK.LD=	${_WRAP_CMD_SINK.CC}
 .  elif ${OPSYS} == "Darwin"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
@@ -350,7 +349,7 @@ _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-hpux-ld
 .elif ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC?=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
 _WRAP_CMD_SINK.CXX?=	${_WRAP_CMD_SINK.CC}
-_WRAP_CMD_SINK.LD?=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
 _WRAP_CACHE_BODY.CC?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
 _WRAP_CACHE_BODY.CC_R?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
 _WRAP_TRANSFORM.CC?=	${WRAPPER_TMPDIR}/transform-aix-cc
