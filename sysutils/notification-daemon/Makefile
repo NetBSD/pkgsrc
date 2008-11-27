@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/11/27 14:18:31 jmcneill Exp $
 #
 
-DISTNAME=	notification-daemon-0.3.7
+DISTNAME=	notification-daemon-0.4.0
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/notification-daemon/
 
@@ -27,8 +27,11 @@ CONFIGURE_ARGS+=	--with-dbus-sys=${PKG_SYSCONFDIR}/dbus-1/system.d
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
