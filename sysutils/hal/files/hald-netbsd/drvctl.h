@@ -19,5 +19,6 @@ gboolean drvctl_init(void);
 void drvctl_fini(void);
 int drvctl_list(const gchar *devnode, struct devlistargs *laa);
 gboolean drvctl_find_parent(const gchar *devnode, char *parent);
+gboolean drvctl_find_device(const gchar *devnode, prop_dictionary_t *properties);
 
 #endif /* DRVCTL_H */
