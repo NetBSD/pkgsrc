@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/11/27 21:06:47 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2008/11/27 21:15:36 minskim Exp $
 #
 
-DISTNAME=	qDecoder-9.0
+DISTNAME=	qDecoder-9.0.1
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.qDecoder.org/pub/qDecoder/
 
@@ -17,6 +17,7 @@ INSTALLATION_DIRS=	include lib share/doc/qDecoder share/doc/qDecoder/html \
 post-install:
 	cd ${WRKSRC}; ${INSTALL_DATA} AUTHORS CHANGES COPYING \
 		qDecoder.jpg ${PREFIX}/share/doc/qDecoder
+	cd ${WRKSRC}/src; ${INSTALL_DATA} qDecoder.h ${PREFIX}/include
 	cd ${WRKSRC}/doc/html; ${INSTALL_DATA} * ${PREFIX}/share/doc/qDecoder/html
 	cd ${WRKSRC}/examples; ${INSTALL_DATA} *.c *.conf s*.in \
 		*.html ${PREFIX}/share/examples/qDecoder
