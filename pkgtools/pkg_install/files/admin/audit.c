@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8.2.5 2008/10/02 20:51:41 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.6 2008/11/27 19:24:13 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8.2.5 2008/10/02 20:51:41 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8.2.6 2008/11/27 19:24:13 joerg Exp $");
 #endif
 
 /*-
@@ -343,7 +343,8 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 {
 	struct pkg_vulnerabilities *pv_check;
 	char *buf, *decompressed_input;
-	size_t buf_len, decompressed_len;
+	size_t buf_len, buf_fetched, decompressed_len;
+	ssize_t cur_fetched;
 	struct url_stat st;
 	fetchIO *f;
 	int fd;
@@ -365,11 +366,21 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 
 	buf_len = st.size;
 	buf = xmalloc(buf_len + 1);
+	buf_fetched = 0;
 
-	if (fetchIO_read(f, buf, buf_len) != buf_len)
-		errx(EXIT_FAILURE,
-		    "Failure during fetch of pkg-vulnerabilities: %s",
-		    fetchLastErrString);
+	while (buf_fetched < buf_len) {
+		cur_fetched = fetchIO_read(f, buf + buf_fetched,
+		    buf_len - buf_fetched);
+		if (cur_fetched == 0)
+			errx(EXIT_FAILURE,
+			    "Truncated pkg-vulnerabilities received");
+		else if (cur_fetched == -1)
+			errx(EXIT_FAILURE,
+			    "IO error while fetching pkg-vulnerabilities: %s",
+			    fetchLastErrString);
+		buf_fetched += cur_fetched;
+	}
+	
 	buf[buf_len] = '\0';
 
 	if (decompress_buffer(buf, buf_len, &decompressed_input,
