@@ -27,6 +27,7 @@
 #include "../device_info.h"
 #include "../util.h"
 #include "devinfo_misc.h"
+#include "drvctl.h"
 
 static HalDevice *devinfo_computer_add(HalDevice *, const char *, char *, char *);
 static HalDevice *devinfo_cpu_add(HalDevice *, const char *, char *,char *);
@@ -97,6 +98,11 @@ devinfo_computer_add(HalDevice *parent, const char *devnode, char *devfs_path, c
 		hal_device_property_set_bool (d, "power_management.can_hibernate", FALSE);
 	}
 
+	if (drvctl_find_device ("acpibat0", NULL) == TRUE)
+		hal_device_property_set_string (d, "system.formfactor", "laptop");
+	else
+		hal_device_property_set_string (d, "system.formfactor", "desktop");	/* XXX */
+
 	devinfo_add_enqueue (d, devnode, &devinfo_default_handler);
 
 	return d;
@@ -127,7 +133,6 @@ devinfo_cpu_add(HalDevice *parent, const char *devnode, char *devfs_path, char *
 static void
 devinfo_default_apply_quirks(HalDevice *d, const char *devnode)
 {
-	HalDevice *computer = hal_device_store_match_key_value_string (hald_get_gdl (), "info.udi", "/org/freedesktop/Hal/devices/computer");
 
 /* acpiacad(4) */
 	if (strncmp (devnode, "acpiacad", 8) == 0) {
@@ -139,11 +144,6 @@ devinfo_default_apply_quirks(HalDevice *d, const char *devnode)
 		HAL_INFO (("%s: applying acpibat quirks"));
 		hal_device_add_capability (d, "battery");
 		hal_device_property_set_string (d, "battery.type", "primary");
-
-		if (computer) {
-			HAL_INFO (("%s: applying acpibat computer quirks"));
-			hal_device_property_set_string (computer, "system.formfactor", "laptop");
-		}
 	}
 
 }
