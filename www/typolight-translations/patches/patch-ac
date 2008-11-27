@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/11/27 04:06:41 taca Exp $
+
+--- system/modules/newsletter/languages/pl/tl_module.php.orig	2008-09-22 02:33:39.000000000 +0900
++++ system/modules/newsletter/languages/pl/tl_module.php
+@@ -29,7 +29,7 @@ $GLOBALS['TL_LANG']['tl_module']['nl_tem
+ $GLOBALS['TL_LANG']['tl_module']['nl_subscribe'] = array('E-mail aktywacyjny', 'Wpisz treść e-maila z potwierdzeniem subskrypcji. Możesz używać tagów <em>##channel##</em> (nazwa kanału), <em>##domain##</em> (aktualna domena) and <em>##link##</em> (link aktywacyjny).');
+ $GLOBALS['TL_LANG']['tl_module']['nl_unsubscribe'] = array('E-mail deaktywacyjny', 'Wpisz treść e-maila z anulowaniem subskrypcji. Możesz używać tagów <em>##channel##</em> (channel name) and <em>##domain##</em> (aktualna domena).');
+ $GLOBALS['TL_LANG']['tl_module']['nl_includeCss'] = array('Dołącz arkusz styli', 'Jeśli występuje arkusz o nazwie <em>newsletter.css</em> dołącz go do strony serwisu.');
+-$GLOBALS['TL_LANG']['tl_module']['text_subscribe'] = array('Twoja subskrypcja %s', 'Witaj\n\nDziękujemy za subskrypcję newslettera ##channel## na ##domain##.\n\nProsimy kliknąć w poniższy link aby dokończyć proces subskrypcji\n##link##\nJeśli powyższy link nie działa, musisz skopiować go i wkleić do swojej przeglądarki internetowej lub samemu go wpisać.\n\nJeśli nie zapisywałeś się do naszego newslettera, prosimy zignorować tego e-maila.\n');
+-$GLOBALS['TL_LANG']['tl_module']['text_unsubscribe'] = array('Twoja subskrypcja %s', 'Zostałeś pomyślnie wypisany z listy odbiorców newslettera - ##channel##.\n');
++$GLOBALS['TL_LANG']['tl_module']['text_subscribe'] = array('Twoja subskrypcja %s', "Witaj\n\nDziękujemy za subskrypcję newslettera ##channel## na ##domain##.\n\nProsimy kliknąć w poniższy link aby dokończyć proces subskrypcji\n##link##\nJeśli powyższy link nie działa, musisz skopiować go i wkleić do swojej przeglądarki internetowej lub samemu go wpisać.\n\nJeśli nie zapisywałeś się do naszego newslettera, prosimy zignorować tego e-maila.\n");
++$GLOBALS['TL_LANG']['tl_module']['text_unsubscribe'] = array('Twoja subskrypcja %s', "Zostałeś pomyślnie wypisany z listy odbiorców newslettera - ##channel##.\n");
+ 
+ ?>
+\ No newline at end of file

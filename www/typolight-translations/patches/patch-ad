@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/11/27 04:06:41 taca Exp $
+
+--- system/modules/registration/languages/ja/tl_module.php.orig	2008-11-06 23:02:30.000000000 +0900
++++ system/modules/registration/languages/ja/tl_module.php
+@@ -28,7 +28,7 @@ $GLOBALS['TL_LANG']['tl_module']['reg_te
+ $GLOBALS['TL_LANG']['tl_module']['reg_password'] = array('確認メール', '確認メールのテキストを入力してください。 任意のユーザプロパティ（例えば、<em>##lastname##</em> ）や、<em>##domain##</em> （現在のドメイン名）、<em>##link##</em> （有効化リンク）をワイルドカードとして使用できます。');
+ $GLOBALS['TL_LANG']['tl_module']['reg_skipName'] = array('ユーザ名の省略', 'ここにチェックを入れると、新しいパスワードをリクエストする際、ユーザ名が要求されなくなります。');
+ $GLOBALS['TL_LANG']['tl_module']['reg_jumpTo'] = array('有効化のジャンプ先ページ', 'アカウントが有効化された後に、ユーザをリダイレクトするページを選択してください。');
+-$GLOBALS['TL_LANG']['tl_module']['emailText'] = array('%s での登録', '##domain## でのご登録ありがとうございます。\n\n##link## をクリックすると登録が完了し、アカウントが有効となります。 アカウントの申し込みをした覚えがない場合は、このメールは無視してください。\n');
+-$GLOBALS['TL_LANG']['tl_module']['passwordText'] = array('%s でのパスワードリクエスト', '##domain## の新しいパスワードのリクエストがありました。\n\n##link## をクリックして、新しいパスワードを入力してください。 このメールをリクエストした覚えがない場合は、サイトの管理者に連絡してください。\n');
++$GLOBALS['TL_LANG']['tl_module']['emailText'] = array('%s での登録', "##domain## でのご登録ありがとうございます。\n\n##link## をクリックすると登録が完了し、アカウントが有効となります。 アカウントの申し込みをした覚えがない場合は、このメールは無視してください。\n");
++$GLOBALS['TL_LANG']['tl_module']['passwordText'] = array('%s でのパスワードリクエスト', "##domain## の新しいパスワードのリクエストがありました。\n\n##link## をクリックして、新しいパスワードを入力してください。 このメールをリクエストした覚えがない場合は、サイトの管理者に連絡してください。\n");
+ 
+ ?>
+\ No newline at end of file
