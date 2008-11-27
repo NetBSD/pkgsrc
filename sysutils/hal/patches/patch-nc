@@ -1,0 +1,17 @@
+$NetBSD: patch-nc,v 1.1 2008/11/27 03:32:19 jmcneill Exp $
+
+--- tools/Makefile.am.orig	2008-11-26 21:01:00.000000000 -0500
++++ tools/Makefile.am	2008-11-26 21:01:24.000000000 -0500
+@@ -8,8 +8,11 @@
+ if HALD_COMPILE_FREEBSD
+ SUBDIRS += freebsd
+ endif
++if HALD_COMPILE_NETBSD
++SUBDIRS += netbsd
++endif
+ 
+-DIST_SUBDIRS = freebsd linux
++DIST_SUBDIRS = freebsd linux netbsd
+ 
+ AM_CPPFLAGS = \
+ 	-DPACKAGE_LIBEXEC_DIR=\""$(libexecdir)"\" \
