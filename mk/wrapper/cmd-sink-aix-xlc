@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.5 2008/11/14 14:04:12 joerg Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.6 2008/11/27 18:01:17 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -89,7 +89,7 @@ $debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
 # Force dynamic linkage on AIX to get preference of dynamic libraries
 # over library archives.
 if $test "$dont_link" != "yes"; then
-	arg="-brtl"
+	arg="-Wl,-brtl"
 	$debug_log $wrapperlog "    (cmd-sink-aix-xlc) pop: $arg"
 	. $buildcmd
 fi
