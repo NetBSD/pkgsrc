@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/11/24 14:05:40 jmcneill Exp $
+# $NetBSD: Makefile,v 1.19 2008/11/27 18:14:46 jmcneill Exp $
 #
 
 DISTNAME=	gnome-control-center-2.24.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -89,6 +89,9 @@ post-patch:
 .endif
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mhal)
+DEPENDS+=	gst-plugins0.10-hal>=0.10.11:../../multimedia/gst-plugins0.10-hal
+.endif
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
