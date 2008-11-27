@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/27 17:51:28 jmcneill Exp $
+lib/gstreamer-0.10/libgsthalelements.la
