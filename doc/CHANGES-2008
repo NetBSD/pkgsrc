@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3186 2008/11/27 14:17:38 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3187 2008/11/27 14:19:09 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5310,3 +5310,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb7 [jmcneill 2008-11-27]
 	Added sysutils/gnome-device-manager version 0.2 [jmcneill 2008-11-27]
 	Updated sysutils/hal to 0.5.11nb8 [jmcneill 2008-11-27]
+	Updated sysutils/notification-daemon to 0.4.0 [jmcneill 2008-11-27]
