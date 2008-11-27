@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.16 2008/03/04 06:45:33 jlam Exp $
+# $NetBSD: unprivileged.mk,v 1.17 2008/11/27 19:28:01 rillig Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -106,7 +106,7 @@ _VARGROUPS+=			unprivileged
 _USER_VARS.unprivileged= \
 	UNPRIVILEGED UNPRIVILEGED_GROUP UNPRIVILEGED_GROUPS UNPRIVILEGED_USER
 _PKG_VARS.unprivileged=	\
-	PKG_USER_VARS PKG_GROUP_VARS
+	PKG_USERS_VARS PKG_GROUPS_VARS
 _SYS_VARS.unprivileged= \
 	REAL_ROOT_USER REAL_ROOT_GROUP ROOT_USER ROOT_GROUP \
 	BINOWN BINGRP GAMEOWN GAMEGRP MANOWN MANGRP SHAREOWN SHAREGRP DOCOWN DOCGRP \
