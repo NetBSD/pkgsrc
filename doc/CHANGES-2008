@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3180 2008/11/27 01:49:24 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3181 2008/11/27 03:33:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5304,3 +5304,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/mediawiki version 1.13.2 [martti 2008-11-26]
 	Updated devel/p5-Class-MOP to 0.70 [seb 2008-11-27]
 	Updated sysutils/hal to 0.5.11nb5 [jmcneill 2008-11-26]
+	Updated sysutils/hal to 0.5.11nb6 [jmcneill 2008-11-26]
