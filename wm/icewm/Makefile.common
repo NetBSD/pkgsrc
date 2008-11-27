@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2008/06/17 08:32:41 hauke Exp $
+# $NetBSD: Makefile.common,v 1.64 2008/11/27 13:28:05 obache Exp $
 
 DISTNAME=		icewm-1.2.35
 PKGREVISION=		1
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.icewm.org/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
@@ -65,13 +67,13 @@ post-extract:
 	cp ${FILESDIR}/bsd-daemon.xpm ${WRKSRC}/lib/taskbar
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
 	set -e; \
 	for file in BUGS CHANGES COPYING README README.wm-session TODO; do \
-		${INSTALL_DATA} ${WRKSRC}/"$${file}" ${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/"$${file}" ${DESTDIR}${DOCDIR}; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${DESTDIR}${HTMLDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
