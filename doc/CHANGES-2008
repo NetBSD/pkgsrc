@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3188 2008/11/27 16:07:55 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3189 2008/11/27 17:54:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5312,3 +5312,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb8 [jmcneill 2008-11-27]
 	Updated sysutils/notification-daemon to 0.4.0 [jmcneill 2008-11-27]
 	Updated sysutils/hal to 0.5.11nb9 [jmcneill 2008-11-27]
+	Added multimedia/gst-plugins0.10-hal version 0.10.11 [jmcneill 2008-11-27]
