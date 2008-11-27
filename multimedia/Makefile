@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2008/11/06 13:41:12 obache Exp $
+# $NetBSD: Makefile,v 1.131 2008/11/27 17:52:06 jmcneill Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -33,6 +33,7 @@ SUBDIR+=	gst-plugins0.10-dvdread
 SUBDIR+=	gst-plugins0.10-ffmpeg
 SUBDIR+=	gst-plugins0.10-gnonlin
 SUBDIR+=	gst-plugins0.10-good
+SUBDIR+=	gst-plugins0.10-hal
 SUBDIR+=	gst-plugins0.10-mpeg2dec
 SUBDIR+=	gst-plugins0.10-ogg
 SUBDIR+=	gst-plugins0.10-theora
