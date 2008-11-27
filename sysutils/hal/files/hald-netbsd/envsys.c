@@ -1,4 +1,4 @@
-/* $NetBSD: envsys.c,v 1.2 2008/11/27 12:24:02 jmcneill Exp $ */
+/* $NetBSD: envsys.c,v 1.3 2008/11/27 14:17:11 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -61,6 +61,12 @@ static void envsys_handle_devnode(const char *devnode, prop_array_t properties);
 
 static void envsys_acadapter_handler(HalDevice *d, prop_array_t properties);
 static void envsys_battery_handler(HalDevice *d, prop_array_t properties);
+
+enum battery_state {
+	CHARGING,
+	DISCHARGING,
+	NORMAL
+};
 
 static struct envsys_devmap {
 	const char *capability;
@@ -170,12 +176,11 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 {
 	prop_object_iterator_t iter;
 	prop_dictionary_t prop;
+	enum battery_state battstate = NORMAL;
 
 	device_property_atomic_update_begin ();
 
 	hal_device_property_set_bool (d, "battery.is_rechargeable", TRUE);
-	hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
-	hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
 
 	iter = prop_array_iterator (properties);
 	while ((prop = (prop_dictionary_t)prop_object_iterator_next (iter)) != NULL) {
@@ -206,14 +211,27 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 				hal_device_property_set_int (d, "battery.charge_level.percentage", 0);
 		}
 		else if (strcmp (descr, "charge rate") == 0) {
-			hal_device_property_set_bool (d, "battery.rechargeable.is_charging", TRUE);
-			hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
+			battstate = CHARGING;
 			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
 		} else if (strcmp (descr, "discharge rate") == 0) {
-			hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
-			hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", TRUE);
+			battstate = DISCHARGING;
 			hal_device_property_set_int (d, "battery.charge_level.rate", intval / 3600);
 		}
+	}
+
+	switch (battstate) {
+	case NORMAL:
+		hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
+		hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
+		break;
+	case CHARGING:
+		hal_device_property_set_bool (d, "battery.rechargeable.is_charging", TRUE);
+		hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
+		break;
+	case DISCHARGING:
+		hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
+		hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", TRUE);
+		break;
 	}
 
 	device_property_atomic_update_end ();
