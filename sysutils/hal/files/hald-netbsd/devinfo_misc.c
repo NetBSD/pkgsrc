@@ -117,6 +117,28 @@ devinfo_cpu_add(HalDevice *parent, const char *devnode, char *devfs_path, char *
 	return (d);
 }
 
+static void
+devinfo_default_apply_quirks(HalDevice *d, const char *devnode)
+{
+
+/* acpiacad(4) */
+	if (strncmp (devnode, "acpiacad", 8) == 0) {
+		hal_device_add_capability (d, "ac_adapter");
+
+/* acpibat(4) */
+	} else if (strncmp (devnode, "acpibat", 7) == 0) {
+		HalDevice *computer;
+
+		hal_device_add_capability (d, "battery");
+		hal_device_property_set_string (d, "battery.type", "primary");
+
+		computer = hal_device_store_find(hald_get_gdl (), "/org/freedesktop/Hal/devices/computer");
+		if (computer)
+			hal_device_property_set_string (computer, "system.formfactor", "laptop");
+	}
+
+}
+
 static HalDevice *
 devinfo_default_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
 {
@@ -127,6 +149,8 @@ devinfo_default_add(HalDevice *parent, const char *devnode, char *devfs_path, ch
 	d = hal_device_new ();
 
 	devinfo_set_default_properties (d, parent, devnode, devnode);
+
+	devinfo_default_apply_quirks (d, devnode);
 
 	devinfo_add_enqueue (d, devnode, &devinfo_default_handler);
 
