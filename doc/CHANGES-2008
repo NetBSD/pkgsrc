@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3190 2008/11/27 18:15:45 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3191 2008/11/27 21:16:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5314,3 +5314,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb9 [jmcneill 2008-11-27]
 	Added multimedia/gst-plugins0.10-hal version 0.10.11 [jmcneill 2008-11-27]
 	Updated x11/gnome-control-center to 2.24.0.1nb3 [jmcneill 2008-11-27]
+	Updated www/qDecoder to 9.0.1 [minskim 2008-11-27]
