@@ -32,6 +32,7 @@
 #include "osspec_netbsd.h"
 #include "hotplug.h"
 #include "drvctl.h"
+#include "envsys.h"
 #include "devinfo.h"
 #include "devinfo_storage.h"
 
@@ -50,6 +51,7 @@ osspec_init (void)
 {
 	ids_init ();
 	mntinfo_event_init ();
+	envsys_init ();
 }
 
 void
