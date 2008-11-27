@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/11/27 04:06:41 taca Exp $
+
+--- system/modules/backend/languages/ja/tl_task.php.orig	2008-11-06 23:02:30.000000000 +0900
++++ system/modules/backend/languages/ja/tl_task.php
+@@ -32,7 +32,7 @@ $GLOBALS['TL_LANG']['tl_task']['createdB
+ $GLOBALS['TL_LANG']['tl_task']['creator'] = '作成者';
+ $GLOBALS['TL_LANG']['tl_task']['noTasks'] = '現在のところ、タスクはありません。';
+ $GLOBALS['TL_LANG']['tl_task']['delConfirm'] = '本当に、タスク ID %s を削除してもよろしいですか？';
+-$GLOBALS['TL_LANG']['tl_task']['message'] = '\n\n---\n\nこのタスクは %s さんによって割り当てられました。\n';
++$GLOBALS['TL_LANG']['tl_task']['message'] = "\n\n---\n\nこのタスクは %s さんによって割り当てられました。\n";
+ $GLOBALS['TL_LANG']['tl_task']['history'] = 'タスクの履歴';
+ $GLOBALS['TL_LANG']['tl_task']['createSubmit'] = 'タスクを作成';
+ $GLOBALS['TL_LANG']['tl_task']['editSubmit'] = 'タスクを更新';

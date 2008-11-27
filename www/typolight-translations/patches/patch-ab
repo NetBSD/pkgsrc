@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/11/27 04:06:41 taca Exp $
+
+--- system/modules/newsletter/languages/ja/tl_module.php.orig	2008-11-06 23:02:30.000000000 +0900
++++ system/modules/newsletter/languages/ja/tl_module.php
+@@ -24,7 +24,7 @@ $GLOBALS['TL_LANG']['tl_module']['nl_tem
+ $GLOBALS['TL_LANG']['tl_module']['nl_subscribe'] = array('購読申し込みメール', '定期購読確認メールのテキストを入力してください。 テキストには、 <em>##channel##</em> （チャンネル名）、<em>##domain##</em> （現在のドメイン名）、<em>##link##</em> （アクティベーションリンク）のワイルドカードを使用することができます。');
+ $GLOBALS['TL_LANG']['tl_module']['nl_unsubscribe'] = array('購読中止メール', '購読中止確認メールのテキストを入力してください。 テキストには、 <em>##channel##</em> （チャンネル名）、<em>##domain##</em> （現在のドメイン名）のワイルドカードを使用することができます。');
+ $GLOBALS['TL_LANG']['tl_module']['nl_includeCss'] = array('スタイルシートを含める', '<em>newsletter.css</em> というスタイルシートがある場合、フロントエンドにそれを含めます。');
+-$GLOBALS['TL_LANG']['tl_module']['text_subscribe'] = array('%s での定期購読', '##domain## で ##channel## の購読申し込みを行いました。\n\n申し込みを完了するには ##link## をクリックしてください。 もし、あなた自身が申し込んだのでなければ、このメールは無視してください。\n');
+-$GLOBALS['TL_LANG']['tl_module']['text_unsubscribe'] = array('%s での定期購読', '正常に ##channel## の購読が中止されました。\n');
++$GLOBALS['TL_LANG']['tl_module']['text_subscribe'] = array('%s での定期購読', "##domain## で ##channel## の購読申し込みを行いました。\n\n申し込みを完了するには ##link## をクリックしてください。 もし、あなた自身が申し込んだのでなければ、このメールは無視してください。\n");
++$GLOBALS['TL_LANG']['tl_module']['text_unsubscribe'] = array('%s での定期購読', "正常に ##channel## の購読が中止されました。\n");
+ 
+ ?>
+\ No newline at end of file
