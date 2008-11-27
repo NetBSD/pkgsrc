@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/11/26 01:23:40 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2008/11/27 21:06:47 minskim Exp $
 #
 
 DISTNAME=	qDecoder-9.0
 CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.qDecoder.org/pub/qDecoder/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jypak@users.sourceforge.net
 HOMEPAGE=	http://www.qDecoder.org/
 COMMENT=	Web Application Interface for C/C++ (CGI Library)
 
