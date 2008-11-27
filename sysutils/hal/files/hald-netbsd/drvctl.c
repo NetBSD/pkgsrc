@@ -99,7 +99,6 @@ drvctl_iochannel_data (GIOChannel *source,
 
 	HAL_INFO (("DRVGETEVENT event=%s device=%s", event, device));
 
-
 	if (strcmp (event, "device-attach") == 0) {
 		drvctl_dev_add (device);
 	} else {
@@ -180,6 +179,41 @@ drvctl_list(const gchar *name, struct devlistargs *laa)
 	}
 	if (children != laa->l_children)
 		HAL_WARNING (("DRVLISTDEV/3 expected %d children, got %d", children, laa->l_childname));
+}
+
+gboolean
+drvctl_find_device(const gchar *devnode, prop_dictionary_t *properties)
+{
+	prop_dictionary_t command_dict;
+	prop_dictionary_t args_dict;
+	prop_dictionary_t results_dict;
+	int err;
+	   
+	command_dict = prop_dictionary_create ();
+	args_dict = prop_dictionary_create ();
+		
+	prop_dictionary_set_cstring_nocopy (command_dict, "drvctl-command", "get-properties");
+	prop_dictionary_set_cstring_nocopy (args_dict, "device-name", devnode);  
+	prop_dictionary_set (command_dict, "drvctl-arguments", args_dict);
+	prop_object_release (args_dict);
+
+	err = prop_dictionary_sendrecv_ioctl (command_dict, drvctl_fd,
+					      DRVCTLCOMMAND, &results_dict);
+	prop_object_release (command_dict);
+	if (err)
+		return FALSE;
+
+	if (prop_dictionary_get_int8 (results_dict, "drvctl-error", &err) == false || err != 0) {
+		prop_object_release (results_dict);
+		return FALSE;
+	}
+
+	if (properties)
+		*properties = prop_dictionary_get (results_dict, "drvctl-result-data");
+
+	prop_object_release (results_dict);
+
+	return TRUE;
 }
 
 static gboolean
