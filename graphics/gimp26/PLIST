@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/26 12:19:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/11/28 21:28:49 adam Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -270,7 +270,7 @@ lib/gimp/2.0/plug-ins/edge-neon
 lib/gimp/2.0/plug-ins/edge-sobel
 lib/gimp/2.0/plug-ins/emboss
 lib/gimp/2.0/plug-ins/engrave
-lib/gimp/2.0/plug-ins/file-aa
+${PLIST.aalib}lib/gimp/2.0/plug-ins/file-aa
 lib/gimp/2.0/plug-ins/file-bmp
 lib/gimp/2.0/plug-ins/file-cel
 lib/gimp/2.0/plug-ins/file-compressor
