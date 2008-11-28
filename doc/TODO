@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7712 2008/11/26 19:21:45 wiz Exp $
+$NetBSD: TODO,v 1.7713 2008/11/28 03:32:16 taca Exp $
 
 Suggested new packages
 ======================
@@ -822,6 +822,7 @@ Suggested package updates
 	o mail-notification-5.3
 	o mailfront-1.11 [pkg/34765]
 	o mailgraph-1.14
+	o mailman-2.1.11
 	o mailscanner-4.54.6
 	o mailx-12.3 [pkg/38262, replace mail/nail]
 	o maketool-0.8.4
@@ -1088,6 +1089,7 @@ Suggested package updates
 	o quagga-0.99.11
 	o qvplay-0.95
 	o radiance-3.7.2
+	o rails-2.2.2
 	o raine-0.50.15
 	o randread-0.2
 	o rapidsvn-0.9.6
@@ -1131,7 +1133,8 @@ Suggested package updates
 	o rxvt-unicode-9.05 [pkg/38988]
 	o rxvt-unicode-9.06
 	o sablecc-3.2
-	o samba-3.2.4
+	o samba-3.0.33 (We should keep it for compatibility or license change.)
+	o samba-3.2.5
 	o sarg-2.2.5
 	o sbcl-1.0.22
 	o scamper-20070201
@@ -1250,6 +1253,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o udunits-1.12.9
 	o uim-1.5.4
+	o unbound-1.1.1
 	o unicap-0.9.3
 	o unixodbc-2.2.13
 	o ups-nut-2.2.1 [pkgsrc-wip]
