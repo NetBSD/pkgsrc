@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+
+--- configure.ac.orig	2008-07-24 03:24:54.000000000 -0400
++++ configure.ac
+@@ -181,6 +181,7 @@ dnl ========================
+ 
+ AC_HEADER_STDC
+ AC_CHECK_HEADERS([math.h], , AC_MSG_ERROR("math header file not found"))
++AC_CHECK_HEADERS([alloca.h stdlib.h])
+ 
+ dnl Checks for libraries.
+ dnl =====================
+@@ -228,7 +229,7 @@ AC_CONFIG_FILES([
+ ])
+ 
+ BACKENDS=""
+-if test "$enable_backend" == yes; then
++if test "$enable_backend" = yes; then
+ 	BACKENDS="arm ia32 mips ppc32"
+ fi
+ AC_SUBST([BACKENDS])
