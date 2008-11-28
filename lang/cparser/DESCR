@@ -1,0 +1,6 @@
+Cparser is a recursive descent C99 parser written in C99. It contains
+a lexer, a parser, and the appropriate constructs; it does AST and
+semantic analysis. It is currently used as a frontend to the
+libFirm intermediate representation.  However, it can be used
+independently, and also is able to bootstrap itself.  Currently, cparser
+uses an external preprocessor.
