@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.patches,v 1.8 2008/04/03 20:19:42 jlam Exp $
+# $NetBSD: Makefile.patches,v 1.8.10.1 2008/11/28 11:46:32 tron Exp $
 #
 # This Makefile fragment describes the recommended patches for the
 # currently packaged version of Samba.  All recommended patches for
@@ -12,3 +12,5 @@
 #PATCH_SITES=	http://www.samba.org/samba/patches/patches-${VERSION}/
 #PATCHFILES=
 PATCH_DIST_STRIP= -p2
+PATCH_SITES=	http://www.samba.org/samba/ftp/patches/security/
+PATCHFILES=	samba-3.0.32-CVE-2008-4314.patch
