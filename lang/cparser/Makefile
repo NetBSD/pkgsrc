@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/28 01:20:06 bjs Exp $
 #
 
 DISTNAME=	cparser-0.9.5
@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake pkg-config
 AUTO_MKDIRS=	yes
 COPTS?=		-O2
 
-#DBG?=		-g3	# XXX debugging option?
+#DBG?=		-g3	# XXX debugging option (install without strip)
 
 MAKE_ENV+=	LIBTOOL_CFLAGS=-prefer-pic
 MAKE_ENV+=	COPTS=${COPTS:Q}
