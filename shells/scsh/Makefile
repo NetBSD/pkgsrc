@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2007/03/16 23:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2008/11/28 11:45:40 obache Exp $
 
 DISTNAME=		scsh-0.6.7
 CATEGORIES=		shells lang
-MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/0.6/
+MASTER_SITES=		http://ftp.scsh.net/pub/scsh/0.6/  \
+			${MASTER_SITE_SOURCEFORGE:=scsh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scsh.net/
