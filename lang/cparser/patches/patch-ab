@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
+
+Quell warning about possible uninitialized use;
+someone may wish to look into this further.
+
+--- parser.c.orig	2008-08-01 05:01:24.000000000 -0400
++++ parser.c
+@@ -2402,7 +2402,7 @@ static initializer_t *parse_initializer(
+ {
+ 	type_t        *type   = skip_typeref(env->type);
+ 	initializer_t *result = NULL;
+-	size_t         max_index;
++	size_t         max_index = 0;
+ 
+ 	if(is_type_scalar(type)) {
+ 		result = parse_scalar_initializer(type, env->must_be_constant);
