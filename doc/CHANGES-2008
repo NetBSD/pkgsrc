@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3194 2008/11/28 01:18:33 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.3195 2008/11/28 03:18:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5318,3 +5318,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb10 [jmcneill 2008-11-27]
 	Added devel/libfirm version 1.13.0 [bjs 2008-11-28]
 	Added lang/cparser version 0.9.5 [bjs 2008-11-28]
+	Updated net/samba to 3.0.32nb2 [taca 2008-11-28]
