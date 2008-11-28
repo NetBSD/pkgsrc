@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.12 2008/11/21 14:09:30 adam Exp $
+# $NetBSD: options.mk,v 1.13 2008/11/28 13:47:51 adam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
-PKG_SUPPORTED_OPTIONS=		bacula-static python 
+PKG_SUPPORTED_OPTIONS=		bacula-static openssl python
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite catalog-sqlite3 catalog-pgsql catalog-mysql
 PKG_SUGGESTED_OPTIONS=		catalog-sqlite
@@ -48,4 +48,9 @@ CONFIGURE_ARGS+=	--enable-static-tools
 PLIST_SUBST+=		STATIC=
 .else
 PLIST_SUBST+=		STATIC="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+.  include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .endif
