@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2008/09/14 13:25:07 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2008/11/28 14:29:31 jmcneill Exp $
 
---- data/Makefile.am.orig	2008-09-13 12:39:37.000000000 +0200
+--- data/Makefile.am.orig	2008-10-20 12:01:52.000000000 -0400
 +++ data/Makefile.am
 @@ -6,7 +6,7 @@ desktop_in_files = cheese.desktop.in
  desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
