@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2008/11/21 14:09:30 adam Exp $
+$NetBSD: distinfo,v 1.31 2008/11/28 13:47:51 adam Exp $
 
 SHA1 (bacula-2.4.3/2.4.3-cancel-after-network-outage.patch) = c3bfc9805792525b95857640c3549443b54e33c4
 RMD160 (bacula-2.4.3/2.4.3-cancel-after-network-outage.patch) = 100e77272267824ee3275df7b190a6da31d78fe3
@@ -13,6 +13,7 @@ SHA1 (bacula-2.4.3/bacula-2.4.3.tar.gz) = c24e7c2bd8706467d71c60b32cccdec416902c
 RMD160 (bacula-2.4.3/bacula-2.4.3.tar.gz) = 3fc216718746f8cdc1e4ca385e3d6f9c72c534c5
 Size (bacula-2.4.3/bacula-2.4.3.tar.gz) = 3125702 bytes
 SHA1 (patch-aa) = c1e5ec7c3e78c125b9fbaba97190ead10adbc599
+SHA1 (patch-ab) = 760c5214dc9a4e4c11e812842e790b973c502c1a
 SHA1 (patch-ac) = ee3771bc026d7f6e714f5e77dec920d07d4c12cf
 SHA1 (patch-ae) = 80f2adb5e905f775fbfe6568654ba8495b4c456e
 SHA1 (patch-af) = e2e60b5ecba58ced41855f01719c6bc6e27e6a1d

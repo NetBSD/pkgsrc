@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.3 2008/11/28 13:47:51 adam Exp $
+
+--- src/lib/crypto.c.orig	2008-11-28 13:50:13.000000000 +0100
++++ src/lib/crypto.c
+@@ -1099,7 +1099,7 @@ CRYPTO_SESSION *crypto_session_new (cryp
+       /* Encrypt the session key */
+       ekey = (unsigned char *)malloc(EVP_PKEY_size(keypair->pubkey));
+ 
+-      if ((ekey_len = EVP_PKEY_encrypt(ekey, cs->session_key, cs->session_key_len, keypair->pubkey)) <= 0) {
++      if ((ekey_len = EVP_PKEY_encrypt_old(ekey, cs->session_key, cs->session_key_len, keypair->pubkey)) <= 0) {
+          /* OpenSSL failure */
+          RecipientInfo_free(ri);
+          crypto_session_free(cs);
+@@ -1222,7 +1222,7 @@ crypto_error_t crypto_session_decode(con
+             /* Decrypt the session key */
+             /* Allocate sufficient space for the largest possible decrypted data */
+             cs->session_key = (unsigned char *)malloc(EVP_PKEY_size(keypair->privkey));
+-            cs->session_key_len = EVP_PKEY_decrypt(cs->session_key, M_ASN1_STRING_data(ri->encryptedKey),
++            cs->session_key_len = EVP_PKEY_decrypt_old(cs->session_key, M_ASN1_STRING_data(ri->encryptedKey),
+                                   M_ASN1_STRING_length(ri->encryptedKey), keypair->privkey);
+ 
+             if (cs->session_key_len <= 0) {
