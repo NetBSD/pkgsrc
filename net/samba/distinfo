@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.64 2008/08/30 12:18:38 tron Exp $
+$NetBSD: distinfo,v 1.64.4.1 2008/11/28 11:46:32 tron Exp $
 
+SHA1 (samba-3.0.32-CVE-2008-4314.patch) = 23354d8773e791fc9198da49048eff2a6966e6b9
+RMD160 (samba-3.0.32-CVE-2008-4314.patch) = 7507f46b58c96668a2e4e2c4aefa3244c18fad7d
+Size (samba-3.0.32-CVE-2008-4314.patch) = 1846 bytes
 SHA1 (samba-3.0.32.tar.gz) = bcbcff2c00a7cec07886de184d8761fd8b424810
 RMD160 (samba-3.0.32.tar.gz) = 91bea73b9a799b8cb67d5fadd288d9403f175492
 Size (samba-3.0.32.tar.gz) = 21679285 bytes
