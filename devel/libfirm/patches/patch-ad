@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+
+--- ir/libcore/lc_opts_enum.c.orig	2008-02-13 10:28:59.000000000 -0500
++++ ir/libcore/lc_opts_enum.c
+@@ -14,11 +14,12 @@
+ #include <stdio.h>
+ #include <string.h>
+ 
+-#if defined(__FreeBSD__)
++#if defined(HAVE_STDLIB_H)
+ #include <stdlib.h>
+ #elif defined(_WIN32)
+ #include <malloc.h>
+-#else
++#endif
++#if defined(HAVE_ALLOCA_H)
+ #include <alloca.h>
+ #endif
+ 

@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+
+--- include/libfirm/adt/xmalloc.h.orig	2008-02-18 09:19:20.000000000 -0500
++++ include/libfirm/adt/xmalloc.h
+@@ -41,12 +41,9 @@ char *xstrdup(const char *str);
+ #define xfree(ptr)      free(ptr)
+ 
+ 
+-/* Includes for alloca() */
+-#if defined(__FreeBSD__)
+-#include <stdlib.h>
+-#elif defined(_WIN32)
++#if defined(_WIN32)
+ #include <malloc.h>
+-#else
++#elif defined(HAVE_ALLOCA_H)
+ #include <alloca.h>
+ #endif
+ 
