@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+
+SHA1 (libfirm-1.13.0.tar.bz2) = 4e0fc008f20fe7d92328db9991d0f12d2ec4aa76
+RMD160 (libfirm-1.13.0.tar.bz2) = 0c3ce0285482b7fe0196d7e2a2bc3f3e8fa7351a
+Size (libfirm-1.13.0.tar.bz2) = 1548777 bytes
+SHA1 (patch-aa) = a19f5a65cf9ad07a1fdc2e9946d1c0ef63f7e0a5
+SHA1 (patch-ab) = 524535d4ac025bff2d8f37f9494ee5da307613fc
+SHA1 (patch-ac) = 6c64452d96654adb1bed5ed8f31e5b72e782a063
+SHA1 (patch-ad) = 60672bed0323094b7f857d94bab19d83ac99f6ae
