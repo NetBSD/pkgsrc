@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/07 15:16:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/29 08:32:13 wiz Exp $
 
-DISTNAME=	gnome-admin-2.24.0.90
+DISTNAME=	gnome-admin-2.24.1.90
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -10,7 +10,7 @@ COMMENT=	Meta-package for administration applications of the GNOME desktop
 
 META_PACKAGE=	yes
 
-# see http://ftp.gnome.org/pub/GNOME/admin/2.24/2.24.1/sources/
+# see http://ftp.gnome.org/pub/GNOME/admin/2.24/2.24.2/sources/
 
 # unpackaged
 #DEPENDS+=	pessulus>=2.24.0:../../*/pessulus
