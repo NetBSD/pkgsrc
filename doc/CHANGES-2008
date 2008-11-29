@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3198 2008/11/29 02:56:06 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3199 2008/11/29 08:58:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5323,3 +5323,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/sqlite3 to 3.6.6.2 [adam 2008-11-28]
 	Updated sysutils/bacula to 2.4.3nb1 [adam 2008-11-28]
 	Updated mail/wl to 2.14.0nb7 [obache 2008-11-29]
+	Added meta-pkgs/gnome-mobile version 2.24.1.90 [wiz 2008-11-29]
