@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/10 16:35:48 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/29 08:33:41 wiz Exp $
 
-DISTNAME=	c++-gnome-bindings-2.24.0.90
+DISTNAME=	c++-gnome-bindings-2.24.1.90
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -19,7 +19,7 @@ DEPENDS+=	glibmm>=2.18.1:../../devel/glibmm
 # outdated
 #DEPENDS+=	gnome-vfsmm>=2.24.0:../../sysutils/gnome-vfsmm
 DEPENDS+=	gnome-vfsmm-[0-9]*:../../sysutils/gnome-vfsmm
-DEPENDS+=	gtkmm>=2.14.1:../../x11/gtkmm
+DEPENDS+=	gtkmm>=2.14.3:../../x11/gtkmm
 # outdated
 #DEPENDS+=	libglademm>=2.6.7:../../devel/libglademm
 DEPENDS+=	libglademm-[0-9]*:../../devel/libglademm
@@ -36,6 +36,6 @@ DEPENDS+=	libsigc++>=2.2.3:../../devel/libsigc++
 # outdated
 #DEPENDS+=	libxml++>=2.24.0:../../textproc/libxml++
 DEPENDS+=	libxml++-[0-9]*:../../textproc/libxml++
-DEPENDS+=	pangomm>=2.14.0:../../devel/pangomm
+DEPENDS+=	pangomm>=2.14.1:../../devel/pangomm
 
 .include "../../mk/bsd.pkg.mk"
