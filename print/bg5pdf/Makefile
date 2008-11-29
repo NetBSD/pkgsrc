@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/21 18:55:13 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.16 2008/11/29 22:50:06 snj Exp $
 
 DISTNAME=	bg5pdf-1.0.0
 PKGREVISION=	4
@@ -13,7 +12,6 @@ COMMENT=	Wrap big5 encoding text file into PDF file by using PDFlib
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=				${WRKDIR}/bg5pdf
-PYTHON_VERSIONS_ACCEPTED=	21
 PYBINMODULE=			# defined
 PY_PATCHPLIST=			yes
 PYTHON_PATCH_SCRIPTS=		bg5pdf
