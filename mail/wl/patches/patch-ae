@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2008/11/29 02:55:41 obache Exp $
+
+Refrect custmization of PIXMAPDIR by pkgsrc.
+
+--- wl/wl-vars.el.orig	2005-02-25 15:05:50.000000000 +0000
++++ wl/wl-vars.el
+@@ -172,8 +172,8 @@ Supersede `wl-user-mail-address-list'."
+ 
+ (defcustom wl-icon-directory (if (fboundp 'locate-data-directory)
+ 				 (locate-data-directory "wl")
+-			       (let ((icons (expand-file-name "wl/icons/"
+-							      data-directory)))
++			       (let ((icons (expand-file-name "share/wl/"
++							      "@PREFIX@")))
+ 				 (if (file-directory-p icons)
+ 				     icons)))
+   "*Directory to load the icon files from, or nil if none."
