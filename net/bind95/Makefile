@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/08/03 18:42:31 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2008/11/29 21:47:32 spz Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P2/pl2/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
@@ -75,7 +76,7 @@ post-install:
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "options.mk"
 .include "../../mk/bsd.pkg.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none") || \
