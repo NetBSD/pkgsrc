@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3204 2008/11/29 19:26:38 snj Exp $
+$NetBSD: CHANGES-2008,v 1.3205 2008/11/29 21:44:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5369,3 +5369,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed www/zope25-Zippy [snj 2008-11-29]
 	Removed www/zope25-colorz [snj 2008-11-29]
 	Removed www/zope25-zopebook [snj 2008-11-29]
+	Updated databases/p5-CatalystX-CRUD to 0.35 [seb 2008-11-29]
