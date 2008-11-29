@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/10/30 04:40:26 snj Exp $
+# $NetBSD: Makefile,v 1.30 2008/11/29 18:13:28 snj Exp $
 
 DISTNAME=	rdiff-backup-1.2.2
 CATEGORIES=	sysutils net
@@ -12,7 +12,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	15 21 23
+PYTHON_VERSIONS_INCOMPATIBLE=	21 23
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
