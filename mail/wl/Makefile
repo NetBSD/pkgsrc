@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2008/10/13 08:07:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.40 2008/11/29 02:55:41 obache Exp $
 
 DISTNAME=	wl-2.14.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
 
@@ -18,7 +18,13 @@ MAKE_FLAGS+=	INFODIR=${DESTDIR:Q}${EMACS_INFOPREFIX:Q}
 MAKE_FLAGS+=	LISPDIR=${DESTDIR:Q}${EMACS_LISPPREFIX:Q}
 MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR:Q}
 MAKE_FLAGS+=	PIXMAPDIR=${DESTDIR:Q}${PREFIX:Q}/share/wl
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
+
+SUBST_CLASSES+=		pixmap
+SUBST_STAGE.pixmap=	post-configure
+SUBST_MESSAGE.pixmap=	Fixing wl-icon-directory default value
+SUBST_FILES.pixmap=	wl/wl-vars.el
+SUBST_VARS.pixmap=	PREFIX
 
 DOCDIR=			${PREFIX}/share/doc/wl
 EXAMPLESDIR=		${PREFIX}/share/examples/wl
