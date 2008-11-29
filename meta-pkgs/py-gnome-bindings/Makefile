@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2008/11/19 01:16:24 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/11/29 08:36:08 wiz Exp $
 
-DISTNAME=	${PYPKGPREFIX}-gnome-bindings-2.24.1
+DISTNAME=	${PYPKGPREFIX}-gnome-bindings-2.24.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -14,7 +14,7 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 
 .include "../../lang/python/pyversion.mk"
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.1/sources/python/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.2/sources/python/
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2>=2.22.3:../../x11/py-gnome2
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.15.4:../../devel/py-gobject
