@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/29 08:33:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/11/29 08:34:48 wiz Exp $
 
 DISTNAME=	c++-gnome-bindings-2.24.1.90
 CATEGORIES=	meta-pkgs x11 gnome
@@ -10,7 +10,7 @@ COMMENT=	Meta-package for C++ bindings for the GNOME desktop
 
 META_PACKAGE=	yes
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.1/sources/c++/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.2/sources/c++/
 
 # outdated
 #DEPENDS+=	gconfmm>=2.24.0:../../devel/gconfmm
