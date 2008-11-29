@@ -1,5 +1,0 @@
-Selects a random quote from a quote database as used by the ``fortune'' BSD
-prgram standard on most Unix installations.
-
-If your fortune databases are not in /usr/share/games/fortunes then you need
-to edit fortunesetup.py, sorry.

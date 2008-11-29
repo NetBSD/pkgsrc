@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:08:40 wiz Exp $
-
-SHA1 (zope/Zope-2.6.2-src.tgz) = 378a505eda04f843161dea449194996241278a98
-RMD160 (zope/Zope-2.6.2-src.tgz) = bfc25a15a2c3065c61939ea4bcd265eccdae9e88
-Size (zope/Zope-2.6.2-src.tgz) = 2347004 bytes
-SHA1 (patch-aa) = d1b047c5b8082e5efb67f02c1d1a4ba149a1ece6

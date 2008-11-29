@@ -1,3 +1,0 @@
-The JPicture product adds an extended type of Image to ZOPE. In addition
-to the title a JPicture has an optional description field as well as a
-thumbnail which can be uploaded into it using the management screens.
