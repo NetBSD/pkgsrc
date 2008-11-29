@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.12 2007/08/10 04:03:23 jlam Exp $
+# $NetBSD: install.mk,v 1.13 2008/11/29 13:54:45 rillig Exp $
 #
 # _flavor-check-conflicts:
 #	Checks for conflicts between the package and installed packages.
@@ -20,16 +20,16 @@
 #
 
 _flavor-check-conflicts: .PHONY error-check
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${WRKDIR}/.CONFLICTS
+	${RUN}${RM} -f ${WRKDIR}/.CONFLICTS
 .for _conflict_ in ${CONFLICTS}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	found="`${_PKG_BEST_EXISTS} ${_conflict_:Q} || ${TRUE}`";	\
 	case "$$found" in						\
 	"")	;;							\
 	*)	${ECHO} "$$found" >> ${WRKDIR}/.CONFLICTS ;;		\
 	esac
 .endfor
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${TEST} -f ${WRKDIR}/.CONFLICTS || exit 0;			\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
 	${ECHO} "${PKGNAME} conflicts with installed package(s):";	\
@@ -39,7 +39,7 @@ _flavor-check-conflicts: .PHONY error-check
 	${RM} -f ${WRKDIR}/.CONFLICTS
 
 _flavor-check-installed: .PHONY error-check
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	found="`${_PKG_BEST_EXISTS} ${PKGWILDCARD:Q} || ${TRUE}`";	\
 	${TEST} -n "$$found" || exit 0;					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
@@ -59,15 +59,15 @@ _REGISTER_DEPENDENCIES=							\
 
 _flavor-register: .PHONY _flavor-generate-metadata ${_RDEPENDS_FILE}
 	@${STEP_MSG} "Registering installation for ${PKGNAME}"
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}${CP} ${PKG_DB_TMPDIR}/* ${_PKG_DBDIR}/${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} add ${PKGNAME}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}${RM} -fr ${_PKG_DBDIR}/${PKGNAME}
+	${RUN}${MKDIR} ${_PKG_DBDIR}/${PKGNAME}
+	${RUN}${CP} ${PKG_DB_TMPDIR}/* ${_PKG_DBDIR}/${PKGNAME}
+	${RUN}${PKG_ADMIN} add ${PKGNAME}
+	${RUN}								\
 	case ${_AUTOMATIC:Q}"" in					\
 	[yY][eE][sS])	${PKG_ADMIN} set automatic=yes ${PKGNAME} ;;	\
 	esac
-	${_PKG_SILENT}${_PKG_DEBUG}${_FULL_DEPENDS_CMD} |		\
+	${RUN}${_FULL_DEPENDS_CMD} |					\
 		${SORT} -u | ${_REGISTER_DEPENDENCIES} ${PKGNAME}
 
 _flavor-install-clean: .PHONY _flavor-clean-metadata

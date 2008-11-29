@@ -1,19 +1,19 @@
-# $NetBSD: utility.mk,v 1.10 2008/02/18 14:30:40 obache Exp $
+# $NetBSD: utility.mk,v 1.11 2008/11/29 13:54:45 rillig Exp $
 
 # The 'info' target can be used to display information about a package.
 .PHONY: info
 info:
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} "${PKGWILDCARD}"
+	${RUN}${PKG_INFO} "${PKGWILDCARD}"
 
 # The 'check' target can be used to check an installed package.
 .PHONY: check
 check:
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_ADMIN} check "${PKGWILDCARD}"
+	${RUN}${PKG_ADMIN} check "${PKGWILDCARD}"
 
 # The 'list' target can be used to list the files installed by a package.
 .PHONY: list
 list:
-	${_PKG_SILENT}${_PKG_DEBUG}${PKG_INFO} -L "${PKGWILDCARD}"
+	${RUN}${PKG_INFO} -L "${PKGWILDCARD}"
 
 ######################################################################
 ###
@@ -27,9 +27,9 @@ list:
 #
 show-downlevel: .PHONY
 .if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+	${RUN}${DO_NADA}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	found="`${_PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" -a "X$$found" != "X${PKGNAME}" ]; then	\
 		${ECHO} "${PKGBASE} package: $$found installed, pkgsrc version ${PKGNAME}"; \
@@ -43,7 +43,7 @@ show-downlevel: .PHONY
 .PHONY: show-installed-depends
 show-installed-depends: # will not be removed
 .if !empty(DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	for i in ${DEPENDS:C/:.*$//:Q:S/\ / /g} ; do			\
 		echo "$$i =>" `${_PKG_BEST_EXISTS} "$$i"`;		\
 	done
@@ -52,7 +52,7 @@ show-installed-depends: # will not be removed
 .PHONY: show-needs-update
 show-needs-update: _about-to-be-removed
 .if !empty(DEPENDS)
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${_DEPENDS_WALK_CMD} -r ${PKGPATH} |				\
 	while read i; do						\
 		cd ${PKGSRCDIR}/$$i;					\
@@ -69,9 +69,9 @@ show-needs-update: _about-to-be-removed
 .PHONY: show-pkgsrc-dir
 show-pkgsrc-dir: _about-to-be-removed
 .if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+	${RUN}${DO_NADA}
 .else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	found="`${_PKG_BEST_EXISTS} \"${PKGWILDCARD}\" || ${TRUE}`";	\
 	if [ "X$$found" != "X" ]; then					\
 		${ECHO} ${PKGPATH};					\
