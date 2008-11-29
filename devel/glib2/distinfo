@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.104 2008/11/24 14:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.105 2008/11/29 19:09:04 jmcneill Exp $
 
 SHA1 (glib-2.18.3.tar.bz2) = 293f639fb85ea47347eb34e122327c60ef7606e4
 RMD160 (glib-2.18.3.tar.bz2) = cf43fbba04250becaabdb7b7f55bcdec584f019e
@@ -14,5 +14,5 @@ SHA1 (patch-ai) = 29faa9647a201bf82b016af0d48f61fc06baac7c
 SHA1 (patch-aj) = a8c4e79113828e6dadf0b158777bb860aa44de3e
 SHA1 (patch-ak) = f382189966f073b3b6e6de89ea7709571241a9a0
 SHA1 (patch-al) = de5135c328027b3c4543bb09994d31b6ffedeafa
-SHA1 (patch-ba) = 739f407f6e19bb9c5e7a0e15a3b5cb5ea0431f9a
+SHA1 (patch-ba) = a343571ca14f7b20339d627782206baa7016f3fa
 SHA1 (patch-cb) = 0f084c33fb67fbb8e12448034450699da26289ff
