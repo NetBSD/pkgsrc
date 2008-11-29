@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2008/11/19 12:06:41 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2008/11/29 21:31:58 joerg Exp $
 
 DISTNAME=		mutt-1.5.18
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -57,6 +57,11 @@ CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 FILES_SUBST+=		DOCDIR=${DOCDIR}
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	doc/Muttrc
+SUBST_VARS.paths+=	DOCDIR PREFIX
+SUBST_STAGE.paths+=	pre-configure
 
 # Define WRKSRC explicitly so we can use its value below.
 WRKSRC=			${WRKDIR}/${DISTNAME}
