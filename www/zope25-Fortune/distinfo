@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:41 wiz Exp $
-
-SHA1 (zope/Fortune-0.5.2.tar.gz) = 3d07eadd077378f530931052a55ab7e4a784bf77
-RMD160 (zope/Fortune-0.5.2.tar.gz) = c6862774a87aecc4c127b2bfe4b7aaaf97083223
-Size (zope/Fortune-0.5.2.tar.gz) = 2912 bytes
-SHA1 (patch-aa) = 61a38a9cb356e146a7e6be92c48ee8fcb20277b4
