@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/12 23:53:19 rillig Exp $
-
-SHA1 (zope/MetaPublisher128.tgz) = b243632ba08329e99618943a8a42055252cc3160
-RMD160 (zope/MetaPublisher128.tgz) = 87e90dd44a40084c2b456585e25a3baf2011b057
-Size (zope/MetaPublisher128.tgz) = 115885 bytes
-SHA1 (patch-aa) = 372fafa2a14c07d01f5d90bbda2ef981efc7e198
