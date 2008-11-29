@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/10 16:36:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/11/29 08:34:29 wiz Exp $
 
-DISTNAME=	mono-gnome-bindings-2.24.1
+DISTNAME=	mono-gnome-bindings-2.24.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -10,8 +10,8 @@ COMMENT=	Meta-package for Mono (C#) bindings for the GNOME desktop
 
 META_PACKAGE=	yes
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.1/sources/mono/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.2/sources/mono/
 
-DEPENDS+=	gtk-sharp>=2.12.4:../../x11/gtk-sharp
+DEPENDS+=	gtk-sharp>=2.12.6:../../x11/gtk-sharp
 
 .include "../../mk/bsd.pkg.mk"
