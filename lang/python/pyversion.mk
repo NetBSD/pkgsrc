@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.59 2008/04/25 16:27:45 tnn Exp $
+# $NetBSD: pyversion.mk,v 1.60 2008/11/29 18:52:22 snj Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 15 21 23 24 25
+#	Possible values: 21 23 24 25
 #	Default: 24
 #
 # === Package-settable variables ===
@@ -21,13 +21,13 @@
 #	PYTHON_VERSIONS_INCOMPATIBLE instead, since it will
 #	automatically include future versions.
 #
-#	Possible values: 25 24 23 21 15
+#	Possible values: 25 24 23 21
 #	Default: 25 24 23
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 15 21 23 24 25
+#	Possible values: 21 23 24 25
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -66,10 +66,9 @@ PYTHON_VERSIONS_ACCEPTED?=		25 24 23
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 .if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_INCOMPATIBLE+=		21 15
+PYTHON_VERSIONS_INCOMPATIBLE+=		21
 .endif
 
-BUILDLINK_API_DEPENDS.python15?=		python15>=1.5
 BUILDLINK_API_DEPENDS.python21?=		python21>=2.1
 BUILDLINK_API_DEPENDS.python23?=		python23>=2.3
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
@@ -139,15 +138,6 @@ PYPACKAGE=	python21
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python21}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
-.elif ${_PYTHON_VERSION} == "15"
-PYPKGSRCDIR=	../../lang/python15
-PYPACKAGE=	python15
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python15}:${PYPKGSRCDIR}
-PYVERSSUFFIX=	1.5
-PYPKGPREFIX=	py15
-.if !defined(PYTHON_DISTUTILS_BOOTSTRAP)
-BUILD_DEPENDS+=	py15-distutils-[0-9]*:../../devel/py-distutils
-.endif
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
 .endif
