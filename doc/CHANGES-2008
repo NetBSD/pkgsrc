@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3202 2008/11/29 18:13:28 snj Exp $
+$NetBSD: CHANGES-2008,v 1.3203 2008/11/29 19:10:04 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5328,3 +5328,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Moose to 0.62 [seb 2008-11-29]
 	Updated net/p5-NetAddr-IP to 4.018 [seb 2008-11-29]
 	Removed lang/python15 [snj 2008-11-29]
+	Updated devel/glib2 to 2.18.3nb1 [jmcneill 2008-11-29]
