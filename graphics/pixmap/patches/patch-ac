@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2002/10/08 12:38:26 jlam Exp $
+$NetBSD: patch-ac,v 1.6 2008/11/30 08:43:16 obache Exp $
 
---- Imakefile.orig	Fri May 13 06:04:38 1994
+--- Imakefile.orig	1994-05-13 11:04:38.000000000 +0000
 +++ Imakefile
-@@ -8,7 +8,7 @@
+@@ -8,7 +8,7 @@ XCOMM  Created:   April 20, 1991.
  XCOMM
  
  XCOMM def/undef USE_MOTIF there if you want Pixmap to use Motif or not.
@@ -11,12 +11,12 @@ $NetBSD: patch-ac,v 1.5 2002/10/08 12:38:26 jlam Exp $
  #ifdef HPArchitecture
  CCOPTIONS = -Aa -D_HPUX_SOURCE -DNO_EDITRES
  #if ProjectX > 4
-@@ -21,22 +21,20 @@
+@@ -21,22 +21,20 @@ R5EXT    = -I.
  #endif
  
  XCOMM Where you have rgb.txt
 -RGBTXT = $(LIBDIR)/rgb.txt
-+RGBTXT = ${X11BASE}/lib/X11/rgb.txt
++RGBTXT = @RGBTXT@
  
  XCOMM LUCS extra variable for where bitmaps go
  PIXMAPDIR = $(LIBDIR)/Pixmap
@@ -39,7 +39,18 @@ $NetBSD: patch-ac,v 1.5 2002/10/08 12:38:26 jlam Exp $
          BITMAPS = MDown MFlipHoriz MFlipVert MFold  MLeft MRight MRotateLeft \
                    MRotateRight Stipple MUp
  #else
-@@ -89,7 +87,7 @@
+@@ -70,8 +68,8 @@ LOCAL_LIBRARIES =  -L$(XPM_LIBDIR) -lXpm
+ 
+ ComplexProgramTarget(pixmap)
+ InstallAppDefaults(Pixmap)
+-MakeDirectories(install, $(PIXMAPDIR))
+-InstallMultipleFlags($(BITMAPS), $(PIXMAPDIR), $(INSTDATFLAGS))
++MakeDirectories(install,$(PIXMAPDIR))
++InstallMultipleFlags($(BITMAPS),$(PIXMAPDIR),$(INSTDATFLAGS))
+ 
+ AllTarget(dotpixmap)
+ 
+@@ -89,7 +87,7 @@ NamedMakeSubdirs(Xgnu, SelFile)
  
  Pixmap.ad: APixmap.ad
  	@echo Pixmap compiled with Athena.
