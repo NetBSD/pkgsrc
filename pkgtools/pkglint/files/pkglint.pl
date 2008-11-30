@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.790 2008/11/24 14:59:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.791 2008/11/30 22:19:01 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -971,16 +971,16 @@ sub check_end($$) {
 	return unless defined($self->subst_id);
 
 	if (!defined($self->subst_class)) {
-		$line->log_warning("Incomplete SUBST block: SUBST_CLASSES missing.");
+		$main::opt_warn_extra and $line->log_warning("Incomplete SUBST block: SUBST_CLASSES missing.");
 	}
 	if (!defined($self->subst_stage)) {
-		$line->log_warning("Incomplete SUBST block: SUBST_STAGE missing.");
+		$main::opt_warn_extra and $line->log_warning("Incomplete SUBST block: SUBST_STAGE missing.");
 	}
 	if (@{$self->subst_files} == 0) {
-		$line->log_warning("Incomplete SUBST block: SUBST_FILES missing.");
+		$main::opt_warn_extra and $line->log_warning("Incomplete SUBST block: SUBST_FILES missing.");
 	}
 	if (@{$self->subst_sed} == 0 && @{$self->subst_vars} == 0 && !defined($self->subst_filter_cmd)) {
-		$line->log_warning("Incomplete SUBST block: SUBST_SED or SUBST_VARS missing.");
+		$main::opt_warn_extra and $line->log_warning("Incomplete SUBST block: SUBST_SED or SUBST_VARS missing.");
 	}
 	$self->init();
 }
@@ -1002,13 +1002,13 @@ sub check_varassign($$$$$) {
 	if ($varname eq "SUBST_CLASSES") {
 
 		if ($value =~ m"^(\S+)\s") {
-			$line->log_warning("Please add only one class at a time to SUBST_CLASSES.");
+			$main::opt_warn_extra and $line->log_warning("Please add only one class at a time to SUBST_CLASSES.");
 			$self->[SUBST_CLASS] = $1;
 			$self->[SUBST_ID] = $1;
 
 		} else {
 			if (defined($self->subst_class)) {
-				$line->log_warning("SUBST_CLASSES should only appear once in a SUBST block.");
+				$main::opt_warn_extra and $line->log_warning("SUBST_CLASSES should only appear once in a SUBST block.");
 			}
 			$self->[SUBST_CLASS] = $value;
 			$self->[SUBST_ID] = $value;
@@ -1022,13 +1022,13 @@ sub check_varassign($$$$$) {
 		($varbase, $varparam) = ($1, $2);
 
 		if (!defined($id)) {
-			$line->log_note("SUBST_CLASSES should precede the definition of ${varbase}.${varparam}.");
+			$main::opt_warn_extra and $line->log_note("SUBST_CLASSES should precede the definition of ${varbase}.${varparam}.");
 
 			$id = $self->[SUBST_ID] = $varparam;
 		}
 	} else {
 		if (defined($id)) {
-			$line->log_warning("Foreign variable in SUBST block.");
+			$main::opt_warn_extra and $line->log_warning("Foreign variable in SUBST block.");
 		}
 		return;
 	}
@@ -1046,20 +1046,20 @@ sub check_varassign($$$$$) {
 			$self->[SUBST_ID] = $varparam;
 			$id = $varparam;
 		} else {
-			$line->log_warning("Variable parameter \"${varparam}\" does not match SUBST class \"${id}\".");
+			$main::opt_warn_extra and $line->log_warning("Variable parameter \"${varparam}\" does not match SUBST class \"${id}\".");
 		}
 	}
 
 	if ($varbase eq "SUBST_STAGE") {
 		if (defined($self->subst_stage)) {
-			$line->log_warning("Duplicate definition of SUBST_STAGE.${id}.");
+			$main::opt_warn_extra and $line->log_warning("Duplicate definition of SUBST_STAGE.${id}.");
 		} else {
 			$self->[SUBST_STAGE] = $value;
 		}
 
 	} elsif ($varbase eq "SUBST_MESSAGE") {
 		if (defined($self->subst_message)) {
-			$line->log_warning("Duplicate definition of SUBST_MESSAGE.${id}.");
+			$main::opt_warn_extra and $line->log_warning("Duplicate definition of SUBST_MESSAGE.${id}.");
 		} else {
 			$self->[SUBST_MESSAGE] = $value;
 		}
@@ -1067,7 +1067,7 @@ sub check_varassign($$$$$) {
 	} elsif ($varbase eq "SUBST_FILES") {
 		if (@{$self->subst_files} > 0) {
 			if ($op ne "+=") {
-				$line->log_warning("All but the first SUBST_FILES line should use the \"+=\" operator.");
+				$main::opt_warn_extra and $line->log_warning("All but the first SUBST_FILES line should use the \"+=\" operator.");
 			}
 		}
 		push(@{$self->subst_files}, $value);
@@ -1075,14 +1075,14 @@ sub check_varassign($$$$$) {
 	} elsif ($varbase eq "SUBST_SED") {
 		if (@{$self->subst_sed} > 0) {
 			if ($op ne "+=") {
-				$line->log_warning("All but the first SUBST_SED line should use the \"+=\" operator.");
+				$main::opt_warn_extra and $line->log_warning("All but the first SUBST_SED line should use the \"+=\" operator.");
 			}
 		}
 		push(@{$self->subst_sed}, $value);
 
 	} elsif ($varbase eq "SUBST_FILTER_CMD") {
 		if (defined($self->subst_filter_cmd)) {
-			$line->log_warning("Duplicate definition of SUBST_FILTER_CMD.${id}.");
+			$main::opt_warn_extra and $line->log_warning("Duplicate definition of SUBST_FILTER_CMD.${id}.");
 		} else {
 			$self->[SUBST_FILTER_CMD] = $value;
 		}
@@ -1090,13 +1090,13 @@ sub check_varassign($$$$$) {
 	} elsif ($varbase eq "SUBST_VARS") {
 		if (@{$self->subst_vars} > 0) {
 			if ($op ne "+=") {
-				$line->log_warning("All but the first SUBST_VARS line should use the \"+=\" operator.");
+				$main::opt_warn_extra and $line->log_warning("All but the first SUBST_VARS line should use the \"+=\" operator.");
 			}
 		}
 		push(@{$self->subst_vars}, $value);
 
 	} else {
-		$line->log_warning("Foreign variable in SUBST block.");
+		$main::opt_warn_extra and $line->log_warning("Foreign variable in SUBST block.");
 	}
 }
 
@@ -1307,7 +1307,7 @@ my (%debug) = (
 
 my $opt_warn_absname	= true;
 my $opt_warn_directcmd	= true;
-my $opt_warn_extra	= false;
+our $opt_warn_extra	= false;	# used by PkgLint::SubstContext
 my $opt_warn_order	= true;
 my $opt_warn_perm	= false;
 my $opt_warn_plist_depr	= false;
