@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3210 2008/11/30 13:30:36 seb Exp $
+$NetBSD: CHANGES-2008,v 1.3211 2008/11/30 19:22:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5375,3 +5375,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.17 [seb 2008-11-30]
 	Updated net/p5-NetAddr-IP to 4.019 [seb 2008-11-30]
 	Added devel/p5-Template-Plugin-VMethods version 0.03 [seb 2008-11-30]
+	Added devel/p5-Template-Plugin-Handy version 0.002 [seb 2008-11-30]
