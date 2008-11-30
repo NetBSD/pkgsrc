@@ -1,0 +1,3 @@
+The Perl 5 module Template::Plugin::VMethods is a simple base class
+to allow modules to install and remove virtual methods into the
+Template Toolkit.
