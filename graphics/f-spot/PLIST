@@ -1,0 +1,388 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/30 23:56:48 wiz Exp $
+bin/f-spot
+bin/f-spot-import
+bin/f-spot-sqlite-upgrade
+lib/f-spot/Cms.dll
+lib/f-spot/Cms.dll.config
+lib/f-spot/FSpot.Core.dll
+lib/f-spot/FSpot.JobScheduler.dll
+lib/f-spot/FSpot.Query.dll
+lib/f-spot/FSpot.Utils.dll
+lib/f-spot/FSpot.Utils.dll.config
+lib/f-spot/FSpot.Widgets.dll
+lib/f-spot/FlickrNet.dll
+lib/f-spot/Mono.Addins.Gui.dll
+lib/f-spot/Mono.Addins.Setup.dll
+lib/f-spot/Mono.Addins.dll
+lib/f-spot/Mono.Addins.dll.config
+lib/f-spot/Mono.Google.dll
+lib/f-spot/Mono.Tabblo.dll
+lib/f-spot/NDesk.Glitz.dll
+lib/f-spot/SemWeb.dll
+lib/f-spot/SmugMugNet.dll
+lib/f-spot/Tao.OpenGl.ExtensionLoader.dll
+lib/f-spot/Tao.OpenGl.ExtensionLoader.dll.config
+lib/f-spot/Tao.OpenGl.Glu.dll
+lib/f-spot/Tao.OpenGl.Glu.dll.config
+lib/f-spot/Tao.OpenGl.dll
+lib/f-spot/Tao.OpenGl.dll.config
+lib/f-spot/extensions/BeagleService.dll
+lib/f-spot/extensions/CDExport.dll
+lib/f-spot/extensions/ChangePhotoPath.dll
+lib/f-spot/extensions/DBusService.dll
+lib/f-spot/extensions/DefaultExporters.addin.xml
+lib/f-spot/extensions/DevelopInUFRaw.dll
+lib/f-spot/extensions/FacebookExport.dll
+lib/f-spot/extensions/FlickrExport.dll
+lib/f-spot/extensions/FolderExport.dll
+lib/f-spot/extensions/GalleryExport.dll
+lib/f-spot/extensions/HashJob.dll
+lib/f-spot/extensions/MergeDb.dll
+lib/f-spot/extensions/PicasaWebExport.dll
+lib/f-spot/extensions/RawPlusJpeg.dll
+lib/f-spot/extensions/SmugMugExport.dll
+lib/f-spot/extensions/TabbloExport.dll
+lib/f-spot/extensions/ZipExport.dll
+lib/f-spot/f-spot.exe
+lib/f-spot/f-spot.exe.config
+lib/f-spot/f-spot.global.addins
+lib/f-spot/gio-sharp.dll
+lib/f-spot/gio-sharp.dll.config
+lib/f-spot/gnome-keyring-sharp.dll
+lib/f-spot/libfspot.la
+lib/f-spot/libfspoteog.la
+lib/f-spot/libfspotjpegtran.la
+lib/f-spot/libgphoto2-sharp.dll
+lib/f-spot/libgphoto2-sharp.dll.config
+lib/gio-sharp-unstable/gio-sharp.dll
+lib/gio-sharp-unstable/gio-sharp.dll.config
+lib/pkgconfig/f-spot.pc
+lib/pkgconfig/gio-sharp-unstable.pc
+libexec/gnome-screensaver/f-spot-screensaver
+share/applications/f-spot-import.desktop
+share/applications/f-spot-view.desktop
+share/applications/f-spot.desktop
+share/applications/screensavers/f-spot-screensaver.desktop
+share/f-spot/icons/hicolor/16x16/actions/adjust-colors.png
+share/f-spot/icons/hicolor/16x16/actions/align-horizon.png
+share/f-spot/icons/hicolor/16x16/actions/autocolor.png
+share/f-spot/icons/hicolor/16x16/actions/color-desaturate.png
+share/f-spot/icons/hicolor/16x16/actions/color-sepia.png
+share/f-spot/icons/hicolor/16x16/actions/crop.png
+share/f-spot/icons/hicolor/16x16/actions/filter-soft-focus.png
+share/f-spot/icons/hicolor/16x16/actions/object-rotate-left.png
+share/f-spot/icons/hicolor/16x16/actions/object-rotate-right.png
+share/f-spot/icons/hicolor/16x16/actions/rating-blank.png
+share/f-spot/icons/hicolor/16x16/actions/rating-rated-gray.png
+share/f-spot/icons/hicolor/16x16/actions/rating-rated.png
+share/f-spot/icons/hicolor/16x16/actions/red-eye-remove.png
+share/f-spot/icons/hicolor/16x16/actions/tag-new.png
+share/f-spot/icons/hicolor/16x16/actions/tag.png
+share/f-spot/icons/hicolor/16x16/actions/view-far.png
+share/f-spot/icons/hicolor/16x16/actions/view-fullscreen.png
+share/f-spot/icons/hicolor/16x16/actions/view-near.png
+share/f-spot/icons/hicolor/16x16/actions/view-restore.png
+share/f-spot/icons/hicolor/16x16/apps/f-spot.png
+share/f-spot/icons/hicolor/16x16/devices/camera-photo.png
+share/f-spot/icons/hicolor/16x16/emblems/emblem-event.png
+share/f-spot/icons/hicolor/16x16/emblems/emblem-people.png
+share/f-spot/icons/hicolor/16x16/emblems/emblem-places.png
+share/f-spot/icons/hicolor/16x16/emblems/emblem-readonly.png
+share/f-spot/icons/hicolor/16x16/places/film-roll.png
+share/f-spot/icons/hicolor/16x16/status/mode-browse.png
+share/f-spot/icons/hicolor/16x16/status/mode-image-edit.png
+share/f-spot/icons/hicolor/22x22/actions/adjust-colors.png
+share/f-spot/icons/hicolor/22x22/actions/align-horizon.png
+share/f-spot/icons/hicolor/22x22/actions/autocolor.png
+share/f-spot/icons/hicolor/22x22/actions/color-desaturate.png
+share/f-spot/icons/hicolor/22x22/actions/color-sepia.png
+share/f-spot/icons/hicolor/22x22/actions/crop.png
+share/f-spot/icons/hicolor/22x22/actions/filter-soft-focus.png
+share/f-spot/icons/hicolor/22x22/actions/object-rotate-left.png
+share/f-spot/icons/hicolor/22x22/actions/object-rotate-right.png
+share/f-spot/icons/hicolor/22x22/actions/red-eye-remove.png
+share/f-spot/icons/hicolor/22x22/actions/tag-new.png
+share/f-spot/icons/hicolor/22x22/actions/tag.png
+share/f-spot/icons/hicolor/22x22/actions/view-far.png
+share/f-spot/icons/hicolor/22x22/actions/view-fullscreen.png
+share/f-spot/icons/hicolor/22x22/actions/view-near.png
+share/f-spot/icons/hicolor/22x22/actions/view-restore.png
+share/f-spot/icons/hicolor/22x22/apps/f-spot.png
+share/f-spot/icons/hicolor/22x22/devices/camera-photo.png
+share/f-spot/icons/hicolor/22x22/emblems/emblem-event.png
+share/f-spot/icons/hicolor/22x22/emblems/emblem-people.png
+share/f-spot/icons/hicolor/22x22/emblems/emblem-places.png
+share/f-spot/icons/hicolor/22x22/emblems/emblem-readonly.png
+share/f-spot/icons/hicolor/22x22/places/film-roll.png
+share/f-spot/icons/hicolor/22x22/status/mode-browse.png
+share/f-spot/icons/hicolor/22x22/status/mode-image-edit.png
+share/f-spot/icons/hicolor/24x24/actions/adjust-colors.png
+share/f-spot/icons/hicolor/24x24/actions/align-horizon.png
+share/f-spot/icons/hicolor/24x24/actions/autocolor.png
+share/f-spot/icons/hicolor/24x24/actions/color-desaturate.png
+share/f-spot/icons/hicolor/24x24/actions/filter-soft-focus.png
+share/f-spot/icons/hicolor/24x24/actions/object-rotate-left.png
+share/f-spot/icons/hicolor/24x24/actions/object-rotate-right.png
+share/f-spot/icons/hicolor/24x24/actions/red-eye-remove.png
+share/f-spot/icons/hicolor/24x24/actions/tag-new.png
+share/f-spot/icons/hicolor/24x24/actions/view-far.png
+share/f-spot/icons/hicolor/24x24/actions/view-fullscreen.png
+share/f-spot/icons/hicolor/24x24/actions/view-near.png
+share/f-spot/icons/hicolor/24x24/actions/view-restore.png
+share/f-spot/icons/hicolor/24x24/apps/f-spot.png
+share/f-spot/icons/hicolor/24x24/devices/camera-photo.png
+share/f-spot/icons/hicolor/24x24/emblems/emblem-event.png
+share/f-spot/icons/hicolor/24x24/emblems/emblem-people.png
+share/f-spot/icons/hicolor/24x24/emblems/emblem-places.png
+share/f-spot/icons/hicolor/24x24/emblems/emblem-readonly.png
+share/f-spot/icons/hicolor/24x24/places/film-roll.png
+share/f-spot/icons/hicolor/24x24/status/mode-browse.png
+share/f-spot/icons/hicolor/24x24/status/mode-image-edit.png
+share/f-spot/icons/hicolor/32x32/actions/object-rotate-left.png
+share/f-spot/icons/hicolor/32x32/actions/object-rotate-right.png
+share/f-spot/icons/hicolor/32x32/actions/view-fullscreen.png
+share/f-spot/icons/hicolor/32x32/actions/view-restore.png
+share/f-spot/icons/hicolor/32x32/apps/f-spot.png
+share/f-spot/icons/hicolor/32x32/devices/camera-photo.png
+share/f-spot/icons/hicolor/32x32/emblems/emblem-event.png
+share/f-spot/icons/hicolor/32x32/emblems/emblem-people.png
+share/f-spot/icons/hicolor/32x32/emblems/emblem-places.png
+share/f-spot/icons/hicolor/32x32/emblems/emblem-readonly.png
+share/f-spot/icons/hicolor/32x32/status/mode-browse.png
+share/f-spot/icons/hicolor/scalable/actions/object-rotate-left.svg
+share/f-spot/icons/hicolor/scalable/actions/object-rotate-right.svg
+share/f-spot/icons/hicolor/scalable/actions/view-fullscreen.svg
+share/f-spot/icons/hicolor/scalable/actions/view-restore.svg
+share/f-spot/icons/hicolor/scalable/apps/f-spot.svg
+share/f-spot/icons/hicolor/scalable/emblems/emblem-event.svg
+share/f-spot/icons/hicolor/scalable/emblems/emblem-places.svg
+share/f-spot/icons/hicolor/scalable/status/mode-browse.svg
+share/gnome/help/f-spot/C/f-spot.xml
+share/gnome/help/f-spot/C/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/C/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/C/figures/f-spot-crop.png
+share/gnome/help/f-spot/C/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/C/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/C/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/C/figures/f-spot-sepia.png
+share/gnome/help/f-spot/C/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/C/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/C/figures/f-spot-straighten.png
+share/gnome/help/f-spot/da/f-spot.xml
+share/gnome/help/f-spot/da/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/da/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/da/figures/f-spot-crop.png
+share/gnome/help/f-spot/da/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/da/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/da/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/da/figures/f-spot-sepia.png
+share/gnome/help/f-spot/da/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/da/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/da/figures/f-spot-straighten.png
+share/gnome/help/f-spot/es/f-spot.xml
+share/gnome/help/f-spot/es/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/es/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/es/figures/f-spot-crop.png
+share/gnome/help/f-spot/es/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/es/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/es/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/es/figures/f-spot-sepia.png
+share/gnome/help/f-spot/es/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/es/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/es/figures/f-spot-straighten.png
+share/gnome/help/f-spot/fr/f-spot.xml
+share/gnome/help/f-spot/fr/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/fr/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/fr/figures/f-spot-crop.png
+share/gnome/help/f-spot/fr/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/fr/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/fr/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/fr/figures/f-spot-sepia.png
+share/gnome/help/f-spot/fr/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/fr/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/fr/figures/f-spot-straighten.png
+share/gnome/help/f-spot/it/f-spot.xml
+share/gnome/help/f-spot/it/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/it/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/it/figures/f-spot-crop.png
+share/gnome/help/f-spot/it/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/it/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/it/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/it/figures/f-spot-sepia.png
+share/gnome/help/f-spot/it/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/it/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/it/figures/f-spot-straighten.png
+share/gnome/help/f-spot/oc/f-spot.xml
+share/gnome/help/f-spot/oc/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/oc/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/oc/figures/f-spot-crop.png
+share/gnome/help/f-spot/oc/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/oc/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/oc/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/oc/figures/f-spot-sepia.png
+share/gnome/help/f-spot/oc/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/oc/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/oc/figures/f-spot-straighten.png
+share/gnome/help/f-spot/pt_BR/f-spot.xml
+share/gnome/help/f-spot/pt_BR/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-crop.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-sepia.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/pt_BR/figures/f-spot-straighten.png
+share/gnome/help/f-spot/ru/f-spot.xml
+share/gnome/help/f-spot/ru/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/ru/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/ru/figures/f-spot-crop.png
+share/gnome/help/f-spot/ru/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/ru/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/ru/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/ru/figures/f-spot-sepia.png
+share/gnome/help/f-spot/ru/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/ru/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/ru/figures/f-spot-straighten.png
+share/gnome/help/f-spot/sv/f-spot.xml
+share/gnome/help/f-spot/sv/figures/f-spot-adjust-colors.png
+share/gnome/help/f-spot/sv/figures/f-spot-autocolor.png
+share/gnome/help/f-spot/sv/figures/f-spot-crop.png
+share/gnome/help/f-spot/sv/figures/f-spot-desaturate.png
+share/gnome/help/f-spot/sv/figures/f-spot-fullscreen.png
+share/gnome/help/f-spot/sv/figures/f-spot-red-eye.png
+share/gnome/help/f-spot/sv/figures/f-spot-sepia.png
+share/gnome/help/f-spot/sv/figures/f-spot-slideshow.png
+share/gnome/help/f-spot/sv/figures/f-spot-soft-focus.png
+share/gnome/help/f-spot/sv/figures/f-spot-straighten.png
+share/icons/hicolor/16x16/apps/f-spot.png
+share/icons/hicolor/22x22/apps/f-spot.png
+share/icons/hicolor/24x24/apps/f-spot.png
+share/icons/hicolor/32x32/apps/f-spot.png
+share/icons/hicolor/scalable/apps/f-spot.svg
+share/locale/ar/LC_MESSAGES/f-spot.mo
+share/locale/be@latin/LC_MESSAGES/f-spot.mo
+share/locale/bg/LC_MESSAGES/f-spot.mo
+share/locale/ca/LC_MESSAGES/f-spot.mo
+share/locale/cs/LC_MESSAGES/f-spot.mo
+share/locale/da/LC_MESSAGES/f-spot.mo
+share/locale/de/LC_MESSAGES/f-spot.mo
+share/locale/dz/LC_MESSAGES/f-spot.mo
+share/locale/el/LC_MESSAGES/f-spot.mo
+share/locale/en_CA/LC_MESSAGES/f-spot.mo
+share/locale/en_GB/LC_MESSAGES/f-spot.mo
+share/locale/es/LC_MESSAGES/f-spot.mo
+share/locale/et/LC_MESSAGES/f-spot.mo
+share/locale/eu/LC_MESSAGES/f-spot.mo
+share/locale/fa/LC_MESSAGES/f-spot.mo
+share/locale/fi/LC_MESSAGES/f-spot.mo
+share/locale/fr/LC_MESSAGES/f-spot.mo
+share/locale/gl/LC_MESSAGES/f-spot.mo
+share/locale/he/LC_MESSAGES/f-spot.mo
+share/locale/hi/LC_MESSAGES/f-spot.mo
+share/locale/hu/LC_MESSAGES/f-spot.mo
+share/locale/it/LC_MESSAGES/f-spot.mo
+share/locale/ja/LC_MESSAGES/f-spot.mo
+share/locale/ka/LC_MESSAGES/f-spot.mo
+share/locale/ko/LC_MESSAGES/f-spot.mo
+share/locale/lt/LC_MESSAGES/f-spot.mo
+share/locale/lv/LC_MESSAGES/f-spot.mo
+share/locale/mk/LC_MESSAGES/f-spot.mo
+share/locale/nb/LC_MESSAGES/f-spot.mo
+share/locale/nl/LC_MESSAGES/f-spot.mo
+share/locale/oc/LC_MESSAGES/f-spot.mo
+share/locale/pa/LC_MESSAGES/f-spot.mo
+share/locale/pl/LC_MESSAGES/f-spot.mo
+share/locale/pt/LC_MESSAGES/f-spot.mo
+share/locale/pt_BR/LC_MESSAGES/f-spot.mo
+share/locale/ru/LC_MESSAGES/f-spot.mo
+share/locale/rw/LC_MESSAGES/f-spot.mo
+share/locale/sk/LC_MESSAGES/f-spot.mo
+share/locale/sr/LC_MESSAGES/f-spot.mo
+share/locale/sr@latin/LC_MESSAGES/f-spot.mo
+share/locale/sv/LC_MESSAGES/f-spot.mo
+share/locale/th/LC_MESSAGES/f-spot.mo
+share/locale/uk/LC_MESSAGES/f-spot.mo
+share/locale/vi/LC_MESSAGES/f-spot.mo
+share/locale/zh_CN/LC_MESSAGES/f-spot.mo
+share/locale/zh_HK/LC_MESSAGES/f-spot.mo
+share/locale/zh_TW/LC_MESSAGES/f-spot.mo
+share/omf/f-spot/f-spot-C.omf
+share/omf/f-spot/f-spot-da.omf
+share/omf/f-spot/f-spot-es.omf
+share/omf/f-spot/f-spot-fr.omf
+share/omf/f-spot/f-spot-it.omf
+share/omf/f-spot/f-spot-oc.omf
+share/omf/f-spot/f-spot-pt_BR.omf
+share/omf/f-spot/f-spot-ru.omf
+share/omf/f-spot/f-spot-sv.omf
+@dirrm share/omf/f-spot
+@comment in rarian: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/f-spot/sv/figures
+@dirrm share/gnome/help/f-spot/sv
+@dirrm share/gnome/help/f-spot/ru/figures
+@dirrm share/gnome/help/f-spot/ru
+@dirrm share/gnome/help/f-spot/pt_BR/figures
+@dirrm share/gnome/help/f-spot/pt_BR
+@dirrm share/gnome/help/f-spot/oc/figures
+@dirrm share/gnome/help/f-spot/oc
+@dirrm share/gnome/help/f-spot/it/figures
+@dirrm share/gnome/help/f-spot/it
+@dirrm share/gnome/help/f-spot/fr/figures
+@dirrm share/gnome/help/f-spot/fr
+@dirrm share/gnome/help/f-spot/es/figures
+@dirrm share/gnome/help/f-spot/es
+@dirrm share/gnome/help/f-spot/da/figures
+@dirrm share/gnome/help/f-spot/da
+@dirrm share/gnome/help/f-spot/C/figures
+@dirrm share/gnome/help/f-spot/C
+@dirrm share/gnome/help/f-spot
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm share/f-spot/icons/hicolor/scalable/status
+@dirrm share/f-spot/icons/hicolor/scalable/emblems
+@dirrm share/f-spot/icons/hicolor/scalable/apps
+@dirrm share/f-spot/icons/hicolor/scalable/actions
+@dirrm share/f-spot/icons/hicolor/scalable
+@dirrm share/f-spot/icons/hicolor/32x32/status
+@dirrm share/f-spot/icons/hicolor/32x32/emblems
+@dirrm share/f-spot/icons/hicolor/32x32/devices
+@dirrm share/f-spot/icons/hicolor/32x32/apps
+@dirrm share/f-spot/icons/hicolor/32x32/actions
+@dirrm share/f-spot/icons/hicolor/32x32
+@dirrm share/f-spot/icons/hicolor/24x24/status
+@dirrm share/f-spot/icons/hicolor/24x24/places
+@dirrm share/f-spot/icons/hicolor/24x24/emblems
+@dirrm share/f-spot/icons/hicolor/24x24/devices
+@dirrm share/f-spot/icons/hicolor/24x24/apps
+@dirrm share/f-spot/icons/hicolor/24x24/actions
+@dirrm share/f-spot/icons/hicolor/24x24
+@dirrm share/f-spot/icons/hicolor/22x22/status
+@dirrm share/f-spot/icons/hicolor/22x22/places
+@dirrm share/f-spot/icons/hicolor/22x22/emblems
+@dirrm share/f-spot/icons/hicolor/22x22/devices
+@dirrm share/f-spot/icons/hicolor/22x22/apps
+@dirrm share/f-spot/icons/hicolor/22x22/actions
+@dirrm share/f-spot/icons/hicolor/22x22
+@dirrm share/f-spot/icons/hicolor/16x16/status
+@dirrm share/f-spot/icons/hicolor/16x16/places
+@dirrm share/f-spot/icons/hicolor/16x16/emblems
+@dirrm share/f-spot/icons/hicolor/16x16/devices
+@dirrm share/f-spot/icons/hicolor/16x16/apps
+@dirrm share/f-spot/icons/hicolor/16x16/actions
+@dirrm share/f-spot/icons/hicolor/16x16
+@dirrm share/f-spot/icons/hicolor
+@dirrm share/f-spot/icons
+@dirrm share/f-spot
+@dirrm share/applications/screensavers
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm libexec/gnome-screensaver
+@dirrm lib/gio-sharp-unstable
+@dirrm lib/f-spot/extensions
+@dirrm lib/f-spot
