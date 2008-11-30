@@ -1,0 +1,2 @@
+The Perl 5 module Template::Plugin::Handy provides virtual methods
+for Template Toolkit files, especially for debugging.
