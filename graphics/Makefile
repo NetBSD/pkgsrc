@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.497 2008/11/17 21:06:29 he Exp $
+# $NetBSD: Makefile,v 1.498 2008/11/30 23:57:38 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -72,6 +72,7 @@ SUBDIR+=	exif
 SUBDIR+=	exifprobe
 SUBDIR+=	exiftags
 SUBDIR+=	exiv2
+SUBDIR+=	f-spot
 SUBDIR+=	f4l
 SUBDIR+=	fbm
 SUBDIR+=	feh
@@ -228,8 +229,8 @@ SUBDIR+=	p5-Chart
 SUBDIR+=	p5-Chart-ThreeD
 SUBDIR+=	p5-GD
 SUBDIR+=	p5-GD-Graph-sparklines
-SUBDIR+=	p5-GD-SecurityImage
 SUBDIR+=	p5-GD-SVG
+SUBDIR+=	p5-GD-SecurityImage
 SUBDIR+=	p5-GDGraph
 SUBDIR+=	p5-GDGraph3d
 SUBDIR+=	p5-GDTextUtil
