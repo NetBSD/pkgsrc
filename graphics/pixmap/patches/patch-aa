@@ -1,21 +1,13 @@
-$NetBSD: patch-aa,v 1.2 1998/08/07 10:40:52 agc Exp $
+$NetBSD: patch-aa,v 1.3 2008/11/30 08:43:16 obache Exp $
 
-*** Pixmap.h~	Fri May 13 04:03:29 1994
---- Pixmap.h	Sun Feb 19 03:35:48 1995
-***************
-*** 69,75 ****
-  #include <X11/Xmu/Converters.h>
-  #include <X11/Xos.h>
-  #include <X11/Xfuncproto.h>
-! #include "xpm.h"
-  
-  /* Resources:
-  
---- 69,75 ----
-  #include <X11/Xmu/Converters.h>
-  #include <X11/Xos.h>
-  #include <X11/Xfuncproto.h>
-! #include <X11/xpm.h>
-  
-  /* Resources:
-  
+--- Pixmap.h.orig	2008-11-30 06:21:45.000000000 +0000
++++ Pixmap.h
+@@ -69,7 +69,7 @@
+ #include <X11/Xmu/Converters.h>
+ #include <X11/Xos.h>
+ #include <X11/Xfuncproto.h>
+-#include "xpm.h"
++#include <X11/xpm.h>
+ 
+ /* Resources:
+ 
