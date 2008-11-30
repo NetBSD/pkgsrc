@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.17 2008/11/30 22:25:01 ahoka Exp $
+
+--- glib/gtester.c.orig	2008-11-24 06:45:23.000000000 +0100
++++ glib/gtester.c
+@@ -636,7 +636,11 @@ main (int    argc,
+       struct sigaction osa;
+       sa.sa_handler = SIG_DFL;
+       sigfillset (&sa.sa_mask);
++#ifdef SA_RESTART
+       sa.sa_flags = SA_RESTART;
++#else /* QNX */
++      sa.sa_flags = 0;
++#endif
+       sigaction (SIGCHLD, &sa, &osa);
+     }
+ 
