@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3209 2008/11/30 09:27:55 seb Exp $
+$NetBSD: CHANGES-2008,v 1.3210 2008/11/30 13:30:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5374,3 +5374,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/pixmap to 2.6.4nb6 [obache 2008-11-30]
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.17 [seb 2008-11-30]
 	Updated net/p5-NetAddr-IP to 4.019 [seb 2008-11-30]
+	Added devel/p5-Template-Plugin-VMethods version 0.03 [seb 2008-11-30]
