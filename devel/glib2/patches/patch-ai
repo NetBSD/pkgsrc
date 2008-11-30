@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.15 2008/09/06 11:07:20 obache Exp $
+$NetBSD: patch-ai,v 1.16 2008/11/30 22:25:01 ahoka Exp $
 
---- glib/gmain.c.orig	2008-09-02 15:09:41.000000000 +0000
+--- glib/gmain.c.orig	2008-11-24 06:45:23.000000000 +0100
 +++ glib/gmain.c
-@@ -2717,13 +2717,13 @@ g_main_context_iterate (GMainContext *co
+@@ -2720,13 +2720,13 @@ g_main_context_iterate (GMainContext *co
      {
        gboolean got_ownership;
        
@@ -18,7 +18,7 @@ $NetBSD: patch-ai,v 1.15 2008/09/06 11:07:20 obache Exp $
        if (!context->cond)
  	context->cond = g_cond_new ();
            
-@@ -2733,7 +2733,6 @@ g_main_context_iterate (GMainContext *co
+@@ -2736,7 +2736,6 @@ g_main_context_iterate (GMainContext *co
  
        if (!got_ownership)
  	{
@@ -26,3 +26,15 @@ $NetBSD: patch-ai,v 1.15 2008/09/06 11:07:20 obache Exp $
  	  return FALSE;
  	}
      }
+@@ -4039,7 +4038,11 @@ g_child_watch_source_init_multi_threaded
+  
+   action.sa_handler = g_child_watch_signal_handler;
+   sigemptyset (&action.sa_mask);
++#ifdef SA_RESTART
+   action.sa_flags = SA_RESTART | SA_NOCLDSTOP;
++#else /* QNX */
++  action.sa_flags = SA_NOCLDSTOP;
++#endif
+   sigaction (SIGCHLD, &action, NULL);
+ }
+ 
