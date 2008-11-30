@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3212 2008/11/30 21:31:00 seb Exp $
+$NetBSD: CHANGES-2008,v 1.3213 2008/11/30 23:49:37 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5377,3 +5377,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Template-Plugin-VMethods version 0.03 [seb 2008-11-30]
 	Added devel/p5-Template-Plugin-Handy version 0.002 [seb 2008-11-30]
 	Updated databases/p5-Rose-DBx-Object-MoreHelpers to 0.06 [seb 2008-11-30]
+	Updated cad/gnetlist to 1.4.0nb1 [dmcmahill 2008-11-30]
