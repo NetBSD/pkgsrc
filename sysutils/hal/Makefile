@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/11/27 22:19:10 jmcneill Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/01 02:02:33 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		10
+PKGREVISION=		11
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -12,9 +12,6 @@ HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 
 BUILD_DEFS+=		VARBASE
-
-HAL_USER?=		haldaemon
-HAL_GROUP?=		haldaemon
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.4
@@ -33,8 +30,6 @@ CONF_FILES=		${EGDIR}/hal.conf ${PREFIX}/etc/dbus-1/system.d/hal.conf
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids
 CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
-CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
-CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -47,6 +42,7 @@ PLIST_SRC=		PLIST.FreeBSD PLIST
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
 CONFIGURE_ARGS+=	--with-backend=netbsd
 PLIST_SRC=		PLIST.NetBSD PLIST
+HAL_GROUP=		operator
 .elif ${OPSYS} == "NetBSD"
 # Pull in the dummy backend for older NetBSD
 CONFIGURE_ARGS+=	--with-backend=dummy
@@ -65,9 +61,16 @@ REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash+=	tools/hal-${halscript}
 .endfor
 
+HAL_USER?=		haldaemon
+HAL_GROUP?=		haldaemon
+CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
+CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
+
 RCD_SCRIPTS=		hal
 
+.if ${HAL_GROUP} != "operator"
 PKG_GROUPS=		${HAL_GROUP}
+.endif
 PKG_USERS=		${HAL_USER}:${HAL_GROUP}
 PKG_HOME.haldaemon=	${VARBASE}/run/hal
 
