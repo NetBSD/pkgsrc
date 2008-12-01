@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/28 12:08:20 obache Exp $
+$NetBSD: distinfo,v 1.2 2008/12/01 22:19:42 tonnerre Exp $
 
-SHA1 (Term-ReadPassword-0.07.tar.gz) = 10689c1dca095e5daba93d61e67cf5d9baa91837
-RMD160 (Term-ReadPassword-0.07.tar.gz) = 05543749fe9cc798b3b20f4ebc8ff0aaafd1e51d
-Size (Term-ReadPassword-0.07.tar.gz) = 6735 bytes
+SHA1 (Term-ReadPassword-0.11.tar.gz) = d68542a617f3fa8aa26c3c081302cdc4e0cd6b42
+RMD160 (Term-ReadPassword-0.11.tar.gz) = 48a1164958db3b4bb869f3fd1ebf67a5327e0819
+Size (Term-ReadPassword-0.11.tar.gz) = 7056 bytes
