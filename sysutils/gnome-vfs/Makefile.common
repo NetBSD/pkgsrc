@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2008/11/24 13:01:33 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2008/12/01 14:41:52 wiz Exp $
 #
 
 GNOME_VFS_VERSION=	2.24.0
@@ -44,38 +44,7 @@ EGDIR=			${PREFIX}/share/examples/gnome-vfs-2.0
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
-PKG_SUPPORTED_OPTIONS+=	inet6 gssapi hal
-PKG_SUGGESTED_OPTIONS+=	hal
-
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == NetBSD
-# Kerberos is built in - no additional dependency
-PKG_SUGGESTED_OPTIONS+= gssapi
-.endif
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
-
-.if !empty(PKG_OPTIONS:Mgssapi)
-.include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ENV+=		KRB5_CONFIG=${SH_KRB5_CONFIG}
-.else
-CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
-.endif
-
-.if !empty(PKG_OPTIONS:Mhal)
-MESSAGE_SRC+=	MESSAGE.hal
-.include "../../sysutils/hal/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-hal
-.else
-CONFIGURE_ARGS+=	--disable-hal
-.endif
 
 # XXX Work-around for a problem in the configure script which checks for
 # statvfs(2) having SVR4 in mind.  Solving this in the script itself could
