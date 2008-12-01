@@ -1,4 +1,4 @@
-# $NetBSD: subr_gcc,v 1.2 2007/08/27 10:08:30 abs Exp $
+# $NetBSD: subr_gcc,v 1.3 2008/12/01 17:51:40 abs Exp $
 
 # Return gcc version string
 gcc_ver()
@@ -101,5 +101,6 @@ gcc_fixup_arch_flags()
 3.4:-msse3:
 4.2:-m3dnow:
 4.2:-march=native:
+4.3:-march=core2:-march=pentium3
 EOD
     }
