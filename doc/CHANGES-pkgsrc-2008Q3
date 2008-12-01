@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.50 2008/11/28 11:46:58 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.51 2008/12/01 07:53:53 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -139,3 +139,5 @@ pullup ticket #2600 - requested by martti
 clamav: update package for fixes
 Pullup ticket #2601 - requested by taca
 samba: security patch
+pullup ticket #2602 - requested by bouyer
+sympa: fix master site
