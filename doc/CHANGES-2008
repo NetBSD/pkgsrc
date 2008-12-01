@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3222 2008/12/01 17:52:04 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3223 2008/12/01 22:20:17 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5388,3 +5388,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/url2pkg to 2.8 [wiz 2008-12-01]
 	Added sysutils/gnome-nds-thumbnailer version 1.2.0 [wiz 2008-12-01]
 	Updated devel/cpuflags to 1.19 [abs 2008-12-01]
+	Updated devel/p5-Term-ReadPassword to 0.11 [tonnerre 2008-12-01]
