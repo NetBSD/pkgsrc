@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3219 2008/12/01 11:04:09 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3220 2008/12/01 13:48:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5385,3 +5385,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/p7zip to 4.61 [adam 2008-12-01]
 	Updated www/webalizer to 2.20.1 [tonnerre 2008-12-01]
 	Updated mail/imap-uw to 2007dnb2 [obache 2008-12-01]
+	Updated pkgtools/url2pkg to 2.8 [wiz 2008-12-01]
