@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2008/12/01 02:02:33 jmcneill Exp $
 
---- tools/hal-storage-mount.c.orig	2008-05-08 02:24:23 +0300
-+++ tools/hal-storage-mount.c	2008-11-23 13:25:17 +0200
+--- tools/hal-storage-mount.c.orig	2008-05-07 19:24:23.000000000 -0400
++++ tools/hal-storage-mount.c	2008-11-30 20:50:05.000000000 -0500
 @@ -31,7 +31,7 @@
  #include <string.h>
  #include <glib.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
  #include <fstab.h>
  #include <sys/param.h>
  #include <sys/ucred.h>
-@@ -41,6 +41,10 @@
+@@ -41,6 +41,13 @@
  #elif sun
  #include <sys/mnttab.h>
  #include <sys/vfstab.h>
@@ -19,10 +19,13 @@ $NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
 +#include <fstab.h>
 +#include <sys/param.h>
 +#include <sys/mount.h>
++#include <fcntl.h>
++#include <sys/stat.h>
++#include <unistd.h>
  #else
  #include <mntent.h>
  #endif
-@@ -54,10 +58,14 @@
+@@ -54,10 +61,14 @@
  
  #include "hal-storage-shared.h"
  
@@ -38,7 +41,7 @@ $NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
  #elif sun
  #define MOUNT		"/sbin/mount"
  #define MOUNT_OPTIONS	"noexec,nosuid"
-@@ -421,7 +429,7 @@ device_is_mounted (const char *device, c
+@@ -421,7 +432,7 @@ device_is_mounted (const char *device, c
  static const char *
  map_fstype (const char *fstype)
  {
@@ -47,7 +50,7 @@ $NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
  	if (! strcmp (fstype, "iso9660"))
  		return "cd9660";
  	else if (! strcmp (fstype, "ext2"))
-@@ -430,6 +438,13 @@ map_fstype (const char *fstype)
+@@ -430,6 +441,13 @@ map_fstype (const char *fstype)
  		return "ext2fs";
  	else if (! strcmp (fstype, "vfat"))
  		return "msdosfs";
@@ -57,7 +60,59 @@ $NetBSD: patch-aa,v 1.2 2008/11/23 21:50:51 hasso Exp $
 +	else if (! strcmp (fstype, "ext2"))
 +		return "ext2fs";
 +	else if (! strcmp (fstype, "vfat"))
-+		return "msdosfs";
++		return "msdos";
  #elif sun
  	if (! strcmp (fstype, "iso9660"))
  		return "hsfs";
+@@ -475,6 +493,11 @@ handle_mount (LibHalContext *hal_ctx, 
+ 	uid_t calling_uid;
+ 	gid_t calling_gid;
+ #endif
++	gboolean have_rump = FALSE;
++#ifdef __NetBSD__
++	char *rump_cmd;
++	struct stat st;
++#endif
+ 	const char *label;
+ 	const char *uuid;
+ 
+@@ -731,7 +754,6 @@ handle_mount (LibHalContext *hal_ctx, 
+ 	/* construct arguments to mount */
+ 	na = 0;
+ 	
+-	args[na++] = MOUNT;
+ 	if (strlen (mount_fstype) > 0) {
+ 		mount_do_fstype = (char *) map_fstype (mount_fstype);
+ 	} else if (volume == NULL) {
+@@ -742,8 +764,29 @@ handle_mount (LibHalContext *hal_ctx, 
+ 	} else {
+ 		mount_do_fstype = "auto";
+ 	}
+-	args[na++] = MOUNT_TYPE_OPT;
+-	args[na++] = mount_do_fstype;
++
++#ifdef __NetBSD__
++	rump_cmd = g_strdup_printf ("/usr/sbin/rump_%s", mount_do_fstype);
++	if (stat (rump_cmd, &st) == 0) {
++		int rump_fd = open ("/dev/puffs", O_RDONLY);
++		if (rump_fd >= 0) {
++			have_rump = TRUE;
++			close (rump_fd);
++		}
++	}
++
++	/* XXX rump_* option handling is different, disable for now */
++	have_rump = FALSE;
++
++	if (have_rump == TRUE)
++		args[na++] = rump_cmd;
++	else
++#endif
++	{
++		args[na++] = MOUNT;
++		args[na++] = MOUNT_TYPE_OPT;
++		args[na++] = mount_do_fstype;
++	}
+ 
+ 	args[na++] = "-o";
+ #ifdef HAVE_UMOUNT_HAL

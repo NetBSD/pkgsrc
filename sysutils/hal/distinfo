@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2008/11/27 03:32:19 jmcneill Exp $
+$NetBSD: distinfo,v 1.7 2008/12/01 02:02:33 jmcneill Exp $
 
 SHA1 (hal-0.5.11.tar.bz2) = 1ddb7895d2ddc2464b553ad11f7ba38860478ae9
 RMD160 (hal-0.5.11.tar.bz2) = 741cfe82f0bc2d67106b24cfe526a754ab36e45f
 Size (hal-0.5.11.tar.bz2) = 1281251 bytes
-SHA1 (patch-aa) = 120079700424a3c199b58f87bb3f160263f84ce1
+SHA1 (patch-aa) = 1380aca775e5be6b21f755bc36656163394a9c32
 SHA1 (patch-ab) = 8712f8bd3ab5d4f7f6d4ea2c30c11f8384615772
 SHA1 (patch-ac) = cffdb9caa947366ff88310a750ab502bd2d98db8
 SHA1 (patch-ad) = 2a2732f82a4fd8d7ffa311b4a0e747208dc9ad1c
