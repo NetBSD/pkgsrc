@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/11/13 17:36:54 chuck Exp $
+# $NetBSD: Makefile,v 1.54 2008/12/01 07:49:22 rillig Exp $
 
 DISTNAME=	ghostscript-8.63
 PKGREVISION=	1
@@ -50,9 +50,11 @@ SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=		-fPIC
-.endif
+# On Linux-*-x86_64, there was an error message:
+# gp_unix.o: relocation R_X86_64_32 against `a local symbol' can not be
+# used when making a shared object; recompile with -fPIC
+CFLAGS.NetBSD=		-fPIC
+CFLAGS.Linux=		-fPIC
 
 ###.if ${OPSYS} == "Darwin"
 ###MAKEFLAGS= "LDFLAGS_SO=-dynamiclib"
