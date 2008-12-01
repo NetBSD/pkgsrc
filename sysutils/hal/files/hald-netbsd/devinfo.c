@@ -32,6 +32,7 @@
 #include "devinfo_video.h"
 #include "devinfo_pci.h"
 #include "devinfo_storage.h"
+#include "devinfo_mass.h"
 #include "devinfo_usb.h"
 #include "devinfo_misc.h"
 #include "devinfo_cpu.h"
@@ -153,6 +154,7 @@ static DevinfoDevHandler *devinfo_handlers[] = {
 	&devinfo_audio_mixer_handler,
 	&devinfo_audio_dsp_handler,
 	&devinfo_video_handler,
+	&devinfo_mass_handler,
 	&devinfo_default_handler,
 	NULL
 };
