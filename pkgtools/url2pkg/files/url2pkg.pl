@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.10 2007/09/25 13:59:42 wiz Exp $
+# $NetBSD: url2pkg.pl,v 1.11 2008/12/01 13:48:34 wiz Exp $
 #
 
 use strict;
@@ -113,7 +113,7 @@ sub magic_gconf2_schemas() {
 		push(@build_vars, ["MAKE_ENV+", "GCONF_SCHEMA_FILE_DIR=\${PREFIX}/share/gconf/schemas/"]);
 		foreach my $f (@gconf2_files) {
 			if ($f =~ qr"(.*schemas)") {
-				push(@extra_vars, ["GCONF2_SCHEMAS+", $1]);
+				push(@extra_vars, ["GCONF_SCHEMAS+", $1]);
 			}
 		}
 		push(@includes, "../../devel/GConf/schemas.mk");
