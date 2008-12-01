@@ -1,12 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2008/05/28 21:20:48 joerg Exp $
+# $NetBSD: options.mk,v 1.4 2008/12/01 13:25:47 wiz Exp $
 #
 # This file is *not* included for HPUX and OSF1, as they don't have
 # a working FAM implementation. 
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.glib2
-
-PKG_SUGGESTED_OPTIONS=	fam
 PKG_SUPPORTED_OPTIONS=	fam
+PKG_SUGGESTED_OPTIONS=	fam
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mfam)
@@ -24,4 +24,6 @@ SUBST_SED.fam-linkage=		-e 's,^FAM_LIBS =.*$$,FAM_LIBS = -lfam -lC,g'
 
 BUILDLINK_TRANSFORM+=		l:fam:fam:C
 .  endif
+.else
+CONFIGURE_ARGS+=	--disable-fam
 .endif
