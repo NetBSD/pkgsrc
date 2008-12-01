@@ -164,23 +164,14 @@ dsk_to_rdsk(char *dsk)
 static void
 mntinfo_event_init ()
 {
-#if notyet
-	g_timeout_add(1000, mntinfo_timeout, NULL);
-#endif
+	g_timeout_add (1000, mntinfo_timeout, NULL);
 }
 
 static gboolean
 mntinfo_timeout (gpointer user_data)
 {
-#if notyet
-	struct statvfs *statvfs;
-
-	HAL_INFO (("mntinfo timeout"));
-
-	if (!hald_is_initialising) {
-		devinfo_storage_mnttab_event (NULL);
-	}
-#endif
+	if (!hald_is_initialising)
+		vfsstat_event (NULL);
 
 	return TRUE;
 }
@@ -188,8 +179,5 @@ mntinfo_timeout (gpointer user_data)
 void
 osspec_refresh_mount_state_for_block_device (HalDevice *d)
 {
-#warning osspec_refresh_mount_state_for_block_device TODO
-#if notyet
-	devinfo_storage_mnttab_event (d);
-#endif
+	vfsstat_event (d);
 }
