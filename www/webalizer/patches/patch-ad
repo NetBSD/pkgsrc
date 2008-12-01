@@ -1,22 +1,28 @@
-$NetBSD: patch-ad,v 1.8 2003/07/01 14:33:00 jwise Exp $
+$NetBSD: patch-ad,v 1.9 2008/12/01 09:45:55 tonnerre Exp $
 
---- Makefile.in.orig	Tue Oct 17 00:15:53 2000
+--- Makefile.in.orig	2008-07-01 00:04:39.000000000 +0200
 +++ Makefile.in
-@@ -24,7 +24,7 @@
- ETCDIR = @ETCDIR@
- CC     = @CC@
- CFLAGS = @CFLAGS@
--LIBS   = @LIBS@
-+LIBS   = @LIBS@ -lpng -ljpeg -lz -lfreetype -lintl
- DEFS   = -DETCDIR=\"@ETCDIR@\" @DEFS@ @OPTS@
- LDFLAGS= @LDFLAGS@
- INSTALL= @INSTALL@
-@@ -86,7 +86,7 @@
- install: all
- 	$(INSTALL_PROGRAM) webalizer ${BINDIR}/webalizer
- 	$(INSTALL_DATA) webalizer.1 ${MANDIR}/webalizer.1
--	$(INSTALL_DATA) sample.conf ${ETCDIR}/webalizer.conf.sample
-+	$(INSTALL_DATA) sample.conf ${PREFIX}/share/examples/webalizer.conf.sample
- 	rm -f ${BINDIR}/webazolver
- 	@LN_S@ ${BINDIR}/webalizer ${BINDIR}/webazolver
+@@ -21,12 +21,12 @@ exec_prefix     = @exec_prefix@
+ datadir         = @datarootdir@
  
+ BINDIR          = @bindir@
+-MANDIR          = ${datadir}/man/man1
++MANDIR          = ${prefix}/man/man1
+ ETCDIR          = @sysconfdir@
+ GEODB           = @GEODB_LOC@
+ CC              = @CC@
+ CFLAGS          = @CFLAGS@ @CPPFLAGS@
+-LIBS            = @LIBS@
++LIBS            = @LIBS@ -lpng -ljpeg -lz -lfreetype -lintl
+ WCMGR_LIBS      = @WCMGR_LIBS@
+ DEFS            = -DETCDIR=\"${ETCDIR}\" -DGEODB_LOC=\"${GEODB}\" @DEFS@ @OPTS@
+ LDFLAGS         = @LDFLAGS@
+@@ -102,7 +102,7 @@ install: all
+ 	$(INSTALL_DATA) wcmgr.1 ${DESTDIR}${MANDIR}/wcmgr.1
+ 	rm -f ${DESTDIR}${MANDIR}/webazolver.1
+ 	@LN_S@ webalizer.1 ${DESTDIR}${MANDIR}/webazolver.1
+-	$(INSTALL_DATA) sample.conf ${DESTDIR}${ETCDIR}/webalizer.conf.sample
++	$(INSTALL_DATA) sample.conf ${DESTDIR}${PREFIX}/share/examples/webalizer.conf.sample
+ 
+ uninstall:
+ 	rm -f ${DESTDIR}${BINDIR}/webalizer
