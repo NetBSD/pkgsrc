@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3218 2008/12/01 09:46:09 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.3219 2008/12/01 11:04:09 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5384,3 +5384,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb11 [jmcneill 2008-11-30]
 	Updated archivers/p7zip to 4.61 [adam 2008-12-01]
 	Updated www/webalizer to 2.20.1 [tonnerre 2008-12-01]
+	Updated mail/imap-uw to 2007dnb2 [obache 2008-12-01]
