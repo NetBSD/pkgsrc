@@ -1,0 +1,5 @@
+gnome-nds-thumbnailer is a thumbnailer for GNOME that will make
+thumbnails for Nintendo DS roms by extracting their preview icon.
+
+Nintendo DS files contain an embedded 16 colours, 32x32 icon, which
+helps identify the ROM files.

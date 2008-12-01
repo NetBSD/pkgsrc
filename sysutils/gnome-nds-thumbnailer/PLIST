@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/01 14:05:04 wiz Exp $
+bin/gnome-nds-thumbnailer
+share/gconf/schemas/gnome-nds-thumbnailer.schemas
+@comment in GConf: @dirrm share/gconf/schemas
