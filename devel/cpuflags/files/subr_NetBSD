@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.2 2007/09/11 05:03:30 bjs Exp $
+# $NetBSD: subr_NetBSD,v 1.3 2008/12/01 17:51:40 abs Exp $
 
 AWK=awk
 SED=sed
@@ -10,16 +10,27 @@ OS		: '$(uname)'
 hw.model	: '$hw_model'
 hw.machine	: '$hw_machine'
 hw.machine_arch : '$hw_machine_arch'
-cpu details	:
+cpu details	: '$cpu'
 END
+    
     sed -n -e 's/^/    /' -e '/^    cpu/p' /var/run/dmesg.boot
+    if [ -x /usr/sbin/cpuctl ]; then
+	cpuctl identify 0
+    fi
     }
 
 extract_hw_details()
     {
-    hw_model=$(sysctl -n hw.model)
+    hw_model=$(sysctl -n hw.model | sed 's/^  *//')
     hw_machine=$(sysctl -n hw.machine)
     hw_machine_arch=$(sysctl -n hw.machine_arch)
+    if [ "$hw_machine_arch" = i386 -o "$hw_machine_arch" = x86_64 ] ; then
+	if [ -x /usr/sbin/cpuctl ] ; then
+	    cpu=$(cpuctl identify 0|awk '/cpu0:/{sub("cpu0: ","");print;exit}')
+	else
+	    cpu=$(awk '/cpu0:/{sub("cpu0: ","");print;exit}'</var/run/dmesg.boot)
+	fi
+    fi
 
     # We're almost certainly crosscompiling
     if [ -n "$MACHINE" -a $hw_machine != "$MACHINE" ]; then
@@ -82,51 +93,27 @@ determine_arch()
 	;;
 
     i386 | x86_64)
-    case $hw_model in
-	*Intel\ Pentium/MMX\ *)		ARCH='-march=pentium-mmx'	;;
-	*Intel\ Pentium\ II\ *)		ARCH='-march=pentium2'		;;
-	*Intel\ Pentium\ III\ *)	ARCH='-march=pentium3'		;;
-	*Intel\ Mobile\ Pentium\ III\ *) ARCH='-march=pentium3'	;;
-	*Intel\ Celeron\ \(Mendocino\)\ *) ARCH='-march=pentium3 -mno-sse' ;;
-	*Intel\ Pentium\ M\ \(\Dothan\)\ *) ARCH='-march=pentium-m'	;;
-	*Intel\ Pentium\ M\ *)		ARCH='-march=pentium-m'	;;
-	*Intel\ Mobile\ Pentium\ 4\ *)	ARCH='-march=pentium4m'	;;
-	*Intel\ Pentium\ 4\ *)		ARCH='-march=pentium4'		;;
-	*Intel\(R\)\ Pentium\(R\)\ D*)	ARCH='-march=nocona'		;;
-	*VIA\ C3*\ *)			ARCH='-march=c3'		;;
-	*AMD\ K6-III*)			ARCH='-march=k6-3'		;;
-	*AMD\ K6-2*)			ARCH='-march=k6-2'		;;
-	*AMD\ K6*)			ARCH='-march=k6'		;;
-	*AMD\ Duron*)			ARCH='-march=athlon'		;;
-	*AMD\ Athlon\ 4*)		ARCH='-march=athlon-4'		;;
-	*AMD\ Athlon\ Model\ 4\ \(Thunderbird\)*) ARCH='-march=athlon-tbird';;
-	*AMD\ Athlon\ MP*)		ARCH='-march=athlon-mp'	;;
-	*AMD\ K7\ \(Athlon\)\ XP\ *)	ARCH='-march=athlon-xp'	;;
-	*AMD\ Athlon\ XP\ *)		ARCH='-march=athlon-xp'	;;
-	*AMD\ K7*|*AMD\ Athlon*)	ARCH='-march=athlon'		;;
-	*AMD\ Unknown\ K7\ \(Athlon\)*) ARCH='-march=athlon'		;;
-	*AMD\ Opteron\(tm\)\ Processor*) ARCH='-march=opteron'		;;
-	*AMD\ Turion\(tm\)\ 64\ Mobile*) ARCH='-march=athlon64'	;;
-	*386-class*)			ARCH='-march=i386'		;;
-	*486-class*)			ARCH='-march=i486'		;;
-	*586-class*)			ARCH='-march=pentium'		;;
-	*686-class*)			ARCH='-march=pentiumpro'	;;
-    esac
-    if [ -n "$ARCH" -a "$hw_machine_arch" = i386 ] ; then
-	if [ "$(sysctl -n machdep.sse2)" = 1 ] ; then
-	    case $hw_model in
-		*Intel\ Celeron\ *)
-			ARCH='-march=pentium4'				;;
-	    esac
-	fi
-    fi
-    ;;
+	case "$cpu" in
+	    'AMD Athlon 64 or Athlon 64 FX or Opteron '*) ARCH='-march=opteron' ;;
+	    'AMD Athlon 64 or Sempron (686-class),'*) ARCH='-march=athlon64' ;;
+	    'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
+	    'Intel (686-class),'*)		ARCH='-march=pentiumpro' ;;
+	    'Intel Celeron (686-class),'*)	ARCH='-march=pentiumpro' ;;
+	    'Intel Core 2 (Merom) (686-class),'*) ARCH='-march=core2' ;;
+	    'Intel Pentium 4 (686-class),'*)	ARCH='-march=pentium4' ;;
+	    'Intel Pentium II (686-class),'*)	ARCH='-march=pentium3' ;;
+	    'Intel Pentium III (686-class),'*)	ARCH='-march=pentium2' ;;
+	    # Fallback classes
+	    *'(586-class)'*)			ARCH='-march=pentium' ;;
+	    *'(486-class)'*)			ARCH='-march=i486' ;;
+	esac
+	;;
 
     m68k) case $hw_model in				   # Examples
 	*\(68020*|*\ MC68020\ *) ARCH='-m68020'	;; # Untested
 	*\(68030*|*\ MC68030\ *) ARCH='-m68030'	;; # Mac LC III
 	*\(68040*|*\ MC68040\ *) ARCH='-m68040'	;; # Untested
-	*\(68060*|*\ MC68060\ *) ARCH='-m68060'	;; # Upgr amiga 3000
+	*\(68060*|*\ MC68060\ *) ARCH='-m68060'	;; # Upgraded amiga 3000
     esac
     case "$(egrep '^fpu0 ' /var/run/dmesg.boot)" in
 	*\(emulator\)*)		FEATURES="-msoft-float" ;;
@@ -154,6 +141,7 @@ determine_arch()
 		*\ QED\ RM5200\ *)	ARCH="-mtune=r5000 -mips2" ;; # mips4
 		*\ MIPS\ R6000\ *)	ARCH="-mtune=r6000 -mips2" ;;
 		*\ MIPS\ R8000\ *)	ARCH="-mtune=r8000 -mips2" ;; # mips4
+		*\ MIPS\ R10000\ *)	ARCH="-march=mips4 -mabi=32" ;; # mips4
 	    esac ;;
 	esac
 	;;
