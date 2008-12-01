@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3220 2008/12/01 13:48:48 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3221 2008/12/01 14:06:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5386,3 +5386,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/webalizer to 2.20.1 [tonnerre 2008-12-01]
 	Updated mail/imap-uw to 2007dnb2 [obache 2008-12-01]
 	Updated pkgtools/url2pkg to 2.8 [wiz 2008-12-01]
+	Added sysutils/gnome-nds-thumbnailer version 1.2.0 [wiz 2008-12-01]
