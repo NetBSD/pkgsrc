@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/10 23:34:51 bjs Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/12/02 23:08:26 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -9,6 +9,9 @@ ${PYSITELIB}/hgext/acl.pyo
 ${PYSITELIB}/hgext/alias.py
 ${PYSITELIB}/hgext/alias.pyc
 ${PYSITELIB}/hgext/alias.pyo
+${PYSITELIB}/hgext/bookmarks.py
+${PYSITELIB}/hgext/bookmarks.pyc
+${PYSITELIB}/hgext/bookmarks.pyo
 ${PYSITELIB}/hgext/bugzilla.py
 ${PYSITELIB}/hgext/bugzilla.pyc
 ${PYSITELIB}/hgext/bugzilla.pyo
@@ -24,6 +27,9 @@ ${PYSITELIB}/hgext/color.pyo
 ${PYSITELIB}/hgext/convert/__init__.py
 ${PYSITELIB}/hgext/convert/__init__.pyc
 ${PYSITELIB}/hgext/convert/__init__.pyo
+${PYSITELIB}/hgext/convert/bzr.py
+${PYSITELIB}/hgext/convert/bzr.pyc
+${PYSITELIB}/hgext/convert/bzr.pyo
 ${PYSITELIB}/hgext/convert/common.py
 ${PYSITELIB}/hgext/convert/common.pyc
 ${PYSITELIB}/hgext/convert/common.pyo
@@ -33,6 +39,9 @@ ${PYSITELIB}/hgext/convert/convcmd.pyo
 ${PYSITELIB}/hgext/convert/cvs.py
 ${PYSITELIB}/hgext/convert/cvs.pyc
 ${PYSITELIB}/hgext/convert/cvs.pyo
+${PYSITELIB}/hgext/convert/cvsps.py
+${PYSITELIB}/hgext/convert/cvsps.pyc
+${PYSITELIB}/hgext/convert/cvsps.pyo
 ${PYSITELIB}/hgext/convert/darcs.py
 ${PYSITELIB}/hgext/convert/darcs.pyc
 ${PYSITELIB}/hgext/convert/darcs.pyo
@@ -69,12 +78,18 @@ ${PYSITELIB}/hgext/gpg.pyo
 ${PYSITELIB}/hgext/graphlog.py
 ${PYSITELIB}/hgext/graphlog.pyc
 ${PYSITELIB}/hgext/graphlog.pyo
+${PYSITELIB}/hgext/hgcia.py
+${PYSITELIB}/hgext/hgcia.pyc
+${PYSITELIB}/hgext/hgcia.pyo
 ${PYSITELIB}/hgext/hgk.py
 ${PYSITELIB}/hgext/hgk.pyc
 ${PYSITELIB}/hgext/hgk.pyo
-${PYSITELIB}/hgext/highlight.py
-${PYSITELIB}/hgext/highlight.pyc
-${PYSITELIB}/hgext/highlight.pyo
+${PYSITELIB}/hgext/highlight/__init__.py
+${PYSITELIB}/hgext/highlight/__init__.pyc
+${PYSITELIB}/hgext/highlight/__init__.pyo
+${PYSITELIB}/hgext/highlight/highlight.py
+${PYSITELIB}/hgext/highlight/highlight.pyc
+${PYSITELIB}/hgext/highlight/highlight.pyo
 ${PYSITELIB}/hgext/imerge.py
 ${PYSITELIB}/hgext/imerge.pyc
 ${PYSITELIB}/hgext/imerge.pyo
@@ -102,6 +117,9 @@ ${PYSITELIB}/hgext/patchbomb.pyo
 ${PYSITELIB}/hgext/purge.py
 ${PYSITELIB}/hgext/purge.pyc
 ${PYSITELIB}/hgext/purge.pyo
+${PYSITELIB}/hgext/rebase.py
+${PYSITELIB}/hgext/rebase.pyc
+${PYSITELIB}/hgext/rebase.pyo
 ${PYSITELIB}/hgext/record.py
 ${PYSITELIB}/hgext/record.pyc
 ${PYSITELIB}/hgext/record.pyo
@@ -114,6 +132,12 @@ ${PYSITELIB}/hgext/win32mbcs.pyo
 ${PYSITELIB}/hgext/win32text.py
 ${PYSITELIB}/hgext/win32text.pyc
 ${PYSITELIB}/hgext/win32text.pyo
+${PYSITELIB}/hgext/zeroconf/Zeroconf.py
+${PYSITELIB}/hgext/zeroconf/Zeroconf.pyc
+${PYSITELIB}/hgext/zeroconf/Zeroconf.pyo
+${PYSITELIB}/hgext/zeroconf/__init__.py
+${PYSITELIB}/hgext/zeroconf/__init__.pyc
+${PYSITELIB}/hgext/zeroconf/__init__.pyo
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
@@ -174,6 +198,9 @@ ${PYSITELIB}/mercurial/filelog.pyo
 ${PYSITELIB}/mercurial/filemerge.py
 ${PYSITELIB}/mercurial/filemerge.pyc
 ${PYSITELIB}/mercurial/filemerge.pyo
+${PYSITELIB}/mercurial/graphmod.py
+${PYSITELIB}/mercurial/graphmod.pyc
+${PYSITELIB}/mercurial/graphmod.pyo
 ${PYSITELIB}/mercurial/hbisect.py
 ${PYSITELIB}/mercurial/hbisect.pyc
 ${PYSITELIB}/mercurial/hbisect.pyo
@@ -207,15 +234,15 @@ ${PYSITELIB}/mercurial/hgweb/server.pyo
 ${PYSITELIB}/mercurial/hgweb/webcommands.py
 ${PYSITELIB}/mercurial/hgweb/webcommands.pyc
 ${PYSITELIB}/mercurial/hgweb/webcommands.pyo
+${PYSITELIB}/mercurial/hgweb/webutil.py
+${PYSITELIB}/mercurial/hgweb/webutil.pyc
+${PYSITELIB}/mercurial/hgweb/webutil.pyo
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.py
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.pyc
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.pyo
 ${PYSITELIB}/mercurial/hook.py
 ${PYSITELIB}/mercurial/hook.pyc
 ${PYSITELIB}/mercurial/hook.pyo
-${PYSITELIB}/mercurial/httprangereader.py
-${PYSITELIB}/mercurial/httprangereader.pyc
-${PYSITELIB}/mercurial/httprangereader.pyo
 ${PYSITELIB}/mercurial/httprepo.py
 ${PYSITELIB}/mercurial/httprepo.pyc
 ${PYSITELIB}/mercurial/httprepo.pyo
@@ -243,6 +270,9 @@ ${PYSITELIB}/mercurial/mail.pyo
 ${PYSITELIB}/mercurial/manifest.py
 ${PYSITELIB}/mercurial/manifest.pyc
 ${PYSITELIB}/mercurial/manifest.pyo
+${PYSITELIB}/mercurial/match.py
+${PYSITELIB}/mercurial/match.pyc
+${PYSITELIB}/mercurial/match.pyo
 ${PYSITELIB}/mercurial/mdiff.py
 ${PYSITELIB}/mercurial/mdiff.pyc
 ${PYSITELIB}/mercurial/mdiff.pyo
@@ -257,6 +287,7 @@ ${PYSITELIB}/mercurial/osutil.py
 ${PYSITELIB}/mercurial/osutil.pyc
 ${PYSITELIB}/mercurial/osutil.pyo
 ${PYSITELIB}/mercurial/osutil.so
+${PYSITELIB}/mercurial/parsers.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
@@ -281,6 +312,9 @@ ${PYSITELIB}/mercurial/sshserver.pyo
 ${PYSITELIB}/mercurial/statichttprepo.py
 ${PYSITELIB}/mercurial/statichttprepo.pyc
 ${PYSITELIB}/mercurial/statichttprepo.pyo
+${PYSITELIB}/mercurial/store.py
+${PYSITELIB}/mercurial/store.pyc
+${PYSITELIB}/mercurial/store.pyo
 ${PYSITELIB}/mercurial/streamclone.py
 ${PYSITELIB}/mercurial/streamclone.pyc
 ${PYSITELIB}/mercurial/streamclone.pyo
@@ -300,16 +334,8 @@ ${PYSITELIB}/mercurial/templates/atom/header.tmpl
 ${PYSITELIB}/mercurial/templates/atom/map
 ${PYSITELIB}/mercurial/templates/atom/tagentry.tmpl
 ${PYSITELIB}/mercurial/templates/atom/tags.tmpl
-${PYSITELIB}/mercurial/templates/changelog.tmpl
-${PYSITELIB}/mercurial/templates/changelogentry.tmpl
-${PYSITELIB}/mercurial/templates/changeset.tmpl
-${PYSITELIB}/mercurial/templates/error.tmpl
-${PYSITELIB}/mercurial/templates/fileannotate.tmpl
-${PYSITELIB}/mercurial/templates/filediff.tmpl
-${PYSITELIB}/mercurial/templates/filelog.tmpl
-${PYSITELIB}/mercurial/templates/filelogentry.tmpl
-${PYSITELIB}/mercurial/templates/filerevision.tmpl
-${PYSITELIB}/mercurial/templates/footer.tmpl
+${PYSITELIB}/mercurial/templates/coal/header.tmpl
+${PYSITELIB}/mercurial/templates/coal/map
 ${PYSITELIB}/mercurial/templates/gitweb/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/changeset.tmpl
@@ -319,6 +345,7 @@ ${PYSITELIB}/mercurial/templates/gitweb/filediff.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/filelog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/filerevision.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/footer.tmpl
+${PYSITELIB}/mercurial/templates/gitweb/graph.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/header.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/index.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/manifest.tmpl
@@ -328,14 +355,46 @@ ${PYSITELIB}/mercurial/templates/gitweb/search.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/summary.tmpl
 ${PYSITELIB}/mercurial/templates/gitweb/tags.tmpl
-${PYSITELIB}/mercurial/templates/header.tmpl
-${PYSITELIB}/mercurial/templates/index.tmpl
-${PYSITELIB}/mercurial/templates/manifest.tmpl
-${PYSITELIB}/mercurial/templates/map
 ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
-${PYSITELIB}/mercurial/templates/notfound.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/changelog.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/changelogentry.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/changeset.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/error.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/filediff.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/filelog.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/filerevision.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/footer.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/graph.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/header.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/index.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/manifest.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/map
+${PYSITELIB}/mercurial/templates/monoblue/notfound.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/search.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/shortlog.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/summary.tmpl
+${PYSITELIB}/mercurial/templates/monoblue/tags.tmpl
+${PYSITELIB}/mercurial/templates/paper/changeset.tmpl
+${PYSITELIB}/mercurial/templates/paper/error.tmpl
+${PYSITELIB}/mercurial/templates/paper/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/paper/filediff.tmpl
+${PYSITELIB}/mercurial/templates/paper/filelog.tmpl
+${PYSITELIB}/mercurial/templates/paper/filelogentry.tmpl
+${PYSITELIB}/mercurial/templates/paper/filerevision.tmpl
+${PYSITELIB}/mercurial/templates/paper/footer.tmpl
+${PYSITELIB}/mercurial/templates/paper/graph.tmpl
+${PYSITELIB}/mercurial/templates/paper/header.tmpl
+${PYSITELIB}/mercurial/templates/paper/index.tmpl
+${PYSITELIB}/mercurial/templates/paper/manifest.tmpl
+${PYSITELIB}/mercurial/templates/paper/map
+${PYSITELIB}/mercurial/templates/paper/notfound.tmpl
+${PYSITELIB}/mercurial/templates/paper/search.tmpl
+${PYSITELIB}/mercurial/templates/paper/shortlog.tmpl
+${PYSITELIB}/mercurial/templates/paper/shortlogentry.tmpl
+${PYSITELIB}/mercurial/templates/paper/tags.tmpl
 ${PYSITELIB}/mercurial/templates/raw/changeset.tmpl
 ${PYSITELIB}/mercurial/templates/raw/error.tmpl
 ${PYSITELIB}/mercurial/templates/raw/fileannotate.tmpl
@@ -352,15 +411,38 @@ ${PYSITELIB}/mercurial/templates/rss/header.tmpl
 ${PYSITELIB}/mercurial/templates/rss/map
 ${PYSITELIB}/mercurial/templates/rss/tagentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/tags.tmpl
-${PYSITELIB}/mercurial/templates/search.tmpl
-${PYSITELIB}/mercurial/templates/shortlog.tmpl
-${PYSITELIB}/mercurial/templates/shortlogentry.tmpl
+${PYSITELIB}/mercurial/templates/spartan/changelog.tmpl
+${PYSITELIB}/mercurial/templates/spartan/changelogentry.tmpl
+${PYSITELIB}/mercurial/templates/spartan/changeset.tmpl
+${PYSITELIB}/mercurial/templates/spartan/error.tmpl
+${PYSITELIB}/mercurial/templates/spartan/fileannotate.tmpl
+${PYSITELIB}/mercurial/templates/spartan/filediff.tmpl
+${PYSITELIB}/mercurial/templates/spartan/filelog.tmpl
+${PYSITELIB}/mercurial/templates/spartan/filelogentry.tmpl
+${PYSITELIB}/mercurial/templates/spartan/filerevision.tmpl
+${PYSITELIB}/mercurial/templates/spartan/footer.tmpl
+${PYSITELIB}/mercurial/templates/spartan/graph.tmpl
+${PYSITELIB}/mercurial/templates/spartan/header.tmpl
+${PYSITELIB}/mercurial/templates/spartan/index.tmpl
+${PYSITELIB}/mercurial/templates/spartan/manifest.tmpl
+${PYSITELIB}/mercurial/templates/spartan/map
+${PYSITELIB}/mercurial/templates/spartan/notfound.tmpl
+${PYSITELIB}/mercurial/templates/spartan/search.tmpl
+${PYSITELIB}/mercurial/templates/spartan/shortlog.tmpl
+${PYSITELIB}/mercurial/templates/spartan/shortlogentry.tmpl
+${PYSITELIB}/mercurial/templates/spartan/tags.tmpl
+${PYSITELIB}/mercurial/templates/static/background.png
+${PYSITELIB}/mercurial/templates/static/coal-file.png
+${PYSITELIB}/mercurial/templates/static/coal-folder.png
+${PYSITELIB}/mercurial/templates/static/excanvas.js
+${PYSITELIB}/mercurial/templates/static/graph.js
 ${PYSITELIB}/mercurial/templates/static/hgicon.png
 ${PYSITELIB}/mercurial/templates/static/hglogo.png
-${PYSITELIB}/mercurial/templates/static/highlight.css
+${PYSITELIB}/mercurial/templates/static/style-coal.css
 ${PYSITELIB}/mercurial/templates/static/style-gitweb.css
+${PYSITELIB}/mercurial/templates/static/style-monoblue.css
+${PYSITELIB}/mercurial/templates/static/style-paper.css
 ${PYSITELIB}/mercurial/templates/static/style.css
-${PYSITELIB}/mercurial/templates/tags.tmpl
 ${PYSITELIB}/mercurial/templates/template-vars.txt
 ${PYSITELIB}/mercurial/transaction.py
 ${PYSITELIB}/mercurial/transaction.pyc
@@ -368,6 +450,9 @@ ${PYSITELIB}/mercurial/transaction.pyo
 ${PYSITELIB}/mercurial/ui.py
 ${PYSITELIB}/mercurial/ui.pyc
 ${PYSITELIB}/mercurial/ui.pyo
+${PYSITELIB}/mercurial/url.py
+${PYSITELIB}/mercurial/url.pyc
+${PYSITELIB}/mercurial/url.pyo
 ${PYSITELIB}/mercurial/util.py
 ${PYSITELIB}/mercurial/util.pyc
 ${PYSITELIB}/mercurial/util.pyo
@@ -386,12 +471,18 @@ man/man5/hgrc.5
 share/doc/mercurial/README
 @dirrm share/doc/mercurial
 @dirrm ${PYSITELIB}/mercurial/templates/static
+@dirrm ${PYSITELIB}/mercurial/templates/spartan
 @dirrm ${PYSITELIB}/mercurial/templates/rss
 @dirrm ${PYSITELIB}/mercurial/templates/raw
+@dirrm ${PYSITELIB}/mercurial/templates/paper
+@dirrm ${PYSITELIB}/mercurial/templates/monoblue
 @dirrm ${PYSITELIB}/mercurial/templates/gitweb
+@dirrm ${PYSITELIB}/mercurial/templates/coal
 @dirrm ${PYSITELIB}/mercurial/templates/atom
 @dirrm ${PYSITELIB}/mercurial/templates
 @dirrm ${PYSITELIB}/mercurial/hgweb
 @dirrm ${PYSITELIB}/mercurial
+@dirrm ${PYSITELIB}/hgext/zeroconf
+@dirrm ${PYSITELIB}/hgext/highlight
 @dirrm ${PYSITELIB}/hgext/convert
 @dirrm ${PYSITELIB}/hgext
