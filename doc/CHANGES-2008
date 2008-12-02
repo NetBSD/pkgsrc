@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3236 2008/12/02 15:59:46 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3237 2008/12/02 16:17:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5402,3 +5402,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/gnome-games to 2.24.2 [wiz 2008-12-02]
 	Updated sysutils/gnome-menus to 2.24.2 [wiz 2008-12-02]
 	Updated x11/gnome-panel to 2.24.2 [wiz 2008-12-02]
+	Updated x11/gnome-session to 2.24.2 [wiz 2008-12-02]
