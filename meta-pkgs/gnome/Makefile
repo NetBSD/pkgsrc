@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.97 2008/11/29 08:51:38 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2008/12/02 17:33:46 wiz Exp $
 
-DISTNAME=	gnome-2.24.1.90
+DISTNAME=	gnome-2.24.1.91
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -15,83 +15,53 @@ META_PACKAGE=	yes
 # see http://ftp.gnome.org/pub/GNOME/desktop/2.24/2.24.2/sources/
 
 DEPENDS+=	alacarte>=0.11.6:../../x11/alacarte
-# too old
-#DEPENDS+=	bug-buddy>=2.24.2:../../net/bug-buddy
-DEPENDS+=	bug-buddy>=2.24.1:../../net/bug-buddy
-# too old
-#DEPENDS+=	cheese>=2.24.2:../../graphics/cheese
-DEPENDS+=	cheese>=2.24.1:../../graphics/cheese
+DEPENDS+=	bug-buddy>=2.24.2:../../net/bug-buddy
+DEPENDS+=	cheese>=2.24.2:../../graphics/cheese
 DEPENDS+=	dasher>=4.9.0:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.24.2:../../misc/deskbar-applet
 DEPENDS+=	eel>=2.24.1:../../devel/eel
 DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
 DEPENDS+=	empathy>=2.24.1:../../chat/empathy
-# too old
-#DEPENDS+=	eog>=2.24.2:../../graphics/eog
-DEPENDS+=	eog>=2.24.1:../../graphics/eog
-# too old
-# DEPENDS+=	epiphany>=2.24.2.1:../../www/epiphany
-DEPENDS+=	epiphany>=2.24.1:../../www/epiphany
-# too old
-#DEPENDS+=	evince>=2.24.2:../../print/evince
-DEPENDS+=	evince>=2.24.1:../../print/evince
+DEPENDS+=	eog>=2.24.2:../../graphics/eog
+DEPENDS+=	epiphany>=2.24.2.1:../../www/epiphany
+DEPENDS+=	evince>=2.24.2:../../print/evince
 DEPENDS+=	evolution>=2.24.2:../../mail/evolution
 DEPENDS+=	evolution-data-server>=2.24.2:../../mail/evolution-data-server
 DEPENDS+=	evolution-exchange>=2.24.2:../../mail/evolution-exchange
 DEPENDS+=	evolution-webcal>=2.24.0:../../time/evolution-webcal
-# too old
-#DEPENDS+=	file-roller>=2.24.2:../../archivers/file-roller
-DEPENDS+=	file-roller>=2.24.1:../../archivers/file-roller
-# too old
-#DEPENDS+=	gcalctool>=5.24.2:../../math/gcalctool
-DEPENDS+=	gcalctool>=5.24.1:../../math/gcalctool
+DEPENDS+=	file-roller>=2.24.2:../../archivers/file-roller
+DEPENDS+=	gcalctool>=5.24.2:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.24.1:../../editors/gconf-editor
 # too old
 #DEPENDS+=	gdm>=2.24.1:../../x11/gdm
 DEPENDS+=	gdm-[0-9]*:../../x11/gdm
 DEPENDS+=	gedit>=2.24.2:../../editors/gedit
-# too old
-#DEPENDS+=	gnome-applets>=2.24.2:../../x11/gnome-applets
-DEPENDS+=	gnome-applets>=2.24.1:../../x11/gnome-applets
+DEPENDS+=	gnome-applets>=2.24.2:../../x11/gnome-applets
 DEPENDS+=	gnome-backgrounds>=2.24.0:../../graphics/gnome-backgrounds
 DEPENDS+=	gnome-control-center>=2.24.0.1:../../x11/gnome-control-center
-# too old
-#DEPENDS+=	gnome-desktop>=2.24.2:../../x11/gnome-desktop
-DEPENDS+=	gnome-desktop>=2.24.1:../../x11/gnome-desktop
+DEPENDS+=	gnome-desktop>=2.24.2:../../x11/gnome-desktop
 DEPENDS+=	gnome-desktop-sharp>=2.24.0:../../x11/gnome-desktop-sharp
 DEPENDS+=	gnome-doc-utils>=0.14.0:../../textproc/gnome-doc-utils
-# too old
-#DEPENDS+=	gnome-games>=2.24.2:../../games/gnome-games
-DEPENDS+=	gnome-games>=2.24.1:../../games/gnome-games
+DEPENDS+=	gnome-games>=2.24.2:../../games/gnome-games
 DEPENDS+=	gnome-icon-theme>=2.24.0:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-keyring>=2.24.1:../../security/gnome-keyring
 DEPENDS+=	gnome-mag>=0.15.4:../../x11/gnome-mag
 DEPENDS+=	gnome-media>=2.24.0.1:../../multimedia/gnome-media
-# too old
-#DEPENDS+=	gnome-menus>=2.24.2:../../sysutils/gnome-menus
-DEPENDS+=	gnome-menus>=2.24.1:../../sysutils/gnome-menus
+DEPENDS+=	gnome-menus>=2.24.2:../../sysutils/gnome-menus
 DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
 # unpackaged
 #DEPENDS+=	gnome-nettool>=2.22.1:../../*/gnome-nettool
-# too old
-#DEPENDS+=	gnome-panel>=2.24.2:../../x11/gnome-panel
-DEPENDS+=	gnome-panel>=2.24.1:../../x11/gnome-panel
+DEPENDS+=	gnome-panel>=2.24.2:../../x11/gnome-panel
 DEPENDS+=	gnome-power-manager>=2.24.2:../../sysutils/gnome-power-manager
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
 DEPENDS+=	gnome-screensaver>=2.24.1:../../x11/gnome-screensaver
-# too old
-#DEPENDS+=	gnome-session>=2.24.2:../../x11/gnome-session
-DEPENDS+=	gnome-session>=2.24.1:../../x11/gnome-session
-# too old
-#DEPENDS+=	gnome-settings-daemon>=2.24.1:../../sysutils/gnome-settings-daemon
-DEPENDS+=	gnome-settings-daemon>=2.24.0:../../sysutils/gnome-settings-daemon
+DEPENDS+=	gnome-session>=2.24.2:../../x11/gnome-session
+DEPENDS+=	gnome-settings-daemon>=2.24.1:../../sysutils/gnome-settings-daemon
 DEPENDS+=	gnome-sharp>=2.24.0:../../x11/gnome-sharp
 DEPENDS+=	gnome-speech>=0.4.22:../../audio/gnome-speech
 DEPENDS+=	gnome-system-monitor>=2.24.1:../../sysutils/gnome-system-monitor
 DEPENDS+=	gnome-system-tools>=2.22.1:../../sysutils/gnome-system-tools
-# too old
-#DEPENDS+=	gnome-terminal>=2.24.2:../../x11/gnome-terminal
-DEPENDS+=	gnome-terminal>=2.24.1.1:../../x11/gnome-terminal
+DEPENDS+=	gnome-terminal>=2.24.2:../../x11/gnome-terminal
 DEPENDS+=	gnome-themes>=2.24.1:../../x11/gnome-themes
 DEPENDS+=	gnome-user-docs>=2.24.0:../../misc/gnome-user-docs
 DEPENDS+=	gnome-utils>=2.24.1:../../misc/gnome-utils
@@ -103,9 +73,7 @@ DEPENDS+=	gstreamer0.10>=0.10.21:../../multimedia/gstreamer0.10
 DEPENDS+=	gtk2-engines>=2.16.1:../../x11/gtk2-engines
 DEPENDS+=	gtkhtml314>=3.24.2:../../www/gtkhtml314
 DEPENDS+=	gtksourceview2>=2.4.1:../../x11/gtksourceview2
-# too old
-#DEPENDS+=	gucharmap>=2.24.2:../../fonts/gucharmap
-DEPENDS+=	gucharmap>=2.24.1:../../fonts/gucharmap
+DEPENDS+=	gucharmap>=2.24.2:../../fonts/gucharmap
 DEPENDS+=	gvfs>=1.0.3:../../sysutils/gvfs
 # unpackaged
 #DEPENDS+=	hamster-applet>=2.24.2:../../*/hamster-applet
@@ -114,17 +82,11 @@ DEPENDS+=	libgnomekbd>=2.24.0:../../x11/libgnomekbd
 DEPENDS+=	libgnomeprint>=2.18.5:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.18.3:../../print/libgnomeprintui
 DEPENDS+=	libgtop>=2.24.0:../../sysutils/libgtop
-# too old
-#DEPENDS+=	libgweather>=2.24.2:../../devel/libgweather
-DEPENDS+=	libgweather>=2.24.1:../../devel/libgweather
+DEPENDS+=	libgweather>=2.24.2:../../devel/libgweather
 DEPENDS+=	liboobs>=2.22.0:../../sysutils/liboobs
 DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
-# too old
-#DEPENDS+=	libsoup24>=2.24.2.1:../../net/libsoup24
-DEPENDS+=	libsoup24>=2.24.1:../../net/libsoup24
-# too old
-#DEPENDS+=	libwnck>=2.24.2:../../devel/libwnck
-DEPENDS+=	libwnck>=2.24.1:../../devel/libwnck
+DEPENDS+=	libsoup24>=2.24.2.1:../../net/libsoup24
+DEPENDS+=	libwnck>=2.24.2:../../devel/libwnck
 DEPENDS+=	metacity>=2.24.0:../../wm/metacity
 # unpackaged
 #DEPENDS+=	mousetweaks>=2.24.2:../../*/mousetweaks
@@ -132,9 +94,7 @@ DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 # too old
 #DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	nautilus-cd-burner-[0-9]*:../../sysutils/nautilus-cd-burner
-# too old
-#DEPENDS+=	orca>=2.24.2:../../misc/orca
-DEPENDS+=	orca>=2.24.1:../../misc/orca
+DEPENDS+=	orca>=2.24.2:../../misc/orca
 # unpackaged
 #DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../*/py-gtksourceview
 DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
