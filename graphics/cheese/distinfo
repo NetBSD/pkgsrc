@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2008/11/29 13:57:31 jmcneill Exp $
+$NetBSD: distinfo,v 1.6 2008/12/02 11:47:09 wiz Exp $
 
-SHA1 (cheese-2.24.1.tar.gz) = 87bde5fba2e956f05f3849b5501ce6490bd6bae2
-RMD160 (cheese-2.24.1.tar.gz) = 1501a43d3af6565a39e16a9a0378223c6a687e3d
-Size (cheese-2.24.1.tar.gz) = 2874336 bytes
+SHA1 (cheese-2.24.2.tar.gz) = efa0de5e3d663a7417244b3f463844edefe7835c
+RMD160 (cheese-2.24.2.tar.gz) = 619bf834d9e71b0901a8c177e4e3109e57e81587
+Size (cheese-2.24.2.tar.gz) = 2878710 bytes
 SHA1 (patch-aa) = 6be8e2b429a3033202cc20aad329ca3979489427
-SHA1 (patch-ab) = 1f273bc49e6d4cd76dad0bc9e60db7ed395d6d83
+SHA1 (patch-ab) = bb7a12f2ed26bdd134ee5ac114f1d4a6ca409267
 SHA1 (patch-ac) = 4db9fc3c6288ba6eb20ad98aca8875326952dfd8
 SHA1 (patch-ad) = 8755f4b1dc133f1ab6164894a9ea19cb96a8a49b
