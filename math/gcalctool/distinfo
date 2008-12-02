@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.33 2008/10/25 00:43:23 wiz Exp $
+$NetBSD: distinfo,v 1.34 2008/12/02 13:35:11 wiz Exp $
 
-SHA1 (gcalctool-5.24.1.tar.bz2) = fca4070121f005cfff7e16407e6eec63ca59c80f
-RMD160 (gcalctool-5.24.1.tar.bz2) = c171b3fd77c62c976c99c9962d50220b5f54f07d
-Size (gcalctool-5.24.1.tar.bz2) = 1714708 bytes
+SHA1 (gcalctool-5.24.2.tar.bz2) = dee1645bb8feebf6b9f678f1f7167cfd4fb24396
+RMD160 (gcalctool-5.24.2.tar.bz2) = fccf4f98e4bc93d6b7cad27c6202ced69dbf45bf
+Size (gcalctool-5.24.2.tar.bz2) = 1694083 bytes
