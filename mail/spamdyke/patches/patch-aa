@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.9 2008/07/16 07:03:21 schmonz Exp $
+$NetBSD: patch-aa,v 1.10 2008/12/02 16:24:58 schmonz Exp $
 
---- spamdyke.h.orig	2008-06-25 23:11:26.000000000 -0400
+--- spamdyke.h.orig	2008-11-28 13:02:32.000000000 -0500
 +++ spamdyke.h
 @@ -93,7 +93,7 @@
  #define STRINGIFY(X)                    _STRINGIFY(X)
  
  #define DEFAULT_REMOTE_IP               "0.0.0.0"
--#define DEFAULT_PATH                    "/bin:/usr/bin:/usr/local/bin:/var/qmail/bin:/home/vpopmail/bin"
+-#define DEFAULT_PATH                    "/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/var/qmail/bin:/home/vpopmail/bin"
 +#define DEFAULT_PATH                    "/bin:/usr/bin:@LOCALBASE@/bin:@QMAILDIR@/bin:/home/vpopmail/bin"
  #define DEFAULT_NIHDNS_RESOLVER_FILENAME        "/etc/resolv.conf"
  #define DEFAULT_NIHDNS_PORT             53
