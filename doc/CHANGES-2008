@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3242 2008/12/02 17:07:36 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3243 2008/12/02 17:13:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5408,3 +5408,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-terminal to 2.24.2 [wiz 2008-12-02]
 	Updated fonts/gucharmap to 2.24.2 [wiz 2008-12-02]
 	Updated devel/libgweather to 2.24.2 [wiz 2008-12-02]
+	Updated net/libsoup24 to 2.24.2.1 [wiz 2008-12-02]
