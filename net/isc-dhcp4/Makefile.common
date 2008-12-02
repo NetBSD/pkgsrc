@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2008/02/13 22:03:58 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/12/02 12:07:47 martti Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-srv-lease-file=${DHCP_HOME}/dhcpd.leases
 CONFIGURE_ARGS+=	--with-cli-lease-file=${DHCP_HOME}/dhclient.leases
-CONFIGURE_ARGS+=	--with-srv-pid-file=${DHCP_PID}/isc-dhcpd.pif
+CONFIGURE_ARGS+=	--with-srv-pid-file=${DHCP_PID}/isc-dhcpd.pid
 CONFIGURE_ARGS+=	--with-cli-pid-file=${DHCP_PID}/isc-dhclient.pid
 CONFIGURE_ARGS+=	--with-relay-pid-file=${DHCP_PID}/isc-dhcrelay.pid
 
