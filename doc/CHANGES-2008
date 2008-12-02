@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3232 2008/12/02 14:37:07 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3233 2008/12/02 14:37:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5398,3 +5398,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/file-roller to 2.24.2 [wiz 2008-12-02]
 	Updated math/gcalctool to 5.24.2 [wiz 2008-12-02]
 	Updated x11/gnome-applets to 2.24.2 [wiz 2008-12-02]
+	Updated x11/gnome-desktop to 2.24.2 [wiz 2008-12-02]
