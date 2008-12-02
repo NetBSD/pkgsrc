@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/12/02 14:35:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/12/02 22:09:13 wiz Exp $
 bin/invest-chart
 ${PYSITELIB}/invest/__init__.py
 ${PYSITELIB}/invest/__init__.pyc
@@ -288,6 +288,12 @@ ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-applet.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-credits-hal.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-preferences.png
 ${PLIST.battstat}share/gnome/help/battstat/bg/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/de/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/de/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/de/figures/context-menu.png
 ${PLIST.battstat}share/gnome/help/battstat/el/battstat.xml
 ${PLIST.battstat}share/gnome/help/battstat/el/figures/battstat-applet-expanded.png
 ${PLIST.battstat}share/gnome/help/battstat/el/figures/battstat-applet.png
@@ -1136,6 +1142,7 @@ share/omf/accessx-status/accessx-status-sv.omf
 share/omf/accessx-status/accessx-status-uk.omf
 ${PLIST.battstat}share/omf/battstat/battstat-C.omf
 ${PLIST.battstat}share/omf/battstat/battstat-bg.omf
+${PLIST.battstat}share/omf/battstat/battstat-de.omf
 ${PLIST.battstat}share/omf/battstat/battstat-el.omf
 ${PLIST.battstat}share/omf/battstat/battstat-en_GB.omf
 ${PLIST.battstat}share/omf/battstat/battstat-es.omf
