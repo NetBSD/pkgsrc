@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3250 2008/12/02 22:37:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3251 2008/12/02 23:08:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5416,3 +5416,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/sound-juicer to 2.24.0 [wiz 2008-12-02]
 	Added net/gnome-nettool version 2.22.1 [wiz 2008-12-02]
 	Added time/hamster-applet version 2.24.2 [wiz 2008-12-02]
+	Updated devel/mercurial to 1.1 [wiz 2008-12-02]
