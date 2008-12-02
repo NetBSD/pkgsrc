@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2008/10/25 11:15:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/12/02 12:30:13 wiz Exp $
 bin/epiphany
 include/epiphany/2.24/epiphany/ephy-adblock-manager.h
 include/epiphany/2.24/epiphany/ephy-adblock.h
@@ -236,6 +236,7 @@ share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
 share/locale/as/LC_MESSAGES/epiphany.mo
+share/locale/ast/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
 share/locale/be@latin/LC_MESSAGES/epiphany.mo
