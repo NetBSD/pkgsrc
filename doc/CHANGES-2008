@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3241 2008/12/02 16:57:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3242 2008/12/02 17:07:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5407,3 +5407,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/spamdyke to 4.0.9 [schmonz 2008-12-02]
 	Updated x11/gnome-terminal to 2.24.2 [wiz 2008-12-02]
 	Updated fonts/gucharmap to 2.24.2 [wiz 2008-12-02]
+	Updated devel/libgweather to 2.24.2 [wiz 2008-12-02]
