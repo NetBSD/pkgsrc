@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
+
+--- src/ping.h.orig	2008-09-22 22:04:12.000000000 +0000
++++ src/ping.h
+@@ -30,7 +30,7 @@
+ #   define PING_PROGRAM_FORMAT_6 "%s ping6 -c %d -n %s"
+ #   define PING_FORMAT "%d bytes from %s icmp_seq=%d ttl=%d time=%s %s"
+ #   define PING_PARAMS_6
+-#elif defined(__OSF__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__OSF__) || defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
+ #   define PING_PROGRAM_FORMAT "%s ping -c %d -n %s"
+ #   define PING_PROGRAM_FORMAT_6 "%s ping6 -c %d -n %s"
+ #   define PING_FORMAT "%d bytes from %s icmp_seq=%d ttl=%d time=%s %s"

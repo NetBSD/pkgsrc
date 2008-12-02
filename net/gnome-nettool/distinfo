@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
+
+SHA1 (gnome-nettool-2.22.1.tar.bz2) = 41e66c37beb677cf5ac17a2ec6254cd24b0e18d4
+RMD160 (gnome-nettool-2.22.1.tar.bz2) = 43b78d53ae5805f97f031821b37b7e739ca5866a
+Size (gnome-nettool-2.22.1.tar.bz2) = 600085 bytes
+SHA1 (patch-aa) = 3f6c5cea284b2ddfefda9cff1e74f6fa5755bb8d
+SHA1 (patch-ab) = 3c45a604945c955ea18dc510b279e7e9405d0b1a
+SHA1 (patch-ac) = 647ecaae91966d99759b08c920af9eaf8e1fe6ca
