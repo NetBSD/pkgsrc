@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/10/19 17:42:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/12/02 13:04:18 wiz Exp $
 bin/evince
 bin/evince-thumbnailer
 include/evince-2.20/evince/ev-async-renderer.h
@@ -107,6 +107,8 @@ share/gnome/help/evince/sv/evince.xml
 share/gnome/help/evince/sv/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
+share/gnome/help/evince/vi/evince.xml
+share/gnome/help/evince/vi/figures/evince_start_window.png
 share/gnome/help/evince/zh_CN/evince.xml
 share/gnome/help/evince/zh_CN/figures/evince_start_window.png
 share/gtk-doc/html/evince/EvAttachment.html
@@ -266,6 +268,7 @@ share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
 share/omf/evince/evince-sv.omf
 share/omf/evince/evince-uk.omf
+share/omf/evince/evince-vi.omf
 share/omf/evince/evince-zh_CN.omf
 @dirrm share/omf/evince
 @comment in rarian: @dirrm share/omf
@@ -278,6 +281,8 @@ share/omf/evince/evince-zh_CN.omf
 @dirrm share/gtk-doc/html/evince
 @dirrm share/gnome/help/evince/zh_CN/figures
 @dirrm share/gnome/help/evince/zh_CN
+@dirrm share/gnome/help/evince/vi/figures
+@dirrm share/gnome/help/evince/vi
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
 @dirrm share/gnome/help/evince/sv/figures
