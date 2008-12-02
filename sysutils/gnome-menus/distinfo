@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2008/10/24 22:07:08 wiz Exp $
+$NetBSD: distinfo,v 1.19 2008/12/02 15:03:30 wiz Exp $
 
-SHA1 (gnome-menus-2.24.1.tar.bz2) = f29b6b76ac562f6f6be2887f9cd5826890a5593f
-RMD160 (gnome-menus-2.24.1.tar.bz2) = 6161162b121505378687d4240d681df540d72c2b
-Size (gnome-menus-2.24.1.tar.bz2) = 452818 bytes
+SHA1 (gnome-menus-2.24.2.tar.bz2) = 8769c37ca8a7045d9b79b02fd3fa3f89442b4271
+RMD160 (gnome-menus-2.24.2.tar.bz2) = f377b2ea6f94a4ecd159e0a095c8a0ea3139ed37
+Size (gnome-menus-2.24.2.tar.bz2) = 453261 bytes
