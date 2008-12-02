@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2008/12/02 17:33:46 wiz Exp $
+# $NetBSD: Makefile,v 1.99 2008/12/02 20:33:53 wiz Exp $
 
-DISTNAME=	gnome-2.24.1.91
+DISTNAME=	gnome-2.24.1.92
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -91,17 +91,13 @@ DEPENDS+=	metacity>=2.24.0:../../wm/metacity
 # unpackaged
 #DEPENDS+=	mousetweaks>=2.24.2:../../*/mousetweaks
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
-# too old
-#DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
-DEPENDS+=	nautilus-cd-burner-[0-9]*:../../sysutils/nautilus-cd-burner
+DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	orca>=2.24.2:../../misc/orca
 # unpackaged
 #DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../*/py-gtksourceview
 DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
-# too old
-#DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
-DEPENDS+=	sound-juicer-[0-9]*:../../audio/sound-juicer
+DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
 DEPENDS+=	sound-theme-freedesktop>=0.2:../../audio/sound-theme-freedesktop
 DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
 # unpackaged
