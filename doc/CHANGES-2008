@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3224 2008/12/02 00:47:50 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3225 2008/12/02 10:35:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5390,3 +5390,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.19 [abs 2008-12-01]
 	Updated devel/p5-Term-ReadPassword to 0.11 [tonnerre 2008-12-01]
 	Updated net/msdl to 1.2.3 [obache 2008-12-02]
+	Updated net/bug-buddy to 2.24.2 [wiz 2008-12-02]
