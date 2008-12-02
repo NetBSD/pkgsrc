@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.791 2008/11/30 22:19:01 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.792 2008/12/02 09:00:28 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -21,6 +21,9 @@
 #	Copyright(c) 1997 by Jun-ichiro Hagino <itojun@itojun.org>.
 #	All rights reserved.
 #	Freely redistributable.  Absolutely no warranty.
+
+# To get an overview of the code, run:
+#    sed -n -e 's,^\(sub .*\) {.*,  \1,p' -e '/^package/p'
 
 #==========================================================================
 # Note: The @EXPORT clauses in the packages must be in a BEGIN block,
@@ -272,60 +275,6 @@ sub get_show_source_flag()	{ return $show_source_flag; }
 sub set_show_source_flag()	{ $show_source_flag = true; }
 
 #== End of PkgLint::Logging ===============================================
-
-#==========================================================================
-# A File is a structure containing the contents of a file:
-#	name:	string			The name of the file.
-#	lines:	array of string		The physical lines in the file.
-#==========================================================================
-package PkgLint::File;
-
-use enum qw(NAME LINES);
-
-sub new($$$) {
-	my ($class, $name, $lines) = @_;
-	my $self = [$name, $lines];
-	bless($self, $class);
-	return $self;
-}
-
-sub name($)		{ return shift(@_)->[NAME]; }
-sub lines($)		{ return shift(@_)->[LINES]; }
-
-sub load($$) {
-	my ($self, $fname) = @_;
-	my ($lines);
-
-	$lines = [];
-	open(F, "<", $fname) or return undef;
-	while (defined(my $line = <F>)) {
-		push(@{$lines}, $line);
-	}
-	close(F) or return undef;
-
-	$self->[NAME] = $fname;
-	$self->[LINES] = $lines;
-	return $self;
-}
-
-#==========================================================================
-# A Location is a structure containing a location in a file:
-#	lineno:	int			The line number in the file
-#	colno:	int			The column number in the file
-#==========================================================================
-package PkgLint::Location;
-
-use enum qw(LINENO COLNO);
-
-sub new($$$$) {
-	my ($class, $lineno, $colno) = @_;
-	my ($self) = ([$lineno, $colno]);
-	bless($self, $class);
-	return $self;
-}
-
-sub lineno($)		{ return shift(@_)->[LINENO]; }
-sub colno($)		{ return shift(@_)->[COLNO]; }
 
 #==========================================================================
 # A SimpleMatch is the result of applying a regular expression to a Perl
@@ -2871,7 +2820,7 @@ sub expect($$$) {
 
 	if ($lineno <= $#{$lines} && $lines->[$lineno]->text =~ $regex) {
 		${$lineno_ref}++;
-		return new PkgLint::SimpleMatch($lines->[$lineno]->text, \@-, \@+);
+		return PkgLint::SimpleMatch->new($lines->[$lineno]->text, \@-, \@+);
 	} else {
 		return false;
 	}
