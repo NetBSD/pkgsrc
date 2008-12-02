@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3240 2008/12/02 16:42:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3241 2008/12/02 16:57:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5406,3 +5406,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/gnome-settings-daemon to 2.24.1 [wiz 2008-12-02]
 	Updated mail/spamdyke to 4.0.9 [schmonz 2008-12-02]
 	Updated x11/gnome-terminal to 2.24.2 [wiz 2008-12-02]
+	Updated fonts/gucharmap to 2.24.2 [wiz 2008-12-02]
