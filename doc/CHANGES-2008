@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3244 2008/12/02 17:19:45 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3245 2008/12/02 17:28:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5410,3 +5410,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgweather to 2.24.2 [wiz 2008-12-02]
 	Updated net/libsoup24 to 2.24.2.1 [wiz 2008-12-02]
 	Updated devel/libwnck to 2.24.2 [wiz 2008-12-02]
+	Updated misc/orca to 2.24.2 [wiz 2008-12-02]
