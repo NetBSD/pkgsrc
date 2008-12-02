@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3228 2008/12/02 12:30:28 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3229 2008/12/02 13:04:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5394,3 +5394,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/eog to 2.24.2 [wiz 2008-12-02]
 	Updated graphics/cheese to 2.24.2 [wiz 2008-12-02]
 	Updated www/epiphany to 2.24.2.1 [wiz 2008-12-02]
+	Updated print/evince to 2.24.2 [wiz 2008-12-02]
