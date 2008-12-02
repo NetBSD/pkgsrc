@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3226 2008/12/02 11:39:54 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3227 2008/12/02 11:47:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5392,3 +5392,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/msdl to 1.2.3 [obache 2008-12-02]
 	Updated net/bug-buddy to 2.24.2 [wiz 2008-12-02]
 	Updated graphics/eog to 2.24.2 [wiz 2008-12-02]
+	Updated graphics/cheese to 2.24.2 [wiz 2008-12-02]
