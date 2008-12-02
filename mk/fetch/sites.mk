@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.50 2008/12/01 11:49:20 obache Exp $
+# $NetBSD: sites.mk,v 1.51 2008/12/02 12:58:59 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -145,7 +145,7 @@ MASTER_SITE_MOZILLA+=	\
 	http://mozilla.mirrors.tds.net/pub/mozilla.org/ \
 	http://mirrors.yocum.org/mozilla/ \
 	http://mozilla.isohunt.com/ \
-	http://mozilla.ussg.indiana.edu/pub/mozilla.org \
+	http://mozilla.ussg.indiana.edu/pub/mozilla.org/ \
 	http://mirror.atlanticmetro.net/mozilla/ \
 	http://mirror.csclub.uwaterloo.ca/pub/mozilla.org/ \
 	http://mozilla.mirror.rafal.ca/ \
