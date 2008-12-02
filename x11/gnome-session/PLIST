@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2008/10/26 23:33:18 gdt Exp $
+@comment $NetBSD: PLIST,v 1.26 2008/12/02 16:16:19 wiz Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-save
@@ -29,6 +29,7 @@ share/icons/hicolor/scalable/apps/session-properties.svg
 share/locale/af/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/ast/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-session-2.0.mo
