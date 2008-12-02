@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/11/18 09:58:11 dsainty Exp $
+# $NetBSD: Makefile,v 1.48 2008/12/02 13:03:22 obache Exp $
 
 DISTNAME=	cdrtools-2.01.01a53
 PKGNAME=	${DISTNAME:S/a/./}
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cdrecord.berlios.de/old/private/cdrecord.html
 COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs
 
-CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]*
+CONFLICTS=	mkisofs-[0-9]* cdrtools-ossdvd-[0-9]* cdrecord-[0-9]* cdrkit-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

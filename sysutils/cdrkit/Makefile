@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/02 13:03:22 obache Exp $
 #
 
 DISTNAME=	cdrkit-1.1.6
@@ -9,6 +9,8 @@ MASTER_SITES=	http://cdrkit.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cdrkit.org/
 COMMENT=	Portable command-line CD/DVD recorder software
+
+CONFLICTS=	cdrtools-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
