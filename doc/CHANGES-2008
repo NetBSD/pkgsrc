@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3246 2008/12/02 17:33:57 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3247 2008/12/02 20:00:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5412,3 +5412,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libwnck to 2.24.2 [wiz 2008-12-02]
 	Updated misc/orca to 2.24.2 [wiz 2008-12-02]
 	Updated meta-pkgs/gnome to 2.24.1.91 [wiz 2008-12-02]
+	Updated sysutils/nautilus-cd-burner to 2.24.0 [wiz 2008-12-02]
