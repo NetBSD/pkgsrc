@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3230 2008/12/02 13:30:27 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3231 2008/12/02 13:35:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5396,3 +5396,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/epiphany to 2.24.2.1 [wiz 2008-12-02]
 	Updated print/evince to 2.24.2 [wiz 2008-12-02]
 	Updated archivers/file-roller to 2.24.2 [wiz 2008-12-02]
+	Updated math/gcalctool to 5.24.2 [wiz 2008-12-02]
