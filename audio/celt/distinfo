@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/03 00:44:49 bjs Exp $
+
+SHA1 (celt-0.5.0.tar.gz) = 77558887d7c6cb587630bddd8f11f19e4a94bc2b
+RMD160 (celt-0.5.0.tar.gz) = bb207fe024a2518204dba223b735a9c3da3cd339
+Size (celt-0.5.0.tar.gz) = 447365 bytes
+SHA1 (patch-aa) = f7e1478687e92da3ec52dc92e7070e9fcac65efd
+SHA1 (patch-ab) = 28bd1b924e367c6ddf4a53282fa7324a2662ae74

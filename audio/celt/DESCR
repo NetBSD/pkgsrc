@@ -1,0 +1,7 @@
+CELT is an ultra-low-delay audio codec designed for high-quality
+communications.  Its potential uses include video-conferencing and
+network music performance.  The code is still in early stage, so it may
+be broken from time to time.
+
+NOTE: The API is not frozen yet, so it is different from one version to
+another.

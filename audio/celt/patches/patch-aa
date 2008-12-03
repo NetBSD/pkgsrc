@@ -1,0 +1,55 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/03 00:44:49 bjs Exp $
+
+--- tools/celtdec.c.orig	2008-07-26 08:58:49.000000000 -0400
++++ tools/celtdec.c
+@@ -61,14 +61,14 @@
+ #include "wave_out.c"
+ #endif
+ 
+-#ifdef HAVE_SYS_SOUNDCARD_H
++#ifdef USE_OSSAUDIO
+ #include <sys/soundcard.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+ 
+-#elif defined HAVE_SYS_AUDIOIO_H
++#elif defined USE_SUNAUDIO
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+@@ -145,12 +145,12 @@ FILE *out_file_open(char *outFile, int r
+    /*Open output file*/
+    if (strlen(outFile)==0)
+    {
+-#if defined HAVE_SYS_SOUNDCARD_H
++#if defined USE_OSSAUDIO
+       int audio_fd, format, stereo;
+-      audio_fd=open("/dev/dsp", O_WRONLY);
++      audio_fd=open(DEVOSSAUDIO, O_WRONLY);
+       if (audio_fd<0)
+       {
+-         perror("Cannot open /dev/dsp");
++         perror("Cannot open audio device.");
+          exit(1);         
+       }
+ 
+@@ -185,14 +185,14 @@ FILE *out_file_open(char *outFile, int r
+          exit(1);
+       }
+       fout = fdopen(audio_fd, "w");
+-#elif defined HAVE_SYS_AUDIOIO_H
++#elif defined USE_SUNAUDIO
+       audio_info_t info;
+       int audio_fd;
+       
+-      audio_fd = open("/dev/audio", O_WRONLY);
++      audio_fd = open(DEVSUNAUDIO, O_WRONLY);
+       if (audio_fd<0)
+       {
+-         perror("Cannot open /dev/audio");
++         perror("Cannot open audio device.");
+          exit(1);
+       }
+ 
