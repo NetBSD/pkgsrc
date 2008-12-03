@@ -1,10 +1,21 @@
-@comment $NetBSD: PLIST,v 1.12 2008/02/02 04:50:20 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/12/03 00:28:39 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
 info/pcb.info
 man/man1/pcb.1
 share/applications/pcb.desktop
+share/doc/pcb/pad.gif
+share/doc/pcb/pad.png
+share/doc/pcb/pcb.html
+share/doc/pcb/pcb.pdf
+share/doc/pcb/pcb.ps
+share/doc/pcb/puller.gif
+share/doc/pcb/puller.png
+share/doc/pcb/refcard.pdf
+share/doc/pcb/refcard.ps
+share/doc/pcb/thermal.gif
+share/doc/pcb/thermal.png
 share/icons/hicolor/16x16/mimetypes/application-x-excellon-16.png
 share/icons/hicolor/16x16/mimetypes/application-x-gerber-16.png
 share/icons/hicolor/16x16/mimetypes/application-x-pcb-footprint-16.png
@@ -37,7 +48,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-gerber.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-footprint.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-layout.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-netlist.svg
-${PKGLOCALEDIR}/locale/fr_FR/LC_MESSAGES/pcb.mo
+${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pcb.mo
 share/mime/packages/pcb.xml
 share/mimelnk/application/x-excellon.desktop
 share/mimelnk/application/x-gerber.desktop
@@ -180,14 +191,7 @@ share/pcb/newlib/tests/TK11950
 share/pcb/newlib/tests/TO99fromLED
 share/pcb/newlib/tests/UART
 share/pcb/newlib/tests/monoblock_small
-share/pcb/pad.eps
-share/pcb/pad.gif
-share/pcb/pad.pdf
-share/pcb/pad.png
 share/pcb/pcb-menu.res
-share/pcb/pcb.html
-share/pcb/pcb.pdf
-share/pcb/pcb.ps
 share/pcb/pcblib
 share/pcb/pcblib.contents
 share/pcb/pcblib-newlib/amp/AMP_MICTOR_767054_1.fp
@@ -826,6 +830,8 @@ share/pcb/pcblib-newlib/geda/LQFP120_16.fp
 share/pcb/pcblib-newlib/geda/LQFP120_16.png
 share/pcb/pcblib-newlib/geda/LQFP128_14.fp
 share/pcb/pcblib-newlib/geda/LQFP128_14.png
+share/pcb/pcblib-newlib/geda/LQFP128_14_EP.fp
+share/pcb/pcblib-newlib/geda/LQFP128_14_EP.png
 share/pcb/pcblib-newlib/geda/LQFP128_R.fp
 share/pcb/pcblib-newlib/geda/LQFP128_R.png
 share/pcb/pcblib-newlib/geda/LQFP144_20.fp
@@ -1516,6 +1522,10 @@ share/pcb/pcblib-newlib/geda/TQFP100_14.fp
 share/pcb/pcblib-newlib/geda/TQFP100_14.png
 share/pcb/pcblib-newlib/geda/TQFP120_28.fp
 share/pcb/pcblib-newlib/geda/TQFP120_28.png
+share/pcb/pcblib-newlib/geda/TQFP128_14.fp
+share/pcb/pcblib-newlib/geda/TQFP128_14.png
+share/pcb/pcblib-newlib/geda/TQFP128_14_EP.fp
+share/pcb/pcblib-newlib/geda/TQFP128_14_EP.png
 share/pcb/pcblib-newlib/geda/TQFP128_28.fp
 share/pcb/pcblib-newlib/geda/TQFP128_28.png
 share/pcb/pcblib-newlib/geda/TQFP144_28.fp
@@ -1863,18 +1873,8 @@ share/pcb/pcblib-newlib/pci/PCI5V_MIN_HEIGHT.png
 share/pcb/pcblib-newlib/pci/PCI5V_SMALL_HEIGHT.fp
 share/pcb/pcblib-newlib/pci/PCI5V_SMALL_HEIGHT.png
 share/pcb/pcblib-newlib/pci/index.html
-share/pcb/puller.eps
-share/pcb/puller.gif
-share/pcb/puller.pdf
-share/pcb/puller.png
 share/pcb/qfp-ui
 share/pcb/qfp.dat
-share/pcb/refcard.pdf
-share/pcb/refcard.ps
-share/pcb/thermal.eps
-share/pcb/thermal.gif
-share/pcb/thermal.pdf
-share/pcb/thermal.png
 share/pcb/tools/MergePCBPS
 share/pcb/tools/Merge_dimPCBPS
 share/pcb/tools/apctools.zip
