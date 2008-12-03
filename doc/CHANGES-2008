@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3258 2008/12/03 08:29:48 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.3259 2008/12/03 08:33:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5424,3 +5424,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Term-Size to 0.207 [martti 2008-12-03]
 	Updated graphics/gtkam to 0.1.16nb1 [wiz 2008-12-03]
 	Updated editors/texmaker to 1.8 [ghen 2008-12-03]
+	Updated graphics/SDL_image to 1.2.7 [wiz 2008-12-03]
