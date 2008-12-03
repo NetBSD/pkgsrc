@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3265 2008/12/03 10:29:53 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.3266 2008/12/03 11:12:17 is Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5432,3 +5432,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/mousetweaks version 2.24.2 [wiz 2008-12-03]
 	Added x11/py-gtksourceview version 2.4.0 [wiz 2008-12-03]
 	Updated meta-pkgs/gnome to 2.24.1.95 [wiz 2008-12-03]
+	Updated devel/libslang2 to 2.1.3nb1 [is 2008-12-03]
