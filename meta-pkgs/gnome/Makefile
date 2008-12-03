@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2008/12/03 09:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2008/12/03 09:45:26 wiz Exp $
 
-DISTNAME=	gnome-2.24.1.94
+DISTNAME=	gnome-2.24.1.95
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -90,8 +90,7 @@ DEPENDS+=	mousetweaks>=2.24.2:../../misc/mousetweaks
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	orca>=2.24.2:../../misc/orca
-# unpackaged
-#DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../*/py-gtksourceview
+DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../x11/py-gtksourceview
 DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
 DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
