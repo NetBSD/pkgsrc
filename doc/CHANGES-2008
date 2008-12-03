@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3266 2008/12/03 11:12:17 is Exp $
+$NetBSD: CHANGES-2008,v 1.3267 2008/12/03 13:00:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5433,3 +5433,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/py-gtksourceview version 2.4.0 [wiz 2008-12-03]
 	Updated meta-pkgs/gnome to 2.24.1.95 [wiz 2008-12-03]
 	Updated devel/libslang2 to 2.1.3nb1 [is 2008-12-03]
+	Updated net/libtorrent to 0.12.2 [tron 2008-12-03]
+	Updated net/rtorrent to 0.8.2 [tron 2008-12-03]
