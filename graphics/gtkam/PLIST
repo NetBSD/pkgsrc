@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/11/07 20:11:30 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/12/03 08:19:19 wiz Exp $
 bin/gtkam
 man/man1/gtkam.1
 share/applications/gtkam.desktop
@@ -40,10 +40,11 @@ share/images/gtkam/gtkam-lock.png
 share/images/gtkam/gtkam-new.png
 share/omf/gtkam/gtkam-C.omf
 share/omf/gtkam/gtkam-ru.omf
+share/pixmaps/gtkam-camera.png
 share/pixmaps/gtkam.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gtkam
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @dirrm share/images/gtkam
 @comment in xdg-dirs: @dirrm share/images
 @dirrm share/gtkam/pixmaps
