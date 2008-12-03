@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/12/01 02:02:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.16 2008/12/03 07:38:10 hasso Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -12,6 +12,7 @@ HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 
 BUILD_DEFS+=		VARBASE
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.4
