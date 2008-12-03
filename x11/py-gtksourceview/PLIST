@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/03 09:43:22 wiz Exp $
+lib/pkgconfig/pygtksourceview-2.0.pc
+${PYSITELIB}/gtksourceview2.la
+share/gtk-doc/html/pygtksourceview2/class-gtksourcebuffer2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcelanguage2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcelanguagemanager2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcemark2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourceprintcompositor2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcestyle2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcestylescheme2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourcestyleschememanager2.html
+share/gtk-doc/html/pygtksourceview2/class-gtksourceview2.html
+share/gtk-doc/html/pygtksourceview2/index.html
+share/gtk-doc/html/pygtksourceview2/index.sgml
+share/gtk-doc/html/pygtksourceview2/pygtksourceview2.devhelp
+share/gtk-doc/html/pygtksourceview2/style.css
+share/pygtk/2.0/defs/gtksourceview2.defs
+@comment in py-gtk2: @dirrm share/pygtk/2.0/defs
+@dirrm share/gtk-doc/html/pygtksourceview2
