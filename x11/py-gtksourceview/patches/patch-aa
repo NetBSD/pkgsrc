@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/03 09:43:22 wiz Exp $
+
+--- configure.orig	2008-12-03 09:32:34.000000000 +0000
++++ configure
+@@ -20813,7 +20813,7 @@ fi
+   fi
+ fi
+ 
+-if test x$enable_docs == xyes; then
++if test x$enable_docs = xyes; then
+    if ! $PKG_CONFIG "pygobject-2.0 >= 2.11.3"; then
+        { echo "$as_me:$LINENO: WARNING: pygobject-2.0 < 2.11.3; disabling generation of docs" >&5
+ echo "$as_me: WARNING: pygobject-2.0 < 2.11.3; disabling generation of docs" >&2;}
