@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2006/05/27 14:10:28 jmmv Exp $
+$NetBSD: MESSAGE,v 1.6 2008/12/03 23:23:20 minskim Exp $
 
 Because FAM uses RPC, you have to add the following line to the system's
 portmapper file (/etc/rpc):
@@ -15,7 +15,7 @@ way, add the following line to /etc/inetd.conf:
 
         sgi_fam/1-2 stream rpc/tcp wait root ${PREFIX}/sbin/famd famd
 
-and reload inetd(8)'s daemon.  However, if you prefer the later way, use
+and reload inetd(8)'s daemon.  However, if you prefer the latter way, use
 the provided famd rc.d(8) script.
 
 ===========================================================================
