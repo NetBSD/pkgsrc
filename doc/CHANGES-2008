@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3256 2008/12/03 06:51:06 martti Exp $
+$NetBSD: CHANGES-2008,v 1.3257 2008/12/03 08:19:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5422,3 +5422,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/celt version 0.5.0 [bjs 2008-12-03]
 	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.08 [seb 2008-12-03]
 	Updated devel/p5-Term-Size to 0.207 [martti 2008-12-03]
+	Updated graphics/gtkam to 0.1.16nb1 [wiz 2008-12-03]
