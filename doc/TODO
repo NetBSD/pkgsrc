@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7715 2008/12/03 06:29:17 wiz Exp $
+$NetBSD: TODO,v 1.7716 2008/12/03 06:51:06 martti Exp $
 
 Suggested new packages
 ======================
@@ -925,7 +925,6 @@ Suggested package updates
 	o p5-Perl-Tidy-20071205
 	o p5-Regexp-Common-2.122
 	o p5-Sendmail-AccessDB-0.09
-	o p5-Term-Size-0.203
 	o p5-Test-Simple-0.86
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-Feed-0.40
