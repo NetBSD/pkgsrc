@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2008/12/03 09:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.102 2008/12/03 09:27:46 wiz Exp $
 
 DISTNAME=	gnome-2.24.1.94
 CATEGORIES=	meta-pkgs x11 gnome
@@ -49,7 +49,7 @@ DEPENDS+=	gnome-mag>=0.15.4:../../x11/gnome-mag
 DEPENDS+=	gnome-media>=2.24.0.1:../../multimedia/gnome-media
 DEPENDS+=	gnome-menus>=2.24.2:../../sysutils/gnome-menus
 DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
-DEPENDS+=	gnome-nettool>=2.22.1:../../*/gnome-nettool
+DEPENDS+=	gnome-nettool>=2.22.1:../../net/gnome-nettool
 DEPENDS+=	gnome-panel>=2.24.2:../../x11/gnome-panel
 DEPENDS+=	gnome-power-manager>=2.24.2:../../sysutils/gnome-power-manager
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop>=2.24.0:../../x11/py-gnome2-desktop
@@ -74,7 +74,7 @@ DEPENDS+=	gtkhtml314>=3.24.2:../../www/gtkhtml314
 DEPENDS+=	gtksourceview2>=2.4.1:../../x11/gtksourceview2
 DEPENDS+=	gucharmap>=2.24.2:../../fonts/gucharmap
 DEPENDS+=	gvfs>=1.0.3:../../sysutils/gvfs
-DEPENDS+=	hamster-applet>=2.24.2:../../*/hamster-applet
+DEPENDS+=	hamster-applet>=2.24.2:../../time/hamster-applet
 DEPENDS+=	libgail-gnome>=1.20.1:../../devel/libgail-gnome
 DEPENDS+=	libgnomekbd>=2.24.0:../../x11/libgnomekbd
 DEPENDS+=	libgnomeprint>=2.18.5:../../print/libgnomeprint
@@ -86,7 +86,7 @@ DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
 DEPENDS+=	libsoup24>=2.24.2.1:../../net/libsoup24
 DEPENDS+=	libwnck>=2.24.2:../../devel/libwnck
 DEPENDS+=	metacity>=2.24.0:../../wm/metacity
-DEPENDS+=	mousetweaks>=2.24.2:../../*/mousetweaks
+DEPENDS+=	mousetweaks>=2.24.2:../../misc/mousetweaks
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	orca>=2.24.2:../../misc/orca
