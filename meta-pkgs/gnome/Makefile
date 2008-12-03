@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2008/12/02 23:09:07 wiz Exp $
+# $NetBSD: Makefile,v 1.101 2008/12/03 09:27:19 wiz Exp $
 
-DISTNAME=	gnome-2.24.1.93
+DISTNAME=	gnome-2.24.1.94
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -86,8 +86,7 @@ DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
 DEPENDS+=	libsoup24>=2.24.2.1:../../net/libsoup24
 DEPENDS+=	libwnck>=2.24.2:../../devel/libwnck
 DEPENDS+=	metacity>=2.24.0:../../wm/metacity
-# unpackaged
-#DEPENDS+=	mousetweaks>=2.24.2:../../*/mousetweaks
+DEPENDS+=	mousetweaks>=2.24.2:../../*/mousetweaks
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	orca>=2.24.2:../../misc/orca
