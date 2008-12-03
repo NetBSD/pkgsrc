@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3252 2008/12/02 23:09:19 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3253 2008/12/03 00:30:41 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5418,3 +5418,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added time/hamster-applet version 2.24.2 [wiz 2008-12-02]
 	Updated devel/mercurial to 1.1 [wiz 2008-12-02]
 	Updated meta-pkgs/gnome to 2.24.1.93 [wiz 2008-12-02]
+	Updated cad/pcb to 20081128 [dmcmahill 2008-12-02]
