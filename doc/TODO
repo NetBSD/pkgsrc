@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7716 2008/12/03 06:51:06 martti Exp $
+$NetBSD: TODO,v 1.7717 2008/12/03 07:24:34 spz Exp $
 
 Suggested new packages
 ======================
@@ -697,7 +697,6 @@ Suggested package updates
 	o intercal-0.24
 	o ircservices-5.1.13
 	o irrd-2.3.4 [pkg/36813|38002]
-	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-slovak-0.3.2
