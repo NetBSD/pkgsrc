@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3253 2008/12/03 00:30:41 dmcmahill Exp $
+$NetBSD: CHANGES-2008,v 1.3254 2008/12/03 00:45:07 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5419,3 +5419,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mercurial to 1.1 [wiz 2008-12-02]
 	Updated meta-pkgs/gnome to 2.24.1.93 [wiz 2008-12-02]
 	Updated cad/pcb to 20081128 [dmcmahill 2008-12-02]
+	Added audio/celt version 0.5.0 [bjs 2008-12-03]
