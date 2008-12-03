@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/12 22:51:13 he Exp $
+$NetBSD: distinfo,v 1.2 2008/12/03 05:44:50 seb Exp $
 
-SHA1 (DBIx-Class-RDBOHelpers-0.07.tar.gz) = 1fd9d876990b01d2aff0696b23d892733ceb3eed
-RMD160 (DBIx-Class-RDBOHelpers-0.07.tar.gz) = 6fa7e45752d1d2cdbfcd4a7ea53cff1fc500e9f0
-Size (DBIx-Class-RDBOHelpers-0.07.tar.gz) = 7139 bytes
+SHA1 (DBIx-Class-RDBOHelpers-0.08.tar.gz) = fef2008ff0b4a9290bcf2f0a53dc02cf36854f73
+RMD160 (DBIx-Class-RDBOHelpers-0.08.tar.gz) = 98bf6106abf8e41a84650ddab4f2fc7596510f12
+Size (DBIx-Class-RDBOHelpers-0.08.tar.gz) = 7533 bytes
