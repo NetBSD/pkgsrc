@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3263 2008/12/03 09:44:07 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3264 2008/12/03 09:45:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5430,3 +5430,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gst-plugins0.10-ugly to 0.10.10 [wiz 2008-12-03]
 	Added misc/mousetweaks version 2.24.2 [wiz 2008-12-03]
 	Added x11/py-gtksourceview version 2.4.0 [wiz 2008-12-03]
+	Updated meta-pkgs/gnome to 2.24.1.95 [wiz 2008-12-03]
