@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3271 2008/12/04 07:19:57 martti Exp $
+$NetBSD: CHANGES-2008,v 1.3272 2008/12/04 07:42:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5439,3 +5439,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/asciidoc to 8.2.6nb1 [minskim 2008-12-04]
 	Updated pkgtools/x11-links to 0.42 [cube 2008-12-04]
 	Updated mail/squirrelmail to 1.4.17 [martti 2008-12-04]
+	Updated emulators/libspectrum to 0.5.0 [adam 2008-12-04]
+	Updated emulators/fuse to 0.10.0 [adam 2008-12-04]
+	Updated emulators/fuse-utils to 0.10.0 [adam 2008-12-04]
