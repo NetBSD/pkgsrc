@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/24 18:32:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/04 07:40:34 adam Exp $
 bin/createhdf
 bin/listbasic
 bin/profile2map
@@ -23,5 +23,6 @@ man/man1/rzxtool.1
 man/man1/scl2trd.1
 man/man1/snap2tzx.1
 man/man1/snapconv.1
+man/man1/tape2wav.1
 man/man1/tapeconv.1
 man/man1/tzxlist.1
