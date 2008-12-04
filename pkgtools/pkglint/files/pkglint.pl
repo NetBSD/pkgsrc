@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.792 2008/12/02 09:00:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.793 2008/12/04 18:07:52 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7420,6 +7420,9 @@ sub checkfile_PLIST($) {
 "created the directory.");
 				}
 
+				if ($pkgpath ne "graphics/hicolor-icon-theme" && $arg =~ m"^share/icons/hicolor(?:$|/)") {
+					$line->log_warning("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
+				}
 			} elsif ($cmd eq "imake-man") {
 				my (@args) = split(/\s+/, $arg);
 				if (@args != 3) {
@@ -7566,6 +7569,9 @@ sub checkfile_PLIST($) {
 
 			} elsif (defined($effective_pkgbase) && $text =~ m"^share/\Q${effective_pkgbase}\E/") {
 				# Fine.
+
+			} elsif ($pkgpath ne "graphics/hicolor-icon-theme" && $text =~ m"^share/icons/hicolor/icon-theme\.cache") {
+				$line->log_error("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
 
 			} elsif ($text =~ m"^share/info/") {
 				$line->log_warning("Info pages should be installed into info/, not share/info/.");
