@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/11/29 08:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/04 17:32:36 wiz Exp $
 
-DISTNAME=	gnome-devtools-2.24.1.90
+DISTNAME=	gnome-devtools-2.24.1.91
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -15,9 +15,7 @@ META_PACKAGE=	yes
 
 # unpackaged
 #DEPENDS+=	accerciser>=1.4.0:../../devel/accerciser
-# too old
-#DEPENDS+=	anjuta>=2.24.2:../../devel/anjuta
-DEPENDS+=	anjuta>=2.24.1:../../devel/anjuta
+DEPENDS+=	anjuta>=2.24.2:../../devel/anjuta
 DEPENDS+=	devhelp>=0.21:../../devel/devhelp
 DEPENDS+=	gdl>=2.24.0:../../devel/gdl
 DEPENDS+=	glade3>=3.4.5:../../devel/glade3
