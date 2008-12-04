@@ -1,4 +1,4 @@
-# $NetBSD: subr_gcc,v 1.3 2008/12/01 17:51:40 abs Exp $
+# $NetBSD: subr_gcc,v 1.4 2008/12/04 11:45:35 abs Exp $
 
 # Return gcc version string
 gcc_ver()
@@ -24,12 +24,20 @@ gcc_fixup_arch_flags()
     #   -march=k6-3 -> -march=k6 -> -march=pentium -> -march=i486
     #
     # The format of table is
-    #   gcc_version_in_which_option_was_introduced	new_option  old_option
+    #   gcc_version_in_which_option_was_introduced : new_option : old_option
 
     $AWK -F: -v "flags=$gcc_arch_flags" -v "gcc_ver=$(gcc_ver $gcc)" '
-	{ if (gcc_ver < $1){map[$2] = ""$3} }
-	END { FS=" "; split(flags,ar); for (af in ar) { flag=ar[af];
-	 while (flag in map) {flag = map[flag]} print flag }}
+	{ if (gcc_ver < $1) { map[$2] = ""$3 } }
+	END {
+	    FS=" "; split(flags, flaglist);
+	    for (af in flaglist) {
+		flag = flaglist[af];
+	        while (flag in map) {
+		    flag = map[flag]
+		}
+		print flag
+	    }
+	}
 	' <<EOD
 2.90:-march=i386:-mno-486
 2.90:-march=i486:-m486
