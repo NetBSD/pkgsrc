@@ -1,4 +1,4 @@
-/* $NetBSD: envsys.c,v 1.3 2008/11/27 14:17:11 jmcneill Exp $ */
+/* $NetBSD: envsys.c,v 1.4 2008/12/04 03:35:59 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -202,6 +202,13 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 			hal_device_property_set_int (d, "battery.charge_level.last_full", intval);
 		else if (strcmp (descr, "charge") == 0) {
 			int64_t maxval;
+			const char *type;
+
+			if (prop_dictionary_get_cstring_nocopy (prop, "type", &type))
+				if (strcmp (type, "Ampere hour") == 0) {
+					/* HAL 0.5.12 spec discourages this, but what can we do about it? */
+					hal_device_property_set_string (d, "battery.charge_level.unit", "mAh");
+				}
 
 			hal_device_property_set_int (d, "battery.charge_level.current", intval);
 
@@ -223,6 +230,7 @@ envsys_battery_handler(HalDevice *d, prop_array_t properties)
 	case NORMAL:
 		hal_device_property_set_bool (d, "battery.rechargeable.is_charging", FALSE);
 		hal_device_property_set_bool (d, "battery.rechargeable.is_discharging", FALSE);
+		hal_device_property_set_int (d, "battery.charge_level.rate", 0);
 		break;
 	case CHARGING:
 		hal_device_property_set_bool (d, "battery.rechargeable.is_charging", TRUE);
