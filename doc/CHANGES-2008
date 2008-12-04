@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3267 2008/12/03 13:00:08 tron Exp $
+$NetBSD: CHANGES-2008,v 1.3268 2008/12/04 03:36:55 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5435,3 +5435,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libslang2 to 2.1.3nb1 [is 2008-12-03]
 	Updated net/libtorrent to 0.12.2 [tron 2008-12-03]
 	Updated net/rtorrent to 0.8.2 [tron 2008-12-03]
+	Updated sysutils/hal to 0.5.11nb12 [jmcneill 2008-12-03]
