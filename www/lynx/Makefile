@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.103 2008/01/18 05:09:51 tnn Exp $
+# $NetBSD: Makefile,v 1.104 2008/12/04 13:13:48 obache Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
 # version 2.8.6dev.15 or later.  There is a known security issue
-# with this feature in earlier versions.
+# with this feature in earlier versions (CVE-2005-2929, CVE-2008-4690).
 #
 
 DISTNAME=	lynx2.8.6rel.5
