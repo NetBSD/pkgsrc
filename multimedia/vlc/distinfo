@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19.2.3 2008/11/08 23:06:38 tron Exp $
+$NetBSD: distinfo,v 1.19.2.4 2008/12/04 17:37:19 tron Exp $
 
-SHA1 (vlc-0.9.6.tar.bz2) = b56b0ed4152ec841a2145caab5f6710ba9ed0d88
-RMD160 (vlc-0.9.6.tar.bz2) = 7cc3d8b1506469c759780d23ffcdc826a88e4288
-Size (vlc-0.9.6.tar.bz2) = 16981922 bytes
+SHA1 (vlc-0.9.8a.tar.bz2) = 1d68f4e4ef77ffc9cb63de70a610a3969bffd873
+RMD160 (vlc-0.9.8a.tar.bz2) = a9b57d9c6d99c5e3384914003afec974d1996f59
+Size (vlc-0.9.8a.tar.bz2) = 17032727 bytes
 SHA1 (patch-configure) = 0b69157981409067b42385ee5c81fc422f3842a2
 SHA1 (patch-v4l2) = 54504b7e3bc41522db5c90983319c0c1ce1f3c8f

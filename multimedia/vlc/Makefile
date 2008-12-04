@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61.2.3 2008/11/08 23:06:38 tron Exp $
+# $NetBSD: Makefile,v 1.61.2.4 2008/12/04 17:37:19 tron Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		0.9.6
+VLC_VERSION=		0.9.8a
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--enable-cddax \
 			--enable-dvdread \
 			--enable-flac \
 			--enable-live555 \
+			--enable-theora
 
 # Build optimalized modules
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
@@ -132,6 +133,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../audio/libcddb/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../net/liblive/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"
@@ -150,6 +152,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
