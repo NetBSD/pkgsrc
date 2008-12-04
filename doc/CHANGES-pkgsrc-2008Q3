@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.52 2008/12/04 10:25:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.53 2008/12/04 17:37:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -145,3 +145,5 @@ Pullup ticket #2604 - requested by is
 libslang2: build fix for Solaris
 Pullup ticket #2605 - requested by martti
 squirremal: security update
+Pullup ticket #2603 - requested by ahoka
+vlc: security update
