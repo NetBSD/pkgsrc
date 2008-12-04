@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.3 2008/12/01 17:51:40 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.4 2008/12/04 11:45:35 abs Exp $
 
 AWK=awk
 SED=sed
@@ -95,14 +95,16 @@ determine_arch()
     i386 | x86_64)
 	case "$cpu" in
 	    'AMD Athlon 64 or Athlon 64 FX or Opteron '*) ARCH='-march=opteron' ;;
-	    'AMD Athlon 64 or Sempron (686-class),'*) ARCH='-march=athlon64' ;;
+	    'AMD Athlon 64 or Sempron (686-class)'*) ARCH='-march=athlon64' ;;
 	    'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
-	    'Intel (686-class),'*)		ARCH='-march=pentiumpro' ;;
-	    'Intel Celeron (686-class),'*)	ARCH='-march=pentiumpro' ;;
-	    'Intel Core 2 (Merom) (686-class),'*) ARCH='-march=core2' ;;
-	    'Intel Pentium 4 (686-class),'*)	ARCH='-march=pentium4' ;;
-	    'Intel Pentium II (686-class),'*)	ARCH='-march=pentium3' ;;
-	    'Intel Pentium III (686-class),'*)	ARCH='-march=pentium2' ;;
+	    'Intel (686-class)'*)		ARCH='-march=pentiumpro' ;;
+	    'Intel Celeron (686-class)'*)	ARCH='-march=pentiumpro' ;;
+	    'Intel Core 2 (Merom) (686-class)'*) ARCH='-march=core2' ;;
+	    'Intel Pentium 4 (686-class)'*)	ARCH='-march=pentium4' ;;
+	    'Intel Pentium II (686-class)'*)	ARCH='-march=pentium2' ;;
+	    'Intel Pentium III (686-class)'*)	ARCH='-march=pentium3' ;;
+	    'Intel Pentium III Xeon (686-class)'*) ARCH='-march=pentium3' ;;
+	    'Intel Pentium M (Dothan) (686-class)'*) ARCH='-march=pentium-m' ;;
 	    # Fallback classes
 	    *'(586-class)'*)			ARCH='-march=pentium' ;;
 	    *'(486-class)'*)			ARCH='-march=i486' ;;
@@ -114,10 +116,6 @@ determine_arch()
 	*\(68030*|*\ MC68030\ *) ARCH='-m68030'	;; # Mac LC III
 	*\(68040*|*\ MC68040\ *) ARCH='-m68040'	;; # Untested
 	*\(68060*|*\ MC68060\ *) ARCH='-m68060'	;; # Upgraded amiga 3000
-    esac
-    case "$(egrep '^fpu0 ' /var/run/dmesg.boot)" in
-	*\(emulator\)*)		FEATURES="-msoft-float" ;;
-	*\(no\ math\ support\)*) FEATURES="-msoft-float" ;;
     esac
     ;;
 
