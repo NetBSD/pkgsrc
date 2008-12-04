@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3268 2008/12/04 03:36:55 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3269 2008/12/04 04:06:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5436,3 +5436,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/libtorrent to 0.12.2 [tron 2008-12-03]
 	Updated net/rtorrent to 0.8.2 [tron 2008-12-03]
 	Updated sysutils/hal to 0.5.11nb12 [jmcneill 2008-12-03]
+	Updated textproc/asciidoc to 8.2.6nb1 [minskim 2008-12-04]
