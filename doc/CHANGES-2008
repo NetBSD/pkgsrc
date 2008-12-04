@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3273 2008/12/04 11:46:16 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3274 2008/12/04 12:54:32 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5443,3 +5443,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/fuse to 0.10.0 [adam 2008-12-04]
 	Updated emulators/fuse-utils to 0.10.0 [adam 2008-12-04]
 	Updated devel/cpuflags to 1.20 [abs 2008-12-04]
+	Updated chat/irssi to 0.8.12nb2 [tonnerre 2008-12-04]
