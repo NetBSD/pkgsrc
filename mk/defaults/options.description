@@ -19,6 +19,7 @@ aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
 atheme-large-net	Enable support for large networks (i.e. > 2000 users)
+avahi-howl		Enable howl compatibility in avahi.
 bacula-static		Enable building of statically linked versions of the Bacula daemons
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
@@ -301,8 +302,9 @@ pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 png			Enable PNG support.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 proftpd-readme		Enable mod_readme.
-psycopg1		Enable psycopg 1.1.x support
-psycopg2		Enable psycopg 2.x support
+psycopg1		Enable psycopg 1.1.x support.
+psycopg2		Enable psycopg 2.x support.
+python			Enable Python support.
 qdbm			Enable qdbm support.
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
 qmail-bigdns		Patch to handle oversized responses to MX queries.
