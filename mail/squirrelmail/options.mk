@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/05/27 12:40:37 martti Exp $
+# $NetBSD: options.mk,v 1.8.8.1 2008/12/04 10:24:38 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squirrelmail
 PKG_SUPPORTED_OPTIONS=	squirrelmail-japanese squirrelmail-lite
@@ -6,10 +6,10 @@ PKG_SUPPORTED_OPTIONS=	squirrelmail-japanese squirrelmail-lite
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Msquirrelmail-japanese)
-PATCHFILES+=		squirrelmail-1.4.15-ja-20080527-patch.gz
-SITES.squirrelmail-1.4.15-ja-20080527-patch.gz= \
+PATCHFILES+=		squirrelmail-1.4.16-ja-20081013-patch.gz
+SITES.squirrelmail-1.4.16-ja-20081013-patch.gz= \
 			http://www.yamaai-tech.com/~masato/Download/
-PATCH_DIST_STRIP.squirrelmail-1.4.15-ja-20080527-patch.gz=	-p1
+PATCH_DIST_STRIP.squirrelmail-1.4.16-ja-20081013-patch.gz=	-p1
 
 .endif
 

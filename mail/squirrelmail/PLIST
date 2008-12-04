@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2008/09/28 17:32:26 martti Exp $
+@comment $NetBSD: PLIST,v 1.27.2.1 2008/12/04 10:24:38 tron Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -60,6 +60,7 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.11.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.12.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.13.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.15.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.16.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
