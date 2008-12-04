@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3270 2008/12/04 04:18:25 cube Exp $
+$NetBSD: CHANGES-2008,v 1.3271 2008/12/04 07:19:57 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5438,3 +5438,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb12 [jmcneill 2008-12-03]
 	Updated textproc/asciidoc to 8.2.6nb1 [minskim 2008-12-04]
 	Updated pkgtools/x11-links to 0.42 [cube 2008-12-04]
+	Updated mail/squirrelmail to 1.4.17 [martti 2008-12-04]
