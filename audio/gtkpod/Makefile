@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2008/02/04 20:10:34 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/04 16:55:42 wiz Exp $
 #
 
 DISTNAME=	gtkpod-0.99.12
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 
@@ -15,10 +16,10 @@ COMMENT=	GUI for iPod using GTK2
 
 GNU_CONFIGURE=		yes
 
+USE_DIRS=		xdg-1.4
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		intltool lex msgfmt perl:run pkg-config
-USE_TOOLS+=		gmake
+USE_TOOLS+=		intltool gmake lex msgfmt perl:run pkg-config
 
 REPLACE_PERL+=		scripts/mab2vcard
 
@@ -46,6 +47,7 @@ USE_DIRS+=		xdg-1.4
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvasmm/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
