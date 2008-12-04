@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.10 2008/10/29 21:14:01 cube Exp $
+# $NetBSD: xorg,v 1.11 2008/12/04 04:16:41 cube Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -423,14 +423,6 @@ lib/libXss.a
 lib/libXss.so
 lib/libXss.so.1
 lib/libXss.so.1.0
-lib/libXtst.6.1.0.dylib
-lib/libXtst.6.1.dylib
-lib/libXtst.6.dylib
-lib/libXtst.a
-lib/libXtst.dylib
-lib/libXtst.so
-lib/libXtst.so.6
-lib/libXtst.so.6.1
 lib/libXvMC.1.0.0.dylib
 lib/libXvMC.1.dylib
 lib/libXvMC.dylib
