@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/29 08:57:03 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/04 16:57:10 wiz Exp $
 
-DISTNAME=	gnome-admin-2.24.1.90
+DISTNAME=	gnome-mobile-2.24.1.90
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
