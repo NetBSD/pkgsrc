@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/26 14:02:35 smb Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/12/04 16:55:42 wiz Exp $
 bin/gtkpod
 share/applications/gtkpod.desktop
 share/gtkpod/data/cdshine.png
@@ -45,7 +45,6 @@ share/gtkpod/scripts/sync-webcalendar.sh
 share/icons/hicolor/32x32/apps/gtkpod.png
 share/icons/hicolor/48x48/apps/gtkpod.png
 share/icons/hicolor/64x64/apps/gtkpod.png
-share/icons/hicolor/icon-theme.cache
 share/locale/de/LC_MESSAGES/gtkpod.mo
 share/locale/es/LC_MESSAGES/gtkpod.mo
 share/locale/fr/LC_MESSAGES/gtkpod.mo
@@ -55,9 +54,11 @@ share/locale/ja/LC_MESSAGES/gtkpod.mo
 share/locale/ro/LC_MESSAGES/gtkpod.mo
 share/locale/ru/LC_MESSAGES/gtkpod.mo
 share/locale/sv/LC_MESSAGES/gtkpod.mo
-@dirrm share/icons/hicolor/64x64/apps
-@dirrm share/icons/hicolor/48x48/apps
-@dirrm share/icons/hicolor/32x32/apps
-@dirrm share/icons/hicolor
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gtkpod/scripts
 @dirrm share/gtkpod/data
+@dirrm share/gtkpod
+@comment in xdg-dirs: @dirrm share/applications
