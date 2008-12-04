@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.104 2008/12/04 16:10:15 wiz Exp $
+# $NetBSD: Makefile,v 1.105 2008/12/04 16:47:59 wiz Exp $
 
-DISTNAME=	gnome-2.24.1.95
+DISTNAME=	gnome-2.24.1.96
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -96,8 +96,7 @@ DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
 DEPENDS+=	sound-juicer>=2.24.0:../../audio/sound-juicer
 DEPENDS+=	sound-theme-freedesktop>=0.2:../../audio/sound-theme-freedesktop
 DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
-# unpackaged
-#DEPENDS+=	tomboy>=0.12.1:../../*/tomboy
+DEPENDS+=	tomboy>=0.12.1:../../editors/tomboy
 DEPENDS+=	totem>=2.24.3:../../multimedia/totem
 DEPENDS+=	totem-pl-parser>=2.24.2:../../multimedia/totem-pl-parser
 # packaged in wip, doesn't work
