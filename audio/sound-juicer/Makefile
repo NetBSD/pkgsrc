@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/12/02 20:32:58 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/12/04 00:27:08 jmcneill Exp $
 #
 
 DISTNAME=		sound-juicer-2.24.0
@@ -24,6 +24,9 @@ CONFIGURE_ENV+=		GST_INSPECT="${LOCALBASE}/bin/gst-inspect-0.10"
 
 GCONF_SCHEMAS+=	sound-juicer.schemas
 
+DEPENDS+=	gst-plugins0.10-flac>=0.10.11:../../audio/gst-plugins0.10-flac
+DEPENDS+=	gst-plugins0.10-gio>=0.10.21:../../sysutils/gst-plugins0.10-gio
+
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
@@ -39,6 +42,7 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.5
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
+.include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
