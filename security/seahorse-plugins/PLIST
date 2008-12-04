@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/27 16:54:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/04 17:34:14 wiz Exp $
 bin/seahorse-agent
 bin/seahorse-preferences
 bin/seahorse-tool
@@ -183,7 +183,6 @@ share/gnome/help/seahorse-plugins/vi/figures/signature.png
 share/gnome/help/seahorse-plugins/vi/figures/text-editor.png
 share/gnome/help/seahorse-plugins/vi/seahorse-plugins.xml
 share/icons/hicolor/48x48/apps/seahorse-applet.png
-share/icons/hicolor/icon-theme.cache
 share/icons/hicolor/scalable/apps/seahorse-applet.svg
 share/locale/ar/LC_MESSAGES/seahorse-plugins.mo
 share/locale/az/LC_MESSAGES/seahorse-plugins.mo
