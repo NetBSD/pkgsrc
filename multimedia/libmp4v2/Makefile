@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/27 21:24:32 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/04 15:07:03 wiz Exp $
 
 DISTNAME=		mpeg4ip-1.6.1
 PKGNAME=		libmp4v2-1.6.1
@@ -20,6 +20,7 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	USENASM=no
 # the "bootstrap" script checks too much, and isn't useful anyway
 #CONFIGURE_SCRIPT=	bootstrap
 
