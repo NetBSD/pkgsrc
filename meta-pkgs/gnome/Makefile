@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2008/12/03 09:45:26 wiz Exp $
+# $NetBSD: Makefile,v 1.104 2008/12/04 16:10:15 wiz Exp $
 
 DISTNAME=	gnome-2.24.1.95
 CATEGORIES=	meta-pkgs x11 gnome
@@ -100,7 +100,7 @@ DEPENDS+=	swfdec-gnome>=2.24.0:../../multimedia/swfdec-gnome
 #DEPENDS+=	tomboy>=0.12.1:../../*/tomboy
 DEPENDS+=	totem>=2.24.3:../../multimedia/totem
 DEPENDS+=	totem-pl-parser>=2.24.2:../../multimedia/totem-pl-parser
-# unpackaged
+# packaged in wip, doesn't work
 #DEPENDS+=	vinagre>=2.24.1:../../*/vinagre
 DEPENDS+=	vino>=2.24.1:../../net/vino
 DEPENDS+=	vte>=0.17.4:../../x11/vte
