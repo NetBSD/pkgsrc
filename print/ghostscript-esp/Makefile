@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/10 12:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/12/05 08:49:42 obache Exp $
 
 DISTNAME=	espgs-${GS_VERS}-source
 PKGNAME=	ghostscript-esp-${GS_VERS}
@@ -9,7 +9,6 @@ CATEGORIES=	print
 ESP_SITES=	http://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp2.easysw.com/pub/ghostscript/ \
-		ftp://ftp3.easysw.com/pub/ghostscript/ \
 		http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/ghostscript/ \
 		ftp://ftp.rz.tu-bs.de/pub/mirror/ftp.easysw.com/ftp/pub/ghostscript/ \
