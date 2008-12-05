@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2008/12/04 14:03:11 ahoka Exp $
+# $NetBSD: Makefile,v 1.68 2008/12/05 15:18:40 is Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -113,6 +113,8 @@ SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
 SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
+
+REPLACE_SH+=		vlc-config.in.in
 
 # VLC embeds the build environment info to help debuging
 #
