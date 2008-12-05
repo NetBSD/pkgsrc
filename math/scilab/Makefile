@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/11/15 01:19:08 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.77 2008/12/05 19:02:09 ahoka Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.scilab.org/download/4.1/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.scilab.org/
 COMMENT=	High-level scientific math programming environment with graphics
+
+MAKE_JOBS_SAFE=	no
 
 SCIBASE=	scilab-4.1
 # don't forget to update SCI and SCIVERSION in the buildlink3.mk file when
