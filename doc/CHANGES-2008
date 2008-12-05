@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3287 2008/12/05 12:54:00 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.3288 2008/12/05 13:07:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5455,3 +5455,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/openvpn to 2.1rc13nb2 [hasso 2008-12-05]
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.13 [seb 2008-12-05]
 	Added security/sslproxy 1.0.5 [sborrill 2008-12-05]
+	Updated lang/php5 to 5.2.7 [adrianp 2008-12-05]
