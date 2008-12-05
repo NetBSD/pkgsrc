@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/12/05 16:31:52 tron Exp $
+
+--- src/utils/directory.h.orig	2008-12-05 13:22:18 +0100
++++ src/utils/directory.h	2008-12-05 13:22:24 +0100
+@@ -49,7 +49,6 @@
+ 
+   // The name and types should match POSIX.
+   uint32_t            d_fileno;
+-  uint32_t            d_reclen;
+-  uint8_t             d_type;
++  uint32_t            d_type;
+ 
+   std::string         d_name;
