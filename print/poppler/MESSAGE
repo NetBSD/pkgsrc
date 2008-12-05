@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/12/05 01:57:07 smb Exp $
+
+To change the default paper size to US Letter, make sure that
+
+	LC_MESSAGES=en_US.UTF-8
+
+is in your environment.
+===========================================================================
