@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/05 15:32:12 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/05 14:04:52 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -55,28 +55,6 @@ lib/inspircd/cmd_who.so
 lib/inspircd/cmd_whois.so
 lib/inspircd/cmd_whowas.so
 lib/inspircd/cmd_zline.so
-lib/inspircd/libIRCDasyncdns.so
-lib/inspircd/libIRCDbase.so
-lib/inspircd/libIRCDchannels.so
-lib/inspircd/libIRCDcommand_parse.so
-lib/inspircd/libIRCDcommands.so
-lib/inspircd/libIRCDconfigreader.so
-lib/inspircd/libIRCDcull_list.so
-lib/inspircd/libIRCDdynamic.so
-lib/inspircd/libIRCDhash.so
-lib/inspircd/libIRCDhelper.so
-lib/inspircd/libIRCDinspsocket.so
-lib/inspircd/libIRCDmode.so
-lib/inspircd/libIRCDmodules.so
-lib/inspircd/libIRCDsnomasks.so
-lib/inspircd/libIRCDsocket.so
-lib/inspircd/libIRCDsocketengine.so
-lib/inspircd/libIRCDstring.so
-lib/inspircd/libIRCDtimer.so
-lib/inspircd/libIRCDuserprocess.so
-lib/inspircd/libIRCDusers.so
-lib/inspircd/libIRCDwildcard.so
-lib/inspircd/libIRCDxline.so
 share/examples/inspircd/aliases/anope.conf.example
 share/examples/inspircd/aliases/atheme.conf.example
 share/examples/inspircd/aliases/ircservices.conf.example
