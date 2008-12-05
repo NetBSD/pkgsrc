@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7720 2008/12/05 13:34:59 wiz Exp $
+$NetBSD: TODO,v 1.7721 2008/12/05 14:06:13 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -695,7 +695,6 @@ Suggested package updates
 	o ikiwiki-2.70
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o inputproto-1.5.0
-	o inspircd-1.1.22
 	o instiki-0.13
 	o intercal-0.24
 	o ircservices-5.1.13
