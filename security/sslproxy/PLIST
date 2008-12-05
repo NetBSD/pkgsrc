@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/05 12:52:39 sborrill Exp $
+bin/ssl_proxy
+share/doc/ssl_proxy/README
+@dirrm share/doc/ssl_proxy

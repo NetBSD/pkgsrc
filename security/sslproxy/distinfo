@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/05 12:52:39 sborrill Exp $
+
+SHA1 (sslproxy-1.0.5.tgz) = 539d9f8cffa4c65692523dd28688c5350c92b259
+RMD160 (sslproxy-1.0.5.tgz) = 300f7449bc1d8fbb20b0eb9b4aa22233a3f4179b
+Size (sslproxy-1.0.5.tgz) = 23756 bytes
