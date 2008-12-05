@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1 2008/12/05 16:31:52 tron Exp $
+
+--- src/utils/directory.cc.orig	2008-12-05 13:20:16 +0100
++++ src/utils/directory.cc	2008-12-05 13:27:27 +0100
+@@ -38,6 +38,7 @@
+ 
+ #include <algorithm>
+ #include <functional>
++#include <sys/stat.h>
+ #include <dirent.h>
+ #include <rak/path.h>
+ #include <torrent/exceptions.h>
+@@ -63,6 +64,8 @@
+   if (m_path.empty())
+     throw torrent::input_error("Directory::update() tried to open an empty path.");
+ 
++  std::string path=rak::path_expand(m_path);
++
+-  DIR* d = opendir(rak::path_expand(m_path).c_str());
++  DIR* d = opendir(path.c_str());
+ 
+   if (d == NULL)
+@@ -73,12 +76,18 @@
+   while ((entry = readdir(d)) != NULL) {
+     if ((flags & update_hide_dot) && entry->d_name[0] == '.')
+       continue;
++    
++    std::string full_path = path + '/';
++    full_path += entry->d_name;
++    
++    struct stat sb;
++    if (stat(full_path.c_str(), &sb))
++      continue;
+ 
+     iterator itr = base_type::insert(end(), value_type());
+ 
+-    itr->d_fileno = entry->d_fileno;
+-    itr->d_reclen = entry->d_reclen;
+-    itr->d_type   = entry->d_type;
++    itr->d_fileno = sb.st_ino;
++    itr->d_type   = sb.st_mode;
+ 
+ #ifdef DIRENT_NAMLEN_EXISTS_FOOBAR
+     itr->d_name   = std::string(entry->d_name, entry->d_name + entry->d_namlen);

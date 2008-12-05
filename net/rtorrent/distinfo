@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.18 2008/12/03 12:57:40 tron Exp $
+$NetBSD: distinfo,v 1.19 2008/12/05 16:31:52 tron Exp $
 
 SHA1 (rtorrent-0.8.2.tar.gz) = 891093c5d600c2e3853eadbbec369a12dfe6ec11
 RMD160 (rtorrent-0.8.2.tar.gz) = e86b0082d1788e4e7cd8fcf631f7f857d642c799
 Size (rtorrent-0.8.2.tar.gz) = 506015 bytes
 SHA1 (patch-ab) = 87873bb32166d00398ab0ef6421a6fe85a55c914
+SHA1 (patch-ac) = b62de9ce834aa0422ec173e694d07e88aa1e2f47
+SHA1 (patch-ad) = 902a95e7edcd4f1f6c4cebe04c28e5ddefc650cf
+SHA1 (patch-ae) = cd24c34d28d1c15f028a3ba7b786e40592c7a395
