@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3281 2008/12/05 00:42:54 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3282 2008/12/05 01:20:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5451,3 +5451,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/swfdec-mozilla to 0.8.2nb1 [wiz 2008-12-04]
 	Updated security/seahorse-plugins to 2.24.1nb1 [wiz 2008-12-04]
 	Updated devel/cpuflags to 1.21 [abs 2008-12-05]
+	Updated graphics/ruby-RMagick to 2.8.0 [obache 2008-12-05]
