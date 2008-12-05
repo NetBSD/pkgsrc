@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3283 2008/12/05 08:43:31 hasso Exp $
+$NetBSD: CHANGES-2008,v 1.3284 2008/12/05 08:45:03 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5453,3 +5453,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.21 [abs 2008-12-05]
 	Updated graphics/ruby-RMagick to 2.8.0 [obache 2008-12-05]
 	Updated net/openvpn to 2.1rc13nb2 [hasso 2008-12-05]
+	Added net/transmission version 1.40 [kefren 2008-12-05]
