@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2008/10/25 00:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2008/12/05 01:59:07 smb Exp $
 #
 
+PKGREVISION=	1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/evince/Makefile.common"
