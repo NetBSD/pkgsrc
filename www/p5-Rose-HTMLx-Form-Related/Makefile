@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/20 23:40:19 he Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/05 09:06:02 seb Exp $
 
-DISTNAME=	Rose-HTMLx-Form-Related-0.09
+DISTNAME=	Rose-HTMLx-Form-Related-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
@@ -14,6 +14,12 @@ DEPENDS+=	p5-Rose-HTML-Objects>=0:../../www/p5-Rose-HTML-Objects
 DEPENDS+=	p5-Rose-HTMLx-Form-Field-Autocomplete>=0:../../www/p5-Rose-HTMLx-Form-Field-Autocomplete
 DEPENDS+=	p5-Rose-HTMLx-Form-Field-Boolean>=0:../../www/p5-Rose-HTMLx-Form-Field-Boolean
 DEPENDS+=	p5-Rose-HTMLx-Form-Field-Serial>=0.002:../../www/p5-Rose-HTMLx-Form-Field-Serial
+
+# For test target
+BUILD_DEPENDS+=	p5-Rose-DB-Object-[0-9]*:../../databases/p5-Rose-DB-Object
+BUILD_DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers-[0-9]*:../../databases/p5-Rose-DBx-Object-MoreHelpers
+BUILD_DEPENDS+=	p5-DBIx-Class>=0.08010:../../databases/p5-DBIx-Class
+BUILD_DEPENDS+=	p5-DBIx-Class-RDBOHelpers-[0-9]*:../../databases/p5-DBIx-Class-RDBOHelpers
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Rose/HTMLx/Form/Related/.packlist
