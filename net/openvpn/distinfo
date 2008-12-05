@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.15 2008/10/09 10:57:23 sborrill Exp $
+$NetBSD: distinfo,v 1.16 2008/12/05 08:13:35 hasso Exp $
 
 SHA1 (openvpn-2.1_rc13.tar.gz) = 904d54249e62f02b6f2c7fc4a35f56babe014b7e
 RMD160 (openvpn-2.1_rc13.tar.gz) = d52261aa1992f46f890793944858f057fa239fdd
 Size (openvpn-2.1_rc13.tar.gz) = 825890 bytes
+SHA1 (patch-aa) = e27e5a6411c9fb6545a1ad630f165200546b7213
 SHA1 (patch-ab) = d26cdc9166a8813860f31cb5b11bc5b3643b8aa5
 SHA1 (patch-ac) = f59615702208cae2a094306bc5fa7fb96234e55a
 SHA1 (patch-ad) = 69f5fff5105131dc05ab38a1a717e1b363f88c1c
