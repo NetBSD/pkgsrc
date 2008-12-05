@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3282 2008/12/05 01:20:18 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3283 2008/12/05 08:43:31 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5452,3 +5452,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/seahorse-plugins to 2.24.1nb1 [wiz 2008-12-04]
 	Updated devel/cpuflags to 1.21 [abs 2008-12-05]
 	Updated graphics/ruby-RMagick to 2.8.0 [obache 2008-12-05]
+	Updated net/openvpn to 2.1rc13nb2 [hasso 2008-12-05]
