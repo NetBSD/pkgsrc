@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.4 2008/12/05 08:13:35 hasso Exp $
+
+--- route.c.orig	2008-11-17 02:48:04 +0200
++++ route.c	2008-12-04 23:33:09 +0200
+@@ -1557,7 +1557,11 @@ get_default_gateway (in_addr_t *gateway,
+ #define RTA_NETMASK 0x4
+ 
+ #define RTM_GET     0x4
++#if defined(TARGET_DRAGONFLY) && __DragonFly_version >= 200000
++#define RTM_VERSION 6
++#else
+ #define RTM_VERSION 5
++#endif
+ 
+ #define RTF_UP      0x1
+ #define RTF_GATEWAY 0x2
