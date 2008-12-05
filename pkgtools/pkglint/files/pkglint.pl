@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.793 2008/12/04 18:07:52 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.794 2008/12/05 06:48:05 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7421,7 +7421,7 @@ sub checkfile_PLIST($) {
 				}
 
 				if ($pkgpath ne "graphics/hicolor-icon-theme" && $arg =~ m"^share/icons/hicolor(?:$|/)") {
-					$line->log_warning("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
+					$line->log_error("Please .include \"../../graphics/hicolor-icon-theme/buildlink3.mk\" and remove this line.");
 				}
 			} elsif ($cmd eq "imake-man") {
 				my (@args) = split(/\s+/, $arg);
