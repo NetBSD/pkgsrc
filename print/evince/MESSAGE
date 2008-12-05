@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/12/05 01:59:07 smb Exp $
+
+Per the way the print/poppler package behaves,
+
+	LC_MESSAGES=en_US.UTF-8
+
+is in your environment.
+===========================================================================
