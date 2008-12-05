@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.32 2008/11/20 14:28:22 dillo Exp $
+# $NetBSD: Makefile,v 1.33 2008/12/05 01:57:07 smb Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 COMMENT=		PDF rendering library
 MAINTAINER=		reed@reedmedia.net
+PKGREVISION=		1
 
 USE_TOOLS+=		gmake
 
@@ -31,10 +32,6 @@ CONFIGURE_ARGS+=	--disable-poppler-glib
 CONFIGURE_ARGS+=	--disable-utils
 
 .include "../../mk/bsd.prefs.mk"
-
-.if defined(PAPERSIZE) && ${PAPERSIZE} == "A4"
-CONFIGURE_ARGS+=	--enable-a4-paper
-.endif
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/poppler/
