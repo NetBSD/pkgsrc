@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/09/29 14:28:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/12/05 01:19:53 obache Exp $
 ${GEM_HOME}/cache/rmagick-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/ChangeLog
@@ -239,6 +239,7 @@ ${GEM_LIBDIR}/doc/ex/skewx.rb
 ${GEM_LIBDIR}/doc/ex/skewy.rb
 ${GEM_LIBDIR}/doc/ex/smile.rb
 ${GEM_LIBDIR}/doc/ex/solarize.rb
+${GEM_LIBDIR}/doc/ex/sparse_color.rb
 ${GEM_LIBDIR}/doc/ex/splice.rb
 ${GEM_LIBDIR}/doc/ex/spread.rb
 ${GEM_LIBDIR}/doc/ex/stegano.rb
