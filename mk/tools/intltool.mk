@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.3 2006/07/05 10:23:58 jlam Exp $
+# $NetBSD: intltool.mk,v 1.4 2008/12/05 08:25:15 wiz Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -46,7 +46,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.intltool
 .  else
 USE_TOOLS+=		perl
 CONFIGURE_ENV+=		INTLTOOL_PERL=${TOOLS_PERL5:Q}
-TOOLS_DEPENDS.intltool?=	intltool>=0.35:../../textproc/intltool
+TOOLS_DEPENDS.intltool?=	intltool>=0.40.0:../../textproc/intltool
 .    if !empty(USE_TOOLS:Mintltool\:run)
 DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    else
