@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7722 2008/12/06 08:50:36 wiz Exp $
+$NetBSD: TODO,v 1.7723 2008/12/06 11:38:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o distcc-3.0
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
-	o dmidecode-2.10 [pkg/40104]
 	o dnsmasq-2.46
 	o dnstop-20070307
 	o dnstracer-1.9
