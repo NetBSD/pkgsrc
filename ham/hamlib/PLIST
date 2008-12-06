@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2007/07/02 15:30:04 wulf Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/12/06 08:48:03 wiz Exp $
 bin/rigctl
+bin/rigctld
 bin/rigmem
 bin/rigsmtr
 bin/rigswr
@@ -48,6 +49,7 @@ man/man1/rigmem.1
 man/man1/rigsmtr.1
 man/man1/rigswr.1
 man/man1/rotctl.1
+man/man8/rigctld.8
 man/man8/rpc.rigd.8
 man/man8/rpc.rotd.8
 sbin/rpc.rigd
