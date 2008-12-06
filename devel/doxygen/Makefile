@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/11/11 00:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2008/12/06 12:25:19 wiz Exp $
 
 DISTNAME=	doxygen-1.5.7.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -29,12 +29,6 @@ MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
 PLIST_VARS+=		ci cs
 
-.if exists(./descr)
-PLIST.ci=		yes	# case-insensitive
-.else
-PLIST.cs=		yes	# case-sensitive
-.endif
-
 SUBST_CLASSES+=		pybin
 SUBST_STAGE.pybin=	pre-configure
 SUBST_FILES.pybin=	doc/Makefile.in
@@ -49,6 +43,12 @@ SUBST_SED.perlbin=	-e 's,^PERL_PATH.*,PERL_PATH = ${PERL5},'
 INSTALL_TARGET=		install install_docs
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST.ci=		yes	# case-insensitive
+.else
+PLIST.cs=		yes	# case-sensitive
+.endif
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	-platform freebsd-g++
