@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3293 2008/12/06 11:37:01 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3294 2008/12/06 12:01:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5460,3 +5460,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/hamster-applet to 2.24.2nb1 [jmcneill 2008-12-05]
 	Updated www/ja-trac to 0.11.2.1pl1 [obache 2008-12-06]
 	Updated sysutils/dmidecode to 2.10 [obache 2008-12-06]
+	Updated emulators/bochs to 2.3.7 [wiz 2008-12-06]
