@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/12/06 18:40:33 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/12/06 19:43:27 wiz Exp $
 #
 
 DISTNAME=		comix-4.0.0
@@ -12,6 +12,12 @@ COMMENT=		Image viewer specifically designed to handle comic books
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
+.include "../../lang/python/extension.mk"
+.if ${PYPKGPREFIX} == "py24"
+.include "../../databases/py-sqlite2/buildlink3.mk"
+.else
+DEPENDS+=		${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+.endif
 
 USE_DIRS+=		xdg-1.3
 MANCOMPRESSED=		yes
