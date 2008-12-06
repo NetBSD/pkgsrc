@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/09/05 21:48:39 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2008/12/06 11:36:41 obache Exp $
 #
 
-DISTNAME=	dmidecode-2.9
+DISTNAME=	dmidecode-2.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://savannah.gnu.org/download/dmidecode/
 
