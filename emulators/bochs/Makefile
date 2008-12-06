@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2008/12/06 12:00:56 wiz Exp $
 
-DISTNAME=		bochs-2.3.6
+DISTNAME=		bochs-2.3.7
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--enable-x86-debugger
 .endif
 
 .if empty(PKG_OPTIONS:Mtiny)
-CONFIGURE_ARGS+=	--enable-3dnow
+#CONFIGURE_ARGS+=	--enable-3dnow
 CONFIGURE_ARGS+=	--enable-4meg-pages
 CONFIGURE_ARGS+=	--enable-all-optimizations
 CONFIGURE_ARGS+=	--enable-apic
@@ -71,6 +71,12 @@ CONFIGURE_ARGS+=	--enable-large-pages
 CONFIGURE_ARGS+=	--enable-mtrr
 CONFIGURE_ARGS+=	--enable-clgd54xx
 CONFIGURE_ARGS+=	--enable-sse-extension
+CONFIGURE_ARGS+=	--enable-gameport
+CONFIGURE_ARGS+=	--enable-misaligned-sse
+CONFIGURE_ARGS+=	--enable-aes
+CONFIGURE_ARGS+=	--enable-xsave
+CONFIGURE_ARGS+=	--enable-vme
+CONFIGURE_ARGS+=	--enable-plugins
 
 .  if !empty(MACHINE_PLATFORM:M*-*-i386)
 CONFIGURE_ARGS+=	--enable-fast-function-calls
