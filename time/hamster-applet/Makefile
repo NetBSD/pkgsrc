@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/02 22:36:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/06 00:59:42 jmcneill Exp $
 #
 
 DISTNAME=	hamster-applet-2.24.2
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hamster-applet/2.24/}
 
@@ -17,6 +18,12 @@ USE_TOOLS+=	gmake intltool pkg-config
 
 GCONF_SCHEMAS+=	hamster-applet.schemas
 PY_PATCHPLIST=	yes
+
+SUBST_CLASSES+=		python
+SUBST_MESSAGE.python=	Fixing path to Python interpreter.
+SUBST_STAGE.python=	post-patch
+SUBST_FILES.python=	hamster/hamster-applet.py
+SUBST_SED.python=	-e 's@/usr/bin/env python@${PYTHONBIN}@g'
 
 .include "../../lang/python/extension.mk"
 

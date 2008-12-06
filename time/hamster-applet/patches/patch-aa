@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/12/06 00:59:42 jmcneill Exp $
+
+--- hamster/__init__.py.orig	2008-10-25 17:15:16.000000000 -0400
++++ hamster/__init__.py
+@@ -22,7 +22,7 @@
+ 
+ import os, sys
+ from os.path import join, exists, isdir, isfile, dirname, abspath, expanduser
+-from shutil import copy as copyfile
++from shutil import copyfile
+ 
+ import gtk, gnome.ui
+ from gtk import glade
