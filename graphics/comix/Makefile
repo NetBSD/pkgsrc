@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/08/10 16:05:28 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/06 18:40:33 wiz Exp $
 #
 
-DISTNAME=		comix-3.6.4
-PKGREVISION=		2
+DISTNAME=		comix-4.0.0
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=comix/}
 
@@ -23,17 +22,19 @@ SUBST_MESSAGE.install-path=	Fixing man page installation path.
 SUBST_FILES.install-path=	install.py
 SUBST_SED.install-path=		-e "s,share/man/man,${PKGMANDIR}/man,g"
 
-PYTHON_PATCH_SCRIPTS=		comix mime/comicthumb
+PYTHON_PATCH_SCRIPTS=		src/comix.py mime/comicthumb
 
 do-build:
 
 do-install:
-	cd ${WRKSRC} && ${PYTHONBIN} install.py install --installdir ${DESTDIR}${PREFIX}
+	cd ${WRKSRC} && ${PYTHONBIN} install.py install --dir ${DESTDIR}${PREFIX}
 
-.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.5
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.12
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
