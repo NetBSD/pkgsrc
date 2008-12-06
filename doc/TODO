@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7723 2008/12/06 11:38:14 obache Exp $
+$NetBSD: TODO,v 1.7724 2008/12/06 12:01:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ Suggested package updates
 	o blender-2.48
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bochs-2.3.7
 	o bonnie++-1.94
 	o boolean-6.97
 	o bos-2.5
