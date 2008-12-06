@@ -1,7 +1,32 @@
-@comment $NetBSD: PLIST,v 1.9 2008/01/03 21:03:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/12/06 12:00:56 wiz Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
+lib/bochs/plugins/libbx_acpi.la
+lib/bochs/plugins/libbx_biosdev.la
+lib/bochs/plugins/libbx_busmouse.la
+lib/bochs/plugins/libbx_cmos.la
+lib/bochs/plugins/libbx_dma.la
+lib/bochs/plugins/libbx_extfpuirq.la
+lib/bochs/plugins/libbx_floppy.la
+lib/bochs/plugins/libbx_gameport.la
+lib/bochs/plugins/libbx_harddrv.la
+lib/bochs/plugins/libbx_keyboard.la
+lib/bochs/plugins/libbx_ne2k.la
+lib/bochs/plugins/libbx_parallel.la
+lib/bochs/plugins/libbx_pci.la
+lib/bochs/plugins/libbx_pci2isa.la
+lib/bochs/plugins/libbx_pci_ide.la
+lib/bochs/plugins/libbx_pcipnic.la
+lib/bochs/plugins/libbx_pciusb.la
+lib/bochs/plugins/libbx_pcivga.la
+lib/bochs/plugins/libbx_pic.la
+lib/bochs/plugins/libbx_sb16.la
+lib/bochs/plugins/libbx_serial.la
+lib/bochs/plugins/libbx_speaker.la
+lib/bochs/plugins/libbx_unmapped.la
+lib/bochs/plugins/libbx_vga.la
+lib/bochs/plugins/libbx_x.la
 man/man1/bochs-dlx.1
 man/man1/bochs.1
 man/man1/bxcommit.1
@@ -37,3 +62,5 @@ share/doc/bochs/bochsrc-sample.txt
 @dirrm share/doc/bochs
 @dirrm share/bochs/keymaps
 @dirrm share/bochs
+@dirrm lib/bochs/plugins
+@dirrm lib/bochs
