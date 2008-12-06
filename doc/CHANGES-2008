@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3296 2008/12/06 18:18:03 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3297 2008/12/06 18:40:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5463,3 +5463,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/bochs to 2.3.7 [wiz 2008-12-06]
 	Added emulators/xhomer version 9.16.06 [obache 2008-12-06]
 	Updated textproc/gtkspell to 2.0.15 [wiz 2008-12-06]
+	Updated graphics/comix to 4.0.0 [wiz 2008-12-06]
