@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3290 2008/12/05 15:45:01 tron Exp $
+$NetBSD: CHANGES-2008,v 1.3291 2008/12/06 01:00:42 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5457,3 +5457,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/sslproxy version 1.0.5 [sborrill 2008-12-05]
 	Updated lang/php5 to 5.2.7 [adrianp 2008-12-05]
 	Updated chat/inspircd to 1.1.22 [adrianp 2008-12-05]
+	Updated time/hamster-applet to 2.24.2nb1 [jmcneill 2008-12-05]
