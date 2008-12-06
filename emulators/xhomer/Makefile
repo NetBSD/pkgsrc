@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/06 12:56:27 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/06 13:10:34 obache Exp $
 
 DISTNAME=	xhomer-9-16-06
 PKGNAME=	xhomer-9.16.06
@@ -6,7 +6,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://xhomer.isani.org/xhomer/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	jmaier@happymolars.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xhomer.isani.org/xhomer/
 COMMENT=	DEC Pro 350/380 emulator
 
