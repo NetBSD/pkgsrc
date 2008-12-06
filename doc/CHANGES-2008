@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3291 2008/12/06 01:00:42 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3292 2008/12/06 10:52:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5458,3 +5458,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/php5 to 5.2.7 [adrianp 2008-12-05]
 	Updated chat/inspircd to 1.1.22 [adrianp 2008-12-05]
 	Updated time/hamster-applet to 2.24.2nb1 [jmcneill 2008-12-05]
+	Updated www/ja-trac to 0.11.2.1pl1 [obache 2008-12-06]
