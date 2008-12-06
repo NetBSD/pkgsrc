@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/09/22 04:18:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/12/06 10:52:23 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -509,6 +509,7 @@ ${PYSITELIB}/trac/wiki/default-pages/TracJa
 ${PYSITELIB}/trac/wiki/default-pages/TracLinks
 ${PYSITELIB}/trac/wiki/default-pages/TracLogging
 ${PYSITELIB}/trac/wiki/default-pages/TracModPython
+${PYSITELIB}/trac/wiki/default-pages/TracModWSGI
 ${PYSITELIB}/trac/wiki/default-pages/TracNavigation
 ${PYSITELIB}/trac/wiki/default-pages/TracNotification
 ${PYSITELIB}/trac/wiki/default-pages/TracPermissions
