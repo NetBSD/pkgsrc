@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/06 12:56:27 obache Exp $
+
+SHA1 (xhomer-9-16-06.tgz) = ebb9762b60121dd9caafd973b8161254fb8bb629
+RMD160 (xhomer-9-16-06.tgz) = 7d6ed8ec8cd0a1b43ed9a87f2835fe53efee73ae
+Size (xhomer-9-16-06.tgz) = 318277 bytes
+SHA1 (patch-aa) = a765656930ca2748766d27bc15008b9d5d49b5e5

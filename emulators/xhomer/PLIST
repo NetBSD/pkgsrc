@@ -1,0 +1,42 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/06 12:56:27 obache Exp $
+bin/xhomer
+share/doc/xhomer/battery_backed_ram.html
+share/doc/xhomer/building.html
+share/doc/xhomer/change_log.html
+share/doc/xhomer/configuration_file.html
+share/doc/xhomer/contact.gif
+share/doc/xhomer/control_menu.html
+share/doc/xhomer/display.html
+share/doc/xhomer/emulated_hardware.html
+share/doc/xhomer/floppy_drive.html
+share/doc/xhomer/hard_drive.html
+share/doc/xhomer/index.html
+share/doc/xhomer/lk201_mapping.html
+share/doc/xhomer/performance.html
+share/doc/xhomer/pro_software.html
+share/doc/xhomer/problems.html
+share/doc/xhomer/running.html
+share/doc/xhomer/rx50_floppies.html
+share/doc/xhomer/screen1.gif
+share/doc/xhomer/screen10.gif
+share/doc/xhomer/screen11.gif
+share/doc/xhomer/screen2.gif
+share/doc/xhomer/screen3.gif
+share/doc/xhomer/screen4.gif
+share/doc/xhomer/screen5.gif
+share/doc/xhomer/screen6.gif
+share/doc/xhomer/screen7.gif
+share/doc/xhomer/screen8.gif
+share/doc/xhomer/screen9.gif
+share/doc/xhomer/screen_shots.html
+share/doc/xhomer/serial_devices.html
+share/doc/xhomer/title.gif
+share/doc/xhomer/topics.html
+share/doc/xhomer/xhomer.html
+share/doc/xhomer/xhomer.html.head
+share/doc/xhomer/xhomer.html.middle
+share/doc/xhomer/xhomer.html.tail
+share/examples/xhomer/bat.ram
+share/examples/xhomer/xhomer.cfg
+@dirrm share/examples/xhomer
+@dirrm share/doc/xhomer
