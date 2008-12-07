@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3302 2008/12/07 11:42:01 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3303 2008/12/07 15:33:46 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5477,3 +5477,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/tokyodystopia to 0.9.8nb1 [obache 2008-12-07]
 	Updated databases/p5-tokyocabinet to 1.19nb1 [obache 2008-12-07]
 	Updated databases/ruby-tokyocabinet to 1.17nb1 [obache 2008-12-07]
+	Updated emulators/wine to 1.0.1nb1 [jmcneill 2008-12-07]
+	Updated emulators/wine-devel to 1.1.10nb1 [jmcneill 2008-12-07]
