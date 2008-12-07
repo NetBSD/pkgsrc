@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.17 2006/08/10 03:35:33 minskim Exp $
+# $NetBSD: module.mk,v 1.18 2008/12/07 06:41:51 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It takes care of rebuilding the ls-R database
@@ -33,6 +33,8 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\
 			{ next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, "$${PKG_LOCALTEXMFPREFIX}"); }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${TEXMFDIST:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${TEXMFDIST:S|${PREFIX}/||:S|/|\\/|g}/, "$${TEXMFDIST}"); }
 
 .include "../../mk/tex.buildlink3.mk"
 
