@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7724 2008/12/06 12:01:48 wiz Exp $
+$NetBSD: TODO,v 1.7725 2008/12/07 02:50:08 epg Exp $
 
 Suggested new packages
 ======================
@@ -442,7 +442,6 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o bugzilla-3.2
 	o byacc-20080824
-	o bzr-1.10
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
