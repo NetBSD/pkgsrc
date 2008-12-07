@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/07 11:31:21 obache Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TOKYOCABINET_BUILDLINK3_MK:=	${TOKYOCABINET_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}tokyocabinet
 
 .if ${TOKYOCABINET_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.7
+BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.23
 BUILDLINK_PKGSRCDIR.tokyocabinet?=	../../databases/tokyocabinet
 .endif	# TOKYOCABINET_BUILDLINK3_MK
 
