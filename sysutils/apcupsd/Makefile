@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2008/12/07 22:54:00 bouyer Exp $
 
 DISTNAME=		apcupsd-3.14.3
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
+PKGREVISION=		1
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
@@ -64,7 +65,7 @@ CONF_FILES_PERMS+= ${EGDIR}/offbattery ${PKG_SYSCONFDIR}/offbattery ${ROOT_USER}
 CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${ROOT_USER} ${ROOT_GROUP} 755
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${ROOT_USER} ${ROOT_GROUP} 755
 RCD_SCRIPTS=	apcupsd
-RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/netbsd/apcupsd
+RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/${OPSYS:tl}/apcupsd
 
 EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
