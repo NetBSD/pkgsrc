@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3307 2008/12/07 22:38:33 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3308 2008/12/07 22:55:02 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5483,3 +5483,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-CatalystX-CRUD to 0.36 [seb 2008-12-07]
 	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.19 [seb 2008-12-07]
 	Updated security/base to 1.4.1nb1 [adrianp 2008-12-07]
+	Updated sysutils/apcupsd to 3.14.3nb1 [bouyer 2008-12-07]
