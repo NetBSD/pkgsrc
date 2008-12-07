@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3305 2008/12/07 21:48:03 seb Exp $
+$NetBSD: CHANGES-2008,v 1.3306 2008/12/07 22:14:22 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5481,3 +5481,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine-devel to 1.1.10nb1 [jmcneill 2008-12-07]
 	Updated wm/dwm to 5.3.1 [tonio 2008-12-07]
 	Updated databases/p5-CatalystX-CRUD to 0.36 [seb 2008-12-07]
+	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.19 [seb 2008-12-07]
