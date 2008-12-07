@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2008/11/07 11:49:08 obache Exp $
+$NetBSD: patch-aa,v 1.5 2008/12/07 11:31:21 obache Exp $
 
---- configure.orig	2008-10-28 13:58:35.000000000 +0000
+--- configure.orig	2008-12-03 02:35:10.000000000 +0000
 +++ configure
-@@ -1738,18 +1738,15 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+@@ -1744,18 +1744,15 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
  MYPCFILES="tokyocabinet.pc"
  
  # Building flags
@@ -21,23 +21,10 @@ $NetBSD: patch-aa,v 1.4 2008/11/07 11:49:08 obache Exp $
 -pathtmp="$PATH"
 -PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 -PATH="$PATH:/usr/ccs/bin:/usr/ucb:/usr/xpg4/bin:/usr/xpg6/bin:$pathtmp"
+ CPATH="$HOME/include:/usr/local/include:$CPATH"
  LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LIBRARY_PATH"
  LD_LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LD_LIBRARY_PATH"
- CPATH="$HOME/include:/usr/local/include:$CPATH"
-@@ -1950,9 +1947,9 @@ printf '#===============================
- #================================================================
- 
- # Reset variables
--test -n "$CFLAGS" && MYCFLAGS="$CFLAGS"
--test -n "$CPPFLAGS" && MYCPPFLAGS="$CPPFLAGS"
--test -n "$LDFLAGS" && MYLDFLAGS="$LDFLAGS"
-+test -n "$CFLAGS" && MYCFLAGS="$CFLAGS $MYCFLAGS"
-+test -n "$CPPFLAGS" && MYCPPFLAGS="$CPPFLAGS $MYCPPFLAGS"
-+test -n "$LDFLAGS" && MYLDFLAGS="$LDFLAGS $MYLDFLAGS"
- 
- # C compiler
- ac_ext=c
-@@ -4081,7 +4078,7 @@ _ACEOF
+@@ -4119,7 +4116,7 @@ _ACEOF
  fi
  
  fi
@@ -46,7 +33,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/07 11:49:08 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzma" >&5
-@@ -4149,7 +4146,7 @@ _ACEOF
+@@ -4187,7 +4184,7 @@ _ACEOF
  fi
  
  fi
@@ -55,7 +42,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/07 11:49:08 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzo2" >&5
-@@ -5494,7 +5491,7 @@ fi
+@@ -5532,7 +5529,7 @@ fi
  
  
  fi
@@ -64,7 +51,7 @@ $NetBSD: patch-aa,v 1.4 2008/11/07 11:49:08 obache Exp $
  then
    if test "${ac_cv_header_lzmalib_h+set}" = set; then
    { echo "$as_me:$LINENO: checking for lzmalib.h" >&5
-@@ -5631,7 +5628,7 @@ fi
+@@ -5669,7 +5666,7 @@ fi
  
  
  fi
