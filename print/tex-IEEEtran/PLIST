@@ -1,24 +1,34 @@
-@comment $NetBSD: PLIST,v 1.4 2007/07/16 23:49:07 minskim Exp $
-${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran/IEEEabrv.bib
-${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran/IEEEexample.bib
-${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran/IEEEfull.bib
-${PKG_LOCALTEXMFPREFIX}/bibtex/bst/IEEEtran/IEEEtran.bst
-${PKG_LOCALTEXMFPREFIX}/bibtex/bst/IEEEtran/IEEEtranS.bst
-${PKG_LOCALTEXMFPREFIX}/doc/bibtex/IEEEtran/IEEEtran_bst_HOWTO.pdf
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/README
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/bare_adv.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/bare_conf.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/bare_jrnl.tex
-${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran/bare_jrnl_compsoc.tex
-${PKG_LOCALTEXMFPREFIX}/tex/latex/IEEEtran/IEEEtran.cls
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/IEEEtran
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/bibtex/IEEEtran
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/bibtex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/IEEEtran
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/bibtex/bst
-@dirrm ${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/bibtex/bib
+@comment $NetBSD: PLIST,v 1.5 2008/12/07 06:43:22 minskim Exp $
+${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEabrv.bib
+${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEexample.bib
+${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEfull.bib
+${TEXMFDIST}/bibtex/bst/IEEEtran/IEEEtran.bst
+${TEXMFDIST}/bibtex/bst/IEEEtran/IEEEtranN.bst
+${TEXMFDIST}/bibtex/bst/IEEEtran/IEEEtranS.bst
+${TEXMFDIST}/bibtex/bst/IEEEtran/IEEEtranSA.bst
+${TEXMFDIST}/bibtex/bst/IEEEtran/IEEEtranSN.bst
+${TEXMFDIST}/doc/latex/IEEEtran/IEEEtran_HOWTO.pdf
+${TEXMFDIST}/doc/latex/IEEEtran/IEEEtran_bst_HOWTO.pdf
+${TEXMFDIST}/doc/latex/IEEEtran/IEEEtrantools_doc.txt
+${TEXMFDIST}/doc/latex/IEEEtran/README
+${TEXMFDIST}/doc/latex/IEEEtran/README.bibtex
+${TEXMFDIST}/doc/latex/IEEEtran/README.extras
+${TEXMFDIST}/doc/latex/IEEEtran/README.testflow
+${TEXMFDIST}/doc/latex/IEEEtran/README.tools
+${TEXMFDIST}/doc/latex/IEEEtran/bare_adv.tex
+${TEXMFDIST}/doc/latex/IEEEtran/bare_conf.tex
+${TEXMFDIST}/doc/latex/IEEEtran/bare_jrnl.tex
+${TEXMFDIST}/doc/latex/IEEEtran/bare_jrnl_compsoc.tex
+${TEXMFDIST}/doc/latex/IEEEtran/changelog.txt
+${TEXMFDIST}/doc/latex/IEEEtran/font_install_how.txt
+${TEXMFDIST}/doc/latex/IEEEtran/testflow.tex
+${TEXMFDIST}/doc/latex/IEEEtran/testflow_ctl_A4.pdf
+${TEXMFDIST}/doc/latex/IEEEtran/testflow_ctl_LTR.pdf
+${TEXMFDIST}/doc/latex/IEEEtran/testflow_doc.pdf
+${TEXMFDIST}/doc/latex/IEEEtran/tux.eps
+${TEXMFDIST}/tex/latex/IEEEtran/IEEEtran.cls
+${TEXMFDIST}/tex/latex/IEEEtran/IEEEtrantools.sty
+@dirrm ${TEXMFDIST}/tex/latex/IEEEtran
+@dirrm ${TEXMFDIST}/doc/latex/IEEEtran
+@dirrm ${TEXMFDIST}/bibtex/bst/IEEEtran
+@dirrm ${TEXMFDIST}/bibtex/bib/IEEEtran
