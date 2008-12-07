@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3298 2008/12/07 00:45:59 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3299 2008/12/07 02:37:51 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5465,3 +5465,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/gtkspell to 2.0.15 [wiz 2008-12-06]
 	Updated graphics/comix to 4.0.0 [wiz 2008-12-06]
 	Updated emulators/wine-devel to 1.1.10 [adam 2008-12-07]
+	Updated devel/bzr to 1.10 [epg 2008-12-07]
+	Updated devel/bzrtools to 1.10.0 [epg 2008-12-07]
+	Updated devel/bzr-svn to 0.4.16 [epg 2008-12-07]
