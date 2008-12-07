@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/11/25 13:22:30 bjs Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/07 12:32:27 bjs Exp $
 #
 
 DISTNAME=	usbutil-0.5
@@ -11,17 +11,9 @@ COMMENT=	USB developer utilities
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-AUTO_MKDIRS=		yes
-USE_BSD_MAKEFILE=	yes
-
-INSTALL_TARGET+=	maninstall install
-
-MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/sbin
-MAKE_FLAGS+=	MKCATPAGES=no
-MAKE_FLAGS+=	MKHTML=no
-MAKE_FLAGS+=	NOGCCERROR=yes	# in keeping with original Makefile
-
-post-extract:
-	${RUN} ${CP} ${FILESDIR}/Makefile ${WRKSRC}/Makefile
+post-install:
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/usbgen.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/usbgen.8
 
 .include "../../mk/bsd.pkg.mk"
