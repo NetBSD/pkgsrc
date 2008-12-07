@@ -1,52 +1,56 @@
-# $NetBSD: Makefile,v 1.11 2007/07/16 23:49:07 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/07 06:43:22 minskim Exp $
 #
 
 DISTNAME=	IEEEtran
-PKGNAME=	tex-IEEEtran-1.7
+PKGNAME=	tex-IEEEtran-1.7a
 CATEGORIES=	print
-MASTER_SITES=	http://www.ieee.org/portal/cms_docs_iportals/iportals/publications/journmag/transactions/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} IEEEtranBST${EXTRACT_SUFX}
-
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.ieee.org/portal/pages/pubs/transactions/stylesheets.html
-COMMENT=	LaTeX class for IEEE journals and conferences
-
+MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
+EXTRACT_SUFX=	.zip
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
-WRKSRC=		${WRKDIR}
+MAINTAINER=	minskim@NetBSD.org
+HOMEPAGE=	http://www.michaelshell.org/tex/ieeetran/
+COMMENT=	LaTeX class for IEEE journals and conferences
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-USE_DIRS+=	texmf-1.4
 
-LATEX_FILES=	IEEEtran.cls
-LATEX_DOCS=	IEEEtran_HOWTO.pdf README \
-		bare_adv.tex bare_conf.tex bare_jrnl.tex bare_jrnl_compsoc.tex
-BIB_FILES=	IEEEabrv.bib IEEEexample.bib IEEEfull.bib
-BST_FILES=	IEEEtran.bst IEEEtranS.bst
-BIBTEX_DOCS=	IEEEtran_bst_HOWTO.pdf
+TEXMFDIRS=	${TEXMFDIST}
 
 .include "../../print/teTeX/module.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/IEEEtran
-.for f in ${LATEX_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/tex/latex/IEEEtran
-.endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran
-.for f in ${LATEX_DOCS}
-		${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/doc/latex/IEEEtran
-.endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran
-.for f in ${BIB_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/bibtex/bib/IEEEtran
-.endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/IEEEtran
-.for f in ${BST_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/IEEEtran
-.endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/bibtex/IEEEtran
-.for f in ${BIBTEX_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/doc/bibtex/IEEEtran
-.endfor
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXMFDIST}/bibtex/bib/${DISTNAME}
+	${FIND} ${WRKSRC} -name \*.bib -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/bibtex/bib/${DISTNAME} \;
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXMFDIST}/bibtex/bst/${DISTNAME}
+	${FIND} ${WRKSRC} -name \*.bst -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/bibtex/bst/${DISTNAME} \;
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}
+	${FIND} ${WRKSRC} -name \*.pdf -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME} \;
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}
+	${INSTALL_DATA} ${WRKSRC}/bibtex/README \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}/README.bibtex
+	${INSTALL_DATA} ${WRKSRC}/extras/README \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}/README.extras
+	${INSTALL_DATA} ${WRKSRC}/testflow/README \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}/README.testflow
+	${INSTALL_DATA} ${WRKSRC}/tools/README \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME}/README.tools
+	${FIND} ${WRKSRC} -name \*.txt -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME} \;
+	${FIND} ${WRKSRC} -name \*.tex -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME} \;
+	${FIND} ${WRKSRC} -name \*.eps -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/doc/latex/${DISTNAME} \;
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXMFDIST}/tex/latex/${DISTNAME}
+	${FIND} ${WRKSRC} -name \*.cls -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/tex/latex/${DISTNAME} \;
+	${FIND} ${WRKSRC} -name \*.sty -exec ${INSTALL_DATA} {} \
+		${DESTDIR}${TEXMFDIST}/tex/latex/${DISTNAME} \;
 
 .include "../../mk/bsd.pkg.mk"
