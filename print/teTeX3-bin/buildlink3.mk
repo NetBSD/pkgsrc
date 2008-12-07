@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:05 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/12/07 06:40:47 minskim Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 TETEX_BIN_BUILDLINK3_MK:=	${TETEX_BIN_BUILDLINK3_MK}+
@@ -16,6 +16,9 @@ BUILDLINK_API_DEPENDS.teTeX-bin+=	teTeX-bin>=3.0nb2
 BUILDLINK_ABI_DEPENDS.teTeX-bin?=	teTeX-bin>=3.0nb7
 BUILDLINK_PKGSRCDIR.teTeX-bin?=	../../print/teTeX3-bin
 .endif	# TETEX_BIN_BUILDLINK3_MK
+
+TEXMFDIST=	${PREFIX}/share/texmf-dist
+PLIST_SUBST+=	TEXMFDIST=${TEXMFDIST:C|^${PREFIX}/||}
 
 TEX=etex
 PDFTEX=pdfetex
