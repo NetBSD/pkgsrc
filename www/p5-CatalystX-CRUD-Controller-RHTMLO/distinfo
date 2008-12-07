@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/10/21 00:05:55 he Exp $
+$NetBSD: distinfo,v 1.5 2008/12/07 22:13:50 seb Exp $
 
-SHA1 (CatalystX-CRUD-Controller-RHTMLO-0.18.tar.gz) = f78bd38566365dbe09aec6a647f381153e1bbd3a
-RMD160 (CatalystX-CRUD-Controller-RHTMLO-0.18.tar.gz) = 67e01b5e2cf25db3fe50dc5bc37c3cfd097eb94b
-Size (CatalystX-CRUD-Controller-RHTMLO-0.18.tar.gz) = 5207 bytes
+SHA1 (CatalystX-CRUD-Controller-RHTMLO-0.19.tar.gz) = 955a76c65b5061bb80ba51f569d995de4010344a
+RMD160 (CatalystX-CRUD-Controller-RHTMLO-0.19.tar.gz) = 4f3ebb89c42d4cd59b73b2abe5b46d3c6daa62e5
+Size (CatalystX-CRUD-Controller-RHTMLO-0.19.tar.gz) = 5239 bytes
