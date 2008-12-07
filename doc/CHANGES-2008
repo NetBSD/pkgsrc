@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3300 2008/12/07 06:44:08 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3301 2008/12/07 11:17:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5469,3 +5469,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bzrtools to 1.10.0 [epg 2008-12-07]
 	Updated devel/bzr-svn to 0.4.16 [epg 2008-12-07]
 	Updated print/tex-IEEEtran to 1.7a [minskim 2008-12-07]
+	Updated net/darkstat to 3.0.712 [obache 2008-12-07]
