@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/26 11:43:50 obache Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/07 11:37:53 obache Exp $
 
---- install.rb.orig	2008-10-26 08:13:27.000000000 +0000
+--- install.rb.orig	2008-10-22 15:53:45.000000000 +0000
 +++ install.rb
-@@ -1,10 +1,13 @@
+@@ -1,10 +1,15 @@
  require 'rbconfig'
 +require 'ftools'
  
@@ -10,8 +10,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/10/26 11:43:50 obache Exp $
  bindir = Config::CONFIG.fetch("bindir")
  
  def copy(src, dest, mode)
++  if (destdir = ENV['DESTDIR'])
++    dest = File.join(destdir, dest)
++  end
    p dest
-+  dest = File.join(ENV['DESTDIR'], dest)
 +  File::makedirs(File.dirname(dest))
    open(src, "rb") do |infile|
      open(dest, "wb") do |outfile|
