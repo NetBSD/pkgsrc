@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/15 19:36:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/07 15:16:31 wiz Exp $
 #
 
 DISTNAME=	libgksu-2.0.7
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://people.debian.org/~kov/gksu/
 
@@ -20,6 +21,12 @@ USE_TOOLS+=	gmake intltool pkg-config
 
 GCONF_SCHEMAS+=		gksu.schemas
 PKGCONFIG_OVERRIDE+=	libgksu/libgksu2.pc.in
+
+SUBST_CLASSES+=		xauth
+SUBST_SED.xauth+=	-e "s,/usr/bin/xauth,${LOCALBASE}/bin/xauth,g"
+SUBST_MESSAGE.xauth=	Fixing path to xauth executable.
+SUBST_STAGE.xauth=	post-extract
+SUBST_FILES.xauth=	libgksu/gksu-run-helper.c libgksu/libgksu.c
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
