@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/11/21 17:40:29 adam Exp $
+# $NetBSD: options.mk,v 1.2 2008/12/07 15:32:06 jmcneill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
-PKG_SUPPORTED_OPTIONS=	cups opengl sane esound ldap dbus ssl x11
-PKG_SUGGESTED_OPTIONS=	opengl esound ldap dbus ssl x11
+PKG_SUPPORTED_OPTIONS=	cups opengl sane esound ldap dbus hal ssl x11
+PKG_SUGGESTED_OPTIONS=	opengl esound ldap dbus hal ssl x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -22,6 +22,12 @@ CONFIGURE_ARGS+= --without-ldap
 .include "../../sysutils/dbus/buildlink3.mk"
 .else
 CONFIGURE_ARGS+= --without-dbus
+.endif
+
+.if !empty(PKG_OPTIONS:Mhal)
+.include "../../sysutils/hal/buildlink3.mk"
+.else
+CONFIGURE_ARGS+= --without-hal
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
