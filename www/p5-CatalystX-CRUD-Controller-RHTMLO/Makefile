@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/10/21 00:05:55 he Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/07 22:13:50 seb Exp $
 
-DISTNAME=	CatalystX-CRUD-Controller-RHTMLO-0.18
+DISTNAME=	CatalystX-CRUD-Controller-RHTMLO-0.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
