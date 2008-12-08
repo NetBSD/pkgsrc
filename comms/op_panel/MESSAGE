@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/12/08 04:53:28 jnemeth Exp $
+
+You will need to make Flash Operator Panel accessible through your
+HTTP server.  If you are running Apache, then you may either symlink
+
+	${SMDIR}
+
+into DocumentRoot, or add the following line to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/${FOP}.conf
+
+Please see the instructions at http://www.asternic.org/documentation.html
+for instructions on how to setup the Flash Operator Panel.
+
+===========================================================================

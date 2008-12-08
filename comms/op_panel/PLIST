@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/08 04:53:28 jnemeth Exp $
+libexec/op_server.pl
+share/examples/op_panel/op_astdb.cfg
+share/examples/op_panel/op_buttons.cfg
+share/examples/op_panel/op_lang_ca.cfg
+share/examples/op_panel/op_lang_de.cfg
+share/examples/op_panel/op_lang_en.cfg
+share/examples/op_panel/op_lang_es.cfg
+share/examples/op_panel/op_lang_fr.cfg
+share/examples/op_panel/op_lang_gl.cfg
+share/examples/op_panel/op_lang_it.cfg
+share/examples/op_panel/op_lang_no.cfg
+share/examples/op_panel/op_lang_ru.cfg
+share/examples/op_panel/op_lang_se.cfg
+share/examples/op_panel/op_panel.conf
+share/examples/op_panel/op_server.cfg
+share/examples/op_panel/op_style.cfg
+share/examples/rc.d/op_panel
+share/op_panel/crossdomain.xml
+share/op_panel/help_de.html
+share/op_panel/help_en.html
+share/op_panel/help_es.html
+share/op_panel/help_fr.html
+share/op_panel/help_it.html
+share/op_panel/help_no.html
+share/op_panel/help_ru.html
+share/op_panel/help_se.html
+share/op_panel/index-clicktodial.html
+share/op_panel/index-crm.html
+share/op_panel/index-fixed.html
+share/op_panel/index-restrict.html
+share/op_panel/index.html
+share/op_panel/mypage.php
+share/op_panel/operator_panel.swf
+@dirrm share/examples/op_panel
+@dirrm share/op_panel
