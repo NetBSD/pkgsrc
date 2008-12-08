@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2008/11/06 21:15:24 snj Exp $
+# $NetBSD: Makefile,v 1.74 2008/12/08 04:55:18 jnemeth Exp $
 #
 
 COMMENT=	Communication utilities
@@ -41,6 +41,7 @@ SUBDIR+=	modemd
 SUBDIR+=	msynctool
 SUBDIR+=	obexapp
 SUBDIR+=	obexftp
+SUBDIR+=	op_panel
 SUBDIR+=	openobex
 SUBDIR+=	p5-Asterisk
 SUBDIR+=	p5-Device-Gsm
