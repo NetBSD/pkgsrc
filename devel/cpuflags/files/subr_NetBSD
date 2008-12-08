@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.6 2008/12/08 17:40:14 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.7 2008/12/08 19:46:59 abs Exp $
 
 AWK=awk
 SED=sed
@@ -97,6 +97,7 @@ determine_arch()
 	'AMD Athlon 64 or Sempron (686-class)'*)   ARCH='-march=athlon64' ;;
 	'AMD Athlon Model 4 (Thunderbird) '*)	   ARCH='-march=athlon-tbird' ;;
 	'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
+	'AMD Family 10h (686-class)'*)   	   ARCH='-march=amdfam10' ;;
 	'Intel (686-class)'*)			   ARCH='-march=pentiumpro' ;;
 	'Intel Celeron (686-class)'*)		   ARCH='-march=pentiumpro' ;;
 	'Intel Core 2 (Merom) (686-class)'*)	   ARCH='-march=core2' ;;
