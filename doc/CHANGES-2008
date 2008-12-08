@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3313 2008/12/08 14:53:34 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3314 2008/12/08 17:40:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5489,3 +5489,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/totem-pl-parser to 2.24.3 [wiz 2008-12-08]
 	Updated comms/op_panel to 0.29nb1 [jnemeth 2008-12-08]
 	Downgraded lang/php5 to 5.2.6nb2 [adrianp 2008-12-08]
+	Updated devel/cpuflags to 1.22 [abs 2008-12-08]
