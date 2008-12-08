@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/12/04 03:35:59 jmcneill Exp $
+# $NetBSD: Makefile,v 1.18 2008/12/08 20:26:13 ahoka Exp $
 #
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -26,7 +26,7 @@ SPECIAL_PERMS+=		${VARBASE}/cache/hald ${HAL_USER} ${HAL_GROUP} 0644
 
 EGDIR=			${PREFIX}/share/examples/hal
 
-CONF_FILES=		${EGDIR}/hal.conf ${PREFIX}/etc/dbus-1/system.d/hal.conf
+CONF_FILES=		${EGDIR}/hal.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/hal.conf
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids
