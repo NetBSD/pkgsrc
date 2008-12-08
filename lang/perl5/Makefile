@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2008/11/14 18:27:00 joerg Exp $
+# $NetBSD: Makefile,v 1.144 2008/12/08 13:34:46 tron Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
-PKGREVISION=	2
+PKGREVISION=	3
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -270,6 +270,8 @@ SUBST_SED.rm=	-e "s!^rm_try='/.*/\.tools/bin/rm -f!rm_try='/bin/rm -f!"
 REPLACE_PERL+=		lib/Class/ISA.pm
 REPLACE_PERL+=		lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/version.pm
+REPLACE_PERL+=		lib/Math/BigFloat/Trace.pm
+REPLACE_PERL+=		lib/Math/BigInt/Trace.pm
 
 # And replace a perl interpreter during the pre-install stage
 # I think this may be a bootstrap script, so can't use REPLACE_PERL
