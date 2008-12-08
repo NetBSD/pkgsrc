@@ -1,0 +1,14 @@
+# $NetBSD: op_panel.conf.dist,v 1.1.1.1 2008/12/08 04:53:28 jnemeth Exp $
+#
+# Flash Operator Panel configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+    Alias /panel/ "@SMDIR@/"
+</IfModule>
+
+<Directory "@SMDIR@">
+    Options None
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+</Directory>
