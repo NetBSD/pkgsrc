@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.5 2008/12/05 00:41:31 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.6 2008/12/08 17:40:14 abs Exp $
 
 AWK=awk
 SED=sed
@@ -7,16 +7,13 @@ display_hw_details()
     {
     cat <<END
 OS		: '$(uname)'
+OS version	: '$(uname -r)'
 hw.model	: '$hw_model'
 hw.machine	: '$hw_machine'
 hw.machine_arch : '$hw_machine_arch'
-cpu details	: '$cpu'
+CPU		: '$cpu'
+$cpu_details
 END
-    
-    sed -n -e 's/^/    /' -e '/^    cpu/p' /var/run/dmesg.boot
-    if [ -x /usr/sbin/cpuctl ]; then
-	cpuctl identify 0
-    fi
     }
 
 extract_hw_details()
@@ -26,10 +23,11 @@ extract_hw_details()
     hw_machine_arch=$(sysctl -n hw.machine_arch)
     if [ "$hw_machine_arch" = i386 -o "$hw_machine_arch" = x86_64 ] ; then
 	if [ -x /usr/sbin/cpuctl ] ; then
-	    cpu=$(cpuctl identify 0|awk '/cpu0:/{sub("cpu0: ","");print;exit}')
+	    cpu_details="$(cpuctl identify 0 | grep ^cpu0:)"
 	else
-	    cpu=$(awk '/cpu0:/{sub("cpu0: ","");print;exit}'</var/run/dmesg.boot)
+	    cpu_details="$(grep ^cpu0: /var/run/dmesg.boot)"
 	fi
+	cpu=$(echo "$cpu_details"|awk '/cpu0:/{sub("cpu0: ","");print;exit}')
     fi
 
     # We're almost certainly crosscompiling
@@ -94,29 +92,33 @@ determine_arch()
 
     i386 | x86_64)
 	case "$cpu" in
-	    'AMD Athlon 64 or Athlon 64 FX or Opteron '*) ARCH='-march=opteron' ;;
-	    'AMD Athlon 64 or Sempron (686-class)'*) ARCH='-march=athlon64' ;;
-	    'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
-	    'AMD Athlon Model 4 (Thunderbird) '*) ARCH='-march=athlon-tbird' ;;
-	    'Intel (686-class)'*)		ARCH='-march=pentiumpro' ;;
-	    'Intel Celeron (686-class)'*)	ARCH='-march=pentiumpro' ;;
-	    'Intel Core 2 (Merom) (686-class)'*) ARCH='-march=core2' ;;
-	    'Intel Pentium 4 (686-class)'*)	ARCH='-march=pentium4' ;;
-	    'Intel Pentium II (686-class)'*)	ARCH='-march=pentium2' ;;
-	    'Intel Pentium III (686-class)'*)	ARCH='-march=pentium3' ;;
-	    'Intel Pentium III Xeon (686-class)'*) ARCH='-march=pentium3' ;;
-	    'Intel Pentium M (Dothan) (686-class)'*) ARCH='-march=pentium-m' ;;
-	    # Fallback classes
-	    *'(586-class)'*)			ARCH='-march=pentium' ;;
-	    *'(486-class)'*)			ARCH='-march=i486' ;;
+	'AMD Athlon 64 X2 (686-class)'*)	   ARCH='-march=athlon64' ;;
+	'AMD Athlon 64 or Athlon 64 FX or Opteron '*) ARCH='-march=opteron' ;;
+	'AMD Athlon 64 or Sempron (686-class)'*)   ARCH='-march=athlon64' ;;
+	'AMD Athlon Model 4 (Thunderbird) '*)	   ARCH='-march=athlon-tbird' ;;
+	'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
+	'Intel (686-class)'*)			   ARCH='-march=pentiumpro' ;;
+	'Intel Celeron (686-class)'*)		   ARCH='-march=pentiumpro' ;;
+	'Intel Core 2 (Merom) (686-class)'*)	   ARCH='-march=core2' ;;
+	'Intel Pentium 4 (686-class)'*)		   ARCH='-march=pentium4' ;;
+	'Intel Pentium II (686-class)'*)	   ARCH='-march=pentium2' ;;
+	'Intel Pentium III (686-class)'*)	   ARCH='-march=pentium3' ;;
+	'Intel Pentium III (Katmai) (686-class)'*) ARCH='-march=pentium3' ;;
+	'Intel Pentium III Xeon (686-class)'*)	   ARCH='-march=pentium3' ;;
+	'Intel Pentium M (Dothan) (686-class)'*)   ARCH='-march=pentium-m' ;;
+	'Intel Pentium M (Yonah) (686-class)'*)	   ARCH='-march=pentium-m' ;;
+
+	# Fallback classes
+	*'(586-class)'*)			   ARCH='-march=pentium' ;;
+	*'(486-class)'*)			   ARCH='-march=i486' ;;
 	esac
 	;;
 
     m68k) case $hw_model in				   # Examples
-	*\(68020*|*\ MC68020\ *) ARCH='-m68020'	;; # Untested
-	*\(68030*|*\ MC68030\ *) ARCH='-m68030'	;; # Mac LC III
-	*\(68040*|*\ MC68040\ *) ARCH='-m68040'	;; # Untested
-	*\(68060*|*\ MC68060\ *) ARCH='-m68060'	;; # Upgraded amiga 3000
+	*\(68020*|*\ MC68020\ *) ARCH='-m68020' ;; # Untested
+	*\(68030*|*\ MC68030\ *) ARCH='-m68030' ;; # Mac LC III
+	*\(68040*|*\ MC68040\ *) ARCH='-m68040' ;; # Untested
+	*\(68060*|*\ MC68060\ *) ARCH='-m68060' ;; # Upgraded amiga 3000
     esac
     ;;
 
@@ -159,7 +161,7 @@ determine_arch()
 	7410\ *)		ARCH='-mcpu=7400'	;; # powerbook g4
 	7447A\ *)		ARCH='-mcpu=7450'	;; #
 	7450\ *)		ARCH='-mcpu=7450'	;; # tibook 550
-        750\ *)		       ARCH='-mcpu=750'       ;; # orig. iBook
+	750\ *)		       ARCH='-mcpu=750'	      ;; # orig. iBook
 
     esac ;;
 
@@ -168,11 +170,11 @@ determine_arch()
 	*[\ \(]L64811*)		ARCH='-mcpu=cypress'		;; # sun4/sun4c
 	*[\ \(]CY7C601*)	ARCH='-mcpu=cypress'		;; # ss2
 	*[\ \(]W8601/8701*)	ARCH='-mcpu=cypress'		;; # elc
-	*[\ \(]MB86904*)	ARCH='-mcpu=supersparc'	;; # ss5 usparc
-	*[\ \(]MB86907*)	ARCH='-mcpu=supersparc'	;; # ss5 usparc
-	*[\ \(]TMS390S10*)	ARCH='-mcpu=supersparc'	;; # classic  "
-	*[\ \(]TMS390Z50*)	ARCH='-mcpu=supersparc'	;; # ss10/ss20
-	*[\ \(]RT620/625*)	ARCH='-mcpu=hypersparc'	;; # ss20 ross
+	*[\ \(]MB86904*)	ARCH='-mcpu=supersparc' ;; # ss5 usparc
+	*[\ \(]MB86907*)	ARCH='-mcpu=supersparc' ;; # ss5 usparc
+	*[\ \(]TMS390S10*)	ARCH='-mcpu=supersparc' ;; # classic  "
+	*[\ \(]TMS390Z50*)	ARCH='-mcpu=supersparc' ;; # ss10/ss20
+	*[\ \(]RT620/625*)	ARCH='-mcpu=hypersparc' ;; # ss20 ross
 	*[\ \(]MB86930*)	ARCH='-mcpu=sparclite'		;; # from gcc
 	*[\ \(]MB86934*)	ARCH='-mcpu=sparclite'		;; # from gcc
 	# under 1.5.1 -mcpu=ultrasparc chokes egcs-2.91.66 compiling perl
@@ -190,11 +192,22 @@ determine_arch()
 determine_features()
     {
     FEATURES=
+
     case $hw_machine_arch in
-	i386)
-	    if [ "$(sysctl -n machdep.sse2)" = 1 ] ; then
+	i386 | x86_64)
+	    # Set cpu_feature_FOO=1 for each 'FOO' feature reported
+	    eval $(echo "$cpu_details" | awk -F , '
+	    /cpu0: features/ {
+		sub(".*<","");
+		sub(">.*","");
+		gsub("[^,A-Z0-9]","_");
+		for (i = 1; i < NR; i++) { print "cpu_feature_"$i"=1" } }
+		')
+	    if [ -n "$cpu_feature_SSE3" ] ; then
+		FEATURES="-mfpmath=sse -msse3"
+	    elif [ -n "$cpu_feature_SSE2" ] ; then
 		FEATURES="-mfpmath=sse -msse2"
-	    elif [ "$(sysctl -n machdep.sse)" = 1 ] ; then
+	    elif [ -n "$cpu_feature_SSE" ] ; then
 		FEATURES="-mfpmath=sse -msse"
 	    fi
 	    ;;
