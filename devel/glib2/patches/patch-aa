@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
+$NetBSD: patch-aa,v 1.45 2008/12/08 16:10:19 tnn Exp $
 
---- configure.orig	2008-10-16 14:41:13.000000000 +0000
+--- configure.orig	2008-11-24 06:50:01.000000000 +0100
 +++ configure
-@@ -986,6 +986,7 @@ MKDIR_P
- INSTALL_STRIP_PROGRAM
- STRIP
- install_sh
+@@ -835,6 +835,7 @@ GIO
+ GSPAWN
+ GLIB_DEBUG_FLAGS
+ G_MODULE_NEED_USCORE
 +G_MODULE_BROKEN_DLOPEN_NULL
- MAKEINFO
- AUTOHEADER
- AUTOMAKE
-@@ -37256,6 +37257,7 @@ else
+ G_MODULE_BROKEN_RTLD_GLOBAL
+ G_MODULE_HAVE_DLERROR
+ G_MODULE_LDFLAGS
+@@ -34079,6 +34080,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -38091,6 +38093,87 @@ fi
+@@ -34914,6 +34916,87 @@ fi
  
  	LIBS="$LIBS_orig"
  fi
@@ -106,7 +106,7 @@ $NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -38127,6 +38210,8 @@ fi
+@@ -34950,6 +35033,8 @@ fi
  
  
  
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
  { $as_echo "$as_me:$LINENO: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -39873,117 +39958,8 @@ if test x"$have_threads" != xno; then
+@@ -36696,117 +36781,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -235,7 +235,7 @@ $NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
           ;;
      esac
    fi
-@@ -42177,6 +42153,10 @@ case $host in
+@@ -39000,6 +38976,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -246,23 +246,3 @@ $NetBSD: patch-aa,v 1.44 2008/10/24 15:59:52 wiz Exp $
  esac
  
  
-@@ -47480,9 +47460,9 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
-   }
-   split(mac1, mac2, "(") #)
-   macro = mac2[1]
--  prefix = substr(line, 1, index(line, defundef) - 1)
-   if (D_is_set[macro]) {
-     # Preserve the white space surrounding the "#".
-+    prefix = substr(line, 1, index(line, defundef) - 1)
-     print prefix "define", macro P[macro] D[macro]
-     next
-   } else {
-@@ -47490,7 +47470,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
-     # in the case of _POSIX_SOURCE, which is predefined and required
-     # on some systems where configure will not decide to define it.
-     if (defundef == "undef") {
--      print "/*", prefix defundef, macro, "*/"
-+      print "/*", line, "*/"
-       next
-     }
-   }
