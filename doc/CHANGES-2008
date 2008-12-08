@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3309 2008/12/08 04:58:53 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.3310 2008/12/08 12:27:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5485,3 +5485,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/base to 1.4.1nb1 [adrianp 2008-12-07]
 	Updated sysutils/apcupsd to 3.14.3nb1 [bouyer 2008-12-07]
 	Added comms/op_panel version 0.29 [jnemeth 2008-12-08]
+	Updated net/powerdns to 2.9.21.2 [ghen 2008-12-08]
