@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3315 2008/12/08 19:47:26 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3316 2008/12/08 23:25:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5491,3 +5491,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Downgraded lang/php5 to 5.2.6nb2 [adrianp 2008-12-08]
 	Updated devel/cpuflags to 1.22 [abs 2008-12-08]
 	Updated devel/cpuflags to 1.23 [abs 2008-12-08]
+	Added net/barnyard version 0.2.0 [adrianp 2008-12-08]
