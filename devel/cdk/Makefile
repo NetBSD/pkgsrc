@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/12/08 17:24:19 tnn Exp $
 #
 
 DISTNAME=		latestCDK
@@ -22,7 +22,8 @@ USE_TOOLS+=		autoconf213
 
 BUILD_TARGET=		default
 
-INSTALL_MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX}
+INSTALL_MAKE_FLAGS+=	INSTALL_DIR=${DESTDIR}${PREFIX} \
+			MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 INSTALLATION_DIRS=	share/examples/cdk
 
 pre-configure:
