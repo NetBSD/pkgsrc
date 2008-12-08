@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/09/18 13:03:38 joerg Exp $
+$NetBSD: distinfo,v 1.6.2.1 2008/12/08 14:06:41 tron Exp $
 
-SHA1 (pdns-2.9.21.1/pdns-2.9.21.1.tar.gz) = d2f9f55223411114ce229b4728228f6739f2e708
-RMD160 (pdns-2.9.21.1/pdns-2.9.21.1.tar.gz) = 4d02e732fb7348f6eeb44090d641abd9d0cee9dd
-Size (pdns-2.9.21.1/pdns-2.9.21.1.tar.gz) = 1002905 bytes
+SHA1 (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = 9088361071ddb6c2bd32eb90c6c166736e8a229d
+RMD160 (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = e28a31c6816a382502124726a5fe9ac66dd2df94
+Size (pdns-2.9.21.2/pdns-2.9.21.2.tar.gz) = 1008111 bytes
 SHA1 (patch-aa) = 034845af3a9b66f57e482e3b43e43b61c17f51ab
 SHA1 (patch-ab) = d47887faff80330122ccf1cfd047c11e114c1153
 SHA1 (patch-ac) = 14c743d41ccb35ee2b47d1692b8812abd360494e
