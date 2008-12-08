@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/08 13:05:22 adrianp Exp $
 
 DISTNAME=	oinkmaster-2.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oinkmaster/}
 
@@ -8,7 +9,6 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://oinkmaster.sourceforge.net/
 COMMENT=	Manage snort rule updates
 
-DEPENDS+=	wget>=1.00:../../net/wget
 DEPENDS+=	snort{,-mysql,-pgsql}-[0-9]*:../../net/snort
 
 NO_BUILD=	yes
@@ -22,13 +22,15 @@ DOCS=		INSTALL LICENSE README README.templates UPGRADING FAQ
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	${WRKSRC}/oinkmaster.pl
 
+.include "options.mk"
+
 PKG_SYSCONFSUBDIR=	snort
 
 SUBST_CLASSES+=		pub
 SUBST_STAGE.pub=	post-patch
 SUBST_FILES.pub=	oinkmaster.pl oinkmaster.conf oinkmaster.1
-SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g" \
-			-e "s|/usr/local|${PREFIX}|g"
+SUBST_SED.pub=		-e "s|/usr/local/etc|${PKG_SYSCONFDIR}|g"
+SUBST_SED.pub+=		-e "s|/usr/local|${PREFIX}|g"
 SUBST_MESSAGE.pub=	Fixing harcoded paths.
 
 INSTALLATION_DIRS=	bin share/snort/rules
