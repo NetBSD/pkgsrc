@@ -1,8 +1,8 @@
-$NetBSD: patch-co,v 1.2 2008/10/10 21:58:43 he Exp $
+$NetBSD: patch-co,v 1.3 2008/12/08 12:46:13 schwarz Exp $
 
 --- hints/freebsd.sh.orig	2007-12-18 11:47:07.000000000 +0100
-+++ hints/freebsd.sh
-@@ -114,7 +114,7 @@ case "$osvers" in
++++ hints/freebsd.sh	2008-12-08 10:41:51.000000000 +0100
+@@ -114,7 +114,7 @@
  	lddlflags="-Bshareable $lddlflags"
  	;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-co,v 1.2 2008/10/10 21:58:43 he Exp $
          objformat=`/usr/bin/objformat`
          if [ x$objformat = xaout ]; then
              if [ -e /usr/lib/aout ]; then
-@@ -130,6 +130,14 @@ case "$osvers" in
+@@ -130,6 +130,14 @@
          fi
          cccdlflags='-DPIC -fPIC'
          ;;
@@ -26,3 +26,16 @@ $NetBSD: patch-co,v 1.2 2008/10/10 21:58:43 he Exp $
  esac
  
  case "$osvers" in
+@@ -211,6 +219,12 @@
+ 	      exit 1
+ 	      ;;
+ 
++	7.*)
++	      ldflags="-pthread $ldflags"
++	      # patch according to perl Change 34542
++	      # to take care of bug perl #57458
++	      ;;
++
+ 	*)
+ 	      if [ ! -r "$lc_r" ]; then
+ 	      cat <<EOM >&4
