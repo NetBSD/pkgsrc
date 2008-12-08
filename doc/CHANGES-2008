@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3311 2008/12/08 13:09:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3312 2008/12/08 13:50:05 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5487,3 +5487,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added comms/op_panel version 0.29 [jnemeth 2008-12-08]
 	Updated net/powerdns to 2.9.21.2 [ghen 2008-12-08]
 	Updated multimedia/totem-pl-parser to 2.24.3 [wiz 2008-12-08]
+	Updated comms/op_panel to 0.29nb1 [jnemeth 2008-12-08]
