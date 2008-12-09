@@ -1,0 +1,41 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 14:19:21 wiz Exp $
+bin/diffuse
+man/man1/diffuse.1
+share/applications/diffuse.desktop
+share/diffuse/syntax/bash.syntax
+share/diffuse/syntax/c++.syntax
+share/diffuse/syntax/csh.syntax
+share/diffuse/syntax/csharp.syntax
+share/diffuse/syntax/css.syntax
+share/diffuse/syntax/gettext.syntax
+share/diffuse/syntax/html.syntax
+share/diffuse/syntax/ini.syntax
+share/diffuse/syntax/java.syntax
+share/diffuse/syntax/javascript.syntax
+share/diffuse/syntax/jsp.syntax
+share/diffuse/syntax/makefile.syntax
+share/diffuse/syntax/octave.syntax
+share/diffuse/syntax/pascal.syntax
+share/diffuse/syntax/patch.syntax
+share/diffuse/syntax/perl.syntax
+share/diffuse/syntax/php.syntax
+share/diffuse/syntax/python.syntax
+share/diffuse/syntax/ruby.syntax
+share/diffuse/syntax/sql.syntax
+share/diffuse/syntax/tcl.syntax
+share/diffuse/syntax/vb.syntax
+share/diffuse/syntax/verilog.syntax
+share/diffuse/syntax/vhdl.syntax
+share/diffuse/syntax/xml.syntax
+share/examples/diffuse/diffuserc
+share/gnome/help/diffuse/C
+share/omf/diffuse
+share/pixmaps/diffuse.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in rarian: @dirrm share/omf
+@dirrm share/gnome/help/diffuse
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@dirrm share/examples/diffuse
+@dirrm share/diffuse/syntax
+@dirrm share/diffuse
+@comment in xdg-dirs: @dirrm share/applications
