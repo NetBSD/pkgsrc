@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/11/06 11:23:14 taca Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/09 07:27:39 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -49,7 +50,8 @@ REQD_FILES+=		${TL_EGDIR}/${f} ${TL_WEBDIR}/${f}
 .endfor
 
 .for f in ${WWW_EG_FILES}
-CONF_FILES_PERMS+=	${TL_EGDIR}/${f} ${TL_WEBDIR}/${f} www www 0644
+CONF_FILES_PERMS+=	${TL_EGDIR}/${f} ${TL_WEBDIR}/${f} \
+			${APACHE_USER} ${APACHE_GROUP} 0644
 .endfor
 
 SUBST_CLASSES+=		conf
@@ -69,9 +71,11 @@ WWW_SYSFILES=	config/.htaccess constants.php drivers functions.php \
 INSTALLATION_DIRS+=	${TL_DOCDIR} ${TL_EGDIR} ${TL_WEBDIR}/system/config
 OWN_DIRS_PERMS+= \
 		${TL_WEBDIR} ${BINOWN} ${APACHE_GROUP} 0775 \
+		${TL_WEBDIR}/plugins ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/drivers ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/html ${BINOWN} ${APACHE_GROUP} 0770 \
+		${TL_WEBDIR}/system/libraries ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/logs ${BINOWN} ${APACHE_GROUP} 0770 \
 		${TL_WEBDIR}/system/modules ${BINOWN} ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/themes ${BINOWN} ${APACHE_GROUP} 0775 \
