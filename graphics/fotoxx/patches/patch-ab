@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+
+--- zfuncs.cpp.orig	2008-12-05 13:36:40.000000000 +0000
++++ zfuncs.cpp
+@@ -29,10 +29,12 @@ void appcrash(cchar *pMess, ... )
+    
+    printf("appcrash: %s \n",message);
+    
++#ifdef backtrace
+    nstack = backtrace(stacklist,nstack);                                   //  good for g++ -rdynamic    v.16
+    stackents = backtrace_symbols(stacklist,nstack);
+    for (ii = 0; ii < nstack; ii++)
+       printf("function: %s \n",stackents[ii]);
++#endif
+ 
+    abort();                                                                //  good for gdb backtrace    v.16
+ }
