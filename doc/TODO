@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7728 2008/12/09 05:18:35 obache Exp $
+$NetBSD: TODO,v 1.7729 2008/12/09 10:57:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -964,6 +964,7 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php-5.2.8
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
