@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3317 2008/12/09 01:56:32 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3318 2008/12/09 06:57:39 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5493,3 +5493,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.23 [abs 2008-12-08]
 	Added net/barnyard version 0.2.0 [adrianp 2008-12-08]
 	Added graphics/silgraphite version 2.3 [minskim 2008-12-09]
+	Added devel/zzuf version 0.12 [bjs 2008-12-09]
