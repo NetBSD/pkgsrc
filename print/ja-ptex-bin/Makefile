@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/11/10 17:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2008/12/09 19:49:22 minskim Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/tetex/
