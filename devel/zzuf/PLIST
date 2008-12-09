@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 06:56:52 bjs Exp $
+bin/zzuf
+lib/zzuf/libzzuf.la
+man/man1/zzuf.1
+man/man3/libzzuf.3
+@dirrm lib/zzuf
