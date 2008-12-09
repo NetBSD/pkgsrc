@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3322 2008/12/09 10:54:00 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3323 2008/12/09 12:20:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5499,3 +5499,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/mnemosyne to 1.2 [wiz 2008-12-09]
 	Added sysutils/xfce4-volman version 0.2.0 [ahoka 2008-12-09]
 	Added misc/whohas version 0.21 [wiz 2008-12-09]
+	Added math/texdrive version 0.0.20081126.171834 [wiz 2008-12-09]
