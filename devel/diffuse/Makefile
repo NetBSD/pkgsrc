@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/09 14:19:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/09 14:23:31 wiz Exp $
 #
 
 DISTNAME=	diffuse-0.2.15
@@ -19,6 +19,7 @@ INSTALLATION_DIRS+=	share/gnome/help/diffuse
 CONF_FILES+=	${PREFIX}/share/examples/diffuse/diffuserc \
 		${PKG_SYSCONFDIR}/diffuserc
 
+PYTHON_VERSIONS_ACCEPTED=	25 24
 REPLACE_PYTHON=		src/usr/bin/diffuse
 
 SUBST_CLASSES+=		paths
@@ -53,5 +54,6 @@ do-install:
 
 .include "../../lang/python/application.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
+BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.10
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
