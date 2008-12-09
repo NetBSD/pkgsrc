@@ -1,0 +1,11 @@
+whohas is a command line tool that allows querying several package
+lists at once. whohas is written in Perl and was designed to help
+package maintainers find ebuilds, pkgbuilds and similar package
+definitions from other distributions to learn from. However, it
+can also be used by normal users who want to know:
+
+- Which distribution has packages available for apps upon whom the
+user depends.
+
+- What version of a given package is in use in each distribution,
+or in each release of a distribution (implemented only for Debian).
