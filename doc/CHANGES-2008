@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3319 2008/12/09 07:29:27 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3320 2008/12/09 10:16:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5496,3 +5496,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/zzuf version 0.12 [bjs 2008-12-09]
 	Updated www/typolight to 2.6.2nb1 [taca 2008-12-08]
 	Updated www/typolight-translations to 20081202 [taca 2008-12-08]
+	Updated misc/mnemosyne to 1.2 [wiz 2008-12-09]
