@@ -1,0 +1,3 @@
+texdrive is an emacs minor-mode for adding mathematical equations
+to html-pages; things like Euler's identity, Pythagoras theorem
+and so on.

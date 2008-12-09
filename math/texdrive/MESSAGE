@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/12/09 12:19:59 wiz Exp $
+
+You will need to add something like the following to your .emacs file to
+autoload the texdrive minor mode for Emacs:
+
+  (require 'texdrive)
+
+Then enable the mode when you want to use it with
+
+  (texdrive-mode)
+
+===========================================================================
