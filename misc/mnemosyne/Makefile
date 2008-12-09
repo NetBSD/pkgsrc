@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/12/09 10:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/09 15:08:09 taca Exp $
 #
 
 DISTNAME=	mnemosyne-1.2
 CATEGORIES=	misc
-MASTER_SITES=	http://downloads.sourceforge.net/mnemosyne-proj/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mnemosyne-proj/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
