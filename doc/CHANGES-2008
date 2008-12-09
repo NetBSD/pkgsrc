@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3326 2008/12/09 15:13:01 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3327 2008/12/09 19:47:30 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5504,3 +5504,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/xdg-utils version 1.0.2 [wiz 2008-12-09]
 	Added graphics/fotoxx version 5.7.1 [wiz 2008-12-09]
 	Removed graphics/fotox successor graphics/fotoxx [wiz 2008-12-09]
+	Updated print/teTeX3-bin to 3.0nb21 [minskim 2008-12-09]
