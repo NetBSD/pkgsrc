@@ -1,0 +1,24 @@
+The xdg-utils package is a set of simple scripts that provide basic
+desktop integration functions for any Free Desktop, such as Linux.
+
+They are intended to provide a set of defacto standards. This means
+that:
+
+* Third party software developers can rely on these xdg-utils for
+all of their simple integration needs.
+
+* Developers of desktop environments can make sure that their
+environments are well supported
+
+If a desktop developer wants to be certain that their environment
+functions with all third party software, then can simply make sure
+that these utilities work properly in their environment.  This will
+hopefully mean that 'third tier' window managers such as XFCE and
+Blackbox can reach full parity with Gnome and KDE in terms of third
+party ISV support.
+
+* Distribution vendors can provide custom versions of these utilities
+
+If a distribution vendor wishes to have unusual systems, they can
+provide custom scripts, and the third party software should still
+continue to work.
