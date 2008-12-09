@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2007/09/05 18:58:19 shannonjr Exp $
+# $NetBSD: options.mk,v 1.9 2008/12/09 11:58:59 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libprelude
 PKG_SUPPORTED_OPTIONS=	perl python
@@ -15,10 +15,11 @@ PKG_OPTIONS.libprelude?=
 PLIST_SRC=		${PKGDIR}/PLIST
 
 .if !empty(PKG_OPTIONS:Mperl)
-CONFIGURE_ARGS+=	--with-perl=${PERL5:Q}
+CONFIGURE_ARGS+=	--with-perl=${PERL5:Q} --with-perl-installdirs=vendor
 USE_TOOLS+=		perl:run
-PLIST_SRC+=		${PKGDIR}/PLIST.perl
-.include "../../lang/perl5/buildlink3.mk"
+PERL5_PACKLIST=		auto/Prelude/.packlist
+PERL5_CONFIGURE=	no
+.include "../../lang/perl5/module.mk"
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif
