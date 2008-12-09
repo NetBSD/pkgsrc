@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+
+--- zfuncs.h.orig	2008-12-05 13:36:40.000000000 +0000
++++ zfuncs.h
+@@ -17,7 +17,7 @@
+ #include <pthread.h>
+ #include <errno.h>
+ #include <signal.h>
+-#include <execinfo.h>
++#include <sys/wait.h>
+ 
+ #include <libintl.h>                                                       //  gettext   v.2.9
+ #include <locale.h>
