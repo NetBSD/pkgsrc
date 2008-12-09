@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.499 2008/12/09 01:56:32 minskim Exp $
+# $NetBSD: Makefile,v 1.500 2008/12/09 15:11:59 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -79,7 +79,7 @@ SUBDIR+=	feh
 SUBDIR+=	flphoto
 SUBDIR+=	fly
 SUBDIR+=	fnlib
-SUBDIR+=	fotox
+SUBDIR+=	fotoxx
 SUBDIR+=	freeglut
 SUBDIR+=	freetype
 SUBDIR+=	freetype-lib
