@@ -1,0 +1,114 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+bin/fotoxx
+share/doc/fotoxx/CHANGES
+share/doc/fotoxx/COPYING
+share/doc/fotoxx/README
+share/doc/fotoxx/TRANSLATIONS
+share/doc/fotoxx/images/HDR-fr.jpg
+share/doc/fotoxx/images/de-noise.jpg
+share/doc/fotoxx/images/defog-fr.jpg
+share/doc/fotoxx/images/edit-tags-fr.jpg
+share/doc/fotoxx/images/lens-adjust-fr.jpg
+share/doc/fotoxx/images/navigation-fr.jpg
+share/doc/fotoxx/images/pano-adjust-fr.jpg
+share/doc/fotoxx/images/pano-prealign-fr.jpg
+share/doc/fotoxx/images/redeye-fr.jpg
+share/doc/fotoxx/images/rotate-fr.jpg
+share/doc/fotoxx/images/search-tags-fr.jpg
+share/doc/fotoxx/images/sharpen1.jpg
+share/doc/fotoxx/images/stretch2.jpg
+share/doc/fotoxx/images/toolbar-en.jpg
+share/doc/fotoxx/images/toolbar-fr.jpg
+share/doc/fotoxx/images/toolbar-gl.jpg
+share/doc/fotoxx/images/tune-fr.jpg
+share/doc/fotoxx/images/unbend.jpg
+share/doc/fotoxx/userguide-en.html
+share/doc/fotoxx/userguide-fr.html
+share/doc/fotoxx/userguide-gl.html
+share/fotoxx/icons/RGB.png
+share/fotoxx/icons/bigger.png
+share/fotoxx/icons/file.png
+share/fotoxx/icons/first-page.png
+share/fotoxx/icons/folder.png
+share/fotoxx/icons/folder128.png
+share/fotoxx/icons/folder256.png
+share/fotoxx/icons/fotoxx.png
+share/fotoxx/icons/index.png
+share/fotoxx/icons/kill.png
+share/fotoxx/icons/last-page.png
+share/fotoxx/icons/logo.png
+share/fotoxx/icons/m-about.png
+share/fotoxx/icons/m-blur.png
+share/fotoxx/icons/m-changelog.png
+share/fotoxx/icons/m-clone.png
+share/fotoxx/icons/m-color-depth.png
+share/fotoxx/icons/m-color-inten.png
+share/fotoxx/icons/m-create-thumbs.png
+share/fotoxx/icons/m-errorlog.png
+share/fotoxx/icons/m-exif.png
+share/fotoxx/icons/m-flatten.png
+share/fotoxx/icons/m-hdr.png
+share/fotoxx/icons/m-montest.png
+share/fotoxx/icons/m-noise.png
+share/fotoxx/icons/m-open.png
+share/fotoxx/icons/m-pano.png
+share/fotoxx/icons/m-params.png
+share/fotoxx/icons/m-print.png
+share/fotoxx/icons/m-quit.png
+share/fotoxx/icons/m-readme.png
+share/fotoxx/icons/m-redeye.png
+share/fotoxx/icons/m-resize.png
+share/fotoxx/icons/m-rgb-spread.png
+share/fotoxx/icons/m-rotate.png
+share/fotoxx/icons/m-save.png
+share/fotoxx/icons/m-select.png
+share/fotoxx/icons/m-sharpen.png
+share/fotoxx/icons/m-slideshow.png
+share/fotoxx/icons/m-tags.png
+share/fotoxx/icons/m-trash.png
+share/fotoxx/icons/m-trim.png
+share/fotoxx/icons/m-tune.png
+share/fotoxx/icons/m-unbend.png
+share/fotoxx/icons/m-userguide.png
+share/fotoxx/icons/m-warp.png
+share/fotoxx/icons/next-page.png
+share/fotoxx/icons/next-row.png
+share/fotoxx/icons/next.png
+share/fotoxx/icons/prev-page.png
+share/fotoxx/icons/prev-row.png
+share/fotoxx/icons/prev.png
+share/fotoxx/icons/print.png
+share/fotoxx/icons/quit.png
+share/fotoxx/icons/redo.png
+share/fotoxx/icons/save.png
+share/fotoxx/icons/select.png
+share/fotoxx/icons/smaller.png
+share/fotoxx/icons/trash.png
+share/fotoxx/icons/undo.png
+share/fotoxx/icons/zoomin.png
+share/fotoxx/icons/zoomout.png
+share/fotoxx/locales/de/fotoxx.po
+share/fotoxx/locales/de/fotoxx.po.old
+share/fotoxx/locales/de/zfuncs.po
+share/fotoxx/locales/el/fotoxx.po
+share/fotoxx/locales/el/zfuncs.po
+share/fotoxx/locales/es/fotoxx.po
+share/fotoxx/locales/es/zfuncs.po
+share/fotoxx/locales/fr/fotoxx.po
+share/fotoxx/locales/fr/stan1125.po
+share/fotoxx/locales/fr/zfuncs.po
+share/fotoxx/locales/gl/fotoxx.po
+share/fotoxx/locales/gl/zfuncs.po
+share/fotoxx/locales/it/fotoxx.po
+share/fotoxx/locales/it/zfuncs.po
+@dirrm share/fotoxx/locales/it
+@dirrm share/fotoxx/locales/gl
+@dirrm share/fotoxx/locales/fr
+@dirrm share/fotoxx/locales/es
+@dirrm share/fotoxx/locales/el
+@dirrm share/fotoxx/locales/de
+@dirrm share/fotoxx/locales
+@dirrm share/fotoxx/icons
+@dirrm share/fotoxx
+@dirrm share/doc/fotoxx/images
+@dirrm share/doc/fotoxx

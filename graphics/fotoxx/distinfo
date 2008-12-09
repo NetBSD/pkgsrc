@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+
+SHA1 (fotoxx-5.7.1.tar.gz) = 44abbd2aab0454448f63e9960a40926068aefa76
+RMD160 (fotoxx-5.7.1.tar.gz) = 34a61ecbba851a16c695ed86dc5dd8171dd18796
+Size (fotoxx-5.7.1.tar.gz) = 924376 bytes
+SHA1 (patch-aa) = 2f5b2b650c557296f073d816e9c12998e7f874ad
+SHA1 (patch-ab) = 45705b890257cd34571e4896494ee0d643bdf168
+SHA1 (patch-ac) = e213a84e029d51af8e672da8b58945c3f32bc5c2
