@@ -1,0 +1,9 @@
+Graphite is a project under development within SIL's Non-Roman Script
+Initiative and Language Software Development groups to provide
+rendering capabilities for complex non-Roman writing systems.
+
+Its smart-font engine is the bit that takes a Unicode string, font
+formatting information (features, size, etc.), and a font, and returns
+a set of positioned glyphs.  Graphite also does more than this, in
+that it can handle cursor tracking and interaction with the
+application for string selection, etc.
