@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/12/09 07:24:14 tonnerre Exp $
+
+--- Object.xs.orig	2008-10-12 23:06:28.000000000 +0200
++++ Object.xs
+@@ -342,7 +342,7 @@ _dispel_magic(ISET* s, SV* sv) {
+        I32 i = AvFILLp(wand);
+        int c = 0;
+ 
+-       assert( SvTYPE(want) == SVt_PVAV );
++       assert( SvTYPE(wand) == SVt_PVAV );
+ 
+        while (i >= 0) {
+ 	 if (svp[i] && SvIV(svp[i])) {
