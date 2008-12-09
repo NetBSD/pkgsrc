@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/09 06:56:52 bjs Exp $
+
+SHA1 (zzuf-0.12.tar.gz) = 13a5abecf585f4da893f0592485f9e50fb42ad71
+RMD160 (zzuf-0.12.tar.gz) = 2eb81c4136b2f44f012eec34484197138aed8684
+Size (zzuf-0.12.tar.gz) = 446043 bytes
+SHA1 (patch-aa) = 73c4d388d2936f4f654d1b34d464920c583ad6e0
