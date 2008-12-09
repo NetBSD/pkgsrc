@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+
+--- Makefile.orig	2008-12-05 13:36:40.000000000 +0000
++++ Makefile
+@@ -18,7 +18,7 @@ DATADIR = $(PREFIX)/share/$(PROGRAM)
+ 
+ 
+ $(PROGRAM): $(PROGRAM).o zfuncs.o
+-	@g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o
++	@g++ $(LFLAGS) -o $(PROGRAM) $(PROGRAM).o zfuncs.o -lcompat
+ 
+ $(PROGRAM).o: $(SOURCE) zfuncs.h
+ 	@g++ $(CFLAGS) -o $(PROGRAM).o $(SOURCE)		\
