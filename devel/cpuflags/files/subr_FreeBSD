@@ -1,4 +1,4 @@
-# $NetBSD: subr_FreeBSD,v 1.2 2007/08/27 10:08:29 abs Exp $
+# $NetBSD: subr_FreeBSD,v 1.3 2008/12/10 23:27:17 abs Exp $
 
 AWK=awk
 SED=sed
@@ -38,7 +38,7 @@ determine_arch()
 	Pentium\ II*)			ARCH='-march=pentium2'		;;
 	Intel\ Pentium\ III\ *)		ARCH='-march=pentium3'		;;
 	Intel\ Pentium\ 4\ *)		ARCH='-march=pentium4'		;;
-	Intel\ Core2\ *)		ARCH='-march=prescott'		;;
+	Intel\ Core2\ *)		ARCH='-march=core2'		;;
 	AMD\ Athlon\ XP*)		ARCH='-march=athlon-xp'		;;
 	AMD\ Sempron\ Processor\ *)	ARCH='-march=athlon-xp'		;;
 	# last resort:

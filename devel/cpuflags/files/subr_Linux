@@ -1,4 +1,4 @@
-# $NetBSD: subr_Linux,v 1.1 2007/08/20 11:21:21 abs Exp $
+# $NetBSD: subr_Linux,v 1.2 2008/12/10 23:27:17 abs Exp $
 
 AWK=awk
 SED=sed
@@ -32,37 +32,29 @@ determine_arch()
 	parisc) case $hw_model in
 	    "Mirage 100+")			ARCH='-march=1.1'	;;
 	esac ;;
-	i386)				ARCH='-march=i386'	;;
-	i486)				ARCH='-march=i486'	;;
-	i586)				ARCH='-march=pentium'	;;
-	i686) case $hw_model in
+	i386)					ARCH='-march=i386'	;;
+	i486)					ARCH='-march=i486'	;;
+	i586)					ARCH='-march=pentium'	;;
+	i686 | x86_64)
+	include subr_x86	# this provides map_x86_brand_string()
+	ARCH=$(map_x86_brand_string "$cpu_brand")
+	if [ -z "$ARCH" ] ; then
+	case $hw_model in
 	    "AMD Athlon(TM) XP "*)		ARCH='-march=athlon-xp'	;;
-	    "AMD Athlon(tm) XP"*)		ARCH='-march=athlon-xp'	;;
-	    "AMD Duron(TM)")		ARCH='-march=athlon'	;;
-	    "AMD Duron(tm) ")		ARCH='-march=athlon'	;;
-	    "Pentium II (Deschutes)")	ARCH='-march=pentium2'	;;
-	    "Celeron (Coppermine)")		ARCH='-march=pentium3'	;;
-	    "Intel(R) Pentium(R) 4 CPU "*)	ARCH='-march=pentium4'	;;
-	    "Intel(R) Pentium(R) III Mobile CPU"*) ARCH='-march=pentium3m' ;;
-	    "Intel(R) Pentium(R) M processor"*) ARCH='-march=pentium3m'	;;
-	    "Mobile Intel(R) Pentium(R) 4 - M "*) ARCH='-march=pentium4m' ;;
-	    "Pentium III (Coppermine)")	ARCH='-march=pentium3'	;;
-	    "Pentium III (Katmai)")		ARCH='-march=pentium3'	;;
-	    "AMD Athlon(tm) 64"*)		ARCH='-march=athlon-xp'	;;
-	    "AMD Opteron(tm) Processor "*)	ARCH='-march=opteron'	;;
-	    "Intel(R) Celeron(R) CPU "* | "Intel(R) Xeon(TM) CPU "*)
-		case "$feat_flags" in
-		    *" sse2 "*)
-					    ARCH='-march=pentium4'	;;
-		esac;;
-	    "AMD Sempron(tm) Processor "*)	ARCH='-march=athlon-xp'	;;
-	    "Intel(R) Core(TM)2 CPU "*)	ARCH='-march=prescott'	;;
-	esac ;;
-	x86_64) case $hw_model in
-	    "AMD Sempron(tm) Processor "*)	ARCH='-march=athlon64'	;;
 	    "AMD Athlon(tm) 64"*)		ARCH='-march=athlon64'	;;
-	    "Intel(R) Core(TM)2 CPU "*)	ARCH='-march=nocona'	;;
-	esac ;;
+	    "AMD Athlon(tm) XP"*)		ARCH='-march=athlon-xp'	;;
+	    "AMD Duron(TM)")			ARCH='-march=athlon'	;;
+	    "AMD Duron(tm) ")			ARCH='-march=athlon'	;;
+	    "AMD Opteron(tm) Processor "*)	ARCH='-march=opteron'	;;
+	    "AMD Sempron(tm) Processor "*)	ARCH='-march=athlon-xp'	;;
+
+	    # Intel PIII & earlier - later Intel handled by map_x86_brand_string
+	    "Celeron (Coppermine)")		ARCH='-march=pentium3'	;;
+	    "Pentium II (Deschutes)")		ARCH='-march=pentium2'	;;
+	    "Pentium III (Coppermine)")		ARCH='-march=pentium3'	;;
+	    "Pentium III (Katmai)")		ARCH='-march=pentium3'	;;
+	esac
+	fi ;;
     esac
     echo $ARCH
     }
