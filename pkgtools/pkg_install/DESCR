@@ -5,6 +5,8 @@ from around the globe.
 
 The following tools are included:
 
+audit-packages	audit installed packages for security vulnerabilities
+download-vulnerability-list	download the latest vulnerabilities list
 pkg_add		install and upgrade binary packages
 pkg_admin	perform various pkgsrc administrative tasks
 pkg_create	create software package distributions
