@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3340 2008/12/10 21:25:29 he Exp $
+$NetBSD: CHANGES-2008,v 1.3341 2008/12/10 23:12:43 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5522,3 +5522,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Email-Abstract to 3.000 [rhaen 2008-12-10]
 	Updated net/p5-Net-Jifty to 0.08 [rhaen 2008-12-10]
 	Updated lang/php5 to 5.2.8 [adrianp 2008-12-10]
+	Updated lang/guile to 1.8.6 [gdt 2008-12-10]
