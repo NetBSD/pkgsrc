@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3341 2008/12/10 23:12:43 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.3342 2008/12/10 23:27:47 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5523,3 +5523,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Net-Jifty to 0.08 [rhaen 2008-12-10]
 	Updated lang/php5 to 5.2.8 [adrianp 2008-12-10]
 	Updated lang/guile to 1.8.6 [gdt 2008-12-10]
+	Updated devel/cpuflags to 1.24 [abs 2008-12-10]
