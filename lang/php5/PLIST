@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/12/08 14:52:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/12/10 19:37:01 adrianp Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -87,7 +87,6 @@ include/php/ext/pcre/pcrelib/pcre.h
 include/php/ext/pcre/pcrelib/pcre_internal.h
 include/php/ext/pcre/pcrelib/pcreposix.h
 include/php/ext/pcre/pcrelib/ucp.h
-include/php/ext/pcre/pcrelib/ucpinternal.h
 include/php/ext/pcre/pcrelib/ucptable.h
 include/php/ext/pcre/php_pcre.h
 include/php/ext/session/mod_files.h
