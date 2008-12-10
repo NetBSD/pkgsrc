@@ -1,4 +1,25 @@
-# $NetBSD: subr_x86,v 1.2 2007/08/27 10:09:22 abs Exp $
+# $NetBSD: subr_x86,v 1.3 2008/12/10 23:27:17 abs Exp $
+
+# Apparently the only way to reliably determine the architecture of a recent
+# Intel CPU is to use the cpu brand string - as they reused family and
+# extended family bitflags... annoying
+map_x86_brand_string()
+    {
+    case "$1" in
+	"Genuine Intel(R) CPU           T2400"*) echo '-march=core2' ;;
+	"Intel(R) Celeron(R) CPU        E1400"*) echo '-march=core2' ;;
+	"Intel(R) Celeron(R) CPU 2.40GHz")	echo '-march=pentium4' ;;
+	"Intel(R) Core(TM)2 CPU "*) 		echo '-march=core2' ;;
+	"Intel(R) Core(TM)2 Duo CPU "*)		echo '-march=core2' ;;
+	"Intel(R) Core(TM)2 Quad  CPU"*)	echo '-march=core2' ;;
+	"Intel(R) Pentium(R) 4 CPU 3.00GHz")	echo '-march=prescott' ;;
+	"Intel(R) Pentium(R) D CPU "*)		echo '-march=prescott' ;;
+	"Intel(R) Xeon(R) CPU            3040"*) echo '-march=core2' ;;
+	"Intel(R) Xeon(R) CPU            3050"*) echo '-march=core2' ;;
+	"Pentium(R) Dual-Core  CPU      E5200"*) echo '-march=core2' ;;
+
+    esac
+    }
 
 flags_fixup_x86arch()
     {

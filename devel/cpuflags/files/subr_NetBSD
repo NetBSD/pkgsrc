@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.7 2008/12/08 19:46:59 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.8 2008/12/10 23:27:17 abs Exp $
 
 AWK=awk
 SED=sed
@@ -12,13 +12,14 @@ hw.model	: '$hw_model'
 hw.machine	: '$hw_machine'
 hw.machine_arch : '$hw_machine_arch'
 CPU		: '$cpu'
-$cpu_details
 END
+    extract_x86_cpu_vars
+    echo "$cpu_details"
     }
 
 extract_hw_details()
     {
-    hw_model=$(sysctl -n hw.model | sed 's/^  *//')
+    hw_model=$(sysctl -n hw.model | $SED 's/^  *//')
     hw_machine=$(sysctl -n hw.machine)
     hw_machine_arch=$(sysctl -n hw.machine_arch)
     if [ "$hw_machine_arch" = i386 -o "$hw_machine_arch" = x86_64 ] ; then
@@ -27,7 +28,7 @@ extract_hw_details()
 	else
 	    cpu_details="$(grep ^cpu0: /var/run/dmesg.boot)"
 	fi
-	cpu=$(echo "$cpu_details"|awk '/cpu0:/{sub("cpu0: ","");print;exit}')
+	eval $(extract_x86_cpu_vars)
     fi
 
     # We're almost certainly crosscompiling
@@ -35,6 +36,23 @@ extract_hw_details()
 	echo
 	exit
     fi
+    }
+
+extract_x86_cpu_vars()
+    {
+    # Set: cpu_feature_FOO=1 for each 'FOO' feature reported
+    #      cpu_name="NAME" taken from the first cpu0: line
+    #      cpu_brand="BRAND" the CPU branding string
+    echo "$cpu_details" | $AWK -F , '
+    { if (/cpu0:/ && !n) { sub("cpu0: ",""); n=1; print "cpu_name=\""$0"\"" } }
+    /cpu0: ".*"/ { sub("[^\"]*", ""); print "cpu_brand="$0 }
+    /cpu0: features/ {
+	sub(".*<","");
+	sub(">.*","");
+	gsub("[^,A-Z0-9]","_");
+	for (i = 1; i < NR; i++) { print "cpu_feature_"$i"=1" }
+	}
+    '
     }
 
 determine_arch()
@@ -91,28 +109,30 @@ determine_arch()
 	;;
 
     i386 | x86_64)
-	case "$cpu" in
+	include subr_x86	# this provides map_x86_brand_string()
+	ARCH=$(map_x86_brand_string "$cpu_brand")
+	if [ -z "$ARCH" ] ; then
+	case "$cpu_name" in
 	'AMD Athlon 64 X2 (686-class)'*)	   ARCH='-march=athlon64' ;;
 	'AMD Athlon 64 or Athlon 64 FX or Opteron '*) ARCH='-march=opteron' ;;
 	'AMD Athlon 64 or Sempron (686-class)'*)   ARCH='-march=athlon64' ;;
 	'AMD Athlon Model 4 (Thunderbird) '*)	   ARCH='-march=athlon-tbird' ;;
 	'AMD Dual-Core Opteron or Athlon 64 X2 '*) ARCH='-march=opteron' ;;
 	'AMD Family 10h (686-class)'*)   	   ARCH='-march=amdfam10' ;;
+	'AMD K6-2 (586-class)'*) 		   ARCH="-march=k6-2" ;;
+
+	# Intel PIII & earlier - later Intel handled by map_x86_brand_string
 	'Intel (686-class)'*)			   ARCH='-march=pentiumpro' ;;
-	'Intel Celeron (686-class)'*)		   ARCH='-march=pentiumpro' ;;
-	'Intel Core 2 (Merom) (686-class)'*)	   ARCH='-march=core2' ;;
-	'Intel Pentium 4 (686-class)'*)		   ARCH='-march=pentium4' ;;
 	'Intel Pentium II (686-class)'*)	   ARCH='-march=pentium2' ;;
 	'Intel Pentium III (686-class)'*)	   ARCH='-march=pentium3' ;;
 	'Intel Pentium III (Katmai) (686-class)'*) ARCH='-march=pentium3' ;;
 	'Intel Pentium III Xeon (686-class)'*)	   ARCH='-march=pentium3' ;;
-	'Intel Pentium M (Dothan) (686-class)'*)   ARCH='-march=pentium-m' ;;
-	'Intel Pentium M (Yonah) (686-class)'*)	   ARCH='-march=pentium-m' ;;
 
 	# Fallback classes
 	*'(586-class)'*)			   ARCH='-march=pentium' ;;
 	*'(486-class)'*)			   ARCH='-march=i486' ;;
 	esac
+	fi
 	;;
 
     m68k) case $hw_model in				   # Examples
@@ -196,14 +216,6 @@ determine_features()
 
     case $hw_machine_arch in
 	i386 | x86_64)
-	    # Set cpu_feature_FOO=1 for each 'FOO' feature reported
-	    eval $(echo "$cpu_details" | awk -F , '
-	    /cpu0: features/ {
-		sub(".*<","");
-		sub(">.*","");
-		gsub("[^,A-Z0-9]","_");
-		for (i = 1; i < NR; i++) { print "cpu_feature_"$i"=1" } }
-		')
 	    if [ -n "$cpu_feature_SSE3" ] ; then
 		FEATURES="-mfpmath=sse -msse3"
 	    elif [ -n "$cpu_feature_SSE2" ] ; then
