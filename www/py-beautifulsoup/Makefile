@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2008/09/05 15:46:51 darcy Exp $
-# FreeBSD Id: ports/www/py-beautifulsoup/Makefile,v 1.6 2008/02/15 01:22:48 lwhsu Exp
+# $NetBSD: Makefile,v 1.2 2008/12/10 12:32:09 wiz Exp $
+#
 
 DISTNAME=	BeautifulSoup-3.0.7a
-PKGNAME=	${PYTHON_PKGNAMEPREFIX}beautifulsoup-3.0.7a
+PKGNAME=	${PYPKGPREFIX}-beautifulsoup-3.0.7a
 CATEGORIES=	www python
 MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/download/
 
