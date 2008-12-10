@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3337 2008/12/10 16:59:02 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.3338 2008/12/10 17:13:30 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5516,3 +5516,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Simple to 0.86 [rhaen 2008-12-10]
 	Updated misc/p5-Business-ISBN-Data to 20081208 [rhaen 2008-12-10]
 	Updated mail/p5-Email-Abstract to 3.000 [rhaen 2008-12-10]
+	Updated net/p5-Net-Jifty to 0.08 [rhaen 2008-12-10]
