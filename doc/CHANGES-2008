@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3342 2008/12/10 23:27:47 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3343 2008/12/10 23:41:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5524,3 +5524,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/php5 to 5.2.8 [adrianp 2008-12-10]
 	Updated lang/guile to 1.8.6 [gdt 2008-12-10]
 	Updated devel/cpuflags to 1.24 [abs 2008-12-10]
+	Updated geography/postgresql81-postgis to 1.3.4 [gdt 2008-12-10]
