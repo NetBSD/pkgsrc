@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3335 2008/12/10 16:53:41 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.3336 2008/12/10 16:56:45 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5514,3 +5514,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/py-sip to 4.7.9 [wiz 2008-12-10]
 	Updated devel/p5-Log-Dispatch to 2.22 [rhaen 2008-12-10]
 	Updated devel/p5-Test-Simple to 0.86 [rhaen 2008-12-10]
+	Updated misc/p5-Business-ISBN-Data to 20081208 [rhaen 2008-12-10]
