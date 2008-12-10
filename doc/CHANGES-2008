@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3332 2008/12/10 00:48:38 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3333 2008/12/10 00:55:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5511,3 +5511,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-CatalystX-CRUD to 0.37 [seb 2008-12-09]
 	Added games/LostPixels version 0.5.3 [wiz 2008-12-10]
 	Updated graphics/GraphicsMagick to 1.3.3 [obache 2008-12-10]
+	Updated x11/py-sip to 4.7.9 [wiz 2008-12-10]
