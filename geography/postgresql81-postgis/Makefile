@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/10/17 23:42:19 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2008/12/10 23:41:20 gdt Exp $
 
 DISTNAME=		postgis-${VERSION}
-VERSION=		1.3.3
+VERSION=		1.3.4
 PKGNAME=		postgresql81-postgis-${VERSION}
 MASTER_SITES=		http://postgis.refractions.net/download/
 CATEGORIES=		databases geography
@@ -50,6 +50,8 @@ do-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/*.txt ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/doc/html && pax -rw -pp *.html *.css ${DESTDIR}${HTMLDIR}
 	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
+TEST_TARGET=		check
 
 DEPENDS+=	postgresql81-server>=8.1:../../databases/postgresql81-server
 
