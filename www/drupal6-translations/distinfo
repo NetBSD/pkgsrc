@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2008/10/12 13:05:01 taca Exp $
+$NetBSD: distinfo,v 1.9 2008/12/11 16:26:49 taca Exp $
 
 SHA1 (drupal6-20080816/cs-6.x-1.9.tar.gz) = 1e200bacc0463366e39e9df736c15a7255671cce
 RMD160 (drupal6-20080816/cs-6.x-1.9.tar.gz) = de2453f564262cab830dc291fc91ccfa62c9de35
@@ -12,9 +12,9 @@ Size (drupal6-20080816/de-6.x-1.0-rc1.tar.gz) = 222894 bytes
 SHA1 (drupal6-20080816/el-6.x-1.0-beta1.tar.gz) = 08307e0542ce3464611ed6f169192967511d2481
 RMD160 (drupal6-20080816/el-6.x-1.0-beta1.tar.gz) = 9dd346d2fea40fcf2334289e7bb23c5c67f09b1e
 Size (drupal6-20080816/el-6.x-1.0-beta1.tar.gz) = 247012 bytes
-SHA1 (drupal6-20080816/es-6.x-1.0.tar.gz) = 120aacdffc658c3e9cd91ff9052ddb9d7725073a
-RMD160 (drupal6-20080816/es-6.x-1.0.tar.gz) = 18167a81ae6a236891388baed829ba51f607b542
-Size (drupal6-20080816/es-6.x-1.0.tar.gz) = 349846 bytes
+SHA1 (drupal6-20080816/es-6.x-1.2.tar.gz) = 8e044871a2b1f182a1c527e7ba8d354bb810a1f5
+RMD160 (drupal6-20080816/es-6.x-1.2.tar.gz) = 75f59aeb0a936b8f814652cee1f4a036c2543bd1
+Size (drupal6-20080816/es-6.x-1.2.tar.gz) = 350926 bytes
 SHA1 (drupal6-20080816/fi-6.x-1.0.tar.gz) = 8c4de208ec46dcab237e81e8e022d436ff5bfe5e
 RMD160 (drupal6-20080816/fi-6.x-1.0.tar.gz) = e8aa2b53664de785aa7891fc3d2d6b15da4b0fcb
 Size (drupal6-20080816/fi-6.x-1.0.tar.gz) = 214961 bytes
@@ -27,6 +27,9 @@ Size (drupal6-20080816/he-6.x-1.0.tar.gz) = 139027 bytes
 SHA1 (drupal6-20080816/hu-6.x-1.0.tar.gz) = 2ebc346c8d043e517d4ae277ea7243110044f248
 RMD160 (drupal6-20080816/hu-6.x-1.0.tar.gz) = 03e433a3b27ee5cbabe2085fda9c22981fc6fd0b
 Size (drupal6-20080816/hu-6.x-1.0.tar.gz) = 219618 bytes
+SHA1 (drupal6-20080816/it-6.x-1.4.tar.gz) = 067e4475271685b0c4a556840e25567099686d8e
+RMD160 (drupal6-20080816/it-6.x-1.4.tar.gz) = b76a60408f40451acce30ce3462267e362449f21
+Size (drupal6-20080816/it-6.x-1.4.tar.gz) = 206120 bytes
 SHA1 (drupal6-20080816/ja-6.x-1.2.tar.gz) = 7320e657e443bbd1e78b8e732e3c8128ff44d869
 RMD160 (drupal6-20080816/ja-6.x-1.2.tar.gz) = 459d899f5370c22ac0e647240a447eba23f20a5f
 Size (drupal6-20080816/ja-6.x-1.2.tar.gz) = 233354 bytes
