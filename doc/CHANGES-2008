@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3358 2008/12/11 17:36:16 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.3359 2008/12/11 17:41:38 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5542,3 +5542,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight to 2.6.2nb2 [taca 2008-12-11]
 	Updated geography/geos to 3.0.3 [gdt 2008-12-11]
 	Updated graphics/gtkimageview to 1.6.3 [gdt 2008-12-11]
+	Updated databases/p5-Catalyst-Model-RDBO to 0.07 [rhaen 2008-12-11]
