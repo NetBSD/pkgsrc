@@ -27,6 +27,7 @@
 #include <unistd.h>
 #include <sys/fdio.h>
 #include <sys/statvfs.h>
+#include <sys/syslog.h>
 
 #include <sys/scsiio.h>
 #include <dev/scsipi/scsi_spc.h>
@@ -288,17 +289,23 @@ main (int argc, char *argv[])
 	const char *scheme = "";
 	LibHalChangeSet *cs = NULL;
 
+	HAL_INFO(("f0"));
 	if ((udi = getenv ("UDI")) == NULL)
 		goto out;
+	HAL_INFO(("f0-1"));
 	if ((device_file = getenv ("HAL_PROP_BLOCK_DEVICE")) == NULL)
 		goto out;
-	if ((raw_device_file = getenv ("HAL_PROP_BLOCK_SOLARIS_RAW_DEVICE")) == NULL)
+	HAL_INFO(("f0-2"));
+	if ((raw_device_file = getenv ("HAL_PROP_BLOCK_NETBSD_RAW_DEVICE")) == NULL)
 		goto out;
+	HAL_INFO(("f0-3"));
 	if ((bus = getenv ("HAL_PROP_STORAGE_BUS")) == NULL)
 		goto out;
+	HAL_INFO(("f0-4"));
 	if ((drive_type = getenv ("HAL_PROP_STORAGE_DRIVE_TYPE")) == NULL)
 		goto out;
 
+	HAL_INFO(("f1"));
 	setup_logger ();
 
 	if (argc == 2 && strcmp (argv[1], "--only-check-for-media") == 0)
@@ -309,14 +316,18 @@ main (int argc, char *argv[])
 	is_cdrom = (strcmp (drive_type, "cdrom") == 0);
 	is_floppy = (strcmp (drive_type, "floppy") == 0);
 
+	HAL_INFO(("f2"));
 	dbus_error_init (&error);
+	HAL_INFO(("f3"));
 	if ((ctx = libhal_ctx_init_direct (&error)) == NULL)
 		goto out;
 
+	HAL_INFO(("f4"));
 	if ((cs = libhal_device_new_changeset (udi)) == NULL) {
 		HAL_DEBUG (("Cannot allocate changeset"));
 		goto out;
 	}
+	HAL_INFO(("f5"));
 
 	HAL_DEBUG (("Doing probe-storage for %s (bus %s) (drive_type %s) (udi=%s) (--only-check-for-media==%d)", 
 	     device_file, bus, drive_type, udi, only_check_for_media));
