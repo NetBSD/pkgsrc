@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/06 00:59:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/11 00:21:57 ahoka Exp $
 #
 
 DISTNAME=	hamster-applet-2.24.2
@@ -26,6 +26,7 @@ SUBST_FILES.python=	hamster/hamster-applet.py
 SUBST_SED.python=	-e 's@/usr/bin/env python@${PYTHONBIN}@g'
 
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/pyversion.mk"
 
 .if ${PYPKGPREFIX} == "py24"
 .include "../../databases/py-sqlite2/buildlink3.mk"
