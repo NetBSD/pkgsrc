@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/11 10:33:56 wiz Exp $
+bin/stegavorto
+share/stegavorto/data/FreeMonoBold.ttf
+share/stegavorto/data/alpha_corner.png
+share/stegavorto/data/author_bierce.jpg
+share/stegavorto/data/author_carroll.jpg
+share/stegavorto/data/author_neruda.jpg
+share/stegavorto/data/author_twain.jpg
+share/stegavorto/data/icon.png
+share/stegavorto/data/impatience.txt
+share/stegavorto/data/intro.txt
+share/stegavorto/data/levels.txt
+share/stegavorto/data/names.txt
+share/stegavorto/data/sfx_cheer.ogg
+share/stegavorto/data/sfx_select.ogg
+share/stegavorto/data/song_my_life_changed.ogg
+share/stegavorto/data/story_and_because_love_battles.txt.bz2
+share/stegavorto/data/story_present_at_a_hanging_and_other_ghost_stories.txt.bz2
+share/stegavorto/data/story_the_innocents_abroad.txt.bz2
+share/stegavorto/data/story_through_the_looking_glass.txt.bz2
+share/stegavorto/data/victory_hibiscus.png
+share/stegavorto/data/words_long.txt
+share/stegavorto/data/words_med.txt
+share/stegavorto/data/words_short.txt
+share/stegavorto/data/yay_kitten_01.jpg
+share/stegavorto/data/yay_kitten_02.jpg
+share/stegavorto/data/yay_kitten_03.jpg
+share/stegavorto/data/yay_kitten_04.jpg
+share/stegavorto/data/yay_kitten_05.jpg
+share/stegavorto/data/yay_kitten_06.jpg
+share/stegavorto/stegavorto.py
+@dirrm share/stegavorto/data
+@dirrm share/stegavorto
