@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3359 2008/12/11 17:41:38 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.3360 2008/12/11 19:53:16 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5543,3 +5543,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated geography/geos to 3.0.3 [gdt 2008-12-11]
 	Updated graphics/gtkimageview to 1.6.3 [gdt 2008-12-11]
 	Updated databases/p5-Catalyst-Model-RDBO to 0.07 [rhaen 2008-12-11]
+	Added www/webkit-gtk version 1.0.2.35656 [ahoka 2008-12-11]
