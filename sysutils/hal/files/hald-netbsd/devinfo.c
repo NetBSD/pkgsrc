@@ -36,6 +36,8 @@
 #include "devinfo_usb.h"
 #include "devinfo_misc.h"
 #include "devinfo_cpu.h"
+#include "devinfo_optical.h"
+/* #include "devinfo_scsipi.h" */
 #include "drvctl.h"
 
 void devinfo_add_subtree(HalDevice *parent, const char *devnode, gboolean is_root);
@@ -142,7 +144,9 @@ devinfo_set_default_properties (HalDevice *d, HalDevice *parent, const char *dev
 static DevinfoDevHandler *devinfo_handlers[] = {
 	&devinfo_computer_handler,
 	&devinfo_cpu_handler,
+	&devinfo_optical_handler,
 #if notyet
+	&devinfo_scsipi_handler,
 	&devinfo_ide_handler,
 	&devinfo_scsi_handler,
 	&devinfo_floppy_handler,
