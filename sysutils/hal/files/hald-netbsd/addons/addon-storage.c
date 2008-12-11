@@ -18,6 +18,7 @@
 #include <strings.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <syslog.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -60,7 +61,7 @@ scsi_test_unit_ready (int fd)
 	req.databuf = NULL;
 	req.datalen = 0;
 	req.timeout = 10000;
-	req.flags = 0;
+	req.flags = SCCMD_READ;
 	req.senselen = SENSEBUFLEN;
 
 	if (ioctl(fd, SCIOCCOMMAND, &req) == -1)
@@ -224,7 +225,7 @@ main (int argc, char *argv[])
 		goto out;
 	if ((device_file = getenv ("HAL_PROP_BLOCK_DEVICE")) == NULL)
 		goto out;
-	if ((raw_device_file = getenv ("HAL_PROP_BLOCK_SOLARIS_RAW_DEVICE")) == NULL)
+	if ((raw_device_file = getenv ("HAL_PROP_BLOCK_NETBSD_RAW_DEVICE")) == NULL)
 		goto out;
 	if ((bus = getenv ("HAL_PROP_STORAGE_BUS")) == NULL)
 		goto out;
@@ -263,12 +264,11 @@ main (int argc, char *argv[])
 	 * keeps media constantly spun up. All this needs more thought.
 	 */
 	for (;;) {
+		sleep (SLEEP_PERIOD);
 		if (is_mounted (device_file)) {
 			close_device (&fd);
-			sleep (SLEEP_PERIOD);
 		} else if ((fd < 0) && ((fd = open (raw_device_file, O_RDONLY | O_NONBLOCK)) < 0)) {
 			HAL_DEBUG (("open failed for %s: %s", raw_device_file, strerror (errno)));
-			sleep (SLEEP_PERIOD);
 		} else {
 			/* Check if a disc is in the drive */
 			state = scsi_test_unit_ready (fd);
