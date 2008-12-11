@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/12/01 07:49:22 rillig Exp $
+# $NetBSD: Makefile,v 1.55 2008/12/11 09:18:20 wiz Exp $
 
 DISTNAME=	ghostscript-8.63
 PKGREVISION=	1
@@ -55,6 +55,7 @@ CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 # used when making a shared object; recompile with -fPIC
 CFLAGS.NetBSD=		-fPIC
 CFLAGS.Linux=		-fPIC
+CFLAGS.SunOS=		-fPIC
 
 ###.if ${OPSYS} == "Darwin"
 ###MAKEFLAGS= "LDFLAGS_SO=-dynamiclib"
