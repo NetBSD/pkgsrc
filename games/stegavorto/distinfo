@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/11 10:33:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2008/12/11 22:45:46 wiz Exp $
 
-SHA1 (stegavorto-0.0.2.20081210/stegavorto-src.tar.bz2) = 6f235e6707abda280a3a3cb088141a2bd21a28f9
-RMD160 (stegavorto-0.0.2.20081210/stegavorto-src.tar.bz2) = 1d6a7d5290ce1dcdec1eeda02dda75a3fe8cc73d
-Size (stegavorto-0.0.2.20081210/stegavorto-src.tar.bz2) = 2129495 bytes
+SHA1 (stegavorto-src-2008.12.11.tar.bz2) = 56817427d8580cbdc2e4985ada21610a87743108
+RMD160 (stegavorto-src-2008.12.11.tar.bz2) = 4c2cb5c6566eb77cabdd3a660ec58d54e23bd48c
+Size (stegavorto-src-2008.12.11.tar.bz2) = 2160186 bytes
