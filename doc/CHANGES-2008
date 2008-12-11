@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3361 2008/12/11 20:18:34 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3362 2008/12/11 21:21:14 reed Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5545,3 +5545,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Catalyst-Model-RDBO to 0.07 [rhaen 2008-12-11]
 	Added www/webkit-gtk version 1.0.2.35656 [ahoka 2008-12-11]
 	Added www/midori version 0.1.1 [ahoka 2008-12-11]
+	Added net/wpa_supplicant 0.6.6 [reed 2008-12-11]
