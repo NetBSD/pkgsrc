@@ -18,7 +18,10 @@ libhald_netbsd_la_SOURCES = \
 	osspec.c drvctl.c envsys.c vfsstat.c \
 	devinfo.c devinfo_misc.c devinfo_audio.c devinfo_video.c \
 	devinfo_mass.c \
-	hotplug.c hal-file-monitor.c
-#	devinfo_pci.c devinfo_storage.c devinfo_usb.c
+	hotplug.c hal-file-monitor.c \
+	devinfo_optical.c 
+#	devinfo_scsipi.c
+#	devinfo_usb.c \
+#	devinfo_pci.c
 
 libhald_netbsd_la_LDFLAGS = -lprop @VOLUME_ID_LIBS@
