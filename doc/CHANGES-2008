@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3346 2008/12/11 00:45:34 he Exp $
+$NetBSD: CHANGES-2008,v 1.3347 2008/12/11 02:31:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5529,3 +5529,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal to 5.13 [adrianp 2008-12-10]
 	Updated www/drupal6 to 6.7 [adrianp 2008-12-10]
 	Updated time/p5-DateTime-Locale to 0.42 [he 2008-12-11]
+	Updated www/typolight-translations to 20081209 [taca 2008-12-11]
