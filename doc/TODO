@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7729 2008/12/09 10:57:05 obache Exp $
+$NetBSD: TODO,v 1.7730 2008/12/11 02:31:51 taca Exp $
 
 Suggested new packages
 ======================
@@ -1108,7 +1108,7 @@ Suggested package updates
 	o rxvt-unicode-9.06
 	o sablecc-3.2
 	o samba-3.0.33 (We should keep it for compatibility or license change.)
-	o samba-3.2.5
+	o samba-3.2.6
 	o sarg-2.2.5
 	o sbcl-1.0.22
 	o scamper-20070201
