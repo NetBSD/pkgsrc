@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/11 10:33:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/11 22:45:46 wiz Exp $
 #
 
-DISTNAME=	stegavorto-src
-# version number from setup.py's game_version variable + date
-PKGNAME=	stegavorto-0.0.2.20081210
+DISTNAME=	stegavorto-src-2008.12.11
+PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	games
 MASTER_SITES=	http://hamsterrepublic.com/games/stegavorto/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://james.hamsterrepublic.com/?p=130
 COMMENT=	Discover secret messages embedded in the works of great authors
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
+WRKSRC=		${WRKDIR}/stegavorto-src
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	bin share/stegavorto/data
