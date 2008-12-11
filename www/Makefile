@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.610 2008/11/29 19:26:38 snj Exp $
+# $NetBSD: Makefile,v 1.611 2008/12/11 19:42:42 ahoka Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -489,6 +489,7 @@ SUBDIR+=	waplet
 SUBDIR+=	wdg-validate
 SUBDIR+=	webalizer
 SUBDIR+=	webby
+SUBDIR+=	webkit-gtk
 SUBDIR+=	weblint
 SUBDIR+=	webnew
 SUBDIR+=	websvn
