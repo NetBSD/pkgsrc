@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/11 19:38:57 ahoka Exp $
+
+--- autogen.sh.orig	2008-04-17 23:37:24.000000000 +0200
++++ autogen.sh
+@@ -53,5 +53,3 @@ automake --foreign --add-missing || exit
+ autoconf || exit $?
+ 
+ cd $ORIGDIR || exit 1
+-
+-$srcdir/configure $AUTOGEN_CONFIGURE_ARGS "$@" || exit $?

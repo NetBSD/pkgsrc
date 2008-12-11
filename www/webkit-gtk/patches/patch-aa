@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/11 19:38:57 ahoka Exp $
+
+--- WebKitTools/wx/install-unix-extras.orig	2008-04-28 20:40:06.000000000 +0200
++++ WebKitTools/wx/install-unix-extras
+@@ -41,7 +41,7 @@ DL_DIR=/tmp/webkit-deps
+ DEPS_PREFIX=$WK_ROOT/WebKitLibraries/unix
+ DLLEXT=so
+ 
+-if [ "${OSTYPE:0:6}" == "darwin" ]; then
++if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     DLLEXT=dylib
+ fi
+ 
+@@ -84,7 +84,7 @@ if [ `which icu-config >/dev/null 2>&1` 
+   
+   chmod +x configure install-sh
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then  
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then  
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc" \
+     LDFLAGS="-arch i386 -arch ppc"
+@@ -107,7 +107,7 @@ if [ ! -f $DEPS_PREFIX/lib/libiconv.$DLL
+   tar xzvf $DL_DIR/$ICONV_TARBALL
+   cd $DL_DIR/libiconv-$ICONV_VERSION
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then  
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then  
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc" \
+     LDFLAGS="-arch i386 -arch ppc"
+@@ -131,7 +131,7 @@ if [ ! -f $DEPS_PREFIX/lib/libjpeg.a ]; 
+   # jpeg install command expects this to exist.
+   mkdir -p $DEPS_PREFIX/man/man1
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc" \
+     LDFLAGS="-arch i386 -arch ppc"
+@@ -155,7 +155,7 @@ if [ ! -f $DEPS_PREFIX/lib/libpng.a ]; t
+   tar xzvf $DL_DIR/$LIBPNG_TARBALL
+   cd $DL_DIR/libpng-$LIBPNG_VERSION
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot /Developer/SDKs/MacOSX10.4u.sdk -arch i386 -arch ppc" \
+     LDFLAGS="-arch i386 -arch ppc"
