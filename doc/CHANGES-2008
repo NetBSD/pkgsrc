@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3362 2008/12/11 21:21:14 reed Exp $
+$NetBSD: CHANGES-2008,v 1.3363 2008/12/11 22:45:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5546,3 +5546,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/webkit-gtk version 1.0.2.35656 [ahoka 2008-12-11]
 	Added www/midori version 0.1.1 [ahoka 2008-12-11]
 	Added net/wpa_supplicant 0.6.6 [reed 2008-12-11]
+	Updated games/stegavorto to 2008.12.11 [wiz 2008-12-11]
