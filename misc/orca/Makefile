@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/12/02 17:27:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/12/11 05:46:04 ahoka Exp $
 #
 
 DISTNAME=	orca-2.24.2
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/orca/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +25,7 @@ PY_PATCHPLIST=	yes
 BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.10
 .include "../../audio/gnome-speech/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.at-spi+=	at-spi>=1.7.6
-.include "../../devel/at-spi/buildlink3.mk"
+.include "../../devel/py-at-spi/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
 .include "../../devel/glib2/buildlink3.mk"
 #BUILDLINK_API_DEPENDS.libbonobo+=	libbonobo>=2.14.0
