@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3350 2008/12/11 09:42:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3351 2008/12/11 10:35:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5533,3 +5533,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/x11vnc to 0.9.6 [obache 2008-12-11]
 	Updated devel/py-at-spi to 1.24.0 [wiz 2008-12-11]
 	Updated security/mit-krb5 to 1.4.2nb7 [wiz 2008-12-11]
+	Added games/stegavorto version 0.0.2.20081210 [wiz 2008-12-11]
