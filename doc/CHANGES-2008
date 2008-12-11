@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3352 2008/12/11 15:06:12 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.3353 2008/12/11 15:58:16 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5535,4 +5535,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/mit-krb5 to 1.4.2nb7 [wiz 2008-12-11]
 	Added games/stegavorto version 0.0.2.20081210 [wiz 2008-12-11]
 	Updated sysutils/hal to version 0.5.11nb14 [reinoud 2008-12-11]
+	Updated textproc/p5-XML-Writer to version0.606 [rhaen 2008-12-11]
 
