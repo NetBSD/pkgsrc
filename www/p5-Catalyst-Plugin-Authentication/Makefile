@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/11/10 22:37:46 rhaen Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/11 16:03:38 rhaen Exp $
 
-DISTNAME=	Catalyst-Plugin-Authentication-0.10008
+DISTNAME=	Catalyst-Plugin-Authentication-0.100091
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
