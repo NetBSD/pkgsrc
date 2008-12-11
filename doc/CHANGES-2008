@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3348 2008/12/11 07:27:19 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3349 2008/12/11 09:09:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5531,3 +5531,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-DateTime-Locale to 0.42 [he 2008-12-11]
 	Updated www/typolight-translations to 20081209 [taca 2008-12-11]
 	Updated x11/x11vnc to 0.9.6 [obache 2008-12-11]
+	Updated devel/py-at-spi to 1.24.0 [wiz 2008-12-11]
