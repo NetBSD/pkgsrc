@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2008/12/10 00:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.315 2008/12/11 10:34:51 wiz Exp $
 #
 
 COMMENT=	Games
@@ -223,6 +223,7 @@ SUBDIR+=	sl
 SUBDIR+=	spaceracer
 SUBDIR+=	spellcast
 SUBDIR+=	spider
+SUBDIR+=	stegavorto
 SUBDIR+=	stratagus
 SUBDIR+=	sudoku-cli
 SUBDIR+=	svb
