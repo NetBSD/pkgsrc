@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/12/11 17:40:54 rhaen Exp $
+
+This package is deprecated as mentioned in CPAN
+
+	**DEPRECATED** base class for Rose::DB::Object model 
+
+===========================================================================
