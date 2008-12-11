@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2007/05/24 13:30:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/12/11 07:27:00 obache Exp $
 bin/x11vnc
 man/man1/x11vnc.1
+share/applications/x11vnc.desktop
 share/x11vnc/classes/VncViewer.jar
 share/x11vnc/classes/index.vnc
 share/x11vnc/classes/ssl/README
@@ -16,3 +17,4 @@ share/x11vnc/classes/ssl/ultrasigned.vnc
 @dirrm share/x11vnc/classes/ssl
 @dirrm share/x11vnc/classes
 @dirrm share/x11vnc
+@comment in xdg-dirs: @dirrm share/applications
