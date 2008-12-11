@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/12/11 19:38:57 ahoka Exp $
+
+--- JavaScriptCore/wtf/Platform.h.orig	2008-07-23 07:17:02.000000000 +0200
++++ JavaScriptCore/wtf/Platform.h
+@@ -64,6 +64,13 @@
+ #define WTF_PLATFORM_OPENBSD 1
+ #endif
+ 
++/* PLATFORM(NETBSD) */
++/* Operating system level dependencies for OpenBSD systems that */
++/* should be used regardless of operating environment */
++#ifdef __NetBSD__
++#define WTF_PLATFORM_NETBSD 1
++#endif
++
+ /* PLATFORM(SOLARIS) */
+ /* Operating system level dependencies for Solaris that should be used */
+ /* regardless of operating environment */
+@@ -76,10 +83,10 @@
+ /* should be used regardless of operating environment */
+ #if   PLATFORM(DARWIN)     \
+    || PLATFORM(FREEBSD)    \
++   || PLATFORM(NETBSD)     \
+    || defined(unix)        \
+    || defined(__unix)      \
+    || defined(__unix__)    \
+-   || defined (__NetBSD__) \
+    || defined(_AIX)
+ #define WTF_PLATFORM_UNIX 1
+ #endif
