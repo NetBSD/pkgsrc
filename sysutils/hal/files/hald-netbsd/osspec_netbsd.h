@@ -18,4 +18,4 @@ void hotplug_queue_now_empty (void);
 HalDevice *hal_util_find_closest_ancestor (const gchar *devfs_path, gchar **ancestor_devfs_path, gchar **hotplug_devfs_path);
 char *dsk_to_rdsk(char *);
 
-#endif /* OSSPEC_SOLARIS_H */
+#endif /* OSSPEC_NETBSD_H */
