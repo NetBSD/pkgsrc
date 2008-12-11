@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3355 2008/12/11 16:15:46 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.3356 2008/12/11 16:30:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5538,4 +5538,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-Writer to version 0.606 [rhaen 2008-12-11]
 	Updated www/p5-Catalyst-Plugin-Authentication to version 0.100091 [rhaen 2008-12-11]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to version 0.08 [rhaen 2008-12-11]
-
+	Updated www/drupal6-translations to 20081207 [taca 2008-12-11]
+	Updated www/typolight to 2.6.2nb2 [taca 2008-12-11]
