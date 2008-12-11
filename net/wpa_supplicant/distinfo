@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/11 21:18:41 reed Exp $
+
+SHA1 (wpa_supplicant-0.6.6.tar.gz) = 28109b6ec134a846cba87b3a57145ac3ec63dc57
+RMD160 (wpa_supplicant-0.6.6.tar.gz) = 30c23fac6e553193817fbf0a48d25da28bf8eb09
+Size (wpa_supplicant-0.6.6.tar.gz) = 1024724 bytes
+SHA1 (patch-aa) = fe22c4096983f7ab3f9e690abb69e324c228fb6c

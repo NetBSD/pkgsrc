@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/11 21:18:41 reed Exp $
+man/man5/wpa_supplicant.conf.5
+man/man8/wpa_cli.8
+man/man8/wpa_passphrase.8
+man/man8/wpa_supplicant.8
+sbin/wpa_cli
+sbin/wpa_passphrase
+sbin/wpa_supplicant
