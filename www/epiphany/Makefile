@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.89 2008/12/02 12:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2008/12/12 01:27:24 jmcneill Exp $
 #
 
 DISTNAME=	epiphany-2.24.2.1
+PKGREVISION=	1
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,16 +23,6 @@ USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE=	data/epiphany-2.24.pc
 
 .include "options.mk"
-
-CPPFLAGS+=      -I${BUILDLINK_PREFIX.firefox}/include/firefox/find
-CFLAGS+=        -I${BUILDLINK_PREFIX.firefox}/include/firefox/find
-CPPFLAGS+=      -I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
-CFLAGS+=        -I${BUILDLINK_PREFIX.firefox}/include/firefox/necko
-CPPFLAGS+=      -I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
-CFLAGS+=        -I${BUILDLINK_PREFIX.firefox}/include/firefox/pref
-
-# XXX the configure check doesn't work
-CONFIGURE_ENV+=	ac_cv_header_nsIBadCertListener_h=yes
 
 GCONF_SCHEMAS=		epiphany.schemas
 GCONF_SCHEMAS+=	epiphany-fonts.schemas
@@ -61,7 +52,6 @@ BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.4
 BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.12
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../www/firefox/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
