@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3368 2008/12/12 15:48:02 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3369 2008/12/12 23:27:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5552,3 +5552,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight-translations to 20081212 [taca 2008-12-12]
 	Updated x11/gtk-sharp to 2.12.7 [wiz 2008-12-12]
 	Updated www/typolight to 2.6.2nb3 [taca 2008-12-12]
+	Updated textproc/p5-YAML-LibYAML to 0.29 [he 2008-12-12]
+	Updated textproc/p5-YAML to 0.68 [he 2008-12-12]
+	Updated www/p5-Apache2-AUthCookieDBI to 2.04 [he 2008-12-12]
+	Updated www/p5-CGI-Session to 4.38 [he 2008-12-12]
+	Updated www/p5-CGI-Simple to 1.106 [he 2008-12-12]
+	Updated www/p5-HTML-Parser to 3.59 [he 2008-12-12]
+	Updated www/p5-HTML-WikiConverter to 0.63 [he 2008-12-12]
+	Updated www/p5-HTTP-Body to 1.05 [he 2008-12-12]
+	Updated www/p5-HTTP-DAV to 0.35 [he 2008-12-12]
