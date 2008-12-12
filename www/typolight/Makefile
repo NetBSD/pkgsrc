@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/12/11 16:28:05 taca Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/12 15:47:00 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -10,7 +10,7 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.typolight.org/
 COMMENT=	Powerful web content management system (CMS)
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.1.0:../../security/php-mcrypt
