@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.5 2008/10/03 17:42:29 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2008/12/12 01:10:54 taca Exp $
 
---- Makefile.orig	1994-07-25 17:59:41.000000000 +0200
+--- Makefile.orig	1994-07-26 00:59:41.000000000 +0900
 +++ Makefile
+@@ -12,7 +12,7 @@
+ ###
+ 
+ # destination directory for final executables
+-DESTDIR = /secureplace/bin
++DESTDIR? =
+ 
+ # destination for man pages
+ MANDIR  = /usr/man
 @@ -32,11 +32,11 @@ SHELL	= /bin/sh
  #SHELL	= /bin/bash		# For the GNU fanatics
  
