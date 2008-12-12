@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2008/10/19 19:19:07 he Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/12 21:29:49 he Exp $
 
-DISTNAME=		CGI-Session-4.35
+DISTNAME=		CGI-Session-4.38
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 SVR4_PKGNAME=		p5ses
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://search.cpan.org/dist/CGI-Session/
 COMMENT=		Perl5 module providing session management across HTTP requests
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PERL5_MODULE_TYPE=	Module::Build
 
 PERL5_PACKLIST=		auto/CGI/Session/.packlist
 
