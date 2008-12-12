@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3364 2008/12/12 01:28:11 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3365 2008/12/12 09:08:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5548,3 +5548,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/wpa_supplicant 0.6.6 [reed 2008-12-11]
 	Updated games/stegavorto to 2008.12.11 [wiz 2008-12-11]
 	Updated www/epiphany to 2.24.2.1nb1 [jmcneill 2008-12-11]
+	Updated devel/bison to 2.4.1 [wiz 2008-12-12]
