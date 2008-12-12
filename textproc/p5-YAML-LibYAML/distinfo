@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/31 12:11:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2008/12/12 17:32:45 he Exp $
 
-SHA1 (YAML-LibYAML-0.27.tar.gz) = b36daebfd6c29cf9c5dd176781bb05b781a12b6a
-RMD160 (YAML-LibYAML-0.27.tar.gz) = 967da22cecf692e91b5ec1b5b64f19048d76e0be
-Size (YAML-LibYAML-0.27.tar.gz) = 132547 bytes
+SHA1 (YAML-LibYAML-0.29.tar.gz) = ac6d46e8d594ab1fda96268aaa4eaf14a30ae7e4
+RMD160 (YAML-LibYAML-0.29.tar.gz) = 461e9603c3191f757baea6fed06d3706e8ce6063
+Size (YAML-LibYAML-0.29.tar.gz) = 134950 bytes
