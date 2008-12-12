@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2008/12/11 02:30:22 taca Exp $
+$NetBSD: distinfo,v 1.10 2008/12/12 12:45:41 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -15,6 +15,9 @@ Size (TYPOlight-Catalan-v4.zip) = 118138 bytes
 SHA1 (TYPOlight-Chinese-v19.zip) = 7df9da1e9bc119726ac5f26decdb874ee3adefc3
 RMD160 (TYPOlight-Chinese-v19.zip) = 57bcc2a6d2bb48bd108e8951e55118e915736bef
 Size (TYPOlight-Chinese-v19.zip) = 97311 bytes
+SHA1 (TYPOlight-Czech-v2.zip) = a24c15f1f2e7e096bfa02238847f9eefea267422
+RMD160 (TYPOlight-Czech-v2.zip) = d84836c2f3c8b3b9143c6a1a64ac4f142e3efb39
+Size (TYPOlight-Czech-v2.zip) = 85842 bytes
 SHA1 (TYPOlight-Danish-v5.zip) = c6dda21cfac9cc0e09af7689372ad31046fecf68
 RMD160 (TYPOlight-Danish-v5.zip) = 491ef6cd1cc3f2ed4c7366d857524d82c54acae1
 Size (TYPOlight-Danish-v5.zip) = 119480 bytes
@@ -30,9 +33,9 @@ Size (TYPOlight-Icelandic-v2.zip) = 76117 bytes
 SHA1 (TYPOlight-Italian-v8.zip) = 76b09577265c4ef07c46fed1c1889ce73051e39a
 RMD160 (TYPOlight-Italian-v8.zip) = 570305f288bf7ca6eab43f706c181b71517f554f
 Size (TYPOlight-Italian-v8.zip) = 133716 bytes
-SHA1 (TYPOlight-Japanese-v10.zip) = 46ed3013fc6a2984c66b44239fb660d629fb4a10
-RMD160 (TYPOlight-Japanese-v10.zip) = 2d3a200df054df8f4018a0e3b146d20999fcecdb
-Size (TYPOlight-Japanese-v10.zip) = 146971 bytes
+SHA1 (TYPOlight-Japanese-v12.zip) = 12e0bbd416edcd32aeb4bba31226a8c626c69467
+RMD160 (TYPOlight-Japanese-v12.zip) = bd9e1f8fb3ca14e07a60bba4fea5124339851b9a
+Size (TYPOlight-Japanese-v12.zip) = 147436 bytes
 SHA1 (TYPOlight-Latvian-v16.zip) = ae52ca14ea110bc5b791ebe87aa501f966fa4fa5
 RMD160 (TYPOlight-Latvian-v16.zip) = 5e11a5be0168f922dcbf5efd88d13d8a058a0612
 Size (TYPOlight-Latvian-v16.zip) = 99128 bytes
@@ -78,7 +81,4 @@ Size (TYPOlight-Turkish-v1.zip) = 68706 bytes
 SHA1 (TYPOlight-Ukrainian-v5.zip) = 200f4f6f486c548df0aeda6a9d91b0cecff95253
 RMD160 (TYPOlight-Ukrainian-v5.zip) = e038eb10cbd47a9ccc5b88ace1162e44747765f3
 Size (TYPOlight-Ukrainian-v5.zip) = 136814 bytes
-SHA1 (patch-aa) = 9af34ebc105d5e701a07cb07c358ead95f5600aa
-SHA1 (patch-ab) = e8c79c627c6b6c515dc433d9e0479bbb2a598641
 SHA1 (patch-ac) = fd8a8a319d2d5963afbf58172a757f82fa2eaa3a
-SHA1 (patch-ad) = 94354bbd3df6698ffefd3353959799169af46752
