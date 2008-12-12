@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:19:15 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/12 22:45:59 he Exp $
 
-DISTNAME=	HTTP-Body-1.04
+DISTNAME=	HTTP-Body-1.05
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AG/AGRUNDMA/}
 
