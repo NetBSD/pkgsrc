@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3366 2008/12/12 12:46:59 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3367 2008/12/12 15:10:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5550,3 +5550,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/epiphany to 2.24.2.1nb1 [jmcneill 2008-12-11]
 	Updated devel/bison to 2.4.1 [wiz 2008-12-12]
 	Updated www/typolight-translations to 20081212 [taca 2008-12-12]
+	Updated x11/gtk-sharp to 2.12.7 [wiz 2008-12-12]
