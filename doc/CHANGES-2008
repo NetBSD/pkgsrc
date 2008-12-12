@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3363 2008/12/11 22:45:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3364 2008/12/12 01:28:11 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5547,3 +5547,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/midori version 0.1.1 [ahoka 2008-12-11]
 	Added net/wpa_supplicant 0.6.6 [reed 2008-12-11]
 	Updated games/stegavorto to 2008.12.11 [wiz 2008-12-11]
+	Updated www/epiphany to 2.24.2.1nb1 [jmcneill 2008-12-11]
