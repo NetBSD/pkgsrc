@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.34 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: SunOS.mk,v 1.35 2008/12/12 15:35:34 sketch Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -17,7 +17,7 @@ DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
 GROUPADD?=		/usr/sbin/groupadd
 MOTIF_TYPE_DEFAULT?=	dt		# default 2.0 compatible libs type
-NOLOGIN?=		${FALSE}
+NOLOGIN?=		/usr/bin/false
 ROOT_CMD?=		${SU} - root -c
 ROOT_GROUP?=		root
 ROOT_USER?=		root
