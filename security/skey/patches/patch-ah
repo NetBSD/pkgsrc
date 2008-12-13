@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2008/12/13 13:58:31 obache Exp $
+
+include "config.h" before using HAVE_* macro.
+
+--- sha1.c.orig	2001-05-10 16:10:49.000000000 +0000
++++ sha1.c
+@@ -13,13 +13,14 @@
+  * A million repetitions of "a"
+  *   34AA973C D4C4DAA4 F61EEB2B DBAD2731 6534016F
+  */
++#include "config.h"
++
+ #ifndef HAVE_SHA1_H
+ 
+ #define SHA1HANDSOFF		/* Copies data before messing with it. */
+ 
+ #include <sys/param.h>
+ #include <string.h>
+-#include "config.h"
+ #include "sha1.h"
+ 
+ #define rol(value, bits) (((value) << (bits)) | ((value) >> (32 - (bits))))

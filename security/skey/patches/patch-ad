@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1 2008/12/13 13:58:31 obache Exp $
+
+include "config.h" before using HAVE_* macro.
+
+--- md4c.c.orig	2001-05-10 16:10:49.000000000 +0000
++++ md4c.c
+@@ -21,6 +21,8 @@
+    documentation and/or software.
+  */
+ 
++#include "config.h"
++
+ #ifndef HAVE_MD4_H
+ 
+ #if defined(LIBC_SCCS) && !defined(lint)
+@@ -29,7 +31,6 @@ static char rcsid[] = "$OpenBSD: md4c.c,
+ 
+ #include <string.h>
+ #include <sys/types.h>
+-#include "config.h"
+ #include "md4.h"
+ 
+ /* POINTER defines a generic pointer type */

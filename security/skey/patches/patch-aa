@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2008/12/13 13:26:19 obache Exp $
+$NetBSD: patch-aa,v 1.5 2008/12/13 13:58:31 obache Exp $
 
---- Makefile.in.orig	2001-05-10 11:10:49.000000000 -0500
+--- Makefile.in.orig	2001-05-10 16:10:49.000000000 +0000
 +++ Makefile.in
 @@ -18,15 +18,18 @@ LIBS=@LIBS@
  AR=@AR@
@@ -55,11 +55,13 @@ $NetBSD: patch-aa,v 1.4 2008/12/13 13:26:19 obache Exp $
  	${INSTALL_DATA} libskey.a $(DESTDIR)$(libdir)
  	${INSTALL_DATA} ${HDRS} $(DESTDIR)$(includedir)
  	@for target in ${TARGETS}; do \
-@@ -107,7 +110,7 @@ install: ${TARGETS}
+@@ -106,8 +109,8 @@ install: ${TARGETS}
+ 	${INSTALL_MAN} skeyinit.[01].out $(DESTDIR)$(mandir)/$(mansubdir)1/skeyinit.1
  	${INSTALL_MAN} skeyinfo.[01].out $(DESTDIR)$(mandir)/$(mansubdir)1/skeyinfo.1
  	${INSTALL_MAN} skeyaudit.[01].out $(DESTDIR)$(mandir)/$(mansubdir)1/skeyaudit.1
- 	${INSTALL_MAN} skeyprune.[08].out $(DESTDIR)$(mandir)/$(mansubdir)8/skeyprune.1
+-	${INSTALL_MAN} skeyprune.[08].out $(DESTDIR)$(mandir)/$(mansubdir)8/skeyprune.1
 -	${TOUCH} ${DESTDIR}${sysconfdir}/skeykeys
++	${INSTALL_MAN} skeyprune.[08].out $(DESTDIR)$(mandir)/$(mansubdir)8/skeyprune.8
 +	${TOUCH} ${DESTDIR}$(prefix)/share/examples/skey/skeykeys
  
  uninstallall: uninstall
