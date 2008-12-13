@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3379 2008/12/13 15:36:17 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3380 2008/12/13 16:29:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5569,3 +5569,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/skey to 1.1.5nb3 [obache 2008-12-13]
 	Updated shells/osh to 20081213 [obache 2008-12-13]
 	Updated fonts/liberation-ttf to 1.04 [ahoka 2008-12-13]
+	Updated www/typolight-translations to 20081213 [taca 2008-12-13]
