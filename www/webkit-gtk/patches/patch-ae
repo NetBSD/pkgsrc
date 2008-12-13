@@ -1,19 +1,19 @@
-$NetBSD: patch-ae,v 1.1 2008/12/11 20:53:04 jmcneill Exp $
+$NetBSD: patch-ae,v 1.2 2008/12/13 02:35:16 jmcneill Exp $
 
 https://bugs.webkit.org/show_bug.cgi?id=22205
 
---- WebCore/css/CSSGrammar.y.orig	2008-08-08 00:50:53.000000000 -0400
-+++ WebCore/css/CSSGrammar.y	2008-12-11 15:46:35.000000000 -0500
-@@ -93,6 +93,8 @@
+--- WebCore/css/CSSGrammar.y.orig	2008-12-04 23:38:15.000000000 -0500
++++ WebCore/css/CSSGrammar.y
+@@ -94,6 +94,8 @@ static int cssyylex(YYSTYPE* yylval, voi
  
- %expect 48
+ %expect 49
  
 +%nonassoc LOWEST_PREC
 +
  %left UNIMPORTANT_TOK
  
  %token WHITESPACE SGML_CD
-@@ -335,7 +337,7 @@
+@@ -349,7 +351,7 @@ maybe_charset:
  
  closing_brace:
      '}'
@@ -22,7 +22,7 @@ https://bugs.webkit.org/show_bug.cgi?id=22205
    ;
  
  charset:
-@@ -1323,10 +1325,10 @@
+@@ -1355,10 +1357,10 @@ term:
        $$.string = $1;
    }
    /* We might need to actually parse the number from a dimension, but we can't just put something that uses $$.string into unary_term. */
