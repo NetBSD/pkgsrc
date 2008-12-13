@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/12/13 06:31:59 epg Exp $
+
+Install textproc/py-pygments to enable syntax coloring in annotate, cat,
+and diff file views.  Install textproc/py-enchant to enable spell check in
+commit dialog.
+
+===========================================================================
