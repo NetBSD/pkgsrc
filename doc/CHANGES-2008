@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3374 2008/12/13 07:01:27 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3375 2008/12/13 12:05:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5534,10 +5534,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-at-spi to 1.24.0 [wiz 2008-12-11]
 	Updated security/mit-krb5 to 1.4.2nb7 [wiz 2008-12-11]
 	Added games/stegavorto version 0.0.2.20081210 [wiz 2008-12-11]
-	Updated sysutils/hal to version 0.5.11nb14 [reinoud 2008-12-11]
-	Updated textproc/p5-XML-Writer to version 0.606 [rhaen 2008-12-11]
-	Updated www/p5-Catalyst-Plugin-Authentication to version 0.100091 [rhaen 2008-12-11]
-	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to version 0.08 [rhaen 2008-12-11]
+	Updated sysutils/hal to 0.5.11nb14 [reinoud 2008-12-11]
+	Updated textproc/p5-XML-Writer to 0.606 [rhaen 2008-12-11]
+	Updated www/p5-Catalyst-Plugin-Authentication to 0.100091 [rhaen 2008-12-11]
+	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.08 [rhaen 2008-12-11]
 	Updated www/drupal6-translations to 20081207 [taca 2008-12-11]
 	Updated www/typolight to 2.6.2nb2 [taca 2008-12-11]
 	Updated geography/geos to 3.0.3 [gdt 2008-12-11]
@@ -5545,7 +5545,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Catalyst-Model-RDBO to 0.07 [rhaen 2008-12-11]
 	Added www/webkit-gtk version 1.0.2.35656 [ahoka 2008-12-11]
 	Added www/midori version 0.1.1 [ahoka 2008-12-11]
-	Added net/wpa_supplicant 0.6.6 [reed 2008-12-11]
+	Added net/wpa_supplicant version 0.6.6 [reed 2008-12-11]
 	Updated games/stegavorto to 2008.12.11 [wiz 2008-12-11]
 	Updated www/epiphany to 2.24.2.1nb1 [jmcneill 2008-12-11]
 	Updated devel/bison to 2.4.1 [wiz 2008-12-12]
@@ -5562,6 +5562,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-HTTP-Body to 1.05 [he 2008-12-12]
 	Updated www/p5-HTTP-DAV to 0.35 [he 2008-12-12]
 	Updated www/webkit-gtk to 1.0.3.39230 [jmcneill 2008-12-12]
-	Added x11/py-qt4 4.4.4 [epg 2008-12-13]
-	Added devel/qbzr 0.9.5 [epg 2008-12-13]
+	Added x11/py-qt4 version 4.4.4 [epg 2008-12-13]
+	Added devel/qbzr version 0.9.5 [epg 2008-12-13]
 	Added graphics/silgraphite-ft version 2.3 [minskim 2008-12-13]
