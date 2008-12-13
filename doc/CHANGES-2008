@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3371 2008/12/13 02:36:14 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3372 2008/12/13 05:22:45 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5562,3 +5562,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-HTTP-Body to 1.05 [he 2008-12-12]
 	Updated www/p5-HTTP-DAV to 0.35 [he 2008-12-12]
 	Updated www/webkit-gtk to 1.0.3.39230 [jmcneill 2008-12-12]
+	Added x11/py-qt4 4.4.4 [epg 2008-12-13]
