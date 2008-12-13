@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/01/31 13:08:12 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/12/13 03:20:41 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 XAW_XPM_BUILDLINK3_MK:=	${XAW_XPM_BUILDLINK3_MK}+
@@ -35,6 +35,7 @@ LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
 
 .endif	# XAW_XPM_BUILDLINK3_MK
 
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
