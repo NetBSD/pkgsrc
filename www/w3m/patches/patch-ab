@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2002/03/02 00:08:16 kei Exp $
+$NetBSD: patch-ab,v 1.10 2008/12/13 08:16:07 obache Exp $
+
+Suspend the job w3m belongs to, not w3m only.
 
 --- main.c.orig	Mon Jan 28 02:52:03 2002
 +++ main.c
