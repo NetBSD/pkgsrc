@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3376 2008/12/13 12:45:41 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3377 2008/12/13 13:58:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5566,3 +5566,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/qbzr version 0.9.5 [epg 2008-12-13]
 	Added graphics/silgraphite-ft version 2.3 [minskim 2008-12-13]
 	Updated x11/py-qt4 to 4.4.4nb1 [wiz 2008-12-13]
+	Updated security/skey to 1.1.5nb3 [obache 2008-12-13]
