@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2008/12/13 08:16:07 obache Exp $
+$NetBSD: patch-ab,v 1.11 2008/12/13 08:24:55 obache Exp $
 
 Suspend the job w3m belongs to, not w3m only.
 
---- main.c.orig	Mon Jan 28 02:52:03 2002
+--- main.c.orig	2007-05-31 01:19:50.000000000 +0000
 +++ main.c
-@@ -2221,7 +2221,17 @@
+@@ -2496,7 +2496,17 @@ DEFUN(susp, INTERRUPT SUSPEND, "Stop loa
  	shell = "/bin/sh";
      system(shell);
  #else				/* SIGSTOP */
