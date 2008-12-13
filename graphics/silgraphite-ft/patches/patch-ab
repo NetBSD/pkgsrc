@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/13 06:58:01 minskim Exp $
+
+--- silgraphite-ft.pc.in.orig	2007-04-04 17:23:23.000000000 -0700
++++ silgraphite-ft.pc.in
+@@ -1,5 +1,3 @@
+-prefix=@prefix@
+-exec_prefix=@exec_prefix@
+ 
+ Name: graphite-ft
+ Description: A freetype backend for Graphite

@@ -1,0 +1,7 @@
+Graphite is a smart font engine that basically takes a unicode string
+and font formatting information (features, size, etc.) and returns a
+set of positioned glyphs.  In reality, Graphite does more than this in
+that it handles cursor tracking and interaction with the rendering
+engine for string selection, etc.
+
+This package is a wrapper for FreeType.
