@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/11 19:38:57 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/13 02:35:15 jmcneill Exp $
 #
-# pkg-config says 1.0.2, let's combine it with the revision
+# pkg-config says 1.0.3, let's combine it with the revision
 # to give a sane version number.
 #
-DISTNAME=	WebKit-r35656
-PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.2./}
+DISTNAME=	WebKit-r39230
+PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.3./}
 CATEGORIES=	www
 MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
 EXTRACT_SUFX=	.tar.bz2
