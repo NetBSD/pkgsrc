@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/05 18:01:50 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/12/13 04:21:28 obache Exp $
 #
 
 PKGNAME=	w3m-img-${W3M_VERS}
@@ -16,6 +16,4 @@ USE_TOOLS+=	msgfmt
 # Enable image support.
 _W3M_USE_IMAGE=	YES
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../www/w3m/Makefile.common"
