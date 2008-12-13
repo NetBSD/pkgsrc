@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/13 05:19:12 epg Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/13 05:20:04 epg Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
@@ -20,10 +20,6 @@ CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	-q ${QTDIR}/bin/qmake
-# XXX: should not be necessary, but framework thinks pkgsrc only has static
-# qt4 libraries
-#epg fixed? with patch-aa
-#CONFIGURE_ARGS+=	-k
 CONFIGURE_ARGS+=	--confirm-license
 
 PYTHON_VERSIONS_ACCEPTED=	25 24 23
