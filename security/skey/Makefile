@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/12/13 13:18:08 obache Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/13 13:26:19 obache Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Port of OpenBSD s/key implementation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -22,6 +24,6 @@ REPLACE_PERL=		skeyprune.pl
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
 post-install:
-	${RANLIB} ${PREFIX}/lib/libskey.a
+	${RANLIB} ${DESTDIR}${PREFIX}/lib/libskey.a
 
 .include "../../mk/bsd.pkg.mk"
