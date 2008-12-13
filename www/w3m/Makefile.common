@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2008/12/13 04:33:43 obache Exp $
+# $NetBSD: Makefile.common,v 1.52 2008/12/13 08:09:41 obache Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -57,9 +57,6 @@ post-extract:
 	@cd ${WRKSRC}/doc; ${RM} -fr CVS
 	@cd ${WRKSRC}/doc-jp; ${RM} -fr CVS
 	@cd ${WRKSRC}; ${RM} -fr gc
-
-post-patch:
-	@${FIND} ${WRKSRC} -type f -name '*.orig' -print | ${XARGS} ${RM}
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
