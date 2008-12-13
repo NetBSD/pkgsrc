@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2008/12/13 05:17:02 epg Exp $
+@dirrm share/sip${PYVERSSUFFIX}/QtXml
+@dirrm share/sip${PYVERSSUFFIX}/QtWebKit
+@dirrm share/sip${PYVERSSUFFIX}/QtTest
+@dirrm share/sip${PYVERSSUFFIX}/QtSvg
+@dirrm share/sip${PYVERSSUFFIX}/QtSql
+@dirrm share/sip${PYVERSSUFFIX}/QtScript
+@dirrm share/sip${PYVERSSUFFIX}/QtOpenGL
+@dirrm share/sip${PYVERSSUFFIX}/QtNetwork
+@dirrm share/sip${PYVERSSUFFIX}/QtHelp
+@dirrm share/sip${PYVERSSUFFIX}/QtGui
+@dirrm share/sip${PYVERSSUFFIX}/QtDesigner
+@dirrm share/sip${PYVERSSUFFIX}/QtCore
+@dirrm share/sip${PYVERSSUFFIX}/QtAssistant
+@dirrm share/sip${PYVERSSUFFIX}/Qt
+@dirrm share/sip${PYVERSSUFFIX}
+@comment in py-dbus: @dirrm ${PYSITELIB}/dbus/mainloop
+@comment in py-dbus: @dirrm ${PYSITELIB}/dbus
+@dirrm ${PYSITELIB}/PyQt4/uic/widget-plugins
+@dirrm ${PYSITELIB}/PyQt4/uic/Loader
+@dirrm ${PYSITELIB}/PyQt4/uic/Compiler
+@dirrm ${PYSITELIB}/PyQt4/uic
+@dirrm ${PYSITELIB}/PyQt4
