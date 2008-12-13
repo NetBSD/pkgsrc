@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/03/04 18:15:08 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2008/12/13 22:34:44 sborrill Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -24,6 +24,7 @@ post-patch:
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_2
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_3
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_4
+	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_NetBSD_5
 	${CP} ${WRKSRC}/Makefile_NetBSD_1 ${WRKSRC}/Makefile_DragonFly_1
 
 do-build:
