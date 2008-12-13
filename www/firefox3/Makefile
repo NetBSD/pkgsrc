@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/13 14:44:00 tron Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/13 00:42:26 martin Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -25,6 +25,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 MAINTAINER=		tnn@NetBSD.org
 MOZ_VER=		3.0.4
 
+FILESDIR=		${.CURDIR}/files
 DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox3/distinfo
