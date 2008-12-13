@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1 2008/12/13 13:58:31 obache Exp $
+
+include "config.h" before using HAVE_* macro.
+
+--- md5c.c.orig	2001-05-10 16:10:49.000000000 +0000
++++ md5c.c
+@@ -22,6 +22,8 @@ These notices must be retained in any co
+ documentation and/or software.
+  */
+ 
++#include "config.h"
++
+ #ifndef HAVE_MD5_H
+ 
+ #if defined(LIBC_SCCS) && !defined(lint)
+@@ -30,7 +32,6 @@ static char rcsid[] = "$OpenBSD: md5c.c,
+ 
+ #include <string.h>
+ #include <sys/types.h>
+-#include "config.h"
+ #include "md5.h"
+ 
+ 
