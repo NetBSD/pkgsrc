@@ -1,10 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/13 15:34:17 ahoka Exp $
 #
 
-DISTNAME=	liberation-fonts-ttf-3
-PKGNAME=	liberation-ttf-0.2
+DISTNAME=	liberation-fonts-1.04
+PKGNAME=	${DISTNAME:S/fonts/ttf/}
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.redhat.com/f/fonts/
+
+# The official repo is https only,
+# so we have to fetch from this strange URL.
+#
+LF_HASH=	4846797ef0fc70b0cbaede2514677c58
+LF_BASEURL=	http://cvs.fedoraproject.org/repo/pkgs/liberation-fonts
+MASTER_SITES=	${LF_BASEURL}/${DISTNAME}.tar.gz/${LF_HASH}/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
