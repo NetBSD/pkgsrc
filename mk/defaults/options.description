@@ -409,6 +409,7 @@ viewvc-php		Use php to colorize .php and .inc files.
 vorbis			Enable Ogg Vorbis support.
 w3m			Use and enable support for the w3m browser
 w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
+w3m-image-gtk2		Use GTK2 as imaging library for W3m.
 w3m-image-imlib		Use imlib as imaging library for W3m.
 w3m-image-imlib2	Use imlib2 as imaging library for W3m.
 w3m-lynx-key		Enable lynx-like key bindings.
