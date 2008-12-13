@@ -1,0 +1,9 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/13 06:58:01 minskim Exp $
+
+--- installed-top.pc.in.orig	2007-06-28 01:12:11.000000000 -0700
++++ installed-top.pc.in
+@@ -1,2 +1,4 @@
++prefix=@prefix@
++exec_prefix=@exec_prefix@
+ libdir=@libdir@
+ includedir=@includedir@
