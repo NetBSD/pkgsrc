@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2008/12/13 05:19:12 epg Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2008/12/13 12:31:53 wiz Exp $
 @dirrm share/sip${PYVERSSUFFIX}/QtXml
 @dirrm share/sip${PYVERSSUFFIX}/QtWebKit
 @dirrm share/sip${PYVERSSUFFIX}/QtTest
@@ -21,3 +21,4 @@
 @dirrm ${PYSITELIB}/PyQt4/uic/Compiler
 @dirrm ${PYSITELIB}/PyQt4/uic
 @dirrm ${PYSITELIB}/PyQt4
+@dirrm qt4/plugins/designer/python
