@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.8 2008/12/13 13:26:19 obache Exp $
+$NetBSD: distinfo,v 1.9 2008/12/13 13:58:31 obache Exp $
 
 SHA1 (skey-1.1.5.tar.bz2) = d55fb286098900cdf3eb6b174a720a06c722312a
 RMD160 (skey-1.1.5.tar.bz2) = 33d97cbcd6dbc91bdca5b27056d51d1f5d06b68d
 Size (skey-1.1.5.tar.bz2) = 61911 bytes
-SHA1 (patch-aa) = 9ffb4f7c3b562ff5d50ea396ac130d7056b4a216
+SHA1 (patch-aa) = 78a4f791c5378d0ce2df8a92203859a34bc92bfe
 SHA1 (patch-ab) = 69d8f92968b3ebffc9b05fe7af1cde7e9d116587
 SHA1 (patch-ac) = f3e9a6ebb7ac22116c8d8e6fe8ca0db7f8d37051
+SHA1 (patch-ad) = d1c43f17b52a82679ec554296a853196d8469bc7
+SHA1 (patch-ae) = 344026ab4acffe57aa4d0545a791f845ecafda4b
+SHA1 (patch-af) = a2f46213568bb61cebbca658cf8bdb17e4150361
+SHA1 (patch-ag) = 43db09ab58733b773ed30015984f724ba80d0e11
+SHA1 (patch-ah) = dec25286d50cbe0181b9b4bc99bd92556e573b5e
+SHA1 (patch-ai) = ad90b480047a22b25bc2c6e416a224e892e501c9
