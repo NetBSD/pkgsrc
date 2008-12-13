@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2006/07/09 13:39:06 schwarz Exp $
+$NetBSD: patch-ac,v 1.2 2008/12/13 12:07:54 obache Exp $
 
 --- defines.h.orig	2006-07-09 14:03:48.000000000 +0200
 +++ defines.h	2006-07-09 14:06:42.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-ac,v 1.1 2006/07/09 13:39:06 schwarz Exp $
  # endif
  #endif
  
-+#ifdef MISSING-U_INT64_T
++#ifdef MISSING_U_INT64_T
 +typedef unsigned long long int  u_int64_t;
 +#endif
 +
