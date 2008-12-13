@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2008/12/13 08:16:07 obache Exp $
+$NetBSD: distinfo,v 1.19 2008/12/13 08:24:55 obache Exp $
 
 SHA1 (w3m-0.5.2.tar.gz) = 484522547ae6dbb342d3858a2a53a65451e273f9
 RMD160 (w3m-0.5.2.tar.gz) = 09ce72d8ef5e621a2e49496b63e22f2773edbe79
 Size (w3m-0.5.2.tar.gz) = 1906812 bytes
-SHA1 (patch-ab) = 4677c7f3b4ba7db1ae9bd3c173be61425a0da410
+SHA1 (patch-ab) = 2d60d7a2946f13a185591c0b927cf0f8b5ea351b
