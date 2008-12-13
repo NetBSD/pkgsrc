@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/13 05:17:02 epg Exp $
+
+Force shared libraries, from
+http://cvs.fedora.redhat.com/viewvc/devel/PyQt4/PyQt-x11-gpl-4.4.4-QT_SHARED.patch?revision=1.1&view=markup&pathrev=HEAD
+
+--- configure.py.orig	2008-11-08 03:55:49.000000000 -0800
++++ configure.py
+@@ -1584,11 +1584,7 @@ int main(int, char **)
+     out << QT_VERSION << '\\n';
+     out << QT_EDITION << '\\n';
+ 
+-#if defined(QT_SHARED) || defined(QT_DLL)
+     out << "shared\\n";
+-#else
+-    out << "\\n";
+-#endif
+ 
+     // Determine which features should be disabled.
+ 
