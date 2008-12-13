@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.X11,v 1.1.1.1 2008/12/13 05:19:12 epg Exp $
+share/sip${PYVERSSUFFIX}/QtGui/qx11embed_x11.sip
+share/sip${PYVERSSUFFIX}/QtGui/qx11info_x11.sip
