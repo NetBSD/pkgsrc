@@ -1,0 +1,36 @@
+$NetBSD: patch-ag,v 1.1 2008/12/13 13:58:31 obache Exp $
+
+Change to same as other *.c for hash functions.
+Avoid to use a mixture of local RMD160 functions with system RMD160 header.
+
+--- rmd160hl.c.orig	2001-05-10 16:10:49.000000000 +0000
++++ rmd160hl.c
+@@ -7,6 +7,10 @@
+  * ----------------------------------------------------------------------------
+  */
+ 
++#include "config.h"
++
++#ifndef HAVE_RMD160_H
++
+ #if defined(LIBC_SCCS) && !defined(lint)
+ static char rcsid[] = "$OpenBSD: rmd160hl.c,v 1.2 1999/08/17 09:13:12 millert Exp $";
+ #endif /* LIBC_SCCS and not lint */
+@@ -18,12 +22,7 @@ static char rcsid[] = "$OpenBSD: rmd160h
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
+-#include "config.h"
+-#ifdef HAVE_RMD160_H
+-#include <rmd160.h>
+-#else
+ #include "rmd160.h"
+-#endif
+ 
+ /* ARGSUSED */
+ char *
+@@ -83,3 +82,4 @@ RMD160Data (data, len, buf)
+     RMD160Update(&ctx, data, len);
+     return(RMD160End(&ctx, buf));
+ }
++#endif

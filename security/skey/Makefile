@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/12/13 13:26:19 obache Exp $
+# $NetBSD: Makefile,v 1.22 2008/12/13 13:58:31 obache Exp $
 #
 
 DISTNAME=		skey-1.1.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		security
 MASTER_SITES=		http://www.sparc.spb.su/solaris/skey/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=		Port of OpenBSD s/key implementation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONF_FILES+=		${PREFIX}/share/examples/skey/skeykeys \

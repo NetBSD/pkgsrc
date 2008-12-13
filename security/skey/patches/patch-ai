@@ -1,0 +1,23 @@
+$NetBSD: patch-ai,v 1.1 2008/12/13 13:58:31 obache Exp $
+
+include "config.h" before using HAVE_* macro.
+
+--- sha1hl.c.orig	2001-05-10 16:10:49.000000000 +0000
++++ sha1hl.c
+@@ -6,6 +6,8 @@
+  * this stuff is worth it, you can buy me a beer in return.   Poul-Henning Kamp
+  * ----------------------------------------------------------------------------
+  */
++#include "config.h"
++
+ #ifndef HAVE_SHA1_H
+ 
+ #if defined(LIBC_SCCS) && !defined(lint)
+@@ -19,7 +21,6 @@ static char rcsid[] = "$OpenBSD: sha1hl.
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ #include <unistd.h>
+-#include "config.h"
+ #include "sha1.h"
+ 
+ /* ARGSUSED */
