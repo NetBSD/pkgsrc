@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2008/11/23 16:16:35 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.51 2008/12/13 04:33:43 obache Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -63,9 +63,9 @@ post-patch:
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
+INSTALL_TARGET=		install install-helpfile
+
 post-install:
-	# Install help files.
-	@cd ${WRKSRC}; ${MAKE_PROGRAM} DESTDIR=${DESTDIR} install-helpfile
 	# Use pax to discard uid/gid.  Exclude manuals (*.1).
 	@cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
 	    ( cd ${DESTDIR}${PREFIX}/${DOCDIR}; pax -r )
