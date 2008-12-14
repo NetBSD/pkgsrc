@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2008/08/24 02:08:32 ahoka Exp $
+# $NetBSD: Makefile,v 1.83 2008/12/14 18:22:10 jdolecek Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 #PKGREVISION=		1
@@ -11,7 +11,7 @@ MASTER_SITES+=		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}
 MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
 DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}${EXTRACT_SUFX}
 
-MAINTAINER=		jdolecek@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
 COMMENT=		Small, fast and customizable WWW client
 
