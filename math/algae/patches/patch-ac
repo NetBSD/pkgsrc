@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2003/04/29 22:15:28 jtb Exp $
+$NetBSD: patch-ac,v 1.3 2008/12/14 13:19:15 tnn Exp $
 
---- src/Makefile.in.orig
-+++ src/Makefile.in
+--- src/Makefile.in.orig	2003-12-07 00:39:57.000000000 +0300
++++ src/Makefile.in	2008-12-07 00:26:34.000000000 +0300
 @@ -129,7 +129,7 @@
  # <<<< This section is deleted in the "binary" distribution.
  
@@ -11,3 +11,16 @@ $NetBSD: patch-ac,v 1.2 2003/04/29 22:15:28 jtb Exp $
  
  Makefile: Makefile.in ../config.status
  	cd ..; ./config.status
+@@ -218,9 +218,9 @@
+ # ========================== Installation ==========================
+ 
+ install: all
+-	$(INSTALL_PROGRAM) algae $(bindir)/algae-$(VERSION_NUMBER)
+-	rm -f $(bindir)/algae
+-	ln -s $(bindir)/algae-$(VERSION_NUMBER) $(bindir)/algae
++	$(INSTALL_PROGRAM) algae $(DESTDIR)$(bindir)/algae-$(VERSION_NUMBER)
++	rm -f $(DESTDIR)$(bindir)/algae
++	ln -s $(bindir)/algae-$(VERSION_NUMBER) $(DESTDIR)$(bindir)/algae
+ .PHONY:	install
+ 
+ uninstall:

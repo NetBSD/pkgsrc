@@ -1,8 +1,19 @@
-$NetBSD: patch-ae,v 1.4 2006/04/05 23:01:15 jlam Exp $
+$NetBSD: patch-ae,v 1.5 2008/12/14 13:19:15 tnn Exp $
 
---- Makefile.in.orig	2003-02-28 18:07:03.000000000 -0500
-+++ Makefile.in
-@@ -308,7 +308,7 @@ install: algae.A installdirs
+--- Makefile.in.orig	2003-12-07 00:39:23.000000000 +0300
++++ Makefile.in	2008-12-06 23:56:24.000000000 +0300
+@@ -294,15 +294,15 @@
+ # >>>> End of deleted section.
+ 
+ install: algae.A installdirs
+-	$(INSTALL_DATA) algae.A $(RC0)
+-	$(INSTALL_DATA) COPYING $(htmldir)
+-	$(INSTALL_DATA) LICENSE $(htmldir)
++	$(INSTALL_DATA) algae.A $(DESTDIR)$(RC0)
++	$(INSTALL_DATA) COPYING $(DESTDIR)$(htmldir)
++	$(INSTALL_DATA) LICENSE $(DESTDIR)$(htmldir)
+ 	cd src; \
+ 	  $(MAKE) bindir=$(bindir) install
  	cd tools; \
  	  $(MAKE) tooldir=$(tooldir) install
  	cd doc; \
@@ -11,3 +22,14 @@ $NetBSD: patch-ae,v 1.4 2006/04/05 23:01:15 jlam Exp $
  	  manext=$(manext) infodir=$(infodir) htmldir=$(htmldir) install
  .PHONY:	install
  
+@@ -310,8 +310,8 @@
+ # if necessary.
+ 
+ installdirs: mkinstalldirs
+-	$(srcdir)/mkinstalldirs $(bindir) $(datadir) $(libdir) $(infodir) \
+-          $(mandir) $(tooldir) $(rcdir) $(htmldir)
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(datadir) $(DESTDIR)$(libdir) $(DESTDIR)$(infodir) \
++          $(DESTDIR)$(mandir) $(DESTDIR)$(tooldir) $(DESTDIR)$(rcdir) $(DESTDIR)$(htmldir)
+ .PHONY:	installdirs
+ 
+ # Why would anyone want to uninstall?
