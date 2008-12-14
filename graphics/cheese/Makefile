@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/12/02 11:47:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/12/14 19:21:01 hasso Exp $
 
 DISTNAME=	cheese-2.24.2
 CATEGORIES=	graphics
@@ -23,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		pkg-config perl intltool gmake
+USE_TOOLS+=		pkg-config perl intltool gmake msgfmt
 USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
