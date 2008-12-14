@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7732 2008/12/14 15:39:59 wiz Exp $
+$NetBSD: TODO,v 1.7733 2008/12/14 16:08:28 taca Exp $
 
 Suggested new packages
 ======================
@@ -388,6 +388,7 @@ Suggested package updates
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
+	o apache-2.2.11
 	o apache-ant-1.7.1
 	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
