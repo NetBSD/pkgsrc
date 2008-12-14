@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2008/08/21 11:37:01 abs Exp $
+# $NetBSD: Makefile,v 1.30 2008/12/14 01:31:01 ahoka Exp $
 
-DISTNAME=	openttd-0.6.2-source
-PKGREVISION=	1
+DISTNAME=	openttd-0.6.3-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
@@ -23,6 +22,7 @@ USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
 CONFIGURE_ARGS+=	--data-dir=share/openttd
+CONFIGURE_ARGS+=	--man-dir=${PKGMANDIR}/man6
 
 # disable custom assert for Mac OS X (XXX: still needed?)
 CFLAGS+=	-DNDEBUG=1
