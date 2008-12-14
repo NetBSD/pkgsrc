@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3382 2008/12/14 04:03:26 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3383 2008/12/14 06:39:21 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5572,3 +5572,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight-translations to 20081213 [taca 2008-12-13]
 	Updated www/typolight to 2.6.3 [taca 2008-12-14]
 	Updated print/tex-IEEEtran to 1.7anb1 [minskim 2008-12-14]
+	Added filesystems/fuse-gstfs version 0.1 [bjs 2008-12-14]
