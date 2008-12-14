@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 11:04:35 obache Exp $
+include/clutter-0.8/clutter-cairo/clutter-cairo.h
+lib/libclutter-cairo-0.8.la
+lib/pkgconfig/clutter-cairo-0.8.pc
+@dirrm include/clutter-0.8/clutter-cairo
