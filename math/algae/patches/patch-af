@@ -1,13 +1,25 @@
-$NetBSD: patch-af,v 1.1 2003/04/29 22:15:28 jtb Exp $
+$NetBSD: patch-af,v 1.2 2008/12/14 13:19:15 tnn Exp $
 
---- doc/Makefile.in.orig
+--- doc/Makefile.in.orig	2001-10-31 20:43:44.000000000 +0100
 +++ doc/Makefile.in
-@@ -181,6 +181,8 @@
+@@ -173,15 +173,16 @@ maintainer-clean::
+ install: algae.info algae.1 algae_toc.html index.html info.db
+ 	-if test -f algae.info; then d=.; else d=$(srcdir); fi; \
+ 	for f in $$d/algae.info $$d/algae.info-*; do \
+-	  $(INSTALL_DATA) $$f $(infodir); \
++	  $(INSTALL_DATA) $$f $(DESTDIR)$(infodir); \
+ 	done; \
+ 	if $(SHELL) -c 'install-info --version' > /dev/null 2>&1; then \
+ 	  install-info --info-dir=$(infodir) $$d/algae.info; else true; fi
+ 	-if test -f algae_toc.html; then d=.; else d=$(srcdir); fi; \
  	for f in $$d/index.html $$d/algae*.html $$d/icon.gif $$d/info.db; do \
- 	  $(INSTALL_DATA) $$f $(htmldir); done
- 	-rm -f $(datadir)/algae/html; ln -s $(htmldir) $(datadir)/algae/html
-+	-mkdir -p $(prefix)/share/doc/algae
-+	-$(INSTALL_DATA) algae.ps $(prefix)/share/doc/algae
- 	-$(INSTALL_DATA) algae.1 $(mandir)/algae.$(manext)
+-	  $(INSTALL_DATA) $$f $(htmldir); done
+-	-rm -f $(datadir)/algae/html; ln -s $(htmldir) $(datadir)/algae/html
+-	-$(INSTALL_DATA) algae.1 $(mandir)/algae.$(manext)
++	  $(INSTALL_DATA) $$f $(DESTDIR)$(htmldir); done
++	-mkdir -p $(DESTDIR)$(prefix)/share/doc/algae
++	-$(INSTALL_DATA) algae.ps $(DESTDIR)$(prefix)/share/doc/algae
++	-$(INSTALL_DATA) algae.1 $(DESTDIR)$(mandir)/algae.$(manext)
  
  uninstall:
+ 	rm -f $(infodir)/algae.info* $(mandir)/algae.$(manext) \
