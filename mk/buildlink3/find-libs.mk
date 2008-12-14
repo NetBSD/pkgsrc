@@ -1,4 +1,4 @@
-# $NetBSD: find-libs.mk,v 1.3 2005/07/15 18:27:55 jlam Exp $
+# $NetBSD: find-libs.mk,v 1.4 2008/12/14 16:34:24 jmcneill Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -65,6 +65,8 @@ BUILTIN_LIB_FOUND.${_lib_}!=	\
 	if ${TEST} "`${ECHO} /usr/lib${ABI}/lib${_lib_}.*`" != "/usr/lib${ABI}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	elif ${TEST} "`${ECHO} /lib${ABI}/lib${_lib_}.*`" != "/lib${ABI}/lib${_lib_}.*"; then \
+		${ECHO} yes;						\
+	elif ${TEST} "`${ECHO} /usr/lib${LIBABISUFFIX}/lib${_lib}.*`" != "/usr/lib${LIBABISUFFIX}/lib${_lib_}.*"; then \
 		${ECHO} yes;						\
 	else								\
 		${ECHO} no;						\
