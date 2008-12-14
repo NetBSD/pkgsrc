@@ -1,0 +1,8 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/14 06:37:49 bjs Exp $
+
+--- ogg2mp3.sh.orig	2008-08-31 12:13:53.000000000 -0400
++++ ogg2mp3.sh
+@@ -1,2 +1,2 @@
+ #! /bin/sh
+-./gstfs -f -osrc=$1,src_ext=ogg,dst_ext=mp3,pipeline="filesrc name=\"_source\" ! oggdemux ! vorbisdec ! audioconvert ! lame bitrate=160 ! fdsink name=\"_dest\" sync=false" $2
++gstfs -f -osrc=$1,src_ext=ogg,dst_ext=mp3,pipeline="filesrc name=\"_source\" ! oggdemux ! vorbisdec ! audioconvert ! lame bitrate=160 ! fdsink name=\"_dest\" sync=false" $2

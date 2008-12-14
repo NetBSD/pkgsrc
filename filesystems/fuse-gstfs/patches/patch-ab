@@ -1,0 +1,8 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/14 06:37:49 bjs Exp $
+
+--- mp32wav.sh.orig	2008-08-31 12:13:53.000000000 -0400
++++ mp32wav.sh
+@@ -1,2 +1,2 @@
+ #! /bin/sh
+-./gstfs -d -osrc=$1,src_ext=mp3,dst_ext=wav,pipeline="filesrc name=\"_source\" ! decodebin ! audioconvert ! wavenc ! fdsink name=\"_dest\" sync=false" $2
++gstfs -d -osrc=$1,src_ext=mp3,dst_ext=wav,pipeline="filesrc name=\"_source\" ! decodebin ! audioconvert ! wavenc ! fdsink name=\"_dest\" sync=false" $2

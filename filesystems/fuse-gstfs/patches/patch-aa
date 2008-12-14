@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/14 06:37:49 bjs Exp $
+
+--- Makefile.orig	2008-08-31 12:13:53.000000000 -0400
++++ Makefile
+@@ -5,14 +5,14 @@ DISTFILES=*.[ch] *.sh Makefile README CO
+ SRCS=gstfs.c xcode.c
+ OBJS=$(SRCS:.c=.o)
+ 
+-LIBS=-lpthread `pkg-config --libs fuse glib-2.0 gstreamer-0.10`
++LIBS+=`pkg-config --libs fuse glib-2.0 gstreamer-0.10`
+ 
+ CFLAGS+=-g -Wall -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=26 `pkg-config --cflags fuse glib-2.0 gstreamer-0.10`
+ 
+ all: gstfs
+ 
+ gstfs: $(OBJS)
+-	gcc -o gstfs $(OBJS) $(LIBS)
++	${CC} -o gstfs $(OBJS) $(LIBS)
+ 
+ clean:
+ 	$(RM) gstfs *.o
