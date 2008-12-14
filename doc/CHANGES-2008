@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3387 2008/12/14 13:20:01 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.3388 2008/12/14 15:53:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5582,3 +5582,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/p5-clutter version 0.8.2.0 [obache 2008-12-14]
 	Added graphics/py-pyclutter version 0.8.2 [obache 2008-12-14]
 	Updated math/algae to 4.3.6 [tnn 2008-12-14]
+	Renamed graphics/py-pyclutter to graphics/py-clutter [obache 2008-12-14]
