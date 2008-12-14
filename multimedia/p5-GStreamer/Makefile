@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/06 13:39:54 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/14 09:06:13 obache Exp $
 #
 
 DISTNAME=	GStreamer-0.11
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.205:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.07:../../devel/p5-ExtUtils-PkgConfig
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
