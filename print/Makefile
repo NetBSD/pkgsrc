@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.188 2008/11/20 14:33:30 dillo Exp $
+# $NetBSD: Makefile,v 1.189 2008/12/14 07:55:56 obache Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -111,7 +111,6 @@ SUBDIR+=	ruby-gnome2-gnomeprintui
 SUBDIR+=	ruby-gnome2-poppler
 SUBDIR+=	ruby-pdf-writer
 SUBDIR+=	scribus
-SUBDIR+=	scribus-doc
 SUBDIR+=	stylewriter
 SUBDIR+=	tcl-pdflib
 SUBDIR+=	teTeX
