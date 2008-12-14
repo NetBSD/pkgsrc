@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3388 2008/12/14 15:53:45 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3389 2008/12/14 17:00:30 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5583,3 +5583,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/py-pyclutter version 0.8.2 [obache 2008-12-14]
 	Updated math/algae to 4.3.6 [tnn 2008-12-14]
 	Renamed graphics/py-pyclutter to graphics/py-clutter [obache 2008-12-14]
+	Updated print/gutenprint51-lib to 5.2.1 [gdt 2008-12-14]
