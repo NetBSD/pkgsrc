@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.794 2008/12/05 06:48:05 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.795 2008/12/14 18:46:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5071,8 +5071,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 				$line->explain_warning(
 "This option is not documented in the mk/defaults/options.description",
 "file. If this is not a typo, please think of a brief but precise",
-"description and ask on the tech-pkg\@NetBSD.org for inclusion in the",
-"database.");
+"description and either update that file yourself or ask on the",
+"tech-pkg\@NetBSD.org mailing list.");
 			}
 
 		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_]*)$") {
