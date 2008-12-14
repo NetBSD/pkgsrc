@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2008/08/05 12:38:22 kefren Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/12/14 01:31:01 ahoka Exp $
 bin/openttd
+man/man6/openttd.6
 share/openttd/data/openttdd.grf
 share/openttd/data/openttdw.grf
 share/openttd/data/opntitle.dat
@@ -9,10 +10,6 @@ ${PLIST.ttd-data}share/openttd/data/trgcr.grf
 ${PLIST.ttd-data}share/openttd/data/trghr.grf
 ${PLIST.ttd-data}share/openttd/data/trgir.grf
 ${PLIST.ttd-data}share/openttd/data/trgtr.grf
-share/openttd/docs/32bpp.txt
-share/openttd/docs/changelog.txt
-share/openttd/docs/known-bugs.txt
-share/openttd/docs/multiplayer.txt
 ${PLIST.ttd-data}share/openttd/gm/gm_tt00.gm
 ${PLIST.ttd-data}share/openttd/gm/gm_tt01.gm
 ${PLIST.ttd-data}share/openttd/gm/gm_tt02.gm
@@ -73,12 +70,24 @@ share/openttd/lang/swedish.lng
 share/openttd/lang/traditional_chinese.lng
 share/openttd/lang/turkish.lng
 share/openttd/lang/ukrainian.lng
-share/pixmaps/openttd.32.bmp
 share/pixmaps/openttd.32.xpm
-share/pixmaps/openttd.64.png
+share/applications/openttd.desktop
+share/doc/openttd/32bpp.txt
+share/doc/openttd/multiplayer.txt
+share/icons/hicolor/128x128/apps/openttd.128.png
+share/icons/hicolor/16x16/apps/openttd.16.png
+share/icons/hicolor/256x256/apps/openttd.256.png
+share/icons/hicolor/32x32/apps/openttd.32.png
+share/icons/hicolor/48x48/apps/openttd.48.png
+share/icons/hicolor/64x64/apps/openttd.64.png
+share/openttd/data/generictrams_v0.4.grf
+share/openttd/scenario/Greenistan.scn
+share/openttd/scenario/Polopolis.scn
+share/openttd/scenario/Skadi Islands.scn
+share/openttd/scenario/Terra Incognita.scn
+share/openttd/scenario/Wales and West England.scn
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/openttd/lang
-@dirrm share/openttd/docs
 @unexec ${RMDIR} %D/share/openttd/data 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/openttd/gm 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/openttd 2>/dev/null || ${TRUE}
