@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2006/07/21 05:32:11 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/14 13:19:15 tnn Exp $
 
-DISTNAME=		algae-4.1.3
-PKGREVISION=		4
+DISTNAME=		algae-4.3.6
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=algae/}
 
@@ -11,17 +10,18 @@ COMMENT=		Interpreted language for numerical analysis
 
 DEPENDS+=		gnuplot>=3.5:../../graphics/gnuplot
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS=		--disable-dlmalloc
+CONFIGURE_ENV=		ac_cv_path_XTERM=xterm
 USE_LANGUAGES=		c fortran
-USE_TOOLS+=		ls tr
 USE_GNU_READLINE=	yes	# uses history_truncate_file
 INFO_FILES=		yes
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
-			mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1		\
-			infodir=${PREFIX:Q}/${PKGINFODIR:Q}		\
-			htmldir=${PREFIX:Q}/share/doc/html/algae	\
-			sourcedir=${PREFIX:Q}/include			\
-			hdir=${PREFIX:Q}/include/algae
+			mandir=${PREFIX}/${PKGMANDIR}/man1		\
+			infodir=${PREFIX}/${PKGINFODIR}		\
+			htmldir=${PREFIX}/share/doc/algae
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
