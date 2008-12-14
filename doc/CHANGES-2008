@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3385 2008/12/14 11:22:57 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3386 2008/12/14 12:49:04 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5580,4 +5580,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/clutter-gtk version 0.8.2 [obache 2008-12-14]
 	Added multimedia/clutter-gst version 0.8.4 [obache 2008-12-14]
 	Added graphics/p5-clutter version 0.8.2.0 [obache 2008-12-14]
-	Added graphics/python-pyclutter version 0.8.2 [obache 2008-12-14]
+	Added graphics/py-pyclutter version 0.8.2 [obache 2008-12-14]
