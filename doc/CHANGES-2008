@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3380 2008/12/13 16:29:51 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3381 2008/12/14 00:24:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5570,3 +5570,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated shells/osh to 20081213 [obache 2008-12-13]
 	Updated fonts/liberation-ttf to 1.04 [ahoka 2008-12-13]
 	Updated www/typolight-translations to 20081213 [taca 2008-12-13]
+	Updated www/typolight to 2.6.3 [taca 2008-12-14]
