@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3384 2008/12/14 07:57:46 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3385 2008/12/14 11:22:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5574,3 +5574,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/tex-IEEEtran to 1.7anb1 [minskim 2008-12-14]
 	Added filesystems/fuse-gstfs version 0.1 [bjs 2008-12-14]
 	Removed print/scribus-doc [obache 2008-12-14]
+	Added graphics/clutter version 0.8.4 [obache 2008-12-14]
+	Added graphics/clutter-box2d version 0.8.0 [obache 2008-12-14]
+	Added graphics/clutter-cairo version 0.8.2 [obache 2008-12-14]
+	Added graphics/clutter-gtk version 0.8.2 [obache 2008-12-14]
+	Added multimedia/clutter-gst version 0.8.4 [obache 2008-12-14]
+	Added graphics/p5-clutter version 0.8.2.0 [obache 2008-12-14]
+	Added graphics/python-pyclutter version 0.8.2 [obache 2008-12-14]
