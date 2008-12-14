@@ -1,4 +1,4 @@
-/*	$NetBSD: types.h,v 1.3 2008/10/08 14:28:14 joerg Exp $	*/
+/*	$NetBSD: types.h,v 1.4 2008/12/14 07:50:49 obache Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -42,6 +42,10 @@
  */
 #if HAVE_INTTYPES_H
 #include <inttypes.h>
+#endif
+
+#if HAVE_STDINT_H
+#include <stdint.h>
 #endif
 
 /*
