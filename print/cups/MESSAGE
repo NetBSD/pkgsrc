@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2003/06/25 11:47:40 reinoud Exp $
+$NetBSD: MESSAGE,v 1.10 2008/12/14 17:17:55 ahoka Exp $
 
-You will need to also install print/ghostscript-esp{,-nox11} if you wish
-to print to non-Postscript printers.
+You will need to also install print/ghostscript if you wish to
+print to non-Postscript printers.
 
 You may install additional PPD files for other printer models into
 ${PREFIX}/share/cups/model.
