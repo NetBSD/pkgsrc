@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 11:06:42 obache Exp $
+include/clutter-0.8/clutter-gtk/gtk-clutter-embed.h
+include/clutter-0.8/clutter-gtk/gtk-clutter-util.h
+lib/libclutter-gtk-0.8.la
+lib/pkgconfig/clutter-gtk-0.8.pc
+share/gtk-doc/html/clutter-gtk/GtkClutterEmbed.html
+share/gtk-doc/html/clutter-gtk/ch01.html
+share/gtk-doc/html/clutter-gtk/ch02.html
+share/gtk-doc/html/clutter-gtk/ch03.html
+share/gtk-doc/html/clutter-gtk/clutter-gtk-Utility-Functions.html
+share/gtk-doc/html/clutter-gtk/clutter-gtk.devhelp
+share/gtk-doc/html/clutter-gtk/clutter-gtk.devhelp2
+share/gtk-doc/html/clutter-gtk/home.png
+share/gtk-doc/html/clutter-gtk/index.html
+share/gtk-doc/html/clutter-gtk/index.sgml
+share/gtk-doc/html/clutter-gtk/left.png
+share/gtk-doc/html/clutter-gtk/license.html
+share/gtk-doc/html/clutter-gtk/right.png
+share/gtk-doc/html/clutter-gtk/style.css
+share/gtk-doc/html/clutter-gtk/up.png
+@dirrm share/gtk-doc/html/clutter-gtk
+@dirrm include/clutter-0.8/clutter-gtk
