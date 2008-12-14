@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.10 2008/09/15 21:07:46 rillig Exp $
+# $NetBSD: fetch,v 1.11 2008/12/14 14:09:32 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -189,7 +189,7 @@ if ${TEST} -n "$distinfo"; then
 	done < $distinfo
 fi
 
-# verify_file $file
+# verify_file [-v] $file
 #	If we can checksum the file, then see if it matches the listed
 #	checksums in the distinfo file.  If we can check the size, then
 #	check that instead.  We strip off ".pkgsrc.resume" from the
@@ -197,14 +197,26 @@ fi
 #	fetch file as well.
 #
 verify_file() {
+	_if_verbose=:; if [ "x$1" = "x-v" ]; then shift; _if_verbose=; fi
 	_file="${1#./}"
-	${TEST} -f $_file || return 1
+	${TEST} -f $_file || {
+		$_if_verbose ${ECHO} 1>&2 "$self: File $_file does not exist."
+		return 1
+	}
 	if ${TEST} -n "$checksum"; then
-		${CHECKSUM} -s ".pkgsrc.resume" $distinfo ${_file} || return 1
+		echo "foo"
+		read line
+		${CHECKSUM} -s ".pkgsrc.resume" $distinfo ${_file} || {
+			$_if_verbose ${ECHO} 1>&2 "$self: Checksum of the file $_file doesn't match."
+			return 1
+		}
 		return 0
 	elif ${TEST} -n "$distsize"; then
 		_size=`${WC} -c < $_file`
-		${TEST} "$_size" -eq "$distsize" || return 1
+		${TEST} "$_size" -eq "$distsize" || {
+			$_if_verbose ${ECHO} 1>&2 "$self: Size of the file $_file doesn't match."
+			return 1
+		}
 		return 0
 	fi
 	return 0;
@@ -270,11 +282,9 @@ while ${TEST} $# -gt 0; do
 		${ECHO} 1>&2 "$self: Unable to fetch expected file $file"
 		continue
 	fi
-	if verify_file $outputpath; then
+	if verify_file -v $outputpath; then
 		${TEST} -z "$resume" || ${MV} -f $outputpath $path
 		break
-	else
-		${ECHO} 1>&2 "$self: Unable to verify fetched file $file"
 	fi
 	if ${TEST} -n "$resume"; then
 		if ${TEST} -f $path; then
