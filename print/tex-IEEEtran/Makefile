@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.12 2008/12/07 06:43:22 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/14 04:02:01 minskim Exp $
 #
 
 DISTNAME=	IEEEtran
 PKGNAME=	tex-IEEEtran-1.7a
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=macros/latex/contrib/}
 EXTRACT_SUFX=	.zip
-DIST_SUBDIR=	${PKGNAME_NOREV}
+DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.michaelshell.org/tex/ieeetran/
