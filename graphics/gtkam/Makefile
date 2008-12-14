@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/12/03 08:19:19 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/12/14 20:52:04 hasso Exp $
 #
 
 DISTNAME=	gtkam-0.1.16
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		intltool pkg-config perl
+USE_TOOLS+=		intltool pkg-config perl msgfmt
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--without-bonobo
