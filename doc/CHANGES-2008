@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3391 2008/12/15 00:47:08 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3392 2008/12/15 03:09:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4091,6 +4091,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/tokyodystopia to 0.9.7 [obache 2008-10-06]
 	Added www/ap-mono version 1.9 [kefren 2008-10-06]
 	Updated www/typolight to 2.6.1 [taca 2008-10-06]
+	Updated www/typolight-example to 2.6.1 [taca 2008-10-06]
 	Updated www/typolight-translations to 20081006 [taca 2008-10-06]
 	Updated www/drupal6-translations to 20081006 [taca 2008-10-06]
 	Updated www/ikiwiki to 2.66 [schmonz 2008-10-06]
@@ -4862,6 +4863,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/mtree to 20081105 [jschauma 2008-11-05]
 	Updated www/elinks to 0.12rc2 [bjs 2008-11-06]
 	Updated www/typolight to 2.6.2 [taca 2008-11-06]
+	Updated www/typolight-example to 2.6.2 [taca 2008-11-06]
 	Updated graphics/p5-Image-ExifTool to 7.51nb1 [gdt 2008-11-06]
 	Added multimedia/p5-GStreamer version 0.11 [obache 2008-11-06]
 	Updated mail/imap-uw to 2007d [tron 2008-11-06]
@@ -5571,6 +5573,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/liberation-ttf to 1.04 [ahoka 2008-12-13]
 	Updated www/typolight-translations to 20081213 [taca 2008-12-13]
 	Updated www/typolight to 2.6.3 [taca 2008-12-14]
+	Updated www/typolight-example to 2.6.3 [taca 2008-12-14]
 	Updated print/tex-IEEEtran to 1.7anb1 [minskim 2008-12-14]
 	Added filesystems/fuse-gstfs version 0.1 [bjs 2008-12-14]
 	Removed print/scribus-doc [obache 2008-12-14]
@@ -5588,3 +5591,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-client to 2.1.8 [adam 2008-12-14]
 	Updated games/freeciv-server to 2.1.8 [adam 2008-12-14]
 	Added graphics/silgraphite-xft version 2.3 [minskim 2008-12-15]
+	Updated www/typolight to 2.6.3nb1 [taca 2008-12-15]
+	Updated www/typolight-translations to 20081214 [taca 2008-12-15]
