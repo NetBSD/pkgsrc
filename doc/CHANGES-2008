@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3398 2008/12/15 23:05:33 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3399 2008/12/15 23:14:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5605,3 +5605,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/icsi-finger to 1.0.27nb2 [is 2008-12-15]
 	Updated security/mcrypto to 2.6.8 [smb 2008-12-15]
 	Updated www/horde to 3.3.2 [adrianp 2008-12-15]
+	Updated mail/imp to 4.3.2 [adrianp 2008-12-15]
