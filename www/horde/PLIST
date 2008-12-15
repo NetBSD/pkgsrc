@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/10/12 12:00:52 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/12/15 23:05:14 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -45,6 +45,7 @@ share/horde/config/prefs.php.dist
 share/horde/config/registry.php.dist
 share/horde/index.php
 share/horde/js/QuickFinder.js
+share/horde/js/accesskeys.js
 share/horde/js/addEvent.php
 share/horde/js/colorpicker.js
 share/horde/js/controls.js
@@ -73,6 +74,7 @@ share/horde/js/sidebar.js
 share/horde/js/slider.js
 share/horde/js/sorter.js
 share/horde/js/src/QuickFinder.js
+share/horde/js/src/accesskeys.js
 share/horde/js/src/colorpicker.js
 share/horde/js/src/controls.js
 share/horde/js/src/dhtmlHistory.js
@@ -307,6 +309,16 @@ share/horde/lib/Horde/Image/svg.php
 share/horde/lib/Horde/Image/swf.php
 share/horde/lib/Horde/Kolab.php
 share/horde/lib/Horde/Kolab/Deprecated.php
+share/horde/lib/Horde/Kolab/IMAP.php
+share/horde/lib/Horde/Kolab/IMAP/cclient.php
+share/horde/lib/Horde/Kolab/IMAP/pear.php
+share/horde/lib/Horde/Kolab/IMAP/test.php
+share/horde/lib/Horde/Kolab/Server/Object/adminrole.php
+share/horde/lib/Horde/Kolab/Server/Object/distlist.php
+share/horde/lib/Horde/Kolab/Session.php
+share/horde/lib/Horde/Kolab/Test.php
+share/horde/lib/Horde/Kolab/Test/Server.php
+share/horde/lib/Horde/Kolab/Test/Storage.php
 share/horde/lib/Horde/Kolab/Format.php
 share/horde/lib/Horde/Kolab/Format/Date.php
 share/horde/lib/Horde/Kolab/Format/XML.php
@@ -333,13 +345,8 @@ share/horde/lib/Horde/Kolab/Storage.php
 share/horde/lib/Horde/Kolab/Storage/Cache.php
 share/horde/lib/Horde/Kolab/Storage/Data.php
 share/horde/lib/Horde/Kolab/Storage/Folder.php
-share/horde/lib/Horde/Kolab/Storage/IMAP.php
-share/horde/lib/Horde/Kolab/Storage/IMAP/cclient.php
-share/horde/lib/Horde/Kolab/Storage/IMAP/pear.php
-share/horde/lib/Horde/Kolab/Storage/IMAP/test.php
 share/horde/lib/Horde/Kolab/Storage/List.php
 share/horde/lib/Horde/Kolab/Storage/Perms.php
-share/horde/lib/Horde/Kolab/Storage/Session.php
 share/horde/lib/Horde/LDAP.php
 share/horde/lib/Horde/Lens.php
 share/horde/lib/Horde/Lens/Interface.php
@@ -801,6 +808,8 @@ share/horde/scripts/get_login.php
 share/horde/scripts/horde.logrotate
 share/horde/scripts/http_login_refer.php
 share/horde/scripts/import_squirrelmail_prefs.php
+share/horde/scripts/import_squirrelmail_file_prefs.php
+share/horde/scripts/import_squirrelmail_sql_prefs.php
 share/horde/scripts/ldap/horde.prefs.acl
 share/horde/scripts/ldap/horde.schema
 share/horde/scripts/set_perms.sh
@@ -1587,6 +1596,7 @@ share/horde/templates/javascript/open_calendar.js
 share/horde/templates/javascript/open_html_helper.js
 share/horde/templates/javascript/print.js
 share/horde/templates/javascript/tree.js
+share/horde/templates/login/header.inc
 share/horde/templates/login/login.inc
 share/horde/templates/login/mobile.inc
 share/horde/templates/maintenance/maintenance.html
@@ -4124,12 +4134,13 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/lib/Horde/Log
 @dirrm share/horde/lib/Horde/Lock
 @dirrm share/horde/lib/Horde/Lens
-@dirrm share/horde/lib/Horde/Kolab/Storage/IMAP
 @dirrm share/horde/lib/Horde/Kolab/Storage
 @dirrm share/horde/lib/Horde/Kolab/Server/Object
 @dirrm share/horde/lib/Horde/Kolab/Server
 @dirrm share/horde/lib/Horde/Kolab/Format/XML
 @dirrm share/horde/lib/Horde/Kolab/Format
+@dirrm share/horde/lib/Horde/Kolab/IMAP
+@dirrm share/horde/lib/Horde/Kolab/Test
 @dirrm share/horde/lib/Horde/Kolab
 @dirrm share/horde/lib/Horde/Image/Effect/im
 @dirrm share/horde/lib/Horde/Image/Effect/gd
