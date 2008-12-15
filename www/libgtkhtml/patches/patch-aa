@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2008/12/15 12:10:45 rillig Exp $
+
+strlen and memset are in <string.h>, not in <strings.h>.
+
+http://bugzilla.gnome.org/show_bug.cgi?id=564598
+
+--- libgtkhtml/layout/htmlboxlistitem.c.orig	2003-07-01 10:03:11.000000000 +0200
++++ libgtkhtml/layout/htmlboxlistitem.c	2008-12-15 13:00:30.000000000 +0100
+@@ -20,6 +20,7 @@
+    Boston, MA 02111-1307, USA.
+ */
+ 
++#include <string.h>
+ #include <strings.h>
+ 
+ #include "htmlboxtext.h"
