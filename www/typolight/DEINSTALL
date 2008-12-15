@@ -1,6 +1,8 @@
-# $NetBSD: DEINSTALL,v 1.1 2008/11/06 11:23:14 taca Exp $
+# $NetBSD: DEINSTALL,v 1.2 2008/12/15 03:05:11 taca Exp $
 
 TL_WEBDIR="@PREFIX@/@TL_WEBDIR@"
+TL_DIRS="templates system/drivers system/libraries system/logs \
+	 system/modules system/themes system/config system"
 
 case ${STAGE} in
 DEINSTALL)
@@ -8,13 +10,8 @@ DEINSTALL)
 		-exec ${RM} -f {} \;
 	;;
 POST-DEINSTALL)
-	${RMDIR} ${TL_WEBDIR}/templates 2>/dev/null
-	${RMDIR} ${TL_WEBDIR}/system/drivers 2>/dev/null
-	${RMDIR} ${TL_WEBDIR}/system/libraries
-	${RMDIR} ${TL_WEBDIR}/system/logs
-	${RMDIR} ${TL_WEBDIR}/system/modules
-	${RMDIR} ${TL_WEBDIR}/system/themes 2>/dev/null
-	${RMDIR} ${TL_WEBDIR}/system/config
-	${RMDIR} -p ${TL_WEBDIR}/system
+	for d in ${TL_DIRS} ${TL_WEBDIR}; do
+		${RMDIR} $d >/dev/null 2>&1
+	done
 	;;
 esac
