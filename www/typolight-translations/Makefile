@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/12/13 16:28:24 taca Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/15 03:05:37 taca Exp $
 #
 
 DISTNAME=	typolight-translations-${VERS}
@@ -13,7 +13,7 @@ COMMENT=	Language files for TYPOlight CMS
 
 DEPENDS+=	typolight>=2.6.0:../../www/typolight
 
-VERS=		20081213
+VERS=		20081214
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
