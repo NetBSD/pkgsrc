@@ -1,0 +1,68 @@
+$NetBSD: patch-ah,v 1.1 2008/12/15 15:37:56 is Exp $
+
+--- config.h.orig	1997-10-27 20:44:06.000000000 +0100
++++ config.h
+@@ -12,38 +12,35 @@
+  *
+  */
+ 
+-#undef InstallCmd
+-#define InstallCmd	/usr/local/etc/install -c
+-
+-#if defined(sun) && !defined(__svr4__)
+-#undef X11Dir		/* use own X11R6 on old SunOS */
+-#endif
+-
+-#ifndef X11Dir
+-#ifndef sgi
+-#define X11Dir		/usr/local/X11R6
+-#endif
+-#endif
+-
+-#ifdef bsdi
+-#undef X11Dir
+-#define X11Dir		/usr/X11
+ #undef FingerDir
+-#define FingerDir	/var/spool/fingerdir
+-#endif
++#define FingerDir /var/run/fingerdir
++
++#undef MugShotPath
++#define MugShotPath "/usr/pkg/images/finger"
++
++#undef BinDir
++#define BinDir /usr/pkg/bin
++
++#undef EtcDir
++#define EtcDir /usr/pkg/sbin
+ 
+-#ifdef ultrix
+-/*
+- * Standard ultrix man(1) cannot handle multiple man directories.
+- */
+ #undef ManDir
+ #undef ManExt
+ #undef Man5Ext
+ #undef Man8Ext
+-#define ManDir /usr/man
+-#define ManExt l
+-#define Man5Ext l
+-#define Man8Ext l
+-#endif /* ultrix */
+ 
+-/* #define USE_DBMALLOC */
++#define ManExt 1
++#define Man5Ext 5
++#define Man8Ext 8
++
++/* Binaries with names identical to standard UNIX versions may be prefixed
++   e.g., "gfinger" instead of "finger". */
++#undef BinPrefix
++#define BinPrefix g
++
++#undef HAVE_X11
++#undef HAVE_SUNVIEW
++#undef PRINT_WIDGET
++
++#undef MAILDIR 
++#define MAILDIR "/var/mail"
