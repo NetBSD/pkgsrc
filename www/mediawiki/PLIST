@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/26 18:13:19 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/15 11:54:34 martti Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/AdminSettings.sample
 share/mediawiki/COPYING
@@ -89,6 +89,7 @@ share/mediawiki/includes/HTMLFileCache.php
 share/mediawiki/includes/HistoryBlob.php
 share/mediawiki/includes/Hooks.php
 share/mediawiki/includes/HttpFunctions.php
+share/mediawiki/includes/IEContentAnalyzer.php
 share/mediawiki/includes/IP.php
 share/mediawiki/includes/ImageFunctions.php
 share/mediawiki/includes/ImageGallery.php
