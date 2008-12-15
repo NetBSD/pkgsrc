@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.503 2008/12/14 15:53:45 obache Exp $
+# $NetBSD: Makefile,v 1.504 2008/12/15 00:47:08 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -325,6 +325,7 @@ SUBDIR+=	scrot
 SUBDIR+=	showimg
 SUBDIR+=	silgraphite
 SUBDIR+=	silgraphite-ft
+SUBDIR+=	silgraphite-xft
 SUBDIR+=	simage
 SUBDIR+=	skencil
 SUBDIR+=	snx101view
