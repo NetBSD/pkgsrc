@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/03/17 19:29:58 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/15 15:37:56 is Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.27
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.icsi.berkeley.edu/pub/ai/stolcke/software/
 EXTRACT_SUFX=	.tar.Z
@@ -19,10 +19,16 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
 			${PKGMANDIR}/man8 sbin
 
 pre-configure:
-		${RM} -f ${WRKSRC}/config.h
-		${SED}	-e s@/usr/local@${PREFIX}@	\
-			-e s@/usr/pkg@${PREFIX}@	\
-			files/config.h.netbsd > ${WRKSRC}/config.h
+		echo \#define ManDir ${PREFIX}/${PKGMANDIR} >> \
+			${WRKSRC}/config.h
+		echo \#define TARGETDIR \"${PKG_SYSCONFDIR}/fingerdir/targets\"\
+			>> ${WRKSRC}/config.h
+		echo \#define TargetDir ${PKG_SYSCONFDIR}/fingerdir/targets \
+			>> ${WRKSRC}/config.h
+		echo \#define TTYLOCFILE \"${PKG_SYSCONFDIR}/fingerdir/ttylocs\" \
+			>> ${WRKSRC}/config.h
+		echo \#define HOSTCONFIGFILE \"${PKG_SYSCONFDIR}/fingerdir/hostconfig\" \
+			>> ${WRKSRC}/config.h
 		${MV} -f ${WRKSRC}/support/inetd.conf-add \
 			${WRKSRC}/support/inetd.conf-add.bak
 		${SED}	-e s@/usr/local/etc@${PREFIX}/libexec@      \
