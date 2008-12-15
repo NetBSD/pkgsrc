@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3390 2008/12/14 19:36:49 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3391 2008/12/15 00:47:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5587,3 +5587,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-share to 2.1.8 [adam 2008-12-14]
 	Updated games/freeciv-client to 2.1.8 [adam 2008-12-14]
 	Updated games/freeciv-server to 2.1.8 [adam 2008-12-14]
+	Added graphics/silgraphite-xft version 2.3 [minskim 2008-12-15]
