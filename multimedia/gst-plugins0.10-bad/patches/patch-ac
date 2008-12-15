@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2008/12/15 21:31:59 hasso Exp $
+
+--- ext/apexsink/gstapexraop.h.orig	2008-12-15 22:57:52 +0200
++++ ext/apexsink/gstapexraop.h	2008-12-15 22:58:59 +0200
+@@ -44,6 +44,10 @@
+ 
+ #include <arpa/inet.h>
+ 
++#ifdef HAVE_SYS_SOCKET_H
++#include <sys/socket.h>
++#endif
++
+ G_BEGIN_DECLS
+ 
+ /* raop fixed parameters */
