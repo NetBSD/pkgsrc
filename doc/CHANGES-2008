@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3394 2008/12/15 11:19:25 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3395 2008/12/15 15:39:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5599,3 +5599,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/ruby-tokyocabinet to 1.18 [obache 2008-12-15]
 	Updated databases/tokyotyrant to 1.1.9nb1 [obache 2008-12-15]
 	Updated textproc/tokyodystopia to 0.9.8nb2 [obache 2008-12-15]
+	Updated multimedia/gmplayer to 1.0rc10nb8 [tron 2008-12-15]
+	Updated multimedia/mplayer to 1.0rc10nb10 [tron 2008-12-15]
+	Updated multimedia/mencoder to 1.0rc10nb5 [tron 2008-12-15]
