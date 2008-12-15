@@ -1,4 +1,4 @@
-# $NetBSD: check-stripped.mk,v 1.1 2008/02/13 15:02:20 rillig Exp $
+# $NetBSD: check-stripped.mk,v 1.2 2008/12/15 11:03:49 rillig Exp $
 #
 # This file checks that after installation, all binaries conform to the
 # setting of INSTALL_UNSTRIPPED.
@@ -43,16 +43,17 @@ _check-stripped: error-check .PHONY
 		${CHECK_STRIPPED_SKIP:@p@${p}) continue ;;@}		\
 		*) ;;							\
 		esac;							\
-		test -x "$$file" || continue;				\
-		if [ ! -r "$$file" ]; then				\
-			${DELAYED_WARNING_MSG} "[check-stripped.mk] File \"${DESTDIR}${PREFIX}/$$file\" cannot be read."; \
+		dpfile=${DESTDIR}${PREFIX}/$$file;			\
+		test -x "$$dpfile" || continue;				\
+		if [ ! -r "$$dpfile" ]; then				\
+			${DELAYED_WARNING_MSG} "[check-stripped.mk] File \"$$dpfile\" cannot be read."; \
 			continue;					\
 		fi;							\
-		ftype=`LANG=C LC_ALL=C ${FILE_CMD} ./$$file`;		\
+		ftype=`LC_ALL=C ${FILE_CMD} ./$$dpfile`;		\
 		case $$want_stripped,$$ftype in				\
-		yes,*:*\ ELF\ *,\ not\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] ${DESTDIR}${PREFIX}/$$file should be stripped, but is not.";; \
-		no,*:*\ ELF\ *,\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] ${DESTDIR}${PREFIX}/$$file should NOT be stripped, but it is.";; \
-		no,*:*\ ELF\ *,\ not\ stripped*) ${INFO_MSG} "[check-stripped.mk] ${DESTDIR}${PREFIX}/$$file is not stripped (ok).";; \
-		yes,*:*\ ELF\ *,\ stripped*) ${INFO_MSG} "[check-stripped.mk] ${DESTDIR}${PREFIX}/$$file is stripped (ok).";; \
+		yes,*:*\ ELF\ *,\ not\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] $$dpfile should be stripped, but is not.";; \
+		no,*:*\ ELF\ *,\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] $$dpfile should NOT be stripped, but it is.";; \
+		no,*:*\ ELF\ *,\ not\ stripped*) : ${INFO_MSG} "[check-stripped.mk] $$dpfile is not stripped (ok).";; \
+		yes,*:*\ ELF\ *,\ stripped*) : ${INFO_MSG} "[check-stripped.mk] $$dpfile is stripped (ok).";; \
 		esac;							\
 	done
