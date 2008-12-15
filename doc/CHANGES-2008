@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3392 2008/12/15 03:09:06 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3393 2008/12/15 09:12:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5593,3 +5593,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/silgraphite-xft version 2.3 [minskim 2008-12-15]
 	Updated www/typolight to 2.6.3nb1 [taca 2008-12-15]
 	Updated www/typolight-translations to 20081214 [taca 2008-12-15]
+	Updated databases/phpmyadmin to 2.11.9.4 [tron 2008-12-15]
