@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/23 12:55:58 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/12/15 22:55:53 he Exp $
 
-SHA1 (HTTP-Server-Simple-Recorder-0.02.tar.gz) = b3bff6f3ca3019d618e1af68d9eb93589385885d
-RMD160 (HTTP-Server-Simple-Recorder-0.02.tar.gz) = 79a2bf23f300f1316b4e40d514bd39fee202e5e3
-Size (HTTP-Server-Simple-Recorder-0.02.tar.gz) = 10883 bytes
+SHA1 (HTTP-Server-Simple-Recorder-0.03.tar.gz) = 7a00a4aa52db41c17d32783f75539e6486b5877c
+RMD160 (HTTP-Server-Simple-Recorder-0.03.tar.gz) = 9989deeab182ba25487cb410a636b4a3df4a70ca
+Size (HTTP-Server-Simple-Recorder-0.03.tar.gz) = 16327 bytes
