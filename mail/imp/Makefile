@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/10/12 12:03:12 adrianp Exp $
+# $NetBSD: Makefile,v 1.51 2008/12/15 23:13:44 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -26,7 +26,7 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.3
+IMPVER=		4.3.2
 PAXDIRS=	lib locale po scripts templates themes js
 
 PKG_USERS_VARS+=	APACHE_USER
