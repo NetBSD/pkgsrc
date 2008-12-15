@@ -1,4 +1,4 @@
-# $NetBSD: check-stripped.mk,v 1.2 2008/12/15 11:03:49 rillig Exp $
+# $NetBSD: check-stripped.mk,v 1.3 2008/12/15 12:28:49 rillig Exp $
 #
 # This file checks that after installation, all binaries conform to the
 # setting of INSTALL_UNSTRIPPED.
@@ -49,7 +49,7 @@ _check-stripped: error-check .PHONY
 			${DELAYED_WARNING_MSG} "[check-stripped.mk] File \"$$dpfile\" cannot be read."; \
 			continue;					\
 		fi;							\
-		ftype=`LC_ALL=C ${FILE_CMD} ./$$dpfile`;		\
+		ftype=`LC_ALL=C ${FILE_CMD} $$dpfile`;			\
 		case $$want_stripped,$$ftype in				\
 		yes,*:*\ ELF\ *,\ not\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] $$dpfile should be stripped, but is not.";; \
 		no,*:*\ ELF\ *,\ stripped*) ${DELAYED_ERROR_MSG} "[check-stripped.mk] $$dpfile should NOT be stripped, but it is.";; \
