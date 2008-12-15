@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/14 01:24:59 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/15 10:43:13 hasso Exp $
 #
 
 DISTNAME=	sound-theme-freedesktop-0.2
@@ -14,6 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	gmake intltool
+USE_TOOLS+=	gmake intltool msgfmt
 
 .include "../../mk/bsd.pkg.mk"
