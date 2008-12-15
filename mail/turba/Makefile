@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/10/12 12:06:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.32 2008/12/15 23:19:35 adrianp Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -20,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/turba
 EGDIR=		${PREFIX}/share/examples/turba
 HORDEDIR=	${PREFIX}/share/horde
 TURBADIR=	${HORDEDIR}/turba
-TURBAVER=	2.3
+TURBAVER=	2.3.1
 PAXDIRS=	lib locale po scripts templates themes js
 USE_TOOLS+=	pax perl:run
 
@@ -46,7 +46,9 @@ REPLACE_FILES.php=	scripts/import_vcards.php \
 			scripts/upgrades/create_default_histories.php \
 			scripts/upgrades/public_to_horde_share.php \
 			scripts/import_squirrelmail_abook.php \
-			scripts/upgrades/2.1_to_2.2_sql_schema.php
+			scripts/upgrades/2.1_to_2.2_sql_schema.php \
+			scripts/import_squirrelmail_file_abook.php \
+			scripts/import_squirrelmail_sql_abook.php
 
 CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
 CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
