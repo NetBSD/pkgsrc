@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2008/10/12 12:00:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.60 2008/12/15 23:05:14 adrianp Exp $
 
-DISTNAME=	horde-3.3
+DISTNAME=	horde-3.3.2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -54,7 +54,9 @@ REPLACE_FILES.php=	po/translation.php \
 			scripts/alarms.php \
 			scripts/import_squirrelmail_prefs.php \
 			scripts/upgrades/convert_datatree_groups_to_sql.php \
-			scripts/upgrades/convert_datatree_perms_to_sql.php
+			scripts/upgrades/convert_datatree_perms_to_sql.php \
+			scripts/import_squirrelmail_file_prefs.php \
+			scripts/import_squirrelmail_sql_prefs.php
 
 CONF_FILES+=		${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 CONF_FILES_PERMS+=	${HORDEDIR}/config/conf.php.dist \
