@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/10/12 12:06:52 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/12/15 23:19:35 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -75,13 +75,14 @@ share/horde/turba/lib/tests/ApiTest.php
 share/horde/turba/lib/tests/BrowsePageTest.php
 share/horde/turba/lib/tests/DriverTest.php
 share/horde/turba/lib/tests/GroupTest.php
+share/horde/turba/lib/tests/KolabTest.php
+share/horde/turba/lib/tests/KolabTestBase.php
 share/horde/turba/lib/tests/ListTest.php
 share/horde/turba/lib/tests/ListViewTest.php
 share/horde/turba/lib/tests/TestBase.php
 share/horde/turba/lib/tests/ViewBrowseTest.php
 share/horde/turba/lib/tests/az.png
 share/horde/turba/lib/tests/bug_6518.phpt
-share/horde/turba/lib/tests/bug5476.phpt
 share/horde/turba/lib/tests/import.ldif
 share/horde/turba/lib/tests/importCRLF.ldif
 share/horde/turba/lib/tests/ldif_exportFile.phpt
@@ -180,7 +181,8 @@ share/horde/turba/po/uk_UA.po
 share/horde/turba/po/zh_CN.po
 share/horde/turba/po/zh_TW.po
 share/horde/turba/scripts/Turba.reg
-share/horde/turba/scripts/import_squirrelmail_abook.php
+share/horde/turba/scripts/import_squirrelmail_file_abook.php
+share/horde/turba/scripts/import_squirrelmail_sql_abook.php
 share/horde/turba/scripts/import_vcards.php
 share/horde/turba/scripts/ldap/addou
 share/horde/turba/scripts/ldap/addou.pl
@@ -201,6 +203,7 @@ share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.pgsql.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_sql_schema.php
 share/horde/turba/scripts/upgrades/2.2.1_to_2.3.sql
+share/horde/turba/scripts/upgrades/2.2.1_to_2.3.pgsql.sql
 share/horde/turba/scripts/upgrades/2007-06-17_flatten_shares.php
 share/horde/turba/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/turba/scripts/upgrades/convert_datatree_shares_to_sql.php
