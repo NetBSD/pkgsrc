@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/04/30 19:28:34 adam Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/15 20:59:28 smb Exp $
 
-DISTNAME=	mcrypt-2.6.5
+DISTNAME=	mcrypt-2.6.8
 CATEGORIES=	security devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mcrypt/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mcrypt.sourceforge.net/
