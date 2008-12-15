@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.11 2008/12/14 14:09:32 rillig Exp $
+# $NetBSD: fetch,v 1.12 2008/12/15 09:01:30 taca Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -204,8 +204,6 @@ verify_file() {
 		return 1
 	}
 	if ${TEST} -n "$checksum"; then
-		echo "foo"
-		read line
 		${CHECKSUM} -s ".pkgsrc.resume" $distinfo ${_file} || {
 			$_if_verbose ${ECHO} 1>&2 "$self: Checksum of the file $_file doesn't match."
 			return 1
