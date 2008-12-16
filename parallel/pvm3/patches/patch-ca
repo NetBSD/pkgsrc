@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1 2008/12/16 15:56:17 is Exp $
+
+--- conf/SUN4SOL2.def.orig	2002-02-14 17:00:42.000000000 +0000
++++ conf/SUN4SOL2.def
+@@ -6,7 +6,7 @@
+ #    (-KPIC used for building shared dynamic libraries...)
+ #
+ ARCHCFLAGS	=	-DSYSVBFUNC -DSYSVSTR -DNOGETDTBLSIZ -DSYSVSIGNAL \
+-				-DNOWAIT3 -DRSHCOMMAND=\"/usr/bin/rsh\" -DUSESTRERROR
++				-DNOWAIT3 -DRSHCOMMAND=\"${SSH}\" -DUSESTRERROR
+ ARCHDLIB	=	-lnsl -lsocket
+ ARCHDOBJ	=
+ ARCHLIB		=	-lnsl -lsocket
