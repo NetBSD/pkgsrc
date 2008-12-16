@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/11/21 18:54:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/12/16 08:56:18 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -30,6 +30,7 @@ include/fontforge/gimage.h
 include/fontforge/gio.h
 include/fontforge/gkeysym.h
 include/fontforge/gprogress.h
+include/fontforge/gresedit.h
 include/fontforge/gresource.h
 include/fontforge/groups.h
 include/fontforge/gwidget.h
