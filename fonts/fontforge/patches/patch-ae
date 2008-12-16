@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
+$NetBSD: patch-ae,v 1.18 2008/12/16 08:56:18 adam Exp $
 
---- configure.orig	2008-11-15 15:16:49.000000000 +0100
+--- configure.orig	2008-12-15 20:38:07.000000000 +0100
 +++ configure
-@@ -21813,8 +21813,8 @@ if test $ac_cv_file__usr_include_libxml2
+@@ -21815,8 +21815,8 @@ if test $ac_cv_file__usr_include_libxml2
    CFLAGS="$CFLAGS -I/usr/include/libxml2/"
  else
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
  if test "${ac_cv_file__usr_local_include_libxml2_libxml+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -21822,7 +21822,7 @@ else
+@@ -21824,7 +21824,7 @@ else
    { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
  echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
     { (exit 1); exit 1; }; }
@@ -22,7 +22,7 @@ $NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
    ac_cv_file__usr_local_include_libxml2_libxml=yes
  else
    ac_cv_file__usr_local_include_libxml2_libxml=no
-@@ -21831,7 +21831,7 @@ fi
+@@ -21833,7 +21833,7 @@ fi
  { echo "$as_me:$LINENO: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
  echo "${ECHO_T}$ac_cv_file__usr_local_include_libxml2_libxml" >&6; }
  if test $ac_cv_file__usr_local_include_libxml2_libxml = yes; then
@@ -31,7 +31,7 @@ $NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
  else
    cat >>confdefs.h <<\_ACEOF
  #define _NO_LIBXML 1
-@@ -24099,9 +24099,9 @@ else
+@@ -24103,9 +24103,9 @@ else
    :
  fi
  
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
      gww_CFLAGS="$CFLAGS"
      CFLAGS="$CFLAGS $X_CFLAGS"
      { echo "$as_me:$LINENO: checking for X11/Xft/Xft.h" >&5
-@@ -24169,7 +24169,7 @@ if test "$gww_haspango" = "yes" ; then
+@@ -24173,7 +24173,7 @@ if test "$gww_haspango" = "yes" ; then
   CFLAGS="$CFLAGS `pkg-config --cflags pangoxft`"
  fi
  if test "$gww_haspango" = "yes" -a "$gww_hascairo" = "yes" ; then
@@ -52,7 +52,7 @@ $NetBSD: patch-ae,v 1.17 2008/11/21 18:54:19 adam Exp $
      gww_haspangocairo="yes"
      CFLAGS="$CFLAGS `pkg-config --cflags pangocairo`"
    fi
-@@ -26602,7 +26602,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+@@ -26606,7 +26606,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
