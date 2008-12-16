@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2008/12/15 00:47:08 minskim Exp $
+# $NetBSD: Makefile,v 1.505 2008/12/16 12:37:17 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -305,6 +305,10 @@ SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
 SUBDIR+=	ruby-RMagick
 SUBDIR+=	ruby-color
+SUBDIR+=	ruby-clutter
+SUBDIR+=	ruby-clutter-cairo
+SUBDIR+=	ruby-clutter-core
+SUBDIR+=	ruby-clutter-gtk
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gnome2-gdkpixbuf
 SUBDIR+=	ruby-gnome2-gnomecanvas
