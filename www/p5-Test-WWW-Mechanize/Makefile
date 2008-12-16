@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:19:24 he Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/16 21:59:27 he Exp $
 #
 
-DISTNAME=	Test-WWW-Mechanize-1.20
+DISTNAME=	Test-WWW-Mechanize-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5twm
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -21,7 +20,7 @@ DEPENDS+=	p5-Carp-Assert-[0-9]*:../../devel/p5-Carp-Assert
 DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-Test-LongString>=0.09nb1:../../devel/p5-Test-LongString
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
-DEPENDS+=	p5-WWW-Mechanize>=1.0:../../www/p5-WWW-Mechanize
+DEPENDS+=	p5-WWW-Mechanize>=1.24:../../www/p5-WWW-Mechanize
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
