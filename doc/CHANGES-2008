@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3403 2008/12/16 01:48:09 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.3404 2008/12/16 07:35:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5613,3 +5613,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Handel to 1.00011 [he 2008-12-15]
 	Updated www/p5-Kwiki-Archive-Cvs to 0.104 [he 2008-12-15]
 	Added www/pear-HTML_TreeMenu version 1.2.1 [dsainty 2008-12-16]
+	Updated databases/tokyocabinet to 1.3.25 [obache 2008-12-16]
