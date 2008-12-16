@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/12/12 06:22:31 taca Exp $
+# $NetBSD: Makefile,v 1.22 2008/12/16 10:09:32 hasso Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -37,6 +37,7 @@ CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
 CONFIGURE_ARGS+=	--with-backend=freebsd
+PLIST_SRC=		PLIST.FreeBSD PLIST
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
