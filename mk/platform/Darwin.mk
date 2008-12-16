@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.33 2008/09/22 17:11:02 ahoka Exp $
+# $NetBSD: Darwin.mk,v 1.34 2008/12/16 08:11:29 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -11,7 +11,7 @@
 # Jaguar	10.2.x	6.x.y
 # Panther	10.3.x	7.x.y
 # Tiger		10.4.x	8.x.y	2.x (gcc 4.0, 4.0.1 from 2.2)
-# Leopard	10.5.x	9.x.y	3.0
+# Leopard	10.5.x	9.x.y	3.x (gcc 4.0.1, 4.0.1 and 4.2.1 from 3.1)
 
 .if !defined(CPP) || ${CPP} == "cpp"
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
