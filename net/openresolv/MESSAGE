@@ -1,0 +1,4 @@
+To ensure that resolvconf works correctly, you should ensure that
+${PREFIX} is available before any clients such as dhcpcd attempt to use it.
+On NetBSD, for example, you could do this by setting this in /etc/rc.conf
+critical_filesystems_local="/usr /var"
