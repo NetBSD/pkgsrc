@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3400 2008/12/15 23:19:52 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3401 2008/12/16 00:06:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5607,3 +5607,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/horde to 3.3.2 [adrianp 2008-12-15]
 	Updated mail/imp to 4.3.2 [adrianp 2008-12-15]
 	Updated mail/turba to 2.3.1 [adrianp 2008-12-15]
+	Updated www/p5-HTTP-Server-Simple to 0.36 [he 2008-12-15]
+	Updated www/p5-HTTP-Server-Simple-Mason to 0.11 [he 2008-12-15]
+	Updated www/p5-HTTP-Server-Simple-Recorder to 0.03 [he 2008-12-15]
+	Updated www/p5-Handel to 1.00011 [he 2008-12-15]
+	Updated www/p5-Kwiki-Archive-Cvs to 0.104 [he 2008-12-15]
