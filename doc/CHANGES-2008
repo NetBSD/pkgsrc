@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3406 2008/12/16 08:57:27 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3407 2008/12/16 12:18:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5616,3 +5616,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/tokyocabinet to 1.3.25 [obache 2008-12-16]
 	Added devel/apache-maven version 2.0.9 [yyamano 2008-12-16]
 	Updated fonts/fontforge to 20081215 [adam 2008-12-16]
+	Updated net/libIDL to 0.8.12 [wiz 2008-12-16]
