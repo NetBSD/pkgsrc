@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/16 19:35:45 sborrill Exp $
+
+SHA1 (vic-2.8ucl1.4.0_ov511.diff.gz) = 46faceb1d926820e41ffda71228f63959747a73e
+RMD160 (vic-2.8ucl1.4.0_ov511.diff.gz) = b60a9d3f5764cc4528dffbf5e9465301d71723de
+Size (vic-2.8ucl1.4.0_ov511.diff.gz) = 8646 bytes
+SHA1 (vic-2.8ucl1.4.0beta-4337.tgz) = 6c15491fa5bdfaedf94731094f8952ed3ff027bb
+RMD160 (vic-2.8ucl1.4.0beta-4337.tgz) = 631b18fe036c289e5622722e521af2c9735c63da
+Size (vic-2.8ucl1.4.0beta-4337.tgz) = 9345775 bytes
+SHA1 (patch-Makefile.in) = f908c984d9bd9c216ceda0eba99987904eea4dfd
+SHA1 (patch-configure) = 509e31f0e0c1037701d7f012569ac5e5e1e4c033
+SHA1 (patch-crypt-rijndael.cpp) = 5dfda8c17c91fa5f6b2df24d4e1ed93bc4ae5b87
+SHA1 (patch-grabber-v4l2.cpp) = e9ef03d31f336976e220291646028916712e71a7
+SHA1 (patch-main.cpp) = 671cda41595f1f5c001b089ee04b5c84f559330a
+SHA1 (patch-ui-ctrlmenu.tcl) = b81763c2642f3d1eb828cbac4e687c7bf9bc1ba2
+SHA1 (patch-ui-resource.tcl) = 1763779af32de2d19b4352eb7174f9edd9f7be16
