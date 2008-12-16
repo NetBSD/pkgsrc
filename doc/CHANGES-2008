@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3401 2008/12/16 00:06:30 he Exp $
+$NetBSD: CHANGES-2008,v 1.3402 2008/12/16 00:37:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5603,7 +5603,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/mplayer to 1.0rc10nb10 [tron 2008-12-15]
 	Updated multimedia/mencoder to 1.0rc10nb5 [tron 2008-12-15]
 	Updated net/icsi-finger to 1.0.27nb2 [is 2008-12-15]
-	Updated security/mcrypto to 2.6.8 [smb 2008-12-15]
+	Updated security/mcrypt to 2.6.8 [smb 2008-12-15]
 	Updated www/horde to 3.3.2 [adrianp 2008-12-15]
 	Updated mail/imp to 4.3.2 [adrianp 2008-12-15]
 	Updated mail/turba to 2.3.1 [adrianp 2008-12-15]
