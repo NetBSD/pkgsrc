@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/16 21:35:40 he Exp $
 
-DISTNAME=	Rose-HTML-Objects-0.554
+DISTNAME=	Rose-HTML-Objects-0.600
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Rose::HTML::Objects
+HOMEPAGE=	http://search.cpan.org/dist/Rose-HTML-Objects/
 COMMENT=	Object-oriented interfaces for HTML
 
 DEPENDS+=	p5-DateTime>=0.20:../../time/p5-DateTime
@@ -18,7 +17,7 @@ DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Image-Size>=0:../../graphics/p5-Image-Size
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
-DEPENDS+=	p5-Rose-Object>=0.82:../../devel/p5-Rose-Object
+DEPENDS+=	p5-Rose-Object>=0.854:../../devel/p5-Rose-Object
 DEPENDS+=	p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
 DEPENDS+=	p5-Rose-URI>=0.021:../../www/p5-Rose-URI
 
