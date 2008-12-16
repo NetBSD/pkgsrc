@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3407 2008/12/16 12:18:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3408 2008/12/16 12:35:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5617,3 +5617,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/apache-maven version 2.0.9 [yyamano 2008-12-16]
 	Updated fonts/fontforge to 20081215 [adam 2008-12-16]
 	Updated net/libIDL to 0.8.12 [wiz 2008-12-16]
+	Added graphics/ruby-clutter version 0.8.0 [obache 2008-12-16]
+	Added graphics/ruby-clutter-core version 0.8.0 [obache 2008-12-16]
+	Added graphics/ruby-clutter-cairo version 0.8.0 [obache 2008-12-16]
+	Added graphics/ruby-clutter-gtk version 0.8.0 [obache 2008-12-16]
+	Added multimedia/clutter-gst version 0.8.0 [obache 2008-12-16]
