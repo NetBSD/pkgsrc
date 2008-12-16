@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2008/12/16 19:35:46 sborrill Exp $
+
+Dynamically link common mml library
+
+--- Makefile.in.orig	2008-12-10 21:06:38.000000000 +0000
++++ Makefile.in	2008-12-10 21:06:52.000000000 +0000
+@@ -92,7 +92,7 @@
+ CODEC_LIB = @V_CODEC_LIB@ codec/tmndec/libh263.a codec/tmn-x/libh263coder.a
+ 
+ LIB = $(LIB_GRABBER) @V_LIB_TK@ @V_LIB_TCL@ @V_LIB_X11@ @V_LIB@ $(CODEC_LIB) $(VIDEO_LIB) \
+-	../common/src/libuclmmbase.a -lm -lz -lpthread @V_LIB_FFMPEG@ @V_LIB_X264@ 
++	-luclmmbase -lm -lz -lpthread @V_LIB_FFMPEG@ @V_LIB_X264@ 
+ 
+ 
+ INCLUDE = $(INCLUDE_MISC) $(INCLUDE_GRABBER) $(INCLUDE_TK) $(INCLUDE_TCL) \

@@ -1,0 +1,399 @@
+$NetBSD: patch-configure,v 1.1.1.1 2008/12/16 19:35:46 sborrill Exp $
+
+- Portability fixes
+- pkgsrc ffmpeg includes path
+- pkgsrc common-mml includes path
+- NetBSD v4l2 support
+- ov511 support on NetBSD
+
+--- configure.orig	2008-12-10 19:28:01.000000000 +0000
++++ configure	2008-12-14 11:05:24.000000000 +0000
+@@ -4538,7 +4538,7 @@
+         V_DEFINE="$V_DEFINE -DMAC_OSX_TCL"
+     fi
+ 
+-elif test "${TCL_VERSION}" == "8.0" ; then
++elif test "${TCL_VERSION}" = "8.0" ; then
+     if test -f "${TCL_SRC_DIR}/generic/tcl2c.c" ; then
+         { echo "$as_me:$LINENO: result: UCL Tcl ${TCL_VERSION}${TCL_PATCH_LEVEL}" >&5
+ echo "${ECHO_T}UCL Tcl ${TCL_VERSION}${TCL_PATCH_LEVEL}" >&6; }
+@@ -4752,7 +4752,7 @@
+ 
+ { echo "$as_me:$LINENO: checking for a compatible version of Tk" >&5
+ echo $ECHO_N "checking for a compatible version of Tk... $ECHO_C" >&6; }
+-if test "${TCL_VERSION}" == "${TK_VERSION}"; then
++if test "${TCL_VERSION}" = "${TK_VERSION}"; then
+     { echo "$as_me:$LINENO: result: Tk ${TK_VERSION}${TK_PATCH_LEVEL}" >&5
+ echo "${ECHO_T}Tk ${TK_VERSION}${TK_PATCH_LEVEL}" >&6; }
+ 
+@@ -5012,14 +5012,14 @@
+   if test "$ffmpegco" != "yes"; then
+ 
+ 	if test "$ffmpeginc" != "" ; then
+-	   if test ! -r $ffmpeginc/ffmpeg/avcodec.h ; then
+-	        echo "Error! you need to have $ffmpeginc/ffmpeg/avcodec.h around"
++	   if test ! -r $ffmpeginc/libavcodec/avcodec.h ; then
++	        echo "Error! you need to have $ffmpeginc/libavcodec/avcodec.h around"
+ 	        exit 1
+-	   elif test ! -r $ffmpeginc/ffmpeg/avutil.h ; then
+-	        echo "Error! you need to have $ffmpeginc/ffmpeg/avutil.h around"
++	   elif test ! -r $ffmpeginc/libavutil/avutil.h ; then
++	        echo "Error! you need to have $ffmpeginc/libavutil/avutil.h around"
+ 	        exit 1
+-	   elif test ! -r $ffmpeginc/ffmpeg/swscale.h ; then
+-	        echo "Error! you need to have $ffmpeginc/ffmpeg/swscale.h around"
++	   elif test ! -r $ffmpeginc/libswscale/swscale.h ; then
++	        echo "Error! you need to have $ffmpeginc/libswscale/swscale.h around"
+ 	        exit 1
+ 	   fi
+ 	   echo "checking for FFmpeg headers...yes"
+@@ -5028,8 +5028,8 @@
+ 	else
+ 
+ 	   if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
+-  { echo "$as_me:$LINENO: checking for ffmpeg/avcodec.h" >&5
+-echo $ECHO_N "checking for ffmpeg/avcodec.h... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for libavcodec/avcodec.h" >&5
++echo $ECHO_N "checking for libavcodec/avcodec.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+@@ -5037,8 +5037,8 @@
+ echo "${ECHO_T}$ac_cv_header_ffmpeg_avcodec_h" >&6; }
+ else
+   # Is the header compilable?
+-{ echo "$as_me:$LINENO: checking ffmpeg/avcodec.h usability" >&5
+-echo $ECHO_N "checking ffmpeg/avcodec.h usability... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libavcodec/avcodec.h usability" >&5
++echo $ECHO_N "checking libavcodec/avcodec.h usability... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5046,7 +5046,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -5078,15 +5078,15 @@
+ echo "${ECHO_T}$ac_header_compiler" >&6; }
+ 
+ # Is the header present?
+-{ echo "$as_me:$LINENO: checking ffmpeg/avcodec.h presence" >&5
+-echo $ECHO_N "checking ffmpeg/avcodec.h presence... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libavcodec/avcodec.h presence" >&5
++echo $ECHO_N "checking libavcodec/avcodec.h presence... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <ffmpeg/avcodec.h>
++#include <libavcodec/avcodec.h>
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
+@@ -5119,30 +5119,30 @@
+ # So?  What about this header?
+ case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+   yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: proceeding with the compiler's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: proceeding with the compiler's result" >&2;}
+     ac_header_preproc=yes
+     ;;
+   no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avcodec.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: ffmpeg/avcodec.h: in the future, the compiler will take precedence" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: present but cannot be compiled" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavcodec/avcodec.h: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: libavcodec/avcodec.h: in the future, the compiler will take precedence" >&2;}
+ 
+     ;;
+ esac
+-{ echo "$as_me:$LINENO: checking for ffmpeg/avcodec.h" >&5
+-echo $ECHO_N "checking for ffmpeg/avcodec.h... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for libavcodec/avcodec.h" >&5
++echo $ECHO_N "checking for libavcodec/avcodec.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_avcodec_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -5163,8 +5163,8 @@
+ 
+ 
+ 	   if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
+-  { echo "$as_me:$LINENO: checking for ffmpeg/avutil.h" >&5
+-echo $ECHO_N "checking for ffmpeg/avutil.h... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for libavutil/avutil.h" >&5
++echo $ECHO_N "checking for libavutil/avutil.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+@@ -5172,8 +5172,8 @@
+ echo "${ECHO_T}$ac_cv_header_ffmpeg_avutil_h" >&6; }
+ else
+   # Is the header compilable?
+-{ echo "$as_me:$LINENO: checking ffmpeg/avutil.h usability" >&5
+-echo $ECHO_N "checking ffmpeg/avutil.h usability... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libavutil/avutil.h usability" >&5
++echo $ECHO_N "checking libavutil/avutil.h usability... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5181,7 +5181,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <ffmpeg/avutil.h>
++#include <libavutil/avutil.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -5213,15 +5213,15 @@
+ echo "${ECHO_T}$ac_header_compiler" >&6; }
+ 
+ # Is the header present?
+-{ echo "$as_me:$LINENO: checking ffmpeg/avutil.h presence" >&5
+-echo $ECHO_N "checking ffmpeg/avutil.h presence... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libavutil/avutil.h presence" >&5
++echo $ECHO_N "checking libavutil/avutil.h presence... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <ffmpeg/avutil.h>
++#include <libavutil/avutil.h>
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
+@@ -5254,30 +5254,30 @@
+ # So?  What about this header?
+ case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+   yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: proceeding with the compiler's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: proceeding with the compiler's result" >&2;}
+     ac_header_preproc=yes
+     ;;
+   no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/avutil.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: ffmpeg/avutil.h: in the future, the compiler will take precedence" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: present but cannot be compiled" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: libavutil/avutil.h:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: libavutil/avutil.h:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libavutil/avutil.h: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: libavutil/avutil.h: in the future, the compiler will take precedence" >&2;}
+ 
+     ;;
+ esac
+-{ echo "$as_me:$LINENO: checking for ffmpeg/avutil.h" >&5
+-echo $ECHO_N "checking for ffmpeg/avutil.h... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for libavutil/avutil.h" >&5
++echo $ECHO_N "checking for libavutil/avutil.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_avutil_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -5298,8 +5298,8 @@
+ 
+ 
+ 	   if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
+-  { echo "$as_me:$LINENO: checking for ffmpeg/swscale.h" >&5
+-echo $ECHO_N "checking for ffmpeg/swscale.h... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for libswscale/swscale.h" >&5
++echo $ECHO_N "checking for libswscale/swscale.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ fi
+@@ -5307,8 +5307,8 @@
+ echo "${ECHO_T}$ac_cv_header_ffmpeg_swscale_h" >&6; }
+ else
+   # Is the header compilable?
+-{ echo "$as_me:$LINENO: checking ffmpeg/swscale.h usability" >&5
+-echo $ECHO_N "checking ffmpeg/swscale.h usability... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libswscale/swscale.h usability" >&5
++echo $ECHO_N "checking libswscale/swscale.h usability... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -5316,7 +5316,7 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <ffmpeg/swscale.h>
++#include <libswscale/swscale.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -5348,15 +5348,15 @@
+ echo "${ECHO_T}$ac_header_compiler" >&6; }
+ 
+ # Is the header present?
+-{ echo "$as_me:$LINENO: checking ffmpeg/swscale.h presence" >&5
+-echo $ECHO_N "checking ffmpeg/swscale.h presence... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking libswscale/swscale.h presence" >&5
++echo $ECHO_N "checking libswscale/swscale.h presence... $ECHO_C" >&6; }
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <ffmpeg/swscale.h>
++#include <libswscale/swscale.h>
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
+@@ -5389,30 +5389,30 @@
+ # So?  What about this header?
+ case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
+   yes:no: )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: accepted by the compiler, rejected by the preprocessor!" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: proceeding with the compiler's result" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: proceeding with the compiler's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: accepted by the compiler, rejected by the preprocessor!" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: proceeding with the compiler's result" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: proceeding with the compiler's result" >&2;}
+     ac_header_preproc=yes
+     ;;
+   no:yes:* )
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: present but cannot be compiled" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: present but cannot be compiled" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h:     check for missing prerequisite headers?" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h:     check for missing prerequisite headers?" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: see the Autoconf documentation" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: see the Autoconf documentation" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h:     section \"Present But Cannot Be Compiled\"" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h:     section \"Present But Cannot Be Compiled\"" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: proceeding with the preprocessor's result" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: proceeding with the preprocessor's result" >&2;}
+-    { echo "$as_me:$LINENO: WARNING: ffmpeg/swscale.h: in the future, the compiler will take precedence" >&5
+-echo "$as_me: WARNING: ffmpeg/swscale.h: in the future, the compiler will take precedence" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: present but cannot be compiled" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: present but cannot be compiled" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h:     check for missing prerequisite headers?" >&5
++echo "$as_me: WARNING: libswscale/swscale.h:     check for missing prerequisite headers?" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: see the Autoconf documentation" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: see the Autoconf documentation" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h:     section \"Present But Cannot Be Compiled\"" >&5
++echo "$as_me: WARNING: libswscale/swscale.h:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: proceeding with the preprocessor's result" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: proceeding with the preprocessor's result" >&2;}
++    { echo "$as_me:$LINENO: WARNING: libswscale/swscale.h: in the future, the compiler will take precedence" >&5
++echo "$as_me: WARNING: libswscale/swscale.h: in the future, the compiler will take precedence" >&2;}
+ 
+     ;;
+ esac
+-{ echo "$as_me:$LINENO: checking for ffmpeg/swscale.h" >&5
+-echo $ECHO_N "checking for ffmpeg/swscale.h... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for libswscale/swscale.h" >&5
++echo $ECHO_N "checking for libswscale/swscale.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_ffmpeg_swscale_h+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+@@ -6425,7 +6425,7 @@
+ if test "$v4l2old" = "yes" ; then
+                 V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-v4l2-old.o"
+ 		echo "Using old Linux grabber-v4l2"
+-elif test -r /usr/include/linux/videodev.h ; then
++elif test -r /usr/include/linux/videodev.h -o -r /usr/include/sys/videoio.h ; then
+         if test "${ac_cv_header_libv4lconvert_h+set}" = set; then
+   { echo "$as_me:$LINENO: checking for libv4lconvert.h" >&5
+ echo $ECHO_N "checking for libv4lconvert.h... $ECHO_C" >&6; }
+@@ -6553,7 +6553,11 @@
+ fi
+ if test $ac_cv_header_libv4lconvert_h = yes; then
+   V_DEFINE="$V_DEFINE -DHAVE_LIBV4L"
+-         V_LIB_GRABBER="$V_LIB_GRABBER -lv4l1 -lv4l2"
++	if test -r /usr/include/sys/videoio.h; then
++		V_LIB_GRABBER="$V_LIB_GRABBER -lv4l2"
++	else
++		V_LIB_GRABBER="$V_LIB_GRABBER -lv4l1 -lv4l2"
++	fi
+ else
+   V_OBJ_GRABBER="$V_OBJ_GRABBER  video/tinyjpeg.o video/jidctflt.o"
+ fi
+@@ -6562,6 +6566,9 @@
+         if test -r /usr/include/linux/videodev2.h  ; then
+                 V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-v4l2.o video/grabber-video4linux.o"
+ 		echo "Using Linux Grabbers: Video4Linux2 and Video4Linux1"
++	elif test -r /usr/include/sys/videoio.h; then
++                V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-v4l2.o"
++		echo "Using NetBSD Grabbers: Video4Linux2"
+         else
+                 V_OBJ_GRABBER="$V_OBJ_GRABBER video/grabber-video4linux.o"
+ 		echo "Using Linux Grabber: Video4Linux1"
+@@ -6790,8 +6797,9 @@
+ 	V_LIB="$V_LIB -lipc"
+ 	;;
+ *-*-netbsd*)
++	V_STATIC=""
+ 	V_TARCMD="tar -h -c -f"
+-	V_LIB="$V_LIB -L/usr/local/lib"
++	V_OBJ_GRABBER="video/grabber-ov511.o $V_OBJ_GRABBER"
+ 	;;
+ *-*-freebsd*)
+ 	V_STATIC=""
+@@ -7077,7 +7085,8 @@
+ 
+ # various include hacks
+ dirs="/usr/src/local/include-fixes \
+-	/import/mcast/include"
++	/import/mcast/include \
++	$prefix/include/common-mml"
+ for dir in $dirs; do
+ 	if test -d $dir ; then
+ 		V_INCLUDE="$V_INCLUDE -I$dir"

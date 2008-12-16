@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/16 19:35:45 sborrill Exp $
+bin/histtolut
+bin/vic
+man/vic.1
