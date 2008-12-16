@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/10 23:26:13 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/12/16 21:54:41 he Exp $
 
-SHA1 (Test-WWW-Declare-0.01.tar.gz) = b62d02343875f0ae625cdc699aeac5806a44c079
-RMD160 (Test-WWW-Declare-0.01.tar.gz) = 54ef8701984968551567a444dae78bcea2e9d52d
-Size (Test-WWW-Declare-0.01.tar.gz) = 18969 bytes
+SHA1 (Test-WWW-Declare-0.02.tar.gz) = 44cefb72be4403fc386863e9a5f9d61445c85b17
+RMD160 (Test-WWW-Declare-0.02.tar.gz) = 8b29b5f2b166abf3229ccb2b6df794af7e85096e
+Size (Test-WWW-Declare-0.02.tar.gz) = 20138 bytes
