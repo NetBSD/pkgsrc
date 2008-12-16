@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2008/12/05 16:31:52 tron Exp $
+$NetBSD: patch-ad,v 1.2 2008/12/16 16:49:52 tron Exp $
 
---- src/utils/directory.cc.orig	2008-12-05 13:20:16 +0100
-+++ src/utils/directory.cc	2008-12-05 13:27:27 +0100
+--- src/utils/directory.cc.orig	2008-05-07 13:19:11.000000000 +0100
++++ src/utils/directory.cc	2008-12-16 16:45:58.000000000 +0000
 @@ -38,6 +38,7 @@
  
  #include <algorithm>
@@ -10,16 +10,17 @@ $NetBSD: patch-ad,v 1.1 2008/12/05 16:31:52 tron Exp $
  #include <dirent.h>
  #include <rak/path.h>
  #include <torrent/exceptions.h>
-@@ -63,6 +64,8 @@
+@@ -63,7 +64,9 @@
    if (m_path.empty())
      throw torrent::input_error("Directory::update() tried to open an empty path.");
  
+-  DIR* d = opendir(rak::path_expand(m_path).c_str());
 +  std::string path=rak::path_expand(m_path);
 +
--  DIR* d = opendir(rak::path_expand(m_path).c_str());
 +  DIR* d = opendir(path.c_str());
  
    if (d == NULL)
+     return false;
 @@ -73,12 +76,18 @@
    while ((entry = readdir(d)) != NULL) {
      if ((flags & update_hide_dot) && entry->d_name[0] == '.')
