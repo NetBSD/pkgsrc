@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/16 07:39:41 yyamano Exp $
+
+--- bin/m2.conf.orig	2008-04-07 09:04:44.000000000 -0700
++++ bin/m2.conf
+@@ -3,4 +3,4 @@ main is org.apache.maven.cli.MavenCli fr
+ set maven.home default ${user.home}/m2
+ 
+ [plexus.core]
+-load ${maven.home}/lib/*.jar
++load ${maven.home}/lib/java/maven/*.jar
