@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3413 2008/12/17 01:48:12 he Exp $
+$NetBSD: CHANGES-2008,v 1.3414 2008/12/17 03:10:41 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5627,7 +5627,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/sqlite3 to 3.6.7 [adam 2008-12-16]
 	Added mbone/vic-devel 2.8.1.4.0beta.4337 [sborrill 2008-12-16]
 	Updated devel/p5-Rose-Object version 0.854 [he 2008-12-16]
-	Updated www/p5-Rose-HTML-Object to 0.600 [he 2008-12-16]
+	Updated www/p5-Rose-HTML-Objects to 0.600 [he 2008-12-16]
 	Updated www/p5-Rose-URI to 0.500 [he 2008-12-16]
 	Updated www/p5-Test-WWW-Declare to 0.02 [he 2008-12-16]
 	Updated www/p5-Test-WWW-Mechanize to 1.22 [he 2008-12-16]
