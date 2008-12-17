@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/12/07 19:43:30 martti Exp $
+# $NetBSD: Makefile,v 1.32 2008/12/17 12:50:03 hira Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 .include "../../mk/compiler.mk"
@@ -12,6 +12,15 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 PKGCONFIG_OVERRIDE=	panel/xfce4-panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
+
+OWN_DIRS+=		xdg/xfce4
+OWN_DIRS+=		xdg/xfce4/panel
+PKG_SYSCONFSUBDIR=	xdg/xfce4/panel
+EGDIR=			${XFCE4_EGBASE}/panel
+.for f in clock-14.rc launcher-10.rc launcher-7.rc launcher-8.rc launcher-9.rc \
+	panels.xml systray-4.rc xfce4-menu-5.rc
+CONF_FILES+=		${EGDIR:Q}/$f ${PKG_SYSCONFDIR:Q}/$f
+.endfor
 
 # If using gcc-4, compile the panel launcher without GCC optimization. See
 # http://bugzilla.xfce.org/show_bug.cgi?id=2262
