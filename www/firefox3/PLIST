@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/17 15:51:14 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/12/17 19:50:42 tnn Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -21,6 +21,7 @@ lib/${MOZILLA}/components/libbrowsercomps.${SO_SUFFIX}
 lib/${MOZILLA}/components/libbrowserdirprovider.${SO_SUFFIX}
 lib/${MOZILLA}/components/libimgicon.${SO_SUFFIX}
 @comment libfreebl
+${JEMALLOC}lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
 lib/${MOZILLA}/libmozjs.${SO_SUFFIX}
 lib/${MOZILLA}/libnspr4.${SO_SUFFIX}
 lib/${MOZILLA}/libnss3.${SO_SUFFIX}
