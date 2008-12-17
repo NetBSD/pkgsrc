@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.56 2008/12/17 12:51:55 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.57 2008/12/17 21:07:10 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -155,3 +155,5 @@ pullup ticket #2611 - requested by tron
 mplayer: security and vcd support patches
 gmplayer: security and vcd support patches
 mencoder: security and vcd support patches
+Pullup ticket #2612 - tnn
+firefox3: security update
