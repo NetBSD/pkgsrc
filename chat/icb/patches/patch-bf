@@ -1,13 +1,31 @@
-$NetBSD: patch-bf,v 1.1 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-bf,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- tcl/tclCmdIZ.c.orig	2005-12-13 16:50:37.000000000 +0000
-+++ tcl/tclCmdIZ.c
-@@ -30,8 +30,6 @@ static char rcsid[] = "$Header: /home/ag
- #include <sys/time.h>
- #include "tclInt.h"
- 
+--- murgil/serverserve.c.orig	1995-02-24 16:19:44.000000000 -0500
++++ murgil/serverserve.c	2008-12-16 20:18:00.000000000 -0500
+@@ -15,11 +15,13 @@
+ #include "ipcf.h"
+ #include "externs.h"
+  
 -extern int errno;
--
- 
- /*
-  *----------------------------------------------------------------------
+ fd_set fdr;	
+ int timeisup;
+ 
+ sighandler gotalarm();
++#ifndef __FDS_BITS
++# define __FDS_BITS(set) ((set)->fds_bits)
++#endif
+ 
+ serverserve()
+ {
+@@ -81,9 +83,9 @@
+ 
+ 	/* examine set of file descriptors */
+ 	for (b = 0, y = 0; b <= (howmany(highestfd, 32) - 1); b++, y += 32) {
+-	    if (!fdr.fds_bits[b])
++	    if (!__FDS_BITS(&fdr)[b])
+ 		continue;
+-	    bits = fdr.fds_bits[b];
++	    bits = __FDS_BITS(&fdr)[b];
+ 	    for (x = y; bits; x++, bits >>= 01)
+ 		if (bits & 01)
+ 			if (x == port_fd) {
