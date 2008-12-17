@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/17 16:52:35 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBFIRM_BUILDLINK3_MK:=	${LIBFIRM_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libfirm
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libfirm
 
 .if ${LIBFIRM_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libfirm+=	libfirm>=1.13.0
+BUILDLINK_API_DEPENDS.libfirm+=	libfirm>=1.15.0
 BUILDLINK_PKGSRCDIR.libfirm?=	../../devel/libfirm
 .endif	# LIBFIRM_BUILDLINK3_MK
 
