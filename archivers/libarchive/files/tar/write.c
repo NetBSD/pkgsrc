@@ -44,9 +44,6 @@ __FBSDID("$FreeBSD: src/usr.bin/tar/write.c,v 1.70 2008/05/26 17:10:10 kientzle 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
 #endif
-#ifdef HAVE_EXT2FS_EXT2_FS_H
-#include <ext2fs/ext2_fs.h>
-#endif
 #ifdef HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
@@ -61,6 +58,16 @@ __FBSDID("$FreeBSD: src/usr.bin/tar/write.c,v 1.70 2008/05/26 17:10:10 kientzle 
 #endif
 #ifdef HAVE_LINUX_FS_H
 #include <linux/fs.h>	/* for Linux file flags */
+#endif
+#ifdef HAVE_LINUX_EXT2_FS_H
+#include <linux/ext2_fs.h>	/* for Linux file flags */
+#endif
+#ifdef HAVE_EXT2FS_EXT2_FS_H
+/*
+ * This must be after the include of linux/ext2_fs.h,
+ * otherwise the former will fail.
+ */
+#include <ext2fs/ext2_fs.h>	/* for Linux file flags */
 #endif
 #ifdef HAVE_PWD_H
 #include <pwd.h>
