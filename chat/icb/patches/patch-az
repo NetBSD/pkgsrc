@@ -1,13 +1,15 @@
-$NetBSD: patch-az,v 1.1 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-az,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- murgil/sendpacket.c.orig	2005-12-13 16:28:40.000000000 +0000
-+++ murgil/sendpacket.c
-@@ -5,8 +5,6 @@
- #include <stdio.h>
- #include <errno.h>
+--- murgil/externs.h.orig	1995-02-24 16:19:40.000000000 -0500
++++ murgil/externs.h	2008-12-16 20:28:33.000000000 -0500
+@@ -1,6 +1,10 @@
+ /* Copyright (c) 1988 Carrick Sean Casey. All rights reserved. */
+ /* For copying and distribution information, see the file "copyright.h." */
  
--extern int errno;
--
- _sendpacket(s, pkt)
- int s;
- char *pkt;
++#include <unistd.h>
++#include <string.h>
++#include <stdlib.h>
++
+ extern fd_set fdset;		/* player fd set for select() */
+ extern fd_set ignorefds;		/* fds that are not to be polled */
+ extern char *fail;		/* failcode used by logerr */

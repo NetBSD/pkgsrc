@@ -1,21 +1,27 @@
-$NetBSD: patch-as,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+$NetBSD: patch-as,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- icb/unix.c.orig	Sun Nov 28 23:33:27 1999
-+++ icb/unix.c	Sun Nov 28 23:35:51 1999
-@@ -92,13 +92,13 @@
- pushback(c)
- char c;
+--- icb/strccmp.c.orig	1995-02-24 16:20:30.000000000 -0500
++++ icb/strccmp.c	2008-12-16 20:22:58.000000000 -0500
+@@ -61,8 +61,8 @@
+ 	'\370', '\371', '\372', '\373', '\374', '\375', '\376', '\377',
+ };
+ 
+-strcasecmp(s1, s2)
+-	char *s1, *s2;
++int
++strcasecmp(const char *s1, const char *s2)
  {
--#ifndef SYSV
-+#ifdef TIOCSTI
- 	if (ioctl(0, TIOCSTI, &c) < 0)
- 		perror("TIOCSTI ioctl failed");
--#else /* SYSV */
-+#else /* !TIOCSTI */
- 	if (ungetc(c,stdin) == EOF)
- 		perror("ungetc() failed");
--#endif /* SYSV */
-+#endif /* TIOCSTI */
+ 	register char	*cm = charmap,
+ 			*us1 = (char *)s1,
+@@ -74,9 +74,8 @@
+ 	return(cm[*us1] - cm[*--us2]);
  }
  
- 
+-strncasecmp(s1, s2, n)
+-	char *s1, *s2;
+-	register int n;
++int
++strncasecmp(const char *s1, const char *s2, size_t n)
+ {
+ 	register char	*cm = charmap,
+ 			*us1 = (char *)s1,

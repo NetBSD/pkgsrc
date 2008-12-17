@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2000/12/15 00:36:37 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2008/12/17 02:19:59 christos Exp $
 
-diff -x *.orig -urN ./icb/c_shell.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c
---- ./icb/c_shell.c	Fri Feb 24 22:20:19 1995
-+++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/c_shell.c	Fri Nov 26 22:56:29 1999
-@@ -14,7 +14,7 @@
- 	static char *usage = "usage: c_shell [command]";
- 	int w, pid;
- 	int shellout = 0;
--	union wait status;
-+	int status;
- 	char *shell, *getenv();
- 	
- 	/* disallow use if restricted mode set */
+--- tcl/tclGlob.c.orig	2008-12-16 20:18:00.000000000 -0500
++++ tcl/tclGlob.c	2008-12-16 20:18:01.000000000 -0500
+@@ -40,8 +40,6 @@
+  * grows dynamically to be as big as needed.
+  */
+ 
+-extern int errno;
+-
+ typedef struct {
+     char *result;		/* Pointer to result area. */
+     int totalSpace;		/* Total number of characters allocated
