@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/12/17 16:59:19 joerg Exp $
+
+--- ast.c.orig	2008-12-05 20:43:03.000000000 +0100
++++ ast.c
+@@ -206,7 +206,7 @@ static void print_const(const const_expr
+ #else
+ 		fprintf(out, "%.20Lg", val);
+ #endif
+-		if (isfinite(val) && truncl(val) == val)
++		if (isfinite(val) && trunc(val) == val)
+ 			fputs(".0", out);
+ 	} else {
+ 		panic("unknown constant");
