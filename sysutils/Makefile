@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.456 2008/12/09 10:36:02 ahoka Exp $
+# $NetBSD: Makefile,v 1.457 2008/12/17 11:57:35 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -91,6 +91,7 @@ SUBDIR+=	fam
 SUBDIR+=	fastfs
 SUBDIR+=	fatback
 SUBDIR+=	fdgw
+SUBDIR+=	fdupes
 SUBDIR+=	file
 SUBDIR+=	filelight
 SUBDIR+=	findutils
