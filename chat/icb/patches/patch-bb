@@ -1,24 +1,13 @@
-$NetBSD: patch-bb,v 1.1 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-bb,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- icb/unix.c.orig	2005-12-13 16:41:59.000000000 +0000
-+++ icb/unix.c
-@@ -6,6 +6,7 @@
- 
- #include <sys/types.h>
- #include <sys/param.h>
-+#include <limits.h>
- #include <stdio.h>
- #include "icb.h"
- #include "externs.h"
-@@ -219,7 +220,11 @@ char *s;
- 	struct passwd *pw;
- 	char login[17];
- 	char *p = login;
-+#ifdef NAME_MAX
-+	static char path[NAME_MAX + 1];
-+#else
- 	static char path[MAXNAMLEN+1];
-+#endif
- 
- 	/* has to start with a tilde */
- 	if (*s++ != '~')
+--- murgil/getrname.c.orig	1995-02-24 16:19:41.000000000 -0500
++++ murgil/getrname.c	2008-12-16 20:18:00.000000000 -0500
+@@ -14,7 +14,7 @@
+ {
+ 	static char rname[24];
+ 	struct hostent *host;
+-#if defined(linux)
++#if defined(linux) || defined(__NetBSD__)
+ #define PEER_CAST (struct sockaddr *)
+ #define HOST_CAST (char *)
+ #else

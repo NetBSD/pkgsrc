@@ -1,12 +1,53 @@
-$NetBSD: patch-ar,v 1.1.1.1 2000/12/15 00:36:39 wiz Exp $
+$NetBSD: patch-ar,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- sample.icbrc.orig	Fri Nov 26 23:44:37 1999
-+++ sample.icbrc	Fri Nov 26 23:45:00 1999
-@@ -15,6 +15,7 @@
- oset autodel false  # set to "true" to have nicks that generate an "error - 
- 					# so-and-so not signed on" removed from tab history 
- #echoback on		# uncomment to see your own public messages
-+#oset printtime true	# print time in front of each message
+--- icb/serverlist.c.orig	1995-02-24 16:20:29.000000000 -0500
++++ icb/serverlist.c	2008-12-16 20:18:00.000000000 -0500
+@@ -1,4 +1,6 @@
+ #include <stdio.h>
++#include <stdlib.h>
++#include <pwd.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
+ #include "icb.h"
+@@ -14,15 +16,14 @@
+ FILE *openserverfile()
+ {
+ 	struct stat statbuf;
+-	char *personalsl;
+-	char command[256];
+-	char pwd[256];
++	char *personalsl, *home;
++	char pwd[MAXPATHLEN+1];
+ 	FILE *ret;
  
- #==============================================================================#
- # procedures
+ #ifdef sgi
+ #undef SYSV
+ #endif
+-#ifndef SYSV
++#if !defined(SYSV) && !(defined(BSD) && BSD >= 199306) && !defined(__linux__)
+ 	getwd(pwd);
+ #else /* SYSV */
+ 	getcwd(pwd, MAXPATHLEN+1);
+@@ -30,11 +31,20 @@
+ #ifdef sgi
+ #define SYSV
+ #endif
+-	chdir(getenv("HOME"));
++	if ((home = getenv("HOME")) == NULL) {
++		struct passwd *pw;
++		if ((pw = getpwuid(getuid())) == NULL)
++			home = ".";
++		home = pw->pw_dir;
++	}
++	chdir(home);
+ 	if (!stat(PERSONALSL,&statbuf))
+ 	{
+-		sprintf(command,"/bin/cat %s %s\n", PERSONALSL, SERVERLIST);
++		char *command = malloc(strlen("/bin/cat  \n") +
++			strlen(PERSONALSL) + strlen(SERVERLIST) + 1);
++		sprintf(command, "/bin/cat %s %s\n", PERSONALSL, SERVERLIST);
+ 		ret= popen(command,"r");
++		free(command);
+ 	}
+ 	else
+ 		ret= fopen(SERVERLIST,"r");

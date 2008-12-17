@@ -1,22 +1,28 @@
-$NetBSD: patch-bm,v 1.2 2006/05/21 10:52:08 rillig Exp $
+$NetBSD: patch-bm,v 1.3 2008/12/17 02:19:59 christos Exp $
 
---- icb/s_bump.c.orig	1995-02-24 16:20:27.000000000 -0500
-+++ icb/s_bump.c	2006-05-15 10:59:10.000000000 -0400
-@@ -6,6 +6,8 @@
+--- tcl/stdlib.h.orig	1995-02-24 16:19:50.000000000 -0500
++++ tcl/stdlib.h	2008-12-16 20:30:23.000000000 -0500
+@@ -41,10 +41,10 @@
+  *------------------
+  */
  
- #include "icb.h"
- #include "externs.h"
-+#include <stdlib.h>
-+#include <unistd.h>
- 
- s_bump(TARGLIST)
- TARGDEFS
-@@ -22,7 +24,7 @@
- 	if (argc > 2)
- 		password = argv[2];
- 	else
--		password = (char *) getpass ("Enter password:");
-+		password = getpass ("Enter password:");
- 
- 	sprintf(message,"bump %s %s", nick, password);
- 	sendpersonal("server",message,-1);
+-extern char *	alloca();
+-extern char *	calloc();
+-extern char *	malloc();
+-extern char *	realloc();
++extern void *	alloca();
++extern void *	calloc();
++extern void *	malloc();
++extern void *	realloc();
+ extern void	Mem_Bin();
+ extern char *	Mem_CallerPC();
+ extern void	Mem_DumpTrace();
+@@ -142,7 +142,7 @@
+ extern void	abort();
+ extern int	atexit();
+ extern char *   bsearch();
+-extern 		exit();
++extern void 	exit();
+ extern char *	getenv();
+ extern void	qsort();
+ extern int	rand();
