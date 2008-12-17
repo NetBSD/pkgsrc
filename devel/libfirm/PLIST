@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/28 01:14:45 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/17 16:52:35 joerg Exp $
 include/libfirm/absgraph.h
 include/libfirm/adt/align.h
 include/libfirm/adt/array.h
 include/libfirm/adt/bipartite.h
-include/libfirm/adt/bitfiddle.h
-include/libfirm/adt/bitset.h
-include/libfirm/adt/bitset_ia32.h
-include/libfirm/adt/bitset_std.h
-include/libfirm/adt/compiler.h
 include/libfirm/adt/cpset.h
 include/libfirm/adt/eset.h
 include/libfirm/adt/fourcc.h
@@ -34,7 +29,6 @@ include/libfirm/adt/unionfind.h
 include/libfirm/adt/util.h
 include/libfirm/adt/xmalloc.h
 include/libfirm/analyze_irg_args.h
-include/libfirm/archop.h
 include/libfirm/be.h
 include/libfirm/callgraph.h
 include/libfirm/cdep.h
@@ -46,7 +40,6 @@ include/libfirm/execution_frequency.h
 include/libfirm/field_temperature.h
 include/libfirm/firm.h
 include/libfirm/firm_common.h
-include/libfirm/firm_config.h
 include/libfirm/firm_types.h
 include/libfirm/firm_ycomp.h
 include/libfirm/firmstat.h
