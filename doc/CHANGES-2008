@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3424 2008/12/17 18:15:46 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.3425 2008/12/17 19:56:42 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5679,3 +5679,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cscope to 15.6nb2 [ghen 2008-12-17]
 	Updated www/firefox to 2.0.0.19 [ghen 2008-12-17]
 	Updated www/firefox-bin to 2.0.0.19 [ghen 2008-12-17]
+	Updated www/py-django to 1.0.2 [joerg 2008-12-17]
