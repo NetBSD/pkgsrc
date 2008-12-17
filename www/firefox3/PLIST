@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/17 19:50:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/12/17 23:16:50 tnn Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -32,7 +32,6 @@ lib/${MOZILLA}/libplc4.${SO_SUFFIX}
 lib/${MOZILLA}/libplds4.${SO_SUFFIX}
 lib/${MOZILLA}/libsmime3.${SO_SUFFIX}
 lib/${MOZILLA}/libsoftokn3.${SO_SUFFIX}
-lib/${MOZILLA}/libsqlite3.${SO_SUFFIX}
 lib/${MOZILLA}/libssl3.${SO_SUFFIX}
 lib/${MOZILLA}/libxpcom.${SO_SUFFIX}
 lib/${MOZILLA}/libxul.${SO_SUFFIX}
@@ -1263,7 +1262,6 @@ include/${MOZILLA}/zipwriter/nsIZipWriter.h
 include/${MOZILLA}/morkreader/nsMorkReader.h
 include/${MOZILLA}/cookie/nsICookieAcceptDialog.h
 include/${MOZILLA}/cookie/nsICookiePromptService.h
-include/${MOZILLA}/sqlite3/sqlite3.h
 include/${MOZILLA}/rdf/rdfIDataSource.h
 include/${MOZILLA}/rdf/rdfITripleVisitor.h
 include/${MOZILLA}/rdf/rdfISerializer.h
