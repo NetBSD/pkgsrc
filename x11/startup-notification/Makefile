@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/11/16 14:01:11 tron Exp $
+# $NetBSD: Makefile,v 1.21 2008/12/17 13:03:32 joerg Exp $
 
 DISTNAME=		startup-notification-0.9
 CATEGORIES=		x11 gnome
@@ -22,10 +22,8 @@ DOCDIR=			${PREFIX}/share/doc/startup-notification
 INSTALLATION_DIRS+=	${DOCDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/startup-notification
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS COPYING ChangeLog NEWS \
-		doc/startup-notification.txt \
-		${DESTDIR}${DOCDIR}
+		doc/startup-notification.txt ${DESTDIR}${DOCDIR}
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
