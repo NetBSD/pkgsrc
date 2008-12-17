@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/17 16:59:19 joerg Exp $
 
---- Makefile.orig	2008-11-27 19:36:46.000000000 -0500
+--- Makefile.orig	2008-12-01 18:57:31.000000000 +0100
 +++ Makefile
 @@ -8,18 +8,18 @@ BUILDDIR ?= build
  FIRM_CFLAGS ?= `pkg-config --cflags libfirm`
@@ -26,9 +26,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
  
  LFLAGS += $(FIRM_LIBS)
  
-@@ -51,13 +51,13 @@ SOURCES := \
- 	driver/firm_opt.c \
+@@ -55,13 +55,13 @@ SOURCES := \
  	driver/gen_firm_asm.c \
+ 	preprocessor.c
  
 -OBJECTS = $(SOURCES:%.c=build/%.o)
 +OBJECTS = $(SOURCES:%.c=build/%.lo)
@@ -44,9 +44,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
  
  Q = @
  
-@@ -93,7 +93,8 @@ UNUSED := $(shell mkdir -p $(DIRS))
+@@ -97,7 +97,8 @@ UNUSED := $(shell mkdir -p $(DIRS))
  
- $(GOAL): $(OBJECTS)
+ $(GOAL): $(OBJECTS) $(LIBFIRM_FILE)
  	@echo "===> LD $@"
 -	$(Q)$(CC) $(OBJECTS) $(LFLAGS) -o $(GOAL)
 +	$(Q)$(LIBTOOL) --mode=link --tag=CC \
@@ -54,7 +54,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
  
  splint: $(SPLINTS)
  
-@@ -123,36 +124,40 @@ builtins.h: builtins/builtins.c
+@@ -127,35 +128,42 @@ builtins.h: builtins/builtins.c create_b
  
  main.c: builtins.h
  
@@ -89,7 +89,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
  	@echo "===> LD $@"
 -	$(Q)gcc $(CPARSEROS_E) $(LFLAGS) -o $@
 +	$(Q)$(LIBTOOL) --mode=link \
-+		$(CC) $(CPARSEROS_E) $(LFLAGS) -o $@
++		gcc $(CPARSEROS_E) $(LFLAGS) -o $@
  
  cparser.bootstrap2: $(CPARSEROS2)
  	@echo "===> LD $@"
@@ -100,12 +100,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/28 01:17:47 bjs Exp $
 -build/%.o: %.c
 +build/%.lo: %.c
  	@echo '===> CC $<'
--	$(Q)$(ICC) $(CPPFLAGS) $(ICC_CFLAGS) -c $< -o $@
--	$(Q)$(GCCO1) $(CPPFLAGS) $(CFLAGS) -O1 -c $< -o $@
+ #$(Q)$(ICC) $(CPPFLAGS) $(ICC_CFLAGS) -c $< -o $@
+ #$(Q)$(GCCO1) $(CPPFLAGS) $(CFLAGS) -O1 -c $< -o $@
 -	$(Q)$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
--
 +	$(Q)$(LIBTOOL) --mode=compile --tag=CC \
 +		$(CC) $(CPPFLAGS) $(CFLAGS) -c $< -o $@
+ 
  clean:
  	@echo '===> CLEAN'
- 	$(Q)rm -rf build/* $(GOAL) .depend

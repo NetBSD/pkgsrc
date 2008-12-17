@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/11/28 01:20:06 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/17 16:59:19 joerg Exp $
 #
 
-DISTNAME=	cparser-0.9.5
+DISTNAME=	cparser-0.9.7
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cparser/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,6 @@ USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-AUTO_MKDIRS=	yes
 COPTS?=		-O2
 
 #DBG?=		-g3	# XXX debugging option (install without strip)
@@ -28,10 +27,13 @@ MAKE_ENV+=	COPTS=${COPTS:Q}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
 	${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} ${WRKSRC}/build/cparser \
 		${DESTDIR}${PREFIX}/bin/cparser
+	${INSTALL_MAN} ${WRKSRC}/cparser.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/libfirm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
