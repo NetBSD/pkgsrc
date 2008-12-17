@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2008/11/20 13:11:18 tron Exp $
+# $NetBSD: Makefile,v 1.48 2008/12/17 17:05:52 ghen Exp $
 
 MOZILLA=		firefox
-MOZ_VER=		2.0.0.18
+MOZ_VER=		2.0.0.19
 MOZ_DISTVER=		${MOZ_VER}
 
 MAINTAINER=		grant@NetBSD.org
