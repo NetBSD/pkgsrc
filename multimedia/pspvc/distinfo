@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/17 04:17:25 jmcneill Exp $
+
+SHA1 (pspvc-install-0.3.tar.gz) = 1cbc9aa2b177e0d402ab774d6ddf870156f38dbb
+RMD160 (pspvc-install-0.3.tar.gz) = abe601e58dbd88321b7e4515a3e243811a56c596
+Size (pspvc-install-0.3.tar.gz) = 2675111 bytes
+SHA1 (patch-aa) = 1032e2054651247267927ac9b6deb963e90acee0
