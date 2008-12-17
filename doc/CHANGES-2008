@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3423 2008/12/17 17:06:47 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.3424 2008/12/17 18:15:46 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5671,7 +5671,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox3 to 3.0.5 [tnn 2008-12-17]
 	Updated devel/libfirm to 1.15.0 [joerg 2008-12-17]
 	Updated lang/cparser to 0.9.7 [joerg 2008-12-17]
+	Updated mail/archivemail to 0.7.2 [joerg 2008-12-17]
+	Updated net/nsd to 3.2.0 [joerg 2008-12-17]
+	Updated net/ldns to 1.4.0 [joerg 2008-12-17]
+	Updated net/drill to 1.4.0 [joerg 2008-12-17]
+	Updated net/unbound to 1.1.1 [joerg 2008-12-17]
 	Updated devel/cscope to 15.6nb2 [ghen 2008-12-17]
 	Updated www/firefox to 2.0.0.19 [ghen 2008-12-17]
-	Updated www/firefox-bin to 2.0.0.19 [ghen 2008-12-17]
 	Updated www/firefox-bin to 2.0.0.19 [ghen 2008-12-17]
