@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3415 2008/12/17 04:19:55 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3416 2008/12/17 11:56:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5644,3 +5644,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-Rose-DBx-AutoReconnect version 0.02 [he 2008-12-17]
 	Added www/p5-CatalystX-CRUD-YUI version 0.012 [he 2008-12-17]
 	Added multimedia/pspvc version 0.3 [jmcneill 2008-12-16]
+	Added sysutils/fdupes version 1.40 [obache 2008-12-17]
