@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/12/17 15:43:01 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/17 19:50:42 tnn Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 MAINTAINER=		tnn@NetBSD.org
 MOZ_VER=		3.0.5
 
-FILESDIR=		${.CURDIR}/files
+XPTCFILES:=		${XPTCFILES:C,^,../../firefox3/files/,}
 DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox3/distinfo
@@ -65,13 +65,17 @@ stage-package:
 	cp ${WRKSRC}/dist/firefox/components/browser.xpt \
 	   ${WRKSRC}/dist/bin/components/browser.xpt
 
-# Install libjemalloc.so which is needed on Linux.
-.if ${OPSYS} == "Linux"
+.if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
+PLIST_SUBST+=		JEMALLOC=
+SCRIPTS_ENV+=		JEMALLOC=
 post-install: install-libjemalloc
 .PHONY: install-libjemalloc
 install-libjemalloc:
-	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.so \
+	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.${SO_SUFFIX} \
 	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
+.else
+PLIST_SUBST+=		JEMALLOC="@comment "
+SCRIPTS_ENV+=		JEMALLOC="@comment "
 .endif
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
