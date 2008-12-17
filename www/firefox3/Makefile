@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/12/17 19:50:42 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/17 20:06:43 tnn Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -88,7 +88,8 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--disable-dbus
 # Avoids needing curl on Linux
 CONFIGURE_ARGS+=	--disable-crashreporter
-CONFIGURE_ARGS+=	--disable-system-sqlite 
-#.include "../../databases/sqlite3/buildlink3.mk"
+
+#CONFIGURE_ARGS+=	--enable-system-sqlite 
+.include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
