@@ -49,9 +49,6 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_write_disk.c,v 1.26 2008/06/21 19
 #include <sys/utime.h>
 #endif
 
-#ifdef HAVE_EXT2FS_EXT2_FS_H
-#include <ext2fs/ext2_fs.h>	/* for Linux file flags */
-#endif
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
 #endif
@@ -63,6 +60,16 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_write_disk.c,v 1.26 2008/06/21 19
 #endif
 #ifdef HAVE_LINUX_FS_H
 #include <linux/fs.h>	/* for Linux file flags */
+#endif
+#ifdef HAVE_LINUX_EXT2_FS_H
+#include <linux/ext2_fs.h>	/* for Linux file flags */
+#endif
+#ifdef HAVE_EXT2FS_EXT2_FS_H
+/*
+ * This must be after the include of linux/ext2_fs.h,
+ * otherwise the former will fail.
+ */
+#include <ext2fs/ext2_fs.h>	/* for Linux file flags */
 #endif
 #ifdef HAVE_LIMITS_H
 #include <limits.h>
