@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.286 2008/11/25 14:38:25 abs Exp $
+# $NetBSD: Makefile,v 1.287 2008/12/17 00:44:52 he Exp $
 #
 
 COMMENT=	Databases
@@ -127,6 +127,7 @@ SUBDIR+=	p5-Rose-DB-Object
 SUBDIR+=	p5-Rose-DBx-Garden
 SUBDIR+=	p5-Rose-DBx-Garden-Catalyst
 SUBDIR+=	p5-Rose-DBx-Object-MoreHelpers
+SUBDIR+=	p5-Rose-DBx-AutoReconnect
 SUBDIR+=	p5-Rose-DBx-TestDB
 SUBDIR+=	p5-SQL-Abstract
 SUBDIR+=	p5-SQL-Abstract-Limit
