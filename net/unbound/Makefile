@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/10/09 01:31:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/17 18:14:01 joerg Exp $
 
-DISTNAME=	unbound-1.0.2
+DISTNAME=	unbound-1.1.1
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -10,13 +10,12 @@ COMMENT=	DNS resolver and recursive server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Strictly speaking this is tar in gzip in gzip, but using bsdtar is
-# the easiest workaround.
-EXTRACT_USING=	bsdtar
-
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
+
+CONFIGURE_ARGS+=	--with-ldns=${BUILDLINK_PREFIX.ldns}
+CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound.pid
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	post-configure
@@ -40,5 +39,6 @@ UNBOUND_GROUP?=	unbound
 PKG_GROUPS=	${UNBOUND_GROUP}
 PKG_USERS=	${UNBOUND_USER}:${UNBOUND_GROUP}
 
+.include "../../net/ldns/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
