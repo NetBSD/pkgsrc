@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3421 2008/12/17 17:00:08 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.3422 2008/12/17 17:01:38 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5671,3 +5671,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox3 to 3.0.5 [tnn 2008-12-17]
 	Updated devel/libfirm to 1.15.0 [joerg 2008-12-17]
 	Updated lang/cparser to 0.9.7 [joerg 2008-12-17]
+	Updated devel/cscope to 15.6nb2 [ghen 2008-12-17]
