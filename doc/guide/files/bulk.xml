@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.2 2008/04/04 18:32:37 joerg Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.3 2008/12/17 09:50:48 rillig Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -85,8 +85,9 @@ temporary filesystems, others must survive a sudden reboot.</para>
 <sect1 id="bulk.old">
 <title>Running an old-style bulk build</title>
 
-<warning><para>The rest of this section is rather old. Don't rely on it
-too much.</para></warning>
+<note><para>There are two ways of doing a bulk build. The old-style
+one and the new-style <quote>pbulk</quote>. The latter is the recommended
+way.</para></note>
 
 <sect2 id="binary.configuration">
 <title>Configuration</title>
@@ -612,10 +613,51 @@ nbftp% <userinput>chmod 755 .</userinput>
 <sect1 id="bulk.pbulk">
 <title>Running a pbulk-style bulk build</title>
 
+<para>Running a pbulk-style bulk build works roughly as follows:</para>
+
+<itemizedlist>
+<listitem><para>First, build the pbulk infrastructure in a fresh pkgsrc location.</para></listitem>
+<listitem><para>Then, build each of the packages from a clean installation directory using the infrastructure.</para></listitem>
+</itemizedlist>
+
+<sect2 id="bulk.pbulk.prepare">
+<title>Preparation</title>
+
+<para>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <filename>/usr/pbulk-outer</filename> or <filename>$HOME/pbulk-outer</filename> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</para>
+
+<screen>
+$ <userinput>cd /usr/pkgsrc</userinput>
+$ <userinput>./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap</userinput>
+$ <userinput>rm -rf /tmp/pbulk-bootstrap</userinput>
+</screen>
+
+<para>Now the basic environment for the pbulk infrastructure is installed. The specific tools are still missing. This is a good time to edit the pkgsrc configuration file <filename>/usr/pbulk/etc/mk.conf</filename> to fit your needs. Typical things you might set now are:</para>
+
+<itemizedlist>
+<listitem><para><literal><varname>PKG_DEVELOPER</varname>=yes</literal>, to enable many consistency checks,</para></listitem>
+<listitem><para><literal><varname>WRKOBJDIR</varname>=/tmp/pbulk-outer</literal>, to keep <filename>/usr/pkgsrc</filename> free from any modifications,</para></listitem>
+<listitem><para><literal><varname>DISTDIR</varname>=/distfiles</literal>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</para></listitem>
+<listitem><para><literal><varname>ACCEPTABLE_LICENSES</varname>+=...</literal>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</para></listitem>
+<listitem><para><literal><varname>_ACCEPTABLE</varname>=yes</literal>, to accept all licenses, no matter how restrictive they are.</para></listitem>
+</itemizedlist>
+
+<para>Now you are ready to build the rest of the pbulk infrastructure.</para>
+
+<screen>
+$ <userinput>cd pkgtools/pbulk</userinput>
+$ <userinput>/usr/pbulk/bin/bmake install</userinput>
+$ <userinput>rm -rf /tmp/pbulk-outer</userinput>
+</screen>
+
+<para>Now the pbulk infrastructure is built and installed. It still needs to be configured, and after some more preparation, we will be able to start the real bulk build.</para>
+</sect2>
+
 <sect2 id="bulk.pbulk.conf">
 <title>Configuration</title>
 
 <para>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</para>
+
+<para>TODO: continue writing</para>
 
 </sect2>
 
