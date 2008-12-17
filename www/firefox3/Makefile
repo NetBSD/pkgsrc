@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7.2.1 2008/11/17 09:57:55 rtr Exp $
+# $NetBSD: Makefile,v 1.7.2.2 2008/12/17 21:06:45 tron Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -13,7 +13,6 @@ INSTALLATION_DIRS=	lib/pkgconfig
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.4
-.include "../../databases/sqlite3/buildlink3.mk"
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
@@ -23,7 +22,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 .include "../../www/firefox/Makefile-firefox.common"
 
 MAINTAINER=		tnn@NetBSD.org
-MOZ_VER=		3.0.4
+MOZ_VER=		3.0.5
 
 DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 
@@ -84,5 +83,7 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 CONFIGURE_ARGS+=	--disable-dbus
 # Avoids needing curl on Linux
 CONFIGURE_ARGS+=	--disable-crashreporter
+#CONFIGURE_ARGS+=	--disable-system-sqlite 
+.include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
