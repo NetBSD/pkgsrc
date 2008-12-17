@@ -1,0 +1,5 @@
+CatalystX::CRUD::YUI is a crud application using the Yahoo User
+Interface toolkit and CatalystX::CRUD components. It is derived
+largely from the Rose::DBx::Garden::Catalyst project but now with
+support for DBIx::Class via the CatalystX::CRUD::ModelAdapter::DBIC
+package.
