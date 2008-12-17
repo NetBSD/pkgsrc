@@ -1,8 +1,12 @@
-$NetBSD: patch-bh,v 1.1 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-bh,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- readline/history.c.orig	1995-02-24 21:20:00.000000000 +0000
-+++ readline/history.c
-@@ -45,6 +45,7 @@ extern char *alloca ();
+--- readline/history.c.orig	1995-02-24 16:20:00.000000000 -0500
++++ readline/history.c	2008-12-16 20:37:14.000000000 -0500
+@@ -42,9 +42,11 @@
+ #endif /* !__GNU_C__ */
+ 
+ #include <stdio.h>
++#include <string.h>
  #include <sys/types.h>
  #include <sys/file.h>
  #include <sys/stat.h>
@@ -10,7 +14,7 @@ $NetBSD: patch-bh,v 1.1 2005/12/14 13:53:24 joerg Exp $
  #include <fcntl.h>
  #include "history.h"
  
-@@ -466,7 +467,6 @@ read_history_range (filename, from, to)
+@@ -466,7 +468,6 @@
    char *input, *buffer = (char *)NULL;
    int file, current_line;
    struct stat finfo;
@@ -18,7 +22,7 @@ $NetBSD: patch-bh,v 1.1 2005/12/14 13:53:24 joerg Exp $
  
    input = history_filename (filename);
    file = open (input, O_RDONLY, 0666);
-@@ -601,7 +601,6 @@ history_do_write (filename, nelements, o
+@@ -601,7 +602,6 @@
       char *filename;
       int nelements, overwrite;
  {

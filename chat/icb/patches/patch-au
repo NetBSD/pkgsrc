@@ -1,36 +1,36 @@
-$NetBSD: patch-au,v 1.3 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-au,v 1.4 2008/12/17 02:19:59 christos Exp $
 
---- tcl/panic.c.orig	1995-02-24 21:19:49.000000000 +0000
-+++ tcl/panic.c
-@@ -19,7 +19,7 @@ static char rcsid[] = "$Header: /home/ag
+--- icb/tcl.c.orig	1995-02-24 16:20:30.000000000 -0500
++++ icb/tcl.c	2008-12-16 20:18:01.000000000 -0500
+@@ -3,6 +3,7 @@
  
- #include <stdio.h>
- #include <stdlib.h>
--#include <varargs.h>
-+#include <stdarg.h>
- 
- /*
-  *----------------------------------------------------------------------
-@@ -39,18 +39,17 @@ static char rcsid[] = "$Header: /home/ag
+ /* TCL interface */
  
- #ifndef lint
- void
--panic(va_alist)
--    va_dcl			/* char *format, then any number of additional
-+panic(char *format, ...)
-+				/* char *format, then any number of additional
- 				 * values to be printed under the control of
- 				 * format.  This is all just the same as you'd
- 				 * pass to printf. */
++#include <limits.h>
+ #ifdef linux
+ #include <unistd.h>
+ #endif
+@@ -95,7 +96,11 @@
+ tclreadicbrc()
  {
--    char *format;
-     va_list args;
+ 	char *p, *path;
++#ifdef NAME_MAX
++	char cmd[NAME_MAX + 10];
++#else
+ 	char cmd[MAXNAMLEN+10];
++#endif
+ 	
+ 	if (!(path = getrcname())) return;
  
--    va_start(args);
--    format = va_arg(args, char *);
-+    va_start(args, format);
-     (void) vfprintf(stderr, format, args);
-+    va_end(args);
-     (void) fflush(stderr);
-     abort();
- }
+@@ -117,7 +122,11 @@
+ {
+ 	static char *names[] = { ".icbrc", ".fnrc", ".tclrc" , (char *)NULL };
+ 	char *rcfile, *homedir, *getenv(), **p;
++#ifdef NAME_MAX
++	static char rcpath[NAME_MAX + 1];
++#else
+ 	static char rcpath[MAXNAMLEN+1];	/* path of startup file */
++#endif
+ 
+ 	/* get name of file to use */
+ 	if (((rcfile = getenv("ICBRC")) != NULL)

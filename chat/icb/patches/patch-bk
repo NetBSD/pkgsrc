@@ -1,27 +1,61 @@
-$NetBSD: patch-bk,v 1.1 2006/05/15 15:33:00 christos Exp $
+$NetBSD: patch-bk,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- icb/readlineinit.c.orig	1995-02-24 16:20:25.000000000 -0500
-+++ icb/readlineinit.c	2006-05-15 10:47:05.000000000 -0400
-@@ -1,4 +1,6 @@
- #include <readline.h>
-+#include <stdlib.h>
-+#include <unistd.h>
- #include "icb.h"
- #include "externs.h"
+--- tcl/Make.orig	1995-02-24 16:19:48.000000000 -0500
++++ tcl/Make	2008-12-16 20:18:01.000000000 -0500
+@@ -11,13 +11,7 @@
  
-@@ -21,12 +23,12 @@
- rl_vi_editing_mode(); /* default to vi, dammit. */
- gv.editmode = "vi";
+ SRC = \
+ 	panic.c \
+-	strchr.c \
+ 	strerror.c \
+-	strpbrk.c \
+-	strspn.c \
+-	strstr.c \
+-	strtol.c \
+-	strtoul.c \
+ 	tclAssem.c \
+ 	tclBasic.c \
+ 	tclCmdAH.c \
+@@ -30,13 +24,7 @@
  
--editor = (char *)getenv("EDITOR");
-+editor = getenv("EDITOR");
- if (!editor)
--	editor = (char *)getenv("VISUAL");
-+	editor = getenv("VISUAL");
+ OBJ = \
+ 	panic.o \
+-	strchr.o \
+ 	strerror.o \
+-	strpbrk.o \
+-	strspn.o \
+-	strstr.o \
+-	strtol.o \
+-	strtoul.o \
+ 	tclAssem.o \
+ 	tclBasic.o \
+ 	tclCmdAH.o \
+@@ -80,28 +68,3 @@
+ 	$(MAKEDEPEND) $(DEPENDFLAGS) *.c
  
- if (editor != NULL)
--   if (strcmp((char *)basename(editor),"emacs")==0)
-+   if (strcmp(basename(editor),"emacs")==0)
-    {
- 	rl_emacs_editing_mode();
- 	gv.editmode = "emacs";
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
+-
+-panic.o: stdlib.h 
+-strchr.o: string.h
+-strerror.o: string.h
+-strpbrk.o: string.h
+-strspn.o: string.h
+-strtol.o: stdlib.h 
+-strtoul.o: sprite.h stdlib.h 
+-tclAssem.o: tclInt.h tcl.h stdlib.h
+-tclAssem.o: string.h
+-tclBasic.o: stdlib.h string.h
+-tclBasic.o: tclInt.h tcl.h
+-tclCmdAH.o: stdlib.h string.h 
+-tclCmdAH.o: tclInt.h tcl.h
+-tclCmdIZ.o: stdlib.h string.h
+-tclCmdIZ.o: tclInt.h tcl.h
+-tclExpr.o: tcl.h tclInt.h
+-tclGlob.o: stdlib.h string.h 
+-tclGlob.o: tcl.h
+-tclHistory.o: tclInt.h tcl.h 
+-tclHistory.o: stdlib.h string.h
+-tclProc.o: stdlib.h string.h 
+-tclProc.o: tclInt.h tcl.h
+-tclUtil.o: stdlib.h string.h tcl.h
+-tclUtil.o: tclInt.h
