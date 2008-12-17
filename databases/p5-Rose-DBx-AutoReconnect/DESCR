@@ -1,0 +1,14 @@
+Rose::DBx::AutoReconnect is a subclass of Rose::DB. Additional
+features include:
+
+    * If using new_or_cached() method, will ping() dbh on every
+      fetch from cache to ensure that the dbh is connected. This
+      extends the basic Rose::DB::Cache behaviour beyond
+      mod_perl/Apache::DBI.
+    * Convenient logger() method for debugging.
+    * Always uses DBI connect_cached() method when creating handles.
+
+Rose::DBx::AutoReconnect was written to allow new_or_cached() to
+work with MySQL's "morning bug" and to allow for restarting your
+database without restarting your application. See also
+Rose::DBx::Cache::Anywhere.
