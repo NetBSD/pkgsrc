@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/11/17 21:20:45 darcy Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/17 15:44:10 darcy Exp $
 #
 
 DISTNAME=	generate-2.6
@@ -13,5 +13,7 @@ COMMENT=	Simple text pre-processor
 MAKE_ENV+=	${BSD_MAKE_ENV} LIBS=${LIBS:Q}
 USE_TOOLS+=	gmake
 LIBS.SunOS=	-lsocket -lnsl
+LIBS.QNX=	-lsocket
+CFLAGS.QNX=	-U__STRICT_ANSI__
 
 .include "../../mk/bsd.pkg.mk"
