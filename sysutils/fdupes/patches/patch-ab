@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+
+--- md5/md5.c.orig	1999-11-05 01:04:36.000000000 +0000
++++ md5/md5.c
+@@ -38,6 +38,8 @@
+   1999-05-03 lpd Original version.
+  */
+ 
++#include <string.h>
++
+ #include "md5.h"
+ 
+ #ifdef TEST
+@@ -46,7 +48,6 @@
+  * The test program should print out the same values as given in section
+  * A.5 of RFC 1321, reproduced below.
+  */
+-#include <string.h>
+ main()
+ {
+     static const char *const test[7] = {

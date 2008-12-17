@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+
+--- fdupes.c.orig	2001-03-15 02:16:09.000000000 +0000
++++ fdupes.c
+@@ -588,7 +588,7 @@ void printmatches(file_t *files)
+   while (files != NULL) {
+     if (files->hasdupes) {
+       if (!ISFLAG(flags, F_OMITFIRST)) {
+-	if (ISFLAG(flags, F_SHOWSIZE)) printf("%ld byte%seach:\n", files->size,
++	if (ISFLAG(flags, F_SHOWSIZE)) printf("%ld byte%seach:\n", (long)files->size,
+ 	 (files->size != 1) ? "s " : " ");
+ 	if (ISFLAG(flags, F_DSAMELINE)) escapefilename("\\ ", &files->d_name);
+ 	printf("%s%c", files->d_name, ISFLAG(flags, F_DSAMELINE)?' ':'\n');
+@@ -676,7 +676,7 @@ void autodelete(file_t *files)
+       do {
+ 	printf("Set %d of %d, preserve files [1 - %d, all]", 
+           curgroup, groups, counter);
+-	if (ISFLAG(flags, F_SHOWSIZE)) printf(" (%ld byte%seach)", files->size,
++	if (ISFLAG(flags, F_SHOWSIZE)) printf(" (%ld byte%seach)", (long)files->size,
+ 	  (files->size != 1) ? "s " : " ");
+ 	printf(": ");
+ 	fflush(stdout);

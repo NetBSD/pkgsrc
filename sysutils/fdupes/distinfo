@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+
+SHA1 (fdupes-1.40.tar.gz) = e1bce9bdf50d7bf700dda3eb8a3d218b181b3931
+RMD160 (fdupes-1.40.tar.gz) = 0abd2f0dfee38cb333c1069363a65f8ab37e18dd
+Size (fdupes-1.40.tar.gz) = 16026 bytes
+SHA1 (patch-aa) = c84138d46bef74db226e3ea1226de874e5a7e01a
+SHA1 (patch-ab) = 8e988a6f42682b0393454b8564b6068e1fc70df9
+SHA1 (patch-ac) = 833aaa5903efb59acaa1f3f505090f7b018903f8
