@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+
+--- Makefile.orig	2001-03-15 02:49:11.000000000 +0000
++++ Makefile
+@@ -38,8 +38,8 @@ fdupes: fdupes.c md5/md5.c	
+ 	gcc fdupes.c md5/md5.c -Wall -o fdupes -DVERSION=\"$(VERSION)\" $(EXTERNAL_MD5) $(EXPERIMENTAL_RBTREE)
+ 
+ install: fdupes
+-	cp fdupes $(INSTALLDIR)
+-	cp fdupes.1 $(MANPAGEDIR)/man1
++	${BSD_INSTALL_PROGRAM} fdupes ${DESTDIR}$(INSTALLDIR)
++	${BSD_INSTALL_MAN} fdupes.1 ${DESTDIR}$(MANPAGEDIR)/man1
+ 
+ tarball: clean
+ 	tar --directory=.. -c -z -v -f ../fdupes-$(VERSION).tar.gz fdupes-$(VERSION)
