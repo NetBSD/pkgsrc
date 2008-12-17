@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.6 2008/01/05 05:42:02 hira Exp $
+$NetBSD: patch-aa,v 1.7 2008/12/17 12:57:27 hira Exp $
 
---- panel-plugin/battery.c.orig	2007-01-18 02:56:51.000000000 +0900
-+++ panel-plugin/battery.c	2008-01-03 21:30:22.000000000 +0900
+--- panel-plugin/battery.c.orig	2008-09-05 05:53:40.000000000 +0900
++++ panel-plugin/battery.c	2008-11-27 22:16:05.000000000 +0900
 @@ -25,7 +25,7 @@
  #include <config.h>
  #endif
  
--#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
  #include <machine/apm_bios.h>
  #elif __OpenBSD__
  #include <sys/param.h>
@@ -63,16 +63,16 @@ $NetBSD: patch-aa,v 1.6 2008/01/05 05:42:02 hira Exp $
  #else
      struct apm_info apm;
      DBG ("Updating battery status...");
-@@ -400,7 +410,7 @@
+@@ -404,7 +414,7 @@
          acline = apm.ac_line_status ? TRUE : FALSE;
-         
+ 
      }
 -#elif __FreeBSD__
 +#elif defined(__FreeBSD__) || defined(__DragonFly__)
      else {
   /* This is how I read the information from the APM subsystem under
       FreeBSD.  Each time this functions is called (once every second)
-@@ -460,6 +470,11 @@
+@@ -464,6 +474,11 @@
  
      if(battmon->options.display_percentage && !(battmon->options.hide_when_full && acline && charge >= 99)){
          gtk_widget_show((GtkWidget *)battmon->charge);
@@ -84,7 +84,7 @@ $NetBSD: patch-aa,v 1.6 2008/01/05 05:42:02 hira Exp $
          g_snprintf(buffer, sizeof(buffer),"%d%% ", charge);
          gtk_label_set_text(battmon->charge,buffer);
      } else {
-@@ -477,6 +492,11 @@
+@@ -481,6 +496,11 @@
          }
  
          gtk_widget_show((GtkWidget *)active_label);
