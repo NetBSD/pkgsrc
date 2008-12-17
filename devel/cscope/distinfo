@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2007/01/20 23:39:44 wiz Exp $
+$NetBSD: distinfo,v 1.18 2008/12/17 17:01:15 ghen Exp $
 
 SHA1 (cscope-15.6.tar.gz) = f5f73dca1f223cf6905c09a7f0e8eb993fa5fd93
 RMD160 (cscope-15.6.tar.gz) = b93238d3c91782d032e028abcfde3c2a7491a9c9
@@ -17,3 +17,4 @@ SHA1 (patch-al) = 76a3a65fe80c7acf7cdf7f78bd4959f102ffdc72
 SHA1 (patch-am) = 2c08e2ccf22b3a3852c52d5177c7a08d206c1cdf
 SHA1 (patch-an) = cef8d1d31a417125c516df403dce228ac92a307c
 SHA1 (patch-ao) = 05ae43171f04320dc1a213510b0906d3387cf35f
+SHA1 (patch-ap) = 6266006b14ac6f0a8063439e9f4521443948665a
