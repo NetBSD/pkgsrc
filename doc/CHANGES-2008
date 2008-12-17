@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3417 2008/12/17 12:52:28 hira Exp $
+$NetBSD: CHANGES-2008,v 1.3418 2008/12/17 12:59:25 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5667,3 +5667,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xfce4-terminal to 0.2.8.3 [hira 2008-12-17]
 	Updated x11/xfce4-utils to 4.4.3 [hira 2008-12-17]
 	Updated meta-pkgs/xfce4 to 4.4.3 [hira 2008-12-17]
+	Updated sysutils/xfce4-battery-plugin to 0.5.1 [hira 2008-12-17]
