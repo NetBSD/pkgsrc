@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.55 2008/12/16 12:02:38 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.56 2008/12/17 12:51:55 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -151,3 +151,7 @@ Pullup ticket #2606 - requested by ghen
 powerdns: security update
 pullup ticket #2609 - requested by tron
 phpmyadmin: update package
+pullup ticket #2611 - requested by tron
+mplayer: security and vcd support patches
+gmplayer: security and vcd support patches
+mencoder: security and vcd support patches
