@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2008/08/04 06:55:39 obache Exp $
+# $NetBSD: Makefile,v 1.52 2008/12/17 00:53:48 hubertf Exp $
 #
 
 DISTNAME=		qemu-0.9.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://bellard.org/qemu/
 
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
 GCC_REQD+=		3.0
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*)
 USE_PKGSRC_GCC=	yes
 .endif
 
