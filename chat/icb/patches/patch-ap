@@ -1,59 +1,22 @@
-$NetBSD: patch-ap,v 1.2 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-ap,v 1.3 2008/12/17 02:19:59 christos Exp $
 
---- tcl/tclCmdAH.c.orig	1995-02-24 21:19:53.000000000 +0000
-+++ tcl/tclCmdAH.c
-@@ -38,9 +38,21 @@ static char rcsid[] = "$Header: /home/ag
- #include <sys/wait.h>
- #include "tclInt.h"
+--- icb/s_bump.c.orig	1995-02-24 16:20:27.000000000 -0500
++++ icb/s_bump.c	2008-12-16 20:18:01.000000000 -0500
+@@ -6,6 +6,8 @@
  
--extern int errno;
-+#ifdef __NetBSD__
-+#define unix
-+#endif
-+
-+#if (defined(__unix__) || defined(unix)) && !defined(USG)
-+#include <sys/param.h>
+ #include "icb.h"
+ #include "externs.h"
++#include <stdlib.h>
 +#include <unistd.h>
-+#endif
-+
-+#if !(defined(BSD) && BSD >= 199306)
- extern long lseek();
-+#endif
-+#ifndef BSD4_4
- extern char *mktemp();
-+#endif
- 
- /*
-  *----------------------------------------------------------------------
-@@ -430,7 +442,7 @@ Tcl_ExecCmd(dummy, interp, argc, argv)
-     int pid = -1;			/* -1 means child process doesn't
- 					 * exist (yet).  Non-zero gives its
- 					 * id (0 only in child). */
--    union wait status;
-+    int status;
-     char *cmdName, *execName;
  
-     /*
-@@ -501,8 +513,13 @@ Tcl_ExecCmd(dummy, interp, argc, argv)
-     } else {
- 	char tmp[sizeof(TMP_FILE_NAME) + 1];
- 	strcpy(tmp, TMP_FILE_NAME);
-+#ifdef BSD4_4
-+	mkstemp(tmp);
-+	stdIn[0] = mkstemp(tmp);
-+#else
- 	mktemp(tmp);
- 	stdIn[0] = open(tmp, O_RDWR|O_CREAT, 0);
-+#endif
- 	if (stdIn[0] < 0) {
- 	    sprintf(interp->result,
- 		    "couldn't create input file for \"%.50s\" command: %.50s",
-@@ -642,7 +659,7 @@ Tcl_ExecCmd(dummy, interp, argc, argv)
- 	    sprintf(interp->result, "command terminated abnormally");
- 	    result = TCL_ERROR;
- 	}
--	result = status.w_retcode;
-+	result = WEXITSTATUS(status);
-     }
-     if (stdIn[0] != -1) {
- 	close(stdIn[0]);
+ s_bump(TARGLIST)
+ TARGDEFS
+@@ -22,7 +24,7 @@
+ 	if (argc > 2)
+ 		password = argv[2];
+ 	else
+-		password = (char *) getpass ("Enter password:");
++		password = getpass ("Enter password:");
+ 
+ 	sprintf(message,"bump %s %s", nick, password);
+ 	sendpersonal("server",message,-1);

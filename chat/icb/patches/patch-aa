@@ -1,43 +1,51 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/12/15 00:36:37 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/17 02:19:59 christos Exp $
 
---- icb/c_log.c.orig	Fri Feb 24 22:20:18 1995
-+++ icb/c_log.c	Fri Jul 21 02:08:35 2000
-@@ -6,6 +6,7 @@
- #include "icb.h"
- #include "externs.h"
- #include <time.h>
-+#include <errno.h>
+--- glob/tilde.c.orig	1995-02-24 16:20:46.000000000 -0500
++++ glob/tilde.c	2008-12-16 20:35:03.000000000 -0500
+@@ -28,12 +28,16 @@
+ #endif
  
- FILE *logfp = NULL;
+ #include <pwd.h>
++#include <string.h>
++#include <stdlib.h>
++#include <unistd.h>
  
-@@ -45,8 +46,6 @@
- 	time_t time();
- 	struct tm *t, *localtime();
- 	time_t clock;
--	extern int errno, sys_nerr;
--	extern char *sys_errlist[];
+ #ifndef savestring
+ #define savestring(x) (char *)strcpy ((char *)xmalloc (1 + strlen (x)), (x))
+ #endif
  
- 	/* determine pathname to use */
- 	if (path == NULL || *path == '\0')
-@@ -97,8 +96,8 @@
- 		aptr++;
- 	
- 	/* timestamp it */
--	sprintf(mbuf, "Session log \"%s\" started at %d/%02d/%-2d %s.",
--	  path, t->tm_mon+1, t->tm_mday, t->tm_year, aptr);
-+	sprintf(mbuf, "Session log \"%s\" started at %d/%02d/%-4d %s.",
-+	  path, t->tm_mon+1, t->tm_mday, 1900+t->tm_year, aptr);
- 	putl(mbuf, PL_SCR | PL_LOG);
+ typedef int Function ();
++typedef char *CPFunction ();
+ #if !defined (NULL)
+ #  define NULL 0x0
+ #endif
+@@ -41,7 +45,7 @@
+ #if defined (TEST)
+ static char *xmalloc (), *xrealloc ();
+ #else
+-extern char *malloc (), *xrealloc ();
++extern char *xmalloc (), *xrealloc ();
+ #endif /* TEST */
  
- 	return(0);
-@@ -126,8 +125,8 @@
- 		aptr++;
- 	
- 	/* timestamp it */
--	sprintf(mbuf, "Session log closed at %d/%02d/%-2d %s.",
--	  t->tm_mon+1, t->tm_mday, t->tm_year, aptr);
-+	sprintf(mbuf, "Session log closed at %d/%02d/%-4d %s.",
-+	  t->tm_mon+1, t->tm_mday, 1900+t->tm_year, aptr);
- 	putl(mbuf, PL_SCR | PL_LOG);
+ /* The default value of tilde_additional_prefixes.  This is set to
+@@ -60,7 +64,7 @@
+    standard meaning for expanding a tilde fails.  The function is called
+    with the text (sans tilde, as in "foo"), and returns a malloc()'ed string
+    which is the expansion, or a NULL pointer if there is no expansion. */
+-Function *tilde_expansion_failure_hook = (Function *)NULL;
++CPFunction *tilde_expansion_failure_hook = (CPFunction *)NULL;
  
- 	/* close it */
+ /* When non-null, this is a NULL terminated array of strings which
+    are duplicates for a tilde prefix.  Bash uses this to expand
+@@ -207,9 +211,9 @@
+       if (!dirname[1] || dirname[1] == '/')
+ 	{
+ 	  /* Prepend $HOME to the rest of the string. */
+-	  char *temp_home = (char *)getenv ("HOME");
++	  char *temp_home = getenv ("HOME");
+ 
+-	  temp_name = (char *)alloca (1 + strlen (&dirname[1])
++	  temp_name = alloca (1 + strlen (&dirname[1])
+ 				      + (temp_home? strlen (temp_home) : 0));
+ 	  temp_name[0] = '\0';
+ 	  if (temp_home)

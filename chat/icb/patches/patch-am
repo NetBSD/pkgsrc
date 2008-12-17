@@ -1,31 +1,27 @@
-$NetBSD: patch-am,v 1.2 2005/12/14 13:53:24 joerg Exp $
+$NetBSD: patch-am,v 1.3 2008/12/17 02:19:59 christos Exp $
 
---- murgil/serverserve.c.orig	1995-02-24 21:19:44.000000000 +0000
-+++ murgil/serverserve.c
-@@ -15,11 +15,13 @@
- #include "ipcf.h"
+--- icb/readlineinit.c.orig	1995-02-24 16:20:25.000000000 -0500
++++ icb/readlineinit.c	2008-12-16 20:18:01.000000000 -0500
+@@ -1,4 +1,6 @@
+ #include <readline.h>
++#include <stdlib.h>
++#include <unistd.h>
+ #include "icb.h"
  #include "externs.h"
-  
--extern int errno;
- fd_set fdr;	
- int timeisup;
  
- sighandler gotalarm();
-+#ifndef __FDS_BITS
-+# define __FDS_BITS(set) ((set)->fds_bits)
-+#endif
+@@ -21,12 +23,12 @@
+ rl_vi_editing_mode(); /* default to vi, dammit. */
+ gv.editmode = "vi";
  
- serverserve()
- {
-@@ -81,9 +83,9 @@ sdoinput()
+-editor = (char *)getenv("EDITOR");
++editor = getenv("EDITOR");
+ if (!editor)
+-	editor = (char *)getenv("VISUAL");
++	editor = getenv("VISUAL");
  
- 	/* examine set of file descriptors */
- 	for (b = 0, y = 0; b <= (howmany(highestfd, 32) - 1); b++, y += 32) {
--	    if (!fdr.fds_bits[b])
-+	    if (!__FDS_BITS(&fdr)[b])
- 		continue;
--	    bits = fdr.fds_bits[b];
-+	    bits = __FDS_BITS(&fdr)[b];
- 	    for (x = y; bits; x++, bits >>= 01)
- 		if (bits & 01)
- 			if (x == port_fd) {
+ if (editor != NULL)
+-   if (strcmp((char *)basename(editor),"emacs")==0)
++   if (strcmp(basename(editor),"emacs")==0)
+    {
+ 	rl_emacs_editing_mode();
+ 	gv.editmode = "emacs";

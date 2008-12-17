@@ -1,59 +1,67 @@
-$NetBSD: patch-ak,v 1.1.1.1 2000/12/15 00:36:38 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2008/12/17 02:19:59 christos Exp $
 
-diff -x *.orig -urN ./icb/unix.c /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/unix.c
---- ./icb/unix.c	Fri Feb 24 22:20:31 1995
-+++ /usr/pkgsrc/net/icb/work.i386.unpatched/icb-5.0.9/icb/unix.c	Fri Nov 26 22:56:29 1999
-@@ -4,6 +4,8 @@
- /* This file contains routines that are unix dependent. */
- /* Eventually, most unixisms should be moved here. */
+--- icb/print.c.orig	1995-02-24 16:20:25.000000000 -0500
++++ icb/print.c	2008-12-16 20:18:00.000000000 -0500
+@@ -5,6 +5,8 @@
  
-+#include <sys/types.h>
-+#include <sys/param.h>
- #include <stdio.h>
  #include "icb.h"
  #include "externs.h"
-@@ -13,6 +15,14 @@
- #undef stty
- #undef gtty
++#include <time.h>
++#include <string.h>
  
-+#if defined(__linux__)
-+#include <termios.h>
-+#include <sys/ioctl.h>
-+#define TTYSTRUCT termios
-+#define stty(fd,buf) tcgetattr((fd), (buf))
-+#define gtty(fd,buf) tcsetattr((fd), TCSANOW, (buf))
-+#define SYSV
-+#else 
- #ifndef SYSV
+ extern FILE *logfp;
  
- #ifdef linux
-@@ -30,6 +40,7 @@
- #define stty(fd,buf) ioctl((fd),TCSETA,(buf))
- #define gtty(fd,buf) ioctl((fd),TCGETA,(buf))
- #endif /* SYSV */
-+#endif /* __linux__ */
+@@ -17,16 +19,26 @@
+ 	char printbuf[1024];
+ 	char *p = printbuf;
+ 	char *t = s;
++	struct tm *tm, *localtime();
++	char timestamp[9];
  
- char *getlogin();
+ 	if (continued) {
+ 		linenumber = 0;
+ 		continued = 0;
+ 	}
  
-@@ -49,8 +60,10 @@
- 	if (((loginid = getlogin()) == NULL) || *loginid == '\0')
- 		if ((pw = getpwuid(getuid())) == NULL)
- 			loginid = NULL;
--		else
--			loginid = pw->pw_name;
-+		else {
-+			loginid = malloc(strlen(pw->pw_name) + 1);
-+			strcpy(loginid, pw->pw_name);
-+		}
- 	return(loginid);
- }
++	/* If requested, prepare timestamp */
++	if (gv.printtime) {
++		gettime();
++		tm = localtime(&curtime);
++		snprintf(timestamp, sizeof(timestamp), "[%02d:%02d] ",
++		 	tm->tm_hour, tm->tm_min);
++	}
++
+ 	if (flags & PL_SCR) {
+ 		/* if paging in effect, do paging */
+ 		if (gv.pagesize && (++linenumber >= gv.pagesize)) {
+-			pauseprompt("[=More=]", 1, 0, 1, (int) " ");
++			pauseprompt("[=More=]", 1, 0, 1, " ");
+ 			linenumber = 0;
+ 		}
  
-@@ -181,7 +194,7 @@
+@@ -35,6 +47,8 @@
+ 			*p++ = *t++;
+ 		*p++ = '\r';
+ 		*p++ = '\n';
++		if (gv.printtime)
++			write(1, timestamp, 8);
+ 		write(1, printbuf, p - printbuf);
+ 	}
  
- getwinsize()
+@@ -61,7 +75,7 @@
+ int Erase;
+ char c;
+ int unget;
+-int except;
++char *except;
  {
--#ifndef NOWINSIZE
-+#ifdef TIOCGWINSZ
- 	struct winsize win;
+ 	char uc, *p;
  
- 	/* get tty settings */
+@@ -89,6 +103,6 @@
+ 
+ 	/* push character back onto stream if requested */
+ 	if (unget)
+-		if (!except || !index(except,uc))
++		if (!except || !strchr(except,uc))
+ 			pushback(uc);
+ }

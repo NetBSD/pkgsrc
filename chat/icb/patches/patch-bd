@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2008/12/17 02:19:59 christos Exp $
+
+--- murgil/readpacket.c.orig	1995-02-24 16:19:42.000000000 -0500
++++ murgil/readpacket.c	2008-12-16 20:18:01.000000000 -0500
+@@ -14,8 +14,6 @@
+ #include "ipcf.h"
+ #include "externs.h"
+ 
+-extern int errno;
+-
+ _readpacket(user, p)
+ int user;
+ struct Cbuf *p;
