@@ -39,9 +39,6 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_entry.c,v 1.52 2008/05/26 17:00:2
 #include <sys/sysmacros.h>
 #endif
 #endif
-#ifdef HAVE_EXT2FS_EXT2_FS_H
-#include <ext2fs/ext2_fs.h>	/* for Linux file flags */
-#endif
 #ifdef HAVE_LIMITS_H
 #include <limits.h>
 #endif
@@ -50,6 +47,13 @@ __FBSDID("$FreeBSD: src/lib/libarchive/archive_entry.c,v 1.52 2008/05/26 17:00:2
 #endif
 #ifdef HAVE_LINUX_EXT2_FS_H
 #include <linux/ext2_fs.h>	/* for Linux file flags */
+#endif
+#ifdef HAVE_EXT2FS_EXT2_FS_H
+/*
+ * This must be after the include of linux/ext2_fs.h,
+ * otherwise the former will fail.
+ */
+#include <ext2fs/ext2_fs.h>	/* for Linux file flags */
 #endif
 #include <stddef.h>
 #include <stdio.h>
