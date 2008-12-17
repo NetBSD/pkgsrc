@@ -1,0 +1,37 @@
+$NetBSD: patch-an,v 1.1.2.2 2008/12/17 12:50:31 rtr Exp $
+
+--- stream/vcd_read_fbsd.h.orig	2007-10-07 19:49:26.000000000 +0000
++++ stream/vcd_read_fbsd.h
+@@ -37,9 +37,8 @@ typedef struct mp_vcd_priv_st {
+   vcd_tocentry entry;
+ #ifdef VCD_NETBSD
+   struct cd_toc_entry entry_data;
+-#else
+-  cdsector_t buf;
+ #endif
++  cdsector_t buf;
+ } mp_vcd_priv_t;
+ 
+ static inline void
+@@ -208,8 +207,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+   sc.cmd[9] = 1 << 4; // user data only
+   sc.cmd[10] = 0;     // no subchannel
+   sc.cmdlen = 12;
+-  sc.databuf = (caddr_t) mem;
+-  sc.datalen = 2328;
++  sc.databuf = (caddr_t) vcd->buf.data;
++  sc.datalen = VCD_SECTOR_DATA + 4;    // MMC-3 spec says there are 4 extra bytes
+   sc.senselen = sizeof(sc.sense);
+   sc.flags = SCCMD_READ;
+   sc.timeout = 10000;
+@@ -226,9 +225,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+ #else
+   if (pread(vcd->fd,&vcd->buf,VCD_SECTOR_SIZE,vcd_get_msf(vcd)*VCD_SECTOR_SIZE)
+      != VCD_SECTOR_SIZE) return 0;  // EOF?
++#endif
+ 
+   memcpy(mem,vcd->buf.data,VCD_SECTOR_DATA);
+-#endif
+   vcd_inc_msf(vcd);
+   return VCD_SECTOR_DATA;
+ }
