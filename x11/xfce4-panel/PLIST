@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2007/12/07 19:43:30 martti Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/12/17 12:50:03 hira Exp $
 bin/xfce4-panel
 bin/xfce4-popup-windowlist
-etc/xdg/xfce4/panel/clock-14.rc
-etc/xdg/xfce4/panel/launcher-10.rc
-etc/xdg/xfce4/panel/launcher-7.rc
-etc/xdg/xfce4/panel/launcher-8.rc
-etc/xdg/xfce4/panel/launcher-9.rc
-etc/xdg/xfce4/panel/panels.xml
-etc/xdg/xfce4/panel/systray-4.rc
-etc/xdg/xfce4/panel/xfce4-menu-5.rc
 include/xfce4/libxfce4panel/xfce-arrow-button.h
 include/xfce4/libxfce4panel/xfce-hvbox.h
 include/xfce4/libxfce4panel/xfce-itembar.h
@@ -35,6 +27,14 @@ lib/xfce4/panel-plugins/libsystray.la
 lib/xfce4/panel-plugins/libtasklist.la
 lib/xfce4/panel-plugins/libwindowlist.la
 share/applications/xfce4-panel-manager.desktop
+share/examples/xfce4/panel/clock-14.rc
+share/examples/xfce4/panel/launcher-10.rc
+share/examples/xfce4/panel/launcher-7.rc
+share/examples/xfce4/panel/launcher-8.rc
+share/examples/xfce4/panel/launcher-9.rc
+share/examples/xfce4/panel/panels.xml
+share/examples/xfce4/panel/systray-4.rc
+share/examples/xfce4/panel/xfce4-menu-5.rc
 share/doc/libxfce4panel/XfceArrowButton.html
 share/doc/libxfce4panel/XfceExternalPanelPlugin.html
 share/doc/libxfce4panel/XfceHVBox.html
@@ -136,7 +136,6 @@ share/xfce4/panel-plugins/windowlist.desktop
 @dirrm share/doc/libxfce4panel
 @dirrm lib/xfce4/panel-plugins
 @dirrm include/xfce4/libxfce4panel
-@dirrm etc/xdg/xfce4/panel
 @unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/libexec/xfce4 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/xdg/xfce4 2>/dev/null || ${TRUE}

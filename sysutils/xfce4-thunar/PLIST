@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/07 19:43:22 martti Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/12/17 12:50:03 hira Exp $
 bin/Thunar
 bin/thunar
-etc/xdg/Thunar/uca.xml
 include/thunar-vfs-1/thunar-vfs/thunar-vfs-config.h
 include/thunar-vfs-1/thunar-vfs/thunar-vfs-enum-types.h
 include/thunar-vfs-1/thunar-vfs/thunar-vfs-info.h
@@ -247,6 +246,7 @@ share/doc/Thunar/html/zh_TW/support.html
 share/doc/Thunar/html/zh_TW/the-file-manager-window.html
 share/doc/Thunar/html/zh_TW/using-removable-media.html
 share/doc/Thunar/html/zh_TW/working-with-files-and-folders.html
+share/examples/Thunar/uca.xml
 share/gtk-doc/html/thunar-vfs/ThunarVfsGroup.html
 share/gtk-doc/html/thunar-vfs/ThunarVfsJob.html
 share/gtk-doc/html/thunar-vfs/ThunarVfsMimeAction.html
@@ -365,6 +365,7 @@ share/pixmaps/Thunar/Thunar-fallback-icon.png
 share/thumbnailers/thunar-vfs-font-thumbnailer-1.desktop
 share/xfce4/panel-plugins/thunar-tpa.desktop
 @dirrm share/pixmaps/Thunar
+@dirrm share/examples/Thunar
 @dirrm share/doc/Thunar/html/zh_TW/images
 @dirrm share/doc/Thunar/html/zh_TW
 @dirrm share/doc/Thunar/html/ru/images
@@ -392,4 +393,3 @@ share/xfce4/panel-plugins/thunar-tpa.desktop
 @dirrm include/thunarx-1
 @dirrm include/thunar-vfs-1/thunar-vfs
 @dirrm include/thunar-vfs-1
-@dirrm etc/xdg/Thunar

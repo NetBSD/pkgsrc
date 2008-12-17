@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/12/17 12:50:03 hira Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-XFCE4_VERSION=	2.4.2
+XFCE4_VERSION=	2.4.3
 
 DISTNAME=	gtk-xfce-engine-${XFCE4_VERSION}
 PKGNAME=	xfce4-gtk2-engine-${XFCE4_VERSION}
