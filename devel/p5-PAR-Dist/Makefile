@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/12/18 00:35:24 he Exp $
+# $NetBSD: Makefile,v 1.16 2008/12/18 21:44:57 he Exp $
 #
 
 DISTNAME=	PAR-Dist-0.40
@@ -32,7 +32,7 @@ PKG_SUGGESTED_OPTIONS=		YAML
 .if !empty(PKG_OPTIONS:MYAML-Tiny)
 BUILD_DEPENDS+=	p5-YAML-Tiny>=1.25:../../textproc/p5-YAML-Tiny
 .elif !empty(PKG_OPTIONS:MLibYAML)
-BUILD_DEPENDS+=	p5-LibYAML>=0.03:../../textproc/p5-LibYAML
+BUILD_DEPENDS+=	p5-YAML-LibYAML>=0.03:../../textproc/p5-YAML-LibYAML
 .elif !empty(PKG_OPTIONS:MYAML)
 BUILD_DEPENDS+=	p5-YAML>=0.60:../../textproc/p5-YAML
 .endif
