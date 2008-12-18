@@ -1,0 +1,56 @@
+$NetBSD: patch-af,v 1.1 2008/12/18 13:15:10 reinoud Exp $
+
+--- lib3ds/io.c.orig	2001-07-11 15:47:35.000000000 +0200
++++ lib3ds/io.c
+@@ -31,6 +31,11 @@
+  * \author J.E. Hoffmann <je-h@gmx.net>
+  */
+ 
++typedef union {
++    uint32_t dword_value;
++    float float_value;
++} Lib3dsDwordFloat;
++
+ 
+ struct _Lib3dsIo {
+   void *self;
+@@ -248,15 +253,15 @@ Lib3dsFloat
+ lib3ds_io_read_float(Lib3dsIo *io)
+ {
+   Lib3dsByte b[4];
+-  Lib3dsDword d;
++  Lib3dsDwordFloat d;
+ 
+   ASSERT(io);
+   lib3ds_io_read(io, b, 4);
+-  d=((Lib3dsDword)b[3] << 24) |
++  d.dword_value =((Lib3dsDword)b[3] << 24) |
+     ((Lib3dsDword)b[2] << 16) |
+     ((Lib3dsDword)b[1] << 8) |
+     ((Lib3dsDword)b[0]);
+-  return(*((Lib3dsFloat*)&d));
++  return d.float_value;
+ }
+ 
+ 
+@@ -459,14 +464,14 @@ Lib3dsBool
+ lib3ds_io_write_float(Lib3dsIo *io, Lib3dsFloat l)
+ {
+   Lib3dsByte b[4];
+-  Lib3dsDword d;
++  Lib3dsDwordFloat d;
+ 
+   ASSERT(io);
+-  d=*((Lib3dsDword*)&l);
+-  b[3]=(Lib3dsByte)(((Lib3dsDword)d & 0xFF000000) >> 24);
+-  b[2]=(Lib3dsByte)(((Lib3dsDword)d & 0x00FF0000) >> 16);
+-  b[1]=(Lib3dsByte)(((Lib3dsDword)d & 0x0000FF00) >> 8);
+-  b[0]=(Lib3dsByte)(((Lib3dsDword)d & 0x000000FF));
++  d.float_value = l;
++  b[3]=(Lib3dsByte)(((Lib3dsDword)d.dword_value & 0xFF000000) >> 24);
++  b[2]=(Lib3dsByte)(((Lib3dsDword)d.dword_value & 0x00FF0000) >> 16);
++  b[1]=(Lib3dsByte)(((Lib3dsDword)d.dword_value & 0x0000FF00) >> 8);
++  b[0]=(Lib3dsByte)(((Lib3dsDword)d.dword_value & 0x000000FF));
+   if (lib3ds_io_write(io, b, 4)!=4) {
+     return(LIB3DS_FALSE);
+   }
