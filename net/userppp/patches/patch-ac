@@ -1,12 +1,15 @@
-$NetBSD: patch-ac,v 1.1.1.1 2000/11/07 17:26:58 ad Exp $
+$NetBSD: patch-ac,v 1.2 2008/12/18 13:55:24 joerg Exp $
 
 --- pppctl/Makefile.orig	Tue Nov  7 15:15:10 2000
 +++ pppctl/Makefile	Tue Nov  7 15:15:18 2000
-@@ -13,7 +13,6 @@
+@@ -12,10 +12,6 @@ MAN8=		pppctl.8
+ MAN=		pppctl.8
  .endif
  
- # To install correctly:
+-# To install correctly:
 -BINDIR=/usr/sbin
- BINOWN=root
- 
+-BINOWN=root
+-
  .include <bsd.prog.mk>
+ LDADD+=	-lutil
+ DPADD+= ${LIBUTIL}
