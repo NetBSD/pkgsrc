@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 00:32:14 ahoka Exp $
+include/unique-1.0/unique/unique.h
+include/unique-1.0/unique/uniqueapp.h
+include/unique-1.0/unique/uniquebackend.h
+include/unique-1.0/unique/uniquemessage.h
+include/unique-1.0/unique/uniqueversion.h
+lib/libunique-1.0.la
+lib/pkgconfig/unique-1.0.pc
+share/gtk-doc/html/unique/UniqueApp.html
+share/gtk-doc/html/unique/UniqueBackend.html
+share/gtk-doc/html/unique/home.png
+share/gtk-doc/html/unique/index.html
+share/gtk-doc/html/unique/index.sgml
+share/gtk-doc/html/unique/ix01.html
+share/gtk-doc/html/unique/left.png
+share/gtk-doc/html/unique/license.html
+share/gtk-doc/html/unique/right.png
+share/gtk-doc/html/unique/style.css
+share/gtk-doc/html/unique/unique-Message-Data.html
+share/gtk-doc/html/unique/unique-Versioning-Information.html
+share/gtk-doc/html/unique/unique-overview.html
+share/gtk-doc/html/unique/unique.devhelp
+share/gtk-doc/html/unique/unique.devhelp2
+share/gtk-doc/html/unique/up.png
+@dirrm share/gtk-doc/html/unique
+@dirrm include/unique-1.0/unique
+@dirrm include/unique-1.0
