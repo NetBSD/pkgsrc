@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2008/08/01 23:28:39 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/18 17:35:18 jmcneill Exp $
 
 DISTNAME=	# empty
 PKGNAME=	gstreamer0.10-plugins-1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs multimedia
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -25,6 +26,7 @@ DEPENDS+=	gst-plugins0.10-libvisual-[0-9]*:../../audio/gst-plugins0.10-libvisual
 DEPENDS+=	gst-plugins0.10-mad-[0-9]*:../../audio/gst-plugins0.10-mad
 DEPENDS+=	gst-plugins0.10-musepack-[0-9]*:../../audio/gst-plugins0.10-musepack
 DEPENDS+=	gst-plugins0.10-oss-[0-9]*:../../audio/gst-plugins0.10-oss
+DEPENDS+=	gst-plugins0.10-pulse-[0-9]*:../../audio/gst-plugins0.10-pulse
 DEPENDS+=	gst-plugins0.10-sid-[0-9]*:../../audio/gst-plugins0.10-sid
 DEPENDS+=	gst-plugins0.10-spc-[0-9]*:../../audio/gst-plugins0.10-spc
 DEPENDS+=	gst-plugins0.10-speex-[0-9]*:../../audio/gst-plugins0.10-speex
