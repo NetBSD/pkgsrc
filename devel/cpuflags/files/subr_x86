@@ -1,4 +1,4 @@
-# $NetBSD: subr_x86,v 1.3 2008/12/10 23:27:17 abs Exp $
+# $NetBSD: subr_x86,v 1.4 2008/12/18 00:57:12 abs Exp $
 
 # Apparently the only way to reliably determine the architecture of a recent
 # Intel CPU is to use the cpu brand string - as they reused family and
@@ -9,9 +9,11 @@ map_x86_brand_string()
 	"Genuine Intel(R) CPU           T2400"*) echo '-march=core2' ;;
 	"Intel(R) Celeron(R) CPU        E1400"*) echo '-march=core2' ;;
 	"Intel(R) Celeron(R) CPU 2.40GHz")	echo '-march=pentium4' ;;
+	"Intel(R) Celeron(TM) CPU                1400MHz") echo '-march=pentium3' ;;
 	"Intel(R) Core(TM)2 CPU "*) 		echo '-march=core2' ;;
 	"Intel(R) Core(TM)2 Duo CPU "*)		echo '-march=core2' ;;
 	"Intel(R) Core(TM)2 Quad  CPU"*)	echo '-march=core2' ;;
+	"Intel(R) Pentium(R) 4 CPU 2.80GHz")	echo '-march=pentium4' ;;
 	"Intel(R) Pentium(R) 4 CPU 3.00GHz")	echo '-march=prescott' ;;
 	"Intel(R) Pentium(R) D CPU "*)		echo '-march=prescott' ;;
 	"Intel(R) Xeon(R) CPU            3040"*) echo '-march=core2' ;;
