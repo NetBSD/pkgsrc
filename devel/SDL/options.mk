@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2006/06/15 09:45:05 adam Exp $
+# $NetBSD: options.mk,v 1.3 2008/12/18 16:53:01 jmcneill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL
-PKG_SUPPORTED_OPTIONS=	aalib arts esound nas
-PKG_SUGGESTED_OPTIONS=	aalib arts esound nas
+PKG_SUPPORTED_OPTIONS=	aalib arts esound nas pulseaudio
+PKG_SUGGESTED_OPTIONS=	aalib arts esound nas pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -30,4 +30,11 @@ CONFIGURE_ARGS+=	--enable-nas
 .include "../../audio/nas/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-nas
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+# for some reason --enable-pulseaudio disables the
+# configure check
+#CONFIGURE_ARGS+=	--enable-pulseaudio
+.include "../../audio/pulseaudio/buildlink3.mk"
 .endif
