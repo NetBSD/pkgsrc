@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3450 2008/12/18 22:43:33 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3451 2008/12/18 23:02:02 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5741,3 +5741,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/fuse to 0.10.0.1 [adam 2008-12-18]
 	Updated www/nspluginwrapper to 1.1.10 [jmcneill 2008-12-18]
 	Updated audio/audacious-plugins to 1.5.1nb1 [jmcneill 2008-12-18]
+	Added multimedia/adobe-flash-plugin version 10.0.0.525 [jmcneill 2008-12-18]
