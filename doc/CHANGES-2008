@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3448 2008/12/18 19:20:14 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3449 2008/12/18 20:00:23 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5739,3 +5739,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/pavumeter version 0.9.3 [jmcneill 2008-12-18]
 	Updated audio/pulseaudio to 0.9.13nb1 [jmcneill 2008-12-18]
 	Updated emulators/fuse to 0.10.0.1 [adam 2008-12-18]
+	Updated www/nspluginwrapper to 1.1.10 [jmcneill 2008-12-18]
