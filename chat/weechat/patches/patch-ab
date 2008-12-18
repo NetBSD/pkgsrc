@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2008/12/18 20:27:47 ahoka Exp $
+
+--- src/gui/curses/gui-curses.h.orig	2008-12-18 21:17:01.000000000 +0100
++++ src/gui/curses/gui-curses.h
+@@ -21,6 +21,8 @@
+ #define __WEECHAT_GUI_CURSES_H 1
+ 
+ #ifdef HAVE_NCURSESW_CURSES_H
++#include <ncursesw/curses.h>
++#elif HAVE_NCURSESW_NCURSES_H
+ #include <ncursesw/ncurses.h>
+ #elif HAVE_NCURSES_H
+ #include <ncurses.h>
