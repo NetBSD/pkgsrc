@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3442 2008/12/18 17:30:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.3443 2008/12/18 17:31:01 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5718,3 +5718,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/xfce4 to 4.4.3nb1 [hira 2008-12-18]
 	Updated x11/xfce4-exo to 0.3.4nb3 [hira 2008-12-18]
 	Updated multimedia/vlc to 0.9.8anb1 [bjs 2008-12-18]
+	Updated multimedia/vlc08 to 0.8.6inb1 [bjs 2008-12-18]
