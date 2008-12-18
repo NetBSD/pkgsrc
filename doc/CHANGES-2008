@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3429 2008/12/18 01:02:09 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3430 2008/12/18 01:18:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5683,3 +5683,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/libunique version 1.0.4 [ahoka 2008-12-18]
 	Added multimedia/totem-browser-plugin version 2.24.3 [jmcneill 2008-12-17]
 	Updated devel/cpuflags to 1.26 [abs 2008-12-18]
+	Updated devel/p5-Tie-File to 0.96nb2 [he 2008-12-18]
+	Updated devel/p5-PAR-Dist to 0.40nb1 [he 2008-12-18]
+	Updated databases/p5-DBD-postgresql to 2.11.7 [he 2008-12-18]
+	Updated databases/p5-DBD-Oracle to 1.22 [he 2008-12-18]
