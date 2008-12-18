@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/12/18 14:21:43 hira Exp $
 ${PLIST.bsdlpr}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint4
 bin/xfprint4-manager
@@ -42,6 +42,7 @@ share/locale/bg/LC_MESSAGES/xfprint.mo
 share/locale/bn_IN/LC_MESSAGES/xfprint.mo
 share/locale/ca/LC_MESSAGES/xfprint.mo
 share/locale/cs/LC_MESSAGES/xfprint.mo
+share/locale/da/LC_MESSAGES/xfprint.mo
 share/locale/de/LC_MESSAGES/xfprint.mo
 share/locale/dz/LC_MESSAGES/xfprint.mo
 share/locale/el/LC_MESSAGES/xfprint.mo
@@ -59,6 +60,7 @@ share/locale/gu/LC_MESSAGES/xfprint.mo
 share/locale/he/LC_MESSAGES/xfprint.mo
 share/locale/hi/LC_MESSAGES/xfprint.mo
 share/locale/hu/LC_MESSAGES/xfprint.mo
+share/locale/id/LC_MESSAGES/xfprint.mo
 share/locale/it/LC_MESSAGES/xfprint.mo
 share/locale/ja/LC_MESSAGES/xfprint.mo
 share/locale/ka/LC_MESSAGES/xfprint.mo
@@ -76,11 +78,13 @@ share/locale/pt_BR/LC_MESSAGES/xfprint.mo
 share/locale/pt_PT/LC_MESSAGES/xfprint.mo
 share/locale/ro/LC_MESSAGES/xfprint.mo
 share/locale/ru/LC_MESSAGES/xfprint.mo
+share/locale/si/LC_MESSAGES/xfprint.mo
 share/locale/sk/LC_MESSAGES/xfprint.mo
 share/locale/sv/LC_MESSAGES/xfprint.mo
 share/locale/ta/LC_MESSAGES/xfprint.mo
 share/locale/tr/LC_MESSAGES/xfprint.mo
 share/locale/uk/LC_MESSAGES/xfprint.mo
+share/locale/ur/LC_MESSAGES/xfprint.mo
 share/locale/vi/LC_MESSAGES/xfprint.mo
 share/locale/zh_CN/LC_MESSAGES/xfprint.mo
 share/locale/zh_TW/LC_MESSAGES/xfprint.mo
