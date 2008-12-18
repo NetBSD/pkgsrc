@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/12/07 19:43:25 martti Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/12/18 13:46:51 hira Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -94,6 +94,7 @@ share/locale/bn_IN/LC_MESSAGES/libxfcegui4.mo
 share/locale/ca/LC_MESSAGES/libxfcegui4.mo
 share/locale/cs/LC_MESSAGES/libxfcegui4.mo
 share/locale/cy/LC_MESSAGES/libxfcegui4.mo
+share/locale/da/LC_MESSAGES/libxfcegui4.mo
 share/locale/de/LC_MESSAGES/libxfcegui4.mo
 share/locale/dz/LC_MESSAGES/libxfcegui4.mo
 share/locale/el/LC_MESSAGES/libxfcegui4.mo
@@ -110,10 +111,12 @@ share/locale/gu/LC_MESSAGES/libxfcegui4.mo
 share/locale/he/LC_MESSAGES/libxfcegui4.mo
 share/locale/hu/LC_MESSAGES/libxfcegui4.mo
 share/locale/hy/LC_MESSAGES/libxfcegui4.mo
+share/locale/id/LC_MESSAGES/libxfcegui4.mo
 share/locale/it/LC_MESSAGES/libxfcegui4.mo
 share/locale/ja/LC_MESSAGES/libxfcegui4.mo
 share/locale/ka/LC_MESSAGES/libxfcegui4.mo
 share/locale/ko/LC_MESSAGES/libxfcegui4.mo
+share/locale/ku/LC_MESSAGES/libxfcegui4.mo
 share/locale/lt/LC_MESSAGES/libxfcegui4.mo
 share/locale/lv/LC_MESSAGES/libxfcegui4.mo
 share/locale/mk/LC_MESSAGES/libxfcegui4.mo
@@ -126,6 +129,7 @@ share/locale/pt_BR/LC_MESSAGES/libxfcegui4.mo
 share/locale/pt_PT/LC_MESSAGES/libxfcegui4.mo
 share/locale/ro/LC_MESSAGES/libxfcegui4.mo
 share/locale/ru/LC_MESSAGES/libxfcegui4.mo
+share/locale/si/LC_MESSAGES/libxfcegui4.mo
 share/locale/sk/LC_MESSAGES/libxfcegui4.mo
 share/locale/sq/LC_MESSAGES/libxfcegui4.mo
 share/locale/sv/LC_MESSAGES/libxfcegui4.mo
@@ -133,6 +137,7 @@ share/locale/ta/LC_MESSAGES/libxfcegui4.mo
 share/locale/th/LC_MESSAGES/libxfcegui4.mo
 share/locale/tr/LC_MESSAGES/libxfcegui4.mo
 share/locale/uk/LC_MESSAGES/libxfcegui4.mo
+share/locale/ur/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_CN/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_TW/LC_MESSAGES/libxfcegui4.mo
 @dirrm share/doc/libxfcegui4
