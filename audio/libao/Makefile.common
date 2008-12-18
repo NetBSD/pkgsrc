@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2008/11/02 13:22:12 obache Exp $
+# $NetBSD: Makefile.common,v 1.31 2008/12/18 16:36:11 jmcneill Exp $
 # used by audio/libao-arts/Makefile
 # used by audio/libao-esound/Makefile
 # used by audio/libao-macosx/Makefile
@@ -32,7 +32,7 @@ CONFIGURE_ARGS+=	--disable-alsa09
 CONFIGURE_ARGS+=	--disable-arts
 CONFIGURE_ARGS+=	--disable-esd
 CONFIGURE_ARGS+=	--disable-nas
-CONFIGURE_ARGS+=	--disable-polyp
+CONFIGURE_ARGS+=	--disable-pulse
 CONFIGURE_ARGS+=	ENABLE_AIX_AUDIO=no
 CONFIGURE_ARGS+=	ENABLE_IRIX=no
 CONFIGURE_ARGS+=	ENABLE_OSS=no
