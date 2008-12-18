@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.3 2008/12/18 19:59:31 jmcneill Exp $
+
+--- src/utils.c.orig	2008-12-06 15:16:38.000000000 -0500
++++ src/utils.c
+@@ -19,6 +19,7 @@
+  */
+ 
+ #define _GNU_SOURCE 1
++#define _NETBSD_SOURCE 1
+ #include "sysdeps.h"
+ 
+ #include <stdio.h>
