@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/12/18 13:49:19 hira Exp $
+# $NetBSD: Makefile,v 1.32 2008/12/18 13:56:38 hira Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -13,8 +13,8 @@ COMMENT=	Xfce desktop background manager
 PKG_SYSCONFSUBDIR=	xdg/xfce4/desktop
 EGDIR=			${XFCE4_EGBASE}/desktop
 CONF_FILES=		${EGDIR:Q}/menu.xml ${PKG_SYSCONFDIR:Q}/menu.xml
-.for l in ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR ro ru sk sv \
-	uk vi zh_TW
+.for l in ca cs da de el es et eu fi fr he hu ja ko nl pl pt_BR pt_PT ro ru sk \
+	sv uk vi zh_TW
 CONF_FILES+=		${EGDIR:Q}/menu.xml.${l:Q} \
 			${PKG_SYSCONFDIR:Q}/menu.xml.${l:Q}
 .endfor
