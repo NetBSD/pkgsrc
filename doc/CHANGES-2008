@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3438 2008/12/18 16:37:45 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3439 2008/12/18 16:38:57 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5694,3 +5694,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/gst-plugins0.10-pulse version 0.10.11 [jmcneill 2008-12-18]
 	Updated multimedia/x264-devel to 20081217 [bjs 2008-12-18]
 	Updated multimedia/ffmpeg to 20080727nb6 [bjs 2008-12-18]
+	Added audio/libao-pulse version 0.8.8 [jmcneill 2008-12-18]
