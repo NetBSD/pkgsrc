@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2008/10/19 19:17:58 he Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/18 23:22:21 he Exp $
 #
 
-DISTNAME=	Perl-Tidy-20070508
+DISTNAME=	Perl-Tidy-20071205
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5pt
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=perltidy/}
 
-MAINTAINER=	adam@migus.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perltidy.sourceforge.net/
+#HOMEPAGE=	http://search.cpan.org/dist/Perl-Tidy/
 COMMENT=	Parses and beautifies perl source
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
