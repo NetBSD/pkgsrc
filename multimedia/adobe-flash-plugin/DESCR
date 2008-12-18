@@ -1,0 +1,10 @@
+Netscape plugin for Adobe Flash player.  This package contains
+a plugin that enables Netscape to render the Flash format.
+
+The nspluginwrapper option (enabled by default) permits the use of
+the the Linux x86 flash player in Firefox browsers on other x86
+systems.
+
+Systems tested with nspluginwrapper:
+    - NetBSD 5.0			- works
+    - firefox 3.0.x			- works
