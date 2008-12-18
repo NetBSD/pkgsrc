@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3445 2008/12/18 17:37:59 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.3446 2008/12/18 17:58:13 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5734,3 +5734,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/vice to 1.22nb5 [bjs 2008-12-18]
 	Updated mbone/vic-devel to 2.8.1.4.0beta.4337nb1 [bjs 2008-12-18]
 	Updated multimedia/gnash to 0.8.3nb5 [bjs 2008-12-18]
+	Added audio/paprefs version 0.9.7 [jmcneill 2008-12-18]
+	Added audio/pavucontrol version 0.9.7 [jmcneill 2008-12-18]
+	Added audio/pavumeter version 0.9.3 [jmcneill 2008-12-18]
