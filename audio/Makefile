@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.391 2008/12/18 17:45:16 jmcneill Exp $
+# $NetBSD: Makefile,v 1.392 2008/12/18 17:50:56 jmcneill Exp $
 #
 
 COMMENT=	Audio tools
@@ -263,6 +263,7 @@ SUBDIR+=	p5-MPEG-Audio-Frame
 SUBDIR+=	p5-MusicBrainz-Client
 SUBDIR+=	p5-MusicBrainz-Queries
 SUBDIR+=	paprefs
+SUBDIR+=	pavucontrol
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
 SUBDIR+=	pulseaudio
