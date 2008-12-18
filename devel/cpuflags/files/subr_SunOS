@@ -1,4 +1,4 @@
-# $NetBSD: subr_SunOS,v 1.2 2008/12/10 23:27:17 abs Exp $
+# $NetBSD: subr_SunOS,v 1.3 2008/12/18 01:01:33 abs Exp $
 
 AWK=nawk
 SED=sed
@@ -27,7 +27,7 @@ determine_arch()
 	sun4u )			ARCH='-mcpu=v9' ;;
 	i86pc )
 	    include subr_x86	# this provides map_x86_brand_string()
-	    ARCH=$(map_x86_brand_string "$cpu_brand")
+	    ARCH=`map_x86_brand_string "$cpu_brand"`
 	    if [ -z "$ARCH" ] ; then
 		case "$hw_psrinfo" in
 		    *)
