@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/11 20:15:49 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/18 00:40:42 ahoka Exp $
 #
 
 DISTNAME=	midori-0.1.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -15,6 +16,7 @@ USE_LIBTOOL=	yes
 USE_DIRS+=	xdg-1.4
 USE_TOOLS+=	gmake intltool msgfmt pkg-config
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 REPLACE_PYTHON=		waf wscript po/wscript_build katze/wscript_build
@@ -29,6 +31,7 @@ REPLACE_PYTHON+=	midori/wscript_build
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
