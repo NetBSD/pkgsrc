@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/07 09:13:58 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2008/12/18 17:28:16 joerg Exp $
 
 DISTNAME=	mailwrapper-19990412
 PKGREVISION=	4
@@ -8,10 +8,11 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Wrapper to support arbitrary Mail Transport Agents
 
-NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_BSD_MAKEFILE=	yes
 
 WRKSRC=			${WRKDIR}/mailwrapper
-MANCOMPRESSED_IF_MANZ=	yes
 
 EGDIR=			${PREFIX}/share/examples/mailwrapper
 
@@ -23,7 +24,9 @@ MAILWRAPPEES=	/usr/bin/mailq						\
 		/usr/sbin/sendmail	/usr/lib/sendmail
 FILES_SUBST+=	MAILWRAPPEES=${MAILWRAPPEES:Q}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 \
+			${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin \
+			share/examples/mailwrapper
 
 do-configure:
 	cd ${WRKSRC};							\
@@ -34,7 +37,6 @@ do-configure:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${EGDIR}/mailer.conf.sendmail
+	${INSTALL_DATA} ${WRKSRC}/mailer.conf ${DESTDIR}${EGDIR}/mailer.conf.sendmail
 
 .include "../../mk/bsd.pkg.mk"
