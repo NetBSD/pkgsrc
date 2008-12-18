@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/12/07 19:43:26 martti Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/12/18 13:49:19 hira Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -76,6 +76,7 @@ share/locale/bg/LC_MESSAGES/xfdesktop.mo
 share/locale/bn_IN/LC_MESSAGES/xfdesktop.mo
 share/locale/ca/LC_MESSAGES/xfdesktop.mo
 share/locale/cs/LC_MESSAGES/xfdesktop.mo
+share/locale/da/LC_MESSAGES/xfdesktop.mo
 share/locale/de/LC_MESSAGES/xfdesktop.mo
 share/locale/dz/LC_MESSAGES/xfdesktop.mo
 share/locale/el/LC_MESSAGES/xfdesktop.mo
@@ -94,6 +95,7 @@ share/locale/he/LC_MESSAGES/xfdesktop.mo
 share/locale/hi/LC_MESSAGES/xfdesktop.mo
 share/locale/hu/LC_MESSAGES/xfdesktop.mo
 share/locale/hy/LC_MESSAGES/xfdesktop.mo
+share/locale/id/LC_MESSAGES/xfdesktop.mo
 share/locale/it/LC_MESSAGES/xfdesktop.mo
 share/locale/ja/LC_MESSAGES/xfdesktop.mo
 share/locale/ka/LC_MESSAGES/xfdesktop.mo
@@ -111,11 +113,13 @@ share/locale/pt_BR/LC_MESSAGES/xfdesktop.mo
 share/locale/pt_PT/LC_MESSAGES/xfdesktop.mo
 share/locale/ro/LC_MESSAGES/xfdesktop.mo
 share/locale/ru/LC_MESSAGES/xfdesktop.mo
+share/locale/si/LC_MESSAGES/xfdesktop.mo
 share/locale/sk/LC_MESSAGES/xfdesktop.mo
 share/locale/sv/LC_MESSAGES/xfdesktop.mo
 share/locale/ta/LC_MESSAGES/xfdesktop.mo
 share/locale/tr/LC_MESSAGES/xfdesktop.mo
 share/locale/uk/LC_MESSAGES/xfdesktop.mo
+share/locale/ur/LC_MESSAGES/xfdesktop.mo
 share/locale/vi/LC_MESSAGES/xfdesktop.mo
 share/locale/zh_CN/LC_MESSAGES/xfdesktop.mo
 share/locale/zh_TW/LC_MESSAGES/xfdesktop.mo
