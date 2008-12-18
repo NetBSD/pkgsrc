@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/12/18 13:49:19 hira Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/12/18 13:56:38 hira Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -30,6 +30,7 @@ share/examples/xfce4/desktop/menu.xml.nl
 share/examples/xfce4/desktop/menu.xml.pa
 share/examples/xfce4/desktop/menu.xml.pl
 share/examples/xfce4/desktop/menu.xml.pt_BR
+share/examples/xfce4/desktop/menu.xml.pt_PT
 share/examples/xfce4/desktop/menu.xml.ro
 share/examples/xfce4/desktop/menu.xml.ru
 share/examples/xfce4/desktop/menu.xml.sk
@@ -113,7 +114,6 @@ share/locale/pt_BR/LC_MESSAGES/xfdesktop.mo
 share/locale/pt_PT/LC_MESSAGES/xfdesktop.mo
 share/locale/ro/LC_MESSAGES/xfdesktop.mo
 share/locale/ru/LC_MESSAGES/xfdesktop.mo
-share/locale/si/LC_MESSAGES/xfdesktop.mo
 share/locale/sk/LC_MESSAGES/xfdesktop.mo
 share/locale/sv/LC_MESSAGES/xfdesktop.mo
 share/locale/ta/LC_MESSAGES/xfdesktop.mo
