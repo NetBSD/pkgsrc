@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3433 2008/12/18 14:44:31 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3434 2008/12/18 15:56:51 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5690,3 +5690,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/cgoban-java to 3.3.23 [roland 2008-12-18]
 	Updated graphics/lib3ds to 1.2.0nb6 [reinoud 2008-12-18]
 	Added audio/pulseaudio version 0.9.13 [jmcneill 2008-12-18]
+	Updated gnome-settings-daemon to 2.24.1nb1 [jmcneill 2008-12-18]
