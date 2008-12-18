@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.3 2008/12/18 15:21:54 joerg Exp $
+
+--- Makefile.orig	2008-12-18 16:18:13.000000000 +0100
++++ Makefile
+@@ -19,11 +19,6 @@ MAN			 = spegla.1
+ FILES		 = spegla.sh spegla.conf
+ FILESDIR	 = ${PREFIX}/share/examples/spegla
+ 
+-filesinstall:: ${PREFIX}/share/examples/spegla
+-
+-${PREFIX}/share/examples/spegla: 
+-	mkdir -p ${PREFIX}/share/examples/spegla
+-
+ #WARNS		 = 2
+ CFLAGS		+= -Wall 
+ LDADD		+= -lcompat
