@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/12/18 16:38:08 hira Exp $
+
+--- exo-helper/helpers/Makefile.in.orig	2008-11-29 17:14:28.000000000 +0900
++++ exo-helper/helpers/Makefile.in	2008-11-29 17:15:31.000000000 +0900
+@@ -276,7 +276,7 @@
+ target_vendor = @target_vendor@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-defaultsdir = $(sysconfdir)/xdg/xfce4
++defaultsdir = $(datadir)/examples/xfce4
+ defaults_DATA = helpers.rc
+ desktopdir = $(datadir)/xfce4/helpers
+ desktop_in_in_files = \
