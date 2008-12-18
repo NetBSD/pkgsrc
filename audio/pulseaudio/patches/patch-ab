@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+
+--- src/daemon/main.c.orig	2008-10-03 15:16:52.000000000 -0400
++++ src/daemon/main.c
+@@ -302,7 +302,9 @@ static void set_all_rlimits(const pa_dae
+ #ifdef RLIMIT_MEMLOCK
+     set_one_rlimit(&conf->rlimit_memlock, RLIMIT_MEMLOCK, "RLIMIT_MEMLOCK");
+ #endif
++#ifdef RLIMIT_AS
+     set_one_rlimit(&conf->rlimit_as, RLIMIT_AS, "RLIMIT_AS");
++#endif
+ #ifdef RLIMIT_LOCKS
+     set_one_rlimit(&conf->rlimit_locks, RLIMIT_LOCKS, "RLIMIT_LOCKS");
+ #endif
