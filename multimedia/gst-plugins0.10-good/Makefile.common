@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.15 2008/10/30 14:33:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2008/12/18 16:09:09 jmcneill Exp $
 #
 # used by audio/gst-plugins0.10-esound/Makefile
 # used by audio/gst-plugins0.10-flac/Makefile
 # used by audio/gst-plugins0.10-oss/Makefile
+# used by audio/gst-plugins0.10-pulse/Makefile
 # used by audio/gst-plugins0.10-speex/Makefile
 # used by audio/gst-plugins0.10-wavpack/Makefile
 # used by graphics/gst-plugins0.10-cairo/Makefile
