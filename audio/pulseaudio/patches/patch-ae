@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+
+--- src/pulsecore/socket-util.c.orig	2008-12-18 00:53:11.000000000 -0500
++++ src/pulsecore/socket-util.c
+@@ -202,9 +202,11 @@ void pa_make_udp_socket_low_delay(int fd
+ }
+ 
+ int pa_socket_set_rcvbuf(int fd, size_t l) {
++    int bufsz = (int)l;
++
+     pa_assert(fd >= 0);
+ 
+-    if (setsockopt(fd, SOL_SOCKET, SO_RCVBUF, (void*)&l, sizeof(l)) < 0) {
++    if (setsockopt(fd, SOL_SOCKET, SO_RCVBUF, (void*)&bufsz, sizeof(bufsz)) < 0) {
+         pa_log_warn("SO_RCVBUF: %s", pa_cstrerror(errno));
+         return -1;
+     }
+@@ -213,9 +215,11 @@ int pa_socket_set_rcvbuf(int fd, size_t 
+ }
+ 
+ int pa_socket_set_sndbuf(int fd, size_t l) {
++    int bufsz = (int)l;
++
+     pa_assert(fd >= 0);
+ 
+-    if (setsockopt(fd, SOL_SOCKET, SO_SNDBUF, (void*)&l, sizeof(l)) < 0) {
++    if (setsockopt(fd, SOL_SOCKET, SO_SNDBUF, (void*)&bufsz, sizeof(bufsz)) < 0) {
+         pa_log("SO_SNDBUF: %s", pa_cstrerror(errno));
+         return -1;
+     }
