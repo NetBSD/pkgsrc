@@ -1,0 +1,38 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+
+--- src/Makefile.in.orig	2008-10-05 21:09:32.000000000 -0400
++++ src/Makefile.in
+@@ -2296,7 +2296,7 @@ pulseincludedir = $(includedir)/pulse
+ pulsecoreincludedir = $(includedir)/pulsecore
+ pulseconfdir = $(sysconfdir)/pulse
+ pulselibexecdir = $(libexecdir)/pulse
+-xdgautostartdir = $(sysconfdir)/xdg/autostart
++xdgautostartdir = $(PREFIX)/share/gnome/autostart
+ 
+ ###################################
+ #            Defines              #
+@@ -3091,7 +3091,7 @@ module_x11_xsmp_la_LIBADD = $(AM_LIBADD)
+ 
+ # OSS
+ liboss_util_la_SOURCES = modules/oss-util.c modules/oss-util.h
+-liboss_util_la_LDFLAGS = -avoid-version
++liboss_util_la_LDFLAGS = -avoid-version $(LIBOSSAUDIO)
+ liboss_util_la_LIBADD = libpulsecore.la
+ module_oss_la_SOURCES = modules/module-oss.c
+ module_oss_la_LDFLAGS = -module -avoid-version
+@@ -7776,12 +7776,12 @@ uninstall-policyDATA:
+ 	done
+ install-pulseconfDATA: $(pulseconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(pulseconfdir)" || $(MKDIR_P) "$(DESTDIR)$(pulseconfdir)"
++	test -z "$(EGDIR)" || $(MKDIR_P) "$(DESTDIR)$(EGDIR)"
+ 	@list='$(pulseconf_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(pulseconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(pulseconfdir)/$$f'"; \
+-	  $(pulseconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(pulseconfdir)/$$f"; \
++	  echo " $(pulseconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(EGDIR)/$$f'"; \
++	  $(pulseconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(EGDIR)/$$f"; \
+ 	done
+ 
+ uninstall-pulseconfDATA:
