@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2008/12/18 12:02:34 obache Exp $
+
+Add NetBSD support.
+
+--- myconf.h.orig	2008-12-07 02:38:46.000000000 +0000
++++ myconf.h
+@@ -91,7 +91,7 @@
+ 
+ #endif
+ 
+-#if !defined(_SYS_LINUX_) && !defined(_SYS_FREEBSD_) && !defined(_SYS_MACOSX_)
++#if !defined(_SYS_LINUX_) && !defined(_SYS_FREEBSD_) && !defined(_SYS_MACOSX_) && !defined(_SYS_NETBSD_)
+ #error =======================================
+ #error Your platform is not supported.  Sorry.
+ #error =======================================
+@@ -209,7 +209,7 @@
+ #include <tcbdb.h>
+ #include <tcadb.h>
+ 
+-#if defined(_SYS_FREEBSD_) || defined(_SYS_MACOSX_)
++#if defined(_SYS_FREEBSD_) || defined(_SYS_MACOSX_) || defined(_SYS_NETBSD_)
+ #define TTUSEKQUEUE    1
+ #else
+ #include <sys/epoll.h>
