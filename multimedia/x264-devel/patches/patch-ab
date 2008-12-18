@@ -1,26 +1,20 @@
-$NetBSD: patch-ab,v 1.8 2008/07/10 13:40:40 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2008/12/18 16:19:07 bjs Exp $
 
---- Makefile.orig	2008-07-10 15:34:13.000000000 +0200
+--- Makefile.orig	2008-12-12 16:45:07.000000000 -0500
 +++ Makefile
-@@ -26,7 +26,7 @@ ASMSRC  = common/i386/dct-a.asm common/i
-           common/i386/mc-a2.asm common/i386/predict-a.asm \
-           common/i386/pixel-sse2.asm common/i386/quant-a.asm \
-           common/i386/deblock-a.asm
+@@ -40,9 +40,9 @@ endif
+ ifdef ARCH_X86
+ ASFLAGS += -Icommon/x86/
+ SRCS   += common/x86/mc-c.c common/x86/predict-c.c
 -OBJASM  = $(ASMSRC:%.asm=%.o)
 +OBJASM  = $(ASMSRC:%.asm=%.lo)
- ASFLAGS += -Icommon/i386/
+ $(OBJASM): common/x86/x86inc.asm common/x86/x86util.asm
+-checkasm: tools/checkasm-a.o
++checkasm: tools/checkasm-a.lo
  endif
  endif
-@@ -40,7 +40,7 @@ ASMSRC  = common/amd64/dct-a.asm common/
-           common/amd64/mc-a2.asm common/amd64/predict-a.asm \
-           common/amd64/pixel-sse2.asm common/amd64/quant-a.asm \
-           common/amd64/deblock-a.asm
--OBJASM  = $(ASMSRC:%.asm=%.o)
-+OBJASM  = $(ASMSRC:%.asm=%.lo)
- ASFLAGS += -Icommon/amd64
- endif
- endif
-@@ -51,20 +51,20 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
+ 
+@@ -52,44 +52,49 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
                common/ppc/quant.c common/ppc/deblock.c \
                common/ppc/predict.c
  SRCS += $(ALTIVECSRC)
@@ -40,11 +34,12 @@ $NetBSD: patch-ab,v 1.8 2008/07/10 13:40:40 joerg Exp $
  endif
  
 -OBJS = $(SRCS:%.c=%.o)
+-OBJCLI = $(SRCCLI:%.c=%.o)
 +OBJS = $(SRCS:%.c=%.lo)
- OBJCLI = $(SRCCLI:%.c=%.o)
++OBJCLI = $(SRCCLI:%.c=%.lo)
  DEP  = depend
  
-@@ -73,15 +73,17 @@ all: default
+ .PHONY: all default fprofiled clean distclean install uninstall dox test testclean
  
  default: $(DEP) x264$(EXE)
  
@@ -52,55 +47,59 @@ $NetBSD: patch-ab,v 1.8 2008/07/10 13:40:40 joerg Exp $
 -	ar rc libx264.a $(OBJS) $(OBJASM)
 -	ranlib libx264.a
 +%.lo: %.c
-+	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} -o $@ $<
++	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} ${PICFLAGS} -o $@ $<
 +
 +libx264.la: .depend $(OBJS) $(OBJASM)
-+	${LIBTOOL} --mode=link ${CC} -o libx264.la $(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -rpath ${PREFIX}/lib -version-info 0
++	${LIBTOOL} --mode=link \
++	${CC} -o libx264.la -rpath ${PREFIX}/lib -version-info 0 \
++	$(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  
  $(SONAME): .depend $(OBJS) $(OBJASM)
- 	$(CC) -shared -o $@ $(OBJS) $(OBJASM) -Wl,-soname,$(SONAME) $(LDFLAGS)
+ 	$(CC) -shared -o $@ $(OBJS) $(OBJASM) $(SOFLAGS) $(LDFLAGS)
  
 -x264$(EXE): $(OBJCLI) libx264.a 
 -	$(CC) -o $@ $+ $(LDFLAGS)
 +x264$(EXE): $(OBJCLI) libx264.la 
 +	${LIBTOOL} --mode=link $(CC) -o $@ $+ $(LDFLAGS)
  
- libx264gtk.a: muxers.o libx264.a
- 	$(MAKE) -C gtk
-@@ -89,10 +91,10 @@ libx264gtk.a: muxers.o libx264.a
- checkasm: tools/checkasm.o libx264.a
- 	$(CC) -o $@ $+ $(LDFLAGS)
+-checkasm: tools/checkasm.o libx264.a
+-	$(CC) -o $@ $+ $(LDFLAGS)
++checkasm: tools/checkasm.lo libx264.la
++	${LIBTOOL} --mode=link $(CC) -o $@ $+ $(LDFLAGS)
  
--common/amd64/*.o: common/amd64/amd64inc.asm
--common/i386/*.o: common/i386/i386inc.asm
 -%.o: %.asm
 -	$(AS) $(ASFLAGS) -o $@ $<
-+common/amd64/*.lo: common/amd64/amd64inc.asm
-+common/i386/*.lo: common/i386/i386inc.asm
 +%.lo: %.asm
-+	${LIBTOOL} --mode=compile --tag=ASM ./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=CC \
++		./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
  # delete local/anonymous symbols, so they don't show up in oprofile
- 	-@ strip -x $@
+-	-@ strip -x $@
++	-@ strip -x $(@:.lo=.o)
  
-@@ -150,15 +152,14 @@ distclean: clean
- 	$(MAKE) -C gtk distclean
+ .depend: config.mak
+ 	rm -f .depend
+@@ -144,21 +149,16 @@ distclean: clean
+ 	rm -f config.mak config.h x264.pc
+ 	rm -rf test/
  
- install: x264 $(SONAME)
--	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(includedir)
--	install -d $(DESTDIR)$(libdir) $(DESTDIR)$(libdir)/pkgconfig
-+	install -d $(DESTDIR)$(bindir)
-+	install -d $(DESTDIR)$(includedir)
-+	install -d $(DESTDIR)$(libdir)
-+	install -d $(DESTDIR)$(libdir)/pkgconfig
+-install: x264$(EXE) $(SONAME)
++install: x264$(EXE) libx264.la
+ 	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(includedir)
+ 	install -d $(DESTDIR)$(libdir) $(DESTDIR)$(libdir)/pkgconfig
  	install -m 644 x264.h $(DESTDIR)$(includedir)
 -	install -m 644 libx264.a $(DESTDIR)$(libdir)
-+	${LIBTOOL} --mode=install install -m 644 libx264.la $(DESTDIR)$(libdir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libx264.la $(DESTDIR)$(libdir)
  	install -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
--	install x264 $(DESTDIR)$(bindir)
+-	install x264$(EXE) $(DESTDIR)$(bindir)
 -	ranlib $(DESTDIR)$(libdir)/libx264.a
--	$(if $(SONAME), ln -sf $(SONAME) $(DESTDIR)$(libdir)/libx264.so)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} x264$(EXE) $(DESTDIR)$(bindir)
+ ifeq ($(SYS),MINGW)
+ 	$(if $(SONAME), install -m 755 $(SONAME) $(DESTDIR)$(bindir))
+-else
+-	$(if $(SONAME), ln -sf $(SONAME) $(DESTDIR)$(libdir)/libx264.$(SOSUFFIX))
 -	$(if $(SONAME), install -m 755 $(SONAME) $(DESTDIR)$(libdir))
-+	${LIBTOOL} --mode=install install x264 $(DESTDIR)$(bindir)
+ endif
+-	$(if $(IMPLIBNAME), install -m 644 $(IMPLIBNAME) $(DESTDIR)$(libdir))
  
- install-gtk: libx264gtk.a
- 	$(MAKE) -C gtk install
+ uninstall:
+ 	rm -f $(DESTDIR)$(includedir)/x264.h $(DESTDIR)$(libdir)/libx264.a

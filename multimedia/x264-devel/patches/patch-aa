@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.5 2008/04/09 18:33:37 tron Exp $
+$NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
 
---- configure.orig	2007-12-18 21:45:04.000000000 +0000
-+++ configure	2008-04-09 19:10:28.000000000 +0100
-@@ -193,6 +193,10 @@
+--- configure.orig	2008-12-12 16:45:07.000000000 -0500
++++ configure
+@@ -130,7 +130,7 @@ for opt do
+             LDFLAGS="$LDFLAGS ${opt#--extra-ldflags=}"
+             ;;
+         --enable-pthread)
+-            pthread="auto" # can't skip detection, since it differs by OS
++            pthread="yes"
+             ;;
+         --disable-pthread)
+             pthread="no"
+@@ -150,7 +150,7 @@ for opt do
+             shared="yes"
+             ;;
+         --enable-visualize)
+-            LDFLAGS="$LDFLAGS -L/usr/X11R6/lib -lX11"
++            LDFLAGS="$LDFLAGS -lX11"
+             CFLAGS="$CFLAGS -DVISUALIZE=1"
+             vis="yes"
+             ;;
+@@ -192,6 +192,10 @@ case $host_os in
      SYS="FREEBSD"
      LDFLAGS="$LDFLAGS -lm"
      ;;
@@ -13,23 +31,16 @@ $NetBSD: patch-aa,v 1.5 2008/04/09 18:33:37 tron Exp $
    kfreebsd*-gnu)
      SYS="FREEBSD"
      CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
-@@ -245,14 +249,12 @@
-       ASFLAGS="$ASFLAGS -f macho -DPREFIX"
-     elif [ "$SYS" = CYGWIN -o "$SYS" = MINGW ]; then
-       ASFLAGS="$ASFLAGS -f win32 -DPREFIX"
--    elif [ "$SYS" = NETBSD ]; then
--      ASFLAGS="$ASFLAGS -f aoutb"
-     else
+@@ -247,7 +251,7 @@ case $host_cpu in
        ASFLAGS="$ASFLAGS -f elf"
      fi
-     as_check || AS="nasm"
      ;;
 -  x86_64)
 +  x86_64|amd64)
      ARCH="X86_64"
-     AS="yasm"
      if [ "$SYS" = MACOSX ];then
-@@ -264,11 +266,11 @@
+       ASFLAGS="-f macho64 -m amd64 -DPIC -DPREFIX"
+@@ -258,11 +262,11 @@ case $host_cpu in
      fi
      ;;
    powerpc|powerpc64)
@@ -43,3 +54,31 @@ $NetBSD: patch-aa,v 1.5 2008/04/09 18:33:37 tron Exp $
        ALTIVECFLAGS="$ALTIVECFLAGS -maltivec -mabi=altivec"
      fi
      ;;
+@@ -322,7 +326,7 @@ grep -q BIGE conftest.o && CFLAGS="$CFLA
+ 
+ # autodetect options that weren't forced nor disabled
+ 
+-libpthread=""
++libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
+ if test "$pthread" = "auto" ; then
+     pthread="no"
+     case $SYS in
+@@ -348,7 +352,7 @@ if test "$pthread" = "auto" ; then
+     esac
+ fi
+ if test "$pthread" = "yes" ; then
+-    CFLAGS="$CFLAGS -DHAVE_PTHREAD"
++    CFLAGS="$CFLAGS -DHAVE_PTHREAD $PTHREAD_CFLAGS"
+     LDFLAGS="$LDFLAGS $libpthread"
+ fi
+ 
+@@ -378,7 +382,8 @@ if [ "$avis_input" = "yes" ] ; then
+ fi
+ 
+ if [ "$pic" = "yes" ] ; then
+-    CFLAGS="$CFLAGS -fPIC"
++    CFLAGS="$CFLAGS"
++    PICFLAG="-prefer-pic"
+     ASFLAGS="$ASFLAGS -DPIC"
+     # resolve textrels in the x86 asm
+     cc_check stdio.h -Wl,-Bsymbolic && LDFLAGS="$LDFLAGS -Wl,-Bsymbolic"
