@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/07/14 12:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2008/12/18 00:29:19 roy Exp $
 #
 
 DISTNAME=	icu4c-3_6-src
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.icu-project.org/
 COMMENT=	Robust and full-featured Unicode services
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/${PKGBASE}/source
 USE_TOOLS+=		gmake
