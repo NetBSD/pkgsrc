@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 17:55:40 jmcneill Exp $
+bin/pavumeter
+share/applications/pavumeter-record.desktop
+share/applications/pavumeter.desktop
+@comment in xdg-dirs: @dirrm share/applications
