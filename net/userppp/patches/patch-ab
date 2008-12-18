@@ -1,17 +1,22 @@
-$NetBSD: patch-ab,v 1.5 2007/08/25 09:00:46 obache Exp $
+$NetBSD: patch-ab,v 1.6 2008/12/18 13:55:24 joerg Exp $
 
---- ppp/Makefile.orig	2000-11-07 05:45:44.000000000 +0000
+--- ppp/Makefile.orig	2000-11-07 06:45:44.000000000 +0100
 +++ ppp/Makefile
-@@ -29,7 +29,7 @@ BINMODE=554
- BINMODE=4554
- BINOWN=	root
+@@ -23,13 +23,6 @@ LDADD+= -lcrypto -lutil -lz
  .endif
+ .endif
+ DPADD+=	${LIBCRYPT} ${LIBMD} ${LIBUTIL} ${LIBZ}
+-.if defined(NOSUID) || defined(PPP_NOSUID)
+-BINMODE=554
+-.else
+-BINMODE=4554
+-BINOWN=	root
+-.endif
 -BINGRP=	network
-+BINGRP=	${USERPPP_GROUP}
  OS!=	uname -s
  .if ${OS} == FreeBSD
  MAN8=	ppp.8
-@@ -90,7 +90,7 @@ CFLAGS+=-DNORADIUS
+@@ -90,7 +83,7 @@ CFLAGS+=-DNORADIUS
  .else
  .if !defined(RELEASE_CRUNCH)
  SRCS+=	radius.c
@@ -20,7 +25,7 @@ $NetBSD: patch-ab,v 1.5 2007/08/25 09:00:46 obache Exp $
  DPADD+= ${LIBRADIUS}
  .endif
  .endif
-@@ -121,9 +121,8 @@ chap_ms.o mppe.o id.o nat_cmd.o radius.o
+@@ -121,9 +114,8 @@ chap_ms.o mppe.o id.o nat_cmd.o radius.o
  
  # To cope with uucplock changes:
  # Note, uucplock.c and libutil.h do not really belong here !
