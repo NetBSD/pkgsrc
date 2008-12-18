@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3435 2008/12/18 16:10:04 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3436 2008/12/18 16:19:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5692,3 +5692,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/pulseaudio version 0.9.13 [jmcneill 2008-12-18]
 	Updated gnome-settings-daemon to 2.24.1nb1 [jmcneill 2008-12-18]
 	Added audio/gst-plugins0.10-pulse version 0.10.11 [jmcneill 2008-12-18]
+	Updated multimedia/x264-devel to 20081217 [bjs 2008-12-18]
