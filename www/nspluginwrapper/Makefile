@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/11/18 08:33:51 abs Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/18 19:59:31 jmcneill Exp $
 #
 
-DISTNAME=       nspluginwrapper-1.0.0
-PKGREVISION=	1
+DISTNAME=       nspluginwrapper-1.1.10
 CATEGORIES=     www
 MASTER_SITES=   http://gwenole.beauchesne.info/projects/nspluginwrapper/files/
 EXTRACT_SUFX=   .tar.bz2
@@ -38,6 +37,8 @@ post-install:
 	${INSTALL_LIB} ${PLUGIN_SRCDIR}/npviewer.bin ${PLUGIN_INSTDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
