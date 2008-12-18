@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/18 17:50:30 jmcneill Exp $
+
+SHA1 (pavucontrol-0.9.7.tar.gz) = 2ab2ee042647a4e32bbd2a5908dcb8315ddae751
+RMD160 (pavucontrol-0.9.7.tar.gz) = 380e2c0dd39d17269fe0b50e79adc55d5da903fc
+Size (pavucontrol-0.9.7.tar.gz) = 201938 bytes
