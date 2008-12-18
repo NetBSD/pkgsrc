@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/18 17:55:40 jmcneill Exp $
+
+SHA1 (pavumeter-0.9.3.tar.gz) = fc2f12405fbb15cced43de36c5a519043ea04050
+RMD160 (pavumeter-0.9.3.tar.gz) = cb76748b6192dd7641e50fec7d2b8c379df0328f
+Size (pavumeter-0.9.3.tar.gz) = 89241 bytes
