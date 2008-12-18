@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2007/08/25 09:00:45 obache Exp $
+$NetBSD: patch-aa,v 1.4 2008/12/18 13:55:24 joerg Exp $
 
---- Makefile.orig	Tue Nov  7 05:45:45 2000
-+++ Makefile	Tue Nov  7 16:42:17 2000
-@@ -1,8 +1,9 @@
+--- Makefile.orig	2000-11-07 06:45:45.000000000 +0100
++++ Makefile
+@@ -1,12 +1,13 @@
  SUBDIR+=libhack ppp pppctl
 -EXAMPLES=/usr/share/examples/ppp
-+EXAMPLES=${PREFIX}/share/examples/ppp
-+MYCONFDIR=${PKG_SYSCONFDIR}
++EXAMPLES=${DESTDIR}${PREFIX}/share/examples/ppp
++MYCONFDIR=${DESTDIR}${PKG_SYSCONFDIR}
  .include <bsd.subdir.mk>
  afterinstall:
 -	if [ ! -d /etc/ppp ]; then mkdir -p /etc/ppp; chmod 755 /etc/ppp; fi
@@ -14,3 +14,8 @@ $NetBSD: patch-aa,v 1.3 2007/08/25 09:00:45 obache Exp $
  	mkdir -p $(EXAMPLES)
  	for cfg in examples/ppp/*; \
  	do \
+ 	  head -1 $$cfg | grep -q '^#!' && mode=555 || mode=444; \
+-	  install -c -o bin -g bin -m $$mode $$cfg $(EXAMPLES); \
++	  ${BSD_INSTALL_DATA} -m $$mode $$cfg $(EXAMPLES); \
+ 	done
+ 	@echo "Please read the README.changes file."
