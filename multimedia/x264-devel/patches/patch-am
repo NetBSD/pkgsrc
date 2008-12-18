@@ -1,0 +1,19 @@
+$NetBSD: patch-am,v 1.1 2008/12/18 16:19:08 bjs Exp $
+
+--- common/x86/mc-a.asm.orig	2008-12-12 16:45:07.000000000 -0500
++++ common/x86/mc-a.asm
+@@ -512,12 +512,12 @@ AVG_CACHELINE_CHECK  8, 32, mmxext
+ AVG_CACHELINE_CHECK 12, 32, mmxext
+ AVG_CACHELINE_CHECK 16, 32, mmxext
+ AVG_CACHELINE_CHECK 20, 32, mmxext
+-AVG_CACHELINE_CHECK 16, 64, mmxext
+-AVG_CACHELINE_CHECK 20, 64, mmxext
+ %endif
+ 
+ AVG_CACHELINE_CHECK  8, 64, mmxext
+ AVG_CACHELINE_CHECK 12, 64, mmxext
++AVG_CACHELINE_CHECK 16, 64, mmxext
++AVG_CACHELINE_CHECK 20, 64, mmxext
+ AVG_CACHELINE_CHECK 16, 64, sse2
+ AVG_CACHELINE_CHECK 20, 64, sse2
+ 

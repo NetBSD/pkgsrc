@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2008/12/18 16:19:08 bjs Exp $
+
+--- common/display-x11.c.orig	2008-12-12 16:45:07.000000000 -0500
++++ common/display-x11.c
+@@ -22,6 +22,9 @@
+ #include <X11/Xutil.h>
+ #include <stdio.h>
+ #include <string.h>
++#ifdef HAVE_STDLIB_H
++#include <stdlib.h>
++#endif
+ 
+ #include "display.h"
+ 
