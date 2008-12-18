@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2008/12/03 00:45:49 bjs Exp $
+# $NetBSD: Makefile,v 1.388 2008/12/18 14:43:31 jmcneill Exp $
 #
 
 COMMENT=	Audio tools
@@ -262,6 +262,7 @@ SUBDIR+=	p5-MusicBrainz-Client
 SUBDIR+=	p5-MusicBrainz-Queries
 SUBDIR+=	portaudio
 SUBDIR+=	portaudio-devel
+SUBDIR+=	pulseaudio
 SUBDIR+=	py-ao
 SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
