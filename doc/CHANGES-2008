@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3443 2008/12/18 17:31:01 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.3444 2008/12/18 17:36:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5719,3 +5719,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xfce4-exo to 0.3.4nb3 [hira 2008-12-18]
 	Updated multimedia/vlc to 0.9.8anb1 [bjs 2008-12-18]
 	Updated multimedia/vlc08 to 0.8.6inb1 [bjs 2008-12-18]
+	Updated meta-pkgs/gstreamer0.10-plugins to 1.0nb1 [jmcneill 2008-12-18]
