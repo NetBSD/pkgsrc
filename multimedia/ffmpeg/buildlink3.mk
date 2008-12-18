@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2008/09/07 23:39:37 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2008/12/18 17:28:16 bjs Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 FFMPEG_BUILDLINK3_MK:=	${FFMPEG_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ffmpeg
 
 .if ${FFMPEG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=20080727
+BUILDLINK_ABI_DEPENDS.ffmpeg?=	ffmpeg>=20080727nb6
 BUILDLINK_PKGSRCDIR.ffmpeg?=	../../multimedia/ffmpeg
 
 pkgbase := ffmpeg
