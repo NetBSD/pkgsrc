@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/18 15:21:54 joerg Exp $
 bin/spegla
-share/examples/spegla/spegla.sh
+man/cat1/spegla.0
+man/man1/spegla.1
 share/examples/spegla/spegla.conf
+share/examples/spegla/spegla.sh
 @dirrm share/examples/spegla
