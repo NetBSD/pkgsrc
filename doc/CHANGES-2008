@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3426 2008/12/18 00:39:56 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3427 2008/12/18 00:48:12 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5681,3 +5681,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-bin to 2.0.0.19 [ghen 2008-12-17]
 	Updated www/py-django to 1.0.2 [joerg 2008-12-17]
 	Added x11/libunique version 1.0.4 [ahoka 2008-12-18]
+	Added multimedia/totem-browser-plugin version 2.24.3 [jmcneill 2008-12-17]
