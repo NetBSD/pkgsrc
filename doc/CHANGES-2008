@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3428 2008/12/18 00:57:35 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3429 2008/12/18 01:02:09 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5682,4 +5682,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/py-django to 1.0.2 [joerg 2008-12-17]
 	Added x11/libunique version 1.0.4 [ahoka 2008-12-18]
 	Added multimedia/totem-browser-plugin version 2.24.3 [jmcneill 2008-12-17]
-	Updated devel/cpuflags to 1.25 [abs 2008-12-18]
+	Updated devel/cpuflags to 1.26 [abs 2008-12-18]
