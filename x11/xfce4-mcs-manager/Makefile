@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/12/18 13:50:42 hira Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTNAME=	xfce-mcs-manager-${XFCE4_VERSION}
 PKGNAME=	xfce4-mcs-manager-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Xfce settings manager
 
