@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/18 17:44:48 jmcneill Exp $
+
+SHA1 (paprefs-0.9.7.tar.gz) = a7631c63c5e00e72c4bb73d0df28e4f5b03360b3
+RMD160 (paprefs-0.9.7.tar.gz) = 1dd8ecb4ead43d2a3d21f837ebf05d42f139989e
+Size (paprefs-0.9.7.tar.gz) = 188336 bytes
