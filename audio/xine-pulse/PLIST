@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 23:24:47 jmcneill Exp $
+lib/xine/plugins/1.24/xineplug_ao_out_pulseaudio.la
