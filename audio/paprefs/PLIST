@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 17:44:48 jmcneill Exp $
+bin/paprefs
+share/applications/paprefs.desktop
+share/locale/de/LC_MESSAGES/paprefs.mo
+share/locale/el/LC_MESSAGES/paprefs.mo
+share/locale/fr/LC_MESSAGES/paprefs.mo
+share/locale/hu/LC_MESSAGES/paprefs.mo
+share/locale/pl/LC_MESSAGES/paprefs.mo
+share/locale/pt_BR/LC_MESSAGES/paprefs.mo
+share/locale/sv/LC_MESSAGES/paprefs.mo
+share/locale/tr/LC_MESSAGES/paprefs.mo
+share/paprefs/paprefs.glade
+@dirrm share/paprefs
+@comment in xdg-dirs: @dirrm share/applications
