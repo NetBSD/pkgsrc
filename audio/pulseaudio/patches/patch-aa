@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/18 18:43:52 jmcneill Exp $
 
 --- src/utils/padsp.c.orig	2008-10-01 19:05:01.000000000 -0400
 +++ src/utils/padsp.c
@@ -38,7 +38,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
  
  #define LOAD_OPEN_FUNC() \
  do { \
-@@ -1452,7 +1466,8 @@ static int real_open(const char *filenam
+@@ -180,11 +194,16 @@ do { \
+     pthread_mutex_unlock(&func_mutex); \
+ } while(0)
+ 
++#ifdef __NetBSD__
++#define STAT_FUNC "__stat30"
++#else
++#define STAT_FUNC "stat"
++#endif
+ #define LOAD_STAT_FUNC() \
+ do { \
+     pthread_mutex_lock(&func_mutex); \
+     if (!_stat) \
+-        _stat = (int (*)(const char *, struct stat *)) dlsym_fn(RTLD_NEXT, "stat"); \
++        _stat = (int (*)(const char *, struct stat *)) dlsym_fn(RTLD_NEXT, STAT_FUNC); \
+     pthread_mutex_unlock(&func_mutex); \
+ } while(0)
+ 
+@@ -1452,7 +1471,8 @@ static int real_open(const char *filenam
          return _open(filename, flags, mode);
      }
  
@@ -48,7 +66,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
          r = dsp_open(flags, &_errno);
      else if (filename && mixer_cloak_enable() && strcmp(filename, "/dev/mixer") == 0)
          r = mixer_open(flags, &_errno);
-@@ -2313,19 +2328,27 @@ fail:
+@@ -2313,19 +2333,27 @@ fail:
  
  #ifdef sun
  int ioctl(int fd, int request, ...) {
@@ -76,7 +94,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
  
      if (!function_enter()) {
          LOAD_IOCTL_FUNC();
-@@ -2383,6 +2406,8 @@ int access(const char *pathname, int mod
+@@ -2383,6 +2411,8 @@ int access(const char *pathname, int mod
  
      if (!pathname ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -85,7 +103,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2412,6 +2437,8 @@ int stat(const char *pathname, struct st
+@@ -2412,6 +2442,8 @@ int stat(const char *pathname, struct st
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -94,7 +112,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2469,6 +2496,8 @@ int stat64(const char *pathname, struct 
+@@ -2469,6 +2501,8 @@ int stat64(const char *pathname, struct 
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -103,7 +121,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2514,6 +2543,8 @@ int open64(const char *filename, int fla
+@@ -2514,6 +2548,8 @@ int open64(const char *filename, int fla
  
      if (!filename ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -112,7 +130,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2534,6 +2565,8 @@ int __xstat(int ver, const char *pathnam
+@@ -2534,6 +2570,8 @@ int __xstat(int ver, const char *pathnam
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -121,7 +139,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2557,6 +2590,8 @@ int __xstat64(int ver, const char *pathn
+@@ -2557,6 +2595,8 @@ int __xstat64(int ver, const char *pathn
      if (!pathname ||
          !buf ||
          ( strcmp(pathname, "/dev/dsp") != 0 &&
@@ -130,7 +148,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(pathname, "/dev/adsp") != 0 &&
            strcmp(pathname, "/dev/sndstat") != 0 &&
            strcmp(pathname, "/dev/mixer") != 0 )) {
-@@ -2586,6 +2621,8 @@ FILE* fopen(const char *filename, const 
+@@ -2586,6 +2626,8 @@ FILE* fopen(const char *filename, const 
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
@@ -139,7 +157,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
            strcmp(filename, "/dev/adsp") != 0 &&
            strcmp(filename, "/dev/sndstat") != 0 &&
            strcmp(filename, "/dev/mixer") != 0 )) {
-@@ -2629,6 +2666,8 @@ FILE *fopen64(const char *filename, cons
+@@ -2629,6 +2671,8 @@ FILE *fopen64(const char *filename, cons
      if (!filename ||
          !mode ||
          ( strcmp(filename, "/dev/dsp") != 0 &&
