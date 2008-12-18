@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/08/25 09:00:45 obache Exp $
+# $NetBSD: Makefile,v 1.24 2008/12/18 13:55:24 joerg Exp $
 
 DISTNAME=		ppp-001107.src
 PKGNAME=		userppp-001107
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.NetBSD.org/~ad/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.awfulhak.org/~brian/
 COMMENT=		User-PPP package as found in FreeBSD and OpenBSD
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-*-*
 
@@ -29,13 +31,17 @@ SUBST_SED.cfgdir+=	-e "s,/usr/share,${PREFIX}/share,"
 
 .include "../../mk/bsd.prefs.mk"
 
+SPECIAL_PERMS+=	sbin/ppp ${REAL_ROOT_USER} ${USERPPP_GROUP} 04554
+
 USERPPP_GROUP?=	network
-MAKE_ENV+=	USERPPP_GROUP=${USERPPP_GROUP:Q}
+MAKE_ENV+=	USERPPP_GROUP=${USERPPP_GROUP:Q} BINOWN=${ROOT_USER}
 
 PKG_GROUPS=	${USERPPP_GROUP}
 
 PKG_GROUPS_VARS+=	USERPPP_GROUP
 BUILD_DEFS+=		USERPPP_GROUP
+
+USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 INSTALLATION_DIRS+=	share/examples/ppp
