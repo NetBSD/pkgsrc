@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3431 2008/12/18 09:28:01 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.3432 2008/12/18 13:16:44 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5688,3 +5688,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-DBD-postgresql to 2.11.7 [he 2008-12-18]
 	Updated databases/p5-DBD-Oracle to 1.22 [he 2008-12-18]
 	Updated games/cgoban-java to 3.3.23 [roland 2008-12-18]
+	Updated graphics/lib3ds to 1.2.0nb6 [reinoud 2008-12-18]
+
