@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/02/26 08:05:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/12/19 23:16:22 tnn Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -52,6 +52,7 @@ include/gsl/gsl_heapsort.h
 include/gsl/gsl_histogram.h
 include/gsl/gsl_histogram2d.h
 include/gsl/gsl_ieee_utils.h
+include/gsl/gsl_inline.h
 include/gsl/gsl_integration.h
 include/gsl/gsl_interp.h
 include/gsl/gsl_linalg.h
@@ -74,6 +75,7 @@ include/gsl/gsl_matrix_ulong.h
 include/gsl/gsl_matrix_ushort.h
 include/gsl/gsl_message.h
 include/gsl/gsl_min.h
+include/gsl/gsl_minmax.h
 include/gsl/gsl_mode.h
 include/gsl/gsl_monte.h
 include/gsl/gsl_monte_miser.h
