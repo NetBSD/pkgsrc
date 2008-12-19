@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7743 2008/12/19 19:49:27 adam Exp $
+$NetBSD: TODO,v 1.7744 2008/12/19 22:51:13 markd Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ Suggested package updates
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
-	o akonadi-1.0.80
 	o album-4.01
 	o alee-ttf-11.2
 	o aliados-0.2.0
