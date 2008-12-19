@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2008/12/17 15:44:10 darcy Exp $
+$NetBSD: patch-aa,v 1.9 2008/12/19 12:12:53 darcy Exp $
 
 --- Makefile.orig	2008-11-17 16:12:39.000000000 -0500
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.8 2008/12/17 15:44:10 darcy Exp $
  PACKAGE_NAME =	generate-${VERSION_MAJOR}.${VERSION_MINOR}
  
 -CFLAGS =	-O2 -ansi -pipe -Wall -Wshadow -Wpointer-arith \
-+CFLAGS +=	-O2 -ansi -pipe -Wall -Wshadow -Wpointer-arith \
++CFLAGS +=	-O2 -pipe -Wall -Wshadow -Wpointer-arith \
  			-Wwrite-strings -Wstrict-prototypes \
  			-Wformat -Wmissing-prototypes -funsigned-char \
  			-I/usr/local/include -L/usr/local/lib \
