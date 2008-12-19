@@ -1,0 +1,14 @@
+$NetBSD: patch-bh,v 1.1 2008/12/19 05:14:00 jmcneill Exp $
+
+--- src/pcm/pcm_meter.c.orig	2008-12-19 00:05:13.000000000 -0500
++++ src/pcm/pcm_meter.c	2008-12-19 00:05:34.000000000 -0500
+@@ -27,7 +27,9 @@
+  */
+   
+ 
++#ifndef __NetBSD__
+ #include <byteswap.h>
++#endif
+ #include <time.h>
+ #include <pthread.h>
+ #include <dlfcn.h>
