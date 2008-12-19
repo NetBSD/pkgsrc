@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.3 2007/01/01 14:32:29 rillig Exp $
+$NetBSD: patch-ae,v 1.4 2008/12/19 23:16:22 tnn Exp $
 
 Tags: for-upstream
 
 siman_tsp.c uses many functions from libm.
 
---- siman/Makefile.am.orig	2007-01-01 15:12:17.000000000 +0100
-+++ siman/Makefile.am	2007-01-01 15:13:22.000000000 +0100
-@@ -16,6 +16,7 @@ siman_tsp_LDADD = libgslsiman.la ../rng/
+--- siman/Makefile.am.orig	2008-11-27 23:03:28.000000000 +0300
++++ siman/Makefile.am	2008-12-16 20:53:55.000000000 +0300
+@@ -16,6 +16,7 @@
  CLEANFILES = siman_test.out
  
  libgslsiman_la_SOURCES = siman.c
 +libgslsiman_la_LIBADD = -lm
  pkginclude_HEADERS = gsl_siman.h
  
- INCLUDES= -I$(top_builddir)
+ INCLUDES = -I$(top_srcdir)
