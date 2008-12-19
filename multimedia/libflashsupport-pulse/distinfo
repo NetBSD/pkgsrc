@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/19 19:49:22 jmcneill Exp $
+
+SHA1 (libflashsupport-pulse-20081219.tar.gz) = 0199358b325db60826044d64e13a3c2ee1745a86
+RMD160 (libflashsupport-pulse-20081219.tar.gz) = 58f2a0335919881780311c34af126ab87011e6f2
+Size (libflashsupport-pulse-20081219.tar.gz) = 442054 bytes
