@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.398 2008/12/19 04:04:54 jmcneill Exp $
+# $NetBSD: Makefile,v 1.399 2008/12/19 04:28:08 jmcneill Exp $
 #
 
 COMMENT=	Audio tools
@@ -162,6 +162,7 @@ SUBDIR+=	ladspa
 SUBDIR+=	lame
 SUBDIR+=	liba52
 SUBDIR+=	libao
+SUBDIR+=	libao-alsa
 SUBDIR+=	libao-arts
 SUBDIR+=	libao-esound
 SUBDIR+=	libao-macosx
