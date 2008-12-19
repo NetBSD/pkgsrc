@@ -1,0 +1,6 @@
+This is a shared library built from source provided by Adobe and
+modified by the PulseAudio project which enables the use of
+the PulseAudio sound server in the multimedia/ns-flash and
+multimedia/adobe-flash-plugin packages.
+
+Non Linux platforms will probably also need www/nspluginwrapper
