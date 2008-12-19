@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3465 2008/12/19 19:11:52 he Exp $
+$NetBSD: CHANGES-2008,v 1.3466 2008/12/19 19:49:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5767,3 +5767,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Readonly-XS to 1.04nb2 [he 2008-12-19]
 	Added security/p5-OpenSSL version 0.09 [he 2008-12-19]
 	Added devel/p5-File-LibMagic version 0.90 [he 2008-12-19]
+	Updated math/glpk to 4.34 [adam 2008-12-19]
