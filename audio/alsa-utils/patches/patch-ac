@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
+
+--- aplay/formats.h.orig	2008-12-18 22:21:49.000000000 -0500
++++ aplay/formats.h
+@@ -1,8 +1,15 @@
+ #ifndef FORMATS_H
+ #define FORMATS_H		1
+ 
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#define bswap_16 bswap16
++#define bswap_32 bswap32
++#define bswap_64 bswap64
++#else
+ #include <endian.h>
+ #include <byteswap.h>
++#endif
+ 
+ /* Definitions for .VOC files */
+ 
