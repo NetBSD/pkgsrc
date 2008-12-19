@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/06/29 07:47:03 kim Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/12/19 21:10:39 markd Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -348,6 +348,7 @@ lib/mailman/cgi-bin/subscribe${MAILMAN_CGIEXT}
 lib/mailman/cron/bumpdigests
 lib/mailman/cron/checkdbs
 lib/mailman/cron/crontab.in
+lib/mailman/cron/cull_bad_shunt
 lib/mailman/cron/disabled
 lib/mailman/cron/gate_news
 lib/mailman/cron/mailpasswds
@@ -444,6 +445,9 @@ lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.po
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.po
+lib/mailman/pythonlib/JapaneseCodecs-1.4.11-py2.5.egg-info
+lib/mailman/pythonlib/KoreanCodecs-2.0.5-py2.5.egg-info
+lib/mailman/pythonlib/email-2.5.8-py2.5.egg-info
 lib/mailman/pythonlib/email/Charset.py
 lib/mailman/pythonlib/email/Charset.pyc
 lib/mailman/pythonlib/email/Encoders.py
@@ -682,6 +686,7 @@ lib/mailman/templates/ca/archlistend.html
 lib/mailman/templates/ca/archliststart.html
 lib/mailman/templates/ca/archtoc.html
 lib/mailman/templates/ca/archtocentry.html
+lib/mailman/templates/ca/archtocnombox.html
 lib/mailman/templates/ca/article.html
 lib/mailman/templates/ca/bounce.txt
 lib/mailman/templates/ca/checkdbs.txt
@@ -701,6 +706,7 @@ lib/mailman/templates/ca/postack.txt
 lib/mailman/templates/ca/postauth.txt
 lib/mailman/templates/ca/postheld.txt
 lib/mailman/templates/ca/private.html
+lib/mailman/templates/ca/probe.txt
 lib/mailman/templates/ca/refuse.txt
 lib/mailman/templates/ca/roster.html
 lib/mailman/templates/ca/subauth.txt
@@ -2137,6 +2143,8 @@ lib/mailman/tests/bounces/dsn_12.txt
 lib/mailman/tests/bounces/dsn_13.txt
 lib/mailman/tests/bounces/dsn_14.txt
 lib/mailman/tests/bounces/dsn_15.txt
+lib/mailman/tests/bounces/dsn_16.txt
+lib/mailman/tests/bounces/dsn_17.txt
 lib/mailman/tests/bounces/dumbass_01.txt
 lib/mailman/tests/bounces/exim_01.txt
 lib/mailman/tests/bounces/groupwise_01.txt
@@ -2186,6 +2194,12 @@ lib/mailman/tests/bounces/simple_24.txt
 lib/mailman/tests/bounces/simple_25.txt
 lib/mailman/tests/bounces/simple_26.txt
 lib/mailman/tests/bounces/simple_27.txt
+lib/mailman/tests/bounces/simple_28.txt
+lib/mailman/tests/bounces/simple_29.txt
+lib/mailman/tests/bounces/simple_30.txt
+lib/mailman/tests/bounces/simple_31.txt
+lib/mailman/tests/bounces/simple_32.txt
+lib/mailman/tests/bounces/simple_33.txt
 lib/mailman/tests/bounces/sina_01.txt
 lib/mailman/tests/bounces/smtp32_01.txt
 lib/mailman/tests/bounces/smtp32_02.txt
