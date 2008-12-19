@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/01/18 05:09:38 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2008/12/19 21:09:11 heinz Exp $
 #
 
 DISTNAME=		isakmpd-20030903
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # this is not compatible with cross build - there's no other way
 .if !exists(/usr/include/netinet6/ipsec.h)
@@ -43,6 +45,15 @@ SUBST_MESSAGE.man=	Fixing manual page references
 SUBST_FILES.man=	isakmpd.8 isakmpd.conf.5 isakmpd.policy.5
 SUBST_SED.man=		-e "s+/usr/share/ipsec+${PREFIX}/share/examples+g"
 SUBST_SED.man+=		-e "s+/etc/isakmpd+${PKG_SYSCONFDIR}+g"
+
+SUBST_CLASSES+=		destdir
+SUBST_STAGE.destdir=	pre-configure
+SUBST_MESSAGE.destdir=	Fixing ownership for DESTDIR installations
+SUBST_FILES.destdir=	Makefile apps/certpatch/Makefile
+SUBST_VARS.destdir=	BINOWN BINGRP MANOWN MANGRP
+
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/cat5
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8 ${PKGMANDIR}/cat8
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

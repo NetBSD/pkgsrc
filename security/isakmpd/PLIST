@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/02 20:34:05 reed Exp $
-sbin/certpatch
-sbin/isakmpd
+@comment $NetBSD: PLIST,v 1.5 2008/12/19 21:09:11 heinz Exp $
 man/cat5/isakmpd.conf.0
 man/cat5/isakmpd.policy.0
 man/cat8/certpatch.0
@@ -9,6 +7,8 @@ man/man5/isakmpd.conf.5
 man/man5/isakmpd.policy.5
 man/man8/certpatch.8
 man/man8/isakmpd.8
+sbin/certpatch
+sbin/isakmpd
 share/examples/isakmpd/VPN-3way-template.conf
 share/examples/isakmpd/VPN-east.conf
 share/examples/isakmpd/VPN-west.conf

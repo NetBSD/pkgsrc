@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 2004/11/22 12:42:46 shannonjr Exp $
+$NetBSD: patch-an,v 1.2 2008/12/19 21:09:12 heinz Exp $
 
---- ./conf.c.orig	2003-09-02 12:15:55.000000000 -0600
-+++ ./conf.c
+--- conf.c.orig	2003-09-02 12:15:55.000000000 -0600
++++ conf.c
 @@ -118,7 +118,7 @@ conf_hash (char *s)
  
    while (*s)
