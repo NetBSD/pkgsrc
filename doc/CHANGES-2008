@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3457 2008/12/19 04:05:40 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3458 2008/12/19 04:28:47 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5755,3 +5755,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/alsa-utils version 1.0.18 [jmcneill 2008-12-18]
 	Added audio/alsa-plugins-oss version 1.0.18 [jmcneill 2008-12-18]
 	Added audio/alsa-plugins-pulse version 1.0.18 [jmcneill 2008-12-18]
+	Added audio/libao-alsa version 0.8.8 [jmcneill 2008-12-18]
