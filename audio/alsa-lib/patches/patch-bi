@@ -1,0 +1,12 @@
+$NetBSD: patch-bi,v 1.1 2008/12/19 05:14:00 jmcneill Exp $
+
+--- src/pcm/pcm_ladspa.c.orig	2008-12-19 00:06:18.000000000 -0500
++++ src/pcm/pcm_ladspa.c	2008-12-19 00:06:31.000000000 -0500
+@@ -33,6 +33,7 @@
+  */
+   
+ #include <dirent.h>
++#include <dlfcn.h>
+ #include <locale.h>
+ #include <math.h>
+ #include "pcm_local.h"
