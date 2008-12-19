@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
+
+--- speaker-test/speaker-test.c.orig	2008-12-18 22:24:52.000000000 -0500
++++ speaker-test/speaker-test.c
+@@ -47,7 +47,12 @@
+ #ifdef ENABLE_NLS
+ #include <locale.h>
+ #endif
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#define ESTRPIPE EPIPE
++#else
+ #include <byteswap.h>
++#endif
+ 
+ #define ALSA_PCM_NEW_HW_PARAMS_API
+ #define ALSA_PCM_NEW_SW_PARAMS_API
