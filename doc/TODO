@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7739 2008/12/18 19:20:14 adam Exp $
+$NetBSD: TODO,v 1.7740 2008/12/19 07:56:32 roy Exp $
 
 Suggested new packages
 ======================
@@ -512,7 +512,6 @@ Suggested package updates
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
 	o dmenu-3.9 [pkgsrc-wip has it!]
-	o dnsmasq-2.46
 	o dnstop-20070307
 	o dnstracer-1.9
 	o dri2proto-1.99.3
