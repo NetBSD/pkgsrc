@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7740 2008/12/19 07:56:32 roy Exp $
+$NetBSD: TODO,v 1.7741 2008/12/19 12:29:26 adam Exp $
 
 Suggested new packages
 ======================
@@ -481,7 +481,6 @@ Suggested package updates
 	o cppunit-1.12.0
 	o cross-h8300-hms-binutils-2.17
 	o crypto++-523
-	o cstream-2.7.3
 	o cuetools-1.3.1
 	o curl-7.19.2
 	o cvs-1.11.23
@@ -526,7 +525,6 @@ Suggested package updates
 	o eclipse-3.2.0
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o efax-gtk-3.0.18
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o electric-8.07
