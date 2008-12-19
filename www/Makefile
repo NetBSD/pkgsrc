@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.615 2008/12/17 01:17:05 he Exp $
+# $NetBSD: Makefile,v 1.616 2008/12/19 07:58:42 jnemeth Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -59,8 +59,8 @@ SUBDIR+=	ap2-suphp
 SUBDIR+=	ap2-transform
 SUBDIR+=	ap2-wsgi
 SUBDIR+=	ap2-xslt2
-SUBDIR+=	ap22-authnz-external
 SUBDIR+=	ap22-authn-sasl
+SUBDIR+=	ap22-authnz-external
 SUBDIR+=	apache
 SUBDIR+=	apache-tomcat55
 SUBDIR+=	apache2
@@ -88,7 +88,7 @@ SUBDIR+=	cherokee
 SUBDIR+=	chimera
 SUBDIR+=	clearsilver
 SUBDIR+=	clearsilver-base
-#SUBDIR+=	cocoon
+#SUBDIR+=	cocoon			# broken, needs updating
 SUBDIR+=	communicator
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
@@ -278,8 +278,8 @@ SUBDIR+=	p5-CatalystX-CRUD-YUI
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-HTML-Clean
-SUBDIR+=	p5-HTML-Email-Obfuscate
 SUBDIR+=	p5-HTML-Element-Extended
+SUBDIR+=	p5-HTML-Email-Obfuscate
 SUBDIR+=	p5-HTML-FillInForm
 SUBDIR+=	p5-HTML-FixEntities
 SUBDIR+=	p5-HTML-Format
