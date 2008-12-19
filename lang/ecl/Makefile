@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/12 19:57:45 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/19 23:12:46 tnn Exp $
 #
 
-DISTNAME=		ecl-0.9l
-PKGNAME=		ecl-0.9.12
+DISTNAME=		ecl-8.12.0
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
-EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
