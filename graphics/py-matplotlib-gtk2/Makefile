@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/11/19 03:39:57 hasso Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/19 22:39:47 markd Exp $
 #
 
-DISTNAME=		matplotlib-0.87.2
-PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-0.87.2
-PKGREVISION=		2
+DISTNAME=		matplotlib-0.98.0
+PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-0.98.0
 CATEGORIES=		graphics python
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
 
@@ -25,7 +24,6 @@ PYTHON_VERSIONS_ACCEPTED=	24 25
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../math/py-Numeric/buildlink3.mk"
-.include "../../math/py-numarray/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
