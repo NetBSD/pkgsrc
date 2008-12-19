@@ -1,0 +1,15 @@
+$NetBSD: patch-ap,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_file.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_file.c
+@@ -26,8 +26,10 @@
+  *
+  */
+   
++#ifndef __NetBSD__
+ #include <endian.h>
+ #include <byteswap.h>
++#endif
+ #include <ctype.h>
+ #include "pcm_local.h"
+ #include "pcm_plugin.h"

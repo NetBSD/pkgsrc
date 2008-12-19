@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm.c
+@@ -635,6 +635,10 @@ playback devices.
+ #include <limits.h>
+ #include "pcm_local.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ /**
+  * \brief get identifier of PCM handle
+  * \param pcm PCM handle

@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_share.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_share.c
+@@ -39,6 +39,10 @@
+ #include <pthread.h>
+ #include "pcm_local.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ #ifndef PIC
+ /* entry for static linking */
+ const char *_snd_module_pcm_share = "";
