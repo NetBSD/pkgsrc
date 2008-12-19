@@ -306,6 +306,7 @@ postfix-stress		Enable Postfix stress-adaptive behaviour.
 proftpd-readme		Enable mod_readme.
 psycopg1		Enable psycopg 1.1.x support.
 psycopg2		Enable psycopg 2.x support.
+pulseaudio		Enable support for the PulseAudio sound server.
 python			Enable Python support.
 qdbm			Enable qdbm support.
 qmail-badrcptto		Patch to SMTP-reject particular envelope recipients.
