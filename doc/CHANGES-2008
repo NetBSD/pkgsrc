@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3462 2008/12/19 12:16:47 darcy Exp $
+$NetBSD: CHANGES-2008,v 1.3463 2008/12/19 12:29:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5761,3 +5761,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/cstream to 2.7.5 [adam 2008-12-19]
 	Updated devel/generate to 2.6nb1 [darcy 2008-12-19]
 	Updated devel/py-generate to 2.6nb1 [darcy 2008-12-19]
+	Updated comms/efax-gtk to 3.0.18 [adam 2008-12-19]
