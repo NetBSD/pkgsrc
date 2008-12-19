@@ -1,0 +1,6 @@
+PulseAudio Manager (paman) is a simple GTK frontend for the PulseAudio sound
+server.
+
+With the current version of paman you may browser most of PulseAudio's
+internals. There is support for changing volume of sinks and sink outputs.
+You're able to play samples from the sample cache.
