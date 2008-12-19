@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/18 23:00:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/19 19:51:39 jmcneill Exp $
 
 CATEGORIES=	multimedia www
 MASTER_SITES=	http://download.macromedia.com/pub/labs/flashplayer10/
@@ -23,7 +23,7 @@ DIST_SUBDIR=		flash/${FLASH_VERS}
 CRYPTO=			yes
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	compat gtk2 mozilla x11
+EMUL_MODULES.linux=	compat gtk2 x11
 EMUL_REQD=		suse>=10.0
 
 .include "../../mk/bsd.prefs.mk"
