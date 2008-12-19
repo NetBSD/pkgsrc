@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/08 23:23:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/19 12:53:48 joerg Exp $
 
 DISTNAME=	barnyard-0.2.0
 CATEGORIES=	net
@@ -20,12 +20,11 @@ CONF_FILES=	${EGDIR}/barnyard.conf ${PKG_SYSCONFDIR}/barnyard.conf
 
 EGDIR=		${PREFIX}/share/examples/barnyard
 
+INSTALLATION_DIRS=	bin share/doc/barnyard share/examples/barnyard
+
 .include "options.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/barnyard
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-
 	${INSTALL_SCRIPT} ${WRKSRC}/src/barnyard ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ \
 		${DESTDIR}${PREFIX}/share/doc/barnyard/FAQ
