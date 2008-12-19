@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3454 2008/12/19 01:10:32 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3455 2008/12/19 01:18:09 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5745,3 +5745,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/xine-pulse version 1.1.15 [jmcneill 2008-12-18]
 	Added audio/bmp-pulse version 0.9.4 [jmcneill 2008-12-18]
 	Added audio/paman version 0.9.4 [jmcneill 2008-12-18]
+	Updated net/p5-SOAP-Lite to 0.710.08nb3 [he 2008-12-18]
+	Updated devel/p5-Clone to 0.30 [he 2008-12-18]
+	Updated www/p5-CGI to 3.42 [he 2008-12-18]
+	Updated security/p5-IO-Socket-SSL to 1.18 [he 2008-12-18]
+	Updated devel/p5-Perl-Tidy to 20071205 [he 2008-12-18]
+	Updated security/p5-Digest-MD5 to 2.38 [he 2008-12-19]
