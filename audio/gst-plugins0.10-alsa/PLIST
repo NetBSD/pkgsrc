@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 04:40:39 jmcneill Exp $
+lib/gstreamer-0.10/libgstalsa.la
