@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3466 2008/12/19 19:49:27 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3467 2008/12/19 22:49:17 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5768,3 +5768,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/p5-OpenSSL version 0.09 [he 2008-12-19]
 	Added devel/p5-File-LibMagic version 0.90 [he 2008-12-19]
 	Updated math/glpk to 4.34 [adam 2008-12-19]
+	Updated mail/mailman to 2.1.11 [markd 2008-12-19]
+	Updated devel/automoc4 to 0.9.87 [markd 2008-12-19]
+	Updated textproc/soprano to 2.1.1 [markd 2008-12-19]
+	Updated mail/akonadi to 1.0.81 [markd 2008-12-19]
+	Added time/libical version 0.42 [markd 2008-12-19]
+	Added math/py-numpy version 1.1.0 [markd 2008-12-19]
+	Added math/py-scipy version 0.6.0 [markd 2008-12-19]
+	Updated graphics/py-matplotlib to 0.98.0 [markd 2008-12-19]
+	Updated graphics/py-matplotlib-gtk2 to 0.98.0 [markd 2008-12-19]
