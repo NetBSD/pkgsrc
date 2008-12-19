@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3456 2008/12/19 03:36:20 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3457 2008/12/19 04:05:40 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5753,3 +5753,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Digest-MD5 to 2.38 [he 2008-12-19]
 	Added audio/alsa-lib version 1.0.18 [jmcneill 2008-12-18]
 	Added audio/alsa-utils version 1.0.18 [jmcneill 2008-12-18]
+	Added audio/alsa-plugins-oss version 1.0.18 [jmcneill 2008-12-18]
+	Added audio/alsa-plugins-pulse version 1.0.18 [jmcneill 2008-12-18]
