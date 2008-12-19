@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2008/12/18 14:52:09 hira Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/12/19 23:58:18 hira Exp $
 bin/xfce4-autostart-editor
 bin/xfce4-session
 bin/xfce4-session-logout
 bin/xfce4-tips
-etc/xdg/autostart/xfce4-tips-autostart.desktop
 include/xfce4/xfce4-session-4.2/libxfsm/xfsm-splash-engine.h
 include/xfce4/xfce4-session-4.2/libxfsm/xfsm-splash-rc.h
 lib/libxfsm-4.2.la
@@ -90,6 +89,7 @@ share/locale/zh_CN/LC_MESSAGES/xfce4-session.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-session.mo
 share/themes/Default/balou/logo.png
 share/themes/Default/balou/themerc
+share/xdg/autostart/xfce4-tips-autostart.desktop
 share/xfce4/doc/C/images/xfsm-advanced.png
 share/xfce4/doc/C/images/xfsm-general.png
 share/xfce4/doc/C/images/xfsm-splash.png
@@ -101,12 +101,11 @@ share/xfce4/doc/fr/xfce4-session.html
 share/xfce4/tips/tips
 share/xfce4/tips/tips.dat
 @dirrm share/xfce4/tips
+@dirrm share/xdg/autostart
 @dirrm share/themes/Default/balou
 @dirrm share/examples/xfce4/session
 @dirrm lib/xfce4/splash/engines
 @dirrm lib/xfce4/splash
 @dirrm include/xfce4/xfce4-session-4.2/libxfsm
 @dirrm include/xfce4/xfce4-session-4.2
-@dirrm etc/xdg/xfce4-session
-@dirrm etc/xdg/autostart
 @unexec ${RMDIR} %D/etc/xdg 2>/dev/null || ${TRUE}
