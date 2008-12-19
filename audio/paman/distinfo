@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/19 01:09:24 jmcneill Exp $
+
+SHA1 (paman-0.9.4.tar.gz) = d51d390a00222a51580c23c3d26547689b6d767b
+RMD160 (paman-0.9.4.tar.gz) = e15cacd2724014976e89ef622976577818d481c1
+Size (paman-0.9.4.tar.gz) = 116757 bytes
