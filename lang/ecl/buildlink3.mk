@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/08/12 19:57:45 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/12/19 23:12:46 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ECL_BUILDLINK3_MK:=	${ECL_BUILDLINK3_MK}+
