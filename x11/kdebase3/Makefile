@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.144 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: Makefile,v 1.145 2008/12/19 21:16:02 markd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -121,7 +122,7 @@ SUBST_SED.varlock=	-e s:/var/lock:/var/spool/lock:
 .endif
 .endif
 
-SUBST_CLASSES+=		htdig paths
+SUBST_CLASSES+=		htdig paths xkb
 SUBST_STAGE.htdig=	post-patch
 SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
@@ -131,6 +132,10 @@ SUBST_FILES.paths=	kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
+
+SUBST_FILES.xkb=	kxkb/x11helper.cpp
+SUBST_SED.xkb=		-e 's:XLIBDIR:"${X11BASE}/share/X11/", XLIBDIR:'
+SUBST_STAGE.xkb=	post-patch
 
 pre-configure:
 	cd ${WRKSRC}/ksysguard/ksysguardd && rm -f DragonFly && ln -s FreeBSD DragonFly
