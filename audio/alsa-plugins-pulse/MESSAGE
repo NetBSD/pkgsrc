@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/12/19 05:21:01 jmcneill Exp $
+
+To use ALSA with PulseAudio, add the following to ~/.asoundrc:
+
+# begin ~/.asoundrc
+pcm.!default {
+	type pulse
+}
+
+ctl.!default {
+	type pulse
+}
+
+pcm.pulse {
+	type pulse
+}
+
+ctl.pulse {
+	type pulse
+}
+# end ~/.asoundrc
+
+===========================================================================
