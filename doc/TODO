@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7741 2008/12/19 12:29:26 adam Exp $
+$NetBSD: TODO,v 1.7742 2008/12/19 15:43:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ Suggested package updates
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
-	o gnutls-2.6.3
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
