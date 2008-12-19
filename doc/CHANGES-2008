@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3461 2008/12/19 10:20:50 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3462 2008/12/19 12:16:47 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5759,3 +5759,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/gst-plugins0.10-alsa version 0.10.21 [jmcneill 2008-12-18]
 	Updated net/dnsmasq to 2.46 [roy 2008-12-19]
 	Updated misc/cstream to 2.7.5 [adam 2008-12-19]
+	Updated devel/generate to 2.6nb1 [darcy 2008-12-19]
+	Updated devel/py-generate to 2.6nb1 [darcy 2008-12-19]
