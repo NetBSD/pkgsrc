@@ -1,0 +1,23 @@
+$NetBSD: patch-ay,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_null.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_null.c
+@@ -26,12 +26,18 @@
+  *
+  */
+   
++#ifndef __NetBSD__
+ #include <byteswap.h>
++#endif
+ #include <limits.h>
+ #include <sys/shm.h>
+ #include "pcm_local.h"
+ #include "pcm_plugin.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ #ifndef PIC
+ /* entry for static linking */
+ const char *_snd_module_pcm_null = "";

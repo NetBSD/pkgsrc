@@ -1,0 +1,22 @@
+$NetBSD: patch-bg,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/timer/timer_hw.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/timer/timer_hw.c
+@@ -92,10 +92,17 @@ static int snd_timer_hw_async(snd_timer_
+ 	}
+ 	if (sig < 0)
+ 		return 0;
++#ifdef F_SETSIG
+ 	if (fcntl(fd, F_SETSIG, (long)sig) < 0) {
+ 		SYSERR("F_SETSIG failed");
+ 		return -errno;
+ 	}
++#else
++	if (fcntl(fd, F_SETFL, O_ASYNC) < 0) {
++		SYSERR("F_SETFL failed");
++		return -errno;
++	}
++#endif
+ 	if (fcntl(fd, F_SETOWN, (long)pid) < 0) {
+ 		SYSERR("F_SETOWN failed");
+ 		return -errno;

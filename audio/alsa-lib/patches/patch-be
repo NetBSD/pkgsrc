@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_simple.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_simple.c
+@@ -25,6 +25,10 @@
+ 
+ #include "pcm_local.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ static int set_buffer_time(snd_spcm_latency_t latency,
+ 			   unsigned int *buffer_time)
+ {

@@ -1,0 +1,12 @@
+The Advanced Linux Sound Architecture (ALSA) provides audio and MIDI
+functionality to the Linux operating system. ALSA has the following
+significant features:
+
+    * Efficient support for all types of audio interfaces, from consumer sound
+      cards to professional multichannel audio interfaces.
+    * Fully modularized sound drivers.
+    * SMP and thread-safe design.
+    * User space library (alsa-lib) to simplify application programming and
+      provide higher level functionality.
+    * Support for the older Open Sound System (OSS) API, providing binary
+      compatibility for most OSS programs.

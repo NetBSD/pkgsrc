@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- include/asoundlib-head.h.orig	2008-12-18 22:01:21.000000000 -0500
++++ include/asoundlib-head.h
+@@ -34,7 +34,11 @@
+ #include <string.h>
+ #include <fcntl.h>
+ #include <assert.h>
++#ifdef __NetBSD__
++#include <sys/endian.h>
++#else
+ #include <endian.h>
++#endif
+ #include <sys/poll.h>
+ #include <errno.h>
+ #include <stdarg.h>
