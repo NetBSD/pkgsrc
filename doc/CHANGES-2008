@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3464 2008/12/19 15:43:30 adam Exp $
+$NetBSD: CHANGES-2008,v 1.3465 2008/12/19 19:11:52 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5763,3 +5763,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-generate to 2.6nb1 [darcy 2008-12-19]
 	Updated comms/efax-gtk to 3.0.18 [adam 2008-12-19]
 	Updated security/gnutls to 2.6.3 [adam 2008-12-19]
+	Updated devel/p5-Class-MethodMaker to 2.13 [he 2008-12-19]
+	Updated devel/p5-Readonly-XS to 1.04nb2 [he 2008-12-19]
+	Added security/p5-OpenSSL version 0.09 [he 2008-12-19]
+	Added devel/p5-File-LibMagic version 0.90 [he 2008-12-19]
