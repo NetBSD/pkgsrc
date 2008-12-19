@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/19 18:30:52 he Exp $
+
+SHA1 (OpenSSL-0.09.tar.gz) = 6d93d428cdb53f583970ac624318ea0b2605c190
+RMD160 (OpenSSL-0.09.tar.gz) = cab6e9ef7c2cad70c0693a45a51a8703a6fc53e5
+Size (OpenSSL-0.09.tar.gz) = 14890 bytes
