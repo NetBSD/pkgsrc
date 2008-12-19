@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3455 2008/12/19 01:18:09 he Exp $
+$NetBSD: CHANGES-2008,v 1.3456 2008/12/19 03:36:20 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5751,3 +5751,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-IO-Socket-SSL to 1.18 [he 2008-12-18]
 	Updated devel/p5-Perl-Tidy to 20071205 [he 2008-12-18]
 	Updated security/p5-Digest-MD5 to 2.38 [he 2008-12-19]
+	Added audio/alsa-lib version 1.0.18 [jmcneill 2008-12-18]
+	Added audio/alsa-utils version 1.0.18 [jmcneill 2008-12-18]
