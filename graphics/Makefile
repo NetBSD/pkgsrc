@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.505 2008/12/16 12:37:17 obache Exp $
+# $NetBSD: Makefile,v 1.506 2008/12/19 07:52:29 jnemeth Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -118,6 +118,7 @@ SUBDIR+=	gimp1-base
 SUBDIR+=	gimp1-data
 SUBDIR+=	gimp1-wideangle
 SUBDIR+=	gimp2-wideangle
+SUBDIR+=	gimp26
 SUBDIR+=	giram
 SUBDIR+=	gle
 SUBDIR+=	glew
@@ -304,11 +305,11 @@ SUBDIR+=	rayshade
 SUBDIR+=	refocus-it
 SUBDIR+=	resize_image
 SUBDIR+=	ruby-RMagick
-SUBDIR+=	ruby-color
 SUBDIR+=	ruby-clutter
 SUBDIR+=	ruby-clutter-cairo
 SUBDIR+=	ruby-clutter-core
 SUBDIR+=	ruby-clutter-gtk
+SUBDIR+=	ruby-color
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gnome2-gdkpixbuf
 SUBDIR+=	ruby-gnome2-gnomecanvas
