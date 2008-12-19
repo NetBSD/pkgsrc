@@ -1,25 +1,36 @@
-# $NetBSD: Makefile,v 1.8 2008/11/22 18:59:54 ahoka Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/19 07:53:43 roy Exp $
 #
 
-DISTNAME=		dnsmasq-2.45
-PKGREVISION=		3
+DISTNAME=		dnsmasq-2.46
 CATEGORIES=		net
 MASTER_SITES=		http://www.thekelleys.org.uk/dnsmasq/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://www.thekelleys.org.uk/dnsmasq/doc.html
 COMMENT=		Lightweight, easy to configure DNS forwarder
 
-USE_TOOLS+=		gmake
+RCD_SCRIPTS=		dnsmasq
+CONF_FILES=		${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \
+			${PKG_SYSCONFDIR}/dnsmasq.conf
 
-RCD_SCRIPTS=	dnsmasq
-CONF_FILES=	${PREFIX}/share/examples/dnsmasq/dnsmasq.conf.example \
-		${PKG_SYSCONFDIR}/dnsmasq.conf
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-CFLAGS+=	-DCONFFILE=\"${PKG_SYSCONFDIR}/dnsmasq.conf\"
+.include "options.mk"
+
+# Override the defaults
+CFLAGS+=		-DCONFFILE=\\\"${PKG_SYSCONFDIR}/dnsmasq.conf\\\"
+BUILD_MAKE_FLAGS+=	COPTS="${CFLAGS}"
+INSTALL_MAKE_FLAGS+=	PREFIX="${PREFIX}"
+INSTALL_MAKE_FLAGS+=	MANDIR="${PREFIX}/${PKGMANDIR}"
+INSTALL_MAKE_FLAGS+=	LOCALEDIR="${PREFIX}/${PKGLOCALEDIR}"
+
+# Upstream wants to use nawk, but awk should work just fine here.
+BUILD_MAKE_FLAGS+=	AWK="${AWK}"
+INSTALL_MAKE_FLAGS+=	AWK="${AWK}"
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/dnsmasq
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/dnsmasq
 	${INSTALL} ${WRKSRC}/dnsmasq.conf.example \
-		${PREFIX}/share/examples/dnsmasq/
+		${DESTDIR}${PREFIX}/share/examples/dnsmasq/
 
 .include "../../mk/bsd.pkg.mk"
