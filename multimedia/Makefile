@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2008/12/18 23:01:16 jmcneill Exp $
+# $NetBSD: Makefile,v 1.137 2008/12/19 07:53:25 jnemeth Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -99,8 +99,8 @@ SUBDIR+=	ogmtools
 SUBDIR+=	openquicktime
 SUBDIR+=	p5-GStreamer
 SUBDIR+=	p5-xmltv
-SUBDIR+=	php-ming
 SUBDIR+=	phonon
+SUBDIR+=	php-ming
 SUBDIR+=	pspvc
 SUBDIR+=	py-gstreamer0.10
 SUBDIR+=	py-ming
