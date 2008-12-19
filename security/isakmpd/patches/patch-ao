@@ -1,0 +1,19 @@
+$NetBSD: patch-ao,v 1.1 2008/12/19 21:09:12 heinz Exp $
+
+  - Override variables for DESTDIR support.
+
+--- apps/certpatch/Makefile.orig	2003-06-03 16:35:00.000000000 +0200
++++ apps/certpatch/Makefile
+@@ -31,6 +31,12 @@
+ #
+ 
+ PROG=		certpatch
++
++BINOWN=		@BINOWN@
++BINGRP=		@BINGRP@
++MANOWN=		@MANOWN@
++MANGRP=		@MANGRP@
++
+ SRCS=		certpatch.c
+ BINDIR?=	/usr/sbin
+ TOPSRC=		${.CURDIR}/../..
