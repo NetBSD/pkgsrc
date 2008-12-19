@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/12 13:57:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/19 22:49:18 adrianp Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -10,15 +10,15 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/
 COMMENT=	Free RADIUS server implementation
 
-CONFLICTS+=	freeradius-1.[0-9]*
-
 .include "../../mk/bsd.prefs.mk"
 
 CONFLICTS+=		radiusd-cistron-[0-9]*
+CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_OLD_DES_API=	YES
+MAKE_JOBS_SAFE=		NO
 
 BUILD_DEFS=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
@@ -45,7 +45,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.1
+RADVER=			2.1.3
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -71,10 +71,7 @@ REPLACE_PERL=		scripts/radsqlrelay
 
 SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
-SUBST_FILES.make=	src/modules/rlm_mschap/Makefile \
-			src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
-SUBST_SED.make=	-e "s|RLM_LDFLAGS	=|RLM_LDFLAGS 	= \
-				-L../../../src/lib/.libs/ -lradius|g"
+SUBST_FILES.make=	src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make+=	-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
 				-L${PREFIX}/lib|g"
 SUBST_MESSAGE.make=	Fixing Makefiles.
