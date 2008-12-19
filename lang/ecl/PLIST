@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/12 19:57:45 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/19 23:12:46 tnn Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -16,18 +16,21 @@ include/ecl/object.h
 include/ecl/page.h
 include/ecl/stacks.h
 include/ecl/unify.h
-lib/ecl/BUILD-STAMP
-lib/ecl/asdf.fas
-lib/ecl/cmp.fas
-lib/ecl/defsystem.fas
-lib/ecl/dpp
-lib/ecl/ecl_min
-lib/ecl/help.doc
-lib/ecl/profile.fas
-lib/ecl/rt.fas
-lib/ecl/serve-event.fas
-lib/ecl/sockets.fas
-lib/ecl/sysfun.lsp
+lib/${PKGNAME}/BUILD-STAMP
+lib/${PKGNAME}/asdf.fas
+lib/${PKGNAME}/cmp.fas
+lib/${PKGNAME}/defsystem.fas
+lib/${PKGNAME}/dpp
+lib/${PKGNAME}/ecl_min
+lib/${PKGNAME}/help.doc
+lib/${PKGNAME}/profile.fas
+lib/${PKGNAME}/rt.fas
+lib/${PKGNAME}/serve-event.fas
+lib/${PKGNAME}/sockets.fas
+lib/${PKGNAME}/sysfun.lsp
 lib/libecl.so
-@dirrm lib/ecl
+lib/libecl.so.8
+lib/libecl.so.8.12
+lib/libecl.so.${PKGVERSION}
+@dirrm lib/${PKGNAME}
 @dirrm include/ecl
