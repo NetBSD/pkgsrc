@@ -1,0 +1,11 @@
+THIS IS A FUCKING HACK (nichts für die Goldwaage..)
+
+Don't read the man-pages/*.pm's (they are dummy), check t/*
+and fix OpenSSL.xs
+
+Don't forget to try -
+print OpenSSL::CRL::new_from_file("crl.pem")->info
+- it's the only CRL stuff that's supported :)
+
+OpenSSL::HMAC is dummy.
+OpenSSL::BN is untested.
