@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 04:04:04 jmcneill Exp $
+lib/alsa-lib/libasound_module_conf_pulse.la
+lib/alsa-lib/libasound_module_ctl_pulse.la
+lib/alsa-lib/libasound_module_pcm_pulse.la
