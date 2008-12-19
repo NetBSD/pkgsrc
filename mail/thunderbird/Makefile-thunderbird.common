@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.38 2008/11/24 17:19:13 is Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.39 2008/12/19 07:59:26 roy Exp $
 # used by mail/thunderbird/Makefile
 # used by mail/thunderbird-gtk1/Makefile
 
@@ -25,10 +25,9 @@ CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
 
+INSTALL_TEMPLATES+=	${.CURDIR}/../../mail/thunderbird/INSTALL
+
 post-install:
-	cd ${PREFIX}/lib/${MOZILLA} && \
-	${SETENV} LD_LIBRARY_PATH=.:${PREFIX}/lib MOZILLA_FIVE_HOME=. HOME=${WRKSRC:Q} \
-		./${MOZILLA_BIN} -register
 	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
 
 .include "../../mk/bsd.fast.prefs.mk"
