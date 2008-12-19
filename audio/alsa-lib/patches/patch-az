@@ -1,0 +1,25 @@
+$NetBSD: patch-az,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_rate.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_rate.c
+@@ -28,7 +28,9 @@
+  *
+  */
+ #include <inttypes.h>
++#ifndef __NetBSD__
+ #include <byteswap.h>
++#endif
+ #include "pcm_local.h"
+ #include "pcm_plugin.h"
+ #include "pcm_rate.h"
+@@ -36,6 +38,10 @@
+ 
+ #include "plugin_ops.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ #if 0
+ #define DEBUG_REFINE
+ #endif
