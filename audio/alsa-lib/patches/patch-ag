@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/control/control_shm.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/control/control_shm.c
+@@ -35,6 +35,10 @@
+ #include <netdb.h>
+ #include "aserver.h"
+ 
++#ifndef EBADFD
++#define EBADFD EBADF
++#endif
++
+ #ifndef PIC
+ /* entry for static linking */
+ const char *_snd_module_control_shm = "";

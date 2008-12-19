@@ -1,0 +1,14 @@
+$NetBSD: patch-am,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+
+--- src/pcm/pcm_dmix_generic.c.orig	2008-10-29 08:42:10.000000000 -0400
++++ src/pcm/pcm_dmix_generic.c
+@@ -125,7 +125,9 @@ static void mix_select_callbacks(snd_pcm
+ 	 (1ULL << SND_PCM_FORMAT_S24_3LE) | \
+ 	 (1ULL << SND_PCM_FORMAT_U8))
+ 
++#ifndef __NetBSD__
+ #include <byteswap.h>
++#endif
+ 
+ static void generic_mix_areas_16_native(unsigned int size,
+ 					volatile signed short *dst,
