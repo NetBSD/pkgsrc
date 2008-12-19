@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/12/16 10:09:32 hasso Exp $
+# $NetBSD: Makefile,v 1.23 2008/12/19 23:13:24 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -35,12 +35,14 @@ CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+.include "../../devel/libvolume_id/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
 CONFIGURE_ARGS+=	--with-backend=freebsd
 PLIST_SRC=		PLIST.FreeBSD PLIST
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
+.include "../../devel/libvolume_id/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=netbsd
 HAL_GROUP=		operator
 .elif ${OPSYS} == "NetBSD"
@@ -51,6 +53,7 @@ PLIST_SRC=		PLIST
 
 .if ${OPSYS} == "Linux"
 .include "../../devel/libusb/buildlink3.mk"
+.include "../../devel/libvolume_id/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=linux
 .endif
@@ -87,7 +90,6 @@ pre-configure:
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libvolume_id/buildlink3.mk"
 .include "../../misc/pciids/buildlink3.mk"
 .include "../../misc/usbids/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
