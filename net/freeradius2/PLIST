@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/12 13:57:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/12/19 22:49:18 adrianp Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -185,6 +185,7 @@ share/doc/freeradius/rfc/draft-kamath-pppext-eap-mschapv2-00.txt
 share/doc/freeradius/rfc/draft-sterman-aaa-sip-00.txt
 share/doc/freeradius/rfc/leap.txt
 share/doc/freeradius/rfc/pppext-eap-sim-12.txt
+share/doc/freeradius/rfc/rfc5281.txt
 share/doc/freeradius/rfc/rfc1157.txt
 share/doc/freeradius/rfc/rfc1227.txt
 share/doc/freeradius/rfc/rfc1448.txt
