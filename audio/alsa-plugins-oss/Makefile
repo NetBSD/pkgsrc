@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/19 04:03:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/19 12:34:22 jmcneill Exp $
 #
 
 DISTNAME=	alsa-plugins-1.0.18
@@ -15,8 +15,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS=	pkg-config gmake
 USE_LIBTOOL=	yes
 
-MAKE_ENV+=	LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 CFLAGS+=	-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
+LIBS+=		${LIBOSSAUDIO}
 
 do-build:
 	cd ${WRKSRC}/oss && ${GMAKE}
