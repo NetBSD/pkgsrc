@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.17 2008/12/19 20:20:22 macallan Exp $
+$NetBSD: patch-aa,v 1.18 2008/12/19 21:25:28 macallan Exp $
 
 --- src/sysdeps/bsd-common.c.orig	2006-03-29 17:23:37.000000000 -0500
 +++ src/sysdeps/bsd-common.c
@@ -11,17 +11,16 @@ $NetBSD: patch-aa,v 1.17 2008/12/19 20:20:22 macallan Exp $
      !(defined(__OpenBSD__) && OpenBSD < 200006) && \
      !defined(__APPLE__)
  #define HAVE_GETIFADDRS	1
-@@ -52,8 +52,11 @@ gkrellm_sys_net_read_data(void)
+@@ -52,6 +52,8 @@ gkrellm_sys_net_read_data(void)
  			if (ifa->ifa_addr->sa_family != AF_LINK)
  				continue;
  			ifd = (struct if_data *)ifa->ifa_data;
 +			if (ifd == NULL)
 +				continue;
-+
  			gkrellm_net_assign_data(ifa->ifa_name,
-					ifd->ifi_ibytes, ifd->ifi_obytes);
- 			} 
-@@ -255,7 +258,11 @@ void
+ 					ifd->ifi_ibytes, ifd->ifi_obytes);
+ 			}
+@@ -255,7 +257,11 @@ void
  gkrellm_sys_fs_get_mounts_list(void)
  	{
  	gchar		*s, *dev, *dir, *type;
@@ -33,7 +32,7 @@ $NetBSD: patch-aa,v 1.17 2008/12/19 20:20:22 macallan Exp $
  	gint		mntsize, i;
  
  	if ((mntsize = getmntinfo(&mntbuf, MNT_NOWAIT)) == 0)
-@@ -281,12 +288,24 @@ gkrellm_sys_fs_get_mounts_list(void)
+@@ -281,12 +287,24 @@ gkrellm_sys_fs_get_mounts_list(void)
  void
  gkrellm_sys_fs_get_fsusage(gpointer fs, gchar *dir)
  	{
@@ -58,7 +57,7 @@ $NetBSD: patch-aa,v 1.17 2008/12/19 20:20:22 macallan Exp $
  	else
  		gkrellm_fs_assign_fsusage_data(fs, 0, 0, 0, 0);
  	}
-@@ -345,7 +364,7 @@ gkrellm_sys_fs_init(void)
+@@ -345,7 +363,7 @@ gkrellm_sys_fs_init(void)
  	}
  #endif
  
