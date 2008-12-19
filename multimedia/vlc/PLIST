@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.24 2008/11/08 19:00:15 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/12/19 23:28:40 jmcneill Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
+${PLIST.hal}lib/vlc/misc/libprobe_hal_plugin.la
+${PLIST.hal}lib/vlc/services_discovery/libhal_plugin.la
 ${PLIST.x11}bin/qvlc
 ${PLIST.x11}lib/vlc/gui/libqt4_plugin.la
 ${PLIST.x11}lib/vlc/codec/libpng_plugin.la
@@ -20,6 +22,7 @@ ${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.la
 ${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.la
 ${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.la
 ${PLIST.esound}lib/vlc/audio_output/libesd_plugin.la
+${PLIST.pulseaudio}lib/vlc/audio_output/libpulse_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
 ${PLIST.altivec}lib/vlc/misc/libmemcpyaltivec_plugin.la
 ${PLIST.x86simd}lib/vlc/video_chroma/libi420_rgb_mmx_plugin.la

@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.11 2008/11/08 19:00:15 ahoka Exp $
+# $NetBSD: options.mk,v 1.12 2008/12/19 23:28:40 jmcneill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		debug faad arts dbus skins sdl esound x11 gnome
-PKG_SUGGESTED_OPTIONS=		x11 esound
+PKG_SUPPORTED_OPTIONS=		debug faad arts dbus hal skins sdl esound pulseaudio x11 gnome
+PKG_SUGGESTED_OPTIONS=		x11 esound pulseaudio
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,6 +14,16 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 CONFIGURE_ARGS+=	--enable-esd
 .include "../../audio/esound/buildlink3.mk"
 PLIST.esound=		yes
+.endif
+
+## PulseAudio support
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--enable-pulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+PLIST.pulseaudio=	yes
+.else
+CONFIGURE_ARGS+=	--disable-pulse
 .endif
 
 ## SDL backend support
@@ -47,8 +57,18 @@ CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--enable-notify
 .include "../../sysutils/libnotify/buildlink3.mk"
 PLIST.dbus=		yes
+## HAL support (requires dbus)
+.if !empty(PKG_OPTIONS:Mhal)
+CONFIGURE_ARGS+=	--enable-hal
+.include "../../sysutils/hal/buildlink3.mk"
+PLIST.hal=		yes
+.else
+CONFIGURE_ARGS+=	--disable-hal
+.endif
 .else
 CONFIGURE_ARGS+=	--disable-dbus
+CONFIGURE_ARGS+=	--disable-hal
+CONFIGURE_ARGS+=	--disable-notify
 .endif
 
 ## DEBUG build or release build
