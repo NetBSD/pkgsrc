@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/19 22:04:36 markd Exp $
+
+--- numpy/distutils/fcompiler/__init__.py.orig	2008-06-04 23:26:41.000000000 +1200
++++ numpy/distutils/fcompiler/__init__.py
+@@ -690,7 +690,7 @@ _default_compilers = (
+     ('irix.*', ('mips','gnu','gnu95',)),
+     ('aix.*', ('ibm','gnu','gnu95',)),
+     # os.name mappings
+-    ('posix', ('gnu','gnu95',)),
++    ('posix', ('gnu','gnu95','g95',)),
+     ('nt', ('gnu','gnu95',)),
+     ('mac', ('gnu','gnu95',)),
+     )
