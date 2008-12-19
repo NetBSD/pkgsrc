@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/11/13 23:20:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/19 21:38:31 markd Exp $
 
-DISTNAME=	akonadi-1.0.0
+DISTNAME=	akonadi-1.0.81
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
 USE_DIRS+=	kde4-1.0
@@ -28,6 +28,7 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/_build
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
