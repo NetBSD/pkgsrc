@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.5 2008/12/19 04:39:11 jmcneill Exp $
+
+--- ext/alsa/gstalsasink.c.orig	2008-12-18 23:35:32.000000000 -0500
++++ ext/alsa/gstalsasink.c
+@@ -53,6 +53,10 @@
+ 
+ #include <gst/gst-i18n-plugin.h>
+ 
++#ifndef ESTRPIPE
++#define ESTRPIPE EPIPE
++#endif
++
+ /* elementfactory information */
+ static const GstElementDetails gst_alsasink_details =
+ GST_ELEMENT_DETAILS ("Audio sink (ALSA)",
