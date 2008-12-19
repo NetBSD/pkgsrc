@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3453 2008/12/19 00:55:20 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3454 2008/12/19 01:10:32 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5744,3 +5744,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added multimedia/adobe-flash-plugin version 10.0.0.525 [jmcneill 2008-12-18]
 	Added audio/xine-pulse version 1.1.15 [jmcneill 2008-12-18]
 	Added audio/bmp-pulse version 0.9.4 [jmcneill 2008-12-18]
+	Added audio/paman version 0.9.4 [jmcneill 2008-12-18]
