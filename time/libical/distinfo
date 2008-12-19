@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/19 21:48:05 markd Exp $
+
+SHA1 (libical-0.42.tar.gz) = 8b6654c714b0193e4496a55427803c969c9cb5e1
+RMD160 (libical-0.42.tar.gz) = 71544a562a4244bec7f62669bdbf280591c0b253
+Size (libical-0.42.tar.gz) = 1145477 bytes
