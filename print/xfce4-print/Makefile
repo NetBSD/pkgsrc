@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/12/18 14:21:43 hira Exp $
+# $NetBSD: Makefile,v 1.24 2008/12/20 18:59:52 reed Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -9,6 +9,7 @@ DISTNAME=	xfprint-${XFCE4_VERSION}
 PKGREVISION=	1
 CATEGORIES=	print
 COMMENT=	Xfce print dialog
+HOMEPAGE=	http://www.xfce.org/projects/xfprint/
 
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX:Q}/share/doc
 CONFIGURE_ARGS+=	--with-printcap=/etc/printcap
