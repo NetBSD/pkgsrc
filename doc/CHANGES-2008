@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3474 2008/12/20 00:47:10 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3475 2008/12/20 00:54:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5788,3 +5788,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/qgtkstyle version r868 [jmcneill 2008-12-19]
 	Updated multimedia/mplayer to 1.0rc10nb12 [jmcneill 2008-12-19]
 	Updated multimedia/gmplayer to 1.0rc10nb10 [jmcneill 2008-12-19]
+	Updated print/gutenprint-lib to 5.2.2 [gdt 2008-12-20]
