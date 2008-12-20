@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2008/11/28 18:22:45 jmcneill Exp $
+$NetBSD: MESSAGE,v 1.4 2008/12/20 23:38:56 jmcneill Exp $
 
 In order to get the GNOME Desktop running properly, you need to follow
 these manual steps:
@@ -24,7 +24,12 @@ these manual steps:
    /etc/pam.d/gnome-screensaver file.  You can use one of the files
    in ${PREFIX}/share/examples/gnome-screensaver/pam.d as templates.
 
-6) Optionally enable GDM (highly recommended).  Just copy the
+6) Optionally enable the Avahi DNS Service Discovery service if you
+   installed it.  In order to do that, copy the
+   ${PREFIX}/share/examples/rc.d/avahidaemon script to /etc/rc.d and set
+   avahidaemon=YES in your /etc/rc.conf file.
+
+7) Optionally enable GDM (highly recommended).  Just copy the
    ${PREFIX}/share/examples/rc.d/gdm script to /etc/rc.d and add
    gdm=YES to your /etc/rc.conf file.
 
