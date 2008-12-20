@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.14 2008/10/19 19:17:56 he Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/20 23:12:29 he Exp $
 
-DISTNAME=	IPC-Run-0.80
+DISTNAME=	IPC-Run-0.82
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IPC/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/IPC-Run/
 COMMENT=	Perl module for interacting with child processes
+
+DEPENDS+=	p5-IO-tty>=1.0:../../devel/p5-IO-Tty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
