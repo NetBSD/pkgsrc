@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+
+--- avahi-common/Makefile.in.orig	2008-12-04 12:00:32.000000000 +0000
++++ avahi-common/Makefile.in
+@@ -601,7 +601,7 @@ clean-libLTLIBRARIES:
+ 	  rm -f "$${dir}/so_locations"; \
+ 	done
+ libavahi-common.la: $(libavahi_common_la_OBJECTS) $(libavahi_common_la_DEPENDENCIES) 
+-	$(libavahi_common_la_LINK) -rpath $(libdir) $(libavahi_common_la_OBJECTS) $(libavahi_common_la_LIBADD) $(LIBS)
++	$(libavahi_common_la_LINK) -rpath $(libdir) $(libavahi_common_la_OBJECTS) $(libavahi_common_la_LIBADD) $(LIBS) $(INTLLIBS)
+ 
+ clean-noinstPROGRAMS:
+ 	@list='$(noinst_PROGRAMS)'; for p in $$list; do \
