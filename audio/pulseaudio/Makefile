@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/18 18:43:52 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/20 11:00:43 ahoka Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
@@ -59,6 +59,12 @@ PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
 PKG_USERS=              ${PULSE_USER}:${PULSE_GROUP}
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
+
+# Needs libatomic_ops if the compiler is not >=GCC4.1
+.include "../../mk/compiler.mk"
+.if empty(CC_VERSION:Mgcc-4.[1-9]*) && empty(CC_VERSION:Mgcc-[5-9]*) 
+.  include "../../devel/libatomic_ops/buildlink3.mk"
+.endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
