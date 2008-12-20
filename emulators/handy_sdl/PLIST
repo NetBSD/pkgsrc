@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 17:34:02 wiz Exp $
+bin/handy_sdl
+share/doc/handy_sdl/README
+@dirrm share/doc/handy_sdl
