@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/10/11 01:46:32 minskim Exp $
+$NetBSD: distinfo,v 1.7 2008/12/20 23:00:27 minskim Exp $
 
-SHA1 (imhangul-0.9.13.tar.bz2) = 2e9a20263973466ea94be8400ac0e4ac433647e7
-RMD160 (imhangul-0.9.13.tar.bz2) = 252d2b7ccbf3fbb2fd7df6eddef2eab07b133d21
-Size (imhangul-0.9.13.tar.bz2) = 364508 bytes
-SHA1 (patch-aa) = c1daac3fc9bc5aeadef9acb142875c29f4ce9722
+SHA1 (imhangul-0.9.14.tar.bz2) = 8c48e206f49f49f26781a9c8fe35b6a12a66854e
+RMD160 (imhangul-0.9.14.tar.bz2) = 92e167e9ee0a7b79a31fab64f688db9eba92f29b
+Size (imhangul-0.9.14.tar.bz2) = 251167 bytes
+SHA1 (patch-aa) = a0ecb21074cc5172043633a21c31d7dacfeadf3c
