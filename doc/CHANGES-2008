@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3494 2008/12/20 21:22:43 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3495 2008/12/20 23:01:37 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5815,3 +5815,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/ekiga to 3.0.1nb3 [jmcneill 2008-12-20]
 	Updated editors/vim-share to 7.2.69 [martti 2008-12-20]
 	Added net/gnome-vfs-dns-sd version 2.24.0 [jmcneill 2008-12-20]
+	Updated inputmethod/libhangul to 0.0.9 [minskim 2008-12-20]
+	Updated inputmethod/imhangul to 0.9.14 [minskim 2008-12-20]
