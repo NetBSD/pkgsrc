@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2008/11/09 16:15:47 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/12/20 19:02:12 bouyer Exp $
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
 man/man8/sympa.8
 share/doc/sympa/NEWS
-share/doc/sympa/sympa.pdf
 share/examples/sympa/README
 share/examples/sympa/employees.ldap
 share/examples/sympa/robot.conf
