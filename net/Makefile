@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.747 2008/12/16 15:13:15 roy Exp $
+# $NetBSD: Makefile,v 1.748 2008/12/20 17:37:17 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -29,6 +29,7 @@ SUBDIR+=	arpd
 SUBDIR+=	arping
 SUBDIR+=	arpwatch
 SUBDIR+=	autonet
+SUBDIR+=	avahi
 SUBDIR+=	awhois
 SUBDIR+=	balance
 SUBDIR+=	barnyard
