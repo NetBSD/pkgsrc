@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/12/05 12:20:05 smb Exp $
+# $NetBSD: Makefile,v 1.49 2008/12/20 20:52:27 reed Exp $
 #
 
 PKGREVISION=	2
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/evince/Makefile.common"
 
-COMMENT=		Document viewer for the GNOME Desktop
+COMMENT=		Document viewer
 
 GCONF_SCHEMAS=		evince.schemas
 GCONF_SCHEMAS+=	evince-thumbnailer.schemas
