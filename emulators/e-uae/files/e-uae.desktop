@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=e-uae
+Comment=Ubiquitous Amiga Emulator
+Comment[tr]=Amiga Emülatörü
+Comment[hu]=Amiga Emulátor
+Exec=uae
+Icon=package_games_arcade
+Terminal=false
+Type=Application
+Categories=Application;Game;Emulator
+StartupNotify=false
