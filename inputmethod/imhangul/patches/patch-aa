@@ -1,23 +1,37 @@
-$NetBSD: patch-aa,v 1.4 2005/10/11 01:46:32 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2008/12/20 23:00:27 minskim Exp $
 
---- Makefile.in.orig	2005-09-10 20:20:25.000000000 -0700
+--- Makefile.in.orig	2008-12-20 05:59:15.000000000 -0800
 +++ Makefile.in
-@@ -829,12 +829,12 @@ uninstall-info: uninstall-info-recursive
+@@ -815,19 +815,19 @@ uninstall-info: uninstall-info-recursive
  
  
  install-data-hook:
 -	if test -z "$(DESTDIR)" ; then \
--		if test ! -d `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; then \
--			$(mkinstalldirs) `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; \
--		fi;\
--		gtk-query-immodules-2.0 > $(IM_HANGUL_GTK_IMMODULE_FILE); \
+-		GTK_IM_MODULE_FILE=$(GTK_IM_MODULE_FILE) ; \
+-		GTK_QUERY_IM_MODULE=`which gtk-query-immodules-2.0` ; \
+-		GTK_IM_MODULE_FILE_DIR=`dirname $$GTK_IM_MODULE_FILE` ; \
+-		if test ! -d $$GTK_IM_MODULE_FILE_DIR ; then \
+-			$(mkinstalldirs) $$GTK_IM_MODULE_FILE_DIR; \
+-		fi; \
+-		if test -x $$GTK_QUERY_IM_MODULE; then \
+-			if test -w $$GTK_IM_MODULE_FILE_DIR; then \
+-				$$GTK_QUERY_IM_MODULE > $$GTK_IM_MODULE_FILE ; \
+-			fi; \
+-		fi; \
 -	fi
 +#	if test -z "$(DESTDIR)" ; then \
-+#		if test ! -d `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; then \
-+#			$(mkinstalldirs) `dirname $(IM_HANGUL_GTK_IMMODULE_FILE)`; \
-+#		fi;\
-+#		gtk-query-immodules-2.0 > $(IM_HANGUL_GTK_IMMODULE_FILE); \
++#		GTK_IM_MODULE_FILE=$(GTK_IM_MODULE_FILE) ; \
++#		GTK_QUERY_IM_MODULE=`which gtk-query-immodules-2.0` ; \
++#		GTK_IM_MODULE_FILE_DIR=`dirname $$GTK_IM_MODULE_FILE` ; \
++#		if test ! -d $$GTK_IM_MODULE_FILE_DIR ; then \
++#			$(mkinstalldirs) $$GTK_IM_MODULE_FILE_DIR; \
++#		fi; \
++#		if test -x $$GTK_QUERY_IM_MODULE; then \
++#			if test -w $$GTK_IM_MODULE_FILE_DIR; then \
++#				$$GTK_QUERY_IM_MODULE > $$GTK_IM_MODULE_FILE ; \
++#			fi; \
++#		fi; \
 +#	fi
  
- uninstall:
+ uninstall-hook:
  	if test -z "$(DESTDIR)" ; then \
