@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3487 2008/12/20 18:28:13 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3488 2008/12/20 18:39:10 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5804,3 +5804,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added emulators/handy_sdl version 0.5 [wiz 2008-12-20]
 	Added net/avahi version 0.6.23 [wiz 2008-12-20]
 	Updated audio/pulseaudio to 0.9.13nb3 [jmcneill 2008-12-20]
+	Added audio/padevchooser version 0.9.3 [jmcneill 2008-12-20]
