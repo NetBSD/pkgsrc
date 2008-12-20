@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3485 2008/12/20 17:39:10 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3486 2008/12/20 17:40:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5802,3 +5802,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Search-QueryParser-SQL to 0.007 [he 2008-12-20]
 	Added devel/libdaemon version 0.12 [ahoka 2008-12-20]
 	Added emulators/handy_sdl version 0.5 [wiz 2008-12-20]
+	Added net/avahi version 0.6.23 [wiz 2008-12-20]
