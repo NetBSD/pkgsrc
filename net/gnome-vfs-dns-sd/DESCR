@@ -1,0 +1,6 @@
+GNOME VFS provides an abstraction layer of the file system; applications
+use this layer to access many different protocols and simulate that they
+are part of the local file system.
+
+This package provides the dns-sd module for GNOME VFS, which allows it to
+discover sftp, webdav, and ftp services advertised with multicast DNS.
