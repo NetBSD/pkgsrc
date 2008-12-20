@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/11/04 05:46:23 seb Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/20 23:51:33 he Exp $
 
-DISTNAME=	Mouse-0.11
+DISTNAME=	Mouse-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SARTAK/}
@@ -11,9 +11,12 @@ COMMENT=	Perl module implementing an extension of the perl object system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# For tests
-#BUILD_DEPENDS+=	p5-Class-Method-Modifiers-[0-9]*:../../devel/p5-Class-Method-Modifiers
-#BUILD_DEPENDS+=	p5-Moose>=0.59:../../devel/p5-Moose
+DEPENDS+=	p5-Class-Method-Modifiers>=1.01:../../devel/p5-Class-Method-Modifiers
+DEPENDS+=	p5-MRO-Compat>=0:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
+
+BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
+#BUILD_DEPENDS+= p5-Moose>=0.59:../../devel/p5-Moose
 
 PERL5_PACKLIST=	auto/Mouse/.packlist
 
