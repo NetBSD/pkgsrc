@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3472 2008/12/20 00:15:24 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.3473 2008/12/20 00:16:46 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5785,3 +5785,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ecl to 8.12.0 [tnn 2008-12-19]
 	Updated math/gsl to 1.12 [tnn 2008-12-19]
 	Updated meta-pkgs/xfce4 to 4.4.3nb2 [hira 2008-12-20]
+	Added x11/qgtkstyle version r868 [jmcneill 2008-12-19]
