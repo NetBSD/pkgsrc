@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/11/02 19:19:36 he Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/20 21:04:13 he Exp $
 
-DISTNAME=	Data-Visitor-0.21
+DISTNAME=	Data-Visitor-0.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
@@ -11,7 +11,6 @@ COMMENT=	Visitor style traversal of Perl data structures
 
 DEPENDS+=	p5-Mouse>=0.06:../../devel/p5-Mouse
 DEPENDS+=	p5-namespace-clean>=0.08:../../devel/p5-namespace-clean
-DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Tie-ToObject>=0.01:../../devel/p5-Tie-ToObject
 DEPENDS+=	p5-Data-Alias>=0:../../devel/p5-Data-Alias
 DEPENDS+=	p5-Task-Weaken>=0:../../devel/p5-Task-Weaken
