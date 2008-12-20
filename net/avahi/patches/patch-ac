@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+
+--- avahi-daemon/Makefile.in.orig	2008-06-24 00:20:31.000000000 +0100
++++ avahi-daemon/Makefile.in
+@@ -505,19 +505,15 @@ AM_CFLAGS = -I$(top_srcdir) '-DDEBUG_TRA
+ 
+ @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@ini_file_parser_test_CFLAGS = $(AM_CFLAGS)
+ @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@ini_file_parser_test_LDADD = $(AM_LDADD) ../avahi-common/libavahi-common.la ../avahi-core/libavahi-core.la 
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@pkgsysconf_DATA = \
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	avahi-daemon.conf \
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	hosts
+-
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@service_DATA = \
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	ssh.service \
+-@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	sftp-ssh.service
++@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@pkgsysconf_DATA =
++
++@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@service_DATA =
+ 
+ @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@pkgdata_DATA = \
+ @HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	avahi-service.dtd
+ 
+ @HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@dbusservicedir = $(DBUS_SYS_DIR)
+-@HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@dbusservice_DATA = avahi-dbus.conf
++@HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@dbusservice_DATA =
+ @HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@introspection_DATA = \
+ @HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	Server.introspect \
+ @HAVE_DBUS_TRUE@@HAVE_LIBDAEMON_TRUE@@HAVE_XML_TRUE@	EntryGroup.introspect \
