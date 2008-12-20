@@ -1,1 +1,4 @@
-Session manager for Xfce.
+Session manager for Xfce. Its task is to save the state of your
+desktop (opened applications and their location) and restore it
+during a next startup. You can create several different sessions
+and choose one of them on startup.
