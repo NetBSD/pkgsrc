@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/08/16 22:23:46 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/20 15:16:52 ahoka Exp $
 
 DISTNAME=	e-uae-0.8.28
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.rcdrummond.net/uae/e-uae-0.8.28/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,13 +17,16 @@ CONFLICTS+=	uae-[0-9]*
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+USE_DIRS+=		xdg-1.4
 
 .include "options.mk"
 
-INSTALLATION_DIRS=	share/doc/uae
+INSTALLATION_DIRS=	share/doc/uae \
+			share/applications
 
 post-install:
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} *.txt ${DESTDIR}${PREFIX}/share/doc/uae
+	${INSTALL_DATA} ${FILESDIR}/e-uae.desktop ${DESTDIR}${PREFIX}/share/applications
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
