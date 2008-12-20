@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3490 2008/12/20 20:12:45 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3491 2008/12/20 20:27:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5807,3 +5807,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/padevchooser version 0.9.3 [jmcneill 2008-12-20]
 	Updated mail/sympa to 5.4.4 [bouyer 2008-12-20]
 	Updated sysutils/gvfs to 1.0.3nb1 [jmcneill 2008-12-20]
+	Updated devel/p5-B-Utils to 0.07 [he 2008-12-20]
+	Updated devel/p5-Class-Accessor-Grouped to 0.08002 [he 2008-12-20]
+	Updated devel/p5-Class-C3 to 0.20 [he 2008-12-20]
+	Updated devel/p5-Class-MOP to 0.73 [he 2008-12-20]
+	Updated devel/p5-Config-Any to 0.16 [he 2008-12-20]
