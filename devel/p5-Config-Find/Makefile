@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/11/16 23:27:19 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/20 20:59:18 he Exp $
 
-DISTNAME=	Config-Find-0.24
+DISTNAME=	Config-Find-0.26
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cf
 CATEGORIES=	devel perl5
