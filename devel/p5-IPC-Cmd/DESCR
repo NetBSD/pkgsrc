@@ -1,0 +1,7 @@
+IPC::Cmd allows you to run commands, interactively if desired,
+platform independent but have them still work.
+
+The can_run function can tell you if a certain binary is installed
+and if so where, whereas the run function can actually execute any
+of the commands you give it and give you a clear return value, as
+well as adhere to your verbosity settings.
