@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3471 2008/12/20 00:13:29 hira Exp $
+$NetBSD: CHANGES-2008,v 1.3472 2008/12/20 00:15:24 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5782,4 +5782,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/vlc to 0.9.8anb2 [jmcneill 2008-12-19]
 	Updated sysutils/xfce4-thunar to 0.9.3nb2 [hira 2008-12-19]
 	Updated x11/xfce4-session to 4.4.3nb2 [hira 2008-12-19]
+	Updated lang/ecl to 8.12.0 [tnn 2008-12-19]
+	Updated math/gsl to 1.12 [tnn 2008-12-19]
 	Updated meta-pkgs/xfce4 to 4.4.3nb2 [hira 2008-12-20]
