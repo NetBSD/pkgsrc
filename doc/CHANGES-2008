@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3495 2008/12/20 23:01:37 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3496 2008/12/20 23:32:46 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5817,3 +5817,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/gnome-vfs-dns-sd version 2.24.0 [jmcneill 2008-12-20]
 	Updated inputmethod/libhangul to 0.0.9 [minskim 2008-12-20]
 	Updated inputmethod/imhangul to 0.9.14 [minskim 2008-12-20]
+	Updated x11/libxklavier to 3.8nb1 [jmcneill 2008-12-20]
