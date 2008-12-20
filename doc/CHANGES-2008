@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3489 2008/12/20 19:03:00 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.3490 2008/12/20 20:12:45 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5806,3 +5806,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/pulseaudio to 0.9.13nb3 [jmcneill 2008-12-20]
 	Added audio/padevchooser version 0.9.3 [jmcneill 2008-12-20]
 	Updated mail/sympa to 5.4.4 [bouyer 2008-12-20]
+	Updated sysutils/gvfs to 1.0.3nb1 [jmcneill 2008-12-20]
