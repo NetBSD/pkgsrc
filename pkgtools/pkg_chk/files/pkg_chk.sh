@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.60 2008/07/05 22:56:40 abs Exp $
+# $Id: pkg_chk.sh,v 1.61 2008/12/20 09:50:59 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -172,7 +172,7 @@ extract_variables()
 	    fi
 	done
     fi
-    if [ ! -d $PKGSRCDIR -a \( -z "$opt_b" -o -n "$opt_s" \) ] ; then
+    if [ ! -d "$PKGSRCDIR" -a \( -z "$opt_b" -o -n "$opt_s" \) ] ; then
 	fatal "Unable to locate PKGSRCDIR (${PKGSRCDIR:-not set})"
     fi
 
@@ -377,7 +377,7 @@ pkgdirs_from_conf()
 
     # Determine list of tags
     #
-    if [ $PKGSRCDIR = NONE ]; then
+    if [ "$PKGSRCDIR" = NONE ]; then
 	OPSYS=$(uname -s)
 	OS_VERSION=$(uname -r)
 	MACHINE_ARCH=$(uname -p)
