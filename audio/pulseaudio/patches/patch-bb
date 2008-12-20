@@ -1,8 +1,8 @@
-$NetBSD: patch-bb,v 1.1 2008/12/20 16:10:25 ahoka Exp $
+$NetBSD: patch-bb,v 1.2 2008/12/20 17:53:51 jmcneill Exp $
 
---- src/pulsecore/atomic.h.orig	2008-09-03 23:13:44.000000000 +0200
-+++ src/pulsecore/atomic.h
-@@ -107,6 +107,81 @@ static inline pa_bool_t pa_atomic_ptr_cm
+--- src/pulsecore/atomic.h.orig	2008-09-03 17:13:44.000000000 -0400
++++ src/pulsecore/atomic.h	2008-12-20 12:35:13.000000000 -0500
+@@ -107,6 +107,85 @@ static inline pa_bool_t pa_atomic_ptr_cm
      return __sync_bool_compare_and_swap(&a->value, (long) old_p, (long) new_p);
  }
  
@@ -30,22 +30,26 @@ $NetBSD: patch-bb,v 1.1 2008/12/20 16:10:25 ahoka Exp $
 +
 +/* Returns the previously set value */
 +static inline int pa_atomic_add(pa_atomic_t *a, int i) {
-+    return (int) atomic_add_int_nv(&a->value, i);
++    int nv = (int)atomic_add_int_nv(&a->value, i);
++    return nv - i;
 +}
 +
 +/* Returns the previously set value */
 +static inline int pa_atomic_sub(pa_atomic_t *a, int i) {
-+    return (int) atomic_add_int_nv(&a->value, -i);
++    int nv = (int)atomic_add_int_nv(&a->value, -i);
++    return nv + i;
 +}
 +
 +/* Returns the previously set value */
 +static inline int pa_atomic_inc(pa_atomic_t *a) {
-+    return (int) atomic_inc_uint_nv(&a->value);
++    int nv = (int)atomic_inc_uint_nv(&a->value);
++    return nv - 1;
 +}
 +
 +/* Returns the previously set value */
 +static inline int pa_atomic_dec(pa_atomic_t *a) {
-+    return (int) atomic_dec_uint_nv(&a->value);
++    int nv = (int)atomic_dec_uint_nv(&a->value);
++    return nv + 1;
 +}
 +
 +/* Returns TRUE when the operation was successful. */
