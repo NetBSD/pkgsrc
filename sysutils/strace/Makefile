@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/12/06 16:59:37 christos Exp $
+# $NetBSD: Makefile,v 1.12 2008/12/20 18:06:39 christos Exp $
 #
 
 DISTNAME=		strace-4.5.15
@@ -27,6 +27,11 @@ REPLACE_PERL=		strace-graph
 USE_TOOLS+=		autoconf
 pre-configure:
 	cd ${WRKSRC} && autoconf
+.endif
+
+.if ${OPSYS} == "NetBSD"
+pre-configure:
+	${CP} -f ${WRKSRC}/syscalls.pl ${WRKSRC}/netbsd
 .endif
 
 .include "../../mk/bsd.pkg.mk"
