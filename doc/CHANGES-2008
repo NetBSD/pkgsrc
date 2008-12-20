@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3482 2008/12/20 16:24:56 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.3483 2008/12/20 16:42:55 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5796,4 +5796,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.27 [abs 2008-12-20]
 	Updated lang/pear to 1.5.4nb3 [adrianp 2008-12-20]
 	Updated sysutils/hal to 0.5.11nb16 [reinoud 2008-12-20]
-
+	Added devel/p5-IPC-Cmd version 0.42 [he 2008-12-20]
+	Updated databases/p5-Rose-DBx-Garden-Catalyst to 0.13 [he 2008-12-20]
+	Updated databases/p5-SQL-Translator to 0.09002 [he 2008-12-20]
+	Updated databases/p5-Search-QueryParser-SQL to 0.007 [he 2008-12-20]
