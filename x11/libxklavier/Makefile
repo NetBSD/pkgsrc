@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2008/11/24 14:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/12/20 23:31:54 jmcneill Exp $
 #
 
 DISTNAME=	libxklavier-3.8
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gswitchit/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,6 +21,14 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libxklavier.pc.in
 
 CONFIGURE_ARGS+=	--enable-xkb-support
+CONFIGURE_ARGS+=	--with-xmodmap-base=${PREFIX}/share/xmodmap
+
+.include "../../mk/bsd.prefs.mk"
+.if exists(${X11BASE}/share/X11/xkb/rules/xorg.xml)
+CONFIGURE_ARGS+=	--with-xkb-base=${X11BASE}/share/X11/xkb
+.else
+CONFIGURE_ARGS+=	--with-xkb-base=${X11BASE}/lib/X11/xkb
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 
