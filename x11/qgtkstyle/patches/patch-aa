@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/20 00:13:07 jmcneill Exp $
+
+--- gtksymbols.cpp.orig	2008-12-19 19:07:43.000000000 -0500
++++ gtksymbols.cpp
+@@ -790,8 +790,25 @@ GtkStyle* QGtk::gtkStyle(const QString &
+ }
+ QT_END_NAMESPACE
+ 
++#ifdef __NetBSD__
++int
++getresuid(uid_t *ruid, uid_t *euid, uid_t *suid)
++{
++	*ruid = getuid();
++	*euid = geteuid();
++	*suid = *euid;
++}
++int
++getresgid(gid_t *rgid, gid_t *egid, gid_t *sgid)
++{
++	*rgid = getgid();
++	*egid = getegid();
++	*sgid = *egid;
++}
++#else
+ int getresuid(uid_t *ruid, uid_t *euid, uid_t *suid);
+ int getresgid(gid_t *rgid, gid_t *egid, gid_t *sgid);
++#endif
+ 
+ QT_BEGIN_NAMESPACE
+ void QGtk::initGtkWidgets()
