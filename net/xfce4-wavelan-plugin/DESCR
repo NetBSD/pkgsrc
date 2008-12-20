@@ -1,1 +1,2 @@
-WLAN plugin for Xfce.
+WLAN plugin for Xfce.  Used to display stats from a wireless LAN
+interface (signal state, signal quality, network name (SSID)).
