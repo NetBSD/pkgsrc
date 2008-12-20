@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/20 16:10:25 ahoka Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/20 16:50:38 ahoka Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
@@ -64,7 +64,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 # Needs libatomic_ops if the compiler is not >=GCC4.1
 # We can use native atomic operation on 5.0 and newer.
 #
-.if exists(/include/sys/atomic.h)	# NetBSD >=5.0
+.if exists(/usr/include/sys/atomic.h)	# NetBSD >=5.0
    CONFIGURE_ARGS+=	--enable-netbsd-atomic-ops
 .else					# NetBSD <5.0 and other OS
 .  include "../../mk/compiler.mk"
