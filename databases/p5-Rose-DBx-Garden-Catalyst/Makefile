@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/12/17 01:45:44 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/20 16:12:47 he Exp $
 
-DISTNAME=	Rose-DBx-Garden-Catalyst-0.12
+DISTNAME=	Rose-DBx-Garden-Catalyst-0.13
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
@@ -35,12 +35,13 @@ DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 
 # For tests:
 BUILD_DEPENDS+=	sqlite3>=0:../../databases/sqlite3
+BUILD_DEPENDS+=	p5-IPC-Cmd>=0:../../devel/p5-IPC-Cmd
 
 SUBST_CLASSES+=	sqlite3
 SUBST_MESSAGE.sqlite3=	Fixing sqlite3-using test
 SUBST_STAGE.sqlite3=	post-configure
 SUBST_FILES.sqlite3=	t/lib/MyDB.pm
-SUBST_SED.sqlite3=	-e "s!system(\"sqlite3!system(\"${PREFIX}/bin/sqlite3!"
+SUBST_SED.sqlite3=	-e "s!\"sqlite3!\"${PREFIX}/bin/sqlite3!"
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Rose/DBx/Garden/Catalyst/.packlist
