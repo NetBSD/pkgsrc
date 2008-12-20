@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/20 00:54:17 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/12/20 01:20:30 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -65,6 +65,7 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/f360_photo.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/f360_photo7_japan.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/f360_ultrachrome.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/f360_ultrachrome_k3.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/nx100.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/photo_gen0.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/photo_gen1.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/photo_gen2.xml
@@ -83,6 +84,8 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/standard.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/standard_gen0.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/ultrachrome.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/x80.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/wf40.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/inks/wf500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/b500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd_cutter_roll_feed.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots/cd_roll_feed.xml
@@ -129,6 +132,7 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/media/standard_gen0.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/r800.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/ultrachrome.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/media/x80.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/media/wf500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/mediasizes/standard.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_0.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_1.xml
@@ -222,6 +226,9 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_89.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_9.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_90.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_91.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_92.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_93.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_94.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_95.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/model/model_96.xml
 share/gutenprint/${INSTALLVERSION}/xml/papers.xml
@@ -230,11 +237,17 @@ share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/p1_5.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/picturemate.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/standard.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/v2880.xml
+share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets/wf40.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves/pro7000.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves/pro7500.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves/pro7600.xml
 share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves/standard.xml
+share/gutenprint/doc/AUTHORS
+share/gutenprint/doc/COPYING
+share/gutenprint/doc/ChangeLog
 share/gutenprint/doc/FAQ.html
+share/gutenprint/doc/NEWS
+share/gutenprint/doc/README
 share/gutenprint/doc/gutenprint-users-manual.odt
 share/gutenprint/doc/gutenprint-users-manual.pdf
 share/gutenprint/doc/gutenprint.pdf
