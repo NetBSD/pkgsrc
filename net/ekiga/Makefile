@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/11/13 23:45:47 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/20 20:29:42 jmcneill Exp $
 #
 
 DISTNAME=		ekiga-3.0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.0/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,8 +17,18 @@ USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 
-CONFIGURE_ARGS+=	--disable-avahi
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client:Q}
+
+PKG_OPTIONS_VAR=        PKG_OPTIONS.ekiga
+PKG_SUPPORTED_OPTIONS+= avahi
+PKG_SUGGESTED_OPTIONS+= avahi
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mavahi)
+.include "../../net/avahi/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-avahi
+.endif
 
 GCONF_SCHEMAS=		ekiga.schemas
 
