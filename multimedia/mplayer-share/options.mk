@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.33 2008/09/09 01:11:53 jmcneill Exp $
+# $NetBSD: options.mk,v 1.34 2008/12/20 00:43:47 jmcneill Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -25,7 +25,7 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	faadgroup
 PKG_OPTIONS_GROUP.faadgroup=	faad mplayer-internal-faad
 PKG_SUGGESTED_OPTIONS+=		mplayer-internal-faad
 
-PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas sdl
+PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas pulseaudio sdl
 
 .  if ${OPSYS} != "SunOS"
 PKG_SUPPORTED_OPTIONS+=	arts
@@ -76,7 +76,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 .for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
-	    nas oss png sdl theora vorbis x264 xvid
+	    nas oss pulseaudio png sdl theora vorbis x264 xvid
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
@@ -254,6 +254,13 @@ CONFIGURE_ARGS+=	--enable-png
 .  include "../../graphics/png/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-png
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--enable-polyp
+.  include "../../audio/pulseaudio/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-polyp
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
