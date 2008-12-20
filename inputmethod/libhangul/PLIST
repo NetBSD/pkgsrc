@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/20 19:42:21 minskim Exp $
-bin/hanjac
+@comment $NetBSD: PLIST,v 1.3 2008/12/20 22:59:59 minskim Exp $
 include/hangul-1.0/hangul.h
 lib/libhangul.la
-lib/libhangul/hanja/hanja.bin
+lib/libhangul/hanja/hanja.txt
 lib/pkgconfig/libhangul.pc
-share/libhangul/hanja/hanja.txt
-@dirrm share/libhangul/hanja
-@dirrm share/libhangul
-@dirrm lib/libhangul/hanja
 @dirrm lib/libhangul
 @dirrm include/hangul-1.0
