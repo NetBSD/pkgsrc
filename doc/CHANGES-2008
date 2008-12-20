@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3491 2008/12/20 20:27:30 he Exp $
+$NetBSD: CHANGES-2008,v 1.3492 2008/12/20 20:30:22 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5812,3 +5812,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-C3 to 0.20 [he 2008-12-20]
 	Updated devel/p5-Class-MOP to 0.73 [he 2008-12-20]
 	Updated devel/p5-Config-Any to 0.16 [he 2008-12-20]
+	Updated net/ekiga to 3.0.1nb3 [jmcneill 2008-12-20]
