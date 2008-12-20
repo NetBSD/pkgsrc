@@ -39,6 +39,10 @@
 
 #define	SLEEP_PERIOD	5
 
+#define _EXPOSE_MMC
+#include <sys/cdio.h>
+
+
 enum discstate {
 	DISC_INSERTED,
 	DISC_EJECTED,
@@ -207,6 +211,180 @@ close_device (int *fd)
 	}
 }
 
+
+/* XXX why not share this further */
+static char const *
+get_profile_typestring(int profile)
+{
+	switch (profile) {
+	case 0x00 : return "unknown";	  // "Unknown[0] profile";
+	case 0x01 : return "unknown";	  // "Non removeable disc";
+	case 0x02 : return "unknown";	  // "Removable disc";
+	case 0x03 : return "mo";	  // Magneto Optical with sector erase";
+	case 0x04 : return "mo";	  // "Magneto Optical write once";
+	case 0x05 : return "mo";	  // "Advance Storage Magneto Optical";
+	case 0x08 : return "cd_rom";	  // "CD-ROM"; no writing
+	case 0x09 : return "cd_r";	  // "CD-R recordable";
+	case 0x0a : return "cd_rw";	  // "CD-RW rewritable";
+	case 0x10 : return "dvd_rom";	  // "DVD-ROM"; no writing
+	case 0x11 : return "dvd_r";	  // "DVD-R sequential";
+	case 0x12 : return "dvd_ram";	  // "DVD-RAM rewritable";
+	case 0x13 : return "dvd_rw";	  // "DVD-RW restricted overwrite";
+	case 0x14 : return "dvd_rw";	  // "DVD-RW sequential";
+	case 0x15 : return "dvd_r";	  // "DVD-R dual layer sequential";
+	case 0x16 : return "dvd_r";	  // "DVD-R dual layer jump";
+	case 0x17 : return "dvd_rw";	  // "DVD-RW dual layer";
+	case 0x18 : return "unknown";	  // "DVD-Download disc"; UNKNOWN
+	case 0x1a : return "dvd_plus_rw"; // "DVD+RW rewritable";
+	case 0x1b : return "dvd_plus_r";  // "DVD+R recordable";
+	case 0x20 : return "ddcd_rom";	  // "DDCD readonly (retracted)"; no writing
+	case 0x21 : return "ddcd_r";	  // "DDCD-R recordable (retracted)";	OK?
+	case 0x22 : return "ddcd_rw";	  // "DDCD-RW rewritable (retracted)"; OK?
+	case 0x2a : return "dvd_plus_rw_dl";//"DVD+RW double layer";
+	case 0x2b : return "dvd_plus_r_dl";// "DVD+R double layer";
+	case 0x40 : return "bd_rom";	  // "BD-ROM";
+	case 0x41 : return "bd_r";	  // "BD-R Sequential Recording (SRM)";
+	case 0x42 : return "bd_r";	  // "BD-R Random Recording (RRM)";
+	case 0x43 : return "bd_re";	  // "BD-RE rewritable";
+	case 0x50 : return "hddvd_rom";	  // "HD DVD-ROM (retracted)";
+	case 0x51 : return "hddvd_r";	  // "HD DVD-R (retracted)";
+	case 0x52 : return "hddvd_ram";	  // "HD DVD-RAM (retracted)";
+	case 0x53 : return "hddvd_rw";	  // "HD DVD-RW (retracted)";
+	case 0x58 : return "hddvd_r_dl";  // "HD DVD-R dual layer (retracted)";
+	case 0x5a : return "hddvd_rw_dl"; // "HD DVD-RW dual layer (retracted)";
+	}
+	/* reserved */
+	return "unknown";
+}
+
+
+static void
+set_volume_properties(int fd, LibHalContext *ctx, char *udi, int state)
+{
+	struct mmc_discinfo  di;
+	struct mmc_trackinfo ti;
+	struct volume_id *vid;
+	DBusError error;
+	uint64_t capacity;
+	char const *disc_type;
+	char *disc_fstype, *disc_label;
+	int has_audio, has_data, is_vcd, is_svcd, is_videodvd, is_appendable, is_blank, is_rewritable;
+	int tracknr, err;
+
+	disc_fstype = "";
+	disc_label  = "";
+	disc_type   = "unknown";
+	has_audio = has_data = is_vcd = is_svcd = is_videodvd = is_appendable = is_blank = is_rewritable = 0;
+	capacity  = 0;
+
+	dbus_error_init (&error);
+	if (state == DISC_INSERTED) {
+		/* fetch new values */
+		memset(&di, 0, sizeof(struct mmc_discinfo));
+		err = ioctl(fd, MMCGETDISCINFO, &di);
+		if (!err) {
+			disc_type = get_profile_typestring(di.mmc_profile);
+			is_rewritable = di.mmc_cur & MMC_CAP_REWRITABLE;
+			is_blank      = (di.disc_state == MMC_STATE_EMPTY);
+			is_appendable = (di.disc_state != MMC_STATE_FULL);
+
+			/* can't check is_videodvd, is_svcd, is_vcd (yet); use volume lib */
+			disc_fstype = "cd9660";
+			disc_label  = "label";
+vid = NULL;
+#if 0
+			vid = volume_id_open_fd (fd);
+			if (vid) {
+				if (volume_id_probe_all (vid, 0, psize) == 0) {
+					hal_device_property_set_string (d, "volume.label", vid->label);
+					hal_device_property_set_string (d, "volume.partition.label", vid->label);
+					hal_device_property_set_string (d, "volume.uuid", vid->uuid);
+					hal_device_property_set_string (d, "volume.partition.uuid", vid->uuid);
+				}
+				volume_id_close (vid);
+			}
+#endif
+			for (tracknr = di.first_track; tracknr <= di.last_track_last_session; tracknr++) {
+				memset(&ti, 0, sizeof(struct mmc_trackinfo));
+				ti.tracknr = tracknr;
+				err = ioctl(fd, MMCGETTRACKINFO, &ti);
+				if (err)
+					break;
+				if (!(ti.flags & MMC_TRACKINFO_BLANK)) {
+					if (ti.flags & MMC_TRACKINFO_DATA)
+						has_data = TRUE;
+					if (ti.flags & MMC_TRACKINFO_AUDIO)
+						has_audio = TRUE;
+				}
+				capacity += (ti.track_size + ti.free_blocks) * di.sector_size;
+			}
+		}
+	}
+
+	/* add volume properties (ignoring dbus errors) */
+	libhal_device_set_property_bool   (ctx, udi, "volume.ignore", FALSE, &error);		/* make visible */
+	libhal_device_set_property_bool   (ctx, udi, "volume.ismounted", FALSE, &error);	/* XXX fixme XXX */
+	libhal_device_set_property_bool   (ctx, udi, "volume.ismounted_readonly", FALSE, &error);	/* XXX fixme XXX */
+	libhal_device_set_property_string (ctx, udi, "volume.fsusage", "filesystem", &error);
+	libhal_device_set_property_string (ctx, udi, "volume.fstype",  disc_fstype, &error);
+	libhal_device_set_property_string (ctx, udi, "volume.label", disc_label, &error);
+	libhal_device_set_property_string (ctx, udi, "volume.uuid", "", &error);
+	libhal_device_set_property_uint64 (ctx, udi, "volume.size", capacity, &error);
+
+	/* add volume.disc properties (ignoring dbus errors) */
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.has_audio", has_audio, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.has_data", has_data, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_vcd", is_vcd, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_svcd", is_svcd, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_videodvd", is_videodvd, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_appendable", is_appendable, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_blank", is_blank, &error);
+	libhal_device_set_property_bool   (ctx, udi, "volume.disc.is_rewritable", is_rewritable, &error);
+
+	libhal_device_set_property_string (ctx, udi, "volume.disc.type", disc_type, &error);
+	libhal_device_set_property_uint64 (ctx, udi, "volume.disc.capacity", capacity, &error);
+
+	my_dbus_error_free (&error);
+}
+
+
+static void 
+update_disc_volume_properties(int fd, LibHalContext *ctx, const char *udi, int state)
+{
+	DBusError error;
+	char **volumes;
+	char *vol_udi;
+	int num_volumes, i;
+
+	dbus_error_init (&error);
+
+	/* update volume children */
+	if ((volumes = libhal_manager_find_device_string_match (
+	     ctx, "info.parent", udi, &num_volumes, &error)) != NULL) {
+		dbus_error_free (&error);
+
+		for (i = 0; i < num_volumes; i++) {
+			vol_udi = volumes[i];
+			if (libhal_device_get_property_bool (ctx, vol_udi, "block.is_volume", &error)) {
+				dbus_error_free (&error);
+				HAL_DEBUG(("Updating child %s of %s\n", udi, vol_udi));
+				set_volume_properties(fd, ctx, vol_udi, state);
+
+#if 0
+				if (libhal_device_get_property_bool (ctx, vol_udi, "volume.is_mounted", &error)) {
+					dbus_error_free (&error);
+					HAL_DEBUG (("Forcing unmount of child '%s'", vol_udi));
+					force_unmount (ctx, vol_udi);
+				}
+#endif
+			}
+		}
+		libhal_free_string_array (volumes);
+	}
+	my_dbus_error_free (&error);
+}
+
+
 int 
 main (int argc, char *argv[])
 {
@@ -275,6 +453,8 @@ main (int argc, char *argv[])
 
 			if (state == last_state) {
 				HAL_DEBUG (("state has not changed %d %s", state, device_file));
+				/* TODO check if eject button was pressed */
+				/* see linux addons/addon-storage.c */
 				continue;
 			} else {
 				HAL_DEBUG (("new state %d %s", state, device_file));
@@ -291,6 +471,8 @@ main (int argc, char *argv[])
 				/* attempt to unmount all childs */
 				unmount_childs (ctx, udi);
 
+				update_disc_volume_properties(fd, ctx, udi, state);
+
 				/* could have a fs on the main block device; do a rescan to remove it */
 				libhal_device_rescan (ctx, udi, &error);
 				my_dbus_error_free (&error);
@@ -302,6 +484,8 @@ main (int argc, char *argv[])
 
 				libhal_device_set_property_bool (ctx, udi, "storage.removable.media_available", TRUE, &error);
 				my_dbus_error_free (&error);
+
+				update_disc_volume_properties(fd, ctx, udi, state);
 
 				/* could have a fs on the main block device; do a rescan to add it */
 				libhal_device_rescan (ctx, udi, &error);
