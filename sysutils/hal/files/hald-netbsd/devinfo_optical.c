@@ -55,6 +55,7 @@
 
 #define	DEVINFO_PROBE_STORAGE_TIMEOUT   60000
 static HalDevice *devinfo_optical_add(HalDevice *, const char *, char *,char *);
+static HalDevice *devinfo_optical_volume_add(HalDevice *, const char *, char *, char *);
 
 
 static const gchar *
@@ -83,8 +84,18 @@ DevinfoDevHandler devinfo_optical_handler = {
 };
 
 
+DevinfoDevHandler devinfo_optical_volume_handler = {
+        devinfo_optical_volume_add,
+	NULL,	/* remove */
+	NULL,	/* hotplug_begin_add */
+	NULL,	/* hotplug_begin_remove */
+	NULL,	/* probing_done */
+        NULL /* devinfo_storage_get_prober */	/* get_prober */
+};
+
+
 /* XXX i dont know how to link cdutils here XXX ! */
-bool
+static bool
 scsi_command (int fd, void *cmd, size_t cmdlen, void *data, size_t datalen,
     int timeout, int flags)
 {
@@ -315,10 +326,10 @@ devinfo_optical_disc_caps(int fd, HalDevice *d)
 	 * XXX very rare to now have multi-session support; could be detected
 	 * in the change bits of page 5, but set to true for now
 	 */
-	hal_device_property_set_bool(d,"storage.cdrom.support_multisession", TRUE);
+	hal_device_property_set_bool(d, "storage.cdrom.support_multisession", TRUE);
 
 	/* XXX realy? */
-	hal_device_property_set_bool(d,"storage.cdrom.support_media_changed", TRUE);
+	hal_device_property_set_bool(d, "storage.cdrom.support_media_changed", TRUE);
 
 	/* media dependent; addon-storage will handle these */
 	//hal_device_property_set_int(d,"storage.cdrom.read_speed", 0);
@@ -328,6 +339,60 @@ devinfo_optical_disc_caps(int fd, HalDevice *d)
 }
 #undef max_profile
 #undef feat_tbl_len
+
+
+static HalDevice *
+devinfo_optical_volume_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
+{
+	HalDevice *d;
+	struct stat devstat;
+	char *devstr;
+	int error;
+
+	HAL_INFO (("devinfo_optical_volume_add: parent=%p devnode=%s devfs_path=%s device_type=%s",
+	    parent, devnode, devfs_path, device_type));
+
+	d = hal_device_new ();
+
+	devstr = malloc(strlen(devnode) + 10);
+
+	/* info */
+	devinfo_set_default_properties (d, parent, devnode, devnode);
+	hal_device_add_capability (d, "block");
+	hal_device_add_capability (d, "volume");
+	hal_device_add_capability (d, "volume.disc");
+
+	/* block */
+	sprintf(devstr, "/dev/%s", devnode);
+        hal_device_property_set_string (d, "block.device", devstr);
+	error = stat(devstr, &devstat);
+	if (!error) {
+	        hal_device_property_set_int (d, "block.major", major(devstat.st_rdev));
+	        hal_device_property_set_int (d, "block.minor", minor(devstat.st_rdev));
+	}
+	sprintf(devstr, "/dev/r%s", devnode);
+        hal_device_property_set_string (d, "block.netbsd.raw_device", devstr);
+
+        hal_device_property_set_bool (d, "block.is_volume", TRUE);
+        hal_device_property_set_bool (d, "block.no_partitions", TRUE);
+        hal_device_property_set_bool (d, "block.have_scanned", TRUE);
+
+	/* volume */
+	hal_device_property_set_bool  (d, "volume.ignore", FALSE);
+	hal_device_property_set_string(d, "volume.fsusage", "filesytem");
+	hal_device_property_set_string(d, "volume.fstype",  "");
+	hal_device_property_set_string(d, "volume.label",   "");
+	hal_device_property_set_bool  (d, "volume.is_disc", TRUE);
+	hal_device_property_set_bool  (d, "volume.is_partition", FALSE);
+	/* rest by addon */
+
+	/* volume.disc */
+	/* by addon */
+
+	devinfo_add_enqueue (d, devnode, &devinfo_optical_volume_handler);
+
+	return d;
+}
 
 
 static HalDevice *
@@ -387,6 +452,7 @@ devinfo_optical_add(HalDevice *parent, const char *devnode, char *devfs_path, ch
 	hal_device_property_set_bool (d, "storage.removable", TRUE);
 	/* "storage.removable.media_available" set by addon-storage */
 	/* "storage.removable.media_size" set by addon-storage */
+	hal_device_property_set_bool (d, "storage.removable.support_async_notification", FALSE);
 	hal_device_property_set_bool (d, "storage.requires_eject", TRUE);
 	hal_device_property_set_bool (d, "storage.hotpluggable", TRUE);
 	hal_device_property_set_bool (d, "storage.media_check_enabled", TRUE);	   /* XXX */
@@ -401,10 +467,15 @@ devinfo_optical_add(HalDevice *parent, const char *devnode, char *devfs_path, ch
 
 		/* get CD specific `storage.cdrom' values */
 		devinfo_optical_disc_caps(fd, d);
+
+	}
+	devinfo_add_enqueue (d, devnode, &devinfo_optical_handler);
+	if (fd) {
+		/* create CD volume node */
+		sprintf(devstr, "%s%c", devnode, 'a' + RAW_PART);
+		devinfo_optical_volume_add(d, devstr, devfs_path, "volume");
 	}
 	close(fd);
-
-	devinfo_add_enqueue (d, devnode, &devinfo_optical_handler);
 
 	return (d);
 }

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3481 2008/12/20 14:43:10 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3482 2008/12/20 16:24:56 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5795,3 +5795,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_chk to 1.96 [abs 2008-12-20]
 	Updated devel/cpuflags to 1.27 [abs 2008-12-20]
 	Updated lang/pear to 1.5.4nb3 [adrianp 2008-12-20]
+	Updated sysutils/hal to 0.5.11nb16 [reinoud 2008-12-20]
+
