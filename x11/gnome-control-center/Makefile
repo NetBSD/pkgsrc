@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/11/27 18:14:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.20 2008/12/20 01:08:57 jmcneill Exp $
 #
 
 DISTNAME=	gnome-control-center-2.24.0.1
@@ -72,7 +72,6 @@ post-patch:
 	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
 	done
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
