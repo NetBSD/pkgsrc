@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.21 2008/09/09 12:07:45 jmcneill Exp $
+$NetBSD: patch-aa,v 1.22 2008/12/20 00:43:47 jmcneill Exp $
 
 --- configure.orig	2007-10-07 15:49:33.000000000 -0400
-+++ configure	2008-09-08 20:58:52.000000000 -0400
++++ configure	2008-12-19 19:29:30.000000000 -0500
 @@ -718,7 +718,7 @@
      _inc_extra=-I`echo $ac_option | cut -d '=' -f 2 | sed 's,:, -I,g'`
      ;;
@@ -64,6 +64,38 @@ $NetBSD: patch-aa,v 1.21 2008/09/09 12:07:45 jmcneill Exp $
    fi
    _vosrc="$_vosrc vo_aa.c"
    _vomodules="aa $_vomodules"
+@@ -5100,15 +5103,15 @@
+ echocheck "Polyp"
+ if test "$_polyp" = auto ; then
+   _polyp=no
+-  if $_pkg_config --exists 'polyplib >= 0.6 polyplib-error >= 0.6 polyplib-mainloop >= 0.6' ; then
++  if $_pkg_config --exists 'libpulse >= 0.9 libpulse-simple >= 0.9 libpulse-mainloop-glib >= 0.9' ; then
+ 
+ cat > $TMPC << EOF
+-#include <polyp/polyplib.h>
+-#include <polyp/mainloop.h>
+-#include <polyp/polyplib-error.h>
++#include <pulse/pulseaudio.h>
++#include <pulse/mainloop.h>
++#include <pulse/error.h>
+ int main(void) { return 0; }
+ EOF
+-cc_check `$_pkg_config --libs --cflags polyplib polyplib-error polyplib-mainloop` && tmp_run && _polyp=yes
++cc_check `$_pkg_config --libs --cflags libpulse libpulse-simple libpulse-mainloop-glib` && tmp_run && _polyp=yes
+ 
+   fi
+ fi
+@@ -5118,8 +5121,8 @@
+   _def_polyp='#define USE_POLYP 1'
+   _aosrc="$_aosrc ao_polyp.c"
+   _aomodules="polyp $_aomodules"
+-  _libs_mplayer="$_libs_mplayer `$_pkg_config --libs polyplib polyplib-error polyplib-mainloop`"
+-  _inc_extra="$_inc_extra `$_pkg_config --cflags polyplib polyplib-error polyplib-mainloop`"
++  _libs_mplayer="$_libs_mplayer `$_pkg_config --libs libpulse libpulse-simple libpulse-mainloop-glib`"
++  _inc_extra="$_inc_extra `$_pkg_config --cflags libpulse libpulse-simple libpulse-mainloop-glib`"
+ else
+   _def_polyp='#undef USE_POLYP'
+   _noaomodules="polyp $_noaomodules"
 @@ -6837,11 +6840,16 @@
  echocheck "Video 4 Linux 2 TV interface"
  if test "$_tv_v4l2" = auto ; then
