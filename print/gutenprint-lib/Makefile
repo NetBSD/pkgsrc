@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:11 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/20 00:54:17 gdt Exp $
 
-VERSION=	5.0.2
+VERSION=	5.2.2
 DISTNAME=	gutenprint-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 
 MAINTAINER=	gdt@NetBSD.org
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
 HOMEPAGE=	http://gutenprint.sourceforge.net/
+
+INSTALLVERSION=	5.2
+PLIST_SUBST+=	INSTALLVERSION=${INSTALLVERSION}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,7 +23,7 @@ USE_TOOLS+=		gmake lex pkg-config perl:run
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 
-USE_LANGUAGES+=		c99 c++
+USE_LANGUAGES+=		c99
 # gcc 3.3.3 either can't compile this, or needs huge amounts of RAM (0.5G+).
 # Observed on NetBSD/i386 3 and confirmed with upstream.  Apparently it's
 # just 3.3.3 - there are no known issues with 2.95.
@@ -86,8 +88,7 @@ CONFIGURE_ARGS+=	--without-readline
 #CONFIGURE_ARGS+=	--disable-test
 #CONFIGURE_ARGS+=	--disable-testpattern
 
-# iconv?
-
+# A libintl is optional in gutenprint.
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 # gutenprint-gimp: gimp plugin
