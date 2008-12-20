@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.144 2008/12/08 13:34:46 tron Exp $
+# $NetBSD: Makefile,v 1.145 2008/12/20 13:08:00 joerg Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
-PKGREVISION=	3
+PKGREVISION=	4
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -170,6 +170,7 @@ LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
+LIBSWANTED.AIX=		m crypt dl socket nsl bind c
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 
 # Nail down the directories in which the system libraries may be found.
@@ -183,6 +184,7 @@ SYSLIBPATH.Interix=	/usr/lib
 SYSLIBPATH.NetBSD=	/usr/lib
 SYSLIBPATH.OpenBSD=	/usr/lib
 SYSLIBPATH.SunOS=	/usr/lib
+SYSLIBPATH.AIX=		/usr/lib
 SYSLIBPATH=		${SYSLIBPATH.${OPSYS}}
 
 # Nail down the directories in which headers and libraries of
@@ -197,8 +199,12 @@ LOCINCPATH=		${LOCALBASE}/include
 #
 .if ${OBJECT_FMT} == "a.out"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
-.elif ${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "XCOFF"
+.elif ${OBJECT_FMT} == "ELF"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
+.elif ${OBJECT_FMT} == "XCOFF"
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g} \
+	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/perl5/${PKGVERSION_NOREV}/${MACHINE_ARCH}-${LOWER_OPSYS}${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-64all/CORE \
+	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/perl5/${PKGVERSION_NOREV}/${MACHINE_ARCH}-${LOWER_OPSYS}${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-all/CORE
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
