@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/10/25 00:11:13 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/12/20 20:52:27 reed Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -13,7 +13,9 @@ COMMENT=		File properties plugin for evince files
 INSTALL_DIRS=		properties
 
 BUILDLINK_DEPMETHOD.libXt?=	build
+BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
 
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
