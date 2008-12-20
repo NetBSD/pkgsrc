@@ -1,0 +1,84 @@
+$NetBSD: patch-ab,v 1.1 2008/12/20 16:12:47 he Exp $
+
+--- t/rdgc.sql.orig	2008-09-14 07:03:34.000000000 +0200
++++ t/rdgc.sql
+@@ -1,6 +1,6 @@
+ /* SQL supplied by laust_frederiksen@hotmail.com */
+ 
+-drop table addresses;
++/* drop table addresses; */
+ create table addresses
+ (
+     id           serial primary key,
+@@ -10,7 +10,7 @@ create table addresses
+     name4        char(40)
+ );
+ 
+-drop table suppliers;
++/* drop table suppliers; */
+ create table suppliers 
+ (
+     id          serial primary key,
+@@ -21,7 +21,7 @@ create table suppliers 
+ 
+ create unique index suppliers_name on suppliers(name);
+ 
+-drop table manufacturers;
++/* drop table manufacturers; */
+ create table manufacturers
+ (
+     id          serial primary key,
+@@ -32,7 +32,7 @@ create table manufacturers
+ 
+ create unique index manufacturers_name on manufacturers(name);
+ 
+-drop table products;
++/* drop table products; */
+ create table products
+ (
+     id              serial primary key,
+@@ -45,7 +45,7 @@ create table products
+ 
+ create unique index products_manufacturer_name on products(manufacturer,name);
+ 
+-drop table locations;
++/* drop table locations; */
+ create table locations
+ (
+     id          serial primary key,
+@@ -56,7 +56,7 @@ create table locations
+ 
+ create unique index locations_name on locations(name);
+ 
+-drop table stocks;
++/* drop table stocks; */
+ create table stocks
+ (
+     id          serial primary key,
+@@ -69,7 +69,7 @@ create table stocks
+ 
+ create unique index stocks_location_product on stocks(location,product);
+ 
+-drop table customers;
++/* drop table customers; */
+ create table customers
+ (
+     id          integer    auto increment not null,
+@@ -80,7 +80,7 @@ create table customers
+ 
+ create unique index customers_name on customers(name);
+ 
+-drop table invoices;
++/* drop table invoices; */
+ create table invoices
+ (
+     id          integer auto increment not null,
+@@ -92,7 +92,7 @@ create table invoices
+     foreign key (address) references addresses (id)
+ );
+ 
+-drop table lines;
++/* drop table lines; */
+ create table lines
+ (
+     id          serial primary key,
