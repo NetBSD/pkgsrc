@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 14:42:56 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/20 18:23:56 jmcneill Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -138,6 +138,13 @@ share/locale/de/LC_MESSAGES/pulseaudio.mo
 share/locale/el/LC_MESSAGES/pulseaudio.mo
 share/locale/fr/LC_MESSAGES/pulseaudio.mo
 share/locale/sv/LC_MESSAGES/pulseaudio.mo
+${PLIST.avahi}bin/pabrowse
+${PLIST.avahi}include/pulse/browser.h
+${PLIST.avahi}lib/libpulse-browse.la
+${PLIST.avahi}lib/pkgconfig/libpulse-browse.pc
+${PLIST.avahi}lib/pulse-0.9/modules/libavahi-wrap.so
+${PLIST.avahi}lib/pulse-0.9/modules/module-zeroconf-discover.so
+${PLIST.avahi}lib/pulse-0.9/modules/module-zeroconf-publish.so
 @dirrm libexec/pulse
 @dirrm lib/pulse-0.9/modules
 @dirrm lib/pulse-0.9

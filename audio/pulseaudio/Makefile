@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/12/20 16:50:38 ahoka Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/20 18:23:56 jmcneill Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -15,6 +15,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake msgfmt intltool perl \
 		autoconf automake
 USE_DIRS+=	xdg-1.4
+
+PKG_OPTIONS_VAR=	pulseaudio
+PKG_SUPPORTED_OPTIONS=	avahi
+PKG_SUGGESTED_OPTIONS=	avahi
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+.include "../../mk/bsd.options.mk"
 
 PKGCONFIG_OVERRIDE+=	libpulse-browse.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
@@ -71,6 +77,14 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .  if empty(CC_VERSION:Mgcc-4.[1-9]*) && empty(CC_VERSION:Mgcc-[5-9]*) 
 .    include "../../devel/libatomic_ops/buildlink3.mk"
 .  endif
+.endif
+
+# avahi support
+.if !empty(PKG_OPTIONS:Mavahi)
+.include "../../net/avahi/buildlink3.mk"
+PLIST.avahi=		yes
+.else
+CONFIGURE_ARGS+=	--disable-avahi
 .endif
 
 pre-configure:
