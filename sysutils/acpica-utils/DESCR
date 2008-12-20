@@ -1,5 +1,6 @@
 This package provides the ACPICA user-space utilities built upon
-the same kernel code. The following utilities are provided:
+the same kernel code. The ACPI Component Architecture is used for
+managing hardware and events. The following utilities are provided:
 
     * ASL Compiler & Disassembler
     * ACPI Simulator (AcpiExec)
