@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2008/06/04 08:54:40 markd Exp $
+# $NetBSD: Makefile,v 1.58 2008/12/20 02:59:03 obache Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
@@ -33,6 +33,8 @@ MANCOMPRESSED=		yes
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
 RCD_SCRIPTS=	hylafax
+
+MAKE_JOBS_SAFE=	NO
 
 INSTALLATION_DIRS=	libdata/hylafax
 
