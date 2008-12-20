@@ -1,0 +1,125 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+bin/avahi-browse
+bin/avahi-browse-domains
+bin/avahi-discover-standalone
+bin/avahi-publish
+bin/avahi-publish-address
+bin/avahi-publish-service
+bin/avahi-resolve
+bin/avahi-resolve-address
+bin/avahi-resolve-host-name
+bin/avahi-set-host-name
+bin/bshell
+bin/bssh
+bin/bvnc
+include/avahi-client/client.h
+include/avahi-client/lookup.h
+include/avahi-client/publish.h
+include/avahi-common/address.h
+include/avahi-common/alternative.h
+include/avahi-common/cdecl.h
+include/avahi-common/defs.h
+include/avahi-common/domain.h
+include/avahi-common/error.h
+include/avahi-common/gccmacro.h
+include/avahi-common/llist.h
+include/avahi-common/malloc.h
+include/avahi-common/rlist.h
+include/avahi-common/simple-watch.h
+include/avahi-common/strlst.h
+include/avahi-common/thread-watch.h
+include/avahi-common/timeval.h
+include/avahi-common/watch.h
+include/avahi-core/core.h
+include/avahi-core/log.h
+include/avahi-core/lookup.h
+include/avahi-core/publish.h
+include/avahi-core/rr.h
+include/avahi-glib/glib-malloc.h
+include/avahi-glib/glib-watch.h
+include/avahi-gobject/ga-client.h
+include/avahi-gobject/ga-entry-group.h
+include/avahi-gobject/ga-enums.h
+include/avahi-gobject/ga-error.h
+include/avahi-gobject/ga-record-browser.h
+include/avahi-gobject/ga-service-browser.h
+include/avahi-gobject/ga-service-resolver.h
+include/avahi-ui/avahi-ui.h
+lib/libavahi-client.la
+lib/libavahi-common.la
+lib/libavahi-core.la
+lib/libavahi-glib.la
+lib/libavahi-gobject.la
+lib/libavahi-ui.la
+lib/pkgconfig/avahi-client.pc
+lib/pkgconfig/avahi-core.pc
+lib/pkgconfig/avahi-glib.pc
+lib/pkgconfig/avahi-gobject.pc
+lib/pkgconfig/avahi-ui.pc
+man/man1/avahi-browse-domains.1
+man/man1/avahi-browse.1
+man/man1/avahi-publish-address.1
+man/man1/avahi-publish-service.1
+man/man1/avahi-publish.1
+man/man1/avahi-resolve-address.1
+man/man1/avahi-resolve-host-name.1
+man/man1/avahi-resolve.1
+man/man1/avahi-set-host-name.1
+man/man1/bssh.1
+man/man1/bvnc.1
+man/man5/avahi-daemon.conf.5
+man/man5/avahi.hosts.5
+man/man5/avahi.service.5
+man/man8/avahi-daemon.8
+man/man8/avahi-dnsconfd.8
+man/man8/avahi-dnsconfd.action.8
+sbin/avahi-daemon
+sbin/avahi-dnsconfd
+share/applications/bssh.desktop
+share/applications/bvnc.desktop
+share/avahi/avahi-service.dtd
+share/avahi/interfaces/avahi-discover.glade
+share/avahi/introspection/AddressResolver.introspect
+share/avahi/introspection/DomainBrowser.introspect
+share/avahi/introspection/EntryGroup.introspect
+share/avahi/introspection/HostNameResolver.introspect
+share/avahi/introspection/RecordBrowser.introspect
+share/avahi/introspection/Server.introspect
+share/avahi/introspection/ServiceBrowser.introspect
+share/avahi/introspection/ServiceResolver.introspect
+share/avahi/introspection/ServiceTypeBrowser.introspect
+share/avahi/service-types
+share/doc/avahi/HACKING
+share/doc/avahi/INSTALL
+share/doc/avahi/NEWS
+share/doc/avahi/README
+share/doc/avahi/TODO
+share/examples/avahi/avahi-daemon.conf
+share/examples/avahi/avahi-dbus.conf
+share/examples/avahi/avahi-dnsconfd.action
+share/examples/avahi/hosts
+share/examples/avahi/ssh.service
+share/examples/rc.d/avahidaemon
+share/locale/de/LC_MESSAGES/avahi.mo
+share/locale/en_AU/LC_MESSAGES/avahi.mo
+share/locale/en_CA/LC_MESSAGES/avahi.mo
+share/locale/en_GB/LC_MESSAGES/avahi.mo
+share/locale/en_NZ/LC_MESSAGES/avahi.mo
+share/locale/fr/LC_MESSAGES/avahi.mo
+share/locale/it/LC_MESSAGES/avahi.mo
+share/locale/pl/LC_MESSAGES/avahi.mo
+share/locale/pt_BR/LC_MESSAGES/avahi.mo
+share/locale/ru/LC_MESSAGES/avahi.mo
+share/locale/sr/LC_MESSAGES/avahi.mo
+share/locale/sr@latin/LC_MESSAGES/avahi.mo
+share/locale/zh_CN/LC_MESSAGES/avahi.mo
+@dirrm share/doc/avahi
+@dirrm share/avahi/introspection
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm include/avahi-ui
+@dirrm include/avahi-gobject
+@dirrm include/avahi-glib
+@dirrm include/avahi-core
+@dirrm include/avahi-common
+@dirrm include/avahi-client
+@comment in dbus: @dirrm etc/dbus-1/system.d
