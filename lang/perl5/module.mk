@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.56 2007/11/18 21:44:56 minskim Exp $
+# $NetBSD: module.mk,v 1.57 2008/12/20 13:08:00 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -45,13 +45,6 @@ PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TY
 TEST_TARGET?=		test
 
 .include "../../mk/compiler.mk"
-
-# see http://mail-index.netbsd.org/tech-pkg/2007/04/20/0004.html
-.if ${OPSYS} == "AIX"
-.  if !empty(CC_VERSION:Mgcc*)
-BROKEN=		Perl does not like building with GCC on AIX, please use a different compiler
-.  endif
-.endif
 
 .if ${PERL5_MODULE_TYPE} == "Module::Build"
 _PERL5_MODTYPE=		modbuild
