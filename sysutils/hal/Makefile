@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/12/20 16:23:26 reinoud Exp $
+# $NetBSD: Makefile,v 1.25 2008/12/20 21:11:05 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -58,6 +58,10 @@ PLIST_SRC=		PLIST
 CONFIGURE_ARGS+=	--with-backend=linux
 .endif
 
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
+.endif
+
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
@@ -69,6 +73,7 @@ HAL_USER?=		haldaemon
 HAL_GROUP?=		haldaemon
 CONFIGURE_ARGS+=	--with-hal-user=${HAL_USER}
 CONFIGURE_ARGS+=	--with-hal-group=${HAL_GROUP}
+CONFIGURE_ARGS+=	--disable-pmu
 
 RCD_SCRIPTS=		hal
 
@@ -96,4 +101,5 @@ pre-configure:
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/hal-info/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

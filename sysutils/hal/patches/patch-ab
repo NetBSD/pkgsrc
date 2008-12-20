@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
+$NetBSD: patch-ab,v 1.3 2008/12/20 21:11:05 jmcneill Exp $
 
 --- tools/hal-storage-shared.c.orig	2008-05-08 02:24:24 +0300
 +++ tools/hal-storage-shared.c	2008-11-23 13:38:53 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  #include <glib.h>
  #include <glib/gstdio.h>
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  #include <fstab.h>
  #include <sys/param.h>
  #include <sys/ucred.h>
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  #include "hal-storage-shared.h"
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  struct mtab_handle
  {
    struct statfs	*mounts;
@@ -48,7 +48,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  mtab_open (gpointer *handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	struct mtab_handle *mtab;
  
  	mtab = g_new0 (struct mtab_handle, 1);
@@ -57,7 +57,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  mtab_next (gpointer handle, char **mount_point)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	struct mtab_handle *mtab = handle;
  
  	if (mtab->iter < mtab->n_mounts) {
@@ -66,7 +66,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  mtab_close (gpointer handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	g_free (handle);
  #else
  	fclose (handle);
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  fstab_open (gpointer *handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	return setfsent () == 1;
  #elif sun
  	*handle = fopen (VFSTAB, "r");
@@ -84,7 +84,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  fstab_next (gpointer handle, char **mount_point)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	struct fstab *fstab;
  
  	fstab = getfsent ();
@@ -93,7 +93,7 @@ $NetBSD: patch-ab,v 1.2 2008/11/23 21:50:51 hasso Exp $
  fstab_close (gpointer handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  	endfsent ();
  #else
  	fclose (handle);
