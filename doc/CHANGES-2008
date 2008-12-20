@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3492 2008/12/20 20:30:22 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3493 2008/12/20 20:48:13 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5813,3 +5813,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-MOP to 0.73 [he 2008-12-20]
 	Updated devel/p5-Config-Any to 0.16 [he 2008-12-20]
 	Updated net/ekiga to 3.0.1nb3 [jmcneill 2008-12-20]
+	Updated editors/vim-share to 7.2.69 [martti 2008-12-20]
