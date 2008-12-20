@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/12/20 11:00:43 ahoka Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/20 16:10:25 ahoka Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -12,7 +12,8 @@ COMMENT=	Sound server for POSIX and Win32 systems
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake msgfmt intltool perl
+USE_TOOLS+=	pkg-config gmake msgfmt intltool perl \
+		autoconf automake
 USE_DIRS+=	xdg-1.4
 
 PKGCONFIG_OVERRIDE+=	libpulse-browse.pc.in
@@ -61,10 +62,19 @@ PKG_USERS=              ${PULSE_USER}:${PULSE_GROUP}
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 
 # Needs libatomic_ops if the compiler is not >=GCC4.1
-.include "../../mk/compiler.mk"
-.if empty(CC_VERSION:Mgcc-4.[1-9]*) && empty(CC_VERSION:Mgcc-[5-9]*) 
-.  include "../../devel/libatomic_ops/buildlink3.mk"
+# We can use native atomic operation on 5.0 and newer.
+#
+.if exists(/include/sys/atomic.h)	# NetBSD >=5.0
+   CONFIGURE_ARGS+=	--enable-netbsd-atomic-ops
+.else					# NetBSD <5.0 and other OS
+.  include "../../mk/compiler.mk"
+.  if empty(CC_VERSION:Mgcc-4.[1-9]*) && empty(CC_VERSION:Mgcc-[5-9]*) 
+.    include "../../devel/libatomic_ops/buildlink3.mk"
+.  endif
 .endif
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -f
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
