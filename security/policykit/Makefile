@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/11/26 08:22:24 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/20 19:44:00 jmcneill Exp $
 #
 
 POLICYKIT_VER=		0.9
@@ -50,6 +50,10 @@ CONFIGURE_ARGS+=	--with-polkit-group=${POLICYKIT_GROUP}
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/PolicyKit.conf.NetBSD ${DESTDIR}${EGDIR}/PolicyKit.conf
+.endif
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
