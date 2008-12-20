@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/11/02 23:34:14 he Exp $
+$NetBSD: distinfo,v 1.3 2008/12/20 21:27:17 he Exp $
 
-SHA1 (Devel-Declare-0.003003.tar.gz) = b3672a68d7e165aa6ad4fc437c52639a3253dd0a
-RMD160 (Devel-Declare-0.003003.tar.gz) = 2d5260b5c4a7e4e02decaf24b6d2292889451cda
-Size (Devel-Declare-0.003003.tar.gz) = 33214 bytes
+SHA1 (Devel-Declare-0.003004.tar.gz) = 72e29ba1df784e2e8204b8af53e9bad4d48737e7
+RMD160 (Devel-Declare-0.003004.tar.gz) = a60b9103e65eab214ce7dd48162e79dcbc2718c7
+Size (Devel-Declare-0.003004.tar.gz) = 34716 bytes
 SHA1 (patch-aa) = c6772df05f1fbadb375ae9b15d288295053a377a
