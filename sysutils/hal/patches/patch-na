@@ -1,7 +1,7 @@
-$NetBSD: patch-na,v 1.2 2008/11/27 03:32:19 jmcneill Exp $
+$NetBSD: patch-na,v 1.3 2008/12/20 21:11:05 jmcneill Exp $
 
 --- configure.in.orig	2008-05-07 19:24:31.000000000 -0400
-+++ configure.in	2008-11-26 21:32:46.000000000 -0500
++++ configure.in	2008-12-20 15:28:11.000000000 -0500
 @@ -448,7 +448,7 @@
  
  AC_ARG_WITH([backend],
@@ -29,7 +29,16 @@ $NetBSD: patch-na,v 1.2 2008/11/27 03:32:19 jmcneill Exp $
  AC_SUBST(HALD_BACKEND)
  
  dnl DBUS API is subject to changes
-@@ -1004,6 +1008,9 @@
+@@ -644,6 +648,8 @@
+ case "$host" in
+ *-*-solaris*)
+ 	;;
++*-*-darwin*)
++	;;
+ *)
+ 	PKG_CHECK_MODULES(VOLUME_ID, [$volume_id_module])
+ 	AC_SUBST(VOLUME_ID_CFLAGS)
+@@ -1004,6 +1010,9 @@
  hald/solaris/Makefile
  hald/solaris/probing/Makefile
  hald/solaris/addons/Makefile
@@ -39,7 +48,7 @@ $NetBSD: patch-na,v 1.2 2008/11/27 03:32:19 jmcneill Exp $
  hald/freebsd/Makefile
  hald/freebsd/probing/Makefile
  hald/freebsd/libprobe/Makefile
-@@ -1014,6 +1021,7 @@
+@@ -1014,6 +1023,7 @@
  tools/Makefile
  tools/freebsd/Makefile
  tools/linux/Makefile
