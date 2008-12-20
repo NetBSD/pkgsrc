@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3478 2008/12/20 09:27:59 hira Exp $
+$NetBSD: CHANGES-2008,v 1.3479 2008/12/20 09:51:33 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5792,3 +5792,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed print/gutenprint51-lib successor print/gutenprint-lib [gdt 2008-12-20]
 	Updated inputmethod/nabi to 0.99.3 [minskim 2008-12-20]
 	Updated sysutils/xfce4-battery-plugin to 0.5.1nb1 [hira 2008-12-20]
+	Updated pkgtools/pkg_chk to 1.96 [abs 2008-12-20]
