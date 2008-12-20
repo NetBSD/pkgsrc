@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/20 01:20:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/12/20 15:57:02 gdt Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -276,29 +276,49 @@ share/gutenprint/samples/extended.sample
 share/gutenprint/samples/profile.jpg
 share/gutenprint/samples/testpattern.sample
 share/locale/cs/LC_MESSAGES/gutenprint.mo
+share/locale/cs/gutenprint_cs.po
 share/locale/da/LC_MESSAGES/gutenprint.mo
+share/locale/da/gutenprint_da.po
 share/locale/de/LC_MESSAGES/gutenprint.mo
+share/locale/de/gutenprint_de.po
 share/locale/el/LC_MESSAGES/gutenprint.mo
+share/locale/el/gutenprint_el.po
 share/locale/en_GB/LC_MESSAGES/gutenprint.mo
+share/locale/en_GB/gutenprint_en_GB.po
 share/locale/es/LC_MESSAGES/gutenprint.mo
+share/locale/es/gutenprint_es.po
 share/locale/fr/LC_MESSAGES/gutenprint.mo
+share/locale/fr/gutenprint_fr.po
 share/locale/hu/LC_MESSAGES/gutenprint.mo
+share/locale/hu/gutenprint_hu.po
 share/locale/it/LC_MESSAGES/gutenprint.mo
+share/locale/it/gutenprint_it.po
 share/locale/ja/LC_MESSAGES/gutenprint.mo
+share/locale/ja/gutenprint_ja.po
 share/locale/nb/LC_MESSAGES/gutenprint.mo
+share/locale/nb/gutenprint_nb.po
 share/locale/nl/LC_MESSAGES/gutenprint.mo
+share/locale/nl/gutenprint_nl.po
 share/locale/pl/LC_MESSAGES/gutenprint.mo
+share/locale/pl/gutenprint_pl.po
 share/locale/pt/LC_MESSAGES/gutenprint.mo
+share/locale/pt/gutenprint_pt.po
 share/locale/sk/LC_MESSAGES/gutenprint.mo
+share/locale/sk/gutenprint_sk.po
 share/locale/sv/LC_MESSAGES/gutenprint.mo
+share/locale/sv/gutenprint_sv.po
 share/locale/zh_TW/LC_MESSAGES/gutenprint.mo
+share/locale/zh_TW/gutenprint_zh_TW.po
 @dirrm share/gutenprint/samples
 @dirrm share/gutenprint/doc/reference-html
 @dirrm share/gutenprint/doc
+@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves
+@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets
 @dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/model
 @dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/mediasizes
 @dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/media
 @dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots
+@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/inks
 @dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2
 @dirrm share/gutenprint/${INSTALLVERSION}/xml
 @dirrm share/gutenprint/${INSTALLVERSION}
