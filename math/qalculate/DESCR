@@ -1,5 +1,4 @@
-Qalculate! is a modern multi-purpose desktop calculator for GNU/Linux.
+Qalculate! is a modern multi-purpose desktop calculator.
 It is small and simple to use but with much power and versatility underneath.
-Features include customizable functions, units, arbitrary precision, plotting,
-and a graphical interface (GTK+) that uses a one-line fault-tolerant expression
-entry (although it supports optional traditional buttons).
+Features include customizable functions, units, arbitrary precision, and
+plotting. This package provides libraries and a console-based calculator.
