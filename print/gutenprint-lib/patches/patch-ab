@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2008/12/20 18:08:07 gdt Exp $
+$NetBSD: patch-ab,v 1.2 2008/12/20 19:16:27 rillig Exp $
 
 --- ./configure.orig	2008-11-14 13:49:21.000000000 +0100
 +++ ./configure	2008-12-19 21:23:35.000000000 +0100
@@ -11,12 +11,3 @@ $NetBSD: patch-ab,v 1.1 2008/12/20 18:08:07 gdt Exp $
      stp_ac_save_CFLAGS="${CFLAGS}"
  
    { echo "$as_me:$LINENO: checking if ${CC} supports ${stp_ac_arg}" >&5
-@@ -31879,6 +31879,8 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     echo "$ac_cs_version"; exit ;;
