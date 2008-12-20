@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/11/04 05:46:23 seb Exp $
+$NetBSD: distinfo,v 1.5 2008/12/20 23:51:33 he Exp $
 
-SHA1 (Mouse-0.11.tar.gz) = c1befd1473ecb89c2d673e4699bc17a8571dd9fe
-RMD160 (Mouse-0.11.tar.gz) = de5673c6535339db92eea5edb3ef49493e9cc1d0
-Size (Mouse-0.11.tar.gz) = 50205 bytes
+SHA1 (Mouse-0.13.tar.gz) = 6d5853367a49fb0cffef36d8c149efd50987d679
+RMD160 (Mouse-0.13.tar.gz) = 991ee55620f24602d6c48209b7d77433eceab39b
+Size (Mouse-0.13.tar.gz) = 71876 bytes
