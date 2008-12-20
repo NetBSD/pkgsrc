@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.pygdbm,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+lib/avahi/service-types.db
+${PYSITELIB}/avahi/ServiceTypeDatabase.py

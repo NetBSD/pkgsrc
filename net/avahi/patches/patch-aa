@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+
+--- avahi-core/iface-pfroute.c.orig	2006-06-21 22:35:00.000000000 +0100
++++ avahi-core/iface-pfroute.c
+@@ -48,6 +48,13 @@
+ #include "iface-pfroute.h"
+ #include "util.h"
+ 
++#ifdef __NetBSD__
++#define lifreq if_laddrreq
++#define lifr_addr iflr_addr
++#define lifr_flags iflr_flags
++#define SIOCGLIFFLAGS SIOCGIFFLAGS
++#endif
++
+ static int bitcount (unsigned int n)  
+ {  
+   int count=0 ;

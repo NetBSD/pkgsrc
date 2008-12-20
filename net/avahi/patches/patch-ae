@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+
+--- initscript/fedora/avahi-dnsconfd.in.orig	2008-06-18 00:13:44.000000000 +0100
++++ initscript/fedora/avahi-dnsconfd.in
+@@ -12,7 +12,7 @@
+ 
+ AVAHI_BIN=@sbindir@/avahi-dnsconfd
+ 
+-if [ "$1" == 'status' ]; then
++if [ "$1" = 'status' ]; then
+     test -x $AVAHI_BIN || exit 4
+ else
+     test -x $AVAHI_BIN || exit 5
