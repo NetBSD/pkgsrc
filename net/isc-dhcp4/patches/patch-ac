@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1 2008/12/21 21:24:08 adrianp Exp $
+
+--- includes/dhcpd.h.orig	2007-12-08 19:36:00.000000000 +0000
++++ includes/dhcpd.h
+@@ -1241,7 +1241,7 @@ typedef unsigned char option_mask [16];
+ #else /* !DEBUG */
+ 
+ #ifndef _PATH_DHCPD_CONF
+-#define _PATH_DHCPD_CONF	"/etc/dhcpd.conf"
++#define _PATH_DHCPD_CONF	"@@PKG_SYSCONFDIR@@/dhcpd.conf"
+ #endif /* DEBUG */
+ 
+ #ifndef _PATH_DHCPD_DB
+@@ -1263,11 +1263,11 @@ typedef unsigned char option_mask [16];
+ #endif /* DEBUG */
+ 
+ #ifndef _PATH_DHCLIENT_CONF
+-#define _PATH_DHCLIENT_CONF	"/etc/dhclient.conf"
++#define _PATH_DHCLIENT_CONF	"@@PKG_SYSCONFDIR@@/dhclient.conf"
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_SCRIPT
+-#define _PATH_DHCLIENT_SCRIPT	"/sbin/dhclient-script"
++#define _PATH_DHCLIENT_SCRIPT	"@@PREFIX@@/sbin/dhclient-script"
+ #endif
+ 
+ #ifndef _PATH_DHCLIENT_PID
