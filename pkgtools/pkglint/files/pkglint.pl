@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.796 2008/12/15 12:47:31 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.797 2008/12/21 10:34:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6795,6 +6795,10 @@ sub checkfile_package_Makefile($$) {
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_package_Makefile(..., ...)");
 
 	checkperms($fname);
+
+	if (!exists($pkgctx_vardef->{"PKG_DESTDIR_SUPPORT"}) && !exists($pkgctx_vardef->{"META_PACKAGE"})) {
+		log_warning($fname, NO_LINE_NUMBER, "This package has not set PKG_DESTDIR_SUPPORT.");
+	}
 
 	if (!exists($pkgctx_vardef->{"PLIST_SRC"})
 	    && !exists($pkgctx_vardef->{"GENERATE_PLIST"})
