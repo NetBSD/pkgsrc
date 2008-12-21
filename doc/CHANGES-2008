@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3517 2008/12/21 16:07:01 agc Exp $
+$NetBSD: CHANGES-2008,v 1.3518 2008/12/21 16:15:40 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5860,3 +5860,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.28 [abs 2008-12-21]
 	Updated www/firefox3 to 3.0.5nb2 [jmcneill 2008-12-21]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q4 branch [agc 2008-12-21]
+	Updated sysutils/system-tools-backends to 2.6.0nb2 [jmcneill 2008-12-21]
