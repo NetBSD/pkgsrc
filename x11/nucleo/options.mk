@@ -1,3 +1,6 @@
+# $NetBSD: options.mk,v 1.2 2008/12/21 12:41:51 obache Exp $
+#
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nucleo
 PKG_SUPPORTED_OPTIONS=	gnutls # qt4
 PKG_SUGGESTED_OPTIONS=	gnutls
