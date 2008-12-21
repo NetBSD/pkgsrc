@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/10/03 17:42:28 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2008/12/21 15:20:27 taca Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.cerias.purdue.edu/about/history/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 
 USE_TOOLS+=	pax
+MAKE_JOBS_SAFE=	NO
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
 
