@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3499 2008/12/21 00:29:47 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3500 2008/12/21 00:33:51 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5822,3 +5822,22 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/un-core-ttf to 1.0.2.20080608 [minskim 2008-12-21]
 	Updated fonts/un-extra-ttf to 1.0.2.20080608 [minskim 2008-12-21]
 	Updated x11/libgnomekbd to 2.24.0nb1 [jmcneill 2008-12-20]
+	Updated devel/p5-Config-Find to 0.26 [he 2008-12-20]
+	Updated devel/p5-Data-Visitor to 0.22 [he 2008-12-20]
+	Updated devel/p5-Devel-Declare to 0.003004 [he 2008-12-20]
+	Updated net/p5-SOAP-Lite to 0.710.08nb4 [he 2008-12-20]
+	Updated devel/p5-ExtUtils-Install to 1.52 [he 2008-12-20]
+	Updated devel/p5-File-Temp to 0.21 [he 2008-12-20]
+	Updated devel/p5-Graph to 0.86 [he 2008-12-20]
+	Updated devel/p5-Hook-LexWrap to 0.22 [he 2008-12-20]
+	Updated devel/p5-IO-All to 0.39 [he 2008-12-20]
+	Updated devel/p5-IPC-PubSub to 0.29 [he 2008-12-20]
+	Updated devel/p5-IPC-Run to 0.82 [he 2008-12-20]
+	Updated devel/p5-Inline to 0.45 [he 2008-12-20]
+	Updated devel/p5-MooseX-Object-Pluggable to 0.0009 [he 2008-12-20]
+	Updated devel/p5-MooseX-Types to 0.08 [he 2008-12-20]
+	Updated devel/p5-Mouse to 0.13 [he 2008-12-20]
+	Updated devel/p5-Sub-Identify to 0.04 [he 2008-12-20]
+	Updated devel/p5-Test-Base to 0.55 [he 2008-12-20]
+	Updated devel/p5-Test-WWW-Selenium to 1.16 [he 2008-12-21]
+	Updated devel/p5-Variable-Magic to 0.26 [he 2008-12-21]
