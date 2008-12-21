@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/12/06 18:40:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/12/21 10:37:28 wiz Exp $
 bin/comicthumb
 bin/comix
 man/man1/comicthumb.1
@@ -70,6 +70,8 @@ share/comix/src/librarybackend.py
 share/comix/src/librarybackend.pyc
 share/comix/src/main.py
 share/comix/src/main.pyc
+share/comix/src/portability.py
+share/comix/src/portability.pyc
 share/comix/src/preferences.py
 share/comix/src/preferences.pyc
 share/comix/src/process.py
@@ -113,10 +115,14 @@ share/icons/hicolor/48x48/mimetypes/application-x-cbz.png
 share/icons/hicolor/scalable/apps/comix.svg
 share/locale/cs/LC_MESSAGES/comix.mo
 share/locale/es/LC_MESSAGES/comix.mo
+share/locale/hr/LC_MESSAGES/comix.mo
 share/locale/id/LC_MESSAGES/comix.mo
 share/locale/ja/LC_MESSAGES/comix.mo
 share/locale/ko/LC_MESSAGES/comix.mo
+share/locale/pl/LC_MESSAGES/comix.mo
+share/locale/ru/LC_MESSAGES/comix.mo
 share/locale/sv/LC_MESSAGES/comix.mo
+share/locale/zh_CN/LC_MESSAGES/comix.mo
 share/mime/packages/comix.xml
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
