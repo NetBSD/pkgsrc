@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/11/23 16:21:05 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/21 16:14:08 jmcneill Exp $
 #
 
 DISTNAME=		system-tools-backends-2.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://system-tools-backends.freedesktop.org/downloads/2.6/
 
@@ -15,11 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_OPTIONS_VAR=	PKG_OPTIONS.system-tools-backends
 PKG_SUPPORTED_OPTIONS+=	hal
 PKG_SUGGESTED_OPTIONS+=	hal
+PLIST_VARS+=		hal
 
 .include "../../mk/bsd.options.mk"
 .if !empty(PKG_OPTIONS:Mhal)
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
+PLIST.hal=		yes
 .endif
 
 EGDIR=		${PREFIX}/share/examples/system-tools-backends
