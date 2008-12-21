@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2008/12/01 13:25:47 wiz Exp $
+# $NetBSD: Makefile,v 1.151 2008/12/21 05:03:34 obache Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -73,6 +73,11 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
+.endif
+
+# Workaround for Bug#562310
+.if ${OPSYS} == "Darwin"
+TOOLS_NOOP+=		gtkdoc-rebase
 .endif
 
 .if ${OPSYS} == "HPUX"
