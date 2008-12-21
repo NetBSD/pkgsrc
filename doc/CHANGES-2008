@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3524 2008/12/21 21:25:09 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.3525 2008/12/21 21:25:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5869,3 +5869,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/py-qt3-modules to 3.17.6 [wiz 2008-12-21]
 	Updated x11/py-qt3-qscintilla to 3.17.6 [wiz 2008-12-21]
 	Updated net/isc-dhcp4 to 4.0.0nb1 [adrianp 2008-12-21]
+	Updated net/isc-dhclient4 to 4.0.0nb1 [adrianp 2008-12-21]
