@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3507 2008/12/21 10:32:35 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3508 2008/12/21 10:37:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5849,3 +5849,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/maxima to 5.17.1 [minskim 2008-12-21]
 	Updated devel/mercurial to 1.1.1 [wiz 2008-12-21]
 	Updated x11/modular-xorg-server to 1.4.2nb3 [ahoka 2008-12-21]
+	Updated graphics/comix to 4.0.1 [wiz 2008-12-21]
