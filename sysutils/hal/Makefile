@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/12/21 13:58:28 jmcneill Exp $
+# $NetBSD: Makefile,v 1.27 2008/12/21 14:17:20 ahoka Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -39,25 +39,25 @@ CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
 CONFIGURE_ARGS+=	--with-eject=/usr/sbin/cdcontrol
 CONFIGURE_ARGS+=	--with-backend=freebsd
 PLIST_SRC=		PLIST.FreeBSD PLIST
-.endif
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
+.elif !empty(MACHINE_PLATFORM:MNetBSD-[5-9]*)
 .include "../../devel/libvolume_id/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=netbsd
 HAL_GROUP=		operator
-.elif ${OPSYS} == "NetBSD"
-# Pull in the dummy backend for older NetBSD
-CONFIGURE_ARGS+=	--with-backend=dummy
-PLIST_SRC=		PLIST
-.endif
 
-.if ${OPSYS} == "Linux"
+.elif ${OPSYS} == "Linux"
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../devel/libvolume_id/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=linux
 CONF_FILES+=		${EGDIR}/90-hal.rules \
 			${PKG_SYSCONFBASE}/udev/rules.d/90-hal.rules
+
+.else	# Unsupported systems
+# Pull in the dummy backend
+.include "../../devel/libvolume_id/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-backend=dummy
+PLIST_SRC=		PLIST
 .endif
 
 .if ${OPSYS} == "Darwin"
