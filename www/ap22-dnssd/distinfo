@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/12/21 14:34:46 jmcneill Exp $
+
+SHA1 (mod_dnssd-0.5.tar.gz) = d881d1b965b9e984992b9410c7aaef5c1343355b
+RMD160 (mod_dnssd-0.5.tar.gz) = 03a7a4ebc63d84eed7914775f7a680e2ff47aef3
+Size (mod_dnssd-0.5.tar.gz) = 106994 bytes
