@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3509 2008/12/21 11:10:46 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3510 2008/12/21 11:37:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5851,3 +5851,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/modular-xorg-server to 1.4.2nb3 [ahoka 2008-12-21]
 	Updated graphics/comix to 4.0.1 [wiz 2008-12-21]
 	Updated net/tor to 0.2.0.32 [obache 2008-12-21]
+	Updated www/epiphany to 2.24.2.1nb2 [wiz 2008-12-21]
