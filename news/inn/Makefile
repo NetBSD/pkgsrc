@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2008/12/21 11:55:25 spz Exp $
+# $NetBSD: Makefile,v 1.95 2008/12/21 16:00:04 spz Exp $
 
 DISTNAME=		inn-2.4.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -107,13 +107,26 @@ CFILES=			actsync.cfg actsync.ign buffindexed.conf \
 			innreport.conf innwatch.ctl moderators \
 			motd.news news2mail.cf newsfeeds nnrpd.track \
 			nntpsend.ctl ovdb.conf overview.fmt passwd.nntp \
-			radius.conf readers.conf sasl.conf storage.conf
+			radius.conf readers.conf sasl.conf storage.conf \
+			subscriptions
 .for file in ${CFILES}
 CONF_FILES_PERMS+=	${EXAMPLEDIR}/${file} ${PKG_SYSCONFDIR}/${file} \
 			${INN_USER} ${INN_GROUP} 0664
 .endfor
 
+CONF_FILES_PERMS+=      ${EXAMPLEDIR}/active.minimal ${INN_DATA_DIR}/db/active ${INN_USER} ${INN_GROUP} 0664
+CONF_FILES_PERMS+=      ${EXAMPLEDIR}/newsgroups.minimal ${INN_DATA_DIR}/db/newsgroups ${INN_USER} ${INN_GROUP} 0664
+
+DBFILES=		active.times history
+
+.for file in ${DBFILES}
+CONF_FILES_PERMS+=      ${EXAMPLEDIR}/${file} ${INN_DATA_DIR}/db/${file} \
+			${INN_USER} ${INN_GROUP} 0664
+.endfor
+
 RCD_SCRIPTS=		innd
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -130,43 +143,32 @@ GCC_REQD+=		2.95.3
 .include "options.mk"
 
 pre-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	for FILE in `ls -1 ${WRKSRC}/samples/* |			\
-		     ${EGREP} -v '(Makefile|.*\.(in|orig)$$)'`; do	\
-		${INSTALL_DATA} $$FILE ${EXAMPLEDIR};			\
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
+	for FILE in ${CFILES} active.minimal newsgroups.minimal; do	\
+		${INSTALL_DATA} ${WRKSRC}/site/$$FILE			\
+					${DESTDIR}${EXAMPLEDIR};	\
 	done
-	# makedbz needs these earlier than pkgsrc will install them normally
-	if [ ! -f ${PKG_SYSCONFDIR}/inn.conf ] ; then			\
-		${INSTALL} ${COPY} -o ${INN_USER} -g ${INN_GROUP} -m 0664 \
-				${EXAMPLEDIR}/inn.conf			\
-				${PKG_SYSCONFDIR}/inn.conf ;		\
-	fi
-	if [ ! -d ${INN_DATA_DIR}/db ] ; then				\
-		${INSTALL} -d -o ${INN_USER} ${INN_DATA_DIR}/db ;	\
-	fi
-
+	for FILE in ${DBFILES} ; do					\
+		${TOUCH} ${WRKSRC}/site/$$FILE ;			\
+		${INSTALL_DATA} ${WRKSRC}/site/$$FILE			\
+					${DESTDIR}${EXAMPLEDIR};	\
+	done
 
 post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/etc/nntp
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
 	for FILE in cnfsstat ctlinnd inndstart makehistory ; do		\
-		${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/$$FILE     \
-				${PREFIX}/sbin/$$FILE ;                 \
+		${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/$$FILE \
+				${DESTDIR}${PREFIX}/sbin/$$FILE ;	\
 	done
-	${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/inews ${PREFIX}/bin/inews
-	${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/rnews ${PREFIX}/bin/rnews
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews	\
+			${DESTDIR}${PREFIX}/bin/inews
+	${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews	\
+			${DESTDIR}${PREFIX}/bin/rnews
 	for FILE in libinn.a libstorage.a libinnhist.a ; do		\
-		${CHMOD} 644 ${PREFIX}/lib/$$FILE ;			\
+		${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/$$FILE ;		\
 	done
-	if [ -d ${INN_DATA_DIR}/etc ] ; then				\
-		${ECHO} "" ; 						\
-		${ECHO} "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
-		${ECHO} "" ; 						\
-		${ECHO} "WARNING: old inn config directory ${INN_DATA_DIR}/etc found";\
-		${ECHO} "WARNING: please move your config to ${PREFIX}/etc/inn"; \
-		${ECHO} "WARNING: before starting your new inn install" ;	\
-		${ECHO} "" ; 						\
-		${ECHO} "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
-		${ECHO} "" ; 						\
-	fi
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
