@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3519 2008/12/21 16:57:32 uebayasi Exp $
+$NetBSD: CHANGES-2008,v 1.3520 2008/12/21 17:06:47 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5863,3 +5863,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/system-tools-backends to 2.6.0nb2 [jmcneill 2008-12-21]
 	Updated shells/zsh to 4.2.6 [uebayasi 2008-12-21]
 	Updated shells/zsh-current to 4.3.9 [uebayasi 2008-12-21]
+	Updated mail/thunderbird to 2.0.0.18nb1 [jmcneill 2008-12-21]
+	Updated mail/thunderbird-gtk1 to 2.0.0.18nb1 [jmcneill 2008-12-21]
