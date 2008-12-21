@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/06/04 13:34:46 sketch Exp $
+# $NetBSD: Makefile,v 1.18 2008/12/21 00:03:32 adrianp Exp $
 #
 
-DISTNAME=		rc.subr-20080423
+DISTNAME=		rc.subr-20081208
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
