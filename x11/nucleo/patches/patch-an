@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2008/12/21 12:53:24 obache Exp $
+
+--- nucleo/plugins/ffmpeg/ffmpegImageSink.H.orig	2008-01-29 13:54:23.000000000 +0000
++++ nucleo/plugins/ffmpeg/ffmpegImageSink.H
+@@ -19,7 +19,7 @@
+ #include <stdint.h>
+ 
+ extern "C" {
+-#include <avformat.h>
++#include <libavformat/avformat.h>
+ }
+ 
+ namespace nucleo {
