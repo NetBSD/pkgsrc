@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2008/10/16 21:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2008/12/21 11:01:59 obache Exp $
 #
 
 DISTNAME=		tor-0.2.0.31
@@ -60,7 +60,6 @@ post-install:
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
-	-${RMDIR} ${PREFIX}/etc/tor/tor
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 .include "../../devel/libevent/buildlink3.mk"
