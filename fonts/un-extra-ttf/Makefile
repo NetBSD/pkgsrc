@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/21 00:26:11 minskim Exp $
 
-DISTNAME=	un-fonts-extra-${UN_EXTRA_VER}
-PKGNAME=	un-extra-ttf-${UN_EXTRA_VER}
-PKGREVISION=	2
+DISTNAME=	un-fonts-extra-1.0.2-080608
+PKGNAME=	${DISTNAME:S/fonts-extra/extra-ttf/:S/-0/.200/}
 CATEGORIES=	fonts korean
-MASTER_SITES=	http://kldp.net/download.php/1435/
+MASTER_SITES=	http://kldp.net/frs/download.php/4696/
 
 MAINTAINER=	yui@yui.pe.kr
 HOMEPAGE=	http://kldp.net/projects/unfonts/
 COMMENT=	Extra set of Un Korean TrueType fonts
 
 CONFLICTS+=	un-ttf-[0-9]*
-
-UN_EXTRA_VER=	1.0.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
