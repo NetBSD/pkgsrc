@@ -1,18 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/12/21 00:25:00 minskim Exp $
 
-DISTNAME=	un-fonts-core-${UN_CORE_VER}
-PKGNAME=	un-core-ttf-${UN_CORE_VER}
-PKGREVISION=	2
+DISTNAME=	un-fonts-core-1.0.2-080608
+PKGNAME=	${DISTNAME:S/fonts-core/core-ttf/:S/-0/.200/}
 CATEGORIES=	fonts korean
-MASTER_SITES=	http://kldp.net/download.php/1425/
+MASTER_SITES=	http://kldp.net/frs/download.php/4695/
 
 MAINTAINER=	yui@yui.pe.kr
 HOMEPAGE=	http://kldp.net/projects/unfonts/
 COMMENT=	Core set of Un Korean TrueType fonts
 
 CONFLICTS+=	un-ttf-[0-9]*
-
-UN_CORE_VER=	1.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
