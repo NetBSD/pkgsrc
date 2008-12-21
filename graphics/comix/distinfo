@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2008/12/06 18:40:33 wiz Exp $
+$NetBSD: distinfo,v 1.12 2008/12/21 10:37:28 wiz Exp $
 
-SHA1 (comix-4.0.0.tar.gz) = 554513f8ac04d862b84ff66e5483101f999a2733
-RMD160 (comix-4.0.0.tar.gz) = 98d1af837f0e734c68456620b02ec703084d78b3
-Size (comix-4.0.0.tar.gz) = 338650 bytes
+SHA1 (comix-4.0.1.tar.gz) = e9eb5b00a812a61dec0249dd2019a9bf353cf045
+RMD160 (comix-4.0.1.tar.gz) = 4ccfa073a7b7bc0b65bd457245b00b8fd43efdb5
+Size (comix-4.0.1.tar.gz) = 395972 bytes
