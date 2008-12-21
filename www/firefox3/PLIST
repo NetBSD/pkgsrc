@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/17 23:16:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/12/21 15:53:26 jmcneill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2633,6 +2633,8 @@ include/${MOZILLA}/browserplaces/nsIPlacesImportExportService.h
 include/${MOZILLA}/browserplaces/nsIPlacesTransactionsService.h
 include/${MOZILLA}/fuel/fuelIApplication.h
 @comment end INCLUDE
+share/applications/${MOZILLA}.desktop
+share/pixmaps/${MOZILLA}.png
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA} MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
