@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.93 2008/10/19 19:18:44 he Exp $
+# $NetBSD: Makefile,v 1.94 2008/12/21 11:55:25 spz Exp $
 
 DISTNAME=		inn-2.4.5
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
@@ -15,6 +15,8 @@ CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
 .include "Makefile.common"
 
 BUILD_DEFS+=		INN_DATA_DIR
+BUILD_DEFS+=		VARBASE
+
 FILES_SUBST+=		INN_DATA_DIR=${INN_DATA_DIR:Q}
 
 BUILD_DEFS+=		INN_PATHBIN
@@ -26,14 +28,14 @@ PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
 SUBST_CLASSES+=		BADPATHBIN
 SUBST_STAGE.BADPATHBIN=	post-patch
-SUBST_MESSAGE.BADPATHBIN=	"fixing up unfortunate pathbin paths"
+SUBST_MESSAGE.BADPATHBIN=	fixing up unfortunate pathbin paths
 SUBST_FILES.BADPATHBIN= Makefile.global.in \
 			samples/inn.conf.in samples/newsfeeds.in \
 			scripts/innshellvars.in scripts/innshellvars.pl.in \
 			scripts/innshellvars.tcl.in backends/news2mail.in \
 			control/controlbatch.in control/controlchan.in
-SUBST_SED.BADPATHBIN=	-e 's,@prefix@/bin,${PREFIX}/${INN_PATHBIN:Q},g' \
-			-e 's,$$(PATHNEWS)/bin,${PREFIX}/${INN_PATHBIN:Q},g'
+SUBST_SED.BADPATHBIN=	-e 's,@prefix@/bin,${PREFIX}/${INN_PATHBIN:Q},g'
+SUBST_SED.BADPATHBIN+=	-e 's,$$(PATHNEWS)/bin,${PREFIX}/${INN_PATHBIN:Q},g'
 
 
 GNU_CONFIGURE=		YES
@@ -142,7 +144,7 @@ pre-install:
 	if [ ! -d ${INN_DATA_DIR}/db ] ; then				\
 		${INSTALL} -d -o ${INN_USER} ${INN_DATA_DIR}/db ;	\
 	fi
-	
+
 
 post-install:
 	for FILE in cnfsstat ctlinnd inndstart makehistory ; do		\
@@ -155,15 +157,15 @@ post-install:
 		${CHMOD} 644 ${PREFIX}/lib/$$FILE ;			\
 	done
 	if [ -d ${INN_DATA_DIR}/etc ] ; then				\
-		echo "" ; 						\
-		echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
-		echo "" ; 						\
-		echo "WARNING: old inn config directory ${INN_DATA_DIR}/etc found";\
-		echo "WARNING: please move your config to ${PREFIX}/etc/inn"; \
-		echo "WARNING: before starting your new inn install" ;	\
-		echo "" ; 						\
-		echo "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
-		echo "" ; 						\
+		${ECHO} "" ; 						\
+		${ECHO} "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
+		${ECHO} "" ; 						\
+		${ECHO} "WARNING: old inn config directory ${INN_DATA_DIR}/etc found";\
+		${ECHO} "WARNING: please move your config to ${PREFIX}/etc/inn"; \
+		${ECHO} "WARNING: before starting your new inn install" ;	\
+		${ECHO} "" ; 						\
+		${ECHO} "WARNING WARNING WARNING WARNING WARNING WARNING WARNING";\
+		${ECHO} "" ; 						\
 	fi
 
 .include "../../security/openssl/buildlink3.mk"
