@@ -280,7 +280,6 @@ nfdump-sflow		Build sflow collector sfcpad
 nls			Use native language support
 nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
-nox11			Do not link against x11 libraries.	
 nspluginwrapper		Enable running non native netscape compatible plugins
 ocamlduce		Enable OcamlDuce support.
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
