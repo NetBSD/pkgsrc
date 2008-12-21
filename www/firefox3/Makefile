@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/12/21 15:53:26 jmcneill Exp $
+# $NetBSD: Makefile,v 1.15 2008/12/21 18:13:01 jmcneill Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -80,16 +80,24 @@ PLIST_SUBST+=		JEMALLOC="@comment "
 SCRIPTS_ENV+=		JEMALLOC="@comment "
 .endif
 
+.if !empty(PKG_OPTIONS:Mofficial-mozilla-branding)
+MOZILLA_NAME=	Firefox 3
+MOZILLA_ICON=	${WRKSRC}/other-licenses/branding/firefox/default48.png
+.else
+MOZILLA_NAME=	Minefield 3
+MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
+.endif
+
 install-desktop:
 	${SED}							\
 		-e 's|@MOZILLA@|${MOZILLA}|g'			\
-		-e 's|@MOZILLA_NAME@|Firefox 3|g'		\
+		-e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'		\
 		-e 's|@FIREFOX_ICON@|${MOZILLA}.png|g'		\
 		<${.CURDIR}/../../www/firefox3/files/${MOZILLA}.desktop.in \
 		>${WRKDIR}/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop		\
 	    ${PREFIX}/share/applications/${MOZILLA}.desktop
-	${LN} -sf ${PREFIX}/lib/${MOZILLA}/chrome/icons/default/default48.png \
+	${INSTALL_DATA} ${MOZILLA_ICON}				\
 	    ${PREFIX}/share/pixmaps/${MOZILLA}.png
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
