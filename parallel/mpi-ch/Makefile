@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2008/07/11 01:57:00 obache Exp $
+# $NetBSD: Makefile,v 1.57 2008/12/21 11:41:01 obache Exp $
 
-DISTNAME=	mpich2-1.0.7
-PKGREVISION=	1
+DISTNAME=	mpich2-1.0.8
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.0.8/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
@@ -24,8 +23,10 @@ PKG_SYSCONFSUBDIR=	mpich
 
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
-CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGBASE}/html
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
+
+CONFIGURE_ARGS+=	--disable-f90
 
 USE_TOOLS+=		perl:run
 

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2008/05/29 20:25:53 tnn Exp $
+$NetBSD: distinfo,v 1.14 2008/12/21 11:41:01 obache Exp $
 
-SHA1 (mpich2-1.0.7.tar.gz) = 39d2734f2504b7c3a5e5ea79fa447913c5fcd177
-RMD160 (mpich2-1.0.7.tar.gz) = d818cd2b3daf173a3e754d9805fdf20d74335122
-Size (mpich2-1.0.7.tar.gz) = 16565875 bytes
-SHA1 (patch-aa) = dc0756c27c01715669c066007ff964733213f14c
+SHA1 (mpich2-1.0.8.tar.gz) = 41d6f6ce1034ecec5c14fb03592730ae2dd071e5
+RMD160 (mpich2-1.0.8.tar.gz) = 646cf50fbdc60a49809f4d0a6bcaf2835844db1f
+Size (mpich2-1.0.8.tar.gz) = 17237476 bytes
+SHA1 (patch-aa) = bf2ae82372de78e77891b9cf0d93618ba95ca0c8
 SHA1 (patch-ab) = 904c244fb3273dd1c38e0083c443f9a9c9d7e27e
-SHA1 (patch-ac) = 813ab9b66055ce009d7ff254a6a81a8422ccffcf
-SHA1 (patch-ad) = b63a0877e263fbc30500bf8e3a8f002912726efd
-SHA1 (patch-ae) = eb20a1eec5aa7fd173e4652e8c4a6e3475f24e7b
+SHA1 (patch-ac) = 6e2d4e66824ea6806e86946feea4bc0ae29eca59
+SHA1 (patch-ad) = f3d63a31cbfd8f2e08254130b6579135f6ab8c67
+SHA1 (patch-ae) = e665c29ef2f19c7683eae790299eb4a21f960898
