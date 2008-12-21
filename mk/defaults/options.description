@@ -23,6 +23,7 @@ avahi-howl		Enable howl compatibility in avahi.
 bacula-static		Enable building of statically linked versions of the Bacula daemons
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
+bind-xml-statistics-server	Enable building in the statistics server in bind95 and later.
 bittorrent		Enable bittorrent support
 blender-exppython	Enable the Experimental Python support.
 boehm-gc		Use Boehm's garbage collector for memory allocation.
