@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.145 2008/12/20 13:08:00 joerg Exp $
+# $NetBSD: Makefile,v 1.146 2008/12/21 14:02:59 joerg Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
@@ -202,9 +202,16 @@ LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
 .elif ${OBJECT_FMT} == "ELF"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
 .elif ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g} \
-	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/perl5/${PKGVERSION_NOREV}/${MACHINE_ARCH}-${LOWER_OPSYS}${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-64all/CORE \
-	${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/perl5/${PKGVERSION_NOREV}/${MACHINE_ARCH}-${LOWER_OPSYS}${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-all/CORE
+LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
+.  if !empty(PKG_OPTIONS:Mthreads)
+LOCLIBRPATHFLAGS+=
+	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-64all/CORE \
+	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE
+.  else
+LOCLIBRPATHFLAGS+=
+	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-multi-64all/CORE \
+	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-multi/CORE
+.  endif
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
@@ -286,6 +293,17 @@ SUBST_CLASSES+=		miniperl
 SUBST_STAGE.miniperl=	pre-install
 SUBST_FILES.miniperl=	lib/ExtUtils/xsubpp
 SUBST_SED.miniperl=	-e "1s:\#!./miniperl:\#!${PERL5}:"
+
+.if ${PKGSRC_COMPILER} == "xlc"
+SUBST_CLASSES+=		cpprun
+SUBST_STAGE.cpprun=	pre-install
+SUBST_FILES.cpprun=	lib/Config_heavy.pl
+.if !empty(PKG_OPTIONS:Mthreads)
+SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun-'cc_r -E'/"
+.else
+SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun-'cc -E'/"
+.endif
+.endif
 
 # Some platforms may want the directory mode not to be 0755.  This
 # is, unfortunately, hardcoded in quite a few places in Perl, so
