@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.1 2008/12/21 12:53:24 obache Exp $
+
+--- nucleo/plugins/ffmpeg/ffmpegImageSink.cxx.orig	2008-01-29 13:54:23.000000000 +0000
++++ nucleo/plugins/ffmpeg/ffmpegImageSink.cxx
+@@ -235,14 +235,14 @@ namespace nucleo {
+ 	 int port = uri.port ;
+ 	 if (!port) port = 1234 ;
+ 	 sender = new UdpSender(uri.host.c_str(), port) ;
+-	 if (init_put_byte(&(format_context->pb), buffer, buffer_size,
++	 if (init_put_byte(format_context->pb, buffer, buffer_size,
+ 				    1, (void *)this,
+ 				    0, udp_callback, 0) < 0) {
+ 	   std::cerr << "ffmpegImageSink: init_put_byte failed" << std::endl ;
+ 	   return false ;
+ 	 }
+-	 format_context->pb.is_streamed = 1 ; // no seek
+-	 format_context->pb.max_packet_size = buffer_size ;
++	 format_context->pb->is_streamed = 1 ; // no seek
++	 format_context->pb->max_packet_size = buffer_size ;
+     }
+     
+     av_write_header(format_context) ;
+@@ -340,7 +340,7 @@ namespace nucleo {
+ 	 if (vstream->codec) {
+ 	   avcodec_close(vstream->codec) ;
+ 	   av_write_trailer(format_context) ;
+-	   if (!sender) url_fclose(&format_context->pb) ;
++	   if (!sender) url_fclose(format_context->pb) ;
+ 	 }
+ 	 av_freep(&vstream) ;
+     }
