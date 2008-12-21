@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.12 2008/07/13 18:26:24 tonnerre Exp $
+$NetBSD: distinfo,v 1.13 2008/12/21 16:53:45 uebayasi Exp $
 
-SHA1 (zsh-4.3.4.tar.bz2) = 6bd905c4bf61bf3df5e5bb78f64be68366ad7517
-RMD160 (zsh-4.3.4.tar.bz2) = 2fe0fcf6371d2072c3b7eeae0392c7ef3665457c
-Size (zsh-4.3.4.tar.bz2) = 2374851 bytes
-SHA1 (patch-aa) = 15f9d45ea98f89945ca274fc5b0298fa9397f89d
-SHA1 (patch-ab) = 799e63e51338d542d6247066d77647365fda09c9
-SHA1 (patch-ac) = 95e15527e75685cbc140066efeec12127a4863ce
-SHA1 (patch-ae) = 62a763ee77b823d63f245f34122b232cf0344285
-SHA1 (patch-af) = baceb8c014b1a6d8291412bf111ca117514ecb4e
-SHA1 (patch-ag) = ddcefd4ebcb4457eaed0bcf70273c35641ca0bde
-SHA1 (patch-ah) = 772f98cbc8487fb074b35030c2ad26eeedb7343a
+SHA1 (zsh-4.3.9.tar.bz2) = 7c80e1ad6b311ee5877172a1a7e0161a9a60da70
+RMD160 (zsh-4.3.9.tar.bz2) = 2c88347fa357e3624f000721963749c6ccb4e129
+Size (zsh-4.3.9.tar.bz2) = 2659602 bytes
+SHA1 (patch-ab) = 4fc9ef0aa307a794fddf018a7888ac8b0073a13a
+SHA1 (patch-ac) = b586fcb6ab7d831a3490077f84fe170969905c26
