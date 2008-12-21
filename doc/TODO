@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7748 2008/12/21 10:21:38 wiz Exp $
+$NetBSD: TODO,v 1.7749 2008/12/21 13:07:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -908,6 +908,7 @@ Suggested package updates
 	o nss-3.11.7
 	o ntop-3.3.9
 	o ntp-4.2.4p5
+	o nucleo-0.7.3
 	o nulib2-220
 	o nullmailer-1.04
 	o nut-14.1
