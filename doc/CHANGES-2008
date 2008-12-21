@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3514 2008/12/21 14:44:55 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3515 2008/12/21 15:49:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5857,3 +5857,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin to 2.5.1nb2 [ahoka 2008-12-21]
 	Added www/ap22-dnssd version 0.5 [jmcneill 2008-12-21]
 	Updated www/typolight-translations to 20081219 [taca 2008-12-21]
+	Updated devel/cpuflags to 1.28 [abs 2008-12-21]
