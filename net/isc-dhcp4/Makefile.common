@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2008/12/02 12:07:47 martti Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/12/21 21:24:08 adrianp Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -34,6 +34,13 @@ CONFIGURE_ARGS+=	--with-cli-lease-file=${DHCP_HOME}/dhclient.leases
 CONFIGURE_ARGS+=	--with-srv-pid-file=${DHCP_PID}/isc-dhcpd.pid
 CONFIGURE_ARGS+=	--with-cli-pid-file=${DHCP_PID}/isc-dhclient.pid
 CONFIGURE_ARGS+=	--with-relay-pid-file=${DHCP_PID}/isc-dhcrelay.pid
+
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-patch
+SUBST_FILES.config=	includes/dhcpd.h
+SUBST_SED.config=       -e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_SED.config+=      -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.config=   Fixing configuration files.
 
 do-install:
 .	for d in ${SUBDIR}
