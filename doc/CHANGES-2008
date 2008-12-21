@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3500 2008/12/21 00:33:51 he Exp $
+$NetBSD: CHANGES-2008,v 1.3501 2008/12/21 00:39:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5841,3 +5841,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Base to 0.55 [he 2008-12-20]
 	Updated devel/p5-Test-WWW-Selenium to 1.16 [he 2008-12-21]
 	Updated devel/p5-Variable-Magic to 0.26 [he 2008-12-21]
+	Updated graphics/p5-GraphViz to 2.04 [he 2008-12-21]
