@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3516 2008/12/21 15:54:46 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3517 2008/12/21 16:07:01 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3926,7 +3926,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit to 1.6.0.2 [bjs 2008-09-17]
 	Updated devel/scmgit-base to 1.6.0.2 [bjs 2008-09-17]
 	Updated devel/scmgit-docs to 1.6.0.2 [bjs 2008-09-17]
-	mk/bsd.pkg.mk: started freeze for pkgsrc-3008Q2 branch [agc 2008-09-17]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q3 branch [agc 2008-09-17]
 	Updated www/drraw to 2.2a5nb1 [kleink 2008-09-17]
 	Updated x11/x11vnc to 0.9.4 [obache 2008-09-18]
 	Updated net/ns to 2.33 [minskim 2008-09-18]
@@ -5859,3 +5859,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight-translations to 20081219 [taca 2008-12-21]
 	Updated devel/cpuflags to 1.28 [abs 2008-12-21]
 	Updated www/firefox3 to 3.0.5nb2 [jmcneill 2008-12-21]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q4 branch [agc 2008-12-21]
