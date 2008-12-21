@@ -1,7 +1,35 @@
-@comment $NetBSD: PLIST,v 1.18 2006/04/07 15:28:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/12/21 16:53:31 uebayasi Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/cap.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/clone.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/compctl.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complete.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/complist.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/computil.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/datetime.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/deltochar.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/example.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/files.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/langinfo.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/mapfile.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/mathfunc.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/socket.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/tcp.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/parameter.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/rlimits.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/sched.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/stat.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/system.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/termcap.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zftp.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zle.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zleparameter.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zprof.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zpty.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zselect.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/zutil.so
 man/man1/zsh.1
 man/man1/zshall.1
 man/man1/zshbuiltins.1
@@ -535,9 +563,64 @@ share/zsh/${PKGVERSION}/functions/zrecompile
 share/zsh/${PKGVERSION}/functions/zsh-mime-handler
 share/zsh/${PKGVERSION}/functions/zsh-mime-setup
 share/zsh/${PKGVERSION}/functions/zstyle+
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_alias
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_close
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_command
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_expect
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_fd_handler
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_log
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_open
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_output
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_point
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_proxy
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_read
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_rename
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_send
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_sess
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_shoot
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_spam
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_talk
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/tcp_wait
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfanon
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfautocheck
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfcd
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfcd_match
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfcget
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfclose
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfcput
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfdir
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zffcache
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfgcp
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfget
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfget_match
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfgoto
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfhere
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfinit
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfls
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfmark
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfopen
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfparams
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfpcp
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfput
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfrglob
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfrtime
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfsession
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfstat
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftp_chpwd
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftp_progress
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftransfer
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftype
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuget
+${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuput
+@comment ${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/terminfo.so
+@comment ${PLIST.shlibs}lib/zsh/libzsh-${PKGVERSION}.so
 @exec ${MKDIR} %D/share/zsh/site-functions
 @dirrm share/zsh/site-functions
 @dirrm share/zsh/${PKGVERSION}/functions
 @dirrm share/zsh/${PKGVERSION}
 @dirrm share/zsh
 @dirrm share/doc/zsh
+${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}/zsh/net
+${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}/zsh
+${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}
+${PLIST.dynamic}@dirrm lib/zsh
