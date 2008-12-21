@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2008/12/21 13:57:29 jmcneill Exp $
+
+PR# pkg/40146: security/policykit fails to build on Linux
+
+--- configure.in.orig	2008-06-30 22:40:59.000000000 +0300
++++ configure.in
+@@ -528,7 +528,7 @@ case "$host_os" in
+ esac
+ 
+ have_inotify=no
+-AC_CHECK_HEADERS([linux/inotify.h], [have_inotify=yes])
++#AC_CHECK_HEADERS([linux/inotify.h], [have_inotify=yes])
+ AC_CHECK_HEADERS([sys/inotify.h], [have_inotify=yes])
+ 
+ AM_CONDITIONAL(HAVE_INOTIFY, test "x$have_inotify" = "xyes")
