@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/12/21 12:41:51 obache Exp $
+# $NetBSD: options.mk,v 1.3 2008/12/21 12:45:50 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nucleo
@@ -24,5 +24,4 @@ PLIST.gnutls=		yes
 .  include "../../security/gnutls/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-gnutls
-PLIST.gnutls=		no
 .endif
