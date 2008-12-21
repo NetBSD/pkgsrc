@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/11/15 15:05:22 tron Exp $
+# $NetBSD: Makefile,v 1.31 2008/12/21 17:04:40 jmcneill Exp $
 
 MOZILLA=		thunderbird
+PKGREVISION=		1
 COMMENT=		Mozilla mail client
 
 MOZILLA_USE_GTK2=	# yes
