@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/12/20 21:11:05 jmcneill Exp $
+# $NetBSD: Makefile,v 1.26 2008/12/21 13:58:28 jmcneill Exp $
 #
 
 DISTNAME=		hal-0.5.11
@@ -56,6 +56,8 @@ PLIST_SRC=		PLIST
 .include "../../devel/libvolume_id/buildlink3.mk"
 .include "../../sysutils/pciutils/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-backend=linux
+CONF_FILES+=		${EGDIR}/90-hal.rules \
+			${PKG_SYSCONFBASE}/udev/rules.d/90-hal.rules
 .endif
 
 .if ${OPSYS} == "Darwin"
