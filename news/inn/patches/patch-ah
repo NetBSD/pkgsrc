@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.10 2008/09/03 21:33:29 spz Exp $
+$NetBSD: patch-ah,v 1.11 2008/12/21 16:00:05 spz Exp $
 
 --- site/Makefile.orig	2008-06-29 17:56:57.000000000 +0000
 +++ site/Makefile
-@@ -74,23 +74,12 @@
+@@ -74,28 +74,16 @@
  ALL		= $(MOST) $(REST)
  
  REST_INSTALLED	= \
@@ -22,19 +22,15 @@ $NetBSD: patch-ah,v 1.10 2008/09/03 21:33:29 spz Exp $
  	$D$(PATH_TCL_STARTUP) $D$(PATH_TCL_FILTER) $D$(PATH_PYTHON_NNRPD_MODULE) \
 -	$D$(PATH_NNRPAUTH) $D$(PATHETC)/news2mail.cf $D$(PATH_READERSCONF) \
 -	$D$(PATH_RADIUS_CONF) $D$(PATH_NNRPYAUTH) $D$(PATH_OVDB_CONF) \
-	$D$(PATH_NNRPYACCESS) $D$(PATH_NNRPYDYNAMIC) \
+ 	$D$(PATH_NNRPYACCESS) $D$(PATH_NNRPYDYNAMIC) \
 -	$D$(PATH_SASL_CONF) $D$(PATH_SUBSCRIPTIONS) $D$(PATH_NNRPACCESS)
 +	$D$(PATH_NNRPAUTH) $D$(PATH_NNRPYAUTH) $D$(PATH_NNRPACCESS) 
  
  ALL_INSTALLED	= $(MOST_INSTALLED) $(REST_INSTALLED)
  
-@@ -145,7 +133,8 @@
- 	chown $(NEWSUSER) $@
- 	chgrp $(NEWSGROUP) $@
- 	chmod $(FILEMODE) $@
--	$(PATHBIN)/makedbz -i -o
-+	# makedbz wants ridiculous amounts of RAM for -s 0
-+	$(PATHBIN)/makedbz -i -o -s 10000
+-SPECIAL		= $D$(PATH_ACTIVE) $D$(PATH_ACTIVE_TIMES) \
+-		$D$(PATH_NEWSGROUPS) $D$(PATH_HISTORY)
++SPECIAL		=
  
- ##  Remove files that are unchanged from the release version.
- clean:
+ ##  Get new versions of everything from samples directory.
+ all:		$(P) $(ALL) config
