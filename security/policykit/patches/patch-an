@@ -1,0 +1,31 @@
+$NetBSD: patch-an,v 1.1 2008/12/21 13:57:29 jmcneill Exp $
+
+PR# pkg/40146: security/policykit fails to build on Linux
+
+--- src/polkit/polkit-context.c.orig	2008-05-31 00:24:44.000000000 +0300
++++ src/polkit/polkit-context.c
+@@ -310,6 +310,7 @@ polkit_context_init (PolKitContext *pk_c
+ 	}
+ #else
+         if (pk_context->io_add_watch_func != NULL) {
++#ifdef HAVE_INOTIFY
+                 pk_context->inotify_fd = inotify_init ();
+                 if (pk_context->inotify_fd < 0) {
+                         polkit_debug ("failed to initialize inotify: %s", strerror (errno));
+@@ -358,6 +359,7 @@ polkit_context_init (PolKitContext *pk_c
+                         /* TODO: set error */
+                         goto error;
+                 }
++#endif
+         }
+ #endif
+ 
+@@ -571,7 +573,7 @@ polkit_context_io_func (PolKitContext *p
+ 			polkit_debug ("failed to read kqueue event: %s", strerror (errno));
+ 		}
+ 	}
+-#else
++#elif HAVE_INOTIFY
+         if (fd == pk_context->inotify_fd) {
+ /* size of the event structure, not counting name */
+ #define EVENT_SIZE  (sizeof (struct inotify_event))
