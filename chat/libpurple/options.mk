@@ -1,12 +1,17 @@
-# $NetBSD: options.mk,v 1.9 2008/12/21 00:12:10 ahoka Exp $
+# $NetBSD: options.mk,v 1.10 2008/12/21 14:08:39 ahoka Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl
-PKG_SUGGESTED_OPTIONS+=		gnutls dbus
+PKG_SUPPORTED_OPTIONS+=		gnutls perl tcl debug dbus sasl avahi
+PKG_SUGGESTED_OPTIONS+=		gnutls dbus avahi
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		dbus
+PLIST_VARS+=		dbus avahi
+
+.if !empty(PKG_OPTIONS:Mavahi)
+PLIST.avahi=            yes
+.  include "../../net/avahi/buildlink3.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mgnutls)
 CONFIGURE_ARGS+=	--enable-gnutls
