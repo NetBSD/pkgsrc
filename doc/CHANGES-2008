@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3501 2008/12/21 00:39:38 he Exp $
+$NetBSD: CHANGES-2008,v 1.3502 2008/12/21 01:01:32 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5842,3 +5842,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-WWW-Selenium to 1.16 [he 2008-12-21]
 	Updated devel/p5-Variable-Magic to 0.26 [he 2008-12-21]
 	Updated graphics/p5-GraphViz to 2.04 [he 2008-12-21]
+	Updated chat/libpurple to 2.5.1nb1 [ahoka 2008-12-21]
+	Updated chat/pidgin to 2.5.1nb1 [ahoka 2008-12-21]
