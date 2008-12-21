@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3522 2008/12/21 17:14:54 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.3523 2008/12/21 17:15:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5867,3 +5867,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/thunderbird-gtk1 to 2.0.0.18nb1 [jmcneill 2008-12-21]
 	Updated x11/py-qt3-base to 3.17.6 [wiz 2008-12-21]
 	Updated x11/py-qt3-modules to 3.17.6 [wiz 2008-12-21]
+	Updated x11/py-qt3-qscintilla to 3.17.6 [wiz 2008-12-21]
