@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2008/12/21 00:12:10 ahoka Exp $
+# $NetBSD: Makefile.common,v 1.23 2008/12/21 14:08:39 ahoka Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-silc/Makefile
 
 PIDGIN_VERSION=	2.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
