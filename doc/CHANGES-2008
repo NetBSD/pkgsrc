@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3512 2008/12/21 14:11:37 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3513 2008/12/21 14:36:49 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5855,3 +5855,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated parallel/mpi-ch to 1.0.8 [obache 2008-12-21]
 	Updated chat/libpurple to 2.5.1nb2 [ahoka 2008-12-21]
 	Updated chat/pidgin to 2.5.1nb2 [ahoka 2008-12-21]
+	Added www/ap22-dnssd version 0.5 [jmcneill 2008-12-21]
