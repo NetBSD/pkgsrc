@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3498 2008/12/21 00:27:31 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.3499 2008/12/21 00:29:47 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5821,3 +5821,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/rc.subr to 20081208 [adrianp 2008-12-21]
 	Updated fonts/un-core-ttf to 1.0.2.20080608 [minskim 2008-12-21]
 	Updated fonts/un-extra-ttf to 1.0.2.20080608 [minskim 2008-12-21]
+	Updated x11/libgnomekbd to 2.24.0nb1 [jmcneill 2008-12-20]
