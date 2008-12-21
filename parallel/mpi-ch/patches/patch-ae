@@ -1,60 +1,60 @@
-$NetBSD: patch-ae,v 1.4 2008/05/29 20:25:54 tnn Exp $
+$NetBSD: patch-ae,v 1.5 2008/12/21 11:41:01 obache Exp $
 
 "test ==" portability fixes.
 
---- src/mpid/ch3/channels/nemesis/configure.orig	Sat Apr  5 02:04:06 2008
-+++ src/mpid/ch3/channels/nemesis/configure	Thu May 15 12:29:54 2008
-@@ -3249,7 +3249,7 @@
+--- src/mpid/ch3/channels/nemesis/configure.orig	2008-12-20 17:29:37.000000000 +0300
++++ src/mpid/ch3/channels/nemesis/configure	2008-12-20 17:41:34.000000000 +0300
+@@ -3790,7 +3790,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "gm" ; then
 +if test "${nemesis_network}" = "gm" ; then
      ac_safe=`echo "gm.h" | sed 'y%./+-%__p_%'`
- echo "$as_me:$LINENO: checking for gm.h" >&5
- echo $ECHO_N "checking for gm.h... $ECHO_C" >&6
-@@ -3444,7 +3444,7 @@
+ { $as_echo "$as_me:$LINENO: checking for gm.h" >&5
+ $as_echo_n "checking for gm.h... " >&6; }
+@@ -3989,7 +3989,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "ib" ; then
 +if test "${nemesis_network}" = "ib" ; then
      ac_safe=`echo "verbs.h" | sed 'y%./+-%__p_%'`
- echo "$as_me:$LINENO: checking for verbs.h" >&5
- echo $ECHO_N "checking for verbs.h... $ECHO_C" >&6
-@@ -3639,7 +3639,7 @@
+ { $as_echo "$as_me:$LINENO: checking for verbs.h" >&5
+ $as_echo_n "checking for verbs.h... " >&6; }
+@@ -4188,7 +4188,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "mx" ; then
 +if test "${nemesis_network}" = "mx" ; then
      ac_safe=`echo "myriexpress.h" | sed 'y%./+-%__p_%'`
- echo "$as_me:$LINENO: checking for myriexpress.h" >&5
- echo $ECHO_N "checking for myriexpress.h... $ECHO_C" >&6
-@@ -3844,7 +3844,7 @@
+ { $as_echo "$as_me:$LINENO: checking for myriexpress.h" >&5
+ $as_echo_n "checking for myriexpress.h... " >&6; }
+@@ -4397,7 +4397,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "elan" ; then
 +if test "${nemesis_network}" = "elan" ; then
  echo "=== You're about to use the experimental Nemesis/Elan network module."
  echo "=== This module has not been thoroughly tested and some performance issues remain."
  
-@@ -4042,7 +4042,7 @@
+@@ -4599,7 +4599,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "sctp" ; then
 +if test "${nemesis_network}" = "sctp" ; then
      ac_safe=`echo "netinet/sctp.h" | sed 'y%./+-%__p_%'`
- echo "$as_me:$LINENO: checking for netinet/sctp.h" >&5
- echo $ECHO_N "checking for netinet/sctp.h... $ECHO_C" >&6
-@@ -4237,7 +4237,7 @@
+ { $as_echo "$as_me:$LINENO: checking for netinet/sctp.h" >&5
+ $as_echo_n "checking for netinet/sctp.h... " >&6; }
+@@ -4798,7 +4798,7 @@
  fi
- fi;
+ 
  
 -if test "${nemesis_network}" == "psm" ; then
 +if test "${nemesis_network}" = "psm" ; then
      ac_safe=`echo "psm.h" | sed 'y%./+-%__p_%'`
- echo "$as_me:$LINENO: checking for psm.h" >&5
- echo $ECHO_N "checking for psm.h... $ECHO_C" >&6
+ { $as_echo "$as_me:$LINENO: checking for psm.h" >&5
+ $as_echo_n "checking for psm.h... " >&6; }
