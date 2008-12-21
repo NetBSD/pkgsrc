@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.39 2008/12/19 07:59:26 roy Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.40 2008/12/21 17:04:40 jmcneill Exp $
 # used by mail/thunderbird/Makefile
 # used by mail/thunderbird-gtk1/Makefile
 
@@ -29,6 +29,16 @@ INSTALL_TEMPLATES+=	${.CURDIR}/../../mail/thunderbird/INSTALL
 
 post-install:
 	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
+	${SED}		\
+		-e 's|@MOZILLA@|${MOZILLA}|g' \
+		-e 's|@MOZILLA_NAME@|Thunderbird|g' \
+		-e 's|@MOZILLA_ICON@|${MOZILLA}.xpm|g' \
+		< ${.CURDIR}/../../mail/thunderbird/files/thunderbird.desktop.in \
+		> ${WRKDIR}/${MOZILLA}.desktop
+	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop \
+	    ${DESTDIR:Q}${PREFIX:Q}/share/applications/${MOZILLA}.desktop
+	${LN} -sf ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/chrome/icons/default/default.xpm \
+	    ${DESTDIR:Q}${PREFIX:Q}/share/pixmaps/${MOZILLA}.xpm
 
 .include "../../mk/bsd.fast.prefs.mk"
 

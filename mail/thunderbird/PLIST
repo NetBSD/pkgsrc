@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/08/22 09:42:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/12/21 17:04:40 jmcneill Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2847,6 +2847,8 @@ include/${MOZILLA}/nss/sslproto.h
 include/${MOZILLA}/nss/sslt.h
 include/${MOZILLA}/nss/watcomfx.h
 @comment end INCLUDE-PUBLIC
+share/applications/${MOZILLA}.desktop
+share/pixmaps/${MOZILLA}.xpm
 @exec env LD_LIBRARY_PATH=%D/lib/${MOZILLA}:%D/lib MOZILLA_FIVE_HOME=%D/lib/${MOZILLA} %D/lib/${MOZILLA}/regxpcom
 @unexec ${RM} -f %D/lib/${MOZILLA}/chrome/app-chrome.manifest
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
