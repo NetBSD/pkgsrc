@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:02 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/21 00:07:19 he Exp $
 #
 
-DISTNAME=	Test-WWW-Selenium-1.15
+DISTNAME=	Test-WWW-Selenium-1.16
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -20,7 +19,7 @@ BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Mock-LWP-[0-9]*:../../devel/p5-Test-Mock-LWP
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
