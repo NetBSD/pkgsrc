@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/09 00:04:32 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/12/21 00:07:19 he Exp $
 
-SHA1 (Test-WWW-Selenium-1.15.tar.gz) = a721e07f3296b52fdac39c6d2a8dbfae8679b460
-RMD160 (Test-WWW-Selenium-1.15.tar.gz) = 65b695840fceb8dd8bf6d9c6653255817bc20669
-Size (Test-WWW-Selenium-1.15.tar.gz) = 43497 bytes
+SHA1 (Test-WWW-Selenium-1.16.tar.gz) = 2dde7abbf8ceb9ea4266227e2186401eb9b3e79e
+RMD160 (Test-WWW-Selenium-1.16.tar.gz) = 4c98f97966af35ad03173f764fce539c02b71854
+Size (Test-WWW-Selenium-1.16.tar.gz) = 43809 bytes
