@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/12/21 11:55:25 spz Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/12/21 16:00:04 spz Exp $
 bin/inews
 bin/rnews
 include/inn/conffile.h
@@ -270,8 +270,8 @@ share/doc/inn/hook-perl
 share/doc/inn/hook-python
 share/doc/inn/hook-tcl
 share/doc/inn/sample-control
-share/examples/inn/INN.py
 share/examples/inn/active.minimal
+share/examples/inn/active.times
 share/examples/inn/actsync.cfg
 share/examples/inn/actsync.ign
 share/examples/inn/buffindexed.conf
@@ -279,10 +279,7 @@ share/examples/inn/control.ctl
 share/examples/inn/cycbuff.conf
 share/examples/inn/distrib.pats
 share/examples/inn/expire.ctl
-share/examples/inn/filter.tcl
-share/examples/inn/filter_innd.pl
-share/examples/inn/filter_innd.py
-share/examples/inn/filter_nnrpd.pl
+share/examples/inn/history
 share/examples/inn/incoming.conf
 share/examples/inn/inn.conf
 share/examples/inn/innfeed.conf
@@ -293,27 +290,14 @@ share/examples/inn/motd.news
 share/examples/inn/news2mail.cf
 share/examples/inn/newsfeeds
 share/examples/inn/newsgroups.minimal
-share/examples/inn/nnrpd.py
-share/examples/inn/nnrpd.track
-share/examples/inn/nnrpd_access.pl
-share/examples/inn/nnrpd_access.py
-share/examples/inn/nnrpd_access_wrapper.pl
-share/examples/inn/nnrpd_access_wrapper.py
-share/examples/inn/nnrpd_auth.pl
-share/examples/inn/nnrpd_auth.py
-share/examples/inn/nnrpd_auth_wrapper.pl
-share/examples/inn/nnrpd_auth_wrapper.py
-share/examples/inn/nnrpd_dynamic.py
-share/examples/inn/nnrpd_dynamic_wrapper.py
 share/examples/inn/nntpsend.ctl
+share/examples/inn/nnrpd.track
 share/examples/inn/ovdb.conf
 share/examples/inn/overview.fmt
 share/examples/inn/passwd.nntp
 share/examples/inn/radius.conf
 share/examples/inn/readers.conf
 share/examples/inn/sasl.conf
-share/examples/inn/startup.tcl
-share/examples/inn/startup_innd.pl
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
 share/examples/rc.d/innd
@@ -329,3 +313,4 @@ share/examples/rc.d/innd
 @dirrm include/inn/inn
 @dirrm include/inn
 @dirrm etc/inn
+@dirrm etc/nntp
