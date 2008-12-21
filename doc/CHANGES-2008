@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3511 2008/12/21 11:41:22 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3512 2008/12/21 14:11:37 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5853,3 +5853,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/tor to 0.2.0.32 [obache 2008-12-21]
 	Updated www/epiphany to 2.24.2.1nb2 [wiz 2008-12-21]
 	Updated parallel/mpi-ch to 1.0.8 [obache 2008-12-21]
+	Updated chat/libpurple to 2.5.1nb2 [ahoka 2008-12-21]
+	Updated chat/pidgin to 2.5.1nb2 [ahoka 2008-12-21]
