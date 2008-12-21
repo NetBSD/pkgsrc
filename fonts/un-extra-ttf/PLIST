@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/16 06:19:37 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/21 00:26:11 minskim Exp $
 lib/X11/fonts/TTF/UnBom.ttf
 lib/X11/fonts/TTF/UnJamoBatang.ttf
 lib/X11/fonts/TTF/UnJamoDotum.ttf
@@ -6,6 +6,8 @@ lib/X11/fonts/TTF/UnJamoNovel.ttf
 lib/X11/fonts/TTF/UnJamoSora.ttf
 lib/X11/fonts/TTF/UnPen.ttf
 lib/X11/fonts/TTF/UnPenheulim.ttf
+lib/X11/fonts/TTF/UnPilgia.ttf
 lib/X11/fonts/TTF/UnShinmun.ttf
 lib/X11/fonts/TTF/UnTaza.ttf
+lib/X11/fonts/TTF/UnVada.ttf
 lib/X11/fonts/TTF/UnYetgul.ttf
