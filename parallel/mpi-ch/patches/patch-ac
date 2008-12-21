@@ -1,19 +1,30 @@
-$NetBSD: patch-ac,v 1.5 2008/05/29 20:25:54 tnn Exp $
+$NetBSD: patch-ac,v 1.6 2008/12/21 11:41:01 obache Exp $
 
 Install sample configuration files in example directory.
 
---- src/mpe2/sbin/mpeinstall.in.orig	2007-11-29 00:51:40.000000000 +0300
-+++ src/mpe2/sbin/mpeinstall.in	2008-04-16 00:32:18.000000000 +0400
-@@ -38,6 +38,8 @@
- htmldir=@htmldir@
- docdir=@docdir@
+--- src/mpe2/sbin/mpeinstall.in.orig	2008-10-24 20:56:05.000000000 +0400
++++ src/mpe2/sbin/mpeinstall.in	2008-12-20 18:17:51.000000000 +0300
+@@ -40,13 +40,15 @@
+ mandir=@mandir@
+ # Since autoconf < 2.60 does not set docdir and htmldir,
+ # check if they are set.  If not, set them accordingly.
+-if [ "$docdir" = "@docdir@" ] ; then
+-    docdir=${datadir}/doc/${PACKAGE}
++if [ "$docdir" = "@docdir@" ] ; then # don't override what we set.
++#    docdir=${datadir}/doc/${PACKAGE}
+ fi
+-if [ "$htmldir" = "@htmldir@" ] ; then
+-    htmldir=${docdir}
++if [ "$htmldir" = "@htmldir@" ] ; then # don't override what we set.
++#    htmldir=${docdir}
+ fi
  
 +exampledir=${datadir}/examples
 +
  # Assume PROF_LIBNAME=MPE_LIBNAME.
  PROF_LIBNAME=@MPE_LIBNAME@
  MPI_IMPL=@MPI_IMPL@
-@@ -466,10 +468,10 @@
+@@ -493,10 +495,10 @@
  if [ -n "$etcbuild_dir" ] ; then
      if [ -d $etcbuild_dir ] ; then
           echo "Installing $pkgname configuration files to $DESTDIR$sysconfdir"
