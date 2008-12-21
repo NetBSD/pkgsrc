@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2008/10/08 14:23:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.11 2008/12/21 17:14:17 wiz Exp $
 #
 # used by x11/py-qt3-base/Makefile
 # used by x11/py-qt3-modules/Makefile
@@ -8,7 +8,7 @@
 # XXX: PyQt-mac-gpl and PyQt-x11-gpl in py-qt3-qscintilla,
 # XXX: py-qt3-base, and py-qt3-modules.
 
-PYQT_VERSION=		3.17.4
+PYQT_VERSION=		3.17.6
 CATEGORIES=		x11 python
 MASTER_SITES=		http://www.riverbankcomputing.com/static/Downloads/PyQt3/
 
