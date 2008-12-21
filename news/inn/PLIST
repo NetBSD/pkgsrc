@@ -1,31 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2008/09/16 23:06:19 spz Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/12/21 11:55:25 spz Exp $
 bin/inews
 bin/rnews
-etc/inn/actsync.cfg
-etc/inn/actsync.ign
-etc/inn/buffindexed.conf
-etc/inn/control.ctl
-etc/inn/cycbuff.conf
-etc/inn/distrib.pats
-etc/inn/expire.ctl
-etc/inn/incoming.conf
-etc/inn/inn.conf
-etc/inn/innfeed.conf
-etc/inn/innreport.conf
-etc/inn/innwatch.ctl
-etc/inn/moderators
-etc/inn/motd.news
-etc/inn/news2mail.cf
-etc/inn/newsfeeds
-etc/inn/nnrpd.track
-etc/inn/nntpsend.ctl
-etc/inn/ovdb.conf
-etc/inn/overview.fmt
-etc/inn/passwd.nntp
-etc/inn/radius.conf
-etc/inn/readers.conf
-etc/inn/sasl.conf
-etc/inn/storage.conf
 include/inn/conffile.h
 include/inn/config.h
 include/inn/dbz.h
