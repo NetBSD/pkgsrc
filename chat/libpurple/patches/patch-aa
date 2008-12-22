@@ -1,27 +1,7 @@
-$NetBSD: patch-aa,v 1.10 2008/09/16 19:54:21 abs Exp $
+$NetBSD: patch-aa,v 1.11 2008/12/22 18:47:44 jmcneill Exp $
 
 --- configure.orig	2008-08-31 05:38:17.000000000 +0100
 +++ configure
-@@ -20181,6 +20181,11 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
- 
- 
- 
-+INTLTOOL_EXTRACT=intltool-extract
-+INTLTOOL_MERGE=intltool-merge
-+INTLTOOL_UPDATE=intltool-update
-+# disable pidgin's builtin intltool
-+if test -n ""; then
- # Use the tools built into the package, not the ones that are installed.
- INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
- 
-@@ -20251,6 +20256,7 @@ echo "$as_me: error: XML::Parser perl mo
-    { (exit 1); exit 1; }; }
-    fi
- fi
-+fi # pkgsrc
- 
- # Substitute ALL_LINGUAS so we can use it in po/Makefile
- 
 @@ -29014,7 +29020,7 @@ if test "${ac_cv_lib_panelw_update_panel
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else

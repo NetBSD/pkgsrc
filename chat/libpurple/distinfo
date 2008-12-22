@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.18 2008/09/16 19:54:21 abs Exp $
+$NetBSD: distinfo,v 1.19 2008/12/22 18:47:44 jmcneill Exp $
 
-SHA1 (pidgin-2.5.1.tar.bz2) = 8b7be1be4d549d9c0e34c820c8a285aab5e116d7
-RMD160 (pidgin-2.5.1.tar.bz2) = d9f927db55ecc55a2e66b064612774575b82b062
-Size (pidgin-2.5.1.tar.bz2) = 8952067 bytes
-SHA1 (patch-aa) = b8b0ecb358cc053c1034768b3f80e0e1ae523aa2
-SHA1 (patch-ae) = ff4f2d738656c6f23c423046f746b9ed2878c415
-SHA1 (patch-ag) = fa71295e848f1b06f318f06fab8fcc90110c20a3
+SHA1 (pidgin-2.5.3.tar.bz2) = bd3f6eca0a0c9b221be8a664e904450db8589314
+RMD160 (pidgin-2.5.3.tar.bz2) = c139b2746f2557f5f132e6460f5bff7009fd8259
+Size (pidgin-2.5.3.tar.bz2) = 8393073 bytes
+SHA1 (patch-aa) = 5e12c4ce353811387595c35590ecd9d1fa415be7
+SHA1 (patch-ae) = 33d7197c76cee9eca51faceda2af681079198676
