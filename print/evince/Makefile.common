@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2008/12/02 13:04:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.25 2008/12/22 15:27:02 reed Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
@@ -32,8 +32,6 @@ pre-configure:
 BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.15.6
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
-.include "../../devel/libgnomeui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.17.1
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
@@ -41,7 +39,6 @@ BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.17.1
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.8.0
 .include "../../print/poppler-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.10.0
