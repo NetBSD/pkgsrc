@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2008/04/12 22:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/22 20:04:07 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ocaml/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/ocaml/ocaml-graphics/}
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT+=		(graphics library)
 
@@ -16,8 +18,8 @@ BUILD_TARGET=		all
 INSTALL_TARGET=		install
 
 PLIST_VARS+=		opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc")
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "powerpc" || \
+    ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "x86_64"
 BUILD_TARGET+=		allopt
 INSTALL_TARGET+=	installopt
 PLIST.opt=		yes
@@ -36,6 +38,8 @@ SUBST_STAGE.depend=	post-patch
 SUBST_FILES.depend=	otherlibs/graph/.depend
 SUBST_SED.depend=	-e 's,/usr/X11R6,${X11BASE},g'
 SUBST_MESSAGE.depend=	Fixing .depend in otherlibs/graph.
+
+INSTALLATION_DIRS+=	lib/ocaml/stublibs
 
 post-build:
 	@${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
