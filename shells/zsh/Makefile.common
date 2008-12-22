@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2008/12/21 16:53:31 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.50 2008/12/22 02:15:54 uebayasi Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -34,19 +34,19 @@ BUILD_DEFS+=	ZSH_STATIC
 MAKE_JOBS_SAFE=	no
 INSTALL_TARGET=	install install.info
 PKG_SHELL=	bin/zsh
-PLIST_VARS=	dynamic terminfo shlibs
+PLIST_VARS=	dynamic
 
 ################################################################################
 
-_ZSH_OPSYS.OpenBSD=		dynamic terminfo -      ldflags tcsetpgrp
-_ZSH_OPSYS.Linux=		dynamic terminfo -      ldflags tcsetpgrp
-_ZSH_OPSYS.IRIX=		dynamic terminfo -      ldflags tcsetpgrp
-_ZSH_OPSYS.Interix=		dynamic terminfo shlibs ldflags notcsetpgrp
-_ZSH_OPSYS.DragonFly=		dynamic terminfo shlibs ldflags tcsetpgrp
-_ZSH_OPSYS.FreeBSD=		dynamic terminfo shlibs ldflags tcsetpgrp
-_ZSH_OPSYS.SunOS=		dynamic -        -      -       tcsetpgrp
+_ZSH_OPSYS.OpenBSD=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.Linux=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.IRIX=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.Interix=		dynamic ldflags notcsetpgrp
+_ZSH_OPSYS.DragonFly=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.FreeBSD=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.SunOS=		dynamic -       tcsetpgrp
 
-_ZSH_OPSYS.${OPSYS}?=		dynamic -        shlibs ldflags tcsetpgrp
+_ZSH_OPSYS.${OPSYS}?=		dynamic ldflags tcsetpgrp
 
 ################################################################################
 
@@ -70,8 +70,6 @@ _ZSH_LINKAGE.dynamic.BUILDLINK_PASSTHRU_RPATHDIRS=
 _ZSH_LINKAGE.dynamic.LDFLAGS=	${_ZSH_DYNAMIC_VARS.${_ZSH_OPSYS.${OPSYS}:Mldflags}}
 
 _ZSH_LINKAGE.dynamic.PLIST.dynamic=	${_ZSH_OPSYS.${OPSYS}:Mdynamic:?yes:no}
-_ZSH_LINKAGE.dynamic.PLIST.terminfo=	${_ZSH_OPSYS.${OPSYS}:Mterminfo:?yes:no}
-_ZSH_LINKAGE.dynamic.PLIST.shlibs=	${_ZSH_OPSYS.${OPSYS}:Mshlibs:?yes:no}
 
 ###
 
@@ -88,8 +86,6 @@ CONFIGURE_ARGS+=		${_ZSH_LINKAGE.${_ZSH_LINKAGE}.CONFIGURE_ARGS} \
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${_ZSH_LINKAGE.${_ZSH_LINKAGE}.BUILDLINK_PASSTHRU_RPATHDIRS}
 LDFLAGS+=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.LDFLAGS}
 PLIST.dynamic=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.PLIST.dynamic}
-PLIST.terminfo=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.PLIST.terminfo}
-PLIST.shlibs=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.PLIST.shlibs}
 
 ################################################################################
 

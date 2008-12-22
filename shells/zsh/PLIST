@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/12/21 16:53:31 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/12/22 02:15:54 uebayasi Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -612,8 +612,6 @@ ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftransfer
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zftype
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuget
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuput
-@comment ${PLIST.terminfo}lib/zsh/${PKGVERSION}/zsh/terminfo.so
-@comment ${PLIST.shlibs}lib/zsh/libzsh-${PKGVERSION}.so
 @exec ${MKDIR} %D/share/zsh/site-functions
 @dirrm share/zsh/site-functions
 @dirrm share/zsh/${PKGVERSION}/functions
