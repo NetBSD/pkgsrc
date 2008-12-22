@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3528 2008/12/22 02:48:28 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3529 2008/12/22 09:08:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5873,3 +5873,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/isc-dhcrelay4 to 4.0.0nb1 [adrianp 2008-12-21]
 	Updated net/isc-dhcpd4 to 4.0.0nb1 [adrianp 2008-12-21]
 	Updated devel/libatomic_ops to 20081024nb1 [jmcneill 2008-12-21]
+	Updated multimedia/ns-flash to 9.0.152 [wiz 2008-12-22]
