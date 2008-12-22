@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.50 2008/12/22 02:15:54 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.51 2008/12/22 14:38:31 uebayasi Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -38,28 +38,24 @@ PLIST_VARS=	dynamic
 
 ################################################################################
 
-_ZSH_OPSYS.OpenBSD=		dynamic ldflags tcsetpgrp
-_ZSH_OPSYS.Linux=		dynamic ldflags tcsetpgrp
-_ZSH_OPSYS.IRIX=		dynamic ldflags tcsetpgrp
-_ZSH_OPSYS.Interix=		dynamic ldflags notcsetpgrp
-_ZSH_OPSYS.DragonFly=		dynamic ldflags tcsetpgrp
-_ZSH_OPSYS.FreeBSD=		dynamic ldflags tcsetpgrp
-_ZSH_OPSYS.SunOS=		dynamic -       tcsetpgrp
+_ZSH_OPSYS.OpenBSD=		ldflags tcsetpgrp
+_ZSH_OPSYS.Linux=		ldflags tcsetpgrp
+_ZSH_OPSYS.IRIX=		ldflags tcsetpgrp
+_ZSH_OPSYS.Interix=		ldflags notcsetpgrp
+_ZSH_OPSYS.DragonFly=		ldflags tcsetpgrp
+_ZSH_OPSYS.FreeBSD=		ldflags tcsetpgrp
+_ZSH_OPSYS.SunOS=		-       tcsetpgrp
 
-_ZSH_OPSYS.${OPSYS}?=		dynamic ldflags tcsetpgrp
+_ZSH_OPSYS.${OPSYS}?=		ldflags tcsetpgrp
 
 ################################################################################
 
 ### static
 
-# Might be overwritten by hacks.mk.
-_ZSH_STATIC.BUILDLINK_PASSTHRU_RPATHDIRS=	# nothing
-_ZSH_STATIC.LDFLAGS=				-static
-
 _ZSH_LINKAGE.static.CONFIGURE_ARGS=	--disable-dynamic
-_ZSH_LINKAGE.static.BUILDLINK_PASSTHRU_RPATHDIRS= \
-	${_ZSH_STATIC.BUILDLINK_PASSTHRU_RPATHDIRS}
-_ZSH_LINKAGE.static.LDFLAGS=		${_ZSH_STATIC.LDFLAGS}
+_ZSH_LINKAGE.static.BUILDLINK_PASSTHRU_RPATHDIRS?=
+_ZSH_LINKAGE.static.LDFLAGS?=		-static
+_ZSH_LINKAGE.static.PLIST.dynamic=	no
 
 ### dynamic
 
@@ -67,18 +63,29 @@ _ZSH_DYNAMIC_VARS.ldflags=	${COMPILER_RPATH_FLAG}${PREFIX}/lib/zsh
 
 _ZSH_LINKAGE.dynamic.CONFIGURE_ARGS=
 _ZSH_LINKAGE.dynamic.BUILDLINK_PASSTHRU_RPATHDIRS=
-_ZSH_LINKAGE.dynamic.LDFLAGS=	${_ZSH_DYNAMIC_VARS.${_ZSH_OPSYS.${OPSYS}:Mldflags}}
+# XXXUEBAYASI old make(1) has problems to handle :?true_str:false_str
+#_ZSH_LINKAGE.dynamic.LDFLAGS= \
+#	${_ZSH_OPSYS.${OPSYS}:Mldflags:?${_ZSH_DYNAMIC_VARS.ldflags}:}
+.if !empty(_ZSH_OPSYS.${OPSYS}:Mldflags)
+_ZSH_LINKAGE.dynamic.LDFLAGS=	${_ZSH_DYNAMIC_VARS.ldflags}
+.endif
+_ZSH_LINKAGE.dynamic.PLIST.dynamic=	yes
 
-_ZSH_LINKAGE.dynamic.PLIST.dynamic=	${_ZSH_OPSYS.${OPSYS}:Mdynamic:?yes:no}
-
-###
+### tcsetpgrp
 
 _ZSH_OPSYS_VARS.tcsetpgrp=	--with-tcsetpgrp
 _ZSH_OPSYS_VARS.notcsetpgrp=	--without-tcsetpgrp
 
 ################################################################################
 
-_ZSH_LINKAGE=	${ZSH_STATIC:M[Yy][Ee][Ss]:?static:dynamic}	# static / dynamic
+# XXXUEBAYASI old make(1) has problems to handle :?true_str:false_str
+#_ZSH_LINKAGE=	${ZSH_STATIC:M[Yy][Ee][Ss]:?static:dynamic}	# static / dynamic
+ZSH_STATIC?=	no
+.if !empty(ZSH_STATIC:M[Yy][Ee][Ss])
+_ZSH_LINKAGE=	static
+.else
+_ZSH_LINKAGE=	dynamic
+.endif
 
 CONFIGURE_ARGS+=		${_ZSH_LINKAGE.${_ZSH_LINKAGE}.CONFIGURE_ARGS} \
 				${_ZSH_OPSYS_VARS.${_ZSH_OPSYS.${OPSYS}:Mtcsetpgrp}} \
