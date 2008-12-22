@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/12/22 02:47:24 jmcneill Exp $
+
+--- configure.ac.orig	2008-12-21 21:44:17.000000000 -0500
++++ configure.ac	2008-12-21 21:44:24.000000000 -0500
+@@ -4,6 +4,7 @@
+ AC_CONFIG_SRCDIR(src/atomic_ops.c)
+ AM_INIT_AUTOMAKE
+ AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ 
+ AM_CONFIG_HEADER(src/config.h)
+ 
