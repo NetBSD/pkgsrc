@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/12/21 20:04:54 markd Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/22 19:17:06 markd Exp $
 
 DISTNAME=	automoc4-0.9.87
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=../unstable/automoc4/0.9.87/}
 EXTRACT_SUFX=	.tar.bz2
+DIST_SUBDIR=	automoc4
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org
