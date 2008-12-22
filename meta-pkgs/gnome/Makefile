@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2008/12/04 16:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2008/12/22 12:21:12 jmcneill Exp $
 
-DISTNAME=	gnome-2.24.1.96
+DISTNAME=	gnome-2.24.1.97
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -11,6 +11,11 @@ COMMENT=	Meta-package for the GNOME desktop
 META_PACKAGE=	yes
 
 .include "../../lang/python/pyversion.mk"
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome
+PKG_SUPPORTED_OPTIONS=	pulseaudio
+PKG_SUGGESTED_OPTIONS=	pulseaudio
+.include "../../mk/bsd.options.mk"
 
 # see http://ftp.gnome.org/pub/GNOME/desktop/2.24/2.24.2/sources/
 
@@ -68,6 +73,9 @@ DEPENDS+=	gnome-volume-manager>=2.24.0:../../sysutils/gnome-volume-manager
 DEPENDS+=	gok>=2.24.0:../../misc/gok
 DEPENDS+=	gst-plugins0.10-base>=0.10.21:../../multimedia/gst-plugins0.10-base
 DEPENDS+=	gst-plugins0.10-good>=0.10.10:../../multimedia/gst-plugins0.10-good
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+DEPENDS+=	gst-plugins0.10-pulse>=0.10.11:../../audio/gst-plugins0.10-pulse
+.endif
 DEPENDS+=	gstreamer0.10>=0.10.21:../../multimedia/gstreamer0.10
 DEPENDS+=	gtk2-engines>=2.16.1:../../x11/gtk2-engines
 DEPENDS+=	gtkhtml314>=3.24.2:../../www/gtkhtml314
