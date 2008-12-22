@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/11/02 13:02:51 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/12/22 18:47:44 jmcneill Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -9,7 +9,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include		"../../chat/libpurple/Makefile.common"
 
-USE_TOOLS+=	msgfmt
+USE_TOOLS+=	msgfmt perl
 
 PKGCONFIG_OVERRIDE+=	finch/finch.pc.in
 PKGCONFIG_OVERRIDE+=	finch/libgnt/gnt.pc.in
