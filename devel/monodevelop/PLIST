@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/11/20 18:02:53 kefren Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/12/22 13:16:49 jmcneill Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -157,6 +157,7 @@ share/icons/hicolor/scalable/apps/monodevelop.svg
 share/locale/ca/LC_MESSAGES/monodevelop.mo
 share/locale/cs/LC_MESSAGES/monodevelop.mo
 share/locale/da/LC_MESSAGES/monodevelop.mo
+share/locale/de/LC_MESSAGES/monodevelop.mo
 share/locale/es/LC_MESSAGES/monodevelop.mo
 share/locale/fr/LC_MESSAGES/monodevelop.mo
 share/locale/gl/LC_MESSAGES/monodevelop.mo
