@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/20 18:23:56 jmcneill Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/22 01:17:51 dsainty Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
@@ -12,7 +12,7 @@ COMMENT=	Sound server for POSIX and Win32 systems
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake msgfmt intltool perl \
+USE_TOOLS+=	pkg-config gmake m4 msgfmt intltool perl \
 		autoconf automake
 USE_DIRS+=	xdg-1.4
 
