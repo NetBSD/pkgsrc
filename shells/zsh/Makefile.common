@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.51 2008/12/22 14:38:31 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.52 2008/12/22 17:03:21 uebayasi Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -55,7 +55,6 @@ _ZSH_OPSYS.${OPSYS}?=		ldflags tcsetpgrp
 _ZSH_LINKAGE.static.CONFIGURE_ARGS=	--disable-dynamic
 _ZSH_LINKAGE.static.BUILDLINK_PASSTHRU_RPATHDIRS?=
 _ZSH_LINKAGE.static.LDFLAGS?=		-static
-_ZSH_LINKAGE.static.PLIST.dynamic=	no
 
 ### dynamic
 
@@ -69,7 +68,6 @@ _ZSH_LINKAGE.dynamic.BUILDLINK_PASSTHRU_RPATHDIRS=
 .if !empty(_ZSH_OPSYS.${OPSYS}:Mldflags)
 _ZSH_LINKAGE.dynamic.LDFLAGS=	${_ZSH_DYNAMIC_VARS.ldflags}
 .endif
-_ZSH_LINKAGE.dynamic.PLIST.dynamic=	yes
 
 ### tcsetpgrp
 
@@ -92,7 +90,9 @@ CONFIGURE_ARGS+=		${_ZSH_LINKAGE.${_ZSH_LINKAGE}.CONFIGURE_ARGS} \
 				${_ZSH_OPSYS_VARS.${_ZSH_OPSYS.${OPSYS}:Mnotcsetpgrp}}
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${_ZSH_LINKAGE.${_ZSH_LINKAGE}.BUILDLINK_PASSTHRU_RPATHDIRS}
 LDFLAGS+=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.LDFLAGS}
-PLIST.dynamic=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.PLIST.dynamic}
+.if ${_ZSH_LINKAGE} == dynamic
+PLIST.dynamic=	yes
+.endif
 
 ################################################################################
 
