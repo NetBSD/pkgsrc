@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/12/21 18:13:01 jmcneill Exp $
+# $NetBSD: Makefile,v 1.16 2008/12/22 15:00:01 joerg Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
 
-INSTALLATION_DIRS=	lib/pkgconfig
+INSTALLATION_DIRS=	lib/pkgconfig share/applications share/pixmaps
 
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
@@ -96,9 +96,9 @@ install-desktop:
 		<${.CURDIR}/../../www/firefox3/files/${MOZILLA}.desktop.in \
 		>${WRKDIR}/${MOZILLA}.desktop
 	${INSTALL_DATA} ${WRKDIR}/${MOZILLA}.desktop		\
-	    ${PREFIX}/share/applications/${MOZILLA}.desktop
+	    ${DESTDIR}${PREFIX}/share/applications/${MOZILLA}.desktop
 	${INSTALL_DATA} ${MOZILLA_ICON}				\
-	    ${PREFIX}/share/pixmaps/${MOZILLA}.png
+	    ${DESTDIR}${PREFIX}/share/pixmaps/${MOZILLA}.png
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
 
