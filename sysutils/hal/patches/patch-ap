@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2008/12/21 13:58:28 jmcneill Exp $
+$NetBSD: patch-ap,v 1.2 2008/12/22 11:06:16 jmcneill Exp $
 
 PR# pkg/40147: sysutils/hal fails to build on Linux
 
@@ -8,7 +8,7 @@ PR# pkg/40147: sysutils/hal fails to build on Linux
  ## Process this file with automake to produce Makefile.in
  
 -udevrulesdir = $(sysconfdir)/udev/rules.d
-+udevrulesdir = $(EGDIR)
++udevrulesdir = $(PREFIX)/share/examples/hal
  udevrules_DATA = 90-hal.rules
  
  
