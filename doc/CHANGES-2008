@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3530 2008/12/22 12:21:56 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3531 2008/12/22 18:49:46 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5875,3 +5875,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libatomic_ops to 20081024nb1 [jmcneill 2008-12-21]
 	Updated multimedia/ns-flash to 9.0.152 [wiz 2008-12-22]
 	Updated meta-pkgs/gnome to 2.24.1.97 [jmcneill 2008-12-22]
+	Updated chat/libpurple to 2.5.3 [jmcneill 2008-12-22]
+	Updated chat/pidgin to 2.5.3 [jmcneill 2008-12-22]
+	Updated chat/pidgin-sametime to 2.5.3 [jmcneill 2008-12-22]
+	Updated chat/pidgin-silc to 2.5.3 [jmcneill 2008-12-22]
+	Updated chat/finch to 2.5.3 [jmcneill 2008-12-22]
