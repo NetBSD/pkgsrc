@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/25 00:32:23 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/22 02:46:52 jmcneill Exp $
 include/atomic_ops.h
 include/atomic_ops/generalize-small.h
 include/atomic_ops/generalize.h
@@ -47,8 +47,8 @@ include/atomic_ops/sysdeps/test_and_set_t_is_ao_t.h
 include/atomic_ops/sysdeps/test_and_set_t_is_char.h
 include/atomic_ops_malloc.h
 include/atomic_ops_stack.h
-lib/libatomic_ops.a
-lib/libatomic_ops_gpl.a
+lib/libatomic_ops.la
+lib/libatomic_ops_gpl.la
 share/doc/libatomic_ops/COPYING
 share/doc/libatomic_ops/LICENSING.txt
 share/doc/libatomic_ops/README.txt

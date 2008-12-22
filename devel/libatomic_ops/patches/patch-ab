@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1 2008/12/22 02:47:24 jmcneill Exp $
+
+--- src/Makefile.am.orig	2006-07-11 19:29:29.000000000 -0400
++++ src/Makefile.am	2008-12-21 21:42:31.000000000 -0500
+@@ -3,14 +3,14 @@
+ AM_CFLAGS=@PICFLAG@
+ 
+ include_HEADERS=atomic_ops.h atomic_ops_stack.h atomic_ops_malloc.h
+-lib_LIBRARIES = libatomic_ops.a libatomic_ops_gpl.a
++lib_LTLIBRARIES = libatomic_ops.la libatomic_ops_gpl.la
+ if NEED_ASM
+-libatomic_ops_a_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
++libatomic_ops_la_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
+ else
+-libatomic_ops_a_SOURCES = atomic_ops.c
++libatomic_ops_la_SOURCES = atomic_ops.c
+ endif
+ 
+-libatomic_ops_gpl_a_SOURCES = atomic_ops_stack.c atomic_ops_malloc.c
++libatomic_ops_gpl_la_SOURCES = atomic_ops_stack.c atomic_ops_malloc.c
+ 
+ EXTRA_DIST=Makefile.msft
+ 
