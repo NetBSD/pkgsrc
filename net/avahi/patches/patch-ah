@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1 2008/12/23 02:08:06 hasso Exp $
+
+--- avahi-common/strlst.c.orig	2008-12-21 20:02:13 +0200
++++ avahi-common/strlst.c	2008-12-21 20:02:39 +0200
+@@ -33,6 +33,14 @@
+ #include "malloc.h"
+ #include "defs.h"
+ 
++#ifndef va_copy
++#ifdef __va_copy
++#define va_copy(DEST,SRC) __va_copy((DEST),(SRC))
++#else
++#define va_copy(DEST,SRC) memcpy(&(DEST), &(SRC), sizeof(va_list))
++#endif
++#endif
++
+ AvahiStringList*avahi_string_list_add_anonymous(AvahiStringList *l, size_t size) {
+     AvahiStringList *n;
+ 
