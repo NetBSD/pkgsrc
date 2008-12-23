@@ -1,12 +1,5 @@
-$NetBSD: distinfo,v 1.64 2008/10/18 18:32:18 tnn Exp $
+$NetBSD: distinfo,v 1.65 2008/12/23 22:45:00 ahoka Exp $
 
-SHA1 (sylpheed-2.5.0.tar.bz2) = d6384669b720c361d1761bbcc5d426e69a1d2bd4
-RMD160 (sylpheed-2.5.0.tar.bz2) = 7514a6b49b4cc399c7926dd4a011bce9566e5971
-Size (sylpheed-2.5.0.tar.bz2) = 2762950 bytes
-SHA1 (patch-aa) = 30305efb899b511b0b3aff50377c7d1b9d6176a8
-SHA1 (patch-ab) = 465f69e8cee24da06089e24eefd3963908aa04be
-SHA1 (patch-ac) = a24840af4d52c6bdc750dbc9b076f5fbd4f25690
-SHA1 (patch-ad) = 346dab88b4c4cfd9c50ae8dcc074d4de74ec6d32
-SHA1 (patch-ae) = a3cbd0c99a5eee72f30d853b3686124b6f1d8b3e
-SHA1 (patch-af) = a28663b1210e688987c3df0837663a4172e63969
-SHA1 (patch-ag) = 54a58f757da11f3b68d59866d0ee3e297f57ca02
+SHA1 (sylpheed-2.6.0.tar.bz2) = 122fe608b5a7cb5a262da65908b1f5cf67a0123f
+RMD160 (sylpheed-2.6.0.tar.bz2) = a4eb3b11d297dce1c42c23ceb553680b0942d75c
+Size (sylpheed-2.6.0.tar.bz2) = 2833188 bytes
