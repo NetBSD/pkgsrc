@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/12/22 17:03:21 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/12/23 02:58:44 uebayasi Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -42,6 +42,7 @@ man/man1/zshmisc.1
 man/man1/zshmodules.1
 man/man1/zshoptions.1
 man/man1/zshparam.1
+man/man1/zshroadmap.1
 man/man1/zshtcpsys.1
 man/man1/zshzftpsys.1
 man/man1/zshzle.1
