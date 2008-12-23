@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/02 08:32:24 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/23 11:22:05 obache Exp $
 #
 
 DISTNAME=	csup-snap-20070216
@@ -10,20 +10,34 @@ MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://www.mu.org/~mux/csup.html
 COMMENT=	Rewrite of the CVSup file updating client in C
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	lex yacc
+
+USE_BSD_MAKEFILE=	yes
+
 WRKSRC=		${WRKDIR}/csup
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
-CFLAGS+=    ${PTHREAD_CFLAGS}
-LDFLAGS+=   ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+CFLAGS+=	${PTHREAD_CFLAGS}
+LDFLAGS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/csup ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/csup.1 ${PREFIX}/${PKGMANDIR}/man1/csup.1
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" \
+	|| ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
+CFLAGS+=	-DHAVE_FFLAGS
+.endif
+
+# taken from ${WRKSRC}/GNUmakefile
+.if ${OPSYS} == "Linux"
+CFLAGS+=	-D_XOPEN_SOURCE -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
