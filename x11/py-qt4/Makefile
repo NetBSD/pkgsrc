@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/16 06:44:43 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/23 22:22:16 wiz Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
@@ -41,6 +41,10 @@ PLIST_SRC+=		${PKGDIR}/PLIST.Darwin
 .else
 DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
 PLIST_SRC+=		${PKGDIR}/PLIST.X11
+.endif
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == "py24"
+PLIST_SRC+=		${PKGDIR}/PLIST.elementtree
 .endif
 PLIST_SRC+=		${PKGDIR}/PLIST.common_end
 
