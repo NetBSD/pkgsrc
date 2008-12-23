@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/02 15:47:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2008/12/23 23:26:38 ahoka Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
@@ -13,7 +13,7 @@ COMMENT=	Browser-based multilingual IMAP client
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2-beta
+RCVERSION=	0.2-beta2
 VERSION=	${RCVERSION:S/-//}
 
 .include "../../mk/bsd.prefs.mk"
