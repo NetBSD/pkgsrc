@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3531 2008/12/22 18:49:46 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3532 2008/12/23 09:49:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5880,3 +5880,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-sametime to 2.5.3 [jmcneill 2008-12-22]
 	Updated chat/pidgin-silc to 2.5.3 [jmcneill 2008-12-22]
 	Updated chat/finch to 2.5.3 [jmcneill 2008-12-22]
+	Updated devel/cpuflags to 1.29 [abs 2008-12-23]
