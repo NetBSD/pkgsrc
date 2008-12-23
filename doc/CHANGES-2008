@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3532 2008/12/23 09:49:27 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3533 2008/12/23 12:09:00 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5881,3 +5881,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-silc to 2.5.3 [jmcneill 2008-12-22]
 	Updated chat/finch to 2.5.3 [jmcneill 2008-12-22]
 	Updated devel/cpuflags to 1.29 [abs 2008-12-23]
+	Updated net/avahi to 0.6.23nb2 [adrianp 2008-12-23]
