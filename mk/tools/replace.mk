@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.216 2008/12/15 12:53:28 rillig Exp $
+# $NetBSD: replace.mk,v 1.217 2008/12/23 22:34:26 dsl Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -1249,7 +1249,8 @@ FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
 #####
 .    if defined(_TOOLS_DEPMETHOD.${_t_}) && defined(TOOLS_DEPENDS.${_t_})
 .      for _dep_ in ${TOOLS_DEPENDS.${_t_}}
-.        if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_:C/\:.*$//})
+_dep_test := ${_dep_:C/\:.*$//}
+.        if empty(${_TOOLS_DEPMETHOD.${_t_}}:C/\:.*$//:M${_dep_test})
 ${_TOOLS_DEPMETHOD.${_t_}}+=	${_dep_}
 .        endif
 .      endfor
