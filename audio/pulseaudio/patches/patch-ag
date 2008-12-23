@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2008/12/23 02:15:27 hasso Exp $
+
+--- ./src/modules/oss-util.c.orig	2008-12-21 22:03:48 +0200
++++ ./src/modules/oss-util.c	2008-12-21 22:04:31 +0200
+@@ -298,7 +298,11 @@ static int get_device_number(const char 
+     int r;
+ 
+     if (!(p = rp = pa_readlink(dev))) {
++#ifdef ENOLINK
+         if (errno != EINVAL && errno != ENOLINK) {
++#else
++        if (errno != EINVAL) {
++#endif
+             r = -1;
+             goto finish;
+         }
