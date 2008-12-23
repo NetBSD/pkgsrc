@@ -1,14 +1,13 @@
-$NetBSD: patch-ab,v 1.2 2007/02/20 13:31:19 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2008/12/23 11:22:06 obache Exp $
 
---- Makefile.orig	2006-03-07 19:10:25.000000000 +0000
+--- Makefile.orig	2006-03-08 04:10:25.000000000 +0900
 +++ Makefile
-@@ -11,33 +11,13 @@ SRCS=	attrstack.c config.c detailer.c di
+@@ -11,33 +11,12 @@ SRCS=	attrstack.c config.c detailer.c di
  	globtree.c idcache.c keyword.c lister.c main.c misc.c mux.c parse.y \
  	pathcomp.c proto.c status.c stream.c threads.c token.l updater.c
  
 -CFLAGS+=	-I. -I${.CURDIR} -g -pthread -DHAVE_FFLAGS -DNDEBUG
-+CFLAGS+=	-I. -I${.CURDIR} -g ${PTHREAD_CFLAGS} -DHAVE_FFLAGS -DNDEBUG
-+LDFLAGS+=	${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
++CFLAGS+=	-I. -I${.CURDIR} -g -DNDEBUG
  WARNS?=		6
  
 -# A bit of tweaking is needed to get this Makefile working
