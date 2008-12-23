@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/12/22 03:32:11 jmcneill Exp $
+# $NetBSD: Makefile,v 1.10 2008/12/23 19:29:28 jmcneill Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
@@ -72,6 +72,7 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/atomic.h)
 CONFIGURE_ARGS+=	--enable-netbsd-atomic-ops
 .else
+CONFIGURE_ARGS+=	--disable-netbsd-atomic-ops
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
