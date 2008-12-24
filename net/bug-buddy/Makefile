@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/12/02 10:34:46 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2008/12/24 03:05:16 jmcneill Exp $
 #
 
 DISTNAME=		bug-buddy-2.24.2
@@ -16,11 +16,15 @@ GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		autoconf
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 CPPFLAGS+=	-I${LOCALBASE}/include/libelf
 
 GCONF_SCHEMAS=		bug-buddy.schemas
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
 
 .include "options.mk"
 
