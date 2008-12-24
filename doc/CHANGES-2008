@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3536 2008/12/24 11:48:27 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3537 2008/12/24 14:48:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5885,3 +5885,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/sylpheed to 2.6.0 [ahoka 2008-12-23]
 	Updated mail/roundcube to 0.2beta2 [ahoka 2008-12-24]
 	Updated meta-pkgs/gnome to 2.24.1.98 [jmcneill 2008-12-24]
+	Updated print/gutenprint-lib to 5.2.3 [gdt 2008-12-24]
