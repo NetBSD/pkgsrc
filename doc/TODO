@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7754 2008/12/24 12:41:41 obache Exp $
+$NetBSD: TODO,v 1.7755 2008/12/24 14:12:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -563,7 +563,7 @@ Suggested package updates
 	o faac-1.26
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fcrackzip-1.0
+	o fcrackzip-1.0 [pkg/40113]
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
