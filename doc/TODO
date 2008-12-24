@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7752 2008/12/23 11:35:40 taca Exp $
+$NetBSD: TODO,v 1.7753 2008/12/24 12:19:46 taca Exp $
 
 Suggested new packages
 ======================
@@ -844,7 +844,7 @@ Suggested package updates
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
-	o mew-6.1 [as mew6?]
+	o mew-6.2 [as mew6?]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.65
