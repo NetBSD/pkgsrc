@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2008/10/16 15:37:51 drochner Exp $
+# $NetBSD: Makefile,v 1.79 2008/12/24 18:49:55 jmcneill Exp $
 #
 
 DISTNAME=	metacity-2.24.0
@@ -30,6 +30,10 @@ GCONF_SCHEMAS=		metacity.schemas
 CONFIGURE_ARGS+=	--disable-xinerama
 .endif
 
+.if ${X11_TYPE} != "modular" && !exists(${X11BASE}/lib/libXdamage.so)
+CONFIGURE_ARGS+=	--disable-compositor
+.endif
+
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.7
@@ -45,8 +49,8 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
