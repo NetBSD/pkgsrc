@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3534 2008/12/23 22:47:01 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3535 2008/12/24 11:21:48 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5883,3 +5883,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cpuflags to 1.29 [abs 2008-12-23]
 	Updated net/avahi to 0.6.23nb2 [adrianp 2008-12-23]
 	Updated mail/sylpheed to 2.6.0 [ahoka 2008-12-23]
+	Updated mail/roundcube to 0.2beta2 [ahoka 2008-12-24]
