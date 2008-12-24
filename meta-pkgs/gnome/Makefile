@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.106 2008/12/22 12:21:12 jmcneill Exp $
+# $NetBSD: Makefile,v 1.107 2008/12/24 11:47:43 jmcneill Exp $
 
-DISTNAME=	gnome-2.24.1.97
+DISTNAME=	gnome-2.24.1.98
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -25,7 +25,8 @@ DEPENDS+=	cheese>=2.24.2:../../graphics/cheese
 DEPENDS+=	dasher>=4.9.0:../../editors/dasher
 DEPENDS+=	deskbar-applet>=2.24.2:../../misc/deskbar-applet
 DEPENDS+=	eel>=2.24.1:../../devel/eel
-DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
+# needs opal->ffmpeg->lame, which has a special license
+#DEPENDS+=	ekiga>=3.0.1:../../net/ekiga
 DEPENDS+=	empathy>=2.24.1:../../chat/empathy
 DEPENDS+=	eog>=2.24.2:../../graphics/eog
 DEPENDS+=	epiphany>=2.24.2.1:../../www/epiphany
