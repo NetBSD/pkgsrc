@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2008/12/24 11:47:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.108 2008/12/24 21:26:13 jmcneill Exp $
 
 DISTNAME=	gnome-2.24.1.98
 CATEGORIES=	meta-pkgs x11 gnome
@@ -51,7 +51,9 @@ DEPENDS+=	gnome-doc-utils>=0.14.0:../../textproc/gnome-doc-utils
 DEPENDS+=	gnome-games>=2.24.2:../../games/gnome-games
 DEPENDS+=	gnome-icon-theme>=2.24.0:../../graphics/gnome-icon-theme
 DEPENDS+=	gnome-keyring>=2.24.1:../../security/gnome-keyring
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/libXdamage.so)
 DEPENDS+=	gnome-mag>=0.15.4:../../x11/gnome-mag
+.endif
 DEPENDS+=	gnome-media>=2.24.0.1:../../multimedia/gnome-media
 DEPENDS+=	gnome-menus>=2.24.2:../../sysutils/gnome-menus
 DEPENDS+=	gnome-netstatus>=2.12.2:../../net/gnome-netstatus
