@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2008/12/24 12:39:59 jmcneill Exp $
+
+--- configure.ac.orig	2008-12-24 07:18:01.000000000 -0500
++++ configure.ac	2008-12-24 07:19:12.000000000 -0500
+@@ -95,11 +95,23 @@
+    telepathy-glib >= $TELEPATHY_GLIB_REQUIRED
+    libmissioncontrol >= $MISSION_CONTROL_REQUIRED
+    gtk+-2.0 >= $GTK_REQUIRED
+-   x11
+    libglade-2.0 >= $LIBGLADE_REQUIRED
+    libebook-1.2
+ ])
+ 
++PKG_CHECK_MODULES(X11, x11 >= $X11_REQUIRED_VERSION, [HAVE_X11=yes], [HAVE_X11=no])
++if test x$HAVE_X11 = xno; then
++  AC_PATH_XTRA
++  if test "x$no_x" = xyes; then
++    AC_MSG_ERROR(X11 development libraries not found);
++  else
++    XLIB_LIBS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
++    XLIB_CFLAGS=$X_CFLAGS
++  fi
++fi
++EMPATHY_CFLAGS="$EMPATHY_CFLAGS $X11_CFLAGS $XLIB_CFLAGS"
++EMPATHY_LIBS="$EMPATHY_LIBS $X11_LIBS $XLIB_LIBS"
++
+ # -----------------------------------------------------------
+ # Enable debug
+ # -----------------------------------------------------------

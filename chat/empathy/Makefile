@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/16 11:59:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/12/24 12:39:59 jmcneill Exp $
 
 DISTNAME=	empathy-2.24.1
 PKGREVISION=	1
@@ -16,6 +16,7 @@ DEPENDS+=	telepathy-idle-[0-9]*:../../chat/telepathy-idle
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gawk gmake intltool msgfmt pkg-config
+USE_TOOLS+=		autoconf
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
@@ -29,6 +30,9 @@ post-patch:
 	    mv $$f $$f.original ; \
 	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
 	done
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
 
 .include "../../chat/telepathy-mission-control/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
