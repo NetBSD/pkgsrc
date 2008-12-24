@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2008/12/02 14:37:19 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2008/12/24 02:38:18 jmcneill Exp $
 #
 
 DISTNAME=		gnome-desktop-2.24.2
@@ -16,12 +16,21 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl:run pkg-config
+USE_TOOLS+=		automake autoconf aclocal autoreconf m4
 USE_LIBTOOL=		yes
+
+AUTOCONF_REQD=		2.62
 
 CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
+BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
+
+pre-configure:
+	cd ${WRKSRC} && autoconf -f
+	cd ${WRKSRC} && autoheader -f
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
