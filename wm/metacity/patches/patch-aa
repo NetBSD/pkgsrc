@@ -1,0 +1,57 @@
+$NetBSD: patch-aa,v 1.5 2008/12/24 18:49:55 jmcneill Exp $
+
+--- src/compositor/compositor-xrender.c.orig	2008-12-24 13:43:30.000000000 -0500
++++ src/compositor/compositor-xrender.c	2008-12-24 13:46:14.000000000 -0500
+@@ -288,6 +288,7 @@ make_gaussian_map (double r)
+   return c;
+ }
+ 
++#ifdef HAVE_COMPOSITE_EXTENSIONS
+ static void
+ dump_xserver_region (const char   *location, 
+                      MetaDisplay  *display,
+@@ -321,6 +322,7 @@ dump_xserver_region (const char   *locat
+   else
+     fprintf (stderr, "%s (XSR): null\n", location);
+ }
++#endif
+ 
+ /*
+ * A picture will help
+@@ -1052,7 +1054,7 @@ get_window_picture (MetaCompWindow *cw)
+ 
+   meta_error_trap_push (display);
+ 
+-#ifdef HAVE_NAME_WINDOW_PIXMAP
++#if defined(HAVE_NAME_WINDOW_PIXMAP) && defined(HAVE_COMPOSITE_EXTENSIONS)
+   if (have_name_window_pixmap (display))
+     {
+       if (cw->back_pixmap == None)
+@@ -1219,7 +1221,7 @@ paint_windows (MetaScreen   *screen,
+         {
+           int x, y, wid, hei;
+           
+-#ifdef HAVE_NAME_WINDOW_PIXMAP
++#if defined(HAVE_NAME_WINDOW_PIXMAP) && defined(HAVE_COMPOSITE_EXTENSIONS)
+           if (have_name_window_pixmap (display))
+             {
+               x = cw->attrs.x;
+@@ -1361,7 +1363,9 @@ paint_all (MetaScreen   *screen,
+     {
+       Picture overlay;
+ 
++#ifdef HAVE_COMPOSITE_EXTENSIONS
+       dump_xserver_region ("paint_all", display, region);
++#endif
+ 
+       /* Make a random colour overlay */
+       overlay = solid_picture (display, screen, TRUE, 1, /* 0.3, alpha */
+@@ -2481,7 +2485,7 @@ show_overlay_window (MetaScreen *screen,
+   MetaDisplay *display = meta_screen_get_display (screen);
+   Display *xdisplay = meta_display_get_xdisplay (display);
+ 
+-#ifdef HAVE_COW
++#if defined(HAVE_COW) && defined(HAVE_COMPOSITE_EXTENSIONS)
+   if (have_cow (display))
+     {
+       XserverRegion region;
