@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/12/14 19:21:01 hasso Exp $
+# $NetBSD: Makefile,v 1.9 2008/12/24 04:04:04 jmcneill Exp $
 
 DISTNAME=	cheese-2.24.2
 CATEGORIES=	graphics
@@ -32,6 +32,7 @@ GCONF_SCHEMAS+=	cheese.schemas
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi # -f breaks it
+	cd ${WRKSRC} && autoheader -f
 
 .include "options.mk"
 
