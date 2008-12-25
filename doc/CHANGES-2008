@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3538 2008/12/25 01:01:15 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3539 2008/12/25 13:27:47 kim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5887,3 +5887,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated meta-pkgs/gnome to 2.24.1.98 [jmcneill 2008-12-24]
 	Updated print/gutenprint-lib to 5.2.3 [gdt 2008-12-24]
 	Updated converters/skf to 1.95.6 [obache 2008-12-25]
+	Updated sysutils/roller to 1.20 [kim 2008-12-25]
