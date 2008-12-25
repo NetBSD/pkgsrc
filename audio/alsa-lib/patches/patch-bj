@@ -1,0 +1,22 @@
+$NetBSD: patch-bj,v 1.1 2008/12/25 13:18:00 hasso Exp $
+
+--- src/pcm/pcm_direct.c.orig	2008-12-25 07:49:08 +0200
++++ src/pcm/pcm_direct.c	2008-12-25 07:48:37 +0200
+@@ -44,7 +44,7 @@
+  *
+  */
+  
+-union semun {
++union semun_l {
+ 	int              val;    /* Value for SETVAL */
+ 	struct semid_ds *buf;    /* Buffer for IPC_STAT, IPC_SET */
+ 	unsigned short  *array;  /* Array for GETALL, SETALL */
+@@ -58,7 +58,7 @@ union semun {
+ 
+ int snd_pcm_direct_semaphore_create_or_connect(snd_pcm_direct_t *dmix)
+ {
+-	union semun s;
++	union semun_l s;
+ 	struct semid_ds buf;
+ 	int i;
+ 
