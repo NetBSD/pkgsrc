@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2008/12/19 23:28:40 jmcneill Exp $
+# $NetBSD: options.mk,v 1.13 2008/12/25 18:21:59 jmcneill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		debug faad arts dbus hal skins sdl esound pulseaudio x11 gnome
@@ -89,7 +89,7 @@ PLIST.skins=		yes
 CONFIGURE_ARGS+=	--disable-skins2
 .endif
 
-## X11 dependecy and QT4 frontend
+## X11 dependency and QT4 frontend
 
 .if !empty(PKG_OPTIONS:Mx11)
 DEPENDS+= dejavu-ttf>=2.0:../../fonts/dejavu-ttf
