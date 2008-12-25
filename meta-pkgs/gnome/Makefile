@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2008/12/24 21:46:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.110 2008/12/25 00:56:34 jmcneill Exp $
 
 DISTNAME=	gnome-2.24.1.98
 CATEGORIES=	meta-pkgs x11 gnome
@@ -99,7 +99,9 @@ DEPENDS+=	librsvg>=2.22.3:../../graphics/librsvg
 DEPENDS+=	libsoup24>=2.24.2.1:../../net/libsoup24
 DEPENDS+=	libwnck>=2.24.2:../../devel/libwnck
 DEPENDS+=	metacity>=2.24.0:../../wm/metacity
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/pkgconfig/xtst.pc)
 DEPENDS+=	mousetweaks>=2.24.2:../../misc/mousetweaks
+.endif
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
 DEPENDS+=	orca>=2.24.2:../../misc/orca
