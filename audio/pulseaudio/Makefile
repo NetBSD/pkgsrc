@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/12/23 19:29:28 jmcneill Exp $
+# $NetBSD: Makefile,v 1.11 2008/12/25 21:47:03 ahoka Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -32,7 +32,7 @@ PULSE_GROUP?=		pulse
 PULSE_GROUP_REALTIME?=	pulsert
 PULSE_GROUP_ACCESS?=	pulseacc
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
 PKG_SYSCONFSUBDIR=	pulse
 EGDIR=		${PREFIX}/share/examples/pulseaudio
@@ -41,6 +41,7 @@ CONF_FILES+=	${EGDIR}/daemon.conf ${PKG_SYSCONFDIR}/daemon.conf
 CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
 CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-system-user=${PULSE_USER}
 CONFIGURE_ARGS+=	--with-system-group=${PULSE_GROUP}
