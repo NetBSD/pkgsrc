@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1 2008/12/25 00:14:42 jmcneill Exp $
+
+--- configure.ac.orig	2008-12-24 19:09:47.000000000 -0500
++++ configure.ac	2008-12-24 19:12:24.000000000 -0500
+@@ -15,10 +15,24 @@
+ AC_PROG_LIBTOOL
+ 
+ # Checks for pkg-config packages
+-PKG_CHECK_MODULES(XEVIE, xproto x11 xextproto xext evieproto)
++PKG_CHECK_MODULES(XEVIE, xextproto evieproto)
+ AC_SUBST(XEVIE_CFLAGS)
+ AC_SUBST(XEVIE_LIBS)
+ 
++PKG_CHECK_MODULES(X11, xproto x11 xextproto xext, [HAVE_X11=yes], [HAVE_X11=no])
++if test x$HAVE_X11 = xno; then
++  AC_PATH_XTRA
++  if test "x$no_x" = xyes; then
++    AC_MSG_ERROR(X11 development libraries not found);
++  else
++    XLIB_LIBS="$X_PRE_LIBS $X_LIBS -lX11 -lXext $X_EXTRA_LIBS"
++    XLIB_CFLAGS="$X_CFLAGS -D_REENTRANT"
++  fi
++fi
++XEVIE_CFLAGS="$XEVIE_CFLAGS $X11_CFLAGS $XLIB_CFLAGS"
++XEVIE_LIBS="$XEVIE_LIBS $X11_LIBS $XLIB_LIBS"
++
++
+ XORG_CHECK_MALLOC_ZERO
+ XORG_MANPAGE_SECTIONS
+ XORG_RELEASE_VERSION
