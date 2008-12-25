@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2008/12/25 00:56:34 jmcneill Exp $
+# $NetBSD: Makefile,v 1.111 2008/12/25 01:28:15 jmcneill Exp $
 
 DISTNAME=	gnome-2.24.1.98
 CATEGORIES=	meta-pkgs x11 gnome
@@ -104,7 +104,9 @@ DEPENDS+=	mousetweaks>=2.24.2:../../misc/mousetweaks
 .endif
 DEPENDS+=	nautilus>=2.24.2:../../sysutils/nautilus
 DEPENDS+=	nautilus-cd-burner>=2.24.0:../../sysutils/nautilus-cd-burner
+.if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/libXdamage.so)
 DEPENDS+=	orca>=2.24.2:../../misc/orca
+.endif
 DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../x11/py-gtksourceview
 DEPENDS+=	seahorse>=2.24.1:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.24.1:../../security/seahorse-plugins
