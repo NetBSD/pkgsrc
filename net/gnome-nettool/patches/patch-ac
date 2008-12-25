@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
 
 --- src/netstat.c.orig	2008-09-22 22:04:12.000000000 +0000
 +++ src/netstat.c
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (netinfo->protocol))) {
  		/* Only works for Solaris */
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	    	option = g_strdup ("-a -f inet -ln");
  #else
  		if (netinfo_is_ipv6_enable ()) {
@@ -16,7 +16,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  
  	count = strip_protocol_line (line, &data);
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (count == 5 || count == 6 || count == 9 || count == 10) {
  #else
  	if (count == 5 || count == 6) {
@@ -25,7 +25,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  {
  	gint count = 0;
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	gint a1, a2, a3, a4;
  	gchar s9[30];
  #else
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  	/*line = g_strdelimit (line, ":", ' ');*/
  
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	line = g_strdelimit (line, ":", ' ');
  	
  	count = sscanf (line, NETSTAT_PROTOCOL_FORMAT,
@@ -43,7 +43,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  
  	count = strip_route_line (line, &data);
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (count == 6) {
  #else
  	if ((count == 8) || (count == 7)) {
@@ -52,7 +52,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  #endif
  
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	count = sscanf (line, NETSTAT_ROUTE_FORMAT,
  			data->destination,
  			data->gateway, flags,
@@ -61,7 +61,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  	column =
  	    gtk_tree_view_column_new_with_attributes
 -#if defined(__FreeBSD__) || defined(__OpenBSD__)
-+#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	    (_("Destination/Prefix"), renderer, "text", 0, NULL);
  #else
  	    (_("Destination"), renderer, "text", 0, NULL);
@@ -70,7 +70,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/12/02 20:56:49 wiz Exp $
  	gtk_tree_view_append_column (widget, column);
  
 -#if ! (defined(__FreeBSD__) || defined(__OpenBSD__))
-+#if ! (defined(__FreeBSD__) || defined(__OpenBSD__)) || defined(__NetBSD__)
++#if ! (defined(__FreeBSD__) || defined(__OpenBSD__)) || defined(__NetBSD__) || defined(__DragonFly__)
  	renderer = gtk_cell_renderer_text_new ();
  	column =
  	    gtk_tree_view_column_new_with_attributes
