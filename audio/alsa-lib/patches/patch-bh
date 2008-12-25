@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.1 2008/12/19 05:14:00 jmcneill Exp $
+$NetBSD: patch-bh,v 1.2 2008/12/25 13:18:00 hasso Exp $
 
 --- src/pcm/pcm_meter.c.orig	2008-12-19 00:05:13.000000000 -0500
 +++ src/pcm/pcm_meter.c	2008-12-19 00:05:34.000000000 -0500
@@ -6,7 +6,7 @@ $NetBSD: patch-bh,v 1.1 2008/12/19 05:14:00 jmcneill Exp $
   */
    
  
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
  #include <byteswap.h>
 +#endif
  #include <time.h>
