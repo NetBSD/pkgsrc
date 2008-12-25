@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7755 2008/12/24 14:12:41 obache Exp $
+$NetBSD: TODO,v 1.7756 2008/12/25 16:44:19 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1198,7 +1198,6 @@ Suggested package updates
 	o sope-4.5.9
 	o source-highlight-2.11
 	o sox-14.2.0
-	o spamdyke-4.0.10
 	o spcaview-20060501
 	o spim-7.3
 	o srp_client-1.7.5 [jlam]
