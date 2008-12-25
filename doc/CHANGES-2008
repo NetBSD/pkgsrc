@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3539 2008/12/25 13:27:47 kim Exp $
+$NetBSD: CHANGES-2008,v 1.3540 2008/12/25 16:43:43 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5888,3 +5888,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/gutenprint-lib to 5.2.3 [gdt 2008-12-24]
 	Updated converters/skf to 1.95.6 [obache 2008-12-25]
 	Updated sysutils/roller to 1.20 [kim 2008-12-25]
+	Updated mail/spamdyke to 4.0.10 [schmonz 2008-12-25]
