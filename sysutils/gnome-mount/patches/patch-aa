@@ -1,20 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2008/12/25 05:33:20 hasso Exp $
 
---- src/gnome-mount-properties-view.c.orig	2008-02-25 16:55:05.000000000 -0500
-+++ src/gnome-mount-properties-view.c
+--- src/gnome-mount-properties-view.c.orig	2008-02-25 23:55:05 +0200
++++ src/gnome-mount-properties-view.c	2008-12-24 22:38:36 +0200
 @@ -35,7 +35,7 @@
  #include <string.h>
  #include <gconf/gconf-client.h>
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <fstab.h>
  #include <sys/param.h>
  #include <sys/ucred.h>
-@@ -59,6 +59,30 @@ struct _GnomeMountPropertiesViewClass {
+@@ -59,7 +59,31 @@ struct _GnomeMountPropertiesViewClass {
  	GtkVBoxClass base_class;
  };
  
+-#ifdef __FreeBSD__
 +#ifdef __NetBSD__
 +static struct opt {
 +	int o_opt;
@@ -39,10 +40,33 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
 +	{ 0, NULL }
 +};
 +#endif
- #ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
  static struct opt {
  	int o_opt;
-@@ -345,6 +369,14 @@ struct mtab_handle
+ 	const char *o_name;
+@@ -79,8 +103,12 @@ static struct opt {
+ 	{ MNT_NOCLUSTERW,	"noclusterw" },
+ 	{ MNT_SUIDDIR,		"suiddir" },
+ 	{ MNT_SOFTDEP,		"soft-updates" },
++#ifdef MNT_MULTILABEL
+ 	{ MNT_MULTILABEL,	"multilabel" },
++#endif
++#ifdef MNT_ACLS
+ 	{ MNT_ACLS,		"acls" },
++#endif
+ #ifdef MNT_GJOURNAL
+ 	{ MNT_GJOURNAL,		"gjournal" },
+ #endif
+@@ -337,7 +365,7 @@ populate_ui_from_gconf (GnomeMountProper
+ 	g_object_unref (gconf_client);
+ }
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ struct mtab_handle
+ {
+   struct statfs	*mounts;
+@@ -345,6 +373,14 @@ struct mtab_handle
    int		iter;
  };
  #endif
@@ -57,25 +81,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
  
  /* borrowed from gtk/gtkfilesystemunix.c in GTK+ on 02/23/2006 */
  static void
-@@ -454,7 +486,7 @@ out:
+@@ -454,7 +490,7 @@ out:
  static gboolean
  mtab_open (gpointer *handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	struct mtab_handle *mtab;
  
  	mtab = g_new0 (struct mtab_handle, 1);
-@@ -475,7 +507,7 @@ mtab_open (gpointer *handle)
+@@ -475,7 +511,7 @@ mtab_open (gpointer *handle)
  static gboolean
  mtab_next (gpointer handle, char **device_file, char **mount_options, char **mount_fstype)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	struct mtab_handle *mtab = handle;
  
  	if (mtab->iter < mtab->n_mounts) {
-@@ -484,7 +516,11 @@ mtab_next (gpointer handle, char **devic
+@@ -484,7 +520,11 @@ mtab_next (gpointer handle, char **devic
  		GString *optstr;
  
  		optstr = g_string_new("");
@@ -87,12 +111,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/11/22 17:54:42 jmcneill Exp $
  
  		for (o = optnames; flags && o->o_opt; o++) {
  			if (flags & o->o_opt) {
-@@ -517,7 +553,7 @@ mtab_next (gpointer handle, char **devic
+@@ -517,7 +557,7 @@ mtab_next (gpointer handle, char **devic
  static void
  mtab_close (gpointer handle)
  {
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	g_free (handle);
  #else
  	fclose (handle);
