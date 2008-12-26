@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3549 2008/12/26 19:53:09 epg Exp $
+$NetBSD: CHANGES-2008,v 1.3550 2008/12/26 20:07:47 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5902,3 +5902,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/SDL to 1.2.13nb4 [ahoka 2008-12-26]
 	Updated misc/udfclient to 0.7.1 [reinoud 2008-12-26]
 	Updated www/loggerhead to 1.10 [epg 2008-12-26]
+	Updated sysutils/consolekit to 0.3.0nb3 [hasso 2008-12-26]
