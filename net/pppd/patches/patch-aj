@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
+$NetBSD: patch-aj,v 1.2 2008/12/26 21:41:40 hasso Exp $
 
---- pppd/Makefile.netbsd.orig	2004-12-31 23:50:59.000000000 +0100
-+++ pppd/Makefile.netbsd
-@@ -0,0 +1,222 @@
+--- pppd/Makefile.netbsd.orig	2008-12-19 11:48:24 +0200
++++ pppd/Makefile.netbsd	2008-12-19 12:14:52 +0200
+@@ -0,0 +1,226 @@
 +#
 +# pppd makefile for NetBSD
 +#
@@ -38,6 +38,10 @@ $NetBSD: patch-aj,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
 +#
 +COPTS = -O2 -pipe -Wall -g
 +LIBS = -lutil
++
++ifeq ($(shell /usr/bin/uname -s),DragonFly)
++LIBS += -lcipher -lmd
++endif
 +
 +# Uncomment the next 2 lines to include support for Microsoft's
 +# MS-CHAP authentication protocol.  Also, edit plugins/radius/Makefile.linux.

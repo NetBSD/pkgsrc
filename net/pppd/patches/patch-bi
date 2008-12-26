@@ -1,14 +1,18 @@
-$NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
+$NetBSD: patch-bi,v 1.2 2008/12/26 21:41:40 hasso Exp $
 
---- pppdump/pppdump.c.orig	2004-02-02 04:36:46.000000000 +0100
-+++ pppdump/pppdump.c
-@@ -38,8 +38,13 @@
+--- pppdump/pppdump.c.orig	2004-02-01 19:36:46 -0800
++++ pppdump/pppdump.c	2008-12-10 03:22:59 -0800
+@@ -38,8 +38,17 @@
  #include <stdlib.h>
  #include <time.h>
  #include <sys/types.h>
 -#include "ppp_defs.h"
 +#include "pppdump.h"
++#ifdef __DragonFly__
++#include <net/ppp_layer/ppp_defs.h>
++#else
 +#include <net/ppp_defs.h>
++#endif
 +#ifdef __NetBSD__
 +#include <net/ppp-comp.h>
 +#else
@@ -17,7 +21,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  
  int hexmode;
  int pppmode;
-@@ -51,6 +56,15 @@ time_t start_time;
+@@ -51,6 +60,15 @@
  int start_time_tenths;
  int tot_sent, tot_rcvd;
  
@@ -33,7 +37,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  extern int optind;
  extern char *optarg;
  
-@@ -191,7 +205,7 @@ dumplog(f)
+@@ -191,7 +209,7 @@
  	    show_time(f, c);
  	    break;
  	default:
@@ -42,7 +46,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  	}
      }
  }
-@@ -234,15 +248,6 @@ static u_short fcstab[256] = {
+@@ -234,15 +252,6 @@
  	0x7bc7,	0x6a4e,	0x58d5,	0x495c,	0x3de3,	0x2c6a,	0x1ef1,	0x0f78
  };
  
@@ -58,7 +62,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  /* Values for flags */
  #define CCP_ISUP	1
  #define CCP_ERROR	2
-@@ -321,7 +326,7 @@ dumpppp(f)
+@@ -321,7 +330,7 @@
  			++r;
  			if (endp - r > mru)
  			    printf("     ERROR: length (%d) > MRU (%d)\n",
@@ -67,7 +71,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  			if (decompress && fcs == PPP_GOODFCS) {
  			    /* See if this is a CCP or compressed packet */
  			    d = dbuf;
-@@ -340,8 +345,15 @@ dumpppp(f)
+@@ -340,8 +349,15 @@
  				    && (pkt->flags & CCP_DECOMP_RUN)
  				    && pkt->state
  				    && (pkt->flags & CCP_ERR) == 0) {
@@ -85,7 +89,7 @@ $NetBSD: patch-bi,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  				    switch (rv) {
  				    case DECOMP_OK:
  					p = dbuf;
-@@ -364,7 +376,10 @@ dumpppp(f)
+@@ -364,7 +380,10 @@
  				}
  			    } else if (pkt->state
  				       && (pkt->flags & CCP_DECOMP_RUN)) {

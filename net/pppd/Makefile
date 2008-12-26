@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/06/11 12:36:23 tron Exp $
+# $NetBSD: Makefile,v 1.8 2008/12/26 21:41:40 hasso Exp $
 
 DISTNAME=		ppp-${PPPD_VERSION}
 PKGNAME=		${DISTNAME:S/ppp/&d/}
@@ -14,7 +14,7 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
-ONLY_FOR_PLATFORM+=	NetBSD-*-* Linux-*-*
+ONLY_FOR_PLATFORM+=	NetBSD-*-* Linux-*-* DragonFly*
 
 PKG_SYSCONFSUBDIR=	ppp
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q} PKGSYSCONFDIR=${PKG_SYSCONFDIR:Q}
