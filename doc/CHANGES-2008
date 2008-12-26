@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3540 2008/12/25 16:43:43 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.3541 2008/12/26 11:39:59 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5889,3 +5889,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/skf to 1.95.6 [obache 2008-12-25]
 	Updated sysutils/roller to 1.20 [kim 2008-12-25]
 	Updated mail/spamdyke to 4.0.10 [schmonz 2008-12-25]
+	Updated sysutils/hal to 0.5.11nb17 [ahoka 2008-12-26]
+	Updated audio/pulseaudio to 0.9.13nb4 [ahoka 2008-12-26]
