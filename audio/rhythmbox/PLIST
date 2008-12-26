@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/10/29 01:39:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/12/26 15:35:51 jmcneill Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/librhythmbox-core.la
@@ -21,6 +21,9 @@ lib/rhythmbox/plugins/daap/libdaap.la
 lib/rhythmbox/plugins/generic-player/generic-player-ui.xml
 lib/rhythmbox/plugins/generic-player/generic-player.rb-plugin
 lib/rhythmbox/plugins/generic-player/libgeneric-player.la
+${PLIST.hal}lib/rhythmbox/plugins/ipod/ipod-ui.xml
+${PLIST.hal}lib/rhythmbox/plugins/ipod/ipod.rb-plugin
+${PLIST.hal}lib/rhythmbox/plugins/ipod/libipod.la
 lib/rhythmbox/plugins/iradio/iradio-initial.pls
 lib/rhythmbox/plugins/iradio/iradio-ui.xml
 lib/rhythmbox/plugins/iradio/iradio.rb-plugin
@@ -460,6 +463,7 @@ share/rhythmbox/rhythmbox-ui.xml
 @dirrm lib/rhythmbox/plugins/power-manager
 @dirrm lib/rhythmbox/plugins/mmkeys
 @dirrm lib/rhythmbox/plugins/iradio
+${PLIST.hal}@dirrm lib/rhythmbox/plugins/ipod
 @dirrm lib/rhythmbox/plugins/generic-player
 @dirrm lib/rhythmbox/plugins/daap
 @dirrm lib/rhythmbox/plugins/cd-recorder
