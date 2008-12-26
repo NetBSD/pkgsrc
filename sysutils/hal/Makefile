@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2008/12/21 14:17:20 ahoka Exp $
+# $NetBSD: Makefile,v 1.28 2008/12/26 11:36:31 ahoka Exp $
 #
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		16
+PKGREVISION=		17
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,7 +11,7 @@ MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
@@ -28,6 +28,7 @@ EGDIR=			${PREFIX}/share/examples/hal
 
 CONF_FILES=		${EGDIR}/hal.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/hal.conf
 
+CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--with-pci-ids=${PREFIX}/share/pciids
 CONFIGURE_ARGS+=	--with-usb-ids=${PREFIX}/share/usbids
