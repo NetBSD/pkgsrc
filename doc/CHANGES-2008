@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3541 2008/12/26 11:39:59 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3542 2008/12/26 12:35:17 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5891,3 +5891,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/spamdyke to 4.0.10 [schmonz 2008-12-25]
 	Updated sysutils/hal to 0.5.11nb17 [ahoka 2008-12-26]
 	Updated audio/pulseaudio to 0.9.13nb4 [ahoka 2008-12-26]
+	Updated misc/udfclient to 0.7.0 [reinoud 2008-12-26]
