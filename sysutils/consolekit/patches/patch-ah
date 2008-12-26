@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2008/12/26 20:05:57 hasso Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=17893
+
+--- src/ck-run-programs.c.orig	2008-11-27 08:52:06 +0200
++++ src/ck-run-programs.c	2008-11-27 08:52:40 +0200
+@@ -225,6 +225,7 @@ ck_run_programs (const char *dirpath,
+         out_loop:
+                 g_free (child_argv[0]);
+         }
++        g_dir_close (dir);
+ out:
+         g_strfreev (env_for_child);
+ }
