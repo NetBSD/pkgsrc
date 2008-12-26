@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/12/10 11:43:20 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2008/12/26 20:05:56 hasso Exp $
 #
 
 CONSOLEKIT_VER=		0.3.0
 DISTNAME=		ConsoleKit-${CONSOLEKIT_VER}
 PKGNAME=		consolekit-${CONSOLEKIT_VER}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://people.freedesktop.org/~mccann/dist/
 EXTRACT_SUFX=		.tar.bz2
@@ -40,10 +40,19 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 #.include "../../mk/pam.buildlink3.mk"
 
 post-extract:
-	cp ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
+	${CP} ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+post-install:
+	${CP} ${FILESDIR}/ck-get-x11-display-device.FreeBSD \
+		${DESTDIR}${PREFIX}/libexec/ck-get-x11-display-device
+	${CP} ${FILESDIR}/ck-get-x11-server-pid.FreeBSD \
+		${DESTDIR}${PREFIX}/libexec/ck-get-x11-server-pid
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
