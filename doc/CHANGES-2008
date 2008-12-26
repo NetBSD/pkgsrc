@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3543 2008/12/26 13:11:38 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3544 2008/12/26 13:24:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5893,3 +5893,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/pulseaudio to 0.9.13nb4 [ahoka 2008-12-26]
 	Updated misc/udfclient to 0.7.0 [reinoud 2008-12-26]
 	Updated www/squid30 to 3.0.11 [taca 2008-12-26]
+	Updated mail/clawsker to 0.5.0nb1 [obache 2008-12-26]
+	Updated mail/claws-mail-fetchinfo to 0.4.23nb2 [obache 2008-12-26]
