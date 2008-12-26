@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.3 2005/01/02 22:28:31 cube Exp $
+$NetBSD: patch-az,v 1.4 2008/12/26 21:41:40 hasso Exp $
 
---- pppd/sys-bsd.c.orig	2005-01-02 23:24:27.000000000 +0100
-+++ pppd/sys-bsd.c
+--- pppd/sys-bsd.c.orig	2008-12-26 23:11:29 +0200
++++ pppd/sys-bsd.c	2008-12-26 23:12:45 +0200
 @@ -0,0 +1,2184 @@
 +/*	NetBSD: sys-bsd.c,v 1.50 2004/12/05 04:16:22 christos Exp 	*/
 +
@@ -131,7 +131,7 @@ $NetBSD: patch-az,v 1.3 2005/01/02 22:28:31 cube Exp $
 +#if defined(NetBSD) && (NetBSD >= 199703)
 +#include <netinet/if_inarp.h>
 +#else	/* NetBSD 1.2D or later */
-+#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
 +#include <netinet/if_ether.h>
 +#else
 +#include <net/if_ether.h>
