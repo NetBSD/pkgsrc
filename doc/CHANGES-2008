@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3546 2008/12/26 15:38:40 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3547 2008/12/26 18:14:37 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5899,3 +5899,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/hal to 0.5.11nb18 [jmcneill 2008-12-26]
 	Updated sysutils/hal-info to 20081022nb1 [jmcneill 2008-12-26]
 	Updated audio/rhythmbox to 0.11.6nb1 [jmcneill 2008-12-26]
+	Updated devel/SDL to 1.2.13nb4 [ahoka 2008-12-26]
