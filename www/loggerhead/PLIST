@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 17:20:26 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/12/26 19:51:55 epg Exp $
 bin/serve-branches
 bin/start-loggerhead
 bin/stop-loggerhead
@@ -14,6 +14,9 @@ ${PYSITELIB}/loggerhead/apps/branch.pyo
 ${PYSITELIB}/loggerhead/apps/config.py
 ${PYSITELIB}/loggerhead/apps/config.pyc
 ${PYSITELIB}/loggerhead/apps/config.pyo
+${PYSITELIB}/loggerhead/apps/error.py
+${PYSITELIB}/loggerhead/apps/error.pyc
+${PYSITELIB}/loggerhead/apps/error.pyo
 ${PYSITELIB}/loggerhead/apps/filesystem.py
 ${PYSITELIB}/loggerhead/apps/filesystem.pyc
 ${PYSITELIB}/loggerhead/apps/filesystem.pyo
@@ -41,6 +44,9 @@ ${PYSITELIB}/loggerhead/controllers/directory_ui.pyo
 ${PYSITELIB}/loggerhead/controllers/download_ui.py
 ${PYSITELIB}/loggerhead/controllers/download_ui.pyc
 ${PYSITELIB}/loggerhead/controllers/download_ui.pyo
+${PYSITELIB}/loggerhead/controllers/error_ui.py
+${PYSITELIB}/loggerhead/controllers/error_ui.pyc
+${PYSITELIB}/loggerhead/controllers/error_ui.pyo
 ${PYSITELIB}/loggerhead/controllers/inventory_ui.py
 ${PYSITELIB}/loggerhead/controllers/inventory_ui.pyc
 ${PYSITELIB}/loggerhead/controllers/inventory_ui.pyo
@@ -99,6 +105,173 @@ ${PYSITELIB}/loggerhead/static/images/treeExpanded.png
 ${PYSITELIB}/loggerhead/static/javascript/custom.js
 ${PYSITELIB}/loggerhead/static/javascript/mootools-1.2-core.js
 ${PYSITELIB}/loggerhead/static/javascript/mootools-1.2-more.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-color-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-color-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-color.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-curve-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-curve-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-curve.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-easing-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-easing-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-easing.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-node-plugin-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-node-plugin-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-node-plugin.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-scroll-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-scroll-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-scroll.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-xy-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-xy-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim-xy.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/anim/anim.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute/attribute-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute/attribute-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute/attribute.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/base/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/base/base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/base/base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/base/base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cookie/cookie-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cookie/cookie-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cookie/cookie.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase/base-context-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase/base-context.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase/base-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase/base.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts/fonts-context-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts/fonts-context.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts/fonts-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts/fonts.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids/grids-context-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids/grids-context.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids/grids-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids/grids.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset/reset-context-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset/reset-context.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset/reset-min.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset/reset.css
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-constrain-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-constrain-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-constrain.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-drop-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-drop-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-drop.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-ddm.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drag-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drag-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drag.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop-plugin-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop-plugin-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop-plugin.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-drop.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-plugin-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-plugin-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-plugin.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-proxy-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-proxy-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd-proxy.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dd/dd.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-screen-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-screen-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-screen.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-style-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-style-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom-style.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/dom.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/selector-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/selector-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dom/selector.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dump/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dump/dump-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dump/dump-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/dump/dump.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/event/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/event/event-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/event/event-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/event/event.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/get/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/get/get-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/get/get-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/get/get.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/io/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/io/io-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/io/io-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/io/io.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/io/io.swf
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-parse-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-parse-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-parse.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-stringify-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-stringify-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json-stringify.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/json/json.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/loader/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/loader/loader-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/loader/loader-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/loader/loader.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-screen-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-screen-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-screen.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-style-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-style-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node-style.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/node/node.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/oop/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/oop/oop-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/oop/oop-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/oop/oop.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/queue/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/queue/queue-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/queue/queue-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/queue/queue.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute/substitute-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute/substitute-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute/substitute.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base/yui-base-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base/yui-base-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base/yui-base.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui/README
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui/yui-debug.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui/yui-min.js
+${PYSITELIB}/loggerhead/static/javascript/yui/build/yui/yui.js
 ${PYSITELIB}/loggerhead/templatefunctions.py
 ${PYSITELIB}/loggerhead/templatefunctions.pyc
 ${PYSITELIB}/loggerhead/templatefunctions.pyo
@@ -107,11 +280,13 @@ ${PYSITELIB}/loggerhead/templates/__init__.pyc
 ${PYSITELIB}/loggerhead/templates/__init__.pyo
 ${PYSITELIB}/loggerhead/templates/annotate.pt
 ${PYSITELIB}/loggerhead/templates/atom.pt
+${PYSITELIB}/loggerhead/templates/breadcrumbs.pt
 ${PYSITELIB}/loggerhead/templates/browse.pt
 ${PYSITELIB}/loggerhead/templates/changelog.pt
 ${PYSITELIB}/loggerhead/templates/collapse-all-button.pt
 ${PYSITELIB}/loggerhead/templates/collapse-button.pt
 ${PYSITELIB}/loggerhead/templates/directory.pt
+${PYSITELIB}/loggerhead/templates/error.pt
 ${PYSITELIB}/loggerhead/templates/feed-link.pt
 ${PYSITELIB}/loggerhead/templates/inventory.pt
 ${PYSITELIB}/loggerhead/templates/macros.pt
@@ -122,6 +297,9 @@ ${PYSITELIB}/loggerhead/templates/revisionfilechanges.pt
 ${PYSITELIB}/loggerhead/templates/revisioninfo.pt
 ${PYSITELIB}/loggerhead/templates/search-box.pt
 ${PYSITELIB}/loggerhead/templates/search.pt
+${PYSITELIB}/loggerhead/trace.py
+${PYSITELIB}/loggerhead/trace.pyc
+${PYSITELIB}/loggerhead/trace.pyo
 ${PYSITELIB}/loggerhead/util.py
 ${PYSITELIB}/loggerhead/util.pyc
 ${PYSITELIB}/loggerhead/util.pyo
@@ -137,6 +315,30 @@ man/man1/stop-loggerhead.1
 share/doc/loggerhead/loggerhead.conf.example
 @dirrm share/doc/loggerhead
 @dirrm ${PYSITELIB}/loggerhead/templates
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/yui
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/queue
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/oop
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/node
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/loader
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/json
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/io
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/get
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/event
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dump
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dom
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dd
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cookie
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/base
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/anim
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build
+@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui
 @dirrm ${PYSITELIB}/loggerhead/static/javascript
 @dirrm ${PYSITELIB}/loggerhead/static/images
 @dirrm ${PYSITELIB}/loggerhead/static/css
