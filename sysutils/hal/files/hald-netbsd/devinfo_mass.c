@@ -1,4 +1,4 @@
-/* $NetBSD: devinfo_mass.c,v 1.1 2008/12/01 02:02:33 jmcneill Exp $ */
+/* $NetBSD: devinfo_mass.c,v 1.2 2008/12/26 15:30:06 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -33,6 +33,9 @@
 #include <sys/disklabel.h>
 #include <sys/bootblock.h>
 #include <sys/ioctl.h>
+#include <sys/scsiio.h>
+#include <dev/scsipi/scsipi_all.h>
+#include <ctype.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
@@ -57,6 +60,9 @@
 HalDevice *devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type);
 HalDevice *devinfo_mass_disklabel_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type);
 
+/* XXX from devinfo_optical */
+extern bool scsi_command(int, void *, size_t, void *, size_t, int, int);
+
 DevinfoDevHandler devinfo_mass_handler = {
 	devinfo_mass_add,
 	NULL,
@@ -73,6 +79,24 @@ DevinfoDevHandler devinfo_mass_disklabel_handler = {
 	NULL,
 	NULL
 };
+
+static char *
+rtrim_copy(char *src, int len)
+{
+        char    *dst, *p;
+
+	if (len == 0) {
+		len = strlen(src);
+	}
+	if ((dst = calloc(1, len + 1)) != NULL) {
+		strncpy(dst, src, len);
+		p = dst + len - 1;
+		while ((p >= dst) && (isspace((int)*p))) {
+			*p-- = '\0';
+		}
+	}
+	return (dst);
+}
 
 static const char *
 devinfo_mass_get_fstype(uint8_t fstype)
@@ -111,16 +135,21 @@ devinfo_mass_get_mbrtype(uint8_t fstype)
 HalDevice *
 devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char *device_type)
 {
-	HalDevice *d = NULL;
+	HalDevice *d = NULL, *gparent = NULL;
 	prop_dictionary_t dict;
 	struct disklabel label;
 	struct stat st;
 	const char *driver;
 	char *rdevpath, *devpath;
 	char *childnode;
-	char *parent_devnode;
+	char *parent_devnode, *gparent_devnode = NULL;
+	char *gparent_udi;
 	int16_t unit;
 	int i, fd;
+	struct scsipi_inquiry_data inqbuf;
+	struct scsipi_inquiry cmd;
+	bool scsiinq_status;
+	char *storage_model = NULL, *storage_vendor = NULL;
 
 	if (drvctl_find_device (devnode, &dict) == FALSE || dict == NULL)
 		return NULL;
@@ -158,6 +187,16 @@ devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char 
 		return NULL;
 	}
 
+	if (strcmp (driver, "sd") == 0) {
+		memset(&cmd, 0, sizeof (cmd));
+		memset(&inqbuf, 0, sizeof (inqbuf));
+		cmd.opcode = INQUIRY;
+		cmd.length = sizeof (inqbuf);
+
+		scsiinq_status = scsi_command (fd, &cmd, sizeof (cmd), &inqbuf, sizeof (inqbuf), 10000, SCCMD_READ);
+	} else
+		scsiinq_status = false;
+
 	close (fd);
 
 	d = hal_device_new ();
@@ -178,7 +217,13 @@ devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char 
 	hal_device_add_capability (d, "storage");
 	hal_device_property_set_string (d, "info.category", "storage");
 	parent_devnode = hal_device_property_get_string (parent, "netbsd.device");
-	if (strstr (parent_devnode, "umass") == parent_devnode)
+	gparent_udi = hal_device_property_get_string (parent, "info.parent");
+	if (gparent_udi) {
+		gparent = hal_device_store_find (hald_get_gdl (), gparent_udi);
+		if (gparent)
+			gparent_devnode = hal_device_property_get_string (gparent, "netbsd.device");
+	}
+	if (gparent_devnode && strstr (gparent_devnode, "umass") == gparent_devnode)
 		hal_device_property_set_string (d, "storage.bus", "usb");
 	else if (strstr (parent_devnode, "atabus") == parent_devnode)
 		hal_device_property_set_string (d, "storage.bus", "ide");
@@ -207,8 +252,23 @@ devinfo_mass_add(HalDevice *parent, const char *devnode, char *devfs_path, char 
 	hal_device_property_set_string (d, "storage.partitioning_scheme", "mbr");
 	hal_device_property_set_string (d, "storage.originating_device",
 	    hal_device_property_get_string (d, "info.udi"));
-	hal_device_property_set_string (d, "storage.model", label.d_packname);
-	hal_device_property_set_string (d, "storage.vendor", label.d_typename);
+
+	if (scsiinq_status == true) {
+		storage_model = rtrim_copy(inqbuf.product, sizeof (inqbuf.product));
+		storage_vendor = rtrim_copy(inqbuf.vendor, sizeof (inqbuf.vendor));
+	}
+
+	if (storage_model) {
+		hal_device_property_set_string (d, "storage.model", storage_model);
+		free (storage_model);
+	} else
+		hal_device_property_set_string (d, "storage.model", label.d_packname);
+
+	if (storage_vendor) {
+		hal_device_property_set_string (d, "storage.vendor", storage_vendor);
+		free (storage_vendor);
+	} else
+		hal_device_property_set_string (d, "storage.vendor", label.d_typename);
 
 	devinfo_add_enqueue (d, devfs_path, &devinfo_mass_handler);
 
@@ -322,10 +382,20 @@ devinfo_mass_disklabel_add(HalDevice *parent, const char *devnode, char *devfs_p
 	vid = volume_id_open_fd (fd);
 	if (vid) {
 		if (volume_id_probe_all (vid, 0, psize) == 0) {
+			char *type;
+
 			hal_device_property_set_string (d, "volume.label", vid->label);
 			hal_device_property_set_string (d, "volume.partition.label", vid->label);
 			hal_device_property_set_string (d, "volume.uuid", vid->uuid);
 			hal_device_property_set_string (d, "volume.partition.uuid", vid->uuid);
+
+			if (volume_id_get_type (vid, &type) && type != NULL)
+				if (strcmp (type, "vfat") == 0) {
+					HAL_INFO (("%s disklabel reports %s but libvolume_id says it is "
+					    "%s, assuming disklabel is incorrect",
+					    devpath, devinfo_mass_get_fstype (part->p_fstype)));
+					hal_device_property_set_string (d, "volume.fstype", type);
+				}
 		}
 		volume_id_close (vid);
 	}
