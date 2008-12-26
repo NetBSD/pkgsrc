@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3544 2008/12/26 13:24:22 obache Exp $
+$NetBSD: CHANGES-2008,v 1.3545 2008/12/26 13:31:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5895,3 +5895,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/squid30 to 3.0.11 [taca 2008-12-26]
 	Updated mail/clawsker to 0.5.0nb1 [obache 2008-12-26]
 	Updated mail/claws-mail-fetchinfo to 0.4.23nb2 [obache 2008-12-26]
+	Updated textproc/p5-XML-Feed to 0.30 [obache 2008-12-26]
