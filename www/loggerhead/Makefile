@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/04 17:20:26 epg Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/26 19:51:55 epg Exp $
 
 DISTNAME=	loggerhead-${VER}
 CATEGORIES=	www scm
-MASTER_SITES=	http://launchpad.net/loggerhead/1.6/${VER}/+download/
-VER=		1.6
+MASTER_SITES=	http://launchpad.net/loggerhead/${VER}/${VER}/+download/
+VER=		1.10
+
+# 1.10 distfile contains no top-level directory.
+EXTRACT_DIR=	${WRKSRC}
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	https://launchpad.net/loggerhead
