@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2008/10/29 01:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2008/12/26 15:35:51 jmcneill Exp $
 #
 
 DISTNAME=	rhythmbox-0.11.6
+PKGREVISION=	1
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.11/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,6 +13,13 @@ COMMENT=	Music management application for GNOME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PKG_OPTIONS_VAR=	rhythmbox
+PKG_SUPPORTED_OPTIONS=	hal
+PKG_SUGGESTED_OPTIONS=	hal
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
+.include "../../mk/bsd.options.mk"
+
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
@@ -20,10 +28,18 @@ USE_PKGLOCALEDIR=	YES
 
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
-# need newer HAL
-#CONFIGURE_ARGS+=	--with-ipod
+.if !empty(PKG_OPTIONS:Mhal)
+CONFIGURE_ARGS+=	--with-ipod
+.include "../../audio/libgpod/buildlink3.mk"
+# needs a newer libmtp
 #CONFIGURE_ARGS+=	--with-mtp
+#.include "../../devel/libmtp/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-hal
+PLIST.hal=		yes
+.include "../../sysutils/hal/buildlink3.mk"
+.else
 CONFIGURE_ARGS+=	--without-hal
+.endif
 
 GCONF_SCHEMAS=		rhythmbox.schemas
 
@@ -31,16 +47,12 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.6.0
 BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 
-# needs newer HAL
-#.include "../../audio/libgpod/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-# needs newer HAL
-#.include "../../devel/libmtp/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
