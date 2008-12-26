@@ -95,7 +95,7 @@ DevinfoDevHandler devinfo_optical_volume_handler = {
 
 
 /* XXX i dont know how to link cdutils here XXX ! */
-static bool
+bool
 scsi_command (int fd, void *cmd, size_t cmdlen, void *data, size_t datalen,
     int timeout, int flags)
 {
