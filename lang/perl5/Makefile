@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2008/12/21 14:02:59 joerg Exp $
+# $NetBSD: Makefile,v 1.147 2008/12/27 15:49:31 joerg Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
@@ -299,9 +299,9 @@ SUBST_CLASSES+=		cpprun
 SUBST_STAGE.cpprun=	pre-install
 SUBST_FILES.cpprun=	lib/Config_heavy.pl
 .if !empty(PKG_OPTIONS:Mthreads)
-SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun-'cc_r -E'/"
+SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc_r -E'/"
 .else
-SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun-'cc -E'/"
+SUBST_SED.cpprun=	-e "s/cpprun=''/cpprun='cc -E'/"
 .endif
 .endif
 
