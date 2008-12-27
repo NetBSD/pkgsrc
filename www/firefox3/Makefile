@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/12/22 15:00:01 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/12/27 16:11:45 tnn Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -31,8 +31,8 @@ DESCR_SRC=		${.CURDIR}/../../www/firefox/DESCR
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox3/distinfo
 PATCHDIR=		${.CURDIR}/../../www/firefox3/patches
 
-post-extract: copy-pkgconfig
 .PHONY: copy-pkgconfig
+post-extract: copy-pkgconfig
 copy-pkgconfig:
 	cp ${.CURDIR}/../../www/firefox3/files/*.pc ${WRKSRC:Q}/build/unix
 
@@ -43,23 +43,23 @@ SUBST_FILES.fix-pc+=	build/unix/*.pc
 SUBST_SED.fix-pc=	-e 's,@PREFIX@,${PREFIX},g'
 
 # Need this to be able to reuse existing firefox pkgsrc infrastructure
-pre-configure: create-dummy-c-sdk
 .PHONY: create-dummy-c-sdk
+pre-configure: create-dummy-c-sdk
 create-dummy-c-sdk:
 	mkdir -p ${WRKSRC:Q}/directory/c-sdk
 	touch ${WRKSRC:Q}/directory/c-sdk/configure.in
 
 # Makefiles sometimes call "rm -f" without more arguments. Kludge around ...
-pre-configure: ye-olde-rm-hack
-.PHONY: ye-olde-rm-hack
-ye-olde-rm-hack:
+.PHONY: create-rm-wrapper
+pre-configure: create-rm-wrapper
+create-rm-wrapper:
 	printf '#!/bin/sh\n[ "$$*" = "-f" ] && exit 0\nexec /bin/rm $$@\n' > \
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
 # Link browser.xpt
-post-build: stage-package
 .PHONY: stage-package
+post-build: stage-package
 stage-package:
 	cd ${WRKSRC}/browser/installer && \
 	  ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} stage-package
@@ -69,13 +69,12 @@ stage-package:
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 PLIST_SUBST+=		JEMALLOC=
 SCRIPTS_ENV+=		JEMALLOC=
-post-install: install-libjemalloc install-desktop
 .PHONY: install-libjemalloc
+post-install: install-libjemalloc
 install-libjemalloc:
 	${INSTALL_LIB} ${WRKSRC}/dist/lib/libjemalloc.${SO_SUFFIX} \
 	  ${DESTDIR}${PREFIX}/lib/${MOZILLA}/libjemalloc.${SO_SUFFIX}
 .else
-post-install: install-desktop
 PLIST_SUBST+=		JEMALLOC="@comment "
 SCRIPTS_ENV+=		JEMALLOC="@comment "
 .endif
@@ -88,6 +87,8 @@ MOZILLA_NAME=	Minefield 3
 MOZILLA_ICON=	${WRKSRC}/browser/branding/unofficial/default48.png
 .endif
 
+.PHONY: install-desktop
+post-install: install-desktop
 install-desktop:
 	${SED}							\
 		-e 's|@MOZILLA@|${MOZILLA}|g'			\
@@ -102,7 +103,7 @@ install-desktop:
 
 INSTALLATION_DIRS+=	lib/${MOZILLA}/modules
 
-# Can't use system PNG because it doesn't have APNG support?
+# configure says: "Can't use system PNG because it doesn't have APNG support"
 CONFIGURE_ARGS+=	--without-system-png
 # Override www/firefox's idea of toolkit
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
@@ -111,7 +112,7 @@ CONFIGURE_ARGS+=	--disable-dbus
 # Avoids needing curl on Linux
 CONFIGURE_ARGS+=	--disable-crashreporter
 
-CONFIGURE_ARGS+=	--enable-system-sqlite 
+CONFIGURE_ARGS+=	--enable-system-sqlite
 .include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
