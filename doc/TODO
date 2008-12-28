@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7759 2008/12/28 01:08:17 obache Exp $
+$NetBSD: TODO,v 1.7760 2008/12/28 11:27:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -336,26 +336,28 @@ Suggested package updates
 	o Canna-3.7p3
 	o Chinput-3.0.1
 	o Coin-2.4.5
-	o DatLib-2.26
-	o DatUtil-2.37
+	o DatLib-2.33
+	o DatUtil-2.43
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o MAMEDiff-2.29
+	o MAMEDiff-2.30
 	o MesaLib-7.2
 	o PAM-0.99.7.1
+	o R-2.8.1
 	o REminiscence-0.1.9
-	o ROMBuild-2.10
+	o ROMBuild-2.11
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o SDL_gfx-2.0.18
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o aap-0.144
-	o abcm2ps-5.9.1
+	o abcm2ps-5.9.2
 	o abcmidi-20080928
 	o abiword-2.6.2
 	o acme-091
@@ -367,7 +369,7 @@ Suggested package updates
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
-	o album-4.01
+	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
 	o amanda-2.6.0p2
@@ -396,7 +398,7 @@ Suggested package updates
 	o aqsis-1.4.1
 	o aranym-0.9.7
 	o argtable-2.9
-	o aria2-1.0.1
+	o aria2-1.1.0
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
@@ -461,12 +463,13 @@ Suggested package updates
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
+	o cdrtools-2.01.01.54
 	o cfitsio-3.100
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
 	o chemtool-1.6.11
-	o cherokee-0.11.5
+	o cherokee-0.11.6
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -494,7 +497,7 @@ Suggested package updates
 	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.2.0
-	o cvsd-1.0.14
+	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
 	o darcs-2.1.2
@@ -508,7 +511,7 @@ Suggested package updates
 	o ddrescue-1.9
 	o defendguin-0.0.11
 	o delegate-9.9.0
-	o devIL-1.7.1
+	o devIL-1.7.4
 	o devhelp-0.22
 	o dhid-5.3
 	o dinotrace-9.3e
@@ -521,6 +524,7 @@ Suggested package updates
 	o dmenu-3.9 [pkgsrc-wip has it!]
 	o dnstop-20070307
 	o dnstracer-1.9
+	o doxygen-1.5.8
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
@@ -535,7 +539,7 @@ Suggested package updates
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
-	o electric-8.07
+	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
 	o elfsh-0.65 [pkg/33959]
@@ -554,6 +558,7 @@ Suggested package updates
 	o erubis-2.6.2
 	o esh-0.8.5
 	o esmtp-1.0
+	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
 	o ex-20050325
@@ -596,6 +601,7 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
+	o gbrainy-1.01
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -606,7 +612,7 @@ Suggested package updates
 	o gdeskcal-1.01
 	o gdm-2.24.1
 	o gdsreader-0.3.2
-	o geda-1.4.1.20080929
+	o geda-1.4.2.20081220
 	o geeklog-1.5.0
 	o gettext-0.17
 	o gforth-0.7.0
@@ -616,16 +622,17 @@ Suggested package updates
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
+	o gimp-ufraw-0.15
 	o gindent-2.2.9
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glabels-2.2.3
+	o glabels-2.2.4
 	o glchess-1.0.5
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
-	o gmpc-0.16.0
+	o gmpc-0.17.0
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -659,6 +666,7 @@ Suggested package updates
 	o gsl-1.12 [pkg/40200]
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gtar-1.21
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-sharp-2.12.7
@@ -695,7 +703,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
-	o hylafax-5.2.7
+	o hylafax-5.2.8
 	o ical-2.3.2
 	o icdprog-0.5
 	o icon-9.4.3
@@ -769,6 +777,7 @@ Suggested package updates
 	o libdockapp-0.6.1
 	o libdrm-2.4.3
 	o libdvbpsi-0.1.6
+	o libevent-1.4.9
 	o libextractor-0.5.21
 	o libflash-0.4.13
 	o libgda-3.1.5
@@ -787,6 +796,7 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmpd-0.17.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -807,8 +817,9 @@ Suggested package updates
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libv4l-0.5.7
-	o libxml++-2.24.1
+	o libxml++-2.24.2
 	o licq-1.3.6
+	o liferea-1.4.23
 	o lincvs-2.1.1 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.2.1
@@ -840,6 +851,7 @@ Suggested package updates
 	o mediawiki-1.13.3
 	o mednafen-0.8.a
 	o memconf-2.9 [pkg/40201]
+	o memtestplus-2.11
 	o merb-0.9.4 (and related plugins)
 	o mercury-0.13.1
 	o mergeant-0.67
@@ -868,7 +880,7 @@ Suggested package updates
 	o mpeg4ip-1.6.1
 	o mpg123-1.6.3
 	o mpi-ch-1.0.8 [pkg/40239]
-	o mpop-1.0.15
+	o mpop-1.0.16
 	o mserv-devel-0.41
 	o msf-2.7
 	o msmtp-1.4.17 [pkg/40278]
@@ -876,9 +888,11 @@ Suggested package updates
 	o multitail-5.2.2
 	o munin-1.3.4
 	o muse-0.9.2
-	o musicpd-0.13.2
+	o musicpd-0.14
 	o mysql-5.1.30
 	o mysql-5.2.3
+	o mysql-client-5.0.79
+	o mysql-server-5.0.79
 	o mysql5-client-5.0.75
 	o mysql5-server-5.0.75
 	o mysqlcc-0.9.8
@@ -997,6 +1011,7 @@ Suggested package updates
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
+	o pekwm-1.0.9a
 	o pen-0.17.3
 	o pekwm-0.1.9a [pkg/40260]
 	o pfqueue-0.5.6
@@ -1024,7 +1039,7 @@ Suggested package updates
 	o ploticus-examples-230
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
-	o plptools-1.0.3
+	o plptools-1.0.6
 	o pmccabe-2.5 [pkg/39749]
 	o png-1.2.34
 	o pngcheck-2.3.0
@@ -1039,7 +1054,7 @@ Suggested package updates
 	o postal-0.70
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
-	o prboom-2.4.8.5
+	o prboom-2.5.0.1
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1154,7 +1169,7 @@ Suggested package updates
 	o samba-3.0.33 (We should keep it for compatibility or license change.)
 	o samba-3.2.6
 	o sarg-2.2.5
-	o sawfish-1.3.5
+	o sawfish-1.3.5.1
 	o sbcl-1.0.22
 	o scamper-20070201
 	o scapy-2.0.0.10
@@ -1172,7 +1187,7 @@ Suggested package updates
 	o sharity-3.6
 	o sharity-light-1.3
 	o shc-3.8
-	o shmux-1.0.1
+	o shmux-1.0.2
 	o shntool-3.0.8
 	o sign-1.0.7
 	o silc-client-1.1.6
@@ -1198,7 +1213,7 @@ Suggested package updates
 	o snownews-1.5.10 [pkg/39887]
 	o solfege-3.10.4 [schmonz]
 	o sope-4.5.9
-	o source-highlight-2.11
+	o source-highlight-2.11.1
 	o sox-14.2.0
 	o spcaview-20060501
 	o spim-7.3
@@ -1217,6 +1232,7 @@ Suggested package updates
 	o sudo-1.7.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
+	o swfdec-0.8.4
 	o swi-prolog-5.6.31
 	o sylpheed-2.6.0
 	o sysinfo-4.2.2
@@ -1278,6 +1294,7 @@ Suggested package updates
 	o unixodbc-2.2.13
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
+	o uriparser-0.7.4
 	o userppp-030706
 	o valgrind-3.3.1
 	o varnish-1.1.1
@@ -1319,7 +1336,8 @@ Suggested package updates
 	o x11perf-1.5
 	o x264-devel-20081220
 	o xanalyser-1.30
-	o xapian-1.0.9
+	o xapian-1.0.10
+	o xapian-omega-1.0.10
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
@@ -1351,11 +1369,12 @@ Suggested package updates
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
 	o xf86-video-sis-0.10.1
-	o xf86-video-tdfx-1.4.0
+	o xf86-video-tdfx-1.4.1
 	o xf86-video-tga-1.2.0
 	o xf86-video-tdfx-1.4.1
 	o xf86-video-trident-1.3.1
 	o xf86-video-tseng-1.2.1
+	o xf86-video-vesa-2.1.0
 	o xf86-video-vmware-10.16.5
 	o xf86-video-vesa-2.1.0
 	o xfe-1.19.1
@@ -1406,7 +1425,7 @@ Suggested package updates
 	o xwpe-1.5.30a
 	o xzgv-0.9 [pkg/38566]
 	o xzip-182
-	o yabause-0.9.8
+	o yabause-0.9.8.1
 	o yacas-1.2.0
 	o yafc-1.1
 	o yaz-3.0.38
