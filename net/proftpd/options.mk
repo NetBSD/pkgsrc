@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.7 2007/01/24 05:22:01 martti Exp $
+# $NetBSD: options.mk,v 1.8 2008/12/28 08:42:01 kim Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.proftpd
-PKG_SUPPORTED_OPTIONS=	pam wrap quota ldap proftpd-readme tls
+PKG_SUGGESTED_OPTIONS=	pam inet6
+PKG_SUPPORTED_OPTIONS=	pam inet6 wrap tls quota ldap proftpd-readme ban
 PKG_OPTIONS_OPTIONAL_GROUPS+=	sql
 PKG_OPTIONS_GROUP.sql=		mysql pgsql
 
@@ -11,6 +12,14 @@ PKG_OPTIONS_GROUP.sql=		mysql pgsql
 .if !empty(PKG_OPTIONS:Mpam)
 CONFIGURE_ARGS+=	--enable-auth-pam
 .include "../../mk/pam.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-auth-pam
+.endif
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 MODULES=	# empty
@@ -59,6 +68,10 @@ MODULES:=	${MODULES}:mod_sql:mod_sql_postgres
 
 .if !empty(PKG_OPTIONS:Mproftpd-readme)
 MODULES:=	${MODULES}:mod_readme
+.endif
+
+.if !empty(PKG_OPTIONS:Mban)
+MODULES:=	${MODULES}:mod_ban
 .endif
 
 .if !empty(MODULES)
