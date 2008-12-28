@@ -1,4 +1,4 @@
-/* $NetBSD: dewey.c,v 1.8 2007/09/27 13:30:28 joerg Exp $ */
+/* $NetBSD: dewey.c,v 1.8.8.1 2008/12/28 00:55:47 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -173,7 +173,7 @@ mkcomponent(arr_t *ap, const char *num)
 	return 1;
 }
 
-/* make a version number string into an array of comparable 64bit ints */
+/* make a version number string into an array of comparable ints */
 static int
 mkversion(arr_t *ap, const char *num)
 {
