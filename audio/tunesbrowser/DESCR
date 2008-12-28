@@ -1,5 +1,5 @@
 TunesBrowser is a simple music player, capable of playing music found
-on iTunes(TM)  shares.
+on iTunes(TM) shares.
 
 TunesBrowser can connect to the latest iTunes applications (as of
 April 29 2004) and is implemented on top of libopendaap
