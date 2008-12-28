@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/12/28 23:45:50 wiz Exp $
 
 DISTNAME=	pa_snapshot_v19
 PKGNAME=	portaudio-devel-20060521
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.portaudio.com/archives/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -21,6 +22,7 @@ CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/portaudio2
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/portaudio2
 CONFIGURE_ARGS+=	--without-alsa
 LDFLAGS+=		${LIBOSSAUDIO}
+PKGCONFIG_OVERRIDE=	portaudio-2.0.pc.in
 WRKSRC=			${WRKDIR}/portaudio
 
 INSTALLATION_DIRS=	include/portaudio2 lib/portaudio2
