@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3551 2008/12/28 12:38:13 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.3552 2008/12/28 14:01:14 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5904,3 +5904,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/loggerhead to 1.10 [epg 2008-12-26]
 	Updated sysutils/consolekit to 0.3.0nb3 [hasso 2008-12-26]
 	Added multimedia/ffmpegthumbnailer version 1.3.0 [jmcneill 2008-12-28]
+	Updated www/apache22 to 2.2.11 [tron 2008-12-28]
