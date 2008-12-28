@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/12/28 08:42:01 kim Exp $
+# $NetBSD: Makefile,v 1.52 2008/12/28 08:56:59 kim Exp $
 
 DISTNAME=		proftpd-1.3.2rc3
 #PKGREVISION=		1
@@ -47,6 +47,12 @@ INSTALLATION_DIRS+=	share/examples/proftpd
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 .include "options.mk"
+
+post-patch:
+	cd ${WRKSRC}/contrib \
+	&& ${CP} -p mod_wrap.c mod_wrap.c.orig \
+	&& ${SED} -e '/^...\$$Libraries: /s/ -lnsl\$$$$/$$/' \
+	    mod_wrap.c.orig > mod_wrap.c
 
 post-install:
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
