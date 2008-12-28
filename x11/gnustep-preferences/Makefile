@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/06/21 22:54:04 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.32 2008/12/28 07:56:38 adam Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
@@ -17,7 +16,7 @@ USE_LANGUAGES=	objc
 NO_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
-
+MAKE_JOBS_SAFE=	NO
 MAKE_FLAGS+=	GNUSTEP_USER_DIR=${WRKDIR}/fake_home/GNUstep
 
 .include "../../x11/gnustep-back/buildlink3.mk"
