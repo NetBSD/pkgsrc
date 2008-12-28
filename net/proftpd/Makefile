@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/11/21 08:00:36 martti Exp $
+# $NetBSD: Makefile,v 1.51 2008/12/28 08:42:01 kim Exp $
 
 DISTNAME=		proftpd-1.3.2rc3
 #PKGREVISION=		1
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
 			ftp://ftp.fsn.hu/pub/proftpd/distrib/source/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		martti@NetBSD.org
+MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.proftpd.org/
 COMMENT=		FTP server with Apache like configuration
 #LICENSE=		gnu-gpl-v2
