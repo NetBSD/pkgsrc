@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2008/12/19 17:45:36 he Exp $
+# $NetBSD: Makefile,v 1.18 2008/12/28 21:14:13 he Exp $
 #
 
 DISTNAME=		Class-MethodMaker-2.13
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 
