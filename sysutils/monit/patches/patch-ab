@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2008/10/08 15:53:42 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2008/12/28 22:38:08 seb Exp $
 
 --- process/sysdep_NETBSD.c.orig	2007-07-29 20:23:26.000000000 +0000
 +++ process/sysdep_NETBSD.c
@@ -11,14 +11,11 @@ $NetBSD: patch-ab,v 1.3 2008/10/08 15:53:42 joerg Exp $
  #include "monitor.h"
  #include "process.h"
  #include "process_sysdep.h"
-@@ -171,9 +173,18 @@ int initprocesstree_sysdep(ProcessTree_T
+@@ -171,9 +173,15 @@ int initprocesstree_sysdep(ProcessTree_T
    {
      pt[i].pid       = pinfo[i].kp_proc.p_pid;
      pt[i].ppid      = pinfo[i].kp_eproc.e_ppid;
-+#ifndef __NetBSD_Prereq__
-+#define __NetBSD_Prereq__(a,b,c) 0
-+#endif
-+#if __NetBSD_Prereq__(4,99,44)
++#if defined(__NetBSD_Prereq__) && (499004400 <= __NetBSD_Version__)
 +    pt[i].cputime   = (long)((pinfo[i].kp_proc.p_rtime.sec << 4) +
 +                             (pinfo[i].kp_proc.p_rtime.frac >> 60)
 +                            );
