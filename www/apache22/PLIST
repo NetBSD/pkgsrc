@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/01 19:49:38 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/12/28 14:00:59 tron Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -28,6 +28,7 @@ include/httpd/mod_dbd.h
 include/httpd/mod_include.h
 include/httpd/mod_log_config.h
 include/httpd/mod_proxy.h
+include/httpd/mod_rewrite.h
 include/httpd/mod_ssl.h
 include/httpd/mod_status.h
 include/httpd/mpm.h
@@ -123,11 +124,6 @@ share/httpd/error/contact.html.var
 share/httpd/error/include/bottom.html
 share/httpd/error/include/spacer.html
 share/httpd/error/include/top.html
-share/httpd/htdocs/apache_pb.gif
-share/httpd/htdocs/apache_pb.png
-share/httpd/htdocs/apache_pb22.gif
-share/httpd/htdocs/apache_pb22.png
-share/httpd/htdocs/apache_pb22_ani.gif
 share/httpd/htdocs/index.html
 share/httpd/icons/README
 share/httpd/icons/README.html
@@ -381,6 +377,7 @@ share/httpd/manual/custom-error.html.en
 share/httpd/manual/custom-error.html.es
 share/httpd/manual/custom-error.html.ja.utf8
 share/httpd/manual/custom-error.html.ko.euc-kr
+share/httpd/manual/custom-error.html.tr.utf8
 share/httpd/manual/developer/API.html
 share/httpd/manual/developer/API.html.en
 share/httpd/manual/developer/debugging.html
@@ -404,6 +401,7 @@ share/httpd/manual/dns-caveats.html
 share/httpd/manual/dns-caveats.html.en
 share/httpd/manual/dns-caveats.html.ja.utf8
 share/httpd/manual/dns-caveats.html.ko.euc-kr
+share/httpd/manual/dns-caveats.html.tr.utf8
 share/httpd/manual/dso.html
 share/httpd/manual/dso.html.en
 share/httpd/manual/dso.html.ja.utf8
@@ -535,6 +533,7 @@ share/httpd/manual/logs.html.tr.utf8
 share/httpd/manual/misc/index.html
 share/httpd/manual/misc/index.html.en
 share/httpd/manual/misc/index.html.ko.euc-kr
+share/httpd/manual/misc/index.html.tr.utf8
 share/httpd/manual/misc/password_encryptions.html
 share/httpd/manual/misc/password_encryptions.html.en
 share/httpd/manual/misc/perf-tuning.html
@@ -821,6 +820,7 @@ share/httpd/manual/mod/mod_suexec.html
 share/httpd/manual/mod/mod_suexec.html.en
 share/httpd/manual/mod/mod_suexec.html.ja.utf8
 share/httpd/manual/mod/mod_suexec.html.ko.euc-kr
+share/httpd/manual/mod/mod_suexec.html.tr.utf8
 share/httpd/manual/mod/mod_unique_id.html
 share/httpd/manual/mod/mod_unique_id.html.en
 share/httpd/manual/mod/mod_unique_id.html.ja.utf8
@@ -829,6 +829,7 @@ share/httpd/manual/mod/mod_userdir.html
 share/httpd/manual/mod/mod_userdir.html.en
 share/httpd/manual/mod/mod_userdir.html.ja.utf8
 share/httpd/manual/mod/mod_userdir.html.ko.euc-kr
+share/httpd/manual/mod/mod_userdir.html.tr.utf8
 share/httpd/manual/mod/mod_usertrack.html
 share/httpd/manual/mod/mod_usertrack.html.en
 share/httpd/manual/mod/mod_version.html
@@ -860,6 +861,7 @@ share/httpd/manual/mod/prefork.html
 share/httpd/manual/mod/prefork.html.de
 share/httpd/manual/mod/prefork.html.en
 share/httpd/manual/mod/prefork.html.ja.utf8
+share/httpd/manual/mod/prefork.html.tr.utf8
 share/httpd/manual/mod/quickreference.html
 share/httpd/manual/mod/quickreference.html.de
 share/httpd/manual/mod/quickreference.html.en
@@ -872,6 +874,7 @@ share/httpd/manual/mod/worker.html
 share/httpd/manual/mod/worker.html.de
 share/httpd/manual/mod/worker.html.en
 share/httpd/manual/mod/worker.html.ja.utf8
+share/httpd/manual/mod/worker.html.tr.utf8
 share/httpd/manual/mpm.html
 share/httpd/manual/mpm.html.de
 share/httpd/manual/mpm.html.en
@@ -916,9 +919,11 @@ share/httpd/manual/platform/windows.html.ko.euc-kr
 share/httpd/manual/programs/ab.html
 share/httpd/manual/programs/ab.html.en
 share/httpd/manual/programs/ab.html.ko.euc-kr
+share/httpd/manual/programs/ab.html.tr.utf8
 share/httpd/manual/programs/apachectl.html
 share/httpd/manual/programs/apachectl.html.en
 share/httpd/manual/programs/apachectl.html.ko.euc-kr
+share/httpd/manual/programs/apachectl.html.tr.utf8
 share/httpd/manual/programs/apxs.html
 share/httpd/manual/programs/apxs.html.en
 share/httpd/manual/programs/apxs.html.ko.euc-kr
@@ -1035,6 +1040,7 @@ share/httpd/manual/suexec.html
 share/httpd/manual/suexec.html.en
 share/httpd/manual/suexec.html.ja.utf8
 share/httpd/manual/suexec.html.ko.euc-kr
+share/httpd/manual/suexec.html.tr.utf8
 share/httpd/manual/upgrading.html
 share/httpd/manual/upgrading.html.de
 share/httpd/manual/upgrading.html.en
