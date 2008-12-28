@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/12/28 13:10:29 adrianp Exp $
 bin/gdk-pixbuf-mlsource
 bin/lablgtk2
 lib/ocaml/lablgtk2/gAction.cmi
@@ -195,9 +195,6 @@ lib/ocaml/lablgtk2/gtkSignal.cmx
 lib/ocaml/lablgtk2/gtkSignal.ml
 lib/ocaml/lablgtk2/gtkSignal.mli
 lib/ocaml/lablgtk2/gtkSourceView_types.mli
-lib/ocaml/lablgtk2/gtkSpell.cmi
-lib/ocaml/lablgtk2/gtkSpell.cmx
-lib/ocaml/lablgtk2/gtkSpell.ml
 lib/ocaml/lablgtk2/gtkSpell.mli
 lib/ocaml/lablgtk2/gtkStock.cmi
 lib/ocaml/lablgtk2/gtkStock.cmx
@@ -223,12 +220,8 @@ lib/ocaml/lablgtk2/gtk_tags.h
 lib/ocaml/lablgtk2/lablgtk.a
 lib/ocaml/lablgtk2/lablgtk.cma
 lib/ocaml/lablgtk2/lablgtk.cmxa
-lib/ocaml/lablgtk2/lablgtkspell.a
-lib/ocaml/lablgtk2/lablgtkspell.cma
-lib/ocaml/lablgtk2/lablgtkspell.cmxa
 lib/ocaml/lablgtk2/lablgtktop
 lib/ocaml/lablgtk2/liblablgtk2.a
-lib/ocaml/lablgtk2/liblablgtkspell.a
 lib/ocaml/lablgtk2/ml_domain.h
 lib/ocaml/lablgtk2/ml_gdk.h
 lib/ocaml/lablgtk2/ml_gdkpixbuf.h
@@ -255,7 +248,6 @@ lib/ocaml/lablgtk2/win32.h
 lib/ocaml/lablgtk2/wrappers.h
 lib/ocaml/lablgtk2/xml_lexer.mli
 ${PLIST.stubs}lib/ocaml/stublibs/dlllablgtk2.so
-${PLIST.stubs}lib/ocaml/stublibs/dlllablgtkspell.so
 @comment in ocaml: lib/ocaml/stublibs
 @dirrm lib/ocaml/lablgtk2
 @comment in ocaml: lib/ocaml
