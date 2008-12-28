@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.7 2008/12/28 08:42:01 kim Exp $
+
+The -lnsl library has its own check in configure.  We cannot hardcode it
+as it is not needed and does not even exist on all platforms.
+
+--- contrib/mod_wrap.c.orig	2008-01-25 03:53:34.000000000 +0200
++++ contrib/mod_wrap.c	2008-12-26 11:42:48.000000000 +0200
+@@ -23,7 +23,7 @@
+  * the source code for OpenSSL in the source distribution.
+  *
+  * -- DO NOT MODIFY THE TWO LINES BELOW --
+- * $Libraries: -lwrap -lnsl$
++ * $Libraries: -lwrap$
+  * $Id: patch-ad,v 1.7 2008/12/28 08:42:01 kim Exp $
+  */
+ 
