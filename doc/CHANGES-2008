@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3550 2008/12/26 20:07:47 hasso Exp $
+$NetBSD: CHANGES-2008,v 1.3551 2008/12/28 12:38:13 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5903,3 +5903,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/udfclient to 0.7.1 [reinoud 2008-12-26]
 	Updated www/loggerhead to 1.10 [epg 2008-12-26]
 	Updated sysutils/consolekit to 0.3.0nb3 [hasso 2008-12-26]
+	Added multimedia/ffmpegthumbnailer version 1.3.0 [jmcneill 2008-12-28]
