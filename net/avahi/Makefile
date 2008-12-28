@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/12/25 06:57:38 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2008/12/28 17:44:37 adrianp Exp $
 
 DISTNAME=		avahi-0.6.23
 PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
-MAINTAINER=		adrianp@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://avahi.org/
 COMMENT=		Facilitate service discovery on a local network
 
