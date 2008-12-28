@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.gtkspell,v 1.1 2008/12/28 13:10:29 adrianp Exp $
+lib/ocaml/lablgtk2/gtkSpell.cmi
+lib/ocaml/lablgtk2/gtkSpell.cmx
+lib/ocaml/lablgtk2/gtkSpell.ml
+lib/ocaml/lablgtk2/lablgtkspell.a
+lib/ocaml/lablgtk2/lablgtkspell.cma
+lib/ocaml/lablgtk2/lablgtkspell.cmxa
+lib/ocaml/lablgtk2/liblablgtkspell.a
+${PLIST.stubs}lib/ocaml/stublibs/dlllablgtkspell.so
