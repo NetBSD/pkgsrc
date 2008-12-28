@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/12/19 21:10:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/12/28 21:57:34 markd Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -445,9 +445,9 @@ lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.po
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.po
-lib/mailman/pythonlib/JapaneseCodecs-1.4.11-py2.5.egg-info
-lib/mailman/pythonlib/KoreanCodecs-2.0.5-py2.5.egg-info
-lib/mailman/pythonlib/email-2.5.8-py2.5.egg-info
+lib/mailman/pythonlib/JapaneseCodecs-1.4.11-py${PYVERSSUFFIX}.egg-info
+lib/mailman/pythonlib/KoreanCodecs-2.0.5-py${PYVERSSUFFIX}.egg-info
+lib/mailman/pythonlib/email-2.5.8-py${PYVERSSUFFIX}.egg-info
 lib/mailman/pythonlib/email/Charset.py
 lib/mailman/pythonlib/email/Charset.pyc
 lib/mailman/pythonlib/email/Encoders.py
