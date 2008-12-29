@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32.8.1 2008/12/01 07:53:20 rtr Exp $
+# $NetBSD: Makefile,v 1.32.8.2 2008/12/29 11:33:05 tron Exp $
 #
 
-DISTNAME=	sympa-5.4.2
+DISTNAME=	sympa-5.4.4
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -37,7 +37,7 @@ DEPENDS.SunOS+=	p5-DB_File>=1.75:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake msgfmt
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
