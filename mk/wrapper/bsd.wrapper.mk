@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.81 2008/12/29 16:53:06 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.82 2008/12/29 20:47:17 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -291,6 +291,7 @@ _WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 .  if ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
 _WRAP_CMD_SINK.CC_R=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.CPP=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.CXX_R=	${_WRAP_CMD_SINK.CC}
 .  elif ${OPSYS} == "Darwin"
