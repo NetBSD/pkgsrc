@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-cc,v 1.3 2008/11/14 14:04:12 joerg Exp $
+# $NetBSD: cmd-sink-aix-cc,v 1.4 2008/12/29 16:53:06 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -45,12 +45,12 @@ while ! queue_is_empty cmdbuf; do
 	case $arg in
 	-blibpath:*)
 		orig_blibpath=${arg#-blibpath:}
-		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [setting orig_blibpath]"
 		dynamic=yes
 		;;
 	-Wl,-blibpath:*)
 		orig_blibpath=${arg#-Wl,-blibpath:}
-		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [setting orig_blibpath]"
 		dynamic=yes
 		;;
 	##############################################################
@@ -73,6 +73,14 @@ while ! queue_is_empty cmdbuf; do
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [adding to blibpath]"
 		dynamic=yes
+		;;
+	-rpath)
+		pop_queue argbuf dir
+		case $blibpath in
+		"")	blibpath="$dir" ;;
+		*)	blibpath="$blibpath:$dir" ;;
+		esac
+		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [adding to blibpath]"
 		;;
 	*)
 		. $buildcmd
