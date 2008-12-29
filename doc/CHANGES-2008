@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3556 2008/12/29 16:05:50 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.3557 2008/12/29 16:30:04 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5909,3 +5909,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-MethodMaker to 2.13nb1 [he 2008-12-28]
 	Updated devel/cfitsio to 3.100 [markd 2008-12-29]
 	Added meta-pkgs/pulseaudio-tools version 0.9 [ahoka 2008-12-29]
+	Updated mail/imap-uw to 2007e [tron 2008-12-29]
