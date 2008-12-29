@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2008/07/27 20:56:27 he Exp $
+# $NetBSD: Makefile,v 1.17.4.1 2008/12/29 11:45:43 tron Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.710.08
 PKGNAME=	p5-${DISTNAME:S/710.08/71.08/}
+PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SOAP/}
 
@@ -14,8 +15,18 @@ COMMENT=	Perl5 module providing a lightweight interface to SOAP
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[a-z]$||}
+
+DEPENDS+=	p5-Compress-Zlib>=0:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
+DEPENDS+=	p5-FCGI>=0:../../www/p5-FCGI
+DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
+DEPENDS+=	p5-IO-Socket-SSL>=0:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
+DEPENDS+=	p5-MIME-Lite>=0:../../mail/p5-MIME-Lite
+DEPENDS+=	p5-MIME-tools>=0:../../mail/p5-MIME-tools
+DEPENDS+=	p5-Net>=0:../../net/p5-Net
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	{perl>=5.10.0,p5-version>=0}:../../devel/p5-version
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 
 REPLACE_PERL+=	bin/SOAPsh.pl bin/XMLRPCsh.pl bin/stubmaker.pl
