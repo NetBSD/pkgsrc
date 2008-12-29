@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1 2008/12/29 10:13:12 markd Exp $
+
+--- cfortran.h.orig	2008-05-20 05:28:41.000000000 +1200
++++ cfortran.h
+@@ -177,6 +177,9 @@ only C calling FORTRAN subroutines will 
+ #if defined(__APPLE__)                         /* 11/2002 (CFITSIO) */
+ #define f2cFortran
+ #endif
++#if defined(__NetBSD__)                         /* 11/2002 (CFITSIO) */
++#define f2cFortran
++#endif
+ #if defined(__hpux)             /* 921107: Use __hpux instead of __hp9000s300 */
+ #define       hpuxFortran       /*         Should also allow hp9000s7/800 use.*/
+ #endif
