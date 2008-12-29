@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/12/29 10:13:12 markd Exp $
 
-DISTNAME=	cfitsio2500
-PKGNAME=	cfitsio-2.500
-PKGREVISION=	1
+DISTNAME=	cfitsio3100
+PKGNAME=	cfitsio-3.100
 CATEGORIES=	devel
 MASTER_SITES=	ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/
 
@@ -14,8 +13,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c # fortran
 USE_LIBTOOL=	YES
+
+PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
 
 BUILD_TARGET=	all testprog
 
@@ -23,14 +24,15 @@ INSTALLATION_DIRS=	include lib
 
 post-build:
 	cd ${WRKSRC}; \
-	./testprog | diff - testprog.out; \
+	./testprog > /dev/null; \
 	${CMP} testprog.fit testprog.std
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cfitsio
 	cd ${WRKSRC}; \
 	${LIBTOOL} ${INSTALL_DATA} libcfitsio.la ${DESTDIR}${PREFIX}/lib; \
-	${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include; \
+	${INSTALL_DATA} fitsio.h fitsio2.h longnam.h drvrsmem.h ${DESTDIR}${PREFIX}/include; \
+	${INSTALL_DATA} cfitsio.pc ${DESTDIR}${PREFIX}/lib/pkgconfig; \
 	${INSTALL_DATA} fitsio.doc ${DESTDIR}${PREFIX}/share/doc/cfitsio
 
 .include "../../mk/bsd.pkg.mk"
