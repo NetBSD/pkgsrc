@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7762 2008/12/29 02:09:20 obache Exp $
+$NetBSD: TODO,v 1.7763 2008/12/29 10:16:33 markd Exp $
 
 Suggested new packages
 ======================
@@ -463,7 +463,6 @@ Suggested package updates
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
 	o cdrtools-2.01.01.54
-	o cfitsio-3.100
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
