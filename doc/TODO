@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7761 2008/12/28 14:01:14 tron Exp $
+$NetBSD: TODO,v 1.7762 2008/12/29 02:09:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -1053,7 +1053,7 @@ Suggested package updates
 	o postal-0.70
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
-	o prboom-2.5.0.1
+	o prboom-2.5.0 [pkg/40286]
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
