@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.19 2008/11/27 17:56:52 joerg Exp $
+# $NetBSD: xlc.mk,v 1.20 2008/12/29 16:53:06 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -71,6 +71,9 @@ LANGUAGES.xlc+=		c
 _XLC_VARS+=		CC
 _XLC_CC=		${_XLC_DIR}/bin/xlc
 _ALIASES.CC=		cc xlc
+_XLC_VARS+=		CPP
+_XLC_CPP=		${_XLC_DIR}/bin/cpp
+PKG_CPP:=		${_XLC_CPP}
 CCPATH=			${XLCBASE}/bin/xlc
 PKG_CC:=		${_XLC_CC}
 .endif
@@ -89,6 +92,14 @@ _ALIASES.CC_R=		cc_r xlc_r
 CC_RPATH=		${XLCBASE}/bin/xlc_r
 PKG_CC_R:=		${_XLC_CC_R}
 CC_R?=			cc_r
+.endif
+.if exists(${XLCBASE}/bin/xlc++_r)
+_XLC_VARS+=		CXX_R
+_XLC_CXX_R=		${_XLC_DIR}/bin/xlc++_r
+_ALIASES.CXX_R=		c++_r xlc++_r
+CXX_RPATH=		${XLCBASE}/bin/xlc++_r
+PKG_CXX_R:=		${_XLC_CXX_R}
+CXX_R?=			c++_r
 .endif
 _COMPILER_STRIP_VARS+=	${_XLC_VARS}
 _COMPILER_RPATH_FLAG=	-Wl,-R
@@ -118,6 +129,15 @@ _LANGUAGES.xlc+=	${LANGUAGES.xlc:M${_lang_}}
 .if !empty(_LANGUAGES.xlc)
 PREPEND_PATH+=	${_XLC_DIR}/bin
 .endif
+
+override-tools: ${_XLC_CPP}
+${_XLC_CPP}:
+	${RUN}${MKDIR} ${.TARGET:H}
+	${RUN}						\
+	{${ECHO} '#!${TOOLS_SHELL}';			\
+	 ${ECHO} 'exec ${XLCBASE}/bin/xlc -E @$$@"';	\
+	) > ${.TARGET}
+	${RUN}${CHMOD} +x ${.TARGET}
 
 # Create compiler driver scripts in ${WRKDIR}.
 .for _var_ in ${_XLC_VARS}

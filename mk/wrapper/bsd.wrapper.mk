@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.80 2008/11/27 18:00:06 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.81 2008/12/29 16:53:06 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -142,6 +142,8 @@ WRAPPEES+=	LD
 .if !empty(PKGSRC_COMPILER:Mxlc) && ${OPSYS} == "AIX"
 CC_R?=		${_XLC_DIR}/bin/cc_r
 WRAPPEES+=	CC_R
+CXX_R?=		${_XLC_DIR}/bin/c++_r
+WRAPPEES+=	CXX_R
 .endif
 
 _WRAPPEE_UNIQUE_CMDS=	# empty
@@ -288,8 +290,9 @@ _WRAP_TRANSFORM.CPP=	${_WRAP_TRANSFORM.CC}
 .if !empty(PKGSRC_COMPILER:Mxlc)
 .  if ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
-_WRAP_CMD_SINK.CC_R=	${WRAPPER_TMPDIR}/cmd-sink-aix-xlc
+_WRAP_CMD_SINK.CC_R=	${_WRAP_CMD_SINK.CC}
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.CXX_R=	${_WRAP_CMD_SINK.CC}
 .  elif ${OPSYS} == "Darwin"
 _WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-darwin-xlc
 _WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}

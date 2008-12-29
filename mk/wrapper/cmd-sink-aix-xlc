@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.7 2008/12/29 11:25:39 joerg Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.8 2008/12/29 16:53:06 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,11 +43,11 @@ while ! queue_is_empty cmdbuf; do
 	case $arg in
 	-blibpath:*)
 		orig_blibpath=${arg#-blibpath:}
-		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-xlc) drop: $dir [setting orig_blibpath]"
 		;;
 	-Wl,-blibpath:*)
 		orig_blibpath=${arg#-Wl,-blibpath:}
-		$debug_log $wrapperlog "    (cmd-sink-aix-ld) drop: $dir [setting orig_blibpath]"
+		$debug_log $wrapperlog "    (cmd-sink-aix-xlc) drop: $dir [setting orig_blibpath]"
 		;;
 	##############################################################
 	# AIX xlC doesn't support -Wl,-rpath,* but accumulate them
