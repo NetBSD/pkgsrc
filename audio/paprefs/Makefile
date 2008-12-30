@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/18 17:44:48 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/30 19:39:28 hasso Exp $
 #
 
 DISTNAME=	paprefs-0.9.7
@@ -11,7 +11,7 @@ COMMENT=	Configuration dialog for the PulseAudio sound server
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config gmake intltool perl
+USE_TOOLS+=	pkg-config gmake intltool perl msgfmt
 USE_DIRS+=	gnome2-1.5
 
 CONFIGURE_ARGS+=	--disable-lynx
