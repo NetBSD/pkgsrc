@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14.14.1 2008/11/07 09:58:38 rtr Exp $
+@comment $NetBSD: PLIST,v 1.14.14.2 2008/12/30 00:50:26 rtr Exp $
 bin/dmail
 bin/mailutil
 bin/mlock
 bin/tmail
 include/c-client/c-client.h
+include/c-client/dummy.h
 include/c-client/env.h
 include/c-client/env_unix.h
 include/c-client/flocksim.h

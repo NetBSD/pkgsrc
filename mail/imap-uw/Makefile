@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124.8.2 2008/11/16 10:07:46 rtr Exp $
+# $NetBSD: Makefile,v 1.124.8.3 2008/12/30 00:50:26 rtr Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -9,9 +9,8 @@
 # The most common reason to install this package is as a prerequisite for pine.
 # If you upgrade this package, you *must* test mail/pine with the new version.
 
-DISTNAME=	imap-2007d
+DISTNAME=	imap-2007e
 PKGNAME=	${DISTNAME:S/-/-uw-/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.cac.washington.edu/imap/
 EXTRACT_SUFX=	.tar.Z
@@ -28,6 +27,8 @@ LTINSTALL_PROGRAM=	${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_PRO
 LTINSTALL_LIB=		${SETENV} ${MAKE_ENV} ${LIBTOOL} --mode=install ${INSTALL_LIB}
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/2$//}
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
