@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.1.2.6 2008/08/10 22:09:38 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.1.2.7 2008/12/30 15:55:57 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.6 2008/08/10 22:09:38 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.7 2008/12/30 15:55:57 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -67,6 +67,7 @@ __RCSID("$NetBSD: pkg_signature.c,v 1.1.2.6 2008/08/10 22:09:38 joerg Exp $");
 
 #define HASH_FNAME "+PKG_HASH"
 #define SIGNATURE_FNAME "+PKG_SIGNATURE"
+#define GPG_SIGNATURE_FNAME "+PKG_GPG_SIGNATURE"
 
 struct signature_archive {
 	struct archive *archive;
@@ -335,21 +336,31 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 		goto no_valid_signature;
 	}
 
-	r = read_file_from_archive(*archive, entry, SIGNATURE_FNAME,
-	    &signature_file, &signature_len);
-	if (r != 0) {
-		free(hash_file);
-		free(state);
-		goto no_valid_signature;
-	}
-
 	if (parse_hash_file(hash_file, pkgname, state))
 		goto no_valid_signature;
 
-	has_sig = !easy_pkcs7_verify(hash_file, hash_len, signature_file,
-	    signature_len, certs_packages, 1);
+	r = read_file_from_archive(*archive, entry, SIGNATURE_FNAME,
+	    &signature_file, &signature_len);
+	if (r != 0) {
+		if (*entry != NULL)
+			r = read_file_from_archive(*archive, entry,
+			    GPG_SIGNATURE_FNAME,
+			    &signature_file, &signature_len);
+		if (r != 0) {
+			free(hash_file);
+			free(state);
+			goto no_valid_signature;
+		}
+		has_sig = !detached_gpg_verify(hash_file, hash_len,
+		    signature_file, signature_len, NULL);
 
-	free(signature_file);
+		free(signature_file);
+	} else {
+		has_sig = !easy_pkcs7_verify(hash_file, hash_len, signature_file,
+		    signature_len, certs_packages, 1);
+
+		free(signature_file);
+	}
 
 	r = archive_read_next_header(*archive, &my_entry);
 	if (r != ARCHIVE_OK) {
@@ -493,7 +504,7 @@ static const char hash_template[] =
 static const char hash_trailer[] = "end pkgsrc signature\n";
 
 void
-pkg_sign(const char *name, const char *output, const char *key_file, const char *cert_file)
+pkg_sign_x509(const char *name, const char *output, const char *key_file, const char *cert_file)
 {
 	struct archive *pkg;
 	struct archive_entry *entry, *hash_entry, *sign_entry;
@@ -545,6 +556,97 @@ pkg_sign(const char *name, const char *output, const char *key_file, const char 
 	archive_entry_set_pathname(entry, pkgname != NULL ? pkgname + 1 : name);
 	archive_entry_set_pathname(hash_entry, HASH_FNAME);
 	archive_entry_set_pathname(sign_entry, SIGNATURE_FNAME);
+	archive_entry_set_size(hash_entry, strlen(hash_file));
+	archive_entry_set_size(sign_entry, signature_len);
+
+	pkg = archive_write_new();
+	archive_write_set_compression_none(pkg);
+	archive_write_set_format_ar_bsd(pkg);
+	archive_write_open_filename(pkg, output);
+
+	archive_write_header(pkg, hash_entry);
+	archive_write_data(pkg, hash_file, strlen(hash_file));
+	archive_write_finish_entry(pkg);
+	archive_entry_free(hash_entry);
+
+	archive_write_header(pkg, sign_entry);
+	archive_write_data(pkg, signature_file, signature_len);
+	archive_write_finish_entry(pkg);
+	archive_entry_free(sign_entry);
+
+	size = archive_entry_size(entry);
+	archive_write_header(pkg, entry);
+
+	for (i = 0; i < size; i += block_len) {
+		if (i + sizeof(block) < size)
+			block_len = sizeof(block);
+		else
+			block_len = size % sizeof(block);
+		if (read(fd, block, block_len) != block_len)
+			err(2, "short read");
+		archive_write_data(pkg, block, block_len);
+	}
+	archive_write_finish_entry(pkg);
+	archive_entry_free(entry);
+
+	archive_write_finish(pkg);
+
+	exit(0);
+}
+
+void
+pkg_sign_gpg(const char *name, const char *output)
+{
+	struct archive *pkg;
+	struct archive_entry *entry, *hash_entry, *sign_entry;
+	int fd;
+	struct stat sb;
+	char *hash_file, *signature_file, *tmp, *pkgname, hash[SHA512_DIGEST_STRING_LENGTH];
+	unsigned char block[65536];
+	off_t i, size;
+	size_t block_len, signature_len;
+
+	if ((fd = open(name, O_RDONLY)) == -1)
+		err(EXIT_FAILURE, "Cannot open binary package %s", name);
+	if (fstat(fd, &sb) == -1)
+		err(EXIT_FAILURE, "Cannot stat %s", name);
+
+	entry = archive_entry_new();
+	archive_entry_copy_stat(entry, &sb);
+
+	pkgname = extract_pkgname(fd);
+	hash_file = xasprintf(hash_template, pkgname,
+	    (long long)archive_entry_size(entry));
+	free(pkgname);
+
+	for (i = 0; i < archive_entry_size(entry); i += block_len) {
+		if (i + sizeof(block) < archive_entry_size(entry))
+			block_len = sizeof(block);
+		else
+			block_len = archive_entry_size(entry) % sizeof(block);
+		if (read(fd, block, block_len) != block_len)
+			err(2, "short read");
+		hash_block(block, block_len, hash);
+		tmp = xasprintf("%s%s\n", hash_file, hash);
+		free(hash_file);
+		hash_file = tmp;
+	}
+	tmp = xasprintf("%s%s", hash_file, hash_trailer);
+	free(hash_file);
+	hash_file = tmp;
+
+	if (detached_gpg_sign(hash_file, strlen(hash_file), &signature_file,
+	    &signature_len, NULL, NULL))
+		err(EXIT_FAILURE, "Cannot sign hash file");
+
+	lseek(fd, 0, SEEK_SET);
+
+	sign_entry = archive_entry_clone(entry);
+	hash_entry = archive_entry_clone(entry);
+	pkgname = strrchr(name, '/');
+	archive_entry_set_pathname(entry, pkgname != NULL ? pkgname + 1 : name);
+	archive_entry_set_pathname(hash_entry, HASH_FNAME);
+	archive_entry_set_pathname(sign_entry, GPG_SIGNATURE_FNAME);
 	archive_entry_set_size(hash_entry, strlen(hash_file));
 	archive_entry_set_size(sign_entry, signature_len);
 
