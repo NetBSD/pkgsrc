@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
+$NetBSD: patch-ab,v 1.2 2008/12/30 14:44:14 hasso Exp $
 
 --- aplay/aplay.c.orig	2008-12-18 22:21:06.000000000 -0500
 +++ aplay/aplay.c
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
  #include <sys/uio.h>
  #include <sys/time.h>
  #include <sys/signal.h>
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
 +#else
  #include <asm/byteorder.h>
@@ -18,7 +18,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/12/19 03:33:45 jmcneill Exp $
  #define LLONG_MAX    9223372036854775807LL
  #endif
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#define open64 open
 +#define lseek64 lseek
 +#define off64_t off_t
