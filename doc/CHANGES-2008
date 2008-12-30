@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3557 2008/12/29 16:30:04 tron Exp $
+$NetBSD: CHANGES-2008,v 1.3558 2008/12/30 14:47:30 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5910,3 +5910,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cfitsio to 3.100 [markd 2008-12-29]
 	Added meta-pkgs/pulseaudio-tools version 0.9 [ahoka 2008-12-29]
 	Updated mail/imap-uw to 2007e [tron 2008-12-29]
+	Updated audio/alsa-utils to 1.0.18nb1 [hasso 2008-12-30]
