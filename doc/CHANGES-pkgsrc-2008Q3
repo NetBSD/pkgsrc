@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.58 2008/12/29 11:46:19 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.59 2008/12/30 00:55:48 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -161,3 +161,5 @@ Pullup ticket #2615 - requested by he
 p5-SOAP-Lite: build fix
 Pullup ticket #2617 - requested by bouyer
 sympa: security update
+pullup ticket #2618 - requested by tron
+imap-uw: update package for security fix
