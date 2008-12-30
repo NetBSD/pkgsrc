@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.53 2008/12/28 14:52:05 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.54 2008/12/30 01:55:22 uebayasi Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -42,7 +42,7 @@ _ZSH_OPSYS.OpenBSD=		ldflags tcsetpgrp   -
 _ZSH_OPSYS.Linux=		ldflags tcsetpgrp   terminfo
 _ZSH_OPSYS.IRIX=		ldflags tcsetpgrp   -
 _ZSH_OPSYS.Interix=		ldflags notcsetpgrp -
-_ZSH_OPSYS.DragonFly=		ldflags tcsetpgrp   -
+_ZSH_OPSYS.DragonFly=		ldflags tcsetpgrp   terminfo
 _ZSH_OPSYS.FreeBSD=		ldflags tcsetpgrp   terminfo
 _ZSH_OPSYS.SunOS=		-       tcsetpgrp   -
 
