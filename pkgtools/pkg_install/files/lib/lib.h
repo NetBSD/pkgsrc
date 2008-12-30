@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.15 2008/08/21 16:04:39 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.16 2008/12/30 15:55:57 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -380,8 +380,10 @@ int pkg_verify_signature(struct archive **, struct archive_entry **, char **,
     void **);
 int pkg_full_signature_check(struct archive *);
 void pkg_free_signature(void *);
-void pkg_sign(const char *, const char *, const char *, const char *);
+void pkg_sign_x509(const char *, const char *, const char *, const char *);
 #endif
+
+void pkg_sign_gpg(const char *, const char *);
 
 #ifdef HAVE_SSL
 /* PKCS7 signing/verification */
@@ -390,6 +392,12 @@ int easy_pkcs7_verify(const char *, size_t, const char *, size_t,
 int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 #endif
+
+int inline_gpg_verify(const char *, size_t);
+int detached_gpg_verify(const char *, size_t, const char *, size_t,
+    const char *);
+int detached_gpg_sign(const char *, size_t, char **, size_t *, const char *,
+    const char *);
 
 char *xstrdup(const char *);
 void *xrealloc(void *, size_t);
