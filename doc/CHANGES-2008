@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3559 2008/12/30 15:02:28 taca Exp $
+$NetBSD: CHANGES-2008,v 1.3560 2008/12/30 15:04:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5912,3 +5912,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/imap-uw to 2007e [tron 2008-12-29]
 	Updated audio/alsa-utils to 1.0.18nb1 [hasso 2008-12-30]
 	Updated www/typolight-translations to 20081228 [taca 2008-12-30]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.48nb1 [he 2008-12-30]
