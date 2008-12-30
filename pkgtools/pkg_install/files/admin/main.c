@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.8 2008/08/25 18:31:14 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.9 2008/12/30 15:55:57 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.8 2008/08/25 18:31:14 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.9 2008/12/30 15:55:57 joerg Exp $");
 #endif
 
 /*-
@@ -109,8 +109,9 @@ usage(void)
 	    " audit-batch [-es] [-t type] ... - check packages in listed files for vulnerabilities\n"
 	    " audit-history [-t type] ...     - print all advisories for package names\n"
 	    " config-var name                 - print current value of the configuration variable\n"
-	    " check-signature ...         - verify the signature of packages\n"
-	    " sign-package pkg spkg key cert  - create signature\n",
+	    " check-signature ...             - verify the signature of packages\n"
+	    " x509-sign-package pkg spkg key cert  - create X509 signature\n"
+	    " gpg-sign-package pkg spkg       - create GPG signature\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
 }
@@ -542,6 +543,10 @@ main(int argc, char *argv[])
 		rc = 0;
 		for (--argc, ++argv; argc > 0; --argc, ++argv) {
 			pkg = open_archive(*argv, &cookie);
+			if (pkg == NULL) {
+				warnx("%s could not be opened", *argv);
+				continue;
+			}
 			if (pkg_full_signature_check(pkg))
 				rc = 1;
 			close_archive(pkg);
@@ -550,16 +555,22 @@ main(int argc, char *argv[])
 #else
 		errx(EXIT_FAILURE, "OpenSSL support is not included");
 #endif
-	} else if (strcasecmp(argv[0], "sign-package") == 0) {
+	} else if (strcasecmp(argv[0], "x509-sign-package") == 0) {
 #ifdef HAVE_SSL
 		--argc;
 		++argv;
 		if (argc != 4)
-			errx(EXIT_FAILURE, "sign-package takes exactly four arguments");
-		pkg_sign(argv[0], argv[1], argv[2], argv[3]);
+			errx(EXIT_FAILURE, "x509-sign-package takes exactly four arguments");
+		pkg_sign_x509(argv[0], argv[1], argv[2], argv[3]);
 #else
 		errx(EXIT_FAILURE, "OpenSSL support is not included");
 #endif
+	} else if (strcasecmp(argv[0], "gpg-sign-package") == 0) {
+		--argc;
+		++argv;
+		if (argc != 2)
+			errx(EXIT_FAILURE, "gpg-sign-package takes exactly two arguments");
+		pkg_sign_gpg(argv[0], argv[1]);
 	}
 #endif
 	else {

@@ -1,4 +1,4 @@
-/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.7 2008/08/05 22:32:12 joerg Exp $	*/
+/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.8 2008/12/30 15:55:57 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.7 2008/08/05 22:32:12 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.8 2008/12/30 15:55:57 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -70,40 +70,6 @@ static const char pgp_msg_start[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
 static const char pgp_msg_end[] = "-----BEGIN PGP SIGNATURE-----\n";
 static const char pkcs7_begin[] = "-----BEGIN PKCS7-----\n";
 static const char pkcs7_end[] = "-----END PKCS7-----\n";
-
-static void
-verify_signature_gpg(const char *input, size_t input_len)
-{
-	pid_t child;
-	int fd[2], status;
-
-	if (pipe(fd) == -1)
-		err(EXIT_FAILURE, "cannot create input pipes");
-
-	child = vfork();
-	if (child == -1)
-		err(EXIT_FAILURE, "cannot fork GPG process");
-	if (child == 0) {
-		close(fd[1]);
-		close(STDIN_FILENO);
-		if (dup2(fd[0], STDIN_FILENO) == -1) {
-			static const char err_msg[] =
-			    "cannot redirect stdin of GPG process\n";
-			write(STDERR_FILENO, err_msg, sizeof(err_msg) - 1);
-			_exit(255);
-		}
-		close(fd[0]);
-		execlp(gpg_cmd, gpg_cmd, "--verify", "-", (char *)NULL);
-		_exit(255);
-	}
-	close(fd[0]);
-	if (write(fd[1], input, input_len) != input_len)
-		errx(EXIT_FAILURE, "Short read from GPG");
-	close(fd[1]);
-	waitpid(child, &status, 0);
-	if (status)
-		errx(EXIT_FAILURE, "GPG could not verify the signature");
-}
 
 static void
 verify_signature_pkcs7(const char *input)
@@ -143,7 +109,7 @@ verify_signature(const char *input, size_t input_len)
 		    "At least GPG or CERTIFICATE_ANCHOR_PKGVULN "
 		    "must be configured");
 	if (gpg_cmd != NULL)
-		verify_signature_gpg(input, input_len);
+		inline_gpg_verify(input, input_len);
 	if (certs_pkg_vulnerabilities != NULL)
 		verify_signature_pkcs7(input);
 }
