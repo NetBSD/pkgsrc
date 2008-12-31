@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/13 06:31:59 epg Exp $
+# $NetBSD: Makefile,v 1.2 2008/12/31 14:04:58 hasso Exp $
 
 DISTNAME=	qbzr-${VER}
 CATEGORIES=	devel
@@ -10,6 +10,8 @@ HOMEPAGE=	http://bazaar-vcs.org/QBzr
 COMMENT=	GUI front end for Bazaar
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	msgfmt
 
 DEPENDS+=	${PYPKGPREFIX}-qt4>=4.4:../../x11/py-qt4
 
