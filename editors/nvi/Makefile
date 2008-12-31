@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/12/31 20:46:33 epg Exp $
+# $NetBSD: Makefile,v 1.34 2008/12/31 20:48:37 epg Exp $
 #
 
 DISTNAME=	nvi-1.81.6
@@ -41,6 +41,8 @@ INSTALL_UNSTRIPPED=	yes
 .endif
 
 # We need exactly the db3 API.
+# TODO: Actually nvi supports db4, but its configure script is broken.
+# Perhaps some brave soul can fix it...
 BUILDLINK_TRANSFORM+=	l:db:db3
 .include "../../databases/db3/buildlink3.mk"
 
