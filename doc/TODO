@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7764 2008/12/29 16:30:04 tron Exp $
+$NetBSD: TODO,v 1.7765 2008/12/31 14:00:42 taca Exp $
 
 Suggested new packages
 ======================
@@ -718,6 +718,8 @@ Suggested package updates
 	o intercal-0.24
 	o ircservices-5.1.14
 	o irrd-2.3.4 [pkg/36813|38002]
+	o isc-dhcp-3.1.2
+	o isc-dhcp4-4.0.1
 	o iselect-1.4.0
 	o iso-codes-3.5
 	o ispell-gaeilge-4.1
@@ -1365,6 +1367,7 @@ Suggested package updates
 	o xf86-video-radeonhd-1.2.4
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
+	o xf86-video-siliconmotion-1.7.0
 	o xf86-video-sis-0.10.1
 	o xf86-video-tdfx-1.4.1
 	o xf86-video-tga-1.2.0
