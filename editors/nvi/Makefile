@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/12/21 23:03:27 epg Exp $
+# $NetBSD: Makefile,v 1.33 2008/12/31 20:46:33 epg Exp $
 #
 
 DISTNAME=	nvi-1.81.6
@@ -40,5 +40,8 @@ LDFLAGS+=		-flat_namespace
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-.include "../../mk/bdb.buildlink3.mk"
+# We need exactly the db3 API.
+BUILDLINK_TRANSFORM+=	l:db:db3
+.include "../../databases/db3/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
