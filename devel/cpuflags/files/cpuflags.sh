@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cpuflags.sh,v 1.3 2007/08/27 10:09:22 abs Exp $
+# $NetBSD: cpuflags.sh,v 1.4 2008/12/31 14:49:54 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
 
 include()
@@ -89,8 +89,8 @@ END
 fi
 
 if [ -z "$ARCH" -a -z "$NOARCH" ] ; then
-    echo 'Unknown machine - please send details to abs@absd.org'	>&2
-    display_hw_details							>&2
+    echo 'Unknown machine - please send cpuflags details to abs@absd.org' >&2
+    display_hw_details							  >&2
 fi
 
 echo $CPUFLAGS
