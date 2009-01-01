@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/07/24 13:49:22 obache Exp $
+# $NetBSD: Makefile,v 1.40 2009/01/01 14:30:02 obache Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirror.cedratnet.com/amavisd-new/ \
 		http://mirror.omroep.nl/amavisd-new/
 
-VERSION=	2.6.1
+VERSION=	2.6.2
 PATCHLEVEL=	# empty
 
 MAINTAINER=	jdunn@aquezada.com
