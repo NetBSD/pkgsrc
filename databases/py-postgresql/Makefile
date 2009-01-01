@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2009/01/01 13:21:44 darcy Exp $
 
-DISTNAME=		PyGreSQL-3.8.1
-PKGNAME=		${PYPKGPREFIX}-postgresql-3.8.1
-PKGREVISION=		2
+DISTNAME=		PyGreSQL-4.0
+PKGNAME=		${PYPKGPREFIX}-postgresql-4.0
 CATEGORIES=		databases python
 MASTER_SITES=		ftp://ftp.druid.net/pub/distrib/
 EXTRACT_SUFX=		.tgz
@@ -13,8 +12,8 @@ COMMENT=		Python interface to PostgreSQL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_ENV+=		MANDIR=${LOCALBASE}/man
-MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=		BINDIR=${PREFIX}/bin
 USE_TOOLS+=		gmake
 
 MAKE_FILE=		GNUmakefile
@@ -22,6 +21,7 @@ MAKE_ENV+=		INSTALLED_LIBPQ=1
 
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
+PYTHON_VERSIONS_ACCEPTED=	26 25 24 23
 
 PYDISTUTILSPKG=		yes
 PYBINMODULE=		yes
