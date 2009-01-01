@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/16 14:04:29 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/01 21:46:58 hubertf Exp $
 bin/cmus
 bin/cmus-remote
 ${PLIST.flac}lib/cmus/ip/flac.so
@@ -12,7 +12,7 @@ ${PLIST.mpcdec}lib/cmus/ip/mpc.so
 lib/cmus/ip/wav.so
 ${PLIST.wavpack}lib/cmus/ip/wavpack.so
 ${PLIST.arts}lib/cmus/op/arts.so
-${PLIST.ao}lib/cmus/op/ao.so
+${PLIST.libao}lib/cmus/op/ao.so
 ${PLIST.oss}lib/cmus/op/oss.so
 ${PLIST.sunaudio}lib/cmus/op/sun.so
 man/man1/cmus-remote.1
