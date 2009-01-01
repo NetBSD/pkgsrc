@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/26 13:10:05 taca Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/01 19:26:35 tron Exp $
 
 DISTNAME=	squid-3.0.STABLE11
 PKGNAME=	${DISTNAME:S/STABLE//}
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl
