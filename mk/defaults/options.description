@@ -7,7 +7,6 @@ anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
-ao			Enable the platform-independent 'ao' audio library.
 apache			Enable support for apache web server
 apache-shared-modules	Build all modules as shared for apache22.
 ares			Use the ares library for asynchronous name resolution.
@@ -227,7 +226,7 @@ lang-zh-cn		Add Chinese Simplified language support.
 lang-zh-tw		Add Chinese Traditional language support.
 lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
-libao			Enable libao support.
+libao			Enable the platform-independent 'ao' audio library.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932
 libmtp			Enable MTP via libmtp support.
