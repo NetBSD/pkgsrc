@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.3561 2008/12/31 14:50:42 abs Exp $
+$NetBSD: CHANGES-2008,v 1.3562 2009/01/02 00:44:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -5309,6 +5309,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-MOP to 0.70 [seb 2008-11-27]
 	Updated sysutils/hal to 0.5.11nb5 [jmcneill 2008-11-26]
 	Updated sysutils/hal to 0.5.11nb6 [jmcneill 2008-11-26]
+	Added graphics/gimp26 version 2.6.3 [drochner 2008-11-26]
 	Updated www/typolight-translations to 20081123 [taca 2008-11-27]
 	Updated mail/clamav to 0.94.2 [martti 2008-11-27]
 	Updated sysutils/hal to 0.5.11nb7 [jmcneill 2008-11-27]
