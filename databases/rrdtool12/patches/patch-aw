@@ -1,10 +1,10 @@
-$NetBSD: patch-aw,v 1.1.1.1 2008/07/28 19:48:03 martti Exp $
+$NetBSD: patch-aw,v 1.2 2009/01/02 20:07:10 martti Exp $
 
 Adjust for pkgsrc.
 
---- src/rrd_tool.c.orig	2007-11-20 02:15:10.000000000 +0200
-+++ src/rrd_tool.c	2007-11-20 12:58:12.000000000 +0200
-@@ -699,9 +699,9 @@
+--- src/rrd_tool.c.orig	2008-12-16 00:05:13.000000000 +0200
++++ src/rrd_tool.c	2009-01-02 21:37:38.000000000 +0200
+@@ -697,9 +697,9 @@
  	  printf("<?xml version=\"1.0\" encoding=\"%s\"?>\n\n", XML_ENCODING);
  	  printf("<%s>\n", ROOT_TAG);
  	  printf("  <%s>\n", META_TAG);
@@ -16,7 +16,7 @@ Adjust for pkgsrc.
  	  printf("    <%s>%lu</%s>\n", META_ROWS_TAG, row_cnt, META_ROWS_TAG);
  	  printf("    <%s>%lu</%s>\n", META_COLS_TAG, col_cnt, META_COLS_TAG);
  	  printf("    <%s>\n", LEGEND_TAG);
-@@ -717,7 +717,7 @@
+@@ -715,7 +715,7 @@
  	  printf("  <%s>\n", DATA_TAG);
  	  for (ti = start+step; ti <= end; ti += step) {
  	    printf ("    <%s>", DATA_ROW_TAG);
