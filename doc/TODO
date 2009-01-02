@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7768 2009/01/01 08:38:58 schmonz Exp $
+$NetBSD: TODO,v 1.7769 2009/01/02 00:46:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -352,12 +352,12 @@ Suggested package updates
 	o RealPlayer-11
 	o SDL_gfx-2.0.18
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.7
+	o TeXmacs-1.0.7.1
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o aap-0.144
-	o abcm2ps-5.9.2
+	o abcm2ps-5.9.3
 	o abcmidi-20080928
 	o abiword-2.6.2
 	o acme-091
@@ -374,7 +374,6 @@ Suggested package updates
 	o aliados-0.2.0
 	o amanda-2.6.0p2
 	o amavis-perl-0.3.12 [called just amavis]
-	o amavisd-new-2.6.2
 	o amaya-11.0
 	o angband-3.0.9
 	o antiright-8.6
@@ -397,7 +396,7 @@ Suggested package updates
 	o aqsis-1.4.1
 	o aranym-0.9.7
 	o argtable-2.9
-	o aria2-1.1.0
+	o aria2-1.1.2
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
@@ -414,7 +413,7 @@ Suggested package updates
 	o aterm-1.0.1
 	o auctex-11.85
 	o autoconvert-0.3.16
-	o autogen-5.9.6
+	o autogen-5.9.7
 	o avcheck-0.91
 	o avl-2.0.2a
 	o avr-binutils-2.17
@@ -431,7 +430,7 @@ Suggested package updates
 	o beacon-1.3
 	o benchfft-3.1
 	o bftpd-2.3
-	o biew-5.7.0
+	o biew-5.7.1
 	o bind-9.5.1
 	o bind-9.6.0
 	o binutils-2.19
@@ -462,7 +461,7 @@ Suggested package updates
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
-	o cdrtools-2.01.01.54
+	o cdrtools-2.01.01.55
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
@@ -473,7 +472,7 @@ Suggested package updates
 	o cjk-lyx-1.4.4
 	o classpath-0.97.2
 	o claws-mail-3.7.0
-	o clive-2.1.1
+	o clive-2.1.2
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.7.8
@@ -509,7 +508,7 @@ Suggested package updates
 	o ddrescue-1.9
 	o defendguin-0.0.11
 	o delegate-9.9.0
-	o devIL-1.7.4
+	o devIL-1.7.5
 	o devhelp-0.22
 	o dhid-5.3
 	o dinotrace-9.3e
@@ -526,7 +525,7 @@ Suggested package updates
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.03
+	o duplicity-0.5.04
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.1
 	o eagle-4.16
@@ -561,6 +560,7 @@ Suggested package updates
 	o etach-1.4.1
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
+	o exempi-2.1.0
 	o exiv2-0.18
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
@@ -584,6 +584,7 @@ Suggested package updates
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
+	o freeciv-2.1.8
 	o freefont-ttf-20080912
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -610,7 +611,7 @@ Suggested package updates
 	o gdeskcal-1.01
 	o gdm-2.24.1
 	o gdsreader-0.3.2
-	o geda-1.4.2.20081220
+	o geda-1.5.1.20081221
 	o geeklog-1.5.0
 	o gettext-0.17
 	o gforth-0.7.0
@@ -621,6 +622,7 @@ Suggested package updates
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
 	o gimp-ufraw-0.15
+	o gimp26-2.6.4
 	o gindent-2.2.9
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
@@ -690,6 +692,7 @@ Suggested package updates
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.4.0
+	o hiawatha-6.11
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -746,6 +749,7 @@ Suggested package updates
 	o kapooka-0.3
 	o kchmviewer-4.0
 	o kdbg-2.1.1
+	o kdevelop-3.5.4
 	o kdrill-6.5
 	o kinput2-3.1
 	o kipi-plugins-0.1.7
@@ -755,6 +759,7 @@ Suggested package updates
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
+	o lablgtk-2.12.0
 	o lapack-3.2
 	o latd-1.21
 	o latex2rtf-1.9.19
@@ -819,6 +824,7 @@ Suggested package updates
 	o libxml++-2.24.2
 	o licq-1.3.6
 	o liferea-1.4.23
+	o lilypond-2.12.1
 	o lincvs-2.1.1 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.2.1
@@ -852,6 +858,7 @@ Suggested package updates
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-0.9.4 (and related plugins)
+	o mercurial-1.1.2
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -873,6 +880,7 @@ Suggested package updates
 	o mmg-2.0.2
 	o modular-xorg-server-1.5.99.3
 	o mono-addins-0.4
+	o monotone-0.42
 	o mp3blaster-3.2.3
 	o mp3splt-gtk-0.5.1 [schmonz]
 	o mpc-0.14
@@ -916,7 +924,6 @@ Suggested package updates
 	o ng-1.4.4
 	o nikto-2.0.1
 	o nmap-4.68
-	o ns-3.3
 	o ns-flash-10
 	o ns-plugger-common-5.1.3
 	o ns-plugger-communicator-5.1.3
@@ -924,6 +931,7 @@ Suggested package updates
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
+	o nspluginwrapper-1.2.0
 	o nspr-4.7.3
 	o nss-3.11.7
 	o ntop-3.3.9
@@ -931,7 +939,7 @@ Suggested package updates
 	o nucleo-0.7.3
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-14.1
+	o nut-14.2
 	o nxtvepg-2.8.1
 	o objc-3.2.8
 	o ocaml-3.11.0
@@ -1104,10 +1112,11 @@ Suggested package updates
 	o py-reportlab-2.2
 	o py-soappy-0.11.6
 	o py-sqlite2-2.5.1
+	o py-subversion-1.5.5
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.2
-	o py-yaml-3.06
+	o py-yaml-3.07
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o python-2.6.1
@@ -1130,6 +1139,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
+	o rdiff-backup-1.2.4
 	o rdp-1.6
 	o redland-1.0.8.1
 	o regionset-0.2
@@ -1143,6 +1153,7 @@ Suggested package updates
 	o root-5.14.0
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundcube-0.2
 	o rox-2.8
 	o rox-session-0.29
 	o roxirc-2.0
@@ -1177,7 +1188,7 @@ Suggested package updates
 	o sch-3.8.3
 	o scilab-5.0.3
 	o scm-5e5
-	o scmgit-base-1.6.0.6
+	o scmgit-base-1.6.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o seamonkey-1.1.14
@@ -1229,6 +1240,7 @@ Suggested package updates
 	o streamripper-1.63.0
 	o subtitleeditor-0.30.0
 	o subversion-1.5.5
+	o subversion-base-1.5.5
 	o sudo-1.7.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
@@ -1255,10 +1267,12 @@ Suggested package updates
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.17
 	o telepathy-glib-0.7.20
+	o tesseract-2.04
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.0
+	o thunderbird-2.0.0.19
 	o tile-0.7.4
 	o tinyproxy-1.7.0
 	o tk-8.5.5
@@ -1334,7 +1348,7 @@ Suggested package updates
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20081220
+	o x264-devel-20081227
 	o xanalyser-1.30
 	o xapian-1.0.10
 	o xapian-omega-1.0.10
@@ -1359,6 +1373,7 @@ Suggested package updates
 	o xf86-video-apm-1.2.1
 	o xf86-video-ark-0.7.1
 	o xf86-video-ast-0.87.0
+	o xf86-video-ati-6.9.0.91
 	o xf86-video-chips-1.2.1
 	o xf86-video-glint-1.2.2
 	o xf86-video-i128-1.3.1
@@ -1413,9 +1428,10 @@ Suggested package updates
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.6
-	o xscreensaver-5.07
+	o xscreensaver-5.08
 	o xskat-4.0
 	o xsoldier-1.4
+	o xterm-238
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
@@ -1454,7 +1470,7 @@ Suggested package updates
 	o zope29-Silva-2.1
 	o zopeedit-0.8
 	o zsh-4.3.9
-	o zziplib-0.13.38
+	o zziplib-0.13.50
 
 Infrastructure problems which need addressing
 =============================================
