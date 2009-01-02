@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/07/28 19:48:03 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/02 20:07:10 martti Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RRDTOOL_BUILDLINK3_MK:=	${RRDTOOL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	rrdtool
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}rrdtool
 
 .if ${RRDTOOL_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.rrdtool+=	rrdtool>=1.2.26
+BUILDLINK_API_DEPENDS.rrdtool+=	rrdtool>=1.2.29
 BUILDLINK_PKGSRCDIR.rrdtool?=	../../databases/rrdtool
 .endif	# RRDTOOL_BUILDLINK3_MK
 
