@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/01/02 21:45:45 he Exp $
+
+--- WrapI18N.pm.orig	2003-06-25 11:14:25.000000000 +0200
++++ WrapI18N.pm
+@@ -88,7 +88,7 @@ sub wrap {
+ 			$len = 0;
+ 			$text = $top2 . $text;
+ 			$word = ''; $wlen = 0;
+-		} elsif ($wlen + $w <= $columns) {
++		} elsif ($wlen + $w <= $columns - length($top2)) {
+ 			# the current word is sent to next line
+ 			$out .= $separator;
+ 			$len = 0;
