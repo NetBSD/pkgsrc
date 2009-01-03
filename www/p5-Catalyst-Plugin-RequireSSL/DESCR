@@ -1,0 +1,10 @@
+e this plugin if you wish to selectively force SSL mode on some of
+your web pages, for example a user login form or shopping cart.
+
+Simply place $c->require_ssl calls in any controller method you
+wish to be secured.
+
+This plugin will automatically disable itself if you are running
+under the standalone HTTP::Daemon Catalyst server. A warning message
+will be printed to the log file whenever an SSL redirect would have
+occurred.
