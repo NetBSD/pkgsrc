@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/01/03 18:44:27 wiz Exp $
+
+Before running, install the contents of ${PREFIX}/share/examples/nestopia
+to ~/.nestopia, and make sure that the nstcontrols is writable:
+
+	mkdir ~/.nestopia
+	cp ${PREFIX}/share/examples/nestopia/* ~/.nestopia
+	chmod 644 ~/.nestopia/nstcontrols
+
+===========================================================================
