@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/03 18:45:45 wiz Exp $
+
+--- gambatte_qt/src/framework/framework.pro.orig	2008-10-27 23:03:48.000000000 +0000
++++ gambatte_qt/src/framework/framework.pro
+@@ -106,6 +106,8 @@ else:unix { 
+ #        framework/fullmodetogglers/xf86vidmodetoggler.h
+     LIBS += -L/usr/X11R6/lib \
+         -lXv \
++        -lusbhid \
++	${LIBOSSAUDIO} \
+         -lXrandr #\
+ #        -lXxf86vm \
+ #        -lXinerama

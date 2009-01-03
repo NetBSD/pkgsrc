@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/03 18:45:45 wiz Exp $
+
+--- gambatte_qt/src/framework/SDL_Joystick/src/bsd/SDL_sysjoystick.c.orig	2008-10-27 23:03:47.000000000 +0000
++++ gambatte_qt/src/framework/SDL_Joystick/src/bsd/SDL_sysjoystick.c
+@@ -135,6 +135,9 @@ static char *joydevnames[MAX_JOYS];
+ static int	report_alloc(struct report *, struct report_desc *, int);
+ static void	report_free(struct report *);
+ 
++#ifdef __NetBSD__
++#define USBHID_UCR_DATA
++#endif
+ #ifdef USBHID_UCR_DATA
+ #define REP_BUF_DATA(rep) ((rep)->buf->ucr_data)
+ #else
+@@ -304,7 +307,7 @@ SDL_SYS_JoystickOpen(SDL_Joystick *joy)
+ 		goto usberr;
+ 	}
+ 
+-#if defined(USBHID_NEW) || (defined(__FREEBSD__) && __FreeBSD_version >= 500111)
++#if defined(USBHID_NEW) || (defined(__FREEBSD__) && __FreeBSD_version >= 500111) || defined(__NetBSD__)
+ 	hdata = hid_start_parse(hw->repdesc, 1 << hid_input, rep->rid);
+ #else
+ 	hdata = hid_start_parse(hw->repdesc, 1 << hid_input);
+@@ -443,7 +446,7 @@ SDL_SYS_JoystickUpdate(SDL_Joystick *joy
+ 	if (read(joy->hwdata->fd, REP_BUF_DATA(rep), rep->size) != rep->size) {
+ 		return;
+ 	}
+-#if defined(USBHID_NEW) || (defined(__FREEBSD__) && __FreeBSD_version >= 500111)
++#if defined(USBHID_NEW) || (defined(__FREEBSD__) && __FreeBSD_version >= 500111) || defined(__NetBSD__)
+ 	hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input, rep->rid);
+ #else
+ 	hdata = hid_start_parse(joy->hwdata->repdesc, 1 << hid_input);
