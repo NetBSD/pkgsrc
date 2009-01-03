@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2008/12/20 00:58:22 gdt Exp $
+# $NetBSD: Makefile,v 1.191 2009/01/03 22:14:03 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -67,6 +67,7 @@ SUBDIR+=	ja-vflib-utils
 SUBDIR+=	ja-vfxdvik
 SUBDIR+=	jcabc2ps
 SUBDIR+=	kbibtex
+SUBDIR+=	kpathsea
 SUBDIR+=	latex-mk
 SUBDIR+=	lgrind
 SUBDIR+=	libgnomecups
