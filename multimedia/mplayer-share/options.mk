@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2008/12/20 00:43:47 jmcneill Exp $
+# $NetBSD: options.mk,v 1.35 2009/01/03 15:18:18 shattered Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -258,6 +258,7 @@ CONFIGURE_ARGS+=	--disable-png
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)
 CONFIGURE_ARGS+=	--enable-polyp
+.  include "../../devel/glib2/buildlink3.mk"
 .  include "../../audio/pulseaudio/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-polyp
