@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7770 2009/01/03 08:52:41 dholland Exp $
+$NetBSD: TODO,v 1.7771 2009/01/03 20:21:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,7 @@ Suggested package updates
 	o arping-2.08
 	o asapm-3.1
 	o asc-2.2.0
-	o aspell-danish-1.6.19
+	o aspell-danish-1.6.20
 	o aspell-faroese-0.2.35
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
@@ -479,6 +479,7 @@ Suggested package updates
 	o clive-2.1.2
 	o cocoon-2.1.10
 	o colorize-0.3.4
+	o comix-4.0.2
 	o compiz-0.7.8
 	o cone-0.77
 	o connect-1.96
@@ -687,6 +688,7 @@ Suggested package updates
 	o gv-3.6.6
 	o gvfs-1.1.2
 	o gworkspace-0.8.6
+	o gxemul-0.4.7
 	o hackbot-2.21
 	o hal-info-20081219
 	o hanzim-2.1
@@ -935,7 +937,7 @@ Suggested package updates
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
-	o nspluginwrapper-1.2.0
+	o nspluginwrapper-1.2.2
 	o nspr-4.7.3
 	o nss-3.11.7
 	o ntop-3.3.9
@@ -1266,7 +1268,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-21.1.2
+	o tea-22.0.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.17
