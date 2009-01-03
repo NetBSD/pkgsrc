@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.18 2008/12/16 08:56:18 adam Exp $
+$NetBSD: patch-ae,v 1.19 2009/01/03 19:45:29 adam Exp $
 
 --- configure.orig	2008-12-15 20:38:07.000000000 +0100
 +++ configure
@@ -31,27 +31,6 @@ $NetBSD: patch-ae,v 1.18 2008/12/16 08:56:18 adam Exp $
  else
    cat >>confdefs.h <<\_ACEOF
  #define _NO_LIBXML 1
-@@ -24103,9 +24103,9 @@ else
-   :
- fi
- 
--  if test "$pan_headers" != "" >& /dev/null ; then
-+  if test "$pan_headers" != "" 2> /dev/null ; then
-     gww_haspango="done"
--  elif pkg-config --libs pangoxft >& /dev/null ; then
-+  elif pkg-config --libs pangoxft 2> /dev/null ; then
-     gww_CFLAGS="$CFLAGS"
-     CFLAGS="$CFLAGS $X_CFLAGS"
-     { echo "$as_me:$LINENO: checking for X11/Xft/Xft.h" >&5
-@@ -24173,7 +24173,7 @@ if test "$gww_haspango" = "yes" ; then
-  CFLAGS="$CFLAGS `pkg-config --cflags pangoxft`"
- fi
- if test "$gww_haspango" = "yes" -a "$gww_hascairo" = "yes" ; then
--  if pkg-config --libs pangocairo >& /dev/null ; then
-+  if pkg-config --libs pangocairo 2> /dev/null ; then
-     gww_haspangocairo="yes"
-     CFLAGS="$CFLAGS `pkg-config --cflags pangocairo`"
-   fi
 @@ -26606,7 +26606,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
