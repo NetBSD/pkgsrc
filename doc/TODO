@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7769 2009/01/02 00:46:24 wiz Exp $
+$NetBSD: TODO,v 1.7770 2009/01/03 08:52:41 dholland Exp $
 
 Suggested new packages
 ======================
@@ -327,6 +327,10 @@ Suggested new packages
 	STklos
 	http://www.stklos.org/
 	Scheme system. Obsoletes (I think) lang/STk.
+
+	sage
+	http://www.sagemath.org/
+	Open-source alternative to Magma, Maple, Mathematica, Matlab.
 
 Suggested package updates
 =========================
