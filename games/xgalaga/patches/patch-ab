@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2006/01/13 02:02:50 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2009/01/03 12:37:08 obache Exp $
 
 --- configure.orig	1998-05-11 07:02:12.000000000 +0000
 +++ configure
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.2 2006/01/13 02:02:50 joerg Exp $
          SOUNDSERVER=xgal.sndsrv.freebsd
  	cat >> confdefs.h <<\EOF
  #define SOUNDDEV "/dev/dsp"
-@@ -1850,6 +1856,16 @@ EOF
+@@ -1850,8 +1856,18 @@ EOF
  EOF
  
  	;;
@@ -42,5 +42,17 @@ $NetBSD: patch-ab,v 1.2 2006/01/13 02:02:50 joerg Exp $
 +
 +	;;
        *sunos*)
-         SOUNDSERVER=xgal.sndsrv.sun.c
+-        SOUNDSERVER=xgal.sndsrv.sun.c
++        SOUNDSERVER=xgal.sndsrv.sun
  	cat >> confdefs.h <<\EOF
+ #define SOUNDDEV "/dev/audio"
+ EOF
+@@ -1862,7 +1878,7 @@ EOF
+ 
+ 	;;
+       *solaris*)
+-        SOUNDSERVER=xgal.sndsrv.sun.c
++        SOUNDSERVER=xgal.sndsrv.sun
+ 	cat >> confdefs.h <<\EOF
+ #define SOUNDDEV "/dev/audio"
+ EOF
