@@ -1,0 +1,13 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2009/01/03 22:12:42 minskim Exp $
+
+case "${STAGE}" in
+POST-INSTALL)
+	@PREFIX@/bin/mktexlsr \
+		@PREFIX@/share/texmf \
+		@PREFIX@/share/texmf-dist \
+		@PREFIX@/share/doc/texmf \
+		@TEXMFLOCAL@ \
+		@VARBASE@/lib/texmf \
+		@PKG_SYSCONFDIR@
+	;;
+esac

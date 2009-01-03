@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/03 22:12:42 minskim Exp $
+
+Set paths to texmf trees for pkgsrc.
+
+--- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
++++ texmf.cnf
+@@ -44,18 +44,18 @@
+ 
+ % The tree containing the runtime files closely related to the specific
+ % program version used:
+-TEXMFMAIN = $SELFAUTOPARENT/texmf
++TEXMFMAIN = $SELFAUTODIR/share/texmf
+ 
+ % The main distribution tree:
+-TEXMFDIST = $SELFAUTOPARENT/texmf-dist
++TEXMFDIST = $SELFAUTODIR/share/texmf-dist
+ 
+ % Our documentation-only tree, arranged by language:
+-TEXMFDOC = $SELFAUTOPARENT/texmf-doc
++TEXMFDOC = $SELFAUTODIR/share/doc/texmf
+ 
+ % A place for local additions to a "standard" texmf tree.
+ % This tree is not used for local configuration maintained by
+ % texconfig, it uses TEXMFCONFIG below.
+-TEXMFLOCAL = $SELFAUTOPARENT/../texmf-local
++TEXMFLOCAL = @TEXMFLOCAL@
+ 
+ % TEXMFSYSVAR, where texconfig-sys stores variable runtime data.
+ % With teTeX-3.0 or later, this must be set.
+@@ -63,7 +63,7 @@ TEXMFLOCAL = $SELFAUTOPARENT/../texmf-lo
+ %   TEXMFSYSVAR = $TEXMFMAIN
+ % For using a separate tree:
+ %   TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+-TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
++TEXMFSYSVAR = @VARBASE@/lib/texmf
+ 
+ % TEXMFSYSCONFIG, where texconfig-sys stores configuration data.
+ % With teTeX-3.0 or later, this must be set.
+@@ -71,7 +71,7 @@ TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+ %   TEXMFSYSCONFIG = $TEXMFMAIN
+ % For using a separate tree:
+ %   TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
+-TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
++TEXMFSYSCONFIG = @PKG_SYSCONFDIR@
+ 
+ % User texmf trees are allowed as follows.
+ % This used to be HOMETEXMF.
+@@ -447,7 +447,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+ % 
+ % For security reasons, it is better not to include . in this path.
+ %
+-TEXMFCNF = {$SELFAUTOLOC,$SELFAUTODIR,$SELFAUTOPARENT}{,{/share,}/texmf{-local,}/web2c}
++TEXMFCNF = @PKG_SYSCONFDIR@
+ 
+ # kpathsea 3.5.3 and later sets these at runtime. To avoid empty
+ # expansions from binaries linked against an earlier version of the
