@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/12/25 21:53:30 ahoka Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/03 19:34:02 gdt Exp $
 #
 
 DISTNAME=	pulseaudio-0.9.13
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -93,6 +93,7 @@ pre-configure:
 .include "../../audio/speex/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
