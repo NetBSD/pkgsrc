@@ -1,0 +1,21 @@
+NEStopia is a portable Nintendo Entertainment System emulator
+written in C++ by Martin Freij and ported to Linux by R. Belmont.
+NEStopia strives for the most accurate emulation possible at the
+pixel-by-pixel and sample-by-sample level, and it has excellent
+mapper and UNIF board support as well. A few features:
+
+- Supports .nes and .unf/.unif format ROMs
+- Supports .fds discs
+- Supports .nsf music rips
+- All supported files can be extracted from zip or 7zip containers (an
+  archive browser is not yet included - this assumes the common
+  GoodSet case of one zip or 7zip per game)
+- Supports save states
+- Supports movie recordings
+- Supports the "rewinder" - if you make a bad jump and screw up your game,
+  press Backspace and the game will run in reverse. Press \ to take over
+  again and try to fix your mistake.
+- Friendly GUI configuration
+- Autodetection of PAL and NTSC format games
+- Supports drag and drop of compatible games and music rips from modern
+  Linux file managers, including KDE's Konqueror and GNOME's Nautilus.
