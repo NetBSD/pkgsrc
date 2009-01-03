@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2008/12/20 17:37:57 wiz Exp $
+# $NetBSD: Makefile,v 1.175 2009/01/03 18:47:23 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -50,6 +50,7 @@ SUBDIR+=	fmsx
 SUBDIR+=	freebsd_lib
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
+SUBDIR+=	gambatte
 SUBDIR+=	gcube
 SUBDIR+=	generator
 SUBDIR+=	generator-cbiere
@@ -75,6 +76,7 @@ SUBDIR+=	makeppf
 SUBDIR+=	mednafen
 SUBDIR+=	minivmac
 SUBDIR+=	mmix
+SUBDIR+=	nestopia
 SUBDIR+=	netbsd32_compat15
 SUBDIR+=	netbsd32_compat15-extras
 SUBDIR+=	netbsd32_compat16
@@ -100,6 +102,7 @@ SUBDIR+=	simulavr
 SUBDIR+=	ski
 SUBDIR+=	sms_sdl
 SUBDIR+=	snes9x
+SUBDIR+=	snes9x-gtk
 SUBDIR+=	spim
 SUBDIR+=	stella
 SUBDIR+=	suse100_32_alsa
