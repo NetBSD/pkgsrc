@@ -1,0 +1,12 @@
+# $NetBSD: texmf-install.tmpl,v 1.1.1.1 2009/01/03 22:12:42 minskim Exp $
+#
+# Rebuild ls-R databases.
+#
+
+case ${STAGE} in
+POST-INSTALL)
+	@MKTEXLSR@ @TEXMF_DIRS@
+        ;;
+*)
+	;;
+esac
