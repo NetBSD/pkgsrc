@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/03 18:15:00 abs Exp $
+
+SHA1 (Catalyst-Plugin-RequireSSL-0.06.tar.gz) = cf37880119a610fc8c7b0645304657df815f8997
+RMD160 (Catalyst-Plugin-RequireSSL-0.06.tar.gz) = c8ae9d983c6d64ec23ca26339ffabe0f3c1cd6a8
+Size (Catalyst-Plugin-RequireSSL-0.06.tar.gz) = 5543 bytes
