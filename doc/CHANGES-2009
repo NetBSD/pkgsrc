@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.36 2009/01/04 11:30:16 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.37 2009/01/04 12:42:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -47,3 +47,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.11 [obache 2009-01-04]
 	Updated databases/p5-tokyotyrant to 1.4 [obache 2009-01-04]
 	Updated databases/ruby-tokyotyrant to 1.2 [obache 2009-01-04]
+	Updated misc/libcdio to 0.81nb1 [wiz 2009-01-04]
