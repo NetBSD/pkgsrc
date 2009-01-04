@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/06/20 01:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2009/01/04 18:01:01 wiz Exp $
 #
 
 DISTNAME=		gnopernicus-1.1.1
@@ -72,7 +72,7 @@ BUILDLINK_API_DEPENDS.libxml2+=		libxml2>=2.6.7
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gnome-mag/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
