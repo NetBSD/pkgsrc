@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/10/28 23:38:33 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2009/01/04 18:01:01 wiz Exp $
 
 DISTNAME=	gnotime-2.3.0
 CATEGORIES=	time gnome
@@ -31,7 +31,7 @@ MAKE_ENV+=		GCONF_SCHEMAS_DIR=${GCONF_SCHEMAS_DIR:Q}
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../www/gtkhtml314/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

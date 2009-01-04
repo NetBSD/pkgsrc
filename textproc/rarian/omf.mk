@@ -1,4 +1,4 @@
-# $NetBSD: omf.mk,v 1.14 2007/11/12 20:41:18 drochner Exp $
+# $NetBSD: omf.mk,v 1.1 2009/01/04 18:01:01 wiz Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # OMF files.  It takes care of registering them in scrollkeeper's global

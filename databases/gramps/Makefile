@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/11/19 03:39:57 hasso Exp $
+# $NetBSD: Makefile,v 1.37 2009/01/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=		gramps-1.0.11
@@ -24,7 +24,7 @@ PYTHON_VERSIONS_ACCEPTED=	24 25
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
