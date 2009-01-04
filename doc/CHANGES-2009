@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.40 2009/01/04 20:02:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.41 2009/01/04 20:11:54 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -51,3 +51,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/horde to 3.3.2nb1 [adrianp 2009-01-04]
 	Updated net/nmap to 4.76 [adrianp 2009-01-04]
 	Updated x11/modular-xorg-server to 1.4.2nb4 [wiz 2009-01-04]
+	Updated mail/p5-Mail-Box to 2.086 [adrianp 2009-01-04]
