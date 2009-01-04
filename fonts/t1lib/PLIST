@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10 2005/09/07 17:46:28 reed Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/04 02:25:27 minskim Exp $
 bin/type1afm
-bin/xglyph
+${PLIST.x11}bin/xglyph
 include/t1lib.h
-include/t1libx.h
+${PLIST.x11}include/t1libx.h
 lib/libt1.la
-lib/libt1x.la
+${PLIST.x11}lib/libt1x.la
 share/doc/${PKGBASE}/Makefile
 share/doc/${PKGBASE}/Makefile.in
 share/doc/${PKGBASE}/Tee.eps
