@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/01/04 00:44:38 adrianp Exp $
+
+WARNING:
+This script will quite hapily delete *any* file in ${DISTDIR}
+(or --distdir) that does not belong to an installed package.  The only
+exception to this is that it tries to avoid deleting some CVS files.
+Please be sure that you are not storing anything else in ${DISTDIR}
+(or --distdir) that you may want to keep.
+===========================================================================
