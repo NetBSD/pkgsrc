@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7771 2009/01/03 20:21:43 wiz Exp $
+$NetBSD: TODO,v 1.7772 2009/01/04 00:40:01 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -435,8 +435,6 @@ Suggested package updates
 	o benchfft-3.1
 	o bftpd-2.3
 	o biew-5.7.1
-	o bind-9.5.1
-	o bind-9.6.0
 	o binutils-2.19
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
@@ -450,7 +448,6 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.8.0
 	o btpd-0.13 [pkg/38144]
-	o bugzilla-3.2 [pkg/40181]
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
