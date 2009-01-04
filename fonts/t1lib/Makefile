@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/11/10 17:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/01/04 02:25:27 minskim Exp $
 
 DISTNAME=	t1lib-5.1.2
 PKGREVISION=	1
@@ -24,6 +24,12 @@ CONF_FILES=	${EGDIR}/t1lib.config.sample ${DATADIR}/t1lib.config
 CONF_FILES+=	${EGDIR}/FontDataBase ${DATADIR}/FontDataBase
 
 .include "options.mk"
+
+PLIST_VARS+=	x11
+
+.if !empty(PKG_OPTIONS:Mx11)
+PLIST.x11=	yes
+.endif
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	t1lib.config.sample
