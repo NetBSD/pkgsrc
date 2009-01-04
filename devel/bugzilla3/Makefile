@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/11/09 20:15:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/04 00:38:11 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-3.0.6
+DISTNAME=	bugzilla-3.2
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
@@ -9,12 +9,13 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
 
-DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
+DEPENDS+=	p5-CGI>=3.21:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.41:../../databases/p5-DBI
-DEPENDS+=	p5-Template-Toolkit>=2.12:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-Template-Toolkit>=2.15:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
-DEPENDS+=	p5-Email-Send>=2.185:../../mail/p5-Email-Send
-DEPENDS+=	p5-Email-MIME-Modifier-[0-9]*:../../mail/p5-Email-MIME-Modifier
+DEPENDS+=	p5-Email-Send>=2.00:../../mail/p5-Email-Send
+DEPENDS+=	p5-Email-MIME>=1.861:../../mail/p5-Email-MIME
+DEPENDS+=	p5-Email-MIME-Modifier>=1.442:../../mail/p5-Email-MIME-Modifier
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,7 +30,7 @@ SENDMAIL?=	/usr/sbin/sendmail
 CVS?=		/usr/bin/cvs
 
 BUILD_DEFS+=	SENDMAIL CVS APACHE_USER APACHE_GROUP
-PERL5_REQD+=	5.8.0
+PERL5_REQD+=	5.8.1
 
 PKG_USERS_VARS+=	APACHE_USER
 PKG_GROUPS_VARS+=	BZ_WEB_GROUP APACHE_GROUP
@@ -65,6 +66,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/en
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/Bugzilla
@@ -73,11 +75,14 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/template
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/skins
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/html
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html/api
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html/api/Bugzilla
 	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/images
 
-	${INSTALL_DATA} ${WRKSRC}/docs/txt/Bugzilla-Guide.txt ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/rel_notes.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/en/txt/Bugzilla-Guide.txt ${DESTDIR}${DOCDIR}/en
+	${INSTALL_DATA} ${WRKSRC}/docs/en/rel_notes.txt ${DESTDIR}${DOCDIR}/en
 	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
@@ -85,7 +90,6 @@ do-install:
 
 	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${DESTDIR}${BZDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${DESTDIR}${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.js ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${DESTDIR}${BZDIR}
 	${INSTALL_DATA} ${WRKSRC}/duplicates.xul ${DESTDIR}${BZDIR}
@@ -96,7 +100,9 @@ do-install:
 
 	${INSTALL_DATA} ${WRKSRC}/images/*.png ${DESTDIR}${BZDIR}/images
 	${INSTALL_DATA} ${WRKSRC}/js/*.js ${DESTDIR}${BZDIR}/js
-	${INSTALL_DATA} ${WRKSRC}/docs/html/*.html ${DESTDIR}${BZDIR}/docs/html
+	${INSTALL_DATA} ${WRKSRC}/docs/en/html/*.html ${DESTDIR}${BZDIR}/docs/en/html
+	${INSTALL_DATA} ${WRKSRC}/docs/en/html/api/*.html ${DESTDIR}${BZDIR}/docs/en/html/api
+	${INSTALL_DATA} ${WRKSRC}/docs/en/html/api/Bugzilla/*.html ${DESTDIR}${BZDIR}/docs/en/html/api/Bugzilla
 
 .for i in ${PAX_DIRS}
 	cd ${WRKSRC}/${i} && pax -rw . ${DESTDIR}${BZDIR}/${i}
