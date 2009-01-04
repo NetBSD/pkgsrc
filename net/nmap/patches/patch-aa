@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.21 2008/06/08 18:12:52 adrianp Exp $
+$NetBSD: patch-aa,v 1.22 2009/01/04 15:16:11 adrianp Exp $
 
---- Makefile.in.orig	2008-05-31 04:24:50.000000000 +0100
+--- Makefile.in.orig	2008-09-05 06:32:06.000000000 +0100
 +++ Makefile.in
 @@ -24,8 +24,8 @@ CXX = @CXX@
  CCOPT = 
@@ -13,9 +13,9 @@ $NetBSD: patch-aa,v 1.21 2008/06/08 18:12:52 adrianp Exp $
  export LIBDNETDIR = @LIBDNETDIR@
  ZENMAPDIR = zenmap
  PYTHON = @PYTHON@
-@@ -88,14 +88,14 @@ nsestdlib: nselib-bin/Makefile 
- 	@echo Compiling nse-standard-library; cd nselib-bin && $(MAKE)
- 
+@@ -82,14 +82,14 @@ $(TARGET): @LUA_DEPENDS@ @PCAP_DEPENDS@ 
+ 	rm -f $@
+ 	$(CXX) $(LDFLAGS) -o $@ $(OBJS) $(LIBS)
  
 -pcre_build: $(LIBPCREDIR)/Makefile
 -	@echo Compiling libpcre; cd $(LIBPCREDIR) && $(MAKE)
