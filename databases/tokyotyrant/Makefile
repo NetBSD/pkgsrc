@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/12/15 11:18:41 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/04 11:04:35 obache Exp $
 #
 
-DISTNAME=	tokyotyrant-1.1.9
-PKGREVISION=	1
+DISTNAME=	tokyotyrant-1.1.11
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
@@ -21,7 +20,7 @@ TEST_TARGET=	check
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.23
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.27
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 PTHREAD_AUTO_VARS=	yes
