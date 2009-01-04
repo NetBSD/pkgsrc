@@ -1,10 +1,10 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcrelay.sh,v 1.1.1.1 2008/02/13 22:03:58 adrianp Exp $
+# $NetBSD: isc_dhclient.sh,v 1.1 2009/01/04 00:59:23 adrianp Exp $
 #
 
-# PROVIDE: dhcrelay
-# REQUIRE: DAEMON
+# PROVIDE: dhclient
+# REQUIRE: network mountcritlocal
 # BEFORE:  NETWORKING
 #
 #	Note that there no syslog logging of dhclient messages at boot because
@@ -15,13 +15,13 @@ if [ -f /etc/rc.subr ]; then
         . /etc/rc.subr
 fi
 
-name="dhcrelay"
-rcvar="isc_${name}"
-command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/isc-dhcp/isc-${name}.pid"
-start_precmd="isc_dhcrelay_precmd"
+name="isc_dhclient"
+rcvar="${name}"
+command="@PREFIX@/sbin/dhclient"
+pidfile="@VARBASE@/run/isc-dhcp/isc-dhclient.pid"
+start_precmd="isc_dhclient_precmd"
 
-isc_dhcrelay_precmd()
+isc_dhclient_precmd()
 {
 	if [ ! -d @VARBASE@/run/isc-dhcp ]; then
 		@MKDIR@ @VARBASE@/run/isc-dhcp

@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2008/12/21 21:24:08 adrianp Exp $
+$NetBSD: distinfo,v 1.3 2009/01/04 00:56:32 adrianp Exp $
 
-SHA1 (dhcp-4.0.0.tar.gz) = acb4ab7634ba002893b15baba1443ef4d6c92201
-RMD160 (dhcp-4.0.0.tar.gz) = 86963598124617bc7d1059262c75176db431f26d
-Size (dhcp-4.0.0.tar.gz) = 1043725 bytes
-SHA1 (patch-aa) = 162f8950cfcbb9647b81d8d1518867aaf8ec7905
-SHA1 (patch-ab) = cd38b5075d2f3a3121fb7dc9f870a6091c603ef1
+SHA1 (dhcp-4.1.0.tar.gz) = 46e161892140a3b60cd56e62b442f48f51bc605f
+RMD160 (dhcp-4.1.0.tar.gz) = bf96fa9d135a65b4d9b27f8caf4f3744f0636c80
+Size (dhcp-4.1.0.tar.gz) = 1086815 bytes
+SHA1 (patch-aa) = 4090c4198ee16bd596d16a06856cfb5bb83dab81
+SHA1 (patch-ab) = 049a3a5037c91a83c0f3eb22e76d861d8c3aa801
 SHA1 (patch-ac) = 7079a37a7bbdf7ede805ecba61700ecf86fffaea

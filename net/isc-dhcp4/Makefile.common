@@ -1,17 +1,17 @@
-# $NetBSD: Makefile.common,v 1.3 2008/12/21 21:24:08 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.4 2009/01/04 00:56:32 adrianp Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
 # used by net/isc-dhclient4/Makefile
 # used by net/isc-dhcrelay4/Makefile
 
-DISTNAME=		dhcp-4.0.0
-PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
+DISTNAME=		dhcp-4.1.0
+DHVER=			${DISTNAME:S/dhcp-//}
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.isc.org/isc/dhcp/
 
 MAINTAINER=		adrianp@NetBSD.org
-HOMEPAGE=		http://www.isc.org/sw/dhcp/dhcp4_0.php
+HOMEPAGE=		https://www.isc.org/sw/dhcp
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
 
@@ -22,9 +22,9 @@ DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
 
-FILESDIR=		${.CURDIR}/../isc-dhcp4/files
 PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
-EGDIR=			${PREFIX}/share/examples/isc-dhcp-${COMPONENT}
+DISTINFO_FILE= 		${.CURDIR}/../isc-dhcp4/distinfo
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 BUILD_DEFS+=		VARBASE DHCP_HOME DHCP_PID
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}

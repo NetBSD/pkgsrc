@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: isc_dhcpd.sh,v 1.1.1.1 2008/02/13 22:03:58 adrianp Exp $
+# $NetBSD: isc_dhcpd.sh,v 1.1 2009/01/04 00:58:42 adrianp Exp $
 #
 
 # PROVIDE: dhcpd
@@ -11,11 +11,11 @@ if [ -f /etc/rc.subr ]; then
         . /etc/rc.subr
 fi
 
-name="dhcpd"
-rcvar="isc_${name}"
-command="@PREFIX@/sbin/${name}"
-pidfile="@VARBASE@/run/isc-dhcp/isc-${name}.pid"
-required_files="@PKG_SYSCONFDIR@/${name}.conf"
+name="isc_dhcpd"
+rcvar="${name}"
+command="@PREFIX@/sbin/dhcpd"
+pidfile="@VARBASE@/run/isc-dhcp/isc-dhcpd.pid"
+required_files="@PKG_SYSCONFDIR@/dhcpd.conf"
 start_precmd="isc_dhcpd_precmd"
 
 isc_dhcpd_precmd()
