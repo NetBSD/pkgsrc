@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7773 2009/01/04 01:26:28 gdt Exp $
+$NetBSD: TODO,v 1.7774 2009/01/04 13:56:07 obache Exp $
 
 Suggested new packages
 ======================
@@ -406,6 +406,7 @@ Suggested package updates
 	o arping-2.08
 	o asapm-3.1
 	o asc-2.2.0
+	o asp2php-0.77.3
 	o aspell-danish-1.6.20
 	o aspell-faroese-0.2.35
 	o aspell-norwegian-2.0.10
