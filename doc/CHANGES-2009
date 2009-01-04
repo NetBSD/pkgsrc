@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.41 2009/01/04 20:11:54 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.42 2009/01/04 21:59:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -52,3 +52,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/nmap to 4.76 [adrianp 2009-01-04]
 	Updated x11/modular-xorg-server to 1.4.2nb4 [wiz 2009-01-04]
 	Updated mail/p5-Mail-Box to 2.086 [adrianp 2009-01-04]
+	Updated emulators/mednafen to 0.8.A [wiz 2009-01-04]
