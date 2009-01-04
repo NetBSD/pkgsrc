@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2009/01/04 14:08:14 shattered Exp $
 
 DISTNAME=	adom-111-elf
 PKGNAME=	adom-1.1.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://www.adom.de/adom/download/linux/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adom.de/
 COMMENT=	Ancient Domains of Mystery - yet another roguelike game
 

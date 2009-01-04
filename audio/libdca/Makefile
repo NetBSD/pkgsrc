@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/09/07 13:54:43 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/04 14:08:14 shattered Exp $
 #
 
 DISTNAME=	libdca-0.0.5
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://download.videolan.org/pub/videolan/libdca/0.0.5/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.videolan.org/developers/libdca.html
 COMMENT=	DTS Coherent Acoustics decoder
 

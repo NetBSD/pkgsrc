@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/04 16:06:53 obache Exp $
+# $NetBSD: Makefile,v 1.18 2009/01/04 14:08:15 shattered Exp $
 
 DISTNAME=	ktorrent-${KTORRENT_VER}
 CATEGORIES=	net kde
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 KTORRENT_VER=	2.2.8
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://ktorrent.org/
 COMMENT=	Graphical BitTorrent client for KDE
 
