@@ -1,0 +1,14 @@
+This is a simple script that will synchronise the content of your ${DISTDIR}
+directory with currently installed packages.
+
+This script will delete any ${DISTFILE} in ${DISTDIR} that does not currently
+have an installed package as an owner.
+
+If you play with packages a fair bit and download some just to have a play with
+and delete the package later your ${DISTDIR} can end up with a lot of orphaned
+${DISTFILES}.  While lintpkgsrc will help you remove outdated ${DISTFILES} it
+does not do any corealtion with installed packakges which is the gap this
+script aims to fill.
+
+With "lintpkgsrc -or && pkg_distinst --delete" you can and up with a fairly
+lean and current ${DISTDIR}.
