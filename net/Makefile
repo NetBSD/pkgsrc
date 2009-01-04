@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.750 2009/01/04 00:22:32 adrianp Exp $
+# $NetBSD: Makefile,v 1.751 2009/01/04 00:25:47 adrianp Exp $
 #
 
 COMMENT=	Networking tools
@@ -35,7 +35,6 @@ SUBDIR+=	balance
 SUBDIR+=	barnyard
 SUBDIR+=	batchftp
 SUBDIR+=	bftpd
-SUBDIR+=	bind8
 SUBDIR+=	bind9
 SUBDIR+=	bind95
 SUBDIR+=	bind96
