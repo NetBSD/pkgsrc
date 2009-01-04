@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/13 22:06:15 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/04 00:58:41 adrianp Exp $
 bin/omshell
 lib/libdhcpctl.a
 lib/libomapi.a
@@ -9,6 +9,6 @@ man/man5/dhcpd.conf.5
 man/man5/dhcpd.leases.5
 man/man8/dhcpd.8
 sbin/dhcpd
-share/examples/isc-dhcp-server/dhcpd.conf
+share/examples/isc-dhcpd/dhcpd.conf
 share/examples/rc.d/isc_dhcpd
-@dirrm share/examples/isc-dhcp-server
+@dirrm share/examples/isc-dhcpd
