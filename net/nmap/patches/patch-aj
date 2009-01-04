@@ -1,10 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2007/01/09 15:25:48 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2009/01/04 15:16:11 adrianp Exp $
 
-SunPro cannot handle struct { ...; union { ...; variable length array }}.
-
---- libdnet-stripped/include/dnet/os.h.orig	2005-08-24 02:06:27.000000000 +0200
-+++ libdnet-stripped/include/dnet/os.h	2007-01-09 16:18:57.602654556 +0100
-@@ -120,7 +120,7 @@ typedef unsigned int                ssiz
+--- libdnet-stripped/include/dnet/os.h.orig	2008-08-29 21:23:56.000000000 +0100
++++ libdnet-stripped/include/dnet/os.h
+@@ -115,7 +115,7 @@
  # ifdef __GNUC__
  #  define __flexarr	[0]
  # else
@@ -12,4 +10,4 @@ SunPro cannot handle struct { ...; union { ...; variable length array }}.
 +#  if defined(__STDC_VERSION__) && __STDC_VERSION__ >= 199901L && !defined(__SUNPRO_C)
  #   define __flexarr	[]
  #  elif defined(_WIN32)
- /* MS VC++ -- using just [] may work, but gives a non-standard extension warning */
+ /* MS VC++ */
