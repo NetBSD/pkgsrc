@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7774 2009/01/04 13:56:07 obache Exp $
+$NetBSD: TODO,v 1.7775 2009/01/04 18:25:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,6 +373,7 @@ Suggested package updates
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
+	o akonadi-1.1.0
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -528,7 +529,7 @@ Suggested package updates
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.04
+	o duplicity-0.5.05
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.1
 	o eagle-4.16
@@ -727,7 +728,7 @@ Suggested package updates
 	o isc-dhcp-3.1.2
 	o isc-dhcp4-4.0.1
 	o iselect-1.4.0
-	o iso-codes-3.5
+	o iso-codes-3.5.1
 	o ispell-gaeilge-4.1
 	o ispell-slovak-0.3.2
 	o ispman-1.2
@@ -973,7 +974,7 @@ Suggested package updates
 	o p5-Array-Compare-1.17
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-CGI-Session-4.39
+	o p5-CGI-Session-4.40
 	o p5-Config-General-2.41
 	o p5-Crypt-CBC-2.30 [pkg/40190]
 	o p5-DBD-Sybase-1.07
@@ -981,10 +982,12 @@ Suggested package updates
 	o p5-DateTime-TimeZone-0.83
 	o p5-File-Temp-0.21
 	o p5-HTTPD-User-Manage-1.62
+	o p5-IO-Socket-SSL-1.19
 	o p5-Locale-Maketext-Lexicon-0.68
 	o p5-MARC-1.38
 	o p5-Math-Random-0.69
 	o p5-Module-Build-0.3100
+	o p5-Net-DNS-0.64
 	o p5-Net-ICQ2000-0.2.2
 	o p5-PV-1.5
 	o p5-PathTools-3.29
@@ -992,7 +995,7 @@ Suggested package updates
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-Feed-0.41
-	o p5-XML-RSS-1.41
+	o p5-XML-RSS-1.42
 	o p5-gtk2-1.201
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1142,7 +1145,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdiff-backup-1.2.4
+	o rdiff-backup-1.3.0
 	o rdp-1.6
 	o redland-1.0.8.1
 	o regionset-0.2
@@ -1164,6 +1167,7 @@ Suggested package updates
 	o rp-pppoe-3.10
 	o rpm-5.1.4
 	o rsnapshot-1.3.1
+	o rsync-3.0.5
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-SDL-2.0.1b
@@ -1272,6 +1276,7 @@ Suggested package updates
 	o telepathy-glib-0.7.20
 	o tesseract-2.04
 	o tex-musixtex-113 [pkg/34758]
+	o texi2html-1.80
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.0
@@ -1351,7 +1356,7 @@ Suggested package updates
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20081227
+	o x264-devel-20090103
 	o xanalyser-1.30
 	o xapian-1.0.10
 	o xapian-omega-1.0.10
@@ -1448,7 +1453,7 @@ Suggested package updates
 	o yabause-0.9.8.1
 	o yacas-1.2.0
 	o yafc-1.1
-	o yaz-3.0.38
+	o yaz-3.0.41
 	o yodl-2.01.02
 	o youtube-dl-20081101
 	o ysm-2.9.9.1
