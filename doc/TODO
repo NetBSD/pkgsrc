@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7777 2009/01/04 18:36:46 wiz Exp $
+$NetBSD: TODO,v 1.7778 2009/01/04 21:57:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -723,7 +723,7 @@ Suggested package updates
 	o intercal-0.24
 	o ircservices-5.1.14
 	o irrd-2.3.4 [pkg/36813|38002]
-	o isc-dhcp4-4.0.1
+	o isc-dhcp-3.1.2
 	o iselect-1.4.0
 	o iso-codes-3.5.1
 	o ispell-gaeilge-4.1
