@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+
+SHA1 (InspIRCd-1.2.0b4.tar.bz2) = 98dbfb4a7111041f1eb0a8b29c3cd0de0fa365b8
+RMD160 (InspIRCd-1.2.0b4.tar.bz2) = 314abf17a3963e47f79fa45361a1ed338d7b66c4
+Size (InspIRCd-1.2.0b4.tar.bz2) = 611465 bytes
+SHA1 (patch-aa) = 47a3df3c35104103bf0a3add100441d9ca8d4c54
+SHA1 (patch-ab) = ddd675b13e89ca514b594c61cee00a3b9f1510e8
+SHA1 (patch-ac) = b9282332189ad19e6c48a5e2e6efa7bffbd7ccb0
+SHA1 (patch-ad) = e17969eb0b06f6e77742927f3fde6e2de1f0c34e
