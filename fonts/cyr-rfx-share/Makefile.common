@@ -1,4 +1,17 @@
-# $NetBSD: Makefile.common,v 1.12 2009/01/04 14:08:14 shattered Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/01/04 16:29:41 shattered Exp $
+
+# used by fonts/cyr-rfx-bulgarian-mik/Makefile
+# used by fonts/cyr-rfx-ibm-cp866/Makefile
+# used by fonts/cyr-rfx-iso10646_0400/Makefile
+# used by fonts/cyr-rfx-iso8859_15/Makefile
+# used by fonts/cyr-rfx-iso8859_5/Makefile
+# used by fonts/cyr-rfx-koi8-o/Makefile
+# used by fonts/cyr-rfx-koi8-ru/Makefile
+# used by fonts/cyr-rfx-koi8-ub/Makefile
+# used by fonts/cyr-rfx-koi8_1/Makefile
+# used by fonts/cyr-rfx-mac-cyrillic/Makefile
+# used by fonts/cyr-rfx-windows_1251/Makefile
+# used by fonts/cyr-rfx-winlatin_1/Makefile
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
