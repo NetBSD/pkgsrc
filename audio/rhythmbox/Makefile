@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2008/12/26 15:35:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.60 2009/01/04 18:00:58 wiz Exp $
 #
 
 DISTNAME=	rhythmbox-0.11.6
@@ -67,6 +67,6 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

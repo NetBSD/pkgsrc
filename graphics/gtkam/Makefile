@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/12/14 20:52:04 hasso Exp $
+# $NetBSD: Makefile,v 1.39 2009/01/04 18:01:00 wiz Exp $
 #
 
 DISTNAME=	gtkam-0.1.16
@@ -26,6 +26,6 @@ CONFIGURE_ARGS+=	--without-gimp
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/libexif-gtk/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/02 07:18:26 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=		mico-2.3.12
@@ -36,5 +36,5 @@ SUBST_FILES.exampledir+=	demo/services/Makefile demo/siegel/Makefile
 SUBST_FILES.exampledir+=	demo/services/wireless/Makefile
 SUBST_SED.exampledir=		-e "s@(INSTDIR)/doc/mico/examples@(SHARED_INSTDIR)/examples/${PKGBASE}@g"
 
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../mk/bsd.pkg.mk"
