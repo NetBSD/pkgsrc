@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.29 2009/01/04 01:14:49 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.30 2009/01/04 01:15:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -35,3 +35,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gimp-ufraw to 0.15 [gdt 2009-01-04]
 	Added security/openvas-libraries version 2.0.0 [adrianp 2009-01-04]
 	Added security/openvas-libnasl version 2.0.0 [adrianp 2009-01-04]
+	Added security/openvas-plugins version 1.0.5 [adrianp 2009-01-04]
