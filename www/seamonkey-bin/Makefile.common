@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2008/11/20 13:11:19 tron Exp $
+# $NetBSD: Makefile.common,v 1.16 2009/01/04 18:48:47 shattered Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -23,7 +23,7 @@ MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
 .sinclude "${.CURDIR}/Makefile.${EMUL_PLATFORM}"
 
 .if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
-EMUL_MODULES.linux=	compat gtk2 locale
+EMUL_MODULES.linux=	compat gtk2 locale alsa resmgr
 EMUL_REQD=		suse>=9.1
 .else
 EMUL_MODULES.linux=	compat gtk
