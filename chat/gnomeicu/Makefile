@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/09/06 20:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2009/01/04 18:00:58 wiz Exp $
 
 DISTNAME=	gnomeicu-0.99.12
 PKGREVISION=	6
@@ -35,7 +35,7 @@ GCONF_SCHEMAS=		gnomeicu.schemas
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

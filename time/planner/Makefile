@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/11/09 02:55:05 dsainty Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/04 18:01:01 wiz Exp $
 #
 
 DISTNAME=	planner-0.14.3
@@ -36,7 +36,7 @@ GCONF_SCHEMAS=		planner.schemas
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

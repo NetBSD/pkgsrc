@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.452 2009/01/04 00:30:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.453 2009/01/04 18:01:01 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -420,7 +420,6 @@ SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
 SUBDIR+=	scew
-#SUBDIR+=	scrollkeeper	# incomplete package (only provides omf.mk)
 SUBDIR+=	soprano
 SUBDIR+=	source-highlight
 SUBDIR+=	stardic

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/09/06 20:54:31 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2009/01/04 18:00:58 wiz Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.15
@@ -27,6 +27,6 @@ CONFIGURE_ARGS+=	--with-pisock=${BUILDLINK_PREFIX.pilot-link-libs}
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

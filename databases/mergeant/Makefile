@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2009/01/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=		mergeant-0.66
@@ -27,6 +27,6 @@ USE_LIBTOOL=		YES
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
