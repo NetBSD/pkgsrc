@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 01:05:46 adrianp Exp $
+bin/ctrlproxy
+include/ctrlproxy-3.0/admin.h
+include/ctrlproxy-3.0/cache.h
+include/ctrlproxy-3.0/client.h
+include/ctrlproxy-3.0/connection.h
+include/ctrlproxy-3.0/ctcp.h
+include/ctrlproxy-3.0/ctrlproxy.h
+include/ctrlproxy-3.0/hooks.h
+include/ctrlproxy-3.0/irc.h
+include/ctrlproxy-3.0/isupport.h
+include/ctrlproxy-3.0/line.h
+include/ctrlproxy-3.0/linestack.h
+include/ctrlproxy-3.0/listener.h
+include/ctrlproxy-3.0/log.h
+include/ctrlproxy-3.0/log_support.h
+include/ctrlproxy-3.0/repl.h
+include/ctrlproxy-3.0/settings.h
+include/ctrlproxy-3.0/ssl.h
+include/ctrlproxy-3.0/state.h
+include/ctrlproxy-3.0/util.h
+include/ctrlproxy-3.0/url.h
+lib/pkgconfig/ctrlproxy.pc
+man/man1/ctrlproxy-admin.1
+man/man1/ctrlproxy.1
+man/man5/ctrlproxy_config.5
+man/man8/ctrlproxyd.8
+sbin/ctrlproxyd
+share/ctrlproxy/help
+share/doc/ctrlproxy/README
+share/doc/ctrlproxy/user-guide.html
+share/examples/ctrlproxy/config.default
+share/examples/ctrlproxy/config.example
+share/examples/ctrlproxy/motd
+@dirrm share/ctrlproxy
+@dirrm share/examples/ctrlproxy
+@dirrm include/ctrlproxy-3.0
+@dirrm share/ctrlproxy
+@dirrm share/doc/ctrlproxy
