@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 00:44:38 adrianp Exp $
+bin/pkg_distinst
