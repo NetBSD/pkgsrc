@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/04 01:05:46 adrianp Exp $
+
+SHA1 (ctrlproxy-3.0.8.tar.gz) = 4999ba32e2f8eed95c0f30bebc0d72ae55cf76aa
+RMD160 (ctrlproxy-3.0.8.tar.gz) = f2dcf9a16172f9a2f8e34d0987e2be87d35c7607
+Size (ctrlproxy-3.0.8.tar.gz) = 277083 bytes
+SHA1 (patch-aa) = c21ee7933b80e30db19b79afaa8d6b6186f04017
