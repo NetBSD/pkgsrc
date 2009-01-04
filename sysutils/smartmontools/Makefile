@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/05/17 13:07:54 obache Exp $
+# $NetBSD: Makefile,v 1.16 2009/01/04 14:08:15 shattered Exp $
 
 DISTNAME=		smartmontools-5.38
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smartmontools/}
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://smartmontools.sourceforge.net/
 COMMENT=		Control and monitor storage systems using SMART
 
