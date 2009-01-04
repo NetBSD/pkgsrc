@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/04 09:35:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/04 23:14:00 dbj Exp $
 
-DISTNAME=	sgb
-PKGNAME=	${DISTNAME}-0pre20050409
+DISTNAME=	sgb-2007-03.28
+PKGNAME=	sgb-20070328
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.cs.stanford.edu/pub/sgb/
 
