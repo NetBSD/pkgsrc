@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/12/21 10:37:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/04 22:19:23 wiz Exp $
 bin/comicthumb
 bin/comix
 man/man1/comicthumb.1
@@ -113,6 +113,7 @@ share/icons/hicolor/48x48/mimetypes/application-x-cbr.png
 share/icons/hicolor/48x48/mimetypes/application-x-cbt.png
 share/icons/hicolor/48x48/mimetypes/application-x-cbz.png
 share/icons/hicolor/scalable/apps/comix.svg
+share/locale/ca/LC_MESSAGES/comix.mo
 share/locale/cs/LC_MESSAGES/comix.mo
 share/locale/es/LC_MESSAGES/comix.mo
 share/locale/hr/LC_MESSAGES/comix.mo
@@ -120,9 +121,11 @@ share/locale/id/LC_MESSAGES/comix.mo
 share/locale/ja/LC_MESSAGES/comix.mo
 share/locale/ko/LC_MESSAGES/comix.mo
 share/locale/pl/LC_MESSAGES/comix.mo
+share/locale/pt_BR/LC_MESSAGES/comix.mo
 share/locale/ru/LC_MESSAGES/comix.mo
 share/locale/sv/LC_MESSAGES/comix.mo
 share/locale/zh_CN/LC_MESSAGES/comix.mo
+share/locale/zh_TW/LC_MESSAGES/comix.mo
 share/mime/packages/comix.xml
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
