@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/04 01:05:46 adrianp Exp $
+
+--- Makefile.orig	2008-12-06 17:36:33.000000000 +0000
++++ Makefile
+@@ -190,10 +190,10 @@ uninstall-data::
+ 	-rmdir $(DESTDIR)$(sysconfdir)
+ 
+ install-data:
+-	$(INSTALL) -d $(DESTDIR)$(sysconfdir)
+-	$(INSTALL) -d $(DESTDIR)$(DEFAULT_CONFIG_DIR)
+-	$(INSTALL) -m 0644 motd $(DESTDIR)$(DEFAULT_CONFIG_DIR)
+-	$(INSTALL) -m 0644 config.default $(DESTDIR)$(DEFAULT_CONFIG_DIR)/config
++	#$(INSTALL) -d $(DESTDIR)$(sysconfdir)
++	#$(INSTALL) -d $(DESTDIR)$(DEFAULT_CONFIG_DIR)
++	#$(INSTALL) -m 0644 motd $(DESTDIR)$(DEFAULT_CONFIG_DIR)
++	#$(INSTALL) -m 0644 config.default $(DESTDIR)$(DEFAULT_CONFIG_DIR)/config
+ 
+ install-pkgconfig:
+ 	$(INSTALL) -d $(DESTDIR)$(libdir)/pkgconfig
