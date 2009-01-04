@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2008/10/29 01:04:06 bjs Exp $
+$NetBSD: distinfo,v 1.14.2.1 2009/01/04 13:23:24 tron Exp $
 
 SHA1 (aria2c-0.16.2.tar.bz2) = 244d51c91771bf440009bb33c360f258913812ac
 RMD160 (aria2c-0.16.2.tar.bz2) = e3c124ac20501163792fe5ceb820da3d801ffc83
 Size (aria2c-0.16.2.tar.bz2) = 1153881 bytes
+SHA1 (patch-aa) = ef972e61740c7b95ca2441e6899ddadab45f51de
