@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/12/06 11:36:41 obache Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/04 14:08:15 shattered Exp $
 #
 
 DISTNAME=	dmidecode-2.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://savannah.gnu.org/download/dmidecode/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/dmidecode/
 COMMENT=	Print out DMI (SMBIOS) table in human-readable format
 
