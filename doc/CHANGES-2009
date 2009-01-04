@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.38 2009/01/04 13:47:55 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.39 2009/01/04 15:16:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -49,3 +49,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-tokyotyrant to 1.2 [obache 2009-01-04]
 	Updated misc/libcdio to 0.81nb1 [wiz 2009-01-04]
 	Updated www/horde to 3.3.2nb1 [adrianp 2009-01-04]
+	Updated net/nmap to 4.76 [adrianp 2009-01-04]
