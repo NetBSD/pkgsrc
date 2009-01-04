@@ -1,0 +1,67 @@
+$NetBSD: patch-ae,v 1.1 2009/01/04 23:10:06 dbj Exp $
+
+--- Makefile.orig	2007-12-26 16:52:36.000000000 -0800
++++ Makefile	2009-01-04 15:05:52.000000000 -0800
+@@ -59,12 +59,19 @@ HEADERS=			\
+ 	libvolume_id.h		\
+ 	util.h
+ 
+-all: libvolume_id.a $(SHLIB) libvolume_id.pc
++all: libvolume_id.la libvolume_id.pc
+ .PHONY: all
+ .DEFAULT: all
+ 
+ .SUFFIXES:
+ 
++libvolume_id.la: $(OBJS:.o=.lo)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) $(CFLAGS) -o $@ \
++	    $^ -version-info $(SHLIB_CUR):$(SHLIB_REV):$(SHLIB_AGE) -rpath $(PREFIX)/lib
++
++%.lo: %.c
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) -o $@ $<
++
+ %.o: %.c
+ 	$(E) "  CC      " $@
+ 	$(Q) $(CC) -c $(CFLAGS) $< -o $@
+@@ -88,27 +95,22 @@ $(SHLIB): $(HEADERS) exported_symbols $(
+ 		$(addprefix .shlib/,$(OBJS))
+ 
+ libvolume_id.pc:
+-	$(E) "  GENPC   " $@
+-	$(Q) echo "libdir=${usrlibdir}" >> $@
+-	$(Q) echo "includedir=${includedir}" >> $@
+-	$(Q) echo "" >> $@
+-	$(Q) echo "Name: libvolume_id" >> $@
+-	$(Q) echo "Description: Filesystem label and uuid access" >> $@
+-	$(Q) echo "Version: $(SHLIB_CUR).$(SHLIB_REV).$(SHLIB_AGE)" >> $@
+-	$(Q) echo "Libs: -L\$${libdir} -lvolume_id" >> $@
+-	$(Q) echo "Cflags: -I\$${includedir}" >> $@
++	echo "prefix=$(PREFIX)" >> $@
++	echo "exec_prefix=\$${prefix}" >> $@
++	echo "libdir=\$${exec_prefix}/lib" >> $@
++	echo "includedir=\$${exec_prefix}/include" >> $@
++	echo "" >> $@
++	echo "Name: libvolume_id" >> $@
++	echo "Description: Filesystem label and uuid access" >> $@
++	echo "Version: $(SHLIB_CUR).$(SHLIB_REV).$(SHLIB_AGE)" >> $@
++	echo "" >> $@
++	echo "Libs: -L\$${libdir} -lvolume_id" >> $@
++	echo "Cflags: -I\$${includedir}" >> $@
+ 
+ install: all
+-	$(INSTALL_DATA) -D libvolume_id.h $(DESTDIR)$(includedir)/libvolume_id.h
+-	$(INSTALL_LIB) -D $(SHLIB) $(DESTDIR)$(libdir)/$(SHLIB)
+-	mkdir -p $(DESTDIR)$(usrlibdir)/
+-	ln -sf $(SHLIB) $(DESTDIR)$(libdir)/libvolume_id.so.$(SHLIB_CUR)
+-ifeq ($(libdir),$(usrlibdir))
+-	ln -sf $(SHLIB) $(DESTDIR)$(usrlibdir)/libvolume_id.so
+-else
+-	ln -sf $(libdir)/$(SHLIB) $(DESTDIR)$(usrlibdir)/libvolume_id.so
+-endif
+-	$(INSTALL_DATA) -D libvolume_id.pc $(DESTDIR)$(usrlibdir)/pkgconfig/libvolume_id.pc
++	$(LIBTOOL) --mode=install $(INSTALL_LIB) libvolume_id.la $(DESTDIR)$(PREFIX)/lib
++	$(INSTALL_DATA) libvolume_id.h $(DESTDIR)$(PREFIX)/include
++	$(INSTALL_DATA) libvolume_id.pc $(DESTDIR)$(PREFIX)/lib/pkgconfig
+ .PHONY: install
+ 
+ uninstall:
