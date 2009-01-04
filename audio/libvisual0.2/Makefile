@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:55:57 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/04 22:32:04 shattered Exp $
 #
 
 DISTNAME=		libvisual-0.2.0
@@ -8,7 +8,7 @@ CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://libvisual.sourceforge.net/
+HOMEPAGE=		http://localhost.nl/~synap/libvisual-wiki/
 COMMENT=		Abstraction library between applications and audio visualisation plugins (0.2 branch)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
