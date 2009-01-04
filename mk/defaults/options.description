@@ -238,10 +238,12 @@ libxml2			Use the libxml2 library for XML support.
 liferea-firefox		Use Firefox to render HTML.
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-seamonkey	Use Seamonkey to render HTML.
+links			Use and enable support for the links browser.
 links-zlib		Enable zlib support for the links WWW browser.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
 lua			Enable Lua support.
+lynx			Use and enable support for the lynx browser.
 lzw			Enable LZW (De)compression support
 m68060-optimized	Optimize for m68060 (only).
 mad			Enable usage of the mad library to play MP3 files.
@@ -409,7 +411,7 @@ vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 viewvc-php		Use php to colorize .php and .inc files.
 vorbis			Enable Ogg Vorbis support.
-w3m			Use and enable support for the w3m browser
+w3m			Use and enable support for the w3m browser.
 w3m-image-gdk-pixbuf	Use gdk-pixbuf as imaging library for W3m.
 w3m-image-gtk2		Use GTK2 as imaging library for W3m.
 w3m-image-imlib		Use imlib as imaging library for W3m.
