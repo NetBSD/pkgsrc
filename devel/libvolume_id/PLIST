@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 13:48:23 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/04 23:10:06 dbj Exp $
 include/libvolume_id.h
-lib/libvolume_id.a
-lib/libvolume_id.so
-lib/libvolume_id.so.0
+lib/libvolume_id.la
 lib/pkgconfig/libvolume_id.pc
