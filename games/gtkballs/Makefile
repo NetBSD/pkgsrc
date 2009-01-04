@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/01/04 14:08:14 shattered Exp $
+# $NetBSD: Makefile,v 1.32 2009/01/04 22:25:57 shattered Exp $
 
 DISTNAME=	gtkballs-3.1.5
 PKGREVISION=	7
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 BUILD_DEFS+=		GAMEDATAMODE
 BUILD_DEFS+=		VARBASE
 
-PLIST_SUBST+=	VARBASE=${VARBASE:Q}
+PLIST_SUBST+=	VARBASE=${VARBASE}
 
 CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/gtkballs-scores \
 			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
