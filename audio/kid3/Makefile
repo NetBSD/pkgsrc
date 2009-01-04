@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2008/11/24 09:06:06 obache Exp $
+# $NetBSD: Makefile,v 1.14 2009/01/04 14:08:14 shattered Exp $
 #
 
 DISTNAME=		kid3-1.1
 CATEGORIES=		kde audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kid3/}
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://kid3.sourceforge.net/
 COMMENT=		KDE ID3 tagger
 

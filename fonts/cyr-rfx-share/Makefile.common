@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2008/04/07 16:54:26 joerg Exp $
+# $NetBSD: Makefile.common,v 1.12 2009/01/04 14:08:14 shattered Exp $
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
@@ -7,7 +7,7 @@ MASTER_SITES=	\
 	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/00index.en.html
 COMMENT=	Cyrillic X11 fonts in ${CYR_RFX_ENCODING} encoding
 DIST_SUBDIR=	cyr-rfx

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2009/01/04 14:08:14 shattered Exp $
 
 DISTNAME=	gtkballs-3.1.5
 PKGREVISION=	7
 CATEGORIES=	games
 MASTER_SITES=	http://gtkballs.antex.ru/dist/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://gtkballs.antex.ru/
 COMMENT=	GTK+ clone of "Color Lines"
 
