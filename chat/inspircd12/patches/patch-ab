@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+
+--- .Makefile.inc.orig	2008-02-24 21:12:51.000000000 +0000
++++ .Makefile.inc
+@@ -69,7 +69,6 @@ ircd:
+ install: all@EXTRA_DIR@
+ 	@-install -d -m $(INSTMODE) $(BASE)
+ 	@-install -d -m $(INSTMODE) $(LIBPATH)
+-	@-install -d -m $(INSTMODE) $(BINPATH)
+ 	@-install -d -m $(INSTMODE) $(CONPATH)
+ 	@-install -d -m $(INSTMODE) $(MODPATH)
+ 	-install -m $(INSTMODE) @STARTSCRIPT@ $(@DESTINATION@) 2>/dev/null
