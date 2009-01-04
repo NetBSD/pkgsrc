@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.43 2009/01/04 22:19:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.44 2009/01/04 23:16:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -54,3 +54,12 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Mail-Box to 2.086 [adrianp 2009-01-04]
 	Updated emulators/mednafen to 0.8.A [wiz 2009-01-04]
 	Updated graphics/comix to 4.0.2 [wiz 2009-01-04]
+	Updated devel/p5-BSD-Resource to 1.2902 [he 2009-01-04]
+	Updated devel/p5-Config-IniFiles to 2.45 [he 2009-01-04]
+	Updated devel/p5-Graph to 0.90 [he 2009-01-04]
+	Updated devel/p5-Module-Build to 0.31 [he 2009-01-04]
+	Updated devel/p5-Mouse to 0.14 [he 2009-01-04]
+	Updated devel/p5-OLE-Storage_Lite to 0.18 [he 2009-01-04]
+	Updated devel/p5-PAR-Dist to 0.42 [he 2009-01-04]
+	Updated devel/p5-Perl-Critic to 1.094.001 [he 2009-01-04]
+	Updated devel/p5-Test-WWW-Selenium to 1.17 [he 2009-01-04]
