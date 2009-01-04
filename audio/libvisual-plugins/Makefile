@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/10/08 09:14:48 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/04 22:32:04 shattered Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.4.0
@@ -7,7 +7,7 @@ CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://localhost.nl/~synap/libvisual/
+HOMEPAGE=		http://localhost.nl/~synap/libvisual-wiki/
 COMMENT=		Plugins for libvisual
 
 PKG_DESTDIR_SUPPORT=	user-destdir
