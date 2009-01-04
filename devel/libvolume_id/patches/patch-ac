@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.2 2008/11/23 16:07:16 hasso Exp $
+$NetBSD: patch-ac,v 1.3 2009/01/04 23:10:06 dbj Exp $
 
---- util.c.orig	2008-11-22 08:34:15.000000000 -0500
-+++ util.c
+--- util.c.orig	2007-12-26 16:56:15.000000000 -0800
++++ util.c	2008-12-28 17:46:24.000000000 -0800
 @@ -28,7 +28,7 @@
  #include "libvolume_id.h"
  #include "util.h"
  
 -#ifdef __FreeBSD__
-+#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__) || defined(__APPLE__)
  static size_t strnlen (const char *s, size_t maxlen)
  {
  	size_t i;
