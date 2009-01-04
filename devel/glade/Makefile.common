@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2008/04/30 13:38:14 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.6 2009/01/04 18:00:59 wiz Exp $
 
 DISTNAME=	glade-2.12.2
 CATEGORIES=	devel
@@ -23,5 +23,5 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gtk2/buildlink3.mk"

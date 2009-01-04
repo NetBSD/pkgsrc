@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2008/10/25 10:20:06 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2009/01/04 18:01:00 wiz Exp $
 #
 
 DISTNAME=		gnome-utils-2.24.1
@@ -62,7 +62,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

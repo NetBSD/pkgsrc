@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.94 2008/06/22 15:22:44 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.95 2009/01/04 18:00:59 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1590,7 +1590,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     <orderedlist>
       <listitem>
 	<para>Include
-	<filename>../../textproc/scrollkeeper/omf.mk</filename>
+	<filename>../../textproc/rarian/omf.mk</filename>
 	instead of its <filename>buildlink3.mk</filename> file.  This
 	takes care of rebuilding the scrollkeeper database at
 	installation and deinstallation time, and disallows any access

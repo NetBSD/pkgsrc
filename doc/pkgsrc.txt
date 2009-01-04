@@ -7506,7 +7506,7 @@ take some extra steps to make sure they get registered in the database:
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
 
- 1. Include ../../textproc/scrollkeeper/omf.mk instead of its buildlink3.mk
+ 1. Include ../../textproc/rarian/omf.mk instead of its buildlink3.mk
     file. This takes care of rebuilding the scrollkeeper database at
     installation and deinstallation time, and disallows any access to it
     directly from the package.

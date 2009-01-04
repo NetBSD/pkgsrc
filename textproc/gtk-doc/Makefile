@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/11/18 11:55:58 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2009/01/04 18:01:01 wiz Exp $
 #
 
 DISTNAME=	gtk-doc-1.11
@@ -26,6 +26,6 @@ USE_TOOLS+=		gmake perl:run pkg-config
 .include "../../lang/python/application.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"

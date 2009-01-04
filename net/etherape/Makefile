@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2009/01/04 18:01:00 wiz Exp $
 
 DISTNAME=	etherape-0.9.7
 PKGREVISION=	5
@@ -31,5 +31,5 @@ post-install:
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../mk/bsd.pkg.mk"

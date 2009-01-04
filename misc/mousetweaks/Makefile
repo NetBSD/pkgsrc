@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/03 09:26:00 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/04 18:01:00 wiz Exp $
 #
 
 DISTNAME=	mousetweaks-2.24.2
@@ -26,7 +26,7 @@ BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.4.0
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
