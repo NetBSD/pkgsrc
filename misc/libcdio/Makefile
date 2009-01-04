@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2008/11/10 22:30:43 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/01/04 12:42:20 wiz Exp $
 
 DISTNAME=	libcdio-0.81
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 
@@ -26,14 +27,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
 CONFIGURE_ARGS+=	--enable-cpp-progs
 INFO_FILES=		# PLIST
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-# XXX we just replace the freebsd module so save patches
-pre-patch:
-	${CP} ${FILESDIR}/_cdio_netbsd.c ${WRKSRC}/lib/driver/FreeBSD/freebsd.c
-.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
