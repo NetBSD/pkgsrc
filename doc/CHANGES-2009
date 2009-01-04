@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.20 2009/01/04 00:45:11 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.21 2009/01/04 00:53:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -26,3 +26,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/p5-RadiusPerl version 0.13 [adrianp 2009-01-04]
 	Updated devel/bugzilla3 to 3.2 [adrianp 2009-01-04]
 	Added pkgtools/pkg_distinst version 0.01 [adrianp 2009-01-04]
+	Added chat/inspircd12 version 1.2.0b4 [adrianp 2009-01-04]
