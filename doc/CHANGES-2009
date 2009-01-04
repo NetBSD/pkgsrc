@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.26 2009/01/04 01:06:38 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.27 2009/01/04 01:12:55 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -32,3 +32,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/isc-dhcrelay4 to 4.1.0 [adrianp 2009-01-04]
 	Updated net/isc-dhclient4 to 4.1.0 [adrianp 2009-01-04]
 	Added chat/ctrlproxy version 3.0.8 [adrianp 2009-01-04]
+	Updated graphics/gimp-ufraw to 0.15 [gdt 2009-01-04]
