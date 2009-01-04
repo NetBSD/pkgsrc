@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/04 01:12:18 adrianp Exp $
+
+SHA1 (openvas-client-2.0.1.tar.gz) = 07ada2cb7538da072c27a3a1cf58f9c6152d5e64
+RMD160 (openvas-client-2.0.1.tar.gz) = aa966e1e9911b63e5fee48d947cda5f0b036dd0a
+Size (openvas-client-2.0.1.tar.gz) = 629551 bytes

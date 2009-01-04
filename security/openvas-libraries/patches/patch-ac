@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/04 01:08:52 adrianp Exp $
+
+--- libopenvas/pcap.c.orig	2008-12-16 13:03:21.000000000 +0000
++++ libopenvas/pcap.c
+@@ -16,6 +16,7 @@
+  * Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+  */
+ 
++#include <netinet/in.h>
+ #include <resolv.h>
+ #include <pcap.h>
+ #include <net/if.h>

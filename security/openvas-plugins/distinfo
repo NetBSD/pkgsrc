@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/04 01:10:17 adrianp Exp $
+
+SHA1 (openvas-plugins-1.0.5.tar.gz) = 1e71b3d00fb7ec160f2a73ea6fc7e8d69bbe2288
+RMD160 (openvas-plugins-1.0.5.tar.gz) = 711ea3f9db0fef2f6b1d8c5fb07c51c7d4d2218e
+Size (openvas-plugins-1.0.5.tar.gz) = 2727952 bytes

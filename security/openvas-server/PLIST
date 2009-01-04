@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 01:11:55 adrianp Exp $
+bin/openvas-mkcert-client
+bin/openvas-mkrand
+bin/openvasd-config
+include/openvas/config.h
+include/openvas/includes.h
+include/openvas/nessusicmp.h
+include/openvas/nessusip.h
+include/openvas/nessusraw.h
+include/openvas/nessustcp.h
+include/openvas/nessusudp.h
+include/openvas/threadcompat.h
+man/man1/openvas-mkcert-client.1
+man/man1/openvas-mkrand.1
+man/man1/openvasd-config.1
+man/man8/openvas-adduser.8
+man/man8/openvas-mkcert.8
+man/man8/openvas-rmuser.8
+man/man8/openvasd.8
+sbin/openvas-adduser
+sbin/openvas-mkcert
+sbin/openvas-rmuser
+sbin/openvasd
+share/examples/rc.d/openvasd
+@unexec ${RMDIR} %D/include/openvas 2>/dev/null || ${TRUE}
