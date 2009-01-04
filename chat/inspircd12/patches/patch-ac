@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+
+--- configure.orig	2008-08-26 14:47:49.000000000 +0100
++++ configure
+@@ -319,8 +319,8 @@ $config{EXTRA_DIR}	  = "";						# Is emp
+ if ($config{OSNAME} =~ /darwin/i)
+ {
+ 	$config{IS_DARWIN} = "YES";
+-	$config{STARTSCRIPT}	  = "org.inspircd.plist";		# start script for OSX.
+-	$config{DESTINATION}	  = "LAUNCHDPATH";				# Is OSX target.
++#	$config{STARTSCRIPT}	  = "org.inspircd.plist";		# start script for OSX.
++#	$config{DESTINATION}	  = "LAUNCHDPATH";				# Is OSX target.
+ 	$config{EXTRA_DIR}	    = " launchd_dir";				# Is OSX specific path.
+ }
+ $config{CC} 		    = "g++";						# C++ compiler
