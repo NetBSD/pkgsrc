@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.34 2009/01/04 09:32:00 seb Exp $
+$NetBSD: CHANGES-2009,v 1.35 2009/01/04 11:07:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -41,3 +41,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-NetAddr-IP to 4.022 [seb 2009-01-04]
 	Updated devel/p5-Class-MOP to 0.75 [seb 2009-01-04]
 	Updated devel/p5-Moose to 0.64 [seb 2009-01-04]
+	Updated databases/tokyocabinet to 1.3.27 [obache 2009-01-04]
+	Updated textproc/tokyodystopia to 0.9.9 [obache 2009-01-04]
+	Updated databases/tokyotyrant to 1.1.11 [obache 2009-01-04]
+	Updated databases/p5-tokyotyrant to 1.4 [obache 2009-01-04]
+	Updated databases/ruby-tokyotyrant to 1.2 [obache 2009-01-04]
