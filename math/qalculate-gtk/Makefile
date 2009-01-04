@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/12/20 18:47:00 reed Exp $
+# $NetBSD: Makefile,v 1.26 2009/01/04 18:01:00 wiz Exp $
 
 DISTNAME=	qalculate-gtk-0.9.6
 PKGREVISION=	1
@@ -25,5 +25,5 @@ pre-configure:
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 .include "../../mk/bsd.pkg.mk"

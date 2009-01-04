@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/09 14:23:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/04 18:00:59 wiz Exp $
 #
 
 DISTNAME=	diffuse-0.2.15
@@ -53,7 +53,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/diffuse
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../textproc/rarian/omf.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.10
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
