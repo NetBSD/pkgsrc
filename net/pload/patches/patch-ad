@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2009/01/04 20:03:21 shattered Exp $
+
+--- pload.h.orig	2000-02-01 07:11:24.000000000 +0000
++++ pload.h
+@@ -35,10 +35,17 @@ struct if_dat
+ #ifdef LINUXPROC
+ 	FILE *file;				/* /proc/net/dev	*/
+ #endif	
++#ifdef __NetBSD__
++	u_quad_t in_bytes;			/* total bytes in 	*/
++	u_quad_t in_bytes_old;			/* last total bytes in	*/
++	u_quad_t out_bytes;			/* total bytes out 	*/
++	u_quad_t out_bytes_old;			/* last total byts out	*/
++#else
+ 	unsigned long in_bytes;			/* total bytes in 	*/
+ 	unsigned long in_bytes_old;		/* last total bytes in	*/
+ 	unsigned long out_bytes;		/* total bytes out 	*/
+ 	unsigned long out_bytes_old;		/* last total byts out	*/
++#endif
+ 	struct timeval prev_time;		/* last time 		*/
+ 	struct timeval curr_time;		/* time now		*/
+ 	int history_size;			/* # pts to average over*/
