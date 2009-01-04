@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.23 2009/01/04 01:03:48 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.24 2009/01/04 01:04:02 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -29,3 +29,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added chat/inspircd12 version 1.2.0b4 [adrianp 2009-01-04]
 	Updated net/isc-dhcp4 to 4.1.0 [adrianp 2009-01-04]
 	Updated net/isc-dhcpd4 to 4.1.0 [adrianp 2009-01-04]
+	Updated net/isc-dhcrelay4 to 4.1.0 [adrianp 2009-01-04]
