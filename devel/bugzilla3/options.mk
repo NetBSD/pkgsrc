@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2007/09/21 19:32:54 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2009/01/04 00:38:11 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bugzilla
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=		mysql pgsql
+PKG_OPTIONS_GROUP.db=		mysql pgsql oracle
 
 PKG_SUPPORTED_OPTIONS=	bugzilla-notify bugzilla-graphicalreports
 PKG_SUPPORTED_OPTIONS+=	bugzilla-inboundemail bugzilla-movebugs
 PKG_SUPPORTED_OPTIONS+=	bugzilla-imagemagick bugzilla-patchviewer
 PKG_SUPPORTED_OPTIONS+=	bugzilla-descriptions bugzilla-xmlrpc
-PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql ldap
+PKG_SUPPORTED_OPTIONS+=	bugzilla-modperl radius
+PKG_SUPPORTED_OPTIONS+=	mysql pgsql oracle ldap
 PKG_SUGGESTED_OPTIONS=	mysql
 
 .include "../../mk/bsd.options.mk"
@@ -19,11 +19,14 @@ PKG_SUGGESTED_OPTIONS=	mysql
 ### Use mysql or postgresql backend
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-DEPENDS+=	p5-DBD-mysql>=2.9003:../../databases/p5-DBD-mysql
+DEPENDS+=	p5-DBD-mysql>=4.000:../../databases/p5-DBD-mysql
 DBDRIVER=	mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	p5-DBD-postgresql>=1.45:../../databases/p5-DBD-postgresql
 DBDRIVER=	pg
+.elif !empty(PKG_OPTIONS:Moracle)
+DEPENDS+=	p5-DBD-Oracle>=1.19:../../databases/p5-DBD-Oracle
+DBDRIVER=	oracle
 .endif
 
 ###
@@ -31,6 +34,13 @@ DBDRIVER=	pg
 ###
 .if !empty(PKG_OPTIONS:Mbugzilla-notify)
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
+.endif
+
+###
+### RADIUS authentication
+###
+.if !empty(PKG_OPTIONS:Mradius)
+DEPENDS+=	p5-RadiusPerl-[0-9]*:../../net/p5-RadiusPerl
 .endif
 
 ###
@@ -47,15 +57,15 @@ DEPENDS+=	p5-HTML-Parser>=3.40:../../www/p5-HTML-Parser
 .if !empty(PKG_OPTIONS:Mbugzilla-modperl)
 DEPENDS+=	p5-CGI>=3.11:../../www/p5-CGI
 DEPENDS+=	p5-Apache-DBI>=0.96:../../databases/p5-Apache-DBI
-
-.if ${PKG_APACHE} == "apache2"
-.include "../../www/ap2-perl/buildlink3.mk"
-.endif
-
-.if ${PKG_APACHE} == "apache13"
-.include "../../www/ap-perl/buildlink3.mk"
-.endif
-
+. if defined(PKG_APACHE)
+.  if !empty(PKG_APACHE:Mapache2)
+.   include "../../www/ap2-perl/buildlink3.mk"
+.  elif !empty(PKG_APACHE:Mapache22)
+.   include "../../www/ap2-perl/buildlink3.mk"
+.  elif !empty(PKG_APACHE:Mapache13)
+.   include "../../www/ap-perl/buildlink3.mk"
+.  endif
+. endif
 .endif
 
 ###

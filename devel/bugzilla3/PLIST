@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/17 09:24:38 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/04 00:38:11 adrianp Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -12,6 +12,7 @@ share/bugzilla/Bugzilla/Auth/Persist/Cookie.pm
 share/bugzilla/Bugzilla/Auth/Verify.pm
 share/bugzilla/Bugzilla/Auth/Verify/DB.pm
 share/bugzilla/Bugzilla/Auth/Verify/LDAP.pm
+share/bugzilla/Bugzilla/Auth/Verify/RADIUS.pm
 share/bugzilla/Bugzilla/Auth/Verify/Stack.pm
 share/bugzilla/Bugzilla/Bug.pm
 share/bugzilla/Bugzilla/BugMail.pm
@@ -30,19 +31,21 @@ share/bugzilla/Bugzilla/Config/Common.pm
 share/bugzilla/Bugzilla/Config/Core.pm
 share/bugzilla/Bugzilla/Config/DependencyGraph.pm
 share/bugzilla/Bugzilla/Config/GroupSecurity.pm
-share/bugzilla/Bugzilla/Config/L10n.pm
 share/bugzilla/Bugzilla/Config/LDAP.pm
 share/bugzilla/Bugzilla/Config/MTA.pm
 share/bugzilla/Bugzilla/Config/PatchViewer.pm
 share/bugzilla/Bugzilla/Config/Query.pm
+share/bugzilla/Bugzilla/Config/RADIUS.pm
 share/bugzilla/Bugzilla/Config/ShadowDB.pm
 share/bugzilla/Bugzilla/Config/UserMatch.pm
 share/bugzilla/Bugzilla/Constants.pm
 share/bugzilla/Bugzilla/DB.pm
 share/bugzilla/Bugzilla/DB/Mysql.pm
+share/bugzilla/Bugzilla/DB/Oracle.pm
 share/bugzilla/Bugzilla/DB/Pg.pm
 share/bugzilla/Bugzilla/DB/Schema.pm
 share/bugzilla/Bugzilla/DB/Schema/Mysql.pm
+share/bugzilla/Bugzilla/DB/Schema/Oracle.pm
 share/bugzilla/Bugzilla/DB/Schema/Pg.pm
 share/bugzilla/Bugzilla/Error.pm
 share/bugzilla/Bugzilla/Field.pm
@@ -51,10 +54,12 @@ share/bugzilla/Bugzilla/FlagType.pm
 share/bugzilla/Bugzilla/Group.pm
 share/bugzilla/Bugzilla/Hook.pm
 share/bugzilla/Bugzilla/Install.pm
+share/bugzilla/Bugzilla/Install/CPAN.pm
 share/bugzilla/Bugzilla/Install/DB.pm
 share/bugzilla/Bugzilla/Install/Filesystem.pm
 share/bugzilla/Bugzilla/Install/Localconfig.pm
 share/bugzilla/Bugzilla/Install/Requirements.pm
+share/bugzilla/Bugzilla/Install/Util.pm
 share/bugzilla/Bugzilla/Keyword.pm
 share/bugzilla/Bugzilla/Mailer.pm
 share/bugzilla/Bugzilla/Milestone.pm
@@ -64,7 +69,9 @@ share/bugzilla/Bugzilla/Search.pm
 share/bugzilla/Bugzilla/Search/Quicksearch.pm
 share/bugzilla/Bugzilla/Search/Saved.pm
 share/bugzilla/Bugzilla/Series.pm
+share/bugzilla/Bugzilla/Status.pm
 share/bugzilla/Bugzilla/Template.pm
+share/bugzilla/Bugzilla/Template/Parser.pm
 share/bugzilla/Bugzilla/Template/Plugin/Bugzilla.pm
 share/bugzilla/Bugzilla/Template/Plugin/Hook.pm
 share/bugzilla/Bugzilla/Template/Plugin/User.pm
@@ -72,6 +79,7 @@ share/bugzilla/Bugzilla/Token.pm
 share/bugzilla/Bugzilla/Update.pm
 share/bugzilla/Bugzilla/User.pm
 share/bugzilla/Bugzilla/User/Setting.pm
+share/bugzilla/Bugzilla/User/Setting/Lang.pm
 share/bugzilla/Bugzilla/User/Setting/Skin.pm
 share/bugzilla/Bugzilla/Util.pm
 share/bugzilla/Bugzilla/Version.pm
@@ -81,6 +89,7 @@ share/bugzilla/Bugzilla/WebService/Bugzilla.pm
 share/bugzilla/Bugzilla/WebService/Constants.pm
 share/bugzilla/Bugzilla/WebService/Product.pm
 share/bugzilla/Bugzilla/WebService/User.pm
+share/bugzilla/admin.cgi
 share/bugzilla/attachment.cgi
 share/bugzilla/buglist.cgi
 share/bugzilla/bugzilla.dtd
@@ -92,95 +101,128 @@ share/bugzilla/config.cgi
 share/bugzilla/createaccount.cgi
 share/bugzilla/describecomponents.cgi
 share/bugzilla/describekeywords.cgi
-share/bugzilla/docs/html/keywords.html
-share/bugzilla/docs/html/multiple-bz-dbs.html
-share/bugzilla/docs/html/sanitycheck.html
-share/bugzilla/docs/html/Bugzilla-Guide.html
-share/bugzilla/docs/html/about.html
-share/bugzilla/docs/html/administration.html
-share/bugzilla/docs/html/attachments.html
-share/bugzilla/docs/html/bug_page.html
-share/bugzilla/docs/html/bugreports.html
-share/bugzilla/docs/html/classifications.html
-share/bugzilla/docs/html/cmdline-bugmail.html
-share/bugzilla/docs/html/cmdline.html
-share/bugzilla/docs/html/components.html
-share/bugzilla/docs/html/configuration.html
-share/bugzilla/docs/html/conventions.html
-share/bugzilla/docs/html/copyright.html
-share/bugzilla/docs/html/credits.html
-share/bugzilla/docs/html/cust-change-permissions.html
-share/bugzilla/docs/html/cust-hooks.html
-share/bugzilla/docs/html/cust-skins.html
-share/bugzilla/docs/html/cust-templates.html
-share/bugzilla/docs/html/custom-fields.html
-share/bugzilla/docs/html/customization.html
-share/bugzilla/docs/html/disclaimer.html
-share/bugzilla/docs/html/edit-values.html
-share/bugzilla/docs/html/extraconfig.html
-share/bugzilla/docs/html/faq.html
-share/bugzilla/docs/html/flags-overview.html
-share/bugzilla/docs/html/flags.html
-share/bugzilla/docs/html/general-advice.html
-share/bugzilla/docs/html/gfdl-0.html
-share/bugzilla/docs/html/gfdl-1.html
-share/bugzilla/docs/html/gfdl-10.html
-share/bugzilla/docs/html/gfdl-2.html
-share/bugzilla/docs/html/gfdl-3.html
-share/bugzilla/docs/html/gfdl-4.html
-share/bugzilla/docs/html/gfdl-5.html
-share/bugzilla/docs/html/gfdl-6.html
-share/bugzilla/docs/html/gfdl-7.html
-share/bugzilla/docs/html/gfdl-8.html
-share/bugzilla/docs/html/gfdl-9.html
-share/bugzilla/docs/html/gfdl-howto.html
-share/bugzilla/docs/html/gfdl.html
-share/bugzilla/docs/html/glossary.html
-share/bugzilla/docs/html/groups.html
-share/bugzilla/docs/html/hintsandtips.html
-share/bugzilla/docs/html/index.html
-share/bugzilla/docs/html/install-perlmodules-manual.html
-share/bugzilla/docs/html/installation.html
-share/bugzilla/docs/html/installing-bugzilla.html
-share/bugzilla/docs/html/integration.html
-share/bugzilla/docs/html/lifecycle.html
-share/bugzilla/docs/html/milestones.html
-share/bugzilla/docs/html/modules-manual-download.html
-share/bugzilla/docs/html/modules-manual-instructions.html
-share/bugzilla/docs/html/modules-manual-optional.html
-share/bugzilla/docs/html/myaccount.html
-share/bugzilla/docs/html/newversions.html
-share/bugzilla/docs/html/nonroot.html
-share/bugzilla/docs/html/os-specific.html
-share/bugzilla/docs/html/parameters.html
-share/bugzilla/docs/html/paranoid-security.html
-share/bugzilla/docs/html/patches.html
-share/bugzilla/docs/html/products.html
-share/bugzilla/docs/html/query.html
-share/bugzilla/docs/html/quips.html
-share/bugzilla/docs/html/reporting.html
-share/bugzilla/docs/html/security-bugzilla.html
-share/bugzilla/docs/html/security-mysql.html
-share/bugzilla/docs/html/security-os.html
-share/bugzilla/docs/html/security-webserver.html
-share/bugzilla/docs/html/security.html
-share/bugzilla/docs/html/timetracking.html
-share/bugzilla/docs/html/trbl-dbdsponge.html
-share/bugzilla/docs/html/trbl-index.html
-share/bugzilla/docs/html/trbl-passwd-encryption.html
-share/bugzilla/docs/html/trbl-perlmodule.html
-share/bugzilla/docs/html/trbl-relogin-everyone.html
-share/bugzilla/docs/html/trbl-relogin-some.html
-share/bugzilla/docs/html/trbl-testserver.html
-share/bugzilla/docs/html/troubleshooting.html
-share/bugzilla/docs/html/upgrade.html
-share/bugzilla/docs/html/useradmin.html
-share/bugzilla/docs/html/userpreferences.html
-share/bugzilla/docs/html/using-intro.html
-share/bugzilla/docs/html/using.html
-share/bugzilla/docs/html/versions.html
-share/bugzilla/docs/html/voting.html
-share/bugzilla/docs/html/whining.html
+share/bugzilla/docs/en/html/Bugzilla-Guide.html
+share/bugzilla/docs/en/html/about.html
+share/bugzilla/docs/en/html/administration.html
+share/bugzilla/docs/en/html/api/Bugzilla.html
+share/bugzilla/docs/en/html/api/Bugzilla/Attachment.html
+share/bugzilla/docs/en/html/api/Bugzilla/Auth.html
+share/bugzilla/docs/en/html/api/Bugzilla/CGI.html
+share/bugzilla/docs/en/html/api/Bugzilla/Classification.html
+share/bugzilla/docs/en/html/api/Bugzilla/Component.html
+share/bugzilla/docs/en/html/api/Bugzilla/Config.html
+share/bugzilla/docs/en/html/api/Bugzilla/DB.html
+share/bugzilla/docs/en/html/api/Bugzilla/Error.html
+share/bugzilla/docs/en/html/api/Bugzilla/Field.html
+share/bugzilla/docs/en/html/api/Bugzilla/Flag.html
+share/bugzilla/docs/en/html/api/Bugzilla/FlagType.html
+share/bugzilla/docs/en/html/api/Bugzilla/Group.html
+share/bugzilla/docs/en/html/api/Bugzilla/Hook.html
+share/bugzilla/docs/en/html/api/Bugzilla/Install.html
+share/bugzilla/docs/en/html/api/Bugzilla/Keyword.html
+share/bugzilla/docs/en/html/api/Bugzilla/Milestone.html
+share/bugzilla/docs/en/html/api/Bugzilla/Object.html
+share/bugzilla/docs/en/html/api/Bugzilla/Product.html
+share/bugzilla/docs/en/html/api/Bugzilla/Status.html
+share/bugzilla/docs/en/html/api/Bugzilla/Template.html
+share/bugzilla/docs/en/html/api/Bugzilla/Token.html
+share/bugzilla/docs/en/html/api/Bugzilla/Update.html
+share/bugzilla/docs/en/html/api/Bugzilla/User.html
+share/bugzilla/docs/en/html/api/Bugzilla/Util.html
+share/bugzilla/docs/en/html/api/Bugzilla/Version.html
+share/bugzilla/docs/en/html/api/Bugzilla/WebService.html
+share/bugzilla/docs/en/html/api/checksetup.html
+share/bugzilla/docs/en/html/api/email_in.html
+share/bugzilla/docs/en/html/api/importxml.html
+share/bugzilla/docs/en/html/api/index.html
+share/bugzilla/docs/en/html/api/install-module.html
+share/bugzilla/docs/en/html/api/sanitycheck.html
+share/bugzilla/docs/en/html/attachments.html
+share/bugzilla/docs/en/html/bug_page.html
+share/bugzilla/docs/en/html/bug_status_workflow.html
+share/bugzilla/docs/en/html/bugreports.html
+share/bugzilla/docs/en/html/classifications.html
+share/bugzilla/docs/en/html/cmdline-bugmail.html
+share/bugzilla/docs/en/html/cmdline.html
+share/bugzilla/docs/en/html/components.html
+share/bugzilla/docs/en/html/configuration.html
+share/bugzilla/docs/en/html/conventions.html
+share/bugzilla/docs/en/html/copyright.html
+share/bugzilla/docs/en/html/credits.html
+share/bugzilla/docs/en/html/cust-change-permissions.html
+share/bugzilla/docs/en/html/cust-hooks.html
+share/bugzilla/docs/en/html/cust-skins.html
+share/bugzilla/docs/en/html/cust-templates.html
+share/bugzilla/docs/en/html/custom-fields.html
+share/bugzilla/docs/en/html/customization.html
+share/bugzilla/docs/en/html/disclaimer.html
+share/bugzilla/docs/en/html/edit-values.html
+share/bugzilla/docs/en/html/extraconfig.html
+share/bugzilla/docs/en/html/flags-overview.html
+share/bugzilla/docs/en/html/flags.html
+share/bugzilla/docs/en/html/general-advice.html
+share/bugzilla/docs/en/html/gfdl-0.html
+share/bugzilla/docs/en/html/gfdl-1.html
+share/bugzilla/docs/en/html/gfdl-10.html
+share/bugzilla/docs/en/html/gfdl-2.html
+share/bugzilla/docs/en/html/gfdl-3.html
+share/bugzilla/docs/en/html/gfdl-4.html
+share/bugzilla/docs/en/html/gfdl-5.html
+share/bugzilla/docs/en/html/gfdl-6.html
+share/bugzilla/docs/en/html/gfdl-7.html
+share/bugzilla/docs/en/html/gfdl-8.html
+share/bugzilla/docs/en/html/gfdl-9.html
+share/bugzilla/docs/en/html/gfdl-howto.html
+share/bugzilla/docs/en/html/gfdl.html
+share/bugzilla/docs/en/html/glossary.html
+share/bugzilla/docs/en/html/groups.html
+share/bugzilla/docs/en/html/hintsandtips.html
+share/bugzilla/docs/en/html/index.html
+share/bugzilla/docs/en/html/install-perlmodules-manual.html
+share/bugzilla/docs/en/html/installation.html
+share/bugzilla/docs/en/html/installing-bugzilla.html
+share/bugzilla/docs/en/html/integration.html
+share/bugzilla/docs/en/html/keywords.html
+share/bugzilla/docs/en/html/lifecycle.html
+share/bugzilla/docs/en/html/milestones.html
+share/bugzilla/docs/en/html/modules-manual-download.html
+share/bugzilla/docs/en/html/modules-manual-instructions.html
+share/bugzilla/docs/en/html/modules-manual-optional.html
+share/bugzilla/docs/en/html/multiple-bz-dbs.html
+share/bugzilla/docs/en/html/myaccount.html
+share/bugzilla/docs/en/html/newversions.html
+share/bugzilla/docs/en/html/nonroot.html
+share/bugzilla/docs/en/html/os-specific.html
+share/bugzilla/docs/en/html/parameters.html
+share/bugzilla/docs/en/html/paranoid-security.html
+share/bugzilla/docs/en/html/patches.html
+share/bugzilla/docs/en/html/products.html
+share/bugzilla/docs/en/html/query.html
+share/bugzilla/docs/en/html/quips.html
+share/bugzilla/docs/en/html/reporting.html
+share/bugzilla/docs/en/html/sanitycheck.html
+share/bugzilla/docs/en/html/security-bugzilla.html
+share/bugzilla/docs/en/html/security-mysql.html
+share/bugzilla/docs/en/html/security-os.html
+share/bugzilla/docs/en/html/security-webserver.html
+share/bugzilla/docs/en/html/security.html
+share/bugzilla/docs/en/html/timetracking.html
+share/bugzilla/docs/en/html/trbl-dbdsponge.html
+share/bugzilla/docs/en/html/trbl-index.html
+share/bugzilla/docs/en/html/trbl-passwd-encryption.html
+share/bugzilla/docs/en/html/trbl-perlmodule.html
+share/bugzilla/docs/en/html/trbl-relogin-everyone.html
+share/bugzilla/docs/en/html/trbl-relogin-some.html
+share/bugzilla/docs/en/html/trbl-testserver.html
+share/bugzilla/docs/en/html/troubleshooting.html
+share/bugzilla/docs/en/html/upgrade.html
+share/bugzilla/docs/en/html/useradmin.html
+share/bugzilla/docs/en/html/userpreferences.html
+share/bugzilla/docs/en/html/using-intro.html
+share/bugzilla/docs/en/html/using.html
+share/bugzilla/docs/en/html/versions.html
+share/bugzilla/docs/en/html/voting.html
+share/bugzilla/docs/en/html/whining.html
 share/bugzilla/duplicates.cgi
 share/bugzilla/duplicates.xul
 share/bugzilla/editclassifications.cgi
@@ -197,22 +239,27 @@ share/bugzilla/editusers.cgi
 share/bugzilla/editvalues.cgi
 share/bugzilla/editversions.cgi
 share/bugzilla/editwhines.cgi
+share/bugzilla/editworkflow.cgi
 share/bugzilla/email_in.pl
 share/bugzilla/enter_bug.cgi
 share/bugzilla/images/padlock.png
 share/bugzilla/importxml.pl
 share/bugzilla/index.cgi
+share/bugzilla/install-module.pl
 share/bugzilla/js/TUI.js
 share/bugzilla/js/attachment.js
 share/bugzilla/js/duplicates.js
 share/bugzilla/js/expanding-tree.js
+share/bugzilla/js/field.js
+share/bugzilla/js/help.js
+share/bugzilla/js/params.js
 share/bugzilla/js/productform.js
+share/bugzilla/js/util.js
 share/bugzilla/long_list.cgi
 share/bugzilla/mod_perl.pl
 share/bugzilla/page.cgi
 share/bugzilla/post_bug.cgi
 share/bugzilla/process_bug.cgi
-share/bugzilla/productmenu.js
 share/bugzilla/query.cgi
 share/bugzilla/quips.cgi
 share/bugzilla/relogin.cgi
@@ -222,6 +269,7 @@ share/bugzilla/request.cgi
 share/bugzilla/robots.txt
 share/bugzilla/runtests.pl
 share/bugzilla/sanitycheck.cgi
+share/bugzilla/sanitycheck.pl
 share/bugzilla/search_plugin.cgi
 share/bugzilla/show_activity.cgi
 share/bugzilla/show_bug.cgi
@@ -229,6 +277,8 @@ share/bugzilla/showattachment.cgi
 share/bugzilla/showdependencygraph.cgi
 share/bugzilla/showdependencytree.cgi
 share/bugzilla/sidebar.cgi
+share/bugzilla/skins/contrib/Dusk/buglist.css
+share/bugzilla/skins/contrib/Dusk/global.css
 share/bugzilla/skins/standard/IE-fixes.css
 share/bugzilla/skins/standard/admin.css
 share/bugzilla/skins/standard/buglist.css
@@ -242,15 +292,20 @@ share/bugzilla/skins/standard/duplicates.css
 share/bugzilla/skins/standard/editusers.css
 share/bugzilla/skins/standard/global.css
 share/bugzilla/skins/standard/global/body-back.gif
+share/bugzilla/skins/standard/global/calendar.png
 share/bugzilla/skins/standard/global/header.png
+share/bugzilla/skins/standard/help.css
 share/bugzilla/skins/standard/index.css
 share/bugzilla/skins/standard/index/front.png
 share/bugzilla/skins/standard/panel.css
 share/bugzilla/skins/standard/params.css
 share/bugzilla/skins/standard/release-notes.css
+share/bugzilla/skins/standard/show_bug.css
 share/bugzilla/skins/standard/show_multiple.css
 share/bugzilla/skins/standard/summarize-time.css
 share/bugzilla/skins/standard/voting.css
+share/bugzilla/skins/standard/yui/calendar.css
+share/bugzilla/skins/standard/yui/sprite.png
 share/bugzilla/summarize_time.cgi
 share/bugzilla/template/en/default/account/auth/login-small.html.tmpl
 share/bugzilla/template/en/default/account/auth/login.html.tmpl
@@ -271,62 +326,47 @@ share/bugzilla/template/en/default/account/prefs/prefs.html.tmpl
 share/bugzilla/template/en/default/account/prefs/saved-searches.html.tmpl
 share/bugzilla/template/en/default/account/prefs/settings.html.tmpl
 share/bugzilla/template/en/default/account/profile-activity.html.tmpl
+share/bugzilla/template/en/default/admin/admin.html.tmpl
 share/bugzilla/template/en/default/admin/classifications/add.html.tmpl
 share/bugzilla/template/en/default/admin/classifications/del.html.tmpl
-share/bugzilla/template/en/default/admin/classifications/delete.html.tmpl
 share/bugzilla/template/en/default/admin/classifications/edit.html.tmpl
-share/bugzilla/template/en/default/admin/classifications/new.html.tmpl
 share/bugzilla/template/en/default/admin/classifications/reclassify.html.tmpl
 share/bugzilla/template/en/default/admin/classifications/select.html.tmpl
-share/bugzilla/template/en/default/admin/classifications/update.html.tmpl
 share/bugzilla/template/en/default/admin/components/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/components/create.html.tmpl
-share/bugzilla/template/en/default/admin/components/created.html.tmpl
-share/bugzilla/template/en/default/admin/components/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/components/edit.html.tmpl
 share/bugzilla/template/en/default/admin/components/footer.html.tmpl
 share/bugzilla/template/en/default/admin/components/list.html.tmpl
 share/bugzilla/template/en/default/admin/components/select-product.html.tmpl
-share/bugzilla/template/en/default/admin/components/updated.html.tmpl
 share/bugzilla/template/en/default/admin/confirm-action.html.tmpl
+share/bugzilla/template/en/default/admin/custom_fields/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/custom_fields/create.html.tmpl
 share/bugzilla/template/en/default/admin/custom_fields/edit.html.tmpl
 share/bugzilla/template/en/default/admin/custom_fields/list.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/create.html.tmpl
-share/bugzilla/template/en/default/admin/fieldvalues/created.html.tmpl
-share/bugzilla/template/en/default/admin/fieldvalues/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/edit.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/footer.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/list.html.tmpl
 share/bugzilla/template/en/default/admin/fieldvalues/select-field.html.tmpl
-share/bugzilla/template/en/default/admin/fieldvalues/updated.html.tmpl
 share/bugzilla/template/en/default/admin/flag-type/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/flag-type/edit.html.tmpl
 share/bugzilla/template/en/default/admin/flag-type/list.html.tmpl
-share/bugzilla/template/en/default/admin/groups/change.html.tmpl
+share/bugzilla/template/en/default/admin/groups/confirm-remove.html.tmpl
 share/bugzilla/template/en/default/admin/groups/create.html.tmpl
-share/bugzilla/template/en/default/admin/groups/created.html.tmpl
 share/bugzilla/template/en/default/admin/groups/delete.html.tmpl
-share/bugzilla/template/en/default/admin/groups/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/groups/edit.html.tmpl
 share/bugzilla/template/en/default/admin/groups/list.html.tmpl
-share/bugzilla/template/en/default/admin/groups/remove.html.tmpl
 share/bugzilla/template/en/default/admin/keywords/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/keywords/create.html.tmpl
-share/bugzilla/template/en/default/admin/keywords/created.html.tmpl
 share/bugzilla/template/en/default/admin/keywords/edit.html.tmpl
 share/bugzilla/template/en/default/admin/keywords/list.html.tmpl
-share/bugzilla/template/en/default/admin/keywords/rebuild-cache.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/create.html.tmpl
-share/bugzilla/template/en/default/admin/milestones/created.html.tmpl
-share/bugzilla/template/en/default/admin/milestones/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/edit.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/footer.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/list.html.tmpl
 share/bugzilla/template/en/default/admin/milestones/select-product.html.tmpl
-share/bugzilla/template/en/default/admin/milestones/updated.html.tmpl
 share/bugzilla/template/en/default/admin/params/admin.html.tmpl
 share/bugzilla/template/en/default/admin/params/attachment.html.tmpl
 share/bugzilla/template/en/default/admin/params/auth.html.tmpl
@@ -339,17 +379,15 @@ share/bugzilla/template/en/default/admin/params/dependencygraph.html.tmpl
 share/bugzilla/template/en/default/admin/params/editparams.html.tmpl
 share/bugzilla/template/en/default/admin/params/groupsecurity.html.tmpl
 share/bugzilla/template/en/default/admin/params/index.html.tmpl
-share/bugzilla/template/en/default/admin/params/l10n.html.tmpl
 share/bugzilla/template/en/default/admin/params/ldap.html.tmpl
 share/bugzilla/template/en/default/admin/params/mta.html.tmpl
 share/bugzilla/template/en/default/admin/params/patchviewer.html.tmpl
 share/bugzilla/template/en/default/admin/params/query.html.tmpl
+share/bugzilla/template/en/default/admin/params/radius.html.tmpl
 share/bugzilla/template/en/default/admin/params/shadowdb.html.tmpl
 share/bugzilla/template/en/default/admin/params/usermatch.html.tmpl
 share/bugzilla/template/en/default/admin/products/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/products/create.html.tmpl
-share/bugzilla/template/en/default/admin/products/created.html.tmpl
-share/bugzilla/template/en/default/admin/products/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/products/edit-common.html.tmpl
 share/bugzilla/template/en/default/admin/products/edit.html.tmpl
 share/bugzilla/template/en/default/admin/products/footer.html.tmpl
@@ -359,8 +397,9 @@ share/bugzilla/template/en/default/admin/products/groupcontrol/updated.html.tmpl
 share/bugzilla/template/en/default/admin/products/list-classifications.html.tmpl
 share/bugzilla/template/en/default/admin/products/list.html.tmpl
 share/bugzilla/template/en/default/admin/products/updated.html.tmpl
+share/bugzilla/template/en/default/admin/sanitycheck/list.html.tmpl
+share/bugzilla/template/en/default/admin/sanitycheck/messages.html.tmpl
 share/bugzilla/template/en/default/admin/settings/edit.html.tmpl
-share/bugzilla/template/en/default/admin/settings/updated.html.tmpl
 share/bugzilla/template/en/default/admin/sudo.html.tmpl
 share/bugzilla/template/en/default/admin/table.html.tmpl
 share/bugzilla/template/en/default/admin/users/confirm-delete.html.tmpl
@@ -368,17 +407,18 @@ share/bugzilla/template/en/default/admin/users/create.html.tmpl
 share/bugzilla/template/en/default/admin/users/edit.html.tmpl
 share/bugzilla/template/en/default/admin/users/list.html.tmpl
 share/bugzilla/template/en/default/admin/users/listselectvars.html.tmpl
+share/bugzilla/template/en/default/admin/users/responsibilities.html.tmpl
 share/bugzilla/template/en/default/admin/users/search.html.tmpl
 share/bugzilla/template/en/default/admin/users/userdata.html.tmpl
 share/bugzilla/template/en/default/admin/versions/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/admin/versions/create.html.tmpl
-share/bugzilla/template/en/default/admin/versions/created.html.tmpl
-share/bugzilla/template/en/default/admin/versions/deleted.html.tmpl
 share/bugzilla/template/en/default/admin/versions/edit.html.tmpl
 share/bugzilla/template/en/default/admin/versions/footer.html.tmpl
 share/bugzilla/template/en/default/admin/versions/list.html.tmpl
 share/bugzilla/template/en/default/admin/versions/select-product.html.tmpl
-share/bugzilla/template/en/default/admin/versions/updated.html.tmpl
+share/bugzilla/template/en/default/admin/workflow/comment.html.tmpl
+share/bugzilla/template/en/default/admin/workflow/edit.html.tmpl
+share/bugzilla/template/en/default/attachment/cancel-create-dupe.html.tmpl
 share/bugzilla/template/en/default/attachment/choose.html.tmpl
 share/bugzilla/template/en/default/attachment/confirm-delete.html.tmpl
 share/bugzilla/template/en/default/attachment/content-types.html.tmpl
@@ -391,6 +431,7 @@ share/bugzilla/template/en/default/attachment/diff-footer.html.tmpl
 share/bugzilla/template/en/default/attachment/diff-header.html.tmpl
 share/bugzilla/template/en/default/attachment/edit.html.tmpl
 share/bugzilla/template/en/default/attachment/list.html.tmpl
+share/bugzilla/template/en/default/attachment/midair.html.tmpl
 share/bugzilla/template/en/default/attachment/show-multiple.html.tmpl
 share/bugzilla/template/en/default/attachment/updated.html.tmpl
 share/bugzilla/template/en/default/bug/activity/show.html.tmpl
@@ -428,6 +469,7 @@ share/bugzilla/template/en/default/bug/votes/list-for-user.html.tmpl
 share/bugzilla/template/en/default/config.js.tmpl
 share/bugzilla/template/en/default/config.rdf.tmpl
 share/bugzilla/template/en/default/email/newchangedmail.txt.tmpl
+share/bugzilla/template/en/default/email/sanitycheck.txt.tmpl
 share/bugzilla/template/en/default/email/sudo.txt.tmpl
 share/bugzilla/template/en/default/email/votes-removed.txt.tmpl
 share/bugzilla/template/en/default/email/whine.txt.tmpl
@@ -443,7 +485,6 @@ share/bugzilla/template/en/default/global/docslinks.html.tmpl
 share/bugzilla/template/en/default/global/field-descs.none.tmpl
 share/bugzilla/template/en/default/global/footer.html.tmpl
 share/bugzilla/template/en/default/global/header.html.tmpl
-share/bugzilla/template/en/default/global/help-header.html.tmpl
 share/bugzilla/template/en/default/global/help.html.tmpl
 share/bugzilla/template/en/default/global/hidden-fields.html.tmpl
 share/bugzilla/template/en/default/global/initialize.none.tmpl
@@ -520,6 +561,7 @@ share/bugzilla/template/en/default/search/search-report-select.html.tmpl
 share/bugzilla/template/en/default/search/search-report-table.html.tmpl
 share/bugzilla/template/en/default/search/search-specific.html.tmpl
 share/bugzilla/template/en/default/search/tabs.html.tmpl
+share/bugzilla/template/en/default/setup/strings.txt.pl
 share/bugzilla/template/en/default/sidebar.xul.tmpl
 share/bugzilla/template/en/default/welcome-admin.html.tmpl
 share/bugzilla/template/en/default/whine/mail.html.tmpl
@@ -536,18 +578,20 @@ share/bugzilla/whine.pl
 share/bugzilla/whineatnews.pl
 share/bugzilla/xml.cgi
 share/bugzilla/xmlrpc.cgi
-share/doc/bugzilla/Bugzilla-Guide.txt
 share/doc/bugzilla/QUICKSTART
 share/doc/bugzilla/README
 share/doc/bugzilla/UPGRADING
 share/doc/bugzilla/UPGRADING-pre-2.8
-share/doc/bugzilla/rel_notes.txt
+share/doc/bugzilla/en/Bugzilla-Guide.txt
+share/doc/bugzilla/en/rel_notes.txt
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
 @dirrm share/examples/bugzilla
+@dirrm share/doc/bugzilla/en
 @dirrm share/doc/bugzilla
 @dirrm share/bugzilla/template/en/extension
 @dirrm share/bugzilla/template/en/default/whine
+@dirrm share/bugzilla/template/en/default/setup
 @dirrm share/bugzilla/template/en/default/search
 @dirrm share/bugzilla/template/en/default/request
 @dirrm share/bugzilla/template/en/default/reports
@@ -562,9 +606,11 @@ share/examples/bugzilla/localconfig
 @dirrm share/bugzilla/template/en/default/bug/activity
 @dirrm share/bugzilla/template/en/default/bug
 @dirrm share/bugzilla/template/en/default/attachment
+@dirrm share/bugzilla/template/en/default/admin/workflow
 @dirrm share/bugzilla/template/en/default/admin/versions
 @dirrm share/bugzilla/template/en/default/admin/users
 @dirrm share/bugzilla/template/en/default/admin/settings
+@dirrm share/bugzilla/template/en/default/admin/sanitycheck
 @dirrm share/bugzilla/template/en/default/admin/products/groupcontrol
 @dirrm share/bugzilla/template/en/default/admin/products
 @dirrm share/bugzilla/template/en/default/admin/params
@@ -585,14 +631,20 @@ share/examples/bugzilla/localconfig
 @dirrm share/bugzilla/template/en/default
 @dirrm share/bugzilla/template/en
 @dirrm share/bugzilla/template
+@dirrm share/bugzilla/skins/standard/yui
 @dirrm share/bugzilla/skins/standard/index
 @dirrm share/bugzilla/skins/standard/global
 @dirrm share/bugzilla/skins/standard/dependency-tree
 @dirrm share/bugzilla/skins/standard
+@dirrm share/bugzilla/skins/contrib/Dusk
+@dirrm share/bugzilla/skins/contrib
 @dirrm share/bugzilla/skins
 @dirrm share/bugzilla/js
 @dirrm share/bugzilla/images
-@dirrm share/bugzilla/docs/html
+@dirrm share/bugzilla/docs/en/html/api/Bugzilla
+@dirrm share/bugzilla/docs/en/html/api
+@dirrm share/bugzilla/docs/en/html
+@dirrm share/bugzilla/docs/en
 @dirrm share/bugzilla/docs
 @dirrm share/bugzilla/Bugzilla/WebService
 @dirrm share/bugzilla/Bugzilla/User/Setting
