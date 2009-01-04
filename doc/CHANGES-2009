@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.35 2009/01/04 11:07:43 obache Exp $
+$NetBSD: CHANGES-2009,v 1.36 2009/01/04 11:30:16 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -18,6 +18,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/fontforge to 20081224 [adam 2009-01-03]
 	Updated emulators/wine to 1.1.12 [adam 2009-01-03]
 	Added print/kpathsea version 3.5.7 [minskim 2009-01-03]
+	Updated net/aria2 to 0.16.2nb1 [dholland 2009-01-03]
 	Updated net/bind95 to 9.5.1 [adrianp 2009-01-04]
 	Updated net/bind9 to 9.4.3 [adrianp 2009-01-04]
 	Added net/bind96 version 9.6.0 [adrianp 2009-01-04]
