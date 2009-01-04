@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.17 2009/01/04 00:30:45 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.18 2009/01/04 00:33:07 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -23,3 +23,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/bind96 version 9.6.0 [adrianp 2009-01-04]
 	Removed net/bind8 [adrianp 2009-01-04]
 	Added textproc/p5-Data-HexDump version 0.02 [adrianp 2009-01-04]
+	Added net/p5-RadiusPerl version 0.13 [adrianp 2009-01-04]
