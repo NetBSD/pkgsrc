@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.13 2009/01/04 00:12:07 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.14 2009/01/04 00:16:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -19,3 +19,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/wine to 1.1.12 [adam 2009-01-03]
 	Added print/kpathsea version 3.5.7 [minskim 2009-01-03]
 	Updated net/bind95 to 9.5.1 [adrianp 2009-01-04]
+	Updated net/bind9 to 9.4.3 [adrianp 2009-01-04]
