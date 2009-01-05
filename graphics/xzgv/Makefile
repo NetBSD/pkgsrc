@@ -1,24 +1,19 @@
-# $NetBSD: Makefile,v 1.36 2008/03/04 15:39:11 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2009/01/05 16:08:20 shattered Exp $
+#
 
-DISTNAME=	xzgv-0.8
-PKGNAME=	xzgv-0.8.0.1
-PKGREVISION=	3
+DISTNAME=	xzgv-0.9
 CATEGORIES=	graphics
-MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/apps/graphics/viewers/X/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xzgv/}
 
-PATCHFILES=	xzgv-0.8-integer-overflow-fix.diff
-PATCH_SITES=	http://rus.members.beeb.net/
-PATCH_DIST_STRIP=	-p1
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://rus.members.beeb.net/xzgv.html
+MAINTAINER=	shattered@NetBSD.org
+HOMEPAGE=	http://sourceforge.net/projects/xzgv
 COMMENT=	Image viewer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 USE_TOOLS+=		gmake makeinfo
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
 do-install:
@@ -31,5 +26,5 @@ do-install:
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
