@@ -1,0 +1,166 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/05 12:31:06 jmcneill Exp $
+bin/kiwi-i18n
+bin/kiwi-ui-test
+${PYSITELIB}/kiwi/__init__.pyc
+${PYSITELIB}/kiwi/__init__.pyo
+${PYSITELIB}/kiwi/__installed__.py
+${PYSITELIB}/kiwi/__installed__.pyc
+${PYSITELIB}/kiwi/__installed__.pyo
+${PYSITELIB}/kiwi/__version__.pyc
+${PYSITELIB}/kiwi/__version__.pyo
+${PYSITELIB}/kiwi/accessor.pyc
+${PYSITELIB}/kiwi/accessor.pyo
+${PYSITELIB}/kiwi/argcheck.pyc
+${PYSITELIB}/kiwi/argcheck.pyo
+${PYSITELIB}/kiwi/component.pyc
+${PYSITELIB}/kiwi/component.pyo
+${PYSITELIB}/kiwi/controllers.pyc
+${PYSITELIB}/kiwi/controllers.pyo
+${PYSITELIB}/kiwi/currency.pyc
+${PYSITELIB}/kiwi/currency.pyo
+${PYSITELIB}/kiwi/datatypes.pyc
+${PYSITELIB}/kiwi/datatypes.pyo
+${PYSITELIB}/kiwi/db/__init__.pyc
+${PYSITELIB}/kiwi/db/__init__.pyo
+${PYSITELIB}/kiwi/db/query.pyc
+${PYSITELIB}/kiwi/db/query.pyo
+${PYSITELIB}/kiwi/db/sqlalch.pyc
+${PYSITELIB}/kiwi/db/sqlalch.pyo
+${PYSITELIB}/kiwi/db/sqlobj.pyc
+${PYSITELIB}/kiwi/db/sqlobj.pyo
+${PYSITELIB}/kiwi/db/stormintegration.pyc
+${PYSITELIB}/kiwi/db/stormintegration.pyo
+${PYSITELIB}/kiwi/decorators.pyc
+${PYSITELIB}/kiwi/decorators.pyo
+${PYSITELIB}/kiwi/desktopparser.pyc
+${PYSITELIB}/kiwi/desktopparser.pyo
+${PYSITELIB}/kiwi/dist.pyc
+${PYSITELIB}/kiwi/dist.pyo
+${PYSITELIB}/kiwi/enums.pyc
+${PYSITELIB}/kiwi/enums.pyo
+${PYSITELIB}/kiwi/environ.pyc
+${PYSITELIB}/kiwi/environ.pyo
+${PYSITELIB}/kiwi/i18n/__init__.pyc
+${PYSITELIB}/kiwi/i18n/__init__.pyo
+${PYSITELIB}/kiwi/i18n/i18n.pyc
+${PYSITELIB}/kiwi/i18n/i18n.pyo
+${PYSITELIB}/kiwi/i18n/msgfmt.pyc
+${PYSITELIB}/kiwi/i18n/msgfmt.pyo
+${PYSITELIB}/kiwi/interfaces.pyc
+${PYSITELIB}/kiwi/interfaces.pyo
+${PYSITELIB}/kiwi/log.pyc
+${PYSITELIB}/kiwi/log.pyo
+${PYSITELIB}/kiwi/model.pyc
+${PYSITELIB}/kiwi/model.pyo
+${PYSITELIB}/kiwi/python.pyc
+${PYSITELIB}/kiwi/python.pyo
+${PYSITELIB}/kiwi/tasklet.pyc
+${PYSITELIB}/kiwi/tasklet.pyo
+${PYSITELIB}/kiwi/ui/__init__.pyc
+${PYSITELIB}/kiwi/ui/__init__.pyo
+${PYSITELIB}/kiwi/ui/comboboxentry.pyc
+${PYSITELIB}/kiwi/ui/comboboxentry.pyo
+${PYSITELIB}/kiwi/ui/comboentry.pyc
+${PYSITELIB}/kiwi/ui/comboentry.pyo
+${PYSITELIB}/kiwi/ui/dateentry.pyc
+${PYSITELIB}/kiwi/ui/dateentry.pyo
+${PYSITELIB}/kiwi/ui/delegates.pyc
+${PYSITELIB}/kiwi/ui/delegates.pyo
+${PYSITELIB}/kiwi/ui/dialogs.pyc
+${PYSITELIB}/kiwi/ui/dialogs.pyo
+${PYSITELIB}/kiwi/ui/entry.pyc
+${PYSITELIB}/kiwi/ui/entry.pyo
+${PYSITELIB}/kiwi/ui/entrycompletion.pyc
+${PYSITELIB}/kiwi/ui/entrycompletion.pyo
+${PYSITELIB}/kiwi/ui/gadgets.pyc
+${PYSITELIB}/kiwi/ui/gadgets.pyo
+${PYSITELIB}/kiwi/ui/gaxmlloader.pyc
+${PYSITELIB}/kiwi/ui/gaxmlloader.pyo
+${PYSITELIB}/kiwi/ui/gazpacholoader.pyc
+${PYSITELIB}/kiwi/ui/gazpacholoader.pyo
+${PYSITELIB}/kiwi/ui/hyperlink.pyc
+${PYSITELIB}/kiwi/ui/hyperlink.pyo
+${PYSITELIB}/kiwi/ui/icon.pyc
+${PYSITELIB}/kiwi/ui/icon.pyo
+${PYSITELIB}/kiwi/ui/libgladeloader.pyc
+${PYSITELIB}/kiwi/ui/libgladeloader.pyo
+${PYSITELIB}/kiwi/ui/listdialog.pyc
+${PYSITELIB}/kiwi/ui/listdialog.pyo
+${PYSITELIB}/kiwi/ui/objectlist.pyc
+${PYSITELIB}/kiwi/ui/objectlist.pyo
+${PYSITELIB}/kiwi/ui/proxy.pyc
+${PYSITELIB}/kiwi/ui/proxy.pyo
+${PYSITELIB}/kiwi/ui/proxywidget.pyc
+${PYSITELIB}/kiwi/ui/proxywidget.pyo
+${PYSITELIB}/kiwi/ui/search.pyc
+${PYSITELIB}/kiwi/ui/search.pyo
+${PYSITELIB}/kiwi/ui/selectablebox.pyc
+${PYSITELIB}/kiwi/ui/selectablebox.pyo
+${PYSITELIB}/kiwi/ui/test/__init__.pyc
+${PYSITELIB}/kiwi/ui/test/__init__.pyo
+${PYSITELIB}/kiwi/ui/test/common.pyc
+${PYSITELIB}/kiwi/ui/test/common.pyo
+${PYSITELIB}/kiwi/ui/test/main.pyc
+${PYSITELIB}/kiwi/ui/test/main.pyo
+${PYSITELIB}/kiwi/ui/test/recorder.pyc
+${PYSITELIB}/kiwi/ui/test/recorder.pyo
+${PYSITELIB}/kiwi/ui/test/runner.pyc
+${PYSITELIB}/kiwi/ui/test/runner.pyo
+${PYSITELIB}/kiwi/ui/tooltip.pyc
+${PYSITELIB}/kiwi/ui/tooltip.pyo
+${PYSITELIB}/kiwi/ui/views.pyc
+${PYSITELIB}/kiwi/ui/views.pyo
+${PYSITELIB}/kiwi/ui/widgets/__init__.pyc
+${PYSITELIB}/kiwi/ui/widgets/__init__.pyo
+${PYSITELIB}/kiwi/ui/widgets/button.pyc
+${PYSITELIB}/kiwi/ui/widgets/button.pyo
+${PYSITELIB}/kiwi/ui/widgets/checkbutton.pyc
+${PYSITELIB}/kiwi/ui/widgets/checkbutton.pyo
+${PYSITELIB}/kiwi/ui/widgets/colorbutton.pyc
+${PYSITELIB}/kiwi/ui/widgets/colorbutton.pyo
+${PYSITELIB}/kiwi/ui/widgets/combo.pyc
+${PYSITELIB}/kiwi/ui/widgets/combo.pyo
+${PYSITELIB}/kiwi/ui/widgets/combobox.pyc
+${PYSITELIB}/kiwi/ui/widgets/combobox.pyo
+${PYSITELIB}/kiwi/ui/widgets/contextmenu.pyc
+${PYSITELIB}/kiwi/ui/widgets/contextmenu.pyo
+${PYSITELIB}/kiwi/ui/widgets/entry.pyc
+${PYSITELIB}/kiwi/ui/widgets/entry.pyo
+${PYSITELIB}/kiwi/ui/widgets/filechooser.pyc
+${PYSITELIB}/kiwi/ui/widgets/filechooser.pyo
+${PYSITELIB}/kiwi/ui/widgets/fontbutton.pyc
+${PYSITELIB}/kiwi/ui/widgets/fontbutton.pyo
+${PYSITELIB}/kiwi/ui/widgets/label.pyc
+${PYSITELIB}/kiwi/ui/widgets/label.pyo
+${PYSITELIB}/kiwi/ui/widgets/list.pyc
+${PYSITELIB}/kiwi/ui/widgets/list.pyo
+${PYSITELIB}/kiwi/ui/widgets/radiobutton.pyc
+${PYSITELIB}/kiwi/ui/widgets/radiobutton.pyo
+${PYSITELIB}/kiwi/ui/widgets/scale.pyc
+${PYSITELIB}/kiwi/ui/widgets/scale.pyo
+${PYSITELIB}/kiwi/ui/widgets/spinbutton.pyc
+${PYSITELIB}/kiwi/ui/widgets/spinbutton.pyo
+${PYSITELIB}/kiwi/ui/widgets/textview.pyc
+${PYSITELIB}/kiwi/ui/widgets/textview.pyo
+${PYSITELIB}/kiwi/ui/wizard.pyc
+${PYSITELIB}/kiwi/ui/wizard.pyo
+${PYSITELIB}/kiwi/utils.pyc
+${PYSITELIB}/kiwi/utils.pyo
+@dirrm share/kiwi/pixmaps
+@dirrm share/kiwi/glade
+@dirrm share/kiwi
+@dirrm share/gazpacho/resources/kiwiwidgets
+@dirrm share/gazpacho/resources
+@dirrm share/gazpacho/catalogs
+@dirrm share/gazpacho
+@dirrm share/doc/kiwi/howto
+@dirrm share/doc/kiwi/api
+@dirrm share/doc/kiwi
+@dirrm ${PYSITELIB}/kiwi/ui/widgets
+@dirrm ${PYSITELIB}/kiwi/ui/test
+@dirrm ${PYSITELIB}/kiwi/ui
+@dirrm ${PYSITELIB}/kiwi/i18n
+@dirrm ${PYSITELIB}/kiwi/db
+@dirrm ${PYSITELIB}/kiwi
+@dirrm ${PYSITELIB}/gazpacho/widgets
+@dirrm ${PYSITELIB}/gazpacho
