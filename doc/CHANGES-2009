@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.51 2009/01/05 13:20:30 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.52 2009/01/05 13:21:34 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -71,3 +71,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/mediatomb to 0.11.0nb4 [jmcneill 2009-01-05]
 	Added x11/py-kiwi version 1.9.22 [jmcneill 2009-01-05]
 	Updated x11/xf86-video-intel to 2.4.3nb1 [hasso 2009-01-05]
+	Added news/lottanzb version 0.4.0 [jmcneill 2009-01-05]
