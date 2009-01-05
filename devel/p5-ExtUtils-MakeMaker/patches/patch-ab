@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2008/07/26 19:11:54 he Exp $
+$NetBSD: patch-ab,v 1.3 2009/01/05 12:15:17 he Exp $
+
+Changes:
+ o More general adaptation for BSDs
+ o Install scripts in DESTINSTALLSITESCRIPT instead of DESTINSTALLSCRIPT
 
 --- lib/ExtUtils/MM_Unix.pm.orig	2008-02-29 01:06:28.000000000 +0100
 +++ lib/ExtUtils/MM_Unix.pm

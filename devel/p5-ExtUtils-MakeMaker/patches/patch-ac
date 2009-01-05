@@ -1,19 +1,13 @@
-$NetBSD: patch-ac,v 1.3 2008/12/30 15:03:03 he Exp $
+$NetBSD: patch-ac,v 1.4 2009/01/05 12:15:17 he Exp $
 
 This corresponds to http://rt.cpan.org/Public/Bug/Display.html?id=41060
 Can't call method "isa" without a package or object reference.
 
+Also correct a grammar error (duplication).
+
 --- lib/ExtUtils/MakeMaker.pm.orig	2008-10-20 20:18:35.000000000 +0200
 +++ lib/ExtUtils/MakeMaker.pm
-@@ -9,6 +9,7 @@ require Exporter;
- use ExtUtils::MakeMaker::Config;
- use Carp ();
- use File::Path;
-+use UNIVERSAL::isa;
- 
- our $Verbose = 0;       # exported
- our @Parent;            # needs to be localized
-@@ -122,7 +123,7 @@ sub _verify_att {
+@@ -122,7 +122,7 @@ sub _verify_att {
  
          my @sigs   = ref $sig ? @$sig : $sig;
          my $given  = ref $val;
@@ -22,7 +16,7 @@ Can't call method "isa" without a package or object reference.
              my $takes = join " or ", map { _format_att($_) } @sigs;
  
              my $has = _format_att($given);
-@@ -1708,7 +1709,7 @@ If set to 'none', no man pages will be i
+@@ -1708,7 +1708,7 @@ If set to 'none', no man pages will be i
  =item INSTALLVENDORSCRIPT
  
  Used by 'make install' which copies files from INST_SCRIPT to this
