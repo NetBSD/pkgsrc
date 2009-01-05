@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/12/19 22:35:41 markd Exp $
+$NetBSD: patch-aa,v 1.5 2009/01/05 06:50:23 epg Exp $
 
 --- setupext.py.orig	2008-05-30 10:47:10.000000000 +1200
 +++ setupext.py
@@ -26,8 +26,8 @@ $NetBSD: patch-aa,v 1.4 2008/12/19 22:35:41 markd Exp $
 -    libdirs = filter(os.path.exists,
 -                     [os.path.join(p, 'lib')     for p in basedir[sys.platform] ]+
 -                     [os.path.join(p, 'lib64')     for p in basedir[sys.platform] ] )
-+    incdirs = os.path.join(os.environ['LOCALBASE'], 'include')
-+    libdirs = os.path.join(os.environ['LOCALBASE'], 'lib')
++    incdirs = [os.path.join(os.environ['LOCALBASE'], 'include')]
++    libdirs = [os.path.join(os.environ['LOCALBASE'], 'lib')]
  
      module.include_dirs.extend(incdirs)
      module.include_dirs.append('.')
