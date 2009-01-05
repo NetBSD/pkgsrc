@@ -1,0 +1,259 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/05 13:20:21 jmcneill Exp $
+bin/lottanzb
+${PYSITELIB}/lottanzb/__init__.py
+${PYSITELIB}/lottanzb/__init__.pyc
+${PYSITELIB}/lottanzb/__init__.pyo
+${PYSITELIB}/lottanzb/__installed__.py
+${PYSITELIB}/lottanzb/__installed__.pyc
+${PYSITELIB}/lottanzb/__installed__.pyo
+${PYSITELIB}/lottanzb/backend.py
+${PYSITELIB}/lottanzb/backend.pyc
+${PYSITELIB}/lottanzb/backend.pyo
+${PYSITELIB}/lottanzb/config.py
+${PYSITELIB}/lottanzb/config.pyc
+${PYSITELIB}/lottanzb/config.pyo
+${PYSITELIB}/lottanzb/core.py
+${PYSITELIB}/lottanzb/core.pyc
+${PYSITELIB}/lottanzb/core.pyo
+${PYSITELIB}/lottanzb/gui.py
+${PYSITELIB}/lottanzb/gui.pyc
+${PYSITELIB}/lottanzb/gui.pyo
+${PYSITELIB}/lottanzb/hellaconfig.py
+${PYSITELIB}/lottanzb/hellaconfig.pyc
+${PYSITELIB}/lottanzb/hellaconfig.pyo
+${PYSITELIB}/lottanzb/hellalog/__init__.py
+${PYSITELIB}/lottanzb/hellalog/__init__.pyc
+${PYSITELIB}/lottanzb/hellalog/__init__.pyo
+${PYSITELIB}/lottanzb/hellalog/core.py
+${PYSITELIB}/lottanzb/hellalog/core.pyc
+${PYSITELIB}/lottanzb/hellalog/core.pyo
+${PYSITELIB}/lottanzb/hellalog/daemon.py
+${PYSITELIB}/lottanzb/hellalog/daemon.pyc
+${PYSITELIB}/lottanzb/hellalog/daemon.pyo
+${PYSITELIB}/lottanzb/hellalog/newzbindownloader.py
+${PYSITELIB}/lottanzb/hellalog/newzbindownloader.pyc
+${PYSITELIB}/lottanzb/hellalog/newzbindownloader.pyo
+${PYSITELIB}/lottanzb/hellalog/nzbdownloader.py
+${PYSITELIB}/lottanzb/hellalog/nzbdownloader.pyc
+${PYSITELIB}/lottanzb/hellalog/nzbdownloader.pyo
+${PYSITELIB}/lottanzb/hellalog/nzbleecher.py
+${PYSITELIB}/lottanzb/hellalog/nzbleecher.pyc
+${PYSITELIB}/lottanzb/hellalog/nzbleecher.pyo
+${PYSITELIB}/lottanzb/hellalog/nzbqueue.py
+${PYSITELIB}/lottanzb/hellalog/nzbqueue.pyc
+${PYSITELIB}/lottanzb/hellalog/nzbqueue.pyo
+${PYSITELIB}/lottanzb/hellalog/postprocessor.py
+${PYSITELIB}/lottanzb/hellalog/postprocessor.pyc
+${PYSITELIB}/lottanzb/hellalog/postprocessor.pyo
+${PYSITELIB}/lottanzb/hellalog/postprocessorutil.py
+${PYSITELIB}/lottanzb/hellalog/postprocessorutil.pyc
+${PYSITELIB}/lottanzb/hellalog/postprocessorutil.pyo
+${PYSITELIB}/lottanzb/hellalog/smartpar.py
+${PYSITELIB}/lottanzb/hellalog/smartpar.pyc
+${PYSITELIB}/lottanzb/hellalog/smartpar.pyo
+${PYSITELIB}/lottanzb/hellalog/util.py
+${PYSITELIB}/lottanzb/hellalog/util.pyc
+${PYSITELIB}/lottanzb/hellalog/util.pyo
+${PYSITELIB}/lottanzb/log.py
+${PYSITELIB}/lottanzb/log.pyc
+${PYSITELIB}/lottanzb/log.pyo
+${PYSITELIB}/lottanzb/modes/__init__.py
+${PYSITELIB}/lottanzb/modes/__init__.pyc
+${PYSITELIB}/lottanzb/modes/__init__.pyo
+${PYSITELIB}/lottanzb/modes/base.py
+${PYSITELIB}/lottanzb/modes/base.pyc
+${PYSITELIB}/lottanzb/modes/base.pyo
+${PYSITELIB}/lottanzb/modes/frontend.py
+${PYSITELIB}/lottanzb/modes/frontend.pyc
+${PYSITELIB}/lottanzb/modes/frontend.pyo
+${PYSITELIB}/lottanzb/modes/local_frontend.py
+${PYSITELIB}/lottanzb/modes/local_frontend.pyc
+${PYSITELIB}/lottanzb/modes/local_frontend.pyo
+${PYSITELIB}/lottanzb/modes/remote_frontend.py
+${PYSITELIB}/lottanzb/modes/remote_frontend.pyc
+${PYSITELIB}/lottanzb/modes/remote_frontend.pyo
+${PYSITELIB}/lottanzb/modes/standalone.py
+${PYSITELIB}/lottanzb/modes/standalone.pyc
+${PYSITELIB}/lottanzb/modes/standalone.pyo
+${PYSITELIB}/lottanzb/modes/ui.py
+${PYSITELIB}/lottanzb/modes/ui.pyc
+${PYSITELIB}/lottanzb/modes/ui.pyo
+${PYSITELIB}/lottanzb/newzbin.py
+${PYSITELIB}/lottanzb/newzbin.pyc
+${PYSITELIB}/lottanzb/newzbin.pyo
+${PYSITELIB}/lottanzb/plugins.py
+${PYSITELIB}/lottanzb/plugins.pyc
+${PYSITELIB}/lottanzb/plugins.pyo
+${PYSITELIB}/lottanzb/postprocessor.py
+${PYSITELIB}/lottanzb/postprocessor.pyc
+${PYSITELIB}/lottanzb/postprocessor.pyo
+${PYSITELIB}/lottanzb/prefsgui.py
+${PYSITELIB}/lottanzb/prefsgui.pyc
+${PYSITELIB}/lottanzb/prefsgui.pyo
+${PYSITELIB}/lottanzb/util.py
+${PYSITELIB}/lottanzb/util.pyc
+${PYSITELIB}/lottanzb/util.pyo
+share/doc/lottanzb/CHANGELOG
+share/doc/lottanzb/LICENSE
+share/gnome/help/lottanzb/C/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/C/figures/DragDropQueue.png
+share/gnome/help/lottanzb/C/figures/FileAddMenu.png
+share/gnome/help/lottanzb/C/figures/MainWindow.png
+share/gnome/help/lottanzb/C/figures/Newzbin.png
+share/gnome/help/lottanzb/C/figures/Paused.png
+share/gnome/help/lottanzb/C/figures/Preferences.png
+share/gnome/help/lottanzb/C/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/C/figures/PreferencesServer.png
+share/gnome/help/lottanzb/C/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/C/figures/Processing.png
+share/gnome/help/lottanzb/C/figures/UsageLocal.png
+share/gnome/help/lottanzb/C/figures/UsageRemote.png
+share/gnome/help/lottanzb/C/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/C/legal.xml
+share/gnome/help/lottanzb/C/lottanzb.xml
+share/gnome/help/lottanzb/da/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/da/figures/DragDropQueue.png
+share/gnome/help/lottanzb/da/figures/FileAddMenu.png
+share/gnome/help/lottanzb/da/figures/MainWindow.png
+share/gnome/help/lottanzb/da/figures/Newzbin.png
+share/gnome/help/lottanzb/da/figures/Paused.png
+share/gnome/help/lottanzb/da/figures/Preferences.png
+share/gnome/help/lottanzb/da/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/da/figures/PreferencesServer.png
+share/gnome/help/lottanzb/da/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/da/figures/Processing.png
+share/gnome/help/lottanzb/da/figures/UsageLocal.png
+share/gnome/help/lottanzb/da/figures/UsageRemote.png
+share/gnome/help/lottanzb/da/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/da/legal.xml
+share/gnome/help/lottanzb/da/lottanzb.xml
+share/gnome/help/lottanzb/de/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/de/figures/DragDropQueue.png
+share/gnome/help/lottanzb/de/figures/FileAddMenu.png
+share/gnome/help/lottanzb/de/figures/MainWindow.png
+share/gnome/help/lottanzb/de/figures/Newzbin.png
+share/gnome/help/lottanzb/de/figures/Paused.png
+share/gnome/help/lottanzb/de/figures/Preferences.png
+share/gnome/help/lottanzb/de/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/de/figures/PreferencesServer.png
+share/gnome/help/lottanzb/de/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/de/figures/Processing.png
+share/gnome/help/lottanzb/de/figures/UsageLocal.png
+share/gnome/help/lottanzb/de/figures/UsageRemote.png
+share/gnome/help/lottanzb/de/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/de/legal.xml
+share/gnome/help/lottanzb/de/lottanzb.xml
+share/gnome/help/lottanzb/en_GB/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/en_GB/figures/DragDropQueue.png
+share/gnome/help/lottanzb/en_GB/figures/FileAddMenu.png
+share/gnome/help/lottanzb/en_GB/figures/MainWindow.png
+share/gnome/help/lottanzb/en_GB/figures/Newzbin.png
+share/gnome/help/lottanzb/en_GB/figures/Paused.png
+share/gnome/help/lottanzb/en_GB/figures/Preferences.png
+share/gnome/help/lottanzb/en_GB/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/en_GB/figures/PreferencesServer.png
+share/gnome/help/lottanzb/en_GB/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/en_GB/figures/Processing.png
+share/gnome/help/lottanzb/en_GB/figures/UsageLocal.png
+share/gnome/help/lottanzb/en_GB/figures/UsageRemote.png
+share/gnome/help/lottanzb/en_GB/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/en_GB/legal.xml
+share/gnome/help/lottanzb/en_GB/lottanzb.xml
+share/gnome/help/lottanzb/es/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/es/figures/DragDropQueue.png
+share/gnome/help/lottanzb/es/figures/FileAddMenu.png
+share/gnome/help/lottanzb/es/figures/MainWindow.png
+share/gnome/help/lottanzb/es/figures/Newzbin.png
+share/gnome/help/lottanzb/es/figures/Paused.png
+share/gnome/help/lottanzb/es/figures/Preferences.png
+share/gnome/help/lottanzb/es/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/es/figures/PreferencesServer.png
+share/gnome/help/lottanzb/es/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/es/figures/Processing.png
+share/gnome/help/lottanzb/es/figures/UsageLocal.png
+share/gnome/help/lottanzb/es/figures/UsageRemote.png
+share/gnome/help/lottanzb/es/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/es/legal.xml
+share/gnome/help/lottanzb/es/lottanzb.xml
+share/gnome/help/lottanzb/fr/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/fr/figures/DragDropQueue.png
+share/gnome/help/lottanzb/fr/figures/FileAddMenu.png
+share/gnome/help/lottanzb/fr/figures/MainWindow.png
+share/gnome/help/lottanzb/fr/figures/Newzbin.png
+share/gnome/help/lottanzb/fr/figures/Paused.png
+share/gnome/help/lottanzb/fr/figures/Preferences.png
+share/gnome/help/lottanzb/fr/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/fr/figures/PreferencesServer.png
+share/gnome/help/lottanzb/fr/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/fr/figures/Processing.png
+share/gnome/help/lottanzb/fr/figures/UsageLocal.png
+share/gnome/help/lottanzb/fr/figures/UsageRemote.png
+share/gnome/help/lottanzb/fr/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/fr/legal.xml
+share/gnome/help/lottanzb/fr/lottanzb.xml
+share/gnome/help/lottanzb/nl/figures/DownloadingMultiple.png
+share/gnome/help/lottanzb/nl/figures/DragDropQueue.png
+share/gnome/help/lottanzb/nl/figures/FileAddMenu.png
+share/gnome/help/lottanzb/nl/figures/MainWindow.png
+share/gnome/help/lottanzb/nl/figures/Newzbin.png
+share/gnome/help/lottanzb/nl/figures/Paused.png
+share/gnome/help/lottanzb/nl/figures/Preferences.png
+share/gnome/help/lottanzb/nl/figures/PreferencesNewzbin.png
+share/gnome/help/lottanzb/nl/figures/PreferencesServer.png
+share/gnome/help/lottanzb/nl/figures/PreferencesServerEdit.png
+share/gnome/help/lottanzb/nl/figures/Processing.png
+share/gnome/help/lottanzb/nl/figures/UsageLocal.png
+share/gnome/help/lottanzb/nl/figures/UsageRemote.png
+share/gnome/help/lottanzb/nl/figures/UsageStandAlone.png
+share/gnome/help/lottanzb/nl/legal.xml
+share/gnome/help/lottanzb/nl/lottanzb.xml
+share/lottanzb/glade/about_dialog.glade
+share/lottanzb/glade/add_file_dialog.glade
+share/lottanzb/glade/add_newzbin_dialog.glade
+share/lottanzb/glade/local_frontend_config_view.glade
+share/lottanzb/glade/log_window.glade
+share/lottanzb/glade/logo.png
+share/lottanzb/glade/lottanzb.glade
+share/lottanzb/glade/main_window.glade
+share/lottanzb/glade/mode_selection_dialog.glade
+share/lottanzb/glade/prefs_tab_categories.glade
+share/lottanzb/glade/prefs_tab_general.glade
+share/lottanzb/glade/prefs_tab_newzbin.glade
+share/lottanzb/glade/prefs_tab_servers.glade
+share/lottanzb/glade/prefs_window.glade
+share/lottanzb/glade/remote_frontend_config_view.glade
+share/lottanzb/glade/server_dialog.glade
+share/lottanzb/glade/small_lock.svg
+share/lottanzb/glade/standalone_config_view.glade
+share/omf/lottanzb/lottanzb-C.omf
+share/omf/lottanzb/lottanzb-da.omf
+share/omf/lottanzb/lottanzb-de.omf
+share/omf/lottanzb/lottanzb-en_GB.omf
+share/omf/lottanzb/lottanzb-es.omf
+share/omf/lottanzb/lottanzb-fr.omf
+share/omf/lottanzb/lottanzb-nl.omf
+@dirrm share/omf/lottanzb
+@comment in rarian: @dirrm share/omf
+@dirrm share/lottanzb/glade
+@dirrm share/lottanzb
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/lottanzb/nl/figures
+@dirrm share/gnome/help/lottanzb/nl
+@dirrm share/gnome/help/lottanzb/fr/figures
+@dirrm share/gnome/help/lottanzb/fr
+@dirrm share/gnome/help/lottanzb/es/figures
+@dirrm share/gnome/help/lottanzb/es
+@dirrm share/gnome/help/lottanzb/en_GB/figures
+@dirrm share/gnome/help/lottanzb/en_GB
+@dirrm share/gnome/help/lottanzb/de/figures
+@dirrm share/gnome/help/lottanzb/de
+@dirrm share/gnome/help/lottanzb/da/figures
+@dirrm share/gnome/help/lottanzb/da
+@dirrm share/gnome/help/lottanzb/C/figures
+@dirrm share/gnome/help/lottanzb/C
+@dirrm share/gnome/help/lottanzb
+@dirrm share/doc/lottanzb
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/lottanzb/modes
+@dirrm ${PYSITELIB}/lottanzb/hellalog
+@dirrm ${PYSITELIB}/lottanzb
