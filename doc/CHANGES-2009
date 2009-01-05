@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.53 2009/01/05 15:34:17 he Exp $
+$NetBSD: CHANGES-2009,v 1.54 2009/01/05 16:10:16 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -79,3 +79,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added mail/p5-Email-Sender version 0.001 [he 2009-01-05]
 	Updated mail/p5-Mail-IMAPClient to 3.12 [he 2009-01-05]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.42 [he 2009-01-05]
+	Updated graphics/xzgv to 0.9 [shattered 2009-01-05]

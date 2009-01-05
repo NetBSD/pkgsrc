@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7779 2009/01/05 09:58:56 taca Exp $
+$NetBSD: TODO,v 1.7780 2009/01/05 16:10:16 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1438,7 +1438,6 @@ Suggested package updates
 	o xview-3.2.1.4.21.8
 	o xwininfo-1.0.4
 	o xwpe-1.5.30a
-	o xzgv-0.9 [pkg/38566]
 	o xzip-182
 	o yabause-0.9.8.1
 	o yacas-1.2.0
