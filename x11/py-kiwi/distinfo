@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/05 12:31:06 jmcneill Exp $
+
+SHA1 (kiwi-1.9.22.tar.gz) = adf9283b20cd25e7e800a905cda477cf8d71688a
+RMD160 (kiwi-1.9.22.tar.gz) = e50d40270195725af30e0cbb6888267084372986
+Size (kiwi-1.9.22.tar.gz) = 1188562 bytes
