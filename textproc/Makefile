@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.453 2009/01/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.454 2009/01/05 09:41:16 he Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -325,6 +325,7 @@ SUBDIR+=	p5-iCal-Parser
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-mecab
 SUBDIR+=	p5-native-hyperestraier
+SUBDIR+=	p5-podlators
 SUBDIR+=	par
 SUBDIR+=	pear-Console_Table
 SUBDIR+=	pear-File_Find
