@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2008/12/15 23:05:14 adrianp Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2009/01/05 10:56:43 tron Exp $
 
 DISTNAME=	horde-3.3.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -29,6 +30,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.3:../../archivers/php-zlib
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Console_Table-[0-9]*:../../textproc/pear-Console_Table
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-File_Find-[0-9]*:../../textproc/pear-File_Find
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-HTTP_Request-[0-9]*:../../www/pear-HTTP_Request
 
 USE_TOOLS+=	pax
 
