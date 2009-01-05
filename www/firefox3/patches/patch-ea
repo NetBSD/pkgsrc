@@ -1,8 +1,30 @@
-$NetBSD: patch-ea,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+$NetBSD: patch-ea,v 1.2 2009/01/05 09:58:36 martin Exp $
 
 --- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
 +++ toolkit/components/history/src/nsGlobalHistory.cpp
-@@ -1132,6 +1132,9 @@ nsGlobalHistory::SetPageTitle(nsIURI *aU
+@@ -322,7 +322,9 @@ matchAgeInDaysCallback(nsIMdbRow *row, v
+   if (err != 0) return PR_FALSE;
+   
+   PRTime rowDate;
+-  PR_sscanf((const char*)yarn.mYarn_Buf, "%lld", &rowDate);
++  long long ld;
++  PR_sscanf((const char*)yarn.mYarn_Buf, "%lld", &ld);
++  rowDate = ld;
+ 
+   PRInt32 days = GetAgeInDays(matchSearchTerm->now, rowDate);
+   
+@@ -1067,7 +1069,9 @@ nsGlobalHistory::GetRowValue(nsIMdbRow *
+   if (!yarn.mYarn_Fill || !yarn.mYarn_Buf)
+     return NS_OK;
+ 
+-  PR_sscanf((const char*)yarn.mYarn_Buf, "%lld", aResult);
++  long long ld;
++  PR_sscanf((const char*)yarn.mYarn_Buf, "%lld", &ld);
++  *aResult = ld;
+   
+   return NS_OK;
+ }
+@@ -1153,6 +1157,9 @@ nsGlobalHistory::SetPageTitle(nsIURI *aU
    rv = aURI->GetSpec(URISpec);
    NS_ENSURE_SUCCESS(rv, rv);
  
@@ -12,3 +34,4 @@ $NetBSD: patch-ea,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
    nsCOMPtr<nsIMdbRow> row;
    rv = FindRow(kToken_URLColumn, URISpec.get(), getter_AddRefs(row));
  
+
