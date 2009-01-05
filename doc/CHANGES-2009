@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.48 2009/01/05 10:55:09 martti Exp $
+$NetBSD: CHANGES-2009,v 1.49 2009/01/05 12:30:00 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix to 2.5.6 [martti 2009-01-05]
 	Updated mail/postfix-current to 2.6.20081205 [martti 2009-01-05]
 	Updated x11/qgtkstyle to 0.0beta868 [martti 2009-01-05]
+	Updated multimedia/mediatomb to 0.11.0nb4 [jmcneill 2009-01-05]
