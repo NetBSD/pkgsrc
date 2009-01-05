@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.52 2009/01/05 13:21:34 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.53 2009/01/05 15:34:17 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -72,3 +72,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Added x11/py-kiwi version 1.9.22 [jmcneill 2009-01-05]
 	Updated x11/xf86-video-intel to 2.4.3nb1 [hasso 2009-01-05]
 	Added news/lottanzb version 0.4.0 [jmcneill 2009-01-05]
+	Added textproc/p5-podlators version 2.2.1 [he 2009-01-05]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.48nb2 [he 2009-01-05]
+	Updated graphics/p5-Image-Imlib2 to 2.02 [he 2009-01-05]
+	Updated mail/p5-Email-Send to 2.194 [he 2009-01-05]
+	Added mail/p5-Email-Sender version 0.001 [he 2009-01-05]
+	Updated mail/p5-Mail-IMAPClient to 3.12 [he 2009-01-05]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.42 [he 2009-01-05]
