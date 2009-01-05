@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/05 13:20:21 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/05 13:31:09 jmcneill Exp $
 #
 
 DISTNAME=	lottanzb-0.4.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.lottanzb.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lottanzb.org/
 COMMENT=	GNOME front-end for HellaNZB
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=          yes
 PYDISTUTILSPKG=         yes
