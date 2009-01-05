@@ -13,6 +13,7 @@ PATH=$PATH:/bin:/usr/bin:@PREFIX@/bin
 # -r8   promote REAL and COMPLEX to DOUBLE REAL and DOUBLE COMPLEX
 # -s    to strip executible 
 # -v    for verbose output
+# -compatibility_version, -install_name, -current_version    for libtool on darwin gcc
 # 
 # Also only pass -m* to the C compiler not f2c.
 # 
@@ -274,6 +275,21 @@ do
 
 	-W*)	CFLAGS="$CFLAGS $(shell_quote "$1")"
 		shift
+		;;
+
+	-install_name)
+		CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
+		shift 2;
+		;;
+
+	-compatibility_version)
+		CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
+		shift 2;
+		;;
+
+	-current_version)
+		CFLAGS="$CFLAGS $1 $(shell_quote "$2")"
+		shift 2;
 		;;
 
 	-*)	CFLAGS="$CFLAGS $(shell_quote "$1")"
