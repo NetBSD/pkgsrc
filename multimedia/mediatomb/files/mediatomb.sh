@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mediatomb.sh,v 1.1 2008/11/03 17:04:51 tron Exp $
+# $NetBSD: mediatomb.sh,v 1.2 2009/01/05 12:28:32 jmcneill Exp $
 #
 
 # PROVIDE: mediatomb
@@ -10,10 +10,12 @@
 
 name="mediatomb"
 rcvar=$name
+load_rc_config_var mediatomb_username mediatomb_username
+load_rc_config_var mediatomb_groupname mediatomb_groupname
 command="@PREFIX@/bin/mediatomb"
 logfile="@VARBASE@/log/${name}.log"
 pidfile="@PKG_HOME@/${name}.pid"
-command_args="-d -u @MEDIATOMB_USER@ -g @MEDIATOMB_USER@ -m @PKG_HOME@ -P ${pidfile} -l ${logfile} -f ."
+command_args="-d -u ${mediatomb_username:-@MEDIATOMB_USER@} -g ${mediatomb_groupname:-@MEDIATOMB_USER@} -m @PKG_HOME@ -P ${pidfile} -l ${logfile} -c @PKG_SYSCONFDIR@/config.xml"
 extra_commands="reload"
 
 if [ -f /etc/rc.subr ]; then
