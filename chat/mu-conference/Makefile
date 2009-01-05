@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/05 12:19:58 abs Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -7,7 +7,7 @@ CATEGORIES=		chat
 MASTER_SITES=		http://jabber.terrapin.com/JCR/ http://www.jabberstudio.org/projects/mu-conference/releases/download.php?file=
 DISTFILES=		${DISTNAME}.tar.gz jcr-0.1.2.tar.gz
 
-MAINTAINER=		abs@mono.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jabber.terrapin.com/JCR/
 COMMENT=		Implementation of the JEP-0045 Multi-User Chat protocol
 
@@ -39,10 +39,10 @@ CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR:Q}/muc-jcr.xml
 INSTALLATION_DIRS=	bin share/examples/jabberd
 
 post-extract:
-	@${MV} ${XMLCONFIG:Q} ${XMLCONFIG:Q}.in
+	${MV} ${XMLCONFIG:Q} ${XMLCONFIG:Q}.in
 
 pre-configure:
-	@${SED}	-e 's|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g' \
+	${SED}	-e 's|\(<logdir>\)[^<]*|\1${JABBERD_LOGDIR}|g' \
 		-e 's|\(<pidfile>\).|\1${JABBERD_PIDDIR}|g' \
 		-e 's|\(<spool>\).|\1${JABBERD_SPOOLDIR}|g' \
 		${XMLCONFIG:Q}.in > ${XMLCONFIG:Q}
