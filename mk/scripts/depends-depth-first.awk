@@ -1,6 +1,6 @@
 #!/usr/bin/awk -f
 #
-# $NetBSD: depends-depth-first.awk,v 1.5 2006/01/21 22:16:13 jlam Exp $
+# $NetBSD: depends-depth-first.awk,v 1.6 2009/01/05 02:37:05 dbj Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -187,47 +187,56 @@ function main(		cmd, depends_pkgpath, dir, pkgpath) {
 	#
 	# Push the given package directories onto the stack.
 	while (ARGC >= ARGSTART) {
+
 		ARGC--;
 		cmd = TEST " -d " PKGSRCDIR "/" ARGV[ARGC]
 		if (system(cmd) == 0) {
 			if (do_root == 0) {
 				root[ARGV[ARGC]] = ARGV[ARGC]
 			}
-			push(dir_stack, ARGV[ARGC])
+			if (status[ARGV[ARGC]] == "") {
+				push(dir_stack, ARGV[ARGC])
+			}
 		}
-	}
 
-	# Depth-first traversal of dependency graph.
-	while (!empty(dir_stack)) {
-		pkgpath = top(dir_stack)
-		if (status[pkgpath] == "walked") {
-			if (walk_order == "postfix") {
+		# Depth-first traversal of dependency graph.
+		while (!empty(dir_stack)) {
+			pkgpath = top(dir_stack)
+
+			if (status[pkgpath] != "") {
+				if (walk_order == "postfix" && status[pkgpath] != "visited") {
+					status[pkgpath] = "visited"
+					visit(pkgpath)
+				}
+				pop(dir_stack)
+				continue
+			}
+
+			status[pkgpath] = "walked"
+
+			if (walk_order == "prefix" && status[pkgpath] != "visited") {
+				status[pkgpath] = "visited"
 				visit(pkgpath)
 			}
-			pop(dir_stack)
-			continue
-		}
-		status[pkgpath] = "walked"
-		if (walk_order == "prefix") {
-			visit(pkgpath)
-		}
 
-		# Grab the "depends_type" dependencies of the current
-		# package and push them onto the stack.  We use the
-		# "show-depends-pkgpaths" target to fetch this information.
-		#
-		dir = PKGSRCDIR "/" pkgpath
-		cmd = "if " TEST " -d " dir "; then cd " dir " && " MAKE " show-depends-pkgpaths DEPENDS_TYPE=\"" depends_type "\"; fi"
-		while (cmd | getline depends_pkgpath) {
-			if (status[depends_pkgpath] == "") {
-				status[depends_pkgpath] = "pushed"
-				push(tmp_stack, depends_pkgpath)
+			# Grab the "depends_type" dependencies of the current
+			# package and push them onto the stack.  We use the
+			# "show-depends-pkgpaths" target to fetch this information.
+			#
+			dir = PKGSRCDIR "/" pkgpath
+			cmd = "if " TEST " -d " dir "; then cd " dir " && " MAKE " show-depends-pkgpaths DEPENDS_TYPE=\"" depends_type "\"; fi"
+			while (cmd | getline depends_pkgpath) {
+				if (status[depends_pkgpath] == "") {
+					push(tmp_stack, depends_pkgpath)
+				}
 			}
-		}
-		close(cmd)
-		while (!empty(tmp_stack)) {
-			push(dir_stack, top(tmp_stack))
-			pop(tmp_stack)
+			close(cmd)
+			# This isn't really necessary, but does preserve child traversal
+			# order as presented by show-depends-pkgpaths
+			while (!empty(tmp_stack)) {
+				push(dir_stack, top(tmp_stack))
+				pop(tmp_stack)
+			}
 		}
 	}
 	exit 0
@@ -261,7 +270,7 @@ function visit(pkgpath,		cmd, dir) {
 # top(stack)
 # push(stack, element)
 # pop(stack)
-#	The well-known functions associated with a LIFO.
+#	The well-known functions associated with a STACK.
 #
 ######################################################################
 function empty(stack) {
