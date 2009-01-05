@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7780 2009/01/05 16:10:16 shattered Exp $
+$NetBSD: TODO,v 1.7781 2009/01/05 19:15:57 tron Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ Suggested package updates
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
-	o nspluginwrapper-1.2.2
 	o nspr-4.7.3
 	o nss-3.11.7
 	o ntop-3.3.9
