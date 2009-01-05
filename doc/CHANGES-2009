@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.59 2009/01/05 20:31:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.60 2009/01/05 20:35:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -89,3 +89,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/png to 1.2.34 [wiz 2009-01-05]
 	Added textproc/sub2srt version 0.5.2 [kefren 2009-01-05]
 	Updated devel/pango to 1.22.4 [wiz 2009-01-05]
+	Updated textproc/gnome-doc-utils to 0.14.1 [wiz 2009-01-05]
