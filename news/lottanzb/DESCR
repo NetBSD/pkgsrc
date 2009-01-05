@@ -1,0 +1,5 @@
+LottaNZB aims to simplify and automate the download of binary news from the
+Usenet, a world-wide internet discussion system. Users can tell LottaNZB what
+to download using so-called NZB files, which are created by many Usenet search
+engines. LottaNZB integrates nicely with GNOME desktops, but is not limited to
+them and uses the mature HellaNZB software as its foundation.
