@@ -1,0 +1,27 @@
+$NetBSD: patch-ek,v 1.1 2009/01/05 09:58:36 martin Exp $
+
+# Reported upstream as https://bugzilla.mozilla.org/show_bug.cgi?id=471179
+
+--- nsprpub/pr/src/misc/prsystem.c.orig	2006-01-19 23:11:59.000000000 +0100
++++ nsprpub/pr/src/misc/prsystem.c	2008-12-26 13:01:50.000000000 +0100
+@@ -290,6 +290,20 @@ PR_IMPLEMENT(PRUint64) PR_GetPhysicalMem
+     long pageCount = sysconf(_SC_PHYS_PAGES);
+     bytes = (PRUint64) pageSize * pageCount;
+ 
++#elif defined(NETBSD)
++
++    int mib[2];
++    int rc;
++    uint64_t memSize;
++    size_t len = sizeof(memSize);
++
++    mib[0] = CTL_HW;
++    mib[1] = HW_PHYSMEM64;
++    rc = sysctl( mib, 2, &memSize, &len, NULL, 0 );
++    if ( -1 != rc )  {
++        bytes = memSize;
++    }
++
+ #elif defined(HPUX)
+ 
+     struct pst_static info;
