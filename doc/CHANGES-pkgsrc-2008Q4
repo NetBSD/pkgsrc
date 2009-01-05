@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.2 2009/01/04 13:25:03 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.3 2009/01/05 10:56:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -7,3 +7,5 @@ Created pkgsrc-2008Q4 branch [agc 2009-01-03 16:00 UTC]
 
 Pullup ticket #2619 - requested by dholland
 aria2: build fix
+Pullup ticket #2620 - requested by adrianp
+horde: dependence fix
