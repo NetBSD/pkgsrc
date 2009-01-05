@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/05 12:31:06 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/05 13:26:33 jmcneill Exp $
 #
 
 DISTNAME=	kiwi-1.9.22
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/kiwi/1.9/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.async.com.br/projects/kiwi/
 COMMENT=	Framework and a set of enhanced PyGTK widgets
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
