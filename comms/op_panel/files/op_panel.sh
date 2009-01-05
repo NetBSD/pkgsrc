@@ -1,7 +1,7 @@
 #!@RCD_SCRIPTS_SHELL@
 
 # PROVIDE:
-# REQUIRE: login
+# REQUIRE: LOGIN
 # KEYWORD:
 
 $_rc_subr_loaded . /etc/rc.subr
