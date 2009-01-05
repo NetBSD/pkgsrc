@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/05 09:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/05 09:36:05 wiz Exp $
 #
 
 DISTNAME=	whohas-0.22
@@ -28,6 +28,8 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/usr/share/man/de/man1/whohas.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/de/man1
+	${INSTALL_DATA} ${WRKSRC}/intro* \
+		${DESTDIR}${PREFIX}/share/doc/whohas
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
