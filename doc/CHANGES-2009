@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.46 2009/01/05 09:34:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.47 2009/01/05 10:26:19 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -65,3 +65,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-WWW-Selenium to 1.17 [he 2009-01-04]
 	Updated games/gbrainy to 1.01 [wiz 2009-01-05]
 	Updated misc/whohas to 0.22 [wiz 2009-01-05]
+	Updated mail/postfix to 2.5.6 [martti 2009-01-05]
+	Updated mail/postfix-current to 2.6.20081205 [martti 2009-01-05]
