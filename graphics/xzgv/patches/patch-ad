@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1 2009/01/05 16:08:20 shattered Exp $
+
+Proposed fix for "missing preview icons" problem, from
+http://sourceforge.net/tracker/index.php?func=detail&aid=1814712&group_id=203093&atid=984206
+
+--- src/main.c.orig	2007-09-09 00:36:21.000000000 +0000
++++ src/main.c
+@@ -200,7 +200,7 @@ int orient_state_flip[8]   ={2,3,0,1,6,7
+ /* required prototypes */
+ void render_pixmap(int reset_pos);
+ void cb_nextprev_tagged_image(int next,int view);
+-void idle_xvpic_load(int *entryp);
++gint idle_xvpic_load(int *entryp);
+ gint pic_win_resized(GtkWidget *widget,GdkEventConfigure *event);
+ void cb_scaling_double(void);
+ void cb_xscaling_double(void);
+@@ -2624,7 +2624,7 @@ else
+ }
+ 
+ 
+-void idle_xvpic_load(int *entryp)
++gint idle_xvpic_load(int *entryp)
+ {
+ static char buf[1024];
+ struct clist_data_tag *datptr;
+@@ -2748,6 +2748,7 @@ for(f=0;f<IDLE_XVPIC_NUM_PER_CALL;f++)
+     *entryp=-1;
+     }
+   }
++  return TRUE;
+ }
+ 
+ 
