@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.58 2009/01/05 20:28:24 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.59 2009/01/05 20:31:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -88,3 +88,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/thunderbird-gtk1 to 2.0.0.19 [ghen 2009-01-05]
 	Updated graphics/png to 1.2.34 [wiz 2009-01-05]
 	Added textproc/sub2srt version 0.5.2 [kefren 2009-01-05]
+	Updated devel/pango to 1.22.4 [wiz 2009-01-05]
