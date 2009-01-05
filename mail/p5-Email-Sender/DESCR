@@ -1,0 +1,12 @@
+Email::Sender replaces the old and sometimes problematic Email::Send
+library, which did a decent job at handling very simple email
+sending tasks, but was not suitable for serious use, for a variety
+of reasons.
+
+At present, the casual user is probably best off using
+Email::Send::Transport::Sendmail. If a local sendmail program is
+unavailable, Email::Send::Transport::SMTP will allow you to send
+mail through your relay host.
+
+In the future, Email::Sender::Simple will provide a very simple
+interface for sending mail.
