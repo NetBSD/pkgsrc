@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.55 2009/01/05 19:12:29 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.56 2009/01/05 19:42:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -81,3 +81,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.42 [he 2009-01-05]
 	Updated graphics/xzgv to 0.9 [shattered 2009-01-05]
 	Updated www/nspluginwrapper to 1.2.2 [jmcneill 2009-01-05]
+	Updated www/seamonkey to 1.1.14 [ghen 2009-01-05]
+	Updated www/seamonkey-bin to 1.1.14 [ghen 2009-01-05]
+	Updated www/seamonkey-gtk1 to 1.1.14 [ghen 2009-01-05]
+	Updated mail/thunderbird to 2.0.0.19 [ghen 2009-01-05]
+	Updated mail/thunderbird-gtk1 to 2.0.0.19 [ghen 2009-01-05]
