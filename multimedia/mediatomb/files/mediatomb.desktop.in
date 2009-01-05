@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=MediaTomb
+Comment=MediaTomb UPnP MediaServer web interface
+Exec=@PREFIX@/bin/gnome-open @MEDIATOMB_HOME@/mediatomb.html
+Icon=@PREFIX@/share/mediatomb/web/icons/mt-icon120.png
+Terminal=false
+Categories=Application;AudioVideo;
+Type=Application
+Encoding=UTF-8
