@@ -1,12 +1,26 @@
-$NetBSD: patch-aa,v 1.3 2008/09/19 14:56:00 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2009/01/05 13:18:18 hasso Exp $
 
-https://bugs.freedesktop.org/show_bug.cgi?id=16631
+https://bugs.freedesktop.org/show_bug.cgi?id=16631 and G41 support.
 
-diff --git src/i830_driver.c src/i830_driver.c
-index 9bf0a64..5de8e7d 100644
---- src/i830_driver.c
-+++ src/i830_driver.c
-@@ -915,19 +915,18 @@ I830SetupOutputs(ScrnInfoPtr pScrn)
+--- src/i830_driver.c.orig	2008-11-13 22:13:56 +0200
++++ src/i830_driver.c	2009-01-05 13:42:59 +0200
+@@ -255,6 +255,7 @@ static SymTabRec I830Chipsets[] = {
+    {PCI_CHIP_IGD_E_G,		"Intel Integrated Graphics Device"},
+    {PCI_CHIP_G45_G,		"G45/G43"},
+    {PCI_CHIP_Q45_G,		"Q45/Q43"},
++   {PCI_CHIP_G41_G,		"G41"},
+    {-1,				NULL}
+ };
+ 
+@@ -282,6 +283,7 @@ static PciChipsets I830PciChipsets[] = {
+    {PCI_CHIP_IGD_E_G,		PCI_CHIP_IGD_E_G,	RES_SHARED_VGA},
+    {PCI_CHIP_G45_G,		PCI_CHIP_G45_G,		RES_SHARED_VGA},
+    {PCI_CHIP_Q45_G,		PCI_CHIP_Q45_G,		RES_SHARED_VGA},
++   {PCI_CHIP_G41_G,		PCI_CHIP_G41_G,		RES_SHARED_VGA},
+    {-1,				-1,			RES_UNDEFINED}
+ };
+ 
+@@ -924,19 +926,18 @@ I830SetupOutputs(ScrnInfoPtr pScrn)
        i830_lvds_init(pScrn);
  
     if (IS_I9XX(pI830)) {
@@ -35,3 +49,13 @@ index 9bf0a64..5de8e7d 100644
     } else {
        i830_dvo_init(pScrn);
     }
+@@ -1230,6 +1231,9 @@ i830_detect_chipset(ScrnInfoPtr pScrn)
+     case PCI_CHIP_Q45_G:
+ 	chipname = "Q45/Q43";
+ 	break;
++    case PCI_CHIP_G41_G:
++	chipname = "G41";
++	break;
+    default:
+ 	chipname = "unknown chipset";
+ 	break;
