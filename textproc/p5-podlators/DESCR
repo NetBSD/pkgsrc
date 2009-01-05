@@ -1,0 +1,7 @@
+collection of pod related perl modules:
+- Pod::Man
+- Pod::ParseLink
+- Pod::Text
+- Pod::Text::Color
+- Pod::Text::Overstrike
+- Pod::Text::Termcap
