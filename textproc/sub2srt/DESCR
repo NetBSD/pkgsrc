@@ -1,0 +1,4 @@
+sub2srt is a simple tool to convert 2 common subtitle formats (microdvd
+and subrip - both are known as ".sub") to subviewer ".srt" format.
+
+This is the format ogmmerge accepts for multiplexing into ogm streams.
