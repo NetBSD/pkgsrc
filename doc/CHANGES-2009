@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.69 2009/01/06 18:08:04 adam Exp $
+$NetBSD: CHANGES-2009,v 1.70 2009/01/06 18:21:15 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/pekwm to 0.1.9a [obache 2009-01-06]
 	Updated graphics/djvulibre-lib to 3.5.21 [adam 2009-01-06]
 	Updated graphics/djvulibre-tools to 3.5.21 [adam 2009-01-06]
+	Updated x11/xterm to 238 [tnn 2009-01-06]
