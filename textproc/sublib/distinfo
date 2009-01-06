@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/06 08:54:21 kefren Exp $
+
+SHA1 (sublib-0.9.zip) = 4c7194666e9991efc7793ab300f60f95c7b56d85
+RMD160 (sublib-0.9.zip) = 7b4c310ddc57c2ab02fdbd233cadf8c1873d5c15
+Size (sublib-0.9.zip) = 255003 bytes
+SHA1 (patch-aa) = 3da70469b7bd6e93a25ca7eba2291e6c43238e0b
