@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/18 14:49:20 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/06 18:41:26 drochner Exp $
 bin/xarchiver
 libexec/thunar-archive-plugin/xarchiver.tap
 share/applications/xarchiver.desktop
@@ -72,7 +72,13 @@ share/pixmaps/xarchiver/xarchiver-add.png
 share/pixmaps/xarchiver/xarchiver-extract.png
 share/pixmaps/xarchiver/xarchiver-html.png
 @dirrm share/pixmaps/xarchiver
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/doc/xarchiver/html/images
 @dirrm share/doc/xarchiver/html
 @dirrm share/doc/xarchiver
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/thunar-archive-plugin
