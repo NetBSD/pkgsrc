@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:31 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.5 2009/01/06 18:03:23 adam Exp $
 
-DISTNAME=		djvulibre-3.5.19
-PKGNAME=		djvulibre-lib-3.5.19
+DISTNAME=		djvulibre-3.5.21
+PKGNAME=		djvulibre-lib-3.5.21
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -12,10 +11,10 @@ COMMENT=		Compression library for scanned documents
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE+=	libdjvu/ddjvuapi.pc.in
 BUILD_DIRS=		libdjvu
