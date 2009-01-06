@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/11/05 16:43:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2009/01/06 18:57:14 drochner Exp $
 
-SHA1 (libkdcraw-0.1.6.tar.bz2) = 0cb1aef852d26fea7756beb652ee0fb14cc7590b
-RMD160 (libkdcraw-0.1.6.tar.bz2) = ac1ec33ebb3f0f1a7e5d74cd17fb581e6ef9cda3
-Size (libkdcraw-0.1.6.tar.bz2) = 692276 bytes
+SHA1 (libkdcraw-0.1.7.tar.bz2) = d778983c089a43838e310cfc774cfb80b579c9ec
+RMD160 (libkdcraw-0.1.7.tar.bz2) = b24f3f5f14e1d6fb1d190b05d045318ca7ea8146
+Size (libkdcraw-0.1.7.tar.bz2) = 690965 bytes
