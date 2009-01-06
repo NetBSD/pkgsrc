@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.70 2009/01/06 18:21:15 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.71 2009/01/06 19:03:35 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/djvulibre-lib to 3.5.21 [adam 2009-01-06]
 	Updated graphics/djvulibre-tools to 3.5.21 [adam 2009-01-06]
 	Updated x11/xterm to 238 [tnn 2009-01-06]
+	Updated sysutils/dbus to 1.2.4nb4 [hasso 2009-01-06]
