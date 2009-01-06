@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.455 2009/01/05 20:27:02 kefren Exp $
+# $NetBSD: Makefile,v 1.456 2009/01/06 08:58:35 kefren Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -84,6 +84,7 @@ SUBDIR+=	gdome2
 SUBDIR+=	glimpse
 SUBDIR+=	gnome-doc-utils
 SUBDIR+=	gnome-spell
+SUBDIR+=	gnome-subtitles
 SUBDIR+=	grep
 SUBDIR+=	groff
 SUBDIR+=	gsed
@@ -425,6 +426,7 @@ SUBDIR+=	soprano
 SUBDIR+=	source-highlight
 SUBDIR+=	stardic
 SUBDIR+=	sub2srt
+SUBDIR+=	sublib
 SUBDIR+=	subtitleripper
 SUBDIR+=	suikyo
 SUBDIR+=	suikyo-conv-table
