@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7782 2009/01/06 12:09:04 obache Exp $
+$NetBSD: TODO,v 1.7783 2009/01/06 12:35:10 obache Exp $
 
 Suggested new packages
 ======================
@@ -1015,9 +1015,8 @@ Suggested package updates
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
-	o pekwm-1.0.9a
-	o pen-0.17.3
 	o pekwm-0.1.9a [pkg/40260]
+	o pen-0.17.3
 	o pfqueue-0.5.6
 	o pgadmin3-1.6.0
 	o pgpool-3.1.1
