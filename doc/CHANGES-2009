@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.63 2009/01/06 03:59:32 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.64 2009/01/06 09:00:00 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -93,3 +93,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated finance/gnucash to 2.2.8 [wiz 2009-01-05]
 	Updated mail/p5-MIME-Lite to 3.023nb1 [he 2009-01-06]
 	Added net/miniupnpd version 20081009 [jmcneill 2009-01-05]
+	Added textproc/sublib version 0.9 [kefren 2009-01-06]
+	Added textproc/gnome-subtitles version 0.8 [kefren 2009-01-06]
