@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 00:44:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/06 10:28:38 adrianp Exp $
 
-DISTNAME=	pkg_distinst-0.01
+DISTNAME=	pkg_distinst-0.02
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
