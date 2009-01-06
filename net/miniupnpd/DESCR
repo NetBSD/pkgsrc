@@ -1,0 +1,12 @@
+The MiniUPnP project offers software which supports the UPnP Internet Gateway
+Device (IGD) specifications. Recently, NAT-PMP support was added to
+MiniUPnPd. For client side NAT-PMP support, use libnatpmp.
+
+UPnP and NAT-PMP are used to improve internet connectivity for devices behind
+a NAT router. Any peer to peer network application such as games, IM, etc.
+can benefit from a NAT router supporting UPnP and/or NAT-PMP.
+
+The latest generation Microsoft XBOX 360 and Sony Playstation 3 game machines
+use UPnP commands to enable the online play with the XBOX Live service and
+the Playstation Network. It has been reported that miniupnpd is correctly
+working with the two consoles.
