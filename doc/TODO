@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7781 2009/01/05 19:15:57 tron Exp $
+$NetBSD: TODO,v 1.7782 2009/01/06 12:09:04 obache Exp $
 
 Suggested new packages
 ======================
@@ -890,7 +890,6 @@ Suggested package updates
 	o mpop-1.0.16
 	o mserv-devel-0.41
 	o msf-2.7
-	o msmtp-1.4.17 [pkg/40278]
 	o mtools-4.0.1
 	o multitail-5.2.2
 	o munin-1.3.4
