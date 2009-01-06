@@ -128,6 +128,7 @@ gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
+gnome-keyring		Enable GNOME keyring support.
 gnutls			Enable GNU TLS support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
@@ -135,6 +136,7 @@ gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
 graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
+gsasl			Enable SASL support with gsasl.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
