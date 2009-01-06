@@ -1,14 +1,12 @@
-# $NetBSD: Makefile.common,v 1.47 2008/11/28 13:47:51 adam Exp $
+# $NetBSD: Makefile.common,v 1.48 2009/01/06 11:29:26 adam Exp $
 
-DISTNAME=		bacula-2.4.3
+DISTNAME=		bacula-2.4.4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
 
-PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
-PATCHFILES=		2.4.3-orphaned-jobs.patch \
-			2.4.3-cancel-after-network-outage.patch \
-			2.4.3-update-slots.patch
-DIST_SUBDIR=		${DISTNAME}
+#PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+#PATCHFILES=
+#DIST_SUBDIR=		${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
