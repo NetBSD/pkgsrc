@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2008/08/08 14:32:38 obache Exp $
+# $NetBSD: Makefile,v 1.31 2009/01/06 12:47:17 obache Exp $
 #
 
-DISTNAME=	pekwm-0.1.7
+DISTNAME=	pekwm-0.1.9a
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/projects/3/files/
 EXTRACT_SUFX=	.tar.bz2
