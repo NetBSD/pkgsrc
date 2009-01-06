@@ -1,17 +1,8 @@
-$NetBSD: distinfo,v 1.31 2008/11/28 13:47:51 adam Exp $
+$NetBSD: distinfo,v 1.32 2009/01/06 11:29:26 adam Exp $
 
-SHA1 (bacula-2.4.3/2.4.3-cancel-after-network-outage.patch) = c3bfc9805792525b95857640c3549443b54e33c4
-RMD160 (bacula-2.4.3/2.4.3-cancel-after-network-outage.patch) = 100e77272267824ee3275df7b190a6da31d78fe3
-Size (bacula-2.4.3/2.4.3-cancel-after-network-outage.patch) = 4766 bytes
-SHA1 (bacula-2.4.3/2.4.3-orphaned-jobs.patch) = 04b44be465f004393658065619e54db982892afa
-RMD160 (bacula-2.4.3/2.4.3-orphaned-jobs.patch) = d099958f74e66de6dd0a631d9fd12dccd215936b
-Size (bacula-2.4.3/2.4.3-orphaned-jobs.patch) = 565 bytes
-SHA1 (bacula-2.4.3/2.4.3-update-slots.patch) = b0ddfb9284125cca9ff05ffef256fdbc6ff854a9
-RMD160 (bacula-2.4.3/2.4.3-update-slots.patch) = 5b59468193c979a08045b983ecdf767b15aa40ec
-Size (bacula-2.4.3/2.4.3-update-slots.patch) = 2681 bytes
-SHA1 (bacula-2.4.3/bacula-2.4.3.tar.gz) = c24e7c2bd8706467d71c60b32cccdec416902cc3
-RMD160 (bacula-2.4.3/bacula-2.4.3.tar.gz) = 3fc216718746f8cdc1e4ca385e3d6f9c72c534c5
-Size (bacula-2.4.3/bacula-2.4.3.tar.gz) = 3125702 bytes
+SHA1 (bacula-2.4.4.tar.gz) = ccdcf82bf975d5d7c7b5d9101f6d0a12a1f94c09
+RMD160 (bacula-2.4.4.tar.gz) = a613b2d731f3d37aff38b3ae050bbd51c1b35670
+Size (bacula-2.4.4.tar.gz) = 3145564 bytes
 SHA1 (patch-aa) = c1e5ec7c3e78c125b9fbaba97190ead10adbc599
 SHA1 (patch-ab) = 760c5214dc9a4e4c11e812842e790b973c502c1a
 SHA1 (patch-ac) = ee3771bc026d7f6e714f5e77dec920d07d4c12cf
