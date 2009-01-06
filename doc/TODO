@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7784 2009/01/06 12:48:19 obache Exp $
+$NetBSD: TODO,v 1.7785 2009/01/06 18:08:04 adam Exp $
 
 Suggested new packages
 ======================
@@ -521,8 +521,6 @@ Suggested package updates
 	o dirac-1.0
 	o dircproxy-devel-1.2.0.2
 	o distcc-3.0
-	o djvulibre-lib-4.1.2
-	o djvulibre-tools-4.1.2
 	o dmenu-3.9 [pkgsrc-wip has it!]
 	o dnstop-20070307
 	o dnstracer-1.9
