@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/06 18:54:51 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/06 18:55:58 kefren Exp $
 bin/dcsharp
 share/applications/dcsharp.desktop
 lib/dcsharp/DCSharp.Base.dll
@@ -11,4 +11,3 @@ share/gconf/schemas/dcsharp-handlers.schema
 share/locale/sv/LC_MESSAGES/dcsharp.mo
 share/locale/pl/LC_MESSAGES/dcsharp.mo
 share/locale/de/LC_MESSAGES/dcsharp.mo
-@dirrm etc/gconf/schemas
