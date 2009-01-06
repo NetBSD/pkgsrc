@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.67 2009/01/06 12:08:23 obache Exp $
+$NetBSD: CHANGES-2009,v 1.68 2009/01/06 12:47:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -103,3 +103,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/bacula-tray-monitor to 2.4.4 [adam 2008-01-06]
 	Updated sysutils/bacula-wx-console to 2.4.4 [adam 2009-01-06]
 	Updated mail/msmtp to 1.4.17 [obache 2009-01-06]
+	Updated wm/pekwm to 0.1.9a [obache 2009-01-06]
