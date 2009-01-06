@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/06 03:56:45 jmcneill Exp $
+
+SHA1 (miniupnpd-20081009.tar.gz) = 9006d433053c237ccb6628e1856b7cd99a79d989
+RMD160 (miniupnpd-20081009.tar.gz) = 16c36151d7f7058c2579dbba33e92b417304453c
+Size (miniupnpd-20081009.tar.gz) = 81732 bytes
+SHA1 (patch-aa) = 9c65d3459f2435c9318ed163cc2b664ca2f49475
+SHA1 (patch-ab) = 04891a14d14efa55b6c10fccabbc4e83a6b8773b
