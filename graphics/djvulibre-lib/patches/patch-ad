@@ -1,0 +1,43 @@
+$NetBSD: patch-ad,v 1.3 2009/01/06 18:05:07 adam Exp $
+
+--- configure.orig	2008-07-03 00:43:52.000000000 +0200
++++ configure
+@@ -21069,13 +21069,12 @@ fi
+    for opt in $saved_CXXFLAGS ; do
+      case $opt in
+        -g*) test $ac_debug != no && OPTS="$OPTS $opt" ;;
+-       -O*) ;;
+        *) CXXFLAGS="$CXXFLAGS $opt" ;;
+      esac
+    done
+    for opt in $saved_CFLAGS ; do
+      case $opt in
+-       -O*|-g*) ;;
++       -g*) ;;
+        *) CFLAGS="$CFLAGS $opt" ;;
+      esac
+    done
+@@ -21107,7 +21106,6 @@ echo $ECHO_N "checking if $CXX accepts $
+     { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+     rm conftest.*
+-    OPTS="$OPTS -O3"
+  else
+     { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+@@ -21121,7 +21119,6 @@ echo $ECHO_N "checking if $CXX accepts $
+     { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+     rm conftest.*
+-    OPTS="$OPTS -O2"
+  else
+     { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+@@ -21162,7 +21159,6 @@ echo $ECHO_N "checking if $CXX accepts $
+     { echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6; }
+     rm conftest.*
+-    OPTS="$OPTS $opt"
+  else
+     { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }

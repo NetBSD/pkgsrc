@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:31 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.6 2009/01/06 18:03:23 adam Exp $
 
-DISTNAME=		djvulibre-3.5.19
-PKGNAME=		djvulibre-tools-3.5.19
+DISTNAME=		djvulibre-3.5.21
+PKGNAME=		djvulibre-tools-3.5.21
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -15,18 +14,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PATCHDIR=		${.CURDIR}/../djvulibre-lib/patches
 DISTINFO_FILE=		${.CURDIR}/../djvulibre-lib/distinfo
 
-USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		bash:run pkg-config
+GNU_CONFIGURE=		yes
 
 MAKE_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 BUILD_DIRS=		tools xmltools
 INSTALL_DIRS=		tools xmltools
 
 REPLACE_BASH+=		tools/any2djvu
-USE_TOOLS+=		bash:run
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
