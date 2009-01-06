@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7785 2009/01/06 18:08:04 adam Exp $
+$NetBSD: TODO,v 1.7786 2009/01/06 21:46:34 tnn Exp $
 
 Suggested new packages
 ======================
@@ -852,7 +852,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-14.2.8
 	o mediawiki-1.13.3
-	o mednafen-0.8.a
+	o mednafen-0.8a
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-0.9.4 (and related plugins)
