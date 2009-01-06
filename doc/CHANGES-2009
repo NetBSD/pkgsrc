@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.72 2009/01/06 20:15:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.73 2009/01/06 21:41:53 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -109,3 +109,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xterm to 238 [tnn 2009-01-06]
 	Updated sysutils/dbus to 1.2.4nb4 [hasso 2009-01-06]
 	Updated x11/xextproto to 7.0.4 [wiz 2009-01-06]
+	Updated net/Transmission to 1.42 [tnn 2009-01-06]
