@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.62 2009/01/06 00:41:15 he Exp $
+$NetBSD: CHANGES-2009,v 1.63 2009/01/06 03:59:32 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -92,3 +92,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/gnome-doc-utils to 0.14.1 [wiz 2009-01-05]
 	Updated finance/gnucash to 2.2.8 [wiz 2009-01-05]
 	Updated mail/p5-MIME-Lite to 3.023nb1 [he 2009-01-06]
+	Added net/miniupnpd version 20081009 [jmcneill 2009-01-05]
