@@ -1,0 +1,49 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/06 08:56:58 kefren Exp $
+bin/gnome-subtitles
+share/gconf/schemas/gnome-subtitles.schemas
+lib/gnome-subtitles/GStreamerPlaybin.dll
+lib/gnome-subtitles/gnome-subtitles.exe
+lib/gnome-subtitles/gnome-subtitles.exe.config
+lib/gnome-subtitles/libgstreamer_playbin.so
+man/man1/gnome-subtitles.1
+share/applications/gnome-subtitles.desktop
+share/gnome/help/gnome-subtitles/C/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/C/legal.xml
+share/gnome/help/gnome-subtitles/ca/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/el/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/es/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/fr/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/oc/gnome-subtitles.xml
+share/gnome/help/gnome-subtitles/sv/gnome-subtitles.xml
+share/locale/ar/LC_MESSAGES/gnome-subtitles.mo
+share/locale/ca/LC_MESSAGES/gnome-subtitles.mo
+share/locale/dz/LC_MESSAGES/gnome-subtitles.mo
+share/locale/el/LC_MESSAGES/gnome-subtitles.mo
+share/locale/en_GB/LC_MESSAGES/gnome-subtitles.mo
+share/locale/es/LC_MESSAGES/gnome-subtitles.mo
+share/locale/fi/LC_MESSAGES/gnome-subtitles.mo
+share/locale/fr/LC_MESSAGES/gnome-subtitles.mo
+share/locale/he/LC_MESSAGES/gnome-subtitles.mo
+share/locale/oc/LC_MESSAGES/gnome-subtitles.mo
+share/locale/pl/LC_MESSAGES/gnome-subtitles.mo
+share/locale/pt/LC_MESSAGES/gnome-subtitles.mo
+share/locale/pt_BR/LC_MESSAGES/gnome-subtitles.mo
+share/locale/sv/LC_MESSAGES/gnome-subtitles.mo
+share/omf/gnome-subtitles/gnome-subtitles-C.omf
+share/omf/gnome-subtitles/gnome-subtitles-ca.omf
+share/omf/gnome-subtitles/gnome-subtitles-el.omf
+share/omf/gnome-subtitles/gnome-subtitles-es.omf
+share/omf/gnome-subtitles/gnome-subtitles-fr.omf
+share/omf/gnome-subtitles/gnome-subtitles-oc.omf
+share/omf/gnome-subtitles/gnome-subtitles-sv.omf
+share/pixmaps/gnome-subtitles.png
+@dirrm share/omf/gnome-subtitles
+@dirrm share/gnome/help/gnome-subtitles/C
+@dirrm share/gnome/help/gnome-subtitles/ca
+@dirrm share/gnome/help/gnome-subtitles/el
+@dirrm share/gnome/help/gnome-subtitles/es
+@dirrm share/gnome/help/gnome-subtitles/fr
+@dirrm share/gnome/help/gnome-subtitles/oc
+@dirrm share/gnome/help/gnome-subtitles/sv
+@dirrm share/gnome/help/gnome-subtitles
+@dirrm lib/gnome-subtitles
