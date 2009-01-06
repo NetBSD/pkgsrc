@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.65 2009/01/06 10:29:02 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.66 2009/01/06 11:32:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -96,3 +96,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/sublib version 0.9 [kefren 2009-01-06]
 	Added textproc/gnome-subtitles version 0.8 [kefren 2009-01-06]
 	Updated pkgtools/pkg_distinst to 0.02 [adrianp 2009-01-06]
+	Updated sysutils/bacula to 2.4.4 [adam 2009-01-06]
+	Updated sysutils/bacula-clientonly to 2.4.4 [adam 2009-01-06]
+	Updated sysutils/bacula-doc to 2.4.4 [adam 2009-01-06]
+	Updated sysutils/bacula-gnome-console to 2.4.4 [adam 2009-01-06]
+	Updated sysutils/bacula-tray-monitor to 2.4.4 [adam 2008-01-06]
+	Updated sysutils/bacula-wx-console to 2.4.4 [adam 2009-01-06]
