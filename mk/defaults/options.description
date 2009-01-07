@@ -68,6 +68,7 @@ djbfft-pentium		Optimize for Pentium{,MMX} processors.
 djbfft-ppro		Optimize for Pentium{Pro,II,III} processors.
 djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
+djvu			Enable DjVuLibRe support.
 dkim-milter-arlib	ar(3) support for dkim-milter
 dkim-stats		dkim-stats(8) support for dkim-milter
 dnsrbl			Enable DNS Real-time Blackhole List support.
@@ -123,6 +124,7 @@ gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
 geoip			Enable IP-to-country-lookup using the GeoIP C library.
 ggi			Enable GGI support.
+ghostscript		Enable GhostScript support.
 gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
@@ -424,6 +426,7 @@ w3m-unicode		Use Unicode characters.
 wavpack			Enable wavpack support.
 wide-curses		Enable wide curses support.
 winbind			Enable name-service switch daemon support using Windows Servers.
+wmf			Enable WMF support.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 x11			Enable X11 support.
 xaw			Enable Xaw support.
