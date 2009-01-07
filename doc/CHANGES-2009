@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.82 2009/01/07 11:53:09 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.83 2009/01/07 11:55:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -119,3 +119,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/SDL_gfx to 2.0.18 [wiz 2009-01-07]
 	Updated x11/xinit to 1.1.1 [wiz 2009-01-07]
 	Updated textproc/libxml++ to 2.24.2 [wiz 2009-01-07]
+	Updated print/libspectre to 0.2.2 [wiz 2009-01-07]
