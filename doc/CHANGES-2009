@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.99 2009/01/07 21:20:42 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.100 2009/01/07 21:29:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -141,3 +141,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/py-cairo to 1.8.0 [wiz 2009-01-07]
 	Updated databases/py-bsddb3 to 4.7.3 [wiz 2009-01-07]
 	Updated sysutils/py-dbus to 0.83.0 [wiz 2009-01-07]
+	Updated devel/py-gobject to 2.16.0 [wiz 2009-01-07]
