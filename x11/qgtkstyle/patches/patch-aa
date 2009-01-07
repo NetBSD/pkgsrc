@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/20 00:13:07 jmcneill Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2009/01/07 14:08:14 tron Exp $
+
+Added NetBSD support.
 
 --- gtksymbols.cpp.orig	2008-12-19 19:07:43.000000000 -0500
 +++ gtksymbols.cpp
