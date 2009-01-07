@@ -1,7 +1,32 @@
-$NetBSD: patch-ab,v 1.1 2007/08/14 21:41:06 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2009/01/07 18:45:54 drochner Exp $
 
---- lib/http.c.orig	2006-08-25 04:01:49.000000000 +0200
+--- lib/http.c.orig	2009-01-07 18:27:06.000000000 +0100
 +++ lib/http.c
+@@ -115,7 +115,7 @@ httplib_parse_url(const char *url, URLIN
+ 
+     /* search for a login '@' token */
+     if (strchr(url, '@') != NULL) {
+-	ret = sscanf(url, "%[^:]:%[^@]", urlinfo->username, urlinfo->password);
++	ret = sscanf(url, "%1023[^:]:%1023[^@]", urlinfo->username, urlinfo->password);
+ #if defined (commentout)
+ 	if (ret < 2) return SR_ERROR_PARSE_FAILURE;
+ #endif
+@@ -132,13 +132,13 @@ httplib_parse_url(const char *url, URLIN
+ 
+     /* search for a port seperator */
+     if (strchr(url, ':') != NULL) {
+-	ret = sscanf(url, "%[^:]:%hu/%s", urlinfo->host, 
++	ret = sscanf(url, "%511[^:]:%hu/%252s", urlinfo->host, 
+ 		     (short unsigned int*)&urlinfo->port, urlinfo->path+1);
+ 	if (urlinfo->port < 1) return SR_ERROR_PARSE_FAILURE;
+ 	ret -= 1;
+     } else {
+ 	urlinfo->port = 80;
+-	ret = sscanf(url, "%[^/]/%s", urlinfo->host, urlinfo->path+1);
++	ret = sscanf(url, "%511[^/]/%252s", urlinfo->host, urlinfo->path+1);
+     }
+     if (ret < 1) return SR_ERROR_INVALID_URL;
+ 
 @@ -258,11 +258,11 @@ httplib_construct_page_request (const ch
  
  /* Return 1 if a match was found, 0 if not found */
@@ -57,7 +82,15 @@ $NetBSD: patch-ab,v 1.1 2007/08/14 21:41:06 drochner Exp $
      }
      if (rc == 0) {
  	info->content_type = CONTENT_TYPE_UNKNOWN;
-@@ -418,11 +426,15 @@ httplib_parse_sc_header (const char *url
+@@ -407,6 +415,7 @@ httplib_parse_sc_header (const char *url
+ 	    info->content_type = content_type_by_url;
+ 	}
+     }
++
+     // Check for Icecast 1
+     else if ((start = (char *)strstr(header, "icecast")) != NULL) {
+ 	if (!info->server[0]) {
+@@ -418,19 +427,19 @@ httplib_parse_sc_header (const char *url
  	}
  
  	// icecast 1.x headers.
@@ -77,7 +110,15 @@ $NetBSD: patch-ab,v 1.1 2007/08/14 21:41:06 drochner Exp $
  	if (rc) {
  	    info->icy_bitrate = atoi(stempbr);
  	}
-@@ -626,7 +638,8 @@ httplib_get_pls (HSOCKET *sock, SR_HTTP_
+     }
+-    // WTF is Zwitterion?
+-    else if ((start = (char *)strstr(header, "Zwitterion v")) != NULL) {
+-	sscanf(start, "%[^<]<", info->server);
+-    }
+ 
+     /* Last chance to deduce content type */
+     if (info->content_type == CONTENT_TYPE_UNKNOWN) {
+@@ -626,16 +635,17 @@ httplib_get_pls (HSOCKET *sock, SR_HTTP_
  	int best_open = 0;
  
  	sprintf (buf1, "File%d=", s);
@@ -87,7 +128,9 @@ $NetBSD: patch-ab,v 1.1 2007/08/14 21:41:06 drochner Exp $
  	    break;
  	}
  	if (s == 1) {
-@@ -635,7 +648,7 @@ httplib_get_pls (HSOCKET *sock, SR_HTTP_
+-	    strcpy (info->http_location, location_buf);
++	    sr_strncpy (info->http_location, location_buf, MAX_HOST_LEN);
+ 	    rc = SR_SUCCESS;
  	}
  	
  	sprintf (buf1, "Title%d=", s);
@@ -96,3 +139,27 @@ $NetBSD: patch-ab,v 1.1 2007/08/14 21:41:06 drochner Exp $
  	    break;
  	}
  	num_scanned = sscanf (title_buf, "(#%*[0-9] - %d/%d",&used,&total);
+@@ -644,12 +654,12 @@ httplib_get_pls (HSOCKET *sock, SR_HTTP_
+ 	}
+ 	open = total - used;
+ 	if (open > best_open) {
+-	    strcpy (info->http_location, location_buf);
++	    sr_strncpy (info->http_location, location_buf, MAX_HOST_LEN);
+ 	    best_open = open;
+ 	}
+     }
+ 
+-    strcpy (info->http_location, location_buf);
++    sr_strncpy (info->http_location, location_buf, MAX_HOST_LEN);
+ 
+     return rc;
+ }
+@@ -689,7 +699,7 @@ httplib_get_m3u (HSOCKET *sock, SR_HTTP_
+ 	if (len > 4 && !strcmp (&p[len-4], ".mp3")) {
+ 	    continue;
+ 	}
+-	strcpy (info->http_location, p);
++	sr_strncpy (info->http_location, p, MAX_HOST_LEN);
+ 	debug_printf ("Redirecting from M3U to: %s\n", p);
+ 	return SR_SUCCESS;
+     }
