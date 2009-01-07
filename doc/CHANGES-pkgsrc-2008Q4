@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.7 2009/01/07 11:43:30 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.8 2009/01/07 14:09:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -19,3 +19,8 @@ pullup ticket #2625 - requested by he
 p5-MIME-Lite: patch to remove interactive build
 pullup ticket #2626 - requested by tnn
 xterm: update package for security vulnerability
+Pullup ticket #2622 - requested by martti
+qgtkstyle: fix invalid package version
+Pullup ticket #2624 - requested by ghen
+thunderbird: security update
+thunderbird-gtk1: security update
