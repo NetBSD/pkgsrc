@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.84 2009/01/07 11:58:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.85 2009/01/07 12:42:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -121,3 +121,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/libxml++ to 2.24.2 [wiz 2009-01-07]
 	Updated print/libspectre to 0.2.2 [wiz 2009-01-07]
 	Updated textproc/iso-codes to 3.5.1 [wiz 2009-01-07]
+	Updated security/p5-IO-Socket-SSL to 1.19 [wiz 2009-01-07]
