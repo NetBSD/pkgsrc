@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/02 12:59:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/07 13:29:45 drochner Exp $
 bin/kphotoalbum
 share/applications/kde/kphotoalbum-import.desktop
 share/applications/kde/kphotoalbum.desktop
@@ -354,6 +354,7 @@ share/locale/it/LC_MESSAGES/kphotoalbum.mo
 share/locale/ja/LC_MESSAGES/kphotoalbum.mo
 share/locale/ka/LC_MESSAGES/kphotoalbum.mo
 share/locale/lt/LC_MESSAGES/kphotoalbum.mo
+share/locale/ms/LC_MESSAGES/kphotoalbum.mo
 share/locale/mt/LC_MESSAGES/kphotoalbum.mo
 share/locale/nb/LC_MESSAGES/kphotoalbum.mo
 share/locale/nds/LC_MESSAGES/kphotoalbum.mo
