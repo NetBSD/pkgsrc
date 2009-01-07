@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/01/07 18:51:28 drochner Exp $
+
+--- ./lib/mchar.c.orig	2008-12-11 05:48:39.000000000 +0100
++++ ./lib/mchar.c
+@@ -48,7 +48,7 @@
+     #define vsnprintf _vsnprintf
+ //    #define vswprintf _vsnwprintf
+ #else
+-    #define ICONV_WCHAR "WCHAR_T"
++    #define ICONV_WCHAR "ucs-4"
+     /* This prototype is missing in some systems */
+ //    int vswprintf (wchar_t * ws, size_t n, const wchar_t * format, va_list arg);
+ #endif

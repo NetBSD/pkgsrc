@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/07 18:51:28 drochner Exp $
+
+--- lib/argv.c.orig	2007-08-14 17:33:03.000000000 +0200
++++ lib/argv.c
+@@ -33,7 +33,7 @@ void freeargv (char **vector);
+ 
+ /*  Routines imported from standard C runtime libraries. */
+ 
+-#ifdef ANSI_PROTOTYPES
++#if 1
+ 
+ #include <stddef.h>
+ #include <string.h>
