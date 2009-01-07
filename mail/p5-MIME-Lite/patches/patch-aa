@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.2.2 2009/01/07 11:38:44 rtr Exp $
+
+--- Makefile.PL.orig	2008-11-17 15:20:47.000000000 +0000
++++ Makefile.PL
+@@ -21,7 +21,6 @@ my %prereq = (
+   'File::Spec'          => 0,
+   'Email::Date::Format' => '1.000', # first release
+ );
+-if (prompt("Add prereqs?",'Yes')=~/y/i) {
+     %prereq=( %prereq,
+               'Mail::Address'     => 1.62,
+               'MIME::Types'       => 1.13,
+@@ -29,7 +28,6 @@ if (prompt("Add prereqs?",'Yes')=~/y/i) 
+               'MIME::Base64'      => undef,
+               'MIME::QuotedPrint' => undef,
+             );
+-}
+ 
+ # Write the Makefile:
+ WriteMakefile(
