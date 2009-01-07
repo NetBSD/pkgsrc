@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 13:04:41 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/07 22:18:16 wiz Exp $
 share/hal/fdi/information/10freedesktop/10-battery.fdi
 share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi
 share/hal/fdi/information/10freedesktop/10-cd-dvd-burner.fdi
@@ -6,6 +6,7 @@ share/hal/fdi/information/10freedesktop/10-dell-rfkill-switch-bluetooth.fdi
 share/hal/fdi/information/10freedesktop/10-dell-rfkill-switch-wlan.fdi
 share/hal/fdi/information/10freedesktop/10-dell-rfkill-switch-wwan.fdi
 share/hal/fdi/information/10freedesktop/10-ipw-rfkill-switch.fdi
+share/hal/fdi/information/10freedesktop/10-iwl-rfkill-switch.fdi
 share/hal/fdi/information/10freedesktop/10-laptop-panel-hardware.fdi
 share/hal/fdi/information/10freedesktop/10-modem.fdi
 share/hal/fdi/information/10freedesktop/10-recall-battery-dell.fdi
@@ -44,8 +45,12 @@ share/hal/fdi/information/10freedesktop/30-keymap-misc.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-module-asus-laptop.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-module-sony-laptop.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-module-thinkpad-acpi.fdi
+share/hal/fdi/information/10freedesktop/99-video-quirk-default.fdi
 share/hal/fdi/preprobe/10osvendor/10-ide-drives.fdi
 share/hal/fdi/preprobe/10osvendor/20-broken-usb-sticks.fdi
+@exec ${MKDIR} %D/share/hal/fdi/policy/10osvendor
+@dirrm share/hal/fdi/policy/10osvendor
+@dirrm share/hal/fdi/policy
 @exec ${MKDIR} %D/share/hal/fdi/preprobe/20thirdparty
 @dirrm share/hal/fdi/preprobe/20thirdparty
 @dirrm share/hal/fdi/preprobe/10osvendor
