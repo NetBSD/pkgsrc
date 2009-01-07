@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.93 2009/01/07 16:18:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.94 2009/01/07 16:39:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -135,3 +135,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-gnome2-desktop to 2.24.1 [wiz 2009-01-07]
 	Updated misc/gnome-user-docs to 2.24.1 [wiz 2009-01-07]
 	Updated editors/tomboy to 0.12.2 [wiz 2009-01-07]
+	Updated graphics/cairo to 1.8.6 [wiz 2009-01-07]
