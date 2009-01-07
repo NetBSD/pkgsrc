@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/09 19:04:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/07 21:20:28 wiz Exp $
 include/dbus-1.0/dbus/dbus-python.h
 lib/pkgconfig/dbus-python.pc
 ${PYSITELIB}/_dbus_bindings.la
@@ -48,6 +48,9 @@ ${PYSITELIB}/dbus/mainloop/glib.pyo
 ${PYSITELIB}/dbus/proxies.py
 ${PYSITELIB}/dbus/proxies.pyc
 ${PYSITELIB}/dbus/proxies.pyo
+${PYSITELIB}/dbus/server.py
+${PYSITELIB}/dbus/server.pyc
+${PYSITELIB}/dbus/server.pyo
 ${PYSITELIB}/dbus/service.py
 ${PYSITELIB}/dbus/service.pyc
 ${PYSITELIB}/dbus/service.pyo
