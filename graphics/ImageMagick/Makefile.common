@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2008/11/21 17:13:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.80 2009/01/07 08:58:07 adam Exp $
 
 ###########################################################################
 #
@@ -9,8 +9,8 @@
 #
 ###########################################################################
 
-IM_MAJOR_VER=		6.4.6
-IM_MINOR_VER=		0
+IM_MAJOR_VER=		6.4.8
+IM_MINOR_VER=		3
 IM_MAJOR_LIB_VER=	${IM_MAJOR_VER}
 
 .if (${IM_MINOR_VER} != NONE)
@@ -31,13 +31,14 @@ MASTER_SITES=	ftp://ftp.imagemagick.net/pub/ImageMagick/ \
 		http://www.imagemagick.net/download/
 EXTRACT_SUFX=	.tar.bz2
 
-WRKSRC=		${WRKDIR}/ImageMagick-${IM_MAJOR_VER}
+WRKSRC=		${WRKDIR}/ImageMagick-${DISTSUFFIX}
 
 # For things for which we do not specify an explicit dependency above, disable
 # so that we don't cause implicit "hidden" dependencies.
 CONFIGURE_ARGS+=	--without-dps
 CONFIGURE_ARGS+=	--without-fpx
+CONFIGURE_ARGS+=	--without-gvc
 CONFIGURE_ARGS+=	--without-hdf
 CONFIGURE_ARGS+=	--without-jbig
+CONFIGURE_ARGS+=	--without-lqr
 CONFIGURE_ARGS+=	--without-modules
-CONFIGURE_ARGS+=	--without-threads

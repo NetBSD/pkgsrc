@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2008/10/28 10:42:02 adam Exp $
+# $NetBSD: Makefile,v 1.154 2009/01/07 08:58:07 adam Exp $
 
 .include "Makefile.common"
 
@@ -40,16 +40,16 @@ CFLAGS+=		-O
 
 # Some configure_args come from Makefile.common
 CONFIGURE_ARGS+=	--without-perl
-
-# WMF linkage is currently broke, since libMagick would need symbols from libWand
-CONFIGURE_ARGS+=	--without-wmf
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
