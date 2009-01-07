@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.77 2009/01/07 04:29:36 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.78 2009/01/07 09:06:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -114,3 +114,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/exiv2 to 0.18 [gdt 2009-01-07]
 	Added devel/nant version 0.86beta1 [jmcneill 2009-01-06]
 	Updated x11/xview-config to 3.2.1nb5 [dholland 2009-01-07]
+	Updated graphics/ImageMagick to 6.4.8.3 [adam 2009-01-07]
