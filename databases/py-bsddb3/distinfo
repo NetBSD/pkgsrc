@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2008/09/13 12:38:09 dholland Exp $
+$NetBSD: distinfo,v 1.14 2009/01/07 21:15:49 wiz Exp $
 
-SHA1 (bsddb3-4.7.2.tar.gz) = 0bd5c9bb9a10b70e03498c303cac2c563daacdf5
-RMD160 (bsddb3-4.7.2.tar.gz) = 3bc0fe4269ee74960e9786ea16a9615518bb7c80
-Size (bsddb3-4.7.2.tar.gz) = 178766 bytes
+SHA1 (bsddb3-4.7.3.tar.gz) = 6f7623c5e96fcbdf5e1b5e8a3611aaaa9e2b6ea6
+RMD160 (bsddb3-4.7.3.tar.gz) = 7389cccd0a22f806a6b814854925f9f76372507d
+Size (bsddb3-4.7.3.tar.gz) = 188793 bytes
 SHA1 (patch-aa) = 6d6fab16ef3e4e04f900a30de5d706298be25f23
