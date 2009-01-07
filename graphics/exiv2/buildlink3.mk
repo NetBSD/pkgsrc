@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2008/01/16 07:54:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/01/07 01:07:51 gdt Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EXIV2_BUILDLINK3_MK:=	${EXIV2_BUILDLINK3_MK}+
@@ -12,8 +12,9 @@ BUILDLINK_PACKAGES+=	exiv2
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}exiv2
 
 .if ${EXIV2_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.14
-BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.16
+# 0.18 changes the signature of printTag
+BUILDLINK_API_DEPENDS.exiv2+=	exiv2>=0.18
+BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.18
 BUILDLINK_PKGSRCDIR.exiv2?=	../../graphics/exiv2
 .endif	# EXIV2_BUILDLINK3_MK
 
