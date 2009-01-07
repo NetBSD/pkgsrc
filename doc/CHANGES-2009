@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.74 2009/01/06 22:57:33 abs Exp $
+$NetBSD: CHANGES-2009,v 1.75 2009/01/07 01:08:13 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -111,3 +111,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xextproto to 7.0.4 [wiz 2009-01-06]
 	Updated net/Transmission to 1.42 [tnn 2009-01-06]
 	Updated net/teamspeak-server to 2.0.24.01 [abs 2009-01-06]
+	Updated graphics/exiv2 to 0.18 [gdt 2009-01-07]
