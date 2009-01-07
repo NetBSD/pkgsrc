@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2008/10/28 10:42:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.60 2009/01/07 08:58:07 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -168,13 +168,14 @@ man/man1/stream.1
 share/ImageMagick-${IM_MAJOR_VER}/ChangeLog
 share/ImageMagick-${IM_MAJOR_VER}/LICENSE
 share/ImageMagick-${IM_MAJOR_VER}/NEWS.txt
-share/ImageMagick-${IM_MAJOR_VER}/config/colors.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/coder.xml
+share/ImageMagick-${IM_MAJOR_VER}/config/colors.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/log.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/magic.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/mime.xml
 share/ImageMagick-${IM_MAJOR_VER}/config/sRGB.icm
 share/ImageMagick-${IM_MAJOR_VER}/config/thresholds.xml
+share/doc/ImageMagick-${IM_MAJOR_VER}/images/affine.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/arc.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/background.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/black.png
@@ -1079,9 +1080,9 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
 @dirrm share/doc/ImageMagick-${IM_MAJOR_VER}
 @dirrm share/ImageMagick-${IM_MAJOR_VER}/config
 @dirrm share/ImageMagick-${IM_MAJOR_VER}
-@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/filters
+@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
-@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_VER}/modules-Q16/coders
+@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16
 @dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/config
@@ -1089,3 +1090,4 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
 @dirrm include/ImageMagick/wand
 @dirrm include/ImageMagick/magick
 @dirrm include/ImageMagick/Magick++
+@dirrm include/ImageMagick
