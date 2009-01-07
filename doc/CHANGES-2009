@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.101 2009/01/07 21:29:26 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.102 2009/01/07 21:33:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -143,3 +143,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/py-dbus to 0.83.0 [wiz 2009-01-07]
 	Updated devel/py-gobject to 2.16.0 [wiz 2009-01-07]
 	Updated devel/py-gobject-shared to 2.16.0 [wiz 2009-01-07]
+	Updated textproc/rasqal to 0.9.16 [wiz 2009-01-07]
