@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2008/06/22 10:45:04 gdt Exp $
+$NetBSD: distinfo,v 1.14 2009/01/07 01:07:51 gdt Exp $
 
-SHA1 (exiv2-0.17.1.tar.gz) = 7872fde6181dd0958c8d855bea35b95094ac06c7
-RMD160 (exiv2-0.17.1.tar.gz) = e9a91efcbbf31240e741a5994e4094905280345f
-Size (exiv2-0.17.1.tar.gz) = 1807220 bytes
+SHA1 (exiv2-0.18.tar.gz) = 7584fff327383da4667390663f24c4100ab997eb
+RMD160 (exiv2-0.18.tar.gz) = 0206c1ff4f7ac0365d0f6b2796c15b102020ef22
+Size (exiv2-0.18.tar.gz) = 2299215 bytes
