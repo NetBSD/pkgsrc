@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.88 2009/01/07 13:54:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.89 2009/01/07 13:56:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -125,3 +125,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/mkfontscale to 1.0.6 [wiz 2009-01-07]
 	Updated misc/pciids to 20081012 [wiz 2009-01-07]
 	Updated print/poppler to 0.10.2 [wiz 2009-01-07]
+	Updated print/poppler-glib2 to 0.10.2 [wiz 2009-01-07]
+	Updated print/poppler-includes to 0.10.2 [wiz 2009-01-07]
+	Updated print/poppler-qt to 0.10.2 [wiz 2009-01-07]
+	Updated print/poppler-qt4 to 0.10.2 [wiz 2009-01-07]
+	Updated print/poppler-utils to 0.10.2 [wiz 2009-01-07]
