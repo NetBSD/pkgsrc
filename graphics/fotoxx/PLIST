@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/07 23:42:04 wiz Exp $
 bin/fotoxx
 share/doc/fotoxx/CHANGES
 share/doc/fotoxx/COPYING
@@ -41,8 +41,10 @@ share/fotoxx/icons/m-about.png
 share/fotoxx/icons/m-blur.png
 share/fotoxx/icons/m-changelog.png
 share/fotoxx/icons/m-clone.png
-share/fotoxx/icons/m-color-depth.png
-share/fotoxx/icons/m-color-inten.png
+share/fotoxx/icons/m-color-bal.png
+share/fotoxx/icons/m-color-dep.png
+share/fotoxx/icons/m-color-int.png
+share/fotoxx/icons/m-color-sat.png
 share/fotoxx/icons/m-create-thumbs.png
 share/fotoxx/icons/m-errorlog.png
 share/fotoxx/icons/m-exif.png
@@ -58,7 +60,6 @@ share/fotoxx/icons/m-quit.png
 share/fotoxx/icons/m-readme.png
 share/fotoxx/icons/m-redeye.png
 share/fotoxx/icons/m-resize.png
-share/fotoxx/icons/m-rgb-spread.png
 share/fotoxx/icons/m-rotate.png
 share/fotoxx/icons/m-save.png
 share/fotoxx/icons/m-select.png
@@ -88,14 +89,15 @@ share/fotoxx/icons/undo.png
 share/fotoxx/icons/zoomin.png
 share/fotoxx/icons/zoomout.png
 share/fotoxx/locales/de/fotoxx.po
-share/fotoxx/locales/de/fotoxx.po.old
 share/fotoxx/locales/de/zfuncs.po
+share/fotoxx/locales/el/fotoxx.mo
 share/fotoxx/locales/el/fotoxx.po
+share/fotoxx/locales/el/zfuncs.mo
 share/fotoxx/locales/el/zfuncs.po
+share/fotoxx/locales/el/zfuncs.po2
 share/fotoxx/locales/es/fotoxx.po
 share/fotoxx/locales/es/zfuncs.po
 share/fotoxx/locales/fr/fotoxx.po
-share/fotoxx/locales/fr/stan1125.po
 share/fotoxx/locales/fr/zfuncs.po
 share/fotoxx/locales/gl/fotoxx.po
 share/fotoxx/locales/gl/zfuncs.po

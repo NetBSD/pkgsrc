@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/09 15:10:34 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/07 23:42:04 wiz Exp $
 #
 
-DISTNAME=	fotoxx-5.7.1
+DISTNAME=	fotoxx-5.8
 CATEGORIES=	graphics
-MASTER_SITES=	http://kornelix.squarespace.com/storage/fotoxx/
+MASTER_SITES=	http://kornelix.squarespace.com/storage/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kornelix.squarespace.com/fotoxx/
