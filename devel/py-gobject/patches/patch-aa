@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2008/10/16 13:52:05 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2009/01/07 21:28:57 wiz Exp $
 
---- Makefile.in.orig	2008-09-03 09:51:10.000000000 +0200
+--- Makefile.in.orig	2009-01-04 21:34:58.000000000 +0100
 +++ Makefile.in
-@@ -802,7 +802,7 @@ info: info-recursive
+@@ -816,7 +816,7 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-data-local install-pkgconfigDATA
 +install-data-am: install-data-local
  
- install-dvi: install-dvi-recursive
- 
+ install-exec-am: install-exec-local install-pkgpyexecLTLIBRARIES \
+ 	install-pkgpyexecPYTHON install-pyexecLTLIBRARIES \
