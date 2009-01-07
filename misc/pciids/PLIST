@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/12 11:46:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/07 12:47:46 wiz Exp $
 share/pciids/pci.ids
-share/pciids/pci.db
 @dirrm share/pciids
