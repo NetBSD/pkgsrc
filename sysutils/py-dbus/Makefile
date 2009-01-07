@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2008/04/25 20:06:04 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/07 21:20:28 wiz Exp $
 #
 
-DISTNAME=	dbus-python-0.82.4
+DISTNAME=	dbus-python-0.83.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
 
+BUILD_DEPENDS+= ${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,14 +19,11 @@ USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
-#PYDISTUTILSPKG=			YES
-#PYBINMODULE=			YES
 PY_PATCHPLIST=			YES
-
-BUILD_DEPENDS+= ${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.0
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 # py-libxml2 is only needed at runtime
