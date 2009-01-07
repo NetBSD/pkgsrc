@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2008/05/15 18:16:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/07 21:15:49 wiz Exp $
+${PYINC}/bsddb3/bsddb.h
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
 ${PYSITELIB}/bsddb3/__init__.pyo
@@ -92,3 +93,4 @@ ${PYSITELIB}/bsddb3/tests/test_thread.pyc
 ${PYSITELIB}/bsddb3/tests/test_thread.pyo
 @dirrm ${PYSITELIB}/bsddb3/tests
 @dirrm ${PYSITELIB}/bsddb3
+@dirrm ${PYINC}/bsddb3
