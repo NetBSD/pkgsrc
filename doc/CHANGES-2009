@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.114 2009/01/07 22:40:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.115 2009/01/07 23:23:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -156,3 +156,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/yaz to 3.0.41 [wiz 2009-01-07]
 	Updated textproc/xapian to 1.0.10 [wiz 2009-01-07]
 	Updated textproc/xapian-omega to 1.0.10 [wiz 2009-01-07]
+	Updated sysutils/cdrtools to 2.01.01.55 [wiz 2009-01-07]
