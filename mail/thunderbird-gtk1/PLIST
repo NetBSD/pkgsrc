@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/12/21 17:05:29 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2009/01/07 16:50:30 tron Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2844,6 +2844,8 @@ share/pixmaps/${MOZILLA}.xpm
 @unexec ${RM} %D/lib/${MOZILLA}/components/compreg.dat
 @unexec ${RM} %D/lib/${MOZILLA}/components/xpti.dat
 @comment begin DIRS
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/${MOZILLA}/res/throbber
 @dirrm lib/${MOZILLA}/res/samples/sampleimages
 @dirrm lib/${MOZILLA}/res/samples
