@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.96 2009/01/07 20:57:53 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.97 2009/01/07 21:05:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -138,3 +138,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/cairo to 1.8.6 [wiz 2009-01-07]
 	Updated sysutils/dbus to 1.2.4.2 [wiz 2009-01-07]
 	Updated sysutils/dbus-glib to 0.78 [wiz 2009-01-07]
+	Updated graphics/py-cairo to 1.8.0 [wiz 2009-01-07]
