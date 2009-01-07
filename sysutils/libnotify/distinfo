@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/03/21 22:33:59 wiz Exp $
+$NetBSD: distinfo,v 1.7 2009/01/07 21:47:37 wiz Exp $
 
-SHA1 (libnotify-0.4.4.tar.gz) = 51375cb75ea933962bb3bf594f8f1856968aa2e7
-RMD160 (libnotify-0.4.4.tar.gz) = d5f1a2b63b98dc4abcd521b625ff5e7c206741c8
-Size (libnotify-0.4.4.tar.gz) = 395528 bytes
+SHA1 (libnotify-0.4.5.tar.gz) = e0a3be6249978ae2eb18bb77cdd22763271dc904
+RMD160 (libnotify-0.4.5.tar.gz) = 6ddf4feb50504012c5f5fd205123d9f27cb12ef6
+Size (libnotify-0.4.5.tar.gz) = 364142 bytes
