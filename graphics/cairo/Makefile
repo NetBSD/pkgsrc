@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2008/11/26 15:55:32 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2009/01/07 16:39:10 wiz Exp $
 
-DISTNAME=	cairo-1.8.4
-PKGREVISION=	1
+DISTNAME=	cairo-1.8.6
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -17,7 +16,7 @@ USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
-PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-backend.pc.in
+PKGCONFIG_OVERRIDE+=	src/cairo.pc.in src/cairo-features.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-xcb
 CONFIGURE_ARGS+=	--enable-glitz
