@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.103 2009/01/07 21:41:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.104 2009/01/07 21:43:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -145,3 +145,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/py-gobject-shared to 2.16.0 [wiz 2009-01-07]
 	Updated textproc/rasqal to 0.9.16 [wiz 2009-01-07]
 	Updated textproc/redland to 1.0.8 [wiz 2009-01-07]
+	Updated time/remind to 3.1.6 [wiz 2009-01-07]
