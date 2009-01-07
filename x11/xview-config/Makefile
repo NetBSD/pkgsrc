@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2008/08/30 19:52:50 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2009/01/07 04:28:53 dholland Exp $
 
 DISTNAME=		xview3.2p1-X11R6
 PKGNAME=		xview-config-3.2.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -19,6 +19,6 @@ WRKSRC=		${WRKDIR}/${EXTRACT_ELEMENTS}
 USE_IMAKE=		yes
 
 post-extract:
-	@${CHMOD} -R go+rX ${WRKDIR}
+	${CHMOD} -R go+rX ${WRKDIR}
 
 .include "../../mk/bsd.pkg.mk"

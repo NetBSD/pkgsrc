@@ -1,4 +1,8 @@
-$NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
+$NetBSD: patch-ad,v 1.8 2009/01/07 04:28:53 dholland Exp $
+
+Patch the make rules to exit on error instead of charging ahead.
+Upstream: not sent upstream as upstream is long dead.
+
 
 --- ./XView.rules.orig	1993-06-29 01:13:20.000000000 -0400
 +++ ./XView.rules	2008-08-30 12:12:24.000000000 -0400
@@ -7,7 +11,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  	do \								@@\
  		(cd $$i ; echo "making name in $$i"; \			@@\
 -			$(MAKE) PassCDebugFlags $(MFLAGS) name); \	@@\
-+		  $(MAKE) PassCDebugFlags $(MFLAGS) name) || exit $?; \	@@\
++		  $(MAKE) PassCDebugFlags $(MFLAGS) name) || exit $$?; \	@@\
  	done
  
  #endif /* MakeAnythingSubdirs */
@@ -16,7 +20,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  	-@if [ ! -d dir ]; then mkdir dir; else exit 0; fi		@@\
  	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
 -	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .); done
-+	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .) || exit $?; done
++	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .) || exit $$?; done
  
  #endif /* SubdirNormalSharedLibraryTarget */
  
@@ -25,7 +29,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
  	for i in salist; do \						@@\
 -	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)); done
-+	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)) || exit $?; done
++	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)) || exit $$?; done
  
  #endif /* SubdirNormalSharedLibraryDataTarget */
  
@@ -42,7 +46,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  	@if [ -f xstrings ]; then \                                     @@\
          	$(RM) strings; $(CP) xstrings strings; fi               @@\
 -	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
-+	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $?	@@\
++	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $$?	@@\
  	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
  	$(RM) $@  							@@\
  	$(MV) $@~ $@							@@\
@@ -58,7 +62,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
 +	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
 +	@if [ -f xstrings ]; then \                                     @@\
 +        	$(RM) strings; $(CP) xstrings strings; fi               @@\
-+	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $?	@@\
++	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $$?	@@\
 +	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
 +	$(RM) $@  							@@\
 +	$(MV) $@~ $@							@@\
@@ -75,7 +79,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  lib/**/libname.sa.rev::  						@@\
  	$(RM) $@~							@@\
 -	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
-+	(cd sadir; $(AR) ../$@~ ?*.o) || exit $?			@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $$?			@@\
  	$(RM) $@ 							@@\
  	$(MV) $@~ $@							@@\
  	$(RANLIB) $@							@@\
@@ -84,7 +88,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  lib/**/libname.sa.rev::  						@@\
  	$(RM) $@~							@@\
 -	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
-+	(cd sadir; $(AR) ../$@~ ?*.o) || exit $?			@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $$?			@@\
  	$(RM) $@ 							@@\
  	$(MV) $@~ $@							@@\
  									@@\
@@ -142,7 +146,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
 +	$(RM) /dest/lib/**/libname.so                                   @@\
  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
 -        (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
-+	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so) || exit $?
++	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so) || exit $$?
  
  #endif /* InstallSharedLibraryNoBuild */
  
@@ -151,7 +155,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  		echo "linking dir/linkname to filename..." \		@@\
  		echo "  cd" dir; cd dir ; $(RM) linkname ; \		@@\
 -		(set -x; $(LN) filename linkname); \			@@\
-+		(set -x; $(LN) filename linkname) || exit $?; \		@@\
++		(set -x; $(LN) filename linkname) || exit $$?; \	@@\
  	else \								@@\
  		echo "dir/linkname exists, no link made." ; \		@@\
  	fi
@@ -160,7 +164,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  #define StartNamedTarget(step,dir,flags)				@@\
  step:: 									@@\
 -	(cd dir ; $(MAKE) $(MFLAGS) flags step );
-+	(cd dir ; $(MAKE) $(MFLAGS) flags step ) || exit $?;
++	(cd dir ; $(MAKE) $(MFLAGS) flags step ) || exit $$?;
  #endif /* StartNamedTarget */
  
  /*
@@ -169,7 +173,7 @@ $NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
  		$(RM) dest/$$i dest/.$$i; \				@@\
  		$(INSTALL) -c $(INSTDATFLAGS) $$i dest ; \ 		@@\
 -		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ); \		@@\
-+		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ) || exit $?; \ @@\
++		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ) || exit $$?; \ @@\
  	done
  #endif /* InstallSupportList */
  
