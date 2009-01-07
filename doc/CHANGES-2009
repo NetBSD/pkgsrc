@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.106 2009/01/07 21:50:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.107 2009/01/07 21:56:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -148,3 +148,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/remind to 3.1.6 [wiz 2009-01-07]
 	Updated sysutils/libnotify to 0.4.5 [wiz 2009-01-07]
 	Updated devel/mercurial to 1.1.2 [wiz 2009-01-07]
+	Updated x11/inputproto to 1.5.0 [wiz 2009-01-07]
