@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/20 00:13:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2009/01/07 14:08:14 tron Exp $
 #
 
 DISTNAME=	qgtkstyle-r868
+PKGNAME=	qgtkstyle-0.0beta868
 CATEGORIES=	x11
 # no upstream releases; svn snapshot location
 MASTER_SITES=	http://www.invisible.ca/~jmcneill/distfiles/
@@ -11,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labs.trolltech.com/page/Projects/Styles/GtkStyle
 COMMENT=	Qt style rendered using GTK
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

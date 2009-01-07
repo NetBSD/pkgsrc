@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/20 00:13:07 jmcneill Exp $
+$NetBSD: distinfo,v 1.1.1.1.2.1 2009/01/07 14:08:14 tron Exp $
 
 SHA1 (qgtkstyle-r868.tar.bz2) = ffdd902f7e65d1f09bd2c8b4f642e55ff88982e7
 RMD160 (qgtkstyle-r868.tar.bz2) = 1dc4ec1f0d2af40640d9abd21f17f4444fd88a91
 Size (qgtkstyle-r868.tar.bz2) = 42173 bytes
-SHA1 (patch-aa) = 0db4a34d1a4a95cb3c4a920fb6cb18e9c8b466bf
+SHA1 (patch-aa) = ea14aa1c33e34897751e125b6d352bcc698cc478
