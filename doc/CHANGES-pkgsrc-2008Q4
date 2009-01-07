@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.4 2009/01/05 12:30:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.5 2009/01/07 06:54:02 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -11,3 +11,7 @@ Pullup ticket #2620 - requested by adrianp
 horde: dependence fix
 Pullup ticket #2621 - requested by martti
 postfix: security update
+Pullup ticket #2623 - requested by ghen
+seamonkey: security update
+seamonkey-bin: security update
+seamonkey-gtk: security update
