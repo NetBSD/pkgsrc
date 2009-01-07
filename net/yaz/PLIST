@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/16 21:21:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/07 22:26:45 wiz Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
@@ -28,6 +28,7 @@ include/yaz/log.h
 include/yaz/logrpn.h
 include/yaz/marcdisp.h
 include/yaz/match_glob.h
+include/yaz/matchstr.h
 include/yaz/mutex.h
 include/yaz/nmem.h
 include/yaz/nmem_xml.h
@@ -111,6 +112,7 @@ man/man1/yaz-icu.1
 man/man1/yaz-illclient.1
 man/man1/yaz-marcdump.1
 man/man1/zoomsh.1
+man/man7/bib1-attr.7
 man/man7/yaz-log.7
 man/man7/yaz.7
 man/man8/yaz-config.8
@@ -121,6 +123,7 @@ share/doc/yaz/asn.external.html
 share/doc/yaz/asn.html
 share/doc/yaz/asn.pdu.html
 share/doc/yaz/asn.preparing.html
+share/doc/yaz/bib1.html
 share/doc/yaz/common/id.png
 share/doc/yaz/common/style1.css
 share/doc/yaz/comstack.addresses.html
