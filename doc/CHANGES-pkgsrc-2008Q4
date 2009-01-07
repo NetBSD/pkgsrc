@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.6 2009/01/07 11:40:08 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.7 2009/01/07 11:43:30 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -17,3 +17,5 @@ seamonkey-bin: security update
 seamonkey-gtk: security update
 pullup ticket #2625 - requested by he
 p5-MIME-Lite: patch to remove interactive build
+pullup ticket #2626 - requested by tnn
+xterm: update package for security vulnerability
