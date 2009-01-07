@@ -1,0 +1,90 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/07 03:01:10 jmcneill Exp $
+bin/nant
+share/NAnt/bin/NAnt.CompressionTasks.dll
+share/NAnt/bin/NAnt.CompressionTasks.dll.mdb
+share/NAnt/bin/NAnt.CompressionTasks.xml
+share/NAnt/bin/NAnt.Core.dll
+share/NAnt/bin/NAnt.Core.dll.mdb
+share/NAnt/bin/NAnt.Core.xml
+share/NAnt/bin/NAnt.DotNetTasks.dll
+share/NAnt/bin/NAnt.DotNetTasks.dll.mdb
+share/NAnt/bin/NAnt.DotNetTasks.xml
+share/NAnt/bin/NAnt.NUnit.dll
+share/NAnt/bin/NAnt.NUnit.dll.mdb
+share/NAnt/bin/NAnt.NUnit.xml
+share/NAnt/bin/NAnt.NUnit1Tasks.dll
+share/NAnt/bin/NAnt.NUnit1Tasks.dll.mdb
+share/NAnt/bin/NAnt.NUnit1Tasks.xml
+share/NAnt/bin/NAnt.NUnit2Tasks.dll
+share/NAnt/bin/NAnt.NUnit2Tasks.dll.mdb
+share/NAnt/bin/NAnt.NUnit2Tasks.xml
+share/NAnt/bin/NAnt.SourceControlTasks.dll
+share/NAnt/bin/NAnt.SourceControlTasks.dll.mdb
+share/NAnt/bin/NAnt.SourceControlTasks.xml
+share/NAnt/bin/NAnt.VSNetTasks.dll
+share/NAnt/bin/NAnt.VSNetTasks.dll.mdb
+share/NAnt/bin/NAnt.VSNetTasks.xml
+share/NAnt/bin/NAnt.VisualCppTasks.dll
+share/NAnt/bin/NAnt.VisualCppTasks.dll.mdb
+share/NAnt/bin/NAnt.VisualCppTasks.xml
+share/NAnt/bin/NAnt.Win32Tasks.dll
+share/NAnt/bin/NAnt.Win32Tasks.dll.mdb
+share/NAnt/bin/NAnt.Win32Tasks.xml
+share/NAnt/bin/NAnt.exe
+share/NAnt/bin/NAnt.exe.config
+share/NAnt/bin/NAnt.exe.mdb
+share/NAnt/bin/NAnt.xml
+share/NAnt/bin/extensions/common/2.0/NAnt.MSBuild.dll
+share/NAnt/bin/extensions/common/2.0/NAnt.MSBuild.dll.mdb
+share/NAnt/bin/extensions/common/2.0/NAnt.MSBuild.xml
+share/NAnt/bin/lib/common/neutral/ICSharpCode.SharpCvsLib.Console.dll
+share/NAnt/bin/lib/common/neutral/ICSharpCode.SharpCvsLib.dll
+share/NAnt/bin/lib/common/neutral/ICSharpCode.SharpZipLib.dll
+share/NAnt/bin/lib/common/neutral/NUnitCore.dll
+share/NAnt/bin/lib/mono/1.0/NDoc.Core.dll
+share/NAnt/bin/lib/mono/1.0/NDoc.Documenter.Msdn.dll
+share/NAnt/bin/lib/mono/1.0/NDoc.ExtendedUI.dll
+share/NAnt/bin/lib/mono/1.0/nunit.core.dll
+share/NAnt/bin/lib/mono/1.0/nunit.framework.dll
+share/NAnt/bin/lib/mono/1.0/nunit.util.dll
+share/NAnt/bin/lib/mono/2.0/NDoc.Core.dll
+share/NAnt/bin/lib/mono/2.0/NDoc.Documenter.Msdn.dll
+share/NAnt/bin/lib/mono/2.0/NDoc.ExtendedUI.dll
+share/NAnt/bin/lib/mono/2.0/nunit.core.dll
+share/NAnt/bin/lib/mono/2.0/nunit.framework.dll
+share/NAnt/bin/lib/mono/2.0/nunit.util.dll
+share/NAnt/bin/lib/net/1.0/NDoc.Core.dll
+share/NAnt/bin/lib/net/1.0/NDoc.Documenter.Msdn.dll
+share/NAnt/bin/lib/net/1.0/NDoc.ExtendedUI.dll
+share/NAnt/bin/lib/net/1.0/nunit.core.dll
+share/NAnt/bin/lib/net/1.0/nunit.framework.dll
+share/NAnt/bin/lib/net/1.0/nunit.util.dll
+share/NAnt/bin/lib/net/1.1/NDoc.Core.dll
+share/NAnt/bin/lib/net/1.1/NDoc.Documenter.Msdn.dll
+share/NAnt/bin/lib/net/1.1/NDoc.ExtendedUI.dll
+share/NAnt/bin/lib/net/1.1/nunit.core.dll
+share/NAnt/bin/lib/net/1.1/nunit.framework.dll
+share/NAnt/bin/lib/net/1.1/nunit.util.dll
+share/NAnt/bin/lib/net/2.0/NDoc.Core.dll
+share/NAnt/bin/lib/net/2.0/NDoc.Documenter.Msdn.dll
+share/NAnt/bin/lib/net/2.0/NDoc.ExtendedUI.dll
+share/NAnt/bin/lib/net/2.0/nunit.core.dll
+share/NAnt/bin/lib/net/2.0/nunit.framework.dll
+share/NAnt/bin/lib/net/2.0/nunit.util.dll
+share/NAnt/bin/log4net.dll
+share/NAnt/bin/scvs.exe
+@dirrm share/NAnt/bin/lib/net/2.0
+@dirrm share/NAnt/bin/lib/net/1.1
+@dirrm share/NAnt/bin/lib/net/1.0
+@dirrm share/NAnt/bin/lib/net
+@dirrm share/NAnt/bin/lib/mono/2.0
+@dirrm share/NAnt/bin/lib/mono/1.0
+@dirrm share/NAnt/bin/lib/mono
+@dirrm share/NAnt/bin/lib/common/neutral
+@dirrm share/NAnt/bin/lib/common
+@dirrm share/NAnt/bin/lib
+@dirrm share/NAnt/bin/extensions/common/2.0
+@dirrm share/NAnt/bin/extensions/common
+@dirrm share/NAnt/bin/extensions
+@dirrm share/NAnt/bin
+@dirrm share/NAnt

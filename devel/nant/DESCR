@@ -1,0 +1,8 @@
+NAnt is a free .NET build tool. In theory it is kind of like make without
+make's wrinkles. In practice it's a lot like Ant.
+
+NAnt is different.  Instead of a model where it is extended with shell-based
+commands, NAnt is extended using task classes.  Instead of writing shell
+commands, the configuration files are XML-based, calling out a target tree
+where various tasks get executed.  Each task is run by an object that
+implements a particular Task interface.
