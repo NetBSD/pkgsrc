@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/04/26 05:07:09 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/07 12:47:46 wiz Exp $
 #
 
-DISTNAME=	pciids-20080312
+DISTNAME=	pciids-20081012
 CATEGORIES=	misc
 MASTER_SITES=	http://people.freebsd.org/~ahze/distfiles/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,5 @@ NO_BUILD=		yes
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pciids
 	${INSTALL_DATA} ${WRKSRC}/pci.ids ${DESTDIR}${PREFIX}/share/pciids
-	${INSTALL_DATA} ${WRKSRC}/pci.db ${DESTDIR}${PREFIX}/share/pciids
 
 .include "../../mk/bsd.pkg.mk"
