@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2008/07/02 13:35:16 obache Exp $
+$NetBSD: distinfo,v 1.7 2009/01/07 13:26:30 drochner Exp $
 
-SHA1 (libkexiv2-0.1.6.tar.bz2) = 725a718df0f87e8af5e8e37cbfff9cf198ef6243
-RMD160 (libkexiv2-0.1.6.tar.bz2) = e2fe84bf8072aa8056f226d1b394897060862f17
-Size (libkexiv2-0.1.6.tar.bz2) = 428456 bytes
-SHA1 (patch-aa) = 2ef57cb05bfa53d566bef390407fca0bef057b22
+SHA1 (libkexiv2-0.1.8.tar.bz2) = 66ce604acb379f36254f354a283c09e8a15b0cab
+RMD160 (libkexiv2-0.1.8.tar.bz2) = 5067acd501d97845f7c0a18f1e466d01592189f9
+Size (libkexiv2-0.1.8.tar.bz2) = 432583 bytes
+SHA1 (patch-aa) = 93769bbf613df12f11494bcdaf98d09c617d5035
