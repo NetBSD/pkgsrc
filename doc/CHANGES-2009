@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.89 2009/01/07 13:56:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.90 2009/01/07 14:23:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -130,3 +130,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/poppler-qt to 0.10.2 [wiz 2009-01-07]
 	Updated print/poppler-qt4 to 0.10.2 [wiz 2009-01-07]
 	Updated print/poppler-utils to 0.10.2 [wiz 2009-01-07]
+	Updated mail/thunderbird to 2.0.0.19nb1 [ghen 2009-01-07]
+	Updated mail/thunderbird-gtk1 to 2.0.0.19nb1 [ghen 2009-01-07]
