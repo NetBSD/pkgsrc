@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2007/01/06 16:31:48 jmmv Exp $
+$NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
 
---- configure.orig	2006-11-01 11:39:36.000000000 +0100
+--- configure.orig	2008-12-03 12:01:54.000000000 +0100
 +++ configure
-@@ -3782,7 +3782,7 @@ SHARED_EXTENSION=""
+@@ -3800,7 +3800,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
  OBJECT_EXTENSION=""
  case "$target_os" in
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/06 16:31:48 jmmv Exp $
  	echo "$as_me:$LINENO: result: .so .a .o" >&5
  echo "${ECHO_T}.so .a .o" >&6
  	STATIC_EXTENSION="a"
-@@ -3833,7 +3833,7 @@ echo "${ECHO_T}ok" >&6
+@@ -3851,7 +3851,7 @@ echo "${ECHO_T}ok" >&6
  	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
  	SPECIFIC_CFLAGS="-fPIC"
  	;;
@@ -20,7 +20,7 @@ $NetBSD: patch-ab,v 1.3 2007/01/06 16:31:48 jmmv Exp $
  	echo "$as_me:$LINENO: result: ok" >&5
  echo "${ECHO_T}ok" >&6
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -3856,13 +3856,13 @@ echo "${ECHO_T}ok" >&6
+@@ -3874,13 +3874,13 @@ echo "${ECHO_T}ok" >&6
  	   echo "$as_me:$LINENO: result: dylib options" >&5
  echo "${ECHO_T}dylib options" >&6
  	   SHARED_LIB="libxvidcore.\$(API_MAJOR).\$(SHARED_EXTENSION)"
@@ -36,18 +36,18 @@ $NetBSD: patch-ab,v 1.3 2007/01/06 16:31:48 jmmv Exp $
  	fi
  	;;
       beos)
-@@ -4038,7 +4038,7 @@ echo "$as_me: WARNING: nasm patch versio
+@@ -4001,7 +4001,7 @@ echo "$as_me: WARNING: nasm version is t
         echo "$as_me:$LINENO: checking for asm object format" >&5
  echo $ECHO_N "checking for asm object format... $ECHO_C" >&6
         case "$target_os" in
 -           *bsd*|linux*|beos|irix*|solaris*)
 +           *bsd*|linux*|beos|irix*|solaris*|dragonfly*)
-                echo "$as_me:$LINENO: result: elf" >&5
- echo "${ECHO_T}elf" >&6
-                NASM_FORMAT="elf"
-@@ -4052,6 +4052,13 @@ echo "${ECHO_T}win32" >&6
- 	       PREFIX="-DPREFIX"
- 	       MARK_FUNCS=""
+                if test "$ARCHITECTURE" = "X86_64" ; then
+                    echo "$as_me:$LINENO: result: elf64" >&5
+ echo "${ECHO_T}elf64" >&6
+@@ -4034,6 +4034,13 @@ echo "${ECHO_T}macho" >&6
+                PREFIX="-DPREFIX"
+                MARK_FUNCS=""
                 ;;
 +           darwin*|rhapsody*)
 +               echo "$as_me:$LINENO: result: macho" >&5
