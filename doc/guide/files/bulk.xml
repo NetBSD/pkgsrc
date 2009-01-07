@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.3 2008/12/17 09:50:48 rillig Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.4 2009/01/07 19:59:12 joerg Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -623,7 +623,7 @@ nbftp% <userinput>chmod 755 .</userinput>
 <sect2 id="bulk.pbulk.prepare">
 <title>Preparation</title>
 
-<para>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <filename>/usr/pbulk-outer</filename> or <filename>$HOME/pbulk-outer</filename> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</para>
+<para>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <filename>/usr/pbulk</filename> or <filename>$HOME/pbulk</filename> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</para>
 
 <screen>
 $ <userinput>cd /usr/pkgsrc</userinput>
