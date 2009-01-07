@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.41 2009/01/05 19:41:37 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.42 2009/01/07 14:23:03 ghen Exp $
 # used by mail/thunderbird/Makefile
 # used by mail/thunderbird-gtk1/Makefile
 
@@ -26,6 +26,8 @@ CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
 
 INSTALL_TEMPLATES+=	${.CURDIR}/../../mail/thunderbird/INSTALL
+
+USE_DIRS+=		xdg-1.4
 
 post-install:
 	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
