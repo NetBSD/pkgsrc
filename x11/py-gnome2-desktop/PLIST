@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/15 18:02:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/01/07 14:35:12 wiz Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
 ${PYSITELIB}/gtk-2.0/bugbuddy.py
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyc
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyo
+${PYSITELIB}/gtk-2.0/evolution/__init__.py
+${PYSITELIB}/gtk-2.0/evolution/ebook.la
+${PYSITELIB}/gtk-2.0/evolution/ecal.la
 ${PYSITELIB}/gtk-2.0/gnome/applet.py
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyc
 ${PYSITELIB}/gtk-2.0/gnome/applet.pyo
@@ -20,7 +23,7 @@ ${PYSITELIB}/gtk-2.0/gnomeprint/ui.la
 ${PYSITELIB}/gtk-2.0/gtksourceview.la
 ${PYSITELIB}/gtk-2.0/gtop.la
 ${PYSITELIB}/gtk-2.0/mediaprofiles.la
-${PLIST.nautilusburn}${PYSITELIB}/gtk-2.0/nautilusburn.la
+${PYSITELIB}/gtk-2.0/nautilusburn.la
 ${PYSITELIB}/gtk-2.0/rsvg.la
 ${PYSITELIB}/gtk-2.0/totem/__init__.py
 ${PYSITELIB}/gtk-2.0/totem/__init__.pyc
@@ -65,10 +68,11 @@ share/gtk-doc/html/pygtksourceview/pygtksourceview.devhelp
 share/pygtk/2.0/defs/_gnomedesktop.defs
 share/pygtk/2.0/defs/applet.defs
 share/pygtk/2.0/defs/art.defs
+share/pygtk/2.0/defs/ebook.defs
 share/pygtk/2.0/defs/gnomekeyring.defs
 share/pygtk/2.0/defs/gtksourceview.defs
 share/pygtk/2.0/defs/mediaprofiles.defs
-${PLIST.nautilusburn}share/pygtk/2.0/defs/nautilus_burn.defs
+share/pygtk/2.0/defs/nautilus_burn.defs
 share/pygtk/2.0/defs/print.defs
 share/pygtk/2.0/defs/printui.defs
 share/pygtk/2.0/defs/wnck.defs
@@ -78,3 +82,4 @@ share/pygtk/2.0/defs/wnck.defs
 @dirrm ${PYSITELIB}/gtk-2.0/totem
 @dirrm ${PYSITELIB}/gtk-2.0/gnomeprint
 @dirrm ${PYSITELIB}/gtk-2.0/gnomedesktop
+@dirrm ${PYSITELIB}/gtk-2.0/evolution
