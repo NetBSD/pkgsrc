@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/07 03:01:10 jmcneill Exp $
+
+SHA1 (nant-0.86-beta1-src.tar.gz) = 9f91381b9c54459c5cc56e31e4645e470a3cbe9b
+RMD160 (nant-0.86-beta1-src.tar.gz) = 96343c30403bb740e52d51688c855738a8021bbf
+Size (nant-0.86-beta1-src.tar.gz) = 2187213 bytes
+SHA1 (patch-aa) = 06d7761f1109247b19a0caa5333c61510038d968
+SHA1 (patch-ab) = 6cd15001cb5e768241a5c26a055c75f92b093651
