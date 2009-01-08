@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.24 2008/03/02 14:40:26 bjs Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/01/08 16:25:45 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
+include/curl/curlbuild.h
+include/curl/curlrules.h
 include/curl/curlver.h
 include/curl/easy.h
 include/curl/mprintf.h
 include/curl/multi.h
 include/curl/stdcheaders.h
+include/curl/typecheck-gcc.h
 include/curl/types.h
 lib/libcurl.la
 lib/pkgconfig/libcurl.pc
@@ -19,7 +22,9 @@ man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
 man/man3/curl_easy_pause.3
 man/man3/curl_easy_perform.3
+man/man3/curl_easy_recv.3
 man/man3/curl_easy_reset.3
+man/man3/curl_easy_send.3
 man/man3/curl_easy_setopt.3
 man/man3/curl_easy_strerror.3
 man/man3/curl_easy_unescape.3
@@ -62,7 +67,6 @@ man/man3/libcurl-multi.3
 man/man3/libcurl-share.3
 man/man3/libcurl-tutorial.3
 man/man3/libcurl.3
-share/curl/curl-ca-bundle.crt
 share/doc/curl/FAQ
 share/doc/curl/MANUAL
 share/doc/curl/TheArtOfHttpScripting
@@ -72,6 +76,7 @@ share/examples/curl/10-at-a-time.c
 share/examples/curl/README
 share/examples/curl/anyauthput.c
 share/examples/curl/cacertinmem.c
+share/examples/curl/certinfo.c
 share/examples/curl/cookie_interface.c
 share/examples/curl/curlgtk.c
 share/examples/curl/curlx.c
@@ -88,6 +93,7 @@ share/examples/curl/ghiper.c
 share/examples/curl/hiperfifo.c
 share/examples/curl/htmltidy.c
 share/examples/curl/http-post.c
+share/examples/curl/httpcustomheader.c
 share/examples/curl/httpput.c
 share/examples/curl/https.c
 share/examples/curl/multi-app.c
@@ -101,12 +107,13 @@ share/examples/curl/persistant.c
 share/examples/curl/post-callback.c
 share/examples/curl/postit2.c
 share/examples/curl/sampleconv.c
+share/examples/curl/sendrecv.c
 share/examples/curl/sepheaders.c
 share/examples/curl/simple.c
 share/examples/curl/simplepost.c
 share/examples/curl/simplessl.c
 share/examples/curl/synctime.c
+share/examples/curl/threaded-ssl.c
 @dirrm share/examples/curl
 @dirrm share/doc/curl
-@dirrm share/curl
 @dirrm include/curl
