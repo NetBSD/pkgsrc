@@ -1,17 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2008/01/06 16:39:14 adam Exp $
+# $NetBSD: options.mk,v 1.5 2009/01/08 22:51:52 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeciv-client
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
-PKG_OPTIONS_GROUP.backend=	gtk gtk2 xaw xaw3d sdl x11
+PKG_OPTIONS_GROUP.backend=	gtk2 xaw xaw3d sdl x11
 PKG_SUGGESTED_OPTIONS=		gtk2
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mgtk)
-CONFIGURE_ARGS+=	--enable-client=gtk
-.include "../../graphics/imlib/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
-.endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-client=gtk2
