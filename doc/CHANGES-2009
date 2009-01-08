@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.139 2009/01/08 22:10:43 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.140 2009/01/08 22:13:56 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -184,3 +184,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/kpathsea to 3.5.7nb1 [minskim 2009-01-08]
 	Updated print/teTeX3-texmf to 3.0nb6 [minskim 2009-01-08]
 	Updated print/teTeX3-bin to 3.0nb22 [minskim 2009-01-08]
+	Updated print/tex-hugelatex to 2.0nb5 [minskim 2009-01-08]
