@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7789 2009/01/07 23:23:42 wiz Exp $
+$NetBSD: TODO,v 1.7790 2009/01/08 01:10:20 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1260,7 +1260,6 @@ Suggested package updates
 	o ucblogo-5.5
 	o udunits-1.12.9
 	o uim-1.5.4
-	o unicap-0.9.3
 	o unixodbc-2.2.13
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
