@@ -1,13 +1,13 @@
-$NetBSD: patch-am,v 1.5 2008/10/25 12:04:34 adrianp Exp $
+$NetBSD: patch-am,v 1.5.2.1 2009/01/08 18:11:26 tron Exp $
 
---- crypto/x509/x509_att.c.orig	2008-04-02 12:11:51.000000000 +0100
-+++ crypto/x509/x509_att.c
-@@ -303,7 +303,7 @@ int X509_ATTRIBUTE_set1_data(X509_ATTRIB
- 	}
- 	if(!(attr->value.set = sk_ASN1_TYPE_new_null())) goto err;
- 	if(!(ttmp = ASN1_TYPE_new())) goto err;
--	if (len == -1)
-+	if ((len == -1) && !(attrtype & MBSTRING_FLAG))
+--- crypto/evp/enc_min.c.orig	2008-12-02 19:14:44.000000000 +0100
++++ crypto/evp/enc_min.c
+@@ -199,7 +199,7 @@ int EVP_CipherInit_ex(EVP_CIPHER_CTX *ct
+ 			enc = 1;
+ 		ctx->encrypt = enc;
+ 		}
+-#ifdef OPENSSL_NO_FIPS
++#if 0 /* def OPENSSL_NO_FIPS */
+ 	if(FIPS_selftest_failed())
  		{
- 		if (!ASN1_TYPE_set1(ttmp, attrtype, data))
- 			goto err;
+ 		FIPSerr(FIPS_F_EVP_CIPHERINIT_EX,FIPS_R_FIPS_SELFTEST_FAILED);
