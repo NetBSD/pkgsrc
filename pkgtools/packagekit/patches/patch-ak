@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2009/01/08 00:21:00 jmcneill Exp $
+
+--- contrib/udev/Makefile.in.orig	2008-12-09 03:25:51.000000000 -0500
++++ contrib/udev/Makefile.in
+@@ -290,7 +290,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-udevrulesdir = ${SYSCONFDIR}/udev/rules.d
++udevrulesdir = $(PREFIX)/share/examples/packagekit
+ dist_udevrules_DATA = 51-packagekit-firmware.rules
+ EXTRA_DIST = packagekit-firmware.sh
+ all: all-am
