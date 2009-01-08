@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/08 00:22:46 jmcneill Exp $
+
+SHA1 (gnome-packagekit-0.4.0.tar.gz) = 8a204535c4a219b8987af756db999ec4f3caa84e
+RMD160 (gnome-packagekit-0.4.0.tar.gz) = 9c1de792b00749ea54fe44d7287cf55228df4bdf
+Size (gnome-packagekit-0.4.0.tar.gz) = 2732798 bytes
+SHA1 (patch-aa) = e9b6d7a9d8034aad4e418b7c1e6cfe753e560c0a
+SHA1 (patch-ab) = 88522542563043b06358e98fa323eb94b9e34679
+SHA1 (patch-ac) = fb0b16340091eeede5b608645b5aa43a4ab50a9f
