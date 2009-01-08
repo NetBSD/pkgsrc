@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.125 2009/01/08 11:59:49 obache Exp $
+$NetBSD: CHANGES-2009,v 1.126 2009/01/08 12:02:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -169,3 +169,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/freefont-ttf to 20090104 [wiz 2009-01-08]
 	Updated x11/lablgtk to 2.12.0 [wiz 2009-01-08]
 	Updated www/htmldoc to 1.8.27 [obache 2009-01-08]
+	Updated misc/kchmviewer to 4.0 [wiz 2009-01-08]
