@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/16 17:08:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/01/08 12:02:44 wiz Exp $
 
-SHA1 (kchmviewer-3.1.tar.gz) = aa685216fc0ccec486d43db9531698ab1fb21152
-RMD160 (kchmviewer-3.1.tar.gz) = d55070b77bf516acaa56d35f58b52d070e2ee957
-Size (kchmviewer-3.1.tar.gz) = 944014 bytes
+SHA1 (kchmviewer-4.0.tar.gz) = 313f07307ab7157ca65977b60a8417379941db56
+RMD160 (kchmviewer-4.0.tar.gz) = b097a320ed2c5e7431d02f1382e1124176a50eef
+Size (kchmviewer-4.0.tar.gz) = 225883 bytes

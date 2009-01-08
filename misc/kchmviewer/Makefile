@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:08 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/08 12:02:44 wiz Exp $
 #
 
-DISTNAME=		kchmviewer-3.1
-PKGREVISION=		3
+DISTNAME=		kchmviewer-4.0
 CATEGORIES=		misc x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kchmviewer/}
 
@@ -16,12 +15,11 @@ USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-kde
+
+.include "options.mk"
 
 .include "../../devel/chmlib/buildlink3.mk"
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
-.include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-qdbus/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
