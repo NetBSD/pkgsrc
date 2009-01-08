@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.8 2009/01/07 14:09:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.9 2009/01/08 18:11:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -24,3 +24,5 @@ qgtkstyle: fix invalid package version
 Pullup ticket #2624 - requested by ghen
 thunderbird: security update
 thunderbird-gtk1: security update
+Pullup ticket #2628 - requested by tnn
+openssl: security update
