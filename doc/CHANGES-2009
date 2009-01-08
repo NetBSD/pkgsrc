@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.138 2009/01/08 21:48:00 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.139 2009/01/08 22:10:43 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -182,3 +182,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/openssl to 0.9.8j [tnn 2009-01-08]
 	Updated multimedia/mjpegtools to 1.9.0 [wiz 2009-01-08]
 	Updated print/kpathsea to 3.5.7nb1 [minskim 2009-01-08]
+	Updated print/teTeX3-texmf to 3.0nb6 [minskim 2009-01-08]
+	Updated print/teTeX3-bin to 3.0nb22 [minskim 2009-01-08]
