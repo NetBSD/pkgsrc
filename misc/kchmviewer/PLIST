@@ -1,16 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/16 17:08:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/08 12:02:44 wiz Exp $
 bin/kchmviewer
-lib/kde3/kio_msits.la
-lib/libchmfile.a
-lib/libkdeextra.a
-share/icons/crystalsvg/128x128/apps/kchmviewer.png
-share/icons/crystalsvg/48x48/apps/kchmviewer.png
-share/icons/crystalsvg/64x64/apps/kchmviewer.png
-share/kde/applnk/kchmviewer.desktop
-share/kde/services/msits.protocol
-share/locale/cs/LC_MESSAGES/kchmviewer.mo
-share/locale/du/LC_MESSAGES/kchmviewer.mo
-share/locale/fr/LC_MESSAGES/kchmviewer.mo
-share/locale/ru/LC_MESSAGES/kchmviewer.mo
-share/locale/tr/LC_MESSAGES/kchmviewer.mo
-share/locale/zh_CN/LC_MESSAGES/kchmviewer.mo
+${PLIST.kde4}lib/kde4/kio_msits.so
+${PLIST.kde4}share/applications/kde4/kchmviewer.desktop
+${PLIST.kde4}share/icons/crystalsvg/128x128/apps/kchmviewer.png
+${PLIST.kde4}share/icons/crystalsvg/48x48/apps/kchmviewer.png
+${PLIST.kde4}share/icons/crystalsvg/64x64/apps/kchmviewer.png
+${PLIST.kde4}share/kde4/services/msits.protocol
+@comment in kde: @dirrm share/kde4/services
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
+@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
+@comment in kde: @dirrm share/icons/crystalsvg/128x128/apps
+@comment in kde: @dirrm share/applications/kde4
+@comment in kde: @dirrm lib/kde4
