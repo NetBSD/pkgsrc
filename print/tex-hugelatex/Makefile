@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2006/10/12 13:38:35 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/08 22:13:23 minskim Exp $
 #
 
 DISTNAME=	hugelatex-2.0
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	print
 MASTER_SITES=	# none
 DISTFILES=	# nada
@@ -15,6 +15,8 @@ WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# nothing
 NO_CHECKSUM=	yes
 NO_BUILD=	yes
+
+PKG_SYSCONFSUBDIR=	texmf
 
 FILES_SUBST+=	PKG_TEXMFPREFIX=${PKG_TEXMFPREFIX:Q}
 
