@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/28 17:44:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/08 01:00:15 obache Exp $
 
 DISTNAME=		avahi-0.6.23
 PKGREVISION=		2
@@ -38,8 +38,9 @@ PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
 MAKE_DIRS=		${PKG_SYSCONFDIR}/services
 
-PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}::Avahi\ user:/nonexistent
+PKG_USERS=		${AVAHI_USER}:${AVAHI_GROUP}
 PKG_GROUPS=		${AVAHI_GROUP}
+PKG_GECOS.${AVAHI_USER}=	Avahi user
 
 .include "options.mk"
 
