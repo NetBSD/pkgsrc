@@ -1,0 +1,19 @@
+$NetBSD: patch-bb,v 1.1 2009/01/08 22:09:35 minskim Exp $
+
+--- texk/make/common.mk.orig	2004-08-06 11:40:50.000000000 -0700
++++ texk/make/common.mk
+@@ -50,11 +50,11 @@ UNINSTALL_LIBTOOL_LIBS = $(LIBTOOL) --mo
+ UNINSTALL_LIBTOOL_PROG = $(LIBTOOL) --mode=uninstall $(RM)
+ 
+ # We use these for many things.
+-kpathsea_parent = ..
++kpathsea_parent = $(KPATHSEA_PREFIX)/include
+ kpathsea_dir = $(kpathsea_parent)/kpathsea
+ kpathsea_srcdir_parent = $(top_srcdir)/..
+-kpathsea_srcdir = $(kpathsea_srcdir_parent)/kpathsea
+-kpathsea = $(kpathsea_dir)/libkpathsea.la
++kpathsea_srcdir = $(KPATHSEA_PREFIX)/include/kpathsea
++kpathsea = $(KPATHSEA_PREFIX)/lib/libkpathsea.la
+ 
+ @MAINT@ifeq ($(CC), gcc)
+ @MAINT@XDEFS = -Wpointer-arith $(warn_more)

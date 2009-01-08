@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.12 2008/12/09 19:43:37 minskim Exp $
+$NetBSD: distinfo,v 1.13 2009/01/08 22:09:35 minskim Exp $
 
 SHA1 (teTeX/tetex-src-3.0.tar.gz) = 7637789f7f4929694aed1b89820f5bad4753e8fc
 RMD160 (teTeX/tetex-src-3.0.tar.gz) = 15a139f5f36993e4ed3583260e175cfb13ce7bcc
 Size (teTeX/tetex-src-3.0.tar.gz) = 12749314 bytes
-SHA1 (patch-aa) = 77feabef32c612ac5d0250b1e4db50a3fc497990
-SHA1 (patch-ab) = af4e90102afeb6e6dbd46ffbec51e14dd6d4fed5
+SHA1 (patch-aa) = afdcbf2dafe053db174ca456806667dbe2cc79c2
+SHA1 (patch-ab) = caaf91dbbd8fa94fabf7b4f6fe6e0a97c7a6071a
 SHA1 (patch-ac) = af7d8c65cece55b7f37e7cf3c99c85e75cb911a1
 SHA1 (patch-ad) = 23d8e8729bc10748cceba5be3272484ab50f34e6
 SHA1 (patch-ae) = 68825699db129b82f476c37ba3b6e20a8831ad6e
@@ -17,14 +17,17 @@ SHA1 (patch-ak) = ba06c10c1151173e04f3a6cc44d44a89f1933bb8
 SHA1 (patch-al) = e1fc74bd6ea05176dfac4e99958f0e1281b89b3b
 SHA1 (patch-am) = 54d86197eee3d4e15a6c9bad6ae16ef1e0299667
 SHA1 (patch-an) = a02db18a49f61f965e0277fbc5a3fa72a5060b47
-SHA1 (patch-ao) = f40eb1ac8f9c1d5adaf6aac86d59a217b4c8411d
 SHA1 (patch-ap) = 0ca7341b416842fbc00a935d6cfdb0531c4169ba
 SHA1 (patch-aq) = d7a4dd4864e43cd27b1ca803f8ebfe82e65f84a7
 SHA1 (patch-ar) = 7f0c6cdca69b73bad1c8f8298e417ede1cd89d77
-SHA1 (patch-as) = 0b6c4c6b253ba1160628c19fa7080bc7c307caf3
 SHA1 (patch-at) = aaeddf2240f1b0e394ab78122352c111f3aa9718
 SHA1 (patch-au) = 119e3714b5c1ff2fe7b7ec8041a3bb8eab6fb944
 SHA1 (patch-av) = 53c963ac1b5f1963f707228badeaf0d57b159344
 SHA1 (patch-aw) = 4876a029e00298aa0f01b2e652fe101b6453afbd
 SHA1 (patch-ax) = 6f32d91113254335f683466149f25050d21dbc08
 SHA1 (patch-ay) = 277a5d8c80b3c2c594bf38de27635d5236f755a6
+SHA1 (patch-az) = 46b4a161f74eca38b73a413c4132fdb96bbb6c7c
+SHA1 (patch-ba) = 598a0668da03f01f30239ac1f3dafaa2a0831c58
+SHA1 (patch-bb) = 14e1ca5de201037f4d9d8a818da3a01bc552a389
+SHA1 (patch-bc) = 7a2f9a3f7218a7985b551c0e5023372436b4eb53
+SHA1 (patch-bd) = 6b4947689c1a3763f1cf274583ca10789e2283f5

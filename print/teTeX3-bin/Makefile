@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2008/12/09 19:43:37 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2009/01/08 22:09:35 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -28,23 +28,19 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
 
+MAKE_ENV+=		KPATHSEA_PREFIX=${BUILDLINK_PREFIX.kpathsea}
+MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		vartexfonts=${VARBASE:Q}/lib/texmf/fonts
-
-SUBST_CLASSES+=		texmfdir
-SUBST_MESSAGE.texmfdir=	Setting TEXMFSYSVAR.
-SUBST_STAGE.texmfdir=	pre-configure
-SUBST_FILES.texmfdir=	texk/kpathsea/texmf.in-teTeX
-SUBST_SED.texmfdir+=	-e 's,@VARBASE@,${VARBASE},'
 
 BUILD_DEFS+=		VARBASE
 LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 FILES_SUBST+=		PAPERSIZE=${LOWER_PAPERSIZE:Q}
 
+PKG_SYSCONFSUBDIR=	texmf
+
 CONF_FILES+=	${PREFIX}/share/texmf/web2c/fmtutil.cnf.dist		\
 		${PREFIX}/share/texmf/web2c/fmtutil.cnf
-CONF_FILES+=	${PREFIX}/share/texmf/web2c/texmf.cnf.dist		\
-		${PREFIX}/share/texmf/web2c/texmf.cnf
 OWN_DIRS+=	${VARBASE}/lib/texmf ${PREFIX}/share/texmf-local
 .for d in pk source tfm
 OWN_DIRS_PERMS+=	${VARBASE}/lib/texmf/fonts/${d} \
@@ -56,8 +52,16 @@ INSTALL_MAKE_FLAGS+=	texmf=${DESTDIR}${PREFIX}/share/texmf
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
+
+.include "../../print/kpathsea/buildlink3.mk"
+.include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
+
+post-extract:
+	${RM} -rf ${WRKSRC}/texk/kpathsea
+
 .include "../../mk/bsd.pkg.mk"

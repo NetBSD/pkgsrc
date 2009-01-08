@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 22:37:30 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/08 22:09:34 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -27,7 +27,7 @@ CHECK_INTERPRETER_SKIP+=share/texmf-dist/doc/generic/ruhyphen/reduce-patt \
 REPLACE_SH+=	doc/latex/bibunits/bibtexall doc/latex/multibib/bibtexall
 USE_TOOLS+=	sh:run pax
 
-INSTALLATION_DIRS=	share/texmf-dist
+.include "../../print/kpathsea/texmf.mk"
 
 post-extract:
 	rm -f ${WRKSRC}/ls-R
