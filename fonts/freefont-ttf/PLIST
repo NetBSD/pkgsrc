@@ -1,19 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 00:59:45 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/08 09:12:00 wiz Exp $
+lib/X11/fonts/TTF/FreeMono.ttf
+lib/X11/fonts/TTF/FreeMonoBold.ttf
+lib/X11/fonts/TTF/FreeMonoBoldOblique.ttf
+lib/X11/fonts/TTF/FreeMonoOblique.ttf
+lib/X11/fonts/TTF/FreeSans.ttf
+lib/X11/fonts/TTF/FreeSansBold.ttf
+lib/X11/fonts/TTF/FreeSansBoldOblique.ttf
+lib/X11/fonts/TTF/FreeSansOblique.ttf
+lib/X11/fonts/TTF/FreeSerif.ttf
+lib/X11/fonts/TTF/FreeSerifBold.ttf
+lib/X11/fonts/TTF/FreeSerifBoldItalic.ttf
+lib/X11/fonts/TTF/FreeSerifItalic.ttf
 share/doc/freefont/AUTHORS
 share/doc/freefont/CREDITS
 share/doc/freefont/README
-share/fonts/freefont/FreeMono.ttf
-share/fonts/freefont/FreeMonoBold.ttf
-share/fonts/freefont/FreeMonoBoldOblique.ttf
-share/fonts/freefont/FreeMonoOblique.ttf
-share/fonts/freefont/FreeSans.ttf
-share/fonts/freefont/FreeSansBold.ttf
-share/fonts/freefont/FreeSansBoldOblique.ttf
-share/fonts/freefont/FreeSansOblique.ttf
-share/fonts/freefont/FreeSerif.ttf
-share/fonts/freefont/FreeSerifBold.ttf
-share/fonts/freefont/FreeSerifBoldItalic.ttf
-share/fonts/freefont/FreeSerifItalic.ttf
-@dirrm share/fonts/freefont
-@unexec ${RMDIR} %D/share/fonts 2> /dev/null || ${TRUE}
 @dirrm share/doc/freefont
