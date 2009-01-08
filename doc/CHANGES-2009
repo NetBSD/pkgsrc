@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.118 2009/01/08 00:26:51 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.119 2009/01/08 01:10:01 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -161,3 +161,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.8 [abs 2009-01-08]
 	Added pkgtools/packagekit version 0.4.0 [jmcneill 2009-01-07]
 	Added pkgtools/gnome-packagekit version 0.4.0 [jmcneill 2009-01-07]
+	Updated graphics/unicap to 0.9.3 [jmcneill 2009-01-07]
+	Updated graphics/ucview to 0.22 [jmcneill 2009-01-07]
