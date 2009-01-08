@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2009/01/08 16:25:45 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2009/01/08 17:22:16 wiz Exp $
 
 DISTNAME=	curl-7.19.2
 CATEGORIES=	www
@@ -20,8 +20,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-# Work around an ICE on sparc64 with gcc2
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -35,23 +33,6 @@ PRIVILEGED_STAGES+=	clean
 .endif
 
 .include "options.mk"
-#
-# XXXbjs CHANGES claims this is fixed.  I have left it here commented out
-#        in case this is not so.
-#
-#post-configure:
-#	if ${GREP} '#define HAVE_SYS_SELECT_H 1' ${WRKSRC}/src/config.h \
-#		>/dev/null; \
-#	then \
-#	    line='#include <sys/select.h>'; \
-#	else \
-#	    line='/* sys/select.h not included because it does not exist */'; \
-#	fi; \
-#	${SED} -e "s|__INCLUDE_SYS_SELECT_H__|$${line}|" \
-#	       <${WRKSRC}/include/curl/multi.h \
-#	       >${WRKSRC}/include/curl/multi.h.new; \
-#	${MV} ${WRKSRC}/include/curl/multi.h.new \
-#	      ${WRKSRC}/include/curl/multi.h
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/curl
