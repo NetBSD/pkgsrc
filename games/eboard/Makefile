@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/08 22:51:52 shattered Exp $
 #
 
 DISTNAME=		eboard-1.0.4
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 EXTRACT_SUFX=		.tar.bz2
@@ -31,6 +32,5 @@ SUBST_SED.mf=		-e 's/^CXXFLAGS.*=/CXXFLAGS += $${CPPFLAGS} /'
 SUBST_SED.mf+=		-e 's/^LDFLAGS.*=/LDFLAGS += $${CXXFLAGS}/'
 
 .include "../../mk/oss.buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
