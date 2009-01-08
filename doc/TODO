@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7791 2009/01/08 01:37:44 jmcneill Exp $
+$NetBSD: TODO,v 1.7792 2009/01/08 12:00:24 obache Exp $
 
 Suggested new packages
 ======================
@@ -690,7 +690,6 @@ Suggested package updates
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
 	o html2wml-0.4.11
-	o htmldoc-1.8.27 [pkg/40223]
 	o htop-0.8.1
 	o http_load-20060312
 	o httptunnel-3.3
