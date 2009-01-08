@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/07 01:07:51 gdt Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/08 18:21:54 joerg Exp $
 bin/exiv2
 include/exiv2/basicio.hpp
 include/exiv2/bmpimage.hpp
@@ -44,7 +44,7 @@ include/exiv2/version.hpp
 include/exiv2/xmp.hpp
 include/exiv2/xmpsidecar.hpp
 lib/libexiv2.la
-lib/pkgconfig/exiv2.${LOWER_VENDOR}
+lib/pkgconfig/exiv2.pc
 man/man1/exiv2.1
 share/locale/de/LC_MESSAGES/exiv2.mo
 share/locale/es/LC_MESSAGES/exiv2.mo
