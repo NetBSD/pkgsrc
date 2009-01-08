@@ -1,9 +1,9 @@
-$NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+$NetBSD: patch-ap,v 1.2 2009/01/08 01:08:37 jmcneill Exp $
 
 
---- configure.orig	2008-09-08 23:50:50.000000000 -0400
-+++ configure	2008-09-08 23:50:52.000000000 -0400
-@@ -23068,7 +23068,7 @@
+--- configure.orig	2008-10-01 12:15:58.000000000 -0400
++++ configure
+@@ -23079,7 +23079,7 @@ _ACEOF
  fi
  
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
    HAVE_AVCODEC_TRUE=
    HAVE_AVCODEC_FALSE='#'
  else
-@@ -23190,7 +23190,7 @@
+@@ -23201,7 +23201,7 @@ _ACEOF
  fi
  
  
@@ -21,7 +21,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
    HAVE_THEORA_TRUE=
    HAVE_THEORA_FALSE='#'
  else
-@@ -23312,7 +23312,7 @@
+@@ -23323,7 +23323,7 @@ _ACEOF
  fi
  
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
    HAVE_ALSA_TRUE=
    HAVE_ALSA_FALSE='#'
  else
-@@ -23434,7 +23434,7 @@
+@@ -23445,7 +23445,7 @@ _ACEOF
  fi
  
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
    HAVE_PNG_TRUE=
    HAVE_PNG_FALSE='#'
  else
-@@ -25322,7 +25322,7 @@
+@@ -25333,7 +25333,7 @@ else
  echo "${ECHO_T}yes" >&6; }
  	HAVE_LIBRAW1394="yes";LIBRAW1394_VERSION="RAW1394_1_1_API"
  fi
@@ -48,7 +48,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define RAW1394_1_1_API 1
-@@ -25719,7 +25719,7 @@
+@@ -25730,7 +25730,7 @@ echo "${ECHO_T} video-to-1394 plugin req
  	fi
  fi
  
@@ -57,7 +57,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define BUILD_VID21394 1
-@@ -25748,7 +25748,7 @@
+@@ -25759,7 +25759,7 @@ echo "${ECHO_T} IIDC 1394 camera plugin 
  	fi
  fi
  
@@ -66,7 +66,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define BUILD_DCAM 1
-@@ -25771,7 +25771,7 @@
+@@ -25782,7 +25782,7 @@ else
  fi
  
  
@@ -75,7 +75,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define BUILD_V4L 1
-@@ -25794,7 +25794,7 @@
+@@ -25805,7 +25805,7 @@ else
  fi
  
  
@@ -84,7 +84,34 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define BUILD_V4L2 1
-@@ -25820,7 +25820,7 @@
+@@ -25827,7 +25827,7 @@ else
+ fi
+ 
+ 
+-if test "x$USE_LIBV4L" == "xyes"; then
++if test "x$USE_LIBV4L" = "xyes"; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for LIBV4L" >&5
+@@ -25899,7 +25899,7 @@ else
+ echo "${ECHO_T}yes" >&6; }
+ 	HAVE_LIBV4L="yes"
+ fi
+-   if test "x$HAVE_LIBV4L" == "xyes"; then
++   if test "x$HAVE_LIBV4L" = "xyes"; then
+       { echo "$as_me:$LINENO: result: enable enable enable " >&5
+ echo "${ECHO_T}enable enable enable " >&6; }
+ 
+@@ -25917,7 +25917,7 @@ _ACEOF
+ fi
+ 
+ 
+-if test x$HAVE_LIBV4L == "xyes" ; then
++if test x$HAVE_LIBV4L = "xyes" ; then
+   HAVE_LIBV4L_TRUE=
+   HAVE_LIBV4L_FALSE='#'
+ else
+@@ -25944,7 +25944,7 @@ fi
  # Check whether --enable-static-cpi was given.
  if test "${enable_static_cpi+set}" = set; then
    enableval=$enable_static_cpi; {
@@ -93,7 +120,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define ENABLE_STATIC_CPI 1
-@@ -25848,7 +25848,7 @@
+@@ -25972,7 +25972,7 @@ fi
  # Check whether --enable-thread-locking was given.
  if test "${enable_thread_locking+set}" = set; then
    enableval=$enable_thread_locking; {
@@ -102,7 +129,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define UNICAP_THREAD_LOCKING 1
-@@ -25868,7 +25868,7 @@
+@@ -25992,7 +25992,7 @@ fi
  # Check whether --enable-unicap-threads was given.
  if test "${enable_unicap_threads+set}" = set; then
    enableval=$enable_unicap_threads; {
@@ -111,3 +138,21 @@ $NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define UNICAP_THREADS 1
+@@ -26728,6 +26728,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
+@@ -27969,7 +27971,7 @@ if test x$VID21394_VISCA = xyes; then
+ 	VID21394="$VID21394 with visca support"
+ fi
+ 
+-if test x$HAVE_LIBV4L == xyes && test x$V4L2 == xyes; then
++if test x$HAVE_LIBV4L = xyes && test x$V4L2 = xyes; then
+    V4L2="yes, with libv4l2 support"
+ fi
+ 
