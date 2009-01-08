@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7790 2009/01/08 01:10:20 jmcneill Exp $
+$NetBSD: TODO,v 1.7791 2009/01/08 01:37:44 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -615,7 +615,6 @@ Suggested package updates
 	o gettext-0.17
 	o gforth-0.7.0
 	o gfract-0.33
-	o gftp-2.0.19
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
