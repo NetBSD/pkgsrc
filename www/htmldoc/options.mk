@@ -1,14 +1,41 @@
-# $NetBSD: options.mk,v 1.1 2008/04/22 16:24:31 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2009/01/08 11:57:24 obache Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.htmldoc
-PKG_SUPPORTED_OPTIONS=	htmldoc-gui
+PKG_OPTIONS_VAR=		PKG_OPTIONS.htmldoc
+PKG_SUPPORTED_OPTIONS=		x11
+PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls ssl
+PKG_SUGGESTED_OPTIONS=		ssl
+PKG_OPTIONS_LEGACY_OPTS+=	htmldoc-gui:x11
 
 .include "../../mk/bsd.options.mk"
 
 ###
+### SSL support
+###
+.if !empty(PKG_OPTIONS:Mssl) || !empty(PKG_OPTIONS:Mgnutls)
+CONFIGURE_ARGS+=	--enable-ssl
+.  if !empty(PKG_OPTIONS:Mssl)
+.include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=	--with-openssl-libs=${SSLBASE:Q}/lib
+CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE:Q}/include
+.  else
+CONFIGURE_ARGS+=	--disable-openssl
+.  endif
+.  if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gnutls
+.  else
+CONFIGURE_ARGS+=	--disable-gnutls
+.  endif
+.else
+CONFIGURE_ARGS+=	--disable-ssl
+.endif
+
+###
 ### X11 GUI support
 ###
-.if !empty(PKG_OPTIONS:Mhtmldoc-gui)
+.if !empty(PKG_OPTIONS:Mx11)
 .  include "../../x11/fltk/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gui --with-x
