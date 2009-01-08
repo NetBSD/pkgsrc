@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.20 2009/01/08 00:01:30 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.21 2009/01/08 00:04:53 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.20 2009/01/08 00:01:30 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.21 2009/01/08 00:04:53 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1170,6 +1170,33 @@ check_signature(struct pkg_task *pkg, void *signature_cookie, int invalid_sig)
 }
 
 static int
+check_ignored_entry(struct pkg_vulnerabilities *pv, size_t i)
+{
+	const char *iter, *next;
+	size_t entry_len, url_len;
+
+	if (ignore_advisories == NULL)
+		return 0;
+
+	url_len = strlen(pv->advisory[i]);
+
+	for (iter = ignore_advisories; *iter; iter = next) {
+		if ((next = strchr(iter, '\n')) == NULL) {
+			entry_len = strlen(iter);
+			next = iter + entry_len;
+		} else {
+			entry_len = next - iter;
+			++next;
+		}
+		if (url_len != entry_len)
+			continue;
+		if (strncmp(pv->advisory[i], iter, entry_len) == 0)
+			return 1;
+	}
+	return 0;
+}
+
+static int
 check_vulnerable(struct pkg_task *pkg)
 {
 	static struct pkg_vulnerabilities *pv;
@@ -1198,6 +1225,8 @@ check_vulnerable(struct pkg_task *pkg)
 	}
 
 	for (i = 0; i < pv->entries; ++i) {
+		if (check_ignored_entry(pv, i))
+			continue;
 		if (!pkg_match(pv->vulnerability[i], pkg->pkgname))
 			continue;
 		if (strcmp("eol", pv->classification[i]) == 0)
