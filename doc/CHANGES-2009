@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.135 2009/01/08 16:25:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.136 2009/01/08 16:38:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -179,3 +179,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/clive to 2.1.2 [wiz 2009-01-08]
 	Updated converters/convmv to 1.13 [wiz 2009-01-08]
 	Updated www/curl to 7.19.2 [wiz 2009-01-08]
+	Updated security/openssl to 0.9.8j [tnn 2009-01-08]
