@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/07 16:19:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/08 22:09:35 minskim Exp $
 bin/a2ping
 bin/afm2tfm
 bin/aleph
@@ -38,13 +38,9 @@ bin/gftodvi
 bin/gftopk
 bin/gftype
 bin/gsftopk
-bin/kpseaccess
 bin/kpsepath
-bin/kpsereadlink
-bin/kpsestat
 bin/kpsetool
 bin/kpsewhere
-bin/kpsewhich
 bin/kpsexpand
 bin/mag
 bin/makeindex
@@ -57,10 +53,6 @@ bin/mkindex
 bin/mkocp
 bin/mkofm
 bin/mktexfmt
-bin/mktexlsr
-bin/mktexmf
-bin/mktexpk
-bin/mktextfm
 bin/mpost
 bin/mpto
 bin/mptopdf
@@ -121,61 +113,9 @@ bin/weave
 bin/xdvi
 bin/xdvi-xaw.bin
 bin/xdvizilla
-include/kpathsea/absolute.h
-include/kpathsea/c-auto.h
-include/kpathsea/c-ctype.h
-include/kpathsea/c-dir.h
-include/kpathsea/c-errno.h
-include/kpathsea/c-fopen.h
-include/kpathsea/c-limits.h
-include/kpathsea/c-memstr.h
-include/kpathsea/c-minmax.h
-include/kpathsea/c-namemx.h
-include/kpathsea/c-pathch.h
-include/kpathsea/c-pathmx.h
-include/kpathsea/c-proto.h
-include/kpathsea/c-stat.h
-include/kpathsea/c-std.h
-include/kpathsea/c-unistd.h
-include/kpathsea/c-vararg.h
-include/kpathsea/cnf.h
-include/kpathsea/concatn.h
-include/kpathsea/config.h
-include/kpathsea/db.h
-include/kpathsea/debug.h
-include/kpathsea/default.h
-include/kpathsea/expand.h
-include/kpathsea/fn.h
-include/kpathsea/fontmap.h
-include/kpathsea/getopt.h
-include/kpathsea/hash.h
-include/kpathsea/kpathsea.h
-include/kpathsea/lib.h
-include/kpathsea/line.h
-include/kpathsea/magstep.h
-include/kpathsea/paths.h
-include/kpathsea/pathsearch.h
-include/kpathsea/proginit.h
-include/kpathsea/progname.h
-include/kpathsea/readable.h
-include/kpathsea/str-list.h
-include/kpathsea/str-llist.h
-include/kpathsea/systypes.h
-include/kpathsea/tex-file.h
-include/kpathsea/tex-glyph.h
-include/kpathsea/tex-hush.h
-include/kpathsea/tex-make.h
-include/kpathsea/tilde.h
-include/kpathsea/truncate.h
-include/kpathsea/types.h
-include/kpathsea/variable.h
-include/kpathsea/xopendir.h
-include/kpathsea/xstat.h
 info/latex.info
 info/dvips.info
 info/web2c.info
-info/kpathsea.info
-lib/libkpathsea.la
 man/man1/afm2tfm.1
 man/man1/allcm.1
 man/man1/allec.1
@@ -215,13 +155,9 @@ man/man1/gftodvi.1
 man/man1/gftopk.1
 man/man1/gftype.1
 man/man1/gsftopk.1
-man/man1/kpseaccess.1
 man/man1/kpsepath.1
-man/man1/kpsereadlink.1
-man/man1/kpsestat.1
 man/man1/kpsetool.1
 man/man1/kpsewhere.1
-man/man1/kpsewhich.1
 man/man1/kpsexpand.1
 man/man1/lambda.1
 man/man1/latex.1
@@ -236,10 +172,6 @@ man/man1/mkindex.1
 man/man1/mkocp.1
 man/man1/mkofm.1
 man/man1/mktexfmt.1
-man/man1/mktexlsr.1
-man/man1/mktexmf.1
-man/man1/mktexpk.1
-man/man1/mktextfm.1
 man/man1/mpost.1
 man/man1/mpto.1
 man/man1/newer.1
@@ -319,34 +251,13 @@ share/texmf/texconfig/x/xterm
 share/texmf/web2c/aleph.pool
 share/texmf/web2c/fmtutil.cnf.dist
 share/texmf/web2c/mf.pool
-share/texmf/web2c/mktex.opt
-share/texmf/web2c/mktexdir
-share/texmf/web2c/mktexdir.opt
-share/texmf/web2c/mktexnam
-share/texmf/web2c/mktexnam.opt
-share/texmf/web2c/mktexupd
 share/texmf/web2c/mp.pool
 share/texmf/web2c/omega.pool
 share/texmf/web2c/pdfetex-pl.pool
 share/texmf/web2c/pdfetex.pool
 share/texmf/web2c/pdfxtex.pool
 share/texmf/web2c/tex.pool
-share/texmf/web2c/texmf.cnf.dist
 share/texmf/xdvi/XDvi
 share/texmf/xdvi/pixmaps/toolbar.xpm
 share/texmf/xdvi/pixmaps/toolbar2.xpm
 share/texmf/xdvi/xdvi.cfg
-@dirrm share/texmf/xdvi/pixmaps
-@dirrm share/texmf/xdvi
-@dirrm share/texmf/web2c
-@dirrm share/texmf/texconfig/x
-@dirrm share/texmf/texconfig/v
-@dirrm share/texmf/texconfig/g
-@dirrm share/texmf/texconfig
-@dirrm share/texmf/dvips/gsftopk
-@dirrm share/texmf/dvips/base
-@dirrm share/texmf/dvips
-@dirrm share/texmf/doc/tetex
-@dirrm share/texmf/doc
-@dirrm share/texmf
-@dirrm include/kpathsea

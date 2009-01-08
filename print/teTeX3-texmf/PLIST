@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/07 16:19:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/08 22:09:34 minskim Exp $
 share/texmf-dist/ChangeLog
 share/texmf-dist/LICENSE.texmf
 share/texmf-dist/aliases
@@ -14821,4 +14821,3 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/bibtex/bib/ams
 @dirrm share/texmf-dist/bibtex/bib
 @dirrm share/texmf-dist/bibtex
-@dirrm share/texmf-dist

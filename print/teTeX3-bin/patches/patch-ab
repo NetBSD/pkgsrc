@@ -1,8 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/03/31 22:09:18 hubertf Exp $
+$NetBSD: patch-ab,v 1.2 2009/01/08 22:09:35 minskim Exp $
 
---- texk/configure.orig	2005-02-06 18:27:03.000000000 +0000
+--- texk/configure.orig	2005-02-06 10:27:03.000000000 -0800
 +++ texk/configure
-@@ -1463,6 +1463,50 @@
+@@ -774,7 +774,7 @@ echo > confdefs.h
+ 
+ # A filename unique to this package, relative to the directory that
+ # configure is in, which we can look for to find out if srcdir is correct.
+-ac_unique_file=kpathsea/kpathsea.texi
++ac_unique_file=web2c/tex.web
+ 
+ # Find the source files, if location was not specified.
+ if test -z "$srcdir"; then
+@@ -1463,6 +1463,50 @@ test -z "$INSTALL_DATA" && INSTALL_DATA=
  # as few characters as possible.  Prefer GNU sed if found.
  
  
@@ -53,7 +62,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/31 22:09:18 hubertf Exp $
  
  # Check whether --with-bibtex8 or --without-bibtex8 was given.
  if test "${with_bibtex8+set}" = set; then
-@@ -6711,7 +6755,7 @@
+@@ -6697,6 +6741,8 @@ for ac_option
+ do
+   case "\$ac_option" in
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     echo "running \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion"
+     exec \${CONFIG_SHELL-/bin/sh} $0 $ac_configure_args --no-create --no-recursion ;;
+   -version | --version | --versio | --versi | --vers | --ver | --ve | --v)
+@@ -6711,7 +6757,7 @@ done
  ac_given_srcdir=$srcdir
  ac_given_INSTALL="$INSTALL"
  
@@ -62,7 +80,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2005/03/31 22:09:18 hubertf Exp $
  EOF
  cat >> $CONFIG_STATUS <<EOF
  
-@@ -6913,6 +6957,113 @@
+@@ -6913,6 +6959,113 @@ s%@INSTALL@%$INSTALL%g
  fi; done
  rm -f conftest.s*
  

@@ -1,0 +1,15 @@
+$NetBSD: patch-ba,v 1.1 2009/01/08 22:09:35 minskim Exp $
+
+--- texk/web2c/kpathsea.mk.orig	1999-01-12 11:11:00.000000000 -0800
++++ texk/web2c/kpathsea.mk
+@@ -1,7 +1,7 @@
+ # web2c/kpathsea.mk -- In subdirectories of web2c, the build directory
+ # for kpathsea is one more level up.  c_auto_h_dir is used by make depend.
+-kpathsea_parent = ../..
+-c_auto_h_dir = ..
++kpathsea_parent = $(KPATHSEA_PREFIX)/include
++c_auto_h_dir = $(KPATHSEA_PREFIX)/include/kpathsea
+ 
+-prog_cflags = -I.. -I$(srcdir)/..
++prog_cflags = -I$(KPATHSEA_PREFIX)/include -I$(srcdir)/..
+ # End of web2c/kpathsea.mk.
