@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 11:52:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/08 01:09:14 jmcneill Exp $
 bin/ucview
 include/ucview/ucview.h
 include/ucview/ucview_plugin.h
 lib/ucview/plugins/libhistogram.la
+man/man1/ucview.1
 share/applications/ucview.desktop
 share/dbus-1/services/org.unicap-imaging.UCView.service
 share/gconf/schemas/ucview.schemas
@@ -10,6 +11,7 @@ share/icons/hicolor/16x16/apps/ucview.png
 share/icons/hicolor/48x48/apps/ucview.png
 share/locale/de/LC_MESSAGES/ucview.mo
 share/locale/fr/LC_MESSAGES/ucview.mo
+share/locale/ru/LC_MESSAGES/ucview.mo
 share/ucview/icons/asus/41x41/ucview-device-settings.png
 share/ucview/icons/asus/41x41/ucview-pause.png
 share/ucview/icons/asus/41x41/ucview-play-video.png
