@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/24 15:20:06 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2009/01/08 11:57:24 obache Exp $
 
 PKGNAME=	${PKGNAME_BASE:S/-/-x11-/}
 
@@ -13,6 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS.htmldoc+=	htmldoc-gui
+PKG_OPTIONS.htmldoc+=	x11
 
 .include "../../www/htmldoc/Makefile"
