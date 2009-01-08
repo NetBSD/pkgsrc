@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.133 2009/01/08 16:09:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.134 2009/01/08 16:14:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -177,3 +177,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added x11/p5-Clipboard version 0.09 [wiz 2009-01-08]
 	Updated sysutils/etcmanage to 0.6 [gdt 2009-01-08]
 	Updated net/clive to 2.1.2 [wiz 2009-01-08]
+	Updated converters/convmv to 1.13 [wiz 2009-01-08]
