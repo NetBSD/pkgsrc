@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
+$NetBSD: patch-af,v 1.21.12.1 2009/01/08 18:11:26 tron Exp $
 
---- Makefile.org.orig	2007-04-24 01:49:54.000000000 +0200
-+++ Makefile.org	2007-10-28 12:44:05.000000000 +0100
+--- Makefile.org.orig	2008-12-30 14:26:26.000000000 +0100
++++ Makefile.org
 @@ -28,6 +28,7 @@ INSTALLTOP=/usr/local/ssl
  
  # Do not edit this manually. Use Configure --openssldir=DIR do change this!
@@ -10,7 +10,18 @@ $NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
  
  # NO_IDEA - Define to build without the IDEA algorithm
  # NO_RC4  - Define to build without the RC4 algorithm
-@@ -125,7 +126,7 @@ TESTS = alltests
+@@ -131,8 +132,8 @@ FIPSCANLIB=
+ 
+ BASEADDR=
+ 
+-DIRS=   crypto fips ssl engines apps test tools
+-SHLIBDIRS= crypto ssl fips
++DIRS=   crypto ssl engines apps test tools # fips
++SHLIBDIRS= crypto ssl # fips
+ 
+ # dirs in crypto to build
+ SDIRS=  \
+@@ -152,7 +153,7 @@ TESTS = alltests
  
  MAKEFILE= Makefile
  
@@ -19,15 +30,15 @@ $NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
  MAN1=1
  MAN3=3
  MANSUFFIX=
-@@ -140,6 +141,7 @@ SHARED_CRYPTO=libcrypto$(SHLIB_EXT)
- SHARED_SSL=libssl$(SHLIB_EXT)
+@@ -168,6 +169,7 @@ SHARED_SSL=libssl$(SHLIB_EXT)
+ SHARED_FIPS=
  SHARED_LIBS=
  SHARED_LIBS_LINK_EXTS=
 +LIBRPATH=$(INSTALLTOP)/lib
  SHARED_LDFLAGS=
  
  GENERAL=        Makefile
-@@ -172,7 +174,7 @@ BUILDENV=	PLATFORM='${PLATFORM}' PROCESS
+@@ -200,7 +202,7 @@ BUILDENV=	PLATFORM='${PLATFORM}' PROCESS
  		CC='${CC}' CFLAG='${CFLAG}' 			\
  		AS='${CC}' ASFLAG='${CFLAG} -c'			\
  		AR='${AR}' PERL='${PERL}' RANLIB='${RANLIB}'	\
@@ -36,7 +47,7 @@ $NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
  		INSTALL_PREFIX='${INSTALL_PREFIX}'		\
  		INSTALLTOP='${INSTALLTOP}' OPENSSLDIR='${OPENSSLDIR}'	\
  		MAKEDEPEND='$$$${TOP}/util/domd $$$${TOP} -MD ${MAKEDEPPROG}' \
-@@ -473,7 +475,7 @@ dist:   
+@@ -608,7 +610,7 @@ dist:   
  dist_pem_h:
  	(cd crypto/pem; $(MAKE) -e $(BUILDENV) pem.h; $(MAKE) clean)
  
@@ -45,7 +56,7 @@ $NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
  
  install_sw:
  	@$(PERL) $(TOP)/util/mkdir-p.pl $(INSTALL_PREFIX)$(INSTALLTOP)/bin \
-@@ -481,9 +483,7 @@ install_sw:
+@@ -616,9 +618,7 @@ install_sw:
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib/engines \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/lib/pkgconfig \
  		$(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl \
@@ -56,7 +67,7 @@ $NetBSD: patch-af,v 1.21 2008/01/17 06:42:48 tnn Exp $
  	@set -e; headerlist="$(EXHEADER)"; for i in $$headerlist;\
  	do \
  	(cp $$i $(INSTALL_PREFIX)$(INSTALLTOP)/include/openssl/$$i; \
-@@ -553,35 +553,53 @@ install_docs:
+@@ -688,35 +688,53 @@ install_docs:
  	set -e; for i in doc/apps/*.pod; do \
  		fn=`basename $$i .pod`; \
  		sec=`$(PERL) util/extract-section.pl 1 < $$i`; \
