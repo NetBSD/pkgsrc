@@ -32,7 +32,7 @@ DDEESSCCRRIIPPTTIIOONN
              Path to a file containing additional certificates that can be
              used for completing certicate chains when validating binary pack-
              ages or pkg-vulnerabilities files.  CHECK_VULNERABILITIES Check
-             for vulnerabilities when installating packages.  Supported values
+             for vulnerabilities when installing packages.  Supported values
              are:
 
              never          No check is performed.
