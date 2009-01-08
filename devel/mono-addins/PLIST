@@ -1,18 +1,31 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/19 13:43:19 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/08 12:17:40 wiz Exp $
 bin/mautil
-lib/mono/gac/Mono.Addins.Gui/0.3.0.0__0738eb9f132ed756/Mono.Addins.Gui.dll
-lib/mono/gac/Mono.Addins.Gui/0.3.0.0__0738eb9f132ed756/Mono.Addins.Gui.dll.mdb
-lib/mono/gac/Mono.Addins.Setup/0.3.0.0__0738eb9f132ed756/Mono.Addins.Setup.dll
-lib/mono/gac/Mono.Addins.Setup/0.3.0.0__0738eb9f132ed756/Mono.Addins.Setup.dll.mdb
-lib/mono/gac/Mono.Addins/0.3.0.0__0738eb9f132ed756/Mono.Addins.dll
-lib/mono/gac/Mono.Addins/0.3.0.0__0738eb9f132ed756/Mono.Addins.dll.config
-lib/mono/gac/Mono.Addins/0.3.0.0__0738eb9f132ed756/Mono.Addins.dll.mdb
+lib/mono/gac/Mono.Addins.CecilReflector/0.4.0.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll
+lib/mono/gac/Mono.Addins.CecilReflector/0.4.0.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll.mdb
+lib/mono/gac/Mono.Addins.Gui/0.4.0.0__0738eb9f132ed756/Mono.Addins.Gui.dll
+lib/mono/gac/Mono.Addins.Gui/0.4.0.0__0738eb9f132ed756/Mono.Addins.Gui.dll.mdb
+lib/mono/gac/Mono.Addins.Setup/0.4.0.0__0738eb9f132ed756/Mono.Addins.Setup.dll
+lib/mono/gac/Mono.Addins.Setup/0.4.0.0__0738eb9f132ed756/Mono.Addins.Setup.dll.mdb
+lib/mono/gac/Mono.Addins/0.4.0.0__0738eb9f132ed756/Mono.Addins.dll
+lib/mono/gac/Mono.Addins/0.4.0.0__0738eb9f132ed756/Mono.Addins.dll.config
+lib/mono/gac/Mono.Addins/0.4.0.0__0738eb9f132ed756/Mono.Addins.dll.mdb
+lib/mono/gac/policy.0.2.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756/policy.0.2.Mono.Addins.CecilReflector.dll
+lib/mono/gac/policy.0.2.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756/policy.0.2.config
 lib/mono/gac/policy.0.2.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756/policy.0.2.Mono.Addins.Gui.dll
 lib/mono/gac/policy.0.2.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756/policy.0.2.config
 lib/mono/gac/policy.0.2.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756/policy.0.2.Mono.Addins.Setup.dll
 lib/mono/gac/policy.0.2.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756/policy.0.2.config
 lib/mono/gac/policy.0.2.Mono.Addins/0.0.0.0__0738eb9f132ed756/policy.0.2.Mono.Addins.dll
 lib/mono/gac/policy.0.2.Mono.Addins/0.0.0.0__0738eb9f132ed756/policy.0.2.config
+lib/mono/gac/policy.0.3.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756/policy.0.3.Mono.Addins.CecilReflector.dll
+lib/mono/gac/policy.0.3.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756/policy.0.3.config
+lib/mono/gac/policy.0.3.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756/policy.0.3.Mono.Addins.Gui.dll
+lib/mono/gac/policy.0.3.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756/policy.0.3.config
+lib/mono/gac/policy.0.3.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756/policy.0.3.Mono.Addins.Setup.dll
+lib/mono/gac/policy.0.3.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756/policy.0.3.config
+lib/mono/gac/policy.0.3.Mono.Addins/0.0.0.0__0738eb9f132ed756/policy.0.3.Mono.Addins.dll
+lib/mono/gac/policy.0.3.Mono.Addins/0.0.0.0__0738eb9f132ed756/policy.0.3.config
+lib/mono/mono-addins/Mono.Addins.CecilReflector.dll
 lib/mono/mono-addins/Mono.Addins.Gui.dll
 lib/mono/mono-addins/Mono.Addins.Setup.dll
 lib/mono/mono-addins/Mono.Addins.dll
@@ -20,16 +33,29 @@ lib/mono/mono-addins/mautil.exe
 lib/pkgconfig/mono-addins-gui.pc
 lib/pkgconfig/mono-addins-setup.pc
 lib/pkgconfig/mono-addins.pc
+man/man1/mautil.1
 @dirrm lib/mono/mono-addins
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins/0.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.Setup
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.Gui
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins.CecilReflector
+@dirrm lib/mono/gac/policy.0.3.Mono.Addins
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins/0.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins.Setup/0.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins.Setup
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins.Gui/0.0.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins.Gui
+@dirrm lib/mono/gac/policy.0.2.Mono.Addins.CecilReflector/0.0.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/policy.0.2.Mono.Addins.CecilReflector
 @dirrm lib/mono/gac/policy.0.2.Mono.Addins
-@dirrm lib/mono/gac/Mono.Addins/0.3.0.0__0738eb9f132ed756
-@dirrm lib/mono/gac/Mono.Addins.Setup/0.3.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.Addins/0.4.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.Addins.Setup/0.4.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.Addins.Setup
-@dirrm lib/mono/gac/Mono.Addins.Gui/0.3.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.Addins.Gui/0.4.0.0__0738eb9f132ed756
 @dirrm lib/mono/gac/Mono.Addins.Gui
+@dirrm lib/mono/gac/Mono.Addins.CecilReflector/0.4.0.0__0738eb9f132ed756
+@dirrm lib/mono/gac/Mono.Addins.CecilReflector
 @dirrm lib/mono/gac/Mono.Addins
