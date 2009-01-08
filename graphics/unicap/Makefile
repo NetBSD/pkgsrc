@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/08 01:08:37 jmcneill Exp $
 
-DISTNAME=	unicap-0.9.1
-PKGREVISION=	1
+DISTNAME=	unicap-0.9.3
 CATEGORIES=	graphics
 MASTER_SITES=	http://unicap-imaging.org/downloads/
 

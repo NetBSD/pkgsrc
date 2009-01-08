@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+$NetBSD: patch-al,v 1.2 2009/01/08 01:08:37 jmcneill Exp $
 
 
---- cpi/v4l2/uvc_compat.h.orig	2008-09-08 23:16:59.000000000 -0400
-+++ cpi/v4l2/uvc_compat.h	2008-09-08 23:18:15.000000000 -0400
+--- cpi/v4l2cpi/uvc_compat.h.orig	2008-06-12 11:25:05.000000000 -0400
++++ cpi/v4l2cpi/uvc_compat.h
 @@ -1,7 +1,12 @@
  #ifndef _UVC_COMPAT_H
  #define _UVC_COMPAT_H

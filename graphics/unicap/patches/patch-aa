@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/01/08 01:08:37 jmcneill Exp $
 
 
---- libucil/colorspace.c.orig	2008-08-12 04:31:15.000000000 -0400
-+++ libucil/colorspace.c	2008-09-09 00:10:25.000000000 -0400
+--- libucil/colorspace.c.orig	2008-10-01 04:14:46.000000000 -0400
++++ libucil/colorspace.c
 @@ -25,7 +25,12 @@
  #endif //HAVE_AVCODEC
  
@@ -16,15 +16,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
  #include <glib.h>
  #include <string.h>
  
-@@ -1595,9 +1600,8 @@
-       }
-       else
-       {
--	 g_message( "Could not convert format: %c%c%c%c %08x to %c%c%c%c %08x\n", 
--		    src->format.fourcc, src->format.fourcc,
--		    dest->format.fourcc, dest->format.fourcc );
-+	 g_message( "Could not convert format: %08x to %08x\n", 
-+		    src->format.fourcc, dest->format.fourcc );
-       }
-       
-    }
