@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.578 2009/01/05 12:31:54 jmcneill Exp $
+# $NetBSD: Makefile,v 1.579 2009/01/08 15:47:23 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -244,6 +244,7 @@ SUBDIR+=	ocaml-graphics
 SUBDIR+=	oneko
 SUBDIR+=	openbsd-input-ws
 SUBDIR+=	openmotif
+SUBDIR+=	p5-Clipboard
 SUBDIR+=	p5-Gtk2-Ex-FormFactory
 SUBDIR+=	p5-Tk
 SUBDIR+=	p5-X11-Protocol
