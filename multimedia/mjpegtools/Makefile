@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/01/08 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/01/08 17:25:40 wiz Exp $
 
 DISTNAME=	mjpegtools-1.9.0
 CATEGORIES=	multimedia
@@ -22,7 +22,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 SHLIBTOOL_OVERRIDE=	# empty
 PKGCONFIG_OVERRIDE=	mjpegtools.pc.in
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-libquicktime
