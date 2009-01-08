@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.7 2009/01/08 11:58:31 obache Exp $
+
+Portability fix, s6_addr32 is not a standard.
+
+--- htmldoc/http-addrlist.c.orig	2006-06-20 15:23:49.000000000 +0000
++++ htmldoc/http-addrlist.c
+@@ -502,7 +502,7 @@ httpAddrGetList(const char *hostname,	/*
+ #  ifdef WIN32
+ 	temp->addr.ipv6.sin6_addr.u.Byte[15]   = 1;
+ #  else
+-	temp->addr.ipv6.sin6_addr.s6_addr32[3] = htonl(1);
++	temp->addr.ipv6.sin6_addr.s6_addr[15] = 1;
+ #  endif /* WIN32 */
+ 
+         if (!first)
