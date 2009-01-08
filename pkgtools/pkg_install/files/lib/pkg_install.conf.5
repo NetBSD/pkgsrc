@@ -1,6 +1,6 @@
-.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.3 2008/08/21 16:10:01 joerg Exp $
+.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.4 2009/01/08 00:01:31 joerg Exp $
 .\"
-.\" Copyright (c) 2008 The NetBSD Foundation, Inc.
+.\" Copyright (c) 2008, 2009 The NetBSD Foundation, Inc.
 .\" All rights reserved.
 .\"
 .\" This code is derived from software contributed to The NetBSD Foundation
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd August 21, 2008
+.Dd January 8, 2009
 .Dt PKG_INSTALL.CONF 5
 .Os
 .Sh NAME
@@ -67,6 +67,18 @@ contained in this file.
 Path to a file containing additional certificates that can be used
 for completing certicate chains when validating binary packages or
 pkg-vulnerabilities files.
+.Dv CHECK_VULNERABILITIES
+Check for vulnerabilities when installating packages.
+Supported values are:
+.Bl -tag -width interactiveXX
+.It Dv never
+No check is performed.
+.It Dv always
+Passing the vulnerability check is required.
+A missing pkg-vulnerabilities file is considered an error.
+.It Dv interactive
+The user is always asked to confirm installation of vulnerable packages.
+.El
 .It Dv GPG
 Deprecated.
 Path to

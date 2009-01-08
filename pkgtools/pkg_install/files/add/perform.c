@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.19 2008/08/25 19:15:11 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.20 2009/01/08 00:01:30 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,13 +6,13 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.19 2008/08/25 19:15:11 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.20 2009/01/08 00:01:30 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
  * Copyright (c) 2005 Dieter Baron <dillo@NetBSD.org>
  * Copyright (c) 2007 Roland Illig <rillig@NetBSD.org>
- * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
+ * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1169,6 +1169,53 @@ check_signature(struct pkg_task *pkg, void *signature_cookie, int invalid_sig)
 	return 1;
 }
 
+static int
+check_vulnerable(struct pkg_task *pkg)
+{
+	static struct pkg_vulnerabilities *pv;
+	size_t i;
+	int require_check;
+	char *line;
+	size_t len;
+
+	if (strcasecmp(check_vulnerabilities, "never") == 0)
+		return 0;
+	else if (strcasecmp(check_vulnerabilities, "always"))
+		require_check = 1;
+	else if (strcasecmp(check_vulnerabilities, "interactive"))
+		require_check = 0;
+	else {
+		warnx("Unknown value of the configuration variable"
+		    "CHECK_VULNERABILITIES");
+		return 1;
+	}
+
+	if (pv == NULL) {
+		pv = read_pkg_vulnerabilities(pkg_vulnerabilities_file,
+		    require_check, 0);
+		if (pv == NULL)
+			return require_check;
+	}
+
+	for (i = 0; i < pv->entries; ++i) {
+		if (!pkg_match(pv->vulnerability[i], pkg->pkgname))
+			continue;
+		if (strcmp("eol", pv->classification[i]) == 0)
+			continue;
+		warnx("Package %s has a %s vulnerability, see %s",
+		    pkg->pkgname, pv->classification[i], pv->advisory[i]);
+		fprintf(stderr, "Do you want to proceed with "
+		    "the installation of %s [y/n]?\n", pkg->pkgname);
+		line = fgetln(stdin, &len);
+		if (check_input(line, len)) {
+			fprintf(stderr, "Cancelling installation\n");
+			return 1;
+		}
+		return 0;
+	}
+	return 0;
+}
+
 /*
  * Install a single package.
  */
@@ -1205,6 +1252,9 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		goto clean_memory;
 
 	if (check_signature(pkg, &signature_cookie, invalid_sig))
+		goto clean_memory;
+
+	if (check_vulnerable(pkg))
 		goto clean_memory;
 
 	if (pkg->meta_data.meta_mtree != NULL)
