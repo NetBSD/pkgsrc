@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.124 2009/01/08 10:04:52 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.125 2009/01/08 11:59:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/bind96 to 9.6.0pl1 [adrianp 2009-01-08]
 	Updated fonts/freefont-ttf to 20090104 [wiz 2009-01-08]
 	Updated x11/lablgtk to 2.12.0 [wiz 2009-01-08]
+	Updated www/htmldoc to 1.8.27 [obache 2009-01-08]
