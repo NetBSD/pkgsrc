@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/09/22 15:04:42 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/08 08:42:41 dsainty Exp $
 #
 
 DISTNAME=	exempi-2.0.0
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+CONFIGURE_ARGS+=	LIBS=${BUILDLINK_LDADD.iconv:Q}
 
 PKGCONFIG_OVERRIDE+=	exempi/exempi-2.0.pc.in
 
