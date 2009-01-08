@@ -1,0 +1,22 @@
+$NetBSD: patch-az,v 1.1 2009/01/08 22:09:35 minskim Exp $
+
+--- texk/Makefile.in.orig	2005-01-21 01:11:48.000000000 -0800
++++ texk/Makefile.in
+@@ -36,7 +36,7 @@ default all: do-kpathsea
+ 	  (cd $$d && $(MAKE) $(makeargs) $@) || exit 1; else true; fi; done
+ 
+ install install-data install-exec:
+-	for d in kpathsea $(programs); do if test -f $$d/Makefile; then \
++	for d in $(programs); do if test -f $$d/Makefile; then \
+ 	  (cd $$d && $(MAKE) $(installargs) $@) || exit 1; else true; fi; done
+ 
+ # Other standard targets for everything.
+@@ -59,7 +59,7 @@ distclean realclean::
+ # Unconditionally remake the library, since we don't want to write out
+ # the dependencies here.
+ do-kpathsea:
+-	cd $(kpathsea_dir) && $(MAKE) $(makeargs)
++	true
+ 
+ # Targets that only apply to web2c.
+ triptrap trip trap mptrap \
