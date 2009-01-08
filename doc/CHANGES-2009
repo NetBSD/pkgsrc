@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.127 2009/01/08 12:17:49 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.128 2009/01/08 12:20:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -171,3 +171,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/htmldoc to 1.8.27 [obache 2009-01-08]
 	Updated misc/kchmviewer to 4.0 [wiz 2009-01-08]
 	Updated devel/mono-addins to 0.4 [wiz 2009-01-08]
+	Updated graphics/pngcrush to 1.6.13 [adam 2009-01-08]
