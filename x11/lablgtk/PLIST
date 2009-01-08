@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2008/12/28 13:10:29 adrianp Exp $
-bin/gdk-pixbuf-mlsource
+@comment $NetBSD: PLIST,v 1.10 2009/01/08 10:04:29 wiz Exp $
+bin/gdk_pixbuf_mlsource
 bin/lablgtk2
 lib/ocaml/lablgtk2/gAction.cmi
 lib/ocaml/lablgtk2/gAction.cmx
