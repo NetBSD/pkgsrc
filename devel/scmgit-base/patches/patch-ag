@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.5 2008/09/13 00:36:37 bjs Exp $
+$NetBSD: patch-ag,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
 
---- templates/Makefile.orig	2008-08-24 19:41:58.000000000 -0400
+--- templates/Makefile.orig	2008-12-20 06:54:30.000000000 +0100
 +++ templates/Makefile
 @@ -8,7 +8,7 @@ INSTALL ?= install
  TAR ?= tar
@@ -15,12 +15,12 @@ $NetBSD: patch-ag,v 1.5 2008/09/13 00:36:37 bjs Exp $
  		case "$$boilerplate" in *~) continue ;; esac && \
  		dst=`echo "$$boilerplate" | sed -e 's|^this|.|;s|--|/|g'` && \
  		dir=`expr "$$dst" : '\(.*\)/'` && \
--		$(INSTALL) -d -m 755 blt/$$dir && \
+-		mkdir -p blt/$$dir && \
 +		$(BSD_INSTALL_DATA_DIR) blt/$$dir && \
  		case "$$boilerplate" in \
- 		*--) ;; \
- 		*) cp -p $$boilerplate blt/$$dst ;; \
-@@ -46,6 +46,6 @@ clean:
+ 		*--) continue;; \
+ 		esac && \
+@@ -48,6 +48,6 @@ clean:
  	$(RM) -r blt boilerplates.made
  
  install: all
