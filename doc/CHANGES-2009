@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.142 2009/01/09 12:54:33 abs Exp $
+$NetBSD: CHANGES-2009,v 1.143 2009/01/09 13:09:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-hugelatex to 2.0nb5 [minskim 2009-01-08]
 	Updated textproc/hunspell-de to 20090107 [wiz 2009-01-09]
 	Updated devel/cpuflags to 1.32 [abs 2009-01-09]
+	Updated net/clive to 2.1.3 [wiz 2009-01-09]
