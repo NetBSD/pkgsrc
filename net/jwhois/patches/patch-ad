@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/01/09 16:20:20 shattered Exp $
+
+--- src/Makefile.in.orig	2007-06-08 17:46:00.000000000 +0000
++++ src/Makefile.in
+@@ -241,7 +241,7 @@ clean-binPROGRAMS:
+ 	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+ jwhois$(EXEEXT): $(jwhois_OBJECTS) $(jwhois_DEPENDENCIES) 
+ 	@rm -f jwhois$(EXEEXT)
+-	$(LINK) $(jwhois_LDFLAGS) $(jwhois_OBJECTS) $(jwhois_LDADD) $(LIBS)
++	$(LINK) $(jwhois_LDFLAGS) $(jwhois_OBJECTS) $(jwhois_LDADD) $(jwhois_LIBS)
+ 
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
