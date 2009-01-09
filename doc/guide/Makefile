@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/10/12 01:29:10 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.33 2009/01/09 10:58:47 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -17,6 +17,7 @@ PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
 NO_MTREE=		yes
 USE_LANGUAGES=		# empty
+MAKE_ENV+=		SED=${SED:Q}
 
 PLIST_SRC=		${WRKDIR}/PLIST_DYNAMIC
 DOCDIR=			${PREFIX}/share/doc/pkgsrc
