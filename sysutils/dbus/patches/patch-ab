@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
+$NetBSD: patch-ab,v 1.17 2009/01/09 21:47:32 he Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2008-10-07 00:14:50 +0300
-+++ dbus/dbus-sysdeps-unix.c	2009-01-06 16:17:35 +0200
+--- dbus/dbus-sysdeps-unix.c.orig	2008-12-18 22:35:53 +0200
++++ dbus/dbus-sysdeps-unix.c	2009-01-09 13:49:43 +0200
 @@ -23,6 +23,7 @@
   */
  
@@ -130,32 +130,39 @@ $NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
    _DBUS_ASSERT_ERROR_IS_CLEAR (error);
    
    /* The POSIX spec certainly doesn't promise this, but
-@@ -1170,10 +1207,10 @@ _dbus_read_credentials_socket  (int     
+@@ -1170,11 +1207,16 @@ _dbus_read_credentials_socket  (int     
    msg.msg_iov = &iov;
    msg.msg_iovlen = 1;
  
 -#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
 +#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
    memset (&cmsg, 0, sizeof (cmsg));
--  msg.msg_control = &cmsg;
--  msg.msg_controllen = sizeof (cmsg);
++#ifdef HAVE_CMSGCRED
 +  msg.msg_control = (caddr_t) &cmsg;
 +  msg.msg_controllen = CMSG_SPACE (sizeof (struct cmsgcred));
++#else /* defined(LOCAL_CREDS) */
+   msg.msg_control = &cmsg;
+   msg.msg_controllen = sizeof (cmsg);
  #endif
++#endif
  
   again:
-@@ -1210,8 +1247,8 @@ _dbus_read_credentials_socket  (int     
+   bytes_read = recvmsg (client_fd, &msg, 0);
+@@ -1210,8 +1252,12 @@ _dbus_read_credentials_socket  (int     
        return FALSE;
      }
  
 -#if defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)
--  if (cmsg.hdr.cmsg_len < sizeof (cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS)
 +#if (defined(HAVE_CMSGCRED) || defined(LOCAL_CREDS)) && !defined(LOCAL_PEEREID)
++#ifdef HAVE_CMSGCRED
 +  if (cmsg.hdr.cmsg_len < CMSG_LEN (sizeof (struct cmsgcred)) || cmsg.hdr.cmsg_type != SCM_CREDS)
++#else /* defined(LOCAL_CREDS) */
+   if (cmsg.hdr.cmsg_len < sizeof (cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS)
++#endif
      {
        dbus_set_error (error, DBUS_ERROR_FAILED,
                        "Message from recvmsg() was not SCM_CREDS");
-@@ -1238,8 +1275,21 @@ _dbus_read_credentials_socket  (int     
+@@ -1238,8 +1284,21 @@ _dbus_read_credentials_socket  (int     
  		       cr_len, (int) sizeof (cr), _dbus_strerror (errno));
        }
  #elif defined(HAVE_CMSGCRED)
@@ -179,7 +186,7 @@ $NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
  #elif defined(LOCAL_CREDS)
      pid_read = DBUS_PID_UNSET;
      uid_read = cmsg.cred.sc_uid;
-@@ -1301,7 +1351,7 @@ _dbus_read_credentials_socket  (int     
+@@ -1301,7 +1360,7 @@ _dbus_read_credentials_socket  (int     
        }
      if (ucred != NULL)
        ucred_free (ucred);
@@ -188,7 +195,7 @@ $NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
      _dbus_verbose ("Socket credentials not supported on this OS\n");
  #endif
    }
-@@ -1826,7 +1876,26 @@ _dbus_parse_uid (const DBusString      *
+@@ -1826,7 +1885,26 @@ _dbus_parse_uid (const DBusString      *
    return TRUE;
  }
  
@@ -215,7 +222,7 @@ $NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
  _DBUS_DEFINE_GLOBAL_LOCK (atomic);
  
  #if DBUS_USE_ATOMIC_INT_486_COND
-@@ -1891,6 +1960,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
+@@ -1891,6 +1969,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
    return res;
  #endif
  }
@@ -223,7 +230,7 @@ $NetBSD: patch-ab,v 1.16 2009/01/06 19:00:50 hasso Exp $
  
  #ifdef DBUS_BUILD_TESTS
  /** Gets our GID
-@@ -2793,8 +2863,18 @@ int
+@@ -2792,8 +2871,18 @@ int
  _dbus_printf_string_upper_bound (const char *format,
                                   va_list     args)
  {
