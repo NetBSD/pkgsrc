@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7794 2009/01/09 14:57:59 wiz Exp $
+$NetBSD: TODO,v 1.7795 2009/01/09 16:21:47 shattered Exp $
 
 Suggested new packages
 ======================
@@ -726,7 +726,6 @@ Suggested package updates
 	o john-1.7.3.1
 	o jools-1.0
 	o jpilot-1.6.1
-	o jwhois-4.0 [pkg/38500]
 	o kadu-0.6.5
 	o kapooka-0.3
 	o kdbg-2.1.1
