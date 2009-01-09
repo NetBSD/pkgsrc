@@ -1,8 +1,10 @@
-# $NetBSD: subr_x86,v 1.8 2008/12/31 14:49:54 abs Exp $
+# $NetBSD: subr_x86,v 1.9 2009/01/09 12:54:15 abs Exp $
 
 # Apparently the only way to reliably determine the architecture of a recent
 # Intel CPU is to use the cpu brand string - as they reused family and
 # extended family bitflags... annoying
+# Even better, they appear to have reused brand strings between Northwood
+# and Prescott pentium4s. Thats just... special.
 
 # AMD, in contrast decided to keep things simple:
 # (thanks to Christoph Egger for this list)
@@ -13,8 +15,17 @@
 
 map_x86_brand_string()
     {
-    case "$1" in
-	"AMD-K6(tm)-III Processor"*) 		echo '-march=k6-3' ;;
+    case "$cpu_brand" in
+	"AMD*")
+	    case "$cpu_family-$cpu_model" in
+		5-6 | 5-7 )			echo '-march=k6' ;;
+		5-8 )				echo '-march=k6-2' ;;
+		5-9 )				echo '-march=k6-3' ;;
+		6-1 | 6-2 | 6-3 )		echo '-march=athlon' ;;
+		6-4 | 6-6 | 6-7 | 6-8 | 6-a ) 	echo '-march=athlon-4' ;;
+	    esac
+	    ;;
+
 	"VIA Nehemiah"*)			echo '-march=c3' ;;
 
 	"Genuine Intel(R) CPU           T2400"*) echo '-march=core2' ;;
@@ -26,11 +37,12 @@ map_x86_brand_string()
 	"Intel(R) Core(TM)2 CPU "*) 		echo '-march=core2' ;;
 	"Intel(R) Core(TM)2 Duo CPU "*)		echo '-march=core2' ;;
 	"Intel(R) Core(TM)2 Quad  CPU"*)	echo '-march=core2' ;;
-	"Intel(R) Pentium(R) 4 CPU 2.00GHz")	echo '-march=pentium4' ;;
-	"Intel(R) Pentium(R) 4 CPU 2.80GHz")	echo '-march=pentium4' ;;
-	"Intel(R) Pentium(R) 4 CPU 3.00GHz")	echo '-march=prescott' ;;
-	"Intel(R) Pentium(R) 4 CPU 3.20GHz")	echo '-march=prescott' ;;
-	"Intel(R) Pentium(R) D CPU "*)		echo '-march=prescott' ;;
+	"Intel(R) Pentium(R) 4 CPU"*)
+	    if [ -n "$cpu_feature_SSE3" ] ; then
+						echo '-march=prescott'
+	    else
+		     				echo '-march=pentium4'
+	    fi ;;
 	"Intel(R) Pentium(R) M processor "*)	echo '-march=pentium-m' ;;
 	"Intel(R) Xeon(R) CPU            3040"*) echo '-march=core2' ;;
 	"Intel(R) Xeon(R) CPU            3050"*) echo '-march=core2' ;;
