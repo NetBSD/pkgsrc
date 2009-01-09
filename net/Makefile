@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.753 2009/01/06 03:58:30 jmcneill Exp $
+# $NetBSD: Makefile,v 1.754 2009/01/09 19:34:44 rillig Exp $
 #
 
 COMMENT=	Networking tools
@@ -365,8 +365,8 @@ SUBDIR+=	p5-POE-Component-Client-DNS
 SUBDIR+=	p5-POE-Component-Client-Ident
 SUBDIR+=	p5-POE-Component-SNMP
 SUBDIR+=	p5-RADIUS
-SUBDIR+=	p5-RadiusPerl
 SUBDIR+=	p5-RPC-XML
+SUBDIR+=	p5-RadiusPerl
 SUBDIR+=	p5-SNMP-Info
 SUBDIR+=	p5-SNMP-MIB-Compiler
 SUBDIR+=	p5-SNMP_Session
