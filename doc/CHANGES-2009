@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.145 2009/01/09 13:49:42 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.146 2009/01/09 13:56:43 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -192,3 +192,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmgit-base to 1.6.0.6 [tonnerre 2009-01-09]
 	Updated devel/scmgit-docs to 1.6.0.6 [tonnerre 2009-01-09]
 	Updated devel/scmgit to 1.6.0.6 [tonnerre 2009-01-09]
+	Updated www/gitweb to 1.6.0.6 [tonnerre 2009-01-09]
