@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/14 21:03:41 minskim Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/09 13:42:15 tonnerre Exp $
 bin/git
+bin/git-cvsserver
 bin/git-receive-pack
+bin/git-shell
 bin/git-upload-archive
 bin/git-upload-pack
 ${PLIST.gui}bin/gitk
