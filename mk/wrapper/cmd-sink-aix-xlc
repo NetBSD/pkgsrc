@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.8 2008/12/29 16:53:06 joerg Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.9 2009/01/09 11:46:34 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -71,12 +71,24 @@ while ! queue_is_empty cmdbuf; do
 		;;
 	# GCC and xlC allow -rpath directly, so keep this behavior.
 	-rpath)
-		pop_queue argbuf dir
+		pop_queue cmdbuf dir
 		case $blibpath in
 		"")	blibpath="$dir" ;;
 		*)	blibpath="$blibpath:$dir" ;;
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-aix-xlc) drop: $dir [adding to blibpath]"
+		;;
+	-shared)
+		arg="-bshared"
+		. $buildcmd
+		;;
+	-Wl,-soname*)
+		arg=-brtl
+		. $buildcmd
+		arg=-Wl,-G
+		. $buildcmd
+		arg=-Wl,-bexpall
+		. $buildcmd
 		;;
 	*)
 		. $buildcmd
