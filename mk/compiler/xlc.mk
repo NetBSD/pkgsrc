@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.21 2008/12/29 21:26:55 joerg Exp $
+# $NetBSD: xlc.mk,v 1.22 2009/01/09 11:46:34 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -135,7 +135,7 @@ ${_XLC_CPP}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}						\
 	(${ECHO} '#!${TOOLS_SHELL}';			\
-	 ${ECHO} 'exec ${XLCBASE}/bin/xlc -E @$$@"';	\
+	 ${ECHO} 'exec ${XLCBASE}/bin/xlc -E "$$@"';	\
 	) > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
 
