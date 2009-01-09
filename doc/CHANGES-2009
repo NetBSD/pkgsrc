@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.150 2009/01/09 22:09:56 he Exp $
+$NetBSD: CHANGES-2009,v 1.151 2009/01/09 22:29:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -198,3 +198,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/xmp to 2.5.1 [shattered 2009-01-09]
 	Updated sysutils/dbus to 1.2.4.2nb1 [he 2009-01-09]
 	Updated sysutils/dbus to 1.2.4.2nb2 [he 2009-01-09]
+	Updated sysutils/strigi to 0.6.2 [markd 2009-01-09]
