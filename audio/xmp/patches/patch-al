@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1 2006/06/30 12:54:38 tron Exp $
+$NetBSD: patch-al,v 1.2 2009/01/09 20:43:53 shattered Exp $
 
---- src/drivers/netbsd.c.orig	2000-12-29 18:08:08.000000000 +0000
-+++ src/drivers/netbsd.c	2006-06-30 12:11:46.000000000 +0100
-@@ -182,7 +182,7 @@
+--- src/drivers/netbsd.c.orig	2007-11-11 16:06:52.000000000 +0000
++++ src/drivers/netbsd.c
+@@ -182,7 +182,7 @@ static void bufdump(struct xmp_context *
      while (i) {
  	if ((j = write (audio_fd, b, i)) > 0) {
  	    i -= j;
@@ -10,4 +10,4 @@ $NetBSD: patch-al,v 1.1 2006/06/30 12:54:38 tron Exp $
 +	    b = (char *)b + j;
  	} else
  	    break;
-     };
+     }
