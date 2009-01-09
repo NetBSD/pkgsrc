@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/04 11:11:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/09 22:22:04 markd Exp $
 bin/deepfind
 bin/deepgrep
 bin/luceneindexer
@@ -24,6 +24,7 @@ include/strigi/fileinputstream.h
 include/strigi/indexeddocument.h
 include/strigi/indexmanager.h
 include/strigi/indexplugin.h
+include/strigi/indexpluginloader.h
 include/strigi/indexreader.h
 include/strigi/indexwriter.h
 include/strigi/inputstream.h
@@ -55,19 +56,19 @@ include/strigi/textutils.h
 include/strigi/variant.h
 lib/libsearchclient.so
 lib/libsearchclient.so.0
-lib/libsearchclient.so.${PKGVERSION}
+lib/libsearchclient.so.0.6.2
 lib/libstreamanalyzer.so
 lib/libstreamanalyzer.so.0
-lib/libstreamanalyzer.so.${PKGVERSION}
+lib/libstreamanalyzer.so.0.6.2
 lib/libstreams.so
 lib/libstreams.so.0
-lib/libstreams.so.${PKGVERSION}
+lib/libstreams.so.0.6.2
 lib/libstrigihtmlgui.so
 lib/libstrigihtmlgui.so.0
-lib/libstrigihtmlgui.so.${PKGVERSION}
+lib/libstrigihtmlgui.so.0.6.2
 lib/libstrigiqtdbusclient.so
 lib/libstrigiqtdbusclient.so.0
-lib/libstrigiqtdbusclient.so.${PKGVERSION}
+lib/libstrigiqtdbusclient.so.0.6.2
 lib/pkgconfig/libstreamanalyzer.pc
 lib/pkgconfig/libstreams.pc
 lib/strigi/StrigiConfig.cmake
