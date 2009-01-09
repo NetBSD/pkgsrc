@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.9 2009/01/08 18:11:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.10 2009/01/09 10:51:08 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -26,3 +26,5 @@ thunderbird: security update
 thunderbird-gtk1: security update
 Pullup ticket #2628 - requested by tnn
 openssl: security update
+Pullup ticket #2630 - requested by rhaen
+p5-Rose-HTML-Objects: dependence fix
