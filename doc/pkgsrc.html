@@ -117,8 +117,8 @@
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (CFLAGS)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (LDFLAGS)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
@@ -145,14 +145,17 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.1. Configuration</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#files">8. Directory layout of the installed files</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
-<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in ${LOCALBASE}</a></span></dt>
+<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in ${VARBASE}</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#faq">9. Frequently Asked Questions</a></span></dt>
 <dd><dl>
@@ -163,17 +166,17 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
 <dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
 <dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell make fetch to do passive FTP?</a></span></dt>
 <dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does &#8220;<span class="quote">Don't know how to make
-/usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does Don't know how to make
+/usr/share/tmac/tmac.andoc mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does Could not find bsd.own.mk mean?</a></span></dt>
 <dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my CFLAGS?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge conflicts mean?</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="part"><a href="#developers-guide">II. The pkgsrc developer's guide</a></span></dt>
@@ -190,8 +193,8 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#components">11. Package components - files, directories and contents</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
+<dt><span class="sect1"><a href="#components.Makefile">11.1. Makefile</a></span></dt>
+<dt><span class="sect1"><a href="#components.distinfo">11.2. distinfo</a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
@@ -207,13 +210,13 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#components.optional.build">11.5.2. Files affecting the build process</a></span></dt>
 <dt><span class="sect2"><a href="#components.optional.none">11.5.3. Files affecting nothing at all</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#work-dir">11.6. <code class="filename">work*</code></a></span></dt>
-<dt><span class="sect1"><a href="#files-dir">11.7. <code class="filename">files/*</code></a></span></dt>
+<dt><span class="sect1"><a href="#work-dir">11.6. work*</a></span></dt>
+<dt><span class="sect1"><a href="#files-dir">11.7. files/*</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="#makefile">12. Programming in <code class="filename">Makefile</code>s</a></span></dt>
+<dt><span class="chapter"><a href="#makefile">12. Programming in Makefiles</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#makefile.style">12.1. Caveats</a></span></dt>
-<dt><span class="sect1"><a href="#makefile.variables">12.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">12.2. Makefile variables</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">12.2.1. Naming conventions</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
@@ -227,25 +230,25 @@ builds)</a></span></dt>
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#rcs-id">13.1. RCS ID</a></span></dt>
-<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic <code class="filename">PLIST</code> generation</a></span></dt>
-<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of <span class="command"><strong>make print-PLIST</strong></span></a></span></dt>
+<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic PLIST generation</a></span></dt>
+<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of make print-PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#plist.misc">13.4. Variable substitution in PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#manpage-compression">13.5. Man page compression</a></span></dt>
-<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with <code class="varname">PLIST_SRC</code></a></span></dt>
+<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with PLIST_SRC</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-plist">13.7. Platform-specific and differing PLISTs</a></span></dt>
 <dt><span class="sect1"><a href="#faq.common-dirs">13.8. Sharing directories between packages</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#buildlink">14. Buildlink methodology</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#converting-to-buildlink3">14.1. Converting packages to use buildlink3</a></span></dt>
-<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing buildlink3.mk files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing builtin.mk files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
+<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a builtin.mk file</a></span></dt>
 <dt><span class="sect2"><a href="#native-or-pkgsrc-preference">14.3.2. Global preferences for native or pkgsrc software</a></span></dt>
 </dl></dd>
 </dl></dd>
@@ -258,7 +261,7 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#conf-files">15.2. Configuration files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How <code class="varname">PKG_SYSCONFDIR</code> is set</a></span></dt>
+<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How PKG_SYSCONFDIR is set</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-configure">15.2.2. Telling the software where configuration files are</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-patching">15.2.3. Patching installations</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-disable">15.2.4. Disabling handling of configuration files</a></span></dt>
@@ -274,7 +277,7 @@ builds)</a></span></dt>
 <dt><span class="chapter"><a href="#options">16. Options handling</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
-<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
+<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use bsd.options.mk</a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
 <dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl></dd>
@@ -284,21 +287,21 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#build.prefix">17.2. Program location</a></span></dt>
 <dt><span class="sect1"><a href="#build.builddirs">17.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">17.4. Running a phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.fetch">17.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.fetch">17.5. The fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#build.fetch.what">17.5.1. What to fetch and where to get it from</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.how">17.5.2. How are the files fetched?</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#build.checksum">17.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.extract">17.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.patch">17.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.tools">17.9. The <span class="emphasis"><em>tools</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.wrapper">17.10. The <span class="emphasis"><em>wrapper</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.configure">17.11. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.build">17.12. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.test">17.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.install">17.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.package">17.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.checksum">17.6. The checksum phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.extract">17.7. The extract phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.patch">17.8. The patch phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.tools">17.9. The tools phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.wrapper">17.10. The wrapper phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.configure">17.11. The configure phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.build">17.12. The build phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.test">17.13. The test phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.install">17.14. The install phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.package">17.15. The package phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.clean">17.16. Cleaning up</a></span></dt>
 <dt><span class="sect1"><a href="#build.helpful-targets">17.17. Other helpful targets</a></span></dt>
 </dl></dd>
@@ -314,7 +317,7 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from ???</a></span></dt>
 <dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
 <dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
 <dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
@@ -326,12 +329,12 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 <dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the configure phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -344,14 +347,14 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#perl-scripts">19.4.3. Packages containing perl scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.4. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the build phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to ...</a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the install phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -415,8 +418,8 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#infr.order">24.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in bsd.prefs.mk</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in bsd.pkg.mk</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">25. Regression tests</a></span></dt>
@@ -442,7 +445,7 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#example-Makefile">A.1.1. Makefile</a></span></dt>
 <dt><span class="sect2"><a href="#example-descr">A.1.2. DESCR</a></span></dt>
 <dt><span class="sect2"><a href="#example-plist">A.1.3. PLIST</a></span></dt>
-<dt><span class="sect2"><a href="#checking-package-with-pkglint">A.1.4. Checking a package with <span class="command"><strong>pkglint</strong></span></a></span></dt>
+<dt><span class="sect2"><a href="#checking-package-with-pkglint">A.1.4. Checking a package with pkglint</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#steps-for-b-i-p">A.2. Steps for building, installing, packaging</a></span></dt>
 </dl></dd>
@@ -453,14 +456,14 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="appendix"><a href="#ftp-layout">C. Directory layout of the pkgsrc FTP server</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-distfiles">C.2. <code class="filename">distfiles</code>: The distributed source files</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-reports">C.6. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.7. <code class="filename">current</code>,
-<code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
+<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. bootstrap-pkgsrc: Bootstrap kits</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-distfiles">C.2. distfiles: The distributed source files</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-iso">C.3. iso: Currently empty</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-misc">C.4. misc: Miscellaneous things</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.5. packages: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-reports">C.6. reports: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.7. current,
+pkgsrc-200xQy:
 source packages</a></span></dt>
 </dl></dd>
 <dt><span class="appendix"><a href="#editing">D. Editing guidelines for the pkgsrc guide</a></span></dt>
@@ -828,8 +831,8 @@ minutes!</p>
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (CFLAGS)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (LDFLAGS)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
@@ -856,14 +859,17 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.1. Configuration</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#files">8. Directory layout of the installed files</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
-<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in ${LOCALBASE}</a></span></dt>
+<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in ${VARBASE}</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#faq">9. Frequently Asked Questions</a></span></dt>
 <dd><dl>
@@ -874,17 +880,17 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
 <dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
 <dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell make fetch to do passive FTP?</a></span></dt>
 <dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does &#8220;<span class="quote">Don't know how to make
-/usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does Don't know how to make
+/usr/share/tmac/tmac.andoc mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does Could not find bsd.own.mk mean?</a></span></dt>
 <dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my CFLAGS?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge conflicts mean?</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -2085,8 +2091,8 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <dt><span class="sect1"><a href="#conf.compiler">5.4. Selecting and configuring the compiler</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#selecting-the-compiler">5.4.1. Selecting the compiler</a></span></dt>
-<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (<code class="varname">CFLAGS</code>)</a></span></dt>
-<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (<code class="varname">LDFLAGS</code>)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.cflags">5.4.2. Additional flags to the compiler (CFLAGS)</a></span></dt>
+<dt><span class="sect2"><a href="#conf.ldflags">5.4.3. Additional flags to the linker (LDFLAGS)</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#developer-advanced-settings">5.5. Developer/advanced settings</a></span></dt>
 <dt><span class="sect1"><a href="#selecting-build-options">5.6. Selecting Build Options</a></span></dt>
@@ -2474,7 +2480,10 @@ builds)</h2></div></div></div>
 <dt><span class="sect2"><a href="#bulk-upload">7.3.8. Uploading results of a bulk build</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#bulk.pbulk">7.4. Running a pbulk-style bulk build</a></span></dt>
-<dd><dl><dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.1. Configuration</a></span></dt></dl></dd>
+<dd><dl>
+<dt><span class="sect2"><a href="#bulk.pbulk.prepare">7.4.1. Preparation</a></span></dt>
+<dt><span class="sect2"><a href="#bulk.pbulk.conf">7.4.2. Configuration</a></span></dt>
+</dl></dd>
 <dt><span class="sect1"><a href="#creating-cdroms">7.5. Creating a multiple CD-ROM packages collection</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#cdpack-example">7.5.1. Example of cdpack</a></span></dt></dl></dd>
 </dl>
@@ -2540,10 +2549,11 @@ temporary filesystems, others must survive a sudden reboot.</p>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="bulk.old"></a>7.3. Running an old-style bulk build</h2></div></div></div>
-<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
-<h3 class="title">Warning</h3>
-<p>The rest of this section is rather old. Don't rely on it
-too much.</p>
+<div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3 class="title">Note</h3>
+<p>There are two ways of doing a bulk build. The old-style
+one and the new-style &#8220;<span class="quote">pbulk</span>&#8221;. The latter is the recommended
+way.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -2824,7 +2834,7 @@ fi
 	  <code class="filename">/usr/sandbox/usr/pkgsrc/packages</code> and
 	  <code class="filename">.../distfiles</code> point somewhere
 	  appropriate. NFS- and/or nullfs-mounts may come in handy!</p></li>
-<li><p>Edit <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, see <a class="xref" href="#binary.mk.conf" title="7.3.1.2. mk.conf">Section 7.3.1.2, &#8220;<code class="filename">mk.conf</code>&#8221;</a>.</p></li>
+<li><p>Edit <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>, see <a class="xref" href="#binary.mk.conf" title="7.3.1.2. ???">Section 7.3.1.2, &#8220;???&#8221;</a>.</p></li>
 <li><p>Adjust <code class="filename">mk/bulk/build.conf</code> to suit your needs.</p></li>
 </ol></div>
 <p>When the chroot sandbox is set up, you can start
@@ -2941,10 +2951,41 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="bulk.pbulk"></a>7.4. Running a pbulk-style bulk build</h2></div></div></div>
+<p>Running a pbulk-style bulk build works roughly as follows:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p>First, build the pbulk infrastructure in a fresh pkgsrc location.</p></li>
+<li><p>Then, build each of the packages from a clean installation directory using the infrastructure.</p></li>
+</ul></div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bulk.pbulk.conf"></a>7.4.1. Configuration</h3></div></div></div>
+<a name="bulk.pbulk.prepare"></a>7.4.1. Preparation</h3></div></div></div>
+<p>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <code class="filename">/usr/pbulk-outer</code> or <code class="filename">$HOME/pbulk-outer</code> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</p>
+<pre class="screen">
+$ <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
+$ <strong class="userinput"><code>./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap</code></strong>
+$ <strong class="userinput"><code>rm -rf /tmp/pbulk-bootstrap</code></strong>
+</pre>
+<p>Now the basic environment for the pbulk infrastructure is installed. The specific tools are still missing. This is a good time to edit the pkgsrc configuration file <code class="filename">/usr/pbulk/etc/mk.conf</code> to fit your needs. Typical things you might set now are:</p>
+<div class="itemizedlist"><ul type="disc">
+<li><p><code class="literal"><code class="varname">PKG_DEVELOPER</code>=yes</code>, to enable many consistency checks,</p></li>
+<li><p><code class="literal"><code class="varname">WRKOBJDIR</code>=/tmp/pbulk-outer</code>, to keep <code class="filename">/usr/pkgsrc</code> free from any modifications,</p></li>
+<li><p><code class="literal"><code class="varname">DISTDIR</code>=/distfiles</code>, to have only one directory in which all distfiles (for the infrastructure and for the actual packages) are downloaded,</p></li>
+<li><p><code class="literal"><code class="varname">ACCEPTABLE_LICENSES</code>+=...</code>, to select some licenses additional to the usual Free/Open Source licenses that are acceptable to you,</p></li>
+<li><p><code class="literal"><code class="varname">_ACCEPTABLE</code>=yes</code>, to accept all licenses, no matter how restrictive they are.</p></li>
+</ul></div>
+<p>Now you are ready to build the rest of the pbulk infrastructure.</p>
+<pre class="screen">
+$ <strong class="userinput"><code>cd pkgtools/pbulk</code></strong>
+$ <strong class="userinput"><code>/usr/pbulk/bin/bmake install</code></strong>
+$ <strong class="userinput"><code>rm -rf /tmp/pbulk-outer</code></strong>
+</pre>
+<p>Now the pbulk infrastructure is built and installed. It still needs to be configured, and after some more preparation, we will be able to start the real bulk build.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="bulk.pbulk.conf"></a>7.4.2. Configuration</h3></div></div></div>
 <p>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</p>
+<p>TODO: continue writing</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -2999,8 +3040,8 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in <code class="literal">${LOCALBASE}</code></a></span></dt>
-<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in <code class="literal">${VARBASE}</code></a></span></dt>
+<dt><span class="sect1"><a href="#files.localbase">8.1. File system layout in ${LOCALBASE}</a></span></dt>
+<dt><span class="sect1"><a href="#files.varbase">8.2. File system layout in ${VARBASE}</a></span></dt>
 </dl>
 </div>
 <p>The files that are installed by pkgsrc are organized in a way that
@@ -3147,17 +3188,17 @@ currently running.</p></dd>
 <dt><span class="sect1"><a href="#resume-transfers">9.5. How to resume transfers when fetching distfiles?</a></span></dt>
 <dt><span class="sect1"><a href="#x.org-from-pkgsrc">9.6. How can I install/use modular X.org from pkgsrc?</a></span></dt>
 <dt><span class="sect1"><a href="#fetch-behind-firewall">9.7. How to fetch files from behind a firewall</a></span></dt>
-<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell <span class="command"><strong>make fetch</strong></span> to do passive FTP?</a></span></dt>
+<dt><span class="sect1"><a href="#passive-ftp">9.8. How do I tell make fetch to do passive FTP?</a></span></dt>
 <dt><span class="sect1"><a href="#fetching-all-distfiles">9.9. How to fetch all distfiles at once</a></span></dt>
-<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does &#8220;<span class="quote">Don't know how to make
-/usr/share/tmac/tmac.andoc</span>&#8221; mean?</a></span></dt>
-<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does &#8220;<span class="quote">Could not find bsd.own.mk</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#tmac.andoc-missing">9.10. What does Don't know how to make
+/usr/share/tmac/tmac.andoc mean?</a></span></dt>
+<dt><span class="sect1"><a href="#bsd.own.mk-missing">9.11. What does Could not find bsd.own.mk mean?</a></span></dt>
 <dt><span class="sect1"><a href="#using-sudo-with-pkgsrc">9.12. Using 'sudo' with pkgsrc</a></span></dt>
 <dt><span class="sect1"><a href="#faq.conf">9.13. How do I change the location of configuration files?</a></span></dt>
 <dt><span class="sect1"><a href="#audit-packages">9.14. Automated security checks</a></span></dt>
-<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my <code class="varname">CFLAGS</code>?</a></span></dt>
+<dt><span class="sect1"><a href="#ufaq-cflags">9.15. Why do some packages ignore my CFLAGS?</a></span></dt>
 <dt><span class="sect1"><a href="#ufaq-fail">9.16. A package does not build.  What shall I do?</a></span></dt>
-<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does &#8220;<span class="quote">Makefile appears to contain unresolved cvs/rcs/??? merge conflicts</span>&#8221; mean?</a></span></dt>
+<dt><span class="sect1"><a href="#faq.rcs-conflicts">9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge conflicts mean?</a></span></dt>
 </dl>
 </div>
 <p>This section contains hints, tips &amp; tricks on special things in
@@ -3588,8 +3629,8 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 </dl></dd>
 <dt><span class="chapter"><a href="#components">11. Package components - files, directories and contents</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
+<dt><span class="sect1"><a href="#components.Makefile">11.1. Makefile</a></span></dt>
+<dt><span class="sect1"><a href="#components.distinfo">11.2. distinfo</a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
@@ -3605,13 +3646,13 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#components.optional.build">11.5.2. Files affecting the build process</a></span></dt>
 <dt><span class="sect2"><a href="#components.optional.none">11.5.3. Files affecting nothing at all</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#work-dir">11.6. <code class="filename">work*</code></a></span></dt>
-<dt><span class="sect1"><a href="#files-dir">11.7. <code class="filename">files/*</code></a></span></dt>
+<dt><span class="sect1"><a href="#work-dir">11.6. work*</a></span></dt>
+<dt><span class="sect1"><a href="#files-dir">11.7. files/*</a></span></dt>
 </dl></dd>
-<dt><span class="chapter"><a href="#makefile">12. Programming in <code class="filename">Makefile</code>s</a></span></dt>
+<dt><span class="chapter"><a href="#makefile">12. Programming in Makefiles</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#makefile.style">12.1. Caveats</a></span></dt>
-<dt><span class="sect1"><a href="#makefile.variables">12.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">12.2. Makefile variables</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">12.2.1. Naming conventions</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
@@ -3625,25 +3666,25 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#rcs-id">13.1. RCS ID</a></span></dt>
-<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic <code class="filename">PLIST</code> generation</a></span></dt>
-<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of <span class="command"><strong>make print-PLIST</strong></span></a></span></dt>
+<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic PLIST generation</a></span></dt>
+<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of make print-PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#plist.misc">13.4. Variable substitution in PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#manpage-compression">13.5. Man page compression</a></span></dt>
-<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with <code class="varname">PLIST_SRC</code></a></span></dt>
+<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with PLIST_SRC</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-plist">13.7. Platform-specific and differing PLISTs</a></span></dt>
 <dt><span class="sect1"><a href="#faq.common-dirs">13.8. Sharing directories between packages</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#buildlink">14. Buildlink methodology</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#converting-to-buildlink3">14.1. Converting packages to use buildlink3</a></span></dt>
-<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing buildlink3.mk files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing builtin.mk files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
+<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a builtin.mk file</a></span></dt>
 <dt><span class="sect2"><a href="#native-or-pkgsrc-preference">14.3.2. Global preferences for native or pkgsrc software</a></span></dt>
 </dl></dd>
 </dl></dd>
@@ -3656,7 +3697,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 </dl></dd>
 <dt><span class="sect1"><a href="#conf-files">15.2. Configuration files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How <code class="varname">PKG_SYSCONFDIR</code> is set</a></span></dt>
+<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How PKG_SYSCONFDIR is set</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-configure">15.2.2. Telling the software where configuration files are</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-patching">15.2.3. Patching installations</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-disable">15.2.4. Disabling handling of configuration files</a></span></dt>
@@ -3672,7 +3713,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="chapter"><a href="#options">16. Options handling</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
-<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
+<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use bsd.options.mk</a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
 <dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl></dd>
@@ -3682,21 +3723,21 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#build.prefix">17.2. Program location</a></span></dt>
 <dt><span class="sect1"><a href="#build.builddirs">17.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">17.4. Running a phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.fetch">17.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.fetch">17.5. The fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#build.fetch.what">17.5.1. What to fetch and where to get it from</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.how">17.5.2. How are the files fetched?</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#build.checksum">17.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.extract">17.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.patch">17.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.tools">17.9. The <span class="emphasis"><em>tools</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.wrapper">17.10. The <span class="emphasis"><em>wrapper</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.configure">17.11. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.build">17.12. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.test">17.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.install">17.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.package">17.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.checksum">17.6. The checksum phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.extract">17.7. The extract phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.patch">17.8. The patch phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.tools">17.9. The tools phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.wrapper">17.10. The wrapper phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.configure">17.11. The configure phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.build">17.12. The build phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.test">17.13. The test phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.install">17.14. The install phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.package">17.15. The package phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.clean">17.16. Cleaning up</a></span></dt>
 <dt><span class="sect1"><a href="#build.helpful-targets">17.17. Other helpful targets</a></span></dt>
 </dl></dd>
@@ -3712,7 +3753,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from ???</a></span></dt>
 <dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
 <dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
 <dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
@@ -3724,12 +3765,12 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 <dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the configure phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -3742,14 +3783,14 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#perl-scripts">19.4.3. Packages containing perl scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.4. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the build phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to ...</a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the install phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -4136,8 +4177,8 @@ everything worked.</p>
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
+<dt><span class="sect1"><a href="#components.Makefile">11.1. Makefile</a></span></dt>
+<dt><span class="sect1"><a href="#components.distinfo">11.2. distinfo</a></span></dt>
 <dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
@@ -4153,8 +4194,8 @@ everything worked.</p>
 <dt><span class="sect2"><a href="#components.optional.build">11.5.2. Files affecting the build process</a></span></dt>
 <dt><span class="sect2"><a href="#components.optional.none">11.5.3. Files affecting nothing at all</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#work-dir">11.6. <code class="filename">work*</code></a></span></dt>
-<dt><span class="sect1"><a href="#files-dir">11.7. <code class="filename">files/*</code></a></span></dt>
+<dt><span class="sect1"><a href="#work-dir">11.6. work*</a></span></dt>
+<dt><span class="sect1"><a href="#files-dir">11.7. files/*</a></span></dt>
 </dl>
 </div>
 <p>Whenever you're preparing a package, there are a number of
@@ -4219,7 +4260,7 @@ converters    games         mbone         print         x11
     <code class="varname">DYNAMIC_MASTER_SITES</code>,
     <code class="varname">DIST_SUBDIR</code>, <code class="varname">EXTRACT_SUFX</code>
     and <code class="varname">DISTFILES</code> are discussed in detail in
-    <a class="xref" href="#build.fetch" title="17.5. The fetch phase">Section 17.5, &#8220;The <span class="emphasis"><em>fetch</em></span> phase&#8221;</a>.</p></li>
+    <a class="xref" href="#build.fetch" title="17.5. The fetch phase">Section 17.5, &#8220;The fetch phase&#8221;</a>.</p></li>
 </ul></div>
 <p>The second section contains information about separately
   downloaded patches, if any.
@@ -4393,7 +4434,7 @@ converters    games         mbone         print         x11
   directory to <code class="filename">patches/</code>.</p>
 <p>When you have finished a package, remember to generate
   the checksums for the patch files by using the <span class="command"><strong>make
-  makepatchsum</strong></span> command, see <a class="xref" href="#components.distinfo" title="11.2. distinfo">Section 11.2, &#8220;<code class="filename">distinfo</code>&#8221;</a>.</p>
+  makepatchsum</strong></span> command, see <a class="xref" href="#components.distinfo" title="11.2. distinfo">Section 11.2, &#8220;distinfo&#8221;</a>.</p>
 <p>When adding a patch that corrects a problem in the
   distfile (rather than e.g. enforcing pkgsrc's view of where
   man pages should go), send the patch as a bug report to the
@@ -4721,7 +4762,7 @@ FILESDIR=${.CURDIR}/../xemacs/files
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#makefile.style">12.1. Caveats</a></span></dt>
-<dt><span class="sect1"><a href="#makefile.variables">12.2. <code class="filename">Makefile</code> variables</a></span></dt>
+<dt><span class="sect1"><a href="#makefile.variables">12.2. Makefile variables</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#makefile.variables.names">12.2.1. Naming conventions</a></span></dt></dl></dd>
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
@@ -5047,11 +5088,11 @@ VAR:=   ${VAR:N${_othervar_:C/-//}}
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#rcs-id">13.1. RCS ID</a></span></dt>
-<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic <code class="filename">PLIST</code> generation</a></span></dt>
-<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of <span class="command"><strong>make print-PLIST</strong></span></a></span></dt>
+<dt><span class="sect1"><a href="#automatic-plist-generation">13.2. Semi-automatic PLIST generation</a></span></dt>
+<dt><span class="sect1"><a href="#print-PLIST">13.3. Tweaking output of make print-PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#plist.misc">13.4. Variable substitution in PLIST</a></span></dt>
 <dt><span class="sect1"><a href="#manpage-compression">13.5. Man page compression</a></span></dt>
-<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with <code class="varname">PLIST_SRC</code></a></span></dt>
+<dt><span class="sect1"><a href="#using-PLIST_SRC">13.6. Changing PLIST source with PLIST_SRC</a></span></dt>
 <dt><span class="sect1"><a href="#platform-specific-plist">13.7. Platform-specific and differing PLISTs</a></span></dt>
 <dt><span class="sect1"><a href="#faq.common-dirs">13.8. Sharing directories between packages</a></span></dt>
 </dl>
@@ -5265,14 +5306,14 @@ USE_DIRS+=      xdg-1.1
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#converting-to-buildlink3">14.1. Converting packages to use buildlink3</a></span></dt>
-<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#creating-buildlink3.mk">14.2. Writing buildlink3.mk files</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#anatomy-of-bl3">14.2.1. Anatomy of a buildlink3.mk file</a></span></dt>
-<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating <code class="varname">BUILDLINK_API_DEPENDS.<em class="replaceable"><code>pkg</code></em></code> in <code class="filename">buildlink3.mk</code> files</a></span></dt>
+<dt><span class="sect2"><a href="#updating-buildlink-depends">14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing <code class="filename">builtin.mk</code> files</a></span></dt>
+<dt><span class="sect1"><a href="#writing-builtin.mk">14.3. Writing builtin.mk files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a <code class="filename">builtin.mk</code> file</a></span></dt>
+<dt><span class="sect2"><a href="#anatomy-of-builtin.mk">14.3.1. Anatomy of a builtin.mk file</a></span></dt>
 <dt><span class="sect2"><a href="#native-or-pkgsrc-preference">14.3.2. Global preferences for native or pkgsrc software</a></span></dt>
 </dl></dd>
 </dl>
@@ -5733,7 +5774,7 @@ PREFER_NATIVE=  getopt skey tcp_wrappers
 </dl></dd>
 <dt><span class="sect1"><a href="#conf-files">15.2. Configuration files</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How <code class="varname">PKG_SYSCONFDIR</code> is set</a></span></dt>
+<dt><span class="sect2"><a href="#conf-files-sysconfdir">15.2.1. How PKG_SYSCONFDIR is set</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-configure">15.2.2. Telling the software where configuration files are</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-patching">15.2.3. Patching installations</a></span></dt>
 <dt><span class="sect2"><a href="#conf-files-disable">15.2.4. Disabling handling of configuration files</a></span></dt>
@@ -6128,7 +6169,7 @@ environment variable to <code class="literal">NO</code>.</p>
 <p><b>Table of Contents</b></p>
 <dl>
 <dt><span class="sect1"><a href="#global-default-options">16.1. Global default options</a></span></dt>
-<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use <code class="filename">bsd.options.mk</code></a></span></dt>
+<dt><span class="sect1"><a href="#converting-to-options">16.2. Converting packages to use bsd.options.mk</a></span></dt>
 <dt><span class="sect1"><a href="#option-names">16.3. Option Names</a></span></dt>
 <dt><span class="sect1"><a href="#option-build">16.4. Determining the options of dependencies</a></span></dt>
 </dl>
@@ -6372,21 +6413,21 @@ details.</p>
 <dt><span class="sect1"><a href="#build.prefix">17.2. Program location</a></span></dt>
 <dt><span class="sect1"><a href="#build.builddirs">17.3. Directories used during the build process</a></span></dt>
 <dt><span class="sect1"><a href="#build.running">17.4. Running a phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.fetch">17.5. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.fetch">17.5. The fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#build.fetch.what">17.5.1. What to fetch and where to get it from</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.how">17.5.2. How are the files fetched?</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#build.checksum">17.6. The <span class="emphasis"><em>checksum</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.extract">17.7. The <span class="emphasis"><em>extract</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.patch">17.8. The <span class="emphasis"><em>patch</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.tools">17.9. The <span class="emphasis"><em>tools</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.wrapper">17.10. The <span class="emphasis"><em>wrapper</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.configure">17.11. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.build">17.12. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.test">17.13. The <span class="emphasis"><em>test</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.install">17.14. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
-<dt><span class="sect1"><a href="#build.package">17.15. The <span class="emphasis"><em>package</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.checksum">17.6. The checksum phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.extract">17.7. The extract phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.patch">17.8. The patch phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.tools">17.9. The tools phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.wrapper">17.10. The wrapper phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.configure">17.11. The configure phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.build">17.12. The build phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.test">17.13. The test phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.install">17.14. The install phase</a></span></dt>
+<dt><span class="sect1"><a href="#build.package">17.15. The package phase</a></span></dt>
 <dt><span class="sect1"><a href="#build.clean">17.16. Cleaning up</a></span></dt>
 <dt><span class="sect1"><a href="#build.helpful-targets">17.17. Other helpful targets</a></span></dt>
 </dl>
@@ -6557,7 +6598,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
 </dl></div>
 <p>The <code class="varname">CREATE_WRKDIR_SYMLINK</code> definition takes either
     the value <span class="emphasis"><em>yes</em></span> or <span class="emphasis"><em>no</em></span> and defaults
-    to <span class="emphasis"><em>yes</em></span>. It indicates whether a symbolic link to the
+    to <span class="emphasis"><em>no</em></span>. It indicates whether a symbolic link to the
     <code class="varname">WRKDIR</code> is to be created in the pkgsrc entry's directory.
     If users would like to have their pkgsrc trees behave in a
     read-only manner, then the value of
@@ -7343,7 +7384,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 	  <code class="filename">PLIST</code>, as the &#8220;<span class="quote">find
 	  -newer</span>&#8221; command used by this target won't catch
 	  them!</p>
-<p>See <a class="xref" href="#print-PLIST" title="13.3. Tweaking output of make print-PLIST">Section 13.3, &#8220;Tweaking output of <span class="command"><strong>make print-PLIST</strong></span>&#8221;</a> for more
+<p>See <a class="xref" href="#print-PLIST" title="13.3. Tweaking output of make print-PLIST">Section 13.3, &#8220;Tweaking output of make print-PLIST&#8221;</a> for more
 	  information on this target.</p>
 </dd>
 <dt><span class="term">bulk-package</span></dt>
@@ -7486,7 +7527,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230246568"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id364453"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7496,7 +7537,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230246577"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id364465"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7507,7 +7548,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230246585"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id364476"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7532,7 +7573,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from ???</a></span></dt>
 <dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
 <dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
 <dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
@@ -7544,12 +7585,12 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
 <dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the fetch phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the configure phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -7562,14 +7603,14 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#perl-scripts">19.4.3. Packages containing perl scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.4. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the build phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
-<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to &#8220;<span class="quote">...</span>&#8221;</a></span></dt>
+<dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to ...</a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the install phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -8959,7 +9000,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     get registered in the database:</p>
 <div class="orderedlist"><ol type="1">
 <li><p>Include
-	<code class="filename">../../textproc/rarian/omf.mk</code>
+	<code class="filename">../../textproc/scrollkeeper/omf.mk</code>
 	instead of its <code class="filename">buildlink3.mk</code> file.  This
 	takes care of rebuilding the scrollkeeper database at
 	installation and deinstallation time, and disallows any access
@@ -9259,7 +9300,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
       package.</p>
 </li>
 <li><p>Look at the <code class="filename">Makefile</code>, fix if
-      necessary; see <a class="xref" href="#components.Makefile" title="11.1. Makefile">Section 11.1, &#8220;<code class="filename">Makefile</code>&#8221;</a>.</p></li>
+      necessary; see <a class="xref" href="#components.Makefile" title="11.1. Makefile">Section 11.1, &#8220;Makefile&#8221;</a>.</p></li>
 <li>
 <p>Generate a <code class="filename">PLIST</code>:</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>make install</code></strong>
@@ -9521,7 +9562,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230233435"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id369298"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9537,7 +9578,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230233468"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id369338"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9555,7 +9596,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230233574"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id369382"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9573,7 +9614,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230233608"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id369424"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9586,7 +9627,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230233626"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id369447"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9602,7 +9643,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230233653"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id369481"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9626,7 +9667,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230233720"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id369566"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9651,7 +9692,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230233751"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id369609"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9699,7 +9740,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230233805"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id369686"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10052,8 +10093,8 @@ details.</p>
 </dl></dd>
 <dt><span class="sect1"><a href="#infr.order">24.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in bsd.prefs.mk</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in bsd.pkg.mk</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">25. Regression tests</a></span></dt>
@@ -10095,8 +10136,8 @@ details.</p>
 </dl></dd>
 <dt><span class="sect1"><a href="#infr.order">24.6. The order in which files are loaded</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in <code class="filename">bsd.prefs.mk</code></a></span></dt>
-<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in <code class="filename">bsd.pkg.mk</code></a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.prefs">24.6.1. The order in bsd.prefs.mk</a></span></dt>
+<dt><span class="sect2"><a href="#infr.order.pkg">24.6.2. The order in bsd.pkg.mk</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -10524,7 +10565,7 @@ CFLAGS+=                -Wall
 <dt><span class="sect2"><a href="#example-Makefile">A.1.1. Makefile</a></span></dt>
 <dt><span class="sect2"><a href="#example-descr">A.1.2. DESCR</a></span></dt>
 <dt><span class="sect2"><a href="#example-plist">A.1.3. PLIST</a></span></dt>
-<dt><span class="sect2"><a href="#checking-package-with-pkglint">A.1.4. Checking a package with <span class="command"><strong>pkglint</strong></span></a></span></dt>
+<dt><span class="sect2"><a href="#checking-package-with-pkglint">A.1.4. Checking a package with pkglint</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#steps-for-b-i-p">A.2. Steps for building, installing, packaging</a></span></dt>
 </dl>
@@ -10825,14 +10866,14 @@ Registering depends:.
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl>
-<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. <code class="filename">bootstrap-pkgsrc</code>: Bootstrap kits</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-distfiles">C.2. <code class="filename">distfiles</code>: The distributed source files</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-iso">C.3. <code class="filename">iso</code>: Currently empty</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-misc">C.4. <code class="filename">misc</code>: Miscellaneous things</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-packages">C.5. <code class="filename">packages</code>: Binary packages</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-reports">C.6. <code class="filename">reports</code>: Bulk build reports</a></span></dt>
-<dt><span class="sect1"><a href="#ftp-source">C.7. <code class="filename">current</code>,
-<code class="filename">pkgsrc-200<em class="replaceable"><code>x</code></em>Q<em class="replaceable"><code>y</code></em></code>:
+<dt><span class="sect1"><a href="#ftp-bootstrap">C.1. bootstrap-pkgsrc: Bootstrap kits</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-distfiles">C.2. distfiles: The distributed source files</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-iso">C.3. iso: Currently empty</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-misc">C.4. misc: Miscellaneous things</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-packages">C.5. packages: Binary packages</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-reports">C.6. reports: Bulk build reports</a></span></dt>
+<dt><span class="sect1"><a href="#ftp-source">C.7. current,
+pkgsrc-200xQy:
 source packages</a></span></dt>
 </dl>
 </div>
@@ -10923,7 +10964,7 @@ source packages</a></span></dt>
 <a name="ftp-reports"></a>C.6. <code class="filename">reports</code>: Bulk build reports</h2></div></div></div>
 <p>Here are the reports from bulk builds, for those who want
 	to fix packages that didn't build on some of the platforms. The
-	structure of subdirectories should look like the one in <a class="xref" href="#ftp-packages" title="C.5. packages: Binary packages">Section C.5, &#8220;<code class="filename">packages</code>: Binary packages&#8221;</a>.</p>
+	structure of subdirectories should look like the one in <a class="xref" href="#ftp-packages" title="C.5. packages: Binary packages">Section C.5, &#8220;packages: Binary packages&#8221;</a>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
