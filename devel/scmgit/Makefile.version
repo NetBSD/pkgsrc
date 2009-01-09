@@ -1,3 +1,3 @@
-# $NetBSD: Makefile.version,v 1.6 2008/09/17 01:18:42 bjs Exp $
+# $NetBSD: Makefile.version,v 1.7 2009/01/09 13:42:15 tonnerre Exp $
 #
-GIT_VERSION=	1.6.0.2
+GIT_VERSION=	1.6.0.6
