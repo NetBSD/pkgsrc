@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/04 11:11:50 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/09 22:22:04 markd Exp $
 
-DISTNAME=	strigi-0.5.10
+DISTNAME=	strigi-0.6.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=strigi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config perl
 USE_CMAKE=	yes
+
+PKGCONFIG_OVERRIDE+=	src/streamanalyzer/libstreamanalyzer.pc.cmake
+PKGCONFIG_OVERRIDE+=	src/streams/libstreams.pc.cmake
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
