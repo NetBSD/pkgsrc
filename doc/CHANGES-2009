@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.140 2009/01/08 22:13:56 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.141 2009/01/09 11:35:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -185,3 +185,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb6 [minskim 2009-01-08]
 	Updated print/teTeX3-bin to 3.0nb22 [minskim 2009-01-08]
 	Updated print/tex-hugelatex to 2.0nb5 [minskim 2009-01-08]
+	Updated textproc/hunspell-de to 20090107 [wiz 2009-01-09]
