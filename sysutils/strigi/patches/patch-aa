@@ -1,11 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/04 11:11:50 markd Exp $
+$NetBSD: patch-aa,v 1.2 2009/01/09 22:22:04 markd Exp $
 
---- CMakeLists.txt.orig	2007-11-29 17:49:02.000000000 +1300
+CMAKE_MODULE_PATH may be a path (ie multiple directories) so don't use it.
+
+--- CMakeLists.txt.orig	2009-01-03 23:06:22.000000000 +1300
 +++ CMakeLists.txt
-@@ -204,7 +204,7 @@ include(ConfigureChecks.cmake)
- include_directories( ${CMAKE_CURRENT_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR} )
+@@ -225,7 +225,7 @@ if (CppUnit_FOUND)
+ endif (CppUnit_FOUND)
  
- CONFIGURE_FILE(
+ configure_file(
 -  "${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in"
 +  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/cmake_uninstall.cmake.in"
    "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
