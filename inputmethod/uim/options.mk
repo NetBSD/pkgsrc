@@ -1,14 +1,27 @@
-# $NetBSD: options.mk,v 1.13 2008/06/08 13:01:48 obache Exp $
+# $NetBSD: options.mk,v 1.14 2009/01/09 03:32:08 uebayasi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 wnn
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime
-PKG_SUGGESTED_OPTIONS=	anthy canna gtk
+#PKG_SUPPORTED_OPTIONS=	anthy canna curses eb gnome gtk kde m17nlib qt prime sj3 wnn x11
+PKG_SUPPORTED_OPTIONS=	anthy canna curses eb gnome gtk kde m17nlib qt prime x11
+PKG_SUGGESTED_OPTIONS=	anthy canna curses gtk x11
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		helperdata uim-dict-gtk
-PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn
+PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn x11
+
+.if !empty(PKG_OPTIONS:Mx11)
+.include "../../x11/libX11/buildlink3.mk"
+PLIST.x11=		yes
+.else
+CONFIGURE_ARGS+=	--with-x=no
+.endif
+
+.if !empty(PKG_OPTIONS:Mcurses)
+.include "../../devel/ncurses/buildlink3.mk"	# XXXUEBAYASI setupterm in ncurses is needed
+#.include "../../mk/curses.buildlink3.mk"	# XXXUEBAYASI for FEP
+.else
+.endif
 
 .if !empty(PKG_OPTIONS:Manthy)
 .  include "../../inputmethod/anthy/buildlink3.mk"

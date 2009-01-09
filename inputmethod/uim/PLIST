@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/24 03:03:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/01/09 03:32:08 uebayasi Exp $
 ${PLIST.qt}bin/uim-chardict-qt
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 bin/uim-fep
@@ -14,7 +14,7 @@ bin/uim-sh
 ${PLIST.gtk}bin/uim-toolbar-gtk
 ${PLIST.qt}bin/uim-toolbar-qt
 ${PLIST.gtk}bin/uim-toolbar-gtk-systray
-bin/uim-xim
+${PLIST.x11}bin/uim-xim
 include/uim/plugin.h
 include/uim/uim-custom.h
 include/uim/uim-helper.h
@@ -46,7 +46,7 @@ ${PLIST.gtk}libexec/uim-candwin-gtk
 ${PLIST.qt}libexec/uim-candwin-qt
 libexec/uim-helper-server
 ${PLIST.gnome}libexec/uim-toolbar-applet
-man/man1/uim-xim.1
+${PLIST.x11}man/man1/uim-xim.1
 share/applications/uim.desktop
 share/doc/uim/COMPATIBILITY
 share/doc/uim/CUSTOM

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/09/24 03:03:45 obache Exp $
+# $NetBSD: Makefile,v 1.35 2009/01/09 03:32:08 uebayasi Exp $
 #
 
 DISTNAME=		uim-1.5.1
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
 
 .include "options.mk"
+
+# XXXUEBAYASI why is readline a must?
 
 PLIST_VARS+=		editline
 CHECK_BUILTIN.readline:=	yes
@@ -56,6 +58,4 @@ post-install:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libgcroots/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
