@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.147 2009/01/09 14:50:56 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.148 2009/01/09 16:21:47 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -194,3 +194,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmgit to 1.6.0.6 [tonnerre 2009-01-09]
 	Updated www/gitweb to 1.6.0.6 [tonnerre 2009-01-09]
 	Updated devel/subversion-base to 1.5.5 [gdt 2009-01-09]
+	Updated net/jwhois to 4.0 [shattered 2009-01-09]
