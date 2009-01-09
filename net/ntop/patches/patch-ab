@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2008/10/16 12:24:09 adam Exp $
+$NetBSD: patch-ab,v 1.14 2009/01/09 08:53:26 dbj Exp $
 
 --- configure.in.orig	2008-10-02 12:54:15.000000000 +0200
 +++ configure.in
@@ -24,7 +24,7 @@ $NetBSD: patch-ab,v 1.13 2008/10/16 12:24:09 adam Exp $
    if test -d $PCAP_ROOT &&
 -     test -r $PCAP_ROOT/libpcap.a &&
 -     test -r $PCAP_ROOT/pcap.h; then
-+     test -r $PCAP_ROOT/lib/libpcap.a &&
++     test -r $PCAP_ROOT/lib/libpcap.a -o -r $PCAP_ROOT/lib/libpcap.dylib &&
 +     test -r $PCAP_ROOT/include/pcap.h; then
         PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
         CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
