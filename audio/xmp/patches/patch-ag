@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.1 2004/05/16 17:11:30 danw Exp $
+$NetBSD: patch-ag,v 1.2 2009/01/09 20:43:53 shattered Exp $
 
---- configure.orig	Sat May 15 09:48:55 2004
+--- configure.orig	2007-12-03 00:32:25.000000000 +0000
 +++ configure
-@@ -593,7 +593,6 @@ CINCS="${CPPFLAGS}"
- PLUGIN=""
+@@ -1851,7 +1851,6 @@ CINCS="${CPPFLAGS}"
+ PLUGINS=""
  
  
 -LDFLAGS=""
  
  
- X_XMP="xxmp"
+ DRIVERS=""
