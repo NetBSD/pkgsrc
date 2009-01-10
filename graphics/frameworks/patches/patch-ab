@@ -1,0 +1,110 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/10 21:08:14 jmcneill Exp $
+
+NetBSD doesn't provide v4l1 compatibility, so use libv4l1 until
+frameworks is ported to v4l2.
+
+--- src/camera.c.orig	2007-02-27 22:18:50.000000000 -0500
++++ src/camera.c
+@@ -1,5 +1,6 @@
+ #include <math.h>
+ #include "common.h"
++#include <libv4l1.h>
+ 
+ /* internal function prototypes */
+ gpointer read_thread(gpointer data);
+@@ -158,7 +159,7 @@ gint open_cam(struct Camera *camera, GSt
+ {
+     if (camera->device <= 0) {
+         camera->device_name = device_name;
+-	camera->device = open(device_name->str, O_RDWR);
++	camera->device = v4l1_open(device_name->str, O_RDWR);
+ 	if (camera->device < 0) {
+             /* frameworks_error(device_string) */
+             camera->open = FALSE;
+@@ -182,7 +183,7 @@ gint close_cam(struct Camera *camera)
+ {
+     if (camera->open == TRUE) {
+         mmap_teardown(camera);
+-	close(camera->device);
++	v4l1_close(camera->device);
+         g_string_free(camera->device_name, TRUE);
+         camera->device_name = NULL;
+ 	camera->device = 0;
+@@ -201,12 +202,12 @@ void mmap_setup(struct Camera *camera)
+         mmap_teardown(camera);
+     if (camera->vid_caps.type & VID_TYPE_CAPTURE) {
+         /* mmap method is available */
+-        ret = ioctl(camera->device, VIDIOCGMBUF, &camera->vmbuf);
++        ret = v4l1_ioctl(camera->device, VIDIOCGMBUF, &camera->vmbuf);
+         if (ret < 0) {
+             perror("ioctl(VIDIOCGMBUF)");
+             camera->mmap = NULL;
+         } else {
+-            camera->mmap = mmap(0,
++            camera->mmap = v4l1_mmap(0,
+                                 camera->vmbuf.size,
+                                 PROT_READ | PROT_WRITE,
+                                 MAP_SHARED, camera->device,
+@@ -224,7 +225,7 @@ void mmap_setup(struct Camera *camera)
+ void mmap_teardown(struct Camera *camera)
+ {
+     if (camera->mmap != NULL) {
+-        munmap(camera->mmap, camera->vmbuf.size);
++        v4l1_munmap(camera->mmap, camera->vmbuf.size);
+         camera->mmap = NULL;
+     }
+ }
+@@ -259,12 +260,12 @@ void frameworks_camera_update_status(str
+ 
+ void set_status(struct Camera *camera)
+ {
+-    if (ioctl(camera->device, VIDIOCSPICT, &camera->vid_pic) == -1) {
++    if (v4l1_ioctl(camera->device, VIDIOCSPICT, &camera->vid_pic) == -1) {
+ 	/* error */
+         perror("ioctl(VIDIOCSPICT)");
+ 	/* printf("error setting video_picture\n"); */
+     }
+-    if (ioctl(camera->device, VIDIOCSWIN, &camera->vid_win) == -1) {
++    if (v4l1_ioctl(camera->device, VIDIOCSWIN, &camera->vid_win) == -1) {
+         perror("ioctl(VIDIOCSWIN)");
+         /* printf("error setting video_window\n"); */
+     }
+@@ -272,9 +273,9 @@ void set_status(struct Camera *camera)
+ 
+ void get_status(struct Camera *camera)
+ {
+-    ioctl(camera->device, VIDIOCGCAP, &camera->vid_caps);
+-    ioctl(camera->device, VIDIOCGWIN, &camera->vid_win);
+-    ioctl(camera->device, VIDIOCGPICT, &camera->vid_pic);
++    v4l1_ioctl(camera->device, VIDIOCGCAP, &camera->vid_caps);
++    v4l1_ioctl(camera->device, VIDIOCGWIN, &camera->vid_win);
++    v4l1_ioctl(camera->device, VIDIOCGPICT, &camera->vid_pic);
+ 
+     /* apparently MONOCHORME means grey scale? this was in gqcam...*/
+     if (camera->vid_caps.type & VID_TYPE_MONOCHROME) {
+@@ -329,14 +330,14 @@ int read_into(struct Camera *camera, str
+         vmmap.width = buf->width;
+         vmmap.height = buf->height;
+         vmmap.format = camera->vid_pic.palette;
+-        if(ioctl(camera->device, VIDIOCMCAPTURE, &vmmap) < 0) {
++        if(v4l1_ioctl(camera->device, VIDIOCMCAPTURE, &vmmap) < 0) {
+             perror("ioctl(VIDIOCMCAPTURE)");
+             mmap_teardown(camera);  /* switch to read() */
+             return -1;
+         }
+         n = 0;
+         for (i=0; i<3; i++) {
+-            if (ioctl(camera->device, VIDIOCSYNC, &n) == -1)  /* failure */
++            if (v4l1_ioctl(camera->device, VIDIOCSYNC, &n) == -1)  /* failure */
+             {
+                 if (errno == EINTR) {
+                     ;   /* try again on EINTR */
+@@ -355,7 +356,7 @@ int read_into(struct Camera *camera, str
+         }
+     } else {  /* use read method */
+         for (i=0; i<3; i++) {  /* give it 3 tries to get some data */
+-            bytes_read = read(camera->device, buf->data, bytes_requested);
++            bytes_read = v4l1_read(camera->device, buf->data, bytes_requested);
+             if (bytes_read > 0) {
+ 
+                 /* more than zero isn't really success (should be "if
