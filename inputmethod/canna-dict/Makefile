@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2006/07/05 04:48:28 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/10 03:06:34 obache Exp $
 
 PKGREVISION=	1
 CANNA_MODULE=	dict
+
+MAKE_JOBS_SAFE=	no
 
 .include "../../inputmethod/canna/Makefile.common"
 
