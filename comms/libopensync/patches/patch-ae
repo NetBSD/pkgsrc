@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2009/01/10 22:08:46 wiz Exp $
+
+Fix compilation with Sun Studio, which does not provide __FUNCTION__.
+
+--- opensync/opensync_internals.h.orig	2007-03-27 13:49:18.000000000 +0200
++++ opensync/opensync_internals.h
+@@ -13,6 +13,10 @@
+ #include <errno.h>
+ extern int errno;
+ 
++#ifndef __FUNCTION__
++#define __FUNCTION__ __func__
++#endif
++
+ #define osync_assert(x) do {								\
+   if (!(x)) { 										\
+     fprintf(stderr, "%s:%i:E:%s: Assertion \"" #x "\" failed\n", __FILE__, __LINE__, __FUNCTION__); \
