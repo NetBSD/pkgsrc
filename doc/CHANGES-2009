@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.157 2009/01/10 20:20:18 markd Exp $
+$NetBSD: CHANGES-2009,v 1.158 2009/01/10 21:05:35 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -204,3 +204,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated inputmethod/canna-server to 3.6pl4nb4 [obache 2009-01-10]
 	Added chat/libmsn version 4.0beta2 [markd 2009-01-10]
 	Added print/py-cups version 1.9.44 [markd 2009-01-10]
+	Updated graphics/libv4l to 0.4.3nb2 [jmcneill 2009-01-10]
