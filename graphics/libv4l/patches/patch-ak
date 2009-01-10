@@ -1,0 +1,40 @@
+$NetBSD: patch-ak,v 1.1 2009/01/10 21:04:23 jmcneill Exp $
+
+--- libv4l1/libv4l1.c.orig	2009-01-10 15:34:52.000000000 -0500
++++ libv4l1/libv4l1.c	2009-01-10 15:35:47.000000000 -0500
+@@ -44,12 +44,13 @@
+ #include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <syscall.h>
+ #include <fcntl.h>
+ #include <string.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <sys/mman.h>
++#ifdef __linux__
++#include <syscall.h>
+ /* These headers are not needed by us, but by linux/videodev2.h,
+    which is broken on some systems and doesn't include them itself :( */
+ #include <sys/time.h>
+@@ -58,10 +59,20 @@
+ /* end broken header workaround includes */
+ #include <linux/videodev.h>
+ #include <linux/videodev2.h>
++#else
++#include <sys/syscall.h>
++#include <sys/ioctl.h>
++#include "videodev.h"
++#include <sys/videoio.h>
++#endif
+ #include <libv4l2.h>
+ #include "libv4l1.h"
+ #include "libv4l1-priv.h"
+ 
++#ifndef MAP_ANONYMOUS
++#define MAP_ANONYMOUS MAP_ANON
++#endif
++
+ #define V4L1_SUPPORTS_ENUMINPUT 0x01
+ #define V4L1_SUPPORTS_ENUMSTD   0x02
+ #define V4L1_PIX_FMT_TOUCHED    0x04
