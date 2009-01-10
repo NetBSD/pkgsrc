@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.155 2009/01/10 08:38:07 markd Exp $
+$NetBSD: CHANGES-2009,v 1.156 2009/01/10 09:00:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -202,4 +202,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/akonadi to 1.1.0 [markd 2009-01-09]
 	Added math/eigen2 version 2.0beta5 [markd 2009-01-10]
 	Updated inputmethod/canna-server to 3.6pl4nb4 [obache 2009-01-10]
-	Added print-py-pycups version 1.9.44 [markd 2009-01-10]
+	Added print/py-pycups version 1.9.44 [markd 2009-01-10]
+	Added chat/libmsn version 4.0beta2 [markd 2009-01-10]
