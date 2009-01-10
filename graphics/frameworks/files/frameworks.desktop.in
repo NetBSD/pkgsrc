@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Frameworks
+Comment=Stop-motion frame capture
+Exec=@PREFIX@/bin/frameworks
+Icon=@PREFIX@/share/icons/hicolor/48x48/apps/frameworks.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Application;AudioVideo;
