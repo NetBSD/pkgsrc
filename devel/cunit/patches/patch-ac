@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+
+Place doc headers in correct directory
+
+--- doc/headers/Makefile.in	2009/01/10 18:01:36	1.1
++++ doc/headers/Makefile.in	2009/01/10 18:02:34
+@@ -183,7 +183,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-dochdrdir = $(prefix)/doc/@PACKAGE@/headers
++dochdrdir = $(prefix)/share/doc/@PACKAGE@/headers
+ INCLUDE_FILES = \
+ 	Automated.h \
+ 	Basic.h \
