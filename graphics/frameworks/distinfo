@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/10 21:08:14 jmcneill Exp $
+
+SHA1 (frameworks-0.3.7.tar.gz) = 0d7629355c47283497246ee5d7aefdca99d1e7b8
+RMD160 (frameworks-0.3.7.tar.gz) = b63a877a4e477ed23993beaeda80326bd2c7cf1c
+Size (frameworks-0.3.7.tar.gz) = 116266 bytes
+SHA1 (patch-aa) = 639cc8de7ecbda4f22d762af7f22dd6f63f23e32
+SHA1 (patch-ab) = f1ef0a5658062347925e367b80f95667c44a9a67
