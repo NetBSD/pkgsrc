@@ -1,0 +1,59 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+
+update for modern openssl.
+use gettimeofday() rather than ftime() to prime srand().
+
+--- msn/util.cpp.orig	2008-11-17 02:27:05.000000000 +1300
++++ msn/util.cpp
+@@ -29,7 +29,7 @@
+ #include <fstream>
+ #include <openssl/rand.h>
+ #include <cstring>
+-#include <sys/timeb.h>
++#include <sys/time.h>
+ #include "md5.h"
+ 
+ #ifdef _WIN32
+@@ -244,15 +244,15 @@ namespace MSN 
+ 
+         unsigned char workvec[8];
+         RAND_bytes(workvec, 8);
+-        des_key_schedule ks1,ks2,ks3;
++        DES_key_schedule ks1,ks2,ks3;
+ 
+         const char *one=key3.c_str();
+         const char *two=key3.c_str()+8;
+         const char *three=key3.c_str()+16;
+ 
+-        des_set_key((C_Block *)one,ks1);
+-        des_set_key((C_Block *)two,ks2);
+-        des_set_key((C_Block *)three,ks3);
++        DES_set_key((DES_cblock *)one,&ks1);
++        DES_set_key((DES_cblock *)two,&ks2);
++        DES_set_key((DES_cblock *)three,&ks3);
+ 
+         unsigned char output[72];
+         memset(&output,0,72);
+@@ -263,7 +263,7 @@ namespace MSN 
+         // ugly, but I think it is working properly
+         std::ostringstream buf_;
+         buf_ << nonce << "\x08\x08\x08\x08\x08\x08\x08\x08";
+-        DES_ede3_cbc_encrypt((const unsigned char*)buf_.str().c_str(),output,buf_.str().size(),&ks1,&ks2,&ks3,(C_Block *)workvec,DES_ENCRYPT);
++        DES_ede3_cbc_encrypt((const unsigned char*)buf_.str().c_str(),output,buf_.str().size(),&ks1,&ks2,&ks3,(DES_cblock *)workvec,DES_ENCRYPT);
+ 
+         MSGUSRKEY.uStructHeaderSize=28;
+         MSGUSRKEY.uCryptMode=1;
+@@ -352,10 +352,10 @@ namespace MSN 
+ 
+     std::string new_branch()
+     {
+-        struct timeb t;
+-        ftime(&t);
++        struct timeval t;
++        gettimeofday(&t, NULL);
+         char branch[100];
+-        srand(t.millitm);
++        srand(t.tv_usec);
+         unsigned int a=random();
+         srand(a);
+         unsigned short b=random();
