@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/10 20:13:29 markd Exp $
+
+SHA1 (pycups-1.9.44.tar.bz2) = e5920cba3d888c867c5324810fa2fe18f9deb414
+RMD160 (pycups-1.9.44.tar.bz2) = db1376be3f344cc21c54ee7705b8d57fa016524b
+Size (pycups-1.9.44.tar.bz2) = 39561 bytes
+SHA1 (patch-aa) = 22ba76d03b7d7e4638f2a81f042b5fcfa48f7ac5
