@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+
+Place docs in correct directory
+
+--- doc/Makefile.in	2009/01/10 17:57:40	1.1
++++ doc/Makefile.in	2009/01/10 17:58:05
+@@ -192,7 +192,7 @@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-docdir = $(prefix)/doc/@PACKAGE@
++docdir = $(prefix)/share/doc/@PACKAGE@
+ doc_DATA = \
+ 	CUnit_doc.css \
+ 	error_handling.html \
