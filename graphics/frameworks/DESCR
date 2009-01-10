@@ -1,0 +1,14 @@
+Frameworks is stop-motion animation frame capture software primarily for
+Linux. Frameworks captures images from a camera and strings them together into
+an animation. These still images may then be combined into a single video file
+using other software. Only video4linux webcams are currently supported; work
+is being done to add other types of digital cameras including IEEE 1394
+camcorders, and USB still cameras. Frameworks is designed to be easily used
+alongside the GIMP Animation Package (GAP).
+
+Frameworks provides an interface to camera brightness and other controls. It
+captures images as frame_0001.png, frame_0002.png, and so on. Frameworks
+provides animation assistance in the form of onion skinning: displaying ghost
+images of previous frames, and continuous preview: continuous playback of the
+most recent few seconds followed by the live view from the camera. No editing
+features are provided.
