@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.160 2009/01/10 21:10:48 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.161 2009/01/10 22:22:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -207,3 +207,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/libv4l to 0.4.3nb2 [jmcneill 2009-01-10]
 	Added devel/cunit version 2.1 [agc 2009-01-10]
 	Added graphics/frameworks version 0.3.7 [jmcneill 2009-01-10]
+	Added textproc/ebook-tools version 0.1.1 [wiz 2009-01-10]
