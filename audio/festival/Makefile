@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2009/01/10 00:28:57 jnemeth Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -31,7 +31,7 @@ CONFIG_SUB_OVERRIDE=	${SPEECHTOOLS}/config.sub ${FESTIVAL}/config.sub
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*)
 GCC_REQD+=	3.3.6
 USE_PKGSRC_GCC= yes
 .endif
