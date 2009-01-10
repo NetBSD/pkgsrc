@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/10 08:35:29 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/10 08:54:01 markd Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY25_PYCUPS_BUILDLINK3_MK:=	${PY25_PYCUPS_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py25-pycups
 
 .if ${PY25_PYCUPS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py25-pycups+=	py25-pycups>=1.9.44
-BUILDLINK_PKGSRCDIR.py25-pycups?=	../../wip/py-pycups
+BUILDLINK_PKGSRCDIR.py25-pycups?=	../../print/py-pycups
 .endif	# PY25_PYCUPS_BUILDLINK3_MK
 
 #.include "../../print/cups/buildlink3.mk"
