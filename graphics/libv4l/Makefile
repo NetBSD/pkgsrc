@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/09/17 14:04:54 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/10 21:04:22 jmcneill Exp $
 
 DISTNAME=	libv4l-0.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://people.atrpms.net/~hdegoede/
 
@@ -22,9 +22,13 @@ INSTALLATION_DIRS+=	include/sys
 pre-configure:
 	${MKDIR} ${WRKSRC}/include/sys
 	cp ${FILESDIR}/videoio.h ${WRKSRC}/include/sys
+	cp ${FILESDIR}/videodev.h ${WRKSRC}/include/sys
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/videoio.h ${DESTDIR}${PREFIX}/include/sys
+.elif !exists(/usr/include/linux/videodev.h)
+pre-configure:
+	cp ${FILESDIR}/videodev.h ${WRKSRC}/include/videodev.h
 .endif
 
 PLIST_VARS=	needs_videoio
