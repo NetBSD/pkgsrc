@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+LIBMSN_BUILDLINK3_MK:=	${LIBMSN_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	libmsn
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmsn}
+BUILDLINK_PACKAGES+=	libmsn
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmsn
+
+.if ${LIBMSN_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libmsn+=	libmsn>=4.0beta2
+BUILDLINK_PKGSRCDIR.libmsn?=	../../chat/libmsn
+.endif	# LIBMSN_BUILDLINK3_MK
+
+.include "../../security/openssl/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
