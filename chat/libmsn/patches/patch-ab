@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+
+update for modern openssl.
+
+--- msntest/msntest.cpp.orig	2008-11-17 06:17:58.000000000 +1300
++++ msntest/msntest.cpp
+@@ -258,7 +258,7 @@ int main()
+                     if(mySocketsSsl[i].isSSL && !mySocketsSsl[i].isConnected)
+                     {
+                         BIO *bio_socket_new;
+-                        SSL_METHOD *meth=NULL;
++                        const SSL_METHOD *meth=NULL;
+                         meth=SSLv23_client_method();
+                         SSLeay_add_ssl_algorithms();
+                         mySocketsSsl[i].ctx = SSL_CTX_new(meth);
