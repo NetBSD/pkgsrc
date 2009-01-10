@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.192 2009/01/10 08:36:43 markd Exp $
+# $NetBSD: Makefile,v 1.193 2009/01/10 20:17:01 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -100,8 +100,8 @@ SUBDIR+=	psify
 SUBDIR+=	psjoin
 SUBDIR+=	pslib
 SUBDIR+=	psutils
+SUBDIR+=	py-cups
 SUBDIR+=	py-pslib
-SUBDIR+=	py-pycups
 SUBDIR+=	py-reportlab
 SUBDIR+=	py-reportlab-renderPM
 SUBDIR+=	rlpr
