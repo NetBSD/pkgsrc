@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/10 21:03:58 agc Exp $
+
+Place documentation in the correct place
+
+--- doc/Makefile.am	2009/01/10 17:32:20	1.1
++++ doc/Makefile.am	2009/01/10 17:32:29
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-docdir = $(prefix)/doc/@PACKAGE@
++docdir = $(prefix)/share/doc/@PACKAGE@
+ 
+ doc_DATA = \
+ 	CUnit_doc.css \
