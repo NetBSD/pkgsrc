@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1 2009/01/10 21:48:51 jmcneill Exp $
+
+Use /dev/video0 as the default device.
+
+--- src/frameworks.c.orig	2009-01-10 16:42:18.000000000 -0500
++++ src/frameworks.c	2009-01-10 16:42:50.000000000 -0500
+@@ -44,7 +44,7 @@
+     GString *device_file = NULL;
+ 
+     /* To command line args: "-r" forces read(), and "device_name" is
+-     * the filename of the video device (defaults to /dev/video). */
++     * the filename of the video device (defaults to /dev/video0). */
+     if (argc > 1) {
+         for (i=1; i<argc; i++) {
+             if (strcmp("-r", argv[i]) == 0) {
+@@ -60,7 +60,7 @@
+         }
+     }
+     if (device_file == NULL)
+-        device_file = g_string_new("/dev/video");
++        device_file = g_string_new("/dev/video0");
+ 
+ 
+     g_thread_init(NULL);

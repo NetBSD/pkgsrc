@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/10 21:08:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/10 21:48:51 jmcneill Exp $
 bin/frameworks
+share/applications/frameworks.desktop
 share/frameworks.glade
+share/icons/hicolor/48x48/apps/frameworks.png
