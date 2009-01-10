@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2007/09/07 22:12:12 jlam Exp $
+# $NetBSD: Makefile.common,v 1.19 2009/01/10 05:13:01 obache Exp $
 #
 # Canna common makefile.
 #
@@ -33,5 +33,6 @@ CANNA_ENV=	CANNA_USER=${CANNA_USER}				\
 		CANNA_MODE=${CANNA_MODE}				\
 		IMDICTDIR=${IMDICTDIR}
 MAKE_ENV+=	${CANNA_ENV}
+SCRIPTS_ENV+=	${CANNA_ENV}
 PLIST_SUBST+=	${CANNA_ENV}
 FILES_SUBST+=	${CANNA_ENV}
