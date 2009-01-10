@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.60 2009/01/09 16:20:20 shattered Exp $
+# $NetBSD: Makefile,v 1.61 2009/01/10 10:02:00 shattered Exp $
 #
 
 DISTNAME=		jwhois-4.0
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_GNU:=jwhois/}
 
-MAINTAINER=		kim@tac.nyc.ny.us
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/jwhois/
 COMMENT=		Configurable WHOIS client
 
