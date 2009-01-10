@@ -1,0 +1,57 @@
+@comment $NetBSD: PLIST.python25,v 1.1 2009/01/10 23:13:44 adrianp Exp $
+include/pygtk-2.0/pygtk/pygtk.h
+${PYSITELIB}/gtk-2.0/gtk/__init__.py
+${PYSITELIB}/gtk-2.0/gtk/__init__.pyc
+${PYSITELIB}/gtk-2.0/gtk/__init__.pyo
+${PYSITELIB}/gtk-2.0/gtk/_gtk.la
+${PYSITELIB}/gtk-2.0/gtk/_lazyutils.py
+${PYSITELIB}/gtk-2.0/gtk/_lazyutils.pyc
+${PYSITELIB}/gtk-2.0/gtk/_lazyutils.pyo
+${PYSITELIB}/gtk-2.0/gtk/compat.py
+${PYSITELIB}/gtk-2.0/gtk/compat.pyc
+${PYSITELIB}/gtk-2.0/gtk/compat.pyo
+${PYSITELIB}/gtk-2.0/gtk/deprecation.py
+${PYSITELIB}/gtk-2.0/gtk/deprecation.pyc
+${PYSITELIB}/gtk-2.0/gtk/deprecation.pyo
+${PYSITELIB}/gtk-2.0/gtk/glade.la
+${PYSITELIB}/gtk-2.0/gtk/keysyms.py
+${PYSITELIB}/gtk-2.0/gtk/keysyms.pyc
+${PYSITELIB}/gtk-2.0/gtk/keysyms.pyo
+${PYSITELIB}/gtk-2.0/gtk/compat.py
+${PYSITELIB}/gtk-2.0/gtk/compat.pyc
+${PYSITELIB}/gtk-2.0/gtk/compat.pyo
+${PYSITELIB}/gtk-2.0/gtk/deprecation.py
+${PYSITELIB}/gtk-2.0/gtk/deprecation.pyc
+${PYSITELIB}/gtk-2.0/gtk/deprecation.pyo
+${PYSITELIB}/gtk-2.0/gtk/glade.la
+${PYSITELIB}/gtk-2.0/gtk/keysyms.py
+${PYSITELIB}/gtk-2.0/gtk/keysyms.pyc
+${PYSITELIB}/gtk-2.0/gtk/keysyms.pyo
+${PYSITELIB}/gtk-2.0/gtkunixprint.la
+share/pygtk/2.0/defs/gdk-2.10.defs
+share/pygtk/2.0/defs/gdk-2.12.defs
+share/pygtk/2.0/defs/gdk-2.14.defs
+share/pygtk/2.0/defs/gdk-base-types.defs
+share/pygtk/2.0/defs/gdk-base.defs
+share/pygtk/2.0/defs/gdk-types.defs
+share/pygtk/2.0/defs/gdk.defs
+share/pygtk/2.0/defs/gtk-2.10-types.defs
+share/pygtk/2.0/defs/gtk-2.10.defs
+share/pygtk/2.0/defs/gtk-2.12-types.defs
+share/pygtk/2.0/defs/gtk-2.12.defs
+share/pygtk/2.0/defs/gtk-2.14-types.defs
+share/pygtk/2.0/defs/gtk-2.14.defs
+share/pygtk/2.0/defs/gtk-base-types.defs
+share/pygtk/2.0/defs/gtk-base.defs
+share/pygtk/2.0/defs/gtk-extrafuncs.defs
+share/pygtk/2.0/defs/gtk-types.defs
+share/pygtk/2.0/defs/gtk.defs
+share/pygtk/2.0/defs/gtkunixprint.defs
+share/pygtk/2.0/defs/libglade.defs
+@unexec ${RMDIR} %D/include/pygtk-2.0/pygtk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/include/pygtk-2.0 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PYSITELIB}/gtk-2.0/gtk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${PYSITELIB}/gtk-2.0 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/pygtk/2.0/defs 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/pygtk/2.0 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/pygtk 2>/dev/null || ${TRUE}
