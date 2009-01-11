@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/12 13:38:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/11 09:13:00 minskim Exp $
 bin/hugelatex
+share/texmf/web2c/texmf.hugelatex.cnf
