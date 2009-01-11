@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2008/11/23 01:40:26 jmcneill Exp $
+# $NetBSD: Makefile,v 1.38.2.1 2009/01/11 05:55:56 rtr Exp $
 
-DISTNAME=	dbus-1.2.4
-PKGREVISION=	3
+DISTNAME=	dbus-1.2.4.2permissive
+PKGNAME=	dbus-1.2.4.2
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -94,6 +95,10 @@ FILES_SUBST+=		DBUS_USER=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
+# Package tries to use these if gcc accepts them, but that doesn't
+# mean that we universally can *run* the executables
+BUILDLINK_TRANSFORM+=	rm:-fPIE
+BUILDLINK_TRANSFORM+=	rm:-pie
 
 .include "options.mk"
 
