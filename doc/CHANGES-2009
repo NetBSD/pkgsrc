@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.164 2009/01/11 03:12:48 smb Exp $
+$NetBSD: CHANGES-2009,v 1.165 2009/01/11 04:22:57 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -211,3 +211,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/libspf2 to 1.2.9 [adrianp 2009-01-10]
 	Updated textproc/soprano to 2.1.64 [markd 2009-01-10]
 	Updated mail/claws-mail to 3.7.0 [smb 2009-01-10]
+	Updated pkgtools/packagekit to 0.4.0nb1 [jmcneill 2009-01-10]
