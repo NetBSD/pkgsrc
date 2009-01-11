@@ -1,0 +1,19 @@
+# $NetBSD: config-install.tmpl,v 1.1 2009/01/11 09:11:07 minskim Exp $
+#
+# Add config fragments to texmf.cnf
+#
+
+TEXMF_CNF=${PKG_SYSCONFBASE}/texmf/texmf.cnf
+
+case ${STAGE} in
+POST-INSTALL)
+	config_names="@CONFIG_NAMES@"
+	for c in $config_names; do
+	    ${ECHO} "%%% BEGIN $c" >> ${TEXMF_CNF}
+	    ${CAT} @PREFIX@/share/texmf/web2c/texmf.$c.cnf >> ${TEXMF_CNF}
+	    ${ECHO} "%%% END $c" >> ${TEXMF_CNF}
+	done
+	;;
+*)
+	;;
+esac
