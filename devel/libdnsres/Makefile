@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/16 21:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/11 13:04:01 adrianp Exp $
 #
 
 DISTNAME=		libdnsres-0.1a
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+MAKE_JOBS_SAFE=		NO
 
 # uses event_once
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.9
