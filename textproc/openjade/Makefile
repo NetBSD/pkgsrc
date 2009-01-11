@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2009/01/11 09:08:00 minskim Exp $
 #
 
 DISTNAME=	openjade-1.3.2
@@ -36,6 +36,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/*.htm ${OPENJADE_DOC_DIR}/jadedoc
 	${INSTALL_DATA} ${WRKSRC}/jadedoc/images/* ${OPENJADE_DOC_DIR}/jadedoc/images
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
