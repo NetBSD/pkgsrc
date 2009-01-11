@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.10 2009/01/09 10:51:08 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.11 2009/01/11 05:58:48 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -28,3 +28,7 @@ Pullup ticket #2628 - requested by tnn
 openssl: security update
 Pullup ticket #2630 - requested by rhaen
 p5-Rose-HTML-Objects: dependence fix
+pullup ticket #2627 - requested by wiz
+dbus: update for security fix
+pullup ticket #2631 - requested by he
+dbus: update for build fix
