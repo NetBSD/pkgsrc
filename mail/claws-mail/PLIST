@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/10/15 16:22:02 smb Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/11 03:11:37 smb Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -248,8 +248,7 @@ share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
 share/locale/ru/LC_MESSAGES/claws-mail.mo
-share/locale/sk/LC_MESSAGES/claws-mail.mo
-share/locale/sr/LC_MESSAGES/claws-mail.mo
+share/locale/cs/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps

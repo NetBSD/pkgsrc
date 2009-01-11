@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/15 16:22:02 smb Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/11 03:11:37 smb Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +12,7 @@ COMMENT=	Plugin to use the Dillo web browser for html rendering
 CONFIGURE_ARGS+=	--enable-dillo_viewer-plugin
 
 DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
-DEPENDS+=	dillo>=0.8.6nb2:../../www/dillo
+DEPENDS+=	dillo>=2.0:../../www/dillo
 
 .include "../../mail/claws-mail/Makefile.vers"
 .include "../../security/gnutls/buildlink3.mk"

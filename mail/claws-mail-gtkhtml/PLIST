@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/16 20:35:06 smb Exp $
-lib/claws-mail/plugins/gtkhtml2_viewer.a
+@comment $NetBSD: PLIST,v 1.4 2009/01/11 03:11:37 smb Exp $
 lib/claws-mail/plugins/gtkhtml2_viewer.la
-lib/claws-mail/plugins/gtkhtml2_viewer.so
 share/locale/ca/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/de/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/es/LC_MESSAGES/gtkhtml2_viewer.mo
@@ -14,6 +12,7 @@ share/locale/pt_BR/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/ru/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/sk/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/sr/LC_MESSAGES/gtkhtml2_viewer.mo
+share/locale/cs/LC_MESSAGES/gtkhtml2_viewer.mo
 share/locale/zh_CN/LC_MESSAGES/gtkhtml2_viewer.mo
 @dirrm lib/claws-mail/plugins
 @dirrm lib/claws-mail

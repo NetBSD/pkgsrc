@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/15 16:22:03 smb Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/11 03:11:38 smb Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin
 CONFIGURE_ARGS+=	--enable-pgpinline-plugin
 
-DEPENDS+=	claws-mail-pgpcore-3.6.1{,nb[0-9]*}:../../mail/claws-mail-pgpcore
+DEPENDS+=	claws-mail-pgpcore-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail-pgpcore
 
 PLIST_SRC+=	PLIST
 

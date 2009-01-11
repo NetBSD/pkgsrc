@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/10/15 16:22:02 smb Exp $
+$NetBSD: distinfo,v 1.5 2009/01/11 03:11:38 smb Exp $
 
-SHA1 (newmail-0.0.14.tar.gz) = 81d128315cc48398c8372d84906490f99fd5a490
-RMD160 (newmail-0.0.14.tar.gz) = f17e9876b014a183a69d1468b2bca2e88e3bd210
-Size (newmail-0.0.14.tar.gz) = 327283 bytes
+SHA1 (newmail-0.0.15.tar.gz) = 7665de0060d611e0cf63f209c3e5ea7c2daf5cec
+RMD160 (newmail-0.0.15.tar.gz) = 9b6fa11e5c551d6ed5fa771ce7fb185a83e6c583
+Size (newmail-0.0.15.tar.gz) = 327928 bytes
