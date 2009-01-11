@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7797 2009/01/09 23:09:42 markd Exp $
+$NetBSD: TODO,v 1.7798 2009/01/11 22:50:58 shattered Exp $
 
 Suggested new packages
 ======================
@@ -1153,7 +1153,6 @@ Suggested package updates
 	o silc-server-1.1.14
 	o silc-toolkit-2.1.9
 	o simulavr-0.1.2.2
-	o sipcalc-1.1.4
 	o sitecopy-0.16.5
 	o sitescooper-3.1.2
 	o sj3-lib-2.0.1.21 [http://code.google.com/p/sj3/]
