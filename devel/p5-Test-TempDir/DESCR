@@ -1,0 +1,16 @@
+Test::TempDir provides temporary directory creation with testing in mind.
+
+The differences between using this and using File::Temp are:
+
+    * If t/tmp is available (writable, creatable, etc) it's preferred
+      over $ENV{TMPDIR} etc. Otherwise a temporary directory will be
+      used.
+      This is temp_root
+    * Lockfiles are used on t/tmp, to prevent race conditions when
+      running under a parallel test harness.
+    * The temp_root is cleaned at the end of a test run, but not
+      if tests failed.
+    * temp_root is emptied at the begining of a test run unconditionally.
+    * The default policy is not to clean the individual tempfiles
+      and tempdirs within temp_root, in order to aid in debugging of
+      failed tests.
