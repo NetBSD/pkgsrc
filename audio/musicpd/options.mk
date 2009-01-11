@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2007/02/01 14:52:43 cbiere Exp $
+# $NetBSD: options.mk,v 1.8 2009/01/11 20:57:20 ahoka Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg
-PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg
+PKG_SUPPORTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg shout
+PKG_SUGGESTED_OPTIONS=	aac audiofile flac iconv id3 libmikmod musepack ogg shout
 
 .include "../../mk/bsd.options.mk"
 
@@ -62,6 +62,13 @@ CONFIGURE_ARGS+=	--disable-mpc
 CONFIGURE_ARGS+=	--with-ogg=${BUILDLINK_PREFIX.libvorbis}
 .else
 CONFIGURE_ARGS+=	--disable-ogg
+.endif
+
+.if !empty(PKG_OPTIONS:Mshout)
+.  include "../../audio/libshout/buildlink3.mk"
+CONFIGURE_ARGS+=        --enable-shout
+.else
+CONFIGURE_ARGS+=        --enable-shout
 .endif
 
 # when IPv6 support is enabled, mpd doesn't listen on an IPv4 address.
