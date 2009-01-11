@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2008/09/07 14:03:42 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2009/01/11 23:15:55 minskim Exp $
 
-DISTNAME=	lua-5.1.4
+DISTNAME=	lua-${LUA_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.gwdg.de/pub/languages/lua/ \
@@ -15,6 +15,8 @@ MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lua.org/
 COMMENT=	Powerful light-weight language for extending applications
+
+.include "../../lang/lua/version.mk"
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
