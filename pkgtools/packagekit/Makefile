@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/08 00:21:00 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/11 04:22:10 jmcneill Exp $
 #
 
 DISTNAME=	PackageKit-0.4.0
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/PackageKit/packagekit/}
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://www.packagekit.org/releases/
@@ -60,4 +61,5 @@ pre-configure:
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
