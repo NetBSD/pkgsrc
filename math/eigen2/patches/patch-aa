@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2009/01/11 10:11:48 markd Exp $
+$NetBSD: patch-aa,v 1.2 2009/01/11 11:45:12 markd Exp $
 
---- ./Eigen/src/Core/util/Memory.h.orig	2009-01-06 07:21:44.000000000 +1300
-+++ ./Eigen/src/Core/util/Memory.h
-@@ -48,7 +48,7 @@ inline T* ei_aligned_malloc(size_t size)
-   if(ei_packet_traits<T>::size>1 || ei_force_aligned_malloc<T>::ret)
-   {
-     void *void_result;
--    #ifdef __linux
-+    #if defined(__linux) || defined(__NetBSD__)
-       #ifdef EIGEN_EXCEPTIONS
-         const int failed =
-       #endif
-@@ -95,7 +95,7 @@ inline void ei_aligned_free(T* ptr, size
-       // need to call manually the dtor in case T is some user-defined fancy numeric type.
-       // always destruct an array starting from the end.
+--- Eigen/src/Core/util/Memory.h.orig	2009-01-06 07:21:44.000000000 +1300
++++ Eigen/src/Core/util/Memory.h
+@@ -56,7 +56,7 @@ inline T* ei_aligned_malloc(size_t size)
+     #else
+       #ifdef _MSC_VER
+         void_result = _aligned_malloc(size*sizeof(T), 16);
+-      #elif defined(__APPLE__)
++      #elif defined(__APPLE__) || defined(__NetBSD__)
+         void_result = malloc(size*sizeof(T)); // Apple's malloc() already returns aligned ptrs
+       #else
+         void_result = _mm_malloc(size*sizeof(T), 16);
+@@ -97,7 +97,7 @@ inline void ei_aligned_free(T* ptr, size
        while(size) ptr[--size].~T();
--      #if defined(__linux)
-+      #if defined(__linux) || defined(__NetBSD__)
+       #if defined(__linux)
          free(ptr);
-       #elif defined(__APPLE__)
+-      #elif defined(__APPLE__)
++      #elif defined(__APPLE__) || defined(__NetBSD__)
          free(ptr);
+       #elif defined(_MSC_VER)
+         _aligned_free(ptr);
