@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/10/15 16:22:03 smb Exp $
+$NetBSD: distinfo,v 1.8 2009/01/11 03:11:38 smb Exp $
 
-SHA1 (rssyl-0.22.tar.gz) = 538c713f2ac4e50d26b0d0b2596fdc17a891add6
-RMD160 (rssyl-0.22.tar.gz) = d479499c17f7fa16359fdc129c110a794a5e0a72
-Size (rssyl-0.22.tar.gz) = 492868 bytes
+SHA1 (rssyl-0.23.tar.gz) = 0493d1b72f3675ad4f32dc992c8396720ff0d01f
+RMD160 (rssyl-0.23.tar.gz) = ed7dba30fefa0186ece0069688fd867ec1321be5
+Size (rssyl-0.23.tar.gz) = 494738 bytes
