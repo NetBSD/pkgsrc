@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/08 00:21:00 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/11 04:22:10 jmcneill Exp $
 bin/packagekit-bugreport.sh
 bin/pkcon
 bin/pkgenpack
@@ -26,6 +26,7 @@ include/PackageKit/packagekit-glib/pk-service-pack.h
 include/PackageKit/packagekit-glib/pk-task-list.h
 include/PackageKit/packagekit-glib/pk-transaction-obj.h
 include/PackageKit/packagekit-glib/pk-update-detail-obj.h
+lib/gtk-2.0/modules/libpk-gtk-module.la
 lib/libpackagekit-glib.la
 lib/packagekit-backend/libpk_backend_dummy.la
 lib/packagekit-backend/libpk_backend_pkgsrc.la
