@@ -1,6 +1,3 @@
-
-% jadetex & pdfjadetex
-% added by jadetex pkg
 main_memory.jadetex = 1500000
 param_size.jadetex = 1500
 stack_size.jadetex = 1500
@@ -22,4 +19,3 @@ nest_size.pdfjadetex = 500
 save_size.pdfjadetex = 5000
 pool_size.pdfjadetex = 500000
 max_strings.pdfjadetex = 55000
-
