@@ -1,0 +1,8 @@
+MooseX::Types::Path::Class creates common Moose types, coercions
+and option specifications useful for dealing with Path::Class
+objects as Moose attributes.
+
+Coercions (see Moose::Util::TypeConstraints) are made from both
+'Str' and 'ArrayRef' to both Path::Class::Dir and Path::Class::File
+objects. If you have MooseX::Getopt installed, the Getopt option
+type ("=s") will be added for both Path::Class::Dir and Path::Class::File.
