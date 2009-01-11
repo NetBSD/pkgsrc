@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/10/03 06:52:03 martti Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/01/11 22:47:54 shattered Exp $
 bin/ftpcount
 bin/ftpdctl
 bin/ftptop
@@ -83,6 +83,7 @@ share/doc/proftpd/license.txt
 share/examples/proftpd/anonymous.conf
 share/examples/proftpd/basic.conf
 share/examples/proftpd/complex-virtual.conf
+share/examples/proftpd/ftpasswd
 share/examples/proftpd/mod_sql.conf
 share/examples/proftpd/virtual.conf
 share/examples/rc.d/proftpd
