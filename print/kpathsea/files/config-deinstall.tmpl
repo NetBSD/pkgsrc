@@ -1,0 +1,22 @@
+# $NetBSD: config-deinstall.tmpl,v 1.1 2009/01/11 09:11:07 minskim Exp $
+#
+# Remove config fragments from texmf.cnf.
+#
+
+TEXMF_CNF=${PKG_SYSCONFBASE}/texmf/texmf.cnf
+
+case ${STAGE} in
+DEINSTALL)
+	config_names="@CONFIG_NAMES@"
+	for c in $config_names; do
+	    ${AWK} "\
+BEGIN { do_print=1; } \
+/^%%% BEGIN $c\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^%%% END $c\$/ { do_print=1; }" ${TEXMF_CNF} > ${TEXMF_CNF}.tmp &&
+	${MV} ${TEXMF_CNF}.tmp ${TEXMF_CNF}
+	done
+	;;
+*)
+	;;
+esac
