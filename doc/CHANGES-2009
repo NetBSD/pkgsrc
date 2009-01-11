@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.168 2009/01/11 20:58:09 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.169 2009/01/11 21:58:00 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -216,3 +216,31 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-hugelatex to 2.0nb6 [minskim 2009-01-11]
 	Updated print/tex-jadetex to 3.13nb6 [minskim 2009-01-11]
 	Updated audio/musicpd to 0.13.1nb3 [ahoka 2009-01-11]
+	Updated net/p5-DNS-ZoneParse to 0.96 [he 2009-01-11]
+	Added devel/p5-MooseX-Types-Path-Class version 0.05 [he 2009-01-11]
+	Added devel/p5-File-Path version 2.07 [he 2009-01-11]
+	Added devel/p5-Test-TempDir version 0.04 [he 2009-01-11]
+	Added databases/p5-DBD-Mock version 1.39 [he 2009-01-11]
+	Added net/p5-Data-Stream-Bulk version 0.03 [he 2009-01-11]
+	Added devel/p5-MooseX-StrictConstructor version 0.07 [he 2009-01-11]
+	Updated net/p5-Net-Amazon-S3 to 0.48 [he 2009-01-11]
+	Updated security/p5-Authen-SASL to 2.12 [he 2009-01-11]
+	Updated sysutils/p5-File-Copy-Recursive to 0.38 [he 2009-01-11]
+	Updated textproc/p5-Data-Form-Validator to 4.63 [he 2009-01-11]
+	Updated textproc/p5-PDF-API2 to 0.72.003 [he 2009-01-11]
+	Updated textproc/p5-Template-Declare to 0.30 [he 2009-01-11]
+	Updated textproc/p5-Text-DHCPLeases to 0.8 [he 2009-01-11]
+	Updated textproc/p5-Text-SpellChecker to 0.5 [he 2009-01-11]
+	Updated textproc/p5-XML-RSS to 1.42 [he 2009-01-11]
+	Updated textproc/p5-YAML-LibYAML to 0.30 [he 2009-01-11]
+	Updated textproc/p5-YAML-Tiny to 1.36 [he 2009-01-11]
+	Updated time/p5-DateTime-TimeZone to 0.83.1 [he 2009-01-11]
+	Updated time/p5-Time-Local to 1.19.1 [he 2009-01-11]
+	Updated www/p5-Alien-GvaScript to 1.11 [he 2009-01-11]
+	Updated www/p5-Apache2-AuthCookieDBI to 2.04 [he 2009-01-11]
+	Updated www/p5-CGI-Session to 4.40 [he 2009-01-11]
+	Updated www/p5-HTML-Lint to 2.06 [he 2009-01-11]
+	Updated www/p5-HTTP-Server-Simple to 0.37 [he 2009-01-11]
+	Updated www/p5-Rose-HTMLx-Form-Related to 0.14 [he 2009-01-11]
+	Updated www/p5-WWW-Amazon-Wishlist to 1.6.1 [he 2009-01-11]
+	Updated x11/p5-gtk2 to 1.202 [he 2009-01-11]
