@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/12 17:32:45 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/11 17:00:56 he Exp $
 #
 
-DISTNAME=	YAML-LibYAML-0.29
+DISTNAME=	YAML-LibYAML-0.30
 PKGNAME=	p5-${DISTNAME}
 #PKGNAME=	p5-${DISTNAME:S/LibYAML/XS/}
 CATEGORIES=	textproc perl5
@@ -13,6 +13,7 @@ COMMENT=	Perl XS binding to libyaml
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PERL5_REQD+=	5.8.3
 PERL5_PACKLIST=	auto/YAML/LibYAML/.packlist
 
 .include "../../lang/perl5/module.mk"
