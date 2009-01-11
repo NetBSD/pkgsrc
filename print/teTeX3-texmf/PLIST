@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/08 22:09:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/01/11 09:05:27 minskim Exp $
 share/texmf-dist/ChangeLog
 share/texmf-dist/LICENSE.texmf
 share/texmf-dist/aliases
@@ -14186,10 +14186,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/vf/adobe/avantgar
 @dirrm share/texmf-dist/fonts/vf/adobe
 @dirrm share/texmf-dist/fonts/vf
-@exec ${MKDIR} %D/share/texmf-dist/fonts/type42
-@dirrm share/texmf-dist/fonts/type42
-@exec ${MKDIR} %D/share/texmf-dist/fonts/type3
-@dirrm share/texmf-dist/fonts/type3
 @dirrm share/texmf-dist/fonts/type1/urw/zapfding
 @dirrm share/texmf-dist/fonts/type1/urw/zapfchan
 @dirrm share/texmf-dist/fonts/type1/urw/times
@@ -14239,8 +14235,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/type1/bitstrea/charter
 @dirrm share/texmf-dist/fonts/type1/bitstrea
 @dirrm share/texmf-dist/fonts/type1
-@exec ${MKDIR} %D/share/texmf-dist/fonts/truetype
-@dirrm share/texmf-dist/fonts/truetype
 @dirrm share/texmf-dist/fonts/tfm/yandy/times
 @dirrm share/texmf-dist/fonts/tfm/yandy/mathtime
 @dirrm share/texmf-dist/fonts/tfm/yandy/mathplus
@@ -14382,10 +14376,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/source/ams/cmextra
 @dirrm share/texmf-dist/fonts/source/ams
 @dirrm share/texmf-dist/fonts/source
-@exec ${MKDIR} %D/share/texmf-dist/fonts/sfd
-@dirrm share/texmf-dist/fonts/sfd
-@exec ${MKDIR} %D/share/texmf-dist/fonts/pk
-@dirrm share/texmf-dist/fonts/pk
 @dirrm share/texmf-dist/fonts/ovp/public/otibet
 @dirrm share/texmf-dist/fonts/ovp/public/omega
 @dirrm share/texmf-dist/fonts/ovp/public/ocherokee
@@ -14399,8 +14389,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/ovf/public/ethiop
 @dirrm share/texmf-dist/fonts/ovf/public
 @dirrm share/texmf-dist/fonts/ovf
-@exec ${MKDIR} %D/share/texmf-dist/fonts/opentype
-@dirrm share/texmf-dist/fonts/opentype
 @dirrm share/texmf-dist/fonts/ofm/public/otibet
 @dirrm share/texmf-dist/fonts/ofm/public/omega
 @dirrm share/texmf-dist/fonts/ofm/public/oinuit
@@ -14408,18 +14396,12 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/ofm/public/ethiop
 @dirrm share/texmf-dist/fonts/ofm/public
 @dirrm share/texmf-dist/fonts/ofm
-@exec ${MKDIR} %D/share/texmf-dist/fonts/misc
-@dirrm share/texmf-dist/fonts/misc
-@exec ${MKDIR} %D/share/texmf-dist/fonts/map/pdftex/updmap
-@dirrm share/texmf-dist/fonts/map/pdftex/updmap
 @dirrm share/texmf-dist/fonts/map/pdftex/cmttf
 @dirrm share/texmf-dist/fonts/map/pdftex
 @dirrm share/texmf-dist/fonts/map/fontname
 @dirrm share/texmf-dist/fonts/map/dvips/xypic
 @dirrm share/texmf-dist/fonts/map/dvips/vntex
 @dirrm share/texmf-dist/fonts/map/dvips/urwvn
-@exec ${MKDIR} %D/share/texmf-dist/fonts/map/dvips/updmap
-@dirrm share/texmf-dist/fonts/map/dvips/updmap
 @dirrm share/texmf-dist/fonts/map/dvips/tetex
 @dirrm share/texmf-dist/fonts/map/dvips/qfonts
 @dirrm share/texmf-dist/fonts/map/dvips/psnfssx
@@ -14435,13 +14417,9 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/map/dvips/antp
 @dirrm share/texmf-dist/fonts/map/dvips/ams
 @dirrm share/texmf-dist/fonts/map/dvips
-@exec ${MKDIR} %D/share/texmf-dist/fonts/map/dvipdfm/updmap
-@dirrm share/texmf-dist/fonts/map/dvipdfm/updmap
 @dirrm share/texmf-dist/fonts/map/dvipdfm/tetex
 @dirrm share/texmf-dist/fonts/map/dvipdfm
 @dirrm share/texmf-dist/fonts/map
-@exec ${MKDIR} %D/share/texmf-dist/fonts/lig
-@dirrm share/texmf-dist/fonts/lig
 @dirrm share/texmf-dist/fonts/enc/dvips/vntex
 @dirrm share/texmf-dist/fonts/enc/dvips/tetex
 @dirrm share/texmf-dist/fonts/enc/dvips/qfonts
@@ -14456,8 +14434,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/fonts/enc/dvips/antp
 @dirrm share/texmf-dist/fonts/enc/dvips
 @dirrm share/texmf-dist/fonts/enc
-@exec ${MKDIR} %D/share/texmf-dist/fonts/cmap
-@dirrm share/texmf-dist/fonts/cmap
 @dirrm share/texmf-dist/fonts/afm/yandy/mathtime
 @dirrm share/texmf-dist/fonts/afm/yandy/mathplus
 @dirrm share/texmf-dist/fonts/afm/yandy/lumath
@@ -14725,8 +14701,6 @@ share/texmf-dist/web2c/viscii-t5.tcx
 @dirrm share/texmf-dist/doc/generic/pstricks/lgc
 @dirrm share/texmf-dist/doc/generic/pstricks/images
 @dirrm share/texmf-dist/doc/generic/pstricks
-@exec ${MKDIR} %D/share/texmf-dist/doc/generic/pdfcrop
-@dirrm share/texmf-dist/doc/generic/pdfcrop
 @dirrm share/texmf-dist/doc/generic/nohyph
 @dirrm share/texmf-dist/doc/generic/multido
 @dirrm share/texmf-dist/doc/generic/mfpic
