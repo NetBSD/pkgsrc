@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/16 20:59:53 smb Exp $
-lib/claws-mail/plugins/spamreport.a
+@comment $NetBSD: PLIST,v 1.5 2009/01/11 03:11:38 smb Exp $
 lib/claws-mail/plugins/spamreport.la
-lib/claws-mail/plugins/spamreport.so
 share/locale/ca/LC_MESSAGES/spam_report.mo
 share/locale/es/LC_MESSAGES/spam_report.mo
 share/locale/fi/LC_MESSAGES/spam_report.mo
@@ -11,5 +9,6 @@ share/locale/it/LC_MESSAGES/spam_report.mo
 share/locale/pt_BR/LC_MESSAGES/spam_report.mo
 share/locale/ru/LC_MESSAGES/spam_report.mo
 share/locale/sk/LC_MESSAGES/spam_report.mo
+share/locale/cs/LC_MESSAGES/spam_report.mo
 @dirrm lib/claws-mail/plugins
 @dirrm lib/claws-mail
