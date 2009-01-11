@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/11/09 13:44:15 seb Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/11 18:21:06 he Exp $
 
-DISTNAME=	Alien-GvaScript-1.10
+DISTNAME=	Alien-GvaScript-1.11
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Alien/}
