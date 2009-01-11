@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.170 2009/01/11 22:06:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.171 2009/01/11 22:50:59 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -245,3 +245,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-WWW-Amazon-Wishlist to 1.6.1 [he 2009-01-11]
 	Updated x11/p5-gtk2 to 1.202 [he 2009-01-11]
 	Updated meta-pkgs/p5-gnome-bindings to 2.24.1.91 [wiz 2009-01-11]
+	Updated net/sipcalc to 1.1.4 [shattered 2009-01-11]
