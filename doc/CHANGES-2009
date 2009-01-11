@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.166 2009/01/11 09:06:11 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.167 2009/01/11 09:17:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -213,3 +213,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/claws-mail to 3.7.0 [smb 2009-01-10]
 	Updated pkgtools/packagekit to 0.4.0nb1 [jmcneill 2009-01-10]
 	Updated print/teTeX3-texmf to 3.0nb7 [minskim 2009-01-11]
+	Updated print/tex-hugelatex to 2.0nb6 [minskim 2009-01-11]
+	Updated print/tex-jadetex to 3.13nb6 [minskim 2009-01-11]
