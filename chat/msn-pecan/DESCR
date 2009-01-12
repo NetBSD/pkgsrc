@@ -1,0 +1,15 @@
+msn-pecan is a fork of the MSN plug-in from Pidgin. Compared to Pidgin's
+official MSN plug-in:
+
+  * Faster log-in
+  * Fewer connection issues
+  * Fewer crashes
+  * Experimental direct connection support (fast file transfers)
+  * Server-side storage for display names (private alias)
+  * Support for handwritten messages (read-only)
+
+Other features:
+
+  * Support for personal status messages
+  * Support for offline messaging (read-only)
+  * Send custom emoticons (Pidgin >= 2.5)
