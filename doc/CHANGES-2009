@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.172 2009/01/12 02:09:33 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.173 2009/01/12 02:44:23 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -246,4 +246,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/p5-gtk2 to 1.202 [he 2009-01-11]
 	Updated meta-pkgs/p5-gnome-bindings to 2.24.1.91 [wiz 2009-01-11]
 	Updated net/sipcalc to 1.1.4 [shattered 2009-01-11]
-	Updated x11/gtk2 to version 2.14.7 [jmcneill 2009-01-11]
+	Updated x11/gtk2 to 2.14.7 [jmcneill 2009-01-11]
+	Updated www/liferea to 1.4.23 [jmcneill 2009-01-11]
