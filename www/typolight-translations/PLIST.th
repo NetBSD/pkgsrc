@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST.th,v 1.1 2008/11/27 04:06:41 taca Exp $
-${TL_WEBDIR}/system/modules/backend/languages/ja/.htaccess
+@comment $NetBSD: PLIST.th,v 1.2 2009/01/12 16:22:45 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/th/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/th/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/th/default.php
