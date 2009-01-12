@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/01/03 18:33:55 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/01/12 15:25:12 wiz Exp $
 #
 
-DISTNAME=		pbzip2-1.0.4
+DISTNAME=		pbzip2-1.0.5
 CATEGORIES=		archivers
 MASTER_SITES=		http://compression.ca/pbzip2/
-#DIST_SUBDIR=		pbzip-1.0.2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://compression.ca/pbzip2/
