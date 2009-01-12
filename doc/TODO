@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7798 2009/01/11 22:50:58 shattered Exp $
+$NetBSD: TODO,v 1.7799 2009/01/12 02:33:18 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -657,7 +657,6 @@ Suggested package updates
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-2.14.7
 	o gtkglarea-2.0.0
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
