@@ -1,4 +1,9 @@
-# $NetBSD: Makefile.common,v 1.48 2009/01/06 11:29:26 adam Exp $
+# $NetBSD: Makefile.common,v 1.49 2009/01/12 17:37:11 shattered Exp $
+#
+# used by sysutils/bacula-clientonly/Makefile
+# used by sysutils/bacula-gnome-console/Makefile
+# used by sysutils/bacula-tray-monitor/Makefile
+# used by sysutils/bacula-wx-console/Makefile
 
 DISTNAME=		bacula-2.4.4
 CATEGORIES=		sysutils
