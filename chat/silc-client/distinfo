@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2009/01/12 06:46:43 tonnerre Exp $
+$NetBSD: distinfo,v 1.34 2009/01/12 07:15:50 tonnerre Exp $
 
 SHA1 (silc-client-1.1.7.tar.bz2) = 3d6ebdeaea98a728cd225114c972116c8746fb72
 RMD160 (silc-client-1.1.7.tar.bz2) = 06bb20b4ee795b814fc0fb73c07b3ae19b9b4e71
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 873c65a78da7195b8baddb33d1c71300fce704f1
 SHA1 (patch-ac) = 576299d98ea63f6c42cc341bf31ad7ec903f93c8
 SHA1 (patch-ad) = 490e3b2a99e14683b9a0005494d29b5a91186755
 SHA1 (patch-ae) = b437cb3433093592573802e70b600c7556ee5834
+SHA1 (patch-af) = 29738fac989989fdd2a8865f9f5e2b3ea2ed7198

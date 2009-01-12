@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.3 2009/01/12 07:15:50 tonnerre Exp $
+
+--- apps/irssi/src/perl/perl-core.c.orig	2008-12-04 13:45:24.000000000 +0100
++++ apps/irssi/src/perl/perl-core.c
+@@ -452,6 +452,8 @@ void perl_core_init(void)
+ 	perl_signals_init();
+         signal_add_last("script error", (SIGNAL_FUNC) sig_script_error);
+ 
++	PERLIO_INIT;
++
+ 	perl_scripts_init();
+ 
+ 	if (irssi_init_finished)
