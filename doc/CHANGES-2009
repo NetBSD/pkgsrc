@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.190 2009/01/12 15:43:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.191 2009/01/12 15:58:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -264,3 +264,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libglademm to 2.6.7 [wiz 2009-01-12]
 	Updated graphics/libgnomecanvasmm to 2.23.1 [wiz 2009-01-12]
 	Updated devel/libgnomemm to 2.24.0 [wiz 2009-01-12]
+	Updated devel/libgnomeuimm to 2.24.0 [wiz 2009-01-12]
