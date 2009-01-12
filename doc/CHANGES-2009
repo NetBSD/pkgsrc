@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.197 2009/01/12 21:50:32 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.198 2009/01/12 21:57:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -271,3 +271,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/rocksndiamonds to 3.2.6.0 [adam 2009-01-12]
 	Updated math/gcalctool to 5.24.3 [wiz 2009-01-12]
 	Updated editors/gedit to 2.24.3 [wiz 2009-01-12]
+	Updated devel/cpuflags to 1.33 [abs 2009-01-12]
