@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.23 2008/07/13 12:04:11 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/01/12 06:46:43 tonnerre Exp $
 bin/silc
 lib/silc-client/libsilc.la
 lib/silc-client/libsilcclient.la
 man/man1/silc.1
-share/doc/silc-client/CHANGES
 share/doc/silc-client/COPYING
 share/doc/silc-client/CREDITS
+share/doc/silc-client/ChangeLog
 share/doc/silc-client/FAQ
 share/doc/silc-client/INSTALL
 share/doc/silc-client/README
