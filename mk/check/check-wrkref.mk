@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.18 2008/02/20 10:23:26 rillig Exp $
+# $NetBSD: check-wrkref.mk,v 1.19 2009/01/12 13:11:22 uebayasi Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -73,7 +73,6 @@ _check-wrkref: error-check .PHONY
 	${RUN} rm -f ${ERROR_DIR}/${.TARGET}
 	${RUN}					\
 	exec 1>${ERROR_DIR}/${.TARGET};					\
-	cd ${DESTDIR}${PREFIX};						\
 	${_CHECK_WRKREF_FILELIST_CMD} | ${SORT} |			\
 	while read file; do						\
 		case "$$file" in					\
@@ -82,7 +81,7 @@ _check-wrkref: error-check .PHONY
 		esac;							\
 		${SHCOMMENT} "[$$file]";				\
 		for d in ${_CHECK_WRKREF_DIRS}; do			\
-			grep "$$d" "$$file" 2>/dev/null |		\
+			grep "$$d" "${DESTDIR}$$file" 2>/dev/null |	\
 			sed -e "s|^|$$file:	|";			\
 		done;							\
 	done
