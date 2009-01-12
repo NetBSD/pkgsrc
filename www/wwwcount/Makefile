@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/01/12 16:09:22 taca Exp $
 
 DISTNAME=	wwwcount2.5
 PKGNAME=	wwwcount-2.5
@@ -19,6 +19,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1				\
 CONF_FILES_PERMS=	/dev/null ${VARBASE}/log/wwwcount nobody nogroup 0644
 CONF_FILES=		${PREFIX}/share/examples/wwwcount.conf		\
 			${PKG_SYSCONFDIR}/wwwcount.conf
+
+MAKE_JOBS_SAFE=		NO
 
 pre-configure:
 	cd ${WRKSRC}; yes "" | PREFIX=${PREFIX} PKG_SYSCONFDIR=${PKG_SYSCONFDIR} VARBASE=${VARBASE} ./Count-config
