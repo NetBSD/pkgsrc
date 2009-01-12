@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2008/09/14 14:19:40 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2009/01/12 02:43:32 jmcneill Exp $
 
-DISTNAME=		liferea-1.4.19
+DISTNAME=		liferea-1.4.23
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=liferea/}
 
@@ -25,6 +25,7 @@ PKG_SUGGESTED_OPTIONS=	liferea-gtkhtml
 
 PLIST_VARS+=	gtkhtml mozilla
 .if !empty(PKG_OPTIONS:Mliferea-gtkhtml)
+CONFIGURE_ARGS+=	--disable-gecko
 .include "../../www/libgtkhtml/buildlink3.mk"
 PLIST.gtkhtml=	yes
 .endif
