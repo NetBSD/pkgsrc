@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2009/01/12 19:22:18 adam Exp $
 
-DISTNAME=	rocksndiamonds-3.2.4
-PKGREVISION=	1
+DISTNAME=	rocksndiamonds-3.2.6.0
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/
 
@@ -54,8 +53,8 @@ MAKE_FLAGS+=	JOYSTICK=-DHAVE_JOYSTICK
 
 MAKE_FLAGS+=	CC=${CC:Q}
 MAKE_FLAGS+=	MAKE=${MAKE_PROGRAM:Q}
-MAKE_FLAGS+=	X11_PATH=${X11BASE:Q}
-MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX:Q}/share/rocksndiamonds
+MAKE_FLAGS+=	X11_PATH=${X11BASE}
+MAKE_FLAGS+=	RO_GAME_DIR=${PREFIX}/share/rocksndiamonds
 MAKE_FLAGS+=	RW_GAME_DIR=${SCORE_PATH:Q}
 MAKE_FLAGS+=	X11_INCL=
 MAKE_FLAGS+=	X11_LIBS=-lX11
@@ -63,10 +62,10 @@ MAKE_FLAGS+=	X11_LIBS=-lX11
 .include "options.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rocksndiamonds ${DESTDIR:Q}${PREFIX:Q}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/rocksndiamonds ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/rocksndiamonds.1 \
-		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR}/man6/rocksndiamonds.6
-	${INSTALL_DATA_DIR} ${DESTDIR:Q}${SHAREDIR:Q}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/rocksndiamonds.6
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	# auto-generated PLIST
 	rm -f ${WRKDIR}/PLIST.F ${WRKDIR}/PLIST.D
 	set -e;								\
@@ -74,12 +73,12 @@ do-install:
 	for d in sounds graphics levels music; do 			\
 		find "$${d}" -type d -print | { while read subdir; do	\
 			${INSTALL_DATA_DIR} 				\
-				${DESTDIR:Q}${SHAREDIR:Q}/"$${subdir}";	\
+				${DESTDIR}${SHAREDIR}/"$${subdir}";	\
 			${ECHO} "@dirrm ${SHARESUBDIR}/$${subdir}";	\
 		done ; } | sort -r >> ${WRKDIR}/PLIST.D;		\
 		find "$${d}" -type f -print | while read f; do		\
 			${INSTALL_DATA} "$${f}"				\
-				${DESTDIR:Q}${SHAREDIR:Q}/"$${f}";	\
+				${DESTDIR}${SHAREDIR}/"$${f}";	\
 			${ECHO} ${SHARESUBDIR}/"$${f}" >> ${WRKDIR}/PLIST.F;\
 		done ;							\
 	done
