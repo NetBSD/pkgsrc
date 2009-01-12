@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.174 2009/01/12 06:47:05 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.175 2009/01/12 07:16:02 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -249,3 +249,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtk2 to 2.14.7 [jmcneill 2009-01-11]
 	Updated www/liferea to 1.4.23 [jmcneill 2009-01-11]
 	Updated chat/silc-client to 1.1.7 [tonnerre 2009-01-12]
+	Updated chat/silc-client to 1.1.7nb1 [tonnerre 2009-01-12]
