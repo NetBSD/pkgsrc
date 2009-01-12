@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2008/11/29 08:39:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/12 12:43:47 wiz Exp $
 
-DISTNAME=	gnome-platform-2.24.1.90
+DISTNAME=	gnome-platform-2.24.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -22,9 +22,7 @@ DEPENDS+=	glib2>=2.18.3:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
 DEPENDS+=	gnome-vfs>=2.24.0:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-# too old
-#DEPENDS+=	gtk2+>=2.14.5:../../x11/gtk2
-DEPENDS+=	gtk2+>=2.14.4:../../x11/gtk2
+DEPENDS+=	gtk2+>=2.14.5:../../x11/gtk2
 DEPENDS+=	gtk-doc>=1.10:../../textproc/gtk-doc
 DEPENDS+=	intltool>=0.40.5:../../textproc/intltool
 DEPENDS+=	libIDL>=0.8.11:../../net/libIDL
