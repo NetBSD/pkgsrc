@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2008/11/24 13:39:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/01/12 21:50:17 wiz Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.20/gedit/gedit-app.h
@@ -33,13 +33,13 @@ lib/gedit-2/plugins/libindent.la
 lib/gedit-2/plugins/libmodelines.la
 lib/gedit-2/plugins/libsample.la
 lib/gedit-2/plugins/libsort.la
-lib/gedit-2/plugins/libspell.la
+${PLIST.enchant}lib/gedit-2/plugins/libspell.la
 lib/gedit-2/plugins/libtaglist.la
 lib/gedit-2/plugins/libtime.la
 lib/gedit-2/plugins/modelines.gedit-plugin
 lib/gedit-2/plugins/sample.gedit-plugin
 lib/gedit-2/plugins/sort.gedit-plugin
-lib/gedit-2/plugins/spell.gedit-plugin
+${PLIST.enchant}lib/gedit-2/plugins/spell.gedit-plugin
 lib/gedit-2/plugins/taglist.gedit-plugin
 lib/gedit-2/plugins/time.gedit-plugin
 lib/pkgconfig/gedit-2.20.pc
@@ -53,8 +53,8 @@ share/gedit-2/logo/gedit-logo.png
 share/gedit-2/plugins/docinfo/docinfo.ui
 share/gedit-2/plugins/filebrowser/gedit-file-browser-widget-ui.xml
 share/gedit-2/plugins/sort/sort.ui
-share/gedit-2/plugins/spell/languages-dialog.ui
-share/gedit-2/plugins/spell/spell-checker.ui
+${PLIST.enchant}share/gedit-2/plugins/spell/languages-dialog.ui
+${PLIST.enchant}share/gedit-2/plugins/spell/spell-checker.ui
 share/gedit-2/plugins/time/time.ui
 share/gedit-2/taglist/HTML.tags.gz
 share/gedit-2/taglist/Latex.tags.gz
@@ -416,7 +416,7 @@ share/omf/gedit/gedit-zh_TW.omf
 @dirrm share/gedit-2/ui
 @dirrm share/gedit-2/taglist
 @dirrm share/gedit-2/plugins/time
-@dirrm share/gedit-2/plugins/spell
+${PLIST.enchant}@dirrm share/gedit-2/plugins/spell
 @dirrm share/gedit-2/plugins/sort
 @exec ${MKDIR} %D/share/gedit-2/plugins/sample
 @dirrm share/gedit-2/plugins/sample
