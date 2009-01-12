@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.187 2009/01/12 15:25:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.188 2009/01/12 15:31:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -261,3 +261,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added chat/msn-pecan version 0.0.17 [jmcneill 2009-01-12]
 	Updated sysutils/gnome-vfsmm to 2.24.0 [wiz 2009-01-12]
 	Updated archivers/pbzip2 to 1.0.5 [wiz 2009-01-12]
+	Updated devel/libglademm to 2.6.7 [wiz 2009-01-12]
