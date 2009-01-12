@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.192 2009/01/12 15:59:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.193 2009/01/12 16:18:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -266,3 +266,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libgnomemm to 2.24.0 [wiz 2009-01-12]
 	Updated devel/libgnomeuimm to 2.24.0 [wiz 2009-01-12]
 	Updated meta-pkgs/c++-gnome-bindings to 2.24.2 [wiz 2009-01-12]
+	Updated www/typolight to 2.6.3nb2 [taca 2009-01-12]
