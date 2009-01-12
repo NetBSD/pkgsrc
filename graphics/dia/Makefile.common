@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2009/01/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2009/01/12 16:20:38 jmcneill Exp $
 #
 
 DISTNAME=	dia-0.96.1
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/dia-/dia${DIA_SUBPKG}-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dia/0.96/}
 
-MAINTAINER=	jmcneill@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/dia/
 COMMENT=	Program for creating diagrams of all kinds
 
