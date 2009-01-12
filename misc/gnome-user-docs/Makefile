@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2009/01/07 14:46:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/01/12 22:20:56 wiz Exp $
 #
 
-DISTNAME=	gnome-user-docs-2.24.1
+DISTNAME=	gnome-user-docs-2.24.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-docs/2.24/}
 EXTRACT_SUFX=	.tar.bz2
