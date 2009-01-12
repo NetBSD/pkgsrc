@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.199 2009/01/12 22:09:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.200 2009/01/12 22:12:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/gedit to 2.24.3 [wiz 2009-01-12]
 	Updated devel/cpuflags to 1.33 [abs 2009-01-12]
 	Updated textproc/gnome-doc-utils to 0.14.2 [wiz 2009-01-12]
+	Updated devel/cpuflags to 1.34 [abs 2009-01-12]
