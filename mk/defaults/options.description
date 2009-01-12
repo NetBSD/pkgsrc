@@ -91,6 +91,7 @@ elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
 elinks-root-exec	Allow elinks to run as root.
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
+enchant			Add spell checking support using enchant.
 enchant-zemberek	Add spell checking support for Turkish.
 epoll			Enable support for epoll I/O event notification facility
 esound			Enable support for the Enlightment Sound Daemon.
