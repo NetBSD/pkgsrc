@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.2 2008/10/09 12:41:17 obache Exp $
+$NetBSD: patch-af,v 1.3 2009/01/12 12:17:22 obache Exp $
 
 --- example/Makefile.in.orig	2008-06-23 05:59:44.000000000 +0000
 +++ example/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-af,v 1.2 2008/10/09 12:41:17 obache Exp $
  X_LD_FLAGS = ${X_PRE_LIBS} ${X_LIBS} @XAW_LD_FLAGS@ @X11_LD_FLAGS@ ${X_EXTRA_LIBS}
  m17n_edit_SOURCES = medit.c
 -m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui} -ldl
-+m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui}
++m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui} ${DL_LDFLAGS} ${DL_LIBS}
  m17n_view_SOURCES = mview.c
  m17n_view_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui}
  m17n_dump_SOURCES = mdump.c
