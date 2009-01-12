@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+$NetBSD: patch-ae,v 1.2 2009/01/12 12:17:22 obache Exp $
 
 --- example/Makefile.am.orig	2007-11-13 02:22:21.000000000 +0000
 +++ example/Makefile.am
@@ -7,7 +7,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
  
  m17n_edit_SOURCES = medit.c
 -m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui} -ldl
-+m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui}
++m17n_edit_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui} ${DL_LDFLAGS} ${DL_LIBS}
  
  m17n_view_SOURCES = mview.c
  m17n_view_LDADD = ${X_LD_FLAGS} ${common_ldflags_gui}
