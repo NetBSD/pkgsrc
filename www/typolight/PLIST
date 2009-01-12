@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/06 11:23:15 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/12 16:17:03 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
-${TL_EGDIR}/news.xml
 ${TL_EGDIR}/print.css
+${TL_EGDIR}/robots.txt
 ${TL_EGDIR}/system/config/config.php
 ${TL_EGDIR}/system/config/countries.php
 ${TL_EGDIR}/system/config/dcaconfig.php
@@ -760,7 +760,6 @@ ${TL_WEBDIR}/plugins/tinyMCE/utils/form_utils.js
 ${TL_WEBDIR}/plugins/tinyMCE/utils/mctabs.js
 ${TL_WEBDIR}/plugins/tinyMCE/utils/validate.js
 ${TL_WEBDIR}/plugins/ufo/ufo.js
-${TL_WEBDIR}/robots.txt
 ${TL_WEBDIR}/system/config/.htaccess
 ${TL_WEBDIR}/system/constants.php
 ${TL_WEBDIR}/system/drivers/.htaccess
