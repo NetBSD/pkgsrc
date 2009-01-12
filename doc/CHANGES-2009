@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.183 2009/01/12 13:06:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.184 2009/01/12 13:28:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -257,3 +257,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/gnome-platform to 2.24.2 [wiz 2009-01-12]
 	Updated meta-pkgs/gnome-mobile to 2.24.1.91 [wiz 2009-01-12]
 	Updated devel/glib2 to 2.18.4 [wiz 2009-01-12]
+	Updated devel/gconfmm to 2.24.0 [wiz 2009-01-12]
