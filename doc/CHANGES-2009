@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.185 2009/01/12 13:38:58 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.186 2009/01/12 15:22:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -259,3 +259,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/glib2 to 2.18.4 [wiz 2009-01-12]
 	Updated devel/gconfmm to 2.24.0 [wiz 2009-01-12]
 	Added chat/msn-pecan version 0.0.17 [jmcneill 2009-01-12]
+	Updated sysutils/gnome-vfsmm to 2.24.0 [wiz 2009-01-12]
