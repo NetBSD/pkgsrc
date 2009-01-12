@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.165 2009/01/12 02:08:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.166 2009/01/12 11:19:22 wiz Exp $
 
 DISTNAME=		gtk+-2.14.7
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -75,16 +75,6 @@ PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 
 _BUILDING_GTK2=	yes
 .include "modules.mk"
-
-# Defeat evil shell script code which tries to find "gtkdoc-rebase"
-# via the "which" command. This goes horribly wrong if "gtkdoc-rebase"
-# is not installed at the "which" command prints an error message
-# to standard output.
-pre-install:
-	${RM} -f ${BUILDLINK_DIR}/bin/which
-	${ECHO} >${BUILDLINK_DIR}/bin/which "#!${SH}"
-	${ECHO} >>${BUILDLINK_DIR}/bin/which "exit 0"
-	${CHMOD} +x ${BUILDLINK_DIR}/bin/which
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 BUILDLINK_API_DEPENDS.atk+=	atk>=1.13.0
