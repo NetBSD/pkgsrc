@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+$NetBSD: patch-af,v 1.2 2009/01/13 13:48:33 cegger Exp $
 
---- misc/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
+--- misc/Makefile.orig	2009-01-05 11:26:59.000000000 +0000
 +++ misc/Makefile
-@@ -14,12 +14,14 @@ TARGETS-y := xenperf
- TARGETS-$(CONFIG_X86) += xen-detect
+@@ -14,17 +14,21 @@ TARGETS-y := xenperf
+ TARGETS-$(CONFIG_X86) += xen-detect xenpm
  TARGETS := $(TARGETS-y)
  
 -SUBDIRS-$(CONFIG_LOMOUNT) += lomount
@@ -11,16 +11,23 @@ $NetBSD: patch-af,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
  SUBDIRS-$(CONFIG_MINITERM) += miniterm
  SUBDIRS := $(SUBDIRS-y)
  
--INSTALL_BIN  = $(TARGETS) xencons
--INSTALL_SBIN = netfix xm xen-bugtool xen-python-path xend xenperf xsview
-+INSTALL_BIN  = $(TARGETS)
-+INSTALL_BIN_SCRIPT  = xencons
-+INSTALL_SBIN = xenperf
-+INSTALL_SBIN_SCRIPT = netfix xm xen-bugtool xen-python-path xend xsview
+-INSTALL_BIN-y := xencons
++INSTALL_BIN-y := 
++INSTALL_BIN_SCRIPT-y := xencons
+ INSTALL_BIN-$(CONFIG_X86) += xen-detect
+ INSTALL_BIN := $(INSTALL_BIN-y)
++INSTALL_BIN_SCRIPT := $(INSTALL_BIN_SCRIPT-y)
+ 
+-INSTALL_SBIN-y := netfix xm xen-bugtool xen-python-path xend xenperf xsview
++INSTALL_SBIN-y := xenperf
++INSTALL_SBIN_SCRIPT-y := netfix xm xen-bugtool xen-python-path xend xsview
+ INSTALL_SBIN-$(CONFIG_X86) += xenpm
+ INSTALL_SBIN := $(INSTALL_SBIN-y)
++INSTALL_SBIN_SCRIPT := $(INSTALL_SBIN_SCRIPT-y)
  
  DEFAULT_PYTHON_PATH := $(shell $(XEN_ROOT)/tools/python/get-path)
  PYTHON_PATH ?= $(DEFAULT_PYTHON_PATH)
-@@ -35,10 +37,12 @@ build: $(TARGETS)
+@@ -40,10 +44,12 @@ build: $(TARGETS)
  
  .PHONY: install
  install: build
