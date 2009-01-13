@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2009/01/13 02:19:10 jmcneill Exp $
+
+--- src/ptlib/unix/svcproc.cxx.orig	2009-01-12 21:12:44.000000000 -0500
++++ src/ptlib/unix/svcproc.cxx	2009-01-12 21:13:12.000000000 -0500
+@@ -165,7 +165,7 @@ void PSystemLog::Output(Level level, con
+ #elif defined(BE_THREADS)
+       thread_id tid = ::find_thread(NULL);
+ #else
+-      unsigned tid = (unsigned) pthread_self();
++      unsigned tid = (uintptr_t) pthread_self();
+ #endif
+       *out << "ThreadID=0x"
+            << setfill('0') << ::hex
+@@ -719,7 +719,7 @@ void PServiceProcess::PXOnAsyncSignal(in
+ #elif defined(BE_THREADS)
+   thread_id tid = ::find_thread(NULL);
+ #else
+-  unsigned tid = (unsigned) pthread_self();
++  unsigned tid = (uintptr_t) pthread_self();
+ #endif
+   PThread * thread_ptr = activeThreads.GetAt(tid);
+ 
