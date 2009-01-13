@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/01/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/13 16:10:01 wiz Exp $
 #
 
-DISTNAME=	mousetweaks-2.24.2
+DISTNAME=	mousetweaks-2.24.3
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.24/}
 
