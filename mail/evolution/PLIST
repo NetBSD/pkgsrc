@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2008/11/07 23:37:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/01/13 13:24:03 wiz Exp $
 bin/evolution
 include/evolution-2.24/addressbook/gui/widgets/eab-config.h
 include/evolution-2.24/addressbook/gui/widgets/eab-menu.h
@@ -446,6 +446,7 @@ ${PLIST.smime}share/evolution/2.24/glade/smime-ui.glade
 share/evolution/2.24/glade/task-details-page.glade
 share/evolution/2.24/glade/task-page.glade
 share/evolution/2.24/help/quickref/C/quickref.pdf
+share/evolution/2.24/help/quickref/cs/quickref.pdf
 share/evolution/2.24/help/quickref/de/quickref.pdf
 share/evolution/2.24/help/quickref/es/quickref.pdf
 share/evolution/2.24/help/quickref/fr/quickref.pdf
@@ -2100,6 +2101,7 @@ share/omf/evolution/evolution-sv.omf
 @dirrm share/evolution/2.24/help/quickref/fr
 @dirrm share/evolution/2.24/help/quickref/es
 @dirrm share/evolution/2.24/help/quickref/de
+@dirrm share/evolution/2.24/help/quickref/cs
 @dirrm share/evolution/2.24/help/quickref/C
 @dirrm share/evolution/2.24/help/quickref
 @dirrm share/evolution/2.24/help
