@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.228 2009/01/13 16:02:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.229 2009/01/13 16:10:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -308,3 +308,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libsoup24 to 2.24.3 [wiz 2009-01-13]
 	Updated misc/orca to 2.24.3 [wiz 2009-01-13]
 	Updated x11/zenity to 2.24.1 [wiz 2009-01-13]
+	Updated misc/mousetweaks to 2.24.3 [wiz 2009-01-13]
