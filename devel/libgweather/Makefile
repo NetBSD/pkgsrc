@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/12/02 17:07:19 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/13 15:25:24 wiz Exp $
 #
 
-DISTNAME=	libgweather-2.24.2
+DISTNAME=	libgweather-2.24.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgweather/2.24/}
 EXTRACT_SUFX=	.tar.bz2
