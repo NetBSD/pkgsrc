@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/24 23:28:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/13 10:18:56 wiz Exp $
 include/poppler/qt4/poppler-annotation.h
 include/poppler/qt4/poppler-export.h
 include/poppler/qt4/poppler-form.h
@@ -10,3 +10,4 @@ include/poppler/qt4/poppler-qt4.h
 lib/libpoppler-qt4.la
 lib/pkgconfig/poppler-qt4.pc
 @dirrm include/poppler/qt4
+@comment in poppler: @dirrm include/poppler
