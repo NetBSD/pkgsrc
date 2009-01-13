@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.212 2009/01/13 10:20:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.213 2009/01/13 10:28:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/poppler-qt to 0.10.3 [wiz 2009-01-13]
 	Updated print/poppler-qt4 to 0.10.3 [wiz 2009-01-13]
 	Updated print/poppler-utils to 0.10.3 [wiz 2009-01-13]
+	Updated chat/telepathy-glib to 0.7.20 [wiz 2009-01-13]
