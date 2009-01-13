@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.206 2009/01/13 03:22:39 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.207 2009/01/13 03:24:12 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -281,3 +281,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added games/ioquake3 version 0.0.1490 [jmcneill 2009-01-12]
 	Updated devel/ptlib to 2.4.4 [jmcneill 2009-01-12]
 	Updated devel/opal to 3.4.4 [jmcneill 2009-01-12]
+	Updated net/ekiga to 3.0.2 [jmcneill 2009-01-12]
