@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.226 2009/01/13 15:28:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.227 2009/01/13 16:02:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -306,3 +306,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/gucharmap to 2.24.3 [wiz 2009-01-13]
 	Updated devel/libgweather to 2.24.3 [wiz 2009-01-13]
 	Updated net/libsoup24 to 2.24.3 [wiz 2009-01-13]
+	Updated misc/orca to 2.24.3 [wiz 2009-01-13]
