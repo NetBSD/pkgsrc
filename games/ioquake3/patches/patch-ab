@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+
+--- code/qcommon/q_shared.h.orig	2009-01-12 12:28:35.000000000 -0500
++++ code/qcommon/q_shared.h
+@@ -40,7 +40,7 @@ Foundation, Inc., 51 Franklin St, Fifth 
+   #define GAMENAME_FOR_MASTER		"Quake3Arena"
+ #endif
+ 
+-#ifdef _MSC_VER
++#if defined(_MSC_VER) || !defined(PRODUCT_VERSION)
+   #define PRODUCT_VERSION "1.35"
+ #endif
+ 

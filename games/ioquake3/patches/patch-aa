@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+
+--- code/qcommon/q_platform.h.orig	2009-01-12 12:28:35.000000000 -0500
++++ code/qcommon/q_platform.h
+@@ -194,6 +194,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+ #define ARCH_STRING "i386"
+ #elif defined __axp__
+ #define ARCH_STRING "alpha"
++#elif defined __x86_64__
++#define ARCH_STRING "x86_64"
+ #endif
+ 
+ #if BYTE_ORDER == BIG_ENDIAN
