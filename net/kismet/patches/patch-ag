@@ -1,8 +1,21 @@
-$NetBSD: patch-ag,v 1.2 2008/10/28 11:06:38 adam Exp $
+$NetBSD: patch-ag,v 1.3 2009/01/13 14:08:07 obache Exp $
 
---- pcapsource.h.orig	2008-05-19 11:51:54.000000000 +0200
+--- pcapsource.h.orig	2008-05-19 09:51:54.000000000 +0000
 +++ pcapsource.h
-@@ -395,7 +395,7 @@ public:
+@@ -34,8 +34,11 @@
+ 
+ extern "C" {
+ #ifndef HAVE_PCAPPCAP_H
++#ifdef HAVE_NET_BPF_H
++#include <net/bpf.h>
++#define PCAP_DONT_INCLUDE_PCAP_BPF_H
++#endif
+ #include <pcap.h>
+-//#include <net/bpf.h>
+ #else
+ #include <pcap/pcap.h>
+ #include <pcap/net/bpf.h>
+@@ -395,7 +398,7 @@ public:
  };
  #endif
  
@@ -11,7 +24,7 @@ $NetBSD: patch-ag,v 1.2 2008/10/28 11:06:38 adam Exp $
  class RadiotapBSD {
  public:
      RadiotapBSD(const char *ifname);
-@@ -584,7 +584,7 @@ int chancontrol_openbsd_prism2(const cha
+@@ -584,7 +587,7 @@ int chancontrol_openbsd_prism2(const cha
                                 void *in_ext);
  #endif
  
