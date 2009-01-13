@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/12/16 21:35:41 he Exp $
+$NetBSD: distinfo,v 1.3 2009/01/13 00:02:22 he Exp $
 
-SHA1 (Rose-HTML-Objects-0.600.tar.gz) = 3ba452d79b2424920dea300be4f7d4acbed6e79b
-RMD160 (Rose-HTML-Objects-0.600.tar.gz) = 8ce00217c0f5352e8ef479e28500476460cdab10
-Size (Rose-HTML-Objects-0.600.tar.gz) = 200681 bytes
+SHA1 (Rose-HTML-Objects-0.601.tar.gz) = 2d768914bcdf5a9d57df867253481b6a8e72656c
+RMD160 (Rose-HTML-Objects-0.601.tar.gz) = 9afcf1bb53b959ed0fea3e0069fb660bc13e8897
+Size (Rose-HTML-Objects-0.601.tar.gz) = 200411 bytes
