@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/27 21:22:03 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/13 17:11:33 shattered Exp $
 libexec/nagios/check_by_ssh
 libexec/nagios/check_clamd
 libexec/nagios/check_dhcp
@@ -10,6 +10,7 @@ libexec/nagios/check_file_age
 libexec/nagios/check_ftp
 libexec/nagios/check_http
 libexec/nagios/check_icmp
+${PLIST.linux}libexec/nagios/check_ide_smart
 libexec/nagios/check_imap
 libexec/nagios/check_ircd
 libexec/nagios/check_jabber
