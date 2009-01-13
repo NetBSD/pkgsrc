@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/14 23:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/13 10:55:15 wiz Exp $
 #
 
-DISTNAME=	telepathy-gabble-0.7.15
+DISTNAME=	telepathy-gabble-0.7.18
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-gabble/
 
@@ -19,7 +19,7 @@ BUILDLINK_API_DEPENDS.loudmouth+=	loudmouth>=1.3.2
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"
-BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.73
+BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.78
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.dbus+=		dbus>=1.1
 .include "../../sysutils/dbus/buildlink3.mk"
