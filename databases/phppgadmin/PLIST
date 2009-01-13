@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/01/30 10:07:34 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10.12.1 2009/01/13 18:46:04 tron Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -30,6 +30,7 @@ share/phppgadmin/classes/database/Postgres74.php
 share/phppgadmin/classes/database/Postgres80.php
 share/phppgadmin/classes/database/Postgres81.php
 share/phppgadmin/classes/database/Postgres82.php
+share/phppgadmin/classes/database/Postgres83.php
 share/phppgadmin/colproperties.php
 share/phppgadmin/constraints.php
 share/phppgadmin/conversions.php
@@ -39,6 +40,7 @@ share/phppgadmin/dataimport.php
 share/phppgadmin/dbexport.php
 share/phppgadmin/display.php
 share/phppgadmin/domains.php
+share/phppgadmin/fulltext.php
 share/phppgadmin/functions.js
 share/phppgadmin/functions.php
 share/phppgadmin/groups.php
@@ -51,6 +53,8 @@ share/phppgadmin/help/PostgresDoc74.php
 share/phppgadmin/help/PostgresDoc80.php
 share/phppgadmin/help/PostgresDoc81.php
 share/phppgadmin/help/PostgresDoc82.php
+share/phppgadmin/help/PostgresDoc83.php
+share/phppgadmin/history.php
 share/phppgadmin/images/themes/default/AddArguments.png
 share/phppgadmin/images/themes/default/Admin.png
 share/phppgadmin/images/themes/default/Aggregate.png
@@ -88,10 +92,16 @@ share/phppgadmin/images/themes/default/Explain.png
 share/phppgadmin/images/themes/default/Export.png
 share/phppgadmin/images/themes/default/Filter.png
 share/phppgadmin/images/themes/default/ForeignKey.png
+share/phppgadmin/images/themes/default/Fts.png
+share/phppgadmin/images/themes/default/FtsCfg.png
+share/phppgadmin/images/themes/default/FtsDict.png
+share/phppgadmin/images/themes/default/FtsParser.png
 share/phppgadmin/images/themes/default/Function.png
 share/phppgadmin/images/themes/default/Functions.png
 share/phppgadmin/images/themes/default/GurusHint.png
 share/phppgadmin/images/themes/default/Help.png
+share/phppgadmin/images/themes/default/Histories.png
+share/phppgadmin/images/themes/default/History.png
 share/phppgadmin/images/themes/default/I.png
 share/phppgadmin/images/themes/default/Import.png
 share/phppgadmin/images/themes/default/Index.png
@@ -126,11 +136,14 @@ share/phppgadmin/images/themes/default/Privileges.png
 share/phppgadmin/images/themes/default/Processes.png
 share/phppgadmin/images/themes/default/Property.png
 share/phppgadmin/images/themes/default/RaiseArgument.png
+share/phppgadmin/images/themes/default/Record.png
+share/phppgadmin/images/themes/default/Records.png
 share/phppgadmin/images/themes/default/Redo.png
 share/phppgadmin/images/themes/default/Refresh.png
 share/phppgadmin/images/themes/default/RemoveArgument.png
 share/phppgadmin/images/themes/default/Replication.png
 share/phppgadmin/images/themes/default/ReplicationSets.png
+share/phppgadmin/images/themes/default/Report.png
 share/phppgadmin/images/themes/default/Reports.png
 share/phppgadmin/images/themes/default/Restore.png
 share/phppgadmin/images/themes/default/Roles.png
@@ -186,6 +199,8 @@ share/phppgadmin/lang/arabic.php
 share/phppgadmin/lang/catalan.php
 share/phppgadmin/lang/chinese-sim.php
 share/phppgadmin/lang/chinese-tr.php
+share/phppgadmin/lang/chinese-utf8-zh_CN.php
+share/phppgadmin/lang/chinese-utf8-zh_TW.php
 share/phppgadmin/lang/convert.awk
 share/phppgadmin/lang/czech.php
 share/phppgadmin/lang/danish.php
@@ -206,6 +221,8 @@ share/phppgadmin/lang/recoded/arabic.php
 share/phppgadmin/lang/recoded/catalan.php
 share/phppgadmin/lang/recoded/chinese-sim.php
 share/phppgadmin/lang/recoded/chinese-tr.php
+share/phppgadmin/lang/recoded/chinese-utf8-zh_CN.php
+share/phppgadmin/lang/recoded/chinese-utf8-zh_TW.php
 share/phppgadmin/lang/recoded/czech.php
 share/phppgadmin/lang/recoded/danish.php
 share/phppgadmin/lang/recoded/dutch.php
@@ -239,25 +256,17 @@ share/phppgadmin/languages.php
 share/phppgadmin/libraries/adodb/adodb-csvlib.inc.php
 share/phppgadmin/libraries/adodb/adodb-datadict.inc.php
 share/phppgadmin/libraries/adodb/adodb-error.inc.php
-share/phppgadmin/libraries/adodb/adodb-errorhandler.inc.php
-share/phppgadmin/libraries/adodb/adodb-errorpear.inc.php
-share/phppgadmin/libraries/adodb/adodb-exceptions.inc.php
 share/phppgadmin/libraries/adodb/adodb-iterator.inc.php
 share/phppgadmin/libraries/adodb/adodb-lib.inc.php
-share/phppgadmin/libraries/adodb/adodb-pear.inc.php
 share/phppgadmin/libraries/adodb/adodb-php4.inc.php
 share/phppgadmin/libraries/adodb/adodb-time.inc.php
-share/phppgadmin/libraries/adodb/adodb-xmlschema.inc.php
 share/phppgadmin/libraries/adodb/adodb.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres64.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres7.inc.php
 share/phppgadmin/libraries/adodb/drivers/adodb-postgres8.inc.php
 share/phppgadmin/libraries/adodb/license.txt
-share/phppgadmin/libraries/adodb/pivottable.inc.php
 share/phppgadmin/libraries/adodb/readme.txt
-share/phppgadmin/libraries/adodb/rsfilter.inc.php
-share/phppgadmin/libraries/adodb/server.php
 share/phppgadmin/libraries/adodb/toexport.inc.php
 share/phppgadmin/libraries/adodb/tohtml.inc.php
 share/phppgadmin/libraries/decorator.inc.php
@@ -267,6 +276,7 @@ share/phppgadmin/libraries/lib.inc.php
 share/phppgadmin/links.js
 share/phppgadmin/login.php
 share/phppgadmin/logout.php
+share/phppgadmin/multiactionform.js
 share/phppgadmin/opclasses.php
 share/phppgadmin/operators.php
 share/phppgadmin/plugin_slony.php
@@ -292,7 +302,8 @@ share/phppgadmin/types.php
 share/phppgadmin/users.php
 share/phppgadmin/viewproperties.php
 share/phppgadmin/views.php
-@exec ${MKDIR} %D/share/phppgadmin/xloadtree
+share/phppgadmin/xloadtree/xloadtree2.js
+share/phppgadmin/xloadtree/xtree2.js
 @dirrm share/phppgadmin/xloadtree
 @dirrm share/phppgadmin/themes/default
 @dirrm share/phppgadmin/themes
@@ -308,12 +319,13 @@ share/phppgadmin/views.php
 @dirrm share/phppgadmin/images/themes
 @dirrm share/phppgadmin/images
 @dirrm share/phppgadmin/help
-@exec ${MKDIR} %D/share/phppgadmin/conf
 @dirrm share/phppgadmin/conf
 @exec ${MKDIR} %D/share/phppgadmin/classes/plugins
 @dirrm share/phppgadmin/classes/plugins
 @dirrm share/phppgadmin/classes/database
 @dirrm share/phppgadmin/classes
+@exec ${MKDIR} %D/share/phppgadmin/conf
+@dirrm share/phppgadmin/conf
 @dirrm share/phppgadmin
 @dirrm share/examples/phppgadmin
 @dirrm share/doc/phppgadmin
