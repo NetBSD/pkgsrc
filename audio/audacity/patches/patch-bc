@@ -1,0 +1,30 @@
+$NetBSD: patch-bc,v 1.1 2009/01/13 12:38:49 drochner Exp $
+
+--- ./lib-src/allegro/allegrord.cpp.orig	2006-11-15 05:12:11.000000000 +0100
++++ ./lib-src/allegro/allegrord.cpp
+@@ -109,10 +109,10 @@ bool Allegro_reader::parse()
+         bool new_note_flag = false;  // "A"-"G" syntax
+         int new_note = 0;
+         Parameters_ptr attributes = NULL;
+-        line_parser.get_nonspace_quoted(field);
++        line_parser.get_nonspace_quoted(field, field_max);
+         char pk = line_parser.peek();
+         if (pk && !isspace(pk)) {
+-            line_parser.get_nonspace_quoted(field + strlen(field));
++            line_parser.get_nonspace_quoted(field + strlen(field), field_max - strlen(field));
+         }
+         while (field[0]) {
+             // print "field", "|";field;"|", "|";line_parser.string;"|", line_parser.pos
+@@ -203,10 +203,10 @@ bool Allegro_reader::parse()
+             if (error_flag) {
+                 field[0] = 0; // exit the loop
+             } else {
+-                line_parser.get_nonspace_quoted(field);
++                line_parser.get_nonspace_quoted(field, field_max);
+                 pk = line_parser.peek();
+                 if (pk && !isspace(pk)) {
+-                    line_parser.get_nonspace_quoted(field + strlen(field));
++                    line_parser.get_nonspace_quoted(field + strlen(field), field_max - strlen(field));
+                 }
+             }
+         }
