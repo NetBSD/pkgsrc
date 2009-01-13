@@ -1,5 +1,5 @@
 <IfModule mod_alias.c>
-    Alias /phppgadmin/ "@PHPPGBASE@/"
+    Alias /phppgadmin "@PHPPGBASE@"
 </IfModule>
 
 <Directory "@PHPPGBASE@">
