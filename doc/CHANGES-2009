@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.229 2009/01/13 16:10:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.230 2009/01/13 16:22:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -309,3 +309,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/orca to 2.24.3 [wiz 2009-01-13]
 	Updated x11/zenity to 2.24.1 [wiz 2009-01-13]
 	Updated misc/mousetweaks to 2.24.3 [wiz 2009-01-13]
+	Updated graphics/eog to 2.24.3 [wiz 2009-01-13]
