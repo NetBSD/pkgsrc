@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/06/08 14:08:47 tonnerre Exp $
+# $NetBSD: Makefile,v 1.16 2009/01/13 17:11:33 shattered Exp $
 #
 
 CATEGORIES=	net sysutils
 
 MAINTAINER=	tonnerre@NetBSD.org
-PKGREVISION=	1
+PKGREVISION=	2
 HOMEPAGE=	http://sourceforge.net/projects/nagiosplug/
 COMMENT=	Nagios plugins
 
@@ -19,6 +19,11 @@ CONFIGURE_ARGS+= --without-pgsql --without-mysql \
 		--without-snmpgetnext-command --without-fping-command
 
 SPECIAL_PERMS+=	${PREFIX}/libexec/nagios/check_icmp ${REAL_ROOT_USER} ${NAGIOS_GROUP} 4550
+
+PLIST_VARS+=	linux
+.if ${OPSYS} == "Linux"
+PLIST.linux=	yes
+.endif
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-df-command="/bin/df -Pklt nokernfs,procfs,fdesc"
