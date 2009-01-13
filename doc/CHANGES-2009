@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.208 2009/01/13 07:14:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.209 2009/01/13 07:15:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/opal to 3.4.4 [jmcneill 2009-01-12]
 	Updated net/ekiga to 3.0.2 [jmcneill 2009-01-12]
 	Updated www/gtkhtml314 to 3.24.3 [wiz 2009-01-13]
+	Updated x11/libICE to 1.0.5 [wiz 2009-01-13]
