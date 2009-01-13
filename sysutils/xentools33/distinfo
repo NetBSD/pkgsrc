@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.14 2008/10/09 10:15:52 cegger Exp $
+$NetBSD: distinfo,v 1.15 2009/01/13 13:48:32 cegger Exp $
 
-SHA1 (xen-3.3.0.tar.gz) = b6365864eeb5125e0f66a056c4c72816e1789358
-RMD160 (xen-3.3.0.tar.gz) = c98c08617e302ef4004d17cb0ba161d0ed7af59c
-Size (xen-3.3.0.tar.gz) = 11338614 bytes
+SHA1 (xen-3.3.1.tar.gz) = fa63c80e04dfc1bb376d98c5a0a0b08f7912b3f9
+RMD160 (xen-3.3.1.tar.gz) = 31d3e801b4eec37715900c6247be403aaafdd5e1
+Size (xen-3.3.1.tar.gz) = 11329774 bytes
 SHA1 (patch-aa) = 74c3023e39baf488f8bae060e93f6175b32df61a
 SHA1 (patch-ab) = a6244d421dc995c9bcbc9959de422972f9d46b6d
 SHA1 (patch-ac) = 70af1b1a787b9dad9e41a2ffe14d595c6797b4d7
 SHA1 (patch-ad) = 323e854e5872e770580068fa93a74bd0b1531025
 SHA1 (patch-ae) = bb7116a71bf6637591b639511f055836a13d9887
-SHA1 (patch-af) = 5995f0f8ee9cf40c8ac43d02568d942430993b3e
+SHA1 (patch-af) = c39bd79ebb409e6e0bfc45b9c048fbf77863d7a0
 SHA1 (patch-ag) = 6b6c26c5fbb28b9cc37e76b250cc90fed111e78a
 SHA1 (patch-ah) = cc8d95c73d7f4a08f311e8417d26f53ffd010549
 SHA1 (patch-ai) = 0906a5ec3a7450fc987b01289e2560e60966d00d
@@ -28,7 +28,7 @@ SHA1 (patch-ca) = b62ec8f0db5e65d737d1aaf3bd44580f5969328b
 SHA1 (patch-cb) = 9b7834e367a1820f28c0c1053d3f351751a12283
 SHA1 (patch-cc) = 598f7cda0e3137188f97605037b0b1c26ae8d0c0
 SHA1 (patch-cd) = 5563a72e203e789a86f4166c71ddb3fcff5215c6
-SHA1 (patch-ce) = 379774429d79724dbcd69d7c246d68d974d5ba89
+SHA1 (patch-ce) = 24d71f68a93b59bd5c5441c257d34862e7302040
 SHA1 (patch-cf) = 055af260b497cbfaa5732f05267526e9fb1d1536
 SHA1 (patch-cg) = 1f6ec716a101256274b6fff47b825271403a1ee0
 SHA1 (patch-da) = b775dc2ba49bd2d3e044f7393294e2194d8c6b60
@@ -49,6 +49,3 @@ SHA1 (patch-fb) = 22a07628566b43aa786c410927d29a283e8cf141
 SHA1 (patch-fc) = 37c9b0897182de93a01f9620ef6346ef68157770
 SHA1 (patch-fd) = cb4741bf33050d72cfbcd2eff4a8632d976de643
 SHA1 (patch-fe) = 85d42672766fe8ce2dc7f745938722710c6ee5a3
-SHA1 (patch-ga) = c7a32f0feefd9b00993e64e406ad2914e6737fb6
-SHA1 (patch-gc) = 26a750ca14bcaa33b3f63c16104d2acfae764c96
-SHA1 (patch-gd) = 78e9bcba7dbd2dbd520c015947240b7e514abf8c
