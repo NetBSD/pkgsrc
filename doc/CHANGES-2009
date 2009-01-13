@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.220 2009/01/13 13:48:32 cegger Exp $
+$NetBSD: CHANGES-2009,v 1.221 2009/01/13 13:53:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -301,3 +301,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution-exchange to 2.24.3 [wiz 2009-01-13]
 	Updated sysutils/xenkernel33 to 3.3.1nb1 [cegger 2009-01-13]
 	Updated sysutils/xentools33 to 3.3.1nb3 [cegger 2009-01-13]
+	Updated sysutils/libgtop to 2.24.3 [wiz 2009-01-13]
