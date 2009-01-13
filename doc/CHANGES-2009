@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.210 2009/01/13 07:21:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.211 2009/01/13 09:44:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -285,3 +285,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/gtkhtml314 to 3.24.3 [wiz 2009-01-13]
 	Updated x11/libICE to 1.0.5 [wiz 2009-01-13]
 	Updated x11/gtksourceview2 to 2.4.2 [wiz 2009-01-13]
+	Updated sysutils/nautilus-sendto to 1.1.1 [wiz 2009-01-13]
