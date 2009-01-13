@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2009/01/13 12:38:49 drochner Exp $
+
+--- lib-src/allegro/strparse.h.orig	2006-11-15 05:12:11.000000000 +0100
++++ lib-src/allegro/strparse.h
+@@ -10,7 +10,7 @@ public:
+     }
+     void skip_space();
+     char peek();
+-    void get_nonspace_quoted(char *field);
++    void get_nonspace_quoted(char *field, int flen);
+ };
+ 
+ void string_escape(char *result, char *str, char *quote);
