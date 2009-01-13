@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.217 2009/01/13 13:23:52 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.218 2009/01/13 13:24:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -297,3 +297,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xtrans to 1.2.3 [wiz 2009-01-13]
 	Updated emulators/gambatte to 0.4.1 [wiz 2009-01-13]
 	Updated mail/evolution-data-server to 2.24.3 [wiz 2009-01-13]
+	Updated mail/evolution to 2.24.3 [wiz 2009-01-13]
