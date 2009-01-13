@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/09/30 15:08:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/13 13:48:32 cegger Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -8,7 +8,6 @@ bin/xen-detect
 bin/xencons
 bin/xenconsole
 bin/xenctx
-bin/xenperf
 bin/xenstore
 bin/xenstore-chmod
 bin/xenstore-control
@@ -496,6 +495,7 @@ sbin/xenconsoled
 sbin/xend
 sbin/xenmon.py
 sbin/xenperf
+sbin/xenpm
 sbin/xenstored
 sbin/xentop
 sbin/xentrace_setmask
