@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/20 14:32:19 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/13 10:18:56 wiz Exp $
 include/poppler/Annot.h
 include/poppler/Array.h
-include/poppler/BaseFile.h
 include/poppler/BuiltinFont.h
 include/poppler/BuiltinFontTables.h
 include/poppler/CMap.h
@@ -93,3 +92,4 @@ include/poppler/splash/SplashXPath.h
 include/poppler/splash/SplashXPathScanner.h
 @dirrm include/poppler/splash
 @dirrm include/poppler/goo
+@comment in poppler: @dirrm include/poppler
