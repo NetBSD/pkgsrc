@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.216 2009/01/13 11:42:46 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.217 2009/01/13 13:23:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-gabble to 0.7.18 [wiz 2009-01-13]
 	Updated x11/xtrans to 1.2.3 [wiz 2009-01-13]
 	Updated emulators/gambatte to 0.4.1 [wiz 2009-01-13]
+	Updated mail/evolution-data-server to 2.24.3 [wiz 2009-01-13]
