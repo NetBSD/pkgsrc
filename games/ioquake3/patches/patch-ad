@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+
+--- code/qcommon/vm_x86_64.c.orig	2009-01-12 18:50:39.000000000 -0500
++++ code/qcommon/vm_x86_64.c
+@@ -58,6 +58,10 @@ void assemble_line(const char* input, si
+ #endif
+ #endif // USE_GAS
+ 
++#ifndef MAP_ANONYMOUS
++#define MAP_ANONYMOUS MAP_ANON
++#endif
++
+ static void VM_Destroy_Compiled(vm_t* self);
+ 
+ /*
