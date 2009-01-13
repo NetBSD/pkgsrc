@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/11/20 21:45:07 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/01/13 11:52:30 obache Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 IMAGEMAGICK_BUILDLINK3_MK:=	${IMAGEMAGICK_BUILDLINK3_MK}+
@@ -21,9 +21,13 @@ pkgbase := ImageMagick
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.ImageMagick:Mx11)
-.include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/libwmf/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.endif
+.if !empty(PKG_BUILD_OPTIONS.ImageMagick:Mjasper)
+.include "../../graphics/jasper/buildlink3.mk"
+.endif
+.if !empty(PKG_BUILD_OPTIONS.ImageMagick:Mwmf)
+.include "../../graphics/libwmf/buildlink3.mk"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
