@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.224 2009/01/13 14:58:22 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.225 2009/01/13 15:25:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -304,3 +304,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/libgtop to 2.24.3 [wiz 2009-01-13]
 	Updated databases/phppgadmin to 4.2.2 [roy 2009-01-13]
 	Updated fonts/gucharmap to 2.24.3 [wiz 2009-01-13]
+	Updated devel/libgweather to 2.24.3 [wiz 2009-01-13]
