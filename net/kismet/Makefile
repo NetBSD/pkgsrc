@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/10/28 11:06:38 adam Exp $
+# $NetBSD: Makefile,v 1.9 2009/01/13 14:08:07 obache Exp $
 
 DISTNAME=		kismet-2008-05-R1
 PKGNAME=		kismet-2008.05.01
@@ -61,6 +61,10 @@ post-install:
 		${EGDIR}/kismet_ui.conf.default
 
 .include "options.mk"
+
+.if exists(/usr/include/net/bpf.h)
+CFLAGS+=	-DHAVE_NET_BPF_H
+.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
