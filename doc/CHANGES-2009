@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.222 2009/01/13 14:42:23 roy Exp $
+$NetBSD: CHANGES-2009,v 1.223 2009/01/13 14:50:33 reed Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -226,7 +226,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-Amazon-S3 to 0.48 [he 2009-01-11]
 	Updated security/p5-Authen-SASL to 2.12 [he 2009-01-11]
 	Updated sysutils/p5-File-Copy-Recursive to 0.38 [he 2009-01-11]
-	Updated textproc/p5-Data-Form-Validator to 4.63 [he 2009-01-11]
+	Updated textproc/p5-Data-FormValidator to 4.63 [he 2009-01-11]
 	Updated textproc/p5-PDF-API2 to 0.72.003 [he 2009-01-11]
 	Updated textproc/p5-Template-Declare to 0.30 [he 2009-01-11]
 	Updated textproc/p5-Text-DHCPLeases to 0.8 [he 2009-01-11]
