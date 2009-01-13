@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/10/24 16:06:57 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/01/13 10:56:52 wiz Exp $
 #
 
-DISTNAME=		xtrans-1.2.2
+DISTNAME=		xtrans-1.2.3
 CATEGORIES=		x11 net
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
