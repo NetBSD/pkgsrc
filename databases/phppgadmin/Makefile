@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2008/01/30 10:07:34 tnn Exp $
+# $NetBSD: Makefile,v 1.22.12.1 2009/01/13 18:46:04 tron Exp $
 
-DISTNAME=	phpPgAdmin-4.1.3
+DISTNAME=	phpPgAdmin-4.2.2
 PKGNAME=	${DISTNAME:S/PgAdmin/pgadmin/}
 CATEGORIES=	databases www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phppgadmin/}
@@ -29,15 +29,14 @@ DOCDIR=		${PREFIX}/share/doc/phppgadmin
 CONF_FILES=	${EGDIR}/config.inc.php-dist ${PHPPGBASE}/conf/config.inc.php
 DOC_FILES=	CREDITS DEVELOPERS FAQ HISTORY INSTALL LICENSE TODO \
 		TRANSLATORS
-REQD_DIRS+=	${PHPPGBASE} ${PHPPGBASE}/conf
 
 do-configure:
-	@${SED} -e "s#/usr/bin/pg#${PREFIX}/bin/pg#" \
+	${SED} -e "s#/usr/bin/pg#${PREFIX}/bin/pg#" \
 		${WRKSRC}/conf/config.inc.php-dist > \
 			${WRKSRC}/conf/config.inc.php-dist.tmp
-	@${MV} ${WRKSRC}/conf/config.inc.php-dist.tmp \
+	${MV} ${WRKSRC}/conf/config.inc.php-dist.tmp \
 		${WRKSRC}/conf/config.inc.php-dist
-	@${SED} -e "s#@PHPPGBASE@#${PHPPGBASE}#g" ${FILESDIR}/apache.conf-dist \
+	${SED} -e "s#@PHPPGBASE@#${PHPPGBASE}#g" ${FILESDIR}/apache.conf-dist \
 		> ${WRKDIR}/apache.conf
 
 do-install:
@@ -67,6 +66,8 @@ do-install:
 		${DESTDIR}${PHPPGBASE}/libraries/adodb/drivers
 	${INSTALL_DATA} ${WRKSRC}/themes/default/global.css \
 		${DESTDIR}${PHPPGBASE}/themes/default
+	${INSTALL_DATA} ${WRKSRC}/xloadtree/*.* \
+		${DESTDIR}${PHPPGBASE}/xloadtree
 	${INSTALL_DATA} ${WRKSRC}/conf/config.inc.php-dist ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/apache.conf ${DESTDIR}${EGDIR}
 
