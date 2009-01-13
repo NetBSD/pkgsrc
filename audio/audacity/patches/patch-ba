@@ -1,0 +1,24 @@
+$NetBSD: patch-ba,v 1.1 2009/01/13 12:38:49 drochner Exp $
+
+--- lib-src/allegro/strparse.cpp.orig	2006-11-15 05:12:11.000000000 +0100
++++ lib-src/allegro/strparse.cpp
+@@ -16,8 +16,9 @@ char String_parse::peek()
+ }
+ 
+ 
+-void String_parse::get_nonspace_quoted(char *field)
++void String_parse::get_nonspace_quoted(char *field, int flen)
+ {
++    char *ofield = field;
+     skip_space();
+     bool quoted = false;
+     if (string[pos] == '"') {
+@@ -25,7 +26,7 @@ void String_parse::get_nonspace_quoted(c
+         *field++ = '"';
+         pos = pos + 1;
+     }
+-    while (string[pos] && (quoted || !isspace(string[pos]))) {
++    while (string[pos] && (quoted || !isspace(string[pos])) && (field - ofield) < (flen - 2)) {
+         if (string[pos] == '"') {
+             if (quoted) {
+                 *field++ = '"';
