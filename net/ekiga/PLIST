@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/22 23:50:55 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/13 03:23:51 jmcneill Exp $
 bin/ekiga
 bin/ekiga-config-tool
 bin/ekiga-helper
@@ -20,6 +20,7 @@ share/gnome/help/ekiga/C/figures/config_d4.png
 share/gnome/help/ekiga/C/figures/config_d5.png
 share/gnome/help/ekiga/C/figures/config_d6.png
 share/gnome/help/ekiga/C/figures/config_d7.png
+share/gnome/help/ekiga/C/figures/config_d8.png
 share/gnome/help/ekiga/C/figures/lumi.png
 share/gnome/help/ekiga/bg/ekiga.xml
 share/gnome/help/ekiga/bg/figures/accounts_d1.png
@@ -28,7 +29,6 @@ share/gnome/help/ekiga/bg/figures/accounts_sip.png
 share/gnome/help/ekiga/bg/figures/audio_codecs.png
 share/gnome/help/ekiga/bg/figures/call_d1.png
 share/gnome/help/ekiga/bg/figures/config_d1.png
-share/gnome/help/ekiga/bg/figures/config_d10.png
 share/gnome/help/ekiga/bg/figures/config_d2.png
 share/gnome/help/ekiga/bg/figures/config_d3.png
 share/gnome/help/ekiga/bg/figures/config_d4.png
@@ -36,9 +36,7 @@ share/gnome/help/ekiga/bg/figures/config_d5.png
 share/gnome/help/ekiga/bg/figures/config_d6.png
 share/gnome/help/ekiga/bg/figures/config_d7.png
 share/gnome/help/ekiga/bg/figures/config_d8.png
-share/gnome/help/ekiga/bg/figures/config_d9.png
 share/gnome/help/ekiga/bg/figures/lumi.png
-share/gnome/help/ekiga/bg/figures/stats.png
 share/gnome/help/ekiga/de/ekiga.xml
 share/gnome/help/ekiga/de/figures/accounts_d1.png
 share/gnome/help/ekiga/de/figures/accounts_h323.png
@@ -52,6 +50,7 @@ share/gnome/help/ekiga/de/figures/config_d4.png
 share/gnome/help/ekiga/de/figures/config_d5.png
 share/gnome/help/ekiga/de/figures/config_d6.png
 share/gnome/help/ekiga/de/figures/config_d7.png
+share/gnome/help/ekiga/de/figures/config_d8.png
 share/gnome/help/ekiga/de/figures/lumi.png
 share/gnome/help/ekiga/el/ekiga.xml
 share/gnome/help/ekiga/el/figures/accounts_d1.png
@@ -66,6 +65,7 @@ share/gnome/help/ekiga/el/figures/config_d4.png
 share/gnome/help/ekiga/el/figures/config_d5.png
 share/gnome/help/ekiga/el/figures/config_d6.png
 share/gnome/help/ekiga/el/figures/config_d7.png
+share/gnome/help/ekiga/el/figures/config_d8.png
 share/gnome/help/ekiga/el/figures/lumi.png
 share/gnome/help/ekiga/es/ekiga.xml
 share/gnome/help/ekiga/es/figures/accounts_d1.png
@@ -74,7 +74,6 @@ share/gnome/help/ekiga/es/figures/accounts_sip.png
 share/gnome/help/ekiga/es/figures/audio_codecs.png
 share/gnome/help/ekiga/es/figures/call_d1.png
 share/gnome/help/ekiga/es/figures/config_d1.png
-share/gnome/help/ekiga/es/figures/config_d10.png
 share/gnome/help/ekiga/es/figures/config_d2.png
 share/gnome/help/ekiga/es/figures/config_d3.png
 share/gnome/help/ekiga/es/figures/config_d4.png
@@ -82,9 +81,7 @@ share/gnome/help/ekiga/es/figures/config_d5.png
 share/gnome/help/ekiga/es/figures/config_d6.png
 share/gnome/help/ekiga/es/figures/config_d7.png
 share/gnome/help/ekiga/es/figures/config_d8.png
-share/gnome/help/ekiga/es/figures/config_d9.png
 share/gnome/help/ekiga/es/figures/lumi.png
-share/gnome/help/ekiga/es/figures/stats.png
 share/gnome/help/ekiga/fi/ekiga.xml
 share/gnome/help/ekiga/fi/figures/accounts_d1.png
 share/gnome/help/ekiga/fi/figures/accounts_h323.png
@@ -92,7 +89,6 @@ share/gnome/help/ekiga/fi/figures/accounts_sip.png
 share/gnome/help/ekiga/fi/figures/audio_codecs.png
 share/gnome/help/ekiga/fi/figures/call_d1.png
 share/gnome/help/ekiga/fi/figures/config_d1.png
-share/gnome/help/ekiga/fi/figures/config_d10.png
 share/gnome/help/ekiga/fi/figures/config_d2.png
 share/gnome/help/ekiga/fi/figures/config_d3.png
 share/gnome/help/ekiga/fi/figures/config_d4.png
@@ -100,9 +96,7 @@ share/gnome/help/ekiga/fi/figures/config_d5.png
 share/gnome/help/ekiga/fi/figures/config_d6.png
 share/gnome/help/ekiga/fi/figures/config_d7.png
 share/gnome/help/ekiga/fi/figures/config_d8.png
-share/gnome/help/ekiga/fi/figures/config_d9.png
 share/gnome/help/ekiga/fi/figures/lumi.png
-share/gnome/help/ekiga/fi/figures/stats.png
 share/gnome/help/ekiga/fr/ekiga.xml
 share/gnome/help/ekiga/fr/figures/accounts_d1.png
 share/gnome/help/ekiga/fr/figures/accounts_h323.png
@@ -131,6 +125,7 @@ share/gnome/help/ekiga/oc/figures/config_d4.png
 share/gnome/help/ekiga/oc/figures/config_d5.png
 share/gnome/help/ekiga/oc/figures/config_d6.png
 share/gnome/help/ekiga/oc/figures/config_d7.png
+share/gnome/help/ekiga/oc/figures/config_d8.png
 share/gnome/help/ekiga/oc/figures/lumi.png
 share/gnome/help/ekiga/pt_BR/ekiga.xml
 share/gnome/help/ekiga/pt_BR/figures/accounts_d1.png
@@ -139,7 +134,6 @@ share/gnome/help/ekiga/pt_BR/figures/accounts_sip.png
 share/gnome/help/ekiga/pt_BR/figures/audio_codecs.png
 share/gnome/help/ekiga/pt_BR/figures/call_d1.png
 share/gnome/help/ekiga/pt_BR/figures/config_d1.png
-share/gnome/help/ekiga/pt_BR/figures/config_d10.png
 share/gnome/help/ekiga/pt_BR/figures/config_d2.png
 share/gnome/help/ekiga/pt_BR/figures/config_d3.png
 share/gnome/help/ekiga/pt_BR/figures/config_d4.png
@@ -147,9 +141,7 @@ share/gnome/help/ekiga/pt_BR/figures/config_d5.png
 share/gnome/help/ekiga/pt_BR/figures/config_d6.png
 share/gnome/help/ekiga/pt_BR/figures/config_d7.png
 share/gnome/help/ekiga/pt_BR/figures/config_d8.png
-share/gnome/help/ekiga/pt_BR/figures/config_d9.png
 share/gnome/help/ekiga/pt_BR/figures/lumi.png
-share/gnome/help/ekiga/pt_BR/figures/stats.png
 share/gnome/help/ekiga/ru/ekiga.xml
 share/gnome/help/ekiga/ru/figures/accounts_d1.png
 share/gnome/help/ekiga/ru/figures/accounts_h323.png
@@ -163,6 +155,7 @@ share/gnome/help/ekiga/ru/figures/config_d4.png
 share/gnome/help/ekiga/ru/figures/config_d5.png
 share/gnome/help/ekiga/ru/figures/config_d6.png
 share/gnome/help/ekiga/ru/figures/config_d7.png
+share/gnome/help/ekiga/ru/figures/config_d8.png
 share/gnome/help/ekiga/ru/figures/lumi.png
 share/gnome/help/ekiga/sv/ekiga.xml
 share/gnome/help/ekiga/sv/figures/accounts_d1.png
@@ -171,7 +164,6 @@ share/gnome/help/ekiga/sv/figures/accounts_sip.png
 share/gnome/help/ekiga/sv/figures/audio_codecs.png
 share/gnome/help/ekiga/sv/figures/call_d1.png
 share/gnome/help/ekiga/sv/figures/config_d1.png
-share/gnome/help/ekiga/sv/figures/config_d10.png
 share/gnome/help/ekiga/sv/figures/config_d2.png
 share/gnome/help/ekiga/sv/figures/config_d3.png
 share/gnome/help/ekiga/sv/figures/config_d4.png
@@ -179,9 +171,7 @@ share/gnome/help/ekiga/sv/figures/config_d5.png
 share/gnome/help/ekiga/sv/figures/config_d6.png
 share/gnome/help/ekiga/sv/figures/config_d7.png
 share/gnome/help/ekiga/sv/figures/config_d8.png
-share/gnome/help/ekiga/sv/figures/config_d9.png
 share/gnome/help/ekiga/sv/figures/lumi.png
-share/gnome/help/ekiga/sv/figures/stats.png
 share/gnome/help/ekiga/uk/ekiga.xml
 share/gnome/help/ekiga/uk/figures/accounts_d1.png
 share/gnome/help/ekiga/uk/figures/accounts_h323.png
@@ -189,7 +179,6 @@ share/gnome/help/ekiga/uk/figures/accounts_sip.png
 share/gnome/help/ekiga/uk/figures/audio_codecs.png
 share/gnome/help/ekiga/uk/figures/call_d1.png
 share/gnome/help/ekiga/uk/figures/config_d1.png
-share/gnome/help/ekiga/uk/figures/config_d10.png
 share/gnome/help/ekiga/uk/figures/config_d2.png
 share/gnome/help/ekiga/uk/figures/config_d3.png
 share/gnome/help/ekiga/uk/figures/config_d4.png
@@ -197,9 +186,7 @@ share/gnome/help/ekiga/uk/figures/config_d5.png
 share/gnome/help/ekiga/uk/figures/config_d6.png
 share/gnome/help/ekiga/uk/figures/config_d7.png
 share/gnome/help/ekiga/uk/figures/config_d8.png
-share/gnome/help/ekiga/uk/figures/config_d9.png
 share/gnome/help/ekiga/uk/figures/lumi.png
-share/gnome/help/ekiga/uk/figures/stats.png
 share/icons/hicolor/128x128/apps/ekiga.png
 share/icons/hicolor/16x16/apps/ekiga.png
 share/icons/hicolor/22x22/apps/ekiga.png
