@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.35 2008/12/12 15:35:34 sketch Exp $
+# $NetBSD: SunOS.mk,v 1.36 2009/01/14 23:33:48 sketch Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -93,12 +93,11 @@ PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 # (it defaults to 'no' as per defaults/mk.conf).
 # Set the group and mode to meaningful values in that case (defaults to
 # BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
-# FIXME: Adjust to work on this system and enable the lines below.
-#.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-#GAMES_USER=		games
-#GAMES_GROUP=		games
-#GAMEOWN=		${GAMES_USER}
-#GAMEGRP=		${GAMES_GROUP}
-#GAMEMODE=		2555
-#GAMEDIRMODE=		0775
-#.endif
+.if !(empty(SETGIDGAME:M[yY][eE][sS]))
+GAMES_USER=		games
+GAMES_GROUP=		games
+GAMEOWN=		${GAMES_USER}
+GAMEGRP=		${GAMES_GROUP}
+GAMEMODE=		2555
+GAMEDIRMODE=		0775
+.endif
