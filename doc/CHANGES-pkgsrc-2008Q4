@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.13 2009/01/14 06:47:30 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.14 2009/01/14 06:51:35 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -36,3 +36,5 @@ Pullup ticket #2634 - requested by roy
 phppgadmin: security update
 pullup ticket #2632 - requested by wiz
 amarok: fix possible buffer overflows
+pullup ticket #2633 - requested by wiz
+avidemux: add option for pulseaudio, fix build problems
