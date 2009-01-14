@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2008/08/27 12:18:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/01/14 13:31:53 drochner Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -1824,6 +1824,7 @@ share/icons/kdeclassic/16x16/actions/upper.png
 share/icons/kdeclassic/16x16/actions/validators.png
 share/icons/kdeclassic/16x16/actions/variablenew.png
 share/icons/kdeclassic/16x16/actions/vertical_text.png
+share/icons/kdeclassic/16x16/actions/view.png
 share/icons/kdeclassic/16x16/actions/view_bottom.png
 share/icons/kdeclassic/16x16/actions/view_choose.png
 share/icons/kdeclassic/16x16/actions/view_detailed.png
@@ -1841,7 +1842,6 @@ share/icons/kdeclassic/16x16/actions/view_split.png
 share/icons/kdeclassic/16x16/actions/view_text.png
 share/icons/kdeclassic/16x16/actions/view_top_bottom.png
 share/icons/kdeclassic/16x16/actions/view_tree.png
-share/icons/kdeclassic/16x16/actions/view.png
 share/icons/kdeclassic/16x16/actions/viewmag+.png
 share/icons/kdeclassic/16x16/actions/viewmag-.png
 share/icons/kdeclassic/16x16/actions/viewmag.png
@@ -2969,6 +2969,7 @@ share/icons/kdeclassic/22x22/actions/up.png
 share/icons/kdeclassic/22x22/actions/upper.png
 share/icons/kdeclassic/22x22/actions/validators.png
 share/icons/kdeclassic/22x22/actions/vertical_text.png
+share/icons/kdeclassic/22x22/actions/view.png
 share/icons/kdeclassic/22x22/actions/view_bottom.png
 share/icons/kdeclassic/22x22/actions/view_choose.png
 share/icons/kdeclassic/22x22/actions/view_detailed.png
@@ -2984,7 +2985,6 @@ share/icons/kdeclassic/22x22/actions/view_sidetree.png
 share/icons/kdeclassic/22x22/actions/view_text.png
 share/icons/kdeclassic/22x22/actions/view_top_bottom.png
 share/icons/kdeclassic/22x22/actions/view_tree.png
-share/icons/kdeclassic/22x22/actions/view.png
 share/icons/kdeclassic/22x22/actions/viewmag+.png
 share/icons/kdeclassic/22x22/actions/viewmag-.png
 share/icons/kdeclassic/22x22/actions/viewmag.png
@@ -3262,6 +3262,7 @@ share/icons/kdeclassic/32x32/actions/undo.png
 share/icons/kdeclassic/32x32/actions/unindent.png
 share/icons/kdeclassic/32x32/actions/unlock.png
 share/icons/kdeclassic/32x32/actions/up.png
+share/icons/kdeclassic/32x32/actions/view.png
 share/icons/kdeclassic/32x32/actions/view_bottom.png
 share/icons/kdeclassic/32x32/actions/view_choose.png
 share/icons/kdeclassic/32x32/actions/view_detailed.png
@@ -3276,7 +3277,6 @@ share/icons/kdeclassic/32x32/actions/view_right.png
 share/icons/kdeclassic/32x32/actions/view_text.png
 share/icons/kdeclassic/32x32/actions/view_top_bottom.png
 share/icons/kdeclassic/32x32/actions/view_tree.png
-share/icons/kdeclassic/32x32/actions/view.png
 share/icons/kdeclassic/32x32/actions/viewmag+.png
 share/icons/kdeclassic/32x32/actions/viewmag-.png
 share/icons/kdeclassic/32x32/actions/viewmag.png
@@ -7300,7 +7300,6 @@ share/kde/applnk/System/ScreenSavers/boxfit.desktop
 share/kde/applnk/System/ScreenSavers/braid.desktop
 share/kde/applnk/System/ScreenSavers/bsod.desktop
 share/kde/applnk/System/ScreenSavers/bubble3d.desktop
-share/kde/applnk/System/ScreenSavers/bubbles.desktop
 share/kde/applnk/System/ScreenSavers/bumps.desktop
 share/kde/applnk/System/ScreenSavers/cage.desktop
 share/kde/applnk/System/ScreenSavers/carousel.desktop
@@ -7311,7 +7310,6 @@ share/kde/applnk/System/ScreenSavers/cloudlife.desktop
 share/kde/applnk/System/ScreenSavers/compass.desktop
 share/kde/applnk/System/ScreenSavers/coral.desktop
 share/kde/applnk/System/ScreenSavers/crackberg.desktop
-share/kde/applnk/System/ScreenSavers/critical.desktop
 share/kde/applnk/System/ScreenSavers/crystal.desktop
 share/kde/applnk/System/ScreenSavers/cube21.desktop
 share/kde/applnk/System/ScreenSavers/cubenetic.desktop
@@ -7335,7 +7333,6 @@ share/kde/applnk/System/ScreenSavers/extrusion.desktop
 share/kde/applnk/System/ScreenSavers/fadeplot.desktop
 share/kde/applnk/System/ScreenSavers/fiberlamp.desktop
 share/kde/applnk/System/ScreenSavers/fireworkx.desktop
-share/kde/applnk/System/ScreenSavers/flag.desktop
 share/kde/applnk/System/ScreenSavers/flame.desktop
 share/kde/applnk/System/ScreenSavers/flipflop.desktop
 share/kde/applnk/System/ScreenSavers/flipscreen3d.desktop
@@ -7345,7 +7342,6 @@ share/kde/applnk/System/ScreenSavers/fluidballs.desktop
 share/kde/applnk/System/ScreenSavers/flurry.desktop
 share/kde/applnk/System/ScreenSavers/flyingtoasters.desktop
 share/kde/applnk/System/ScreenSavers/fontglide.desktop
-share/kde/applnk/System/ScreenSavers/forest.desktop
 share/kde/applnk/System/ScreenSavers/fuzzyflakes.desktop
 share/kde/applnk/System/ScreenSavers/galaxy.desktop
 share/kde/applnk/System/ScreenSavers/gears.desktop
@@ -7353,7 +7349,6 @@ share/kde/applnk/System/ScreenSavers/gflux.desktop
 share/kde/applnk/System/ScreenSavers/glblur.desktop
 share/kde/applnk/System/ScreenSavers/glcells.desktop
 share/kde/applnk/System/ScreenSavers/gleidescope.desktop
-share/kde/applnk/System/ScreenSavers/glforestfire.desktop
 share/kde/applnk/System/ScreenSavers/glhanoi.desktop
 share/kde/applnk/System/ScreenSavers/glknots.desktop
 share/kde/applnk/System/ScreenSavers/glmatrix.desktop
@@ -7387,12 +7382,7 @@ share/kde/applnk/System/ScreenSavers/klein.desktop
 share/kde/applnk/System/ScreenSavers/kpartsaver.desktop
 share/kde/applnk/System/ScreenSavers/kumppa.desktop
 share/kde/applnk/System/ScreenSavers/lament.desktop
-share/kde/applnk/System/ScreenSavers/laser.desktop
 share/kde/applnk/System/ScreenSavers/lavalite.desktop
-share/kde/applnk/System/ScreenSavers/lightning.desktop
-share/kde/applnk/System/ScreenSavers/lisa.desktop
-share/kde/applnk/System/ScreenSavers/lissie.desktop
-share/kde/applnk/System/ScreenSavers/lmorph.desktop
 share/kde/applnk/System/ScreenSavers/lockward.desktop
 share/kde/applnk/System/ScreenSavers/loop.desktop
 share/kde/applnk/System/ScreenSavers/m6502.desktop
@@ -7401,7 +7391,6 @@ share/kde/applnk/System/ScreenSavers/memscroller.desktop
 share/kde/applnk/System/ScreenSavers/menger.desktop
 share/kde/applnk/System/ScreenSavers/metaballs.desktop
 share/kde/applnk/System/ScreenSavers/mirrorblob.desktop
-share/kde/applnk/System/ScreenSavers/mismunch.desktop
 share/kde/applnk/System/ScreenSavers/moebius.desktop
 share/kde/applnk/System/ScreenSavers/moebiusgears.desktop
 share/kde/applnk/System/ScreenSavers/moire.desktop
@@ -7436,7 +7425,6 @@ share/kde/applnk/System/ScreenSavers/rd-bomb.desktop
 share/kde/applnk/System/ScreenSavers/ripples.desktop
 share/kde/applnk/System/ScreenSavers/rocks.desktop
 share/kde/applnk/System/ScreenSavers/rorschach.desktop
-share/kde/applnk/System/ScreenSavers/rotor.desktop
 share/kde/applnk/System/ScreenSavers/rotzoomer.desktop
 share/kde/applnk/System/ScreenSavers/rubik.desktop
 share/kde/applnk/System/ScreenSavers/sballs.desktop
@@ -7447,9 +7435,7 @@ share/kde/applnk/System/ScreenSavers/slidescreen.desktop
 share/kde/applnk/System/ScreenSavers/slip.desktop
 share/kde/applnk/System/ScreenSavers/sonar.desktop
 share/kde/applnk/System/ScreenSavers/speedmine.desktop
-share/kde/applnk/System/ScreenSavers/sphere.desktop
 share/kde/applnk/System/ScreenSavers/spheremonics.desktop
-share/kde/applnk/System/ScreenSavers/spiral.desktop
 share/kde/applnk/System/ScreenSavers/spotlight.desktop
 share/kde/applnk/System/ScreenSavers/sproingies.desktop
 share/kde/applnk/System/ScreenSavers/squiral.desktop
@@ -7461,7 +7447,6 @@ share/kde/applnk/System/ScreenSavers/strange.desktop
 share/kde/applnk/System/ScreenSavers/substrate.desktop
 share/kde/applnk/System/ScreenSavers/superquadrics.desktop
 share/kde/applnk/System/ScreenSavers/swirl.desktop
-share/kde/applnk/System/ScreenSavers/t3d.desktop
 share/kde/applnk/System/ScreenSavers/tangram.desktop
 share/kde/applnk/System/ScreenSavers/thornbird.desktop
 share/kde/applnk/System/ScreenSavers/timetunnel.desktop
@@ -7471,12 +7456,9 @@ share/kde/applnk/System/ScreenSavers/truchet.desktop
 share/kde/applnk/System/ScreenSavers/twang.desktop
 share/kde/applnk/System/ScreenSavers/vermiculate.desktop
 share/kde/applnk/System/ScreenSavers/vidwhacker.desktop
-share/kde/applnk/System/ScreenSavers/vines.desktop
 share/kde/applnk/System/ScreenSavers/voronoi.desktop
 share/kde/applnk/System/ScreenSavers/wander.desktop
 share/kde/applnk/System/ScreenSavers/whirlwindwarp.desktop
-share/kde/applnk/System/ScreenSavers/whirlygig.desktop
-share/kde/applnk/System/ScreenSavers/worm.desktop
 share/kde/applnk/System/ScreenSavers/wormhole.desktop
 share/kde/applnk/System/ScreenSavers/xanalogtv.desktop
 share/kde/applnk/System/ScreenSavers/xflame.desktop
@@ -7485,7 +7467,6 @@ share/kde/applnk/System/ScreenSavers/xlyap.desktop
 share/kde/applnk/System/ScreenSavers/xmatrix.desktop
 share/kde/applnk/System/ScreenSavers/xrayswarm.desktop
 share/kde/applnk/System/ScreenSavers/xspirograph.desktop
-share/kde/applnk/System/ScreenSavers/xsublim.desktop
 share/kde/applnk/System/ScreenSavers/zoom.desktop
 share/kde/apps/kfiresaver/kfs_debris.ogg
 share/kde/apps/kfiresaver/kfs_explode.ogg
