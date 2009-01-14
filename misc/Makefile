@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2008/12/09 15:05:34 wiz Exp $
+# $NetBSD: Makefile,v 1.319 2009/01/14 16:11:23 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -73,6 +73,7 @@ SUBDIR+=	gok
 SUBDIR+=	gone
 SUBDIR+=	gperiodic
 SUBDIR+=	granulate
+SUBDIR+=	gwaei
 SUBDIR+=	gxmame
 SUBDIR+=	hanzim
 SUBDIR+=	heyu
