@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.17 2006/07/18 18:40:36 wiz Exp $
+$NetBSD: patch-ab,v 1.18 2009/01/14 13:29:15 drochner Exp $
 
---- configure.in.orig	2006-05-23 22:07:00.000000000 +0000
+--- configure.in.orig	2008-12-27 22:12:27.000000000 +0100
 +++ configure.in
-@@ -1171,7 +1171,7 @@ AC_DEFINE_UNQUOTED(PACKAGE, "$GETTEXT_PA
+@@ -1185,7 +1185,7 @@ AC_DEFINE_UNQUOTED(PACKAGE, "$GETTEXT_PA
  		   generated code.])
  AC_SUBST(GETTEXT_PACKAGE)
  
--ALL_LINGUAS="ca da de es et fi fr hu it ja ko nb nl no pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
-+ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl no pl pt ru sk sv vi wa zh_CN zh_TW"
+-ALL_LINGUAS="ca da de es et fi fr hu it ja ko nb nl pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
++ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl pl pt ru sk sv vi wa zh_CN zh_TW"
  AM_GLIB_GNU_GETTEXT
  MKINSTALLDIRS="$INSTALL_DIRS"
  
-@@ -1937,7 +1937,7 @@ if test "$enable_locking" = yes -a "$wit
+@@ -1995,7 +1995,7 @@ if test "$enable_locking" = yes -a "$wit
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
