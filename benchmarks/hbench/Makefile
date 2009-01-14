@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/04/05 14:09:18 chris Exp $
+# $NetBSD: Makefile,v 1.41 2009/01/14 12:20:57 sketch Exp $
 
 DISTNAME=		hbench-OS-1.0
 PKGNAME=		hbench-1.0
@@ -26,6 +26,11 @@ GET_ARCH_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/-.*-.*$$
 GET_OS_CMD=		${PKGSRCDIR:Q}/mk/gnu-config/config.guess | ${SED} -e 's/^.*-.*-//'
 PLIST_SUBST+=		PLATFORM=${GET_OS_CMD:sh:Q}-${GET_ARCH_CMD:sh:Q}
 
+.include "../../mk/bsd.prefs.mk"
+
+HB_HOSTNAME!=		${UNAME} -n
+HB_SHORTNAME=		${HB_HOSTNAME:C/\..*//}
+
 post-extract:
 	${CP} ${FILESDIR}/do-install ${WRKSRC}
 
@@ -48,12 +53,12 @@ benchmark:
 	${MKDIR} conf;							\
 	${MKDIR} results;						\
 	${SED} -e 's|@pwd@|'`/bin/pwd`'|g' 				\
-		-e 's|@hostname@|'`/bin/hostname -s`'|g'		\
+		-e 's|@hostname@|${HB_SHORTNAME}|g'			\
 		-e 's|@wrksrc@|'`/bin/pwd`'|g'				\
 		${FILESDIR}/setup.answers | ${MAKE} setup;		\
-	${MV} conf/`/bin/hostname -s`.run conf/foo ;			\
+	${MV} conf/${HB_SHORTNAME}.run conf/foo ;			\
 	${SED} -e 's|#PLAINBINDIR=${HBENCHROOT}|PLAINBINDIR='`/bin/pwd`'|' \
-		< conf/foo > conf/`/bin/hostname -s`.run ;		\
+		< conf/foo > conf/${HB_SHORTNAME}.run ;			\
 	${MAKE} run
 
 results:
