@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2008/12/02 15:59:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2009/01/14 09:11:47 wiz Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -212,6 +212,7 @@ share/gnome/help/window-list/ja/window-list.xml
 share/gnome/help/window-list/ko/window-list.xml
 share/gnome/help/window-list/oc/window-list.xml
 share/gnome/help/window-list/pa/window-list.xml
+share/gnome/help/window-list/pt_BR/window-list.xml
 share/gnome/help/window-list/ru/window-list.xml
 share/gnome/help/window-list/sv/window-list.xml
 share/gnome/help/window-list/uk/window-list.xml
@@ -488,6 +489,7 @@ share/omf/window-list/window-list-it.omf
 share/omf/window-list/window-list-ko.omf
 share/omf/window-list/window-list-oc.omf
 share/omf/window-list/window-list-pa.omf
+share/omf/window-list/window-list-pt_BR.omf
 share/omf/window-list/window-list-ru.omf
 share/omf/window-list/window-list-sv.omf
 share/omf/window-list/window-list-uk.omf
@@ -561,6 +563,7 @@ ${PLIST.hal}@dirrm share/examples/gnome-panel
 @dirrm share/gnome/help/window-list/uk
 @dirrm share/gnome/help/window-list/sv
 @dirrm share/gnome/help/window-list/ru
+@dirrm share/gnome/help/window-list/pt_BR
 @dirrm share/gnome/help/window-list/pa
 @dirrm share/gnome/help/window-list/oc
 @dirrm share/gnome/help/window-list/ko
