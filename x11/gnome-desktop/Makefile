@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2008/12/24 02:38:18 jmcneill Exp $
+# $NetBSD: Makefile,v 1.86 2009/01/14 10:48:00 wiz Exp $
 #
 
-DISTNAME=		gnome-desktop-2.24.2
+DISTNAME=		gnome-desktop-2.24.3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,9 +25,6 @@ CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 
 BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
-
 pre-configure:
 	cd ${WRKSRC} && autoconf -f
 	cd ${WRKSRC} && autoheader -f
@@ -37,15 +34,17 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/${f} ${DESTDIR}${PREFIX}/share/pixmaps/${f}
 .endfor
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.4
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.3
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 # gnome-about needs py-gnome2-desktop at runtime, which needs us, so
 # we have a circular dependency. To work around this, just depend on
