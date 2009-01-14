@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.237 2009/01/14 10:48:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.238 2009/01/14 11:34:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-applets to 2.24.3 [wiz 2009-01-14]
 	Updated misc/deskbar-applet to 2.24.3 [wiz 2009-01-14]
 	Updated x11/gnome-desktop to 2.24.3 [wiz 2009-01-14]
+	Updated games/gnome-games to 2.24.3 [wiz 2009-01-14]
