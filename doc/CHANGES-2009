@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.241 2009/01/14 13:17:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.242 2009/01/14 13:40:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -321,3 +321,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/mrtg to 2.16.2nb1 [sketch 2009-01-14]
 	Updated x11/gnome-session to 2.24.3 [wiz 2009-01-14]
 	Updated sysutils/gnome-system-monitor to 2.24.3 [wiz 2009-01-14]
+	Updated x11/gnome-terminal to 2.24.3 [wiz 2009-01-14]
