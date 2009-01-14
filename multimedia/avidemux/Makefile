@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.50 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: Makefile,v 1.50.2.1 2009/01/14 06:51:13 rtr Exp $
 #
 
 DISTNAME=	avidemux_2.4.3
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/avidemux/
 
@@ -29,6 +29,8 @@ SUBST_STAGE.audio=	post-patch
 SUBST_FILES.audio=	avidemux/ADM_audiodevice/ADM_deviceoss.cpp
 SUBST_SED.audio=	-e "s|\\/dev\\/dsp|${DEVOSSAUDIO}|g"
 SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
+
+.include "options.mk"
 
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
