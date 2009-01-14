@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/23 22:09:26 wiz Exp $
-include/dvdread/cmd_print.h
+@comment $NetBSD: PLIST,v 1.4 2009/01/14 22:28:05 jmcneill Exp $
+bin/dvdread-config
+include/dvdread/bitreader.h
 include/dvdread/dvd_reader.h
+include/dvdread/dvd_udf.h
 include/dvdread/ifo_print.h
 include/dvdread/ifo_read.h
 include/dvdread/ifo_types.h
@@ -8,4 +10,6 @@ include/dvdread/nav_print.h
 include/dvdread/nav_read.h
 include/dvdread/nav_types.h
 lib/libdvdread.la
+lib/pkgconfig/dvdread.pc
+share/aclocal/dvdread.m4
 @dirrm include/dvdread
