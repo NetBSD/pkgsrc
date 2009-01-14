@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.245 2009/01/14 16:11:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.246 2009/01/14 20:58:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/eog to 2.24.3.1 [wiz 2009-01-14]
 	Updated graphics/cheese to 2.24.3 [wiz 2009-01-14]
 	Added misc/gwaei version 0.13.0 [wiz 2009-01-14]
+	Updated x11/xterm to 239 [tnn 2009-01-14]
