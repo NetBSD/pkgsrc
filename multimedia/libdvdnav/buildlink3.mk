@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/01/14 22:30:46 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/01/14 22:36:11 jmcneill Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBDVDNAV_BUILDLINK3_MK:=	${LIBDVDNAV_BUILDLINK3_MK}+
@@ -16,5 +16,7 @@ BUILDLINK_API_DEPENDS.libdvdnav+=	libdvdnav>=4.1.3
 BUILDLINK_ABI_DEPENDS.libdvdnav+=	libdvdnav>=4.1.3
 BUILDLINK_PKGSRCDIR.libdvdnav?=	../../multimedia/libdvdnav
 .endif	# LIBDVDNAV_BUILDLINK3_MK
+
+.include "../../multimedia/libdvdread/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
