@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.231 2009/01/13 20:11:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.232 2009/01/14 06:17:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -311,3 +311,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/mousetweaks to 2.24.3 [wiz 2009-01-13]
 	Updated graphics/eog to 2.24.3 [wiz 2009-01-13]
 	Updated archivers/file-roller to 2.24.3 [wiz 2009-01-13]
+	Updated fonts/ttf2pk to 1.5nb1 [minskim 2009-01-14]
