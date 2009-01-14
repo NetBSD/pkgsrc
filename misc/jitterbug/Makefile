@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/06/16 14:39:35 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2009/01/14 12:20:57 sketch Exp $
 
 DISTNAME=	jitterbug-1.6.2
 PKGREVISION=	2
@@ -29,10 +29,10 @@ JB_CONFIGDIR=	${JB_USER}/config
 
 JB_LOCALMAIL?=	${JB_PACKAGE}-bugs
 
-JB_HOSTNAME=	`hostname -s`
-JB_LONGNAME=	`hostname`
+JB_HOSTNAME!=	${UNAME} -n
+JB_SHORTNAME=	${JB_HOSTNAME:C/\..*//}
 .if !defined(JB_FQHOSTNAME)
-JB_FQHOSTNAME=	${JB_LONGNAME}
+JB_FQHOSTNAME=	${JB_HOSTNAME}
 .endif
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
 
@@ -64,7 +64,7 @@ FILES_SUBST+=	JB_USER=${JB_USER} JB_USERID=${JB_USERID}		\
 		CHGRP=${CHGRP} ID=${ID} TOUCH=${TOUCH} RM=${RM}
 
 pre-extract:
-	@(if [ "X${JB_HOSTNAME}" = "X${JB_LONGNAME}" ]; then                  \
+	@(if [ "X${JB_HOSTNAME}" = "X${JB_SHORTNAME}" ]; then                 \
 	${ECHO};                                                              \
 	${ECHO} "Warning: could not determine your fully qualified host";     \
 	${ECHO} "         name. Please set the JB_FQHOSTNAME environment";    \
@@ -96,7 +96,7 @@ pre-extract:
 	@${ECHO} "  (default='${JB_LOCALMAIL}@${JB_FQHOSTNAME}')"
 	@${ECHO}
 .endif
-.if ${JB_FQHOSTNAME} == ${JB_HOSTNAME}
+.if ${JB_FQHOSTNAME} == ${JB_SHORTNAME}
 	@${ECHO} "Warning: Could not determine your fully qualified hostname."
 	@${ECHO} "You must set the JB_FQHOSTNAME environment variable."
 	@${ECHO}
