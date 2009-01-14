@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/10 21:04:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/14 11:27:34 obache Exp $
 
 DISTNAME=	libv4l-0.4.3
 PKGREVISION=	2
@@ -20,15 +20,16 @@ PLIST.needs_videoio=	yes
 INSTALLATION_DIRS+=	include/sys
 
 pre-configure:
-	${MKDIR} ${WRKSRC}/include/sys
-	cp ${FILESDIR}/videoio.h ${WRKSRC}/include/sys
-	cp ${FILESDIR}/videodev.h ${WRKSRC}/include/sys
+	${MKDIR} ${BUILDLINK_DIR}/include/sys
+	cp ${FILESDIR}/videoio.h ${BUILDLINK_DIR}/include/sys
+	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/videoio.h ${DESTDIR}${PREFIX}/include/sys
 .elif !exists(/usr/include/linux/videodev.h)
 pre-configure:
-	cp ${FILESDIR}/videodev.h ${WRKSRC}/include/videodev.h
+	${MKDIR} ${BUILDLINK_DIR}/include
+	cp ${FILESDIR}/videodev.h ${BUILDLINK_DIR}/include/videodev.h
 .endif
 
 PLIST_VARS=	needs_videoio
