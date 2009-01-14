@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7804 2009/01/13 14:42:54 roy Exp $
+$NetBSD: TODO,v 1.7805 2009/01/14 15:49:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -467,7 +467,6 @@ Suggested package updates
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o cheese-2.24.3
 	o chemtool-1.6.11
 	o cherokee-0.11.6
 	o cinepaint-0.23
@@ -507,7 +506,6 @@ Suggested package updates
 	o ddrescue-1.9
 	o defendguin-0.0.11
 	o delegate-9.9.0
-	o deskbar-applet-2.24.3
 	o devIL-1.7.5
 	o devhelp-0.22
 	o dhid-5.3
@@ -545,7 +543,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
-	o eog-2.24.3
 	o epic4-2.6
 	o epsg-6.14
 	o epstool-3.08
@@ -571,7 +568,6 @@ Suggested package updates
 	o fdgw-20040609
 	o festival-1.96
 	o fetchyahoo-2.11.2
-	o file-roller-2.24.3
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -634,14 +630,7 @@ Suggested package updates
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.24.3
-	o gnome-desktop-2.24.3
-	o gnome-games-2.24.3
-	o gnome-panel-2.24.3
 	o gnome-pilot-2.0.17
-	o gnome-session-2.24.3
-	o gnome-system-monitor-2.24.3
-	o gnome-terminal-2.24.3
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -677,7 +666,6 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o gucharmap-2.24.3
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
@@ -783,8 +771,6 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
-	o libgtop-2.24.3
-	o libgweather-2.24.3
 	o libhydrogen-0.9.2
 	o libjit-1.0.2
 	o libltdl-2.2.6a
@@ -801,7 +787,6 @@ Suggested package updates
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
-	o libsoup24-2.24.3
 	o libspf2-1.2.9
 	o libssh-0.2
 	o libstatgrab-0.16
@@ -863,7 +848,6 @@ Suggested package updates
 	o moc-2.4.4
 	o modular-xorg-server-1.5.99.901
 	o monotone-0.42
-	o mousetweaks-2.24.3
 	o mp3blaster-3.2.3
 	o mp3splt-gtk-0.5.1 [schmonz]
 	o mpc-0.14
@@ -943,7 +927,6 @@ Suggested package updates
 	o openssl-0.9.8i
 	o openttd-0.6.1
 	o opera-9.63
-	o orca-2.24.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1321,8 +1304,6 @@ Suggested package updates
 	o xdx-2.4
 	o xemacs-21.4.21
 	o xemacs-current-21.5.28
-	o xenkernel33-3.3.1
-	o xentools33-3.3.1
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
@@ -1410,7 +1391,6 @@ Suggested package updates
 	o yorick-2.1.05
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.24.1
 	o zile-2.3.0
 	o zircon-1.18.256
 	o zoom-1.0.5
