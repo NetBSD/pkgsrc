@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.232 2009/01/14 06:17:07 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.233 2009/01/14 06:35:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -312,3 +312,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/eog to 2.24.3 [wiz 2009-01-13]
 	Updated archivers/file-roller to 2.24.3 [wiz 2009-01-13]
 	Updated fonts/ttf2pk to 1.5nb1 [minskim 2009-01-14]
+	Updated print/dvipdfmx to 0.0.0.20070518nb1 [minskim 2009-01-14]
