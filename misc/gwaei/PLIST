@@ -1,0 +1,56 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 16:10:52 wiz Exp $
+bin/gwaei
+share/applications/gwaei.desktop
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/ChangeLog
+share/doc/${PKGNAME}/NEWS
+share/gconf/schemas/gwaei.schemas
+share/gnome/help/gwaei/C/index.xml
+share/gwaei/character.png
+share/gwaei/character2.png
+share/gwaei/character3.png
+share/gwaei/jdata.dat
+share/gwaei/kanjipad.xml
+share/gwaei/kpengine
+share/gwaei/logo.png
+share/gwaei/main.xml
+share/gwaei/radicals.xml
+share/gwaei/settings.xml
+share/icons/hicolor/16x16/actions/non-word-boundary.png
+share/icons/hicolor/16x16/actions/unknown-character.png
+share/icons/hicolor/16x16/actions/word-boundary.png
+share/icons/hicolor/16x16/apps/gwaei.png
+share/icons/hicolor/22x22/actions/non-word-boundary.png
+share/icons/hicolor/22x22/actions/unknown-character.png
+share/icons/hicolor/22x22/actions/word-boundary.png
+share/icons/hicolor/24x24/actions/non-word-boundary.png
+share/icons/hicolor/24x24/actions/unknown-character.png
+share/icons/hicolor/24x24/actions/word-boundary.png
+share/icons/hicolor/24x24/apps/gwaei.png
+share/icons/hicolor/32x32/apps/gwaei.png
+share/icons/hicolor/48x48/apps/gwaei.png
+share/locale/en@boldquot/LC_MESSAGES/gwaei.mo
+share/locale/en@quot/LC_MESSAGES/gwaei.mo
+share/locale/it/LC_MESSAGES/gwaei.mo
+share/locale/ja/LC_MESSAGES/gwaei.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@dirrm share/gwaei
+@dirrm share/gnome/help/gwaei/C
+@dirrm share/gnome/help/gwaei
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in GConf: @dirrm share/gconf/schemas
+@dirrm share/doc/${PKGNAME}
+@comment in xdg-dirs: @dirrm share/applications
