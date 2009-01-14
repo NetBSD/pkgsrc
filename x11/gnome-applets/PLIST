@@ -1,5 +1,23 @@
-@comment $NetBSD: PLIST,v 1.19 2008/12/02 22:09:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/01/14 12:59:52 drochner Exp $
 bin/invest-chart
+lib/bonobo/servers/GNOME_AccessxStatusApplet.server
+${PLIST.battstat}lib/bonobo/servers/GNOME_BattstatApplet.server
+lib/bonobo/servers/GNOME_CDPlayerApplet.server
+lib/bonobo/servers/GNOME_CharpickerApplet.server
+lib/bonobo/servers/GNOME_DriveMountApplet.server
+lib/bonobo/servers/GNOME_GWeatherApplet_Factory.server
+lib/bonobo/servers/GNOME_GeyesApplet.server
+lib/bonobo/servers/GNOME_GtikApplet.server
+lib/bonobo/servers/GNOME_KeyboardApplet.server
+lib/bonobo/servers/GNOME_MailcheckApplet_Factory.server
+lib/bonobo/servers/GNOME_MiniCommanderApplet.server
+lib/bonobo/servers/GNOME_MixerApplet.server
+lib/bonobo/servers/GNOME_MultiLoadApplet_Factory.server
+lib/bonobo/servers/GNOME_NullApplet_Factory.server
+lib/bonobo/servers/GNOME_Panel_TrashApplet.server
+lib/bonobo/servers/GNOME_Panel_WirelessApplet.server
+lib/bonobo/servers/GNOME_StickyNotesApplet.server
+lib/bonobo/servers/Invest_Applet.server
 ${PYSITELIB}/invest/__init__.py
 ${PYSITELIB}/invest/__init__.pyc
 ${PYSITELIB}/invest/__init__.pyo
@@ -24,24 +42,6 @@ ${PYSITELIB}/invest/quotes.pyo
 ${PYSITELIB}/invest/widgets.py
 ${PYSITELIB}/invest/widgets.pyc
 ${PYSITELIB}/invest/widgets.pyo
-lib/bonobo/servers/GNOME_AccessxStatusApplet.server
-${PLIST.battstat}lib/bonobo/servers/GNOME_BattstatApplet.server
-lib/bonobo/servers/GNOME_CDPlayerApplet.server
-lib/bonobo/servers/GNOME_CharpickerApplet.server
-lib/bonobo/servers/GNOME_DriveMountApplet.server
-lib/bonobo/servers/GNOME_GWeatherApplet_Factory.server
-lib/bonobo/servers/GNOME_GeyesApplet.server
-lib/bonobo/servers/GNOME_GtikApplet.server
-lib/bonobo/servers/GNOME_KeyboardApplet.server
-lib/bonobo/servers/GNOME_MailcheckApplet_Factory.server
-lib/bonobo/servers/GNOME_MiniCommanderApplet.server
-lib/bonobo/servers/GNOME_MixerApplet.server
-lib/bonobo/servers/GNOME_MultiLoadApplet_Factory.server
-lib/bonobo/servers/GNOME_NullApplet_Factory.server
-lib/bonobo/servers/GNOME_Panel_TrashApplet.server
-lib/bonobo/servers/GNOME_Panel_WirelessApplet.server
-lib/bonobo/servers/GNOME_StickyNotesApplet.server
-lib/bonobo/servers/Invest_Applet.server
 libexec/accessx-status-applet
 ${PLIST.battstat}libexec/battstat-applet-2
 libexec/charpick_applet2
@@ -1518,7 +1518,6 @@ ${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/gnome/help/stickynotes_applet/C/figures
 @dirrm share/gnome/help/stickynotes_applet/C
 @dirrm share/gnome/help/stickynotes_applet
-@dirrm share/gnome/help/stickynotes_applet
 @dirrm share/gnome/help/multiload/uk/figures
 @dirrm share/gnome/help/multiload/uk
 @dirrm share/gnome/help/multiload/sv/figures
@@ -1583,7 +1582,6 @@ ${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/gnome/help/mixer_applet2/C/figures
 @dirrm share/gnome/help/mixer_applet2/C
 @dirrm share/gnome/help/mixer_applet2
-@dirrm share/gnome/help/mixer_applet2
 @dirrm share/gnome/help/invest-applet/sv
 @dirrm share/gnome/help/invest-applet/fi
 @dirrm share/gnome/help/invest-applet/es
@@ -1618,7 +1616,6 @@ ${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/gnome/help/gweather/de
 @dirrm share/gnome/help/gweather/C/figures
 @dirrm share/gnome/help/gweather/C
-@dirrm share/gnome/help/gweather
 @dirrm share/gnome/help/gweather
 @dirrm share/gnome/help/gswitchit/uk
 @dirrm share/gnome/help/gswitchit/sv
@@ -1692,7 +1689,6 @@ ${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/gnome/help/drivemount/C/figures
 @dirrm share/gnome/help/drivemount/C
 @dirrm share/gnome/help/drivemount
-@dirrm share/gnome/help/drivemount
 @dirrm share/gnome/help/char-palette/uk/figures
 @dirrm share/gnome/help/char-palette/uk
 @dirrm share/gnome/help/char-palette/sv/figures
@@ -1726,7 +1722,6 @@ ${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/gnome/help/char-palette/C/figures
 @dirrm share/gnome/help/char-palette/C
 @dirrm share/gnome/help/char-palette
-@dirrm share/gnome/help/char-palette
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/uk/figures
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/uk
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/sv/figures
@@ -1749,6 +1744,8 @@ ${PLIST.battstat}@dirrm share/gnome/help/battstat/en_GB/figures
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/en_GB
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/el/figures
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/el
+${PLIST.battstat}@dirrm share/gnome/help/battstat/de/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/de
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/bg/figures
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/bg
 ${PLIST.battstat}@dirrm share/gnome/help/battstat/C/figures
