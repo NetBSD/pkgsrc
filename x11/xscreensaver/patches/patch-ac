@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
+$NetBSD: patch-ac,v 1.21 2009/01/14 13:29:15 drochner Exp $
 
---- configure.orig	2008-07-16 23:40:47.000000000 +0200
+--- configure.orig	2008-12-28 08:59:19.000000000 +0100
 +++ configure
-@@ -3500,6 +3500,9 @@ echo "${ECHO_T}$ac_cv_gcc_accepts_no_cpp
+@@ -3504,6 +3504,9 @@ echo "${ECHO_T}$ac_cv_gcc_accepts_no_cpp
     ac_gcc_accepts_no_cpp_precomp="$ac_cv_gcc_accepts_no_cpp_precomp"
    fi
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
  if test -n "$GCC"; then
     if test -n "$GCC"; then
     { echo "$as_me:$LINENO: checking whether gcc accepts -std=c89" >&5
-@@ -3550,6 +3553,7 @@ echo "${ECHO_T}Disabling C++ comments in
+@@ -3554,6 +3557,7 @@ echo "${ECHO_T}Disabling C++ comments in
       CC="$CC -Wp,-lang-c89"
     fi
    fi
@@ -20,16 +20,16 @@ $NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
  
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
-@@ -7921,7 +7925,7 @@ _ACEOF
+@@ -7925,7 +7929,7 @@ _ACEOF
  
  
  
--ALL_LINGUAS="ca da de es et fi fr hu it ja ko nb nl no pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
-+ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl no pl pt ru sk sv vi wa zh_CN zh_TW"
+-ALL_LINGUAS="ca da de es et fi fr hu it ja ko nb nl pl pt pt_BR ru sk sv vi wa zh_CN zh_TW"
++ALL_LINGUAS="da de es et fi fr hu it ja ko nb nl pl pt ru sk sv vi wa zh_CN zh_TW"
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
-@@ -13640,7 +13644,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
+@@ -13644,7 +13648,7 @@ if test "${ac_cv_lib_krb4_krb_get_tf_rea
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13727,7 +13731,7 @@ echo "$as_me: WARNING: Cannot find compa
+@@ -13731,7 +13735,7 @@ echo "$as_me: WARNING: Cannot find compa
      # from Matt Knopp <mhat@infocalypse.netlag.com>
      # (who got it from amu@mit.edu)
  
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
  
      # jwz: MacOS X uses -lkrb5, but not -lcrypt
  
-@@ -14889,7 +14893,7 @@ fi
+@@ -14893,7 +14897,7 @@ fi
  #
  if test "$enable_locking" = yes ; then
    case "$host" in
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.20 2008/07/30 20:18:37 drochner Exp $
        need_setuid=yes
      ;;
    esac
-@@ -15323,11 +15327,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
+@@ -15327,11 +15331,7 @@ echo "${ECHO_T}$ac_cv_gtk_config_libs" >
    ac_gtk_config_libs=$ac_cv_gtk_config_libs
  
    GTK_EXTRA_OBJS=""
