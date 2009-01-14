@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.109 2008/12/02 16:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.110 2009/01/14 13:01:42 wiz Exp $
 #
 
-DISTNAME=		gnome-session-2.24.2
+DISTNAME=		gnome-session-2.24.3
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.24/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
@@ -12,53 +12,25 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 session management utilities
 
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-core<1.4.2nb4
 
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
-USE_LIBTOOL=		yes
 
 MAKE_ENV+=		REAL_GCONFTOOL=${GCONFTOOL2:Q}
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
-GCONF_SCHEMAS=	gnome-session.schemas
-
-BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
-# Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
-# in the environment being set.
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
-
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/GConf/schemas.mk"
-.include "../../devel/GConf-ui/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../security/gnome-keyring/buildlink3.mk"
-.include "../../security/policykit/buildlink3.mk"
-.include "../../security/policykit-gnome/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"
-.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
-.include "../../x11/gnome-control-center/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+GCONF_SCHEMAS=		gnome-session.schemas
 
 post-extract:
 	${MV} ${WRKSRC}/data/gnome-splash.png \
@@ -70,4 +42,33 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash-orig.png \
 	    ${DESTDIR}${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
 
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
+.include "../../devel/GConf-ui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=2.21.92
+.include "../../security/gnome-keyring/buildlink3.mk"
+.include "../../security/policykit/buildlink3.mk"
+.include "../../security/policykit-gnome/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.76
+.include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libxslt?=	build
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../x11/gnome-control-center/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.1
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libXau/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/startup-notification/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
