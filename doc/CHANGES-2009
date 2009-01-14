@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.243 2009/01/14 15:19:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.244 2009/01/14 15:48:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -323,3 +323,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/gnome-system-monitor to 2.24.3 [wiz 2009-01-14]
 	Updated x11/gnome-terminal to 2.24.3 [wiz 2009-01-14]
 	Updated graphics/eog to 2.24.3.1 [wiz 2009-01-14]
+	Updated graphics/cheese to 2.24.3 [wiz 2009-01-14]
