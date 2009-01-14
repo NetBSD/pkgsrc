@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.235 2009/01/14 09:38:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.236 2009/01/14 10:31:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -315,3 +315,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/dvipdfmx to 0.0.0.20070518nb1 [minskim 2009-01-14]
 	Updated x11/gnome-panel to 2.24.3 [wiz 2009-01-14]
 	Updated x11/gnome-applets to 2.24.3 [wiz 2009-01-14]
+	Updated misc/deskbar-applet to 2.24.3 [wiz 2009-01-14]
