@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+$NetBSD: patch-ac,v 1.2 2009/01/14 21:45:04 dsainty Exp $
 
 --- oobs/oobs-user.c.orig	2008-11-15 09:03:02.000000000 -0500
 +++ oobs/oobs-user.c
-@@ -23,8 +23,19 @@
+@@ -23,8 +23,18 @@
  #include <unistd.h>
  #include <stdlib.h>
  #include <string.h>
@@ -12,7 +12,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
 +#define UTMP utmp
 +#define GETUTENT getutent
 +#define ENDUTENT endutent
-+#define 
 +#else
 +#include <utmpx.h>
 +#define UTMP utmpx
