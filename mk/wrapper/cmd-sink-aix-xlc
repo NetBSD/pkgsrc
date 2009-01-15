@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.9 2009/01/09 11:46:34 joerg Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.10 2009/01/15 16:55:33 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -97,7 +97,7 @@ while ! queue_is_empty cmdbuf; do
 done
 
 # AIX xlc uses -blibpath to set the runtime library search path.
-arg="-Wl,-blibpath:/usr/usr/lib:/lib"
+arg="-Wl,-blibpath:/usr/lib:/lib"
 if $test -n "$orig_blibpath"; then
 	arg="$arg:$orig_blibpath"
 fi
