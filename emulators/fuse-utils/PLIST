@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/04 07:40:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/01/15 11:50:06 adam Exp $
+bin/audio2tape
 bin/createhdf
 bin/listbasic
 bin/profile2map
@@ -9,6 +10,7 @@ bin/rzxtool
 bin/scl2trd
 bin/snap2tzx
 bin/snapconv
+bin/tape2wav
 bin/tapeconv
 bin/tzxlist
 man/man1/audio2tape.1
