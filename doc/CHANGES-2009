@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.248 2009/01/15 12:14:47 adam Exp $
+$NetBSD: CHANGES-2009,v 1.249 2009/01/15 12:20:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/fuse to 0.10.0.2 [adam 2009-01-15]
 	Updated emulators/fuse-utils to 0.10.0.1 [adam 2009-01-15]
 	Updated www/awstats to 6.9 [adam 2009-01-15]
+	Updated x11/gnome-applets to 2.24.3.1 [wiz 2009-01-15]
