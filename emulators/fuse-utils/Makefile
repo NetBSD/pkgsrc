@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/12/04 07:40:34 adam Exp $
+# $NetBSD: Makefile,v 1.17 2009/01/15 11:50:06 adam Exp $
 
-DISTNAME=	fuse-utils-0.10.0
+DISTNAME=	fuse-utils-0.10.0.1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fuse-emulator/}
 
@@ -13,11 +13,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-audiofile
 
 LIBS+=			-lgcrypt
 LIBS+=			-lgpg-error
 
+.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../emulators/libspectrum/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
