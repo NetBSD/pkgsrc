@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/10 12:32:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/15 00:13:59 joerg Exp $
 #
 
 DISTNAME=	BeautifulSoup-3.0.7a
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.crummy.com/software/BeautifulSoup/download/
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.crummy.com/software/BeautifulSoup/
 COMMENT=	HTML/XML Parser for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= # yes
 
