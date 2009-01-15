@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.1 2008/06/09 19:35:31 adrianp Exp $
+# $NetBSD: options.mk,v 1.2 2009/01/15 20:28:31 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
-PKG_SUPPORTED_OPTIONS=	zenmap
+PKG_SUPPORTED_OPTIONS=	zenmap inet6
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Minet6)
+CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
+.endif
 
 ###
 ### Enable dynamically loadable preprocessors, detection engine
