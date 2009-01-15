@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.254 2009/01/15 20:09:54 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.255 2009/01/15 20:10:55 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -335,6 +335,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-applets to 2.24.3.1 [wiz 2009-01-15]
 	Updated databases/sqlite3 to 3.6.9 [adam 2009-01-15]
 	Updated sysutils/bacula-clientonly to 2.4.4nb1 [adam 2009-01-15]
-	Updated www/drupal to 5.15 [adrianp 2009-01-15]
 	Updated www/drupal to 5.15 [adrianp 2009-01-15]
 	Updated www/drupal6 to 6.9 [adrianp 2009-01-15]
