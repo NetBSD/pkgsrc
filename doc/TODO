@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7806 2009/01/14 15:53:30 wiz Exp $
+$NetBSD: TODO,v 1.7807 2009/01/15 12:14:47 adam Exp $
 
 Suggested new packages
 ======================
@@ -424,7 +424,6 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o awesome-3.1.1
-	o awstats-6.9
 	o baci-20040415
 	o balance-3.42
 	o bbdb-2.35
