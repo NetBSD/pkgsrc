@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2009/01/16 22:25:04 tonio Exp $
+
+--- config.h.in.orig	2008-12-12 21:57:30.000000000 +0100
++++ config.h.in
+@@ -384,6 +384,10 @@
+ /* Define to 1 if you need to in order for `stat' and other things to work. */
+ #undef _POSIX_SOURCE
+ 
++#ifdef __APPLE__
++#define _DARWIN_C_SOURCE 1
++#endif
++
+ /* Define to empty if `const' does not conform to ANSI C. */
+ #undef const
+ 

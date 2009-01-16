@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/01/08 01:00:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/16 22:25:04 tonio Exp $
 
-DISTNAME=		avahi-0.6.23
-PKGREVISION=		2
+DISTNAME=		avahi-0.6.24
 CATEGORIES=		net
 MASTER_SITES=		http://avahi.org/download/
 
@@ -32,7 +31,7 @@ PKGCONFIG_OVERRIDE+=	avahi-ui.pc.in
 AVAHI_USER=		avahi
 AVAHI_GROUP=		avahi
 RCD_SCRIPTS=		avahidaemon
-BUILD_DEFS=		VARBASE PKG_SYSCONFBASE
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 PLIST_SRC=		${PKGDIR}/PLIST
 PKG_SYSCONFSUBDIR=	avahi
 USE_LANGUAGES=		c c++
@@ -61,9 +60,9 @@ CONF_FILES+=		${PREFIX}/share/examples/avahi/ssh.service \
 CONF_FILES+=		${PREFIX}/share/examples/avahi/avahi-dbus.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/avahi-dbus.conf
 
-CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER:Q}
-CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-avahi-user=${AVAHI_USER}
+CONFIGURE_ARGS+=	--with-avahi-group=${AVAHI_GROUP}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--disable-qt3
 CONFIGURE_ARGS+=	--disable-qt4
@@ -75,9 +74,10 @@ CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
 
+INSTALLATION_DIRS+=	share/examples/avahi
+INSTALLATION_DIRS+=	share/doc/avahi
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/avahi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avahi
 	${MKDIR} ${PKG_SYSCONFDIR}/services
 
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-daemon.conf \
