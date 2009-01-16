@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/01/11 22:06:01 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/16 14:40:32 wiz Exp $
 
-DISTNAME=	p5-gnome-bindings-2.24.1.91
+DISTNAME=	p5-gnome-bindings-2.24.2.90
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -10,7 +10,7 @@ COMMENT=	Meta-package for Perl bindings for the GNOME desktop
 
 META_PACKAGE=	yes
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.2/sources/perl/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.24/2.24.3/sources/perl/
 
 DEPENDS+=	p5-glib2>=1.200:../../devel/p5-glib2
 # unpackaged
