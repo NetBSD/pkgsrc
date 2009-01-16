@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/16 14:28:37 jmcneill Exp $
+
+SHA1 (pidgin-libnotify-0.14.tar.gz) = 005e9663c7a36f68b9572341654818720a1e571a
+RMD160 (pidgin-libnotify-0.14.tar.gz) = 39d3f1a6339bb76c774273367b4a2e67c2a4b375
+Size (pidgin-libnotify-0.14.tar.gz) = 316365 bytes
