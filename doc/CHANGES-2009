@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.271 2009/01/16 15:04:09 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.272 2009/01/16 15:05:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -356,3 +356,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/p5-gnome-bindings to 2.24.2.90 [wiz 2009-01-16]
 	Updated meta-pkgs/py-gnome-bindings to 2.24.3 [wiz 2009-01-16]
 	Added misc/gnome-devel-docs version 2.24.1 [wiz 2009-01-16]
+	Updated meta-pkgs/gnome-devtools to 2.24.2.91 [wiz 2009-01-16]
