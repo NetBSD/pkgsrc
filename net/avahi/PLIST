@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/16 22:25:04 tonio Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 bin/avahi-discover-standalone
@@ -100,18 +100,25 @@ share/examples/avahi/avahi-dnsconfd.action
 share/examples/avahi/hosts
 share/examples/avahi/ssh.service
 share/examples/rc.d/avahidaemon
+share/locale/ca/LC_MESSAGES/avahi.mo
 share/locale/de/LC_MESSAGES/avahi.mo
+share/locale/el/LC_MESSAGES/avahi.mo
 share/locale/en_AU/LC_MESSAGES/avahi.mo
 share/locale/en_CA/LC_MESSAGES/avahi.mo
 share/locale/en_GB/LC_MESSAGES/avahi.mo
 share/locale/en_NZ/LC_MESSAGES/avahi.mo
+share/locale/es/LC_MESSAGES/avahi.mo
+share/locale/fi/LC_MESSAGES/avahi.mo
 share/locale/fr/LC_MESSAGES/avahi.mo
+share/locale/hu/LC_MESSAGES/avahi.mo
 share/locale/it/LC_MESSAGES/avahi.mo
+share/locale/ms/LC_MESSAGES/avahi.mo
 share/locale/pl/LC_MESSAGES/avahi.mo
 share/locale/pt_BR/LC_MESSAGES/avahi.mo
 share/locale/ru/LC_MESSAGES/avahi.mo
 share/locale/sr/LC_MESSAGES/avahi.mo
 share/locale/sr@latin/LC_MESSAGES/avahi.mo
+share/locale/sv/LC_MESSAGES/avahi.mo
 share/locale/zh_CN/LC_MESSAGES/avahi.mo
 @dirrm share/doc/avahi
 @dirrm share/avahi/introspection
