@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/23 22:01:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/16 16:35:33 asau Exp $
 bin/lush
 man/man1/lush.1
+share/lush/demos/README
+share/lush/demos/RUNME
 share/lush/demos/calculator
 share/lush/demos/glteapot
 share/lush/demos/lunar-lander
 share/lush/demos/lushdoc
 share/lush/demos/lushlife
 share/lush/demos/lushlife.lsh
-share/lush/demos/README
-share/lush/demos/RUNME
 share/lush/demos/sdl-bounce
 share/lush/demos/sdl-lushlife
 share/lush/demos/sdl-slimevolley
 share/lush/demos/sdlgl-triangle
 share/lush/demos/show-image
 share/lush/demos/simple-gui
+share/lush/etc/README.ivtools
 share/lush/etc/compile-all
 share/lush/etc/lush-find-string
 share/lush/etc/lush.1
 share/lush/etc/lush.el
 share/lush/etc/make-html-manual
 share/lush/etc/make-latex-manual
-share/lush/etc/README.ivtools
 share/lush/include/check_func.h
 share/lush/include/define.h
 share/lush/include/dh.h
@@ -41,6 +41,8 @@ share/lush/lsh/compiler/compiler.hlp
 share/lush/lsh/compiler/dh-compile.lsh
 share/lush/lsh/compiler/dh-macro.lsh
 share/lush/lsh/compiler/dh-util.lsh
+share/lush/lsh/compiler/lush_runtime.c
+share/lush/lsh/compiler/make-standalone.lsh
 share/lush/lsh/compiler/old/dh-graphics.sn
 share/lush/lsh/libc/add-makehelp.lsh
 share/lush/lsh/libc/constants.lsh
@@ -101,9 +103,7 @@ share/lush/lsh/libogre/ogre.hlp
 share/lush/lsh/libogre/ogre.lsh
 share/lush/lsh/libogre/treebrowser-test.lsh
 share/lush/lsh/libogre/treebrowser.lsh
-share/lush/lsh/libplot/graphic-driver.lsh
 share/lush/lsh/libplot/plotter.lsh
-share/lush/lsh/libplot/svg.lsh
 share/lush/lsh/libstd/brace.lsh
 share/lush/lsh/libstd/cluster.lsh
 share/lush/lsh/libstd/compat.lsh
@@ -117,6 +117,7 @@ share/lush/lsh/libstd/oldplotenv.lsh
 share/lush/lsh/libstd/overload.lsh
 share/lush/lsh/libstd/plotenv.lsh
 share/lush/lsh/libstd/remote.lsh
+share/lush/lsh/libstd/svgwindow.lsh
 share/lush/lsh/lush-manual-latex.hlp
 share/lush/lsh/lush-manual.hlp
 share/lush/lsh/manual/boolean.hlp
@@ -138,17 +139,18 @@ share/lush/lsh/manual/inputoutput.hlp
 share/lush/lsh/manual/list.hlp
 share/lush/lsh/manual/lush-basics.hlp
 share/lush/lsh/manual/lush-definition.hlp
+share/lush/lsh/manual/lush-interpreter-internals.hlp
 share/lush/lsh/manual/lush-intro.hlp
 share/lush/lsh/manual/lush-tutorial.hlp
 share/lush/lsh/manual/miscellaneous.hlp
 share/lush/lsh/manual/numberlists.hlp
 share/lush/lsh/manual/numbers.hlp
 share/lush/lsh/manual/objects.hlp
-share/lush/lsh/manual/open.hlp
 share/lush/lsh/manual/storage.hlp
 share/lush/lsh/manual/strings.hlp
 share/lush/lsh/manual/symbol.hlp
 share/lush/lsh/manual/tltools.hlp
+share/lush/lsh/profiler/profile.lsh
 share/lush/packages/alsa/alsa-config.lsh
 share/lush/packages/alsa/alsa.hlp
 share/lush/packages/alsa/alsa.lsh
@@ -179,6 +181,7 @@ share/lush/packages/devices/devices.hlp
 share/lush/packages/devices/joystick.lsh
 share/lush/packages/devices/parport.lsh
 share/lush/packages/devices/serial.lsh
+share/lush/packages/devices/usb2rc.lsh
 share/lush/packages/ffmpeg/avsource.lsh
 share/lush/packages/ffmpeg/ffmpeg-config.lsh
 share/lush/packages/ffmpeg/ffmpeg-enum.lsh
@@ -358,7 +361,9 @@ share/lush/packages/lapack/lapack-x.lsh
 share/lush/packages/lapack/lapack-z.lsh
 share/lush/packages/lapack/lapack.hlp
 share/lush/packages/lapack/lapack.lsh
+share/lush/packages/libnum/interpolator.lsh
 share/lush/packages/libnum/libcomplex.lsh
+share/lush/packages/libnum/libnum-config.lsh
 share/lush/packages/libnum/libnum.hlp
 share/lush/packages/libnum/libnum.lsh
 share/lush/packages/libnum/linalgebra.lsh
@@ -484,21 +489,8 @@ share/lush/packages/python/pytuple.lsh
 share/lush/packages/python/pytype.lsh
 share/lush/packages/python/pyunicode.lsh
 share/lush/packages/python/pyweakref.lsh
-share/lush/packages/sdl/demos/lander-simple.lsh
-share/lush/packages/sdl/demos/lem-flame.png
-share/lush/packages/sdl/demos/lem-shadow.png
-share/lush/packages/sdl/demos/lem.png
-share/lush/packages/sdl/demos/libsdl-demo.lsh
-share/lush/packages/sdl/demos/moon-svga.png
-share/lush/packages/sdl/demos/moon.png
-share/lush/packages/sdl/demos/sdlgl-demo-01.lsh
-share/lush/packages/sdl/demos/tutorial.lsh
-share/lush/packages/sdl/libgames.lsh
-share/lush/packages/sdl/libsdl.lsh
-share/lush/packages/sdl/sdl-config.lsh
-share/lush/packages/sdl/sdl-tutorial.hlp
-share/lush/packages/sdl/sdl.hlp
 share/lush/packages/sdl/SDL.lsh
+share/lush/packages/sdl/SDLMain.m
 share/lush/packages/sdl/SDL_active.lsh
 share/lush/packages/sdl/SDL_audio.lsh
 share/lush/packages/sdl/SDL_byteorder.lsh
@@ -513,7 +505,6 @@ share/lush/packages/sdl/SDL_joystick.lsh
 share/lush/packages/sdl/SDL_keyboard.lsh
 share/lush/packages/sdl/SDL_keysym.lsh
 share/lush/packages/sdl/SDL_main.lsh
-share/lush/packages/sdl/SDLMain.m
 share/lush/packages/sdl/SDL_mouse.lsh
 share/lush/packages/sdl/SDL_mutex.lsh
 share/lush/packages/sdl/SDL_quit.lsh
@@ -524,6 +515,20 @@ share/lush/packages/sdl/SDL_timer.lsh
 share/lush/packages/sdl/SDL_types.lsh
 share/lush/packages/sdl/SDL_version.lsh
 share/lush/packages/sdl/SDL_video.lsh
+share/lush/packages/sdl/demos/lander-simple.lsh
+share/lush/packages/sdl/demos/lem-flame.png
+share/lush/packages/sdl/demos/lem-shadow.png
+share/lush/packages/sdl/demos/lem.png
+share/lush/packages/sdl/demos/libsdl-demo.lsh
+share/lush/packages/sdl/demos/moon-svga.png
+share/lush/packages/sdl/demos/moon.png
+share/lush/packages/sdl/demos/sdlgl-demo-01.lsh
+share/lush/packages/sdl/demos/tutorial.lsh
+share/lush/packages/sdl/libgames.lsh
+share/lush/packages/sdl/libsdl.lsh
+share/lush/packages/sdl/sdl-config.lsh
+share/lush/packages/sdl/sdl-tutorial.hlp
+share/lush/packages/sdl/sdl.hlp
 share/lush/packages/sdlgames/lander/bullet.png
 share/lush/packages/sdlgames/lander/crater.png
 share/lush/packages/sdlgames/lander/flash.png
@@ -547,10 +552,11 @@ share/lush/packages/sdlgames/slimevolley/net.png
 share/lush/packages/sdlgames/slimevolley/slime-blue.png
 share/lush/packages/sdlgames/slimevolley/slime-red.png
 share/lush/packages/sdlgames/slimevolley/slime.lsh
-share/lush/packages/sn28/examples/bptool/dig.des
-share/lush/packages/sn28/examples/bptool/dig.pat
+share/lush/packages/sn28/README
 share/lush/packages/sn28/examples/bptool/NetMASK.sn
 share/lush/packages/sn28/examples/bptool/README
+share/lush/packages/sn28/examples/bptool/dig.des
+share/lush/packages/sn28/examples/bptool/dig.pat
 share/lush/packages/sn28/examples/conjgrad/demo
 share/lush/packages/sn28/examples/conjgrad/func.sn
 share/lush/packages/sn28/examples/knnenv/examples.lsh
@@ -601,7 +607,6 @@ share/lush/packages/sn28/lib/nettool.sn
 share/lush/packages/sn28/lib/perf-file.sn
 share/lush/packages/sn28/lib/plot-nlf.sn
 share/lush/packages/sn28/lib/statenv.sn
-share/lush/packages/sn28/README
 share/lush/packages/sn28/sn28.hlp
 share/lush/packages/sn28/sn28.lsh
 share/lush/packages/sn28/sn28common.lsh
@@ -620,6 +625,7 @@ share/lush/packages/sn28/src/miscop.c
 share/lush/packages/sn28/src/network.c
 share/lush/packages/sn28/src/nlf.c
 share/lush/packages/sn28/src/sn2sn1.c
+share/lush/packages/svm/README
 share/lush/packages/svm/demos/mnist-kernel.lsh
 share/lush/packages/svm/demos/mnist-libsvm.lsh
 share/lush/packages/svm/demos/mnist-svqp.lsh
@@ -642,23 +648,23 @@ share/lush/packages/svm/libsvm.lsh
 share/lush/packages/svm/libsvm/README
 share/lush/packages/svm/libsvm/svm.cpp
 share/lush/packages/svm/libsvm/svm.h
-share/lush/packages/svm/README
 share/lush/packages/svm/svqp.lsh
 share/lush/packages/svm/svqp/README
 share/lush/packages/svm/svqp/svqp.cpp
 share/lush/packages/svm/svqp/svqp.h
-share/lush/packages/svm/svqp/svqp2.cpp
-share/lush/packages/svm/svqp/svqp2.h
+share/lush/packages/svm/svqp2/svqp2.cpp
+share/lush/packages/svm/svqp2/svqp2.h
+share/lush/packages/svm/svqp2svm.lsh
 share/lush/packages/svm/svqpsvm.lsh
 share/lush/packages/torch/aux_const.lsh
 share/lush/packages/torch/aux_structure.lsh
 share/lush/packages/torch/demos/DiskIdx2UbyteDataSet.cc
 share/lush/packages/torch/demos/DiskIdx2UbyteDataSet.h
+share/lush/packages/torch/demos/IOIdx2Ubyte.cc
+share/lush/packages/torch/demos/IOIdx2Ubyte.h
 share/lush/packages/torch/demos/gmm_train.lsh
 share/lush/packages/torch/demos/io.lsh
 share/lush/packages/torch/demos/io_idx.lsh
-share/lush/packages/torch/demos/IOIdx2Ubyte.cc
-share/lush/packages/torch/demos/IOIdx2Ubyte.h
 share/lush/packages/torch/demos/svm_multi_test.lsh
 share/lush/packages/torch/demos/svm_multi_train.lsh
 share/lush/packages/torch/demos/test_data.gz
@@ -676,12 +682,11 @@ share/lush/packages/torch/matrix.lsh
 share/lush/packages/torch/torch-config.lsh
 share/lush/packages/torch/torch.hlp
 share/lush/packages/torch/torch.lsh
-share/lush/packages/video/libdc/dc1394_config.lsh
-share/lush/packages/video/libdc/dc1394_object.lsh
-share/lush/packages/video/libdc/dc_const.lsh
-share/lush/packages/video/libdc/demos/grab_gray.lsh
+share/lush/packages/video/libdc/demos/grab_multi.lsh
 share/lush/packages/video/libdc/libdc.hlp
 share/lush/packages/video/libdc/libdc.lsh
+share/lush/packages/video/libdc/libdc_config.lsh
+share/lush/packages/video/libdc/libdc_const.lsh
 share/lush/packages/video4linux/demos/effect-demo.lsh
 share/lush/packages/video4linux/demos/effect-sdl-demo.lsh
 share/lush/packages/video4linux/demos/jabba-320x240.jpg
@@ -692,6 +697,8 @@ share/lush/packages/video4linux/demos/video-utils.lsh
 share/lush/packages/video4linux/freq-tables.lsh
 share/lush/packages/video4linux/v4l.hlp
 share/lush/packages/video4linux/v4l.lsh
+share/lush/src/Makefile
+share/lush/src/Makefile.in
 share/lush/src/allocate.c
 share/lush/src/allocate.o
 share/lush/src/arith.c
@@ -742,7 +749,6 @@ share/lush/src/idx4.o
 share/lush/src/index.c
 share/lush/src/index.o
 share/lush/src/io.c
-share/lush/src/io.c
 share/lush/src/io.o
 share/lush/src/lisp_c.c
 share/lush/src/lisp_c.o
@@ -751,8 +757,6 @@ share/lush/src/lisp_driver.o
 share/lush/src/lush
 share/lush/src/main.c
 share/lush/src/main.o
-share/lush/src/Makefile
-share/lush/src/Makefile.in
 share/lush/src/module.c
 share/lush/src/module.o
 share/lush/src/nan.c
@@ -788,6 +792,7 @@ share/lush/sys/sysenv.lsh
 @dirrm share/lush/packages/video
 @dirrm share/lush/packages/torch/demos
 @dirrm share/lush/packages/torch
+@dirrm share/lush/packages/svm/svqp2
 @dirrm share/lush/packages/svm/svqp
 @dirrm share/lush/packages/svm/libsvm
 @dirrm share/lush/packages/svm/lasvm
@@ -845,6 +850,7 @@ share/lush/sys/sysenv.lsh
 @dirrm share/lush/packages/alsa/demos
 @dirrm share/lush/packages/alsa
 @dirrm share/lush/packages
+@dirrm share/lush/lsh/profiler
 @dirrm share/lush/lsh/manual
 @dirrm share/lush/lsh/libstd
 @dirrm share/lush/lsh/libplot
