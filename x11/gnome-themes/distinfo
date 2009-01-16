@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2008/11/08 18:20:27 wiz Exp $
+$NetBSD: distinfo,v 1.29 2009/01/16 10:32:04 wiz Exp $
 
-SHA1 (gnome-themes-2.24.1.tar.bz2) = 7d537eabe8c855a9b841fa92e633ad0b243a4dda
-RMD160 (gnome-themes-2.24.1.tar.bz2) = f871db08c37dac11395d78178e90368d26faa721
-Size (gnome-themes-2.24.1.tar.bz2) = 1541349 bytes
+SHA1 (gnome-themes-2.24.3.tar.bz2) = d6e53ccf9b767cf8352ff7876a98424a44a009a5
+RMD160 (gnome-themes-2.24.3.tar.bz2) = 26aac887bf42f938eba0fa3f8569dfd2af6d01eb
+Size (gnome-themes-2.24.3.tar.bz2) = 1505357 bytes
 SHA1 (patch-aa) = 84945906731628c225a4ce4d62631d122fd5c33c
