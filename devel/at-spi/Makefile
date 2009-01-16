@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2008/10/24 19:30:32 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2009/01/16 11:46:01 wiz Exp $
 #
 
-DISTNAME=		at-spi-1.24.0
+DISTNAME=		at-spi-1.24.1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -25,9 +25,8 @@ PKGCONFIG_OVERRIDE+=	libspi-1.0.pc.in
 
 GCONF_SCHEMAS=		at-spi.schemas
 
-BUILDLINK_API_DEPENDS.atk+=	atk>=1.18.0
-
 .include "../../devel/GConf/schemas.mk"
+BUILDLINK_API_DEPENDS.atk+=	atk>=1.17.0
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

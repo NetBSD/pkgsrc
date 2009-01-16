@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/12/11 09:09:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/16 11:46:01 wiz Exp $
 #
 
-DISTNAME=		at-spi-1.24.0
+DISTNAME=		at-spi-1.24.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/at-spi/1.24/}
