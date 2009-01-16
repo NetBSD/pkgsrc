@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.264 2009/01/16 14:39:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.265 2009/01/16 14:40:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -346,3 +346,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/nvi to 1.81.6nb3 [obache 2009-01-16]
 	Added chat/pidgin-libnotify version 0.14 [jmcneill 2009-01-16]
 	Updated time/hamster-applet to 2.24.3 [wiz 2009-01-16]
+	Updated meta-pkgs/c++-gnome-bindings to 2.24.3 [wiz 2009-01-16]
