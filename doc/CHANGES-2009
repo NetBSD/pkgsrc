@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.262 2009/01/16 12:32:05 obache Exp $
+$NetBSD: CHANGES-2009,v 1.263 2009/01/16 14:29:36 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -344,3 +344,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/at-spi to 1.24.1 [wiz 2009-01-16]
 	Updated devel/py-at-spi to 1.24.1 [wiz 2009-01-16]
 	Updated editors/nvi to 1.81.6nb3 [obache 2009-01-16]
+	Added chat/pidgin-libnotify version 0.14 [jmcneill 2009-01-16]
