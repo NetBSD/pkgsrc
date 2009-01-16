@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/12/29 10:13:12 markd Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/16 19:44:00 sketch Exp $
 
 DISTNAME=	cfitsio3100
 PKGNAME=	cfitsio-3.100
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
 
 BUILD_TARGET=	all testprog
 
-INSTALLATION_DIRS=	include lib
+INSTALLATION_DIRS=	include lib lib/pkgconfig
 
 post-build:
 	cd ${WRKSRC}; \
