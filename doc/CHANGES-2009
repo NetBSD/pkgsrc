@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.261 2009/01/16 11:46:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.262 2009/01/16 12:32:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -343,3 +343,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-themes to 2.24.3 [wiz 2009-01-16]
 	Updated devel/at-spi to 1.24.1 [wiz 2009-01-16]
 	Updated devel/py-at-spi to 1.24.1 [wiz 2009-01-16]
+	Updated editors/nvi to 1.81.6nb3 [obache 2009-01-16]
