@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.255 2009/01/15 20:10:55 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.256 2009/01/16 02:46:44 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -337,3 +337,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/bacula-clientonly to 2.4.4nb1 [adam 2009-01-15]
 	Updated www/drupal to 5.15 [adrianp 2009-01-15]
 	Updated www/drupal6 to 6.9 [adrianp 2009-01-15]
+	Updated lang/snobol to 1.2 [asau 2009-01-16]
