@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2008/12/31 20:48:37 epg Exp $
+# $NetBSD: Makefile,v 1.35 2009/01/16 12:31:51 obache Exp $
 #
 
 DISTNAME=	nvi-1.81.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,7 +21,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_SCRIPT=	../dist/configure
-CONFIGURE_ARGS+=	--with-db3=${BUILDLINK_PREFIX.db3}
 CONFIGURE_ARGS+=	--program-transform-name='s,^,n,'
 CONFIGURE_ENV+=		vi_cv_path_shell=${TOOLS_SH:Q}
 
@@ -40,10 +39,11 @@ LDFLAGS+=		-flat_namespace
 INSTALL_UNSTRIPPED=	yes
 .endif
 
-# We need exactly the db3 API.
-# TODO: Actually nvi supports db4, but its configure script is broken.
-# Perhaps some brave soul can fix it...
-BUILDLINK_TRANSFORM+=	l:db:db3
-.include "../../databases/db3/buildlink3.mk"
-
+# Use of db1 is not officially supported.
+BDB_ACCEPTED=		db3 db4
+.include "../../mk/bdb.buildlink3.mk"
+.if ${BDB_TYPE} == "db1" || ${BDB_TYPE} == "db2"
+CONFIGURE_ARGS+=	--with-db_type=db1
+.endif
+CONFIGURE_ARGS+=	--with-db-prefix=${BDBBASE}
 .include "../../mk/bsd.pkg.mk"
