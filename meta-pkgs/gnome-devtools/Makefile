@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/01/16 14:40:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/01/16 15:04:53 wiz Exp $
 
-DISTNAME=	gnome-devtools-2.24.2.90
+DISTNAME=	gnome-devtools-2.24.2.91
 CATEGORIES=	meta-pkgs devel gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,7 +20,6 @@ DEPENDS+=	devhelp>=0.21:../../devel/devhelp
 DEPENDS+=	gdl>=2.24.0:../../devel/gdl
 DEPENDS+=	glade3>=3.4.5:../../devel/glade3
 DEPENDS+=	gnome-build>=2.24.1:../../devel/gnome-build
-# unpackaged
-#DEPENDS+=	gnome-devel-docs>=2.24.1:../../devel/gnome-devel-docs
+DEPENDS+=	gnome-devel-docs>=2.24.1:../../misc/gnome-devel-docs
 
 .include "../../mk/bsd.pkg.mk"
