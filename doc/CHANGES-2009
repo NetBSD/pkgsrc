@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.275 2009/01/16 23:39:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.276 2009/01/16 23:40:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -360,3 +360,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/lush to 1.2.1 [asau 2009-01-16]
 	Updated net/avahi to 0.6.24 [tonio 2009-01-16]
 	Added devel/accerciser version 1.4.0 [wiz 2009-01-16]
+	Updated meta-pkgs/gnome-devtools to 2.24.3 [wiz 2009-01-16]
