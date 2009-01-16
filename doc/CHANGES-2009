@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.268 2009/01/16 14:41:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.269 2009/01/16 14:41:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -350,3 +350,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/gnome to 2.24.2.90 [wiz 2009-01-16]
 	Updated meta-pkgs/gnome-admin to 2.24.2.90 [wiz 2009-01-16]
 	Updated meta-pkgs/gnome-devtools to 2.24.2.90 [wiz 2009-01-16]
+	Updated meta-pkgs/gnome-mobile to 2.24.2.90 [wiz 2009-01-16]
