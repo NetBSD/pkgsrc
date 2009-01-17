@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.ro,v 1.4 2008/12/11 02:30:22 taca Exp $
+@comment $NetBSD: PLIST.ro,v 1.5 2009/01/17 15:28:48 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/ro/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/ro/default.php
@@ -102,10 +102,10 @@ ${TL_WEBDIR}/system/modules/rss_reader/languages/ro/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/tl_templates.php
-@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/ro
-@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/ro
