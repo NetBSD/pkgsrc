@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/01/16 19:44:00 sketch Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/17 12:19:21 joerg Exp $
 
 DISTNAME=	cfitsio3100
 PKGNAME=	cfitsio-3.100
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	cfitsio.pc.in
 
 BUILD_TARGET=	all testprog
 
-INSTALLATION_DIRS=	include lib lib/pkgconfig
+INSTALLATION_DIRS=	include lib lib/pkgconfig share/doc/cfitsio
 
 post-build:
 	cd ${WRKSRC}; \
@@ -28,7 +28,6 @@ post-build:
 	${CMP} testprog.fit testprog.std
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cfitsio
 	cd ${WRKSRC}; \
 	${LIBTOOL} ${INSTALL_DATA} libcfitsio.la ${DESTDIR}${PREFIX}/lib; \
 	${INSTALL_DATA} fitsio.h fitsio2.h longnam.h drvrsmem.h ${DESTDIR}${PREFIX}/include; \
