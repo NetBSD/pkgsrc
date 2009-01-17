@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.8 2008/06/17 11:59:08 sketch Exp $
+$NetBSD: README.Solaris,v 1.9 2009/01/17 21:32:12 adrianp Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -18,6 +18,25 @@ Realistically you will need more, such as SUNWlibm, and SUNWlibC for
 C++ packages if you are using SunPro.
 
 Please note the use of GNU binutils on Solaris is not supported.
+
+pkgsrc in Solaris Zones
+-----------------------
+
+If you are trying to bootstrap pkgsrc in a Solairs Zone then you will
+need to install the following packages (assuming you will bootstrap using
+Sun's gcc package):
+
+	- SUNWgccruntime
+	- SUNWgcc
+	- SUNWbinutils
+	- SUNWbtool
+	- SUNWggrp
+	- SUNWxcu4
+	- SUNWcs
+	- SUNWsprot
+	- SUNWlibm
+
+Tested on OpenSolaris 5.11 snv_105 and pkgsrc bootstrap as at Jan 2009.
 
 If you are using gcc
 --------------------
