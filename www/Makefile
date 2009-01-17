@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.621 2009/01/17 16:08:27 seb Exp $
+# $NetBSD: Makefile,v 1.622 2009/01/17 20:48:33 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -378,8 +378,6 @@ SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-Test-HTTP-Server-Simple
 SUBDIR+=	p5-Test-WWW-Declare
 SUBDIR+=	p5-Test-WWW-Mechanize
-SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
-SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
 SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-URI-Escape-XS
@@ -389,6 +387,8 @@ SUBDIR+=	p5-WWW-Amazon-Wishlist
 SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	p5-WWW-Facebook-API
 SUBDIR+=	p5-WWW-Mechanize
+SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
+SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
@@ -418,6 +418,7 @@ SUBDIR+=	py-flup
 SUBDIR+=	py-gdata
 SUBDIR+=	py-genshi
 SUBDIR+=	py-jonpy
+SUBDIR+=	py-mechanize
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
