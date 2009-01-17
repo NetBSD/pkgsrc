@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/17 22:18:26 wiz Exp $
+
+--- src/calibre/linux.py.orig	2009-01-06 00:25:49.000000000 +0100
++++ src/calibre/linux.py
+@@ -397,10 +397,9 @@ def option_parser():
+     return parser
+ 
+ def install_man_pages(fatal_errors):
+-    from bz2 import compress
+     import subprocess
+     print 'Installing MAN pages...'
+     manpath = '/usr/share/man/man1'
+     f = NamedTemporaryFile()
+     f.write('[see also]\nhttp://%s.kovidgoyal.net\n'%__appname__)
+     f.flush()
+@@ -417,7 +416,7 @@ def install_man_pages(fatal_errors):
+         help2man = ('help2man', prog, '--name', 'part of %s'%__appname__,
+                     '--section', '1', '--no-info', '--include',
+                     f.name, '--manual', __appname__)
+-        manfile = os.path.join(manpath, prog+'.1'+__appname__+'.bz2')
++        manfile = os.path.join(manpath, prog+'.1')
+         print '\tInstalling MAN page for', prog
+         try:
+             p = subprocess.Popen(help2man, stdout=subprocess.PIPE)
+@@ -434,7 +433,7 @@ def install_man_pages(fatal_errors):
+             continue
+         f2 = open_file(manfile)
+         manifest.append(f2.name)
+-        f2.write(compress(raw))
++        f2.write(raw)
+     return manifest
+ 
+ def post_install():
+@@ -448,8 +447,6 @@ def post_install():
+     global use_destdir
+     use_destdir = opts.destdir
+     manifest = []
+-    manifest += setup_udev_rules(opts.group_file, not opts.dont_reload, opts.fatal_errors)
+-    manifest += setup_completion(opts.fatal_errors)
+     setup_desktop_integration(opts.fatal_errors)
+     manifest += install_man_pages(opts.fatal_errors)
+ 
