@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1 2009/01/17 13:27:48 adam Exp $
+
+--- Makefile.in.orig	2008-12-02 22:50:31.000000000 +0100
++++ Makefile.in
+@@ -447,7 +447,7 @@ check_include_server_PY = \
+ 
+ ## NOTE: "all" must be the first (default) rule, aside from patterns.
+ 
+-all: $(bin_PROGRAMS) pump include-server
++all: $(bin_PROGRAMS)
+ 
+ #  src/config.h.in is used by config.status
+ Makefile: Makefile.in src/config.h.in config.status
+@@ -1010,7 +1010,7 @@ showpaths:
+ # tricky features so mkinstalldirs and cp will do
+ 
+ install: showpaths install-doc install-man install-programs \
+-	install-include-server install-example @INSTALL_GNOME@ install-conf
++	install-example @INSTALL_GNOME@
+ 
+ install-programs: $(bin_PROGRAMS)
+ 	$(mkinstalldirs) "$(DESTDIR)$(bindir)"
+@@ -1064,7 +1064,7 @@ install-include-server: include-server p
+ 	  INCLUDE_SERVER=`grep '/include_server.py$$' "$(include_server_builddir)/install.log"` && \
+ 	  sed "s,^include_server='',include_server='$$INCLUDE_SERVER'," \
+ 	    pump > "$(include_server_builddir)/pump" && \
+-	  $(INSTALL_PROGRAM) "$(include_server_builddir)/pump" "$(DESTDIR)$(bindir)"; \
++	  $(INSTALL_SCRIPT) "$(include_server_builddir)/pump" "$(DESTDIR)$(bindir)"; \
+ 	fi
+ 
+ install-man: $(man1_MEN)

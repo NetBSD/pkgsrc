@@ -1,25 +1,28 @@
-# $NetBSD: Makefile.common,v 1.6 2008/04/07 16:58:50 joerg Exp $
-#
+# $NetBSD: Makefile.common,v 1.7 2009/01/17 13:27:48 adam Exp $
 
-### XXX: See the other 'XXX' comment below when updating this package.
-DISTCC_VERSION=		2.18.3
+DISTCC_VERSION=		3.1
 
 DISTNAME=		distcc-${DISTCC_VERSION}
 CATEGORIES=		devel
-MASTER_SITES=		http://distcc.samba.org/ftp/distcc/
+MASTER_SITES=		http://distcc.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://distcc.samba.org/
+HOMEPAGE=		http://distcc.org/
 
 DISTINFO_FILE=		${.CURDIR}/../../devel/distcc/distinfo
 PATCHDIR=		${.CURDIR}/../../devel/distcc/patches
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-Werror
 CONFIGURE_ARGS+=	--enable-rfc2553
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+#CONFIGURE_ENV+=	ac_cv_path_PYTHON=/dev/null
+
+CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 
 SUBST_CLASSES+=		doc
 SUBST_STAGE.doc=	post-patch
@@ -28,9 +31,7 @@ SUBST_SED.doc=		-e "s|%s/distcc/hosts|%s/hosts|g"
 SUBST_MESSAGE.doc=	Fixing paths.
 
 .if empty(PKGNAME:Mdistcc-[0-9]*)
-### XXX: Remove 'nb1' from the line below during the next update.
-DEPENDS+=		distcc>=${DISTCC_VERSION}nb1:../../devel/distcc
-
+DEPENDS+=		distcc>=${DISTCC_VERSION}:../../devel/distcc
 PRINT_PLIST_AWK+=	/^@dirrm share\/distcc$$/ \
 				{ print "@comment in distcc: " $$0; next }
 .endif

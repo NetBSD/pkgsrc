@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.17 2006/01/12 07:12:31 martti Exp $
+$NetBSD: distinfo,v 1.18 2009/01/17 13:27:48 adam Exp $
 
-SHA1 (distcc-2.18.3.tar.bz2) = 88e4c15826bdbc5a3de0f7c1bcb429e558c6976d
-RMD160 (distcc-2.18.3.tar.bz2) = c7ac6f3e161dccf39b841b57a3328b4208d28c2d
-Size (distcc-2.18.3.tar.bz2) = 341601 bytes
-SHA1 (patch-aa) = a0bc240ba8ffe312b71ff6f3599f273a9d37bb53
-SHA1 (patch-ab) = 47ca76054fbf9a9337d51ab5386b1fc76aa13634
+SHA1 (distcc-3.1.tar.bz2) = 30663e8ff94f13c0553fbfb928adba91814e1b3a
+RMD160 (distcc-3.1.tar.bz2) = 82229c230e6917b0df7db275460579b02dbf6b60
+Size (distcc-3.1.tar.bz2) = 588820 bytes
+SHA1 (patch-aa) = f459c5e80a60b80f391d9d6c37d8ad2574740372
+SHA1 (patch-ab) = c3a306be0a3576b33f506bd6516d8242ceec07ca
 SHA1 (patch-ac) = 618015e2954dc54c6db3712381749feb17106647
-SHA1 (patch-ad) = 4b0a0c5f820bca2c3c79ddf7b2c53e022635f4bf
+SHA1 (patch-ad) = 79ce3ea1b7dd75dce1654dd31eaa372174f8f5d1
+SHA1 (patch-ae) = d4e5eba767f08a1c346c0223ddf88e98a5ed7c59
