@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2009/01/17 20:36:28 wiz Exp $
+
+--- lib/gibber/gibber-util.h.orig	2008-12-18 17:41:05.000000000 +0100
++++ lib/gibber/gibber-util.h
+@@ -21,6 +21,7 @@
+ #define __GIBBER_UTIL_H__
+ 
+ #include <netdb.h>
++#include <netinet/in.h>
+ 
+ #include <glib.h>
+ 
