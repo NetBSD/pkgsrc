@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.281 2009/01/17 12:23:29 seb Exp $
+$NetBSD: CHANGES-2009,v 1.282 2009/01/17 12:33:58 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -367,3 +367,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/sqlite3 to 3.6.10 [adam 2009-01-17]
 	Updated emulators/wine-devel to 1.1.13 [adam 2009-01-17]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.14 [seb 2009-01-17]
+	Updated sysutils/xentools3 to 3.1.4nb2 [bouyer 2009-01-17]
+	Updated sysutils/xentools33 to 3.3.1nb4 [bouyer 2009-01-17]
