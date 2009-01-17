@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2006/01/12 07:12:31 martti Exp $
+$NetBSD: patch-ab,v 1.4 2009/01/17 13:27:48 adam Exp $
 
---- src/sendfile.c.orig	2004-10-24 07:05:49.000000000 +0200
+--- src/sendfile.c.orig	2008-06-20 17:26:04.000000000 +0200
 +++ src/sendfile.c
-@@ -81,7 +81,7 @@
+@@ -82,7 +82,7 @@
   **/
  
  
