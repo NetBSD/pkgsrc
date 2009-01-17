@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:57 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/17 12:23:03 seb Exp $
 #
 
-DISTNAME=	MooseX-AttributeHelpers-0.13
+DISTNAME=	MooseX-AttributeHelpers-0.14
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
