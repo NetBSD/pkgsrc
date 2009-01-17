@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.288 2009/01/17 15:43:28 seb Exp $
+$NetBSD: CHANGES-2009,v 1.289 2009/01/17 16:09:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-WWW-Pastebin-PastebinCom-Create version 0.001 [seb 2009-01-17]
 	Updated www/typolight-translations to 20090113 [taca 2009-01-17]
 	Added www/p5-WWW-Pastebin-RafbNet-Create version 0.001 [seb 2009-01-17]
+	Added www/p5-App-Nopaste version 0.07 [seb 2009-01-17]
