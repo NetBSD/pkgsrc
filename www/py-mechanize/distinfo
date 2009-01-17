@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/17 20:46:55 wiz Exp $
+
+SHA1 (mechanize-0.1.10.tar.gz) = 02694c8e32442db3c589d187b3b8f4c7ebda0a24
+RMD160 (mechanize-0.1.10.tar.gz) = 7b0ece6a7a4fc5bd6c879938724033e0c1cb2e40
+Size (mechanize-0.1.10.tar.gz) = 253810 bytes
