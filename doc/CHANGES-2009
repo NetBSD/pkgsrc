@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.277 2009/01/17 01:00:06 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.278 2009/01/17 01:02:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -362,3 +362,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/accerciser version 1.4.0 [wiz 2009-01-16]
 	Updated meta-pkgs/gnome-devtools to 2.24.3 [wiz 2009-01-16]
 	Updated archivers/p5-Archive-Tar to 1.42 [rhaen 2009-01-17]
+	Updated devel/p5-Devel-REPL to 1.2.1nb1 [seb 2009-01-17]
