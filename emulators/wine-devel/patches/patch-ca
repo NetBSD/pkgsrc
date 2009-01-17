@@ -1,8 +1,8 @@
-$NetBSD: patch-ca,v 1.1.1.1 2008/11/21 17:40:31 adam Exp $
+$NetBSD: patch-ca,v 1.2 2009/01/17 10:11:14 adam Exp $
 
---- dlls/winex11.drv/settings.c.orig	2008-06-27 11:42:50.000000000 -0400
-+++ dlls/winex11.drv/settings.c	2008-06-27 11:43:40.000000000 -0400
-@@ -431,6 +431,16 @@
+--- dlls/winex11.drv/settings.c.orig	2009-01-16 17:28:07.000000000 +0100
++++ dlls/winex11.drv/settings.c
+@@ -432,6 +432,16 @@ LONG CDECL X11DRV_ChangeDisplaySettingsE
          return DISP_CHANGE_SUCCESSFUL;
      }
  
