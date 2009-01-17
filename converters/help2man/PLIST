@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/17 20:43:27 wiz Exp $
+bin/help2man
+info/help2man.info
+lib/hacklocaledir.so
+man/fi/man1/help2man.1
+man/fr/man1/help2man.1
+man/man1/help2man.1
+man/pl/man1/help2man.1
+man/sv/man1/help2man.1
+share/locale/fi/LC_MESSAGES/help2man.mo
+share/locale/fr/LC_MESSAGES/help2man.mo
+share/locale/pl/LC_MESSAGES/help2man.mo
+share/locale/sv/LC_MESSAGES/help2man.mo
+@dirrm man/sv/man1
+@dirrm man/sv

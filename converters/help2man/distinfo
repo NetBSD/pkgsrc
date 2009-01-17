@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/17 20:43:27 wiz Exp $
+
+SHA1 (help2man-1.36.4.tar.gz) = f3ffd89d50ee158589f2d0ccdc476d2ac3ebff70
+RMD160 (help2man-1.36.4.tar.gz) = 1c2e18f86c2d689dbc4bbc1d85e60a2273308c42
+Size (help2man-1.36.4.tar.gz) = 85630 bytes
+SHA1 (patch-aa) = d285c85af63fe4477203a532814b0d22f3710191
+SHA1 (patch-ab) = 0f37b43ee53dfad50de340082c8b1684fb18b8c5
+SHA1 (patch-ac) = 71ddc4490430f972b3be44049117edfb0d314daa
