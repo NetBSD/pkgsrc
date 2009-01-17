@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/14 16:10:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/17 20:51:34 wiz Exp $
 bin/gwaei
 share/applications/gwaei.desktop
 share/doc/${PKGNAME}/COPYING
@@ -9,6 +9,7 @@ share/gnome/help/gwaei/C/index.xml
 share/gwaei/character.png
 share/gwaei/character2.png
 share/gwaei/character3.png
+share/gwaei/dialog.xml
 share/gwaei/jdata.dat
 share/gwaei/kanjipad.xml
 share/gwaei/kpengine
