@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.291 2009/01/17 20:51:15 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.292 2009/01/17 20:51:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -381,3 +381,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-App-Nopaste version 0.07 [seb 2009-01-17]
 	Added converters/help2man version 1.36.4 [wiz 2009-01-17]
 	Added www/py-mechanize version 0.1.10 [wiz 2009-01-17]
+	Updated misc/gwaei to 0.13.1 [wiz 2009-01-17]
