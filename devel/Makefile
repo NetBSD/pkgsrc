@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1093 2009/01/16 23:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.1094 2009/01/17 13:31:23 adam Exp $
 #
 
 COMMENT=	Development utilities
@@ -142,6 +142,7 @@ SUBDIR+=	dia2code
 SUBDIR+=	diffuse
 SUBDIR+=	diffutils
 SUBDIR+=	distcc
+SUBDIR+=	distcc-pump
 SUBDIR+=	distccmon-gnome
 SUBDIR+=	distccmon-gtk
 SUBDIR+=	dlcompat
