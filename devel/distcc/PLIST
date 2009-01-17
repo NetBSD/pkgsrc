@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.12 2005/10/10 09:53:07 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/01/17 13:27:48 adam Exp $
 bin/distcc
 bin/distccd
 bin/distccmon-text
+bin/lsdistcc
 man/man1/distcc.1
 man/man1/distccd.1
 man/man1/distccmon-text.1
+man/man1/include_server.1
+man/man1/pump.1
 share/doc/distcc/AUTHORS
 share/doc/distcc/COPYING
 share/doc/distcc/INSTALL
 share/doc/distcc/NEWS
 share/doc/distcc/README
+share/doc/distcc/README.pump
 share/doc/distcc/TODO
 share/doc/distcc/example/init
 share/doc/distcc/example/init-suse
