@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: xend.sh,v 1.2 2008/03/03 16:45:27 hannken Exp $
+# $NetBSD: xend.sh,v 1.3 2009/01/17 12:31:10 bouyer Exp $
 #
 # PROVIDE: xend
-# REQUIRE: disks network
+# REQUIRE: DAEMON
 
 . /etc/rc.subr
 
