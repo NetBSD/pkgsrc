@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.284 2009/01/17 13:05:01 seb Exp $
+$NetBSD: CHANGES-2009,v 1.285 2009/01/17 13:34:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -371,3 +371,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xentools33 to 3.3.1nb4 [bouyer 2009-01-17]
 	Updated sysutils/gnome-power-manager to 2.24.3 [wiz 2009-01-17]
 	Updated x11/p5-Clipboard to 0.09nb1 [seb 2009-01-17]
+	Updated devel/distcc to 3.1 [adam 2009-01-17]
+	Updated devel/distccmon-gnome to 3.1 [adam 2009-01-17]
+	Updated devel/distccmon-gtk to 3.1 [adam 2009-01-17]
+	Added devel/distcc-pump version 3.1 [adam 2009-01-17]
