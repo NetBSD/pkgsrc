@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7807 2009/01/15 12:14:47 adam Exp $
+$NetBSD: TODO,v 1.7808 2009/01/17 13:34:13 adam Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,6 @@ Suggested package updates
 	o dinotrace-mode-9.3e
 	o dirac-1.0
 	o dircproxy-devel-1.2.0.2
-	o distcc-3.0
 	o dmenu-3.9 [pkgsrc-wip has it!]
 	o dnstop-20070307
 	o dnstracer-1.9
