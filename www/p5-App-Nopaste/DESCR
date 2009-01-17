@@ -1,0 +1,13 @@
+Pastebins (also known as nopaste sites) let you post text, usually
+code, for public viewing. They're used a lot in IRC channels to
+show code that would normally be too long to give directly in the
+channel (hence the name nopaste).
+
+Each pastebin is slightly different. When one pastebin goes down
+then you have to find a new one. And if you usually use a script
+to publish text, then it's too much hassle.
+
+The Perl 5 module App::Nopaste aims to smooth out the differences
+between pastebins, and provides redundancy: if one site doesn't
+work, it just tries a different one. A commande line script is
+provided.
