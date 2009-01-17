@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.285 2009/01/17 13:34:13 adam Exp $
+$NetBSD: CHANGES-2009,v 1.286 2009/01/17 14:45:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -375,3 +375,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/distccmon-gnome to 3.1 [adam 2009-01-17]
 	Updated devel/distccmon-gtk to 3.1 [adam 2009-01-17]
 	Added devel/distcc-pump version 3.1 [adam 2009-01-17]
+	Added www/p5-WWW-Pastebin-PastebinCom-Create version 0.001 [seb 2009-01-17]
