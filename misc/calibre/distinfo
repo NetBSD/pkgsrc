@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/17 22:18:26 wiz Exp $
+
+SHA1 (calibre-0.4.128.tar.gz) = 722535edfb89b75e591eef2334f6c28f66ca018b
+RMD160 (calibre-0.4.128.tar.gz) = fd63765bd6a2713ab9dff054042022646a2babb4
+Size (calibre-0.4.128.tar.gz) = 6266244 bytes
+SHA1 (patch-aa) = e38d249f0849266942682a3cc0611cf376678265
