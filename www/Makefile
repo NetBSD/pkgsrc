@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.622 2009/01/17 20:48:33 wiz Exp $
+# $NetBSD: Makefile,v 1.623 2009/01/17 20:54:27 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -409,6 +409,7 @@ SUBDIR+=	plone25
 SUBDIR+=	plone3
 SUBDIR+=	pound
 SUBDIR+=	privoxy
+SUBDIR+=	py-ClientForm
 SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-clearsilver
