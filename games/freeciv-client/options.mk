@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2009/01/08 22:51:52 shattered Exp $
+# $NetBSD: options.mk,v 1.6 2009/01/17 22:09:39 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.freeciv-client
 PKG_OPTIONS_REQUIRED_GROUPS=	backend
-PKG_OPTIONS_GROUP.backend=	gtk2 xaw xaw3d sdl x11
+PKG_OPTIONS_GROUP.backend=	gtk2 xaw xaw3d sdl
 PKG_SUGGESTED_OPTIONS=		gtk2
 
 .include "../../mk/bsd.options.mk"
@@ -20,6 +20,7 @@ CONFIGURE_ARGS+=	--enable-client=xaw
 .if !empty(PKG_OPTIONS:Mxaw3d)
 CONFIGURE_ARGS+=	--enable-client=xaw3d
 .include "../../x11/Xaw3d/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Msdl)
