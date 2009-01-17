@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2008/12/05 01:19:52 obache Exp $
+# $NetBSD: Makefile,v 1.59 2009/01/17 01:49:06 obache Exp $
 
-DISTNAME=	rmagick-2.8.0
+DISTNAME=	rmagick-2.9.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
 CATEGORIES=	graphics
 
