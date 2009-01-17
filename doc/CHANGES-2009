@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.282 2009/01/17 12:33:58 bouyer Exp $
+$NetBSD: CHANGES-2009,v 1.283 2009/01/17 12:54:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -369,3 +369,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-AttributeHelpers to 0.14 [seb 2009-01-17]
 	Updated sysutils/xentools3 to 3.1.4nb2 [bouyer 2009-01-17]
 	Updated sysutils/xentools33 to 3.3.1nb4 [bouyer 2009-01-17]
+	Updated sysutils/gnome-power-manager to 2.24.3 [wiz 2009-01-17]
