@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.276 2009/01/16 23:40:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.277 2009/01/17 01:00:06 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -361,3 +361,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/avahi to 0.6.24 [tonio 2009-01-16]
 	Added devel/accerciser version 1.4.0 [wiz 2009-01-16]
 	Updated meta-pkgs/gnome-devtools to 2.24.3 [wiz 2009-01-16]
+	Updated archivers/p5-Archive-Tar to 1.42 [rhaen 2009-01-17]
