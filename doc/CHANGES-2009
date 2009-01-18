@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.313 2009/01/18 21:23:41 jmmv Exp $
+$NetBSD: CHANGES-2009,v 1.314 2009/01/18 21:26:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -403,3 +403,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-File-Next version 1.02 [seb 2009-01-18]
 	Updated emulators/hatari to 1.1.0 [adam 2009-01-18]
 	Updated devel/atf to 0.6 [jmmv 2009-01-18]
+	Updated devel/monotone to 0.42 [jmmv 2009-01-18]
+	Updated devel/monotone-server to 0.42 [jmmv 2009-01-18]

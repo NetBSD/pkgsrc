@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7812 2009/01/18 20:09:08 adam Exp $
+$NetBSD: TODO,v 1.7813 2009/01/18 21:26:09 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -853,7 +853,6 @@ Suggested package updates
 	o mono-2.2
 	o mono-tools-2.2
 	o mono-xsp-2.2
-	o monotone-0.42
 	o mp3blaster-3.2.3
 	o mp3splt-gtk-0.5.1 [schmonz]
 	o mpc-0.14
