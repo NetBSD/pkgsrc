@@ -1,0 +1,2 @@
+The Perl 5 module File::Next is a lightweight, taint-safe, with
+only core prerequisites, file-finding module.
