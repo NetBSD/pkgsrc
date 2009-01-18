@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/01 15:14:21 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/18 21:23:14 jmmv Exp $
+bin/atf-check
 bin/atf-compile
 bin/atf-config
 bin/atf-report
@@ -7,6 +8,7 @@ bin/atf-version
 include/atf-c++.hpp
 include/atf-c++/application.hpp
 include/atf-c++/atffile.hpp
+include/atf-c++/check.hpp
 include/atf-c++/config.hpp
 include/atf-c++/env.hpp
 include/atf-c++/exceptions.hpp
@@ -16,6 +18,7 @@ include/atf-c++/fs.hpp
 include/atf-c++/io.hpp
 include/atf-c++/macros.hpp
 include/atf-c++/parser.hpp
+include/atf-c++/process.hpp
 include/atf-c++/sanity.hpp
 include/atf-c++/tests.hpp
 include/atf-c++/text.hpp
@@ -23,11 +26,13 @@ include/atf-c++/ui.hpp
 include/atf-c++/user.hpp
 include/atf-c++/utils.hpp
 include/atf-c.h
+include/atf-c/check.h
 include/atf-c/config.h
 include/atf-c/defs.h
 include/atf-c/dynstr.h
 include/atf-c/env.h
 include/atf-c/error.h
+include/atf-c/error_fwd.h
 include/atf-c/expand.h
 include/atf-c/fs.h
 include/atf-c/io.h
@@ -35,6 +40,7 @@ include/atf-c/list.h
 include/atf-c/macros.h
 include/atf-c/map.h
 include/atf-c/object.h
+include/atf-c/process.h
 include/atf-c/sanity.h
 include/atf-c/signals.h
 include/atf-c/tc.h
@@ -50,13 +56,12 @@ lib/pkgconfig/atf-c.pc
 libexec/atf-cleanup
 libexec/atf-exec
 libexec/atf-format
-libexec/atf-killpg
+man/man1/atf-check.1
 man/man1/atf-cleanup.1
 man/man1/atf-compile.1
 man/man1/atf-config.1
 man/man1/atf-exec.1
 man/man1/atf-format.1
-man/man1/atf-killpg.1
 man/man1/atf-report.1
 man/man1/atf-run.1
 man/man1/atf-test-program.1
@@ -83,6 +88,7 @@ share/xml/atf/tests-results.dtd
 share/xsl/atf/tests-results.xsl
 tests/atf/Atffile
 tests/atf/atf-c++/Atffile
+tests/atf/atf-c++/t_check
 tests/atf/atf-c++/t_config
 tests/atf/atf-c++/t_env
 tests/atf/atf-c++/t_expand
@@ -90,12 +96,15 @@ tests/atf/atf-c++/t_fs
 tests/atf/atf-c++/t_io
 tests/atf/atf-c++/t_macros
 tests/atf/atf-c++/t_parser
+tests/atf/atf-c++/t_process
 tests/atf/atf-c++/t_signals
 tests/atf/atf-c++/t_tests
 tests/atf/atf-c++/t_text
 tests/atf/atf-c++/t_user
 tests/atf/atf-c++/t_utils
 tests/atf/atf-c/Atffile
+tests/atf/atf-c/h_check
+tests/atf/atf-c/t_check
 tests/atf/atf-c/t_config
 tests/atf/atf-c/t_dynstr
 tests/atf/atf-c/t_env
@@ -106,6 +115,7 @@ tests/atf/atf-c/t_io
 tests/atf/atf-c/t_list
 tests/atf/atf-c/t_macros
 tests/atf/atf-c/t_map
+tests/atf/atf-c/t_process
 tests/atf/atf-c/t_sanity
 tests/atf/atf-c/t_signals
 tests/atf/atf-c/t_tc
@@ -309,11 +319,11 @@ tests/atf/tools/h_fail
 tests/atf/tools/h_misc
 tests/atf/tools/h_mode
 tests/atf/tools/h_pass
+tests/atf/tools/t_atf_check
 tests/atf/tools/t_atf_cleanup
 tests/atf/tools/t_atf_compile
 tests/atf/tools/t_atf_config
 tests/atf/tools/t_atf_exec
-tests/atf/tools/t_atf_killpg
 tests/atf/tools/t_atf_report
 tests/atf/tools/t_atf_run
 @dirrm tests/atf/tools
