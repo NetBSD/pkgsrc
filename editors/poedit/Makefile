@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/09/22 20:21:03 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/01/18 08:45:57 shattered Exp $
 #
 
 DISTNAME=	poedit-1.3.6
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.poedit.net/
 COMMENT=	Cross-platform gettext catalogs (.po files) editor
 
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+BROKEN=		Requires Unicode version of wxGTK
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2 gnome2-1.5
