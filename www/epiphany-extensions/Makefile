@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2008/10/25 11:25:20 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/01/18 17:05:45 wiz Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.24.1
+DISTNAME=	epiphany-extensions-2.24.3
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,13 +23,11 @@ USE_DIRS+=		gnome2-1.5
 CONFIGURE_ARGS+=	--enable-compile-warnings=no
 CONFIGURE_ARGS+=	--with-extensions=all
 
-GCONF_SCHEMAS=		smart-bookmarks.schemas
-
 .include "options.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.5
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
@@ -37,7 +35,9 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+BUILDLINK_API_DEPENDS.epiphany+=	epiphany>=2.22.0
 .include "../../www/epiphany/buildlink3.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.6
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
