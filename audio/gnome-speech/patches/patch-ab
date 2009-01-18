@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/04/09 01:15:05 wiz Exp $
+$NetBSD: patch-ab,v 1.3 2009/01/18 11:28:56 wiz Exp $
 
---- configure.orig	2007-02-25 12:06:14.000000000 +0000
+--- configure.orig	2008-11-16 17:25:05.000000000 +0100
 +++ configure
-@@ -20397,7 +20397,7 @@ fi
+@@ -12133,7 +12133,7 @@ fi
  
  
  if test x$build_swift != xno ; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.2 2007/04/09 01:15:05 wiz Exp $
          # Check default location /opt/swift
          with_swift_dir="/opt/swift"
      fi
-@@ -20455,7 +20455,7 @@ fi
+@@ -12189,7 +12189,7 @@ fi
  
  
  if test x$build_theta != xno ; then
