@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/09/05 20:48:46 bjs Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/01/18 21:24:12 jmmv Exp $
 bin/mtn
 bin/mtnopt
 info/monotone.info
@@ -24,10 +24,7 @@ share/doc/monotone/figures/two-branches.png
 share/doc/monotone/monotone.html
 share/locale/de/LC_MESSAGES/monotone.mo
 share/locale/es/LC_MESSAGES/monotone.mo
-share/locale/fr/LC_MESSAGES/monotone.mo
 share/locale/it/LC_MESSAGES/monotone.mo
-share/locale/ja/LC_MESSAGES/monotone.mo
-share/locale/pt_BR/LC_MESSAGES/monotone.mo
 share/locale/sv/LC_MESSAGES/monotone.mo
 share/monotone/contrib/Monotone.pm
 share/monotone/contrib/README
@@ -37,6 +34,13 @@ share/monotone/contrib/ciabot_monotone_hookversion.py
 share/monotone/contrib/color-logs.conf
 share/monotone/contrib/color-logs.sh
 share/monotone/contrib/colorize
+share/monotone/contrib/command/README
+share/monotone/contrib/command/base.lua
+share/monotone/contrib/command/changed_files.lua
+share/monotone/contrib/command/conflicts.lua
+share/monotone/contrib/command/fuse.lua
+share/monotone/contrib/command/init.lua
+share/monotone/contrib/command/revision.lua
 share/monotone/contrib/edit_comment_from_changelog.lua
 share/monotone/contrib/extra-commands.lua
 share/monotone/contrib/get_passphrase_from_file.lua
@@ -57,6 +61,7 @@ share/monotone/contrib/monotone.bash_completion
 share/monotone/contrib/monotone.el
 share/monotone/contrib/monotone.zsh_completion
 share/monotone/contrib/mtbrowse.sh
+@dirrm share/monotone/contrib/command
 @dirrm share/monotone/contrib
 @dirrm share/monotone
 @dirrm share/doc/monotone/figures
