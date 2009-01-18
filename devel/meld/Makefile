@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/01/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/01/18 12:31:07 ahoka Exp $
 #
 
 DISTNAME=		meld-1.2.1
@@ -24,8 +24,6 @@ MAKE_FLAGS+=			localedir=${PREFIX}/${PKGLOCALEDIR}/locale
 MAKE_FLAGS+=			PYTHON=${PYTHONBIN}
 MAKE_FILE=			GNUmakefile
 PYTHON_PATCH_SCRIPTS=		meld
-# filediff.py: self.textview[1 if len(files) >= 2 else 0].grab_focus()
-PYTHON_VERSIONS_ACCEPTED=	25
 
 post-extract:
 	# msgfmt complains about this in 1.2.1
