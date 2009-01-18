@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2008/08/01 10:04:09 hauke Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/01/18 20:07:45 adam Exp $
 bin/hatari
+bin/hmsa
 man/man1/hatari.1
 share/doc/hatari/alsa-midi.txt
 share/doc/hatari/authors.txt
