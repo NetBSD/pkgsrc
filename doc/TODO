@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7811 2009/01/18 16:24:33 asau Exp $
+$NetBSD: TODO,v 1.7812 2009/01/18 20:09:08 adam Exp $
 
 Suggested new packages
 ======================
@@ -676,7 +676,6 @@ Suggested package updates
 	o hackbot-2.21
 	o hanzim-2.1
 	o haskell-mode-1.45
-	o hatari-1.1.0
 	o hdf-4.2r2
 	o hercules-3.04.1
 	o hesiod-3.1.0
