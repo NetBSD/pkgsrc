@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.308 2009/01/18 17:05:59 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.309 2009/01/18 17:13:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-glib to 0.7.22 [wiz 2009-01-18]
 	Updated www/epiphany to 2.24.3 [wiz 2009-01-18]
 	Updated www/epiphany-extensions to 2.24.3 [wiz 2009-01-18]
+	Updated graphics/py-cairo to 1.8.2 [wiz 2009-01-18]
