@@ -122,6 +122,7 @@ flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
 ftp			Enable File Transfer Protocol (FTP) support.
+gdal			Use the GDAL library.
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
 geoip			Enable IP-to-country-lookup using the GeoIP C library.
@@ -141,6 +142,7 @@ gqmpeg-russian		Russian ID3 tag support.
 graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
 gsasl			Enable SASL support with gsasl.
+gsl			Use GNU Scientific Library.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtk2			Enable support for GTK2.
@@ -291,11 +293,13 @@ nntp			Enable Network News Transport Protocol (NNTP) support.
 nntpcache-pgp		Enable pgp signed nocem support.
 nspluginwrapper		Enable running non native netscape compatible plugins
 ocamlduce		Enable OcamlDuce support.
+octave			Enable Octave support
 official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 ogg			Enable Ogg support.
 oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
+openexr			Use OpenEXR as imaging library
 opengl			Use OpenGL as display library.
 opengrok-build		Enable building of OpenGrok from source
 openldap		Enable OpenLDAP support.
