@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.300 2009/01/18 12:48:34 obache Exp $
+$NetBSD: CHANGES-2009,v 1.301 2009/01/18 13:01:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -390,3 +390,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/logsurfer to 1.7 [shattered 2009-01-18]
 	Added graphics/pfstools version 1.7.0 [obache 2009-01-18]
 	Added graphics/pfstmo version 1.3.2 [obache 2009-01-18]
+	Updated math/fftwf to 3.2 [he 2009-01-18]
