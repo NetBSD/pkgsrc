@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2009/01/10 21:08:54 jmcneill Exp $
+# $NetBSD: Makefile,v 1.508 2009/01/18 12:49:30 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -259,6 +259,8 @@ SUBDIR+=	pdiff
 SUBDIR+=	pear-Image_Canvas
 SUBDIR+=	pear-Image_Color
 SUBDIR+=	pear-Image_Graph
+SUBDIR+=	pfstools
+SUBDIR+=	pfstmo
 SUBDIR+=	pgraf
 SUBDIR+=	photopc
 SUBDIR+=	php-exif
