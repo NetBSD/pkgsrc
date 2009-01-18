@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+
+--- makefiles/arch/desktop.mk.orig	2008-03-22 13:00:31.000000000 +0000
++++ makefiles/arch/desktop.mk
+@@ -11,7 +11,6 @@ AR = ar rsu
+ LD = g++
+ 
+ CFLAGS = -pipe -fno-exceptions -Wall -Wno-ctor-dtor-privacy -W -DLIBICONV_PLUG
+-LDFLAGS =
+ 
+ ifeq "$(UI_TYPE)" "qt"
+   MOC = moc-qt3

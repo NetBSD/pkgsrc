@@ -1,0 +1,31 @@
+FBReader is an e-book reader for various platforms.
+
+Main features:
+  * Supported formats are
+       * fb2 e-book format (style attributes are not supported yet).
+       * HTML format (tables are not supported).
+       * CHM format (tables are not supported).
+       * plucker format (tables are not supported).
+       * Palmdoc (aportis doc).
+       * zTxt (Weasel format).
+       * TCR (psion text) format.
+       * RTF format (stylesheets and tables are not supported).
+       * OEB format (css and tables are not supported).
+       * OpenReader format (css and tables are not supported).
+       * Non-DRM'ed mobipocket format (tables are not supported).
+       * Plain text format.
+  * Direct reading from tar, zip, gzip and bzip2 archives. (Multiple books
+    in one archive are supported.)
+  * Automatic library building.
+  * Automatic language and character encoding detection is supported.
+  * Automatically generated contents table.
+  * Embedded images support.
+  * Footnotes/hyperlinks support.
+  * Position indicator.
+  * Keeps the last open book and the last read positions for all opened
+    books between runs.
+  * List of last opened books.
+  * Automatic hyphenations.
+  * Text search.
+  * Full-screen mode.
+  * Screen rotation by 90, 180 and 270 degrees.
