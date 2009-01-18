@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.298 2009/01/18 11:02:32 shattered Exp $
+$NetBSD: CHANGES-2009,v 1.299 2009/01/18 12:47:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -388,3 +388,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/gnome-speech-espeak to 0.4.22 [wiz 2009-01-18]
 	Updated www/p5-WWW-Pastebin-PastebinCom-Create to 0.002 [seb 2009-01-18]
 	Updated misc/logsurfer to 1.7 [shattered 2009-01-18]
+	Added graphics/pfstools version 1.7.0 [obache 2009-01-18]
