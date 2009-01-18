@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.302 2009/01/18 13:54:18 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.303 2009/01/18 15:03:48 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -392,3 +392,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/pfstmo version 1.3.2 [obache 2009-01-18]
 	Updated math/fftwf to 3.2 [he 2009-01-18]
 	Updated sysutils/hal to 0.5.11nb19 [jmcneill 2009-01-18]
+	Updated devel/py-setuptools to 0.6c9 [roy 2009-01-18]
