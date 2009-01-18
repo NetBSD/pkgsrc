@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7810 2009/01/18 16:22:16 wiz Exp $
+$NetBSD: TODO,v 1.7811 2009/01/18 16:24:33 asau Exp $
 
 Suggested new packages
 ======================
@@ -326,7 +326,8 @@ Suggested new packages
 
 	STklos
 	http://www.stklos.org/
-	Scheme system. Obsoletes (I think) lang/STk.
+	Scheme system. "STklos is the next generation of STklos using
+	GTK," obsoletes lang/STk.
 
 	sage
 	http://www.sagemath.org/
