@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/01/18 17:39:37 wiz Exp $
+
+--- makefiles/config.mk.orig	2009-01-11 01:44:33.000000000 +0100
++++ makefiles/config.mk
+@@ -33,8 +33,8 @@ ZINCLUDE = -I $(ROOTDIR)/zlibrary/core/i
+ ZLSHARED ?= yes
+ 
+ ifeq "$(ZLSHARED)" "yes"
+-  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore $(XML_LIB) $(ARCHIVER_LIB) -ldl
+-	TEXT_LIBS = -lzltext
++  CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/core -lzlcore $(XML_LIB) $(ARCHIVER_LIB)
++	TEXT_LIBS = -lzltext -llinebreak
+ else
+   CORE_LIBS = -lm -L$(ROOTDIR)/zlibrary/ui -L$(ROOTDIR)/zlibrary/core -lzlcore -lzlui-$(UI_TYPE) -lzlcore $(UILIBS) $(XML_LIB) $(ARCHIVER_LIB)
+ 	TEXT_LIBS = -lzltext -llinebreak -lfribidi
