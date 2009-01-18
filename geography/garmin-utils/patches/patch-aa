@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3.22.1 2009/01/18 12:03:40 rtr Exp $
+
+--- lib/Makefile.orig	2009-01-13 20:50:30.000000000 +0100
++++ lib/Makefile
+@@ -11,6 +11,8 @@ NOLINT=		yes
+ SRCS=		gps1.c gps2.c gpsdisplay.c gpsprod.c gpscap.c gpsdump.c \
+ 		gpsprint.c gpsversion.c gpsformat.c gpsload.c gpsfloat.c
+ 
+-install:
++.if ${OPSYS} == "Linux"
++SRCS+=		strlcpy.c
++.endif
+ 
+ .include <bsd.lib.mk>
