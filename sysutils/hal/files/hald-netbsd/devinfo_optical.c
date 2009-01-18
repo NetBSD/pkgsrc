@@ -376,6 +376,8 @@ devinfo_optical_volume_add(HalDevice *parent, const char *devnode, char *devfs_p
         hal_device_property_set_bool (d, "block.is_volume", TRUE);
         hal_device_property_set_bool (d, "block.no_partitions", TRUE);
         hal_device_property_set_bool (d, "block.have_scanned", TRUE);
+        hal_device_property_set_string (d, "block.storage_device",
+            hal_device_property_get_string (parent, "info.udi"));
 
 	/* volume */
 	hal_device_property_set_bool  (d, "volume.ignore", FALSE);
