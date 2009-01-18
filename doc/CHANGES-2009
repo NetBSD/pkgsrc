@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.305 2009/01/18 16:06:35 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.306 2009/01/18 16:19:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/py-setuptools to 0.6c9 [roy 2009-01-18]
 	Added emulators/sdlmame version 0.129 [wiz 2009-01-18]
 	Added emulators/sdlmess version 0.129 [wiz 2009-01-18]
+	Updated chat/telepathy-glib to 0.7.22 [wiz 2009-01-18]
