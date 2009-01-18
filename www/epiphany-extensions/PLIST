@@ -1,66 +1,24 @@
-@comment $NetBSD: PLIST,v 1.17 2008/10/25 11:25:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/01/18 17:05:45 wiz Exp $
 lib/epiphany/2.24/extensions/actions.ephy-extension
 lib/epiphany/2.24/extensions/adblock.ephy-extension
 lib/epiphany/2.24/extensions/auto-reload.ephy-extension
 lib/epiphany/2.24/extensions/auto-scroller.ephy-extension
 lib/epiphany/2.24/extensions/certificates.ephy-extension
-lib/epiphany/2.24/extensions/error-viewer.ephy-extension
 lib/epiphany/2.24/extensions/extensions-manager-ui.ephy-extension
 lib/epiphany/2.24/extensions/gestures.ephy-extension
-lib/epiphany/2.24/extensions/java-console.ephy-extension
-lib/epiphany/2.24/extensions/libactionsextension.a
 lib/epiphany/2.24/extensions/libactionsextension.la
-lib/epiphany/2.24/extensions/libactionsextension.so
-lib/epiphany/2.24/extensions/libadblockextension.a
 lib/epiphany/2.24/extensions/libadblockextension.la
-lib/epiphany/2.24/extensions/libadblockextension.so
-lib/epiphany/2.24/extensions/libautoreloadextension.a
 lib/epiphany/2.24/extensions/libautoreloadextension.la
-lib/epiphany/2.24/extensions/libautoreloadextension.so
-lib/epiphany/2.24/extensions/libautoscrollerextension.a
 lib/epiphany/2.24/extensions/libautoscrollerextension.la
-lib/epiphany/2.24/extensions/libautoscrollerextension.so
-lib/epiphany/2.24/extensions/libcertificatesextension.a
 lib/epiphany/2.24/extensions/libcertificatesextension.la
-lib/epiphany/2.24/extensions/libcertificatesextension.so
-lib/epiphany/2.24/extensions/liberrorviewerextension.a
-lib/epiphany/2.24/extensions/liberrorviewerextension.la
-lib/epiphany/2.24/extensions/liberrorviewerextension.so
-lib/epiphany/2.24/extensions/libextensionsmanageruiextension.a
 lib/epiphany/2.24/extensions/libextensionsmanageruiextension.la
-lib/epiphany/2.24/extensions/libextensionsmanageruiextension.so
-lib/epiphany/2.24/extensions/libgesturesextension.a
 lib/epiphany/2.24/extensions/libgesturesextension.la
-lib/epiphany/2.24/extensions/libgesturesextension.so
-lib/epiphany/2.24/extensions/libjavaconsoleextension.a
-lib/epiphany/2.24/extensions/libjavaconsoleextension.la
-lib/epiphany/2.24/extensions/libjavaconsoleextension.so
-lib/epiphany/2.24/extensions/libpageinfoextension.a
-lib/epiphany/2.24/extensions/libpageinfoextension.la
-lib/epiphany/2.24/extensions/libpageinfoextension.so
-lib/epiphany/2.24/extensions/libpushscrollerextension.a
 lib/epiphany/2.24/extensions/libpushscrollerextension.la
-lib/epiphany/2.24/extensions/libpushscrollerextension.so
-lib/epiphany/2.24/extensions/libselectstylesheetextension.a
-lib/epiphany/2.24/extensions/libselectstylesheetextension.la
-lib/epiphany/2.24/extensions/libselectstylesheetextension.so
-lib/epiphany/2.24/extensions/libsidebarextension.a
 lib/epiphany/2.24/extensions/libsidebarextension.la
-lib/epiphany/2.24/extensions/libsidebarextension.so
-lib/epiphany/2.24/extensions/libsmartbookmarksextension.a
-lib/epiphany/2.24/extensions/libsmartbookmarksextension.la
-lib/epiphany/2.24/extensions/libsmartbookmarksextension.so
-lib/epiphany/2.24/extensions/libtabgroupsextension.a
 lib/epiphany/2.24/extensions/libtabgroupsextension.la
-lib/epiphany/2.24/extensions/libtabgroupsextension.so
-lib/epiphany/2.24/extensions/libtabstatesextension.a
 lib/epiphany/2.24/extensions/libtabstatesextension.la
-lib/epiphany/2.24/extensions/libtabstatesextension.so
-lib/epiphany/2.24/extensions/page-info.ephy-extension
 lib/epiphany/2.24/extensions/push-scroller.ephy-extension
-lib/epiphany/2.24/extensions/select-stylesheet.ephy-extension
 lib/epiphany/2.24/extensions/sidebar.ephy-extension
-lib/epiphany/2.24/extensions/smart-bookmarks.ephy-extension
 lib/epiphany/2.24/extensions/tab-groups.ephy-extension
 lib/epiphany/2.24/extensions/tab-states.ephy-extension
 share/epiphany-extensions/adblock-patterns
@@ -68,11 +26,8 @@ share/epiphany-extensions/ephy-gestures.xml
 share/epiphany-extensions/glade/action-properties.glade
 share/epiphany-extensions/glade/actions-editor.glade
 share/epiphany-extensions/glade/adblock.glade
-share/epiphany-extensions/glade/error-viewer.glade
 share/epiphany-extensions/glade/extensions-manager-ui.glade
-share/epiphany-extensions/glade/page-info.glade
 share/epiphany-extensions/xml/epiphany-sidebar-ui.xml
-share/epiphany-extensions/xml/page-info-context-ui.xml
 share/epiphany/icons/hicolor/16x16/status/ad-blocked.png
 share/epiphany/icons/hicolor/16x16/status/feed-presence.png
 share/epiphany/icons/hicolor/22x22/status/ad-blocked.png
@@ -81,7 +36,6 @@ share/epiphany/icons/hicolor/24x24/status/ad-blocked.png
 share/epiphany/icons/hicolor/24x24/status/feed-presence.png
 share/epiphany/icons/hicolor/32x32/status/feed-presence.png
 share/epiphany/icons/hicolor/scalable/status/feed-presence.svg
-share/gconf/schemas/smart-bookmarks.schemas
 share/gnome/help/epiphany-extensions/C/epiphany-extensions.xml
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-action-create.png
 share/gnome/help/epiphany-extensions/C/figures/epi-ext-adblocker.png
@@ -223,8 +177,13 @@ share/omf/epiphany-extensions/epiphany-extensions-sv.omf
 @dirrm share/gnome/help/epiphany-extensions/C
 @dirrm share/gnome/help/epiphany-extensions
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
+@comment in epiphany: @dirrm share/epiphany/icons/hicolor/scalable/status
+@comment in epiphany: @dirrm share/epiphany/icons/hicolor/32x32/status
+@comment in epiphany: @dirrm share/epiphany/icons/hicolor/24x24/status
+@comment in epiphany: @dirrm share/epiphany/icons/hicolor/22x22/status
+@comment in epiphany: @dirrm share/epiphany/icons/hicolor/16x16/status
 @dirrm share/epiphany-extensions/xml
 @dirrm share/epiphany-extensions/glade
 @dirrm share/epiphany-extensions
 @dirrm lib/epiphany/2.24/extensions
+@comment in epiphany: @dirrm lib/epiphany/2.24
