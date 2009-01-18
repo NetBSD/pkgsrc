@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2008/09/10 00:36:09 gdt Exp $
+# $NetBSD: Makefile,v 1.92 2009/01/18 16:04:48 wiz Exp $
 #
 
 DISTNAME=		xmame-0.106
@@ -17,6 +17,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		sdlmess-[0-9]*
 
 USE_TOOLS+=		gmake
 MAKE_FILE=		makefile.unix
