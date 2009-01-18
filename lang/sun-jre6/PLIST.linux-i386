@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.8 2008/11/11 15:05:51 reinoud Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.9 2009/01/18 21:45:26 christos Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -54,7 +54,7 @@ java/sun-6/lib/deploy/messages_sv.properties.default
 java/sun-6/lib/deploy/messages_zh_CN.properties.default
 java/sun-6/lib/deploy/messages_zh_HK.properties.default
 java/sun-6/lib/deploy/messages_zh_TW.properties.default
-java/sun-6/lib/deploy/splash.jpg
+java/sun-6/lib/deploy/splash.gif
 java/sun-6/lib/desktop/applications/sun-java.desktop
 java/sun-6/lib/desktop/applications/sun-javaws.desktop
 java/sun-6/lib/desktop/applications/sun_java.desktop
@@ -239,7 +239,6 @@ java/sun-6/lib/psfont.properties.ja.default
 java/sun-6/lib/psfontj2d.properties.default
 java/sun-6/lib/resources.jar
 java/sun-6/lib/rt.jar
-java/sun-6/lib/servicetag/registration.xml
 ${PLIST.jce}java/sun-6/lib/security/COPYRIGHT.html
 ${PLIST.jce}java/sun-6/lib/security/README.txt
 java/sun-6/lib/security/US_export_policy.jar
@@ -456,7 +455,6 @@ java/sun-6/lib/zi/Asia/Bangkok
 java/sun-6/lib/zi/Asia/Beirut
 java/sun-6/lib/zi/Asia/Bishkek
 java/sun-6/lib/zi/Asia/Brunei
-java/sun-6/lib/zi/Asia/Calcutta
 java/sun-6/lib/zi/Asia/Choibalsan
 java/sun-6/lib/zi/Asia/Chongqing
 java/sun-6/lib/zi/Asia/Colombo
@@ -467,6 +465,7 @@ java/sun-6/lib/zi/Asia/Dubai
 java/sun-6/lib/zi/Asia/Dushanbe
 java/sun-6/lib/zi/Asia/Gaza
 java/sun-6/lib/zi/Asia/Harbin
+java/sun-6/lib/zi/Asia/Ho_Chi_Minh
 java/sun-6/lib/zi/Asia/Hong_Kong
 java/sun-6/lib/zi/Asia/Hovd
 java/sun-6/lib/zi/Asia/Irkutsk
@@ -478,6 +477,7 @@ java/sun-6/lib/zi/Asia/Kamchatka
 java/sun-6/lib/zi/Asia/Karachi
 java/sun-6/lib/zi/Asia/Kashgar
 java/sun-6/lib/zi/Asia/Katmandu
+java/sun-6/lib/zi/Asia/Kolkata
 java/sun-6/lib/zi/Asia/Krasnoyarsk
 java/sun-6/lib/zi/Asia/Kuala_Lumpur
 java/sun-6/lib/zi/Asia/Kuching
@@ -501,7 +501,6 @@ java/sun-6/lib/zi/Asia/Riyadh
 java/sun-6/lib/zi/Asia/Riyadh87
 java/sun-6/lib/zi/Asia/Riyadh88
 java/sun-6/lib/zi/Asia/Riyadh89
-java/sun-6/lib/zi/Asia/Saigon
 java/sun-6/lib/zi/Asia/Sakhalin
 java/sun-6/lib/zi/Asia/Samarkand
 java/sun-6/lib/zi/Asia/Seoul
