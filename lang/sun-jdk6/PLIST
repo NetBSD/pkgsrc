@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/11 16:00:15 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/18 23:49:06 christos Exp $
 bin/sun6-appletviewer
 bin/sun6-apt
 bin/sun6-extcheck
@@ -38,6 +38,7 @@ java/sun-6/bin/jsadebugd
 java/sun-6/bin/jstack
 java/sun-6/bin/jstat
 java/sun-6/bin/jstatd
+java/sun-6/bin/jvisualvm
 java/sun-6/bin/native2ascii
 java/sun-6/bin/rmic
 java/sun-6/bin/schemagen
@@ -70,6 +71,7 @@ java/sun-6/db/bin/stopNetworkServer
 java/sun-6/db/bin/stopNetworkServer.bat
 java/sun-6/db/bin/sysinfo
 java/sun-6/db/bin/sysinfo.bat
+java/sun-6/db/demo/README.txt
 java/sun-6/db/demo/databases/toursdb.jar
 java/sun-6/db/demo/databases/toursdb/log/log.ctrl
 java/sun-6/db/demo/databases/toursdb/log/log1.dat
@@ -123,24 +125,28 @@ java/sun-6/db/demo/databases/toursdb/seg0/c3a1.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c3b1.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c3c0.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c3d1.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c3e0.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c3e1.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c3f1.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c401.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c400.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c41.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c410.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c421.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c411.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c420.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c431.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c440.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c451.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c441.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c450.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c461.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c471.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c480.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c491.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c4a1.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c4b0.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c4c1.dat
-java/sun-6/db/demo/databases/toursdb/seg0/c4d0.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c4b1.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c4c0.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c4d1.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c4e1.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c4f0.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c501.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c51.dat
+java/sun-6/db/demo/databases/toursdb/seg0/c510.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c60.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c71.dat
 java/sun-6/db/demo/databases/toursdb/seg0/c81.dat
@@ -154,6 +160,7 @@ java/sun-6/db/demo/databases/toursdb/seg0/cf0.dat
 java/sun-6/db/demo/databases/toursdb/service.properties
 java/sun-6/db/demo/programs/csfull.css
 java/sun-6/db/demo/programs/demo.html
+java/sun-6/db/demo/programs/derbylogo128_bluebg.png
 java/sun-6/db/demo/programs/localcal/README
 java/sun-6/db/demo/programs/localcal/src/AddEventRequest.java
 java/sun-6/db/demo/programs/localcal/src/CalEvent.java
@@ -198,11 +205,12 @@ java/sun-6/db/demo/programs/simple/SimpleApp.class
 java/sun-6/db/demo/programs/simple/SimpleApp.java
 java/sun-6/db/demo/programs/simple/derby.properties
 java/sun-6/db/demo/programs/simple/example.html
-java/sun-6/db/demo/programs/toursdb/BART.gif
-java/sun-6/db/demo/programs/toursdb/Caltrain.gif
-java/sun-6/db/demo/programs/toursdb/LightRail.gif
+java/sun-6/db/demo/programs/simplemobile/SimpleMobileApp.class
+java/sun-6/db/demo/programs/simplemobile/SimpleMobileApp.java
+java/sun-6/db/demo/programs/simplemobile/readme.html
 java/sun-6/db/demo/programs/toursdb/ToursDB_schema.sql
 java/sun-6/db/demo/programs/toursdb/build.xml
+java/sun-6/db/demo/programs/toursdb/cupisle.gif
 java/sun-6/db/demo/programs/toursdb/disconnect.sql
 java/sun-6/db/demo/programs/toursdb/insertMaps.java
 java/sun-6/db/demo/programs/toursdb/loadAIRLINES.sql
@@ -213,7 +221,33 @@ java/sun-6/db/demo/programs/toursdb/loadFLIGHTAVAILABILITY2.sql
 java/sun-6/db/demo/programs/toursdb/loadFLIGHTS1.sql
 java/sun-6/db/demo/programs/toursdb/loadFLIGHTS2.sql
 java/sun-6/db/demo/programs/toursdb/loadTables.sql
+java/sun-6/db/demo/programs/toursdb/smallisle.gif
 java/sun-6/db/demo/programs/toursdb/toursdb_readme.html
+java/sun-6/db/demo/programs/toursdb/witchisle.gif
+java/sun-6/db/demo/programs/vtis/README
+java/sun-6/db/demo/programs/vtis/data/ApacheServerLog.xml
+java/sun-6/db/demo/programs/vtis/data/DerbyJiraReport.xml
+java/sun-6/db/demo/programs/vtis/data/svn_log.txt
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/FlatFileVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/QueryRow.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/QueryVTIHelper.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/StringColumnVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/VTIHelper.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/VTITemplate.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/XMLRow.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core/XmlVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/ApacheServerLogVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/DerbyJiraReportVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/LineListVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/PropertyFileVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/SubversionLogVTI.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/VTIs.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example/WorldDBSnapshot.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/snapshot/SnapshotQuery.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/snapshot/Subscription.java
+java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/snapshot/SubscriptionSignature.java
+java/sun-6/db/demo/programs/vtis/sql/demoFileVtis.sql
+java/sun-6/db/demo/programs/vtis/sql/demoForeignDbmsVtis.sql
 java/sun-6/db/demo/programs/workingwithderby/WwdClientExample.class
 java/sun-6/db/demo/programs/workingwithderby/WwdClientExample.java
 java/sun-6/db/demo/programs/workingwithderby/WwdEmbedded.class
@@ -280,6 +314,12 @@ java/sun-6/db/docs/html/adminguide/cadminpreface11181.html
 java/sun-6/db/docs/html/adminguide/cadminpreface22460.html
 java/sun-6/db/docs/html/adminguide/cadminpreface23947.html
 java/sun-6/db/docs/html/adminguide/cadminpreface30074.html
+java/sun-6/db/docs/html/adminguide/cadminreplication.html
+java/sun-6/db/docs/html/adminguide/cadminreplicfailover.html
+java/sun-6/db/docs/html/adminguide/cadminreplicfailures.html
+java/sun-6/db/docs/html/adminguide/cadminreplicsecurity.html
+java/sun-6/db/docs/html/adminguide/cadminreplicstartrun.html
+java/sun-6/db/docs/html/adminguide/cadminreplicstop.html
 java/sun-6/db/docs/html/adminguide/cadminrollforward.html
 java/sun-6/db/docs/html/adminguide/cadminservlet98430.html
 java/sun-6/db/docs/html/adminguide/cadminspace21579.html
@@ -352,6 +392,7 @@ java/sun-6/db/docs/html/adminguide/tadminnetservbasic.html
 java/sun-6/db/docs/html/adminguide/tadminnetservcustom.html
 java/sun-6/db/docs/html/adminguide/tadminnetservopen.html
 java/sun-6/db/docs/html/adminguide/tadminnetservrun.html
+java/sun-6/db/docs/html/adminguide/tadminnetservusrauth.html
 java/sun-6/db/docs/html/adminguide/tadminovclirun.html
 java/sun-6/db/docs/html/adminguide/tadminovnsrundemo.html
 java/sun-6/db/docs/html/adminguide/tadminovrunsrvprgm.html
@@ -472,7 +513,6 @@ java/sun-6/db/docs/html/devguide/cdevdgpref11181.html
 java/sun-6/db/docs/html/devguide/cdevdgpref23947.html
 java/sun-6/db/docs/html/devguide/cdevdgpref24290.html
 java/sun-6/db/docs/html/devguide/cdevdgpref29520.html
-java/sun-6/db/docs/html/devguide/cdevdvlp10252.html
 java/sun-6/db/docs/html/devguide/cdevdvlp13018.html
 java/sun-6/db/docs/html/devguide/cdevdvlp14839.html
 java/sun-6/db/docs/html/devguide/cdevdvlp17453.html
@@ -484,7 +524,6 @@ java/sun-6/db/docs/html/devguide/cdevdvlp20458.html
 java/sun-6/db/docs/html/devguide/cdevdvlp21955.html
 java/sun-6/db/docs/html/devguide/cdevdvlp22619.html
 java/sun-6/db/docs/html/devguide/cdevdvlp24155.html
-java/sun-6/db/docs/html/devguide/cdevdvlp25174.html
 java/sun-6/db/docs/html/devguide/cdevdvlp25820.html
 java/sun-6/db/docs/html/devguide/cdevdvlp25889.html
 java/sun-6/db/docs/html/devguide/cdevdvlp27610.html
@@ -493,7 +532,6 @@ java/sun-6/db/docs/html/devguide/cdevdvlp30653.html
 java/sun-6/db/docs/html/devguide/cdevdvlp34964.html
 java/sun-6/db/docs/html/devguide/cdevdvlp39409.html
 java/sun-6/db/docs/html/devguide/cdevdvlp39943.html
-java/sun-6/db/docs/html/devguide/cdevdvlp40170.html
 java/sun-6/db/docs/html/devguide/cdevdvlp40350.html
 java/sun-6/db/docs/html/devguide/cdevdvlp40653.html
 java/sun-6/db/docs/html/devguide/cdevdvlp40724.html
@@ -529,6 +567,13 @@ java/sun-6/db/docs/html/devguide/cdevspecial67260.html
 java/sun-6/db/docs/html/devguide/cdevspecial76763.html
 java/sun-6/db/docs/html/devguide/cdevspecial847513.html
 java/sun-6/db/docs/html/devguide/cdevspecial93497.html
+java/sun-6/db/docs/html/devguide/cdevspecialtabfuncs.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfbasic.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfexample.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfgetxxx.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfoptexample.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfoptimizer.html
+java/sun-6/db/docs/html/devguide/cdevspecialtfopttune.html
 java/sun-6/db/docs/html/devguide/cdevstandards806118.html
 java/sun-6/db/docs/html/devguide/cdevstandardsxml.html
 java/sun-6/db/docs/html/devguide/cdevstart16043.html
@@ -594,12 +639,12 @@ java/sun-6/db/docs/html/devguide/rdevcsecure766.html
 java/sun-6/db/docs/html/devguide/rdevcsecure871406.html
 java/sun-6/db/docs/html/devguide/rdevcsecure871422.html
 java/sun-6/db/docs/html/devguide/rdevcsecure871439.html
+java/sun-6/db/docs/html/devguide/rdevcsecureclientexample.html
 java/sun-6/db/docs/html/devguide/rdevdeploy856845.html
 java/sun-6/db/docs/html/devguide/rdevdeploy856880.html
 java/sun-6/db/docs/html/devguide/rdevdeploy856912.html
 java/sun-6/db/docs/html/devguide/rdevdeploy856948.html
 java/sun-6/db/docs/html/devguide/rdevdvlp22102.html
-java/sun-6/db/docs/html/devguide/rdevdvlp38881.html
 java/sun-6/db/docs/html/devguide/rdevdvlp847152.html
 java/sun-6/db/docs/html/devguide/rdevexudclass.html
 java/sun-6/db/docs/html/devguide/rdevlicense.html
@@ -628,7 +673,6 @@ java/sun-6/db/docs/html/devguide/tdevdvlp12233.html
 java/sun-6/db/docs/html/devguide/tdevdvlp14496.html
 java/sun-6/db/docs/html/devguide/tdevdvlp20349.html
 java/sun-6/db/docs/html/devguide/tdevdvlp36289.html
-java/sun-6/db/docs/html/devguide/tdevdvlp38381.html
 java/sun-6/db/docs/html/devguide/tdevdvlp39090.html
 java/sun-6/db/docs/html/devguide/tdevdvlp40140.html
 java/sun-6/db/docs/html/devguide/tdevdvlp40464.html
@@ -684,9 +728,7 @@ java/sun-6/db/docs/html/getstart/twwdactivity1_overview.html
 java/sun-6/db/docs/html/getstart/twwdactivity2.html
 java/sun-6/db/docs/html/getstart/twwdactivity3_Setup.html
 java/sun-6/db/docs/html/getstart/twwdactivity4.html
-java/sun-6/db/docs/html/images/java_db_type.gif
 java/sun-6/db/docs/html/images/java_db_type.jpg
-java/sun-6/db/docs/html/images/javadb.jpg
 java/sun-6/db/docs/html/images/logowithtext.jpg
 java/sun-6/db/docs/html/ref/crefjavadb.html
 java/sun-6/db/docs/html/ref/crefjavbclobnot.html
@@ -744,10 +786,22 @@ java/sun-6/db/docs/html/ref/rrefattrib72457.html
 java/sun-6/db/docs/html/ref/rrefattrib88843.html
 java/sun-6/db/docs/html/ref/rrefattribcollation.html
 java/sun-6/db/docs/html/ref/rrefattribencryptkey.html
+java/sun-6/db/docs/html/ref/rrefattribfailover.html
 java/sun-6/db/docs/html/ref/rrefattribnewbootpw.html
 java/sun-6/db/docs/html/ref/rrefattribnewencryptkey.html
 java/sun-6/db/docs/html/ref/rrefattribsecmech.html
+java/sun-6/db/docs/html/ref/rrefattribslavehost.html
+java/sun-6/db/docs/html/ref/rrefattribslaveport.html
 java/sun-6/db/docs/html/ref/rrefattribssl.html
+java/sun-6/db/docs/html/ref/rrefattribstartmaster.html
+java/sun-6/db/docs/html/ref/rrefattribstartslave.html
+java/sun-6/db/docs/html/ref/rrefattribstopmaster.html
+java/sun-6/db/docs/html/ref/rrefattribstopslave.html
+java/sun-6/db/docs/html/ref/rrefattribtracedirectory.html
+java/sun-6/db/docs/html/ref/rrefattribtracefile.html
+java/sun-6/db/docs/html/ref/rrefattribtracefileappend.html
+java/sun-6/db/docs/html/ref/rrefattribtracelevel.html
+java/sun-6/db/docs/html/ref/rrefattribupgrade.html
 java/sun-6/db/docs/html/ref/rrefbackupdbenablelognowaitproc.html
 java/sun-6/db/docs/html/ref/rrefbackupdbenablelogproc.html
 java/sun-6/db/docs/html/ref/rrefbackupdbnowaitproc.html
@@ -785,6 +839,7 @@ java/sun-6/db/docs/html/ref/rrefdmrs.html
 java/sun-6/db/docs/html/ref/rrefdropfunctionstatement.html
 java/sun-6/db/docs/html/ref/rrefdropprocedurestatement.html
 java/sun-6/db/docs/html/ref/rrefdttlimits.html
+java/sun-6/db/docs/html/ref/rrefemptystmtcache.html
 java/sun-6/db/docs/html/ref/rrefexcept16677.html
 java/sun-6/db/docs/html/ref/rrefexcept71493.html
 java/sun-6/db/docs/html/ref/rrefexportproc.html
@@ -797,6 +852,8 @@ java/sun-6/db/docs/html/ref/rreffuncasin.html
 java/sun-6/db/docs/html/ref/rreffuncatan.html
 java/sun-6/db/docs/html/ref/rreffuncceil.html
 java/sun-6/db/docs/html/ref/rreffunccos.html
+java/sun-6/db/docs/html/ref/rreffunccosh.html
+java/sun-6/db/docs/html/ref/rreffunccot.html
 java/sun-6/db/docs/html/ref/rreffuncdegrees.html
 java/sun-6/db/docs/html/ref/rreffuncexp.html
 java/sun-6/db/docs/html/ref/rreffuncfloor.html
@@ -804,13 +861,20 @@ java/sun-6/db/docs/html/ref/rreffunclog.html
 java/sun-6/db/docs/html/ref/rreffunclog10.html
 java/sun-6/db/docs/html/ref/rreffuncpi.html
 java/sun-6/db/docs/html/ref/rreffuncradians.html
+java/sun-6/db/docs/html/ref/rreffuncrand.html
+java/sun-6/db/docs/html/ref/rreffuncrandom.html
+java/sun-6/db/docs/html/ref/rreffuncrownumber.html
+java/sun-6/db/docs/html/ref/rreffuncsign.html
 java/sun-6/db/docs/html/ref/rreffuncsin.html
+java/sun-6/db/docs/html/ref/rreffuncsinh.html
 java/sun-6/db/docs/html/ref/rreffunctan.html
+java/sun-6/db/docs/html/ref/rreffunctanh.html
 java/sun-6/db/docs/html/ref/rreffuncxmlexists.html
 java/sun-6/db/docs/html/ref/rreffuncxmlparse.html
 java/sun-6/db/docs/html/ref/rreffuncxmlquery.html
 java/sun-6/db/docs/html/ref/rreffuncxmlserialize.html
 java/sun-6/db/docs/html/ref/rrefgetdbpropfunc.html
+java/sun-6/db/docs/html/ref/rrefgetuseraccess.html
 java/sun-6/db/docs/html/ref/rrefgpc1.html
 java/sun-6/db/docs/html/ref/rrefhourfunc.html
 java/sun-6/db/docs/html/ref/rrefidentityvallocal.html
@@ -905,6 +969,7 @@ java/sun-6/db/docs/html/ref/rrefsecondfunc.html
 java/sun-6/db/docs/html/ref/rrefselectexpression.html
 java/sun-6/db/docs/html/ref/rrefsetdbpropproc.html
 java/sun-6/db/docs/html/ref/rrefsetstatstimingproc.html
+java/sun-6/db/docs/html/ref/rrefsetuseraccess.html
 java/sun-6/db/docs/html/ref/rrefsimplecolumnname.html
 java/sun-6/db/docs/html/ref/rrefsistabs12085.html
 java/sun-6/db/docs/html/ref/rrefsistabs12813.html
@@ -1035,6 +1100,7 @@ java/sun-6/db/docs/html/ref/rrefsqljmod.html
 java/sun-6/db/docs/html/ref/rrefsqljrenamecolumnstatement.html
 java/sun-6/db/docs/html/ref/rrefsqljrenametablestatement.html
 java/sun-6/db/docs/html/ref/rrefsqljrevoke.html
+java/sun-6/db/docs/html/ref/rrefsqljtfinvoke.html
 java/sun-6/db/docs/html/ref/rrefsqljtypexml.html
 java/sun-6/db/docs/html/ref/rrefstringlimits.html
 java/sun-6/db/docs/html/ref/rrefsynonymname.html
@@ -1252,6 +1318,7 @@ java/sun-6/db/docs/html/tuning/ctunperf54492.html
 java/sun-6/db/docs/html/tuning/ctunperf816059.html
 java/sun-6/db/docs/html/tuning/ctunperf816635.html
 java/sun-6/db/docs/html/tuning/ctunperf98197.html
+java/sun-6/db/docs/html/tuning/ctunperftablefunctions.html
 java/sun-6/db/docs/html/tuning/ctunproper22250.html
 java/sun-6/db/docs/html/tuning/ctunproper51399.html
 java/sun-6/db/docs/html/tuning/ctunpropref1002477.html
@@ -1345,9 +1412,15 @@ java/sun-6/db/docs/html/tuning/rtunproper46141.html
 java/sun-6/db/docs/html/tuning/rtunproper81359.html
 java/sun-6/db/docs/html/tuning/rtunproper81405.html
 java/sun-6/db/docs/html/tuning/rtunproper98166.html
+java/sun-6/db/docs/html/tuning/rtunproperbootall.html
 java/sun-6/db/docs/html/tuning/rtunpropercachedn.html
 java/sun-6/db/docs/html/tuning/rtunproperdurability.html
+java/sun-6/db/docs/html/tuning/rtunproperlogbuffersize.html
+java/sun-6/db/docs/html/tuning/rtunpropermaxlogshippinginterval.html
+java/sun-6/db/docs/html/tuning/rtunproperminlogshippinginterval.html
+java/sun-6/db/docs/html/tuning/rtunpropernoautoboot.html
 java/sun-6/db/docs/html/tuning/rtunpropersqlauth.html
+java/sun-6/db/docs/html/tuning/rtunproperverbose.html
 java/sun-6/db/docs/html/tuning/rtunproperxatrantimeout.html
 java/sun-6/db/docs/html/tuning/rtunsearchauthdn.html
 java/sun-6/db/docs/html/tuning/rtunsearchauthpw.html
@@ -1376,34 +1449,6 @@ java/sun-6/db/docs/pdf/getstart/getstartderby.pdf
 java/sun-6/db/docs/pdf/ref/refderby.pdf
 java/sun-6/db/docs/pdf/tools/derbytools.pdf
 java/sun-6/db/docs/pdf/tuning/tuningderby.pdf
-java/sun-6/db/frameworks.DEPRECATED.txt
-java/sun-6/db/frameworks/NetworkServer/bin/NetworkServerControl.bat
-java/sun-6/db/frameworks/NetworkServer/bin/NetworkServerControl.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/dblook.bat
-java/sun-6/db/frameworks/NetworkServer/bin/dblook.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/ij.bat
-java/sun-6/db/frameworks/NetworkServer/bin/ij.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/setNetworkClientCP.bat
-java/sun-6/db/frameworks/NetworkServer/bin/setNetworkClientCP.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/setNetworkServerCP.bat
-java/sun-6/db/frameworks/NetworkServer/bin/setNetworkServerCP.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/startNetworkServer.bat
-java/sun-6/db/frameworks/NetworkServer/bin/startNetworkServer.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/stopNetworkServer.bat
-java/sun-6/db/frameworks/NetworkServer/bin/stopNetworkServer.ksh
-java/sun-6/db/frameworks/NetworkServer/bin/sysinfo.bat
-java/sun-6/db/frameworks/NetworkServer/bin/sysinfo.ksh
-java/sun-6/db/frameworks/NetworkServer/readme.html
-java/sun-6/db/frameworks/embedded/bin/dblook.bat
-java/sun-6/db/frameworks/embedded/bin/dblook.ksh
-java/sun-6/db/frameworks/embedded/bin/ij.bat
-java/sun-6/db/frameworks/embedded/bin/ij.ksh
-java/sun-6/db/frameworks/embedded/bin/setEmbeddedCP.bat
-java/sun-6/db/frameworks/embedded/bin/setEmbeddedCP.ksh
-java/sun-6/db/frameworks/embedded/bin/sysinfo.bat
-java/sun-6/db/frameworks/embedded/bin/sysinfo.ksh
-java/sun-6/db/frameworks/embedded/readme.html
-java/sun-6/db/frameworks/readme.html
 java/sun-6/db/index.html
 java/sun-6/db/javadoc/jdbc3/allclasses-frame.html
 java/sun-6/db/javadoc/jdbc3/allclasses-noframe.html
@@ -1434,17 +1479,37 @@ java/sun-6/db/javadoc/jdbc3/org/apache/derby/jdbc/EmbeddedXADataSource.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/jdbc/package-frame.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/jdbc/package-summary.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/jdbc/package-tree.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/JDBCMBean.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/Management.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/ManagementMBean.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/VersionMBean.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/drda/NetworkServerMBean.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/drda/package-frame.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/drda/package-summary.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/drda/package-tree.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/package-frame.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/package-summary.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/package-tree.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/security/SystemPermission.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/security/package-frame.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/security/package-summary.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/security/package-tree.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/dblook.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/ij.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/package-frame.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/package-summary.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/package-tree.html
 java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools/sysinfo.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti/VTICosting.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti/VTIEnvironment.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti/package-frame.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti/package-summary.html
+java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti/package-tree.html
 java/sun-6/db/javadoc/jdbc3/overview-frame.html
 java/sun-6/db/javadoc/jdbc3/overview-summary.html
 java/sun-6/db/javadoc/jdbc3/overview-tree.html
 java/sun-6/db/javadoc/jdbc3/package-list
-java/sun-6/db/javadoc/jdbc3/packages.html
+java/sun-6/db/javadoc/jdbc3/resources/derby_logo64.png
 java/sun-6/db/javadoc/jdbc3/resources/inherit.gif
 java/sun-6/db/javadoc/jdbc3/serialized-form.html
 java/sun-6/db/javadoc/jdbc3/stylesheet.css
@@ -1476,16 +1541,37 @@ java/sun-6/db/javadoc/jdbc4/org/apache/derby/jdbc/EmbeddedXADataSource40.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/jdbc/package-frame.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/jdbc/package-summary.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/jdbc/package-tree.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/JDBCMBean.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/Management.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/ManagementMBean.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/VersionMBean.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/drda/NetworkServerMBean.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/drda/package-frame.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/drda/package-summary.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/drda/package-tree.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/package-frame.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/package-summary.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/package-tree.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/security/SystemPermission.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/security/package-frame.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/security/package-summary.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/security/package-tree.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/dblook.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/ij.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/package-frame.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/package-summary.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/package-tree.html
 java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools/sysinfo.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti/VTICosting.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti/VTIEnvironment.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti/package-frame.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti/package-summary.html
+java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti/package-tree.html
 java/sun-6/db/javadoc/jdbc4/overview-frame.html
 java/sun-6/db/javadoc/jdbc4/overview-summary.html
 java/sun-6/db/javadoc/jdbc4/overview-tree.html
 java/sun-6/db/javadoc/jdbc4/package-list
+java/sun-6/db/javadoc/jdbc4/resources/derby_logo64.png
 java/sun-6/db/javadoc/jdbc4/resources/inherit.gif
 java/sun-6/db/javadoc/jdbc4/serialized-form.html
 java/sun-6/db/javadoc/jdbc4/stylesheet.css
@@ -1840,6 +1926,8 @@ java/sun-6/demo/jfc/Java2D/src/java2d/demos/Paths/WindingRule.java
 java/sun-6/demo/jfc/Java2D/src/java2d/demos/Transforms/Rotate.java
 java/sun-6/demo/jfc/Java2D/src/java2d/demos/Transforms/SelectTx.java
 java/sun-6/demo/jfc/Java2D/src/java2d/demos/Transforms/TransformAnim.java
+java/sun-6/demo/jfc/Laffy/laffy.png
+java/sun-6/demo/jfc/Laffy/readme.html
 java/sun-6/demo/jfc/Metalworks/Metalworks.jar
 java/sun-6/demo/jfc/Metalworks/README.txt
 java/sun-6/demo/jfc/Metalworks/src/AquaMetalTheme.java
@@ -2147,6 +2235,8 @@ java/sun-6/demo/jfc/SwingSet2/src/resources/swingset_ja.properties
 java/sun-6/demo/jfc/SwingSet2/src/resources/swingset_zh_CN.properties
 java/sun-6/demo/jfc/SwingSet2/src/resources/title.html
 java/sun-6/demo/jfc/SwingSet2/src/resources/tree.txt
+java/sun-6/demo/jfc/SwingSet3/readme.html
+java/sun-6/demo/jfc/SwingSet3/swingset3.png
 java/sun-6/demo/jfc/TableExample/README.txt
 java/sun-6/demo/jfc/TableExample/TableExample.jar
 java/sun-6/demo/jfc/TableExample/src/JDBCAdapter.java
@@ -2235,6 +2325,7 @@ java/sun-6/demo/jvmti/hprof/src/jvm.hprof.txt
 java/sun-6/demo/jvmti/hprof/src/linux/hprof_md.c
 java/sun-6/demo/jvmti/hprof/src/manual.html
 java/sun-6/demo/jvmti/hprof/src/sample.makefile.txt
+java/sun-6/demo/jvmti/index.html
 java/sun-6/demo/jvmti/java_crw_demo/README.txt
 java/sun-6/demo/jvmti/java_crw_demo/src/java_crw_demo.c
 java/sun-6/demo/jvmti/java_crw_demo/src/java_crw_demo.h
@@ -2285,6 +2376,7 @@ java/sun-6/demo/management/VerboseGC/README.txt
 java/sun-6/demo/management/VerboseGC/VerboseGC.jar
 java/sun-6/demo/management/VerboseGC/src/PrintGCStat.java
 java/sun-6/demo/management/VerboseGC/src/VerboseGC.java
+java/sun-6/demo/management/index.html
 java/sun-6/demo/nbproject/README.txt
 java/sun-6/demo/nbproject/jfc/FileChooserDemo/build.properties
 java/sun-6/demo/nbproject/jfc/FileChooserDemo/build.xml
@@ -2709,6 +2801,8 @@ java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Paths/WindingRule.java
 java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Transforms/Rotate.java
 java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Transforms/SelectTx.java
 java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Transforms/TransformAnim.java
+java/sun-6/demo/plugin/jfc/Laffy/laffy.png
+java/sun-6/demo/plugin/jfc/Laffy/readme.html
 java/sun-6/demo/plugin/jfc/Metalworks/Metalworks.jar
 java/sun-6/demo/plugin/jfc/Metalworks/README.txt
 java/sun-6/demo/plugin/jfc/Metalworks/src/AquaMetalTheme.java
@@ -3016,6 +3110,8 @@ java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/swingset_ja.properties
 java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/swingset_zh_CN.properties
 java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/title.html
 java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/tree.txt
+java/sun-6/demo/plugin/jfc/SwingSet3/readme.html
+java/sun-6/demo/plugin/jfc/SwingSet3/swingset3.png
 java/sun-6/demo/plugin/jfc/TableExample/README.txt
 java/sun-6/demo/plugin/jfc/TableExample/TableExample.jar
 java/sun-6/demo/plugin/jfc/TableExample/src/JDBCAdapter.java
@@ -3057,6 +3153,237 @@ java/sun-6/lib/jconsole.jar
 java/sun-6/lib/orb.idl
 java/sun-6/lib/sa-jdi.jar
 java/sun-6/lib/tools.jar
+java/sun-6/lib/visualvm/etc/visualvm.clusters
+java/sun-6/lib/visualvm/etc/visualvm.conf
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-netbeans-core.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-netbeans-modules-options-api.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-netbeans-modules-queries.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-openide-execution.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-openide-explorer.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-openide-modules.xml
+java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps/org-openide-text.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-jdesktop-layout.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-api-progress.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-api-visual.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core-execution.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core-multiview.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core-output2.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core-ui.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core-windows.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-core.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-libs-jsr223.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-applemenu.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-autoupdate-services.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-autoupdate-ui.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-core-kit.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-editor-mimelookup-impl.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-editor-mimelookup.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-favorites.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-javahelp.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-masterfs.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-options-api.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-options-keymap.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-progress-ui.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-queries.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-sendopts.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-settings.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-modules-templates.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-swing-plaf.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-netbeans-swing-tabcontrol.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-actions.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-awt.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-compat.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-dialogs.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-execution.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-explorer.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-io.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-loaders.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-nodes.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-options.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-text.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-util-enumerations.xml
+java/sun-6/lib/visualvm/platform7/config/Modules/org-openide-windows.xml
+java/sun-6/lib/visualvm/platform7/core/core.jar
+java/sun-6/lib/visualvm/platform7/core/org-openide-filesystems.jar
+java/sun-6/lib/visualvm/platform7/docs/swing-layout-1.0.3-doc.zip
+java/sun-6/lib/visualvm/platform7/docs/swing-layout-1.0.3-src.zip
+java/sun-6/lib/visualvm/platform7/lib/boot.jar
+java/sun-6/lib/visualvm/platform7/lib/nbexec
+java/sun-6/lib/visualvm/platform7/lib/org-openide-modules.jar
+java/sun-6/lib/visualvm/platform7/lib/org-openide-util.jar
+java/sun-6/lib/visualvm/platform7/modules/ext/jh-2.0_05.jar
+java/sun-6/lib/visualvm/platform7/modules/ext/script-api.jar
+java/sun-6/lib/visualvm/platform7/modules/ext/swing-layout-1.0.3.jar
+java/sun-6/lib/visualvm/platform7/modules/ext/updater.jar
+java/sun-6/lib/visualvm/platform7/modules/org-jdesktop-layout.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-api-progress.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-api-visual.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core-execution.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core-multiview.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core-output2.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core-ui.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core-windows.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-core.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-libs-jsr223.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-applemenu.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-autoupdate-services.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-autoupdate-ui.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-core-kit.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-editor-mimelookup-impl.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-editor-mimelookup.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-favorites.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-javahelp.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-masterfs.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-options-api.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-options-keymap.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-progress-ui.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-queries.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-sendopts.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-settings.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-modules-templates.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-swing-plaf.jar
+java/sun-6/lib/visualvm/platform7/modules/org-netbeans-swing-tabcontrol.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-actions.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-awt.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-compat.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-dialogs.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-execution.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-explorer.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-io.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-loaders.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-nodes.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-options.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-text.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-util-enumerations.jar
+java/sun-6/lib/visualvm/platform7/modules/org-openide-windows.jar
+java/sun-6/lib/visualvm/platform7/update_tracking/org-jdesktop-layout.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-api-progress.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-api-visual.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-bootstrap.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-execution.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-multiview.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-output2.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-startup.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-ui.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core-windows.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-core.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-libs-jsr223.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-applemenu.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-autoupdate-services.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-autoupdate-ui.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-core-kit.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-editor-mimelookup-impl.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-editor-mimelookup.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-favorites.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-javahelp.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-masterfs.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-options-api.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-options-keymap.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-progress-ui.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-queries.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-sendopts.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-settings.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-modules-templates.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-swing-plaf.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-netbeans-swing-tabcontrol.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-actions.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-awt.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-compat.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-dialogs.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-execution.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-explorer.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-filesystems.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-io.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-loaders.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-modules.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-nodes.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-options.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-text.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-util-enumerations.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-util.xml
+java/sun-6/lib/visualvm/platform7/update_tracking/org-openide-windows.xml
+java/sun-6/lib/visualvm/profiler2/config/Modules/org-netbeans-lib-profiler-common.xml
+java/sun-6/lib/visualvm/profiler2/config/Modules/org-netbeans-lib-profiler-ui.xml
+java/sun-6/lib/visualvm/profiler2/config/Modules/org-netbeans-lib-profiler.xml
+java/sun-6/lib/visualvm/profiler2/config/Modules/org-netbeans-modules-profiler.xml
+java/sun-6/lib/visualvm/profiler2/config/Services/filters-default.xml
+java/sun-6/lib/visualvm/profiler2/config/Services/filtersets-default.xml
+java/sun-6/lib/visualvm/profiler2/lib/deployed/jdk15/linux/libprofilerinterface.so
+java/sun-6/lib/visualvm/profiler2/lib/deployed/jdk16/linux/libprofilerinterface.so
+java/sun-6/lib/visualvm/profiler2/lib/jfluid-server-15.jar
+java/sun-6/lib/visualvm/profiler2/lib/jfluid-server.jar
+java/sun-6/lib/visualvm/profiler2/modules/docs/org-netbeans-modules-profiler.jar
+java/sun-6/lib/visualvm/profiler2/modules/org-netbeans-lib-profiler-common.jar
+java/sun-6/lib/visualvm/profiler2/modules/org-netbeans-lib-profiler-ui.jar
+java/sun-6/lib/visualvm/profiler2/modules/org-netbeans-lib-profiler.jar
+java/sun-6/lib/visualvm/profiler2/modules/org-netbeans-modules-profiler.jar
+java/sun-6/lib/visualvm/profiler2/update_tracking/org-netbeans-lib-profiler-common.xml
+java/sun-6/lib/visualvm/profiler2/update_tracking/org-netbeans-lib-profiler-ui.xml
+java/sun-6/lib/visualvm/profiler2/update_tracking/org-netbeans-lib-profiler.xml
+java/sun-6/lib/visualvm/profiler2/update_tracking/org-netbeans-modules-profiler.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application-views.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-application.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-attach.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-core.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-coredump.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-heapdump.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-host-views.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-host.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jmx.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jvm.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-jvmstat.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-modules-appui.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-profiler.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-sa.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-threaddump.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/com-sun-tools-visualvm-tools.xml
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-core-execution.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-core-output2.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-libs-jsr223.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-core-kit.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-favorites.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-options-keymap.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-sendopts.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-netbeans-modules-templates.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-openide-compat.xml_hidden
+java/sun-6/lib/visualvm/visualvm/config/Modules/org-openide-util-enumerations.xml_hidden
+java/sun-6/lib/visualvm/visualvm/core/com-sun-tools-visualvm-modules-startup.jar
+java/sun-6/lib/visualvm/visualvm/core/locale/core_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application-views.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-application.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-attach.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-core.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-coredump.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-heapdump.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host-views.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-host.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jmx.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-jvmstat.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-modules-appui.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-profiler.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-sa.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-threaddump.jar
+java/sun-6/lib/visualvm/visualvm/modules/com-sun-tools-visualvm-tools.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core-windows_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/modules/locale/org-netbeans-core_visualvm.jar
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application-views.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-application.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-attach.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-core.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-coredump.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-heapdump.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-host-views.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-host.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jmx.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jvm.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-jvmstat.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-modules-appui.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-modules-startup.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-profiler.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-sa.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-threaddump.xml
+java/sun-6/lib/visualvm/visualvm/update_tracking/com-sun-tools-visualvm-tools.xml
 java/sun-6/man/ja_JP.eucJP/man1/appletviewer.1
 java/sun-6/man/ja_JP.eucJP/man1/apt.1
 java/sun-6/man/ja_JP.eucJP/man1/extcheck.1
@@ -3078,6 +3405,7 @@ java/sun-6/man/ja_JP.eucJP/man1/jsadebugd.1
 java/sun-6/man/ja_JP.eucJP/man1/jstack.1
 java/sun-6/man/ja_JP.eucJP/man1/jstat.1
 java/sun-6/man/ja_JP.eucJP/man1/jstatd.1
+java/sun-6/man/ja_JP.eucJP/man1/jvisualvm.1
 java/sun-6/man/ja_JP.eucJP/man1/native2ascii.1
 java/sun-6/man/ja_JP.eucJP/man1/rmic.1
 java/sun-6/man/ja_JP.eucJP/man1/schemagen.1
@@ -3106,6 +3434,7 @@ java/sun-6/man/man1/jsadebugd.1
 java/sun-6/man/man1/jstack.1
 java/sun-6/man/man1/jstat.1
 java/sun-6/man/man1/jstatd.1
+java/sun-6/man/man1/jvisualvm.1
 java/sun-6/man/man1/native2ascii.1
 java/sun-6/man/man1/rmic.1
 java/sun-6/man/man1/schemagen.1
@@ -3113,9 +3442,6 @@ java/sun-6/man/man1/serialver.1
 java/sun-6/man/man1/wsgen.1
 java/sun-6/man/man1/wsimport.1
 java/sun-6/man/man1/xjc.1
-java/sun-6/register.html
-java/sun-6/register_ja.html
-java/sun-6/register_zh_CN.html
 java/sun-6/sample/javac/processing/src/CheckNamesProcessor.java
 java/sun-6/sample/jmx/jmx-scandir/build.properties
 java/sun-6/sample/jmx/jmx-scandir/build.xml
@@ -3462,9 +3788,32 @@ java/sun-6/src.zip
 @dirrm java/sun-6/sample/javac/processing
 @dirrm java/sun-6/sample/javac
 @dirrm java/sun-6/sample
-@comment in sun-jre6 @dirrm java/sun-6/man/man1
-@comment in sun-jre6 @dirrm java/sun-6/man/ja_JP.eucJP/man1
-@comment in sun-jre6 @dirrm java/sun-6/lib
+@dirrm java/sun-6/man/man1
+@dirrm java/sun-6/man/ja_JP.eucJP/man1
+@dirrm java/sun-6/lib/visualvm/visualvm/update_tracking
+@dirrm java/sun-6/lib/visualvm/visualvm/modules/locale
+@dirrm java/sun-6/lib/visualvm/visualvm/modules
+@dirrm java/sun-6/lib/visualvm/visualvm/core/locale
+@dirrm java/sun-6/lib/visualvm/visualvm/core
+@dirrm java/sun-6/lib/visualvm/visualvm/config/Modules
+@dirrm java/sun-6/lib/visualvm/profiler2/update_tracking
+@dirrm java/sun-6/lib/visualvm/profiler2/modules/docs
+@dirrm java/sun-6/lib/visualvm/profiler2/modules
+@dirrm java/sun-6/lib/visualvm/profiler2/lib/deployed/jdk16/linux
+@dirrm java/sun-6/lib/visualvm/profiler2/lib/deployed/jdk15/linux
+@dirrm java/sun-6/lib/visualvm/profiler2/lib
+@dirrm java/sun-6/lib/visualvm/profiler2/config/Services
+@dirrm java/sun-6/lib/visualvm/profiler2/config/Modules
+@dirrm java/sun-6/lib/visualvm/platform7/update_tracking
+@dirrm java/sun-6/lib/visualvm/platform7/modules/ext
+@dirrm java/sun-6/lib/visualvm/platform7/modules
+@dirrm java/sun-6/lib/visualvm/platform7/lib
+@dirrm java/sun-6/lib/visualvm/platform7/docs
+@dirrm java/sun-6/lib/visualvm/platform7/core
+@dirrm java/sun-6/lib/visualvm/platform7/config/Modules
+@dirrm java/sun-6/lib/visualvm/platform7/config/ModuleAutoDeps
+@dirrm java/sun-6/lib/visualvm/etc
+@dirrm java/sun-6/lib
 @dirrm java/sun-6/include/linux
 @dirrm java/sun-6/include
 @dirrm java/sun-6/demo/scripting/jconsole-plugin/src/scripts
@@ -3481,6 +3830,7 @@ java/sun-6/src.zip
 @dirrm java/sun-6/demo/scripting
 @dirrm java/sun-6/demo/plugin/jfc/TableExample/src
 @dirrm java/sun-6/demo/plugin/jfc/TableExample
+@dirrm java/sun-6/demo/plugin/jfc/SwingSet3
 @dirrm java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/images/tooltip
 @dirrm java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/images/toolbar
 @dirrm java/sun-6/demo/plugin/jfc/SwingSet2/src/resources/images/tabbedpane
@@ -3516,6 +3866,7 @@ java/sun-6/src.zip
 @dirrm java/sun-6/demo/plugin/jfc/Metalworks/src/resources
 @dirrm java/sun-6/demo/plugin/jfc/Metalworks/src
 @dirrm java/sun-6/demo/plugin/jfc/Metalworks
+@dirrm java/sun-6/demo/plugin/jfc/Laffy
 @dirrm java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Transforms
 @dirrm java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Paths
 @dirrm java/sun-6/demo/plugin/jfc/Java2D/src/java2d/demos/Paint
@@ -3654,6 +4005,7 @@ java/sun-6/src.zip
 @dirrm java/sun-6/demo/jpda
 @dirrm java/sun-6/demo/jfc/TableExample/src
 @dirrm java/sun-6/demo/jfc/TableExample
+@dirrm java/sun-6/demo/jfc/SwingSet3
 @dirrm java/sun-6/demo/jfc/SwingSet2/src/resources/images/tooltip
 @dirrm java/sun-6/demo/jfc/SwingSet2/src/resources/images/toolbar
 @dirrm java/sun-6/demo/jfc/SwingSet2/src/resources/images/tabbedpane
@@ -3689,6 +4041,7 @@ java/sun-6/src.zip
 @dirrm java/sun-6/demo/jfc/Metalworks/src/resources
 @dirrm java/sun-6/demo/jfc/Metalworks/src
 @dirrm java/sun-6/demo/jfc/Metalworks
+@dirrm java/sun-6/demo/jfc/Laffy
 @dirrm java/sun-6/demo/jfc/Java2D/src/java2d/demos/Transforms
 @dirrm java/sun-6/demo/jfc/Java2D/src/java2d/demos/Paths
 @dirrm java/sun-6/demo/jfc/Java2D/src/java2d/demos/Paint
@@ -3752,7 +4105,11 @@ java/sun-6/src.zip
 @dirrm java/sun-6/demo
 @dirrm java/sun-6/db/lib
 @dirrm java/sun-6/db/javadoc/jdbc4/resources
+@dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/vti
 @dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/tools
+@dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/security
+@dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans/drda
+@dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/mbeans
 @dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/jdbc
 @dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/drda
 @dirrm java/sun-6/db/javadoc/jdbc4/org/apache/derby/authentication
@@ -3761,7 +4118,11 @@ java/sun-6/src.zip
 @dirrm java/sun-6/db/javadoc/jdbc4/org
 @dirrm java/sun-6/db/javadoc/jdbc4
 @dirrm java/sun-6/db/javadoc/jdbc3/resources
+@dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/vti
 @dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/tools
+@dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/security
+@dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans/drda
+@dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/mbeans
 @dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/jdbc
 @dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/drda
 @dirrm java/sun-6/db/javadoc/jdbc3/org/apache/derby/authentication
@@ -3770,11 +4131,6 @@ java/sun-6/src.zip
 @dirrm java/sun-6/db/javadoc/jdbc3/org
 @dirrm java/sun-6/db/javadoc/jdbc3
 @dirrm java/sun-6/db/javadoc
-@dirrm java/sun-6/db/frameworks/embedded/bin
-@dirrm java/sun-6/db/frameworks/embedded
-@dirrm java/sun-6/db/frameworks/NetworkServer/bin
-@dirrm java/sun-6/db/frameworks/NetworkServer
-@dirrm java/sun-6/db/frameworks
 @dirrm java/sun-6/db/docs/pdf/tuning
 @dirrm java/sun-6/db/docs/pdf/tools
 @dirrm java/sun-6/db/docs/pdf/ref
@@ -3793,7 +4149,19 @@ java/sun-6/src.zip
 @dirrm java/sun-6/db/docs
 @dirrm java/sun-6/db/demo/templates
 @dirrm java/sun-6/db/demo/programs/workingwithderby
+@dirrm java/sun-6/db/demo/programs/vtis/sql
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/snapshot
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/example
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis/core
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo/vtis
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache/derbyDemo
+@dirrm java/sun-6/db/demo/programs/vtis/java/org/apache
+@dirrm java/sun-6/db/demo/programs/vtis/java/org
+@dirrm java/sun-6/db/demo/programs/vtis/java
+@dirrm java/sun-6/db/demo/programs/vtis/data
+@dirrm java/sun-6/db/demo/programs/vtis
 @dirrm java/sun-6/db/demo/programs/toursdb
+@dirrm java/sun-6/db/demo/programs/simplemobile
 @dirrm java/sun-6/db/demo/programs/simple
 @dirrm java/sun-6/db/demo/programs/scores/java/server/org/apache/derbyDemo/scores/proc
 @dirrm java/sun-6/db/demo/programs/scores/java/server/org/apache/derbyDemo/scores
@@ -3819,6 +4187,7 @@ java/sun-6/src.zip
 @dirrm java/sun-6/db/demo/programs/nserverdemo
 @dirrm java/sun-6/db/demo/programs/localcal/src/images
 @dirrm java/sun-6/db/demo/programs/localcal/src
+@exec ${MKDIR} %D/java/sun-6/db/demo/programs/localcal/lib
 @dirrm java/sun-6/db/demo/programs/localcal/lib
 @dirrm java/sun-6/db/demo/programs/localcal
 @dirrm java/sun-6/db/demo/programs
@@ -3829,5 +4198,5 @@ java/sun-6/src.zip
 @dirrm java/sun-6/db/demo
 @dirrm java/sun-6/db/bin
 @dirrm java/sun-6/db
-@comment in sun-jre6 @dirrm java/sun-6/bin
-@comment in sun-jre6 @dirrm java/sun-6
+@dirrm java/sun-6/bin
+@dirrm java/sun-6
