@@ -1,0 +1,63 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
+#
+# used by emulators/sdlmess/Makefile
+
+CATEGORIES=		emulators
+MASTER_SITES=		http://rbelmont.mameworld.info/ \
+			http://dev.gentoo.org/~joker/sdlmame/distfiles/
+EXTRACT_SUFX=		.zip
+
+MAINTAINER=		dillo@NetBSD.org
+HOMEPAGE=		http://rbelmont.mameworld.info/?page_id=163
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+RESTRICTED=		selling is not allowed
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
+USE_TOOLS+=		gmake pkg-config
+UNLIMIT_RESOURCES+=	datasize
+LICENSE=		mame-license
+
+.if ${MACHINE_ARCH:Mi386}
+MAKE_FLAGS+=	X86_MIPS3_DRC=1
+MAKE_FLAGS+=	X86_PPC_DRC=1
+#MAKE_FLAGS+=	X86_ASM=1
+.else
+MAKE_FLAGS+=	X86_MIPS3_DRC=
+MAKE_FLAGS+=	X86_PPC_DRC=
+.endif
+# XXX: PTR64
+.if ${MACHINE_ARCH:Mx86_64}
+MAKE_FLAGS+=	PTR64=true
+# XXX: FORCE_DRC_C_BACKEND?
+.endif
+
+.  include "../../mk/endian.mk"
+.if ${MACHINE_ENDIAN:Mbig}
+MAKE_FLAGS+=	BIGENDIAN=true
+.endif
+
+MAKE_FLAGS+=	SDLMAME_NO64BITIO=true
+
+# Pragma once is not needed, and creates warnings/errors on gcc
+SUBST_CLASSES+=		pragma
+SUBST_STAGE.pragma=	pre-configure
+SUBST_FILES.pragma=	src/*.h src/*/*.h
+SUBST_SED.pragma=	-e "s|\#pragma once||g"
+
+# Using LD with calling conventions of CC is wrong, use CC instead.
+SUBST_CLASSES+=		ldcc
+SUBST_STAGE.ldcc=	pre-configure
+SUBST_FILES.ldcc=	${MAKE_FILE}
+SUBST_FILES.ldcc+=	*.mak */*.mak */*/*.mak */*/*/*.mak */*/*/*/*.mak
+SUBST_SED.ldcc=		-e "s|(LD)|(CC)|"
+
+.include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
