@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/17 14:42:25 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/18 10:08:17 seb Exp $
 
-DISTNAME=	WWW-Pastebin-PastebinCom-Create-0.001
+DISTNAME=	WWW-Pastebin-PastebinCom-Create-0.002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
