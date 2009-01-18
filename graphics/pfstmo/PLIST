@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/18 12:48:19 obache Exp $
+bin/pfstmo_drago03
+bin/pfstmo_durand02
+bin/pfstmo_fattal02
+bin/pfstmo_mantiuk06
+${PLIST.gsl}bin/pfstmo_mantiuk08
+bin/pfstmo_pattanaik00
+bin/pfstmo_reinhard02
+bin/pfstmo_reinhard05
+man/man1/pfstmo_drago03.1
+man/man1/pfstmo_durand02.1
+man/man1/pfstmo_fattal02.1
+man/man1/pfstmo_mantiuk06.1
+${PLIST.gsl}man/man1/pfstmo_mantiuk08.1
+man/man1/pfstmo_pattanaik00.1
+man/man1/pfstmo_reinhard02.1
+man/man1/pfstmo_reinhard05.1
