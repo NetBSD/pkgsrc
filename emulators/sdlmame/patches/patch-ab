@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
+
+--- src/osd/sdl/sdlsync.c.orig	2008-12-12 04:55:30.000000000 +0100
++++ src/osd/sdl/sdlsync.c
+@@ -587,14 +587,27 @@ int osd_thread_adjust_priority(osd_threa
+ int osd_thread_cpu_affinity(osd_thread *thread, UINT32 mask)
+ {
+ #if !defined(NO_THREAD_COOPERATIVE) && !defined(NO_AFFINITY_NP)
++#if defined(__NetBSD__)
++	cpuset_t *cmask;
++#else
+ 	cpu_set_t	cmask;
++#endif
+ 	pthread_t	lthread;
+ 	int			bitnum;
++	int			ret;
+ 
++#if defined(__NetBSD__)
++	cmask = cpuset_create(); /* initializes set as well */
++#else
+ 	CPU_ZERO(&cmask);
++#endif
+ 	for (bitnum=0; bitnum<32; bitnum++)
+ 		if (mask & (1<<bitnum))
++#if defined(__NetBSD__)
++			cpuset_set(bitnum, cmask);
++#else
+ 			CPU_SET(bitnum, &cmask);
++#endif
+ 	
+ 	if (thread == NULL)
+ 		lthread = pthread_self();
+@@ -605,10 +618,15 @@ int osd_thread_cpu_affinity(osd_thread *
+ 	{
+ 		/* Not available during link in all targets */
+ 		fprintf(stderr, "error %d setting cpu affinity to mask %08x", errno, mask);
+-		return FALSE;
++		ret = FALSE;
+ 	}
+ 	else
+-		return TRUE;
++		ret = TRUE;
++
++#if defined(__NetBSD__)
++	cpuset_destroy(cmask);
++#endif
++	return ret;
+ #else
+ 	return TRUE;
+ #endif
