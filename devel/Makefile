@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1094 2009/01/17 13:31:23 adam Exp $
+# $NetBSD: Makefile,v 1.1095 2009/01/18 19:23:50 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -559,6 +559,7 @@ SUBDIR+=	p5-File-LibMagic
 SUBDIR+=	p5-File-MimeInfo
 SUBDIR+=	p5-File-Modified
 SUBDIR+=	p5-File-NFSLock
+SUBDIR+=	p5-File-Next
 SUBDIR+=	p5-File-Path
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-File-PathConvert
