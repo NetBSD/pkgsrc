@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/10/09 19:01:57 bad Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/18 12:00:53 shattered Exp $
 bin/jpilot
 bin/jpilot-dump
 bin/jpilot-sync
@@ -12,6 +12,7 @@ man/man1/jpilot-dial.1
 man/man1/jpilot-dump.1
 man/man1/jpilot-sync.1
 man/man1/jpilot.1
+share/applications/jpilot.desktop
 share/doc/jpilot/AUTHORS
 share/doc/jpilot/BUGS
 share/doc/jpilot/COPYING
@@ -43,8 +44,6 @@ share/doc/jpilot/manual/jpilot-todo.png
 share/doc/jpilot/manual/jpilot-toplogo.jpg
 share/doc/jpilot/manual/manual.html
 share/doc/jpilot/manual/plugin.html
-share/doc/jpilot/BUGS
-share/applications/jpilot.desktop
 share/jpilot/AddressDB.pdb
 share/jpilot/CalendarDB-PDat.pdb
 share/jpilot/ContactsDB-PAdd.pdb
