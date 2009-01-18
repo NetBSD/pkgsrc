@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.9 2009/01/18 21:45:26 christos Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.10 2009/01/18 21:52:25 christos Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -177,6 +177,7 @@ java/sun-6/lib/i386/libnative_chmod.so
 java/sun-6/lib/i386/libnative_chmod_g.so
 java/sun-6/lib/i386/libnet.so
 java/sun-6/lib/i386/libnio.so
+java/sun-6/lib/i386/libnpjp2.so
 java/sun-6/lib/i386/libnpt.so
 java/sun-6/lib/i386/librmi.so
 java/sun-6/lib/i386/libsplashscreen.so
@@ -312,7 +313,9 @@ java/sun-6/lib/zi/America/Argentina/Jujuy
 java/sun-6/lib/zi/America/Argentina/La_Rioja
 java/sun-6/lib/zi/America/Argentina/Mendoza
 java/sun-6/lib/zi/America/Argentina/Rio_Gallegos
+java/sun-6/lib/zi/America/Argentina/Salta
 java/sun-6/lib/zi/America/Argentina/San_Juan
+java/sun-6/lib/zi/America/Argentina/San_Luis
 java/sun-6/lib/zi/America/Argentina/Tucuman
 java/sun-6/lib/zi/America/Argentina/Ushuaia
 java/sun-6/lib/zi/America/Aruba
@@ -411,6 +414,7 @@ java/sun-6/lib/zi/America/Recife
 java/sun-6/lib/zi/America/Regina
 java/sun-6/lib/zi/America/Resolute
 java/sun-6/lib/zi/America/Rio_Branco
+java/sun-6/lib/zi/America/Santarem
 java/sun-6/lib/zi/America/Santiago
 java/sun-6/lib/zi/America/Santo_Domingo
 java/sun-6/lib/zi/America/Sao_Paulo
