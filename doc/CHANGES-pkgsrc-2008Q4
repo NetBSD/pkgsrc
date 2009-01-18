@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.18 2009/01/18 11:55:28 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.19 2009/01/18 12:04:20 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -47,3 +47,5 @@ pullup ticket #2637 - requested by martti
 drupal6: update package for fixes
 pullup ticket #2638 - requested by joerg
 cfitsio: build fix
+pullup ticket #2640 - requested by joerg
+garmin-utils: build fix for newer netbsd
