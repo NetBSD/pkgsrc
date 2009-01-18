@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2008/08/01 10:04:09 hauke Exp $
+# $NetBSD: Makefile,v 1.25 2009/01/18 20:07:45 adam Exp $
 
-DISTNAME=	hatari-1.0.1
+DISTNAME=	hatari-1.1.0
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hatari/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://hatari.sourceforge.net/
