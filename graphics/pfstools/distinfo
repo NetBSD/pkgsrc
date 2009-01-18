@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/18 12:46:39 obache Exp $
+
+SHA1 (pfstools-1.7.0.tar.gz) = 46f89567f3c822f4fddf51214f62fa106efc0d5e
+RMD160 (pfstools-1.7.0.tar.gz) = be4c9f42ac59583ec69ec7d6330e0e1b6033a4ae
+Size (pfstools-1.7.0.tar.gz) = 611821 bytes
+SHA1 (patch-aa) = 01ea784a8db2d9f58ed0f5f7825e9ccc38103bcb
