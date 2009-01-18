@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.15 2009/01/18 10:18:32 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.16 2009/01/18 10:31:14 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -41,3 +41,5 @@ avidemux: add option for pulseaudio, fix build problems
 pullup ticket #2635 - requested by adam
 bacula: PLIST fix
 bacula-clientonly: PLIST fix
+pullup ticket #2636 - requested by rafal
+rrdtool: fix LP64BE problem
