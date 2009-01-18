@@ -1,4 +1,4 @@
-# $NetBSD: octave.mk,v 1.6 2008/01/11 01:23:43 adam Exp $
+# $NetBSD: octave.mk,v 1.7 2009/01/18 02:43:38 obache Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -16,3 +16,15 @@ OCT_${var}!=	${OCTAVE_CONFIG} -p ${var}
 .    endif
 .  endfor
 .endif
+
+# fix shebang line.
+#
+# REPLACE_OCTAVE	replace shebang line of specified files.
+#
+.if defined(REPLACE_OCTAVE)
+REPLACE_INTERPRETER+=	octave
+REPLACE.octave.old=	.*octave
+REPLACE.octave.new=	${LOCALBASE}/bin/octave
+REPLACE_FILES.octave=	${REPLACE_OCTAVE}
+.endif # defined(REPLACE_OCTAVE)
+
