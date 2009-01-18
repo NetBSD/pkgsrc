@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.295 2009/01/17 23:37:43 adam Exp $
+$NetBSD: CHANGES-2009,v 1.296 2009/01/18 10:04:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -385,3 +385,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/py-ClientForm version 0.2.10 [wiz 2009-01-17]
 	Added misc/calibre version 0.4.128 [wiz 2009-01-17]
 	Updated math/glpk to 4.35 [adam 2009-01-18]
+	Updated audio/gnome-speech-espeak to 0.4.22 [wiz 2009-01-18]
