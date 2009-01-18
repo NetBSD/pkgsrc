@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.303 2009/01/18 15:03:48 roy Exp $
+$NetBSD: CHANGES-2009,v 1.304 2009/01/18 16:06:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -393,3 +393,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/fftwf to 3.2 [he 2009-01-18]
 	Updated sysutils/hal to 0.5.11nb19 [jmcneill 2009-01-18]
 	Updated devel/py-setuptools to 0.6c9 [roy 2009-01-18]
+	Added emulators/sdlmame version 0.129 [wiz 2009-01-18]
