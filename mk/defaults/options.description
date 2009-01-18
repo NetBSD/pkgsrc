@@ -121,7 +121,7 @@ firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
-ftp			Enable File Transport Protocol (FTP) support.
+ftp			Enable File Transfer Protocol (FTP) support.
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
 geoip			Enable IP-to-country-lookup using the GeoIP C library.
@@ -384,7 +384,7 @@ ssl			Enable SSL support.
 starttls		Enable TLS support.
 streamtuner-local	Enable local metadata support
 streamtuner-xiph	Enable the Xiph plugin	
-sun-jre-jce		Use unlimited strength cryptograpy extension.
+sun-jre-jce		Use unlimited strength cryptography extension.
 svn			Enable subversion support
 syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
