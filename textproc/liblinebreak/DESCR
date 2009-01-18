@@ -1,0 +1,3 @@
+This is liblinebreak, an implementation of the line breaking
+algorithm as described in Unicode 5.0.0 Standard Annex 14, Revision
+19, available at http://www.unicode.org/reports/tr14/tr14-19.html
