@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.306 2009/01/18 16:19:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.307 2009/01/18 16:53:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -396,3 +396,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added emulators/sdlmame version 0.129 [wiz 2009-01-18]
 	Added emulators/sdlmess version 0.129 [wiz 2009-01-18]
 	Updated chat/telepathy-glib to 0.7.22 [wiz 2009-01-18]
+	Updated www/epiphany to 2.24.3 [wiz 2009-01-18]
