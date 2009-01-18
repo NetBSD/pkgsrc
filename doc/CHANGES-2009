@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.311 2009/01/18 19:24:51 seb Exp $
+$NetBSD: CHANGES-2009,v 1.312 2009/01/18 20:09:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -401,3 +401,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/py-cairo to 1.8.2 [wiz 2009-01-18]
 	Added textproc/liblinebreak version 1.0 [wiz 2009-01-18]
 	Added devel/p5-File-Next version 1.02 [seb 2009-01-18]
+	Updated emulators/hatari to 1.1.0 [adam 2009-01-18]
