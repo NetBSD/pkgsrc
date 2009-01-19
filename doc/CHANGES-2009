@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.320 2009/01/19 10:28:44 sketch Exp $
+$NetBSD: CHANGES-2009,v 1.321 2009/01/19 14:19:32 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -419,3 +419,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/unworkable version 0.51 [agc 2009-01-18]
 	Updated chat/irssi-icb to 0.14nb12 [sketch 2009-01-19]
 	Updated net/djbdns to 1.05nb8 [sketch 2009-01-19]
+	Updated audio/pulseaudio to 0.9.14 [jmcneill 2009-01-19]
