@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.323 2009/01/19 20:16:34 abs Exp $
+$NetBSD: CHANGES-2009,v 1.324 2009/01/19 21:45:05 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -431,3 +431,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/pear-MDB2_Driver_pgsql to 1.5.0b2 [abs 2009-01-19]
 	Updated databases/pear-MDB2_Driver_sqlite to 1.5.0b2 [abs 2009-01-19]
 	Updated mail/roundcube to 0.2stable [abs 2009-01-19]
+	Updated devel/bzr to 1.11 [epg 2009-01-19]
+	Updated devel/bzrtools to 1.11.0 [epg 2009-01-19]
+	Updated devel/bzr-svn to 0.4.17 [epg 2009-01-19]
+	Updated devel/qbzr to 0.9.6 [epg 2009-01-19]
