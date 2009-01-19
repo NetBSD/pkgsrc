@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.317 2009/01/19 00:40:29 christos Exp $
+$NetBSD: CHANGES-2009,v 1.318 2009/01/19 05:42:49 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -416,3 +416,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/apache-ant to 1.7.1 [christos 2009-01-18]
 	Updated lang/sun-jre6 to 6u11 [christos 2009-01-18]
 	Updated lang/sun-jdk6 to 6u11 [christos 2009-01-18]
+	Added net/unworkable version 0.51 [agc 2009-01-18]
