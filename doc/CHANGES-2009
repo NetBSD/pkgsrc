@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.322 2009/01/19 18:06:46 abs Exp $
+$NetBSD: CHANGES-2009,v 1.323 2009/01/19 20:16:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -426,3 +426,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-B-Hooks-Parser version 0.08 [abs 2009-01-19]
 	Added devel/p5-Method-Signatures-Simple version 0.03 [abs 2009-01-19]
 	Added devel/p5-signatures version 0.03 [abs 2009-01-19]
+	Updated databases/pear-MDB2 to 2.5.0b2 [abs 2009-01-19]
+	Updated databases/pear-MDB2_Driver_mysql to 1.5.0b2 [abs 2009-01-19]
+	Updated databases/pear-MDB2_Driver_pgsql to 1.5.0b2 [abs 2009-01-19]
+	Updated databases/pear-MDB2_Driver_sqlite to 1.5.0b2 [abs 2009-01-19]
+	Updated mail/roundcube to 0.2stable [abs 2009-01-19]
