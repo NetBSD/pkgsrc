@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2008/12/23 23:26:38 ahoka Exp $
+$NetBSD: distinfo,v 1.10 2009/01/19 20:15:49 abs Exp $
 
-SHA1 (roundcubemail-0.2-beta2-dep.tar.gz) = 21ddfc98b561348adc859e7b5701bfa050185582
-RMD160 (roundcubemail-0.2-beta2-dep.tar.gz) = 2bac95dff178ab0bc6ea9e0dde1cbacfc642c1b3
-Size (roundcubemail-0.2-beta2-dep.tar.gz) = 1127097 bytes
-SHA1 (patch-aa) = 9e3821f745cfbec7fd2fb2783ff57e570cfd4457
+SHA1 (roundcubemail-0.2-stable-dep.tar.gz) = 23bedb1baa91a67ca14a05aa4acae413c8bf7fc6
+RMD160 (roundcubemail-0.2-stable-dep.tar.gz) = ea47cb59c8b3cea13d10e604070dcf2bc92115fb
+Size (roundcubemail-0.2-stable-dep.tar.gz) = 1186285 bytes
+SHA1 (patch-aa) = 277afd7f1e4e163afc0a7a8ca2580e28deb14081
 SHA1 (patch-ab) = 9e81e117952150f363265bbda11cae9eb7d77c08
-SHA1 (patch-ac) = df56f22ca7f5d932bc1b43d1e4b0a1d2f193a24b
+SHA1 (patch-ac) = 33e85bd1577f3554213c0f1da55500761967026a
 SHA1 (patch-af) = 858606b6e1b6fb0eafa568267ba98278fcc64fc4
