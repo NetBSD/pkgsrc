@@ -1,0 +1,6 @@
+This module provides a basic method keyword with simple signatures.
+It's intentionally simple, and is supposed to be a stepping stone
+for its bigger brothers MooseX::Method::Signatures and Method::Signatures.
+It only has a small benefit over regular subs, so if you want more
+features, look at those modules. But if you're looking for a small
+amount of syntactic sugar, this might just be enough.
