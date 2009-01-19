@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.19 2009/01/18 12:04:20 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.20 2009/01/19 10:56:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -49,3 +49,8 @@ pullup ticket #2638 - requested by joerg
 cfitsio: build fix
 pullup ticket #2640 - requested by joerg
 garmin-utils: build fix for newer netbsd
+Pullup ticket #2639 - requested by bouyer
+xentools3: fix startup problems during system boot
+xentools33: fix startup problems during system boot
+Pullup ticket #2641 - requested by dholland
+ncursesw: fix bulk build problems under Linux
