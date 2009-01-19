@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.328 2009/01/19 22:50:52 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.329 2009/01/19 23:24:39 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -446,3 +446,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtk-sharp to 2.12.7nb1 [kefren 2009-01-20]
 	Updated x11/gtksourceview-sharp2 to 0.12nb5 [kefren 2009-01-20]
 	Updated devel/monodevelop to 1.9.1nb1 [kefren 2009-01-20]
+	Updated mail/dkim-milter to 2.8.1 [adrianp 2009-01-19]
