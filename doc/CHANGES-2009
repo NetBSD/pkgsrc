@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.326 2009/01/19 22:26:15 seb Exp $
+$NetBSD: CHANGES-2009,v 1.327 2009/01/19 22:43:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -437,3 +437,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/qbzr to 0.9.6 [epg 2009-01-19]
 	Updated www/p5-HTTP-Server-Simple to 0.38 [seb 2009-01-19]
 	Updated www/p5-Test-WWW-Mechanize to 1.24 [seb 2009-01-19]
+	Updated devel/p5-PHP-Serialization to 0.30 [seb 2009-01-19]
