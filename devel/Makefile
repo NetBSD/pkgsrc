@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1095 2009/01/18 19:23:50 seb Exp $
+# $NetBSD: Makefile,v 1.1096 2009/01/19 18:05:13 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -426,6 +426,8 @@ SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Check
+SUBDIR+=	p5-B-Hooks-OP-PPAddr
+SUBDIR+=	p5-B-Hooks-Parser
 SUBDIR+=	p5-B-Keywords
 SUBDIR+=	p5-B-Utils
 SUBDIR+=	p5-BSD-Resource
@@ -634,6 +636,7 @@ SUBDIR+=	p5-Mac-Carbon
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
+SUBDIR+=	p5-Method-Signatures-Simple
 SUBDIR+=	p5-Module-Build
 SUBDIR+=	p5-Module-CPANTS-Analyse
 SUBDIR+=	p5-Module-CoreList
@@ -819,6 +822,7 @@ SUBDIR+=	p5-namespace-clean
 SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
+SUBDIR+=	p5-signatures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-version
 SUBDIR+=	palmpower
