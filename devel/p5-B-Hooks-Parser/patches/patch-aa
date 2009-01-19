@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/19 18:02:57 abs Exp $
+
+Do not error out if perl was built without PERL_MALLOC_WRAP
+
+--- stolen_chunk_of_toke.c.orig	2009-01-19 15:42:56.000000000 +0000
++++ stolen_chunk_of_toke.c
+@@ -39,7 +39,10 @@ STATIC char*    S_scan_word(pTHX_ char *
+ #define DPTR2FPTR(t,p) ((t)PTR2nat(p))  /* data pointer to function pointer */
+ #define FPTR2DPTR(t,p) ((t)PTR2nat(p))  /* function pointer to data pointer */
+ #define PTR2nat(p)       (PTRV)(p)       /* pointer to integer of PTRSIZE */
+-#define MEM_WRAP_CHECK_(n,t) MEM_WRAP_CHECK(n,t),
++
++#ifdef PERL_MALLOC_WRAP
++# define MEM_WRAP_CHECK_(n,t) MEM_WRAP_CHECK(n,t),
++#endif
+ 
+ /* On MacOS, respect nonbreaking spaces */
+ #ifdef MACOS_TRADITIONAL
