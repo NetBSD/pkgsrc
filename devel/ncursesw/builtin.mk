@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2008/02/29 19:23:07 jlam Exp $
+# $NetBSD: builtin.mk,v 1.7.12.1 2009/01/19 10:52:27 tron Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -37,14 +37,14 @@ MAKEVARS+=	IS_BUILTIN.ncursesw
 ###
 .if !defined(BUILTIN_PKG.ncursesw) && \
     !empty(IS_BUILTIN.ncursesw:M[yY][eE][sS]) && \
-    empty(H_NCURSES:M__nonexistent__)
+    empty(H_NCURSESW:M__nonexistent__)
 BUILTIN_VERSION.ncursesw!=						\
 	${AWK} '/\#define[ 	]*NCURSES_VERSION[ 	]/ {		\
 			vers = $$3;					\
 			gsub("\"", "", vers);				\
 			print vers;					\
 		}							\
-	' ${H_NCURSES:Q}
+	' ${H_NCURSESW:Q}
 BUILTIN_PKG.ncursesw=	ncursesw-${BUILTIN_VERSION.ncursesw}
 .endif
 MAKEVARS+=	BUILTIN_PKG.ncursesw
