@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/19 05:40:39 agc Exp $
+
+Just add the sources we need to to get it to compile on most hosts
+
+--- BSDmakefile	2008-09-08 10:46:30.000000000 -0700
++++ BSDmakefile	2009-01-18 21:16:38.000000000 -0800
+@@ -21,6 +21,7 @@
+ CFLAGS+= -Wmissing-declarations
+ CFLAGS+= -Wshadow -Wpointer-arith -Wcast-qual
+ CFLAGS+= -Wsign-compare -g -ggdb
++CFLAGS+= -Iopenbsd-compat
+ 
+ #
+ # Uncomment if you like to use Boehm's garbage collector (/usr/ports/devel/boehm-gc).
+@@ -32,10 +33,12 @@
+ 
+ PROG= unworkable
+ 
+-SRCS= announce.c bencode.c buf.c ctl_server.c main.c network.c parse.y progressmeter.c scheduler.c torrent.c trace.c util.c xmalloc.c
++SRCS= announce.c bencode.c buf.c ctl_server.c main.c network.c parse.y progressmeter.c scheduler.c torrent.c trace.c util.c xmalloc.c sha1.c strtonum.c
+ OBJS= ${SRCS:N*.h:N*.sh:R:S/$/.o/g}
+ MAN= unworkable.1
+ 
++.PATH: ${.CURDIR}:${.CURDIR}/openbsd-compat
++
+ all: ${PROG} unworkable.cat1
+ 
+ ${PROG}: ${OBJS}
