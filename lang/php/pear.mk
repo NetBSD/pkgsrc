@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.11 2008/06/12 00:20:10 joerg Exp $
+# $NetBSD: pear.mk,v 1.12 2009/01/19 19:55:02 abs Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -46,6 +46,7 @@ PEAR_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated"; \
 	PEAR_LIB="${PEAR_LIB}" WRKSRC="${WRKSRC}" \
 	PEAR_DIRRM_BASEDIR="${PEAR_DIRRM_BASEDIR}" \
+	PEAR_DIRRM_EXCLUDE="${PEAR_DIRRM_EXCLUDE}" \
 	${PREFIX}/bin/php -d include_path=".:${PREFIX}/lib/php" \
 		-C -n ${PKGDIR}/../../lang/php/pear_plist.php;
 GENERATE_PLIST+=	${PEAR_GENERATE_PLIST}
