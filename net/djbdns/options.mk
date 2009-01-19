@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2006/07/27 18:48:03 jlam Exp $
+# $NetBSD: options.mk,v 1.11 2009/01/19 10:27:31 sketch Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djbdns
-PKG_SUPPORTED_OPTIONS+=	inet6 djbdns-ignoreip2 djbdns-tinydns64
+PKG_SUPPORTED_OPTIONS+=	inet6 djbdns-cachestats djbdns-ignoreip2 djbdns-tinydns64
 
 .if ${MACHINE_ARCH} == "sparc64" || \
 	${MACHINE_ARCH} == "alpha" || \
@@ -17,6 +17,13 @@ PATCHFILES+=			${IPV6_PATCH}
 SITES.${IPV6_PATCH}=		http://www.fefe.de/dns/
 PATCH_DIST_STRIP.${IPV6_PATCH}=	-p1
 PLIST_SRC+=			${PKGDIR}/PLIST.inet6
+.endif
+
+.if !empty(PKG_OPTIONS:Mdjbdns-cachestats)
+CACHESTATS_PATCH=		djbdns-cachestats.patch
+PATCHFILES+=			${CACHESTATS_PATCH}
+SITES.${CACHESTATS_PATCH}=	http://romana.now.ie/software/
+PATCH_DIST_STRIP.${CACHESTATS_PATCH}= -p1
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-ignoreip2)
