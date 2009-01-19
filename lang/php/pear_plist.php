@@ -1,10 +1,11 @@
 <?php
-# $NetBSD: pear_plist.php,v 1.5 2007/10/09 19:19:10 martti Exp $
+# $NetBSD: pear_plist.php,v 1.6 2009/01/19 19:55:02 abs Exp $
 # Parses package XML file and outputs appropriate PLIST
 
 $PEAR_LIB = getenv('PEAR_LIB');
 $WRKSRC = getenv('WRKSRC');
 $PEAR_DIRRM_BASEDIR = getenv('PEAR_DIRRM_BASEDIR');
+$PEAR_DIRRM_EXCLUDE = getenv('PEAR_DIRRM_EXCLUDE');
 $dirrm = array();
 
 include_once "PEAR/Common.php";
@@ -59,6 +60,10 @@ foreach($info['filelist'] as $f => $v) {
 # directories are removed first
 $dirrm = array_keys($dirrm);
 rsort($dirrm);
-foreach($dirrm as $dir)
-	echo "@dirrm {$PEAR_LIB}/$dir\n";
+foreach($dirrm as $dir) {
+	$fulldir = "{$PEAR_LIB}/$dir";
+	if ($PEAR_DIRRM_EXCLUDE && substr($fulldir, 0, strlen($PEAR_DIRRM_EXCLUDE)) == $PEAR_DIRRM_EXCLUDE)
+		continue;
+	echo "@dirrm $fulldir\n";
+}
 ?>
