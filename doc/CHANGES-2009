@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.315 2009/01/18 23:09:46 shattered Exp $
+$NetBSD: CHANGES-2009,v 1.316 2009/01/19 00:17:39 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -406,3 +406,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/monotone to 0.42 [jmmv 2009-01-18]
 	Updated devel/monotone-server to 0.42 [jmmv 2009-01-18]
 	Updated pkgtools/rc.subr to 20090118 [shattered 2009-01-18]
+	Updated converters/p5-JSON-Any to 1.19 [he 2009-01-18]
+	Updated databases/p5-CatalystX-CRUD to 0.39 [he 2009-01-18]
+	Updated databases/p5-DBD-postgresql to 2.11.8 [he 2009-01-18]
+	Updated devel/p5-App-Cmd to 0.203 [he 2009-01-18]
+	Updated devel/p5-AutoLoader to 5.68 [he 2009-01-18]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.05 [he 2009-01-18]
+	Updated devel/p5-Curses to 1.26 [he 2009-01-19]
