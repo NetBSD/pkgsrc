@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2004/03/28 20:09:20 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2009/01/19 10:20:03 sketch Exp $
 
---- src/core/icb-commands.c.orig	Sat May  4 19:21:43 2002
-+++ src/core/icb-commands.c
-@@ -32,6 +32,7 @@ static char *icb_commands[] = {
+--- src/core/icb-commands.c.orig	Sat May  4 18:21:43 2002
++++ src/core/icb-commands.c	Mon Jan 19 10:16:27 2009
+@@ -32,6 +32,7 @@
  
  	"invite", "v", "echoback", "name", "motd", "topic", "status",
  	"boot", "pass", "drop", "shutdown", "wall",
-+	"whereis",
++	"whereis", "brick",
          NULL
  };
  
