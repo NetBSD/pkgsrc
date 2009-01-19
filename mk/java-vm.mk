@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.66 2008/10/25 18:04:27 adrianp Exp $
+# $NetBSD: java-vm.mk,v 1.67 2009/01/19 00:34:53 christos Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -132,7 +132,7 @@ _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
-	NetBSD-*-i386 \
+	NetBSD-*-i386 NetBSD-*-x86_64 \
 	SunOS-5.11-i386
 
 # Set the accepted JVMs for this platform.
@@ -178,6 +178,7 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 .if ${_PKG_JVM_DEFAULT} == "sun-jdk"
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
       !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-i386) || \
+      !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-x86_64) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
       !empty(MACHINE_PLATFORM:MDarwin-[8-9].*-*) || \
       !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
@@ -191,7 +192,7 @@ _PKG_JVM_DEFAULT=	sun-jdk15
 	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
 _PKG_JVM_DEFAULT=	sun-jdk14
 .    else
-_PKG_JVM_DEFAULT=	sun-jdk15
+_PKG_JVM_DEFAULT=	sun-jdk6
 .    endif
 .  endif
 .endif
