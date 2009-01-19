@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/19 18:04:07 abs Exp $
+
+SHA1 (signatures-0.03.tar.gz) = dabd61f6aaa86d2e3323dc05157eeb50610a777b
+RMD160 (signatures-0.03.tar.gz) = e3050765404e57e6b763e6b84dfc5d1a13b7ea6a
+Size (signatures-0.03.tar.gz) = 61427 bytes
