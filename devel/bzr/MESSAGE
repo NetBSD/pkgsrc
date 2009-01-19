@@ -1,6 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/11/08 02:56:14 epg Exp $
+$NetBSD: MESSAGE,v 1.3 2009/01/19 21:41:48 epg Exp $
 
-bzr requires security/py-paramiko in order to push branches over sftp.
+bzr requires security/py-paramiko in order to push branches over sftp
+and www/py-curl to verify https certificates.
 
 ===========================================================================
