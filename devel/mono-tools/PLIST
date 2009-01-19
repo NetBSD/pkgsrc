@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/07 13:26:57 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/19 22:41:10 kefren Exp $
 bin/create-native-map
 bin/gasnview
 bin/gendarme
 bin/gendarme-wizard
+bin/gsharp
 bin/gnunit
 bin/gnunit2
 bin/gui-compare
 bin/monodoc
+bin/mperfmon
 bin/mprof-decoder
 bin/mprof-heap-viewer
 lib/create-native-map/MapAttribute.cs
@@ -26,9 +28,13 @@ lib/gendarme/Gendarme.Rules.Security.dll
 lib/gendarme/Gendarme.Rules.Serialization.dll
 lib/gendarme/Gendarme.Rules.Smells.dll
 lib/gendarme/Gendarme.Rules.Ui.dll
+lib/gendarme/Gendarme.Rules.Design.Generic.dll
+lib/gendarme/Gendarme.Rules.Design.Linq.dll
+lib/gendarme/Gendarme.Rules.Security.Cas.dll
 lib/gendarme/gendarme-wizard.exe
 lib/gendarme/gendarme.exe
 lib/gendarme/rules.xml
+lib/gsharp/gsharp.exe
 lib/gui-compare/Mono.Cecil.dll
 lib/gui-compare/gui-compare.exe
 lib/mono-tools/mprof-decoder-library.dll
@@ -45,10 +51,69 @@ lib/mono/2.0/gnunit2.exe
 lib/monodoc/GtkHtmlHtmlRender.dll
 lib/monodoc/MonoWebBrowserHtmlRender.dll
 lib/monodoc/browser.exe
+lib/monodoc/sources/Gendarme.Framework.source
+lib/monodoc/sources/Gendarme.Framework.tree
+lib/monodoc/sources/Gendarme.Framework.zip
+lib/monodoc/sources/Gendarme.Rules.BadPractice.source
+lib/monodoc/sources/Gendarme.Rules.BadPractice.tree
+lib/monodoc/sources/Gendarme.Rules.BadPractice.zip
+lib/monodoc/sources/Gendarme.Rules.Concurrency.source
+lib/monodoc/sources/Gendarme.Rules.Concurrency.tree
+lib/monodoc/sources/Gendarme.Rules.Concurrency.zip
+lib/monodoc/sources/Gendarme.Rules.Correctness.source
+lib/monodoc/sources/Gendarme.Rules.Correctness.tree
+lib/monodoc/sources/Gendarme.Rules.Correctness.zip
+lib/monodoc/sources/Gendarme.Rules.Design.Generic.source
+lib/monodoc/sources/Gendarme.Rules.Design.Generic.tree
+lib/monodoc/sources/Gendarme.Rules.Design.Generic.zip
+lib/monodoc/sources/Gendarme.Rules.Design.Linq.source
+lib/monodoc/sources/Gendarme.Rules.Design.Linq.tree
+lib/monodoc/sources/Gendarme.Rules.Design.Linq.zip
+lib/monodoc/sources/Gendarme.Rules.Design.source
+lib/monodoc/sources/Gendarme.Rules.Design.tree
+lib/monodoc/sources/Gendarme.Rules.Design.zip
+lib/monodoc/sources/Gendarme.Rules.Exceptions.source
+lib/monodoc/sources/Gendarme.Rules.Exceptions.tree
+lib/monodoc/sources/Gendarme.Rules.Exceptions.zip
+lib/monodoc/sources/Gendarme.Rules.Interoperability.source
+lib/monodoc/sources/Gendarme.Rules.Interoperability.tree
+lib/monodoc/sources/Gendarme.Rules.Interoperability.zip
+lib/monodoc/sources/Gendarme.Rules.Maintainability.source
+lib/monodoc/sources/Gendarme.Rules.Maintainability.tree
+lib/monodoc/sources/Gendarme.Rules.Maintainability.zip
+lib/monodoc/sources/Gendarme.Rules.Naming.source
+lib/monodoc/sources/Gendarme.Rules.Naming.tree
+lib/monodoc/sources/Gendarme.Rules.Naming.zip
+lib/monodoc/sources/Gendarme.Rules.Performance.source
+lib/monodoc/sources/Gendarme.Rules.Performance.tree
+lib/monodoc/sources/Gendarme.Rules.Performance.zip
+lib/monodoc/sources/Gendarme.Rules.Portability.source
+lib/monodoc/sources/Gendarme.Rules.Portability.tree
+lib/monodoc/sources/Gendarme.Rules.Portability.zip
+lib/monodoc/sources/Gendarme.Rules.Security.Cas.source
+lib/monodoc/sources/Gendarme.Rules.Security.Cas.tree
+lib/monodoc/sources/Gendarme.Rules.Security.Cas.zip
+lib/monodoc/sources/Gendarme.Rules.Security.source
+lib/monodoc/sources/Gendarme.Rules.Security.tree
+lib/monodoc/sources/Gendarme.Rules.Security.zip
+lib/monodoc/sources/Gendarme.Rules.Serialization.source
+lib/monodoc/sources/Gendarme.Rules.Serialization.tree
+lib/monodoc/sources/Gendarme.Rules.Serialization.zip
+lib/monodoc/sources/Gendarme.Rules.Smells.source
+lib/monodoc/sources/Gendarme.Rules.Smells.tree
+lib/monodoc/sources/Gendarme.Rules.Smells.zip
+lib/monodoc/sources/Gendarme.Rules.Ui.source
+lib/monodoc/sources/Gendarme.Rules.Ui.tree
+lib/monodoc/sources/Gendarme.Rules.Ui.zip
+lib/mperfmon/config
+lib/mperfmon/mperfmon.exe
 lib/pkgconfig/create-native-map.pc
 lib/pkgconfig/gendarme-framework.pc
 man/man1/create-native-map.1
 man/man1/gendarme.1
+man/man1/mperfmon.1
+share/applications/gendarme-wizard.desktop
+share/applications/gsharp.desktop
 share/applications/monodoc.desktop
 share/applications/mprof-heap-viewer.desktop
 share/locale/ca/LC_MESSAGES/mono-tools.mo
@@ -56,6 +121,7 @@ share/locale/da/LC_MESSAGES/mono-tools.mo
 share/locale/es/LC_MESSAGES/mono-tools.mo
 share/locale/fr/LC_MESSAGES/mono-tools.mo
 share/locale/pt_BR/LC_MESSAGES/mono-tools.mo
+share/pixmaps/gendarme.svg
 man/man1/mprof-decoder.1
 man/man1/mprof-heap-viewer.1
 share/pixmaps/monodoc.png
@@ -65,3 +131,4 @@ share/pixmaps/monodoc.png
 @dirrm lib/gendarme
 @dirrm lib/create-native-map
 @dirrm lib/mono-tools
+@dirrm lib/gsharp
