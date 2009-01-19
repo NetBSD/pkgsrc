@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/12/23 23:26:38 ahoka Exp $
+# $NetBSD: Makefile,v 1.14 2009/01/19 20:15:49 abs Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
@@ -13,12 +13,13 @@ COMMENT=	Browser-based multilingual IMAP client
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2-beta2
+RCVERSION=	0.2-stable
 VERSION=	${RCVERSION:S/-//}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
+DEPENDS+=	php5-dom-5.2.*:../../textproc/php5-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.2.10:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.3:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.4.1:../../databases/pear-MDB2
