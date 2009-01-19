@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.321 2009/01/19 14:19:32 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.322 2009/01/19 18:06:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -420,3 +420,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/irssi-icb to 0.14nb12 [sketch 2009-01-19]
 	Updated net/djbdns to 1.05nb8 [sketch 2009-01-19]
 	Updated audio/pulseaudio to 0.9.14 [jmcneill 2009-01-19]
+	Added www/p5-Catalyst-Component-InstancePerContext version 0.001001 [abs 2009-01-19]
+	Added time/p5-Time-modules version 2006.0814 [abs 2009-01-19]
+	Added devel/p5-B-Hooks-OP-PPAddr version 0.02 [abs 2009-01-19]
+	Added devel/p5-B-Hooks-Parser version 0.08 [abs 2009-01-19]
+	Added devel/p5-Method-Signatures-Simple version 0.03 [abs 2009-01-19]
+	Added devel/p5-signatures version 0.03 [abs 2009-01-19]
