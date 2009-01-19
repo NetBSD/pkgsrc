@@ -1,0 +1,6 @@
+Unworkable is a BSD-licensed BitTorrent implementation written by
+Niall O'Higgins <niallo@p2presearch.com>.  Goals of this project
+include efficiency, simplicity and high code quality.
+
+Unworkable is single threaded and asynchronous, written in portable
+ANSI C using libevent and mmap() for performance.
