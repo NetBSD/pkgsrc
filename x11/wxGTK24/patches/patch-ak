@@ -1,0 +1,44 @@
+$NetBSD: patch-ak,v 1.1 2009/01/19 16:36:40 shattered Exp $
+
+Fix a couple of places where 32-bit values were being used for 64 bit
+values (i.e. pointers).  From PR 40257.
+
+--- include/wx/gtk/win_gtk.h.orig	2003-09-21 05:31:56.000000000 -0600
++++ include/wx/gtk/win_gtk.h	2008-12-21 22:01:53.000000000 -0700
+@@ -82,7 +82,7 @@
+ 				     GtkAdjustment  *vadjustment);
+ };
+ 
+-guint      gtk_pizza_get_type        (void);
++GtkType      gtk_pizza_get_type        (void);
+ GtkWidget* gtk_pizza_new             (void);
+ 
+ void       gtk_pizza_set_shadow_type (GtkPizza          *pizza,
+--- src/gtk/win_gtk.c.orig	2003-09-21 05:31:58.000000000 -0600
++++ src/gtk/win_gtk.c	2008-12-21 21:41:21.000000000 -0700
+@@ -102,10 +102,10 @@
+ 
+ static gboolean gravity_works;
+ 
+-guint
++GtkType
+ gtk_pizza_get_type ()
+ {
+-    static guint pizza_type = 0;
++    static GtkType pizza_type = 0;
+ 
+     if (!pizza_type)
+     {
+--- src/unix/utilsx11.cpp.orig	2003-09-21 05:31:40.000000000 -0600
++++ src/unix/utilsx11.cpp	2008-12-21 21:34:49.000000000 -0700
+@@ -101,8 +101,8 @@
+ 
+     if( size > 0 )
+     {
+-        wxUint32* data = new wxUint32[size];
+-        wxUint32* ptr = data;
++        unsigned long* data = new unsigned long[size];
++        unsigned long* ptr = data;
+ 
+         for( i = 0; i < max; ++i )
+         {
