@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/01/03 19:34:02 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2009/01/19 14:19:00 jmcneill Exp $
 #
 
-DISTNAME=	pulseaudio-0.9.13
-PKGREVISION=	5
+DISTNAME=	pulseaudio-0.9.14
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
