@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.10.1 2009/01/19 14:24:36 spz Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -20,6 +20,7 @@ include/dns/dbiterator.h
 include/dns/dbtable.h
 include/dns/diff.h
 include/dns/dispatch.h
+include/dns/dlz.h
 include/dns/dnssec.h
 include/dns/ds.h
 include/dns/enumclass.h
@@ -56,6 +57,7 @@ include/dns/resolver.h
 include/dns/result.h
 include/dns/rootns.h
 include/dns/sdb.h
+include/dns/sdlz.h
 include/dns/secalg.h
 include/dns/secproto.h
 include/dns/soa.h
@@ -126,6 +128,7 @@ include/isc/parseint.h
 include/isc/platform.h
 include/isc/print.h
 include/isc/quota.h
+include/isc/radix.h
 include/isc/random.h
 include/isc/ratelimiter.h
 include/isc/refcount.h
@@ -196,6 +199,7 @@ lib/liblwres.la
 man/man1/dig.1
 man/man1/host.1
 man/man1/nslookup.1
+man/man1/nsupdate.1
 man/man3/lwres.3
 man/man3/lwres_addr_parse.3
 man/man3/lwres_buffer.3
@@ -290,7 +294,6 @@ man/man8/named-checkconf.8
 man/man8/named-checkzone.8
 man/man8/named-compilezone.8
 man/man8/named.8
-man/man8/nsupdate.8
 man/man8/rndc-confgen.8
 man/man8/rndc.8
 sbin/dnssec-keygen
