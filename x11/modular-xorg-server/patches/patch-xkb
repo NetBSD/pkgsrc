@@ -1,3 +1,4 @@
+$NetBSD: patch-xkb,v 1.2 2009/01/19 17:53:15 tnn Exp $
 From d9f2792dd4a6bc078bb58e22c55ee20c56aabe49 Mon Sep 17 00:00:00 2001
 From: Peter Hutterer <peter.hutterer@redhat.com>
 Date: Fri, 19 Sep 2008 18:27:24 +0930
