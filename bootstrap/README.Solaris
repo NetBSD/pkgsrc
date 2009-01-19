@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.10 2009/01/17 21:56:13 adrianp Exp $
+$NetBSD: README.Solaris,v 1.11 2009/01/19 20:34:33 adrianp Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -36,6 +36,7 @@ Sun's gcc package):
 	- SUNWsprot
 	- SUNWlibm
 	- SUNWloc
+	- SUNWsndm
 
 Tested on OpenSolaris 5.11 snv_105 and pkgsrc bootstrap as at Jan 2009.
 
