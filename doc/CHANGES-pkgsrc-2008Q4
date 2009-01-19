@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.20 2009/01/19 10:56:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.21 2009/01/19 11:45:21 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -54,3 +54,5 @@ xentools3: fix startup problems during system boot
 xentools33: fix startup problems during system boot
 Pullup ticket #2641 - requested by dholland
 ncursesw: fix bulk build problems under Linux
+Pullup ticket #2645 - requested by mlelstv
+bind9: security update
