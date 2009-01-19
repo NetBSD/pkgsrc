@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/19 17:59:42 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/19 18:00:59 abs Exp $
 
 DISTNAME=	Time-modules-2006.0814
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Miscellaneous date parsing and formatting
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# USE_LANGUAGES=	c
+USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/Time-modules/.packlist
 
