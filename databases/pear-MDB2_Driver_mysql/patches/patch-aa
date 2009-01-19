@@ -1,19 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2008/07/13 17:55:38 tonnerre Exp $
+$NetBSD: patch-aa,v 1.3 2009/01/19 20:13:38 abs Exp $
 
 --- ../package.xml.orig	2007-05-03 21:05:23.000000000 +0200
 +++ ../package.xml
-@@ -59,7 +59,7 @@ open todo items:
-    <file baseinstalldir="/" md5sum="33df2e21f7c0e5d764adcf82b6294b38" name="MDB2/Driver/Reverse/mysql.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
--   <file baseinstalldir="/" md5sum="de036c07e722213b95a793e2d5db683c" name="MDB2/Driver/mysql.php" role="php">
-+   <file baseinstalldir="/" md5sum="c7c3c8ff80d001c9177920a6ee620b74" name="MDB2/Driver/mysql.php" role="php">
-     <tasks:replace from="@package_version@" to="version" type="package-info" />
-    </file>
-    <file baseinstalldir="/" md5sum="1766c43f50ce08418b524a6047462e4d" name="tests/MDB2_nonstandard_mysql.php" role="test" />
 @@ -79,9 +79,6 @@ open todo items:
      <channel>pear.php.net</channel>
-     <min>2.4.1</min>
+     <min>2.5.0b2</min>
     </package>
 -   <extension>
 -    <name>mysql</name>
