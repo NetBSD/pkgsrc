@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2008/10/07 13:23:25 kefren Exp $
+# $NetBSD: Makefile,v 1.36 2009/01/19 22:39:44 kefren Exp $
 
-DISTNAME=	libgdiplus-2.0
+DISTNAME=	libgdiplus-2.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/libgdiplus/
 EXTRACT_SUFX=	.tar.bz2
