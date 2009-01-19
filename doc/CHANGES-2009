@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.316 2009/01/19 00:17:39 he Exp $
+$NetBSD: CHANGES-2009,v 1.317 2009/01/19 00:40:29 christos Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -413,3 +413,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-AutoLoader to 5.68 [he 2009-01-18]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.05 [he 2009-01-18]
 	Updated devel/p5-Curses to 1.26 [he 2009-01-19]
+	Updated devel/apache-ant to 1.7.1 [christos 2009-01-18]
+	Updated lang/sun-jre6 to 6u11 [christos 2009-01-18]
+	Updated lang/sun-jdk6 to 6u11 [christos 2009-01-18]
