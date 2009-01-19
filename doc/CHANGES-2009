@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.327 2009/01/19 22:43:25 seb Exp $
+$NetBSD: CHANGES-2009,v 1.328 2009/01/19 22:50:52 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -438,3 +438,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTTP-Server-Simple to 0.38 [seb 2009-01-19]
 	Updated www/p5-Test-WWW-Mechanize to 1.24 [seb 2009-01-19]
 	Updated devel/p5-PHP-Serialization to 0.30 [seb 2009-01-19]
+	Updated lang/mono to 2.2 [kefren 2009-01-20]
+	Removed lang/monodoc [kefren 2009-01-20]
+	Updated lang/mono-basic to 2.2 [kefren 2009-01-20]
+	Updated graphics/libgdiplus to 2.2 [kefren 2009-01-20]
+	Updated devel/mono-tools to 2.2 [kefren 2009-01-20]
+	Updated x11/gtk-sharp to 2.12.7nb1 [kefren 2009-01-20]
+	Updated x11/gtksourceview-sharp2 to 0.12nb5 [kefren 2009-01-20]
+	Updated devel/monodevelop to 1.9.1nb1 [kefren 2009-01-20]
