@@ -63,6 +63,7 @@ dbh			Enable DBH support.
 dbus			Enable dbus (desktop bus) support.
 debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
+djbdns-cachestats	Patch to add stats for cache hits/misses.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
 djbfft-pentium		Optimize for Pentium{,MMX} processors.
