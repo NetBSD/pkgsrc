@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.264 2008/11/29 18:13:28 snj Exp $
+# $NetBSD: Makefile,v 1.265 2009/01/19 22:38:08 kefren Exp $
 #
 
 COMMENT=	Programming languages
@@ -93,7 +93,6 @@ SUBDIR+=	minischeme
 SUBDIR+=	mit-scheme-bin
 SUBDIR+=	mono
 SUBDIR+=	mono-basic
-SUBDIR+=	monodoc
 SUBDIR+=	moscow_ml
 SUBDIR+=	mpd
 SUBDIR+=	mzscheme
