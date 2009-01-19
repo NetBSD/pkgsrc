@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/12/07 02:32:20 epg Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/01/19 21:41:48 epg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -7,6 +7,10 @@ ${PYSITELIB}/bzrlib/_btree_serializer_c.so
 ${PYSITELIB}/bzrlib/_btree_serializer_py.py
 ${PYSITELIB}/bzrlib/_btree_serializer_py.pyc
 ${PYSITELIB}/bzrlib/_btree_serializer_py.pyo
+${PYSITELIB}/bzrlib/_chunks_to_lines_py.py
+${PYSITELIB}/bzrlib/_chunks_to_lines_py.pyc
+${PYSITELIB}/bzrlib/_chunks_to_lines_py.pyo
+${PYSITELIB}/bzrlib/_chunks_to_lines_pyx.so
 ${PYSITELIB}/bzrlib/_dirstate_helpers_c.so
 ${PYSITELIB}/bzrlib/_dirstate_helpers_py.py
 ${PYSITELIB}/bzrlib/_dirstate_helpers_py.pyc
@@ -241,6 +245,9 @@ ${PYSITELIB}/bzrlib/externalcommand.pyo
 ${PYSITELIB}/bzrlib/fetch.py
 ${PYSITELIB}/bzrlib/fetch.pyc
 ${PYSITELIB}/bzrlib/fetch.pyo
+${PYSITELIB}/bzrlib/fifo_cache.py
+${PYSITELIB}/bzrlib/fifo_cache.pyc
+${PYSITELIB}/bzrlib/fifo_cache.pyo
 ${PYSITELIB}/bzrlib/foreign.py
 ${PYSITELIB}/bzrlib/foreign.pyc
 ${PYSITELIB}/bzrlib/foreign.pyo
@@ -403,6 +410,15 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyo
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/__init__.py
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/__init__.pyc
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/__init__.py
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/__init__.pyc
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.py
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.pyc
+${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests/test_netrc.pyo
 ${PYSITELIB}/bzrlib/progress.py
 ${PYSITELIB}/bzrlib/progress.pyc
 ${PYSITELIB}/bzrlib/progress.pyo
@@ -610,6 +626,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_exceptions.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_export.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_export.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_export.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.pyo
@@ -727,6 +746,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_serve.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_shared_repository.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_shared_repository.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_shared_repository.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_shelve.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_shelve.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_shelve.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_sign_my_commits.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_sign_my_commits.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_sign_my_commits.pyo
@@ -901,6 +923,9 @@ ${PYSITELIB}/bzrlib/tests/http_server.pyo
 ${PYSITELIB}/bzrlib/tests/http_utils.py
 ${PYSITELIB}/bzrlib/tests/http_utils.pyc
 ${PYSITELIB}/bzrlib/tests/http_utils.pyo
+${PYSITELIB}/bzrlib/tests/https_server.py
+${PYSITELIB}/bzrlib/tests/https_server.pyc
+${PYSITELIB}/bzrlib/tests/https_server.pyo
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.py
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.pyo
@@ -946,6 +971,9 @@ ${PYSITELIB}/bzrlib/tests/per_repository/test__generate_text_key_index.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository/test_add_fallback_repository.py
 ${PYSITELIB}/bzrlib/tests/per_repository/test_add_fallback_repository.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository/test_add_fallback_repository.pyo
+${PYSITELIB}/bzrlib/tests/per_repository/test_add_inventory_by_delta.py
+${PYSITELIB}/bzrlib/tests/per_repository/test_add_inventory_by_delta.pyc
+${PYSITELIB}/bzrlib/tests/per_repository/test_add_inventory_by_delta.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository/test_break_lock.py
 ${PYSITELIB}/bzrlib/tests/per_repository/test_break_lock.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository/test_break_lock.pyo
@@ -1021,9 +1049,18 @@ ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_break_lock.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.py
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.pyo
+${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.py
+${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyc
+${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyo
+${PYSITELIB}/bzrlib/tests/ssl_certs/create_ssls.py
+${PYSITELIB}/bzrlib/tests/ssl_certs/create_ssls.pyc
+${PYSITELIB}/bzrlib/tests/ssl_certs/create_ssls.pyo
 ${PYSITELIB}/bzrlib/tests/stub_sftp.py
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyc
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyo
+${PYSITELIB}/bzrlib/tests/test__chunks_to_lines.py
+${PYSITELIB}/bzrlib/tests/test__chunks_to_lines.pyc
+${PYSITELIB}/bzrlib/tests/test__chunks_to_lines.pyo
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.py
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyc
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyo
@@ -1120,6 +1157,9 @@ ${PYSITELIB}/bzrlib/tests/test_extract.pyo
 ${PYSITELIB}/bzrlib/tests/test_fetch.py
 ${PYSITELIB}/bzrlib/tests/test_fetch.pyc
 ${PYSITELIB}/bzrlib/tests/test_fetch.pyo
+${PYSITELIB}/bzrlib/tests/test_fifo_cache.py
+${PYSITELIB}/bzrlib/tests/test_fifo_cache.pyc
+${PYSITELIB}/bzrlib/tests/test_fifo_cache.pyo
 ${PYSITELIB}/bzrlib/tests/test_foreign.py
 ${PYSITELIB}/bzrlib/tests/test_foreign.pyc
 ${PYSITELIB}/bzrlib/tests/test_foreign.pyo
@@ -1854,6 +1894,7 @@ man/man1/bzr.1
 @dirrm ${PYSITELIB}/bzrlib/tests/workingtree_implementations
 @dirrm ${PYSITELIB}/bzrlib/tests/tree_implementations
 @dirrm ${PYSITELIB}/bzrlib/tests/test_patches_data
+@dirrm ${PYSITELIB}/bzrlib/tests/ssl_certs
 @dirrm ${PYSITELIB}/bzrlib/tests/per_repository_reference
 @dirrm ${PYSITELIB}/bzrlib/tests/per_repository
 @dirrm ${PYSITELIB}/bzrlib/tests/per_lock
@@ -1869,6 +1910,8 @@ man/man1/bzr.1
 @dirrm ${PYSITELIB}/bzrlib/store
 @dirrm ${PYSITELIB}/bzrlib/smart
 @dirrm ${PYSITELIB}/bzrlib/repofmt
+@dirrm ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests
+@dirrm ${PYSITELIB}/bzrlib/plugins/netrc_credential_store
 @dirrm ${PYSITELIB}/bzrlib/plugins/launchpad
 @dirrm ${PYSITELIB}/bzrlib/plugins
 @dirrm ${PYSITELIB}/bzrlib/help_topics/en
