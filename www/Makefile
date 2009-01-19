@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.623 2009/01/17 20:54:27 wiz Exp $
+# $NetBSD: Makefile,v 1.624 2009/01/19 18:05:48 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -249,6 +249,7 @@ SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
 SUBDIR+=	p5-Catalyst-Action-RenderView
 SUBDIR+=	p5-Catalyst-Authentication-Store-DBIx-Class
 SUBDIR+=	p5-Catalyst-Component-ACCEPT_CONTEXT
+SUBDIR+=	p5-Catalyst-Component-InstancePerContext
 SUBDIR+=	p5-Catalyst-Controller-BindLex
 SUBDIR+=	p5-Catalyst-Controller-FormBuilder
 SUBDIR+=	p5-Catalyst-Devel
