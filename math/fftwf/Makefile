@@ -1,11 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/03/15 14:18:39 joerg Exp $
+# $NetBSD: Makefile,v 1.7.12.1 2009/01/19 13:21:36 tron Exp $
 
-.if (${MACHINE_ARCH} == "powerpc")
-DISTNAME=		fftw-3.1.2-fma
-.else
-DISTNAME=		fftw-3.1.2
-.endif
-PKGNAME=		fftwf-3.1.2
+DISTNAME=		fftw-3.2
+PKGNAME=		fftwf-3.2
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
@@ -22,7 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-float
 
-DEPENDS+=		fftw>=3.1.2:../../math/fftw
+DEPENDS+=		fftw>=3.2:../../math/fftw
 
 .if (${MACHINE_ARCH} == "i386")
 #CONFIGURE_ARGS+=	--enable-sse
@@ -30,6 +26,8 @@ CONFIGURE_ARGS+=	--with-our-malloc16
 .endif
 USE_LANGUAGES=		c fortran
 USE_TOOLS+=		gmake
+# For the "test" target:
+USE_TOOLS+=		perl
 
 TEST_TARGET=		check
 
