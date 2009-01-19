@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.17 2009/01/19 23:23:54 sketch Exp $
+
+--- docs/reference/libgail-util/Makefile.in.orig	Mon Jan 19 22:53:27 2009
++++ docs/reference/libgail-util/Makefile.in	Mon Jan 19 22:53:41 2009
+@@ -801,8 +801,9 @@
+ 	    mv -f $${installdir}/$(DOC_MODULE).devhelp \
+ 	      $${installdir}/$(DOC_MODULE)-$(DOC_MODULE_VERSION).devhelp; \
+ 	  fi; \
+-	  ! which gtkdoc-rebase >/dev/null 2>&1 || \
++	  if type gtkdoc-rebase >/dev/null 2>&1; then \
+ 	    gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$${installdir} ; \
++	  fi; \
+ 	fi
+ 
+ uninstall-local:
