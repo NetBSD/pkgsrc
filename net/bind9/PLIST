@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/07/10 21:05:30 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.22.10.1 2009/01/19 11:44:15 tron Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -192,6 +192,7 @@ lib/liblwres.la
 man/man1/dig.1
 man/man1/host.1
 man/man1/nslookup.1
+man/man1/nsupdate.1
 man/man3/lwres.3
 man/man3/lwres_addr_parse.3
 man/man3/lwres_buffer.3
@@ -286,7 +287,6 @@ man/man8/named-checkconf.8
 man/man8/named-checkzone.8
 man/man8/named-compilezone.8
 man/man8/named.8
-man/man8/nsupdate.8
 man/man8/rndc-confgen.8
 man/man8/rndc.8
 sbin/dnssec-keygen
