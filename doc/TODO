@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7813 2009/01/18 21:26:09 jmmv Exp $
+$NetBSD: TODO,v 1.7814 2009/01/19 16:13:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,6 +417,7 @@ Suggested package updates
 	o astyle-1.15.3
 	o at-spi-1.24.1
 	o aterm-1.0.1
+	o atf-0.6
 	o auctex-11.85
 	o autoconvert-0.3.16
 	o autogen-5.9.7
@@ -630,11 +631,11 @@ Suggested package updates
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-desktop-sharp-2.24.1
 	o gnome-pilot-2.0.17
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnumeric-1.8.4
 	o gnupg2-2.0.10
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
@@ -642,6 +643,7 @@ Suggested package updates
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
+	o goffice0.6-0.6.6
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -778,6 +780,7 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmp3splt-0.5.4
 	o libmpd-0.17.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
@@ -844,7 +847,7 @@ Suggested package updates
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mksh-36b
-	o mkvtoolnix-2.4.1
+	o mkvtoolnix-2.4.2
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -854,7 +857,7 @@ Suggested package updates
 	o mono-tools-2.2
 	o mono-xsp-2.2
 	o mp3blaster-3.2.3
-	o mp3splt-gtk-0.5.1 [schmonz]
+	o mp3splt-2.2.3
 	o mpc-0.14
 	o mpeg4ip-1.6.1
 	o mpg123-1.6.4
@@ -865,7 +868,7 @@ Suggested package updates
 	o multitail-5.2.2
 	o munin-1.3.4
 	o muse-0.9.2
-	o musicpd-0.14
+	o musicpd-0.14.1
 	o mutt-devel-1.5.19
 	o mysql-5.1.30
 	o mysql-5.2.3
@@ -1045,7 +1048,6 @@ Suggested package updates
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-boto-1.6b
-	o py-cairo-1.8.2
 	o py-checker-0.8.17
 	o py-dns-2.3.3
 	o py-docutils-0.5
@@ -1212,7 +1214,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-22.1.0
+	o tea-22.2.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
@@ -1231,10 +1233,12 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o tokyocabinet-1.4.0
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.2.1
+	o transcode-1.1.0
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
