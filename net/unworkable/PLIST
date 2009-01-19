@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/19 05:40:39 agc Exp $
+bin/unworkable
+${PKGMANDIR}/man1/unworkable.1
+${PKGMANDIR}/cat1/unworkable.0
