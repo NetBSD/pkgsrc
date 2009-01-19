@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/02 15:47:15 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/01/19 20:15:49 abs Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -6,7 +6,6 @@ share/doc/roundcube/UPGRADING
 share/examples/roundcube/SQL/mssql.initial.sql
 share/examples/roundcube/SQL/mysql.initial.sql
 share/examples/roundcube/SQL/mysql.update.sql
-share/examples/roundcube/SQL/mysql5.initial.sql
 share/examples/roundcube/SQL/postgres.initial.sql
 share/examples/roundcube/SQL/postgres.update.sql
 share/examples/roundcube/SQL/sqlite.initial.sql
@@ -16,10 +15,12 @@ share/examples/roundcube/main.inc.php.dist
 share/examples/roundcube/roundcube.conf
 share/roundcube/.htaccess
 share/roundcube/bin/html2text.php
+share/roundcube/bin/killcache.php
 share/roundcube/bin/modcss.php
 share/roundcube/bin/msgexport.sh
 share/roundcube/bin/msgimport.sh
 share/roundcube/bin/quotaimg.php
+share/roundcube/bin/update.sh
 share/roundcube/index.php
 share/roundcube/installer/check.php
 share/roundcube/installer/client.js
@@ -29,10 +30,12 @@ share/roundcube/installer/images/banner_bg.gif
 share/roundcube/installer/images/banner_logo.gif
 share/roundcube/installer/images/banner_right.gif
 share/roundcube/installer/images/delete.png
+share/roundcube/installer/images/error.png
 share/roundcube/installer/index.php
 share/roundcube/installer/rcube_install.php
 share/roundcube/installer/styles.css
 share/roundcube/installer/test.php
+share/roundcube/installer/utils.php
 share/roundcube/installer/welcome.html
 share/roundcube/program/blank.gif
 share/roundcube/program/blocked.gif
@@ -60,11 +63,15 @@ share/roundcube/program/include/rcube_user.php
 share/roundcube/program/include/rcube_vcard.php
 share/roundcube/program/include/session.inc
 share/roundcube/program/js/app.js
+share/roundcube/program/js/app.js.src
 share/roundcube/program/js/common.js
+share/roundcube/program/js/common.js.src
 share/roundcube/program/js/editor.js
 share/roundcube/program/js/editor_images.js
 share/roundcube/program/js/googiespell.js
+share/roundcube/program/js/googiespell.js.src
 share/roundcube/program/js/list.js
+share/roundcube/program/js/list.js.src
 share/roundcube/program/js/tiny_mce/langs/ar.js
 share/roundcube/program/js/tiny_mce/langs/bg.js
 share/roundcube/program/js/tiny_mce/langs/bs.js
@@ -528,6 +535,8 @@ share/roundcube/program/localization/ca_ES/labels.inc
 share/roundcube/program/localization/ca_ES/messages.inc
 share/roundcube/program/localization/cs_CZ/labels.inc
 share/roundcube/program/localization/cs_CZ/messages.inc
+share/roundcube/program/localization/cy_GB/labels.inc
+share/roundcube/program/localization/cy_GB/messages.inc
 share/roundcube/program/localization/da_DK/labels.inc
 share/roundcube/program/localization/da_DK/messages.inc
 share/roundcube/program/localization/de_CH/labels.inc
@@ -648,6 +657,8 @@ share/roundcube/program/steps/addressbook/search.inc
 share/roundcube/program/steps/addressbook/show.inc
 share/roundcube/program/steps/error.inc
 share/roundcube/program/steps/mail/addcontact.inc
+share/roundcube/program/steps/mail/attachments.inc
+share/roundcube/program/steps/mail/autocomplete.inc
 share/roundcube/program/steps/mail/check_recent.inc
 share/roundcube/program/steps/mail/compose.inc
 share/roundcube/program/steps/mail/folders.inc
@@ -666,7 +677,6 @@ share/roundcube/program/steps/mail/show.inc
 share/roundcube/program/steps/mail/spell.inc
 share/roundcube/program/steps/mail/spell_googie.inc
 share/roundcube/program/steps/mail/spell_pspell.inc
-share/roundcube/program/steps/mail/upload.inc
 share/roundcube/program/steps/mail/viewsource.inc
 share/roundcube/program/steps/settings/delete_identity.inc
 share/roundcube/program/steps/settings/edit_identity.inc
@@ -680,6 +690,7 @@ share/roundcube/skins/default/addresses.css
 share/roundcube/skins/default/colorpicker.css
 share/roundcube/skins/default/common.css
 share/roundcube/skins/default/editor_content.css
+share/roundcube/skins/default/functions.js
 share/roundcube/skins/default/googiespell.css
 share/roundcube/skins/default/images/blank.gif
 share/roundcube/skins/default/images/buttons/add_act.png
@@ -731,8 +742,6 @@ share/roundcube/skins/default/images/buttons/inbox_sel.png
 share/roundcube/skins/default/images/buttons/last_act.png
 share/roundcube/skins/default/images/buttons/last_pas.png
 share/roundcube/skins/default/images/buttons/last_sel.png
-share/roundcube/skins/default/images/buttons/ldap_act.png
-share/roundcube/skins/default/images/buttons/ldap_pas.png
 share/roundcube/skins/default/images/buttons/logout.gif
 share/roundcube/skins/default/images/buttons/logout.png
 share/roundcube/skins/default/images/buttons/mail.gif
@@ -779,6 +788,7 @@ share/roundcube/skins/default/images/googiespell/ok.gif
 share/roundcube/skins/default/images/googiespell/spellc.gif
 share/roundcube/skins/default/images/icons/abcard.png
 share/roundcube/skins/default/images/icons/attachment.png
+share/roundcube/skins/default/images/icons/blank.gif
 share/roundcube/skins/default/images/icons/collapsed.png
 share/roundcube/skins/default/images/icons/deleted.png
 share/roundcube/skins/default/images/icons/dot.png
@@ -795,6 +805,7 @@ share/roundcube/skins/default/images/icons/folder-sent.png
 share/roundcube/skins/default/images/icons/folder-trash.png
 share/roundcube/skins/default/images/icons/forwarded.png
 share/roundcube/skins/default/images/icons/forwarded_replied.png
+share/roundcube/skins/default/images/icons/minus.gif
 share/roundcube/skins/default/images/icons/plus.gif
 share/roundcube/skins/default/images/icons/remove-attachment.png
 share/roundcube/skins/default/images/icons/rename.png
@@ -809,7 +820,6 @@ share/roundcube/skins/default/images/listheader_dark.gif
 share/roundcube/skins/default/images/listheader_light.gif
 share/roundcube/skins/default/images/mailbox_list.gif
 share/roundcube/skins/default/images/mailbox_selected.gif
-share/roundcube/skins/default/images/rcube_watermark.png
 share/roundcube/skins/default/images/roundcube_logo.gif
 share/roundcube/skins/default/images/roundcube_logo.png
 share/roundcube/skins/default/images/roundcube_logo_print.gif
@@ -819,10 +829,9 @@ share/roundcube/skins/default/images/sort_desc.gif
 share/roundcube/skins/default/images/tab_act.gif
 share/roundcube/skins/default/images/tab_pas.gif
 share/roundcube/skins/default/images/taskbar.gif
+share/roundcube/skins/default/images/watermark.gif
 share/roundcube/skins/default/includes/header.html
-share/roundcube/skins/default/includes/ldapscripts.html
 share/roundcube/skins/default/includes/links.html
-share/roundcube/skins/default/includes/settingscripts.html
 share/roundcube/skins/default/includes/settingstabs.html
 share/roundcube/skins/default/includes/taskbar.html
 share/roundcube/skins/default/mail.css
@@ -914,6 +923,7 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/localization/de_DE
 @dirrm share/roundcube/program/localization/de_CH
 @dirrm share/roundcube/program/localization/da_DK
+@dirrm share/roundcube/program/localization/cy_GB
 @dirrm share/roundcube/program/localization/cs_CZ
 @dirrm share/roundcube/program/localization/ca_ES
 @dirrm share/roundcube/program/localization/bs_BA
