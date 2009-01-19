@@ -1,0 +1,2 @@
+Uses Moose to return a new instance of a specified component on
+each Catalyst request
