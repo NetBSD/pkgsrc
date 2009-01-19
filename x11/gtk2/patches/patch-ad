@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.16 2009/01/19 23:23:54 sketch Exp $
+
+--- docs/reference/gdk-pixbuf/Makefile.in.orig	Mon Jan 19 22:52:18 2009
++++ docs/reference/gdk-pixbuf/Makefile.in	Mon Jan 19 22:52:48 2009
+@@ -909,8 +909,9 @@
+ 	    mv -f $${installdir}/$(DOC_MODULE).devhelp \
+ 	      $${installdir}/$(DOC_MODULE)-$(DOC_MODULE_VERSION).devhelp; \
+ 	  fi; \
+-	  ! which gtkdoc-rebase >/dev/null 2>&1 || \
++	  if type gtkdoc-rebase >/dev/null 2>&1; then \
+ 	    gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$${installdir} ; \
++	  fi; \
+ 	fi
+ 
+ uninstall-local:
