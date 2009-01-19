@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/12/07 02:36:29 epg Exp $
+$NetBSD: distinfo,v 1.4 2009/01/19 21:42:00 epg Exp $
 
-SHA1 (bzrtools-1.10.0.tar.gz) = 9e210bcc6ba6192f58cca7076aad40c25e3f8517
-RMD160 (bzrtools-1.10.0.tar.gz) = d3972fba6fef72342f963bb332ec2a94a8a3b309
-Size (bzrtools-1.10.0.tar.gz) = 69727 bytes
+SHA1 (bzrtools-1.11.0.tar.gz) = 2b13cb2790229dd4381ee6e79765e2ace1cf98ea
+RMD160 (bzrtools-1.11.0.tar.gz) = 71cd4e4f5f741dcc2e12b6b785ed6932725743ec
+Size (bzrtools-1.11.0.tar.gz) = 69765 bytes
