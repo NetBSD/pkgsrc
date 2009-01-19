@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/07/13 17:55:38 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/19 20:13:17 abs Exp $
 
-DISTNAME=	MDB2-2.4.1
-PKGREVISION=	1
+DISTNAME=	MDB2-2.5.0b2
 CATEGORIES=	databases
 
 MAINTAINER=	adrianp@NetBSD.org
