@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.132 2008/10/19 19:18:21 he Exp $
+# $NetBSD: Makefile,v 1.133 2009/01/20 20:43:09 drochner Exp $
 #
 
-DISTNAME=		gnumeric-1.8.3
-PKGREVISION=		1
+DISTNAME=		gnumeric-1.8.4
 CATEGORIES=		math gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnumeric/1.8/}
 EXTRACT_SUFX=		.tar.bz2
@@ -50,5 +49,6 @@ BUILDLINK_API_DEPENDS.libgsf+=	libgsf>=1.14.6
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
