@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.7 2009/01/20 13:26:52 sketch Exp $
+
+--- soundserver/Makefile.in.orig	Wed Aug 20 17:07:21 2008
++++ soundserver/Makefile.in	Tue Jan 20 13:11:08 2009
+@@ -529,7 +529,7 @@
+ 	libartsgslplayobject.la libartswavplayobject.la libkmedia2.la
+ 
+ AM_LDFLAGS = $(LDFLAGS_AS_NEEDED)
+-libsoundserver_idl_la_LIBADD = libkmedia2_idl.la \
++libsoundserver_idl_la_LIBADD = libkmedia2_idl.la $(top_builddir)/mcop/libmcop.la \
+                           $(top_builddir)/flow/libartsflow_idl.la
+ 
+ libsoundserver_idl_la_LDFLAGS = -no-undefined -version-info 1:0 $(all_libraries)
+@@ -537,21 +537,27 @@
+ libsoundserver_idl_la_COMPILE_FIRST = soundserver.h
+ libkmedia2_idl_la_SOURCES = kmedia2.cc
+ libkmedia2_idl_la_COMPILE_FIRST = kmedia2.h
+-libkmedia2_idl_la_LIBADD = $(top_builddir)/flow/libartsflow.la
++libkmedia2_idl_la_LIBADD = $(top_builddir)/flow/libartsflow.la \
++    $(top_builddir)/mcop/libmcop.la $(top_builddir)/flow/libartsflow_idl.la
+ libkmedia2_idl_la_LDFLAGS = -no-undefined -version-info 1:0 $(all_libraries)
+ libkmedia2_la_SOURCES = fileinputstream_impl.cc stdoutwriter_impl.cc
+-libkmedia2_la_LIBADD = libkmedia2_idl.la $(FLOWLIBS)
++libkmedia2_la_LIBADD = libkmedia2_idl.la $(FLOWLIBS) \
++    $(top_builddir)/mcop/libmcop.la $(top_builddir)/flow/libartsflow_idl.la
+ libkmedia2_la_LDFLAGS = -no-undefined -version-info 1:0 $(all_libraries)
+ libkmedia2_la_COMPILE_FIRST = kmedia2.h ../flow/artsflow.h
+ libartswavplayobject_la_SOURCES = wavplayobject_impl.cc
+ libartswavplayobject_la_LIBADD = $(top_builddir)/mcop/libmcop.la \
+-                                  libsoundserver_idl.la $(FLOWLIBS)
++                                  libsoundserver_idl.la $(FLOWLIBS) \
++				  $(top_builddir)/soundserver/libkmedia2_idl.la \
++				  $(top_builddir)/flow/libartsflow_idl.la -lm
+ 
+ libartswavplayobject_la_LDFLAGS = -no-undefined -module $(all_libraries)
+ libartswavplayobject_la_COMPILE_FIRST = soundserver.h ../flow/artsflow.h
+ libartsgslplayobject_la_SOURCES = gslplayobject_impl.cc
+ libartsgslplayobject_la_LIBADD = $(top_builddir)/mcop/libmcop.la \
+-                                  libsoundserver_idl.la $(FLOWLIBS)
++                                  libsoundserver_idl.la $(FLOWLIBS) \
++				  $(top_builddir)/soundserver/libkmedia2_idl.la \
++				  $(top_builddir)/flow/libartsflow_idl.la -lm
+ 
+ libartsgslplayobject_la_LDFLAGS = -no-undefined -module $(all_libraries)
+ libartsgslplayobject_la_COMPILE_FIRST = soundserver.h ../flow/artsflow.h
