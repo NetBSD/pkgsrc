@@ -1,7 +1,7 @@
-$NetBSD: patch-ai,v 1.1 2005/01/25 04:58:01 tv Exp $
+$NetBSD: patch-ai,v 1.2 2009/01/20 21:27:51 sketch Exp $
 
---- gdk-pixbuf/pixops/have_mmx.S.orig	2005-01-24 23:54:16.000000000 -0500
-+++ gdk-pixbuf/pixops/have_mmx.S
+--- gdk-pixbuf/pixops/have_mmx.S.orig	Wed Jan 23 00:37:47 2002
++++ gdk-pixbuf/pixops/have_mmx.S	Tue Jan 20 21:21:54 2009
 @@ -3,6 +3,9 @@
  gcc2_compiled.:
  .text
@@ -12,3 +12,21 @@ $NetBSD: patch-ai,v 1.1 2005/01/25 04:58:01 tv Exp $
  .globl pixops_have_mmx
  	.type	 pixops_have_mmx,@function
  
+@@ -9,7 +12,7 @@
+ pixops_have_mmx:
+ 	push	%ebx
+ 
+-# Check if bit 21 in flags word is writeable
++/* Check if bit 21 in flags word is writeable */
+ 
+ 	pushfl	
+ 	popl	%eax
+@@ -24,7 +27,7 @@
+ 
+ 	je .notfound
+ 
+-# OK, we have CPUID
++/* OK, we have CPUID */
+ 
+ 	movl	$1, %eax
+ 	cpuid
