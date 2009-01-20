@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/09 14:19:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/20 19:16:15 drochner Exp $
 bin/diffuse
 man/man1/diffuse.1
 share/applications/diffuse.desktop
@@ -28,11 +28,13 @@ share/diffuse/syntax/verilog.syntax
 share/diffuse/syntax/vhdl.syntax
 share/diffuse/syntax/xml.syntax
 share/examples/diffuse/diffuserc
-share/gnome/help/diffuse/C
-share/omf/diffuse
+share/gnome/help/diffuse/C/diffuse.xml
+share/omf/diffuse/diffuse-C.omf
 share/pixmaps/diffuse.png
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/diffuse
 @comment in rarian: @dirrm share/omf
+@dirrm share/gnome/help/diffuse/C
 @dirrm share/gnome/help/diffuse
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @dirrm share/examples/diffuse
