@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/07/27 18:40:44 he Exp $
+$NetBSD: distinfo,v 1.4 2009/01/20 23:51:29 he Exp $
 
-SHA1 (Set-Scalar-1.22.tar.gz) = 03b8a3b9bd006b84ae73e8c36d26e7a49d6859d0
-RMD160 (Set-Scalar-1.22.tar.gz) = 6792b309c606d4285bb7a80a15aefd29a7893aa8
-Size (Set-Scalar-1.22.tar.gz) = 19165 bytes
+SHA1 (Set-Scalar-1.23.tar.gz) = 97c3aa6810246a133c067894377f83e3f25f5e9a
+RMD160 (Set-Scalar-1.23.tar.gz) = 27de2d42cf6c877a9110b11a11393101d029e956
+Size (Set-Scalar-1.23.tar.gz) = 19673 bytes
