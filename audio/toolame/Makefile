@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/07/14 19:12:22 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2009/01/20 20:01:23 sketch Exp $
 #
 
 DISTNAME=	toolame-02l
@@ -21,6 +21,16 @@ MAKE_ENV+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} ARCH=${TOOLAME_ARCH:Q}
 BUILD_TARGET=	toolame
 
 INSTALLATION_DIRS=	bin
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+SUBST_CLASSES+=		inline
+SUBST_MESSAGE.inline=	Disable inline on Sun Studio
+SUBST_STAGE.inline=	post-patch
+SUBST_FILES.inline=	Makefile
+SUBST_SED.inline=	-e 's,INLINE=inline,INLINE=,'
+.endif
 
 TOOLAME_HTMLFILES= changes.html default.html psycho.html readme.html vbr.html
 do-install:
