@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/07/14 12:55:57 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/01/20 22:41:03 drochner Exp $
 #
 
-DISTNAME=		libmpd-0.15.0
+DISTNAME=		libmpd-0.17.0
 CATEGORIES=		audio
-MASTER_SITES=		http://download.qballcow.nl/gmpc-0.15.5/
+#MASTER_SITES=		http://download.qballcow.nl/gmpc-0.15.5/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://cms.qballcow.nl/index.php?page=libmpd
