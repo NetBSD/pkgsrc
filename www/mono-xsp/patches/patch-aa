@@ -1,0 +1,15 @@
+--- test/2.0/treeview/Makefile.in.orig	2009-01-20 15:33:32.000000000 +0200
++++ test/2.0/treeview/Makefile.in	2009-01-20 15:34:40.000000000 +0200
+@@ -381,10 +381,12 @@
+ 	$(GMCS) -r:System.Web.dll -t:library -out:$@ $^
+ 
+ dist-hook:
++	chmod 644 $(srcdir)/TreeLineImages/*gif
+ 	$(mkinstalldirs) $(distdir)/TreeLineImages
+ 	cp -p $(srcdir)/TreeLineImages/*gif $(distdir)/TreeLineImages
+ 
+ install-data-hook:
++	chmod 644 $(srcdir)/TreeLineImages/*gif
+ 	$(mkinstalldirs) $(DESTDIR)$(pkglibdir)/test/2.0/treeview/TreeLineImages
+ 	cp $(srcdir)/TreeLineImages/*gif $(DESTDIR)$(pkglibdir)/test/2.0/treeview/TreeLineImages
+ 
