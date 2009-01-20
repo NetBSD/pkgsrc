@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/01/11 23:15:55 minskim Exp $
+# $NetBSD: Makefile,v 1.40 2009/01/20 16:30:39 sketch Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 CATEGORIES=	lang
@@ -24,6 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
+MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
 DOCDIR=		${PREFIX}/share/doc/lua
