@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 06:54:42 adam Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/20 19:43:56 sketch Exp $
 
 PKGNAME=	postgresql83-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -30,6 +30,8 @@ BUILD_DEFS+=		PGSQL_THREAD_SAFETY
 CONFIGURE_ARGS+=	--enable-thread-safety
 .  endif
 .endif
+
+LIBS.SunOS+=	-lintl
 
 INSTALL_DIRS=	src/include
 INSTALL_DIRS+=	src/interfaces
