@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.334 2009/01/20 13:48:35 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.335 2009/01/20 17:26:38 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -460,3 +460,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/openoffice3 to 3.0.0nb8 [hira 2009-01-20]
 	Updated www/mono-xsp to 2.2 [kefren 2009-01-20]
 	Updated www/ap-mono to 2.2 [kefren 2009-01-20]
+	Updated devel/cpuflags to 1.35 [abs 2009-01-20]
