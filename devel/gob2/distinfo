@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/10/03 15:25:57 dillo Exp $
+$NetBSD: distinfo,v 1.5 2009/01/20 22:31:52 drochner Exp $
 
-SHA1 (gob2-2.0.14.tar.gz) = 603873f1f9455ee5a03ff5ba7d327489e91b700d
-RMD160 (gob2-2.0.14.tar.gz) = e190a728ea90a0f76ff375ef151505643f5e70bc
-Size (gob2-2.0.14.tar.gz) = 249857 bytes
+SHA1 (gob2-2.0.15.tar.gz) = 615e968e4a3fb16ac0a6f8668c57765554ca3f30
+RMD160 (gob2-2.0.15.tar.gz) = d5cb4c4ecf5574daf5e13b3c3039c1697bd8caaa
+Size (gob2-2.0.15.tar.gz) = 257582 bytes
