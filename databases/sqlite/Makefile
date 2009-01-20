@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/06/18 22:19:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.38 2009/01/20 17:57:36 sketch Exp $
 
 DISTNAME=		sqlite-2.8.16
 PKGREVISION=		1
@@ -22,9 +22,8 @@ CONFIG_GUESS_OVERRIDE=	../sqlite-2.8.16/config.guess
 CONFIG_SUB_OVERRIDE=	../sqlite-2.8.16/config.sub
 
 .include "../../mk/bsd.prefs.mk"
-# this is certainly needed for SunOS-5.8 with gcc.  How about
-# other compilers or newer versions of the OS?
-.if (${OPSYS} == "SunOS") && !empty(OS_VERSION:M5.[6-9]) 
+
+.if (${OPSYS} == "SunOS")
 CFLAGS+=		-DUINT32_TYPE=uint32_t -DUINT16_TYPE=uint16_t \
 			-DUINT8_TYPE=uint8_t -DINTPTR_TYPE=long
 .else
