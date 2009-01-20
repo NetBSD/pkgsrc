@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.335 2009/01/20 17:26:38 abs Exp $
+$NetBSD: CHANGES-2009,v 1.336 2009/01/20 20:50:36 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -461,3 +461,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/mono-xsp to 2.2 [kefren 2009-01-20]
 	Updated www/ap-mono to 2.2 [kefren 2009-01-20]
 	Updated devel/cpuflags to 1.35 [abs 2009-01-20]
+	Updated math/gnumeric to 1.8.4 [drochner 2009-01-20]
+	Updated misc/goffice0.6 to 0.6.6 [drochner 2009-01-20]
+	Updated multimedia/xine-lib to 1.1.16.1 [drochner 2009-01-20]
