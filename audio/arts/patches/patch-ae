@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.5 2009/01/20 13:26:52 sketch Exp $
+
+--- artsc/Makefile.in.orig	Tue Jan 20 13:04:28 2009
++++ artsc/Makefile.in	Tue Jan 20 13:05:51 2009
+@@ -394,7 +394,8 @@
+ libartsc_la_LIBADD = $(top_builddir)/libltdl/libltdlc.la $(LIBPTHREAD)
+ libartscbackend_la_SOURCES = artscbackend.cc
+ libartscbackend_la_LDFLAGS = -no-undefined -module $(KDE_RPATH) $(all_libraries)
+-libartscbackend_la_LIBADD = $(FLOWLIBS) \
++libartscbackend_la_LIBADD = $(FLOWLIBS) $(top_builddir)/mcop/libmcop.la \
++    $(top_builddir)/flow/libartsflow_idl.la \
+     $(top_builddir)/soundserver/libsoundserver_idl.la
+ 
+ artscincludedir = $(includedir)/artsc
