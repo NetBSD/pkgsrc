@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2009/01/11 20:57:20 ahoka Exp $
+# $NetBSD: Makefile,v 1.33 2009/01/20 22:52:17 drochner Exp $
 
-DISTNAME=		mpd-0.13.1
+DISTNAME=		mpd-0.14.1
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
-PKGREVISION=		3
 CATEGORIES=		audio
-MASTER_SITES=		http://musicpd.org/uploads/files/
+#MASTER_SITES=		http://musicpd.org/uploads/files/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
 EXTRACT_SUFX=		.tar.bz2
 
 CONFLICTS=		mpd-[0-9]*
@@ -15,6 +15,7 @@ COMMENT=		Remote controllable audio player
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 
 .include "options.mk"
 
@@ -39,6 +40,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/mpd.conf ${EGDIR}
 
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 
