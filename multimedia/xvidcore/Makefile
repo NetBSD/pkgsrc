@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/01/07 10:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/01/20 23:25:55 sketch Exp $
 
 DISTNAME=	xvidcore-1.2.1
 CATEGORIES=	multimedia
@@ -24,6 +24,16 @@ CONFIGURE_ARGS+=	--disable-assembly
 BUILD_DEPENDS+=		nasm>=0.98.39nb3:../../devel/nasm
 #.elif ${MACHINE_ARCH} == "x86_64"
 #BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
+.endif
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CFLAGS+=		-D__inline=inline
+SUBST_CLASSES+=		ld
+SUBST_MESSAGE.ld=	Fixing linker arguments for Solaris
+SUBST_STAGE.ld=		pre-configure
+SUBST_FILES.ld=		configure
+SUBST_SED.ld=		-e "s|-Wl,-soname,libxvidcore...(SHARED_EXTENSION)...(API_MAJOR)||"
+SUBST_SED.ld+=		-e "s|-Wl,--version-script=libxvidcore.ld||"
 .endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
