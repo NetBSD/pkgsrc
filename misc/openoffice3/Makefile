@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/01/20 09:52:12 hira Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/20 10:19:30 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -140,7 +140,9 @@ PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
 PLIST_SUBST+=		OO_ICON_PREFIX=openofficeorg3
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications	\
-			lib/${OO_RELEASE}/extensions
+			lib/${OO_RELEASE}/extensions			\
+			share/application-registry share/mime-info	\
+			share/mime/packages
 
 OO_UNXNAME=	openoffice.org3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
