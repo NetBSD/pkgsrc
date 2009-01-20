@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/11/21 11:27:31 bjs Exp $
+# $NetBSD: Makefile,v 1.55 2009/01/20 17:51:12 sketch Exp $
 
 DISTNAME=	gmp-4.2.4
 PKGREVISION=	1
@@ -25,11 +25,19 @@ USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 autoconf makeinfo
 
-CONFIGURE_ARGS+=	--enable-cxx --without-readline
+CONFIGURE_ARGS+=	--without-readline
 
 TEST_TARGET=		check
 
+PLIST_VARS+=		cxx
+
 .include "../../mk/bsd.prefs.mk"
+
+.if empty(PKGSRC_COMPILER:Msunpro)
+CONFIGURE_ARGS+=	--enable-cxx
+PLIST.cxx=		yes
+.endif
+
 .if !empty(MACHINE_PLATFORM:MIRIX-5*) && !empty(ABI)
 ABI=			o32
 .endif
@@ -40,7 +48,7 @@ GCC_REQD+=		3.0
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "Darwin"
+.  if ${OPSYS} == "Darwin" || !empty(PKGSRC_COMPILER:Msunpro)
 # don't use x86 assembly (it doesn't build)
 CONFIGURE_ENV+=		MPN_PATH="generic"
 .  else
