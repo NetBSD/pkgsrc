@@ -1,7 +1,7 @@
-$NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
+$NetBSD: patch-au,v 1.3 2009/01/20 23:56:58 sketch Exp $
 
---- texk/dviljk/dvi2xx.h.orig	1999-03-16 08:03:33.000000000 +0100
-+++ texk/dviljk/dvi2xx.h
+--- texk/dviljk/dvi2xx.h.orig	1999-03-16 07:03:33.000000000 +0000
++++ texk/dviljk/dvi2xx.h	2009-01-20 23:47:46.847736250 +0000
 @@ -8,10 +8,14 @@
  /* #define LJ */
  /* #define DRAWGLYPH */
@@ -44,7 +44,7 @@ $NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
  
  
  #define PK_POST 245
-@@ -281,7 +284,14 @@ char *MFMODE     = MFMODE600;
+@@ -281,7 +284,14 @@
  #define VisChar(c) (unsigned char)(c)
  #endif
  
@@ -55,12 +55,12 @@ $NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
 +   write a new one. [27 Jun 07 -js] */
 +#define GetBytes(fp,buf,n) \
 +    ( sizeof(buf) != sizeof(void *) && sizeof(buf) > n ? \
-+        read_multi(buf, 1, n, fp) \
++        (void)read_multi(buf, 1, n, fp) \
 +      : Fatal("Try to read %d bytes in an array of size %d", n, sizeof(buf)) )
  
  
  /**********************************************************************/
-@@ -307,6 +317,7 @@ int     printf();
+@@ -307,6 +317,7 @@
  int     sscanf();
  int     strcmp();
  char   *strcpy();
@@ -68,7 +68,7 @@ $NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
  #   ifdef MSC5
  unsigned int strlen();
  #   endif
-@@ -393,7 +404,7 @@ struct font_entry {    /* font entry */
+@@ -393,7 +404,7 @@
      char n[STRSIZE];          /* FNT_DEF command parameters                */
      long4    font_mag;         /* computed from FNT_DEF s and d parameters  */
      /*char psname[STRSIZE];*/ /* PostScript name of the font               */
@@ -77,7 +77,7 @@ $NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
      FILEPTR font_file_id;      /* file identifier (NO_FILE if none)         */
  #ifdef USEPXL
      long4    magnification;    /* magnification read from PXL file          */
-@@ -487,8 +498,8 @@ void    LoadAChar DVIPROTO((long4, regis
+@@ -487,8 +498,8 @@
  long4   NoSignExtend DVIPROTO((FILEPTR, int));
  void    OpenFontFile DVIPROTO((void));
  long4   PixRound DVIPROTO((long4, long4));
@@ -88,7 +88,7 @@ $NetBSD: patch-au,v 1.2 2008/08/24 20:35:37 tonnerre Exp $
  			     unsigned int, unsigned char *));
  void    RasterChar DVIPROTO((struct char_entry *));
  void    ReadFontDef DVIPROTO((long4));
-@@ -534,11 +545,12 @@ bool    LastPageSpecified = _FALSE;
+@@ -534,11 +545,12 @@
  #ifndef KPATHSEA
  char   *PXLpath = FONTAREA;
  #endif
