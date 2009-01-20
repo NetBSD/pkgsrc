@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.332 2009/01/20 06:25:13 seb Exp $
+$NetBSD: CHANGES-2009,v 1.333 2009/01/20 09:54:01 hira Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -457,3 +457,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Term-ANSIColor version 1.12 [he 2009-01-19]
 	Updated devel/p5-Devel-REPL to 1.003001 [he 2009-01-19]
 	Updated security/p5-Authen-SASL to 2.12nb1 [seb 2009-01-20]
+	Updated misc/openoffice3 to 3.0.0nb8 [hira 2009-01-20]
