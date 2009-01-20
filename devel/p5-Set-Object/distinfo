@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/12/09 07:24:14 tonnerre Exp $
+$NetBSD: distinfo,v 1.5 2009/01/20 23:48:57 he Exp $
 
-SHA1 (Set-Object-1.26.tar.gz) = 3bbbb2a5889cdfc148b20343e90316a9969005ee
-RMD160 (Set-Object-1.26.tar.gz) = 5ee47e73fcba2767d8bd37f81d53eb266669de1c
-Size (Set-Object-1.26.tar.gz) = 72924 bytes
-SHA1 (patch-aa) = 499aa9c7e91b2761fc415b279c1a95b36fb096b6
+SHA1 (Set-Object-1.27.tar.gz) = e5affbec5d7fa7dd9e75b784ae5dfe7adbbe4c98
+RMD160 (Set-Object-1.27.tar.gz) = 297db263af2cb669a0980993b8548315ae41f7e2
+Size (Set-Object-1.27.tar.gz) = 73106 bytes
