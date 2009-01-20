@@ -1,10 +1,20 @@
-$NetBSD: patch-am,v 1.1 2008/12/21 13:57:29 jmcneill Exp $
+$NetBSD: patch-am,v 1.2 2009/01/20 10:08:17 sketch Exp $
 
-PR# pkg/40146: security/policykit fails to build on Linux
-
---- configure.in.orig	2008-06-30 22:40:59.000000000 +0300
-+++ configure.in
-@@ -528,7 +528,7 @@ case "$host_os" in
+--- configure.in.orig	Mon Jun 30 20:40:59 2008
++++ configure.in	Tue Jan 20 09:42:26 2009
+@@ -521,6 +521,11 @@
+ 	;;
+   *solaris*)
+ 	AC_DEFINE([HAVE_SOLARIS], 1, [Is this a Solaris system?])
++	case "`uname -s`" in
++	  5.11)
++		AC_DEFINE([HAVE_OPENSOLARIS], 1, [Is this an OpenSolaris system?])
++		;;
++	esac
+ 	;;
+   *freebsd*)
+   	AC_DEFINE([HAVE_FREEBSD], 1, [Is this a FreeBSD system?])
+@@ -528,7 +533,7 @@
  esac
  
  have_inotify=no
