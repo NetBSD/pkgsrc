@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/01/03 15:40:04 tron Exp $
+# $NetBSD: Makefile,v 1.17 2009/01/20 22:33:38 sketch Exp $
 
 SNAPSHOT_DATE=		20081217
 
@@ -41,7 +41,7 @@ MAKE_ENV+=		SH=${SH:Q}
 
 BUILD_TARGET=		default
 BUILDLINK_TRANSFORM+=	rm:-O4	# XXX does this mean anything to any compiler?
-REPLACE_SH=		strip_fopt.sh
+REPLACE_SH=		strip_fopt.sh version.sh
 
 .include "../../mk/dlopen.buildlink3.mk"
 
