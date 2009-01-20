@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.14 2008/11/02 22:25:09 snj Exp $
+$NetBSD: distinfo,v 1.15 2009/01/20 22:52:17 drochner Exp $
 
-SHA1 (mpd-0.13.1.tar.bz2) = 0a760bafb608ea5ecde28433dfef8f25a4a12a56
-RMD160 (mpd-0.13.1.tar.bz2) = 30416258a750c4238443c5d2fe895bcb70fa9daa
-Size (mpd-0.13.1.tar.bz2) = 435425 bytes
-SHA1 (patch-aa) = 246424791365a3a9a29c2efe36bbbcd40416ae48
-SHA1 (patch-ab) = 867ed205669efe40bd6debf3f7d82380cb8090fc
+SHA1 (mpd-0.14.1.tar.bz2) = e87424caafca366c15744a31cbc34197474862f9
+RMD160 (mpd-0.14.1.tar.bz2) = b3ae29717f22e4e7bf03a0356b6ca3a0c96bbb60
+Size (mpd-0.14.1.tar.bz2) = 286850 bytes
