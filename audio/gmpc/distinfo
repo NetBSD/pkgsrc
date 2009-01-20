@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2008/05/30 17:32:28 drochner Exp $
+$NetBSD: distinfo,v 1.12 2009/01/20 22:46:09 drochner Exp $
 
-SHA1 (gmpc-0.15.5.0.tar.gz) = 3ac0755da2215b0d037427ee50bea55d953e2454
-RMD160 (gmpc-0.15.5.0.tar.gz) = 5f7f8b4809cc6e3248cd0a9951d5b5e4f18975cc
-Size (gmpc-0.15.5.0.tar.gz) = 893886 bytes
-SHA1 (patch-af) = b15ed261dc255d751dbd09f468590db47fe61a05
+SHA1 (gmpc-0.17.0.tar.gz) = 2b4d4f33e3374440936e91ddc790a98cff13ef1b
+RMD160 (gmpc-0.17.0.tar.gz) = 5ae15f833c333e6fcd47c7ee9712782ff169ae36
+Size (gmpc-0.17.0.tar.gz) = 1041200 bytes
 SHA1 (patch-ag) = 16a41bf8acfac8738a1cc589aeae102a3f9ccecb
