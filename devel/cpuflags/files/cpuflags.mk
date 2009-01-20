@@ -1,4 +1,4 @@
-# $Id: cpuflags.mk,v 1.18 2008/01/11 12:58:30 abs Exp $
+# $Id: cpuflags.mk,v 1.19 2009/01/20 17:26:21 abs Exp $
 # Makefile include fragment to simplify use of cpuflags in pkgsrc
 # abs@absd.org - freely distributable, no warrenties, stick no bills.
 
@@ -12,13 +12,25 @@
 #
 #	CPU_DIR		CPU_FLAGS with spaces stripped (eg: for use in PACKAGES)
 
+
 .ifndef CPU_FLAGS
-. if defined(BSD_PKG_MK) || ${USETOOLS:Uyes} == "no"
-CPU_FLAGS!=@PREFIX@/bin/cpuflags ${CC}
+
+. if exists(${.PARSEDIR}/cpuflags.sh)
+_CPUFLAGS_SH=${.PARSEDIR}/cpuflags.sh
 . else
-CPU_FLAGS!=@PREFIX@/bin/cpuflags
+_CPUFLAGS_SH=@PREFIX@/bin/cpuflags
 . endif
-.endif
+
+. if defined(CCPATH)
+CPU_FLAGS!=${_CPUFLAGS_SH} ${CCPATH}
+. elif defined(BSD_PKG_MK) || ${USETOOLS:Uyes} == "no"
+CPU_FLAGS!=${_CPUFLAGS_SH} ${CC}
+. else
+CPU_FLAGS!=${_CPUFLAGS_SH}
+. endif
+_CPUFLAGS_SH=
+
+.endif # CPU_FLAGS
 
 .ifndef CPU_DIR
 CPU_DIR!=echo ${CPU_FLAGS} | sed 's/ //g'
