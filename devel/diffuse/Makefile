@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/01/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/20 19:16:15 drochner Exp $
 #
 
 DISTNAME=	diffuse-0.2.15
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
@@ -39,8 +40,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/usr/bin/diffuse ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/pixmaps/diffuse.png \
 		${PREFIX}/share/pixmaps
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/gnome/help/diffuse/C/diffuse.xml \
 		${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/omf/diffuse
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/omf/diffuse/diffuse-C.omf \
 		${DESTDIR}${PREFIX}/share/omf/diffuse
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/applications/diffuse.desktop \
@@ -53,7 +56,8 @@ do-install:
 		${DESTDIR}${PREFIX}/share/examples/diffuse
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.10
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
