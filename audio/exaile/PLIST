@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/11 11:37:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/20 21:49:23 drochner Exp $
 bin/exaile
 lib/exaile/exaile.py
 lib/exaile/lib/__init__.py
@@ -10,6 +10,9 @@ lib/exaile/lib/ecs.pyo
 lib/exaile/lib/feedparser.py
 lib/exaile/lib/feedparser.pyc
 lib/exaile/lib/feedparser.pyo
+lib/exaile/lib/scrobbler.py
+lib/exaile/lib/scrobbler.pyc
+lib/exaile/lib/scrobbler.pyo
 lib/exaile/lib/wmainfo.py
 lib/exaile/lib/wmainfo.pyc
 lib/exaile/lib/wmainfo.pyo
@@ -77,6 +80,9 @@ lib/exaile/xl/gui/playlist.pyo
 lib/exaile/xl/gui/statsdialog.py
 lib/exaile/xl/gui/statsdialog.pyc
 lib/exaile/xl/gui/statsdialog.pyo
+lib/exaile/xl/gui/tray.py
+lib/exaile/xl/gui/tray.pyc
+lib/exaile/xl/gui/tray.pyo
 lib/exaile/xl/library.py
 lib/exaile/xl/library.pyc
 lib/exaile/xl/library.pyo
@@ -196,8 +202,10 @@ share/exaile/images/year.png
 share/exaile/sql/changes0001.sql
 share/exaile/sql/changes0002.sql
 share/exaile/sql/changes0003.sql
+share/exaile/sql/changes0004.sql
 share/exaile/sql/db.sql
 share/exaile/xl/plugins/plugins.glade
+share/locale/an/LC_MESSAGES/exaile.mo
 share/locale/ar/LC_MESSAGES/exaile.mo
 share/locale/bg/LC_MESSAGES/exaile.mo
 share/locale/ca/LC_MESSAGES/exaile.mo
@@ -205,6 +213,7 @@ share/locale/cs/LC_MESSAGES/exaile.mo
 share/locale/da/LC_MESSAGES/exaile.mo
 share/locale/de/LC_MESSAGES/exaile.mo
 share/locale/el/LC_MESSAGES/exaile.mo
+share/locale/en_CA/LC_MESSAGES/exaile.mo
 share/locale/en_GB/LC_MESSAGES/exaile.mo
 share/locale/eo/LC_MESSAGES/exaile.mo
 share/locale/es/LC_MESSAGES/exaile.mo
@@ -216,31 +225,40 @@ share/locale/fa/LC_MESSAGES/exaile.mo
 share/locale/fi/LC_MESSAGES/exaile.mo
 share/locale/fr/LC_MESSAGES/exaile.mo
 share/locale/frp/LC_MESSAGES/exaile.mo
+share/locale/gl/LC_MESSAGES/exaile.mo
 share/locale/he/LC_MESSAGES/exaile.mo
 share/locale/he_IL/LC_MESSAGES/exaile.mo
 share/locale/hu/LC_MESSAGES/exaile.mo
+share/locale/id/LC_MESSAGES/exaile.mo
 share/locale/it/LC_MESSAGES/exaile.mo
 share/locale/it_IT/LC_MESSAGES/exaile.mo
+share/locale/ja/LC_MESSAGES/exaile.mo
 share/locale/ka/LC_MESSAGES/exaile.mo
 share/locale/ko/LC_MESSAGES/exaile.mo
 share/locale/lt/LC_MESSAGES/exaile.mo
+share/locale/lv/LC_MESSAGES/exaile.mo
+share/locale/mk/LC_MESSAGES/exaile.mo
 share/locale/nb/LC_MESSAGES/exaile.mo
 share/locale/nl/LC_MESSAGES/exaile.mo
 share/locale/nn/LC_MESSAGES/exaile.mo
 share/locale/oc/LC_MESSAGES/exaile.mo
 share/locale/pa/LC_MESSAGES/exaile.mo
 share/locale/pl/LC_MESSAGES/exaile.mo
+share/locale/pt/LC_MESSAGES/exaile.mo
 share/locale/pt_BR/LC_MESSAGES/exaile.mo
 share/locale/ro/LC_MESSAGES/exaile.mo
 share/locale/ru/LC_MESSAGES/exaile.mo
 share/locale/sk/LC_MESSAGES/exaile.mo
 share/locale/sl/LC_MESSAGES/exaile.mo
+share/locale/sr/LC_MESSAGES/exaile.mo
 share/locale/sr@latin/LC_MESSAGES/exaile.mo
 share/locale/sv/LC_MESSAGES/exaile.mo
+share/locale/ta/LC_MESSAGES/exaile.mo
 share/locale/te/LC_MESSAGES/exaile.mo
 share/locale/tr/LC_MESSAGES/exaile.mo
 share/locale/tr_TR/LC_MESSAGES/exaile.mo
 share/locale/uk/LC_MESSAGES/exaile.mo
+share/locale/zh_CN/LC_MESSAGES/exaile.mo
 share/locale/zh_TW/LC_MESSAGES/exaile.mo
 share/pixmaps/exaile.png
 @comment in xdg-dirs: @dirrm share/pixmaps
