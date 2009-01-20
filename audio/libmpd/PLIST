@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/30 17:28:21 drochner Exp $
-include/libmpd/debug_printf.h
-include/libmpd/libmpd.h
-include/libmpd/libmpdclient.h
-include/libmpd/libmpd-database.h
-include/libmpd/libmpd-internal.h
-include/libmpd/libmpd-player.h
-include/libmpd/libmpd-playlist.h
-include/libmpd/libmpd-status.h
-include/libmpd/libmpd-strfsong.h
-include/libmpd/libmpd-version.h
+@comment $NetBSD: PLIST,v 1.5 2009/01/20 22:41:03 drochner Exp $
+include/libmpd-1.0/libmpd/debug_printf.h
+include/libmpd-1.0/libmpd/libmpd-database.h
+include/libmpd-1.0/libmpd/libmpd-internal.h
+include/libmpd-1.0/libmpd/libmpd-player.h
+include/libmpd-1.0/libmpd/libmpd-playlist.h
+include/libmpd-1.0/libmpd/libmpd-status.h
+include/libmpd-1.0/libmpd/libmpd-strfsong.h
+include/libmpd-1.0/libmpd/libmpd-version.h
+include/libmpd-1.0/libmpd/libmpd.h
+include/libmpd-1.0/libmpd/libmpdclient.h
 lib/libmpd.la
-lib/libmpd.so.0.0.0
 lib/pkgconfig/libmpd.pc
-@dirrm include/libmpd
+@dirrm include/libmpd-1.0/libmpd
+@dirrm include/libmpd-1.0
