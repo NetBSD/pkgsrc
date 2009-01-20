@@ -1,0 +1,16 @@
+$NetBSD: patch-ej,v 1.1 2009/01/20 09:52:12 hira Exp $
+
+--- rsc/source/rscpp/cpp3.c.orig	2008-04-11 16:35:31.000000000 +0900
++++ rsc/source/rscpp/cpp3.c	2009-01-20 17:53:33.000000000 +0900
+@@ -469,7 +469,11 @@
+         register char           *tp;
+         register DEFBUF         *dp;
+         int                     i;
++#ifdef NETBSD
++        time_t                  tvec;
++#else
+         long                    tvec;
++#endif
+ 
+ #if !defined( ZTC ) && !defined( WNT ) && !defined(BLC) && !defined(G3)
+         extern char             *ctime();
