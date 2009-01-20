@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.9 2009/01/20 20:43:09 drochner Exp $
+
+--- po/Makefile.in.in.orig	2009-01-18 17:15:13.000000000 +0100
++++ po/Makefile.in.in
+@@ -69,6 +69,7 @@ $(POFILES) $(SOURCES)
+ EXTRA_DISTFILES = POTFILES.skip Makevars LINGUAS
+ 
+ POTFILES = \
++#
+ 
+ CATALOGS = @CATALOGS@
+ CATOBJEXT = @CATOBJEXT@
