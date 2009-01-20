@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.333 2009/01/20 09:54:01 hira Exp $
+$NetBSD: CHANGES-2009,v 1.334 2009/01/20 13:48:35 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -458,3 +458,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-REPL to 1.003001 [he 2009-01-19]
 	Updated security/p5-Authen-SASL to 2.12nb1 [seb 2009-01-20]
 	Updated misc/openoffice3 to 3.0.0nb8 [hira 2009-01-20]
+	Updated www/mono-xsp to 2.2 [kefren 2009-01-20]
+	Updated www/ap-mono to 2.2 [kefren 2009-01-20]
