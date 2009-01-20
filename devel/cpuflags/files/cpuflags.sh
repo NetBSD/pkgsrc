@@ -1,6 +1,13 @@
 #!/bin/sh
-# $NetBSD: cpuflags.sh,v 1.4 2008/12/31 14:49:54 abs Exp $
+# $NetBSD: cpuflags.sh,v 1.5 2009/01/20 17:26:21 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
+
+# cd to the directory containing the binary, so we can usefully check for
+# include files from there
+case "$0" in
+    /*) cd $(dirname $0) ;;
+    *)  cd $(dirname $PWD/$0) ;;
+esac
 
 include()
     {
