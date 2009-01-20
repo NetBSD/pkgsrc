@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/06/11 12:57:44 obache Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/20 21:49:23 drochner Exp $
 #
 
-DISTNAME=	exaile_0.2.13
-PKGNAME=	exaile-0.2.13
-PKGREVISION=	1
+DISTNAME=	exaile_0.2.14
+PKGNAME=	exaile-0.2.14
 CATEGORIES=	audio
 MASTER_SITES=	http://www.exaile.org/files/
 
@@ -11,6 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exaile.org/
 COMMENT=	Music player
 
+WRKSRC=		${WRKDIR}/exaile-0.2.14
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
