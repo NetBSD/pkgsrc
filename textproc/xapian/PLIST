@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/26 23:35:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/21 06:42:32 dsainty Exp $
 bin/copydatabase
 bin/delve
-bin/quartzcheck
-bin/quartzcompact
-bin/quartzdump
+${PLIST.quartz}bin/quartzcheck
+${PLIST.quartz}bin/quartzcompact
+${PLIST.quartz}bin/quartzdump
 bin/quest
 bin/simpleexpand
 bin/simpleindex
 bin/simplesearch
-bin/xapian-check
-bin/xapian-compact
+${PLIST.flint}bin/xapian-check
+${PLIST.flint}bin/xapian-compact
 bin/xapian-config
-bin/xapian-inspect
+${PLIST.flint}bin/xapian-inspect
 bin/xapian-progsrv
 bin/xapian-tcpsrv
 include/xapian.h
@@ -40,14 +40,14 @@ include/xapian/visibility.h
 lib/libxapian.la
 man/man1/copydatabase.1
 man/man1/delve.1
-man/man1/quartzcheck.1
-man/man1/quartzcompact.1
-man/man1/quartzdump.1
+${PLIST.quartz}man/man1/quartzcheck.1
+${PLIST.quartz}man/man1/quartzcompact.1
+${PLIST.quartz}man/man1/quartzdump.1
 man/man1/quest.1
-man/man1/xapian-check.1
-man/man1/xapian-compact.1
+${PLIST.flint}man/man1/xapian-check.1
+${PLIST.flint}man/man1/xapian-compact.1
 man/man1/xapian-config.1
-man/man1/xapian-inspect.1
+${PLIST.flint}man/man1/xapian-inspect.1
 man/man1/xapian-progsrv.1
 man/man1/xapian-tcpsrv.1
 share/aclocal/xapian.m4
