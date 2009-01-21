@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.336 2009/01/20 20:50:36 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.337 2009/01/21 00:35:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -464,3 +464,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/gnumeric to 1.8.4 [drochner 2009-01-20]
 	Updated misc/goffice0.6 to 0.6.6 [drochner 2009-01-20]
 	Updated multimedia/xine-lib to 1.1.16.1 [drochner 2009-01-20]
+	Updated devel/p5-ExtUtils-Command to 1.16 [he 2009-01-20]
+	Updated devel/p5-Graph to 0.91 [he 2009-01-20]
+	Updated devel/p5-IO-Interactive to 0.0.5 [he 2009-01-20]
+	Updated devel/p5-Module-Build to 0.31012 [he 2009-01-20]
+	Updated devel/p5-Module-CoreList to 2.17 [he 2009-01-20]
+	Updated devel/p5-Set-Object to 1.27 [he 2009-01-20]
+	Updated devel/p5-Set-Scalar to 1.23 [he 2009-01-20]
+	Updated devel/p5-Software-License to 0.009 [he 2009-01-20]
+	Updated devel/p5-Sub-Exporter to 0.982 [he 2009-01-20]
+	Updated devel/p5-Sub-Install to 0.925 [he 2009-01-21]
+	Updated devel/p5-Test-POE-Server-TCP to 0.16 [he 2009-01-21]
