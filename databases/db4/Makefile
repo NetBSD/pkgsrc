@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/09/07 11:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2009/01/21 15:44:32 drochner Exp $
 #
 # NOTE:
 # When updating this package, a change in the minor (4.n -> 4.(n+1))
@@ -7,7 +7,7 @@
 # In particular, take care to include BDB_ACCEPTED=db4 packages.
 
 DISTNAME=	db-4.7.25
-PKGNAME=	${DISTNAME:S/db/db4/}.1
+PKGNAME=	${DISTNAME:S/db/db4/}.3
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
