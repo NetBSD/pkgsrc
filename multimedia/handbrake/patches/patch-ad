@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+
+--- contrib/Jamfile.orig	2008-10-27 19:29:19.000000000 -0400
++++ contrib/Jamfile
+@@ -80,6 +80,7 @@ rule LibAvCodec
+     FFMPEG_PATCH = "$(PATCH) -p0 < ../patch-ffmpeg.patch" ;
+     FFMPEG_PATCH += " && $(PATCH) -p0 < ../patch-ffmpeg-latm.patch " ;
+     FFMPEG_PATCH += " && $(PATCH) -p0 < ../patch-ffmpeg-mpegleak.patch " ;
++    FFMPEG_PATCH += " && $(PATCH) -p0 < ../patch-ffmpeg-nodocs.patch " ;
+     if $(OS) = CYGWIN
+     {
+         FFMPEG_PATCH += " && $(PATCH) -p1 < ../patch-ffmpeg-cygwin.patch " ;
+@@ -98,6 +99,10 @@ rule LibAvCodec
+        #
+        FFMPEG_EXTRA_OPTIONS = "--disable-vis --disable-demuxer=mpc8 --disable-vhook --disable-network" ;
+     }
++    else
++    {
++       FFMPEG_EXTRA_OPTIONS = "--enable-memalign-hack --disable-devices" ;
++    }
+ 
+     Depends $(<) : $(>) ;
+     Depends lib  : $(<) ;

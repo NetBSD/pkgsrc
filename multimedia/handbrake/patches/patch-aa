@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+
+--- Makefile.orig	2008-11-21 15:54:03.000000000 -0500
++++ Makefile
+@@ -1,6 +1,12 @@
+ include Makefile.config
+ 
+ SYSTEM = $(shell uname -s)
++ifeq ($(SYSTEM),Linux)
++  SYSTEM = UNIX
++endif
++ifeq ($(SYSTEM),NetBSD)
++  SYSTEM = UNIX
++endif
+ 
+ # Special case for Mac OS X: everything is handled from the Xcode project
+ 
+@@ -65,9 +71,9 @@ cli-snapshot-release:
+ endif
+ 
+ #
+-# Linux
++# UNIX
+ #
+-ifeq ($(SYSTEM),Linux)
++ifeq ($(SYSTEM),UNIX)
+ 
+ snapshot: unstable-libhb/hbversion.h all
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ffmpeg-nodocs.patch,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+
+--- configure.orig	2009-01-20 20:56:24.000000000 -0500
++++ configure	2008-09-28 19:29:23.000000000 -0400
+@@ -1784,7 +1784,7 @@
+     restore_flags
+ fi
+ 
+-texi2html -version > /dev/null 2>&1 && enable texi2html || disable texi2html
++disable texi2html
+ 
+ ##########################################
+ # Network check
