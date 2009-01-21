@@ -1,0 +1,26 @@
+$NetBSD: patch-ca,v 1.1 2009/01/21 15:40:20 drochner Exp $
+
+--- src/pulse/utf8.c.orig	2008-09-03 23:13:43.000000000 +0200
++++ src/pulse/utf8.c
+@@ -55,6 +55,7 @@
+ 
+ #ifdef HAVE_ICONV
+ #include <iconv.h>
++#include <langinfo.h>
+ #endif
+ 
+ #include <pulse/xmalloc.h>
+@@ -243,11 +244,11 @@ static char* iconv_simple(const char *st
+ }
+ 
+ char* pa_utf8_to_locale (const char *str) {
+-    return iconv_simple(str, "", "UTF-8");
++    return iconv_simple(str, nl_langinfo(CODESET), "UTF-8");
+ }
+ 
+ char* pa_locale_to_utf8 (const char *str) {
+-    return iconv_simple(str, "UTF-8", "");
++    return iconv_simple(str, "UTF-8", nl_langinfo(CODESET));
+ }
+ 
+ #else
