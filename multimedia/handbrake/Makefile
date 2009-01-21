@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/21 14:19:14 jmcneill Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -35,6 +35,12 @@ DISTFILES+=	${CDISTFILES}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://handbrake.fr/
 COMMENT=	Multiplatform, multithreaded video transcoder
+
+RESTRICTED=	Unresolved patent issues
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
