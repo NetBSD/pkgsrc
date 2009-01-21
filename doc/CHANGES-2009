@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.341 2009/01/21 14:17:03 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.342 2009/01/21 19:29:48 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -479,3 +479,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typo3 to 4.2.4 [taca 2009-01-21]
 	Updated www/drupal6-translations to 20090118 [taca 2009-01-21]
 	Added multimedia/handbrake version 0.9.3 [jmcneill 2009-01-21]
+	Updated audio/mpc to 0.14 [drochner 2009-01-21]
+	Updated audio/musicpd to 0.14.1 [drochner 2009-01-21]
+	Updated audio/gmpc to 0.17.0 [drochner 2009-01-21]
+	Updated audio/libmpd to 0.17.0 [drochner 2009-01-21]
+	Updated devel/gob2 to 2.0.15 [drochner 2009-01-21]
+	Updated audio/exaile to 0.2.14 [drochner 2009-01-21]
