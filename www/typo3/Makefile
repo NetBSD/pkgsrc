@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/11/20 15:50:56 taca Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/21 13:10:05 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-VER=		4.2.3
+VER=		4.2.4
 NO_BUILD=	yes
 USE_TOOLS=	pax
 
