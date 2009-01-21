@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.337 2009/01/21 00:35:41 he Exp $
+$NetBSD: CHANGES-2009,v 1.338 2009/01/21 05:35:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -475,3 +475,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Sub-Exporter to 0.982 [he 2009-01-20]
 	Updated devel/p5-Sub-Install to 0.925 [he 2009-01-21]
 	Updated devel/p5-Test-POE-Server-TCP to 0.16 [he 2009-01-21]
+	Updated comms/asterisk to 1.2.31 [obache 2009-01-21]
