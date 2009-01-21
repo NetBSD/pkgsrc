@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+bin/HandBrakeCLI
+bin/ghb
+share/applications/ghb.desktop
+share/doc/ghb/AUTHORS
+share/doc/ghb/COPYING
+share/doc/ghb/ChangeLog
+share/doc/ghb/INSTALL
+share/doc/ghb/NEWS
+share/doc/ghb/README
+share/icons/hicolor/128x128/apps/hb-icon.png
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/ghb
+@comment in xdg-dirs: @dirrm share/applications

@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+
+--- test/Makefile.orig	2009-01-20 21:27:22.000000000 -0500
++++ test/Makefile	2009-01-20 21:27:40.000000000 -0500
+@@ -15,7 +15,11 @@ ifeq ($(findstring CYGWIN_NT,$(SYSTEM)),
+ 	LIBS2 += $(CYGLIBS:%=../contrib/lib/libz.a) $(CYGLIBS:%=../contrib/lib/libbz2.a)
+ endif
+ 
++ifeq ($(SYSTEM),NetBSD)
++LDFLAGS += $(LIBS2) -lbz2
++else
+ LDFLAGS += $(LIBS2) -lbz2 -ldl
++endif
+ 
+ ../HandBrakeCLI: test.c parsecsv.c $(LIBS2)
+ 	@CMD="$(CC) $(CFLAGS) -o test.o -c test.c"; $$CMD || \
