@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2009/01/19 22:35:53 kefren Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2009/01/21 18:20:28 kefren Exp $
 bin/al
 bin/al1
 bin/al2
@@ -29,10 +29,19 @@ bin/makecert
 bin/mconfig
 bin/mcs
 bin/mcs1
+bin/mdassembler
+bin/mdoc
+bin/mdoc-assemble
+bin/mdoc-export-html
+bin/mdoc-export-msxdoc
+bin/mdoc-update
+bin/mdoc-validate
+bin/mdvalidater
 bin/mjs
 bin/mkbundle
 bin/mkbundle1
 bin/mkbundle2
+bin/mod
 bin/mono
 bin/mono-api-diff
 bin/mono-api-info
@@ -47,6 +56,9 @@ bin/mono-shlib-cop
 bin/mono-test-install
 bin/mono-xmltool
 bin/monodis
+bin/monodocer
+bin/monodocs2html
+bin/monodocs2slashdoc
 bin/monograph
 bin/monolinker
 bin/monop
@@ -782,6 +794,13 @@ man/man1/macpack.1
 man/man1/makecert.1
 man/man1/mconfig.1
 man/man1/mcs.1
+man/man1/mdassembler.1
+man/man1/mdoc-assemble.1
+man/man1/mdoc-export-html.1
+man/man1/mdoc-export-msxdoc.1
+man/man1/mdoc-update.1
+man/man1/mdoc-validate.1
+man/man1/mdoc.1
 man/man1/mdvalidater.1
 man/man1/mint.1
 man/man1/mkbundle.1
@@ -792,6 +811,8 @@ man/man1/mono-xmltool.1
 man/man1/mono.1
 man/man1/monoburg.1
 man/man1/monodis.1
+man/man1/monodocer.1
+man/man1/monodocs2html.1
 man/man1/monolinker.1
 man/man1/monop.1
 man/man1/monostyle.1
@@ -809,6 +830,7 @@ man/man1/soapsuds.1
 man/man1/sqlsharp.1
 man/man1/wsdl.1
 man/man1/xsd.1
+man/man5/mdoc.5
 man/man5/mono-config.5
 share/examples/mono/1.0/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/1.0/machine.config
