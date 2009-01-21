@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:00 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/21 00:11:00 he Exp $
 
-DISTNAME=	Sub-Install-0.924
+DISTNAME=	Sub-Install-0.925
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sub/}
 
