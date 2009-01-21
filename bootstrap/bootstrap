@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.137 2008/11/19 16:35:23 sketch Exp $
+# $NetBSD: bootstrap,v 1.138 2009/01/21 00:07:40 sketch Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -829,6 +829,13 @@ fi
 if [ "$compiler" != "" ]; then
 	echo "PKGSRC_COMPILER=	$compiler" >> ${TARGET_MKCONF}
 fi
+case "$compiler" in
+sunpro)
+	echo "CC=			cc"        >> ${TARGET_MKCONF}
+	echo "CXX=			CC"        >> ${TARGET_MKCONF}
+	echo "CPP=			\${CC} -E" >> ${TARGET_MKCONF}
+	;;
+esac
 if [ -n "$SUNWSPROBASE" ]; then
 	echo "SUNWSPROBASE=		$SUNWSPROBASE" >> ${TARGET_MKCONF}
 fi
