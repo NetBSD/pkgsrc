@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+
+--- configure.orig	2008-09-30 15:17:10.000000000 -0400
++++ configure
+@@ -5,7 +5,7 @@ CXX="g++"
+ CCFLAGS="$CCFLAGS -Wall -g"
+ OPTIM="$OPTIM -O3 -funroll-loops"
+ LINKLIBS="-lz -lbz2"
+-MAKE=make
++MAKE=gmake
+ 
+ # System-specific flags
+ SYSTEM=`uname -s`
+@@ -85,19 +85,6 @@ else
+ fi
+ rm -f testconf.c testconf
+ 
+-#
+-# Use Gnu make when available over the built in make
+-#
+-if ( make --version | grep GNU ) > /dev/null 2>&1
+-then
+-MAKE=make
+-elif ( gmake --version | grep GNU ) > /dev/null 2>&1
+-then
+-MAKE=gmake
+-else
+-MAKE=make
+-fi
+-
+ # Unless the user wants a release build, configure for SVN snapshots
+ if test "$1" = "--release" || test "$2" = "--release"; then
+     SNAPSHOT=0
