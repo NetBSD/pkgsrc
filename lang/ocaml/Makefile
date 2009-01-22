@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/12/22 20:04:07 joerg Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2009/01/22 11:40:54 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -30,6 +30,7 @@ BUILD_TARGET+=	opt opt.opt
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .  if empty(MACHINE_PLATFORM:MDarwin-*-powerpc) && \
       empty(MACHINE_PLATFORM:MSunOS-*-i386) && \
+      empty(MACHINE_PLATFORM:MNetBSD-*-powerpc) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-x86_64) && \
       empty(MACHINE_PLATFORM:MNetBSD-*-sparc)
 PLIST_SRC+=	${PKGDIR}/PLIST.prof
