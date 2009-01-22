@@ -1,18 +1,18 @@
-$NetBSD: patch-ay,v 1.7 2007/05/21 20:24:48 xtraeme Exp $
+$NetBSD: patch-ay,v 1.8 2009/01/22 07:27:28 jmmv Exp $
 
---- block-raw.c.orig	2007-02-06 00:01:54.000000000 +0100
-+++ block-raw.c
-@@ -25,7 +25,9 @@
+--- block-raw-posix.c.orig	2008-01-06 20:38:42.000000000 +0100
++++ block-raw-posix.c
+@@ -28,7 +28,9 @@
+ #endif
  #include "block_int.h"
  #include <assert.h>
- #ifndef _WIN32
 +#ifdef _POSIX_ASYNCHRONOUS_IO
  #include <aio.h>
 +#endif
  
- #ifndef QEMU_TOOL
- #include "exec-all.h"
-@@ -157,6 +159,7 @@ static int raw_pwrite(BlockDriverState *
+ #ifdef CONFIG_COCOA
+ #include <paths.h>
+@@ -230,6 +232,7 @@ label__raw_write__success:
      return ret;
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ay,v 1.7 2007/05/21 20:24:48 xtraeme Exp $
  /***********************************************************/
  /* Unix AIO using POSIX AIO */
  
-@@ -379,6 +382,7 @@ static void raw_aio_cancel(BlockDriverAI
+@@ -455,6 +458,7 @@ static void raw_aio_cancel(BlockDriverAI
          pacb = &acb->next;
      }
  }
@@ -28,7 +28,7 @@ $NetBSD: patch-ay,v 1.7 2007/05/21 20:24:48 xtraeme Exp $
  
  static void raw_close(BlockDriverState *bs)
  {
-@@ -469,6 +473,35 @@ static void raw_flush(BlockDriverState *
+@@ -545,6 +549,35 @@ static void raw_flush(BlockDriverState *
      fsync(s->fd);
  }
  
@@ -64,10 +64,10 @@ $NetBSD: patch-ay,v 1.7 2007/05/21 20:24:48 xtraeme Exp $
  BlockDriver bdrv_raw = {
      "raw",
      sizeof(BDRVRawState),
-@@ -480,10 +513,12 @@ BlockDriver bdrv_raw = {
+@@ -556,10 +589,12 @@ BlockDriver bdrv_raw = {
      raw_create,
      raw_flush,
-     
+ 
 +#ifdef _POSIX_ASYNCHRONOUS_IO
      .bdrv_aio_read = raw_aio_read,
      .bdrv_aio_write = raw_aio_write,
@@ -77,10 +77,10 @@ $NetBSD: patch-ay,v 1.7 2007/05/21 20:24:48 xtraeme Exp $
      .protocol_name = "file",
      .bdrv_pread = raw_pread,
      .bdrv_pwrite = raw_pwrite,
-@@ -816,10 +851,12 @@ BlockDriver bdrv_host_device = {
+@@ -908,10 +943,12 @@ BlockDriver bdrv_host_device = {
      NULL,
      raw_flush,
-     
+ 
 +#ifdef _POSIX_ASYNCHRONOUS_IO
      .bdrv_aio_read = raw_aio_read,
      .bdrv_aio_write = raw_aio_write,
