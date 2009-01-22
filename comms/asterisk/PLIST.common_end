@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST.common_end,v 1.5 2008/11/24 09:27:29 jnemeth Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5.2.1 2009/01/22 12:47:01 tron Exp $
 @dirrm share/examples/asterisk
+@dirrm libdata/asterisk/sounds/silence
 @dirrm libdata/asterisk/sounds/phonetic
 @dirrm libdata/asterisk/sounds/letters
 @dirrm libdata/asterisk/sounds/digits
 @dirrm libdata/asterisk/sounds/dictate
-@dirrm libdata/asterisk/sounds/silence
-@dirrm libdata/asterisk/sounds
+@comment @dirrm libdata/asterisk/sounds
 @dirrm libdata/asterisk/mohmp3
 @dirrm libdata/asterisk/keys
 @dirrm libdata/asterisk/images
 @dirrm libdata/asterisk/firmware/iax
 @dirrm libdata/asterisk/firmware
 @dirrm libdata/asterisk/agi-bin
-@dirrm libdata/asterisk
+@comment @dirrm libdata/asterisk
 @dirrm lib/asterisk/modules
 @dirrm lib/asterisk
 @dirrm include/asterisk
