@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/28 12:49:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/22 21:19:17 roy Exp $
 #
 
-DISTNAME=	wpa_supplicant-0.6.6
+DISTNAME=	wpa_supplicant-0.6.7
 CATEGORIES=	net
 MASTER_SITES=	http://hostap.epitest.fi/releases/
 
@@ -18,8 +18,18 @@ BUILD_DIRS=	wpa_supplicant
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
+PKG_OPTIONS_VAR=	PKG_OPTIONS.wpa_supplicant
+PKG_SUPPORTED_OPTIONS=	dbus
+PKG_SUGGESTED_OPTIONS=	dbus
+
+.include "../../mk/bsd.options.mk"
+
 post-extract:
-	cp ${FILESDIR}/defconfig.${OPSYS} ${WRKSRC}/wpa_supplicant/.config
+	${CP} ${FILESDIR}/defconfig ${WRKSRC}/wpa_supplicant/.config
+	${CAT} ${FILESDIR}/defconfig.${OPSYS} >> ${WRKSRC}/wpa_supplicant/.config
+.if !empty(PKG_OPTIONS:Mdbus)
+	${ECHO} xxCONFIG_CTRL_IFACE_DBUS=y >> ${WRKSRC}/wpa_supplicant/.config
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wpa_supplicant/wpa_cli \
@@ -37,6 +47,10 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/wpa_supplicant/doc/docbook/wpa_supplicant.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 
-.include "../../net/libpcap/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mdbus)
+.include "../../sysutils/dbus/buildlink3.mk"
+.endif
 
+.include "../../net/libpcap/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
