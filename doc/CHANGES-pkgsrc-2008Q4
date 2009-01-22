@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.24 2009/01/22 11:41:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.25 2009/01/22 12:40:07 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -66,3 +66,5 @@ Pullup  ticket #2648 - request by taca
 typo3: security update
 Pullup ticket #2649 - requested by he
 ocaml: build fix for NetBSD/macppc
+Pullup ticket #2646 - requested by obache
+asterisk: security update
