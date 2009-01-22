@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.348 2009/01/22 13:43:02 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.349 2009/01/22 16:47:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -491,3 +491,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/p5-nkf to 2.09 [obache 2009-01-22]
 	Added multimedia/cfourcc version 0.1.2 [jmcneill 2009-01-22]
 	Added multimedia/mediainfo version 0.7.8 [jmcneill 2009-01-22]
+	Updated databases/rrdtool12 to 1.2.30 [martti 2009-01-22]
+	Updated databases/rrdtool to 1.3.6 [martti 2009-01-22]
