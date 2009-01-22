@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/12 06:41:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.4.2.1 2009/01/22 11:23:11 tron Exp $
 ${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
@@ -438,13 +438,18 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/fileicons/zip.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/filter_bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/CREDITS.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/at.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ba.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/bg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/br.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ch.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/cn.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/cs.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/cy.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/cz.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/de.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/dk.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ee.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/eg.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/es-basque.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/es.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/fi.gif
@@ -455,12 +460,18 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/gl.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/gr.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/hr.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/hu.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ie.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/il.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ir.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/is.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/it.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/jp.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/kr.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/lt.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/lv.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ma.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/mk.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/mt.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/multi-language.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/nl.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/no.gif
@@ -472,6 +483,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/sa.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/se.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/sk.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/sl.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/tn.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/tr.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/ua.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/unknown.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/gfx/flags/us.gif
@@ -1166,6 +1179,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/login_frameset.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/logomenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/logout.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/md5.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/mod.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/README.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/file/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/file/file.gif
@@ -1237,7 +1251,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/web/perm/legend.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/web/perm/perm.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/web/perm/perm.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/mod/web/website.gif
-${TYPO3DIR}/${TYPO3NAME}/typo3/mod.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/move_el.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/show_item.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/show_rechis.php
@@ -1269,8 +1282,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-xmlschema.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-xmlschema03.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/contrib/toxmlrpc.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/cute_icons_for_site/adodb.gif
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/cute_icons_for_site/adodb2.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-access.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-db2.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-firebird.inc.php
@@ -1283,17 +1294,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-oci8.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-postgres.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-sapdb.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict/datadict-sybase.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-active-record.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-adodb.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-datadict.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-oracle.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-perf.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-session.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/docs-session.old.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/old-changelog.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/readme.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/tips_portable_sql.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs/tute.htm
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-access.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-ado.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers/adodb-ado5.inc.php
@@ -1365,69 +1365,10 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/lang/adodb-uk1251.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/license.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/Auth/Container/ADOdb.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/readme.Auth.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-db2.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-informix.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-mssql.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-mysql.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-oci8.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf/perf-postgres.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pivottable.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/readme.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/rsfilter.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/server.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-compress-bzip2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-compress-gzip.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-cryptsession.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-cryptsession2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-encrypt-mcrypt.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-encrypt-md5.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-encrypt-secret.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-encrypt-sha1.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-sess.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-session-clob.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-session-clob2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-session.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-session2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-sessions.mysql.sql
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-sessions.oracle.clob.sql
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/adodb-sessions.oracle.sql
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/crypt.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/old/adodb-cryptsession.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/old/adodb-session-clob.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/old/adodb-session.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/old/crypt.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/session_schema.xml
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/session_schema2.xml
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/benchmark.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/client.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/pdo.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/rr.htm
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-active-record.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-active-recs2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-datadict.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-perf.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-pgblob.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-php5.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test-xmlschema.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test2.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test3.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test4.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test5.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/test_rs_array.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testcache.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testdatabases.inc.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testgenid.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testmssql.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testoci8.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testoci8cursor.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testpaging.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testpear.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/testsessions.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/time.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/tmssql.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/xmlschema-mssql.xml
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests/xmlschema.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/toexport.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tohtml.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/xmlschema.dtd
@@ -2108,9 +2049,11 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/imgs/jesus2_transp.png
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/imgs/pdf_from_imagemagick.pdf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/imgs/typo3logotype.ai
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/class.tx_install.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/class.tx_install_eid.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/clear.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/install.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/install.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/mod/locallang_mod.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/updates/class.tx_coreupdates_compatversion.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/install/updates/class.tx_coreupdates_mergeadvanced.php
@@ -2962,6 +2905,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/content_client.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/content_default.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/content_fresh.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/content_selected.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/copy_page_after.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/copy_page_into.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/copymode_h.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/copymode_n.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/copymode_s.gif
@@ -3369,6 +3314,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/mode5_n.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/mode6_n.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/mode7_n.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/move_page.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/move_page_after.gif
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/move_page_into.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/move_record.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/napshot.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/icons/gfx/new_el.gif
@@ -4210,18 +4157,12 @@ ${TYPO3DIR}/${SITEDIR}/uploads/index.html
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/res
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/doc
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/xsl
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/tests
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session/old
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/session
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/perf
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/Auth/Container
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear/Auth
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/pear
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/lang
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/drivers
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/docs
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/datadict
-@dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/cute_icons_for_site
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/contrib
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb
