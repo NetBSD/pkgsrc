@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/11/05 14:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22.2.1 2009/01/22 20:18:30 tron Exp $
 #
 
 .include "Makefile.common"
@@ -10,7 +10,12 @@ USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
 # disable doxygen, see libtheora-docs package
+# also, disable transfig, and *tex.
+
 CONFIGURE_ENV+=		HAVE_DOXYGEN=no
+CONFIGURE_ENV+=		HAVE_TRANSFIG=no
+CONFIGURE_ENV+=		HAVE_BIBTEX=no
+CONFIGURE_ENV+=		HAVE_PDFLATEX=no
 
 # avoid installing docs
 do-install:
