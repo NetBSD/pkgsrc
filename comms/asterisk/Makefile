@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2009/01/21 05:35:07 obache Exp $
+# $NetBSD: Makefile,v 1.60 2009/01/22 12:19:49 obache Exp $
 
 DISTNAME=	asterisk-1.2.31
 CATEGORIES=	comms net audio
@@ -68,6 +68,8 @@ SUBST_SED.asterisk+=	-e 's|^ *\(ASTEXAMPLEDIR\)=.*|\1 = ${ASTEXAMPLEDIR}|'
 RCD_SCRIPTS=		asterisk
 OWN_DIRS+=		${ASTSPOOLDIR} ${ASTLOGDIR} ${ASTVARRUNDIR}
 OWN_DIRS+=		${ASTLOGDIR}/cdr-csv
+# XXX: should be in ${VARBASE}
+OWN_DIRS+=		${ASTVARLIBDIR}/sounds/priv-callerintros
 
 CONF_FILES=		# empty
 .for f in asterisk.conf extensions.conf
