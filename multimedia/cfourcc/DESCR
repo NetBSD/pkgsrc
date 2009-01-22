@@ -1,0 +1,6 @@
+The Linux FourCC Changer is a simple command line utility for working with
+Microsoft AVI files. Features:
+
+  - Identifies the codec used in AVI files (*.avi)
+  - Allow the user to change the FourCC description code (like fourcc-changer
+    in Windows).
