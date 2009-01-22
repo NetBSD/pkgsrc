@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.1.1.1 2008/07/28 19:48:03 martti Exp $
+$NetBSD: patch-as,v 1.1.1.1.6.1 2009/01/22 21:48:00 tron Exp $
 
 Adjust for pkgsrc.
 
---- src/rrd_cgi.c.orig	2006-05-04 15:26:28.000000000 +0200
-+++ src/rrd_cgi.c
-@@ -418,7 +418,7 @@ int main(int argc, char *argv[]) {
+--- src/rrd_cgi.c.orig	2009-01-19 16:29:14.000000000 +0200
++++ src/rrd_cgi.c	2009-01-22 17:53:09.000000000 +0200
+@@ -419,7 +419,7 @@
  
  	if (!filter) {
  		printf ("Content-Type: text/html\n" 
