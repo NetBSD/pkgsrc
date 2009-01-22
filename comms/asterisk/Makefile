@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2008/11/24 09:27:29 jnemeth Exp $
+# $NetBSD: Makefile,v 1.58.2.1 2009/01/22 12:39:43 tron Exp $
 
-DISTNAME=	asterisk-1.2.30
-PKGREVISION=	1
+DISTNAME=	asterisk-1.2.31
 CATEGORIES=	comms net audio
-MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
-		http://ftp.digium.com/pub/asterisk/old-releases/
+MASTER_SITES=	http://downloads.digium.com/pub/asterisk/releases/ \
+		http://downloads.digium.com/pub/asterisk/old-releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
@@ -43,7 +42,7 @@ ASTCONFPATH?=		${ASTETCDIR}/asterisk.conf
 ASTBINDIR?=		${PREFIX}/bin
 ASTSBINDIR?=		${PREFIX}/sbin
 ASTVARRUNDIR?=		${VARBASE}/run
-ASTMANDIR?=		${PREFIX}/man
+ASTMANDIR?=		${PREFIX}/${PKGMANDIR}
 ASTEXAMPLEDIR?=		${PREFIX}/share/examples/asterisk
 
 # Override default paths in Makefile
