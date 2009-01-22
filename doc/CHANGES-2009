@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.343 2009/01/21 23:48:35 seb Exp $
+$NetBSD: CHANGES-2009,v 1.344 2009/01/22 07:28:31 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -486,3 +486,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gob2 to 2.0.15 [drochner 2009-01-21]
 	Updated audio/exaile to 0.2.14 [drochner 2009-01-21]
 	Updated devel/p5-Devel-REPL to 1.003002 [seb 2009-01-21]
+	Updated emulators/qemu to 0.9.1 [jmmv 2009-01-22]

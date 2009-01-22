@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7816 2009/01/20 13:48:35 kefren Exp $
+$NetBSD: TODO,v 1.7817 2009/01/22 07:28:32 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -1079,7 +1079,6 @@ Suggested package updates
 	o python26-2.6.0
 	o qbrew-0.3.9
 	o qca2-2.0.1
-	o qemu-0.9.1
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.3.2
