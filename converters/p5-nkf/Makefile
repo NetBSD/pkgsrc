@@ -1,21 +1,27 @@
-# $NetBSD: Makefile,v 1.16 2008/10/19 19:17:42 he Exp $
+# $NetBSD: Makefile,v 1.17 2009/01/22 08:50:12 obache Exp $
 #
 
-DISTNAME=	nkf205
-PKGNAME=	p5-nkf-2.05
-PKGREVISION=	2
+.include "../../converters/nkf/Makefile.common"
+
+PKGNAME=	p5-nkf-2.09
 SVR4_PKGNAME=	p5nkf
 CATEGORIES=	japanese converters perl5
-MASTER_SITES=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://sourceforge.jp/projects/nkf/
 COMMENT=	Perl library for Network Kanji code conversion Filter
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/NKF.mod
+USE_LANGUAGES=	c
+
+PERL5_CONFIGURE_DIRS=	NKF.mod
+BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 PERL5_PACKLIST=		auto/NKF/.packlist
+
+SUBST_CLASSES+=		sp
+SUBST_STAGE.sp=		pre-configure
+SUBST_FILES.sp=		nkf.c
+SUBST_SED.sp=		-e 's/SP/SPSP/g'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
