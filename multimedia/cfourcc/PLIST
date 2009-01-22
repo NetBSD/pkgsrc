@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/22 12:44:45 jmcneill Exp $
+bin/cfourcc
