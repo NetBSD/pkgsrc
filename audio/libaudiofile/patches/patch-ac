@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.2.2 2009/01/22 20:21:28 tron Exp $
+
+--- libaudiofile/modules/msadpcm.c.orig	2004-03-06 07:39:23.000000000 +0100
++++ libaudiofile/modules/msadpcm.c
+@@ -129,8 +129,7 @@ static int ms_adpcm_decode_block (ms_adp
+ 	ms_adpcm_state	*state[2];
+ 
+ 	/* Calculate the number of bytes needed for decoded data. */
+-	outputLength = msadpcm->samplesPerBlock * sizeof (int16_t) *
+-		msadpcm->track->f.channelCount;
++	outputLength = msadpcm->samplesPerBlock * sizeof (int16_t);
+ 
+ 	channelCount = msadpcm->track->f.channelCount;
+ 
+@@ -180,8 +179,7 @@ static int ms_adpcm_decode_block (ms_adp
+ 		The first two samples have already been 'decoded' in
+ 		the block header.
+ 	*/
+-	samplesRemaining = (msadpcm->samplesPerBlock - 2) *
+-		msadpcm->track->f.channelCount;
++	samplesRemaining = msadpcm->samplesPerBlock - (2 * channelCount);
+ 
+ 	while (samplesRemaining > 0)
+ 	{
