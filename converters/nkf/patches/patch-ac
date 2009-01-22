@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2009/01/22 08:50:12 obache Exp $
+
+Fix: can't run test.
+http://git.sourceforge.jp/view?p=nkf/nkf.git;a=commitdiff;h=b7ee1f1b26ba715116fd8f66e83bf1ad8a95bcce
+
+--- nkf_test.pl.orig	2009-01-20 09:49:31.000000000 +0000
++++ nkf_test.pl
+@@ -957,6 +957,7 @@ eofeof
+ printf "%-40s", "test_data/bugs10904";
+     &test("$nkf -Mj",$example{'test_data/bugs10904'},$example{'test_data/bugs10904.ans'});
+ 
++    if (!NKF) {
+ printf "%-40s", "Guess NL";
+ &command_tests(
+ 	"$nkf --guess","none",      "ASCII\n",
+@@ -980,6 +981,7 @@ printf "%-40s", "Guess NL";
+ 	"$nkf --guess","\r\n.\n",   "ASCII (MIXED NL)\n",
+ 	"$nkf --guess","\r\n.\r",   "ASCII (MIXED NL)\n",
+ 	"$nkf --guess","\r\n.\r\n", "ASCII (CRLF)\n");
++    }
+ 
+ printf "%-40s", "Convert NL to LF";
+ &command_tests(
