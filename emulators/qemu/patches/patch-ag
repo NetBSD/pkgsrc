@@ -1,5 +1,7 @@
---- configure.orig	2007-02-05 15:01:54 -0800
-+++ configure	2008-10-04 07:21:23 -0700
+$NetBSD: patch-ag,v 1.12 2009/01/22 07:27:28 jmmv Exp $
+
+--- configure.orig	2008-01-06 20:38:42.000000000 +0100
++++ configure
 @@ -44,7 +44,7 @@ case "$cpu" in
    alpha)
      cpu="alpha"
@@ -9,7 +11,7 @@
      cpu="powerpc"
    ;;
    mips)
-@@ -116,6 +116,12 @@ if [ "$cpu" = "i386" -o "$cpu" = "x86_64
+@@ -136,6 +136,12 @@ if [ "$cpu" = "i386" -o "$cpu" = "x86_64
      kqemu="yes"
  fi
  ;;
@@ -22,7 +24,7 @@
  NetBSD)
  bsd="yes"
  oss="yes"
-@@ -371,6 +377,16 @@ EOF
+@@ -478,6 +484,16 @@ EOF
      fi
  fi
  
@@ -39,28 +41,30 @@
  #
  # Solaris specific configure tool chain decisions
  #
-@@ -573,7 +589,7 @@ else
- if test -z "$prefix" ; then
-     prefix="/usr/local"
+@@ -680,7 +696,7 @@ else
+   if test -z "$prefix" ; then
+       prefix="/usr/local"
+   fi
+-  mansuffix="/share/man"
++  mansuffix="/$PKGMANDIR"
+   datasuffix="/share/qemu"
+   docsuffix="/share/doc/qemu"
+   binsuffix="/bin"
+@@ -848,8 +864,13 @@ int main(void) { return bswap_32(0); }
+ EOF
+   if $cc -o $TMPE $TMPC 2> /dev/null ; then
+     echo "#define HAVE_BYTESWAP_H 1" >> $config_h
++  elif test -f "/usr/include/machine/bswap.h" ; then
++    echo "#define HAVE_MACHINE_BSWAP_H 1" >> $config_h
+   fi
  fi
--mandir="$prefix/share/man"
-+mandir="$prefix/$PKGMANDIR"
- datadir="$prefix/share/qemu"
- docdir="$prefix/share/doc/qemu"
- bindir="$prefix/bin"
-@@ -711,6 +727,11 @@ if test "$mingw32" = "yes" ; then
-   echo "#define CONFIG_WIN32 1" >> $config_h
- elif test -f "/usr/include/byteswap.h" ; then
-   echo "#define HAVE_BYTESWAP_H 1" >> $config_h
-+elif test -f "/usr/include/machine/bswap.h" ; then
-+  echo "#define HAVE_MACHINE_BSWAP_H 1" >> $config_h
-+fi
 +if test "$dragonfly" = "yes" ; then
 +  echo "CONFIG_DRAGONFLY=yes" >> $config_mak
- fi
++fi
  if test "$darwin" = "yes" ; then
    echo "CONFIG_DARWIN=yes" >> $config_mak
-@@ -785,6 +806,10 @@ if [ "$bsd" = "yes" ] ; then
+   echo "#define CONFIG_DARWIN 1" >> $config_h
+@@ -960,6 +981,10 @@ if [ "$bsd" = "yes" ] ; then
    echo "#define _BSD 1" >> $config_h
  fi
  
@@ -70,4 +74,4 @@
 +
  echo "#define CONFIG_UNAME_RELEASE \"$uname_release\"" >> $config_h
  
- for target in $target_list; do
+ tools=
