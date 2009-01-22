@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1.2.2 2009/01/22 20:21:28 tron Exp $
+
+--- libaudiofile/wave.c.orig	2004-03-06 07:39:23.000000000 +0100
++++ libaudiofile/wave.c
+@@ -220,7 +220,8 @@ static status ParseFormat (AFfilehandle 
+ 			extraByteCount = LENDIAN_TO_HOST_INT16(extraByteCount);
+ 
+ 			af_fread(&samplesPerBlock, 1, 2, fp);
+-			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock);
++			samplesPerBlock = LENDIAN_TO_HOST_INT16(samplesPerBlock)
++				* track->f.channelCount;
+ 
+ 			af_fread(&numCoefficients, 1, 2, fp);
+ 			numCoefficients = LENDIAN_TO_HOST_INT16(numCoefficients);
+@@ -281,6 +282,12 @@ static status ParseFormat (AFfilehandle 
+ 			u_int16_t	bitsPerSample, extraByteCount,
+ 					samplesPerBlock;
+ 
++			if (track->f.channelCount != 1) {
++				_af_error(AF_BAD_CHANNELS,
++					"WAVE file with IMA compression: "
++					"can only handle 1 channel");
++			}
++
+ 			af_fread(&bitsPerSample, 1, 2, fp);
+ 			bitsPerSample = LENDIAN_TO_HOST_INT16(bitsPerSample);
+ 
