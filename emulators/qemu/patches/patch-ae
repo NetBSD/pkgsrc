@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2008/12/30 00:55:10 hubertf Exp $
+$NetBSD: patch-ae,v 1.4 2009/01/22 07:27:28 jmmv Exp $
 
---- osdep.h.orig	2007-02-06 00:01:54.000000000 +0100
+--- osdep.h.orig	2008-01-06 20:38:42.000000000 +0100
 +++ osdep.h
 @@ -1,6 +1,7 @@
  #ifndef QEMU_OSDEP_H
@@ -9,4 +9,4 @@ $NetBSD: patch-ae,v 1.3 2008/12/30 00:55:10 hubertf Exp $
 +#include <sys/types.h>
  #include <stdarg.h>
  
- #define qemu_printf printf
+ #ifndef glue
