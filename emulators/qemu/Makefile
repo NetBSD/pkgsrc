@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2008/12/30 00:54:19 hubertf Exp $
+# $NetBSD: Makefile,v 1.54 2009/01/22 07:27:28 jmmv Exp $
 #
 
-DISTNAME=		qemu-0.9.0
-PKGREVISION=		3
+DISTNAME=		qemu-0.9.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://bellard.org/qemu/
 
@@ -32,14 +31,22 @@ CONFIGURE_ENV+=		PKGMANDIR=${PKGMANDIR}
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--interp-prefix=${PREFIX:Q}/share/qemu
 
+.if !empty(MACHINE_PLATFORM:MNetBSD-*)
+SUBST_CLASSES+=		lib
+SUBST_STAGE.lib=	pre-configure
+SUBST_FILES.lib=	x86_64.ld
+SUBST_SED.lib=		-e s,/lib64,/lib,g
+SUBST_MESSAGE.lib=	fixing hardcoded paths to libraries.
+.endif
+
 SUBST_CLASSES+=		snd
-SUBST_STAGE.snd=	post-patch
+SUBST_STAGE.snd=	pre-configure
 SUBST_FILES.snd=	audio/ossaudio.c
 SUBST_SED.snd=		-e s,/dev/dsp,${DEVOSSAUDIO:Q},g
 SUBST_MESSAGE.snd=	Fixing hardcoded audio device.
 
 SUBST_CLASSES+=		smbd
-SUBST_STAGE.smbd=	post-patch
+SUBST_STAGE.smbd=	pre-configure
 SUBST_FILES.smbd=	vl.c
 SUBST_SED.smbd=		-e s,/usr/sbin/smbd,${PREFIX:Q}/sbin/smbd,g
 SUBST_MESSAGE.smbd=	Fixing hardcoded paths.
@@ -49,6 +56,9 @@ REPLACE_PERL+=		texi2pod.pl
 # Remove -march/-mcpu from CFLAGS, otherwise it will fail
 # to build in the SSE code.
 BUILDLINK_TRANSFORM+=	rm-optarg:-march rm-optarg:-mcpu rm:-msse rm:-msse2
+
+BUILDLINK_PASSTHRU_DIRS+= /usr/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+= /usr/lib
 
 # Does not build with the stack protector
 .if ${OPSYS} == "DragonFly"
