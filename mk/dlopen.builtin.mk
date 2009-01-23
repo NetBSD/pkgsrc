@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.18 2009/01/23 13:07:25 obache Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.19 2009/01/23 14:21:38 obache Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -42,13 +42,16 @@ MAKEVARS+=	USE_BUILTIN.dl
 # application if it uses dlopen() or else the applications will core
 # dump when they dlopen a shared module that _is_ linked with pthread
 # support.
+# It is not required for NetBSD>=5 if just linked with pthread or using
+# pthread_mutex_*(), but need if using pthread_create() / pthread_join().
 #
 _BLNK_DLOPEN_REQUIRE_PTHREAD_PLATFORMS=					\
 	NetBSD-2.[0-9]_*-*						\
 	NetBSD-2.[0-9]-* NetBSD-2.[0-9].[0-9]*-*			\
 	NetBSD-2.[0-8][0-9]*-* NetBSD-2.9[0-8]*-*			\
 	NetBSD-2.99.[0-9]-* NetBSD-2.99.10-*				\
-	NetBSD-[3-4]*-*
+	NetBSD-[3-9]*-*							\
+	NetBSD-[1-9][0-9]*-*
 
 .if !defined(_BLNK_DLOPEN_REQUIRE_PTHREADS)
 _BLNK_DLOPEN_REQUIRE_PTHREADS?=	no
