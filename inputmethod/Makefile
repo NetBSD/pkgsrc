@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/04/13 06:12:46 obache Exp $
+# $NetBSD: Makefile,v 1.29 2009/01/23 13:47:01 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -44,6 +44,8 @@ SUBDIR+=	tc
 SUBDIR+=	tomoe
 SUBDIR+=	tomoe-gtk
 SUBDIR+=	uim
+SUBDIR+=	uim-elisp
+SUBDIR+=	uim-qt4-immodule
 SUBDIR+=	uim-tomoe-gtk
 SUBDIR+=	unicon-im
 SUBDIR+=	xcin
