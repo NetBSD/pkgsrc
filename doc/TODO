@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7818 2009/01/22 17:11:48 taca Exp $
+$NetBSD: TODO,v 1.7819 2009/01/23 14:02:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -1248,7 +1248,6 @@ Suggested package updates
 	o ucarp-1.5
 	o ucblogo-5.5
 	o udunits-1.12.9
-	o uim-1.5.4
 	o unixodbc-2.2.13
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
