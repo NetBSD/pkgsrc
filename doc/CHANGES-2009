@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.356 2009/01/23 13:41:06 obache Exp $
+$NetBSD: CHANGES-2009,v 1.357 2009/01/23 13:43:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -501,3 +501,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cad/gerbv to 2.2.0 [dmcmahill 2009-01-23]
 	Added net/proxytunnel version 1.9.0 [sborrill 2009-01-23]
 	Updated inputmethod/uim to 1.5.5 [obache 2009-01-23]
+	Added inputmethod/uim-qt4-immodule version 1.5.5 [obache 2009-01-23]
