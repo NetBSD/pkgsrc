@@ -1,0 +1,4 @@
+GPAC features encoders and multiplexers, publishing and content distribution
+tools for MP4 and 3GPP or 3GPP2 files and many tools for scene descriptions
+(BIFS/VRML/X3D converters, SWF/BIFS, SVG/BIFS, etc...). MP4Box provides all
+these tools in a single command-line application.
