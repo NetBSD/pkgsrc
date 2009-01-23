@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2009/01/23 13:35:30 sborrill Exp $
+
+Remove code which attempts to read svn revision numbers from source files for use in comments
+
+--- Makefile.orig	2009-01-23 12:55:03.000000000 +0000
++++ Makefile	2009-01-23 12:55:21.000000000 +0000
+@@ -5,7 +5,7 @@
+ CC ?= cc
+ CFLAGS ?= -Wall -O2 -ggdb
+ 
+-OPTFLAGS = -DREV=$(shell ./getrev.sh)
++#OPTFLAGS = -DREV=$(shell ./getrev.sh)
+ 
+ # Comment on non-gnu systems
+ OPTFLAGS += -DHAVE_GETOPT_LONG
