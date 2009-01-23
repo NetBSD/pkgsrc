@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/23 15:00:05 jmcneill Exp $
+
+SHA1 (mkv2mp4/README) = 6ec8e50ab84e2d264b70169799e5a77da29558d0
+RMD160 (mkv2mp4/README) = 567760fb28bcd19abcdd6312b363df60f86575ec
+Size (mkv2mp4/README) = 3855 bytes
+SHA1 (mkv2mp4/mkv2mp4.py) = dbbe5dc7e6913cf2d7109648e0031465fafab8e1
+RMD160 (mkv2mp4/mkv2mp4.py) = f03a5151ce18a3e87c747b2478beb569c611d3b5
+Size (mkv2mp4/mkv2mp4.py) = 17413 bytes
