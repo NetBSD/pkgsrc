@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 13:44:20 obache Exp $
+bin/uim-el-agent
+bin/uim-el-helper-agent
+${EMACS_LISPPREFIX}/uim-el/uim-candidate.el
+${EMACS_LISPPREFIX}/uim-el/uim-debug.el
+${EMACS_LISPPREFIX}/uim-el/uim-helper.el
+${EMACS_LISPPREFIX}/uim-el/uim-key.el
+${EMACS_LISPPREFIX}/uim-el/uim-keymap.el
+${EMACS_LISPPREFIX}/uim-el/uim-leim.el
+${EMACS_LISPPREFIX}/uim-el/uim-preedit.el
+${EMACS_LISPPREFIX}/uim-el/uim-util.el
+${EMACS_LISPPREFIX}/uim-el/uim-var.el
+${EMACS_LISPPREFIX}/uim-el/uim-version.el
+${EMACS_LISPPREFIX}/uim-el/uim.el
+share/doc/uim/emacs/README
+share/doc/uim/emacs/README.ja
+@dirrm ${EMACS_LISPPREFIX}/uim-el
+@dirrm share/doc/uim/emacs
