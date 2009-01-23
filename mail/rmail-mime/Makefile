@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/23 21:14:17 jschauma Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.m17n.org/pub/mule/semi/rmail-mime/
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 COMMENT=	MIME-capabilities for RMAIL in Emacs
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.4:../../devel/semi

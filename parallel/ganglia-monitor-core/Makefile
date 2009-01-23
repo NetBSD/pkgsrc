@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/01/23 21:14:17 jschauma Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -8,7 +8,7 @@ CATEGORIES=		net parallel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ganglia/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jschauma@NetBSD.org
+MAINTAINER=		pkgsrc-users@@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
 

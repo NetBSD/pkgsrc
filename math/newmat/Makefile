@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/23 21:14:17 jschauma Exp $
 #
 
 DISTNAME=	newmat10 # actually newmat10B, but no such distfile
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	http://www.robertnz.net/ftp/
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 HOMEPAGE=	http://www.robertnz.net/ol_doc.htm
 COMMENT=	Newmat C++ Matrix Library
 
