@@ -1,8 +1,10 @@
-$NetBSD: patch-ac,v 1.1 2008/06/08 13:01:48 obache Exp $
+$NetBSD: patch-ac,v 1.2 2009/01/23 13:40:32 obache Exp $
 
---- sigscheme/doc/Makefile.in.orig	2008-05-17 09:51:31.000000000 +0900
-+++ sigscheme/doc/Makefile.in	2008-05-17 09:51:54.000000000 +0900
-@@ -158,7 +158,7 @@
+Avoid to install of document files of sigscheme, conflict with lang/sigscheme.
+
+--- sigscheme/doc/Makefile.in.orig	2009-01-21 11:48:57.000000000 +0000
++++ sigscheme/doc/Makefile.in
+@@ -160,7 +160,7 @@ build_vendor = @build_vendor@
  builddir = @builddir@
  datadir = @datadir@
  datarootdir = @datarootdir@

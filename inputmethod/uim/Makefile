@@ -1,26 +1,19 @@
-# $NetBSD: Makefile,v 1.35 2009/01/09 03:32:08 uebayasi Exp $
+# $NetBSD: Makefile,v 1.36 2009/01/23 13:40:32 obache Exp $
 #
 
-DISTNAME=		uim-1.5.1
-CATEGORIES=		inputmethod
-MASTER_SITES=		http://uim.googlecode.com/files/
-EXTRACT_SUFX=		.tar.bz2
+.include "../../inputmethod/uim/Makefile.common"
 
-MAINTAINER=		VEG03617@nifty.com
-HOMEPAGE=		http://code.google.com/p/uim/
 COMMENT=		Multilingual input method library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
-USE_NCURSES=		YES	# clear_screen, clr_eos
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool pkg-config msgfmt
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
-GTK2_IMMODULES=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
 

@@ -1,26 +1,35 @@
-# $NetBSD: options.mk,v 1.14 2009/01/09 03:32:08 uebayasi Exp $
+# $NetBSD: options.mk,v 1.15 2009/01/23 13:40:32 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-#PKG_SUPPORTED_OPTIONS=	anthy canna curses eb gnome gtk kde m17nlib qt prime sj3 wnn x11
-PKG_SUPPORTED_OPTIONS=	anthy canna curses eb gnome gtk kde m17nlib qt prime x11
-PKG_SUGGESTED_OPTIONS=	anthy canna curses gtk x11
+#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 uim-fep wnn xim
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime uim-fep xim
+PKG_SUGGESTED_OPTIONS=	anthy canna gtk uim-fep xim
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		helperdata uim-dict-gtk
-PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn x11
+PLIST_VARS+=		helperdata uim-dict-gtk fep
+PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn xim
 
-.if !empty(PKG_OPTIONS:Mx11)
+.if !empty(PKG_OPTIONS:Mxim)
 .include "../../x11/libX11/buildlink3.mk"
-PLIST.x11=		yes
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-x
+PLIST.xim=		yes
 .else
-CONFIGURE_ARGS+=	--with-x=no
+SUBST_CLASSES+=		xim
+SUBST_STAGE.xim=	pre-configure
+SUBST_FILES.xim=	configure
+SUBST_SED.xim=		-e 's;use_xim="yes";use_xim="no";g'
 .endif
 
-.if !empty(PKG_OPTIONS:Mcurses)
-.include "../../devel/ncurses/buildlink3.mk"	# XXXUEBAYASI setupterm in ncurses is needed
-#.include "../../mk/curses.buildlink3.mk"	# XXXUEBAYASI for FEP
+.if !empty(PKG_OPTIONS:Muim-fep)
+USE_NCURSES=		YES	# setupterm, clear_screen, clr_eos
+.include "../../devel/ncurses/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-fep
+PLIST.fep=		yes
 .else
+CONFIGURE_ARGS+=	--disable-fep
 .endif
 
 .if !empty(PKG_OPTIONS:Manthy)
@@ -54,6 +63,7 @@ CONFIGURE_ARGS+=	--disable-gnome-applet
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
+GTK2_IMMODULES=		YES
 .include "../../x11/gtk2/modules.mk"
 PLIST.gtk=		yes
 .else
@@ -76,10 +86,8 @@ CONFIGURE_ARGS+=	--without-m17nlib
 
 .if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
 .  include "../../x11/qt3-libs/buildlink3.mk"
-BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
+.  include "../../x11/qt3-tools/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-qt CXXFLAGS=-lc
-# This option don't work.  Need immodule patch for Qt3(uim-1.4.x not support Qt4)
-#CONFIGURE_ARGS+=	--with-qt-immodule
 PLIST.helperdata=	yes
 PLIST.qt=		yes
 .endif
