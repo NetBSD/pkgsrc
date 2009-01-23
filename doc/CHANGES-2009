@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.358 2009/01/23 13:44:38 obache Exp $
+$NetBSD: CHANGES-2009,v 1.359 2009/01/23 14:58:20 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated inputmethod/uim to 1.5.5 [obache 2009-01-23]
 	Added inputmethod/uim-qt4-immodule version 1.5.5 [obache 2009-01-23]
 	Added inputmethod/uim-elisp version 1.5.5 [obache 2009-01-23]
+	Added multimedia/gpac version 0.4.5 [jmcneill 2009-01-23]
