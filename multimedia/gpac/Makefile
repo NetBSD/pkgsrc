@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/23 15:57:37 jmcneill Exp $
 #
 
 DISTNAME=	gpac-0.4.5
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gpac/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gpac.sourceforge.net/
 COMMENT=	Open source multimedia framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/gpac
 USE_TOOLS+=	gmake
