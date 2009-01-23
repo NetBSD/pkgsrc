@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/23 15:00:05 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/23 15:14:41 jmcneill Exp $
 #
 
 SVNREV=		11
@@ -7,6 +7,8 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-0.0alpha${SVNREV}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mkv2mp4.googlecode.com/svn-history/r${SVNREV}/trunk/
 NO_BUILD=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTFILES=	${DISTNAME}.py README
 DIST_SUBDIR=	mkv2mp4
