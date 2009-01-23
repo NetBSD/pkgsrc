@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.354 2009/01/23 12:02:12 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.355 2009/01/23 13:37:01 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -499,3 +499,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.76 [seb 2009-01-23]
 	Updated devel/p5-Moose to 0.65 [seb 2009-01-23]
 	Updated cad/gerbv to 2.2.0 [dmcmahill 2009-01-23]
+	Added net/proxytunnel version 1.9.0 [sborrill 2009-01-23]
