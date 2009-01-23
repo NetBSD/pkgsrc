@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/01/16 22:25:04 tonio Exp $
+# $NetBSD: Makefile,v 1.8 2009/01/23 11:21:09 sketch Exp $
 
 DISTNAME=		avahi-0.6.24
 CATEGORIES=		net
@@ -73,6 +73,10 @@ CONFIGURE_ARGS+=	--disable-doxygen-dot
 CONFIGURE_ARGS+=	--disable-doxygen-html
 CONFIGURE_ARGS+=	--disable-xmltoman
 CONFIGURE_ARGS+=	--disable-autoipd
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-distro=none
+.endif
 
 INSTALLATION_DIRS+=	share/examples/avahi
 INSTALLATION_DIRS+=	share/doc/avahi
