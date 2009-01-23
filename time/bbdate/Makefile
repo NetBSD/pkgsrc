@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/01/23 21:14:17 jschauma Exp $
 #
 
 DISTNAME=	bbdate-0.2.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=3
 COMMENT=	Display the current date
 
