@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/15 02:25:54 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/01/23 12:00:43 dmcmahill Exp $
 bin/gerbv
-include/gerbv-2.1.0/gerbv.h
+include/${PKGNAME_NOREV}/gerbv.h
 lib/libgerbv.la
 lib/pkgconfig/libgerbv.pc
 man/man1/gerbv.1
 share/applications/gerbv.desktop
 share/gerbv/scheme/gerb-debug.scm
 share/gerbv/scheme/gerb-ps.scm
+share/gerbv/gerbv_icon.ico
 share/gerbv/scheme/init.scm
 share/icons/hicolor/16x16/apps/gerbv-16.png
 share/icons/hicolor/22x22/apps/gerbv-22.png
