@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+
+--- configure.orig	2009-01-23 09:22:30.000000000 -0500
++++ configure
+@@ -217,12 +217,16 @@ case "$cpu" in
+   ;;
+   x86_64|amd64)
+     cpu="x86"
+-    is_64="yes"
++    if test "$linux" = "yes" ; then
++      is_64="yes"
++    fi
+     canon_arch="`cc -dumpmachine | sed -e 's,\([^-]*\)-.*,\1,'`"
+     if [ x"$canon_arch" = x"x86_64" -o x"$canon_arch" = x"amd64" ]; then
+       if [ -z "`echo $CFLAGS | grep -- -m32`"  ]; then
+         cpu="x86_64"
+-	libdir="lib64"
++        if test "$linux" = "yes" ; then
++	  libdir="lib64"
++	fi
+         #that's a bit crude...
+         PIC_CFLAGS="-fPIC -DPIC"
+         want_pic="yes"
