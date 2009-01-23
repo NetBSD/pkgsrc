@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/11/16 10:25:34 tron Exp $
+# $NetBSD: Makefile,v 1.39 2009/01/23 11:27:16 sketch Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	2
@@ -30,7 +30,7 @@ CFLAGS+=	-Wall
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-build:
-	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o ${WRKSRC}/rpm2pkg \
+	cd ${WRKSRC}; ${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o rpm2pkg \
 		${FILESDIR}/rpm2pkg.c ${LIBS}
 
 do-install:
