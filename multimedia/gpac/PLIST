@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+bin/MP4Box
+bin/MP4Client
+lib/gpac/gm_aac_in.so
+lib/gpac/gm_ac3_in.so
+lib/gpac/gm_bifs_dec.so
+lib/gpac/gm_ctx_load.so
+lib/gpac/gm_dummy_in.so
+lib/gpac/gm_ffmpeg_in.so
+lib/gpac/gm_ft_font.so
+lib/gpac/gm_img_in.so
+lib/gpac/gm_ismacryp.so
+lib/gpac/gm_isom_in.so
+lib/gpac/gm_laser_dec.so
+lib/gpac/gm_mp3_in.so
+lib/gpac/gm_mpegts_in.so
+lib/gpac/gm_odf_dec.so
+lib/gpac/gm_ogg_xiph.so
+lib/gpac/gm_oss_audio.so
+lib/gpac/gm_raw_out.so
+lib/gpac/gm_rtp_in.so
+lib/gpac/gm_saf_in.so
+lib/gpac/gm_soft_raster.so
+lib/gpac/gm_svg_in.so
+lib/gpac/gm_timedtext.so
+lib/gpac/gm_x11_out.so
+lib/gpac/gm_xvid_dec.so
+lib/libgpac-0.4.5.so
+lib/libgpac.so
+man/man1/gpac.1
+man/man1/mp4box.1
+man/man1/mp4client.1
+share/gpac/gpac.mp4
+@dirrm share/gpac
+@dirrm lib/gpac
