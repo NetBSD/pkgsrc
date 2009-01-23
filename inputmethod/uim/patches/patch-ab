@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2008/06/08 13:01:48 obache Exp $
+$NetBSD: patch-ab,v 1.2 2009/01/23 13:40:32 obache Exp $
 
---- sigscheme/src/Makefile.in.orig	2008-05-17 10:10:09.000000000 +0900
-+++ sigscheme/src/Makefile.in	2008-05-17 10:27:12.000000000 +0900
+Avoid to install of header files of sigscheme, conflict with lang/sigscheme.
+
+--- sigscheme/src/Makefile.in.orig	2009-01-21 11:48:58.000000000 +0000
++++ sigscheme/src/Makefile.in
 @@ -22,7 +22,7 @@
  VPATH = @srcdir@
  pkgdatadir = $(datadir)/@PACKAGE@
