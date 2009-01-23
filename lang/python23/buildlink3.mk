@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/01/23 03:05:53 dsainty Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PYTHON23_BUILDLINK3_MK:=	${PYTHON23_BUILDLINK3_MK}+
@@ -27,6 +27,11 @@ BUILDLINK_TRANSFORM+=		l:python:python2.3
 .endif	# PYTHON23_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+
+.include "../../mk/bsd.fast.prefs.mk"
+.if ${OPSYS} != "IRIX"
+.  include "../../mk/bdb.buildlink3.mk"
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
