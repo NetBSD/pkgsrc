@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/01/23 21:14:18 jschauma Exp $
 #
 
 DISTNAME=	skampi4
@@ -9,7 +9,7 @@ MASTER_SITES=	http://liinwww.ira.uka.de/~skampi/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}_userman.ps.gz
 DISTFILES+=	skampili.ps
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 HOMEPAGE=	http://liinwww.ira.uka.de/~skampi/
 COMMENT=	MPI (Message Passing Interface) benchmarks
 
