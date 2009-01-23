@@ -257,6 +257,7 @@ lprng-suid		Install LPRng executables setuid root.
 lua			Enable Lua support.
 lynx			Use and enable support for the lynx browser.
 lzw			Enable LZW (De)compression support
+m17nlib			Enable the m17n library support.
 m68060-optimized	Optimize for m68060 (only).
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP
@@ -319,6 +320,7 @@ pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 png			Enable PNG support.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
+prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
 psycopg1		Enable psycopg 1.1.x support.
 psycopg2		Enable psycopg 2.x support.
@@ -406,6 +408,7 @@ typolight-liveupdate	Allow using TYPOlight Live Update service.
 ucspi-ssl-perl		Enable Perl support in ucspi-ssl.
 ucspi-tcp-nodefaultrbl	Remove the (nonexistent) default RBL from rblsmtpd.
 uim			Enable UIM support.
+uim-fep			Enable UIM FEP support.
 unixodbc		Enable ODBC support via unixODBC.
 unrealircd-chroot	Enable support for running in a chroot jail.
 unrealircd-disableusermod	Disable /sethost, /setident, /chgname, /chghost, and /chgident.
@@ -442,6 +445,7 @@ x11			Enable X11 support.
 xapian-flint-backend	Enable "Flint" format Xapian database support.
 xapian-quartz-backend	Enable "Quartz" format Xapian database support.
 xaw			Enable Xaw support.
+xim			Enable X Input Method support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast
 xft2			Enable Xft support.
 xlockmore-allow-root	Allow root to get access.
