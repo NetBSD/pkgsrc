@@ -1,12 +1,14 @@
 #!/bin/sh
-# $NetBSD: cpuflags.sh,v 1.5 2009/01/20 17:26:21 abs Exp $
+# $NetBSD: cpuflags.sh,v 1.6 2009/01/23 00:04:45 abs Exp $
 PATH=/sbin:/usr/sbin:/bin:/usr/bin:$PATH
+
+# Note - this script needs to run on Solaris sh, so no use of $(...)
 
 # cd to the directory containing the binary, so we can usefully check for
 # include files from there
 case "$0" in
-    /*) cd $(dirname $0) ;;
-    *)  cd $(dirname $PWD/$0) ;;
+    /*) cd `dirname $0`;;
+    *)  cd `dirname $PWD/$0`;;
 esac
 
 include()
