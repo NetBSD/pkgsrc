@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:41 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/01/23 21:14:17 jschauma Exp $
 #
 
 DISTNAME=	larswm-7.5.3
@@ -7,7 +7,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	http://home.earthlink.net/~lab1701/larswm/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DOCFILES}
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 HOMEPAGE=	http://home.earthlink.net/~lab1701/larswm/
 COMMENT=	9wm-like window manager
 
