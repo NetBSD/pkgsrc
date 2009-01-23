@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/07/14 12:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/01/23 21:14:17 jschauma Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.xnc.dubna.su/src-5/
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@@NetBSD.org
 HOMEPAGE=	http://xnc.dubna.su/
 COMMENT=	File manager for X Window
 
