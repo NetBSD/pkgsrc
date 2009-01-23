@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 15:00:05 jmcneill Exp $
+bin/mkv2mp4.py
+share/doc/mkv2mp4/README
+@dirrm share/doc/mkv2mp4
