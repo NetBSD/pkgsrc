@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.352 2009/01/23 00:05:03 abs Exp $
+$NetBSD: CHANGES-2009,v 1.353 2009/01/23 11:04:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -496,3 +496,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squid30 to 3.0.12 [taca 2009-01-22]
 	Updated net/wpa_supplicant to 0.6.7 [roy 2009-01-22]
 	Updated devel/cpuflags to 1.36 [abs 2009-01-23]
+	Updated devel/p5-Class-MOP to 0.76 [seb 2009-01-23]
+	Updated devel/p5-Moose to 0.65 [seb 2009-01-23]
