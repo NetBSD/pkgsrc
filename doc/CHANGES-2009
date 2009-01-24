@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.363 2009/01/24 05:35:28 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.364 2009/01/24 10:52:01 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.1 [obache 2009-01-24]
 	Added databases/lua-tokyocabinet version 1.4 [obache 2009-01-24]
 	Updated multimedia/xvidcore to 1.2.1nb1 [jmcneill 2009-01-24]
+	Updated mail/dovecot to 1.1.9 [ghen 2009-01-24]
