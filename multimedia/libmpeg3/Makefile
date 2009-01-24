@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/04/03 09:41:25 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/24 12:29:51 tonio Exp $
 #
 
 DISTNAME=	libmpeg3-1.7-src
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${MACHINE_ARCH} == "i386")
+.if (${MACHINE_ARCH} == "i386" && ${OPSYS} != "Darwin")
 MAKE_ENV+=	USE_MMX=1
 MAKE_ENV+=	USE_CSS=1
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
