@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.24 2009/01/08 00:02:43 abs Exp $
+$NetBSD: patch-ab,v 1.25 2009/01/24 10:51:35 ghen Exp $
 
---- dovecot-example.conf.orig	2009-01-05 20:49:58.000000000 +0000
+--- dovecot-example.conf.orig	2009-01-13 22:51:40.000000000 +0100
 +++ dovecot-example.conf
 @@ -10,17 +10,14 @@
  # value inside quotes, eg.: key = "# char and trailing whitespace  "
@@ -103,9 +103,9 @@ $NetBSD: patch-ab,v 1.24 2009/01/08 00:02:43 abs Exp $
 -  #sendmail_path = /usr/lib/sendmail
 +  #sendmail_path = /usr/sbin/sendmail
  
-   # Human readable error message for rejection mails. Use can use variables:
-   #  %n = CRLF, %r = reason, %s = subject, %t = recipient
-@@ -693,7 +690,7 @@ protocol lda {
+   # Subject: header to use for rejection mails. You can use the same variables
+   # as for rejection_reason below.
+@@ -697,7 +694,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -114,7 +114,7 @@ $NetBSD: patch-ab,v 1.24 2009/01/08 00:02:43 abs Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -826,7 +823,7 @@ auth default {
+@@ -830,7 +827,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -123,7 +123,7 @@ $NetBSD: patch-ab,v 1.24 2009/01/08 00:02:43 abs Exp $
      # [session=yes] [setcred=yes] [failure_show_msg=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -855,15 +852,15 @@ auth default {
+@@ -859,15 +856,15 @@ auth default {
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
