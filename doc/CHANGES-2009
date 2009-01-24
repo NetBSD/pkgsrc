@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.365 2009/01/24 12:41:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.366 2009/01/24 12:59:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -510,3 +510,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/lua-tokyocabinet version 1.4 [obache 2009-01-24]
 	Updated multimedia/xvidcore to 1.2.1nb1 [jmcneill 2009-01-24]
 	Updated mail/dovecot to 1.1.9 [ghen 2009-01-24]
+	Updated net/mldonkey to 2.9.7 [wiz 2009-01-24]
