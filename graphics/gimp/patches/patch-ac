@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.16 2008/08/30 20:22:25 tron Exp $
+$NetBSD: patch-ac,v 1.17 2009/01/24 20:55:06 adam Exp $
 
 --- plug-ins/twain/Makefile.in.orig	2008-08-30 19:55:20.000000000 +0100
 +++ plug-ins/twain/Makefile.in	2008-08-30 20:02:01.000000000 +0100
