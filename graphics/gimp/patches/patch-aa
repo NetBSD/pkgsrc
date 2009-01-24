@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.21 2008/08/30 11:11:50 adam Exp $
+$NetBSD: patch-aa,v 1.22 2009/01/24 20:55:06 adam Exp $
 
 --- etc/Makefile.in.orig	2008-08-21 11:36:45.000000000 +0200
 +++ etc/Makefile.in
