@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/10/25 22:01:05 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2009/01/24 18:38:59 minskim Exp $
 #
 
 DISTNAME=	teTeX-3.0
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
-COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems, version 2
+COMMENT=	Thomas Esser's TeX distribution for UNIX compatible systems
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
