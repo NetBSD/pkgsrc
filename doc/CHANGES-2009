@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.364 2009/01/24 10:52:01 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.365 2009/01/24 12:41:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -417,6 +417,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jre6 to 6u11 [christos 2009-01-18]
 	Updated lang/sun-jdk6 to 6u11 [christos 2009-01-18]
 	Added net/unworkable version 0.51 [agc 2009-01-18]
+	Added misc/fbreader version 0.10.1 [wiz 2009-01-18]
 	Updated chat/irssi-icb to 0.14nb12 [sketch 2009-01-19]
 	Updated net/djbdns to 1.05nb8 [sketch 2009-01-19]
 	Updated audio/pulseaudio to 0.9.14 [jmcneill 2009-01-19]
