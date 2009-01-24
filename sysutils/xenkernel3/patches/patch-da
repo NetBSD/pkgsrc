@@ -1,0 +1,24 @@
+$NetBSD: patch-da,v 1.1 2009/01/24 18:57:59 bouyer Exp $
+
+some device have I/O space but no mem space so checking iomem to grant
+privileges is not enough.
+
+--- xen/include/xen/iocap.h.orig	2009-01-24 17:21:41.000000000 +0100
++++ xen/include/xen/iocap.h	2009-01-24 17:22:05.000000000 +0100
+@@ -29,7 +29,7 @@
+     rangeset_contains_singleton((d)->irq_caps, i)
+ 
+ #define multipage_allocation_permitted(d)               \
+-    (!rangeset_is_empty((d)->iomem_caps))
++    (!rangeset_is_empty((d)->iomem_caps) || !rangeset_is_empty((d)->arch.ioport_caps))
+ 
+ /*
+  * Until TLB flushing issues are sorted out we consider it unsafe for
+@@ -37,6 +37,6 @@
+  * operations.
+  */
+ #define grant_operation_permitted(d)                    \
+-    (!rangeset_is_empty((d)->iomem_caps))
++    (!rangeset_is_empty((d)->iomem_caps) || !rangeset_is_empty((d)->arch.ioport_caps))
+ 
+ #endif /* __XEN_IOCAP_H__ */
