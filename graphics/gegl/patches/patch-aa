@@ -1,22 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/16 21:53:57 adam Exp $
+$NetBSD: patch-aa,v 1.2 2009/01/24 12:57:30 adam Exp $
 
---- configure.orig	2008-10-05 09:52:36.000000000 +0200
-+++ configure
-@@ -21300,7 +21300,7 @@ fi
+--- gegl/gegl-init.c.orig	2009-01-22 20:26:07.000000000 +0100
++++ gegl/gegl-init.c
+@@ -50,6 +50,7 @@ pid_is_running (gint pid)
  
+ #include <sys/types.h>
+ #include <signal.h>
++#include <locale.h>
  
- 
--if test "x$enable_docs" == "xyes"; then
-+if test "x$enable_docs" = "xyes"; then
-   ENABLE_DOCS_TRUE=
-   ENABLE_DOCS_FALSE='#'
- else
-@@ -24801,7 +24801,7 @@ fi
- 
- 
- 
--if test "x$enable_workshop" == "xyes"; then
-+if test "x$enable_workshop" = "xyes"; then
-   ENABLE_WORKSHOP_TRUE=
-   ENABLE_WORKSHOP_FALSE='#'
- else
+ static inline gboolean
+ pid_is_running (gint pid)
