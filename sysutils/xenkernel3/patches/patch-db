@@ -1,0 +1,15 @@
+$NetBSD: patch-db,v 1.1 2009/01/24 18:57:59 bouyer Exp $
+
+some device have I/O space but no mem space so checking iomem to grant
+privileges is not enough.
+
+--- xen/include/asm-x86/iocap.h.orig	2009-01-24 17:22:41.000000000 +0100
++++ xen/include/asm-x86/iocap.h	2009-01-24 17:23:24.000000000 +0100
+@@ -15,6 +15,6 @@
+     rangeset_contains_range((d)->arch.ioport_caps, s, e)
+ 
+ #define cache_flush_permitted(d)                       \
+-    (!rangeset_is_empty((d)->iomem_caps))
++    (!rangeset_is_empty((d)->iomem_caps) || !rangeset_is_empty((d)->arch.ioport_caps))
+ 
+ #endif /* __X86_IOCAP_H__ */
