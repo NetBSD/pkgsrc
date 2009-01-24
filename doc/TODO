@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7819 2009/01/23 14:02:03 obache Exp $
+$NetBSD: TODO,v 1.7820 2009/01/24 21:03:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -617,7 +617,6 @@ Suggested package updates
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
-	o gimp26-2.6.4
 	o gindent-2.2.9
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
