@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.4 2009/01/24 05:34:42 jmcneill Exp $
+
+--- src/xvid.c.orig	2009-01-24 00:33:11.000000000 -0500
++++ src/xvid.c	2009-01-24 00:33:42.000000000 -0500
+@@ -679,7 +679,11 @@ xvid_gbl_info(xvid_gbl_info_t * info)
+ 
+ #else
+ 
++#if defined(_SC_NPROCESSORS_CONF)
+   info->num_threads = sysconf(_SC_NPROCESSORS_CONF);	
++#else
++  info->num_threads = 1;
++#endif
+ 
+ #endif
+ 
