@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/24 20:15:05 ghen Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/24 21:10:48 manu Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -7,6 +7,7 @@ bin/ldapmodify
 bin/ldapmodrdn
 bin/ldappasswd
 bin/ldapsearch
+bin/ldapurl
 bin/ldapwhoami
 include/lber.h
 include/lber_types.h
@@ -26,6 +27,7 @@ man/man1/ldapmodify.1
 man/man1/ldapmodrdn.1
 man/man1/ldappasswd.1
 man/man1/ldapsearch.1
+man/man1/ldapurl.1
 man/man1/ldapwhoami.1
 man/man3/ber_alloc_t.3
 man/man3/ber_bvarray_add.3
@@ -215,6 +217,7 @@ man/man5/slapd-ldbm.5
 man/man5/slapd-ldif.5
 man/man5/slapd-meta.5
 man/man5/slapd-monitor.5
+man/man5/slapd-ndb.5
 man/man5/slapd-null.5
 man/man5/slapd-passwd.5
 man/man5/slapd-perl.5
@@ -230,6 +233,7 @@ man/man5/slapd.plugin.5
 man/man5/slapo-accesslog.5
 man/man5/slapo-auditlog.5
 man/man5/slapo-chain.5
+man/man5/slapo-collect.5
 man/man5/slapo-constraint.5
 man/man5/slapo-dds.5
 man/man5/slapo-dyngroup.5
