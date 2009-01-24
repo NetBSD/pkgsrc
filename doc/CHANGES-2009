@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.361 2009/01/24 02:20:28 obache Exp $
+$NetBSD: CHANGES-2009,v 1.362 2009/01/24 03:05:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -506,3 +506,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added multimedia/gpac version 0.4.5 [jmcneill 2009-01-23]
 	Added multimedia/mkv2mp4 version 0.0alpha11 [jmcneill 2009-01-23]
 	Updated databases/tokyocabinet to 1.4.1 [obache 2009-01-24]
+	Added databases/lua-tokyocabinet version 1.4 [obache 2009-01-24]
