@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.11 2008/06/21 11:45:56 drochner Exp $
+$NetBSD: patch-ae,v 1.12 2009/01/24 12:29:51 tonio Exp $
 
 --- mpeg3io.c.orig	2005-05-01 07:57:56.000000000 +0200
-+++ mpeg3io.c	2008-02-19 19:25:09.000000000 +0100
-@@ -1,11 +1,32 @@
++++ mpeg3io.c
+@@ -1,11 +1,34 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
@@ -19,10 +19,12 @@ $NetBSD: patch-ae,v 1.11 2008/06/21 11:45:56 drochner Exp $
 +# if defined(__APPLE__) && defined(__MACH__)
 +#include <sys/cdefs.h>
 +# endif
-+# if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__) && !defined(__DARWIN_64_BIT_INO_T) /* MacOSX < 10.5 */)
++# if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__))
 +#  define fopen64 fopen
 +#  define fseeko64 fseek
++#  if (defined(__APPLE__) && defined(__MACH__) && !defined(__DARWIN_64_BIT_INO_T) /* MacOSX < 10.5 */)
 +#  define stat64 stat
++#  endif
 +# endif
 +# if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */
 +#  define statfs statvfs
@@ -37,7 +39,7 @@ $NetBSD: patch-ae,v 1.11 2008/06/21 11:45:56 drochner Exp $
  
  mpeg3_fs_t* mpeg3_new_fs(char *path)
  {
-@@ -215,16 +231,26 @@
+@@ -215,16 +238,26 @@ void mpeg3io_complete_path(char *complet
  
  int mpeg3io_device(char *path, char *device)
  {
@@ -64,7 +66,7 @@ $NetBSD: patch-ae,v 1.11 2008/06/21 11:45:56 drochner Exp $
  	fp = setmntent(MOUNTED, "r");
      while(fp && (mnt = getmntent(fp)))
  	{
-@@ -236,6 +262,7 @@
+@@ -236,6 +269,7 @@ int mpeg3io_device(char *path, char *dev
  		}
  	}
  	endmntent(fp);
