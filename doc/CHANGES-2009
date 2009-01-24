@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.367 2009/01/24 12:59:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.368 2009/01/24 18:59:12 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -512,3 +512,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.9 [ghen 2009-01-24]
 	Updated net/mldonkey to 2.9.7 [wiz 2009-01-24]
 	Updated net/mldonkey-gui to 2.9.7 [wiz 2009-01-24]
+	Updated sysutils/xenkernel3 to 3.1.4nb2 [bouyer 2009-01-24]
