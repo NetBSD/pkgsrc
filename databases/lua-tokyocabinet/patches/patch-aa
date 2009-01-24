@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
+
+--- Makefile.in.orig	2008-10-12 04:17:48.000000000 +0000
++++ Makefile.in
+@@ -32,9 +32,9 @@ DESTDIR =
+ 
+ # Building configuration
+ CC = @CC@
+-CPPFLAGS = @MYCPPFLAGS@
+-CFLAGS = @MYCFLAGS@
+-LDFLAGS = @MYLDFLAGS@
++CPPFLAGS = @CPPFLAGS@ @MYCPPFLAGS@
++CFLAGS = @CFLAGS@ @MYCFLAGS@
++LDFLAGS = @LDFLAGS@ @MYLDFLAGS@
+ LIBS = @LIBS@
+ LDENV = LD_RUN_PATH=/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@:.
+ RUNENV = @MYLDLIBPATHENV@=.:/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@
