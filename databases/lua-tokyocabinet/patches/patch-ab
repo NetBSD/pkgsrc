@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
+
+--- configure.orig	2008-10-11 05:55:55.000000000 +0000
++++ configure
+@@ -1697,16 +1697,13 @@ MYCOMMANDFILES="tcutest.lua tchtest.lua 
+ MYLUALIBDIR=""
+ 
+ # Building flags
+-MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
++MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
+ MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -L$HOME/include -L/usr/local/include -DNDEBUG -D_GNU_SOURCE=1"
+ MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
+ MYRUNPATH="\$(LIBDIR)"
+ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+ 
+ # Building paths
+-pathtmp="$PATH"
+-PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+-PATH="$PATH:/usr/ccs/bin:/usr/ucb:/usr/xpg4/bin:/usr/xpg6/bin:$pathtmp"
+ LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LIBRARY_PATH"
+ LD_LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LD_LIBRARY_PATH"
+ CPATH="$HOME/include:/usr/local/include:$CPATH"
