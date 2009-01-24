@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2008/08/23 12:43:40 obache Exp $
+# $NetBSD: Makefile,v 1.15 2009/01/24 21:10:48 manu Exp $
 
-DISTNAME=		openldap-2.4.11
+DISTNAME=		openldap-2.4.13
 PKGNAME=		${DISTNAME:S/-/-doc-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
