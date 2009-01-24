@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:10:36 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/01/24 12:13:21 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LIBCDDB_BUILDLINK3_MK:=	${LIBCDDB_BUILDLINK3_MK}+
@@ -18,6 +18,5 @@ BUILDLINK_PKGSRCDIR.libcddb?=	../../audio/libcddb
 .endif	# LIBCDDB_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../misc/libcdio/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
