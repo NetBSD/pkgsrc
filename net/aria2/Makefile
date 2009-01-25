@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2009/01/03 23:11:47 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2009/01/25 07:05:14 rillig Exp $
 #
 
 DISTNAME=	aria2c-0.16.2
 PKGNAME=	${DISTNAME:S/+/./:S/2c-/2-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,7 +32,7 @@ USE_FEATURES=		getopt_long snprintf
 
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 BUILDLINK_DEPMETHOD.cppunit?=	build
-BUILDLINK_API_DEPENDS.cppunit+=	cppunit>=10.1.2
+BUILDLINK_API_DEPENDS.cppunit+=	cppunit>=1.10.2
 .  include "../../devel/cppunit/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-xmltest
