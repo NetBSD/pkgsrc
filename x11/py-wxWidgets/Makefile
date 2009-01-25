@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/09/22 20:21:04 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/01/25 20:12:14 shattered Exp $
 #
 
 DISTNAME=	wxPython-src-2.6.3.3
@@ -7,7 +7,7 @@ CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wxpython/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tsarna@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets
 
