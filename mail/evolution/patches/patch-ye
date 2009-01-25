@@ -1,0 +1,19 @@
+$NetBSD: patch-ye,v 1.1 2009/01/25 17:07:36 drochner Exp $
+
+--- calendar/gui/e-week-view.c.orig	2009-01-25 16:40:31.000000000 +0100
++++ calendar/gui/e-week-view.c
+@@ -231,12 +231,13 @@ e_week_view_class_init (EWeekViewClass *
+ }
+ 
+ static void
+-time_range_changed_cb (ECalModel *model, time_t start_time, time_t end_time, gpointer user_data)
++time_range_changed_cb (ECalModel *model, gint64 st64, gint64 et64, gpointer user_data)
+ {
+ 	EWeekView *week_view = E_WEEK_VIEW (user_data);
+ 	GDate date, base_date;
+ 	gint day_offset, weekday, week_start_offset;
+ 	gboolean update_adjustment_value = FALSE;
++	time_t start_time = st64, end_time = et64;
+ 
+ 	g_return_if_fail (E_IS_WEEK_VIEW (week_view));
+ 
