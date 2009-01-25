@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/11/29 18:47:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/01/25 11:40:39 wiz Exp $
 include/gpod-1.0/gpod/itdb.h
 lib/libgpod.la
 lib/pkgconfig/libgpod-1.0.pc
@@ -9,6 +9,7 @@ share/gtk-doc/html/libgpod/index.sgml
 share/gtk-doc/html/libgpod/itunesdb.html
 share/gtk-doc/html/libgpod/left.png
 share/gtk-doc/html/libgpod/libgpod-Artwork.html
+share/gtk-doc/html/libgpod/libgpod-Chapter-Data.html
 share/gtk-doc/html/libgpod/libgpod-Device.html
 share/gtk-doc/html/libgpod/libgpod-File-handling-functions.html
 share/gtk-doc/html/libgpod/libgpod-Low-level-functions.html
@@ -32,6 +33,7 @@ share/locale/it/LC_MESSAGES/libgpod.mo
 share/locale/ja/LC_MESSAGES/libgpod.mo
 share/locale/ro/LC_MESSAGES/libgpod.mo
 share/locale/sv/LC_MESSAGES/libgpod.mo
+share/locale/zh_CN/LC_MESSAGES/libgpod.mo
 @dirrm share/gtk-doc/html/libgpod
 @dirrm include/gpod-1.0/gpod
 @dirrm include/gpod-1.0
