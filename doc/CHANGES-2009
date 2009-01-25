@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.374 2009/01/25 14:21:26 obache Exp $
+$NetBSD: CHANGES-2009,v 1.375 2009/01/25 16:20:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libgpod to 0.7.0 [wiz 2009-01-25]
 	Updated sysutils/gentoo to 0.11.57nb1 [obache 2009-01-25]
 	Updated net/nbtscan to 1.5.1nb1 [obache 2009-01-25]
+	Updated sysutils/hal to 0.5.11nb20 [tron 2009-01-25]
