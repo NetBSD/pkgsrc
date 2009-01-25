@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.369 2009/01/24 21:03:15 adam Exp $
+$NetBSD: CHANGES-2009,v 1.370 2009/01/25 04:46:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -516,3 +516,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gegl to 0.0.22 [adam 2009-01-24]
 	Updated graphics/gimp to 2.6.4 [adam 2009-01-24]
 	Removed graphics/gimp26 [adam 2009-01-24]
+	Updated www/typolight to 2.6.4 [taca 2009-01-25]
