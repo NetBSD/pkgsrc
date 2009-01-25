@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/01/12 16:17:03 taca Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/25 04:46:06 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -15,6 +14,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.1.0:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.1.0:../../net/php5-soap
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 PHP_VERSIONS_ACCEPTED=	5
 
