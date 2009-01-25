@@ -1,0 +1,11 @@
+$NetBSD: patch-yc,v 1.1 2009/01/25 17:07:36 drochner Exp $
+
+--- calendar/gui/e-calendar-marshal.list.orig	2009-01-25 16:33:19.000000000 +0100
++++ calendar/gui/e-calendar-marshal.list
+@@ -13,5 +13,5 @@ NONE:STRING,POINTER,POINTER
+ NONE:POINTER,ENUM
+ NONE:POINTER,STRING
+ NONE:POINTER,POINTER
+-NONE:LONG,LONG
++NONE:INT64,INT64
+ NONE:STRING,INT,INT
