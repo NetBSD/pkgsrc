@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2009/01/25 16:58:47 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2009/01/25 22:23:44 sketch Exp $
 #
 
 DISTNAME=	evolution-data-server-2.24.3
@@ -38,6 +38,10 @@ LIBS+=		-lsemaphore
 
 .if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT
+.endif
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+CFLAGS.SunOS+=	-D__FUNCTION__=__func__
 .endif
 
 CONFIGURE_ARGS+=	--with-nspr-includes=${BUILDLINK_PREFIX.nspr}/include/nspr
