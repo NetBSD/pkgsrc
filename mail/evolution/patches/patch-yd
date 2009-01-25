@@ -1,0 +1,17 @@
+$NetBSD: patch-yd,v 1.1 2009/01/25 17:07:36 drochner Exp $
+
+--- calendar/gui/e-day-view.c.orig	2009-01-25 16:34:41.000000000 +0100
++++ calendar/gui/e-day-view.c
+@@ -473,10 +473,10 @@ e_day_view_class_init (EDayViewClass *cl
+ }
+ 
+ static void
+-time_range_changed_cb (ECalModel *model, time_t start_time, time_t end_time, gpointer user_data)
++time_range_changed_cb (ECalModel *model, gint64 st64, gint64 et64, gpointer user_data)
+ {
+ 	EDayView *day_view = E_DAY_VIEW (user_data);
+-	time_t lower;
++	time_t start_time = st64, end_time = et64, lower;
+ 
+ 	g_return_if_fail (E_IS_DAY_VIEW (day_view));
+ 
