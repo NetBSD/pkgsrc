@@ -1,8 +1,19 @@
-$NetBSD: patch-ab,v 1.4 2007/12/16 12:05:46 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2009/01/25 17:03:31 drochner Exp $
 
---- applets/clock/calendar-client.c.orig	2007-12-01 20:23:22.000000000 +0100
+--- applets/clock/calendar-client.c.orig	2009-01-13 01:02:20.000000000 +0100
 +++ applets/clock/calendar-client.c
-@@ -2025,7 +2025,7 @@ calendar_client_set_task_completed (Cale
+@@ -909,8 +909,8 @@ resolve_timezone_id (const char *tzid,
+ 
+ static gboolean
+ calendar_appointment_collect_occurrence (ECalComponent  *component,
+-					 GTime           occurrence_start,
+-					 GTime           occurrence_end,
++					 time_t           occurrence_start,
++					 time_t           occurrence_end,
+ 					 GSList        **collect_loc)
+ {
+   CalendarOccurrence *occurrence;
+@@ -2124,7 +2124,7 @@ calendar_client_set_task_completed (Cale
      {
        struct icaltimetype  completed_time;
  
