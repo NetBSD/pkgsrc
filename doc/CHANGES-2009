@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.372 2009/01/25 11:40:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.373 2009/01/25 13:12:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight to 2.6.4 [taca 2009-01-25]
 	Updated www/typo3 to 4.2.5 [taca 2009-01-25]
 	Updated audio/libgpod to 0.7.0 [wiz 2009-01-25]
+	Updated sysutils/gentoo to 0.11.57nb1 [obache 2009-01-25]
