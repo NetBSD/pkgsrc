@@ -1,0 +1,13 @@
+$NetBSD: patch-ya,v 1.1 2009/01/25 17:07:36 drochner Exp $
+
+--- calendar/gui/e-cal-model.h.orig	2009-01-25 16:27:52.000000000 +0100
++++ calendar/gui/e-cal-model.h
+@@ -114,7 +114,7 @@ typedef struct {
+ 						     ETableModel *source_model, gint row);
+ 
+ 	/* Signals */
+-	void (* time_range_changed) (ECalModel *model, time_t start, time_t end);
++	void (* time_range_changed) (ECalModel *model, gint64 start, gint64 end);
+ 	void (* row_appended) (ECalModel *model);
+ 	void (* comps_deleted) (ECalModel *model, gpointer list);
+ 	void (* cal_view_progress) (ECalModel *model, const char *message, int progress, ECalSourceType type);
