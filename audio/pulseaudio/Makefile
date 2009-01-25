@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/01/19 14:19:00 jmcneill Exp $
-#
+# $NetBSD: Makefile,v 1.15 2009/01/25 16:56:01 tron Exp $
 
 DISTNAME=	pulseaudio-0.9.14
 CATEGORIES=	audio
@@ -14,12 +13,6 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake m4 msgfmt intltool perl \
 		autoconf automake autoreconf
 USE_DIRS+=	xdg-1.4
-
-PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
-PKG_SUPPORTED_OPTIONS=	avahi
-PKG_SUGGESTED_OPTIONS=	avahi
-PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
-.include "../../mk/bsd.options.mk"
 
 PKGCONFIG_OVERRIDE+=	libpulse-browse.pc.in
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
@@ -76,13 +69,7 @@ CONFIGURE_ARGS+=	--disable-netbsd-atomic-ops
 .include "../../devel/libatomic_ops/buildlink3.mk"
 .endif
 
-# avahi support
-.if !empty(PKG_OPTIONS:Mavahi)
-.include "../../net/avahi/buildlink3.mk"
-PLIST.avahi=		yes
-.else
-CONFIGURE_ARGS+=	--disable-avahi
-.endif
+.include "options.mk"
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -f
