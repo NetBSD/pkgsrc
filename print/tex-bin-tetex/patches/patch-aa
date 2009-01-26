@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/26 20:37:40 minskim Exp $
+
+Typo fix.
+
+--- texmf/dvips/tetex/config.builtin35.orig	2006-01-02 15:51:56.000000000 -0800
++++ texmf/dvips/tetex/config.builtin35
+@@ -1,6 +1,6 @@
+ % Thomas Esser, 2002, public domain.
+ 
+-% Usage: dvips -Pbuildin35 ...
++% Usage: dvips -Pbuiltin35 ...
+ % Purpose: set up dvips to consider the base 35 laserwriter fonts as
+ %          build in of your ps interpreter or printer.
+ 
+@@ -8,4 +8,4 @@
+ % is to download the "base 35" as type 1 with your document. The default
+ % behaviour of dvips can be set by the updmap tool.
+ 
+-p +buildin35.map
++p +builtin35.map

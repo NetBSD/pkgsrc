@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/26 20:37:40 minskim Exp $
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=434891
+
+--- texmf/dvips/tetex/config.pdf.orig	2006-01-02 15:51:56.000000000 -0800
++++ texmf/dvips/tetex/config.pdf
+@@ -43,8 +43,10 @@ R 300 600
+ % It remaps certain ``control character'' positions to an another range
+ % where these characters are repeated. This character shifting works wround
+ % bugs in some tools such as older versions of the Acrobat Reader.
+-
+-G
++%
++% Since this is doing more harm than good, it is disabled by default.
++%
++% G
+ 
+ % Switching algorithm for drawing rules. texc.pro is loaded by default,
+ % but the h tex.pro is need so that it comes before the patch. See
