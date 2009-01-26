@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2009/01/26 20:09:48 sketch Exp $
+
+--- src/hunspell/phonet.cxx.orig	Mon Jan 26 19:59:48 2009
++++ src/hunspell/phonet.cxx	Mon Jan 26 20:05:39 2009
+@@ -42,6 +42,15 @@
+ #include "csutil.hxx"
+ #include "phonet.hxx"
+ 
++#ifdef __SUNPRO_CC
++using std::isalpha;
++using std::isdigit;
++using std::strchr;
++using std::strcpy;
++using std::strlen;
++using std::strstr;
++#endif
++
+ void init_phonet_hash(phonetable & parms) 
+   {
+     int i, k;
