@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.383 2009/01/26 22:36:21 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.384 2009/01/26 22:50:35 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -531,3 +531,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb8 [minskim 2009-01-26]
 	Updated print/teTeX3-bin to 3.0nb23 [minskim 2009-01-26]
 	Updated mail/mutt-devel to 1.5.19 [tonio 2009-01-26]
+	Added multimedia/tstools version 1.11 [jmcneill 2009-01-26]
