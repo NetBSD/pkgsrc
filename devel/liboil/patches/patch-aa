@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.10 2009/01/26 14:08:13 sketch Exp $
+
+--- configure.orig	Mon Jan 26 13:57:43 2009
++++ configure	Mon Jan 26 13:58:58 2009
+@@ -16800,6 +16800,9 @@
+ #error GCC before 4.2 has critical bugs compiling SSE2 intrinsics
+ #endif
+ #endif
++#ifdef __SUNPRO_C
++#error Sun Studio SSE2 intrinsics support does not work for this package
++#endif
+ __m128i a; a = _mm_setzero_si128(); a = _mm_srli_epi16(a,8)
+   ;
+   return 0;
