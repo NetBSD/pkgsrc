@@ -1,0 +1,26 @@
+# $NetBSD: map-deinstall.tmpl,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+#
+# Disable font maps and remove entries from updmap.cfg.
+#
+
+UPDMAP_CFG=${PKG_SYSCONFBASE}/texmf/web2c/updmap.cfg
+
+case ${STAGE} in
+DEINSTALL)
+	map_files="@MAP_FILES@"
+	for map in $map_files ; do
+		${GREP} -v "^Map ${map}" ${UPDMAP_CFG} > \
+		       ${UPDMAP_CFG}.tmp &&
+		${MV} ${UPDMAP_CFG}.tmp ${UPDMAP_CFG}
+	done
+	mixedmap_files="@MIXEDMAP_FILES@"
+	for map in $mixedmap_files ; do
+		${GREP} -v "^MixedMap ${map}" ${UPDMAP_CFG} > \
+		       ${UPDMAP_CFG}.tmp &&
+		${MV} ${UPDMAP_CFG}.tmp ${UPDMAP_CFG}
+	done
+	@UPDMAP_SYS@
+        ;;
+*)
+	;;
+esac
