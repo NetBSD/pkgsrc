@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/11/10 11:58:40 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/01/26 10:44:26 drochner Exp $
 #
 
-DISTNAME=		gst-python-0.10.13
-PKGREVISION=		1
+DISTNAME=		gst-python-0.10.14
 CATEGORIES=		multimedia
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gst-python/
 EXTRACT_SUFX=		.tar.bz2
