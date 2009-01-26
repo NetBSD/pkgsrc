@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2008/11/18 20:25:13 chuck Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2009/01/26 15:43:09 drochner Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -110,6 +110,7 @@ share/doc/libgphoto2/camlibs/README.gsmart300
 share/doc/libgphoto2/camlibs/README.iclick
 share/doc/libgphoto2/camlibs/README.jamcam
 share/doc/libgphoto2/camlibs/README.jl2005a
+share/doc/libgphoto2/camlibs/README.jl2005c
 share/doc/libgphoto2/camlibs/README.konica
 share/doc/libgphoto2/camlibs/README.largan-lmini
 share/doc/libgphoto2/camlibs/README.lg_gsm
