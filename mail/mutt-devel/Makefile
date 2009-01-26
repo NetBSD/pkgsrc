@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.70 2008/11/29 21:31:58 joerg Exp $
+# $NetBSD: Makefile,v 1.71 2009/01/26 22:35:02 tonio Exp $
 
-DISTNAME=		mutt-1.5.18
-PKGREVISION=		2
+DISTNAME=		mutt-1.5.19
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -14,7 +13,7 @@ HOMEPAGE=		http://www.mutt.org/
 COMMENT=		Text-based MIME mail client with PGP & S/MIME support
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	destdir # avoid user-destdir to handle mutt_dotlock
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2008/05/18 08:26:31 tonio Exp $
+$NetBSD: patch-ag,v 1.8 2009/01/26 22:35:03 tonio Exp $
 
---- doc/Makefile.in.orig	Sun Apr 20 05:08:50 2008
+--- doc/Makefile.in.orig	2009-01-05 20:24:14.000000000 +0100
 +++ doc/Makefile.in
-@@ -491,7 +491,7 @@ uninstall-am: uninstall-info-am uninstal
+@@ -492,7 +492,7 @@ uninstall-am: uninstall-local
  
  all: makedoc-all
  
@@ -11,8 +11,8 @@ $NetBSD: patch-ag,v 1.7 2008/05/18 08:26:31 tonio Exp $
  
  install-data-local: makedoc-all instdoc
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(mandir)/man1
-@@ -503,8 +503,8 @@ install-data-local: makedoc-all instdoc
- 	./instdoc $(srcdir)/dotlock.man \
+@@ -504,8 +504,8 @@ install-data-local: makedoc-all instdoc
+ 	test x@DOTLOCK_TARGET@ = x || ./instdoc $(srcdir)/dotlock.man \
  		$(DESTDIR)$(mandir)/man1/mutt_dotlock.1
  	./instdoc muttrc.man $(DESTDIR)$(mandir)/man5/muttrc.5
 -	./instdoc $(srcdir)/mbox.man $(DESTDIR)$(mandir)/man5/mbox.5

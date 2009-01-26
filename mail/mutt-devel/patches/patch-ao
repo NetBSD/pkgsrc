@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.3 2008/06/02 16:42:34 sketch Exp $
+$NetBSD: patch-ao,v 1.4 2009/01/26 22:35:03 tonio Exp $
 
 Add change_folder_next option.
 
@@ -11,7 +11,7 @@ Add change_folder_next option.
 +	  if (option (OPTCHANGEFOLDERNEXT) && Context && Context->path)
 +	  {
 +	    strfcpy (buf, Context->path, sizeof (buf));
-+	    mutt_pretty_mailbox (buf);
++	    mutt_pretty_mailbox (buf, sizeof (buf));
 +	  }
  	  mutt_buffy (buf, sizeof (buf));
  
