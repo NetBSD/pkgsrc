@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+
+--- Makefile.in.orig	2008-07-05 09:43:44.000000000 -0700
++++ Makefile.in
+@@ -34,7 +34,7 @@ install: install-data install-exec
+ 
+ # Auxiliary files.
+ install-data::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(man5dir) $(texpooldir) $(texmf)/doc/tetex
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(man1dir) $(man5dir) $(texpooldir)
+ 	for p in $(manpgs); do \
+ 	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
+ 	done
+@@ -53,22 +53,12 @@ install-data::
+ 	  updmap-sys.$(manext) mktexfmt.$(manext) fmtutil-sys.$(manext)
+ 	ln -s allcm.$(manext) $(man1dir)/allec.$(manext)
+ 	ln -s mktexlsr.$(manext) $(man1dir)/texhash.$(manext)
+-	ln -s omega.$(manext) $(man1dir)/lambda.$(manext)
+-	ln -s pdftex.$(manext) $(man1dir)/pdflatex.$(manext)
+ 	ln -s kpsetool.$(manext) $(man1dir)/kpsepath.$(manext)
+ 	ln -s kpsetool.$(manext) $(man1dir)/kpsexpand.$(manext)
+-	ln -s mf.$(manext) $(man1dir)/mf-nowin.$(manext)
+-	ln -s cweb.$(manext) $(man1dir)/ctangle.$(manext)
+-	ln -s cweb.$(manext) $(man1dir)/cweave.$(manext)
+-	ln -s dvicopy.$(manext) $(man1dir)/odvicopy.$(manext)
+-	ln -s dvitype.$(manext) $(man1dir)/odvitype.$(manext)
+ 	ln -s texconfig.$(manext) $(man1dir)/texconfig-sys.$(manext)
+ 	ln -s updmap.$(manext) $(man1dir)/updmap-sys.$(manext)
+ 	ln -s fmtutil.$(manext) $(man1dir)/mktexfmt.$(manext)
+ 	ln -s fmtutil.$(manext) $(man1dir)/fmtutil-sys.$(manext)
+-	for p in TETEXDOC.pdf TETEXDOC.ps TETEXDOC.dvi teTeX-FAQ; do \
+-	  $(INSTALL_DATA) $(srcdir)/doc/$$p $(texmf)/doc/tetex; \
+-	done
+ 	$(SHELL) $(top_srcdir)/../mkinstalldirs $(texmf)/texconfig $(texmf)/texconfig/g $(texmf)/texconfig/v $(texmf)/texconfig/x
+ 	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/g/generic $(texmf)/texconfig/g
+ 	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/v/vt100 $(texmf)/texconfig/v
+@@ -77,7 +67,6 @@ install-data::
+ 	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/generic $(texmf)/texconfig
+ 	$(INSTALL_SCRIPT) $(srcdir)/tcfmgr $(texmf)/texconfig/tcfmgr
+ 	$(INSTALL_DATA) $(srcdir)/tcfmgr.map $(texmf)/texconfig/tcfmgr.map
+-	$(INSTALL_DATA) $(srcdir)/fmtutil.cnf $(texmf)/web2c/fmtutil.cnf
+ 
+ install-exec: 
+ 	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
