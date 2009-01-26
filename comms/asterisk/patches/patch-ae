@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2006/04/13 08:47:06 adam Exp $
+$NetBSD: patch-ae,v 1.4 2009/01/26 13:15:49 jnemeth Exp $
 
---- apps/Makefile.orig	2006-02-09 03:31:21.000000000 +0100
+--- apps/Makefile.orig	2006-04-30 06:38:22.000000000 -0700
 +++ apps/Makefile
-@@ -45,15 +45,17 @@ APPS=app_dial.so app_playback.so app_voi
+@@ -45,21 +45,23 @@ APPS=app_dial.so app_playback.so app_voi
  #APPS+=app_rpt.so
  
  ifndef WITHOUT_ZAPTEL
@@ -22,6 +22,14 @@ $NetBSD: patch-ae,v 1.3 2006/04/13 08:47:06 adam Exp $
  ifeq ($(findstring BSD,${OSARCH}),BSD)
  CFLAGS+=-I$(CROSS_COMPILE_TARGET)/usr/local/include -L$(CROSS_COMPILE_TARGET)/usr/local/lib
  endif
+ 
+-CURLLIBS=$(shell $(CROSS_COMPILE_BIN)curl-config --libs)
+-ifneq ($(shell if [[ 0x`$(CROSS_COMPILE_BIN)curl-config --vernum` -ge 0x70907 ]]; then echo "OK" ; fi),)
++CURLLIBS=$(shell $(PREFIX)/bin/curl-config --libs)
++ifneq ($(shell if [ `$(PREFIX)/bin/curl-config --vernum` -ge 70907 ]; then echo "OK" ; fi),)
+   ifneq (${CURLLIBS},)
+     APPS+=app_curl.so
+   endif 
 @@ -103,10 +105,10 @@ app_curl.so: app_curl.o
  	$(CC) $(SOLINK) -o $@ ${CYGSOLINK} $< ${CYGSOLIB} $(CURLLIBS)
  
