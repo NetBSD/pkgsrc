@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.14 2008/11/24 09:27:29 jnemeth Exp $
+@comment $NetBSD: PLIST.common,v 1.15 2009/01/26 13:15:49 jnemeth Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -79,6 +79,7 @@ lib/asterisk/modules/app_cdr.so
 lib/asterisk/modules/app_chanisavail.so
 lib/asterisk/modules/app_chanspy.so
 lib/asterisk/modules/app_controlplayback.so
+lib/asterisk/modules/app_curl.so
 lib/asterisk/modules/app_cut.so
 lib/asterisk/modules/app_db.so
 lib/asterisk/modules/app_dial.so
