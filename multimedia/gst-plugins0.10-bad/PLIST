@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/30 21:21:32 wiz Exp $
-include/gstreamer-0.10/gst/app/gstappbuffer.h
-include/gstreamer-0.10/gst/app/gstappsink.h
-include/gstreamer-0.10/gst/app/gstappsrc.h
+@comment $NetBSD: PLIST,v 1.9 2009/01/26 10:42:02 drochner Exp $
+lib/gstreamer-0.10/libgstaacparse.la
 lib/gstreamer-0.10/libgstaiffparse.la
+lib/gstreamer-0.10/libgstamrparse.la
 lib/gstreamer-0.10/libgstapexsink.la
-lib/gstreamer-0.10/libgstapp.la
 lib/gstreamer-0.10/libgstbayer.la
 lib/gstreamer-0.10/libgstbz2.la
 lib/gstreamer-0.10/libgstcdxaparse.la
 lib/gstreamer-0.10/libgstdccp.la
 lib/gstreamer-0.10/libgstdeinterlace.la
+lib/gstreamer-0.10/libgstdeinterlace2.la
 lib/gstreamer-0.10/libgstdvdspu.la
 lib/gstreamer-0.10/libgstfestival.la
 lib/gstreamer-0.10/libgstfilter.la
 lib/gstreamer-0.10/libgstflv.la
 lib/gstreamer-0.10/libgstfreeze.la
 lib/gstreamer-0.10/libgsth264parse.la
+lib/gstreamer-0.10/libgstlegacyresample.la
 lib/gstreamer-0.10/libgstmetadata.la
 lib/gstreamer-0.10/libgstmodplug.la
 lib/gstreamer-0.10/libgstmpeg4videoparse.la
@@ -23,26 +23,26 @@ lib/gstreamer-0.10/libgstmpegdemux.la
 lib/gstreamer-0.10/libgstmpegtsmux.la
 lib/gstreamer-0.10/libgstmpegvideoparse.la
 lib/gstreamer-0.10/libgstmve.la
+lib/gstreamer-0.10/libgstmxf.la
 lib/gstreamer-0.10/libgstnsf.la
 lib/gstreamer-0.10/libgstnuvdemux.la
 lib/gstreamer-0.10/libgstoss4audio.la
 lib/gstreamer-0.10/libgstpcapparse.la
+lib/gstreamer-0.10/libgstqtmux.la
 lib/gstreamer-0.10/libgstrawparse.la
-${PLIST.x86}lib/gstreamer-0.10/libgstreal.la
+lib/gstreamer-0.10/libgstreal.la
 lib/gstreamer-0.10/libgstrfbsrc.la
 lib/gstreamer-0.10/libgstrtpmanager.la
 lib/gstreamer-0.10/libgstscaletempoplugin.la
 lib/gstreamer-0.10/libgstsdpelem.la
 lib/gstreamer-0.10/libgstselector.la
 lib/gstreamer-0.10/libgstspeed.la
-lib/gstreamer-0.10/libgstspeexresample.la
 lib/gstreamer-0.10/libgststereo.la
 lib/gstreamer-0.10/libgstsubenc.la
 lib/gstreamer-0.10/libgsttta.la
 lib/gstreamer-0.10/libgstvideosignal.la
 lib/gstreamer-0.10/libgstvmnc.la
 lib/gstreamer-0.10/libgsty4menc.la
-lib/libgstapp-0.10.la
 share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
@@ -59,6 +59,7 @@ share/locale/id/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/ky/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-bad-0.10.mo
+share/locale/mt/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/nb/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-bad-0.10.mo
@@ -73,5 +74,3 @@ share/locale/uk/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-0.10.mo
 @comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
-@dirrm include/gstreamer-0.10/gst/app
-@comment in gstreamer0.10: @dirrm include/gstreamer-0.10/gst
