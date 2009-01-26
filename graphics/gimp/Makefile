@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.177 2009/01/24 20:55:05 adam Exp $
+# $NetBSD: Makefile,v 1.178 2009/01/26 15:22:03 drochner Exp $
 
 DISTNAME=	gimp-2.6.4
 CATEGORIES=	graphics
@@ -63,6 +63,7 @@ post-patch:
 		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
 	done
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
