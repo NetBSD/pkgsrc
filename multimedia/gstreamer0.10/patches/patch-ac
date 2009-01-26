@@ -1,22 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2008/12/14 18:34:45 rillig Exp $
+$NetBSD: patch-ac,v 1.7 2009/01/26 10:34:48 drochner Exp $
 
-http://bugzilla.gnome.org/show_bug.cgi?id=564507
-
---- configure.orig	2008-10-02 23:54:25.000000000 +0200
-+++ configure	2008-12-14 19:26:26.000000000 +0100
-@@ -25178,10 +25178,7 @@
-   { echo "$as_me:$LINENO: checking bison version $bison_version >= $bison_min_version" >&5
- echo $ECHO_N "checking bison version $bison_version >= $bison_min_version... $ECHO_C" >&6; }
- 
--  if perl -w <<EOF
--    exit ($bison_version < $bison_min_version) ? 0 : 1;
--EOF
--  then
-+  if perl -we "exit ((v$bison_version ge v$bison_min_version) ? 0 : 1)"; then
-     { echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
-   else
-@@ -31985,7 +31982,7 @@
+--- configure.orig	2009-01-19 21:36:01.000000000 +0100
++++ configure
+@@ -23587,7 +23587,7 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
