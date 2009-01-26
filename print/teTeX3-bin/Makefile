@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/01/26 21:17:05 minskim Exp $
+# $NetBSD: Makefile,v 1.36 2009/01/26 21:19:39 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -13,7 +13,7 @@ COMMENT=	TeX distribution for UNIX compatible systems - binaries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
-DEPENDS+=	texlive-tetex-[0-9]*:../../wip/texlive-tetex
+DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 
 # games/omega previously installed an omega executable too
 CONFLICTS+=	omega<0.90.4nb1
@@ -102,8 +102,8 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
-.include "../../wip/texlive-tetex/format.mk"
-.include "../../wip/texlive-tetex/map.mk"
+.include "../../print/texlive-tetex/format.mk"
+.include "../../print/texlive-tetex/map.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
