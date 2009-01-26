@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.798 2009/01/26 15:44:15 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.799 2009/01/26 16:14:45 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1443,10 +1443,13 @@ my $seen_bsd_prefs_mk;		# Has bsd.prefs.mk already been included?
 
 my $pkgctx_vardef;		# { varname => line }
 my $pkgctx_varuse;		# { varname => line }
-my $pkgctx_bl3;			# buildlink3.mk name => line of inclusion
+my $pkgctx_bl3;			# { buildlink3.mk name => line } (contains
+				# only buildlink3.mk files that are directly
+				# included)
 my $pkgctx_plist_subst_cond;	# { varname => 1 } list of all variables
 				# that are used as conditionals (@comment
 				# or nothing) in PLISTs.
+my $pkgctx_included;		# { fname => line }
 my $seen_Makefile_common;	# Does the package have any .includes?
 
 # Context of the Makefile that is currently checked.
@@ -3336,7 +3339,7 @@ sub load_package_Makefile($$) {
 
 	$opt_debug_trace and log_debug($fname, NO_LINES, "load_package_Makefile()");
 
-	if (!readmakefile($fname, $lines = [], $all_lines = [], {})) {
+	if (!readmakefile($fname, $lines = [], $all_lines = [], $pkgctx_included = {})) {
 		log_error($fname, NO_LINE_NUMBER, "Cannot be read.");
 		return false;
 	}
@@ -7570,6 +7573,12 @@ sub checkfile_PLIST($) {
 					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
 				}
 
+			} elsif ($text =~ m"^share/applications/.*\.desktop$") {
+				my $f = "../../sysutils/desktop-file-utils/desktopdb.mk";
+				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
+					$line->log_warning("Packages that install a .desktop entry should .include \"$f\".");
+				}
+
 			} elsif ($dirname eq "share/aclocal" && $basename =~ m"\.m4$") {
 				# Fine.
 
@@ -8003,6 +8012,7 @@ sub checkdir_package() {
 	$pkgctx_varuse = {};
 	$pkgctx_bl3 = {};
 	$pkgctx_plist_subst_cond = {};
+	$pkgctx_included = {};
 	$seen_Makefile_common = false;
 
 	# we need to handle the Makefile first to get some variables
@@ -8073,6 +8083,7 @@ cleanup:
 	$pkgctx_varuse = undef;
 	$pkgctx_bl3 = undef;
 	$pkgctx_plist_subst_cond = undef;
+	$pkgctx_included = undef;
 	$seen_Makefile_common = undef;
 }
 
