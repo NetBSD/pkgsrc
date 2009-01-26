@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.378 2009/01/26 10:46:09 obache Exp $
+$NetBSD: CHANGES-2009,v 1.379 2009/01/26 15:41:14 hira Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -525,3 +525,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-bin-texlive version 2008 [minskim 2009-01-26]
 	Updated sysutils/gentoo to 0.11.57nb2 [dholland 2009-01-26]
 	Updated databases/tokyocabinet to 1.4.2 [obache 2009-01-26]
+	Updated misc/openoffice2 to 2.4.2nb4 [hira 2009-01-26]
