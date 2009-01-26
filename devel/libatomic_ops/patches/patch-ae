@@ -1,0 +1,10 @@
+$NetBSD: patch-ae,v 1.1 2009/01/26 15:01:56 sketch Exp $
+
+--- /dev/null	2009-01-26 14:55:50.000000000 +0000
++++ src/atomic_ops/sysdeps/sunc/x86.h	2009-01-26 14:48:08.246647402 +0000
+@@ -0,0 +1,5 @@
++#include "../all_aligned_atomic_load_store.h"
++#include "../ordered_except_wr.h"
++#include "../test_and_set_t_is_char.h"
++#include "../standard_ao_double_t.h"
++#include "../ao_t_is_int.h"
