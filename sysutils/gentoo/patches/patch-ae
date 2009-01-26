@@ -1,0 +1,111 @@
+$NetBSD: patch-ae,v 1.5 2009/01/26 04:54:50 dholland Exp $
+
+Fix insecure-temp-files. Replaces older nonworking patch with similar
+intent. XXX inadequately tested, lack of time.
+
+Upstream: not sent upstream; inadequately tested, lack of time.
+
+--- src/types.c.orig	2008-07-09 15:51:26.000000000 -0400
++++ src/types.c	2009-01-25 23:36:47.000000000 -0500
+@@ -27,6 +27,7 @@
+ #include <signal.h>
+ #include <sys/wait.h>
+ #include <unistd.h>
++#include <paths.h>
+ 
+ #include <stddef.h>
+ 
+@@ -345,14 +346,18 @@ static FType * match_file(GList *list, D
+ void typ_identify_end(MainInfo *min, const gchar *path)
+ {
+ 	const GList	*here;
+-	gchar		buf[MAXNAMLEN + 2], *temp_name;
++	gchar		buf[MAXNAMLEN + 2];
+ 	gint		fd[2], len, status;
+ 	pid_t		file_pid;
+ 	FType		*type;
++	char		tempnamebuf[64];
++	int		tempfd;
+ 
+ 	if(file_list == NULL)
+ 		return;
+-	if((temp_name = tmpnam(NULL)) == NULL)
++	strcpy(tempnamebuf, _PATH_TMP "gentoo.XXXXXX");
++	tempfd = mkstemp(tempnamebuf);
++	if (tempfd < 0)
+ 		return;
+ 	if(pipe(fd) != 0)
+ 		return;
+@@ -360,20 +365,16 @@ void typ_identify_end(MainInfo *min, con
+ 	file_pid = fork();
+ 	if(file_pid == 0)
+ 	{
+-		guint	bits = 0U;
+-
+-		if(close(STDIN_FILENO) == 0)
+-		{
+-			if(dup(fd[STDIN_FILENO]) == STDIN_FILENO)
+-				bits |= (close(fd[STDIN_FILENO]) == 0);
+-		}
+-		if(close(STDOUT_FILENO) == 0)
+-		{
+-			if(open(temp_name, O_CREAT | O_RDWR, S_IRWXU) == STDOUT_FILENO)
+-				bits |= (close(fd[STDOUT_FILENO]) == 0) << 1;
+-		}
+-		if(bits == 3U && chdir(path) == 0)
+-			execlp("file", "file", "-f", "-", NULL);
++		if (dup2(fd[0], STDIN_FILENO) < 0)
++			_exit(EXIT_FAILURE);
++		if (dup2(tempfd, STDOUT_FILENO) < 0)
++			_exit(EXIT_FAILURE);
++		close(fd[0]);
++		close(fd[1]);
++		close(tempfd);
++		if (chdir(path) < 0)
++			_exit(EXIT_FAILURE);
++		execlp("file", "file", "-f", "-", NULL);
+ 		_exit(EXIT_FAILURE);
+ 	}
+ 	else if(file_pid < 0)
+@@ -382,21 +381,21 @@ void typ_identify_end(MainInfo *min, con
+ 		return;
+ 	}
+ 	/* We don't need the input part of the pipe, so close it. */
+-	close(fd[STDIN_FILENO]);
++	close(fd[0]);
+ 	/* Now, we have file listening on pipe, so write all filenames to it. */
+ 	for(here = file_list; here != NULL; here = g_list_next(here))
+ 	{
+ 		len = g_snprintf(buf, sizeof buf, "%s\n", DP_SEL_NAME(here));
+-		write(fd[STDOUT_FILENO], buf, len);
++		write(fd[1], buf, len);
+ 	}
+-	close(fd[STDOUT_FILENO]);
++	close(fd[1]);
+ 	waitpid(file_pid, &status, 0);
+ 
+ 	if(WIFEXITED(status))
+ 	{
+ 		FILE	*in;
+ 
+-		if((in = fopen(temp_name, "rt")) != NULL)
++		if((in = fdopen(tempfd, "rt")) != NULL)
+ 		{
+ 			const gchar	*fout;
+ 			gchar		line[MAXNAMLEN + 256];
+@@ -412,10 +411,14 @@ void typ_identify_end(MainInfo *min, con
+ 			}
+ 			fclose(in);
+ 		}
++		else
++			close(tempfd);
+ 	}
++	else
++		close(tempfd);
+ 	g_list_free(file_list);
+ 	file_list = NULL;
+-	remove(temp_name);
++	remove(tempnamebuf);
+ }
+ 
+ /* ----------------------------------------------------------------------------------------- */
