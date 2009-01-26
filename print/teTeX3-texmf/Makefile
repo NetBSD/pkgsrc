@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/01/11 09:05:27 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2009/01/26 21:17:04 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -44,6 +44,18 @@ post-extract:
 	rmdir ${WRKSRC}/fonts/truetype
 	rmdir ${WRKSRC}/fonts/type3
 	rmdir ${WRKSRC}/fonts/type42
+	rm -rf ${WRKSRC}/dvips/tetex
+	rm -rf ${WRKSRC}/fonts/enc/dvipdfm/tetex
+	rm -rf ${WRKSRC}/fonts/enc/dvips/tetex
+	rm -f ${WRKSRC}/fonts/map/dvipdfm/tetex/cm-dvipdfm-fix.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/dvipdfm35.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/dvips35.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/mathpple.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/mt-belleek.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/mt-plus.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/mt-yy.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/pdftex35.map
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/ps2pk35.map
 
 do-install:
 	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist

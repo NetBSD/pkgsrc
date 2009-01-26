@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2009/01/08 22:09:35 minskim Exp $
+# $NetBSD: Makefile,v 1.35 2009/01/26 21:17:05 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	22
+PKGREVISION=	23
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -13,7 +13,7 @@ COMMENT=	TeX distribution for UNIX compatible systems - binaries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
-DEPENDS+=	dialog>=0.6z:../../misc/dialog
+DEPENDS+=	texlive-tetex-[0-9]*:../../wip/texlive-tetex
 
 # games/omega previously installed an omega executable too
 CONFLICTS+=	omega<0.90.4nb1
@@ -37,10 +37,6 @@ LOWER_PAPERSIZE_cmd=	${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'
 LOWER_PAPERSIZE=	${LOWER_PAPERSIZE_cmd:sh}
 FILES_SUBST+=		PAPERSIZE=${LOWER_PAPERSIZE:Q}
 
-PKG_SYSCONFSUBDIR=	texmf
-
-CONF_FILES+=	${PREFIX}/share/texmf/web2c/fmtutil.cnf.dist		\
-		${PREFIX}/share/texmf/web2c/fmtutil.cnf
 OWN_DIRS+=	${VARBASE}/lib/texmf ${PREFIX}/share/texmf-local
 .for d in pk source tfm
 OWN_DIRS_PERMS+=	${VARBASE}/lib/texmf/fonts/${d} \
@@ -52,11 +48,62 @@ INSTALL_MAKE_FLAGS+=	texmf=${DESTDIR}${PREFIX}/share/texmf
 INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
+INSTALLATION_DIRS+=	share/texmf/fmtutil
+
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
+
+TEX_FORMAT_NAMES+=	tetex
+TEX_MAP_FILES+=		antp.map
+TEX_MAP_FILES+=		cork-antt.map
+TEX_MAP_FILES+=		cs-antt.map
+TEX_MAP_FILES+=		exp-antt.map
+TEX_MAP_FILES+=		greek-antt.map
+TEX_MAP_FILES+=		qx-antt.map
+TEX_MAP_FILES+=		t2a-antt.map
+TEX_MAP_FILES+=		t2b-antt.map
+TEX_MAP_FILES+=		t2c-antt.map
+TEX_MAP_FILES+=		t5-antt.map
+TEX_MAP_FILES+=		texnansi-antt.map
+TEX_MAP_FILES+=		wncy-antt.map
+TEX_MAP_FILES+=		qbk.map
+TEX_MAP_FILES+=		qcr.map
+TEX_MAP_FILES+=		qhv.map
+TEX_MAP_FILES+=		qpl.map
+TEX_MAP_FILES+=		qtm.map
+TEX_MAP_FILES+=		qzc.map
+TEX_MAP_FILES+=		charter.map
+TEX_MAP_FILES+=		cmcyr.map
+TEX_MAP_FILES+=		contnav.map
+TEX_MAP_FILES+=		cork-lm.map
+TEX_MAP_FILES+=		qx-lm.map
+TEX_MAP_FILES+=		texnansi-lm.map
+TEX_MAP_FILES+=		ts1-lm.map
+TEX_MAP_FILES+=		marvosym.map
+TEX_MAP_FILES+=		mathpple.map
+TEX_MAP_FILES+=		omega.map
+TEX_MAP_FILES+=		pazo.map
+TEX_MAP_FILES+=		pxfonts.map
+TEX_MAP_FILES+=		txfonts.map
+TEX_MAP_FILES+=		xypic.map
+TEX_MAP_FILES+=		mt-belleek.map
+TEX_MAP_FILES+=		urwvn.map
+TEX_MAP_FILES+=		dstroke.map
+TEX_MAP_FILES+=		fpls.map
+TEX_MIXEDMAP_FILES+=	ttcmex.map
+TEX_MIXEDMAP_FILES+=	bsr.map
+TEX_MIXEDMAP_FILES+=	bsr-interpolated.map
+TEX_MIXEDMAP_FILES+=	cs.map
+TEX_MIXEDMAP_FILES+=	hoekwater.map
+TEX_MIXEDMAP_FILES+=	pl.map
+TEX_MIXEDMAP_FILES+=	ccpl.map
+TEX_MIXEDMAP_FILES+=	eurosym.map
+TEX_MIXEDMAP_FILES+=	vnr.map
 
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/kpathsea/texmf.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
+.include "../../wip/texlive-tetex/format.mk"
+.include "../../wip/texlive-tetex/map.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
