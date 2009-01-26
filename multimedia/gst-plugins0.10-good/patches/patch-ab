@@ -1,38 +1,31 @@
-$NetBSD: patch-ab,v 1.11 2008/10/30 14:33:45 wiz Exp $
+$NetBSD: patch-ab,v 1.12 2009/01/26 10:28:59 drochner Exp $
 
---- configure.orig	2008-10-24 21:46:18.000000000 +0000
+--- configure.orig	2009-01-22 22:25:11.000000000 +0100
 +++ configure
-@@ -30739,7 +30739,7 @@ rm -f conftest.mmap
+@@ -26884,7 +26884,7 @@ _ACEOF
+ fi
+ rm -f conftest.mmap
  
- 
- 
--if test "x$ac_cv_func_mmap_fixed_mapped" == "xyes"; then
-+if test "x$ac_cv_func_mmap_fixed_mapped" = "xyes"; then
+- if test "x$ac_cv_func_mmap_fixed_mapped" == "xyes"; then
++ if test "x$ac_cv_func_mmap_fixed_mapped" = "xyes"; then
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -32154,7 +32154,7 @@ rm -f core conftest.err conftest.$ac_obj
- echo "${ECHO_T}$flag_ok" >&6; }
+@@ -28297,7 +28297,7 @@ rm -f core conftest.err conftest.$ac_obj
+ $as_echo "$flag_ok" >&6; }
  
  
 -        if test "x$ERROR_CFLAGS" == "x"
 +        if test "x$ERROR_CFLAGS" = "x"
      then
  
-   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -36493,6 +36493,8 @@ cat >>conftest.$ac_ext <<_ACEOF
+   { $as_echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
+@@ -32949,6 +32949,10 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __sun /* Solaris */
  #include <sys/types.h>
  #include <sys/videodev2.h>
 +#elif defined(__NetBSD__)
 +#include <sys/videoio.h>
- #else /* Linux */
- #include <linux/types.h>
- #define _LINUX_TIME_H
-@@ -36848,6 +36850,8 @@ cat >>conftest.$ac_ext <<_ACEOF
- #ifdef __sun /* Solaris */
- #include <sys/types.h>
- #include <sys/videodev2.h>
 +#elif defined(__NetBSD__)
 +#include <sys/videoio.h>
  #else /* Linux */
