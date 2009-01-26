@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.5 2008/11/10 11:58:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/26 10:44:26 drochner Exp $
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
 ${PYSITELIB}/gst-0.10/gst/__init__.pyc
 ${PYSITELIB}/gst-0.10/gst/__init__.pyo
 ${PYSITELIB}/gst-0.10/gst/_gst.la
+${PYSITELIB}/gst-0.10/gst/audio.la
 ${PYSITELIB}/gst-0.10/gst/extend/__init__.py
 ${PYSITELIB}/gst-0.10/gst/extend/__init__.pyc
 ${PYSITELIB}/gst-0.10/gst/extend/__init__.pyo
@@ -27,14 +28,19 @@ ${PYSITELIB}/gst-0.10/gst/extend/utils.pyc
 ${PYSITELIB}/gst-0.10/gst/extend/utils.pyo
 ${PYSITELIB}/gst-0.10/gst/interfaces.la
 ${PYSITELIB}/gst-0.10/gst/pbutils.la
+${PYSITELIB}/gst-0.10/gst/tag.la
+${PYSITELIB}/gst-0.10/gst/video.la
+${PYSITELIB}/gstoption.la
 ${PYSITELIB}/pygst.pth
 ${PYSITELIB}/pygst.py
-${PYSITELIB}/gstoption.la
+share/gst-python/0.10/defs/audio.defs
 share/gst-python/0.10/defs/base.defs
 share/gst-python/0.10/defs/gst-extrafuncs.defs
 share/gst-python/0.10/defs/gst-types.defs
 share/gst-python/0.10/defs/libs.defs
 share/gst-python/0.10/defs/pbutils.defs
+share/gst-python/0.10/defs/tag.defs
+share/gst-python/0.10/defs/video.defs
 share/gst-python/0.10/examples/audio-controller.py
 share/gst-python/0.10/examples/audioconcat.py
 share/gst-python/0.10/examples/bps.py
