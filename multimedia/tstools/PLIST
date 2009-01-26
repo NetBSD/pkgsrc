@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/26 22:49:28 jmcneill Exp $
+bin/es2ts
+bin/esdots
+bin/esfilter
+bin/esmerge
+bin/esreport
+bin/esreverse
+bin/m2ts2ts
+bin/pcapreport
+bin/ps2ts
+bin/psdots
+bin/psreport
+bin/stream_type
+bin/ts2es
+bin/ts_packet_insert
+bin/tsinfo
+bin/tsplay
+bin/tsreport
+bin/tsserve
