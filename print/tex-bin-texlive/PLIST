@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/26 04:01:56 minskim Exp $
+share/texmf/fmtutil/fmtutil-hdr.cnf
+share/texmf/scripts/texlive/lua/texlive/getopt.tlu
+share/texmf/scripts/texlive/lua/texlive/tlpdb.tlu
+share/texmf/scripts/texlive/lua/texlive/utils.tlu
+share/texmf/scripts/texlive/rungs.tlu
+share/texmf/scripts/texlive/test-tlpdb.tlu
+share/texmf/scripts/texlive/texconf.tlu
+share/texmf/scripts/texlive/tlmgr.pl
+share/texmf/scripts/texlive/tlmgrgui/do_listframe.pl
+share/texmf/scripts/texlive/tlmgrgui/gui-arch.pl
+share/texmf/scripts/texlive/tlmgrgui/gui-config.pl
+share/texmf/scripts/texlive/tlmgrgui/gui-uninstall.pl
+share/texmf/scripts/texlive/tlmgrgui/lang/cn
+share/texmf/scripts/texlive/tlmgrgui/lang/cs
+share/texmf/scripts/texlive/tlmgrgui/lang/de
+share/texmf/scripts/texlive/tlmgrgui/lang/en.sample
+share/texmf/scripts/texlive/tlmgrgui/lang/fr
+share/texmf/scripts/texlive/tlmgrgui/lang/it
+share/texmf/scripts/texlive/tlmgrgui/lang/pl
+share/texmf/scripts/texlive/tlmgrgui/lang/tw
+share/texmf/scripts/texlive/tlmgrgui/lang/vi
+share/texmf/scripts/texlive/tlmgrgui/tlmgrgui-real.pl
+share/texmf/scripts/texlive/tlmgrgui/tlmgrgui.pl
+share/texmf/scripts/texlive/uninstall-win32.pl
+share/texmf/web2c/updmap-hdr.cfg
