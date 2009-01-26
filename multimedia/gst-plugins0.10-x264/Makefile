@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/12/18 17:28:17 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/26 10:42:46 drochner Exp $
 #
 
 GST_PLUGINS0.10_NAME=	x264
 GST_PLUGINS0.10_DIRS=	ext/x264
-
-PKGREVISION=	1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
