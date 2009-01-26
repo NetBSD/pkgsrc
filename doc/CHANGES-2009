@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.380 2009/01/26 20:39:00 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.381 2009/01/26 21:05:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.2 [obache 2009-01-26]
 	Updated misc/openoffice2 to 2.4.2nb4 [hira 2009-01-26]
 	Added print/tex-bin-tetex version 3.0 [minskim 2009-01-26]
+	Added print/texlive-tetex version 2008 [minskim 2009-01-26]
