@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+
+--- texconfig-dialog.orig	2007-07-16 10:08:10.000000000 -0700
++++ texconfig-dialog
+@@ -83,14 +83,7 @@ logexec()
+ runDialog()
+ {
+   termCtl clear
+-  if test -n "$DIALOG_PROG"; then
+-    $DIALOG_PROG --title "TeX setup utility" ${1+"$@"}
+-    runDialogRc=$?
+-  else
+-    TERM=$DIALOG_TERM TERMINFO=$DIALOG_TERMINFO \
+-      tcdialog --title "TeX setup utility" ${1+"$@"}
+-    runDialogRc=$?
+-  fi
++  @DIALOG_PREFIX@/bin/dialog --title "TeX setup utility" ${1+"$@"}
+   termCtl clear
+   (exit $runDialogRc)
+   return $runDialogRc
