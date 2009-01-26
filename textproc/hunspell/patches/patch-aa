@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/01/26 20:09:48 sketch Exp $
+
+--- src/hunspell/hunzip.hxx.orig	Mon Jan 26 19:52:29 2009
++++ src/hunspell/hunzip.hxx	Mon Jan 26 19:59:16 2009
+@@ -4,6 +4,10 @@
+ #ifndef _HUNZIP_HXX_
+ #define _HUNZIP_HXX_
+ 
++#ifdef __SUNPRO_CC
++#include <iostream>
++#endif
++
+ #define BUFSIZE  65536
+ #define HZIP_EXTENSION ".hz"
+ 
