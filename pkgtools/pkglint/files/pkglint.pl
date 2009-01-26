@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.797 2008/12/21 10:34:59 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.798 2009/01/26 15:44:15 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6886,6 +6886,10 @@ sub checkfile_package_Makefile($$) {
 		: (undef, undef, undef, undef);
 	if (defined($effective_pkgname_line)) {
 		$opt_debug_misc and $effective_pkgname_line->log_debug("Effective name=${effective_pkgname} base=${effective_pkgbase} version=${effective_pkgversion}.");
+		# XXX: too many false positives
+		if (false && $pkgpath =~ m"/([^/]+)$" && $effective_pkgbase ne $1) {
+			$effective_pkgname_line->log_warning("Mismatch between PKGNAME ($effective_pkgname) and package directory ($1).");
+		}
 	}
 
 	checkpackage_possible_downgrade();
@@ -7089,6 +7093,7 @@ sub checkfile_patch($) {
 	};
 
 	my $transitions =
+		# [ from state, regex, to state, action ]
 		[   [PST_START, re_patch_rcsid, PST_CENTER, sub() {
 			checkline_rcsid($line, "");
 		}], [PST_START, undef, PST_CENTER, sub() {
