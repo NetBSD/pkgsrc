@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.384 2009/01/26 22:50:35 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.385 2009/01/27 00:16:40 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -532,3 +532,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-bin to 3.0nb23 [minskim 2009-01-26]
 	Updated mail/mutt-devel to 1.5.19 [tonio 2009-01-26]
 	Added multimedia/tstools version 1.11 [jmcneill 2009-01-26]
+	Added devel/ruby-facade version 1.0.2 [ahoka 2009-01-27]
+	Added devel/ruby-pathname2 version 1.6.1 [ahoka 2009-01-27]
