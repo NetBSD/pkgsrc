@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.392 2009/01/27 08:30:16 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.393 2009/01/27 09:19:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -541,3 +541,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/mediatomb to 0.11.0nb5 [jmcneill 2009-01-26]
 	Updated graphics/GraphicsMagick to 1.3.5 [obache 2009-01-27]
 	Updated mail/dovecot to 1.1.10 [ghen 2009-01-27]
+	Updated databases/tokyocabinet to 1.4.3 [obache 2009-01-27]
