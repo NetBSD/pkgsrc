@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/10 23:45:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/27 11:35:10 markd Exp $
 bin/onto2vocabularyclass
 bin/sopranocmd
 bin/sopranod
@@ -55,8 +55,6 @@ include/Soprano/Soprano
 include/Soprano/Statement
 include/Soprano/StatementIterator
 include/Soprano/StorageModel
-include/Soprano/Transaction
-include/Soprano/TransactionFactory
 include/Soprano/Util/AsyncModel
 include/Soprano/Util/AsyncResult
 include/Soprano/Util/DummyModel
@@ -65,7 +63,6 @@ include/Soprano/Util/ReadOnlyModel
 include/Soprano/Util/SignalCacheModel
 include/Soprano/Util/SimpleNodeIterator
 include/Soprano/Util/SimpleStatementIterator
-include/Soprano/Util/SimpleTransactionModel
 include/Soprano/Version
 include/Soprano/Vocabulary/NAO
 include/Soprano/Vocabulary/NRL
