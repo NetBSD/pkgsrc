@@ -1,22 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2009/01/11 11:45:12 markd Exp $
+$NetBSD: patch-aa,v 1.3 2009/01/27 12:22:46 markd Exp $
 
---- Eigen/src/Core/util/Memory.h.orig	2009-01-06 07:21:44.000000000 +1300
+SVN commit 910275 by bjacob
+
+--- Eigen/src/Core/util/Memory.h.orig	2009-01-13 05:06:04.000000000 +1300
 +++ Eigen/src/Core/util/Memory.h
-@@ -56,7 +56,7 @@ inline T* ei_aligned_malloc(size_t size)
-     #else
-       #ifdef _MSC_VER
-         void_result = _aligned_malloc(size*sizeof(T), 16);
--      #elif defined(__APPLE__)
-+      #elif defined(__APPLE__) || defined(__NetBSD__)
-         void_result = malloc(size*sizeof(T)); // Apple's malloc() already returns aligned ptrs
-       #else
-         void_result = _mm_malloc(size*sizeof(T), 16);
-@@ -97,7 +97,7 @@ inline void ei_aligned_free(T* ptr, size
-       while(size) ptr[--size].~T();
-       #if defined(__linux)
-         free(ptr);
--      #elif defined(__APPLE__)
-+      #elif defined(__APPLE__) || defined(__NetBSD__)
-         free(ptr);
-       #elif defined(_MSC_VER)
-         _aligned_free(ptr);
+@@ -27,7 +27,8 @@
+ #ifndef EIGEN_MEMORY_H
+ #define EIGEN_MEMORY_H
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__) || defined(_WIN64)
++// for NetBSD I didn't see any clear statement in the docs, but Mark Davies is confident about this.
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(_WIN64)
+   #define EIGEN_MALLOC_ALREADY_ALIGNED 1
+ #else
+   #define EIGEN_MALLOC_ALREADY_ALIGNED 0
