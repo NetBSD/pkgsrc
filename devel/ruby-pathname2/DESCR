@@ -1,0 +1,2 @@
+An alternate implementation for the Pathname library. This version treats
+a path name as a String, though with certain methods overloaded.
