@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/01/09 23:08:23 markd Exp $
+$NetBSD: distinfo,v 1.4 2009/01/27 10:47:19 markd Exp $
 
-SHA1 (akonadi-1.1.0.tar.bz2) = d8ee17760c9179743ffbdb51de97af1d20b9308b
-RMD160 (akonadi-1.1.0.tar.bz2) = c262afd5e69461287394846800e896ddd6418ab4
-Size (akonadi-1.1.0.tar.bz2) = 139743 bytes
+SHA1 (akonadi-1.1.1.tar.bz2) = 797d90b9a5c17cb852408cbbc9cbd86e0ac711ac
+RMD160 (akonadi-1.1.1.tar.bz2) = 716fc9f410213f96dce38601580048d0e061dedb
+Size (akonadi-1.1.1.tar.bz2) = 134761 bytes
