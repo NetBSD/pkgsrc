@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/01/27 19:14:31 drochner Exp $
+
+--- configure.orig	2009-01-25 19:54:13.000000000 +0100
++++ configure
+@@ -2398,7 +2398,7 @@ if test "x${enable_debug_flags}" != "xno
+ then
+   CXXFLAGS="${CXXFLAGS} -g -O0 -Wunused-value -Wunused-variable -Wunused-function -Wunused-label -Wcomment -Wmissing-braces -Wparentheses -Wreturn-type -Wswitch -Wstrict-aliasing -Wextra -Wno-unused-parameter"
+   CFLAGS="${CFLAGS} -g -O0 -Wunused-value -Wunused-variable -Wunused-function -Wunused-label -Wcomment -Wimplicit-int -Werror-implicit-function-declaration -Wmissing-braces -Wparentheses -Wreturn-type -Wswitch -Wstrict-aliasing -Wextra -Wno-unused-parameter"
+-  if test "x${enable_developer}" == "xyes"
++  if test "x${enable_developer}" = "xyes"
+   then
+   CXXFLAGS="${CXXFLAGS} -Wall"
+   CFLAGS="${CFLAGS} -Wstrict-prototypes -Wall"
