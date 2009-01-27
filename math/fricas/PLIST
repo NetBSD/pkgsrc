@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/14 12:25:30 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/01/27 15:54:23 asau Exp $
 bin/axiom
+bin/efricas
 bin/fricas
+lib/fricas/emacs/fricas-cpl.el
+lib/fricas/emacs/fricas.el
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/A1AGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/A1AGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ABELGRP-.${FASL}
@@ -44,9 +47,22 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ARRAY12.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ARRAY2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ASSOCEQ.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ASTACK.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATADDVA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATAPPRO.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATARBEX.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATARBPR.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCANCL.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCANON.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCS.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATCUNOR.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATFINAG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATMULVA.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATNZDIV.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATPOSET.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATRIG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATRIG.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATTREG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATSHMUT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ATUNIKN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/AUTOMOR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BALFACT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/BASTYPE-.${FASL}
@@ -344,6 +360,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GB.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GBEUCLID.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GBF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GBINTERN.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GCDBAS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GCDDOM-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GCDDOM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/GCNAALG.${FASL}
@@ -605,7 +622,9 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MSET.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MSETAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MSYSCMD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MTHING.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MTSCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MTSCAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MULDEP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MULTFACT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/MULTSQFR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/NAALG-.${FASL}
@@ -960,6 +979,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STBL.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STEP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STINPROD.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STNSR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STREAM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STREAM1.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/STREAM2.${FASL}
@@ -1195,10 +1215,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/iterator.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/mark.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/mark.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/mark.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/metalex.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/metalex.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/metameta.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/metameta.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.o
@@ -2579,7 +2595,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/alql.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/any.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/array1.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/array2.spad.pamphlet
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/attreg.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/attribs.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/bags.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/bezout.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/boolean.spad.pamphlet
@@ -2738,6 +2754,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/moebius.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/mring.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/mset.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/mts.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/muldep.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/multfact.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/multpoly.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/multsqfr.spad.pamphlet
@@ -3055,4 +3072,5 @@ ${x11}@dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/lib/graph
 @dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra
 @dirrm lib/fricas/target/${MACHINE_GNU_PLATFORM}
 @dirrm lib/fricas/target
+@dirrm lib/fricas/emacs
 @dirrm lib/fricas

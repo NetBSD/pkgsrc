@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/01/07 00:00:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/27 15:54:23 asau Exp $
 
-PKGNAME=		fricas-1.0.3
+PKGNAME=		fricas-1.0.5
 DISTNAME=		${PKGNAME}-full
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fricas/}
@@ -20,6 +20,14 @@ USE_TOOLS+=		gmake
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
+# Problems:
+# 4. Emacs files should go into "site-lisp".
+# 5. view3D hangs sometimes (?), killing it doesn't affect binary package.
+
 .include "options.mk"
+
+.if !empty(PKG_OPTIONS:Mclisp)
+INSTALL_UNSTRIPPED=	yes	# don't strip AXIOMsys, it breaks FFI
+.endif
 
 .include "../../mk/bsd.pkg.mk"
