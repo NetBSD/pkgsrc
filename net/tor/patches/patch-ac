@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.5.6.1 2009/01/27 13:14:37 tron Exp $
+
+--- ./src/common/torint.h.orig	2009-01-22 12:02:50.000000000 +0100
++++ ./src/common/torint.h
+@@ -290,6 +290,8 @@ typedef uint32_t uintptr_t;
+ #define TIME_MAX ((time_t)INT_MAX)
+ #elif (SIZEOF_TIME_T == SIZEOF_LONG)
+ #define TIME_MAX ((time_t)LONG_MAX)
++#elif (SIZEOF_TIME_T == 8)
++#define TIME_MAX ((time_t)INT64_MAX)
+ #else
+ #error "Can't define (signed) TIME_MAX"
+ #endif
