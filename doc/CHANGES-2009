@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.389 2009/01/27 01:45:46 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.390 2009/01/27 04:06:40 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -538,3 +538,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/avidemux to 2.4.3nb3 [jmcneill 2009-01-26]
 	Added multimedia/fuppes version 0.629 [jmcneill 2009-01-26]
 	Updated wm/ctwm to 3.8anb1 [jmcneill 2009-01-26]
+	Updated multimedia/mediatomb to 0.11.0nb5 [jmcneill 2009-01-26]
