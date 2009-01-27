@@ -95,11 +95,12 @@ OOPPTTIIOONNSS
              This means that you cannot deinstall it later, so only use this
              option if you know what you are doing!
 
-     --uu      If the package that's being installed is already installed,
-             either in the same or a different version, an update is per-
-             formed.  If this is specified twice, then any dependant packages
-             that are too old will also be updated to fulfill the dependency.
-             See below for a more detailed description of the process.
+     --uu      If the package that's being installed is already installed, an
+             update is performed.  It is currently not possible to update to
+             an identical version.  If this is specified twice, then any
+             dependant packages that are too old will also be updated to ful-
+             fill the dependency.  See below for a more detailed description
+             of the process.
 
      --VV      Print version number and exit.
 
@@ -316,4 +317,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 4.0                     October 10, 2008                     NetBSD 4.0
+NetBSD 5.0                     October 10, 2008                     NetBSD 5.0

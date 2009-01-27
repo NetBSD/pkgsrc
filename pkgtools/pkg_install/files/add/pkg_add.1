@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.9 2008/10/10 15:26:37 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.10 2009/01/27 21:44:23 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -169,8 +169,9 @@ This implies
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
 .It Fl u
-If the package that's being installed is already installed, either
-in the same or a different version, an update is performed.
+If the package that's being installed is already installed,
+an update is performed.
+It is currently not possible to update to an identical version.
 If this is specified twice, then any dependant packages that are
 too old will also be updated to fulfill the dependency.
 See below for a more detailed description of the process.
