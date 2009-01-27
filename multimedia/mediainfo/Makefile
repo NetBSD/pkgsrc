@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/22 13:42:02 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/27 23:58:21 jmcneill Exp $
 #
 
-DISTNAME=	MediaInfo_CLI_0.7.8_GNU_FromSource
-PKGNAME=	mediainfo-0.7.8
+DISTNAME=	MediaInfo_CLI_0.7.9_GNU_FromSource
+PKGNAME=	mediainfo-0.7.9
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediainfo/}
 EXTRACT_SUFX=	.tar.bz2
