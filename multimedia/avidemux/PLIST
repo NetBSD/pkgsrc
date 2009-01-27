@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2008/11/10 23:43:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/01/27 00:56:41 jmcneill Exp $
 bin/avidemux2_cli
 bin/avidemux2_gtk
+share/applications/avidemux2.desktop
+share/icons/hicolor/64x64/apps/avidemux.png
 share/locale/ca/LC_MESSAGES/avidemux.mo
 share/locale/cs/LC_MESSAGES/avidemux.mo
 share/locale/de/LC_MESSAGES/avidemux.mo
