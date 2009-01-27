@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/27 19:14:31 drochner Exp $
+
+--- po/Makefile.in.in.orig	2008-07-30 22:02:12.000000000 +0200
++++ po/Makefile.in.in
+@@ -21,6 +21,7 @@ SHELL = /bin/sh
+ 
+ srcdir = @srcdir@
+ top_srcdir = @top_srcdir@
++top_builddir = ..
+ VPATH = @srcdir@
+ 
+ prefix = @prefix@
