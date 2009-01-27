@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/01/16 04:17:38 obache Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/27 04:38:44 obache Exp $
 #
 
-DISTNAME=	GraphicsMagick-1.3.4
+DISTNAME=	GraphicsMagick-1.3.5
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/
