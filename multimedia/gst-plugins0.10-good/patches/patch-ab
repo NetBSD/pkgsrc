@@ -1,8 +1,18 @@
-$NetBSD: patch-ab,v 1.12 2009/01/26 10:28:59 drochner Exp $
+$NetBSD: patch-ab,v 1.13 2009/01/27 22:59:16 sketch Exp $
 
---- configure.orig	2009-01-22 22:25:11.000000000 +0100
-+++ configure
-@@ -26884,7 +26884,7 @@ _ACEOF
+--- configure.orig	Thu Jan 22 21:25:11 2009
++++ configure	Tue Jan 27 22:46:45 2009
+@@ -26274,6 +26274,9 @@
+ #error GCC before 3.4 has critical bugs compiling inline assembly
+ #endif
+ #endif
++#ifdef __SUNPRO_C
++#error Sun Studio cannot handle assembly in this package
++#endif
+ __asm__ (""::)
+   ;
+   return 0;
+@@ -26884,7 +26887,7 @@
  fi
  rm -f conftest.mmap
  
@@ -11,7 +21,7 @@ $NetBSD: patch-ab,v 1.12 2009/01/26 10:28:59 drochner Exp $
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -28297,7 +28297,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -28297,7 +28300,7 @@
  $as_echo "$flag_ok" >&6; }
  
  
@@ -20,7 +30,7 @@ $NetBSD: patch-ab,v 1.12 2009/01/26 10:28:59 drochner Exp $
      then
  
    { $as_echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -32949,6 +32949,10 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -32949,6 +32952,10 @@
  #ifdef __sun /* Solaris */
  #include <sys/types.h>
  #include <sys/videodev2.h>
