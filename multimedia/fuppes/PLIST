@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/27 01:13:41 jmcneill Exp $
+bin/fuppes
+bin/fuppesd
+include/fuppes_plugin.h
+include/fuppes_plugin_types.h
+lib/fuppes/libdecoder_flac.la
+lib/fuppes/libdecoder_vorbis.la
+lib/fuppes/libencoder_twolame.la
+lib/fuppes/libmetadata_dlna_profiles.la
+lib/fuppes/libmetadata_exiv2.la
+lib/fuppes/libmetadata_libavformat.la
+lib/fuppes/libmetadata_libmp4v2.la
+lib/fuppes/libmetadata_magickwand.la
+lib/fuppes/libmetadata_simage.la
+lib/fuppes/libmetadata_taglib.la
+lib/fuppes/libtranscoder_ffmpeg.la
+lib/fuppes/libtranscoder_magickpp.la
+lib/libfuppes.la
+share/fuppes/fuppes-small.png
+share/fuppes/header-gradient-small.png
+share/fuppes/header-gradient.png
+share/fuppes/style.css
+@dirrm share/fuppes
+@dirrm lib/fuppes
