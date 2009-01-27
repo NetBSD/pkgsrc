@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.1.2.7 2008/12/30 15:55:57 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.1.2.8 2009/01/27 22:24:05 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.7 2008/12/30 15:55:57 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.8 2009/01/27 22:24:05 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -352,7 +352,7 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 			goto no_valid_signature;
 		}
 		has_sig = !detached_gpg_verify(hash_file, hash_len,
-		    signature_file, signature_len, NULL);
+		    signature_file, signature_len, gpg_keyring_verify);
 
 		free(signature_file);
 	} else {
@@ -636,7 +636,7 @@ pkg_sign_gpg(const char *name, const char *output)
 	hash_file = tmp;
 
 	if (detached_gpg_sign(hash_file, strlen(hash_file), &signature_file,
-	    &signature_len, NULL, NULL))
+	    &signature_len, gpg_keyring_sign, gpg_sign_as))
 		err(EXIT_FAILURE, "Cannot sign hash file");
 
 	lseek(fd, 0, SEEK_SET);

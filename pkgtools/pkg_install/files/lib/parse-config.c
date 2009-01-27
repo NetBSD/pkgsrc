@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.1.2.6 2009/01/08 00:01:31 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.7 2009/01/27 22:24:05 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: parse-config.c,v 1.1.2.6 2009/01/08 00:01:31 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.7 2009/01/27 22:24:05 joerg Exp $");
 #endif
 
 /*-
@@ -61,6 +61,10 @@ const char *certs_pkg_vulnerabilities;
 const char *check_vulnerabilities;
 const char *verified_installation;
 const char *gpg_cmd;
+const char *gpg_keyring_pkgvuln;
+const char *gpg_keyring_sign;
+const char *gpg_keyring_verify;
+const char *gpg_sign_as;
 const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
@@ -80,6 +84,10 @@ static struct config_variable {
 	{ "GPG", &gpg_cmd },
 	{ "IGNORE_PROXY", &ignore_proxy },
 	{ "IGNORE_URL", &ignore_advisories },
+	{ "GPG_KEYRING_PKGVULN", &gpg_keyring_pkgvuln },
+	{ "GPG_KEYRING_SIGN", &gpg_keyring_sign },
+	{ "GPG_KEYRING_VERIFY", &gpg_keyring_verify },
+	{ "GPG_SIGN_AS", &gpg_sign_as },
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
 	{ "VERBOSE_NETIO", &verbose_netio },
