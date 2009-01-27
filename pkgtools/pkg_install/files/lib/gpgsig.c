@@ -1,4 +1,4 @@
-/*	$NetBSD: gpgsig.c,v 1.1.2.1 2008/12/30 15:55:57 joerg Exp $	*/
+/*	$NetBSD: gpgsig.c,v 1.1.2.2 2009/01/27 22:24:05 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: gpgsig.c,v 1.1.2.1 2008/12/30 15:55:57 joerg Exp $");
+__RCSID("$NetBSD: gpgsig.c,v 1.1.2.2 2009/01/27 22:24:05 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -108,9 +108,9 @@ verify_signature(const char *input, size_t input_len, const char *keyring,
 }
 
 int
-inline_gpg_verify(const char *content, size_t len)
+inline_gpg_verify(const char *content, size_t len, const char *keyring)
 {
-	verify_signature(content, len, NULL, NULL);
+	verify_signature(content, len, keyring, NULL);
 
 	return 0;
 }
@@ -212,7 +212,7 @@ detached_gpg_sign(const char *content, size_t len, char **sig, size_t *sig_len,
 		}
 		if (keyring != NULL) {
 			*argvp++ = "--no-default-keyring";
-			*argvp++ = "--keyring";
+			*argvp++ = "--secret-keyring";
 			*argvp++ = keyring;
 		}
 
