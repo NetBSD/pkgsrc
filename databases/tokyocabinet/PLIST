@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/01/26 10:41:28 obache Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/01/27 09:19:06 obache Exp $
 bin/tcamgr
 bin/tcatest
 bin/tcbmgr
@@ -10,6 +10,9 @@ bin/tcftest
 bin/tchmgr
 bin/tchmttest
 bin/tchtest
+bin/tctmgr
+bin/tctmttest
+bin/tcttest
 bin/tcucodec
 bin/tcumttest
 bin/tcutest
@@ -17,11 +20,12 @@ include/tcadb.h
 include/tcbdb.h
 include/tcfdb.h
 include/tchdb.h
+include/tctdb.h
 include/tcutil.h
 lib/libtokyocabinet.a
 lib/libtokyocabinet.so
 lib/libtokyocabinet.so.7
-lib/libtokyocabinet.so.7.7.0
+lib/libtokyocabinet.so.7.8.0
 lib/pkgconfig/tokyocabinet.pc
 libexec/tcawmgr.cgi
 man/man1/tcamgr.1
@@ -35,6 +39,9 @@ man/man1/tcftest.1
 man/man1/tchmgr.1
 man/man1/tchmttest.1
 man/man1/tchtest.1
+man/man1/tctmgr.1
+man/man1/tctmttest.1
+man/man1/tcttest.1
 man/man1/tcucodec.1
 man/man1/tcumttest.1
 man/man1/tcutest.1
@@ -46,6 +53,7 @@ man/man3/tclist.3
 man/man3/tcmap.3
 man/man3/tcmdb.3
 man/man3/tcmpool.3
+man/man3/tctdb.3
 man/man3/tctree.3
 man/man3/tcutil.3
 man/man3/tcxstr.3
