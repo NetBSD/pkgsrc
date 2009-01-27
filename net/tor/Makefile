@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2008/12/30 09:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2009/01/27 13:14:37 tron Exp $
 #
 
-DISTNAME=		tor-0.2.0.32
+DISTNAME=		tor-0.2.0.33
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
