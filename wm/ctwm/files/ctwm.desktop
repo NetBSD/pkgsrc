@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=CTWM
+Comment=This session logs you into CTWM
+Exec=ctwm
+TryExec=ctwm
+Icon=
+Type=Application
