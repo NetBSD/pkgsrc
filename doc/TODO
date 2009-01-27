@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7824 2009/01/27 00:49:58 jmcneill Exp $
+$NetBSD: TODO,v 1.7825 2009/01/27 11:44:00 markd Exp $
 
 Suggested new packages
 ======================
@@ -373,7 +373,6 @@ Suggested package updates
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
-	o akonadi-1.1.1
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -1093,7 +1092,6 @@ Suggested package updates
 	o python-2.6.1
 	o python26-2.6.0
 	o qbrew-0.3.9
-	o qca2-2.0.1
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.3.2
