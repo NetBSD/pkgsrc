@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.398 2009/01/27 20:26:20 sketch Exp $
+$NetBSD: CHANGES-2009,v 1.399 2009/01/27 20:37:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -548,5 +548,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/soprano to 2.2 [markd 2009-01-27]
 	Updated math/eigen2 to 2.0beta6 [markd 2009-01-27]
 	Updated math/fricas to 1.0.5 [asau 2009-01-27]
-	Updated textproc/py-html5lib to 0.11 [joerg 2009-01-27]
+	Added textproc/py-html5lib version 0.11 [joerg 2009-01-27]
 	Updated devel/libatomic_ops to 20081024nb2 [sketch 2009-01-27]
+	Added print/py-Pdf version 1.12 [joerg 2009-01-27]
