@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/01/11 11:45:11 markd Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/27 12:22:46 markd Exp $
 
-DISTNAME=	eigen-2.0-beta5
+DISTNAME=	eigen-2.0-beta6
 PKGNAME=	${DISTNAME:S/-beta/beta/}
-PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=   http://download.tuxfamily.org/eigen/
 EXTRACT_SUFX=	.tar.bz2
