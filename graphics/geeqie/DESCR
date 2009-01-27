@@ -1,0 +1,5 @@
+Geeqie is a lightweight Gtk+ based image viewer for Unix like
+operating systems.
+Geeqie has been forked from gqview project, because it was not possible
+to contact gqview author and the only maintainer. Geeqie projects goal is
+to move the development forward and also integrate the existing patches.
