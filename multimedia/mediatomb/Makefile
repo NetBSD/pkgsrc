@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/01/05 12:28:32 jmcneill Exp $
+# $NetBSD: Makefile,v 1.8 2009/01/27 04:05:50 jmcneill Exp $
 
 DISTNAME=	mediatomb-0.11.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mediatomb/}
 
@@ -12,7 +12,7 @@ COMMENT=	UPnP MediaServer with a web user interface
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES+=	c c++
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config automake autoconf autoreconf
 USE_DIRS+=	xdg-1.4
 
 RCD_SCRIPTS=	mediatomb
@@ -45,6 +45,9 @@ SUBST_STAGE.config=	post-patch
 post-extract:
 	${CP} ${FILESDIR}/config.xml.in ${WRKSRC}/config.xml
 	${CP} ${FILESDIR}/mediatomb.desktop.in ${WRKSRC}/mediatomb.desktop
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -i
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
