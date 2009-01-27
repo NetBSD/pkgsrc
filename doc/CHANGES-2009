@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.394 2009/01/27 11:44:00 markd Exp $
+$NetBSD: CHANGES-2009,v 1.395 2009/01/27 12:24:14 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/strigi to 0.6.3 [markd 2009-01-27]
 	Updated security/qca2 to 2.0.1 [markd 2009-01-27]
 	Updated textproc/soprano to 2.2 [markd 2009-01-27]
+	Updated math/eigen2 to 2.0beta6 [markd 2009-01-27]
