@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/10/25 08:26:12 adam Exp $
+# $NetBSD: Makefile,v 1.76 2009/01/27 12:04:14 asau Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
 CATEGORIES=	math
@@ -19,6 +19,8 @@ CONFLICTS+=	octave-2.*
 .if (${MACHINE_ARCH} == "arm32")
 BROKEN=		Internal compiler error occurs on arm32 (even with gcc-2.95.3)
 .endif
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_GNU_READLINE=	yes
 USE_LIBTOOL=		yes
@@ -74,10 +76,10 @@ post-install:
 	cd ${WRKSRC}/doc/liboctave;					\
 	for f in liboctave.info liboctave.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};		\
 	done
 .for f in ${OCTAVE_DOC}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/share/octave/${OCTAVE_VER}/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/share/octave/${OCTAVE_VER}/doc
 .endfor
 
 .include "../../audio/libsndfile/buildlink3.mk"
