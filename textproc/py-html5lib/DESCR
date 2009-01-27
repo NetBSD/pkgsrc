@@ -1,0 +1,8 @@
+html5lib is a pure-python library for parsing HTML. The parser is
+designed to handle all flavours of HTML and  parses invalid documents
+using well-defined error handling rules compatible with the behaviour of
+major desktop web browsers.
+
+Output is to a tree structure; the current release supports output to
+DOM, ElementTree, lxml and BeautifulSoup tree formats as well as a
+simple custom format.
