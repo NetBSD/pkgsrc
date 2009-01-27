@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7823 2009/01/26 22:36:21 tonio Exp $
+$NetBSD: TODO,v 1.7824 2009/01/27 00:49:58 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,6 @@ Suggested package updates
 	o ttf2pk-1.5.20050518
 	o tuxpaint-0.9.20
 	o twelf-1.5r1
-	o twolame-0.3.12
 	o txt2html-2.51
 	o uae-0.8.29
 	o ubs-0.20
