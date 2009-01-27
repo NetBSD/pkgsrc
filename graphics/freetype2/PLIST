@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/06/11 10:35:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/01/27 19:29:32 drochner Exp $
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
 include/freetype2/freetype/config/ftheader.h
@@ -6,6 +6,7 @@ include/freetype2/freetype/config/ftmodule.h
 include/freetype2/freetype/config/ftoption.h
 include/freetype2/freetype/config/ftstdlib.h
 include/freetype2/freetype/freetype.h
+include/freetype2/freetype/ftadvanc.h
 include/freetype2/freetype/ftbbox.h
 include/freetype2/freetype/ftbdf.h
 include/freetype2/freetype/ftbitmap.h
