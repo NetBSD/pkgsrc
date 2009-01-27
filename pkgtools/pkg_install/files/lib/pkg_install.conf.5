@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.5 2009/01/08 09:14:12 wiz Exp $
+.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.6 2009/01/27 22:24:05 joerg Exp $
 .\"
 .\" Copyright (c) 2008, 2009 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -80,7 +80,6 @@ A missing pkg-vulnerabilities file is considered an error.
 The user is always asked to confirm installation of vulnerable packages.
 .El
 .It Dv GPG
-Deprecated.
 Path to
 .Xr gpg 1 ,
 which can be used to verify the signature in the
@@ -89,6 +88,16 @@ file when running
 .Dl Ic pkg_admin check-pkg-vulnerabilities -s
 or
 .Dl Ic pkg_admin fetch-pkg-vulnerabilities -s
+It can also be used to verify and sign binary packages.
+.It Dv GPG_KEYRING_PKGVULN
+Non-default keyring to use for verifying GPG signatures of
+.Pa pkg-vulnerabilities.
+.It Dv GPG_KEYRING_SIGN
+Non-default keyring to use for signing packages with GPG.
+.It Dv GPG_KEYRING_VERIFY
+Non-default keyring to use for verifying GPG signature of packages.
+.It Dv GPG_SIGN_AS
+User-id to use for signing packages.
 .It Dv IGNORE_PROXY
 Use direct connections and ignore
 .Ev FTP_PROXY

@@ -1,4 +1,4 @@
-/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.8 2008/12/30 15:55:57 joerg Exp $	*/
+/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.9 2009/01/27 22:24:06 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.8 2008/12/30 15:55:57 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.9 2009/01/27 22:24:06 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -109,7 +109,7 @@ verify_signature(const char *input, size_t input_len)
 		    "At least GPG or CERTIFICATE_ANCHOR_PKGVULN "
 		    "must be configured");
 	if (gpg_cmd != NULL)
-		inline_gpg_verify(input, input_len);
+		inline_gpg_verify(input, input_len, gpg_keyring_pkgvuln);
 	if (certs_pkg_vulnerabilities != NULL)
 		verify_signature_pkcs7(input);
 }

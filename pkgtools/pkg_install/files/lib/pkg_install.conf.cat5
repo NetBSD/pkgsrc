@@ -44,11 +44,26 @@ DDEESSCCRRIIPPTTIIOONN
              interactive    The user is always asked to confirm installation
                             of vulnerable packages.
 
-     GPG     Deprecated.  Path to gpg(1), which can be used to verify the sig-
-             nature in the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
+     GPG     Path to gpg(1), which can be used to verify the signature in the
+             _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
                    ppkkgg__aaddmmiinn cchheecckk--ppkkgg--vvuullnneerraabbiilliittiieess --ss
              or
                    ppkkgg__aaddmmiinn ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess --ss
+             It can also be used to verify and sign binary packages.
+
+     GPG_KEYRING_PKGVULN
+             Non-default keyring to use for verifying GPG signatures of
+             _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s_.
+
+     GPG_KEYRING_SIGN
+             Non-default keyring to use for signing packages with GPG.
+
+     GPG_KEYRING_VERIFY
+             Non-default keyring to use for verifying GPG signature of pack-
+             ages.
+
+     GPG_SIGN_AS
+             User-id to use for signing packages.
 
      IGNORE_PROXY
              Use direct connections and ignore FTP_PROXY and HTTP_PROXY.
