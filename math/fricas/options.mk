@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/09/14 12:25:30 ahoka Exp $
+# $NetBSD: options.mk,v 1.2 2009/01/27 15:54:23 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -6,9 +6,7 @@ PKG_OPTIONS_GROUP.lisp=		clisp sbcl ecl
 
 PKG_SUPPORTED_OPTIONS+=		x11
 
-# We should use CLISP instead of ECL, but it became problematic
-# in FriCAS 1.0.3:
-PKG_SUGGESTED_OPTIONS+=		ecl x11
+PKG_SUGGESTED_OPTIONS+=		clisp x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,7 +39,7 @@ PRINT_PLIST_AWK+=	{if ($$0 ~ /\.lib$$/) {$$0 = "$${clisp}" $$0;}}
 
 # X11-only files:
 .if !empty(PKG_OPTIONS:Mx11)
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/share\/viewports\// || $$0 ~ /\.(bitmap|xbm|xbm.tiny|bm|bakmap|xpm|ht|pht|ps)$$/) {$$0 = "$${x11}" $$0;}}
 .endif
 
 # X11
