@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2008/01/11 01:23:44 adam Exp $
+$NetBSD: patch-af,v 1.5 2009/01/27 12:04:14 asau Exp $
 
---- liboctave/Makefile.in.orig	2007-11-30 19:53:30.000000000 +0100
-+++ liboctave/Makefile.in
-@@ -256,8 +256,9 @@ endif
+--- liboctave/Makefile.in.orig	2008-09-24 11:13:47.000000000 +0400
++++ liboctave/Makefile.in	2009-01-27 05:00:12.000000000 +0300
+@@ -256,8 +256,9 @@
  
  $(LIBPRE)octave.$(LIBEXT): $(LIBOCTAVE_OBJECTS)
  	rm -f $@
@@ -14,7 +14,7 @@ $NetBSD: patch-af,v 1.4 2008/01/11 01:23:44 adam Exp $
  
  $(LIBPRE)octave.$(SHLEXT_VER): $(LIBPRE)octave.$(SHLEXT)
  	rm -f $@
-@@ -284,9 +285,8 @@ install-lib:
+@@ -284,9 +285,8 @@
  	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(octlibdir)
  	if $(STATIC_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
@@ -22,7 +22,7 @@ $NetBSD: patch-af,v 1.4 2008/01/11 01:23:44 adam Exp $
 -	    $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
 -	  $(RANLIB) $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(LIBEXT); \
 +	  ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} liboctave.$(LIBEXT) \
-+		${PREFIX}/lib; \
++		${DESTDIR}${PREFIX}/lib; \
  	fi
  	if $(SHARED_LIBS); then \
  	  rm -f $(DESTDIR)$(octlibdir)/$(LIBPRE)octave.$(SHLLIB_VER); \
