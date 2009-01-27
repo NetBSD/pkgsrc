@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.27 2009/01/22 21:48:18 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.28 2009/01/27 13:29:52 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -75,3 +75,7 @@ libaudiofile: security patch
 Pullup ticket #2654 - requested by martti
 rrdtool: bug fix update
 rrdtool12: bug fix update
+Pullup ticket #2656 - requested by drochner
+tor: security update
+Pullup ticket #2657 - requested by
+ntp4: security update
