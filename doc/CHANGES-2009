@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.386 2009/01/27 00:50:24 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.387 2009/01/27 00:57:19 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/ruby-facade version 1.0.2 [ahoka 2009-01-27]
 	Added devel/ruby-pathname2 version 1.6.1 [ahoka 2009-01-27]
 	Updated audio/twolame to 0.3.12 [jmcneill 2009-01-26]
+	Updated multimedia/avidemux to 2.4.3nb3 [jmcneill 2009-01-26]
