@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.17 2009/01/08 00:01:31 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.18 2009/01/27 22:24:05 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -393,7 +393,7 @@ int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 #endif
 
-int inline_gpg_verify(const char *, size_t);
+int inline_gpg_verify(const char *, size_t, const char *);
 int detached_gpg_verify(const char *, size_t, const char *, size_t,
     const char *);
 int detached_gpg_sign(const char *, size_t, char **, size_t *, const char *,
@@ -416,6 +416,10 @@ extern const char *check_vulnerabilities;
 extern const char *config_file;
 extern const char *verified_installation;
 extern const char *gpg_cmd;
+extern const char *gpg_keyring_pkgvuln;
+extern const char *gpg_keyring_sign;
+extern const char *gpg_keyring_verify;
+extern const char *gpg_sign_as;
 extern char fetch_flags[];
 
 extern const char *pkg_vulnerabilities_dir;
