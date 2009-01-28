@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2009/01/28 12:28:25 jmcneill Exp $
+# $NetBSD: Makefile,v 1.72 2009/01/28 12:56:42 jmcneill Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
@@ -96,7 +96,7 @@ pre-install:
 #
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${LOCALBASE}/lib/X11/fonts/TTF/DejaVuSans.ttf
-DEPENDS+=		dejavu-fonts-ttf>=2.26:../../fonts/dejavu-ttf
+DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
