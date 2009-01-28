@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/10/25 12:23:09 obache Exp $
+# $NetBSD: Makefile,v 1.60.2.1 2009/01/28 21:15:42 tron Exp $
 #
 
 DISTNAME=	vte-0.17.4
@@ -40,4 +40,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
