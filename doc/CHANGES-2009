@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.409 2009/01/28 17:44:46 he Exp $
+$NetBSD: CHANGES-2009,v 1.410 2009/01/28 22:10:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -562,3 +562,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/py-pisa version 3.0.29 [joerg 2009-01-28]
 	Updated www/typolight-translations to 20090126 [taca 2009-01-28]
 	Updated devel/p5-Devel-PPPort to 3.16 [he 2009-01-28]
+	Added devel/p5-Mixin-Linewise version 0.002 [seb 2009-01-28]
+	Added devel/p5-Config-INI version 0.014 [seb 2009-01-28]
