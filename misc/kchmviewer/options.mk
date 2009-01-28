@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/01/08 12:02:44 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/01/28 06:35:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kchmviewer
 PKG_SUPPORTED_OPTIONS=	kde4
@@ -19,5 +19,6 @@ do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/kchmviewer ${DESTDIR}${PREFIX}/bin
 .endif
