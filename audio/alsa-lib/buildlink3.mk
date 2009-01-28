@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/01/28 05:38:53 obache Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ALSA_LIB_BUILDLINK3_MK:=	${ALSA_LIB_BUILDLINK3_MK}+
@@ -15,5 +15,8 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}alsa-lib
 BUILDLINK_API_DEPENDS.alsa-lib+=	alsa-lib>=1.0.18
 BUILDLINK_PKGSRCDIR.alsa-lib?=	../../audio/alsa-lib
 .endif	# ALSA_LIB_BUILDLINK3_MK
+
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
