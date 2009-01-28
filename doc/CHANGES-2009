@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.405 2009/01/28 14:17:26 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.406 2009/01/28 14:44:24 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -557,3 +557,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/vlc to 0.9.8anb3 [jmcneill 2009-01-28]
 	Updated net/rsync to 3.0.5 [tron 2009-01-28]
 	Updated www/midori to 0.1.1nb2 [ahoka 2009-01-28]
+	Updated print/py-reportlab to 2.2 [joerg 2009-01-28]
+	Removed print/py-reportlab-renderPM [joerg 2009-01-28]
