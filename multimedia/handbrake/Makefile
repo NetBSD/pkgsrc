@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/21 14:19:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/28 03:41:09 jmcneill Exp $
 #
 
 DISTNAME=	HandBrake-0.9.3
@@ -53,6 +53,7 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	jam>=2.5.2:../../devel/jam
 BUILD_DEPENDS+=	nasm>=2.05.01:../../devel/nasm
+BUILD_DEPENDS+=	yasm>=0.6.1:../../devel/yasm
 
 CLI_CONFIGURE_ARGS=	--release
 
