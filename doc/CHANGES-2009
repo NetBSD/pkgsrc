@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.404 2009/01/28 12:34:20 tron Exp $
+$NetBSD: CHANGES-2009,v 1.405 2009/01/28 14:17:26 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/automoc4 to 0.9.88 [markd 2009-01-27]
 	Updated multimedia/vlc to 0.9.8anb3 [jmcneill 2009-01-28]
 	Updated net/rsync to 3.0.5 [tron 2009-01-28]
+	Updated www/midori to 0.1.1nb2 [ahoka 2009-01-28]
