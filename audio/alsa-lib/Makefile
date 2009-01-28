@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/28 05:14:50 obache Exp $
 #
 
 DISTNAME=	alsa-lib-1.0.18
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alsa-project.org/
 COMMENT=	Advanced Linux Sound Architecture (ALSA)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
