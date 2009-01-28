@@ -1,4 +1,4 @@
-# $NetBSD: subr_SunOS,v 1.3 2008/12/18 01:01:33 abs Exp $
+# $NetBSD: subr_SunOS,v 1.4 2009/01/28 23:30:50 abs Exp $
 
 AWK=nawk
 SED=sed
@@ -6,7 +6,7 @@ SED=sed
 display_hw_details()
     {
     cat <<END
-OS		: '`uname`'
+OS		: '$(uname)'
 arch            : '$hw_arch'
 psrinfo         : '$hw_psrinfo'
 END
@@ -14,8 +14,8 @@ END
 
 extract_hw_details()
     {
-    hw_arch=`/usr/bin/uname -m`
-    hw_psrinfo=`psrinfo -pv | $AWK 'NR==3{print}'` # Just gets the first CPU
+    hw_arch=$(/usr/bin/uname -m)
+    hw_psrinfo=$(psrinfo -pv | $AWK 'NR==3{print}') # Just gets the first CPU
     }
 
 determine_arch()
@@ -27,7 +27,7 @@ determine_arch()
 	sun4u )			ARCH='-mcpu=v9' ;;
 	i86pc )
 	    include subr_x86	# this provides map_x86_brand_string()
-	    ARCH=`map_x86_brand_string "$cpu_brand"`
+	    ARCH=$(map_x86_brand_string "$cpu_brand")
 	    if [ -z "$ARCH" ] ; then
 		case "$hw_psrinfo" in
 		    *)
