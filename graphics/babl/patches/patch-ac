@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/01/28 13:02:49 tron Exp $
+
+Mac OS X build fix, taken from:
+http://svn.gnome.org/viewvc/babl/trunk/babl/babl-cpuaccel.c?r1=316&r2=347
+
+--- babl/babl-cpuaccel.c.orig	2008-05-23 15:37:21.000000000 +0100
++++ babl/babl-cpuaccel.c	2009-01-25 15:13:14.000000000 +0000
+@@ -39,6 +39,7 @@
+ typedef unsigned int guint32;
+ typedef int gint;
+ typedef char gchar;
++typedef size_t gsize;
+ #define TRUE  1
+ #define FALSE 0
+ #define G_GNUC_CONST
