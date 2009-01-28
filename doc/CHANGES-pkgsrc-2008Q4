@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.29 2009/01/28 19:18:52 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.30 2009/01/28 21:25:12 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -81,3 +81,5 @@ Pullup ticket #2657 - requested by
 ntp4: security update
 Pullup ticket #2660 - requested by he
 mysql5-client: security patch
+Pullup ticket #2658 - requested by obache
+vte: build fix
