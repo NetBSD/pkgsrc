@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7826 2009/01/28 12:34:20 tron Exp $
+$NetBSD: TODO,v 1.7827 2009/01/28 15:44:20 taca Exp $
 
 Suggested new packages
 ======================
@@ -498,6 +498,7 @@ Suggested package updates
 	o cvs2svn-2.2.0
 	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
+	o dansguardian-2.10.0.3
 	o dap-3.7
 	o darcs-2.1.2
 	o dbench-4.0
@@ -1144,7 +1145,7 @@ Suggested package updates
 	o rxvt-unicode-9.06
 	o sablecc-3.2
 	o samba-3.0.34 (We should keep it for compatibility or license change.)
-	o samba-3.2.7
+	o samba-3.3.0
 	o sarg-2.2.5
 	o sawfish-1.3.5.1
 	o sbcl-1.0.22
