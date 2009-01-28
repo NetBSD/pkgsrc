@@ -1,0 +1,2 @@
+pisa is a html2pdf convert using ReportLab, HTML5lib and pyPDF.
+It supports HTML 5 and CSS 2.1.
