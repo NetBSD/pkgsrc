@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7827 2009/01/28 15:44:20 taca Exp $
+$NetBSD: TODO,v 1.7828 2009/01/28 23:27:59 abs Exp $
 
 Suggested new packages
 ======================
@@ -1335,7 +1335,6 @@ Suggested package updates
 	o xf86-video-intel-2.6.1
 	o xf86-video-neomagic-1.2.2
 	o xf86-video-nsc-2.8.3
-	o xf86-video-radeonhd-1.2.4
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
 	o xf86-video-siliconmotion-1.7.0
