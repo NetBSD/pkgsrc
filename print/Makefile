@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.198 2009/01/28 14:44:24 joerg Exp $
+# $NetBSD: Makefile,v 1.199 2009/01/28 14:46:40 joerg Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -102,6 +102,7 @@ SUBDIR+=	pslib
 SUBDIR+=	psutils
 SUBDIR+=	py-Pdf
 SUBDIR+=	py-cups
+SUBDIR+=	py-pisa
 SUBDIR+=	py-pslib
 SUBDIR+=	py-reportlab
 SUBDIR+=	rlpr

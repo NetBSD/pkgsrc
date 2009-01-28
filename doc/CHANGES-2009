@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.406 2009/01/28 14:44:24 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.407 2009/01/28 14:46:40 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -559,3 +559,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/midori to 0.1.1nb2 [ahoka 2009-01-28]
 	Updated print/py-reportlab to 2.2 [joerg 2009-01-28]
 	Removed print/py-reportlab-renderPM [joerg 2009-01-28]
+	Added print/py-pisa version 3.0.29 [joerg 2009-01-28]
