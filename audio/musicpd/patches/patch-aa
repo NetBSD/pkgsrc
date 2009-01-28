@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2009/01/28 18:06:21 drochner Exp $
+
+--- ./src/decoder/mod_plugin.c.orig	2009-01-17 20:41:09.000000000 +0100
++++ ./src/decoder/mod_plugin.c
+@@ -195,8 +195,6 @@ mod_decode(struct decoder *decoder, cons
+ 	}
+ 
+ 	mod_close(data);
+-
+-	MikMod_Exit();
+ }
+ 
+ static struct tag *modTagDup(const char *file)
