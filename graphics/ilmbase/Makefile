@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/12 16:53:30 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2009/01/28 13:14:54 tron Exp $
 
 DISTNAME=	ilmbase-1.0.1
 CATEGORIES=	graphics
@@ -21,6 +21,8 @@ PKGCONFIG_OVERRIDE=	IlmBase.pc.in
 PTHREAD_OPTS=		require
 
 CONFLICTS=		openexr<1.6
+
+BUILDLINK_TRANSFORM+=	rm:-Wno-long-double
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

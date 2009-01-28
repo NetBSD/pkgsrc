@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/02/03 03:02:32 heinz Exp $
+# $NetBSD: Makefile,v 1.21 2009/01/28 13:14:55 tron Exp $
 
 DISTNAME=	openexr-1.6.1
 CATEGORIES=	graphics
@@ -20,6 +20,8 @@ TEST_TARGET=		check
 PTHREAD_OPTS+=		require
 LIBS.IRIX+=		-lmx
 LIBS.SunOS+=		-lm
+
+BUILDLINK_TRANSFORM+=	rm:-Wno-long-double
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/ilmbase/buildlink3.mk"
