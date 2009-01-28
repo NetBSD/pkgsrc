@@ -1,0 +1,6 @@
+The Perl 5 module Config::INI yet another config module implementing
+yet another slightly different take on the undeniably easy to read
+or write ".ini" file format. Its default behavior is quite similar
+to that of Config::Tiny, on which it is based.
+The chief difference is that Config::INI is designed to be subclassed
+to allow for side-effects and self-reconfiguration.
