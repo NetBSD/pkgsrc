@@ -1,0 +1,4 @@
+The Perl 5 modules Mixin::Linewise::Readers and Mixin::Linewise::Writers
+provide methods for handling reading from or writing to strings or
+files designated by name: only a method to handle file handles has
+to be provided.
