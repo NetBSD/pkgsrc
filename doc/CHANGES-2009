@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.408 2009/01/28 15:43:08 taca Exp $
+$NetBSD: CHANGES-2009,v 1.409 2009/01/28 17:44:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -561,3 +561,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed print/py-reportlab-renderPM [joerg 2009-01-28]
 	Added print/py-pisa version 3.0.29 [joerg 2009-01-28]
 	Updated www/typolight-translations to 20090126 [taca 2009-01-28]
+	Updated devel/p5-Devel-PPPort to 3.16 [he 2009-01-28]
