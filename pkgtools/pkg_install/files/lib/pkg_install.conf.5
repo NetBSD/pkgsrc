@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.6 2009/01/27 22:24:05 joerg Exp $
+.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.7 2009/01/28 06:41:08 wiz Exp $
 .\"
 .\" Copyright (c) 2008, 2009 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -91,7 +91,7 @@ or
 It can also be used to verify and sign binary packages.
 .It Dv GPG_KEYRING_PKGVULN
 Non-default keyring to use for verifying GPG signatures of
-.Pa pkg-vulnerabilities.
+.Pa pkg-vulnerabilities .
 .It Dv GPG_KEYRING_SIGN
 Non-default keyring to use for signing packages with GPG.
 .It Dv GPG_KEYRING_VERIFY
@@ -101,7 +101,7 @@ User-id to use for signing packages.
 .It Dv IGNORE_PROXY
 Use direct connections and ignore
 .Ev FTP_PROXY
-and 
+and
 .Ev HTTP_PROXY .
 .It Dv IGNORE_URL
 One line per advisory which should be ignored when running
