@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.403 2009/01/28 12:29:21 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.404 2009/01/28 12:34:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/mysql5-client to 5.0.67nb2 [he 2009-01-27]
 	Updated devel/automoc4 to 0.9.88 [markd 2009-01-27]
 	Updated multimedia/vlc to 0.9.8anb3 [jmcneill 2009-01-28]
+	Updated net/rsync to 3.0.5 [tron 2009-01-28]
