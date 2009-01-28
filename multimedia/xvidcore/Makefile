@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2009/01/24 05:34:42 jmcneill Exp $
+# $NetBSD: Makefile,v 1.34 2009/01/28 16:03:37 tonio Exp $
 
 DISTNAME=	xvidcore-1.2.1
 PKGREVISION=	1
@@ -47,7 +47,8 @@ MAKE_ENV+=	MKDIR=${MKDIR:Q}
 .if ${OPSYS} == "Darwin"
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so.4
-	${MV} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so ${DESTDIR}${PREFIX}/lib/libxvidcore.dylib
+	${RM} -f ${DESTDIR}${PREFIX}/lib/libxvidcore.so
+	${LN} -sf ${DESTDIR}${PREFIX}/lib/libxvidcore.4.dylib ${DESTDIR}${PREFIX}/lib/libxvidcore.dylib
 .endif
 
 .include "../../mk/bsd.pkg.mk"
