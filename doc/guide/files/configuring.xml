@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.31 2007/12/30 22:54:39 darcy Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.32 2009/01/28 23:31:39 abs Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -251,10 +251,12 @@ CFLAGS+=        -your -flags
 </programlisting>
 
 	<para>Using <varname>CFLAGS=</varname> (i.e. without the
-	<quote>+</quote>) may lead to problems with packages that need
-	to add their own flags.  Also, you may want to take a look at
-	the <filename role="pkg">devel/cpuflags</filename> package if
-	you're interested in optimization for the current CPU.</para>
+	<quote>+</quote>) may lead to problems with packages that
+	need to add their own flags.  You may want to take a look
+	at the <filename role="pkg">devel/cpuflags</filename>
+	package if you're interested in optimization for the current
+	CPU.  Setting <varname>USE_CPUFLAGS</varname> to yes in
+	&mk.conf; will cause pkgsrc to automatically use cpuflags.</para>
 
 </sect2>
 
