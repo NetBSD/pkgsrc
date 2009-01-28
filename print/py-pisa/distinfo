@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/01/28 14:45:44 joerg Exp $
+
+SHA1 (pisa-3.0.29.tar.gz) = b3394e159a5ef71167ec4ad8653009f659f62471
+RMD160 (pisa-3.0.29.tar.gz) = 2a6698ab93db45f8deb143cb0c1bc35b9789cc03
+Size (pisa-3.0.29.tar.gz) = 908104 bytes
