@@ -1,8 +1,16 @@
-$NetBSD: patch-af,v 1.1 2008/12/18 13:15:10 reinoud Exp $
+$NetBSD: patch-af,v 1.2 2009/01/28 00:37:27 dsainty Exp $
 
---- lib3ds/io.c.orig	2001-07-11 15:47:35.000000000 +0200
-+++ lib3ds/io.c
-@@ -31,6 +31,11 @@
+--- lib3ds/io.c.orig	2001-07-12 01:47:35.000000000 +1200
++++ lib3ds/io.c	2009-01-25 19:59:22.437777313 +1300
+@@ -21,6 +21,7 @@
+  */
+ #define LIB3DS_EXPORT
+ #include <lib3ds/io.h>
++#include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h>
+ 
+@@ -31,6 +32,11 @@
   * \author J.E. Hoffmann <je-h@gmx.net>
   */
  
@@ -14,7 +22,7 @@ $NetBSD: patch-af,v 1.1 2008/12/18 13:15:10 reinoud Exp $
  
  struct _Lib3dsIo {
    void *self;
-@@ -248,15 +253,15 @@ Lib3dsFloat
+@@ -248,15 +254,15 @@
  lib3ds_io_read_float(Lib3dsIo *io)
  {
    Lib3dsByte b[4];
@@ -33,7 +41,7 @@ $NetBSD: patch-af,v 1.1 2008/12/18 13:15:10 reinoud Exp $
  }
  
  
-@@ -459,14 +464,14 @@ Lib3dsBool
+@@ -459,14 +465,14 @@
  lib3ds_io_write_float(Lib3dsIo *io, Lib3dsFloat l)
  {
    Lib3dsByte b[4];
