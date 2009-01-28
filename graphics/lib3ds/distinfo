@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2008/12/18 13:15:10 reinoud Exp $
+$NetBSD: distinfo,v 1.7 2009/01/28 00:37:27 dsainty Exp $
 
 SHA1 (lib3ds-1.2.0.tar.gz) = 49614218c4c11572887beefaa34d23f72ef70a2c
 RMD160 (lib3ds-1.2.0.tar.gz) = 3e0401e36b545c2a54213ecb2ea3216360450562
@@ -8,4 +8,4 @@ SHA1 (patch-ab) = b2d6804b71fb37428ebf7fb59168ae8ef2eec362
 SHA1 (patch-ac) = d73dd1b2cdabe61f78d4a7307a04917ff5fc379b
 SHA1 (patch-ad) = bbf95ca49e1bf6fa67314f9818af5b1b974eb54a
 SHA1 (patch-ae) = 7760d2311d99f3d5d91f89fceced314648abbeb0
-SHA1 (patch-af) = 016c93ead0e5d6a033d891d03db5f227a3e1df71
+SHA1 (patch-af) = 578dd6a4c5bb6bccde8b8a283437d8fc917b3a4c
