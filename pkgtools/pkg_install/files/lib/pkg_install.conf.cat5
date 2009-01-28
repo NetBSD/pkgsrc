@@ -53,7 +53,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      GPG_KEYRING_PKGVULN
              Non-default keyring to use for verifying GPG signatures of
-             _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s_.
+             _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s.
 
      GPG_KEYRING_SIGN
              Non-default keyring to use for signing packages with GPG.
