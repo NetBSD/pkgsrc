@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.400 2009/01/27 23:59:03 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.401 2009/01/28 09:45:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libatomic_ops to 20081024nb2 [sketch 2009-01-27]
 	Added print/py-Pdf version 1.12 [joerg 2009-01-27]
 	Updated multimedia/mediainfo to 0.7.9 [jmcneill 2009-01-27]
+	Updated databases/mysql5-client to 5.0.67nb2 [he 2009-01-27]
