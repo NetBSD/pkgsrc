@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/08 18:06:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/28 14:55:48 joerg Exp $
 #
 
 DISTNAME=	lzma-4.32.7
@@ -9,6 +9,8 @@ MASTER_SITES=	http://tukaani.org/lzma/
 MAINTAINER=	magnus.henoch@gmail.com
 HOMEPAGE=	http://tukaani.org/lzma/
 COMMENT=	LZMA compression and decompression utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
