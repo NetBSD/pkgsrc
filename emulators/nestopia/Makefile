@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/03 18:44:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/28 06:53:39 wiz Exp $
 #
 
 DISTNAME=	Nestopia140src
@@ -16,7 +16,7 @@ COMMENT=	Portable, very accurate NES emulator with UNIF support
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
-USE_TOOLS=	gmake
+USE_TOOLS=	gmake pkg-config
 EXTRACT_OPTS_ZIP=	-aqo
 
 SUBST_CLASSES+=		oss
