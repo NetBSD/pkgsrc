@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/13 11:42:55 ahoka Exp $
+# $NetBSD: Makefile,v 1.1.1.1.6.1 2009/01/29 13:09:09 tron Exp $
 #
 
 DISTNAME=	docker-1.5
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://offload1.icculus.org/openbox/2/docker/
 
@@ -13,8 +14,9 @@ COMMENT=	WindowMaker dock app which acts as a system tray
 
 USE_TOOLS+=	pkg-config gmake
 
-MAKE_ENV+=	PREFIX=${DESTDIR}${PREFIX}
-MAKE_ENV+=	XLIBPATH=${X11BASE}
+MAKE_ENV+=	PREFIX=${${DESTDIR}${PREFIX}:Q}
+MAKE_ENV+=	LDFLAGS=${LDFLAGS:Q}
+MAKE_ENV+=	CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS+=	bin
 
