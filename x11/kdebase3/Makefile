@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.145 2008/12/19 21:16:02 markd Exp $
+# $NetBSD: Makefile,v 1.146 2009/01/29 06:40:50 ghen Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 3 integrated X11 desktop
 
@@ -134,7 +134,7 @@ SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
 
 SUBST_FILES.xkb=	kxkb/x11helper.cpp
-SUBST_SED.xkb=		-e 's:XLIBDIR:"${X11BASE}/share/X11/", XLIBDIR:'
+SUBST_SED.xkb=		-e 's:XLIBDIR:"${X11BASE}/lib/X11/", "${X11BASE}/share/X11/", XLIBDIR:'
 SUBST_STAGE.xkb=	post-patch
 
 pre-configure:
