@@ -1,4 +1,0 @@
-  netsaint-plugin-cluster is a host and service cluster checking plugin
-for NetSaint.  You can specify a cluster consisting of several hosts and
-the minimum number of hosts that have to respond in order to consider the
-cluster operational.
