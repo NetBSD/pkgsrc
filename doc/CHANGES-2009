@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.412 2009/01/28 23:31:39 abs Exp $
+$NetBSD: CHANGES-2009,v 1.413 2009/01/29 02:24:52 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Config-INI version 0.014 [seb 2009-01-28]
 	Updated x11/xf86-video-radeonhd to 1.2.4 [abs 2009-01-28]
 	Updated devel/cpuflags to 1.37 [abs 2009-01-28]
+	Updated misc/proj to 4.6.1 [gdt 2009-01-29]
