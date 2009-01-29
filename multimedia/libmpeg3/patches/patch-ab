@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.4 2009/01/29 17:53:49 abs Exp $
+
+--- mpeg3css.c.orig	2007-01-09 07:09:52.000000000 +0000
++++ mpeg3css.c
+@@ -41,7 +41,9 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ // Must unlink /usr/include directories from the kernel source for this to work.
+-#include <linux/cdrom.h>
++#ifdef linux
++# include <linux/cdrom.h>
++#endif
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/ioctl.h>
+@@ -572,6 +574,7 @@ static void crypt_bus_key(mpeg3_css_t *c
+ 	css_engine(perm_varient[varient], scratch, key);
+ }
+ 
++#ifdef linux
+ static int get_asf(mpeg3_css_t *css)
+ {
+ 	dvd_authinfo ai;
+@@ -588,6 +591,7 @@ static int get_asf(mpeg3_css_t *css)
+ 
+ 	return 0;
+ }
++#endif /* linux */
+ 
+ static int authenticate_drive(mpeg3_css_t *css, const unsigned char *key)
+ {
+@@ -611,6 +615,7 @@ static int authenticate_drive(mpeg3_css_
+ 	return 0;
+ }
+ 
++#ifdef linux
+ /* Simulation of a non-CSS compliant host (i.e. the authentication fails,
+  * but idea is here for a real CSS compliant authentication scheme). */
+ static int hostauth(mpeg3_css_t *css, dvd_authinfo *ai)
+@@ -801,6 +806,7 @@ static int validate(mpeg3_css_t *css, in
+ 
+ 	return 0;
+ }
++#endif /* linux */
+ 
+ static int validate_path(mpeg3_css_t *css, int do_title)
+ {
+@@ -831,7 +837,9 @@ static int validate_path(mpeg3_css_t *cs
+ 	if(!result) result = (css->fd = open(css->device_path, O_RDONLY | O_NONBLOCK)) < 0;
+ //printf("validate_path 2 %d\n", result);
+ 
++#ifdef linux
+ 	if(!result) result = validate(css, lba, do_title);
++#endif /* linux */
+ 
+ //printf("validate_path 3 %d\n", result);
+ /* Definitely encrypted if we got here. */
