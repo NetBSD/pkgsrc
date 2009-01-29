@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2004/06/26 18:00:21 grant Exp $
+$NetBSD: patch-ad,v 1.2 2009/01/29 17:53:49 abs Exp $
 
---- ifo.h.orig	Tue Jul 31 17:19:54 2001
-+++ ifo.h	Tue Jul 31 17:20:47 2001
-@@ -193,7 +193,7 @@
+--- ifo.h.orig	2007-01-09 07:09:52.000000000 +0000
++++ ifo.h
+@@ -193,7 +193,7 @@ typedef struct {
  	u_char *data[10];
  	
  	int fd;		// file descriptor
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.1 2004/06/26 18:00:21 grant Exp $
  } ifo_t;
  
  
-@@ -221,7 +221,7 @@
+@@ -221,7 +221,7 @@ typedef struct {
   * Prototypes
   */
  
