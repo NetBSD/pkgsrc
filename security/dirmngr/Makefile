@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/18 05:09:37 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2009/01/29 17:11:25 joerg Exp $
 #
 
 DISTNAME=		dirmngr-1.0.1
@@ -62,6 +62,8 @@ OWN_DIRS_PERMS+=	${VARBASE}/cache/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr ${DIRMNGR_PERMS}
 OWN_DIRS_PERMS+=	${PREFIX}/libdata/dirmngr/extra-certs ${DIRMNGR_PERMS}
 
+INSTALLATION_DIRS=	sbin
+
 # We are building a static pth library and linking against it
 # We are also building libassuan here to get libassuan-pth.
 pre-configure:
@@ -80,7 +82,7 @@ post-build:
 	${SETENV} ${BUILDENV} ${CC} ${CFLAGS} -DDIRMNGR_USER='"${DIRMNGR_USER}"' -DDIRMNGR_PATH='"${PREFIX}/bin/dirmngr"' -o runDirmngr runDirmngr.c
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKDIR}/runDirmngr ${DESTDIR}${PREFIX}/sbin
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
