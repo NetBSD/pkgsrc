@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.419 2009/01/29 19:40:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.420 2009/01/29 19:48:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-App-Nopaste to 0.10 [seb 2009-01-29]
 	Updated multimedia/ffmpeg to 20080727nb7 [tron 2009-01-29]
 	Updated print/kpathsea to 3.5.7nb2 [minskim 2009-01-29]
+	Added net/p5-Net-CIDR-Set version 0.10 [seb 2009-01-29]
