@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/18 00:40:42 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2009/01/29 17:30:55 tron Exp $
 bin/midori
 lib/midori/libpage-holder.so
 lib/midori/libstatusbar-features.so
@@ -46,6 +46,7 @@ share/locale/uk/LC_MESSAGES/midori.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/categories
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/doc/midori/user
 @dirrm share/doc/midori
 @dirrm share/midori
 @dirrm lib/midori
