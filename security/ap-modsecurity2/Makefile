@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/25 15:59:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.11 2009/01/29 16:54:17 joerg Exp $
 
 DISTNAME=	modsecurity-apache_2.5.7
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -17,6 +17,7 @@ PKG_APACHE_ACCEPTED=	apache2 apache22
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pax
+USE_LIBTOOL=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}/apache2
 USE_LANGUAGES+=		c++ c
 
