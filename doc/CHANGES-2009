@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.418 2009/01/29 15:02:31 tron Exp $
+$NetBSD: CHANGES-2009,v 1.419 2009/01/29 19:40:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -570,3 +570,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/kdebase3 to 3.5.10nb2 [ghen 2009-01-29]
 	Updated www/p5-App-Nopaste to 0.10 [seb 2009-01-29]
 	Updated multimedia/ffmpeg to 20080727nb7 [tron 2009-01-29]
+	Updated print/kpathsea to 3.5.7nb2 [minskim 2009-01-29]
