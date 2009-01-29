@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/10/02 18:08:19 joerg Exp $
+# $NetBSD: Makefile,v 1.31.4.1 2009/01/29 13:24:59 tron Exp $
 
 DISTNAME=	ns-2.33
 CATEGORIES=	net
@@ -15,7 +15,7 @@ BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.12nb1
 BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.12nb2
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 PTHREAD_OPTS+=	require
