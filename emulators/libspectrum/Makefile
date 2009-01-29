@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/01/29 17:30:55 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/01/29 18:00:38 joerg Exp $
 
 DISTNAME=	libspectrum-0.5.0.1
 CATEGORIES=	emulators
@@ -15,7 +15,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
 DOCDIR=		${PREFIX}/share/doc/libspectrum
-INSTALLATION_DIRS	${DOCDIR}
+INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/libspectrum.txt ${DESTDIR}${DOCDIR}
