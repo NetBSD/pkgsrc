@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/27 23:58:21 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/29 17:34:14 joerg Exp $
 #
 
 DISTNAME=	MediaInfo_CLI_0.7.9_GNU_FromSource
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/MediaInfo_CLI_GNU_FromSource
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC} && ./CLI_Compile.sh
