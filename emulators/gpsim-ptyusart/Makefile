@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/01/29 17:22:52 joerg Exp $
 #
 
 DISTNAME=	ptyusart-0.3.2
@@ -16,17 +16,18 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
 USE_LIBTOOL=	YES
+USE_TOOLS+=	pkg-config
 
 GCC_REQD+=		3.0
 
 EGDIR=		${PREFIX}/share/examples/gpsim-ptyusart
+INSTALLATION_DIRS=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/examples;					\
-	${INSTALL_DATA} tst_txdot.asm ${EGDIR};			\
-	${INSTALL_DATA} tst_txrx.asm ${EGDIR};			\
-	${INSTALL_DATA} tst_txrx.stc ${EGDIR};			\
-	${INSTALL_DATA} tstloopback.c ${EGDIR};
+	${INSTALL_DATA} ${WRKSRC}/examples/tst_txdot.asm ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/tst_txrx.asm ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/tst_txrx.stc ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/tstloopback.c ${DESTDIR}${EGDIR}
 
 .include "../../emulators/gpsim-devel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
