@@ -1,4 +1,4 @@
-$NetBSD
+$NetBSD: patch-da,v 1.5 2009/01/29 09:41:00 joerg Exp $
 
 Fixes for CVE-2008-2827 and CVE-2008-5302, taken from:
 
