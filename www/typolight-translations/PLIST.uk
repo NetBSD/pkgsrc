@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uk,v 1.5 2008/12/21 14:43:24 taca Exp $
+@comment $NetBSD: PLIST.uk,v 1.6 2009/01/29 06:48:06 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/uk/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/default.php
@@ -110,7 +110,7 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/uk/
+@dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/faq/languages/uk
