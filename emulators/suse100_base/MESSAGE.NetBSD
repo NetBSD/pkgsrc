@@ -1,7 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.3 2009/01/29 09:45:39 joerg Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.4 2009/01/29 10:15:40 sborrill Exp $
 
 Do not forget to include COMPAT_LINUX in your kernel configuration file.
 Linux binaries require this option in order to work.
-Most Linux binaries also require procfs to be mounted with -o linux.
+Most Linux binaries also require procfs to be mounted with -o linux. This
+can be automated by adding the following to your /etc/fstab:
+
+procfs /emul/linux/proc procfs ro,linux
+
 ===========================================================================
