@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/01/26 21:19:39 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2009/01/29 17:52:16 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
@@ -13,7 +13,6 @@ COMMENT=	TeX distribution for UNIX compatible systems - binaries
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
-DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 
 # games/omega previously installed an omega executable too
 CONFLICTS+=	omega<0.90.4nb1
