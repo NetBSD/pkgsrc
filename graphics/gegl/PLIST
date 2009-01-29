@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/24 12:57:30 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/01/29 19:14:13 abs Exp $
 bin/gegl
 include/gegl-0.0/gegl-buffer.h
 include/gegl-0.0/gegl-chant.h
@@ -114,8 +114,23 @@ lib/gegl-0.0/write-buffer.la
 lib/gegl-0.0/xor.la
 lib/libgegl-0.0.la
 lib/pkgconfig/gegl.pc
+share/gtk-doc/html/gegl/api.html
+share/gtk-doc/html/gegl/brightness-contrast.c.html
+share/gtk-doc/html/gegl/gegl-operation-area-filter.h.html
+share/gtk-doc/html/gegl/gegl-operation-composer.h.html
+share/gtk-doc/html/gegl/gegl-operation-filter.h.html
+share/gtk-doc/html/gegl/gegl-operation-meta.h.html
+share/gtk-doc/html/gegl/gegl-operation-point-composer.h.html
+share/gtk-doc/html/gegl/gegl-operation-point-filter.h.html
+share/gtk-doc/html/gegl/gegl-operation-point-render.h.html
+share/gtk-doc/html/gegl/gegl-operation-sink.h.html
+share/gtk-doc/html/gegl/gegl-operation-source.h.html
+share/gtk-doc/html/gegl/gegl-operation-temporal.h.html
+share/gtk-doc/html/gegl/gegl-operation.h.html
+share/gtk-doc/html/gegl/gegl-plugin.h.html
 share/gtk-doc/html/gegl/gegl.css
 share/gtk-doc/html/gegl/gegl.devhelp
+share/gtk-doc/html/gegl/gegl.h.html
 share/gtk-doc/html/gegl/operations.html
 @dirrm share/gtk-doc/html/gegl
 @dirrm lib/gegl-0.0
