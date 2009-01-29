@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2009/01/27 00:56:41 jmcneill Exp $
+# $NetBSD: Makefile,v 1.53 2009/01/29 16:56:52 joerg Exp $
 #
 
 DISTNAME=	avidemux_2.4.3
@@ -30,6 +30,8 @@ SUBST_STAGE.audio=	post-patch
 SUBST_FILES.audio=	avidemux/ADM_audiodevice/ADM_deviceoss.cpp
 SUBST_SED.audio=	-e "s|\\/dev\\/dsp|${DEVOSSAUDIO}|g"
 SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
+
+INSTALLATION_DIRS=	share/applications share/icons/hicolor/64x64/apps
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/avidemux2.desktop \
