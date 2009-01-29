@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2008/01/03 13:37:04 gdt Exp $
+# $NetBSD: Makefile,v 1.26 2009/01/29 02:24:41 gdt Exp $
 
-DISTNAME=		proj-4.6.0
+DISTNAME=		proj-4.6.1
 CATEGORIES=		misc geography
 MASTER_SITES=		http://download.osgeo.org/proj/
 #MASTER_SITES=		ftp://ftp.remotesensing.org/pub/proj/ \
