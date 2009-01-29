@@ -1,0 +1,3 @@
+The Perl 5 module Cisco::Abbrev converts between Cisco canonical
+interface names (i.e. GigabitEthernet0/1) and the abbreviated forms
+often output by their devices (i.e. Gi0/1).
