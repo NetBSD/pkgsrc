@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2009/01/29 09:36:36 sborrill Exp $
+
+On NetBSD, you must ensure you have procfs mounted on /emul/linux/proc with
+the linux compatibility option set. Adding the following to /etc/fstab
+should be sufficient:
+
+procfs /emul/linux/proc procfs ro,linux
+
+===========================================================================
