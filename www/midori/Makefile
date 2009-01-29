@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/12/18 00:40:42 ahoka Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2009/01/29 15:38:18 tron Exp $
 #
 
 DISTNAME=	midori-0.1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 REPLACE_PYTHON=		waf wscript po/wscript_build katze/wscript_build
 REPLACE_PYTHON+=	docs/api/wscript_build icons/wscript_build
 REPLACE_PYTHON+=	midori/wscript_build
+
+BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.4:../../textproc/py-docutils
+BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
 .include "../../lang/python/application.mk"
 
