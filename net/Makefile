@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.758 2009/01/23 13:36:23 sborrill Exp $
+# $NetBSD: Makefile,v 1.759 2009/01/29 19:47:39 seb Exp $
 #
 
 COMMENT=	Networking tools
@@ -322,6 +322,7 @@ SUBDIR+=	p5-Net-Amazon
 SUBDIR+=	p5-Net-Amazon-S3
 SUBDIR+=	p5-Net-Bind
 SUBDIR+=	p5-Net-CIDR-Lite
+SUBDIR+=	p5-Net-CIDR-Set
 SUBDIR+=	p5-Net-DBus
 SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-DNSServer
