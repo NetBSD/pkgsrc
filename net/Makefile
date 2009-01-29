@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.759 2009/01/29 19:47:39 seb Exp $
+# $NetBSD: Makefile,v 1.760 2009/01/29 21:48:23 shattered Exp $
 #
 
 COMMENT=	Networking tools
@@ -273,10 +273,6 @@ SUBDIR+=	netdisco
 SUBDIR+=	netgroup
 SUBDIR+=	netname
 SUBDIR+=	netpipes
-SUBDIR+=	netsaint-base
-SUBDIR+=	netsaint-plugin-cluster
-SUBDIR+=	netsaint-plugin-snmp
-SUBDIR+=	netsaint-plugins
 SUBDIR+=	nfdump
 SUBDIR+=	ngrep
 SUBDIR+=	nicotine
