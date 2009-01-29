@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.414 2009/01/29 06:41:16 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.415 2009/01/29 09:37:19 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -568,3 +568,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cpuflags to 1.37 [abs 2009-01-28]
 	Updated misc/proj to 4.6.1 [gdt 2009-01-29]
 	Updated x11/kdebase3 to 3.5.10nb2 [ghen 2009-01-29]
+	Updated www/nspluginwrapper to 1.2.2nb1 [sborrill 2009-01-29]
