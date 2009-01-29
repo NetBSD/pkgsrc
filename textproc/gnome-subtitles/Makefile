@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/06 08:56:58 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/29 17:19:58 joerg Exp $
 
 DISTNAME=	gnome-subtitles-0.8
 CATEGORIES=	multimedia textproc
@@ -10,7 +10,7 @@ COMMENT=	Subtitle editor for the GNOME desktop
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share
-USE_TOOLS+=		bash:run gmake msgfmt perl pkg-config
+USE_TOOLS+=		bash:run gmake msgfmt perl pkg-config intltool
 REPLACE_BASH=		src/GnomeSubtitles/Execution/gnome-subtitles.in
 
 .include "../../lang/mono/buildlink3.mk"
