@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/08/13 11:42:55 ahoka Exp $
+$NetBSD: patch-aa,v 1.1.1.1.6.1 2009/01/29 13:09:09 tron Exp $
 
 --- Makefile.orig	2002-11-20 11:20:49.000000000 +0100
 +++ Makefile
-@@ -5,9 +5,9 @@
+@@ -5,12 +5,9 @@
  #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
  
  # Change this PREFIX to where you want docker to be installed
@@ -10,7 +10,19 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/08/13 11:42:55 ahoka Exp $
 +PREFIX?=/usr/local
  # Change this XLIBPATH to point to your X11 development package's installation
 -XLIBPATH=/usr/X11R6/lib
+-
+-# Sets some flags for stricter compiling
+-CFLAGS=-pedantic -Wall -W -O
 +XLIBPATH?=/usr/X11R6/lib
  
- # Sets some flags for stricter compiling
- CFLAGS=-pedantic -Wall -W -O
+ #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#
+ #                                                                 #
+@@ -30,7 +27,7 @@ all: $(target) $(sources) $(headers)
+ 	@echo Build Successful
+ 
+ $(target): $(sources:.c=.o)
+-	$(CC) $(CFLAGS) -L$(XLIBPATH) -lX11 \
++	$(CC) $(CFLAGS) $(LDFLAGS) -lX11 \
+ 		`pkg-config --libs glib-2.0` $^ -o $@
+ 
+ %.o: %.c

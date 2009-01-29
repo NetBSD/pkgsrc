@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/13 11:42:55 ahoka Exp $
+$NetBSD: distinfo,v 1.1.1.1.6.1 2009/01/29 13:09:09 tron Exp $
 
 SHA1 (docker-1.5.tar.gz) = aff3e0c6103a7b1f190d4207868ae7c28d267304
 RMD160 (docker-1.5.tar.gz) = d36883acf4de5c2e97d478a7d29cb66645189748
 Size (docker-1.5.tar.gz) = 14863 bytes
-SHA1 (patch-aa) = be91c68b6b9e16434e11b0567338ee9fa2b040eb
+SHA1 (patch-aa) = 7f1a36956fa2302ac22d20ede10a5af5fb9e6cf0
