@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2009/01/05 16:08:20 shattered Exp $
+$NetBSD: distinfo,v 1.11 2009/01/29 17:57:55 shattered Exp $
 
 SHA1 (xzgv-0.9.tar.gz) = 5d8115c87be3836d9ed35dba777cd1dc48541715
 RMD160 (xzgv-0.9.tar.gz) = 7c3284eac5a0a368db1be2ed87f882e26d39fab7
 Size (xzgv-0.9.tar.gz) = 235367 bytes
 SHA1 (patch-aa) = fa502e0fc4fc94cfc88c4aa41505ac7563d982a6
+SHA1 (patch-ab) = 740aadcc35d81fcc57a9e364144e259fd4a2a591
 SHA1 (patch-ad) = 378e0c2e19064c2c276c6e0a3e89bdcbcc2c96c5
