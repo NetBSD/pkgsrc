@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE.DragonFly,v 1.2 2007/11/30 14:18:09 rillig Exp $
+$NetBSD: MESSAGE.DragonFly,v 1.3 2009/01/29 09:45:39 joerg Exp $
 
 Do not forget to include COMPAT_LINUX in your kernel configuration file.
 You will also need to load the "linux.ko" kernel module (using kldload(8)
 or by setting linux_enable=yes in /etc/rc.conf.
+Most Linux binaries also require linprocfs to be mounted.
 ===========================================================================
