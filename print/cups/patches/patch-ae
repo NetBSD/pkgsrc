@@ -1,6 +1,11 @@
-$NetBSD: patch-ae,v 1.20 2009/01/29 15:28:31 gdt Exp $
+$NetBSD: patch-ae,v 1.21 2009/01/30 12:44:15 gdt Exp $
 
-Should be pushed upstream and the real problem identified.
+&data issue filed as http://www.cups.org/str.php?L3079 and fixed in
+cups svn 28 minutes later.
+
+The deeper issue is that firefox3 defines SHA1_Update in nss and cups
+uses openssl and the nss symbol wins; hence any use of RAND_seed
+fails.
 
 --- cups/http.c.orig	2008-08-01 14:33:16.000000000 -0400
 +++ cups/http.c
