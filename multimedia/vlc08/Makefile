@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2009/01/30 17:23:20 tron Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -33,6 +33,7 @@ CONFIGURE_ARGS+=	--disable-vcd
 
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
+BUILDLINK_API_DEPENDS.libcdio+=		libcdio>=0.81
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 CONFIGURE_ARGS+=	--disable-gtk
