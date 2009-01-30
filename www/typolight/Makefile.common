@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2009/01/25 04:46:06 taca Exp $
+# $NetBSD: Makefile.common,v 1.7 2009/01/30 16:35:55 taca Exp $
 #
 # used by www/typolight-example/Makefile
 # used by www/typolight-translations/Makefile
 
-TL_VERSION=	2.6.4
+TL_VERSION=	2.6.5
 
 FILES_SUBST+=	PAX=${PAX} TL_EGDIR=${TL_EGDIR:Q} TL_WEBDIR=${TL_WEBDIR:Q} \
 		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/25 04:46:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/01/30 16:35:55 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -529,6 +529,10 @@ ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/editor_plugin.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/editor_plugin_src.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/img/image.gif
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/img/link.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/js/typobox.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/js/typobox_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/js/typolinks.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/js/typolinks_src.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/da.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/da_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de.js
@@ -542,8 +546,6 @@ ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typobox.html
-${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typobox.js
-${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typobox_src.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typoimages.php
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolib.php
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolinks.php
@@ -1777,6 +1779,7 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/css
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/js
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/img
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs
