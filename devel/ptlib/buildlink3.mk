@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/10/25 18:12:34 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/01/30 12:46:23 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PTLIB_BUILDLINK3_MK:=	${PTLIB_BUILDLINK3_MK}+
@@ -18,6 +18,7 @@ BUILDLINK_PKGSRCDIR.ptlib?=	../../devel/ptlib
 .endif	# PTLIB_BUILDLINK3_MK
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
