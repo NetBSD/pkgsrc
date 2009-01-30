@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.4 2009/01/17 10:11:14 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.5 2009/01/30 19:39:04 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -75,6 +75,7 @@ include/wine/svcctl.idl
 include/wine/unicode.h
 include/wine/windows/accctrl.h
 include/wine/windows/aclapi.h
+include/wine/windows/aclui.h
 include/wine/windows/activaut.h
 include/wine/windows/activaut.idl
 include/wine/windows/activdbg.h
@@ -340,6 +341,8 @@ include/wine/windows/msacmdrv.h
 include/wine/windows/mscat.h
 include/wine/windows/mscoree.h
 include/wine/windows/mscoree.idl
+include/wine/windows/msctf.h
+include/wine/windows/msctf.idl
 include/wine/windows/mshtmcid.h
 include/wine/windows/mshtmdid.h
 include/wine/windows/mshtmhst.h
@@ -565,6 +568,7 @@ lib/libwine.so
 lib/libwine.so.1
 lib/libwine.so.1.0
 lib/wine/acledit.dll.so
+lib/wine/aclui.dll.so
 lib/wine/activeds.dll.so
 lib/wine/actxprxy.dll.so
 lib/wine/advapi32.dll.so
@@ -572,6 +576,7 @@ lib/wine/advpack.dll.so
 lib/wine/amstream.dll.so
 lib/wine/appwiz.cpl.so
 lib/wine/atl.dll.so
+lib/wine/authz.dll.so
 lib/wine/avicap32.dll.so
 lib/wine/avifil32.dll.so
 lib/wine/avifile.dll16
@@ -624,6 +629,9 @@ lib/wine/d3dx9_34.dll.so
 lib/wine/d3dx9_35.dll.so
 lib/wine/d3dx9_36.dll.so
 lib/wine/d3dx9_37.dll.so
+lib/wine/d3dx9_38.dll.so
+lib/wine/d3dx9_39.dll.so
+lib/wine/d3dx9_40.dll.so
 lib/wine/d3dxof.dll.so
 lib/wine/dbghelp.dll.so
 lib/wine/dciman32.dll.so
@@ -698,6 +706,7 @@ lib/wine/jscript.dll.so
 lib/wine/kernel32.dll.so
 lib/wine/keyboard.drv16
 lib/wine/krnl386.exe16
+lib/wine/libaclui.def
 lib/wine/libactiveds.def
 lib/wine/libadsiid.a
 lib/wine/libadvapi32.def
@@ -756,6 +765,7 @@ lib/wine/libimm32.def
 lib/wine/libinetcomm.def
 lib/wine/libiphlpapi.def
 lib/wine/libkernel32.def
+lib/wine/libloadperf.def
 lib/wine/liblz32.def
 lib/wine/libmapi32.def
 lib/wine/libmlang.def
@@ -795,6 +805,7 @@ lib/wine/libpowrprof.def
 lib/wine/libpsapi.def
 lib/wine/libquartz.def
 lib/wine/librasapi32.def
+lib/wine/librasdlg.def
 lib/wine/libresutils.def
 lib/wine/libriched20.def
 lib/wine/librpcrt4.def
@@ -846,6 +857,7 @@ lib/wine/libxinput.def
 lib/wine/loadperf.dll.so
 lib/wine/localspl.dll.so
 lib/wine/localui.dll.so
+lib/wine/lodctr.exe.so
 lib/wine/lz32.dll.so
 lib/wine/lzexpand.dll16
 lib/wine/mapi32.dll.so
@@ -869,6 +881,7 @@ lib/wine/msadp32.acm.so
 lib/wine/mscat32.dll.so
 lib/wine/mscms.dll.so
 lib/wine/mscoree.dll.so
+lib/wine/msctf.dll.so
 lib/wine/msdmo.dll.so
 lib/wine/msftedit.dll.so
 lib/wine/msg711.acm.so
@@ -882,6 +895,7 @@ lib/wine/msisip.dll.so
 lib/wine/msisys.ocx.so
 lib/wine/msnet32.dll.so
 lib/wine/msrle32.dll.so
+lib/wine/mssign32.dll.so
 lib/wine/mssip32.dll.so
 lib/wine/mstask.dll.so
 lib/wine/msvcirt.dll.so
@@ -941,6 +955,7 @@ lib/wine/quartz.dll.so
 lib/wine/query.dll.so
 lib/wine/rasapi16.dll16
 lib/wine/rasapi32.dll.so
+lib/wine/rasdlg.dll.so
 lib/wine/reg.exe.so
 lib/wine/regedit.exe.so
 lib/wine/regsvr32.exe.so
@@ -991,11 +1006,13 @@ lib/wine/system.drv16
 lib/wine/tapi32.dll.so
 lib/wine/taskmgr.exe.so
 lib/wine/toolhelp.dll16
+lib/wine/traffic.dll.so
 lib/wine/twain.dll16
 lib/wine/twain_32.dll.so
 lib/wine/typelib.dll16
 lib/wine/unicows.dll.so
 lib/wine/uninstaller.exe.so
+lib/wine/unlodctr.exe.so
 lib/wine/updspapi.dll.so
 lib/wine/url.dll.so
 lib/wine/urlmon.dll.so
