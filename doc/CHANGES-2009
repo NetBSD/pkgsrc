@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.422 2009/01/29 22:02:41 seb Exp $
+$NetBSD: CHANGES-2009,v 1.423 2009/01/30 16:46:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -574,3 +574,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/p5-Net-CIDR-Set version 0.10 [seb 2009-01-29]
 	Updated textproc/p5-Text-CSV_XS to 0.60 [seb 2009-01-29]
 	Added net/p5-Cisco-Abbrev version 0.02 [seb 2009-01-29]
+	Updated www/typolight to 2.6.5 [taca 2009-01-30]
+	Updated www/typolight-example to 2.6.5 [taca 2009-01-30]
+	Updated www/typolight-translations to 20090128 [taca 2009-01-30]
