@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/04 22:04:17 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.7.6.1 2009/01/30 15:16:42 tron Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -122,6 +122,10 @@ ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES/djangojs.po
+${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES/django.mo
+${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/django/conf/locale/hr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/hr/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/hr/LC_MESSAGES/djangojs.mo
@@ -222,6 +226,10 @@ ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES/djangojs.po
+${PYSITELIB}/django/conf/locale/th/LC_MESSAGES/django.mo
+${PYSITELIB}/django/conf/locale/th/LC_MESSAGES/django.po
+${PYSITELIB}/django/conf/locale/th/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/django/conf/locale/th/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/django/conf/locale/tr/LC_MESSAGES/django.mo
 ${PYSITELIB}/django/conf/locale/tr/LC_MESSAGES/django.po
 ${PYSITELIB}/django/conf/locale/tr/LC_MESSAGES/djangojs.mo
@@ -541,8 +549,6 @@ ${PYSITELIB}/django/contrib/comments/templates/comments/form.html
 ${PYSITELIB}/django/contrib/comments/templates/comments/moderation_queue.html
 ${PYSITELIB}/django/contrib/comments/templates/comments/posted.html
 ${PYSITELIB}/django/contrib/comments/templates/comments/preview.html
-${PYSITELIB}/django/contrib/comments/templates/comments/reply.html
-${PYSITELIB}/django/contrib/comments/templates/comments/reply_preview.html
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.py
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.pyc
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.pyo
@@ -579,6 +585,9 @@ ${PYSITELIB}/django/contrib/contenttypes/models.pyo
 ${PYSITELIB}/django/contrib/contenttypes/tests.py
 ${PYSITELIB}/django/contrib/contenttypes/tests.pyc
 ${PYSITELIB}/django/contrib/contenttypes/tests.pyo
+${PYSITELIB}/django/contrib/contenttypes/views.py
+${PYSITELIB}/django/contrib/contenttypes/views.pyc
+${PYSITELIB}/django/contrib/contenttypes/views.pyo
 ${PYSITELIB}/django/contrib/csrf/__init__.py
 ${PYSITELIB}/django/contrib/csrf/__init__.pyc
 ${PYSITELIB}/django/contrib/csrf/__init__.pyo
@@ -2314,6 +2323,8 @@ ${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/conf/locale/uk
 @dirrm ${PYSITELIB}/django/conf/locale/tr/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/tr
+@dirrm ${PYSITELIB}/django/conf/locale/th/LC_MESSAGES
+@dirrm ${PYSITELIB}/django/conf/locale/th
 @dirrm ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/te
 @dirrm ${PYSITELIB}/django/conf/locale/ta/LC_MESSAGES
@@ -2364,6 +2375,8 @@ ${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/conf/locale/hu
 @dirrm ${PYSITELIB}/django/conf/locale/hr/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/hr
+@dirrm ${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES
+@dirrm ${PYSITELIB}/django/conf/locale/hi
 @dirrm ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/he
 @dirrm ${PYSITELIB}/django/conf/locale/gl/LC_MESSAGES
