@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.425 2009/01/30 22:22:39 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.426 2009/01/30 22:23:38 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -579,3 +579,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight-translations to 20090128 [taca 2009-01-30]
 	Updated emulators/wine-devel to 1.1.14 [adam 2009-01-30]
 	Updated www/horde to 3.3.3 [adrianp 2009-01-30]
+	Updated mail/imp to 4.3.3 [adrianp 2009-01-30]
