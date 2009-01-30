@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/09 01:54:25 minskim Exp $
+# $NetBSD: Makefile,v 1.1.1.1.2.1 2009/01/30 12:38:02 tron Exp $
 
 DISTNAME=	silgraphite-2.3
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c99 c++
 WRKSRC=		${WRKDIR}/${DISTNAME}/engine
 
 PKGCONFIG_OVERRIDE+=	silgraphite.pc.in
