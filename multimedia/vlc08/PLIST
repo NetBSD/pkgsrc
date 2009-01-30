@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/30 13:35:26 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/01/30 21:17:01 sborrill Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -85,7 +85,7 @@ lib/vlc/codec/libflacdec_plugin.so
 lib/vlc/codec/liblibmpeg2_plugin.so
 lib/vlc/codec/liblpcm_plugin.so
 lib/vlc/codec/libmpeg_audio_plugin.so
-${PLIST.x11}lib/vlc/codec/libpng_plugin.so
+lib/vlc/codec/libpng_plugin.so
 lib/vlc/codec/librawvideo_plugin.so
 ${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.so
 lib/vlc/codec/libspudec_plugin.so
@@ -204,7 +204,7 @@ lib/vlc/video_filter/libmarq_plugin.so
 lib/vlc/video_filter/libmosaic_plugin.so
 lib/vlc/video_filter/libmotionblur_plugin.so
 lib/vlc/video_filter/libmotiondetect_plugin.so
-${PLIST.x11}lib/vlc/video_filter/libosdmenu_plugin.so
+lib/vlc/video_filter/libosdmenu_plugin.so
 lib/vlc/video_filter/librss_plugin.so
 lib/vlc/video_filter/librv32_plugin.so
 lib/vlc/video_filter/libscale_plugin.so
@@ -212,9 +212,9 @@ lib/vlc/video_filter/libtime_plugin.so
 lib/vlc/video_filter/libtransform_plugin.so
 lib/vlc/video_filter/libwall_plugin.so
 ${PLIST.fb}lib/vlc/video_output/libfb_plugin.so
-${PLIST.x11}lib/vlc/video_output/libglx_plugin.so
+${PLIST.sdl}lib/vlc/video_output/libglx_plugin.so
 lib/vlc/video_output/libimage_plugin.so
-${PLIST.x11}lib/vlc/video_output/libopengl_plugin.so
+${PLIST.sdl}lib/vlc/video_output/libopengl_plugin.so
 ${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.so
 ${PLIST.x11}lib/vlc/video_output/libx11_plugin.so
 ${PLIST.x11}lib/vlc/video_output/libxvideo_plugin.so
