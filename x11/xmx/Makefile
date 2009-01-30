@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/11/10 17:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2009/01/30 12:43:58 tron Exp $
 
 DISTNAME=	xmx-2.1alpha.pl7
 PKGNAME=	xmx-2.1a7
@@ -20,5 +20,6 @@ USE_IMAKE=	yes
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
