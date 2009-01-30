@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/12 14:47:39 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/01/30 13:35:26 sborrill Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -26,7 +26,7 @@ ${PLIST.cdda}lib/vlc/access/libcdda_plugin.so
 lib/vlc/access/libcddax_plugin.so
 lib/vlc/access/libdvdnav_plugin.so
 lib/vlc/access/libdvdread_plugin.so
-lib/vlc/access/libscreen_plugin.so
+${PLIST.x11}lib/vlc/access/libscreen_plugin.so
 ${PLIST.vcd}lib/vlc/access/libvcd_plugin.so
 lib/vlc/access_filter/libaccess_filter_dump_plugin.so
 lib/vlc/access_filter/libaccess_filter_record_plugin.so
@@ -67,7 +67,7 @@ lib/vlc/audio_mixer/libfloat32_mixer_plugin.so
 lib/vlc/audio_mixer/libspdif_mixer_plugin.so
 lib/vlc/audio_mixer/libtrivial_mixer_plugin.so
 lib/vlc/audio_output/libaout_file_plugin.so
-lib/vlc/audio_output/libaout_sdl_plugin.so
+${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.so
 ${PLIST.arts}lib/vlc/audio_output/libarts_plugin.so
 lib/vlc/audio_output/liboss_plugin.so
 lib/vlc/codec/liba52_plugin.so
@@ -85,9 +85,9 @@ lib/vlc/codec/libflacdec_plugin.so
 lib/vlc/codec/liblibmpeg2_plugin.so
 lib/vlc/codec/liblpcm_plugin.so
 lib/vlc/codec/libmpeg_audio_plugin.so
-lib/vlc/codec/libpng_plugin.so
+${PLIST.x11}lib/vlc/codec/libpng_plugin.so
 lib/vlc/codec/librawvideo_plugin.so
-lib/vlc/codec/libsdl_image_plugin.so
+${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.so
 lib/vlc/codec/libspudec_plugin.so
 lib/vlc/codec/libsubsdec_plugin.so
 lib/vlc/codec/libsvcdsub_plugin.so
@@ -149,7 +149,7 @@ lib/vlc/libmemcpymmxext.a
 lib/vlc/libmux_ts.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
-lib/vlc/misc/libfreetype_plugin.so
+${PLIST.x11}lib/vlc/misc/libfreetype_plugin.so
 lib/vlc/misc/libgrowl_plugin.so
 lib/vlc/misc/libipv4_plugin.so
 lib/vlc/misc/libipv6_plugin.so
@@ -204,7 +204,7 @@ lib/vlc/video_filter/libmarq_plugin.so
 lib/vlc/video_filter/libmosaic_plugin.so
 lib/vlc/video_filter/libmotionblur_plugin.so
 lib/vlc/video_filter/libmotiondetect_plugin.so
-lib/vlc/video_filter/libosdmenu_plugin.so
+${PLIST.x11}lib/vlc/video_filter/libosdmenu_plugin.so
 lib/vlc/video_filter/librss_plugin.so
 lib/vlc/video_filter/librv32_plugin.so
 lib/vlc/video_filter/libscale_plugin.so
@@ -212,12 +212,12 @@ lib/vlc/video_filter/libtime_plugin.so
 lib/vlc/video_filter/libtransform_plugin.so
 lib/vlc/video_filter/libwall_plugin.so
 ${PLIST.fb}lib/vlc/video_output/libfb_plugin.so
-lib/vlc/video_output/libglx_plugin.so
+${PLIST.x11}lib/vlc/video_output/libglx_plugin.so
 lib/vlc/video_output/libimage_plugin.so
-lib/vlc/video_output/libopengl_plugin.so
-lib/vlc/video_output/libvout_sdl_plugin.so
-lib/vlc/video_output/libx11_plugin.so
-lib/vlc/video_output/libxvideo_plugin.so
+${PLIST.x11}lib/vlc/video_output/libopengl_plugin.so
+${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.so
+${PLIST.x11}lib/vlc/video_output/libx11_plugin.so
+${PLIST.x11}lib/vlc/video_output/libxvideo_plugin.so
 lib/vlc/visualization/libvisual_plugin.so
 man/man1/vlc-config.1
 man/man1/vlc.1
