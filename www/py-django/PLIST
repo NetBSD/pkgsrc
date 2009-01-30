@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/29 09:35:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/01/30 13:59:57 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -2323,6 +2323,8 @@ ${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/conf/locale/uk
 @dirrm ${PYSITELIB}/django/conf/locale/tr/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/tr
+@dirrm ${PYSITELIB}/django/conf/locale/th/LC_MESSAGES
+@dirrm ${PYSITELIB}/django/conf/locale/th
 @dirrm ${PYSITELIB}/django/conf/locale/te/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/te
 @dirrm ${PYSITELIB}/django/conf/locale/ta/LC_MESSAGES
@@ -2373,6 +2375,8 @@ ${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/conf/locale/hu
 @dirrm ${PYSITELIB}/django/conf/locale/hr/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/hr
+@dirrm ${PYSITELIB}/django/conf/locale/hi/LC_MESSAGES
+@dirrm ${PYSITELIB}/django/conf/locale/hi
 @dirrm ${PYSITELIB}/django/conf/locale/he/LC_MESSAGES
 @dirrm ${PYSITELIB}/django/conf/locale/he
 @dirrm ${PYSITELIB}/django/conf/locale/gl/LC_MESSAGES
