@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/23 07:22:10 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/01/30 16:42:38 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
@@ -17,6 +17,8 @@ DISTINFO_FILE=	${.CURDIR}/../../www/typolight/distinfo
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WWW_EG_FILES=	music_academy.css tl_files/music_academy
 WWW_FILE=	templates/example_website.sql
