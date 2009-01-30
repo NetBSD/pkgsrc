@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/13 02:19:10 jmcneill Exp $
+# $NetBSD: Makefile,v 1.6 2009/01/30 08:18:45 obache Exp $
 
 DISTNAME=	ptlib-2.4.4
 CATEGORIES=	devel
@@ -9,11 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ekiga.net/
 COMMENT=	Portable Windows Libary
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=	pwlib-[0-9]*
 
-BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
-
-USE_TOOLS+=		gmake tar pkg-config
+USE_TOOLS+=		bison gmake pkg-config
 BUILD_TARGET=		optshared
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--disable-dc
 PTHREAD_OPTS+=		require
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/share/ptlib
+	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/share/ptlib
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
