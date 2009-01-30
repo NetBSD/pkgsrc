@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.33 2009/01/30 14:01:29 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.34 2009/01/30 15:17:16 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -97,3 +97,5 @@ Pullup ticket #2666 - requested by joerg
 xmascot: build fix
 Pullup ticket #2668 - joerg
 perl5: fix bulk build problem
+Pullup ticket #2667 - requested by joerg
+py-django: package list fix
