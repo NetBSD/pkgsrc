@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.36 2009/01/30 22:41:32 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.37 2009/01/31 21:34:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -105,3 +105,5 @@ Pullup ticket #2671 - requested by sborrill
 vlc08: build fix
 Pullup ticket #2670 - requested by obache
 GraphicsMagick: security update
+Pullup ticket #2674 - requested by taca
+awstats: security update
