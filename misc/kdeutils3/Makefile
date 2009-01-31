@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2008/07/14 12:56:08 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2009/01/31 05:40:42 markd Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
+PKGREVISION=	1
 COMMENT=	Utilities for the KDE integrated X11 desktop
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -13,15 +14,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 MAKE_ENV+=		EXPORT_SYMBOLS_LDFLAGS=${EXPORT_SYMBOLS_LDFLAGS:Q}
 
-.if !empty(MACHINE_PLATFORM:MNetBSD-1.6*) || !empty(MACHINE_PLATFORM:MNetBSD-[2-9]*)
-CPPFLAGS+=		-DARK_TAR="\"/usr/bin/tar\""
-.else
 DEPENDS+=	gtar-base>=1.13.25:../../archivers/gtar-base
 
 EVAL_PREFIX+=		PREFIX.gtar=gtar
 PREFIX.gtar_DEFAULT=	${LOCALBASE}
-CPPFLAGS+=		-DARK_TAR="\"${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar\""
-.endif
+
+SUBST_CLASSES+=		tarexe
+SUBST_STAGE.tarexe=	pre-configure
+SUBST_MESSAGE.tarexe=	Use GNU tar in ark
+SUBST_FILES.tarexe=	ark/ark.kcfg
+SUBST_SED.tarexe=	-e 's:<default>tar</default>:<default>${PREFIX.gtar}/bin/${GNU_PROGRAM_PREFIX}tar</default>:'
 
 .include "../../mk/bsd.prefs.mk"
 
