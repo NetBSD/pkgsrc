@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/29 19:46:12 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/31 06:02:18 seb Exp $
 #
 
-DISTNAME=	Net-CIDR-Set-0.10
+DISTNAME=	Net-CIDR-Set-0.11
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
