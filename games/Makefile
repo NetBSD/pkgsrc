@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.316 2009/01/13 00:13:58 jmcneill Exp $
+# $NetBSD: Makefile,v 1.317 2009/01/31 03:06:17 ahoka Exp $
 #
 
 COMMENT=	Games
@@ -182,6 +182,7 @@ SUBDIR+=	orbital_eunuchs_sniper
 SUBDIR+=	pag
 SUBDIR+=	pioneers
 SUBDIR+=	plib
+SUBDIR+=	pokerth
 SUBDIR+=	polyglot
 SUBDIR+=	powermanga
 SUBDIR+=	powwow
