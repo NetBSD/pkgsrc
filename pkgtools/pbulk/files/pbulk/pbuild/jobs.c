@@ -1,7 +1,7 @@
-/* $NetBSD: jobs.c,v 1.9 2008/09/14 18:59:02 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.10 2009/01/31 23:25:38 joerg Exp $ */
 
 /*-
- * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * This code was developed as part of Google's Summer of Code 2007 program.
@@ -187,10 +187,12 @@ init_jobs(const char *scan_output, const char *success_file, const char *error_f
 	if ((fd = open(scan_output, O_RDONLY, 0)) == -1)
 		err(1, "Cannot open input");
 
-	if ((log_success = open(success_file, O_RDWR | O_CREAT, 0666)) == -1)
+	log_success = open(success_file, O_RDWR | O_CREAT | O_APPEND, 0666);
+	if (log_success == -1)
 		err(1, "Cannot open log file for successful builds");
 
-	if ((log_failed = open(error_file, O_RDWR | O_CREAT, 0666)) == -1)
+	log_failed = open(error_file, O_RDWR | O_CREAT | O_APPEND, 0666);
+	if (log_failed == -1)
 		err(1, "Cannot open log file for failed builds");
 
 	input = read_from_file(fd);

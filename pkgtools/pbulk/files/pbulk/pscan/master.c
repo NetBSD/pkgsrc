@@ -1,7 +1,7 @@
-/* $NetBSD: master.c,v 1.6 2008/01/27 14:01:23 joerg Exp $ */
+/* $NetBSD: master.c,v 1.7 2009/01/31 23:25:38 joerg Exp $ */
 
 /*-
- * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * This code was developed as part of Google's Summer of Code 2007 program.
@@ -43,7 +43,6 @@
 #include <nbcompat/time.h>
 #include <sys/wait.h>
 #include <nbcompat/err.h>
-#include <event.h>
 #include <signal.h>
 #include <nbcompat/stdlib.h>
 #include <nbcompat/stdio.h>
@@ -58,7 +57,7 @@ static int clients_started;
 static LIST_HEAD(, scan_peer) active_peers, inactive_peers;
 static struct event listen_event;
 static int listen_event_socket;
-static struct event child_event;
+static struct signal_event child_event;
 static pid_t child_pid;
 
 struct scan_peer {
@@ -195,7 +194,7 @@ assign_job(struct scan_peer *peer)
 }
 
 static void
-listen_handler(int sock, short event, void *arg)
+listen_handler(int sock, void *arg)
 {
 	struct scan_peer *peer;
 	struct sockaddr_in src;
@@ -219,7 +218,7 @@ listen_handler(int sock, short event, void *arg)
 }
 
 static void
-child_handler(int dummy, short event, void *arg)
+child_handler(struct signal_event *ev)
 {
 	struct scan_peer *peer;
 	int status;
@@ -233,7 +232,7 @@ child_handler(int dummy, short event, void *arg)
 		err(1, "Start script failed");
 
 	clients_started = 1;
-	signal_del(&child_event);
+	signal_del(ev);
 
 	while ((peer = LIST_FIRST(&inactive_peers)) != NULL) {
 		LIST_REMOVE(peer, peer_link);
@@ -269,13 +268,11 @@ master_mode(const char *master_port, const char *start_script)
 	if (listen(fd, 5) == -1)
 		err(1, "Could not listen on socket");
 
-	event_set(&listen_event, fd, EV_READ | EV_PERSIST, listen_handler, NULL);
-	event_add(&listen_event, NULL);
+	event_add(&listen_event, fd, 0, 1, listen_handler, NULL);
 	listen_event_socket = fd;
 
 	if (start_script) {
-		signal_set(&child_event, SIGCHLD, child_handler, NULL);
-		signal_add(&child_event, NULL);
+		signal_add(&child_event, SIGCHLD, child_handler);
 
 		if ((child_pid = vfork()) == 0) {
 			execlp(start_script, start_script, (char *)NULL);
