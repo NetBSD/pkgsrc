@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.429 2009/01/31 06:03:49 seb Exp $
+$NetBSD: CHANGES-2009,v 1.430 2009/01/31 09:00:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -583,3 +583,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added games/pokerth version 0.6.3.2 [ahoka 2009-01-31]
 	Added textproc/py-sphinx version 0.5.1 [markd 2009-01-31]
 	Updated net/p5-Net-CIDR-Set to 0.11 [seb 2009-01-31]
+	Updated security/libgcrypt to 1.4.4 [adam 2009-01-31]
+	Updated security/libtasn1 to 1.8 [adam 2009-01-31]
