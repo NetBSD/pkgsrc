@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/31 16:00:55 manu Exp $
+# $NetBSD: Makefile,v 1.2 2009/01/31 17:01:23 obache Exp $
 
 PKGNAME=		${DISTNAME:S/-/-smbk5pwd-/}
 COMMENT=		Samba and Kerberos password sync for OpenLDAP
@@ -14,11 +14,11 @@ USE_LIBTOOL=		yes
 BUILD_DIRS=		include contrib/slapd-modules/smbk5pwd
 
 do-install:
-	${INSTALL_LIB_DIR} ${PREFIX}/lib/openldap
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/openldap
 	${LIBTOOL} --mode=install 					\
 		   ${INSTALL_DATA}					\
 		   ${WRKSRC}/contrib/slapd-modules/smbk5pwd/smbk5pwd.la	\
-		   ${PREFIX}/lib/openldap
+		   ${DESTDIR}${PREFIX}/lib/openldap
 
 .include "../../databases/openldap/Makefile.common"
 
