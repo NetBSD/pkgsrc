@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2009/01/20 10:19:30 hira Exp $
+# $NetBSD: Makefile,v 1.22 2009/01/31 16:54:30 hira Exp $
 #
 
-OO_VER=			3.0.0
-PKGREVISION=		8
-OO_TAG=			OOO300_m9
+OO_VER=			3.0.1
+OO_TAG=			OOO300_m15
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
 CATEGORIES=		misc
@@ -171,7 +170,7 @@ do-install:
 		done;						\
 	done
 	cd ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/basis-link/program &&	\
-	chmod ${SHAREMODE} hid.lst testtoolrc
+	chmod ${SHAREMODE} gengalrc hid.lst testtoolrc
 	for f in ${OO_PROGRAMS}; do					\
 		ln -sf ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;			\
