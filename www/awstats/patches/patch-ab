@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2008/04/07 07:21:00 adam Exp $
+$NetBSD: patch-ab,v 1.5.10.1 2009/01/31 21:28:41 tron Exp $
 
---- tools/awstats_configure.pl.orig	2007-04-02 20:30:52.000000000 +0200
+--- tools/awstats_configure.pl.orig	2008-04-06 15:45:24.000000000 +0200
 +++ tools/awstats_configure.pl
 @@ -29,12 +29,12 @@ $AWSTATS_MODEL_CONFIG
  $AWSTATS_DIRDATA_PATH
@@ -100,7 +100,7 @@ $NetBSD: patch-ab,v 1.5 2008/04/07 07:21:00 adam Exp $
  		print "Example: c:\\Program files\\apache group\\apache\\conf\\httpd.conf\n";
  		$bidon='';
  		while ($bidon ne 'none' && ! -f "$bidon") {
-@@ -545,8 +547,8 @@ EOF
+@@ -546,8 +548,8 @@ EOF
  # -----------------------------
  my $modelfile='';
  if ($OS eq 'linux') 		{ 
@@ -111,7 +111,7 @@ $NetBSD: patch-ab,v 1.5 2008/04/07 07:21:00 adam Exp $
  	}
  	else {
  		$modelfile="$AWSTATS_MODEL_CONFIG";
-@@ -554,7 +556,7 @@ if ($OS eq 'linux') 		{ 
+@@ -555,7 +557,7 @@ if ($OS eq 'linux') 		{ 
  	}
  }
  elsif ($OS eq "macosx") 		{ 
@@ -120,7 +120,7 @@ $NetBSD: patch-ab,v 1.5 2008/04/07 07:21:00 adam Exp $
  }
  elsif ($OS eq 'windows')	{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
  else						{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
-@@ -607,11 +609,11 @@ if ($bidon =~ /^y/i) {
+@@ -608,11 +610,11 @@ if ($bidon =~ /^y/i) {
  	if ($OS eq 'linux') 		{
  		print "\n-----> Define config file path\n";
  		print "In which directory do you plan to store your config file(s) ?\n";

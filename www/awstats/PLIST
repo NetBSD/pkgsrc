@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/11 10:37:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.13.6.1 2009/01/31 21:28:41 tron Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -112,6 +112,7 @@ awstats/cgi-bin/lib/status_smtp.pm
 awstats/cgi-bin/lib/worms.pm
 awstats/cgi-bin/plugins/clusterinfo.pm
 awstats/cgi-bin/plugins/decodeutfkeys.pm
+awstats/cgi-bin/plugins/export_to_csv.pm
 awstats/cgi-bin/plugins/geoip.pm
 awstats/cgi-bin/plugins/geoip_city_maxmind.pm
 awstats/cgi-bin/plugins/geoip_isp_maxmind.pm
@@ -146,6 +147,7 @@ awstats/icon/browser/aweb.png
 awstats/icon/browser/bpftp.png
 awstats/icon/browser/bytel.png
 awstats/icon/browser/chimera.png
+awstats/icon/browser/chrome.png
 awstats/icon/browser/cyberdog.png
 awstats/icon/browser/da.png
 awstats/icon/browser/dillo.png
@@ -459,6 +461,7 @@ awstats/icon/flags/ps.png
 awstats/icon/flags/pt.png
 awstats/icon/flags/py.png
 awstats/icon/flags/qa.png
+awstats/icon/flags/re.png
 awstats/icon/flags/ro.png
 awstats/icon/flags/ru.png
 awstats/icon/flags/rw.png
@@ -520,6 +523,7 @@ awstats/icon/flags/zw.png
 awstats/icon/mime/ai.png
 awstats/icon/mime/archive.png
 awstats/icon/mime/audio.png
+awstats/icon/mime/css.png
 awstats/icon/mime/doc.png
 awstats/icon/mime/flash.png
 awstats/icon/mime/glasses.png
@@ -573,6 +577,7 @@ awstats/icon/os/linux.png
 awstats/icon/os/linuxcentos.png
 awstats/icon/os/linuxdebian.png
 awstats/icon/os/linuxfedora.png
+awstats/icon/os/linuxgentoo.png
 awstats/icon/os/linuxmandr.png
 awstats/icon/os/linuxredhat.png
 awstats/icon/os/linuxsuse.png
@@ -606,6 +611,7 @@ awstats/icon/os/wince.png
 awstats/icon/os/winlong.png
 awstats/icon/os/winme.png
 awstats/icon/os/winnt.png
+awstats/icon/os/winunknown.png
 awstats/icon/os/winxbox.png
 awstats/icon/os/winxp.png
 awstats/icon/other/awstats_logo1.png
