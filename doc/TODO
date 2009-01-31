@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7829 2009/01/30 14:22:22 taca Exp $
+$NetBSD: TODO,v 1.7830 2009/01/31 09:00:44 adam Exp $
 
 Suggested new packages
 ======================
@@ -778,7 +778,6 @@ Suggested package updates
 	o libevent-1.4.9
 	o libextractor-0.5.21
 	o libflash-0.4.13
-	o libgcrypt-1.4.4
 	o libgda-3.1.5
 	o libgdiplus-2.2
 	o libggi-2.2.2
@@ -812,7 +811,6 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
-	o libtasn1-1.8
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
