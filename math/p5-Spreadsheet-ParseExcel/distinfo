@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/01/12 23:25:50 he Exp $
+$NetBSD: distinfo,v 1.8 2009/01/31 16:16:05 seb Exp $
 
-SHA1 (Spreadsheet-ParseExcel-0.44.tar.gz) = a7d48f82278a67ca1b525d8c001f12f982077dd7
-RMD160 (Spreadsheet-ParseExcel-0.44.tar.gz) = b5a59c54ab1b07b3a903fc0ce9e988c628528405
-Size (Spreadsheet-ParseExcel-0.44.tar.gz) = 107753 bytes
+SHA1 (Spreadsheet-ParseExcel-0.49.tar.gz) = 1af5743e6c7fab044f56a867449c1c590d2c93e7
+RMD160 (Spreadsheet-ParseExcel-0.49.tar.gz) = f8ce3ff6e490748a2b93028b2fd83eede85b4fd9
+Size (Spreadsheet-ParseExcel-0.49.tar.gz) = 117123 bytes
