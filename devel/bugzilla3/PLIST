@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/04 00:38:11 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/01/31 12:23:27 adrianp Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -630,16 +630,17 @@ share/examples/bugzilla/localconfig
 @dirrm share/bugzilla/template/en/default/account
 @dirrm share/bugzilla/template/en/default
 @dirrm share/bugzilla/template/en
-@dirrm share/bugzilla/template
+@unexec ${RMDIR} %D/share/bugzilla/template 2>/dev/null || ${TRUE}
 @dirrm share/bugzilla/skins/standard/yui
 @dirrm share/bugzilla/skins/standard/index
 @dirrm share/bugzilla/skins/standard/global
 @dirrm share/bugzilla/skins/standard/dependency-tree
 @dirrm share/bugzilla/skins/standard
-@dirrm share/bugzilla/skins/contrib/Dusk
-@dirrm share/bugzilla/skins/contrib
-@dirrm share/bugzilla/skins
+@unexec ${RMDIR} %D/share/bugzilla/skins/contrib/Dusk 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/bugzilla/skins/contrib 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/bugzilla/skins 2>/dev/null || ${TRUE}
 @dirrm share/bugzilla/js
+@unexec ${RMDIR} %D/share/bugzilla/lib 2>/dev/null || ${TRUE}
 @dirrm share/bugzilla/images
 @dirrm share/bugzilla/docs/en/html/api/Bugzilla
 @dirrm share/bugzilla/docs/en/html/api
@@ -661,5 +662,5 @@ share/examples/bugzilla/localconfig
 @dirrm share/bugzilla/Bugzilla/Auth/Login
 @dirrm share/bugzilla/Bugzilla/Auth
 @dirrm share/bugzilla/Bugzilla/Attachment
-@dirrm share/bugzilla/Bugzilla
-@dirrm share/bugzilla
+@unexec ${RMDIR} %D/share/bugzilla/Bugzilla 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/bugzilla 2>/dev/null || ${TRUE}
