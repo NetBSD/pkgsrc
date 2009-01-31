@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.426 2009/01/30 22:23:38 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.427 2009/01/31 03:07:30 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -580,3 +580,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/wine-devel to 1.1.14 [adam 2009-01-30]
 	Updated www/horde to 3.3.3 [adrianp 2009-01-30]
 	Updated mail/imp to 4.3.3 [adrianp 2009-01-30]
+	Added games/pokerth version 0.6.3.2 [ahoka 2009-01-31]
