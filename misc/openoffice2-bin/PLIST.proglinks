@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST.proglinks,v 1.1.1.1 2005/10/09 13:39:53 mrauch Exp $
+@comment $NetBSD: PLIST.proglinks,v 1.2 2009/01/31 21:56:32 bad Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
+bin/smath
 bin/soffice
+bin/spadmin
 bin/swriter
