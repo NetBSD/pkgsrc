@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/01/31 21:56:32 bad Exp $
+# $NetBSD: Makefile,v 1.39 2009/01/31 22:10:36 bad Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
@@ -12,6 +12,7 @@ COMMENT=		Integrated office productivity suite (binary pkg)
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
 CONFLICTS+=		openoffice-bin-[0-9]*
+CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*

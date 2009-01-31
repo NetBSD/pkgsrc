@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/01/31 16:54:30 hira Exp $
+# $NetBSD: Makefile,v 1.23 2009/01/31 22:10:37 bad Exp $
 #
 
 OO_VER=			3.0.1
@@ -42,6 +42,7 @@ CONFLICTS+=		openoffice-[0-9]*
 CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice2-bin-[0-9]*
+CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 USE_DIRS+=		xdg-1.1
