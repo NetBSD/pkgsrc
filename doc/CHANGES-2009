@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.439 2009/01/31 20:06:43 sketch Exp $
+$NetBSD: CHANGES-2009,v 1.440 2009/01/31 22:13:04 bad Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -597,3 +597,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.4900 [seb 2009-01-31]
 	Updated misc/openoffice3 to 3.0.1 [hira 2009-01-31]
 	Updated devel/libatomic_ops to 20081024nb3 [sketch 2009-01-31]
+	Updated misc/openoffice2-bin to 2.4.2 [bad 2009-01-31]
+	Added misc/openoffice3-bin version 3.0.1 [bad 2009-01-31]
