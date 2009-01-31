@@ -1,0 +1,23 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/01/31 03:04:37 ahoka Exp $
+
+--- src/core/openssl_wrapper.h.orig	2009-01-04 00:17:01.000000000 +0100
++++ src/core/openssl_wrapper.h
+@@ -40,15 +40,8 @@
+ 	#undef X509_NAME // Again for Windows - conflict with WinCrypt.h.
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__OpenBSD__) || defined(__FreeBSD__)
+-	// For BSD-Systems, we assume that OpenSSL is part of the operating system.
+-	#include <openssl/ssl.h>
+-	#include <openssl/md5.h>
+-	#include <openssl/rand.h>
+-#else
+-	// For all other systems, we use GnuTLS.
+-	#include <gnutls/openssl.h>
+-	#define PKTH_USE_GNUTLS
+-#endif
++#include <openssl/ssl.h>
++#include <openssl/md5.h>
++#include <openssl/rand.h>
+ 
+ #endif
