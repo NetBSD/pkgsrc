@@ -1,7 +1,7 @@
-/* $NetBSD: pbulk.h,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: pbulk.h,v 1.3 2009/01/31 23:25:38 joerg Exp $ */
 
 /*-
- * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * This code was developed as part of Google's Summer of Code 2007 program.
@@ -32,7 +32,24 @@
  */
 
 #include <netinet/in.h>
+#include <nbcompat/queue.h>
 #include <nbcompat/unistd.h>
+
+struct event {
+	LIST_ENTRY(event) ev_link;
+	int ev_fd;
+	int ev_write;
+	int ev_persistent;
+	void (*ev_handler)(int, void *);
+	void *ev_arg;
+};
+
+struct signal_event {
+	LIST_ENTRY(signal_event) sig_link;
+	int sig_id;
+	volatile int sig_received;
+	void (*sig_handler)(struct signal_event *);
+};
 
 #if defined(__GNUC__) && __GNUC__ >= 2
 char		*xasprintf(const char *, ...)
@@ -41,6 +58,15 @@ char		*xasprintf(const char *, ...)
 char		*xasprintf(const char *, ...);
 #endif
 
+void		 event_init(void);
+void		 event_add(struct event *, int, int, int,
+    void (*)(int, void *), void *);
+void		 event_del(struct event *);
+void		 signal_add(struct signal_event *, int,
+    void (*)(struct signal_event *));
+void		 signal_del(struct signal_event *);
+void		 event_dispatch(void);
+void		 event_loopexit(struct timeval *tv);
 int		 set_nonblocking(int);
 
 void		 deferred_read(int fd, void *, size_t, void *,

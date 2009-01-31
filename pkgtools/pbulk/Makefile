@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2008/10/16 21:52:17 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/01/31 23:25:37 joerg Exp $
 
-DISTNAME=	pbulk-0.36
-PKGREVISION=	1
+DISTNAME=	pbulk-0.37
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -76,5 +75,4 @@ MAKE_ENV+=	LDADD=${LDADD:Q}
 CPPFLAGS+=	-D_GNU_SOURCE
 .endif
 
-.include "../../devel/libevent/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

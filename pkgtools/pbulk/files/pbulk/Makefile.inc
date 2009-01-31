@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.inc,v 1.3 2007/07/17 18:11:37 tnn Exp $
+# $NetBSD: Makefile.inc,v 1.4 2009/01/31 23:25:38 joerg Exp $
 
 BINDIR?=	${PREFIX}/bin
 
@@ -11,10 +11,3 @@ LDADD+=		-L${.OBJDIR}/../lib -lpbulk
 .endif
 
 LDADD+=		-lnbcompat
-
-.if !defined(NO_LIBEVENT_NEEDED)
-CPPFLAGS+=
-.if !defined(LIBPBULK_ONLY)
-LDADD+=		-levent
-.endif
-.endif
