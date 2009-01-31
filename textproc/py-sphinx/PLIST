@@ -1,0 +1,229 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/31 05:31:13 markd Exp $
+bin/sphinx-build
+bin/sphinx-quickstart
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/sphinx/__init__.py
+${PYSITELIB}/sphinx/__init__.pyc
+${PYSITELIB}/sphinx/__init__.pyo
+${PYSITELIB}/sphinx/_jinja.py
+${PYSITELIB}/sphinx/_jinja.pyc
+${PYSITELIB}/sphinx/_jinja.pyo
+${PYSITELIB}/sphinx/addnodes.py
+${PYSITELIB}/sphinx/addnodes.pyc
+${PYSITELIB}/sphinx/addnodes.pyo
+${PYSITELIB}/sphinx/application.py
+${PYSITELIB}/sphinx/application.pyc
+${PYSITELIB}/sphinx/application.pyo
+${PYSITELIB}/sphinx/builder.py
+${PYSITELIB}/sphinx/builder.pyc
+${PYSITELIB}/sphinx/builder.pyo
+${PYSITELIB}/sphinx/cmdline.py
+${PYSITELIB}/sphinx/cmdline.pyc
+${PYSITELIB}/sphinx/cmdline.pyo
+${PYSITELIB}/sphinx/config.py
+${PYSITELIB}/sphinx/config.pyc
+${PYSITELIB}/sphinx/config.pyo
+${PYSITELIB}/sphinx/directives/__init__.py
+${PYSITELIB}/sphinx/directives/__init__.pyc
+${PYSITELIB}/sphinx/directives/__init__.pyo
+${PYSITELIB}/sphinx/directives/code.py
+${PYSITELIB}/sphinx/directives/code.pyc
+${PYSITELIB}/sphinx/directives/code.pyo
+${PYSITELIB}/sphinx/directives/desc.py
+${PYSITELIB}/sphinx/directives/desc.pyc
+${PYSITELIB}/sphinx/directives/desc.pyo
+${PYSITELIB}/sphinx/directives/other.py
+${PYSITELIB}/sphinx/directives/other.pyc
+${PYSITELIB}/sphinx/directives/other.pyo
+${PYSITELIB}/sphinx/environment.py
+${PYSITELIB}/sphinx/environment.pyc
+${PYSITELIB}/sphinx/environment.pyo
+${PYSITELIB}/sphinx/ext/__init__.py
+${PYSITELIB}/sphinx/ext/__init__.pyc
+${PYSITELIB}/sphinx/ext/__init__.pyo
+${PYSITELIB}/sphinx/ext/autodoc.py
+${PYSITELIB}/sphinx/ext/autodoc.pyc
+${PYSITELIB}/sphinx/ext/autodoc.pyo
+${PYSITELIB}/sphinx/ext/coverage.py
+${PYSITELIB}/sphinx/ext/coverage.pyc
+${PYSITELIB}/sphinx/ext/coverage.pyo
+${PYSITELIB}/sphinx/ext/doctest.py
+${PYSITELIB}/sphinx/ext/doctest.pyc
+${PYSITELIB}/sphinx/ext/doctest.pyo
+${PYSITELIB}/sphinx/ext/ifconfig.py
+${PYSITELIB}/sphinx/ext/ifconfig.pyc
+${PYSITELIB}/sphinx/ext/ifconfig.pyo
+${PYSITELIB}/sphinx/ext/intersphinx.py
+${PYSITELIB}/sphinx/ext/intersphinx.pyc
+${PYSITELIB}/sphinx/ext/intersphinx.pyo
+${PYSITELIB}/sphinx/ext/jsmath.py
+${PYSITELIB}/sphinx/ext/jsmath.pyc
+${PYSITELIB}/sphinx/ext/jsmath.pyo
+${PYSITELIB}/sphinx/ext/mathbase.py
+${PYSITELIB}/sphinx/ext/mathbase.pyc
+${PYSITELIB}/sphinx/ext/mathbase.pyo
+${PYSITELIB}/sphinx/ext/pngmath.py
+${PYSITELIB}/sphinx/ext/pngmath.pyc
+${PYSITELIB}/sphinx/ext/pngmath.pyo
+${PYSITELIB}/sphinx/ext/refcounting.py
+${PYSITELIB}/sphinx/ext/refcounting.pyc
+${PYSITELIB}/sphinx/ext/refcounting.pyo
+${PYSITELIB}/sphinx/ext/todo.py
+${PYSITELIB}/sphinx/ext/todo.pyc
+${PYSITELIB}/sphinx/ext/todo.pyo
+${PYSITELIB}/sphinx/highlighting.py
+${PYSITELIB}/sphinx/highlighting.pyc
+${PYSITELIB}/sphinx/highlighting.pyo
+${PYSITELIB}/sphinx/htmlhelp.py
+${PYSITELIB}/sphinx/htmlhelp.pyc
+${PYSITELIB}/sphinx/htmlhelp.pyo
+${PYSITELIB}/sphinx/htmlwriter.py
+${PYSITELIB}/sphinx/htmlwriter.pyc
+${PYSITELIB}/sphinx/htmlwriter.pyo
+${PYSITELIB}/sphinx/latexwriter.py
+${PYSITELIB}/sphinx/latexwriter.pyc
+${PYSITELIB}/sphinx/latexwriter.pyo
+${PYSITELIB}/sphinx/linkcheck.py
+${PYSITELIB}/sphinx/linkcheck.pyc
+${PYSITELIB}/sphinx/linkcheck.pyo
+${PYSITELIB}/sphinx/locale/__init__.py
+${PYSITELIB}/sphinx/locale/__init__.pyc
+${PYSITELIB}/sphinx/locale/__init__.pyo
+${PYSITELIB}/sphinx/locale/cs/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/cs/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/cs/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/de/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/es/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/locale/sphinx.pot
+${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.js
+${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.mo
+${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES/sphinx.po
+${PYSITELIB}/sphinx/quickstart.py
+${PYSITELIB}/sphinx/quickstart.pyc
+${PYSITELIB}/sphinx/quickstart.pyo
+${PYSITELIB}/sphinx/roles.py
+${PYSITELIB}/sphinx/roles.pyc
+${PYSITELIB}/sphinx/roles.pyo
+${PYSITELIB}/sphinx/search.py
+${PYSITELIB}/sphinx/search.pyc
+${PYSITELIB}/sphinx/search.pyo
+${PYSITELIB}/sphinx/setup_command.py
+${PYSITELIB}/sphinx/setup_command.pyc
+${PYSITELIB}/sphinx/setup_command.pyo
+${PYSITELIB}/sphinx/static/contents.png
+${PYSITELIB}/sphinx/static/default.css
+${PYSITELIB}/sphinx/static/doctools.js
+${PYSITELIB}/sphinx/static/file.png
+${PYSITELIB}/sphinx/static/jquery.js
+${PYSITELIB}/sphinx/static/minus.png
+${PYSITELIB}/sphinx/static/navigation.png
+${PYSITELIB}/sphinx/static/plus.png
+${PYSITELIB}/sphinx/static/rightsidebar.css
+${PYSITELIB}/sphinx/static/searchtools.js
+${PYSITELIB}/sphinx/static/sphinxdoc.css
+${PYSITELIB}/sphinx/static/stickysidebar.css
+${PYSITELIB}/sphinx/static/traditional.css
+${PYSITELIB}/sphinx/templates/changes/frameset.html
+${PYSITELIB}/sphinx/templates/changes/rstsource.html
+${PYSITELIB}/sphinx/templates/changes/versionchanges.html
+${PYSITELIB}/sphinx/templates/defindex.html
+${PYSITELIB}/sphinx/templates/genindex-single.html
+${PYSITELIB}/sphinx/templates/genindex-split.html
+${PYSITELIB}/sphinx/templates/genindex.html
+${PYSITELIB}/sphinx/templates/layout.html
+${PYSITELIB}/sphinx/templates/modindex.html
+${PYSITELIB}/sphinx/templates/opensearch.xml
+${PYSITELIB}/sphinx/templates/page.html
+${PYSITELIB}/sphinx/templates/search.html
+${PYSITELIB}/sphinx/texinputs/Makefile
+${PYSITELIB}/sphinx/texinputs/fncychap.sty
+${PYSITELIB}/sphinx/texinputs/howto.cls
+${PYSITELIB}/sphinx/texinputs/manual.cls
+${PYSITELIB}/sphinx/texinputs/python.ist
+${PYSITELIB}/sphinx/texinputs/sphinx.sty
+${PYSITELIB}/sphinx/texinputs/tabulary.sty
+${PYSITELIB}/sphinx/textwriter.py
+${PYSITELIB}/sphinx/textwriter.pyc
+${PYSITELIB}/sphinx/textwriter.pyo
+${PYSITELIB}/sphinx/util/__init__.py
+${PYSITELIB}/sphinx/util/__init__.pyc
+${PYSITELIB}/sphinx/util/__init__.pyo
+${PYSITELIB}/sphinx/util/compat.py
+${PYSITELIB}/sphinx/util/compat.pyc
+${PYSITELIB}/sphinx/util/compat.pyo
+${PYSITELIB}/sphinx/util/console.py
+${PYSITELIB}/sphinx/util/console.pyc
+${PYSITELIB}/sphinx/util/console.pyo
+${PYSITELIB}/sphinx/util/jsdump.py
+${PYSITELIB}/sphinx/util/jsdump.pyc
+${PYSITELIB}/sphinx/util/jsdump.pyo
+${PYSITELIB}/sphinx/util/png.py
+${PYSITELIB}/sphinx/util/png.pyc
+${PYSITELIB}/sphinx/util/png.pyo
+${PYSITELIB}/sphinx/util/smartypants.py
+${PYSITELIB}/sphinx/util/smartypants.pyc
+${PYSITELIB}/sphinx/util/smartypants.pyo
+${PYSITELIB}/sphinx/util/stemmer.py
+${PYSITELIB}/sphinx/util/stemmer.pyc
+${PYSITELIB}/sphinx/util/stemmer.pyo
+${PYSITELIB}/sphinx/util/texescape.py
+${PYSITELIB}/sphinx/util/texescape.pyc
+${PYSITELIB}/sphinx/util/texescape.pyo
+@dirrm ${PYSITELIB}/sphinx/util
+@dirrm ${PYSITELIB}/sphinx/texinputs
+@dirrm ${PYSITELIB}/sphinx/templates/changes
+@dirrm ${PYSITELIB}/sphinx/templates
+@dirrm ${PYSITELIB}/sphinx/static
+@dirrm ${PYSITELIB}/sphinx/locale/zh_TW/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/zh_TW
+@dirrm ${PYSITELIB}/sphinx/locale/sl/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/sl
+@dirrm ${PYSITELIB}/sphinx/locale/pt_BR/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/pt_BR
+@dirrm ${PYSITELIB}/sphinx/locale/pl/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/pl
+@dirrm ${PYSITELIB}/sphinx/locale/nl/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/nl
+@dirrm ${PYSITELIB}/sphinx/locale/ja/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/ja
+@dirrm ${PYSITELIB}/sphinx/locale/fr/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/fr
+@dirrm ${PYSITELIB}/sphinx/locale/es/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/es
+@dirrm ${PYSITELIB}/sphinx/locale/de/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/de
+@dirrm ${PYSITELIB}/sphinx/locale/cs/LC_MESSAGES
+@dirrm ${PYSITELIB}/sphinx/locale/cs
+@dirrm ${PYSITELIB}/sphinx/locale
+@dirrm ${PYSITELIB}/sphinx/ext
+@dirrm ${PYSITELIB}/sphinx/directives
+@dirrm ${PYSITELIB}/sphinx
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
