@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/09/08 18:01:29 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2009/01/31 03:12:33 obache Exp $
 
 --- Makefile.orig	2004-08-27 00:20:33.000000000 -0700
 +++ Makefile
@@ -48,9 +48,9 @@ $NetBSD: patch-aa,v 1.6 2005/09/08 18:01:29 minskim Exp $
 -	install -c -m 444 -o bin -g bin radlib.h $(PREFIX)/include
 -	install -c -m 444 -o bin -g bin libradius.3 $(PREFIX)/man/man3
 -	install -c -m 444 -o bin -g bin radius.conf.5 $(PREFIX)/man/man5
-+	${BSD_INSTALL_LIB} lib$(LIB).a $(PREFIX)/lib
-+#	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(PREFIX)/lib
-+#	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(PREFIX)/lib/lib$(LIB).so
-+	${BSD_INSTALL_DATA} radlib.h $(PREFIX)/include
-+	${BSD_INSTALL_MAN} libradius.3 $(PREFIX)/man/man3
-+	${BSD_INSTALL_MAN} radius.conf.5 $(PREFIX)/man/man5
++	${BSD_INSTALL_LIB} lib$(LIB).a $(DESTDIR)$(PREFIX)/lib
++#	install -c -m 644 -o bin -g bin lib$(LIB).so.1.0 $(DESTDIR)$(PREFIX)/lib
++#	$(LN) -sf $(PREFIX)/lib/lib$(LIB).so.1.0 $(DESTDIR)$(PREFIX)/lib/lib$(LIB).so
++	${BSD_INSTALL_DATA} radlib.h $(DESTDIR)$(PREFIX)/include
++	${BSD_INSTALL_MAN} libradius.3 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man3
++	${BSD_INSTALL_MAN} radius.conf.5 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man5
