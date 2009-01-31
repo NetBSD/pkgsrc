@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/01/31 16:00:55 manu Exp $
+
+Please note that this module require slapd to be built with dynamic
+module support. THis can be obtained by adding the following to mk.conf:
+  PKG_OPTIONS.openldap-server=   dso
+
+In order to enable the use of this module, add this directive to slapd.conf:
+
+  moduleload      smbk5pwd.la
+
+===========================================================================

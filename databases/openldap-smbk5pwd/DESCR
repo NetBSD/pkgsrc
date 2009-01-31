@@ -1,0 +1,3 @@
+This slapd overlay automatically perform Kerberos and Samba password
+changes when a LDAP password extended operation is done, for instance
+using ldappasswd.
