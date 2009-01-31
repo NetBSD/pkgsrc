@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.438 2009/01/31 18:28:51 manu Exp $
+$NetBSD: CHANGES-2009,v 1.439 2009/01/31 20:06:43 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -596,3 +596,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/openldap-nops version 2.4.13 [manu 2009-01-31]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.4900 [seb 2009-01-31]
 	Updated misc/openoffice3 to 3.0.1 [hira 2009-01-31]
+	Updated devel/libatomic_ops to 20081024nb3 [sketch 2009-01-31]
