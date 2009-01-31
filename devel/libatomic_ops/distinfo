@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2009/01/27 20:26:01 sketch Exp $
+$NetBSD: distinfo,v 1.6 2009/01/31 20:05:57 sketch Exp $
 
 SHA1 (libatomic_ops-20081024.tar.gz) = 70dcc68c89ea8ce8b8e6c936ea337eca31f13662
 RMD160 (libatomic_ops-20081024.tar.gz) = a9194631fafc2d4ce68cea93dbc212d7212cab13
@@ -6,6 +6,4 @@ Size (libatomic_ops-20081024.tar.gz) = 193399 bytes
 SHA1 (patch-aa) = bf53ad892ba270b1d7a9bd1fa14012ca83ab5323
 SHA1 (patch-ab) = 74674124fff34faf2aae0d694566c66ffaf9df25
 SHA1 (patch-ac) = 40eeac276e322ea6f28743c183c11e92b1ab8de5
-SHA1 (patch-ad) = 5952b7a292a381b00b8e101bdf48452555a5a660
-SHA1 (patch-ae) = 5fe403a33d8b49e0ac3f21aaa65ea42d5e656251
-SHA1 (patch-af) = ffd2b0ea6f0b36efaa8872d08e3d004eb8b944aa
+SHA1 (patch-ad) = 1499b105450beba70efdd3cc6bf8dd0270734c22

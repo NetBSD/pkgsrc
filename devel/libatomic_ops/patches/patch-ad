@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2009/01/26 15:01:56 sketch Exp $
+$NetBSD: patch-ad,v 1.2 2009/01/31 20:05:57 sketch Exp $
 
 --- src/atomic_ops.h.orig	Wed Oct 22 02:12:17 2008
 +++ src/atomic_ops.h	Mon Jan 26 14:48:46 2009
@@ -8,7 +8,7 @@ $NetBSD: patch-ad,v 1.1 2009/01/26 15:01:56 sketch Exp $
  
 -#if !defined(__GNUC__) && (defined(sparc) || defined(__sparc)) \
 +#if defined(__SUNPRO_C) && defined(__i386)
-+#   include "atomic_ops/sysdeps/sunc/x86.h"
++#   include "atomic_ops/sysdeps/generic_pthread.h"
 +#   define AO_CAN_EMUL_CAS
 +#elif !defined(__GNUC__) && (defined(sparc) || defined(__sparc)) \
      && !defined(AO_USE_PTHREAD_DEFS)
