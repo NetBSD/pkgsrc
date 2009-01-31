@@ -1,0 +1,2 @@
+This slapd overlay removes null-operations, such as replacing an 
+attribute value set by the exact same set.
