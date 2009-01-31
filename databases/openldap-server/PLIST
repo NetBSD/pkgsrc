@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/24 21:10:48 manu Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/01/31 15:59:05 manu Exp $
 libexec/slapd
 sbin/slapacl
 sbin/slapadd

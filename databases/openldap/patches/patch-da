@@ -1,0 +1,17 @@
+$NetBSD: patch-da,v 1.1 2009/01/31 15:59:04 manu Exp $
+--- contrib/slapd-modules/smbk5pwd/Makefile.orig	2004-04-02 11:06:38.000000000 +0000
++++ contrib/slapd-modules/smbk5pwd/Makefile	2009-01-18 18:06:11.000000000 +0000
+@@ -11,6 +11,6 @@
+ 
+ LIBTOOL=../../../libtool
+-OPT=-g -O2
+-CC=gcc
++OPT=-g -O2 ${CPPFLAGS}
++#CC=gcc
+ 
+ # Omit DO_KRB5 or DO_SAMBA if you don't want to support it.
+@@ -35,3 +35,3 @@
+ smbk5pwd.la:	smbk5pwd.lo
+ 	$(LIBTOOL) --mode=link $(CC) $(OPT) -version-info 0:0:0 \
+-	-rpath /usr/local/libexec/openldap -module -o $@ $? $(LIBS)
++	-rpath $(PREFIX)/lib -module -o $@ $? -ldes $(LIBS)

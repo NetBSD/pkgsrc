@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.9 2008/09/22 08:46:32 tron Exp $
+# $NetBSD: options.mk,v 1.10 2009/01/31 15:59:05 manu Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
-PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd
+PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd dso
 PKG_OPTIONS_OPTIONAL_GROUPS+=	odbc
 PKG_OPTIONS_GROUP.odbc=	iodbc unixodbc
 PKG_SUGGESTED_OPTIONS=	bdb
@@ -89,12 +89,14 @@ CONFIGURE_ARGS+=	--disable-ipv6
 ###
 
 .if !empty(PKG_OPTIONS:Msmbk5pwd)
-CONFIGURE_ARGS+=	--enable-smbk5pwd
-LDFLAGS+=-ldes
-LDFLAGS+=-lkrb5
-LDFLAGS+=-lkadm5srv
-LDFLAGS+=-lhdb
-. include "../../mk/krb5.buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-smbk5pwd
+PKG_FAIL_REASON+=	"smbk5pwd option to openldap-server is now " \
+			"available through the openldap-smbk5pwd package"
+.endif
+
+###
+### Enable dynamic module support
+###
+.if !empty(PKG_OPTIONS:Mdso)
+CONFIGURE_ARGS+=	--enable-modules
+. include "../../devel/libltdl/buildlink3.mk"
 .endif
