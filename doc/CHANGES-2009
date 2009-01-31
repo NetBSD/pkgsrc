@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.437 2009/01/31 16:56:19 hira Exp $
+$NetBSD: CHANGES-2009,v 1.438 2009/01/31 18:28:51 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -593,5 +593,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bugzilla3 to 3.2nb1 [adrianp 2009-01-31]
 	Updated databases/openldap-server to 2.4.13nb1 [manu 2009-01-31]
 	Added databases/openldap-smbk5pwd version 2.4.13 [manu 2009-01-31]
+	Added databases/openldap-nops version 2.4.13 [manu 2009-01-31]
 	Updated math/p5-Spreadsheet-ParseExcel to 0.4900 [seb 2009-01-31]
 	Updated misc/openoffice3 to 3.0.1 [hira 2009-01-31]
