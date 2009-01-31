@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.434 2009/01/31 15:59:04 manu Exp $
+$NetBSD: CHANGES-2009,v 1.435 2009/01/31 16:01:52 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -592,3 +592,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-Class-TimeStamp to 0.07 [seb 2009-01-31]
 	Updated devel/bugzilla3 to 3.2nb1 [adrianp 2009-01-31]
 	Updated databases/openldap-server to 2.4.13nb1 [manu 2009-01-31]
+	Added databases/openldap-smbk5pwd version 2.4.13 [manu 2009-01-31]
