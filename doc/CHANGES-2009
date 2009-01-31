@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.431 2009/01/31 11:20:14 shattered Exp $
+$NetBSD: CHANGES-2009,v 1.432 2009/01/31 11:36:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -589,3 +589,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-CIDR-Set to 0.11 [seb 2009-01-31]
 	Updated security/libgcrypt to 1.4.4 [adam 2009-01-31]
 	Updated security/libtasn1 to 1.8 [adam 2009-01-31]
+	Updated databases/p5-DBIx-Class-TimeStamp to 0.07 [seb 2009-01-31]
