@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/01/31 03:04:37 ahoka Exp $
+
+--- src/core/linux/convhelper.cpp.orig	2009-01-04 00:17:01.000000000 +0100
++++ src/core/linux/convhelper.cpp
+@@ -37,7 +37,7 @@ ConvHelper::NativeToUtf8(const std::stri
+ {
+ 	string retStr(inStr);
+ 	size_t insize = inStr.length();
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ 	const char *inbuf = inStr.data();
+ #else
+ 	char *inbuf = const_cast<char *>(inStr.data());
+@@ -72,7 +72,7 @@ ConvHelper::Utf8ToNative(const std::stri
+ {
+ 	string retStr(inStr);
+ 	size_t insize = inStr.length();
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ 	const char *inbuf = inStr.data();
+ #else
+ 	char *inbuf = const_cast<char *>(inStr.data());
