@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/08/14 19:24:07 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2009/01/31 08:53:14 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgcrypt
 PKG_SUPPORTED_OPTIONS=
@@ -19,5 +19,5 @@ PKG_SUGGESTED_OPTIONS+=	via-padlock
 
 .if empty(PKG_OPTIONS:Mvia-padlock)
 # Disable VIA Padlock support.
-CONFIGURE_ARGS+=        --disable-padlock-support
+CONFIGURE_ARGS+=	--disable-padlock-support
 .endif
