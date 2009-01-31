@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2008/10/14 19:20:43 hira Exp $
+# $NetBSD: Makefile,v 1.38 2009/01/31 21:56:32 bad Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
-PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 
@@ -18,7 +17,7 @@ CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			2.4
-OO_RELEASE=		2.4.1
+OO_RELEASE=		2.4.2
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -46,7 +45,7 @@ RUN_LDCONFIG=		no
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=			${WRKDIR}/OOH680_m17_native_packed-1_en-US.9310
+WRKSRC=			${WRKDIR}/OOH680_m18_native_packed-1_en-US.9364
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
 WRKSRC=			${WRKDIR}/OOG680_m5_native_packed-1_en-US.9221/packages
@@ -68,7 +67,7 @@ do-install:
 .else
 	${LN} -sf ../openoffice.org${OO_VER}/program/soffice ${PREFIX}/bin/soffice
 .endif
-.for i in scalc sdraw simpress swriter
+.for i in scalc sdraw simpress smath spadmin swriter
 	${LN} -sf ../openoffice.org${OO_VER}/program/${i} ${PREFIX}/bin/${i}
 .endfor
 
