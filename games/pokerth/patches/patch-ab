@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/01/31 03:04:37 ahoka Exp $
+
+--- src/third_party/libircclient/include/config.h.orig	2009-01-04 00:17:02.000000000 +0100
++++ src/third_party/libircclient/include/config.h
+@@ -2,7 +2,7 @@
+ /* include/config.h.in.  Generated from configure.in by autoheader.  */
+ 
+ /* Define to 1 if you have the `gethostbyname_r' function. */
+-#if !defined(__APPLE__) && !defined(__OpenBSD__)
++#if !defined(__APPLE__) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ 	#define HAVE_GETHOSTBYNAME_R 1
+ #endif
+ 
