@@ -1,0 +1,36 @@
+$NetBSD: patch-el,v 1.1 2009/02/01 13:03:58 martin Exp $
+
+# hack to solve upstream bug report
+#   https://bugzilla.mozilla.org/show_bug.cgi?id=476345
+# untill something better gets commited upstream.
+
+
+--- layout/style/nsCSSValue.h.orig	2008-07-02 00:51:43.000000000 +0200
++++ layout/style/nsCSSValue.h	2009-02-01 12:00:17.000000000 +0100
+@@ -342,18 +342,23 @@ public:
+     PRUint16 mRefCnt;
+     PRUint16 mCount;
+ 
++    static size_t alignSize(size_t aSelfSize) {
++      if (aSelfSize < sizeof(void*)) return sizeof (void*);
++      return aSelfSize;
++    }
++
+     void* operator new(size_t aSelfSize, PRUint16 aItemCount) CPP_THROW_NEW {
+-      return ::operator new(aSelfSize + sizeof(nsCSSValue)*aItemCount);
++      return ::operator new(alignSize(aSelfSize) + sizeof(nsCSSValue)*aItemCount);
+     }
+ 
+     void operator delete(void* aPtr) { ::operator delete(aPtr); }
+ 
+     nsCSSValue* First() {
+-      return (nsCSSValue*) (((char*)this) + sizeof(*this));
++      return (nsCSSValue*) (((char*)this) + alignSize(sizeof(*this)));
+     }
+ 
+     const nsCSSValue* First() const {
+-      return (const nsCSSValue*) (((const char*)this) + sizeof(*this));
++      return (const nsCSSValue*) (((const char*)this) + alignSize(sizeof(*this)));
+     }
+ 
+ #define CSSVALUE_LIST_FOR_VALUES(var)                                         \
