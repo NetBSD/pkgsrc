@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- ../make/tkpathsea.mk.orig	2008-05-29 13:59:08.000000000 -0700
++++ ../make/tkpathsea.mk
+@@ -4,10 +4,9 @@ makeargs = $(MFLAGS) CC='$(CC)' CFLAGS='
+ 
+ # This is wrong: the library doesn't depend on kpsewhich.c or
+ # acconfig.h.  But what to do?
+-$(kpathsea): $(kpathsea_srcdir)/*.c $(kpathsea_srcdir)/*.h \
+-	     $(top_srcdir)/../make/paths.mk
+-	cd $(kpathsea_dir) && $(MAKE) $(makeargs)
++$(kpathsea):
++	true
+ 
+-$(kpathsea_dir)/paths.h: $(kpathsea_srcdir)/texmf.cnf
+-	cd $(kpathsea_dir) && $(MAKE) $(makeargs)
++$(kpathsea_dir)/paths.h:
++	true
+ # End of tkpathsea.mk.

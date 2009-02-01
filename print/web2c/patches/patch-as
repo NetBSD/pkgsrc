@@ -1,0 +1,14 @@
+$NetBSD: patch-as,v 1.1.1.1 2009/02/01 06:05:59 minskim Exp $
+
+--- alephdir/aleph.mk.orig	2008-05-28 11:29:28.000000000 -0700
++++ alephdir/aleph.mk
+@@ -159,7 +159,7 @@ lamed.fmt: aleph
+ # Installation.
+ install-aleph: install-aleph-exec
+ install-programs: @ALEPH@ install-aleph-exec
+-install-aleph-exec: aleph $(bindir)
+-	for p in aleph; do $(INSTALL_LIBTOOL_PROG) $$p $(bindir); done
++install-aleph-exec: aleph $(DESTDIR)$(bindir)
++	for p in aleph; do $(INSTALL_LIBTOOL_PROG) $$p $(DESTDIR)$(bindir); done
+ 
+ # end of aleph.mk
