@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- mpware/Makefile.in.orig	2008-01-30 06:56:21.000000000 -0800
++++ mpware/Makefile.in
+@@ -46,11 +46,11 @@ Makefile: Makefile.in ../config.status
+ 
+ install: install-exec install-data
+ install-exec: $(programs)
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir) $(scriptdir)
+-	$(INSTALL_PROGRAM) newer $(bindir)/newer
+-	$(INSTALL_LIBTOOL_PROG) dmp $(bindir)
+-	$(INSTALL_LIBTOOL_PROG) mpto $(bindir)
+-	$(INSTALL_LIBTOOL_PROG) makempx $(bindir)
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(bindir) $(DESTDIR)$(scriptdir)
++	$(INSTALL_PROGRAM) newer $(DESTDIR)$(bindir)/newer
++	$(INSTALL_LIBTOOL_PROG) dmp $(DESTDIR)$(bindir)
++	$(INSTALL_LIBTOOL_PROG) mpto $(DESTDIR)$(bindir)
++	$(INSTALL_LIBTOOL_PROG) makempx $(DESTDIR)$(bindir)
+ install-data:
+ 
+ kpse_include ../make/tkpathsea.mk
+@@ -60,4 +60,3 @@ mostlyclean::
+ 	rm -f testex1 testex2
+ 
+ kpse_include ../make/rdepend.mk
+-kpse_include mpware/depend.mk

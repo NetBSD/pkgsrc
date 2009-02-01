@@ -1,0 +1,72 @@
+$NetBSD: patch-ao,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- Makefile.in.orig	2008-08-12 16:46:59.000000000 -0700
++++ Makefile.in
+@@ -816,29 +816,29 @@ install: install-exec install-data
+ install-exec:: install-programs
+ 
+ # Installation directories.
+-$(bindir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir)
+-$(texpooldir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(texpooldir)
+-$(mfpooldir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(mfpooldir)
+-$(mppooldir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(mppooldir)
+-$(fmtdir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(fmtdir)
+-$(basedir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(basedir)
+-$(memdir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(memdir)
+-$(web2cdir)::
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(web2cdir)
++$(DESTDIR)$(bindir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(bindir)
++$(DESTDIR)$(texpooldir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(texpooldir)
++$(DESTDIR)$(mfpooldir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(mfpooldir)
++$(DESTDIR)$(mppooldir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(mppooldir)
++$(DESTDIR)$(fmtdir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(fmtdir)
++$(DESTDIR)$(basedir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(basedir)
++$(DESTDIR)$(memdir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(memdir)
++$(DESTDIR)$(web2cdir)::
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(web2cdir)
+ 
+ # Installing the binaries.  Each of the *dir/*.mk files (except etex)
+ # add to this target via a dependency-only rule, to install their
+ # respective engines.
+-install-programs: $(programs) $(basic_engines) $(bindir)
++install-programs: $(programs) $(basic_engines) $(DESTDIR)$(bindir)
+ 	for p in $(programs) $(basic_engines); do \
+-	  $(INSTALL_LIBTOOL_PROG) $$p $(bindir); done
++	  $(INSTALL_LIBTOOL_PROG) $$p $(DESTDIR)$(bindir); done
+ 
+ # We do not attempt to install any of the per-format symlinks, leaving
+ # that to a separate run of texlinks.
+@@ -874,13 +874,14 @@ install-mpost-mems: mems $(memdir)
+             (cd $(bindir) && (rm -f $$base; $(LN) mpost $$base)); done
+ 
+ # Auxiliary files.
+-install-data:: $(web2cdir)
++install-data:: $(DESTDIR)$(web2cdir)
+ 	cd doc && $(MAKE) $(install_makeargs) install-data
+ 	cd man && $(MAKE) $(install_makeargs) install-data
+-	$(INSTALL_DATA) $(srcdir)/tiedir/tie.1 $(man1dir)/tie.$(manext)
+-	$(INSTALL_DATA) $(srcdir)/ctiedir/ctie.1 $(man1dir)/ctie.$(manext)
+-	$(INSTALL_DATA) $(srcdir)/synctexdir/man1/synctex.1 $(man1dir)/synctex.$(manext)
+-	$(INSTALL_DATA) $(srcdir)/synctexdir/man5/synctex.5 $(man5dir)/synctex.5
++	$(INSTALL_DATA) $(srcdir)/tiedir/tie.1 $(DESTDIR)$(man1dir)/tie.$(manext)
++	$(INSTALL_DATA) $(srcdir)/ctiedir/ctie.1 $(DESTDIR)$(man1dir)/ctie.$(manext)
++	$(INSTALL_DATA) $(srcdir)/synctexdir/man1/synctex.1 $(DESTDIR)$(man1dir)/synctex.$(manext)
++	$(top_srcdir)/../mkinstalldirs $(DESTDIR)$(man5dir)
++	$(INSTALL_DATA) $(srcdir)/synctexdir/man5/synctex.5 $(DESTDIR)$(man5dir)/synctex.5
+ 
+ # Dummy target.
+ uninstall uninstall-exec uninstall-data:

@@ -1,0 +1,9 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- window/Makefile.in.orig	2008-01-30 06:56:21.000000000 -0800
++++ window/Makefile.in
+@@ -35,4 +35,3 @@ distclean::
+ 	rm -f x11.c
+ 
+ kpse_include ../make/rdepend.mk
+-kpse_include window/depend.mk
