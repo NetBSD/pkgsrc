@@ -1,0 +1,6 @@
+The Perl 5 module local::lib allows for the bootstrapping and usage
+of a directory containing Perl modules outside of Perl's @INC. This
+makes it easier to ship an application with an app-specific copy
+of a Perl module, or collection of modules. Useful in cases like
+when an upstream maintainer hasn't applied a patch to a module of
+theirs that you need for your application.
