@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.441 2009/02/01 05:21:45 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.442 2009/02/01 06:07:25 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -609,3 +609,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cad/geda-docs to 1.4.3 [dmcmahill 2009-01-31]
 	Updated cad/geda-examples to 1.4.3 [dmcmahill 2009-01-31]
 	Updated cad/geda to 1.4.3 [dmcmahill 2009-01-31]
+	Added print/web2c version 7.5.7 [minskim 2009-02-01]
