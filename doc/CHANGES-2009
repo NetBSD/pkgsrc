@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.443 2009/02/01 09:05:09 seb Exp $
+$NetBSD: CHANGES-2009,v 1.444 2009/02/01 15:26:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated cad/geda to 1.4.3 [dmcmahill 2009-01-31]
 	Added print/web2c version 7.5.7 [minskim 2009-02-01]
 	Added math/p5-Spreadsheet-ReadSXC version 0.20 [seb 2009-02-01]
+	Updated math/p5-Spreadsheet-XLSX to 0.09 [seb 2009-02-01]
