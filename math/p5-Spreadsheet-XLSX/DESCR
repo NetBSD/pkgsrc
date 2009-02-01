@@ -1,0 +1,5 @@
+The Perl 5 module Spreadsheet::XLSX is a (quick and dirty) emulation
+of Spreadsheet::ParseExcel for Excel 2007 (.xlsx) file format. It
+supports styles and many of Excel's quirks, but not all. It populates
+the classes from Spreadsheet::ParseExcel for interoperability;
+including Workbook, Worksheet, and Cell.
