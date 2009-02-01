@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.440 2009/01/31 22:13:04 bad Exp $
+$NetBSD: CHANGES-2009,v 1.441 2009/02/01 05:21:45 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -599,3 +599,13 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libatomic_ops to 20081024nb3 [sketch 2009-01-31]
 	Updated misc/openoffice2-bin to 2.4.2 [bad 2009-01-31]
 	Added misc/openoffice3-bin version 3.0.1 [bad 2009-01-31]
+	Updated cad/libgeda to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/gattrib to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/gschem to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/gnetlist to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/gsymcheck to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/geda-utils to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/geda-symbols to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/geda-docs to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/geda-examples to 1.4.3 [dmcmahill 2009-01-31]
+	Updated cad/geda to 1.4.3 [dmcmahill 2009-01-31]
