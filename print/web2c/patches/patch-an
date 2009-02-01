@@ -1,0 +1,20 @@
+$NetBSD: patch-an,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- doc/Makefile.in.orig	2008-04-29 15:40:29.000000000 -0700
++++ doc/Makefile.in
+@@ -49,12 +49,12 @@ Makefile: Makefile.in ../config.status
+ install: install-exec install-data
+ install-exec:
+ install-data: web2c.info
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(infodir)
+-	$(INSTALL_DATA) $(srcdir)/web2c.i* $(infodir)/
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(infodir)
++	$(INSTALL_DATA) $(srcdir)/web2c.i* $(DESTDIR)$(infodir)/
+ #
+ 	$(POST_INSTALL)
+ 	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
+-	  install-info --info-dir=$(infodir) $(infodir)/web2c.info; \
++	  install-info --info-dir=$(infodir) $(DESTDIR)$(infodir)/web2c.info; \
+ 	else true; fi
+ 
+ check: all

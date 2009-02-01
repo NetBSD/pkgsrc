@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1.1.1 2009/02/01 06:05:59 minskim Exp $
+
+--- omegadir/omega.mk.orig	2008-07-03 15:16:18.000000000 -0700
++++ omegadir/omega.mk
+@@ -212,8 +212,8 @@ omegafonts/omfonts:
+ # Installation.
+ install-omega: install-omega-exec
+ install-programs: @OMEGA@ install-omega-exec
+-install-omega-exec: $(omega_programs) $(bindir) install-omega-links
+-	for p in omega; do $(INSTALL_LIBTOOL_PROG) $$p $(bindir); done
++install-omega-exec: $(omega_programs) $(DESTDIR)$(bindir) install-omega-links
++	for p in omega; do $(INSTALL_LIBTOOL_PROG) $$p $(DESTDIR)$(bindir); done
+ 	cd otps && $(MAKE) $(install_makeargs) install-programs
+ 	cd omegafonts && $(MAKE) $(install_makeargs) install-programs
+ 

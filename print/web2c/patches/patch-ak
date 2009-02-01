@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- ../../libs/icu-xetex/Makefile.in.orig	2008-03-04 05:26:36.000000000 -0800
++++ ../../libs/icu-xetex/Makefile.in
+@@ -179,7 +179,7 @@ $(top_builddir)/config/Makefile.inc: $(s
+ 
+ $(top_builddir)/config/icu-config: $(top_builddir)/Makefile $(top_srcdir)/config/icu-config-top $(top_srcdir)/config/icu-config-bottom $(top_builddir)/config/Makefile.inc @platform_make_fragment@ $(top_srcdir)/config/make2sh.sed
+ 	-$(RMV) $@
+-	$(INSTALL_SCRIPT) $(top_srcdir)/config/icu-config-top $@
++	cp $(top_srcdir)/config/icu-config-top $@
+ 	chmod u+w $@
+ 	@echo "# Following from @platform_make_fragment@" >> $@
+ 	sed -f $(top_srcdir)/config/make2sh.sed < $(top_builddir)/config/Makefile.inc | grep -v '#M#' | uniq >> $@

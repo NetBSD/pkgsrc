@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- ../make/common.mk.orig	2007-01-20 03:03:18.000000000 -0800
++++ ../make/common.mk
+@@ -17,7 +17,7 @@ LIBTOOL = $(SHELL) $(kpathsea_parent)/li
+ # You can change [X]CPPFLAGS, [X]CFLAGS, or [X]DEFS, but
+ # please don't change ALL_CPPFLAGS or ALL_CFLAGS.
+ # prog_cflags is set by subdirectories of web2c.
+-ALL_CPPFLAGS = $(DEFS) -I. -I$(srcdir) -I$(kpathsea_parent) \
++ALL_CPPFLAGS = $(DEFS) -I. -I$(srcdir) -I$(KPATHSEA_PREFIX)/include \
+   -I$(kpathsea_srcdir_parent) $(prog_cflags) $(CPPFLAGS)
+ ALL_CFLAGS = $(ALL_CPPFLAGS) $(CFLAGS)
+ ALL_CXXFLAGS = $(ALL_CPPFLAGS) $(CXXFLAGS)
+@@ -51,11 +51,11 @@ UNINSTALL_LIBTOOL_LIBS = $(LIBTOOL) --mo
+ UNINSTALL_LIBTOOL_PROG = $(LIBTOOL) --mode=uninstall $(RM)
+ 
+ # We use these for many things.
+-kpathsea_parent = ..
++kpathsea_parent = $(KPATHSEA_PREFIX)/include
+ kpathsea_dir = $(kpathsea_parent)/kpathsea
+ kpathsea_srcdir_parent = $(top_srcdir)/..
+-kpathsea_srcdir = $(kpathsea_srcdir_parent)/kpathsea
+-kpathsea = $(kpathsea_dir)/libkpathsea.la
++kpathsea_srcdir = $(KPATHSEA_PREFIX)/include/kpathsea
++kpathsea = $(KPATHSEA_PREFIX)/lib/libkpathsea.la
+ 
+ @MAINT@ifeq ($(CC), gcc)
+ @MAINT@XDEFS = -Wpointer-arith $(warn_more)

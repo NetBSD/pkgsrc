@@ -1,0 +1,33 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- ../make/man.mk.orig	2006-01-17 13:41:51.000000000 -0800
++++ ../make/man.mk
+@@ -29,7 +29,7 @@ txt: $(manfiles:.1=.txt)
+ # At present, all but VERSION should be unused.
+ sedscript:
+ 	cp /dev/null sedscript
+-	for f in $(kpathsea_dir)/paths.h; do \
++	for f in $(KPATHSEA_PREFIX)/include/kpathsea/paths.h; do \
+ 	  sed -n -e '/^#define/s/#define[ 	][ 	]*\([A-Z_a-z][A-Z_a-z]*\)[ 	][ 	]*\(.*\)/s%@\1@%\2%/p' \
+ 		$$f \
+ 	  | sed -e 's/"//g' -e 's/[ 	]*\/\*[^*]*\*\///g' >>sedscript;\
+@@ -51,16 +51,16 @@ sedscript:
+ 	echo 's%@LOCALMODES@%$(localmodes)%'	>>sedscript
+ 
+ install-man: manfiles
+-	$(top_srcdir)/../mkinstalldirs $(man1dir)
++	$(top_srcdir)/../mkinstalldirs $(DESTDIR)$(man1dir)
+ 	for nameone in $(manfiles); do					\
+           name=`basename $${nameone} .1`;				\
+-          $(INSTALL_DATA) $${name}.1 $(man1dir)/$${name}.$(manext);	\
++          $(INSTALL_DATA) $${name}.1 $(DESTDIR)$(man1dir)/$${name}.$(manext);	\
+         done
+ 
+ uninstall-man:
+ 	for nameone in $(manfiles); do					\
+ 	  name=`basename $${nameone} .1`;				\
+-	  rm -f $(man1dir)/$${name}.$(manext);				\
++	  rm -f $(DESTDIR)$(man1dir)/$${name}.$(manext);				\
+ 	done
+ 
+ install-data: install-man

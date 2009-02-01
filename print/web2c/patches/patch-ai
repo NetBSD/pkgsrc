@@ -1,0 +1,20 @@
+$NetBSD: patch-ai,v 1.1.1.1 2009/02/01 06:05:58 minskim Exp $
+
+--- omegafonts/Makefile.in.orig	2008-03-01 15:49:05.000000000 -0800
++++ omegafonts/Makefile.in
+@@ -53,12 +53,12 @@ install: install-exec 
+ install-exec:: install-links
+ 
+ install-programs: $(programs)
+-	$(SHELL) $(top_srcdir)/../mkinstalldirs $(bindir) 
+-	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $$p $(bindir); done
++	$(SHELL) $(top_srcdir)/../mkinstalldirs $(DESTDIR)$(bindir) 
++	for p in $(programs); do $(INSTALL_LIBTOOL_PROG) $$p $(DESTDIR)$(bindir); done
+ 
+ install-links: install-programs
+ 	for f in ""$(linked_programs); do \
+-	cd $(bindir) && (rm -f $$f; $(LN) omfonts $$f); done
++	cd $(DESTDIR)$(bindir) && (rm -f $$f; $(LN) omfonts $$f); done
+ 
+ Makefile: Makefile.in ../config.status
+ 	cd .. && $(SHELL) config.status

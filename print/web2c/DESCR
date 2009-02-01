@@ -1,0 +1,3 @@
+Web2C is an implementation of TeX and friends which translates the
+original WEB sources written by Donald Knuth into C, so they can be
+readily compiled on modern systems.
