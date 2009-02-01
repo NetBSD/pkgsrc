@@ -1,0 +1,74 @@
+$NetBSD: patch-ap,v 1.1.1.1 2009/02/01 06:05:59 minskim Exp $
+
+--- luatexdir/luatexlib.mk.orig	2008-05-31 16:09:36.000000000 -0700
++++ luatexdir/luatexlib.mk
+@@ -42,14 +42,14 @@ endif
+ 
+ 
+ $(LIBLUADEP):
+-	mkdir -p $(LIBLUADIR) && cd $(LIBLUADIR) && cp -f $(LIBLUASRCDIR)/* . && $(MAKE) $(luatarget)
++	cd $(LIBLUADIR) && $(MAKE) $(luatarget)
+ 
+ # slnunicode
+ SLNUNICODEDIR=../../libs/slnunicode
+ SLNUNICODESRCDIR=$(srcdir)/$(SLNUNICODEDIR)
+ SLNUNICODEDEP=$(SLNUNICODEDIR)/slnunico.o
+ $(SLNUNICODEDEP): $(SLNUNICODEDIR)/slnunico.c $(SLNUNICODEDIR)/slnudata.c
+-	mkdir -p $(SLNUNICODEDIR) && cd $(SLNUNICODEDIR) && cp -f $(SLNUNICODESRCDIR)/* . && $(CC) $(CFLAGS) -I$(LIBLUADIR) -o slnunico.o -c slnunico.c
++	mkdir -p $(SLNUNICODEDIR) && cd $(SLNUNICODEDIR) && $(CC) $(CFLAGS) -I$(LIBLUADIR) -o slnunico.o -c slnunico.c
+ 
+ # zziplib
+ 
+@@ -88,7 +88,7 @@ LUAZIPDEP=$(LUAZIPDIR)/src/luazip.o
+ LUAZIPINC=-I../../lua51 -I../$(ZZIPLIBSRCDIR) -I../$(ZZIPLIBDIR)
+ 
+ $(LUAZIPDEP): $(LUAZIPDIR)/src/luazip.c
+-	mkdir -p $(LUAZIPDIR) && cd $(LUAZIPDIR) && cp -R $(LUAZIPSRCDIR)/* . && \
++	mkdir -p $(LUAZIPDIR) && cd $(LUAZIPDIR) && \
+     cd src && $(CC) $(CFLAGS) $(LUAZIPINC) -g -o luazip.o -c luazip.c
+ 
+ # luafilesystem
+@@ -99,15 +99,14 @@ LUAFSDEP=$(LUAFSDIR)/src/lfs.o
+ LUAFSINC=-I../../lua51
+ 
+ $(LUAFSDEP): $(LUAFSDIR)/src/lfs.c $(LUAFSDIR)/src/lfs.h
+-	mkdir -p $(LUAFSDIR) && cd $(LUAFSDIR) && cp -R $(LUAFSSRCDIR)/* . && \
+-    cd src && $(CC) $(CFLAGS) $(LUAFSINC) -g -o lfs.o -c lfs.c
++	cd $(LUAFSDIR)/src && $(CC) $(CFLAGS) $(LUAFSINC) -g -o lfs.o -c lfs.c
+ 
+ # luapeg
+ LUAPEGDIR=../../libs/luapeg
+ LUAPEGSRCDIR=$(srcdir)/$(LUAPEGDIR)
+ LUAPEGDEP=$(LUAPEGDIR)/lpeg.o
+ $(LUAPEGDEP): $(LUAPEGDIR)/lpeg.c
+-	mkdir -p $(LUAPEGDIR) && cd $(LUAPEGDIR) && cp -f $(LUAPEGSRCDIR)/* . && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o lpeg.o -c lpeg.c
++	mkdir -p $(LUAPEGDIR) && cd $(LUAPEGDIR) && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o lpeg.o -c lpeg.c
+ 
+ 
+ # luamd5
+@@ -115,13 +114,13 @@ LUAMDVDIR=../../libs/luamd5
+ LUAMDVSRCDIR=$(srcdir)/$(LUAMDVDIR)
+ LUAMDVDEP=$(LUAMDVDIR)/md5lib.o $(LUAMDVDIR)/md5.o
+ $(LUAMDVDEP): $(LUAMDVDIR)/md5lib.c $(LUAMDVDIR)/md5.h $(LUAMDVDIR)/md5.c
+-	mkdir -p $(LUAMDVDIR) && cd $(LUAMDVDIR) && cp -f $(LUAMDVSRCDIR)/* . && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o md5.o -c md5.c && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o md5lib.o -c md5lib.c
++	cd $(LUAMDVDIR) && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o md5.o -c md5.c && $(CC) $(CFLAGS) -I$(LIBLUADIR) -g -o md5lib.o -c md5lib.c
+ 
+ .PHONY: always
+ 
+ # luaff
+-LUAFFDIR=../../libs/luafontforge
+-LUAFFSRCDIR=$(srcdir)/$(LUAFFDIR)
++LUAFFDIR=../../libs/luafontforge/src
++LUAFFSRCDIR=$(srcdir)/../../libs/luafontforge
+ LUAFFDEP=$(LUAFFDIR)/libff.a
+ $(LUAFFDEP): always
+ 	mkdir -p $(LUAFFDIR) && cp -f $(LUAFFSRCDIR)/Makefile $(LUAFFDIR)
+@@ -136,7 +135,7 @@ LUAZLIBSRCDIR=$(srcdir)/$(LUAZLIBDIR)
+ LUAZLIBDEP=$(LUAZLIBDIR)/lgzip.o $(LUAZLIBDIR)/lzlib.o
+ LUAZLIBINC=-I$(ZLIBSRCDIR) -I$(LIBLUASRCDIR)
+ $(LUAZLIBDEP): $(LUAZLIBDIR)/lgzip.c $(LUAZLIBDIR)/lzlib.c
+-	mkdir -p $(LUAZLIBDIR) && cd $(LUAZLIBDIR) && cp -f $(LUAZLIBSRCDIR)/* . && $(CC) $(CFLAGS) $(LUAZLIBINC) -g -o lgzip.o -c lgzip.c && $(CC) $(CFLAGS) $(LUAZLIBINC) -g -o lzlib.o -c lzlib.c
++	mkdir -p $(LUAZLIBDIR) && cd $(LUAZLIBDIR) && $(CC) $(CFLAGS) $(LUAZLIBINC) -g -o lgzip.o -c lgzip.c && $(CC) $(CFLAGS) $(LUAZLIBINC) -g -o lzlib.o -c lzlib.c
+ 
+ 
+ # Convenience variables.
