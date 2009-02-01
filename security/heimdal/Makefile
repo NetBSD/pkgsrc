@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2008/05/14 18:01:26 jwise Exp $
+# $NetBSD: Makefile,v 1.72 2009/02/01 21:39:43 shattered Exp $
 
 DISTNAME=	heimdal-1.1
 CATEGORIES=	security
 MASTER_SITES=	http://www.h5l.org/dist/src/
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	lha@NetBSD.org
 HOMEPAGE=	http://www.h5l.org/
@@ -65,7 +65,7 @@ OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${ROOT_USER} ${ROOT_GROUP} 0700
 SPECIAL_PERMS+=		${PREFIX}/bin/otp ${SETUID_ROOT_PERMS}
 SPECIAL_PERMS=		${PREFIX}/bin/${KRB5_PREFIX}su ${SETUID_ROOT_PERMS}
 RCD_SCRIPTS=		kadmind kcm kdc kpasswdd
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 # Dynamically determine the "replacement" headers for bits needed by
 # Heimdal but are missing in the base system and add them to the PLIST.
