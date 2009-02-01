@@ -1,0 +1,4 @@
+The Perl 5 module Spreadsheet::Read tries to transparently read
+*any* spreadsheet and return its content in a universal manner
+independent of the parsing module that does the actual spreadsheet
+scanning.
