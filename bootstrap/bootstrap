@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.138 2009/01/21 00:07:40 sketch Exp $
+# $NetBSD: bootstrap,v 1.139 2009/02/02 13:01:29 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -441,12 +441,10 @@ overpath=""
 root_user=root
 bmakexenv=
 bmakexargs=
-tnftpxflags=
 need_extras=no
 case "$opsys" in
 Darwin)
 	root_group=wheel
-	need_pax=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -468,7 +466,6 @@ Darwin)
 	;;
 DragonFly)
 	root_group=wheel
-	need_pax=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -488,7 +485,6 @@ DragonFly)
 	;;
 FreeBSD)
 	root_group=wheel
-	need_pax=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -497,7 +493,6 @@ FreeBSD)
 	;;
 HPUX)
 	root_group=sys
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -513,7 +508,6 @@ IRIX*)
 	fi
 	root_group=sys
 	need_bsd_install=yes
-	need_pax=yes
 	get_abi "IRIX"
 	opsys=IRIX
 	need_awk=yes
@@ -527,10 +521,6 @@ IRIX*)
 # IRIX 5's mkdir bails out with an error when trying to create with the -p
 # option an already existing directory
 		need_mkdir=yes
-# IRIX 5 does not have uint32_t typedef'd in sys/types.h
-		tnftpxflags="-DUINT32_T=int"
-# IRIX 5 is lacking fnmatch.h needed to build mtree
-		needfnmatchh=yes
 	fi
 	;;
 Linux)
@@ -538,7 +528,6 @@ Linux)
 		DEBIAN=yes
 	fi
 	root_group=root
-	need_pax=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -547,18 +536,14 @@ Linux)
 	;;
 NetBSD)
 	root_group=wheel
-	need_pax=no
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	check_prog paxprog pax
-	check_prog tarprog tar
 	machine_arch=`uname -p`
 	;;
 OpenBSD)
 	root_group=wheel
-	need_pax=yes
 	need_bsd_install=no
 	need_awk=no
 	need_sed=no
@@ -570,7 +555,6 @@ SunOS)
 		overpath="/usr/xpg4/bin:$overpath"
 	fi
 	root_group=root
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -583,7 +567,6 @@ SunOS)
 	;;
 AIX)
 	root_group=system
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -604,7 +587,6 @@ Interix)
 	default_install_mode=0775
 	root_user=`id -u`
 	root_group=131616
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -619,7 +601,6 @@ Interix)
 	;;
 UnixWare)
 	root_group=sys
-	need_pax=yes
 	need_bsd_install=no
 	BSTRAP_ENV="INSTALL=/usr/ucb/install $BSTRAP_ENV"
 	need_mkdir=yes
@@ -631,7 +612,6 @@ UnixWare)
 	;;
 OSF1)
 	root_group=system
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -640,7 +620,6 @@ OSF1)
 	;;
 QNX)
 	root_group=root
-	need_pax=yes
 	need_bsd_install=yes
 	set_opsys=no
 	groupsprog="id -gn"
@@ -651,7 +630,6 @@ QNX)
 *)
 	echo "This platform ($opsys) is untried - good luck, and thanks for using pkgsrc"
 	root_group=wheel
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -670,7 +648,6 @@ fi
 #
 case "$full" in
 yes)
-	need_pax=yes
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
@@ -915,10 +892,6 @@ echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
 run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags)"
 
-if [ x"$needfnmatchh" = x"yes" ]; then
-	$lnprog -s nbcompat/fnmatch.h $wrkdir/libnbcompat/fnmatch.h
-fi
-
 # bootstrap ksh if necessary
 case "$need_ksh" in
 yes)	echo_msg "Bootstrapping ksh"
@@ -959,22 +932,6 @@ yes)	echo_msg "Bootstrapping sed"
 	echo "TOOLS_PLATFORM.sed?=		$wrkdir/bin/sed" >> ${BOOTSTRAP_MKCONF}
 	;;
 esac
-
-case "$need_pax" in
-yes)
-	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}pax" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}pax" >> ${BOOTSTRAP_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}tar" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}tar" >> ${BOOTSTRAP_MKCONF}
-	;;
-*)
-	echo "TOOLS_PLATFORM.pax?=		$paxprog" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.pax?=		$paxprog" >> ${BOOTSTRAP_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$tarprog" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$tarprog" >> ${BOOTSTRAP_MKCONF}
-	;;
-esac
-
 
 # bootstrap pkg_install
 echo_msg "Bootstrapping pkgtools"
@@ -1086,12 +1043,6 @@ yes)	build_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
 esac
 case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
-esac
-case "$need_ftp" in
-yes)	build_package "net/tnftp";;
-esac
-case "$need_pax" in
-yes)	build_package "archivers/pax";;
 esac
 build_package "pkgtools/pkg_install"
 
