@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152.2.4 2008/10/29 10:38:53 joerg Exp $
+# $NetBSD: Makefile,v 1.152.2.5 2009/02/02 11:55:15 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -17,6 +17,7 @@ COMMENT=		Package management and administration tools for pkgsrc
 #LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+BOOTSTRAP_PKG=	yes
 
 CONFLICTS+=		audit-packages-[0-9]*
 
@@ -44,11 +45,18 @@ CHECK_PERMS=		no
 # We also use the newly built pkg_{add,create,delete} since upgrading
 # from an older pkg_install might required features of the new program. 
 #
+# Note that the definitions are only overriden for the phases that are
+# supposed to use them.  pkg_admin pmatch might be used when looking for
+# dependencies. If that is ever changed in a incompatible way, this has to
+# be rethought.
 USE_NATIVE_GCC=		yes
+
+.if defined(_PKGSRC_BARRIER)
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
 PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
 PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
 PKG_INFO_CMD=		${WRKSRC}/info/pkg_info
+.endif
 
 CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64

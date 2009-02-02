@@ -1,4 +1,4 @@
-/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.9 2009/01/27 22:24:06 joerg Exp $	*/
+/*	$NetBSD: vulnerabilities-file.c,v 1.3.4.10 2009/02/02 11:55:16 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.9 2009/01/27 22:24:06 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.10 2009/02/02 11:55:16 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -515,4 +515,74 @@ free_pkg_vulnerabilities(struct pkg_vulnerabilities *pv)
 	free(pv->classification);
 	free(pv->advisory);
 	free(pv);
+}
+
+static int
+check_ignored_entry(struct pkg_vulnerabilities *pv, size_t i)
+{
+	const char *iter, *next;
+	size_t entry_len, url_len;
+
+	if (ignore_advisories == NULL)
+		return 0;
+
+	url_len = strlen(pv->advisory[i]);
+
+	for (iter = ignore_advisories; *iter; iter = next) {
+		if ((next = strchr(iter, '\n')) == NULL) {
+			entry_len = strlen(iter);
+			next = iter + entry_len;
+		} else {
+			entry_len = next - iter;
+			++next;
+		}
+		if (url_len != entry_len)
+			continue;
+		if (strncmp(pv->advisory[i], iter, entry_len) == 0)
+			return 1;
+	}
+	return 0;
+}
+
+int
+audit_package(struct pkg_vulnerabilities *pv, const char *pkgname,
+    const char *limit_vul_types, int check_eol, int output_type)
+{
+	FILE *output = output_type == 1 ? stdout : stderr;
+	size_t i;
+	int retval;
+
+	retval = 0;
+
+	for (i = 0; i < pv->entries; ++i) {
+		if (check_ignored_entry(pv, i))
+			continue;
+		if (limit_vul_types != NULL &&
+		    strcmp(limit_vul_types, pv->classification[i]))
+			continue;
+		if (!pkg_match(pv->vulnerability[i], pkgname))
+			continue;
+		if (strcmp("eol", pv->classification[i]) == 0) {
+			if (!check_eol)
+				continue;
+			if (output_type == 0) {
+				puts(pkgname);
+				continue;
+			}
+			fprintf(output,
+			    "Package %s has reached end-of-life (eol), "
+			    "see %s/eol-packages\n", pkgname,
+			    tnf_vulnerability_base);
+			continue;
+		}
+		retval = 1;
+		if (output_type == 0) {
+			puts(pkgname);
+		} else {
+			fprintf(output,
+			    "Package %s has a %s vulnerability, see %s\n",
+			    pkgname, pv->classification[i], pv->advisory[i]);
+		}
+	}
+	return retval;
 }

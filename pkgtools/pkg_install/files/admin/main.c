@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.9 2008/12/30 15:55:57 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.10 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,9 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.9 2008/12/30 15:55:57 joerg Exp $");
-#endif
+__RCSID("$NetBSD: main.c,v 1.42.2.10 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
