@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/02 20:30:44 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/02 20:32:03 abs Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.tatanka.com.br/ies4linux/downloads/
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.tatanka.com.br/ies4linux/page/Main_Page
-COMMENT=	Microsoft Internet Explorer
+COMMENT=	Microsoft Internet Explorer installer
 
 DEPENDS+=  bash-[0-9]*:../../shells/bash
 DEPENDS+=  unzip-[0-9]*:../../archivers/unzip
