@@ -289,11 +289,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, pkg size recording
              etc.
 
-BBUUGGSS
-     Hard links between files in a distribution must be bracketed by @@ccwwdd
-     directives in order to be preserved as hard links when the package is
-     extracted.  They additionally must not end up being split between ttaarr
-     invocations due to exec argument-space limitations (this depends on the
-     value returned by ssyyssccoonnff(___S_C___A_R_G___M_A_X)).
-
-NetBSD 4.0                      August 10, 2007                     NetBSD 4.0
+NetBSD 4.0                       July 28, 2008                      NetBSD 4.0

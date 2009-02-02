@@ -1,4 +1,4 @@
-/* $NetBSD: dewey.c,v 1.9 2008/12/14 10:18:16 rillig Exp $ */
+/* $NetBSD: dewey.c,v 1.10 2009/02/02 12:35:01 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
