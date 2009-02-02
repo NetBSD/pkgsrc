@@ -1,0 +1,73 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/02 20:30:44 abs Exp $
+bin/ies4linux
+share/ies4linux/LICENSE
+share/ies4linux/README
+share/ies4linux/lang/bgBG.sh
+share/ies4linux/lang/caES.sh
+share/ies4linux/lang/csCZ.sh
+share/ies4linux/lang/daDK.sh
+share/ies4linux/lang/deDE.sh
+share/ies4linux/lang/enUS.sh
+share/ies4linux/lang/esAR.sh
+share/ies4linux/lang/esES.sh
+share/ies4linux/lang/esMX.sh
+share/ies4linux/lang/etEE.sh
+share/ies4linux/lang/etET.sh
+share/ies4linux/lang/fiFI.sh
+share/ies4linux/lang/frFR.sh
+share/ies4linux/lang/hrHR.sh
+share/ies4linux/lang/huHU.sh
+share/ies4linux/lang/idID.sh
+share/ies4linux/lang/itIT.sh
+share/ies4linux/lang/jaJP.sh
+share/ies4linux/lang/ltLT.sh
+share/ies4linux/lang/lvLV.sh
+share/ies4linux/lang/msMY.sh
+share/ies4linux/lang/nbNO.sh
+share/ies4linux/lang/nlNL.sh
+share/ies4linux/lang/plPL.sh
+share/ies4linux/lang/ptBR.sh
+share/ies4linux/lang/ptPT.sh
+share/ies4linux/lang/roRO.sh
+share/ies4linux/lang/siSI.sh
+share/ies4linux/lang/skSK.sh
+share/ies4linux/lang/slSI.sh
+share/ies4linux/lang/srYU.sh
+share/ies4linux/lang/svSE.sh
+share/ies4linux/lang/trTR.sh
+share/ies4linux/lang/ukUA.sh
+share/ies4linux/lang/viVN.sh
+share/ies4linux/lang/zhCN.sh
+share/ies4linux/lang/zhTW.sh
+share/ies4linux/lib/files
+share/ies4linux/lib/functions.sh
+share/ies4linux/lib/help.sh
+share/ies4linux/lib/ies4linux.png
+share/ies4linux/lib/ies4linux.svg
+share/ies4linux/lib/install.sh
+share/ies4linux/lib/messages.txt
+share/ies4linux/lib/uninstall.sh
+share/ies4linux/lib/xdg-desktop-icon
+share/ies4linux/lib/xdg-desktop-menu
+share/ies4linux/mac/functions-overwrite.sh
+share/ies4linux/mac/whereiswine.sh
+share/ies4linux/ui/kommander/advanced.kmdr
+share/ies4linux/ui/kommander/installation.kmdr
+share/ies4linux/ui/kommander/kommander.sh
+share/ies4linux/ui/kommander/logo.kmdr
+share/ies4linux/ui/pygtk/ies4linux-gtk.py
+share/ies4linux/ui/pygtk/python-gtk.sh
+share/ies4linux/winereg/.ie1.reg
+share/ies4linux/winereg/.ie2.reg
+share/ies4linux/winereg/ie5.reg
+share/ies4linux/winereg/ie55.reg
+share/ies4linux/winereg/ie6.reg
+share/ies4linux/winereg/ie7.reg
+@dirrm share/ies4linux/winereg
+@dirrm share/ies4linux/ui/pygtk
+@dirrm share/ies4linux/ui/kommander
+@dirrm share/ies4linux/ui
+@dirrm share/ies4linux/mac
+@dirrm share/ies4linux/lib
+@dirrm share/ies4linux/lang
+@dirrm share/ies4linux

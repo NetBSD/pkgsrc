@@ -1,0 +1,6 @@
+IEs4Linux is the simpler way to have Microsoft Internet Explorer
+running any OS running Wine.
+
+It provides a script with an optional GUI interface to install
+various versions of IE and associated registry settings and plugins
+into your .wine configuration.
