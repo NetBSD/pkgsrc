@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/02 09:35:45 markd Exp $
+
+Dont install docs
+
+--- setup.py.orig	2007-11-18 06:13:24.000000000 +1300
++++ setup.py
+@@ -78,10 +78,6 @@ setup(
+     ],
+     keywords=['python.templating.engines'],
+     packages=['jinja', 'jinja.translators'],
+-    data_files=[
+-        ('docs/html', list(list_files('docs/html'))),
+-        ('docs/txt', list(list_files('docs/src')))
+-    ],
+     entry_points='''
+     [python.templating.engines]
+     jinja = jinja.plugin:BuffetPlugin
