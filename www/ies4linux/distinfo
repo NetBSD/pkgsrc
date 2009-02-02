@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/02 20:30:44 abs Exp $
+
+SHA1 (ies4linux-2.99.0.1.tar.gz) = 3dc29e69e45453b2a73380dbd6d0059f07502d9f
+RMD160 (ies4linux-2.99.0.1.tar.gz) = 7dc2e866c9b344cdbecb26ef23a967dda5e8cfc3
+Size (ies4linux-2.99.0.1.tar.gz) = 332341 bytes
+SHA1 (patch-aa) = 755b80b3aecc25a4a3ed5ffc441a50923793e640
