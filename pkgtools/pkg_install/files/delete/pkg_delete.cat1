@@ -5,7 +5,8 @@ NNAAMMEE
      age distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ddeelleettee [--DDddFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--pp _p_r_e_f_i_x] _p_k_g_-_n_a_m_e _._._.
+     ppkkgg__ddeelleettee [--DDddFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
+                _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ddeelleettee command is used to delete packages that have been previ-
@@ -72,6 +73,11 @@ OOPPTTIIOONNSS
      --OO      Only delete the package's entries from the package database, do
              not touch the package or its files itself.
 
+     --pp _d_e_s_t_d_i_r
+             Prefix all file and directory names with _d_e_s_t_d_i_r.  For packages
+             without install scripts this has the same behavior as using
+             chroot.
+
      --pp _p_r_e_f_i_x
              Set _p_r_e_f_i_x as the directory in which to delete files from any
              installed packages which do not explicitly set theirs.  For most
@@ -136,7 +142,8 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      The scripts are also called with the PKG_METADATA_DIR environment vari-
      able set to the location of the _+_* meta-data files, and with the
      PKG_REFCOUNT_DBDIR environment variable set to the location of the pack-
-     age reference counts database directory.
+     age reference counts database directory.  If the --PP flag was given to
+     ppkkgg__ddeelleettee, PKG_DESTDIR will be set to _d_e_s_t_d_i_r.
 
 EENNVVIIRROONNMMEENNTT
      PKG_DBDIR  If the --KK flag isn't given, then PKG_DBDIR is the location of
@@ -162,4 +169,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, recursive "down"
              delete, etc.
 
-NetBSD 4.0                       March 2, 2007                      NetBSD 4.0
+NetBSD 4.0                       July 30, 2008                      NetBSD 4.0
