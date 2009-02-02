@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.451 2009/02/02 20:07:26 jnemeth Exp $
+$NetBSD: CHANGES-2009,v 1.452 2009/02/02 20:32:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_install to 20090201 [joerg 2009-02-02]
 	Updated devel/cpuflags to 1.38 [abs 2009-02-02]
 	Updated www/privoxy to 3.0.8nb1 [jnemeth 2009-02-02]
+	Added www/ies4linux version 2.99.0.1 [abs 2009-02-02]
