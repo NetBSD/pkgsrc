@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46.2.5 2008/08/10 22:09:38 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.46.2.6 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,13 +13,7 @@
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-#ifndef lint
-#if 0
-static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
-#else
-__RCSID("$NetBSD: perform.c,v 1.46.2.5 2008/08/10 22:09:38 joerg Exp $");
-#endif
-#endif
+__RCSID("$NetBSD: perform.c,v 1.46.2.6 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
