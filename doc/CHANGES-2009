@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.450 2009/02/02 17:10:21 abs Exp $
+$NetBSD: CHANGES-2009,v 1.451 2009/02/02 20:07:26 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -617,3 +617,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/py-jinja version 1.2 [markd 2009-02-01]
 	Updated pkgtools/pkg_install to 20090201 [joerg 2009-02-02]
 	Updated devel/cpuflags to 1.38 [abs 2009-02-02]
+	Updated www/privoxy to 3.0.8nb1 [jnemeth 2009-02-02]
