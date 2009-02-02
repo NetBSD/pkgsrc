@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.40 2009/02/02 07:27:13 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.41 2009/02/02 15:13:31 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -115,3 +115,5 @@ Pullup ticket #2678 - requested by cube
 glut: build fix for systems with native X.org
 Pullup ticket #2676 - requested by hira
 openoffice3: bug fixes
+Pullup ticket #2679 - requested by rafal
+gst-plugins0.10-bad: build fix
