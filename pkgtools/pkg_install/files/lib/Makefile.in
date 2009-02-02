@@ -1,26 +1,25 @@
-# $NetBSD: Makefile.in,v 1.23 2008/04/26 17:40:01 joerg Exp $
+# $NetBSD: Makefile.in,v 1.24 2009/02/02 12:35:01 joerg Exp $
 
 srcdir=		@srcdir@
 
 pkgdbdir=	@pkgdbdir@
 mandir=		@mandir@
 datarootdir=	@datarootdir@
+sysconfdir=	@sysconfdir@
 
 cat5dir=	$(mandir)/cat5
 cat7dir=	$(mandir)/cat7
 man5dir=	$(mandir)/man5
 man7dir=	$(mandir)/man7
 
-tar=		@tar@
-ftp=		@ftp@
-
 BOOTSTRAP=	@bootstrap@
+SSL_SUPPORT=	@ssl_support@
 
 RANLIB=		@RANLIB@
 AR=		@AR@
 CC=		@CC@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
-DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\" -DTAR_CMD=\"$(tar)\" -DFTP_CMD=\"$(ftp)\"
+DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\"
 CFLAGS=		@CFLAGS@
 
 INSTALL=	@INSTALL@
@@ -28,14 +27,21 @@ INSTALL=	@INSTALL@
 LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
-	ftpio.o global.o iterate.o lpkg.o opattern.o \
-	path.o pen.o pexec.o pkgdb.o plist.o \
-	str.o var.o version.o vulnerabilities-file.o
+	gpgsig.o global.o iterate.o lpkg.o opattern.o \
+	parse-config.o path.o pkgdb.o plist.o remove.o \
+	str.o var.o version.o vulnerabilities-file.o xwrapper.o
+
+CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
 
 .if !empty(BOOTSTRAP)
 CPPFLAGS+=	-DBOOTSTRAP
 .else
 OBJS+=	pkg_io.o
+.endif
+
+.if !empty(SSL_SUPPORT)
+CPPFLAGS+=	-DHAVE_SSL
+OBJS+=		pkg_signature.o pkcs7.o
 .endif
 
 all: $(LIB)
@@ -57,5 +63,7 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat7dir)
 	$(INSTALL) -m 444 pkg_summary.5 ${DESTDIR}$(man5dir)/pkg_summary.5
 	$(INSTALL) -m 444 pkg_summary.cat5 ${DESTDIR}$(cat5dir)/pkg_summary.0
+	$(INSTALL) -m 444 pkg_install.conf.5 ${DESTDIR}$(man5dir)/pkg_install.conf.5
+	$(INSTALL) -m 444 pkg_install.conf.cat5 ${DESTDIR}$(cat5dir)/pkg_install.conf.0
 	$(INSTALL) -m 444 pkgsrc.7 ${DESTDIR}$(man7dir)/pkgsrc.7
 	$(INSTALL) -m 444 pkgsrc.cat7 ${DESTDIR}$(cat7dir)/pkgsrc.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2008/07/14 14:56:50 joerg Exp $
+# $NetBSD: Makefile,v 1.159 2009/02/02 12:34:59 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -24,18 +24,10 @@ CONFLICTS+=		audit-packages-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
-CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD:Q}
-CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
-CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
-USE_TOOLS+=		pax:run tar:run gzcat:run ftp:run
-
-# The following tools are needed by pkg_view and linkfarm.
-USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
-			sed sort touch
 
 USE_FEATURES=		nbcompat
 
-NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt --enable-db
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
@@ -52,11 +44,11 @@ CHECK_PERMS=		no
 #
 # We also use the newly built pkg_{add,create,delete} since upgrading
 # from an older pkg_install might required features of the new program. 
+#
 # Note that the definitions are only overriden for the phases that are
 # supposed to use them.  pkg_admin pmatch might be used when looking for
 # dependencies. If that is ever changed in a incompatible way, this has to
 # be rethought.
-#
 USE_NATIVE_GCC=		yes
 
 .if defined(_PKGSRC_BARRIER)
@@ -92,21 +84,20 @@ MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
-# Make sure the audit-packages files pick up the right tools in the right
-# places.
-#
-SUBST_CLASSES=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	Fixing paths in scripts.
-SUBST_FILES.paths=	audit-packages/Makefile.in
-SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
-
-# linkresolver interface appeared in libarchive 2.5.
-BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5
+# linkresolver interface appeared in libarchive 2.5 and extract
+# requires version 2.5.4b to handle hardlinks correctly.
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5.4b
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
+.include "../../security/openssl/builtin.mk"
+
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-ssl
+
+.include "../../security/openssl/buildlink3.mk"
+.endif
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS]) || \
     empty(USE_BUILTIN.zlib:M[yY][eE][sS])
