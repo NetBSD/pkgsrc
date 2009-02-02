@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.22 2007/11/05 09:39:38 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.23 2009/02/02 12:35:01 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,13 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-#if 0
-static char *rcsid = "from FreeBSD Id: main.c,v 1.14 1997/10/08 07:47:26 charnier Exp";
-#else
-__RCSID("$NetBSD: main.c,v 1.22 2007/11/05 09:39:38 joerg Exp $");
-#endif
-#endif
+__RCSID("$NetBSD: main.c,v 1.23 2009/02/02 12:35:01 joerg Exp $");
 
 /*
  *
@@ -271,11 +265,9 @@ main(int argc, char **argv)
 
 			s = pkgdb_retrieve(CheckPkg);
 
-			if (s) {
-				CheckPkg = strdup(s);
-			} else {
+			if (s == NULL)
 				errx(EXIT_FAILURE, "No matching pkg for %s.", CheckPkg);
-			}
+			CheckPkg = xstrdup(s);
 
 			pkgdb_close();
 		}

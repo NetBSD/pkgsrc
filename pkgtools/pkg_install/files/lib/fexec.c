@@ -1,3 +1,5 @@
+/*	$NetBSD: fexec.c,v 1.11 2009/02/02 12:35:01 joerg Exp $	*/
+
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
  * All rights reserved.
@@ -57,9 +59,7 @@
 
 #include "lib.h"
 
-#ifndef lint
-__RCSID("$NetBSD: fexec.c,v 1.10 2008/04/29 05:46:08 martin Exp $");
-#endif
+__RCSID("$NetBSD: fexec.c,v 1.11 2009/02/02 12:35:01 joerg Exp $");
 
 static int	vfcexec(const char *, int, const char *, va_list);
 
@@ -106,8 +106,7 @@ vfcexec(const char *path, int skipempty, const char *arg, va_list ap)
 	int retval;
 
 	argv_size = 16;
-	if ((argv = malloc(argv_size * sizeof(*argv))) == NULL)
-		err(EXIT_FAILURE, "vfcexec: malloc failed");
+	argv = xcalloc(argv_size, sizeof(*argv));
 
 	argv[0] = arg;
 	argc = 1;
@@ -115,9 +114,7 @@ vfcexec(const char *path, int skipempty, const char *arg, va_list ap)
 	do {
 		if (argc == argv_size) {
 			argv_size *= 2;
-			argv = realloc(argv, argv_size * sizeof(*argv));
-			if (argv == NULL)
-				err(EXIT_FAILURE, "vfcexec: realloc failed");
+			argv = xrealloc(argv, argv_size * sizeof(*argv));
 		}
 		arg = va_arg(ap, const char *);
 		if (skipempty && arg && strlen(arg) == 0)

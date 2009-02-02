@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.in,v 1.15 2008/04/04 20:46:59 tnn Exp $
+# $NetBSD: Makefile.in,v 1.16 2009/02/02 12:35:00 joerg Exp $
 
 srcdir=		@srcdir@
 
 prefix=		@prefix@
 exec_prefix=	@exec_prefix@
-sysconfdir=	@sysconfdir@
 sbindir=	@sbindir@
 mandir=		@mandir@
 datarootdir=	@datarootdir@
@@ -13,6 +12,7 @@ man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1
 
 BOOTSTRAP=	@bootstrap@
+SSL_SUPPORT=	@ssl_support@
 
 CC=		@CC@
 CCLD=		$(CC)
@@ -23,20 +23,24 @@ LDFLAGS=	@LDFLAGS@ -L../lib
 INSTALL=	@INSTALL@
 
 PROG=		pkg_admin
+SCRIPTS=	audit-packages download-vulnerability-list
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lbz2 -lfetch -lz @LIBS@
-OBJS=		audit.o check.o config.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib \
-		-DSYSCONFDIR=\"$(sysconfdir)\"
+LIBS=		-linstall -lbz2 -lfetch -larchive -lbz2 -lz
+.if !empty(SSL_SUPPORT)
+LIBS+=		-lcrypto
+CPPFLAGS+=	-DHAVE_SSL
+.endif
+LIBS+=		@LIBS@
+OBJS=		audit.o check.o main.o
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
 LIBS=		-linstall @LIBS@
-OBJS=		check.o config.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP \
-		-DSYSCONFDIR=\"$(sysconfdir)\"
+OBJS=		check.o main.o
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP
 .endif
 
-all: $(PROG)
+all: $(PROG) $(SCRIPTS)
 
 .c.o:
 	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
@@ -52,5 +56,14 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(man1dir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)/$(PROG)
+	$(INSTALL) -m 555 $(SCRIPTS) ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 444 $(PROG).1 ${DESTDIR}$(man1dir)/$(PROG).1
 	$(INSTALL) -m 444 $(PROG).cat1 ${DESTDIR}$(cat1dir)/$(PROG).0
+
+audit-packages: audit-packages.sh.in
+	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
+	    ${.CURDIR}/audit-packages.sh.in > $@
+
+download-vulnerability-list: download-vulnerability-list.sh.in
+	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
+	    ${.CURDIR}/download-vulnerability-list.sh.in > $@
