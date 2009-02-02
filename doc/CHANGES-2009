@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.449 2009/02/02 13:29:06 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.450 2009/02/02 17:10:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -616,3 +616,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-local-lib version 1.3.1 [seb 2009-02-01]
 	Added textproc/py-jinja version 1.2 [markd 2009-02-01]
 	Updated pkgtools/pkg_install to 20090201 [joerg 2009-02-02]
+	Updated devel/cpuflags to 1.38 [abs 2009-02-02]
