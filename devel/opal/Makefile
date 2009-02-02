@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/02 06:20:33 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/02 06:35:44 obache Exp $
 #
 
 DISTNAME=		opal-3.4.4
@@ -41,7 +41,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/version.h ${DESTDIR}${PREFIX}/share/opal
 
 .include "../../devel/ptlib/buildlink3.mk"
-.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
