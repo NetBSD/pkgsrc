@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.8.2.1 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.8.2.2 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,13 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-#if 0
-static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
-#else
-__RCSID("$NetBSD: build.c,v 1.8.2.1 2008/08/02 20:33:50 joerg Exp $");
-#endif
-#endif
+__RCSID("$NetBSD: build.c,v 1.8.2.2 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.

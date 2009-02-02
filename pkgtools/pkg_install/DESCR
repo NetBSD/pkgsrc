@@ -12,3 +12,8 @@ pkg_delete	delete installed packages
 pkg_info	display information about installed or binary packages
 pkg_view	manage package views
 linkfarm	manage symbolic links for package views
+
+For the following tools compatibility wrappers are included:
+
+audit-packages	audit installed packages for security vulnerabilities
+download-vulnerability-list	download the latest vulnerabilities list

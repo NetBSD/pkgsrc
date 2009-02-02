@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.1.2.7 2009/01/27 22:24:05 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.8 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,9 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-__RCSID("$NetBSD: parse-config.c,v 1.1.2.7 2009/01/27 22:24:05 joerg Exp $");
-#endif
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.8 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -82,12 +80,12 @@ static struct config_variable {
 	{ "CERTIFICATE_CHAIN", &cert_chain_file },
 	{ "CHECK_VULNERABILITIES", &check_vulnerabilities },
 	{ "GPG", &gpg_cmd },
-	{ "IGNORE_PROXY", &ignore_proxy },
-	{ "IGNORE_URL", &ignore_advisories },
 	{ "GPG_KEYRING_PKGVULN", &gpg_keyring_pkgvuln },
 	{ "GPG_KEYRING_SIGN", &gpg_keyring_sign },
 	{ "GPG_KEYRING_VERIFY", &gpg_keyring_verify },
 	{ "GPG_SIGN_AS", &gpg_sign_as },
+	{ "IGNORE_PROXY", &ignore_proxy },
+	{ "IGNORE_URL", &ignore_advisories },
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
 	{ "VERBOSE_NETIO", &verbose_netio },
