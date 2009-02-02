@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.Linux,v 1.3 2007/07/12 19:41:46 jlam Exp $
+# $NetBSD: usergroupfuncs.Linux,v 1.4 2009/02/02 19:54:22 joerg Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of shadow-utils.  (Not libuser)
@@ -104,22 +104,16 @@ adduser()
 
 	if ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
 		${ECHO} "${PKGNAME}: Creating user \`\`$user''"
-		# if home directory is missing, make and remove it
-		# ensures that the base directory exists, for shadow-utils
-		if ! ${TEST} -d "$home"; then
-			${MKDIR} -p "$home"
-			${RMDIR} "$home" 2>/dev/null
-		fi
 		case $userid in
 		"")
 			${USERADD}					\
 				-c "$descr" -d "$home" -s "$shell"	\
-				-g $group $user
+				-g $group $user -M
 			;;
 		*)
 			${USERADD}					\
 				-c "$descr" -d "$home" -s "$shell"	\
-				-g $group -u $userid $user
+				-g $group -u $userid $user -M
 			;;
 		esac
 	fi
