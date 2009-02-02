@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8.2.6 2008/11/27 19:24:13 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.7 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,9 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8.2.6 2008/11/27 19:24:13 joerg Exp $");
-#endif
+__RCSID("$NetBSD: audit.c,v 1.8.2.7 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -117,66 +115,10 @@ parse_options(int argc, char **argv)
 }
 
 static int
-check_ignored_entry(size_t i)
-{
-	const char *iter, *next;
-	size_t entry_len, url_len;
-
-	if (ignore_advisories == NULL)
-		return 0;
-
-	url_len = strlen(pv->advisory[i]);
-
-	for (iter = ignore_advisories; *iter; iter = next) {
-		if ((next = strchr(iter, '\n')) == NULL) {
-			entry_len = strlen(iter);
-			next = iter + entry_len;
-		} else {
-			entry_len = next - iter;
-			++next;
-		}
-		if (url_len != entry_len)
-			continue;
-		if (strncmp(pv->advisory[i], iter, entry_len) == 0)
-			return 1;
-	}
-	return 0;
-}
-
-static int
 check_exact_pkg(const char *pkg)
 {
-	int ret;
-	size_t i;
-
-	ret = 0;
-	for (i = 0; i < pv->entries; ++i) {
-		if (check_ignored_entry(i))
-			continue;
-		if (limit_vul_types != NULL &&
-		    strcmp(limit_vul_types, pv->classification[i]))
-			continue;
-		if (!pkg_match(pv->vulnerability[i], pkg))
-			continue;
-		if (strcmp("eol", pv->classification[i]) == 0) {
-			if (!check_eol)
-				continue;
-			if (quiet)
-				puts(pkg);
-			else
-				printf("Package %s has reached end-of-life (eol), "
-				    "see %s/eol-packages\n", pkg,
-				    tnf_vulnerability_base);
-			continue;
-		}
-		if (quiet)
-			puts(pkg);
-		else
-			printf("Package %s has a %s vulnerability, see %s\n",
-			    pkg, pv->classification[i], pv->advisory[i]);
-		ret = 1;
-	}
-	return ret;
+	return audit_package(pv, pkg, limit_vul_types, check_eol,
+	    quiet ? 0 : 1);
 }
 
 static int

@@ -1,4 +1,4 @@
-/*	$NetBSD: var.c,v 1.6.4.1 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: var.c,v 1.6.4.2 2009/02/02 11:55:16 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2005, 2008 The NetBSD Foundation, Inc.
@@ -39,9 +39,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-__RCSID("$NetBSD: var.c,v 1.6.4.1 2008/08/02 20:33:50 joerg Exp $");
-#endif
+__RCSID("$NetBSD: var.c,v 1.6.4.2 2009/02/02 11:55:16 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>

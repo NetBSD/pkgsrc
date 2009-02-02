@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.22.2.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.22.2.2 2009/02/02 11:55:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,13 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-#ifndef lint
-#if 0
-static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
-#else
-__RCSID("$NetBSD: str.c,v 1.22.2.1 2008/04/26 17:44:23 joerg Exp $");
-#endif
-#endif
+__RCSID("$NetBSD: str.c,v 1.22.2.2 2009/02/02 11:55:16 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance

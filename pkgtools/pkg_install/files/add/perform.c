@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.21 2009/01/08 00:04:53 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.22 2009/02/02 11:55:16 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.21 2009/01/08 00:04:53 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.22 2009/02/02 11:55:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1170,37 +1170,9 @@ check_signature(struct pkg_task *pkg, void *signature_cookie, int invalid_sig)
 }
 
 static int
-check_ignored_entry(struct pkg_vulnerabilities *pv, size_t i)
-{
-	const char *iter, *next;
-	size_t entry_len, url_len;
-
-	if (ignore_advisories == NULL)
-		return 0;
-
-	url_len = strlen(pv->advisory[i]);
-
-	for (iter = ignore_advisories; *iter; iter = next) {
-		if ((next = strchr(iter, '\n')) == NULL) {
-			entry_len = strlen(iter);
-			next = iter + entry_len;
-		} else {
-			entry_len = next - iter;
-			++next;
-		}
-		if (url_len != entry_len)
-			continue;
-		if (strncmp(pv->advisory[i], iter, entry_len) == 0)
-			return 1;
-	}
-	return 0;
-}
-
-static int
 check_vulnerable(struct pkg_task *pkg)
 {
 	static struct pkg_vulnerabilities *pv;
-	size_t i;
 	int require_check;
 	char *line;
 	size_t len;
@@ -1224,23 +1196,18 @@ check_vulnerable(struct pkg_task *pkg)
 			return require_check;
 	}
 
-	for (i = 0; i < pv->entries; ++i) {
-		if (check_ignored_entry(pv, i))
-			continue;
-		if (!pkg_match(pv->vulnerability[i], pkg->pkgname))
-			continue;
-		if (strcmp("eol", pv->classification[i]) == 0)
-			continue;
-		warnx("Package %s has a %s vulnerability, see %s",
-		    pkg->pkgname, pv->classification[i], pv->advisory[i]);
-		fprintf(stderr, "Do you want to proceed with "
-		    "the installation of %s [y/n]?\n", pkg->pkgname);
-		line = fgetln(stdin, &len);
-		if (check_input(line, len)) {
-			fprintf(stderr, "Cancelling installation\n");
-			return 1;
-		}
+	if (!audit_package(pv, pkg->pkgname, NULL, 0, 2))
 		return 0;
+
+	if (require_check)
+		return 1;
+
+	fprintf(stderr, "Do you want to proceed with the installation of %s"
+	    " [y/n]?\n", pkg->pkgname);
+	line = fgetln(stdin, &len);
+	if (check_input(line, len)) {
+		fprintf(stderr, "Cancelling installation\n");
+		return 1;
 	}
 	return 0;
 }
