@@ -1,0 +1,45 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/02 20:30:44 abs Exp $
+
+--- lib/functions.sh.orig	2007-11-26 06:28:16.000000000 +0000
++++ lib/functions.sh
+@@ -33,7 +33,8 @@ function init_variables {
+ # Find where wine is
+ function find_wine {
+ 	which wine &> /dev/null || error $MSG_ERROR_INSTALL_WINE
+-	wine --version 2>&1  | grep -q "0.9." || warning $MSG_WARNING_OLDWINE
++	WINE_VERSION=$(wine --version 2>&1 | sed -e 's/[^0-9]*\([0-9]*\.[0-9]*\).*/\1/')
++	[ $WINE_VERSION \< 0.9 ] && warning $MSG_WARNING_OLDWINE
+ }
+ 
+ # check for cabextract
+@@ -181,7 +182,9 @@ function printDownloadPercentage {
+ # Portable md5 calculator
+ # $1 file
+ function getMD5 {
+-	if which md5sum &> /dev/null;then
++	if [ $(uname) = NetBSD ] ; then
++		MD5SUM=$(md5 -n "$1")
++	elif which md5sum &> /dev/null;then
+ 		MD5SUM=$(md5sum "$1")
+ 	else
+ 		MD5SUM=$(md5 -q "$1")
+@@ -200,7 +203,7 @@ function getFileSize {
+ 	}
+ 
+ 	wc '-c' "$1" &> '/dev/null' && {
+-		wc '-c' "$1"
++		wc '-c' "$1" | awk '{print $1}'
+ 		return 0
+ 	}
+ 
+@@ -458,7 +461,9 @@ function load_variables_file {
+ }
+ 
+ function load_default_language { 
+-	eval $(load_variables_file "$MESSAGE_FILE_FULLPATH")
++	if [ -n "$MESSAGE_FILE_FULLPATH" ] ; then
++		eval $(load_variables_file "$MESSAGE_FILE_FULLPATH")
++	fi
+ }
+ 
+ # Determine how to run a specific IE
