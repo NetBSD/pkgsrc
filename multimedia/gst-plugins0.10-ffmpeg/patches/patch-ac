@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2009/02/02 19:23:27 drochner Exp $
+
+--- gst-libs/ext/ffmpeg/libavformat/4xm.c.orig	2009-01-29 14:05:13.000000000 +0100
++++ gst-libs/ext/ffmpeg/libavformat/4xm.c
+@@ -159,10 +159,13 @@ static int fourxm_read_header(AVFormatCo
+                 return AVERROR_INVALIDDATA;
+             }
+             current_track = LE_32(&header[i + 8]);
++	    if((unsigned)current_track >= UINT_MAX / sizeof(AudioTrack) - 1){
++		av_log(s, AV_LOG_ERROR, "current_track too large\n");
++		av_free(header);
++		return AVERROR_INVALIDDATA;
++	    }
+             if (current_track + 1 > fourxm->track_count) {
+                 fourxm->track_count = current_track + 1;
+-                if((unsigned)fourxm->track_count >= UINT_MAX / sizeof(AudioTrack))
+-                    return -1;
+                 fourxm->tracks = av_realloc(fourxm->tracks,
+                     fourxm->track_count * sizeof(AudioTrack));
+                 if (!fourxm->tracks) {
