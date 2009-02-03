@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/03 19:59:41 shattered Exp $
 #
 
-PKGREVISION=		2
+#PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

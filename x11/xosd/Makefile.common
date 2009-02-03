@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.common,v 1.23 2007/01/12 14:59:16 abs Exp $
+# $NetBSD: Makefile.common,v 1.24 2009/02/03 19:59:41 shattered Exp $
+#
+# used by x11/xmms-osd/Makefile
 
-DISTNAME=	xosd-2.2.12
+DISTNAME=	xosd-2.2.14
 CATEGORIES=	x11
-MASTER_SITES=	http://www.ignavus.net/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libxosd/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ignavus.net/software.html
@@ -16,19 +17,18 @@ USE_LIBTOOL=		yes
 
 SHLIBTOOL_OVERRIDE=	libtool-disable-static
 
-CONFIGURE_ARGS+=	--disable-xinerama
-
 # Avoid an ICE on sparc64 with gcc2
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 SUBST_CLASSES+=		fixme
 SUBST_STAGE.fixme=	post-patch
 SUBST_FILES.fixme=	configure
-SUBST_SED.fixme=	-e "s|-lpthread|${PTHREAD_LIBS}|g"
+SUBST_SED.fixme=	-e "s|-lpthread|"${PTHREAD_LIBS:M*:Q}"|g"
 
 PTHREAD_AUTO_VARS=	yes
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
