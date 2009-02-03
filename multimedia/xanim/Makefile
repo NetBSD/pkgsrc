@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:29 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/03 13:45:23 jmcneill Exp $
 
 DISTNAME=	xanim2920
 PKGNAME=	xanim-2.92.0
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.informatik.uni-hamburg.de/pub/soft/graphics/xanim/ \
 DISTFILES=	${EXTRACT_ONLY} ${CODEC_FILES}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Play most popular animation formats and show pictures
+COMMENT=	Play a variety of simple animation formats and show pictures
 HOMEPAGE=	http://xanim.polter.net/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
