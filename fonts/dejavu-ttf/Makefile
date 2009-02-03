@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/09/10 00:27:12 jakllsch Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/03 20:38:01 jakllsch Exp $
 #
 
-DISTNAME=	dejavu-fonts-ttf-2.26
+DISTNAME=	dejavu-fonts-ttf-2.28
 PKGNAME=        ${DISTNAME:S/fonts-//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
@@ -19,14 +19,37 @@ NO_BUILD=	yes
 
 USE_TOOLS+=	pax
 
-FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
+FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf
+EGDIR=		${PREFIX}/share/examples/dejavu-ttf
+FCEGDIR=	${EGDIR}/fontconfig-conf.d
+FCCFDIR=	${PKG_SYSCONFDIR}/fontconfig/conf.d
+
+CONF_FILES=	${FCEGDIR}/20-unhint-small-dejavu-sans-mono.conf \
+		${FCCFDIR}/20-unhint-small-dejavu-sans-mono.conf
+CONF_FILES+=	${FCEGDIR}/20-unhint-small-dejavu-sans.conf \
+		${FCCFDIR}/20-unhint-small-dejavu-sans.conf
+CONF_FILES+=	${FCEGDIR}/20-unhint-small-dejavu-serif.conf \
+		${FCCFDIR}/20-unhint-small-dejavu-serif.conf
+
+CONF_FILES+=	${FCEGDIR}/57-dejavu-sans-mono.conf \
+		${FCCFDIR}/57-dejavu-sans-mono.conf
+CONF_FILES+=	${FCEGDIR}/57-dejavu-sans.conf \
+		${FCCFDIR}/57-dejavu-sans.conf
+CONF_FILES+=	${FCEGDIR}/57-dejavu-serif.conf \
+		${FCCFDIR}/57-dejavu-serif.conf
+
+REQD_DIRS=	${EGDIR}
+REQD_DIRS+=	${FCEGDIR}
+
+INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf ${FCEGDIR}
 
 do-install:
 	cd ${WRKSRC}/ttf && pax -rw -pm *.ttf \
-		${DESTDIR}${PREFIX}/lib/X11/fonts/TTF/
+		${DESTDIR}${FONTS_DIRS.ttf}
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS LICENSE NEWS README \
 		${DESTDIR}${PREFIX}/share/doc/dejavu-ttf
+	cd ${WRKSRC}/fontconfig && pax -rw -pm *.conf \
+		${DESTDIR}${FCEGDIR}
 
 .include "../../mk/bsd.pkg.mk"
