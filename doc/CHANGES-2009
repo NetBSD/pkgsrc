@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.465 2009/02/03 23:05:40 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.466 2009/02/03 23:11:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xmms-osd to 2.2.14 [shattered 2009-02-03]
 	Updated fonts/dejavu-ttf to 2.28 [jakllsch 2009-02-03]
 	Updated devel/bugzilla to 2.22.7 [adrianp 2009-02-03]
+	Updated devel/bugzilla3 to 3.2.2 [adrianp 2009-02-03]
