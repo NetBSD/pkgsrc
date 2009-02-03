@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/03 15:24:46 sborrill Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -13,7 +13,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
-DEPENDS+=	scons>=0.96.91:../../devel/scons-devel
+DEPENDS+=	scons-devel>=0.96.91:../../devel/scons-devel
 
 USE_TOOLS+=	pax
 
