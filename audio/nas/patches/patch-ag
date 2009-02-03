@@ -1,20 +1,18 @@
-$NetBSD: patch-ag,v 1.6 2009/01/26 11:50:54 sketch Exp $
+$NetBSD: patch-ag,v 1.7 2009/02/03 09:39:16 dbj Exp $
 
---- config/NetAudio.tmpl.orig	Sat Jun 16 20:03:20 2007
-+++ config/NetAudio.tmpl	Mon Jan 26 11:42:48 2009
-@@ -155,7 +155,11 @@
+--- config/NetAudio.tmpl.orig	2007-06-16 12:03:20.000000000 -0700
++++ config/NetAudio.tmpl	2009-02-03 00:57:54.000000000 -0800
+@@ -55,6 +55,9 @@ EXTRA_LOAD_FLAGS=/link /nodefaultlib:lib
  
- 
- #else /* SharedLibAudio */
-+#ifdef SunArchitecture
-+ LOCAL_LDFLAGS = -lXau
-+#else
-  LOCAL_LDFLAGS =
+ #define DebugLibX		NO
+ #define ProfileLibX		NO
++#ifndef SharedLibX
++#define SharedLibX              YES
 +#endif
-       DEPAULIB = _AuUseCat($(USRLIBDIR),$(AUSRC),/Lib(audio))
-          AULIB = LoaderLibPrefix _AuUse(-laudio,$(DEPAULIB))
- #endif /* SharedLibAudio */
-@@ -287,6 +291,8 @@
+ 
+ #if HasSharedLibraries
+ #define NormalLibAudio          NormalLibX
+@@ -287,6 +290,8 @@ AuComplexProgramTarget(program)
  release.h: $(TOP)/RELEASE				    		    @@\
  	@echo "static const char *release = \"`cat $(TOP)/RELEASE`\";" > $@   @@\
  						    			    @@\
