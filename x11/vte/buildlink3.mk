@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/10/24 20:23:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/02/03 12:13:37 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VTE_BUILDLINK3_MK:=	${VTE_BUILDLINK3_MK}+
@@ -20,5 +20,6 @@ BUILDLINK_PKGSRCDIR.vte?=	../../x11/vte
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
