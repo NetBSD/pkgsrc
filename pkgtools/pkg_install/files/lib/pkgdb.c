@@ -1,4 +1,4 @@
-/*	$NetBSD: pkgdb.c,v 1.31 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: pkgdb.c,v 1.32 2009/02/03 13:18:03 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkgdb.c,v 1.31 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: pkgdb.c,v 1.32 2009/02/03 13:18:03 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
@@ -44,6 +44,8 @@ __RCSID("$NetBSD: pkgdb.c,v 1.31 2009/02/02 12:35:01 joerg Exp $");
 #include <db1/db.h>
 #elif HAVE_DB_H
 #include <db.h>
+#else
+#include <nbcompat/db.h>
 #endif
 #if HAVE_ERR_H
 #include <err.h>
