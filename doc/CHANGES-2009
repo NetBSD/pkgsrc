@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.462 2009/02/03 13:58:09 obache Exp $
+$NetBSD: CHANGES-2009,v 1.463 2009/02/03 20:01:37 shattered Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -633,3 +633,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/vlgothic-ttf to 20090108 [obache 2009-02-03]
 	Updated graphics/ruby-RMagick to 2.9.1 [obache 2009-02-03]
 	Updated databases/tokyotyrant to 1.1.12 [obache 2009-02-03]
+	Updated x11/xosd to 2.2.14 [shattered 2009-02-03]
+	Updated x11/xmms-osd to 2.2.14 [shattered 2009-02-03]
