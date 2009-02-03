@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.625 2009/02/02 20:32:02 abs Exp $
+# $NetBSD: Makefile,v 1.626 2009/02/03 06:17:41 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -391,6 +391,7 @@ SUBDIR+=	p5-WWW-Facebook-API
 SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
+SUBDIR+=	p5-WWW-Shorten
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
