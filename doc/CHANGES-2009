@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.455 2009/02/03 06:09:28 obache Exp $
+$NetBSD: CHANGES-2009,v 1.456 2009/02/03 06:16:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -622,3 +622,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-NetAddr-IP to 4.024 [seb 2009-02-02]
 	Added devel/p5-Config-Auto version 0.20 [seb 2009-02-03]
 	Updated audio/gsm to 1.0.12 [obache 2009-02-03]
+	Updated audio/rplay to 3.3.2nb5 [obache 2009-02-03]
+	Updated audio/sox to 14.0.1nb1 [obache 2009-02-03]
+	Updated mbone/vat to 4.0b2nb2 [obache 2009-02-03]
+	Updated wm/metisse to 0.4.0rc4nb3 [obache 2009-02-03]
+	Updated wm/vtwm to 5.4.7nb2 [obache 2009-02-03]
