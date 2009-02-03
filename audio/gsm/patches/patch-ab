@@ -1,24 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
+$NetBSD: patch-ab,v 1.10 2009/02/03 06:09:09 obache Exp $
 
---- Makefile.orig	1996-07-02 16:36:06.000000000 +0200
+--- Makefile.orig	2006-04-26 19:14:26.000000000 +0000
 +++ Makefile
-@@ -7,11 +7,13 @@
- SASR	= -DSASR
- ######### Define SASR if >> is a signed arithmetic shift (-1 >> 1 == -1)
- 
--MULHACK = -DUSE_FLOAT_MUL
-+#MULHACK = -DUSE_FLOAT_MUL
-+MULHACK	=
- ######### Define this if your host multiplies floats faster than integers,
- ######### e.g. on a SPARCstation.
- 
--FAST	= -DFAST
-+#FAST	= -DFAST
-+FAST	=
- ######### Define together with USE_FLOAT_MUL to enable the GSM library's
- ######### approximation option for incorrect, but good-enough results.
- 
-@@ -43,7 +45,7 @@ WAV49	=
+@@ -43,7 +43,7 @@ WAV49	= -DWAV49
  # CC		= /usr/lang/acc
  # CCFLAGS 	= -c -O
  
@@ -27,7 +11,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  CCFLAGS 	= -c -O2 -DNeedFunctionPrototypes=1
  
  LD 		= $(CC)
-@@ -71,7 +73,7 @@ LD 		= $(CC)
+@@ -71,7 +71,7 @@ LD 		= $(CC)
  # Leave INSTALL_ROOT empty (or just don't execute "make install") to
  # not install gsm and toast outside of this directory.
  
@@ -36,7 +20,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  
  # Where do you want to install the gsm library, header file, and manpages?
  #
-@@ -80,8 +82,8 @@ INSTALL_ROOT	=
+@@ -80,8 +80,8 @@ INSTALL_ROOT	=
  
  GSM_INSTALL_ROOT = $(INSTALL_ROOT)
  GSM_INSTALL_LIB = $(GSM_INSTALL_ROOT)/lib
@@ -47,7 +31,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  
  
  # Where do you want to install the toast binaries and their manpage?
-@@ -91,13 +93,14 @@ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/ma
+@@ -91,13 +91,14 @@ GSM_INSTALL_MAN = $(GSM_INSTALL_ROOT)/ma
  
  TOAST_INSTALL_ROOT	  = $(INSTALL_ROOT)
  TOAST_INSTALL_BIN = $(TOAST_INSTALL_ROOT)/bin
@@ -64,7 +48,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  AR		= ar
  ARFLAGS		= cr
  RMFLAGS		=
-@@ -114,7 +117,7 @@ RANLIB	 	= ranlib
+@@ -114,7 +115,7 @@ RANLIB	 	= ranlib
  
  # Local Directories
  
@@ -73,7 +57,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  ADDTST	= $(ROOT)/add-test
  TST	= $(ROOT)/tst
  MAN	= $(ROOT)/man
-@@ -129,7 +132,7 @@ INC	= $(ROOT)/inc
+@@ -129,7 +130,7 @@ INC	= $(ROOT)/inc
  # DEBUG	= -DNDEBUG
  ######### Remove -DNDEBUG to enable assertions.
  
@@ -82,7 +66,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  	$(WAV49) $(CCINC) -I$(INC)
  ######### It's $(CC) $(CFLAGS)
  
-@@ -139,7 +142,7 @@ LFLAGS	= $(LDFLAGS) $(LDINC)
+@@ -139,7 +140,7 @@ LFLAGS	= $(LDFLAGS) $(LDINC)
  
  # Targets
  
@@ -91,7 +75,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  
  TOAST	= $(BIN)/toast
  UNTOAST	= $(BIN)/untoast
-@@ -257,7 +260,7 @@ STUFF = 	ChangeLog			\
+@@ -257,7 +258,7 @@ STUFF = 	ChangeLog			\
  # Install targets
  
  GSM_INSTALL_TARGETS =	\
@@ -100,7 +84,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  		$(GSM_INSTALL_INC)/gsm.h		\
  		$(GSM_INSTALL_MAN)/gsm.3		\
  		$(GSM_INSTALL_MAN)/gsm_explode.3	\
-@@ -273,10 +276,15 @@ TOAST_INSTALL_TARGETS =	\
+@@ -273,10 +274,15 @@ TOAST_INSTALL_TARGETS =	\
  
  # Default rules
  
@@ -116,7 +100,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  # Target rules
  
  all:		$(LIBGSM) $(TOAST) $(TCAT) $(UNTOAST)
-@@ -299,16 +307,20 @@ install:	toastinstall gsminstall
+@@ -299,16 +305,20 @@ install:	toastinstall gsminstall
  
  # The basic API: libgsm
  
@@ -128,7 +112,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
 +		cd $(LIB) && \
 +			$(LIBTOOL) --mode=link $(CC) -o `$(BASENAME) $@` \
 +				$(GSM_OBJECTS:.o=.lo) \
-+				-rpath $(PREFIX)/lib -version-info 1:10
++				-rpath $(PREFIX)/lib -version-info 1:12
  
  
  # Toast, Untoast and Tcat -- the compress-like frontends to gsm.
@@ -141,7 +125,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  
  $(UNTOAST):	$(BIN) $(TOAST)
  		-rm $(RMFLAGS) $(UNTOAST)
-@@ -332,12 +344,12 @@ $(LIB):
+@@ -332,12 +342,12 @@ $(LIB):
  
  gsminstall:
  		-if [ x"$(GSM_INSTALL_ROOT)" != x ] ; then	\
@@ -156,7 +140,7 @@ $NetBSD: patch-ab,v 1.9 2008/05/20 19:30:01 tnn Exp $
  		fi
  
  gsmuninstall:
-@@ -351,52 +363,34 @@ toastuninstall:
+@@ -351,52 +361,34 @@ toastuninstall:
  		fi
  
  $(TOAST_INSTALL_BIN)/toast:	$(TOAST)

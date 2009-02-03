@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.1 1998/12/31 05:51:01 garbled Exp $
---- src/code.c.orig	Mon Dec 28 11:04:16 1998
-+++ src/code.c	Mon Dec 28 11:04:46 1998
+$NetBSD: patch-ac,v 1.2 2009/02/03 06:09:09 obache Exp $
+
+--- src/code.c.orig	2006-04-26 19:16:50.000000000 +0000
++++ src/code.c
 @@ -11,6 +11,7 @@
  
  #ifdef	HAS_STDLIB_H
