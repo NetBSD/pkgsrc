@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.454 2009/02/03 06:03:06 seb Exp $
+$NetBSD: CHANGES-2009,v 1.455 2009/02/03 06:09:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -621,3 +621,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/ies4linux version 2.99.0.1 [abs 2009-02-02]
 	Updated net/p5-NetAddr-IP to 4.024 [seb 2009-02-02]
 	Added devel/p5-Config-Auto version 0.20 [seb 2009-02-03]
+	Updated audio/gsm to 1.0.12 [obache 2009-02-03]
