@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/02/03 06:11:12 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 RPLAY_BUILDLINK3_MK:=	${RPLAY_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}rplay
 
 .if !empty(RPLAY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.rplay+=	rplay>=3.3.2nb1
-BUILDLINK_ABI_DEPENDS.rplay+=	rplay>=3.3.2nb2
+BUILDLINK_ABI_DEPENDS.rplay+=	rplay>=3.3.2nb5
 BUILDLINK_PKGSRCDIR.rplay?=	../../audio/rplay
 .endif	# RPLAY_BUILDLINK3_MK
 
