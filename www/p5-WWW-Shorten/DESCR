@@ -1,0 +1,5 @@
+The Perl 5 module WWW::Shorten provides an interface to URL shortening
+sites. These sites maintain databases of long URLs, each of which
+has a unique identifier. A very simple program called shorten is
+supplied. This program takes a URL and gives you a shortened version
+of it.
