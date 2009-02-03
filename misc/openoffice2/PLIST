@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/26 21:55:55 hira Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2009/02/03 07:02:22 rtr Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
@@ -295,29 +295,6 @@ ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-spreadsheet-template.des
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-spreadsheet.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-text-template.desktop
 ${PLIST.kde}share/kde/mimelnk/application/${OO_UNXNAME}-text.desktop
-share/mime/application/vnd.oasis.opendocument.formula.xml
-share/mime/application/vnd.oasis.opendocument.graphics-template.xml
-share/mime/application/vnd.oasis.opendocument.graphics.xml
-share/mime/application/vnd.oasis.opendocument.presentation-template.xml
-share/mime/application/vnd.oasis.opendocument.presentation.xml
-share/mime/application/vnd.oasis.opendocument.spreadsheet-template.xml
-share/mime/application/vnd.oasis.opendocument.spreadsheet.xml
-share/mime/application/vnd.oasis.opendocument.text-master.xml
-share/mime/application/vnd.oasis.opendocument.text-template.xml
-share/mime/application/vnd.oasis.opendocument.text-web.xml
-share/mime/application/vnd.oasis.opendocument.text.xml
-share/mime/application/vnd.openofficeorg.extension.xml
-share/mime/application/vnd.sun.xml.base.xml
-share/mime/application/vnd.sun.xml.calc.template.xml
-share/mime/application/vnd.sun.xml.calc.xml
-share/mime/application/vnd.sun.xml.draw.template.xml
-share/mime/application/vnd.sun.xml.draw.xml
-share/mime/application/vnd.sun.xml.impress.template.xml
-share/mime/application/vnd.sun.xml.impress.xml
-share/mime/application/vnd.sun.xml.math.xml
-share/mime/application/vnd.sun.xml.writer.global.xml
-share/mime/application/vnd.sun.xml.writer.template.xml
-share/mime/application/vnd.sun.xml.writer.xml
 share/mime/packages/openoffice.org.xml
 share/mime-info/${OO_UNXNAME}.mime
 share/mime-info/${OO_UNXNAME}.keys
