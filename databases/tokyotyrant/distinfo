@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/01/04 11:04:35 obache Exp $
+$NetBSD: distinfo,v 1.8 2009/02/03 13:57:56 obache Exp $
 
-SHA1 (tokyotyrant-1.1.11.tar.gz) = 1927ecc0e313e82815d216336052529cf40a4f9e
-RMD160 (tokyotyrant-1.1.11.tar.gz) = 165ad5df56812cdea9cf772ac2a7fc78512d9400
-Size (tokyotyrant-1.1.11.tar.gz) = 150615 bytes
-SHA1 (patch-aa) = 94d950d5ddee5520cc1637f7026270ce0b5e1af5
-SHA1 (patch-ab) = 78838c7880b618a9f4c8c3ae8f9fc774a4f54f3c
-SHA1 (patch-ac) = 0ff0811b359e8a2687ad962f85758b2b60b265b1
+SHA1 (tokyotyrant-1.1.12.tar.gz) = 8309184bae3439f86bd515f0e61c7ec00e211fb0
+RMD160 (tokyotyrant-1.1.12.tar.gz) = dfe9ed375725adf2e133cc2f3ff6b1cb442bc86d
+Size (tokyotyrant-1.1.12.tar.gz) = 156659 bytes
+SHA1 (patch-aa) = 3e6c0c507c8b224bc922ef8649076bfe6a9c677a
+SHA1 (patch-ab) = 1957e87484587425a59ecf18685eebad875f2915
+SHA1 (patch-ac) = d3e44e7cdc81682422b4d4fa25cef4effeaaf1cd

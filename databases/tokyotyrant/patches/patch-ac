@@ -1,8 +1,9 @@
-$NetBSD: patch-ac,v 1.1 2008/12/18 12:02:34 obache Exp $
+$NetBSD: patch-ac,v 1.2 2009/02/03 13:57:56 obache Exp $
 
 Add NetBSD support.
+http://sourceforge.net/tracker/index.php?func=detail&aid=2447593&group_id=200242&atid=972717
 
---- myconf.h.orig	2008-12-07 02:38:46.000000000 +0000
+--- myconf.h.orig	2009-02-02 02:33:22.000000000 +0000
 +++ myconf.h
 @@ -91,7 +91,7 @@
  
@@ -13,8 +14,8 @@ Add NetBSD support.
  #error =======================================
  #error Your platform is not supported.  Sorry.
  #error =======================================
-@@ -209,7 +209,7 @@
- #include <tcbdb.h>
+@@ -211,7 +211,7 @@
+ #include <tctdb.h>
  #include <tcadb.h>
  
 -#if defined(_SYS_FREEBSD_) || defined(_SYS_MACOSX_)
@@ -22,3 +23,12 @@ Add NetBSD support.
  #define TTUSEKQUEUE    1
  #else
  #include <sys/epoll.h>
+@@ -227,7 +227,7 @@
+ 
+ #define sizeof(a)      ((int)sizeof(a))
+ 
+-#if defined(_SYS_FREEBSD_) || defined(_SYS_NETBSD_) || defined(_SYS_OPENBSD_)
++#if defined(_SYS_FREEBSD_)
+ #define nan(TC_a)      strtod("nan", NULL)
+ #endif
+ 
