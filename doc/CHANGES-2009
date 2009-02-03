@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.460 2009/02/03 12:24:55 obache Exp $
+$NetBSD: CHANGES-2009,v 1.461 2009/02/03 12:45:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -631,3 +631,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/x264-devel to 20081217nb1 [obache 2009-02-03]
 	Updated chat/ejabberd to 2.0.3 [martti 2009-02-03]
 	Updated fonts/vlgothic-ttf to 20090108 [obache 2009-02-03]
+	Updated graphics/ruby-RMagick to 2.9.1 [obache 2009-02-03]
