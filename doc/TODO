@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7831 2009/02/01 12:37:37 obache Exp $
+$NetBSD: TODO,v 1.7832 2009/02/03 06:17:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -663,7 +663,6 @@ Suggested package updates
 	o groff-1.20.1
 	o gsasl-1.0
 	o gsharutils-4.7
-	o gsm-1.0.12
 	o gss-0.0.22
 	o gst-plugins0.10-bad-0.10.10
 	o gst-plugins0.10-base-0.10.22
