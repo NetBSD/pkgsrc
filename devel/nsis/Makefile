@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/02/03 15:24:46 sborrill Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/03 15:29:46 sborrill Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsis/}
 EXTRACT_SUFX=	.zip .tar.bz2
@@ -13,7 +13,7 @@ MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
-DEPENDS+=	scons-devel>=0.96.91:../../devel/scons-devel
+DEPENDS+=	scons>=0.96.91:../../devel/scons
 
 USE_TOOLS+=	pax
 
