@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/11/09 20:09:02 adrianp Exp $
+# $NetBSD: Makefile,v 1.34 2009/02/03 23:05:28 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-2.22.6
+DISTNAME=	bugzilla-2.22.7
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
