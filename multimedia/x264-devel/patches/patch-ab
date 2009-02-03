@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2008/12/18 16:19:07 bjs Exp $
+$NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
 
---- Makefile.orig	2008-12-12 16:45:07.000000000 -0500
+--- Makefile.orig	2008-12-17 21:45:13.000000000 +0000
 +++ Makefile
 @@ -40,9 +40,9 @@ endif
  ifdef ARCH_X86
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.9 2008/12/18 16:19:07 bjs Exp $
 +libx264.la: .depend $(OBJS) $(OBJASM)
 +	${LIBTOOL} --mode=link \
 +	${CC} -o libx264.la -rpath ${PREFIX}/lib -version-info 0 \
-+	$(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
++	$(OBJS) $(OBJASM) ${LDFLAGS}
  
  $(SONAME): .depend $(OBJS) $(OBJASM)
  	$(CC) -shared -o $@ $(OBJS) $(OBJASM) $(SOFLAGS) $(LDFLAGS)
