@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.456 2009/02/03 06:16:28 obache Exp $
+$NetBSD: CHANGES-2009,v 1.457 2009/02/03 06:17:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -627,3 +627,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mbone/vat to 4.0b2nb2 [obache 2009-02-03]
 	Updated wm/metisse to 0.4.0rc4nb3 [obache 2009-02-03]
 	Updated wm/vtwm to 5.4.7nb2 [obache 2009-02-03]
+	Added www/p5-WWW-Shorten version 2.02 [seb 2009-02-03]
