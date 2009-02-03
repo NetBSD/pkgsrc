@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/31 12:23:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/03 23:11:13 adrianp Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -480,6 +480,7 @@ share/bugzilla/template/en/default/global/choose-classification.html.tmpl
 share/bugzilla/template/en/default/global/choose-product.html.tmpl
 share/bugzilla/template/en/default/global/code-error.html.tmpl
 share/bugzilla/template/en/default/global/common-links.html.tmpl
+share/bugzilla/template/en/default/global/confirm-action.html.tmpl
 share/bugzilla/template/en/default/global/confirm-user-match.html.tmpl
 share/bugzilla/template/en/default/global/docslinks.html.tmpl
 share/bugzilla/template/en/default/global/field-descs.none.tmpl
