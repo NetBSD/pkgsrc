@@ -1,0 +1,4 @@
+The Perl 5 module Config::Auto provides an interface to diverse
+config file formats 'magically': colon separated, space separated,
+equals separated, XML, Perl code, Windows INI, BIND9 and irssi style
+config files format are supported.
