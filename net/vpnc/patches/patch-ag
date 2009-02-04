@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/02/04 21:51:27 drochner Exp $
+
+--- tunip.c.orig	2009-02-04 16:07:34.000000000 +0100
++++ tunip.c
+@@ -881,7 +881,7 @@ static void vpnc_main_loop(struct sa_blo
+ 				}
+ 			}
+ 			DEBUG(2,printf("lifetime status: %ld of %u seconds used, %u|%u of %u kbytes used\n",
+-				time(NULL) - s->ipsec.life.start,
++				(long)(time(NULL) - s->ipsec.life.start),
+ 				s->ipsec.life.seconds,
+ 				s->ipsec.life.rx/1024,
+ 				s->ipsec.life.tx/1024,
