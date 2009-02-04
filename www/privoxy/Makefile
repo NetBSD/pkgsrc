@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2009/02/04 21:20:39 drochner Exp $
+# $NetBSD: Makefile,v 1.37 2009/02/04 21:30:53 drochner Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-stable-src
-PKGNAME=	privoxy-3.0.8
-PKGREVISION=	2
+PKGNAME=	privoxy-3.0.10
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ijbswa/}
 
@@ -69,5 +68,6 @@ post-install:
 	${CHMOD} -R a+r ${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
