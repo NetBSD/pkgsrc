@@ -1,24 +1,23 @@
-$NetBSD: patch-ac,v 1.6 2008/05/29 20:50:31 sketch Exp $
+$NetBSD: patch-ac,v 1.7 2009/02/04 21:51:27 drochner Exp $
 
---- vpnc-script.orig	2007-09-06 21:05:15.000000000 +0100
-+++ vpnc-script	2008-05-29 13:32:02.000000000 +0100
-@@ -56,18 +56,19 @@
- 		;;
- esac
+--- vpnc-script.in.orig	2009-02-04 14:40:43.000000000 +0100
++++ vpnc-script.in
+@@ -48,18 +48,19 @@ PATH=/sbin:/usr/sbin:$PATH
+ 
+ OS="`uname -s`"
  
 -DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
 -RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
--FULL_SCRIPTNAME=/usr/local/sbin/vpnc
 +STATEDIR=@VARBASE@/run/vpnc
 +DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
 +RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
-+FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
+ FULL_SCRIPTNAME=@PREFIX@/sbin/vpnc
  SCRIPTNAME=`basename $FULL_SCRIPTNAME`
  
  # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
--if ! [ -d "/var/run/vpnc" ]; then
+-if [ ! -d "/var/run/vpnc" ]; then
 -	mkdir -p /var/run/vpnc
-+if ! [ -d $STATEDIR ]; then
++if [ ! -d $STATEDIR ]; then
 +	mkdir -p $STATEDIR
  fi
  
@@ -28,11 +27,11 @@ $NetBSD: patch-ac,v 1.6 2008/05/29 20:50:31 sketch Exp $
  
  if [ "$OS" = "Linux" ]; then
  	ifconfig_syntax_ptp="pointopoint"
-@@ -157,7 +158,7 @@
+@@ -163,7 +164,7 @@ else # use route command
  		# isn't -n supposed to give --numeric output?
  		# apperently not...
  		# Get rid of lines containing IPv6 addresses (':')
--		netstat -r -n | sed 's/default/0.0.0.0/' | sed 's/^.*:.*$//' | grep '^0.0.0.0' | awk '{print $2}'
+-		netstat -r -n | awk '/:/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
 +		netstat -r -n | awk '/:/ { next; } $2 ~ /^link/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'
  	}
  	
