@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/10/09 10:33:40 adam Exp $
+# $NetBSD: Makefile,v 1.56 2009/02/04 21:44:38 drochner Exp $
 
 DISTNAME=		scribus-1.3.3.12
 CATEGORIES=		print
@@ -26,8 +26,8 @@ CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR}
 # stupid assumptions in the configure script
 PYTHON_VERSIONS_ACCEPTED=	25 24
 CONFIGURE_ARGS+=	--with-pythondir=${PREFIX}
-# avoid CUPS libs to be pulled in
-CONFIGURE_ENV+=		ac_cv_prog_hacups=no
+# XXX make an option
+CONFIGURE_ARGS+=	--disable-cups
 
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
