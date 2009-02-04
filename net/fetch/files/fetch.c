@@ -36,6 +36,7 @@
 #if HAVE_SYS_PARAM_H
 #include <sys/param.h>
 #endif
+#include <sys/ioctl.h>
 #if HAVE_SYS_SOCKET_H
 #include <sys/socket.h>
 #endif
@@ -600,7 +601,7 @@ fetch(char *URL, const char *path)
 
 				fd = mkstemp(tmppath);
 				if (fd == -1) {
-					warn("%s: mkstemp failed");
+					warn("%s: mkstemp failed", tmppath);
 					goto failure;
 				}
 				fchown(fd, sb.st_uid, sb.st_gid);
