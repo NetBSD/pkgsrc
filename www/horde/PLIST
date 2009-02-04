@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/12/15 23:05:14 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.20.2.1 2009/02/04 21:28:43 tron Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -241,7 +241,6 @@ share/horde/lib/Horde/Editor.php
 share/horde/lib/Horde/Editor/fckeditor.php
 share/horde/lib/Horde/Editor/tinymce.php
 share/horde/lib/Horde/Editor/xinha.php
-share/horde/lib/Horde/Exception.php
 share/horde/lib/Horde/Feed.php
 share/horde/lib/Horde/Feed/Atom.php
 share/horde/lib/Horde/Feed/Base.php
@@ -295,6 +294,7 @@ share/horde/lib/Horde/Image/Effect/gd/round_corners.php
 share/horde/lib/Horde/Image/Effect/gd/text_watermark.php
 share/horde/lib/Horde/Image/Effect/gd/unsharp_mask.php
 share/horde/lib/Horde/Image/Effect/im/border.php
+share/horde/lib/Horde/Image/Effect/im/composite.php
 share/horde/lib/Horde/Image/Effect/im/drop_shadow.php
 share/horde/lib/Horde/Image/Effect/im/photo_stack.php
 share/horde/lib/Horde/Image/Effect/im/polaroid_image.php
