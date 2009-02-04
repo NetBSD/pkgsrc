@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.466 2009/02/03 23:11:24 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.467 2009/02/04 12:22:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -638,3 +638,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/dejavu-ttf to 2.28 [jakllsch 2009-02-03]
 	Updated devel/bugzilla to 2.22.7 [adrianp 2009-02-03]
 	Updated devel/bugzilla3 to 3.2.2 [adrianp 2009-02-03]
+	Updated www/squid30 to 3.0.13 [taca 2009-02-04]
