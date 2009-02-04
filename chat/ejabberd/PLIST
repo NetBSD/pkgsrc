@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/12 13:13:59 martti Exp $
+@comment $NetBSD: PLIST,v 1.3.2.1 2009/02/04 12:30:43 rtr Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
 ${EJABBERD_EXDIR}/ejabberdctl.cfg
 ${EJABBERD_EXDIR}/inetrc
@@ -170,7 +170,6 @@ share/doc/${PKGNAME}/features.tex
 share/doc/${PKGNAME}/flow.dot
 share/doc/${PKGNAME}/guide.html
 share/doc/${PKGNAME}/guide.tex
-share/doc/${PKGNAME}/guide.tex.orig
 share/doc/${PKGNAME}/introduction.tex
 share/doc/${PKGNAME}/logo.png
 share/doc/${PKGNAME}/mod_http_bind.tex
@@ -186,6 +185,7 @@ share/doc/${PKGNAME}/release_notes_1.1.3.txt
 share/doc/${PKGNAME}/release_notes_1.1.4.txt
 share/doc/${PKGNAME}/release_notes_2.0.0.txt
 share/doc/${PKGNAME}/release_notes_2.0.1.txt
+share/doc/${PKGNAME}/release_notes_2.0.2.txt
 share/doc/${PKGNAME}/version.tex
 share/doc/${PKGNAME}/webadmmain.png
 share/doc/${PKGNAME}/webadmmainru.png
