@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.139 2009/02/02 13:01:29 joerg Exp $
+# $NetBSD: bootstrap,v 1.140 2009/02/04 07:44:58 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -890,7 +890,7 @@ bmake="$wrkdir/bin/bmake $make_quiet_flags"
 # build libnbcompat
 echo_msg "Building libnbcompat"
 copy_src $pkgsrcdir/pkgtools/libnbcompat/files libnbcompat
-run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake $make_quiet_flags)"
+run_cmd "(cd $wrkdir/libnbcompat; $shprog ./configure $configure_quiet_flags -C --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir --enable-bsd-getopt --enable-db && $bmake $make_quiet_flags)"
 
 # bootstrap ksh if necessary
 case "$need_ksh" in
