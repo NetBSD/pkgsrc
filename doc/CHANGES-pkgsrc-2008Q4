@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.43 2009/02/04 12:31:21 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.44 2009/02/04 21:39:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -121,3 +121,9 @@ pullup ticket #2677 - requested by hira
 openoffice2: destdir and time_t fixes
 pullup ticket #2680 - requested by martti
 ejabberd: update package
+Pullup ticket #2682 - requested by adrianp
+bugzilla3: security update
+Pullup ticket #2683 - requested by adrianp
+horde: security update
+Pullup ticket #2684 - requested by adrianp
+imp: security update
