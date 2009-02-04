@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/10/18 11:00:09 obache Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/04 12:30:14 is Exp $
 
-DISTNAME=	pmccabe_2.2-3
-PKGNAME=	pmccabe-2.2.3
+DISTNAME=	pmccabe-2.5-CVS20081026
+PKGNAME=	pmccabe-2.5
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/pmccabe/}
+MASTER_SITES=	http://cvs.parisc-linux.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.parisc-linux.org/~bame/pmccabe/
