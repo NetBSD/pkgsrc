@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2008/12/23 02:08:06 hasso Exp $
+$NetBSD: patch-ag,v 1.2 2009/02/04 07:07:18 dbj Exp $
 
---- configure.orig	2008-12-21 13:37:12 +0200
-+++ configure	2008-12-21 13:37:41 +0200
-@@ -22820,7 +22820,7 @@ with_distro=`echo ${with_distro} | tr '[
+--- configure.orig	2008-12-12 12:56:20.000000000 -0800
++++ configure	2009-02-03 22:49:47.000000000 -0800
+@@ -18055,7 +18055,7 @@ with_distro=`echo ${with_distro} | tr '[
  case $with_distro in
      debian|gentoo|archlinux|suse|fedora|mandriva|darwin|freebsd|slackware|none)
       ;;
@@ -11,3 +11,13 @@ $NetBSD: patch-ag,v 1.1 2008/12/23 02:08:06 hasso Exp $
       { $as_echo "$as_me:$LINENO: WARNING: Your distribution (${with_distro}) is supported but no init script exist yet! (patches welcome)" >&5
  $as_echo "$as_me: WARNING: Your distribution (${with_distro}) is supported but no init script exist yet! (patches welcome)" >&2;}
       ;;
+@@ -19348,7 +19348,8 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-$ac_includes_default
++#include<sys/socket.h>
++
+ int
+ main ()
+ {
