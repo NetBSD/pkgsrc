@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/11/12 13:13:59 martti Exp $
+# $NetBSD: Makefile,v 1.6.2.1 2009/02/04 12:30:42 rtr Exp $
 
-DISTNAME=	ejabberd-2.0.2
+DISTNAME=	ejabberd-2.0.3
 #PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.2/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.3/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
@@ -49,6 +49,8 @@ BUILD_DEFS+=		EJABBERD_EXDIR
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 .include "../../mk/bsd.prefs.mk"
 
 EJABBERD_USER=		ejabberd
@@ -84,6 +86,9 @@ CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
 CONF_FILES+=		${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg
 CONF_FILES+=		${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc
 
+post-patch:
+	${RM} -f ${WRKSRC}/doc/guide.tex.orig
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${PKGNAME_NOREV}
 	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${PKGNAME_NOREV}
@@ -95,6 +100,7 @@ SUBST_MESSAGE.paths=	Localizing paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	src/Makefile.in
 SUBST_FILES.paths+=	src/ejabberdctl.template
+SUBST_FILES.paths+=	doc/guide.tex
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@JABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'
 SUBST_SED.paths+=	-e 's,@EJABBERD_LOGDIR@,${EJABBERD_LOGDIR},g'

@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.4 2008/11/12 13:13:59 martti Exp $
+$NetBSD: distinfo,v 1.4.2.1 2009/02/04 12:30:43 rtr Exp $
 
-SHA1 (ejabberd-2.0.2.tar.gz) = 7c82082b941277fe18aac25ca9b2016f25dc8472
-RMD160 (ejabberd-2.0.2.tar.gz) = b24c1c2d6ce8c56fd26f28a98b89d99890dbad72
-Size (ejabberd-2.0.2.tar.gz) = 1040817 bytes
+SHA1 (ejabberd-2.0.3.tar.gz) = ee3a503befea79378c4c8f7ce5be6151209bf474
+RMD160 (ejabberd-2.0.3.tar.gz) = e5f77715a9e74dfed5b9dbdd17ad2255d40f3d13
+Size (ejabberd-2.0.3.tar.gz) = 1089870 bytes
 SHA1 (patch-aa) = 5b0c2994aad402cf13cc9531465513aad69de1e0
-SHA1 (patch-ab) = a083116beb37cd19a011993e009b57a0a4b202bf
-SHA1 (patch-ac) = 32387347e9581500cbdbdec971b0825c4043d1f1
+SHA1 (patch-ac) = 271640b343bdc24f6609fe9c95250a91d514bc28
 SHA1 (patch-ad) = a6504e8454878c97e434040a2f9136174b994c0d
 SHA1 (patch-ae) = c1c615a1d2e28d05d069f2bafa30179437922536
 SHA1 (patch-af) = 908ebaaea76de53cc22a53289d3b93189767d40c
-SHA1 (patch-ag) = 4cb80b3c530ddb561693a82b55254b322cb41a97
+SHA1 (patch-ag) = c6620ce3018e4c01d8c9edf6242a8cb52a55395d
 SHA1 (patch-ah) = 29b4440454a138908fe2c6937c65658e4cd689ba
 SHA1 (patch-ai) = 4b51670e283e7facd3142601d8560821b7829505
