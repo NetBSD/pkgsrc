@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.140 2009/02/04 07:44:58 joerg Exp $
+# $NetBSD: bootstrap,v 1.141 2009/02/05 18:53:03 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -1039,7 +1039,7 @@ case "$need_awk" in
 yes)	build_package "lang/nawk";;
 esac
 case "$need_sed" in
-yes)	build_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
+yes)	build_package "textproc/nbsed";;
 esac
 case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
