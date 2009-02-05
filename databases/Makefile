@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2009/01/24 03:05:39 obache Exp $
+# $NetBSD: Makefile,v 1.291 2009/02/05 13:57:58 jnemeth Exp $
 #
 
 COMMENT=	Databases
@@ -63,7 +63,9 @@ SUBDIR+=	odbc-postgresql
 SUBDIR+=	openldap
 SUBDIR+=	openldap-client
 SUBDIR+=	openldap-doc
+SUBDIR+=	openldap-nops
 SUBDIR+=	openldap-server
+SUBDIR+=	openldap-smbk5pwd
 SUBDIR+=	oraedit
 SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
