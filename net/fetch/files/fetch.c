@@ -101,7 +101,6 @@ int	 r_flag;	/*    -r: restart previously interrupted transfer */
 off_t	 S_size;        /*    -S: require size to match */
 int	 s_flag;        /*    -s: show size, don't fetch */
 long	 T_secs = 120;	/*    -T: transfer timeout in seconds */
-int	 t_flag;	/*!   -t: workaround TCP bug */
 int	 U_flag;	/*    -U: do not use high ports */
 int	 v_level = 1;	/*    -v: verbosity level */
 int	 v_tty;		/*        stdout is a tty */
@@ -780,7 +779,7 @@ main(int argc, char *argv[])
 	int c, e, r;
 
 	while ((c = getopt(argc, argv,
-	    "146AaB:dFilMmN:no:qRrS:sT:tUvw:")) != -1)
+	    "146AaB:dFilMmN:no:qRrS:sT:Uvw:")) != -1)
 		switch (c) {
 		case '1':
 			once_flag = 1;
@@ -855,10 +854,6 @@ main(int argc, char *argv[])
 			T_secs = strtol(optarg, &end, 10);
 			if (*optarg == '\0' || *end != '\0')
 				errx(1, "invalid timeout (%s)", optarg);
-			break;
-		case 't':
-			t_flag = 1;
-			warnx("warning: the -t option is deprecated");
 			break;
 		case 'U':
 			U_flag = 1;
