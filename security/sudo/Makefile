@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.113 2008/06/30 15:53:41 taca Exp $
+# $NetBSD: Makefile,v 1.113.10.1 2009/02/05 17:00:25 tron Exp $
 #
 
-DISTNAME=		sudo-1.6.9p17
+DISTNAME=		sudo-1.7.0
 CATEGORIES=		security
 MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
 			ftp://ftp.courtesan.com/pub/sudo/ \
@@ -24,6 +24,7 @@ OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
 PKG_DESTDIR_SUPPORT=	destdir
+PLIST_VARS+=		ldap
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -31,7 +32,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 CONFIGURE_ENV+=		NROFFPROG=${CAT:Q}
 CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
-CONFIGURE_ARGS+=	--disable-root-mailer
+CONFIGURE_ARGS+=	--disable-root-mailer --with-ignore-dot
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-timedir=${VARBASE:Q}/run/sudo
 CONFIGURE_ARGS+=	--with-logpath=${VARBASE:Q}/log/sudo.log
