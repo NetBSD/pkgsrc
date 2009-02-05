@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/01/29 12:56:03 jmcneill Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/05 21:05:07 tron Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -54,6 +54,17 @@ SUBST_SED.padsp=	-e 's@libpulsedsp\.so@${PREFIX}/lib/&@'
 .if ${OPSYS} == "NetBSD"
 # broken test for TLS
 CONFIGURE_ENV+=		cc_cv_tls___thread=no
+.endif
+
+PLIST_VARS+=		hal oss
+
+.if ${OPSYS} == "Darwin"
+BUILDLINK_TRANSFORM+=	rm:-Wl,-version-script=./map-file
+BUILDLINK_TRANSFORM+=	rm:-Wl,-no-undefined
+BUILDLINK_TRANSFORM+=	rm:-Wl,-z rm:-Wl,nodelete
+.else
+PLIST.hal=		yes
+PLIST.oss=		yes
 .endif
 
 PKG_GROUPS=             ${PULSE_GROUP}
