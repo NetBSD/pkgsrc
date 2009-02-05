@@ -84,7 +84,6 @@
 int	 A_flag;	/*    -A: do not follow 302 redirects */
 int	 a_flag;	/*    -a: auto retry */
 off_t	 B_size;	/*    -B: buffer size */
-int	 b_flag;	/*!   -b: workaround TCP bug */
 int	 d_flag;	/*    -d: direct connection */
 int	 F_flag;	/*    -F: restart without checking mtime  */
 int	 i_flag;	/*    -i: fetch file if modified */
@@ -781,7 +780,7 @@ main(int argc, char *argv[])
 	int c, e, r;
 
 	while ((c = getopt(argc, argv,
-	    "146AaB:bdFilMmN:no:qRrS:sT:tUvw:")) != -1)
+	    "146AaB:dFilMmN:no:qRrS:sT:tUvw:")) != -1)
 		switch (c) {
 		case '1':
 			once_flag = 1;
@@ -802,10 +801,6 @@ main(int argc, char *argv[])
 			B_size = (off_t)strtol(optarg, &end, 10);
 			if (*optarg == '\0' || *end != '\0')
 				errx(1, "invalid buffer size (%s)", optarg);
-			break;
-		case 'b':
-			warnx("warning: the -b option is deprecated");
-			b_flag = 1;
 			break;
 		case 'd':
 			d_flag = 1;
