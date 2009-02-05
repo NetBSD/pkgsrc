@@ -90,6 +90,7 @@ int	 d_flag;	/*    -d: direct connection */
 int	 F_flag;	/*    -F: restart without checking mtime  */
 char	*f_filename;	/*    -f: file to fetch */
 char	*h_hostname;	/*    -h: host to fetch from */
+int	 i_flag;	/*    -i: fetch file if modified */
 int	 l_flag;	/*    -l: link rather than copy file: URLs */
 int	 m_flag;	/* -[Mm]: mirror mode */
 char	*N_filename;	/*    -N: netrc file name */
@@ -393,6 +394,17 @@ fetch(char *URL, const char *path)
 		break;
 	}
 
+	/* Protocol independent flags */
+	if (i_flag) {
+		if (stat(path, &sb) == 0) {
+			url->last_modified = sb.st_mtime;
+			strcat(flags, "i");
+		} else if (errno != ENOENT) {
+			warn("%s: stat()", path);
+			goto failure;
+		}
+	}
+
 	/* FTP specific flags */
 	if (strcmp(url->scheme, SCHEME_FTP) == 0) {
 		if (d_flag)
@@ -474,6 +486,12 @@ fetch(char *URL, const char *path)
 		alarm(0);
 	if (sigalrm || sigint)
 		goto signal;
+	if (f == NULL && i_flag && fetchLastErrCode == FETCH_UNCHANGED) {
+		/* URL was not modified, return OK. */
+		printf("%s: not modified\n", URL);
+		r = 0;
+		goto done;
+	}
 	if (f == NULL) {
 		warnx("%s: %s", URL, fetchLastErrString);
 		goto failure;
@@ -747,7 +765,7 @@ static void
 usage(void)
 {
 	fprintf(stderr, "%s\n%s\n%s\n",
-	    "usage: fetch [-146AFMPRUadlmnpqrsv] [-N netrc] [-o outputfile]",
+	    "usage: fetch [-146AFMPRUadilmnpqrsv] [-N netrc] [-o outputfile]",
 	    "             [-S bytes] [-B bytes] [-T seconds] [-w seconds]",
 	    "             [-h host -f file [-c dir] | URL ...]");
 }
@@ -766,7 +784,7 @@ main(int argc, char *argv[])
 	int c, e, r;
 
 	while ((c = getopt(argc, argv,
-	    "146AaB:bc:dFf:Hh:lMmN:no:qRrS:sT:tUvw:")) != -1)
+	    "146AaB:bc:dFf:Hh:ilMmN:no:qRrS:sT:tUvw:")) != -1)
 		switch (c) {
 		case '1':
 			once_flag = 1;
@@ -810,6 +828,9 @@ main(int argc, char *argv[])
 			break;
 		case 'h':
 			h_hostname = optarg;
+			break;
+		case 'i':
+			i_flag = 1;
 			break;
 		case 'l':
 			l_flag = 1;
@@ -934,6 +955,10 @@ main(int argc, char *argv[])
 	if (o_flag) {
 		if (strcmp(o_filename, "-") == 0) {
 			o_stdout = 1;
+			if (i_flag) {
+				warnx("-i and -o - are incompatible, dropping -i");
+				i_flag = 0;
+			}
 		} else if (stat(o_filename, &sb) == -1) {
 			if (errno == ENOENT) {
 				if (argc > 1)

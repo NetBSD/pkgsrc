@@ -4,7 +4,7 @@ NNAAMMEE
      ffeettcchh -- retrieve a file by Uniform Resource Locator
 
 SSYYNNOOPPSSIISS
-     ffeettcchh [--114466AAFFMMRRUUaaddllmmnnqqrrssvv] [--BB _b_y_t_e_s] [--SS _b_y_t_e_s] [--TT _s_e_c_o_n_d_s] [--NN _f_i_l_e]
+     ffeettcchh [--114466AAFFMMRRUUaaddiillmmnnqqrrssvv] [--BB _b_y_t_e_s] [--SS _b_y_t_e_s] [--TT _s_e_c_o_n_d_s] [--NN _f_i_l_e]
            [--oo _f_i_l_e] [--ww _s_e_c_o_n_d_s] [--hh _h_o_s_t] [--cc _d_i_r] [--ff _f_i_l_e] [_U_R_L _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
@@ -49,6 +49,9 @@ DDEESSCCRRIIPPTTIIOONN
      --hh _h_o_s_t     The file to retrieve is located on the host _h_o_s_t.  This
                  option is deprecated and is provided for backward compatibil-
                  ity only.
+
+     --ii          Only fetch if it the output file is older than the referenced
+                 URL.  This option is overriden by --oo _-.
 
      --ll          If the target is a file-scheme URL, make a symbolic link to
                  the target rather than trying to copy it.
@@ -150,4 +153,4 @@ NNOOTTEESS
      One cannot both use the --hh, --cc and --ff options and specify URLs on the
      command line.
 
-NetBSD 4.0                      March 11, 2003                      NetBSD 4.0
+NetBSD 5.0                      March 11, 2003                      NetBSD 5.0
