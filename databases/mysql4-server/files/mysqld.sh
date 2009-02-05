@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.6 2008/03/26 13:22:00 wiz Exp $
+# $NetBSD: mysqld.sh,v 1.7 2009/02/05 13:46:36 he Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -27,7 +27,6 @@ procname="@PREFIX@/libexec/${name}"
 : ${mysqld_user:=@MYSQL_USER@}
 : ${mysqld_group:=@MYSQL_GROUP@}
 : ${mysqld_datadir:=@MYSQL_DATADIR@}
-pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 
 extra_commands="initdb"
 initdb_cmd="mysqld_initdb"
@@ -80,11 +79,13 @@ mysqld_start()
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
+	pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 	run_rc_command "$1"
 else
 	if [ -f /etc/rc.conf ]; then
 		. /etc/rc.conf
 	fi
+	pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 	case "$1" in
 	initdb)
 		eval ${initdb_cmd}
