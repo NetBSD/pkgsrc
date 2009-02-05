@@ -1,4 +1,4 @@
-# $NetBSD: tools.UnixWare.mk,v 1.12 2005/06/24 20:59:59 jlam Exp $
+# $NetBSD: tools.UnixWare.mk,v 1.13 2009/02/05 19:03:29 joerg Exp $
 #
 # System-supplied tools for the UnixWare 7 operating system.
 
@@ -51,3 +51,6 @@ TOOLS_PLATFORM.true?=		/usr/bin/true
 TOOLS_PLATFORM.tsort?=		/usr/ccs/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+
+# Special bootstrap script
+TOOLS_PLATFORM.mkdir?=		${LOCALBASE}/sbin/mkdir-sh -p
