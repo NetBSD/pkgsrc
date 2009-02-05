@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/03 20:38:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/05 23:40:22 jmcneill Exp $
 #
 
 DISTNAME=	dejavu-fonts-ttf-2.28
@@ -24,6 +24,8 @@ FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 EGDIR=		${PREFIX}/share/examples/dejavu-ttf
 FCEGDIR=	${EGDIR}/fontconfig-conf.d
 FCCFDIR=	${PKG_SYSCONFDIR}/fontconfig/conf.d
+
+MAKE_DIRS+=	${FCCFDIR}
 
 CONF_FILES=	${FCEGDIR}/20-unhint-small-dejavu-sans-mono.conf \
 		${FCCFDIR}/20-unhint-small-dejavu-sans-mono.conf
