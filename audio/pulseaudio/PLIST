@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/20 18:23:56 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/05 21:05:07 tron Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
 bin/pactl
-bin/padsp
+${PLIST.oss}bin/padsp
 bin/paplay
 bin/parec
 bin/pasuspender
@@ -86,7 +86,7 @@ lib/pulse-0.9/modules/module-esound-protocol-tcp.so
 lib/pulse-0.9/modules/module-esound-protocol-unix.so
 lib/pulse-0.9/modules/module-esound-sink.so
 lib/pulse-0.9/modules/module-gconf.so
-lib/pulse-0.9/modules/module-hal-detect.so
+${PLIST.hal}lib/pulse-0.9/modules/module-hal-detect.so
 lib/pulse-0.9/modules/module-http-protocol-tcp.so
 lib/pulse-0.9/modules/module-http-protocol-unix.so
 lib/pulse-0.9/modules/module-ladspa-sink.so
@@ -95,7 +95,7 @@ lib/pulse-0.9/modules/module-native-protocol-fd.so
 lib/pulse-0.9/modules/module-native-protocol-tcp.so
 lib/pulse-0.9/modules/module-native-protocol-unix.so
 lib/pulse-0.9/modules/module-null-sink.so
-lib/pulse-0.9/modules/module-oss.so
+${PLIST.oss}lib/pulse-0.9/modules/module-oss.so
 lib/pulse-0.9/modules/module-pipe-sink.so
 lib/pulse-0.9/modules/module-pipe-source.so
 lib/pulse-0.9/modules/module-position-event-sounds.so

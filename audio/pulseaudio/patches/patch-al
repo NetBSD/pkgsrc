@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2009/02/05 21:05:07 tron Exp $
+
+--- src/pulsecore/core-util.c.orig	2009-02-05 14:21:35.000000000 +0000
++++ src/pulsecore/core-util.c	2009-02-05 14:42:02.000000000 +0000
+@@ -105,6 +105,10 @@
+ #define MSG_NOSIGNAL 0
+ #endif
+ 
++#ifdef __APPLE__
++#include <xlocale.h>
++#endif
++
+ #ifdef OS_IS_WIN32
+ 
+ #define PULSE_ROOTENV "PULSE_ROOT"
