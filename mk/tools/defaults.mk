@@ -1,4 +1,4 @@
-# $NetBSD: defaults.mk,v 1.55 2008/11/15 20:20:44 minskim Exp $
+# $NetBSD: defaults.mk,v 1.56 2009/02/05 19:03:29 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,7 +43,6 @@ TOOLS_DEFAULTS_MK=	defined
 # XXX These should eventually just migrate over to the appropriate
 # XXX pkgsrc/mk/platform/${OPSYS}.mk file.
 #
-.include "${_PKGSRC_TOPDIR}/mk/tools/bootstrap.mk"
 .if exists(${_PKGSRC_TOPDIR}/mk/tools/tools.${OPSYS}.mk)
 .  include "${_PKGSRC_TOPDIR}/mk/tools/tools.${OPSYS}.mk"
 .endif

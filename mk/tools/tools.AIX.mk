@@ -1,4 +1,4 @@
-# $NetBSD: tools.AIX.mk,v 1.15 2009/02/02 11:14:11 joerg Exp $
+# $NetBSD: tools.AIX.mk,v 1.16 2009/02/05 19:03:29 joerg Exp $
 #
 # System-supplied tools for the AIX operating system.
 
@@ -65,3 +65,6 @@ TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
+
+# Special bootstrap script:
+TOOLS_PLATFORM.strip?=		${LOCALBASE}/bin/strip
