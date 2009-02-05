@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.476 2009/02/05 15:37:01 obache Exp $
+$NetBSD: CHANGES-2009,v 1.477 2009/02/05 21:22:39 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -650,3 +650,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/sudo to 1.7.0 [taca 2009-02-05]
 	Removed www/squid26 [taca 2009-02-05]
 	Updated databases/tokyocabinet to 1.4.4 [obache 2009-02-05]
+	Updated www/firefox3 to 3.0.6 [tnn 2009-02-05]
