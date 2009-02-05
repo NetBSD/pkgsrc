@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.470 2009/02/05 09:15:21 is Exp $
+$NetBSD: CHANGES-2009,v 1.471 2009/02/05 13:45:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -642,3 +642,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.11 [ghen 2009-02-04]
 	Updated net/skype to 1.4.0.118nb1 [jmcneill 2009-02-04]
 	Updated devel/pmccabe to 2.5 [is 2009-02-04]
+	Updated www/squid27 to 2.7.6 [taca 2009-02-05]
