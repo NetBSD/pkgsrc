@@ -69,7 +69,7 @@ OOPPTTIIOONNSS
              Like aauuddiitt--ppkkgg, but read the package names or patterns one per
              line from the given files.
 
-     aauuddiitt--hhiissttoorryy [--tt _t_y_p_e] [_p_k_g_b_a_s_e] ...
+     aauuddiitt--hhiissttoorryy [--ss] [--tt _t_y_p_e] [_p_k_g_b_a_s_e] ...
              Print all vulnerabilities for the given base package names.
 
      cchheecckk [_p_k_g _._._.]
@@ -93,6 +93,9 @@ OOPPTTIIOONNSS
              Check format and hashes in the pkg-vulnerabilties file _f_i_l_e.  If
              --ss is given, also check the embedded signature.
 
+     cchheecckk--ssiiggnnaattuurree _f_i_l_e _._._.
+             Reports if _f_i_l_e is a correctly signed package.
+
      ccoonnffiigg--vvaarr _v_a_r_i_a_b_l_e
              Print the current value of _v_a_r_i_a_b_l_e as used after parsing the
              configuration file.
@@ -106,7 +109,7 @@ OOPPTTIIOONNSS
              --FF.  Columns are printed for the keyfield used in the pkgdb - the
              filename -, and the data field - the package the file belongs to.
 
-     ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess [--ss]
+     ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess [--ssuu]
              Fetch a new pkg-vulnerabilities file, check the format and if --ss
              is given the signature.  If all checks are passed, write it to
              pkgdb.
@@ -172,6 +175,13 @@ OOPPTTIIOONNSS
              Packages that are not installed directly by the user but pulled
              in as dependencies are marked by setting ``automatic=YES''.
 
+     ggppgg--ssiiggnn--ppaacckkaaggee ppkkgg
+             Sign the binary package _p_k_g using GPG.
+
+     xx550099--ssiiggnn--ppaacckkaaggee ppkkgg ssppkkgg kkeeyy cceerrtt
+             Sign the binary package _p_k_g using the key _k_e_y and the certificate
+             _c_e_r_t, using _s_p_k_g as output file.
+
      uunnsseett _v_a_r_i_a_b_l_e _p_k_g _._._.
              Remove an installation variable.
 
@@ -213,4 +223,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 4.0                       May 26, 2008                       NetBSD 4.0
+NetBSD 5.0                       May 30, 2008                       NetBSD 5.0
