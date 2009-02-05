@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.473 2009/02/05 13:50:37 taca Exp $
+$NetBSD: CHANGES-2009,v 1.474 2009/02/05 13:52:43 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -644,5 +644,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/pmccabe to 2.5 [is 2009-02-04]
 	Updated databases/mysql5-server to 5.0.67nb1 [he 2009-02-04]
 	Updated www/squid27 to 2.7.6 [taca 2009-02-05]
+	Removed net/neat [joerg 2009-02-05]
+	Removed net/nsca [joerg 2009-02-05]
 	Updated databases/mysql4-server to 4.1.22nb3 [he 2009-02-05]
 	Updated security/sudo to 1.7.0 [taca 2009-02-05]
