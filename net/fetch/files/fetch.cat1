@@ -5,7 +5,7 @@ NNAAMMEE
 
 SSYYNNOOPPSSIISS
      ffeettcchh [--114466AAFFMMRRUUaaddiillmmnnqqrrssvv] [--BB _b_y_t_e_s] [--SS _b_y_t_e_s] [--TT _s_e_c_o_n_d_s] [--NN _f_i_l_e]
-           [--oo _f_i_l_e] [--ww _s_e_c_o_n_d_s] [--hh _h_o_s_t] [--cc _d_i_r] [--ff _f_i_l_e] [_U_R_L _._._.]
+           [--oo _f_i_l_e] [--ww _s_e_c_o_n_d_s] [_U_R_L _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      The ffeettcchh utility provides a command-line interface to the fetch(3)
@@ -32,23 +32,11 @@ DDEESSCCRRIIPPTTIIOONN
                  silently ignored.  The number of reads actually performed is
                  reported at verbosity level two or higher (see the --vv flag).
 
-     --cc _d_i_r      The file to retrieve is in directory _d_i_r on the remote host.
-                 This option is deprecated and is provided for backward com-
-                 patibility only.
-
      --dd          Use a direct connection even if a proxy is configured.
 
      --FF          In combination with the --rr flag, forces a restart even if the
                  local and remote files have different modification times.
                  Implies --RR.
-
-     --ff _f_i_l_e     The file to retrieve is named _f_i_l_e on the remote host.  This
-                 option is deprecated and is provided for backward compatibil-
-                 ity only.
-
-     --hh _h_o_s_t     The file to retrieve is located on the host _h_o_s_t.  This
-                 option is deprecated and is provided for backward compatibil-
-                 ity only.
 
      --ii          Only fetch if it the output file is older than the referenced
                  URL.  This option is overriden by --oo _-.
