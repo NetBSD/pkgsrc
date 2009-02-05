@@ -37,7 +37,7 @@
 .Nd retrieve a file by Uniform Resource Locator
 .Sh SYNOPSIS
 .Nm
-.Op Fl 146AFMRUadlmnqrsv
+.Op Fl 146AFMRUadilmnqrsv
 .Op Fl B Ar bytes
 .Op Fl S Ar bytes
 .Op Fl T Ar seconds
@@ -110,6 +110,10 @@ The file to retrieve is located on the host
 .Ar host .
 This option is deprecated and is provided for backward compatibility
 only.
+.It Fl i
+Only fetch if it the output file is older than the referenced URL.
+This option is overriden by
+.Fl o Ar - .
 .It Fl l
 If the target is a file-scheme URL, make a symbolic link to the target
 rather than trying to copy it.
