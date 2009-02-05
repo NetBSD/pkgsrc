@@ -125,12 +125,14 @@ sig_handler(int sig)
 {
 	switch (sig) {
 	case SIGALRM:
+		fetchRestartCalls = 0;
 		sigalrm = 1;
 		break;
 	case SIGINFO:
 		siginfo = 1;
 		break;
 	case SIGINT:
+		fetchRestartCalls = 0;
 		sigint = 1;
 		break;
 	}
@@ -651,19 +653,24 @@ fetch(char *URL, const char *path)
 		else
 			size = B_size;
 		if (siginfo) {
-			stat_end(&xs);
+			stat_display(&xs, 1);
 			siginfo = 0;
 		}
 		if ((size = fetchIO_read(f, buf, B_size)) == 0)
 			break;
+		if (size == -1 && errno == EINTR)
+			continue;
+		if (size == -1)
+			break;
 		stat_update(&xs, count += size);
-		for (ptr = buf; size > 0; ptr += wr, size -= wr)
+		for (ptr = buf; size > 0; ptr += wr, size -= wr) {
 			if ((wr = fwrite(ptr, 1, size, of)) < size) {
 				if (ferror(of) && errno == EINTR && !sigint)
 					clearerr(of);
 				else
 					break;
 			}
+		}
 		if (size != 0)
 			break;
 	}
@@ -693,6 +700,8 @@ fetch(char *URL, const char *path)
 	}
 
 	/* timed out or interrupted? */
+	if (fetchLastErrCode == FETCH_TIMEOUT)
+		sigalrm = 1;
 	if (sigalrm)
 		warnx("transfer timed out");
 	if (sigint) {
@@ -704,12 +713,10 @@ fetch(char *URL, const char *path)
 	if (f == NULL)
 		goto failure;
 
-	if (!sigalrm) {
+	if (!sigalrm && ferror(of)) {
 		/* check the status of our files */
-		if (ferror(of))
-			warn("%s", path);
-		if (ferror(of))
-			goto failure;
+		warn("writing to %s failed", path);
+		goto failure;
 	}
 
 	/* did the transfer complete normally? */
@@ -909,7 +916,6 @@ main(int argc, char *argv[])
 	sigaction(SIGALRM, &sa, NULL);
 	sa.sa_flags = SA_RESETHAND;
 	sigaction(SIGINT, &sa, NULL);
-	fetchRestartCalls = 0;
 
 	/* output file */
 	if (o_flag) {
