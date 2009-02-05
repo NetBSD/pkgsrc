@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.12 2008/10/06 12:58:29 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.13 2009/02/05 16:59:45 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -54,6 +54,7 @@ struct url {
 	char		*doc;
 	off_t		 offset;
 	size_t		 length;
+	time_t		 last_modified;
 };
 
 struct url_stat {
@@ -94,6 +95,7 @@ struct url_list {
 #define	FETCH_UNKNOWN	17
 #define	FETCH_URL	18
 #define	FETCH_VERBOSE	19
+#define	FETCH_UNCHANGED	20
 
 #if defined(__cplusplus)
 extern "C" {
