@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/11/09 20:09:02 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.15.2.1 2009/02/05 10:02:30 rtr Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
@@ -72,7 +72,7 @@ share/bugzilla/describecomponents.cgi
 share/bugzilla/describekeywords.cgi
 share/bugzilla/docs/html/keywords.html
 share/bugzilla/docs/html/sanitycheck.html
-share/bugzilla/docs/html/x761.html
+share/bugzilla/docs/html/x759.html
 share/bugzilla/docs/html/Bugzilla-Guide.html
 share/bugzilla/docs/html/about.html
 share/bugzilla/docs/html/administration.html
