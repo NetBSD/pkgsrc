@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.217 2008/12/23 22:34:26 dsl Exp $
+# $NetBSD: replace.mk,v 1.218 2009/02/05 18:44:43 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -746,11 +746,7 @@ TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
 .  if !empty(PKGPATH:Marchivers/pax)
 MAKEFLAGS+=			TOOLS_IGNORE.tar=
 .  elif !empty(_TOOLS_USE_PKGSRC.tar:M[yY][eE][sS])
-#
-# This is installed by pkgsrc bootstrap, and is never registered, so
-# comment out the dependency on it.
-#
-#TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
+TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			tar
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tar=pax
 TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/tar
