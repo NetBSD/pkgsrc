@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2008/08/24 10:08:39 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/05 00:53:09 jmcneill Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.118-oss
 PKGNAME=		skype-1.4.0.118
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,6 +12,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=		skype-license
 RESTRICTED=		Complex terms for redistribution.
@@ -39,13 +42,25 @@ do-build:
 	} > ${WRKSRC}/skype.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/skype.sh ${PREFIX}/bin/skype
-	${INSTALL_DATA} ${WRKSRC}/skype.desktop ${PREFIX}/share/applications
-	${INSTALL_DATA_DIR} ${DATADIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/skype ${DATADIR}
-	cd ${WRKSRC} && pax -rwppm icons sounds ${DATADIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/skype.sh ${DESTDIR}${PREFIX}/bin/skype
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps
+	${INSTALL_DATA} ${WRKSRC}/skype.desktop \
+		${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/icons/SkypeBlue_16x16.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/16x16/apps/skype.png
+	${INSTALL_DATA} ${WRKSRC}/icons/SkypeBlue_32x32.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/32x32/apps/skype.png
+	${INSTALL_DATA} ${WRKSRC}/icons/SkypeBlue_48x48.png \
+		${DESTDIR}${PREFIX}/share/icons/hicolor/48x48/apps/skype.png
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/skype ${DESTDIR}${DATADIR}
+	cd ${WRKSRC} && pax -rwppm icons sounds ${DESTDIR}${DATADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
