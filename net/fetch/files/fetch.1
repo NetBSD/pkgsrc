@@ -44,9 +44,6 @@
 .Op Fl N Ar file
 .Op Fl o Ar file
 .Op Fl w Ar seconds
-.Op Fl h Ar host
-.Op Fl c Ar dir
-.Op Fl f Ar file
 .Op Ar URL ...
 .Sh DESCRIPTION
 The
@@ -84,12 +81,6 @@ The number of reads actually performed is reported at verbosity level
 two or higher (see the
 .Fl v
 flag).
-.It Fl c Ar dir
-The file to retrieve is in directory
-.Ar dir
-on the remote host.
-This option is deprecated and is provided for backward compatibility
-only.
 .It Fl d
 Use a direct connection even if a proxy is configured.
 .It Fl F
@@ -99,17 +90,6 @@ flag, forces a restart even if the local and remote files have
 different modification times.
 Implies
 .Fl R .
-.It Fl f Ar file
-The file to retrieve is named
-.Ar file
-on the remote host.
-This option is deprecated and is provided for backward compatibility
-only.
-.It Fl h Ar host
-The file to retrieve is located on the host
-.Ar host .
-This option is deprecated and is provided for backward compatibility
-only.
 .It Fl i
 Only fetch if it the output file is older than the referenced URL.
 This option is overriden by
