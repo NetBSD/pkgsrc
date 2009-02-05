@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.15 2008/11/04 16:14:24 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.16 2009/02/05 22:45:25 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -50,7 +50,7 @@ auth_t	 fetchAuthMethod;
 int	 fetchLastErrCode;
 char	 fetchLastErrString[MAXERRSTRING];
 int	 fetchTimeout;
-int	 fetchRestartCalls = 1;
+extern int	 fetchRestartCalls = 1;
 int	 fetchDebug;
 
 
