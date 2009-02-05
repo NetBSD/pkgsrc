@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/20 13:29:52 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/02/05 00:53:09 jmcneill Exp $
 bin/skype
 share/applications/skype.desktop
 share/doc/skype/LICENSE
 share/doc/skype/README
+share/icons/hicolor/16x16/apps/skype.png
+share/icons/hicolor/32x32/apps/skype.png
+share/icons/hicolor/48x48/apps/skype.png
 share/skype/icons/SkypeBlue_16x16.png
 share/skype/icons/SkypeBlue_32x32.png
 share/skype/icons/SkypeBlue_48x48.png
