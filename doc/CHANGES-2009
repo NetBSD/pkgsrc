@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.468 2009/02/04 18:37:13 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.469 2009/02/05 00:54:22 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -640,3 +640,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bugzilla3 to 3.2.2 [adrianp 2009-02-03]
 	Updated www/squid30 to 3.0.13 [taca 2009-02-04]
 	Updated mail/dovecot to 1.1.11 [ghen 2009-02-04]
+	Updated net/skype to 1.4.0.118nb1 [jmcneill 2009-02-04]
