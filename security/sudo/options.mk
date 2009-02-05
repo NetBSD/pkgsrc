@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2008/03/11 15:52:51 taca Exp $
+# $NetBSD: options.mk,v 1.15.12.1 2009/02/05 17:00:25 tron Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
@@ -21,8 +21,6 @@ CONFIGURE_ARGS+=	--without-pam
 .endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
-KRB5_ACCEPTED=		heimdal
-IS_BUILTIN.heimdal=	no
 .  include "../../mk/krb5.buildlink3.mk"
 CONFIGURE_ARGS+=	--without-kerb4
 CONFIGURE_ARGS+=	--with-kerb5
@@ -35,6 +33,7 @@ CONFIGURE_ARGS+=	--without-kerb5
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
+PLIST.ldap=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mskey)
