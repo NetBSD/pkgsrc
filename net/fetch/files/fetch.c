@@ -108,9 +108,9 @@ pid_t	 pgrp;		/*        our process group */
 long	 w_secs;	/*    -w: retry delay */
 int	 family = PF_UNSPEC;	/* -[46]: address family to use */
 
-int	 sigalrm;	/* SIGALRM received */
-int	 siginfo;	/* SIGINFO received */
-int	 sigint;	/* SIGINT received */
+volatile int	 sigalrm;	/* SIGALRM received */
+volatile int	 siginfo;	/* SIGINFO received */
+volatile int	 sigint;	/* SIGINT received */
 
 long	 ftp_timeout;	/* default timeout for FTP transfers */
 long	 http_timeout;	/* default timeout for HTTP transfers */
