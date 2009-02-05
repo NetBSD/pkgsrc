@@ -1,7 +1,7 @@
-/*	$NetBSD: ftp.c,v 1.25 2008/12/02 16:59:03 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.26 2009/02/05 16:59:45 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
- * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
+ * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -1127,7 +1127,8 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 	fetchIO *f;
 	char *path;
 	conn_t *conn;
-	int oflag;
+	int if_modified_since, oflag;
+	struct url_stat local_us;
 
 	/* check if we should use HTTP instead */
 	if (purl && strcasecmp(purl->scheme, SCHEME_HTTP) == 0) {
@@ -1159,12 +1160,23 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 		return (NULL);
 	}
 
+	if_modified_since = CHECK_FLAG('i');
+	if (if_modified_since && us == NULL)
+		us = &local_us;
+
 	/* stat file */
 	if (us && ftp_stat(conn, path, us) == -1
 	    && fetchLastErrCode != FETCH_PROTO
 	    && fetchLastErrCode != FETCH_UNAVAIL) {
 		free(path);
 		return (NULL);
+	}
+
+	if (if_modified_since && url->last_modified > 0 &&
+	    url->last_modified >= us->mtime) {
+		fetchLastErrCode = FETCH_UNCHANGED;
+		snprintf(fetchLastErrString, MAXERRSTRING, "Unchanged");
+		return NULL;
 	}
 
 	/* just a stat */
