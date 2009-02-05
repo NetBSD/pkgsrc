@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.475 2009/02/05 14:09:45 taca Exp $
+$NetBSD: CHANGES-2009,v 1.476 2009/02/05 15:37:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/mysql4-server to 4.1.22nb3 [he 2009-02-05]
 	Updated security/sudo to 1.7.0 [taca 2009-02-05]
 	Removed www/squid26 [taca 2009-02-05]
+	Updated databases/tokyocabinet to 1.4.4 [obache 2009-02-05]
