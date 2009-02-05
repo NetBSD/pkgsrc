@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.44 2009/02/04 21:39:48 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.45 2009/02/05 10:02:58 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -127,3 +127,5 @@ Pullup ticket #2683 - requested by adrianp
 horde: security update
 Pullup ticket #2684 - requested by adrianp
 imp: security update
+pullup ticket #2681 - requested by adrianp
+bugzilla: bug fix
