@@ -85,11 +85,8 @@ int	 A_flag;	/*    -A: do not follow 302 redirects */
 int	 a_flag;	/*    -a: auto retry */
 off_t	 B_size;	/*    -B: buffer size */
 int	 b_flag;	/*!   -b: workaround TCP bug */
-char    *c_dirname;	/*    -c: remote directory */
 int	 d_flag;	/*    -d: direct connection */
 int	 F_flag;	/*    -F: restart without checking mtime  */
-char	*f_filename;	/*    -f: file to fetch */
-char	*h_hostname;	/*    -h: host to fetch from */
 int	 i_flag;	/*    -i: fetch file if modified */
 int	 l_flag;	/*    -l: link rather than copy file: URLs */
 int	 m_flag;	/* -[Mm]: mirror mode */
@@ -784,7 +781,7 @@ main(int argc, char *argv[])
 	int c, e, r;
 
 	while ((c = getopt(argc, argv,
-	    "146AaB:bc:dFf:Hh:ilMmN:no:qRrS:sT:tUvw:")) != -1)
+	    "146AaB:bdFilMmN:no:qRrS:sT:tUvw:")) != -1)
 		switch (c) {
 		case '1':
 			once_flag = 1;
@@ -810,24 +807,11 @@ main(int argc, char *argv[])
 			warnx("warning: the -b option is deprecated");
 			b_flag = 1;
 			break;
-		case 'c':
-			c_dirname = optarg;
-			break;
 		case 'd':
 			d_flag = 1;
 			break;
 		case 'F':
 			F_flag = 1;
-			break;
-		case 'f':
-			f_filename = optarg;
-			break;
-		case 'H':
-			warnx("the -H option is now implicit, "
-			    "use -U to disable");
-			break;
-		case 'h':
-			h_hostname = optarg;
 			break;
 		case 'i':
 			i_flag = 1;
@@ -900,20 +884,6 @@ main(int argc, char *argv[])
 
 	argc -= optind;
 	argv += optind;
-
-	if (h_hostname || f_filename || c_dirname) {
-		if (!h_hostname || !f_filename || argc) {
-			usage();
-			exit(EX_USAGE);
-		}
-		/* XXX this is a hack. */
-		if (strcspn(h_hostname, "@:/") != strlen(h_hostname))
-			errx(1, "invalid hostname");
-		if (asprintf(argv, "ftp://%s/%s/%s", h_hostname,
-		    c_dirname ? c_dirname : "", f_filename) == -1)
-			errx(1, "%s", strerror(ENOMEM));
-		argc++;
-	}
 
 	if (!argc) {
 		usage();
