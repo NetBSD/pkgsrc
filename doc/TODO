@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7833 2009/02/04 00:46:55 epg Exp $
+$NetBSD: TODO,v 1.7834 2009/02/05 12:44:45 obache Exp $
 
 Suggested new packages
 ======================
@@ -679,6 +679,7 @@ Suggested package updates
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
+	o gtkpod-0.99.14 [pkg/40493]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
