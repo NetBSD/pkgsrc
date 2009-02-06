@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2008/11/10 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/02/06 06:28:53 martti Exp $
 
 PKGNAME=		vim-xaw-${VIM_VERSION}.${VIM_PATCHLEVEL}
-PKGREVISION=		1
+#PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 Athena GUI
 
