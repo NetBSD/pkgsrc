@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2008/12/21 11:37:15 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2009/02/06 17:29:42 drochner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.epiphany
-PKG_SUPPORTED_OPTIONS=		avahi enchant
+PKG_SUPPORTED_OPTIONS=		avahi
+# browser crashes with enchant
 PKG_OPTIONS_OPTIONAL_GROUPS=	engine
 PKG_OPTIONS_GROUP.engine=	firefox webkit
-PKG_SUGGESTED_OPTIONS=		avahi enchant firefox
+PKG_SUGGESTED_OPTIONS=		avahi firefox
 PLIST_VARS=			gecko
 
 .include "../../mk/bsd.options.mk"
