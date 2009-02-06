@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2008/11/10 17:21:33 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2009/02/06 19:35:07 shattered Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=     audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=timidity/}
 EXTRACT_SUFX=	.tar.bz2
@@ -35,7 +35,7 @@ SUBST_SED.confdir=	-e 's,/usr/local/share/timidity,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-TIMIDITY_NATIVE_AUDIO=	# empty
+TIMIDITY_NATIVE_AUDIO=	ao
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 TIMIDITY_NATIVE_AUDIO=	sun
@@ -47,6 +47,7 @@ TIMIDITY_NATIVE_AUDIO=	darwin
 
 # see above for reason this is not included
 #.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
