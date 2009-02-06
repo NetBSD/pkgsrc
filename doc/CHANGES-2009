@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.480 2009/02/06 14:30:57 taca Exp $
+$NetBSD: CHANGES-2009,v 1.481 2009/02/06 17:01:49 jmorse Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -653,3 +653,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.6 [tnn 2009-02-05]
 	Updated www/tidy to 20081014nb1 [seb 2009-02-05]
 	Updated editors/vim-share to 7.2.102 [martti 2009-02-06]
+	Updated graphics/cheese to 2.24.3nb1 [jmorse 2009-02-06]
