@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7835 2009/02/05 14:14:37 taca Exp $
+$NetBSD: TODO,v 1.7836 2009/02/06 08:35:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -444,7 +444,7 @@ Suggested package updates
 	o benchfft-3.1
 	o bftpd-2.3
 	o biew-5.7.2
-	o binutils-2.19
+	o binutils-2.19.1
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
 	o blender-2.48
@@ -463,6 +463,7 @@ Suggested package updates
 	o bzr-svn-0.5.0 [big one, so let's wait a bit; needs subvertpy --epg]
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o cairomm-1.8.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.4
@@ -520,6 +521,7 @@ Suggested package updates
 	o devIL-1.7.5
 	o devhelp-0.22
 	o dhid-5.3
+	o digikam-0.9.5beta3
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0
@@ -565,6 +567,9 @@ Suggested package updates
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o evolution-2.24.4
+	o evolution-data-server-2.24.4.1
+	o evolution-exchange-2.24.4
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -606,6 +611,7 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
+	o gcalctool-5.24.3.1
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -640,6 +646,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-pilot-2.0.17
+	o gnome-speech-0.4.23
 	o gnome-system-monitor-2.24.4
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -658,6 +665,7 @@ Suggested package updates
 	o gossip-0.31
 	o gourmet-0.13.3
 	o gpaint-0.3.3
+	o gperf-3.0.4
 	o gperiodic-2.0.10
 	o gplcver-2.12a
 	o gpredict-0.9.0
@@ -669,16 +677,14 @@ Suggested package updates
 	o gsasl-1.0
 	o gsharutils-4.7
 	o gss-0.0.22
-	o gst-plugins0.10-bad-0.10.10
-	o gst-plugins0.10-base-0.10.22
-	o gst-plugins0.10-good-0.10.13
-	o gstreamer0.10-0.10.22
 	o gtar-1.21
 	o gtar-base-1.21
 	o gtexinfo-4.13
 	o gtick-0.4.2
+	o gtk-sharp-2.12.8
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
+	o gtkhtml314-3.24.4
 	o gtkpod-0.99.14 [pkg/40493]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
@@ -686,6 +692,7 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
+	o guile-www-2.22
 	o gutenprint-5.2.2
 	o gv-3.6.6
 	o gworkspace-0.8.6
@@ -720,7 +727,7 @@ Suggested package updates
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-3.02
+	o ikiwiki-3.03
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.13
 	o intercal-0.24
@@ -771,11 +778,13 @@ Suggested package updates
 	o lftp-3.7.3 [pkg/39809]
 	o libFoundation-1.1.3
 	o libX11-1.1.99.2
+	o libXext-1.0.5
 	o libXrandr-1.2.99.4
 	o libast-0.7
 	o libcanberra-0.11
 	o libcares-1.6.0
 	o libchewing-0.3.0
+	o libcroco-0.6.2
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libdrm-2.4.4
@@ -850,6 +859,7 @@ Suggested package updates
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
 	o mathomatic-14.2.8
+	o mc-4.6.2
 	o mediawiki-1.13.3
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
@@ -890,7 +900,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.5.99.901
+	o modular-xorg-server-1.5.99.902
 	o mp3blaster-3.2.3
 	o mp3splt-2.2.3
 	o mpc-0.14
@@ -979,6 +989,7 @@ Suggested package updates
 	o p5-Config-General-2.41
 	o p5-Crypt-CBC-2.30 [pkg/40190]
 	o p5-DBD-Sybase-1.07
+	o p5-DB_File-1.818
 	o p5-DateTime-Locale-0.4200
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IO-Socket-SSL-1.22
@@ -986,7 +997,7 @@ Suggested package updates
 	o p5-MARC-1.38
 	o p5-Math-Random-0.69
 	o p5-Module-Build-0.3100
-	o p5-Net-DNS-0.64
+	o p5-Net-DNS-0.65
 	o p5-Net-ICQ2000-0.2.2
 	o p5-PV-1.5
 	o p5-PathTools-3.29
@@ -1092,6 +1103,7 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-gtk2-2.14.0
 	o py-html2text-2.35
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
@@ -1135,7 +1147,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdiff-backup-1.2.5
+	o rdiff-backup-1.2.6
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.18.3
@@ -1227,7 +1239,7 @@ Suggested package updates
 	o sch-3.8.3
 	o scilab-5.0.3
 	o scm-5e5
-	o scmgit-base-1.6.1
+	o scmgit-base-1.6.1.2
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sendfile-20010424
@@ -1297,7 +1309,8 @@ Suggested package updates
 	o tea-22.2.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o telepathy-glib-0.7.23
+	o telepathy-gabble-0.7.19
+	o telepathy-glib-0.7.25
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-1.82
 	o tfmxplay-1.1.6
@@ -1374,7 +1387,7 @@ Suggested package updates
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090124
+	o x264-devel-20090131
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
@@ -1391,6 +1404,7 @@ Suggested package updates
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
+	o xextproto-7.0.5
 	o xf86-input-keyboard-1.3.2
 	o xf86-input-mouse-1.4.0
 	o xf86-input-vmmouse-12.6.3
@@ -1447,7 +1461,7 @@ Suggested package updates
 	o xorg-util-macros-1.2.0
 	o xpad-2.13
 	o xpuyopuyo-0.9.8
-	o xrandr-1.2.99.3
+	o xrandr-1.2.99.4
 	o xrmap-anthems-1.2
 	o xrmap-base-2.33.1
 	o xrn-9.02
