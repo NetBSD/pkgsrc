@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.46 2009/02/05 17:55:15 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.47 2009/02/06 14:02:28 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -135,3 +135,5 @@ Pullup ticket #2687 - requested by taca
 squid27: security update
 Pullup ticket #2688 - requested by taca
 sudo: security update
+Pullup ticket #2689 - requested by tnn
+firefox3: security update
