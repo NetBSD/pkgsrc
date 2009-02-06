@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.478 2009/02/05 21:53:08 seb Exp $
+$NetBSD: CHANGES-2009,v 1.479 2009/02/06 06:29:35 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -652,3 +652,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.4 [obache 2009-02-05]
 	Updated www/firefox3 to 3.0.6 [tnn 2009-02-05]
 	Updated www/tidy to 20081014nb1 [seb 2009-02-05]
+	Updated editors/vim-share to 7.2.102 [martti 2009-02-06]
