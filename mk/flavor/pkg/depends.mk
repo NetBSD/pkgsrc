@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.43 2008/05/26 14:21:43 tron Exp $
+# $NetBSD: depends.mk,v 1.44 2009/02/06 15:27:00 joerg Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -79,7 +79,7 @@ _DEPENDS_INSTALL_CMD=							\
 		${STEP_MSG} "Verifying $$target for $$dir";		\
 		[ -d "$$dir" ] || ${FAIL_MSG} "[depends.mk] The directory \`\`$$dir'' does not exist."; \
 		cd $$dir;						\
-		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
+		${SETENV} ${PKGSRC_MAKE_ENV} _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" PKGNAME_REQD="$$pattern" ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes $$target; \
 		pkg=`${_PKG_BEST_EXISTS} "$$pattern" || ${TRUE}`;	\
 		case "$$pkg" in						\
 		"")	${ERROR_MSG} "[depends.mk] A package matching \`\`$$pattern'' should"; \
@@ -142,10 +142,10 @@ pkg_install-depends:
 	${RUN}if [ `${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302` -lt ${PKGTOOLS_REQD} ]; then \
 	${PHASE_MSG} "Trying to handle out-dated pkg_install..."; \
 	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" \
+	    _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes clean && \
 	cd ../../pkgtools/pkg_install && ${SETENV} ${PKGSRC_MAKE_ENV} \
-	    _PKGSRC_DEPS=", ${PKGNAME}${_PKGSRC_DEPS}" \
+	    _PKGSRC_DEPS="${PKGNAME} ${_PKGSRC_DEPS}" \
 	    ${MAKE} ${MAKEFLAGS} _AUTOMATIC=yes ${DEPENDS_TARGET:Q}; \
 	fi
 
@@ -164,12 +164,17 @@ _BOOTSTRAP_DEPENDS_TARGETS+=	release-bootstrap-depends-lock
 bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
 
 .PHONY: _flavor-bootstrap-depends
+.if empty(PKG_FAIL_REASON)
 _flavor-bootstrap-depends:
 	${RUN}${_LIST_DEPENDS_CMD.bootstrap} | 				\
 	while read type pattern dir; do					\
 		${TEST} "$$type" = "bootstrap" || continue;		\
 		${_DEPENDS_INSTALL_CMD};				\
 	done
+.else
+_flavor-bootstrap-depends:
+	${RUN}${DO_NADA}
+.endif
 
 .PHONY:
 acquire-bootstrap-depends-lock: acquire-lock
