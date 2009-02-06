@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2009/02/06 19:35:07 shattered Exp $
+# $NetBSD: Makefile,v 1.66 2009/02/06 19:45:52 shattered Exp $
 
 DISTNAME=	TiMidity++-2.13.2
 PKGNAME=	${DISTNAME:S/TiMidity++/timidity/}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--enable-gtk --enable-wrd --enable-xaw --enable-ncurses
 CONFIGURE_ARGS+=	--with-ogg="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-vorbis="${BUILDLINK_DIR}/include"
 CONFIGURE_ARGS+=	--with-default-path=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,speex
+CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},ao,vorbis,speex
 # flac disabled since there is currently (20070111) no patch available
 # that adapts timidity for the flac-1.1.3 API
 #CONFIGURE_ARGS+=	--enable-audio=${TIMIDITY_NATIVE_AUDIO},vorbis,flac,speex
@@ -35,7 +35,7 @@ SUBST_SED.confdir=	-e 's,/usr/local/share/timidity,${PKG_SYSCONFDIR},g'
 
 .include "../../mk/bsd.prefs.mk"
 
-TIMIDITY_NATIVE_AUDIO=	ao
+TIMIDITY_NATIVE_AUDIO=	# empty
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 TIMIDITY_NATIVE_AUDIO=	sun
