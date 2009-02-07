@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/08 01:09:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/07 21:51:08 joerg Exp $
 
 DISTNAME=	ucview-0.22
 CATEGORIES=	graphics
@@ -10,7 +10,7 @@ COMMENT=	Video capture and display program based on unicap
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		perl pkg-config gmake
+USE_TOOLS+=		perl pkg-config gmake intltool
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
