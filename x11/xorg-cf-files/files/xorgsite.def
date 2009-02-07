@@ -1,13 +1,10 @@
 /*
- * $NetBSD: xorgsite.def,v 1.2 2007/01/22 20:33:33 joerg Exp $
+ * $NetBSD: xorgsite.def,v 1.3 2009/02/07 21:30:34 joerg Exp $
  *
  * X.org packages for pkgsrc system 
  *  
  */ 
 
-#ifndef HasSecureRPC
-#define HasSecureRPC YES
-#endif
 #ifndef BuildAoutLibraries
 #define BuildAoutLibraries NO
 #endif
