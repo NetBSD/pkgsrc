@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/11 22:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/07 23:30:10 wiz Exp $
 #
 
-DISTNAME=	stegavorto-src-2008.12.11
+DISTNAME=	stegavorto-src-2009.01.22
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	games
 MASTER_SITES=	http://hamsterrepublic.com/games/stegavorto/
