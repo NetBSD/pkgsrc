@@ -4,8 +4,8 @@ NNAAMMEE
      ffeettcchh -- retrieve a file by Uniform Resource Locator
 
 SSYYNNOOPPSSIISS
-     ffeettcchh [--114466AAFFMMRRUUaaddiillmmnnqqrrssvv] [--BB _b_y_t_e_s] [--SS _b_y_t_e_s] [--TT _s_e_c_o_n_d_s] [--NN _f_i_l_e]
-           [--oo _f_i_l_e] [--ww _s_e_c_o_n_d_s] [_U_R_L _._._.]
+     ffeettcchh [--114466AAFFMMRRUUaaddiillmmnnqqrrssvv] [--BB _b_y_t_e_s] [--NN _f_i_l_e] [--oo _f_i_l_e] [--SS _b_y_t_e_s]
+           [--TT _s_e_c_o_n_d_s] [--ww _s_e_c_o_n_d_s] [_U_R_L _._._.]
 
 DDEESSCCRRIIPPTTIIOONN
      The ffeettcchh utility provides a command-line interface to the fetch(3)
@@ -102,6 +102,12 @@ DDEESSCCRRIIPPTTIIOONN
      the current transfer rate statistics will be written to the standard
      error output, in the same format as the standard completion message.
 
+EEXXIITT SSTTAATTUUSS
+     The ffeettcchh command returns zero on success, or one on failure.  If multi-
+     ple URLs are listed on the command line, ffeettcchh will attempt to retrieve
+     each one of them in turn, and will return zero only if they were all suc-
+     cessfully retrieved.
+
 EENNVVIIRROONNMMEENNTT
      FTP_TIMEOUT   Maximum time, in seconds, to wait before aborting an FTP
                    connection.
@@ -113,12 +119,6 @@ EENNVVIIRROONNMMEENNTT
      including FETCH_BIND_ADDRESS, FTP_LOGIN, FTP_PASSIVE_MODE, FTP_PASSWORD,
      FTP_PROXY, ftp_proxy, HTTP_AUTH, HTTP_PROXY, http_proxy, HTTP_PROXY_AUTH,
      HTTP_REFERER, HTTP_USER_AGENT, NETRC, NO_PROXY and no_proxy.
-
-EEXXIITT SSTTAATTUUSS
-     The ffeettcchh command returns zero on success, or one on failure.  If multi-
-     ple URLs are listed on the command line, ffeettcchh will attempt to retrieve
-     each one of them in turn, and will return zero only if they were all suc-
-     cessfully retrieved.
 
 SSEEEE AALLSSOO
      fetch(3)
@@ -138,7 +138,7 @@ NNOOTTEESS
      They were workarounds for bugs in other OSes which this implementation
      does not trigger.
 
-     One cannot both use the --hh, --cc and --ff options and specify URLs on the
+     One cannot both use the --hh, --cc, and --ff options and specify URLs on the
      command line.
 
-NetBSD 5.0                      March 11, 2003                      NetBSD 5.0
+NetBSD 5.0                     February 5, 2009                     NetBSD 5.0
