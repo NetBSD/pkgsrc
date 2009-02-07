@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/02/05 21:05:07 tron Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/07 20:42:33 joerg Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -10,6 +10,8 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pulseaudio.org/
 COMMENT=	Sound server for POSIX and Win32 systems
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
