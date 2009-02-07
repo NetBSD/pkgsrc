@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.29 2008/08/17 18:36:50 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.30 2009/02/07 18:03:00 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -61,7 +61,12 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 .if !empty(PKG_OPTIONS:Mssl)
 .  include "../../security/openssl/buildlink3.mk"
+.  if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-openssl=yes
+LIBS.SunOS+=		-lcrypto
+.  else
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+.  endif
 .else
 CONFIGURE_ARGS+=	--without-openssl
 .endif
