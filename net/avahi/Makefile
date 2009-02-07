@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/23 11:21:09 sketch Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/07 18:24:06 joerg Exp $
 
 DISTNAME=		avahi-0.6.24
 CATEGORIES=		net
@@ -7,6 +7,8 @@ MASTER_SITES=		http://avahi.org/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://avahi.org/
 COMMENT=		Facilitate service discovery on a local network
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		xdg-1.4
@@ -81,25 +83,24 @@ CONFIGURE_ARGS+=	--with-distro=none
 INSTALLATION_DIRS+=	share/examples/avahi
 INSTALLATION_DIRS+=	share/doc/avahi
 
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/services
+
 post-install:
-	${MKDIR} ${PKG_SYSCONFDIR}/services
-
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-daemon.conf \
-		${PREFIX}/share/examples/avahi
+		${DESTDIR}${PREFIX}/share/examples/avahi
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/hosts \
-		${PREFIX}/share/examples/avahi
+		${DESTDIR}${PREFIX}/share/examples/avahi
 	${INSTALL_DATA} ${WRKSRC}/avahi-dnsconfd/avahi-dnsconfd.action \
-		${PREFIX}/share/examples/avahi
+		${DESTDIR}${PREFIX}/share/examples/avahi
 	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/ssh.service \
-		${PREFIX}/share/examples/avahi
-		${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-dbus.conf \
-			${PREFIX}/share/examples/avahi/avahi-dbus.conf
-
-	${INSTALL_DATA} ${WRKSRC}/docs/HACKING ${PREFIX}/share/doc/avahi
-	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${PREFIX}/share/doc/avahi
-	${INSTALL_DATA} ${WRKSRC}/docs/NEWS ${PREFIX}/share/doc/avahi
-	${INSTALL_DATA} ${WRKSRC}/docs/README ${PREFIX}/share/doc/avahi
-	${INSTALL_DATA} ${WRKSRC}/docs/TODO ${PREFIX}/share/doc/avahi
+		${DESTDIR}${PREFIX}/share/examples/avahi
+	${INSTALL_DATA} ${WRKSRC}/avahi-daemon/avahi-dbus.conf \
+		${DESTDIR}${PREFIX}/share/examples/avahi/avahi-dbus.conf
+	${INSTALL_DATA} ${WRKSRC}/docs/HACKING ${DESTDIR}${PREFIX}/share/doc/avahi
+	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${PREFIX}/share/doc/avahi
+	${INSTALL_DATA} ${WRKSRC}/docs/NEWS ${DESTDIR}${PREFIX}/share/doc/avahi
+	${INSTALL_DATA} ${WRKSRC}/docs/README ${DESTDIR}${PREFIX}/share/doc/avahi
+	${INSTALL_DATA} ${WRKSRC}/docs/TODO ${DESTDIR}${PREFIX}/share/doc/avahi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
