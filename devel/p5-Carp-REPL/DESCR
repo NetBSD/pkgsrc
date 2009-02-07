@@ -1,0 +1,6 @@
+When the Perl 5 module Carp::REPL is loaded and the perl interpreter
+dies, a read-eval-print-loop (REPL), with a few debugger like
+commands, is spawned before it quits. A REPL can also be spawned
+when a warning is issued.  This module is intended to be used mostly
+through the command line but can also be used for testing or any
+other situation.
