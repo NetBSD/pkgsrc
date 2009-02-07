@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.490 2009/02/07 17:38:04 seb Exp $
+$NetBSD: CHANGES-2009,v 1.491 2009/02/07 17:56:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -667,3 +667,25 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/privoxy to 3.0.10 [drochner 2009-02-07]
 	Added devel/p5-Devel-StackTrace-WithLexicals version 0.03 [seb 2009-02-07]
 	Added devel/p5-Expect-Simple version 0.04 [seb 2009-02-07]
+	Updated databases/postgresql81 to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-client to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-server to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-plperl to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-plpython to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-pltcl to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql81-tsearch2 to 8.1.16 [adam 2009-02-07]
+	Updated databases/postgresql82 to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-client to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-server to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-adminpack to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-plperl to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-plpython to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-pltcl to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql82-tsearch2 to 8.2.12 [adam 2009-02-07]
+	Updated databases/postgresql83 to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-client to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-server to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-adminpack to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-plperl to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-plpython to 8.3.6 [adam 2009-02-07]
+	Updated databases/postgresql83-pltcl to 8.3.6 [adam 2009-02-07]
