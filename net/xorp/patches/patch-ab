@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2008/10/18 12:51:24 obache Exp $
+$NetBSD: patch-ab,v 1.7.2.1 2009/02/07 22:27:44 tron Exp $
 
 --- fea/data_plane/control_socket/click_socket.cc.orig	2008-07-23 07:10:15.000000000 +0200
 +++ fea/data_plane/control_socket/click_socket.cc
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.7 2008/10/18 12:51:24 obache Exp $
      ret_value = mount("none", _kernel_click_mount_directory.c_str(),
  		      CLICK_FILE_SYSTEM_TYPE.c_str(), 0, 0);
 -#else // ! HOST_OS_LINUX
-+#elif defined(__NetBSD__) && __NetBSD_Version >= 499002400
++#elif defined(__NetBSD__) && __NetBSD_Version__ >= 499002400
 +    ret_value = mount(CLICK_FILE_SYSTEM_TYPE.c_str(),
 +		      _kernel_click_mount_directory.c_str(), 0, 0, 0);
 +#else
