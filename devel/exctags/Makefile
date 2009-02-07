@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/11/19 06:42:21 adrianp Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/07 23:54:39 joerg Exp $
 #
 
 DISTNAME=	ctags-5.7
@@ -11,6 +11,7 @@ HOMEPAGE=	http://ctags.sourceforge.net/
 COMMENT=	Exuberant (feature-filled) tagfile generator for vi, emacs and clones
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-macro-patterns
@@ -36,5 +37,8 @@ SUBST_STAGE.rename=	post-patch
 SUBST_FILES.rename=	c.c eiffel.c general.h lregex.c lua.c main.c \
 			options.c parse.c routines.c
 SUBST_SED.rename=	-e 's|__unused__|__unused_|g'
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../mk/bsd.pkg.mk"
