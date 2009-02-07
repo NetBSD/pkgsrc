@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/01/29 17:57:55 shattered Exp $
+# $NetBSD: Makefile,v 1.39 2009/02/07 16:58:04 joerg Exp $
 #
 
 DISTNAME=	xzgv-0.9
@@ -13,7 +13,7 @@ COMMENT=	Image viewer
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo pkg-config
 INFO_FILES=		yes
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
