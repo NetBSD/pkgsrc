@@ -1,5 +1,6 @@
+.\" $NetBSD: fetch.1,v 1.4 2009/02/07 15:25:51 wiz Exp $
 .\"-
-.\" Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
+.\" Copyright (c) 2000-2004 Dag-Erling CoÃ¯dan SmÃ¸rgrav
 .\" All rights reserved.
 .\" Portions Copyright (c) 1999 Massachusetts Institute of Technology; used
 .\" by permission.
@@ -29,7 +30,7 @@
 .\"
 .\" $FreeBSD$
 .\"
-.Dd March 11, 2003
+.Dd February 5, 2009
 .Dt FETCH 1
 .Os
 .Sh NAME
@@ -39,10 +40,10 @@
 .Nm
 .Op Fl 146AFMRUadilmnqrsv
 .Op Fl B Ar bytes
-.Op Fl S Ar bytes
-.Op Fl T Ar seconds
 .Op Fl N Ar file
 .Op Fl o Ar file
+.Op Fl S Ar bytes
+.Op Fl T Ar seconds
 .Op Fl w Ar seconds
 .Op Ar URL ...
 .Sh DESCRIPTION
@@ -56,7 +57,7 @@ command line.
 .Pp
 The following options are available:
 .Bl -tag -width Fl
-.It Fl \&1
+.It Fl 1
 Stop and return exit code 0 at the first successfully retrieved file.
 .It Fl 4
 Forces
@@ -67,7 +68,9 @@ Forces
 .Nm
 to use IPv6 addresses only.
 .It Fl A
-Do not automatically follow ``temporary'' (302) redirects.
+Do not automatically follow
+.Dq temporary
+(302) redirects.
 Some broken Web sites will return a redirect instead of a not-found
 error when the requested object does not exist.
 .It Fl a
@@ -121,7 +124,9 @@ Do not preserve the modification time of the transferred file.
 .It Fl o Ar file
 Set the output file name to
 .Ar file .
-By default, a ``pathname'' is extracted from the specified URI, and
+By default, a
+.Dq pathname
+is extracted from the specified URI, and
 its basename is used as the name of the output file.
 A
 .Ar file
@@ -185,6 +190,14 @@ argument for
 the current transfer rate statistics will be written to the
 standard error output, in the same format as the standard completion
 message.
+.Sh EXIT STATUS
+The
+.Nm
+command returns zero on success, or one on failure.
+If multiple URLs are listed on the command line,
+.Nm
+will attempt to retrieve each one of them in turn, and will return
+zero only if they were all successfully retrieved.
 .Sh ENVIRONMENT
 .Bl -tag -width HTTP_TIMEOUT
 .It Ev FTP_TIMEOUT
@@ -209,16 +222,9 @@ for a description of additional environment variables, including
 .Ev HTTP_REFERER ,
 .Ev HTTP_USER_AGENT ,
 .Ev NETRC ,
-.Ev NO_PROXY and
+.Ev NO_PROXY
+and
 .Ev no_proxy .
-.Sh EXIT STATUS
-The
-.Nm
-command returns zero on success, or one on failure.
-If multiple URLs are listed on the command line,
-.Nm
-will attempt to retrieve each one of them in turn, and will return
-zero only if they were all successfully retrieved.
 .Sh SEE ALSO
 .Xr fetch 3
 .Sh HISTORY
@@ -253,7 +259,7 @@ does not trigger.
 .Pp
 One cannot both use the
 .Fl h ,
-.Fl c
+.Fl c ,
 and
 .Fl f
 options and specify URLs on the command line.
