@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.491 2009/02/07 17:56:07 adam Exp $
+$NetBSD: CHANGES-2009,v 1.492 2009/02/07 18:03:15 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -689,3 +689,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql83-plperl to 8.3.6 [adam 2009-02-07]
 	Updated databases/postgresql83-plpython to 8.3.6 [adam 2009-02-07]
 	Updated databases/postgresql83-pltcl to 8.3.6 [adam 2009-02-07]
+	Updated lang/php5 to 5.2.8nb1 [adrianp 2009-02-07]
