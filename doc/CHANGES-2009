@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.488 2009/02/07 14:51:26 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.489 2009/02/07 15:14:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -665,3 +665,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/gcalctool to 5.24.3.1 [drochner 2009-02-07]
 	Updated net/vpnc to 0.5.3 [drochner 2009-02-07]
 	Updated www/privoxy to 3.0.10 [drochner 2009-02-07]
+	Added devel/p5-Devel-StackTrace-WithLexicals version 0.03 [seb 2009-02-07]
