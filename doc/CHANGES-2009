@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.483 2009/02/07 08:22:07 obache Exp $
+$NetBSD: CHANGES-2009,v 1.484 2009/02/07 08:23:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/cheese to 2.24.3nb1 [jmorse 2009-02-06]
 	Updated www/typolight to 2.6.6 [taca 2009-02-07]
 	Updated databases/p5-tokyocabinet to 1.22 [obache 2009-02-07]
+	Updated databases/tokyotyrant to 1.1.14 [obache 2009-02-07]
