@@ -1,0 +1,3 @@
+The Perl 5 module Devel::StackTrace::WithLexicals by combining the
+modules Devel::StackTrace and PadWalker, generates stack traces
+with all the callers' lexical variables.
