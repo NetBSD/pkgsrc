@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.485 2009/02/07 08:25:32 obache Exp $
+$NetBSD: CHANGES-2009,v 1.486 2009/02/07 11:03:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -658,3 +658,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyocabinet to 1.22 [obache 2009-02-07]
 	Updated databases/tokyotyrant to 1.1.14 [obache 2009-02-07]
 	Updated databases/p5-tokyotyrant to 1.5 [obache 2009-02-07]
+	Updated devel/p5-Moose to 0.68 [seb 2009-02-07]
