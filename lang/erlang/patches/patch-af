@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2008/01/04 14:10:06 ghen Exp $
+$NetBSD: patch-af,v 1.2 2009/02/07 21:45:43 joerg Exp $
 
-DESTDIR support.
+DESTDIR support
 
 --- Makefile.in.orig	2007-11-26 19:57:49.000000000 +0100
 +++ Makefile.in
@@ -12,3 +12,21 @@ DESTDIR support.
  
  # The directory in which user executables (ERL_BASE_PUB_FILES) are put
  BINDIR      = $(INSTALL_PREFIX)@bindir@
+@@ -707,7 +708,7 @@ else
+ endif
+ 
+ install.Install:
+-	cd $(ERLANG_LIBDIR) && ./Install -minimal $(ERLANG_LIBDIR)
++	cd $(ERLANG_LIBDIR) && ./Install -minimal $(ERLANG_ILIBDIR)
+ 
+ #
+ # Install erlang base public files
+@@ -715,7 +716,7 @@ install.Install:
+ install.bin:
+ 	for file in $(ERL_BASE_PUB_FILES); do \
+ 		rm -f $(BINDIR)/$$file; \
+-		${LN_S} $(ERLANG_BINDIR)/$$file $(BINDIR)/$$file; \
++		${LN_S} $(ERLANG_ILIBDIR)/bin/$$file $(BINDIR)/$$file; \
+ 	done
+ 
+ #
