@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.3 2008/06/20 08:27:57 adam Exp $
+$NetBSD: patch-ab,v 1.4 2009/02/07 17:43:54 adam Exp $
 
---- configure.orig	2008-06-09 03:17:31.000000000 +0200
+--- configure.orig	2009-01-30 04:18:16.000000000 +0100
 +++ configure
 @@ -1501,6 +1501,7 @@ case $host_os in
    darwin*) template=darwin ;;
@@ -18,10 +18,10 @@ $NetBSD: patch-ab,v 1.3 2008/06/20 08:27:57 adam Exp $
 -pgac_tmp2=`$PERL -MConfig -e 'print $Config{ccdlflags}'`
 -perl_embed_ldflags=`echo X"$pgac_tmp1" | sed "s/^X//;s%$pgac_tmp2%%"`
 +perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
- echo "$as_me:$LINENO: result: $perl_embed_ldflags" >&5
- echo "${ECHO_T}$perl_embed_ldflags" >&6
- fi
-@@ -21677,17 +21676,12 @@ cat confdefs.h >>conftest.$ac_ext
+ if test -z "$perl_embed_ldflags" ; then
+ 	echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6
+@@ -21690,17 +21689,12 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.3 2008/06/20 08:27:57 adam Exp $
    ;
    return 0;
  }
-@@ -21732,17 +21726,12 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -21745,17 +21739,12 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
