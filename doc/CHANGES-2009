@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.495 2009/02/07 20:59:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.496 2009/02/07 21:38:21 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -693,3 +693,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/ncmpc to 0.13 [jakllsch 2009-02-07]
 	Added devel/p5-Test-Expect version 0.31 [seb 2009-02-07]
 	Updated textproc/liblinebreak to 1.1 [wiz 2009-02-07]
+	Added devel/p5-Carp-REPL version 0.13 [seb 2009-02-07]
