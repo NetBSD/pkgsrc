@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2006/01/02 16:17:09 joerg Exp $
+$NetBSD: patch-ab,v 1.3 2009/02/07 22:06:06 joerg Exp $
 
---- Imakefile.orig	2001-02-12 16:33:01.000000000 +0000
+--- Imakefile.orig	2001-02-12 17:33:01.000000000 +0100
 +++ Imakefile
 @@ -26,7 +26,7 @@ NETWORKCFLAGS = -DNO_NETWORK
  #ifdef NO_TERMIO
@@ -29,3 +29,28 @@ $NetBSD: patch-ab,v 1.2 2006/01/02 16:17:09 joerg Exp $
  		  '-DXTEL_LIBDIR="$(LIBDIR)/xtel"'
  
  
+@@ -241,19 +241,12 @@ clean::
+ InstallManPage(xteld,$(MANDIR))
+ 
+ #ifdef INSTALLDEMON
+-InstallProgram(xteld, $(BINDIR))
+-InstallProgramWithFlags(mdmdetect, $(BINDIR), $(INSTUIDFLAGS))
++InstallProgram(xteld,$(BINDIR))
++InstallProgramWithFlags(mdmdetect,$(BINDIR),$(INSTUIDFLAGS))
+ InstallNamedProg(make_xtel_lignes.sh,make_xtel_lignes,$(BINDIR))
+-
+-install::
+-	@if [ -r $(LIBDIR)/xtel/$(XTELLIGNES) ]; then \
+-	cp $(LIBDIR)/xtel/$(XTELLIGNES) $(LIBDIR)/xtel/$(XTELLIGNES).old; fi
+-	@if [ -r $(LIBDIR)/xtel/$(XTELSERVICES) ]; then \
+-	cp $(LIBDIR)/xtel/$(XTELSERVICES) $(LIBDIR)/xtel/$(XTELSERVICES).old; fi
+-
+-InstallNonExecFile($(XTELLIGNES), $(LIBDIR)/xtel)
+-InstallNonExecFile($(XTELSERVICES), $(LIBDIR)/xtel)
+-InstallNonExecFile(modem.list, $(LIBDIR)/xtel)
++InstallNonExecFile($(XTELLIGNES),$(LIBDIR)/xtel)
++InstallNonExecFile($(XTELSERVICES),$(LIBDIR)/xtel)
++InstallNonExecFile(modem.list,$(LIBDIR)/xtel)
+ #endif
+ 
+ SpecialObjectRule(teleinfo.o, teleinfo.c, $(TELE_DEFINES))
