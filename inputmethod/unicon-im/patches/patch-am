@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1 2009/02/07 22:47:14 joerg Exp $
+
+--- ImmModules/TL-1/xl_hzinput.c.orig	2009-02-07 23:43:25.000000000 +0100
++++ ImmModules/TL-1/xl_hzinput.c
+@@ -46,7 +46,6 @@
+ 
+ #define         error       printf
+ 
+-static void UnloadInputMethod (hz_input_table *p);
+ void ResetInput (HzInputTable_T *pClient);
+ static void GetAssociatePhrases (HzInputTable_T *pClient, unsigned char *p);
+ static void FindMatchKey (HzInputTable_T *pClient);
