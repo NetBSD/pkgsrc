@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/15 11:54:34 martti Exp $
+@comment $NetBSD: PLIST,v 1.2.2.1 2009/02/07 19:56:33 tron Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/AdminSettings.sample
 share/mediawiki/COPYING
@@ -492,6 +492,7 @@ share/mediawiki/languages/messages/MessagesBm.php
 share/mediawiki/languages/messages/MessagesBn.php
 share/mediawiki/languages/messages/MessagesBo.php
 share/mediawiki/languages/messages/MessagesBpy.php
+share/mediawiki/languages/messages/MessagesBqi.php
 share/mediawiki/languages/messages/MessagesBr.php
 share/mediawiki/languages/messages/MessagesBs.php
 share/mediawiki/languages/messages/MessagesBug.php
@@ -626,6 +627,7 @@ share/mediawiki/languages/messages/MessagesMai.php
 share/mediawiki/languages/messages/MessagesMap_bms.php
 share/mediawiki/languages/messages/MessagesMdf.php
 share/mediawiki/languages/messages/MessagesMg.php
+share/mediawiki/languages/messages/MessagesMhr.php
 share/mediawiki/languages/messages/MessagesMi.php
 share/mediawiki/languages/messages/MessagesMk.php
 share/mediawiki/languages/messages/MessagesMl.php
@@ -662,11 +664,13 @@ share/mediawiki/languages/messages/MessagesPag.php
 share/mediawiki/languages/messages/MessagesPam.php
 share/mediawiki/languages/messages/MessagesPap.php
 share/mediawiki/languages/messages/MessagesPdc.php
+share/mediawiki/languages/messages/MessagesPdt.php
 share/mediawiki/languages/messages/MessagesPfl.php
 share/mediawiki/languages/messages/MessagesPi.php
 share/mediawiki/languages/messages/MessagesPih.php
 share/mediawiki/languages/messages/MessagesPl.php
 share/mediawiki/languages/messages/MessagesPms.php
+share/mediawiki/languages/messages/MessagesPnb.php
 share/mediawiki/languages/messages/MessagesPnt.php
 share/mediawiki/languages/messages/MessagesPs.php
 share/mediawiki/languages/messages/MessagesPt.php
@@ -677,6 +681,7 @@ share/mediawiki/languages/messages/MessagesRm.php
 share/mediawiki/languages/messages/MessagesRmy.php
 share/mediawiki/languages/messages/MessagesRo.php
 share/mediawiki/languages/messages/MessagesRoa_rup.php
+share/mediawiki/languages/messages/MessagesRoa_tara.php
 share/mediawiki/languages/messages/MessagesRu.php
 share/mediawiki/languages/messages/MessagesRuq.php
 share/mediawiki/languages/messages/MessagesRuq_cyrl.php
@@ -714,6 +719,7 @@ share/mediawiki/languages/messages/MessagesSv.php
 share/mediawiki/languages/messages/MessagesSw.php
 share/mediawiki/languages/messages/MessagesSzl.php
 share/mediawiki/languages/messages/MessagesTa.php
+share/mediawiki/languages/messages/MessagesTcy.php
 share/mediawiki/languages/messages/MessagesTe.php
 share/mediawiki/languages/messages/MessagesTet.php
 share/mediawiki/languages/messages/MessagesTg.php
