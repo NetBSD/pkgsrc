@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: mysqld.sh,v 1.2 2007/06/13 13:24:07 xtraeme Exp $
+# $NetBSD: mysqld.sh,v 1.2.18.1 2009/02/07 19:49:37 tron Exp $
 #
 # PROVIDE: mysqld
 # REQUIRE: DAEMON LOGIN mountall
@@ -27,12 +27,18 @@ procname="@PREFIX@/libexec/${name}"
 : ${mysqld_user:=@MYSQL_USER@}
 : ${mysqld_group:=@MYSQL_GROUP@}
 : ${mysqld_datadir:=@MYSQL_DATADIR@}
-pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 
 extra_commands="initdb"
 initdb_cmd="mysqld_initdb"
 start_precmd="mysqld_precmd"
 start_cmd="mysqld_start"
+
+# Don't drop thread priority unless on Linux or SunOS
+# ref. http://bugs.mysql.com/bug.php?id=18526
+case $(uname -s) in
+	Linux|SunOS)	thread_flags="";;
+	*)		thread_flags="--skip-thread-priority"
+esac
 
 mysqld_precmd()
 {
@@ -75,16 +81,19 @@ mysqld_start()
 	ulimit -n 4096
 	cd @PREFIX@
 	${command} --user=${mysqld_user} --datadir=${mysqld_datadir} \
-		   --pid-file=${pidfile} ${mysqld_flags} &
+		   --pid-file=${pidfile} ${mysqld_flags} \
+		   ${thread_flags} &
 }
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
+	pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 	run_rc_command "$1"
 else
 	if [ -f /etc/rc.conf ]; then
 		. /etc/rc.conf
 	fi
+	pidfile="${mysqld_datadir}/`@HOSTNAME_CMD@`.pid"
 	case "$1" in
 	initdb)
 		eval ${initdb_cmd}
