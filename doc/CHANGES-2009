@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.496 2009/02/07 21:38:21 seb Exp $
+$NetBSD: CHANGES-2009,v 1.497 2009/02/07 23:30:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Test-Expect version 0.31 [seb 2009-02-07]
 	Updated textproc/liblinebreak to 1.1 [wiz 2009-02-07]
 	Added devel/p5-Carp-REPL version 0.13 [seb 2009-02-07]
+	Updated games/stegavorto to 2009.01.22 [wiz 2009-02-07]
