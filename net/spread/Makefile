@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/04 20:54:52 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/07 23:29:00 joerg Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.spread.org/
 COMMENT=	Group communication system providing a number of messaging services
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	perl
@@ -40,14 +42,14 @@ CONF_FILES+=	${EXAMPLEDIR}/spread.conf.sample ${PKG_SYSCONFDIR}/spread.conf
 
 OWN_DIRS_PERMS=	${RUNTIME_DIR} ${SPREAD_USER} ${SPREAD_GROUP} 0750
 
+INSTALLATION_DIRS=	${DOCSDIR} ${EXAMPLEDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCSDIR}
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/sample.spread.conf ${EXAMPLEDIR}/spread.conf.sample
-	${INSTALL_DATA} ${WRKSRC}/sample.spread.access_ip ${EXAMPLEDIR}/spread.access_ip.sample
-	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DOCSDIR}/Readme.txt
-	${INSTALL_DATA} ${WRKSRC}/license.txt ${DOCSDIR}/LICENSE
-	${INSTALL_DATA} ${WRKSRC}/Short_Buffer_Handling.txt ${DOCSDIR}/Short_Buffer_Handling.txt
+	${INSTALL_DATA} ${WRKSRC}/sample.spread.conf ${DESTDIR}${EXAMPLEDIR}/spread.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/sample.spread.access_ip ${DESTDIR}${EXAMPLEDIR}/spread.access_ip.sample
+	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${DESTDIR}${DOCSDIR}/Readme.txt
+	${INSTALL_DATA} ${WRKSRC}/license.txt ${DESTDIR}${DOCSDIR}/LICENSE
+	${INSTALL_DATA} ${WRKSRC}/Short_Buffer_Handling.txt ${DESTDIR}${DOCSDIR}/Short_Buffer_Handling.txt
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
