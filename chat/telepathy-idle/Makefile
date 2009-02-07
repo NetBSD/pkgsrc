@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/14 23:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/07 22:57:49 joerg Exp $
 #
 
 DISTNAME=	telepathy-idle-0.1.2
@@ -15,6 +15,11 @@ USE_TOOLS+=	gmake pkg-config
 
 CONFIGURE_ARGS+=	OPENSSL_CFLAGS=-I${BUILDLINK_PREFIX.openssl}/include
 CONFIGURE_ARGS+=	OPENSSL_LIBS="-L${BUILDLINK_PREFIX.openssl}/lib ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib -lssl"
+
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23" || ${PYPKGPREFIX} == "py21"
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+.endif
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
