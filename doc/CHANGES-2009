@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.487 2009/02/07 11:09:58 martti Exp $
+$NetBSD: CHANGES-2009,v 1.488 2009/02/07 14:51:26 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -660,3 +660,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyotyrant to 1.5 [obache 2009-02-07]
 	Updated devel/p5-Moose to 0.68 [seb 2009-02-07]
 	Updated www/mediawiki to 1.13.4 [martti 2009-02-07]
+	Updated www/gtkhtml314 to 3.24.4 [drochner 2009-02-07]
+	Updated mail/evolution-data-server to 2.24.4.1 [drochner 2009-02-07]
+	Updated math/gcalctool to 5.24.3.1 [drochner 2009-02-07]
+	Updated net/vpnc to 0.5.3 [drochner 2009-02-07]
+	Updated www/privoxy to 3.0.10 [drochner 2009-02-07]
