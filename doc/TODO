@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7836 2009/02/06 08:35:53 wiz Exp $
+$NetBSD: TODO,v 1.7837 2009/02/07 17:56:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -970,9 +970,6 @@ Suggested package updates
 	o openafs-1.4.8
 	o opencobol-1.0
 	o openh323-1.19.1
-	o openldap-2.4.12
-	o openldap-client-2.4.13
-	o openldap-server-2.4.13
 	o openmortal-0.7.1
 	o openmsx-0.7.0
 	o openssh-5.1p1
