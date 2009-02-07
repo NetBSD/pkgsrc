@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/18 17:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/07 20:59:37 wiz Exp $
 #
 
-DISTNAME=	liblinebreak-1.0
+DISTNAME=	liblinebreak-1.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vimgadgets/}
 
