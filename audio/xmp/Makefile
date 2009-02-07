@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/01/09 20:43:53 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/07 21:10:47 joerg Exp $
 
 DISTNAME=	xmp-2.5.1
 CATEGORIES=	audio
@@ -8,17 +8,23 @@ MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://xmp.sourceforge.net/
 COMMENT=	Player for many different Amiga and PC module formats
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--disable-alsa \
 		--disable-oss \
 		--disable-xmms \
 		--sysconfdir=${PKG_SYSCONFDIR}
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 EGDIR=		${PREFIX}/share/examples/xmp
 CONF_FILES=	${EGDIR}/xmp-modules.conf ${PKG_SYSCONFDIR}/xmp-modules.conf
 CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
+
+INSTALL_MAKE_FLAGS+=	INSTALL=${INSTALL}
 
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -27,8 +33,5 @@ CONF_FILES+=	${EGDIR}/xmp.conf ${PKG_SYSCONFDIR}/xmp.conf
 # No native support for these OS's, so use esound for audio output
 .include "../../audio/esound/buildlink3.mk"
 .endif
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

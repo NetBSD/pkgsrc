@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2009/01/09 20:43:53 shattered Exp $
+$NetBSD: patch-ac,v 1.5 2009/02/07 21:10:48 joerg Exp $
 
 --- etc/Makefile.orig	2007-10-23 11:28:30.000000000 +0000
 +++ etc/Makefile
@@ -9,6 +9,6 @@ $NetBSD: patch-ac,v 1.4 2009/01/09 20:43:53 shattered Exp $
 -	@echo Installing xmp.conf and xmp-modules.conf in $(SYSCONFDIR)...
 -	@[ -d $(DESTDIR)$(SYSCONFDIR) ] || mkdir -p $(DESTDIR)$(SYSCONFDIR)
 -	$(INSTALL) -m644 xmp.conf xmp-modules.conf $(DESTDIR)$(SYSCONFDIR)/
-+	@echo Installing xmp.conf and xmp-modules.conf in $(datarootdir)/examples/xmp...
-+	$(INSTALL) -m644 xmp.conf xmp-modules.conf $(datarootdir)/examples/xmp
++	@echo Installing xmp.conf and xmp-modules.conf in ${DESTDIR}$(datarootdir)/examples/xmp...
++	$(INSTALL) -m644 xmp.conf xmp-modules.conf ${DESTDIR}$(datarootdir)/examples/xmp
  
