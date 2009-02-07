@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/12/04 03:06:52 hubertf Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/07 17:31:30 joerg Exp $
 
---- Makefile.orig	Sat Dec  4 03:43:11 1999
-+++ Makefile	Sat Dec  4 03:45:42 1999
-@@ -1,9 +1,12 @@
+--- Makefile.orig	1993-06-09 04:12:04.000000000 +0200
++++ Makefile
+@@ -1,9 +1,9 @@
  #	@(#)Makefile	8.1 (Berkeley) 6/8/93
  
  PROG=	xroach
@@ -13,8 +13,5 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/12/04 03:06:52 hubertf Exp $
  DPADD=	${LIBX} ${LIBM}
 -LDADD=	-lX11/X11 -lm
 +LDADD=	-L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lX11 -lm
-+
-+BINDIR=	${PREFIX}/bin
-+MANDIR=	${PREFIX}/man
  
  .include <bsd.prog.mk>
