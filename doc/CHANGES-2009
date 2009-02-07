@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.482 2009/02/07 04:53:55 taca Exp $
+$NetBSD: CHANGES-2009,v 1.483 2009/02/07 08:22:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -655,3 +655,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.102 [martti 2009-02-06]
 	Updated graphics/cheese to 2.24.3nb1 [jmorse 2009-02-06]
 	Updated www/typolight to 2.6.6 [taca 2009-02-07]
+	Updated databases/p5-tokyocabinet to 1.22 [obache 2009-02-07]
