@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.51 2009/01/26 15:39:05 hira Exp $
+$NetBSD: distinfo,v 1.52 2009/02/08 15:27:35 hira Exp $
 
-SHA1 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 1c7f652c71ad3364a98d79d4f6751db00c7daa99
-RMD160 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 09662444f359f86bb7eeec0c035ae29360e989e5
 Size (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 6674731 bytes
-SHA1 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = f84782887062011f34c5c8f0279c40d159051a34
-RMD160 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = d29ed7d23a7616b05d855c172e6f148aeb0f4b69
 Size (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = 153673147 bytes
 SHA1 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = c59fefaf9f7e3372fbeb2a1e468270613b7b1fa6
 RMD160 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = 7a2bf7cbe404b7fe8cb61c670717f54046e1cab9
@@ -71,7 +67,7 @@ SHA1 (patch-dy) = 4af56ef04180ab3dec7d0051e4075e84b62c8405
 SHA1 (patch-ec) = 05f45563ab1f27984e81945a4ea2ddd9e40b16ac
 SHA1 (patch-ed) = 37a3a9527c74500dbcd047f90f218f57d059548f
 SHA1 (patch-ef) = 03c1e3fb27e0ba12dec92866fb592f66442a0c1a
-SHA1 (patch-eg) = 2b3d35e13e059e37996efc651dcca0a4a44a30e8
-SHA1 (patch-eh) = 9635ab017d28c6606126ccd1c5194685ef1828aa
+SHA1 (patch-eg) = 0c6119bd2a91c91ab71348558b8c75224ffa90dc
+SHA1 (patch-eh) = bb09b068066309ccdc1dc707b8d97e2dd9bf64e5
 SHA1 (patch-ei) = b8b0ca35c15cff58cc53a937f8f3a127e4cd0d03
 SHA1 (patch-ej) = 1300efe96fb675b89df2c345cc68f1fc79a8bd69
