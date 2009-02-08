@@ -1,4 +1,4 @@
-$NetBSD: patch-eh,v 1.1 2008/11/24 11:58:44 hira Exp $
+$NetBSD: patch-eh,v 1.2 2009/02/08 15:27:35 hira Exp $
 
 --- sysui/desktop/share/printeradmin.sh.orig	2008-11-24 16:06:52.000000000 +0900
 +++ sysui/desktop/share/printeradmin.sh	2008-11-24 16:07:29.000000000 +0900
@@ -6,4 +6,4 @@ $NetBSD: patch-eh,v 1.1 2008/11/24 11:58:44 hira Exp $
  #!/bin/sh
  
 -exec /etc/%PREFIX/program/spadmin 
-+exec @OO_PREFIX@/%PREFIX/program/spadmin 
++exec @OO_PREFIX@/program/spadmin 
