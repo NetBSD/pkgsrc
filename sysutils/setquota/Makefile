@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/08 00:26:32 joerg Exp $
 #
 
 DISTNAME=	setquota-0.1
@@ -16,9 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-*
 
 WRKSRC=		${WRKDIR}/setquota/
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 
 INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
+USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.pkg.mk"
