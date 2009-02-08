@@ -1,0 +1,3 @@
+The Perl 5 module MouseX::Types allows types definition to be
+organized in libraries. Such libraries and hence types can then
+be used in Mouse based classes.
