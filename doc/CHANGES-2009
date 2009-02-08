@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.506 2009/02/08 18:50:42 seb Exp $
+$NetBSD: CHANGES-2009,v 1.507 2009/02/08 18:55:01 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -705,3 +705,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/openoffice2 to 2.4.2nb5 [hira 2009-02-08]
 	Updated textproc/hunspell to 1.2.8 [ahoka 2009-02-08]
 	Updated devel/p5-Mouse to 0.15 [seb 2009-02-08]
+	Added devel/p5-MouseX-Types version 0.01 [seb 2009-02-08]
