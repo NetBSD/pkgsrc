@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.498 2009/02/08 00:02:45 cube Exp $
+$NetBSD: CHANGES-2009,v 1.499 2009/02/08 00:24:03 christos Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -696,3 +696,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Carp-REPL version 0.13 [seb 2009-02-07]
 	Updated games/stegavorto to 2009.01.22 [wiz 2009-02-07]
 	Updated misc/xtide to 2.8.3nb2 [cube 2009-02-08]
+	Updated lang/sun-jre6 to 6u12 [christos 2009-02-07]
+	Updated lang/sun-jdk6 to 6u12 [christos 2009-02-07]
