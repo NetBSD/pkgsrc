@@ -98,7 +98,7 @@ OOPPTTIIOONNSS
      --uu      If the package that's being installed is already installed, an
              update is performed.  It is currently not possible to update to
              an identical version.  If this is specified twice, then any
-             dependant packages that are too old will also be updated to ful-
+             dependent packages that are too old will also be updated to ful-
              fill the dependency.  See below for a more detailed description
              of the process.
 
@@ -166,7 +166,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 nated.
 
            5.   The file list of the package is compared to the file lists of
-                the installed packeges.  If there is any overlap, the instal-
+                the installed packages.  If there is any overlap, the instal-
                 lation is terminated.
 
            6.   All package dependencies (from @@ppkkggddeepp directives, see
@@ -176,7 +176,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 cannot be found or installed, the installation is terminated.
                 If the --uu option was specified twice, any required packages
                 that are installed, but which have a version number that is
-                considered to be too old, are also updated.  The dependant
+                considered to be too old, are also updated.  The dependent
                 packages are found according to the normal PKG_PATH rules.
 
            7.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
@@ -191,7 +191,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 If the _i_n_s_t_a_l_l script exits with a non-zero status code, the
                 installation is terminated.
 
-           8.   The files from the file list are extracted to the choosen pre-
+           8.   The files from the file list are extracted to the chosen pre-
                 fix.
 
            9.   If an _i_n_s_t_a_l_l script exists for the package, it is executed
@@ -287,7 +287,7 @@ EEXXAAMMPPLLEESS
      _s_e_c_u_r_i_t_y_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s package and running it after every ppkkgg__aadddd.
 
 CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
-     The following variables change the behaviour of ppkkgg__aadddd and are described
+     The following variables change the behavior of ppkkgg__aadddd and are described
      in pkg_install.conf(5):
 
      CERTIFICATE_ANCHOR_PKGS

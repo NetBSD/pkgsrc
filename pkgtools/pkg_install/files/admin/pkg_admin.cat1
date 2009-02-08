@@ -14,7 +14,7 @@ DDEESSCCRRIIPPTTIIOONN
 OOPPTTIIOONNSS
      The following command-line options are supported:
 
-     --bb      Print only the basenames when matching package names for llssaallll
+     --bb      Print only the base names when matching package names for llssaallll
              and llssbbeesstt.
 
      --CC _c_o_n_f_i_g
@@ -90,7 +90,7 @@ OOPPTTIIOONNSS
              installation time.
 
      cchheecckk--ppkkgg--vvuullnneerraabbiilliittiieess [--ss] _f_i_l_e
-             Check format and hashes in the pkg-vulnerabilties file _f_i_l_e.  If
+             Check format and hashes in the pkg-vulnerabilities file _f_i_l_e.  If
              --ss is given, also check the embedded signature.
 
      cchheecckk--ssiiggnnaattuurree _f_i_l_e _._._.
@@ -106,8 +106,9 @@ OOPPTTIIOONNSS
              pkg_view(1).
 
      dduummpp    Dump the contents of the package database, similar to ppkkgg__iinnffoo
-             --FF.  Columns are printed for the keyfield used in the pkgdb - the
-             filename -, and the data field - the package the file belongs to.
+             --FF.  Columns are printed for the key field used in the pkgdb -
+             the filename -, and the data field - the package the file belongs
+             to.
 
      ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess [--ssuu]
              Fetch a new pkg-vulnerabilities file, check the format and if --ss
@@ -192,7 +193,7 @@ EENNVVIIRROONNMMEENNTT
              tory is _/_v_a_r_/_d_b_/_p_k_g.
 
 CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
-     The following variables change the behaviour of ppkkgg__aaddmmiinn and are
+     The following variables change the behavior of ppkkgg__aaddmmiinn and are
      described in pkg_install.conf(5):
 
      CERTIFICATE_ANCHOR_PKGS

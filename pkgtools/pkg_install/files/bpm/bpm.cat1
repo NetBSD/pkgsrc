@@ -49,7 +49,7 @@ DDEESSCCRRIIPPTTIIOONN
      ply by selecting the appropriate choices on the menu.
 
 EENNVVIIRROONNMMEENNTT
-     The environment variables which govern the behaviour of ftp(1) and
+     The environment variables which govern the behavior of ftp(1) and
      pkg_add(1) are valid for bbppmm.
 
 SSEEEE AALLSSOO
@@ -58,4 +58,4 @@ SSEEEE AALLSSOO
 AAUUTTHHOORRSS
      The bbppmm utility was written by Alistair Crooks <agc@NetBSD.org>.
 
-NetBSD 4.0                      August 3, 2007                      NetBSD 4.0
+NetBSD 5.0                      August 3, 2007                      NetBSD 5.0
