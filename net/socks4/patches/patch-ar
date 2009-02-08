@@ -1,0 +1,67 @@
+$NetBSD: patch-ar,v 1.1 2009/02/08 00:16:00 joerg Exp $
+
+--- rtelnet/telnet/sys_bsd.c.orig	1995-02-25 01:16:07.000000000 +0100
++++ rtelnet/telnet/sys_bsd.c
+@@ -66,6 +66,8 @@ static char sccsid[] = "@(#)sys_bsd.c	5.
+ #define	SIG_FUNC_RET	int
+ #endif
+ 
++extern int termdata;
++
+ int
+ 	tout,			/* Output file descriptor */
+ 	tin,			/* Input file descriptor */
+@@ -121,6 +123,19 @@ struct	termio old_tc = { 0 };
+ 
+ static fd_set ibits, obits, xbits;
+ 
++#if defined(SOLARIS) || defined(_SEQUENT_)
++static void xmitAO(), xmitEL(), xmitEC();
++#else
++static void xmitAO(), xmitEL(), xmitEC(), intp(), sendbrk();
++#endif
++
++#ifdef	SIGTSTP
++static SIG_FUNC_RET susp();
++#endif	/* SIGTSTP */
++#ifdef	SIGINFO
++static SIG_FUNC_RET ayt();
++static SIG_FUNC_RET ayt_status();
++#endif	/* SIGINFO */
+ 
+     void
+ init_sys()
+@@ -187,11 +202,6 @@ extern int kludgelinemode;
+ TerminalSpecialChars(c)
+     int	c;
+ {
+-#if defined(SOLARIS) || defined(_SEQUENT_)
+-    void xmitAO(), xmitEL(), xmitEC();
+-#else
+-    void xmitAO(), xmitEL(), xmitEC(), intp(), sendbrk();
+-#endif
+ 
+     if (c == termIntChar) {
+ 	intp();
+@@ -616,12 +626,6 @@ TerminalNewMode(f)
+     }
+ 
+     if (f != -1) {
+-#ifdef	SIGTSTP
+-	static SIG_FUNC_RET susp();
+-#endif	/* SIGTSTP */
+-#ifdef	SIGINFO
+-	static SIG_FUNC_RET ayt();
+-#endif	/* SIGINFO */
+ 
+ #ifdef	SIGTSTP
+ 	(void) signal(SIGTSTP, susp);
+@@ -669,8 +673,6 @@ TerminalNewMode(f)
+ #endif
+     } else {
+ #ifdef	SIGINFO
+-	SIG_FUNC_RET ayt_status();
+-
+ 	(void) signal(SIGINFO, ayt_status);
+ #endif	/* SIGINFO */
+ 

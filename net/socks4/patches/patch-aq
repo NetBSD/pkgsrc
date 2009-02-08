@@ -1,0 +1,20 @@
+$NetBSD: patch-aq,v 1.1 2009/02/08 00:16:00 joerg Exp $
+
+--- rftp/ruserpass.c.orig	2009-02-08 01:01:36.000000000 +0100
++++ rftp/ruserpass.c
+@@ -65,6 +65,7 @@ static	FILE *cfile;
+ #define	MACH	11
+ 
+ static char tokval[100];
++static int token();
+ 
+ static struct toktab {
+ 	char *tokstr;
+@@ -87,7 +88,6 @@ ruserpass(host, aname, apass, aacct)
+ 	char myname[MAXHOSTNAMELEN], *mydomain;
+ 	int t, i, c, usedefault = 0;
+ 	struct stat stb;
+-	static int token();
+ 
+ 	hdir = getenv("HOME");
+ 	if (hdir == NULL)
