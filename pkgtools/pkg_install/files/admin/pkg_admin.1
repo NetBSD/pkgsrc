@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.20 2009/02/05 17:22:19 joerg Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.21 2009/02/08 23:12:10 wiz Exp $
 .\"
 .\" Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -56,7 +56,7 @@ Packages System.
 The following command-line options are supported:
 .Bl -tag -width indent
 .It Fl b
-Print only the basenames when matching package names for
+Print only the base names when matching package names for
 .Cm lsall
 and
 .Cm lsbest .
@@ -161,7 +161,7 @@ checksum of the file on disk.
 Symbolic links are also checked, ensuring that the targets on disk are
 the same as the contents recorded at package installation time.
 .It Cm check-pkg-vulnerabilities Oo Fl s Oc Ar file
-Check format and hashes in the pkg-vulnerabilties file
+Check format and hashes in the pkg-vulnerabilities file
 .Ar file .
 If
 .Fl s
@@ -182,7 +182,7 @@ This should be used only by
 .It Cm dump
 Dump the contents of the package database, similar to
 .Cm pkg_info -F .
-Columns are printed for the keyfield used in the pkgdb - the filename -,
+Columns are printed for the key field used in the pkgdb - the filename -,
 and the data field - the package the file belongs to.
 .It Cm fetch-pkg-vulnerabilities Oo Fl su Oc
 Fetch a new pkg-vulnerabilities file, check the format and if
@@ -294,7 +294,7 @@ The default package database directory is
 .Pa /var/db/pkg .
 .El
 .Sh CONFIGURATION VARIABLES
-The following variables change the behaviour of
+The following variables change the behavior of
 .Nm
 and are described in
 .Xr pkg_install.conf 5 :
