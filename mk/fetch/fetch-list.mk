@@ -1,4 +1,4 @@
-# $NetBSD: fetch-list.mk,v 1.9 2006/07/27 21:46:46 jlam Exp $
+# $NetBSD: fetch-list.mk,v 1.10 2009/02/08 23:16:08 wiz Exp $
 
 ######################################################################
 ### fetch-list (PUBLIC)
@@ -80,11 +80,11 @@ fetch-list-one-pkg:
 		${ECHO} 'unsorted_sites="$${unsorted_sites} ${_MASTER_SITE_BACKUP}"'; \
 		${ECHO} sites='"'${_ORDERED_SITES:Q}'"';		\
 		${ECHO} "${MKDIR} ${_DISTDIR}";				\
-		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
+		${ECHO} 'cd ${_DISTDIR} && { [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
 		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
-		${ECHO}	done;						\
+		${ECHO}	'done; }';					\
 		${ECHO} ')';						\
 	fi)
 .    else
@@ -98,11 +98,11 @@ fetch-list-one-pkg:
 		${ECHO} 'unsorted_sites="${SITES.${fetchfile:T:S/=/--/}} ${_MASTER_SITE_BACKUP}"'; \
 		${ECHO} sites='"'${_ORDERED_SITES:Q}'"';		\
 		${ECHO} "${MKDIR} ${_DISTDIR}";				\
-		${ECHO} 'cd ${_DISTDIR} && [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
+		${ECHO} 'cd ${_DISTDIR} && { [ -f ${fetchfile} -o -f ${fetchfile:T} ] ||'; \
 		${ECHO}	'for site in $$sites; do';			\
 		${ECHO} '	${FETCH_CMD} ${FETCH_BEFORE_ARGS} "$${site}${fetchfile:T}" ${FETCH_AFTER_ARGS} && break ||'; \
 		${ECHO} '	${ECHO} ${fetchfile:T} not fetched';	\
-		${ECHO}	done;						\
+		${ECHO}	'done; }';					\
 	fi)
 .    endif
 .  endfor
