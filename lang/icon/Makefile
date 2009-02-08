@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2008/07/20 19:02:47 ahoka Exp $
+# $NetBSD: Makefile,v 1.46 2009/02/08 12:51:04 asau Exp $
 
-DISTNAME=		icon.v942src
-PKGNAME=		icon-9.4.2
-PKGREVISION=		1
+DISTNAME=		icon.v943src
+PKGNAME=		icon-9.4.3
+PKGREVISION=		#
 CATEGORIES=		lang
 MASTER_SITES=		http://www.cs.arizona.edu/icon/ftp/packages/unix/
 EXTRACT_SUFX=		.tgz
@@ -11,18 +11,19 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.arizona.edu/icon/index.htm
 COMMENT=		The Icon programming language
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All
+INSTALL_TARGET=		Install
 TEST_TARGET=		Test
 MAKE_JOBS_SAFE=		no
-
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 
 .if ${OPSYS} == "NetBSD"
-NAME=	netbsd
+NAME=	bsd
 .  if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "i386") || \
 	(${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "powerpc") || \
 	(${MACHINE_ARCH} == "mipseb") || (${MACHINE_ARCH} == "mipsel") || \
@@ -33,7 +34,7 @@ PTHREAD_OPTS+=		require native
 .  endif
 
 .elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-NAME=	freebsd
+NAME=	bsd
 
 .elif ${OPSYS} == "Linux"
 NAME=	linux
@@ -62,13 +63,12 @@ pre-build:
 	${MKDIR} ${WRKSRC}/lib/icon
 
 do-configure:
-	cd ${WRKSRC}/config/netbsd && \
+	cd ${WRKSRC}/config/bsd && \
 	${SED} -e 's:@X11BASE@:${X11BASE}:g' define.h.in \
 		> define.h
 	cd ${WRKSRC} && ${MAKE} ${CONFIGURE_TARGET} name=${NAME}
 
-do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} dest=${PREFIX} Install
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
