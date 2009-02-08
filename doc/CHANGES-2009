@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.510 2009/02/08 21:52:32 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.511 2009/02/08 23:04:44 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/kpathsea to 3.5.7nb3 [minskim 2009-02-08]
 	Added print/tex-bin-kpathsea version 2008.12107 [minskim 2009-02-08]
 	Updated geography/gpsbabel to 1.3.6 [gdt 2009-02-08]
+	Updated sysutils/puppet to 0.24.7 [tonnerre 2009-02-08]
