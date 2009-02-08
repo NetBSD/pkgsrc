@@ -1,17 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2003/06/06 08:58:42 jtb Exp $
+$NetBSD: patch-ab,v 1.9 2009/02/08 12:51:04 asau Exp $
 
---- /dev/null	Mon Mar 24 07:25:29 2003
-+++ config/netbsd/define.h.in
-@@ -0,0 +1,14 @@
+--- /dev/null	2009-02-08 02:30:41.000000000 +0300
++++ config/bsd/define.h.in	2009-02-08 03:08:28.000000000 +0300
+@@ -0,0 +1,10 @@
 +/*
-+ * Icon configuration file for NetBSD
++ * Icon configuration file for BSD
 + */
 +
 +#define UNIX 1
-+#define GenericBSD
-+#define BSD_4_4_LITE    1	/* This is new, for 4.4Lite specific stuff */
-+#define NetBSD			/* This is for NetBSD stuff (save) */
-+
 +#define LoadFunc
 +
 +#define CComp "gcc"

@@ -1,13 +1,13 @@
-$NetBSD: patch-az,v 1.6 2006/03/19 15:57:36 joerg Exp $
+$NetBSD: patch-az,v 1.7 2009/02/08 12:51:05 asau Exp $
 
---- ipl/cfuncs/mklib.sh.orig	2006-03-19 15:16:00.000000000 +0000
-+++ ipl/cfuncs/mklib.sh
-@@ -21,7 +21,7 @@ case "$SYS" in
-       ld -shared -o $LIBNAME "$@";;
-    OSF*)
-       ld -shared -expect_unresolved '*' -o $LIBNAME "$@" -lc;;
--   Linux*|BSD/OS*|OpenBSD*|NetBSD*|GNU*)
-+   Linux*|BSD/OS*|OpenBSD*|NetBSD*|GNU*|DragonFly*)
+--- ipl/cfuncs/mklib.sh.orig	2005-07-07 21:36:06.000000000 +0400
++++ ipl/cfuncs/mklib.sh	2009-02-08 01:44:18.000000000 +0300
+@@ -10,7 +10,7 @@
+ SYS=`uname -s`
+ set -x
+ case "$SYS" in
+-   Linux*|*BSD*|GNU*)
++   Linux*|*BSD*|GNU*|DragonFly*)
        gcc -shared -o $LIBNAME -fPIC "$@";;
-    FreeBSD*)
-       ld -Bshareable -o $LIBNAME "$@" -lc;;
+    Darwin*)
+       cc -bundle -undefined suppress -flat_namespace -o $LIBNAME "$@";;

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/06/06 08:58:42 jtb Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/08 12:51:04 asau Exp $
 bin/colrbook
 bin/colrpick
 bin/fontpick
@@ -149,6 +149,8 @@ lib/icon/dif.u1
 lib/icon/dif.u2
 lib/icon/digitcnt.u1
 lib/icon/digitcnt.u2
+lib/icon/dijkstra.u1
+lib/icon/dijkstra.u2
 lib/icon/distance.u1
 lib/icon/distance.u2
 lib/icon/divide.u1
@@ -421,6 +423,8 @@ lib/icon/math.u1
 lib/icon/math.u2
 lib/icon/matrix.u1
 lib/icon/matrix.u2
+lib/icon/matrix2.u1
+lib/icon/matrix2.u2
 lib/icon/memlog.u1
 lib/icon/memlog.u2
 lib/icon/memrfncs.u1
@@ -444,6 +448,8 @@ lib/icon/namepfx.u1
 lib/icon/namepfx.u2
 lib/icon/navitrix.u1
 lib/icon/navitrix.u2
+lib/icon/nestlist.u1
+lib/icon/nestlist.u2
 lib/icon/ngrams.u1
 lib/icon/ngrams.u2
 lib/icon/noncase.u1
@@ -851,7 +857,10 @@ share/doc/icon/index.htm
 share/doc/icon/install.htm
 share/doc/icon/istyle.css
 share/doc/icon/lb80.jpg
+share/doc/icon/macintosh.htm
+share/doc/icon/port.htm
 share/doc/icon/relnotes.htm
+share/doc/icon/shortcut.gif
 share/doc/icon/wwwcube.gif
 @dirrm share/doc/icon
 @dirrm lib/icon
