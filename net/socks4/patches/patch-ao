@@ -1,0 +1,21 @@
+$NetBSD: patch-ao,v 1.1 2009/02/08 00:16:00 joerg Exp $
+
+--- lib/check_cconf.c.orig	1995-02-10 21:22:51.000000000 +0100
++++ lib/check_cconf.c
+@@ -29,6 +29,7 @@ extern char *socks_serverlist;
+ static struct config *confPtr, **confNtries = NULL;
+ static int Ntries = 0;
+ static int no_conf = 0;
++static int read_cconf(void);
+ 
+ socks_check_cconf(src, dst)
+ /* Return 0 if sockd should be used,
+@@ -84,7 +85,7 @@ GotIt:
+ 	
+ }
+ 
+-static read_cconf()
++static read_cconf(void)
+ {
+ 	FILE		*fd;
+ 	static char	buf[1024];

@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2005/12/27 13:48:56 joerg Exp $
+$NetBSD: patch-aa,v 1.9 2009/02/08 00:16:00 joerg Exp $
 
---- Makefile.orig	1995-09-07 02:24:02.000000000 +0000
+--- Makefile.orig	1995-09-07 04:24:02.000000000 +0200
 +++ Makefile
 @@ -3,9 +3,11 @@
  
@@ -48,15 +48,15 @@ $NetBSD: patch-aa,v 1.8 2005/12/27 13:48:56 joerg Exp $
  
  # Directory into which to install the man pages
 -MAN_DEST_DIR = /usr/local/man
-+MAN_DEST_DIR = ${PREFIX}/man
++MAN_DEST_DIR = ${DESTDIR}${PREFIX}/man
  
  # Directory into which the SOCKS server should be installed
 -SERVER_BIN_DIR = /usr/etc
-+SERVER_BIN_DIR = ${PREFIX}/libexec
++SERVER_BIN_DIR = ${DESTDIR}${PREFIX}/libexec
  
  # Directory into the client programs should be installed
 -CLIENTS_BIN_DIR = /usr/local/bin
-+CLIENTS_BIN_DIR = ${PREFIX}/bin
++CLIENTS_BIN_DIR = ${DESTDIR}${PREFIX}/bin
  
  # SunOS 4.1.x should use
  #CC=cc
@@ -131,10 +131,10 @@ $NetBSD: patch-aa,v 1.8 2005/12/27 13:48:56 joerg Exp $
  
  
 +install.conf:
-+	${INSTALL} -m 0644 socks.conf ${PREFIX}/share/examples/socks4
++	${INSTALL} -m 0644 socks.conf ${DESTDIR}${PREFIX}/share/examples/socks4
 +
 +install.lib:
-+	${INSTALL} -m 0644 lib/libsocks.a ${PREFIX}/lib/libsocks4.a
-+	${RANLIB} ${PREFIX}/lib/libsocks4.a
++	${INSTALL} -m 0644 lib/libsocks.a ${DESTDIR}${PREFIX}/lib/libsocks4.a
++	${RANLIB} ${DESTDIR}${PREFIX}/lib/libsocks4.a
 +
 +install: install.server install.clients install.man install.conf install.lib
