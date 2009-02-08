@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.1 2009/02/08 00:16:00 joerg Exp $
+
+--- lib/check_user.c.orig	2009-02-08 00:44:57.000000000 +0100
++++ lib/check_user.c
+@@ -19,6 +19,7 @@
+ #include "bstring.h"
+ #endif
+ 
++static int check_userfile(char *userfile, char *src_user);
+ 
+ /*
+  * These functions are used by both Validate (for sockd)
+@@ -147,8 +148,7 @@ char	*userlist, *src_user;
+ #include <string.h>
+ #include <syslog.h>
+ 
+-static int check_userfile(userfile, src_user)
+-char	*userfile, *src_user;
++static int check_userfile(char *userfile, char *src_user)
+ /* return 1 if match, 0 otherwise */
+ /* return -1 if cannot open file */
+ {
