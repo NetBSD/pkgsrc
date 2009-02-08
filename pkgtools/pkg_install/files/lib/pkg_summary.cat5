@@ -38,7 +38,7 @@ DDEESSCCRRIIPPTTIIOONN
 
      FILE_NAME
              (optional) The name of the binary package file.  If not given,
-             PKGNAME.tgz can be assumed.
+             _P_K_G_N_A_M_E_._t_g_z can be assumed.
 
      FILE_SIZE
              (optional) The size of the binary package file, in bytes.
@@ -100,4 +100,4 @@ SSEEEE AALLSSOO
 HHIISSTTOORRYY
      The ppkkgg__ssuummmmaarryy format was first officially documented in April 2006.
 
-NetBSD 4.0                      August 29, 2007                     NetBSD 4.0
+NetBSD 5.0                      August 29, 2007                     NetBSD 5.0
