@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2004/09/08 15:03:15 sketch Exp $
+$NetBSD: patch-ag,v 1.2 2009/02/08 00:16:00 joerg Exp $
 
---- rtelnet/telnet/commands.c.orig	1995-02-25 00:36:16.000000000 +0000
-+++ rtelnet/telnet/commands.c	2004-09-08 15:57:55.000000000 +0100
-@@ -43,7 +43,7 @@
+--- rtelnet/telnet/commands.c.orig	1995-02-25 01:36:16.000000000 +0100
++++ rtelnet/telnet/commands.c
+@@ -43,7 +43,7 @@ static char sccsid[] = "@(#)commands.c	5
  #include <netdb.h>
  #include <ctype.h>
  #include <pwd.h>
@@ -11,16 +11,102 @@ $NetBSD: patch-ag,v 1.1 2004/09/08 15:03:15 sketch Exp $
  #include <errno.h>
  #if defined(ISC)
  #include <net/errno.h>
-@@ -112,7 +112,7 @@
+@@ -112,7 +112,16 @@ extern int isprefix();
  extern char **genget();
  extern int Ambiguous();
  
 -static call();
 +static int call(void *, ...);
++static int help(int argc, char *argvp[]);
++static int send_esc();
++
++#ifndef SOLARIS
++static void send_do();
++static void send_dont();
++static void send_will();
++static void send_wont();
++#endif
  
  typedef struct {
  	char	*name;		/* command name */
-@@ -2345,17 +2345,15 @@
+@@ -265,7 +274,7 @@ struct sendlist {
+ };
+ 
+ 
+-extern int
++static int
+ 	send_esc P((void)),
+ 	send_help P((void)),
+ 	send_docmd P((char *)),
+@@ -406,9 +415,6 @@ send_esc()
+ send_docmd(name)
+     char *name;
+ {
+-#ifndef SOLARIS
+-    void send_do();
+-#endif
+     return(send_tncmd(send_do, "do", name));
+ }
+ 
+@@ -416,27 +422,18 @@ send_docmd(name)
+ send_dontcmd(name)
+     char *name;
+ {
+-#ifndef SOLARIS
+-    void send_dont();
+-#endif
+     return(send_tncmd(send_dont, "dont", name));
+ }
+     static int
+ send_willcmd(name)
+     char *name;
+ {
+-#ifndef SOLARIS
+-    void send_will();
+-#endif
+     return(send_tncmd(send_will, "will", name));
+ }
+     static int
+ send_wontcmd(name)
+     char *name;
+ {
+-#ifndef SOLARIS
+-    void send_wont();
+-#endif
+     return(send_tncmd(send_wont, "wont", name));
+ }
+ 
+@@ -635,9 +632,9 @@ togxbinary(val)
+ }
+ 
+ 
+-extern int togglehelp P((void));
++static int togglehelp P((void));
+ #if	defined(AUTHENTICATE)
+-extern int auth_togdebug P((int));
++static int auth_togdebug P((int));
+ #endif
+ 
+ struct togglelist {
+@@ -1477,7 +1474,7 @@ struct slclist {
+ 	int	arg;
+ };
+ 
+-extern void slc_help();
++static void slc_help();
+ 
+ struct slclist SlcList[] = {
+     { "export",	"Use local special character definitions",
+@@ -1555,7 +1552,7 @@ struct envlist {
+ 
+ extern struct env_lst *
+ 	env_define P((unsigned char *, unsigned char *));
+-extern void
++static void
+ 	env_undefine P((unsigned char *)),
+ 	env_export P((unsigned char *)),
+ 	env_unexport P((unsigned char *)),
+@@ -2345,17 +2342,15 @@ static Command cmdtab2[] = {
  
      /*VARARGS1*/
      static
