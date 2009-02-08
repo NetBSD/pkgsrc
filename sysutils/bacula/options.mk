@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2008/12/07 00:44:40 adam Exp $
+# $NetBSD: options.mk,v 1.15 2009/02/08 21:38:15 shattered Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
 PKG_SUPPORTED_OPTIONS=		bacula-static ssl python
@@ -27,9 +27,9 @@ BACULA_DB=		mysql
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-CONFIGURE_ARGS+=	--with-python=${LOCALBASE}/${PYINC}
 .  include "../../lang/python/application.mk"
 .  include "${PYPKGSRCDIR}/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-python=${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYINC}
 # we can't use REPLACE_INTERPRETER here because ./configure fills in the
 # python path and the replace-interpreter stage happens before that.
 SUBST_CLASSES+=		python
