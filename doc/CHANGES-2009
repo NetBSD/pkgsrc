@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.500 2009/02/08 07:31:05 kim Exp $
+$NetBSD: CHANGES-2009,v 1.501 2009/02/08 10:15:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -699,3 +699,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jre6 to 6u12 [christos 2009-02-07]
 	Updated lang/sun-jdk6 to 6u12 [christos 2009-02-07]
 	Updated net/proftpd to 1.3.2 [kim 2009-02-08]
+	Updated devel/p5-Devel-REPL to 1.003003 [seb 2009-02-08]
