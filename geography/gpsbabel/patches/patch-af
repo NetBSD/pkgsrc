@@ -1,0 +1,74 @@
+$NetBSD: patch-af,v 1.1 2009/02/08 15:30:26 gdt Exp $
+
+From Giles Lean, who places it in the public domain.  Workarounds for
+problems with buggy USB serial adapators.
+
+--- jeeps/gpsread.c.orig	2006-04-19 22:20:18.000000000 -0400
++++ jeeps/gpsread.c
+@@ -103,6 +103,37 @@ int32 GPS_Serial_Packet_Read(gpsdevh *fd
+ 
+ 	    if(!len)
+ 	    {
++                /*
++                 * Missed DLE characters have been observed with Geko
++                 * 201 and Legend GPSRs with Prolific USB-serial
++                 * cables.  The following kludge seems to help.
++                 *
++                 * It has been tested so far with the following
++                 * combinations of software and hardware:
++                 *
++                 * OS X 10.4.x and 10.5.x:
++                 *
++                 * - a Geko 201 (firmware version 2.70) and a third
++                 *   party cable using a Prolific USB-serial converter
++                 * - a Legend using a serial cable with a non-integral
++                 *   Prolific USB-serial converter.
++                 *
++                 * NetBSD-4.0/i386 with the Geko and cable as above.
++                 *
++                 * REVISIT GFL Should this be a switch in a .ini file?
++                 *
++                 * + it's a kludge, so leaving it always on is ugly
++                 * - if it's harmless to properly working hardware,
++                 *   then it's a better user experience to leave it on
++                 */
++                if (u == 0x06 || u == 0x15)
++                {
++                    (*packet)->dle = DLE;
++                    ++len;
++		    (void) fprintf(stderr,"GPS_Packet_Read: inserted DLE due to 0x%02x.\n", u);
++                    goto dle_missed;
++                }
++
+ 		(*packet)->dle = u;
+ 		if(u != DLE)
+ 		{
+@@ -114,6 +145,7 @@ int32 GPS_Serial_Packet_Read(gpsdevh *fd
+ 		continue;
+ 	    }
+ 
++dle_missed:
+ 	    if(len==1)
+ 	    {
+ 		(*packet)->type = u;
+@@ -212,6 +244,20 @@ int32 GPS_Serial_Get_Ack(gpsdevh *fd, GP
+     
+     if(*(*rec)->data != (*tra)->type)
+     {
++        /*
++         * When used with a buggy Prolific USB-serial converter the
++         * calling sequence GPS_A000() -> GPS_Get_Ack() sometimes
++         * returns data != type causing this routine to fail and the
++         * following error message to be emitted:
++         *
++         *   GARMIN:Can't init /dev/cu.usbserial
++         *
++         * Manually retrying usually works, and subsequent
++         * investigation shows that the call that fails is made from
++         * GPS_Init() which in this case is GPS_Serial_Init().  Simply
++         * retrying the call a workaround: see note and retry loop in
++         * gpsapp.c:GPS_Init().
++         */
+ 	gps_error = FRAMING_ERROR;
+ 	return 0;
+     }
