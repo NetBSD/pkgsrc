@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2009/02/08 00:16:00 joerg Exp $
+
+--- rtelnet/Makefile.orig	2009-02-08 01:06:41.000000000 +0100
++++ rtelnet/Makefile
+@@ -91,7 +91,7 @@ all: echocwd
+ 	cd telnet; ${MAKE} ${OS} CC="${CC}" OTHER_CFLAGS="$(OTHER_CFLAGS)" SOCKS="${SOCKS}" SOCKS_LIB=${SOCKS_LIB} RESOLV_LIB="${RESOLV_LIB}" OPTIMIZE="${OPTIMIZE}"
+ 
+ install:  echocwd rtelnet
+-	$(INSTALL) -s -o bin -g bin -m 111 rtelnet ${CLIENTS_BIN_DIR}
++	${INSTALL} -m 555 rtelnet ${CLIENTS_BIN_DIR}
+ 
+ install.man: echocwd
+ 	$(INSTALL) -m 444 ../doc/socks_clients.1 $(MAN_DEST_DIR)/man1
