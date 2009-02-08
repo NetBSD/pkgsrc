@@ -129,8 +129,8 @@ OOPPTTIIOONNSS
              Set _p_r_e_f_i_x as the initial directory (base) to start from in
              selecting files for the package.
 
-     --RR      Re-order any directories in the pkg/PLIST file into reverse
-             alphabetic order, so that child directories will automatically be
+     --RR      Re-order any directories in the PLIST file into reverse alpha-
+             betic order, so that child directories will automatically be
              removed before parent directories.
 
      --SS _s_i_z_e_-_a_l_l_-_f_i_l_e
@@ -228,7 +228,7 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
              to _g_r_o_u_p.  Use without an arg to set back to default (extraction)
              group ownership.
      @@ccoommmmeenntt _s_t_r_i_n_g
-             Imbed a comment in the packing list.  Useful in trying to docu-
+             Embed a comment in the packing list.  Useful in trying to docu-
              ment some particularly hairy sequence that may trip someone up
              later.
      @@iiggnnoorree
@@ -289,4 +289,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, pkg size recording
              etc.
 
-NetBSD 4.0                       July 28, 2008                      NetBSD 4.0
+NetBSD 5.0                       July 28, 2008                      NetBSD 5.0
