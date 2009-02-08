@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.503 2009/02/08 13:42:31 seb Exp $
+$NetBSD: CHANGES-2009,v 1.504 2009/02/08 15:29:24 hira Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-REPL to 1.003003 [seb 2009-02-08]
 	Updated lang/icon to 9.4.3 [asau 2009-02-08]
 	Updated devel/p5-Config-Any to 0.17 [seb 2009-02-08]
+	Updated misc/openoffice2 to 2.4.2nb5 [hira 2009-02-08]
