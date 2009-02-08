@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.6 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-ao,v 1.7 2009/02/08 12:51:05 asau Exp $
 
 --- /dev/null
-+++ config/netbsd/mipseb.s
++++ config/bsd/mipseb.s
 @@ -0,0 +1,76 @@
 +	.data	
 +	.align	0
