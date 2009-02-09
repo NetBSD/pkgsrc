@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/22 08:41:36 hira Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/09 21:55:23 joerg Exp $
 #
 
 DISTNAME=		ccsm-0.6.0
@@ -21,6 +21,8 @@ PYTHON_PATCH_SCRIPTS=	setup.py
 PYTHON_PATCH_SCRIPTS+=	ccm/*.py
 
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
+
+PYTHON_VERSIONS_ACCEPTED=	25
 
 DEPENDS+=	compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gconf
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
