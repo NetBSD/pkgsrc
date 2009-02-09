@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.2.2 2009/02/09 11:34:35 tron Exp $
+
+Try /usr/X11R7 as a possible location for a X11 distribution too.
+
+--- configure.orig	2006-03-14 00:54:31.000000000 +0000
++++ configure
+@@ -2597,7 +2597,7 @@ fi
+ echo "$as_me:$LINENO: checking location of X11" >&5
+ echo $ECHO_N "checking location of X11... $ECHO_C" >&6
+ xroot="NOT FOUND"
+-for dir in "/usr/X11R6" "/usr/openwin" "/usr/contrib/X11R6" "/usr"; do
++for dir in "/usr/X11R7" "/usr/X11R6" "/usr/openwin" "/usr/contrib/X11R6" "/usr"; do
+   if test -r "$dir/lib/libXaw.so" -o -r "$dir/lib/libXaw.a" -o -r "$dir/lib/libXaw.dll.a"; then
+     xroot="$dir"
+     xlibdir="$dir/lib"
