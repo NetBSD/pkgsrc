@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1106 2009/02/08 18:52:20 seb Exp $
+# $NetBSD: Makefile,v 1.1107 2009/02/09 19:11:59 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -22,7 +22,6 @@ SUBDIR+=	SDL_gfx
 SUBDIR+=	SDL_ttf
 SUBDIR+=	SDLmm
 SUBDIR+=	ZenTest
-SUBDIR+=	aap
 SUBDIR+=	accerciser
 SUBDIR+=	acme
 SUBDIR+=	acr
