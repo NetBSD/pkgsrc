@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.24 2009/02/02 12:35:01 joerg Exp $
+# $NetBSD: Makefile.in,v 1.25 2009/02/09 16:54:08 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -36,12 +36,12 @@ CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
 .if !empty(BOOTSTRAP)
 CPPFLAGS+=	-DBOOTSTRAP
 .else
-OBJS+=	pkg_io.o
+OBJS+=	pkg_io.o pkg_signature.o
 .endif
 
 .if !empty(SSL_SUPPORT)
 CPPFLAGS+=	-DHAVE_SSL
-OBJS+=		pkg_signature.o pkcs7.o
+OBJS+=		pkcs7.o
 .endif
 
 all: $(LIB)
