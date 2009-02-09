@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/22 18:47:44 jmcneill Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/09 18:36:11 joerg Exp $
 #
 
 PKGNAME=		pidgin-sametime-${PIDGIN_VERSION}
@@ -8,7 +8,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../chat/libpurple/Makefile.common"
 
-USE_TOOLS+=		msgfmt perl
+USE_TOOLS+=		msgfmt perl intltool
 
 CONFIGURE_ARGS+=	--enable-meanwhile
 
