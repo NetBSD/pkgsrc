@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:12 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/09 21:09:22 joerg Exp $
 #
 
 DISTNAME=		Mixminion-0.0.7.1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7d
 
 CRYPTO=				YES
-PYTHON_VERSIONS_ACCEPTED=	23 21
+PYTHON_VERSIONS_ACCEPTED=	23
 PYDISTUTILSPKG=			YES
 
 TEST_TARGET=			test
