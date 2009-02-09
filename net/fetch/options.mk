@@ -1,8 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/10/08 15:28:30 joerg Exp $
+# $NetBSD: options.mk,v 1.2 2009/02/09 13:34:51 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libfetch
-PKG_SUPPORTED_OPTIONS=	openssl
-PKG_SUGGESTED_OPTIONS=	openssl
+PKG_SUPPORTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=
+
+.include "../../net/libfetch/buildlink3.mk"
 
 .include "../../mk/bsd.options.mk"
 
