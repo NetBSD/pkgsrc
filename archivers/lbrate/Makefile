@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/18 07:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/09 23:25:45 joerg Exp $
 
 DISTNAME=	lbrate-1.1
 PKGREVISION=	1
@@ -10,14 +10,15 @@ HOMEPAGE=	http://rus.members.beeb.net/lbrate.html
 COMMENT=	Extract/decompress CP/M LBR archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
-LBRATE_DOCSDIR=	${PREFIX}/share/doc/lbrate
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/lbrate
 
 post-install:
-	${INSTALL_DATA_DIR} ${LBRATE_DOCSDIR}
 .for f in COPYING ChangeLog README TODO
-	${INSTALL_DATA} ${WRKSRC}/${f} ${LBRATE_DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/lbrate
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
