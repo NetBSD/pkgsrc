@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/23 12:23:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/02/09 08:33:32 obache Exp $
 bin/rabbirc
 bin/rabbit
+bin/rabbit-command
 bin/rabbit-theme-manager
 bin/rabrick
 ${RUBY_VENDORLIB}/rabbit/action.rb
@@ -92,6 +93,7 @@ ${RUBY_VENDORLIB}/rabbit/parser/ext/image.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/inline.rb
 ${RUBY_VENDORLIB}/rabbit/parser/ext/tex.rb
 ${RUBY_VENDORLIB}/rabbit/parser/image.rb
+${RUBY_VENDORLIB}/rabbit/parser/pause-support.rb
 ${RUBY_VENDORLIB}/rabbit/parser/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd.rb
 ${RUBY_VENDORLIB}/rabbit/parser/rd/ext/anthy.rb
@@ -268,6 +270,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/image-viewer/image-viewer.rb
 ${RUBY_VENDORLIB}/rabbit/theme/image-viewer/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/image/image.rb
 ${RUBY_VENDORLIB}/rabbit/theme/image/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/lightning-clear-blue/lightning-clear-blue.rb
+${RUBY_VENDORLIB}/rabbit/theme/lightning-clear-blue/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-rabbit/lightning-rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-rabbit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/lightning-simple/lightning-simple.rb
@@ -285,6 +289,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/newline-in-title.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/night-black/night-black.rb
 ${RUBY_VENDORLIB}/rabbit/theme/night-black/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/pdf-tortoise-and-hare/pdf-tortoise-and-hare.rb
+${RUBY_VENDORLIB}/rabbit/theme/pdf-tortoise-and-hare/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/powered-by/powered-by.rb
@@ -354,6 +360,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/title-background-image/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-background-image/title-background-image.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-logo/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-logo/title-logo.rb
+${RUBY_VENDORLIB}/rabbit/theme/title-on-image-toolkit/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/title-on-image-toolkit/title-on-image-toolkit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-shadow/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/title-shadow/title-shadow.rb
 ${RUBY_VENDORLIB}/rabbit/trackball.rb
@@ -431,6 +439,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rwiki
 @dirrm ${RUBY_VENDORLIB}/rabbit/xmlrpc
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-shadow
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-on-image-toolkit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-logo
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-background-image
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-background-color
@@ -464,6 +473,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/rabbit-block-quote
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/rabbit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/powered-by
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/pdf-tortoise-and-hare
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/pdf
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/night-black
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title
@@ -473,6 +483,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-simple
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-rabbit
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-clear-blue
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/image-viewer
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/image-timer
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/image-slide-number
