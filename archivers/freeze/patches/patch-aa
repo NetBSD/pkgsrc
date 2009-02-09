@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/07/17 17:17:43 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2009/02/09 23:53:00 joerg Exp $
 
---- Makefile.in.orig	1993-02-24 13:36:56.000000000 +0000
+--- Makefile.in.orig	1993-02-24 14:36:56.000000000 +0100
 +++ Makefile.in
 @@ -3,7 +3,7 @@ srcdir        = @srcdir@
  VPATH         = $(srcdir)
@@ -11,12 +11,14 @@ $NetBSD: patch-aa,v 1.2 2006/07/17 17:17:43 joerg Exp $
  
  INSTALL       = @INSTALL@
  INSTALL_PROGRAM = @INSTALL_PROGRAM@
-@@ -20,7 +20,7 @@ default:        prog
+@@ -19,8 +19,8 @@ default:        prog
+ 
  # Added the prefix macro, so that it was easier to change installation place.
  prefix        = /usr/local
- DEST          = $(prefix)/bin
+-DEST          = $(prefix)/bin
 -MANDEST       = $(prefix)/man/man1
-+MANDEST       = $(prefix)/${PKGMANDIR}/man1
++DEST          = ${DESTDIR}$(prefix)/bin
++MANDEST       = ${DESTDIR}$(prefix)/${PKGMANDIR}/man1
  SEC           = 1
  
  HDRS          = bitio.h\
