@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/04/30 19:26:23 adam Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/10 00:08:35 joerg Exp $
 
 DISTNAME=	libmcrypt-2.5.8
 CATEGORIES=	security devel
@@ -9,14 +9,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mcrypt.sourceforge.net/
 COMMENT=	Crypto algorithms library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-pre-install:
-	mkdir ${PREFIX}/include/mutils
+INSTALLATION_DIRS=	include/mutils
 
 post-install:
-	rmdir ${PREFIX}/lib/libmcrypt
+	rmdir ${DESTDIR}${PREFIX}/lib/libmcrypt
 
 .include "../../mk/bsd.pkg.mk"

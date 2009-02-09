@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile.in,v 1.7 2004/08/21 06:33:39 jlam Exp $
+#	$NetBSD: Makefile.in,v 1.8 2009/02/10 00:11:53 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -41,9 +41,9 @@ distclean: clean
 	rm -f configure.lineno config.log
 
 install:
-	$(INSTALL) -m 755 -d $(sbindir)
-	$(INSTALL) -m 755 -d $(man8dir)
-	$(INSTALL) -m 755 -d $(cat8dir)
-	$(INSTALL) $(PROG) $(sbindir)
-	$(INSTALL) -m 444 $(PROG).8 $(man8dir)/$(PROG).8
-	$(INSTALL) -m 444 $(PROG).cat8 $(cat8dir)/$(PROG).0
+	$(INSTALL) -m 755 -d ${DESTDIR}$(sbindir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(man8dir)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(cat8dir)
+	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)
+	$(INSTALL) -m 444 $(PROG).8 ${DESTDIR}$(man8dir)/$(PROG).8
+	$(INSTALL) -m 444 $(PROG).cat8 ${DESTDIR}$(cat8dir)/$(PROG).0

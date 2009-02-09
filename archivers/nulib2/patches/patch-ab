@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2004/11/29 04:50:35 tv Exp $
+$NetBSD: patch-ab,v 1.6 2009/02/10 00:01:55 joerg Exp $
 
---- Makefile.in.orig	Mon May 22 20:42:57 2000
+--- Makefile.in.orig	2004-10-12 00:25:19.000000000 +0200
 +++ Makefile.in
-@@ -69,7 +69,11 @@
+@@ -69,14 +69,18 @@ LIB_PRODUCT	= libnufx.a
  # Build stuff
  #
  
@@ -15,7 +15,18 @@ $NetBSD: patch-ab,v 1.5 2004/11/29 04:50:35 tv Exp $
  	@true
  
  install: $(PRODUCT)
-@@ -97,7 +101,7 @@
+-	$(srcdir)/mkinstalldirs $(bindir)
+-	$(INSTALL_PROGRAM) $(PRODUCT) $(bindir)
+-	$(srcdir)/mkinstalldirs $(mandir)/man1
+-	$(INSTALL_DATA) nulib2.1 $(mandir)/man1/
++	$(srcdir)/mkinstalldirs ${DESTDIR}$(bindir)
++	$(INSTALL_PROGRAM) $(PRODUCT) ${DESTDIR}$(bindir)
++	$(srcdir)/mkinstalldirs ${DESTDIR}$(mandir)/man1
++	$(INSTALL_DATA) nulib2.1 ${DESTDIR}$(mandir)/man1/
+ 
+ install-shared:
+ 	LIB_PRODUCT="libnufx.so" $(MAKE) -e install
+@@ -97,7 +101,7 @@ purify:
  	@$(MAKE) PURIFY_BUILD=1
  
  $(PRODUCT): $(OBJS) $(NUFXLIB)
