@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.513 2009/02/09 03:22:56 dsainty Exp $
+$NetBSD: CHANGES-2009,v 1.514 2009/02/09 08:12:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -712,3 +712,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/puppet to 0.24.7 [tonnerre 2009-02-08]
 	Updated sysutils/ruby-facter to 1.5.2 [tonnerre 2009-02-08]
 	Added math/p5-Roman version 1.22 [dsainty 2009-02-09]
+	Updated databases/ruby-tokyocabinet to 1.19 [obache 2009-02-09]
