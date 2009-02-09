@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.netbsd-i386,v 1.2 2007/08/23 18:20:30 jlam Exp $
+# $NetBSD: Makefile.netbsd-i386,v 1.3 2009/02/09 23:33:27 joerg Exp $
 
 DISTNAME=		rarbsd
 PKGNAME=		rar-2.02
@@ -47,9 +47,9 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/rar ${PREFIX:Q}/bin/rar
-	${INSTALL_DATA} ${WRKSRC:Q}/RarFiles.Lst ${DATADIR:Q}/rarfiles.lst
-	${INSTALL_DATA} ${WRKSRC:Q}/default.sfx ${DATADIR:Q}/default.sfx
-	${INSTALL_DATA} ${WRKSRC:Q}/Dos.SFX ${DATADIR:Q}/dos.sfx
-	cd ${WRKSRC:Q} && ${INSTALL_MAN} Rar.Txt Rar_FAQ.txt		\
-		TechNote.Txt License.Txt Internet.Txt ${DOCDIR:Q}
+	${INSTALL_SCRIPT} ${WRKSRC}/rar ${DESTDIR}${PREFIX}/bin/rar
+	${INSTALL_DATA} ${WRKSRC}/RarFiles.Lst ${DESTDIR}${DATADIR}/rarfiles.lst
+	${INSTALL_DATA} ${WRKSRC}/default.sfx ${DESTDIR}${DATADIR}/default.sfx
+	${INSTALL_DATA} ${WRKSRC}/Dos.SFX ${DESTDIR}${DATADIR}/dos.sfx
+	cd ${WRKSRC} && ${INSTALL_MAN} Rar.Txt Rar_FAQ.txt		\
+		TechNote.Txt License.Txt Internet.Txt ${DESTDIR}${DOCDIR}
