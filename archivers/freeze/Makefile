@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/17 17:17:43 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/09 23:53:00 joerg Exp $
 
 DISTNAME=	freeze-2.5
 PKGREVISION=	2
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	FREEZE / MELT compression program - often used in QNX
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 BUILD_TARGET=	prog
