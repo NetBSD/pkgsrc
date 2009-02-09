@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2008/12/28 08:56:59 kim Exp $
+# $NetBSD: Makefile,v 1.52.2.1 2009/02/09 11:28:54 tron Exp $
 
-DISTNAME=		proftpd-1.3.2rc3
+DISTNAME=		proftpd-1.3.2
 #PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
@@ -31,6 +31,7 @@ CONFIGURE_ENV+=		install_user=${ROOT_USER} install_group=${ROOT_GROUP}
 BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		proftpd
+REPLACE_PERL+=		contrib/ftpasswd
 
 CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
 			${PKG_SYSCONFDIR}/proftpd.conf
@@ -63,6 +64,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/proftpd
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/sample-configurations/*.conf \
+		${DESTDIR}${PREFIX}/share/examples/proftpd
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/ftpasswd \
 		${DESTDIR}${PREFIX}/share/examples/proftpd
 
 .include "../../devel/gettext-lib/buildlink3.mk"
