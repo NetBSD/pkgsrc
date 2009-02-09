@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.515 2009/02/09 08:33:52 obache Exp $
+$NetBSD: CHANGES-2009,v 1.516 2009/02/09 19:11:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -714,3 +714,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added math/p5-Roman version 1.22 [dsainty 2009-02-09]
 	Updated databases/ruby-tokyocabinet to 1.19 [obache 2009-02-09]
 	Updated graphics/rabbit to 0.5.9 [obache 2009-02-09]
+	Removed devel/aap [joerg 2009-02-09]
+	Removed chat/fugu [joerg 2009-02-09]
