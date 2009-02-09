@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/09 18:40:25 joerg Exp $
 #
 
 DISTNAME=		compizconfig-python-0.6.0
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
+
+PYTHON_VERSIONS_ACCEPTED=	25
 
 PY_PATCHPLIST=		yes
 
