@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.linux-i386,v 1.1 2007/08/22 16:43:34 jlam Exp $
+# $NetBSD: Makefile.linux-i386,v 1.2 2009/02/09 23:33:27 joerg Exp $
 
 DISTNAME=		rarlinux-3.6.0
 PKGNAME=		${DISTNAME:S/linux//}
@@ -18,7 +18,7 @@ DOCDIR=			${PREFIX}/share/doc/rar
 INSTALLATION_DIRS=	bin lib ${DATADIR} ${DOCDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/rar_static ${PREFIX:Q}/bin/rar
-	${INSTALL_DATA} ${WRKSRC:Q}/default.sfx ${DATADIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DOCDIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DOCDIR:Q}
+	${INSTALL_PROGRAM} ${WRKSRC}/rar_static ${DESTDIR}${PREFIX}/bin/rar
+	${INSTALL_DATA} ${WRKSRC}/default.sfx ${DESTDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DESTDIR}${DOCDIR}
