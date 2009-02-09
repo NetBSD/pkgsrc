@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/12/22 23:41:01 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/09 23:30:07 joerg Exp $
 
 DISTNAME=	arj-3.10.22
 CATEGORIES=	archivers
@@ -9,6 +9,7 @@ HOMEPAGE=	http://arj.sourceforge.net/
 COMMENT=	Open-source ARJ archiver
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		autoconf gmake
 GNU_CONFIGURE=		yes
@@ -33,12 +34,13 @@ pre-configure:
 	${RM} -f ${WRKSRC}/environ.c.1
 	cd ${WRKSRC}/gnu && autoconf
 
+INSTALLATION_DIRS+=	${ARJ_DOCSDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${ARJ_DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${WRKSRC}/doc/debug.txt 	\
-					${ARJ_DOCSDIR}
+					${DESTDIR}${ARJ_DOCSDIR}
 .for i in arjl.txt arjs.txt history.txt readme.txt unix.txt
-	${INSTALL_DATA} ${WRKSRC}/resource/en/${i:Q} ${ARJ_DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/resource/en/${i:Q} ${DESTDIR}${ARJ_DOCSDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

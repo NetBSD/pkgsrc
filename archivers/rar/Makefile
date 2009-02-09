@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.50 2008/01/25 23:44:14 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2009/02/09 23:33:27 joerg Exp $
 
 DISTNAME=		rar	# overridden in Makefile.${EMUL_PLATFORM}
 PKGNAME=		rar-2.02 # also overridden
 PKGREVISION=		1
 CATEGORIES=		archivers
 MASTER_SITES=		# empty
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rarsoft.com/
