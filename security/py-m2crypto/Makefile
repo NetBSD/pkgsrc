@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/09 21:09:22 joerg Exp $
 #
 
 DISTNAME=		m2crypto-0.13
@@ -18,7 +18,6 @@ COMMENT=		Crypto and SSL toolkit for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 
 # constness is very different between openssl versions,
 # it seems, and 0.9.7i is the version which currently is

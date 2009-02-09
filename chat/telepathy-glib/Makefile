@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/18 16:18:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/09 21:09:20 joerg Exp $
 #
 
 DISTNAME=	telepathy-glib-0.7.22
@@ -16,7 +16,7 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	telepathy-glib/telepathy-glib.pc.in
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23" || ${PYPKGPREFIX} == "py21"
+.if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 

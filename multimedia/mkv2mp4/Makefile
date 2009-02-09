@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/23 17:57:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/09 21:09:22 joerg Exp $
 #
 
 SVNREV=		11
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}
 
 REPLACE_PYTHON=	${DISTNAME}.py
 # uses subprocess.check_call, which is new in 2.5
-PYTHON_VERSIONS_INCOMPATIBLE=	21 23 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}.py \

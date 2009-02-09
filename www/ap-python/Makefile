@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/07/10 14:59:57 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/09 21:09:23 joerg Exp $
 #
 
 DISTNAME=		mod_python-2.7.10
@@ -21,7 +21,7 @@ PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON_BIN=${PYTHONBIN:Q} ac_cv_path_MKDEP=
 MAKE_ENV+=		PYTHONBIN=${PYTHONBIN:Q}
-PYTHON_VERSIONS_ACCEPTED=	23 21
+PYTHON_VERSIONS_ACCEPTED=	23
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ap-mod_python

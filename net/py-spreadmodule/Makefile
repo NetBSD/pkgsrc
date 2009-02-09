@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/09 21:09:22 joerg Exp $
 #
 
 DISTNAME=	SpreadModule-1.4
@@ -15,8 +15,6 @@ COMMENT=	Python bindings for the Spread messaging service
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	YES
-
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 
 SUBST_CLASSES+=		setup
 SUBST_STAGE.setup=	post-patch
