@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/09 21:09:22 joerg Exp $
 
 DISTNAME=	GnuPGInterface-0.3.2
 PKGNAME=	${PYPKGPREFIX}-gnupg-0.3.2
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
