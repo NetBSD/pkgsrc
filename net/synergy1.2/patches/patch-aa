@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2009/02/09 17:04:49 joerg Exp $
+
+--- lib/platform/CXWindowsScreen.cpp.orig	2009-02-09 17:47:55.000000000 +0100
++++ lib/platform/CXWindowsScreen.cpp
+@@ -923,7 +923,7 @@ CXWindowsScreen::openIM()
+ 	// find the appropriate style.  synergy supports XIMPreeditNothing
+ 	// only at the moment.
+ 	XIMStyles* styles;
+-	if (XGetIMValues(im, XNQueryInputStyle, &styles, NULL) != NULL ||
++	if (XGetIMValues(im, XNQueryInputStyle, &styles, (void *)NULL) != NULL ||
+ 		styles == NULL) {
+ 		LOG((CLOG_WARN "cannot get IM styles"));
+ 		XCloseIM(im);
+@@ -946,7 +946,7 @@ CXWindowsScreen::openIM()
+ 	}
+ 
+ 	// create an input context for the style and tell it about our window
+-	XIC ic = XCreateIC(im, XNInputStyle, style, XNClientWindow, m_window, NULL);
++	XIC ic = XCreateIC(im, XNInputStyle, style, XNClientWindow, m_window, (void *)NULL);
+ 	if (ic == NULL) {
+ 		LOG((CLOG_WARN "cannot create IC"));
+ 		XCloseIM(im);
+@@ -955,7 +955,7 @@ CXWindowsScreen::openIM()
+ 
+ 	// find out the events we must select for and do so
+ 	unsigned long mask;
+-	if (XGetICValues(ic, XNFilterEvents, &mask, NULL) != NULL) {
++	if (XGetICValues(ic, XNFilterEvents, &mask, (void *)NULL) != NULL) {
+ 		LOG((CLOG_WARN "cannot get IC filter events"));
+ 		XDestroyIC(ic);
+ 		XCloseIM(im);

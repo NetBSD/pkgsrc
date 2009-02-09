@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/19 19:39:53 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/09 17:04:49 joerg Exp $
 #
 
 DISTNAME=		synergy-1.2.7
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synergy2/}
 MAINTAINER=		yui@yui.pe.kr
 HOMEPAGE=		http://synergy2.sourceforge.net/
 COMMENT=		Let an user share a mouse and keyboard among computers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
