@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.518 2009/02/09 21:05:23 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.519 2009/02/09 21:07:15 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -718,3 +718,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed chat/fugu [joerg 2009-02-09]
 	Removed textproc/py-csv [joerg 2009-02-09]
 	Removed lang/python21 [joerg 2009-02-09]
+	Removed lang/py21-html-docs [joerg 2009-02-09]
