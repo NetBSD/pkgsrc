@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/30 16:42:38 taca Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/09 21:57:10 joerg Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
@@ -29,6 +29,8 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
 
 PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
+
+INSTALLATION_DIRS+=	${TL_WEBDIR}/templates
 
 do-install:
 	cd ${WRKSRC}; \
