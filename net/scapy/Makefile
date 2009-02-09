@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/09 22:56:26 joerg Exp $
 #
 
 DISTNAME=		scapy-1.0.5
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.secdev.org/projects/scapy/files/
 

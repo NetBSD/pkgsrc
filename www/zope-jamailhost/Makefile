@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:15 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/09 22:56:28 joerg Exp $
 # FreeBSD: ports/japanese/zope-jamailhost/Makefile,v 1.6 2006/10/31 10:55:17 miwi Exp
 #
 
 DISTNAME=	${ZOPE_PRODUCT_NAME}-${ZOPE_PRODUCT_VER}
 PKGNAME=	${ZOPE_PKG_PREFIX}-${ZOPE_PRODUCT_NAME}-${ZOPE_PRODUCT_VER}
+PKGREVISION=	1
 CATEGORIES=	www python www japanese
 MASTER_SITES=	http://www005.upp.so-net.ne.jp/nakagami/Download/
 EXTRACT_SUFX=	.tgz

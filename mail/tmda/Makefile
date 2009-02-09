@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2009/02/09 22:56:25 joerg Exp $
 #
 
 DISTNAME=	tmda-1.1.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail python
 MASTER_SITES=	http://tmda.sourceforge.net/ftp/releases/
 MASTER_SITES+=	ftp://tmda.net/pub/tmda/releases/

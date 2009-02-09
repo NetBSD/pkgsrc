@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.36 2008/06/12 02:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2009/02/09 22:56:26 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
 PKGNAME=	${DISTNAME:S/BitT/bitt/}
+PKGREVISION=	1
 
 PYDISTUTILSPKG=	yes
 
