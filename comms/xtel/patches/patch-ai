@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2009/02/09 11:20:30 joerg Exp $
+
+--- iminitel/Imakefile.orig	2009-02-07 18:14:28.000000000 +0100
++++ iminitel/Imakefile
+@@ -8,12 +8,11 @@ clean::
+ depend::
+ 
+ install::
+-InstallNonExecFile(iminitel, $(PPPDIR)/peers)
+-InstallNonExecFile(chat-iminitel, $(PPPDIR))
++InstallNonExecFile(iminitel,$(PPPDIR)/peers)
++InstallNonExecFile(chat-iminitel,$(PPPDIR))
+ InstallNamedProg(connect_iminitel.sh,connect_iminitel,$(LIBDIR)/xtel)
+ InstallNamedProg(install_iminitel.sh,install_iminitel,$(BINDIR))
+-InstallNamedProg(ip-up.iminitel,ip-up.iminitel, $(PPPDIR))
+-InstallNamedProg(ip-down.iminitel,ip-down.iminitel, $(PPPDIR))
++InstallNamedProg(ip-up.iminitel,ip-up.iminitel,$(PPPDIR))
++InstallNamedProg(ip-down.iminitel,ip-down.iminitel,$(PPPDIR))
+ 
+-install::
+-	install_iminitel
++install:: install_iminitel
