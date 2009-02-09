@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:26 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/09 22:56:28 joerg Exp $
 #
 
 DISTNAME=		Zope-3.3.1
 PKGNAME=		zope3-3.3.1
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://www.zope.org/Products/Zope3/3.3.1/
 EXTRACT_SUFX=		.tgz
