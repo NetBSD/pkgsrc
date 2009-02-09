@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/03/02 03:48:36 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/09 23:29:54 joerg Exp $
 #
 
 DISTNAME=		bicom101
@@ -25,7 +25,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/bicom
 
 do-build:
 	set -e;								\
@@ -42,7 +42,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/bicom
 	${INSTALL_DATA} ${WRKSRC}/README.TXT \
 		${DESTDIR}${PREFIX}/share/doc/bicom/readme.txt
 
