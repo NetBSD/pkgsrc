@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/09 21:09:22 joerg Exp $
 
 DISTNAME=	HappyDoc_r2_1
 PKGNAME=	${PYPKGPREFIX}-HappyDoc-2.1
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/HappyDoc-r2_1
 PYDISTUTILSPKG=	# defined
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-extract:
