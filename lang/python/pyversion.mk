@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.62 2009/01/23 18:02:32 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.63 2009/02/09 21:09:21 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -62,11 +62,6 @@ PYTHON_VERSION_DEFAULT?=		24
 PYTHON_VERSIONS_ACCEPTED?=		25 24 23
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
-.if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_INCOMPATIBLE+=		21
-.endif
-
-BUILDLINK_API_DEPENDS.python21?=		python21>=2.1
 BUILDLINK_API_DEPENDS.python23?=		python23>=2.3
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
@@ -129,12 +124,6 @@ PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python23}:${PYPKGSRCDIR}
 PYPACKAGE=	python23
 PYVERSSUFFIX=	2.3
 PYPKGPREFIX=	py23
-.elif ${_PYTHON_VERSION} == "21"
-PYPKGSRCDIR=	../../lang/python21
-PYPACKAGE=	python21
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python21}:${PYPKGSRCDIR}
-PYVERSSUFFIX=	2.1
-PYPKGPREFIX=	py21
 .else
 PKG_FAIL_REASON+=   "No valid Python version"
 .endif
