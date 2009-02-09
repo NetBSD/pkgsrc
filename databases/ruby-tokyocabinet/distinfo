@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/12/15 11:16:34 obache Exp $
+$NetBSD: distinfo,v 1.6 2009/02/09 08:12:41 obache Exp $
 
-SHA1 (tokyocabinet-ruby-1.18.tar.gz) = aa17c5047f2c259d77d55e09f157255bd8a55e21
-RMD160 (tokyocabinet-ruby-1.18.tar.gz) = 756cb163bc91bfd1d8d24dbe71755905abfee1b0
-Size (tokyocabinet-ruby-1.18.tar.gz) = 65505 bytes
-SHA1 (patch-aa) = 0f52e2be325a773b396033d63d02e633a41138f0
+SHA1 (tokyocabinet-ruby-1.19.tar.gz) = 685eea0ffc544e06f8187478d88e2622afb3f44d
+RMD160 (tokyocabinet-ruby-1.19.tar.gz) = 6d99c77c671abac38a62dc058a92ea746dfc6870
+Size (tokyocabinet-ruby-1.19.tar.gz) = 84829 bytes
+SHA1 (patch-aa) = 289c9be268f4eca03c9caed859446176ceb3cd2a
