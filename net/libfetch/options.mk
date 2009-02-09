@@ -1,8 +1,14 @@
-# $NetBSD: options.mk,v 1.2 2008/10/06 12:58:29 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2009/02/09 13:34:02 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libfetch
 PKG_SUPPORTED_OPTIONS=	inet6 openssl
-PKG_SUGGESTED_OPTIONS=	inet6 openssl
+PKG_SUGGESTED_OPTIONS=	inet6
+
+.include "../../security/openssl/builtin.mk"
+
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+PKG_SUGGESTED_OPTIONS+=	openssl
+.endif
 
 .include "../../mk/bsd.options.mk"
 
