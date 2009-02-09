@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.2 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.3 2009/02/09 16:54:08 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.2 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.3 2009/02/09 16:54:08 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -356,10 +356,16 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 
 		free(signature_file);
 	} else {
+#ifdef HAVE_SSL
 		has_sig = !easy_pkcs7_verify(hash_file, hash_len, signature_file,
 		    signature_len, certs_packages, 1);
 
 		free(signature_file);
+#else
+		warnx("No OpenSSL support compiled in, skipping signature");
+		has_sig = 0;
+		free(signature_file);
+#endif
 	}
 
 	r = archive_read_next_header(*archive, &my_entry);
@@ -503,6 +509,7 @@ static const char hash_template[] =
 
 static const char hash_trailer[] = "end pkgsrc signature\n";
 
+#ifdef HAVE_SSL
 void
 pkg_sign_x509(const char *name, const char *output, const char *key_file, const char *cert_file)
 {
@@ -593,6 +600,7 @@ pkg_sign_x509(const char *name, const char *output, const char *key_file, const 
 
 	exit(0);
 }
+#endif
 
 void
 pkg_sign_gpg(const char *name, const char *output)
