@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/04/25 20:39:09 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:23 joerg Exp $
 #
 
 DISTNAME=	gmailfs-0.7.2
+PKGREVISION=	1
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	http://richard.jones.name/google-hacks/gmail-filesystem/
