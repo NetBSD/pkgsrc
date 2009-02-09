@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/19 18:04:07 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/09 23:23:56 abs Exp $
 
 DISTNAME=	signatures-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Subroutine signatures with no source filter
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/signatures/.packlist
+
+BUILD_DEPENDS+=    p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
 
 DEPENDS+=	p5-B-Hooks-OP-Check>=0.13:../../devel/p5-B-Hooks-OP-Check
 DEPENDS+=	p5-B-Hooks-OP-PPAddr>=0:../../devel/p5-B-Hooks-OP-PPAddr
