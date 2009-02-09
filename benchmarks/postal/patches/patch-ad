@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2009/02/09 18:54:05 joerg Exp $
+
+--- tcp.h.orig	2009-02-09 19:48:16.000000000 +0100
++++ tcp.h
+@@ -90,7 +90,11 @@ private:
+   address *m_sourceAddr;
+   Logit *m_debug; // debug file management object (NULL if no debugging)
+ #ifdef USE_SSL
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+   SSL_METHOD *m_sslMeth;
++#else
++  const SSL_METHOD *m_sslMeth;
++#endif
+   SSL_CTX* m_sslCtx;
+   SSL *m_ssl;
+   bool m_isTLS;
