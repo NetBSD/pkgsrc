@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:56 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:27 joerg Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
 DISTNAME=	Plone-${PLONE25_VERSION}
 PKGNAME=	${PLONE_PKG_PREFIX}-${PLONE25_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www python
 MASTER_SITES=	http://launchpad.net/plone/2.5/2.5.5/+download/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/09/14 10:20:38 tonio Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/09 22:56:23 joerg Exp $
 #
 
 DISTNAME=		tailor-0.9.35
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel scm
 MASTER_SITES=		http://darcs.arstecnica.it/
 

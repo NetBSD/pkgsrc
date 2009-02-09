@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/12/04 16:55:42 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/09 22:56:21 joerg Exp $
 #
 
 DISTNAME=	gtkpod-0.99.12
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
 
