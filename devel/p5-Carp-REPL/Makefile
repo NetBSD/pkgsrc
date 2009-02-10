@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/07 21:36:55 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/10 05:41:16 seb Exp $
 #
 
-DISTNAME=	Carp-REPL-0.13
+DISTNAME=	Carp-REPL-0.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Carp/}
@@ -20,6 +20,7 @@ DEPENDS+=	p5-Data-Dump-Streamer-[0-9]*:../../devel/p5-Data-Dump-Streamer
 DEPENDS+=	p5-Devel-LexAlias-[0-9]*:../../devel/p5-Devel-LexAlias
 DEPENDS+=	p5-Devel-REPL-[0-9]*:../../devel/p5-Devel-REPL
 DEPENDS+=	p5-Devel-StackTrace-WithLexicals-[0-9]*:../../devel/p5-Devel-StackTrace-WithLexicals
+DEPENDS+=	p5-Lexical-Persistence-[0-9]*:../../devel/p5-Lexical-Persistence
 DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 # For test target
