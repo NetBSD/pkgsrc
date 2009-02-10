@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/02/10 17:22:20 joerg Exp $
+
+--- Makefile.orig	2009-02-10 18:20:22.000000000 +0100
++++ Makefile
+@@ -14,5 +14,5 @@ clean:
+ 	-rm -f ${PROG} ${OBJS} a.out *.core core
+ 
+ install:	${PROG}
+-	install -s -m 555 ${PROG} ${PREFIX}/bin
+-	install -c -m 444 ${PROG}.1 ${PREFIX}/man/man1
++	${BSD_INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1
