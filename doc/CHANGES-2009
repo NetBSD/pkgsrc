@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.524 2009/02/10 05:51:42 seb Exp $
+$NetBSD: CHANGES-2009,v 1.525 2009/02/10 09:36:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -723,3 +723,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.14nb1 [obache 2009-02-10]
 	Updated devel/p5-Carp-REPL to 0.14 [seb 2009-02-10]
 	Updated devel/p5-Mouse to 0.16 [seb 2009-02-10]
+	Updated www/typo3 to 4.2.6 [taca 2009-02-10]
