@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/02/07 08:23:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/02/10 01:08:52 obache Exp $
 bin/tcrmgr
 bin/tcrmttest
 bin/tcrtest
@@ -28,5 +28,8 @@ share/tokyotyrant/COPYING
 share/tokyotyrant/ChangeLog
 share/tokyotyrant/THANKS
 share/tokyotyrant/doc/index.html
+share/tokyotyrant/ext/senatus.lua
+share/tokyotyrant/ext/usherette.lua
+@dirrm share/tokyotyrant/ext
 @dirrm share/tokyotyrant/doc
 @dirrm share/tokyotyrant
