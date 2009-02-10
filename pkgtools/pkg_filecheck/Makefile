@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/05/25 13:16:11 dillo Exp $
+# $NetBSD: Makefile,v 1.30 2009/02/10 00:15:20 joerg Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.4
@@ -9,6 +9,8 @@ DISTFILES=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 #HOMEPAGE=		http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=		Check for files not owned by any package
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
@@ -23,7 +25,8 @@ FILES_SUBST+=	PKG_DBDIR=${PKG_DBDIR:Q}
 CONF_FILES=	${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf \
 		${PKG_SYSCONFDIR}/pkg_filecheck.conf
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
+			share/examples/pkg_filecheck
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	builddb.pl builddb.1 pkg_filecheck.conf
@@ -47,14 +50,13 @@ do-build:
 		-o pkg_filecheck pkg_filecheck.c
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${PREFIX}/bin/builddb
-	${INSTALL_PROGRAM} ${WRKSRC}/pkg_filecheck ${PREFIX}/bin/pkg_filecheck
-	${INSTALL_MAN} ${WRKSRC}/builddb.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pkg_filecheck
+	${INSTALL_SCRIPT} ${WRKSRC}/builddb.pl ${DESTDIR}${PREFIX}/bin/builddb
+	${INSTALL_PROGRAM} ${WRKSRC}/pkg_filecheck ${DESTDIR}${PREFIX}/bin/pkg_filecheck
+	${INSTALL_MAN} ${WRKSRC}/builddb.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pkg_filecheck.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/pkg_filecheck.conf \
-		${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
+		${DESTDIR}${PREFIX}/share/examples/pkg_filecheck/pkg_filecheck.conf
 
 
 .include "../../mk/bdb.buildlink3.mk"
