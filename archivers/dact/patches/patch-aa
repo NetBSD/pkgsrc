@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2006/08/30 15:34:34 rillig Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/10 00:25:54 joerg Exp $
 
 --- Makefile.in.orig	2006-03-25 14:15:04.000000000 +0100
-+++ Makefile.in	2006-08-30 17:31:54.649362344 +0200
++++ Makefile.in
 @@ -42,15 +42,15 @@ OBJS += dact_common.o comp_fail.o comp_p
  SHLIBOBJS += dact_common_shr.o comp_fail_shr.o comp_plain_shr.o buffer_shr.o header_shr.o sort_shr.o module_shr.o parse_shr.o dendian_shr.o crc_shr.o net_shr.o ui_shr.o sfx_shr.o libdact_shr.o @SHLIBOBJS@
  ALGO = comp_snibble.c comp_delta.c comp_text.c comp_rle.c cipher_chaos.c cipher_sub.c cipher_psub.c @ALGO@
@@ -30,20 +30,35 @@ $NetBSD: patch-aa,v 1.6 2006/08/30 15:34:34 rillig Exp $
  
  dact$(EXEEXT): $(OBJS) $(MODS)
  	$(CC) $(OBJS) $(LIBS) -o dact$(EXEEXT) $(LDLIBS) $(LDFLAGS)
-@@ -101,14 +101,9 @@ install: all install-bin
- 	-$(INSTALL) -d $(libdir)
- 	-$(INSTALL) -d $(datadir)/dact
- 	-$(INSTALL) -d $(sysconfdir)
+@@ -93,22 +93,17 @@ mrproper: distclean
+ 	rm -rf Makefile.dep configure autom4te.cache/ config.h.in
+ 
+ install-bin: dact$(EXEEXT)
+-	-$(INSTALL) -d $(bindir)
+-	$(INSTALL) -m 755 dact$(EXEEXT) $(bindir)/dact$(EXEEXT)
++	-$(INSTALL) -d ${DESTDIR}$(bindir)
++	$(INSTALL) -m 755 dact$(EXEEXT) ${DESTDIR}$(bindir)/dact$(EXEEXT)
+ 
+ install: all install-bin
+-	-$(INSTALL) -d $(mandir)/man1
+-	-$(INSTALL) -d $(libdir)
+-	-$(INSTALL) -d $(datadir)/dact
+-	-$(INSTALL) -d $(sysconfdir)
 -	$(INSTALL) -m 644 dact.conf $(CONF)
-+	$(INSTALL) -m 644 dact.conf $(datadir)/examples/dact
- 	$(INSTALL) -m 644 Docs/dact.1 $(mandir)/man1/dact.1
+-	$(INSTALL) -m 644 Docs/dact.1 $(mandir)/man1/dact.1
 -	-$(INSTALL) -m 755 libdact.$(SHOBJEXT) $(libdir)/libdact.$(SHOBJEXT)
 -	-$(INSTALL) -m 644 libdact.$(SHOBJEXT).def $(libdir)/libdact.$(SHOBJEXT).def
 -	-$(INSTALL) -m 644 libdact.$(SHOBJEXT).a $(libdir)/libdact.$(SHOBJEXT).a
 -	-$(INSTALL) -m 644 libdact.a $(libdir)/libdact.a
 -@MODS@	for so in $(MODS); do $(INSTALL) -m 755 $$so $(datadir)/dact/$$so; done
 -	./patch-magic-file $(datadir)/magic
-+@MODS@	for so in :dummy: $(MODS); do case $$so in :dummy:) continue;; esac; $(INSTALL) -m 755 $$so $(datadir)/dact/$$so; done
++	-$(INSTALL) -d ${DESTDIR}$(mandir)/man1
++	-$(INSTALL) -d ${DESTDIR}$(libdir)
++	-$(INSTALL) -d ${DESTDIR}$(datadir)/dact
++	-$(INSTALL) -d ${DESTDIR}$(sysconfdir)
++	$(INSTALL) -m 644 dact.conf ${DESTDIR}$(datadir)/examples/dact
++	$(INSTALL) -m 644 Docs/dact.1 ${DESTDIR}$(mandir)/man1/dact.1
++@MODS@	for so in :dummy: $(MODS); do case $$so in :dummy:) continue;; esac; $(INSTALL) -m 755 $$so ${DESTDIR}$(datadir)/dact/$$so; done
  
  install-bin-local: dact$(EXEEXT)
  	-$(INSTALL) -d $(HOME)/.dact/`uname -s | tr A-Z a-z`-`uname -m`
