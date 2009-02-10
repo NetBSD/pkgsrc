@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.15 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.16 2009/02/10 14:50:45 joerg Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -271,7 +271,9 @@ following:</para>
 
 <para>It is worth mentioning that <filename>${PKG_SYSCONFDIR}</filename> is
 automatically added to <filename>OWN_DIRS</filename>.  See <xref
-linkend="dirs-outside-prefix" /> what this means.</para>
+linkend="dirs-outside-prefix" /> what this means.  This does not apply to
+subdirectories of <filename>${PKG_SYSCONFDIR}</filename>, they still have to
+be created with OWN_DIRS or MAKE_DIRS.</para>
 
 </sect2>
 
