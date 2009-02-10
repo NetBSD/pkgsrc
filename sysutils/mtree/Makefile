@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/09/08 21:58:00 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/10 00:12:45 joerg Exp $
 
 USE_FEATURES=	nbcompat
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../pkgtools/mtree/Makefile.common"
 
