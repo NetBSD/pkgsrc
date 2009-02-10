@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/12/19 18:23:17 he Exp $
+$NetBSD: distinfo,v 1.2.2.1 2009/02/10 22:28:52 tron Exp $
 
 SHA1 (Readonly-XS-1.04.tar.gz) = 1cd1a97971384538bf5587e5f8e3f4e671a0ce38
 RMD160 (Readonly-XS-1.04.tar.gz) = aad55174f4731336d43f6c30178e0e216fdbac17
 Size (Readonly-XS-1.04.tar.gz) = 9092 bytes
-SHA1 (patch-aa) = f71d79aa2dd0fbbb2cbb46f69ce8dd87b8a3e962
+SHA1 (patch-aa) = d9e5700084073710c0212480e0ae720c27bd8fd1
