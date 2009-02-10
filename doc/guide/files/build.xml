@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.56 2008/09/09 00:59:51 obache Exp $ -->
+<!-- $NetBSD: build.xml,v 1.57 2009/02/10 19:24:37 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -381,6 +381,10 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <varname>MASTER_SORT_RANDOM</varname>, and
       <varname>MASTER_SORT_AWK</varname> or
       <varname>MASTER_SORT_REGEX</varname>.</para>
+
+      <para> The specific command and arguments used depend on the
+      <varname>FETCH_USING</varname> parameter. The example above is
+      for <literal>FETCH_USING=custom</literal>.
 
       <para>The distfiles mirror run by the NetBSD Foundation uses the
       <emphasis>mirror-distfiles</emphasis> target to mirror the
