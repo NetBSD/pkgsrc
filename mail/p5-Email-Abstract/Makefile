@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2008/12/10 16:58:26 rhaen Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/10 14:34:25 rhaen Exp $
 
-DISTNAME=		Email-Abstract-3.000
+DISTNAME=		Email-Abstract-3.001
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ema
 CATEGORIES=		mail perl5
