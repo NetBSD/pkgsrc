@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7839 2009/02/10 00:29:59 obache Exp $
+$NetBSD: TODO,v 1.7840 2009/02/10 18:54:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -432,7 +432,7 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-3.1.1
+	o awesome-3.1.2
 	o baci-20040415
 	o balance-3.42
 	o bbdb-2.35
@@ -482,7 +482,7 @@ Suggested package updates
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o classpath-0.97.2
+	o classpath-0.98
 	o clutter-0.8.6
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -511,6 +511,7 @@ Suggested package updates
 	o darcs-2.1.2
 	o dbench-4.0
 	o dbus-1.2.10 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
+	o dbus-glib-0.80
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -533,7 +534,7 @@ Suggested package updates
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.06
+	o duplicity-0.5.08
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.1
 	o eagle-4.16
@@ -568,7 +569,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o evolution-2.24.4
-	o evolution-data-server-2.24.4.1
 	o evolution-exchange-2.24.4
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
@@ -611,7 +611,6 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
-	o gcalctool-5.24.3.1
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -624,6 +623,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geda-1.5.1.20081221
 	o geeklog-1.5.0
+	o genius-1.0.4
 	o gettext-0.17
 	o gettext-m4-0.17
 	o gforth-0.7.0
@@ -656,6 +656,7 @@ Suggested package updates
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
+	o gnutls-2.6.4
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -684,7 +685,6 @@ Suggested package updates
 	o gtk-sharp-2.12.8
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
-	o gtkhtml314-3.24.4
 	o gtkpod-0.99.14 [pkg/40493]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
@@ -698,6 +698,7 @@ Suggested package updates
 	o gworkspace-0.8.6
 	o gxemul-0.4.7
 	o hackbot-2.21
+	o hal-info-20090202
 	o hanzim-2.1
 	o haskell-mode-1.45
 	o hdf-4.2r2
@@ -734,6 +735,7 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o isc-dhcp-3.1.2
 	o iselect-1.4.0
+	o iso-codes-3.6
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
@@ -820,6 +822,7 @@ Suggested package updates
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
+	o libsndfile-1.0.18
 	o libspf2-1.2.9
 	o libssh-0.2
 	o libstatgrab-0.16
@@ -925,7 +928,6 @@ Suggested package updates
 	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
-	o ncmpc-0.13
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
@@ -1049,7 +1051,7 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
-	o pixman-0.13.2
+	o pixman-0.14.0
 	o pkg_select-20051209
 	o ploticus-2.40
 	o ploticus-examples-230
@@ -1091,7 +1093,7 @@ Suggested package updates
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-boto-1.6b
-	o py-bsddb3-4.7.4
+	o py-bsddb3-4.7.5
 	o py-checker-0.8.17
 	o py-dns-2.3.3
 	o py-docutils-0.5
@@ -1235,7 +1237,7 @@ Suggested package updates
 	o sch-3.8.3
 	o scilab-5.0.3
 	o scm-5e5
-	o scmgit-base-1.6.1.2
+	o scmgit-base-1.6.1.3
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sendfile-20010424
@@ -1305,7 +1307,7 @@ Suggested package updates
 	o tea-22.2.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o telepathy-gabble-0.7.19
+	o telepathy-gabble-0.7.20
 	o telepathy-glib-0.7.25
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-1.82
@@ -1409,7 +1411,7 @@ Suggested package updates
 	o xf86-video-apm-1.2.1
 	o xf86-video-ark-0.7.1
 	o xf86-video-ast-0.87.0
-	o xf86-video-ati-6.10.0
+	o xf86-video-ati-6.10.99.0
 	o xf86-video-chips-1.2.1
 	o xf86-video-glint-1.2.2
 	o xf86-video-i128-1.3.1
@@ -1477,6 +1479,7 @@ Suggested package updates
 	o yabause-0.9.9
 	o yacas-1.2.0
 	o yafc-1.1
+	o yaz-3.0.42
 	o yodl-2.01.02
 	o youtube-dl-20081101
 	o ysm-2.9.9.1
