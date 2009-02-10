@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2009/02/10 00:19:50 joerg Exp $
 #
 
 DISTNAME=	port2pkg-1.11
@@ -10,13 +10,15 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert from a FreeBSD port to a NetBSD package
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	pkglint-[0-9]*:../../pkgtools/pkglint
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_TOOLS+=	gtar perl:run
-AUTO_MKDIRS=			yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 do-extract:
 	cd ${FILESDIR} && cp port2pkg.* ${WRKSRC}
@@ -27,8 +29,8 @@ SUBST_FILES.gtar=	port2pkg.pl
 SUBST_SED.gtar=		-e 's|$${GTAR}|${GTAR}|g'
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/port2pkg.pl ${PREFIX}/bin/port2pkg
-	${INSTALL_MAN} ${WRKSRC}/port2pkg.0 ${PREFIX}/${PKGMANDIR}/cat1
-	${INSTALL_MAN} ${WRKSRC}/port2pkg.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/port2pkg.pl ${DESTDIR}${PREFIX}/bin/port2pkg
+	${INSTALL_MAN} ${WRKSRC}/port2pkg.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/port2pkg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
