@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7838 2009/02/08 12:55:30 asau Exp $
+$NetBSD: TODO,v 1.7839 2009/02/10 00:29:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -1324,6 +1324,7 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o tor-0.2.0.34 [pkg/40591]
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.2.1
