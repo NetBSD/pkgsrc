@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/03/08 20:15:14 bad Exp $
+$NetBSD: distinfo,v 1.5 2009/02/10 12:39:57 abs Exp $
 
-SHA1 (netscape/remote.c) = 7473c12d03ecc24b3a2e6af95b5154802117b793
-RMD160 (netscape/remote.c) = d89e8aaa497f88452760033a640653ab582a86e9
-Size (netscape/remote.c) = 18579 bytes
-SHA1 (netscape/vroot.h) = 3713a3021ee940b7a642478f91e0348524da22d9
-RMD160 (netscape/vroot.h) = afff0788fa6f0e15d96bb526fea4fa7025ff4135
-Size (netscape/vroot.h) = 4930 bytes
-SHA1 (patch-aa) = fb107b802ac690b86d90e4d566d18e8747a00295
+SHA1 (ns-remote-1.12.tbz) = d13f1061c8ec024fdf2601a0ad0881075948cede
+RMD160 (ns-remote-1.12.tbz) = 230175625b4364afba34a2681b90b9a8310865f6
+Size (ns-remote-1.12.tbz) = 10424 bytes
