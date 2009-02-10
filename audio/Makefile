@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2009/01/07 18:53:17 drochner Exp $
+# $NetBSD: Makefile,v 1.403 2009/02/10 11:52:06 abs Exp $
 #
 
 COMMENT=	Audio tools
@@ -245,7 +245,7 @@ SUBDIR+=	mpg321
 SUBDIR+=	mppenc
 SUBDIR+=	mserv
 SUBDIR+=	mserv-devel
-SUBDIR+=	mserv_irman
+SUBDIR+=	mserv-irman
 SUBDIR+=	mstream
 SUBDIR+=	mt-daapd
 SUBDIR+=	muse
