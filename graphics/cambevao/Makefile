@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.14 2007/09/02 12:53:20 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/10 11:59:16 abs Exp $
 #
 
 DISTNAME=		cambevao-2.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
-MASTER_SITES=		http://core.de/~coto/projects/cambevao/
+MASTER_SITES=		http://coto.marsrakete.de/projects/cambevao/
 
 MAINTAINER=		abs@NetBSD.org
-HOMEPAGE=		http://core.de/~coto/projects/cambevao/
-COMMENT=		Grabs images as jpg from bktr and ov511+ based USB webcams
+HOMEPAGE=		http://coto.marsrakete.de/projects/cambevao/
+COMMENT=		Grabs jpg images from bktr and ov511+ based USB webcams
 
 MAKE_ENV+=		prefix=${PREFIX:Q}
 MAKE_FLAGS+=		INSTALL=${INSTALL_PROGRAM:Q}
@@ -18,10 +18,15 @@ RCD_SCRIPT_SRC.cambevao=	${WRKSRC}/cambevao.rc.d
 INSTALLATION_DIRS=	bin share/examples/cambevao share/examples/rc.d
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* DragonFly-*-*
+PKG_DESTDIR_SUPPORT= 	user-destdir
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/cambevao.xml ${PREFIX}/share/examples/cambevao
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/cambevao.README
+INSTALLATION_DIRS+=    ${PREFIX}/share/examples/cambevao
+INSTALLATION_DIRS+=    ${PREFIX}/share/doc
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/cambevao ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/cambevao.xml ${DESTDIR}${PREFIX}/share/examples/cambevao
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cambevao.README
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
