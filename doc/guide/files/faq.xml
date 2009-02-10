@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.41 2009/01/28 23:31:39 abs Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.42 2009/02/10 19:24:37 joerg Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -275,20 +275,20 @@ distfile is found, pkgsrc will try to resume it.</para>
 
 <para>You can also
 use a different program than the default &man.ftp.1; by changing the
-<varname>FETCH_CMD</varname> variable.  Don't forget to set
-<varname>FETCH_RESUME_ARGS</varname> and
-<varname>FETCH_OUTPUT_ARGS</varname> if you are not using default
-values.</para>
+<varname>FETCH_USING</varname> variable.  You can specify the program by
+using of ftp, fetch, wget or curl.  Alternatively, fetching can be disabled
+by using the value manual.  A value of custom disables the system defaults
+and dependency tracking for the fetch program.  In that case you have to
+provide <varname>FETCH_CMD</varname>, <varname>FETCH_BEFORE_ARGS</varname>,
+<varname>FETCH_RESUME_ARGS</varname>, <varname>FETCH_OUTPUT_ARGS</varname>
+<varname>FETCH_AFTER_ARGS<v/varname>.</para>
 
 <para>For example, if you want to use
 <filename>wget</filename> to resume downloads, you'll have to use something
 like:</para>
 
 <programlisting>
-FETCH_CMD=             wget
-FETCH_BEFORE_ARGS=     --passive-ftp
-FETCH_RESUME_ARGS=     -c
-FETCH_OUTPUT_ARGS=     -O -nc
+FETCH_USING=	wget
 </programlisting>
 
 </sect1>
