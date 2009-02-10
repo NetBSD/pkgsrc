@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2009/02/10 12:55:25 abs Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		4
@@ -17,7 +17,7 @@ EXTRACT_OPTS_ZIP=	-Laqo -d ${WRKDIR}/firmware
 
 LICENSE=		speedtouch-firmware-license
 
-MAINTAINER=		abs@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xsproject.org/speedtouch/
 COMMENT=		Alcatel SpeedTouch USB ADSL modem driver
 
@@ -45,13 +45,15 @@ pre-extract:
 
 SAMPLECONF=	${WRKSRC}/doc-bsd/ppp.conf.sample
 
+PKG_DESTDIR_SUPPORT=    user-destdir
+INSTALLATION_DIRS=	libdata/speedtouch
+
 post-build:
 	${CP} ${SAMPLECONF} ${SAMPLECONF}.pre
 	${SED} 's:/usr/local:${PREFIX}:' ${SAMPLECONF}.pre > ${SAMPLECONF}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/speedtouch
-	${INSTALL_DATA} ${WRKDIR}/firmware/kqd6_3.012 ${PREFIX}/libdata/speedtouch
-	${INSTALL_DATA} ${WRKDIR}/firmware/zzzl_3.012 ${PREFIX}/libdata/speedtouch
+	${INSTALL_DATA} ${WRKDIR}/firmware/kqd6_3.012 ${DESTDIR}${PREFIX}/libdata/speedtouch
+	${INSTALL_DATA} ${WRKDIR}/firmware/zzzl_3.012 ${DESTDIR}${PREFIX}/libdata/speedtouch
 
 .include "../../mk/bsd.pkg.mk"
