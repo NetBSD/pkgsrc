@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/10/18 13:28:28 shannonjr Exp $
+# $NetBSD: Makefile,v 1.35 2009/02/10 21:11:13 joerg Exp $
 #
 DISTNAME=		libprelude-0.9.21.1
 CATEGORIES=		security
@@ -7,6 +7,8 @@ MASTER_SITES=		http://www.prelude-ids.com/download/releases/libprelude/
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.prelude-ids.org/download/releases/
 COMMENT=		Provides the framework for using the Prelude system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -37,6 +39,7 @@ PKG_USERS=	${PRELUDE_USER}:${PRELUDE_GROUP}
 PKG_GECOS.${PRELUDE_USER}=	Prelude IDS
 PKG_HOME.${PRELUDE_USER}=	${PRELUDE_HOME}
 
+OWN_DIRS_PERMS+=	${PRELUDE_HOME} ${PRELUDE_USER} ${PRELUDE_GROUP} 0755
 EGDIR=		${PREFIX}/share/examples/libprelude
 REQD_DIRS=	${EGDIR}
 MAKE_DIRS=	${PKG_SYSCONFDIR}/default ${PKG_SYSCONFDIR}/profile
@@ -52,8 +55,7 @@ SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	Makefile.in
 SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
 
-post-install:
-	chown -R ${PRELUDE_USER}:${PRELUDE_GROUP} ${PRELUDE_HOME}
+INSTALLATION_DIRS=	share/examples/libprelude
 
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
