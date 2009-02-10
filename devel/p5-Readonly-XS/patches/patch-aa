@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2008/12/19 18:23:17 he Exp $
+$NetBSD: patch-aa,v 1.1.2.1 2009/02/10 22:28:52 tron Exp $
 
---- work/Readonly-XS-1.04/XS.pm.orig	2005-12-06 07:04:00.000000000 +0100
-+++ work/Readonly-XS-1.04/XS.pm
+--- XS.pm.orig	2005-12-06 07:04:00.000000000 +0100
++++ XS.pm
 @@ -17,6 +17,7 @@ package Readonly::XS;
  
  use strict;
