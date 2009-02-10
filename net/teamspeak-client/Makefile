@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/29 05:19:47 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2009/02/10 12:07:21 abs Exp $
 
 PKGNAME=		teamspeak-client-2.0.32.60
 DISTNAME=		ts2_client_rc2_2032
@@ -30,21 +30,21 @@ do-build:
 	${SED} "s|%installdir%|${LIB_DIR}|" ${WRKSRC}/TeamSpeak \
 						> ${WRKDIR}/TeamSpeak
 
+PKG_DESTDIR_SUPPORT= 	user-destdir
+INSTALLATION_DIRS=	bin ${LIB_DIR}/sounds ${DOC_DIR}
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/TeamSpeak ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${LIB_DIR}
-	${INSTALL_DATA_DIR} ${LIB_DIR}/sounds
-	${INSTALL_LIB} ${WRKSRC}/TeamSpeak.bin ${LIB_DIR}
-	${INSTALL_LIB} ${WRKSRC}/icon.xpm ${LIB_DIR}
-	${INSTALL_LIB} ${WRKSRC}/sounds/* ${LIB_DIR}/sounds
-	${INSTALL_LIB} ${WRKSRC}/*.so* ${LIB_DIR}
-	${INSTALL_DATA_DIR} ${DOC_DIR}
-	${INSTALL_DATA} -m 644 ${WRKSRC}/Readme.txt ${DOC_DIR}
-	${INSTALL_DATA} -m 644 ${WRKSRC}/clicense.txt ${DOC_DIR}
-	${INSTALL_DATA} -m 644 ${WRKSRC}/manual/* ${DOC_DIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/TeamSpeak ${DESTDIR}${PREFIX}/bin
+	${INSTALL_LIB} ${WRKSRC}/TeamSpeak.bin ${DESTDIR}${LIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/icon.xpm ${DESTDIR}${LIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/sounds/* ${DESTDIR}${LIB_DIR}/sounds
+	${INSTALL_LIB} ${WRKSRC}/*.so* ${DESTDIR}${LIB_DIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/Readme.txt ${DESTDIR}${DOC_DIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/clicense.txt ${DESTDIR}${DOC_DIR}
+	${INSTALL_DATA} -m 644 ${WRKSRC}/manual/* ${DESTDIR}${DOC_DIR}
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} lib/teamspeak-client share/doc/teamspeak-client -type f -print ) >> ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} lib/teamspeak-client share/doc/teamspeak-client -type d -print ) | ${SED} 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} lib/teamspeak-client share/doc/teamspeak-client -type f -print ) >> ${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} lib/teamspeak-client share/doc/teamspeak-client -type d -print ) | ${SED} 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 
 
 .include "../../mk/bsd.pkg.mk"
