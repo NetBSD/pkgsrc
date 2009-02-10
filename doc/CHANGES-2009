@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.522 2009/02/10 01:15:44 obache Exp $
+$NetBSD: CHANGES-2009,v 1.523 2009/02/10 05:41:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -721,3 +721,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed lang/py21-html-docs [joerg 2009-02-09]
 	Removed net/py-mimelib [joerg 2009-02-09]
 	Updated databases/tokyotyrant to 1.1.14nb1 [obache 2009-02-10]
+	Updated devel/p5-Carp-REPL to 0.14 [seb 2009-02-10]
