@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/10 00:17:11 joerg Exp $
 #
 
 DISTNAME=	pkgdepgraph-2.8
@@ -10,6 +10,8 @@ MAINTAINER=	atatat@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Visual representation of installed NetBSD packages
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # removed so that pkgdepgraph can be used on "client" machines -- @@@
 # DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
@@ -17,7 +19,6 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 
 EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 DISTVER=	${DISTNAME:S/pkgdepgraph-//}
@@ -52,8 +53,8 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${PREFIX}/bin/pkgdepgraph
-	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${PREFIX}/${PKGMANDIR}/cat1
-	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgdepgraph ${DESTDIR}${PREFIX}/bin/pkgdepgraph
+	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/pkgdepgraph.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
