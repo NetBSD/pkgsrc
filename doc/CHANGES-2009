@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.528 2009/02/10 13:09:57 abs Exp $
+$NetBSD: CHANGES-2009,v 1.529 2009/02/10 14:18:01 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -728,3 +728,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/mserv-irman to 0.21 [abs 2009-02-10]
 	Updated www/ns-remote to 1.12 [abs 2009-02-10]
 	Updated security/msu to 1.09 [abs 2009-02-10]
+	Updated archivers/p5-Archive-Tar to 1.44 [rhaen 2009-02-10]
