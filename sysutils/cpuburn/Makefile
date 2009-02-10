@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/10 12:01:04 abs Exp $
 #
 
 DISTNAME=	cpuburn_1_4
@@ -18,15 +18,16 @@ USE_TOOLS+=	gtar
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+PKG_DESTDIR_SUPPORT= 	user-destdir
 INSTALLATION_DIRS=	bin share/doc/cpuburn
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/burnBX ${PREFIX}/bin/burnBX
-	${INSTALL_PROGRAM} ${WRKSRC}/burnK6 ${PREFIX}/bin/burnK6
-	${INSTALL_PROGRAM} ${WRKSRC}/burnK7 ${PREFIX}/bin/burnK7
-	${INSTALL_PROGRAM} ${WRKSRC}/burnMMX ${PREFIX}/bin/burnMMX
-	${INSTALL_PROGRAM} ${WRKSRC}/burnP5 ${PREFIX}/bin/burnP5
-	${INSTALL_PROGRAM} ${WRKSRC}/burnP6 ${PREFIX}/bin/burnP6
-	${INSTALL_DATA}	${WRKSRC}/README ${PREFIX}/share/doc/cpuburn/README
+	${INSTALL_PROGRAM} ${WRKSRC}/burnBX ${DESTDIR}${PREFIX}/bin/burnBX
+	${INSTALL_PROGRAM} ${WRKSRC}/burnK6 ${DESTDIR}${PREFIX}/bin/burnK6
+	${INSTALL_PROGRAM} ${WRKSRC}/burnK7 ${DESTDIR}${PREFIX}/bin/burnK7
+	${INSTALL_PROGRAM} ${WRKSRC}/burnMMX ${DESTDIR}${PREFIX}/bin/burnMMX
+	${INSTALL_PROGRAM} ${WRKSRC}/burnP5 ${DESTDIR}${PREFIX}/bin/burnP5
+	${INSTALL_PROGRAM} ${WRKSRC}/burnP6 ${DESTDIR}${PREFIX}/bin/burnP6
+	${INSTALL_DATA}	${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cpuburn/README
 
 .include "../../mk/bsd.pkg.mk"
