@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/01/19 20:15:49 abs Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/10 21:24:51 adrianp Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -24,6 +25,12 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.2.10:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.3:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.4.1:../../databases/pear-MDB2
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Auth_SASL-[0-9]*:../../mail/pear-Auth_SASL
+
+.if ${PKG_PHP_VERSION} == "4"
+DEPENDS+=	${PHP_PKG_PREFIX}-domxml>=4.3.3:../../textproc/php4-domxml
+.elif ${PKG_PHP_VERSION} == "5"
+DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
+.endif
 
 PKG_SYSCONFSUBDIR?=	roundcube
 
