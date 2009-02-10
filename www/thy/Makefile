@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/10 16:46:03 joerg Exp $
 
 DISTNAME=	thy-0.9.4
 PKGREVISION=	5
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://bonehunter.rulez.org/pub/thy/stable/
 MAINTAINER=	algernon@bonehunter.rulez.org
 HOMEPAGE=	http://bonehunter.rulez.org/software/thy/
 COMMENT=	Tiny and fast HTTP daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		IPV6_READY
 USE_TOOLS+=		bison gmake lex
@@ -38,10 +40,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 MAKE_FLAGS+=		pkgconfdir=${EGDIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/thy
+INSTALLATION_DIRS=	share/examples/thy
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/thyrc ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/thyrc ${DESTDIR}${EGDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
