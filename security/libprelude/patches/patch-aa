@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2008/06/10 13:57:10 shannonjr Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/10 21:11:13 joerg Exp $
 
 --- Makefile.in.orig	2008-04-24 04:50:26.000000000 -0600
 +++ Makefile.in
@@ -75,10 +75,10 @@ $NetBSD: patch-aa,v 1.6 2008/06/10 13:57:10 shannonjr Exp $
 -                $(INSTALL) -m 644 $(top_srcdir)/tls.conf $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default;					\
 -	fi
 +	$(INSTALL) -d -m 711 $(DESTDIR)$(PRELUDE_SPOOL_DIR)
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/client.conf @EGDIR@
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/global.conf @EGDIR@
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/idmef-client.conf @EGDIR@
-+	$(BSD_INSTALL_DATA) $(top_srcdir)/tls.conf @EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/client.conf ${DESTDIR}@EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/global.conf ${DESTDIR}@EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/idmef-client.conf ${DESTDIR}@EGDIR@
++	$(BSD_INSTALL_DATA) $(top_srcdir)/tls.conf ${DESTDIR}@EGDIR@
  
  uninstall-local:
 -	rm -f $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default/client.conf
