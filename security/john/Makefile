@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/03 17:09:20 sborrill Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/10 16:39:40 joerg Exp $
 #
 
 DISTNAME=	john-1.7.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	DawS@irc.pl
 HOMEPAGE=	http://www.openwall.com/john/
 COMMENT=	Unix Password Cracker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	src
@@ -70,7 +72,7 @@ BUILD_TARGET=	generic
 BUILD_TARGET=	generic
 .endif
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/john
 
 SUBST_CLASSES+=		john
 SUBST_STAGE.john=	pre-build
@@ -79,23 +81,17 @@ SUBST_SED.john=		-e "s+@PREFIX@+${PREFIX}+g"
 
 do-install:
 	# programs and scripts
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/run/john ${PREFIX:Q}/bin
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/run/mailer ${PREFIX:Q}/bin
-
-	# data directory
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/john
-
+	${INSTALL_PROGRAM} ${WRKSRC}/run/john ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/run/mailer ${DESTDIR}${PREFIX}/bin
 	# configuration file
-	${INSTALL_DATA} ${WRKSRC:Q}/run/john.conf ${PREFIX:Q}/share/john
-
+	${INSTALL_DATA} ${WRKSRC}/run/john.conf ${DESTDIR}${PREFIX}/share/john
 	# symbolic links
 .for i in unafs unique unshadow
-	${LN} -sf ${PREFIX:Q}/bin/john ${PREFIX:Q}/bin/${i:Q}
+	${LN} -sf john ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
-
 	# data files
 .for i in all.chr alnum.chr alpha.chr digits.chr lanman.chr password.lst
-	${INSTALL_DATA} ${WRKSRC:Q}/run/${i:Q} ${PREFIX:Q}/share/john
+	${INSTALL_DATA} ${WRKSRC}/run/${i} ${DESTDIR}${PREFIX}/share/john
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
