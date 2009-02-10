@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/09/12 00:48:05 gdt Exp $
+# $NetBSD: Makefile,v 1.46 2009/02/10 17:18:43 joerg Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	_tar.gz
 MAINTAINER=	ambrisko@ambrisko.roble.com
 HOMEPAGE=	http://www.socks.permeo.com/
 COMMENT=	SOCKS v5 application layer gateway and clients
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	socks4-[0-9]*
 
@@ -40,7 +42,6 @@ CONFIGURE_ARGS+=	--with-libconffile=${PREFIX}/etc/libsocks5.conf \
 			--with-srvidtfile=/var/run/socks5.ident \
 			${EXTRA_CONFIGURE_ARGS}
 LIBS+=			-lcrypt
-INSTALLATION_DIRS=	include
 RCD_SCRIPTS=		socks5
 
 EXAMPLE_FILES=	README multiple_server.example server_2_multiple_server.example
@@ -49,14 +50,22 @@ EXAMPLE_FILES+=	socks5.conf.gssapi socks5.conf.multipleservers
 EXAMPLE_FILES+=	socks5.conf.server2server socks5.conf.singlehomed
 EXAMPLE_DIR=	${PREFIX}/share/examples/socks5
 
+INSTALLATION_DIRS=	bin include ${EXAMPLE_DIR} ${PKGMANDIR}/man1 \
+			${PKGMANDIR}/man5
+INSTALL_MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin \
+			SHLIB_DIR=${DESTDIR}${PREFIX}/lib \
+			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
+			prefix=${DESTDIR}${PREFIX} \
+			exec_prefix=${DESTDIR}${PREFIX}
+
 post-install:
-	cd ${PREFIX}/bin && chmod 555 rarchie rfinger rftp rping rtelnet rtraceroute runsocks rwhois
-	${MV} ${PREFIX}/lib/libsocks5_sh.so ${PREFIX}/lib/libsocks5_sh.so.0.0
-	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so.0
-	${LN} -sf libsocks5_sh.so.0.0 ${PREFIX}/lib/libsocks5_sh.so
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
+	cd ${DESTDIR}${PREFIX}/bin && chmod 555 rarchie rfinger rftp rping rtelnet rtraceroute runsocks rwhois
+	${MV} ${DESTDIR}${PREFIX}/lib/libsocks5_sh.so ${DESTDIR}${PREFIX}/lib/libsocks5_sh.so.0.0
+	${LN} -sf libsocks5_sh.so.0.0 ${DESTDIR}${PREFIX}/lib/libsocks5_sh.so.0
+	${LN} -sf libsocks5_sh.so.0.0 ${DESTDIR}${PREFIX}/lib/libsocks5_sh.so
 .for f in ${EXAMPLE_FILES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${DESTDIR}${EXAMPLE_DIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
