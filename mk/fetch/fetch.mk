@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.37 2008/10/08 15:39:07 joerg Exp $
+# $NetBSD: fetch.mk,v 1.38 2009/02/10 18:55:54 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -163,9 +163,9 @@ fetch-check-interactive: .USEBEFORE
 ### transfer the files from the appropriate sites if needed.
 ###
 #
-# FETCH_CMD is the program used to fetch files.  It must understand
-#	fetching files located via URLs, e.g. NetBSD's ftp, net/tnftp,
-#	etc.  The default value is set in pkgsrc/mk/defaults/mk.conf.
+# FETCH_CMD is the program used to fetch files for FETCH_USING=manual.
+#       It must understand fetching files located via URLs,
+#	e.g. NetBSD's ftp, net/tnftp, etc.
 #
 # The following variables are all lists of options to pass to he command
 # used to do the actual fetching of the file.
@@ -188,11 +188,6 @@ fetch-check-interactive: .USEBEFORE
 #	to try to resume interrupted file transfers to avoid downloading
 #	the whole file.  The default is set in pkgsrc/mk/defaults/mk.conf.
 #
-#FETCH_CMD?=		ftp	# default is set by pkgsrc/mk/defaults/mk.conf
-FETCH_BEFORE_ARGS?=	${_FETCH_BEFORE_ARGS.${FETCH_CMD:T}}
-FETCH_AFTER_ARGS?=	${_FETCH_AFTER_ARGS.${FETCH_CMD:T}}
-FETCH_RESUME_ARGS?=	${_FETCH_RESUME_ARGS.${FETCH_CMD:T}}
-FETCH_OUTPUT_ARGS?=	${_FETCH_OUTPUT_ARGS.${FETCH_CMD:T}}
 
 _FETCH_BEFORE_ARGS.ftp=		# empty
 # If this host is behind a filtering firewall, use passive ftp(1)
@@ -200,34 +195,46 @@ _FETCH_BEFORE_ARGS.ftp+=	${PASSIVE_FETCH:D-p}
 _FETCH_AFTER_ARGS.ftp=		# empty
 _FETCH_RESUME_ARGS.ftp=		-R
 _FETCH_OUTPUT_ARGS.ftp=		-o
+_FETCH_CMD.ftp=			${TOOLS_PATH.ftp}
 
 _FETCH_BEFORE_ARGS.fetch=	# empty
 _FETCH_AFTER_ARGS.fetch=	# empty
 _FETCH_RESUME_ARGS.fetch=	-r
 _FETCH_OUTPUT_ARGS.fetch=	-o
+_FETCH_CMD.fetch=		${TOOLS_PATH.fetch}
 
 _FETCH_BEFORE_ARGS.wget=	# empty
 _FETCH_AFTER_ARGS.wget=		# empty
 _FETCH_RESUME_ARGS.wget=	-c
 _FETCH_OUTPUT_ARGS.wget=	-O
+_FETCH_CMD.wget=		${PREFIX}/bin/wget
 
 _FETCH_BEFORE_ARGS.curl=	# empty
 _FETCH_BEFORE_ARGS.curl+=	${PASSIVE_FETCH:D--ftp-pasv}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
+_FETCH_CMD.curl=		${PREFIX}/bin/wget
+
+_FETCH_CMD.manual=		${TOOLS_PATH.false}
+
+_FETCH_CMD.custom=		${FETCH_CMD}
+_FETCH_BEFORE_ARGS.custom=	${FETCH_BEFORE_ARGS}
+_FETCH_AFTER_ARGS.custom=	${FETCH_AFTER_ARGS}
+_FETCH_RESUME_ARGS.custom=	${FETCH_RESUME_ARGS}
+_FETCH_OUTPUT_ARGS.custom=	${FETCH_OUTPUT_ARGS}
 
 _FETCH_CMD=	${SETENV} CHECKSUM=${_CHECKSUM_CMD:Q}			\
-			CP=${TOOLS_CP:Q}				\
-			ECHO=${TOOLS_ECHO:Q}				\
-			FETCH_CMD=${FETCH_CMD:Q}			\
-			FETCH_BEFORE_ARGS=${FETCH_BEFORE_ARGS:Q}	\
-			FETCH_AFTER_ARGS=${FETCH_AFTER_ARGS:Q}		\
-			FETCH_RESUME_ARGS=${FETCH_RESUME_ARGS:Q}	\
-			FETCH_OUTPUT_ARGS=${FETCH_OUTPUT_ARGS:Q}	\
-			MKDIR=${TOOLS_MKDIR:Q} MV=${TOOLS_MV:Q}		\
-			TEST=${TOOLS_TEST:Q} TOUCH=${TOOLS_TOUCH:Q}	\
-			WC=${TOOLS_WC:Q}				\
+		CP=${TOOLS_CP:Q}				\
+		ECHO=${TOOLS_ECHO:Q}				\
+		FETCH_CMD=${_FETCH_CMD.${FETCH_USING}:Q}	\
+		FETCH_BEFORE_ARGS=${_FETCH_BEFORE_ARGS.${FETCH_USING}:Q} \
+		FETCH_AFTER_ARGS=${_FETCH_AFTER_ARGS.${FETCH_USING}:Q}   \
+		FETCH_RESUME_ARGS=${_FETCH_RESUME_ARGS.${FETCH_USING}:Q} \
+		FETCH_OUTPUT_ARGS=${_FETCH_OUTPUT_ARGS.${FETCH_USING}:Q} \
+		MKDIR=${TOOLS_MKDIR:Q} MV=${TOOLS_MV:Q}		\
+		TEST=${TOOLS_TEST:Q} TOUCH=${TOOLS_TOUCH:Q}	\
+		WC=${TOOLS_WC:Q}				\
 		${SH} ${PKGSRCDIR}/mk/fetch/fetch
 
 _FETCH_ARGS+=	${PKG_VERBOSE:D-v}
