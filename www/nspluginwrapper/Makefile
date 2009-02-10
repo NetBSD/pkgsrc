@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/01/29 09:57:59 sborrill Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/10 12:44:24 abs Exp $
 #
 
 DISTNAME=       nspluginwrapper-1.2.2
@@ -30,11 +30,13 @@ SUBST_STAGE.npviewer=	post-build
 SUBST_FILES.npviewer=	${PLUGIN_SRCDIR}/npviewer
 SUBST_SED.npviewer=	-e "s|/usr/|${PREFIX}/|g"
 
+PKG_DESTDIR_SUPPORT= 	user-destdir
+INSTALLATION_DIRS=	${PLUGIN_INSTDIR}
+
 post-install:
-	${INSTALL_LIB_DIR} ${PLUGIN_INSTDIR}
-	${INSTALL_LIB} ${PLUGIN_SRCDIR}/libxpcom.so ${PLUGIN_INSTDIR}
-	${INSTALL_SCRIPT} ${PLUGIN_SRCDIR}/npviewer ${PLUGIN_INSTDIR}
-	${INSTALL_LIB} ${PLUGIN_SRCDIR}/npviewer.bin ${PLUGIN_INSTDIR}
+	${INSTALL_LIB} ${PLUGIN_SRCDIR}/libxpcom.so ${DESTDIR}${PLUGIN_INSTDIR}
+	${INSTALL_SCRIPT} ${PLUGIN_SRCDIR}/npviewer ${DESTDIR}${PLUGIN_INSTDIR}
+	${INSTALL_LIB} ${PLUGIN_SRCDIR}/npviewer.bin ${DESTDIR}${PLUGIN_INSTDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
