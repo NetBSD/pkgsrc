@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.526 2009/02/10 11:54:04 abs Exp $
+$NetBSD: CHANGES-2009,v 1.527 2009/02/10 12:41:06 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -726,3 +726,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typo3 to 4.2.6 [taca 2009-02-10]
 	Renamed audio/mserv_irman to audio/mserv-irman [abs 2009-02-10]
 	Updated audio/mserv-irman to 0.21 [abs 2009-02-10]
+	Updated www/ns-remote to 1.12 [abs 2009-02-10]
