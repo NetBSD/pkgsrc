@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2003/07/31 09:17:46 abs Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/10 12:49:56 abs Exp $
 
---- fix4SA110rev2.c.orig	2003-07-31 10:20:41.000000000 +0100
+--- fix4SA110rev2.c.orig	2009-02-10 12:46:34.000000000 +0000
 +++ fix4SA110rev2.c
 @@ -79,8 +79,8 @@
   */
@@ -12,3 +12,22 @@ $NetBSD: patch-aa,v 1.1 2003/07/31 09:17:46 abs Exp $
  
  /* All programs are loaded at this base address. */
  #define LOAD_ADDR 0x1000
+@@ -100,7 +100,7 @@ int fixcount = 0;
+ 
+ static void usage(void)
+ {
+-  fprintf(stderr, "Usage: findbad <infile> <outfile>\n");
++  fprintf(stderr, "Usage: fix4SA110rev2 <infile> <outfile>\n");
+ }
+ 
+ fix *newfix(unsigned long where, unsigned long inst)
+@@ -240,8 +240,7 @@ space
+      for instructions that do not appear elsewhere, and for the ldr pc 
+      hackery.  */
+   if (fixcount > i - 1)
+-    fprintf(stderr, "Insufficient space for patch instructions (need %d 
+-words)\n", fixcount);
++    fprintf(stderr, "Insufficient space for patch instructions (need %d words)\n", fixcount);
+ 
+   if ((out = fopen(argv[2], "w")) == NULL)
+     {
