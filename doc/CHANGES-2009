@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.530 2009/02/10 14:27:12 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.531 2009/02/10 14:31:26 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -730,3 +730,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/msu to 1.09 [abs 2009-02-10]
 	Updated archivers/p5-Archive-Tar to 1.44 [rhaen 2009-02-10]
 	Updated devel/p5-AnyEvent to 4.331 [rhaen 2009-02-10]
+	Updated devel/p5-Log-Log4perl to 1.20 [rhaen 2009-02-10]
