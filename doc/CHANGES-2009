@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.534 2009/02/10 14:49:09 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.535 2009/02/10 16:10:58 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -734,3 +734,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Email-Abstract to 3.001 [rhaen 2009-02-10]
 	Updated mail/p5-Email-MIME to 1.863 [rhaen 2009-02-10]
 	Updated mail/p5-Email-Simple to 2.005 [rhaen 2009-02-10]
+	Updated misc/p5-Business-ISBN to 2.05 [rhaen 2009-02-10]
