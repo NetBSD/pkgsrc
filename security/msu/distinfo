@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2009/02/10 13:09:35 abs Exp $
+$NetBSD: distinfo,v 1.11 2009/02/11 22:45:58 abs Exp $
 
-SHA1 (msu-1.09.tbz) = 910c179ac15f8308f0df853efa67ab56b9ccff02
-RMD160 (msu-1.09.tbz) = 7fd0beea4395908d65ac5ac760931ac21eaf7bbb
-Size (msu-1.09.tbz) = 3354 bytes
+SHA1 (msu-1.09.tbz) = 54904c613072d65b24324abf06ce0439b23b0fca
+RMD160 (msu-1.09.tbz) = 833ff88d5cee7ba48fcc7dec30b411e33ff19077
+Size (msu-1.09.tbz) = 3355 bytes
