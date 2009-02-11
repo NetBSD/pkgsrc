@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/26 15:55:18 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/11 14:23:32 joerg Exp $
 #
 
 DISTNAME=	sympy-0.5.15
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
