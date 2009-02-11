@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.49 2008/09/25 14:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/02/11 21:48:39 shattered Exp $
 
 DISTNAME=	xcdroast-${DIST_VER}
 PKGNAME=	xcdroast-${DIST_VER:S/alpha/a/}
-PKGREVISION=	9
+#PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
+
+PATCH_SITES=	http://www.xcdroast.org/xcdr098/patches/
+PATCHFILES=	parse_version.patch
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
@@ -12,20 +15,20 @@ COMMENT=	Graphical user interface for the command-line cdrecord-tools
 
 DEPENDS+=		cdrtools>=2.01:../../sysutils/cdrtools
 
-DIST_VER=		0.98alpha15
+DIST_VER=		0.98alpha16
 
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	--enable-gtk2
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${_OPSYS_HAS_OSSAUDIO} == "yes"
 CFLAGS+=	-DHAVE_OSS
-CONFIGURE_ENV+=	AUDIO_LIBS=${LIBOSSAUDIO:Q}
+CONFIGURE_ENV+=	AUDIO_LIBS=${LIBOSSAUDIO}
 .endif
 
 DOCDIR=		${PREFIX}/share/doc/xcdroast
@@ -33,12 +36,11 @@ DOCFILES=	DOCUMENTATION FAQ README.nonroot manual/xcdroast-manual.pdf
 HTMLDIR=	${PREFIX}/share/doc/html/xcdroast
 CONF_FILES=	/dev/null ${PKG_SYSCONFDIR}/xcdroast.conf
 
-pre-build:
-	cd ${WRKSRC}/src; for file in io.c wavplay.c; do		\
-		${SED} -e "s|@DEVOSSAUDIO@|${DEVOSSAUDIO}|g"		\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
+SUBST_CLASSES+=			devossaudio
+SUBST_STAGE.devossaudio=	pre-build
+SUBST_MESSAGE.devossaudio=	Fixing path to audio device.
+SUBST_FILES.devossaudio=	io.c wavplay.c
+SUBST_SED.devossaudio=		-e "s,@DEVOSSAUDIO@,${DEVOSSAUDIO},g"
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

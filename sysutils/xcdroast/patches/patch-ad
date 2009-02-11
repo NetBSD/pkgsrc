@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
+$NetBSD: patch-ad,v 1.5 2009/02/11 21:48:39 shattered Exp $
 
---- src/wavplay.c.orig	2003-04-22 22:28:05.000000000 +0200
-+++ src/wavplay.c	2003-06-04 13:32:27.000000000 +0200
+--- src/wavplay.c.orig	2008-08-20 15:34:02.000000000 +0000
++++ src/wavplay.c
 @@ -23,6 +23,14 @@
  #include <unistd.h>
  #include <fcntl.h>
@@ -17,8 +17,8 @@ $NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
  #if defined(linux) || defined(__CYGWIN32__)
  # include <getopt.h>
  #endif
-@@ -73,8 +81,8 @@
- gint is_in_cd_quality(guchar *hdr);
+@@ -72,8 +80,8 @@ gint read_line(gint fd, gchar *ptr, gint
+ off_t is_std_wav_file(int f, off_t *offset);
  
  
 -#if defined(linux) || defined(__FreeBSD__)
@@ -28,7 +28,7 @@ $NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
  #elif defined (aix)
  #define DEFAULT_AUDIO_DEVICE ""
  #elif defined(__sgi)
-@@ -310,7 +318,7 @@
+@@ -309,7 +317,7 @@ int audio_write( void *buffer, int buf_s
  #endif
  
  
@@ -37,7 +37,7 @@ $NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
  
  /* open the sound-device of linux and set cd-quality */
  
-@@ -361,7 +369,7 @@
+@@ -360,7 +368,7 @@ gint flags;
  
  #endif
  
@@ -46,7 +46,7 @@ $NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
  
  /* open the sound-device of solaris and set cd-quality */
  
-@@ -388,7 +396,7 @@
+@@ -387,7 +395,7 @@ gint flags;
  	info.play.precision = 16;
  	info.play.encoding = AUDIO_ENCODING_LINEAR;
  	info.play.buffer_size = abuf_size;
@@ -55,7 +55,7 @@ $NetBSD: patch-ad,v 1.4 2003/06/05 16:15:48 drochner Exp $
  	info.output_muted = 0;
  #endif
  
-@@ -789,10 +797,10 @@
+@@ -787,10 +795,10 @@ gchar keybuffer[MAXLINE];
  
  	/* the open sets also the global abuf_size-variable */
  
