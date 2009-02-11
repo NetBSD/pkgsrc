@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2009/02/11 21:20:43 joerg Exp $
+
+--- SOAPpy/GSIServer.py.orig	2009-02-11 22:16:29.000000000 +0100
++++ SOAPpy/GSIServer.py
+@@ -1,2 +1,4 @@
++from __future__ import nested_scopes
++
+ """
+ GSIServer - Contributed by Ivan R. Judson <judson@mcs.anl.gov>
+@@ -47,6 +49,4 @@ ident = '$Id: GSIServer.py,v 1.4 2004/02
+ from version import __version__
+ 
+-from __future__ import nested_scopes
+-
+ #import xml.sax
+ import re
