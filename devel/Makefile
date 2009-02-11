@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1107 2009/02/09 19:11:59 joerg Exp $
+# $NetBSD: Makefile,v 1.1108 2009/02/11 16:21:03 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -262,7 +262,6 @@ SUBDIR+=	libarena
 SUBDIR+=	libargparse
 SUBDIR+=	libast
 SUBDIR+=	libatomic_ops
-SUBDIR+=	libaura
 SUBDIR+=	libbegemot
 SUBDIR+=	libbinio
 SUBDIR+=	libbonobo
@@ -273,7 +272,6 @@ SUBDIR+=	libconfig
 SUBDIR+=	libctl
 SUBDIR+=	libdaemon
 SUBDIR+=	libdatrie
-SUBDIR+=	libdfui
 SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libebml
@@ -298,7 +296,6 @@ SUBDIR+=	libgweather
 SUBDIR+=	libhfs
 SUBDIR+=	libiberty
 SUBDIR+=	libidn
-SUBDIR+=	libinstaller
 SUBDIR+=	libixp
 SUBDIR+=	libjit
 SUBDIR+=	libjudy
