@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.75 2009/02/03 19:47:37 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.76 2009/02/11 23:42:42 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.75 2009/02/03 19:47:37 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.76 2009/02/11 23:42:42 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -458,7 +458,7 @@ read_buildinfo(struct pkg_task *pkg)
 
 	data = pkg->meta_data.meta_build_info;
 
-	for (; *data != '\0'; data = next_line) {
+	for (; data != NULL && *data != '\0'; data = next_line) {
 		if ((eol = strchr(data, '\n')) == NULL) {
 			eol = data + strlen(data);
 			next_line = eol;
