@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.457 2008/12/17 11:57:35 obache Exp $
+# $NetBSD: Makefile,v 1.458 2009/02/11 16:21:04 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -65,9 +65,6 @@ SUBDIR+=	ddrescue
 SUBDIR+=	depot
 SUBDIR+=	desktop-file-utils
 SUBDIR+=	detox
-SUBDIR+=	dfuibe_installer
-SUBDIR+=	dfuife_cgi
-SUBDIR+=	dfuife_curses
 SUBDIR+=	dirsize
 SUBDIR+=	dirvish
 SUBDIR+=	diskscrub
