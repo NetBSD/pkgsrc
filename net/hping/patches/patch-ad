@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-ad,v 1.4 2009/02/11 08:06:17 obache Exp $
 
---- libpcap_stuff.c.orig	2002-12-13 15:07:07.000000000 +0100
-+++ libpcap_stuff.c	2006-03-22 19:54:51.000000000 +0100
+--- libpcap_stuff.c.orig	2002-12-13 14:07:07.000000000 +0000
++++ libpcap_stuff.c
 @@ -16,8 +16,10 @@
  #include <string.h>
  #include <stdlib.h>
@@ -14,3 +14,12 @@ $NetBSD: patch-ad,v 1.3 2006/03/30 13:51:29 salo Exp $
  
  #include "globals.h"
  
+@@ -35,7 +37,7 @@ int open_pcap()
+ 		printf("[open_pcap] pcap_open_live: %s\n", errbuf);
+ 		return -1;
+ 	}
+-#if (!defined OSTYPE_LINUX) && (!defined __sun__)
++#if (!defined OSTYPE_LINUX) && (!defined __sun)
+ 	/* Return the packets to userspace as fast as possible */
+ 	if (ioctl(pcap_fileno(pcapfp), BIOCIMMEDIATE, &on) == -1)
+ 		perror("[open_pcap] ioctl(... BIOCIMMEDIATE ...)");

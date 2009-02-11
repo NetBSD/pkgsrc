@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-ai,v 1.2 2009/02/11 08:06:17 obache Exp $
 
---- globals.h.orig	2003-08-08 01:55:55.000000000 +0200
-+++ globals.h	2005-11-05 21:44:31.000000000 +0100
-@@ -32,7 +32,8 @@
+--- globals.h.orig	2003-08-07 23:55:55.000000000 +0000
++++ globals.h
+@@ -32,7 +32,8 @@ extern unsigned int
  		tcp_seqnum,
  		set_ack,
  		ip_header_length,
@@ -12,7 +12,7 @@ $NetBSD: patch-ai,v 1.1 2006/03/30 13:51:29 salo Exp $
  
  extern unsigned short int
  		data_size;
-@@ -44,6 +45,7 @@
+@@ -44,6 +45,7 @@ extern int	opt_debug,
  		recv_pkt,
  		out_of_sequence_pkt,
  		sending_wait,
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.1 2006/03/30 13:51:29 salo Exp $
  		opt_rawipmode,
  		opt_icmpmode,
  		opt_udpmode,
-@@ -77,6 +79,7 @@
+@@ -77,6 +79,7 @@ extern int	opt_debug,
  		opt_tcpexitcode,
  		opt_badcksum,
  		opt_tr_keep_ttl,

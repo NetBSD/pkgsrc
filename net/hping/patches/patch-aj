@@ -1,8 +1,8 @@
-$NetBSD: patch-aj,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-aj,v 1.2 2009/02/11 08:06:17 obache Exp $
 
---- send.c.orig	2003-08-01 16:53:08.000000000 +0200
-+++ send.c	2005-11-05 21:46:21.000000000 +0100
-@@ -79,9 +79,17 @@
+--- send.c.orig	2003-08-01 14:53:08.000000000 +0000
++++ send.c
+@@ -79,9 +79,17 @@ void send_packet (int signal_id)
  	else			send_tcp();
  
  	sent_pkt++;

@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-ao,v 1.2 2009/02/11 08:06:18 obache Exp $
 
---- cksum.c.orig	2003-12-06 14:39:35.000000000 +0100
-+++ cksum.c	2005-11-05 21:35:00.000000000 +0100
-@@ -27,7 +27,7 @@
+--- cksum.c.orig	2003-12-06 13:39:35.000000000 +0000
++++ cksum.c
+@@ -27,7 +27,7 @@ __u16 cksum(__u16 *buf, int nbytes)
  
  	if (nbytes == 1) {
  		oddbyte = 0;
