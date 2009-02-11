@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/11/24 16:28:31 stacktic Exp $
+$NetBSD: distinfo,v 1.4 2009/02/11 22:04:40 stacktic Exp $
 
-SHA1 (fs-utils_20081124.tar.gz) = d87981510a9c1941e0762ecc466e64296b5f4d39
-RMD160 (fs-utils_20081124.tar.gz) = ab7b869dc3e31db96583288c8f085d296b6416b1
-Size (fs-utils_20081124.tar.gz) = 112816 bytes
+SHA1 (fs-utils_20090211.tar.gz) = ed8d02d9d0721659f6bb1ef7266b4ebfd0c4cab3
+RMD160 (fs-utils_20090211.tar.gz) = 199a1d1ead1c3b45a8e77f188ade4c3a29cb38bc
+Size (fs-utils_20090211.tar.gz) = 116713 bytes
