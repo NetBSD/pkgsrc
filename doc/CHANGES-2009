@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.546 2009/02/11 23:11:29 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.547 2009/02/11 23:19:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -752,3 +752,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/jdbc-mysql5 version 5.0.8 [adrianp 2009-02-11]
 	Updated sysutils/rconfig to 0.47 [abs 2009-02-11]
 	Added databases/jdbc-mysql31 version 3.1.14 [adrianp 2009-02-11]
+	Updated security/msudir to 0.15 [abs 2009-02-11]
