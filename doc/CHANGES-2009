@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.538 2009/02/10 19:50:10 he Exp $
+$NetBSD: CHANGES-2009,v 1.539 2009/02/11 16:21:04 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -738,3 +738,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Encode to 2.29 [rhaen 2009-02-10]
 	Updated textproc/p5-XML-Encoding to 2.07 [rhaen 2009-02-10]
 	Updated devel/p5-Readonly-XS to 1.04nb3 [he 2009-02-10]
+	Removed devel/libaura [joerg 2009-02-11]
+	Removed devel/libinstaller [joerg 2009-02-11]
+	Removed devel/libdfui [joerg 2009-02-11]
+	Removed sysutils/dfuibe_installer [joerg 2009-02-11]
+	Removed sysutils/dfuife_cgi [joerg 2009-02-11]
+	Removed sysutils/dfuife_curses [joerg 2009-02-11]

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/10 14:58:48 joerg Exp $
-include/dfui/dfui.h
-include/dfui/dump.h
-include/dfui/lang.h
-include/dfui/system.h
-lib/libdfui.la
