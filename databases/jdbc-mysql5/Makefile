@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/11 22:42:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/11 22:56:02 adrianp Exp $
 #
 
 DISTNAME=	mysql-connector-java-5.0.8
@@ -17,13 +17,13 @@ USE_JAVA2=	1.5
 NO_BUILD=	yes
 
 DOCDIR=		share/doc/${PKGBASE}
-PLIST_SUBST+=	PKGNAME_NOREV=${PKGNAME_NOREV:Q}
+PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/${PKGNAME_NOREV}-bin.jar \
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}-bin.jar \
 		${DESTDIR}${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/docs/README ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/README.txt ${DESTDIR}${PREFIX}/${DOCDIR}
