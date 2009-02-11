@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.42 2009/02/10 19:24:37 joerg Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.43 2009/02/11 05:04:50 kano Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -280,8 +280,8 @@ using of ftp, fetch, wget or curl.  Alternatively, fetching can be disabled
 by using the value manual.  A value of custom disables the system defaults
 and dependency tracking for the fetch program.  In that case you have to
 provide <varname>FETCH_CMD</varname>, <varname>FETCH_BEFORE_ARGS</varname>,
-<varname>FETCH_RESUME_ARGS</varname>, <varname>FETCH_OUTPUT_ARGS</varname>
-<varname>FETCH_AFTER_ARGS<v/varname>.</para>
+<varname>FETCH_RESUME_ARGS</varname>, <varname>FETCH_OUTPUT_ARGS</varname>,
+<varname>FETCH_AFTER_ARGS</varname>.</para>
 
 <para>For example, if you want to use
 <filename>wget</filename> to resume downloads, you'll have to use something
