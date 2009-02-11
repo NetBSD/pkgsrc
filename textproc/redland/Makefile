@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/07 21:41:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/11 22:09:08 markd Exp $
 
 DISTNAME=	redland-1.0.8
 CATEGORIES=	textproc
@@ -7,6 +7,8 @@ MASTER_SITES=	http://download.librdf.org/source/
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://librdf.org
 COMMENT=	libraries that support the Resource Description Framework (RDF)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl pkg-config
 GNU_CONFIGURE=	yes
@@ -29,7 +31,7 @@ CONFIGURE_ARGS+=	--with-rasqal=system
 PKGCONFIG_OVERRIDE+=	redland.pc.in
 
 post-install:
-	${RMDIR} ${PREFIX}/lib/redland
+	${RMDIR} ${DESTDIR}${PREFIX}/lib/redland
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/raptor/buildlink3.mk"
