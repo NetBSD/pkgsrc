@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:33 jlam Exp $
-sbin/dfuife_curses
-share/dfuife_curses/fred.txt
-share/dfuife_curses/puffy.txt
-share/locale/ru/LC_MESSAGES/dfuife_curses.mo
-@dirrm share/dfuife_curses
