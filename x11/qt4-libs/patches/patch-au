@@ -1,3 +1,5 @@
+$NetBSD: patch-au,v 1.2 2009/02/11 17:41:38 wiz Exp $
+
 qt-bugs@ issue : N227209
 Trolltech task ID : none yet
 bugs.kde.org number : 174065
