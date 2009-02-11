@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:16 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.1 2009/02/11 21:58:40 shattered Exp $
 bin/gdb
 bin/gdbtui
 include/gdb6/ansidecl.h
