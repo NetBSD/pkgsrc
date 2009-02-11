@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/26 14:03:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/02/11 18:05:53 drochner Exp $
 bin/stellarium
 man/man1/stellarium.1
 share/locale/af/LC_MESSAGES/stellarium-skycultures.mo
@@ -13,6 +13,8 @@ share/locale/bg/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/bg/LC_MESSAGES/stellarium.mo
 share/locale/bn/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/bn/LC_MESSAGES/stellarium.mo
+share/locale/bs/LC_MESSAGES/stellarium-skycultures.mo
+share/locale/bs/LC_MESSAGES/stellarium.mo
 share/locale/ca/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/ca/LC_MESSAGES/stellarium.mo
 share/locale/cs/LC_MESSAGES/stellarium-skycultures.mo
@@ -59,6 +61,7 @@ share/locale/haw/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/haw/LC_MESSAGES/stellarium.mo
 share/locale/he/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/he/LC_MESSAGES/stellarium.mo
+share/locale/hi/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/hr/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/hr/LC_MESSAGES/stellarium.mo
 share/locale/hu/LC_MESSAGES/stellarium-skycultures.mo
@@ -92,6 +95,7 @@ share/locale/ms/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/ms/LC_MESSAGES/stellarium.mo
 share/locale/mt/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/mt/LC_MESSAGES/stellarium.mo
+share/locale/nan/LC_MESSAGES/stellarium.mo
 share/locale/nb/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/nb/LC_MESSAGES/stellarium.mo
 share/locale/nl/LC_MESSAGES/stellarium-skycultures.mo
@@ -110,10 +114,13 @@ share/locale/ru/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/ru/LC_MESSAGES/stellarium.mo
 share/locale/se/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/se/LC_MESSAGES/stellarium.mo
+share/locale/si/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/sk/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/sk/LC_MESSAGES/stellarium.mo
 share/locale/sl/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/sl/LC_MESSAGES/stellarium.mo
+share/locale/sq/LC_MESSAGES/stellarium-skycultures.mo
+share/locale/sq/LC_MESSAGES/stellarium.mo
 share/locale/sr/LC_MESSAGES/stellarium-skycultures.mo
 share/locale/sr/LC_MESSAGES/stellarium.mo
 share/locale/sv/LC_MESSAGES/stellarium-skycultures.mo
@@ -307,9 +314,13 @@ share/stellarium/nebulae/default/ngc2000.dat
 share/stellarium/nebulae/default/ngc2000names.dat
 share/stellarium/nebulae/default/pleiades.png
 share/stellarium/nebulae/default/textures.json
-share/stellarium/scripts/lunar_eclipse_partial.sts
-share/stellarium/scripts/lunar_eclipse_total.sts
-share/stellarium/scripts/startup.sts
+share/stellarium/scripts/landscapes.ssc
+share/stellarium/scripts/lunar_partial.ssc
+share/stellarium/scripts/lunar_total.ssc
+share/stellarium/scripts/screensaver.ssc
+share/stellarium/scripts/solar_eclipse.ssc
+share/stellarium/scripts/startup.ssc
+share/stellarium/scripts/zodiac.ssc
 share/stellarium/skycultures/chinese/constellation_names.eng.fab
 share/stellarium/skycultures/chinese/constellationship.fab
 share/stellarium/skycultures/chinese/description.en.utf8
@@ -525,7 +536,7 @@ share/stellarium/textures/hyperion.png
 share/stellarium/textures/iapetus.png
 share/stellarium/textures/io.png
 share/stellarium/textures/jupiter.png
-share/stellarium/textures/logo24bitsbeta.png
+share/stellarium/textures/logo24bits.png
 share/stellarium/textures/lune.png
 share/stellarium/textures/mars.png
 share/stellarium/textures/mercury.png
