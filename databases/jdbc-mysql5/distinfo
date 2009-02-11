@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/11 22:35:43 adrianp Exp $
+
+SHA1 (mysql-connector-java-5.0.8.tar.gz) = c76df144d24b4c654dd5417b9b18e094534acba8
+RMD160 (mysql-connector-java-5.0.8.tar.gz) = 8aba23c16c4a7c955be052cdbbecce8ef4286ac8
+Size (mysql-connector-java-5.0.8.tar.gz) = 8652406 bytes
