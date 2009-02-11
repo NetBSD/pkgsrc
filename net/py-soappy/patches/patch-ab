@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2009/02/11 21:20:43 joerg Exp $
+
+--- SOAPpy/Types.py.orig	2009-02-11 22:14:21.000000000 +0100
++++ SOAPpy/Types.py
+@@ -1,2 +1,4 @@
++from __future__ import nested_scopes
++
+ """
+ ################################################################################
+@@ -37,6 +39,4 @@ ident = '$Id: Types.py,v 1.17 2004/09/11
+ from version import __version__
+ 
+-from __future__ import nested_scopes
+-
+ import UserList
+ import base64
