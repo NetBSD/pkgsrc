@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.544 2009/02/11 22:37:27 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.545 2009/02/11 23:00:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xcdroast to 0.98a16 [shattered 2009-02-11]
 	Updated filesystems/fs-utils to 20090211 [stacktic 2009-02-11]
 	Added databases/jdbc-mysql5 version 5.0.8 [adrianp 2009-02-11]
+	Updated sysutils/rconfig to 0.47 [abs 2009-02-11]
