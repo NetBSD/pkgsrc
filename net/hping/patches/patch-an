@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-an,v 1.2 2009/02/11 08:06:17 obache Exp $
 
---- docs/hping2.8.orig	2003-08-09 03:50:52.000000000 +0200
-+++ docs/hping2.8	2005-11-05 22:06:29.000000000 +0100
-@@ -14,6 +14,10 @@
+--- docs/hping2.8.orig	2003-08-09 01:50:52.000000000 +0000
++++ docs/hping2.8
+@@ -14,6 +14,10 @@ hping2 \- send (almost) arbitrary TCP/IP
  ] [
  .B \-\-fast
  ] [
@@ -13,7 +13,7 @@ $NetBSD: patch-an,v 1.1 2006/03/30 13:51:29 salo Exp $
  .B \-I
  .I interface
  ] [
-@@ -98,6 +102,8 @@
+@@ -98,6 +102,8 @@ hping2 \- send (almost) arbitrary TCP/IP
  ] [
  .B \-\-tcpexitcode
  ] [
@@ -22,17 +22,17 @@ $NetBSD: patch-an,v 1.1 2006/03/30 13:51:29 salo Exp $
  .B \-\-tcp-timestamp
  ] [
  .B \-\-tr-stop
-@@ -180,6 +186,9 @@
- .TP
+@@ -181,6 +187,9 @@ Alias for -i u10000. Hping will send 10 
  .I --faster
  Alias for -i u1. Faster then --fast ;) (but not as fast as your computer can send packets due to the signal-driven design).
-+.TP
+ .TP
 +.I --flood
 +Send packets as fast as possible.
- .TP
++.TP
  .I -n --numeric
  Numeric output only, No attempt will be made to lookup symbolic names for host addresses.
-@@ -501,6 +510,9 @@
+ .TP
+@@ -501,6 +510,9 @@ numbers are predictable.
  .I -b --badcksum
  Send packets with a bad UDP/TCP checksum.
  .TP
@@ -42,3 +42,10 @@ $NetBSD: patch-an,v 1.1 2006/03/30 13:51:29 salo Exp $
  .I --tcp-timestamp
  Enable the TCP timestamp option, and try to guess the timestamp update
  frequency and the remote system uptime.
+@@ -714,4 +726,4 @@ On solaris hping does not work on the lo
+ a solaris problem, as stated in the tcpdump-workers mailing list,
+ so the libpcap can't do nothing to handle it properly.
+ .SH SEE ALSO
+-ping(8), traceroute(8), ifconfig(8), nmap(1)
+\ No newline at end of file
++ping(8), traceroute(8), ifconfig(8), nmap(1)
