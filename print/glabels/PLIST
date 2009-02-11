@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/01/11 17:31:46 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/02/11 17:42:40 drochner Exp $
 bin/glabels
 bin/glabels-batch
 include/libglabels/category.h
@@ -30,7 +30,9 @@ share/glabels/glade/wdgt-rotate-label.glade
 share/glabels/templates/avery-iso-templates.xml
 share/glabels/templates/avery-other-templates.xml
 share/glabels/templates/avery-us-templates.xml
+share/glabels/templates/brother-other-templates.xml
 share/glabels/templates/categories.xml
+share/glabels/templates/dymo-other-templates.xml
 share/glabels/templates/misc-iso-templates.xml
 share/glabels/templates/misc-other-templates.xml
 share/glabels/templates/misc-us-templates.xml
@@ -82,6 +84,7 @@ share/locale/es/LC_MESSAGES/glabels.mo
 share/locale/fr/LC_MESSAGES/glabels.mo
 share/locale/it/LC_MESSAGES/glabels.mo
 share/locale/ja/LC_MESSAGES/glabels.mo
+share/locale/ko/LC_MESSAGES/glabels.mo
 share/locale/pl/LC_MESSAGES/glabels.mo
 share/locale/pt_BR/LC_MESSAGES/glabels.mo
 share/locale/ru/LC_MESSAGES/glabels.mo
