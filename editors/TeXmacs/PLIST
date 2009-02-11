@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.38 2008/01/04 15:26:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.39 2009/02/11 17:53:40 drochner Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
+libexec/TeXmacs/bin/bbox_add.pl
 libexec/TeXmacs/bin/maxima_detect
 libexec/TeXmacs/bin/maxima_filter
 libexec/TeXmacs/bin/r_install
@@ -11,6 +12,7 @@ libexec/TeXmacs/bin/texmacs.bin
 libexec/TeXmacs/bin/tm_axiom
 libexec/TeXmacs/bin/tm_dratex
 libexec/TeXmacs/bin/tm_eukleides
+libexec/TeXmacs/bin/tm_feynmf
 libexec/TeXmacs/bin/tm_gnuplot
 libexec/TeXmacs/bin/tm_graphviz
 libexec/TeXmacs/bin/tm_gs
@@ -1873,7 +1875,9 @@ share/TeXmacs/packages/environment/env.ts
 share/TeXmacs/packages/example/allouche.ts
 share/TeXmacs/packages/example/alt-colors.ts
 share/TeXmacs/packages/example/bpr.ts
+share/TeXmacs/packages/example/doxygen.ts
 share/TeXmacs/packages/example/framed-envs.ts
+share/TeXmacs/packages/example/presentation.ts
 share/TeXmacs/packages/example/vdh.ts
 share/TeXmacs/packages/gui/gui-brushed.ts
 share/TeXmacs/packages/gui/gui-form.ts
@@ -1924,6 +1928,9 @@ share/TeXmacs/plugins/dratex/latex/AlDraTex.sty
 share/TeXmacs/plugins/dratex/latex/DraTex.sty
 share/TeXmacs/plugins/dratex/progs/init-dratex.scm
 share/TeXmacs/plugins/eukleides/progs/init-eukleides.scm
+share/TeXmacs/plugins/feynmf/doc/feynmf-plugin_tutorial.tm
+share/TeXmacs/plugins/feynmf/progs/init-feynmf.scm
+share/TeXmacs/plugins/feynmf/share/feynmf-styles
 share/TeXmacs/plugins/giac/packages/session/giac.ts
 share/TeXmacs/plugins/giac/progs/giac-input.scm
 share/TeXmacs/plugins/giac/progs/giac-menus.scm
@@ -2189,6 +2196,8 @@ share/TeXmacs/progs/math/format-math-menu.scm
 share/TeXmacs/progs/math/math-edit.scm
 share/TeXmacs/progs/math/math-kbd.scm
 share/TeXmacs/progs/math/math-menu.scm
+share/TeXmacs/progs/prog/program-edit.scm
+share/TeXmacs/progs/prog/scheme-edit.scm
 share/TeXmacs/progs/remote/chat-edit.scm
 share/TeXmacs/progs/remote/chat-menu.scm
 share/TeXmacs/progs/remote/client.scm
@@ -2246,6 +2255,7 @@ share/TeXmacs/progs/utils/edit/variants.scm
 share/TeXmacs/progs/utils/library/cursor.scm
 share/TeXmacs/progs/utils/library/length.scm
 share/TeXmacs/progs/utils/library/tree.scm
+share/TeXmacs/progs/utils/misc/doxygen.scm
 share/TeXmacs/progs/utils/misc/markup-funcs.scm
 share/TeXmacs/progs/utils/misc/tm-keywords.scm
 share/TeXmacs/progs/utils/plugins/plugin-cmd.scm
@@ -2306,6 +2316,7 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/progs/table
 @dirrm share/TeXmacs/progs/source
 @dirrm share/TeXmacs/progs/remote
+@dirrm share/TeXmacs/progs/prog
 @dirrm share/TeXmacs/progs/math
 @dirrm share/TeXmacs/progs/link
 @dirrm share/TeXmacs/progs/kernel/texmacs
@@ -2333,7 +2344,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/yacas
 @dirrm share/TeXmacs/plugins/xypic/progs
 @dirrm share/TeXmacs/plugins/xypic
-@dirrm share/TeXmacs/plugins/tools
 @dirrm share/TeXmacs/plugins/shell/progs
 @dirrm share/TeXmacs/plugins/shell
 @dirrm share/TeXmacs/plugins/scilab/progs
@@ -2420,6 +2430,10 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/plugins/giac/packages/session
 @dirrm share/TeXmacs/plugins/giac/packages
 @dirrm share/TeXmacs/plugins/giac
+@dirrm share/TeXmacs/plugins/feynmf/share
+@dirrm share/TeXmacs/plugins/feynmf/progs
+@dirrm share/TeXmacs/plugins/feynmf/doc
+@dirrm share/TeXmacs/plugins/feynmf
 @dirrm share/TeXmacs/plugins/eukleides/progs
 @dirrm share/TeXmacs/plugins/eukleides
 @dirrm share/TeXmacs/plugins/dratex/progs
@@ -2595,8 +2609,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/style
 @dirrm share/TeXmacs/doc/devel/source
 @dirrm share/TeXmacs/doc/devel/scheme/utils
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/scheme/process
-@dirrm share/TeXmacs/doc/devel/scheme/process
 @dirrm share/TeXmacs/doc/devel/scheme/overview
 @dirrm share/TeXmacs/doc/devel/scheme/graphics
 @dirrm share/TeXmacs/doc/devel/scheme/edit
@@ -2605,10 +2617,6 @@ share/TeXmacs/texts/test/overview.tm
 @dirrm share/TeXmacs/doc/devel/interface
 @dirrm share/TeXmacs/doc/devel/format/stylesheet
 @dirrm share/TeXmacs/doc/devel/format/regular
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/primitives
-@dirrm share/TeXmacs/doc/devel/format/primitives
-@exec ${MKDIR} %D/share/TeXmacs/doc/devel/format/language
-@dirrm share/TeXmacs/doc/devel/format/language
 @dirrm share/TeXmacs/doc/devel/format/environment
 @dirrm share/TeXmacs/doc/devel/format/basics
 @dirrm share/TeXmacs/doc/devel/format

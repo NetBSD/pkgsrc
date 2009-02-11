@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.79 2009/02/11 17:53:40 drochner Exp $
 
-DISTNAME=		TeXmacs-1.0.6.14-src
+DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/targz/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/targz/
@@ -18,6 +17,8 @@ BUILD_TARGET=		TEXMACS
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
+# XXX workaround for bug in configure
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share
 TEX_ACCEPTED=		teTeX3
 
 PYTHON_PATCH_SCRIPTS=	plugins/python/bin/tm_python
