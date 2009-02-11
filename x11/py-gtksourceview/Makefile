@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/04 06:15:17 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/11 14:23:32 joerg Exp $
 #
 
 DISTNAME=	pygtksourceview-2.4.0
@@ -19,7 +19,7 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 PY_PATCHPLIST=	YES
 
-PYTHON_VERSIONS_ACCEPTED=	24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 .include "../../lang/python/extension.mk"
 
