@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/18 05:08:43 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/11 21:40:57 markd Exp $
 
 DISTNAME=	kftpgrabber-0.8.1
 PKGREVISION=	3
@@ -10,19 +10,16 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kftp.org/
 COMMENT=	Graphical FTP client for KDE
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libSM/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
