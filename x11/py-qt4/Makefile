@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/23 22:22:16 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/11 17:56:48 drochner Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-qt4-${PYQT_VERSION}
@@ -42,7 +42,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.Darwin
 DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
 PLIST_SRC+=		${PKGDIR}/PLIST.X11
 .endif
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/extension.mk"
 .if ${PYPKGPREFIX} == "py24"
 PLIST_SRC+=		${PKGDIR}/PLIST.elementtree
 .endif
@@ -53,7 +53,6 @@ do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
 
-.include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.7.9
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
