@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.542 2009/02/11 21:50:24 shattered Exp $
+$NetBSD: CHANGES-2009,v 1.543 2009/02/11 22:06:49 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -748,3 +748,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/py-metakit to 2.4.9.7 [joerg 2009-02-11]
 	Updated net/py-soappy to 0.11.6 [joerg 2009-02-11]
 	Updated sysutils/xcdroast to 0.98a16 [shattered 2009-02-11]
+	Updated filesystems/fs-utils to 20090211 [stacktic 2009-02-11]
