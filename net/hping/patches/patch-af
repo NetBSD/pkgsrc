@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-af,v 1.2 2009/02/11 08:06:17 obache Exp $
 
---- ars.c.orig	2003-07-28 11:00:54.000000000 +0200
-+++ ars.c	2005-11-05 21:35:00.000000000 +0100
-@@ -372,7 +372,7 @@
+--- ars.c.orig	2003-07-28 09:00:54.000000000 +0000
++++ ars.c
+@@ -372,7 +372,7 @@ u_int16_t ars_cksum(void *vbuf, size_t n
  	}
  	if (nbytes == 1) {
  		oddbyte = 0;
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.1 2006/03/30 13:51:29 salo Exp $
  		sum += oddbyte;
  	}
  	sum = (sum >> 16) + (sum & 0xffff);
-@@ -381,6 +381,13 @@
+@@ -381,6 +381,13 @@ u_int16_t ars_cksum(void *vbuf, size_t n
  }
  
  /* Multiple buffers checksum facility */
@@ -25,7 +25,7 @@ $NetBSD: patch-af,v 1.1 2006/03/30 13:51:29 salo Exp $
  u_int16_t ars_multi_cksum(struct mc_context *c, int op, void *vbuf,
  							size_t nbytes)
  {
-@@ -394,38 +401,27 @@
+@@ -394,38 +401,27 @@ u_int16_t ars_multi_cksum(struct mc_cont
  		c->old = 0;
  		return -ARS_OK;
  	} else if (op == ARS_MC_UPDATE) {
@@ -56,13 +56,13 @@ $NetBSD: patch-af,v 1.1 2006/03/30 13:51:29 salo Exp $
 +			oddbyte = 0;
 +			*((u_int8_t *) &oddbyte) = *((u_int8_t *) buf);
 +			sum += oddbyte;
- 		}
++		}
 +		if (c->oddbyte_flag) {
 +			/* reverse checksum endianness */
 +			sum = (sum >> 16) + (sum & 0xffff);
 +			sum += (sum >> 16);
 +			sum = ((sum & 0xff00) >> 8) | ((sum & 0xff) << 8);
-+		}
+ 		}
 +		c->old += sum;
 +		c->oddbyte_flag ^= (nbytes == 1 ? 1 : 0);
  		return -ARS_OK;

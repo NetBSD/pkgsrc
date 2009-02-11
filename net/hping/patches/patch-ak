@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.1 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-ak,v 1.2 2009/02/11 08:06:17 obache Exp $
 
---- parseoptions.c.orig	2003-08-08 16:39:00.000000000 +0200
-+++ parseoptions.c	2005-11-05 21:48:10.000000000 +0100
-@@ -31,10 +31,11 @@
+--- parseoptions.c.orig	2003-08-08 14:39:00.000000000 +0000
++++ parseoptions.c
+@@ -31,10 +31,11 @@ enum {	OPT_COUNT, OPT_INTERVAL, OPT_NUME
  	OPT_RROUTE, OPT_IPPROTO, OPT_ICMP_IPVER, OPT_ICMP_IPHLEN,
  	OPT_ICMP_IPLEN, OPT_ICMP_IPID, OPT_ICMP_IPPROTO, OPT_ICMP_CKSUM,
  	OPT_ICMP_TS, OPT_ICMP_ADDR, OPT_TCPEXITCODE, OPT_FAST, OPT_TR_KEEP_TTL,
@@ -16,7 +16,7 @@ $NetBSD: patch-ak,v 1.1 2006/03/30 13:51:29 salo Exp $
  
  static struct ago_optlist hping_optlist[] = {
  	{ 'c',	"count",	OPT_COUNT,		AGO_NEEDARG },
-@@ -105,8 +106,10 @@
+@@ -105,8 +106,10 @@ static struct ago_optlist hping_optlist[
  	{ '\0', "tcpexitcode",	OPT_TCPEXITCODE,	AGO_NOARG },
  	{ '\0',	"fast",		OPT_FAST,		AGO_NOARG|AGO_EXCEPT0 },
  	{ '\0',	"faster",	OPT_FASTER,		AGO_NOARG|AGO_EXCEPT0 },
@@ -27,7 +27,7 @@ $NetBSD: patch-ak,v 1.1 2006/03/30 13:51:29 salo Exp $
  	{ '\0', "tr-stop",	OPT_TR_STOP,		AGO_NOARG },
  	{ '\0',	"tr-no-rtt",	OPT_TR_NO_RTT,		AGO_NOARG },
  	{ '\0', "rand-dest",	OPT_RAND_DEST,		AGO_NOARG },
-@@ -503,9 +506,17 @@
+@@ -503,9 +506,17 @@ int parse_options(int argc, char **argv)
  			usec_delay.it_interval.tv_sec = 0;
  			usec_delay.it_value.tv_usec = 
  			usec_delay.it_interval.tv_usec = 1;

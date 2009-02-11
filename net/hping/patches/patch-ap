@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2009/02/11 08:06:18 obache Exp $
+
+--- hping2.h.orig	2003-08-07 23:55:55.000000000 +0000
++++ hping2.h
+@@ -19,7 +19,7 @@
+ #include "byteorder.h"
+ #include "systype.h"
+ 
+-#ifdef __sun__
++#ifdef __sun
+ typedef char                   int_8_t;
+ typedef unsigned char          u_int8_t;
+ typedef short                  int_16_t;
