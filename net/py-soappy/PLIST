@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2003/12/24 11:42:02 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/11 21:19:34 joerg Exp $
 ${PYSITELIB}/SOAPpy/Client.py
 ${PYSITELIB}/SOAPpy/Client.pyc
 ${PYSITELIB}/SOAPpy/Client.pyo
@@ -44,6 +44,9 @@ ${PYSITELIB}/SOAPpy/__init__.pyo
 ${PYSITELIB}/SOAPpy/version.py
 ${PYSITELIB}/SOAPpy/version.pyc
 ${PYSITELIB}/SOAPpy/version.pyo
+${PYSITELIB}/SOAPpy/wstools/Namespaces.py
+${PYSITELIB}/SOAPpy/wstools/Namespaces.pyc
+${PYSITELIB}/SOAPpy/wstools/Namespaces.pyo
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.py
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyc
 ${PYSITELIB}/SOAPpy/wstools/TimeoutSocket.pyo
