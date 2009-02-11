@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/05 13:26:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/11 14:23:32 joerg Exp $
 #
 
 DISTNAME=	kiwi-1.9.22
@@ -16,7 +16,7 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 USE_PKGLOCALEDIR=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c6:../../devel/py-setuptools
 INSTALLATION_DIRS+=	${PYSITELIB}
 

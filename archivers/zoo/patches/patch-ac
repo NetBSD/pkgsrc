@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2006/10/01 21:08:26 rillig Exp $
+$NetBSD: patch-ac,v 1.5 2009/02/11 14:23:32 joerg Exp $
 
 --- makefile.orig	1991-07-16 10:52:08.000000000 -0500
 +++ makefile
-@@ -18,13 +18,13 @@
+@@ -18,13 +18,12 @@
  
  MAKE = make	      # needed for some systems e.g. older BSD
  
@@ -16,7 +16,6 @@ $NetBSD: patch-ac,v 1.4 2006/10/01 21:08:26 rillig Exp $
 -OPTIM = -O
 -DESTDIR = /usr/local/bin
 +OPTIM = $(CFLAGS)
-+DESTDIR = $(PREFIX)/bin
  
  #List of all object files created for Zoo
  ZOOOBJS = addbfcrc.o addfname.o basename.o comment.o crcdefs.o \
@@ -36,8 +35,8 @@ $NetBSD: patch-ac,v 1.4 2006/10/01 21:08:26 rillig Exp $
 -inst_prod:
 -	mv zoo $(DESTDIR)/zoo
 +install:
-+	$(BSD_INSTALL_PROGRAM) $(TARGETS) $(DESTDIR)
-+	$(BSD_INSTALL_DATA) zoo.1 fiz.1 $(PREFIX)/${PKGMANDIR}/man1
++	$(BSD_INSTALL_PROGRAM) $(TARGETS) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_DATA) zoo.1 fiz.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
  
  # executable targets
  TARGETS = zoo fiz

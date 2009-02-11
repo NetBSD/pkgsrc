@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/16 06:47:11 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/11 14:23:32 joerg Exp $
 #
 
 DISTNAME=	pyclutter-0.8.2
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-PYTHON_VERSIONS_ACCEPTED=	24 25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 PKGCONFIG_OVERRIDE+=	pyclutter.pc.in
 
