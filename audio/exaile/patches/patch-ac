@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2009/02/11 18:35:19 drochner Exp $
+
+--- xl/media/mpc.py.orig	2008-10-06 18:25:24.000000000 +0200
++++ xl/media/mpc.py
+@@ -16,6 +16,7 @@ TAG_TRANSLATION = {
+ 
+ # this code taken from quodlibet
+ try:
++    raise ImportError
+     import ctypes
+     _libc = ctypes.cdll.LoadLibrary("libc.so.6")
+     _mpcdec = ctypes.cdll.LoadLibrary("libmpcdec.so.3")
