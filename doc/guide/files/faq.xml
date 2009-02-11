@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.43 2009/02/11 05:04:50 kano Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.44 2009/02/11 05:14:28 kano Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -284,7 +284,7 @@ provide <varname>FETCH_CMD</varname>, <varname>FETCH_BEFORE_ARGS</varname>,
 <varname>FETCH_AFTER_ARGS</varname>.</para>
 
 <para>For example, if you want to use
-<filename>wget</filename> to resume downloads, you'll have to use something
+<filename>wget</filename> to download, you'll have to use something
 like:</para>
 
 <programlisting>
