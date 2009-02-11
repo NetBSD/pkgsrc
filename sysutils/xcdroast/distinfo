@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.15 2007/08/15 18:34:59 plunky Exp $
+$NetBSD: distinfo,v 1.16 2009/02/11 21:48:39 shattered Exp $
 
-SHA1 (xcdroast-0.98alpha15.tar.gz) = f354ea9ffe918c4ec11312d5537e6e245730fecc
-RMD160 (xcdroast-0.98alpha15.tar.gz) = 9198f67659023ce8f508fa2c331df9d9c8b81a8f
-Size (xcdroast-0.98alpha15.tar.gz) = 3282794 bytes
+SHA1 (parse_version.patch) = b4f85e53d050f355a162e9ca94b6b928f10fc5a8
+RMD160 (parse_version.patch) = 4d1f14240657dbf58721727ea4e993d6bd3d3273
+Size (parse_version.patch) = 338 bytes
+SHA1 (xcdroast-0.98alpha16.tar.gz) = bbb3184a7e2bfd80d931698002dc9f74f136241d
+RMD160 (xcdroast-0.98alpha16.tar.gz) = d0d63b6387d9aeace5aaef8ee935b6c6d4836259
+Size (xcdroast-0.98alpha16.tar.gz) = 3563666 bytes
 SHA1 (patch-aa) = 0beee32a5550646cd360459d90281cb0ec9a826a
-SHA1 (patch-ab) = 085da3b440ba1d6a0e305626e1ac3fba49d2f546
-SHA1 (patch-ad) = 417a82344e14ae2a9f602254b152337c33afae4a
-SHA1 (patch-ae) = 773d1a5b2b2ce5ef0a947cb5d7f67f83985b6e5e
+SHA1 (patch-ad) = 501a40eeac05ba96483e6399880b5cf2bd629695
