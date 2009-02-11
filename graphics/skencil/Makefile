@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/09 22:56:24 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/02/11 17:11:58 joerg Exp $
 #
 
 DISTNAME=	skencil-0.6.17
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sketch/}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
@@ -27,19 +29,19 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} setup.py install \
-		--prefix=${PREFIX}
+		--prefix=${PREFIX} --dest-dir=${DESTDIR}
 
 SKETCHDOCDIR=	${PREFIX}/share/doc/skencil
 SKETCHDOCS=	BUGS Doc NEWS PROJECTS README TODO
 SKETCHEXDIR=	${PREFIX}/share/examples/skencil
 
+INSTALLATION_DIRS=	${SKETCHDOCDIR} ${SKETCHEXDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
-	cd ${WRKSRC} && pax -rwpm -v ${SKETCHDOCS} ${SKETCHDOCDIR}
-	${RM} ${SKETCHDOCDIR}/Doc/fonts.alias
-	${RM} ${SKETCHDOCDIR}/Doc/fonts.scale
-	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
-	cd ${WRKSRC}/Examples && pax -rwpm -v . ${SKETCHEXDIR}
+	cd ${WRKSRC} && pax -rw -pm -v ${SKETCHDOCS} ${DESTDIR}${SKETCHDOCDIR}
+	${RM} ${DESTDIR}${SKETCHDOCDIR}/Doc/fonts.alias
+	${RM} ${DESTDIR}${SKETCHDOCDIR}/Doc/fonts.scale
+	cd ${WRKSRC}/Examples && pax -rwpm -v . ${DESTDIR}${SKETCHEXDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"

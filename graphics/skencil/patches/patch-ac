@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2009/02/11 17:11:58 joerg Exp $
+
+--- Filter/Makefile.pre.in.orig	2002-08-06 22:21:15.000000000 +0200
++++ Filter/Makefile.pre.in
+@@ -124,6 +124,7 @@ RANLIB=		@RANLIB@
+ MACHDEP=	@MACHDEP@
+ SO=		@SO@
+ LDSHARED=	@LDSHARED@
++BLDSHARED=	@BLDSHARED@
+ CCSHARED=	@CCSHARED@
+ LINKFORSHARED=	@LINKFORSHARED@
+ #@SET_CCC@
+@@ -255,6 +256,7 @@ sedscript:	$(MAKEFILE)
+ 	 -e '/^RANLIB=/s/^RANLIB=[ 	]*\(.*\)/s%@RANLIB[@]%\1%/p' \
+ 	 -e '/^MACHDEP=/s/^MACHDEP=[ 	]*\(.*\)/s%@MACHDEP[@]%\1%/p' \
+ 	 -e '/^SO=/s/^SO=[ 	]*\(.*\)/s%@SO[@]%\1%/p' \
++	 -e '/^BLDSHARED=/s/^BLDSHARED=[ 	]*\(.*\)/s%@BLDSHARED[@]%\1%/p' \
+ 	 -e '/^LDSHARED=/s/^LDSHARED=[ 	]*\(.*\)/s%@LDSHARED[@]%\1%/p' \
+ 	 -e '/^CCSHARED=/s/^CCSHARED=[ 	]*\(.*\)/s%@CCSHARED[@]%\1%/p' \
+ 	 -e '/^$L=/s/^$L=[ 	]*\(.*\)/s%@$L[@]%\1%/p' \
