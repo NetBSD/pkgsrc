@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.9 2008/04/07 13:18:25 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.10 2009/02/11 14:34:36 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -49,8 +49,18 @@ BOOTSTRAP_DEPENDS+=	pkg_install>=${PKGTOOLS_REQD}:../../pkgtools/pkg_install
 _PKG_INSTALL_DEPENDS=	yes
 .endif
 
+.if !defined(NO_PKGTOOLS_REQD_CHECK) && ${PKGTOOLS_VERSION} >= 20090201
+AUDIT_PACKAGES?=	${PKG_ADMIN}
+_AUDIT_PACKAGES_CMD?=	audit-pkg
+_EXTRACT_PKGVULNDIR=	${PKG_ADMIN} config-var PKGVULNDIR
+DOWNLOAD_VULN_LIST?=	${PKG_ADMIN} fetch-pkg-vulnerabilities
+.else
 AUDIT_PACKAGES?=	${PKG_TOOLS_BIN}/audit-packages
+_AUDIT_PACKAGES_CMD?=	-n
+_EXTRACT_PKGVULNDIR=	${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR
 DOWNLOAD_VULN_LIST?=	${PKG_TOOLS_BIN}/download-vulnerability-list
+.endif
+
 
 # The binary pkg_install tools all need to consistently to refer to the
 # correct package database directory.
