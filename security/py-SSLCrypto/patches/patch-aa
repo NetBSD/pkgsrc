@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/02/11 23:25:59 joerg Exp $
+
+--- setup.py.orig	2009-02-12 00:04:33.000000000 +0100
++++ setup.py
+@@ -9,7 +9,7 @@ if sys.platform == 'win32':
+     extra_link_args = []
+ else:
+     sslLibs = []
+-    extra_link_args = ['/usr/lib/libcrypto.a']
++    extra_link_args = ['-lcrypto']
+ 
+ setup(
+   name = "SSLCrypto",
