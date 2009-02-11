@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.63 2008/09/06 20:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2009/02/11 23:09:29 markd Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
 PKGREVISION=	1
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	cervisia-[0-9]*
 CONFLICTS+=	umbrello-[0-9]*
@@ -68,9 +70,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 
 # Makefile{,.am,.in} weren't supposed to be installed so clean up
 post-install:
-	${RM} ${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile
-	${RM} ${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile.am
-	${RM} ${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile.in
+	${RM} ${DESTDIR}${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile
+	${RM} ${DESTDIR}${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile.am
+	${RM} ${DESTDIR}${KDEDIR}/share/kde/apps/kapptemplate/admin/Makefile.in
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
