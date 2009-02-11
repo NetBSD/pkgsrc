@@ -1,27 +1,16 @@
-$NetBSD: patch-ae,v 1.21 2009/01/30 12:44:15 gdt Exp $
+$NetBSD: patch-ae,v 1.22 2009/02/11 10:21:33 markd Exp $
 
 &data issue filed as http://www.cups.org/str.php?L3079 and fixed in
 cups svn 28 minutes later.
 
-The deeper issue is that firefox3 defines SHA1_Update in nss and cups
-uses openssl and the nss symbol wins; hence any use of RAND_seed
-fails.
-
 --- cups/http.c.orig	2008-08-01 14:33:16.000000000 -0400
 +++ cups/http.c
-@@ -1175,7 +1175,14 @@ httpInitialize(void)
+@@ -1175,7 +1175,7 @@ httpInitialize(void)
    for (i = 0; i < sizeof(data); i ++)
      data[i] = rand(); /* Yes, this is a poor source of random data... */
  
 -  RAND_seed(&data, sizeof(data));
-+#if 0
-+  /*
-+   * For reasons not entirely clear, this call results in segfaults
-+   * when firefox3 tries to print.  Upstream has a spurious & in front
-+   * of data, but removing that is not enough to avoid the crash.
-+   */
 +  RAND_seed(data, sizeof(data));
-+#endif
  #endif /* HAVE_LIBSSL */
  }
  
