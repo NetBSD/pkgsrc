@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
+$NetBSD: patch-aa,v 1.4 2009/02/11 08:06:17 obache Exp $
 
---- main.c.orig	2003-08-08 01:55:55.000000000 +0200
-+++ main.c	2005-11-05 21:45:04.000000000 +0100
-@@ -47,7 +47,8 @@
+--- main.c.orig	2003-08-07 23:55:55.000000000 +0000
++++ main.c
+@@ -47,7 +47,8 @@ unsigned int
  	signlen,
  	lsr_length = 0,
  	ssr_length = 0,
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
  
  
  unsigned short int
-@@ -65,6 +66,7 @@
+@@ -65,6 +66,7 @@ int
  	recv_pkt = 0,
  	out_of_sequence_pkt = 0,
  	sending_wait = DEFAULT_SENDINGWAIT,	/* see DEFAULT_SENDINGWAIT */
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
  	opt_rawipmode	= FALSE,
  	opt_icmpmode	= FALSE,
  	opt_udpmode	= FALSE,
-@@ -98,6 +100,7 @@
+@@ -98,6 +100,7 @@ int
  	opt_tcpexitcode	= FALSE,
  	opt_badcksum	= FALSE,
  	opt_tr_keep_ttl = FALSE,
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
  	opt_tcp_timestamp = FALSE,
  	opt_tr_stop	= FALSE,
  	opt_tr_no_rtt	= FALSE,
-@@ -179,6 +182,17 @@
+@@ -179,6 +182,17 @@ int main(int argc, char **argv)
  	char setflags[1024] = {'\0'};
  	int c, hdr_size;
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
  	if (parse_options(argc, argv) == -1) {
  		printf("hping2: missing host argument\n"
  			"Try `hping2 --help' for more information.\n");
-@@ -219,13 +233,6 @@
+@@ -219,13 +233,6 @@ int main(int argc, char **argv)
  			ifname, ifstraddr, h_if_mtu);
  	}
  
@@ -60,7 +60,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/30 13:51:29 salo Exp $
  	/* set SO_BROADCAST option */
  	socket_broadcast(sockraw);
  	/* set SO_IPHDRINCL option */
-@@ -355,6 +362,13 @@
+@@ -355,6 +362,13 @@ int main(int argc, char **argv)
  		}
  	}
  
