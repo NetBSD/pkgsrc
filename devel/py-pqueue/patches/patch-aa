@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2009/02/11 19:19:00 joerg Exp $
+
+--- Makefile.pre.in.orig	1999-07-09 12:18:20.000000000 +0200
++++ Makefile.pre.in
+@@ -118,6 +118,7 @@ RANLIB=		@RANLIB@
+ MACHDEP=	@MACHDEP@
+ SO=		@SO@
+ LDSHARED=	@LDSHARED@
++BLDSHARED=	@BLDSHARED@
+ CCSHARED=	@CCSHARED@
+ LINKFORSHARED=	@LINKFORSHARED@
+ @SET_CCC@
+@@ -170,8 +171,8 @@ install-shmods: $(SHAREDMODS)
+ 	@echo 'Installing shared modules...'
+ 	@if [ -n "$(SHAREDMODS)" ]; then \
+ 	  for mod in $(SHAREDMODS); do \
+-	    echo "  install -m 555 $$mod $(PY_MOD_DIR)"; \
+-	    $(INSTALL) -m 555 $$mod $(PY_MOD_DIR); \
++	    echo "  install -m 555 $$mod ${DESTDIR}$(PY_MOD_DIR)"; \
++	    $(INSTALL) -m 555 $$mod ${DESTDIR}$(PY_MOD_DIR); \
+ 	  done; \
+ 	fi
+ 
+@@ -181,14 +182,14 @@ install-scripts: $(SCRIPTS)
+ 	  for script in $(SCRIPTS); do \
+ 	    dir=`dirname $$script`; \
+ 	    if [ ! -d $(PY_LIB_DIR)/$$dir ]; then \
+-	      $(INSTALL) -d $(PY_LIB_DIR)/$$dir; \
++	      $(INSTALL) -d ${DESTDIR}$(PY_LIB_DIR)/$$dir; \
+ 	    fi; \
+ 	    echo "  install -m 644 $$script $(PY_LIB_DIR)/$$dir"; \
+-	    $(INSTALL) -m 644 $$script $(PY_LIB_DIR)/$$dir; \
++	    $(INSTALL) -m 644 $$script ${DESTDIR}$(PY_LIB_DIR)/$$dir; \
+ 	  done; \
+ 	  echo "Compiling..."; \
+ 	  for script in $(SCRIPTS); do \
+-	    $(PYTHON) -c "import py_compile; py_compile.compile(\"$(PY_LIB_DIR)/$$script\")"; \
++	    $(PYTHON) -c "import py_compile; py_compile.compile(\"${DESTDIR}$(PY_LIB_DIR)/$$script\")"; \
+ 	  done; \
+ 	fi
+ 
