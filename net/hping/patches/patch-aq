@@ -1,0 +1,25 @@
+$NetBSD: patch-aq,v 1.1 2009/02/11 08:06:18 obache Exp $
+
+--- bytesex.h.orig	2003-07-28 09:00:55.000000000 +0000
++++ bytesex.h
+@@ -7,16 +7,11 @@
+ #ifndef ARS_BYTESEX_H
+ #define ARS_BYTESEX_H
+ 
+-#if 	defined(__i386__) \
+-	|| defined(__alpha__) \
+-	|| (defined(__mips__) && (defined(MIPSEL) || defined (__MIPSEL__)))
++#include "byteorder.h"
++
++#if 	defined(__LITTLE_ENDIAN_BITFIELD)
+ #define BYTE_ORDER_LITTLE_ENDIAN
+-#elif 	defined(__mc68000__) \
+-	|| defined (__sparc__) \
+-	|| defined (__sparc) \
+-	|| defined (__PPC__) \
+-	|| defined (__BIG_ENDIAN__) \
+-	|| (defined(__mips__) && (defined(MIPSEB) || defined (__MIPSEB__)))
++#elif 	defined(__BIG_ENDIAN_BITFIELD)
+ #define BYTE_ORDER_BIG_ENDIAN
+ #else
+ # error can not find the byte order for this architecture, fix bytesex.h
