@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/02/11 21:22:29 markd Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/11 21:27:52 markd Exp $
 
 DISTNAME=	kmessage-0.1
 PKGREVISION=	13
@@ -19,5 +19,4 @@ GNU_CONFIGURE=		YES
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
