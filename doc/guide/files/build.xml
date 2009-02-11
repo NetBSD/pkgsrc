@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.57 2009/02/10 19:24:37 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.58 2009/02/11 05:05:20 kano Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -384,7 +384,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 
       <para> The specific command and arguments used depend on the
       <varname>FETCH_USING</varname> parameter. The example above is
-      for <literal>FETCH_USING=custom</literal>.
+      for <literal>FETCH_USING=custom</literal>.</para>
 
       <para>The distfiles mirror run by the NetBSD Foundation uses the
       <emphasis>mirror-distfiles</emphasis> target to mirror the
