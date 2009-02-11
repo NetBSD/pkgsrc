@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:10:22 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/11 21:52:59 markd Exp $
 
 DISTNAME=	configurator_201
 PKGNAME=	${BINNAME}-2.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	markd@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://edge.mcs.drexel.edu/GICL/people/sevy/airport/
 COMMENT=	Configuration program for Apple's Airport Base Station
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	BINNAME=${BINNAME:Q} JARNAME=${JARNAME:Q}
 
@@ -24,9 +26,9 @@ LIBDIR=		${PREFIX}/lib/${BINNAME}
 .include "../../mk/bsd.prefs.mk"
 
 USE_JAVA=		run
-PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 blackdown-jdk13 jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 sun-jdk15 blackdown-jdk13 jdk14
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/${BINNAME} lib/${BINNAME}
 
 post-extract:
 	${CHMOD} -R g-w,o-w ${WRKSRC}/*
@@ -40,15 +42,14 @@ do-build:
 	${ECHO} "exec java -jar ${LIBDIR}/${JARNAME}" >>${WRKSRC}/${BINNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR} ${LIBDIR}
 	cd ${WRKSRC} && \
-	${INSTALL_SCRIPT} ${BINNAME} ${PREFIX}/bin && \
-	${INSTALL_DATA} ${JARNAME} ${LIBDIR} && \
-	${INSTALL_DATA} AUTHORS ${DOCDIR} && \
-	${INSTALL_DATA} COPYING ${DOCDIR} && \
+	${INSTALL_SCRIPT} ${BINNAME} ${DESTDIR}${PREFIX}/bin && \
+	${INSTALL_DATA} ${JARNAME} ${DESTDIR}${LIBDIR} && \
+	${INSTALL_DATA} AUTHORS ${DESTDIR}${DOCDIR} && \
+	${INSTALL_DATA} COPYING ${DESTDIR}${DOCDIR} && \
 	cd helpdocs && \
-	${INSTALL_DATA} ReadMe.txt ${DOCDIR}/README && \
-	${INSTALL_DATA} mainscreen.jpg manual.html ${DOCDIR}
+	${INSTALL_DATA} ReadMe.txt ${DESTDIR}${DOCDIR}/README && \
+	${INSTALL_DATA} mainscreen.jpg manual.html ${DESTDIR}${DOCDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
