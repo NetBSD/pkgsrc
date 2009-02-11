@@ -187,6 +187,8 @@ ispell			Add spell checking support using ispell.
 jasper			Enable JPEG 2000 support using the jasper library.
 java			Enable Java support.
 javascript		Enable Javascript support.
+jdbc-mysql31		Enable MySQL JDBC driver.
+jdbc-mysql5		Enable MySQL JDBC driver.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
 kde			Enable KDE support.
