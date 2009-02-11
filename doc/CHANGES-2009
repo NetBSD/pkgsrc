@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.539 2009/02/11 16:21:04 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.540 2009/02/11 21:02:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -744,3 +744,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed sysutils/dfuibe_installer [joerg 2009-02-11]
 	Removed sysutils/dfuife_cgi [joerg 2009-02-11]
 	Removed sysutils/dfuife_curses [joerg 2009-02-11]
+	Updated databases/metakit-lib to 2.4.9.7 [joerg 2009-02-11]
+	Updated databases/py-metakit to 2.4.9.7 [joerg 2009-02-11]
