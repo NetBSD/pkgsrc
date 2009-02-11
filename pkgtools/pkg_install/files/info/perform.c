@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.49 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.50 2009/02/11 23:51:30 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.49 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.50 2009/02/11 23:51:30 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -363,10 +363,17 @@ pkg_do(const char *pkg)
 		show_index(meta->meta_comment, tmp);
 	} else if (Flags & SHOW_BI_VAR) {
 		if (strcspn(BuildInfoVariable, "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-		    == strlen(BuildInfoVariable))
-			show_var(meta->meta_installed_info, BuildInfoVariable);
-		else
-			show_var(meta->meta_build_info, BuildInfoVariable);
+		    == strlen(BuildInfoVariable)) {
+			if (meta->meta_installed_info)
+				show_var(meta->meta_installed_info, BuildInfoVariable);
+			else
+				warnx("Installation information missing");
+		} else {
+			if (meta->meta_build_info)
+				show_var(meta->meta_build_info, BuildInfoVariable);
+			else
+				warnx("Build information missing");
+		}
 	} else {
 		package_t plist;
 		
