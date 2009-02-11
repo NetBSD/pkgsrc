@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.53 2008/02/20 10:21:55 rillig Exp $
+# $NetBSD: Makefile,v 1.54 2009/02/11 22:35:49 markd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGNAME=	kdelibdocs-${_KDE_VERSION}
 CATEGORIES=	x11 devel
 
 COMMENT=	KDE library documentation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
@@ -29,7 +31,7 @@ post-install:
 	DOCDIRS=`${FIND} . -name classmap.inc -print | ${SED} 's:/classmap.inc::'`; \
 	cd ${WRKSRC};							\
 	for d in $${DOCDIRS}; do					\
-		(cd $${d}; ${GMAKE} install-apidox);			\
+		(cd $${d}; ${GMAKE} DESTDIR=${DESTDIR} install-apidox);			\
 	done
 
 .include "../../meta-pkgs/kde3/kde3.mk"
