@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/08/27 18:53:42 apb Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/11 22:47:05 joerg Exp $
 #
 
 DISTNAME=	networkx-0.37
@@ -12,7 +12,7 @@ HOMEPAGE=	http://networkx.lanl.gov/
 COMMENT=	Python package for creating and manipulating graphs and networks
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
