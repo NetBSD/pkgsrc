@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/10/05 22:47:23 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2009/02/12 21:35:08 schmonz Exp $
 
-SHA1 (libmp3splt-0.5.1.tar.gz) = 749e910066de1adec6c8dc762aab8a4c06669b1b
-RMD160 (libmp3splt-0.5.1.tar.gz) = 48b4cac880fd3b5a317500640f037cce2f8b2ace
-Size (libmp3splt-0.5.1.tar.gz) = 453243 bytes
+SHA1 (libmp3splt-0.5.4.tar.gz) = f666e5f19daf40bdd70ea4c88f5a74260b865cd9
+RMD160 (libmp3splt-0.5.4.tar.gz) = e999b5881e0efb154862741df37c9b694c9ef241
+Size (libmp3splt-0.5.4.tar.gz) = 462620 bytes
