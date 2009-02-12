@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.551 2009/02/12 12:32:07 obache Exp $
+$NetBSD: CHANGES-2009,v 1.552 2009/02/12 15:26:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -758,3 +758,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/lua-stdlib-doc version 8 [minskim 2009-02-12]
 	Updated databases/tokyocabinet to 1.4.5 [obache 2009-02-12]
 	Updated databases/p5-tokyotyrant to 1.6 [obache 2009-02-12]
+	Updated lang/see to 3.0.1376nb1 [he 2009-02-12]
