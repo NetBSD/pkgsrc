@@ -57,7 +57,6 @@ AC_SUBST(bootstrap)
 
 dnl Checks for libraries.
 AC_CHECK_LIB(db, __db185_open, , AC_SEARCH_LIBS(dbopen, [db db1]))
-AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses])
 
 dnl Checks for header files.
 AC_HEADER_STDC
@@ -72,7 +71,7 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
 	sys/wait.h])
 
 # Checks for library functions.
-AC_CHECK_FUNCS([chflags dbopen __db185_open tgetent vfork])
+AC_CHECK_FUNCS([chflags dbopen __db185_open vfork])
 
 AC_SEARCH_LIBS([gethostbyname], [nsl])
 AC_SEARCH_LIBS([socket],
