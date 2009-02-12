@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/02/12 15:24:14 he Exp $
+
+--- libsee/dtoa_config.h.orig	2007-09-14 00:01:42.000000000 +0200
++++ libsee/dtoa_config.h
+@@ -16,7 +16,7 @@
+ #   define IEEE_8087
+ #endif
+ 
+-#if defined(__m68k__) || defined(__sparc__) || defined(__ppc__)
++#if defined(__m68k__) || defined(__sparc__) || defined(__ppc__) || defined(__powerpc__)
+ #   define IEEE_MC68k 
+ #endif
+ 
