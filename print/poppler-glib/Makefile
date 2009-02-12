@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/20 14:28:22 dillo Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/12 20:55:07 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--disable-poppler-qt
 # Don't compile GTK+ test program.
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
+CONFIGURE_ARGS+=	--disable-cms
 
 BUILD_DIRS=		goo fofi poppler glib
 INSTALL_DIRS=		glib
