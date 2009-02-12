@@ -1,18 +1,18 @@
-$NetBSD: patch-af,v 1.4 2008/11/13 17:36:54 chuck Exp $
+$NetBSD: patch-af,v 1.5 2009/02/12 19:51:08 drochner Exp $
 
---- src/unix-dll.mak.orig	2007-11-27 17:58:40.000000000 -0500
-+++ src/unix-dll.mak	2008-11-13 10:50:06.000000000 -0500
-@@ -52,12 +52,12 @@
+--- base/unix-dll.mak.orig	2008-09-13 22:22:25.000000000 +0200
++++ base/unix-dll.mak
+@@ -52,12 +52,12 @@ GS_SONAME_MAJOR_MINOR=$(GS_SONAME).$(GS_
  LDFLAGS_SO=-shared -Wl,-soname=$(GS_SONAME_MAJOR)
  
  # MacOS X
 -#GS_SOEXT=dylib
-+#Darwin#GS_SOEXT=dylib
 -#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
-+#Darwin#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
 -#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
-+#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
 -#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
++#Darwin#GS_SOEXT=dylib
++#Darwin#GS_SONAME=$(GS_SONAME_BASE).$(GS_SOEXT)
++#Darwin#GS_SONAME_MAJOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_SOEXT)
 +#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
  #LDFLAGS_SO=-dynamiclib -flat-namespace
 -#LDFLAGS_SO=-dynamiclib -install-name $(GS_SONAME_MAJOR_MINOR)
@@ -20,15 +20,15 @@ $NetBSD: patch-af,v 1.4 2008/11/13 17:36:54 chuck Exp $
  #LDFLAGS_SO=-dynamiclib
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
-@@ -79,11 +79,11 @@
+@@ -79,11 +79,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
  # Build the small Ghostscript loaders, with Gtk+ and without
  
- $(GSSOC_XE): $(GS_SO) $(GLSRC)$(SOC_LOADER)
--	$(GLCC) -g -o $(GSSOC_XE) $(GLSRC)dxmainc.c -L$(BINDIR) -l$(GS)
-+	$(GLCC) -g -o $(GSSOC_XE) $(GLSRC)dxmainc.c -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
+ $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
+-	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c -L$(BINDIR) -l$(GS)
++	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
  
- $(GSSOX_XE): $(GS_SO) $(GLSRC)$(SOC_LOADER)
- 	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(GLSRC)$(SOC_LOADER) \
+ $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
+ 	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
 -	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
 +	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
  
