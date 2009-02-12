@@ -1,0 +1,5 @@
+lua-stdlib is a library of modules for common programming tasks,
+including list, table and functional operations, regexps, objects,
+pretty-printing and getopt. The whole thing can be loaded with
+'require "std"', or modules can be used individually.
+Of course, this for Lua programming language :-)
