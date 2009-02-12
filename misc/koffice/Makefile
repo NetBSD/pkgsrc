@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.105 2009/02/12 04:01:13 markd Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	8
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
 PATCHFILES=	koffice-xpdf-CVE-2007-3387.diff koffice-1.6.3-xpdf2-CVE-2007-4352-5392-5393.diff
@@ -27,8 +29,8 @@ GCC_REQD+=		2.95.3
 
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ENV+=			PYTHONDIR=${LOCALBASE:Q}
-CONFIGURE_ENV+=			PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+CONFIGURE_ENV+=		PYTHONDIR=${LOCALBASE:Q}
+CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 REPLACE_PERL+=		lib/store/fix_storage.pl
 REPLACE_PERL+=		admin/config.pl
@@ -48,7 +50,7 @@ post-install:
 	@# The global desktop template files need to be user-writeable, or
 	@# else users won't be able to alter them after copying them to
 	@# their local directories.
-	${CHMOD} u+w ${PREFIX}/share/kde/templates/.source/*
+	${CHMOD} u+w ${DESTDIR}${PREFIX}/share/kde/templates/.source/*
 
 .include "../../lang/python/pyversion.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
