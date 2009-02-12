@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/01/13 10:18:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/02/12 20:55:07 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 POPPLER_BUILDLINK3_MK:=	${POPPLER_BUILDLINK3_MK}+
@@ -20,6 +20,12 @@ PRINT_PLIST_AWK+=	/^@exec ..MKDIR. %D\/include\/poppler$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm include\/poppler$$/ \
 				{ print "@comment in poppler: " $$0; next; }
 .endif	# POPPLER_BUILDLINK3_MK
+
+pkgbase := poppler
+.include "../../mk/pkg-build-options.mk"
+.if !empty(PKG_BUILD_OPTIONS.poppler:Mpoppler-cms)
+.include "../../graphics/lcms/buildlink3.mk"
+.endif
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
