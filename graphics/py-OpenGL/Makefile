@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/04/25 20:39:09 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/12 00:46:34 joerg Exp $
 #
 
 DISTNAME=	PyOpenGL-3.0.0a6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^Py//}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyopengl/}
 
@@ -10,13 +11,11 @@ MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://pyopengl.sourceforge.net/
 COMMENT=	Pyhton bindings for OpenGL
 
-PYTHON_VERSIONS_ACCEPTED= 25 24
-PYDISTUTILSPKG=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PY_PATCHPLIST=	YES
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c1nb1:../../devel/py-setuptools
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
