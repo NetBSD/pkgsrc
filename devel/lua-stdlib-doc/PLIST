@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/12 01:47:49 minskim Exp $
+share/doc/lua-stdlib/base.html
+share/doc/lua-stdlib/debug_ext.html
+share/doc/lua-stdlib/getopt.html
+share/doc/lua-stdlib/io_ext.html
+share/doc/lua-stdlib/lcs.html
+share/doc/lua-stdlib/list.html
+share/doc/lua-stdlib/math_ext.html
+share/doc/lua-stdlib/mbox.html
+share/doc/lua-stdlib/object.html
+share/doc/lua-stdlib/parser.html
+share/doc/lua-stdlib/rex.html
+share/doc/lua-stdlib/set.html
+share/doc/lua-stdlib/std.html
+share/doc/lua-stdlib/string_ext.html
+share/doc/lua-stdlib/table_ext.html
+share/doc/lua-stdlib/xml.html
