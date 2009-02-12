@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7842 2009/02/12 14:41:53 obache Exp $
+$NetBSD: TODO,v 1.7843 2009/02/12 21:36:49 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -811,7 +811,6 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmp3splt-0.5.4
 	o libmpd-0.17.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
@@ -905,7 +904,6 @@ Suggested package updates
 	o moc-2.4.4
 	o modular-xorg-server-1.5.99.902
 	o mp3blaster-3.2.3
-	o mp3splt-2.2.3
 	o mpc-0.14
 	o mpeg4ip-1.6.1
 	o mpg123-1.6.4
