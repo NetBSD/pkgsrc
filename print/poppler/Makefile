@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/01/07 13:54:14 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2009/02/12 20:55:07 drochner Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -29,6 +29,18 @@ CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-poppler-glib
 # Don't build and install the tools
 CONFIGURE_ARGS+=	--disable-utils
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.poppler
+PKG_SUPPORTED_OPTIONS=	poppler-cms
+PKG_SUGGESTED_OPTIONS=	poppler-cms
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpoppler-cms)
+CONFIGURE_ARGS+=	--enable-cms
+.include "../../graphics/lcms/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-cms
+.endif
 
 .include "../../mk/bsd.prefs.mk"
 
