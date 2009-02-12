@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.55 2008/12/11 09:18:20 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2009/02/12 19:51:08 drochner Exp $
 
-DISTNAME=	ghostscript-8.63
-PKGREVISION=	1
+DISTNAME=	ghostscript-8.64
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +29,7 @@ CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
 
 REPLACE_PERL+=		lib/fixmswrd.pl
 
-GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/Resource
+GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,7 +42,7 @@ REQD_DIRS+=		share/ghostscript
 SUBST_CLASSES+=		resdir
 SUBST_STAGE.resdir=	post-extract
 SUBST_MESSAGE.resdir=	Fixing resource directory path
-SUBST_FILES.resdir=	lib/gs_res.ps
+SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
 .if ${OPSYS} == "HPUX"
@@ -79,6 +78,7 @@ post-install:
 
 .include "options.mk"
 
+.include "../../print/libpaper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 # pkgsrc jasper is too new
