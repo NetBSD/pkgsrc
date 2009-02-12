@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/12/20 10:31:21 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2009/02/12 16:06:32 joerg Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -9,6 +9,8 @@ MASTER_SITES=	http://fmg-www.cs.ucla.edu/geoff/tars/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	Interactive spelling checker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	ispell-[0-9]*
 
