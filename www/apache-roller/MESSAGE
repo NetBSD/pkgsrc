@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/02/12 00:26:59 adrianp Exp $
+
+As apache-roller can be used with a number of Servlet containers a
+number of manual steps must be completed:
+
+1. Create the database for roller
+2. Include the JDBC driver on your CLASSPATH
+   (The driver is currently installed in ${PREFIX}/lib/java)
+3. Modify the roller-custom.properties file and place it on your CLASSPATH
+   (A sample is suppied in ${PREFIX}/share/examples/apache-roller)
+4. Deploy the roller WAR file
+   (The WAR file can be found in ${PREFIX}/share/apache-roller)
+
+See the Apache roller docs for the full installation details.
+
+===========================================================================

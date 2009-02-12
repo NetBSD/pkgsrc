@@ -1,0 +1,19 @@
+Apache Roller is a full-featured, multi-user and group-blog server suitable
+for blog sites large and small.
+
+Roller is a Java web application that should be able to run on any Java EE
+server and any relational database. Currently, Roller is best supported on
+Tomcat and MySQL -- but users have reported success running Roller on
+Glassfish, Websphere, JBoss, Resin, Gernonimo, Derby, PostgresSQL, Oracle,
+etc.)
+
+Here are some of Roller's key features:
+
+* Multi-user blogging: can support tens of thousands of users and blogs
+* Group blogging with three permisson levels (editor, author and limited)
+* Support for comment moderation and comment spam prevention measures
+* Bloggers have complete control over blog layout/style via templates
+* Built-in search engine indexes weblog entry content
+* Pluggable cache and rendering system
+* Support for blog clients that support MetaWeblog API
+* All blogs have entry and comment feeds in both RSS 2.0 and Atom 1.0 formats
