@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.52 2009/02/08 15:27:35 hira Exp $
+$NetBSD: distinfo,v 1.53 2009/02/12 09:17:51 hira Exp $
 
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 1c7f652c71ad3364a98d79d4f6751db00c7daa99
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 09662444f359f86bb7eeec0c035ae29360e989e5
 Size (openoffice-2.4.2/OOo_2.4.2_src_binfilter.tar.bz2) = 6674731 bytes
+SHA1 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = f84782887062011f34c5c8f0279c40d159051a34
+RMD160 (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = d29ed7d23a7616b05d855c172e6f148aeb0f4b69
 Size (openoffice-2.4.2/OOo_2.4.2_src_core.tar.bz2) = 153673147 bytes
 SHA1 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = c59fefaf9f7e3372fbeb2a1e468270613b7b1fa6
 RMD160 (openoffice-2.4.2/OOo_2.4.2_src_l10n.tar.bz2) = 7a2bf7cbe404b7fe8cb61c670717f54046e1cab9
