@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.553 2009/02/12 15:34:15 obache Exp $
+$NetBSD: CHANGES-2009,v 1.554 2009/02/12 18:44:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -760,3 +760,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyotyrant to 1.6 [obache 2009-02-12]
 	Updated lang/see to 3.0.1376nb1 [he 2009-02-12]
 	Updated databases/p5-tokyotyrant to 1.6nb1 [obache 2009-02-12]
+	Updated devel/bison to 2.4.1nb1 [minskim 2009-02-12]
