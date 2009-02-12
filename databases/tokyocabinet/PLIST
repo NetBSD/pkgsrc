@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/02/05 15:36:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/02/12 11:52:46 obache Exp $
 bin/tcamgr
 bin/tcatest
 bin/tcbmgr
@@ -25,7 +25,7 @@ include/tcutil.h
 lib/libtokyocabinet.a
 lib/libtokyocabinet.so
 lib/libtokyocabinet.so.7
-lib/libtokyocabinet.so.7.9.0
+lib/libtokyocabinet.so.7.10.0
 lib/pkgconfig/tokyocabinet.pc
 libexec/tcawmgr.cgi
 man/man1/tcamgr.1
