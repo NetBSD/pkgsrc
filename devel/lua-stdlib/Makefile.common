@@ -1,0 +1,18 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/12 01:45:01 minskim Exp $
+# used by devel/lua-stdlib-doc/Makefile
+
+DISTNAME=		stdlib-8
+CATEGORIES=		devel
+MASTER_SITES=		http://luaforge.net/frs/download.php/3740/
+
+MAINTAINER=		cheusov@tut.by
+HOMEPAGE=		http://luaforge.net/projects/stdlib/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DISTINFO_FILE=		${.CURDIR}/../../devel/lua-stdlib/distinfo
+
+WRKSRC=			${WRKDIR}/stdlib
+
+NO_BUILD=		yes
+NO_CONFIGURE=		yes
