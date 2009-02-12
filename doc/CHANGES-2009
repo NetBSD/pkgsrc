@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.548 2009/02/12 00:28:34 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.549 2009/02/12 01:49:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -754,3 +754,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/jdbc-mysql31 version 3.1.14 [adrianp 2009-02-11]
 	Updated security/msudir to 0.15 [abs 2009-02-11]
 	Added www/apache-roller version 4.0.1 [adrianp 2009-02-12]
+	Added devel/lua-stdlib version 8 [minskim 2009-02-12]
+	Added devel/lua-stdlib-doc version 8 [minskim 2009-02-12]
