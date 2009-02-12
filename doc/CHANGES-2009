@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.554 2009/02/12 18:44:07 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.555 2009/02/12 21:36:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -761,3 +761,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/see to 3.0.1376nb1 [he 2009-02-12]
 	Updated databases/p5-tokyotyrant to 1.6nb1 [obache 2009-02-12]
 	Updated devel/bison to 2.4.1nb1 [minskim 2009-02-12]
+	Updated audio/libmp3splt to 0.5.4 [schmonz 2009-02-12]
+	Updated audio/mp3splt to 2.2.3 [schmonz 2009-02-12]
