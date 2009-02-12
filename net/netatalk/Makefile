@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/12/29 08:48:45 markd Exp $
+# $NetBSD: Makefile,v 1.62 2009/02/12 06:44:55 markd Exp $
 
 DISTNAME=	netatalk-2.0.3
 PKGREVISION=	12
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
 COMMENT=	Netatalk appletalk file and print services
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=	rc>=1.5:../../shells/rc
 
@@ -104,12 +106,11 @@ CONFIGURE_ARGS+=	--enable-srvloc
 CONFIGURE_ARGS+=	--disable-srvloc
 .endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/psffilters
+INSTALLATION_DIRS=	libexec/psffilters
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/config/netatalk.pamd ${EG_DIR}
+	${INSTALL_DATA} ${WRKSRC}/config/netatalk.pamd ${DESTDIR}${EG_DIR}
 .endif
 
 .include "../../databases/db4/buildlink3.mk"
