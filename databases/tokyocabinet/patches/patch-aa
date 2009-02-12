@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2009/02/05 15:36:34 obache Exp $
+$NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
 
---- configure.orig	2009-01-30 06:43:48.000000000 +0000
+--- configure.orig	2009-02-12 05:04:07.000000000 +0000
 +++ configure
 @@ -1744,19 +1744,16 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
  MYPCFILES="tokyocabinet.pc"
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.7 2009/02/05 15:36:34 obache Exp $
 -MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -I$HOME/include -I/usr/local/include"
 +MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
 +MYCPPFLAGS="-I. -I\$(INCLUDEDIR)"
- MYCPPFLAGS="$MYCPPFLAGS -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT"
+ MYCPPFLAGS="$MYCPPFLAGS -DNDEBUG -D_GNU_SOURCE=1 -D_REENTRANT -D__EXTENSIONS__"
 -MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
 +MYLDFLAGS="-L. -L\$(LIBDIR)"
  MYCMDLDFLAGS=""
