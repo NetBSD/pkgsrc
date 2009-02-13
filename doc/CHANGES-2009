@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.557 2009/02/13 09:41:40 tron Exp $
+$NetBSD: CHANGES-2009,v 1.558 2009/02/13 11:04:58 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/mp3splt to 2.2.3 [schmonz 2009-02-12]
 	Updated graphics/p5-Image-ExifTool to 7.67 [gdt 2009-02-13]
 	Updated net/wireshark to 1.0.6 [tron 2009-02-13]
+	Added editors/mg version 20090107 [abs 2009-02-13]
