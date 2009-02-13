@@ -1,0 +1,23 @@
+This is the portable version of the OpenBSD mg editor
+
+Mg (mg) is a Public Domain EMACS style editor.  It is "broadly"
+compatible with GNU Emacs, the latest creation of Richard M.
+Stallman, Chief GNUisance and inventor of Emacs.  GNU Emacs (and other
+portions of GNU as they are released) are essentially free, (there are
+handling charges for obtaining it) and so is Mg.  You may never have
+to learn another editor.  (But probably will, at least long enough to
+port Mg...)  Mg was formerly named MicroGnuEmacs, the name change was
+done at the request of Richard Stallman.
+
+Mg is not associated with the GNU project, and most of it does not
+have the copyright restrictions present in GNU Emacs.  (However, some
+of the system dependent modules and the regular expression module do
+have copyright notices.  Look at the source code for exact
+copyright restrictions.)  The Mg authors individually may or may not
+agree with the opinions expressed by Richard Stallman in "The GNU
+Manifesto".
+
+This program is intended to be a small, fast, and portable editor for
+people who can't (or don't want to) run real Emacs for one reason
+or another.  It is compatible with GNU because there shouldn't be
+any reason to learn more than one Emacs flavor.
