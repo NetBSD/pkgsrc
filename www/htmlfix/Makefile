@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/01/31 18:59:37 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/13 22:31:43 abs Exp $
 #
 
 DISTNAME=		htmlfix-1.03
@@ -15,8 +15,11 @@ USE_TOOLS+=		perl:run
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 REPLACE_PERL=		htmlfix.pl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/htmlfix.pl ${PREFIX}/bin/htmlfix
-	${INSTALL_MAN} ${WRKSRC}/htmlfix.1 ${PREFIX}/${PKGMANDIR}/man1/htmlfix.1
+	${INSTALL_SCRIPT} ${WRKSRC}/htmlfix.pl ${DESTDIR}${PREFIX}/bin/htmlfix
+	${INSTALL_MAN} ${WRKSRC}/htmlfix.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/htmlfix.1
 
 .include "../../mk/bsd.pkg.mk"
