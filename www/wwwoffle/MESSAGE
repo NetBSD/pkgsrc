@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.6 2005/11/01 12:22:24 abs Exp $
+$NetBSD: MESSAGE,v 1.7 2009/02/13 22:37:02 abs Exp $
 
 1) To enable "wwwwoffled" to start on boot on NetBSD-1.5 or newer,
    please copy "${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR}/wwwoffled" to
@@ -20,8 +20,8 @@ fi
    example "crontab fragment":
 
 # wwwoffle proxy maintenance
-01      1       *       *       0-5     /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/search/htdig/scripts/wwwoffle-htdig-incr
-01      1       *       *       6       /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/search/htdig/scripts/wwwoffle-htdig-full
+01   1    *    *    0-5  /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/search/htdig/scripts/wwwoffle-htdig-incr
+01   1    *    *    6    /usr/bin/nice ${PREFIX}/bin/wwwoffle -purge -c ${PREFIX}/etc/wwwoffle/wwwoffle.conf && /bin/sh /var/wwwoffle/search/htdig/scripts/wwwoffle-htdig-full
 
 3) Docs and links for the other supported cache searchers, and all
    documentation in fact, is easily accessible once wwwoffle is started,
