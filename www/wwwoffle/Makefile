@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2007/12/21 22:54:57 joerg Exp $
+# $NetBSD: Makefile,v 1.72 2009/02/13 22:37:02 abs Exp $
 
 DISTNAME=	wwwoffle-2.9a
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.gedanken.freeserve.co.uk/download-wwwoffle/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	abs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gedanken.demon.co.uk/wwwoffle/
 COMMENT=	WWW proxy with support for offline browsing
 
@@ -46,24 +46,27 @@ post-build:
 		${RM} $$f.old; \
 	done
 
+PKG_DESTDIR_SUPPORT = user-destdir
+
 # For bulk-build machines: a one-time install/deinstall, if wwwoffle
 # is never run, leaves an incomplete cache directory, which the install
 # target incorrectly calculates to be a pre-2.2 cache. This tricks it
 # into setting up the cache directory properly.
 pre-install:
-	${MKDIR} ${VARBASE}/wwwoffle/prevtime1
+	${MKDIR} ${DESTDIR}${VARBASE}/wwwoffle/prevtime1
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config.pl \
-	  ${PREFIX}/sbin/wwwoffle-upgrade-config.pl
+	  ${DESTDIR}${PREFIX}/sbin/wwwoffle-upgrade-config.pl
 	${INSTALL_SCRIPT} ${WRKSRC}/conf/upgrade-config-2.0-2.5.pl \
-	  ${PREFIX}/sbin/wwwoffle-upgrade-config-2.0-2.5.pl
+	  ${DESTDIR}${PREFIX}/sbin/wwwoffle-upgrade-config-2.0-2.5.pl
 # Directories other than html and search are automatically created at run time
-	${TAR} cCf / - var/wwwoffle/html var/wwwoffle/search | ${GZIP_CMD} -9 \
-		> ${PREFIX}/libdata/wwwoffle-spool.tar.gz
-	${RMDIR} ${PREFIX}/share/doc/wwwoffle/ru
-	${RMDIR} ${PREFIX}/share/doc/wwwoffle/nl
-	${RMDIR} ${PREFIX}/share/doc/wwwoffle/it
+	${TAR} cCf ${DESTDIR}/ - var/wwwoffle/html var/wwwoffle/search | \
+		${GZIP_CMD} -9 \
+		> ${DESTDIR}${PREFIX}/libdata/wwwoffle-spool.tar.gz
+	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/wwwoffle/ru
+	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/wwwoffle/nl
+	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/wwwoffle/it
 	@${ECHO}
 	@${ECHO} ==+===+===+===+===+===+===+===+===+===+===+===+===+===+===+=
 	@${ECHO}
