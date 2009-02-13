@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:11 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/13 22:30:22 abs Exp $
 bin/blanktime
 bin/mkbeep
 bin/setdisplay
@@ -6,6 +6,9 @@ bin/setkbd
 man/cat1/blanktime.0
 man/cat1/mkbeep.0
 man/cat1/setdisplay.0
+man/html1/blanktime.html
+man/html1/mkbeep.html
+man/html1/setdisplay.html
 man/man1/blanktime.1
 man/man1/mkbeep.1
 man/man1/setdisplay.1
