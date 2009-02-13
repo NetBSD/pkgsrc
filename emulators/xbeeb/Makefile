@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/11/11 23:48:19 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/02/13 10:08:40 abs Exp $
 #
 
 DISTNAME=	xbeeb-0.4.1
@@ -24,22 +24,9 @@ REQD_DIRS=	${PREFIX}/lib/X11/fonts/xbeeb
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xbeeb
-PKG_SUPPORTED_OPTIONS=	mitshm
-PKG_SUGGESTED_OPTIONS=
+PKG_DESTDIR_SUPPORT=    user-destdir
 
-.include "../../mk/bsd.options.mk"
-
-# The emulator can be compiled either to use MIT-SHM, or to not.
-# Unfortunately it doesn't support both at once.
-.if empty(PKG_OPTIONS:Mmitshm)
-SUBST_CLASSES+=		nomitshm
-SUBST_STAGE.nomitshm=	post-patch
-SUBST_MESSAGE.nomitshm=	Disabling MIT-SHM
-SUBST_FILES.nomitshm=	src/Config.h
-SUBST_SED.nomitshm=	-e "s|\#define	*MITSHM|\#undef MITSHM|"
-.endif
-
+.include "options.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 
@@ -67,7 +54,6 @@ SUBST_SED.nooss=	-e "s|^\#define\\([	 ]*SOUND_OSS.*\\)\$$|\#undef\\1|"
 
 .endif # OSS_TYPE
 
-
 SUBST_CLASSES+=		beebroot
 SUBST_STAGE.beebroot=	post-patch
 SUBST_MESSAGE.beebroot=	Adjusting XBEEBROOT path
@@ -94,12 +80,12 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/xbeeb ${PREFIX}/bin/xbeeb
-	${INSTALL_MAN} ${MAN_PAGE} ${PREFIX}/${PKGMANDIR}/man1/xbeeb.1
-	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.90.rom ${PREFIX}/${XBEEBROOT}/roms/xdfs0.90.rom
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${PREFIX}/${XBEEBROOT}/docs
-	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${PREFIX}/lib/X11/fonts/xbeeb
-	mkfontdir ${PREFIX}/lib/X11/fonts/xbeeb
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xbeeb ${DESTDIR}${PREFIX}/bin/xbeeb
+	${INSTALL_MAN} ${MAN_PAGE} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xbeeb.1
+	${INSTALL_DATA} ${WRKSRC}/roms/xdfs0.90.rom ${DESTDIR}${PREFIX}/${XBEEBROOT}/roms/xdfs0.90.rom
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} * ${DESTDIR}${PREFIX}/${XBEEBROOT}/docs
+	cd ${WRKSRC}/fonts && ${INSTALL_DATA} *.pcf ${DESTDIR}${PREFIX}/lib/X11/fonts/xbeeb
+	mkfontdir ${DESTDIR}${PREFIX}/lib/X11/fonts/xbeeb
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
