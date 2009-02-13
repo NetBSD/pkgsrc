@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.77 2009/02/13 11:21:07 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.78 2009/02/13 13:19:12 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.77 2009/02/13 11:21:07 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.78 2009/02/13 13:19:12 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -890,9 +890,30 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 	return ret;
 }
 
+struct find_conflict_data {
+	const char *pkg;
+	const char *old_pkg;
+	const char *pattern;
+};
+
+static int
+check_explicit_conflict_iter(const char *cur_pkg, void *cookie)
+{
+	struct find_conflict_data *data = cookie;
+
+	if (strcmp(data->old_pkg, cur_pkg) == 0)
+		return 0;
+
+	warnx("Package `%s' conflicts with `%s', and `%s' is installed.",
+	    data->pkg, data->pattern, cur_pkg);
+
+	return 1;
+}
+
 static int
 check_explicit_conflict(struct pkg_task *pkg)
 {
+	struct find_conflict_data data;
 	char *installed, *installed_pattern;
 	plist_t *p;
 	int status;
@@ -903,15 +924,14 @@ check_explicit_conflict(struct pkg_task *pkg)
 		if (p->type == PLIST_IGNORE) {
 			p = p->next;
 			continue;
-		} else if (p->type != PLIST_PKGCFL)
-			continue;
-		installed = find_best_matching_installed_pkg(p->name);
-		if (installed) {
-			warnx("Package `%s' conflicts with `%s', and `%s' is installed.",
-			    pkg->pkgname, p->name, installed);
-			free(installed);
-			status = -1;
 		}
+		if (p->type != PLIST_PKGCFL)
+			continue;
+		data.pkg = pkg->pkgname;
+		data.old_pkg = pkg->other_version;
+		data.pattern = p->name;
+		status |= match_installed_pkgs(p->name,
+		    check_explicit_conflict_iter, &data);
 	}
 
 	if (some_installed_package_conflicts_with(pkg->pkgname,
@@ -920,7 +940,7 @@ check_explicit_conflict(struct pkg_task *pkg)
 			installed, installed_pattern, pkg->pkgname);
 		free(installed);
 		free(installed_pattern);
-		status = -1;
+		status |= -1;
 	}
 
 	return status;
