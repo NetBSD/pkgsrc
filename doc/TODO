@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7844 2009/02/13 09:41:40 tron Exp $
+$NetBSD: TODO,v 1.7845 2009/02/13 18:54:00 abs Exp $
 
 Suggested new packages
 ======================
@@ -556,7 +556,6 @@ Suggested package updates
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
-	o enscript-1.6.4
 	o epic4-2.6
 	o epiphany-2.24.3
 	o epsg-6.14
