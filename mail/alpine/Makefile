@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/11/20 20:35:22 abs Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/13 15:22:02 abs Exp $
 #
 
 DISTNAME=	alpine-2.00
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+= --with-system-fixed-pinerc=${PKG_SYSCONFDIR}/pine.conf.fixed
 
 USE_LIBTOOL=	yes
 
+MAKE_JOBS_SAFE=         no
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M4.99.*) && empty(OS_VERSION:M[5-9]*)
