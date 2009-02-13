@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/02/13 18:53:28 abs Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
@@ -107,10 +107,7 @@ share/enscript/hl/lang_texinfo.st
 share/enscript/hl/m4.st
 share/enscript/hl/mail.st
 share/enscript/hl/makefile.st
-share/enscript/hl/maple.st
 share/enscript/hl/matlab.st
-share/enscript/hl/modula_2.st
-share/enscript/hl/nested.st
 share/enscript/hl/nroff.st
 share/enscript/hl/objc.st
 share/enscript/hl/outline.st
@@ -118,6 +115,7 @@ share/enscript/hl/pascal.st
 share/enscript/hl/passthrough.st
 share/enscript/hl/perl.st
 share/enscript/hl/postscript.st
+share/enscript/hl/pyrex.st
 share/enscript/hl/python.st
 share/enscript/hl/rfc.st
 share/enscript/hl/scheme.st
@@ -151,13 +149,19 @@ share/enscript/simple.hdr
 share/enscript/squeeze.hdr
 share/enscript/vms.enc
 share/examples/enscript/enscript.cfg
+share/locale/ca/LC_MESSAGES/enscript.mo
+share/locale/da/LC_MESSAGES/enscript.mo
 share/locale/de/LC_MESSAGES/enscript.mo
+share/locale/en_GB/LC_MESSAGES/enscript.mo
 share/locale/es/LC_MESSAGES/enscript.mo
-share/locale/fi/LC_MESSAGES/enscript.mo
 share/locale/fr/LC_MESSAGES/enscript.mo
+share/locale/hr/LC_MESSAGES/enscript.mo
 share/locale/nl/LC_MESSAGES/enscript.mo
+share/locale/pt_BR/LC_MESSAGES/enscript.mo
 share/locale/ru/LC_MESSAGES/enscript.mo
 share/locale/sl/LC_MESSAGES/enscript.mo
+share/locale/sv/LC_MESSAGES/enscript.mo
+share/locale/tr/LC_MESSAGES/enscript.mo
 @dirrm share/examples/enscript
 @dirrm share/enscript/hl
 @dirrm share/enscript/afm

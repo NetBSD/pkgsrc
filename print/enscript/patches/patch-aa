@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2005/03/17 12:24:13 salo Exp $
+$NetBSD: patch-aa,v 1.3 2009/02/13 18:53:28 abs Exp $
 
---- src/main.c.orig	2002-01-24 08:35:45.000000000 +0100
-+++ src/main.c	2005-03-17 11:52:58.000000000 +0100
-@@ -1546,9 +1546,13 @@
+--- src/main.c.orig	2003-03-05 07:36:32.000000000 +0000
++++ src/main.c
+@@ -1546,9 +1546,13 @@ name             width\theight\tllx\tlly
        buffer_append (&cmd, intbuf);
        buffer_append (&cmd, " ");
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.2 2005/03/17 12:24:13 salo Exp $
  
        buffer_append (&cmd, "-Dtoc=");
        buffer_append (&cmd, toc ? "1" : "0");
-@@ -1565,8 +1569,14 @@
+@@ -1565,8 +1569,14 @@ name             width\theight\tllx\tlly
        /* Append input files. */
        for (i = optind; i < argc; i++)
  	{
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.2 2005/03/17 12:24:13 salo Exp $
  	}
  
        /* And do the job. */
-@@ -1627,7 +1637,7 @@
+@@ -1627,7 +1637,7 @@ name             width\theight\tllx\tlly
  				 buffer_ptr (opts), buffer_len (opts));
  	    }
  
