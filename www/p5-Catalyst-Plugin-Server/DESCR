@@ -1,0 +1,9 @@
+Base plugin for XMLRPC and SOAP server.
+
+XMLRPC Plugin for Catalyst which we tried to make compatible with
+the way Catalyst works with URLS. Main features are:
+
+    * Split XMLRPC methodNames by STRING to find out Controller.
+    * Single entrypoint for XMLRPC calls, like http://host.tld/rpc
+    * DispatchTypes (attributes) which work much the same as Catalyst attrs
+    * XMLRPC Parameter handling transparent to Catalyst parameter handling
