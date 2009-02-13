@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2006/10/24 15:39:18 obache Exp $
+# $NetBSD: Makefile,v 1.42 2009/02/13 18:53:28 abs Exp $
 #
 
-DISTNAME=		enscript-1.6.3
-PKGREVISION=		4
+DISTNAME=		enscript-1.6.4
 CATEGORIES=		print
 MASTER_SITES=		http://www.iki.fi/mtr/genscript/
 
@@ -16,11 +15,16 @@ USE_TOOLS+=		gmake lex perl:run xgettext
 BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-INFO_FILES=		# PLIST
+INFO_FILES=		YES
 
 EGDIR=			${PREFIX}/share/examples/enscript
 CONF_FILES=		${EGDIR}/enscript.cfg ${PKG_SYSCONFDIR}/enscript.cfg
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
+MAKE_ENV+=		prefix=${PREFIX}
+BUILD_DEFS+=		PAPERSIZE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	share/enscript/afm share/enscript/hl
 
 .include "../../mk/bsd.prefs.mk"
 
