@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.14 2008/09/21 19:41:42 abs Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/13 22:18:01 abs Exp $
 #
 
-DISTNAME=	libirman-0.4.1b
-PKGNAME=	${DISTNAME:S/b$/.2/}
-PKGREVISION=	7
+DISTNAME=	libirman-0.4.1c
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.evation.com/libirman/
+MASTER_SITES=	http://libirman.googlecode.com/files/
+EXTRACT_SUFX=	.tbz
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://www.evation.com/libirman/libirman.html
+HOMEPAGE=	http://code.google.com/p/libirman/
 COMMENT=	Programming library for Irman - infrared control
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -19,6 +18,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 EGDIR=		${PREFIX}/share/examples
 CONF_FILES=	${EGDIR}/irman.conf ${PKG_SYSCONFDIR}/irman.conf
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	share/doc share/examples
 
 post-build:
@@ -31,12 +31,5 @@ post-build:
 	    ${SED}  -e 's:port /dev/ttyS1:port ${DEFAULT_SERIAL_DEVICE}:' \
 			${WRKSRC}/irman.conf > ${WRKSRC}/irman.conf.patched
 	    ${MV} ${WRKSRC}/irman.conf.patched ${WRKSRC}/irman.conf
-
-post-install:
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_func ${PREFIX}/bin/irman_func
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_io ${PREFIX}/bin/irman_io
-	    ${INSTALL_PROGRAM} ${WRKSRC}/test_name ${PREFIX}/bin/irman_name
-	    ${INSTALL_DATA} ${WRKSRC}/libirman.README \
-					${PREFIX}/share/doc/libirman.README
 
 .include "../../mk/bsd.pkg.mk"
