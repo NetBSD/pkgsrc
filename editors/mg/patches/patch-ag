@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/02/13 11:04:14 abs Exp $
+
+--- Makefile.in.orig	2008-12-11 09:11:05.000000000 +0000
++++ Makefile.in
+@@ -7,7 +7,7 @@
+ 
+ name=		mg
+ 
+-prefix=		/usr/local
++prefix?=	/usr/local
+ bindir=		$(prefix)/bin
+ libdir=		$(prefix)/lib
+ includedir=	$(prefix)/include
+@@ -17,7 +17,7 @@ mandir=		$(prefix)/man
+ CC=		gcc
+ CFLAGS?=	-O2 -pipe
+ CFLAGS+=	-g -Wall -Werror
+-LDFLAGS= 	-lncurses
++LDFLAGS+= 	-lncurses
+ 
+ INSTALL=	/usr/bin/install
+ STRIP=		/usr/bin/strip

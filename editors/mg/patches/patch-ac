@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/02/13 11:04:14 abs Exp $
+
+--- configure.orig	2008-12-12 08:40:04.000000000 +0000
++++ configure
+@@ -187,6 +187,7 @@ if [ ! -r /usr/include/term.h ]; then
+ 	    exit 1
+ 	}
+     fi
++    add_inc NCURSES
+ fi
+ 
+ note 'base and dirname'
