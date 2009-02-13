@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2009/02/13 15:06:24 joerg Exp $
+
+--- cs/csparse.c.orig	2009-02-13 16:01:07.000000000 +0100
++++ cs/csparse.c
+@@ -3717,7 +3717,7 @@ static NEOERR * _builtin_str_crc(CSPARSE
+   if (val.op_type & (CS_TYPE_VAR | CS_TYPE_STRING))
+   {
+     char *s = arg_eval(parse, &val);
+-    if (s) result->n = ne_crc((unsigned char *)s, strlen(s));
++    if (s) result->n = (int32_t)ne_crc((unsigned char *)s, strlen(s));
+   }
+   if (val.alloc) free(val.s);
+   return STATUS_OK;
