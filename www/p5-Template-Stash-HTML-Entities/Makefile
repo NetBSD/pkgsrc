@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/13 21:36:08 abs Exp $
 
 DISTNAME=	Template-Stash-HTML-Entities-1.3.1
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,9 @@ COMMENT=	Encode Template toolkit stash values using HTML::Entities
 
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
+
+USE_LANGUAGES=	#
+PKG_DESTDIR_SUPPORT = user-destdir
 
 PERL5_PACKLIST= auto/Template/Stash/HTML/Entities/.packlist
 
