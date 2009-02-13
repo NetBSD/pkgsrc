@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.555 2009/02/12 21:36:49 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.556 2009/02/13 01:29:59 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -763,3 +763,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bison to 2.4.1nb1 [minskim 2009-02-12]
 	Updated audio/libmp3splt to 0.5.4 [schmonz 2009-02-12]
 	Updated audio/mp3splt to 2.2.3 [schmonz 2009-02-12]
+	Updated graphics/p5-Image-ExifTool to 7.67 [gdt 2009-02-13]
