@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/09/29 22:12:51 abs Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/13 22:32:48 abs Exp $
 #
 
 DISTNAME=	netscape-20040123
@@ -27,12 +27,13 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	${SED} "s/@NETSCAPE_PREFERRED@/${NETSCAPE_PREFERRED}/" \
 				${FILESDIR}/netscape > ${WRKSRC}/netscape
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/netscape ${PREFIX}/bin/netscape
+	${INSTALL_SCRIPT} ${WRKSRC}/netscape ${DESTDIR}${PREFIX}/bin/netscape
 
 .include "../../mk/bsd.pkg.mk"
