@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 16:38:11 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/13 23:36:00 abs Exp $
 #
 
 DISTNAME=	b116
@@ -18,20 +18,18 @@ NOT_FOR_PLATFORM=	SunOS-*-* # needs porting
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/brandy-1.0.16
-DOCDIR=		${PREFIX}/share/doc/brandy
-EXAMPLEDIR=	${PREFIX}/share/examples/brandy
+DOCDIR=		share/doc/brandy
+EXAMPLEDIR=	share/examples/brandy
 BUILD_TARGET=	nodebug
 
 USE_TOOLS+=		gtar
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${DOCDIR} ${EXAMPLEDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
 	cd ${WRKSRC}/docs && ${GTAR} -cf - `ls |grep -v .orig` | \
-		(cd ${DESTDIR}${DOCDIR} && tar xf -)
+		(cd ${DESTDIR}${PREFIX}/${DOCDIR} && gtar xf -)
 	cd ${WRKSRC}/examples && ${GTAR} -cf - [a-z]* | \
-		(cd ${DESTDIR}${EXAMPLEDIR} && tar xf -)
+		(cd ${DESTDIR}${PREFIX}/${EXAMPLEDIR} && gtar xf -)
 	${INSTALL_PROGRAM} ${WRKSRC}/brandy ${DESTDIR}${PREFIX}/bin/brandy
 
 .include "../../mk/bsd.pkg.mk"
