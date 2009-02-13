@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.50 2009/02/11 23:51:30 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.51 2009/02/13 11:21:07 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.50 2009/02/11 23:51:30 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.51 2009/02/13 11:21:07 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -298,9 +298,7 @@ pkg_do(const char *pkg)
 #else
 		struct archive *archive;
 		void *archive_cookie;
-#  ifdef HAVE_SSL
 		void *signature_cookie;
-#  endif
 		struct archive_entry *entry;
 		char *pkgname;
 
@@ -311,17 +309,15 @@ pkg_do(const char *pkg)
 		}
 		pkgname = NULL;
 		entry = NULL;
-#  ifdef HAVE_SSL
 		pkg_verify_signature(&archive, &entry, &pkgname,
 		    &signature_cookie);
-#  endif
+		if (archive == NULL)
+			return -1;
 		free(pkgname);
 
 		meta = read_meta_data_from_archive(archive, entry);
 		close_archive(archive_cookie);
-#  ifdef HAVE_SSL
 		pkg_free_signature(signature_cookie);
-#  endif
 		if (!IS_URL(pkg))
 			binpkgfile = pkg;
 #endif

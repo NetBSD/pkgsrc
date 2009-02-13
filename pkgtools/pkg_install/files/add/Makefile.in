@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.19 2009/02/02 12:35:00 joerg Exp $
+# $NetBSD: Makefile.in,v 1.20 2009/02/13 11:21:07 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -23,7 +23,6 @@ SSL_SUPPORT=	@ssl_support@
 LIBS=		-linstall -lfetch -larchive -lbz2 -lz
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lcrypto
-CPPFLAGS+=	-DHAVE_SSL
 .endif
 LIBS+=		@LIBS@
 
