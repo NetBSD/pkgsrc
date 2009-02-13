@@ -1,0 +1,3 @@
+This module is a compatibility wrapper around Date::Parse.
+
+It accepts no arguments to its import method and exports no symbols.
