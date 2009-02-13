@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/03 23:11:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/13 20:41:33 abs Exp $
 #
 
 DISTNAME=	bugzilla-3.2.2
@@ -58,6 +58,12 @@ SUBST_SED.conf+=	-e "s|@CVS@|${CVS}|g"
 SUBST_SED.conf+=	-e "s|@DBDRIVER@|${DBDRIVER}|g"
 SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
+INSTALLATION_DIRS += ${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
+INSTALLATION_DIRS += ${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
+INSTALLATION_DIRS += ${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
+INSTALLATION_DIRS += ${BZDIR}/images ${BZDIR}/docs/en/html/api
+INSTALLATION_DIRS += ${BZDIR}/docs/en/html/api/Bugzilla
+
 post-extract:
 	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -rf
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" | ${XARGS} ${RM} -f
@@ -65,22 +71,6 @@ post-extract:
 	${CP} ${FILESDIR}/localconfig ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/en
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/Bugzilla
-
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/js
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/template
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/skins
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html/api
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/en/html/api/Bugzilla
-	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/images
 
 	${INSTALL_DATA} ${WRKSRC}/docs/en/txt/Bugzilla-Guide.txt ${DESTDIR}${DOCDIR}/en
 	${INSTALL_DATA} ${WRKSRC}/docs/en/rel_notes.txt ${DESTDIR}${DOCDIR}/en
