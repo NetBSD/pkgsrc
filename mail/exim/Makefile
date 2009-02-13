@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2009/01/12 18:59:24 abs Exp $
+# $NetBSD: Makefile,v 1.95 2009/02/13 15:28:03 abs Exp $
 
 DISTNAME=	exim-4.69
 PKGREVISION=	4
@@ -22,6 +22,8 @@ MAKE_ENV+=	SSLBASE=${SSLBASE:Q}
 MAKE_ENV+=	INST_CHOWN=${CHOWN:Q}
 MAKE_FLAGS+=	FULLECHO=''
 MAKE_JOBS_SAFE=	no
+
+PKG_DESTDIR_SUPPORT =	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -106,10 +108,11 @@ post-build:
 	    ${FILESDIR}/mailer.conf.exim \
 	    > ${WRKDIR}/mailer.conf
 
+INSTALLATION_DIRS =	${PKGMANDIR}/man8 sbin share/examples/exim
+
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${PREFIX}/${PKGMANDIR}/man8/exim.8
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/exim.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/exim.8
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
