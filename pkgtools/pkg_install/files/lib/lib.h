@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.46 2009/02/02 12:35:01 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.47 2009/02/13 01:31:42 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -308,7 +308,7 @@ Boolean isempty(const char *);
 int     URLlength(const char *);
 Boolean make_preserve_name(char *, size_t, char *, char *);
 void    remove_files(const char *, const char *);
-int     delete_hierarchy(char *, Boolean, Boolean);
+int     delete_hierarchy(const char *, Boolean, Boolean);
 int     format_cmd(char *, size_t, const char *, const char *, const char *);
 
 int	recursive_remove(const char *, int);
