@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/25 14:45:17 tron Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/13 11:13:40 abs Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		mg
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+CONFLICTS+=  	mg-[0-9]*
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
