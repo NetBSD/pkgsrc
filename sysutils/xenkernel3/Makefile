@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2009/01/24 18:57:59 bouyer Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/13 22:34:52 bouyer Exp $
 #
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel3-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=	.tar.gz
@@ -46,17 +46,35 @@ SUBST_FILES.bash=	xen/include/Makefile
 SUBST_SED.bash=		-e "s,/bin/bash,${PREFIX}/bin/bash,g"
 .endif
 
+.if  ${MACHINE_ARCH} == "i386"
+PLIST_SRC=		PLIST.i386 PLIST
+.else
+PLIST_SRC=		PLIST
+.endif
+
 do-build:
 	cd ${WRKSRC} && ${GMAKE} XEN_TARGET_X86_PAE=n debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
 	cd ${WRKSRC} && ${GMAKE} clean && \
 	    ${GMAKE} XEN_TARGET_X86_PAE=n debug=y xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
+.if  ${MACHINE_ARCH} == "i386"
+	cd ${WRKSRC} && ${GMAKE} clean && \
+	    ${GMAKE} XEN_TARGET_X86_PAE=y debug=n xen
+	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-PAE.gz
+	cd ${WRKSRC} && ${GMAKE} clean && \
+	    ${GMAKE} XEN_TARGET_X86_PAE=y debug=y xen
+	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-PAE-debug.gz
+.endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/xen3-kernel
 	${INSTALL_DATA} ${WRKDIR}/xen.gz ${PREFIX}/xen3-kernel/xen.gz
 	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${PREFIX}/xen3-kernel/xen-debug.gz
+.if  ${MACHINE_ARCH} == "i386"
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE.gz ${PREFIX}/xen3-kernel/xen-PAE.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE-debug.gz ${PREFIX}/xen3-kernel/xen-PAE-debug.gz
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
