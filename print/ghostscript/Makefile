@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/02/12 19:51:08 drochner Exp $
+# $NetBSD: Makefile,v 1.57 2009/02/13 15:31:35 drochner Exp $
 
 DISTNAME=	ghostscript-8.64
 CATEGORIES=	print
@@ -65,6 +65,8 @@ CFLAGS.SunOS=		-fPIC
 .if ${OPSYS} == "IRIX"
 BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 .endif
+
+CONFIGURE_ENV+=	LPLIBDIR=${LOCALBASE}/lib
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
