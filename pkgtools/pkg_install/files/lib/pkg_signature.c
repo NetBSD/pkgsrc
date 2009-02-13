@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.4 2009/02/13 11:21:07 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.5 2009/02/13 13:17:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.4 2009/02/13 11:21:07 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.5 2009/02/13 13:17:41 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -192,7 +192,7 @@ retry:
 	}
 
 	if (strcmp(fname, archive_entry_pathname(*entry)) != 0)
-		return -1;
+		return 1;
 
 	if (archive_entry_size(*entry) > SSIZE_MAX - 1) {
 		warnx("signature too large to process");
