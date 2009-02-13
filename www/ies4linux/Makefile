@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/13 22:00:12 abs Exp $
 #
 
 DISTNAME=	ies4linux-2.99.0.1
@@ -22,20 +22,20 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 
-SHAREDIR=		${PREFIX}/share/ies4linux
+SHAREDIR=		share/ies4linux
 
 SUBST_CLASSES+=		sharedir
 SUBST_STAGE.sharedir=	post-patch
 SUBST_FILES.sharedir=	${WRKSRC}/ies4linux
-SUBST_SED.sharedir=	-e "s|.dirname ..0..|${SHAREDIR}|g"
+SUBST_SED.sharedir=	-e "s|.dirname ..0..|${PREFIX}/${SHAREDIR}|g"
+
+INSTALLATION_DIRS	= bin ${SHAREDIR}
 
 do-install:
 	cd ${WRKSRC} && rm -f lib/functions.sh.orig
 	cd ${WRKSRC} && rm -fr ui/.svn
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
-	cd ${WRKSRC} && pax -rwppm . ${DESTDIR}${SHAREDIR}
-	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
-	mv ${DESTDIR}${SHAREDIR}/ies4linux ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC} && pax -rwppm . ${DESTDIR}${PREFIX}/${SHAREDIR}
+	mv ${DESTDIR}${PREFIX}/${SHAREDIR}/ies4linux ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
