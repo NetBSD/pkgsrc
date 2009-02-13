@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.17 2009/02/02 12:35:01 joerg Exp $
+# $NetBSD: Makefile.in,v 1.18 2009/02/13 14:13:58 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -17,6 +17,9 @@ CC=		@CC@
 CCLD=		$(CC)
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -larchive -lfetch -lbz2 -lz @LIBS@
+.if !empty(SSL_SUPPORT)
+LIBS+=		-lcrypto
+.endif
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
 LIBS=		-linstall @LIBS@
