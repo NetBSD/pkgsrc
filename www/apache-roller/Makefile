@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/02/13 15:28:46 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/13 20:21:28 adrianp Exp $
 #
 
-DISTNAME=	apache-roller-4.0.1
+DISTNAME=	apache-roller-${ROLLER_VER}
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://mirror.lividpenguin.com/pub/apache/roller/roller-4/v4.0.1/bin/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	${MASTER_SITE_APACHE:=roller/roller-4/v${ROLLER_VER}/bin/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://roller.apache.org/
@@ -15,6 +14,7 @@ BUILD_DEPENDS+=	fastjar-[0-9]*:../../archivers/fastjar
 
 USE_JAVA=	run
 USE_JAVA2=	1.5
+ROLLER_VER=	4.0.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_SUBST+=		PKGNAME_NOREV=${PKGNAME_NOREV:Q}
