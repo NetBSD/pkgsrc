@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.629 2009/02/13 16:54:51 abs Exp $
+# $NetBSD: Makefile,v 1.630 2009/02/13 17:03:07 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -258,7 +258,6 @@ SUBDIR+=	p5-Catalyst-Devel
 SUBDIR+=	p5-Catalyst-Manual
 SUBDIR+=	p5-Catalyst-Model-Adaptor
 SUBDIR+=	p5-Catalyst-Plugin-Authentication
-SUBDIR+=	p5-Catalyst-Plugin-Authentication-Credential-Password
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-DBIC
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-RDBO
 SUBDIR+=	p5-Catalyst-Plugin-Authorization-Roles
