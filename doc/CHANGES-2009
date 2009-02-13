@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.558 2009/02/13 11:04:58 abs Exp $
+$NetBSD: CHANGES-2009,v 1.559 2009/02/13 14:47:39 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/p5-Image-ExifTool to 7.67 [gdt 2009-02-13]
 	Updated net/wireshark to 1.0.6 [tron 2009-02-13]
 	Added editors/mg version 20090107 [abs 2009-02-13]
+	Updated www/opera to 9.63nb1 [ahoka 2009-02-13]
