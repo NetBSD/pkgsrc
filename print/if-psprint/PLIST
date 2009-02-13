@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/13 21:33:00 abs Exp $
 libexec/if-psprint
-man/man1/if-psprint.1
+man/man8/if-psprint.8
