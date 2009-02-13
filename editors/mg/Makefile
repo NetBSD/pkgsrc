@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/13 11:04:14 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/13 11:13:40 abs Exp $
 #
 
 DISTNAME=	mg-20090107
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=   user-destdir
 MAKE_ENV+=	prefix=${PREFIX:Q}
 
 INSTALLATION_DIRS = bin ${PKGMANDIR}/man1
+
+CONFLICTS+=  	mg2a-[0-9]*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
