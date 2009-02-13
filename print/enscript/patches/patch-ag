@@ -1,13 +1,18 @@
-$NetBSD: patch-ag,v 1.1 2008/11/14 03:25:55 chuck Exp $
+$NetBSD: patch-ag,v 1.2 2009/02/13 18:53:28 abs Exp $
 
---- states/Makefile.in.orig	2008-11-13 22:19:35.000000000 -0500
-+++ states/Makefile.in	2008-11-13 22:19:48.000000000 -0500
-@@ -132,7 +132,7 @@
+--- afm/Makefile.in.orig	2003-03-05 07:40:06.000000000 +0000
++++ afm/Makefile.in
+@@ -319,10 +319,10 @@ uninstall-am: uninstall-info-am uninstal
  
  
- LDADD = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a @LEXLIB@
--states_DEPENDENCIES = @INTLLIBS@ ../compat/libcompat.a
-+states_DEPENDENCIES = @INTLDEPS@ ../compat/libcompat.a
+ install-data-local:
+-	$(top_srcdir)/mkinstalldirs $(datadir)/enscript
+-	$(top_srcdir)/mkinstalldirs $(datadir)/enscript/afm
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)/enscript
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)/enscript/afm
+ 	for f in $(EXTRA_DIST); do \
+-	  $(INSTALL_DATA) $(srcdir)/$$f $(datadir)/enscript/afm/$$f; \
++	  $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(datadir)/enscript/afm/$$f; \
+ 	done
  
- noinst_HEADERS = defs.h gram.h
- 
+ uninstall-local:

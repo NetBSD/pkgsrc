@@ -1,15 +1,18 @@
-$NetBSD: patch-af,v 1.1 2008/11/14 03:25:55 chuck Exp $
+$NetBSD: patch-af,v 1.2 2009/02/13 18:53:28 abs Exp $
 
---- src/Makefile.in.orig	2008-11-13 22:19:15.000000000 -0500
-+++ src/Makefile.in	2008-11-13 22:19:30.000000000 -0500
-@@ -135,8 +135,8 @@
- mkafmmap_SOURCES = mkafmmap.c
+--- states/hl/Makefile.in.orig	2003-03-05 07:40:07.000000000 +0000
++++ states/hl/Makefile.in
+@@ -330,10 +330,10 @@ uninstall-am: uninstall-info-am uninstal
  
- LDADD = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a -lm
--enscript_DEPENDENCIES = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a
--mkafmmap_DEPENDENCIES = ../afmlib/libafm.a @INTLLIBS@ ../compat/libcompat.a
-+enscript_DEPENDENCIES = ../afmlib/libafm.a @INTLDEPS@ ../compat/libcompat.a
-+mkafmmap_DEPENDENCIES = ../afmlib/libafm.a @INTLDEPS@ ../compat/libcompat.a
  
- noinst_HEADERS = gsint.h
+ install-data-local:
+-	$(top_srcdir)/mkinstalldirs $(datadir)/enscript
+-	$(top_srcdir)/mkinstalldirs $(datadir)/enscript/hl
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)/enscript
++	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(datadir)/enscript/hl
+ 	for f in $(states); do \
+-	  $(INSTALL_DATA) $(srcdir)/$$f $(datadir)/enscript/hl/$$f; \
++	  $(INSTALL_DATA) $(srcdir)/$$f $(DESTDIR)$(datadir)/enscript/hl/$$f; \
+ 	done
  
+ uninstall-local:
