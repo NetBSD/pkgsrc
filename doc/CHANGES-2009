@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.562 2009/02/13 18:54:00 abs Exp $
+$NetBSD: CHANGES-2009,v 1.563 2009/02/13 22:36:15 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -769,3 +769,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/opera to 9.63nb1 [ahoka 2009-02-13]
 	Added www/p5-Catalyst-Plugin-Server version 0.24 [abs 2009-02-13]
 	Updated print/enscript to 1.6.4 [abs 2009-02-13]
+	Updated sysutils/xenkernel3 to 3.1.4nb3 [bouyer 2009-02-13]
