@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.47 2009/02/13 01:31:42 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.48 2009/02/13 11:21:07 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -376,12 +376,12 @@ void pkg_install_config(void);
 /* Print configuration variable */
 void pkg_install_show_variable(const char *);
 
-#ifdef HAVE_SSL
 /* Package signature creation and validation */
 int pkg_verify_signature(struct archive **, struct archive_entry **, char **,
     void **);
-int pkg_full_signature_check(struct archive *);
+int pkg_full_signature_check(struct archive **);
 void pkg_free_signature(void *);
+#ifdef HAVE_SSL
 void pkg_sign_x509(const char *, const char *, const char *, const char *);
 #endif
 
