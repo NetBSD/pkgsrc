@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/12 00:26:59 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2009/02/13 20:21:28 adrianp Exp $
 
-SHA1 (apache-roller-4.0.1.zip) = 4d9990ca072b09cc516d5e05045802e5300186a5
-RMD160 (apache-roller-4.0.1.zip) = 09d1018a6f9185ebaec1ac3cb6e28efe7c59c651
-Size (apache-roller-4.0.1.zip) = 28324346 bytes
+SHA1 (apache-roller-4.0.1.tar.gz) = ae4af6af3b6bec03d7f1d8784ee610af78ebebea
+RMD160 (apache-roller-4.0.1.tar.gz) = f909d7f7fdf09f6b9bb57d979e19602b192f0d6e
+Size (apache-roller-4.0.1.tar.gz) = 27630829 bytes
