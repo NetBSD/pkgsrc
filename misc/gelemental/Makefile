@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/30 17:15:25 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/13 18:15:05 joerg Exp $
 #
 
 DISTNAME=	gelemental-1.2.0
@@ -10,10 +10,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kdau.com/projects/gelemental/
 COMMENT=	Periodic table viewer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake msgfmt
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 USE_DIRS+=	xdg-1.1
 
 PKGCONFIG_OVERRIDE+=	data/libelemental.pc.in
