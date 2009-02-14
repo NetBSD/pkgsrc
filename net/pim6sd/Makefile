@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/10/11 19:48:11 is Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/14 17:57:18 joerg Exp $
 
 DISTNAME=	pim6sd-20031021a
 PKGREVISION=	1
@@ -7,6 +7,10 @@ MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	IPv6 PIM sparse mode daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_BSD_MAKEFILE=	yes
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/pim6sd/
 USE_TOOLS+=	lex yacc
@@ -17,7 +21,7 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8 \
 CONFLICTS=	mcast-tools-*
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/pim6stat.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/pim6stat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pim6sd
 PKG_OPTIONS_REQUIRED_GROUPS=	inet6 # require inet6 capability
