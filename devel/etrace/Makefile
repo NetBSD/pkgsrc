@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/14 10:34:56 rillig Exp $
 #
 
 DISTNAME=	etrace-2.1
@@ -11,7 +11,7 @@ COMMENT=	Function call tracing
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl:run
 
 NO_BUILD=	yes
 
@@ -20,7 +20,7 @@ DOCDIR=		${PREFIX}/share/doc/etrace
 EXAMPLEDIR=	${PREFIX}/share/examples/etrace
 BINDIR=		${PREFIX}/bin
 
-INSTALLATION_DIRS=	bin
+AUTO_MKDIRS=	yes
 
 REPLACE_PERL=	src/etrace.pl
 # python script uses /usr/bin/env; let it slide pending wondering if
@@ -29,11 +29,8 @@ REPLACE_PERL=	src/etrace.pl
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/etrace ${DESTDIR}${BINDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/src/etrace.pl ${DESTDIR}${BINDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/src/ptrace.c ${DESTDIR}${SHAREDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/example/* ${DESTDIR}${EXAMPLEDIR}
 
 .include "../../mk/bsd.pkg.mk"

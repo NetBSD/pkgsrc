@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/13 23:45:15 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/14 10:34:56 rillig Exp $
 bin/etrace
 bin/etrace.pl
 share/doc/etrace/README
+share/etrace/ptrace.c
 share/examples/etrace/Makefile
 share/examples/etrace/crumble.c
-share/etrace/ptrace.c
-@exec ${MKDIR} %D/share/examples/etrace
 @dirrm share/examples/etrace
 @dirrm share/etrace
 @dirrm share/doc/etrace
