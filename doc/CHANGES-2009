@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.563 2009/02/13 22:36:15 bouyer Exp $
+$NetBSD: CHANGES-2009,v 1.564 2009/02/14 00:21:56 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -770,3 +770,18 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-Catalyst-Plugin-Server version 0.24 [abs 2009-02-13]
 	Updated print/enscript to 1.6.4 [abs 2009-02-13]
 	Updated sysutils/xenkernel3 to 3.1.4nb3 [bouyer 2009-02-13]
+	Updated print/if-psprint to 1.9 [abs 2009-02-13]
+	Added www/p5-Catalyst-View-Mason version 0.16 [abs 2009-02-13]
+	Updated net/mrstat to 1.20 [abs 2009-02-13]
+	Updated sysutils/libirman to 0.4.1c [abs 2009-02-13]
+	Added time/p5-DateTime-Format-DateParse version 0.04 [abs 2009-02-13]
+	Added time/p5-MooseX-Types-DateTime version 0.03 [abs 2009-02-13]
+	Added devel/p5-boolean version 0.20 [abs 2009-02-13]
+	Added devel/p5-MooseX-Types-Common version 0.001000 [abs 2009-02-13]
+	Added time/p5-Date-Calc version 5.4 [abs 2009-02-13]
+	Added time/p5-DateTime-Format-Natural version 0.74 [abs 2009-02-13]
+	Added time/p5-DateTime-Format-Flexible version 0.05 [abs 2009-02-13]
+	Added time/p5-DateTime-Format-DateManip version 0.04 [abs 2009-02-14]
+	Added devel/p5-Test-Most version 0.20 [abs 2009-02-14]
+	Added time/p5-DateTimeX-Easy version 0.085 [abs 2009-02-14]
+	Added time/p5-MooseX-Types-DateTime version 0.03 [abs 2009-02-14]
