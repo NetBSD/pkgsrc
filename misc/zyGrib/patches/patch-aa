@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/14 20:55:41 plunky Exp $
+
+libbz2, libz and libproj are all provided by the buildlink3.mk
+framework; no need to use private versions.
+
+--- zyGrib.pro.orig	2008-12-18 20:21:44.000000000 +0000
++++ zyGrib.pro
+@@ -4,8 +4,7 @@ CONFIG += qt
+ TEMPLATE = app
+ TARGET = 
+ DEPENDPATH += .
+-INCLUDEPATH += bzip2 zlib-1.2.3 proj-4.6.0/src
+-LIBS += -Lbzip2 -lbz2 -Lzlib-1.2.3 -lz -Lproj-4.6.0/src -lproj
++LIBS += -lbz2 -lz -lproj
+ 
+ win32 {
+ 	LIBS += -lregex
