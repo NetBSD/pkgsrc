@@ -1,4 +1,4 @@
-$NetBSD: patch-cs,v 1.3 2008/08/03 22:43:39 spz Exp $
+$NetBSD: patch-cs,v 1.4 2009/02/14 22:19:52 spz Exp $
 
 --- src/RtConfig/f_cisco.cc.orig	2007-01-23 01:45:16.000000000 +0100
 +++ src/RtConfig/f_cisco.cc
@@ -56,7 +56,7 @@ $NetBSD: patch-cs,v 1.3 2008/08/03 22:43:39 spz Exp $
  	 q = strchr(r, ')') + 1;
  	 *r = 0;
  	 r++;
-@@ -1246,8 +1246,28 @@ bool CiscoConfig::printNeighbor(int impo
+@@ -1246,8 +1246,31 @@ bool CiscoConfig::printNeighbor(int impo
       cout << " neighbor "   << neighbor << " remote-as " << peerAS << "\n";
  
     if (afi_activate && !peerGroup) {
@@ -82,6 +82,9 @@ $NetBSD: patch-cs,v 1.3 2008/08/03 22:43:39 spz Exp $
 +       cout << indent <<" no neighbor " << neighbor << " activate\n"; 
 +       cout << " address-family " << "ipv6 multicast" << endl;
 +       cout << indent <<" neighbor " << neighbor << " activate\n"; 
++     } else if (strcmp(filter_afi->name(),"ipv4.unicast") == 0) {
++       cout << " address-family " << "ipv4 unicast" << endl;
++       cout << indent <<" neighbor " << neighbor << " activate\n";
 +     }
 +     // ought to handle afi any too, but that's not just done by naming it here
     }
