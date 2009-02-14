@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.565 2009/02/14 07:50:40 seb Exp $
+$NetBSD: CHANGES-2009,v 1.566 2009/02/14 12:05:17 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -786,3 +786,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/p5-DateTimeX-Easy version 0.085 [abs 2009-02-14]
 	Added time/p5-MooseX-Types-DateTime version 0.03 [abs 2009-02-14]
 	Updated databases/p5-perl-ldap to 0.39 [seb 2009-02-14]
+	Added www/apache-tomcat6 version 6.0.18 [adrianp 2009-02-14]
