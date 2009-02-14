@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/14 20:57:43 plunky Exp $
+share/zyGrib/maps/gshhs/gshhs_0.rim
+share/zyGrib/maps/gshhs/gshhs_1.rim
+share/zyGrib/maps/gshhs/rangs_0.cat
+share/zyGrib/maps/gshhs/rangs_0.cel
+share/zyGrib/maps/gshhs/rangs_1.cat
+share/zyGrib/maps/gshhs/rangs_1.cel
+share/zyGrib/maps/gshhs/wdb_borders_f.b
+share/zyGrib/maps/gshhs/wdb_borders_h.b
+share/zyGrib/maps/gshhs/wdb_rivers_f.b
+share/zyGrib/maps/gshhs/wdb_rivers_h.b
