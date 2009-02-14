@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.39 2009/02/10 19:25:09 joerg Exp $
+# $NetBSD: fetch.mk,v 1.40 2009/02/14 18:51:20 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -189,9 +189,8 @@ fetch-check-interactive: .USEBEFORE
 #	the whole file.  The default is set in pkgsrc/mk/defaults/mk.conf.
 #
 
-_FETCH_BEFORE_ARGS.ftp=		# empty
 # If this host is behind a filtering firewall, use passive ftp(1)
-_FETCH_BEFORE_ARGS.ftp+=	${PASSIVE_FETCH:D-p}
+_FETCH_BEFORE_ARGS.ftp=		${PASSIVE_FETCH:D-p}
 _FETCH_AFTER_ARGS.ftp=		# empty
 _FETCH_RESUME_ARGS.ftp=		-R
 _FETCH_OUTPUT_ARGS.ftp=		-o
@@ -209,8 +208,7 @@ _FETCH_RESUME_ARGS.wget=	-c
 _FETCH_OUTPUT_ARGS.wget=	-O
 _FETCH_CMD.wget=		${PREFIX}/bin/wget
 
-_FETCH_BEFORE_ARGS.curl=	# empty
-_FETCH_BEFORE_ARGS.curl+=	${PASSIVE_FETCH:D--ftp-pasv}
+_FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
