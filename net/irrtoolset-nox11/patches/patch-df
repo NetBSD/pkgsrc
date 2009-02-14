@@ -1,8 +1,16 @@
-$NetBSD: patch-df,v 1.1 2007/09/07 21:26:33 spz Exp $
+$NetBSD: patch-df,v 1.2 2009/02/14 16:17:06 spz Exp $
 
 --- src/prtraceroute/prtraceroute.cc.orig	2002-04-09 13:48:47.000000000 +0200
 +++ src/prtraceroute/prtraceroute.cc
-@@ -171,6 +171,7 @@ main (int argc, char **argv, char **envp
+@@ -103,6 +103,7 @@
+ extern IRR * irr;  // defined in irr.cc
+ 
+ int  opt_rusage         = 0;
++int  opt_asdot          = true;
+ 
+ int policy_flag = 1;
+ int nflag = 0;
+@@ -171,6 +172,7 @@ main (int argc, char **argv, char **envp
    ICMPProbeReply reply;		    // wait for incoming icmp's
    Timer t1, t2;
    int ttl, got_there = 0, unreachable = 0;
@@ -10,7 +18,7 @@ $NetBSD: patch-df,v 1.1 2007/09/07 21:26:33 spz Exp $
  
    printf ("prtraceroute to %s (%s), %d hops max, %d byte packets\n",
            dst, dstip->getIpaddr(), max_ttl, datalen);
-@@ -192,7 +193,8 @@ main (int argc, char **argv, char **envp
+@@ -192,7 +194,8 @@ main (int argc, char **argv, char **envp
              ipAddr *ipaddr = new ipAddr (newaddr);
              if (policy_flag) {
                path.addHop(ipaddr, ttl);
@@ -20,7 +28,17 @@ $NetBSD: patch-df,v 1.1 2007/09/07 21:26:33 spz Exp $
              }
              if (!nflag) {
                printf (" %s (%s)", ipaddr->getName(),
-@@ -690,6 +692,7 @@ Path::process_policies()  {
+@@ -401,6 +404,9 @@ init_and_set_options (int argc, char **a
+ 
+       IRR_COMMAND_LINE_OPTIONS,
+ 
++      {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++       "print AS numbers in asplain format."},
++
+       // prtraceroute specific arguments
+       {"-g", ARGV_FUNC, (char *)gFlag, (char *)NULL,
+        "Gateway"},
+@@ -690,6 +696,7 @@ Path::process_policies()  {
    const AutNum * autnum;
    
    char test[80];
@@ -28,7 +46,7 @@ $NetBSD: patch-df,v 1.1 2007/09/07 21:26:33 spz Exp $
    
    actiondictionary = new ActionDictionary;
  
-@@ -796,7 +799,8 @@ Path::process_policies()  {
+@@ -796,7 +803,8 @@ Path::process_policies()  {
    for (i = last_ttl; i >= 0; i--) {
      if (hops[i] != NULL) {
        //cout << i << "   AS" << getHopAS(i) << " ";

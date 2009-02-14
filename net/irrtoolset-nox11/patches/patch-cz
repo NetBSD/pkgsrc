@@ -1,14 +1,16 @@
-$NetBSD: patch-cz,v 1.1 2007/09/07 21:26:32 spz Exp $
+$NetBSD: patch-cz,v 1.2 2009/02/14 16:17:06 spz Exp $
 
---- src/rpsl/rpsl/rpsl_asnum.hh.orig	2007-09-07 22:05:27.000000000 +0200
+--- src/rpsl/rpsl/rpsl_asnum.hh.orig	2009-02-13 22:35:13.000000000 +0100
 +++ src/rpsl/rpsl/rpsl_asnum.hh
-@@ -0,0 +1,13 @@
+@@ -0,0 +1,15 @@
 +#ifndef ASNUM_HH
 +#define ASNUM_HH 1
 +
++extern bool opt_asdot;
++
 +inline int asnum_string(char *buf, unsigned int asno)
 +{
-+   if (asno > 65535)
++   if (asno > 65535 && opt_asdot)
 +      return sprintf(buf, "AS%d.%d", asno>>16, asno&0xffff);
 +   else
 +      return sprintf(buf, "AS%d", asno);

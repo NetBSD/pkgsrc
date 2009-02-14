@@ -1,8 +1,26 @@
-$NetBSD: patch-da,v 1.1 2007/09/07 21:26:33 spz Exp $
+$NetBSD: patch-da,v 1.2 2009/02/14 16:17:06 spz Exp $
 
 --- src/aoe/aoe.cc.orig	2002-04-09 13:48:46.000000000 +0200
 +++ src/aoe/aoe.cc
-@@ -275,7 +275,7 @@ TclList &operator<<(TclList &tl, List<AS
+@@ -106,6 +106,7 @@ Rusage ru(clog, &opt_rusage);
+ char *opt_my_as  = NULL;
+ char *opt_rcfile = NULL;
+ char *display    = NULL;
++bool opt_asdot   = true;
+ ASt myAS         = 0;
+ 
+ 
+@@ -153,6 +154,9 @@ void init_and_set_options (int argc, cha
+ 
+       IRR_COMMAND_LINE_OPTIONS,
+ 
++      {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++       "print AS numbers in asplain format."},
++
+       // aoe specific arguments
+       {"-as",  ARGV_STRING,     (char *)NULL, (char *) &opt_my_as,
+        "AS number of the aut-num object to use"},
+@@ -275,7 +279,7 @@ TclList &operator<<(TclList &tl, List<AS
  	pcASPeer;
  	pcASPeer = lh.next(pcASPeer))
        {
@@ -11,7 +29,7 @@ $NetBSD: patch-da,v 1.1 2007/09/07 21:26:33 spz Exp $
        switch (pcASPeer->getType())
  	 {
  	 case dASPeerFromIRR:
-@@ -662,8 +662,8 @@ int ListPeer::command(int argc, char *ar
+@@ -662,8 +666,8 @@ int ListPeer::command(int argc, char *ar
     ASt tPeerAS      = pcApp->getASPeerNo(iPeerASIndex);
     
     char pzcMyAS[16], pzcPeerAS[16];
@@ -22,7 +40,7 @@ $NetBSD: patch-da,v 1.1 2007/09/07 21:26:33 spz Exp $
  
     // Setup $PeerAS properly
     if (!pcApp->evalf("set PeerAS %s", pzcPeerAS)) return TCL_ERROR;
-@@ -1093,7 +1093,7 @@ AoeApplication::AoeApplication(char *pzc
+@@ -1093,7 +1097,7 @@ AoeApplication::AoeApplication(char *pzc
     pcPolicyShowButton(NULL),
     pcStatusLine(NULL)
  {

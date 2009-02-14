@@ -1,4 +1,4 @@
-$NetBSD: patch-cw,v 1.1 2007/09/07 21:26:32 spz Exp $
+$NetBSD: patch-cw,v 1.2 2009/02/14 16:17:06 spz Exp $
 
 --- src/rpsl/rpsl/rpsl_item.cc.orig	2006-06-08 17:16:26.000000000 +0200
 +++ src/rpsl/rpsl/rpsl_item.cc
@@ -9,7 +9,7 @@ $NetBSD: patch-cw,v 1.1 2007/09/07 21:26:32 spz Exp $
 -   out << "AS" << asno;
 +   char buffer[64];
 +   asnum_string(buffer, asno);
-+   out << "AS" << buffer;
++   out << buffer;
     return out;
  }
  

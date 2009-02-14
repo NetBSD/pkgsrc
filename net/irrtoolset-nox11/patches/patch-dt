@@ -1,0 +1,22 @@
+$NetBSD: patch-dt,v 1.1 2009/02/14 16:17:06 spz Exp $
+
+--- src/roe/roe.cc.orig	2002-04-09 13:48:48.000000000 +0200
++++ src/roe/roe.cc
+@@ -99,6 +99,7 @@ char *opt_rcfile       = ".roerc";
+ char opt_default_rcfile[256] = "";
+ char *display  = NULL;
+ char *geometry = NULL;
++bool opt_asdot = true;
+ ASt myAS;
+ 
+ 
+@@ -138,6 +139,9 @@ void init_and_set_options (int argc, cha
+ 
+       IRR_COMMAND_LINE_OPTIONS,
+ 
++      {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++       "print AS numbers in asplain format."},
++
+       // roe specific arguments
+       {"-as",  ARGV_STRING,    (char *) NULL,    (char *) &opt_my_as,
+        "AS number of the aut-num object to use."},

@@ -1,0 +1,14 @@
+$NetBSD: patch-dy,v 1.1 2009/02/14 16:17:07 spz Exp $
+
+--- man/man1/roe.1.orig	2002-07-02 14:41:50.000000000 +0200
++++ man/man1/roe.1
+@@ -115,6 +115,9 @@ database server or parsing policy object
+ .RS
+ .IP "\-as <as-no>"
+ Lists routes of <as-no>. 
++.IP \-asplain
++Print AS numbers as asplain, i.e. as unstructured number;
++default is to use the more human readable asdot format.
+ .IP "-rcfile <resource filename>"
+ .IP "\-display <X Windows Display Specification>"
+ .IP "\-geometry <X Windows Geometry Specification>"
