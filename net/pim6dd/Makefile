@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/10/11 19:48:11 is Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/14 17:54:55 joerg Exp $
 
 DISTNAME=	pim6dd-20031021a
 PKGREVISION=	1
@@ -7,6 +7,10 @@ MASTER_SITES=	ftp://ftp.kame.net/pub/kame/misc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	IPv6 PIM dense mode daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_BSD_MAKEFILE=	yes
 
 CONFLICTS=	mcast-tools-*
 
