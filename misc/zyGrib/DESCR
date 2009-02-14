@@ -1,0 +1,12 @@
+Download and display weather data contained in GRIB1 files.
+
+Weather data display:
+    - atmospheric pressure at sea level
+    - wind at 10m above ground
+    - temperature at 2m above ground (degC)
+    - relative humidity at 2m above ground
+    - rainfall (mm/h)
+    - cloud cover (%)
+    - dew point (degC)
+    - altitude of 0C isotherm
+    - snow depth and risk
