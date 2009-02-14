@@ -1,0 +1,13 @@
+This module provides you with the most commonly used testing
+functions and gives you a bit more fine-grained control over your
+test suite.
+
+    use Test::Most tests => 4, 'die';
+
+    ok 1, 'Normal calls to ok() should succeed';
+    is 2, 2, '... as should all passing tests';
+    eq_or_diff [3], [4], '... but failing tests should die';
+    ok 4, '... will never get to here';
+
+As you can see, the eq_or_diff test will fail. Because 'die' is in
+the import list, the test program will halt at that point.
