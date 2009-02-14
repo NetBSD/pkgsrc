@@ -1,0 +1,14 @@
+$NetBSD: patch-dz,v 1.1 2009/02/14 16:17:07 spz Exp $
+
+--- man/man1/prtraceroute.1.orig	2002-07-02 14:41:50.000000000 +0200
++++ man/man1/prtraceroute.1
+@@ -133,6 +133,9 @@ Consider the sources specified in the co
+ If an object is defined in multiple sources in <source-list>,
+ pmatch uses the definition first encountered in <source-list>
+ from left to right.
++.IP \-asplain
++Print AS numbers as asplain, i.e. as unstructured number;
++default is to use the more human readable asdot format.
+ .RE
+ .SH ENVIRONMENT VARIABLES
+ .RS
