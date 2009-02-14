@@ -1,4 +1,4 @@
-$NetBSD: patch-dd,v 1.1 2007/09/07 21:26:33 spz Exp $
+$NetBSD: patch-dd,v 1.2 2009/02/14 16:17:06 spz Exp $
 
 --- src/roe/route-list.cc.orig	2002-06-18 13:00:11.000000000 +0200
 +++ src/roe/route-list.cc
@@ -18,7 +18,7 @@ $NetBSD: patch-dd,v 1.1 2007/09/07 21:26:33 spz Exp $
 -      sprintf(line + strlen(line), "  %s:AS%d", p->db, p->as);
 +   for (p = vr->db_as_l.head(); p; p = vr->db_as_l.next(p)) {
 +      asnum_string(buf, p->as);
-+	  sprintf(line + strlen(line), "  %s:%s", p->db, buf);
++      sprintf(line + strlen(line), "  %s:%s", p->db, buf);
 +   }
  
     return line;
@@ -38,8 +38,8 @@ $NetBSD: patch-dd,v 1.1 2007/09/07 21:26:33 spz Exp $
     if (registered_routes->isEmpty()) {
 -     tcl_Eval("showWarning { No route for AS%d}", as);
 +     char buf[64];
-+	 asnum_string(buf, as);
-+	 tcl_Eval("showWarning { No route for %s}", buf);
++     asnum_string(buf, as);
++     tcl_Eval("showWarning { No route for %s}", buf);
       return;
     }
  

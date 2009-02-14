@@ -1,0 +1,22 @@
+$NetBSD: patch-du,v 1.1 2009/02/14 16:17:06 spz Exp $
+
+--- src/peval/peval.cc.orig	2006-06-08 17:16:26.000000000 +0200
++++ src/peval/peval.cc
+@@ -98,6 +98,7 @@ Rusage ru(clog, &opt_rusage);
+ char *opt_prompt                 = "peval> ";
+ int  opt_expand                  = EXPAND_ALL;
+ int  opt_symbolic                = 0;
++bool opt_asdot                   = true;
+ 
+ const int SIZE = 8*1024;
+ char base[SIZE] = "peval: ";
+@@ -228,6 +229,9 @@ void init_and_set_options (int argc, cha
+ 
+       IRR_COMMAND_LINE_OPTIONS,
+ 
++      {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++       "print AS numbers in asplain format."},
++
+       // peval specific arguments
+       {"-symbolic",  ARGV_CONSTANT, (char *)1, (char *)&opt_symbolic, 
+        "Symbolic"},
