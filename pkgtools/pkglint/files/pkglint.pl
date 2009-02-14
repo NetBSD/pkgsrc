@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.799 2009/01/26 16:14:45 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.800 2009/02/14 10:42:20 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4515,26 +4515,31 @@ sub checkline_mk_shelltext($$) {
 			checkline_mk_absolute_pathname($line, $shellword);
 		}
 
-		if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ m"^\$\{PREFIX(?:|:Q)\}/") {
-			$line->log_warning("Please use one of the INSTALL_*_DIR commands instead of "
+		if (($state == SCST_INSTALL_D || $state == SCST_MKDIR) && $shellword =~ m"^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/") {
+			$line->log_warning("Please use AUTO_MKDIRS instead of "
 				. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
 				. ".");
 			$line->explain_warning(
-"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
-"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+"Setting AUTO_MKDIRS=yes automatically creates all directories that are",
+"mentioned in the PLIST. If you need additional directories, specify",
+"them in INSTALLATION_DIRS, which is a list of directories relative to",
+"\${PREFIX}.");
 		}
 
-		if (($state == SCST_INSTALL_DIR || $state == SCST_INSTALL_DIR2) && $shellword !~ regex_mk_shellvaruse && $shellword =~ m"^\$\{PREFIX(?:|:Q)\}/(.*)") {
+		if (($state == SCST_INSTALL_DIR || $state == SCST_INSTALL_DIR2) && $shellword !~ regex_mk_shellvaruse && $shellword =~ m"^(?:\${DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)") {
 			my ($dirname) = ($1);
 
-			$opt_warn_extra and $line->log_note("You can use INSTALLATION_DIRS+= ${dirname} instead of this command.");
-			$opt_warn_extra and $line->explain_note(
+			$line->log_note("You can use AUTO_MKDIRS=yes or INSTALLATION_DIRS+= ${dirname} instead of this command.");
+			$line->explain_note(
 "This saves you some typing. You also don't have to think about which of",
 "the many INSTALL_*_DIR macros is appropriate, since INSTALLATION_DIRS",
 "takes care of that.",
 "",
 "Note that you should only do this if the package creates _all_",
-"directories it needs before trying to install files into them.");
+"directories it needs before trying to install files into them.",
+"",
+"Many packages include a list of all needed directories in their PLIST",
+"file. In that case, you can just set AUTO_MKDIRS=yes and be done.");
 		}
 
 		if ($state == SCST_INSTALL_DIR2 && $shellword =~ m"^\$") {
@@ -7578,6 +7583,7 @@ sub checkfile_PLIST($) {
 				if (defined($pkgctx_included) && !exists($pkgctx_included->{$f})) {
 					$line->log_warning("Packages that install a .desktop entry should .include \"$f\".");
 				}
+				# TODO: check that USE_DIRS contains any xdg-*
 
 			} elsif ($dirname eq "share/aclocal" && $basename =~ m"\.m4$") {
 				# Fine.
