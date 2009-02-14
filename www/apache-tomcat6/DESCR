@@ -1,0 +1,19 @@
+Apache Tomcat is an implementation of the Java Servlet and JavaServer Pages
+technologies. The Java Servlet and JavaServer Pages specifications are
+developed under the Java Community Process.
+
+Apache Tomcat is developed in an open and participatory environment and
+released under the Apache Software License. Apache Tomcat is intended to
+be a collaboration of the best-of-breed developers from around the world.
+We invite you to participate in this open development project.
+
+Apache Tomcat powers numerous large-scale, mission-critical web applications
+across a diverse range of industries and organizations.
+
+Apache Tomcat 6.x is the current focus of development. It builds upon the
+improvements made in Tomcat 5.5.x and implements the Servlet 2.5 and JSP 2.1
+specifications. In addition to that, it includes the following improvements:
+
+* Memory usage optimizations
+* Advanced IO capabilities
+* Refactored clustering
