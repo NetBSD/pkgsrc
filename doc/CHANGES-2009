@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.568 2009/02/14 15:37:53 seb Exp $
+$NetBSD: CHANGES-2009,v 1.569 2009/02/14 21:14:00 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -789,3 +789,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/apache-tomcat6 version 6.0.18 [adrianp 2009-02-14]
 	Updated chat/inspircd12 to 1.2.0rc1 [adrianp 2009-02-14]
 	Updated devel/p5-Moose to 0.69 [seb 2009-02-14]
+	Added misc/zyGrib version 3.3.0 [plunky 2009-02-14]
+	Added misc/zyGrib-maps version 2 [plunky 2009-02-14]
