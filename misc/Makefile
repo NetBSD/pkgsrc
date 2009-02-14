@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.323 2009/01/31 22:11:10 bad Exp $
+# $NetBSD: Makefile,v 1.324 2009/02/14 20:59:54 plunky Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -236,5 +236,7 @@ SUBDIR+=	xtide
 SUBDIR+=	yelp
 SUBDIR+=	yrolo
 SUBDIR+=	zorro
+SUBDIR+=	zyGrib
+SUBDIR+=	zyGrib-maps
 
 .include "../mk/misc/category.mk"
