@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1111 2009/02/13 23:42:56 abs Exp $
+# $NetBSD: Makefile,v 1.1112 2009/02/14 00:13:03 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -783,6 +783,7 @@ SUBDIR+=	p5-Test-Memory-Cycle
 SUBDIR+=	p5-Test-Mock-LWP
 SUBDIR+=	p5-Test-MockModule
 SUBDIR+=	p5-Test-MockObject
+SUBDIR+=	p5-Test-Most
 SUBDIR+=	p5-Test-NoWarnings
 SUBDIR+=	p5-Test-Object
 SUBDIR+=	p5-Test-Output
