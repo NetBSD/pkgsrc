@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2009/02/05 13:48:12 taca Exp $
+# $NetBSD: options.mk,v 1.17 2009/02/14 19:30:33 tonnerre Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--without-kerb5
 
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
+.  include "../../security/cyrus-sasl/buildlink3.mk"
 DL_AUTO_VARS=		yes
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-ldap-conf-file=${PKG_SYSCONFDIR}/ldap.conf
