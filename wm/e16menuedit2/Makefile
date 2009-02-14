@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/01/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/14 19:10:42 joerg Exp $
 #
 
 DISTNAME=		e16menuedit2-0.0.3
@@ -21,6 +21,8 @@ USE_TOOLS+=		automake intltool msgfmt pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 MAKE_ENV+=		CATALOGS="de.gmo en.gmo ko.gmo tr.gmo"
+
+BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
 pre-configure:
 	set -e; cd ${WRKSRC:Q}; \
