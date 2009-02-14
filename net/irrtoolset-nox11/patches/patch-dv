@@ -1,0 +1,22 @@
+$NetBSD: patch-dv,v 1.1 2009/02/14 16:17:06 spz Exp $
+
+--- src/RtConfig/RtConfig.cc.orig	2006-10-01 13:23:32.000000000 +0200
++++ src/RtConfig/RtConfig.cc
+@@ -85,6 +85,7 @@ bool opt_rusage                  = false
+ Rusage ru(clog, &opt_rusage);
+ 
+ char *opt_prompt                 = "RtConfig> ";
++bool opt_asdot                   = true;
+ 
+ bool         RtConfig::supressMartians          = false;
+ int          RtConfig::preferenceCeiling        = 1000;
+@@ -182,6 +183,9 @@ void init_and_set_options (int argc, cha
+      
+      IRR_COMMAND_LINE_OPTIONS,
+ 
++     {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++      "print AS numbers in asplain format."},
++
+      {"-config", ARGV_FUNC, (char *) &select_config_format, (char *) NULL, 
+       "Configuration format (junos, cisco, bcc, gated or rsd)"},
+      {"-no_match_ip_inbound", ARGV_BOOL, 

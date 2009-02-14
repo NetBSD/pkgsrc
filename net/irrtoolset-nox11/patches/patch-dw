@@ -1,0 +1,22 @@
+$NetBSD: patch-dw,v 1.1 2009/02/14 16:17:06 spz Exp $
+
+--- src/rpslcheck/rpslcheck.cc.orig	2007-02-09 20:46:31.000000000 +0100
++++ src/rpslcheck/rpslcheck.cc
+@@ -72,6 +72,7 @@ bool opt_stats                   = false
+ bool opt_rusage                  = false;
+ char *opt_prompt                 = "rpslcheck> ";
+ bool opt_echo                    = false;
++bool opt_asdot                   = true;
+ char *opt_my_as			 = NULL;
+ #ifdef DEBUG
+ bool opt_debug_rpsl              = false;
+@@ -106,6 +107,9 @@ void init_and_set_options (int argc, cha
+      
+      IRR_COMMAND_LINE_OPTIONS,
+ 
++     {"-asplain", ARGV_BOOL, (char *) NULL, (char *) &opt_asdot,
++      "print AS numbers in asplain format."},
++
+      {"-rusage", ARGV_BOOL, (char *) NULL,           (char *) &opt_rusage,
+       "On termination print resource usage"},
+      {"-stats", ARGV_BOOL, (char *) NULL,            (char *) &opt_stats,

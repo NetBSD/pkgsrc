@@ -1,0 +1,14 @@
+$NetBSD: patch-dx,v 1.1 2009/02/14 16:17:06 spz Exp $
+
+--- man/man1/aoe.1.orig	2002-07-02 14:41:49.000000000 +0200
++++ man/man1/aoe.1
+@@ -137,6 +137,9 @@ database server or parsing policy object
+ .RS
+ .IP "\-as <as-no>"
+ Gets aut-num object for <as-no>. 
++.IP \-asplain
++Print AS numbers as asplain, i.e. as unstructured number;
++default is to use the more human readable asdot format.
+ .IP "-rcfile <resource filename>"
+ .IP "\-display <X Windows Display Specification>"
+ .RE

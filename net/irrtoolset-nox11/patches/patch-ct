@@ -1,7 +1,34 @@
-$NetBSD: patch-ct,v 1.1 2007/09/07 21:26:31 spz Exp $
+$NetBSD: patch-ct,v 1.2 2009/02/14 16:17:06 spz Exp $
 
 --- src/rpsl/rpsl/rptype.cc.orig	2006-06-08 17:16:26.000000000 +0200
 +++ src/rpsl/rpsl/rptype.cc
+@@ -254,7 +254,7 @@ Item *RPTypeWord::typeCast(const Item  *
+ 	 return new ItemWORD(strdup("false"));
+    if (typeid(*item) == typeid(ItemASNO)) {
+       char buffer[64];
+-      sprintf(buffer, "AS%d", ((ItemASNO *) item)->asno);
++      asnum_string(buffer, ((ItemASNO *) item)->asno);
+       return new ItemWORD(strdup(buffer));
+    }
+ 
+@@ -285,7 +285,7 @@ Item *RPTypeBlob::typeCast(const Item  *
+ 	 return new ItemBLOB(strdup("false"));
+    if (typeid(*item) == typeid(ItemASNO)) {
+       char buffer[64];
+-      sprintf(buffer, "AS%d", ((ItemASNO *) item)->asno);
++      asnum_string(buffer, ((ItemASNO *) item)->asno);
+       return new ItemWORD(strdup(buffer));
+    }
+ 
+@@ -367,7 +367,7 @@ Item *RPTypeEnum::typeCast(const Item  *
+ 	 w = new ItemWORD(strdup("false"));
+    if (typeid(*item) == typeid(ItemASNO)) {
+       char buffer[64];
+-      sprintf(buffer, "AS%d", ((ItemASNO *) item)->asno);
++      asnum_string(buffer, ((ItemASNO *) item)->asno);
+       w = new ItemWORD(strdup(buffer));
+    }
+ 
 @@ -388,8 +388,7 @@ bool RPTypeBoolean::validate(const Item 
  ////////////////////////////// RPTypeASNumber ////////////////////
  
