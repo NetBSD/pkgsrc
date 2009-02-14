@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.564 2009/02/14 00:21:56 abs Exp $
+$NetBSD: CHANGES-2009,v 1.565 2009/02/14 07:50:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -785,3 +785,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Test-Most version 0.20 [abs 2009-02-14]
 	Added time/p5-DateTimeX-Easy version 0.085 [abs 2009-02-14]
 	Added time/p5-MooseX-Types-DateTime version 0.03 [abs 2009-02-14]
+	Updated databases/p5-perl-ldap to 0.39 [seb 2009-02-14]
