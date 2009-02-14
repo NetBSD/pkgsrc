@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 00:52:27 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/14 15:07:25 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -75,6 +75,7 @@ share/examples/inspircd/sql/m_sqloper.mysql.sql
 share/examples/inspircd/sql/m_sqloper.postgresql.sql
 share/examples/inspircd/sql/m_sqloper.sqlite3.sql
 share/examples/rc.d/inspircd
+share/inspircd/.gdbargs
 share/inspircd/inspircd
 share/inspircd/modules/m_alias.so
 share/inspircd/modules/m_alltime.so
@@ -197,9 +198,10 @@ share/inspircd/modules/m_httpd_acl.so
 share/inspircd/modules/m_httpd_config.so
 share/inspircd/modules/m_maphide.so
 share/inspircd/modules/m_muteban.so
+share/inspircd/modules/m_nationalchars.so
 share/inspircd/modules/m_nopartmsg.so
-share/inspircd/modules/m_operflood.so
 share/inspircd/modules/m_operinvex.so
+share/inspircd/modules/m_operprefix.so
 share/inspircd/modules/m_password_hash.so
 share/inspircd/modules/m_permchannels.so
 share/inspircd/modules/m_regex_glob.so
