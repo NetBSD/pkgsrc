@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/14 18:51:36 joerg Exp $
 #
 
 DISTNAME=	PackageKit-0.4.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.packagekit.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.packagekit.org/
 COMMENT=	System activated daemon for managing software updates
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -30,6 +32,9 @@ CONF_FILES+=	${EGDIR}/org.freedesktop.PackageKit.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PackageKit.conf
 CONF_FILES+=	${EGDIR}/org.freedesktop.PackageKitTestBackend.conf \
 		${PKG_SYSCONFDIR}/dbus-1/system.d/org.freedesktop.PackageKitTestBackend.conf
+
+CHECK_INTERPRETER_SKIP+= lib/pm-utils/sleep.d/95packagekit \
+			 share/PackageKit/helpers/test_spawn/search-name.sh
 
 CONFIGURE_ARGS+=	--disable-qt
 CONFIGURE_ARGS+=	--with-security-framework=polkit
