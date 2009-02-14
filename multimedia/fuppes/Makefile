@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/14 15:50:43 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/14 15:51:03 joerg Exp $
 #
 
 SVNREV=		629
@@ -30,7 +30,7 @@ SUBST_MESSAGE.version=	Patching version script for non-SVN checkout builds.
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
-DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
+BUILD_DEPENDS+=		gettext-m4>=0.14.6:../../devel/gettext-m4
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
