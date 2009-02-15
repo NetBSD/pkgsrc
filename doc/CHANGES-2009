@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.590 2009/02/15 16:44:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.591 2009/02/15 17:13:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -812,3 +812,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/quesoglc version 0.7.1 [jmcneill 2009-02-15]
 	Added games/warzone2100 version 2.1.1 [jmcneill 2009-02-15]
 	Updated pkgtools/packagekit to 0.4.0nb3 [wiz 2009-02-15]
+	Updated devel/p5-Devel-REPL to 1.003004 [seb 2009-02-15]
