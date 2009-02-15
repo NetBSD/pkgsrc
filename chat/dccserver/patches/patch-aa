@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/02/15 18:49:54 wiz Exp $
+
+--- Makefile.in.orig	2003-11-02 00:06:24.000000000 +0000
++++ Makefile.in
+@@ -696,8 +696,8 @@ uninstall-man: uninstall-man1
+ 
+ 
+ install-exec-hook:
+-	@(chown root $(bindir)/dccserver && \
+-		chmod u+s $(bindir)/dccserver && \
++	@(chown root $(DESTDIR)$(bindir)/dccserver && \
++		chmod u+s $(DESTDIR)$(bindir)/dccserver && \
+ 		echo NOTE: dccserver has been installed setuid root.) || \
+ 	echo dccserver NOT installed setuid root.
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
