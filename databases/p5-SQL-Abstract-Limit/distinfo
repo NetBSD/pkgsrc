@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/20 15:15:30 he Exp $
+$NetBSD: distinfo,v 1.2 2009/02/15 17:41:46 seb Exp $
 
-SHA1 (SQL-Abstract-Limit-0.12.tar.gz) = c7334aed594b5bf20ebea6d9ce28cad227682ec0
-RMD160 (SQL-Abstract-Limit-0.12.tar.gz) = dfa5cd70a9988fc2af83633e1b0f654ea0c40a1f
-Size (SQL-Abstract-Limit-0.12.tar.gz) = 14295 bytes
+SHA1 (SQL-Abstract-Limit-0.141.tar.gz) = c84261e381df070b3cdc05e0ce7d740ab212c924
+RMD160 (SQL-Abstract-Limit-0.141.tar.gz) = fbc839dd43198244ae7f5de0f79aa9257d802bed
+Size (SQL-Abstract-Limit-0.141.tar.gz) = 15877 bytes
