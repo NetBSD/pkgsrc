@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.570 2009/02/15 03:05:46 taca Exp $
+$NetBSD: CHANGES-2009,v 1.571 2009/02/15 07:07:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -792,3 +792,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added misc/zyGrib version 3.3.0 [plunky 2009-02-14]
 	Added misc/zyGrib-maps version 2 [plunky 2009-02-14]
 	Added devel/ruby-setup version 3.4.0 [taca 2009-02-15]
+	Updated mail/cue to 20090209 [obache 2009-02-15]
