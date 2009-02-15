@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.1 2009/02/15 16:16:50 joerg Exp $
+
+--- perl.h.orig	2006-05-05 19:50:18.000000000 +0200
++++ perl.h
+@@ -1,11 +1,11 @@
+ #ifndef __PERL_H_
+ #define __PERL_H_
+ 
++#include <EXTERN.h>
++#include <perl.h>
++
+ void perl_startup();
+ void perl_shutdown();
+-#ifndef I32
+-#define I32 int
+-#endif
+ I32 perl_inc(char *path);
+ I32 perl_use(char *module);
+ I32 perl_log(char *func, char *sender, char *group, char *message);
