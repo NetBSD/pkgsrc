@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2009/02/15 16:31:49 joerg Exp $
 #
 
 OO_VER=			2.4.2
@@ -135,7 +135,8 @@ PLIST_SUBST+=		OO_UNXNAME=${OO_UNXNAME}
 PLIST_SUBST+=		OO_ICON_PREFIX=openofficeorg24
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
 INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications \
-			share/mime-info share/packages
+			share/application-registry share/mime-info \
+			share/packages share/mime/packages
 
 OO_UNXNAME=	openoffice.org2.4
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
