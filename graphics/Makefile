@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.511 2009/01/30 20:51:50 jnemeth Exp $
+# $NetBSD: Makefile,v 1.512 2009/02/15 16:04:32 jmcneill Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -301,6 +301,7 @@ SUBDIR+=	py-piddle
 SUBDIR+=	qcamview
 SUBDIR+=	qimageblitz
 SUBDIR+=	qiv
+SUBDIR+=	quesoglc
 SUBDIR+=	qvplay
 SUBDIR+=	rabbit
 SUBDIR+=	radiance
