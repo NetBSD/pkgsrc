@@ -1,0 +1,63 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+bin/warzone2100
+share/applications/warzone2100.desktop
+share/doc/warzone2100/AUTHORS
+share/doc/warzone2100/COPYING
+share/doc/warzone2100/COPYING.README
+share/doc/warzone2100/ChangeLog
+share/doc/warzone2100/Readme.de
+share/doc/warzone2100/Readme.de.xhtml
+share/doc/warzone2100/Readme.en
+share/doc/warzone2100/Readme.en.xhtml
+share/doc/warzone2100/ScriptingManual.xhtml
+share/doc/warzone2100/styles/readme.print.css
+share/doc/warzone2100/styles/readme.screen.css
+share/doc/warzone2100/styles/scriptingmanual.css
+share/icons/warzone2100.png
+share/locale/cs/LC_MESSAGES/warzone2100.mo
+share/locale/da/LC_MESSAGES/warzone2100.mo
+share/locale/de/LC_MESSAGES/warzone2100.mo
+share/locale/en_GB/LC_MESSAGES/warzone2100.mo
+share/locale/es/LC_MESSAGES/warzone2100.mo
+share/locale/eu/LC_MESSAGES/warzone2100.mo
+share/locale/fi/LC_MESSAGES/warzone2100.mo
+share/locale/fr/LC_MESSAGES/warzone2100.mo
+share/locale/fy/LC_MESSAGES/warzone2100.mo
+share/locale/ga/LC_MESSAGES/warzone2100.mo
+share/locale/it/LC_MESSAGES/warzone2100.mo
+share/locale/la/LC_MESSAGES/warzone2100.mo
+share/locale/lt/LC_MESSAGES/warzone2100.mo
+share/locale/lv/LC_MESSAGES/warzone2100.mo
+share/locale/nb/LC_MESSAGES/warzone2100.mo
+share/locale/nl/LC_MESSAGES/warzone2100.mo
+share/locale/nn/LC_MESSAGES/warzone2100.mo
+share/locale/pl/LC_MESSAGES/warzone2100.mo
+share/locale/pt/LC_MESSAGES/warzone2100.mo
+share/locale/pt_BR/LC_MESSAGES/warzone2100.mo
+share/locale/ro/LC_MESSAGES/warzone2100.mo
+share/locale/ru/LC_MESSAGES/warzone2100.mo
+share/locale/sl/LC_MESSAGES/warzone2100.mo
+share/locale/sv/LC_MESSAGES/warzone2100.mo
+share/locale/sv_SE/LC_MESSAGES/warzone2100.mo
+share/locale/tr/LC_MESSAGES/warzone2100.mo
+share/locale/uz/LC_MESSAGES/warzone2100.mo
+share/locale/zh_CN/LC_MESSAGES/warzone2100.mo
+share/warzone2100/mods/global/aivolution.wz
+share/warzone2100/mods/global/autoload/music/music/menu.ogg
+share/warzone2100/mods/global/autoload/music/music/music.wpl
+share/warzone2100/mods/global/autoload/music/music/track1.ogg
+share/warzone2100/mods/global/autoload/music/music/track2.ogg
+share/warzone2100/mods/global/grim.wz
+share/warzone2100/mods/global/newst_tiles.wz
+share/warzone2100/mods/multiplay/ntw.wz
+share/warzone2100/mp.wz
+share/warzone2100/warzone.wz
+@dirrm share/warzone2100/mods/multiplay
+@dirrm share/warzone2100/mods/global/autoload/music/music
+@dirrm share/warzone2100/mods/global/autoload/music
+@dirrm share/warzone2100/mods/global/autoload
+@dirrm share/warzone2100/mods/global
+@dirrm share/warzone2100/mods
+@dirrm share/warzone2100
+@dirrm share/doc/warzone2100/styles
+@dirrm share/doc/warzone2100
