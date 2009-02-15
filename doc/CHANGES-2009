@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.572 2009/02/15 08:03:32 obache Exp $
+$NetBSD: CHANGES-2009,v 1.573 2009/02/15 08:40:50 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -794,3 +794,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/ruby-setup version 3.4.0 [taca 2009-02-15]
 	Updated mail/cue to 20090209 [obache 2009-02-15]
 	Updated net/tor to 0.2.0.34 [obache 2009-02-15]
+	Updated devel/p5-Class-MOP to 0.77 [seb 2009-02-15]
+	Updated devel/p5-Moose to 0.70 [seb 2009-02-15]
