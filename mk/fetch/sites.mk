@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.51 2008/12/02 12:58:59 obache Exp $
+# $NetBSD: sites.mk,v 1.52 2009/02/15 14:31:52 asau Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -816,6 +816,12 @@ MASTER_SITE_FREEBSD+= \
 MASTER_SITE_FREEBSD_LOCAL+= \
 	ftp://ftp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/ \
 	ftp://ftp.jp.FreeBSD.org/pub/FreeBSD/ports/local-distfiles/
+
+MASTER_SITE_NETLIB+= \
+	http://netlib.org/ \
+	http://netlib.sandia.gov/ \
+	http://www.netlib.no/netlib/ \
+	http://www.mirrorservice.org/sites/netlib.bell-labs.com/netlib/
 
 # The primary backup site.
 MASTER_SITE_BACKUP?=	\
