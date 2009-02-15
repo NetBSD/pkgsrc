@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1112 2009/02/14 00:13:03 abs Exp $
+# $NetBSD: Makefile,v 1.1113 2009/02/15 18:44:58 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -980,6 +980,7 @@ SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-rgl
 SUBDIR+=	ruby-rspec
+SUBDIR+=	ruby-setup
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subversion
 SUBDIR+=	ruby-test-spec
