@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2009/02/15 09:03:46 obache Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/15 12:42:57 obache Exp $
 #
 
 DISTNAME=	tokyotyrant-perl-1.7
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
-DIST_SUBDIR=	${PKGNAME_NOREV}-1
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/tyrantperldoc/
