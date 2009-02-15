@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.573 2009/02/15 08:40:50 seb Exp $
+$NetBSD: CHANGES-2009,v 1.574 2009/02/15 08:58:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/tor to 0.2.0.34 [obache 2009-02-15]
 	Updated devel/p5-Class-MOP to 0.77 [seb 2009-02-15]
 	Updated devel/p5-Moose to 0.70 [seb 2009-02-15]
+	Updated databases/p5-tokyocabinet to 1.23 [obache 2009-02-15]
