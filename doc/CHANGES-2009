@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.589 2009/02/15 16:07:14 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.590 2009/02/15 16:44:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/kipi-plugins to 0.1.7nb2 [wiz 2009-02-15]
 	Added graphics/quesoglc version 0.7.1 [jmcneill 2009-02-15]
 	Added games/warzone2100 version 2.1.1 [jmcneill 2009-02-15]
+	Updated pkgtools/packagekit to 0.4.0nb3 [wiz 2009-02-15]
