@@ -1,0 +1,4 @@
+The Perl 5 module Proc::Background provides a generic interface for
+placing processes in the background on both Unix and Win32 platforms.
+Background processes can be started, killed, waited upon, checked
+for existence and their exit values can be retrieved.
