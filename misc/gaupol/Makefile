@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/08 09:45:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/15 23:24:27 wiz Exp $
 #
 
 DISTNAME=	gaupol-0.13.1
@@ -19,6 +19,7 @@ PYDISTUTILSPKG= 		yes
 USE_DIRS+=			xdg-1.4
 USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
+PKG_DESTDIR_SUPPORT=		user-destdir
 
 SUBST_CLASSES+=			manpath
 SUBST_FILES.manpath=		INSTALL setup.py
