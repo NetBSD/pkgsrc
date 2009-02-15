@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/08/12 16:08:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/02/15 21:57:51 wiz Exp $
 #
 
 DISTNAME=		orbital_eunuchs_sniper-1.30
@@ -11,6 +11,9 @@ COMMENT=		Overhead shooting game
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-games-dir=${PREFIX}/libexec
+
+INSTALLATION_DIRS=	share/doc/orbital_eunuchs_sniper
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 REPLACE_INTERPRETER+=	bash
@@ -25,11 +28,10 @@ PLIST_SUBST+=		CPU=${MACHINE_ARCH}
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/orbital_eunuchs_sniper
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${PREFIX}/share/doc/orbital_eunuchs_sniper
+		${DESTDIR}${PREFIX}/share/doc/orbital_eunuchs_sniper
 	${INSTALL_DATA} ${WRKSRC}/readme.txt \
-		${PREFIX}/share/doc/orbital_eunuchs_sniper
+		${DESTDIR}${PREFIX}/share/doc/orbital_eunuchs_sniper
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
