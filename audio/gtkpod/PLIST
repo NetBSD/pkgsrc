@@ -1,16 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/04 16:55:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/15 09:43:38 wiz Exp $
 bin/gtkpod
+man/man1/gtkpod.1
 share/applications/gtkpod.desktop
-share/gtkpod/data/cdshine.png
-share/gtkpod/data/cdshine_main.png
 share/gtkpod/data/default-cover.png
-share/gtkpod/data/gphoto_album_menuitem-32.png
-share/gtkpod/data/gphoto_album_menuitem-48.png
-share/gtkpod/data/gphoto_images_menuitem-32.png
-share/gtkpod/data/gphoto_images_menuitem-48.png
-share/gtkpod/data/gphoto_playlist_icon-48.png
-share/gtkpod/data/gphoto_tools_menuitem-32.png
-share/gtkpod/data/gphoto_tools_menuitem-48.png
 share/gtkpod/data/gtkpod-add-dirs.png
 share/gtkpod/data/gtkpod-add-files.png
 share/gtkpod/data/gtkpod-add-playlists.png
@@ -18,12 +10,54 @@ share/gtkpod/data/gtkpod-icon-32-2.png
 share/gtkpod/data/gtkpod-icon-32.png
 share/gtkpod/data/gtkpod-icon-48.png
 share/gtkpod/data/gtkpod-logo.png
-share/gtkpod/data/gtkpod-new-playlist.png
 share/gtkpod/data/gtkpod-read-16.png
 share/gtkpod/data/gtkpod-read.png
-share/gtkpod/data/gtkpod-sync.png
 share/gtkpod/data/gtkpod.glade
-share/gtkpod/data/tunes_playlist_icon-48.png
+share/gtkpod/data/photo-toolbar-album.png
+share/gtkpod/data/photo-toolbar-photos.png
+share/gtkpod/doc/adding-cover-art-from-a-browser.html
+share/gtkpod/doc/adding-files-and-folders.html
+share/gtkpod/doc/advanced-features.html
+share/gtkpod/doc/copying-content-to-the-ipod.html
+share/gtkpod/doc/cover-art.html
+share/gtkpod/doc/exporting-files-from-the-ipod.html
+share/gtkpod/doc/figures/add-folders.png
+share/gtkpod/doc/figures/cover-fullsize.png
+share/gtkpod/doc/figures/cover-popupmenu.png
+share/gtkpod/doc/figures/cover-setfromfile.png
+share/gtkpod/doc/figures/coverart.png
+share/gtkpod/doc/figures/edit-track-details.png
+share/gtkpod/doc/figures/gtkpod.png
+share/gtkpod/doc/getting-started.html
+share/gtkpod/doc/gtkpod-info.html
+share/gtkpod/doc/gtkpod.html
+share/gtkpod/doc/gtkpod.xml
+share/gtkpod/doc/hooking-up-the-ipod.html
+share/gtkpod/doc/ipod-and-content.html
+share/gtkpod/doc/ipod-file-recovery.html
+share/gtkpod/doc/layout-of-gtkpod.html
+share/gtkpod/doc/managing-playlists.html
+share/gtkpod/doc/playcounts-and-ratings.html
+share/gtkpod/doc/playlists-podcasts-and-photos.html
+share/gtkpod/doc/setting-ipod-properties.html
+share/gtkpod/doc/the-sysinfo-file.html
+share/gtkpod/doc/troubleshooting-faq.html
+share/gtkpod/doc/view-and-edit-track-details.html
+share/gtkpod/icons/hicolor/16x16/places/playlist-photo.png
+share/gtkpod/icons/hicolor/16x16/places/playlist.png
+share/gtkpod/icons/hicolor/16x16/status/star-none.png
+share/gtkpod/icons/hicolor/16x16/status/star-set.png
+share/gtkpod/icons/hicolor/16x16/status/star-unset.png
+share/gtkpod/icons/hicolor/22x22/places/playlist-photo.png
+share/gtkpod/icons/hicolor/22x22/places/playlist.png
+share/gtkpod/icons/hicolor/24x24/places/playlist-photo.png
+share/gtkpod/icons/hicolor/24x24/places/playlist.png
+share/gtkpod/icons/hicolor/32x32/places/playlist-photo.png
+share/gtkpod/icons/hicolor/32x32/places/playlist.png
+share/gtkpod/icons/hicolor/48x48/places/playlist-photo.png
+share/gtkpod/icons/hicolor/48x48/places/playlist.png
+share/gtkpod/icons/hicolor/scalable/places/playlist-photo.svg
+share/gtkpod/icons/hicolor/scalable/places/playlist.svg
 share/gtkpod/scripts/convert-2m4a.sh
 share/gtkpod/scripts/convert-2mp3.sh
 share/gtkpod/scripts/gtkpod-convert-common.sh
@@ -42,9 +76,13 @@ share/gtkpod/scripts/sync-thunderbird-nano.sh
 share/gtkpod/scripts/sync-thunderbird.sh
 share/gtkpod/scripts/sync-tomboy.sh
 share/gtkpod/scripts/sync-webcalendar.sh
+share/icons/hicolor/16x16/apps/gtkpod.png
+share/icons/hicolor/22x22/apps/gtkpod.png
+share/icons/hicolor/24x24/apps/gtkpod.png
 share/icons/hicolor/32x32/apps/gtkpod.png
 share/icons/hicolor/48x48/apps/gtkpod.png
 share/icons/hicolor/64x64/apps/gtkpod.png
+share/icons/hicolor/scalable/apps/gtkpod.svg
 share/locale/de/LC_MESSAGES/gtkpod.mo
 share/locale/es/LC_MESSAGES/gtkpod.mo
 share/locale/fr/LC_MESSAGES/gtkpod.mo
@@ -54,11 +92,33 @@ share/locale/ja/LC_MESSAGES/gtkpod.mo
 share/locale/ro/LC_MESSAGES/gtkpod.mo
 share/locale/ru/LC_MESSAGES/gtkpod.mo
 share/locale/sv/LC_MESSAGES/gtkpod.mo
+share/locale/zh_CN/LC_MESSAGES/gtkpod.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gtkpod/scripts
+@dirrm share/gtkpod/icons/hicolor/scalable/places
+@dirrm share/gtkpod/icons/hicolor/scalable
+@dirrm share/gtkpod/icons/hicolor/48x48/places
+@dirrm share/gtkpod/icons/hicolor/48x48
+@dirrm share/gtkpod/icons/hicolor/32x32/places
+@dirrm share/gtkpod/icons/hicolor/32x32
+@dirrm share/gtkpod/icons/hicolor/24x24/places
+@dirrm share/gtkpod/icons/hicolor/24x24
+@dirrm share/gtkpod/icons/hicolor/22x22/places
+@dirrm share/gtkpod/icons/hicolor/22x22
+@dirrm share/gtkpod/icons/hicolor/16x16/status
+@dirrm share/gtkpod/icons/hicolor/16x16/places
+@dirrm share/gtkpod/icons/hicolor/16x16
+@dirrm share/gtkpod/icons/hicolor
+@dirrm share/gtkpod/icons
+@dirrm share/gtkpod/doc/figures
+@dirrm share/gtkpod/doc
 @dirrm share/gtkpod/data
 @dirrm share/gtkpod
 @comment in xdg-dirs: @dirrm share/applications
