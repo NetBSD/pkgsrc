@@ -1,0 +1,52 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+
+--- configure.orig	2009-01-11 16:51:50.000000000 -0500
++++ configure
+@@ -4415,13 +4415,6 @@ fi
+ done
+ test -n "$YACC" || YACC="yacc"
+ 
+-if test "x$YACC" != "xbison -y" ; then
+-	{ { echo "$as_me:$LINENO: error: Bison is not installed" >&5
+-echo "$as_me: error: Bison is not installed" >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+-
+-
+ 	for ac_prog in bison; do
+ 		ac_prog_version_check=`$ac_prog --version | head -n 1 | sed 's/([^)]*)//g;s/^[a-zA-Z\.\ \-\/]*//;s/ .*$//'`
+ 		ac_prog_major_check=`echo $ac_prog_version_check | cut -d. -f1`
+@@ -4670,12 +4663,6 @@ fi
+ rm -f conftest.l $LEX_OUTPUT_ROOT.c
+ 
+ fi
+-if test "x$LEX" != "xflex" ; then
+-	{ { echo "$as_me:$LINENO: error: Flex is not installed" >&5
+-echo "$as_me: error: Flex is not installed" >&2;}
+-   { (exit 1); exit 1; }; }
+-fi
+-
+ 
+ 	for ac_prog in flex; do
+ 		ac_prog_version_check=`$ac_prog --version | head -n 1 | sed 's/([^)]*)//g;s/^[a-zA-Z\.\ \-\/]*//;s/ .*$//'`
+@@ -6970,15 +6957,15 @@ _ACEOF
+ 		[ -z "$ac_prog_minor_check" ] && ac_prog_minor_check=0
+ 		[ -z "$ac_prog_micro_check" ] && ac_prog_micro_check=0
+ 
+-		ac_prog_min_major_check=`echo 0.15 | cut -d. -f1`
+-		ac_prog_min_minor_check=`echo 0.15 | sed s/[-,a-z,A-Z].*// | cut -d. -f2`
+-		ac_prog_min_micro_check=`echo 0.15 | sed s/[-,a-z,A-Z].*// | cut -d. -f3`
++		ac_prog_min_major_check=`echo 0.14 | cut -d. -f1`
++		ac_prog_min_minor_check=`echo 0.14 | sed s/[-,a-z,A-Z].*// | cut -d. -f2`
++		ac_prog_min_micro_check=`echo 0.14 | sed s/[-,a-z,A-Z].*// | cut -d. -f3`
+ 		[ -z "$ac_prog_min_minor_check" ] && ac_prog_min_minor_check=0
+ 		[ -z "$ac_prog_min_micro_check" ] && ac_prog_min_micro_check=0
+ 
+ 
+-		{ echo "$as_me:$LINENO: checking for $ac_prog >= 0.15" >&5
+-echo $ECHO_N "checking for $ac_prog >= 0.15... $ECHO_C" >&6; }
++		{ echo "$as_me:$LINENO: checking for $ac_prog >= 0.14" >&5
++echo $ECHO_N "checking for $ac_prog >= 0.14... $ECHO_C" >&6; }
+ 
+ 
+ 		if [ "$ac_prog_major_check" -lt "$ac_prog_min_major_check" ]; then
