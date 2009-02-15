@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7845 2009/02/13 18:54:00 abs Exp $
+$NetBSD: TODO,v 1.7846 2009/02/15 07:08:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ Suggested package updates
 	o cppunit-1.12.0
 	o cross-h8300-hms-binutils-2.17
 	o crypto++-523
-	o cue-20090209 [pkg/40623]
 	o cuetools-1.3.1
 	o curl-7.19.3
 	o cvs-1.11.23
