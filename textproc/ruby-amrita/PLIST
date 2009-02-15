@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:54:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/15 03:33:02 taca Exp $
 bin/ams
 bin/amshandler
 bin/amx
@@ -36,7 +36,6 @@ ${RUBY_DOC}/amrita/index.rd
 ${RUBY_DOC}/amrita/index.xml
 ${RUBY_DOC}/amrita/index_ja.rd
 ${RUBY_DOC}/amrita/index_ja.xml
-${RUBY_DOC}/amrita/html/classes/Amrita.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AmsHandler.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AmsTemplate.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/AsIsFormatter.html
@@ -83,10 +82,11 @@ ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateFile.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateFileWithCache.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/TemplateText.html
 ${RUBY_DOC}/amrita/html/classes/Amrita/XMLParser.html
-${RUBY_DOC}/amrita/html/classes/Amx.html
+${RUBY_DOC}/amrita/html/classes/Amrita.html
 ${RUBY_DOC}/amrita/html/classes/Amx/AmxContext.html
 ${RUBY_DOC}/amrita/html/classes/Amx/Document.html
 ${RUBY_DOC}/amrita/html/classes/Amx/Template.html
+${RUBY_DOC}/amrita/html/classes/Amx.html
 ${RUBY_DOC}/amrita/html/classes/Array.html
 ${RUBY_DOC}/amrita/html/classes/CKAmritaElement.html
 ${RUBY_DOC}/amrita/html/classes/Integer.html
