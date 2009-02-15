@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7847 2009/02/15 08:04:01 obache Exp $
+$NetBSD: TODO,v 1.7848 2009/02/15 19:44:55 snj Exp $
 
 Suggested new packages
 ======================
@@ -133,7 +133,7 @@ Suggested new packages
 	A 2D car racing action game with untypical racing game features
 	such as shooting at other players.
 
-	The Open Racing Car Simulator
+	The Open Racing Car Simulator [pkgsrc-wip]
 	http://torcs.sf.net/
 	TORCS is a 3D racing cars simulator using OpenGL. The goal
 	is to have programmed robots drivers racing against each
