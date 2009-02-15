@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.596 2009/02/15 20:35:12 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.597 2009/02/15 20:59:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -818,3 +818,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ruby-rcsparse to 0.0.0.43 [wiz 2009-02-15]
 	Updated converters/mpack to 1.6 [dholland 2009-02-15]
 	Added security/pam-mkhomedir version 1 [tonnerre 2009-02-15]
+	Added devel/p5-Proc-Background version 1.08 [seb 2009-02-15]
