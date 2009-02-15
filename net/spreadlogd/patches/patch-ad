@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1 2009/02/15 16:16:50 joerg Exp $
+
+--- nethelp.h.orig	2006-05-05 19:50:18.000000000 +0200
++++ nethelp.h
+@@ -26,20 +26,4 @@ int tcp_listen_on(const char *addr, unsi
+ int tcp_dispatch(const char *addr, unsigned short port, int backlog, int mask,
+                  void (*dispatch)(int, short, void *), void *userdata);
+ 
+-
+-#if BYTE_ORDER == BIG_ENDIAN
+-static inline unsigned long long bswap64(unsigned long long _x) {
+-  return _x;
+-}
+-#elif BYTE_ORDER == LITTLE_ENDIAN
+-static inline unsigned long long bswap64(unsigned long long _x) {
+-  return ((_x >> 56) | ((_x >> 40) & 0xff00) | ((_x >> 24) & 0xff0000) |
+-    ((_x >> 8) & 0xff000000) |
+-    ((_x << 8) & ((unsigned long long)0xff << 32)) |
+-    ((_x << 24) & ((unsigned long long)0xff << 40)) |
+-    ((_x << 40) & ((unsigned long long)0xff << 48)) | ((_x << 56)));
+-}
+-#else
+-#error Unsupported byte order
+-#endif
+ #endif

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/10/19 19:18:44 he Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/15 16:16:50 joerg Exp $
 #
 
 DISTNAME=	spreadlogd
 PKGNAME=	spreadlogd-2.0.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://www.backhand.org/mod_log_spread/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -12,8 +12,10 @@ MAINTAINER=	mark@exonetric.com
 HOMEPAGE=	http://www.backhand.org/mod_log_spread/
 COMMENT=	Daemon to log to file, messages from spread toolkit clients
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	perl yacc
+USE_TOOLS+=	perl:run yacc
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 RCD_SCRIPTS=	spreadlogd
@@ -26,11 +28,12 @@ EXAMPLEDIR=	${PREFIX}/share/examples/spreadlogd
 # sample configuration in the example directory for us (as well as creating it)
 CONF_FILES+=	${EXAMPLEDIR}/spreadlogd.conf.sample ${PKG_SYSCONFDIR}/spreadlogd.conf
 
+INSTALLATION_DIRS+=	${EXAMPLEDIR}
+
 # create example directory *and* put the sample configuration file here with the suffix
 # .sample so that pkginstall can drop it in for us.
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/spreadlogd.conf ${EXAMPLEDIR}/spreadlogd.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/spreadlogd.conf ${DESTDIR}${EXAMPLEDIR}/spreadlogd.conf.sample
 
 BUILDLINK_API_DEPENDS.libevent+=libevent>=1.0c
 
