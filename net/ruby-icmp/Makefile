@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/19 14:53:07 taca Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/15 03:27:01 taca Exp $
 
 DISTNAME=	icmp-0.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,11 +10,13 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	# not available
 COMMENT=	Ruby module for handling ICMP packets
 
-USE_RUBY_INSTALL=	yes
+USE_RUBY_SETUP=		yes
+USE_RUBY_SETUP_PKG=	yes
 NO_BUILD=		yes
 REPLACE_RUBY=		sample/ping.rb sample/traceroute.rb
 EXAMPLES=		sample/ping.rb sample/traceroute.rb
-INSTALLATION_DIRS=	${RUBY_EG}/icmp
+INSTALLATION_DIRS=	${RUBY_EG}/icmp ${RUBY_VENDORLIB}
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 .for f in ${EXAMPLES}

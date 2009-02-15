@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/19 14:46:37 taca Exp $
+# $NetBSD: Makefile,v 1.14 2009/02/15 03:24:50 taca Exp $
 
 DISTNAME=	amstd-2.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,14 +10,15 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://i.loveruby.net/en/projects/amstd/
 COMMENT=	Collection of miscellaneous Ruby modules
 
-USE_RUBY_SETUP=	yes
-RUBY_SETUP=	install.rb
-CONFIGURE_ARGS=	--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
-		--so-dir=${PREFIX}/${RUBY_VENDORARCHLIB}
+USE_RUBY_SETUP=		YES
+USE_RUBY_SETUP_PKG=	YES
+CONFIGURE_ARGS=		--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
+			--so-dir=${PREFIX}/${RUBY_VENDORARCHLIB}
 
-DOCS=		README.en README.ja manual.rd.ja
+DOCS=			README.en README.ja manual.rd.ja
 
 INSTALLATION_DIRS=	${RUBY_DOC}/amstd
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 .for f in ${DOCS}
