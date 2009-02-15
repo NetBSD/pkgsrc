@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.60.2.1 2009/01/27 13:14:37 tron Exp $
+# $NetBSD: Makefile,v 1.60.2.2 2009/02/15 11:45:00 tron Exp $
 #
 
-DISTNAME=		tor-0.2.0.33
+DISTNAME=		tor-0.2.0.34
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		athaba@inode.at
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 
