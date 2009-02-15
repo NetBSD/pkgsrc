@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.51 2009/02/13 09:49:49 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.52 2009/02/15 11:45:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -153,3 +153,7 @@ Pullup ticket #2695 - requested by he
 p5-Readonly-XS: build fix
 pullup ticket #2969 - requested by he
 see: add patch for ppc ports
+Pullup ticket #2698 - requested by minskim
+bison: portability fix
+Pullup ticket #2699 - requested by obache
+tor: security update
