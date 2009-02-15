@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.599 2009/02/15 22:34:35 seb Exp $
+$NetBSD: CHANGES-2009,v 1.600 2009/02/15 23:16:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -821,3 +821,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Proc-Background version 1.08 [seb 2009-02-15]
 	Updated games/monsterz to 0.7.1nb2 [wiz 2009-02-15]
 	Added devel/p5-Devel-ebug version 0.49 [seb 2009-02-15]
+	Updated devel/p5-Devel-NYTProf to 2.08 [seb 2009-02-15]
