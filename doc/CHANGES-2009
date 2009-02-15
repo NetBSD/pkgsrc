@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.597 2009/02/15 20:59:47 seb Exp $
+$NetBSD: CHANGES-2009,v 1.598 2009/02/15 21:53:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -819,3 +819,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/mpack to 1.6 [dholland 2009-02-15]
 	Added security/pam-mkhomedir version 1 [tonnerre 2009-02-15]
 	Added devel/p5-Proc-Background version 1.08 [seb 2009-02-15]
+	Updated games/monsterz to 0.7.1nb2 [wiz 2009-02-15]
