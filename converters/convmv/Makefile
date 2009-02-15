@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/01/08 16:14:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/15 09:48:25 wiz Exp $
 
-DISTNAME=		convmv-1.13
+DISTNAME=		convmv-1.14
 CATEGORIES=		converters
 MASTER_SITES=		http://www.j3e.de/linux/convmv/
 
@@ -26,6 +26,7 @@ MAKEFLAGS+=		INSTALL_MAN=${INSTALL_MAN:Q}
 MAKEFLAGS+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
 
 REPLACE_PERL+=		${WRKSRC}/convmv
+REPLACE_PERL+=		suite/parsable_tester.pl
 REPLACE_SH+=		suite/dotests.sh
 
 CHECK_PORTABILITY_SKIP=	suite/test-nfd/*

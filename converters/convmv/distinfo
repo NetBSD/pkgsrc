@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/01/08 16:14:16 wiz Exp $
+$NetBSD: distinfo,v 1.6 2009/02/15 09:48:25 wiz Exp $
 
-SHA1 (convmv-1.13.tar.gz) = d226010584cae8223362287283ba5c63b079d1e8
-RMD160 (convmv-1.13.tar.gz) = a20eb333e944c3dc735e1fc8791f5a921c01caa3
-Size (convmv-1.13.tar.gz) = 26917 bytes
+SHA1 (convmv-1.14.tar.gz) = e6261eed4771014e84ffe68aac8041c02fb1834d
+RMD160 (convmv-1.14.tar.gz) = 3b9c2a89dccad4d0361241a71d588f37450338b0
+Size (convmv-1.14.tar.gz) = 26620 bytes
 SHA1 (patch-aa) = 294c1713940926745dda0c15e66c585dbb8fe47e
