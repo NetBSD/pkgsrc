@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.52 2009/02/15 11:45:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.53 2009/02/15 22:24:06 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -157,3 +157,5 @@ Pullup ticket #2698 - requested by minskim
 bison: portability fix
 Pullup ticket #2699 - requested by obache
 tor: security update
+Pullup ticket #2671 - requested by dholland
+mpack: security update
