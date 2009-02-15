@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/12/17 10:33:11 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/15 21:53:40 wiz Exp $
 
---- Makefile.orig	2006-05-12 18:39:38.000000000 +0200
+--- Makefile.orig	2007-12-17 22:05:00.000000000 +0000
 +++ Makefile
-@@ -1,6 +1,6 @@
+@@ -1,9 +1,9 @@
  
 -prefix = /usr/local
 -gamesdir = ${prefix}/games
@@ -10,4 +10,37 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/12/17 10:33:11 wiz Exp $
 +gamesdir = ${prefix}/bin
  datadir = ${prefix}/share
  pkgdatadir = $(datadir)/games/monsterz
- scoredir = /var/games
+-scoredir = /var/games
++scoredir = ${VARBASE}/games
+ scorefile = $(scoredir)/monsterz
+ 
+ VERSION = 0.7.1
+@@ -40,18 +40,17 @@ graphics/logo.png: graphics/graphics.svg
+ 	$(INKSCAPE) graphics/graphics.svg -a 810:858:1220:1075 -w380 -h180 -e graphics/logo.png
+ 
+ install: all
+-	mkdir -p $(DESTDIR)$(gamesdir)
+-	cp monsterz $(DESTDIR)$(gamesdir)/
+-	chown root:games $(DESTDIR)$(gamesdir)/monsterz
+-	chmod g+s $(DESTDIR)$(gamesdir)/monsterz
+-	mkdir -p $(DESTDIR)$(pkgdatadir)/graphics
+-	mkdir -p $(DESTDIR)$(pkgdatadir)/sound
+-	cp monsterz.py $(DESTDIR)$(pkgdatadir)/
+-	cp $(BITMAP) $(DESTDIR)$(pkgdatadir)/graphics/
+-	cp $(SOUND) $(MUSIC) $(DESTDIR)$(pkgdatadir)/sound/
+-	mkdir -p $(DESTDIR)$(scoredir)
++	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(gamesdir)
++	${BSD_INSTALL_GAME} monsterz $(DESTDIR)$(gamesdir)/
++	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(pkgdatadir)/graphics
++	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(pkgdatadir)/sound
++	${BSD_INSTALL_SCRIPT} monsterz.py $(DESTDIR)$(pkgdatadir)/
++	${BSD_INSTALL_GAME_DATA} $(BITMAP) $(DESTDIR)$(pkgdatadir)/graphics/
++	${BSD_INSTALL_GAME_DATA} $(SOUND) $(MUSIC) $(DESTDIR)$(pkgdatadir)/sound/
++	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(scoredir)
++	${BSD_INSTALL_GAME_DIR} $(DESTDIR)$(scoredir)
+ 	test -f $(DESTDIR)$(scorefile) || echo "" > $(DESTDIR)$(scorefile)
+-	chown root:games $(DESTDIR)$(scorefile)
++	chown ${GAMEOWN}:${GAMEGRP} $(DESTDIR)$(scorefile)
+ 	chmod g+w $(DESTDIR)$(scorefile)
+ 
+ uninstall:
