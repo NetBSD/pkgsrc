@@ -1,0 +1,6 @@
+The Perl 5 module Devel::ebug is a simple, extensible Perl debugger
+with a clean API. With this module, a Perl Perldebugger may easily
+be written. There are currently two user interfaces to Devel::debug,
+ebug and ebug_http. ebug is a console-based interface to debugging
+programs, much like perl5db.pl. ebug_http is an innovative web-based
+interface to debugging programs. Devel::ebug is a work in progress.
