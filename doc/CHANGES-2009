@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.588 2009/02/15 16:05:04 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.589 2009/02/15 16:07:14 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -810,3 +810,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-FreezeThaw to 0.45 [seb 2009-02-15]
 	Updated graphics/kipi-plugins to 0.1.7nb2 [wiz 2009-02-15]
 	Added graphics/quesoglc version 0.7.1 [jmcneill 2009-02-15]
+	Added games/warzone2100 version 2.1.1 [jmcneill 2009-02-15]
