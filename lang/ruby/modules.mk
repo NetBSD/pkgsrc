@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.23 2008/06/19 14:30:45 taca Exp $
+# $NetBSD: modules.mk,v 1.24 2009/02/15 03:16:37 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -15,6 +15,8 @@ CONFIGURE_ENV+=		RUBY=${RUBY:Q} RDOC=${RDOC:Q}
 
 #
 # extconf.rb support
+#
+# USE_RUBY_EXTCONF	Use extconf script.
 #
 # RUBY_EXTCONF		specify extconf script name (default: extconf.rb).
 # RUBY_EXTCONF_CHECK	make sure to check existence of Makefile after
@@ -79,16 +81,28 @@ ruby-extconf-configure:
 #
 # setup.rb support
 #
+# USE_RUBY_SETUP	Uset setup script.
+# USE_RUBY_SETUP_PKG	Use pkgsrc's ruby-setup package.
+#
 # RUBY_SETUP		specify setup script name (default: setup.rb).
 #
 .elif defined(USE_RUBY_SETUP) && empty(USE_RUBY_SETUP:M[nN][oO])
 
 RUBY_SETUP?=		setup.rb
 
+.if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
+BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-setup>=3.4.0:../../devel/ruby-setup
+.endif
+
 .if !target(do-configure)
 do-configure:	ruby-setup-configure
 
 ruby-setup-configure:
+.if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
+	@${ECHO_MSG} "===>  Use pkgsrc's ${RUBY_SETUP}"
+	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+		${CP} ${PREFIX}/${RUBY_VENDORLIB}/setup.rb ${RUBY_SETUP}
+.endif
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to configure"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_SETUP} config ${CONFIGURE_ARGS}
