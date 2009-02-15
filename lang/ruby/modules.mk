@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.24 2009/02/15 03:16:37 taca Exp $
+# $NetBSD: modules.mk,v 1.25 2009/02/15 03:20:03 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -99,7 +99,7 @@ do-configure:	ruby-setup-configure
 
 ruby-setup-configure:
 .if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
-	@${ECHO_MSG} "===>  Use pkgsrc's ${RUBY_SETUP}"
+	@${ECHO_MSG} "===>  Use pkgsrc's ruby-setup"
 	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
 		${CP} ${PREFIX}/${RUBY_VENDORLIB}/setup.rb ${RUBY_SETUP}
 .endif
