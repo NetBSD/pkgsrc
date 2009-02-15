@@ -1,0 +1,7 @@
+  The pam_mkhomedir module provides the means for automatic creation of
+home directories upon login, if necessary. Key Benefits are:
+
+ * Uses the Pluggable Authentication Module API defined in OSF DCE RFC 86.0.
+ * Removes the need to pre-create user home directories.
+
+  The software is distributed under the terms of the 2-clause BSD license.
