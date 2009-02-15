@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+bin/${RUBY_PKGPREFIX}-setup
+${RUBY_VENDORLIB}/setup.rb
+${RUBY_DOC}/setup/ChangeLog
+${RUBY_DOC}/setup/NEWS.en
+${RUBY_DOC}/setup/README.en
+${RUBY_DOC}/setup/TODO
+${RUBY_DOC}/setup/Usage_en.txt
+${RUBY_DOC}/setup/devel.html
+${RUBY_DOC}/setup/hookapi.html
+${RUBY_DOC}/setup/index.html
+${RUBY_DOC}/setup/ja/NEWS.ja
+${RUBY_DOC}/setup/ja/README.ja
+${RUBY_DOC}/setup/ja/Usage_ja.txt
+${RUBY_DOC}/setup/ja/devel.html
+${RUBY_DOC}/setup/ja/hookapi.html
+${RUBY_DOC}/setup/ja/index.html
+${RUBY_DOC}/setup/ja/metaconfapi.html
+${RUBY_DOC}/setup/ja/news.html
+${RUBY_DOC}/setup/ja/usage.html
+${RUBY_DOC}/setup/metaconfapi.html
+${RUBY_DOC}/setup/news.html
+${RUBY_DOC}/setup/usage.html
+${RUBY_EG}/setup/add-task.rb
+@dirrm ${RUBY_EG}/setup
+@dirrm ${RUBY_DOC}/setup/ja
+@dirrm ${RUBY_DOC}/setup
