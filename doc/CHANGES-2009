@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.571 2009/02/15 07:07:41 obache Exp $
+$NetBSD: CHANGES-2009,v 1.572 2009/02/15 08:03:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -793,3 +793,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added misc/zyGrib-maps version 2 [plunky 2009-02-14]
 	Added devel/ruby-setup version 3.4.0 [taca 2009-02-15]
 	Updated mail/cue to 20090209 [obache 2009-02-15]
+	Updated net/tor to 0.2.0.34 [obache 2009-02-15]
