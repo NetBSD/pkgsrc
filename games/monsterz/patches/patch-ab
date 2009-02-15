@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1 2009/02/15 21:53:40 wiz Exp $
+
+Fix 64-bit alignment issue with Python 2.5.
+http://sam.zoy.org/cgi-bin/viewcvs.cgi/monsterz.py?root=monsterz&rev=137&r1=135&r2=137
+
+Fix blit crash, using patch from Fedora:
+http://cvs.fedoraproject.org/viewvc/devel/monsterz/monsterz-0.7.1-blit-crash.patch?view=log
+
+--- monsterz.py.orig	2007-12-17 22:05:00.000000000 +0000
++++ monsterz.py
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/pkg/bin/python2.5
+ # -*- coding: utf-8 -*-
+ 
+ """
+@@ -108,7 +108,9 @@ def semi_grayscale(surf):
+                 M = int(max(r, g, b))
+                 m = int(min(r, g, b))
+                 val = (2 * M + r + g + b) / 5
+-                p[:] = (val + r) / 2, (val + g) / 2, (val + b) / 2
++		p[0] = (val + r) / 2
++		p[1] = (val + g) / 2
++		p[2] = (val + b) / 2
+                 if alpha[y][x] >= 250:
+                     alpha[y][x] = 255 - (M - m) * 3 / 4
+         del pixels
+@@ -129,7 +131,9 @@ def semi_transp(surf):
+                 r, g, b = p
+                 M = int(max(r, g, b))
+                 m = int(min(r, g, b))
+-                p[:] = (m + r) / 2, (m + g) / 2, (m + b) / 2
++		p[0] = (m + r) / 2
++		p[1] = (m + g) / 2
++		p[2] = (m + b) / 2
+                 if alpha[y][x] >= 250:
+                     alpha[y][x] = 255 - M * 2 / 3
+         del pixels
+@@ -829,10 +833,10 @@ class Game:
+             pass
+         else:
+             for x in range(4):
+-                for y, p in enumerate(alpha[x]):
+-                    alpha[x][y] = p * x / 4
+-                for y, p in enumerate(alpha[406 - x - 1]):
+-                    alpha[406 - x - 1][y] = p * x / 4
++                for y in range(len(alpha[x])):
++                    alpha[x][y] = alpha[x][y] * x / 4
++                for y in range(len(alpha[406 - x - 1])):
++                    alpha[406 - x - 1][y] = alpha[406 - x - 1][y] * x / 4
+             for col in alpha:
+                 l = len(col)
+                 for y in range(4):
+@@ -1287,10 +1291,10 @@ class Monsterz:
+             pass
+         else:
+             for x in range(10):
+-                for y, p in enumerate(alpha[x]):
+-                    alpha[x][y] = p * x / 12
+-                for y, p in enumerate(alpha[406 - x - 1]):
+-                    alpha[406 - x - 1][y] = p * x / 12
++                for y in range(len(alpha[x])):
++                    alpha[x][y] = alpha[x][y] * x / 12
++                for y in range(len(alpha[406 - x - 1])):
++                    alpha[406 - x - 1][y] = alpha[406 - x - 1][y] * x / 12
+             del alpha
+             scroll.unlock()
+         system.blit(scroll, (13, 437))
