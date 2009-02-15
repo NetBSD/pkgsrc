@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/19 15:06:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/15 03:34:51 taca Exp $
 ${RUBY_VENDORARCHLIB}/gtk.${RUBY_DLEXT}
 ${RUBY_EG}/gtk/calendar.rb
-${RUBY_EG}/gtk/doc/rbbr.rb
 ${RUBY_EG}/gtk/cursor.rb
+${RUBY_EG}/gtk/doc/rbbr.rb
 ${RUBY_EG}/gtk/dnd.rb
 ${RUBY_EG}/gtk/drawing.rb
 ${RUBY_EG}/gtk/helloworld.rb
