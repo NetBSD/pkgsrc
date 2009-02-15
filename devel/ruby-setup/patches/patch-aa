@@ -1,0 +1,50 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+
+Add shbang path and use vendordir.
+
+--- setup.rb.orig	2005-09-25 02:22:05.000000000 +0900
++++ setup.rb
+@@ -1,3 +1,4 @@
++#!env ruby
+ #
+ # setup.rb
+ #
+@@ -171,6 +172,9 @@ class ConfigTable
+       siteruby        = c['sitedir']
+       siterubyver     = c['sitelibdir']
+       siterubyverarch = c['sitearchdir']
++      vendorruby	= c['vendordir']
++      vendorrubyver	= c['vendorlibdir']
++      vendorrubyverarch	= c['vendorarchdir']
+     elsif newpath_p
+       # 1.4.4 <= V <= 1.6.3
+       libruby         = "#{c['prefix']}/lib/ruby"
+@@ -207,8 +211,8 @@ class ConfigTable
+               table['rbdir'] = '$librubyver'
+               table['sodir'] = '$librubyverarch'
+             when 'site'
+-              table['rbdir'] = '$siterubyver'
+-              table['sodir'] = '$siterubyverarch'
++              table['rbdir'] = '$vendorrubyver'
++              table['sodir'] = '$vendorrubyverarch'
+             when 'home'
+               setup_rb_error '$HOME was not set' unless ENV['HOME']
+               table['prefix'] = ENV['HOME']
+@@ -242,9 +246,15 @@ class ConfigTable
+                    'the directory for aux ruby libraries'),
+       PathItem.new('siterubyverarch', 'path', siterubyverarch,
+                    'the directory for aux ruby binaries'),
+-      PathItem.new('rbdir', 'path', '$siterubyver',
++      PathItem.new('vendorruby', 'path', vendorruby,
++          'the directory for version-independent aux ruby libraries'),
++      PathItem.new('vendorrubyver', 'path', vendorrubyver,
++                   'the directory for aux ruby libraries'),
++      PathItem.new('vendorrubyverarch', 'path', vendorrubyverarch,
++                   'the directory for aux ruby binaries'),
++      PathItem.new('rbdir', 'path', '$vendorrubyver',
+                    'the directory for ruby scripts'),
+-      PathItem.new('sodir', 'path', '$siterubyverarch',
++      PathItem.new('sodir', 'path', '$vendorrubyverarch',
+                    'the directory for ruby extentions'),
+       PathItem.new('rubypath', 'path', rubypath,
+                    'the path to set to #! line'),
