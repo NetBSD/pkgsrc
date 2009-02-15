@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.68 2008/12/12 09:08:05 wiz Exp $
+# $NetBSD: Makefile,v 1.68.2.1 2009/02/15 11:40:45 tron Exp $
 
 DISTNAME=		bison-2.4.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=bison/}
 EXTRACT_SUFX=		.tar.bz2
