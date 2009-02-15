@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/19 14:55:41 taca Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/15 03:33:59 taca Exp $
 
 DISTNAME=	html-parser-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-html-parser-${VERSION}
@@ -13,11 +13,16 @@ COMMENT=	HTML-parser package for Ruby
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
 
-USE_RUBY_INSTALL=	yes
 VERSION=		19990912p2
-INSTALLATION_DIRS=	${RUBY_DOC}/html-parser
+INSTALLATION_DIRS=	${RUBY_DOC}/html-parser ${RUBY_VENDORLIB}
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-post-install:
+SRCS=		formatter.rb html-parser.rb sgml-parser.rb
+
+do-install:
+.for f in ${SRCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_VENDORLIB}
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/README.html \
 		${DESTDIR}${PREFIX}/${RUBY_DOC}/html-parser
 
