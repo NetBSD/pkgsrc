@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.584 2009/02/15 11:32:42 tron Exp $
+$NetBSD: CHANGES-2009,v 1.585 2009/02/15 14:14:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/convmv to 1.14 [wiz 2009-02-15]
 	Updated audio/amarok to 1.4.10nb3 [wiz 2009-02-15]
 	Updated net/net-snmp to 5.4.2.1nb1 [tron 2009-02-15]
+	Updated textproc/p5-Text-RewriteRules to 0.17 [seb 2009-02-15]
