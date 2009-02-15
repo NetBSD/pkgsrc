@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/06/19 15:06:11 taca Exp $
+# $NetBSD: Makefile,v 1.41 2009/02/15 03:34:51 taca Exp $
 
 DISTNAME=	ruby-gtk-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-gtk-${VERSION}
@@ -16,7 +16,9 @@ USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 DOCS_EN=		README README.EXT doc/rbbr.rb
 DOCS_JA=		README.ja README.EXT.ja
-INSTALLATION_DIRS==	${RUBY_EG}/gtk/doc ${RUBY_EG}/gtk/test ${RUBY_EG}/gtk/testgtk
+INSTALLATION_DIRS==	${RUBY_VENDORLIB} ${RUBY_EG}/gtk/doc \
+			${RUBY_EG}/gtk/test ${RUBY_EG}/gtk/testgtk
+PKG_DESTDIR_SUPPORT=	destdir
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/*.rb ${DESTDIR}${PREFIX}/${RUBY_EG}/gtk
