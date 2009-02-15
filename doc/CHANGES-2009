@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.593 2009/02/15 18:15:08 seb Exp $
+$NetBSD: CHANGES-2009,v 1.594 2009/02/15 18:53:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -815,3 +815,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-REPL to 1.003004 [seb 2009-02-15]
 	Updated databases/p5-SQL-Abstract-Limit to 0.14.1 [seb 2009-02-15]
 	Updated databases/p5-DBIx-Class to 0.08012 [seb 2009-02-15]
+	Updated devel/ruby-rcsparse to 0.0.0.43 [wiz 2009-02-15]
