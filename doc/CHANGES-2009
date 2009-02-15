@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.574 2009/02/15 08:58:55 obache Exp $
+$NetBSD: CHANGES-2009,v 1.575 2009/02/15 08:59:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.77 [seb 2009-02-15]
 	Updated devel/p5-Moose to 0.70 [seb 2009-02-15]
 	Updated databases/p5-tokyocabinet to 1.23 [obache 2009-02-15]
+	Updated databases/ruby-tokyocabinet to 1.20 [obache 2009-02-15]
