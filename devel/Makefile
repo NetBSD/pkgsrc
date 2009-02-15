@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1113 2009/02/15 18:44:58 joerg Exp $
+# $NetBSD: Makefile,v 1.1114 2009/02/15 20:58:49 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -706,6 +706,7 @@ SUBDIR+=	p5-Perl6-Slurp
 SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
+SUBDIR+=	p5-Proc-Background
 SUBDIR+=	p5-Proc-Daemon
 SUBDIR+=	p5-Proc-PID-File
 SUBDIR+=	p5-Proc-Pidfile
