@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/15 09:43:38 wiz Exp $
 #
 
-DISTNAME=	gtkpod-0.99.12
-PKGREVISION=	2
+DISTNAME=	gtkpod-0.99.14
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkpod/}
-
-#PATCHFILES=	gtkpod-0.99.8_libgpod-0.4.2.diff
-#PATCH_SITES=	http://ftp.osuosl.org/pub/gentoo/distfiles/
-#PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://www.gtkpod.org/
