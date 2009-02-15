@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/19 14:53:34 taca Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/15 03:27:56 taca Exp $
 
 DISTNAME=	ruby-tcpwrap-0.6
 PKGNAME=	${RUBY_PKGPREFIX}-tcpwrap-0.6
@@ -18,6 +18,7 @@ DOCS_EN=		README.en doc/tcpwrap.html.en
 DOCS_JA=		README.ja doc/tcpwrap.html.ja
 
 INSTALLATION_DIRS=	${RUBY_DOC}/tcpwrap/ja ${RUBY_EG}/tcpwrap
+PKG_DESTDIR_SUPPORT=	destdir
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/sample/echod.rb \
