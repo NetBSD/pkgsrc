@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/12/06 08:48:03 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/15 18:52:40 joerg Exp $
 #
 
 DISTNAME=	hamlib-1.2.7.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hamlib/}
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://hamlib.sourceforge.net/
 COMMENT=	API for digital communications equipment
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -23,7 +25,6 @@ CONFIGURE_ARGS+=--without-tcl-binding \
 # when none is needed.
 CONFIGURE_ENV+=	PYTHON=/nonexistent
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/hamlib
+INSTALLATION_DIRS=	include/hamlib
 
 .include "../../mk/bsd.pkg.mk"
