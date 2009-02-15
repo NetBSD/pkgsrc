@@ -1,4 +1,4 @@
-$NetBSD: patch-dw,v 1.1 2009/02/14 16:17:06 spz Exp $
+$NetBSD: patch-dw,v 1.2 2009/02/15 10:45:02 spz Exp $
 
 --- src/rpslcheck/rpslcheck.cc.orig	2007-02-09 20:46:31.000000000 +0100
 +++ src/rpslcheck/rpslcheck.cc
@@ -20,3 +20,16 @@ $NetBSD: patch-dw,v 1.1 2009/02/14 16:17:06 spz Exp $
       {"-rusage", ARGV_BOOL, (char *) NULL,           (char *) &opt_rusage,
        "On termination print resource usage"},
       {"-stats", ARGV_BOOL, (char *) NULL,            (char *) &opt_stats,
+@@ -163,7 +167,11 @@ main(int argc, char **argv, char **envp)
+    
+    while (opt_my_as || cin ) {
+        if (opt_my_as) {
+-	  myAS = atoi(opt_my_as + 2);
++          const char *dot = strchr(opt_my_as,'.');
++          if (dot)
++             myAS = atoi(opt_my_as + 2)<<16 | atoi(dot+1);
++          else
++	     myAS = atoi(opt_my_as + 2);
+ 	  const AutNum *autnum = irr->getAutNum(myAS);
+           if (!autnum)	{
+           	std::cerr << "Error: no object for AS " << myAS << std::endl;

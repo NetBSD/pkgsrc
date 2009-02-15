@@ -1,0 +1,19 @@
+$NetBSD: patch-ef,v 1.1 2009/02/15 10:45:02 spz Exp $
+
+--- src/RtConfig/command.l.orig	2006-06-08 17:16:26.000000000 +0200
++++ src/RtConfig/command.l
+@@ -205,8 +205,12 @@ int yywrap () {
+ }
+ 
+ 
+-<USEFUL_LINE>[Aa][Ss][0-9]+ {
+-   yylval.as = atoi(yytext+2);
++<USEFUL_LINE>[Aa][Ss]([0-9]+|[0-9]+\.[0-9]+) {
++   const char *dot = strchr(yytext,'.');
++   if (dot)
++      yylval.as = atoi(yytext+2)<<16 | atoi(dot+1);
++   else
++      yylval.as = atoi(yytext+2);
+    LEXER_RETURN(TKN_ASNUM);
+ }
+ 
