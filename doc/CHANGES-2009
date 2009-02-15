@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.586 2009/02/15 14:26:55 seb Exp $
+$NetBSD: CHANGES-2009,v 1.587 2009/02/15 14:41:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -808,3 +808,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/net-snmp to 5.4.2.1nb1 [tron 2009-02-15]
 	Updated textproc/p5-Text-RewriteRules to 0.17 [seb 2009-02-15]
 	Updated devel/p5-FreezeThaw to 0.45 [seb 2009-02-15]
+	Updated graphics/kipi-plugins to 0.1.7nb2 [wiz 2009-02-15]
