@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 13:22:24 tonnerre Exp $
+lib/security/pam_mkhomedir.la
