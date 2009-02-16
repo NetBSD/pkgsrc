@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.606 2009/02/16 20:56:07 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.607 2009/02/16 22:38:34 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Moved time/wmcalclock to time/wmCalClock [wiz 2009-02-16]
 	Updated sysutils/cdrtools to 2.01.01.57 [wiz 2009-02-16]
 	Updated www/drupal6 to 6.9nb1 [adrianp 2009-02-16]
+	Updated net/Transmission to 1.50 [tnn 2009-02-16]
