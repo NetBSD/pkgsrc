@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.53 2009/02/15 22:24:06 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.54 2009/02/16 05:25:07 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -159,3 +159,7 @@ Pullup ticket #2699 - requested by obache
 tor: security update
 Pullup ticket #2671 - requested by dholland
 mpack: security update
+pullup ticket #2697 - requested by tron
+wireshark: update package for security fix
+pullup ticket #2700 - requested by tron
+net-snmp: security fix
