@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/01/18 05:06:23 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/16 18:37:04 joerg Exp $
 #
 
 DISTNAME=	epic4-2.2
@@ -15,11 +15,15 @@ MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
 
 GNU_CONFIGURE=	YES
+
+INSTALL_MAKE_FLAGS+=	IP=${DESTDIR}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
