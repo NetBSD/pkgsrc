@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1 2009/02/16 19:19:01 joerg Exp $
+
+--- examples/Makefile.in.orig	2009-02-16 20:16:44.000000000 +0100
++++ examples/Makefile.in
+@@ -15,10 +15,10 @@ CFGS = tfkiss.ini tfkiss.cfg
+ all:
+ 
+ install:
+-	$(MKDIR) ${tfkiss_conf_dir}
++	$(MKDIR) ${DESTDIR}${tfkiss_conf_dir}
+ 	@for i in $(CFGS); \
+ 	do \
+-		$(INSTALL_DATA) $$i ${tfkiss_conf_dir}; \
++		$(INSTALL_DATA) $$i ${DESTDIR}${tfkiss_conf_dir}; \
+ 	done;
+ 
+ clean:
