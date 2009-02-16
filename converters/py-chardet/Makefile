@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/08 09:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/16 19:26:00 joerg Exp $
 #
 
 DISTNAME=	chardet-1.0.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	bartosz@atom.eu.org
 HOMEPAGE=	http://chardet.feedparser.org/
 COMMENT=	Character encoding auto-detection in Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
