@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/10/14 02:16:03 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/16 20:22:18 joerg Exp $
 #
 
 DISTNAME=	BLT2.4z
@@ -12,6 +12,7 @@ HOMEPAGE=	http://blt.sourceforge.net/
 COMMENT=	Extension to Tcl/Tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/blt2.4z
 GNU_CONFIGURE=		YES
@@ -22,6 +23,8 @@ CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 MAKE_ENV+=		CP=${CP:Q}
 
 CHECK_INTERPRETER_SKIP+=	lib/*/demos/*.tcl
+
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
