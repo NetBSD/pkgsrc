@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2008/10/03 18:05:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/16 13:30:44 joerg Exp $
 
 DISTNAME=	sqlsharpgtk-0.4
 CATEGORIES=	databases
 MASTER_SITES=	http://forgeftp.novell.com/sqlsharpgtk/SQL-Sharp%20For%20GTK-Sharp%200.4/
 
-MAINTAINER=	pkgsrc-users@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://forge.novell.com/modules/xfmod/project/?sqlsharpgtk
 COMMENT=	GUI client for entering and running SQL commands and scripts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
