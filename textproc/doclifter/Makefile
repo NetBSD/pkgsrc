@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/16 10:25:16 wiz Exp $
 #
 
 DISTNAME=	doclifter-2.3
@@ -14,6 +14,8 @@ NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=		doclifter manlifter
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SUBST_CLASSES+=		bin-path
 SUBST_STAGE.bin-path=	pre-configure
 SUBST_FILES.bin-path=	manlifter
@@ -22,10 +24,12 @@ SUBST_SED.bin-path=	-e 's,@@BIN_PATH@@,${PREFIX}/bin,g'
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/doclifter ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doclifter.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKSRC}/manlifter ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/manlifter.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/doclifter ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doclifter.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/manlifter ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/manlifter.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

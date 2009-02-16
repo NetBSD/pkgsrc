@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/24 19:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/16 10:09:16 wiz Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
@@ -16,6 +16,7 @@ DEPENDS+=	p5-Time>=2003.0:../../time/p5-Time
 DEPENDS+=	p5-Time-Period>=1.0:../../time/p5-Time-Period
 
 PKG_SYSCONFSUBDIR=	dirvish
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXECUTABLES=	dirvish dirvish-runall dirvish-expire dirvish-locate
 MAN5=		dirvish.conf.5
@@ -37,16 +38,19 @@ do-build:
 
 do-install:
 	for f in ${EXECUTABLES}; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${PREFIX}/sbin; \
+		${INSTALL_SCRIPT} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/sbin; \
 	done
 	for f in ${MAN5}; do \
-		${INSTALL_MAN} ${WRKSRC}/$$f ${PREFIX}/${PKGMANDIR}/man5; \
+		${INSTALL_MAN} ${WRKSRC}/$$f \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man5; \
 	done
 	for f in ${MAN8}; do \
-		${INSTALL_MAN} ${WRKSRC}/$$f ${PREFIX}/${PKGMANDIR}/man8; \
+		${INSTALL_MAN} ${WRKSRC}/$$f \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8; \
 	done
 	for f in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/dirvish; \
+		${INSTALL_DATA} ${WRKSRC}/$$f \
+			${DESTDIR}${PREFIX}/share/doc/dirvish; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
