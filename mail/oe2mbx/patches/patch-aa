@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2005/02/05 16:27:39 zuntum Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/16 18:25:20 joerg Exp $
 
 --- makefile.orig	Sat Jun 17 17:30:36 2000
 +++ makefile
@@ -27,8 +27,8 @@ $NetBSD: patch-aa,v 1.1 2005/02/05 16:27:39 zuntum Exp $
  install : 
 -	test -e bin/* && install bin/* $(BINDIR) && echo oe2mbx binary installed || echo oe2mbx binary not prepared
 -	test -e lib/*.so && install lib/*.so $(LIBDIR) && install src/*.h $(INCLUDEDIR) && echo liboe library installed || echo liboe library not prepared
-+	test -r bin/* && ${INSTALL_PROGRAM} bin/* $(BINDIR) && echo oe2mbx binary installed || echo oe2mbx binary not prepared
-+	test -r lib/*.so && ${INSTALL_LIB} lib/*.so $(LIBDIR) && ${INSTALL_DATA} src/*.h $(INCLUDEDIR) && echo liboe library installed || echo liboe library not prepared
++	test -r bin/* && ${INSTALL_PROGRAM} bin/* ${DESTDIR}$(BINDIR) && echo oe2mbx binary installed || echo oe2mbx binary not prepared
++	test -r lib/*.so && ${INSTALL_LIB} lib/*.so ${DESTDIR}$(LIBDIR) && ${INSTALL_DATA} src/*.h ${DESTDIR}$(INCLUDEDIR) && echo liboe library installed || echo liboe library not prepared
  clean	:
 -	test -e bin/* && rm -f bin/* || test .
 -	test -e lib/* && rm -f lib/* || test .
