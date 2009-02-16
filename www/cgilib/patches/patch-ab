@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.9 2006/11/12 01:51:52 rillig Exp $
+$NetBSD: patch-ab,v 1.10 2009/02/16 19:16:57 joerg Exp $
 
 --- Makefile.orig	1999-08-20 23:14:07.000000000 +0200
 +++ Makefile	2006-11-12 02:49:34.000000000 +0100
@@ -51,17 +51,17 @@ $NetBSD: patch-ab,v 1.9 2006/11/12 01:51:52 rillig Exp $
  	done
 +
 +install:
-+	${BSD_INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin
-+	${BSD_INSTALL_DATA_DIR} ${PREFIX}/share/examples/cgilib
-+	${BSD_INSTALL_DATA} cgitest.c ${PREFIX}/share/examples/cgilib
-+	${BSD_INSTALL_DATA} jumpto.c ${PREFIX}/share/examples/cgilib
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcgi.la ${PREFIX}/lib
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} cgitest ${PREFIX}/libexec/cgi-bin
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} jumpto ${PREFIX}/libexec/cgi-bin
-+	${BSD_INSTALL_DATA} cgi.h ${PREFIX}/include
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/cgi-bin
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/cgilib
++	${BSD_INSTALL_DATA} cgitest.c ${DESTDIR}${PREFIX}/share/examples/cgilib
++	${BSD_INSTALL_DATA} jumpto.c ${DESTDIR}${PREFIX}/share/examples/cgilib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcgi.la ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} cgitest ${DESTDIR}${PREFIX}/libexec/cgi-bin
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} jumpto ${DESTDIR}${PREFIX}/libexec/cgi-bin
++	${BSD_INSTALL_DATA} cgi.h ${DESTDIR}${PREFIX}/include
 +	for i in *.3; do \
-+          ${BSD_INSTALL_MAN} $$i ${MANDIR}/man3/; \
++          ${BSD_INSTALL_MAN} $$i ${DESTDIR}${MANDIR}/man3/; \
 +        done
 +	for i in *.5; do \
-+          ${BSD_INSTALL_MAN} $$i ${MANDIR}/man5/; \
++          ${BSD_INSTALL_MAN} $$i ${DESTDIR}${MANDIR}/man5/; \
 +        done
