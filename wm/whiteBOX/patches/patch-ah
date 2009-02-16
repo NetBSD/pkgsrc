@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2009/02/16 14:15:28 joerg Exp $
+
+--- src/plugins/keybind/Makefile.in.orig	2009-02-16 15:05:47.000000000 +0100
++++ src/plugins/keybind/Makefile.in
+@@ -87,7 +87,7 @@ INCLUDES = \
+ 
+ lib_LTLIBRARIES = libwbkeybind.la
+ 
+-libdir = $(DESTDIR)$(pkgdatadir)/plugins
++libdir = $(pkgdatadir)/plugins
+ 
+ CFLAGS = -O2  -I$(top_srcdir)/intl @GTK_CFLAGS@
+ 
