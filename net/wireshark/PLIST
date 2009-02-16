@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11.10.1 2009/02/16 05:21:51 rtr Exp $
 bin/capinfos
 bin/dftest
 bin/dumpcap
@@ -58,6 +58,7 @@ share/wireshark/capinfos.html
 share/wireshark/cfilters
 share/wireshark/colorfilters
 share/wireshark/dfilters
+share/wireshark/diameter/TGPPRx.xml
 share/wireshark/diameter/TGPPSh.xml
 share/wireshark/diameter/chargecontrol.xml
 share/wireshark/diameter/dictionary.dtd
@@ -104,6 +105,7 @@ share/wireshark/radius/dictionary.alcatel
 share/wireshark/radius/dictionary.alteon
 share/wireshark/radius/dictionary.altiga
 share/wireshark/radius/dictionary.aptis
+share/wireshark/radius/dictionary.aruba
 share/wireshark/radius/dictionary.ascend
 share/wireshark/radius/dictionary.bay
 share/wireshark/radius/dictionary.bintec
