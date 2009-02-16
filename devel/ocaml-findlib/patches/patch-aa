@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/02/16 16:29:18 joerg Exp $
+
+--- Makefile.orig	2009-02-16 17:09:51.000000000 +0100
++++ Makefile
+@@ -22,7 +22,7 @@ install:
+ 	$(MAKE) install-meta
+ 	cd src/findlib; $(MAKE) install-num-top
+ 	$(MAKE) install-config
+-	cp tools/safe_camlp4 $(OCAMLFIND_BIN)
++	cp tools/safe_camlp4 ${DESTDIR}$(OCAMLFIND_BIN)
+ 
+ uninstall:
+ 	$(MAKE) uninstall-doc
