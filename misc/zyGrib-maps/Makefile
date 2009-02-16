@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/14 20:57:43 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/16 16:36:32 joerg Exp $
 #
 
 DISTNAME=	zyGrib-maps-2
@@ -12,7 +12,7 @@ COMMENT=	High resolution map files for zyGrib
 
 #LICENSE=	gnu-gpl
 
-DEPENDS+=	zyGrib>=2.0:../../wip/zyGrib
+DEPENDS+=	zyGrib>=2.0:../../misc/zyGrib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
