@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2008/10/24 18:52:31 adrianp Exp $
+# $NetBSD: options.mk,v 1.3 2009/02/16 21:02:26 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=		mysql pgsql
 
-PKG_SUPPORTED_OPTIONS=	drupal-xmlservices apache
+PKG_SUPPORTED_OPTIONS=	drupal-xmlservices apache unicode
 PKG_SUGGESTED_OPTIONS=	mysql drupal-xmlservices apache
 
 .include "../../mk/bsd.options.mk"
@@ -34,6 +34,13 @@ DEPENDS+=	${PHP_PKG_PREFIX}-domxml>=4.3.3:../../textproc/php4-domxml
 .	elif ${PKG_PHP_VERSION} == "5"
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
 .	endif
+.endif
+
+###
+### Support for unicode
+###
+.if !empty(PKG_OPTIONS:Municode)
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../misc/php-mbstring
 .endif
 
 ###
