@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/02/19 21:12:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.32 2009/02/16 18:46:42 joerg Exp $
 
 DISTNAME=		daemontools-0.76
 PKGREVISION=		1
@@ -17,6 +17,7 @@ SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 DJB_RESTRICTED=		no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/admin/${DISTNAME}
 DJB_SLASHPACKAGE=	YES
@@ -30,15 +31,13 @@ SUBST_FILES.djbware+=	src/error.h
 do-install:
 	(while read cmd; do \
 	  if ${FILE_CMD} ${CMDDIR}/$$cmd | ${EGREP} "(executable .* script|shell script|text)" >/dev/null 2>&1; then \
-	    ${INSTALL_SCRIPT} ${CMDDIR}/$$cmd ${PREFIX}/bin; \
+	    ${INSTALL_SCRIPT} ${CMDDIR}/$$cmd ${DESTDIR}${PREFIX}/bin; \
 	  else \
-	    ${INSTALL_PROGRAM} ${CMDDIR}/$$cmd ${PREFIX}/bin; \
+	    ${INSTALL_PROGRAM} ${CMDDIR}/$$cmd ${DESTDIR}${PREFIX}/bin; \
 	  fi \
 	done) < ${WRKSRC}/package/commands
-
-post-install:
 	cd ${WRKDIR}/*-man; for i in 8; do		 		\
-	for j in *.$$i; do ${INSTALL_MAN} $$j ${PREFIX}/${PKGMANDIR}/man$$i; done \
+	for j in *.$$i; do ${INSTALL_MAN} $$j ${DESTDIR}${PREFIX}/${PKGMANDIR}/man$$i; done \
 	done
 
 .include "../../mk/djbware.mk"
