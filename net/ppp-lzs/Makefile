@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/16 13:59:42 joerg Exp $
 
 DISTNAME=	ppp-lzs-1.2
 CATEGORIES=	net
@@ -8,7 +8,7 @@ MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://homepages.rya-online.net/plunky/lzs.html
 COMMENT=	PPP daemon and LKM with Stac LZS decompression
 
-BROKEN_IN=	pkgsrc-2005Q4 pkgsrc-2006Q1 pkgsrc-2006Q4
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		ppp-* ppp-mppe-*
 ONLY_FOR_PLATFORM=	NetBSD-*-*
@@ -51,17 +51,14 @@ do-patch:
 	    ${FALSE};							\
 	fi
 
-pre-install:
-.if !exists(${PREFIX}/lkm)
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lkm
-.endif
+INSTALLATION_DIRS=	lkm sbin ${PKGMANDIR}/cat8 ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m 4555 \
-		${WRKSRC}/pppd/pppd ${PREFIX}/sbin/pppd
-	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/pppd.0
-	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.8 ${PREFIX}/${PKGMANDIR}/man8/pppd.8
+		${WRKSRC}/pppd/pppd ${DESTDIR}${PREFIX}/sbin/pppd
+	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/pppd.0
+	${INSTALL_MAN} ${WRKSRC}/pppd/pppd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/pppd.8
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
-		${WRKSRC}/lkm/lzs.o ${PREFIX}/lkm/lzs.o
+		${WRKSRC}/lkm/lzs.o ${DESTDIR}${PREFIX}/lkm/lzs.o
 
 .include "../../mk/bsd.pkg.mk"
