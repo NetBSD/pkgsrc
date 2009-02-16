@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/04/16 17:21:34 drochner Exp $
+$NetBSD: patch-aa,v 1.3 2009/02/16 19:36:42 joerg Exp $
 
---- Makefile.pre.in.orig	2003-08-01 12:12:38.000000000 +0200
-+++ Makefile.pre.in	2003-08-01 18:33:45.000000000 +0200
-@@ -119,7 +119,7 @@
+--- Makefile.pre.in.orig	2005-10-01 02:14:45.000000000 +0200
++++ Makefile.pre.in
+@@ -120,7 +120,7 @@ LIBC=		@LIBC@
  RANLIB=		@RANLIB@
  MACHDEP=	@MACHDEP@
  SO=		@SO@
@@ -11,3 +11,12 @@ $NetBSD: patch-aa,v 1.2 2004/04/16 17:21:34 drochner Exp $
  BLDSHARED=      @LDSHARED@
  CCSHARED=	@CCSHARED@
  LINKFORSHARED=	@LINKFORSHARED@
+@@ -179,7 +179,7 @@ install-shmods: $(SHAREDMODS)
+ 	@if [ -n "$(SHAREDMODS)" ]; then \
+ 	  for mod in $(SHAREDMODS); do \
+ 	    echo "  install -m 555 $$mod $(PY_MOD_DIR)"; \
+-	    $(INSTALL) @INSTALLOPTS@ -m 555 $$mod $(PY_MOD_DIR); \
++	    $(INSTALL) @INSTALLOPTS@ -m 555 $$mod ${DESTDIR}$(PY_MOD_DIR); \
+ 	  done; \
+ 	fi
+ 
