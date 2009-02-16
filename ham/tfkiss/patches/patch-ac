@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/02/16 19:19:01 joerg Exp $
+
+--- src/Makefile.in.orig	2009-02-16 20:15:02.000000000 +0100
++++ src/Makefile.in
+@@ -72,8 +72,8 @@ tfkiss:		$(OBJS)
+ 		$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(LDFLAGS) -o tfkiss;
+ 
+ install:
+-		$(MKDIR) ${tfkiss_main_dir}/sbin; \
+-		$(INSTALL_PROGRAM) tfkiss ${tfkiss_main_dir}/sbin;
++		$(MKDIR) ${DESTDIR}${tfkiss_main_dir}/sbin; \
++		$(INSTALL_PROGRAM) tfkiss ${DESTDIR}${tfkiss_main_dir}/sbin;
+ 
+ clean:
+ 	rm -f   *.o *.core tfkiss .depend
