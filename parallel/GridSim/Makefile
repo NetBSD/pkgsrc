@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/01/23 21:14:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/16 13:34:38 joerg Exp $
 #
 
 DISTNAME=		gridsimtoolkit-3.0
@@ -9,7 +9,7 @@ MASTER_SITES=		http://www.gridbus.org/gridsim/download/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}-patch2${EXTRACT_SUFX}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gridbus.org/gridsim/
 COMMENT=		Toolkit for simulation of parallel systems
 
