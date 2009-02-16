@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.6.6.1 2009/02/16 05:24:29 rtr Exp $
+
+Patch for CVE-2008-6123, taken from here:
+
+http://net-snmp.svn.sourceforge.net/viewvc/net-snmp/branches/V5-4-patches/net-snmp/snmplib/snmpUDPDomain.c?r1=17312&r2=17367&pathrev=17367
+
+--- snmplib/snmpUDPDomain.c.orig	2007-10-11 21:46:30.000000000 +0100
++++ snmplib/snmpUDPDomain.c	2009-02-15 11:21:10.000000000 +0000
+@@ -107,9 +107,9 @@
+             sprintf(tmp, "UDP: [%s]->unknown",
+                     inet_ntoa(addr_pair->local_addr));
+         } else {
+-            sprintf(tmp, "UDP: [%s]->", inet_ntoa(addr_pair->local_addr));
+-            sprintf(tmp + strlen(tmp), "[%s]:%hd",
++            sprintf(tmp, "UDP: [%s]:%hu->",
+                     inet_ntoa(to->sin_addr), ntohs(to->sin_port));
++            sprintf(tmp + strlen(tmp), "[%s]", inet_ntoa(addr_pair->local_addr));
+         }
+         return strdup(tmp);
+     }
