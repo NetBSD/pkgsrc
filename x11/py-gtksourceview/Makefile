@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/11 14:23:32 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/16 19:28:45 joerg Exp $
 #
 
 DISTNAME=	pygtksourceview-2.4.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for gtksourceview2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
