@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/02/09 21:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2009/02/16 19:36:42 joerg Exp $
 #
 
 DISTNAME=	psycopg-1.1.21
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://initd.org/projects/psycopg1/
 COMMENT=	PostgreSQL database adapter for Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+= --with-python=${PYTHONBIN:Q}
 CONFIGURE_ARGS+= \
@@ -19,6 +21,8 @@ CONFIGURE_ARGS+= \
 BUILD_TARGET=	default
 
 PY_PATCHPLIST=	yes
+
+INSTALLATION_DIRS=	${PYSITELIB}
 
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
