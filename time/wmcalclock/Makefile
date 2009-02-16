@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/16 11:51:14 wiz Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
@@ -11,8 +11,10 @@ MAINTAINER=	wiz@NetBSD.org
 COMMENT=	Another WindowMaker calendar/clock dockapp
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
-USE_X11BASE=	YES
 USE_TOOLS+=	gmake
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,11 +22,10 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	EXTRALIBS="-lsocket -lnsl"
 .endif
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/wmCalClock.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_PROGRAM} ${WRKSRC}/wmCalClock ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/wmCalClock.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/wmCalClock ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
