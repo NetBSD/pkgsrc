@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2009/02/16 14:15:28 joerg Exp $
+
+--- src/plugins/style/Makefile.in.orig	2009-02-16 15:07:00.000000000 +0100
++++ src/plugins/style/Makefile.in
+@@ -87,7 +87,7 @@ INCLUDES = \
+ 
+ lib_LTLIBRARIES = libwbstyle.la
+ 
+-libdir = $(DESTDIR)$(pkgdatadir)/plugins
++libdir = $(pkgdatadir)/plugins
+ 
+ CFLAGS = -g -O2 -Wall -I$(top_srcdir)/intl @GTK_CFLAGS@
+ 
