@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/01/23 21:14:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/16 13:55:00 joerg Exp $
 
 DISTNAME=		opera-acroread7-1.0
 PKGREVISION=		3
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Acrobat Reader 7 plugin for opera
 
 PKG_DESTDIR_SUPPORT=	user-destdir
