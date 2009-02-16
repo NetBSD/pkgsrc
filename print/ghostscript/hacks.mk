@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2008/11/13 17:36:54 chuck Exp $
+# $NetBSD: hacks.mk,v 1.3 2009/02/16 12:23:14 drochner Exp $
 
 ### [Tue Jan  9 15:57:05 EST 2007 : tv]
 ### Interix has u_int64_t, but not uint64_t
@@ -16,7 +16,7 @@ CPPFLAGS.Interix+=	-Duint64_t=u_int64_t
 ### to make it work.
 .if ${OPSYS} == "Darwin"
 post-patch:
-	${SED} -e 's/^#Darwin#//' ${WRKSRC}/src/unix-dll.mak > \
-		${WRKSRC}/src/unix-darwin.mak
-	${MV} ${WRKSRC}/src/unix-darwin.mak ${WRKSRC}/src/unix-dll.mak
+	${SED} -e 's/^#Darwin#//' ${WRKSRC}/base/unix-dll.mak > \
+		${WRKSRC}/base/unix-darwin.mak
+	${MV} ${WRKSRC}/base/unix-darwin.mak ${WRKSRC}/base/unix-dll.mak
 .endif
