@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2009/02/15 08:59:26 obache Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/16 11:26:40 obache Exp $
 #
 
 DISTNAME=	tokyocabinet-ruby-1.20
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
+DIST_SUBDIR=	${DISTNAME}-1
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/rubydoc/
