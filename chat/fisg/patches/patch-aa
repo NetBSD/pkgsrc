@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/03 23:13:00 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/16 22:14:43 snj Exp $
 --- Makefile.orig	2003-02-18 02:59:18.000000000 -0800
 +++ Makefile	2003-09-28 18:41:07.000000000 -0700
 @@ -1,11 +1,19 @@
@@ -18,9 +18,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/12/03 23:13:00 xtraeme Exp $
  include Makefile.gen
 +
 +install: $(FISGEXE)
-+	$(BSD_INSTALL_PROGRAM) $(FISGEXE) $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/fisg
-+	$(BSD_INSTALL_DATA) ../example.cfg $(PREFIX)/share/examples/fisg
-+	$(BSD_INSTALL_DATA) ../users.cfg $(PREFIX)/share/examples/fisg
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/fisg
-+	$(BSD_INSTALL_DATA) ../data/* $(PREFIX)/share/fisg
++	$(BSD_INSTALL_PROGRAM) $(FISGEXE) $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/examples/fisg
++	$(BSD_INSTALL_DATA) ../example.cfg $(DESTDIR)$(PREFIX)/share/examples/fisg
++	$(BSD_INSTALL_DATA) ../users.cfg $(DESTDIR)$(PREFIX)/share/examples/fisg
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/share/fisg
++	$(BSD_INSTALL_DATA) ../data/* $(DESTDIR)$(PREFIX)/share/fisg
