@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/09/12 11:33:44 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2009/02/16 09:56:09 wiz Exp $
 #
 
 DISTNAME=	tin-1.8.3
@@ -21,6 +21,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
+
+INSTALLATION_DIRS=	share/doc/tin
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # for tinews.pl
 USE_TOOLS+=	perl:run yacc
 REPLACE_PERL=	tools/*.pl
@@ -52,8 +56,7 @@ post-configure:
 	${ECHO} '#define SMTP_SERVER_FILE "${PREFIX}/etc/smtpserver"' >>${WRKSRC}/include/autoconf.h
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tin
-	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${PREFIX}/share/doc/tin
+	${INSTALL_DATA} ${WRKSRC}/doc/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/tin
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../converters/uulib/buildlink3.mk"
