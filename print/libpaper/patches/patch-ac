@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/02/16 18:05:44 drochner Exp $
+
+--- lib/paper.h.orig	1996-09-24 09:16:07.000000000 +0200
++++ lib/paper.h
+@@ -22,7 +22,7 @@
+  *
+  */
+ 
+-#if __STDC__ - 0 == 0
++#if !defined(__STDC__)
+ 
+ #define __PAPER_CONST
+ #define __PAPER_PROTO(p)	()
