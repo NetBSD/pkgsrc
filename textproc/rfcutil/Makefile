@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/01/04 15:37:07 hubertf Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/16 18:48:54 joerg Exp $
 #
 
 DISTNAME=	rfc-3.2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	#
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.dewn.com/rfc/
 COMMENT=	Search for RFCs and do ports, services & protocol lookups
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	#
@@ -31,6 +33,6 @@ do-extract:
 		<${DISTDIR}/${DISTNAME} >${WRKSRC}/rfc
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/rfc ${PREFIX}/bin/rfc
+	${INSTALL_SCRIPT} ${WRKSRC}/rfc ${DESTDIR}${PREFIX}/bin/rfc
 
 .include "../../mk/bsd.pkg.mk"

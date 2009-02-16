@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/16 18:51:16 joerg Exp $
 #
 
 DISTNAME=	safetynet-1.15
@@ -9,11 +9,13 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.unixpimps.org/safetynet/
 COMMENT=	Safetynet is a perl script intended to monitor system services
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 
-INSTALLATION_DIRS=	bin etc
+INSTALLATION_DIRS=	bin etc share/doc/safetynet
 
 post-patch:
 	${SED}	-e "s,/etc/safetynet.conf,${PREFIX}/etc/safetynet.conf,g" \
@@ -28,9 +30,8 @@ post-patch:
 	${MV} ${WRKSRC}/safetynet.conf.done ${WRKSRC}/safetynet.conf
 
 do-install:
-	${INSTALL_SCRIPT} -m 700 ${WRKSRC}/safetynet ${PREFIX}/bin/safetynet
-	${INSTALL_DATA} -m 600 ${WRKSRC}/safetynet.conf ${PREFIX}/etc/safetynet.conf.sample
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/safetynet
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/safetynet/README
+	${INSTALL_SCRIPT} -m 700 ${WRKSRC}/safetynet ${DESTDIR}${PREFIX}/bin/safetynet
+	${INSTALL_DATA} -m 600 ${WRKSRC}/safetynet.conf ${DESTDIR}${PREFIX}/etc/safetynet.conf.sample
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/safetynet/README
 
 .include "../../mk/bsd.pkg.mk"
