@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/10/09 09:45:43 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/02/16 12:06:35 wiz Exp $
 #
 
 DISTNAME=	surfraw-2.2.3
@@ -11,6 +11,8 @@ COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
 
 CONFLICTS+=	surfaw-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--disable-sr
@@ -21,6 +23,7 @@ REPLACE_PERL+=		surfraw-update-path.IN opensearch-discover \
 DOCDIR=			${PREFIX}/share/doc/surfraw
 EGDIR=			${PREFIX}/share/examples/surfraw
 INSTALLATION_DIRS=	${DOCDIR}
+INSTALL_MAKE_FLAGS=	sysconfdir=${EGDIR}
 
 CONF_FILES=		${EGDIR}/surfraw.conf ${PKG_SYSCONFDIR}/surfraw.conf
 CONF_FILES+=		${EGDIR}/surfraw.bookmarks ${PKG_SYSCONFDIR}/surfraw.bookmarks
@@ -34,13 +37,10 @@ post-patch:
 	${SED} -e s/sr/surfraw/g ${WRKSRC}/elvi.1sr.IN > ${WRKSRC}/elvi.1sr.IN.new
 	${MV} ${WRKSRC}/elvi.1sr.IN.new ${WRKSRC}/elvi.1sr.IN
 
-# Override installation to install config files in example dir
-do-install:
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_ARGS} sysconfdir=${EGDIR} install
-
 # fix man page name; install additional documentation
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${MV} ${PREFIX}/${PKGMANDIR}/man1/elvi.1sr ${PREFIX}/${PKGMANDIR}/man1/elvi.1
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/elvi.1sr \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/elvi.1
 
 .include "../../mk/bsd.pkg.mk"
