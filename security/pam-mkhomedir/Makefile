@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/15 13:21:52 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/16 16:42:38 joerg Exp $
 
 DISTNAME=	pam-mkhomedir-1
 CATEGORIES=	security
@@ -31,7 +31,7 @@ do-build:
 
 do-install:
 	${SHLIBTOOL} --mode=install ${INSTALL_PROGRAM} -c		\
-		${WRKSRC}/pam_mkhomedir.la ${PREFIX}/lib/security
+		${WRKSRC}/pam_mkhomedir.la ${DESTDIR}${PREFIX}/lib/security
 
 # Fix (workaround?) a bug with openpam/NetBSD
 # The bug is described in PR security/39313.
