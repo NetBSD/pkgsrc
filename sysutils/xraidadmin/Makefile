@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/01/23 21:14:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/16 13:40:11 joerg Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3.1archive
@@ -7,9 +7,11 @@ PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.info.apple.com/Mac_OS_X/061-1325.20040706.bNhy4/
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.apple.com/downloads/macosx/apple/xserveraidadmintools.html
 COMMENT=		Tool to administer Apple's Xserve RAID
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=		apple-admin-license
 
@@ -24,7 +26,7 @@ WRKSRC=			${WRKDIR}/RAID\ Admin\ 1.3.1
 NO_BUILD=		yes
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin libexec/xraidadmin
 
 do-configure:
 	${SED} -e 's|@SH@|${SH}|' -e 's|@PKG_JAVA_HOME@|${PKG_JAVA_HOME}|' \
@@ -32,9 +34,8 @@ do-configure:
 		${WRKSRC}/xraidadmin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/xraidadmin
-	${INSTALL_DATA} ${WRKSRC}/RAID_Admin.jar ${PREFIX}/libexec/xraidadmin/RAID_Admin.jar
-	${INSTALL_SCRIPT} ${WRKSRC}/xraidadmin ${PREFIX}/bin/xraidadmin
+	${INSTALL_DATA} ${WRKSRC}/RAID_Admin.jar ${DESTDIR}${PREFIX}/libexec/xraidadmin/RAID_Admin.jar
+	${INSTALL_SCRIPT} ${WRKSRC}/xraidadmin ${DESTDIR}${PREFIX}/bin/xraidadmin
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
