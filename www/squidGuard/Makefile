@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/15 17:34:48 taca Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/16 19:06:51 joerg Exp $
 #
 
 DISTNAME=	squidGuard-1.3
@@ -12,6 +12,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.squidguard.org/
 COMMENT=	Ultrafast and free filter, redirector and access controller for Squid
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=	db4
 GNU_CONFIGURE=	YES
