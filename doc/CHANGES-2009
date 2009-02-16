@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.603 2009/02/16 11:26:55 obache Exp $
+$NetBSD: CHANGES-2009,v 1.604 2009/02/16 11:54:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/digikam to 0.9.5beta2nb1 [wiz 2009-02-15]
 	Updated databases/p5-tokyocabinet to 1.23nb1 [obache 2009-02-16]
 	Updated databases/ruby-tokyocabinet to 1.20nb1 [obache 2009-02-16]
+	Moved time/wmcalclock to time/wmCalClock [wiz 2009-02-16]
