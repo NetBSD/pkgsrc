@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2003/10/06 07:53:04 jlam Exp $
+$NetBSD: patch-aa,v 1.4 2009/02/16 18:49:58 joerg Exp $
 
 --- Makefile.orig	Thu Feb 15 04:47:36 2001
 +++ Makefile
@@ -25,8 +25,8 @@ $NetBSD: patch-aa,v 1.3 2003/10/06 07:53:04 jlam Exp $
  install:
 -	$(CP) sniff2 $(INSTALL_DIR)
 -	$(CP) sniff2.1 $(INSTALL_MAN)/man1
-+	$(BSD_INSTALL_PROGRAM) sniff2 $(INSTALL_DIR)
-+	$(BSD_INSTALL_MAN) sniff2.1 $(INSTALL_MAN)/man1
++	$(BSD_INSTALL_PROGRAM) sniff2 ${DESTDIR}$(INSTALL_DIR)
++	$(BSD_INSTALL_MAN) sniff2.1 ${DESTDIR}$(INSTALL_MAN)/man1
  clean: 
  	$(RM)  $(OBJS) sniff2
  
