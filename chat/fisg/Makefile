@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:23 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/16 22:14:43 snj Exp $
 
 DISTNAME=		fisg-0.2.0
 PKGREVISION=		1
@@ -11,5 +11,9 @@ COMMENT=		Fast IRC statistics generator
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=		gmake
+
+INSTALLATION_DIRS+=	bin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"
