@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2009/02/16 16:49:16 joerg Exp $
 
 SHA1 (python-biggles-1.6.3.tar.gz) = ada51bb368f504151c3e65d776b0314dd6f534df
 RMD160 (python-biggles-1.6.3.tar.gz) = a5723e0ca332bac741079e5ccabff10459ef1be6
 Size (python-biggles-1.6.3.tar.gz) = 107760 bytes
+SHA1 (patch-aa) = 53e927eb559d145e247173e1ad4b125e5374cbcc
