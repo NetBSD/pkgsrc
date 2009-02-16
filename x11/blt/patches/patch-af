@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2009/02/16 20:22:18 joerg Exp $
+
+--- Makefile.in.orig	2009-02-16 21:12:29.000000000 +0100
++++ Makefile.in
+@@ -47,9 +47,9 @@ install-all:
+ 	(cd library; $(MAKE) install)
+ 	(cd man; $(MAKE) install)
+ 	(cd demos; $(MAKE) install)
+-	$(INSTALL_DATA) $(srcdir)/README $(INSTALL_DIR)$(scriptdir)
+-	$(INSTALL_DATA) $(srcdir)/PROBLEMS $(INSTALL_DIR)$(scriptdir)
+-	$(INSTALL_DATA) $(srcdir)/NEWS $(INSTALL_DIR)$(scriptdir)
++	$(INSTALL_DATA) $(srcdir)/README ${DESTDIR}$(INSTALL_DIR)$(scriptdir)
++	$(INSTALL_DATA) $(srcdir)/PROBLEMS ${DESTDIR}$(INSTALL_DIR)$(scriptdir)
++	$(INSTALL_DATA) $(srcdir)/NEWS ${DESTDIR}$(INSTALL_DIR)$(scriptdir)
+ 
+ mkdirs:
+ 	@for i in $(instdirs) ; do \
