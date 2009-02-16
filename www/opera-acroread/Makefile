@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2009/01/23 21:14:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/16 13:55:00 joerg Exp $
 
 DISTNAME=		opera-acroread-1.0
 PKGREVISION=		4
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Acrobat Reader 4 plugin for opera
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		acroread-4.[0-9]*:../../print/acroread
 CONFLICTS+=		opera-acroread3-[0-9]*
