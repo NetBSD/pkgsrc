@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/18 15:45:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/16 20:05:12 joerg Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/native_libs.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/lxml/ElementInclude.py
 ${PYSITELIB}/lxml/ElementInclude.pyc
 ${PYSITELIB}/lxml/ElementInclude.pyo
@@ -65,4 +71,5 @@ ${PYSITELIB}/lxml/usedoctest.py
 ${PYSITELIB}/lxml/usedoctest.pyc
 ${PYSITELIB}/lxml/usedoctest.pyo
 @dirrm ${PYSITELIB}/lxml/html
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
 @dirrm ${PYSITELIB}/lxml
