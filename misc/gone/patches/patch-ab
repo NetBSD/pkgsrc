@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2009/02/16 18:29:53 joerg Exp $
+
+--- Makefile.in.orig	2009-02-16 19:26:13.000000000 +0100
++++ Makefile.in
+@@ -44,9 +44,8 @@ gone.1:
+ 	    -e s+_BINPATH_+${binpath}+g gone.man > gone.${manext}
+ 
+ install: gone gone.1
+-	strip ${srcdir}/gone
+-	${INSTALL_PROGRAM} gone ${bindir}/gone 
+-	-${INSTALL_DATA} ${srcdir}/gone.${manext} ${mandir}/gone.${manext}
++	${INSTALL_PROGRAM} gone ${DESTDIR}${bindir}/gone 
++	${INSTALL_DATA} ${srcdir}/gone.${manext} ${DESTDIR}${mandir}/gone.${manext}
+ 
+ gone.o: gone.c config.h Makefile
+ 	${CC} -c ${CFLAGS} gone.c
