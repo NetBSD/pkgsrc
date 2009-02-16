@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.604 2009/02/16 11:54:09 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.605 2009/02/16 14:13:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -826,3 +826,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-tokyocabinet to 1.23nb1 [obache 2009-02-16]
 	Updated databases/ruby-tokyocabinet to 1.20nb1 [obache 2009-02-16]
 	Moved time/wmcalclock to time/wmCalClock [wiz 2009-02-16]
+	Updated sysutils/cdrtools to 2.01.01.57 [wiz 2009-02-16]
