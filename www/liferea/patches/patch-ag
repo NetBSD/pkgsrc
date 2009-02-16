@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 2009/02/16 17:34:17 drochner Exp $
+
+--- configure.orig	2009-02-10 20:01:34.000000000 +0100
++++ configure
+@@ -23343,6 +23343,7 @@ else
+ fi
+ 
+ 
++if false; then
+ { $as_echo "$as_me:$LINENO: checking for 64bit platform" >&5
+ $as_echo_n "checking for 64bit platform... " >&6; }
+ case "$target" in
+@@ -23356,6 +23357,7 @@ $as_echo "yes -> disabling GtkHTML2" >&6
+ $as_echo "no" >&6; }
+      ;;
+ esac
++fi
+ 
+ 
+ { $as_echo "$as_me:$LINENO: checking for some Win32 platform" >&5
