@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/02/05 19:44:53 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2009/02/16 19:44:28 joerg Exp $
 
---- installp.py.orig	Tue Feb  5 20:19:55 2002
-+++ installp.py	Tue Feb  5 20:20:11 2002
-@@ -15,7 +15,7 @@
+--- installp.py.orig	1999-02-04 05:59:11.000000000 +0100
++++ installp.py
+@@ -14,12 +14,12 @@ def main():
          print "Usage: %s [-f] pymodule [npymodule...]" % sys.argv[0]
          sys.exit(1)
      for opt in opts:
@@ -11,3 +11,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/02/05 19:44:53 drochner Exp $
  
      v = sys.version[:3]
  
+     if string.atof(v) >= 1.5:
+-        sp = "%s/lib/python%s/site-packages" % (sys.prefix, v)
++        sp = "%s%s/lib/python%s/site-packages" % (os.environ.get("DESTDIR", ""), sys.prefix, v)
+         if not os.path.exists(sp):
+             os.mkdir(sp)
+     else:
