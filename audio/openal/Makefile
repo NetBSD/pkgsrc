@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2008/07/18 13:43:26 obache Exp $
+# $NetBSD: Makefile,v 1.24 2009/02/16 12:46:00 drochner Exp $
 
 DISTNAME=	openal-0.0.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://www.openal.org/openal_webstf/downloads/
 
