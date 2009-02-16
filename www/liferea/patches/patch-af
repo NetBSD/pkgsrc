@@ -1,23 +1,31 @@
-$NetBSD: patch-af,v 1.4 2009/01/18 01:59:42 drochner Exp $
+$NetBSD: patch-af,v 1.5 2009/02/16 17:34:17 drochner Exp $
 
---- src/ui/ui_itemlist.c.orig	2009-01-18 02:25:45.000000000 +0100
+--- src/ui/ui_itemlist.c.orig	2008-12-28 10:21:00.000000000 +0100
 +++ src/ui/ui_itemlist.c
-@@ -416,6 +416,7 @@ ui_itemlist_add_item (itemPtr item) 
- 	{
- 		GtkTreeIter *iter = &old_iter;
- 		gint state = 0;
-+		unsigned long tmp_time; /* match column type */
- 		
- 		node = node_from_id (item->nodeId);
- 		if(!node)
-@@ -433,8 +434,9 @@ ui_itemlist_add_item (itemPtr item) 
- 		if (!item->readStatus)
+@@ -76,7 +76,7 @@ static gboolean ui_item_id_to_iter(gulon
+ 
+ /* sort function for the item list date column */
+ static gint ui_itemlist_date_sort_func(GtkTreeModel *model, GtkTreeIter *a, GtkTreeIter *b, gpointer user_data) {
+-	gulong	timea, timeb;
++	gint64	timea, timeb;
+ 	double	diff;
+ 
+ 	gtk_tree_model_get(model, a, IS_TIME, &timea, -1);
+@@ -129,7 +129,7 @@ GtkTreeStore * ui_itemlist_get_tree_stor
+ 	model = gtk_tree_view_get_model(GTK_TREE_VIEW(itemlist_treeview));
+ 	if(!model) {
+ 		itemstore = gtk_tree_store_new(IS_LEN,
+-		                               G_TYPE_ULONG,	/* IS_TIME */
++		                               G_TYPE_INT64,	/* IS_TIME */
+ 		                               G_TYPE_STRING, 	/* IS_TIME_STR */
+ 		                               G_TYPE_STRING,	/* IS_LABEL */
+ 		                               GDK_TYPE_PIXBUF,	/* IS_STATEICON */
+@@ -434,7 +434,7 @@ ui_itemlist_add_item (itemPtr item) 
  			state += 1;
  
-+		tmp_time = item->time;
  		gtk_tree_store_set (itemstore, iter,
 -		                	       IS_TIME, item->time,
-+		                	       IS_TIME, tmp_time,
++		                	       IS_TIME, (gint64)item->time,
  		                	       IS_NR, item->id,
  					       IS_PARENT, node,
  		                               IS_FAVICON, node->icon,
