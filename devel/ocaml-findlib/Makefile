@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/16 16:29:18 joerg Exp $
 #
 
 DISTNAME=		findlib-1.1.2pl1
 PKGNAME=		ocaml-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml-programming.de/packages/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ocaml-programming.de/packages/
 COMMENT=		Library finder for OCaml
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake m4
 USE_PKGLOCALEDIR=	yes
@@ -19,8 +21,9 @@ CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-config ${PKG_SYSCONFDIR}/ocamlfind.conf
 
 EGDIR=			${PREFIX}/share/examples/ocaml-findlib
-INSTALL_MAKE_FLAGS+=	OCAMLFIND_CONF=${EGDIR}/ocamlfind.conf
-INSTALLATION_DIRS=	libexec
+INSTALL_MAKE_FLAGS+=	OCAMLFIND_CONF=${EGDIR}/ocamlfind.conf \
+			prefix=${DESTDIR}
+INSTALLATION_DIRS=	libexec bin
 
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
 
@@ -32,11 +35,16 @@ SUBST_SED.ofr=		-e 's,@SH@,'${SH:Q}','
 SUBST_SED.ofr+=		-e 's,@PREFIX@,${PREFIX},'
 SUBST_SED.ofr+=		-e 's,@FGREP@,'${FGREP:Q}','
 
+SUBST_CLASSES+=		pathes
+SUBST_STAGE.pathes=	post-install
+SUBST_FILES.pathes=	${DESTDIR}${PREFIX}/lib/ocaml/site-lib/findlib/Makefile.config
+SUBST_SED.pathes=	-e 's,^\(OCAML_CORE_BIN=\).*,\1'${PREFIX:Q}/bin','
+
 post-extract:
 	${CP} ${FILESDIR}/ocaml-findlib-register.sh ${WRKSRC}
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ocaml-findlib-register.sh ${PREFIX}/libexec/ocaml-findlib-register
+	${INSTALL_SCRIPT} ${WRKSRC}/ocaml-findlib-register.sh ${DESTDIR}${PREFIX}/libexec/ocaml-findlib-register
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
