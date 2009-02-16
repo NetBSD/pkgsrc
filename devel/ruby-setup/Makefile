@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/16 16:39:36 joerg Exp $
 # $FreeBSD: ports/devel/ruby-setup.rb/Makefile,v 1.20 2006/06/08 20:25:19 sem Exp $
 #
 
@@ -20,6 +20,8 @@ REPLACE_RUBY=	setup.rb
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${RUBY_DOC}/setup/ja ${RUBY_EG}/setup \
 			${RUBY_VENDORLIB}
+
+PLIST_SUBST+=		RUBY_PKGPREFIX=${RUBY_PKGPREFIX:Q}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/setup.rb \
