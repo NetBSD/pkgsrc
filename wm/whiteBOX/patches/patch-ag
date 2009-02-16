@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/02/16 14:15:28 joerg Exp $
+
+--- src/plugins/bgset/Makefile.in.orig	2009-02-16 15:05:13.000000000 +0100
++++ src/plugins/bgset/Makefile.in
+@@ -88,7 +88,7 @@ INCLUDES = \
+ 
+ lib_LTLIBRARIES = libwbbgset.la
+ 
+-libdir = $(DESTDIR)$(pkgdatadir)/plugins
++libdir = $(pkgdatadir)/plugins
+ 
+ CFLAGS = -g -O2  -I$(top_srcdir)/intl @GTK_CFLAGS@ @GDK_PIXBUF_CFLAGS@
+ 
