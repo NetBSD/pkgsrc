@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2009/02/17 19:13:46 joerg Exp $
+
+--- compiler/Error.h.orig	2009-02-17 20:01:36.000000000 +0100
++++ compiler/Error.h
+@@ -89,7 +89,7 @@ public:
+ 	};
+ 	
+ 			Error(ErrorCode code, int data=0) : fCode(code), fData(data) {}
+-			Error(ErrorCode code, const char *s) : fCode(code), fData((int)s) {}
++			Error(ErrorCode code, const char *s) : fCode(code), fData((size_t)s) {}
+ 
+ 	// raising errors
+ 	void	Raise(const LexLocation *loc) const;	// raise error at specified location
+@@ -104,7 +104,7 @@ public:
+ 	
+ private:
+ 	ErrorCode	fCode;
+-	int			fData;
++	size_t			fData;
+ };
+ 
+ 

@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/02/17 19:13:46 joerg Exp $
+
+--- compiler/Error.cpp.orig	2001-04-16 02:56:29.000000000 +0200
++++ compiler/Error.cpp
+@@ -129,7 +129,7 @@ bool Error::IsDeprecated() const
+ void Error::SPrint(char *str) const
+ {
+ 	if (fCode < 0 || fCode >= (ErrorCode)(sizeof(sErrorText) / sizeof(const char *)))
+-		sprintf(str, "internal error #%d", fCode);
++		sprintf(str, "internal error #%d", (int)fCode);
+ 	else
+ 		sprintf(str, sErrorText[fCode], fData);
+ }
