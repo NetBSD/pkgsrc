@@ -2009,8 +2009,9 @@ instead of the = operator:
 CFLAGS+=        -your -flags
 
 Using CFLAGS= (i.e. without the "+") may lead to problems with packages that
-need to add their own flags. Also, you may want to take a look at the devel/
-cpuflags package if you're interested in optimization for the current CPU.
+need to add their own flags. You may want to take a look at the devel/cpuflags
+package if you're interested in optimization for the current CPU. Setting
+USE_CPUFLAGS to yes in mk.conf will cause pkgsrc to automatically use cpuflags.
 
 5.4.3. Additional flags to the linker (LDFLAGS)
 
@@ -2588,9 +2589,9 @@ Running a pbulk-style bulk build works roughly as follows:
 
 First, you need to create a pkgsrc installation for the pbulk infrastructure.
 No matter on which platform you are (even on NetBSD), you should bootstrap into
-its own directory. Let's take the directory /usr/pbulk-outer or $HOME/
-pbulk-outer for it. This installation will be bootstrapped and all the tools
-that are required for the bulk build will be installed there.
+its own directory. Let's take the directory /usr/pbulk or $HOME/pbulk for it.
+This installation will be bootstrapped and all the tools that are required for
+the bulk build will be installed there.
 
 $ cd /usr/pkgsrc
 $ ./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap
@@ -2903,7 +2904,8 @@ Utilities used by pkgsrc (not automatically installed):
   * pkgtools/xpkgwedge: Put X11 packages someplace else (enabled by default).
 
   * devel/cpuflags: Determine the best compiler flags to optimise code for your
-    current CPU and compiler.
+    current CPU and compiler. Setting USE_CPUFLAGS to yes in mk.conf will cause
+    pkgsrc to automatically use cpuflags.
 
 Utilities for keeping track of installed packages, being up to date, etc:
 
@@ -2963,16 +2965,16 @@ feature by adding the option PKG_RESUME_TRANSFERS=YES into mk.conf. If, during
 a fetch step, an incomplete distfile is found, pkgsrc will try to resume it.
 
 You can also use a different program than the default ftp(1) by changing the
-FETCH_CMD variable. Don't forget to set FETCH_RESUME_ARGS and FETCH_OUTPUT_ARGS
-if you are not using default values.
+FETCH_USING variable. You can specify the program by using of ftp, fetch, wget
+or curl. Alternatively, fetching can be disabled by using the value manual. A
+value of custom disables the system defaults and dependency tracking for the
+fetch program. In that case you have to provide FETCH_CMD, FETCH_BEFORE_ARGS,
+FETCH_RESUME_ARGS, FETCH_OUTPUT_ARGS, FETCH_AFTER_ARGS.
 
-For example, if you want to use wget to resume downloads, you'll have to use
-something like:
+For example, if you want to use wget to download, you'll have to use something
+like:
 
-FETCH_CMD=             wget
-FETCH_BEFORE_ARGS=     --passive-ftp
-FETCH_RESUME_ARGS=     -c
-FETCH_OUTPUT_ARGS=     -O -nc
+FETCH_USING=    wget
 
 9.6. How can I install/use modular X.org from pkgsrc?
 
@@ -4063,7 +4065,7 @@ MESSAGE
 
     replaces "${SOMEVAR}" with "somevalue" in MESSAGE. By default, substitution
     is performed for PKGNAME, PKGBASE, PREFIX, LOCALBASE, X11PREFIX, X11BASE,
-    PKG_SYSCONFDIR, ROOT_GROUP, and ROOT_GROUP.
+    PKG_SYSCONFDIR, ROOT_GROUP, and ROOT_USER.
 
     You can display a different or additional files by setting the MESSAGE_SRC
     variable. Its default is MESSAGE, if the file exists.
@@ -5120,7 +5122,9 @@ basically the following:
  3. Otherwise, it is set to ${PKG_SYSCONFBASE}.
 
 It is worth mentioning that ${PKG_SYSCONFDIR} is automatically added to
-OWN_DIRS. See Section 15.1.1, "Directory manipulation" what this means.
+OWN_DIRS. See Section 15.1.1, "Directory manipulation" what this means. This
+does not apply to subdirectories of ${PKG_SYSCONFDIR}, they still have to be
+created with OWN_DIRS or MAKE_DIRS.
 
 15.2.2. Telling the software where configuration files are
 
@@ -5761,6 +5765,9 @@ defined, else MASTER_SITES or PATCH_SITES, as applies, then finally the value
 of MASTER_SITE_BACKUP. The order of all except the first and the last can be
 optionally sorted by the user, via setting either MASTER_SORT_RANDOM, and
 MASTER_SORT_AWK or MASTER_SORT_REGEX.
+
+The specific command and arguments used depend on the FETCH_USING parameter.
+The example above is for FETCH_USING=custom.
 
 The distfiles mirror run by the NetBSD Foundation uses the mirror-distfiles
 target to mirror the distfiles, if they are freely distributable. Packages
@@ -7559,10 +7566,10 @@ take some extra steps to make sure they get registered in the database:
 If a package installs .omf files, used by scrollkeeper, you need to take some
 extra steps to make sure they get registered in the database:
 
- 1. Include ../../textproc/scrollkeeper/omf.mk instead of its buildlink3.mk
-    file. This takes care of rebuilding the scrollkeeper database at
-    installation and deinstallation time, and disallows any access to it
-    directly from the package.
+ 1. Include ../../textproc/rarian/omf.mk instead of its buildlink3.mk file.
+    This takes care of rebuilding the scrollkeeper database at installation and
+    deinstallation time, and disallows any access to it directly from the
+    package.
 
  2. Check the PLIST and remove any entries under the libdata/scrollkeeper
     directory, as they will be handled automatically.
