@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1 2009/02/17 18:58:34 joerg Exp $
+
+--- node/node.d/exim_mailqueue_alt.in.orig	2009-02-17 19:55:26.000000000 +0100
++++ node/node.d/exim_mailqueue_alt.in
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ #
+ # Plugin to monitor Exim's mail queue
+ #
+@@ -31,7 +31,7 @@ QUEUECRIT=200
+ [ "$queuewarn" ] && QUEUEWARN=$queuewarn
+ [ "$queuecrit" ] && QUEUECRIT=$queuecrit
+ 
+-if [ "$1" == "config" ]; then
++if [ "$1" = "config" ]; then
+ 	echo 'graph_title Exim mailqueue'
+ 	echo 'graph_args --base 1000 -l 0'
+ 	echo 'graph_vlabel mails in queue'
