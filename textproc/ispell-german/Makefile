@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/11/10 18:15:05 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/17 14:43:05 abs Exp $
 #
 
 DISTNAME=	igerman98-20081106
@@ -19,9 +19,10 @@ REPLACE_PERL=	bin/dic2iso.pl bin/grepl bin/sq.pl bin/myspellfixprefix.pl \
 		bin/clear_affix.pl bin/unsq.pl bin/uniqflag.pl
 
 INSTALLATION_DIRS=	lib
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ispell/*.aff ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/ispell/*.hash ${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/ispell/*.aff ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/ispell/*.hash ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
