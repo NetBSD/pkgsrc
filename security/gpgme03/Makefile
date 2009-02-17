@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/02/17 13:02:20 joerg Exp $
 #
 
 DISTNAME=	gpgme-0.3.16
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gpgme/
 
-MAINTAINER=	oishi@ims.ac.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/related_software/gpgme/
 COMMENT=	GnuPG Made Easy (0.3 branch)
 

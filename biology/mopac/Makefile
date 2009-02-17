@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/17 13:02:20 joerg Exp $
 #
 
 DISTNAME=		mopac7
@@ -12,7 +12,7 @@ PATCH_SITES=		${MASTER_SITES:=old-version-95.06.21/}
 PATCHFILES=		mopac7-linux.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		oishi@ims.ac.jp
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://server.ccl.net/cca/software/LINUX/mopac7/index.shtml
 COMMENT=		Molecular energy calculation program
 

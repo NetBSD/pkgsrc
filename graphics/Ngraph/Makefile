@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:09:27 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/02/17 13:02:20 joerg Exp $
 #
 
 DISTNAME=	Ngraph-6.3.30-src
@@ -10,7 +10,7 @@ MASTER_SITES=	http://www2e.biglobe.ne.jp/~isizaka/bin/ \
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} Ngraph-6.3.30-doc.tar.gz \
 		ileaf-widgets.tar.Z
 
-MAINTAINER=	oishi@ims.ac.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2e.biglobe.ne.jp/~isizaka/
 COMMENT=	The 2D graph and data analysis program
 

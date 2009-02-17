@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/06 20:58:28 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/17 13:02:20 joerg Exp $
 
 DISTNAME=		binutils-2.12.1
 PKGNAME=		cross-h8300-hms-binutils-2.12.1
@@ -7,7 +7,7 @@ CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/binutils/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		oishi@ims.ac.jp
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		# empty
 COMMENT=		h8300-hms cross utility
 

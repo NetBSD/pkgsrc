@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2008/09/18 12:35:27 taca Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/17 13:02:20 joerg Exp $
 
 PKGREVISION=	2
 CANNA_MODULE=	canuum
 
 .include "../../inputmethod/canna/Makefile.common"
 
-MAINTAINER=	oishi@ims.ac.jp
+MAINTAINER=		pkgsrc-users@NetBSD.org
 
 MAKE_ARGS+=	PREFIX=${PREFIX}
 
