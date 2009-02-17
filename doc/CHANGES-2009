@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.608 2009/02/17 07:44:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.609 2009/02/17 10:11:28 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/drupal6 to 6.9nb1 [adrianp 2009-02-16]
 	Updated net/Transmission to 1.50 [tnn 2009-02-16]
 	Updated print/tex-bin-dvipsk to 2008.11868 [minskim 2009-02-17]
+	Updated misc/dvtm to 0.5.1 [tnn 2009-02-17]
