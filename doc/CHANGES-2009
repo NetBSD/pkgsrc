@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.617 2009/02/17 21:12:01 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.618 2009/02/17 23:17:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-texlive to 2008.12152 [minskim 2009-02-17]
 	Updated print/teTeX3-texmf to 3.0nb9 [minskim 2009-02-17]
 	Updated print/teTeX3-bin to 3.0nb24 [minskim 2009-02-17]
+	Added security/php-suhosin version 5.2.8.0.9.27 [adrianp 2009-02-17]
