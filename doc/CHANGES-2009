@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.615 2009/02/17 21:00:38 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.616 2009/02/17 21:03:44 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -839,3 +839,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-Catalyst-Engine-JobQueue-POE version 0.0.3 [abs 2009-02-17]
 	Added print/dvipsk version 5.97 [minskim 2009-02-17]
 	Updated print/tex-bin-tetex to 3.0.12157 [minskim 2009-02-17]
+	Updated print/tex-bin-texlive to 2008.12152 [minskim 2009-02-17]
