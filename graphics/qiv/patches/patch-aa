@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2004/11/26 22:18:28 snj Exp $
+$NetBSD: patch-aa,v 1.6 2009/02/17 01:08:24 snj Exp $
 
 --- Makefile.orig	2004-05-22 00:21:47.000000000 -0700
 +++ Makefile	2004-11-26 14:05:41.000000000 -0800
@@ -48,8 +48,8 @@ $NetBSD: patch-aa,v 1.5 2004/11/26 22:18:28 snj Exp $
 -	else echo "-- Test Failed --" ; \
 -	fi
 -	@echo -ne "\nDont forget to look into the \"qiv-command\" file and install it!\n-> cp qiv-command.example /usr/local/bin/qiv-command\n\n" 
-+	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_PROGRAM) $(PROGRAM) $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_DATA) $(PROGRAM).1 $(DESTDIR)$(PREFIX)/man/man1
  
  install-xscreensaver: install
  	@echo "#!/bin/sh" > $(SS_PROG)
