@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.40 2009/02/14 18:51:20 joerg Exp $
+# $NetBSD: fetch.mk,v 1.41 2009/02/17 10:42:45 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -212,7 +212,7 @@ _FETCH_BEFORE_ARGS.curl=	${PASSIVE_FETCH:D--ftp-pasv}
 _FETCH_AFTER_ARGS.curl=		-O # must be here to honor -o option
 _FETCH_RESUME_ARGS.curl=	-C -
 _FETCH_OUTPUT_ARGS.curl=	-o
-_FETCH_CMD.curl=		${PREFIX}/bin/wget
+_FETCH_CMD.curl=		${PREFIX}/bin/curl
 
 _FETCH_CMD.manual=		${TOOLS_PATH.false}
 
