@@ -1,0 +1,22 @@
+$NetBSD: patch-ea,v 1.1 2009/02/17 21:04:14 spz Exp $
+
+--- src/rpsl/rpsl/afi.cc.orig	2006-06-08 18:08:25.000000000 +0200
++++ src/rpsl/rpsl/afi.cc
+@@ -29,6 +29,8 @@
+ 
+ using namespace std;
+ 
++bool         AddressFamily::noDefaultAfi             = false;
++
+ AddressFamily::AddressFamily(void) :
+   afi(NULL)
+ {
+@@ -63,7 +65,7 @@ bool AddressFamily::is_ipv6() {
+ }
+ 
+ bool AddressFamily::is_default() {
+-  if (strcmp(afi, "ipv4.unicast") == 0)
++  if (strcmp(afi, "ipv4.unicast") == 0 && !AddressFamily::noDefaultAfi)
+      return true;
+   return false;
+ } 

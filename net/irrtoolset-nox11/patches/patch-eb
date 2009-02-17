@@ -1,0 +1,12 @@
+$NetBSD: patch-eb,v 1.1 2009/02/17 21:04:14 spz Exp $
+
+--- src/rpsl/rpsl/afi.hh.orig	2006-06-08 18:08:25.000000000 +0200
++++ src/rpsl/rpsl/afi.hh
+@@ -32,6 +32,7 @@ class MPPrefix;
+ 
+ class AddressFamily {
+  public:
++   static bool noDefaultAfi;
+    char *afi;
+ 
+  public:
