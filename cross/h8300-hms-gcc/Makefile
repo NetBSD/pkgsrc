@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:16 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/17 13:02:20 joerg Exp $
 
 DISTNAME=		gcc-core-3.1
 PKGNAME=		cross-h8300-hms-gcc-3.1
@@ -14,7 +14,7 @@ PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=h8300-hms/}
 PATCHFILES=		h8300-hms-gcc-3.1-1.patch
 PATCH_DIST_ARGS=	-d ${SRCDIR} -E -p1
 
-MAINTAINER=		oishi@ims.ac.jp
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		#empty
 COMMENT=		GCC compiler for h8300-hms
 
