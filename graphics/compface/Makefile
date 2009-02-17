@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2007/07/18 20:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/17 13:02:20 joerg Exp $
 
 DISTNAME=	compface-1.5.2
 PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://ftp.xemacs.org/pub/xemacs/aux/
 
-MAINTAINER=	oishi@ims.ac.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://freshmeat.net/projects/compface/
 COMMENT=	48x48x1 image compression and decompression (X-face utility)
 
