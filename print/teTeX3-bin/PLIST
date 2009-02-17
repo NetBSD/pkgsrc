@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/26 21:17:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/02/17 21:09:54 minskim Exp $
 bin/a2ping
-bin/afm2tfm
 bin/aleph
 bin/bibtex
 bin/ctangle
@@ -18,7 +17,6 @@ bin/dvilj6
 bin/dvipdfm
 bin/dvipdft
 bin/dvipng
-bin/dvips
 bin/dvitomp
 bin/dvitype
 bin/e2pall
@@ -45,7 +43,6 @@ bin/mpto
 bin/mptopdf
 bin/newer
 bin/odvicopy
-bin/odvips
 bin/odvitype
 bin/ofm2opl
 bin/omega
@@ -89,9 +86,7 @@ bin/xdvi
 bin/xdvi-xaw.bin
 bin/xdvizilla
 info/latex.info
-info/dvips.info
 info/web2c.info
-man/man1/afm2tfm.1
 man/man1/amstex.1
 man/man1/bibtex.1
 man/man1/ctangle.1
@@ -109,7 +104,6 @@ man/man1/dvilj6.1
 man/man1/dvipdfm.1
 man/man1/dvipdft.1
 man/man1/dvipng.1
-man/man1/dvips.1
 man/man1/dvitomp.1
 man/man1/dvitype.1
 man/man1/ebb.1
@@ -133,7 +127,6 @@ man/man1/mpost.1
 man/man1/mpto.1
 man/man1/newer.1
 man/man1/odvicopy.1
-man/man1/odvips.1
 man/man1/odvitype.1
 man/man1/omega.1
 man/man1/oxdvi.1
@@ -164,14 +157,6 @@ share/texmf/doc/tetex/TETEXDOC.dvi
 share/texmf/doc/tetex/TETEXDOC.pdf
 share/texmf/doc/tetex/TETEXDOC.ps
 share/texmf/doc/tetex/teTeX-FAQ
-share/texmf/dvips/base/color.pro
-share/texmf/dvips/base/crop.pro
-share/texmf/dvips/base/finclude.pro
-share/texmf/dvips/base/hps.pro
-share/texmf/dvips/base/special.pro
-share/texmf/dvips/base/tex.pro
-share/texmf/dvips/base/texc.pro
-share/texmf/dvips/base/texps.pro
 share/texmf/dvips/gsftopk/render.ps
 share/texmf/fmtutil/format.tetex.cnf
 share/texmf/release-tetex-src.txt
