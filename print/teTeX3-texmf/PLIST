@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/01/26 21:17:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/02/17 21:09:54 minskim Exp $
 share/texmf-dist/ChangeLog
 share/texmf-dist/LICENSE.texmf
 share/texmf-dist/aliases
@@ -3786,7 +3786,6 @@ share/texmf-dist/dvips/bluesky/config.ams
 share/texmf-dist/dvips/bluesky/config.amz
 share/texmf-dist/dvips/bluesky/config.cm
 share/texmf-dist/dvips/bluesky/config.cmz
-share/texmf-dist/dvips/config/config.ps
 share/texmf-dist/dvips/misc/alt-rule.pro
 share/texmf-dist/dvips/misc/config.mirr
 share/texmf-dist/dvips/misc/crops.pro
