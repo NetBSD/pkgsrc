@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2009/01/14 23:16:54 dsainty Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/17 17:08:13 joerg Exp $
 
-DISTNAME=	bootstrap-mk-files-20090114
+DISTNAME=	bootstrap-mk-files-20090217
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -38,8 +38,8 @@ do-configure:
 	else								\
 		own_mk=mods/bsd.own.mk.in;				\
 	fi;								\
-	${SED}	-e 's|@ROOT_GROUP@|'${ROOT_GROUP}'|g'			\
-		-e 's|@ROOT_USER@|'${ROOT_USER}'|g'			\
+	${SED}	-e 's|@ROOT_GROUP@|'${REAL_ROOT_GROUP}'|g'			\
+		-e 's|@ROOT_USER@|'${REAL_ROOT_USER}'|g'			\
 		-e 's|@SYSCONFDIR@|'${PKG_SYSCONFDIR}'|g'		\
 		$$own_mk > bsd.own.mk
 
