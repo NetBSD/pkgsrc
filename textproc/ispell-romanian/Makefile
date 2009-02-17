@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/17 03:50:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/17 14:43:05 abs Exp $
 #
 
 DISTNAME=	rom-spell
@@ -15,11 +15,12 @@ DEPENDS+=	ispell-base>=3.1.20:../../textproc/ispell-base
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	lib
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/rom.aff ${PREFIX}/lib/romanian.aff
-	${INSTALL_DATA} ${WRKSRC}/rom.hash ${PREFIX}/lib/romanian.hash
-	${INSTALL_DATA} ${WRKSRC}/rom.signs.aff ${PREFIX}/lib/romanian-signs.aff
-	${INSTALL_DATA} ${WRKSRC}/rom.signs.hash ${PREFIX}/lib/romanian-signs.hash
+	${INSTALL_DATA} ${WRKSRC}/rom.aff ${DESTDIR}${PREFIX}/lib/romanian.aff
+	${INSTALL_DATA} ${WRKSRC}/rom.hash ${DESTDIR}${PREFIX}/lib/romanian.hash
+	${INSTALL_DATA} ${WRKSRC}/rom.signs.aff ${DESTDIR}${PREFIX}/lib/romanian-signs.aff
+	${INSTALL_DATA} ${WRKSRC}/rom.signs.hash ${DESTDIR}${PREFIX}/lib/romanian-signs.hash
 
 .include "../../mk/bsd.pkg.mk"
