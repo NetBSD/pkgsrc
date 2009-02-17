@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2009/02/17 19:16:29 joerg Exp $
+
+--- glib/ocaml-giochannel.c.orig	2009-02-17 19:40:17.000000000 +0100
++++ glib/ocaml-giochannel.c
+@@ -134,7 +134,7 @@ check_substring (value s, gsize off, gsi
+ #endif
+ 
+ CAMLprim value
+-ml_g_io_channel_read_chars (value c, value o_off, value o_len, value s)
++my_ml_g_io_channel_read_chars (value c, value o_off, value o_len, value s)
+ {
+   CAMLparam1(s);
+   GError *err = NULL;
