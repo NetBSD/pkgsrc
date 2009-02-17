@@ -4,3 +4,6 @@ trademarks.  See the following URLs:
   http://www.mozilla.org/foundation/trademarks/
   http://www.mozilla.org/foundation/trademarks/distribution-policy.html
   http://www.mozilla.org/foundation/trademarks/faq.html
+
+If you want a 100% free and redistributable package, you can disable the
+official-mozilla-branding option to get a non-trademarked build.
