@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/12/10 19:37:01 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/02/17 23:18:55 adrianp Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -201,6 +201,9 @@ include/php/main/streams/php_stream_transport.h
 include/php/main/streams/php_stream_userspace.h
 include/php/main/streams/php_streams_int.h
 include/php/main/win95nt.h
+${PLIST.suhosin}include/php/main/suhosin_globals.h
+${PLIST.suhosin}include/php/main/suhosin_logo.h
+${PLIST.suhosin}include/php/main/suhosin_patch.h
 include/php/regex/cclass.h
 include/php/regex/cname.h
 include/php/regex/regex.h

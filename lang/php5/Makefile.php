@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.30 2009/02/07 18:03:00 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.31 2009/02/17 23:18:55 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -10,6 +10,7 @@ USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 BUILD_DEFS+=		VARBASE
+PLIST_VARS+=		suhosin
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
@@ -41,7 +42,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts suhosin
 PKG_SUGGESTED_OPTIONS+=	ssl
 
 SUBST_CLASSES+=		ini
@@ -52,6 +53,15 @@ SUBST_SED.ini=		-e "s|\;include_path = \".:/php/includes\"|include_path = \".:${
 SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Msuhosin)
+PATCH_SITES=		http://download.suhosin.org/
+PATCHFILES+=		suhosin-patch-5.2.8-0.9.6.3.patch.gz
+PATCH_DIST_STRIP=	-p1
+PLIST.suhosin=		yes
+MESSAGE_SRC=		${PKGDIR}/MESSAGE
+MESSAGE_SRC+=		${PKGDIR}/MESSAGE.suhosin
+.endif
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
