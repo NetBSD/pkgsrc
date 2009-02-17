@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/17 19:10:49 minskim Exp $
+bin/afm2tfm
+bin/dvips
+bin/odvips
+info/dvips.info
+man/man1/afm2tfm.1
+man/man1/dvips.1
+man/man1/odvips.1
+share/texmf-dist/dvips/config/config.ps
+share/texmf/dvips/base/color.pro
+share/texmf/dvips/base/crop.pro
+share/texmf/dvips/base/finclude.pro
+share/texmf/dvips/base/hps.pro
+share/texmf/dvips/base/special.pro
+share/texmf/dvips/base/tex.pro
+share/texmf/dvips/base/texc.pro
+share/texmf/dvips/base/texps.pro
