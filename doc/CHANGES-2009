@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.613 2009/02/17 19:12:34 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.614 2009/02/17 19:13:42 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -837,3 +837,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/p5-DateTime-Event-Random version 0.03 [abs 2009-02-17]
 	Added devel/p5-POE-Component-Cron version 0.019nb1 [abs 2009-02-17]
 	Added www/p5-Catalyst-Engine-JobQueue-POE version 0.0.3 [abs 2009-02-17]
+	Added print/dvipsk version 5.97 [minskim 2009-02-17]
