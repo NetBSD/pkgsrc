@@ -1,0 +1,8 @@
+Catalyst is an elegant web application framework, extremely flexible
+yet extremely simple. It's similar to Ruby on Rails, Spring (Java)
+and Maypole, upon which it was originally based.
+
+This is a Catalyst Engine implementing a job queue with POE. It
+allows the launching of HTTP requests to the application at
+predetermined moments in time and the subsequent capturing of
+response to a logfile or an email address.
