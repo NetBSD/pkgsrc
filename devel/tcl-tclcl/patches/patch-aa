@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2006/01/30 00:09:10 minskim Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/17 19:53:02 joerg Exp $
 
 --- Makefile.in.orig	2005-10-02 14:26:19.000000000 -0700
 +++ Makefile.in
@@ -62,11 +62,11 @@ $NetBSD: patch-aa,v 1.6 2006/01/30 00:09:10 minskim Exp $
 -	$(INSTALL) $(LIB_TCLCL) @prefix@/lib
 -	$(RANLIB)  @prefix@/lib/$(LIB_TCLCL)
 +	for f in idlecallback.h iohandler.h rate-variable.h tclcl-config.h tclcl-mappings.h tclcl.h timer.h tracedvar.h; do \
-+		${INSTALL_DATA} $$f ${PREFIX}/include; \
++		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/include; \
 +	done
-+	${INSTALL_PROGRAM} tcl2c++ ${PREFIX}/bin
-+	${INSTALL_SCRIPT} otcldoc ${PREFIX}/bin
-+	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libtclcl.la ${PREFIX}/lib
++	${INSTALL_PROGRAM} tcl2c++ ${DESTDIR}${PREFIX}/bin
++	${INSTALL_SCRIPT} otcldoc ${DESTDIR}${PREFIX}/bin
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} libtclcl.la ${DESTDIR}${PREFIX}/lib
  
  # libTcl is no longer installed as of 13-Nov-99
  #	-test -f @prefix@/lib/libTcl.a && rm -f @prefix@/lib/libTcl.a || true
