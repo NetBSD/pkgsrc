@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2009/02/17 15:56:41 joerg Exp $
+
+--- setup.py.orig	2009-02-17 16:42:15.000000000 +0100
++++ setup.py
+@@ -41,5 +41,4 @@ setup(
+     download_url = "http://www.duke.edu/~dgraham/wxRemind/wxRemind-current.tar.gz",
+     url = "http://www.duke.edu/~dgraham/wxRemind",
+     keywords = "calendar alarm schedule appointments",
+-    data_files = [ ('', ['CHANGES', 'COPYING', 'INSTALL', 'README'])],
+ )
