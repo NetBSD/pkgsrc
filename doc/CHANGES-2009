@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.610 2009/02/17 10:42:42 adam Exp $
+$NetBSD: CHANGES-2009,v 1.611 2009/02/17 13:17:10 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -833,3 +833,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/dvtm to 0.5.1 [tnn 2009-02-17]
 	Updated math/fftw to 3.2.1 [adam 2009-02-17]
 	Updated math/fftwf to 3.2.1 [adam 2009-02-17]
+	Removed security/gpgme03 [joerg 2009-02-17]
