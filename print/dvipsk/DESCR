@@ -1,0 +1,10 @@
+dvips takes a DVI file file[.dvi] produced by TeX (or by some other
+processor such as GFtoDVI) and converts it to PostScript, normally
+sending the result directly to the (laser)printer.  The DVI file may
+be specified without the .dvi extension.  Fonts used may either be
+resident in the printer or defined as bitmaps in PK files, or a
+`virtual' combination of both.  If the mktexpk program is installed,
+either be resident in the printer or defined as bitmaps in PK files,
+or a `virtual' combination of both.  If the mktexpk program is
+installed, dvips will automatically invoke METAFONT to generate fonts
+that don't already exist.
