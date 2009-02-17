@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/09/29 15:11:35 stacktic Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/17 18:35:15 stacktic Exp $
 bin/fsu_cat
 bin/fsu_chflags
 bin/fsu_chmod
@@ -10,12 +10,14 @@ bin/fsu_du
 bin/fsu_ecp
 bin/fsu_exec
 bin/fsu_find
+bin/fsu_get
 bin/fsu_ln
 bin/fsu_ls
 bin/fsu_mkdir
 bin/fsu_mkfifo
 bin/fsu_mknod
 bin/fsu_mv
+bin/fsu_put
 bin/fsu_rm
 bin/fsu_rmdir
 bin/fsu_touch
