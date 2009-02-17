@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/02/17 17:48:24 joerg Exp $
+
+--- gdl/gdl.override.orig	2009-02-17 18:45:42.000000000 +0100
++++ gdl/gdl.override
+@@ -6,7 +6,6 @@ headers
+ #include <pygtk/pygtk.h>
+ #include <gdl/gdl-dock.h>
+ #include <gdl/libgdltypebuiltins.h>
+-#include <gdl/gdl-icons.h>
+ #ifndef HAVE_GDL_0_7
+ # include <gdl/gdl-dock-bar.h>
+ #endif
