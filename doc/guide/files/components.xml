@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.39 2008/05/29 08:34:26 abs Exp $ -->
+<!-- $NetBSD: components.xml,v 1.40 2009/02/17 04:24:02 jnemeth Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -578,7 +578,7 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	    <varname>X11BASE</varname>,
 	    <varname>PKG_SYSCONFDIR</varname>,
 	    <varname>ROOT_GROUP</varname>, and
-	    <varname>ROOT_GROUP</varname>.</para>
+	    <varname>ROOT_USER</varname>.</para>
 
 	    <para>You can display a different or additional files by
 	    setting the <varname>MESSAGE_SRC</varname> variable.  Its
