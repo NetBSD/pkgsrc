@@ -2291,10 +2291,12 @@ works.</p>
 CFLAGS+=        -your -flags
 </pre>
 <p>Using <code class="varname">CFLAGS=</code> (i.e. without the
-	&#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that need
-	to add their own flags.  Also, you may want to take a look at
-	the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a> package if
-	you're interested in optimization for the current CPU.</p>
+	&#8220;<span class="quote">+</span>&#8221;) may lead to problems with packages that
+	need to add their own flags.  You may want to take a look
+	at the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a>
+	package if you're interested in optimization for the current
+	CPU.  Setting <code class="varname">USE_CPUFLAGS</code> to yes in
+	<a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> will cause pkgsrc to automatically use cpuflags.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -2959,7 +2961,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="bulk.pbulk.prepare"></a>7.4.1. Preparation</h3></div></div></div>
-<p>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <code class="filename">/usr/pbulk-outer</code> or <code class="filename">$HOME/pbulk-outer</code> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</p>
+<p>First, you need to create a pkgsrc installation for the pbulk infrastructure. No matter on which platform you are (even on NetBSD), you should bootstrap into its own directory. Let's take the directory <code class="filename">/usr/pbulk</code> or <code class="filename">$HOME/pbulk</code> for it. This installation will be bootstrapped and all the tools that are required for the bulk build will be installed there.</p>
 <pre class="screen">
 $ <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
 $ <strong class="userinput"><code>./bootstrap/bootstrap --prefix=/usr/pbulk --varbase=/usr/pbulk/var --workdir=/tmp/pbulk-bootstrap</code></strong>
@@ -3278,9 +3280,11 @@ with each package.</p>
       methods: multiple CD-ROMs and network FTP/HTTP connections.</p></li>
 <li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/xpkgwedge/README.html" target="_top"><code class="filename">pkgtools/xpkgwedge</code></a>: Put X11
       packages someplace else (enabled by default).</p></li>
-<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a>: Determine the
-      best compiler flags to optimise code for your current CPU and
-      compiler.</p></li>
+<li><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/devel/cpuflags/README.html" target="_top"><code class="filename">devel/cpuflags</code></a>: Determine
+      the best compiler flags to optimise code for your current
+      CPU and compiler. Setting <code class="varname">USE_CPUFLAGS</code> to
+      yes in <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> will cause pkgsrc to automatically use
+      cpuflags. </p></li>
 </ul></div>
 <p>Utilities for keeping track of installed packages, being up to date,
 etc:</p>
@@ -3351,18 +3355,18 @@ enable this feature by adding the option
 distfile is found, pkgsrc will try to resume it.</p>
 <p>You can also
 use a different program than the default <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?ftp+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">ftp</span>(1)</span></a> by changing the
-<code class="varname">FETCH_CMD</code> variable.  Don't forget to set
-<code class="varname">FETCH_RESUME_ARGS</code> and
-<code class="varname">FETCH_OUTPUT_ARGS</code> if you are not using default
-values.</p>
+<code class="varname">FETCH_USING</code> variable.  You can specify the program by
+using of ftp, fetch, wget or curl.  Alternatively, fetching can be disabled
+by using the value manual.  A value of custom disables the system defaults
+and dependency tracking for the fetch program.  In that case you have to
+provide <code class="varname">FETCH_CMD</code>, <code class="varname">FETCH_BEFORE_ARGS</code>,
+<code class="varname">FETCH_RESUME_ARGS</code>, <code class="varname">FETCH_OUTPUT_ARGS</code>,
+<code class="varname">FETCH_AFTER_ARGS</code>.</p>
 <p>For example, if you want to use
-<code class="filename">wget</code> to resume downloads, you'll have to use something
+<code class="filename">wget</code> to download, you'll have to use something
 like:</p>
 <pre class="programlisting">
-FETCH_CMD=             wget
-FETCH_BEFORE_ARGS=     --passive-ftp
-FETCH_RESUME_ARGS=     -c
-FETCH_OUTPUT_ARGS=     -O -nc
+FETCH_USING=	wget
 </pre>
 </div>
 <div class="sect1" lang="en">
@@ -4666,7 +4670,7 @@ MESSAGE_SUBST+=  SOMEVAR="somevalue"
 	    <code class="varname">X11BASE</code>,
 	    <code class="varname">PKG_SYSCONFDIR</code>,
 	    <code class="varname">ROOT_GROUP</code>, and
-	    <code class="varname">ROOT_GROUP</code>.</p>
+	    <code class="varname">ROOT_USER</code>.</p>
 <p>You can display a different or additional files by
 	    setting the <code class="varname">MESSAGE_SRC</code> variable.  Its
 	    default is <code class="filename">MESSAGE</code>, if the file
@@ -5971,7 +5975,9 @@ following:</p>
     <code class="filename">${PKG_SYSCONFBASE}</code>.</p></li>
 </ol></div>
 <p>It is worth mentioning that <code class="filename">${PKG_SYSCONFDIR}</code> is
-automatically added to <code class="filename">OWN_DIRS</code>.  See <a class="xref" href="#dirs-outside-prefix" title="15.1.1. Directory manipulation">Section 15.1.1, &#8220;Directory manipulation&#8221;</a> what this means.</p>
+automatically added to <code class="filename">OWN_DIRS</code>.  See <a class="xref" href="#dirs-outside-prefix" title="15.1.1. Directory manipulation">Section 15.1.1, &#8220;Directory manipulation&#8221;</a> what this means.  This does not apply to
+subdirectories of <code class="filename">${PKG_SYSCONFDIR}</code>, they still have to
+be created with OWN_DIRS or MAKE_DIRS.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -6741,6 +6747,9 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <code class="varname">MASTER_SORT_RANDOM</code>, and
       <code class="varname">MASTER_SORT_AWK</code> or
       <code class="varname">MASTER_SORT_REGEX</code>.</p>
+<p> The specific command and arguments used depend on the
+      <code class="varname">FETCH_USING</code> parameter. The example above is
+      for <code class="literal">FETCH_USING=custom</code>.</p>
 <p>The distfiles mirror run by the NetBSD Foundation uses the
       <span class="emphasis"><em>mirror-distfiles</em></span> target to mirror the
       distfiles, if they are freely distributable.  Packages setting
@@ -7527,7 +7536,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id364453"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id9503691"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7537,7 +7546,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id364465"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id9503700"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7548,7 +7557,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id364476"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id9503708"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9000,7 +9009,7 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
     get registered in the database:</p>
 <div class="orderedlist"><ol type="1">
 <li><p>Include
-	<code class="filename">../../textproc/scrollkeeper/omf.mk</code>
+	<code class="filename">../../textproc/rarian/omf.mk</code>
 	instead of its <code class="filename">buildlink3.mk</code> file.  This
 	takes care of rebuilding the scrollkeeper database at
 	installation and deinstallation time, and disallows any access
@@ -9562,7 +9571,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id369298"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id9508238"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9578,7 +9587,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id369338"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id9508273"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9596,7 +9605,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id369382"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id9508309"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9614,7 +9623,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id369424"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id9508344"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9627,7 +9636,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id369447"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id9508362"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9643,7 +9652,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id369481"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id9508389"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9667,7 +9676,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id369566"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id9508456"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9692,7 +9701,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id369609"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id9508487"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9740,7 +9749,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id369686"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id9508541"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
