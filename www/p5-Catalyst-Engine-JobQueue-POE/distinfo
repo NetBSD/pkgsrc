@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/17 15:07:42 abs Exp $
+
+SHA1 (Catalyst-Engine-JobQueue-POE-0.0.3.tar.gz) = 7604f6e8032df0b380298b5e9ad1a2978b84d0e4
+RMD160 (Catalyst-Engine-JobQueue-POE-0.0.3.tar.gz) = 2fc21ef767c547682685b727cfb4db600dba819c
+Size (Catalyst-Engine-JobQueue-POE-0.0.3.tar.gz) = 27929 bytes
