@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.629 2009/02/18 16:58:12 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.630 2009/02/18 17:52:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -854,3 +854,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/py-vobject version 0.8.1b [kleink 2009-02-18]
 	Updated print/teTeX to 3.0nb2 [minskim 2009-02-18]
 	Updated textproc/py-vobject to 0.8.1bnb1 [kleink 2009-02-18]
+	Updated print/tex-bin-tetex to 3.0.12157nb1 [minskim 2009-02-18]
