@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/18 16:38:41 kleink Exp $
+
+SHA1 (vobject-0.8.1b.tar.gz) = 209b488353635c6b4827767a8b889feeb72f40f1
+RMD160 (vobject-0.8.1b.tar.gz) = d48bf9374ca30fa89c4a619bb122963a5ab96de1
+Size (vobject-0.8.1b.tar.gz) = 59833 bytes
