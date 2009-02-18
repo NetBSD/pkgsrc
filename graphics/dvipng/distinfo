@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/18 21:19:15 ahoka Exp $
+
+SHA1 (dvipng-1.11.tar.gz) = 2093cbd22c4d459bbf7e89d87b6a0b0046281ce7
+RMD160 (dvipng-1.11.tar.gz) = 5a1910784208a25bbb3949495d95fcac59e849ba
+Size (dvipng-1.11.tar.gz) = 167331 bytes
