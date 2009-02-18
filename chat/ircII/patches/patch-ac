@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2008/11/10 19:25:27 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2009/02/18 08:18:53 mrg Exp $
 
 --- Makefile.in.orig	2008-03-14 17:13:15.000000000 +0000
 +++ Makefile.in
@@ -13,15 +13,6 @@ $NetBSD: patch-ac,v 1.4 2008/11/10 19:25:27 wiz Exp $
  
  VERSION = @VERSION@
  
-@@ -142,7 +142,7 @@ PROGRAMS = irc ircio ircflush wserv
- 
- all: $(PROGRAMS)
- 
--install: all installbin installscript installtranslation installman installhelp
-+install: all installbin installscript installman installhelp
- 
- installeverything: install installflush installio installwserv \
- 	installscript installtranslation installhelp
 @@ -153,11 +153,9 @@ installbin: installirc installio install
  
  installirc: irc installdirs
@@ -41,9 +32,8 @@ $NetBSD: patch-ac,v 1.4 2008/11/10 19:25:27 wiz Exp $
  
  installdirs:
 -	umask 022; $(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
--		$(TRANS_PATH) $(INSTALL_SCRIPT) $(HELP_DIR)
 +	$(topdir)/mkinstalldirs $(IRCLIB) $(bindir) $(mandir) \
-+		$(INSTALL_SCRIPT) $(HELP_DIR)
+		$(TRANS_PATH) $(INSTALL_SCRIPT) $(HELP_DIR)
  
  clena clean:
  	cd $(objdir) &&	$(RM) $(PROGRAMS) $(OBJECTS) \
