@@ -1,0 +1,4 @@
+This program makes PNG and/or GIF graphics from DVI files. It produces
+high-quality images while its internals are tuned for speed. It supports PK,
+VF, PostScript and TrueType fonts, color, PostScript inclusion, bitmap
+inclusion, and has CJK support
