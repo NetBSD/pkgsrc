@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/18 16:38:41 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/18 16:56:23 kleink Exp $
 #
 
 DISTNAME=	vobject-0.8.1b
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	http://vobject.skyhouseconsulting.com/
 
