@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.619 2009/02/18 02:05:10 obache Exp $
+$NetBSD: CHANGES-2009,v 1.620 2009/02/18 07:21:43 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -829,7 +829,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01.57 [wiz 2009-02-16]
 	Updated www/drupal6 to 6.9nb1 [adrianp 2009-02-16]
 	Updated net/Transmission to 1.50 [tnn 2009-02-16]
-	Added print/tex-bin-dvipsk to 2008.11868 [minskim 2009-02-17]
+	Added print/tex-bin-dvipsk version 2008.11868 [minskim 2009-02-17]
 	Updated misc/dvtm to 0.5.1 [tnn 2009-02-17]
 	Updated math/fftw to 3.2.1 [adam 2009-02-17]
 	Updated math/fftwf to 3.2.1 [adam 2009-02-17]
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-bin to 3.0nb24 [minskim 2009-02-17]
 	Added security/php-suhosin version 5.2.8.0.9.27 [adrianp 2009-02-17]
 	Updated databases/tokyocabinet to 1.4.7 [obache 2009-02-18]
+	Updated archivers/p7zip to 4.65 [adam 2009-02-18]
