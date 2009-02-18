@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2009/02/09 16:46:35 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2009/02/18 19:13:04 adam Exp $
 
---- Makefile.in.orig	2009-02-08 00:34:11.000000000 +0100
+--- Makefile.in.orig	2009-02-15 14:07:08.000000000 +0100
 +++ Makefile.in
-@@ -456,7 +456,7 @@ libsqlite3.la:	$(LIBOBJ)
+@@ -466,7 +466,7 @@ libsqlite3.la:	$(LIBOBJ)
  
  libtclsqlite3.la:	tclsqlite.lo libsqlite3.la
  	$(LTLINK) -o $@ tclsqlite.lo \
 -		libsqlite3.la @TCL_STUB_LIB_SPEC@ $(TLIBS) \
-+		libsqlite3.la @TCL_LIB_FLAG@ $(TLIBS) \
-                 -rpath "$(libdir)/sqlite" \
- 		-module -avoid-version
- 
++		libsqlite3.la @TCL_LIB_FLAGS@ $(TLIBS) \
+ 		-rpath "$(TCLLIBDIR)" \
+ 		-version-info "8:6:8" \
+ 		-avoid-version
