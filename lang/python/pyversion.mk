@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.64 2009/02/09 22:56:24 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.65 2009/02/18 05:50:31 obache Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -9,7 +9,7 @@
 #	The preferred Python version to use.
 #
 #	Possible values: 21 23 24 25
-#	Default: 24
+#	Default: 25
 #
 # === Package-settable variables ===
 #
