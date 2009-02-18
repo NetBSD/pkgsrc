@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/02/17 20:59:56 minskim Exp $
+$NetBSD: distinfo,v 1.3 2009/02/18 16:33:30 minskim Exp $
 
 SHA1 (tex-bin-tetex-3.0.12157/bin-tetex.tar.lzma) = 8da12aab19abc3bff2f5e1b60105969cbea12c77
 RMD160 (tex-bin-tetex-3.0.12157/bin-tetex.tar.lzma) = 32282449d02791e18591ac2b5104fd51591fbf3a
 Size (tex-bin-tetex-3.0.12157/bin-tetex.tar.lzma) = 18908 bytes
+SHA1 (patch-aa) = 1726e70bece37eef0b8e3fd892d94e20b2418752
+SHA1 (patch-ab) = baece2cd952aebfa421f1161d98e2847d3e92403
