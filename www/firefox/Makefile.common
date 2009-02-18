@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2008/05/19 10:43:02 tnn Exp $
+# $NetBSD: Makefile.common,v 1.26 2009/02/18 10:51:40 abs Exp $
 # used by www/firefox/Makefile-firefox.common
 
 MOZ_DIST_VER?=		${MOZ_VER}
@@ -18,6 +18,9 @@ WRKSRC=			${WRKDIR}/mozilla
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=		yes
+
+# Mozilla applications require the frame-pointer
+BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 
 INSTALL_TEMPLATES+=	${.CURDIR}/../../www/seamonkey/INSTALL
 
