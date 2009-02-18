@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.628 2009/02/18 16:44:11 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.629 2009/02/18 16:58:12 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -853,3 +853,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rdiff-backup to 1.2.6nb1 [wiz 2009-02-18]
 	Added textproc/py-vobject version 0.8.1b [kleink 2009-02-18]
 	Updated print/teTeX to 3.0nb2 [minskim 2009-02-18]
+	Updated textproc/py-vobject to 0.8.1bnb1 [kleink 2009-02-18]
