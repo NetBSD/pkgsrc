@@ -1,0 +1,668 @@
+#! @PERL@
+
+# pkgsrc version upgrade notifier
+# covered by the revised BSD license
+# iMil <imil@gcu.info>
+#
+# Create the /usr/pkg/etc/pkg_notify.list file containing the package list
+# you want to be informed on, following this format :
+#
+# $ cat /usr/pkg/etc/pkg_notify.list
+# wip/foo
+# net/bar
+# www/foobar-devel
+#
+# OR invoke pkg_notify with the package following :
+#
+# $ pkg_notify category/package
+#
+# $Id: pkg_notify,v 1.1 2009/02/18 21:23:21 imil Exp $
+
+use Net::FTP;
+use LWP::UserAgent;
+use HTTP::Request::Common;
+use Getopt::Std;
+
+use strict;
+
+# those three are replaced by Makefile
+my $make = "@MAKE@";
+my $pkgsrcbase = "@PKGSRCDIR@";
+my $localbase = "@PREFIX@";
+
+my $conf = "@PKG_SYSCONFDIR@/pkg_notify.list";
+
+################################################################################
+
+my $extract_sufx = "";
+my $distname = "";
+my $pkgname = "";
+my $version = "";
+my $pkgversion = "";
+my $dist = "";
+my $pkgpath = "";
+
+my $SF_NET= "sourceforge.net";
+
+my $nicearc;
+my $go_subdirs;
+my $pathvers;
+
+my $debug = 0;
+
+my $subvers = "";
+
+# create an alpha to num mapping
+my %alnum = map { $_ => ord($_) - ord('a') + 1 } ('a' .. 'z');
+
+sub dot_strip {
+    my $out = $_[0];
+    # clean extremities from dots
+    $out =~ s/^[\.\-_]+//;
+    $out =~ s/[\.\-_]+$//;
+
+    return ($out);
+}
+
+sub beta_strip {
+	my $out = $_[0];
+
+	# handle beta - alpha - pre...
+	if ($out =~ /(.*[0-9])([\-\_\.]?)(pre|alpha|beta|gamma|rc)([0-9]*.*)/i) {
+		my $pre = $1;
+		my $dev = lc $3;
+		# remember real versionning
+		$subvers = "$2$3";
+		my $post = $4;
+		# replace pre|alpha|beta... with equiv nums
+		$dev =~ s/([a-z]).*/$alnum{$1}/;
+		$out = $pre.".00".$dev."00.".$post;
+	}
+
+	return ($out);
+}
+
+sub ext_strip {
+	# cleanup versions :
+	# blah-1.2.3-blah
+	# 1.2.3[.-_]pkg -> 1.2.3
+	# devel-1.2.3 -> 1.2.3
+	my $out = $_[0];
+
+	# version has no chars, should be fine
+	if ($out !~ /[a-z]/) {
+		return ($out);
+	}
+
+	if ($out =~ /^[a-z\-\._]+([0-9\-\._]+)[a-z\-\._]+$/i) {
+	# strip (qwerty-)1.2.3(-qwerty)
+		$out = $1;
+	} elsif ($out =~ /^([0-9\-\._]+)[\-\._][a-z]+/i) {
+	# strip 1.2.3(-qwerty)
+		$out = $1;
+	} elsif ($out =~ /[a-z]+[\-\._]+([0-9\-\._]+)$/i) {
+	# strip (qwerty-)1.2.3
+		$out = $1;
+	}
+
+	return ($out);
+}
+
+sub is_beta {
+	if ($_[0] =~ /00[0-9]+00/) {
+		return (1);
+	}
+	return (0);
+}
+
+sub find_version {
+	my @ls = @_;
+	my $lastvers = "";
+	my $realdist = "";
+
+	foreach (@ls) {
+		my $line = $_;
+		my $wasbad = 0;
+
+		if ($line =~ /([^0-9a-z]$dist|^$dist)([^\/\"<>\@]+)$extract_sufx/) {
+
+			$realdist = $dist.$2.$extract_sufx;
+			my $lsvers = $2;
+
+			# replace alpha|beta|... with .0[num]0.
+			$lsvers = beta_strip($lsvers);
+
+			# strip any extension left (bin, pkg, src, devel-...)
+			if ($nicearc) {
+				$lsvers = ext_strip($lsvers);
+			} else {
+				# remember archive was bad for next loop
+				$wasbad = 1;
+			}
+
+			# with beta/alpha/... numbered, archive may be nice
+			if (($lsvers !~ /[^0-9\.\-\_]/i) && 
+				($version !~ /[^0-9\.\-\_]/i)) {
+				$nicearc = 1;
+			}
+
+			# replace every dot-like char (-_) with dots
+			$lsvers = dot_strip($lsvers);
+
+			my $display_lsvers;
+			if ($subvers ne "") {
+				# archive has an alpha / beta / ...
+				$display_lsvers = $lsvers;
+				$display_lsvers =~ s/(\.00[0-9]+00)/$subvers/;
+				$subvers = "";
+			} else {
+				$display_lsvers = $lsvers;
+			}
+
+			# replace [-_] with dot
+			$lsvers =~ s/[\-\_]/./g;
+			$version =~ s/[\-\_]/./g;
+
+			# replace remaining chars
+			# ex: 3.14a -> 3.14.1, i -> 9
+			$lsvers = lc $lsvers;
+			$lsvers =~ s/([a-z])/.$alnum{$1}/g;
+			# numberify official version
+			$version = lc $version;
+			$version =~ s/([a-z])/.$alnum{$1}/g;
+
+			# uniq .'s
+			$lsvers =~ s/\.+/./g;
+			$version =~ s/\.+/./g;
+
+if ($debug) {
+	print "comparing $lsvers against $version (nicearc: $nicearc)\n";
+}
+
+			if (($lsvers ne $lastvers) && # already seen
+				# if it's not a nicearc, do basic string comparison
+				# if it is a nicearc, finest / int comparison
+				(($lsvers gt $version) | $nicearc)) {
+
+				my $greater = 0;
+
+				if ($nicearc) { # nice archive, has at least major.minor
+
+					my @pkg_version = split(/[\.\-_]/, $version);
+					my @ls_version = split(/[\.\-_]/, $lsvers);
+
+					my $i = 0;
+					foreach (@ls_version) {
+
+						# package version has this member
+						if (defined($pkg_version[$i])) {
+
+							my $member = $_;
+
+							# empty member
+							if ($member =~ /^$/) {
+								last;
+							}
+							# archive version has non-num in it, can't compare
+							if ($member =~ /[^0-9]/) {
+								last;
+							}
+							# is this member greater that pkg_version equiv ?
+							if ($member > $pkg_version[$i]) {
+								# if member is beta, version is >
+								if (is_beta($member) && 
+									!is_beta($pkg_version[$i])) {
+										last;
+								}
+								$greater = 1;
+								last;
+							}
+
+							# local package has a superior version, end
+							if ($pkg_version[$i] > $member) {
+								# if version is beta, member is >
+								if (!is_beta($member) &&
+									is_beta($pkg_version[$i])) {
+									$greater = 1;
+								}
+								last;
+							}
+
+						} else { # package version don't have this sub-number
+							if (!is_beta($_)) { # avoid beta versions
+												# aka 1.1.1beta !> 1.1.1
+								$greater = 1;
+							}
+							last;
+						}
+
+						$i++; # increment version member
+					} # foreach
+
+				}
+				if ($nicearc == 0) { # not a nice distname
+					$greater = 1;
+				}
+				# strip \'s
+				$realdist =~ s/\\//g;
+				if ($greater) {
+					print "!! seems like there's a new version for $pkgname\n";
+					print "!! [v.$display_lsvers] - from $realdist\n";
+					$lastvers = $lsvers;
+				}
+			}
+		} # if line /arc/
+		if ($wasbad) { # remember, archive was bad
+			$nicearc = 0;
+		}
+	} # foreach @ls
+	if ($lastvers eq "") {
+		return (0);
+	} else {
+		return (1);
+	}
+}
+
+my $ftp;
+
+sub ftp_connect {
+
+	if ($ftp = Net::FTP->new($_[0], Debug => 0, Passive => 1)) {
+
+		if ($ftp->login("anonymous",'-anonymous@')) {
+			# connected
+			return (1);
+		} else { 
+			if ($debug) {
+				print "Cannot login ", $ftp->message;
+			}
+			return (0);
+		}
+
+	} else {
+		if ($debug) {
+			print "Cannot connect to site: $@\n";
+		}
+	}
+}
+
+my $hadversion = 0;
+# maximum ftp recursion
+my $max_recurs = 3;
+my $nb_recurs;
+
+sub ftp_ls {
+
+	my $path = $_[0];
+
+	# first connection
+	if (!defined($ftp)) {
+
+		my $site = $_[0];
+		$path = "/";
+
+		$site =~ s/(ftp:\/\/)([^\/]+)(\/?.*)/$2/;
+		$path = $3;
+
+		if (!ftp_connect($site)) {
+			return (0)
+		}
+	}
+
+	if ($nb_recurs > $max_recurs) {
+		return (0);
+	} else {
+		$nb_recurs++;
+	}
+
+	# don't recurse to yourself
+	if ($path =~ /\.\ ?\//) {
+		return (0);
+	}
+
+	my @list;
+	if (my @ls = $ftp->dir($path)) {
+
+		foreach (@ls) {
+			chomp;
+			
+			my $relpath = $_;
+			$relpath =~ s/.*[\t\ ](.+)$/$1/;
+
+			my $type = substr($_, 0, 1);
+
+			# recurse
+			if ($type eq 'd') {
+
+				ftp_ls("$path/$relpath");
+				# back from child directory, decrement recursion
+				$nb_recurs--;
+
+			} else {
+				push(@list, "$relpath");
+			}
+		}
+	# could not cwd
+	} else {
+		if ($debug) {
+			print "Cannot change working directory ", $ftp->message;
+		}
+	}
+
+	# remember when we have found something
+	if (find_version(@list)) {
+		$hadversion = 1;
+	}
+
+	return ($hadversion);
+}
+
+sub http_ls {
+	my $ua = LWP::UserAgent->new(agent => 'pkg_notify');
+
+	my @page = "";
+	my $site = $_[0];
+
+	my $headers = $ua->head($site);
+
+	if ($headers) {
+		if ($headers->content_type !~ /text/) {
+			print " * $site is a direct download !\n";
+			return (0);
+		}
+	} else {
+		print " ** $site has no HTTP headers !\n";
+		return (0);
+	}
+
+	my $reply = $ua->get($site);
+
+	if ($reply->is_success) {
+		@page = split("\n", $reply->content);
+
+		if ($go_subdirs) {
+			$go_subdirs = 0;
+			foreach (@page) {
+				chomp;
+
+				my $pattern = $pathvers;
+				$pattern =~ s/.*\/([a-z]+)[\/\.\-_0-9]+$/$1/i;
+
+				if (/$pattern/) {
+
+					my $lsvers = $_;
+					$lsvers  =~ s/.*a\ href\=\"([^\"\ ]+?)\".*/$1/i;
+
+					# both are / terminated
+					if ($lsvers =~ /[^\/]$/) {
+						$lsvers = $lsvers ."/";
+							}
+					if ($pathvers =~ /[^\/]$/) {
+						$pathvers = $pathvers ."/";
+					}
+
+					$lsvers = "$site/$lsvers";
+
+					if ($lsvers ge $pathvers) {
+						http_ls($lsvers);
+					}
+				}
+			} # foreach page
+		} # if subdirs
+
+		if (find_version(@page)) {
+			return (1);
+		} else {
+			return (0);
+		}
+	} else {
+		if ($debug) {
+			print $reply->status_line;
+		}
+	}
+}
+
+# read a file and return array
+sub readfile {
+
+	open(FILE, $_[0]) || die "$_[0] not found";
+	my @ret = <FILE>;
+	close(FILE);
+
+	return (@ret);
+}
+
+# match $match against a whole file
+sub file_rx_check {
+
+	my $match = $_[1];
+	my $flat = join('\n', readfile($_[0]));
+
+	if ($flat =~ /$match/) {
+		return (1);
+	} else {
+		return (0);
+	}
+}
+
+my @packages;
+
+my %opts;
+exit(2) if !getopts('c:', \%opts);
+$conf = $opts{c} if defined($opts{c});
+if ($#ARGV > -1) {
+	@packages = @ARGV; 
+} else {
+	@packages = readfile($conf);
+}
+
+# load MASTER_SORT suffixes
+my $master_sort_flat = `cd $pkgsrcbase/pkgtools/pkg_chk && $make show-var VARNAME=MASTER_SORT`;
+chomp($master_sort_flat);
+my @master_sort_list = reverse(split(/[\ \t]+/, $master_sort_flat));
+my @master_list;
+
+sub sort_master_sites {
+	my $m_list = $_[0];
+	my @s_list = ();
+
+	@master_list = ();
+
+	if ($m_list =~ /$SF_NET/) {
+		# we only want ftp sites from SF
+		$m_list =~ s/http:\/\/[^\t\ \n]+//g;
+		$m_list =~ s/[\t\ \r\n]+//g;
+	}
+
+    # graphics/libggi packages-like fix (ftp://blahhttp://bleh): missing space
+    # this is because of previous SF's char stripping
+    $m_list =~ s/([^\ ])(ftp\:|http\:)/$1\ $2/g;
+
+	foreach (@master_sort_list) {
+		if ($m_list =~ /(.*)(http|ftp)(\:\/\/[^\t\ ]*$_[^\t\ ]*)(.*)/) {
+			push @s_list, $2.$3;
+			$m_list = $1 . $4;
+		}
+	}
+	@s_list = reverse @s_list;
+	push @master_list, @s_list;
+	push @master_list, split(/[\ \t]+/, $m_list);
+
+	@master_list = reverse @master_list;
+}
+
+# used to record last connection
+my $last_master_host = "";
+
+foreach (@packages) {
+	chomp;
+
+	# ignore comments and newlines
+	if (/^[#\n]/) {
+		next;
+	}
+
+	my $pkg = $_;
+	my $master_site;
+
+	$pkgpath = "$pkgsrcbase/$pkg/";
+
+	$pkgname = `cd $pkgpath && $make show-var VARNAME=PKGNAME`;
+	chomp($pkgname);
+
+	$pkgversion = $pkgname;
+	$pkgversion =~ s/(.+)\-([0-9a-z_\.]+)$/$2/;
+	$pkgname = $1;
+	$pkgversion =~ s/nb[0-9]+$//;
+
+	my ($major, $minor) = split(/\./, $pkgversion);
+
+	chomp($distname = `cd $pkgpath && $make show-var VARNAME=DISTNAME`);
+
+	# will we strip version numbers from extensions ?
+	my $nostrip = 0;
+
+	$nicearc = 0;
+	# nice archive, has a comprehensive versioning
+	if (defined($minor) && ($distname =~ /(.+?)($major[\._]?$minor.*$)/)) {
+		$dist = $1;
+		$version = $2;
+		$nicearc = 1;
+	# archive appears to only have a major
+	} elsif (defined($major) && ($distname =~ /(.+)($major.*)/)) {
+		$dist = $1;
+		$version = $2;
+	# ok, archive versioning is a pure mess
+	# assume version is everything not being PKGNAME
+	} else {
+		$dist = $pkgname;
+		$version = $distname;
+		$version =~ s/$pkgname//;
+
+		# don't strip extensions
+		$nostrip = 1;
+	}
+
+	# MASTER_SITES is MASTER_SITE_LOCAL, skip
+	if (file_rx_check("$pkgpath/Makefile",
+			"MASTER_SITES.+MASTER_SITE_LOCAL")) {
+		next;
+	}
+
+	# extract HOMEPAGE
+	my $homepage = `cd $pkgpath && $make show-var VARNAME=HOMEPAGE`;
+	chomp($homepage);
+
+	# extract 1st MASTER_SITE from list
+	my $master_flat_list = `cd $pkgpath && $make show-var VARNAME=MASTER_SITES`;
+	chomp($master_flat_list);
+
+	sort_master_sites($master_flat_list);
+
+	next_master_site:
+
+	$master_site = pop @master_list;
+	if (!$master_site) {
+		next;
+	}
+	chomp($master_site);
+
+	# sourceforge archive
+	if ($master_site =~ /$SF_NET.+\/(.+)\/?$/) {
+		# SF ftp is hashed
+		my $sfpkgdir = $1;
+		my $hash = substr($sfpkgdir, 0, 1)."/".substr($sfpkgdir, 0, 2);
+		$master_site =~ s/(.+sourceforge)\/.*/$1/;
+		$master_site = $master_site."/".$hash."/$sfpkgdir";
+	}
+
+	if (($distname eq "") || ($master_site eq "")) {
+		print "missing DISTNAME or MASTER_SITES for package $pkgname\n";
+		next;
+	}
+
+	$version = dot_strip($version);
+
+	my $vers_display = $version;
+	if ($vers_display eq "") {
+		$vers_display = "none";
+	}
+
+	$version = beta_strip($version);
+
+	# strip extensions
+	if ($nostrip == 0) {
+		$version = ext_strip($version);
+	}
+
+	print "- checking for newer version of $pkg\n";
+	print " \\ actual distname version: $vers_display\n";
+	print " \\ master site: $master_site\n";
+
+	$extract_sufx = `cd $pkgpath && $make show-var VARNAME=EXTRACT_SUFX`;
+	chomp($extract_sufx);
+
+	# protect special chars
+	$dist =~ s/([\+\-\[\]\{\}\.\*])/\\$1/g;
+
+	$go_subdirs = 0;
+	$pathvers = "";
+
+	# try HOMEPAGE first
+	my $found = 0;
+	if ($homepage ne "") {
+		print " \\ homepage: $homepage\n";
+		$found = http_ls($homepage, $distname);
+	}
+
+	# homepage had no infos, fallback to MASTER_SITES
+	if ($found == 0) {
+
+		# check if version exists on MASTER_SITES so we strip it
+		# typically ftp://ftp.gnome.org/pub/GNOME/sources/gnome-core/1.4
+		if ($nicearc) {
+			$pathvers = $version;
+			$pathvers =~ s/([0-9]+[\-_\.][0-9]+)([\-_\.][0-9]+)*/$1/;
+			# strip master_site to parent
+			if ($master_site =~ /(.+)\/[^\/]*$pathvers.*/) {
+				# save full path
+				$pathvers = $master_site;
+				# base directory
+				$master_site = $1;
+				$go_subdirs = 1;
+			}
+		}
+
+		# ftp master site
+		if ($master_site =~ /^ftp\:\/\//) {
+			$nb_recurs = 0;
+			# do not close / reconnect if new ftp site == last ftp site
+			if (($master_site !~ /$last_master_host/) && defined($ftp)) {
+				$ftp->quit;
+				undef($ftp);
+			}
+
+			ftp_ls($master_site, $distname);
+			$last_master_host = $master_site;
+			$last_master_host =~ s/(ftp:\/\/[^\/]+).*/$1/;
+
+			if (!defined($ftp)) {
+				print "  /!\\ there was an error while connecting to $master_site\n";
+				# believe me you prefer see this than a while / break
+				goto next_master_site;
+			}
+
+		# http master site
+		} elsif ($master_site =~ /^http\:\/\//) {
+			http_ls($master_site, $distname);
+		} else {
+			print "unsupported MASTER_SITES protocol";
+		}
+	}
+
+} # foreach package
+
+# if there was a resient ftp connexion, close it
+if (defined($ftp)) {
+	$ftp->quit;
+}

@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/18 21:23:21 imil Exp $
 #
 
-DISTNAME=	pkg_notify-0.4.2
+DISTNAME=	pkg_notify-0.4.3
 CATEGORIES=	pkgtools
-MASTER_SITES=	http://imil.net/NetBSD/
+MASTER_SITES=	# none
+DISTFILES=	# none
 
 MAINTAINER=	imil@gcu.info
-HOMEPAGE=	http://imil.net/wp/
+HOMEPAGE=	# none
 COMMENT=	Notifies package maintainer when a new version is available
 
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
@@ -14,29 +15,38 @@ DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+NO_CHECKSUM=		yes
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
-WRKSRC=			${WRKDIR}/pkg_notify
+WRKSRC=			${WRKDIR}
 
-EXAMPLEDIR=		${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES=		${EXAMPLEDIR}/${PKGBASE}.list \
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES=		${EGDIR}/${PKGBASE}.list \
 			${PKG_SYSCONFDIR}/${PKGBASE}.list
 
+.include "../../mk/bsd.prefs.mk"
+
 SUBST_CLASSES+=			pkg_notify
-SUBST_MESSAGE.pkg_notify=	Setting up hardcoded path.
 SUBST_STAGE.pkg_notify=		post-patch
 SUBST_FILES.pkg_notify=		pkg_notify
-SUBST_SED.pkg_notify=		-e 's|/usr/pkgsrc|${PKGSRCDIR}|'	\
-				-e 's|/usr/pkg|${LOCALBASE}|g'		\
-				-e 's|/usr/bin/make|${MAKE}|g'		\
-				-e 's|/usr/pkg/bin/perl|${PERL5}|g'
+SUBST_FILES.pkg_notify+=	pkg_notify.1
+SUBST_SED.pkg_notify=		-e 's|@PKGSRCDIR@|${PKGSRCDIR}|'
+SUBST_SED.pkg_notify+=		-e 's|@PREFIX@|${PREFIX}|g'
+SUBST_SED.pkg_notify+=		-e 's|@MAKE@|${MAKE:Q}|g'
+SUBST_SED.pkg_notify+=		-e 's|@PERL@|${PERL5:Q}|g'
+SUBST_SED.pkg_notify+=		-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 
-INSTALLATION_DIRS=	bin ${EXAMPLEDIR} share/doc/pkg_notify
+INSTALLATION_DIRS=	bin ${EGDIR} ${PKGMANDIR}/man1
+
+do-extract:
+	cd ${FILESDIR} &&	\
+	${CP} pkg_notify pkg_notify.list pkg_notify.1 ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/pkg_notify.list ${DESTDIR}${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pkg_notify
+	${INSTALL_DATA} ${WRKSRC}/pkg_notify.list ${DESTDIR}${EGDIR}
+	${INSTALL_MAN} ${WRKSRC}/pkg_notify.1	\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
