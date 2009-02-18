@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2009/02/11 17:53:40 drochner Exp $
+# $NetBSD: Makefile,v 1.80 2009/02/18 13:57:41 drochner Exp $
 
 DISTNAME=		TeXmacs-1.0.6.15-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -44,6 +44,14 @@ REPLACE_SH+=		plugins/xypic/bin/tm_xypic
 pre-install:
 	${RM} -f ${WRKSRC}/TeXmacs/doc/devel/format/.log
 	${FIND} ${WRKSRC}/plugins/ -name '*.orig' | ${XARGS} ${RM}
+
+# just a helper script, not worth a full perl dependency
+CHECK_INTERPRETER_SKIP=	libexec/TeXmacs/bin/bbox_add.pl
+# but be friendly and set the path to something reasonable
+REPLACE_INTERPRETER+=		optionalperl
+REPLACE.optionalperl.old=	.*perl[^[:space:]]*
+REPLACE.optionalperl.new=	${LOCALBASE}/bin/perl
+REPLACE_FILES.optionalperl=	plugins/feynmf/bin/bbox_add.pl
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
