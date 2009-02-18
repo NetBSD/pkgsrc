@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.45 2009/01/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2009/02/18 20:06:57 ahoka Exp $
 #
 
-DISTNAME=		gnome-pilot-2.0.15
-PKGREVISION=		6
+DISTNAME=		gnome-pilot-2.0.17
 CATEGORIES=		comms gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
-COMMENT=		Palm Pilot synchronisation for GNOME
+COMMENT=		Handheld synchronisation for GNOME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,7 +20,11 @@ USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 
 CONFIGURE_ARGS+=	--with-pisock=${BUILDLINK_PREFIX.pilot-link-libs}
+CONFIGURE_ARGS+=	--with-hal
+CONFIGURE_ARGS+=	--with-vfs
 
+.include "../../sysutils/hal/buildlink3.mk"
+.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
