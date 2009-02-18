@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.627 2009/02/18 16:41:05 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.628 2009/02/18 16:44:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -852,3 +852,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-Template-Provider-Encoding version 0.10 [abs 2009-02-18]
 	Updated sysutils/rdiff-backup to 1.2.6nb1 [wiz 2009-02-18]
 	Added textproc/py-vobject version 0.8.1b [kleink 2009-02-18]
+	Updated print/teTeX to 3.0nb2 [minskim 2009-02-18]
