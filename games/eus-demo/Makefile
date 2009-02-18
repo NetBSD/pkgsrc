@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/18 10:56:55 abs Exp $
 
 DISTNAME=	eus-demo
 PKGNAME=	eus-demo-1.0
@@ -37,7 +37,7 @@ BINTYPE.powerpc=	ppc/glibc-2.1
 BINTYPE.sparc64=	sparc64/glibc-2.1
 BINTYPE=		${BINTYPE.${EMUL_ARCH}}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${LIBDIR} ${SHAREDIR}
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
@@ -47,8 +47,6 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
 		${DESTDIR}${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINTYPE}/${DISTBINNAME} \

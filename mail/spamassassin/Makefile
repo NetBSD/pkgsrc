@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2008/11/14 22:51:52 joerg Exp $
+# $NetBSD: Makefile,v 1.91 2009/02/18 11:02:59 abs Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.2.5
 PKGNAME=	spamassassin-3.2.5
@@ -140,6 +140,8 @@ INTERPRETER_SUPPORT=	YES
 FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT:Q}
 FILES_SUBST+=		OPSYS=${OPSYS}
 
+INSTALLATION_DIRS+=	${SA_INSTALLDIRS}
+
 pre-configure: perl5-configure
 	# GNU configure needs version.h -> create it
 	cd ${WRKSRC}/spamc && ${PERL5} ./version.h.pl
@@ -148,9 +150,6 @@ pre-configure: perl5-configure
 
 post-install:
 	${TEST} -r ${PLIST_ADD} && ${RM} ${PLIST_ADD} ; :
-.for dir in ${SA_INSTALLDIRS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${dir}
-.endfor
 .for f in ${SA_DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}/${f}
 	${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}

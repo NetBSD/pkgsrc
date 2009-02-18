@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/18 10:56:55 abs Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -38,7 +38,7 @@ DIST_SUBDIR=	lokigames
 LIBDIR=		${PREFIX}/lib/lokigames/${BINNAME}
 SHAREDIR=	${PREFIX}/share/doc/lokigames
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${LIBDIR} ${SHAREDIR}
 
 do-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \
@@ -48,8 +48,6 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${LIBDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
 		${DESTDIR}${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTBINNAME} \
