@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.512 2009/02/15 16:04:32 jmcneill Exp $
+# $NetBSD: Makefile,v 1.513 2009/02/18 21:20:36 ahoka Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -67,6 +67,7 @@ SUBDIR+=	digikam-doc
 SUBDIR+=	djview4
 SUBDIR+=	djvulibre-lib
 SUBDIR+=	djvulibre-tools
+SUBDIR+=	dvipng
 SUBDIR+=	dx
 SUBDIR+=	dxsamples
 SUBDIR+=	eog
