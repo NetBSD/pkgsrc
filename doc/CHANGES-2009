@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.630 2009/02/18 17:52:57 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.631 2009/02/18 19:14:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX to 3.0nb2 [minskim 2009-02-18]
 	Updated textproc/py-vobject to 0.8.1bnb1 [kleink 2009-02-18]
 	Updated print/tex-bin-tetex to 3.0.12157nb1 [minskim 2009-02-18]
+	Updated databases/sqlite3 to 3.6.11 [adam 2009-02-18]
