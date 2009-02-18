@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.632 2009/02/18 20:17:36 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.633 2009/02/18 21:23:07 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -857,3 +857,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-tetex to 3.0.12157nb1 [minskim 2009-02-18]
 	Updated databases/sqlite3 to 3.6.11 [adam 2009-02-18]
 	Updated comms/gnome-pilot to 2.0.17 [ahoka 2009-02-18]
+	Added graphics/dvipng version 1.11 [ahoka 2009-02-18]
