@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/18 16:38:41 kleink Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/vobject/__init__.py
+${PYSITELIB}/vobject/__init__.pyc
+${PYSITELIB}/vobject/__init__.pyo
+${PYSITELIB}/vobject/base.py
+${PYSITELIB}/vobject/base.pyc
+${PYSITELIB}/vobject/base.pyo
+${PYSITELIB}/vobject/behavior.py
+${PYSITELIB}/vobject/behavior.pyc
+${PYSITELIB}/vobject/behavior.pyo
+${PYSITELIB}/vobject/change_tz.py
+${PYSITELIB}/vobject/change_tz.pyc
+${PYSITELIB}/vobject/change_tz.pyo
+${PYSITELIB}/vobject/hcalendar.py
+${PYSITELIB}/vobject/hcalendar.pyc
+${PYSITELIB}/vobject/hcalendar.pyo
+${PYSITELIB}/vobject/icalendar.py
+${PYSITELIB}/vobject/icalendar.pyc
+${PYSITELIB}/vobject/icalendar.pyo
+${PYSITELIB}/vobject/ics_diff.py
+${PYSITELIB}/vobject/ics_diff.pyc
+${PYSITELIB}/vobject/ics_diff.pyo
+${PYSITELIB}/vobject/vcard.py
+${PYSITELIB}/vobject/vcard.pyc
+${PYSITELIB}/vobject/vcard.pyo
+${PYSITELIB}/vobject/win32tz.py
+${PYSITELIB}/vobject/win32tz.pyc
+${PYSITELIB}/vobject/win32tz.pyo
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/vobject
