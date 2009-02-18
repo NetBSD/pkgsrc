@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2008/11/03 14:18:42 ghen Exp $
+# $NetBSD: Makefile.common,v 1.32 2009/02/18 10:51:40 abs Exp $
 # used by mail/thunderbird/Makefile-thunderbird.common
 # used by www/seamonkey/Makefile-seamonkey.common
 # used by time/sunbird/Makefile-sunbird.common
@@ -72,6 +72,9 @@ CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
+
+# Mozilla applications require the frame-pointer
+BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=${MOZILLA:Q}
 
