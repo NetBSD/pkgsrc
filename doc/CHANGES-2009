@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.620 2009/02/18 07:21:43 adam Exp $
+$NetBSD: CHANGES-2009,v 1.621 2009/02/18 08:02:30 mlelstv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -845,3 +845,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/php-suhosin version 5.2.8.0.9.27 [adrianp 2009-02-17]
 	Updated databases/tokyocabinet to 1.4.7 [obache 2009-02-18]
 	Updated archivers/p7zip to 4.65 [adam 2009-02-18]
+	Updated multimedia/replex to 0.1.6.8 [mlelstv 2009-02-18]
