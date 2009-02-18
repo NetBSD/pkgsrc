@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.625 2009/02/18 10:27:34 abs Exp $
+$NetBSD: CHANGES-2009,v 1.626 2009/02/18 12:24:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -850,3 +850,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gimp to 2.6.5 [adam 2009-02-18]
 	Updated sysutils/rdiff-backup to 1.2.6 [wiz 2009-02-18]
 	Added www/p5-Template-Provider-Encoding version 0.10 [abs 2009-02-18]
+	Updated sysutils/rdiff-backup to 1.2.6nb1 [wiz 2009-02-18]
