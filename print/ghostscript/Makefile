@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/02/17 16:15:29 drochner Exp $
+# $NetBSD: Makefile,v 1.59 2009/02/18 17:52:58 drochner Exp $
 
 DISTNAME=	ghostscript-8.64
 CATEGORIES=	print
@@ -69,6 +69,7 @@ BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 CONFIGURE_ENV+=	LPLIBDIR=${LOCALBASE}/lib
 
 # XXX Sun Studio Compiler does not like DOS linebreaks
+# should be fixed in next ghostscript release
 DELDOSCR= ${WRKSRC}/jasper/src/libjasper/jpc/jpc_qmfb.c
 
 post-extract:
