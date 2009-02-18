@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7852 2009/02/17 10:42:43 adam Exp $
+$NetBSD: TODO,v 1.7853 2009/02/18 08:57:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -638,7 +638,6 @@ Suggested package updates
 	o gforth-0.7.0
 	o gfract-0.33
 	o ggiterm-0.7.1
-	o ghostscript-8.64
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.2
