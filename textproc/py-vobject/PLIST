@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/18 16:38:41 kleink Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/18 16:56:23 kleink Exp $
+bin/change_tz
+bin/ics_diff
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
