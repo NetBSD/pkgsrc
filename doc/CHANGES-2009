@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.622 2009/02/18 08:19:29 mrg Exp $
+$NetBSD: CHANGES-2009,v 1.623 2009/02/18 08:57:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/p7zip to 4.65 [adam 2009-02-18]
 	Updated multimedia/replex to 0.1.6.8 [mlelstv 2009-02-18]
 	Updated chat/ircII to 20081115 [mrg 2009-02-18]
+	Updated graphics/gimp to 2.6.5 [adam 2009-02-18]
