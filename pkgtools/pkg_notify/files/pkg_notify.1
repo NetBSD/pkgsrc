@@ -1,0 +1,72 @@
+.\" $NetBSD: pkg_notify.1,v 1.1 2009/02/18 21:23:21 imil Exp $
+.\"
+.\" Copyright (c) 2009 Emile "iMil" Heitor <imil@gcu.info>
+.\" All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd Feb 18, 2009
+.Dt PKG_NOTIFY 1
+.Sh NAME
+.Nm pkg_notify
+.Nd Notifies package maintainer when a new version is available
+.Sh SYNOPSIS
+.Nm
+.Op Fl c Ar list-file
+.Op Ar ...
+.Sh DESCRIPTION
+.Nm
+notifies package maintainers when a new version of the software
+is available.
+.Pp
+In order to use
+.Nm
+, create the
+.Pa @PKG_SYSCONFDIR@/pkg_notify.list
+file containing the package list you want to be informed on.
+The file contains a list of
+.Pa category/package
+pairs, one per line.  For example:
+.Pp
+.Bd -literal -offset 0
+audio/bmp
+devel/ncurses
+x11/xbindkeys
+.Ed
+.Pp
+The following option may be used:
+.Bl -tag -width Ds
+.It Fl c Ar list-file
+Use
+.Ar list-file
+as the file containing the package list
+.El
+.Pp
+Otherwise,
+.Nm
+can be called with a list of packages to be checked.
+.El
+.Sh SEE ALSO
+.Pa http://www.pkgsrc.org/
+.Sh AUTHORS
+.An Emile "iMil" Heitor Aq imil@gcu.info
+.An Stoned Elipot Aq seb@NetBSD.org
