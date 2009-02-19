@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.12 2008/09/22 16:42:06 minskim Exp $
+# $NetBSD: replace.mk,v 1.13 2009/02/19 12:15:15 obache Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -13,7 +13,7 @@ _RUBY_REPLACE_MK=	# defined
 .if defined(REPLACE_RUBY)
 REPLACE_INTERPRETER+=	${RUBY_NAME}
 
-REPLACE.${RUBY_NAME}.old=	.*ruby[0-9]*
+REPLACE.${RUBY_NAME}.old=	.*ruby[0-9.]*
 REPLACE.${RUBY_NAME}.new=	${RUBY}
 REPLACE_FILES.${RUBY_NAME}=	${REPLACE_RUBY}
 
