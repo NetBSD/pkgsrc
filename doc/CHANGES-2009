@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.637 2009/02/19 07:44:13 epg Exp $
+$NetBSD: CHANGES-2009,v 1.638 2009/02/19 11:18:58 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr to 1.12 [epg 2009-02-19]
 	Updated devel/bzr-svn to 0.5.1 [epg 2009-02-19]
 	Updated devel/qbzr to 0.9.8 [epg 2009-02-19]
+	Updated net/dnsmasq to 2.47 [roy 2009-02-19]
