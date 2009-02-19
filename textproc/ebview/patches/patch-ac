@@ -1,0 +1,21 @@
+$NetBSD: patch-ac,v 1.1 2009/02/19 16:43:13 joerg Exp $
+
+--- data/Makefile.in.orig	2009-02-16 15:39:52.000000000 +0100
++++ data/Makefile.in
+@@ -304,13 +304,13 @@ check: all
+ 
+ install:
+ 	if test -r $(MKINSTALLDIRS); then \
+-		$(MKINSTALLDIRS) $(pkgdatadir); \
++		$(MKINSTALLDIRS) ${DESTDIR}$(pkgdatadir); \
+ 	else \
+-		$(top_srcdir)/mkinstalldirs $(pkgdatadir); \
++		$(top_srcdir)/mkinstalldirs ${DESTDIR}$(pkgdatadir); \
+ 	fi; \
+ 	data="$(data)"; \
+ 	for file in $$data; do \
+-		$(INSTALL_DATA) $(srcdir)/$$file $(pkgdatadir)/$$file; \
++		$(INSTALL_DATA) $(srcdir)/$$file ${DESTDIR}$(pkgdatadir)/$$file; \
+ 	done;
+ 
+ # Define this as empty until I found a useful application.

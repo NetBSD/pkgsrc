@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.1 2009/02/19 16:43:13 joerg Exp $
+
+--- doc/Makefile.in.orig	2009-02-16 15:46:52.000000000 +0100
++++ doc/Makefile.in
+@@ -308,15 +308,15 @@ install:
+ 	dir="$(dir)"; \
+ 	for lang in $$dir; do \
+ 		if test -r $(MKINSTALLDIRS); then \
+-			$(MKINSTALLDIRS) $(pkgdatadir)/help/$$lang; \
++			$(MKINSTALLDIRS) ${DESTDIR}$(pkgdatadir)/help/$$lang; \
+ 		else \
+-			$(top_srcdir)/mkinstalldirs $(pkgdatadir)/help/$$lang; \
++			$(top_srcdir)/mkinstalldirs ${DESTDIR}$(pkgdatadir)/help/$$lang; \
+ 		fi; \
+ 	done; \
+ 	data="$(data)"; \
+ 	for lang in $$dir; do \
+ 		for file in $$data; do \
+-			$(INSTALL_DATA) $(srcdir)/$$lang/$$file $(pkgdatadir)/help/$$lang/$$file; \
++			$(INSTALL_DATA) $(srcdir)/$$lang/$$file ${DESTDIR}$(pkgdatadir)/help/$$lang/$$file; \
+ 		done; \
+ 	done;
+ 
