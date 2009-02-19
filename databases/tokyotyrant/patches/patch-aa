@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2009/02/03 13:57:56 obache Exp $
+$NetBSD: patch-aa,v 1.3 2009/02/19 06:31:55 obache Exp $
 
 Honor CFLAGS and LDFLAGS passwed to configure script.
 
---- Makefile.in.orig	2008-09-29 02:32:50.000000000 +0000
+--- Makefile.in.orig	2009-02-16 08:35:25.000000000 +0000
 +++ Makefile.in
 @@ -54,8 +54,8 @@ CPPFLAGS = @MYCPPFLAGS@ \
    -D_TT_PREFIX="\"$(prefix)\"" -D_TT_INCLUDEDIR="\"$(INCLUDEDIR)\"" \
