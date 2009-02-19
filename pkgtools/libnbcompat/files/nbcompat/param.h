@@ -1,4 +1,4 @@
-/*	$NetBSD: param.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: param.h,v 1.3 2009/02/19 00:51:12 abs Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -45,6 +45,11 @@
 #endif
 #if !defined(MAX)
 # define MAX(a, b)	((a) < (b) ? (b) : (a))
+#endif
+
+/* At least Ubuntu 8.10 jumps through hoops to *undefine* ARG_MAX */
+#if !defined(ARG_MAX)
+# define ARG_MAX sysconf(_SC_ARG_MAX)
 #endif
 
 #endif	/* !_NBCOMPAT_SYS_PARAM_H_ */
