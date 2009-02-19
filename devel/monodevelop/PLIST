@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/12/22 13:16:49 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/02/19 12:49:12 kefren Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -14,6 +14,7 @@ lib/monodevelop/AddIns/BackendBindings/MonoDevelop.VBNetBinding.dll.mdb
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll
 lib/monodevelop/AddIns/ChangeLogAddIn/ChangeLogAddIn.dll.mdb
 lib/monodevelop/AddIns/GnomePlatform/GnomePlatform.dll
+lib/monodevelop/AddIns/GnomePlatform/GnomePlatform.dll.config
 lib/monodevelop/AddIns/GnomePlatform/GnomePlatform.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.Autotools/Makefile.am.project.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/Makefile.include
@@ -85,6 +86,10 @@ lib/monodevelop/AddIns/MonoDeveloperExtensions/MonoDeveloperExtensions_nunit.dll
 lib/monodevelop/AddIns/MonoDeveloperExtensions/MonoDeveloperExtensions_nunit.dll.mdb
 lib/monodevelop/AddIns/NUnit/MonoDevelop.NUnit.dll
 lib/monodevelop/AddIns/NUnit/MonoDevelop.NUnit.dll.mdb
+lib/monodevelop/AddIns/NUnit/NUnitRunner.dll
+lib/monodevelop/AddIns/NUnit/NUnitRunner.dll.mdb
+lib/monodevelop/AddIns/NUnit/nunit.core.interfaces.dll
+lib/monodevelop/AddIns/NUnit/nunit.util.dll
 lib/monodevelop/AddIns/NUnit/nunit.core.dll
 lib/monodevelop/AddIns/NUnit/nunit.framework.dll
 lib/monodevelop/AddIns/VersionControl/Diff.dll
@@ -141,8 +146,6 @@ lib/monodevelop/data/options/MonoDevelop-tools.xml
 lib/monodevelop/data/options/MonoDevelopProperties.xml
 lib/monodevelop/data/options/StandardHeader.xml
 lib/monodevelop/data/options/TipsOfTheDay.xml
-lib/monodevelop/data/resources/css/MsdnHelp.css
-lib/monodevelop/data/resources/css/SharpDevelopStandard.css
 lib/pkgconfig/monodevelop-core-addins.pc
 lib/pkgconfig/monodevelop.pc
 man/man1/mdtool.1
@@ -177,8 +180,6 @@ share/locale/zh_CN/LC_MESSAGES/monodevelop.mo
 share/locale/zh_TW/LC_MESSAGES/monodevelop.mo
 share/mime/packages/monodevelop.xml
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/monodevelop/data/resources/css
-@dirrm lib/monodevelop/data/resources
 @dirrm lib/monodevelop/data/options
 @dirrm lib/monodevelop/data
 @dirrm lib/monodevelop/bin
