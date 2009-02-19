@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/02/17 10:08:15 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2009/02/19 19:22:22 tonio Exp $
 
 Do not use rudimentary mkdir(1), cp(1) and chmod(1): install(1) is
 simpler and more elegant to install binaries.
@@ -13,24 +13,26 @@ simpler and more elegant to install binaries.
  
  debug: clean
  	@make CFLAGS='${DEBUG_CFLAGS}'
-@@ -43,15 +44,12 @@ install: dvtm
- 	@echo stripping executable
- 	@strip -s dvtm
+@@ -40,18 +41,12 @@ dist: clean
+ 	@rm -rf dvtm-${VERSION}
+ 
+ install: dvtm
+-	@echo stripping executable
+-	@strip -s dvtm
  	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 -	@mkdir -p ${DESTDIR}${PREFIX}/bin
 -	@cp -f dvtm ${DESTDIR}${PREFIX}/bin
 -	@chmod 755 ${DESTDIR}${PREFIX}/bin/dvtm
 -	@cp -f dvtm-status ${DESTDIR}${PREFIX}/bin
 -	@chmod 755 ${DESTDIR}${PREFIX}/bin/dvtm-status
-+	@install -m 755 -d ${DESTDIR}${PREFIX}/bin
-+	@install -m 755 -c dvtm ${DESTDIR}${PREFIX}/bin
-+	@install -m 755 -c dvtm-status ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_PROGRAM} dvtm ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_SCRIPT} dvtm-status ${DESTDIR}${PREFIX}/bin
  	@echo installing manual page to ${DESTDIR}${MANPREFIX}/man1
 -	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
 -	@sed "s/VERSION/${VERSION}/g" < dvtm.1 > ${DESTDIR}${MANPREFIX}/man1/dvtm.1
 -	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/dvtm.1
-+	@install -m 755 -d ${DESTDIR}${MANPREFIX}/man1
-+	@install -m 644 -c dvtm.1.out ${DESTDIR}${MANPREFIX}/man1/dvtm.1
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${MANPREFIX}/man1
++	${BSD_INSTALL_MAN} dvtm.1.out ${DESTDIR}${MANPREFIX}/man1/dvtm.1
  
  uninstall:
  	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
