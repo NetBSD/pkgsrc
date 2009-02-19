@@ -639,6 +639,7 @@ ac_includes_default="\
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
+SYSCONFDIR
 EGREP
 CPP
 bootstrap
@@ -6847,7 +6848,10 @@ esac
 
 
 
-ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile"
+SYSCONFDIR="$sysconfdir"
+
+
+ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat5"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -7452,6 +7456,8 @@ do
     "delete/Makefile") CONFIG_FILES="$CONFIG_FILES delete/Makefile" ;;
     "info/Makefile") CONFIG_FILES="$CONFIG_FILES info/Makefile" ;;
     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
+    "lib/pkg_install.conf.5") CONFIG_FILES="$CONFIG_FILES lib/pkg_install.conf.5" ;;
+    "lib/pkg_install.conf.cat5") CONFIG_FILES="$CONFIG_FILES lib/pkg_install.conf.cat5" ;;
 
   *) { { $as_echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 $as_echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

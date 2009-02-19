@@ -145,7 +145,10 @@ AH_BOTTOM(
 #endif
 )
 
+SYSCONFDIR="$sysconfdir"
+AC_SUBST(SYSCONFDIR)
+
 AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile bpm/bpm.sh \
 	create/Makefile delete/Makefile info/Makefile \
-	lib/Makefile])
+	lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat5])
 AC_OUTPUT
