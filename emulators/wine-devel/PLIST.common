@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2009/01/30 19:39:04 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2009/02/19 19:26:17 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -152,6 +152,7 @@ include/wine/windows/d3dx9.h
 include/wine/windows/d3dx9core.h
 include/wine/windows/d3dx9math.h
 include/wine/windows/d3dx9math.inl
+include/wine/windows/d3dx9mesh.h
 include/wine/windows/d3dx9shader.h
 include/wine/windows/d3dx9tex.h
 include/wine/windows/dbghelp.h
@@ -483,6 +484,8 @@ include/wine/windows/svrapi.h
 include/wine/windows/tapi.h
 include/wine/windows/tchar.h
 include/wine/windows/textserv.h
+include/wine/windows/textstor.h
+include/wine/windows/textstor.idl
 include/wine/windows/tlhelp32.h
 include/wine/windows/tmschema.h
 include/wine/windows/tom.h
