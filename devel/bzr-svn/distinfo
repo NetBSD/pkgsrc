@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/01/19 21:42:09 epg Exp $
+$NetBSD: distinfo,v 1.7 2009/02/19 07:34:08 epg Exp $
 
-SHA1 (bzr-svn-0.4.17.tar.gz) = 850d66e451680ee7498a86d92d7d7d17f3c395c5
-RMD160 (bzr-svn-0.4.17.tar.gz) = 76565152c86a70fd6496975931047595ab3edc28
-Size (bzr-svn-0.4.17.tar.gz) = 223433 bytes
+SHA1 (bzr-svn-0.5.1.tar.gz) = 1946fa3bfa3d40479f73f7acbf7d3ea37fee58b7
+RMD160 (bzr-svn-0.5.1.tar.gz) = a18cc399118bc9869f4f0caa14b469698160a4e3
+Size (bzr-svn-0.5.1.tar.gz) = 232762 bytes
