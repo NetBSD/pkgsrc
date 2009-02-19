@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7855 2009/02/19 11:18:58 roy Exp $
+$NetBSD: TODO,v 1.7856 2009/02/19 12:50:16 kefren Exp $
 
 Suggested new packages
 ======================
@@ -914,7 +914,6 @@ Suggested package updates
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.5.99.902
-	o monodevelop-1.9.2
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
