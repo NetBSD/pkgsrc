@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/08/26 13:14:48 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2009/02/19 12:59:35 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -23,6 +23,5 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}
 
 .include "../../audio/esound/buildlink3.mk"
-.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
