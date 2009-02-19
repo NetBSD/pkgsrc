@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.639 2009/02/19 12:50:16 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.640 2009/02/19 14:49:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/qbzr to 0.9.8 [epg 2009-02-19]
 	Updated net/dnsmasq to 2.47 [roy 2009-02-19]
 	Updated devel/monodevelop to 1.9.2 [kefren 2009-02-19]
+	Updated www/trac to 0.11.3 [gdt 2009-02-19]
