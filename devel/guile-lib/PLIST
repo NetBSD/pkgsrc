@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/21 16:29:44 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/02/19 18:22:22 gdt Exp $
 info/guile-library.info
+share/guile/site/apicheck.scm
 share/guile/site/config/load.scm
+share/guile/site/container/async-queue.scm
 share/guile/site/container/delay-tree.scm
 share/guile/site/container/nodal-tree.scm
 share/guile/site/container/queue.scm
@@ -31,6 +33,7 @@ share/guile/site/string/soundex.scm
 share/guile/site/string/transform.scm
 share/guile/site/string/wrap.scm
 share/guile/site/sxml/apply-templates.scm
+share/guile/site/sxml/fold.scm
 share/guile/site/sxml/simple.scm
 share/guile/site/sxml/ssax-simple.scm
 share/guile/site/sxml/ssax.scm
@@ -46,6 +49,7 @@ share/guile/site/sxml/upstream/packages.scm
 share/guile/site/sxml/xpath.scm
 share/guile/site/term/ansi-color.scm
 share/guile/site/texinfo.scm
+share/guile/site/texinfo/docbook.scm
 share/guile/site/texinfo/html.scm
 share/guile/site/texinfo/indexing.scm
 share/guile/site/texinfo/nodal-tree.scm
