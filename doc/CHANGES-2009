@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.640 2009/02/19 14:49:27 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.641 2009/02/19 18:22:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -866,3 +866,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dnsmasq to 2.47 [roy 2009-02-19]
 	Updated devel/monodevelop to 1.9.2 [kefren 2009-02-19]
 	Updated www/trac to 0.11.3 [gdt 2009-02-19]
+	Updated devel/guile-lib to 0.1.6 [gdt 2009-02-19]
