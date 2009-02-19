@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/19 21:42:26 epg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/19 07:40:01 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.pyo
@@ -29,12 +29,18 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/commit.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/config.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/config.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/config.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/conflicts.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/conflicts.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/conflicts.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diff.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diff.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diff.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diffview.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diffview.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/diffview.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/extdiff.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/extdiff.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/extdiff.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/extra/__init__.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/extra/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/extra/__init__.pyo
@@ -161,6 +167,9 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_update_branch.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_update_checkout.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_update_checkout.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/ui_update_checkout.pyo
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/uifactory.py
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/uifactory.pyc
+${PYSITELIB}/bzrlib/plugins/qbzr/lib/uifactory.pyo
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/util.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/util.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/lib/util.pyo
