@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2009/02/03 13:57:56 obache Exp $
+$NetBSD: patch-ab,v 1.5 2009/02/19 06:31:55 obache Exp $
 
 Avoid to break pkgsrc's tools.
 
---- configure.orig	2008-12-27 09:46:51.000000000 +0000
+--- configure.orig	2009-02-17 09:48:58.000000000 +0000
 +++ configure
-@@ -1745,13 +1745,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+@@ -1746,13 +1746,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
  MYPOSTCMD="true"
  
  # Building paths
@@ -18,7 +18,7 @@ Avoid to break pkgsrc's tools.
  export PATH CPATH LIBRARY_PATH LD_LIBRARY_PATH PKG_CONFIG_PATH
  if type pkg-config > /dev/null 2>&1
  then
-@@ -4427,7 +4423,7 @@ _ACEOF
+@@ -4428,7 +4424,7 @@ _ACEOF
  
  fi
  
@@ -27,7 +27,7 @@ Avoid to break pkgsrc's tools.
  then
  
  { echo "$as_me:$LINENO: checking for main in -llua" >&5
-@@ -5294,7 +5290,7 @@ echo "$as_me: error: tcutil.h is require
+@@ -5295,7 +5291,7 @@ echo "$as_me: error: tcutil.h is require
  fi
  
  
