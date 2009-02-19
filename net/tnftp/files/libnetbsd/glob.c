@@ -1,4 +1,4 @@
-/* $NetBSD: glob.c,v 1.4 2007/08/07 02:06:59 lukem Exp $ */
+/* $NetBSD: glob.c,v 1.5 2009/02/19 00:51:12 abs Exp $ */
 /* from	NetBSD: glob.c,v 1.16 2006/03/26 18:11:22 christos Exp */
 
 /*
@@ -56,6 +56,11 @@
  */
 
 #include "tnftp.h"
+
+/* At least Ubuntu 8.10 jumps through hoops to *undefine* ARG_MAX */
+#if !defined(ARG_MAX)
+# define ARG_MAX sysconf(_SC_ARG_MAX)
+#endif
 
 #undef	TILDE			/* XXX: AIX 4.1.5 has this in <sys/ioctl.h> */
 
