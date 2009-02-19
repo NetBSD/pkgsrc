@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/01/19 21:41:48 epg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/02/19 07:06:40 epg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -276,6 +276,7 @@ ${PYSITELIB}/bzrlib/help_topics/en/authentication.txt
 ${PYSITELIB}/bzrlib/help_topics/en/configuration.txt
 ${PYSITELIB}/bzrlib/help_topics/en/conflicts.txt
 ${PYSITELIB}/bzrlib/help_topics/en/hooks.txt
+${PYSITELIB}/bzrlib/help_topics/en/log-formats.txt
 ${PYSITELIB}/bzrlib/help_topics/en/patterns.txt
 ${PYSITELIB}/bzrlib/help_topics/en/rules.txt
 ${PYSITELIB}/bzrlib/hooks.py
@@ -404,6 +405,9 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/test_account.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_directory.pyo
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_open.py
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_open.pyc
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_open.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyo
@@ -815,6 +819,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_commit.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_get_revision_id_to_revno_map.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_get_revision_id_to_revno_map.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_get_revision_id_to_revno_map.pyo
@@ -824,6 +831,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_hooks.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_http.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_http.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_http.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_iter_merge_sorted_revisions.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_iter_merge_sorted_revisions.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_iter_merge_sorted_revisions.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_last_revision_info.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_last_revision_info.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_last_revision_info.pyo
@@ -848,6 +858,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_reconcile.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_dotted_revno.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_dotted_revno.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_dotted_revno.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_revno.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_revno.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_id_to_revno.pyo
