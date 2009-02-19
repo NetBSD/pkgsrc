@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_notify.1,v 1.1 2009/02/18 21:23:21 imil Exp $
+.\" $NetBSD: pkg_notify.1,v 1.2 2009/02/19 09:41:39 wiz Exp $
 .\"
 .\" Copyright (c) 2009 Emile "iMil" Heitor <imil@gcu.info>
 .\" All rights reserved.
@@ -24,7 +24,7 @@
 .\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 .\" SUCH DAMAGE.
 .\"
-.Dd Feb 18, 2009
+.Dd February 18, 2009
 .Dt PKG_NOTIFY 1
 .Sh NAME
 .Nm pkg_notify
@@ -39,13 +39,14 @@ notifies package maintainers when a new version of the software
 is available.
 .Pp
 In order to use
-.Nm
-, create the
+.Nm ,
+create the
 .Pa @PKG_SYSCONFDIR@/pkg_notify.list
 file containing the package list you want to be informed on.
 The file contains a list of
 .Pa category/package
-pairs, one per line.  For example:
+pairs, one per line.
+For example:
 .Pp
 .Bd -literal -offset 0
 audio/bmp
@@ -58,12 +59,12 @@ The following option may be used:
 .It Fl c Ar list-file
 Use
 .Ar list-file
-as the file containing the package list
+as the file containing the package list.
 .El
 .Pp
 Otherwise,
 .Nm
-can be called with a list of packages to be checked.
+can be called with a list of packages to be checked as arguments.
 .El
 .Sh SEE ALSO
 .Pa http://www.pkgsrc.org/
