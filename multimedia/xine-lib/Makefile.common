@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.59 2009/01/20 18:30:49 drochner Exp $
+# $NetBSD: Makefile.common,v 1.60 2009/02/19 12:58:03 drochner Exp $
 #
 
 # used by audio/xine-arts/Makefile
 # used by audio/xine-esound/Makefile
 # used by audio/xine-pulse/Makefile
 
-DISTNAME=		xine-lib-1.1.16.1
-XINE_PKGNAME=		xine-lib-1.1.16.1
+DISTNAME=		xine-lib-1.1.16.2
+XINE_PKGNAME=		xine-lib-1.1.16.2
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -28,7 +28,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
-USE_TOOLS+=		autoconf gmake msgfmt pkg-config xmkmf
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config xmkmf perl
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
@@ -57,6 +57,12 @@ CONFIGURE_ARGS+=	--with-xxmc-path='${X11BASE}/lib'
 PLIST.xvmc=		yes
 .endif
 .endif # X11_TYPE
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1-4].*)
+# --no-undefined causes errors if shlibs are not linked against libc
+BUILDLINK_TRANSFORM+=	"rm:-Wl,--no-undefined"
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
