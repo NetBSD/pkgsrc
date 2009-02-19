@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7854 2009/02/19 06:53:30 epg Exp $
+$NetBSD: TODO,v 1.7855 2009/02/19 11:18:58 roy Exp $
 
 Suggested new packages
 ======================
@@ -529,7 +529,6 @@ Suggested package updates
 	o dirac-1.0.2
 	o dircproxy-devel-1.2.0.2
 	o dmenu-3.9 [pkgsrc-wip has it!]
-	o dnsmasq-2.47
 	o dnstop-20070307
 	o dnstracer-1.9
 	o doxygen-1.5.8
