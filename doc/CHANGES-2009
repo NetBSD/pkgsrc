@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.635 2009/02/19 06:53:30 epg Exp $
+$NetBSD: CHANGES-2009,v 1.636 2009/02/19 07:16:40 epg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -860,3 +860,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/dvipng version 1.11 [ahoka 2009-02-18]
 	Updated databases/tokyotyrant to 1.1.16 [obache 2009-02-19]
 	Added devel/subvertpy version 0.6.1 [epg 2009-02-19]
+	Updated devel/bzr to 1.12 [epg 2009-02-19]
