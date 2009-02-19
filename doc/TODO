@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7853 2009/02/18 08:57:30 adam Exp $
+$NetBSD: TODO,v 1.7854 2009/02/19 06:53:30 epg Exp $
 
 Suggested new packages
 ======================
@@ -332,10 +332,6 @@ Suggested new packages
 	sage
 	http://www.sagemath.org/
 	Open-source alternative to Magma, Maple, Mathematica, Matlab.
-
-	subvertpy
-	http://launchpad.net/subvertpy
-        Yet another Subversion Python binding; needed for bzr-svn>=0.5.0
 
 Suggested package updates
 =========================
