@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/19 07:34:08 epg Exp $
 
 DISTNAME=	bzr-svn-${VER}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://launchpad.net/bzr-svn/0.4/${VER}/+download/
+MASTER_SITES=	http://launchpad.net/bzr-svn/0.5/${VER}/+download/
 MASTER_SITES+=	http://samba.org/~jelmer/bzr/
-VER=		0.4.17
+VER=		0.5.1
 
 MAINTAINER=	epg@NetBSD.org
 HOMEPAGE=	http://bazaar-vcs.org/BzrForeignBranches/Subversion
@@ -14,7 +14,8 @@ COMMENT=	Foreign Subversion repositoriy support for Bazaar
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${SQLITE_DEP}
-DEPENDS+=	bzr>=1.10{,nb[0-9]*}:../../devel/bzr
+DEPENDS+=	bzr>=1.11{,nb[0-9]*}:../../devel/bzr
+DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.6.1:../../devel/subvertpy
 
 # for make test
 USE_TOOLS+=	gmake
