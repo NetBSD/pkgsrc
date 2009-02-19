@@ -1,10 +1,12 @@
-# $NetBSD: extension.mk,v 1.21 2008/12/23 15:39:07 abs Exp $
+# $NetBSD: extension.mk,v 1.22 2009/02/19 12:24:59 obache Exp $
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
-.if defined(PKGNAME_REQD) && !empty(${PKGNAME_REQD:Mpy([0-9][0-9])-.*})
+.if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
+    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(${PKGNAME_OLD:Mpy([0-9][0-9])-.*})
+.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
+      defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
 PYTHON_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
 .endif
 
