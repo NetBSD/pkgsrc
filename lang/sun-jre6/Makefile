@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/02/08 00:23:20 christos Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/20 11:56:55 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -90,6 +90,10 @@ pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 .endif
+
+# This file is generated the *first* time the package is built on a box
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/java/sun-6/lib/servicetag/registration.xml
 
 #
 # re-create sfiles.mk from properties and config files
