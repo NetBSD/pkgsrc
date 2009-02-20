@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/02/20 23:21:53 adrianp Exp $
+
+--- libradius/radlib.h.orig	2005-04-11 14:36:34.000000000 -0700
++++ libradius/radlib.h
+@@ -33,6 +33,10 @@
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ 
++#ifndef u_int32_t
++#define u_int32_t	uint32_t
++#endif
++
+ /* Limits */
+ #define RAD_MAX_ATTR_LEN		253
+ 
