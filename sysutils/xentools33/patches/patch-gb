@@ -1,0 +1,38 @@
+$NetBSD: patch-gb,v 1.3 2009/02/20 23:22:47 cegger Exp $
+
+--- console/daemon/io.c.orig	2009-01-05 11:26:58.000000000 +0000
++++ console/daemon/io.c
+@@ -402,9 +402,7 @@ static int domain_create_tty(struct doma
+ 	assert(dom->slave_fd == -1);
+ 	assert(dom->master_fd == -1);
+ 
+-	cfmakeraw(&term);
+-
+-	if (openpty(&dom->master_fd, &dom->slave_fd, NULL, &term, NULL) < 0) {
++	if (openpty(&dom->master_fd, &dom->slave_fd, NULL, NULL, NULL) < 0) {
+ 		err = errno;
+ 		dolog(LOG_ERR, "Failed to create tty for domain-%d "
+ 		      "(errno = %i, %s)",
+@@ -412,6 +410,22 @@ static int domain_create_tty(struct doma
+ 		return 0;
+ 	}
+ 
++	if (tcgetattr(dom->slave_fd, &term) < 0) {
++		err = errno;
++		dolog(LOG_ERR, "Failed to get tty attributes for domain-%d "
++			"(errno = %i, %s)",
++			dom->domid, err, strerror(err));
++		goto out;
++	}
++	cfmakeraw(&term);
++	if (tcsetattr(dom->slave_fd, TCSANOW, &term) < 0) {
++		err = errno;
++		dolog(LOG_ERR, "Failed to set tty attributes for domain-%d "
++			"(errno = %i, %s)",
++			dom->domid, err, strerror(err));
++		goto out;
++	}
++
+ 	if ((slave = ptsname(dom->master_fd)) == NULL) {
+ 		err = errno;
+ 		dolog(LOG_ERR, "Failed to get slave name for domain-%d "
