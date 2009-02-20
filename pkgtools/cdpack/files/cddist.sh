@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: cddist.sh,v 1.1 2008/01/28 23:06:13 dmcmahill Exp $
+# $NetBSD: cddist.sh,v 1.2 2009/02/20 07:50:15 wiz Exp $
 #
 # Copyright (c) 2008 Dan McMahill, All rights reserved.
 #
@@ -65,9 +65,9 @@ touch $exclude
 
 usage(){
     cat << EOF
-$prog - generates ISO9660 images for a multi-cd/dvd pkgsrc distfiles archive
-Usage:      $prog [-dvd] [-h|--help] [-l logfile] [-dRvV]
-            [-x dir] [-X dir] distfiles_directory cdimage_directory
+$prog - generates ISO9660 images for a multi-CD/DVD pkgsrc distfiles archive
+Usage:      $prog [-dRVv] [-dvd] [-h|--help] [-l logfile]
+            [-X dir] [-x dir] distfiles_directory cdimage_directory
 Example:    $prog /usr/pkgsrc/packages/distfiles  /images/distfiles
 Please refer to the manual page for complete documentation."
 	
