@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/19 07:34:08 epg Exp $
+# $NetBSD: Makefile,v 1.10 2009/02/20 03:41:25 epg Exp $
 
 DISTNAME=	bzr-svn-${VER}
 #PKGREVISION=	1
@@ -15,18 +15,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${SQLITE_DEP}
 DEPENDS+=	bzr>=1.11{,nb[0-9]*}:../../devel/bzr
-DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.6.1:../../devel/subvertpy
+DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.6.1:../../devel/py-subvertpy
 
 # for make test
 USE_TOOLS+=	gmake
 
-MAKE_ENV+=	SVN_PREFIX=${BUILDLINK_PREFIX.subversion-base}
 PYDISTUTILSPKG=	yes
 # NOTE: This must run in a UTF-8 locale, e.g. LC_TYPE=en_US.utf8 make test
 TEST_TARGET=	check-verbose
 
 .include "../../devel/bzr/plugin.mk"
-.include "../../devel/subversion-base/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
 
