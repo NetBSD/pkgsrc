@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7858 2009/02/19 19:38:19 snj Exp $
+$NetBSD: TODO,v 1.7859 2009/02/20 10:40:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,6 +347,7 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o GutenMark-20090216
 	o MAMEDiff-2.30
 	o MesaLib-7.3
 	o PAM-0.99.7.1
@@ -364,7 +365,7 @@ Suggested package updates
 	o aap-0.144
 	o abcm2ps-5.9.3
 	o abcmidi-20080928
-	o abiword-2.6.2
+	o abiword-2.6.6
 	o acme-091
 	o acr-0.5.2
 	o adns-1.4
@@ -377,6 +378,7 @@ Suggested package updates
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
+	o alsa-lib-1.0.19
 	o amanda-2.6.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.0
@@ -473,7 +475,6 @@ Suggested package updates
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
-	o cdrtools-2.01.01.57
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
@@ -575,6 +576,7 @@ Suggested package updates
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
+	o exiftool-7.67
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20090102
@@ -652,10 +654,11 @@ Suggested package updates
 	o gnome-pilot-2.0.17
 	o gnome-power-manager-2.24.4
 	o gnome-speech-0.4.25
-	o gnome-system-monitor-2.24.4
+	o gnome-volume-manager-2.24.1
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnugo-3.8
 	o gnumeric-1.8.4
 	o gnupg2-2.0.10
 	o gnustep-1.16.1
@@ -688,7 +691,6 @@ Suggested package updates
 	o gtar-base-1.21
 	o gtexinfo-4.13
 	o gtick-0.4.2
-	o gtk-sharp-2.12.8
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
 	o gtkyahoo-0.18.3
@@ -705,7 +707,7 @@ Suggested package updates
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-info-20090202
-	o hanzim-2.2
+	o hanzim-2.3
 	o haskell-mode-1.45
 	o hatari-1.2.0
 	o hdf-4.2r2
@@ -724,6 +726,7 @@ Suggested package updates
 	o html2wml-0.4.11
 	o htop-0.8.1
 	o http_load-20060312
+	o httping-1.3.0
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
 	o hylafax-5.2.8
@@ -756,16 +759,18 @@ Suggested package updates
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.6.1.1
 	o jabberd2-2.2.2 [pkg/39212]
-	o jabberd2-2.2.5
+	o jabberd2-2.2.7
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jgrasp-183
+	o jhead-2.86
 	o joe-3.6
 	o john-1.7.3.1
 	o jools-1.0
-	o jpilot-1.6.1
+	o jpilot-1.6.2
 	o kadu-0.6.5
+	o kaffeine-0.8.7
 	o kapooka-0.3
 	o kdbg-2.1.1
 	o kdevelop-3.5.4
@@ -788,8 +793,9 @@ Suggested package updates
 	o lftp-3.7.3 [pkg/39809]
 	o lftp-3.7.8
 	o libFoundation-1.1.3
-	o libX11-1.1.99.2
+	o libX11-1.2
 	o libXext-1.0.5
+	o libXfont-1.4.0
 	o libXrandr-1.2.99.4
 	o libast-0.7
 	o libcanberra-0.11
@@ -814,7 +820,6 @@ Suggested package updates
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
 	o libgphoto2-2.4.4
-	o libgtop-2.24.4
 	o libhydrogen-0.9.2
 	o libidn-1.12
 	o libjit-1.0.2
@@ -843,7 +848,7 @@ Suggested package updates
 	o libv4l-0.5.8
 	o libxml2-2.7.3
 	o licq-1.3.6
-	o liferea-1.4.24
+	o lighttpd-1.4.21
 	o lilypond-2.12.1
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -871,7 +876,7 @@ Suggested package updates
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.3.2
+	o mathomatic-14.3.3
 	o mc-4.6.2
 	o mediawiki-1.13.3
 	o memconf-2.9 [pkg/40201]
@@ -913,7 +918,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.5.99.902
+	o modular-xorg-server-1.5.99.903
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
@@ -926,7 +931,7 @@ Suggested package updates
 	o munin-1.3.4
 	o muse-0.9.2
 	o musicpd-0.14.2
-	o mysql-5.1.30
+	o mysql-5.1.31
 	o mysql-5.2.3
 	o mysql-client-5.0.79
 	o mysql-server-5.0.79
@@ -987,6 +992,7 @@ Suggested package updates
 	o openssh-5.1p1
 	o openssl-0.9.8i
 	o openttd-0.6.1
+	o orca-2.24.4
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1045,7 +1051,7 @@ Suggested package updates
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
-	o pekwm-0.1.10
+	o pekwm-0.1.10 [pkg/40682]
 	o pen-0.17.3
 	o pfqueue-0.5.6
 	o pgadmin3-1.6.0
@@ -1061,6 +1067,7 @@ Suggested package updates
 	o phpmyadmin-3.1.2
 	o phylip-3.65
 	o picp-0.6.8
+	o pidgin-2.5.4
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
@@ -1285,8 +1292,7 @@ Suggested package updates
 	o snes9x-1.51
 	o snort-2.8.3.2
 	o snownews-1.5.10 [pkg/39887]
-	o solfege-3.10.4 [schmonz]
-	o solfege-3.12.1
+	o solfege-3.13.0
 	o sope-4.5.9
 	o source-highlight-2.11.1
 	o sox-14.2.0
@@ -1334,7 +1340,7 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
-	o tig-0.14
+	o tig-0.14.1
 	o tile-0.7.4
 	o tinyproxy-1.7.0
 	o tk-8.5.5
@@ -1346,9 +1352,11 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o totem-2.24.4
+	o totem-pl-parser-2.24.4
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.11.2.1
+	o trac-0.11.3
 	o transcode-1.1.0
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1382,6 +1390,7 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.1.2
 	o vp-1.6
+	o vsftpd-2.1.0
 	o vttest-20071216
 	o vym-1.12.0 [pkg/39455]
 	o wMosaic-3.8.22
@@ -1425,12 +1434,12 @@ Suggested package updates
 	o xf86-input-keyboard-1.3.2
 	o xf86-input-mouse-1.4.0
 	o xf86-input-vmmouse-12.6.3
-	o xf86-video-amd-2.11.0 [now xf86-video-geode]
+	o xf86-video-amd-2.11.1 [now xf86-video-geode]
 	o xf86-video-apm-1.2.1
 	o xf86-video-ark-0.7.1
 	o xf86-video-ast-0.87.0
 	o xf86-video-ati-6.10.0 [pkg/40498]
-	o xf86-video-ati-6.10.99.0
+	o xf86-video-ati-6.11.0
 	o xf86-video-chips-1.2.1
 	o xf86-video-glint-1.2.2
 	o xf86-video-i128-1.3.1
@@ -1446,14 +1455,13 @@ Suggested package updates
 	o xf86-video-tdfx-1.4.1
 	o xf86-video-trident-1.3.1
 	o xf86-video-tseng-1.2.1
-	o xf86-video-vesa-2.1.0
+	o xf86-video-vesa-2.2.0
 	o xf86-video-vmware-10.16.5
 	o xf86-video-vesa-2.1.0
 	o xfe-1.19.1
 	o xforms-1.0.91
 	o xfstt-1.7
 	o xhippo-3.5
-	o xine-1.1.16
 	o xinput-1.4.0
 	o xisp-2.7p4
 	o xjman-0.7
@@ -1488,6 +1496,7 @@ Suggested package updates
 	o xscreensaver-5.08
 	o xskat-4.0
 	o xsoldier-1.4
+	o xterm-242
 	o xtraceroute-0.9.1
 	o xtu-1.3
 	o xtux-20030306
