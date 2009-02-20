@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2009/02/20 00:42:50 gdt Exp $
 
-DISTNAME=	g-wrap-1.9.8
+DISTNAME=	g-wrap-1.9.11
 CATEGORIES=	devel
 MASTER_SITES=	http://savannah.nongnu.org/download/g-wrap/
 
@@ -24,7 +24,6 @@ INFO_FILES=		YES
 INSTALLATION_DIRS=	share/guile/site/g-wrap/guile/ws
 
 .include "../../devel/glib2/buildlink3.mk"
-# wrong version
-#.include "../../devel/libffi/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
