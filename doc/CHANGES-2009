@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.645 2009/02/20 06:02:28 adam Exp $
+$NetBSD: CHANGES-2009,v 1.646 2009/02/20 07:46:53 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -871,3 +871,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/g-wrap to 1.9.11 [gdt 2009-02-20]
 	Updated pkgtools/cdpack to 1.9 [dmcmahill 2009-02-20]
 	Updated graphics/pngcrush to 1.6.14 [adam 2009-02-20]
+	Updated x11/xextproto to 7.0.5 [bjs 2009-02-20]
