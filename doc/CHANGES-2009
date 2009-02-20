@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.647 2009/02/20 10:30:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.648 2009/02/20 11:05:11 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -873,3 +873,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/pngcrush to 1.6.14 [adam 2009-02-20]
 	Updated x11/xextproto to 7.0.5 [bjs 2009-02-20]
 	Updated games/wesnoth to 1.4.7 [wiz 2009-02-20]
+	Updated graphics/png to 1.2.35 [drochner 2009-02-20]
+	Updated multimedia/xine-lib to 1.1.16.2 [drochner 2009-02-20]
+	Updated games/xblockout to 1.1.6 [drochner 2009-02-20]
+	Updated mail/evolution to 2.24.4 [drochner 2009-02-20]
