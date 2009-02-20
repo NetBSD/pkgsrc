@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2008/03/06 14:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2009/02/20 20:02:30 reed Exp $
 #
 
-DISTNAME=	libcroco-0.6.1
-PKGREVISION=	7
+DISTNAME=	libcroco-0.6.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libcroco/0.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,7 +22,5 @@ CONFIGURE_ARGS+=	--enable-seleng=yes
 CONFIGURE_ARGS+=	--enable-layeng=yes
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
