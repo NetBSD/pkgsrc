@@ -1,4 +1,4 @@
-.\" $NetBSD: cddist.1,v 1.1 2008/01/28 23:06:13 dmcmahill Exp $
+.\" $NetBSD: cddist.1,v 1.2 2009/02/20 07:46:15 wiz Exp $
 .\"
 .\" Copyright (c) 2008 Dan McMahill, All rights reserved.
 .\"
@@ -36,13 +36,13 @@
 .Nm cddist
 .Nd produce multi-CD/DVD distfile archive images
 .Sh SYNOPSIS
-.Nm ""
+.Nm
+.Op -dRVv
 .Op -dvd
 .Op -h | --help
 .Op -l logfile
-.Op -dnRvV
-.Op -x common_directory
 .Op -X extras_directory
+.Op -x common_directory
 .Ar distfiles_directory
 .Ar image_directory
 .Sh DESCRIPTION
@@ -55,51 +55,58 @@ The
 .Nm
 utility archives all files and directories found in the directory
 .Ar distfiles_directory
-specified on the command line.  The directory
+specified on the command line.
+The directory
 .Ar cd_image_directory
 is used as a staging area and the final ISO 9660 images are left in
-that directory.  A file,
-.Ar .index ,
+that directory.
+A file,
+.Pa .index ,
 which lists the contents of each CD/DVD will be left in the root
 directory of each CD/DVD image.
 .Bl -tag -width "-x directory "
 .It Fl d
 Enable debugging by not deleting temporary files at the end of the
-run.  These files are left in TMPDIR.
+run.
+These files are left in
+.Ev TMPDIR .
 .It Fl dvd
 Create DVD sized images rather than the default CD-ROM sized images.
 .It Fl h
-.It Fl -help
+.It Fl Fl help
 Displays a short usage message.
 .It Fl l Ar logfile
-Log the output of mkisofs -v -v to the file
+Log the output of
+.Ic mkisofs Fl v Fl v
+to the file
 .Ar logfile .
 .It Fl R
 Generate a file,
-.Ar README.txt ,
-which will be placed in the root directory of each CD/DVD image.  This
-README file contains a small amount of information about the contents
-of the CD/DVD set.
-.It Fl v
-Be verbose.  Currently does not change things much.
+.Pa README.txt ,
+which will be placed in the root directory of each CD/DVD image.
+This README file contains a small amount of information about the
+contents of the CD/DVD set.
 .It Fl V
 Print the program version number and exit.
-.It Fl x Ar directory
-Includes the contents of
-.Ar directory
-on each CD/DVD.  This is useful for README files, etc., which you want
-to be present on each CD/DVD in the set.
+.It Fl v
+Be verbose.
+Currently does not change things much.
 .It Fl X Ar directory
 Includes the contents of
 .Ar directory
-on the last CD/DVD in the set.  This is useful for adding
+on the last CD/DVD in the set.
+This is useful for adding
 a pkgsrc.tar.gz tarball, i.e. a file which does not
 need to be on each CD/DVD.
+.It Fl x Ar directory
+Includes the contents of
+.Ar directory
+on each CD/DVD.
+This is useful for README files, etc., which you want
+to be present on each CD/DVD in the set.
 .El
-.Pp
-The
-.Nm
-utility exits 0 on success, and >0 if an error occurs.
+.Sh EXIT STATUS
+.Ex -std cddist
 .Sh ENVIRONMENT
 .Nm
 uses the fillowing environment variables if set.
@@ -107,27 +114,31 @@ uses the fillowing environment variables if set.
 .It Ev AWK
 awk implementation to use.
 Defaults to
-.Dq Li @AWK@ .
+.Dq Pa @AWK@ .
 .It Ev TMPDIR
 Directory for holding temporary files during the image creation.
 Defaults to
-.Dq Li /tmp .
+.Dq Pa /tmp .
 .El
 .Sh EXAMPLES
 This example takes all of the distfiles found in
-/usr/pkgsrc/distfiles and creates cd images in
-/u2/images/disk{1,2,...}.iso.  The directories
-/u2/images/disk{1,2,...} are used to create the ISO 9660 layouts.
+.Pa /usr/pkgsrc/distfiles
+and creates cd images in
+.Pa /u2/images/disk{1,2,...}.iso .
+The directories
+.Pa /u2/images/disk{1,2,...}
+are used to create the ISO 9660 layouts.
 .D1 cddist /usr/pkgsrc/distfiles /u2/images
 .Pp
 To include a common set of files on all CD/DVD's, place them in a
-directory, /tmp/foo, in this example, and pass in the directory name
-with the
+directory,
+.Pa /tmp/foo
+in this example, and pass in the directory name with the
 .Fl x
 option.
 .Dl cddist -x /tmp/foo /usr/pkgsrc/distfiles /u2/images
 .Sh SEE ALSO
-.Xr cdpack 1
+.Xr cdpack 1 ,
 .Xr mkisofs 1
 .Sh HISTORY
 The
@@ -138,4 +149,6 @@ packages collection in January, 2008.
 .Sh AUTHORS
 The
 .Nm
-utility was written by Dan McMahill (dmcmahill@NetBSD.org).
+utility was written by
+.An Dan McMahill
+.Aq dmcmahill@NetBSD.org .
