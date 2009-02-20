@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.644 2009/02/20 05:18:15 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.645 2009/02/20 06:02:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/wine-devel to 1.1.15 [adam 2009-02-19]
 	Updated devel/g-wrap to 1.9.11 [gdt 2009-02-20]
 	Updated pkgtools/cdpack to 1.9 [dmcmahill 2009-02-20]
+	Updated graphics/pngcrush to 1.6.14 [adam 2009-02-20]
