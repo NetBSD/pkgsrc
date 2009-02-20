@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.648 2009/02/20 11:05:11 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.649 2009/02/20 11:46:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/xine-lib to 1.1.16.2 [drochner 2009-02-20]
 	Updated games/xblockout to 1.1.6 [drochner 2009-02-20]
 	Updated mail/evolution to 2.24.4 [drochner 2009-02-20]
+	Updated graphics/digikam to 0.9.5beta3 [wiz 2009-02-20]
