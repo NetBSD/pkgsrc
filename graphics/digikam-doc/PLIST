@@ -1,14 +1,61 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/03 00:50:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/20 19:49:35 wiz Exp $
 share/doc/kde/HTML/da/digikam/common
 share/doc/kde/HTML/da/digikam/index.cache.bz2
 share/doc/kde/HTML/da/digikam/index.docbook
+share/doc/kde/HTML/da/showfoto/common
+share/doc/kde/HTML/da/showfoto/index.cache.bz2
+share/doc/kde/HTML/da/showfoto/index.docbook
 share/doc/kde/HTML/de/digikam/common
+share/doc/kde/HTML/de/digikam/credits-annex.docbook
+share/doc/kde/HTML/de/digikam/editor-color.docbook
+share/doc/kde/HTML/de/digikam/editor-decorate.docbook
+share/doc/kde/HTML/de/digikam/editor-enhance.docbook
+share/doc/kde/HTML/de/digikam/editor-filters.docbook
+share/doc/kde/HTML/de/digikam/editor-transform.docbook
+share/doc/kde/HTML/de/digikam/file-formats.docbook
+share/doc/kde/HTML/de/digikam/ie-menu.docbook
 share/doc/kde/HTML/de/digikam/index.cache.bz2
 share/doc/kde/HTML/de/digikam/index.docbook
+share/doc/kde/HTML/de/digikam/menu-descriptions.docbook
+share/doc/kde/HTML/de/digikam/photo-editing.docbook
+share/doc/kde/HTML/de/digikam/sidebar.docbook
+share/doc/kde/HTML/de/showfoto/common
+share/doc/kde/HTML/de/showfoto/index.cache.bz2
+share/doc/kde/HTML/de/showfoto/index.docbook
 share/doc/kde/HTML/en/digikam/2Greens.png
+share/doc/kde/HTML/en/digikam/542px-CIExy1931_sRGB.svg.png
+share/doc/kde/HTML/en/digikam/DAM-Metadata.png
+share/doc/kde/HTML/en/digikam/DAM-Workflow.png
+share/doc/kde/HTML/en/digikam/DAM-errors.png
+share/doc/kde/HTML/en/digikam/DAM-pyramid.png
+share/doc/kde/HTML/en/digikam/DAM-story.png
+share/doc/kde/HTML/en/digikam/DAM-transmission.png
 share/doc/kde/HTML/en/digikam/ICCworkflowlogic.png
 share/doc/kde/HTML/en/digikam/README
+share/doc/kde/HTML/en/digikam/Shortcuts
 share/doc/kde/HTML/en/digikam/TODO
+share/doc/kde/HTML/en/digikam/adjustcurvesdialog.png
+share/doc/kde/HTML/en/digikam/adjustcurvespreview.png
+share/doc/kde/HTML/en/digikam/adjustlevelsdialog.png
+share/doc/kde/HTML/en/digikam/adjustlevelspreview.png
+share/doc/kde/HTML/en/digikam/antivignettingdialog.png
+share/doc/kde/HTML/en/digikam/antivignettingpreview.png
+share/doc/kde/HTML/en/digikam/blowupdialog.png
+share/doc/kde/HTML/en/digikam/blowuppreview.png
+share/doc/kde/HTML/en/digikam/blowupsettings1.png
+share/doc/kde/HTML/en/digikam/blowupsettings2.png
+share/doc/kde/HTML/en/digikam/blurfx_farblur.png
+share/doc/kde/HTML/en/digikam/blurfx_focusblur.png
+share/doc/kde/HTML/en/digikam/blurfx_frostglass.png
+share/doc/kde/HTML/en/digikam/blurfx_mosaic.png
+share/doc/kde/HTML/en/digikam/blurfx_motionblur.png
+share/doc/kde/HTML/en/digikam/blurfx_radialblur.png
+share/doc/kde/HTML/en/digikam/blurfx_shakeblur.png
+share/doc/kde/HTML/en/digikam/blurfx_smartblur.png
+share/doc/kde/HTML/en/digikam/blurfx_softenerblur.png
+share/doc/kde/HTML/en/digikam/blurfx_zoomblur.png
+share/doc/kde/HTML/en/digikam/blurfxpreview.png
+share/doc/kde/HTML/en/digikam/borderpreview.png
 share/doc/kde/HTML/en/digikam/cameraclient.png
 share/doc/kde/HTML/en/digikam/cameraclientdownload.png
 share/doc/kde/HTML/en/digikam/cameraclientidentity.png
@@ -18,11 +65,39 @@ share/doc/kde/HTML/en/digikam/cameraclientsetting2.png
 share/doc/kde/HTML/en/digikam/cameraclientsetting3.png
 share/doc/kde/HTML/en/digikam/camerafolderselectiondialog.png
 share/doc/kde/HTML/en/digikam/cameratargetalbumdialog.png
+share/doc/kde/HTML/en/digikam/channelmixerdialog.png
+share/doc/kde/HTML/en/digikam/channelmixerpreview.png
+share/doc/kde/HTML/en/digikam/charcoalpreview.png
+share/doc/kde/HTML/en/digikam/cimg-logo.png
+share/doc/kde/HTML/en/digikam/color-management.docbook
 share/doc/kde/HTML/en/digikam/colormanagement.png
 share/doc/kde/HTML/en/digikam/common
+share/doc/kde/HTML/en/digikam/credits-annex.docbook
 share/doc/kde/HTML/en/digikam/digikamlogo.png
-share/doc/kde/HTML/en/digikam/editoradjustcurves.png
-share/doc/kde/HTML/en/digikam/editoradjustlevels.png
+share/doc/kde/HTML/en/digikam/distortionfx_blockwaves1.png
+share/doc/kde/HTML/en/digikam/distortionfx_blockwaves2.png
+share/doc/kde/HTML/en/digikam/distortionfx_caricature.png
+share/doc/kde/HTML/en/digikam/distortionfx_circularwaves1.png
+share/doc/kde/HTML/en/digikam/distortionfx_circularwaves2.png
+share/doc/kde/HTML/en/digikam/distortionfx_corners.png
+share/doc/kde/HTML/en/digikam/distortionfx_cylinderh.png
+share/doc/kde/HTML/en/digikam/distortionfx_cylinderhv.png
+share/doc/kde/HTML/en/digikam/distortionfx_cylinderv.png
+share/doc/kde/HTML/en/digikam/distortionfx_fisheyes.png
+share/doc/kde/HTML/en/digikam/distortionfx_polarcoord.png
+share/doc/kde/HTML/en/digikam/distortionfx_tiles.png
+share/doc/kde/HTML/en/digikam/distortionfx_twirl.png
+share/doc/kde/HTML/en/digikam/distortionfx_unpolarcoord.png
+share/doc/kde/HTML/en/digikam/distortionfx_wavesh.png
+share/doc/kde/HTML/en/digikam/distortionfx_wavesv.png
+share/doc/kde/HTML/en/digikam/distortionfxpreview.png
+share/doc/kde/HTML/en/digikam/distortions.png
+share/doc/kde/HTML/en/digikam/editor-color.docbook
+share/doc/kde/HTML/en/digikam/editor-decorate.docbook
+share/doc/kde/HTML/en/digikam/editor-enhance.docbook
+share/doc/kde/HTML/en/digikam/editor-filters.docbook
+share/doc/kde/HTML/en/digikam/editor-redeyes-correction.png
+share/doc/kde/HTML/en/digikam/editor-transform.docbook
 share/doc/kde/HTML/en/digikam/editorautolevels.png
 share/doc/kde/HTML/en/digikam/editorautosizebutton.png
 share/doc/kde/HTML/en/digikam/editorbcgadjust.png
@@ -55,12 +130,12 @@ share/doc/kde/HTML/en/digikam/editorhistogramsample3.png
 share/doc/kde/HTML/en/digikam/editorhsladjust.png
 share/doc/kde/HTML/en/digikam/editoriccprofile.png
 share/doc/kde/HTML/en/digikam/editorimageselection.png
+share/doc/kde/HTML/en/digikam/editorneon.png
 share/doc/kde/HTML/en/digikam/editornoisereductionplugin.png
 share/doc/kde/HTML/en/digikam/editornormalize.png
 share/doc/kde/HTML/en/digikam/editorpreview.png
 share/doc/kde/HTML/en/digikam/editorraindropsplugin.png
 share/doc/kde/HTML/en/digikam/editorratiocroptool.png
-share/doc/kde/HTML/en/digikam/editorredeyescorrection.png
 share/doc/kde/HTML/en/digikam/editorresizetool.png
 share/doc/kde/HTML/en/digikam/editorrevertbutton.png
 share/doc/kde/HTML/en/digikam/editorrulethirdlinesexample.png
@@ -68,10 +143,24 @@ share/doc/kde/HTML/en/digikam/editorsharpenplugin.png
 share/doc/kde/HTML/en/digikam/editorstretchcontrast.png
 share/doc/kde/HTML/en/digikam/editortoolbar.png
 share/doc/kde/HTML/en/digikam/editorunsharpedmaskplugin.png
+share/doc/kde/HTML/en/digikam/editorvivid.png
 share/doc/kde/HTML/en/digikam/editorzoombuttons.png
+share/doc/kde/HTML/en/digikam/embosspreview.png
+share/doc/kde/HTML/en/digikam/file-formats.docbook
+share/doc/kde/HTML/en/digikam/filmgrainpreview.png
+share/doc/kde/HTML/en/digikam/freerotationpreview.png
 share/doc/kde/HTML/en/digikam/handheld_gps.png
+share/doc/kde/HTML/en/digikam/hotpixelsdialog.png
+share/doc/kde/HTML/en/digikam/hotpixelspreview.png
+share/doc/kde/HTML/en/digikam/ie-menu.docbook
 share/doc/kde/HTML/en/digikam/index.cache.bz2
 share/doc/kde/HTML/en/digikam/index.docbook
+share/doc/kde/HTML/en/digikam/infraredpreview.png
+share/doc/kde/HTML/en/digikam/inpaintingdialog.png
+share/doc/kde/HTML/en/digikam/inpaintingpreview.png
+share/doc/kde/HTML/en/digikam/inpaintingsettings1.png
+share/doc/kde/HTML/en/digikam/inpaintingsettings2.png
+share/doc/kde/HTML/en/digikam/inserttextpreview.png
 share/doc/kde/HTML/en/digikam/introductionalbumsmissingdialog.png
 share/doc/kde/HTML/en/digikam/introductionfirewireconnector.png
 share/doc/kde/HTML/en/digikam/introductionfirstrundialog.png
@@ -80,6 +169,10 @@ share/doc/kde/HTML/en/digikam/introductionplugininterfaces.png
 share/doc/kde/HTML/en/digikam/introductionscandialog.png
 share/doc/kde/HTML/en/digikam/introductionserialconnector.png
 share/doc/kde/HTML/en/digikam/introductionusbconnector.png
+share/doc/kde/HTML/en/digikam/lensdistortiondialog.png
+share/doc/kde/HTML/en/digikam/lensdistortionpreview.png
+share/doc/kde/HTML/en/digikam/lighttable.png
+share/doc/kde/HTML/en/digikam/logo.png
 share/doc/kde/HTML/en/digikam/maininterfaceadvancedsearch.png
 share/doc/kde/HTML/en/digikam/maininterfaceadvancedsearchoption.png
 share/doc/kde/HTML/en/digikam/maininterfaceadvancedsearchoptiongroup.png
@@ -91,15 +184,36 @@ share/doc/kde/HTML/en/digikam/maininterfacequicksearch.png
 share/doc/kde/HTML/en/digikam/maininterfacesearchview.png
 share/doc/kde/HTML/en/digikam/maininterfacetagsview.png
 share/doc/kde/HTML/en/digikam/maininterfacetoolbar.png
+share/doc/kde/HTML/en/digikam/menu-descriptions.docbook
 share/doc/kde/HTML/en/digikam/menualbum.png
 share/doc/kde/HTML/en/digikam/menucamera.png
+share/doc/kde/HTML/en/digikam/menuexport.png
 share/doc/kde/HTML/en/digikam/menuhelp.png
 share/doc/kde/HTML/en/digikam/menuimage.png
+share/doc/kde/HTML/en/digikam/menuimagemetadata.png
+share/doc/kde/HTML/en/digikam/menuimport.png
 share/doc/kde/HTML/en/digikam/menuselect.png
 share/doc/kde/HTML/en/digikam/menusettings.png
 share/doc/kde/HTML/en/digikam/menutag.png
 share/doc/kde/HTML/en/digikam/menutools.png
+share/doc/kde/HTML/en/digikam/menutoolsbatch.png
 share/doc/kde/HTML/en/digikam/menuview.png
+share/doc/kde/HTML/en/digikam/noisereductiondialog.png
+share/doc/kde/HTML/en/digikam/noisereductionpreview.png
+share/doc/kde/HTML/en/digikam/oilpaintpreview.png
+share/doc/kde/HTML/en/digikam/perspectivepreview.png
+share/doc/kde/HTML/en/digikam/photo-editing.docbook
+share/doc/kde/HTML/en/digikam/raindropspreview.png
+share/doc/kde/HTML/en/digikam/refocus-notsharpened.png
+share/doc/kde/HTML/en/digikam/refocus-refocus.png
+share/doc/kde/HTML/en/digikam/refocus-sharped.png
+share/doc/kde/HTML/en/digikam/refocus-unsharpmask.png
+share/doc/kde/HTML/en/digikam/refocusdialog.png
+share/doc/kde/HTML/en/digikam/restorationdialog.png
+share/doc/kde/HTML/en/digikam/restorationpreview.png
+share/doc/kde/HTML/en/digikam/restorationpreview2.png
+share/doc/kde/HTML/en/digikam/restorationsettings1.png
+share/doc/kde/HTML/en/digikam/restorationsettings2.png
 share/doc/kde/HTML/en/digikam/setupaddcamera.png
 share/doc/kde/HTML/en/digikam/setupalbum.png
 share/doc/kde/HTML/en/digikam/setupcamera.png
@@ -109,6 +223,7 @@ share/doc/kde/HTML/en/digikam/setupiccprofiles.png
 share/doc/kde/HTML/en/digikam/setupimageeditor.png
 share/doc/kde/HTML/en/digikam/setupimageplugins.png
 share/doc/kde/HTML/en/digikam/setupkipiplugins.png
+share/doc/kde/HTML/en/digikam/setuplighttable.png
 share/doc/kde/HTML/en/digikam/setupmimetypes.png
 share/doc/kde/HTML/en/digikam/setupmisc.png
 share/doc/kde/HTML/en/digikam/setuprawfiledecoding.png
@@ -124,6 +239,8 @@ share/doc/kde/HTML/en/digikam/setupthememarine.png
 share/doc/kde/HTML/en/digikam/setupthemeorangecrush.png
 share/doc/kde/HTML/en/digikam/setupthemesandy.png
 share/doc/kde/HTML/en/digikam/setuptooltip.png
+share/doc/kde/HTML/en/digikam/sheartoolpreview.png
+share/doc/kde/HTML/en/digikam/sidebar.docbook
 share/doc/kde/HTML/en/digikam/sidebarcolorshistogramviewer.png
 share/doc/kde/HTML/en/digikam/sidebarcommentstags.png
 share/doc/kde/HTML/en/digikam/sidebarfileproperties.png
@@ -133,6 +250,21 @@ share/doc/kde/HTML/en/digikam/sidebarmetadatagps.png
 share/doc/kde/HTML/en/digikam/sidebarmetadataiptc.png
 share/doc/kde/HTML/en/digikam/sidebarmetadatamakernote.png
 share/doc/kde/HTML/en/digikam/sidebartagfilters.png
+share/doc/kde/HTML/en/digikam/solarizepreview.png
+share/doc/kde/HTML/en/digikam/superimposepreview.png
+share/doc/kde/HTML/en/digikam/texturedialog.png
+share/doc/kde/HTML/en/digikam/texturepreview.png
+share/doc/kde/HTML/en/digikam/unsharpdialog.png
+share/doc/kde/HTML/en/digikam/unsharppreview.png
+share/doc/kde/HTML/en/digikam/whitebalancedialog.png
+share/doc/kde/HTML/en/showfoto/README
+share/doc/kde/HTML/en/showfoto/common
+share/doc/kde/HTML/en/showfoto/index.cache.bz2
+share/doc/kde/HTML/en/showfoto/index.docbook
+share/doc/kde/HTML/en/showfoto/introductionplugininterfaces.png
+share/doc/kde/HTML/en/showfoto/setupgeneral.png
+share/doc/kde/HTML/en/showfoto/setupplugins.png
+share/doc/kde/HTML/en/showfoto/setupslideshow.png
 share/doc/kde/HTML/es/digikam/2Greens.png
 share/doc/kde/HTML/es/digikam/ICCworkflowlogic.png
 share/doc/kde/HTML/es/digikam/cameraclient.png
@@ -143,7 +275,6 @@ share/doc/kde/HTML/es/digikam/cameraclientitemproperties.png
 share/doc/kde/HTML/es/digikam/cameraclientsetting1.png
 share/doc/kde/HTML/es/digikam/cameraclientsetting2.png
 share/doc/kde/HTML/es/digikam/cameraclientsetting3.png
-share/doc/kde/HTML/es/digikam/camerafolderselectiondialog.png
 share/doc/kde/HTML/es/digikam/cameratargetalbumdialog.png
 share/doc/kde/HTML/es/digikam/colormanagement.png
 share/doc/kde/HTML/es/digikam/common
@@ -242,7 +373,6 @@ share/doc/kde/HTML/es/digikam/setupslideshow.png
 share/doc/kde/HTML/es/digikam/setupthemeclean.png
 share/doc/kde/HTML/es/digikam/setupthemedark.png
 share/doc/kde/HTML/es/digikam/setupthemedefault.png
-share/doc/kde/HTML/es/digikam/setupthemedessert.png
 share/doc/kde/HTML/es/digikam/setupthemedreary.png
 share/doc/kde/HTML/es/digikam/setupthememarine.png
 share/doc/kde/HTML/es/digikam/setupthemeorangecrush.png
@@ -257,7 +387,6 @@ share/doc/kde/HTML/es/digikam/sidebarmetadatagps.png
 share/doc/kde/HTML/es/digikam/sidebarmetadataiptc.png
 share/doc/kde/HTML/es/digikam/sidebarmetadatamakernote.png
 share/doc/kde/HTML/es/digikam/sidebartagfilters.png
-share/doc/kde/HTML/es/showfoto/common
 share/doc/kde/HTML/es/showfoto/digikamlogo.png
 share/doc/kde/HTML/es/showfoto/editoradjustcurves.png
 share/doc/kde/HTML/es/showfoto/editoradjustlevels.png
@@ -307,28 +436,48 @@ share/doc/kde/HTML/es/showfoto/editorstretchcontrast.png
 share/doc/kde/HTML/es/showfoto/editortoolbar.png
 share/doc/kde/HTML/es/showfoto/editorunsharpedmaskplugin.png
 share/doc/kde/HTML/es/showfoto/editorzoombuttons.png
-share/doc/kde/HTML/es/showfoto/index.cache.bz2
-share/doc/kde/HTML/es/showfoto/index.docbook
 share/doc/kde/HTML/es/showfoto/introductionplugininterfaces.png
 share/doc/kde/HTML/es/showfoto/setupgeneral.png
 share/doc/kde/HTML/es/showfoto/setupplugins.png
 share/doc/kde/HTML/es/showfoto/setupslideshow.png
 share/doc/kde/HTML/et/digikam/common
+share/doc/kde/HTML/et/digikam/credits-annex.docbook
+share/doc/kde/HTML/et/digikam/editor-color.docbook
+share/doc/kde/HTML/et/digikam/editor-decorate.docbook
+share/doc/kde/HTML/et/digikam/editor-enhance.docbook
+share/doc/kde/HTML/et/digikam/editor-filters.docbook
+share/doc/kde/HTML/et/digikam/editor-transform.docbook
+share/doc/kde/HTML/et/digikam/file-formats.docbook
+share/doc/kde/HTML/et/digikam/ie-menu.docbook
 share/doc/kde/HTML/et/digikam/index.cache.bz2
 share/doc/kde/HTML/et/digikam/index.docbook
+share/doc/kde/HTML/et/digikam/menu-descriptions.docbook
+share/doc/kde/HTML/et/digikam/photo-editing.docbook
+share/doc/kde/HTML/et/digikam/sidebar.docbook
 share/doc/kde/HTML/et/showfoto/common
 share/doc/kde/HTML/et/showfoto/index.cache.bz2
 share/doc/kde/HTML/et/showfoto/index.docbook
-share/doc/kde/HTML/fr/showfoto/common
-share/doc/kde/HTML/fr/showfoto/index.cache.bz2
-share/doc/kde/HTML/fr/showfoto/index.docbook
 share/doc/kde/HTML/it/digikam/addcamera.png
 share/doc/kde/HTML/it/digikam/common
+share/doc/kde/HTML/it/digikam/credits-annex.docbook
+share/doc/kde/HTML/it/digikam/editor-color.docbook
+share/doc/kde/HTML/it/digikam/editor-decorate.docbook
+share/doc/kde/HTML/it/digikam/editor-enhance.docbook
+share/doc/kde/HTML/it/digikam/editor-filters.docbook
+share/doc/kde/HTML/it/digikam/editor-transform.docbook
+share/doc/kde/HTML/it/digikam/file-formats.docbook
+share/doc/kde/HTML/it/digikam/ie-menu.docbook
 share/doc/kde/HTML/it/digikam/imageeditor.png
 share/doc/kde/HTML/it/digikam/index.cache.bz2
 share/doc/kde/HTML/it/digikam/index.docbook
 share/doc/kde/HTML/it/digikam/mainwindow.png
+share/doc/kde/HTML/it/digikam/menu-descriptions.docbook
+share/doc/kde/HTML/it/digikam/photo-editing.docbook
 share/doc/kde/HTML/it/digikam/setupalbum.png
+share/doc/kde/HTML/it/digikam/sidebar.docbook
+share/doc/kde/HTML/it/showfoto/common
+share/doc/kde/HTML/it/showfoto/index.cache.bz2
+share/doc/kde/HTML/it/showfoto/index.docbook
 share/doc/kde/HTML/nl/digikam/addcamera.png
 share/doc/kde/HTML/nl/digikam/albumproperties.png
 share/doc/kde/HTML/nl/digikam/assigntags.png
@@ -371,40 +520,17 @@ share/doc/kde/HTML/nl/digikam/setupmimetypes.png
 share/doc/kde/HTML/nl/digikam/setupmisc.png
 share/doc/kde/HTML/nl/digikam/tagsview.png
 share/doc/kde/HTML/nl/digikam/targetalbumdialog.png
-share/doc/kde/HTML/nl/showfoto/autolevelspreview.png
 share/doc/kde/HTML/nl/showfoto/common
 share/doc/kde/HTML/nl/showfoto/convert_brown.png
-share/doc/kde/HTML/nl/showfoto/convert_bw.png
-share/doc/kde/HTML/nl/showfoto/convert_bwgreen.png
 share/doc/kde/HTML/nl/showfoto/convert_bworange.png
-share/doc/kde/HTML/nl/showfoto/convert_bwred.png
 share/doc/kde/HTML/nl/showfoto/convert_bwyellow.png
 share/doc/kde/HTML/nl/showfoto/convert_cold.png
-share/doc/kde/HTML/nl/showfoto/convert_original.png
 share/doc/kde/HTML/nl/showfoto/convert_platinium.png
-share/doc/kde/HTML/nl/showfoto/convert_selenium.png
-share/doc/kde/HTML/nl/showfoto/convert_sepia.png
-share/doc/kde/HTML/nl/showfoto/digikamlogo.png
-share/doc/kde/HTML/nl/showfoto/editoradjustcurves.png
-share/doc/kde/HTML/nl/showfoto/editoradjustlevels.png
 share/doc/kde/HTML/nl/showfoto/editorautosizebutton.png
 share/doc/kde/HTML/nl/showfoto/editorbcgadjust.png
-share/doc/kde/HTML/nl/showfoto/editorblurplugin.png
-share/doc/kde/HTML/nl/showfoto/editorcolorbalance.png
 share/doc/kde/HTML/nl/showfoto/editorcropbutton.png
-share/doc/kde/HTML/nl/showfoto/editorhsladjust.png
-share/doc/kde/HTML/nl/showfoto/editorimageselection.png
-share/doc/kde/HTML/nl/showfoto/editornoisereductionplugin.png
-share/doc/kde/HTML/nl/showfoto/editorraindropsplugin.png
-share/doc/kde/HTML/nl/showfoto/editorratiocroptool.png
-share/doc/kde/HTML/nl/showfoto/editorredeyescorrection.png
-share/doc/kde/HTML/nl/showfoto/editorresizetool.png
 share/doc/kde/HTML/nl/showfoto/editorsharpenplugin.png
-share/doc/kde/HTML/nl/showfoto/editorunsharpedmaskplugin.png
-share/doc/kde/HTML/nl/showfoto/equalizepreview.png
-share/doc/kde/HTML/nl/showfoto/exifviewer.png
 share/doc/kde/HTML/nl/showfoto/histogramdescription.png
-share/doc/kde/HTML/nl/showfoto/histogramimageplugin.png
 share/doc/kde/HTML/nl/showfoto/histogramsample1.png
 share/doc/kde/HTML/nl/showfoto/histogramsample2.png
 share/doc/kde/HTML/nl/showfoto/histogramsample3.png
@@ -416,21 +542,6 @@ share/doc/kde/HTML/nl/showfoto/normalizepreview.png
 share/doc/kde/HTML/nl/showfoto/revertbutton.png
 share/doc/kde/HTML/nl/showfoto/rulethirdlinesexample.png
 share/doc/kde/HTML/nl/showfoto/setupgeneral.png
-share/doc/kde/HTML/nl/showfoto/setupimageeditor.png
-share/doc/kde/HTML/nl/showfoto/stretchcontrastpreview.png
-share/doc/kde/HTML/nl/showfoto/zoombuttons.png
-share/doc/kde/HTML/pl/digikam/common
-share/doc/kde/HTML/pl/digikam/index.cache.bz2
-share/doc/kde/HTML/pl/digikam/index.docbook
-share/doc/kde/HTML/pl/showfoto/common
-share/doc/kde/HTML/pl/showfoto/index.cache.bz2
-share/doc/kde/HTML/pl/showfoto/index.docbook
-share/doc/kde/HTML/pt/digikam/common
-share/doc/kde/HTML/pt/digikam/index.cache.bz2
-share/doc/kde/HTML/pt/digikam/index.docbook
-share/doc/kde/HTML/pt/showfoto/common
-share/doc/kde/HTML/pt/showfoto/index.cache.bz2
-share/doc/kde/HTML/pt/showfoto/index.docbook
 share/doc/kde/HTML/pt_BR/digikam/albumproperties.png
 share/doc/kde/HTML/pt_BR/digikam/common
 share/doc/kde/HTML/pt_BR/digikam/convert_brown.png
@@ -458,9 +569,22 @@ share/doc/kde/HTML/pt_BR/digikam/setupkipi.png
 share/doc/kde/HTML/ru/digikam/common
 share/doc/kde/HTML/ru/digikam/index.cache.bz2
 share/doc/kde/HTML/ru/digikam/index.docbook
+share/doc/kde/HTML/sv/digikam/DAM-Metadata.png
+share/doc/kde/HTML/sv/digikam/DAM-Workflow.png
+share/doc/kde/HTML/sv/digikam/DAM-errors.png
+share/doc/kde/HTML/sv/digikam/DAM-pyramid.png
+share/doc/kde/HTML/sv/digikam/DAM-transmission.png
 share/doc/kde/HTML/sv/digikam/ICCworkflowlogic.png
 share/doc/kde/HTML/sv/digikam/addcamera.png
+share/doc/kde/HTML/sv/digikam/adjustcurvesdialog.png
+share/doc/kde/HTML/sv/digikam/adjustlevelsdialog.png
 share/doc/kde/HTML/sv/digikam/albumproperties.png
+share/doc/kde/HTML/sv/digikam/antivignettingdialog.png
+share/doc/kde/HTML/sv/digikam/blowupdialog.png
+share/doc/kde/HTML/sv/digikam/blowupsettings1.png
+share/doc/kde/HTML/sv/digikam/blowupsettings2.png
+share/doc/kde/HTML/sv/digikam/blurfxpreview.png
+share/doc/kde/HTML/sv/digikam/borderpreview.png
 share/doc/kde/HTML/sv/digikam/cameraclient.png
 share/doc/kde/HTML/sv/digikam/cameraclientadvanced.png
 share/doc/kde/HTML/sv/digikam/cameraclientdownload.png
@@ -471,9 +595,19 @@ share/doc/kde/HTML/sv/digikam/cameraclientsetting2.png
 share/doc/kde/HTML/sv/digikam/cameraclientsetting3.png
 share/doc/kde/HTML/sv/digikam/camerafolderselectiondialog.png
 share/doc/kde/HTML/sv/digikam/cameratargetalbumdialog.png
+share/doc/kde/HTML/sv/digikam/channelmixerdialog.png
+share/doc/kde/HTML/sv/digikam/color-management.docbook
 share/doc/kde/HTML/sv/digikam/colormanagement.png
 share/doc/kde/HTML/sv/digikam/commentstags.png
 share/doc/kde/HTML/sv/digikam/common
+share/doc/kde/HTML/sv/digikam/credits-annex.docbook
+share/doc/kde/HTML/sv/digikam/distortionfxpreview.png
+share/doc/kde/HTML/sv/digikam/editor-color.docbook
+share/doc/kde/HTML/sv/digikam/editor-decorate.docbook
+share/doc/kde/HTML/sv/digikam/editor-enhance.docbook
+share/doc/kde/HTML/sv/digikam/editor-filters.docbook
+share/doc/kde/HTML/sv/digikam/editor-redeyes-correction.png
+share/doc/kde/HTML/sv/digikam/editor-transform.docbook
 share/doc/kde/HTML/sv/digikam/editoradjustcurves.png
 share/doc/kde/HTML/sv/digikam/editoradjustlevels.png
 share/doc/kde/HTML/sv/digikam/editorbcgadjust.png
@@ -492,14 +626,25 @@ share/doc/kde/HTML/sv/digikam/editorredeyescorrection.png
 share/doc/kde/HTML/sv/digikam/editorresizetool.png
 share/doc/kde/HTML/sv/digikam/editorsharpenplugin.png
 share/doc/kde/HTML/sv/digikam/editorunsharpedmaskplugin.png
+share/doc/kde/HTML/sv/digikam/editorvivid.png
+share/doc/kde/HTML/sv/digikam/file-formats.docbook
 share/doc/kde/HTML/sv/digikam/firstrundialog.png
+share/doc/kde/HTML/sv/digikam/freerotationpreview.png
+share/doc/kde/HTML/sv/digikam/hotpixelsdialog.png
+share/doc/kde/HTML/sv/digikam/ie-menu.docbook
 share/doc/kde/HTML/sv/digikam/imageeditorfilesettings.png
 share/doc/kde/HTML/sv/digikam/index.cache.bz2
 share/doc/kde/HTML/sv/digikam/index.docbook
+share/doc/kde/HTML/sv/digikam/inpaintingdialog.png
+share/doc/kde/HTML/sv/digikam/inpaintingsettings1.png
+share/doc/kde/HTML/sv/digikam/inpaintingsettings2.png
+share/doc/kde/HTML/sv/digikam/inserttextpreview.png
 share/doc/kde/HTML/sv/digikam/introductionalbumsmissingdialog.png
 share/doc/kde/HTML/sv/digikam/introductionfirstrundialog.png
 share/doc/kde/HTML/sv/digikam/introductionplugininterfaces.png
 share/doc/kde/HTML/sv/digikam/introductionscandialog.png
+share/doc/kde/HTML/sv/digikam/lensdistortiondialog.png
+share/doc/kde/HTML/sv/digikam/lighttable.png
 share/doc/kde/HTML/sv/digikam/maininterfaceadvancedsearch.png
 share/doc/kde/HTML/sv/digikam/maininterfaceadvancedsearchoption.png
 share/doc/kde/HTML/sv/digikam/maininterfaceadvancedsearchoptiongroup.png
@@ -513,12 +658,27 @@ share/doc/kde/HTML/sv/digikam/maininterfacepreview.png
 share/doc/kde/HTML/sv/digikam/maininterfacequicksearch.png
 share/doc/kde/HTML/sv/digikam/maininterfacesearchview.png
 share/doc/kde/HTML/sv/digikam/maininterfacetagsview.png
+share/doc/kde/HTML/sv/digikam/menu-descriptions.docbook
+share/doc/kde/HTML/sv/digikam/menualbum.png
+share/doc/kde/HTML/sv/digikam/menucamera.png
+share/doc/kde/HTML/sv/digikam/menuimage.png
+share/doc/kde/HTML/sv/digikam/menuselect.png
+share/doc/kde/HTML/sv/digikam/menusettings.png
+share/doc/kde/HTML/sv/digikam/menutag.png
+share/doc/kde/HTML/sv/digikam/menutools.png
+share/doc/kde/HTML/sv/digikam/menuview.png
+share/doc/kde/HTML/sv/digikam/noisereductiondialog.png
+share/doc/kde/HTML/sv/digikam/perspectivepreview.png
+share/doc/kde/HTML/sv/digikam/photo-editing.docbook
+share/doc/kde/HTML/sv/digikam/refocusdialog.png
+share/doc/kde/HTML/sv/digikam/restorationdialog.png
+share/doc/kde/HTML/sv/digikam/restorationsettings1.png
+share/doc/kde/HTML/sv/digikam/restorationsettings2.png
 share/doc/kde/HTML/sv/digikam/setupaddcamera.png
 share/doc/kde/HTML/sv/digikam/setupalbum.png
 share/doc/kde/HTML/sv/digikam/setupcamera.png
 share/doc/kde/HTML/sv/digikam/setupcollections.png
 share/doc/kde/HTML/sv/digikam/setupembeddedinfo.png
-share/doc/kde/HTML/sv/digikam/setupembededinfo.png
 share/doc/kde/HTML/sv/digikam/setupiccprofiles.png
 share/doc/kde/HTML/sv/digikam/setupimageeditor.png
 share/doc/kde/HTML/sv/digikam/setupimageplugins.png
@@ -526,6 +686,8 @@ share/doc/kde/HTML/sv/digikam/setupkipi.png
 share/doc/kde/HTML/sv/digikam/setupkipiplugins.png
 share/doc/kde/HTML/sv/digikam/setupmimetypes.png
 share/doc/kde/HTML/sv/digikam/setupmisc.png
+share/doc/kde/HTML/sv/digikam/setuprawfiledecoding.png
+share/doc/kde/HTML/sv/digikam/setupsaveimages.png
 share/doc/kde/HTML/sv/digikam/setupslideshow.png
 share/doc/kde/HTML/sv/digikam/setupthemeclean.png
 share/doc/kde/HTML/sv/digikam/setupthemedark.png
@@ -535,6 +697,8 @@ share/doc/kde/HTML/sv/digikam/setupthememarine.png
 share/doc/kde/HTML/sv/digikam/setupthemeorangecrush.png
 share/doc/kde/HTML/sv/digikam/setupthemesandy.png
 share/doc/kde/HTML/sv/digikam/setuptooltip.png
+share/doc/kde/HTML/sv/digikam/sheartoolpreview.png
+share/doc/kde/HTML/sv/digikam/sidebar.docbook
 share/doc/kde/HTML/sv/digikam/sidebarcolorshistogramviewer.png
 share/doc/kde/HTML/sv/digikam/sidebarcommentstags.png
 share/doc/kde/HTML/sv/digikam/sidebarfileproperties.png
@@ -544,34 +708,61 @@ share/doc/kde/HTML/sv/digikam/sidebarmetadatagps.png
 share/doc/kde/HTML/sv/digikam/sidebarmetadataiptc.png
 share/doc/kde/HTML/sv/digikam/sidebarmetadatamakernote.png
 share/doc/kde/HTML/sv/digikam/sidebartagfilters.png
+share/doc/kde/HTML/sv/digikam/superimposepreview.png
+share/doc/kde/HTML/sv/digikam/texturedialog.png
+share/doc/kde/HTML/sv/digikam/unsharpdialog.png
+share/doc/kde/HTML/sv/digikam/whitebalancedialog.png
+share/doc/kde/HTML/sv/showfoto/common
+share/doc/kde/HTML/sv/showfoto/editoradjustcurves.png
+share/doc/kde/HTML/sv/showfoto/editoradjustlevels.png
+share/doc/kde/HTML/sv/showfoto/editorbcgadjust.png
+share/doc/kde/HTML/sv/showfoto/editorblurplugin.png
+share/doc/kde/HTML/sv/showfoto/editorcolorbalance.png
+share/doc/kde/HTML/sv/showfoto/editorcommondialogtools.png
+share/doc/kde/HTML/sv/showfoto/editorexifviewer.png
+share/doc/kde/HTML/sv/showfoto/editorhistogramviewer.png
+share/doc/kde/HTML/sv/showfoto/editorhsladjust.png
+share/doc/kde/HTML/sv/showfoto/editornoisereductionplugin.png
+share/doc/kde/HTML/sv/showfoto/editorpreview.png
+share/doc/kde/HTML/sv/showfoto/editorraindropsplugin.png
+share/doc/kde/HTML/sv/showfoto/editorratiocroptool.png
+share/doc/kde/HTML/sv/showfoto/editorredeyescorrection.png
+share/doc/kde/HTML/sv/showfoto/editorresizetool.png
+share/doc/kde/HTML/sv/showfoto/editorsharpenplugin.png
+share/doc/kde/HTML/sv/showfoto/editorunsharpedmaskplugin.png
+share/doc/kde/HTML/sv/showfoto/index.cache.bz2
+share/doc/kde/HTML/sv/showfoto/index.docbook
+share/doc/kde/HTML/sv/showfoto/introductionplugininterfaces.png
+share/doc/kde/HTML/sv/showfoto/setupgeneral.png
+share/doc/kde/HTML/sv/showfoto/setupplugins.png
+share/doc/kde/HTML/sv/showfoto/setupslideshow.png
+@dirrm share/doc/kde/HTML/sv/showfoto
 @dirrm share/doc/kde/HTML/sv/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/sv
 @dirrm share/doc/kde/HTML/ru/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/ru
 @dirrm share/doc/kde/HTML/pt_BR/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@dirrm share/doc/kde/HTML/pt/showfoto
-@dirrm share/doc/kde/HTML/pt/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/pl/showfoto
-@dirrm share/doc/kde/HTML/pl/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/pl
 @dirrm share/doc/kde/HTML/nl/showfoto
 @dirrm share/doc/kde/HTML/nl/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/nl
+@dirrm share/doc/kde/HTML/it/showfoto
 @dirrm share/doc/kde/HTML/it/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/showfoto
-@comment in kde: @dirrm share/doc/kde/HTML/fr
 @dirrm share/doc/kde/HTML/et/showfoto
 @dirrm share/doc/kde/HTML/et/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/et
 @dirrm share/doc/kde/HTML/es/showfoto
 @dirrm share/doc/kde/HTML/es/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/es
+@dirrm share/doc/kde/HTML/en/showfoto
 @dirrm share/doc/kde/HTML/en/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/en
+@dirrm share/doc/kde/HTML/de/showfoto
 @dirrm share/doc/kde/HTML/de/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/de
+@dirrm share/doc/kde/HTML/da/showfoto
 @dirrm share/doc/kde/HTML/da/digikam
 @comment in kde: @dirrm share/doc/kde/HTML/da
+@comment in kde: @dirrm share/doc/kde/HTML
+@comment in kde: @dirrm share/doc/kde
