@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/01/06 12:47:17 obache Exp $
+$NetBSD: distinfo,v 1.9 2009/02/20 12:27:03 obache Exp $
 
-SHA1 (pekwm-0.1.9a.tar.bz2) = ee3d8503d2a8747ba9081cbe82298063a802bf19
-RMD160 (pekwm-0.1.9a.tar.bz2) = 473f091ec0f9a242498f23f576f4dc4d59226ec3
-Size (pekwm-0.1.9a.tar.bz2) = 354338 bytes
-SHA1 (patch-aa) = ae4e541315e357c9f13ff47dc2ba8f00358a24ce
+SHA1 (pekwm-0.1.10.tar.bz2) = 5a92fb3f6446270900fe4decd491ae841a92de38
+RMD160 (pekwm-0.1.10.tar.bz2) = 8e8f168f848897d807fbfb92f67eccba10609001
+Size (pekwm-0.1.10.tar.bz2) = 372622 bytes
+SHA1 (patch-aa) = 6aa5307aa6ea3e1fcbd5715bbfb0627c49c41304
