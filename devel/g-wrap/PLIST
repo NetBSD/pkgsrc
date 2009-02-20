@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2007/05/17 23:59:34 gdt Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/02/20 00:42:50 gdt Exp $
 bin/g-wrap-config
-include/ffi.h
-include/ffitarget.h
 include/g-wrap-wct.h
 include/g-wrap/core-runtime.h
 include/g-wrap/ffi-support.h
@@ -10,11 +8,9 @@ include/g-wrap/guile-runtime.h
 include/g-wrap/guile-wct.h
 info/g-wrap.info
 lib/g-wrap/modules/libgw-guile-standard.la
-lib/libffi.la
-lib/libgw-guile-miscutils.la
+lib/g-wrap/modules/libgw-guile-gw-glib.la
 lib/libgwrap-core-runtime.la
 lib/libgwrap-guile-runtime.la
-lib/libmiscutils.la
 lib/pkgconfig/g-wrap-2.0-guile.pc
 share/aclocal/g-wrap.m4
 share/guile/site/g-wrap.scm
@@ -25,6 +21,7 @@ share/guile/site/g-wrap/config.scm
 share/guile/site/g-wrap/enumeration.scm
 share/guile/site/g-wrap/guile.scm
 share/guile/site/g-wrap/guile/ws/standard.scm
+share/guile/site/g-wrap/gw-glib.scm
 share/guile/site/g-wrap/gw-glib-spec.scm
 share/guile/site/g-wrap/gw-standard-spec.scm
 share/guile/site/g-wrap/gw-wct-spec.scm
