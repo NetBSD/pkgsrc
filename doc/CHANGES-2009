@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.643 2009/02/20 00:43:06 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.644 2009/02/20 05:18:15 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/guile-lib to 0.1.6 [gdt 2009-02-19]
 	Updated emulators/wine-devel to 1.1.15 [adam 2009-02-19]
 	Updated devel/g-wrap to 1.9.11 [gdt 2009-02-20]
+	Updated pkgtools/cdpack to 1.9 [dmcmahill 2009-02-20]
