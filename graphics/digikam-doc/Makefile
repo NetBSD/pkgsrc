@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/20 19:49:35 wiz Exp $
 
-DISTNAME=		digikam-doc-0.9.1
-PKGREVISION=		3
+DISTNAME=		digikam-doc-0.9.5
 CATEGORIES=		graphics kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=digikam/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,9 +16,6 @@ USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
-BUILDLINK_DEPMETHOD.libXt?=	build
-
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
