@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/03/06 14:53:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/02/20 20:02:30 reed Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBCROCO_BUILDLINK3_MK:=	${LIBCROCO_BUILDLINK3_MK}+
@@ -18,8 +18,6 @@ BUILDLINK_PKGSRCDIR.libcroco?=	../../textproc/libcroco
 .endif	# LIBCROCO_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
