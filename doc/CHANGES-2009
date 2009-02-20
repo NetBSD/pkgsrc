@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.646 2009/02/20 07:46:53 bjs Exp $
+$NetBSD: CHANGES-2009,v 1.647 2009/02/20 10:30:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/cdpack to 1.9 [dmcmahill 2009-02-20]
 	Updated graphics/pngcrush to 1.6.14 [adam 2009-02-20]
 	Updated x11/xextproto to 7.0.5 [bjs 2009-02-20]
+	Updated games/wesnoth to 1.4.7 [wiz 2009-02-20]
