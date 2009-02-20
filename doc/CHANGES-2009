@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.650 2009/02/20 12:27:25 obache Exp $
+$NetBSD: CHANGES-2009,v 1.651 2009/02/20 12:33:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution to 2.24.4 [drochner 2009-02-20]
 	Updated graphics/digikam to 0.9.5beta3 [wiz 2009-02-20]
 	Updated wm/pekwm to 0.1.10 [obache 2009-02-20]
+	Updated lang/ruby18-base to 1.8.7.72nb3 [taca 2009-02-20]
