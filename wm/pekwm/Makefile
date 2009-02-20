@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2009/01/06 12:47:17 obache Exp $
+# $NetBSD: Makefile,v 1.32 2009/02/20 12:27:03 obache Exp $
 #
 
-DISTNAME=	pekwm-0.1.9a
+DISTNAME=	pekwm-0.1.10
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/projects/3/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,12 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
-
-.include "../../mk/bsd.prefs.mk"
-
-.if exists(${X11BASE}/include/X11/extensions/Xinerama.h)
-CONFIGURE_ARGS+=	--enable-xinerama
-.endif
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 

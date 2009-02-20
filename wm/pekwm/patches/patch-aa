@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/01/06 12:47:17 obache Exp $
+$NetBSD: patch-aa,v 1.5 2009/02/20 12:27:03 obache Exp $
 
---- data/Makefile.in.orig	2008-12-22 14:47:29.000000000 +0000
+--- data/Makefile.in.orig	2009-01-26 17:59:45.000000000 +0000
 +++ data/Makefile.in
-@@ -184,7 +184,7 @@ AUTOMAKE_OPTIONS = foreign
+@@ -182,7 +182,7 @@ AUTOMAKE_OPTIONS = foreign
  SUBDIRS = themes scripts
  CLEANFILES = config menu
  EXTRA_DIST = autoproperties config.in keys menu.in mouse start vars
