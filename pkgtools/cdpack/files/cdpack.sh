@@ -1,7 +1,7 @@
 #!/bin/sh
-# $NetBSD: cdpack.sh,v 1.12 2008/01/28 23:03:48 dmcmahill Exp $
+# $NetBSD: cdpack.sh,v 1.13 2009/02/20 05:16:51 dmcmahill Exp $
 #
-# Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003, 2005, 2009 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -40,10 +40,15 @@ progver=@progver@
 
 TMPDIR=${TMPDIR:-/tmp}
 TMP=${TMPDIR}/${prog}.$$
+
 AWK=${AWK:-@AWK@}
+BZCAT=${BZCAT:-@BZCAT@}
 EXPR="@EXPR@"
+GZCAT=${GZCAT:-@GZCAT@}
 SORT="@SORT@"
+TAR="${TAR:-@TAR@}"
 TSORT="@TSORT@"
+
 
 depf=$TMP/depf
 depf2=$TMP/depf2
@@ -250,6 +255,21 @@ if [ "$VERBOSE" = "yes" ]; then
     else
 	echo "A CD-ROM sized image will be created"
     fi
+
+    cat << EOF
+
+The following tools will be used:
+
+AWK    = ${AWK}
+BZCAT  = ${BZCAT}
+EXPR   = ${EXPR}
+GZCAT  = ${GZCAT}
+SORT   = ${SORT}
+TAR    = ${TAR}
+TSORT  = ${TSORT}
+
+EOF
+
 fi
 
 #
@@ -326,14 +346,24 @@ do
 	*.txt)
 		continue
 		;;
+	*.tbz)
+		pkg_sufx=.tbz
+		ZCAT=${BZCAT}
+		;;
+
+	*.tgz)
+		pkg_sufx=.tgz
+		ZCAT=${GZCAT}
+		;;
+
 	esac
 
 	if [ -f $pkg ]; then
 		# extract the packge name
-		pkgname=`basename $pkg .tgz`
+		pkgname=`basename $pkg $pkg_sufx`
 
 		# extract the packing list
-		cat $pkg | (cd $TMP; tar --fast-read -xzf - +BUILD_INFO +CONTENTS)
+		cat $pkg | (cd $TMP; $ZCAT - | ${TAR} --fast-read -xf - +BUILD_INFO +CONTENTS)
 
 		# extract the depends
 		deps=`${AWK} '/^@pkgdep/ {printf("%s ",$2)}' $TMP/+CONTENTS`
@@ -383,6 +413,7 @@ do
 			best=`/usr/sbin/pkg_admin lsbest "${packages}/${dep}"`
 			if [ ! -z "$best" ]; then
 			    best=`basename $best .tgz`
+			    best=`basename $best .tbz`
 			    bestdeps=$bestdeps" "$best
 			    echo "$best	$pkgname" >> $deptree
 			    listed=yes
@@ -398,7 +429,7 @@ do
 		    echo "$pkgname	$pkgname" >> $deptree
 		fi
 
-		echo "$pkgname | $bestdeps | $cfls" >> $depf2
+		echo "$pkgname | $bestdeps | $cfls | $pkg_sufx" >> $depf2
 
 		npkgs=`${EXPR} $npkgs + 1`
 	else
