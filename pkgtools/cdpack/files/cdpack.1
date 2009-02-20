@@ -1,4 +1,4 @@
-.\" $NetBSD: cdpack.1,v 1.13 2008/01/28 23:06:14 dmcmahill Exp $
+.\" $NetBSD: cdpack.1,v 1.14 2009/02/20 05:16:51 dmcmahill Exp $
 .\"
 .\" Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
 .\"
@@ -70,6 +70,11 @@ that directory.  A file,
 .Ar .index ,
 which lists the contents of each CD/DVD will be left in the root
 directory of each CD/DVD image.
+.Nm
+will look for files ending both in .tgz as well as .tbz when
+scanning the directory
+.Ar packages_directory
+for binary packages.
 .Bl -tag -width "-x directory "
 .It Fl ac
 Include binary packages marked as NO_BIN_ON_CDROM on the CD/DVD set.
@@ -159,6 +164,14 @@ uses the fillowing environment variables if set.
 awk implementation to use.
 Defaults to
 .Dq Li @AWK@ .
+.It Ev BZCAT
+bzcat2 implementation to use.
+Defaults to
+.Dq Li @BZCAT@ .
+.It Ev GZCAT
+bzcat2 implementation to use.
+Defaults to
+.Dq Li @GZCAT@ .
 .It Ev TMPDIR
 Directory for holding temporary files during the image creation.
 Defaults to

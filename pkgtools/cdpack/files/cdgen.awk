@@ -1,7 +1,7 @@
 #!@AWK@ -f
-# $NetBSD: cdgen.awk,v 1.6 2005/08/01 21:47:43 dmcmahill Exp $
+# $NetBSD: cdgen.awk,v 1.7 2009/02/20 05:16:51 dmcmahill Exp $
 #
-# Copyright (c) 2001, 2002, 2003, 2005 Dan McMahill, All rights reserved.
+# Copyright (c) 2001, 2002, 2003, 2005, 2009 Dan McMahill, All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -32,6 +32,12 @@
 #
 
 BEGIN {
+
+# all of the PKG_SUFX values which are currently allowed.  This is hardcoded into
+# pkg_create(1) and friends.
+
+    allsf[1] = ".tgz";
+    allsf[2] = ".tbz";
 
 # ARGV[0] = program name
 # ARGV[1] = packages directory (/usr/pkgsrc/packages/All)
@@ -179,6 +185,11 @@ BEGIN {
 	}
 	else{
 	    printf("WARNING:  binary package \"%s\" has zero size\n",pkgorder[n]);
+	    if(!verbose) {
+		verbose = 1;
+		getsize(pkgorder[n]);
+		verbose = 0;
+	    }
 	}
 	totsize = totsize + pkgsize[pkgorder[n]];
     }
@@ -393,9 +404,14 @@ BEGIN {
 # populate it with the symlinks to the binary packages
 	for (n=1; n<=npkgs; n++){
 	    if (cdcontents[cdn":"pkgorder[n]]){
-		cmd = "cd " outdir " && ln -s " packages "/" ;
-		cmd = cmd pkgorder[n] ".tgz";
-		do_system(cmd);
+		for(i in allsf) {
+		    cmd="test -f " packages "/" pkgorder[n] allsf[i];
+		    if( (r = system(cmd)) == 0){
+			cmd = "cd " outdir " && ln -s " packages "/" ;
+			cmd = cmd pkgorder[n] allsf[i];
+			do_system(cmd);
+		    }
+		}
 	    }
 	}
 
@@ -414,17 +430,36 @@ BEGIN {
     exit 0
 	} # BEGIN
 
-function getsize(name,cmd,sz){
-
-    cmd="test -f " packages "/" name ".tgz";
-    if(system(cmd) == 0){
-	cmd="du -k " packages "/" name ".tgz";
-	cmd | getline ;
-	close(cmd);
-	sz=$1;
-    }
-    else{
-	sz=0;
+# This is a bit of a hack, but in the event that we have both a
+# foo-1.3.tgz and a foo-1.3.tbz, we currently take them both.
+# I'm not sure how we avoid this.  One option is a flag to 
+# cdpack that says to prefer the .tbz over the .tgz for example.
+# To implement that, the cdpack.sh shell script would need some
+# updating as well as this function.  Grep for ".tgz" in
+# pkgsrc/pkgutils/cdpack/files/* and also grep for allsf in this file
+  
+function getsize(name,cmd,sz,i,pkgsfx,r){
+    sz=0;
+    for(i in allsf) {
+	pkgsfx=allsf[i];
+	cmd="test -f " packages "/" name pkgsfx;
+	if( verbose ) {
+	    printf("getsize(%s):  Checking for suffix \"%s\" with:\n", name, pkgsfx);
+	    printf("    %s\n", cmd);
+	}
+	if( (r = system(cmd)) == 0){
+	    cmd="du -k " packages "/" name pkgsfx;
+	    cmd | getline ;
+	    close(cmd);
+	    if( verbose ) {
+		printf("    \"%s\" gave %s\n", cmd, $0);
+	    }
+	    sz=sz + $1;
+	} else {
+	    if( verbose ) {
+		printf("    command returned %d\n", r);
+	    }
+	}
     }
 
     return(sz);	
