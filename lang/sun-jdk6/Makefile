@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/02/08 00:23:20 christos Exp $
+# $NetBSD: Makefile,v 1.12 2009/02/20 21:42:27 abs Exp $
 
 DISTNAME=	jdk-6u12-linux-${DIST_ARCH}
 #PKGREVISION=    1
@@ -30,5 +30,11 @@ post-extract:
 		fi;							\
 	done
 	${LN} -sf . ${WRKSRC}/jre
+
+pre-install:
+	# These files are generated the *first* time the package is built
+	${RM} -f ${WRKSRC}/register.html
+	${RM} -f ${WRKSRC}/register_ja.html
+	${RM} -f ${WRKSRC}/register_zh_CN.html
 
 .include "../../mk/bsd.pkg.mk"
