@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2008/06/16 15:29:35 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/02/20 05:16:51 dmcmahill Exp $
 #
 
-DISTNAME=	cdpack-1.8
+DISTNAME=	cdpack-1.9
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -20,9 +20,12 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 USE_TOOLS+=	awk:run
+USE_TOOLS+=	bzcat:run
 USE_TOOLS+=	expr:run
+USE_TOOLS+=	gzcat:run
 USE_TOOLS+=	printf:run
 USE_TOOLS+=	sort:run
+USE_TOOLS+=	tar:run
 USE_TOOLS+=	tsort:run
 
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1
@@ -32,14 +35,21 @@ do-build:
 	${SED}  -e 's;@prefix@;${PREFIX};g' \
 		-e 's;@progver@;${PKGVERSION};g' \
 		-e 's;@AWK@;${AWK};g' \
+		-e 's;@BZCAT@;${BZCAT};g' \
 		-e 's;@EXPR@;${EXPR};g' \
+		-e 's;@GZCAT@;${GZCAT};g' \
 		-e 's;@PRINTF@;${PRINTF};g' \
 		-e 's;@SORT@;${SORT};g' \
+		-e 's;@TAR@;${TAR};g' \
 		-e 's;@TSORT@;${TSORT};g' \
 		${FILESDIR}/${f}.sh > \
 		${WRKSRC}/${f}
 	${CHMOD} 755 ${WRKDIR}/${f}
-	${SED} -e 's;@AWK@;${AWK};g' ${FILESDIR}/${f}.1 > \
+	${SED} -e 's;@AWK@;${AWK};g' \
+		-e 's;@BZCAT@;${BZCAT};g' \
+		-e 's;@GZCAT@;${GZCAT};g' \
+		-e 's;@TAR@;${TAR};g' \
+		${FILESDIR}/${f}.1 > \
 		${WRKSRC}/${f}.1
 .endfor
 	${SED} -e 's;@AWK@;${AWK};g' ${FILESDIR}/cdgen.awk > \
