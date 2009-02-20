@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.7 2008/06/19 14:35:37 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.8 2009/02/20 12:32:26 taca Exp $
 @dirrm ${RUBY_LIB}/bigdecimal
 @dirrm ${RUBY_LIB}/cgi/session
 @dirrm ${RUBY_LIB}/cgi
@@ -100,4 +100,4 @@ ${PLIST.io}@dirrm ${RUBY_LIB}/io
 @dirrm ${RUBY_EG}
 @dirrm ${RUBY_SITERIDIR}
 @dirrm ${RUBY_BASERIDIR}
-@dirrm ${RUBY_RIDIR}
+@unexec ${RMDIR} %D/${RUBY_RIDIR} 2>/dev/null || ${TRUE}
