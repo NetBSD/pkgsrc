@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.3 2009/01/06 18:05:07 adam Exp $
+$NetBSD: patch-ad,v 1.4 2009/02/20 10:52:57 drochner Exp $
 
 --- configure.orig	2008-07-03 00:43:52.000000000 +0200
 +++ configure
@@ -41,3 +41,11 @@ $NetBSD: patch-ad,v 1.3 2009/01/06 18:05:07 adam Exp $
   else
      { echo "$as_me:$LINENO: result: no" >&5
  echo "${ECHO_T}no" >&6; }
+@@ -21691,6 +21687,7 @@ main ()
+ __sync_lock_test_and_set(&l,1);
+   __sync_lock_release(&l);
+   __sync_add_and_fetch(&l,1);
++  __sync_bool_compare_and_swap(&l,0,1);
+   return 0;
+   ;
+   return 0;
