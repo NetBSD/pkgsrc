@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/01 06:02:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/02/21 13:20:45 wiz Exp $
+bin/sndfile-cmp
 bin/sndfile-convert
 bin/sndfile-info
+bin/sndfile-jackplay
+bin/sndfile-metadata-get
+bin/sndfile-metadata-set
 bin/sndfile-play
 bin/sndfile-regtest
 include/sndfile.h
@@ -24,12 +28,7 @@ share/doc/libsndfile1-dev/html/new_file_type.HOWTO
 share/doc/libsndfile1-dev/html/octave.html
 share/doc/libsndfile1-dev/html/pkgconfig.html
 share/doc/libsndfile1-dev/html/sndfile_info.html
+share/doc/libsndfile1-dev/html/tutorial.html
 share/doc/libsndfile1-dev/html/win32.html
-share/octave/site/m/sndfile_load.m
-share/octave/site/m/sndfile_play.m
-share/octave/site/m/sndfile_save.m
 @dirrm share/doc/libsndfile1-dev/html
 @dirrm share/doc/libsndfile1-dev
-@dirrm share/octave/site/m
-@dirrm share/octave/site
-@dirrm share/octave
