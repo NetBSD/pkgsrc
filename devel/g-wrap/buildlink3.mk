@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/02/21 02:09:00 gdt Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 G_WRAP_BUILDLINK3_MK:=	${G_WRAP_BUILDLINK3_MK}+
@@ -17,6 +17,7 @@ BUILDLINK_ABI_DEPENDS.g-wrap?=	g-wrap>=1.9.6nb1
 BUILDLINK_PKGSRCDIR.g-wrap?=	../../devel/g-wrap
 .endif	# G_WRAP_BUILDLINK3_MK
 
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
