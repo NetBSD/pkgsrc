@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.670 2009/02/21 14:12:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.671 2009/02/21 14:42:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -899,3 +899,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-libwww to 5.824 [wiz 2009-02-21]
 	Updated textproc/py-libxml2 to 2.7.3 [wiz 2009-02-21]
 	Updated x11/py-gtk2 to 2.14.0 [wiz 2009-02-21]
+	Updated devel/liboil to 0.3.15nb1 [he 2009-02-21]
