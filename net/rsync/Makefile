@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2009/01/28 12:34:00 tron Exp $
+# $NetBSD: Makefile,v 1.81 2009/02/21 09:34:17 tron Exp $
 
 DISTNAME=	rsync-3.0.5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
@@ -22,6 +23,9 @@ CONFIGURE_ARGS+=	--with-included-popt \
 TEST_TARGET=		test
 
 PKG_SYSCONFSUBDIR=	rsync
+
+RCD_SCRIPTS=            rsyncd
+RCD_SCRIPT_SRC.rsyncd=	files/rsyncd.sh
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
