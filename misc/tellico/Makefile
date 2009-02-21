@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/21 10:18:28 wiz Exp $
 #
 
-DISTNAME=	tellico-1.3.4
-PKGREVISION=	2
+DISTNAME=	tellico-1.3.5
 CATEGORIES=	misc
 MASTER_SITES=	http://www.periapsis.org/tellico/download/
 
@@ -16,7 +15,7 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_DIRS+=		kde3-1.0
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake perl:build pkg-config
 
 .include "options.mk"
 
