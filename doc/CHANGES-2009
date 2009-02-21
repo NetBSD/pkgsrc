@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.674 2009/02/21 15:16:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.675 2009/02/21 15:53:27 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/subtitleeditor to 0.30.0 [wiz 2009-02-21]
 	Updated net/yaz to 3.0.42 [wiz 2009-02-21]
 	Added wm/scrotwm version 0.9.1 [wiz 2009-02-21]
+	Updated devel/libffi to 3.0.8 [asau 2009-02-21]
