@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.655 2009/02/21 07:31:01 taca Exp $
+$NetBSD: CHANGES-2009,v 1.656 2009/02/21 09:34:31 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -884,3 +884,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/libcroco to 0.6.2 [reed 2009-02-20]
 	Updated devel/guile-gnome to 2.16.1 [gdt 2009-02-21]
 	Updated www/typolight-translations to 20090217 [taca 2009-02-21]
+	Updated net/rsync to 3.0.5nb1 [tron 2009-02-21]
