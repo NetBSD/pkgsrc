@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.671 2009/02/21 14:42:48 he Exp $
+$NetBSD: CHANGES-2009,v 1.672 2009/02/21 14:48:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -900,3 +900,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-libxml2 to 2.7.3 [wiz 2009-02-21]
 	Updated x11/py-gtk2 to 2.14.0 [wiz 2009-02-21]
 	Updated devel/liboil to 0.3.15nb1 [he 2009-02-21]
+	Updated multimedia/subtitleeditor to 0.30.0 [wiz 2009-02-21]
