@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/10/16 17:26:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/02/21 17:40:00 wiz Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -116,6 +116,15 @@ share/gnome/help/totem/it/figures/totem_start_window.png
 share/gnome/help/totem/it/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/it/figures/totem_volume_mute_button.png
 share/gnome/help/totem/it/totem.xml
+share/gnome/help/totem/ja/figures/totem_next_button.png
+share/gnome/help/totem/ja/figures/totem_pause_button.png
+share/gnome/help/totem/ja/figures/totem_play_button.png
+share/gnome/help/totem/ja/figures/totem_previous_button.png
+share/gnome/help/totem/ja/figures/totem_show_playlist_button.png
+share/gnome/help/totem/ja/figures/totem_start_window.png
+share/gnome/help/totem/ja/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/ja/figures/totem_volume_mute_button.png
+share/gnome/help/totem/ja/totem.xml
 share/gnome/help/totem/oc/figures/totem_next_button.png
 share/gnome/help/totem/oc/figures/totem_pause_button.png
 share/gnome/help/totem/oc/figures/totem_play_button.png
@@ -243,6 +252,7 @@ share/locale/ka/LC_MESSAGES/totem.mo
 share/locale/kn/LC_MESSAGES/totem.mo
 share/locale/ko/LC_MESSAGES/totem.mo
 share/locale/ku/LC_MESSAGES/totem.mo
+share/locale/la/LC_MESSAGES/totem.mo
 share/locale/lt/LC_MESSAGES/totem.mo
 share/locale/lv/LC_MESSAGES/totem.mo
 share/locale/mg/LC_MESSAGES/totem.mo
@@ -291,6 +301,7 @@ share/omf/totem/totem-en_GB.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-it.omf
+share/omf/totem/totem-ja.omf
 share/omf/totem/totem-oc.omf
 share/omf/totem/totem-pa.omf
 share/omf/totem/totem-pl.omf
@@ -316,12 +327,19 @@ share/totem/video-list.ui
 @dirrm share/omf/totem
 @comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gnome/help/totem/zh_TW/figures
 @dirrm share/gnome/help/totem/zh_TW
 @dirrm share/gnome/help/totem/zh_HK/figures
@@ -340,6 +358,8 @@ share/totem/video-list.ui
 @dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/oc/figures
 @dirrm share/gnome/help/totem/oc
+@dirrm share/gnome/help/totem/ja/figures
+@dirrm share/gnome/help/totem/ja
 @dirrm share/gnome/help/totem/it/figures
 @dirrm share/gnome/help/totem/it
 @dirrm share/gnome/help/totem/fr/figures
@@ -360,6 +380,7 @@ share/totem/video-list.ui
 @dirrm share/gnome/help/totem/C
 @dirrm share/gnome/help/totem
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/totem/plugins/youtube
