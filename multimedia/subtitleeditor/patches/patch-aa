@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/09/08 11:33:55 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/21 14:47:58 wiz Exp $
 
---- configure.orig	2007-04-29 10:33:12.000000000 +0000
+--- configure.orig	2009-02-21 14:15:01.000000000 +0000
 +++ configure
-@@ -9117,8 +9117,8 @@ else
- echo "${ECHO_T}no" >&6; }
+@@ -25653,8 +25653,8 @@ else
+ $as_echo "no" >&6; }
  fi
  
 -if test "$have_iso_code_639" == "yes"; then
