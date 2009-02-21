@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2008/12/19 15:43:20 adam Exp $
+# $NetBSD: Makefile,v 1.77 2009/02/21 13:45:31 wiz Exp $
 
-DISTNAME=	gnutls-2.6.3
+DISTNAME=	gnutls-2.6.4
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		http://www.mirrors.wiretapped.net/security/network-security/gnutls/ \
