@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.664 2009/02/21 13:52:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.665 2009/02/21 13:58:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -893,3 +893,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gnutls to 2.6.4 [wiz 2009-02-21]
 	Updated sysutils/hal-info to 20090202 [wiz 2009-02-21]
 	Updated devel/libidn to 1.12 [wiz 2009-02-21]
+	Updated textproc/libxml2 to 2.7.3 [wiz 2009-02-21]
