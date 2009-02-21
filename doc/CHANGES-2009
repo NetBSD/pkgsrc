@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.653 2009/02/20 20:02:30 reed Exp $
+$NetBSD: CHANGES-2009,v 1.654 2009/02/21 02:37:36 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -882,3 +882,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ruby18-base to 1.8.7.72nb3 [taca 2009-02-20]
 	Updated graphics/digikam-doc to 0.9.5 [wiz 2009-02-20]
 	Updated textproc/libcroco to 0.6.2 [reed 2009-02-20]
+	Updated devel/guile-gnome to 2.16.1 [gdt 2009-02-21]
