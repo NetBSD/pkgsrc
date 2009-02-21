@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/02/21 15:59:20 imil Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+	LoadModule vhost_ldap_module lib/httpd/mod_vhost_ldap.so
+
+===========================================================================
