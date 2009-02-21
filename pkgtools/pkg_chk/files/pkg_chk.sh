@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.61 2008/12/20 09:50:59 abs Exp $
+# $Id: pkg_chk.sh,v 1.62 2009/02/21 20:50:06 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -172,30 +172,30 @@ extract_variables()
 	    fi
 	done
     fi
-    if [ ! -d "$PKGSRCDIR" -a \( -z "$opt_b" -o -n "$opt_s" \) ] ; then
-	fatal "Unable to locate PKGSRCDIR (${PKGSRCDIR:-not set})"
-    fi
 
-    # Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
-    # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
-    #
-
-    if [ -n "$opt_g" ]; then
-        :
-    elif [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
-	cd $PKGSRCDIR/pkgtools/pkg_chk
-	extract_make_vars Makefile \
-		AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
-		PKGCHK_TAGS PKGCHK_UPDATE_CONF PKG_ADD PKG_DBDIR PKG_DELETE \
-		PKG_ADMIN PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
-	if [ -z "$PACKAGES" ];then
-	    PACKAGES=$PKGSRCDIR/packages
+    if [ -z "$opt_g" ]; then
+	# Now we have PKGSRCDIR, use it to determine PACKAGES, and PKGCHK_CONF
+	# as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
+	#
+	if [ ! -d "$PKGSRCDIR" -a \( -z "$opt_b" -o -n "$opt_s" \) ] ; then
+	    fatal "Unable to locate PKGSRCDIR (${PKGSRCDIR:-not set})"
 	fi
-    elif [ $MAKECONF != /dev/null ] ; then
-	extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF PKGCHK_UPDATE_CONF \
-			PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
-	if [ -z "$PACKAGES" ] ; then
-	    PACKAGES=`pwd`
+	if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ;
+	    then
+	    cd $PKGSRCDIR/pkgtools/pkg_chk
+	    extract_make_vars Makefile \
+		    AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
+		    PKGCHK_TAGS PKGCHK_UPDATE_CONF PKG_ADD PKG_DBDIR \
+		    PKG_DELETE PKG_ADMIN PKG_INFO PKG_SUFX SED SORT SU_CMD TSORT
+	    if [ -z "$PACKAGES" ];then
+		PACKAGES=$PKGSRCDIR/packages
+	    fi
+	elif [ $MAKECONF != /dev/null ] ; then
+	    extract_make_vars $MAKECONF PACKAGES PKGCHK_CONF \
+			PKGCHK_UPDATE_CONF PKGCHK_TAGS PKGCHK_NOTAGS PKG_SUFX
+	    if [ -z "$PACKAGES" ] ; then
+		PACKAGES=`pwd`
+	    fi
 	fi
     fi
 
