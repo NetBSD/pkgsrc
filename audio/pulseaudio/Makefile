@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2009/02/07 20:42:33 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/21 13:22:43 wiz Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
 
 DISTNAME=	pulseaudio-0.9.14
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
