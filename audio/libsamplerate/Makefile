@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/08/07 18:27:08 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/21 13:22:43 wiz Exp $
 #
 
 DISTNAME=	libsamplerate-0.1.4
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/SRC/
 
