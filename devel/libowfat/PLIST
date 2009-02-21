@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/06 23:48:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/21 16:53:33 wiz Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
@@ -348,6 +348,12 @@ man/man3/uint32_read.3
 man/man3/uint32_read_big.3
 man/man3/uint32_unpack.3
 man/man3/uint32_unpack_big.3
+man/man3/uint64_pack.3
+man/man3/uint64_pack_big.3
+man/man3/uint64_read.3
+man/man3/uint64_read_big.3
+man/man3/uint64_unpack.3
+man/man3/uint64_unpack_big.3
 man/man3/umult16.3
 man/man3/umult32.3
 man/man3/umult64.3
