@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/02/28 19:43:00 agc Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/21 23:34:00 tron Exp $
 
 DISTNAME=	afpfs-ng-0.8
+PKGREVISION=	1
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=afpfs-ng/}
