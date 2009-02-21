@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.677 2009/02/21 16:23:12 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.678 2009/02/21 16:44:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -907,3 +907,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libffi to 3.0.8 [asau 2009-02-21]
 	Added www/ap22-vhost-ldap version 1.2.0 [imil 2009-02-21]
 	Updated graphics/cairomm to 1.8.0 [wiz 2009-02-21]
+	Updated x11/libX11 to 1.2 [wiz 2009-02-21]
