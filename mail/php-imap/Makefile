@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/11/13 14:21:05 tron Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/21 17:02:59 adrianp Exp $
 
 MODNAME=		imap
 PKGREVISION=		4
@@ -11,9 +11,16 @@ CONFLICTS=	php-imap-[0-9]*
 
 USE_PHP_EXT_PATCHES=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.imap-uw}
-CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	--with-${MODNAME}-linkage
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=yes
+.else
+CONFIGURE_ARGS+=	--with-${MODNAME}-ssl=${SSLBASE}
+.endif
 
 CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 
@@ -22,7 +29,11 @@ CONFIGURE_ENV+=		ac_cv_lib_pam_pam_start=no
 # PHP_OPENSSL is set. For a self contained extension build like for
 # this package this is not the case of course.
 
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=		PHP_OPENSSL=yes
+.else
 CONFIGURE_ENV+=		PHP_OPENSSL=${SSLBASE:Q}
+.endif
 
 .include "../../mail/imap-uw/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
