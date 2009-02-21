@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2009/02/21 15:53:04 tonio Exp $
 
 DISTNAME=	bibtex2html-1.89
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.lri.fr/~filliatr/ftp/bibtex2html/
 
@@ -9,6 +10,7 @@ HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 
 BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
+BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
