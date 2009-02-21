@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7860 2009/02/20 12:29:34 obache Exp $
+$NetBSD: TODO,v 1.7861 2009/02/21 07:02:31 taca Exp $
 
 Suggested new packages
 ======================
@@ -628,7 +628,7 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.16
 	o geda-1.5.1.20081221
-	o geeklog-1.5.0
+	o geeklog-1.5.2
 	o genius-1.0.5
 	o gettext-0.17
 	o gettext-m4-0.17
@@ -1074,6 +1074,7 @@ Suggested package updates
 	o pircbot-1.4.4
 	o pixman-0.14.0
 	o pkg_select-20051209
+	o plone-3.2.1 [needs plone-32?]
 	o ploticus-2.40
 	o ploticus-examples-230
 	o plotutils-2.5
@@ -1456,7 +1457,7 @@ Suggested package updates
 	o xf86-video-tseng-1.2.1
 	o xf86-video-vesa-2.2.0
 	o xf86-video-vmware-10.16.5
-	o xf86-video-vesa-2.1.0
+	o xf86-video-vesa-2.2.0
 	o xfe-1.19.1
 	o xforms-1.0.91
 	o xfstt-1.7
