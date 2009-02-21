@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/01/24 20:55:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/02/21 08:23:04 dholland Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -302,7 +302,7 @@ lib/gimp/2.0/plug-ins/file-psp
 lib/gimp/2.0/plug-ins/file-raw
 lib/gimp/2.0/plug-ins/file-sgi
 lib/gimp/2.0/plug-ins/file-sunras
-lib/gimp/2.0/plug-ins/file-svg
+${PLIST.svg}lib/gimp/2.0/plug-ins/file-svg
 lib/gimp/2.0/plug-ins/file-tga
 lib/gimp/2.0/plug-ins/file-tiff-load
 lib/gimp/2.0/plug-ins/file-tiff-save
