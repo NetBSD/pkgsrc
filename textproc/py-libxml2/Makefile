@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2008/10/16 13:32:49 drochner Exp $
+# $NetBSD: Makefile,v 1.32 2009/02/21 14:06:09 wiz Exp $
 
-DISTNAME=	libxml2-2.7.2
+DISTNAME=	libxml2-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/
