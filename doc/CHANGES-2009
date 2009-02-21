@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.682 2009/02/21 17:40:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.683 2009/02/21 20:50:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -912,3 +912,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libowfat to 0.28 [wiz 2009-02-21]
 	Updated multimedia/totem-pl-parser to 2.24.4 [wiz 2009-02-21]
 	Updated multimedia/totem to 2.24.4 [wiz 2009-02-21]
+	Updated pkgtools/pkg_chk to 1.97 [abs 2009-02-21]
