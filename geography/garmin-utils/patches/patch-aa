@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2009/01/13 21:24:58 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2009/02/21 14:53:43 gdt Exp $
 
 --- lib/Makefile.orig	2009-01-13 20:50:30.000000000 +0100
 +++ lib/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.4 2009/01/13 21:24:58 joerg Exp $
  		gpsprint.c gpsversion.c gpsformat.c gpsload.c gpsfloat.c
  
 -install:
-+.if ${OPSYS} == "Linux"
++.if defined(OPSYS) && ${OPSYS} == "Linux"
 +SRCS+=		strlcpy.c
 +.endif
  
