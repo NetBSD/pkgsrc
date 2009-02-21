@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.666 2009/02/21 14:00:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.667 2009/02/21 14:02:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -895,3 +895,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libidn to 1.12 [wiz 2009-02-21]
 	Updated textproc/libxml2 to 2.7.3 [wiz 2009-02-21]
 	Updated www/p5-HTML-Parser to 3.60 [wiz 2009-02-21]
+	Updated security/p5-IO-Socket-SSL to 1.22 [wiz 2009-02-21]
