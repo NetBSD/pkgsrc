@@ -1,0 +1,68 @@
+$NetBSD: patch-ad,v 1.3.6.1 2009/02/21 17:03:41 tron Exp $
+
+Provide proper detection of altivec on NetBSD/powerpc ports.
+
+--- liboil/liboilcpu-powerpc.c.orig	2008-06-30 19:57:33.000000000 +0000
++++ liboil/liboilcpu-powerpc.c
+@@ -59,6 +59,12 @@
+ #include <sys/sysctl.h>
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/types.h>
++#include <sys/param.h>
++#include <sys/sysctl.h>
++#endif
++
+ 
+ /***** powerpc *****/
+ 
+@@ -70,7 +76,7 @@ oil_profile_stamp_tb(void)
+   return ts;
+ }
+ 
+-#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__APPLE__) && !defined(__linux__)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__NetBSD__)
+ static void
+ test_altivec (void * ignored)
+ {
+@@ -78,6 +84,21 @@ test_altivec (void * ignored)
+ }
+ #endif
+ 
++#if defined(__NetBSD__)
++static void
++oil_check_altivec_sysctl_netbsd (void)
++{
++  int ret, av;
++  size_t len;
++
++  len = sizeof(av);
++  ret = sysctlbyname("machdep.altivec", &av, &len, NULL, 0);
++  if (!ret && av) {
++    oil_cpu_flags |= OIL_IMPL_FLAG_ALTIVEC;
++  }
++}
++#endif
++
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+ static void
+ oil_check_altivec_sysctl_freebsd (void)
+@@ -158,7 +179,7 @@ out:
+ }
+ #endif
+ 
+-#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__APPLE__) && !defined(__linux__)
++#if !defined(__FreeBSD__) && !defined(__FreeBSD_kernel__) && !defined(__APPLE__) && !defined(__linux__) && !defined(__NetBSD__)
+ static void
+ oil_check_altivec_fault (void)
+ {
+@@ -176,6 +197,8 @@ oil_cpu_detect_arch(void)
+ {
+ #if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
+   oil_check_altivec_sysctl_freebsd();
++#elif defined(__NetBSD__)
++  oil_check_altivec_sysctl_netbsd();
+ #elif defined(__APPLE__)
+   oil_check_altivec_sysctl_darwin();
+ #elif defined(__linux__)
