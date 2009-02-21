@@ -1,13 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2009/01/13 12:13:45 drochner Exp $
+# $NetBSD: Makefile,v 1.48 2009/02/21 13:20:45 wiz Exp $
 
-DISTNAME=	libsndfile-1.0.17
-PKGREVISION=	5
+DISTNAME=	libsndfile-1.0.18
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/
-
-PATCHFILES=	libsndfile-1.0.17+flac-1.1.3.patch.bz2
-PATCH_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
-PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mega-nerd.com/libsndfile/
@@ -16,16 +11,22 @@ COMMENT=	Library for reading and writing audio files
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS=		pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
 
 MAKE_JOBS_SAFE=		no
 
+SUBST_CLASSES+=		vorbis
+SUBST_FILES.vorbis=	configure
+SUBST_SED.vorbis=	"s/1\.2\.1/1.2.0/g"
+SUBST_STAGE.vorbis=	pre-configure
+SUBST_MESSAGE.vorbis=	Allowing libvorbis-1.2.0.
+
 # This package compiles with gcc2, but its configure script doesn't know that
 CONFIGURE_ENV+=		ac_cv_c_struct_hack=yes
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,4 +37,8 @@ BUILDLINK_PASSTHRU_DIRS+=	/Developer
 .endif
 
 .include "../../audio/flac/buildlink3.mk"
+#BUILDLINK_API_DEPENDS.libvorbis+=	libvorbis>=1.2.1
+.include "../../audio/libvorbis/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libogg+=	libogg>=1.1.3
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
