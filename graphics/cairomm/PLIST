@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/21 15:00:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/21 16:23:02 wiz Exp $
 include/cairomm-1.0/cairomm/cairomm.h
 include/cairomm-1.0/cairomm/cairommconfig.h
 include/cairomm-1.0/cairomm/context.h
@@ -6,13 +6,26 @@ include/cairomm-1.0/cairomm/enums.h
 include/cairomm-1.0/cairomm/exception.h
 include/cairomm-1.0/cairomm/fontface.h
 include/cairomm-1.0/cairomm/fontoptions.h
+include/cairomm-1.0/cairomm/matrix.h
 include/cairomm-1.0/cairomm/path.h
 include/cairomm-1.0/cairomm/pattern.h
+include/cairomm-1.0/cairomm/quartz_font.h
 include/cairomm-1.0/cairomm/quartz_surface.h
 include/cairomm-1.0/cairomm/refptr.h
 include/cairomm-1.0/cairomm/scaledfont.h
 include/cairomm-1.0/cairomm/surface.h
+include/cairomm-1.0/cairomm/types.h
+include/cairomm-1.0/cairomm/win32_font.h
 include/cairomm-1.0/cairomm/win32_surface.h
 include/cairomm-1.0/cairomm/xlib_surface.h
 lib/libcairomm-1.0.la
 lib/pkgconfig/cairomm-1.0.pc
+lib/pkgconfig/cairomm-ft-1.0.pc
+lib/pkgconfig/cairomm-pdf-1.0.pc
+lib/pkgconfig/cairomm-png-1.0.pc
+lib/pkgconfig/cairomm-ps-1.0.pc
+lib/pkgconfig/cairomm-svg-1.0.pc
+lib/pkgconfig/cairomm-xlib-1.0.pc
+lib/pkgconfig/cairomm-xlib-xrender-1.0.pc
+@dirrm include/cairomm-1.0/cairomm
+@dirrm include/cairomm-1.0
