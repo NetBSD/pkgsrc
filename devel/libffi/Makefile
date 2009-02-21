@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/10/11 22:33:56 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/21 15:51:35 asau Exp $
 #
 
-DISTNAME=	libffi-3.0.6
+DISTNAME=	libffi-3.0.8
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
@@ -19,5 +19,13 @@ USE_LANGUAGES=	c c++
 INFO_FILES=	# PLIST
 
 PKGCONFIG_OVERRIDE+=	libffi.pc.in
+
+# Since we don't have "TEST_DEPENDS", we implement it as a hack:
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+TEST_TARGET=	check
+BUILD_DEPENDS+=	dejagnu-[0-9]*:../../devel/dejagnu
+.endif
 
 .include "../../mk/bsd.pkg.mk"
