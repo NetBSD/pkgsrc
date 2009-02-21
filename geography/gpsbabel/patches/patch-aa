@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/09/21 05:12:08 martti Exp $
+$NetBSD: patch-aa,v 1.2 2009/02/21 18:54:41 gdt Exp $
+
+Applied upstream 2009-02-21.
 
 --- tools/mkfilelist.orig	2007-09-21 08:06:37.000000000 +0000
 +++ tools/mkfilelist	2007-09-21 08:06:53.000000000 +0000

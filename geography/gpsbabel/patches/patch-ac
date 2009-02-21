@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/09/21 05:12:08 martti Exp $
+$NetBSD: patch-ac,v 1.2 2009/02/21 18:54:41 gdt Exp $
+
+Applied upstream 2009-02-21.
 
 --- testw.orig	2007-09-21 08:08:32.000000000 +0000
 +++ testw	2007-09-21 08:08:48.000000000 +0000
