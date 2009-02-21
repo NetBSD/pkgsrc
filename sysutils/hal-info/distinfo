@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/01/07 22:18:16 wiz Exp $
+$NetBSD: distinfo,v 1.4 2009/02/21 13:49:21 wiz Exp $
 
-SHA1 (hal-info-20081219.tar.gz) = d2231f32133eac4ab53f4e13b68df9f2027dc0e0
-RMD160 (hal-info-20081219.tar.gz) = 2e81127e95050818121020c17ac34a2a81863b3f
-Size (hal-info-20081219.tar.gz) = 235508 bytes
+SHA1 (hal-info-20090202.tar.gz) = 6eeed8b4bd41822e24b5710a1b299833b810a386
+RMD160 (hal-info-20090202.tar.gz) = c603a692a3384b07dc3ea39989493dd5e12ef9cc
+Size (hal-info-20090202.tar.gz) = 241540 bytes
 SHA1 (patch-aa) = 1b2c6515e28584a1da6b1554f28210ffc93193b7
 SHA1 (patch-ab) = d480299f24cccbfc9a3b65331c790cc11cd86c32
