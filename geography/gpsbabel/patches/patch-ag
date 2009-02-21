@@ -1,7 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2009/02/08 15:30:26 gdt Exp $
+$NetBSD: patch-ag,v 1.2 2009/02/21 18:54:41 gdt Exp $
 
 From Giles Lean.  Discards characters that may be waiting in the tty
-on open to get a fresh start.  Not yet sent upstream.
+on open to get a fresh start.  Upstream said would be applied on
+2009-02-21.
 
 --- jeeps/gpsserial.c.orig	2008-09-18 16:16:14.000000000 -0400
 +++ jeeps/gpsserial.c
