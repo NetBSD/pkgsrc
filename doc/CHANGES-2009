@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.679 2009/02/21 16:48:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.680 2009/02/21 16:53:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -909,3 +909,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/cairomm to 1.8.0 [wiz 2009-02-21]
 	Updated x11/libX11 to 1.2 [wiz 2009-02-21]
 	Updated x11/libXext to 1.0.5 [wiz 2009-02-21]
+	Updated devel/libowfat to 0.28 [wiz 2009-02-21]
