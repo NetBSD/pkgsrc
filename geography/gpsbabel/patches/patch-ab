@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/09/21 05:12:08 martti Exp $
+$NetBSD: patch-ab,v 1.2 2009/02/21 18:54:41 gdt Exp $
+
+Applied upstream 2009-02-21.
 
 --- tools/mkspec.orig	2007-09-21 08:07:45.000000000 +0000
 +++ tools/mkspec	2007-09-21 08:07:57.000000000 +0000
