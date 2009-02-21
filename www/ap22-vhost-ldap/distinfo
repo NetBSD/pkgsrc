@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/21 15:59:20 imil Exp $
+
+SHA1 (mod-vhost-ldap_1.2.0.orig.tar.gz) = 5152a928bdee6f6e9e3a2e02dc20ef3de24528d4
+RMD160 (mod-vhost-ldap_1.2.0.orig.tar.gz) = b4bcd45d4fab70acc69e1a65a3f3f94447591889
+Size (mod-vhost-ldap_1.2.0.orig.tar.gz) = 8593 bytes
