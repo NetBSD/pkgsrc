@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.3 2009/02/21 00:39:45 sketch Exp $
+
+--- src/lib/mDNSResponder/mDNSClientAPI.h.orig	Sat Feb 21 00:36:59 2009
++++ src/lib/mDNSResponder/mDNSClientAPI.h	Sat Feb 21 00:37:28 2009
+@@ -526,7 +526,7 @@
+ typedef unsigned char  mDNSu8;
+ typedef   signed short mDNSs16;
+ typedef unsigned short mDNSu16;
+-#if _LP64
++#ifdef _LP64
+ typedef   signed int   mDNSs32;
+ typedef unsigned int   mDNSu32;
+ #else
