@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2008/09/11 13:29:58 adam Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/21 16:23:02 wiz Exp $
 
-DISTNAME=	cairomm-1.6.4
+DISTNAME=	cairomm-1.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-docs
 PKGCONFIG_OVERRIDE+=	cairomm-1.0.pc.in
 
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.4
+.include "../../devel/libsigc++/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
