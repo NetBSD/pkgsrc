@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.654 2009/02/21 02:37:36 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.655 2009/02/21 07:31:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -883,3 +883,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/digikam-doc to 0.9.5 [wiz 2009-02-20]
 	Updated textproc/libcroco to 0.6.2 [reed 2009-02-20]
 	Updated devel/guile-gnome to 2.16.1 [gdt 2009-02-21]
+	Updated www/typolight-translations to 20090217 [taca 2009-02-21]
