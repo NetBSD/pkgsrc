@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/02/14 19:11:40 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2009/02/22 15:51:45 wiz Exp $
 
-SHA1 (Pod-Coverage-0.19.tar.gz) = 8f46d64523f7b17e35d4e861048bf4ac3a048907
-RMD160 (Pod-Coverage-0.19.tar.gz) = bcf11a970cdd451322cbf12fcf998c15ee288e7c
-Size (Pod-Coverage-0.19.tar.gz) = 13630 bytes
+SHA1 (Pod-Coverage-0.20.tar.gz) = c4786c39ae5a53ae6dbf553071d1e6f707deba61
+RMD160 (Pod-Coverage-0.20.tar.gz) = 97ab364d8ff57ebe94b709f9ef9c05089dc69a9e
+Size (Pod-Coverage-0.20.tar.gz) = 13224 bytes
