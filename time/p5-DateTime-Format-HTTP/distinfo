@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/22 14:33:20 he Exp $
+
+SHA1 (DateTime-Format-HTTP-0.37.tar.gz) = 38c1eaa6c6ddfe0dbc4e167353a2afe2ff7e80d5
+RMD160 (DateTime-Format-HTTP-0.37.tar.gz) = 193bf66ac1ad4238df211fb64ad2c9ed06443312
+Size (DateTime-Format-HTTP-0.37.tar.gz) = 17817 bytes
