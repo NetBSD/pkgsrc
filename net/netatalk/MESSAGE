@@ -1,18 +1,11 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2008/03/22 04:40:45 taca Exp $
+$NetBSD: MESSAGE,v 1.5 2009/02/22 07:35:16 taca Exp $
 
-To have Netatalk start automatically at boot, you will need to set the
-following variables in /etc/rc.conf (replacing "YES" with "NO" for those
-services you wish to not run):
-		atalkd=YES
-		afpd=YES
-		cnid_metad=YES
-		papd=YES
-		timelord=YES
+For users migrating from netatalk 1.x, note that CAP encoding isn't
+supported by Netatalk 2 any more.  You could convert encoding of file
+names from CAP to UTF-8 with some tools, but it is simple and safe way.
 
-Example Netatalk config files have been installed in the examples directory
-at ${PREFIX}/share/examples/netatalk. Production config files are
-installed in ${PKG_SYSCONFDIR}. If no config files existed before this
-package was installed, default config files were copied in.
+* You should backup your volumes to a client.
+* Restore backuped volumes from the client.
 
 ===========================================================================
