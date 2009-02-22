@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/21 22:39:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/22 12:29:42 wiz Exp $
 bin/ttx
 ${PYSITELIB}/FontTools.pth
 ${PYSITELIB}/FontTools/fontTools/__init__.py
@@ -31,6 +31,9 @@ ${PYSITELIB}/FontTools/fontTools/misc/__init__.pyo
 ${PYSITELIB}/FontTools/fontTools/misc/arrayTools.py
 ${PYSITELIB}/FontTools/fontTools/misc/arrayTools.pyc
 ${PYSITELIB}/FontTools/fontTools/misc/arrayTools.pyo
+${PYSITELIB}/FontTools/fontTools/misc/bezierTools.py
+${PYSITELIB}/FontTools/fontTools/misc/bezierTools.pyc
+${PYSITELIB}/FontTools/fontTools/misc/bezierTools.pyo
 ${PYSITELIB}/FontTools/fontTools/misc/eexec.py
 ${PYSITELIB}/FontTools/fontTools/misc/eexec.pyc
 ${PYSITELIB}/FontTools/fontTools/misc/eexec.pyo
@@ -38,6 +41,9 @@ ${PYSITELIB}/FontTools/fontTools/misc/eexecOp.so
 ${PYSITELIB}/FontTools/fontTools/misc/homeResFile.py
 ${PYSITELIB}/FontTools/fontTools/misc/homeResFile.pyc
 ${PYSITELIB}/FontTools/fontTools/misc/homeResFile.pyo
+${PYSITELIB}/FontTools/fontTools/misc/macCreatorType.py
+${PYSITELIB}/FontTools/fontTools/misc/macCreatorType.pyc
+${PYSITELIB}/FontTools/fontTools/misc/macCreatorType.pyo
 ${PYSITELIB}/FontTools/fontTools/misc/psCharStrings.py
 ${PYSITELIB}/FontTools/fontTools/misc/psCharStrings.pyc
 ${PYSITELIB}/FontTools/fontTools/misc/psCharStrings.pyo
@@ -50,9 +56,33 @@ ${PYSITELIB}/FontTools/fontTools/misc/psOperators.pyo
 ${PYSITELIB}/FontTools/fontTools/misc/textTools.py
 ${PYSITELIB}/FontTools/fontTools/misc/textTools.pyc
 ${PYSITELIB}/FontTools/fontTools/misc/textTools.pyo
+${PYSITELIB}/FontTools/fontTools/misc/transform.py
+${PYSITELIB}/FontTools/fontTools/misc/transform.pyc
+${PYSITELIB}/FontTools/fontTools/misc/transform.pyo
 ${PYSITELIB}/FontTools/fontTools/nfntLib.py
 ${PYSITELIB}/FontTools/fontTools/nfntLib.pyc
 ${PYSITELIB}/FontTools/fontTools/nfntLib.pyo
+${PYSITELIB}/FontTools/fontTools/pens/__init__.py
+${PYSITELIB}/FontTools/fontTools/pens/__init__.pyc
+${PYSITELIB}/FontTools/fontTools/pens/__init__.pyo
+${PYSITELIB}/FontTools/fontTools/pens/basePen.py
+${PYSITELIB}/FontTools/fontTools/pens/basePen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/basePen.pyo
+${PYSITELIB}/FontTools/fontTools/pens/boundsPen.py
+${PYSITELIB}/FontTools/fontTools/pens/boundsPen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/boundsPen.pyo
+${PYSITELIB}/FontTools/fontTools/pens/cocoaPen.py
+${PYSITELIB}/FontTools/fontTools/pens/cocoaPen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/cocoaPen.pyo
+${PYSITELIB}/FontTools/fontTools/pens/pointInsidePen.py
+${PYSITELIB}/FontTools/fontTools/pens/pointInsidePen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/pointInsidePen.pyo
+${PYSITELIB}/FontTools/fontTools/pens/reportLabPen.py
+${PYSITELIB}/FontTools/fontTools/pens/reportLabPen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/reportLabPen.pyo
+${PYSITELIB}/FontTools/fontTools/pens/transformPen.py
+${PYSITELIB}/FontTools/fontTools/pens/transformPen.pyc
+${PYSITELIB}/FontTools/fontTools/pens/transformPen.pyo
 ${PYSITELIB}/FontTools/fontTools/t1Lib.py
 ${PYSITELIB}/FontTools/fontTools/t1Lib.pyc
 ${PYSITELIB}/FontTools/fontTools/t1Lib.pyo
@@ -83,6 +113,12 @@ ${PYSITELIB}/FontTools/fontTools/ttLib/tables/DefaultTable.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_D_E_F_.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_D_E_F_.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_D_E_F_.pyo
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_M_A_P_.py
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_M_A_P_.pyc
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_M_A_P_.pyo
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_K_G_.py
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_K_G_.pyc
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_K_G_.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_O_S_.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_O_S_.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/G_P_O_S_.pyo
@@ -95,9 +131,15 @@ ${PYSITELIB}/FontTools/fontTools/ttLib/tables/J_S_T_F_.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/L_T_S_H_.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/L_T_S_H_.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/L_T_S_H_.pyo
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/M_E_T_A_.py
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/M_E_T_A_.pyc
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/M_E_T_A_.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/O_S_2f_2.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/O_S_2f_2.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/O_S_2f_2.pyo
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/S_I_N_G_.py
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/S_I_N_G_.pyc
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/S_I_N_G_.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I_B_.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I_B_.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I_B_.pyo
@@ -131,6 +173,9 @@ ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I__3.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I__5.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I__5.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/T_S_I__5.pyo
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/V_O_R_G_.py
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/V_O_R_G_.pyc
+${PYSITELIB}/FontTools/fontTools/ttLib/tables/V_O_R_G_.pyo
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/__init__.py
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/__init__.pyc
 ${PYSITELIB}/FontTools/fontTools/ttLib/tables/__init__.pyo
@@ -224,9 +269,11 @@ ${PYSITELIB}/FontTools/sstruct.pyo
 ${PYSITELIB}/FontTools/xmlWriter.py
 ${PYSITELIB}/FontTools/xmlWriter.pyc
 ${PYSITELIB}/FontTools/xmlWriter.pyo
+man/man1/ttx.1
 @dirrm ${PYSITELIB}/FontTools/fontTools/ttLib/test
 @dirrm ${PYSITELIB}/FontTools/fontTools/ttLib/tables
 @dirrm ${PYSITELIB}/FontTools/fontTools/ttLib
+@dirrm ${PYSITELIB}/FontTools/fontTools/pens
 @dirrm ${PYSITELIB}/FontTools/fontTools/misc
 @dirrm ${PYSITELIB}/FontTools/fontTools/encodings
 @dirrm ${PYSITELIB}/FontTools/fontTools
