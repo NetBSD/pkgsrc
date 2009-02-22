@@ -42,6 +42,7 @@ catalog-sqlite		Store Bacula catalog in SQLite database.
 catalog-sqlite3		Store Bacula catalog in SQLite 3 database.
 cdparanoia		Use cdparanoia to rip CDDA media.
 cgi			Enable CGI support
+cjk			Enable Chinese/Japanese/Korean support.
 clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support
 clisp			Common/C Lisp
@@ -360,6 +361,7 @@ simd			Enable MMX/3DNOW/SSE/Altivec support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey			Enable S/Key support.
 slang			Enable S-Lang support.
+slp			Enable Service Location Protocol support.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
