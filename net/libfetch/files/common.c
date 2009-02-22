@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.17 2009/02/05 16:59:45 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.18 2009/02/22 19:11:48 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -42,8 +42,8 @@
 #include <sys/time.h>
 #include <sys/uio.h>
 
-#include <arpa/inet.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include <ctype.h>
 #include <errno.h>
