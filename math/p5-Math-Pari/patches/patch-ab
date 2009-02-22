@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2008/02/09 22:39:50 adrianp Exp $
+$NetBSD: patch-ab,v 1.6 2009/02/22 13:11:39 he Exp $
 
---- utils/Math/PariBuild.pm.orig	2006-10-25 21:28:06.000000000 +0100
+--- utils/Math/PariBuild.pm.orig	2009-02-11 02:40:56.000000000 +0100
 +++ utils/Math/PariBuild.pm
-@@ -768,7 +768,7 @@ sub find_machine_architecture () {
+@@ -779,7 +779,7 @@ sub find_machine_architecture () {
      } elsif ($machine ne 'ia64') {
        $machine = 'hppa';
      }
@@ -11,28 +11,28 @@ $NetBSD: patch-ab,v 1.5 2008/02/09 22:39:50 adrianp Exp $
  	   or $os eq 'freebsd' or $os =~ /^cygwin/) {
      chomp($machine = `uname -m`);
      $machine ||= 'ix86';
-@@ -820,6 +820,24 @@ sub find_machine_architecture () {
- 	$machine = 'ix86';
-       } elsif ((split ' ', $Config{myuname})[3] eq 'sun') {
- 	$machine = 'm86k';
-+      } elsif ($os eq 'netbsd') {
-+        chomp($machine = `uname -p`);
-+	if ($machine =~ 'arm.*') {
-+	    $machine='arm';
-+	} elsif ($machine = 'i386') {
-+	    $machine='ix86';
-+	} elsif ($machine =~ 'mips.*') {
-+	    $machine='mips';
-+	} elsif ($machine = 'powerpc') {
-+	    $machine='ppc';
-+	} elsif ($machine =~ 'sh3.*') {
-+	    $machine='sh3';
-+	} elsif ($machine =~ 'sh5.*') {
-+	    $machine='sh5';
-+	} elsif ($machine = 'sparc64') {
-+	    $machine='sparcv9';
-+	}
-+	# these can be used verbatim: alpha amd64 m68k sparc vax
-       } elsif ($redo++ == 0) {
- 	$type = `uname -m`;
- 	redo find_machine;
+@@ -808,6 +808,24 @@ sub find_machine_architecture () {
+       close IN or die "close /proc/cpuinfo: $!";
+       $machine = process_sparc $info, $machine;
+     }
++  } elsif ($os eq 'netbsd') {
++    chomp($machine = `uname -p`);
++    if ($machine =~ 'arm.*') {
++      $machine='arm';
++    } elsif ($machine = 'i386') {
++      $machine='ix86';
++    } elsif ($machine =~ 'mips.*') {
++      $machine='mips';
++    } elsif ($machine = 'powerpc') {
++      $machine='ppc';
++    } elsif ($machine =~ 'sh3.*') {
++      $machine='sh3';
++    } elsif ($machine =~ 'sh5.*') {
++      $machine='sh5';
++    } elsif ($machine = 'sparc64') {
++      $machine='sparcv9';
++    }
++    # these can be used verbatim: alpha amd64 m68k sparc vax
+   } elsif ($os eq 'sunos') {
+     my $type = (split ' ', $Config{myuname})[4];
+     # format: SunOS name 5.9 Generic_118558-26 sun4u sparc SUNW,Ultra-5_10
