@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.709 2009/02/22 20:37:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.710 2009/02/22 20:57:42 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.06 [he 2009-02-22]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.015 [he 2009-02-22]
 	Updated mail/p5-Sendmail-AccessDB to 0.09 [wiz 2009-02-22]
+	Updated geography/garmin-utils to 2.5 [gdt 2009-02-22]
