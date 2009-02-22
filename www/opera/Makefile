@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2009/02/13 14:30:02 ahoka Exp $
+# $NetBSD: Makefile,v 1.86 2009/02/22 11:54:23 ahoka Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www
 MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
