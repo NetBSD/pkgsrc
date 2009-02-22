@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.684 2009/02/21 23:35:17 tron Exp $
+$NetBSD: CHANGES-2009,v 1.685 2009/02/22 07:37:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -914,3 +914,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/totem to 2.24.4 [wiz 2009-02-21]
 	Updated pkgtools/pkg_chk to 1.97 [abs 2009-02-21]
 	Updated filesystems/fuse-afpfs-ng to 0.8nb1 [tron 2009-02-21]
+	Updated net/netatalk to 2.0.3nb13 [taca 2009-02-22]
+	Removed net/netatalk1 [taca 2009-02-22]
