@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.26 2009/02/05 16:59:45 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.27 2009/02/22 19:11:48 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -72,8 +72,8 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 
-#include <arpa/inet.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 
 #include <ctype.h>
 #include <errno.h>
