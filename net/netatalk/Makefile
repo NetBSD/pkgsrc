@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2009/02/12 06:44:55 markd Exp $
+# $NetBSD: Makefile,v 1.63 2009/02/22 07:35:16 taca Exp $
 
 DISTNAME=	netatalk-2.0.3
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -57,54 +57,21 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	post-patch
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
-SUBST_SED.paths+=	-e "s,\\(NETBSD.*\\)/etc/rc.d,\\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
+
+RCD_SCRIPTS=		afpd atalkd papd timelord cnid_metad
+.for f in ${RCD_SCRIPTS}
+RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
+.endfor
 
 SUBST_CLASSES+=		rc
 SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
 SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX:Q},g'
 SUBST_STAGE.rc=		pre-configure
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=	cups kerberos pam slp
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcups)
-.include "../../print/cups/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-cups
-.else
-CONFIGURE_ARGS+=	--disable-cups
-.endif
-
-PLIST_VARS+=		gssapi
-.if !empty(PKG_OPTIONS:Mkerberos)
-.include "../../mk/krb5.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-gssapi --enable-krbV-uam
-CONFIGURE_ENV+=		GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
-PLIST.gssapi=		yes
-.else
-CONFIGURE_ARGS+=	--without-gssapi
-.endif
-
-PLIST_VARS+=		pam
-.if !empty(PKG_OPTIONS:Mpam)
-.include "../../mk/pam.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-pam
-PLIST.pam=		yes
-MESSAGE_SRC+=		MESSAGE MESSAGE.pam
-.else
-CONFIGURE_ARGS+=	--without-pam
-.endif
-
-.if !empty(PKG_OPTIONS:Mslp)
-.include "../../net/openslp/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-srvloc
-.else
-CONFIGURE_ARGS+=	--disable-srvloc
-.endif
+.include "options.mk"
 
 INSTALLATION_DIRS=	libexec/psffilters
 
