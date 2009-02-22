@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2009/02/22 20:57:25 gdt Exp $
+$NetBSD: distinfo,v 1.11 2009/02/22 22:07:52 gdt Exp $
 
 SHA1 (garmin-utils-2.5.tar.gz) = 1b7ee9936a691bf5e5466a3efd052f71dd3cb63c
 RMD160 (garmin-utils-2.5.tar.gz) = c32dd4b9efaef80fb203059ac399e52d0cd86fbe
 Size (garmin-utils-2.5.tar.gz) = 174336 bytes
-SHA1 (patch-aa) = 650305540171cea6b77b52acbffe89fd76901d20
+SHA1 (patch-aa) = 3a04f974bd0eae012977dc3a8090b19032463ce7
