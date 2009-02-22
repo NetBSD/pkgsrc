@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.699 2009/02/22 16:06:49 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.700 2009/02/22 16:08:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -930,3 +930,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-RSS to 1.43 [wiz 2009-02-22]
 	Updated devel/p5-Array-Compare to 1.17 [wiz 2009-02-22]
 	Updated security/p5-Authen-SASL-Cyrus to 0.12 [wiz 2009-02-22]
+	Updated devel/p5-Config-General to 2.42 [wiz 2009-02-22]
