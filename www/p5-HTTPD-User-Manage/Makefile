@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/10/19 19:19:16 he Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/22 16:13:45 wiz Exp $
 
-DISTNAME=	HTTPD-User-Manage-1.58
+DISTNAME=	HTTPD-User-Manage-1.66
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 SVR4_PKGNAME=	p5hum
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTPD/}
@@ -10,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTPD/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://stein.cshl.org/~lstein/user_manage/
 COMMENT=	Perl script/modules for managing web access control
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/HTTPD-User-Manage/.packlist
 REPLACE_PERL=		user_manage
@@ -26,10 +27,11 @@ post-extract:
 	chmod -x ${WRKSRC}/lib/HTTPD/UserAdmin/DBM.pm
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${PREFIX}/libexec/cgi-bin
+	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/user_manage \
+		${DESTDIR}${PREFIX}/libexec/cgi-bin
 	${INSTALL_DATA} ${WRKSRC}/user_manage.html \
-		${PREFIX}/share/doc/user_manage/user_manage.html
+		${DESTDIR}${PREFIX}/share/doc/user_manage/user_manage.html
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
