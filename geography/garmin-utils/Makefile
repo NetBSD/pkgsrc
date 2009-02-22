@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2009/02/21 14:53:43 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2009/02/22 20:57:25 gdt Exp $
 #
 
-DISTNAME=		garmin-utils-2.4
-PKGREVISION=		1
+DISTNAME=		garmin-utils-2.5
 CATEGORIES=		geography
 MASTER_SITES=		ftp://ftp.snafu.org/pub/
 
@@ -17,6 +16,11 @@ ONLY_FOR_PLATFORM=	NetBSD-*-* Linux-*-*
 INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 USE_BSD_MAKEFILE=	yes
+
+# No actual serial port will be right for any significant number of users,
+# so make everyone use a symlink.
+MAKE_FLAGS+=		GPS_SERIAL_PORT=/dev/gps
+
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,7 +28,7 @@ MAKE_JOBS_SAFE=		no
 CPPFLAGS.Linux=		-DLINUX
 
 .if ${OPSYS} == "Linux"
-MAKE_FLAGS+=	SIO_TYPE=-DSIO_TYPE=Linux GPG_SERIAL_PORT=/dev/gps \
+MAKE_FLAGS+=	SIO_TYPE=-DSIO_TYPE=Linux \
 		NEEDS_STRLCPY=1
 .endif
 
