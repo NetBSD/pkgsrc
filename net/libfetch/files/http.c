@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.21 2009/02/05 16:59:45 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.22 2009/02/22 19:11:48 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -83,10 +83,8 @@
 #include <locale.h>
 #include <stdarg.h>
 #ifndef NETBSD
-#include <nbcompat/netdb.h>
 #include <nbcompat/stdio.h>
 #else
-#include <netdb.h>
 #include <stdio.h>
 #endif
 #include <stdlib.h>
@@ -94,10 +92,16 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <arpa/inet.h>
-
 #include <netinet/in.h>
 #include <netinet/tcp.h>
+
+#ifndef NETBSD
+#include <nbcompat/netdb.h>
+#else
+#include <netdb.h>
+#endif
+
+#include <arpa/inet.h>
 
 #include "fetch.h"
 #include "common.h"
