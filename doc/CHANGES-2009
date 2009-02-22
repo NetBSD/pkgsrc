@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.703 2009/02/22 16:17:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.704 2009/02/22 16:21:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -934,3 +934,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/p5-Crypt-CBC to 2.30 [wiz 2009-02-22]
 	Updated www/p5-HTTPD-User-Manage to 1.66 [wiz 2009-02-22]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.77 [wiz 2009-02-22]
+	Updated math/p5-Math-Random to 0.71 [wiz 2009-02-22]
