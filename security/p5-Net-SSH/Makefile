@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/11/18 16:19:04 he Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/22 15:59:05 he Exp $
 #
 
-DISTNAME=		Net-SSH-Perl-1.33
-PKGNAME=		p5-Net-SSH-1.33
+DISTNAME=		Net-SSH-Perl-1.34
+PKGNAME=		p5-Net-SSH-1.34
 SVR4_PKGNAME=		p5nsh
 CATEGORIES=		security net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
@@ -19,6 +19,7 @@ DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 DEPENDS+=		p5-Crypt-DH>=0.01:../../security/p5-Crypt-DH
 DEPENDS+=		p5-Crypt-DSA>=0.11:../../security/p5-Crypt-DSA
 DEPENDS+=		p5-Crypt-RSA>=1.37:../../security/p5-Crypt-RSA
+DEPENDS+=		p5-Crypt-IDEA-[0-9]*:../../security/p5-Crypt-IDEA
 DEPENDS+=		p5-Digest-BubbleBabble>=0.01:../../security/p5-Digest-BubbleBabble
 DEPENDS+=		p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
