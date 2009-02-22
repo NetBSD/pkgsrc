@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.688 2009/02/22 12:29:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.689 2009/02/22 14:00:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/opera to 9.63nb2 [ahoka 2009-02-22]
 	Updated www/mediawiki to 1.13.5 [martti 2009-02-22]
 	Updated fonts/py-fonttools to 2.2 [wiz 2009-02-22]
+	Updated devel/py-gobject to 2.16.1 [wiz 2009-02-22]
