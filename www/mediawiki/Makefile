@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/07 11:09:37 martti Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/22 11:58:57 martti Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -15,7 +15,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 VER=			1.13
-PVER=			4
+PVER=			5
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
