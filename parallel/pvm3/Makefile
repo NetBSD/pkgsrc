@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2008/12/16 15:56:17 is Exp $
+# $NetBSD: Makefile,v 1.56 2009/02/22 14:15:28 asau Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
 PKGREVISION=	6
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.netlib.org/pvm3/
+MASTER_SITES=	${MASTER_SITE_NETLIB:=pvm3/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
