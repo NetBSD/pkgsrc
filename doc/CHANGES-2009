@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.707 2009/02/22 18:09:33 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.708 2009/02/22 18:17:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -938,3 +938,29 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-DNS to 0.65 [wiz 2009-02-22]
 	Updated devel/p5-PV to 1.5 [wiz 2009-02-22]
 	Updated devel/p5-PathTools to 3.29 [wiz 2009-02-22]
+	Updated mail/p5-Email-MIME-Creator to 1.455 [he 2009-02-22]
+	Updated mail/p5-Catalyst-View-Email to 0.13 [he 2009-02-22]
+	Updated mail/p5-Email-MIME-ContentType to 1.015 [he 2009-02-22]
+	Updated mail/p5-Email-MIME-Encodings to 1.312 [he 2009-02-22]
+	Updated mail/p5-Email-MessageID to 1.401 [he 2009-02-22]
+	Updated mail/p5-Email-Sender to 0.002 [he 2009-02-22]
+	Updated mail/p5-Email-Valid to 0.180 [he 2009-02-22]
+	Updated mail/p5-MIME-Lite to 3.024 [he 2009-02-22]
+	Updated mail/p5-Mail-IMAPClient to 3.14 [he 2009-02-22]
+	Updated math/p5-Math-Pari to 2.010801 [he 2009-02-22]
+	Updated math/p5-Roman to 1.23 [he 2009-02-22]
+	Updated multimedia/p5-GStreamer to 0.14 [he 2009-02-22]
+	Added time/p5-DateTime-Format-HTTP version 0.37 [he 2009-02-22]
+	Updated net/p5-Net-Amazon-S3 to 0.50 [he 2009-02-22]
+	Updated net/p5-Net-SSH to 1.34 [he 2009-02-22]
+	Updated textproc/p5-Number-Format to 1.70 [he 2009-02-22]
+	Added textproc/p5-String-BufferStack version 1.12 [he 2009-02-22]
+	Updated textproc/p5-Template-Declare to 0.37 [he 2009-02-22]
+	Updated textproc/p5-XML-RSS to 1.43 [he 2009-02-22]
+	Updated time/p5-DateTime-TimeZone to 0.84 [he 2009-02-22]
+	Updated www/p5-Catalyst-Devel to 1.10 [he 2009-02-22]
+	Updated www/p5-Catalyst-Plugin-Session 1.20 [he 2009-02-22]
+	Updated www/p5-Catalyst-Plugin-Session-State-Cookie to 1.10 [he 2009-02-22]
+	Updated www/p5-Catalyst-Plugin-Session-Store-Delegate to 0.03 [he 2009-02-22]
+	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.06 [he 2009-02-22]
+	Updated www/p5-CatalystX-CRUD-YUI to 0.015 [he 2009-02-22]
