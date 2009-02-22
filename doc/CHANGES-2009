@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.704 2009/02/22 16:21:21 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.705 2009/02/22 16:38:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -935,3 +935,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTTPD-User-Manage to 1.66 [wiz 2009-02-22]
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.77 [wiz 2009-02-22]
 	Updated math/p5-Math-Random to 0.71 [wiz 2009-02-22]
+	Updated net/p5-Net-DNS to 0.65 [wiz 2009-02-22]
