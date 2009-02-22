@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.686 2009/02/22 11:56:15 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.687 2009/02/22 11:59:28 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -917,3 +917,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/netatalk to 2.0.3nb13 [taca 2009-02-22]
 	Removed net/netatalk1 [taca 2009-02-22]
 	Updated www/opera to 9.63nb2 [ahoka 2009-02-22]
+	Updated www/mediawiki to 1.13.5 [martti 2009-02-22]
