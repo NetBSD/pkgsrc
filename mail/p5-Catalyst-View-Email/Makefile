@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:11 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/22 11:55:59 he Exp $
 
-DISTNAME=	Catalyst-View-Email-0.11
+DISTNAME=	Catalyst-View-Email-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
@@ -14,7 +13,7 @@ DEPENDS+=    	p5-Catalyst-Runtime>=5.7:../../www/p5-Catalyst-Runtime
 DEPENDS+=    	p5-Class-C3>=0:../../devel/p5-Class-C3
 DEPENDS+=    	p5-Email-Send>=2.185:../../mail/p5-Email-Send
 DEPENDS+=    	p5-Email-MIME>=1.859:../../mail/p5-Email-MIME
-DEPENDS+=    	p5-Email-MIME-Creator>=1.453:../../mail/p5-Email-MIME-Creator
+DEPENDS+=    	p5-Email-MIME-Creator>=1.455:../../mail/p5-Email-MIME-Creator
 DEPENDS+=    	p5-Catalyst-View-TT>=0:../../www/p5-Catalyst-View-TT
 
 USE_LANGUAGES=	# empty
