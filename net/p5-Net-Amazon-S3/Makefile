@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/01/11 14:20:40 he Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/22 15:10:44 he Exp $
 
-DISTNAME=	Net-Amazon-S3-0.48
+DISTNAME=	Net-Amazon-S3-0.50
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -13,6 +13,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Data-Stream-Bulk>=0:../../net/p5-Data-Stream-Bulk
+DEPENDS+=	p5-DateTime-Format-HTTP>=0:../../time/p5-DateTime-Format-HTTP
+DEPENDS+=	p5-DateTime-Format-ISO8601>=0:../../time/p5-DateTime-Format-ISO8601
 DEPENDS+=	p5-Digest-HMAC>=0:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-Digest-MD5-File>=0:../../security/p5-Digest-MD5-File
 DEPENDS+=	p5-libwww>=2:../../www/p5-libwww
