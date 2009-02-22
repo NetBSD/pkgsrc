@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.706 2009/02/22 18:08:12 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.707 2009/02/22 18:09:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -937,3 +937,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Math-Random to 0.71 [wiz 2009-02-22]
 	Updated net/p5-Net-DNS to 0.65 [wiz 2009-02-22]
 	Updated devel/p5-PV to 1.5 [wiz 2009-02-22]
+	Updated devel/p5-PathTools to 3.29 [wiz 2009-02-22]
