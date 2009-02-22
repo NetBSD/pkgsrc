@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.31 2009/02/17 23:18:55 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.32 2009/02/22 23:38:46 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -59,8 +59,8 @@ PATCH_SITES=		http://download.suhosin.org/
 PATCHFILES+=		suhosin-patch-5.2.8-0.9.6.3.patch.gz
 PATCH_DIST_STRIP=	-p1
 PLIST.suhosin=		yes
-MESSAGE_SRC=		${PKGDIR}/MESSAGE
-MESSAGE_SRC+=		${PKGDIR}/MESSAGE.suhosin
+MESSAGE_SRC=		${.CURDIR}/../../lang/php5/MESSAGE
+MESSAGE_SRC+=		${.CURDIR}/../../lang/php5/MESSAGE.suhosin
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
