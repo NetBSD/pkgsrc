@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.rpm,v 1.4 2009/02/13 14:30:02 ahoka Exp $
+# $NetBSD: Makefile.rpm,v 1.5 2009/02/22 11:54:23 ahoka Exp $
 
 # This package installs from an RPM directly into "/usr" on a Linux
 # system, which can't be managed by pkgsrc.
 #
 NOT_FOR_PLATFORMS=      Linux-*-*
 
-EMUL_MODULES.linux=	x11
+EMUL_MODULES.linux=	x11 fontconfig
 EMUL_REQD=		suse>=7.3
 
 EXTRACT_SUFX=		.rpm
