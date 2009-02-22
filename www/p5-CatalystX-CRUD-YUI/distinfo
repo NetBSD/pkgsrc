@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/17 01:16:19 he Exp $
+$NetBSD: distinfo,v 1.2 2009/02/22 18:15:33 he Exp $
 
-SHA1 (CatalystX-CRUD-YUI-0.012.tar.gz) = d17fc73a0ed84d9bf8a4b84d6b03be8c03d1c841
-RMD160 (CatalystX-CRUD-YUI-0.012.tar.gz) = 89580bb7d193f6fd68618160ec06aa30dbec941a
-Size (CatalystX-CRUD-YUI-0.012.tar.gz) = 79497 bytes
+SHA1 (CatalystX-CRUD-YUI-0.015.tar.gz) = 411b9611d287b431269789e60d7d3cc1fa031923
+RMD160 (CatalystX-CRUD-YUI-0.015.tar.gz) = e724f8293cbd7affb2c109d1ac5e70c5d0b5cd9d
+Size (CatalystX-CRUD-YUI-0.015.tar.gz) = 79158 bytes
