@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.695 2009/02/22 15:55:30 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.696 2009/02/22 15:58:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Pod-Coverage to 0.20 [wiz 2009-02-22]
 	Updated databases/p5-DB_File to 1.819 [wiz 2009-02-22]
 	Updated textproc/p5-XML-Atom to 0.33 [wiz 2009-02-22]
+	Updated textproc/p5-XML-Feed to 0.41 [wiz 2009-02-22]
