@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/15 09:19:38 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/02/22 17:43:41 he Exp $
 
-SHA1 (Catalyst-Plugin-Session-Store-FastMmap-0.05.tar.gz) = 686d5ee1283f2ed2196861c4535068320f2fc69d
-RMD160 (Catalyst-Plugin-Session-Store-FastMmap-0.05.tar.gz) = b03d57817d44af3cfb4f88c78fea25c5fbb4f527
-Size (Catalyst-Plugin-Session-Store-FastMmap-0.05.tar.gz) = 3985 bytes
+SHA1 (Catalyst-Plugin-Session-Store-FastMmap-0.06.tar.gz) = 68350c508b6e8be5b9d21a8099f49f47056a53ca
+RMD160 (Catalyst-Plugin-Session-Store-FastMmap-0.06.tar.gz) = 66a6c4f4022bd0939100b76611ea2781e03fca71
+Size (Catalyst-Plugin-Session-Store-FastMmap-0.06.tar.gz) = 4315 bytes
