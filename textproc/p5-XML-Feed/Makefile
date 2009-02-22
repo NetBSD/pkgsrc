@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/12/26 13:31:00 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/02/22 15:58:30 wiz Exp $
 #
 
-DISTNAME=		XML-Feed-0.3
-PKGNAME=		p5-${DISTNAME}0
+DISTNAME=		XML-Feed-0.41
 SVR4_PKGNAME=		p5xfe
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=XML/}
@@ -21,9 +20,9 @@ DEPENDS+=		p5-Feed-Find-[0-9]*:../../textproc/p5-Feed-Find
 DEPENDS+=		p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
 DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-URI-Fetch-[0-9]*:../../www/p5-URI-Fetch
-DEPENDS+=		p5-XML-Atom>=0.23:../../textproc/p5-XML-Atom
+DEPENDS+=		p5-XML-Atom>=0.32:../../textproc/p5-XML-Atom
 DEPENDS+=		p5-XML-LibXML>=1.66:../../textproc/p5-XML-LibXML
-DEPENDS+=		p5-XML-RSS>=1.31:../../textproc/p5-XML-RSS
+DEPENDS+=		p5-XML-RSS>=1.40:../../textproc/p5-XML-RSS
 
 BUILD_DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 BUILD_DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
