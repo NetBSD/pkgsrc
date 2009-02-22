@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/09 03:18:07 dsainty Exp $
+$NetBSD: distinfo,v 1.2 2009/02/22 13:21:32 he Exp $
 
-SHA1 (Roman-1.22.tar.gz) = 5d286c13da97252db4cec54b29adf2057763a566
-RMD160 (Roman-1.22.tar.gz) = 59c0af1805d331fbe5dfabe4d83e6c225c8c48a3
-Size (Roman-1.22.tar.gz) = 3266 bytes
+SHA1 (Roman-1.23.zip) = 49d47d518e92f823f141309a475400ba7e6357ab
+RMD160 (Roman-1.23.zip) = ce377857bf69d0b341935edf59126a49d5a71da9
+Size (Roman-1.23.zip) = 7346 bytes
