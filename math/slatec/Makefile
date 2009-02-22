@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2007/12/02 11:21:54 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/02/22 14:15:28 asau Exp $
 #
 
 DISTNAME=	slatec_src
 PKGNAME=	slatec-4.1
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.netlib.org/slatec/ \
-		ftp://netlib.no/netlib/slatec/ \
-		ftp://ftp.zib.de/netlib/slatec/
+MASTER_SITES=	${MASTER_SITE_NETLIB:=slatec/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam@NetBSD.org

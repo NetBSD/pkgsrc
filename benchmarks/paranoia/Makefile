@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/22 14:15:28 asau Exp $
 
 DISTNAME=		paranoia
 PKGNAME=		paranoia-960101
 CATEGORIES=		benchmarks
-MASTER_SITES=		http://www.netlib.org/paranoia/
+MASTER_SITES=		${MASTER_SITE_NETLIB:=paranoia/}
 EXTRACT_SUFX=		.c
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
