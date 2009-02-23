@@ -1,0 +1,5 @@
+Primary goal for the desktop project:
+
+Given a NetBSD CD and a reasonably modern x86 computer, make it
+possible to install a useful desktop system in under 15 minutes,
+responding to only a few prompts in the process.
