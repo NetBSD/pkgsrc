@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/01/01 06:45:42 obache Exp $
+# $NetBSD: Makefile,v 1.57 2009/02/23 17:53:07 ahoka Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -7,6 +7,7 @@ SUBDIR+=	boost
 SUBDIR+=	c++-gnome-bindings
 SUBDIR+=	compiz-fusion
 SUBDIR+=	courier
+SUBDIR+=	desktop-gnome
 SUBDIR+=	fxtv-capture
 SUBDIR+=	gnome
 SUBDIR+=	gnome-admin
