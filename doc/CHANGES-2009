@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.711 2009/02/22 22:30:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.712 2009/02/23 00:13:18 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -967,3 +967,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Sendmail-AccessDB to 0.09 [wiz 2009-02-22]
 	Updated geography/garmin-utils to 2.5 [gdt 2009-02-22]
 	Updated textproc/p5-Text-Tabs+Wrap to 2006.1117 [wiz 2009-02-22]
+	Added devel/p5-accessors version 1.01 [rhaen 2009-02-22]
+	Added textproc/p5-TAP-Formatter-HTML version 0.07 [rhaen 2009-02-22]
