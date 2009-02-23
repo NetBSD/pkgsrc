@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+
+XDvi is installed by tex-bin-xdvi.
+
+--- Makefile.in.orig	2008-05-03 12:45:05.000000000 -0700
++++ Makefile.in
+@@ -161,7 +161,6 @@ install-data: $(manpage).1 pixmaps/toolb
+ 	$(INSTALL_DATA) $(manpage).1 $(man1dir)/$(manpage).$(manext)
+ 	rm -f $(man1dir)/o$(manpage).$(manext)
+ 	ln -s $(manpage).$(manext) $(man1dir)/o$(manpage).$(manext)
+-	$(INSTALL_DATA) $(srcdir)/texmf/XDvi $(texmf)/xdvi/XDvi
+ 	$(INSTALL_DATA) $(srcdir)/pixmaps/toolbar.xpm $(srcdir)/pixmaps/toolbar2.xpm $(texmf)/xdvi/pixmaps
+ 	if \
+ 	    grep 'original xdvi.cfg --' $(texmf)/xdvi/xdvi.cfg >/dev/null 2>&1 \
