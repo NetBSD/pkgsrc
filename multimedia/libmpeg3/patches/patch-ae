@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.13 2009/01/29 17:53:49 abs Exp $
+$NetBSD: patch-ae,v 1.14 2009/02/23 13:24:31 wiz Exp $
 
---- mpeg3io.c.orig	2008-07-05 01:47:42.000000000 +0100
+--- mpeg3io.c.orig	2008-07-05 00:47:42 +0000
 +++ mpeg3io.c
-@@ -1,10 +1,42 @@
+@@ -1,10 +1,43 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
@@ -28,6 +28,7 @@ $NetBSD: patch-ae,v 1.13 2009/01/29 17:53:49 abs Exp $
 +# include <sys/types.h>
 +# define fopen64 fopen
 +# define fseeko64 fseek
++# define stat64 stat
 +
 +#elif defined(__APPLE__) && defined(__MACH__)
 +
@@ -46,7 +47,7 @@ $NetBSD: patch-ae,v 1.13 2009/01/29 17:53:49 abs Exp $
  #include <sys/stat.h>
  
  mpeg3_fs_t* mpeg3_new_fs(char *path)
-@@ -215,16 +247,26 @@ void mpeg3io_complete_path(char *complet
+@@ -215,16 +248,26 @@ void mpeg3io_complete_path(char *complet
  
  int mpeg3io_device(char *path, char *device)
  {
@@ -73,7 +74,7 @@ $NetBSD: patch-ae,v 1.13 2009/01/29 17:53:49 abs Exp $
  	fp = setmntent(MOUNTED, "r");
      while(fp && (mnt = getmntent(fp)))
  	{
-@@ -236,6 +278,7 @@ int mpeg3io_device(char *path, char *dev
+@@ -236,6 +279,7 @@ int mpeg3io_device(char *path, char *dev
  		}
  	}
  	endmntent(fp);
