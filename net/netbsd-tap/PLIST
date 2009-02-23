@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/20 18:02:39 cube Exp $
-include/net/if_tap.h
-lkm/tap.o
-man/cat4/tap.0
-man/man4/tap.4
-sbin/tap_postinstall
-@unexec ${RMDIR} %D/include/net || ${TRUE}
