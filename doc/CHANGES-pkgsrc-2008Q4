@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.57 2009/02/21 23:18:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.58 2009/02/23 12:51:47 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -169,3 +169,5 @@ Pullup ticket #2704 - requested by he
 liboil: build fix
 Pullup ticket #2705 - requested by he
 emacs: build fix
+Pullup ticket #2702 - requested by martti
+dovecot: bug fix update
