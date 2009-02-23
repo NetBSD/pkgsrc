@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/01/17 20:51:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/23 11:25:18 wiz Exp $
 #
 
-DISTNAME=	gwaei-0.13.1
+DISTNAME=	gwaei-0.14.0
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwaei/}
 
@@ -9,7 +9,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gwaei.sourceforge.net/
 COMMENT=	Japanese dictionary for GNOME
 
-#DEPENDS+=	rsync-[0-9]*:../../net/rsync
+DEPENDS+=	rsync-[0-9]*:../../net/rsync
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS=		xdg-1.4 gnome2-1.6
