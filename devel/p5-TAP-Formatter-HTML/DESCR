@@ -1,0 +1,13 @@
+This module provides HTML output formatting for TAP::Harness (a
+replacement for Test::Harness. It is largely based on ideas from
+TAP::Test::HTMLMatrix (which was built on Test::Harness and thus
+had a few limitations - hence this module). For sample output,
+see:
+
+http://www.spurkis.org/TAP-Formatter-HTML/test-output.html
+
+This module is targeted at all users of automated test suites.
+It's meant to make reading test results easier, giving you a
+visual summary of your test suite and letting you drill down
+into individual failures (which will hopefully make testing
+more likely to happen at your organization ;-)
