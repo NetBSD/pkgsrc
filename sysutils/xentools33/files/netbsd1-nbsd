@@ -19,7 +19,7 @@ name = "netbsd1"
 
 #----------------------------------------------------------------------------
 # network configuration.
-# The mac address is optionnal, it will use a random one if not specified.
+# The mac address is optional, it will use a random one if not specified.
 # By default we create a bridged configuration; when a vif is created
 # the script @PKG_SYSCONFDIR@/scripts/vif-bridge is called to connect
 # the bridge to the designated bridge (the bridge should already be up)
