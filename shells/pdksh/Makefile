@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/06/19 18:36:51 joerg Exp $
+# $NetBSD: Makefile,v 1.17.10.1 2009/02/23 13:18:56 tron Exp $
 #
 
 DISTNAME=	pdksh-5.2.14
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.cs.mun.ca/pub/pdksh/ \
 		http://gd.tuwien.ac.at/utils/shells/pdksh/ \
