@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/10 16:20:01 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/23 11:37:40 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -82,6 +82,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Argentina/Jujuy
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/La_Rioja
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/Mendoza
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/Rio_Gallegos
+${PYSITELIB}/pytz/zoneinfo/America/Argentina/Salta
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/San_Juan
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/San_Luis
 ${PYSITELIB}/pytz/zoneinfo/America/Argentina/Tucuman
@@ -197,6 +198,7 @@ ${PYSITELIB}/pytz/zoneinfo/America/Regina
 ${PYSITELIB}/pytz/zoneinfo/America/Resolute
 ${PYSITELIB}/pytz/zoneinfo/America/Rio_Branco
 ${PYSITELIB}/pytz/zoneinfo/America/Rosario
+${PYSITELIB}/pytz/zoneinfo/America/Santarem
 ${PYSITELIB}/pytz/zoneinfo/America/Santiago
 ${PYSITELIB}/pytz/zoneinfo/America/Santo_Domingo
 ${PYSITELIB}/pytz/zoneinfo/America/Sao_Paulo
@@ -272,6 +274,7 @@ ${PYSITELIB}/pytz/zoneinfo/Asia/Kabul
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kamchatka
 ${PYSITELIB}/pytz/zoneinfo/Asia/Karachi
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kashgar
+${PYSITELIB}/pytz/zoneinfo/Asia/Kathmandu
 ${PYSITELIB}/pytz/zoneinfo/Asia/Katmandu
 ${PYSITELIB}/pytz/zoneinfo/Asia/Kolkata
 ${PYSITELIB}/pytz/zoneinfo/Asia/Krasnoyarsk
