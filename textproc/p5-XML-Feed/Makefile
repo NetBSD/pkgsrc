@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/02/22 15:58:30 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/23 23:40:18 joerg Exp $
 #
 
 DISTNAME=		XML-Feed-0.41
+PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5xfe
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=XML/}
