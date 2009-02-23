@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.731 2009/02/23 12:58:44 tron Exp $
+$NetBSD: CHANGES-2009,v 1.732 2009/02/23 17:58:17 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -987,3 +987,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ruby-rbtree to 0.2.1 [wiz 2009-02-23]
 	Updated devel/readline to 6.0 [wiz 2009-02-23]
 	Updated filesystems/fuse-afpfs-ng to 0.8.1 [tron 2009-02-23]
+	Added meta-pkgs/desktop-gnome version 0.1 [ahoka 2009-02-23]
