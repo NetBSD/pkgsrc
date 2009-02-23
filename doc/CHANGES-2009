@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.717 2009/02/23 08:58:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.718 2009/02/23 08:59:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -973,3 +973,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/p5-gtk2 to 1.203 [wiz 2009-02-23]
 	Added print/tex-bin-xdvi version 22.84.14 [minskim 2009-02-23]
 	Added x11/p5-Gtk2-GladeXML version 1.007 [wiz 2009-02-23]
+	Updated meta-pkgs/p5-gnome-bindings to 2.24.2.91 [wiz 2009-02-23]
