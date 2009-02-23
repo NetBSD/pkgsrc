@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2009/02/18 16:43:39 minskim Exp $
+# $NetBSD: Makefile,v 1.49 2009/02/23 20:14:19 minskim Exp $
 
 DISTNAME=	teTeX-3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print meta-pkgs
 MASTER_SITES=	# empty
 
@@ -13,6 +13,7 @@ DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 DEPENDS+=	teTeX-texmf-[0-9]*:../../print/teTeX3-texmf
 DEPENDS+=	texi2html>=1.52:../../textproc/texi2html
+DEPENDS+=	xdvik-[0-9]*:../../print/xdvik
 
 CONFLICTS+=	teTeX2-[0-9]*
 
