@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.719 2009/02/23 09:05:16 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.720 2009/02/23 09:08:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -975,3 +975,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added x11/p5-Gtk2-GladeXML version 1.007 [wiz 2009-02-23]
 	Updated meta-pkgs/p5-gnome-bindings to 2.24.2.91 [wiz 2009-02-23]
 	Updated databases/shared-mime-info to 0.60 [wiz 2009-02-23]
+	Updated graphics/comix to 4.0.3 [wiz 2009-02-23]
