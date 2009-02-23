@@ -1,0 +1,2 @@
+The Perl 5 module WordPress::XMLRPC provides an API to WordPress's XML-RPC
+services. It is not meant to be fast, it is meant to be convenient.
