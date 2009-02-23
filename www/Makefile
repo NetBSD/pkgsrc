@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.635 2009/02/21 16:05:06 imil Exp $
+# $NetBSD: Makefile,v 1.636 2009/02/23 21:04:17 imil Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -399,6 +399,7 @@ SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
 SUBDIR+=	p5-WWW-Shorten
+SUBDIR+=	p5-WordPress-XMLRPC
 SUBDIR+=	p5-libapreq
 SUBDIR+=	p5-libapreq2
 SUBDIR+=	p5-libwww
