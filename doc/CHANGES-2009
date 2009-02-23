@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.736 2009/02/23 20:14:36 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.737 2009/02/23 21:08:29 imil Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/xdvik version 22.84.14 [minskim 2009-02-23]
 	Updated print/teTeX3-bin to 3.0nb25 [minskim 2009-02-23]
 	Updated print/teTeX to 3.0nb3 [minskim 2009-02-23]
+	Added www/p5-WordPress-XMLRPC version 1.18 [imil 2009-02-23]
