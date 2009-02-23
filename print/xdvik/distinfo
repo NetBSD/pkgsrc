@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+
+SHA1 (xdvik-22.84.14.tar.gz) = 1ca7f0c7930d24c3e10cc1d7115abed7dd39e95e
+RMD160 (xdvik-22.84.14.tar.gz) = a19920fcc9e4e5d2878b16e65fa95bab5f034b74
+Size (xdvik-22.84.14.tar.gz) = 2016256 bytes
+SHA1 (patch-aa) = 878d51f49647160c6f75acb1ca386fefb7fd778b
+SHA1 (patch-ab) = bbbeb011aa888f2ee7dab84c1602fb3e1127cdb1
