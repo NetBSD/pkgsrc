@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.730 2009/02/23 12:35:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.731 2009/02/23 12:58:44 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-docutils to 0.5 [wiz 2009-02-23]
 	Updated devel/ruby-rbtree to 0.2.1 [wiz 2009-02-23]
 	Updated devel/readline to 6.0 [wiz 2009-02-23]
+	Updated filesystems/fuse-afpfs-ng to 0.8.1 [tron 2009-02-23]
