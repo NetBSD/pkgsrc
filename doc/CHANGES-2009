@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.734 2009/02/23 19:33:22 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.735 2009/02/23 20:12:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added meta-pkgs/desktop-gnome version 0.1 [ahoka 2009-02-23]
 	Updated multimedia/swfdec to 0.8.4 [wiz 2009-02-23]
 	Added print/xdvik version 22.84.14 [minskim 2009-02-23]
+	Updated print/teTeX3-bin to 3.0nb25 [minskim 2009-02-23]
