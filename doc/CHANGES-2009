@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.724 2009/02/23 11:05:15 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.725 2009/02/23 11:25:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/telepathy-glib to 0.7.26 [wiz 2009-02-23]
 	Updated chat/telepathy-idle to 0.1.3 [wiz 2009-02-23]
 	Updated chat/telepathy-gabble to 0.7.21 [wiz 2009-02-23]
+	Updated misc/gwaei to 0.14.0 [wiz 2009-02-23]
