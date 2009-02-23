@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.95 2009/01/04 18:00:59 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.96 2009/02/23 17:45:17 joerg Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1363,10 +1363,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
       incorrect; fix them.</para></listitem>
 
       <listitem><para>If files are installed with special owner/group
-      either use @owner/@group in the <filename>PLIST</filename>
-      (preferred) or use <varname>SPECIAL_PERMS</varname>
-      (discouraged). Note that @owner/@group are sticky during
-      install, keep this in mind.</para></listitem>
+      use <varname>SPECIAL_PERMS</varname>.</para></listitem>
 
       <listitem><para>In general, packages should support
       <varname>UNPRIVILEGED</varname> to be able to use
