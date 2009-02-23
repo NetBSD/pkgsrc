@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.1.1.1 2009/01/04 00:21:36 adrianp Exp $
+# $NetBSD: named9.sh,v 1.2 2009/02/23 09:22:16 adrianp Exp $
 #
 
 # PROVIDE: named
@@ -13,7 +13,7 @@
 name="named"
 rcvar="${name}9"
 command="@PREFIX@/sbin/${name}"
-pidfile="/var/run/${name}.pid"
+pidfile="@VARBASE@/run/named/${name}.pid"
 start_precmd="named_precmd"
 extra_commands="reload"
 required_dirs="$named_chrootdir"	# if it is set, it must exist
@@ -27,6 +27,10 @@ named_precmd()
 		return 1
 	fi
 
+       	if [ ! -d @VARBASE@/run/named ]; then 
+		@MKDIR@ @VARBASE@/run/named 
+       	fi      
+
 	if [ -z "$named_chrootdir" ]; then
 		return 0;
 	fi
@@ -35,10 +39,16 @@ named_precmd()
 		@RM@ -f "${named_chrootdir}/dev/null"
 		( cd /dev ; @PAX@ -rw -pe null "${named_chrootdir}/dev" )
 	fi
+
 	if [ -f /etc/localtime ]; then
 		@CMP@ -s /etc/localtime "${named_chrootdir}/etc/localtime" || \
 		    @CP@ -p /etc/localtime "${named_chrootdir}/etc/localtime"
 	fi
+
+       	if [ ! -d ${named_chrootdir}@VARBASE@/run/named ]; then 
+		@MKDIR@ ${named_chrootdir}@VARBASE@/run/named 
+       	fi      
+
 	@RM@ -f ${pidfile}
 	@LN@ -s "${named_chrootdir}${pidfile}" ${pidfile}
 
