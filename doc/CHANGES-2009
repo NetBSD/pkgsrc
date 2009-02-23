@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.728 2009/02/23 11:33:53 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.729 2009/02/23 11:39:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -984,3 +984,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/py-boto to 1.6b [wiz 2009-02-23]
 	Updated databases/py-bsddb3 to 4.7.5 [wiz 2009-02-23]
 	Updated textproc/py-docutils to 0.5 [wiz 2009-02-23]
+	Updated devel/ruby-rbtree to 0.2.1 [wiz 2009-02-23]
