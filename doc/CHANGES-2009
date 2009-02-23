@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.721 2009/02/23 10:41:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.722 2009/02/23 10:52:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -977,3 +977,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/shared-mime-info to 0.60 [wiz 2009-02-23]
 	Updated graphics/comix to 4.0.3 [wiz 2009-02-23]
 	Updated net/yaz to 3.0.44 [wiz 2009-02-23]
+	Updated chat/telepathy-glib to 0.7.26 [wiz 2009-02-23]
