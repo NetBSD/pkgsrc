@@ -1,4 +1,4 @@
-/*	$NetBSD: c_ulimit.c,v 1.3 2008/06/15 14:20:08 tnn Exp $	*/
+/*	$NetBSD: c_ulimit.c,v 1.3.10.1 2009/02/23 13:18:56 tron Exp $	*/
 
 /*
 	ulimit -- handle "ulimit" builtin
@@ -187,7 +187,7 @@ c_ulimit(wp)
 			    bi_errorf("invalid limit: %s", wp[0]);
 			    return 1;
 			}
-			val = rval * l->factor;
+			val = (unsigned long)rval * l->factor;
 		}
 	}
 	if (all) {
