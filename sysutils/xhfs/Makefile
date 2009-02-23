@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/02/05 23:10:58 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/02/23 18:25:04 joerg Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -11,12 +11,18 @@ MAINTAINER=	wrstuden@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Tk GUI + Tcl Shell for accessing HFS volumes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--disable-cli
 CPPFLAGS+=	-I${BUILDLINK_PREFIX.libhfs}/include/libhfs
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			MANDEST=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../devel/libhfs/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
