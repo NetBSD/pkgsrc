@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/02/23 11:33:44 wiz Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2newlatex.py
 bin/rst2pseudoxml.py
 bin/rst2s5.py
 bin/rst2xml.py
+bin/rstpep2html.py
 ${PYSITELIB}/docutils/__init__.py
 ${PYSITELIB}/docutils/__init__.pyc
 ${PYSITELIB}/docutils/__init__.pyo
@@ -50,6 +51,9 @@ ${PYSITELIB}/docutils/languages/fi.pyo
 ${PYSITELIB}/docutils/languages/fr.py
 ${PYSITELIB}/docutils/languages/fr.pyc
 ${PYSITELIB}/docutils/languages/fr.pyo
+${PYSITELIB}/docutils/languages/he.py
+${PYSITELIB}/docutils/languages/he.pyc
+${PYSITELIB}/docutils/languages/he.pyo
 ${PYSITELIB}/docutils/languages/it.py
 ${PYSITELIB}/docutils/languages/it.pyc
 ${PYSITELIB}/docutils/languages/it.pyo
@@ -180,6 +184,9 @@ ${PYSITELIB}/docutils/parsers/rst/languages/fi.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.py
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/fr.pyo
+${PYSITELIB}/docutils/parsers/rst/languages/he.py
+${PYSITELIB}/docutils/parsers/rst/languages/he.pyc
+${PYSITELIB}/docutils/parsers/rst/languages/he.pyo
 ${PYSITELIB}/docutils/parsers/rst/languages/it.py
 ${PYSITELIB}/docutils/parsers/rst/languages/it.pyc
 ${PYSITELIB}/docutils/parsers/rst/languages/it.pyo
@@ -283,6 +290,7 @@ ${PYSITELIB}/docutils/writers/html4css1/__init__.py
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyc
 ${PYSITELIB}/docutils/writers/html4css1/__init__.pyo
 ${PYSITELIB}/docutils/writers/html4css1/html4css1.css
+${PYSITELIB}/docutils/writers/html4css1/template.txt
 ${PYSITELIB}/docutils/writers/latex2e/__init__.py
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyc
 ${PYSITELIB}/docutils/writers/latex2e/__init__.pyo
@@ -332,12 +340,12 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/small-black/__base__
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-black/pretty.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/framing.css
 ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/pretty.css
-${PYSITELIB}/roman.py
-${PYSITELIB}/roman.pyc
-${PYSITELIB}/roman.pyo
 ${PLIST.std}${PYSITELIB}/optparse.py
 ${PLIST.std}${PYSITELIB}/optparse.pyc
 ${PLIST.std}${PYSITELIB}/optparse.pyo
+${PYSITELIB}/roman.py
+${PYSITELIB}/roman.pyc
+${PYSITELIB}/roman.pyo
 ${PLIST.std}${PYSITELIB}/textwrap.py
 ${PLIST.std}${PYSITELIB}/textwrap.pyc
 ${PLIST.std}${PYSITELIB}/textwrap.pyo
