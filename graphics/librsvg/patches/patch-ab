@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2007/10/03 20:42:50 dmcmahill Exp $
+$NetBSD: patch-ab,v 1.6 2009/02/23 18:24:25 tnn Exp $
 
---- gdk-pixbuf-loader/Makefile.in.orig	2007-08-29 15:11:19.000000000 -0400
+--- gdk-pixbuf-loader/Makefile.in.orig	2008-09-23 02:54:51.000000000 +0200
 +++ gdk-pixbuf-loader/Makefile.in
-@@ -544,10 +544,6 @@ uninstall-am: uninstall-info-am uninstal
+@@ -532,10 +532,6 @@ uninstall-am: uninstall-loaderLTLIBRARIE
  
  
  install-data-hook: 
