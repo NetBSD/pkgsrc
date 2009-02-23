@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.714 2009/02/23 08:28:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.715 2009/02/23 08:46:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -971,3 +971,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-TAP-Formatter-HTML version 0.07 [rhaen 2009-02-22]
 	Updated devel/p5-glib2 to 1.201 [wiz 2009-02-23]
 	Updated x11/p5-gtk2 to 1.203 [wiz 2009-02-23]
+	Added print/tex-bin-xdvi version 22.84.14 [minskim 2009-02-23]
