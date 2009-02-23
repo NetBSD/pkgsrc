@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/24 17:37:56 bjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/02/23 11:28:58 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/boto/__init__.py
 ${PYSITELIB}/boto/__init__.pyc
 ${PYSITELIB}/boto/__init__.pyo
+${PYSITELIB}/boto/cloudfront/__init__.py
+${PYSITELIB}/boto/cloudfront/__init__.pyc
+${PYSITELIB}/boto/cloudfront/__init__.pyo
+${PYSITELIB}/boto/cloudfront/distribution.py
+${PYSITELIB}/boto/cloudfront/distribution.pyc
+${PYSITELIB}/boto/cloudfront/distribution.pyo
+${PYSITELIB}/boto/cloudfront/exception.py
+${PYSITELIB}/boto/cloudfront/exception.pyc
+${PYSITELIB}/boto/cloudfront/exception.pyo
 ${PYSITELIB}/boto/connection.py
 ${PYSITELIB}/boto/connection.pyc
 ${PYSITELIB}/boto/connection.pyo
@@ -27,6 +36,9 @@ ${PYSITELIB}/boto/ec2/address.pyo
 ${PYSITELIB}/boto/ec2/connection.py
 ${PYSITELIB}/boto/ec2/connection.pyc
 ${PYSITELIB}/boto/ec2/connection.pyo
+${PYSITELIB}/boto/ec2/ec2object.py
+${PYSITELIB}/boto/ec2/ec2object.pyc
+${PYSITELIB}/boto/ec2/ec2object.pyo
 ${PYSITELIB}/boto/ec2/image.py
 ${PYSITELIB}/boto/ec2/image.pyc
 ${PYSITELIB}/boto/ec2/image.pyo
@@ -36,9 +48,18 @@ ${PYSITELIB}/boto/ec2/instance.pyo
 ${PYSITELIB}/boto/ec2/keypair.py
 ${PYSITELIB}/boto/ec2/keypair.pyc
 ${PYSITELIB}/boto/ec2/keypair.pyo
+${PYSITELIB}/boto/ec2/regioninfo.py
+${PYSITELIB}/boto/ec2/regioninfo.pyc
+${PYSITELIB}/boto/ec2/regioninfo.pyo
 ${PYSITELIB}/boto/ec2/securitygroup.py
 ${PYSITELIB}/boto/ec2/securitygroup.pyc
 ${PYSITELIB}/boto/ec2/securitygroup.pyo
+${PYSITELIB}/boto/ec2/snapshot.py
+${PYSITELIB}/boto/ec2/snapshot.pyc
+${PYSITELIB}/boto/ec2/snapshot.pyo
+${PYSITELIB}/boto/ec2/volume.py
+${PYSITELIB}/boto/ec2/volume.pyc
+${PYSITELIB}/boto/ec2/volume.pyo
 ${PYSITELIB}/boto/ec2/zone.py
 ${PYSITELIB}/boto/ec2/zone.pyc
 ${PYSITELIB}/boto/ec2/zone.pyo
@@ -75,6 +96,9 @@ ${PYSITELIB}/boto/mturk/notification.pyo
 ${PYSITELIB}/boto/mturk/price.py
 ${PYSITELIB}/boto/mturk/price.pyc
 ${PYSITELIB}/boto/mturk/price.pyo
+${PYSITELIB}/boto/mturk/qualification.py
+${PYSITELIB}/boto/mturk/qualification.pyc
+${PYSITELIB}/boto/mturk/qualification.pyo
 ${PYSITELIB}/boto/mturk/question.py
 ${PYSITELIB}/boto/mturk/question.pyc
 ${PYSITELIB}/boto/mturk/question.pyo
@@ -135,6 +159,33 @@ ${PYSITELIB}/boto/sdb/__init__.pyo
 ${PYSITELIB}/boto/sdb/connection.py
 ${PYSITELIB}/boto/sdb/connection.pyc
 ${PYSITELIB}/boto/sdb/connection.pyo
+${PYSITELIB}/boto/sdb/db/__init__.py
+${PYSITELIB}/boto/sdb/db/__init__.pyc
+${PYSITELIB}/boto/sdb/db/__init__.pyo
+${PYSITELIB}/boto/sdb/db/key.py
+${PYSITELIB}/boto/sdb/db/key.pyc
+${PYSITELIB}/boto/sdb/db/key.pyo
+${PYSITELIB}/boto/sdb/db/manager/__init__.py
+${PYSITELIB}/boto/sdb/db/manager/__init__.pyc
+${PYSITELIB}/boto/sdb/db/manager/__init__.pyo
+${PYSITELIB}/boto/sdb/db/manager/pgmanager.py
+${PYSITELIB}/boto/sdb/db/manager/pgmanager.pyc
+${PYSITELIB}/boto/sdb/db/manager/pgmanager.pyo
+${PYSITELIB}/boto/sdb/db/manager/sdbmanager.py
+${PYSITELIB}/boto/sdb/db/manager/sdbmanager.pyc
+${PYSITELIB}/boto/sdb/db/manager/sdbmanager.pyo
+${PYSITELIB}/boto/sdb/db/model.py
+${PYSITELIB}/boto/sdb/db/model.pyc
+${PYSITELIB}/boto/sdb/db/model.pyo
+${PYSITELIB}/boto/sdb/db/property.py
+${PYSITELIB}/boto/sdb/db/property.pyc
+${PYSITELIB}/boto/sdb/db/property.pyo
+${PYSITELIB}/boto/sdb/db/query.py
+${PYSITELIB}/boto/sdb/db/query.pyc
+${PYSITELIB}/boto/sdb/db/query.pyo
+${PYSITELIB}/boto/sdb/db/test_db.py
+${PYSITELIB}/boto/sdb/db/test_db.pyc
+${PYSITELIB}/boto/sdb/db/test_db.pyo
 ${PYSITELIB}/boto/sdb/domain.py
 ${PYSITELIB}/boto/sdb/domain.pyc
 ${PYSITELIB}/boto/sdb/domain.pyo
@@ -159,6 +210,30 @@ ${PYSITELIB}/boto/sdb/persist/test_persist.pyo
 ${PYSITELIB}/boto/sdb/queryresultset.py
 ${PYSITELIB}/boto/sdb/queryresultset.pyc
 ${PYSITELIB}/boto/sdb/queryresultset.pyo
+${PYSITELIB}/boto/services/__init__.py
+${PYSITELIB}/boto/services/__init__.pyc
+${PYSITELIB}/boto/services/__init__.pyo
+${PYSITELIB}/boto/services/bs.py
+${PYSITELIB}/boto/services/bs.pyc
+${PYSITELIB}/boto/services/bs.pyo
+${PYSITELIB}/boto/services/message.py
+${PYSITELIB}/boto/services/message.pyc
+${PYSITELIB}/boto/services/message.pyo
+${PYSITELIB}/boto/services/result.py
+${PYSITELIB}/boto/services/result.pyc
+${PYSITELIB}/boto/services/result.pyo
+${PYSITELIB}/boto/services/service.py
+${PYSITELIB}/boto/services/service.pyc
+${PYSITELIB}/boto/services/service.pyo
+${PYSITELIB}/boto/services/servicedef.py
+${PYSITELIB}/boto/services/servicedef.pyc
+${PYSITELIB}/boto/services/servicedef.pyo
+${PYSITELIB}/boto/services/sonofmmm.py
+${PYSITELIB}/boto/services/sonofmmm.pyc
+${PYSITELIB}/boto/services/sonofmmm.pyo
+${PYSITELIB}/boto/services/submit.py
+${PYSITELIB}/boto/services/submit.pyc
+${PYSITELIB}/boto/services/submit.pyo
 ${PYSITELIB}/boto/sqs/__init__.py
 ${PYSITELIB}/boto/sqs/__init__.pyc
 ${PYSITELIB}/boto/sqs/__init__.pyo
@@ -200,7 +275,10 @@ ${PYSITELIB}/boto/utils.pyc
 ${PYSITELIB}/boto/utils.pyo
 @dirrm ${PYSITELIB}/boto/tests
 @dirrm ${PYSITELIB}/boto/sqs
+@dirrm ${PYSITELIB}/boto/services
 @dirrm ${PYSITELIB}/boto/sdb/persist
+@dirrm ${PYSITELIB}/boto/sdb/db/manager
+@dirrm ${PYSITELIB}/boto/sdb/db
 @dirrm ${PYSITELIB}/boto/sdb
 @dirrm ${PYSITELIB}/boto/s3
 @dirrm ${PYSITELIB}/boto/pyami
@@ -208,5 +286,6 @@ ${PYSITELIB}/boto/utils.pyo
 @dirrm ${PYSITELIB}/boto/mashups
 @dirrm ${PYSITELIB}/boto/ec2
 @dirrm ${PYSITELIB}/boto/contrib
+@dirrm ${PYSITELIB}/boto/cloudfront
 @dirrm ${PYSITELIB}/${EGG_INFODIR}
 @dirrm ${PYSITELIB}/boto
