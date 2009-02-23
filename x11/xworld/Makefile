@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/11 14:55:15 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/23 18:32:36 joerg Exp $
 #
 
 DISTNAME=		xworld-2.0
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://gutemine.geo.uni-koeln.de/pub/xworld/ \
 
 MAINTAINER=		wennmach@NetBSD.org
 COMMENT=		Earth as seen from the direction of the sun
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		csh
@@ -23,12 +25,6 @@ SUBST_MESSAGE.x11=	Fixing x11 options.
 SUBST_STAGE.x11=	post-patch
 SUBST_FILES.x11=	defaults/NetBSD/set.csh
 SUBST_SED.x11=		-e 's,@X11BASE@,${X11BASE},g'
-
-SUBST_CLASSES+=		install
-SUBST_MESSAGE.install=	Fixing install options.
-SUBST_STAGE.install=	post-patch
-SUBST_FILES.install=	Makefile.in
-SUBST_SED.install=	-e 's,-g bin -o bin,-g ${BINGRP} -o ${BINOWN},g'
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
