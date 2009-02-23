@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1118 2009/02/20 02:59:50 epg Exp $
+# $NetBSD: Makefile,v 1.1119 2009/02/23 00:10:57 rhaen Exp $
 #
 
 COMMENT=	Development utilities
@@ -751,6 +751,7 @@ SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
 SUBDIR+=	p5-Sub-Override
 SUBDIR+=	p5-Sub-Uplevel
+SUBDIR+=	p5-TAP-Formatter-HTML
 SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Template-Plugin-Handy
 SUBDIR+=	p5-Template-Plugin-VMethods
@@ -825,6 +826,7 @@ SUBDIR+=	p5-VCP-Dest-svk
 SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
+SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
