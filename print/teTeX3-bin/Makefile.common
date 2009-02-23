@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2008/12/09 19:43:37 minskim Exp $
+# $NetBSD: Makefile.common,v 1.12 2009/02/23 20:12:19 minskim Exp $
 
 TETEX_BIN_VERS=		3.0
 DIST_SUBDIR=		teTeX
@@ -17,7 +17,8 @@ CONFIGURE_ARGS+=	--enable-ipc
 CONFIGURE_ARGS+=	--with-epsfwin
 CONFIGURE_ARGS+=	--with-hp2627win
 CONFIGURE_ARGS+=	--with-mftalkwin
-CONFIGURE_ARGS+=	--with-x11
+CONFIGURE_ARGS+=	--with-mf-nowin
+CONFIGURE_ARGS+=	--without-x11
 CONFIGURE_ARGS+=	--with-system-ncurses
 CONFIGURE_ARGS+=	--with-ncurses-include=${BUILDLINK_PREFIX.ncurses}/include
 CONFIGURE_ARGS+=	--with-ncurses-libdir=${BUILDLINK_PREFIX.ncurses}/lib
@@ -49,4 +50,3 @@ CONFIGURE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q} \
 .include "../../fonts/t1lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"

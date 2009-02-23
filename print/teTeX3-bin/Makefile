@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2009/02/17 21:09:54 minskim Exp $
+# $NetBSD: Makefile,v 1.39 2009/02/23 20:12:19 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -20,13 +20,12 @@ CONFLICTS+=	omega<0.90.4nb1
 INFO_FILES=	# PLIST
 
 USE_TOOLS+=	bison lex
-REPLACE_PERL=	texk/xdvik/t1mapper
 
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 CONFIGURE_ARGS+=	--without-dvipsk --without-odvipsk
-CONFIGURE_ARGS+=	--with-xdvi-x-toolkit=xaw
+CONFIGURE_ARGS+=	--without-xdvik --without-oxdvik
 
 MAKE_ENV+=		KPATHSEA_PREFIX=${BUILDLINK_PREFIX.kpathsea}
 MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
@@ -104,9 +103,6 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 .include "../../print/teTeX3-bin/Makefile.common"
 .include "../../print/texlive-tetex/format.mk"
 .include "../../print/texlive-tetex/map.mk"
-.include "../../x11/libXp/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../mk/xaw.buildlink3.mk"
 
 post-extract:
 	${RM} -rf ${WRKSRC}/texk/kpathsea
