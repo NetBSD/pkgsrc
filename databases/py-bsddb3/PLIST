@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/07 21:15:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/02/23 11:30:51 wiz Exp $
 ${PYINC}/bsddb3/bsddb.h
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
@@ -61,6 +61,9 @@ ${PYSITELIB}/bsddb3/tests/test_distributed_transactions.pyo
 ${PYSITELIB}/bsddb3/tests/test_early_close.py
 ${PYSITELIB}/bsddb3/tests/test_early_close.pyc
 ${PYSITELIB}/bsddb3/tests/test_early_close.pyo
+${PYSITELIB}/bsddb3/tests/test_fileid.py
+${PYSITELIB}/bsddb3/tests/test_fileid.pyc
+${PYSITELIB}/bsddb3/tests/test_fileid.pyo
 ${PYSITELIB}/bsddb3/tests/test_get_none.py
 ${PYSITELIB}/bsddb3/tests/test_get_none.pyc
 ${PYSITELIB}/bsddb3/tests/test_get_none.pyo
