@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.764 2009/02/22 07:35:56 taca Exp $
+# $NetBSD: Makefile,v 1.765 2009/02/23 23:19:22 cube Exp $
 #
 
 COMMENT=	Networking tools
@@ -264,7 +264,6 @@ SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	net6
 SUBDIR+=	netatalk
-SUBDIR+=	netbsd-tap
 SUBDIR+=	netcat
 SUBDIR+=	netcat6
 SUBDIR+=	netdisco
