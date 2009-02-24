@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/05/26 17:54:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/02/24 20:41:45 wiz Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -27,15 +27,28 @@ bin/${GNU_PREFIX}pic
 bin/pic2graph
 bin/post-grohtml
 bin/pre-grohtml
+bin/preconv
 bin/${GNU_PREFIX}refer
+bin/roff2dvi
+bin/roff2html
+bin/roff2pdf
+bin/roff2ps
+bin/roff2text
+bin/roff2x
 bin/${GNU_PREFIX}soelim
 bin/${GNU_PREFIX}tbl
 bin/tfmtodit
 bin/${GNU_PREFIX}troff
-info/groff
-lib/groff/groffer/groffer2.sh
+info/groff.info
+lib/charset.alias
+lib/groff/groffer/func.pl
+lib/groff/groffer/man.pl
+lib/groff/groffer/perl_test.pl
+lib/groff/groffer/split_env.sh
+lib/groff/groffer/version.sh
 man/man1/addftinfo.1
 man/man1/afmtodit.1
+man/man1/chem.1
 man/man1/${GNU_PREFIX}eqn.1
 man/man1/eqn2graph.1
 man/man1/gdiffmk.1
@@ -61,7 +74,14 @@ man/man1/pdfroff.1
 man/man1/pfbtops.1
 man/man1/${GNU_PREFIX}pic.1
 man/man1/pic2graph.1
+man/man1/preconv.1
 man/man1/${GNU_PREFIX}refer.1
+man/man1/roff2dvi.1
+man/man1/roff2html.1
+man/man1/roff2pdf.1
+man/man1/roff2ps.1
+man/man1/roff2text.1
+man/man1/roff2x.1
 man/man1/${GNU_PREFIX}soelim.1
 man/man1/${GNU_PREFIX}tbl.1
 man/man1/tfmtodit.1
@@ -74,6 +94,7 @@ man/man7/ditroff.7
 man/man7/groff.7
 man/man7/groff_char.7
 man/man7/groff_diff.7
+man/man7/groff_hdtbl.7
 man/man7/groff_man.7
 man/man7/groff_mdoc.7
 man/man7/groff_me.7
@@ -84,10 +105,34 @@ man/man7/groff_ms.7
 man/man7/groff_trace.7
 man/man7/groff_www.7
 man/man7/roff.7
+share/doc/groff/${PKGVERSION}/examples/gnu.eps
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.g
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.me
 share/doc/groff/${PKGVERSION}/examples/grnexmpl.ps
 share/doc/groff/${PKGVERSION}/examples/groff.css
+share/doc/groff/${PKGVERSION}/examples/hdtbl/chess_board.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/chess_board.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/col_rowspan_colors.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/col_rowspan_colors.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_boxes.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_boxes.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_nested_tables.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_nested_tables.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_table_cells.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_table_cells.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_transitions.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/color_transitions.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/fonts_n.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/fonts_n.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/fonts_x.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/fonts_x.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/gnu.eps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/mixed_pickles.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/mixed_pickles.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/rainbow.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/rainbow.roff
+share/doc/groff/${PKGVERSION}/examples/hdtbl/short_reference.ps
+share/doc/groff/${PKGVERSION}/examples/hdtbl/short_reference.roff
 share/doc/groff/${PKGVERSION}/examples/mom/README.txt
 share/doc/groff/${PKGVERSION}/examples/mom/elvis_syntax
 share/doc/groff/${PKGVERSION}/examples/mom/elvis_syntax.new
@@ -309,6 +354,7 @@ share/groff/${PKGVERSION}/font/devps/ZCMI
 share/groff/${PKGVERSION}/font/devps/ZD
 share/groff/${PKGVERSION}/font/devps/ZDR
 share/groff/${PKGVERSION}/font/devps/download
+share/groff/${PKGVERSION}/font/devps/freeeuro.afm
 share/groff/${PKGVERSION}/font/devps/freeeuro.pfa
 share/groff/${PKGVERSION}/font/devps/generate/Makefile
 share/groff/${PKGVERSION}/font/devps/generate/afmname
@@ -328,14 +374,49 @@ share/groff/${PKGVERSION}/font/devutf8/BI
 share/groff/${PKGVERSION}/font/devutf8/DESC
 share/groff/${PKGVERSION}/font/devutf8/I
 share/groff/${PKGVERSION}/font/devutf8/R
+share/groff/${PKGVERSION}/oldfont/devps/CB
+share/groff/${PKGVERSION}/oldfont/devps/CBI
+share/groff/${PKGVERSION}/oldfont/devps/CI
+share/groff/${PKGVERSION}/oldfont/devps/CR
+share/groff/${PKGVERSION}/oldfont/devps/HB
+share/groff/${PKGVERSION}/oldfont/devps/HBI
+share/groff/${PKGVERSION}/oldfont/devps/HI
+share/groff/${PKGVERSION}/oldfont/devps/HNB
+share/groff/${PKGVERSION}/oldfont/devps/HNBI
+share/groff/${PKGVERSION}/oldfont/devps/HNI
+share/groff/${PKGVERSION}/oldfont/devps/HNR
+share/groff/${PKGVERSION}/oldfont/devps/HR
+share/groff/${PKGVERSION}/oldfont/devps/NB
+share/groff/${PKGVERSION}/oldfont/devps/NBI
+share/groff/${PKGVERSION}/oldfont/devps/NI
+share/groff/${PKGVERSION}/oldfont/devps/NR
+share/groff/${PKGVERSION}/oldfont/devps/PB
+share/groff/${PKGVERSION}/oldfont/devps/PBI
+share/groff/${PKGVERSION}/oldfont/devps/PI
+share/groff/${PKGVERSION}/oldfont/devps/PR
+share/groff/${PKGVERSION}/oldfont/devps/S
+share/groff/${PKGVERSION}/oldfont/devps/SS
+share/groff/${PKGVERSION}/oldfont/devps/TB
+share/groff/${PKGVERSION}/oldfont/devps/TBI
+share/groff/${PKGVERSION}/oldfont/devps/TI
+share/groff/${PKGVERSION}/oldfont/devps/TR
+share/groff/${PKGVERSION}/oldfont/devps/symbol.afm
+share/groff/${PKGVERSION}/oldfont/devps/symbolsl.afm
+share/groff/${PKGVERSION}/oldfont/devps/zapfdr.afm
+share/groff/${PKGVERSION}/oldfont/devps/zapfdr.ps
+share/groff/${PKGVERSION}/tmac/62bit.tmac
 share/groff/${PKGVERSION}/tmac/X.tmac
 share/groff/${PKGVERSION}/tmac/Xps.tmac
 share/groff/${PKGVERSION}/tmac/a4.tmac
+share/groff/${PKGVERSION}/tmac/an-ext.tmac
 share/groff/${PKGVERSION}/tmac/an-old.tmac
 share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_AN_TMAC}an.tmac
 share/groff/${PKGVERSION}/tmac/andoc.tmac
 share/groff/${PKGVERSION}/tmac/composite.tmac
 share/groff/${PKGVERSION}/tmac/cp1047.tmac
+share/groff/${PKGVERSION}/tmac/cs.tmac
+share/groff/${PKGVERSION}/tmac/de.tmac
+share/groff/${PKGVERSION}/tmac/den.tmac
 share/groff/${PKGVERSION}/tmac/devtag.tmac
 share/groff/${PKGVERSION}/tmac/doc-old.tmac
 share/groff/${PKGVERSION}/tmac/doc.tmac
@@ -344,12 +425,23 @@ share/groff/${PKGVERSION}/tmac/e.tmac
 share/groff/${PKGVERSION}/tmac/ec.tmac
 share/groff/${PKGVERSION}/tmac/eqnrc
 share/groff/${PKGVERSION}/tmac/europs.tmac
+share/groff/${PKGVERSION}/tmac/fr.tmac
+share/groff/${PKGVERSION}/tmac/hdmisc.tmac
+share/groff/${PKGVERSION}/tmac/hdtbl.tmac
 share/groff/${PKGVERSION}/tmac/html-end.tmac
 share/groff/${PKGVERSION}/tmac/html.tmac
+share/groff/${PKGVERSION}/tmac/hyphen.cs
+share/groff/${PKGVERSION}/tmac/hyphen.den
+share/groff/${PKGVERSION}/tmac/hyphen.det
+share/groff/${PKGVERSION}/tmac/hyphen.fr
+share/groff/${PKGVERSION}/tmac/hyphen.sv
 share/groff/${PKGVERSION}/tmac/hyphen.us
+share/groff/${PKGVERSION}/tmac/hyphenex.cs
+share/groff/${PKGVERSION}/tmac/hyphenex.det
 share/groff/${PKGVERSION}/tmac/hyphenex.us
 share/groff/${PKGVERSION}/tmac/latin1.tmac
 share/groff/${PKGVERSION}/tmac/latin2.tmac
+share/groff/${PKGVERSION}/tmac/latin5.tmac
 share/groff/${PKGVERSION}/tmac/latin9.tmac
 share/groff/${PKGVERSION}/tmac/lbp.tmac
 share/groff/${PKGVERSION}/tmac/lj4.tmac
@@ -385,21 +477,26 @@ share/groff/${PKGVERSION}/tmac/pspic.tmac
 share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_AN_TMAC}s.tmac
 share/groff/${PKGVERSION}/tmac/safer.tmac
 share/groff/${PKGVERSION}/tmac/spdf.tmac
+share/groff/${PKGVERSION}/tmac/sv.tmac
 share/groff/${PKGVERSION}/tmac/trace.tmac
+share/groff/${PKGVERSION}/tmac/trans.tmac
 share/groff/${PKGVERSION}/tmac/troffrc
 share/groff/${PKGVERSION}/tmac/troffrc-end
 share/groff/${PKGVERSION}/tmac/tty-char.tmac
 share/groff/${PKGVERSION}/tmac/tty.tmac
 share/groff/${PKGVERSION}/tmac/unicode.tmac
 share/groff/${PKGVERSION}/tmac/www.tmac
+share/groff/current
 share/groff/site-tmac/man.local
 share/groff/site-tmac/mdoc.local
-@exec ${MKDIR} %D/share/groff/site-font
 @dirrm share/groff/site-tmac
+@exec ${MKDIR} %D/share/groff/site-font
 @dirrm share/groff/site-font
 @dirrm share/groff/${PKGVERSION}/tmac/mm
 @dirrm share/groff/${PKGVERSION}/tmac/mdoc
 @dirrm share/groff/${PKGVERSION}/tmac
+@dirrm share/groff/${PKGVERSION}/oldfont/devps
+@dirrm share/groff/${PKGVERSION}/oldfont
 @dirrm share/groff/${PKGVERSION}/font/devutf8
 @dirrm share/groff/${PKGVERSION}/font/devps/generate
 @dirrm share/groff/${PKGVERSION}/font/devps
@@ -417,6 +514,7 @@ share/groff/site-tmac/mdoc.local
 @dirrm share/doc/groff/${PKGVERSION}/html/mom
 @dirrm share/doc/groff/${PKGVERSION}/html
 @dirrm share/doc/groff/${PKGVERSION}/examples/mom
+@dirrm share/doc/groff/${PKGVERSION}/examples/hdtbl
 @dirrm share/doc/groff/${PKGVERSION}/examples
 @dirrm share/doc/groff/${PKGVERSION}
 @dirrm share/doc/groff
