@@ -1,0 +1,4 @@
+This module converts strings among 8-bit character sets defined by IETF
+RFC 1345 (about 128 sets). The RFC document is included so you can look up
+character set names and aliases; it's also read by the module when composing
+conversion maps. Failing functions or objects return undef value.
