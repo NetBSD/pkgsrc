@@ -1,6 +1,19 @@
-@comment $NetBSD: PLIST.docs,v 1.1 2006/07/24 16:49:12 wiz Exp $
+@comment $NetBSD: PLIST.docs,v 1.2 2009/02/24 20:41:45 wiz Exp $
 share/doc/groff/${PKGVERSION}/examples/img/webpage1.png
 share/doc/groff/${PKGVERSION}/examples/img/webpage2.png
+share/doc/groff/${PKGVERSION}/examples/webpage-1.html
+share/doc/groff/${PKGVERSION}/examples/webpage-10.html
+share/doc/groff/${PKGVERSION}/examples/webpage-11.html
+share/doc/groff/${PKGVERSION}/examples/webpage-12.html
+share/doc/groff/${PKGVERSION}/examples/webpage-13.html
+share/doc/groff/${PKGVERSION}/examples/webpage-2.html
+share/doc/groff/${PKGVERSION}/examples/webpage-3.html
+share/doc/groff/${PKGVERSION}/examples/webpage-4.html
+share/doc/groff/${PKGVERSION}/examples/webpage-5.html
+share/doc/groff/${PKGVERSION}/examples/webpage-6.html
+share/doc/groff/${PKGVERSION}/examples/webpage-7.html
+share/doc/groff/${PKGVERSION}/examples/webpage-8.html
+share/doc/groff/${PKGVERSION}/examples/webpage-9.html
 share/doc/groff/${PKGVERSION}/examples/webpage.html
 share/doc/groff/${PKGVERSION}/html/img/pic1.png
 share/doc/groff/${PKGVERSION}/html/img/pic10.png
@@ -41,11 +54,13 @@ share/doc/groff/${PKGVERSION}/html/img/pic41.png
 share/doc/groff/${PKGVERSION}/html/img/pic42.png
 share/doc/groff/${PKGVERSION}/html/img/pic43.png
 share/doc/groff/${PKGVERSION}/html/img/pic44.png
-share/doc/groff/${PKGVERSION}/html/img/pic46.png
+share/doc/groff/${PKGVERSION}/html/img/pic45.png
 share/doc/groff/${PKGVERSION}/html/img/pic47.png
 share/doc/groff/${PKGVERSION}/html/img/pic48.png
 share/doc/groff/${PKGVERSION}/html/img/pic49.png
 share/doc/groff/${PKGVERSION}/html/img/pic5.png
+share/doc/groff/${PKGVERSION}/html/img/pic50.png
+share/doc/groff/${PKGVERSION}/html/img/pic51.png
 share/doc/groff/${PKGVERSION}/html/img/pic6.png
 share/doc/groff/${PKGVERSION}/html/img/pic7.png
 share/doc/groff/${PKGVERSION}/html/img/pic8.png
