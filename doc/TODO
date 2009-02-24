@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7868 2009/02/24 10:15:02 wiz Exp $
+$NetBSD: TODO,v 1.7869 2009/02/24 12:08:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,8 +401,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-ant-1.7.1
-	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
 	o aqsis-1.4.1
@@ -423,9 +421,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk-1.6.0.5
 	o astyle-1.15.3
-	o at-spi-1.24.1
 	o aterm-1.0.1
-	o atf-0.6
 	o auctex-11.85
 	o autoconvert-0.3.16
 	o autogen-5.9.7
@@ -438,7 +434,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o awesome-3.1.2
 	o baci-20040415
 	o balance-3.42
-	o bash-4.0
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -557,7 +552,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
 	o epic4-2.6
-	o epiphany-2.24.3
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.3.0 [now called eric4]
@@ -644,24 +638,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glchess-1.0.5
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
-	o gmpc-0.17.0
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-pilot-2.0.17
 	o gnome-power-manager-2.24.4
 	o gnome-speech-0.4.25
 	o gnome-volume-manager-2.24.1
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.9
 	o gnugo-3.8
 	o gnupg2-2.0.10
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
-	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -693,7 +683,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o guile-gnome-2.16.1
 	o guile-gtk-2.0
 	o guile-www-2.22
 	o gutenprint-5.2.2
@@ -800,7 +789,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.5.22
 	o libflash-0.4.13
 	o libgda-3.1.5
-	o libgdiplus-2.2
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -814,7 +802,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmpd-0.17.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libntlm-1.0
@@ -823,7 +810,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
-	o libspf2-1.2.9
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -863,7 +849,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o matchbox-panel-0.9.3
 	o mathomatic-14.3.3
 	o mc-4.6.2
-	o mediawiki-1.13.3
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-1.0.8.1
@@ -888,7 +873,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metakit-lib-2.4.9.6
 	o mew-6.2 [as mew6?]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
@@ -976,7 +960,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openmortal-0.7.1
 	o openmsx-0.7.0
 	o openssh-5.1p1
-	o openssl-0.9.8i
 	o openttd-0.6.1
 	o orca-2.24.4
 	o oregano-0.60.0
@@ -1040,7 +1023,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.6
-	o pmccabe-2.5 [pkg/39749]
 	o pngcheck-2.3.0
 	o po4a-0.29
 	o poedit-1.4.2
@@ -1059,7 +1041,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pspp-0.6.1
 	o pstoedit-3.45
 	o puf-0.93.3
-	o puppet-0.24.7
 	o puzzle-5.2
 	o pv-1.1.4
 	o pwlib-1.11.1
@@ -1086,13 +1067,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.19.1
 	o py-mad-0.6
-	o py-metakit-2.4.9.6
 	o py-moin-1.8.2
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.15
 	o py-psycopg-2.0.9
-	o py-reportlab-2.2
-	o py-soappy-0.11.6
 	o py-sqlite2-2.5.1
 	o py-sybase-0.37
 	o py-textile-2.0.11
@@ -1111,7 +1089,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o radiance-3.7.2
 	o rails-2.2.2
 	o raine-0.50.15
-	o rake-0.8.3
 	o ramaze-2009.01
 	o randread-0.2
 	o randrproto-1.2.99.3
@@ -1122,7 +1099,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.18.3
-	o replex-0.1.6.8
 	o resize_image-0.7
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
@@ -1130,7 +1106,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o root-5.14.0
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundcube-0.2
 	o rox-2.8
 	o rox-session-0.29
 	o roxirc-2.0
@@ -1166,7 +1141,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-haml-2.0.7
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
-	o ruby-launchy-0.3.2
 	o ruby-libxml-0.9.8
 	o ruby-logging-0.9.5
 	o ruby-mechanize-0.9.0
@@ -1177,21 +1151,16 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-netaddr-1.5.0
 	o ruby-parsetree-3.0.3
 	o ruby-postgres-pr-0.5.0
-	o ruby-postgresql-0.7.9.2008.01.28
 	o ruby-racc-1.4.6
 	o ruby-rack-0.9.1
-	o ruby-rb-gsl-1.10.3
 	o ruby-redcloth-4.1.1
 	o ruby-rgl-0.4.0
 	o ruby-rspec-1.1.12
 	o ruby-rttool-1.0.3.0
 	o ruby-sequel-2.9.0
 	o ruby-sequel-core-2.2.0
-	o ruby-tmail-1.2.3.1
-	o ruby-tzinfo-0.3.12
 	o ruby-will-paginate-2.2.3
 	o ruby2ruby-1.2.2
-	o rubyforge-1.0.2
 	o rubygems-1.3.1
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
@@ -1215,7 +1184,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
-	o shared-mime-info-0.60
 	o sharity-3.6
 	o sharity-light-1.3
 	o shc-3.8
@@ -1281,7 +1249,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-23.0.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o telepathy-gabble-0.7.21
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-1.82
 	o tfmxplay-1.1.6
@@ -1301,7 +1268,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.11.3
 	o transcode-1.1.1
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1364,7 +1330,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xcdroast-0.98a16
 	o xchm-1.14
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
