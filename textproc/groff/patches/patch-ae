@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1 2003/07/01 10:12:55 wiz Exp $
+$NetBSD: patch-ae,v 1.2 2009/02/24 20:41:46 wiz Exp $
 
---- tmac/troffrc.orig	Tue Apr  8 19:26:42 2003
+--- tmac/troffrc.orig	2009-01-09 14:25:52.000000000 +0000
 +++ tmac/troffrc
-@@ -43,4 +43,59 @@ troffrc!X100 troffrc!X100-12 troffrc!lj4
- .\" Handle paper formats
+@@ -44,6 +44,61 @@ troffrc!X100 troffrc!X100-12 troffrc!lj4
+ .\" Handle paper formats.
  .do mso papersize.tmac
  .
 +.if n \{\
@@ -61,4 +61,6 @@ $NetBSD: patch-ae,v 1.1 2003/07/01 10:12:55 wiz Exp $
 +.  cp \n[_C]
 +.\}
 +.
- .\" Don't let blank lines creep in here.
+ .\" Handle PS images.
+ .do mso pspic.tmac
+ .
