@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/11/23 13:38:41 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2009/02/24 15:24:12 wiz Exp $
 
-SHA1 (gnome-volume-manager-2.24.0.tar.bz2) = 3ce48166b1f70e3a5e6353de996c98311791f715
-RMD160 (gnome-volume-manager-2.24.0.tar.bz2) = 8cae1fe1038157cac2092b400f46f14f0b6f5fea
-Size (gnome-volume-manager-2.24.0.tar.bz2) = 400417 bytes
+SHA1 (gnome-volume-manager-2.24.1.tar.bz2) = 1a79546133708e18400b42cc1d621ab38962c573
+RMD160 (gnome-volume-manager-2.24.1.tar.bz2) = 418bff9f1e1492deb349ced1727f6aab0e360c76
+Size (gnome-volume-manager-2.24.1.tar.bz2) = 374678 bytes
 SHA1 (patch-aa) = de2b58679b657e8f03cff5610e0f5367fa3e1d76
-SHA1 (patch-ab) = ba14759380358c6b64710d88cd2f09b594315671

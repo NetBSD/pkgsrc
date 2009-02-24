@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/22 16:27:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/24 15:24:12 wiz Exp $
 bin/gnome-volume-properties
 libexec/gnome-volume-manager
 share/applications/gnome-volume-properties.desktop
 share/gconf/schemas/gnome-volume-manager.schemas
-share/gnome/autostart/gnome-volume-manager.desktop
 share/gnome-volume-manager/gnome-volume-properties.glade
+share/gnome/autostart/gnome-volume-manager.desktop
 share/locale/ang/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ar/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/az/LC_MESSAGES/gnome-volume-manager.mo
@@ -42,6 +42,7 @@ share/locale/ka/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/kn/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ko/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/ku/LC_MESSAGES/gnome-volume-manager.mo
+share/locale/la/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/lt/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/lv/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/mg/LC_MESSAGES/gnome-volume-manager.mo
@@ -81,4 +82,6 @@ share/locale/zh_CN/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-volume-manager.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-volume-manager.mo
 @dirrm share/gnome-volume-manager
+@comment in gnome2-dirs: @dirrm share/gnome
+@comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
