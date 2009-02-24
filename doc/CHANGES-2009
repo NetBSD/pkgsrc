@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.758 2009/02/24 16:09:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.759 2009/02/24 20:41:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1015,3 +1015,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/dbus-glib to 0.80 [wiz 2009-02-24]
 	Added shells/bash3 version 3.2.48 [wiz 2009-02-24]
 	Updated multimedia/avidemux to 2.4.4 [wiz 2009-02-24]
+	Updated textproc/groff to 1.20.1 [wiz 2009-02-24]
