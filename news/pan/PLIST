@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/22 08:12:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/02/24 12:24:48 wiz Exp $
 bin/pan
 share/applications/pan.desktop
 share/locale/am/LC_MESSAGES/pan.mo
@@ -29,6 +29,7 @@ share/locale/lv/LC_MESSAGES/pan.mo
 share/locale/ms/LC_MESSAGES/pan.mo
 share/locale/nb/LC_MESSAGES/pan.mo
 share/locale/nl/LC_MESSAGES/pan.mo
+share/locale/oc/LC_MESSAGES/pan.mo
 share/locale/pl/LC_MESSAGES/pan.mo
 share/locale/pt/LC_MESSAGES/pan.mo
 share/locale/pt_BR/LC_MESSAGES/pan.mo
@@ -46,3 +47,5 @@ share/locale/vi/LC_MESSAGES/pan.mo
 share/locale/zh_CN/LC_MESSAGES/pan.mo
 share/locale/zh_TW/LC_MESSAGES/pan.mo
 share/pixmaps/pan.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
