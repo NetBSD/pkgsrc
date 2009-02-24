@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/02/16 10:25:16 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/02/24 16:19:14 wiz Exp $
 #
 
 DISTNAME=	doclifter-2.3
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://catb.org/~esr/doclifter/
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://catb.org/~esr/doclifter/
 COMMENT=	Translates documents written in troff macros to DocBook
 
