@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7867 2009/02/24 03:25:55 rh Exp $
+$NetBSD: TODO,v 1.7868 2009/02/24 10:15:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -336,6 +336,8 @@ Suggested new packages
 Suggested package updates
 =========================
 
+For possible perl packages updates, see http://www.pkgbox.org/p2c/
+
 	o 9base-20060125
 	o CSP-0.34
 	o Canna-3.7p3
@@ -346,6 +348,7 @@ Suggested package updates
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
+	o Gorm-1.2.8
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
@@ -435,6 +438,7 @@ Suggested package updates
 	o awesome-3.1.2
 	o baci-20040415
 	o balance-3.42
+	o bash-4.0
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
@@ -514,7 +518,7 @@ Suggested package updates
 	o dc_gui2-0.80
 	o dctc-0.85.9
 	o ddclient-3.7.3
-	o ddrescue-1.9
+	o ddrescue-1.10
 	o defendguin-0.0.11
 	o devIL-1.7.7
 	o devhelp-0.22
@@ -526,12 +530,11 @@ Suggested package updates
 	o dmenu-3.9 [pkgsrc-wip has it!]
 	o dnstop-20070307
 	o dnstracer-1.9
-	o doxygen-1.5.8
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
 	o duplicity-0.5.08
-	o dvdrip-0.98.9
+	o dvdrip-0.98.10
 	o dvdstyler-1.7.1
 	o dwm-5.4.1
 	o eagle-4.16
@@ -652,6 +655,7 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.2.9
 	o gnugo-3.8
 	o gnupg2-2.0.10
 	o gnustep-1.16.1
@@ -694,7 +698,6 @@ Suggested package updates
 	o guile-www-2.22
 	o gutenprint-5.2.2
 	o gv-3.6.6
-	o gwaei-0.14.0
 	o gworkspace-0.8.6
 	o gxemul-0.4.7.1
 	o hackbot-2.21
@@ -791,7 +794,7 @@ Suggested package updates
 	o libchewing-0.3.0
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
-	o libdrm-2.4.4
+	o libdrm-2.4.5
 	o libdvbpsi-0.1.6
 	o libevent-1.4.9
 	o libextractor-0.5.22
@@ -895,7 +898,7 @@ Suggested package updates
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mksh-36b
-	o mkvtoolnix-2.4.2
+	o mkvtoolnix-2.5.1
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -917,11 +920,12 @@ Suggested package updates
 	o mysql-5.2.3
 	o mysql-client-5.0.79
 	o mysql-server-5.0.79
-	o mysql5-client-5.0.75
+	o mysql5-client-5.0.77
 	o mysql5-server-5.0.75
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
+	o nautilus-sendto-1.1.2
 	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
@@ -987,7 +991,7 @@ Suggested package updates
 	o pan-0.133
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-0.9.0
+	o parrot-0.9.1
 	o patchutils-0.3.1
 	o pcal-4.8
 	o pcmanfm-0.5
@@ -1070,19 +1074,15 @@ Suggested package updates
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-boto-1.6b
-	o py-bsddb3-4.7.5
 	o py-checker-0.8.17
 	o py-dns-2.3.3
-	o py-docutils-0.5
 	o py-fpconst-0.7.3
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
 	o py-html2text-2.35
-	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
-	o py-ldap-2.3.4
+	o py-ldap-2.3.6
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.19.1
 	o py-mad-0.6
@@ -1090,12 +1090,10 @@ Suggested package updates
 	o py-moin-1.8.2
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.15
-	o py-psycopg-2.0.8
-	o py-pytz-2009a
+	o py-psycopg-2.0.9
 	o py-reportlab-2.2
 	o py-soappy-0.11.6
 	o py-sqlite2-2.5.1
-	o py-subversion-1.5.5
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.2
@@ -1122,7 +1120,6 @@ Suggested package updates
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
-	o readline-6.0
 	o regionset-0.2
 	o rep-gtk-0.18.3
 	o replex-0.1.6.8
@@ -1184,7 +1181,6 @@ Suggested package updates
 	o ruby-racc-1.4.6
 	o ruby-rack-0.9.1
 	o ruby-rb-gsl-1.10.3
-	o ruby-rbtree-0.2.1
 	o ruby-redcloth-4.1.1
 	o ruby-rgl-0.4.0
 	o ruby-rspec-1.1.12
@@ -1266,7 +1262,6 @@ Suggested package updates
 	o streamripper-1.63.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
-	o swfdec-0.8.4
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o systrace-1.6e
@@ -1278,7 +1273,7 @@ Suggested package updates
 	o tcpdstat-0.9
 	o tcpdump-4.0.0
 	o tcpillust-1.00b
-	o tcpreplay-3.4.0
+	o tcpreplay-3.4.1
 	o tcpslice-1.2a3
 	o tct-1.16
 	o tdir-1.67
@@ -1287,8 +1282,6 @@ Suggested package updates
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.21
-	o telepathy-glib-0.7.26
-	o telepathy-idle-0.1.3
 	o tex-musixtex-113 [pkg/34758]
 	o texi2html-1.82
 	o tfmxplay-1.1.6
@@ -1309,7 +1302,7 @@ Suggested package updates
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.3
-	o transcode-1.1.0
+	o transcode-1.1.1
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1419,7 +1412,7 @@ Suggested package updates
 	o xjman-0.7
 	o xkbset-0.5
 	o xli-2006.11.10
-	o xlog-2.0
+	o xlog-2.0.1
 	o xm7-1020s
 	o xmbdfed-4.6
 	o xmcd-3.3.0
@@ -1460,7 +1453,6 @@ Suggested package updates
 	o yabause-0.9.9
 	o yacas-1.2.0
 	o yafc-1.1
-	o yaz-3.0.44
 	o yodl-2.01.02
 	o youtube-dl-20090207
 	o ysm-2.9.9.1
@@ -1468,7 +1460,7 @@ Suggested package updates
 	o yorick-2.1.05
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.3.0
+	o zile-2.3.1
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope-3.4.0
