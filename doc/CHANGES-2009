@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.751 2009/02/24 12:29:27 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.752 2009/02/24 15:04:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1008,3 +1008,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/orca to 2.24.4 [wiz 2009-02-24]
 	Updated news/pan to 0.133 [wiz 2009-02-24]
 	Added textproc/p5-Convert-Translit version 1.03 [tonnerre 2009-02-24]
+	Updated audio/gnome-speech to 0.4.25 [wiz 2009-02-24]
