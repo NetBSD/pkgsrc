@@ -1,25 +1,18 @@
-$NetBSD: patch-ac,v 1.4 2008/11/16 17:24:40 wiz Exp $
+$NetBSD: patch-ac,v 1.5 2009/02/24 15:04:15 wiz Exp $
 
---- drivers/espeak/Makefile.in.orig	2008-11-16 16:25:02.000000000 +0000
+For separating gnome-speech-espeak into a separate package.
+
+--- drivers/espeak/Makefile.in.orig	2009-02-15 17:43:44.000000000 +0000
 +++ drivers/espeak/Makefile.in
 @@ -55,7 +55,6 @@ espeak_synthesis_driver_OBJECTS =  \
  espeak_synthesis_driver_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
  espeak_synthesis_driver_DEPENDENCIES =  \
 -	$(top_builddir)/gnome-speech/libgnomespeech.la \
- 	$(am__DEPENDENCIES_1)
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -217,7 +216,7 @@ infodir = @infodir@
- install_sh = @install_sh@
- libdir = @libdir@
- libexecdir = @libexecdir@
--localedir = @localedir@
-+localedir = /usr/pkg/share/locale
- localstatedir = @localstatedir@
- loquendo_INCLUDES = @loquendo_INCLUDES@
- loquendo_LIBS = @loquendo_LIBS@
-@@ -250,11 +249,12 @@ INCLUDES = -I$(top_srcdir)          \
+@@ -250,9 +249,10 @@ INCLUDES = -I$(top_srcdir)          \
  	-I$(top_srcdir)/gnome-speech\
  	$(gnome_speech_CFLAGS) \
  	$(WARN_CFLAGS) \
@@ -30,8 +23,5 @@ $NetBSD: patch-ac,v 1.4 2008/11/16 17:24:40 wiz Exp $
 -LDADD = $(top_builddir)/gnome-speech/libgnomespeech.la 	\
 +LDADD = -lgnomespeech \
  	$(gnome_speech_LIBS)	\
--	-L$(espeak_LIBDIR)	\
-+	$(espeak_LIBS)	\
- 	-lespeak
+ 	$(espeak_LIBS)
  
- espeak_synthesis_driver_SOURCES = \
