@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7870 2009/02/24 21:24:02 cube Exp $
+$NetBSD: TODO,v 1.7871 2009/02/24 21:43:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -426,7 +426,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o autoconvert-0.3.16
 	o autogen-5.9.7
 	o avcheck-0.91
-	o avidemux-2.4.4
 	o avl-2.0.2a
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
@@ -508,7 +507,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o darcs-2.1.2
 	o dbench-4.0
 	o dbus-1.2.12 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
-	o dbus-glib-0.80
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -528,7 +526,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dri2proto-1.99.3
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.08
+	o duplicity-0.5.9
 	o dvdrip-0.98.10
 	o dvdstyler-1.7.1
 	o dwm-5.4.1
@@ -641,9 +639,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-power-manager-2.24.4
-	o gnome-speech-0.4.25
-	o gnome-volume-manager-2.24.1
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -668,7 +663,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o granulate-0.2
 	o graphviz-2.20.3 [pkg/40180]
 	o grep-2.5.4
-	o groff-1.20.1
 	o gsasl-1.0
 	o gsharutils-4.7
 	o gss-0.0.22
@@ -676,6 +670,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtar-1.21
 	o gtar-base-1.21
 	o gtexinfo-4.13
+	o gthumb-2.10.11
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
@@ -919,6 +914,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o neon-0.28.3
 	o nessus-3.2.0
 	o netcdf-4.0
+	o netpbm-10.45.04
 	o netperf-2.4.4
 	o netpipe-3.6.2
 	o netramet-50
@@ -959,9 +955,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openldap-client-2.4.14
 	o openmortal-0.7.1
 	o openmsx-0.7.0
-	o openssh-5.1p1
+	o openssh-5.2
 	o openttd-0.6.1
-	o orca-2.24.4
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1355,6 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-intel-2.6.1
 	o xf86-video-neomagic-1.2.2
 	o xf86-video-nsc-2.8.3
+	o xf86-video-rendition-4.2.1
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
 	o xf86-video-siliconmotion-1.7.0
