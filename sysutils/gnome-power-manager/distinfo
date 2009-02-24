@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/01/17 12:53:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2009/02/24 15:14:01 wiz Exp $
 
-SHA1 (gnome-power-manager-2.24.3.tar.bz2) = 976fb95f6165e2de6b5ed20c6c1772861a2be38d
-RMD160 (gnome-power-manager-2.24.3.tar.bz2) = aef79f4a3eda3cc27d7b460bdcbe8576c4794e5f
-Size (gnome-power-manager-2.24.3.tar.bz2) = 2997061 bytes
+SHA1 (gnome-power-manager-2.24.4.tar.bz2) = ea9c895a78761c59fea13701e074946a20c50fe6
+RMD160 (gnome-power-manager-2.24.4.tar.bz2) = c0b16ead610ffeae9d801f8bde44507464808e53
+Size (gnome-power-manager-2.24.4.tar.bz2) = 2997032 bytes
 SHA1 (patch-aa) = d3e3e33b82af97e1fb372914afc732e3d9a2232a
 SHA1 (patch-ab) = 1d095932a52528148703ce63bfab81f3a2f316fd
 SHA1 (patch-ac) = 57ade4298abd05dc57af06347dc96dea4683eb51
