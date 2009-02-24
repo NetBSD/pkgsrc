@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2009/02/16 10:50:23 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/02/24 20:41:45 wiz Exp $
 #
 
-DISTNAME=	groff-1.19.2
-PKGREVISION=	6
+DISTNAME=	groff-1.20.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=groff/}
 
@@ -13,10 +12,7 @@ COMMENT=	GNU roff text processing suite
 CHECK_PERMS=		NO
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
-INSTALL_MAKE_FLAGS+=	appresdir=${DESTDIR}${PREFIX}/lib/X11/app-defaults
-INSTALL_MAKE_FLAGS+=	infodir=${DESTDIR}${PREFIX}/info
-INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+INSTALLATION_DIRS=	share/groff/site-tmac
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
