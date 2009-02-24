@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2007/07/04 20:54:52 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/24 00:58:10 cube Exp $
 #
 
-DISTNAME=	rbldnsd_0.996a
+DISTNAME=	rbldnsd_0.996b
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	net
 MASTER_SITES=	http://www.corpit.ru/mjt/rbldnsd/
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.corpit.ru/mjt/rbldnsd/
 COMMENT=	Efficient DNS daemon to serve DNSBL zones
 
-WRKSRC=		${WRKDIR}/rbldnsd-0.996a
+WRKSRC=		${WRKDIR}/rbldnsd-0.996b
 HAS_CONFIGURE=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,8 +27,8 @@ PKG_GROUPS=	${RBLDNSD_GROUP}
 PKG_USERS=	${RBLDNSD_USER}:${RBLDNSD_GROUP}
 PKG_HOME.${RBLDNSD_USER}=	${RBLDNSD_DIR}
 
-PKG_GROUPS_VARS+=	RBLDNSD_GROUP
-PKG_USERS_VARS+=	RBLDNSD_USER
+PKG_GROUPS_VARS=	RBLDNSD_GROUP
+PKG_USERS_VARS=		RBLDNSD_USER
 
 FILES_SUBST+=	RBLDNSD_USER=${RBLDNSD_USER} RBLDNSD_GROUP=${RBLDNSD_GROUP}
 RCD_SCRIPTS=	rbldnsd
@@ -38,10 +40,12 @@ RBLDNSD_DOCS=	NEWS README.user
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/rbldnsd
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rbldnsd ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/rbldnsd.8 ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_PROGRAM} ${WRKSRC}/rbldnsd ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/rbldnsd.8 \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 	set -e; for doc in ${RBLDNSD_DOCS}; do \
-	    ${INSTALL_DATA} ${WRKSRC}/"$$doc" ${PREFIX}/share/doc/rbldnsd/; \
+	    ${INSTALL_DATA} ${WRKSRC}/"$$doc" \
+	    ${DESTDIR}/${PREFIX}/share/doc/rbldnsd/; \
 	    done
 
 .include "../../mk/bsd.pkg.mk"
