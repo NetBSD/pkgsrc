@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.744 2009/02/24 07:54:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.745 2009/02/24 09:36:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1001,3 +1001,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/g-wrap to 1.9.12 [gdt 2009-02-24]
 	Updated net/delegate to 9.9.1 [rh 2009-02-24]
 	Updated devel/doxygen to 1.5.8 [wiz 2009-02-24]
+	Updated net/libupnp to 1.6.6nb2 [obache 2009-02-24]
