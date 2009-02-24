@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7864 2009/02/22 22:33:19 wiz Exp $
+$NetBSD: TODO,v 1.7865 2009/02/24 00:45:25 cube Exp $
 
 Suggested new packages
 ======================
@@ -815,7 +815,6 @@ Suggested package updates
 	o libmpd-0.17.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
-	o libnids-1.21
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
