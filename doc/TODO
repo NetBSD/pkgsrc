@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7865 2009/02/24 00:45:25 cube Exp $
+$NetBSD: TODO,v 1.7866 2009/02/24 01:00:16 snj Exp $
 
 Suggested new packages
 ======================
@@ -1090,7 +1090,7 @@ Suggested package updates
 	o py-metakit-2.4.9.6
 	o py-moin-1.8.2
 	o py-musicbrainz-0.4.1
-	o py-mutagen-1.11
+	o py-mutagen-1.15
 	o py-psycopg-2.0.8
 	o py-pytz-2009a
 	o py-reportlab-2.2
