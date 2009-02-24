@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.747 2009/02/24 12:04:19 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.748 2009/02/24 12:08:46 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libupnp to 1.6.6nb2 [obache 2009-02-24]
 	Updated finance/gnucash to 2.2.9 [wiz 2009-02-24]
 	Updated shells/bash to 4.0 [wiz 2009-02-24]
+	Added textproc/p5-Text-Unidecode version 0.04 [tonnerre 2009-02-24]
