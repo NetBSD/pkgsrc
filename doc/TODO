@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7866 2009/02/24 01:00:16 snj Exp $
+$NetBSD: TODO,v 1.7867 2009/02/24 03:25:55 rh Exp $
 
 Suggested new packages
 ======================
@@ -516,7 +516,6 @@ Suggested package updates
 	o ddclient-3.7.3
 	o ddrescue-1.9
 	o defendguin-0.0.11
-	o delegate-9.9.0
 	o devIL-1.7.7
 	o devhelp-0.22
 	o dhid-5.3
