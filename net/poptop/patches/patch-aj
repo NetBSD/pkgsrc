@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2009/02/24 21:22:41 cube Exp $
+
+--- plugins/Makefile.orig	2004-05-21 09:26:37.000000000 +0000
++++ plugins/Makefile
+@@ -20,8 +20,8 @@ all:	$(PLUGINS)
+ LIBDIR	= $(DESTDIR)$(prefix)/lib/pptpd
+ 
+ install: $(PLUGINS)
+-	$(INSTALL) -d $(LIBDIR)
+-	$(INSTALL) $? $(LIBDIR)
++	$(BSD_INSTALL_LIB_DIR) $(LIBDIR)
++	$(BSD_INSTALL_LIB) $? $(LIBDIR)
+ 
+ uninstall:
+ 	rm -f $(LIBDIR)$(PLUGINS)

@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.16 2006/11/11 16:50:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2009/02/24 21:22:41 cube Exp $
 #
 
-DISTNAME=	pptpd-1.2.1
+DISTNAME=	pptpd-1.3.0
 PKGNAME=	${DISTNAME:S/pptpd/poptop/}
-PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poptop/}
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poptop.org/
 COMMENT=	PPTP server with support for Microsoft VPN clients
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake
