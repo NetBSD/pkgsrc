@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.746 2009/02/24 11:55:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.747 2009/02/24 12:04:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1003,3 +1003,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/doxygen to 1.5.8 [wiz 2009-02-24]
 	Updated net/libupnp to 1.6.6nb2 [obache 2009-02-24]
 	Updated finance/gnucash to 2.2.9 [wiz 2009-02-24]
+	Updated shells/bash to 4.0 [wiz 2009-02-24]
