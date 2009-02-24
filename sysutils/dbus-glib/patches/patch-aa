@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2009/01/07 20:57:43 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2009/02/24 15:41:29 wiz Exp $
 
---- dbus/Makefile.in.orig	2008-12-04 21:55:48.000000000 +0100
+--- dbus/Makefile.in.orig	2009-02-02 20:41:21.000000000 +0000
 +++ dbus/Makefile.in
-@@ -382,7 +382,7 @@ dbus_binding_tool_SOURCES = \
+@@ -384,7 +384,7 @@ dbus_binding_tool_SOURCES = \
  	dbus-glib-tool.c
  
- dbus_binding_tool_LDADD = libdbus-gtool.la libdbus-glib-1.la $(DBUS_LIBS) $(DBUS_GLIB_LIBS) -lexpat
--profiledir = $(sysconfdir)/profile.d
-+profiledir = $(prefix)/share/examples/dbus-glib
- @DBUS_BASH_COMPLETION_TRUE@profile_SCRIPTS = dbus-bash-completion.sh
+ dbus_binding_tool_LDADD = $(builddir)/libdbus-gtool.la $(builddir)/libdbus-glib-1.la $(DBUS_LIBS) $(DBUS_GLIB_LIBS) -lexpat
+-completiondir = $(sysconfdir)/bash_completion.d
++completiondir = $(prefix)/share/examples/dbus-glib
+ @DBUS_BASH_COMPLETION_TRUE@completion_SCRIPTS = dbus-bash-completion.sh
  dbus_bash_completion_helper_SOURCES = \
  	dbus-bash-completion-helper.c
