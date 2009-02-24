@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/24 00:42:29 cube Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/24 00:44:26 cube Exp $
 #
 
 DISTNAME=	libnids-1.23
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS=	pkg-config
+USE_TOOLS+=	pkg-config
 
 BUILDLINK_DEPMETHOD.libpcap=	build
 
