@@ -1,8 +1,0 @@
-$NetBSD: patch-ah,v 1.1 2006/10/22 11:18:39 wiz Exp $
-
---- po/LINGUAS.orig	2006-01-10 22:51:33.000000000 +0000
-+++ po/LINGUAS
-@@ -1,2 +1,2 @@
- # Set of available languages.
--en@quot en@boldquot ru
-+en@quot en@boldquot
