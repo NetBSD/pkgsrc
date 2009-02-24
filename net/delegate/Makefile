@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile,v 1.37 2009/02/24 03:24:15 rh Exp $
 
-DISTNAME=	delegate9.7.7
-PKGNAME=	delegate-9.7.7
+DISTNAME=	delegate9.9.1
+PKGNAME=	delegate-9.9.1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://etlport.etl.go.jp/pub/DeleGate/ \
@@ -12,7 +12,7 @@ MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
 		ftp://ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/ \
 		ftp://ftp.ecrc.de/ftp/data/ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/
 
-MAINTAINER=	rh@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/delegate/
 COMMENT=	General purpose TCP/IP proxy system
 
@@ -20,6 +20,7 @@ COMMENT=	General purpose TCP/IP proxy system
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		DELEGATE_MANAGER
+BUILD_DEFS+=		VARBASE
 DELEGATE_MANAGER?=	root@localhost
 
 RCD_SCRIPTS=		delegated
