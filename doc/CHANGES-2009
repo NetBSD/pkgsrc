@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.738 2009/02/23 23:20:28 cube Exp $
+$NetBSD: CHANGES-2009,v 1.739 2009/02/24 00:09:28 cube Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -994,3 +994,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX to 3.0nb3 [minskim 2009-02-23]
 	Added www/p5-WordPress-XMLRPC version 1.18 [imil 2009-02-23]
 	Removed net/netbsd-tap [cube 2009-02-23]
+	Updated graphics/nvtv to 0.4.7nb5 [cube 2009-02-24]
+	Removed graphics/nvtv-gtk2 [cube 2009-02-24]
