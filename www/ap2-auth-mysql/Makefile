@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/06/30 16:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/24 17:51:10 cube Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -8,7 +8,7 @@ CATEGORIES=		www databases
 MASTER_SITES=		ftp://ftp.kcilink.com/pub/
 DISTFILES=		${DISTNAME}.gz mysql-group-auth.txt
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.kcilink.com/pub/
 COMMENT=		Module to allow Apache 2 authentication against a MySQL database
 
@@ -20,10 +20,14 @@ EXTRACT_ONLY=		${DISTNAME}.gz
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 NO_CONFIGURE=		yes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 APACHE_MODULE_NAME=	mod_auth_mysql
 DOC_DIR=		${PREFIX}/share/doc/${APACHE_MODULE_NAME}
 
 PKG_APACHE_ACCEPTED=	apache2 apache22
+
+INSTALLATION_DIRS+=	${DOC_DIR} lib/httpd
 
 post-extract:
 	${MKDIR} ${WRKSRC}
@@ -40,9 +44,10 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} &&								\
-	${APXS} -i -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_NAME}.la
-	${INSTALL_DATA_DIR} ${DOC_DIR}
-	${INSTALL_DATA} ${WRKSRC}/mysql-group-auth.txt ${DOC_DIR}
+	    libexecdir=$$(${APXS} -q LIBEXECDIR) &&				\
+	    ${APXS} -i -S LIBEXECDIR=${DESTDIR}"$${libexecdir}" 		\
+	      -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_NAME}.la
+	${INSTALL_DATA} ${WRKSRC}/mysql-group-auth.txt ${DESTDIR}${DOC_DIR}
 
 .include "../../mk/apache.mk"
 .include "../../mk/mysql.buildlink3.mk"
