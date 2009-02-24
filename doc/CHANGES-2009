@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.743 2009/02/24 03:25:55 rh Exp $
+$NetBSD: CHANGES-2009,v 1.744 2009/02/24 07:54:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/rbldnsd to 0.996b [cube 2009-02-24]
 	Updated devel/g-wrap to 1.9.12 [gdt 2009-02-24]
 	Updated net/delegate to 9.9.1 [rh 2009-02-24]
+	Updated devel/doxygen to 1.5.8 [wiz 2009-02-24]
