@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/24 17:51:10 cube Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/24 17:53:03 cube Exp $
 #
 
 DISTNAME=		mod_auth_mysql.c
@@ -44,7 +44,7 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} &&								\
-	    libexecdir=$$(${APXS} -q LIBEXECDIR) &&				\
+	    libexecdir=`${APXS} -q LIBEXECDIR` &&				\
 	    ${APXS} -i -S LIBEXECDIR=${DESTDIR}"$${libexecdir}" 		\
 	      -n ${APACHE_MODULE_NAME} ${APACHE_MODULE_NAME}.la
 	${INSTALL_DATA} ${WRKSRC}/mysql-group-auth.txt ${DESTDIR}${DOC_DIR}
