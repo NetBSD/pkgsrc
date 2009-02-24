@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.741 2009/02/24 00:58:39 cube Exp $
+$NetBSD: CHANGES-2009,v 1.742 2009/02/24 02:30:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -998,3 +998,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed graphics/nvtv-gtk2 [cube 2009-02-24]
 	Updated net/libnids to 1.23 [cube 2009-02-24]
 	Updated net/rbldnsd to 0.996b [cube 2009-02-24]
+	Updated devel/g-wrap to 1.9.12 [gdt 2009-02-24]
