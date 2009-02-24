@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1 2009/02/24 10:53:02 markd Exp $
+
+Remove LWP::Debug calls as they have been deprecated
+
+--- lib/LWP/Authen/Negotiate.pm.orig	2006-03-08 09:09:25.000000000 +1300
++++ lib/LWP/Authen/Negotiate.pm
+@@ -34,7 +34,6 @@ use GSSAPI 0.18;
+ 
+ sub authenticate
+   {
+-    LWP::Debug::debug("authenticate() version $VERSION called");
+     my ($class,$ua,$proxy,$auth_param,$response,$request,$arg,$size) = @_;
+ 
+     my $uri = URI->new($request->uri);
+@@ -50,7 +49,6 @@ sub authenticate
+ 	# in case of broken DNS or /etc/hosts
+ 	# or missing Kerberosprincipal for target system
+ 	#
+-        LWP::Debug::debug("target hostname $targethost");
+         $status  = GSSAPI::Name->import(
+                       $target,
+                       join( '@', 'HTTP', $targethost ),
+@@ -60,7 +58,6 @@ sub authenticate
+         $status  = $target->display( $tname );
+ 	last TRY if  ( $status->major != GSS_S_COMPLETE );
+ 
+-        LWP::Debug::debug("GSSAPI servicename $tname");
+         my $auth_header = $proxy ? 'Proxy-Authorization'
+ 	                :          'Authorization';
+ 
+@@ -92,7 +89,6 @@ sub authenticate
+ 	                      undef, $otoken, undef, undef);
+         if  (    $status->major == GSS_S_COMPLETE
+ 	      or $status->major == GSS_S_CONTINUE_NEEDED   ) {
+-            LWP::Debug::debug( 'successfull $ctx->init()');
+ 	    my $referral = $request->clone;
+ 	    $referral->header( $auth_header => "Negotiate ".encode_base64($otoken,""));
+ 	    return $ua->request( $referral, $arg, $size, $response );
+@@ -102,8 +98,6 @@ sub authenticate
+     # this is the errorhandler,
+     # the try block is normally leaved via return
+     #
+-    LWP::Debug::debug( $status->generic_message());
+-    LWP::Debug::debug( $status->specific_message() );
+     return $response;
+ 
+ }
