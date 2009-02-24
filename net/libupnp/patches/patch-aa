@@ -1,17 +1,32 @@
-$NetBSD: patch-aa,v 1.9 2008/05/13 11:20:02 obache Exp $
+$NetBSD: patch-aa,v 1.10 2009/02/24 09:36:23 obache Exp $
 
 --- threadutil/src/ThreadPool.c.orig	2008-04-10 16:03:04.000000000 +0000
 +++ threadutil/src/ThreadPool.c
-@@ -234,7 +234,7 @@ static int SetPolicyType( PolicyType in 
+@@ -234,12 +234,20 @@ static int SetPolicyType( PolicyType in 
  	return 0;
  #elif defined(WIN32)
  	return sched_setscheduler( 0, in );
 -#elif defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING > 0
 +#elif defined(_POSIX_PRIORITY_SCHEDULING) && _POSIX_PRIORITY_SCHEDULING >= 200112L
++#if defined(__NetBSD__)
++	if (in != SCHED_OTHER) {
++#endif
  	struct sched_param current;
  
  	sched_getparam( 0, &current );
-@@ -261,7 +261,7 @@ static int SetPolicyType( PolicyType in 
+-	current.sched_priority = DEFAULT_SCHED_PARAM;
+-	return sched_setscheduler( 0, in, &current );
++	current.sched_priority = sched_get_priority_min(in);
++	return sched_setscheduler( 0, in, &current ) == -1 ? -1 : 0;
++#if defined(__NetBSD__)
++	} else {
++	return 0;
++	}
++#endif
+ #else
+ 	return 0;
+ #endif
+@@ -261,7 +269,7 @@ static int SetPolicyType( PolicyType in 
   *****************************************************************************/
  static int SetPriority( ThreadPriority priority )
  {
@@ -20,7 +35,7 @@ $NetBSD: patch-aa,v 1.9 2008/05/13 11:20:02 obache Exp $
  	int currentPolicy;
  	int minPriority = 0;
  	int maxPriority = 0;
-@@ -389,7 +389,7 @@ static void SetSeed()
+@@ -389,7 +397,7 @@ static void SetSeed()
  	gettimeofday(&t, NULL);
  #if defined(WIN32)
   	srand( ( unsigned int )t.tv_usec + (unsigned int)ithread_get_current_thread_id().p );
