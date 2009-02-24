@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/01/01 06:26:41 cube Exp $
+$NetBSD: patch-ae,v 1.2 2009/02/24 21:22:41 cube Exp $
 
---- Makefile.in.orig	2004-12-30 19:56:10.000000000 +0100
+--- Makefile.in.orig	2005-08-03 07:47:42.000000000 +0000
 +++ Makefile.in
 @@ -14,7 +14,7 @@
  
@@ -20,17 +20,17 @@ $NetBSD: patch-ae,v 1.1 2005/01/01 06:26:41 cube Exp $
  subdir = .
  DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
  	$(srcdir)/Makefile.in $(srcdir)/config.h.in \
-@@ -55,9 +55,6 @@ CONFIG_CLEAN_FILES =
- am__installdirs = "$(DESTDIR)$(sbindir)" "$(DESTDIR)$(man5dir)" "$(DESTDIR)$(man8dir)"
+@@ -56,9 +56,6 @@ am__installdirs = "$(DESTDIR)$(sbindir)"
+ 	"$(DESTDIR)$(man8dir)"
  sbinPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
  PROGRAMS = $(sbin_PROGRAMS)
 -am_bcrelay_OBJECTS = bcrelay.$(OBJEXT)
 -bcrelay_OBJECTS = $(am_bcrelay_OBJECTS)
 -bcrelay_LDADD = $(LDADD)
- am_pptpctrl_OBJECTS = pptpctrl.$(OBJEXT) ctrlpacket.$(OBJEXT) \
- 	inststr.$(OBJEXT) compat.$(OBJEXT) pptpgre.$(OBJEXT) \
- 	ppphdlc.$(OBJEXT)
-@@ -76,8 +73,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
+ am_pptpctrl_OBJECTS = pqueue.$(OBJEXT) pptpctrl.$(OBJEXT) \
+ 	ctrlpacket.$(OBJEXT) inststr.$(OBJEXT) compat.$(OBJEXT) \
+ 	pptpgre.$(OBJEXT) ppphdlc.$(OBJEXT)
+@@ -77,8 +74,8 @@ COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUD
  	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
@@ -41,7 +41,7 @@ $NetBSD: patch-ae,v 1.1 2005/01/01 06:26:41 cube Exp $
  man5dir = $(mandir)/man5
  man8dir = $(mandir)/man8
  NROFF = nroff
-@@ -285,9 +282,6 @@ uninstall-sbinPROGRAMS:
+@@ -288,9 +285,6 @@ uninstall-sbinPROGRAMS:
  
  clean-sbinPROGRAMS:
  	-test -z "$(sbin_PROGRAMS)" || rm -f $(sbin_PROGRAMS)
