@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/01/07 20:57:43 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/02/24 15:41:29 wiz Exp $
 #
 
-DISTNAME=	dbus-glib-0.78
+DISTNAME=	dbus-glib-0.80
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-glib/
 
@@ -28,21 +28,11 @@ CONFIGURE_ARGS+=	--disable-xml-docs
 CONFIGURE_ARGS+=	--enable-checks
 CONFIGURE_ARGS+=	--with-xml=expat
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus-glib
-PKG_SUPPORTED_OPTIONS+=	debug
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-asserts
-CONFIGURE_ARGS+=	--enable-tests
-CONFIGURE_ARGS+=	--enable-verbose-mode
-.endif
-
-BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.1
+.include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.1
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
