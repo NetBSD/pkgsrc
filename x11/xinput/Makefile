@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:17 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/25 16:10:17 wiz Exp $
 #
 
-DISTNAME=	xinput-1.3.0
+DISTNAME=	xinput-1.4.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
@@ -14,8 +14,9 @@ PKG_DESTDIR_SUPPORT= 	user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-BUILDLINK_API_DEPENDS.inputproto+= 	inputproto>=1.4
-
+BUILDLINK_API_DEPENDS.inputproto+= 	inputproto>=1.5
+.include "../../x11/inputproto/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libXi+=		libXi>=1.2.0
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 
