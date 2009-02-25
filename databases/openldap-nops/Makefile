@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/01 08:05:06 manu Exp $
+# $NetBSD: Makefile,v 1.3 2009/02/25 20:31:41 manu Exp $
 
 PKGNAME=		${DISTNAME:S/-/-nops-/}
 COMMENT=		Remove null-ops for OpenLDAP
@@ -20,7 +20,7 @@ do-install:
 	${LIBTOOL} --mode=install 					\
 		   ${INSTALL_DATA}					\
 		   ${WRKSRC}/contrib/slapd-modules/nops/nops.la		\
-		   ${PREFIX}/lib/openldap
+		   ${DESTDIR}${PREFIX}/lib/openldap
 
 .include "../../databases/openldap/Makefile.common"
 
