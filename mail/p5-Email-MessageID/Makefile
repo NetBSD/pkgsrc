@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/02/22 12:12:17 he Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/25 20:09:20 sno Exp $
 
 DISTNAME=	Email-MessageID-1.401
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Email-Address>=1.80:../../mail/p5-Email-Address
 DEPENDS+=	{perl>5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
-DEPENDS+=	p5-Sys-Hostname-Long>=1.1:../../sysutils/p5-Sys-Hostname-Long
 
 PERL5_PACKLIST= auto/Email/MessageID/.packlist
 
