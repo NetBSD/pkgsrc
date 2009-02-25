@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.35 2009/02/16 13:11:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.36 2009/02/25 23:39:36 wiz Exp $
 #
 # used by net/mldonkey/Makefile
 # used by net/mldonkey-gui/Makefile
 
-DISTNAME=	mldonkey-2.9.7
+DISTNAME=	mldonkey-3.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
