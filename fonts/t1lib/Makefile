@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/01/04 02:25:27 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2009/02/25 07:54:07 sno Exp $
 
 DISTNAME=	t1lib-5.1.2
 PKGREVISION=	1
@@ -29,6 +29,8 @@ PLIST_VARS+=	x11
 
 .if !empty(PKG_OPTIONS:Mx11)
 PLIST.x11=	yes
+.else
+CONFIGURE_ARGS+=	--without-x
 .endif
 
 SUBST_CLASSES+=		paths
