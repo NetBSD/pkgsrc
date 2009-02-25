@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/05 13:08:49 he Exp $
+# $NetBSD: Makefile,v 1.9 2009/02/25 20:51:11 sno Exp $
 
 DISTNAME=	Email-Send-2.194
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Email-Simple>=1.92:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Module-Pluggable>=2.97:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Return-Value>=1.28:../../devel/p5-Return-Value
 
-PERL5_REQD+=	5.6.0
+PERL5_REQD+=	5.8.1
 
 PERL5_PACKLIST=	auto/Email/Send/.packlist
 
