@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/23 07:00:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/02/25 19:50:19 drochner Exp $
 bin/galculator
 man/man1/galculator.1
 share/applications/galculator.desktop
@@ -9,21 +9,24 @@ share/galculator/glade/dispctrl_bottom.glade
 share/galculator/glade/dispctrl_right.glade
 share/galculator/glade/dispctrl_right_vertical.glade
 share/galculator/glade/main_frame.glade
+share/galculator/glade/main_frame_hildon.glade
 share/galculator/glade/paper_view.glade
 share/galculator/glade/prefs.glade
+share/galculator/glade/prefs-ume.glade
 share/galculator/glade/scientific_buttons.glade
 share/locale/de/LC_MESSAGES/galculator.mo
 share/locale/es_MX/LC_MESSAGES/galculator.mo
 share/locale/fr/LC_MESSAGES/galculator.mo
 share/locale/ja/LC_MESSAGES/galculator.mo
 share/locale/pl/LC_MESSAGES/galculator.mo
+share/locale/pt/LC_MESSAGES/galculator.mo
 share/locale/pt_BR/LC_MESSAGES/galculator.mo
 share/locale/ro/LC_MESSAGES/galculator.mo
 share/locale/ru/LC_MESSAGES/galculator.mo
 share/locale/sk/LC_MESSAGES/galculator.mo
-share/pixmaps/galculator/galculator.svg
-share/pixmaps/galculator/galculator_48x48.png
-@dirrm share/pixmaps/galculator
+share/pixmaps/galculator.svg
+share/pixmaps/galculator.png
+share/pixmaps/galculator.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/galculator/glade
 @dirrm share/galculator
