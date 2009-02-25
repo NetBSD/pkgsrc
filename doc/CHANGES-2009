@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.764 2009/02/25 08:24:23 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.765 2009/02/25 09:25:17 imil Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1027,3 +1027,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-B-Hooks-EndOfScope to 0.07 [he 2009-02-24]
 	Updated devel/doxygen to 1.5.8nb1 [minskim 2009-02-25]
 	Updated textproc/py-vobject to 0.8.1bnb2 [kleink 2009-02-25]
+	Added devel/py-pytemplate version 1.5.1 [imil 2009-02-25]
