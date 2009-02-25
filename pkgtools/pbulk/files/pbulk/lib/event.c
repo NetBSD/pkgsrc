@@ -1,4 +1,4 @@
-/* $NetBSD: event.c,v 1.4 2009/01/31 23:25:38 joerg Exp $ */
+/* $NetBSD: event.c,v 1.5 2009/02/25 19:31:53 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,12 @@
 #ifdef __sun
 #include <sys/filio.h>
 #endif
-#include <nbcompat/poll.h>
+#if HAVE_POLL_H
+#include <poll.h>
+#endif
+#if HAVE_SYS_POLL_H
+#include <sys/poll.h>
+#endif
 #include <nbcompat/time.h>
 #include <nbcompat/stdlib.h>
 #include <nbcompat/unistd.h>
