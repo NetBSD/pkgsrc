@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.762 2009/02/24 23:39:43 he Exp $
+$NetBSD: CHANGES-2009,v 1.763 2009/02/25 03:08:23 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1025,3 +1025,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Translator to 0.09004 [he 2009-02-24]
 	Updated devel/p5-Variable-Magic to 0.31 [he 2009-02-24]
 	Updated devel/p5-B-Hooks-EndOfScope to 0.07 [he 2009-02-24]
+	Updated devel/doxygen to 1.5.8nb1 [minskim 2009-02-25]
