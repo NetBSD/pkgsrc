@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/03/01 03:09:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/02/25 12:38:36 rillig Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSLANG_BUILDLINK3_MK:=	${LIBSLANG_BUILDLINK3_MK}+
-
-.include "../../mk/bsd.fast.prefs.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	libslang
