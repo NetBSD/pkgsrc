@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2009/02/24 07:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2009/02/25 03:07:42 minskim Exp $
 
 DISTNAME=	doxygen-1.5.8.src
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 		http://ftp.stack.nl/pub/users/dimitri/
@@ -9,6 +10,8 @@ MASTER_SITES=	ftp://ftp.stack.nl/pub/users/dimitri/ \
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.doxygen.org/
 COMMENT=	Documentation system for C++, Java, IDL and C
+
+DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
