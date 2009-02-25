@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.784 2009/02/25 23:29:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.785 2009/02/25 23:39:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1056,3 +1056,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Hash-MoreUtils version 0.01 [sno 2009-02-25]
 	Added devel/p5-Scalar-Util-Refcount version 1.0.2 [sno 2009-02-25]
 	Updated x11/xf86-video-ati to 6.11.0 [wiz 2009-02-25]
+	Updated net/mldonkey to 3.0.0 [wiz 2009-02-25]
