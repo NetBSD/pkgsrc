@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/09/20 18:53:11 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2009/02/25 17:48:56 minskim Exp $
 
 DISTNAME=		gri-2.12.18
 CATEGORIES=		graphics
@@ -11,6 +11,7 @@ COMMENT=		Language for scientific graphics applications
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
