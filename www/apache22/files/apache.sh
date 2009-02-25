@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.2 2008/10/12 12:22:25 tron Exp $
+# $NetBSD: apache.sh,v 1.3 2009/02/25 15:39:38 tron Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -12,48 +12,48 @@
 # apache_start="start"	# set to "startssl" to allow HTTPS connections;
 #			# this variable is optional
 
+name="apache"
+
 if [ -f /etc/rc.subr ]
 then
 	. /etc/rc.subr
-fi
 
-name="apache"
-rcvar=$name
-command="@PREFIX@/sbin/httpd"
-pidfile="/var/run/httpd.pid"
-ctl_command="@PREFIX@/sbin/apachectl"
-required_files="@PKG_SYSCONFDIR@/httpd.conf"
-extra_commands="reload"
-start_cmd="apache_doit start"
-stop_cmd="apache_doit stop"
-reload_cmd="apache_doit reload"
+	rcvar=$name
+	command="@PREFIX@/sbin/httpd"
+	command_args="-k start"
+	pidfile="@VARBASE@/run/httpd.pid"
+	required_files="@PKG_SYSCONFDIR@/httpd.conf"
+	extra_commands="reload"
+	reload_cmd="$command -k graceful"
 
-apache_doit ()
-{
-	: ${apache_start:=start}
-
-	case $1 in
-	start)	action=${apache_start} ;;
-	reload)	action=graceful ;;
-	*)	action=$1 ;;
-	esac
+	load_rc_config $name
+	run_rc_command "$1"
+else
+	ctl_command="@PREFIX@/sbin/apachectl"
 
 	if [ ! -x ${ctl_command} ]; then
 		return
 	fi
 
-	case ${action} in
-	start|startssl)	@ECHO@ "Starting ${name}." ;;
-	stop)		@ECHO@ "Stopping ${name}." ;;
+	case "$1" in
+	start)
+		@ECHO@ "Starting ${name}."
+		${ctl_command} start
+		;;
+	stop)
+		@ECHO@ "Stopping ${name}."
+		${ctl_command} stop
+		;;
+	reload)
+		${ctl_command} graceful
+		;;
+	restart)
+		"$0" stop
+		sleep 10
+		"$0" start
+		;;
+	*)
+		${ctl_command} "$1"
+		;;
 	esac
-
-	${ctl_command} ${action}
-}
-
-if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]
-then
-	load_rc_config $name
-	run_rc_command "$1"
-else
-	apache_doit "$1"
 fi
