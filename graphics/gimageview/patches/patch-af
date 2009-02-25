@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/image_view/Makefile.in.orig	2009-02-25 01:54:27.000000000 +0100
++++ plugins/image_view/Makefile.in
+@@ -347,8 +347,8 @@ target_alias = @target_alias@
+ CLEANFILES = *~ .deps/* .*.swp .*.swo
+ @ENABLE_MPLAYER_TRUE@gimv_mplayer_plugin_LTLIBRARIES = libgimv_mplayer.la
+ @ENABLE_XINE_TRUE@gimv_xine_plugin_LTLIBRARIES = libgimv_xine.la
+-gimv_mplayer_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_VIEW_PLUGIN_DIR)
+-gimv_xine_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_VIEW_PLUGIN_DIR)
++gimv_mplayer_plugindir = $(plugindir)/$(IMAGE_VIEW_PLUGIN_DIR)
++gimv_xine_plugindir = $(plugindir)/$(IMAGE_VIEW_PLUGIN_DIR)
+ INCLUDES = \
+ 	$(GTK_CFLAGS) \
+ 	$(XINE_CFLAGS) \
