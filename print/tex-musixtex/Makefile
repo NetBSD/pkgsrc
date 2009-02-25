@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/25 17:53:50 minskim Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -18,13 +18,6 @@ WRKSRC=		${WRKDIR}/musixtex-T112
 NO_CONFIGURE=	yes
 USE_DIRS+=	texmf-1.0
 
-.include "../../mk/bsd.prefs.mk"
-.if exists(${LOCALBASE}/bin/initex)
-INITEX=	initex		# teTeX2
-.else
-INITEX=	tex -ini	# teTeX3
-.endif
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../print/teTeX/module.mk"
@@ -34,7 +27,7 @@ do-build:
 	${CP} -f ${WRKSRC}/system/dos/musixtex.ins \
 		${WRKSRC}/tex
 	cd ${WRKSRC}/tex ; \
-		(TEXFONTS=${WRKSRC}/tfm ${INITEX} '&tex musixtex.ins \dump')
+		(TEXFONTS=${WRKSRC}/tfm tex -ini '&tex musixtex.ins \dump')
 	@${ECHO} "======> Building musixflx executable"
 	cd ${WRKSRC}/system/c-source; ${CC} -o musixflx musixflx.c
 
