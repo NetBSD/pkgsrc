@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.768 2009/02/25 13:29:45 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.769 2009/02/25 13:51:04 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1031,3 +1031,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight-translations to 20090223 [taca 2009-02-25]
 	Updated emulators/mednafen to 0.8.11 [wiz 2009-02-25]
 	Updated devel/p5-Algorithm-Dependency to 1.108 [rhaen 2009-02-25]
+	Updated mail/p5-Email-MIME-Modifier to 1.443 [rhaen 2009-02-25]
