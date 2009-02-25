@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.33 2009/02/25 17:18:08 minskim Exp $
 
 DISTNAME=	latex2html-2002-2-1
 PKGNAME=	latex2html-2002.2.1
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	textproc converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
 
@@ -10,6 +10,7 @@ MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	http://www.latex2html.org/
 COMMENT=	LaTeX to HTML converter
 
+DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	netpbm>=10.29nb2:../../graphics/netpbm
 
 TEX_ACCEPTED=		teTeX3
