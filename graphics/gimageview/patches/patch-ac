@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/archiver/Makefile.in.orig	2009-02-25 01:53:13.000000000 +0100
++++ plugins/archiver/Makefile.in
+@@ -346,7 +346,7 @@ archiver_plugin_LTLIBRARIES = \
+ 	libgimv_tar_extarc.la \
+ 	libgimv_zip_extarc.la
+ 
+-archiver_plugindir = $(DESTDIR)$(plugindir)/$(ARCHIVER_PLUGIN_DIR)
++archiver_plugindir = $(plugindir)/$(ARCHIVER_PLUGIN_DIR)
+ INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/src $(GTK_CFLAGS)
+ libgimv_lha_extarc_la_LDFLAGS = -module -avoid-version $(no_undefined) $(GIMV_LIBS)
+ libgimv_lha_extarc_la_SOURCES = lha-ext.c lha-ext.h

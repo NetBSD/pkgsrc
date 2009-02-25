@@ -1,0 +1,25 @@
+$NetBSD: patch-ak,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- etc/Makefile.in.orig	2009-02-25 01:57:20.000000000 +0100
++++ etc/Makefile.in
+@@ -304,17 +304,17 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-desktopdir = $(DESTDIR)$(datadir)/gnome/apps/Graphics
++desktopdir = $(datadir)/gnome/apps/Graphics
+ desktop_in_files = gimageview.desktop.in
+ #desktop_DATA = gimageview.desktop
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop) 
+ icondir = $(datadir)/pixmaps
+ icon_DATA = gimv.png
+-prefsdir = $(DESTDIR)$(gimv_datadir)
++prefsdir = $(gimv_datadir)
+ prefs_DATA = \
+ 	gtkrc
+ 
+-mplayerrcdir = $(DESTDIR)$(gimv_datadir)
++mplayerrcdir = $(gimv_datadir)
+ mplayerrc_DATA = \
+ 	mplayerrc
+ 
