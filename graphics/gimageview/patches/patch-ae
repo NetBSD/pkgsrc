@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/image_saver/Makefile.in.orig	2009-02-25 01:53:42.000000000 +0100
++++ plugins/image_saver/Makefile.in
+@@ -342,7 +342,7 @@ image_saver_plugin_LTLIBRARIES = \
+ 	libgimv_pnm_saver.la \
+ 	libgimv_xvpics_saver.la
+ 
+-image_saver_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_SAVER_PLUGIN_DIR)
++image_saver_plugindir = $(plugindir)/$(IMAGE_SAVER_PLUGIN_DIR)
+ INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/src $(GTK_CFLAGS)
+ libgimv_png_saver_la_LDFLAGS = -module -avoid-version $(no_undefined) $(GIMV_LIBS)
+ libgimv_png_saver_la_SOURCES = png_saver.c
