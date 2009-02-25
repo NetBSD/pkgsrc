@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/06/12 02:14:36 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2009/02/25 03:33:03 minskim Exp $
 
 DISTNAME=	pari-2.1.6
 PKGREVISION=	2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pari.math.u-bordeaux.fr/
 COMMENT=	Software package for computer-aided number theory
+
+BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
