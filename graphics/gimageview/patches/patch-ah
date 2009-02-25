@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/thumbnail/Makefile.in.orig	2009-02-25 01:55:31.000000000 +0100
++++ plugins/thumbnail/Makefile.in
+@@ -377,7 +377,7 @@ thumbnail_plugin_LTLIBRARIES = \
+ 	libgimv_ee_thumb.la \
+ 	libgimv_xvpics_thumb.la
+ 
+-thumbnail_plugindir = $(DESTDIR)$(plugindir)/$(THUMBNAIL_PLUGIN_DIR)
++thumbnail_plugindir = $(plugindir)/$(THUMBNAIL_PLUGIN_DIR)
+ INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/src $(GTK_CFLAGS)
+ libgimv_thumb_la_LDFLAGS = -module -avoid-version $(no_undefined) $(GIMV_LIBS)
+ libgimv_thumb_la_SOURCES = gimv_thumb.c

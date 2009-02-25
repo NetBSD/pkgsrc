@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/thumbnail_view/Makefile.in.orig	2009-02-25 01:56:07.000000000 +0100
++++ plugins/thumbnail_view/Makefile.in
+@@ -330,7 +330,7 @@ target_alias = @target_alias@
+ thumbview_plugin_LTLIBRARIES = \
+ 	libgimv_thumbview_detail.la
+ 
+-thumbview_plugindir = $(DESTDIR)$(plugindir)/$(THUMBNAIL_VIEW_PLUGIN_DIR)
++thumbview_plugindir = $(plugindir)/$(THUMBNAIL_VIEW_PLUGIN_DIR)
+ INCLUDES = \
+ 	$(GTK_CFLAGS) \
+ 	-I$(top_srcdir) \

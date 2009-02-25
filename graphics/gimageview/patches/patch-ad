@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/image_loader/Makefile.in.orig	2009-02-25 01:52:40.000000000 +0100
++++ plugins/image_loader/Makefile.in
+@@ -450,14 +450,14 @@ image_loader_plugin_LTLIBRARIES = \
+ @ENABLE_SPI_TRUE@gimv_spi_loader_plugin_LTLIBRARIES = libgimv_spi_loader.la
+ @ENABLE_LIBRSVG_TRUE@gimv_rsvg_loader_plugin_LTLIBRARIES = libgimv_rsvg_loader.la
+ @ENABLE_WMF_TRUE@gimv_wmf_loader_plugin_LTLIBRARIES = libgimv_wmf_loader.la
+-image_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_imlib1_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_jpeg_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_mng_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_pixbuf_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_spi_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_rsvg_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+-gimv_wmf_loader_plugindir = $(DESTDIR)$(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++image_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_imlib1_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_jpeg_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_mng_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_pixbuf_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_spi_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_rsvg_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
++gimv_wmf_loader_plugindir = $(plugindir)/$(IMAGE_LOADER_PLUGIN_DIR)
+ INCLUDES = \
+ 	$(GTK_CFLAGS) \
+ 	$(GIMV_IMAGELIB_CFLAGS) \

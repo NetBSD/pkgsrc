@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- src/auto_completion.c.orig	2009-02-25 01:33:28.000000000 +0100
++++ src/auto_completion.c
+@@ -36,7 +36,6 @@
+ #include <gdk/gdkkeysyms.h>
+ #include <gtk/gtkentry.h>
+ #include <gtk/gtkframe.h>
+-#include <gtk/gtkclist.h>
+ #include <gtk/gtkmain.h>
+ #include <gtk/gtkwindow.h>
+ #include <gtk/gtkscrolledwindow.h>
