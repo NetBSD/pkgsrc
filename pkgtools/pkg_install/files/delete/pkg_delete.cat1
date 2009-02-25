@@ -5,12 +5,16 @@ NNAAMMEE
      age distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ddeelleettee [--DDddFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
+     ppkkgg__ddeelleettee [--AADDddFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
                 _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
      The ppkkgg__ddeelleettee command is used to delete packages that have been previ-
-     ously installed with the pkg_add(1) command.
+     ously installed with the pkg_add(1) command.  The given packages are
+     sorted, so that the dependencies of a package are deleted after the pack-
+     age.  Before any action is executed, ppkkgg__ddeelleettee checks for packages that
+     are marked as pprreesseerrvveedd or have depending packages left.  Unless the --ff
+     flag is given, ppkkgg__ddeelleettee stops on the first error.
 
 WWAARRNNIINNGG
      _S_i_n_c_e _t_h_e ppkkgg__ddeelleettee _c_o_m_m_a_n_d _m_a_y _e_x_e_c_u_t_e _s_c_r_i_p_t_s _o_r _p_r_o_g_r_a_m_s _p_r_o_v_i_d_e_d _b_y
@@ -35,6 +39,10 @@ OOPPTTIIOONNSS
              filenames may be specified and the Package Database will be con-
              sulted for the package to which the given file belongs.  These
              packages are then deinstalled.
+
+     --AA      Recursively remove all automatically installed packages that were
+             needed by the given packages and are no longer required.  See
+             also the --RR flag.
 
      --DD      If a deinstallation script exists for a given package, do not
              execute it.
@@ -84,17 +92,12 @@ OOPPTTIIOONNSS
              packages, the prefix will be set automatically to the installed
              location by pkg_add(1).
 
-     --RR      This option triggers a recursive delete of the given package and
-             any packages it depends on, unless some other package still needs
-             a dependent package.  This --RR option can be used to clean up by
-             deleting a package and all its then-unneeded dependent packages.
+     --RR      Recursively remove all packages that were needed by the given
+             packages and that have no other dependencies left.  This option
+             overrides the --AA flag.
 
-     --rr      ppkkgg__ddeelleettee first builds a list of all packages that require
-             (directly and indirectly) the one being deleted.  It then deletes
-             these packages using ppkkgg__ddeelleettee with the given options before
-             deleting the user specified package.  This --rr option can be used
-             to recursively delete a package and all of the packages which
-             depend on that package.
+     --rr      Recursively remove all packages that require one of the packages
+             given.
 
      --VV      Print version number and exit.
 
@@ -157,8 +160,7 @@ EENNVVIIRROONNMMEENNTT
                 _/_v_a_r_/_d_b_/_p_k_g_._r_e_f_c_o_u_n_t.
 
 SSEEEE AALLSSOO
-     pkg_add(1), pkg_admin(1), pkg_create(1), pkg_info(1), mktemp(3),
-     pkgsrc(7)
+     pkg_add(1), pkg_admin(1), pkg_create(1), pkg_info(1), pkgsrc(7)
 
 AAUUTTHHOORRSS
      Jordan Hubbard
@@ -168,5 +170,8 @@ AAUUTTHHOORRSS
      Hubert Feyrer
              NetBSD wildcard dependency processing, pkgdb, recursive "down"
              delete, etc.
+     Joerg Sonnenberger
+             Rewrote most of the code to compute correct order of deinstalla-
+             tion and to improve error handling.
 
-NetBSD 4.0                       July 30, 2008                      NetBSD 4.0
+NetBSD 5.0                       July 30, 2008                      NetBSD 5.0
