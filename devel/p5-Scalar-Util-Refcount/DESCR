@@ -1,0 +1,12 @@
+Provides two functions to show reference counts of Perl objects.
+
+This can be handy when testing/debugging and you want to know what the heck
+is going on.
+
+This is a trivial module. The documentation is longer than the code. Heck,
+the BSD license at the top of the file is longer than the code. It took
+longer to make it release-ready than it took to write it.
+
+Provides:
+  - refcount
+  - refcount_sv

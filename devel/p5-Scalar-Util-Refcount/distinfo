@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2009/02/25 22:33:47 sno Exp $
+
+SHA1 (Scalar-Util-Refcount-1.0.2.tar.gz) = 52ea69d212c349e3f26f2510f8c855cba81c26b7
+RMD160 (Scalar-Util-Refcount-1.0.2.tar.gz) = f8cdfce3ae4030aa18b711cfad2cd1ac4f2a9849
+Size (Scalar-Util-Refcount-1.0.2.tar.gz) = 18571 bytes
