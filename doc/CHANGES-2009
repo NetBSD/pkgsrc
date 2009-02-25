@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.782 2009/02/25 22:32:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.783 2009/02/25 22:35:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1054,3 +1054,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-MIME-Types to 1.27 [sno 2009-02-25]
 	Added devel/p5-IO-CaptureOutput version 0.11 [sno 2009-02-25]
 	Added devel/p5-Hash-MoreUtils version 0.01 [sno 2009-02-25]
+	Added devel/p5-Scalar-Util-Refcount version 1.0.2 [sno 2009-02-25]
