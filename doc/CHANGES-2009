@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.776 2009/02/25 17:18:49 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.777 2009/02/25 18:08:22 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1039,3 +1039,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-input-void to 1.2.0 [wiz 2009-02-25]
 	Updated x11/xinput to 1.4.0 [wiz 2009-02-25]
 	Updated textproc/latex2html to 2002.2.1nb8 [minskim 2009-02-25]
+	Updated textproc/tex2page to 20060131nb5 [minskim 2009-02-25]
