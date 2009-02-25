@@ -1,13 +1,26 @@
-$NetBSD: patch-af,v 1.1.1.1 2006/12/19 22:54:51 joerg Exp $
+$NetBSD: patch-af,v 1.2 2009/02/25 14:20:50 joerg Exp $
+
+Use ginstall on Solaris 11, /usr/ucb/install has been removed.
 
 Run-time path fix for Solaris for the X client libraries.  Without this
 patch, libraries such as libXext.so will not contain a run-time link path
 to /usr/pkg/xorg/lib, causing run time link failures or possibly linking
 with other (non-Pkgsrc) X libraries on the system!
 
---- sun.cf.orig	2005-12-04 06:20:48.000000000 +1300
-+++ sun.cf	2006-10-26 13:11:56.535497000 +1300
-@@ -688,10 +688,10 @@
+--- sun.cf.orig	2005-12-03 18:20:48.000000000 +0100
++++ sun.cf
+@@ -429,7 +429,9 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
+ #   define XawI18nDefines    -DHAS_WCHAR_H -DHAS_ISW_FUNCS
+ #  endif
+ # endif
+-# if OSMinorVersion > 3
++# if OSMinorVersion >= 11
++#  define InstallCmd	    /usr/bin/ginstall
++# elif OSMinorVersion > 3 
+ #  define InstallCmd	    /usr/ucb/install
+ # endif
+ #ifndef LargefileDefines
+@@ -688,10 +690,10 @@ XCOMM SunPro C++ CplusplusCompilerMajorV
      /* This is to work around what appears to be a PIC bug in some gcc/egcs
         versions that shows up with the Solaris 7/x86 <ctype.h>. */
  #    define SharedLibraryLdCmd $(LD)
