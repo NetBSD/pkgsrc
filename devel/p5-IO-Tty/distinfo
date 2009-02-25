@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/02/09 16:34:43 rhaen Exp $
+$NetBSD: distinfo,v 1.9 2009/02/25 14:12:04 rhaen Exp $
 
-SHA1 (IO-Tty-1.07.tar.gz) = 3dda5c1bf10aecb51627a4c9abdc60a471e1915e
-RMD160 (IO-Tty-1.07.tar.gz) = 2a4f41ff0e275d9d76aacbe03723c27d3dfe0a3f
-Size (IO-Tty-1.07.tar.gz) = 22004 bytes
-SHA1 (patch-ab) = 3465382b06e4facf1b5b5403b69fa7ff1011ff9a
+SHA1 (IO-Tty-1.08.tar.gz) = 547395e3ce0f1894ec08f56fadfe0942a13f9249
+RMD160 (IO-Tty-1.08.tar.gz) = 29bb020ec7b0b8c5cc7ac74c184d0911e7457750
+Size (IO-Tty-1.08.tar.gz) = 22320 bytes
