@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- plugins/io_stream/Makefile.in.orig	2009-02-25 01:55:01.000000000 +0100
++++ plugins/io_stream/Makefile.in
+@@ -337,8 +337,8 @@ io_stream_plugin_LTLIBRARIES = \
+ 	libgimv_gzip_io.la
+ 
+ @HAVE_BZLIB_TRUE@gimv_bz_io_plugin_LTLIBRARIES = libgimv_bz_io.la
+-io_stream_plugindir = $(DESTDIR)$(plugindir)/$(IO_STREAM_PLUGIN_DIR)
+-gimv_bz_io_plugindir = $(DESTDIR)$(plugindir)/$(IO_STREAM_PLUGIN_DIR)
++io_stream_plugindir = $(plugindir)/$(IO_STREAM_PLUGIN_DIR)
++gimv_bz_io_plugindir = $(plugindir)/$(IO_STREAM_PLUGIN_DIR)
+ INCLUDES = \
+ 	$(GTK_CFLAGS) \
+ 	$(ZLIB_CLAGS) \

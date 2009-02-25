@@ -1,5 +1,18 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 08:45:06 agc Exp $
+$NetBSD: distinfo,v 1.9 2009/02/25 01:17:01 joerg Exp $
 
 SHA1 (gimageview-0.2.27.tar.gz) = 333f0682e4f8f8ead4abb24f6eddf86f776c2478
 RMD160 (gimageview-0.2.27.tar.gz) = 1d35b3a1b453f87dc232b84407524c3011ec91eb
 Size (gimageview-0.2.27.tar.gz) = 1348286 bytes
+SHA1 (patch-aa) = 74fd28b7370022d4af2556b928d7695b3db67759
+SHA1 (patch-ab) = e5f18d3ae22e63d6c04fbc5e16c1846d5c687bde
+SHA1 (patch-ac) = 02446b9d3393a49804b2a61c725aeb027602b59d
+SHA1 (patch-ad) = f9f5345833f50e74f12f61c37a73aa9e77d7888d
+SHA1 (patch-ae) = e80ab5693424aad5578b6775af5c21857b69f8e2
+SHA1 (patch-af) = e1829e5903fc722a105df24b91461b4943e81506
+SHA1 (patch-ag) = bb80da9d6cbfd98f5a299e2e53e92a594b481688
+SHA1 (patch-ah) = 4ef03652127f442214bd0ad66fe125b75186502b
+SHA1 (patch-ai) = 78e70d580900095fb2c4887867399473306e63d3
+SHA1 (patch-aj) = 73ffb15d6451469ba1cc89d6b8918cecfbd24847
+SHA1 (patch-ak) = 7e8faa1712a5c4aeae2f12e64bb9c7ce415f17db
+SHA1 (patch-al) = cbd0c2ae2fdb096ddbf31dfbc747e25fe8c6311a
+SHA1 (patch-am) = e6e3b6e859b6de2ca7dc17fe714cea0e7fe542ef

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2009/02/25 01:17:01 joerg Exp $
+
+--- src/pixmaps/Makefile.in.orig	2009-02-25 01:56:58.000000000 +0100
++++ src/pixmaps/Makefile.in
+@@ -299,7 +299,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-default_icondir = $(DESTDIR)$(gimv_icondir)/default
++default_icondir = $(gimv_icondir)/default
+ default_icon_DATA = \
+ 	alert.xpm		\
+ 	archive.xpm		\
