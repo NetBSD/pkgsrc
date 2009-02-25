@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.780 2009/02/25 18:40:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.781 2009/02/25 22:23:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1043,3 +1043,12 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-apm to 1.2.1 [wiz 2009-02-25]
 	Updated x11/xf86-video-ark to 0.7.1 [wiz 2009-02-25]
 	Updated x11/xf86-video-ast to 0.87.0 [wiz 2009-02-25]
+	Updated devel/p5-Clone to 0.31 [sno 2009-02-25]
+	Updated devel/p5-Class-MethodMaker to 2.15 [sno 2009-02-25]
+	Updated security/p5-IO-Socket-SSL to 1.23 [sno 2009-02-25]
+	Updated devel/p5-Params-Util to 0.38 [sno 2009-02-25]
+	Added devel/p5-Devel-Leak-Object version 0.92 [sno 2009-02-25]
+	Updated devel/p5-Tie-Array-AsHash to 0.11 [sno 2009-02-25]
+	Updated time/p5-Time-HiRes to 1.9719 [sno 2009-02-25]
+	Added sysutils/p5-Sys-SigAction version 0.11 [sno 2009-02-25]
+	Updated mail/p5-MIME-Types to 1.27 [sno 2009-02-25]
