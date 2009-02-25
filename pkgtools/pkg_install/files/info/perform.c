@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.51 2009/02/13 11:21:07 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.52 2009/02/25 20:52:10 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_WAIT_H
 #include <sys/wait.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.51 2009/02/13 11:21:07 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.52 2009/02/25 20:52:10 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -362,8 +362,6 @@ pkg_do(const char *pkg)
 		    == strlen(BuildInfoVariable)) {
 			if (meta->meta_installed_info)
 				show_var(meta->meta_installed_info, BuildInfoVariable);
-			else
-				warnx("Installation information missing");
 		} else {
 			if (meta->meta_build_info)
 				show_var(meta->meta_build_info, BuildInfoVariable);
