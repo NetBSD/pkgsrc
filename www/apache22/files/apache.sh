@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.3 2009/02/25 15:39:38 tron Exp $
+# $NetBSD: apache.sh,v 1.4 2009/02/25 22:05:40 tron Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -9,8 +9,6 @@
 # You will need to set some variables in /etc/rc.conf to start Apache:
 #
 # apache=YES
-# apache_start="start"	# set to "startssl" to allow HTTPS connections;
-#			# this variable is optional
 
 name="apache"
 
