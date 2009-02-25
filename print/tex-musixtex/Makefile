@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/25 17:53:50 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2009/02/25 17:55:00 minskim Exp $
 #
 
 DISTNAME=	musixtex-112
@@ -11,6 +11,8 @@ DISTFILES=	musixtex-T112.tar.gz
 MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://icking-music-archive.org/
 COMMENT=	TeX macros to typeset music
+
+BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 TEX_ACCEPTED=	teTeX3
 
