@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/11/05 15:25:34 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2009/02/25 20:39:20 sno Exp $
 #
 
 DISTNAME=		Socket6-0.23
@@ -21,6 +21,13 @@ BUILD_DEFS+=		IPV6_READY
 
 USE_LANGUAGES=		c
 MAKE_ENV+=		CCFLAGS="${CFLAGS} ${CPPFLAGS}"
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "AIX" && ${PKGSRC_COMPILER} == "xlc"
+MAKE_ENV+=		CC="cc_r"
+.endif
+cc=cc_r
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
