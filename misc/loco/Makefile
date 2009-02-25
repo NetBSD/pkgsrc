@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/07/16 01:19:14 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2009/02/25 20:46:18 joerg Exp $
 #
 
 DISTNAME=	loco-0.32
@@ -8,6 +8,8 @@ MASTER_SITES=	http://zjuul.net/~jules/loco/
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://zjuul.net/~jules/loco/
 COMMENT=	Colorize file or standard input and print on the standard output
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	loco
