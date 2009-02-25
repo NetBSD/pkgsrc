@@ -1,0 +1,16 @@
+This module provides tracking of objects, for the purpose of detecting
+memory leaks due to circular references or innappropriate caching schemes.
+
+Object tracking can be enabled on a per object basis. Any objects thus
+tracked are remembered until DESTROYed; details of any objects left are
+printed out to stderr at END-time.
+
+  use Devel::Leak::Object qw(GLOBAL_bless);
+
+This form overloads bless to track construction and destruction of all
+objects. As an alternative, by importing bless, you can just track the
+objects of the caller code that is doing the use.
+
+If you use GLOBAL_bless to overload the bless function, please note that it
+will ONLY apply to bless for modules loaded AFTER Devel::Leak::Object has
+enabled the hook.
