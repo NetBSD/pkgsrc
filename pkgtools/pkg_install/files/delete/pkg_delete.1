@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_delete.1,v 1.18 2009/02/25 16:29:08 joerg Exp $
+.\" $NetBSD: pkg_delete.1,v 1.19 2009/02/25 16:57:51 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     from FreeBSD: @(#)pkg_delete.1
 .\"
-.Dd July 30, 2008
+.Dd February 25, 2009
 .Dt PKG_DELETE 1
 .Os
 .Sh NAME
@@ -45,7 +45,7 @@ The given packages are sorted, so that the dependencies of a package
 are deleted after the package.
 Before any action is executed,
 .Nm
-checks for packages that are marked as 
+checks for packages that are marked as
 .Cm preserved
 or have depending packages left.
 Unless the
