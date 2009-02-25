@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/25 09:16:06 imil Exp $
+
+SHA1 (pytemplate-1.5.1.tar.gz) = 884a3b27724c20f9fadca38390767176c8854b00
+RMD160 (pytemplate-1.5.1.tar.gz) = be6a2af09255cb459af66787bafd62919c167358
+Size (pytemplate-1.5.1.tar.gz) = 17926 bytes
