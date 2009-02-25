@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/05/25 21:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/02/25 17:03:03 minskim Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
+
+BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
