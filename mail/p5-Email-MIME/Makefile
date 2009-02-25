@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/10 14:41:45 rhaen Exp $
+# $NetBSD: Makefile,v 1.6 2009/02/25 19:59:13 sno Exp $
 
 DISTNAME=		Email-MIME-1.863
 PKGNAME=		p5-${DISTNAME}
@@ -12,9 +12,9 @@ COMMENT=		Perl module for easy MIME message parsing
 
 DEPENDS+=		p5-Email-MIME-ContentType>=1.011:../../mail/p5-Email-MIME-ContentType
 DEPENDS+=		p5-Email-MIME-Encodings>=1.3:../../mail/p5-Email-MIME-Encodings
-DEPENDS+=		p5-Email-Simple>=2.003:../../mail/p5-Email-Simple
+DEPENDS+=		p5-Email-Simple>=2.004:../../mail/p5-Email-Simple
 DEPENDS+=		p5-MIME-Types>=1.13:../../mail/p5-MIME-Types
-BUILD_DEPENDS+=		p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
+BUILD_DEPENDS+=		{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
