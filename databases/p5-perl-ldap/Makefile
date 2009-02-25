@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2009/02/14 07:49:50 seb Exp $
+# $NetBSD: Makefile,v 1.38 2009/02/25 21:23:14 sno Exp $
 
 DISTNAME=	perl-ldap-0.39
 PKGNAME=	p5-perl-ldap-0.39
@@ -17,7 +17,7 @@ BUILD_DEFS+=	IPV6_READY
 DEPENDS+=	p5-Convert-ASN1>=0.07:../../textproc/p5-Convert-ASN1
 DEPENDS+=	p5-IO-Socket-SSL>=0.81:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=	p5-URI>=1.08:../../www/p5-URI
+DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-XML-SAX-Writer-[0-9]*:../../textproc/p5-XML-SAX-Writer
 
 MAKE_PARAMS+=	--skip	# skip CPAN auto installation of modules
