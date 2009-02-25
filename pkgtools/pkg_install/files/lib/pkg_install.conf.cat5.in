@@ -31,7 +31,9 @@ DDEESSCCRRIIPPTTIIOONN
      CERTIFICATE_CHAIN
              Path to a file containing additional certificates that can be
              used for completing certificate chains when validating binary
-             packages or pkg-vulnerabilities files.  CHECK_VULNERABILITIES
+             packages or pkg-vulnerabilities files.
+
+     CHECK_VULNERABILITIES
              Check for vulnerabilities when installing packages.  Supported
              values are:
 
