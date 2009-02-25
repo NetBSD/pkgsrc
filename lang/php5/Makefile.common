@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.33 2008/12/10 19:37:01 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.34 2009/02/25 16:16:33 tnn Exp $
 # used by lang/php5/Makefile.php
+# used by lang/php/ext.mk
 
 .if !defined(DISTNAME)
 DISTNAME=		php-${PHP_BASE_VERS}
