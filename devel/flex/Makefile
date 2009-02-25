@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/05/18 00:43:51 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2009/02/25 21:03:01 sno Exp $
 
 DISTNAME=		flex-2.5.35
 CATEGORIES=		lang
@@ -19,6 +19,10 @@ LIBS.SunOS+=		-lm
 USE_PKGLOCALEDIR=	YES
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${LOWER_OPSYS} == "aix"
+CFLAGS+=		-D_LINUX_SOURCE_COMPAT
+.endif
 
 #.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_LANGUAGES=		c c++
