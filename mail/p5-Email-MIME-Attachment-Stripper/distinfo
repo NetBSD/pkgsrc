@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/08/17 18:19:42 he Exp $
+$NetBSD: distinfo,v 1.3 2009/02/25 20:02:31 sno Exp $
 
-SHA1 (Email-MIME-Attachment-Stripper-1.315.tar.gz) = 069401008df0a13e5f666742ac395b346bc8bb7f
-RMD160 (Email-MIME-Attachment-Stripper-1.315.tar.gz) = 6fc9a8e70d15656d791e612351e7ab8e4db23524
-Size (Email-MIME-Attachment-Stripper-1.315.tar.gz) = 24471 bytes
+SHA1 (Email-MIME-Attachment-Stripper-1.316.tar.gz) = b58e8fe447400048f7209258df14f6e6e257003a
+RMD160 (Email-MIME-Attachment-Stripper-1.316.tar.gz) = 16ce51a6df5b135579ac51f7ae2efb7f55254608
+Size (Email-MIME-Attachment-Stripper-1.316.tar.gz) = 24342 bytes
