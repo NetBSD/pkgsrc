@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.767 2009/02/25 13:16:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.768 2009/02/25 13:29:45 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/py-pytemplate version 1.5.1 [imil 2009-02-25]
 	Updated www/typolight-translations to 20090223 [taca 2009-02-25]
 	Updated emulators/mednafen to 0.8.11 [wiz 2009-02-25]
+	Updated devel/p5-Algorithm-Dependency to 1.108 [rhaen 2009-02-25]
