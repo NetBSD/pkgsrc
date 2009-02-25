@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/10/28 22:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/02/25 01:39:28 joerg Exp $
 #
 
 DISTNAME=	bmpx-0.40.14
@@ -55,5 +55,6 @@ BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.9
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.11
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
