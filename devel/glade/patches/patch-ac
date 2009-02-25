@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2009/02/25 01:38:07 joerg Exp $
+
+--- glade/glade_menu_editor.c.orig	2009-02-25 02:30:24.000000000 +0100
++++ glade/glade_menu_editor.c
+@@ -28,7 +28,6 @@
+ #include <gdk/gdkkeysyms.h>
+ #include <gtk/gtkarrow.h>
+ #include <gtk/gtkaccellabel.h>
+-#include <gtk/gtkclist.h>
+ #include <gtk/gtkcombo.h>
+ #include <gtk/gtkentry.h>
+ #include <gtk/gtkeventbox.h>
