@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.779 2009/02/25 18:38:50 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.780 2009/02/25 18:40:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1042,3 +1042,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/tex2page to 20060131nb5 [minskim 2009-02-25]
 	Updated x11/xf86-video-apm to 1.2.1 [wiz 2009-02-25]
 	Updated x11/xf86-video-ark to 0.7.1 [wiz 2009-02-25]
+	Updated x11/xf86-video-ast to 0.87.0 [wiz 2009-02-25]
