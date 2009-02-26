@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+
+--- akode/plugins/xiph_decoder/speex_decoder.cpp.orig	2009-02-20 13:47:29 +0200
++++ akode/plugins/xiph_decoder/speex_decoder.cpp	2009-02-20 13:47:52 +0200
+@@ -25,10 +25,10 @@
+ extern "C" {
+ #include <string.h>
+ #include <stdlib.h>
+-#include <speex.h>
+-#include <speex_header.h>
+-#include <speex_callbacks.h>
+-#include <speex_stereo.h>
++#include <speex/speex.h>
++#include <speex/speex_header.h>
++#include <speex/speex_callbacks.h>
++#include <speex/speex_stereo.h>
+ #include <ogg/ogg.h>
+ }
+ 

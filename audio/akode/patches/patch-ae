@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+
+--- akode/plugins/Makefile.in.orig	2009-02-20 10:13:15 +0200
++++ akode/plugins/Makefile.in	2009-02-20 10:13:53 +0200
+@@ -248,7 +248,7 @@ target_os = @target_os@
+ target_vendor = @target_vendor@
+ unsermake_enable_pch_FALSE = @unsermake_enable_pch_FALSE@
+ unsermake_enable_pch_TRUE = @unsermake_enable_pch_TRUE@
+-AKODE_MPC_DECODER = mpc_decoder
++@include_mpc_decoder_TRUE@AKODE_MPC_DECODER = mpc_decoder
+ @include_xiph_decoder_TRUE@AKODE_XIPH_DECODER = xiph_decoder
+ @include_mpeg_decoder_TRUE@AKODE_MPEG_DECODER = mpeg_decoder
+ @include_ffmpeg_decoder_TRUE@AKODE_FFMPEG_DECODER = ffmpeg_decoder
