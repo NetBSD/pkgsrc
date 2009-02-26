@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+
+--- akode/plugins/xiph_decoder/flac113_decoder.cpp.orig	2008-12-05 15:27:25 +0200
++++ akode/plugins/xiph_decoder/flac113_decoder.cpp	2008-12-05 15:27:44 +0200
+@@ -108,7 +108,7 @@ struct FLACDecoder::private_data {
+ static FLAC__StreamDecoderReadStatus flac_read_callback(
+         const FLAC__StreamDecoder *,
+         FLAC__byte buffer[],
+-        unsigned *bytes,
++        size_t *bytes,
+         void *client_data)
+ {
+     FLACDecoder::private_data *data = (FLACDecoder::private_data*)client_data;
