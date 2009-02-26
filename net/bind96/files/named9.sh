@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: named9.sh,v 1.2 2009/02/23 09:22:16 adrianp Exp $
+# $NetBSD: named9.sh,v 1.3 2009/02/26 23:49:24 adrianp Exp $
 #
 
 # PROVIDE: named
@@ -47,6 +47,7 @@ named_precmd()
 
        	if [ ! -d ${named_chrootdir}@VARBASE@/run/named ]; then 
 		@MKDIR@ ${named_chrootdir}@VARBASE@/run/named 
+		@CHOWN@ @BIND_USER@ ${named_chrootdir}@VARBASE@/run/named
        	fi      
 
 	@RM@ -f ${pidfile}
