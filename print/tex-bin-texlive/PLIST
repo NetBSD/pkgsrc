@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/26 04:01:56 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/26 16:50:57 minskim Exp $
 share/texmf/fmtutil/fmtutil-hdr.cnf
 share/texmf/scripts/texlive/lua/texlive/getopt.tlu
 share/texmf/scripts/texlive/lua/texlive/tlpdb.tlu
@@ -20,7 +20,6 @@ share/texmf/scripts/texlive/tlmgrgui/lang/it
 share/texmf/scripts/texlive/tlmgrgui/lang/pl
 share/texmf/scripts/texlive/tlmgrgui/lang/tw
 share/texmf/scripts/texlive/tlmgrgui/lang/vi
-share/texmf/scripts/texlive/tlmgrgui/tlmgrgui-real.pl
 share/texmf/scripts/texlive/tlmgrgui/tlmgrgui.pl
 share/texmf/scripts/texlive/uninstall-win32.pl
 share/texmf/web2c/updmap-hdr.cfg
