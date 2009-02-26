@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/26 18:12:55 minskim Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/02/26 18:46:52 minskim Exp $
 
 DISTNAME=	evas-0.9.9.050
 CATEGORIES=	graphics
@@ -8,6 +8,9 @@ MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DISTINFO_FILE=	${.CURDIR}/../../graphics/evas/distinfo
+PATCHDIR=	${.CURDIR}/../../graphics/evas/patches
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
