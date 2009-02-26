@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 21:00:11 minskim Exp $
+include/Evas_Engine_SDL_16.h
+lib/evas/modules/engines/software_16_sdl/${MODULE_ARCH}/module.la
+@dirrm lib/evas/modules/engines/software_16_sdl/${MODULE_ARCH}
+@dirrm lib/evas/modules/engines/software_16_sdl
