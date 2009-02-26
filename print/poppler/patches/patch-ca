@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.1 2009/02/12 20:55:07 drochner Exp $
+$NetBSD: patch-ca,v 1.2 2009/02/26 20:23:02 drochner Exp $
 
 --- poppler/GfxState.cc.orig	2008-11-05 22:49:26.000000000 +0100
 +++ poppler/GfxState.cc
@@ -912,7 +912,7 @@ $NetBSD: patch-ca,v 1.1 2009/02/12 20:55:07 drochner Exp $
 +  if (cache[GFX_ICCBASED_CACHE_SIZE-1].num > 0) {
 +    delete cache[GFX_ICCBASED_CACHE_SIZE-1].colorSpace;
 +  }
-+  for (i = GFX_ICCBASED_CACHE_SIZE; i > 0; i--) {
++  for (i = GFX_ICCBASED_CACHE_SIZE-1; i > 0; i--) {
 +    if (cache[i - 1].num > 0) cache[i] = cache[i - 1];
 +  }
 +  cache[0].num = numA;
