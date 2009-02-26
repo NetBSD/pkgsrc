@@ -1,0 +1,11 @@
+--- Makefile.PL.orig	2008-12-17 19:17:19.000000000 +0000
++++ Makefile.PL	2008-12-17 19:19:35.000000000 +0000
+@@ -88,7 +88,7 @@
+ 	      ($] >= 5.005 ?    ## Add these new keywords supported since 5.005
+ 	       (ABSTRACT_FROM => 'Iconv.pm', # retrieve abstract from module
+ 		AUTHOR        => 'Michael Piotrowski <mxp@dynalabs.de>') : ()),
+-	      'LIBS'              => $config{LIBS},
++	      'LIBS'              => [$ENV{LDFLAGS} . ' ' . $config{LIBS}],
+ 	      'DEFINE'            => "@DEFINE",
+ 	      'INC'               => $config{INC},
+ 	      'dist'              => {COMPRESS => 'gzip', SUFFIX => 'gz'},
