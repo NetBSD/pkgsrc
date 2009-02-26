@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/07/04 20:54:50 jlam Exp $
+# $NetBSD: Makefile,v 1.45.16.1 2009/02/26 14:03:28 tron Exp $
 #
 
 .include "Makefile.common"
@@ -9,6 +9,8 @@ PKG_GROUPS_VARS+=	MLDONKEY_GROUP
 PKG_USERS_VARS+=	MLDONKEY_USER
 
 BUILD_DEFS+=		MLDONKEY_HOME VARBASE
+
+INSTALLATION_DIRS=	libexec/mldonkey
 
 OWN_DIRS_PERMS=		${MLDONKEY_HOME} ${MLDONKEY_USER} ${MLDONKEY_GROUP} 0700
 OWN_DIRS_PERMS+=	${VARBASE}/log/mldonkey \
@@ -28,8 +30,7 @@ FILES_SUBST+=		MLDONKEY_HOME=${MLDONKEY_HOME:Q}
 FILES_SUBST+=		MLDONKEY_USER=${MLDONKEY_USER:Q}
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlnet ${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM} ${WRKSRC}/mlnet ${DESTDIR}${PREFIX}/libexec/mldonkey
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
