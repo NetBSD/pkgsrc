@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.798 2009/02/26 21:57:22 plunky Exp $
+$NetBSD: CHANGES-2009,v 1.799 2009/02/26 22:27:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1082,3 +1082,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/libfprint version 0.0.6 [plunky 2009-02-26]
 	Added security/pam-fprint version 0.2 [plunky 2009-02-26]
 	Added security/fprint-demo version 0.4 [plunky 2009-02-26]
+	Updated devel/p5-Class-MOP to 0.78 [seb 2009-02-26]
+	Updated devel/p5-Moose to 0.72 [seb 2009-02-26]
