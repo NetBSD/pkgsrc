@@ -1,0 +1,3 @@
+This is a simple PAM module which uses the fingerprint processing and
+verification from libfprint for authentication instead of asking for
+a password.
