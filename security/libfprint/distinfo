@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/26 21:51:06 plunky Exp $
+
+SHA1 (libfprint-0.0.6.tar.bz2) = 430af91efbefeb2b98fe30215fb33051e4f8efc5
+RMD160 (libfprint-0.0.6.tar.bz2) = 3677a0997da641ba3e8586222ca88640e1f6373f
+Size (libfprint-0.0.6.tar.bz2) = 431957 bytes
