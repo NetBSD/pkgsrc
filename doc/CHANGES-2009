@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.795 2009/02/26 18:21:33 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.796 2009/02/26 18:28:56 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1067,3 +1067,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-texlive to 2008.12181 [minskim 2009-02-26]
 	Updated print/tex-bin-dvipsk to 2008.12172 [minskim 2009-02-26]
 	Added graphics/evas version 0.9.9.050 [minskim 2009-02-26]
+	Added audio/akode version 2.0.2nb1 [hasso 2009-02-26]
+	Added aduio/akode-plugins-alsa version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-ffmpeg version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-jack version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-mpc version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-mpeg version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-oss version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-pulseaudio version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-resampler version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-sun version 2.0.2 [hasso 2009-02-26]
+	Added audio/akode-plugins-xiph version 2.0.2 [hasso 2009-02-26]
