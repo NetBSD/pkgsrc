@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2009/02/26 11:06:55 hasso Exp $
+# $NetBSD: Makefile,v 1.345 2009/02/26 21:59:21 plunky Exp $
 #
 
 COMMENT=	Security tools
@@ -54,6 +54,7 @@ SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
 SUBDIR+=	egd
 SUBDIR+=	flawfinder
+SUBDIR+=	fprint-demo
 SUBDIR+=	fprot-workstation-bin
 SUBDIR+=	fragroute
 SUBDIR+=	fsh
@@ -92,6 +93,7 @@ SUBDIR+=	libassuan
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
 SUBDIR+=	libdes
+SUBDIR+=	libfprint
 SUBDIR+=	libfwbuilder
 SUBDIR+=	libfwbuilder21
 SUBDIR+=	libgcrypt
@@ -206,6 +208,7 @@ SUBDIR+=	pakchois
 SUBDIR+=	pakemon
 SUBDIR+=	pam-af
 SUBDIR+=	pam-dbm
+SUBDIR+=	pam-fprint
 SUBDIR+=	pam-ldap
 SUBDIR+=	pam-mkhomedir
 SUBDIR+=	pam-mysql
