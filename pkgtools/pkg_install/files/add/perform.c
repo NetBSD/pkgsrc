@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.78 2009/02/13 13:19:12 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.79 2009/02/26 12:52:43 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.78 2009/02/13 13:19:12 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.79 2009/02/26 12:52:43 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1111,8 +1111,7 @@ start_replacing(struct pkg_task *pkg)
 	if (preserve_meta_data_file(pkg, REQUIRED_BY_FNAME))
 		return -1;
 
-	if (pkg->meta_data.meta_preserve == NULL &&
-	    preserve_meta_data_file(pkg, PRESERVE_FNAME))
+	if (preserve_meta_data_file(pkg, PRESERVE_FNAME))
 		return -1;
 
 	if (pkg->meta_data.meta_installed_info == NULL &&
