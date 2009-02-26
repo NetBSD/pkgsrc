@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.797 2009/02/26 19:46:26 sno Exp $
+$NetBSD: CHANGES-2009,v 1.798 2009/02/26 21:57:22 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1079,3 +1079,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/akode-plugins-sun version 2.0.2 [hasso 2009-02-26]
 	Added audio/akode-plugins-xiph version 2.0.2 [hasso 2009-02-26]
 	Updated graphics/graphviz to 2.20.3 [sno 2009-02-26]
+	Added security/libfprint version 0.0.6 [plunky 2009-02-26]
+	Added security/pam-fprint version 0.2 [plunky 2009-02-26]
+	Added security/fprint-demo version 0.4 [plunky 2009-02-26]
