@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/02/26 21:52:00 plunky Exp $
+
+Read `pam_fprint_enroll --help' to learn about enrolling fingers. The
+fingerprint data is stored in the users home directory under the .fprint
+directory, and the program must have read/write access to the USB devices.
+
+After enrolling fingerprints for your user(s), you can enable finger
+print authentication by adding the following line to the corresponding
+PAM configuration file(s) in /etc/pam.d
+
+auth            sufficient      ${PREFIX}/lib/security/pam_fprint.so
+
+Note that using a fingerprint to authenticate is not particularly
+secure, see the pam_fprint web site for more information.
+===========================================================================
