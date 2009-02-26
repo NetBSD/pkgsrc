@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.793 2009/02/26 16:59:35 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.794 2009/02/26 18:14:14 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/opensc-signer 0.11.6 [hasso 2009-02-26]
 	Updated print/tex-bin-texlive to 2008.12181 [minskim 2009-02-26]
 	Updated print/tex-bin-dvipsk to 2008.12172 [minskim 2009-02-26]
+	Added graphics/evas version 0.9.9.050 [minskim 2009-02-26]
