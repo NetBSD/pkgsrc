@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/17 07:43:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/26 16:58:56 minskim Exp $
 share/texmf/dvips/config/alt-rule.pro
 share/texmf/dvips/config/canonex.cfg
 share/texmf/dvips/config/config.bakoma
 share/texmf/dvips/config/config.canonex
-share/texmf/dvips/config/config.cms
 share/texmf/dvips/config/config.cx
 share/texmf/dvips/config/config.deskjet
 share/texmf/dvips/config/config.dvired
