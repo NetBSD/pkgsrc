@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.789 2009/02/26 08:47:16 abs Exp $
+$NetBSD: CHANGES-2009,v 1.790 2009/02/26 11:11:32 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1061,3 +1061,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Tee version 0.13 [sno 2009-02-26]
 	Added devel/p5-Probe-Perl 0.01 [sno 2009-02-26]
 	Updated converters/p5-Text-Iconv to 1.7 [abs 2009-02-26]
+	Added security/openct 0.6.15nb1 [hasso 2009-02-26]
+	Added security/opensc 0.11.6nb2 [hasso 2009-02-26]
+	Added security/opensc-signer 0.11.6 [hasso 2009-02-26]
