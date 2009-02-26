@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.514 2009/02/24 00:08:09 cube Exp $
+# $NetBSD: Makefile,v 1.515 2009/02/26 18:14:14 minskim Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -72,6 +72,7 @@ SUBDIR+=	dx
 SUBDIR+=	dxsamples
 SUBDIR+=	eog
 SUBDIR+=	epeg
+SUBDIR+=	evas
 SUBDIR+=	ewipe
 SUBDIR+=	exif
 SUBDIR+=	exifprobe
