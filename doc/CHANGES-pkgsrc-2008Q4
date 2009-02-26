@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.59 2009/02/23 14:12:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.60 2009/02/26 14:03:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -175,3 +175,7 @@ Pullup ticket #2706 - requested by adrianp
 pdksh: bug fix
 Pullup ticket #2707 - requested by martti
 mediawiki: bug fix update
+Pullup ticket #2708 - requested by:
+mldonkey: security update
+Pullup ticket #2709 - requested by sborrill
+php-imap: bug fix
