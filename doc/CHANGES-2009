@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.790 2009/02/26 11:11:32 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.791 2009/02/26 16:10:29 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -952,7 +952,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/p5-GStreamer to 0.14 [he 2009-02-22]
 	Added time/p5-DateTime-Format-HTTP version 0.37 [he 2009-02-22]
 	Updated net/p5-Net-Amazon-S3 to 0.50 [he 2009-02-22]
-	Updated net/p5-Net-SSH to 1.34 [he 2009-02-22]
+	Updated security/p5-Net-SSH to 1.34 [he 2009-02-22]
 	Updated textproc/p5-Number-Format to 1.70 [he 2009-02-22]
 	Added textproc/p5-String-BufferStack version 1.12 [he 2009-02-22]
 	Updated textproc/p5-Template-Declare to 0.37 [he 2009-02-22]
@@ -968,7 +968,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated geography/garmin-utils to 2.5 [gdt 2009-02-22]
 	Updated textproc/p5-Text-Tabs+Wrap to 2006.1117 [wiz 2009-02-22]
 	Added devel/p5-accessors version 1.01 [rhaen 2009-02-22]
-	Added textproc/p5-TAP-Formatter-HTML version 0.07 [rhaen 2009-02-22]
+	Added devel/p5-TAP-Formatter-HTML version 0.07 [rhaen 2009-02-22]
 	Updated devel/p5-glib2 to 1.201 [wiz 2009-02-23]
 	Updated x11/p5-gtk2 to 1.203 [wiz 2009-02-23]
 	Added print/tex-bin-xdvi version 22.84.14 [minskim 2009-02-23]
