@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/02/25 08:23:27 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2009/02/26 22:52:48 kleink Exp $
 #
 
-DISTNAME=	vobject-0.8.1b
+DISTNAME=	vobject-0.8.1c
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	http://vobject.skyhouseconsulting.com/
 
@@ -15,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.1:../../time/py-dateutil
 
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
