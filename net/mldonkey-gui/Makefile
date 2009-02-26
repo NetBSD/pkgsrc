@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/08/12 17:09:01 wiz Exp $
+# $NetBSD: Makefile,v 1.26.6.1 2009/02/26 14:03:28 tron Exp $
 #
 
 .include "../../net/mldonkey/Makefile.common"
@@ -18,11 +18,13 @@ INSTALLATION_DIRS=	bin
 .include "options.mk"
 
 do-install:
-	${RM} -f ${PREFIX}/bin/mlgui
-	cd ${PREFIX}/bin && ${LN} -s ../libexec/mldonkey/mlgui mlgui
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlgui ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlguistarter ${PREFIX}/libexec/mldonkey
-	${INSTALL_PROGRAM} ${WRKSRC}/mlnet+gui ${PREFIX}/libexec/mldonkey
+	${RM} -f ${DESTDIR}${PREFIX}/bin/mlgui
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s ../libexec/mldonkey/mlgui mlgui
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM} ${WRKSRC}/mlgui ${DESTDIR}${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM} ${WRKSRC}/mlguistarter \
+		${DESTDIR}${PREFIX}/libexec/mldonkey
+	${INSTALL_PROGRAM} ${WRKSRC}/mlnet+gui \
+		${DESTDIR}${PREFIX}/libexec/mldonkey
 
 .include "../../mk/bsd.pkg.mk"
