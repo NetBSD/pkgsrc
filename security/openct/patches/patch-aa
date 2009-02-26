@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/26 10:07:49 hasso Exp $
+
+--- etc/Makefile.in.orig	2008-08-06 00:53:45 +0300
++++ etc/Makefile.in	2008-08-06 00:54:01 +0300
+@@ -458,12 +458,7 @@ uninstall-am: uninstall-hotplugDATA unin
+ 	ps ps-am uninstall uninstall-am uninstall-hotplugDATA \
+ 	uninstall-nodist_udevSCRIPTS uninstall-sysconfDATA
+ 
+-install-exec-hook:	install-sysconfDATA openct.conf
+-	if [ -f "$(DESTDIR)$(sysconfdir)/openct.conf" ]; then \
+-		$(INSTALL_DATA) openct.conf "$(DESTDIR)$(sysconfdir)/openct.conf.new"; \
+-	else \
+-		$(INSTALL_DATA) openct.conf "$(DESTDIR)$(sysconfdir)/openct.conf"; \
+-	fi
++install-exec-hook:
+ 
+ .in:
+ 	sed \
