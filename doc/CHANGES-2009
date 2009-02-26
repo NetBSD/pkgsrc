@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.796 2009/02/26 18:28:56 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.797 2009/02/26 19:46:26 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1078,3 +1078,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/akode-plugins-resampler version 2.0.2 [hasso 2009-02-26]
 	Added audio/akode-plugins-sun version 2.0.2 [hasso 2009-02-26]
 	Added audio/akode-plugins-xiph version 2.0.2 [hasso 2009-02-26]
+	Updated graphics/graphviz to 2.20.3 [sno 2009-02-26]
