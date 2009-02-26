@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/17 07:43:01 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/02/26 16:58:56 minskim Exp $
 
-SHA1 (tex-bin-dvipsk-2008.11868/bin-dvipsk.tar.lzma) = 765739955a16239102ac322f679dee1d650b4909
-RMD160 (tex-bin-dvipsk-2008.11868/bin-dvipsk.tar.lzma) = 0fd766fe9df0fc993375d31004d7ccfaa83a91a7
-Size (tex-bin-dvipsk-2008.11868/bin-dvipsk.tar.lzma) = 60953 bytes
+SHA1 (tex-bin-dvipsk-2008.12172/bin-dvipsk.tar.lzma) = 16032c6c71aeca08d3a075bcbae2329960bab76b
+RMD160 (tex-bin-dvipsk-2008.12172/bin-dvipsk.tar.lzma) = ecbbd76404af5520863c34e24a4bda418a6f5226
+Size (tex-bin-dvipsk-2008.12172/bin-dvipsk.tar.lzma) = 60266 bytes
