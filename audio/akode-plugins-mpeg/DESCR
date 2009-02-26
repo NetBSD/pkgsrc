@@ -1,0 +1,6 @@
+aKode is a simple audio decoding framework that provides a uniform interface
+to decode the most common audio formats. It also has a direct playback option
+for a number of audio outputs.
+
+This package provides the mpeg plugin for aKode which allows decoding MPEG 1/2
+layer I-III audio.
