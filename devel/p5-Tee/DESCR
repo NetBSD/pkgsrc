@@ -1,0 +1,11 @@
+The Tee distribution provides the ptee program, a pure Perl emulation of the
+standard GNU tool tee. It is designed to be a platform-independent
+replacement for operating systems without a native tee program. As with tee,
+it passes input received on STDIN through to STDOUT while also writing a copy
+of the input to one or more files. By default, files will be overwritten.
+
+Unlike tee, ptee does not support ignoring interrupts, as signal handling is
+not sufficiently portable.
+
+The Tee module provides a convenience function that may be used in place of
+system() to redirect commands through ptee.
