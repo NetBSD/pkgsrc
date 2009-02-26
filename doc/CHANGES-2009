@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.794 2009/02/26 18:14:14 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.795 2009/02/26 18:21:33 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1059,11 +1059,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/mldonkey to 3.0.0 [wiz 2009-02-25]
 	Updated pkgtools/bootstrap-mk-files to 20090226 [wiz 2009-02-26]
 	Added devel/p5-Tee version 0.13 [sno 2009-02-26]
-	Added devel/p5-Probe-Perl 0.01 [sno 2009-02-26]
+	Added devel/p5-Probe-Perl version 0.01 [sno 2009-02-26]
 	Updated converters/p5-Text-Iconv to 1.7 [abs 2009-02-26]
-	Added security/openct 0.6.15nb1 [hasso 2009-02-26]
-	Added security/opensc 0.11.6nb2 [hasso 2009-02-26]
-	Added security/opensc-signer 0.11.6 [hasso 2009-02-26]
+	Added security/openct version 0.6.15nb1 [hasso 2009-02-26]
+	Added security/opensc version 0.11.6nb2 [hasso 2009-02-26]
+	Added security/opensc-signer version 0.11.6 [hasso 2009-02-26]
 	Updated print/tex-bin-texlive to 2008.12181 [minskim 2009-02-26]
 	Updated print/tex-bin-dvipsk to 2008.12172 [minskim 2009-02-26]
 	Added graphics/evas version 0.9.9.050 [minskim 2009-02-26]
