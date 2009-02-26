@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+
+--- akode/plugins/ffmpeg_decoder/ffmpeg_decoder.cpp.orig	2006-08-10 21:37:20 +0300
++++ akode/plugins/ffmpeg_decoder/ffmpeg_decoder.cpp	2009-02-20 13:57:54 +0200
+@@ -26,9 +26,11 @@
+ #include "decoder.h"
+ 
+ #include <assert.h>
+-#include <ffmpeg/avcodec.h>
+-#include <ffmpeg/avformat.h>
+-#include <ffmpeg/avio.h>
++extern "C" {
++#include <libavcodec/avcodec.h>
++#include <libavformat/avformat.h>
++#include <libavformat/avio.h>
++}
+ 
+ #include "ffmpeg_decoder.h"
+ #include <iostream>
+@@ -349,7 +351,7 @@ retry:
+             assert(false);
+     }
+     if (length == 0) return readFrame(frame);
+-    std::cout << "akode: FFMPEG: Frame length: " << length << "\n";
++    // std::cout << "akode: FFMPEG: Frame length: " << length << "\n";
+ 
+     if( d->packetSize <= 0 )
+         av_free_packet( &d->packet );
