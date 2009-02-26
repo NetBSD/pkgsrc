@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1120 2009/02/25 09:20:26 imil Exp $
+# $NetBSD: Makefile,v 1.1121 2009/02/26 07:56:23 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -525,6 +525,7 @@ SUBDIR+=	p5-Devel-Events
 SUBDIR+=	p5-Devel-Events-Objects
 SUBDIR+=	p5-Devel-Gladiator
 SUBDIR+=	p5-Devel-GlobalDestruction
+SUBDIR+=	p5-Devel-Leak-Object
 SUBDIR+=	p5-Devel-LexAlias
 SUBDIR+=	p5-Devel-NYTProf
 SUBDIR+=	p5-Devel-PPPort
@@ -591,11 +592,13 @@ SUBDIR+=	p5-Graph
 SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Hash-Case
 SUBDIR+=	p5-Hash-Merge
+SUBDIR+=	p5-Hash-MoreUtils
 SUBDIR+=	p5-Heap
 SUBDIR+=	p5-Hook-LexWrap
 SUBDIR+=	p5-IO
 SUBDIR+=	p5-IO-All
 SUBDIR+=	p5-IO-Capture
+SUBDIR+=	p5-IO-CaptureOutput
 SUBDIR+=	p5-IO-Compress-Base
 SUBDIR+=	p5-IO-Compress-Bzip2
 SUBDIR+=	p5-IO-Compress-Zlib
@@ -730,6 +733,7 @@ SUBDIR+=	p5-SVN-Simple
 SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Scalar-Defer
 SUBDIR+=	p5-Scalar-List-Utils
+SUBDIR+=	p5-Scalar-Util-Refcount
 SUBDIR+=	p5-Schedule-RateLimiter
 SUBDIR+=	p5-Scope-Guard
 SUBDIR+=	p5-Set-IntSpan
