@@ -1,7 +1,9 @@
-# $NetBSD: Makefile.common,v 1.33 2008/08/12 17:09:01 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33.6.1 2009/02/26 14:03:28 tron Exp $
 #
+# used by net/mldonkey/Makefile
+# used by net/mldonkey-gui/Makefile
 
-DISTNAME=	mldonkey-2.9.6
+DISTNAME=	mldonkey-3.0.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +18,8 @@ PATCHDIR=	${.CURDIR}/../../net/mldonkey/patches
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=		WGET=""
 CONFIGURE_ENV+=		ac_cv_prog_WGET="no"
