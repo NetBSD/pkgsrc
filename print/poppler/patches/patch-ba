@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2009/02/26 20:23:02 drochner Exp $
+
+--- poppler/CairoOutputDev.cc.orig	2009-02-24 15:34:03.000000000 +0100
++++ poppler/CairoOutputDev.cc
+@@ -236,7 +236,7 @@ void CairoOutputDev::setDefaultCTM(doubl
+   matrix.y0 = ctm[5];
+ 
+   cairo_transform (cairo, &matrix);
+-  if (shape)
++  if (cairo_shape)
+       cairo_transform (cairo_shape, &matrix);
+ 
+   OutputDev::setDefaultCTM(ctm);
