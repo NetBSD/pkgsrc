@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.785 2009/02/25 23:39:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.786 2009/02/26 07:05:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1057,3 +1057,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Scalar-Util-Refcount version 1.0.2 [sno 2009-02-25]
 	Updated x11/xf86-video-ati to 6.11.0 [wiz 2009-02-25]
 	Updated net/mldonkey to 3.0.0 [wiz 2009-02-25]
+	Updated pkgtools/bootstrap-mk-files to 20090226 [wiz 2009-02-26]
