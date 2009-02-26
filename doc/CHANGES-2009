@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.788 2009/02/26 08:24:05 sno Exp $
+$NetBSD: CHANGES-2009,v 1.789 2009/02/26 08:47:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1060,3 +1060,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/bootstrap-mk-files to 20090226 [wiz 2009-02-26]
 	Added devel/p5-Tee version 0.13 [sno 2009-02-26]
 	Added devel/p5-Probe-Perl 0.01 [sno 2009-02-26]
+	Updated converters/p5-Text-Iconv to 1.7 [abs 2009-02-26]
