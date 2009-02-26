@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 18:05:27 hasso Exp $
+lib/libakode_jack_sink.la
