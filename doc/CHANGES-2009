@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.787 2009/02/26 08:13:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.788 2009/02/26 08:24:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1059,3 +1059,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/mldonkey to 3.0.0 [wiz 2009-02-25]
 	Updated pkgtools/bootstrap-mk-files to 20090226 [wiz 2009-02-26]
 	Added devel/p5-Tee version 0.13 [sno 2009-02-26]
+	Added devel/p5-Probe-Perl 0.01 [sno 2009-02-26]
