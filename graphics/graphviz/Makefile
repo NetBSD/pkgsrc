@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2009/02/26 19:45:14 sno Exp $
 
-DISTNAME=	graphviz-2.16.1
-PKGREVISION=	4
+DISTNAME=	graphviz-2.20.3
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.graphviz.org/pub/graphviz/ARCHIVE/
+MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.graphviz.org/
@@ -26,12 +25,11 @@ CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
 CONFIGURE_ARGS+=	--disable-sharp
-CONFIGURE_ENV+=		X11PREFIX=${X11PREFIX} X11BASE=${X11BASE}
 # build fails when PHP and/or Ruby are also installed
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
 CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
-PKGCONFIG_OVERRIDE=	lib/agraph/libagraph.pc.in
+PKGCONFIG_OVERRIDE=		lib/agraph/libagraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cgraph/libcgraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/expr/libexpr.pc.in
@@ -57,12 +55,9 @@ pre-build:
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/convenience.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
-.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

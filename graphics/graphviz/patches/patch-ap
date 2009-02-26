@@ -1,12 +1,33 @@
-$NetBSD: patch-ap,v 1.10 2008/03/11 15:46:57 joerg Exp $
+$NetBSD: patch-ap,v 1.11 2009/02/26 19:45:14 sno Exp $
 
---- lib/gvc/gvconfig.c.orig	2008-03-11 06:01:47.000000000 +0100
-+++ lib/gvc/gvconfig.c
-@@ -584,6 +584,7 @@ void gvconfig(GVC_t * gvc, boolean resca
-     	f = fopen(gvc->config_path,"r");
-     	if (!f) {
-     	    agerr (AGERR,"failed to open %s for read.\n", gvc->config_path);
-+	    exit(1);
-     	}
-     	else {
-     	    config_text = gmalloc(config_st.st_size + 1);
+--- lib/gvc/gvconfig.c.orig	2008-12-01 12:48:23.000000000 +0100
++++ lib/gvc/gvconfig.c	2008-12-01 12:50:26.000000000 +0100
+@@ -526,10 +526,7 @@
+         }
+         else {
+     	    f = fopen(gvc->config_path,"r");
+-    	    if (!f) {
+-    	        agerr (AGERR,"failed to open %s for read.\n", gvc->config_path);
+-    	    }
+-    	    else {
++    	    if (f) {
+     	        config_text = gmalloc(config_st.st_size + 1);
+     	        sz = fread(config_text, 1, config_st.st_size, f);
+     	        if (sz == 0) {
+@@ -542,10 +539,13 @@
+     	            rc = gvconfig_plugin_install_from_config(gvc, config_text);
+     		    /* NB. config_text not freed because we retain char* into it */
+     	        }
+-    	    }
+-    	    if (f) {
++
+     	        fclose(f);
+-	    }
++    	    }
++    	    else {
++    	        agerr (AGERR,"failed to open %s for read.\n", gvc->config_path);
++		exit(1);
++    	    }
+         }
+     }
+ #endif
