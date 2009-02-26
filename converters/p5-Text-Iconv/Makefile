@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/10/19 19:17:42 he Exp $
+# $NetBSD: Makefile,v 1.22 2009/02/26 08:46:33 abs Exp $
 #
 
-DISTNAME=	Text-Iconv-1.4
+DISTNAME=	Text-Iconv-1.7
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
 SVR4_PKGNAME=	p5tic
 CATEGORIES=	converters perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
