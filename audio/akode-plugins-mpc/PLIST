@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 18:06:08 hasso Exp $
+lib/libakode_mpc_decoder.la
