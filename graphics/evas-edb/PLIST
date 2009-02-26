@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 21:13:43 minskim Exp $
+lib/evas/modules/loaders/edb/${MODULE_ARCH}/module.la
+lib/evas/modules/savers/edb/${MODULE_ARCH}/module.la
+@dirrm lib/evas/modules/savers/edb/${MODULE_ARCH}
+@dirrm lib/evas/modules/savers/edb
+@dirrm lib/evas/modules/loaders/edb/${MODULE_ARCH}
+@dirrm lib/evas/modules/loaders/edb
