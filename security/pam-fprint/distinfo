@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/02/26 21:52:00 plunky Exp $
+
+SHA1 (pam_fprint-0.2.tar.bz2) = d52543cb2b4cb7d1a32ae30347a9053bc118f2cd
+RMD160 (pam_fprint-0.2.tar.bz2) = 483fcf6b70d4805b1da4f95acbd34c672275a4ba
+Size (pam_fprint-0.2.tar.bz2) = 72781 bytes
+SHA1 (patch-aa) = e2d6a4daa9d3e7d0af10807d1d81e74941b79089

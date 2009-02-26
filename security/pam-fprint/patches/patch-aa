@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/26 21:52:00 plunky Exp $
+
+- pamtest relies on libpam_misc so disable it
+- pam modules directory is hardcoded, fix that
+
+--- src/Makefile.in.orig	2007-11-19 19:15:11.000000000 +0000
++++ src/Makefile.in
+@@ -30,7 +30,7 @@ POST_INSTALL = :
+ NORMAL_UNINSTALL = :
+ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+-noinst_PROGRAMS = pamtest$(EXEEXT)
++noinst_PROGRAMS = 
+ bin_PROGRAMS = pam_fprint_enroll$(EXEEXT)
+ pammod_PROGRAMS = pam_fprint.so$(EXEEXT)
+ subdir = src
+@@ -163,7 +163,7 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-pammoddir = /lib/security
++pammoddir = @libdir@/security
+ pam_fprint_so_SOURCES = pam_fprint.c
+ pam_fprint_so_CFLAGS = -fPIC $(FPRINT_CFLAGS)
+ pam_fprint_so_LDFLAGS = -shared
