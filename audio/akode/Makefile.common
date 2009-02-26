@@ -1,0 +1,42 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+#
+# used by audio/akode/Makefile
+# used by audio/akode-plugins-alsa/Makefile
+# used by audio/akode-plugins-ffmpeg/Makefile
+# used by audio/akode-plugins-jack/Makefile
+# used by audio/akode-plugins-mpc/Makefile
+# used by audio/akode-plugins-mpeg/Makefile
+# used by audio/akode-plugins-oss/Makefile
+# used by audio/akode-plugins-pulseaudio/Makefile
+# used by audio/akode-plugins-resampler/Makefile
+# used by audio/akode-plugins-sun/Makefile
+# used by audio/akode-plugins-xiph/Makefile
+
+AKODE_VERSION=		2.0.2
+DISTNAME=		30375-akode-${AKODE_VERSION}
+CATEGORIES=		audio
+MASTER_SITES=		http://www.kde-apps.org/CONTENT/content-files/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		hasso@NetBSD.org
+HOMEPAGE=		http://carewolf.com/akode/
+
+WRKSRC=			${WRKDIR}/akode-${AKODE_VERSION}
+
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
+
+CONFIGURE_ARGS+=        --without-flac
+CONFIGURE_ARGS+=        --without-speex
+CONFIGURE_ARGS+=        --without-libmad
+CONFIGURE_ARGS+=        --without-libsamplerate
+CONFIGURE_ARGS+=        --without-jack
+CONFIGURE_ARGS+=        --without-polypaudio
+CONFIGURE_ARGS+=        --without-ffmpeg
+CONFIGURE_ARGS+=        --without-oss
+CONFIGURE_ARGS+=        --without-sun
+CONFIGURE_ARGS+=        --without-alsa
+CONFIGURE_ARGS+=        --without-vorbis
+CONFIGURE_ARGS+=	--without-mpc
