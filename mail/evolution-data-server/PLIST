@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/11/24 16:36:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/02/27 17:40:43 wiz Exp $
 include/evolution-data-server-2.24/camel/camel-address.h
 include/evolution-data-server-2.24/camel/camel-arg.h
 include/evolution-data-server-2.24/camel/camel-block-file.h
@@ -476,6 +476,7 @@ share/gtk-doc/html/camel/camel-camel-net-utils.html
 share/gtk-doc/html/camel/camel-camel-operation.html
 share/gtk-doc/html/camel/camel-camel-process.html
 share/gtk-doc/html/camel/camel-camel-provider.html
+share/gtk-doc/html/camel/camel-camel-search-sql-sexp.html
 share/gtk-doc/html/camel/camel-camel-search-sql.html
 share/gtk-doc/html/camel/camel-camel-string-utils.html
 share/gtk-doc/html/camel/camel-camel-trie.html
