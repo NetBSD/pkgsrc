@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.816 2009/02/27 22:38:26 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.817 2009/02/27 22:50:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1116,3 +1116,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libXi to 1.2.1 [wiz 2009-02-27]
 	Updated audio/libcanberra to 0.11 [wiz 2009-02-27]
 	Updated multimedia/libdvbpsi to 0.1.6 [wiz 2009-02-27]
+	Updated devel/libevent to 1.4.9 [wiz 2009-02-27]
