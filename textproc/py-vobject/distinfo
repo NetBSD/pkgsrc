@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/02/26 22:52:48 kleink Exp $
+$NetBSD: distinfo,v 1.3 2009/02/27 00:05:02 kleink Exp $
 
-SHA1 (vobject-0.8.1c.tar.gz) = 9bed1ab4b16448eff0ac03cd6e48e305f6e03144
-RMD160 (vobject-0.8.1c.tar.gz) = 697f8708cbab09ad96206e13dad4ace0b2075df1
-Size (vobject-0.8.1c.tar.gz) = 59899 bytes
+SHA1 (vobject-0.8.1c.tar.gz) = 97f1daf9d813a2b2128c2d39ca52bbbcc152fdfd
+RMD160 (vobject-0.8.1c.tar.gz) = ca1b1f207b6b7d4418a401938656627e6404aacf
+Size (vobject-0.8.1c.tar.gz) = 59925 bytes
