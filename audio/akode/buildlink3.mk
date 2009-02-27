@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/02/27 16:31:27 hasso Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 AKODE_BUILDLINK3_MK:=	${AKODE_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}akode
 
 .if !empty(AKODE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.akode+=	akode>=2.0.2
-BUILDLINK_PKGSRCDIR.akode?=	../../akode/akode
+BUILDLINK_PKGSRCDIR.akode?=	../../audio/akode
 .endif	# AKODE_BUILDLINK3_MK
 
 .include "../../devel/libltdl/buildlink3.mk"
