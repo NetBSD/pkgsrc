@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2008/02/15 15:47:56 tron Exp $
+# $NetBSD: Makefile,v 1.53 2009/02/27 10:00:29 tron Exp $
 
 DISTNAME=	magicfilter-1.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/printing/}
 
@@ -13,12 +13,12 @@ COMMENT=	Customizable, extensible automatic printer filter
 DEPENDS+=	a2ps-[0-9]*:../../print/a2ps
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
 DEPENDS+=	papersize-[0-9]*:../../print/papersize
+DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 
 USE_TOOLS+=	gmake gs:run gzip
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GHOSTSCRIPT=${TOOLS_PATH.gs}
 CONFIGURE_ENV+= GZIP=${TOOLS_GZIP_CMD:Q}
-TEX_ACCEPTED=	teTeX3
 
 FILTER_DIR=	libexec/magicfilter
 
@@ -58,5 +58,4 @@ post-install:
 	  ${INSTALL_SCRIPT} "$$f" ${PREFIX}/${FILTER_DIR}/"$$f";	\
 	done
 
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
