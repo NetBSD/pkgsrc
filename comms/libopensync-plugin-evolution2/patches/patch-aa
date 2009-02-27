@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2009/02/27 17:42:23 drochner Exp $
+
+--- src/evolution2_ecal.c.orig	2007-03-27 13:49:55.000000000 +0200
++++ src/evolution2_ecal.c
+@@ -106,11 +106,13 @@ void evo2_calendar_get_changes(OSyncCont
+ 					data = e_cal_get_component_as_string(env->calendar, e_cal_component_get_icalcomponent(ecc->comp));
+ 					datasize = strlen(data) + 1;
+ 					evo2_report_change(ctx, "event", "vevent20", data, datasize, uid, CHANGE_ADDED);
++					g_free(data);
+ 					break;
+ 				case E_CAL_CHANGE_MODIFIED:
+ 					data = e_cal_get_component_as_string(env->calendar, e_cal_component_get_icalcomponent(ecc->comp));
+ 					datasize = strlen(data) + 1;
+ 					evo2_report_change(ctx, "event", "vevent20", data, datasize, uid, CHANGE_MODIFIED);
++					g_free(data);
+ 					break;
+ 				case E_CAL_CHANGE_DELETED:
+ 					evo2_report_change(ctx, "event", "vevent20", NULL, 0, uid, CHANGE_DELETED);
+@@ -132,6 +134,7 @@ void evo2_calendar_get_changes(OSyncCont
+ 			e_cal_component_get_uid(comp, &uid);
+ 			int datasize = strlen(data) + 1;
+ 			evo2_report_change(ctx, "event", "vevent20", data, datasize, uid, CHANGE_ADDED);
++			g_free(data);
+ 			g_object_unref (comp);
+ 		}
+ 	}
