@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2008/11/26 12:48:08 jmcneill Exp $
+# $NetBSD: Makefile,v 1.61 2009/02/27 07:38:08 hira Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.24.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE=	gnome-icon-theme.pc.in
 # The list of installed files depends on the version of
 # icon-naming-utils, so be sure that this dependency corresponds to
 # the current pkgsrc version.
-BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.6
+BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 
 # XXX this is used by applications. We "own" the subtree share/icons/gnome,
 # so we control the subdirs not belonging to a single application.
