@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/10/02 13:52:02 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/02/27 22:38:34 wiz Exp $
 #
 
 DISTNAME=		vls-0.5.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		net
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vls/0.5.6/
 
