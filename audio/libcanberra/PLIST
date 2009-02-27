@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/16 15:17:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/02/27 22:08:57 wiz Exp $
 bin/canberra-gtk-play
 include/canberra-gtk.h
 include/canberra.h
 lib/gtk-2.0/modules/libcanberra-gtk-module.la
+lib/${PKGNAME}/libcanberra-gstreamer.la
+lib/${PKGNAME}/libcanberra-multi.la
+lib/${PKGNAME}/libcanberra-null.la
+lib/${PKGNAME}/libcanberra-oss.la
 lib/libcanberra-gtk.la
 lib/libcanberra.la
-lib/libcanberra/libcanberra-gstreamer.la
-lib/libcanberra/libcanberra-multi.la
-lib/libcanberra/libcanberra-null.la
-lib/libcanberra/libcanberra-oss.la
 lib/pkgconfig/libcanberra-gtk.pc
 lib/pkgconfig/libcanberra.pc
 share/doc/libcanberra/README
@@ -28,8 +28,10 @@ share/gtk-doc/html/libcanberra/right.png
 share/gtk-doc/html/libcanberra/style.css
 share/gtk-doc/html/libcanberra/up.png
 @dirrm share/gtk-doc/html/libcanberra
+@unexec ${RMDIR} %D/share/gnome/shutdown 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/gnome/autostart 2>/dev/null || ${TRUE}
 @comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/doc/libcanberra
-@dirrm lib/libcanberra
+@dirrm lib/${PKGNAME}
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
