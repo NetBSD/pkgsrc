@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.815 2009/02/27 22:09:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.816 2009/02/27 22:38:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1115,3 +1115,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/gst-plugins0.10-good to 0.10.14 [wiz 2009-02-27]
 	Updated x11/libXi to 1.2.1 [wiz 2009-02-27]
 	Updated audio/libcanberra to 0.11 [wiz 2009-02-27]
+	Updated multimedia/libdvbpsi to 0.1.6 [wiz 2009-02-27]
