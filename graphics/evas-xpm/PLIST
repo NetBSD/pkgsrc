@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/27 04:20:48 minskim Exp $
+lib/evas/modules/loaders/xpm/${MODULE_ARCH}/module.la
+@dirrm lib/evas/modules/loaders/xpm/${MODULE_ARCH}
+@dirrm lib/evas/modules/loaders/xpm
