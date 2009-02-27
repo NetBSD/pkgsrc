@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/10/30 14:33:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/02/27 21:10:43 wiz Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
@@ -39,6 +39,8 @@ lib/gstreamer-0.10/libgstvideomixer.la
 lib/gstreamer-0.10/libgstwavenc.la
 lib/gstreamer-0.10/libgstwavparse.la
 share/gconf/schemas/gstreamer-0.10.schemas
+share/gstreamer-0.10/presets/GstIirEqualizer10Bands.prs
+share/gstreamer-0.10/presets/GstIirEqualizer3Bands.prs
 share/locale/af/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-good-0.10.mo
@@ -55,6 +57,7 @@ share/locale/id/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/it/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/ja/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/lt/LC_MESSAGES/gst-plugins-good-0.10.mo
+share/locale/mt/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/nb/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/nl/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-good-0.10.mo
@@ -70,5 +73,7 @@ share/locale/vi/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_HK/LC_MESSAGES/gst-plugins-good-0.10.mo
 share/locale/zh_TW/LC_MESSAGES/gst-plugins-good-0.10.mo
+@dirrm share/gstreamer-0.10/presets
+@dirrm share/gstreamer-0.10
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
