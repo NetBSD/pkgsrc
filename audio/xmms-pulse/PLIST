@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/27 10:05:37 kefren Exp $
+lib/xmms/Output/libxmms-pulse.la
+@comment in xmms: @dirrm lib/xmms/Output
