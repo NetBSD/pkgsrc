@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2009/02/21 19:39:44 tnn Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/27 19:39:48 drochner Exp $
 
 --- Makefile.in.orig	2009-02-15 14:07:08.000000000 +0100
 +++ Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.6 2009/02/21 19:39:44 tnn Exp $
  libtclsqlite3.la:	tclsqlite.lo libsqlite3.la
  	$(LTLINK) -o $@ tclsqlite.lo \
 -		libsqlite3.la @TCL_STUB_LIB_SPEC@ $(TLIBS) \
-+		libsqlite3.la @TCL_LIB_FLAGS@ $(TLIBS) \
++		libsqlite3.la @TCL_LIB_FLAG@ $(TLIBS) \
  		-rpath "$(TCLLIBDIR)" \
  		-version-info "8:6:8" \
  		-avoid-version
