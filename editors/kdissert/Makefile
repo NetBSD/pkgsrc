@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/01/18 05:06:32 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/27 19:51:13 drochner Exp $
 #
 
-DISTNAME=		kdissert-1.0.5
-PKGREVISION=		8
+DISTNAME=		kdissert-1.0.7
 CATEGORIES=		editors
 MASTER_SITES=		http://freehackers.org/~tnagy/kdissert/
 EXTRACT_SUFX=		.tar.bz2
@@ -14,18 +13,23 @@ COMMENT=		Mindmapping-like tool to generate text templates
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt
-NO_CONFIGURE=		yes
+PYTHON_FOR_BUILD_ONLY=	yes
 
-BUILD_DEPENDS+=	scons>=0.96.1nb1:../../devel/scons
+do-configure:
+	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD} \
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
+	${PYTHONBIN} waf configure --prefix=${PTEFIX}
 
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} waf
 
 do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+	${PYTHONBIN} waf install
 
+.include "../../lang/python/application.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
