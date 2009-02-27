@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.806 2009/02/27 11:10:15 tron Exp $
+$NetBSD: CHANGES-2009,v 1.807 2009/02/27 17:17:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1106,3 +1106,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/opensc-signer to 0.11.7 [hasso 2009-02-27]
 	Updated graphics/gnome-icon-theme to 2.24.0nb2 [hira 2009-02-27]
 	Updated print/magicfilter to 1.2nb7 [tron 2009-02-27]
+	Updated x11/gnome-themes to 2.24.3nb1 [wiz 2009-02-27]
