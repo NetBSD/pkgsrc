@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.802 2009/02/27 04:26:39 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.803 2009/02/27 07:39:53 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1102,3 +1102,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/evas-tiff version 0.9.9.050 [minskim 2009-02-27]
 	Added graphics/evas-xpm version 0.9.9.050 [minskim 2009-02-27]
 	Added graphics/evas-xrender-x11 version 0.9.9.050 [minskim 2009-02-27]
+	Updated security/opensc to 0.11.7 [hasso 2009-02-27]
+	Updated security/opensc-signer to 0.11.7 [hasso 2009-02-27]
