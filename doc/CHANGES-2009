@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.812 2009/02/27 20:29:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.813 2009/02/27 21:10:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1112,3 +1112,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution to 2.24.5 [wiz 2009-02-27]
 	Updated mail/evolution-exchange to 2.24.5 [wiz 2009-02-27]
 	Updated devel/gperf to 3.0.4 [wiz 2009-02-27]
+	Updated multimedia/gst-plugins0.10-good to 0.10.14 [wiz 2009-02-27]
