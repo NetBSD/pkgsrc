@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2009/02/27 14:35:25 tnn Exp $
+
+Declare inline functions also as static. Fixes build with Sun Studio.
+
+--- delta.c.orig	2004-09-17 23:35:49.000000000 +0200
++++ delta.c
+@@ -125,6 +125,7 @@ static rs_result rs_delta_s_scan(rs_job_
+ static rs_result rs_delta_s_flush(rs_job_t *job);
+ static rs_result rs_delta_s_end(rs_job_t *job);
+ void rs_getinput(rs_job_t *job);
++#define inline static inline
+ inline int rs_findmatch(rs_job_t *job, rs_long_t *match_pos, size_t *match_len);
+ inline rs_result rs_appendmatch(rs_job_t *job, rs_long_t match_pos, size_t match_len);
+ inline rs_result rs_appendmiss(rs_job_t *job, size_t miss_len);
