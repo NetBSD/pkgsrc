@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2009/02/27 13:05:20 joerg Exp $
 
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		vncviewer-4.1.2
 PKGREVISION=		1
 CATEGORIES=		net x11
-MASTER_SITES=		http://www.realvnc.com/dist/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.realvnc.com/
@@ -23,13 +23,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-zlib
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-# The distfile listed above is bogus, there is no direct link to download the
-# file, so a special command must be used.  I lifted this from FreeBSD Ports.
-DISTURL=http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
-pre-fetch:
-	${TEST} -f ${DISTDIR}/${DISTNAME}.tar.gz || \
-	 (cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz ${DISTURL:Q})
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
