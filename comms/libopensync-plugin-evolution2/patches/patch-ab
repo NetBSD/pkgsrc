@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1 2009/02/27 17:42:23 drochner Exp $
+
+--- src/evolution2_etodo.c.orig	2007-03-27 13:49:55.000000000 +0200
++++ src/evolution2_etodo.c
+@@ -105,11 +105,13 @@ void evo2_todo_get_changes(OSyncContext 
+ 					data = e_cal_get_component_as_string(env->calendar, e_cal_component_get_icalcomponent(ecc->comp));
+ 					datasize = strlen(data) + 1;
+ 					evo2_report_change(ctx, "todo", "vtodo20", data, datasize, uid, CHANGE_ADDED);
++					g_free(data);
+ 					break;
+ 				case E_CAL_CHANGE_MODIFIED:
+ 					data = e_cal_get_component_as_string(env->calendar, e_cal_component_get_icalcomponent(ecc->comp));
+ 					datasize = strlen(data) + 1;
+ 					evo2_report_change(ctx, "todo", "vtodo20", data, datasize, uid, CHANGE_MODIFIED);
++					g_free(data);
+ 					break;
+ 				case E_CAL_CHANGE_DELETED:
+ 					evo2_report_change(ctx, "todo", "vtodo20", NULL, 0, uid, CHANGE_DELETED);
+@@ -131,6 +133,7 @@ void evo2_todo_get_changes(OSyncContext 
+ 			e_cal_component_get_uid(comp, &uid);
+ 			int datasize = strlen(data) + 1;
+ 			evo2_report_change(ctx, "todo", "vtodo20", data, datasize, uid, CHANGE_ADDED);
++			g_free(data);
+ 			g_object_unref (comp);
+ 		}
+ 	}
