@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.79 2009/02/26 12:52:43 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.80 2009/02/27 19:34:12 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.79 2009/02/26 12:52:43 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.80 2009/02/27 19:34:12 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -901,7 +901,7 @@ check_explicit_conflict_iter(const char *cur_pkg, void *cookie)
 {
 	struct find_conflict_data *data = cookie;
 
-	if (strcmp(data->old_pkg, cur_pkg) == 0)
+	if (data->old_pkg && strcmp(data->old_pkg, cur_pkg) == 0)
 		return 0;
 
 	warnx("Package `%s' conflicts with `%s', and `%s' is installed.",
