@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/02/27 17:44:14 drochner Exp $
+
+--- src/wscript.orig	2006-11-06 20:36:21.000000000 +0100
++++ src/wscript
+@@ -16,6 +16,8 @@ def build(bld):
+ 		obj_gui.find_sources_in_dirs('. plugins')
+ 		obj_gui.defines='HAVE_CONFIG_H=1'
+ 		obj_gui.uselib = 'GLIB GTK GLADE OPENSYNC OPENSYNCENGINE'
++		obj_gui.env['LINKFLAGS'] += ['-Wl,-R' + os.getenv('LOCALBASE') + '/lib']
++		obj_gui.env['LINKFLAGS'] += ['-Wl,-R' + os.getenv('X11BASE') + '/lib']
+ 
+ 		Common.install_files('MULTISYNC_DATA', '', 'multisync-gui.glade')
+ 	else:

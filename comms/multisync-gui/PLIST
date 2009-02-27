@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/27 17:44:14 drochner Exp $
+bin/multisync-gui
+share/applications/multisync-gui.desktop
+share/multisync-gui/multisync-gui.glade
+share/pixmaps/multisync-gui/multisync.png
+@dirrm share/pixmaps/multisync-gui
+@dirrm share/multisync-gui
+@comment in xdg-dirs: @dirrm share/applications
