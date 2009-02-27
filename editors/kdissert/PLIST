@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/26 04:03:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/02/27 19:51:13 drochner Exp $
 bin/kdissert
 lib/kde3/libkdissOOOdoc.la
 lib/kde3/libkdissOOOdoc.so
@@ -10,6 +10,8 @@ lib/kde3/libkdissasciidoc.la
 lib/kde3/libkdissasciidoc.so
 lib/kde3/libkdissbeamerslides.la
 lib/kde3/libkdissbeamerslides.so
+lib/kde3/libkdissdocbook.la
+lib/kde3/libkdissdocbook.so
 lib/kde3/libkdisshtmldoc.la
 lib/kde3/libkdisshtmldoc.so
 lib/kde3/libkdisspdflatexarticle.la
@@ -21,13 +23,6 @@ lib/kde3/libkdissprosperslides.so
 lib/kde3/libkdissstx.la
 lib/kde3/libkdissstx.so
 share/applications/kde/kdissert.desktop
-share/doc/kde/HTML/en/kdissert/common
-share/doc/kde/HTML/en/kdissert/index.cache.bz2
-share/doc/kde/HTML/en/kdissert/index.docbook
-share/doc/kde/HTML/en/kdissert/screenshot.jpg
-share/doc/kde/HTML/fr/kdissert/common
-share/doc/kde/HTML/fr/kdissert/index.cache.bz2
-share/doc/kde/HTML/fr/kdissert/index.docbook
 share/icons/hicolor/128x128/actions/kdissert_sort.png
 share/icons/hicolor/128x128/apps/kdissert.png
 share/icons/hicolor/16x16/actions/kdissert_link.png
@@ -52,6 +47,7 @@ share/kde/apps/kdissert/templatedata/kdissOOOimpress.tar.gz
 share/kde/apps/kdissert/templatedata/kdissapplet.tar.gz
 share/kde/apps/kdissert/templatedata/kdissasciidoc.tar.gz
 share/kde/apps/kdissert/templatedata/kdissbeamerslides.tar.gz
+share/kde/apps/kdissert/templatedata/kdissdocbook.tar.gz
 share/kde/apps/kdissert/templatedata/kdisshtmldoc.tar.gz
 share/kde/apps/kdissert/templatedata/kdisspdflatexarticle.tar.gz
 share/kde/apps/kdissert/templatedata/kdisspdflatexbook.tar.gz
@@ -62,31 +58,27 @@ share/kde/apps/kdissertpart/kdissertpart.rc
 share/kde/config.kcfg/kdissert.kcfg
 share/kde/mimelnk/application/x-kdissert.desktop
 share/kde/services/kdissertpart.desktop
+share/locale/bg/LC_MESSAGES/kdissert.mo
+share/locale/br/LC_MESSAGES/kdissert.mo
+share/locale/cs/LC_MESSAGES/kdissert.mo
+share/locale/da/LC_MESSAGES/kdissert.mo
 share/locale/de/LC_MESSAGES/kdissert.mo
+share/locale/el/LC_MESSAGES/kdissert.mo
 share/locale/es/LC_MESSAGES/kdissert.mo
 share/locale/fr/LC_MESSAGES/kdissert.mo
+share/locale/ga/LC_MESSAGES/kdissert.mo
+share/locale/gl/LC_MESSAGES/kdissert.mo
 share/locale/it/LC_MESSAGES/kdissert.mo
+share/locale/ka/LC_MESSAGES/kdissert.mo
 share/locale/nl/LC_MESSAGES/kdissert.mo
 share/locale/pl/LC_MESSAGES/kdissert.mo
-@comment in kde: @dirrm share/kde/mimelnk/application
+share/locale/pt/LC_MESSAGES/kdissert.mo
+share/locale/pt_BR/LC_MESSAGES/kdissert.mo
+share/locale/ru/LC_MESSAGES/kdissert.mo
+share/locale/sk/LC_MESSAGES/kdissert.mo
+share/locale/sv/LC_MESSAGES/kdissert.mo
+share/locale/tr/LC_MESSAGES/kdissert.mo
 @dirrm share/kde/apps/kdissertpart
 @dirrm share/kde/apps/kdissert/templatedata
 @dirrm share/kde/apps/kdissert/pics
 @dirrm share/kde/apps/kdissert
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/actions
-@dirrm share/doc/kde/HTML/fr/kdissert
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/en/kdissert
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm lib/kde3
