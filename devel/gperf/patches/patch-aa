@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.6 2007/10/13 18:35:36 adam Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/27 20:29:20 wiz Exp $
 
---- doc/Makefile.in.orig	2007-04-04 12:56:28.000000000 +0200
+--- doc/Makefile.in.orig	2008-08-23 19:05:33.000000000 +0000
 +++ doc/Makefile.in
-@@ -50,7 +50,6 @@ TEX = tex
+@@ -48,7 +48,6 @@ TEX = tex
  TEXI2DVI = texi2dvi
  DVIPS = dvips -D600
  TEXI2PDF = texi2pdf
 -MAKEINFO = LANG= LC_MESSAGES= LC_ALL= LANGUAGE= makeinfo
- TEXI2HTML = texi2html
+ TEXI2HTML = perl $(srcdir)/texi2html
  
  # Programs used by "make install":
-@@ -117,8 +116,8 @@ install : all force
+@@ -115,8 +114,8 @@ install : all force
  #	$(INSTALL_DATA) $(srcdir)/gperf.ps $(DESTDIR)$(psdir)/gperf.ps
  #	$(MKINSTALLDIRS) $(DESTDIR)$(pdfdir)
  #	$(INSTALL_DATA) $(srcdir)/gperf.pdf $(DESTDIR)$(pdfdir)/gperf.pdf
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/13 18:35:36 adam Exp $
  
  installdirs : force
  	$(MKINSTALLDIRS) $(DESTDIR)$(infodir)
-@@ -126,7 +125,7 @@ installdirs : force
+@@ -124,7 +123,7 @@ installdirs : force
  #	$(MKINSTALLDIRS) $(DESTDIR)$(dvidir)
  #	$(MKINSTALLDIRS) $(DESTDIR)$(psdir)
  #	$(MKINSTALLDIRS) $(DESTDIR)$(pdfdir)
