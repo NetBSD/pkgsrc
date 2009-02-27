@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 19:14:12 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/02/27 16:44:38 minskim Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-software-x11/}
 
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE=	evas-software-x11.pc.in
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 
 post-install:
