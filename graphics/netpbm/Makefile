@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2008/09/01 09:04:19 dholland Exp $
+# $NetBSD: Makefile,v 1.159 2009/02/27 16:51:36 wiz Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -13,7 +13,8 @@ COMMENT=	Toolkit for conversion of images between different formats
 MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
+# PLIST generation in post-install below is broken for destdir
+#PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bash:run gmake lex pax perl
 USE_FEATURES=	snprintf
