@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/02/27 22:38:16 wiz Exp $
+
+--- examples/connect.c.orig	2007-01-18 14:57:08.000000000 +0000
++++ examples/connect.c
+@@ -38,7 +38,6 @@
+ #   include <netinet/if_ether.h>
+ #endif
+ #include <netdb.h>
+-#include <netinet/ip.h>
+ #include <netinet/udp.h>
+ #include <arpa/inet.h>
+ 
