@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.801 2009/02/27 00:07:37 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.802 2009/02/27 04:26:39 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1087,3 +1087,18 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-local-lib to 1.3.2 [seb 2009-02-26]
 	Updated textproc/py-vobject to 0.8.1c [kleink 2009-02-26]
 	Updated textproc/py-vobject to 0.8.1cnb1 [kleink 2009-02-27]
+	Added graphics/evas-buffer version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-edb version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-eet version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-gif version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-jpeg version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-pmaps version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-png version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-sdl version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-sdl-16 version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-software-16-x11 version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-software-x11 version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-svg version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-tiff version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-xpm version 0.9.9.050 [minskim 2009-02-27]
+	Added graphics/evas-xrender-x11 version 0.9.9.050 [minskim 2009-02-27]
