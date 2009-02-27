@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2008/08/06 18:17:24 drochner Exp $
+$NetBSD: patch-ac,v 1.6 2009/02/27 21:10:43 wiz Exp $
 
---- gst/udp/Makefile.in.orig	2008-08-04 16:38:33.000000000 +0200
+--- gst/udp/Makefile.in.orig	2009-02-19 11:46:06.000000000 +0000
 +++ gst/udp/Makefile.in
-@@ -987,7 +987,7 @@ uninstall-am: uninstall-info-am uninstal
+@@ -824,7 +824,7 @@ uninstall-am: uninstall-pluginLTLIBRARIE
  	$^ > $@
  
  %-enumtypes.c: $(glib_enum_headers)
