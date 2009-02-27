@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/04/15 17:41:13 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/02/27 20:11:20 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBRSVG_BUILDLINK3_MK:=		${LIBRSVG_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.librsvg?=		../../graphics/librsvg
 
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
