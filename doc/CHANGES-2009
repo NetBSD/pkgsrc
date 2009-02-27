@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.803 2009/02/27 07:39:53 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.804 2009/02/27 07:41:37 hira Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1104,3 +1104,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/evas-xrender-x11 version 0.9.9.050 [minskim 2009-02-27]
 	Updated security/opensc to 0.11.7 [hasso 2009-02-27]
 	Updated security/opensc-signer to 0.11.7 [hasso 2009-02-27]
+	Updated graphics/gnome-icon-theme to 2.24.0nb2 [hira 2009-02-27]
