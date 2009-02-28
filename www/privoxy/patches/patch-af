@@ -1,0 +1,15 @@
+$NetBSD: patch-af,v 1.2.2.2 2009/02/28 12:47:22 rtr Exp $
+
+--- ./jcc.c.orig	2007-12-16 19:32:46.000000000 +0100
++++ ./jcc.c
+@@ -3299,6 +3299,10 @@ int main(int argc, const char *argv[])
+       {
+          log_error(LOG_LEVEL_FATAL, "Cannot setgid(): Insufficient permissions.");
+       }
++      if (grp)
++	setgroups(1, &grp->gr_gid);
++      else
++      	initgroups(pw->pw_name, pw->pw_gid);
+       if (do_chroot)
+       {
+          if (!pw->pw_dir)
