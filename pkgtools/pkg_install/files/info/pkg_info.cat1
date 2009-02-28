@@ -171,25 +171,6 @@ EENNVVIIRROONNMMEENNTT
                 the package database directory.  The default package database
                 directory is _/_v_a_r_/_d_b_/_p_k_g.
 
-     PKG_PATH   This can be used to specify a semicolon-separated list of
-                paths and URLs to search for package files.  If PKG_PATH is
-                used, the suffix _._t_g_z is automatically appended to the
-                _p_k_g_-_n_a_m_e, whereas searching in the current directory uses
-                _p_k_g_-_n_a_m_e literally.
-
-     PKG_TMPDIR, TMPDIR
-                These are tried in turn (if set) as candidate directories in
-                which to create a ``staging area'' for any files extracted by
-                ppkkgg__iinnffoo from package files.  If neither PKG_TMPDIR nor TMPDIR
-                yields a suitable scratch directory, _/_v_a_r_/_t_m_p, _/_t_m_p, and
-                _/_u_s_r_/_t_m_p are tried in turn.  Note that _/_u_s_r_/_t_m_p may be cre-
-                ated, if it doesn't already exist.
-
-                Since ppkkgg__iinnffoo requires very little information to be
-                extracted from any package files examined, it is unlikely that
-                these environment variables would ever need to be used to work
-                around limited available space in the default locations.
-
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1), pkg_create(1), pkg_delete(1), mktemp(3),
      pkgsrc(7), mtree(8)
@@ -203,4 +184,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, depends displaying,
              pkg size display etc.
 
-NetBSD 4.0                       March 2, 2007                      NetBSD 4.0
+NetBSD 5.0                     February 27, 2009                    NetBSD 5.0
