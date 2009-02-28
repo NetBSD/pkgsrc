@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2009/02/28 14:54:23 ahoka Exp $
+# $NetBSD: Makefile,v 1.36 2009/02/28 15:54:29 ahoka Exp $
 
 DISTNAME=		hal-0.5.11
 PKGREVISION=		21
@@ -20,7 +20,6 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		YES
 
-OWN_DIRS+=		/media
 MAKE_DIRS+=		/media
 MAKE_DIRS+=		${VARBASE}/cache/hald
 SPECIAL_PERMS+=		${VARBASE}/cache/hald ${HAL_USER} ${HAL_GROUP} 0644
