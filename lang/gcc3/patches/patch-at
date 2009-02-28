@@ -1,0 +1,24 @@
+$NetBSD: patch-at,v 1.1 2009/02/28 18:37:22 joerg Exp $
+
+Alternative fix for http://gcc.gnu.org/bugzilla/show_bug.cgi?id=38182
+
+--- gcc/ginclude/stddef.h.orig	2009-02-28 18:57:06.000000000 +0100
++++ gcc/ginclude/stddef.h
+@@ -64,7 +64,7 @@ Boston, MA 02111-1307, USA.  */
+ /* In 4.3bsd-net2, machine/ansi.h defines these symbols, which are
+    defined if the corresponding type is *not* defined.
+    FreeBSD-2.1 defines _MACHINE_ANSI_H_ instead of _ANSI_H_ */
+-#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_)
++#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) || defined(__NetBSD__)
+ #if !defined(_SIZE_T_) && !defined(_BSD_SIZE_T_)
+ #define _SIZE_T
+ #endif
+@@ -359,7 +359,7 @@ typedef __WINT_TYPE__ wint_t;
+ /*  In 4.3bsd-net2, leave these undefined to indicate that size_t, etc.
+     are already defined.  */
+ /*  BSD/OS 3.1 and FreeBSD [23].x require the MACHINE_ANSI_H check here.  */
+-#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_)
++#if defined(_ANSI_H_) || defined(_MACHINE_ANSI_H_) || defined(__NetBSD__)
+ /*  The references to _GCC_PTRDIFF_T_, _GCC_SIZE_T_, and _GCC_WCHAR_T_
+     are probably typos and should be removed before 2.8 is released.  */
+ #ifdef _GCC_PTRDIFF_T_
