@@ -236,14 +236,14 @@ EENNVVIIRROONNMMEENNTT
                  the package database directory.  The default package database
                  directory is _/_v_a_r_/_d_b_/_p_k_g.
 
-     PKG_PATH    The value of the PKG_PATH variable is used if a given package
-                 can't be found, it's usually set to _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.
-                 The environment variable should be a series of entries sepa-
-                 rated by semicolons.  Each entry consists of a directory name
-                 or URL.  The current directory may be indicated implicitly by
-                 an empty directory name, or explicitly by a single period.
-                 It overrides the pkg_install.conf(5) variable of the same
-                 name.
+     PKG_PATH    The value of the PKG_PATH variable overrides the
+                 pkg_install.conf(5) variable of the same name.  It is used if
+                 a given package can't be found, it's usually set to
+                 _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.  The environment variable should be
+                 a series of entries separated by semicolons.  Each entry con-
+                 sists of a directory name or URL.  The current directory may
+                 be indicated implicitly by an empty directory name, or
+                 explicitly by a single period.
 
      PKG_REFCOUNT_DBDIR
                  Location of the package reference counts database directory.
