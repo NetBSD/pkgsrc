@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.822 2009/02/28 16:11:31 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.823 2009/02/28 16:21:58 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1122,3 +1122,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dkim-milter to 2.8.2 [manu 2009-02-28]
 	Updated www/drupal to 5.16 [adrianp 2009-02-28]
 	Updated www/drupal6 to 6.10 [adrianp 2009-02-28]
+	Updated devel/p5-Test-Harness to 3.16 [adrianp 2009-02-28]
