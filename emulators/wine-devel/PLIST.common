@@ -1,16 +1,13 @@
-@comment $NetBSD: PLIST.common,v 1.6 2009/02/19 19:26:17 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.7 2009/02/28 15:30:13 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
 bin/notepad
-bin/progman
 bin/regedit
 bin/regsvr32
-bin/uninstaller
 bin/widl
 bin/wine
 bin/wineboot
-bin/winebrowser
 bin/winebuild
 bin/winecfg
 bin/wineconsole
@@ -129,7 +126,9 @@ include/wine/windows/cvconst.h
 include/wine/windows/d3d.h
 include/wine/windows/d3d10.h
 include/wine/windows/d3d10.idl
+include/wine/windows/d3d10effect.h
 include/wine/windows/d3d10misc.h
+include/wine/windows/d3d10shader.h
 include/wine/windows/d3d8.h
 include/wine/windows/d3d8caps.h
 include/wine/windows/d3d8types.h
@@ -408,6 +407,8 @@ include/wine/windows/optary.h
 include/wine/windows/optary.idl
 include/wine/windows/pdh.h
 include/wine/windows/pdhmsg.h
+include/wine/windows/perhist.h
+include/wine/windows/perhist.idl
 include/wine/windows/pktdef.h
 include/wine/windows/poppack.h
 include/wine/windows/powrprof.h
@@ -866,6 +867,7 @@ lib/wine/lzexpand.dll16
 lib/wine/mapi32.dll.so
 lib/wine/mciavi32.dll.so
 lib/wine/mcicda.dll.so
+lib/wine/mciqtz32.dll.so
 lib/wine/mciseq.dll.so
 lib/wine/mciwave.dll.so
 lib/wine/midimap.dll.so
@@ -1066,14 +1068,14 @@ lib/wine/winevdm.exe.so
 ${PLIST.x11}lib/wine/winex11.drv.so
 lib/wine/wing.dll16
 lib/wine/wing32.dll.so
-lib/wine/winhelp.exe16
+lib/wine/winhelp.exe16.so
 lib/wine/winhlp32.exe.so
 lib/wine/winhttp.dll.so
 lib/wine/wininet.dll.so
 lib/wine/winmm.dll.so
 lib/wine/winnls.dll16
 lib/wine/winnls32.dll.so
-lib/wine/winoldap.mod16
+lib/wine/winoldap.mod16.so
 lib/wine/winscard.dll.so
 lib/wine/winsock.dll16
 lib/wine/winspool.drv.so
@@ -1145,6 +1147,7 @@ ${PLIST.x11}share/wine/fonts/sserifeg.fon
 ${PLIST.x11}share/wine/fonts/sserifer.fon
 ${PLIST.x11}share/wine/fonts/sserifet.fon
 ${PLIST.x11}share/wine/fonts/svgasys.fon
+${PLIST.x11}share/wine/fonts/symbol.ttf
 ${PLIST.x11}share/wine/fonts/tahoma.ttf
 ${PLIST.x11}share/wine/fonts/tahomabd.ttf
 ${PLIST.x11}share/wine/fonts/vgas1255.fon

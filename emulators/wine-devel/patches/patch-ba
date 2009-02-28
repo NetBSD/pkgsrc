@@ -1,16 +1,16 @@
-$NetBSD: patch-ba,v 1.7 2009/02/19 19:26:17 adam Exp $
+$NetBSD: patch-ba,v 1.8 2009/02/28 15:30:13 adam Exp $
 
---- configure.orig	2009-02-13 18:01:33.000000000 +0100
+--- configure.orig	2009-02-27 23:21:46.000000000 +0100
 +++ configure
-@@ -3945,7 +3945,6 @@ TOOLSDIR=$wine_cv_toolsdir
+@@ -3947,7 +3947,6 @@ TOOLSDIR=$wine_cv_toolsdir
  
- if test -n "$host_alias"
+ if test -n "$host_alias" -a "$host_alias" != "$build_alias"
  then
 -    TARGETFLAGS="-b $host_alias $TARGETFLAGS"
  
  fi
  
-@@ -17911,6 +17910,11 @@ MAIN_BINARY="wine-pthread"
+@@ -17913,6 +17912,11 @@ MAIN_BINARY="wine-pthread"
  
          EXTRA_BINARIES="wine-pthread"
   ;;

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.5 2009/01/30 19:39:04 adam Exp $
+$NetBSD: patch-af,v 1.6 2009/02/28 15:30:13 adam Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2009-01-30 17:54:01.000000000 +0100
+--- dlls/ntdll/signal_i386.c.orig	2009-02-27 23:21:46.000000000 +0100
 +++ dlls/ntdll/signal_i386.c
-@@ -402,8 +402,13 @@ enum i386_trap_code
+@@ -403,8 +403,13 @@ enum i386_trap_code
      TRAP_x86_PAGEFLT    = T_PAGEFLT,    /* Page fault */
      TRAP_x86_ARITHTRAP  = T_ARITHTRAP,  /* Floating point exception */
      TRAP_x86_ALIGNFLT   = T_ALIGNFLT,   /* Alignment check exception */
