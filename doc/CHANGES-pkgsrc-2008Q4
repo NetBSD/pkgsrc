@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.61 2009/02/28 12:41:51 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.62 2009/02/28 12:47:53 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -181,3 +181,5 @@ Pullup ticket #2709 - requested by sborrill
 php-imap: bug fix
 pullup ticket #2710 - requested by wiz
 pan: update package for fixes
+pullup ticket #2711 - requested by drochner
+privoxy: update for security fix
