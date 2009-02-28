@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.823 2009/02/28 16:21:58 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.824 2009/02/28 20:42:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1123,3 +1123,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/drupal to 5.16 [adrianp 2009-02-28]
 	Updated www/drupal6 to 6.10 [adrianp 2009-02-28]
 	Updated devel/p5-Test-Harness to 3.16 [adrianp 2009-02-28]
+	Updated textproc/p5-Template-Declare to 0.38 [seb 2009-02-28]
