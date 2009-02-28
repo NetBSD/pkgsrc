@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.818 2009/02/27 23:13:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.819 2009/02/28 15:31:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1118,3 +1118,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/libdvbpsi to 0.1.6 [wiz 2009-02-27]
 	Updated devel/libevent to 1.4.9 [wiz 2009-02-27]
 	Updated graphics/libkdcraw to 0.1.8 [wiz 2009-02-27]
+	Updated emulators/wine-devel to 1.1.16 [adam 2009-02-28]
