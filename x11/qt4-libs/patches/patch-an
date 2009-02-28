@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.5 2009/02/28 11:38:02 schwarz Exp $
+
+--- src/corelib/concurrent/qtconcurrentiteratekernel.cpp.orig	2009-02-15 16:19:07.000000000 +0100
++++ src/corelib/concurrent/qtconcurrentiteratekernel.cpp	2009-02-15 16:21:41.000000000 +0100
+@@ -37,7 +37,7 @@
+ 
+ #include "qtconcurrentiteratekernel.h"
+ 
+-#if defined(Q_OS_MAC)
++#if defined(Q_OS_MAC) || defined(__APPLE__)
+ 
+ #include <mach/mach.h>
+ #include <mach/mach_time.h>
+@@ -64,7 +64,7 @@
+     MedianSize = 7
+ };
+ 
+-#if defined(Q_OS_MAC)
++#if defined(Q_OS_MAC) || defined(__APPLE__)
+ 
+ static qint64 getticks()
+ {
