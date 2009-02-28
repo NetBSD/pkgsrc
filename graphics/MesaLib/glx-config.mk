@@ -1,4 +1,4 @@
-# $NetBSD: glx-config.mk,v 1.3 2008/10/26 21:03:40 bjs Exp $
+# $NetBSD: glx-config.mk,v 1.4 2009/02/28 01:22:07 bjs Exp $
 #
 # used by x11/modular-xorg-server/options.mk
 
@@ -48,7 +48,7 @@ CFLAGS.NetBSD+=		-DDEFAULT_X86_FPU=0x127f
 ###
 #/* FreeBSD leaves some exceptions unmasked as well. */
 ###
-CFLAGS.FreeBSD+=	-DDEFAULT_x86_FPU=0x1272
+CFLAGS.FreeBSD+=	-DDEFAULT_X86_FPU=0x1272
 .  endif
 
 CFLAGS.FreeBSD+=	-DUSE_NATIVE_LIBM_FUNCS
