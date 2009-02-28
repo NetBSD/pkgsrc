@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.80 2009/02/27 19:34:12 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.81 2009/02/28 16:03:56 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.80 2009/02/27 19:34:12 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.81 2009/02/28 16:03:56 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -123,7 +123,7 @@ static const struct pkg_meta_desc {
 	{ 0, NULL, 0 },
 };
 
-static int pkg_do(const char *, int);
+static int pkg_do(const char *, int, int);
 
 static int
 mkdir_p(const char *path)
@@ -1024,7 +1024,7 @@ check_dependencies(struct pkg_task *pkg)
 				    p->name);
 				continue;
 			}
-			if (pkg_do(p->name, 1)) {
+			if (pkg_do(p->name, 1, 0)) {
 				warnx("Can't install dependency %s", p->name);
 				status = -1;
 				break;
@@ -1238,7 +1238,7 @@ check_vulnerable(struct pkg_task *pkg)
  * Install a single package.
  */
 static int
-pkg_do(const char *pkgpath, int mark_automatic)
+pkg_do(const char *pkgpath, int mark_automatic, int top_level)
 {
 	int status, invalid_sig;
 	void *archive_cookie;
@@ -1249,7 +1249,8 @@ pkg_do(const char *pkgpath, int mark_automatic)
 
 	status = -1;
 
-	if ((pkg->archive = find_archive(pkgpath, &archive_cookie)) == NULL) {
+	pkg->archive = find_archive(pkgpath, &archive_cookie, top_level);
+	if (pkg->archive == NULL) {
 		warnx("no pkg found for '%s', sorry.", pkgpath);
 		goto clean_find_archive;
 	}
@@ -1426,25 +1427,15 @@ clean_find_archive:
 int
 pkg_perform(lpkg_head_t *pkgs)
 {
-	int     oldcwd, errors = 0;
+	int     errors = 0;
 	lpkg_t *lpp;
 
-	if ((oldcwd = open(".", O_RDONLY, 0)) == -1)
-		err(EXIT_FAILURE, "unable to open cwd");
-
 	while ((lpp = TAILQ_FIRST(pkgs)) != NULL) {
-		path_prepend_from_pkgname(lpp->lp_name);
-		if (pkg_do(lpp->lp_name, Automatic))
+		if (pkg_do(lpp->lp_name, Automatic, 1))
 			++errors;
-		path_prepend_clear();
 		TAILQ_REMOVE(pkgs, lpp, lp_link);
 		free_lpkg(lpp);
-
-		if (fchdir(oldcwd) == -1)
-			err(EXIT_FAILURE, "unable to restore cwd");
 	}
-
-	close(oldcwd);
 
 	return errors;
 }
