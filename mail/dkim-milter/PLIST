@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/19 23:24:28 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/02/28 15:44:55 manu Exp $
 ${PLIST.arlib}lib/libar.a
 ${PLIST.arlib}man/man3/ar.3
 lib/libdkim.a
@@ -21,11 +21,11 @@ share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
 share/examples/dkim-milter/dkim-filter.conf.sample
 share/doc/dkim-milter/draft-hoffman-dac-vbr-05.txt
-share/doc/dkim-milter/draft-ietf-dkim-deployment-02.txt
+share/doc/dkim-milter/draft-ietf-dkim-deployment-03.txt
 share/doc/dkim-milter/draft-ietf-dkim-overview-10.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-08.txt
+share/doc/dkim-milter/draft-ietf-dkim-ssp-09.txt
 share/doc/dkim-milter/draft-kucherawy-dkim-reporting-04.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-19.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-20.txt
 share/doc/dkim-milter/draft-shafranovich-feedback-report-06.txt
 share/doc/dkim-milter/libdkim/dkim_dnssec.html
 share/doc/dkim-milter/libdkim/dkim_policy_getdnssec.html
