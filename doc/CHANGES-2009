@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.819 2009/02/28 15:31:17 adam Exp $
+$NetBSD: CHANGES-2009,v 1.820 2009/02/28 15:44:55 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1119,3 +1119,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libevent to 1.4.9 [wiz 2009-02-27]
 	Updated graphics/libkdcraw to 0.1.8 [wiz 2009-02-27]
 	Updated emulators/wine-devel to 1.1.16 [adam 2009-02-28]
+	Updated mail/dkim-milter to 2.8.2 [manu 2009-02-28]

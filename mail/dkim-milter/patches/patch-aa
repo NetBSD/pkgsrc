@@ -1,27 +1,36 @@
-$NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
+$NetBSD: patch-aa,v 1.7 2009/02/28 15:44:55 manu Exp $
 
---- devtools/Site/site.config.m4.orig	2009-01-19 23:11:46.000000000 +0000
+--- devtools/Site/site.config.m4.orig	2009-02-18 11:02:11.000000000 +0100
 +++ devtools/Site/site.config.m4
-@@ -11,7 +11,7 @@ dnl
+@@ -11,7 +11,7 @@
  dnl If you are encountering coredumps and want to be able to analyze them
  dnl using something like "gdb", enable this next line by deleting the "dnl"
  dnl at the front of it.
 -dnl define(`confOPTIMIZE', `-g')
-+@DEBUG@ dnl define(`confOPTIMIZE', `-g')
++@DEBUG@ define(`confOPTIMIZE', `-g')
  
  dnl Shared library for libdkim
  dnl
-@@ -26,7 +26,7 @@ dnl If you want libdkim and dkim.h to be
+@@ -26,7 +26,7 @@
  dnl the package, enable this next line by deleting the "dnl" at the front
  dnl of it.  This is done automatically if you've requested the shared
  dnl library.
 -dnl define(`bld_LIBDKIM_INSTALL', `true')
 +define(`bld_LIBDKIM_INSTALL', `true')
  
+ dnl Use native strlcat()/strlcpy() functions
+ dnl
+@@ -37,7 +37,7 @@
+ dnl On the other hand, you can just use your native strlcat() and strlcpy()
+ dnl if you have them, avoiding this dependency.  If that's the case, enable
+ dnl this next line by deleting the "dnl" at the front of it.
+-dnl APPENDDEF(`confENVDEF', `-DWITHOUT_LIBSM')
++@WITHOUTLIBSM@ APPENDDEF(`confENVDEF', `-DWITHOUT_LIBSM')
+ 
  dnl Faster strtoul()/strtoull() implementations
  dnl
-@@ -40,7 +40,7 @@ dnl libar -- asynchronous resolver libra
- dnl
+@@ -53,7 +53,7 @@
+ dnl 
  dnl If you want to use the provided asynchronous resolver library, enable this
  dnl next line by deleting the "dnl" at the front of it.
 -dnl define(`bld_USE_ARLIB', `true')
@@ -29,7 +38,7 @@ $NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
  dnl 
  dnl libar normally uses res_init() or res_ninit() to load the contents
  dnl of resolv.conf for its use.  If neither of these work on your system
-@@ -49,7 +49,7 @@ dnl may need to enable code that parses 
+@@ -62,7 +62,7 @@
  dnl also be required if you've got any IPv6 addresses in /etc/resolv.conf.
  dnl In that case, enable this next line by deleting the "dnl" at the front
  dnl of it.
@@ -38,13 +47,13 @@ $NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
  
  dnl libunbound -- "unbound" asynchronous resolver library
  dnl
-@@ -64,6 +64,14 @@ dnl Finally, you may need to enable and 
+@@ -79,6 +79,14 @@
  dnl can find your installation.
  dnl APPENDDEF(`confINCDIRS', `-I/usr/local/unbound/include ')
  dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/unbound/lib ')
 +APPENDDEF(`confINCDIRS', `-I@SSLBASE@/include ')                       
 +APPENDDEF(`confLIBDIRS', `-L@SSLBASE@/lib ')                           
-+                                     
++
 +dnl pthread support                  
 +dnl                                  
 +APPENDDEF(`confLIBS', `@PTHREAD_LDFLAGS@ ')                            
@@ -53,7 +62,7 @@ $NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
  
  dnl POPAUTH -- POP-before-SMTP authentication
  dnl
-@@ -131,9 +139,10 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REPL
+@@ -146,9 +154,10 @@
  dnl APPENDDEF(`confENVDEF', `-D_FFR_REPORT_INTERVALS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECTOR_HEADER ')
@@ -65,7 +74,7 @@ $NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
  
  dnl DomainKeys -- Yahoo DomainKeys verification support
  dnl 
-@@ -149,6 +158,8 @@ dnl adjust the paths below and enable th
+@@ -164,6 +173,8 @@
  dnl front of them.
  dnl APPENDDEF(`bld_dkim_filter_INCDIRS', `-I/usr/local/sendmail/include')
  dnl APPENDDEF(`bld_dkim_filter_LIBDIRS', `-L/usr/local/sendmail/lib')
@@ -74,11 +83,11 @@ $NetBSD: patch-aa,v 1.6 2009/01/19 23:24:28 adrianp Exp $
  
  dnl smfi_addheader() -- older versions of libmilter
  dnl
-@@ -157,3 +168,22 @@ dnl primitive, you can enable this to ha
+@@ -172,3 +183,22 @@
  dnl instead.  It will still work, but it breaks the DKIM specification.
  dnl To enable this, remove the "dnl" from the front of the line.
  dnl APPENDDEF(`conf_dkim_filter_ENVDEF', `-DNO_SMFI_INSHEADER ')
-+                                     
++
 +dnl path fixes for pkgsrc            
 +dnl                                  
 +define(`confINCLUDEDIR', `@PREFIX@/include')                           
