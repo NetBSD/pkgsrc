@@ -1,9 +1,0 @@
-# $NetBSD: INSTALL,v 1.1 2009/02/28 14:00:23 ahoka Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	if [ ! -e /media ]; then
-		mkdir /media
-	fi
-	;;
-esac
