@@ -76,6 +76,10 @@ DDEESSCCRRIIPPTTIIOONN
              The URL from the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file should be used as
              value.
 
+     PKG_PATH
+             Search path as used by ppkkgg__aadddd.  Overriden by the environment
+             variable PKG_PATH.
+
      PKGVULNDIR
              Directory name in which the _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file resides.
              Default is _$_{_P_K_G___D_B_D_I_R_}.
@@ -116,4 +120,4 @@ FFIILLEESS
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1)
 
-NetBSD 5.0                      January 8, 2009                     NetBSD 5.0
+NetBSD 5.0                     February 27, 2009                    NetBSD 5.0

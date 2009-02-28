@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.25 2009/02/09 16:54:08 joerg Exp $
+# $NetBSD: Makefile.in,v 1.26 2009/02/28 16:03:56 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -28,7 +28,7 @@ LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
 	gpgsig.o global.o iterate.o lpkg.o opattern.o \
-	parse-config.o path.o pkgdb.o plist.o remove.o \
+	parse-config.o pkgdb.o plist.o remove.o \
 	str.o var.o version.o vulnerabilities-file.o xwrapper.o
 
 CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"

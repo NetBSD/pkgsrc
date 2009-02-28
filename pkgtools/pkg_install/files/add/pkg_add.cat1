@@ -37,13 +37,12 @@ OOPPTTIIOONNSS
      The following command line arguments are supported:
 
      _p_k_g_-_n_a_m_e [_._._.]
-             The named packages are installed.  _p_k_g_-_n_a_m_e may be either a URL
-             or a local pathname, a package name of "-" will cause ppkkgg__aadddd to
-             read from stdin.  If the packages are not found in the current
-             working directory, ppkkgg__aadddd will search them in each directory
-             named by the PKG_PATH environment variable.  Any dependencies
-             required by the installed package will be searched in the same
-             location that the original package was installed from.
+             The named packages are installed.  ppkkgg__aadddd will first try to use
+             _p_k_g_-_n_a_m_e as full URL or path name without any wildcard process-
+             ing.  If that fails, ppkkgg__aadddd will try to match packages using
+             wildcard processing.  If that fails as well and _p_k_g_-_n_a_m_e does not
+             contain any /, the entries of the PKG_PATH variable are searched
+             using the wildcard processing rules.
 
      --AA      Mark package as installed automatically, as dependency of another
              package.  You can use
@@ -237,13 +236,14 @@ EENNVVIIRROONNMMEENNTT
                  the package database directory.  The default package database
                  directory is _/_v_a_r_/_d_b_/_p_k_g.
 
-     PKG_PATH    The value of the PKG_PATH is used if a given package can't be
-                 found, it's usually set to _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.  The
-                 environment variable should be a series of entries separated
-                 by semicolons.  Each entry consists of a directory name or
-                 URL.  The current directory may be indicated implicitly by an
-                 empty directory name, or explicitly by a single period.  FTP
-                 URLs may not end with a slash.
+     PKG_PATH    The value of the PKG_PATH variable is used if a given package
+                 can't be found, it's usually set to _/_u_s_r_/_p_k_g_s_r_c_/_p_a_c_k_a_g_e_s_/_A_l_l.
+                 The environment variable should be a series of entries sepa-
+                 rated by semicolons.  Each entry consists of a directory name
+                 or URL.  The current directory may be indicated implicitly by
+                 an empty directory name, or explicitly by a single period.
+                 It overrides the pkg_install.conf(5) variable of the same
+                 name.
 
      PKG_REFCOUNT_DBDIR
                  Location of the package reference counts database directory.
@@ -317,4 +317,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 5.0                     October 10, 2008                     NetBSD 5.0
+NetBSD 5.0                     February 27, 2009                    NetBSD 5.0
