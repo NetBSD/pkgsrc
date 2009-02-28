@@ -77,7 +77,7 @@ DDEESSCCRRIIPPTTIIOONN
              value.
 
      PKG_PATH
-             Search path as used by ppkkgg__aadddd.  Overriden by the environment
+             Search path as used by ppkkgg__aadddd.  Overridden by the environment
              variable PKG_PATH.
 
      PKGVULNDIR
