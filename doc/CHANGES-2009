@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.821 2009/02/28 16:10:35 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.822 2009/02/28 16:11:31 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1121,3 +1121,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/wine-devel to 1.1.16 [adam 2009-02-28]
 	Updated mail/dkim-milter to 2.8.2 [manu 2009-02-28]
 	Updated www/drupal to 5.16 [adrianp 2009-02-28]
+	Updated www/drupal6 to 6.10 [adrianp 2009-02-28]
