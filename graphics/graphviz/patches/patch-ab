@@ -1,6 +1,8 @@
---- configure.orig	2008-10-07 23:54:55.000000000 +0000
-+++ configure	2009-02-26 19:17:53.000000000 +0000
-@@ -2402,18 +2402,26 @@
+$NetBSD: patch-ab,v 1.15 2009/02/28 13:19:46 drochner Exp $
+
+--- configure.orig	2008-10-08 01:54:55.000000000 +0200
++++ configure
+@@ -2402,18 +2402,26 @@ GRAPHVIZ_VERSION_MICRO=3
  
  
  
@@ -39,7 +41,7 @@
  
  
  
-@@ -6457,6 +6465,9 @@
+@@ -6457,6 +6465,9 @@ if test "${GCC}" != "yes" ; then
  	    ;;
  	*-sgi-irix* )
  	    ;;
@@ -49,3 +51,14 @@
      esac
  else
      case "${CC}" in
+@@ -34814,10 +34825,6 @@ fi
+ 
+ 
+ 
+-# Check whether --with-platformsdkincludedir was given.
+-if test "${with_platformsdkincludedir+set}" = set; then
+-  withval=$with_platformsdkincludedir; PLATFORMSDKINCLUDE=$withval; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE//'\\'/\\\\}; PLATFORMSDKINCLUDE_ESCAPED=${PLATFORMSDKINCLUDE_ESCAPED// /\\ }
+-fi
+ 
+ 
+ 
