@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/02/10 21:24:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2009/02/28 17:35:04 adrianp Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
@@ -81,6 +81,18 @@ REPLACE.php.old=	.*/bin/php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	bin/*.sh
 
+EMPTY_DIRS=	plugins/cleanup plugins/emotions/images \
+		plugins/emotions/jscripts plugins/media/images \
+		plugins/media/jscripts plugins/nonbreaking/images \
+		plugins/nonbreaking/langs plugins/searchreplace/images \
+		plugins/searchreplace/jscripts plugins/spellchecker/images \
+		plugins/spellchecker/langs plugins/table/images \
+		plugins/table/jscripts plugins/visualchars/images \
+		plugins/visualchars/langs themes/advanced/css \
+		themes/advanced/docs/en/images themes/advanced/images/xp \
+		themes/advanced/jscripts themes/advanced/docs/en \
+		themes/advanced/images themes/advanced/docs
+
 INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
 INSTALLATION_DIRS+=	${RCDIR}/bin
 
@@ -92,8 +104,9 @@ post-extract:
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
-.	for i in 1 2 3
-	${FIND} ${WRKSRC}/program/js/tiny_mce -type d -empty | ${XARGS} ${RMDIR}
+
+.	for d in ${EMPTY_DIRS}
+		cd ${WRKSRC}/program/js/tiny_mce && rmdir ${d}
 .	endfor
 
 do-install:
@@ -115,7 +128,7 @@ do-install:
 		${EGDIR}/main.inc.php.dist
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && pax -rw . ${RCDIR}/${i}
+		cd ${WRKSRC}/${i} && ${PAX} -rw . ${RCDIR}/${i}
 		${FIND} ${RCDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 		${FIND} ${RCDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 		${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
