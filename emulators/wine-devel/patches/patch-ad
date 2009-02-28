@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
+$NetBSD: patch-ad,v 1.5 2009/02/28 15:30:13 adam Exp $
 
---- dlls/iphlpapi/ipstats.c.orig	2009-02-13 18:01:33.000000000 +0100
+--- dlls/iphlpapi/ipstats.c.orig	2009-02-27 23:21:46.000000000 +0100
 +++ dlls/iphlpapi/ipstats.c
-@@ -28,6 +28,10 @@
+@@ -27,6 +27,10 @@
  #include <stdlib.h>
  #include <string.h>
  #include <sys/types.h>
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
  #ifdef HAVE_ALIAS_H
  #include <alias.h>
  #endif
-@@ -286,7 +290,7 @@ DWORD getInterfaceStatsByName(const char
+@@ -287,7 +291,7 @@ DWORD getInterfaceStatsByName(const char
  
  DWORD getICMPStats(MIB_ICMP *stats)
  {
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
    int mib[] = {CTL_NET, PF_INET, IPPROTO_ICMP, ICMPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
    size_t needed;
-@@ -483,7 +487,7 @@ DWORD getICMPStats(MIB_ICMP *stats)
+@@ -484,7 +488,7 @@ DWORD getICMPStats(MIB_ICMP *stats)
  
  DWORD getIPStats(PMIB_IPSTATS stats)
  {
@@ -31,7 +31,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
    int mib[] = {CTL_NET, PF_INET, IPPROTO_IP, IPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
    int ip_ttl, ip_forwarding;
-@@ -652,7 +656,7 @@ DWORD getIPStats(PMIB_IPSTATS stats)
+@@ -653,7 +657,7 @@ DWORD getIPStats(PMIB_IPSTATS stats)
  
  DWORD getTCPStats(MIB_TCPSTATS *stats)
  {
@@ -40,7 +40,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
  #ifndef TCPTV_MIN  /* got removed in Mac OS X for some reason */
  #define TCPTV_MIN 2
  #define TCPTV_REXMTMAX 128
-@@ -789,7 +793,7 @@ DWORD getTCPStats(MIB_TCPSTATS *stats)
+@@ -790,7 +794,7 @@ DWORD getTCPStats(MIB_TCPSTATS *stats)
  
  DWORD getUDPStats(MIB_UDPSTATS *stats)
  {
@@ -49,7 +49,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
    int mib[] = {CTL_NET, PF_INET, IPPROTO_UDP, UDPCTL_STATS};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
    struct udpstat udp_stat;
-@@ -1031,7 +1035,11 @@ DWORD getNumRoutes(void)
+@@ -1032,7 +1036,11 @@ DWORD getNumRoutes(void)
  
        /* Ignore all entries except for gateway routes which aren't
           multicast */
@@ -61,7 +61,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
           continue;
  
        RouteCount++;
-@@ -1107,8 +1115,12 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
+@@ -1108,8 +1116,12 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
  
            /* Ignore all entries except for gateway routes which aren't
               multicast */
@@ -74,7 +74,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
               continue;
  
            memset (&table->table[table->dwNumEntries], 0,
-@@ -1269,7 +1281,7 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
+@@ -1270,7 +1282,7 @@ DWORD getRouteTable(PMIB_IPFORWARDTABLE 
  
  DWORD getNumArpEntries(void)
  {
@@ -83,7 +83,7 @@ $NetBSD: patch-ad,v 1.4 2009/02/19 19:26:17 adam Exp $
    int mib[] = {CTL_NET, PF_ROUTE, 0, AF_INET, NET_RT_FLAGS, RTF_LLINFO};
  #define MIB_LEN (sizeof(mib) / sizeof(mib[0]))
    DWORD arpEntries = 0;
-@@ -1325,7 +1337,7 @@ DWORD getArpTable(PMIB_IPNETTABLE *ppIpN
+@@ -1326,7 +1338,7 @@ DWORD getArpTable(PMIB_IPNETTABLE *ppIpN
      if (numEntries > 1)
        size += (numEntries - 1) * sizeof(MIB_IPNETROW);
      table = HeapAlloc(heap, flags, size);
