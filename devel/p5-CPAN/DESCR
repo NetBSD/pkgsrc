@@ -1,0 +1,4 @@
+The CPAN module automates or at least simplifies the make and install of perl
+modules and extensions. It includes some primitive searching capabilities and
+knows how to use Net::FTP or LWP or some external download clients to fetch
+the distributions from the net.
