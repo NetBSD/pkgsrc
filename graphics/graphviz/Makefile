@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2009/02/26 19:45:14 sno Exp $
+# $NetBSD: Makefile,v 1.68 2009/03/01 21:58:53 tron Exp $
 
 DISTNAME=	graphviz-2.20.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
@@ -29,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-sharp
 CONFIGURE_ENV+=		ac_cv_prog_PHP=
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=
 CPPFLAGS+=		-DNO_POSTSCRIPT_ALIAS=1
-PKGCONFIG_OVERRIDE=		lib/agraph/libagraph.pc.in
+PKGCONFIG_OVERRIDE=	lib/agraph/libagraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cdt/libcdt.pc.in
 PKGCONFIG_OVERRIDE+=	lib/cgraph/libcgraph.pc.in
 PKGCONFIG_OVERRIDE+=	lib/expr/libexpr.pc.in
@@ -39,6 +40,16 @@ PKGCONFIG_OVERRIDE+=	lib/gvc/libgvc_builtins.pc.in
 PKGCONFIG_OVERRIDE+=	lib/pathplan/libpathplan.pc.in
 XAW_TYPE=		standard
 
+REPLACE_INTERPRETER+=	lua
+REPLACE.lua.old=	.*lua
+REPLACE.lua.new=	${PREFIX}/bin/lua
+REPLACE_FILES.lua=	tclpkg/gv/demo/modgraph.lua
+
+REPLACE_INTERPRETER+=	tclsh
+REPLACE.tclsh.old=	.*tclsh
+REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
+REPLACE_FILES.tclsh=	tclpkg/gv/demo/modgraph.tcl
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/compiler.mk"
@@ -46,9 +57,13 @@ XAW_TYPE=		standard
 BUILDLINK_TRANSFORM+=	rm:-Wno-unused-parameter
 .endif
 
-# prevent another config.status run
+# Prevent another config.status run.
 pre-build:
 	touch ${WRKSRC}/Makefile
+
+# Remove file created by re-linking "libgv_lua.la".
+post-install:
+	${RM} -f ${PREFIX}/lib/graphviz/lua/gv.so
 
 .include "options.mk"
 
