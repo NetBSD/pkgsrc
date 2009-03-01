@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/08 14:20:12 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/01 21:51:22 sno Exp $
 #
 
 DISTNAME=	libpaper_1.1.23
@@ -18,5 +18,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 FILES_SUBST+=		PAPERSIZE=${PAPERSIZE}
+
+.include "../../devel/libgetopt/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
