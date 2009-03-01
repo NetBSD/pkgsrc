@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.27 2009/03/01 21:58:53 tron Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -44,37 +45,16 @@ include/graphviz/pathplan.h
 include/graphviz/textpara.h
 include/graphviz/types.h
 include/graphviz/usershape.h
-lib/graphviz/config
-lib/graphviz/libgvplugin_core.a
 lib/graphviz/libgvplugin_core.la
-lib/graphviz/libgvplugin_core.so.5
-lib/graphviz/libgvplugin_dot_layout.a
 lib/graphviz/libgvplugin_dot_layout.la
-lib/graphviz/libgvplugin_dot_layout.so.5
-lib/graphviz/libgvplugin_gd.a
 lib/graphviz/libgvplugin_gd.la
-lib/graphviz/libgvplugin_gd.so.5
-lib/graphviz/libgvplugin_neato_layout.a
 lib/graphviz/libgvplugin_neato_layout.la
-lib/graphviz/libgvplugin_neato_layout.so.5
-lib/libagraph.a
 lib/libagraph.la
-lib/libagraph.so.4
-lib/libcdt.a
 lib/libcdt.la
-lib/libcdt.so.4
-lib/libcgraph.a
 lib/libcgraph.la
-lib/libcgraph.so.4
-lib/libgraph.a
 lib/libgraph.la
-lib/libgraph.so.4
-lib/libgvc.a
 lib/libgvc.la
-lib/libgvc.so.4
-lib/libpathplan.a
 lib/libpathplan.la
-lib/libpathplan.so.4
 lib/pkgconfig/libagraph.pc
 lib/pkgconfig/libcdt.pc
 lib/pkgconfig/libcgraph.pc
@@ -237,11 +217,14 @@ share/graphviz/doc/pdf/bcomps.pdf
 share/graphviz/doc/pdf/ccomps.pdf
 share/graphviz/doc/pdf/cdt.pdf
 share/graphviz/doc/pdf/cgraph.pdf
+share/graphviz/doc/pdf/circo.pdf
 share/graphviz/doc/pdf/dijkstra.pdf
 share/graphviz/doc/pdf/dot.pdf
+share/graphviz/doc/pdf/dot2gxl.pdf
 share/graphviz/doc/pdf/dotguide.pdf
 share/graphviz/doc/pdf/dotty.pdf
 share/graphviz/doc/pdf/dottyguide.pdf
+share/graphviz/doc/pdf/fdp.pdf
 share/graphviz/doc/pdf/gc.pdf
 share/graphviz/doc/pdf/graph.pdf
 share/graphviz/doc/pdf/gvc.pdf
@@ -251,6 +234,7 @@ share/graphviz/doc/pdf/gvpr.pdf
 share/graphviz/doc/pdf/gxl2dot.pdf
 share/graphviz/doc/pdf/leftyguide.pdf
 share/graphviz/doc/pdf/lneato.pdf
+share/graphviz/doc/pdf/neato.pdf
 share/graphviz/doc/pdf/neatoguide.pdf
 share/graphviz/doc/pdf/nop.pdf
 share/graphviz/doc/pdf/pathplan.pdf
@@ -258,6 +242,7 @@ share/graphviz/doc/pdf/prune.pdf
 share/graphviz/doc/pdf/sccmap.pdf
 share/graphviz/doc/pdf/tred.pdf
 share/graphviz/doc/pdf/unflatten.pdf
+share/graphviz/doc/pdf/twopi.pdf
 share/graphviz/graphs/directed/KW91.dot
 share/graphviz/graphs/directed/Latin1.dot
 share/graphviz/graphs/directed/NaN.dot
@@ -327,36 +312,18 @@ share/graphviz/lefty/lefty.psp
 share/graphviz/lefty/slides.lefty
 share/graphviz/lefty/tree.lefty
 ${PLIST.x11}share/graphviz/doc/pdf/lefty.pdf
-${PLIST.pangocairo}lib/graphviz/libgvplugin_pango.a
 ${PLIST.pangocairo}lib/graphviz/libgvplugin_pango.la
-${PLIST.pangocairo}lib/graphviz/libgvplugin_pango.so.5
-${PLIST.pangocairo}lib/graphviz/libgvplugin_xlib.a
 ${PLIST.pangocairo}lib/graphviz/libgvplugin_xlib.la
-${PLIST.pangocairo}lib/graphviz/libgvplugin_xlib.so.5
-${PLIST.guile}lib/graphviz/guile/libgv_guile.a
 ${PLIST.guile}lib/graphviz/guile/libgv_guile.la
-${PLIST.guile}lib/graphviz/guile/libgv_guile.so
-${PLIST.lua}lib/graphviz/lua/libgv_lua.a
 ${PLIST.lua}lib/graphviz/lua/libgv_lua.la
-${PLIST.lua}lib/graphviz/lua/libgv_lua.so
 ${PLIST.guile}man/mann/gv_guile.n
 ${PLIST.lua}man/mann/gv_lua.n
 ${PLIST.lua}share/graphviz/demo/modgraph.lua
-${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.a
 ${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.la
-${PLIST.tcl}lib/graphviz/tcl/libgv_tcl.so
-${PLIST.tcl}lib/graphviz/tcl/libtcldot.a
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot.la
-${PLIST.tcl}lib/graphviz/tcl/libtcldot.so.0
-${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.a
 ${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.la
-${PLIST.tcl}lib/graphviz/tcl/libtcldot_builtin.so.0
-${PLIST.tcl}lib/graphviz/tcl/libtclplan.a
 ${PLIST.tcl}lib/graphviz/tcl/libtclplan.la
-${PLIST.tcl}lib/graphviz/tcl/libtclplan.so.0
-${PLIST.tcl}lib/graphviz/tcl/libtkspline.a
 ${PLIST.tcl}lib/graphviz/tcl/libtkspline.la
-${PLIST.tcl}lib/graphviz/tcl/libtkspline.so.0
 ${PLIST.tcl}lib/graphviz/tcl/pkgIndex.tcl
 ${PLIST.tcl}man/mann/gv_tcl.n
 ${PLIST.tcl}man/mann/tcldot.n
@@ -388,16 +355,10 @@ ${PLIST.tcl}share/graphviz/demo/spline.tcl.README
 ${PLIST.tcl}share/graphviz/doc/html/tcldot.html
 ${PLIST.tcl}share/graphviz/doc/pdf/tcldot.pdf
 ${PLIST.tcl}share/graphviz/doc/pdf/tkspline.pdf
-${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.a
 ${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.la
-${PLIST.gtk}lib/graphviz/libgvplugin_gdk_pixbuf.so.5
-${PLIST.gtk}lib/graphviz/libgvplugin_gtk.a
 ${PLIST.gtk}lib/graphviz/libgvplugin_gtk.la
-${PLIST.gtk}lib/graphviz/libgvplugin_gtk.so.5
 ${PLIST.gd}bin/diffimg
-${PLIST.gd}${PLIST.tcl}lib/graphviz/tcl/libgdtclft.a
 ${PLIST.gd}${PLIST.tcl}lib/graphviz/tcl/libgdtclft.la
-${PLIST.gd}${PLIST.tcl}lib/graphviz/tcl/libgdtclft.so.0
 ${PLIST.gd}${PLIST.tcl}man/mann/gdtclft.n
 ${PLIST.gd}${PLIST.tcl}share/graphviz/doc/pdf/gdtclft.pdf
 @exec ${MKDIR} %D/share/graphviz/smyrna
@@ -444,4 +405,3 @@ ${PLIST.gd}${PLIST.tcl}share/graphviz/doc/pdf/gdtclft.pdf
 @dirrm lib/graphviz/R
 @dirrm lib/graphviz
 @dirrm include/graphviz
-
