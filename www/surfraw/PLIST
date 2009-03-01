@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/09 09:45:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/03/01 14:57:33 wiz Exp $
 bin/opensearch-discover
 bin/opensearch-genquery
 bin/surfraw
@@ -10,6 +10,7 @@ lib/surfraw/amazon
 lib/surfraw/archpkg
 lib/surfraw/arxiv
 lib/surfraw/ask
+lib/surfraw/aur
 lib/surfraw/austlii
 lib/surfraw/bbcnews
 lib/surfraw/cddb
@@ -54,6 +55,7 @@ lib/surfraw/leodict
 lib/surfraw/lsm
 lib/surfraw/musicbrainz
 lib/surfraw/netbsd
+lib/surfraw/ntrs
 lib/surfraw/openbsd
 lib/surfraw/opensearch
 lib/surfraw/pgpkeys
@@ -65,14 +67,17 @@ lib/surfraw/rfc
 lib/surfraw/rhyme
 lib/surfraw/scaleplus
 lib/surfraw/scholar
+lib/surfraw/scicom
 lib/surfraw/scpan
 lib/surfraw/slashdot
 lib/surfraw/slinuxdoc
 lib/surfraw/sourceforge
+lib/surfraw/springer
 lib/surfraw/stockquote
 lib/surfraw/sunonesearch
 lib/surfraw/thesaurus
 lib/surfraw/translate
+lib/surfraw/urban
 lib/surfraw/w3css
 lib/surfraw/w3html
 lib/surfraw/w3link
