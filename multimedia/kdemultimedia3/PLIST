@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/10/20 10:41:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/03/01 06:58:57 hasso Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -201,6 +201,7 @@ lib/kde3/noatun_voiceprint.la
 lib/kde3/noatun_winskin.la
 lib/kde3/noatunsimple.la
 lib/kde3/videothumbnail.la
+lib/libarts_akode.la
 lib/libarts_audiofile.la
 lib/libarts_mpeglib.la
 lib/libarts_splay.la
@@ -342,6 +343,9 @@ lib/mcop/RawWriter.mcopclass
 lib/mcop/SplayPlayObject.mcopclass
 lib/mcop/VoiceRemoval.mcopclass
 lib/mcop/WAVPlayObject.mcopclass
+lib/mcop/akodePlayObject.mcopclass
+lib/mcop/akodearts.mcopclass
+lib/mcop/akodearts.mcoptype
 lib/mcop/artsbuilder.mcopclass
 lib/mcop/artsbuilder.mcoptype
 lib/mcop/artseffects.mcopclass
