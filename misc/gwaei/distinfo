@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/02/23 11:25:18 wiz Exp $
+$NetBSD: distinfo,v 1.4 2009/03/01 15:13:21 wiz Exp $
 
-SHA1 (gwaei-0.14.0.tar.gz) = 1f428d0cf7d011ea61b4a5fb316f99369ce77ef5
-RMD160 (gwaei-0.14.0.tar.gz) = d9350c77d55846c9183799781e1161a4f46304a3
-Size (gwaei-0.14.0.tar.gz) = 480409 bytes
+SHA1 (gwaei-0.15.0.tar.gz) = 7bf152d2d95895832dcf24b166d5b7bf7c5376f1
+RMD160 (gwaei-0.15.0.tar.gz) = 18f32ea03eb56a432e0cd64a6a384c061953ecdd
+Size (gwaei-0.15.0.tar.gz) = 487969 bytes
