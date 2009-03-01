@@ -1,0 +1,10 @@
+The CPAN Testers project captures and analyses detailed results from
+building and testing CPAN distributions on multiple operating systems and
+multiple versions of Perl. This provides valuable feedback to module
+authors and potential users to identify bugs or platform compatibility
+issues and improves the overall quality and value of CPAN.
+
+One way individuals can contribute is to send a report for each module that
+they test or install. CPAN::Reporter is an add-on for the CPAN.pm module to
+send the results of building and testing modules to the CPAN Testers project.
+Full support for CPAN::Reporter is available in CPAN.pm as of version 1.92.
