@@ -1,21 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/15 14:57:28 he Exp $
-
---- Makefile.PL.orig	2008-08-26 19:39:22.000000000 +0200
-+++ Makefile.PL
-@@ -1,6 +1,7 @@
- use strict;
- use ExtUtils::MakeMaker;
- use Getopt::Long;
-+use Config;
+--- Makefile.PL.orig	2009-02-26 12:09:45.000000000 +0000
++++ Makefile.PL	2009-02-28 00:05:41.000000000 +0000
+@@ -47,15 +47,10 @@
+ 		"disable-tld" => \$disable_tld
+ 	);
  
- # See lib/ExtUtils/MakeMaker.pm for details of how to influence
- # the contents of the Makefile that is written.
-@@ -48,7 +49,7 @@ sub InitMakeParams
- 
- 	if ($libdir)
- 	{
+-	if ($libdir)
+-	{
 -		$Params{LIBS} = "-L$libdir -lidn";
-+		$Params{LIBS} = $Config{ldflags} . " -lidn";
- 	}
- 	else
+-	}
+-	else
+-	{
+-		$Params{LIBS} = $Config{ldflags} . ' -lidn';
+-	}
+-
++	$Params{LIBS} = $Config{ldflags};
++	$Params{LIBS} .= " -L$libdir" if ($libdir);
++	$Params{LIBS} .= " -lidn";
++	
+ 	if ($incdir)
  	{
+ 		$Params{INC} = "-I$incdir";
