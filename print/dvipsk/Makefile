@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/17 19:10:49 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/01 18:09:18 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	dvipsk-5.97
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.lzma
@@ -12,8 +13,8 @@ COMMENT=	DVI-to-PostScript translator
 
 CONFLICTS+=	teTeX-bin<3.0nb24
 CONFLICTS+=	teTeX-texmf<3.0nb9
+BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../print/tex-bin-dvipsk
-DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
 
 EXTRACT_ELEMENTS=	${DISTNAME}/texk/dvipsk \
 			${DISTNAME}/texk/make \
@@ -63,7 +64,8 @@ post-build:
 	${MKDIR} -p ${WRKSRC}/texmf/dvips/config
 	${CP} ${BIN_DVIPSK_PREFIX}/share/texmf/dvips/config/config.ps \
 		${WRKSRC}/texmf/dvips/config
-	env TFC_TEXMFCONFIG=${WRKSRC}/texmf \
+	env TEXMFCONFIG=${BIN_DVIPSK_PREFIX}/share/texmf \
+		TFC_TEXMFCONFIG=${WRKSRC}/texmf \
 		configPsFile=${WRKSRC}/config.ps \
 		${TETEX_PREFIX}/bin/texconfig dvips paper ${LOWER_PAPERSIZE}
 
