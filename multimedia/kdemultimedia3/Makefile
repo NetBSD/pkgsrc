@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.69 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2009/03/01 06:58:57 hasso Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
 
@@ -37,6 +38,7 @@ PTHREAD_AUTO_VARS=	yes
 UNLIMIT_RESOURCES+=	datasize
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../audio/akode/buildlink3.mk"
 .include "../../audio/arts/buildlink3.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
