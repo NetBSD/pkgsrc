@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/01 15:19:49 wiz Exp $
+bin/mdocterm
+bin/mdoctree
+bin/mdoclint
+lib/libmdoc.a
+include/mdoc.h
+man/man1/mdoctree.1
+man/man1/mdocterm.1
+man/man1/mdoclint.1
+man/man3/mdoc.3
