@@ -1,4 +1,4 @@
-/* $NetBSD: envsys.c,v 1.4 2008/12/04 03:35:59 jmcneill Exp $ */
+/* $NetBSD: envsys.c,v 1.5 2009/03/01 18:22:31 jmcneill Exp $ */
 
 /*-
  * Copyright (c) 2008 Jared D. McNeill <jmcneill@invisible.ca>
@@ -122,6 +122,7 @@ envsys_timeout(gpointer user_data)
 	}
 	prop_object_iterator_release (iter);
 
+	prop_object_release (global_array);
 	prop_object_release (global_dict);
 	return TRUE;
 }
