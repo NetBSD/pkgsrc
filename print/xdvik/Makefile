@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/23 19:32:01 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/01 17:45:19 minskim Exp $
 
 DISTNAME=	xdvik-22.84.14
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdvi/}
 
@@ -9,7 +10,8 @@ HOMEPAGE=	http://xdvi.sourceforge.net/
 COMMENT=	Previewer for DVI files
 
 CONFLICTS+=	teTeX-bin<3.0nb25
-DEPENDS+=	tex-bin-xdvi-[0-9]*:../../print/tex-bin-xdvi
+BUILD_DEPENDS+=	texlive-tetex-[0-9]*:../../print/texlive-tetex
+BUILD_DEPENDS+=	tex-bin-xdvi-[0-9]*:../../print/tex-bin-xdvi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +19,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvik
 
-FIND_PREFIX:=	TETEX_PREFIX=texlive-tetex
+FIND_PREFIX:=	TETEX_PREFIX=texlive-tetex BIN_XDVI_PREFIX=tex-bin-xdvi
 .include "../../mk/find-prefix.mk"
 
 CONFIGURE_ARGS+=	--with-system-kpathsea --with-system-t1lib \
@@ -60,7 +62,10 @@ XDVI_PAPERSIZE=	a4
 .include "../../mk/xaw.buildlink3.mk"
 
 post-build:
-	env TFC_TEXMFCONFIG=${WRKSRC}/texmf \
+	${MKDIR} -p ${WRKSRC}/texmf/xdvi
+	${CP} ${BIN_XDVI_PREFIX}/share/texmf/xdvi/XDvi \
+		${WRKSRC}/texmf/xdvi
+	env TEXMFSYSCONFIG=${WRKSRC}/texmf TFC_TEXMFCONFIG=${WRKSRC}/texmf \
 		${TETEX_PREFIX}/bin/texconfig xdvi paper ${XDVI_PAPERSIZE}
 
 post-install:
