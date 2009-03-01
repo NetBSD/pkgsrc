@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2009/02/26 08:02:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.468 2009/03/01 15:21:17 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -168,6 +168,7 @@ SUBDIR+=	lout
 SUBDIR+=	lq-sp
 SUBDIR+=	lua-expat
 SUBDIR+=	makeztxt
+SUBDIR+=	mdocml
 SUBDIR+=	mecab
 SUBDIR+=	mecab-base
 SUBDIR+=	mecab-ipadic
