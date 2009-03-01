@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1122 2009/03/01 23:44:37 sno Exp $
+# $NetBSD: Makefile,v 1.1123 2009/03/01 23:59:07 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -433,6 +433,7 @@ SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-CLASS
 SUBDIR+=	p5-CPAN
 SUBDIR+=	p5-CPAN-DistnameInfo
+SUBDIR+=	p5-CPAN-Reporter
 SUBDIR+=	p5-Cache
 SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-FastMmap
