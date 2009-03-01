@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.838 2009/03/01 21:55:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.839 2009/03/01 21:56:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1138,3 +1138,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/mdoclint version 1.0 [wiz 2009-03-01]
 	Updated devel/p5-Module-Build to 0.32 [sno 2009-03-01]
 	Updated net/p5-Net-LibIDN to 0.12 [sno 2009-03-01]
+	Updated textproc/p5-Encode to 2.31 [sno 2009-03-01]
