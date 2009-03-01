@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/01 17:45:19 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/01 18:13:50 minskim Exp $
 
 DISTNAME=	xdvik-22.84.14
 PKGREVISION=	1
@@ -65,7 +65,8 @@ post-build:
 	${MKDIR} -p ${WRKSRC}/texmf/xdvi
 	${CP} ${BIN_XDVI_PREFIX}/share/texmf/xdvi/XDvi \
 		${WRKSRC}/texmf/xdvi
-	env TEXMFSYSCONFIG=${WRKSRC}/texmf TFC_TEXMFCONFIG=${WRKSRC}/texmf \
+	env TEXMFCONFIG=${BIN_XDVI_PREFIX}/share/texmf \
+		TFC_TEXMFCONFIG=${WRKSRC}/texmf \
 		${TETEX_PREFIX}/bin/texconfig xdvi paper ${XDVI_PAPERSIZE}
 
 post-install:
