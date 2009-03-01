@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/01 14:22:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2009/03/01 16:39:47 tron Exp $
 #
 
-DISTNAME=	gnome-power-manager-2.24.2
+DISTNAME=	gnome-power-manager-2.24.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-power-manager/2.24/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/gnome-power-manager/
 COMMENT=	GNOME desktop session daemon for managing power management
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
@@ -20,6 +22,7 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--enable-policykit
+CONFIGURE_ENV+=		ac_cv_path_DOCBOOK2MAN=no
 
 GCONF_SCHEMAS+=		gnome-power-manager.schemas
 
