@@ -1,4 +1,4 @@
-This package contains tools from the Qt3 Graphical User Interface
+This package contains tools from the Qt4 Graphical User Interface
 toolkit. This includes Qt Designer; Qt Linguist, lupdate and lrelease
 for translating international applications; qm2ts for converting
 old .qm ii18n message files; Qt Assistant for finding help; qtconfig
