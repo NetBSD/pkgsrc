@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/04/13 22:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/01 15:02:02 wiz Exp $
 
-DISTNAME=	signing-party_1.0.orig
-PKGNAME=	caff-1.0
+DISTNAME=	signing-party_1.1.orig
+PKGNAME=	caff-1.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/signing-party/}
 
