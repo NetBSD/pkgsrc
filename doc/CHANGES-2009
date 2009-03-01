@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.845 2009/03/01 23:13:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.846 2009/03/01 23:29:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1145,3 +1145,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/devel/p5-Devel-Autoflush version 0.05 [sno 2009-03-01]
 	Updated devel/p5-CPAN to 1.9304 [sno 2009-03-01]
 	Added devel/p5-Test-Reporter version 1.5203 [sno 2009-03-01]
+	Added devel/p5-File-pushd version 1.00 [sno 2009-03-01]
