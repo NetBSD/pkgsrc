@@ -1,0 +1,2 @@
+This module is a hack to set autoflush for STDOUT and STDERR from the command
+line or from PERL5OPT for code that needs it but doesn't have it.
