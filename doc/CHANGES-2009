@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.835 2009/03/01 21:17:08 sno Exp $
+$NetBSD: CHANGES-2009,v 1.836 2009/03/01 21:26:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1135,3 +1135,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/dvipsk to 5.97nb1 [minskim 2009-03-01]
 	Updated sysutils/hal to 0.5.11nb22 [jmcneill 2009-03-01]
 	Updated devel/p5-File-HomeDir to 0.82 [sno 2009-03-01]
+	Added textproc/mdoclint version 1.0 [wiz 2009-03-01]
