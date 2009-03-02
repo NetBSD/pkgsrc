@@ -1,0 +1,47 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/03/02 16:46:01 manu Exp $
+--- configure.orig	2009-03-01 06:27:56.000000000 +0000
++++ configure	2009-03-01 06:29:47.000000000 +0000
+@@ -22127,9 +22127,9 @@
+ fi
+ 
+ { echo "$as_me:$LINENO: checking for PHP 4 development files" >&5
+ echo $ECHO_N "checking for PHP 4 development files... $ECHO_C" >&6; }
+-if $PHP4_CONFIG --version | grep -q "^4" || test "x$ENABLE_PHP4_FORCE" == "xyes"
++if $PHP4_CONFIG --version | grep -q "^4" || test "x$ENABLE_PHP4_FORCE" = "xyes"
+ then
+ 	PHP4_VERSION=`$PHP4_CONFIG --version 2> /dev/null`
+ 	languages_available="$languages_available php4($PHP4_VERSION)"
+ else
+@@ -22372,9 +22372,9 @@
+ fi
+ 
+ { echo "$as_me:$LINENO: checking for PHP 5 development files" >&5
+ echo $ECHO_N "checking for PHP 5 development files... $ECHO_C" >&6; }
+-if $PHP5_CONFIG --version | grep -q "^5" || test "x$ENABLE_PHP5_FORCE" == "xyes"
++if $PHP5_CONFIG --version | grep -q "^5" || test "x$ENABLE_PHP5_FORCE" = "xyes"
+ then
+ 	PHP5_VERSION=`$PHP5_CONFIG --version 2> /dev/null`
+ 	languages_available="$languages_available php5($PHP5_VERSION)"
+ else
+@@ -23799,9 +23799,9 @@
+ 
+ 
+ 
+ 
+-if test $MINGW == 1; then
++if test $MINGW -eq 1; then
+   MINGW_TRUE=
+   MINGW_FALSE='#'
+ else
+   MINGW_TRUE='#'
+@@ -23809,9 +23809,9 @@
+ fi
+ 
+ 
+ 
+-if test $DARWIN == 1; then
++if test $DARWIN -eq 1; then
+   DARWIN_TRUE=
+   DARWIN_FALSE='#'
+ else
+   DARWIN_TRUE='#'
