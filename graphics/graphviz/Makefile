@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2009/03/02 11:24:58 tron Exp $
+# $NetBSD: Makefile,v 1.70 2009/03/02 20:15:43 tron Exp $
 
 DISTNAME=	graphviz-2.20.3
 PKGREVISION=	2
@@ -65,7 +65,6 @@ pre-build:
 post-install:
 	${RM} -rf ${PREFIX}/lib/graphviz/lua/gv.so \
 	  ${PREFIX}/lib/graphviz/tcl/tcl ${PREFIX}/lib/lua/5.1/gv.so
-	${RMDIR} ${PREFIX}/lib/lua/5.1 ${PREFIX}/lib/lua || ${TRUE}
 
 .include "options.mk"
 
