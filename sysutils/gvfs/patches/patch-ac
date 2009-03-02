@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2009/03/02 02:00:51 jmcneill Exp $
+
+--- client/gvfsfusedaemon.c.orig	2008-10-20 05:02:26.000000000 -0400
++++ client/gvfsfusedaemon.c
+@@ -26,7 +26,9 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
++#if !defined(__NetBSD__)
+ #include <sys/vfs.h>
++#endif
+ #include <sys/time.h>
+ #include <unistd.h>
+ #include <stdlib.h>
