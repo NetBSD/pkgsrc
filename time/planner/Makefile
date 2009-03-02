@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/01/04 18:01:01 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/02 22:22:48 abs Exp $
 #
 
 DISTNAME=	planner-0.14.3
@@ -17,6 +17,7 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
+MAKE_JOBS_SAFE=		no
 
 PKGCONFIG_OVERRIDE=	libplanner-1.pc.in
 
