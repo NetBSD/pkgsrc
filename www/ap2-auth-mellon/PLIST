@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/02 16:47:42 manu Exp $
+lib/httpd/mod_auth_mellon.so
