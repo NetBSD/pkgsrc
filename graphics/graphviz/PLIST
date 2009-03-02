@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.27 2009/03/01 21:58:53 tron Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/03/02 11:24:58 tron Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
+bin/circo
+bin/dot2gxl
+bin/fdp
+bin/neato
+bin/twopi
 bin/dijkstra
 bin/dot
 bin/dotty
@@ -79,6 +84,11 @@ man/man1/prune.1
 man/man1/sccmap.1
 man/man1/tred.1
 man/man1/unflatten.1
+man/man1/circo.1
+man/man1/dot2gxl.1
+man/man1/fdp.1
+man/man1/neato.1
+man/man1/twopi.1
 man/man3/agraph.3
 man/man3/cdt.3
 man/man3/cgraph.3
