@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.848 2009/03/02 02:01:30 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.849 2009/03/02 06:24:40 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1118,6 +1118,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/libdvbpsi to 0.1.6 [wiz 2009-02-27]
 	Updated devel/libevent to 1.4.9 [wiz 2009-02-27]
 	Updated graphics/libkdcraw to 0.1.8 [wiz 2009-02-27]
+	Added audio/xmms-pulse version 0.9.4 [kefren 2009-02-27]
 	Updated emulators/wine-devel to 1.1.16 [adam 2009-02-28]
 	Updated mail/dkim-milter to 2.8.2 [manu 2009-02-28]
 	Updated www/drupal to 5.16 [adrianp 2009-02-28]
@@ -1148,3 +1149,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-File-pushd version 1.00 [sno 2009-03-01]
 	Added devel/p5-ExtUtils-Manifest version 1.56 [sno 2009-03-01]
 	Updated sysutils/gvfs to 1.0.3nb2 [jmcneill 2009-03-01]
+	Updated graphics/optipng to 0.6.2.1 [kefren 2009-03-01]
