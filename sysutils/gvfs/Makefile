@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/12/20 20:11:54 jmcneill Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/02 02:00:51 jmcneill Exp $
 #
 
 DISTNAME=	gvfs-1.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gvfs/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,9 +23,15 @@ CONFIGURE_ARGS+=	--enable-http
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gvfs
-PKG_SUPPORTED_OPTIONS+= avahi hal
+PKG_SUPPORTED_OPTIONS+= avahi hal fuse
 PKG_SUGGESTED_OPTIONS+= avahi hal
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
+# XXX fuse.bl3.mk will fail if we include it and fuse is not available
+.if ${OPSYS} == "Linux" || (${OPSYS} == "NetBSD" && exists(/usr/include/fuse.h))
+PKG_SUGGESTED_OPTIONS+=	fuse
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mavahi)
@@ -47,8 +53,13 @@ CONFIGURE_ARGS+=	--disable-hal
 CONFIGURE_ARGS+=	--disable-cdda
 .endif
 
-# Not yet; will cause the package to fail if fuse is not present
-#.include "../../mk/fuse.buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mfuse)
+.include "../../mk/fuse.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-fuse
+PLIST.fuse=		yes
+.else
+CONFIGURE_ARGS+=	--disable-fuse
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.6
 .include "../../devel/glib2/buildlink3.mk"
