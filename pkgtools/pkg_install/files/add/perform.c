@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.82 2009/03/02 14:59:14 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.83 2009/03/02 15:30:45 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.82 2009/03/02 14:59:14 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.83 2009/03/02 15:30:45 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -776,7 +776,6 @@ pkg_register_depends(struct pkg_task *pkg)
 		if (fd == -1) {
 			warn("can't open dependency file '%s',"
 			    "registration is incomplete!", required_by);
-			close(fd);
 		} else if (write(fd, text, text_len) != text_len) {
 			warn("can't write to dependency file `%s'", required_by);
 			close(fd);
