@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/06/18 11:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/03/02 22:39:11 wiz Exp $
 #
 
 DISTNAME=		tightvnc-1.3.9
@@ -18,6 +18,7 @@ CRYPTO=			yes
 USE_IMAKE=		yes
 USE_TOOLS+=		perl:run
 NO_INSTALL_MANPAGES=	yes
+MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		World
 
