@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2008/07/16 20:13:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.39 2009/03/02 15:13:10 jmcneill Exp $
 ${PLIST.dmx}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
@@ -13,6 +13,7 @@ libexec/gdmchooser
 libexec/gdmgreeter
 libexec/gdmlogin
 ${PLIST.gdmopen}libexec/gdmopen
+libexec/gdmprefetch
 libexec/gdmtranslate
 man/man1/gdm.1
 sbin/gdm
@@ -28,6 +29,7 @@ share/examples/gdm/PreSession/Default
 share/examples/gdm/XKeepsCrashing
 share/examples/gdm/Xsession
 share/examples/gdm/custom.conf
+share/examples/gdm/gdmprefetchlist
 share/examples/gdm/locale.alias
 share/examples/gdm/modules/AccessDwellMouseEvents
 share/examples/gdm/modules/AccessKeyMouseEvents
