@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2009/03/02 06:20:34 kefren Exp $
+diff -ru optipng-0.6.2/src/proginfo.h optipng-0.6.2.1/src/proginfo.h
+--- src/proginfo.h	2008-11-09 23:56:00.000000000 -0500
++++ src/proginfo.h	2009-02-22 23:38:00.000000000 -0500
+@@ -1,5 +1,5 @@
+ #define PROGRAM_NAME        "OptiPNG"
+ #define PROGRAM_DESCRIPTION "Advanced PNG optimizer"
+-#define PROGRAM_VERSION     "0.6.2"
+-#define PROGRAM_COPYRIGHT   "Copyright (C) 2001-2008 Cosmin Truta"
++#define PROGRAM_VERSION     "0.6.2.1"
++#define PROGRAM_COPYRIGHT   "Copyright (C) 2001-2009 Cosmin Truta"
+ #define PROGRAM_URI         "http://optipng.sourceforge.net/"
