@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.850 2009/03/02 10:25:06 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.851 2009/03/02 11:37:24 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1151,3 +1151,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/gvfs to 1.0.3nb2 [jmcneill 2009-03-01]
 	Updated graphics/optipng to 0.6.2.1 [kefren 2009-03-01]
 	Updated textproc/mdoclint to 1.1 [wiz 2009-03-02]
+	Updated sysutils/hal to 0.5.11nb23 [tron 2009-03-02]
