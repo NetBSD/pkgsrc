@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/01 21:25:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/02 09:39:53 wiz Exp $
 
 DISTNAME=	mdoclint-1.0
 CATEGORIES=	textproc
@@ -11,6 +11,8 @@ COMMENT=	Tool for verifying man pages
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+CONFLICTS=	mdocml-[0-9]*
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
