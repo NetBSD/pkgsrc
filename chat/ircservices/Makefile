@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/11/24 00:47:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.32 2009/03/02 18:24:52 joerg Exp $
 #
 
 DISTNAME=	ircservices-5.0.63
@@ -12,6 +12,8 @@ MASTER_SITES=	http://www.ircservices.za.net/download/ \
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.ircservices.za.net/
 COMMENT=	Services for IRC networks
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	gmake grep gsed perl
@@ -56,7 +58,12 @@ CONF_FILES_PERMS+=	${PREFIX}/share/examples/ircservices/modules.conf \
 				${PREFIX}/lib/services/modules.conf \
 				${BINOWN} ${BINGRP} 0640
 
-INSTALLATION_DIRS=	lib/services ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	lib/services ${PKGMANDIR}/man8 sbin \
+			share/doc/html/ircservices share/examples/ircservices
+
+INSTALL_MAKE_FLAGS+=	BINDEST=${DESTDIR}${PREFIX}/sbin \
+			DATDEST=${DESTDIR}${PREFIX}/lib/services
+
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,22 +71,23 @@ INSTALLATION_DIRS=	lib/services ${PKGMANDIR}/man8 sbin
 # others, the modules are statically-linked into the ircservices
 # executable.
 #
-.if exists(${WRKDIR}/${DISTNAME}/modules/mail/main.so)
-PLIST_SRC=	${.CURDIR}/PLIST.shared
-.endif
-PLIST_SRC+=	${.CURDIR}/PLIST
+PLIST_SRC=	${PLIST_SRC_DFLT} ${WRKDIR}/PLIST
+
+pre-install:
+	if [ -f ${WRKDIR}/${DISTNAME}/modules/mail/main.so ]; then \
+		${CP} ${.CURDIR}/PLIST.shared ${WRKDIR}/PLIST; \
+	else \
+		${TOUCH} ${WRKDIR}/PLIST; \
+	fi
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ircservices
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ircservices
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/docs/*.html \
-		${PREFIX}/share/doc/html/ircservices
-	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${PREFIX}/${PKGMANDIR}/man8
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/services/helpfiles
+		${DESTDIR}${PREFIX}/share/doc/html/ircservices
+	${INSTALL_MAN} ${WRKSRC}/docs/*.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/services/helpfiles
 	${INSTALL_DATA} ${WRKSRC}/data/example-ircservices.conf \
-		${PREFIX}/share/examples/ircservices/ircservices.conf
+		${DESTDIR}${PREFIX}/share/examples/ircservices/ircservices.conf
 	${INSTALL_DATA} ${WRKSRC}/data/example-modules.conf \
-		${PREFIX}/share/examples/ircservices/modules.conf
+		${DESTDIR}${PREFIX}/share/examples/ircservices/modules.conf
 
 .include "../../mk/bsd.pkg.mk"
