@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.81 2009/02/28 16:03:56 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.82 2009/03/02 14:59:14 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.81 2009/02/28 16:03:56 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.82 2009/03/02 14:59:14 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -357,6 +357,7 @@ check_already_installed(struct pkg_task *pkg)
 		warnx("package `%s' already recorded as installed",
 		      pkg->pkgname);
 	}
+	close(fd);
 	return 0;
 
 }
@@ -549,6 +550,7 @@ write_meta_data(struct pkg_task *pkg)
 				warn("Can't write meta data file: %s",
 				    filename);
 				free(filename);
+				close(fd);
 				return -1;
 			}
 			len -= ret;
@@ -771,12 +773,14 @@ pkg_register_depends(struct pkg_task *pkg)
 		required_by = pkgdb_pkg_file(pkg->dependencies[i], REQUIRED_BY_FNAME);
 
 		fd = open(required_by, O_WRONLY | O_APPEND | O_CREAT, 0644);
-		if (fd == -1)
+		if (fd == -1) {
 			warn("can't open dependency file '%s',"
 			    "registration is incomplete!", required_by);
-		else if (write(fd, text, text_len) != text_len)
+			close(fd);
+		} else if (write(fd, text, text_len) != text_len) {
 			warn("can't write to dependency file `%s'", required_by);
-		else if (close(fd) == -1)
+			close(fd);
+		} else if (close(fd) == -1)
 			warn("cannot close file %s", required_by);
 
 		free(required_by);
