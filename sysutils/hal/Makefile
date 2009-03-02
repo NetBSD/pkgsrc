@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/03/01 18:22:31 jmcneill Exp $
+# $NetBSD: Makefile,v 1.38 2009/03/02 11:36:33 tron Exp $
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -89,6 +89,8 @@ PKG_HOME.haldaemon=	${VARBASE}/run/hal
 
 FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
+
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 post-extract:
 	${CP} -r ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
