@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.855 2009/03/02 17:08:27 adam Exp $
+$NetBSD: CHANGES-2009,v 1.856 2009/03/02 17:29:30 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1143,7 +1143,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/graphviz to 2.20.3nb1 [tron 2009-03-01]
 	Added devel/p5-CPAN version 1.9301 [sno 2009-03-01]
 	Added devel/p5-Parse-CPAN-Meta version 0.04 [sno 2009-03-01]
-	Added devel/devel/p5-Devel-Autoflush version 0.05 [sno 2009-03-01]
+	Added devel/p5-Devel-Autoflush version 0.05 [sno 2009-03-01]
 	Updated devel/p5-CPAN to 1.9304 [sno 2009-03-01]
 	Added devel/p5-Test-Reporter version 1.5203 [sno 2009-03-01]
 	Added devel/p5-File-pushd version 1.00 [sno 2009-03-01]
