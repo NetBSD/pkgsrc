@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.9 2009/03/01 21:58:54 tron Exp $
+$NetBSD: patch-aa,v 1.10 2009/03/02 11:24:58 tron Exp $
 
---- configure.ac.orig	2008-10-07 18:40:07.000000000 +0000
-+++ configure.ac	2009-02-26 19:14:19.000000000 +0000
+--- configure.ac.orig	2008-10-07 19:40:07.000000000 +0100
++++ configure.ac	2009-03-02 11:04:39.000000000 +0000
 @@ -23,17 +23,30 @@
  AC_SUBST(GRAPHVIZ_VERSION_MINOR)
  AC_SUBST(GRAPHVIZ_VERSION_MICRO)
@@ -52,3 +52,21 @@ $NetBSD: patch-aa,v 1.9 2009/03/01 21:58:54 tron Exp $
      case "${CC}" in
  	*icc* )
  	    # -Wall causes relocation errors with icc
+@@ -753,7 +767,7 @@
+ 		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
+                         LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
+                         LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
+-		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
++		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
+     
+ 		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
+ 		        if test  "x$?" = "x0"; then
+@@ -775,7 +789,7 @@
+                 LUA_INCLUDES=`$LUACONFIG --include`
+                 LUA_LIBS=`$LUACONFIG --libs`
+ 	        LUA_VERSION="5.0.x"
+-	        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/5.0"
++	        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/5.0"
+             fi
+         fi
+     
