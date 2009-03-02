@@ -1,6 +1,6 @@
-#	$NetBSD: Makefile,v 1.3 2008/11/07 21:12:12 snj Exp $
+#	$NetBSD: Makefile,v 1.4 2009/03/02 22:10:26 rh Exp $
 
-DISTNAME=		highlight-2.6.14
+DISTNAME=		highlight-2.7
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.andre-simon.de/zip/
 EXTRACT_SUFX=		.tar.bz2
@@ -12,7 +12,7 @@ COMMENT=		Converts source code to formatted text with syntax highlighting
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 MANCOMPRESSED=		yes
 
 MAKE_FILE=		makefile
