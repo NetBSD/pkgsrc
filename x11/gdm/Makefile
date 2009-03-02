@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.149 2008/11/26 00:52:40 jmcneill Exp $
+# $NetBSD: Makefile,v 1.150 2009/03/02 15:13:10 jmcneill Exp $
 #
 
 DISTNAME=	gdm-2.20.7
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gdm/2.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-dmconfdir=${PKG_SYSCONFDIR:Q}/dm
 CONFIGURE_ARGS+=	--with-sysconfsubdir=
+CONFIGURE_ARGS+=	--with-prefetch=yes
 CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
 CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
@@ -81,6 +82,7 @@ SUBST_SED.desktop+=	-e 's|^\#Logo=.*$$|Logo=${PREFIX}/share/pixmaps/NetBSD.xpm|g
 SUBST_SED.desktop+=	-e 's|^\#RebootCommand=.*$$|RebootCommand=/sbin/shutdown -r now|g'
 SUBST_SED.desktop+=	-e 's|^\#HaltCommand=.*$$|HaltCommand=/sbin/shutdown -p now|g'
 .endif
+SUBST_SED.desktop+=	-e 's|^PreFetchProgram=.*$$|PreFetchProgram=${PREFIX}/libexec/gdmprefetch @${PKG_SYSCONFDIR}/gdmprefetchlist|g'
 
 SUBST_CLASSES+=		gdmsetup
 SUBST_MESSAGE.gdmsetup=	Patching gdmsetup theme installer to use ${ROOT_USER}:${ROOT_GROUP}
