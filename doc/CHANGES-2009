@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.856 2009/03/02 17:29:30 mishka Exp $
+$NetBSD: CHANGES-2009,v 1.857 2009/03/02 18:06:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1148,6 +1148,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Test-Reporter version 1.5203 [sno 2009-03-01]
 	Added devel/p5-File-pushd version 1.00 [sno 2009-03-01]
 	Added devel/p5-ExtUtils-Manifest version 1.56 [sno 2009-03-01]
+	Added devel/p5-CPAN-Reporter version 1.1705 [sno 2009-03-01]
 	Updated sysutils/gvfs to 1.0.3nb2 [jmcneill 2009-03-01]
 	Updated graphics/optipng to 0.6.2.1 [kefren 2009-03-01]
 	Updated textproc/mdoclint to 1.1 [wiz 2009-03-02]
