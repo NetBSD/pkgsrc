@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/29 01:05:17 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/02 17:40:03 joerg Exp $
 
 --- src/Makefile.in.orig	2003-04-06 13:22:35.000000000 -0700
 +++ src/Makefile.in
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/10/29 01:05:17 minskim Exp $
  
  install:	
 -		cp chksniff $(INSDIR)
-+		$(BSD_INSTALL_PROGRAM) chksniff $(INSDIR)
++		$(BSD_INSTALL_PROGRAM) chksniff ${DESTDIR}$(INSDIR)
  
  uninstall:	
  		rm $(INSDIR)/chksniff
