@@ -1,4 +1,4 @@
-/*	$NetBSD: vulnerabilities-file.c,v 1.4 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: vulnerabilities-file.c,v 1.5 2009/03/02 14:59:14 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -38,7 +38,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.4 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.5 2009/03/02 14:59:14 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -367,6 +367,8 @@ read_pkg_vulnerabilities(const char *path, int ignore_missing, int check_sum)
 		err(1, "Failed to read input");
 	if (bytes_read != st.st_size)
 		errx(1, "Unexpected short read");
+
+	close(fd);
 
 	if (decompress_buffer(input, input_len, &decompressed_input,
 	    &decompressed_len)) {
