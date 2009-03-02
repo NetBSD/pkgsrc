@@ -1,0 +1,36 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/03/02 16:46:01 manu Exp $
+#
+# used by security/lasso/Makefile
+# used by security/py-lasso/Makefile
+
+DISTNAME=	lasso-2.2.1
+CATEGORIES=	security
+MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/673/
+
+MAINTAINER=	manu@NetBSD.org
+HOMEPAGE=	http://lasso.entrouvert.org/
+COMMENT=	Libery Alliance Single Sign On implementation
+
+DISTINFO_FILE=          ${.CURDIR}/../../security/lasso/distinfo
+PATCHDIR=               ${.CURDIR}/../../security/lasso/patches
+
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-sasl2=${PREFIX}
+CONFIGURE_ARGS+=	--with-zlib=${PREFIX}
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config perl
+
+PKGCONFIG_OVERRIDE+=	lasso.pc.in
+
+PYTHON_VERSIONS_ACCEPTED= 26 25 24
+.include "../../lang/python/application.mk"
+
+.include "../../security/xmlsec1/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"
