@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/20 20:11:54 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/03/02 02:00:51 jmcneill Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -21,6 +21,7 @@ lib/gio/modules/libgiogconf.la
 lib/gio/modules/libgioremote-volume-monitor.la
 lib/gio/modules/libgvfsdbus.la
 lib/libgvfscommon.la
+${PLIST.fuse}libexec/gvfs-fuse-daemon
 ${PLIST.hal}libexec/gvfs-hal-volume-monitor
 libexec/gvfsd
 libexec/gvfsd-archive
