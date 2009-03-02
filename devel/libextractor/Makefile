@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/02/28 13:14:45 drochner Exp $
+# $NetBSD: Makefile,v 1.39 2009/03/02 15:57:27 wiz Exp $
 
 DISTNAME=	libextractor-0.5.20c
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://gnunet.org/libextractor/
 COMMENT=	Metadata extractor for various file data types
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
