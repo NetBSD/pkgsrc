@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2009/02/28 13:19:46 drochner Exp $
+$NetBS$
 
---- configure.orig	2008-10-08 01:54:55.000000000 +0200
-+++ configure
-@@ -2402,18 +2402,26 @@ GRAPHVIZ_VERSION_MICRO=3
+--- configure.orig	2008-10-08 00:54:55.000000000 +0100
++++ configure	2009-03-02 11:03:05.000000000 +0000
+@@ -2402,18 +2402,26 @@
  
  
  
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.15 2009/02/28 13:19:46 drochner Exp $
  
  
  
-@@ -6457,6 +6465,9 @@ if test "${GCC}" != "yes" ; then
+@@ -6457,6 +6465,9 @@
  	    ;;
  	*-sgi-irix* )
  	    ;;
@@ -51,7 +51,25 @@ $NetBSD: patch-ab,v 1.15 2009/02/28 13:19:46 drochner Exp $
      esac
  else
      case "${CC}" in
-@@ -34814,10 +34825,6 @@ fi
+@@ -26311,7 +26322,7 @@
+ 		        LUA_VERSION=`$PKGCONFIG --modversion lua$l`
+                         LUA_INCLUDES="$LUA_CFLAGS "`$PKGCONFIG --cflags lua$l`
+                         LUA_LIBS="$LUA_LFLAGS "`$PKGCONFIG --libs lua$l`
+-		        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
++		        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/`$PKGCONFIG --variable=V lua`"
+ 
+ 		        pkgconfig_lualib_found=`$PKGCONFIG --exists lualib$l 2>/dev/null`
+ 		        if test  "x$?" = "x0"; then
+@@ -26375,7 +26386,7 @@
+                 LUA_INCLUDES=`$LUACONFIG --include`
+                 LUA_LIBS=`$LUACONFIG --libs`
+ 	        LUA_VERSION="5.0.x"
+-	        LUA_INSTALL_DIR="/usr/lib$LIBPOSTFIX/lua/5.0"
++	        LUA_INSTALL_DIR="${PREFIX}/lib$LIBPOSTFIX/lua/5.0"
+             fi
+         fi
+ 
+@@ -34814,10 +34825,6 @@
  
  
  
