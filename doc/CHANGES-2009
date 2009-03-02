@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.854 2009/03/02 16:49:57 manu Exp $
+$NetBSD: CHANGES-2009,v 1.855 2009/03/02 17:08:27 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1157,3 +1157,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/lasso version 2.2.1 [manu 2009-03-02]
 	Added security/py-lasso version 2.2.1 [manu 2009-03-02]
 	Added www/ap2-auth-mellon version 0.1.0 [manu 2009-03-02]
+	Updated games/scummvm to 0.13.0 [adam 2009-03-02]
