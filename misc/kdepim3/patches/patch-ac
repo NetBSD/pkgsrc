@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.14 2009/03/03 12:34:15 explorer Exp $
+
+--- knode/kngroup.cpp.orig	2009-03-03 12:20:17.000000000 +0000
++++ knode/kngroup.cpp	2009-03-03 12:20:45.000000000 +0000
+@@ -550,7 +550,7 @@
+ 
+       ts << art->id() << ' ';
+       ts << art->lines()->numberOfLines() << ' ';
+-      ts << art->date()->unixTime() << ' ';
++      ts << (unsigned long)art->date()->unixTime() << ' ';
+       ts << "2\n";       // version number to achieve backward compatibility easily
+ 
+       ts << art->articleNumber() << '\n';
