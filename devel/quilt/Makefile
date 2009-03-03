@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/08 19:29:25 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/03 15:37:45 jmmv Exp $
 #
 
 DISTNAME=	quilt-0.46
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.savannah.gnu.org/releases/quilt/
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/quilt
 COMMENT=	Tools to manage series of patches
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
@@ -26,7 +28,7 @@ CONFIGURE_ARGS+=	--with-sendmail=/usr/sbin/sendmail
 CONFIGURE_ARGS+=	--without-rpmbuild
 CONFIGURE_ARGS+=	--without-getopt
 
-INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/quilt
+INSTALL_MAKE_FLAGS+=	BUILD_ROOT=${DESTDIR:Q} etcdir=${PREFIX}/share/examples/quilt
 
 REPLACE_INTERPRETER+=	conf-bash
 REPLACE.conf-bash.old=	@BASH@
