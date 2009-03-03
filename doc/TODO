@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7875 2009/03/02 22:12:08 rh Exp $
+$NetBSD: TODO,v 1.7876 2009/03/03 08:57:58 jmmv Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bmon-2.1.0
 	o bonnie++-1.03e
 	o boolean-6.97
-	o boost-libs-1.37.0
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
