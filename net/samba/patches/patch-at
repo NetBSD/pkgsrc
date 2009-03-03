@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
+$NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
 
---- configure.orig	2008-05-28 15:15:44.000000000 +0100
-+++ configure	2008-06-28 14:02:26.000000000 +0100
+--- configure.orig	2008-08-25 22:16:26.000000000 +0100
++++ configure	2009-03-03 16:24:13.000000000 +0000
 @@ -667,6 +667,7 @@
  target_os
  configdir
@@ -81,10 +81,10 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -46876,6 +46902,75 @@
- fi
- 
- if test $iface = no; then
+@@ -46809,6 +46835,74 @@
+ ##################
+ # look for a method of finding the list of network interfaces
+ iface=no;
 +{ echo "$as_me:$LINENO: checking for iface ifaddrs" >&5
 +echo $ECHO_N "checking for iface ifaddrs... $ECHO_C" >&6; }
 +if test "${samba_cv_HAVE_IFACE_IFADDRS+set}" = set; then
@@ -151,13 +151,20 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
 +_ACEOF
 +
 +fi
-+fi
 +
 +if test $iface = no; then
+ { echo "$as_me:$LINENO: checking for iface AIX" >&5
+ echo $ECHO_N "checking for iface AIX... $ECHO_C" >&6; }
+ if test "${samba_cv_HAVE_IFACE_AIX+set}" = set; then
+@@ -46876,6 +46970,7 @@
+ _ACEOF
+ 
+ fi
++fi
+ 
+ if test $iface = no; then
  { echo "$as_me:$LINENO: checking for iface ifconf" >&5
- echo $ECHO_N "checking for iface ifconf... $ECHO_C" >&6; }
- if test "${samba_cv_HAVE_IFACE_IFCONF+set}" = set; then
-@@ -50251,9 +50346,9 @@
+@@ -50253,9 +50348,9 @@
  
  
  
@@ -170,7 +177,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -50269,11 +50364,11 @@
+@@ -50271,11 +50366,11 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -184,7 +191,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
    ;
    return 0;
  }
-@@ -50296,13 +50391,13 @@
+@@ -50298,13 +50393,13 @@
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -200,7 +207,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  		  ac_cv_lib_ext_crypto=no
  fi
  
-@@ -50310,11 +50405,11 @@
+@@ -50312,11 +50407,11 @@
        conftest$ac_exeext conftest.$ac_ext
  
  fi
@@ -216,7 +223,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  _ACEOF
  
  fi
-@@ -63338,31 +63433,39 @@
+@@ -63340,31 +63435,39 @@
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -278,7 +285,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -67891,6 +67994,7 @@
+@@ -67893,6 +67998,7 @@
  target_os!$target_os$ac_delim
  configdir!$configdir$ac_delim
  lockdir!$lockdir$ac_delim
@@ -286,7 +293,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  piddir!$piddir$ac_delim
  logfilebase!$logfilebase$ac_delim
  privatedir!$privatedir$ac_delim
-@@ -67934,7 +68038,6 @@
+@@ -67936,7 +68042,6 @@
  KRB5_LIBS!$KRB5_LIBS$ac_delim
  UUID_LIBS!$UUID_LIBS$ac_delim
  LDAP_LIBS!$LDAP_LIBS$ac_delim
@@ -294,7 +301,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  _ACEOF
  
    if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-@@ -67976,6 +68079,7 @@
+@@ -67978,6 +68083,7 @@
  ac_delim='%!_!# '
  for ac_last_try in false false false false false :; do
    cat >conf$$subs.sed <<_ACEOF
@@ -302,7 +309,7 @@ $NetBSD: patch-at,v 1.10 2008/06/28 22:51:21 tron Exp $
  INSTALL_PAM_MODULES!$INSTALL_PAM_MODULES$ac_delim
  UNINSTALL_PAM_MODULES!$UNINSTALL_PAM_MODULES$ac_delim
  NSS_MODULES!$NSS_MODULES$ac_delim
-@@ -68060,7 +68164,7 @@
+@@ -68062,7 +68168,7 @@
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
