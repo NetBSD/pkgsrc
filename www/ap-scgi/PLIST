@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/03 10:13:34 manu Exp $
+lib/httpd/mod_scgi.so
