@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.63 2009/03/01 16:40:00 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.64 2009/03/03 19:58:25 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -185,3 +185,5 @@ pullup ticket #2711 - requested by drochner
 privoxy: update for security fix
 Pullup ticket 2712 - requested by wiz
 gnome-power-manager: bug fix update
+Pullup ticket #2714 - requested by kefren
+optipng: security patch
