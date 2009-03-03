@@ -1,4 +1,11 @@
-# $NetBSD: Makefile.common,v 1.29 2009/01/09 13:39:43 gdt Exp $
+# $NetBSD: Makefile.common,v 1.30 2009/03/03 17:38:46 gdt Exp $
+# used by devel/java-subversion/Makefile
+# used by devel/p5-subversion/Makefile
+# used by devel/py-subversion/Makefile
+# used by devel/ruby-subversion/Makefile
+# used by devel/subversion-base/Makefile
+# used by devel/subversion/Makefile
+# used by www/ap2-subversion/Makefile
 
 DISTNAME=		subversion-${SVNVER}
 CATEGORIES=		devel scm
