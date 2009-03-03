@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.65 2008/11/28 03:17:58 taca Exp $
+$NetBSD: distinfo,v 1.66 2009/03/03 17:50:49 sborrill Exp $
 
 SHA1 (samba-3.0.32-CVE-2008-4314.patch) = 23354d8773e791fc9198da49048eff2a6966e6b9
 RMD160 (samba-3.0.32-CVE-2008-4314.patch) = 7507f46b58c96668a2e4e2c4aefa3244c18fad7d
@@ -12,8 +12,8 @@ SHA1 (patch-ae) = 28fc3d1ad158f8025f1f9ba8e170d93c31fa45ba
 SHA1 (patch-af) = 9f14842b7d0b5e66bf1d52bcacefe5e1aa392b7c
 SHA1 (patch-ag) = c73e717e053b6618b2a334602fefabe5a5f98a98
 SHA1 (patch-ak) = 0c69720954282022c7982d36eaee94a03db7b689
-SHA1 (patch-at) = 8664f61528e589beba02094e74e2485b3a865eb9
-SHA1 (patch-au) = f1b86b6f3a161b485bf5507fa1da69352b5a5e93
+SHA1 (patch-at) = 047657002d21420f737a1adb8026ce552f4e8b2a
+SHA1 (patch-au) = a3990e7da879e35bc184704547c08311bd8fa05e
 SHA1 (patch-av) = c29ba19e96c24ef95a9a043f8678d77c00d73506
 SHA1 (patch-aw) = 5b6c1bf65d23564eaabf1bafda41a29d1f687538
 SHA1 (patch-ax) = e528921710514bc2651bfca808c21d608f928a95
