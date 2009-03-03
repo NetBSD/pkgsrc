@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/03 10:13:10 manu Exp $
+${PYSITELIB}/scgi/quixote_handler.py
+${PYSITELIB}/scgi/__init__.py
+${PYSITELIB}/scgi/scgi_server.py
+${PYSITELIB}/scgi/test_passfd.py
+${PYSITELIB}/scgi/passfd.so
+${PYSITELIB}/scgi/quixote_handler.pyc
+${PYSITELIB}/scgi/__init__.pyc
+${PYSITELIB}/scgi/scgi_server.pyc
+${PYSITELIB}/scgi/test_passfd.pyc
+${PYSITELIB}/scgi/quixote_handler.pyo
+${PYSITELIB}/scgi/__init__.pyo
+${PYSITELIB}/scgi/scgi_server.pyo
+${PYSITELIB}/scgi/test_passfd.pyo
+@dirrm ${PYSITELIB}/scgi
