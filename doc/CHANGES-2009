@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.863 2009/03/03 10:16:39 manu Exp $
+$NetBSD: CHANGES-2009,v 1.864 2009/03/03 14:57:29 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1173,3 +1173,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/py-quixote version 2.6 [manu 2009-03-03]
 	Added www/py-scgi version 1.13 [manu 2009-03-03]
 	Added www/ap-scgi version 1.13 [manu 2009-03-03]
+	Removed devel/buildtool [jmmv 2009-03-03]
+	Removed devel/buildtool-doc [jmmv 2009-03-03]
