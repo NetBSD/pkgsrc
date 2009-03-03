@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/03 10:13:10 manu Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/03 10:53:15 manu Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-scgi
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 COMMENT=	Simple Common Gateway Interface
 
