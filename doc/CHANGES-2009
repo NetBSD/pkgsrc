@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.861 2009/03/03 08:58:38 rillig Exp $
+$NetBSD: CHANGES-2009,v 1.862 2009/03/03 09:04:09 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1169,3 +1169,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-python to 1.38.0 [jmmv 2009-02-27]
 	Updated meta-pkgs/boost to 1.38.0 [jmmv 2009-02-27]
 	Updated devel/splint to 3.1.2 [roland 2009-03-03]
+	Updated devel/uno to 2.13 [roland 2009-03-03]
