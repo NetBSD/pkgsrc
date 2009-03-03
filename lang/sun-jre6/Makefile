@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/20 14:37:58 abs Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/03 11:09:03 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -35,6 +35,7 @@ CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
 .endfor
 
 CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${EMUL_ARCH}/client/classes.jsa
+CHECK_SHLIBS_SUPPORTED=	NO
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sun-jre6
 PKG_SUPPORTED_OPTIONS=	sun-jre-jce
@@ -71,7 +72,7 @@ PLIST_SUBST+=		LIBX11=
 .PHONY: create-library-symlinks
 post-install: create-library-symlinks
 create-library-symlinks:
-	${RUN}${LN} -fs ${LIBX11} ${JAVA_HOME}/lib/${EMUL_ARCH}
+	${RUN}${LN} -fs ${LIBX11} ${DESTDIR}${JAVA_HOME}/lib/${EMUL_ARCH}
 .else
 PLIST_SUBST+=		LIBX11="@comment "
 .endif
