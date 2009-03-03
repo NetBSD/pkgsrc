@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/03/03 10:13:34 manu Exp $
+
+In order to use ${PKGNAME}, you must add something like this to your Apache
+configuration:
+
+LoadModule scgi_module lib/httpd/mod_scgi.so
+SCGIMount /dynamic 127.0.0.1:4000
+
+===========================================================================
