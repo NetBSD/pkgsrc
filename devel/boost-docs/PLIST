@@ -1,24 +1,26 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/13 16:14:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/03/03 08:57:57 jmmv Exp $
 share/doc/boost/boost.css
 share/doc/boost/boost.png
 share/doc/boost/index.htm
+share/doc/boost/libs/CMakeLists.txt
+share/doc/boost/libs/accumulators/CMakeLists.txt
+share/doc/boost/libs/accumulators/doc/CMakeLists.txt
 share/doc/boost/libs/accumulators/doc/Jamfile.v2
-share/doc/boost/libs/accumulators/doc/accdoc.xml
 share/doc/boost/libs/accumulators/doc/accumulators.qbk
-share/doc/boost/libs/accumulators/doc/opdoc.xml
-share/doc/boost/libs/accumulators/doc/statsdoc.xml
-share/doc/boost/libs/accumulators/doc/tagfile.xml
+share/doc/boost/libs/accumulators/example/CMakeLists.txt
 share/doc/boost/libs/accumulators/example/Jamfile.v2
 share/doc/boost/libs/accumulators/example/main.cpp
 share/doc/boost/libs/accumulators/index.html
+share/doc/boost/libs/accumulators/module.cmake
+share/doc/boost/libs/algorithm/CMakeLists.txt
 share/doc/boost/libs/algorithm/minmax/doc/minmax_benchs.html
 share/doc/boost/libs/algorithm/minmax/doc/minmax_synopsis.html
 share/doc/boost/libs/algorithm/minmax/example/Jamfile
 share/doc/boost/libs/algorithm/minmax/example/minmax_ex.cpp
 share/doc/boost/libs/algorithm/minmax/example/minmax_timer.cpp
 share/doc/boost/libs/algorithm/minmax/index.html
+share/doc/boost/libs/algorithm/module.cmake
 share/doc/boost/libs/algorithm/string/doc/Jamfile.v2
-share/doc/boost/libs/algorithm/string/doc/autodoc.xml
 share/doc/boost/libs/algorithm/string/doc/concept.xml
 share/doc/boost/libs/algorithm/string/doc/credits.xml
 share/doc/boost/libs/algorithm/string/doc/design.xml
@@ -41,19 +43,17 @@ share/doc/boost/libs/algorithm/string/example/split_example.cpp
 share/doc/boost/libs/algorithm/string/example/trim_example.cpp
 share/doc/boost/libs/algorithm/string/index.html
 share/doc/boost/libs/algorithm/sublibs
+share/doc/boost/libs/any/CMakeLists.txt
 share/doc/boost/libs/any/any_test.cpp
 share/doc/boost/libs/any/doc/any.xml
 share/doc/boost/libs/any/index.html
+share/doc/boost/libs/any/module.cmake
 share/doc/boost/libs/any/test.hpp
-share/doc/boost/libs/array/array0.cpp
-share/doc/boost/libs/array/array1.cpp
-share/doc/boost/libs/array/array2.cpp
-share/doc/boost/libs/array/array3.cpp
-share/doc/boost/libs/array/array4.cpp
-share/doc/boost/libs/array/array5.cpp
+share/doc/boost/libs/array/CMakeLists.txt
 share/doc/boost/libs/array/doc/array.xml
 share/doc/boost/libs/array/index.html
-share/doc/boost/libs/array/print.hpp
+share/doc/boost/libs/array/module.cmake
+share/doc/boost/libs/asio/CMakeLists.txt
 share/doc/boost/libs/asio/doc/Jamfile.v2
 share/doc/boost/libs/asio/doc/asio.qbk
 share/doc/boost/libs/asio/doc/doxy2qbk.pl
@@ -154,6 +154,7 @@ share/doc/boost/libs/asio/example/chat/Jamfile.v2
 share/doc/boost/libs/asio/example/chat/chat_client.cpp
 share/doc/boost/libs/asio/example/chat/chat_message.hpp
 share/doc/boost/libs/asio/example/chat/chat_server.cpp
+share/doc/boost/libs/asio/example/chat/posix_chat_client.cpp
 share/doc/boost/libs/asio/example/echo/Jamfile
 share/doc/boost/libs/asio/example/echo/Jamfile.v2
 share/doc/boost/libs/asio/example/echo/async_tcp_echo_server.cpp
@@ -238,6 +239,7 @@ share/doc/boost/libs/asio/example/iostreams/daytime_server.cpp
 share/doc/boost/libs/asio/example/local/Jamfile
 share/doc/boost/libs/asio/example/local/Jamfile.v2
 share/doc/boost/libs/asio/example/local/connect_pair.cpp
+share/doc/boost/libs/asio/example/local/iostream_client.cpp
 share/doc/boost/libs/asio/example/local/stream_client.cpp
 share/doc/boost/libs/asio/example/local/stream_server.cpp
 share/doc/boost/libs/asio/example/multicast/Jamfile
@@ -305,13 +307,20 @@ share/doc/boost/libs/asio/example/tutorial/timer3/timer.cpp
 share/doc/boost/libs/asio/example/tutorial/timer4/timer.cpp
 share/doc/boost/libs/asio/example/tutorial/timer5/timer.cpp
 share/doc/boost/libs/asio/example/tutorial/timer_dox.txt
+share/doc/boost/libs/asio/example/windows/Jamfile
+share/doc/boost/libs/asio/example/windows/Jamfile.v2
+share/doc/boost/libs/asio/example/windows/transmit_file.cpp
 share/doc/boost/libs/asio/index.html
+share/doc/boost/libs/asio/module.cmake
+share/doc/boost/libs/assign/CMakeLists.txt
 share/doc/boost/libs/assign/doc/email_example.html
 share/doc/boost/libs/assign/doc/index.html
 share/doc/boost/libs/assign/doc/multi_index_container.html
 share/doc/boost/libs/assign/doc/my_vector_example.html
 share/doc/boost/libs/assign/doc/style.css
 share/doc/boost/libs/assign/index.html
+share/doc/boost/libs/assign/module.cmake
+share/doc/boost/libs/bimap/CMakeLists.txt
 share/doc/boost/libs/bimap/doc/acknowledgements.qbk
 share/doc/boost/libs/bimap/doc/bimap.hdf
 share/doc/boost/libs/bimap/doc/bimap.qbk
@@ -441,13 +450,17 @@ share/doc/boost/libs/bimap/example/tutorial_range.cpp
 share/doc/boost/libs/bimap/example/unconstrained_collection.cpp
 share/doc/boost/libs/bimap/example/user_defined_names.cpp
 share/doc/boost/libs/bimap/index.html
+share/doc/boost/libs/bimap/module.cmake
+share/doc/boost/libs/bind/CMakeLists.txt
 share/doc/boost/libs/bind/bind.html
 share/doc/boost/libs/bind/bind_as_compose.cpp
 share/doc/boost/libs/bind/bind_visitor.cpp
 share/doc/boost/libs/bind/doc/ref.xml
 share/doc/boost/libs/bind/index.html
 share/doc/boost/libs/bind/mem_fn.html
+share/doc/boost/libs/bind/module.cmake
 share/doc/boost/libs/bind/ref.html
+share/doc/boost/libs/circular_buffer/CMakeLists.txt
 share/doc/boost/libs/circular_buffer/doc/Doxyfile
 share/doc/boost/libs/circular_buffer/doc/HOWTO-srcdoc
 share/doc/boost/libs/circular_buffer/doc/Tidy.conf
@@ -462,11 +475,14 @@ share/doc/boost/libs/circular_buffer/doc/space_optimized.png
 share/doc/boost/libs/circular_buffer/doc/space_optimized.xslt
 share/doc/boost/libs/circular_buffer/doc/update_srcdoc.sh
 share/doc/boost/libs/circular_buffer/doc/update_srcdoc.xslt
-share/doc/boost/libs/circular_buffer/doc/valid-html40.png
 share/doc/boost/libs/circular_buffer/index.html
+share/doc/boost/libs/circular_buffer/module.cmake
+share/doc/boost/libs/compatibility/CMakeLists.txt
 share/doc/boost/libs/compatibility/generate_cpp_c_headers.py
 share/doc/boost/libs/compatibility/index.html
+share/doc/boost/libs/compatibility/module.cmake
 share/doc/boost/libs/compose/index.htm
+share/doc/boost/libs/concept_check/CMakeLists.txt
 share/doc/boost/libs/concept_check/Jamfile.v2
 share/doc/boost/libs/concept_check/bad_error_eg.cpp
 share/doc/boost/libs/concept_check/bibliography.htm
@@ -494,6 +510,7 @@ share/doc/boost/libs/concept_check/fake_sort.hpp
 share/doc/boost/libs/concept_check/function_requires_fail.cpp
 share/doc/boost/libs/concept_check/implementation.htm
 share/doc/boost/libs/concept_check/index.html
+share/doc/boost/libs/concept_check/module.cmake
 share/doc/boost/libs/concept_check/old_concept_class_fail.cpp
 share/doc/boost/libs/concept_check/old_concept_function_fail.cpp
 share/doc/boost/libs/concept_check/old_concept_pass.cpp
@@ -506,6 +523,7 @@ share/doc/boost/libs/concept_check/usage_fail.cpp
 share/doc/boost/libs/concept_check/using_concept_check.htm
 share/doc/boost/libs/concept_check/where.cpp
 share/doc/boost/libs/concept_check/where_fail.cpp
+share/doc/boost/libs/config/CMakeLists.txt
 share/doc/boost/libs/config/config.htm
 share/doc/boost/libs/config/configure
 share/doc/boost/libs/config/doc/Jamfile.v2
@@ -523,9 +541,11 @@ share/doc/boost/libs/config/doc/html/index.html
 share/doc/boost/libs/config/doc/macro_reference.qbk
 share/doc/boost/libs/config/doc/rationale.qbk
 share/doc/boost/libs/config/index.html
+share/doc/boost/libs/config/module.cmake
 share/doc/boost/libs/config/tools/Jamfile.v2
 share/doc/boost/libs/config/tools/configure.in
 share/doc/boost/libs/config/tools/generate.cpp
+share/doc/boost/libs/conversion/CMakeLists.txt
 share/doc/boost/libs/conversion/cast.htm
 share/doc/boost/libs/conversion/cast_test.cpp
 share/doc/boost/libs/conversion/index.html
@@ -533,10 +553,12 @@ share/doc/boost/libs/conversion/lexical_cast.htm
 share/doc/boost/libs/conversion/lexical_cast_test.cpp
 share/doc/boost/libs/conversion/numeric_cast_test.cpp
 share/doc/boost/libs/conversion/test.hpp
+share/doc/boost/libs/crc/CMakeLists.txt
 share/doc/boost/libs/crc/crc.html
 share/doc/boost/libs/crc/crc_example.cpp
-share/doc/boost/libs/crc/crc_test.cpp
 share/doc/boost/libs/crc/index.html
+share/doc/boost/libs/crc/module.cmake
+share/doc/boost/libs/date_time/CMakeLists.txt
 share/doc/boost/libs/date_time/data/README.zone_spec_csv_file
 share/doc/boost/libs/date_time/data/date_time_zonespec.csv
 share/doc/boost/libs/date_time/doc/index.html
@@ -568,6 +590,8 @@ share/doc/boost/libs/date_time/example/posix_time/time_math.cpp
 share/doc/boost/libs/date_time/example/posix_time/time_periods.cpp
 share/doc/boost/libs/date_time/example/tutorial/io_tutorial.cpp
 share/doc/boost/libs/date_time/index.html
+share/doc/boost/libs/date_time/module.cmake
+share/doc/boost/libs/date_time/src/CMakeLists.txt
 share/doc/boost/libs/date_time/src/date_time.doc
 share/doc/boost/libs/date_time/src/gregorian/date_generators.cpp
 share/doc/boost/libs/date_time/src/gregorian/greg_month.cpp
@@ -591,7 +615,6 @@ share/doc/boost/libs/date_time/xmldoc/date_input_facet.xml
 share/doc/boost/libs/date_time/xmldoc/date_iterators.xml
 share/doc/boost/libs/date_time/xmldoc/date_period.xml
 share/doc/boost/libs/date_time/xmldoc/date_time.xml
-share/doc/boost/libs/date_time/xmldoc/date_time_autodoc.xml
 share/doc/boost/libs/date_time/xmldoc/date_time_docs_howto.html
 share/doc/boost/libs/date_time/xmldoc/date_time_fo_stylesheet.xsl
 share/doc/boost/libs/date_time/xmldoc/date_time_io.xml
@@ -623,18 +646,15 @@ share/doc/boost/libs/date_time/xmldoc/examples.xml
 share/doc/boost/libs/date_time/xmldoc/exclusive_date_time.xml
 share/doc/boost/libs/date_time/xmldoc/format_flags.xml
 share/doc/boost/libs/date_time/xmldoc/gregorian.xml
-share/doc/boost/libs/date_time/xmldoc/gregorian_autodoc.xml
 share/doc/boost/libs/date_time/xmldoc/gregorian_calendar.xml
 share/doc/boost/libs/date_time/xmldoc/io_objects.xml
 share/doc/boost/libs/date_time/xmldoc/io_tutorial.xml
 share/doc/boost/libs/date_time/xmldoc/license.xml
 share/doc/boost/libs/date_time/xmldoc/local_date_time.xml
 share/doc/boost/libs/date_time/xmldoc/local_time.xml
-share/doc/boost/libs/date_time/xmldoc/local_time_autodoc.xml
 share/doc/boost/libs/date_time/xmldoc/local_time_period.xml
 share/doc/boost/libs/date_time/xmldoc/motivation.xml
 share/doc/boost/libs/date_time/xmldoc/posix_time.xml
-share/doc/boost/libs/date_time/xmldoc/posix_time_autodoc.xml
 share/doc/boost/libs/date_time/xmldoc/posix_time_zone.xml
 share/doc/boost/libs/date_time/xmldoc/ptime_class.xml
 share/doc/boost/libs/date_time/xmldoc/ref_tag_fix.pl
@@ -653,12 +673,17 @@ share/doc/boost/libs/date_time/xmldoc/time_zone_base.xml
 share/doc/boost/libs/date_time/xmldoc/tradeoffs.xml
 share/doc/boost/libs/date_time/xmldoc/tz_database.xml
 share/doc/boost/libs/date_time/xmldoc/usage_examples.xml
+share/doc/boost/libs/detail/CMakeLists.txt
+share/doc/boost/libs/detail/module.cmake
 share/doc/boost/libs/detail/utf8_codecvt_facet.cpp
+share/doc/boost/libs/disjoint_sets/CMakeLists.txt
 share/doc/boost/libs/disjoint_sets/Jamfile
 share/doc/boost/libs/disjoint_sets/bibliography.html
 share/doc/boost/libs/disjoint_sets/disjoint_set_test.cpp
 share/doc/boost/libs/disjoint_sets/disjoint_sets.html
 share/doc/boost/libs/disjoint_sets/index.html
+share/doc/boost/libs/disjoint_sets/module.cmake
+share/doc/boost/libs/dynamic_bitset/CMakeLists.txt
 share/doc/boost/libs/dynamic_bitset/Jamfile.v2
 share/doc/boost/libs/dynamic_bitset/bitset_test.hpp
 share/doc/boost/libs/dynamic_bitset/dyn_bitset_unit_tests1.cpp
@@ -672,32 +697,37 @@ share/doc/boost/libs/dynamic_bitset/example/example2.cpp
 share/doc/boost/libs/dynamic_bitset/example/example3.cpp
 share/doc/boost/libs/dynamic_bitset/example/timing_tests.cpp
 share/doc/boost/libs/dynamic_bitset/index.html
-share/doc/boost/libs/exception/doc/BOOST_ERROR_INFO.html
+share/doc/boost/libs/dynamic_bitset/module.cmake
+share/doc/boost/libs/exception/CMakeLists.txt
+share/doc/boost/libs/exception/doc/BOOST_THROW_EXCEPTION.html
 share/doc/boost/libs/exception/doc/boost-exception.html
-share/doc/boost/libs/exception/doc/boost_exception_diagnostic_information_hpp.html
+share/doc/boost/libs/exception/doc/configuration_macros.html
 share/doc/boost/libs/exception/doc/copy_exception.html
 share/doc/boost/libs/exception/doc/current_exception.html
 share/doc/boost/libs/exception/doc/diagnostic_information.html
 share/doc/boost/libs/exception/doc/enable_current_exception.html
 share/doc/boost/libs/exception/doc/enable_error_info.html
 share/doc/boost/libs/exception/doc/error_info.html
+share/doc/boost/libs/exception/doc/error_info_error_info.html
+share/doc/boost/libs/exception/doc/error_info_value.html
+share/doc/boost/libs/exception/doc/error_info_value_type.html
 share/doc/boost/libs/exception/doc/exception.html
 share/doc/boost/libs/exception/doc/exception_cloning_hpp.html
 share/doc/boost/libs/exception/doc/exception_constructors.html
 share/doc/boost/libs/exception/doc/exception_destructor.html
-share/doc/boost/libs/exception/doc/exception_diagnostic_information.html
+share/doc/boost/libs/exception/doc/exception_diagnostic_information_hpp.html
+share/doc/boost/libs/exception/doc/exception_enable_current_exception_hpp.html
 share/doc/boost/libs/exception/doc/exception_enable_error_info_hpp.html
-share/doc/boost/libs/exception/doc/exception_enable_exception_cloning_hpp.html
 share/doc/boost/libs/exception/doc/exception_error_info_group_hpp.html
 share/doc/boost/libs/exception/doc/exception_error_info_hpp.html
 share/doc/boost/libs/exception/doc/exception_error_info_value_hpp.html
 share/doc/boost/libs/exception/doc/exception_exception_hpp.html
+share/doc/boost/libs/exception/doc/exception_get_error_info_hpp.html
 share/doc/boost/libs/exception/doc/exception_hpp.html
+share/doc/boost/libs/exception/doc/exception_operator_shl.html
 share/doc/boost/libs/exception/doc/exception_ptr.html
 share/doc/boost/libs/exception/doc/get_error_info.html
 share/doc/boost/libs/exception/doc/name_idx.html
-share/doc/boost/libs/exception/doc/operator_shl_exception.html
-share/doc/boost/libs/exception/doc/operator_shl_tuple.html
 share/doc/boost/libs/exception/doc/reno.css
 share/doc/boost/libs/exception/doc/rethrow_exception.html
 share/doc/boost/libs/exception/doc/shade-l.png
@@ -707,6 +737,7 @@ share/doc/boost/libs/exception/doc/source/html_prefix.txt
 share/doc/boost/libs/exception/doc/source/html_suffix.txt
 share/doc/boost/libs/exception/doc/throw_exception.html
 share/doc/boost/libs/exception/doc/throw_exception_hpp.html
+share/doc/boost/libs/exception/doc/tuple_operator_shl.html
 share/doc/boost/libs/exception/doc/tutorial_diagnostic_information.html
 share/doc/boost/libs/exception/doc/tutorial_enable_error_info.html
 share/doc/boost/libs/exception/doc/tutorial_exception_ptr.html
@@ -724,6 +755,8 @@ share/doc/boost/libs/exception/example/example_io.cpp
 share/doc/boost/libs/exception/example/info_tuple.cpp
 share/doc/boost/libs/exception/example/logging.cpp
 share/doc/boost/libs/exception/index.html
+share/doc/boost/libs/exception/module.cmake
+share/doc/boost/libs/filesystem/CMakeLists.txt
 share/doc/boost/libs/filesystem/doc/design.htm
 share/doc/boost/libs/filesystem/doc/do-list.htm
 share/doc/boost/libs/filesystem/doc/faq.htm
@@ -739,14 +772,61 @@ share/doc/boost/libs/filesystem/example/mbpath.hpp
 share/doc/boost/libs/filesystem/example/path_table.cpp
 share/doc/boost/libs/filesystem/example/simple_ls.cpp
 share/doc/boost/libs/filesystem/index.html
+share/doc/boost/libs/filesystem/module.cmake
+share/doc/boost/libs/filesystem/src/CMakeLists.txt
 share/doc/boost/libs/filesystem/src/operations.cpp
 share/doc/boost/libs/filesystem/src/path.cpp
 share/doc/boost/libs/filesystem/src/portability.cpp
 share/doc/boost/libs/filesystem/src/utf8_codecvt_facet.cpp
 share/doc/boost/libs/filesystem/src/utf8_codecvt_facet.hpp
+share/doc/boost/libs/flyweight/doc/acknowledgements.html
+share/doc/boost/libs/flyweight/doc/examples.html
+share/doc/boost/libs/flyweight/doc/future_work.html
+share/doc/boost/libs/flyweight/doc/html.png
+share/doc/boost/libs/flyweight/doc/index.html
+share/doc/boost/libs/flyweight/doc/memory.png
+share/doc/boost/libs/flyweight/doc/memory_gcc_344.png
+share/doc/boost/libs/flyweight/doc/memory_msvc_80.png
+share/doc/boost/libs/flyweight/doc/next.gif
+share/doc/boost/libs/flyweight/doc/performance.html
+share/doc/boost/libs/flyweight/doc/prev.gif
+share/doc/boost/libs/flyweight/doc/reference/factories.html
+share/doc/boost/libs/flyweight/doc/reference/flyweight.html
+share/doc/boost/libs/flyweight/doc/reference/holders.html
+share/doc/boost/libs/flyweight/doc/reference/index.html
+share/doc/boost/libs/flyweight/doc/reference/key_value.html
+share/doc/boost/libs/flyweight/doc/reference/locking.html
+share/doc/boost/libs/flyweight/doc/reference/tags.html
+share/doc/boost/libs/flyweight/doc/reference/tracking.html
+share/doc/boost/libs/flyweight/doc/release_notes.html
+share/doc/boost/libs/flyweight/doc/style.css
+share/doc/boost/libs/flyweight/doc/tests.html
+share/doc/boost/libs/flyweight/doc/time_gcc_344.png
+share/doc/boost/libs/flyweight/doc/time_msvc_80.png
+share/doc/boost/libs/flyweight/doc/tutorial/basics.html
+share/doc/boost/libs/flyweight/doc/tutorial/configuration.html
+share/doc/boost/libs/flyweight/doc/tutorial/extension.html
+share/doc/boost/libs/flyweight/doc/tutorial/flyweight_rep.png
+share/doc/boost/libs/flyweight/doc/tutorial/index.html
+share/doc/boost/libs/flyweight/doc/tutorial/key_value.html
+share/doc/boost/libs/flyweight/doc/tutorial/lambda_expressions.html
+share/doc/boost/libs/flyweight/doc/tutorial/technical.html
+share/doc/boost/libs/flyweight/doc/up.gif
+share/doc/boost/libs/flyweight/example/Jamfile.v2
+share/doc/boost/libs/flyweight/example/basic.cpp
+share/doc/boost/libs/flyweight/example/composite.cpp
+share/doc/boost/libs/flyweight/example/custom_factory.cpp
+share/doc/boost/libs/flyweight/example/fibonacci.cpp
+share/doc/boost/libs/flyweight/example/html.cpp
+share/doc/boost/libs/flyweight/example/key_value.cpp
+share/doc/boost/libs/flyweight/example/perf.cpp
+share/doc/boost/libs/flyweight/index.html
+share/doc/boost/libs/foreach/CMakeLists.txt
 share/doc/boost/libs/foreach/doc/Jamfile.v2
 share/doc/boost/libs/foreach/doc/foreach.qbk
 share/doc/boost/libs/foreach/index.html
+share/doc/boost/libs/foreach/module.cmake
+share/doc/boost/libs/format/CMakeLists.txt
 share/doc/boost/libs/format/Jamfile
 share/doc/boost/libs/format/benchmark/Jamfile
 share/doc/boost/libs/format/benchmark/bench_format.cpp
@@ -759,6 +839,9 @@ share/doc/boost/libs/format/example/sample_formats.cpp
 share/doc/boost/libs/format/example/sample_new_features.cpp
 share/doc/boost/libs/format/example/sample_userType.cpp
 share/doc/boost/libs/format/index.html
+share/doc/boost/libs/format/module.cmake
+share/doc/boost/libs/function/CMakeLists.txt
+share/doc/boost/libs/function/doc/CMakeLists.txt
 share/doc/boost/libs/function/doc/Jamfile.v2
 share/doc/boost/libs/function/doc/faq.xml
 share/doc/boost/libs/function/doc/function.xml
@@ -771,6 +854,8 @@ share/doc/boost/libs/function/example/bind1st.cpp
 share/doc/boost/libs/function/example/int_div.cpp
 share/doc/boost/libs/function/example/sum_avg.cpp
 share/doc/boost/libs/function/index.html
+share/doc/boost/libs/function/module.cmake
+share/doc/boost/libs/function_types/CMakeLists.txt
 share/doc/boost/libs/function_types/doc/Jamfile
 share/doc/boost/libs/function_types/doc/function_types.qbk
 share/doc/boost/libs/function_types/doc/html/boost_functiontypes/about_tag_types.html
@@ -799,9 +884,11 @@ share/doc/boost/libs/function_types/example/macro_type_args_example.cpp
 share/doc/boost/libs/function_types/example/result_of.hpp
 share/doc/boost/libs/function_types/example/result_of_example.cpp
 share/doc/boost/libs/function_types/index.html
+share/doc/boost/libs/function_types/module.cmake
+share/doc/boost/libs/functional/CMakeLists.txt
 share/doc/boost/libs/functional/binders.html
-share/doc/boost/libs/functional/function_test.cpp
 share/doc/boost/libs/functional/function_traits.html
+share/doc/boost/libs/functional/hash/doc/CMakeLists.txt
 share/doc/boost/libs/functional/hash/doc/Jamfile.v2
 share/doc/boost/libs/functional/hash/doc/changes.qbk
 share/doc/boost/libs/functional/hash/doc/disable.qbk
@@ -812,6 +899,7 @@ share/doc/boost/libs/functional/hash/doc/portability.qbk
 share/doc/boost/libs/functional/hash/doc/ref.xml
 share/doc/boost/libs/functional/hash/doc/thanks.qbk
 share/doc/boost/libs/functional/hash/doc/tutorial.qbk
+share/doc/boost/libs/functional/hash/examples/CMakeLists.txt
 share/doc/boost/libs/functional/hash/examples/Jamfile.v2
 share/doc/boost/libs/functional/hash/examples/books.cpp
 share/doc/boost/libs/functional/hash/examples/books.hpp
@@ -820,9 +908,11 @@ share/doc/boost/libs/functional/hash/examples/portable.cpp
 share/doc/boost/libs/functional/hash/index.html
 share/doc/boost/libs/functional/index.html
 share/doc/boost/libs/functional/mem_fun.html
+share/doc/boost/libs/functional/module.cmake
 share/doc/boost/libs/functional/negators.html
 share/doc/boost/libs/functional/ptr_fun.html
 share/doc/boost/libs/functional/sublibs
+share/doc/boost/libs/fusion/CMakeLists.txt
 share/doc/boost/libs/fusion/doc/Jamfile
 share/doc/boost/libs/fusion/doc/acknowledgements.qbk
 share/doc/boost/libs/fusion/doc/adapted.qbk
@@ -1149,7 +1239,9 @@ share/doc/boost/libs/fusion/example/performance/sequence_efficiency.cpp
 share/doc/boost/libs/fusion/example/performance/timings.txt
 share/doc/boost/libs/fusion/example/performance/zip_efficiency.cpp
 share/doc/boost/libs/fusion/index.html
+share/doc/boost/libs/fusion/module.cmake
 share/doc/boost/libs/fusion/todo.txt
+share/doc/boost/libs/gil/CMakeLists.txt
 share/doc/boost/libs/gil/doc/adobe_logo.gif
 share/doc/boost/libs/gil/doc/adobe_source.css
 share/doc/boost/libs/gil/doc/boost.png
@@ -1905,6 +1997,8 @@ share/doc/boost/libs/gil/example/packed_pixel.cpp
 share/doc/boost/libs/gil/example/resize.cpp
 share/doc/boost/libs/gil/example/test.jpg
 share/doc/boost/libs/gil/example/x_gradient.cpp
+share/doc/boost/libs/gil/module.cmake
+share/doc/boost/libs/graph/CMakeLists.txt
 share/doc/boost/libs/graph/LICENSE
 share/doc/boost/libs/graph/doc/AStarHeuristic.html
 share/doc/boost/libs/graph/doc/AStarVisitor.html
@@ -1934,6 +2028,7 @@ share/doc/boost/libs/graph/doc/PlanarEmbedding.html
 share/doc/boost/libs/graph/doc/PlanarFaceVisitor.html
 share/doc/boost/libs/graph/doc/PropertyGraph.html
 share/doc/boost/libs/graph/doc/PropertyTag.html
+share/doc/boost/libs/graph/doc/TSPTourVisitor.html
 share/doc/boost/libs/graph/doc/VertexAndEdgeListGraph.html
 share/doc/boost/libs/graph/doc/VertexListGraph.html
 share/doc/boost/libs/graph/doc/VertexMutableGraph.html
@@ -1979,7 +2074,7 @@ share/doc/boost/libs/graph/doc/dijkstra_shortest_paths.html
 share/doc/boost/libs/graph/doc/dijkstra_visitor.html
 share/doc/boost/libs/graph/doc/distance_recorder.html
 share/doc/boost/libs/graph/doc/edge_list.html
-share/doc/boost/libs/graph/doc/edmunds_karp_max_flow.html
+share/doc/boost/libs/graph/doc/edmonds_karp_max_flow.html
 share/doc/boost/libs/graph/doc/eg1-iso.cpp
 share/doc/boost/libs/graph/doc/erdos_renyi_generator.html
 share/doc/boost/libs/graph/doc/exception.html
@@ -2122,6 +2217,7 @@ share/doc/boost/libs/graph/doc/make_connected.html
 share/doc/boost/libs/graph/doc/make_maximal_planar.html
 share/doc/boost/libs/graph/doc/math.sty
 share/doc/boost/libs/graph/doc/maximum_matching.html
+share/doc/boost/libs/graph/doc/metric_tsp_approx.html
 share/doc/boost/libs/graph/doc/minimum_degree_ordering.html
 share/doc/boost/libs/graph/doc/minimum_degree_ordering.w
 share/doc/boost/libs/graph/doc/mungeaux.csh
@@ -2141,6 +2237,7 @@ share/doc/boost/libs/graph/doc/publications.html
 share/doc/boost/libs/graph/doc/push_relabel_max_flow.html
 share/doc/boost/libs/graph/doc/python.html
 share/doc/boost/libs/graph/doc/quick_tour.html
+share/doc/boost/libs/graph/doc/r_c_shortest_paths.html
 share/doc/boost/libs/graph/doc/random.html
 share/doc/boost/libs/graph/doc/random_layout.html
 share/doc/boost/libs/graph/doc/read_dimacs.html
@@ -2169,6 +2266,8 @@ share/doc/boost/libs/graph/doc/transitive_closure.html
 share/doc/boost/libs/graph/doc/transitive_closure.w
 share/doc/boost/libs/graph/doc/transpose_graph.html
 share/doc/boost/libs/graph/doc/trouble_shooting.html
+share/doc/boost/libs/graph/doc/tsp_tour_len_visitor.html
+share/doc/boost/libs/graph/doc/tsp_tour_visitor.html
 share/doc/boost/libs/graph/doc/undirected_dfs.html
 share/doc/boost/libs/graph/doc/users.html
 share/doc/boost/libs/graph/doc/using_adjacency_list.html
@@ -2250,7 +2349,7 @@ share/doc/boost/libs/graph/example/edge_iterator_constructor.cpp
 share/doc/boost/libs/graph/example/edge_iterator_constructor.dat
 share/doc/boost/libs/graph/example/edge_property.cpp
 share/doc/boost/libs/graph/example/edge_property.expected
-share/doc/boost/libs/graph/example/edmunds-karp-eg.cpp
+share/doc/boost/libs/graph/example/edmonds-karp-eg.cpp
 share/doc/boost/libs/graph/example/exterior_properties.cpp
 share/doc/boost/libs/graph/example/exterior_properties.expected
 share/doc/boost/libs/graph/example/exterior_property_map.cpp
@@ -2278,6 +2377,7 @@ share/doc/boost/libs/graph/example/gerdemann.expected
 share/doc/boost/libs/graph/example/girth.cpp
 share/doc/boost/libs/graph/example/graph-assoc-types.cpp
 share/doc/boost/libs/graph/example/graph-property-iter-eg.cpp
+share/doc/boost/libs/graph/example/graph-thingie.cpp
 share/doc/boost/libs/graph/example/graph.cpp
 share/doc/boost/libs/graph/example/graph_as_tree.cpp
 share/doc/boost/libs/graph/example/graph_property.cpp
@@ -2361,6 +2461,7 @@ share/doc/boost/libs/graph/example/put-get-helper-eg.cpp
 share/doc/boost/libs/graph/example/quick-tour.cpp
 share/doc/boost/libs/graph/example/quick_tour.cpp
 share/doc/boost/libs/graph/example/quick_tour.expected
+share/doc/boost/libs/graph/example/r_c_shortest_paths_example.cpp
 share/doc/boost/libs/graph/example/reachable-loop-head.cpp
 share/doc/boost/libs/graph/example/reachable-loop-tail.cpp
 share/doc/boost/libs/graph/example/read_graphviz.cpp
@@ -2412,21 +2513,22 @@ share/doc/boost/libs/graph/example/visitor.cpp
 share/doc/boost/libs/graph/example/visitor.expected
 share/doc/boost/libs/graph/example/write_graphviz.cpp
 share/doc/boost/libs/graph/index.html
+share/doc/boost/libs/graph/module.cmake
+share/doc/boost/libs/graph/src/CMakeLists.txt
 share/doc/boost/libs/graph/src/graphml.cpp
 share/doc/boost/libs/graph/src/read_graphviz_spirit.cpp
 share/doc/boost/libs/index.html
+share/doc/boost/libs/integer/CMakeLists.txt
 share/doc/boost/libs/integer/cstdint.htm
-share/doc/boost/libs/integer/cstdint_test.cpp
 share/doc/boost/libs/integer/doc/integer_mask.html
 share/doc/boost/libs/integer/doc/static_log2.html
 share/doc/boost/libs/integer/doc/static_min_max.html
 share/doc/boost/libs/integer/index.html
 share/doc/boost/libs/integer/integer.htm
-share/doc/boost/libs/integer/integer_test.cpp
 share/doc/boost/libs/integer/integer_traits.html
-share/doc/boost/libs/integer/integer_traits_test.cpp
+share/doc/boost/libs/integer/module.cmake
+share/doc/boost/libs/interprocess/CMakeLists.txt
 share/doc/boost/libs/interprocess/doc/Jamfile.v2
-share/doc/boost/libs/interprocess/doc/autodoc.xml
 share/doc/boost/libs/interprocess/doc/html/boostbook.css
 share/doc/boost/libs/interprocess/doc/html/images/blank.png
 share/doc/boost/libs/interprocess/doc/html/images/caution.png
@@ -2507,11 +2609,13 @@ share/doc/boost/libs/interprocess/example/doc_where_allocate.cpp
 share/doc/boost/libs/interprocess/example/doc_windows_shared_memory.cpp
 share/doc/boost/libs/interprocess/example/doc_windows_shared_memory2.cpp
 share/doc/boost/libs/interprocess/index.html
+share/doc/boost/libs/interprocess/module.cmake
 share/doc/boost/libs/interprocess/proj/conceptgcc/MakeAll
 share/doc/boost/libs/interprocess/proj/cygwin/MakeAll
 share/doc/boost/libs/interprocess/proj/linux/MakeAll
 share/doc/boost/libs/interprocess/proj/mingw/MakeAll
 share/doc/boost/libs/interprocess/proj/qnx/MakeAll
+share/doc/boost/libs/interprocess/proj/to-do.txt
 share/doc/boost/libs/interprocess/proj/vc7ide/Interprocess.sln
 share/doc/boost/libs/interprocess/proj/vc7ide/adaptive_node_pool_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/adaptive_pool_test.vcproj
@@ -2602,6 +2706,7 @@ share/doc/boost/libs/interprocess/proj/vc7ide/message_queue.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/multi_index_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/mutex_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/named_condition_test.vcproj
+share/doc/boost/libs/interprocess/proj/vc7ide/named_construct_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/named_mutex_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/named_recursive_mutex_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/named_semaphore_test.vcproj
@@ -2628,8 +2733,8 @@ share/doc/boost/libs/interprocess/proj/vc7ide/vector_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/vectorstream_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/windows_shared_memory_mapping_test.vcproj
 share/doc/boost/libs/interprocess/proj/vc7ide/windows_shared_memory_test.vcproj
+share/doc/boost/libs/intrusive/CMakeLists.txt
 share/doc/boost/libs/intrusive/doc/Jamfile.v2
-share/doc/boost/libs/intrusive/doc/autodoc.xml
 share/doc/boost/libs/intrusive/doc/html/boostbook.css
 share/doc/boost/libs/intrusive/doc/html/images/blank.png
 share/doc/boost/libs/intrusive/doc/html/images/caution.png
@@ -2674,10 +2779,13 @@ share/doc/boost/libs/intrusive/example/doc_splay_algorithms.cpp
 share/doc/boost/libs/intrusive/example/doc_splay_set.cpp
 share/doc/boost/libs/intrusive/example/doc_splaytree_algorithms.cpp
 share/doc/boost/libs/intrusive/example/doc_stateful_value_traits.cpp
+share/doc/boost/libs/intrusive/example/doc_treap_algorithms.cpp
+share/doc/boost/libs/intrusive/example/doc_treap_set.cpp
 share/doc/boost/libs/intrusive/example/doc_unordered_set.cpp
 share/doc/boost/libs/intrusive/example/doc_value_traits.cpp
 share/doc/boost/libs/intrusive/example/doc_window.cpp
 share/doc/boost/libs/intrusive/index.html
+share/doc/boost/libs/intrusive/module.cmake
 share/doc/boost/libs/intrusive/perf/Jamfile.v2
 share/doc/boost/libs/intrusive/perf/perf_list.cpp
 share/doc/boost/libs/intrusive/proj/vc7ide/Intrusive.sln
@@ -2700,12 +2808,18 @@ share/doc/boost/libs/intrusive/proj/vc7ide/slist/slist.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/splay_multiset/splay_multiset.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/splay_set/splay_set.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/stateful_value_traits/stateful_value_traits.vcproj
+share/doc/boost/libs/intrusive/proj/vc7ide/to-do.txt
+share/doc/boost/libs/intrusive/proj/vc7ide/treap_multiset/treap_multiset.vcproj
+share/doc/boost/libs/intrusive/proj/vc7ide/treap_set/treap_set.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/unordered_multiset/unordered_multiset.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/unordered_set/unordered_set.vcproj
 share/doc/boost/libs/intrusive/proj/vc7ide/virtual_base/virtual_base.vcproj
+share/doc/boost/libs/io/CMakeLists.txt
 share/doc/boost/libs/io/doc/index.html
 share/doc/boost/libs/io/doc/ios_state.html
 share/doc/boost/libs/io/index.html
+share/doc/boost/libs/io/module.cmake
+share/doc/boost/libs/iostreams/CMakeLists.txt
 share/doc/boost/libs/iostreams/doc/acknowledgments.html
 share/doc/boost/libs/iostreams/doc/bibliography.html
 share/doc/boost/libs/iostreams/doc/classes/aggregate.html
@@ -2851,10 +2965,13 @@ share/doc/boost/libs/iostreams/example/std_back_inserter_example.cpp
 share/doc/boost/libs/iostreams/example/tab_expanding_filter.hpp
 share/doc/boost/libs/iostreams/example/unix2dos_filter.hpp
 share/doc/boost/libs/iostreams/index.html
+share/doc/boost/libs/iostreams/module.cmake
+share/doc/boost/libs/iostreams/src/CMakeLists.txt
 share/doc/boost/libs/iostreams/src/bzip2.cpp
 share/doc/boost/libs/iostreams/src/file_descriptor.cpp
 share/doc/boost/libs/iostreams/src/mapped_file.cpp
 share/doc/boost/libs/iostreams/src/zlib.cpp
+share/doc/boost/libs/iterator/CMakeLists.txt
 share/doc/boost/libs/iterator/doc/BidirectionalTraversal.html
 share/doc/boost/libs/iterator/doc/BidirectionalTraversal.rst
 share/doc/boost/libs/iterator/doc/ForwardTraversal.html
@@ -3017,6 +3134,8 @@ share/doc/boost/libs/iterator/example/reverse_iterator.cpp
 share/doc/boost/libs/iterator/example/reverse_iterator_example.cpp
 share/doc/boost/libs/iterator/example/transform_iterator_example.cpp
 share/doc/boost/libs/iterator/index.html
+share/doc/boost/libs/iterator/module.cmake
+share/doc/boost/libs/lambda/CMakeLists.txt
 share/doc/boost/libs/lambda/doc/Jamfile.v2
 share/doc/boost/libs/lambda/doc/detail/README
 share/doc/boost/libs/lambda/doc/detail/lambda_doc.xml
@@ -3025,11 +3144,14 @@ share/doc/boost/libs/lambda/doc/detail/lambda_doc_chunks.xsl
 share/doc/boost/libs/lambda/doc/index.html
 share/doc/boost/libs/lambda/doc/lambda.xml
 share/doc/boost/libs/lambda/index.html
+share/doc/boost/libs/lambda/module.cmake
 share/doc/boost/libs/libraries.htm
+share/doc/boost/libs/logic/CMakeLists.txt
 share/doc/boost/libs/logic/doc/Jamfile.v2
-share/doc/boost/libs/logic/doc/reference.xml
 share/doc/boost/libs/logic/doc/tribool.boostbook
+share/doc/boost/libs/logic/module.cmake
 share/doc/boost/libs/maintainers.txt
+share/doc/boost/libs/math/CMakeLists.txt
 share/doc/boost/libs/math/doc/Jamfile.v2
 share/doc/boost/libs/math/doc/common_factor.html
 share/doc/boost/libs/math/doc/complex/Jamfile.v2
@@ -3165,6 +3287,39 @@ share/doc/boost/libs/math/doc/sf_and_dist/distributions/weibull.qbk
 share/doc/boost/libs/math/doc/sf_and_dist/ellint_carlson.qbk
 share/doc/boost/libs/math/doc/sf_and_dist/ellint_introduction.qbk
 share/doc/boost/libs/math/doc/sf_and_dist/ellint_legendre.qbk
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh1.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh1.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh1.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh2.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh2.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh2.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh3.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh3.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh3.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh4.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh4.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/acosh4.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh1.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh1.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh1.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh2.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh2.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh2.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh3.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh3.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh3.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh4.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh4.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/asinh4.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh1.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh1.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh1.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh2.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh2.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh2.svg
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh3.mml
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh3.png
+share/doc/boost/libs/math/doc/sf_and_dist/equations/atanh3.svg
 share/doc/boost/libs/math/doc/sf_and_dist/equations/bessel1.mml
 share/doc/boost/libs/math/doc/sf_and_dist/equations/bessel1.png
 share/doc/boost/libs/math/doc/sf_and_dist/equations/bessel1.svg
@@ -4257,6 +4412,7 @@ share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/status/issues.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1/cf.html
+share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1/constants.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1/minima.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1/rational.html
 share/doc/boost/libs/math/doc/sf_and_dist/html/math_toolkit/toolkit/internals1/roots.html
@@ -4384,6 +4540,7 @@ share/doc/boost/libs/math/example/students_t_two_samples.cpp
 share/doc/boost/libs/math/index.html
 share/doc/boost/libs/math/minimax/f.cpp
 share/doc/boost/libs/math/minimax/main.cpp
+share/doc/boost/libs/math/module.cmake
 share/doc/boost/libs/math/octonion/graphics/octonion_blurb1.jpeg
 share/doc/boost/libs/math/octonion/graphics/octonion_blurb10.jpeg
 share/doc/boost/libs/math/octonion/graphics/octonion_blurb11.jpeg
@@ -4649,6 +4806,7 @@ share/doc/boost/libs/math/tools/ibeta_inv_data.cpp
 share/doc/boost/libs/math/tools/ibeta_invab_data.cpp
 share/doc/boost/libs/math/tools/igamma_data.cpp
 share/doc/boost/libs/math/tools/igamma_temme_large_coef.cpp
+share/doc/boost/libs/math/tools/inv_hyp_data.cpp
 share/doc/boost/libs/math/tools/laguerre_data.cpp
 share/doc/boost/libs/math/tools/lanczos_generator.cpp
 share/doc/boost/libs/math/tools/legendre_data.cpp
@@ -4663,9 +4821,10 @@ share/doc/boost/libs/math/tools/zeta_data.cpp
 share/doc/boost/libs/math/vc71_fix/Jamfile.v2
 share/doc/boost/libs/math/vc71_fix/instantiate_all.cpp
 share/doc/boost/libs/mem_fn/index.html
+share/doc/boost/libs/mpi/CMakeLists.txt
+share/doc/boost/libs/mpi/doc/CMakeLists.txt
 share/doc/boost/libs/mpi/doc/Jamfile.v2
 share/doc/boost/libs/mpi/doc/mpi.qbk
-share/doc/boost/libs/mpi/doc/mpi_autodoc.xml
 share/doc/boost/libs/mpi/doc/netpipe.png
 share/doc/boost/libs/mpi/example/generate_collect.cpp
 share/doc/boost/libs/mpi/example/generate_collect_optional.cpp
@@ -4679,6 +4838,8 @@ share/doc/boost/libs/mpi/example/random_gather.cpp
 share/doc/boost/libs/mpi/example/random_min.cpp
 share/doc/boost/libs/mpi/example/reduce_performance_test.cpp
 share/doc/boost/libs/mpi/example/string_cat.cpp
+share/doc/boost/libs/mpi/module.cmake
+share/doc/boost/libs/mpi/src/CMakeLists.txt
 share/doc/boost/libs/mpi/src/broadcast.cpp
 share/doc/boost/libs/mpi/src/communicator.cpp
 share/doc/boost/libs/mpi/src/computation_tree.cpp
@@ -4712,9 +4873,9 @@ share/doc/boost/libs/mpi/src/python/skeleton_and_content.cpp
 share/doc/boost/libs/mpi/src/python/status.cpp
 share/doc/boost/libs/mpi/src/python/utility.hpp
 share/doc/boost/libs/mpi/src/request.cpp
-share/doc/boost/libs/mpi/src/text_skeleton_iarchive.cpp
 share/doc/boost/libs/mpi/src/text_skeleton_oarchive.cpp
 share/doc/boost/libs/mpi/src/timer.cpp
+share/doc/boost/libs/mpl/CMakeLists.txt
 share/doc/boost/libs/mpl/book/chapter1/binary.hpp
 share/doc/boost/libs/mpl/doc/index.html
 share/doc/boost/libs/mpl/doc/paper/mpl_paper.pdf
@@ -5202,8 +5363,10 @@ share/doc/boost/libs/mpl/example/inherit_multiply.cpp
 share/doc/boost/libs/mpl/example/integer.cpp
 share/doc/boost/libs/mpl/example/tuple_from_list.cpp
 share/doc/boost/libs/mpl/index.html
+share/doc/boost/libs/mpl/module.cmake
 share/doc/boost/libs/mpl/preprocessed/include/bcc/user.hpp
 share/doc/boost/libs/mpl/preprocessed/include/bcc551/user.hpp
+share/doc/boost/libs/mpl/preprocessed/include/bcc_pre590/user.hpp
 share/doc/boost/libs/mpl/preprocessed/include/dmc/user.hpp
 share/doc/boost/libs/mpl/preprocessed/include/gcc/user.hpp
 share/doc/boost/libs/mpl/preprocessed/include/msvc60/user.hpp
@@ -5302,6 +5465,7 @@ share/doc/boost/libs/mpl/preprocessed/vector/vector40.cpp
 share/doc/boost/libs/mpl/preprocessed/vector/vector40_c.cpp
 share/doc/boost/libs/mpl/preprocessed/vector/vector50.cpp
 share/doc/boost/libs/mpl/preprocessed/vector/vector50_c.cpp
+share/doc/boost/libs/multi_array/CMakeLists.txt
 share/doc/boost/libs/multi_array/doc/index.html
 share/doc/boost/libs/multi_array/doc/iterator_categories.html
 share/doc/boost/libs/multi_array/doc/matrix.gif
@@ -5324,6 +5488,8 @@ share/doc/boost/libs/multi_array/example/print_array.cpp
 share/doc/boost/libs/multi_array/example/subview.cpp
 share/doc/boost/libs/multi_array/example/subview2.cpp
 share/doc/boost/libs/multi_array/index.html
+share/doc/boost/libs/multi_array/module.cmake
+share/doc/boost/libs/multi_index/CMakeLists.txt
 share/doc/boost/libs/multi_index/doc/acknowledgements.html
 share/doc/boost/libs/multi_index/doc/compiler_specifics.html
 share/doc/boost/libs/multi_index/doc/examples.html
@@ -5374,8 +5540,10 @@ share/doc/boost/libs/multi_index/example/rearrange.cpp
 share/doc/boost/libs/multi_index/example/sequenced.cpp
 share/doc/boost/libs/multi_index/example/serialization.cpp
 share/doc/boost/libs/multi_index/index.html
+share/doc/boost/libs/multi_index/module.cmake
 share/doc/boost/libs/multi_index/perf/Jamfile.v2
 share/doc/boost/libs/multi_index/perf/test_perf.cpp
+share/doc/boost/libs/numeric/CMakeLists.txt
 share/doc/boost/libs/numeric/conversion/doc/Jamfile.v2
 share/doc/boost/libs/numeric/conversion/doc/bounds.qbk
 share/doc/boost/libs/numeric/conversion/doc/conversion.qbk
@@ -5419,6 +5587,7 @@ share/doc/boost/libs/numeric/interval/examples/io.cpp
 share/doc/boost/libs/numeric/interval/examples/newton-raphson.cpp
 share/doc/boost/libs/numeric/interval/examples/rational.cpp
 share/doc/boost/libs/numeric/interval/examples/transc.cpp
+share/doc/boost/libs/numeric/module.cmake
 share/doc/boost/libs/numeric/sublibs
 share/doc/boost/libs/numeric/ublas/bench1/Jamfile.v2
 share/doc/boost/libs/numeric/ublas/bench1/bench1.cpp
@@ -5527,6 +5696,7 @@ share/doc/boost/libs/numeric/ublas/doc/vector_expression.htm
 share/doc/boost/libs/numeric/ublas/doc/vector_proxy.htm
 share/doc/boost/libs/numeric/ublas/doc/vector_sparse.htm
 share/doc/boost/libs/numeric/ublas/index.html
+share/doc/boost/libs/optional/CMakeLists.txt
 share/doc/boost/libs/optional/doc/Jamfile.v2
 share/doc/boost/libs/optional/doc/acknowledgments.qbk
 share/doc/boost/libs/optional/doc/dependencies.qbk
@@ -5555,6 +5725,8 @@ share/doc/boost/libs/optional/doc/optional.qbk
 share/doc/boost/libs/optional/doc/reference.qbk
 share/doc/boost/libs/optional/doc/special_cases.qbk
 share/doc/boost/libs/optional/index.html
+share/doc/boost/libs/optional/module.cmake
+share/doc/boost/libs/parameter/CMakeLists.txt
 share/doc/boost/libs/parameter/doc/Jamfile.v2
 share/doc/boost/libs/parameter/doc/html/index.html
 share/doc/boost/libs/parameter/doc/html/python.html
@@ -5565,7 +5737,9 @@ share/doc/boost/libs/parameter/doc/index.rst
 share/doc/boost/libs/parameter/doc/python.rst
 share/doc/boost/libs/parameter/doc/reference.rst
 share/doc/boost/libs/parameter/index.html
+share/doc/boost/libs/parameter/module.cmake
 share/doc/boost/libs/platform_maintainers.txt
+share/doc/boost/libs/pool/CMakeLists.txt
 share/doc/boost/libs/pool/TODO.txt
 share/doc/boost/libs/pool/doc/concepts.html
 share/doc/boost/libs/pool/doc/implementation/alignment.html
@@ -5591,6 +5765,8 @@ share/doc/boost/libs/pool/doc/interfaces/singleton_pool.html
 share/doc/boost/libs/pool/doc/interfaces/user_allocator.html
 share/doc/boost/libs/pool/doc/pool.css
 share/doc/boost/libs/pool/index.html
+share/doc/boost/libs/pool/module.cmake
+share/doc/boost/libs/preprocessor/CMakeLists.txt
 share/doc/boost/libs/preprocessor/doc/acknowledgements.html
 share/doc/boost/libs/preprocessor/doc/bibliography.html
 share/doc/boost/libs/preprocessor/doc/contents.html
@@ -6043,10 +6219,11 @@ share/doc/boost/libs/preprocessor/doc/topics/problems.html
 share/doc/boost/libs/preprocessor/doc/topics/reentrancy.html
 share/doc/boost/libs/preprocessor/doc/topics/techniques.html
 share/doc/boost/libs/preprocessor/index.html
+share/doc/boost/libs/preprocessor/module.cmake
+share/doc/boost/libs/program_options/CMakeLists.txt
 share/doc/boost/libs/program_options/doc/Jamfile.v2
 share/doc/boost/libs/program_options/doc/acknowledgements.xml
 share/doc/boost/libs/program_options/doc/alternatives
-share/doc/boost/libs/program_options/doc/autodoc.xml
 share/doc/boost/libs/program_options/doc/changes.xml
 share/doc/boost/libs/program_options/doc/design.xml
 share/doc/boost/libs/program_options/doc/glossary.dox
@@ -6078,6 +6255,8 @@ share/doc/boost/libs/program_options/example/regex.cpp
 share/doc/boost/libs/program_options/example/response_file.cpp
 share/doc/boost/libs/program_options/example/response_file.rsp
 share/doc/boost/libs/program_options/index.html
+share/doc/boost/libs/program_options/module.cmake
+share/doc/boost/libs/program_options/src/CMakeLists.txt
 share/doc/boost/libs/program_options/src/cmdline.cpp
 share/doc/boost/libs/program_options/src/config_file.cpp
 share/doc/boost/libs/program_options/src/convert.cpp
@@ -6088,6 +6267,7 @@ share/doc/boost/libs/program_options/src/utf8_codecvt_facet.cpp
 share/doc/boost/libs/program_options/src/value_semantic.cpp
 share/doc/boost/libs/program_options/src/variables_map.cpp
 share/doc/boost/libs/program_options/src/winmain.cpp
+share/doc/boost/libs/property_map/CMakeLists.txt
 share/doc/boost/libs/property_map/LvaluePropertyMap.html
 share/doc/boost/libs/property_map/ReadWritePropertyMap.html
 share/doc/boost/libs/property_map/ReadablePropertyMap.html
@@ -6102,9 +6282,88 @@ share/doc/boost/libs/property_map/example3.cpp
 share/doc/boost/libs/property_map/identity_property_map.html
 share/doc/boost/libs/property_map/index.html
 share/doc/boost/libs/property_map/iterator_property_map.html
+share/doc/boost/libs/property_map/module.cmake
 share/doc/boost/libs/property_map/property_map.html
 share/doc/boost/libs/property_map/ref_property_map.html
 share/doc/boost/libs/property_map/vector_property_map.html
+share/doc/boost/libs/proto/CMakeLists.txt
+share/doc/boost/libs/proto/doc/Jamfile.v2
+share/doc/boost/libs/proto/doc/acknowledgements.qbk
+share/doc/boost/libs/proto/doc/back_end.qbk
+share/doc/boost/libs/proto/doc/calculator.qbk
+share/doc/boost/libs/proto/doc/conventions.qbk
+share/doc/boost/libs/proto/doc/examples.qbk
+share/doc/boost/libs/proto/doc/front_end.qbk
+share/doc/boost/libs/proto/doc/getting_started.qbk
+share/doc/boost/libs/proto/doc/glossary.qbk
+share/doc/boost/libs/proto/doc/hello_world.qbk
+share/doc/boost/libs/proto/doc/history.qbk
+share/doc/boost/libs/proto/doc/implementation.qbk
+share/doc/boost/libs/proto/doc/installation.qbk
+share/doc/boost/libs/proto/doc/intermediate_form.qbk
+share/doc/boost/libs/proto/doc/preface.qbk
+share/doc/boost/libs/proto/doc/propdocs.sh
+share/doc/boost/libs/proto/doc/proto.qbk
+share/doc/boost/libs/proto/doc/rationale.qbk
+share/doc/boost/libs/proto/doc/reference.xml
+share/doc/boost/libs/proto/doc/reference/args.xml
+share/doc/boost/libs/proto/doc/reference/concepts/CallableTransform.xml
+share/doc/boost/libs/proto/doc/reference/concepts/ObjectTransform.xml
+share/doc/boost/libs/proto/doc/reference/concepts/PolymorphicFunctionObject.xml
+share/doc/boost/libs/proto/doc/reference/concepts/PrimitiveTransform.xml
+share/doc/boost/libs/proto/doc/reference/concepts/Transform.xml
+share/doc/boost/libs/proto/doc/reference/context/callable.xml
+share/doc/boost/libs/proto/doc/reference/context/default.xml
+share/doc/boost/libs/proto/doc/reference/context/null.xml
+share/doc/boost/libs/proto/doc/reference/core.xml
+share/doc/boost/libs/proto/doc/reference/debug.xml
+share/doc/boost/libs/proto/doc/reference/deep_copy.xml
+share/doc/boost/libs/proto/doc/reference/domain.xml
+share/doc/boost/libs/proto/doc/reference/eval.xml
+share/doc/boost/libs/proto/doc/reference/expr.xml
+share/doc/boost/libs/proto/doc/reference/extends.xml
+share/doc/boost/libs/proto/doc/reference/fusion.xml
+share/doc/boost/libs/proto/doc/reference/generate.xml
+share/doc/boost/libs/proto/doc/reference/literal.xml
+share/doc/boost/libs/proto/doc/reference/make_expr.xml
+share/doc/boost/libs/proto/doc/reference/matches.xml
+share/doc/boost/libs/proto/doc/reference/operators.xml
+share/doc/boost/libs/proto/doc/reference/proto.xml
+share/doc/boost/libs/proto/doc/reference/proto_fwd.xml
+share/doc/boost/libs/proto/doc/reference/proto_typeof.xml
+share/doc/boost/libs/proto/doc/reference/repeat.xml
+share/doc/boost/libs/proto/doc/reference/tags.xml
+share/doc/boost/libs/proto/doc/reference/traits.xml
+share/doc/boost/libs/proto/doc/reference/transform/arg.xml
+share/doc/boost/libs/proto/doc/reference/transform/call.xml
+share/doc/boost/libs/proto/doc/reference/transform/default.xml
+share/doc/boost/libs/proto/doc/reference/transform/fold.xml
+share/doc/boost/libs/proto/doc/reference/transform/fold_tree.xml
+share/doc/boost/libs/proto/doc/reference/transform/impl.xml
+share/doc/boost/libs/proto/doc/reference/transform/lazy.xml
+share/doc/boost/libs/proto/doc/reference/transform/make.xml
+share/doc/boost/libs/proto/doc/reference/transform/pass_through.xml
+share/doc/boost/libs/proto/doc/reference/transform/when.xml
+share/doc/boost/libs/proto/doc/resources.qbk
+share/doc/boost/libs/proto/example/Jamfile.v2
+share/doc/boost/libs/proto/example/calc1.cpp
+share/doc/boost/libs/proto/example/calc2.cpp
+share/doc/boost/libs/proto/example/calc3.cpp
+share/doc/boost/libs/proto/example/futures.cpp
+share/doc/boost/libs/proto/example/hello.cpp
+share/doc/boost/libs/proto/example/lambda.hpp
+share/doc/boost/libs/proto/example/lazy_vector.cpp
+share/doc/boost/libs/proto/example/map_assign.cpp
+share/doc/boost/libs/proto/example/mini_lambda.cpp
+share/doc/boost/libs/proto/example/mixed.cpp
+share/doc/boost/libs/proto/example/rgb.cpp
+share/doc/boost/libs/proto/example/tarray.cpp
+share/doc/boost/libs/proto/example/vec3.cpp
+share/doc/boost/libs/proto/example/vector.cpp
+share/doc/boost/libs/proto/example/virtual_member.cpp
+share/doc/boost/libs/proto/index.html
+share/doc/boost/libs/proto/module.cmake
+share/doc/boost/libs/ptr_container/CMakeLists.txt
 share/doc/boost/libs/ptr_container/doc/Jamfile.v2
 share/doc/boost/libs/ptr_container/doc/associative_ptr_container.html
 share/doc/boost/libs/ptr_container/doc/associative_ptr_container.rst
@@ -6190,6 +6449,8 @@ share/doc/boost/libs/ptr_container/doc/tutorial.html
 share/doc/boost/libs/ptr_container/doc/tutorial.rst
 share/doc/boost/libs/ptr_container/doc/tutorial_example.html
 share/doc/boost/libs/ptr_container/index.html
+share/doc/boost/libs/ptr_container/module.cmake
+share/doc/boost/libs/python/CMakeLists.txt
 share/doc/boost/libs/python/doc/Jamfile
 share/doc/boost/libs/python/doc/PyConDC_2003/bpl.html
 share/doc/boost/libs/python/doc/PyConDC_2003/bpl.pdf
@@ -6333,6 +6594,7 @@ share/doc/boost/libs/python/example/tutorial/Jamroot
 share/doc/boost/libs/python/example/tutorial/hello.cpp
 share/doc/boost/libs/python/example/tutorial/hello.py
 share/doc/boost/libs/python/index.html
+share/doc/boost/libs/python/module.cmake
 share/doc/boost/libs/python/pyste/NEWS
 share/doc/boost/libs/python/pyste/README
 share/doc/boost/libs/python/pyste/TODO
@@ -6460,6 +6722,7 @@ share/doc/boost/libs/python/pyste/tests/wrappertest.pyste
 share/doc/boost/libs/python/pyste/tests/wrappertestUT.py
 share/doc/boost/libs/python/pyste/tests/wrappertest_wrappers.h
 share/doc/boost/libs/python/release_notes.txt
+share/doc/boost/libs/python/src/CMakeLists.txt
 share/doc/boost/libs/python/src/converter/arg_to_python_base.cpp
 share/doc/boost/libs/python/src/converter/builtin_converters.cpp
 share/doc/boost/libs/python/src/converter/from_python.cpp
@@ -6490,9 +6753,11 @@ share/doc/boost/libs/python/src/tuple.cpp
 share/doc/boost/libs/python/src/wrapper.cpp
 share/doc/boost/libs/python/todo.html
 share/doc/boost/libs/python/todo.txt
+share/doc/boost/libs/random/CMakeLists.txt
 share/doc/boost/libs/random/histogram.cpp
 share/doc/boost/libs/random/index.html
 share/doc/boost/libs/random/integrate.hpp
+share/doc/boost/libs/random/module.cmake
 share/doc/boost/libs/random/nondet_random.html
 share/doc/boost/libs/random/nondet_random_speed.cpp
 share/doc/boost/libs/random/random-concepts.html
@@ -6508,6 +6773,8 @@ share/doc/boost/libs/random/random_test.cpp
 share/doc/boost/libs/random/statistic_tests.cpp
 share/doc/boost/libs/random/statistic_tests.hpp
 share/doc/boost/libs/random/wg21-proposal.html
+share/doc/boost/libs/range/CMakeLists.txt
+share/doc/boost/libs/range/doc/CMakeLists.txt
 share/doc/boost/libs/range/doc/Jamfile.v2
 share/doc/boost/libs/range/doc/boost_range.html
 share/doc/boost/libs/range/doc/boost_range.qbk
@@ -6526,10 +6793,12 @@ share/doc/boost/libs/range/doc/style.html
 share/doc/boost/libs/range/doc/upgrading.html
 share/doc/boost/libs/range/doc/utility_class.html
 share/doc/boost/libs/range/index.html
+share/doc/boost/libs/range/module.cmake
+share/doc/boost/libs/rational/CMakeLists.txt
 share/doc/boost/libs/rational/index.html
+share/doc/boost/libs/rational/module.cmake
 share/doc/boost/libs/rational/rational.html
-share/doc/boost/libs/rational/rational_example.cpp
-share/doc/boost/libs/rational/rational_test.cpp
+share/doc/boost/libs/regex/CMakeLists.txt
 share/doc/boost/libs/regex/doc/Jamfile.v2
 share/doc/boost/libs/regex/doc/acknowledgements.qbk
 share/doc/boost/libs/regex/doc/bad_expression.qbk
@@ -6697,6 +6966,7 @@ share/doc/boost/libs/regex/example/timer/regex_timer.cpp
 share/doc/boost/libs/regex/example/timer/vc6-stlport.mak
 share/doc/boost/libs/regex/example/timer/vc6.mak
 share/doc/boost/libs/regex/index.html
+share/doc/boost/libs/regex/module.cmake
 share/doc/boost/libs/regex/performance/Jamfile.v2
 share/doc/boost/libs/regex/performance/command_line.cpp
 share/doc/boost/libs/regex/performance/input.html
@@ -6710,6 +6980,7 @@ share/doc/boost/libs/regex/performance/time_pcre.cpp
 share/doc/boost/libs/regex/performance/time_posix.cpp
 share/doc/boost/libs/regex/performance/time_safe_greta.cpp
 share/doc/boost/libs/regex/readme.txt
+share/doc/boost/libs/regex/src/CMakeLists.txt
 share/doc/boost/libs/regex/src/c_regex_traits.cpp
 share/doc/boost/libs/regex/src/cpp_regex_traits.cpp
 share/doc/boost/libs/regex/src/cregex.cpp
@@ -6728,6 +6999,18 @@ share/doc/boost/libs/regex/src/wc_regex_traits.cpp
 share/doc/boost/libs/regex/src/wide_posix_api.cpp
 share/doc/boost/libs/regex/src/winstances.cpp
 share/doc/boost/libs/regex/tools/generate/tables.cpp
+share/doc/boost/libs/scope_exit/doc/Jamfile.v2
+share/doc/boost/libs/scope_exit/doc/html/index.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/acknowledge.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/alternatives.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/compilers.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/conf.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/ref.html
+share/doc/boost/libs/scope_exit/doc/html/scope_exit/tutorial.html
+share/doc/boost/libs/scope_exit/doc/scope_exit.qbk
+share/doc/boost/libs/scope_exit/example/world.cpp
+share/doc/boost/libs/scope_exit/index.html
+share/doc/boost/libs/serialization/CMakeLists.txt
 share/doc/boost/libs/serialization/doc/acknowledgments.html
 share/doc/boost/libs/serialization/doc/archive_reference.html
 share/doc/boost/libs/serialization/doc/archives.html
@@ -6812,6 +7095,7 @@ share/doc/boost/libs/serialization/example/portable_binary_iarchive.hpp
 share/doc/boost/libs/serialization/example/portable_binary_oarchive.cpp
 share/doc/boost/libs/serialization/example/portable_binary_oarchive.hpp
 share/doc/boost/libs/serialization/index.html
+share/doc/boost/libs/serialization/module.cmake
 share/doc/boost/libs/serialization/performance/Jamfile.v2
 share/doc/boost/libs/serialization/performance/binary_archive.hpp
 share/doc/boost/libs/serialization/performance/binary_warchive.hpp
@@ -6837,6 +7121,7 @@ share/doc/boost/libs/serialization/performance/text_archive.hpp
 share/doc/boost/libs/serialization/performance/text_warchive.hpp
 share/doc/boost/libs/serialization/performance/xml_archive.hpp
 share/doc/boost/libs/serialization/performance/xml_warchive.hpp
+share/doc/boost/libs/serialization/src/CMakeLists.txt
 share/doc/boost/libs/serialization/src/basic_archive.cpp
 share/doc/boost/libs/serialization/src/basic_iarchive.cpp
 share/doc/boost/libs/serialization/src/basic_iserializer.cpp
@@ -6881,6 +7166,7 @@ share/doc/boost/libs/serialization/vc7ide/LibraryW.vcproj
 share/doc/boost/libs/serialization/vc7ide/Manual.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_auto_ptr.vcproj
+share/doc/boost/libs/serialization/vc7ide/demo_dll.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_exception.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_fast_archive.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_pimpl.vcproj
@@ -6890,12 +7176,16 @@ share/doc/boost/libs/serialization/vc7ide/demo_shared_ptr.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_xml.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_xml_load.vcproj
 share/doc/boost/libs/serialization/vc7ide/demo_xml_save.vcproj
+share/doc/boost/libs/serialization/vc7ide/dll_a.vcproj
+share/doc/boost/libs/serialization/vc7ide/dll_base.vcproj
+share/doc/boost/libs/serialization/vc7ide/dll_derived2.vcproj
 share/doc/boost/libs/serialization/vc7ide/readme.txt
 share/doc/boost/libs/serialization/vc7ide/test_array.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_binary.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_class_info_load.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_class_info_save.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_codecvt_null.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_complex.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_const.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_const_fail.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_const_pass.vcproj
@@ -6907,6 +7197,9 @@ share/doc/boost/libs/serialization/vc7ide/test_derived.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_derived_class.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_derived_class_ptr.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_diamond.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_dll_exported.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_dll_plugin.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_dll_simple.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_exported.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_inclusion.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_iterators.vcproj
@@ -6938,17 +7231,21 @@ share/doc/boost/libs/serialization/vc7ide/test_shared_ptr.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_shared_ptr_132.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_simple_class.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_simple_class_ptr.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_singleton.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_smart_cast.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_split.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_static_warning.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_strong_typedef.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_tracking.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_traits_fail.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_traits_pass.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_unregistered.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_utf8_codecvt.vcproj
+share/doc/boost/libs/serialization/vc7ide/test_valarray.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_variant.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_vector.vcproj
 share/doc/boost/libs/serialization/vc7ide/test_void_cast.vcproj
+share/doc/boost/libs/signals/CMakeLists.txt
 share/doc/boost/libs/signals/doc/Jamfile.v2
 share/doc/boost/libs/signals/doc/design.xml
 share/doc/boost/libs/signals/doc/faq.xml
@@ -6977,11 +7274,14 @@ share/doc/boost/libs/signals/example/print_sum_product.cpp
 share/doc/boost/libs/signals/example/quotient_controlling.cpp
 share/doc/boost/libs/signals/example/quotient_named.cpp
 share/doc/boost/libs/signals/index.html
+share/doc/boost/libs/signals/module.cmake
+share/doc/boost/libs/signals/src/CMakeLists.txt
 share/doc/boost/libs/signals/src/connection.cpp
 share/doc/boost/libs/signals/src/named_slot_map.cpp
 share/doc/boost/libs/signals/src/signal_base.cpp
 share/doc/boost/libs/signals/src/slot.cpp
 share/doc/boost/libs/signals/src/trackable.cpp
+share/doc/boost/libs/smart_ptr/CMakeLists.txt
 share/doc/boost/libs/smart_ptr/compatibility.htm
 share/doc/boost/libs/smart_ptr/enable_shared_from_this.html
 share/doc/boost/libs/smart_ptr/example/scoped_ptr_example.cpp
@@ -6994,6 +7294,7 @@ share/doc/boost/libs/smart_ptr/example/shared_ptr_example2_test.cpp
 share/doc/boost/libs/smart_ptr/gccspeed.gif
 share/doc/boost/libs/smart_ptr/index.html
 share/doc/boost/libs/smart_ptr/intrusive_ptr.html
+share/doc/boost/libs/smart_ptr/module.cmake
 share/doc/boost/libs/smart_ptr/msvcspeed.gif
 share/doc/boost/libs/smart_ptr/pointer_cast.html
 share/doc/boost/libs/smart_ptr/pointer_to_other.html
@@ -7008,6 +7309,7 @@ share/doc/boost/libs/smart_ptr/sp_techniques.html
 share/doc/boost/libs/smart_ptr/src/sp_collector.cpp
 share/doc/boost/libs/smart_ptr/src/sp_debug_hooks.cpp
 share/doc/boost/libs/smart_ptr/weak_ptr.htm
+share/doc/boost/libs/spirit/CMakeLists.txt
 share/doc/boost/libs/spirit/classic/change_log.html
 share/doc/boost/libs/spirit/classic/doc/acknowledgments.html
 share/doc/boost/libs/spirit/classic/doc/basic_concepts.html
@@ -7471,6 +7773,7 @@ share/doc/boost/libs/spirit/example/qi/num_list4.cpp
 share/doc/boost/libs/spirit/example/qi/roman.cpp
 share/doc/boost/libs/spirit/example/qi/sum.cpp
 share/doc/boost/libs/spirit/index.html
+share/doc/boost/libs/spirit/module.cmake
 share/doc/boost/libs/spirit/phoenix/doc/Jamfile.v2
 share/doc/boost/libs/spirit/phoenix/doc/html/images/add2.png
 share/doc/boost/libs/spirit/phoenix/doc/html/images/add2_call.png
@@ -7517,6 +7820,7 @@ share/doc/boost/libs/spirit/phoenix/example/users_manual/lambda.cpp
 share/doc/boost/libs/spirit/phoenix/example/users_manual/references.cpp
 share/doc/boost/libs/spirit/phoenix/example/users_manual/values.cpp
 share/doc/boost/libs/spirit/phoenix/index.html
+share/doc/boost/libs/statechart/CMakeLists.txt
 share/doc/boost/libs/statechart/Jamfile.v2
 share/doc/boost/libs/statechart/Statechart.sln
 share/doc/boost/libs/statechart/doc/A.gif
@@ -7570,6 +7874,7 @@ share/doc/boost/libs/statechart/example/BitMachine/BitMachine.cpp
 share/doc/boost/libs/statechart/example/BitMachine/BitMachine.vcproj
 share/doc/boost/libs/statechart/example/BitMachine/UniqueObject.hpp
 share/doc/boost/libs/statechart/example/BitMachine/UniqueObjectAllocator.hpp
+share/doc/boost/libs/statechart/example/CMakeLists.txt
 share/doc/boost/libs/statechart/example/Camera/Camera.cpp
 share/doc/boost/libs/statechart/example/Camera/Camera.hpp
 share/doc/boost/libs/statechart/example/Camera/Camera.vcproj
@@ -7597,10 +7902,13 @@ share/doc/boost/libs/statechart/example/StopWatch/StopWatch.cpp
 share/doc/boost/libs/statechart/example/StopWatch/StopWatch.vcproj
 share/doc/boost/libs/statechart/example/StopWatch/StopWatch2.cpp
 share/doc/boost/libs/statechart/index.html
+share/doc/boost/libs/statechart/module.cmake
+share/doc/boost/libs/static_assert/CMakeLists.txt
 share/doc/boost/libs/static_assert/Jamfile.v2
 share/doc/boost/libs/static_assert/doc/Jamfile.v2
 share/doc/boost/libs/static_assert/doc/static_assert.qbk
 share/doc/boost/libs/static_assert/index.html
+share/doc/boost/libs/static_assert/module.cmake
 share/doc/boost/libs/static_assert/static_assert.htm
 share/doc/boost/libs/static_assert/static_assert_example_1.cpp
 share/doc/boost/libs/static_assert/static_assert_example_2.cpp
@@ -7616,10 +7924,14 @@ share/doc/boost/libs/static_assert/static_assert_test_fail_6.cpp
 share/doc/boost/libs/static_assert/static_assert_test_fail_7.cpp
 share/doc/boost/libs/static_assert/static_assert_test_fail_8.cpp
 share/doc/boost/libs/static_assert/static_assert_test_fail_9.cpp
+share/doc/boost/libs/system/CMakeLists.txt
 share/doc/boost/libs/system/doc/index.html
 share/doc/boost/libs/system/doc/reference.html
 share/doc/boost/libs/system/index.html
+share/doc/boost/libs/system/module.cmake
+share/doc/boost/libs/system/src/CMakeLists.txt
 share/doc/boost/libs/system/src/error_code.cpp
+share/doc/boost/libs/test/CMakeLists.txt
 share/doc/boost/libs/test/Jamfile.v2
 share/doc/boost/libs/test/README
 share/doc/boost/libs/test/doc/html/aknowledgements.html
@@ -7705,6 +8017,8 @@ share/doc/boost/libs/test/doc/img/post_build_event.jpg
 share/doc/boost/libs/test/doc/img/post_build_out.jpg
 share/doc/boost/libs/test/doc/img/run_args.jpg
 share/doc/boost/libs/test/doc/js/boost-test.js
+share/doc/boost/libs/test/doc/src/UTF.log.xsd
+share/doc/boost/libs/test/doc/src/UTF.report.xsd
 share/doc/boost/libs/test/doc/src/examples/example.sln
 share/doc/boost/libs/test/doc/src/examples/example.vcproj
 share/doc/boost/libs/test/doc/src/examples/example01.cpp
@@ -7832,6 +8146,12 @@ share/doc/boost/libs/test/doc/style/btl-paragraphs.css
 share/doc/boost/libs/test/doc/style/btl-structure.css
 share/doc/boost/libs/test/doc/style/btl-tables.css
 share/doc/boost/libs/test/doc/style/style.css
+share/doc/boost/libs/test/docbook/img/boost.test.logo.png
+share/doc/boost/libs/test/docbook/img/class-hier.jpg
+share/doc/boost/libs/test/docbook/img/level.png
+share/doc/boost/libs/test/docbook/img/post_build_event.jpg
+share/doc/boost/libs/test/docbook/img/post_build_out.jpg
+share/doc/boost/libs/test/docbook/img/run_args.jpg
 share/doc/boost/libs/test/example/Jamfile.v2
 share/doc/boost/libs/test/example/cla/Jamfile
 share/doc/boost/libs/test/example/cla/assign_to.cpp
@@ -7875,6 +8195,8 @@ share/doc/boost/libs/test/example/cla/validation/required_missing.cpp
 share/doc/boost/libs/test/example/cla/validation/unexpected_input.cpp
 share/doc/boost/libs/test/example/cla/validation/unexpected_repetition.cpp
 share/doc/boost/libs/test/example/cla/wide_string.cpp
+share/doc/boost/libs/test/example/const_string.hpp
+share/doc/boost/libs/test/example/const_string_test.cpp
 share/doc/boost/libs/test/example/env/Jamfile
 share/doc/boost/libs/test/example/env/custom_interpreter_env.cpp
 share/doc/boost/libs/test/example/env/env_var_default_value.cpp
@@ -7892,6 +8214,8 @@ share/doc/boost/libs/test/example/named_param_example.cpp
 share/doc/boost/libs/test/example/prg_exec_example.cpp
 share/doc/boost/libs/test/example/test_case_template_example.cpp
 share/doc/boost/libs/test/example/unit_test_example_01.cpp
+share/doc/boost/libs/test/example/unit_test_example_011.cpp
+share/doc/boost/libs/test/example/unit_test_example_012.cpp
 share/doc/boost/libs/test/example/unit_test_example_02.cpp
 share/doc/boost/libs/test/example/unit_test_example_03.cpp
 share/doc/boost/libs/test/example/unit_test_example_04.cpp
@@ -7906,6 +8230,8 @@ share/doc/boost/libs/test/example/unit_test_example_11.cpp
 share/doc/boost/libs/test/example/unit_test_example_12.cpp
 share/doc/boost/libs/test/example/unit_test_example_12.input
 share/doc/boost/libs/test/index.html
+share/doc/boost/libs/test/module.cmake
+share/doc/boost/libs/test/src/CMakeLists.txt
 share/doc/boost/libs/test/src/compiler_log_formatter.cpp
 share/doc/boost/libs/test/src/cpp_main.cpp
 share/doc/boost/libs/test/src/debug.cpp
@@ -7927,7 +8253,9 @@ share/doc/boost/libs/test/src/unit_test_parameters.cpp
 share/doc/boost/libs/test/src/unit_test_suite.cpp
 share/doc/boost/libs/test/src/xml_log_formatter.cpp
 share/doc/boost/libs/test/src/xml_report_formatter.cpp
+share/doc/boost/libs/test/tools/console_test_runner/Jamfile.v2
 share/doc/boost/libs/test/tools/console_test_runner/src/console_test_runner.cpp
+share/doc/boost/libs/thread/CMakeLists.txt
 share/doc/boost/libs/thread/doc/Jamfile.v2
 share/doc/boost/libs/thread/doc/acknowledgements.qbk
 share/doc/boost/libs/thread/doc/barrier.qbk
@@ -7956,6 +8284,8 @@ share/doc/boost/libs/thread/example/thread_group.cpp
 share/doc/boost/libs/thread/example/tss.cpp
 share/doc/boost/libs/thread/example/xtime.cpp
 share/doc/boost/libs/thread/index.html
+share/doc/boost/libs/thread/module.cmake
+share/doc/boost/libs/thread/src/CMakeLists.txt
 share/doc/boost/libs/thread/src/pthread/exceptions.cpp
 share/doc/boost/libs/thread/src/pthread/once.cpp
 share/doc/boost/libs/thread/src/pthread/thread.cpp
@@ -7977,34 +8307,36 @@ share/doc/boost/libs/thread/tutorial/helloworld3.cpp
 share/doc/boost/libs/thread/tutorial/helloworld4.cpp
 share/doc/boost/libs/thread/tutorial/once.cpp
 share/doc/boost/libs/thread/tutorial/tss.cpp
+share/doc/boost/libs/timer/CMakeLists.txt
 share/doc/boost/libs/timer/index.html
+share/doc/boost/libs/timer/module.cmake
 share/doc/boost/libs/timer/timer.htm
-share/doc/boost/libs/timer/timer_test.cpp
+share/doc/boost/libs/tokenizer/CMakeLists.txt
 share/doc/boost/libs/tokenizer/char_delimiters_separator.htm
 share/doc/boost/libs/tokenizer/char_sep_example_1.cpp
 share/doc/boost/libs/tokenizer/char_sep_example_2.cpp
 share/doc/boost/libs/tokenizer/char_sep_example_3.cpp
 share/doc/boost/libs/tokenizer/char_separator.htm
 share/doc/boost/libs/tokenizer/escaped_list_separator.htm
-share/doc/boost/libs/tokenizer/examples.cpp
 share/doc/boost/libs/tokenizer/index.html
 share/doc/boost/libs/tokenizer/introduc.htm
+share/doc/boost/libs/tokenizer/module.cmake
 share/doc/boost/libs/tokenizer/offset_separator.htm
-share/doc/boost/libs/tokenizer/simple_example_1.cpp
-share/doc/boost/libs/tokenizer/simple_example_2.cpp
-share/doc/boost/libs/tokenizer/simple_example_3.cpp
-share/doc/boost/libs/tokenizer/simple_example_4.cpp
-share/doc/boost/libs/tokenizer/simple_example_5.cpp
 share/doc/boost/libs/tokenizer/token_iterator.htm
 share/doc/boost/libs/tokenizer/tokenizer.htm
 share/doc/boost/libs/tokenizer/tokenizerfunction.htm
+share/doc/boost/libs/tr1/CMakeLists.txt
 share/doc/boost/libs/tr1/doc/Jamfile.v2
 share/doc/boost/libs/tr1/doc/tr1.qbk
 share/doc/boost/libs/tr1/index.html
+share/doc/boost/libs/tr1/module.cmake
+share/doc/boost/libs/tuple/CMakeLists.txt
 share/doc/boost/libs/tuple/doc/design_decisions_rationale.html
 share/doc/boost/libs/tuple/doc/tuple_advanced_interface.html
 share/doc/boost/libs/tuple/doc/tuple_users_guide.html
 share/doc/boost/libs/tuple/index.html
+share/doc/boost/libs/tuple/module.cmake
+share/doc/boost/libs/type_traits/CMakeLists.txt
 share/doc/boost/libs/type_traits/cxx_type_traits.htm
 share/doc/boost/libs/type_traits/doc/Jamfile.v2
 share/doc/boost/libs/type_traits/doc/add_const.qbk
@@ -8177,30 +8509,19 @@ share/doc/boost/libs/type_traits/examples/fill_example.cpp
 share/doc/boost/libs/type_traits/examples/iter_swap_example.cpp
 share/doc/boost/libs/type_traits/examples/trivial_destructor_example.cpp
 share/doc/boost/libs/type_traits/index.html
+share/doc/boost/libs/type_traits/module.cmake
 share/doc/boost/libs/type_traits/tools/specialisations.cpp
+share/doc/boost/libs/typeof/CMakeLists.txt
 share/doc/boost/libs/typeof/doc/Jamfile.v2
 share/doc/boost/libs/typeof/doc/typeof.qbk
 share/doc/boost/libs/typeof/index.html
+share/doc/boost/libs/typeof/module.cmake
 share/doc/boost/libs/typeof/tools/preprocess.pl
+share/doc/boost/libs/units/CMakeLists.txt
 share/doc/boost/libs/units/boost.css
+share/doc/boost/libs/units/doc/CMakeLists.txt
 share/doc/boost/libs/units/doc/Jamfile.v2
-share/doc/boost/libs/units/doc/abstract_reference.xml
-share/doc/boost/libs/units/doc/angle_base_units_reference.xml
-share/doc/boost/libs/units/doc/astronomical_base_units_reference.xml
-share/doc/boost/libs/units/doc/base_units.qbk
-share/doc/boost/libs/units/doc/cgs_base_units_reference.xml
-share/doc/boost/libs/units/doc/cgs_reference.xml
-share/doc/boost/libs/units/doc/dimensions_reference.xml
-share/doc/boost/libs/units/doc/imperial_base_units_reference.xml
-share/doc/boost/libs/units/doc/metric_base_units_reference.xml
-share/doc/boost/libs/units/doc/si_base_units_reference.xml
-share/doc/boost/libs/units/doc/si_reference.xml
-share/doc/boost/libs/units/doc/temperature_base_units_reference.xml
-share/doc/boost/libs/units/doc/temperature_reference.xml
-share/doc/boost/libs/units/doc/trig_reference.xml
 share/doc/boost/libs/units/doc/units.qbk
-share/doc/boost/libs/units/doc/units_reference.xml
-share/doc/boost/libs/units/doc/us_base_units_reference.xml
 share/doc/boost/libs/units/example/Jamfile.v2
 share/doc/boost/libs/units/example/complex.cpp
 share/doc/boost/libs/units/example/composite_output.cpp
@@ -8241,10 +8562,12 @@ share/doc/boost/libs/units/images/form_7.png
 share/doc/boost/libs/units/images/form_8.png
 share/doc/boost/libs/units/images/form_9.png
 share/doc/boost/libs/units/index.html
+share/doc/boost/libs/units/module.cmake
 share/doc/boost/libs/units/test_headers/Jamfile.v2
 share/doc/boost/libs/units/test_headers/main.cpp
 share/doc/boost/libs/units/test_headers/test.cpp
 share/doc/boost/libs/units/tutorial/tutorial_1.cpp
+share/doc/boost/libs/unordered/CMakeLists.txt
 share/doc/boost/libs/unordered/doc/Jamfile.v2
 share/doc/boost/libs/unordered/doc/bibliography.xml
 share/doc/boost/libs/unordered/doc/buckets.qbk
@@ -8265,7 +8588,9 @@ share/doc/boost/libs/unordered/examples/case_insensitive.hpp
 share/doc/boost/libs/unordered/examples/case_insensitive_test.cpp
 share/doc/boost/libs/unordered/examples/fnv1.hpp
 share/doc/boost/libs/unordered/index.html
+share/doc/boost/libs/unordered/module.cmake
 share/doc/boost/libs/utility/Assignable.html
+share/doc/boost/libs/utility/CMakeLists.txt
 share/doc/boost/libs/utility/Collection.html
 share/doc/boost/libs/utility/CopyConstructible.html
 share/doc/boost/libs/utility/LessThanComparable.html
@@ -8277,6 +8602,7 @@ share/doc/boost/libs/utility/assert_test.cpp
 share/doc/boost/libs/utility/base_from_member.html
 share/doc/boost/libs/utility/base_from_member_test.cpp
 share/doc/boost/libs/utility/binary_search_test.cpp
+share/doc/boost/libs/utility/binary_test.cpp
 share/doc/boost/libs/utility/call_traits.htm
 share/doc/boost/libs/utility/call_traits_test.cpp
 share/doc/boost/libs/utility/checked_delete.html
@@ -8291,6 +8617,7 @@ share/doc/boost/libs/utility/in_place_factories.html
 share/doc/boost/libs/utility/index.html
 share/doc/boost/libs/utility/iterator_adaptors.htm
 share/doc/boost/libs/utility/iterators_test.cpp
+share/doc/boost/libs/utility/module.cmake
 share/doc/boost/libs/utility/noncopyable_test.cpp
 share/doc/boost/libs/utility/numeric_traits_test.cpp
 share/doc/boost/libs/utility/operators.htm
@@ -8303,6 +8630,7 @@ share/doc/boost/libs/utility/shared_iterator_example2.cpp
 share/doc/boost/libs/utility/shared_iterator_example3.cpp
 share/doc/boost/libs/utility/shared_iterator_test.cpp
 share/doc/boost/libs/utility/sublibs
+share/doc/boost/libs/utility/swap.html
 share/doc/boost/libs/utility/throw_exception.html
 share/doc/boost/libs/utility/utility.htm
 share/doc/boost/libs/utility/value_init.htm
@@ -8311,6 +8639,7 @@ share/doc/boost/libs/utility/value_init_test_fail1.cpp
 share/doc/boost/libs/utility/value_init_test_fail2.cpp
 share/doc/boost/libs/utility/value_init_test_fail3.cpp
 share/doc/boost/libs/utility/verify_test.cpp
+share/doc/boost/libs/variant/CMakeLists.txt
 share/doc/boost/libs/variant/doc/Jamfile.v2
 share/doc/boost/libs/variant/doc/biblio.xml
 share/doc/boost/libs/variant/doc/design.xml
@@ -8332,8 +8661,11 @@ share/doc/boost/libs/variant/doc/tutorial/basic.xml
 share/doc/boost/libs/variant/doc/tutorial/tutorial.xml
 share/doc/boost/libs/variant/doc/variant.xml
 share/doc/boost/libs/variant/index.html
+share/doc/boost/libs/variant/module.cmake
+share/doc/boost/libs/wave/CMakeLists.txt
 share/doc/boost/libs/wave/ChangeLog
 share/doc/boost/libs/wave/doc/acknowledgements.html
+share/doc/boost/libs/wave/doc/class_ref_ctxpolicy_depr.html
 share/doc/boost/libs/wave/doc/class_reference_context.html
 share/doc/boost/libs/wave/doc/class_reference_ctxpolicy.html
 share/doc/boost/libs/wave/doc/class_reference_filepos.html
@@ -8364,6 +8696,7 @@ share/doc/boost/libs/wave/doc/token_ids.html
 share/doc/boost/libs/wave/doc/tracing_facility.html
 share/doc/boost/libs/wave/doc/wave_driver.html
 share/doc/boost/libs/wave/index.html
+share/doc/boost/libs/wave/module.cmake
 share/doc/boost/libs/wave/samples/Jamfile.v2
 share/doc/boost/libs/wave/samples/advanced_hooks/advanced_hooks.cpp
 share/doc/boost/libs/wave/samples/advanced_hooks/advanced_hooks.hpp
@@ -8437,6 +8770,7 @@ share/doc/boost/libs/wave/samples/waveidl/instantiate_defined_grammar.cpp
 share/doc/boost/libs/wave/samples/waveidl/instantiate_predef_macros.cpp
 share/doc/boost/libs/wave/samples/waveidl/instantiate_re2c_lexer.cpp
 share/doc/boost/libs/wave/samples/waveidl/instantiate_re2c_lexer_str.cpp
+share/doc/boost/libs/wave/src/CMakeLists.txt
 share/doc/boost/libs/wave/src/cpplexer/re2clex/aq.cpp
 share/doc/boost/libs/wave/src/cpplexer/re2clex/cpp.re
 share/doc/boost/libs/wave/src/cpplexer/re2clex/cpp_re.cpp
@@ -8452,10 +8786,10 @@ share/doc/boost/libs/wave/src/instantiate_re2c_lexer.cpp
 share/doc/boost/libs/wave/src/instantiate_re2c_lexer_str.cpp
 share/doc/boost/libs/wave/src/token_ids.cpp
 share/doc/boost/libs/wave/src/wave_config_constant.cpp
+share/doc/boost/libs/xpressive/CMakeLists.txt
 share/doc/boost/libs/xpressive/doc/Jamfile.v2
 share/doc/boost/libs/xpressive/doc/acknowledgements.qbk
 share/doc/boost/libs/xpressive/doc/actions.qbk
-share/doc/boost/libs/xpressive/doc/autodoc.xml
 share/doc/boost/libs/xpressive/doc/concepts.qbk
 share/doc/boost/libs/xpressive/doc/dynamic_regexes.qbk
 share/doc/boost/libs/xpressive/doc/examples.qbk
@@ -8483,6 +8817,7 @@ share/doc/boost/libs/xpressive/example/example.vcproj
 share/doc/boost/libs/xpressive/example/main.cpp
 share/doc/boost/libs/xpressive/example/numbers.cpp
 share/doc/boost/libs/xpressive/index.html
+share/doc/boost/libs/xpressive/module.cmake
 share/doc/boost/libs/xpressive/perf/Jamfile.v2
 share/doc/boost/libs/xpressive/perf/command_line.cpp
 share/doc/boost/libs/xpressive/perf/gcc/long_twain_search.xml
@@ -8496,69 +8831,6 @@ share/doc/boost/libs/xpressive/perf/regex_comparison.hpp
 share/doc/boost/libs/xpressive/perf/time_boost.cpp
 share/doc/boost/libs/xpressive/perf/time_dynamic_xpressive.cpp
 share/doc/boost/libs/xpressive/perf/time_static_xpressive.cpp
-share/doc/boost/libs/xpressive/proto/doc/CallableTransform.xml
-share/doc/boost/libs/xpressive/proto/doc/Jamfile.v2
-share/doc/boost/libs/xpressive/proto/doc/acknowledgements.qbk
-share/doc/boost/libs/xpressive/proto/doc/calculator.qbk
-share/doc/boost/libs/xpressive/proto/doc/concepts/PolymorphicFunctionObject.xml
-share/doc/boost/libs/xpressive/proto/doc/concepts/PrimitiveTransform.xml
-share/doc/boost/libs/xpressive/proto/doc/concepts/Transform.xml
-share/doc/boost/libs/xpressive/proto/doc/construction.qbk
-share/doc/boost/libs/xpressive/proto/doc/evaluation.qbk
-share/doc/boost/libs/xpressive/proto/doc/examples.qbk
-share/doc/boost/libs/xpressive/proto/doc/extensibility.qbk
-share/doc/boost/libs/xpressive/proto/doc/grammars.qbk
-share/doc/boost/libs/xpressive/proto/doc/history.qbk
-share/doc/boost/libs/xpressive/proto/doc/html/boostbook.css
-share/doc/boost/libs/xpressive/proto/doc/html/images/alert.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/1.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/10.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/11.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/12.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/13.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/14.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/15.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/2.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/3.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/4.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/5.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/6.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/7.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/8.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/callouts/9.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/caution.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/home.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/important.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/next.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/note.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/prev.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/smiley.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/tip.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/up.png
-share/doc/boost/libs/xpressive/proto/doc/html/images/warning.png
-share/doc/boost/libs/xpressive/proto/doc/implementation.qbk
-share/doc/boost/libs/xpressive/proto/doc/installation.qbk
-share/doc/boost/libs/xpressive/proto/doc/preface.qbk
-share/doc/boost/libs/xpressive/proto/doc/proto.qbk
-share/doc/boost/libs/xpressive/proto/doc/proto.xml
-share/doc/boost/libs/xpressive/proto/doc/protodoc.xml
-share/doc/boost/libs/xpressive/proto/doc/quick_start.qbk
-share/doc/boost/libs/xpressive/proto/doc/rationale.qbk
-share/doc/boost/libs/xpressive/proto/doc/transforms.qbk
-share/doc/boost/libs/xpressive/proto/example/Jamfile.v2
-share/doc/boost/libs/xpressive/proto/example/calc1.cpp
-share/doc/boost/libs/xpressive/proto/example/calc2.cpp
-share/doc/boost/libs/xpressive/proto/example/calc3.cpp
-share/doc/boost/libs/xpressive/proto/example/futures.cpp
-share/doc/boost/libs/xpressive/proto/example/hello.cpp
-share/doc/boost/libs/xpressive/proto/example/lambda.cpp
-share/doc/boost/libs/xpressive/proto/example/lazy_vector.cpp
-share/doc/boost/libs/xpressive/proto/example/map_assign.cpp
-share/doc/boost/libs/xpressive/proto/example/mixed.cpp
-share/doc/boost/libs/xpressive/proto/example/rgb.cpp
-share/doc/boost/libs/xpressive/proto/example/tarray.cpp
-share/doc/boost/libs/xpressive/proto/example/vec3.cpp
-share/doc/boost/libs/xpressive/proto/example/vector.cpp
 share/doc/boost/libs/xpressive/tools/Jamfile.v2
 share/doc/boost/libs/xpressive/tools/perl2xpr.cpp
 share/doc/boost/more/BoostSponsorshipAgreement.pdf
@@ -8610,13 +8882,6 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/more/getting_started
 @dirrm share/doc/boost/more
 @dirrm share/doc/boost/libs/xpressive/tools
-@dirrm share/doc/boost/libs/xpressive/proto/example
-@dirrm share/doc/boost/libs/xpressive/proto/doc/html/images/callouts
-@dirrm share/doc/boost/libs/xpressive/proto/doc/html/images
-@dirrm share/doc/boost/libs/xpressive/proto/doc/html
-@dirrm share/doc/boost/libs/xpressive/proto/doc/concepts
-@dirrm share/doc/boost/libs/xpressive/proto/doc
-@dirrm share/doc/boost/libs/xpressive/proto
 @dirrm share/doc/boost/libs/xpressive/perf/msvc
 @dirrm share/doc/boost/libs/xpressive/perf/gcc
 @dirrm share/doc/boost/libs/xpressive/perf
@@ -8648,6 +8913,9 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/variant/doc/reference
 @dirrm share/doc/boost/libs/variant/doc
 @dirrm share/doc/boost/libs/variant
+@exec ${MKDIR} %D/share/doc/boost/libs/utility/swap
+@dirrm share/doc/boost/libs/utility/swap
+@exec ${MKDIR} %D/share/doc/boost/libs/utility/enable_if
 @dirrm share/doc/boost/libs/utility/enable_if
 @dirrm share/doc/boost/libs/utility
 @dirrm share/doc/boost/libs/unordered/examples
@@ -8696,6 +8964,8 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/test/example/cla/validation
 @dirrm share/doc/boost/libs/test/example/cla
 @dirrm share/doc/boost/libs/test/example
+@dirrm share/doc/boost/libs/test/docbook/img
+@dirrm share/doc/boost/libs/test/docbook
 @dirrm share/doc/boost/libs/test/doc/style
 @dirrm share/doc/boost/libs/test/doc/src/examples
 @dirrm share/doc/boost/libs/test/doc/src
@@ -8803,6 +9073,11 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/serialization/example
 @dirrm share/doc/boost/libs/serialization/doc
 @dirrm share/doc/boost/libs/serialization
+@dirrm share/doc/boost/libs/scope_exit/example
+@dirrm share/doc/boost/libs/scope_exit/doc/html/scope_exit
+@dirrm share/doc/boost/libs/scope_exit/doc/html
+@dirrm share/doc/boost/libs/scope_exit/doc
+@dirrm share/doc/boost/libs/scope_exit
 @dirrm share/doc/boost/libs/regex/tools/generate
 @dirrm share/doc/boost/libs/regex/tools
 @dirrm share/doc/boost/libs/regex/src
@@ -8857,6 +9132,13 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/python
 @dirrm share/doc/boost/libs/ptr_container/doc
 @dirrm share/doc/boost/libs/ptr_container
+@dirrm share/doc/boost/libs/proto/example
+@dirrm share/doc/boost/libs/proto/doc/reference/transform
+@dirrm share/doc/boost/libs/proto/doc/reference/context
+@dirrm share/doc/boost/libs/proto/doc/reference/concepts
+@dirrm share/doc/boost/libs/proto/doc/reference
+@dirrm share/doc/boost/libs/proto/doc
+@dirrm share/doc/boost/libs/proto
 @dirrm share/doc/boost/libs/property_map/doc
 @dirrm share/doc/boost/libs/property_map
 @dirrm share/doc/boost/libs/program_options/src
@@ -8942,6 +9224,7 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/mpl/preprocessed/include/msvc60
 @dirrm share/doc/boost/libs/mpl/preprocessed/include/gcc
 @dirrm share/doc/boost/libs/mpl/preprocessed/include/dmc
+@dirrm share/doc/boost/libs/mpl/preprocessed/include/bcc_pre590
 @dirrm share/doc/boost/libs/mpl/preprocessed/include/bcc551
 @dirrm share/doc/boost/libs/mpl/preprocessed/include/bcc
 @dirrm share/doc/boost/libs/mpl/preprocessed/include
@@ -9071,6 +9354,8 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/virtual_base
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/unordered_set
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/unordered_multiset
+@dirrm share/doc/boost/libs/intrusive/proj/vc7ide/treap_set
+@dirrm share/doc/boost/libs/intrusive/proj/vc7ide/treap_multiset
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/stateful_value_traits
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/splay_set
 @dirrm share/doc/boost/libs/intrusive/proj/vc7ide/splay_multiset
@@ -9196,6 +9481,11 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/format
 @dirrm share/doc/boost/libs/foreach/doc
 @dirrm share/doc/boost/libs/foreach
+@dirrm share/doc/boost/libs/flyweight/example
+@dirrm share/doc/boost/libs/flyweight/doc/tutorial
+@dirrm share/doc/boost/libs/flyweight/doc/reference
+@dirrm share/doc/boost/libs/flyweight/doc
+@dirrm share/doc/boost/libs/flyweight
 @dirrm share/doc/boost/libs/filesystem/src
 @dirrm share/doc/boost/libs/filesystem/example
 @dirrm share/doc/boost/libs/filesystem/doc
@@ -9257,6 +9547,7 @@ share/doc/boost/rst.css
 @dirrm share/doc/boost/libs/bimap
 @dirrm share/doc/boost/libs/assign/doc
 @dirrm share/doc/boost/libs/assign
+@dirrm share/doc/boost/libs/asio/example/windows
 @dirrm share/doc/boost/libs/asio/example/tutorial/timer5
 @dirrm share/doc/boost/libs/asio/example/tutorial/timer4
 @dirrm share/doc/boost/libs/asio/example/tutorial/timer3

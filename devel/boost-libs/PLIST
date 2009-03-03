@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/13 16:14:13 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/03/03 08:57:58 jmmv Exp $
 lib/libboost_date_time-mt-d.a
 lib/libboost_date_time-mt-d.so
 lib/libboost_date_time-mt.a
@@ -23,10 +23,10 @@ lib/libboost_math_c99f-mt-d.a
 lib/libboost_math_c99f-mt-d.so
 lib/libboost_math_c99f-mt.a
 lib/libboost_math_c99f-mt.so
-lib/libboost_math_c99l-mt-d.a
-lib/libboost_math_c99l-mt-d.so
-lib/libboost_math_c99l-mt.a
-lib/libboost_math_c99l-mt.so
+@comment lib/libboost_math_c99l-mt-d.a
+@comment lib/libboost_math_c99l-mt-d.so
+@comment lib/libboost_math_c99l-mt.a
+@comment lib/libboost_math_c99l-mt.so
 lib/libboost_math_tr1-mt-d.a
 lib/libboost_math_tr1-mt-d.so
 lib/libboost_math_tr1-mt.a
@@ -35,10 +35,10 @@ lib/libboost_math_tr1f-mt-d.a
 lib/libboost_math_tr1f-mt-d.so
 lib/libboost_math_tr1f-mt.a
 lib/libboost_math_tr1f-mt.so
-lib/libboost_math_tr1l-mt-d.a
-lib/libboost_math_tr1l-mt-d.so
-lib/libboost_math_tr1l-mt.a
-lib/libboost_math_tr1l-mt.so
+@comment lib/libboost_math_tr1l-mt-d.a
+@comment lib/libboost_math_tr1l-mt-d.so
+@comment lib/libboost_math_tr1l-mt.a
+@comment lib/libboost_math_tr1l-mt.so
 lib/libboost_prg_exec_monitor-mt-d.a
 lib/libboost_prg_exec_monitor-mt-d.so
 lib/libboost_prg_exec_monitor-mt.a
