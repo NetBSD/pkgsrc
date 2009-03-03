@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:25 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/03 08:58:23 rillig Exp $
 #
 
-VERSION=	3.1.1
-DISTNAME=	splint-${VERSION}.src
-PKGNAME=	splint-${VERSION}
-PKGREVISION=	1
+DISTNAME=	splint-3.1.2
+VERSION=	3.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.splint.org/downloads/
-EXTRACT_SUFX= .tgz
+DISTFILES=	${DISTNAME}.src.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lclint.cs.virginia.edu/
 COMMENT=	Statically check C programs
 
-WRKSRC=		${WRKDIR}/splint-${VERSION}
 USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	YES
 
