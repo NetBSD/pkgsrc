@@ -1,8 +1,6 @@
-$NetBSD: patch-ae,v 1.8 2006/01/03 08:03:53 recht Exp $
-
---- libgc/configure.orig	2005-12-22 18:35:37.000000000 +0100
-+++ libgc/configure
-@@ -3940,7 +3940,27 @@ _ACEOF
+--- libgc/configure.orig	2009-01-09 07:56:17 -0800
++++ libgc/configure	2009-03-03 15:25:59 -0800
+@@ -4604,7 +4604,27 @@
  _ACEOF
  
  	;;
@@ -30,4 +28,13 @@ $NetBSD: patch-ae,v 1.8 2006/01/03 08:03:53 recht Exp $
 +	*-*-aix*)
  	cat >>confdefs.h <<\_ACEOF
  #define GC_AIX_THREADS 1
+ _ACEOF
+@@ -4637,7 +4657,7 @@
+ 
+ 	THREADDLLIBS="-lpthread -lrt"
+ 	;;
+-      *-*-freebsd*)
++      *-*-freebsd* | *-*-*dragonfly*)
+ 	cat >>confdefs.h <<\_ACEOF
+ #define GC_FREEBSD_THREADS 1
  _ACEOF

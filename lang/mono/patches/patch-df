@@ -1,0 +1,11 @@
+--- support/mph.h.orig	2009-03-03 16:39:06 -0800
++++ support/mph.h	2009-03-03 16:39:21 -0800
+@@ -36,7 +36,7 @@
+ #include <stdint.h>             /* for SIZE_MAX */
+ #endif
+ 
+-#if __APPLE__ || __BSD__ || __FreeBSD__
++#if __APPLE__ || __BSD__ || __FreeBSD__ || __DragonFly__
+ #define MPH_ON_BSD
+ #endif
+ 
