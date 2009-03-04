@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.2 2008/10/30 02:44:23 minskim Exp $
+$NetBSD: patch-ab,v 1.3 2009/03/04 17:39:22 minskim Exp $
 
---- ../rake-0.8.3.gemspec.orig	2008-09-14 21:30:11.000000000 -0700
-+++ ../rake-0.8.3.gemspec
-@@ -115,7 +115,6 @@ files: 
+--- ../rake-0.8.4.gemspec.orig	2009-03-04 09:34:56.000000000 -0800
++++ ../rake-0.8.4.gemspec
+@@ -122,7 +122,6 @@ files: 
  - test/data/namespace/Rakefile
  - test/data/statusreturn/Rakefile
  - test/data/unittest/Rakefile
 -- test/data/unittest/subdir
+ - doc/command_line_usage.rdoc
  - doc/example
  - doc/example/a.c
- - doc/example/b.c
