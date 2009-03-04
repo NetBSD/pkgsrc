@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/02 16:02:58 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/04 11:27:52 wiz Exp $
 #
 
 DISTNAME=	multisync-gui-0.91.0
@@ -9,7 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/
 COMMENT=	GUI for libopensync
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_DIRS+=	xdg-1.1
+USE_TOOLS+=	pkg-config
 HAS_CONFIGURE=	yes
 
 REPLACE_PYTHON= waf
