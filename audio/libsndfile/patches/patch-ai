@@ -1,0 +1,18 @@
+$NetBSD: patch-ai,v 1.1.2.1 2009/03/04 23:17:09 tron Exp $
+
+Fix for CVE-2009-0186.
+
+--- src/caf.c.orig	2006-08-31 11:22:07.000000000 +0200
++++ src/caf.c
+@@ -282,6 +282,11 @@ caf_read_header (SF_PRIVATE *psf)
+ 			"  Frames / packet  : %u\n  Channels / frame : %u\n  Bits / channel   : %u\n",
+ 			desc.fmt_id, desc.fmt_flags, desc.pkt_bytes, desc.pkt_frames, desc.channels_per_frame, desc.bits_per_chan) ;
+ 
++	if (desc.channels_per_frame > 200)
++	{	psf_log_printf (psf, "**** Bad channels per frame value %u.\n", desc.channels_per_frame) ;
++		return SFE_MALFORMED_FILE ;
++		} ;
++
+ 	if (chunk_size > SIGNED_SIZEOF (DESC_CHUNK))
+ 		psf_binheader_readf (psf, "j", (int) (chunk_size - sizeof (DESC_CHUNK))) ;
+ 
