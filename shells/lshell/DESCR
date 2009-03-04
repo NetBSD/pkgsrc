@@ -1,0 +1,4 @@
+Limited Shell (lshell) provides a configurable shell per user. This is done
+quite simply using a configuration file. It becomes easy to restrict user's
+access to a limited set of commands, chosing to allow any command over SSH
+(e.g. SCP,SFTP,rsync,etc.).
