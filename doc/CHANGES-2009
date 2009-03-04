@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.867 2009/03/04 01:02:32 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.868 2009/03/04 02:12:10 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/subversion to 1.5.6nb1 [gdt 2009-03-03]
 	Updated devel/cpuflags to 1.39 [abs 2009-03-04]
 	Updated x11/libunique to 1.0.6 [jmcneill 2009-03-03]
+	Added www/libproxy version 0.2.3 [jmcneill 2009-03-03]
