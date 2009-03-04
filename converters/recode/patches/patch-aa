@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1 2009/03/04 08:44:13 yyamano Exp $
+
+--- lib/Makefile.in.orig	2001-01-22 10:14:14.000000000 -0800
++++ lib/Makefile.in
+@@ -108,14 +108,18 @@ AUTOMAKE_OPTIONS = gnits
+ 
+ noinst_LIBRARIES = libreco.a
+ noinst_HEADERS = error.h getopt.h gettext.h pathmax.h xstring.h
++.if ${OPSYS} == "Darwin"
++libreco_a_SOURCES = error.c xstrdup.c
++.else
+ libreco_a_SOURCES = error.c getopt.c getopt1.c xstrdup.c
++.endif
+ 
+ EXTRA_DIST = alloca.c gettext.c malloc.c realloc.c strtol.c strtoul.c
+ 
+ INCLUDES = -I.. -I$(srcdir)
+ 
+ libreco_a_LIBADD = @ALLOCA@ @LIBOBJS@
+-localedir = $(prefix)/share/locale
++localedir = /usr/pkg/share/locale
+ aliaspath = $(localedir):.
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = ../config.h
+@@ -128,7 +132,11 @@ CPPFLAGS = @CPPFLAGS@
+ LDFLAGS = @LDFLAGS@
+ LIBS = @LIBS@
+ libreco_a_DEPENDENCIES =  @ALLOCA@ @LIBOBJS@
++.if ${OPSYS} == "Darwin"
++libreco_a_OBJECTS =  error.o xstrdup.o
++.else
+ libreco_a_OBJECTS =  error.o getopt.o getopt1.o xstrdup.o
++.endif
+ AR = ar
+ CFLAGS = @CFLAGS@
+ COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+@@ -256,8 +264,10 @@ distdir: $(DISTFILES)
+ 	  fi; \
+ 	done
+ error.o: error.c ../config.h error.h
++.if ${OPSYS} != "Darwin"
+ getopt.o: getopt.c ../config.h
+ getopt1.o: getopt1.c ../config.h getopt.h
++.endif
+ xstrdup.o: xstrdup.c ../config.h
+ 
+ info-am:
