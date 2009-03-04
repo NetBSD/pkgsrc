@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/10/06 19:21:03 kleink Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/04 13:19:36 kleink Exp $
 #
 
-DISTNAME=		drraw-2.2b1
+DISTNAME=		drraw-2.2b2
 CATEGORIES=		databases graphics www
 MASTER_SITES=		http://web.taranis.org/drraw/dist/
 
