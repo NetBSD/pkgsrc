@@ -1,0 +1,12 @@
+--- libgc/include/private/gcconfig.h.orig	2009-03-03 14:22:28 -0800
++++ libgc/include/private/gcconfig.h	2009-03-03 14:24:56 -0800
+@@ -351,6 +351,9 @@
+ #   define OPENBSD
+ #   define mach_type_known
+ # endif
++# if defined(__DragonFly__)
++# define FREEBSD
++# endif
+ # if defined(FREEBSD) && (defined(i386) || defined(__i386__))
+ #   define I386
+ #   define mach_type_known
