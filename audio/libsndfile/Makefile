@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2008/07/24 22:39:30 obache Exp $
+# $NetBSD: Makefile,v 1.46.6.1 2009/03/04 23:17:09 tron Exp $
 
 DISTNAME=	libsndfile-1.0.17
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/
 
