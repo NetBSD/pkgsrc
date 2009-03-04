@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.865 2009/03/03 17:47:51 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.866 2009/03/04 00:33:22 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed devel/buildtool [jmmv 2009-03-03]
 	Removed devel/buildtool-doc [jmmv 2009-03-03]
 	Updated devel/subversion to 1.5.6nb1 [gdt 2009-03-03]
+	Updated devel/cpuflags to 1.39 [abs 2009-03-04]
