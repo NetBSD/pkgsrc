@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/18 00:32:14 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/04 01:01:45 jmcneill Exp $
 #
 
-DISTNAME=	unique-1.0.4
+DISTNAME=	unique-1.0.6
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.gnome.org/~ebassi/source/
