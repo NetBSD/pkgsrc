@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/19 22:39:01 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/04 17:49:04 ahoka Exp $
 bin/vbnc
 lib/mono/2.0/Microsoft.VisualBasic.dll
 lib/mono/2.0/vbnc.exe
@@ -6,4 +6,4 @@ lib/mono/2.0/vbnc.exe.mdb
 lib/mono/2.0/vbnc.rsp
 lib/mono/gac/Microsoft.VisualBasic/8.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualBasic.dll
 lib/mono/gac/Microsoft.VisualBasic/8.0.0.0__b03f5f7f11d50a3a/Microsoft.VisualBasic.dll.mdb
-share/man/man1/vbnc.1
+man/man1/vbnc.1
