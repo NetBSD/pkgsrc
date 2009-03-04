@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/13 06:58:01 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/04 17:01:39 minskim Exp $
 
 DISTNAME=	silgraphite-2.3
 PKGNAME=	${DISTNAME:S/silgraphite/silgraphite-ft/}
@@ -9,6 +9,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://silgraphite.sourceforge.net/
 COMMENT=	FreeType wrapper for SIL Graphite
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
@@ -16,11 +18,13 @@ USE_LANGUAGES=	c c++
 WRKSRC=		${WRKDIR}/${DISTNAME}/wrappers/freetype
 
 PKGCONFIG_OVERRIDE+=	silgraphite-ft.pc
+INSTALLATION_DIRS+=	lib/pkgconfig
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/silgraphite/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/silgraphite-ft.pc ${PREFIX}/lib/pkgconfig
+	${INSTALL_DATA} ${WRKSRC}/silgraphite-ft.pc \
+		${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../mk/bsd.pkg.mk"
