@@ -1,0 +1,23 @@
+--- mono/metadata/attach.c.orig	2009-03-03 15:32:27 -0800
++++ mono/metadata/attach.c	2009-03-03 15:48:41 -0800
+@@ -366,12 +366,20 @@ ipc_connect (void)
+ 	 */
+ 	/* FIXME: Use TMP ? */
+ 	pw = NULL;
++#ifndef HAVE_GETPWUID_R
++	pw = getpwuid(getuid());
++	if (pw == NULL) {
++		fprintf(stderr, "attach: getpwuid () failed.\n");
++		return;
++	}
++#else
+ 	res = getpwuid_r (getuid (), &pwbuf, buf, sizeof (buf), &pw);
+ 	if (res != 0) {
+ 		fprintf (stderr, "attach: getpwuid_r () failed.\n");
+ 		return;
+ 	}
+ 	g_assert (pw);
++#endif
+ 	directory = g_strdup_printf ("/tmp/mono-%s", pw->pw_name);
+ 	res = mkdir (directory, S_IRUSR | S_IWUSR | S_IXUSR);
+ 	if (res != 0) {
