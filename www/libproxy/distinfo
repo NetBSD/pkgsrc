@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
+
+SHA1 (libproxy-0.2.3.tar.gz) = 2b2b00a179740548035a1145bbae600db9b0a2ce
+RMD160 (libproxy-0.2.3.tar.gz) = c86c4f8403cb879380e101d074af469c960b5c1c
+Size (libproxy-0.2.3.tar.gz) = 378773 bytes
+SHA1 (patch-aa) = e27fd8a773fab0a7e0813b1a8acf6311b4fd012a
