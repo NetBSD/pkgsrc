@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/04 11:59:43 jmcneill Exp $
 #
 
 DISTNAME=	warzone2100-2.1.1
@@ -34,6 +34,8 @@ DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+BUILDLINK_API_DEPENDS.flex+=	flex>=2.5.35
+.include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
