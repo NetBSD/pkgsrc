@@ -1,0 +1,11 @@
+--- mono/mini/mini-x86.h.orig	2009-03-03 16:01:51 -0800
++++ mono/mini/mini-x86.h	2009-03-03 16:02:17 -0800
+@@ -194,7 +194,7 @@
+ 	#define UCONTEXT_REG_EIP(ctx) ((ctx)->uc_mcontext.gregs [REG_EIP])
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__APPLE__) || defined(__DragonFly__)
+ # define SC_EAX sc_eax
+ # define SC_EBX sc_ebx
+ # define SC_ECX sc_ecx
