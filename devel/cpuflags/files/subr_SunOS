@@ -1,4 +1,4 @@
-# $NetBSD: subr_SunOS,v 1.4 2009/01/28 23:30:50 abs Exp $
+# $NetBSD: subr_SunOS,v 1.5 2009/03/04 00:32:44 abs Exp $
 
 AWK=nawk
 SED=sed
@@ -15,7 +15,8 @@ END
 extract_hw_details()
     {
     hw_arch=$(/usr/bin/uname -m)
-    hw_psrinfo=$(psrinfo -pv | $AWK 'NR==3{print}') # Just gets the first CPU
+    # Just gets the first CPU
+    hw_psrinfo=$(psrinfo -pv | $AWK 'NR==3{sub(" *","");print}')
     }
 
 determine_arch()
