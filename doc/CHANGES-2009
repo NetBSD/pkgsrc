@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.869 2009/03/04 09:33:45 imil Exp $
+$NetBSD: CHANGES-2009,v 1.870 2009/03/04 13:20:50 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1180,3 +1180,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libunique to 1.0.6 [jmcneill 2009-03-03]
 	Added www/libproxy version 0.2.3 [jmcneill 2009-03-03]
 	Added shells/lshell version 0.2.6 [imil 2009-03-04]
+	Updated www/drraw to 2.2b2 [kleink 2009-03-04]
