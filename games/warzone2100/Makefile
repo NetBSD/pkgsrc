@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/04 11:59:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/04 12:00:18 jmcneill Exp $
 #
 
 DISTNAME=	warzone2100-2.1.1
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gsed gawk
+USE_TOOLS+=	pkg-config bison msgfmt intltool gmake gsed gawk flex
 TOOLS_PLATFORM.gsed=	#empty, override nonsense in tools
 
 CONFIGURE_ARGS+=	--with-distributor=pkgsrc
