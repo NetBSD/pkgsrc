@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2008/10/30 02:44:22 minskim Exp $
+$NetBSD: distinfo,v 1.11 2009/03/04 17:39:22 minskim Exp $
 
-SHA1 (rake-0.8.3.gem) = fc3060c6c3ea3b804ef95576e41706b92fd51243
-RMD160 (rake-0.8.3.gem) = 8a81f35787c814b427177b88c07f6d2410b799a9
-Size (rake-0.8.3.gem) = 100352 bytes
-SHA1 (patch-ab) = 21701d38f5026e8fb0a9d5102a6de4bedaa191c3
+SHA1 (rake-0.8.4.gem) = 3d0d287df69b38e4ba1efd567669df1d27809691
+RMD160 (rake-0.8.4.gem) = 30e20fce53051afe2e7b5f03018b65a8ea8af9ab
+Size (rake-0.8.4.gem) = 103936 bytes
+SHA1 (patch-ab) = 76dff28958394720ae5af267798423dbe0323d66
