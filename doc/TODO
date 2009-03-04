@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7877 2009/03/03 22:57:04 wiz Exp $
+$NetBSD: TODO,v 1.7878 2009/03/04 02:09:00 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -862,6 +862,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mew-6.2 [pkg/40808|as mew6?]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
+	o midori-0.1.4 [needs libsoup>=2.25.2 for persistent cookies]
 	o mimedefang-2.67
 	o minivmac-3.0.4
 	o mirmon-1.37
