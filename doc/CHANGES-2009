@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.871 2009/03/04 14:47:11 tron Exp $
+$NetBSD: CHANGES-2009,v 1.872 2009/03/04 16:59:49 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1182,3 +1182,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added shells/lshell version 0.2.6 [imil 2009-03-04]
 	Updated www/drraw to 2.2b2 [kleink 2009-03-04]
 	Updated www/curl to 7.19.4 [tron 2009-03-04]
+	Updated audio/libsndfile to 1.0.19 [tnn 2009-03-04]
