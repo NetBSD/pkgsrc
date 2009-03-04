@@ -1,4 +1,4 @@
-# $NetBSD: subr_x86,v 1.11 2009/02/02 17:09:46 abs Exp $
+# $NetBSD: subr_x86,v 1.12 2009/03/04 00:32:44 abs Exp $
 
 # Apparently the only way to reliably determine the architecture of a recent
 # Intel CPU is to use the cpu brand string - as they reused family and
@@ -29,13 +29,14 @@ map_x86_brand_string()
 	"VIA Nehemiah"*)			echo '-march=c3' ;;
 
 	"Genuine Intel(R) CPU           T2400"*) echo '-march=core2' ;;
+	"Genuine Intel(R) CPU           T2500"*) echo '-march=core2' ;;
 	"Intel(R) Atom(TM) CPU N270 "*)		echo '-march=prescott' ;;#So far
 	"Intel(R) Celeron(R) CPU        E1400"*) echo '-march=core2' ;;
 	"Intel(R) Celeron(R) CPU 2.40GHz")	echo '-march=pentium4' ;;
 	"Intel(R) Celeron(R) M processor "*)	echo '-march=pentium-m' ;;
 	"Intel(R) Celeron(TM) CPU                1400MHz") echo '-march=pentium3' ;;
-	"Intel(R) Core(TM)2 "*) 		echo '-march=core2' ;;
 	"Intel(R) Core 2 "*) 			echo '-march=core2' ;;
+	"Intel(R) Core(TM)2 "*) 		echo '-march=core2' ;;
 	"Intel(R) Pentium(R) 4 CPU"*)
 	    if [ -n "$cpu_feature_SSE3" ] ; then
 						echo '-march=prescott'
@@ -45,6 +46,8 @@ map_x86_brand_string()
 	"Intel(R) Pentium(R) M processor "*)	echo '-march=pentium-m' ;;
 	"Intel(R) Xeon(R) CPU            3040"*) echo '-march=core2' ;;
 	"Intel(R) Xeon(R) CPU            3050"*) echo '-march=core2' ;;
+	"Intel(R) Xeon(R) CPU           E5310"*) echo '-march=core2' ;;
+	"Intel(r) Xeon(r) CPU           E5430"*) echo '-march=core2' ;;
 	"Pentium(R) Dual-Core  CPU      E5200"*) echo '-march=core2' ;;
 
     esac
