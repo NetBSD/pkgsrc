@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/04 19:22:20 imil Exp $
+bin/puzzle-diff
+include/puzzle.h
+lib/libpuzzle.la
+man/man3/libpuzzle.3
+man/man3/puzzle_set.3
+man/man8/puzzle-diff.8
+share/doc/libpuzzle/AUTHORS
+share/doc/libpuzzle/COPYING
+share/doc/libpuzzle/NEWS
+share/doc/libpuzzle/README
+share/doc/libpuzzle/THANKS
+@dirrm share/doc/libpuzzle
