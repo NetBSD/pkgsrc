@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.872 2009/03/04 16:59:49 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.873 2009/03/04 17:40:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1183,3 +1183,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/drraw to 2.2b2 [kleink 2009-03-04]
 	Updated www/curl to 7.19.4 [tron 2009-03-04]
 	Updated audio/libsndfile to 1.0.19 [tnn 2009-03-04]
+	Updated devel/rake to 0.8.4 [minskim 2009-03-04]
