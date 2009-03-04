@@ -1,7 +1,6 @@
-$NetBSD: patch-ab,v 1.15 2008/11/19 11:17:49 kefren Exp $
---- configure.orig	2008-02-05 14:21:50.000000000 +0200
-+++ configure	2008-02-05 14:24:06.000000000 +0200
-@@ -2890,7 +2890,7 @@
+--- configure.orig	2009-01-09 07:56:07 -0800
++++ configure	2009-03-03 16:24:30 -0800
+@@ -2938,11 +2938,11 @@
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -10,4 +9,28 @@ $NetBSD: patch-ab,v 1.15 2008/11/19 11:17:49 kefren Exp $
  		libgc_threads=pthreads
  		with_sigaltstack=no
  		;;
- # these flags will work for all versions of -STABLE
+-	*-*-*freebsd*)
++	*-*-*freebsd* | *-*-*dragonfly*)
+ 		platform_win32=no
+ 		if test "x$PTHREAD_CFLAGS" = "x"; then
+ 			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
+@@ -32216,6 +32216,9 @@
+ /* end confdefs.h.  */
+ $ac_includes_default
+ #include <$ac_header>
++#ifdef __DragonFly__
++#error extattr
++#endif
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -32256,6 +32259,9 @@
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ #include <$ac_header>
++#ifdef __DragonFly__
++#error extattr
++#endif
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
