@@ -1,0 +1,10 @@
+Hebcal is a program which prints out the days in the Jewish calendar
+for a given gregorian year.  Hebcal is fairly flexible in terms of which
+events in the Jewish calendar it displays.  Each of the following can
+be individualy turned on or off:
+
+  The Hebrew date
+  Jewish Holdiays (including Yom Ha'atzmaut and Yom HaShoah etc.)
+  The weekly Sedrah
+  The day of the week
+  The days of the Omer
