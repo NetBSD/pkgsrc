@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 20:35:07 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 17:46:45 hasso Exp $
 #
 
 DISTNAME=	ghex-2.24.0
@@ -12,7 +12,7 @@ COMMENT=	Hex editor
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool msgfmt gmake
 USE_DIRS+=	xdg-1.1 gnome2-1.5
 
 PKGCONFIG_OVERRIDE+=	gtkhex.pc.in
