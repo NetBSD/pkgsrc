@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.345 2009/02/26 21:59:21 plunky Exp $
+# $NetBSD: Makefile,v 1.346 2009/03/05 20:37:25 hasso Exp $
 #
 
 COMMENT=	Security tools
@@ -53,6 +53,7 @@ SUBDIR+=	dropbear
 SUBDIR+=	dsniff
 SUBDIR+=	dsniff-nox11
 SUBDIR+=	egd
+SUBDIR+=	engine-pkcs11
 SUBDIR+=	flawfinder
 SUBDIR+=	fprint-demo
 SUBDIR+=	fprot-workstation-bin
@@ -104,6 +105,7 @@ SUBDIR+=	libksba
 SUBDIR+=	libksba04
 SUBDIR+=	libmcrypt
 SUBDIR+=	libnasl
+SUBDIR+=	libp11
 SUBDIR+=	libprelude
 SUBDIR+=	libpreludedb
 SUBDIR+=	libssh
