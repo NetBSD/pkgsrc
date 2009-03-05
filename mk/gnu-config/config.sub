@@ -226,7 +226,7 @@ case $os in
 	-psos*)
 		os=-psos
 		;;
-	-mint | -mint[0-9]*)
+	-freemint | -mint | -mint[0-9]*)
 		basic_machine=m68k-atari
 		os=-mint
 		;;
