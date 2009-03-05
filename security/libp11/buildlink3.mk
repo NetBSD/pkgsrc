@@ -1,0 +1,22 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/03/05 20:28:24 hasso Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+LIBP11_BUILDLINK3_MK:=	${LIBP11_BUILDLINK3_MK}+
+
+.if !empty(BUILDLINK_DEPTH:M+)
+BUILDLINK_DEPENDS+=	libp11
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibp11}
+BUILDLINK_PACKAGES+=	libp11
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libp11
+
+.if !empty(LIBP11_BUILDLINK3_MK:M+)
+BUILDLINK_API_DEPENDS.libp11+=	libp11>=0.2.4
+BUILDLINK_PKGSRCDIR.libp11?=	../../security/libp11
+.endif	# LIBP11_BUILDLINK3_MK
+
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
