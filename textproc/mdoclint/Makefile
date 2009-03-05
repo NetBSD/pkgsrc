@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/03/02 10:24:54 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/05 10:47:29 wiz Exp $
 
 DISTNAME=	mdoclint-1.1
 CATEGORIES=	textproc
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	wiz@NetBSD.org
+OWNER=		wiz@NetBSD.org
 #HOMEPAGE=	#
 COMMENT=	Tool for verifying man pages
 
