@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.889 2009/03/05 23:13:29 seb Exp $
+$NetBSD: CHANGES-2009,v 1.890 2009/03/05 23:26:31 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1219,3 +1219,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed multimedia/gstreamer0.8 [snj 2009-03-05]
 	Updated chat/msn-pecan to 0.0.18 [jmcneill 2009-03-05]
 	Updated math/p5-Math-Pari to 2.010801nb1 [seb 2009-03-05]
+	Updated net/dhcpcd to 4.99.14 [roy 2009-03-05]
