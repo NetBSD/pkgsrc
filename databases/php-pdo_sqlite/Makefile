@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:19 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/05 20:58:37 joerg Exp $
 
 PDO_DRIVER=		sqlite
 PDO_COMMENT=		SQLite v3
@@ -12,3 +12,6 @@ CONFIGURE_ARGS+=	--with-${PKGMODNAME}=shared,${BUILDLINK_PREFIX.sqlite3}
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
+
+.include "../../lang/php/ext.mk"
+.include "../../mk/bsd.pkg.mk"
