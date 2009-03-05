@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/05 18:51:27 joerg Exp $
 #
 
 DISTNAME=		IndexedCatalog-0.6.0
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYTHON_VERSIONS_ACCEPTED=	23
 
 PYDISTUTILSPKG=		yes
-PYBINMODULE=		yes
 
 .include "../../lang/python/extension.mk"
 .include "../../databases/py-ZODB/buildlink3.mk"
