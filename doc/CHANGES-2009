@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.882 2009/03/05 19:45:58 bouyer Exp $
+$NetBSD: CHANGES-2009,v 1.883 2009/03/05 20:37:25 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1193,3 +1193,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.7 [tron 2009-03-05]
 	Updated sysutils/duplicity to 0.5.10 [tnn 2009-03-05]
 	Updated sysutils/xentools3 to 3.1.4nb4 [bouyer 2009-03-05]
+	Added security/libp11 version 0.2.4 [hasso 2009-03-05]
+	Added security/engine_pkcs11 version 0.1.5 [hasso 2009-03-05]
