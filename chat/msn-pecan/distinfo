@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/12 13:36:35 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/03/05 22:48:07 jmcneill Exp $
 
-SHA1 (msn-pecan-0.0.17.tar.bz2) = 57509d178f9a8b1aa628ad4d11aa9fc111bf1c35
-RMD160 (msn-pecan-0.0.17.tar.bz2) = 230e13dbff8f9f786fcdf5f5f204d41d6c3d6da5
-Size (msn-pecan-0.0.17.tar.bz2) = 134172 bytes
+SHA1 (msn-pecan-0.0.18.tar.bz2) = 5a60d858a1256af06925797829a489fdd0126127
+RMD160 (msn-pecan-0.0.18.tar.bz2) = 017ab0d790a361c24d07056973bca2852dab39fe
+Size (msn-pecan-0.0.18.tar.bz2) = 176774 bytes
