@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.874 2009/03/04 19:29:37 imil Exp $
+$NetBSD: CHANGES-2009,v 1.875 2009/03/05 00:26:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1185,3 +1185,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libsndfile to 1.0.19 [tnn 2009-03-04]
 	Updated devel/rake to 0.8.4 [minskim 2009-03-04]
 	Added graphics/libpuzzle version 0.9 [imil 2009-03-04]
+	Added lang/openjdk7-bin version 20090129 [abs 2009-03-05]
