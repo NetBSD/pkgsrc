@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/10/06 01:04:29 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/05 18:51:33 joerg Exp $
 
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 
@@ -15,7 +15,6 @@ CFLAGS+=			-fPIC
 INSTALL_DIRS=			${WRKSRC}/python
 
 PY_PATCHPLIST=			YES
-PYBINMODULE=			YES
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

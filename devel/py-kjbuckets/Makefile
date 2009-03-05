@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/05 18:51:29 joerg Exp $
 #
 
 DISTNAME=	gadfly-1.0.0
@@ -18,7 +18,6 @@ EXTRACT_ELEMENTS+=	${DISTNAME}/doc/kjbuckets.txt
 WRKSRC=			${WRKDIR}/${DISTNAME}/kjbuckets
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 KJBDOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-kjbuckets

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/27 00:28:57 epg Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 18:51:28 joerg Exp $
 
 PKGNAME=	${PYPKGPREFIX}-sqlite3-0
 CATEGORIES=	databases python
@@ -13,7 +13,6 @@ USE_TOOLS+=		patch
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_sqlite
 
-PYBINMODULE=		yes
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED=25
 PY_SETUP_SUBST+= 	SQLITE_PREFIX=${BUILDLINK_PREFIX.sqlite3}

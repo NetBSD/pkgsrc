@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/25 17:16:40 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2009/03/05 18:51:29 joerg Exp $
 
 DISTNAME=	psyco-1.6-src
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-src//}
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-src//}
 PYDISTUTILSPKG=	YES
-PYBINMODULE=	YES
 PY_PATCHPLIST=	YES
 
 ONLY_FOR_PLATFORM=		*-*-i386

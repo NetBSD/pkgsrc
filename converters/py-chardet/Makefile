@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/16 19:26:00 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/05 18:51:27 joerg Exp $
 #
 
 DISTNAME=	chardet-1.0.1
@@ -14,7 +14,6 @@ COMMENT=	Character encoding auto-detection in Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

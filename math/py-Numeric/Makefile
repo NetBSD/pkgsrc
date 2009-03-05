@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2009/03/05 18:51:30 joerg Exp $
 
 DISTNAME=	Numeric-24.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Adds multidimensional numeric arrays to Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PYSETUP=	setup.py
 
 PLIST_VARS+=	blas

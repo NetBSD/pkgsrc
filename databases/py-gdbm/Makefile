@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/03/05 18:51:28 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-0
@@ -17,7 +17,6 @@ USE_TOOLS+=	patch
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/gdbmmodule.c
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 
 PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
