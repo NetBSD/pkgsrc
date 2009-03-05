@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/02 18:27:55 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/05 20:58:37 joerg Exp $
 
 PDO_DRIVER=		dblib
 PDO_COMMENT=		FreeTDS/Sybase/MS SQL
@@ -13,3 +13,6 @@ BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.63
 
 .include "../../databases/freetds/buildlink3.mk"
 .include "../../databases/php-pdo/buildlink3.mk"
+
+.include "../../lang/php/ext.mk"
+.include "../../mk/bsd.pkg.mk"
