@@ -42,6 +42,19 @@ vif = [ 'mac=00:16:3e:00:00:11, bridge=bridge0' ]
 disk = [ 'file:/home/domains/netbsd1,0x1,w' ]
 
 #----------------------------------------------------------------------------
+# exported PCI devices
+# these devices have to be attched to the pciback driver; use
+# pciback.hide=(bus:dev1.fun1)(bus:dev2.fun2)(...)
+# on the dom0's kernel command line to force attach of PCI devices to
+# pciback. bus and dev are 2-digit hex number, fun is a single digit
+# the domU needs to be built with
+# xpci* at xenbus ?
+# pci* at xpci ?
+# and the pci drivers to be used by the domU
+#
+# pci = [ 'bus:dev1.fun1', 'bus:dev2.fun2' ]
+
+#----------------------------------------------------------------------------
 # Boot parameters (e.g. -s, -a, ...)
 extra = ""
 
