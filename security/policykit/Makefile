@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/01/20 10:08:17 sketch Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/05 14:17:46 joerg Exp $
 #
 
 POLICYKIT_VER=		0.9
@@ -56,9 +56,7 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/PolicyKit.conf.NetBSD ${DESTDIR}${EGDIR}/PolicyKit.conf
 .endif
 
-.if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
-.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
