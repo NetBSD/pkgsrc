@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/03/05 18:51:27 joerg Exp $
 
 DISTNAME=	ChineseCodecs1.2.0
 PKGNAME=	${PYPKGPREFIX}-zhCodecs-1.2.0
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Python
 PYDISTUTILSPKG=	# defined
-PYBINMODULE=	# defined
 
 post-extract:
 	@${CHMOD} 711 ${WRKSRC}/chinesetw
