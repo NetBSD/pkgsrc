@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.887 2009/03/05 22:46:23 snj Exp $
+$NetBSD: CHANGES-2009,v 1.888 2009/03/05 22:48:38 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1217,3 +1217,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed multimedia/gst-plugins0.8-theora [snj 2009-03-05]
 	Removed multimedia/gst-plugins0.8-xvid [snj 2009-03-05]
 	Removed multimedia/gstreamer0.8 [snj 2009-03-05]
+	Updated chat/msn-pecan to 0.0.18 [jmcneill 2009-03-05]
