@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.878 2009/03/05 09:26:43 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.879 2009/03/05 12:57:21 imil Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1189,3 +1189,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/hebcal version 3.7 [smb 2009-03-04]
 	Updated wm/wmii to 3.6nb3 [ghen 2009-03-05]
 	Updated x11/dmenu to 3.9 [ghen 2009-03-05]
+	Added sysutils/ftwin version 0.8.2 [imil 2009-03-05]
