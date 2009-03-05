@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/05 20:30:52 hasso Exp $
+
+SHA1 (engine_pkcs11-0.1.5.tar.gz) = 189da9a9156c86df99d16567acbf141869f87729
+RMD160 (engine_pkcs11-0.1.5.tar.gz) = e1edcab5008cc0d524c904808de3344b9520700e
+Size (engine_pkcs11-0.1.5.tar.gz) = 355324 bytes
+SHA1 (patch-aa) = 996cdb0f077c923a2c2552ad03443e449b7c70fe
