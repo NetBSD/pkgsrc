@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/05 00:25:55 abs Exp $
+
+SHA1 (jdk1.7.0.20090129-i386-netbsd5.tar.gz) = 31a28c12c9fc98132605af49def618283f8b8e39
+RMD160 (jdk1.7.0.20090129-i386-netbsd5.tar.gz) = 734f95c55c277db57dc09e7fbd264eb188ebea70
+Size (jdk1.7.0.20090129-i386-netbsd5.tar.gz) = 62632565 bytes
