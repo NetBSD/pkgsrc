@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/05 20:28:24 hasso Exp $
+
+--- Makefile.in.orig	2009-03-05 21:27:02 +0200
++++ Makefile.in	2009-03-05 21:27:26 +0200
+@@ -232,8 +232,8 @@ EXTRA_DIST = svnignore
+ dist_noinst_DATA = COPYING bootstrap \
+ 	$(srcdir)/examples/Makefile $(srcdir)/examples/*.c $(srcdir)/examples/README
+ 
+-dist_doc_DATA = NEWS
+-SUBDIRS = src doc
++dist_doc_DATA =
++SUBDIRS = src
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
