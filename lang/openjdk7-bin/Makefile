@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 00:25:54 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 00:43:19 jmcneill Exp $
 #
 
 DISTNAME=	jdk1.7.0.20090129-i386-netbsd5
 PKGNAME=	${DISTNAME:C:-i386.*:::C:.*\.:openjdk7-bin-:}
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/java/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/java/
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/projects/bsd-port/
