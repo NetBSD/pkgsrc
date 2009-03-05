@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.883 2009/03/05 20:37:25 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.884 2009/03/05 21:50:46 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1195,3 +1195,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xentools3 to 3.1.4nb4 [bouyer 2009-03-05]
 	Added security/libp11 version 0.2.4 [hasso 2009-03-05]
 	Added security/engine_pkcs11 version 0.1.5 [hasso 2009-03-05]
+	Removed audio/tunesbrowser [snj 2009-03-05]
+	Removed audio/libopendaap [snj 2009-03-05]
