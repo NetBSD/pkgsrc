@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/05 21:59:43 ahoka Exp $
+include/gee-1.0/gee/arraylist.h
+include/gee-1.0/gee/collection.h
+include/gee-1.0/gee/hashmap.h
+include/gee-1.0/gee/hashset.h
+include/gee-1.0/gee/iterable.h
+include/gee-1.0/gee/iterator.h
+include/gee-1.0/gee/list.h
+include/gee-1.0/gee/map.h
+include/gee-1.0/gee/readonlycollection.h
+include/gee-1.0/gee/readonlylist.h
+include/gee-1.0/gee/readonlymap.h
+include/gee-1.0/gee/readonlyset.h
+include/gee-1.0/gee/set.h
+lib/libgee.la
+lib/pkgconfig/gee-1.0.pc
+share/vala/vapi/gee-1.0.vapi
+@dirrm include/gee-1.0/gee
+@dirrm include/gee-1.0
