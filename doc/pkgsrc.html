@@ -187,6 +187,7 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#creating.nvu">10.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
@@ -2234,6 +2235,53 @@ works.</p>
     <code class="literal">package-install</code> will ask again.</p>
 <p>With basic DESTDIR support, <strong class="userinput"><code>make
     clean</code></strong> needs to be run as root.</p>
+<p>Considering the <code class="filename">foo/bar</code> package,
+    DESTDIR full support can be tested using the following commands
+
+</p>
+<pre class="programlisting">
+<code class="prompt">$</code> id
+uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
+<code class="prompt">$</code> mkdir $HOME/packages
+<code class="prompt">$</code> cd $PKGSRCDIR/foo/bar
+</pre>
+<p>
+
+    Verify <code class="varname">DESTDIR</code> full support, no root privileges
+    should be needed
+
+</p>
+<pre class="programlisting">
+<code class="prompt">$</code> make USE_DESTDIR=full install
+</pre>
+<p>
+
+    Create a package without root privileges
+
+</p>
+<pre class="programlisting">
+<code class="prompt">$</code> make USE_DESTDIR=full PACKAGES=$HOME/packages package
+</pre>
+<p>
+
+    For the following command, you must be able to gain root
+    privileges using <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?su+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">su</span>(1)</span></a>
+
+</p>
+<pre class="programlisting">
+<code class="prompt">$</code> make USE_DESTDIR=full PACKAGES=$HOME/packages package-install
+</pre>
+<p>
+
+    Then, as a simple user
+
+</p>
+<pre class="programlisting">
+<code class="prompt">$</code> make clean
+</pre>
+<p>
+
+    </p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -3627,6 +3675,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#creating.nvu">10.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
@@ -3851,6 +3900,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dd><dl>
 <dt><span class="sect2"><a href="#creating.perl-module">10.1.1. Perl modules</a></span></dt>
 <dt><span class="sect2"><a href="#creating.kde-app">10.1.2. KDE applications</a></span></dt>
+<dt><span class="sect2"><a href="#creating.python-module">10.1.3. Python modules and programs</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#creating.examples">10.2. Examples</a></span></dt>
 <dd><dl><dt><span class="sect2"><a href="#creating.nvu">10.2.1. How the www/nvu package came into pkgsrc</a></span></dt></dl></dd>
@@ -3954,6 +4004,54 @@ package from the set of installed files.</p></li>
 <p>KDE applications should always include
 <code class="filename">meta-pkgs/kde3/kde3.mk</code>, which contains numerous
 settings that are typical of KDE packages.</p>
+</div>
+<div class="sect2" lang="en">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="creating.python-module"></a>10.1.3. Python modules and programs</h3></div></div></div>
+<p>Python modules and programs packages are easily created using a
+set of predefined variables.</p>
+<p>Most Python packages use either &#8220;<span class="quote">distutils</span>&#8221; or
+easy-setup (&#8220;<span class="quote">eggs</span>&#8221;).
+If the software uses &#8220;<span class="quote">distutils</span>&#8221;, set the
+<code class="varname">PYDISTUTILSPKG</code> variable to &#8220;<span class="quote">yes</span>&#8221; so
+pkgsrc will make use of this framework.
+&#8220;<span class="quote">distutils</span>&#8221; uses a script called <code class="filename">setup.py</code>,
+if the &#8220;<span class="quote">distutils</span>&#8221; driver is not called
+<code class="filename">setup.py</code>, set the <code class="varname">PYSETUP</code> variable
+to the name of the script.</p>
+<p>
+If the default Python versions are not supported by the software, set the
+<code class="varname">PYTHON_VERSIONS_ACCEPTED</code> variable to the Python versions
+the software is known to work with, from the most recent to the older
+one, e.g.
+</p>
+<pre class="programlisting">
+PYTHON_VERSIONS_ACCEPTED=       25 24 23
+</pre>
+<p>
+If the packaged software is a Python module, include
+&#8220;<span class="quote"><code class="filename">../../lang/python/extension.mk</code></span>&#8221;.
+In this case, the package directory should be called
+&#8220;<span class="quote">py-software</span>&#8221; and <code class="varname">PKGNAME</code> should be set to
+&#8220;<span class="quote">${PYPKGPREFIX}-${DISTNAME}</span>&#8221;, e.g.
+</p>
+<pre class="programlisting">
+DISTNAME=   foopymodule-1.2.10
+PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
+</pre>
+<p>If it is an application, also include
+&#8220;<span class="quote"><code class="filename">../../lang/python/application.mk</code></span>&#8221;
+before &#8220;<span class="quote">extension.mk</span>&#8221;.</p>
+<p>If the packaged software, either it is an application or a module, is
+egg-aware, you only need to include
+&#8220;<span class="quote"><code class="filename">../../lang/python/egg.mk</code></span>&#8221;.</p>
+<p>In order to correctly set the path to the Python interpreter, use the
+<code class="varname">REPLACE_PYTHON</code> variable and set it to the list of files
+that must be corrected. For example :
+</p>
+<pre class="programlisting">
+REPLACE_PYTHON=   ${WRKSRC}/*.py
+</pre>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -7536,7 +7634,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id9503691"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id52054999"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7546,7 +7644,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id9503700"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id52055008"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7557,7 +7655,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id9503708"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id52055016"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8823,10 +8921,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
       automatically. Many manual rules and pre/post-install often are
       incorrect; fix them.</p></li>
 <li><p>If files are installed with special owner/group
-      either use @owner/@group in the <code class="filename">PLIST</code>
-      (preferred) or use <code class="varname">SPECIAL_PERMS</code>
-      (discouraged). Note that @owner/@group are sticky during
-      install, keep this in mind.</p></li>
+      use <code class="varname">SPECIAL_PERMS</code>.</p></li>
 <li><p>In general, packages should support
       <code class="varname">UNPRIVILEGED</code> to be able to use
       DESTDIR.</p></li>
@@ -9571,7 +9666,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id9508238"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id52059900"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9587,7 +9682,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id9508273"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id52059936"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9605,7 +9700,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id9508309"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id52059974"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9623,7 +9718,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id9508344"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id52060009"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9636,7 +9731,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id9508362"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id52060097"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9652,7 +9747,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id9508389"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id52060122"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9676,7 +9771,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id9508456"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id52060325"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9701,7 +9796,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id9508487"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id52060359"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9749,7 +9844,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id9508541"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id52060413"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>

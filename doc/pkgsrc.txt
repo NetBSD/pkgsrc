@@ -167,6 +167,7 @@ II. The pkgsrc developer's guide
 
             10.1.1. Perl modules
             10.1.2. KDE applications
+            10.1.3. Python modules and programs
 
         10.2. Examples
 
@@ -1966,6 +1967,30 @@ will ask again.
 
 With basic DESTDIR support, make clean needs to be run as root.
 
+Considering the foo/bar package, DESTDIR full support can be tested using the
+following commands
+
+$ id
+uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
+$ mkdir $HOME/packages
+$ cd $PKGSRCDIR/foo/bar
+
+Verify DESTDIR full support, no root privileges should be needed
+
+$ make USE_DESTDIR=full install
+
+Create a package without root privileges
+
+$ make USE_DESTDIR=full PACKAGES=$HOME/packages package
+
+For the following command, you must be able to gain root privileges using su(1)
+
+$ make USE_DESTDIR=full PACKAGES=$HOME/packages package-install
+
+Then, as a simple user
+
+$ make clean
+
 5.4. Selecting and configuring the compiler
 
 5.4.1. Selecting the compiler
@@ -3192,6 +3217,7 @@ Table of Contents
 
         10.1.1. Perl modules
         10.1.2. KDE applications
+        10.1.3. Python modules and programs
 
     10.2. Examples
 
@@ -3418,6 +3444,7 @@ Table of Contents
 
     10.1.1. Perl modules
     10.1.2. KDE applications
+    10.1.3. Python modules and programs
 
 10.2. Examples
 
@@ -3509,6 +3536,42 @@ dependencies.
 
 KDE applications should always include meta-pkgs/kde3/kde3.mk, which contains
 numerous settings that are typical of KDE packages.
+
+10.1.3. Python modules and programs
+
+Python modules and programs packages are easily created using a set of
+predefined variables.
+
+Most Python packages use either "distutils" or easy-setup ("eggs"). If the
+software uses "distutils", set the PYDISTUTILSPKG variable to "yes" so pkgsrc
+will make use of this framework. "distutils" uses a script called setup.py, if
+the "distutils" driver is not called setup.py, set the PYSETUP variable to the
+name of the script.
+
+If the default Python versions are not supported by the software, set the
+PYTHON_VERSIONS_ACCEPTED variable to the Python versions the software is known
+to work with, from the most recent to the older one, e.g.
+
+PYTHON_VERSIONS_ACCEPTED=       25 24 23
+
+If the packaged software is a Python module, include "../../lang/python/
+extension.mk". In this case, the package directory should be called
+"py-software" and PKGNAME should be set to "${PYPKGPREFIX}-${DISTNAME}", e.g.
+
+DISTNAME=   foopymodule-1.2.10
+PKGNAME=    ${PYPKGPREFIX}-${DISTNAME}
+
+If it is an application, also include "../../lang/python/application.mk" before
+"extension.mk".
+
+If the packaged software, either it is an application or a module, is
+egg-aware, you only need to include "../../lang/python/egg.mk".
+
+In order to correctly set the path to the Python interpreter, use the
+REPLACE_PYTHON variable and set it to the list of files that must be corrected.
+For example :
+
+REPLACE_PYTHON=   ${WRKSRC}/*.py
 
 10.2. Examples
 
@@ -7426,9 +7489,7 @@ as root ("destdir") or the package can install as non-root user
   * automake gets this DESTDIR mostly right automatically. Many manual rules
     and pre/post-install often are incorrect; fix them.
 
-  * If files are installed with special owner/group either use @owner/@group in
-    the PLIST (preferred) or use SPECIAL_PERMS (discouraged). Note that @owner/
-    @group are sticky during install, keep this in mind.
+  * If files are installed with special owner/group use SPECIAL_PERMS.
 
   * In general, packages should support UNPRIVILEGED to be able to use DESTDIR.
 
