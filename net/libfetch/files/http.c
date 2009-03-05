@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.23 2009/03/05 15:14:14 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.24 2009/03/05 19:07:03 abs Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -63,8 +63,8 @@
  * SUCH DAMAGE.
  */
 
-#ifdef __linux__
-/* Keep this down to Linux, it can create surprises else where. */
+#if defined(__linux__) || defined(__MINT__)
+/* Keep this down to Linux or MiNT, it can create surprises elsewhere. */
 #define _GNU_SOURCE
 #endif
 
