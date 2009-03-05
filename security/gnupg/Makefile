@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2009/02/24 16:18:57 wiz Exp $
+# $NetBSD: Makefile,v 1.98 2009/03/05 10:46:23 wiz Exp $
 
 DISTNAME=	gnupg-1.4.9
 CATEGORIES=	security
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tar.bz2
 # don't remove this -- we may add idea.c.gz to it in options.mk
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
 
