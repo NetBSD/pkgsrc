@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.3 2008/05/27 19:34:30 adrianp Exp $
+# $NetBSD: Makefile.common,v 1.4 2009/03/05 23:35:12 adrianp Exp $
 #
 # used by net/isc-dhcp/Makefile
 # used by net/isc-dhcpd/Makefile
 # used by net/isc-dhclient/Makefile
 # used by net/isc-dhcrelay/Makefile
 
-DISTNAME=		dhcp-3.1.1
+DISTNAME=		dhcp-3.1.2
 PKGNAME=		${DISTNAME:S/dhcp/isc-dhcp-${COMPONENT}/}
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.isc.org/isc/dhcp/ \
