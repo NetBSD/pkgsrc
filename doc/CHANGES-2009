@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.892 2009/03/05 23:35:29 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.893 2009/03/05 23:35:51 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1221,3 +1221,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/p5-Math-Pari to 2.010801nb1 [seb 2009-03-05]
 	Added net/dhcpcd to 4.99.14 [roy 2009-03-05]
 	Updated net/isc-dhcp to 3.1.2 [adrianp 2009-03-05]
+	Updated net/isc-dhclient to 3.1.2 [adrianp 2009-03-05]
