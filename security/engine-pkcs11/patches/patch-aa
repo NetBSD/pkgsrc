@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/05 20:30:52 hasso Exp $
+
+--- Makefile.in.orig	2009-03-05 16:05:48 +0200
++++ Makefile.in	2009-03-05 16:24:01 +0200
+@@ -227,9 +227,9 @@ MAINTAINERCLEANFILES = \
+ 	$(srcdir)/packaged
+ 
+ EXTRA_DIST = svnignore
+-SUBDIRS = src doc
++SUBDIRS = src
+ dist_noinst_SCRIPTS = bootstrap
+-dist_doc_DATA = NEWS
++dist_doc_DATA =
+ all: config.h
+ 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
+ 
