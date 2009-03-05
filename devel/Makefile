@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1124 2009/03/03 14:57:09 jmmv Exp $
+# $NetBSD: Makefile,v 1.1125 2009/03/05 22:01:34 ahoka Exp $
 #
 
 COMMENT=	Development utilities
@@ -281,6 +281,7 @@ SUBDIR+=	libffi
 SUBDIR+=	libfirm
 SUBDIR+=	libgail-gnome
 SUBDIR+=	libgcroots
+SUBDIR+=	libgee
 SUBDIR+=	libgetopt
 SUBDIR+=	libglade
 SUBDIR+=	libglademm
