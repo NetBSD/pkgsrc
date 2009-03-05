@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.32 2009/01/28 23:31:39 abs Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.33 2009/03/05 13:08:02 imil Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -163,6 +163,45 @@ works.</para>
     <literal>package-install</literal> will ask again.</para>
     <para>With basic DESTDIR support, <userinput>make
     clean</userinput> needs to be run as root.</para>
+
+    <para>Considering the <filename>foo/bar</filename> package,
+    DESTDIR full support can be tested using the following commands
+
+<programlisting>
+&uprompt; id
+uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
+&uprompt; mkdir $HOME/packages
+&uprompt; cd $PKGSRCDIR/foo/bar
+</programlisting>
+
+    Verify <varname>DESTDIR</varname> full support, no root privileges
+    should be needed
+
+<programlisting>
+&uprompt; make USE_DESTDIR=full install
+</programlisting>
+
+    Create a package without root privileges
+
+<programlisting>
+&uprompt; make USE_DESTDIR=full PACKAGES=$HOME/packages package
+</programlisting>
+
+    For the following command, you must be able to gain root
+    privileges using &man.su.1;
+
+<programlisting>
+&uprompt; make USE_DESTDIR=full PACKAGES=$HOME/packages package-install
+</programlisting>
+
+    Then, as a simple user
+
+<programlisting>
+&uprompt; make clean
+</programlisting>
+
+    </para>
+
   </sect1>
 
 <sect1 id="conf.compiler">
