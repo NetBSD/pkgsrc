@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.406 2009/03/05 21:52:06 snj Exp $
+# $NetBSD: Makefile,v 1.407 2009/03/05 22:46:21 snj Exp $
 #
 
 COMMENT=	Audio tools
@@ -143,14 +143,6 @@ SUBDIR+=	gst-plugins0.10-spc
 SUBDIR+=	gst-plugins0.10-speex
 SUBDIR+=	gst-plugins0.10-vorbis
 SUBDIR+=	gst-plugins0.10-wavpack
-SUBDIR+=	gst-plugins0.8-artsd
-SUBDIR+=	gst-plugins0.8-cdparanoia
-SUBDIR+=	gst-plugins0.8-esound
-SUBDIR+=	gst-plugins0.8-faad
-SUBDIR+=	gst-plugins0.8-lame
-SUBDIR+=	gst-plugins0.8-mad
-SUBDIR+=	gst-plugins0.8-oss
-SUBDIR+=	gst-plugins0.8-vorbis
 SUBDIR+=	gtick
 SUBDIR+=	gtkmserv
 SUBDIR+=	gtkpod

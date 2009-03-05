@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.886 2009/03/05 22:08:45 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.887 2009/03/05 22:46:23 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1199,3 +1199,21 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed audio/libopendaap [snj 2009-03-05]
 	Added lang/vala version 0.5.7 [ahoka 2009-03-05]
 	Added devel/libgee version 0.1.5 [ahoka 2009-03-05]
+	Removed audio/gst-plugins0.8-artsd [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-cdparanoia [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-esound [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-faad [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-lame [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-mad [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-oss [snj 2009-03-05]
+	Removed audio/gst-plugins0.8-vorbis [snj 2009-03-05]
+	Removed graphics/gst-plugins-0.8-opengl [snj 2009-03-05]
+	Removed graphics/gst-plugins-0.8-png [snj 2009-03-05]
+	Removed multimedia/gst-plugins-0.8 [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-dvdnav [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-dvdread [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-mpeg2dec [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-ogg [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-theora [snj 2009-03-05]
+	Removed multimedia/gst-plugins0.8-xvid [snj 2009-03-05]
+	Removed multimedia/gstreamer0.8 [snj 2009-03-05]
