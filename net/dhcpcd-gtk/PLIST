@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/05 23:51:55 roy Exp $
+bin/dhcpcd-gtk
+share/gnome/autostart/dhcpcd-gtk.desktop
+@unexec ${RMDIR} %D/share/gnome/autostart 2>/dev/null || ${TRUE}
