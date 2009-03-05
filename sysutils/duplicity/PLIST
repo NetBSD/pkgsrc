@@ -1,18 +1,43 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/06 07:17:00 bjs Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/05 17:40:04 tnn Exp $
 bin/duplicity
 bin/rdiffdir
-man/man1/duplicity.1
-man/man1/rdiffdir.1
-share/doc/${PKGNAME}/CHANGELOG
-share/doc/${PKGNAME}/COPYING
-share/doc/${PKGNAME}/README
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
 ${PYSITELIB}/duplicity/_librsync.so
-${PYSITELIB}/duplicity/backends.py
-${PYSITELIB}/duplicity/backends.pyc
-${PYSITELIB}/duplicity/backends.pyo
+${PYSITELIB}/duplicity/asyncscheduler.py
+${PYSITELIB}/duplicity/asyncscheduler.pyc
+${PYSITELIB}/duplicity/asyncscheduler.pyo
+${PYSITELIB}/duplicity/backend.py
+${PYSITELIB}/duplicity/backend.pyc
+${PYSITELIB}/duplicity/backend.pyo
+${PYSITELIB}/duplicity/backends/__init__.py
+${PYSITELIB}/duplicity/backends/__init__.pyc
+${PYSITELIB}/duplicity/backends/__init__.pyo
+${PYSITELIB}/duplicity/backends/botobackend.py
+${PYSITELIB}/duplicity/backends/botobackend.pyc
+${PYSITELIB}/duplicity/backends/botobackend.pyo
+${PYSITELIB}/duplicity/backends/ftpbackend.py
+${PYSITELIB}/duplicity/backends/ftpbackend.pyc
+${PYSITELIB}/duplicity/backends/ftpbackend.pyo
+${PYSITELIB}/duplicity/backends/hsibackend.py
+${PYSITELIB}/duplicity/backends/hsibackend.pyc
+${PYSITELIB}/duplicity/backends/hsibackend.pyo
+${PYSITELIB}/duplicity/backends/imapbackend.py
+${PYSITELIB}/duplicity/backends/imapbackend.pyc
+${PYSITELIB}/duplicity/backends/imapbackend.pyo
+${PYSITELIB}/duplicity/backends/localbackend.py
+${PYSITELIB}/duplicity/backends/localbackend.pyc
+${PYSITELIB}/duplicity/backends/localbackend.pyo
+${PYSITELIB}/duplicity/backends/rsyncbackend.py
+${PYSITELIB}/duplicity/backends/rsyncbackend.pyc
+${PYSITELIB}/duplicity/backends/rsyncbackend.pyo
+${PYSITELIB}/duplicity/backends/sshbackend.py
+${PYSITELIB}/duplicity/backends/sshbackend.pyc
+${PYSITELIB}/duplicity/backends/sshbackend.pyo
+${PYSITELIB}/duplicity/backends/webdavbackend.py
+${PYSITELIB}/duplicity/backends/webdavbackend.pyc
+${PYSITELIB}/duplicity/backends/webdavbackend.pyo
 ${PYSITELIB}/duplicity/collections.py
 ${PYSITELIB}/duplicity/collections.pyc
 ${PYSITELIB}/duplicity/collections.pyo
@@ -25,9 +50,15 @@ ${PYSITELIB}/duplicity/diffdir.pyo
 ${PYSITELIB}/duplicity/dup_temp.py
 ${PYSITELIB}/duplicity/dup_temp.pyc
 ${PYSITELIB}/duplicity/dup_temp.pyo
+${PYSITELIB}/duplicity/dup_threading.py
+${PYSITELIB}/duplicity/dup_threading.pyc
+${PYSITELIB}/duplicity/dup_threading.pyo
 ${PYSITELIB}/duplicity/dup_time.py
 ${PYSITELIB}/duplicity/dup_time.pyc
 ${PYSITELIB}/duplicity/dup_time.pyo
+${PYSITELIB}/duplicity/errors.py
+${PYSITELIB}/duplicity/errors.pyc
+${PYSITELIB}/duplicity/errors.pyo
 ${PYSITELIB}/duplicity/file_naming.py
 ${PYSITELIB}/duplicity/file_naming.pyc
 ${PYSITELIB}/duplicity/file_naming.pyo
@@ -58,6 +89,9 @@ ${PYSITELIB}/duplicity/patchdir.pyo
 ${PYSITELIB}/duplicity/path.py
 ${PYSITELIB}/duplicity/path.pyc
 ${PYSITELIB}/duplicity/path.pyo
+${PYSITELIB}/duplicity/pexpect.py
+${PYSITELIB}/duplicity/pexpect.pyc
+${PYSITELIB}/duplicity/pexpect.pyo
 ${PYSITELIB}/duplicity/robust.py
 ${PYSITELIB}/duplicity/robust.pyc
 ${PYSITELIB}/duplicity/robust.pyo
@@ -79,5 +113,18 @@ ${PYSITELIB}/duplicity/tempdir.pyo
 ${PYSITELIB}/duplicity/urlparse_2_5.py
 ${PYSITELIB}/duplicity/urlparse_2_5.pyc
 ${PYSITELIB}/duplicity/urlparse_2_5.pyo
+${PYSITELIB}/duplicity/util.py
+${PYSITELIB}/duplicity/util.pyc
+${PYSITELIB}/duplicity/util.pyo
+man/man1/duplicity.1
+man/man1/rdiffdir.1
+share/doc/${PKGNAME}/CHANGELOG
+share/doc/${PKGNAME}/COPYING
+share/doc/${PKGNAME}/CVS-README
+share/doc/${PKGNAME}/LOG-README
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/tarfile-LICENSE
+share/locale/io/LC_MESSAGES/duplicity.mo
 @dirrm share/doc/${PKGNAME}
+@dirrm ${PYSITELIB}/duplicity/backends
 @dirrm ${PYSITELIB}/duplicity
