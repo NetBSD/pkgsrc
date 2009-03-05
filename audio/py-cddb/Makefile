@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:14 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/05 18:51:26 joerg Exp $
 #
 
 DISTNAME=	CDDB-1.4
@@ -14,7 +14,6 @@ COMMENT=	Python module to access the CDDB online database
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

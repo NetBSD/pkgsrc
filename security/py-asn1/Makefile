@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/22 16:33:55 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 18:51:31 joerg Exp $
 #
 
 DISTNAME=		pyasn1-0.0.8a
@@ -13,7 +13,6 @@ COMMENT=		ITU Abstract Syntax Notification for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
-#PYBINMODULE=		yes
 PYSETUP=		setup.py
 
 .include "../../lang/python/egg.mk"

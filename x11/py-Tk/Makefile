@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/02/09 21:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2009/03/05 18:51:33 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-Tk-0
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_tkinter.c \
 			${PYSUBDIR}/Modules/tkappinit.c
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 
 PY_SETUP_SUBST+= BLPREFIX=${LOCALBASE}

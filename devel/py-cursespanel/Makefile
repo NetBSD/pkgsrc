@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:28 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/03/05 18:51:29 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-cursespanel-0
@@ -17,7 +17,6 @@ USE_NCURSES=	# filter getsyx getwin has_key immedok mvwinsnstr mvwinsstr ...
 # wechochar winsnstr winsstr wredrawln wsyncdown wsyncup
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_curses_panel.c
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 
 PY_SETUP_SUBST=	NCURSESPREFIX=${BUILDLINK_PREFIX.ncurses}

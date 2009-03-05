@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/21 17:51:37 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/05 18:51:33 joerg Exp $
 
 PYRSS2GENVER=	1.0.0
 DISTNAME=	PyRSS2Gen-${PYRSS2GENVER}
@@ -13,7 +13,6 @@ COMMENT=	Python module to generate RSS feeds
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	# defined
-PYBINMODULE=	# defined
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/extension.mk"

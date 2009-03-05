@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/02/09 21:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/05 18:51:29 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-readline-0
@@ -16,7 +16,6 @@ EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/readline.c
 USE_GNU_READLINE=	# defined
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
 PY_SETUP_SUBST+= RLPREFIX=${BUILDLINK_PREFIX.readline}
 PY_SETUP_SUBST+= RLRTPREFIX=${BUILDLINK_PREFIX.readline}
