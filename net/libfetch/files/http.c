@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.22 2009/02/22 19:11:48 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.23 2009/03/05 15:14:14 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -67,6 +67,9 @@
 /* Keep this down to Linux, it can create surprises else where. */
 #define _GNU_SOURCE
 #endif
+
+/* Needed for gmtime_r on Interix */
+#define _REENTRANT
 
 #if HAVE_CONFIG_H
 #include "config.h"
