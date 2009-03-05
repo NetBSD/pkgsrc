@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/02/17 15:37:01 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/05 18:51:27 joerg Exp $
 #
 
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=  c
 
 PYDISTUTILSPKG=         yes
-PYBINMODULE=    yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
