@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/05 23:51:55 roy Exp $
+
+SHA1 (dhcpcd-gtk-0.3.0.tar.bz2) = b16368ab39a7189b2056cef9f1d4b5bda46c539a
+RMD160 (dhcpcd-gtk-0.3.0.tar.bz2) = 01dbf5cf585359edcc5b05cc79147c46d872f0b3
+Size (dhcpcd-gtk-0.3.0.tar.bz2) = 14445 bytes
