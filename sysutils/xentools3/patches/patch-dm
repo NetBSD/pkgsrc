@@ -1,0 +1,186 @@
+$NetBSD: patch-dm,v 1.1 2009/03/05 19:43:32 bouyer Exp $
+
+--- python/xen/util/pci.py.orig	2008-04-25 13:03:12.000000000 +0000
++++ python/xen/util/pci.py	2009-03-05 15:48:44.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/pkg/bin/python2.4
+ #
+ # PCI Device Information Class
+ # - Helps obtain information about which I/O resources a PCI device needs
+@@ -6,52 +6,8 @@
+ #   Author: Ryan Wilson <hap9@epoch.ncsc.mil>
+ 
+ import sys
+-import os, os.path
+ 
+-PROC_MNT_PATH = '/proc/mounts'
+-PROC_PCI_PATH = '/proc/bus/pci/devices'
+-PROC_PCI_NUM_RESOURCES = 7
+-
+-SYSFS_PCI_DEVS_PATH = '/bus/pci/devices'
+-SYSFS_PCI_DEV_RESOURCE_PATH = '/resource'
+-SYSFS_PCI_DEV_IRQ_PATH = '/irq'
+-SYSFS_PCI_DEV_DRIVER_DIR_PATH = '/driver'
+-SYSFS_PCI_DEV_VENDOR_PATH = '/vendor'
+-SYSFS_PCI_DEV_DEVICE_PATH = '/device'
+-SYSFS_PCI_DEV_SUBVENDOR_PATH = '/subsystem_vendor'
+-SYSFS_PCI_DEV_SUBDEVICE_PATH = '/subsystem_device'
+-
+-PCI_BAR_IO = 0x01
+-PCI_BAR_IO_MASK = ~0x03
+-PCI_BAR_MEM_MASK = ~0x0f
+-
+-# Definitions from Linux: include/linux/pci.h
+-def PCI_DEVFN(slot, func):
+-    return ((((slot) & 0x1f) << 3) | ((func) & 0x07))
+-
+-def find_sysfs_mnt():
+-    mounts_file = open(PROC_MNT_PATH,'r')
+-
+-    for line in mounts_file:
+-        sline = line.split()
+-        if len(sline)<3:
+-            continue
+-
+-        if sline[2]=='sysfs':
+-            return sline[1]
+-
+-    return None
+-
+-class PciDeviceNotFoundError(Exception):
+-    def __init__(self,domain,bus,slot,func):
+-        self.domain = domain
+-        self.bus = bus
+-        self.slot = slot
+-        self.func = func
+-        self.name = "%04x:%02x:%02x.%01x"%(domain, bus, slot, func)
+-    
+-    def __str__(self):
+-        return ('PCI Device %s Not Found' % (self.name))
++KERN_PATH = '/kern/xen/pci/'
+ 
+ class PciDeviceParseError(Exception):
+     def __init__(self,msg):
+@@ -69,94 +25,45 @@
+         self.irq = 0
+         self.iomem = []
+         self.ioports = []
+-        self.driver = None
++        self.driver = 'pciback'
+         self.vendor = None
+         self.device = None
+         self.subvendor = None
+         self.subdevice = None
+ 
+-        self.get_info_from_sysfs()
++        self.get_info_from_kern()
+ 
+-    def get_info_from_sysfs(self):
+-        try:
+-            sysfs_mnt = find_sysfs_mnt()
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to locate sysfs mount: %s (%d)' %
+-                (PROC_PCI_PATH, strerr, errno)))
++    def get_info_from_kern(self):
+ 
+-        if sysfs_mnt == None:
+-            return False
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_RESOURCE_PATH
++        path = KERN_PATH + self.name
++        
+         try:
+             resource_file = open(path,'r')
+ 
+-            for i in range(PROC_PCI_NUM_RESOURCES):
+-                line = resource_file.readline()
+-                sline = line.split()
+-                if len(sline)<3:
+-                    continue
+-
+-                start = int(sline[0],16)
+-                end = int(sline[1],16)
+-                flags = int(sline[2],16)
+-                size = end-start+1
+-
+-                if start!=0:
+-                    if flags&PCI_BAR_IO:
+-                        self.ioports.append( (start,size) )
++            for line in resource_file.readlines():
++                k, v = line.strip().split(':')
++                if k == 'vendor':
++                    self.vendor = int(v.strip(), 16)
++                elif k == 'product':
++                    self.device = int(v.strip(), 16)
++                elif k == 'subsys_vendor':
++                    self.subvendor = int(v.strip(), 16)
++                elif k == 'subsys_product':
++                    self.subdevice = int(v.strip(), 16)
++                elif k in ('I/O', 'mem'):
++                    sline = map(str.strip, v.split('-'))
++                    
++                    start = int(sline[0], 16)
++                    end = int(sline[1], 16)
++                    size = end - start + 1
++                    
++                    if k == 'I/O':
++                        self.ioports.append((start, size))
+                     else:
+-                        self.iomem.append( (start,size) )
+-
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+-                (path, strerr, errno)))
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_IRQ_PATH
+-        try:
+-            self.irq = int(open(path,'r').readline())
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+-                (path, strerr, errno)))
++                        self.iomem.append((start, size))
++                elif k == 'irq':
++                    self.irq = int(v.strip())
+ 
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_DRIVER_DIR_PATH
+-        try:
+-            self.driver = os.path.basename(os.readlink(path))
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to read %s: %s (%d)' %
+-                (path, strerr, errno)))
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_VENDOR_PATH
+-        try:
+-            self.vendor = int(open(path,'r').readline(), 16)
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+-                (path, strerr, errno)))
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_DEVICE_PATH
+-        try:
+-            self.device = int(open(path,'r').readline(), 16)
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+-                (path, strerr, errno)))
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_SUBVENDOR_PATH
+-        try:
+-            self.subvendor = int(open(path,'r').readline(), 16)
+-        except IOError, (errno, strerr):
+-            raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+-                (path, strerr, errno)))
+-
+-        path = sysfs_mnt+SYSFS_PCI_DEVS_PATH+'/'+ \
+-                self.name+SYSFS_PCI_DEV_SUBDEVICE_PATH
+-        try:
+-            self.subdevice = int(open(path,'r').readline(), 16)
+         except IOError, (errno, strerr):
+             raise PciDeviceParseError(('Failed to open & read %s: %s (%d)' %
+                 (path, strerr, errno)))
