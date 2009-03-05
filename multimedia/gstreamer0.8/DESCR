@@ -1,4 +1,0 @@
-GStreamer is a framework for streaming media.  The fundamental design comes
-from the video pipeline at Oregon Graduate Institute, as well as some ideas
-from DirectMedia.  It's based on plug-ins that will provide the various
-codecs and other functionality.

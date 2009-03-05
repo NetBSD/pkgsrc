@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/03/05 22:46:23 snj Exp $
 bin/kmag
 bin/kmousetool
 bin/kmouth
@@ -15,7 +15,6 @@ lib/kde3/libkttsd_eposplugin.la
 lib/kde3/libkttsd_festivalintplugin.la
 lib/kde3/libkttsd_fliteplugin.la
 lib/kde3/libkttsd_freettsplugin.la
-${PLIST.gstreamer}lib/kde3/libkttsd_gstplugin.la
 lib/kde3/libkttsd_hadifixplugin.la
 lib/kde3/libkttsd_sbdplugin.la
 lib/kde3/libkttsd_stringreplacerplugin.la
@@ -2866,7 +2865,6 @@ share/kde/services/kttsd_eposplugin.desktop
 share/kde/services/kttsd_festivalintplugin.desktop
 share/kde/services/kttsd_fliteplugin.desktop
 share/kde/services/kttsd_freettsplugin.desktop
-${PLIST.gstreamer}share/kde/services/kttsd_gstplugin.desktop
 share/kde/services/kttsd_hadifixplugin.desktop
 share/kde/services/kttsd_sbdplugin.desktop
 share/kde/services/kttsd_stringreplacerplugin.desktop
