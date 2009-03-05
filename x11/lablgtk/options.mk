@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/12/28 13:10:29 adrianp Exp $
+# $NetBSD: options.mk,v 1.5 2009/03/05 07:13:01 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lablgtk
 PKG_SUPPORTED_OPTIONS=	glade gnomecanvas gtksourceview svg gtkspell
@@ -48,7 +48,7 @@ PLIST_SRC+=		PLIST.svg
 CONFIGURE_ARGS+=	--without-rsvg
 .endif
 
-.if !empty(PKG_OPTIONS:Mgnomecanvas) || !empty(PKG_OPTIONS:Msvg)
+.if !empty(PKG_OPTIONS:Mgnomecanvas)
 PLIST_SRC+=		PLIST.gnome
 .endif
 
