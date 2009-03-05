@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.765 2009/02/23 23:19:22 cube Exp $
+# $NetBSD: Makefile,v 1.766 2009/03/05 23:24:35 roy Exp $
 #
 
 COMMENT=	Networking tools
@@ -79,6 +79,7 @@ SUBDIR+=	dctc
 SUBDIR+=	ddclient
 SUBDIR+=	delegate
 SUBDIR+=	dgd
+SUBDIR+=	dhcpcd
 SUBDIR+=	dhid
 SUBDIR+=	dhisd
 SUBDIR+=	djbdns
