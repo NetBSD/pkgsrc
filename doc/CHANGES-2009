@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.884 2009/03/05 21:50:46 snj Exp $
+$NetBSD: CHANGES-2009,v 1.885 2009/03/05 22:03:09 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1197,3 +1197,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/engine_pkcs11 version 0.1.5 [hasso 2009-03-05]
 	Removed audio/tunesbrowser [snj 2009-03-05]
 	Removed audio/libopendaap [snj 2009-03-05]
+	Updated lang/vala to 0.5.7 [ahoka 2009-03-05]
+	Updated devel/libgee to 0.1.5 [ahoka 2009-03-05]
