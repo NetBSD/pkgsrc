@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.896 2009/03/05 23:39:35 roy Exp $
+$NetBSD: CHANGES-2009,v 1.897 2009/03/05 23:45:44 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1224,3 +1224,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/isc-dhclient to 3.1.2 [adrianp 2009-03-05]
 	Updated net/isc-dhcpd to 3.1.2 [adrianp 2009-03-05]
 	Updated net/isc-dhcrelay to 3.1.2 [adrianp 2009-03-05]
+	Added net/dhcpcd-dbus version 0.3.0 [roy 2009-03-05]
