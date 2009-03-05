@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/09 21:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/03/05 18:51:32 joerg Exp $
 #
 
 DISTNAME=	egenix-mx-base-2.0.6
@@ -14,7 +14,6 @@ COMMENT=	Python extension that provides types and conversions for dates
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYBINMODULE=	yes
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

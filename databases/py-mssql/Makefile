@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/05 18:51:28 joerg Exp $
 #
 
 DISTNAME=		pymssql-0.8.0
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.63
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
-PYBINMODULE=		yes
 PYDISTUTILSPKG=		yes
 
 .include "../../databases/freetds/buildlink3.mk"
