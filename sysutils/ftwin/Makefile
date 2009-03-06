@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 12:50:33 imil Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/06 10:11:44 imil Exp $
 #
 
 DISTNAME=	ftwin-0.8.2
@@ -24,6 +24,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
+.include "../../archivers/libarchive/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/apr/buildlink3.mk"
