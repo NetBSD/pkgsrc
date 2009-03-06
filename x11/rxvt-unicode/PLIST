@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/03/06 00:20:27 snj Exp $
 bin/urxvt
 bin/urxvtc
 bin/urxvtd
-${PLIST.perl}lib/urxvt/perl/automove-background
 ${PLIST.perl}lib/urxvt/perl/block-graphics-to-ascii
 ${PLIST.perl}lib/urxvt/perl/digital-clock
 ${PLIST.perl}lib/urxvt/perl/example-refresh-hooks
@@ -10,6 +9,7 @@ ${PLIST.perl}lib/urxvt/perl/kuake
 ${PLIST.perl}lib/urxvt/perl/macosx-clipboard
 ${PLIST.perl}lib/urxvt/perl/matcher
 ${PLIST.perl}lib/urxvt/perl/option-popup
+${PLIST.perl}lib/urxvt/perl/overlay-osc
 ${PLIST.perl}lib/urxvt/perl/readline
 ${PLIST.perl}lib/urxvt/perl/remote-clipboard
 ${PLIST.perl}lib/urxvt/perl/searchable-scrollback

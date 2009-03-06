@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2008/10/19 19:19:25 he Exp $
-#
+# $NetBSD: Makefile,v 1.24 2009/03/06 00:20:27 snj Exp $
 
-DISTNAME=		rxvt-unicode-8.3
-PKGREVISION=		4
+DISTNAME=		rxvt-unicode-9.06
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/ \
 			http://dist.schmorp.de/rxvt-unicode/Attic/
@@ -17,11 +15,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_FEATURES+=		snprintf
 
-CONFIGURE_ARGS+=	--enable-transparency	\
-			--enable-menubar	\
-			--enable-xpm-background	\
-			--enable-xgetdefault	\
-			--enable-24bit
 CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
 post-install:

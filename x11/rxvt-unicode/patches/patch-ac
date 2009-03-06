@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/03/06 00:20:27 snj Exp $
+
+Undo upstream revision 1.45, which was done in the name of simplification.
+
+--- doc/Makefile.in.orig	2009-02-24 13:22:58.000000000 -0800
++++ doc/Makefile.in	2009-02-24 13:23:28.000000000 -0800
+@@ -98,7 +98,7 @@ install: all
+ 	$(INSTALL_DATA) rxvt.7.man  $(DESTDIR)$(man7dir)/$(RXVTNAME).$(man7ext)
+ @IF_PERL@	$(INSTALL) -d $(DESTDIR)$(man3dir)
+ @IF_PERL@	$(INSTALL_DATA) rxvtperl.3.man $(DESTDIR)$(man3dir)/$(RXVTNAME)perl.$(man3ext)
+-	@TIC@ $(srcdir)/etc/rxvt-unicode.terminfo
++	if test -x "@TIC@"; then if test -n "@TIC@"; then @TIC@ $(srcdir)/etc/rxvt-unicode.terminfo; fi; fi
+ 
+ distdepend: alldoc
+ 
