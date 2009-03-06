@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2008/12/28 12:43:27 jmcneill Exp $
-#
+# $NetBSD: Makefile,v 1.30.2.1 2009/03/06 13:15:21 tron Exp $
 
 DISTNAME=		hal-0.5.11
-PKGREVISION=		18
+PKGREVISION=		23
 CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -21,7 +20,8 @@ USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_TOOLS+=		autoconf automake autoreconf
 USE_LIBTOOL=		YES
 
-MAKE_DIRS=		${VARBASE}/cache/hald
+MAKE_DIRS+=		/media
+MAKE_DIRS+=		${VARBASE}/cache/hald
 SPECIAL_PERMS+=		${VARBASE}/cache/hald ${HAL_USER} ${HAL_GROUP} 0644
 
 EGDIR=			${PREFIX}/share/examples/hal
@@ -60,6 +60,8 @@ CONFIGURE_ARGS+=	--with-backend=dummy
 PLIST_SRC=		PLIST
 .endif
 
+CFLAGS.SunOS+=		-Du_int32_t=uint32_t
+
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 .endif
@@ -87,6 +89,8 @@ PKG_HOME.haldaemon=	${VARBASE}/run/hal
 
 FILES_SUBST+=		HAL_USER=${HAL_USER}
 FILES_SUBST+=		HAL_GROUP=${HAL_GROUP}
+
+PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 post-extract:
 	${CP} -r ${FILESDIR}/hald-netbsd ${WRKSRC}/hald/netbsd
