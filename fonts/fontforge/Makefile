@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2009/01/03 19:45:29 adam Exp $
+# $NetBSD: Makefile,v 1.57 2009/03/06 23:56:53 wiz Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -14,17 +14,20 @@ VERSION=	20081224
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
-USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
+USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
-GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
 CONFIGURE_ARGS+=	--without-python
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BROKEN_GETTEXT_DETECTION=	yes
+
+LDFLAGS.SunOS+=		-lrt
 
 .include "options.mk"
 
