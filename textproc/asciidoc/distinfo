@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2008/12/04 04:05:01 minskim Exp $
+$NetBSD: distinfo,v 1.7 2009/03/06 15:17:07 wiz Exp $
 
-SHA1 (asciidoc-8.2.6.tar.gz) = cce98ed670c462a3a007b03b6f92d2108c5bc405
-RMD160 (asciidoc-8.2.6.tar.gz) = c07d2eaa04d16275c44756236023c0789cf54310
-Size (asciidoc-8.2.6.tar.gz) = 739790 bytes
-SHA1 (patch-aa) = f8e1128a7ea77a6c4bcfa023b6fcb040cc3882de
-SHA1 (patch-ab) = fe9d10cf052dc6cb6918ae00a14cccc7d52dc4ea
+SHA1 (asciidoc-8.3.3.tar.gz) = 6c85063185deaeecee6389cdadafd3e88c5ae160
+RMD160 (asciidoc-8.3.3.tar.gz) = 42417668d1fe1d6a1b580c7ee49ad54d2688f207
+Size (asciidoc-8.3.3.tar.gz) = 1050151 bytes
+SHA1 (patch-aa) = fab20eec609960b05b0bab034159b6138436f30a

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/02/09 22:56:27 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/06 15:17:07 wiz Exp $
 #
 
-DISTNAME=		asciidoc-8.2.6
-PKGREVISION=		2
+DISTNAME=		asciidoc-8.3.3
 CATEGORIES=		textproc
 MASTER_SITES=		${HOMEPAGE}	\
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
@@ -18,7 +17,10 @@ DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
 REPLACE_BASH+=		a2x
 USE_TOOLS+=		bash:run pax
-PYTHON_PATCH_SCRIPTS=	asciidoc.py filters/code-filter.py filters/music2png.py
+PYTHON_PATCH_SCRIPTS=	asciidoc.py
+PYTHON_PATCH_SCRIPTS+=	filters/code/code-filter.py
+PYTHON_PATCH_SCRIPTS+=	filters/music/music2png.py
+PYTHON_PATCH_SCRIPTS+=	filters/graphviz/graphviz2png.py
 
 NO_BUILD=		yes
 
@@ -44,8 +46,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DESTDIR}${DOCDIR}
 
-	cd ${WRKSRC} && pax -wr -pma *.conf filters/*.py \
-		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
+	cd ${WRKSRC} && pax -wr -pma *.conf filters \
+		filters docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/icons/callouts/* images/icons/*.png \
 		images/icons/README \
 		${DESTDIR}${PREFIX}/share/asciidoc/.
