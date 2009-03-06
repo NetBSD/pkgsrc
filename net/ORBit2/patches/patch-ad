@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2009/03/06 14:02:32 wiz Exp $
+
+--- configure.orig	2009-03-06 13:58:59.000000000 +0000
++++ configure
+@@ -11669,7 +11669,7 @@ if test "${with_idl_compiler+set}" = set
+ 
+ fi
+ 
+-if test x$IDL_COMPILER == x"\$(top_builddir)/src/idl-compiler/orbit-idl-2\$(EXEEXT)"; then
++if test x$IDL_COMPILER = x"\$(top_builddir)/src/idl-compiler/orbit-idl-2\$(EXEEXT)"; then
+   { $as_echo "$as_me:$LINENO: result: internal" >&5
+ $as_echo "internal" >&6; }
+ else
