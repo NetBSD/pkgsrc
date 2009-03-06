@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2008/12/20 00:43:47 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.40 2009/03/06 01:54:14 jmcneill Exp $
 
 MPLAYER_DIST_VERSION=	1.0rc2
 
@@ -56,5 +56,10 @@ post-extract:
 	${CP} ${FILESDIR}/ao_pulse.c ${WRKSRC}/libao2/ao_polyp.c
 
 .include "../../mk/bsd.prefs.mk"
+
+# The configure script misdetects endianness on mipseb
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
+CONFIGURE_ARGS+=        --enable-big-endian
+.endif
 
 .include "../../multimedia/mplayer-share/options.mk"
