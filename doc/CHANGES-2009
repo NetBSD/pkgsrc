@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.915 2009/03/06 15:17:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.916 2009/03/06 17:54:53 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1243,3 +1243,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/texi2html to 1.82 [wiz 2009-03-06]
 	Updated textproc/asciidoc to 8.3.3 [wiz 2009-03-06]
 	Updated devel/guile-www to 2.22 [wiz 2009-03-06]
+	Added print/tex-hyphen-base version 2008.11176 [minskim 2009-03-06]
