@@ -1,0 +1,19 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/03/06 12:16:17 hasso Exp $
+
+get_argv0() function prototype is:
+
+ char *get_argv0(int, char *);
+
+so respect it in order to build on unknown platforms.
+
+--- osdep-unknown.c.orig	2009-02-18 09:36:41 +0200
++++ osdep-unknown.c	2009-02-18 09:37:30 +0200
+@@ -24,7 +24,7 @@
+ #include "tmux.h"
+ 
+ char *
+-get_argv0(unused pid_t pgrp)
++get_argv0(unused int fd, unused char *tty)
+ {
+ 	return (NULL);
+ }
