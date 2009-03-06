@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/02/21 14:12:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/03/06 13:48:13 wiz Exp $
 bin/pygtk-codegen-2.0
 bin/pygtk-demo
 include/pygtk-2.0/pygtk/pygtk.h
@@ -145,6 +145,7 @@ share/gtk-doc/html/pygtk/class-atkstreamablecontent.html
 share/gtk-doc/html/pygtk/class-atktable.html
 share/gtk-doc/html/pygtk/class-atktext.html
 share/gtk-doc/html/pygtk/class-atkvalue.html
+share/gtk-doc/html/pygtk/class-gdkapplaunchcontext.html
 share/gtk-doc/html/pygtk/class-gdkatom.html
 share/gtk-doc/html/pygtk/class-gdkcairocontext.html
 share/gtk-doc/html/pygtk/class-gdkcolor.html
@@ -266,6 +267,7 @@ share/gtk-doc/html/pygtk/class-gtkmenushell.html
 share/gtk-doc/html/pygtk/class-gtkmenutoolbutton.html
 share/gtk-doc/html/pygtk/class-gtkmessagedialog.html
 share/gtk-doc/html/pygtk/class-gtkmisc.html
+share/gtk-doc/html/pygtk/class-gtkmountoperation.html
 share/gtk-doc/html/pygtk/class-gtknotebook.html
 share/gtk-doc/html/pygtk/class-gtkobject.html
 share/gtk-doc/html/pygtk/class-gtkoptionmenu.html
@@ -329,6 +331,7 @@ share/gtk-doc/html/pygtk/class-gtktoggletoolbutton.html
 share/gtk-doc/html/pygtk/class-gtktoolbar.html
 share/gtk-doc/html/pygtk/class-gtktoolbutton.html
 share/gtk-doc/html/pygtk/class-gtktoolitem.html
+share/gtk-doc/html/pygtk/class-gtktoolshell.html
 share/gtk-doc/html/pygtk/class-gtktooltip.html
 share/gtk-doc/html/pygtk/class-gtktooltips.html
 share/gtk-doc/html/pygtk/class-gtktreedragdest.html
@@ -528,10 +531,15 @@ share/gtk-doc/html/pygtk/icons/stock_new_24.png
 share/gtk-doc/html/pygtk/icons/stock_no_20.png
 share/gtk-doc/html/pygtk/icons/stock_ok_20.png
 share/gtk-doc/html/pygtk/icons/stock_open_24.png
+share/gtk-doc/html/pygtk/icons/stock_page_setup_24.png
 share/gtk-doc/html/pygtk/icons/stock_paste_24.png
 share/gtk-doc/html/pygtk/icons/stock_preferences_24.png
 share/gtk-doc/html/pygtk/icons/stock_print_24.png
+share/gtk-doc/html/pygtk/icons/stock_print_error_24.png
+share/gtk-doc/html/pygtk/icons/stock_print_paused_24.png
 share/gtk-doc/html/pygtk/icons/stock_print_preview_24.png
+share/gtk-doc/html/pygtk/icons/stock_print_report_24.png
+share/gtk-doc/html/pygtk/icons/stock_print_warning_24.png
 share/gtk-doc/html/pygtk/icons/stock_properties_24.png
 share/gtk-doc/html/pygtk/icons/stock_redo_24.png
 share/gtk-doc/html/pygtk/icons/stock_redo_rtl_24.png
@@ -566,6 +574,14 @@ share/gtk-doc/html/pygtk/icons/stock_zoom_1_24.png
 share/gtk-doc/html/pygtk/icons/stock_zoom_fit_24.png
 share/gtk-doc/html/pygtk/icons/stock_zoom_in_24.png
 share/gtk-doc/html/pygtk/icons/stock_zoom_out_24.png
+share/gtk-doc/html/pygtk/images/layout-btlr.png
+share/gtk-doc/html/pygtk/images/layout-btrl.png
+share/gtk-doc/html/pygtk/images/layout-lrbt.png
+share/gtk-doc/html/pygtk/images/layout-lrtb.png
+share/gtk-doc/html/pygtk/images/layout-rlbt.png
+share/gtk-doc/html/pygtk/images/layout-rltb.png
+share/gtk-doc/html/pygtk/images/layout-tblr.png
+share/gtk-doc/html/pygtk/images/layout-tbrl.png
 share/gtk-doc/html/pygtk/index.html
 share/gtk-doc/html/pygtk/index.sgml
 share/gtk-doc/html/pygtk/pango-class-reference.html
@@ -613,6 +629,7 @@ share/pygtk/2.0/defs/pangocairo.override
 @dirrm share/pygtk/2.0/defs
 @dirrm share/pygtk/2.0
 @unexec ${RMDIR} %D/share/pygtk 2>/dev/null || ${TRUE}
+@dirrm share/gtk-doc/html/pygtk/images
 @dirrm share/gtk-doc/html/pygtk/icons
 @dirrm share/gtk-doc/html/pygtk/cursors
 @dirrm share/gtk-doc/html/pygtk
