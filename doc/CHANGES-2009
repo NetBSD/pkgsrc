@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.903 2009/03/06 10:28:43 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.904 2009/03/06 10:35:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dhcpcd-gtk to 0.3.0nb1 [jmcneill 2009-03-05]
 	Updated devel/mercurial to 1.2 [wiz 2009-03-06]
 	Updated x11/xproto to 7.0.15 [wiz 2009-03-06]
+	Updated multimedia/gopchop to 1.1.8 [wiz 2009-03-06]
