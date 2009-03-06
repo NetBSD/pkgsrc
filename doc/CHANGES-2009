@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.904 2009/03/06 10:35:33 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.905 2009/03/06 12:29:07 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1232,3 +1232,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/mercurial to 1.2 [wiz 2009-03-06]
 	Updated x11/xproto to 7.0.15 [wiz 2009-03-06]
 	Updated multimedia/gopchop to 1.1.8 [wiz 2009-03-06]
+	Added misc/tmux version 0.7nb1 [hasso 2009-03-06]
