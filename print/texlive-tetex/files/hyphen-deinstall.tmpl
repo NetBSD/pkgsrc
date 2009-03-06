@@ -1,0 +1,26 @@
+# $NetBSD: hyphen-deinstall.tmpl,v 1.1 2009/03/06 18:13:00 minskim Exp $
+#
+# Deinstall hyphenation patterns.
+#
+
+LANGUAGE_DAT=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.dat
+LANGUAGE_DEF=${PKG_SYSCONFBASE}/texmf/tex/generic/config/language.def
+
+case ${STAGE} in
+DEINSTALL)
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^%%% BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DAT} > ${LANGUAGE_DAT}.tmp &&
+	${MV} ${LANGUAGE_DAT}.tmp ${LANGUAGE_DAT}
+	${AWK} "\
+BEGIN { do_print=1; } \
+/^%%% BEGIN @PKGBASE@\$/ { do_print=0; } \
+{ if (do_print) print \$0; } \
+/^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DEF} > ${LANGUAGE_DEF}.tmp &&
+	${MV} ${LANGUAGE_DEF}.tmp ${LANGUAGE_DEF}
+	;;
+*)
+	;;
+esac
