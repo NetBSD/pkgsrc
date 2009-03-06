@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.5 2007/08/06 10:02:27 ghen Exp $
+$NetBSD: patch-aa,v 1.6 2009/03/06 00:20:27 snj Exp $
 
---- configure.orig	2007-08-06 10:26:41.000000000 +0200
-+++ configure		2007-08-06 10:29:20.000000000 +0200
-@@ -3877,57 +3877,6 @@
+--- configure.orig	2009-02-27 11:58:51.000000000 -0800
++++ configure	2009-02-27 11:58:47.000000000 -0800
+@@ -3852,56 +3852,6 @@ fi
  LINKER=$LINKER
  
  
 -if test -z "$orig_CXXFLAGS"; then
 -  if test x$GCC = xyes && test "x$GXX" = xyes; then
--     CXXFLAGS="-g -O3 -fno-threadsafe-statics -fno-enforce-eh-specs"
+-    CXXFLAGS="-g -O3 -fno-rtti -fvisibility-inlines-hidden -fno-threadsafe-statics -fno-enforce-eh-specs"
 -    cat >conftest.$ac_ext <<_ACEOF
 -/* confdefs.h.  */
 -_ACEOF
@@ -56,26 +56,6 @@ $NetBSD: patch-aa,v 1.5 2007/08/06 10:02:27 ghen Exp $
 -  CFLAGS="$CXXFLAGS"
 -fi
 -
--
- cat >>confdefs.h <<\_ACEOF
- #define _GNU_SOURCE 1
- _ACEOF
-@@ -6691,11 +6640,16 @@
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
+ case $host in
+    *-*-solaris* )
  
-+extern "C" {
-+#include <X11/xpm.h>
-+#include <stddef.h>
-+}
-+
- int
- main ()
- {
--XpmReadFileToPixmap()
--  ;
-+  Drawable d;
-+  XpmReadFileToPixmap(NULL, d, NULL, NULL, NULL, NULL);
-   return 0;
- }
- _ACEOF
