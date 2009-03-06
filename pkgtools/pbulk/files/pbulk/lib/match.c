@@ -1,4 +1,4 @@
-/* $NetBSD: match.c,v 1.3 2008/09/22 11:31:16 joerg Exp $ */
+/* $NetBSD: match.c,v 1.4 2009/03/06 15:19:04 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -273,9 +273,8 @@ result(int cmp, int tst)
 static int
 vtest(arr_t *lhs, int tst, arr_t *rhs)
 {
+	unsigned int c, i;
 	int cmp;
-	int     c;
-	int     i;
 
 	for (i = 0, c = MAX(lhs->c, rhs->c) ; i < c ; i++) {
 		if ((cmp = DIGIT(lhs->v, lhs->c, i) - DIGIT(rhs->v, rhs->c, i)) != 0) {
@@ -353,7 +352,7 @@ dewey_match(const char *pattern, const char *pkg)
 	if (sep2) {
 		char ver[PKG_PATTERN_MAX];
 
-		strlcpy(ver, sep, MIN(sizeof(ver), sep2-sep+1));
+		strlcpy(ver, sep, MIN((ssize_t)sizeof(ver), sep2-sep+1));
 		if (dewey_cmp(version, op, ver))
 			return 1;
 	}
