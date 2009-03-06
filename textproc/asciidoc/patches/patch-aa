@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2008/06/10 13:06:30 gdt Exp $
+$NetBSD: patch-aa,v 1.3 2009/03/06 15:17:07 wiz Exp $
 
 a2x uses the '-u' argument to cp, which POSIX does not specify:
   http://www.opengroup.org/onlinepubs/009695399/utilities/cp.html
@@ -6,9 +6,9 @@ a2x uses the '-u' argument to cp, which POSIX does not specify:
 Filed upstream on 20080609 as
 https://sourceforge.net/tracker/index.php?func=detail&aid=1989227&group_id=67797&atid=519005
 
---- a2x.orig	2007-10-28 23:50:53.000000000 -0400
+--- a2x.orig	2008-12-31 02:46:28.000000000 +0000
 +++ a2x
-@@ -379,7 +379,7 @@ function copy_stylesheet()
+@@ -415,7 +415,7 @@ function copy_stylesheet()
      if [[ "$src" -ef "$dst" ]]; then
          return
      fi
@@ -17,7 +17,7 @@ https://sourceforge.net/tracker/index.php?func=detail&aid=1989227&group_id=67797
  }
  
  # Copy distribution admonition and navigation icons to destination directory
-@@ -405,7 +405,7 @@ function copy_icons()
+@@ -441,7 +441,7 @@ function copy_icons()
      else
          execute_command_2 "mkdir -p \"$dst\""
      fi
@@ -25,4 +25,4 @@ https://sourceforge.net/tracker/index.php?func=detail&aid=1989227&group_id=67797
 +    execute_command_2 "cp -rf  \"$src/\"* \"$dst\""
  }
  
- #--------------------------------------------------------------------
+ # Run xmllint(1) checking of $1 file if xmllint checking is enabled.
