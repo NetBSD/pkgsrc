@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7882 2009/03/06 14:15:08 wiz Exp $
+$NetBSD: TODO,v 1.7883 2009/03/06 15:20:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o arping-2.08
 	o asapm-3.1
 	o asc-2.2.0
-	o asciidoc-8.3.3
 	o asp2php-0.77.3
 	o aspell-danish-1.6.20
 	o aspell-faroese-0.2.35
@@ -638,7 +637,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-sharp-2.24.1
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -676,7 +674,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o guile-gtk-2.0
-	o guile-www-2.22
 	o gutenprint-5.2.2
 	o gv-3.6.6
 	o gworkspace-0.8.6
@@ -1084,7 +1081,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o raine-0.50.15
 	o ramaze-2009.01
 	o randread-0.2
-	o randrproto-1.2.99.4
 	o rapidsvn-0.9.6
 	o rat-4.2.25
 	o rayshade-4.0.6
@@ -1245,7 +1241,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
-	o texi2html-1.82
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
