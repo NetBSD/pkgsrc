@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/12/21 15:53:26 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/03/06 08:37:02 ghen Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2726,7 +2726,6 @@ share/pixmaps/${MOZILLA}.png
 @dirrm include/${MOZILLA}/shellservice
 @dirrm include/${MOZILLA}/shistory
 @dirrm include/${MOZILLA}/spellchecker
-@dirrm include/${MOZILLA}/sqlite3
 @dirrm include/${MOZILLA}/storage
 @dirrm include/${MOZILLA}/string
 @dirrm include/${MOZILLA}/system-pref
