@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.900 2009/03/06 00:21:16 snj Exp $
+$NetBSD: CHANGES-2009,v 1.901 2009/03/06 01:55:58 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1228,3 +1228,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/dhcpcd-gtk version 0.3.0 [roy 2009-03-05]
 	Updated devel/GConf to 2.24.0nb1 [jmcneill 2009-03-05]
 	Updated x11/rxvt-unicode to 9.06 [snj 2009-03-06]
+	Updated net/dhcpcd-gtk to 0.3.0nb1 [jmcneill 2009-03-05]
