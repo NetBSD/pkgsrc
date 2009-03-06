@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.12 2009/02/20 11:56:55 abs Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.13 2009/03/06 16:18:04 abs Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -146,7 +146,7 @@ java/sun-6/lib/i386/headless/libmawt.so
 java/sun-6/lib/i386/jli/libjli.so
 java/sun-6/lib/i386/jvm.cfg.default
 java/sun-6/lib/i386/libJdbcOdbc.so
-${LIBX11}java/sun-6/lib/i386/libX11.so.6
+${PLIST.x11}java/sun-6/lib/i386/libX11.so.6
 java/sun-6/lib/i386/libawt.so
 java/sun-6/lib/i386/libcmm.so
 java/sun-6/lib/i386/libdcpr.so
