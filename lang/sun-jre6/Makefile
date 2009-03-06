@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/03 11:09:03 abs Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/06 16:18:04 abs Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -9,7 +9,6 @@ PKGNAME=	sun-jre6-6.0.12
 MASTER_SITES=	# empty
 
 DOWNLOAD_NAME=	Java Runtime Environment (JRE) 6u12
-SHORT_NAME=	JRE
 
 USE_TOOLS+=	pax
 
@@ -30,8 +29,8 @@ LICENSE=	sun-jre6-license
 
 .sinclude "sfiles-${EMUL_ARCH}.mk"
 
-.for FILE in ${SFILES}
-CONF_FILES+=	${JAVA_HOME}/lib/${FILE}.default ${JAVA_HOME}/lib/${FILE}
+.for file in ${SFILES}
+CONF_FILES+=	${JAVA_HOME}/lib/${file}.default ${JAVA_HOME}/lib/${file}
 .endfor
 
 CHECK_FILES_SKIP+=	${JAVA_HOME}/lib/${EMUL_ARCH}/client/classes.jsa
@@ -42,7 +41,9 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	jce
+PLIST_SRC=	PLIST.linux-i386
+
+PLIST_VARS+=	jce x11
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-6.zip
 PLIST.jce=	yes
@@ -67,14 +68,12 @@ PKG_FAIL_REASON+=	"${LIBX11} does not exist.  Please install the" \
 LIBX11=		${X11PREFIX}/lib/libX11.so.6
 .  endif
 
-PLIST_SUBST+=		LIBX11=
-
 .PHONY: create-library-symlinks
 post-install: create-library-symlinks
 create-library-symlinks:
 	${RUN}${LN} -fs ${LIBX11} ${DESTDIR}${JAVA_HOME}/lib/${EMUL_ARCH}
-.else
-PLIST_SUBST+=		LIBX11="@comment "
+
+PLIST.x11=	yes
 .endif
 
 post-extract:

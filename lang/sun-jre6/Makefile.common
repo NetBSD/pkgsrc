@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.10 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile.common,v 1.11 2009/03/06 16:18:04 abs Exp $
+# used by lang/sun-jre6/Makefile
 
 CATEGORIES=	lang java
 COMMENT=	Sun's Java(tm) 2 Standard Edition, ${DOWNLOAD_NAME}
@@ -40,7 +41,7 @@ BUILD_DIRS=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 
-JAVA_HOME=		${LOCALBASE}/java/sun-6
+JAVA_HOME=		${PREFIX}/java/sun-6
 JAVA_NAME=		sun6
 JAVA_UNLIMIT=		datasize
 JAVA_LD_LIBRARY_PATH=	${JAVA_HOME}/lib/${EMUL_ARCH}/jli
@@ -66,7 +67,7 @@ FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
 
 post-fetch:
-	@if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
+	if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
 		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
 	fi
 
