@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/06/10 13:06:30 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/03/06 15:17:07 wiz Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -9,13 +9,21 @@ share/asciidoc/docbook-xsl/common.xsl
 share/asciidoc/docbook-xsl/fo.xsl
 share/asciidoc/docbook-xsl/htmlhelp.xsl
 share/asciidoc/docbook-xsl/manpage.xsl
+share/asciidoc/docbook-xsl/text.xsl
 share/asciidoc/docbook-xsl/xhtml.xsl
 share/asciidoc/docbook.conf
-share/asciidoc/filters/code-filter.conf
-share/asciidoc/filters/code-filter.py
-share/asciidoc/filters/music-filter.conf
-share/asciidoc/filters/music2png.py
-share/asciidoc/filters/source-highlight-filter.conf
+share/asciidoc/filters/code/code-filter-readme.txt
+share/asciidoc/filters/code/code-filter-test.txt
+share/asciidoc/filters/code/code-filter.conf
+share/asciidoc/filters/code/code-filter.py
+share/asciidoc/filters/graphviz/asciidoc-graphviz-sample.txt
+share/asciidoc/filters/graphviz/graphviz-filter.conf
+share/asciidoc/filters/graphviz/graphviz2png.py
+share/asciidoc/filters/music/music-filter-test.txt
+share/asciidoc/filters/music/music-filter.conf
+share/asciidoc/filters/music/music2png.py
+share/asciidoc/filters/source/source-highlight-filter-test.txt
+share/asciidoc/filters/source/source-highlight-filter.conf
 share/asciidoc/help.conf
 share/asciidoc/html4.conf
 share/asciidoc/images/icons/README
@@ -49,17 +57,12 @@ share/asciidoc/javascripts/LaTeXMathML.js
 share/asciidoc/javascripts/toc.js
 share/asciidoc/lang-es.conf
 share/asciidoc/latex.conf
-share/asciidoc/linuxdoc.conf
-share/asciidoc/stylesheets/compact.css
 share/asciidoc/stylesheets/docbook-xsl.css
-share/asciidoc/stylesheets/xhtml-deprecated-manpage.css
-share/asciidoc/stylesheets/xhtml-deprecated.css
 share/asciidoc/stylesheets/xhtml11-manpage.css
 share/asciidoc/stylesheets/xhtml11-quirks.css
 share/asciidoc/stylesheets/xhtml11.css
 share/asciidoc/text.conf
-share/asciidoc/xhtml-deprecated-css.conf
-share/asciidoc/xhtml-deprecated.conf
+share/asciidoc/wordpress.conf
 share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
 share/doc/asciidoc/asciidoc.html
@@ -70,6 +73,10 @@ share/doc/asciidoc/asciidoc.txt
 @dirrm share/asciidoc/images/icons/callouts
 @dirrm share/asciidoc/images/icons
 @dirrm share/asciidoc/images
+@dirrm share/asciidoc/filters/source
+@dirrm share/asciidoc/filters/music
+@dirrm share/asciidoc/filters/graphviz
+@dirrm share/asciidoc/filters/code
 @dirrm share/asciidoc/filters
 @dirrm share/asciidoc/docbook-xsl
 @dirrm share/asciidoc
