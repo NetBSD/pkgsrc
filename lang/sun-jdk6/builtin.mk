@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/25 18:06:31 adrianp Exp $
+# $NetBSD: builtin.mk,v 1.3 2009/03/06 16:22:55 abs Exp $
 
 BUILTIN_PKG:=	sun-jdk6
 
@@ -30,7 +30,7 @@ MAKEVARS+=	IS_BUILTIN.sun-jdk6
     !empty(IS_BUILTIN.sun-jdk6:M[yY][eE][sS]) && \
     empty(JDK6:M__nonexistent__)
 
-BUILTIN_VERSION.sun-jdk6!= ${JDK6} -version 2>&1 | ${HEAD} -1 | \ 
+BUILTIN_VERSION.sun-jdk6!= ${JDK6} -version 2>&1 | ${HEAD} -1 | \
 	${AWK} '{print $$2}'
 
 BUILTIN_PKG.sun-jdk6=	sun-jdk6-${BUILTIN_VERSION.sun-jdk6}
