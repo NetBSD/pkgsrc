@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/21 06:00:50 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/06 22:27:36 minskim Exp $
 
 DISTNAME=	dtd
 PKGNAME=	tei-4
@@ -11,12 +11,14 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tei-c.org/
 COMMENT=	DTD of the Text Encoding Initiative
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/dtd
 DIST_SUBDIR=	${PKGNAME_NOREV}nb3
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
-DTDDIR=		${LOCALBASE}/share/xml/tei
+DTDDIR=		${DESTDIR}${PREFIX}/share/xml/tei
 
 XML_CATALOGS=	${DTDDIR}/teicatalog.xml
 
