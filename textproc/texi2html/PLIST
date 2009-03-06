@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/07/30 18:58:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/06 14:34:43 wiz Exp $
 bin/texi2html
 info/texi2html.info
 man/man1/texi2html.1
@@ -6,6 +6,8 @@ share/doc/texi2html/texi2html.html
 share/texi2html/bib-example.texi
 share/texi2html/book.init
 share/texi2html/chm.init
+share/texi2html/docbook.init
+share/texi2html/enable_encoding.init
 share/texi2html/glossary.texi
 share/texi2html/html32.init
 share/texi2html/i18n/de
@@ -90,12 +92,14 @@ share/texi2html/images/xy_up_gr.png
 share/texi2html/inlinestyle.init
 share/texi2html/l2h.init
 share/texi2html/makeinfo.init
+share/texi2html/mediawiki.init
 share/texi2html/my-bib-macros.texi
 share/texi2html/noheaders.init
 share/texi2html/roff.init
 share/texi2html/tex4ht.init
 share/texi2html/utf8.init
 share/texi2html/xhtml.init
+share/texi2html/xml.init
 @dirrm share/texi2html/images
 @dirrm share/texi2html/i18n
 @dirrm share/texi2html
