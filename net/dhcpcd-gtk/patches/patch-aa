@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/03/06 01:55:27 jmcneill Exp $
+
+--- menu.c.orig	2009-03-05 14:23:21.000000000 -0500
++++ menu.c
+@@ -126,7 +126,7 @@ add_scan_results(GtkMenu *menu, const st
+ 		bar = gtk_progress_bar_new();
+ 		gtk_widget_set_size_request(bar, 100, -1);
+ 		gtk_box_pack_end(GTK_BOX(box), bar, FALSE, TRUE, 0);
+-		strength = CLAMP(ifa->quality, 0, 100);
++		strength = CLAMP(ifa->level, 0, 100);
+ 		perc = strength / 100.0;
+ 		gtk_progress_bar_set_fraction(GTK_PROGRESS_BAR(bar), perc);
+ 
