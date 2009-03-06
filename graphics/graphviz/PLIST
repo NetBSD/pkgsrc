@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2009/03/02 11:24:58 tron Exp $
+@comment $NetBSD: PLIST,v 1.29 2009/03/06 07:35:53 wiz Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -410,6 +410,7 @@ ${PLIST.gd}${PLIST.tcl}share/graphviz/doc/pdf/gdtclft.pdf
 @dirrm lib/graphviz/java
 @exec ${MKDIR} %D/lib/graphviz/io
 @dirrm lib/graphviz/io
+@exec ${MKDIR} %D/lib/graphviz/guile
 @dirrm lib/graphviz/guile
 @exec ${MKDIR} %D/lib/graphviz/R
 @dirrm lib/graphviz/R
