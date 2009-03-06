@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/17 21:09:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/03/06 20:41:02 minskim Exp $
 share/texmf-dist/ChangeLog
 share/texmf-dist/LICENSE.texmf
 share/texmf-dist/aliases
@@ -11737,7 +11737,6 @@ share/texmf-dist/tex/generic/bghyph/catmik.tex
 share/texmf-dist/tex/generic/bghyph/mik2t2.tex
 share/texmf-dist/tex/generic/config/fontmath.cfg
 share/texmf-dist/tex/generic/config/fonttext.cfg
-share/texmf-dist/tex/generic/config/language.dat
 share/texmf-dist/tex/generic/config/pdftexconfig.tex
 share/texmf-dist/tex/generic/config/preload.cfg
 share/texmf-dist/tex/generic/context/m-ch-de.tex
@@ -11812,7 +11811,6 @@ share/texmf-dist/tex/generic/hyphen/dehypht.tex
 share/texmf-dist/tex/generic/hyphen/dkcommon.tex
 share/texmf-dist/tex/generic/hyphen/dkhyphen.tex
 share/texmf-dist/tex/generic/hyphen/dkspecial.tex
-share/texmf-dist/tex/generic/hyphen/dumyhyph.tex
 share/texmf-dist/tex/generic/hyphen/eehyph.tex
 share/texmf-dist/tex/generic/hyphen/eohyph.tex
 share/texmf-dist/tex/generic/hyphen/eshyph.tex
@@ -11824,8 +11822,6 @@ share/texmf-dist/tex/generic/hyphen/grhyph.tex
 share/texmf-dist/tex/generic/hyphen/hrhyph.tex
 share/texmf-dist/tex/generic/hyphen/huhyph.tex
 share/texmf-dist/tex/generic/hyphen/huhyphn.tex
-share/texmf-dist/tex/generic/hyphen/hyphen.tex
-share/texmf-dist/tex/generic/hyphen/hypht1.tex
 share/texmf-dist/tex/generic/hyphen/icehyph.tex
 share/texmf-dist/tex/generic/hyphen/inhyph.tex
 share/texmf-dist/tex/generic/hyphen/ithyph.tex
@@ -11845,7 +11841,6 @@ share/texmf-dist/tex/generic/hyphen/skhyph.tex
 share/texmf-dist/tex/generic/hyphen/skhyph2e.tex
 share/texmf-dist/tex/generic/hyphen/srhyphc.tex
 share/texmf-dist/tex/generic/hyphen/trhyph.tex
-share/texmf-dist/tex/generic/hyphen/zerohyph.tex
 share/texmf-dist/tex/generic/localloc/localloc.sty
 share/texmf-dist/tex/generic/mfpic/dvipsnam.mp
 share/texmf-dist/tex/generic/mfpic/grafbase.mp
@@ -13640,7 +13635,6 @@ share/texmf-dist/tex/plain/btxmac/btxmac.tex
 share/texmf-dist/tex/plain/config/aleph.ini
 share/texmf-dist/tex/plain/config/bplain.ini
 share/texmf-dist/tex/plain/config/etex.ini
-share/texmf-dist/tex/plain/config/language.def
 share/texmf-dist/tex/plain/config/omega.ini
 share/texmf-dist/tex/plain/config/pdfbplain.ini
 share/texmf-dist/tex/plain/config/pdfetex.ini
@@ -13720,26 +13714,3 @@ share/texmf-dist/tex/texinfo/txi-tr.tex
 share/texmf-dist/tex/texinfo/vntexinfo.tex
 share/texmf-dist/texdoctk/texdocrc.defaults
 share/texmf-dist/texdoctk/texdoctk.dat
-share/texmf-dist/web2c/amiga-pl.tcx
-share/texmf-dist/web2c/cp1250cs.tcx
-share/texmf-dist/web2c/cp1250pl.tcx
-share/texmf-dist/web2c/cp1250t1.tcx
-share/texmf-dist/web2c/cp227.tcx
-share/texmf-dist/web2c/cp852-cs.tcx
-share/texmf-dist/web2c/cp852-pl.tcx
-share/texmf-dist/web2c/cp8bit.tcx
-share/texmf-dist/web2c/il1-t1.tcx
-share/texmf-dist/web2c/il2-cs.tcx
-share/texmf-dist/web2c/il2-pl.tcx
-share/texmf-dist/web2c/il2-t1.tcx
-share/texmf-dist/web2c/kam-cs.tcx
-share/texmf-dist/web2c/kam-t1.tcx
-share/texmf-dist/web2c/macce-cs.tcx
-share/texmf-dist/web2c/macce-pl.tcx
-share/texmf-dist/web2c/macce-t1.tcx
-share/texmf-dist/web2c/maz-pl.tcx
-share/texmf-dist/web2c/mktex.cnf
-share/texmf-dist/web2c/natural.tcx
-share/texmf-dist/web2c/tcvn-t5.tcx
-share/texmf-dist/web2c/updmap.cfg
-share/texmf-dist/web2c/viscii-t5.tcx
