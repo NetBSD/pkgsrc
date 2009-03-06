@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.65 2009/03/04 23:18:43 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.66 2009/03/06 13:16:45 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -191,3 +191,5 @@ Pullup ticket #2715 - requested by sborrill
 samba: bug fix
 Pullup ticket #2717 - requested by tnn
 libsndfile: security patch
+Pullup ticket #2713 - requested by jmcneill
+hal: bug fixes
