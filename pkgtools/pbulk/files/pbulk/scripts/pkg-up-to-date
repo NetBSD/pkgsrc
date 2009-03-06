@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.4 2009/03/06 13:00:29 tnn Exp $
+# $NetBSD: pkg-up-to-date,v 1.5 2009/03/06 13:05:21 tnn Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -66,5 +66,7 @@ ${pkg_info} -qN ${pkg} | while read dep; do
 		fi
 	done
 	[ $found = 1 ]
-	[ "${packages}/All/${dep}.tgz" -ot "${pkg}" ]
+	if [ "${packages}/All/${dep}.tgz" -nt "${pkg}" ]; then
+		exit 1
+	fi
 done
