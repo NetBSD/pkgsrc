@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.2 2007/06/25 21:38:45 joerg Exp $ */
+/* $NetBSD: client.c,v 1.3 2009/03/06 15:21:17 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -117,7 +117,7 @@ loop:
 	sent_bytes = write(fd, output, output_len);
 	if (sent_bytes == -1)
 		err(1, "Could not write to socket");
-	if (sent_bytes != output_len)
+	if ((size_t)sent_bytes != output_len)
 		errx(1, "Premature end of stream while writing to socket");
 	free(output);
 	goto loop;
