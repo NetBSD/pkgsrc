@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
+share/texmf/tex/generic/config/language.dat
+share/texmf/tex/generic/config/language.def
+share/texmf/tex/generic/config/language.us
+share/texmf/tex/generic/config/language.us.def
+share/texmf/tex/generic/hyphen/dumyhyph.tex
+share/texmf/tex/generic/hyphen/hyphen.tex
+share/texmf/tex/generic/hyphen/hypht1.tex
+share/texmf/tex/generic/hyphen/ushyphmax.tex
+share/texmf/tex/generic/hyphen/zerohyph.tex

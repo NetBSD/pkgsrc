@@ -1,0 +1,117 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/06 17:53:40 minskim Exp $
+
+--- texmf/tex/generic/config/language.dat.orig	2008-11-03 18:37:35.000000000 -0800
++++ texmf/tex/generic/config/language.dat
+@@ -47,112 +47,3 @@ usenglishmax	ushyphmax.tex
+ % 
+ dumylang	dumyhyph.tex    %for testing a new language.
+ nohyphenation	zerohyph.tex    %a language with no patterns at all.
+-% from dehyph-exptl:
+-german-x-2008-06-18 dehypht-x-2008-06-18.tex
+-=german-x-latest
+-ngerman-x-2008-06-18 dehyphn-x-2008-06-18.tex
+-=ngerman-x-latest
+-% from hyphen-ancientgreek:
+-ancientgreek loadhyph-grc.tex
+-ibycus ibyhyph.tex
+-% from hyphen-arabic:
+-arabic zerohyph.tex
+-% from hyphen-basque:
+-basque loadhyph-eu.tex
+-% from hyphen-bulgarian:
+-bulgarian loadhyph-bg.tex
+-% from hyphen-catalan:
+-catalan loadhyph-ca.tex
+-% from hyphen-chinese:
+-pinyin loadhyph-zh-latn.tex
+-% from hyphen-coptic:
+-coptic loadhyph-cop.tex
+-% from hyphen-croatian:
+-croatian loadhyph-hr.tex
+-% from hyphen-czech:
+-czech loadhyph-cs.tex
+-% from hyphen-danish:
+-danish loadhyph-da.tex
+-% from hyphen-dutch:
+-dutch loadhyph-nl.tex
+-% from hyphen-esperanto:
+-esperanto loadhyph-eo.tex
+-% from hyphen-estonian:
+-estonian loadhyph-et.tex
+-% from hyphen-farsi:
+-farsi zerohyph.tex
+-=persian
+-% from hyphen-finnish:
+-finnish loadhyph-fi.tex
+-% from hyphen-french:
+-french loadhyph-fr.tex
+-=patois
+-=francais
+-% from hyphen-galician:
+-galician loadhyph-gl.tex
+-% from hyphen-german:
+-german loadhyph-de-1901.tex
+-ngerman loadhyph-de-1996.tex
+-% from hyphen-greek:
+-monogreek loadhyph-el-monoton.tex
+-greek loadhyph-el-polyton.tex
+-=polygreek
+-% from hyphen-hungarian:
+-hungarian loadhyph-hu.tex
+-% from hyphen-icelandic:
+-icelandic loadhyph-is.tex
+-% from hyphen-indonesian:
+-indonesian loadhyph-id.tex
+-% from hyphen-interlingua:
+-interlingua loadhyph-ia.tex
+-% from hyphen-irish:
+-irish loadhyph-ga.tex
+-% from hyphen-italian:
+-italian loadhyph-it.tex
+-% from hyphen-latin:
+-latin loadhyph-la.tex
+-% from hyphen-lithuanian:
+-lithuanian loadhyph-lt.tex
+-% from hyphen-mongolian:
+-mongolian loadhyph-mn-cyrl.tex
+-mongolian2a loadhyph-mn-cyrl-x-2a.tex
+-% from hyphen-norwegian:
+-bokmal loadhyph-nb.tex
+-=norwegian
+-=norsk
+-nynorsk loadhyph-nn.tex
+-% from hyphen-polish:
+-polish loadhyph-pl.tex
+-% from hyphen-portuguese:
+-portuguese loadhyph-pt.tex
+-=portuges
+-% from hyphen-romanian:
+-romanian loadhyph-ro.tex
+-% from hyphen-russian:
+-russian loadhyph-ru.tex
+-% from hyphen-sanskrit:
+-sanskrit loadhyph-sa.tex
+-% from hyphen-serbian:
+-serbian loadhyph-sr-latn.tex
+-% from hyphen-slovak:
+-slovak loadhyph-sk.tex
+-% from hyphen-slovenian:
+-slovenian loadhyph-sl.tex
+-=slovene
+-% from hyphen-spanish:
+-spanish loadhyph-es.tex
+-=espanol
+-% from hyphen-swedish:
+-swedish loadhyph-sv.tex
+-% from hyphen-turkish:
+-turkish loadhyph-tr.tex
+-% from hyphen-ukenglish:
+-ukenglish loadhyph-en-gb.tex
+-=british
+-=UKenglish
+-% from hyphen-ukrainian:
+-ukrainian loadhyph-uk.tex
+-% from hyphen-uppersorbian:
+-uppersorbian loadhyph-hsb.tex
+-% from hyphen-welsh:
+-welsh loadhyph-cy.tex
