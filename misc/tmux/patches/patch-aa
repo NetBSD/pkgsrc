@@ -1,0 +1,81 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/06 12:16:17 hasso Exp $
+
+Do not add -W* flags to CFLAGS.
+NetBSD has not got strtonum(3) and strnvis(3) so use the compat/
+alternatives.
+Add settings for Darwin, obtained from GNUmakefile.
+Do not use rough install(1) commands, use cleaner INSTALL_* ones.
+
+--- Makefile.orig	2009-02-07 00:36:34.000000000 -0800
++++ Makefile
+@@ -46,10 +46,10 @@ SRCS= tmux.c server.c server-msg.c serve
+       options.c options-cmd.c paste.c colour.c utf8.c clock.c \
+       tty.c tty-term.c tty-keys.c tty-write.c util.c names.c \
+       osdep-unknown.c osdep-openbsd.c osdep-freebsd.c osdep-linux.c \
+-      osdep-darwin.c attributes.c
++      osdep-darwin.c osdep-netbsd.c attributes.c
+ 
+ CC?= cc
+-INCDIRS+= -I. -I- -I/usr/local/include
++INCDIRS+= -I. -I/usr/local/include
+ CFLAGS+= -DMETA="'${META}'"
+ .ifdef PROFILE
+ # Don't use ccache
+@@ -64,10 +64,10 @@ CFLAGS+= -DBUILD="\"$(VERSION) ($(DATE))
+ CFLAGS+= -DBUILD="\"$(VERSION)\""
+ .endif
+ #CFLAGS+= -pedantic -std=c99
+-CFLAGS+= -Wno-long-long -Wall -W -Wnested-externs -Wformat=2
+-CFLAGS+= -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations
+-CFLAGS+= -Wwrite-strings -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
+-CFLAGS+= -Wundef -Wbad-function-cast -Winline -Wcast-align
++#CFLAGS+= -Wno-long-long -Wall -W -Wnested-externs -Wformat=2
++#CFLAGS+= -Wmissing-prototypes -Wstrict-prototypes -Wmissing-declarations
++#CFLAGS+= -Wwrite-strings -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
++#CFLAGS+= -Wundef -Wbad-function-cast -Winline -Wcast-align
+ 
+ PREFIX?= /usr/local
+ INSTALLDIR= install -d
+@@ -80,6 +80,14 @@ LDFLAGS+= -pg
+ .endif
+ LIBS+= -lutil -lncurses
+ 
++# Darwin
++.if ${OS} == "Darwin"
++INCDIRS+= -Icompat
++SRCS+= compat/strtonum.c compat/bsd-poll.c compat/vis.c
++CFLAGS+= -DNO_STRTONUM -DNO_SETRESUID -DNO_SETRESGID -DNO_SETPROCTITLE \
++         -DNO_QUEUE_H -DNO_TREE_H -DBROKEN_POLL
++.endif
++
+ # FreeBSD and DragonFly
+ .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
+ INCDIRS+= -Icompat
+@@ -88,6 +96,15 @@ CFLAGS+= -DUSE_LIBUTIL_H -DNO_QUEUE_H -D
+ LIBS+= -lcrypt
+ .endif
+ 
++# NetBSD
++.if ${OS} == "NetBSD"
++INCDIRS+= -Icompat
++SRCS+= compat/strtonum.c compat/vis.c
++LIBS+= -lcrypt
++CFLAGS+=-DNO_STRTONUM
++.endif
++
++
+ OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
+ 
+ DISTDIR= ${PROG}-${VERSION}
+@@ -134,7 +151,7 @@ update-index.html:
+ 		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
+ 
+ install:	all
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/bin
+-		${INSTALLBIN} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/man/man1
+-		${INSTALLMAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1/
++		${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++		${INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin/${PROG}
++		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++		${INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
