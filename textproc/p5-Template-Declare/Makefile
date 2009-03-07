@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/02/28 20:42:25 seb Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/07 05:38:37 seb Exp $
 
-DISTNAME=	Template-Declare-0.38
+DISTNAME=	Template-Declare-0.39
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Template/}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-ISA-[0-9]*:../../devel/p5-Class-ISA
 DEPENDS+=	p5-String-BufferStack>=1.1:../../textproc/p5-String-BufferStack
 BUILD_DEPENDS+=	p5-HTML-Lint-[0-9]*:../../www/p5-HTML-Lint
-BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
+BUILD_DEPENDS+=	p5-Test-Warn>=0.11:../../devel/p5-Test-Warn
 
 
 .include "../../lang/perl5/module.mk"
