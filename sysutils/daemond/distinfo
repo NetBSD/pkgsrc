@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/07 17:25:14 smb Exp $
+
+SHA1 (daemond-1.0.tar.gz) = 8262aad555e4869c22edcffcd1232525fef88eb4
+RMD160 (daemond-1.0.tar.gz) = 847d0d780910e332474e74bd24e246171401a5ea
+Size (daemond-1.0.tar.gz) = 1628 bytes
