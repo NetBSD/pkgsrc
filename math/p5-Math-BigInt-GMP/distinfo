@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/07 02:19:33 hubertf Exp $
+
+SHA1 (Math-BigInt-GMP-1.23.tar.gz) = cd6a783df0b49f4091a122e68318e5aab838756a
+RMD160 (Math-BigInt-GMP-1.23.tar.gz) = 4c9d530246ebbb69c35c13cf1bd4d8ab2b4c77e3
+Size (Math-BigInt-GMP-1.23.tar.gz) = 42945 bytes
+SHA1 (patch-aa) = 4a861fd398b19938345fad1b781ef34f2408c770
