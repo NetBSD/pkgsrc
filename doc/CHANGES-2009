@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.930 2009/03/07 14:39:32 imil Exp $
+$NetBSD: CHANGES-2009,v 1.931 2009/03/07 15:03:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1259,3 +1259,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libbonoboui to 2.24.1 [wiz 2009-03-07]
 	Updated devel/libgnomeui to 2.24.1 [wiz 2009-03-07]
 	Updated pkgtools/pkg_select to 20080307 [imil 2009-03-07]
+	Updated net/mrtg to 2.16.2nb2 [seb 2009-03-07]
