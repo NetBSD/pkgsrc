@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2008/10/16 13:26:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/03/07 13:40:31 wiz Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -163,6 +163,7 @@ share/locale/af/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/am/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ar/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/as/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/ast/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/az/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/be/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/be@latin/LC_MESSAGES/libgnomeui-2.0.mo
@@ -205,6 +206,7 @@ share/locale/ka/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/kn/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ko/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/ku/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/la/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/li/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lt/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/lv/LC_MESSAGES/libgnomeui-2.0.mo
@@ -246,6 +248,7 @@ share/locale/tk/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/tr/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/tt/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/uk/LC_MESSAGES/libgnomeui-2.0.mo
+share/locale/uz@cyrillic/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/vi/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/wa/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/xh/LC_MESSAGES/libgnomeui-2.0.mo
@@ -258,6 +261,5 @@ share/pixmaps/gnome-about-logo.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/gtk-doc/html/libgnomeui
 @comment in libglade: @dirrm lib/libglade/2.0
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/filesystems
 @dirrm include/libgnomeui-2.0/libgnomeui
 @dirrm include/libgnomeui-2.0
