@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.923 2009/03/07 05:39:26 seb Exp $
+$NetBSD: CHANGES-2009,v 1.924 2009/03/07 08:15:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1252,3 +1252,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added math/p5-Math-BigInt-GMP version 1.23 [hubertf 2009-03-07]
 	Updated net/avahi to 0.6.24nb1 [wiz 2009-03-07]
 	Updated textproc/p5-Template-Declare to 0.39 [seb 2009-03-07]
+	Updated chat/cgiirc to 0.5.9nb2 [seb 2009-03-07]
