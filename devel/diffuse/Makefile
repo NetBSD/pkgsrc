@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/07 03:02:09 wiz Exp $
 #
 
 DISTNAME=	diffuse-0.2.15
@@ -11,11 +11,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://diffuse.sourceforge.net/
 COMMENT=	Graphical tool for merging and comparing text files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	# none
 USE_DIRS=	xdg-1.4 gnome2-1.6
 
-INSTALLATION_DIRS=	bin share/diffuse/syntax share/examples/diffuse
-INSTALLATION_DIRS+=	share/gnome/help/diffuse
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications
+INSTALLATION_DIRS+=	share/diffuse/syntax share/examples/diffuse
+INSTALLATION_DIRS+=	share/gnome/help/diffuse share/pixmaps
 
 CONF_FILES+=	${PREFIX}/share/examples/diffuse/diffuserc \
 		${PKG_SYSCONFDIR}/diffuserc
@@ -39,7 +42,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/usr/bin/diffuse ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/pixmaps/diffuse.png \
-		${PREFIX}/share/pixmaps
+		${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/gnome/help/diffuse/C/diffuse.xml \
 		${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
