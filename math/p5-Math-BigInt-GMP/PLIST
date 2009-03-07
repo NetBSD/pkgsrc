@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/07 02:19:33 hubertf Exp $
+lib/perl5/vendor_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Math/BigInt/GMP/GMP.bs
+lib/perl5/vendor_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Math/BigInt/GMP/GMP.so
+lib/perl5/vendor_perl/man/man3/Math::BigInt::GMP.3
