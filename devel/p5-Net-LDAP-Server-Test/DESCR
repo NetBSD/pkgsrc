@@ -1,0 +1,2 @@
+The Perl 5 module Net::LDAP::Server::Test allows you to test to
+Net::LDAP code without having a real LDAP server available.
