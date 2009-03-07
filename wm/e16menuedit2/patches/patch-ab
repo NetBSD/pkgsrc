@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1 2009/03/07 17:45:20 joerg Exp $
+
+--- Makefile.in.orig	2009-03-07 18:16:23.000000000 +0100
++++ Makefile.in
+@@ -219,15 +219,6 @@ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ yelphelpdir = @yelphelpdir@
+ SUBDIRS = src po pixmaps help
+-e16menuedit2docdir = ${prefix}/${packagedocdir}
+-e16menuedit2doc_DATA = \
+-		README\
+-		COPYING\
+-		AUTHORS\
+-		ChangeLog\
+-		INSTALL\
+-		NEWS\
+-                TODO
+ 
+ GLADE_FILES = e16menuedit2.glade
+ e16menuedit2datadir = ${prefix}/${packagedatadir}/glade
