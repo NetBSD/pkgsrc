@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.933 2009/03/07 15:54:51 seb Exp $
+$NetBSD: CHANGES-2009,v 1.934 2009/03/07 17:27:03 smb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1262,3 +1262,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/mrtg to 2.16.2nb2 [seb 2009-03-07]
 	Updated net/p5-Net-DNS to 0.65nb1 [seb 2009-03-07]
 	Removed net/p5-INET6 [seb 2009-03-07]
+	Added sysutils/daemond version 1.0 [smb 2009-30-07]
