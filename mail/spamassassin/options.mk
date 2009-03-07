@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2007/08/26 17:26:51 heinz Exp $
+# $NetBSD: options.mk,v 1.8 2009/03/07 13:25:19 seb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamassassin
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -112,5 +112,5 @@ MAKE_PARAMS+=		ENABLE_SSL=no
 # Be prepared for IPv6 nameservers
 #
 .if !empty(PKG_OPTIONS:Minet6)
-DEPENDS+=		p5-INET6-[0-9]*:../../net/p5-INET6
+DEPENDS+=		p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 .endif
