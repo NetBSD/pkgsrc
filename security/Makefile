@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2009/03/05 20:37:25 hasso Exp $
+# $NetBSD: Makefile,v 1.347 2009/03/07 02:17:08 jnemeth Exp $
 #
 
 COMMENT=	Security tools
@@ -90,6 +90,7 @@ SUBDIR+=	keepassx
 SUBDIR+=	keychain
 SUBDIR+=	kssh
 SUBDIR+=	kth-krb4
+SUBDIR+=	lasso
 SUBDIR+=	libassuan
 SUBDIR+=	libbf
 SUBDIR+=	libcrack
@@ -249,6 +250,7 @@ SUBDIR+=	py-cryptkit
 SUBDIR+=	py-denyhosts
 SUBDIR+=	py-gnupg
 SUBDIR+=	py-gnutls
+SUBDIR+=	py-lasso
 SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
 SUBDIR+=	py-paramiko
