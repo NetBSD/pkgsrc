@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.638 2009/03/07 02:24:32 jnemeth Exp $
+# $NetBSD: Makefile,v 1.639 2009/03/07 18:41:11 tnn Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -43,7 +43,7 @@ SUBDIR+=	ap-throttle
 SUBDIR+=	ap-xslt
 SUBDIR+=	ap2-auth-external
 SUBDIR+=	ap2-auth-ldap
-SUDBID+=	ap2-auth-mellon
+SUBDIR+=	ap2-auth-mellon
 SUBDIR+=	ap2-auth-mysql
 SUBDIR+=	ap2-auth-ntlm
 SUBDIR+=	ap2-auth-pgsql
@@ -438,7 +438,7 @@ SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
 SUBDIR+=	py-rss2gen
-SUDBID+=	py-scgi
+SUBDIR+=	py-scgi
 SUBDIR+=	py-simpletal
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-webpy
