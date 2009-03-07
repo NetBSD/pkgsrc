@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.16 2009/03/05 23:07:15 joerg Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.17 2009/03/07 19:36:31 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -128,7 +128,11 @@ ${_DDIR}: ${_DLIST}
 
 .if ${PKGTOOLS_VERSION} >= 20090302
 ${_DLIST}: ${WRKDIR}
-	${PKG_INFO} -qr "${PKGWILDCARD}" > ${_DLIST}
+	if ${PKG_INFO} -qe "${PKGWILDCARD}"; then \
+		${PKG_INFO} -qr "${PKGWILDCARD}" > ${_DLIST}; \
+	else \
+		${TOUCH} ${_DLIST}; \
+	fi
 .elif ${PKGTOOLS_VERSION} >= 20090225
 ${_DLIST}: ${WRKDIR}
 	${RUN}echo "Please update to pkg_install-20090302 or later" 2>&1
