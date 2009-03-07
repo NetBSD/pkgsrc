@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2009/02/22 16:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/03/07 15:34:40 seb Exp $
 
 DISTNAME=		Net-DNS-0.65
+PKGREVISION=		1
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ndn
 CATEGORIES=		net perl5
@@ -27,7 +28,7 @@ PKG_SUGGESTED_OPTIONS=	inet6
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
-DEPENDS+=		p5-INET6>=2.01:../../net/p5-INET6
+DEPENDS+=		p5-IO-Socket-INET6>=2.01:../../net/p5-IO-Socket-INET6
 DEPENDS+=		p5-Socket6-[0-9]*:../../net/p5-Socket6
 MAKE_PARAMS+=		--IPv6-tests
 .else
