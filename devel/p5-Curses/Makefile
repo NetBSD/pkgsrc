@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2009/01/19 00:16:26 he Exp $
+# $NetBSD: Makefile,v 1.36 2009/03/08 19:13:42 he Exp $
 
-DISTNAME=	Curses-1.26
+DISTNAME=	Curses-1.27
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cur
 CATEGORIES=	devel perl5
@@ -25,7 +25,6 @@ MAKE_PARAMS+=	PANELS
 
 pre-configure:
 	@${LN} -sf ${WRKSRC}/hints/c-netbsd.ncurses.h ${WRKSRC}/c-config.h
-	@${RM} -f ${WRKSRC}/Curses.i ${WRKSRC}/Curses.s
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
