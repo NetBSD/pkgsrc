@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.10 2009/02/05 16:06:55 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.11 2009/03/08 17:26:23 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: build.c,v 1.10 2009/02/05 16:06:55 joerg Exp $");
+__RCSID("$NetBSD: build.c,v 1.11 2009/03/08 17:26:23 joerg Exp $");
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -130,7 +130,8 @@ write_entry(struct archive *archive, struct archive_entry *entry)
 	}
 
 	if (archive_write_header(archive, entry)) {
-		errx(2, "cannot write to archive: %s",
+		errx(2, "cannot write %s to archive: %s",
+		    archive_entry_pathname(entry),
 		    archive_error_string(archive));
 	}
 
