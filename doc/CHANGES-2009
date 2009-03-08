@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.944 2009/03/08 19:17:51 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.945 2009/03/08 19:52:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1275,3 +1275,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/milter-greylist to 4.0.1nb2 [tron 2009-03-08]
 	Updated pkgtools/pkg_select to 20090308 [imil 2009-03-08]
 	Updated print/html2ps to 1.0b4nb5 [minskim 2009-03-08]
+	Added devel/p5-Net-LDAP-Batch version 0.02 [seb 2009-03-08]
