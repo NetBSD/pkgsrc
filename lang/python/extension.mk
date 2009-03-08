@@ -1,14 +1,4 @@
-# $NetBSD: extension.mk,v 1.23 2009/03/05 18:51:30 joerg Exp $
-
-# derive a python version from the package name if possible
-# optionally handled quoted package names
-.if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
-    defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
-PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
-.elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
-      defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
-PYTHON_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
-.endif
+# $NetBSD: extension.mk,v 1.24 2009/03/08 17:05:10 joerg Exp $
 
 .include "../../lang/python/pyversion.mk"
 
