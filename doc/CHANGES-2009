@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.940 2009/03/08 10:22:37 seb Exp $
+$NetBSD: CHANGES-2009,v 1.941 2009/03/08 13:30:47 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1269,3 +1269,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/x11-links to 0.43 [snj 2009-03-08]
 	Added devel/topgit version 0.7 [minskim 2009-03-08]
 	Updated devel/p5-Rose-Object to 0.855 [seb 2009-03-08]
+	Removed textproc/p5-XML-SAX-Base [seb 2009-03-08]
+	Updated textproc/p5-XML-SAX-Writer to 0.52nb1 [seb 2009-03-08]
+	Updated textproc/p5-XML-SAX to 0.96nb2 [seb 2009-03-08]
