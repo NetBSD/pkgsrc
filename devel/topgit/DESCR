@@ -1,0 +1,6 @@
+TopGit aims to make handling of large amount of interdependent topic
+branches easier.  In fact, it is designed especially for the case when
+you maintain a queue of third-party patches on top of another (perhaps
+Git-controlled) project and want to easily organize, maintain and
+submit them.  TopGit achieves that by keeping a separate topic branch
+for each patch and providing few tools to maintain the branches.

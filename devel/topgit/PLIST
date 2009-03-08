@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/08 05:58:07 minskim Exp $
+bin/tg
+libexec/topgit/hooks/pre-commit
+libexec/topgit/tg-create
+libexec/topgit/tg-delete
+libexec/topgit/tg-depend
+libexec/topgit/tg-export
+libexec/topgit/tg-import
+libexec/topgit/tg-info
+libexec/topgit/tg-mail
+libexec/topgit/tg-patch
+libexec/topgit/tg-remote
+libexec/topgit/tg-summary
+libexec/topgit/tg-update
+share/topgit/tg-create.txt
+share/topgit/tg-delete.txt
+share/topgit/tg-depend.txt
+share/topgit/tg-export.txt
+share/topgit/tg-import.txt
+share/topgit/tg-info.txt
+share/topgit/tg-mail.txt
+share/topgit/tg-patch.txt
+share/topgit/tg-remote.txt
+share/topgit/tg-summary.txt
+share/topgit/tg-update.txt
+@dirrm share/topgit
+@dirrm libexec/topgit/hooks
+@dirrm libexec/topgit
