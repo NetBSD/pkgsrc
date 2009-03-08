@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.6 2008/10/10 01:56:38 bjs Exp $
+# $NetBSD: options.mk,v 1.7 2009/03/08 23:41:33 bjs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.aria2
 
 PKG_OPTIONS_GROUP.ssl=		gnutls ssl
-PKG_OPTIONS_GROUP.asyncns=	ares cares
-PKG_OPTIONS_REQUIRED_GROUPS=	ssl asyncns
+PKG_OPTIONS_REQUIRED_GROUPS=	ssl
 
 PKG_SUPPORTED_OPTIONS=		sqlite firefox3
-PKG_SUGGESTED_OPTIONS=		ssl cares
+PKG_SUGGESTED_OPTIONS=		ssl
 ###
 ### XXX Remove this in the future [2008-04-15 bjs]
 ###
@@ -30,17 +29,6 @@ CONFIGURE_ARGS+=	--with-gnutls=no
 CONFIGURE_ARGS+=	--with-gnutls
 CONFIGURE_ARGS+=	--with-openssl=no
 .  include "../../security/gnutls/buildlink3.mk"
-.endif
-###
-###	asynchronous resolver library.
-###
-.if !empty(PKG_OPTIONS:Mcares)
-CONFIGURE_ARGS+=	--with-libares=no
-CONFIGURE_ARGS+=	--with-libcares-prefix=${BUILDLINK_PREFIX.libcares:Q}
-.  include "../../net/libcares/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mares)
-CONFIGURE_ARGS+=	--with-libcares=no
-CONFIGURE_ARGS+=	--with-libares-prefix=${BUILDLINK_PREFIX.libares:Q}
 .endif
 ###
 ###	firefox3 cookie	support via sqlite3
