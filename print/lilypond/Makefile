@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2009/03/08 15:56:47 wiz Exp $
 #
 
 DISTNAME=	lilypond-2.10.33
@@ -46,6 +46,6 @@ DEPENDS+=	potrace>=1.8:../../graphics/potrace
 .include "../../fonts/mftrace/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
