@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.47 2009/02/13 11:21:07 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.48 2009/03/08 14:50:36 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.47 2009/02/13 11:21:07 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.48 2009/03/08 14:50:36 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
@@ -70,6 +70,10 @@ __RCSID("$NetBSD: main.c,v 1.47 2009/02/13 11:21:07 joerg Exp $");
 #endif
 #if HAVE_STRING_H
 #include <string.h>
+#endif
+
+#ifndef BOOTSTRAP
+#include <archive.h>
 #endif
 
 #include "admin.h"
@@ -534,12 +538,11 @@ main(int argc, char *argv[])
 		audit_history(--argc, ++argv);
 	} else if (strcasecmp(argv[0], "check-signature") == 0) {
 		struct archive *pkg;
-		void *cookie;
 		int rc;
 
 		rc = 0;
 		for (--argc, ++argv; argc > 0; --argc, ++argv) {
-			pkg = open_archive(*argv, &cookie);
+			pkg = open_archive(*argv);
 			if (pkg == NULL) {
 				warnx("%s could not be opened", *argv);
 				continue;
@@ -547,7 +550,7 @@ main(int argc, char *argv[])
 			if (pkg_full_signature_check(&pkg))
 				rc = 1;
 			if (!pkg)
-				close_archive(pkg);
+				archive_read_finish(pkg);
 		}
 		return rc;
 	} else if (strcasecmp(argv[0], "x509-sign-package") == 0) {
