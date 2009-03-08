@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/08 05:58:07 minskim Exp $
+
+SHA1 (topgit_0.7.orig.tar.gz) = 65205aea0dafc7af2ea6557b221a11020f77a27b
+RMD160 (topgit_0.7.orig.tar.gz) = 999adb246d35502510db92d9cc707cadf117ac40
+Size (topgit_0.7.orig.tar.gz) = 23437 bytes
