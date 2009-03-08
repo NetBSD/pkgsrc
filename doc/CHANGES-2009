@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.942 2009/03/08 15:54:39 tron Exp $
+$NetBSD: CHANGES-2009,v 1.943 2009/03/08 16:15:44 imil Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1273,3 +1273,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-SAX-Writer to 0.52nb1 [seb 2009-03-08]
 	Updated textproc/p5-XML-SAX to 0.96nb2 [seb 2009-03-08]
 	Updated mail/milter-greylist to 4.0.1nb2 [tron 2009-03-08]
+	Updated pkgtools/pkg_select to 20090308 [imil 2009-03-08]
