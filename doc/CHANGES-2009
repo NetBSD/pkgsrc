@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.945 2009/03/08 19:52:52 seb Exp $
+$NetBSD: CHANGES-2009,v 1.946 2009/03/08 23:28:15 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1276,3 +1276,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_select to 20090308 [imil 2009-03-08]
 	Updated print/html2ps to 1.0b4nb5 [minskim 2009-03-08]
 	Added devel/p5-Net-LDAP-Batch version 0.02 [seb 2009-03-08]
+	Updated devel/p5-Config-IniFiles to 2.47 [he 2009-03-08]
+	Updated devel/p5-Curses to 1.27 [he 2009-03-08]
