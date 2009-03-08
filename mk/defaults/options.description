@@ -323,6 +323,7 @@ pgsql			Enable PostgreSQL support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
 png			Enable PNG support.
+postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
@@ -354,6 +355,7 @@ scapy-pyx		Add in py-X support
 scmgit-gui		Build the GUI in Tcl/Tk.
 sdl			Use SDL as display library.
 seamonkey		Use seamonkey as gecko rendering engine.
+sendmail-milter		Build the milter with support for the Sendmail MTA.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 serialconsole		Enable use of serial console
 sieve			Enable sieve support.
