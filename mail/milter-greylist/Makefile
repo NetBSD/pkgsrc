@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2009/01/19 06:16:38 obache Exp $
+# $NetBSD: Makefile,v 1.40 2009/03/08 15:54:26 tron Exp $
 
 DISTNAME=	milter-greylist-4.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -16,22 +16,22 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--with-user=smmsp
-
 BUILD_TARGET=		milter-greylist
 
-PKG_GROUPS=		smmsp
-PKG_USERS=		smmsp:smmsp
-PKG_GECOS.smmsp=	Sendmail Message Submission Program
-
-RCD_SCRIPTS=	milter-greylist
+RCD_SCRIPTS=		milter-greylist
 
 .include "options.mk"
 
+CONFIGURE_ARGS+=	--with-user=${MILTER_USER}
+BUILD_DEFS+=		MILTER_USER
+FILES_SUBST+=		MILTER_USER=${MILTER_USER:Q}
+
+INSTALLATION_DIRS+=	share/doc/milter-greylist
+INSTALLATION_DIRS+=	share/examples/milter-greylist
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/milter-greylist
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/milter-greylist
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/milter-greylist
+	${INSTALL_DATA} ${WRKSRC}/README \
+	  ${DESTDIR}${PREFIX}/share/doc/milter-greylist
 	${INSTALL_DATA} ${WRKSRC}/greylist.conf \
 	  ${DESTDIR}${PREFIX}/share/examples/milter-greylist
 
