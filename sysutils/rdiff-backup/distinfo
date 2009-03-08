@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2009/02/18 09:40:10 wiz Exp $
+$NetBSD: distinfo,v 1.14 2009/03/08 23:38:51 snj Exp $
 
-SHA1 (rdiff-backup-1.2.6.tar.gz) = 3c530d48b20cad656d3842bca283336d01dd128c
-RMD160 (rdiff-backup-1.2.6.tar.gz) = a6805968f87ca6fda591661b38dbd73591fcc842
-Size (rdiff-backup-1.2.6.tar.gz) = 196104 bytes
+SHA1 (rdiff-backup-1.2.7.tar.gz) = 646b02d78e235479e99b2ad595d8df691e999a1e
+RMD160 (rdiff-backup-1.2.7.tar.gz) = d6eaf8416d8a3de5de158810d3d515cba3a3b02c
+Size (rdiff-backup-1.2.7.tar.gz) = 196205 bytes
