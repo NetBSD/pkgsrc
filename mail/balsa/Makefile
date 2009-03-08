@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/01/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2009/03/08 15:56:46 wiz Exp $
 
 DISTNAME=	balsa-2.3.26
 CATEGORIES=	mail gnome
@@ -54,7 +54,7 @@ BUILDLINK_API_DEPENDS.gmime+=	gmime>=2.1.9
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/gtkhtml314/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"

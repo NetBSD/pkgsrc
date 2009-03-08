@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/01/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/03/08 15:56:43 wiz Exp $
 #
 
 DISTNAME=	streamtuner-0.99.99
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "options.mk"
 
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

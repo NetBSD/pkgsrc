@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/01/04 18:00:58 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/08 15:56:43 wiz Exp $
 #
 
 DISTNAME=		sound-juicer-2.24.0
@@ -45,7 +45,7 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.5
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../x11/gtk2/buildlink3.mk"
