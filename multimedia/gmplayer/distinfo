@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.62 2009/02/03 12:40:47 drochner Exp $
+$NetBSD: distinfo,v 1.63 2009/03/08 14:04:29 wiz Exp $
 
 SHA1 (gmplayer-1.0rc10-20060123/AlienMind-1.2.tar.bz2) = 34370da1e003e4accceae194a63483aa6eebc4dc
 RMD160 (gmplayer-1.0rc10-20060123/AlienMind-1.2.tar.bz2) = f3fda7d44a59f98097162f76d0a0d58840974998
@@ -63,7 +63,7 @@ Size (gmplayer-1.0rc10-20060123/xanim-1.6.tar.bz2) = 94564 bytes
 SHA1 (gmplayer-1.0rc10-20060123/xine-lcd-1.2.tar.bz2) = 2fa7811e0dc7316d0c996b0a5bc37f5c97d1dd18
 RMD160 (gmplayer-1.0rc10-20060123/xine-lcd-1.2.tar.bz2) = 785f6826d49eddabd7ebc431db77139771f208f5
 Size (gmplayer-1.0rc10-20060123/xine-lcd-1.2.tar.bz2) = 172270 bytes
-SHA1 (patch-aa) = 66237776593acde3de025d485285978e63b4996a
+SHA1 (patch-aa) = ebcbff0b8d0914aaaf89d8388bc9e04229680658
 SHA1 (patch-ab) = 29bf59ecb3d283708ae1c5002d1fa71cac627cc9
 SHA1 (patch-ac) = 6d0de4bd41d9842ea1bf46e9fbe60bf6a943b913
 SHA1 (patch-ad) = d0b72eaa5e63d2cfd7828ea1a9973f1728c607b5
