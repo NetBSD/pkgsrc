@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/01/25 07:05:14 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/08 23:41:33 bjs Exp $
 #
 
-DISTNAME=	aria2c-0.16.2
-PKGNAME=	${DISTNAME:S/+/./:S/2c-/2-/}
-PKGREVISION=	2
+DISTNAME=	aria2-1.2.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
 EXTRACT_SUFX=	.tar.bz2
@@ -42,6 +40,7 @@ CONFIGURE_ARGS+=	--disable-xmltest
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
