@@ -1,0 +1,3 @@
+The Perl 5 module Net::LDAP::Batch provides the means to perform
+series of actions against a LDAP server. If any of the actions
+fails, then all the actions in the batch are reverted.
