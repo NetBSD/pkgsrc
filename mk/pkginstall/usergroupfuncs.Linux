@@ -1,4 +1,4 @@
-# $NetBSD: usergroupfuncs.Linux,v 1.4 2009/02/02 19:54:22 joerg Exp $
+# $NetBSD: usergroupfuncs.Linux,v 1.5 2009/03/08 19:39:03 joerg Exp $
 #
 # Platform-specific adduser and addgroup functionality
 # on top of shadow-utils.  (Not libuser)
@@ -83,6 +83,30 @@ user_exists()
 	${RM} -fr $_tmpdir; return 3
 }
 
+# The useradd command on Linux is a complete mess.
+# At least Red Hat derivatives want to create home directories
+# by default. They have support for -M, but no --help.
+# Other Linux distributions lack -M support, some at least have
+# --help.
+# LSB just wants useradd, but doesn't specify any behavior, so
+# it is useless for writing portable scripts.
+
+call_useradd()
+{
+	case $userid in
+	"")
+		${USERADD}					\
+			-c "$descr" -d "$home" -s "$shell"	\
+			-g $group $user "$@"
+		;;
+	*)
+		${USERADD}					\
+			-c "$descr" -d "$home" -s "$shell"	\
+			-g $group -u $userid $user "$@"
+		;;
+	esac
+}
+
 # adduser user group [userid] [descr] [home] [shell]
 adduser()
 {
@@ -104,18 +128,11 @@ adduser()
 
 	if ${TEST} -n "${USERADD}" -a -x "${USERADD}"; then
 		${ECHO} "${PKGNAME}: Creating user \`\`$user''"
-		case $userid in
-		"")
-			${USERADD}					\
-				-c "$descr" -d "$home" -s "$shell"	\
-				-g $group $user -M
-			;;
-		*)
-			${USERADD}					\
-				-c "$descr" -d "$home" -s "$shell"	\
-				-g $group -u $userid $user -M
-			;;
-		esac
+		if grep -i -- "^CREATE_HOME.*yes" /etc/login.defs > /dev/null; then
+			call_useradd -M
+		else
+			call_useradd
+		fi
 	fi
 	return 0
 }
