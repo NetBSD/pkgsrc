@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7883 2009/03/06 15:20:37 wiz Exp $
+$NetBSD: TODO,v 1.7884 2009/03/08 15:29:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -492,6 +492,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cross-h8300-hms-binutils-2.17
 	o crypto++-523
 	o cuetools-1.3.1
+	o cups-1.4
 	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.2.0
@@ -536,6 +537,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
+	o eigen2-2.0.0
 	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -550,7 +552,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epic4-2.6
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.3.0 [now called eric4]
+	o eric3-4.3.1 [now called eric4]
 	o erlang-12b3
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -558,7 +560,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o evolution-exchange-2.24.5
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -603,6 +604,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
+	o gbdfed-1.5
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
@@ -617,6 +619,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geda-1.5.1.20081221
 	o geeklog-1.5.2
 	o genius-1.0.5
+	o gentoo-0.15.1
 	o gettext-0.17
 	o gettext-m4-0.17
 	o gforth-0.7.0
@@ -637,6 +640,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-netstatus-2.26.0
+	o gnome-packagekit-0.4.4
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -658,6 +663,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gpsdrive-2.09
 	o gramofile-1.6P
 	o granulate-0.2
+	o graphviz-2.22.0
 	o grep-2.5.4
 	o gsasl-1.0
 	o gsharutils-4.7
@@ -708,7 +714,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-3.05
+	o ikiwiki-3.06
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.13
 	o intercal-0.24
@@ -768,6 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libast-0.7
 	o libcares-1.6.0
 	o libchewing-0.3.0
+	o libdaemon-0.13
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libdrm-2.4.5
@@ -791,6 +798,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.0
 	o libole2-2.2.8
+	o libosip-3.3.0
+	o libotf-0.9.9
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
@@ -801,6 +810,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libv4l-0.5.8
+	o libvolume_id-0.81.1
 	o libxml++-2.24.3
 	o licq-1.3.6
 	o liferea-1.4.25
@@ -867,7 +877,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mksh-36b
-	o mkvtoolnix-2.5.2
+	o mkvtoolnix-2.5.3
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -876,6 +886,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
+	o mpfr-2.4.1
 	o mpg123-1.6.4
 	o mpop-1.0.16
 	o mserv-devel-0.41
@@ -954,11 +965,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Archive-Tar-1.46
 	o p5-DBD-Sybase-1.08
+	o p5-Filter-1.36
 	o p5-Net-Twitter-2.10 [pkg/40812]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
+	o packagekit-0.4.4
 	o pam-smbpass-3.0.13
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
@@ -971,7 +985,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pear-Console_Table-1.1.3
 	o pear-DB-1.7.13
 	o pear-Date-1.5.0a1
-	o pear-HTTP_Request-1.4.0
+	o pear-HTTP_Request-1.4.4
 	o pear-Image_Canvas-0.3.0
 	o pear-Image_Graph-0.7.2
 	o pear-Log-1.9.6
@@ -979,6 +993,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pear-Net_SMTP-1.3.2
 	o pear-Net_Sieve-1.1.5
 	o pear-Net_Socket-1.0.9
+	o pear-Net_URL-1.0.15
 	o pear-Numbers_Roman-1.0.1
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
@@ -1043,6 +1058,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-checker-0.8.17
+	o py-cups-1.9.45
+	o py-dateutil-1.4
 	o py-dns-2.3.3
 	o py-fpconst-0.7.3
 	o py-gnosis-1.2.2
@@ -1169,7 +1186,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1
 	o scm-5e5
-	o scmgit-base-1.6.1.3
+	o scmgit-base-1.6.2
+	o scmgit-docs-1.6.2
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sendfile-20010424
@@ -1237,9 +1255,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-23.1.1
+	o tea-23.2.0
 	o ted-2.17
 	o ted-en-us-2.17
+	o telepathy-gabble-0.7.22
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
 	o thin-1.0.0
@@ -1297,6 +1316,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vym-1.12.0 [pkg/39455]
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
+	o warzone2100-2.1.2
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.4
 	o webby-0.9.3
@@ -1309,14 +1329,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o wmx-7
-	o worker-2.17.1
+	o worker-2.17.2
 	o wpa_gui-0.6.4 [pkg/39811]
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9e
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090228
+	o x264-devel-20090307
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
