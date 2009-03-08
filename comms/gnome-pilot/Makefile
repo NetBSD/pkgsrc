@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2009/02/18 20:06:57 ahoka Exp $
+# $NetBSD: Makefile,v 1.47 2009/03/08 15:56:44 wiz Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.17
@@ -30,6 +30,6 @@ CONFIGURE_ARGS+=	--with-vfs
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

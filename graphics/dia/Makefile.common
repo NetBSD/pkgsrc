@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2009/01/12 16:20:38 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.22 2009/03/08 15:56:45 wiz Exp $
 #
 
 DISTNAME=	dia-0.96.1
@@ -57,5 +57,5 @@ BUILDLINK_DEPMETHOD.gtk2+=		build
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"

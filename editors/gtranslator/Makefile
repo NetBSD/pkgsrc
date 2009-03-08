@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/01/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/03/08 15:56:45 wiz Exp $
 
 DISTNAME=	gtranslator-1.1.7
 PKGREVISION=	4
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--disable-debug
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

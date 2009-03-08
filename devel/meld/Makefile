@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/08 15:56:44 wiz Exp $
 #
 
 DISTNAME=		meld-1.2.1
@@ -35,5 +35,5 @@ post-install:
 	${RMDIR} ${DESTDIR}${PREFIX}/share/doc/meld
 
 .include "../../lang/python/application.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

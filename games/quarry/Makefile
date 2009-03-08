@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/08 15:56:45 wiz Exp $
 #
 
 DISTNAME=	quarry-0.2.0
@@ -20,5 +20,5 @@ USE_TOOLS+=		gmake pkg-config
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/01/04 18:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/08 15:56:46 wiz Exp $
 #
 
 DISTNAME=		genius-1.0.3
@@ -29,7 +29,7 @@ do-test:
 .include "../../devel/readline/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
