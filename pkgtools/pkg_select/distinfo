@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/03/07 14:26:27 imil Exp $
+$NetBSD: distinfo,v 1.7 2009/03/08 16:13:24 imil Exp $
 
-SHA1 (pkg_select-20080307.tar.gz) = 26f6436040b16cdb94ced5b8a57d1bada1ee1940
-RMD160 (pkg_select-20080307.tar.gz) = 4e719a10ff1ed21758d13910322a99b8874fc079
-Size (pkg_select-20080307.tar.gz) = 55657 bytes
+SHA1 (pkg_select-20090308.tar.gz) = f4a4f40927631d16ee563671ce98e69843382c93
+RMD160 (pkg_select-20090308.tar.gz) = d265f8e18ee4500e2ac34ba2d105acff28cc7e91
+Size (pkg_select-20090308.tar.gz) = 54637 bytes
