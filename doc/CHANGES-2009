@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.939 2009/03/08 05:59:33 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.940 2009/03/08 10:22:37 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1268,3 +1268,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated openldap to 2.4.15 [manu 2009-03-07]
 	Updated pkgtools/x11-links to 0.43 [snj 2009-03-08]
 	Added devel/topgit version 0.7 [minskim 2009-03-08]
+	Updated devel/p5-Rose-Object to 0.855 [seb 2009-03-08]
