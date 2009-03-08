@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/03/07 14:26:27 imil Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/08 16:13:24 imil Exp $
 #
 
-DISTNAME=	pkg_select-20080307
+DISTNAME=	pkg_select-20090308
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
