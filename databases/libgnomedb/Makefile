@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2009/01/04 18:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2009/03/08 15:56:44 wiz Exp $
 #
 
 DISTNAME=		libgnomedb-3.0.0
@@ -32,7 +32,7 @@ BUILDLINK_API_DEPENDS.libgda+=	libgda>=3.0.0
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

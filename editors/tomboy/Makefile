@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/07 16:17:51 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/08 15:56:45 wiz Exp $
 #
 
 DISTNAME=		tomboy-0.12.2
@@ -37,7 +37,7 @@ BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3.1
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-.include "../../textproc/rarian/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
