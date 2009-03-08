@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.3 2008/09/15 17:33:26 taca Exp $
+# $NetBSD: Makefile.squid,v 1.4 2009/03/08 11:39:23 apb Exp $
 #
 # used by www/squid26/Makefile
 # used by www/squid27/Makefile
@@ -58,8 +58,9 @@ SUBST_MESSAGE.confs=	Fixing configuration files.
 CHECK_PORTABILITY_SKIP+=	icons/icons.shar
 
 INSTALL_TARGET=		install install-pinger
-INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin ${DOCDIR} \
-			${EGDIR} share/squid/errors share/squid/icons
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin \
+			share/squid share/squid/errors share/squid/icons \
+			${DOCDIR} ${EGDIR}
 
 post-install:
 .for f in ${EGFILES}
