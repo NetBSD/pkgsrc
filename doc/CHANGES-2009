@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.937 2009/03/07 22:26:22 manu Exp $
+$NetBSD: CHANGES-2009,v 1.938 2009/03/08 00:05:45 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1265,4 +1265,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/daemond version 1.0 [smb 2009-03-07]
 	Removed cad/ipal-current [snj 2009-03-07]
 	Added devel/p5-Net-LDAP-Server-Test version 0.80.100 [seb 2009-03-07]
-	Updated openldap to 2.4.15 [manu 2009-08-07]
+	Updated openldap to 2.4.15 [manu 2009-03-07]
+	Updated pkgtools/x11-links to 0.43 [snj 2009-03-08]
