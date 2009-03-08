@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: milter-greylist.sh,v 1.3 2006/02/11 23:14:15 seb Exp $
+# $NetBSD: milter-greylist.sh,v 1.4 2009/03/08 15:54:26 tron Exp $
 #
 
 # PROVIDE: milter-greylist
@@ -10,7 +10,7 @@
 name="miltergreylist"
 rcvar="miltergreylist"
 command="@PREFIX@/bin/milter-greylist"
-command_args="-p /var/milter-greylist/milter-greylist.sock -u smmsp"
+command_args="-p /var/milter-greylist/milter-greylist.sock -u @MILTER_USER@"
 
 if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
 	. /etc/rc.subr
