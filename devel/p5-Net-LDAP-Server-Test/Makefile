@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/07 22:10:47 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/08 22:03:50 seb Exp $
 #
 
 DISTNAME=	Net-LDAP-Server-Test-0.08_01
@@ -14,6 +14,7 @@ DEPENDS+=	p5-Net-LDAP-Server-[0-9]*:../../net/p5-Net-LDAP-Server
 DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
 
+USE_LANGUAGES=		# empty
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/LDAP/Server/Test/.packlist
