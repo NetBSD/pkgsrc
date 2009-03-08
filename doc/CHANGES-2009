@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.946 2009/03/08 23:28:15 he Exp $
+$NetBSD: CHANGES-2009,v 1.947 2009/03/08 23:39:54 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1278,3 +1278,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Net-LDAP-Batch version 0.02 [seb 2009-03-08]
 	Updated devel/p5-Config-IniFiles to 2.47 [he 2009-03-08]
 	Updated devel/p5-Curses to 1.27 [he 2009-03-08]
+	Updated sysutils/rdiff-backup to 1.2.7 [snj 2009-03-08]
