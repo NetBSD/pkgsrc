@@ -1,0 +1,60 @@
+$NetBSD: patch-ba,v 1.1 2009/03/09 21:24:00 manu Exp $
+--- devtools/OS/NetBSD.orig	2008-11-09 16:26:18.000000000 +0100
++++ devtools/OS/NetBSD	2008-11-09 16:28:06.000000000 +0100
+@@ -7,3 +7,3 @@
+ define(`confLIBS', `-lutil')
+-define(`confENVDEF', ` -DNETISO')
++define(`confENVDEF', ` -DNETISO -D_FFR_GETPWNAM_R')
+ define(`confDEPEND_TYPE', `CC-M')
+--- libsm/mbdb.c.orig	2003-12-10 04:19:07.000000000 +0100
++++ libsm/mbdb.c	2008-11-09 17:02:31.000000000 +0100
+@@ -313,8 +313,12 @@
+ 	char *name;
+ 	SM_MBDB_T *user;
+ {
+ 	struct passwd *pw;
++#ifdef _FFR_GETPWNAM_R
++	struct passwd pwres;
++	char pwbuf[1024];
++#endif
+ 
+ #ifdef HESIOD
+ 	/* DEC Hesiod getpwnam accepts numeric strings -- short circuit it */
+ 	{
+@@ -327,31 +331,16 @@
+ 			return EX_NOUSER;
+ 	}
+ #endif /* HESIOD */
+ 
+-	errno = 0;
++#ifdef _FFR_GETPWNAM_R
++	if (getpwnam_r(name, &pwres, pwbuf, sizeof(pwbuf), &pw) != 0)
++		return EX_TEMPFAIL;
++#else
+ 	pw = getpwnam(name);
++#endif
+ 	if (pw == NULL)
+-	{
+-#if 0
+-		/*
+-		**  getpwnam() isn't advertised as setting errno.
+-		**  In fact, under FreeBSD, non-root getpwnam() on
+-		**  non-existant users returns NULL with errno = EPERM.
+-		**  This test won't work.
+-		*/
+-		switch (errno)
+-		{
+-		  case 0:
+-			return EX_NOUSER;
+-		  case EIO:
+-			return EX_OSERR;
+-		  default:
+-			return EX_TEMPFAIL;
+-		}
+-#endif /* 0 */
+ 		return EX_NOUSER;
+-	}
+ 
+ 	sm_mbdb_frompw(user, pw);
+ 	return EX_OK;
+ }
