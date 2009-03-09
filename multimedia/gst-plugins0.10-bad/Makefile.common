@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2009/01/26 10:42:02 drochner Exp $
+# $NetBSD: Makefile.common,v 1.9 2009/03/09 16:02:07 drochner Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faad/Makefile
@@ -15,6 +15,7 @@ GST_PLUGINS0.10_VER=	0.10.10
 .for driver in	amrwb \
 		cdaudio \
 		dfbvideosink \
+		dvdnav \
 		divx \
 		tsdec \
 		faac \
