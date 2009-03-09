@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2009/03/09 16:46:02 sno Exp $
+# used by archivers/sapcar/Makefile
+# used by devel/sapnwrfcsdk/Makefile
+
+EMUL_PLATFORMS?=	linux-x86_64 linux-i386 linux-powerpc64 linux-ia64 \
+			aix-powerpc hpux-ia64 hpux-hppa solaris-x86_64 \
+			solaris-sparc windows-x86_64 windows-i586 \
+			windows-ia64
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${EMUL_PLATFORM} == "none"
+SAP_OPSYS=		${LOWER_OPSYS}
+SAP_ARCH=		${MACHINE_ARCH}
+.else
+SAP_OPSYS=		${EMUL_OPSYS}
+SAP_ARCH=		${EMUL_ARCH}
+.endif
+
+MASTER_SITES?=		# empty
+DIST_SUBDIR?=		sap/${SAP_OPSYS}-${SAP_ARCH}
+EXTRACT_SUFX?=		.SAR
+
+HOMEPAGE?=		http://www.sap.com/
+
+WRKSRC?=		${WRKDIR}
+BUILD_DIRS=		# empty
+
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+
