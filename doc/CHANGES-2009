@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.948 2009/03/08 23:42:06 bjs Exp $
+$NetBSD: CHANGES-2009,v 1.949 2009/03/09 14:53:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Curses to 1.27 [he 2009-03-08]
 	Updated sysutils/rdiff-backup to 1.2.7 [snj 2009-03-08]
 	Updated net/aria2 to 1.2.0 [bjs 2009-03-08]
+	Updated textproc/mdocml to 1.4.7 [joerg 2009-03-09]
