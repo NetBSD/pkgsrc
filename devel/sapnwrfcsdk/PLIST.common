@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST.common,v 1.1.1.1 2009/03/09 16:53:17 sno Exp $
+include/sapuc.h
+include/sapdecf.h
+include/sapnwrfc.h
+include/sapucx.h
+share/examples/sapnwrfcsdk/companyClient.c
+share/examples/sapnwrfcsdk/sflightClient.c
+share/examples/sapnwrfcsdk/rfcexec.cpp
+share/examples/sapnwrfcsdk/rfcexec.h
+share/examples/sapnwrfcsdk/sapnwrfc.ini
+share/examples/sapnwrfcsdk/startrfc.h
+share/examples/sapnwrfcsdk/startrfc.cpp
+share/examples/sapnwrfcsdk/stfcDeepTableServer.c
+@dirrm share/examples/sapnwrfcsdk
