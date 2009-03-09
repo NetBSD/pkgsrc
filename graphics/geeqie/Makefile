@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/27 19:14:31 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/09 12:18:28 hasso Exp $
 #
 
 DISTNAME=	geeqie-1.0alpha3
@@ -12,7 +12,7 @@ COMMENT=	Image viewer
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		pkg-config gmake
+USE_TOOLS=		pkg-config gmake msgfmt
 USE_DIRS+=		xdg-1.1
 
 .include "../../graphics/exiv2/buildlink3.mk"
