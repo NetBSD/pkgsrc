@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.949 2009/03/09 14:53:59 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.950 2009/03/09 16:56:02 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1281,3 +1281,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rdiff-backup to 1.2.7 [snj 2009-03-08]
 	Updated net/aria2 to 1.2.0 [bjs 2009-03-08]
 	Updated textproc/mdocml to 1.4.7 [joerg 2009-03-09]
+	Added archivers/sapcar version 7.00 [sno 2009-03-09]
