@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/02 02:55:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/09 13:37:08 hasso Exp $
 #
 
 DISTNAME=	pspvc-install-0.3
@@ -13,7 +13,7 @@ HOMEPAGE=	http://pspvc.sf.net/
 COMMENT=	PSP video converter
 
 USE_LANGUAGES=	c
-USE_TOOLS=	pkg-config gmake
+USE_TOOLS=	pkg-config gmake msgfmt
 GNU_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}/${PSPVCVER}
 
