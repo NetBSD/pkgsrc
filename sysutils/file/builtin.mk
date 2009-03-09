@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.5 2008/10/29 20:50:16 christos Exp $
+# $NetBSD: builtin.mk,v 1.6 2009/03/09 17:47:36 cube Exp $
 
 BUILTIN_PKG:=	file
 
-BUILTIN_FIND_FILES_VAR:=	H_FILE
+BUILTIN_FIND_FILES_VAR:=	H_FILE BIN_FILE
 BUILTIN_FIND_FILES.H_FILE=	/usr/include/magic.h
 BUILTIN_FIND_GREP.H_FILE=	magic_file
+BUILTIN_FIND_FILES.BIN_FILE=	/bin/file /usr/bin/file
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -17,13 +18,19 @@ IS_BUILTIN.file=	no
 .  if empty(H_FILE:M__nonexistent__) && empty(H_FILE:M${LOCALBASE}/*)
 IS_BUILTIN.file=	yes
 .  endif
+.  if empty(BIN_FILE:M__nonexistent__) && empty(BIN_FILE:M{LOCALBASE}/*)
+BUILTIN_CMD.file=	${BIN_FILE}
+.  else
+BUILTIN_CMD.file=	file
+.  endif
 .endif
 MAKEVARS+=	IS_BUILTIN.file
 
 .if !defined(BUILTIN_PKG.file) && !empty(IS_BUILTIN.file:M[yY][eE][sS])
-BUILTIN_VERSION.file!=	file --version 2>&1 | ${GREP} 'file-' | ${SED} 's/file-//'
+BUILTIN_VERSION.file!=	${BUILTIN_CMD.file} --version 2>&1 | ${GREP} 'file-' | ${SED} 's/file-//'
 BUILTIN_PKG.file=	file-${BUILTIN_VERSION.file}
 .endif
+MAKEVARS+=	BUILTIN_PKG.file
 
 ###
 ### Determine whether we should use the built-in implementation if it
