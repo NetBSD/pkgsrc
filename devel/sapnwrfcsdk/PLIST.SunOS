@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1.1.1 2009/03/09 16:53:16 sno Exp $
+bin/rfcexec
+bin/startrfc
+lib/libsapucum.so
+lib/libicui18n.so.34
+lib/libicui18n.so
+lib/libicudecnumber.so
+lib/libicuuc.so.34
+lib/libicuuc.so
+lib/libsapnwrfc.so
+lib/libicudata.so.34
+lib/libicudata.so

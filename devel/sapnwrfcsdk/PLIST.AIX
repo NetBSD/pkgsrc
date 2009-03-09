@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.AIX,v 1.1.1.1 2009/03/09 16:53:17 sno Exp $
+bin/rfcexec
+bin/startrfc
+lib/libicudata34.a
+lib/libicudata.a
+lib/libicudecnumber.so
+lib/libicui18n34.a
+lib/libicui18n.a
+lib/libicuuc34.a
+lib/libicuuc.a
+lib/libsapnwrfc.so
+lib/libsapucum.so
