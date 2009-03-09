@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.951 2009/03/09 16:58:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.952 2009/03/09 19:43:49 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1283,3 +1283,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/mdocml to 1.4.7 [joerg 2009-03-09]
 	Added archivers/sapcar version 7.00 [sno 2009-03-09]
 	Added devel/sapnwrfcsdk version 7.11 [sno 2009-03-09]
+	Added devel/p5-Any-Moose version 0.05 [rhaen 2009-03-09]
