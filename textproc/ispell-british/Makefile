@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/02/17 14:43:05 abs Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/09 21:37:17 abs Exp $
 #
 
 DISTNAME=	ispell-3.3.02
@@ -20,6 +20,7 @@ MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 
 INSTALLATION_DIRS=	lib
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"
