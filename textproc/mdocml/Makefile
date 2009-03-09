@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/03/03 15:13:13 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/09 14:53:19 joerg Exp $
 
-DISTNAME=		mdocml-1.3.15
+DISTNAME=		mdocml-1.4.7
 CATEGORIES=		devel
 MASTER_SITES=		http://mdocml.bsd.lv/snapshots/
 
