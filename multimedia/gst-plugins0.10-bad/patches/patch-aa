@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2008/05/14 18:32:04 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2009/03/09 11:52:11 jmcneill Exp $
 
---- configure.orig	2008-04-24 01:30:31.000000000 +0200
+--- configure.orig	2009-01-19 17:06:28.000000000 -0500
 +++ configure
-@@ -30459,7 +30459,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -26361,7 +26361,7 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
@@ -11,3 +11,16 @@ $NetBSD: patch-aa,v 1.3 2008/05/14 18:32:04 drochner Exp $
      then
  
    { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
+@@ -33364,11 +33364,7 @@ fi
+     DVDNAV_CFLAGS=
+     HAVE_DVDNAV=no
+   else
+-    if dvdnav-config --plugin-libs  &> /dev/null; then
+-      DVDNAV_LIBS=`dvdnav-config --plugin-libs `
+-    else
+-      DVDNAV_LIBS=`dvdnav-config --libs `
+-    fi
++    DVDNAV_LIBS=`dvdnav-config --libs `
+     DVDNAV_CFLAGS=`dvdnav-config --cflags `
+     HAVE_DVDNAV=yes
+   fi
