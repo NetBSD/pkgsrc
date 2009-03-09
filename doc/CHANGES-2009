@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.955 2009/03/09 20:30:13 rhaen Exp $
+$NetBSD: CHANGES-2009,v 1.956 2009/03/09 20:35:03 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-Jifty to 0.11 [rhaen 2009-03-09]
 	Updated textproc/p5-Encode to 2.32 [rhaen 2009-03-09]
 	Updated www/p5-CGI-Application to 4.21 [rhaen 2009-03-09]
+	Updated www/p5-Catalyst-Manual to 5.7018 [rhaen 2009-03-09]
