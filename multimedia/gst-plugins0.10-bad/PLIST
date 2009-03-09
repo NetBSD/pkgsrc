@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/26 10:42:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/03/09 11:31:34 jmcneill Exp $
 lib/gstreamer-0.10/libgstaacparse.la
 lib/gstreamer-0.10/libgstaiffparse.la
 lib/gstreamer-0.10/libgstamrparse.la
@@ -43,6 +43,7 @@ lib/gstreamer-0.10/libgsttta.la
 lib/gstreamer-0.10/libgstvideosignal.la
 lib/gstreamer-0.10/libgstvmnc.la
 lib/gstreamer-0.10/libgsty4menc.la
+lib/gstreamer-0.10/libresindvd.la
 share/locale/af/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
