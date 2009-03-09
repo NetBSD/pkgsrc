@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.950 2009/03/09 16:56:02 sno Exp $
+$NetBSD: CHANGES-2009,v 1.951 2009/03/09 16:58:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/aria2 to 1.2.0 [bjs 2009-03-08]
 	Updated textproc/mdocml to 1.4.7 [joerg 2009-03-09]
 	Added archivers/sapcar version 7.00 [sno 2009-03-09]
+	Added devel/sapnwrfcsdk version 7.11 [sno 2009-03-09]
