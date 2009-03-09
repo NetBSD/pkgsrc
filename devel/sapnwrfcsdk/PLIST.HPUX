@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST.HPUX,v 1.1.1.1 2009/03/09 16:53:17 sno Exp $
+bin/rfcexec
+bin/startrfc
+lib/libicudata34.sl
+lib/libicudata.sl
+${PLIST.ia64}lib/libicudecnumber.so
+${PLIST.hppa}lib/libicudecnumber.sl
+lib/libicui18n34.sl
+lib/libicui18n.sl
+lib/libicuuc34.sl
+lib/libicuuc.sl
+${PLIST.ia64}lib/libsapnwrfc.so
+${PLIST.hppa}lib/libsapnwrfc.sl
+${PLIST.ia64}lib/libsapucum.so
+${PLIST.hppa}lib/libsapucum.sl
