@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/10/13 08:07:02 uebayasi Exp $
+# $NetBSD: Makefile,v 1.25 2009/03/09 15:05:30 uebayasi Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	1
@@ -48,7 +48,7 @@ ICONDIR=	${PREFIX}/${ETCDIR}
 
 INSTALL_TARGET.emacs=	install install-icons
 INSTALL_TARGET.xemacs=	install-package
-ETCDIR.emacs=		share/emacs/${_EMACS_VERSION_NOREV}/etc/w3m
+ETCDIR.emacs=		share/emacs/${_EMACS_VERSION_MAJOR}/etc/w3m
 ETCDIR.xemacs=		lib/xemacs/site-packages/etc/w3m
 
 post-install:
