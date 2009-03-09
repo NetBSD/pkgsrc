@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/12/10 17:12:54 rhaen Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/09 20:15:12 rhaen Exp $
 #
 
-DISTNAME=	Net-Jifty-0.08
+DISTNAME=	Net-Jifty-0.11
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Email-Address-[0-9]*:../../mail/p5-Email-Address
 DEPENDS+=	p5-Encode-[0-9]*:../../textproc/p5-Encode
 DEPENDS+=	p5-Hash-Merge-[0-9]*:../../devel/p5-Hash-Merge
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
-DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+DEPENDS+=	p5-Any-Moose>=0.04:../../devel/p5-Any-Moose
 DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
