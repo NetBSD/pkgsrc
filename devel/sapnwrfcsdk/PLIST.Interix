@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST.Interix,v 1.1.1.1 2009/03/09 16:53:17 sno Exp $
+bin/rfcexec
+bin/startrfc
+lib/icudt34.dll
+lib/icuin34.dll
+lib/icuuc34.dll
+lib/libicudecnumber.dll
+lib/libsapucum.dll
+lib/libsapucum.lib
+lib/sapdecfICUlib.lib
+lib/sapnwrfc.dll
+lib/sapnwrfc.lib

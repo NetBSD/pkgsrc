@@ -1,0 +1,16 @@
+The SAP NetWeaver RFC SDK allows to develop applications which can do Remote
+Function Calls to an SAP (ABAP) instance.
+
+How to get SAP RFC-SDK for C/C++:
+
+You need your SAP Service Marketplace username and password.
+
+Visit http://service.sap.com/ Under the "SAP Support Portal", there is a link
+titled "Software Download". Click on it. In the page that opens up, the left
+pane is a tree / hierarchical view. Follow this path: SAP Software
+Distribution Center --> Download --> Support Packages and Patches --> Entry
+by Application Group. Click on it. In the right pane, a few links will come
+up. Click on "Additional Components". In the right pane, a few more links are
+displayed. Choose "SAP RFC SDK UNICODE".
+(You always need the Unicode libraries, irrespective of whether your SAP
+Server is unicode or not).
