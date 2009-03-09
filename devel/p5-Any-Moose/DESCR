@@ -1,0 +1,3 @@
+Perl extension which is very useful to decide which object model to use.
+Either Moose or Mouse has to be installed in order to fulfill the needed
+dependencies.
