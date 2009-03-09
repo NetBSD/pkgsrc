@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/23 13:44:20 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/09 12:45:53 hasso Exp $
 
 .include		"../../inputmethod/uim/Makefile.common"
 PKGNAME=		${EMACS_PKGNAME_PREFIX}uim-elisp-${UIM_VERSION}
@@ -8,7 +8,7 @@ COMMENT=		Emacs LISP for inputmethod/uim
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-libgcroots=installed
