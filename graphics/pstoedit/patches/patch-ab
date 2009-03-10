@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.5 2009/03/10 03:29:37 dmcmahill Exp $
+
+--- src/Makefile.in.orig	2007-09-09 16:07:30.000000000 +0000
++++ src/Makefile.in
+@@ -358,7 +358,7 @@ libpstoedit_la_SOURCES = \
+ 	genericints.h 				\
+ 	version.h
+ 
+-libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB} -ldl
++libpstoedit_la_LIBADD = ${CXX_STD_LIB} ${CXX_RUNTIME_LIB}
+ libpstoedit_la_LDFLAGS = -no-undefined
+ pstoedit_SOURCES = cmdmain.cpp
+ pstoedit_LDFLAGS = -no-undefined -L. libpstoedit.la ${LIBLD_LDFLAGS}
