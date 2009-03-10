@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/10 11:13:09 gson Exp $
 #
 
-DISTNAME=	st-1.5.1
-PKGREVISION=	1
+DISTNAME=	st-1.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=state-threads/}
 
@@ -20,10 +19,10 @@ BUILD_TARGET=	netbsd-debug
 
 HTMLDIR=	${PREFIX}/share/doc/html/st
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin include lib
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} \
+	${LIBTOOL} --mode=install ${INSTALL_LIB} \
 		${WRKSRC}/libst.la ${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/examples/lookupdns ${DESTDIR}${PREFIX}/bin/st-lookupdns
@@ -31,7 +30,6 @@ do-install:
 		${WRKSRC}/examples/proxy ${DESTDIR}${PREFIX}/bin/st-proxy
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
 		${WRKSRC}/examples/server ${DESTDIR}${PREFIX}/bin/st-server
-	${INSTALL_DATA_DIR} ${PREFIX}/include/st
 	${INSTALL_DATA} ${WRKSRC}/public.h ${DESTDIR}${PREFIX}/include/st.h
 	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
 	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html *.gif ${DESTDIR}${HTMLDIR}
