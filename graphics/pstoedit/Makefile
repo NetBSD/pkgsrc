@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2008/09/10 13:59:43 gdt Exp $
+# $NetBSD: Makefile,v 1.39 2009/03/10 03:29:37 dmcmahill Exp $
 
-DISTNAME=	pstoedit-3.41
-PKGREVISION=	2
+DISTNAME=	pstoedit-3.45
 CATEGORIES=	converters graphics print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 
@@ -21,14 +20,18 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-# XXX Avoid hard dependency on Ghostscript
-#USE_TOOLS+=	gs:run
+USE_TOOLS+=	gs:run
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	CXXFLAGS="${CFLAGS} -Dunix"
 CONFIGURE_ENV+=	ac_cv_path_GS=${LOCALBASE}/bin/gs
+
+# needs libEMF which has build problems on alpha and probably
+# other 64-bit systems
+CONFIGURE_ARGS+=--without-emf
+
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share
 CONFIGURE_ARGS+=--libdir=${PREFIX}/lib/pstoedit	# plugin dir -- unused for now
 BUILD_TARGET=
@@ -47,5 +50,9 @@ post-install:
 	done
 	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DESTDIR}${DOCDIR}
 
+.include "../../graphics/gd/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/plotutils/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../..//multimedia/ming/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
