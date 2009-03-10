@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.961 2009/03/10 14:36:01 abs Exp $
+$NetBSD: CHANGES-2009,v 1.962 2009/03/10 17:22:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gwaei to 0.15.1 [wiz 2009-03-10]
 	Updated devel/st to 1.8 [gson 2009-03-10]
 	Updated print/if-psprint to 1.10 [abs 2009-03-10]
+	Updated archivers/p5-Archive-Tar to 1.46 [sno 2009-03-10]
