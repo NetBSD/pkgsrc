@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2004/11/27 12:12:16 gson Exp $
+$NetBSD: patch-aa,v 1.4 2009/03/10 11:13:09 gson Exp $
 
---- Makefile.orig	Tue Oct 29 16:28:26 2002
+--- Makefile.orig	2007-03-14 04:34:20.000000000 +0200
 +++ Makefile
-@@ -181,6 +181,13 @@
+@@ -184,6 +184,13 @@ LDFLAGS     = -shared -soname=$(SONAME) 
  OTHER_FLAGS = -Wall
  endif
  
@@ -16,20 +16,22 @@ $NetBSD: patch-aa,v 1.3 2004/11/27 12:12:16 gson Exp $
  ifeq ($(OS), OPENBSD)
  SFLAGS      = -fPIC
  LDFLAGS     = -shared -soname=$(SONAME) -lc
-@@ -236,14 +243,14 @@
+@@ -273,15 +280,15 @@ endif
  
- CFLAGS      += $(DEFINES) $(OTHER_FLAGS)
+ CFLAGS      += $(DEFINES) $(OTHER_FLAGS) $(EXTRA_CFLAGS)
  
 -OBJS        = $(TARGETDIR)/sched.o \
 -              $(TARGETDIR)/stk.o   \
 -              $(TARGETDIR)/sync.o  \
 -              $(TARGETDIR)/key.o   \
--              $(TARGETDIR)/io.o
+-              $(TARGETDIR)/io.o    \
+-              $(TARGETDIR)/event.o
 +OBJS        = $(TARGETDIR)/sched.lo \
 +              $(TARGETDIR)/stk.lo   \
 +              $(TARGETDIR)/sync.lo  \
 +              $(TARGETDIR)/key.lo   \
-+              $(TARGETDIR)/io.lo
++              $(TARGETDIR)/io.lo    \
++              $(TARGETDIR)/event.lo
  OBJS        += $(EXTRA_OBJS)
  HEADER      = $(TARGETDIR)/st.h
 -SLIBRARY    = $(TARGETDIR)/libst.a
@@ -37,7 +39,7 @@ $NetBSD: patch-aa,v 1.3 2004/11/27 12:12:16 gson Exp $
  DLIBRARY    = $(TARGETDIR)/libst.$(DSO_SUFFIX).$(VERSION)
  EXAMPLES    = examples
  
-@@ -294,8 +301,7 @@
+@@ -332,8 +339,7 @@ $(TARGETDIR):
  	if [ ! -d $(TARGETDIR) ]; then mkdir $(TARGETDIR); fi
  
  $(SLIBRARY): $(OBJS)
@@ -47,13 +49,13 @@ $NetBSD: patch-aa,v 1.3 2004/11/27 12:12:16 gson Exp $
  	rm -f obj; $(LN) $(LNFLAGS) $(TARGETDIR) obj
  
  $(DLIBRARY): $(OBJS:%.o=%-pic.o)
-@@ -311,11 +317,11 @@
+@@ -349,11 +355,11 @@ $(HEADER): public.h
  	rm -f $@
  	cp public.h $@
  
--$(TARGETDIR)/%asm.o: %asm.S
+-$(TARGETDIR)/md.o: md.S
 -	$(CC) $(CFLAGS) -c $< -o $@
-+$(TARGETDIR)/%asm.lo: %asm.S
++$(TARGETDIR)/md.lo: md.S
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $< -o $@
  
 -$(TARGETDIR)/%.o: %.c common.h md.h
