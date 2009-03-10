@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.973 2009/03/10 21:24:32 seb Exp $
+$NetBSD: CHANGES-2009,v 1.974 2009/03/10 21:46:17 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1305,3 +1305,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-sapnwrfc version 0.24 [sno 2009-03-10]
 	Updated devel/p5-Term-ReadLine to 1.18 [sno 2009-03-10]
 	Added devel/p5-Perl-Version version 1.009 [seb 2009-03-10]
+	Updated multimedia/swfdec to 0.8.4nb1 [jmcneill 2009-03-10]
