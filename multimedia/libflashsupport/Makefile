@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/16 14:43:15 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/10 21:40:51 abs Exp $
 
 PKGNAME=	libflashsupport-1.0.2098
 DISTNAME=	libflashsupport-1-0-2098-i586
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://labs.adobe.com/wiki/index.php/Flash_Player:Additional_Interface_Support_for_Linux
 COMMENT=	Additional Interface Support for Linux Flash Player
+
+CONFLICTS=	libflashsupport-pulse-[0-9]*
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base openssl
