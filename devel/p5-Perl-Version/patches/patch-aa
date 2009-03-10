@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/03/10 21:22:59 seb Exp $
+
+Install the perl-reversion script.
+
+--- Makefile.PL.orig	2009-03-07 14:48:16.000000000 +0000
++++ Makefile.PL
+@@ -33,7 +33,7 @@ my %ARGS = (
+ $ARGS{SIGN} = 1 if MM->can( 'signature_target' );
+ 
+ while ( my ( $exe, $spec ) = each %EXE ) {
+-  my $yn = prompt( "Install $exe script?", "N" );
++  my $yn = prompt( "Install $exe script?", "Y" );
+   if ( $yn =~ /^y/i ) {
+     while ( my ( $key, $val ) = each %$spec ) {
+       if ( ref $val eq 'HASH' ) {
