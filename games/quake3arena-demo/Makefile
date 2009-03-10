@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/03/10 07:21:53 hasso Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	3
@@ -22,6 +22,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gtar pax
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} |	\
 		${GTAR} xzf -
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "DragonFly"
+# DragonFly sed(1) adds trailing newline and it confuses gzip(1). Bsdtar,
+# which doesn't use gzip but zlib, extracts the archive fine though.
+TOOLS_PLATFORM.gtar=    /usr/bin/bsdtar
+.endif
 
 DISTBINNAME=	q3demo
 BINNAME=	quake3arena-demo
