@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.964 2009/03/10 17:32:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.965 2009/03/10 17:35:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1296,3 +1296,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/p5-Archive-Tar to 1.46 [sno 2009-03-10]
 	Updated sysutils/p5-Sys-Filesystem to 1.23 [sno 2009-03-10]
 	Updated devel/p5-Readonly-XS to 1.05 [sno 2009-03-10]
+	Updated devel/p5-B-Keywords to 1.09 [sno 2009-03-10]
