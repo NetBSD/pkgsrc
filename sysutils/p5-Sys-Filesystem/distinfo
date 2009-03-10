@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/09 05:44:41 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/03/10 17:27:28 sno Exp $
 
-SHA1 (Sys-Filesystem-1.22.tar.gz) = ee873a7b9d098a673c6f3eeee3ba87b14a0395e4
-RMD160 (Sys-Filesystem-1.22.tar.gz) = 3d7ecf42aeac8789510cc120f4c5ca9a04f2b659
-Size (Sys-Filesystem-1.22.tar.gz) = 18722 bytes
+SHA1 (Sys-Filesystem-1.23.tar.gz) = 75141812feb1228fed58e8e388ad6fdc6f409bca
+RMD160 (Sys-Filesystem-1.23.tar.gz) = 4cb51a16fb0b3ef396d54e61f01570de8f415569
+Size (Sys-Filesystem-1.23.tar.gz) = 22119 bytes
