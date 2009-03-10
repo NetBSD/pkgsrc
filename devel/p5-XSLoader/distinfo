@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/03/10 18:50:24 sno Exp $
+
+SHA1 (XSLoader-0.10.tar.gz) = 42f9c7c99f7e8059e01cd6f2a28723ad9c1054d1
+RMD160 (XSLoader-0.10.tar.gz) = 765200302b9df1ed1cd6109a6a3f0fc6d8d00466
+Size (XSLoader-0.10.tar.gz) = 9437 bytes
