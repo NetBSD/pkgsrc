@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.5 2009/03/10 03:29:37 dmcmahill Exp $
+
+Avoid this:
+
+/usr/pkgsrc/graphics/pstoedit/work/.buildlink/include/ImageMagick/magick/magick-type.h:120: error: ISO C++ does not support 'long long'
+/usr/pkgsrc/graphics/pstoedit/work/.buildlink/include/ImageMagick/magick/magick-type.h:121: error: ISO C++ does not support 'long long'
+
+on alpha (and probably others)
+
+--- configure.orig	2007-08-10 20:26:10.000000000 +0000
++++ configure
+@@ -22282,7 +22282,7 @@ echo "${ECHO_T}GNU on RiscOS" >&6; }
+   else
+     { echo "$as_me:$LINENO: result: GNU" >&5
+ echo "${ECHO_T}GNU" >&6; }
+-    SPECIAL_CXXFLAGS="-DBUGGYGPP -pedantic -Wall -Wwrite-strings -Wcast-qual -Wpointer-arith "
++    SPECIAL_CXXFLAGS="-DBUGGYGPP  -Wall -Wwrite-strings -Wcast-qual -Wpointer-arith "
+   fi
+   CXXFLAGS="-g"
+ elif test `echo "$CXX" | egrep -c 'xlC$'` -eq 1; then
