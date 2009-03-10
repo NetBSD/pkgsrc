@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.974 2009/03/10 21:46:17 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.975 2009/03/10 23:36:35 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1306,3 +1306,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Term-ReadLine to 1.18 [sno 2009-03-10]
 	Added devel/p5-Perl-Version version 1.009 [seb 2009-03-10]
 	Updated multimedia/swfdec to 0.8.4nb1 [jmcneill 2009-03-10]
+	Updated sysutils/file to 5.00 [he 2009-03-10]
+	Updated devel/p5-File-LibMagic to 0.91 [he 2009-03-10]
