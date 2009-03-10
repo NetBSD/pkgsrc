@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 22:24:34 agc Exp $
+$NetBSD: distinfo,v 1.6 2009/03/10 11:13:09 gson Exp $
 
-SHA1 (st-1.5.1.tar.gz) = 5dcc4146a30b82f8e8ca076f298cddb2a19ba93e
-RMD160 (st-1.5.1.tar.gz) = 341713fc544d58bfc9b1e2e6f43e3c74df0108d3
-Size (st-1.5.1.tar.gz) = 90372 bytes
-SHA1 (patch-aa) = a975923396f713a64a9a321c753539909fb3e69c
-SHA1 (patch-ab) = d8b024bd5382c844dd42720d637f3adfb8cb0ac2
+SHA1 (st-1.8.tar.gz) = 3f9c9bfe0a6074ccfcb642c1b95320dba496b9e8
+RMD160 (st-1.8.tar.gz) = 951c55807d2164c1a8f1fcde75d97aeb6a47a256
+Size (st-1.8.tar.gz) = 106604 bytes
+SHA1 (patch-aa) = 81dccd050f11e06bee7c8c07870091741b49d3f7
+SHA1 (patch-ab) = b1967d6ee1dcdd549f3f90f53f51aa253be2dc5c
