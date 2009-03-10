@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2009/02/13 21:33:00 abs Exp $
+$NetBSD: distinfo,v 1.9 2009/03/10 14:35:39 abs Exp $
 
-SHA1 (if-psprint-1.9.tbz) = 770ed014e1cbed066ad0b408543236d3a26eb20c
-RMD160 (if-psprint-1.9.tbz) = fc954e69a50d5b698f8e76146c212a49ecee2328
-Size (if-psprint-1.9.tbz) = 3133 bytes
+SHA1 (if-psprint-1.10.tbz) = b2d47b6e350bcef13c4fc8cfff76a7510f39e2a2
+RMD160 (if-psprint-1.10.tbz) = cea96e1f595109efb456784eb22e5c92e1fbd983
+Size (if-psprint-1.10.tbz) = 3160 bytes
