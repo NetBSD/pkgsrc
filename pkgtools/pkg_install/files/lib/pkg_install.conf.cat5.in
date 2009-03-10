@@ -114,8 +114,8 @@ DDEESSCCRRIIPPTTIIOONN
                             installing a package.
 
 FFIILLEESS
-     @SYSCONFDIR@/pkg_install.conf     Default location for the file described
-                                       in this manual page.
+     @SYSCONFDIR@/pkg_install.conf  Default location for the file described in
+                                    this manual page.
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1)
