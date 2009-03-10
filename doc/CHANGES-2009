@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.967 2009/03/10 17:48:07 sno Exp $
+$NetBSD: CHANGES-2009,v 1.968 2009/03/10 17:51:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1299,3 +1299,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-B-Keywords to 1.09 [sno 2009-03-10]
 	Updated databases/p5-SQL-Statement to 1.20 [sno 2009-03-10]
 	Updated devel/p5-Parse-RecDescent to 1.96.0 [sno 2009-03-10]
+	Updated textproc/p5-Filter to 1.36 [sno 2009-03-10]
