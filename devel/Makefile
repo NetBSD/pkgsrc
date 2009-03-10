@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1132 2009/03/10 00:54:47 snj Exp $
+# $NetBSD: Makefile,v 1.1133 2009/03/10 18:52:25 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -841,6 +841,7 @@ SUBDIR+=	p5-VCP-Dest-svk
 SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
+SUBDIR+=	p5-XSLoader
 SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-boolean
