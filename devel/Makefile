@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1133 2009/03/10 18:52:25 sno Exp $
+# $NetBSD: Makefile,v 1.1134 2009/03/10 18:59:15 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -854,6 +854,7 @@ SUBDIR+=	p5-namespace-clean
 SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
+SUBDIR+=	p5-sapnwrfc
 SUBDIR+=	p5-signatures
 SUBDIR+=	p5-subversion
 SUBDIR+=	p5-version
