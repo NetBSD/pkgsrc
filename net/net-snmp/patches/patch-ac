@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.7 2008/09/08 12:58:09 adam Exp $
+$NetBSD: patch-ac,v 1.8 2009/03/10 18:30:44 apb Exp $
 
---- configure.in.orig	2008-09-05 11:27:25.000000000 +0200
+--- configure.in.orig	2008-10-31 17:22:23.000000000 +0200
 +++ configure.in
 @@ -2697,6 +2697,8 @@ AC_CHECK_LIB(kstat, kstat_lookup,
          AC_DEFINE(HAVE_LIBKSTAT, 1, [Define to 1 if you have the `kstat' library (-lkstat).])
@@ -134,3 +134,11 @@ $NetBSD: patch-ac,v 1.7 2008/09/08 12:58:09 adam Exp $
  #include <sys/socket.h>
  #undef KERNEL
  #undef _KERNEL
+@@ -4162,6 +4190,7 @@ AC_CHECK_IFNET_FOR(if_noproto)
+ AC_CHECK_IFNET_FOR(if_omcasts)
+ AC_CHECK_IFNET_FOR(if_xname,no)
+ AC_CHECK_IFNET_FOR(if_lastchange.tv_sec)
++AC_CHECK_IFNET_FOR(if_lastchange.tv_nsec)
+ AC_CHECK_IFNET_FOR(if_obytes)
+ AC_CHECK_IFNET_FOR(if_ibytes)
+ AC_CHECK_IFNET_FOR(if_addrlist)
