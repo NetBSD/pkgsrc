@@ -1,19 +1,16 @@
-$NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
+$NetBSD: patch-ab,v 1.3 2009/03/10 05:24:36 dsainty Exp $
 
---- src/gnome-mount.c.orig	2008-04-17 02:41:32 +0300
-+++ src/gnome-mount.c	2008-12-24 22:39:47 +0200
-@@ -31,6 +31,10 @@
+--- src/gnome-mount.c.orig	2008-04-17 11:41:32.000000000 +1200
++++ src/gnome-mount.c	2009-03-10 17:11:00.000000000 +1300
+@@ -30,6 +30,7 @@
+ #include <fcntl.h>
  #include <string.h>
  #include <stdlib.h>
- 
-+#ifdef __NetBSD__
 +#include <locale.h>
-+#endif
-+
+ 
  #include <dbus/dbus.h>
  #include <dbus/dbus-glib-lowlevel.h>
- #include <libhal.h>
-@@ -51,9 +55,9 @@
+@@ -51,9 +52,9 @@
  #define NOTIFY_EXPIRES_DEFAULT -1
  #endif
  
@@ -25,7 +22,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  #include <fstab.h>
  #include <sys/param.h>
  #include <sys/ucred.h>
-@@ -677,15 +681,19 @@ static char *
+@@ -677,15 +678,19 @@
  get_mntent_mount_point(const char *device_file)
  {
  	char *mount_point;
@@ -47,7 +44,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  #elif defined(sun)
  	FILE *f;
  	struct mnttab mnt;
-@@ -694,7 +702,7 @@ get_mntent_mount_point(const char *devic
+@@ -694,7 +699,7 @@
  
  	mount_point = NULL;
  
@@ -56,7 +53,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  	if ((f = setmntent ("/proc/mounts", "r")) != NULL) {
  		
  		while ((mnte = getmntent_r (f, &mnt, buf, sizeof(buf))) != NULL) {
-@@ -717,13 +725,13 @@ get_mntent_mount_point(const char *devic
+@@ -717,13 +722,13 @@
  		}
  		fclose(f);
  	}
@@ -72,7 +69,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  
  out:
  	return (mount_point);
-@@ -862,7 +870,7 @@ out:
+@@ -862,7 +867,7 @@
  static gboolean
  fstab_open (gpointer *handle)
  {
@@ -81,7 +78,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  	return setfsent () == 1;
  #else
  	*handle = fopen ("/etc/fstab", "r");
-@@ -873,7 +881,7 @@ fstab_open (gpointer *handle)
+@@ -873,7 +878,7 @@
  static char *
  fstab_next (gpointer handle, char **mount_point)
  {
@@ -90,7 +87,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  	struct fstab *fstab;
  
  	fstab = getfsent ();
-@@ -901,7 +909,7 @@ fstab_next (gpointer handle, char **moun
+@@ -901,7 +906,7 @@
  static void
  fstab_close (gpointer handle)
  {
@@ -99,7 +96,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  	endfsent ();
  #else
  	fclose (handle);
-@@ -1116,7 +1124,7 @@ out:
+@@ -1116,7 +1121,7 @@
  	return ret;
  }
  
@@ -108,7 +105,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  #define MOUNT		"/sbin/mount"
  #define UMOUNT		"/sbin/umount"
  #else
-@@ -1451,7 +1459,7 @@ volume_mount (const char *udi, LibHalVol
+@@ -1451,7 +1456,7 @@
  	if (volume == NULL && (mount_options->len == 0)) {
  		/* volume from a non-pollable drive, just set uid.. */
  		
@@ -117,7 +114,7 @@ $NetBSD: patch-ab,v 1.2 2008/12/25 05:33:20 hasso Exp $
  		snprintf (uidbuf, sizeof (uidbuf) - 1, "uid=%u", getuid ());
  #else
  		snprintf (uidbuf, sizeof (uidbuf) - 1, "-u=%u", getuid ());
-@@ -1482,7 +1490,7 @@ volume_mount (const char *udi, LibHalVol
+@@ -1482,7 +1487,7 @@
  				g_debug ("read default option '%s' from gconf strlist key %s", option, key);
  
  				/* special workaround to replace "uid=" with "uid=<actual uid of caller>" */
