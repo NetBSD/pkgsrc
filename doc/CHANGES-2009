@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.969 2009/03/10 18:02:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.970 2009/03/10 18:52:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Parse-RecDescent to 1.96.0 [sno 2009-03-10]
 	Updated textproc/p5-Filter to 1.36 [sno 2009-03-10]
 	Updated devel/p5-Perl-Critic to 1.098 [sno 2009-03-10]
+	Added devel/p5-XSLoader version 0.10 [sno 2009-03-10]
