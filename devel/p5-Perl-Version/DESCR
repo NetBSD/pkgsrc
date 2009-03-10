@@ -1,0 +1,6 @@
+The Perl 5 module Perl::Version provides a simple interface for
+parsing, manipulating and formatting Perl version strings.
+Unlike version.pm (which concentrates on parsing and comparing
+version strings) Perl::Version is designed for cases where you'd
+like to parse a version, modify it and get back the modified version
+formatted like the original.
