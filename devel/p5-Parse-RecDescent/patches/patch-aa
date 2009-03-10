@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2008/09/10 19:40:00 he Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/10 17:43:19 sno Exp $
 
---- lib/Parse/RecDescent.pm.orig	2007-09-29 21:06:56.000000000 +0200
-+++ lib/Parse/RecDescent.pm
-@@ -1719,7 +1719,7 @@ use vars qw ( $AUTOLOAD $VERSION );
+--- lib/Parse/RecDescent.pm.orig	2009-03-04 11:25:37.000000000 +0100
++++ lib/Parse/RecDescent.pm	2009-03-04 11:26:34.000000000 +0100
+@@ -1719,7 +1719,7 @@
  
  my $ERRORS = 0;
  
--use version; $VERSION = qv('1.95.1');
-+use version; $VERSION = qv('1.951');
+-use version; $VERSION = qv('1.96.0');
++use version; $VERSION = qv('1.960');
  
  # BUILDING A PARSER
  
