@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.972 2009/03/10 19:05:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.973 2009/03/10 21:24:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1304,3 +1304,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-XSLoader version 0.10 [sno 2009-03-10]
 	Added devel/p5-sapnwrfc version 0.24 [sno 2009-03-10]
 	Updated devel/p5-Term-ReadLine to 1.18 [sno 2009-03-10]
+	Added devel/p5-Perl-Version version 1.009 [seb 2009-03-10]
