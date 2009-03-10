@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/02/23 18:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/10 21:45:00 jmcneill Exp $
 #
 
 DISTNAME=		swfdec-0.8.4
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://swfdec.freedesktop.org/download/swfdec/0.8/
 
@@ -19,8 +20,21 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	swfdec-0.8.pc.in
 PKGCONFIG_OVERRIDE=	swfdec-gtk-0.8.pc.in
 
-CONFIGURE_ARGS+=	--with-audio=none
 CONFIGURE_ARGS+=	--enable-gtk
+
+PKG_OPTIONS_VAR=	swfdec
+PKG_SUPPORTED_OPTIONS=	pulseaudio
+PKG_SUGGESTED_OPTIONS=	pulseaudio
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+CONFIGURE_ARGS+=	--with-audio=pulse
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--with-audio=none
+.endif
 
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
