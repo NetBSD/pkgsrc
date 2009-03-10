@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.966 2009/03/10 17:39:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.967 2009/03/10 17:48:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1298,3 +1298,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Readonly-XS to 1.05 [sno 2009-03-10]
 	Updated devel/p5-B-Keywords to 1.09 [sno 2009-03-10]
 	Updated databases/p5-SQL-Statement to 1.20 [sno 2009-03-10]
+	Updated devel/p5-Parse-RecDescent to 1.96.0 [sno 2009-03-10]
