@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.800 2009/02/14 10:42:20 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.801 2009/03/10 19:41:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -23,7 +23,7 @@
 #	Freely redistributable.  Absolutely no warranty.
 
 # To get an overview of the code, run:
-#    sed -n -e 's,^\(sub .*\) {.*,  \1,p' -e '/^package/p'
+#    sed -n -e 's,^\(sub .*\) {.*,  \1,p' -e '/^package/p' pkglint.pl
 
 #==========================================================================
 # Note: The @EXPORT clauses in the packages must be in a BEGIN block,
@@ -7090,12 +7090,25 @@ sub checkfile_patch($) {
 		}
 	};
 
-	my $check_hunk_line = sub($$$$) {
-		my ($deldelta, $adddelta, $newstate, $check_added) = @_;
+	# @param deldelta
+	#	The number of lines that are deleted from the patched file.
+	# @param adddelta
+	#	The number of lines that are added to the patched file.
+	# @param newstate
+	#	The follow-up state when this line is the last line to be
+	#	added in this hunk of the patch.
+	#
+	my $check_hunk_line = sub($$$) {
+		my ($deldelta, $adddelta, $newstate) = @_;
 
 		$check_contents->();
 		$check_hunk_end->($deldelta, $adddelta, $newstate);
-		if ($check_added) {
+
+		# If -Wextra is given, the context lines are checked for
+		# absolute paths and similar things. If it is not given,
+		# only those lines that really add something to the patched
+		# file are checked.
+		if ($adddelta != 0 && ($deldelta == 0 || $opt_warn_extra)) {
 			$check_added_contents->();
 		}
 	};
@@ -7151,17 +7164,17 @@ sub checkfile_patch($) {
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
 		}], [PST_CLD0, re_patch_clc, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD0, re_patch_cld, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD0, re_patch_clm, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, re_patch_clc, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, re_patch_cld, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, re_patch_clm, PST_CLD, sub() {
-			$check_hunk_line->(1, 0, PST_CLD0, false);
+			$check_hunk_line->(1, 0, PST_CLD0);
 		}], [PST_CLD, undef, PST_CLD0, sub() {
 			if ($dellines != 0) {
 				$line->log_warning("Invalid number of deleted lines (${dellines} missing).");
@@ -7172,17 +7185,17 @@ sub checkfile_patch($) {
 			    ? (1 + $m->text(2) - $m->text(1))
 			    : ($m->text(1));
 		}], [PST_CLA0, re_patch_clc, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA0, re_patch_clm, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA0, re_patch_cla, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA, re_patch_clc, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA, re_patch_clm, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA, re_patch_cla, PST_CLA, sub() {
-			$check_hunk_line->(0, 1, PST_CH, true);
+			$check_hunk_line->(0, 1, PST_CH);
 		}], [PST_CLA, undef, PST_CLA0, sub() {
 			if ($addlines != 0) {
 				$line->log_warning("Invalid number of added lines (${addlines} missing).");
@@ -7211,16 +7224,16 @@ sub checkfile_patch($) {
 			$leading_context_lines = 0;
 			$trailing_context_lines = 0;
 		}], [PST_UL, re_patch_uld, PST_UL, sub() {
-			$check_hunk_line->(1, 0, PST_UH, false);
+			$check_hunk_line->(1, 0, PST_UH);
 		}], [PST_UL, re_patch_ula, PST_UL, sub() {
-			$check_hunk_line->(0, 1, PST_UH, true);
+			$check_hunk_line->(0, 1, PST_UH);
 		}], [PST_UL, re_patch_ulc, PST_UL, sub() {
-			$check_hunk_line->(1, 1, PST_UH, true);
+			$check_hunk_line->(1, 1, PST_UH);
 		}], [PST_UL, re_patch_ulnonl, PST_UL, sub() {
 			#
 		}], [PST_UL, re_patch_empty, PST_UL, sub() {
 			$opt_warn_space and $line->log_note("Leading white-space missing in hunk.");
-			$check_hunk_line->(1, 1, PST_UH, false);
+			$check_hunk_line->(1, 1, PST_UH);
 		}], [PST_UL, undef, PST_UH, sub() {
 			if ($dellines != 0 || $addlines != 0) {
 				$line->log_warning("Unexpected end of hunk (-${dellines},+${addlines} expected).");
