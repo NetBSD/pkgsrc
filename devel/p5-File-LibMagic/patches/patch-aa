@@ -1,3 +1,7 @@
+$NetBSD: patch-aa,v 1.2 2009/03/10 23:35:02 he Exp $
+
+Ensure we use the required ldflags for the platform.
+
 --- Makefile.PL.orig	2008-08-06 10:56:22.000000000 +0200
 +++ Makefile.PL	2008-09-18 11:48:17.459072000 +0200
 @@ -12,7 +12,7 @@
