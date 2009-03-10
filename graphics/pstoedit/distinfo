@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2005/12/28 17:27:28 joerg Exp $
+$NetBSD: distinfo,v 1.12 2009/03/10 03:29:37 dmcmahill Exp $
 
-SHA1 (pstoedit-3.41.tar.gz) = 10a0a666c02eb5102f867744f6e75ee815b03aca
-RMD160 (pstoedit-3.41.tar.gz) = 8db6d8b40ba681a01eb2bda3a0f14e31df25130f
-Size (pstoedit-3.41.tar.gz) = 797596 bytes
-SHA1 (patch-aa) = bbe51177db5672e3254f89b401af16e14f1a767d
-SHA1 (patch-ba) = a0e14f4b515069972f0cc7bf0f0949c1828edd28
+SHA1 (pstoedit-3.45.tar.gz) = 3eecd5efcd4f3d1752d13303a2d1b64346f74171
+RMD160 (pstoedit-3.45.tar.gz) = dbe610807dae3ece5d32979100795d3399beb23a
+Size (pstoedit-3.45.tar.gz) = 848922 bytes
+SHA1 (patch-aa) = db0c80414eeefa5e8b28c70f124bd23e2e1aa6cb
+SHA1 (patch-ab) = 450443318bcff521998fa29f2902401dfe14fd6e
+SHA1 (patch-ac) = fb67dc34c06e98e80fc241ba906bd0b9d1d1ec4d
