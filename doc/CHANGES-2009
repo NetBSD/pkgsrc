@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.977 2009/03/11 12:55:50 abs Exp $
+$NetBSD: CHANGES-2009,v 1.978 2009/03/11 14:19:26 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-File-LibMagic to 0.91 [he 2009-03-10]
 	Updated cad/verilog to 0.8.7 [dmcmahill 2009-03-10]
 	Updated mail/roundcube to 0.2.1 [abs 2009-03-11]
+	Added geography/viking version 0.9.8 [gdt 2009-03-11]
