@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/01/19 20:15:49 abs Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/03/11 12:55:10 abs Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -58,20 +58,17 @@ share/roundcube/program/include/rcube_result_set.php
 share/roundcube/program/include/rcube_shared.inc
 share/roundcube/program/include/rcube_smtp.inc
 share/roundcube/program/include/rcube_sqlite.inc
+share/roundcube/program/include/rcube_string_replacer.php
 share/roundcube/program/include/rcube_template.php
 share/roundcube/program/include/rcube_user.php
 share/roundcube/program/include/rcube_vcard.php
 share/roundcube/program/include/session.inc
 share/roundcube/program/js/app.js
-share/roundcube/program/js/app.js.src
 share/roundcube/program/js/common.js
-share/roundcube/program/js/common.js.src
 share/roundcube/program/js/editor.js
 share/roundcube/program/js/editor_images.js
 share/roundcube/program/js/googiespell.js
-share/roundcube/program/js/googiespell.js.src
 share/roundcube/program/js/list.js
-share/roundcube/program/js/list.js.src
 share/roundcube/program/js/tiny_mce/langs/ar.js
 share/roundcube/program/js/tiny_mce/langs/bg.js
 share/roundcube/program/js/tiny_mce/langs/bs.js
@@ -521,14 +518,19 @@ share/roundcube/program/lib/html2text.php
 share/roundcube/program/lib/icl_commons.inc
 share/roundcube/program/lib/imap.inc
 share/roundcube/program/lib/mime.inc
+share/roundcube/program/lib/tnef_decoder.inc
 share/roundcube/program/lib/utf7.inc
 share/roundcube/program/lib/washtml.php
 share/roundcube/program/localization/ar_SA/labels.inc
 share/roundcube/program/localization/ar_SA/messages.inc
+share/roundcube/program/localization/ast/labels.inc
+share/roundcube/program/localization/ast/messages.inc
 share/roundcube/program/localization/az_AZ/labels.inc
 share/roundcube/program/localization/az_AZ/messages.inc
 share/roundcube/program/localization/bg_BG/labels.inc
 share/roundcube/program/localization/bg_BG/messages.inc
+share/roundcube/program/localization/bn_BD/labels.inc
+share/roundcube/program/localization/bn_BD/messages.inc
 share/roundcube/program/localization/bs_BA/labels.inc
 share/roundcube/program/localization/bs_BA/messages.inc
 share/roundcube/program/localization/ca_ES/labels.inc
@@ -551,6 +553,8 @@ share/roundcube/program/localization/en_US/labels.inc
 share/roundcube/program/localization/en_US/messages.inc
 share/roundcube/program/localization/eo/labels.inc
 share/roundcube/program/localization/eo/messages.inc
+share/roundcube/program/localization/es_AR/labels.inc
+share/roundcube/program/localization/es_AR/messages.inc
 share/roundcube/program/localization/es_ES/labels.inc
 share/roundcube/program/localization/es_ES/messages.inc
 share/roundcube/program/localization/et_EE/labels.inc
