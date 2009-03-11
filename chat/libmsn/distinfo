@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+$NetBSD: distinfo,v 1.2 2009/03/11 21:18:35 hasso Exp $
 
 SHA1 (libmsn-4.0-beta2.tar.bz2) = 8ced56c64c6132b5525d8c19e5a43bab08bca2f4
 RMD160 (libmsn-4.0-beta2.tar.bz2) = 8a4f6faa3f22e87b4807c688b11051ca0c7d84c1
 Size (libmsn-4.0-beta2.tar.bz2) = 155319 bytes
 SHA1 (patch-aa) = 25b9d7f0018bd20ec664c62981aa2b51edfeebae
-SHA1 (patch-ab) = e3f3d40ebc1f1d86f24e887711217321e90630e1
+SHA1 (patch-ab) = ef8cb8597f30f427d84d3fa6d23688e79f978514
