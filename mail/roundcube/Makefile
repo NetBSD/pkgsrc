@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2009/02/28 17:35:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/11 12:55:10 abs Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
-PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
@@ -14,8 +13,12 @@ COMMENT=	Browser-based multilingual IMAP client
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2-stable
+RCVERSION=	0.2.1
 VERSION=	${RCVERSION:S/-//}
+
+PKG_DESTDIR_SUPPORT=  	user-destdir
+INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
+INSTALLATION_DIRS+=	${RCDIR}/bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -93,9 +96,6 @@ EMPTY_DIRS=	plugins/cleanup plugins/emotions/images \
 		themes/advanced/jscripts themes/advanced/docs/en \
 		themes/advanced/images themes/advanced/docs
 
-INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
-INSTALLATION_DIRS+=	${RCDIR}/bin
-
 .include "../../mk/apache.mk"
 .include "options.mk"
 
@@ -110,28 +110,31 @@ pre-install:
 .	endfor
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/roundcube.conf ${EGDIR}/roundcube.conf
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/roundcube.conf \
+		${DESTDIR}${EGDIR}/roundcube.conf
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${EGDIR}/SQL/
+	${INSTALL_DATA} ${WRKSRC}/SQL/*.sql ${DESTDIR}${EGDIR}/SQL/
 
-	${INSTALL_DATA} ${WRKSRC}/.htaccess ${RCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/index.php ${RCDIR}/
-	${INSTALL_DATA} ${WRKSRC}/robots.txt ${RCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/.htaccess ${DESTDIR}${RCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${RCDIR}/
+	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${RCDIR}/
 
 	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist \
-		${EGDIR}/db.inc.php.dist
+		${DESTDIR}${EGDIR}/db.inc.php.dist
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
-		${EGDIR}/main.inc.php.dist
+		${DESTDIR}${EGDIR}/main.inc.php.dist
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${RCDIR}/${i}
-		${FIND} ${RCDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
-		${FIND} ${RCDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-		${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}
+		cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${RCDIR}/${i}
+		${FIND} ${DESTDIR}${RCDIR}/${i} -type f | \
+			${XARGS} ${CHMOD} ${SHAREMODE}
+		${FIND} ${DESTDIR}${RCDIR}/${i} -type d | \
+			${XARGS} ${CHMOD} ${PKGDIRMODE}
+		${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${RCDIR}/${i}
 .	endfor
 
 .include "../../mk/bsd.pkg.mk"
