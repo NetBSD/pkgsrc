@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/21 15:15:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/03/11 20:01:43 hasso Exp $
 
 SHA1 (scrotwm-0.9.1.tgz) = bc01e3be45274a1f439ae5ff910736c403ffbc96
 RMD160 (scrotwm-0.9.1.tgz) = e9d8af1cb077f6f5d9e2f50ffb8efa7177efae05
 Size (scrotwm-0.9.1.tgz) = 31428 bytes
-SHA1 (patch-aa) = 7a2c5ec09c4f8701e3c1e757574f28ee88d42ce4
+SHA1 (patch-aa) = 1f3eb5a0be03ea10105575397e26983622436008
 SHA1 (patch-ab) = 58309fbcf514bcb3a9acd9b8b5028fb988e6dd8e
