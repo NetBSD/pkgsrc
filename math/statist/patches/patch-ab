@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2009/03/11 12:42:41 hasso Exp $
+
+--- iodefs.c.orig	2009-03-11 14:18:05 +0200
++++ iodefs.c		2009-03-11 14:18:31 +0200
+@@ -11,8 +11,7 @@
+ 
+ #include<stdio.h>
+ #include<string.h>
+-
+-extern int errno;
++#include<errno.h>
+ 
+ #define FOPEN(name, mode, fp)                                     \
+   if ((fp = fopen(name, mode))==NULL) {                           \
