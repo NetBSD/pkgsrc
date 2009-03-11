@@ -1,0 +1,27 @@
+$NetBSD: patch-ah,v 1.1 2009/03/11 19:24:41 hasso Exp $
+
+--- fileio.c.orig	2009-03-11 19:57:37 +0200
++++ fileio.c	2009-03-11 19:58:36 +0200
+@@ -15,6 +15,10 @@
+ #define	DEFFILEMODE	(S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP|S_IROTH|S_IWOTH)
+ #endif
+ 
++#ifndef NAME_MAX
++#define NAME_MAX	MAXNAMLEN
++#endif
++
+ #include <sys/time.h>
+ #include <sys/resource.h>
+ #include <sys/wait.h>
+@@ -545,11 +549,7 @@ make_file_list(char *buf)
+ 	 * SV files are fairly short.  For BSD, something more general would
+ 	 * be required.
+ 	 */
+-#ifdef  __CYGWIN__  /* Cygwin uses NAME_MAX for dirents */
+ 	if (preflen > NFILEN - NAME_MAX)
+-#else
+-	if (preflen > NFILEN - MAXNAMLEN)
+-#endif
+ 		return (NULL);
+ 
+ 	/* loop over the specified directory, making up the list of files */
