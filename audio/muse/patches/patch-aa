@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/05/02 22:59:16 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/11 14:42:35 hasso Exp $
 
 --- src/shout/sock.h.orig	2004-04-30 01:49:50.000000000 +0200
 +++ src/shout/sock.h	2004-04-30 01:50:10.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/05/02 22:59:16 xtraeme Exp $
  #endif
  
 -#ifdef HAVE_SYS_UIO_H
-+#if defined(HAVE_SYS_UIO_H) || defined(__NetBSD__)
++#if defined(HAVE_SYS_UIO_H) || defined(__NetBSD__) || defined(__DragonFly__)
  #include <sys/uio.h>
  #else
  #ifndef _SYS_UIO_H
