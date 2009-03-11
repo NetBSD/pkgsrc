@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.5 2009/03/11 19:27:00 hasso Exp $
+
+--- konversation/src/dcccommon.cpp.orig	2009-03-11 19:22:06 +0200
++++ konversation/src/dcccommon.cpp	2009-03-11 19:22:36 +0200
+@@ -15,6 +15,7 @@
+ #include "server.h"
+ 
+ #include <arpa/inet.h>
++#include <netinet/in.h>
+ 
+ #include <qhostaddress.h>
+ 
