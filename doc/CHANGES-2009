@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.975 2009/03/10 23:36:35 he Exp $
+$NetBSD: CHANGES-2009,v 1.976 2009/03/11 02:09:34 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1308,3 +1308,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/swfdec to 0.8.4nb1 [jmcneill 2009-03-10]
 	Updated sysutils/file to 5.00 [he 2009-03-10]
 	Updated devel/p5-File-LibMagic to 0.91 [he 2009-03-10]
+	Updated cad/verilog to 0.8.7 [dmcmahill 2009-03-10]
