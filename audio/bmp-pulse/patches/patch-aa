@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/19 00:54:16 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/11 06:59:51 hasso Exp $
 
---- src/plugin.c.orig	2008-12-18 19:50:37.000000000 -0500
-+++ src/plugin.c
-@@ -39,8 +39,8 @@
+--- src/plugin.c.orig	2007-08-06 22:21:53 +0300
++++ src/plugin.c	2009-03-11 08:40:15 +0200
+@@ -39,12 +39,11 @@
  #endif
  
  #ifdef HAVE_BMP
@@ -10,6 +10,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/12/19 00:54:16 jmcneill Exp $
 - #include <beepctrl.h>
 + #include <bmp/plugin.h>
 + #include <bmp/beepctrl.h>
++ #include <bmp/util.h>
  #endif
  
- #include <util.h>
+-#include <util.h>
+-
+ #include <pulse/pulseaudio.h>
+ 
+ static pa_context *context = NULL;
