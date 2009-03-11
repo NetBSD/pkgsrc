@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.976 2009/03/11 02:09:34 dmcmahill Exp $
+$NetBSD: CHANGES-2009,v 1.977 2009/03/11 12:55:50 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1309,3 +1309,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/file to 5.00 [he 2009-03-10]
 	Updated devel/p5-File-LibMagic to 0.91 [he 2009-03-10]
 	Updated cad/verilog to 0.8.7 [dmcmahill 2009-03-10]
+	Updated mail/roundcube to 0.2.1 [abs 2009-03-11]
