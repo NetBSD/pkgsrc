@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.5 2009/03/11 13:39:52 hasso Exp $
+
+--- ./homeio.c.orig	2009-03-11 15:08:21 +0200
++++ ./homeio.c		2009-03-11 15:09:31 +0200
+@@ -11,6 +11,9 @@
+ #include <time.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#if defined(__STDC__)
++#include <errno.h>
++#endif
+ 
+ #include "xephem.h"
+ 
+@@ -227,7 +230,6 @@ syserrstr ()
+ {
+ #if defined(__STDC__)
+ /* some older gcc don't have strerror */
+-#include <errno.h>
+ return (strerror (errno));
+ #else
+ #if defined(VMS)
