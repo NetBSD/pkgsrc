@@ -1,0 +1,21 @@
+$NetBSD: patch-at,v 1.1 2009/03/11 12:16:22 hasso Exp $
+
+--- utils/ppsocket.h.orig	2009-03-11 13:51:20 +0200
++++ utils/ppsocket.h	2009-03-11 13:51:50 +0200
+@@ -7,6 +7,7 @@
+ 
+ #include <unistd.h>
+ #include <netdb.h>
++#include <errno.h>
+ #include <sys/socket.h>
+ #include <arpa/inet.h>
+ 
+@@ -24,8 +25,6 @@
+ #define  SOCKET_ERROR	-1
+ #define  INFINITE	0
+ 
+-extern int errno;
+-
+ #include "bool.h"
+ class bufferStore;
+ 

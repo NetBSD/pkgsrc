@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2007/10/10 18:14:07 rillig Exp $
+$NetBSD: distinfo,v 1.15 2009/03/11 12:16:21 hasso Exp $
 
 SHA1 (plp_1_8.tar.gz) = cad586353091895b6efc556d2cb5fa16891a3749
 RMD160 (plp_1_8.tar.gz) = 1a29209fd7def352c9a1c6671b1a90efcd276456
@@ -21,3 +21,4 @@ SHA1 (patch-ap) = c104fcff93c6a20da75dcfa63ad814da43bbc718
 SHA1 (patch-aq) = 706c2518c92c1b9ce3098839e5b282933f7904f0
 SHA1 (patch-ar) = 25ec84057553840bb071706ecf143189f7591fc9
 SHA1 (patch-as) = 696b46a9f173cc81083a0c4efa2ffdd8df2d0f19
+SHA1 (patch-at) = d5196efa3423c0d3e897806325ff712dec7f05c2
