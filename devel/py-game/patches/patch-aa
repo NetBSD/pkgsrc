@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2009/03/11 22:05:12 wiz Exp $
+
+--- config_unix.py.orig	2008-07-07 05:58:40.000000000 +0000
++++ config_unix.py
+@@ -11,7 +11,7 @@ localbase = os.environ.get('LOCALBASE', 
+ #these get prefixes with '/usr' and '/usr/local' or the $LOCALBASE
+ origincdirs = ['/include', '/include/SDL', '/include/SDL',
+                '/include/smpeg' ]
+-origlibdirs = ['/lib','/lib64','/X11R6/lib']
++origlibdirs = ['/lib','/lib64','/X11R6/lib','/X11R7/lib']
+ 
+ def confirm(message):
+     "ask a yes/no question, return result"
