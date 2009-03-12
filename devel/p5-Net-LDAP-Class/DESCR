@@ -1,0 +1,4 @@
+The Perl 5 module Net::LDAP::Class can be described as an
+object-relational mapping for LDAP. More accurately it provides for
+LDAP management an ORM-like API, similar to these of the DBIx::Class
+and Rose::DB::Object modules.
