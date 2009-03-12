@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.979 2009/03/11 21:44:28 seb Exp $
+$NetBSD: CHANGES-2009,v 1.980 2009/03/12 00:54:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/roundcube to 0.2.1 [abs 2009-03-11]
 	Added geography/viking version 0.9.8 [gdt 2009-03-11]
 	Updated devel/p5-Net-LDAP-Server-Test to 0.8.0.01 [seb 2009-03-11]
+	Added devel/libmaa version 1.1.0 [minskim 2009-03-12]
