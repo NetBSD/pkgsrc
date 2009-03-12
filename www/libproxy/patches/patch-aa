@@ -1,20 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/12 13:31:48 hasso Exp $
 
---- configure.orig	2008-06-05 16:56:33.000000000 -0400
-+++ configure
-@@ -20509,16 +20509,16 @@ fi
- if test "${with_gnome+set}" = set; then
-   withval=$with_gnome;
- else
--  test x$have_gconf == xyes &&
+--- configure.ac.orig	2009-03-12 12:13:00 +0200
++++ configure.ac	2009-03-12 12:15:44 +0200
+@@ -41,14 +41,14 @@ AC_ARG_WITH([gnome],
+             [AS_HELP_STRING([--with-gnome],
+             [build GNOME configuration plugin @<:@automatic@:>@])],
+             [],
+-            [test x$have_gconf == xyes && 
 -             test x$have_x11   == xyes &&
 -             test x$have_xmu   == xyes &&
-+  test x$have_gconf = xyes &&
++            [test x$have_gconf = xyes && 
 +             test x$have_x11   = xyes &&
 +             test x$have_xmu   = xyes &&
-              with_gnome=yes
- fi
- 
+              with_gnome=yes])
  if test x$with_gnome = xyes; then
 -	if test x$have_gconf == xyes && \
 -	   test x$have_x11 == xyes && \
@@ -24,18 +22,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
 +	   test x$have_xmu = xyes; then
  		GNOME_CFLAGS="$x11_CFLAGS $xmu_CFLAGS $gconf_CFLAGS"
  		GNOME_LIBS="$x11_LIBS $xmu_LIBS $gconf_LIBS"
- 
-@@ -20545,14 +20545,14 @@ fi
- if test "${with_kde+set}" = set; then
-   withval=$with_kde;
- else
--  test x$have_x11   == xyes &&
+ 		AC_SUBST(GNOME_CFLAGS)
+@@ -67,12 +67,12 @@ AC_ARG_WITH([kde],
+             [AS_HELP_STRING([--with-kde],
+             [build KDE configuration plugin @<:@automatic@:>@])],
+             [],
+-            [test x$have_x11   == xyes &&
 -             test x$have_xmu   == xyes &&
-+  test x$have_x11   = xyes &&
++            [test x$have_x11   = xyes &&
 +             test x$have_xmu   = xyes &&
-              with_kde=yes
- fi
- 
+              with_kde=yes])
  if test x$with_kde = xyes; then
 -	if test x$have_x11 == xyes && \
 -	   test x$have_xmu == xyes; then
@@ -43,58 +39,50 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
 +	   test x$have_xmu = xyes; then
  		KDE_CFLAGS="$x11_CFLAGS $xmu_CFLAGS"
  		KDE_LIBS="$x11_LIBS $xmu_LIBS"
- 
-@@ -20579,11 +20579,11 @@ fi
- if test "${with_webkit+set}" = set; then
-   withval=$with_webkit;
- else
--  test x$have_webkit == xyes && with_webkit=yes
-+  test x$have_webkit = xyes && with_webkit=yes
- fi
- 
+ 		AC_SUBST(KDE_CFLAGS)
+@@ -91,9 +91,9 @@ AC_ARG_WITH([webkit],
+             [AS_HELP_STRING([--with-webkit],
+             [build WebKit JavaScriptCore PAC runner plugin @<:@automatic@:>@])],
+             [],
+-            [test x$have_webkit == xyes && with_webkit=yes])
++            [test x$have_webkit = xyes && with_webkit=yes])
  if test x$with_webkit = xyes; then
 -	if test x$have_webkit == xyes; then
 +	if test x$have_webkit = xyes; then
  		WEBKIT_CFLAGS="$webkit_CFLAGS"
  		WEBKIT_LIBS="$webkit_LIBS"
- 
-@@ -20610,11 +20610,11 @@ fi
- if test "${with_mozjs+set}" = set; then
-   withval=$with_mozjs;
- else
--  test x$have_mozjs == xyes && with_mozjs=yes
-+  test x$have_mozjs = xyes && with_mozjs=yes
- fi
- 
+ 		AC_SUBST(WEBKIT_CFLAGS)
+@@ -112,9 +112,9 @@ AC_ARG_WITH([mozjs],
+             [AS_HELP_STRING([--with-mozjs],
+             [build Mozilla JavaScript PAC runner plugin @<:@automatic@:>@])],
+             [],
+-            [test x$have_mozjs == xyes && with_mozjs=yes])
++            [test x$have_mozjs = xyes && with_mozjs=yes])
  if test x$with_mozjs = xyes; then
 -	if test x$have_mozjs == xyes; then
 +	if test x$have_mozjs = xyes; then
  		MOZJS_CFLAGS="$mozjs_CFLAGS"
  		MOZJS_LIBS="$mozjs_LIBS"
- 
-@@ -20641,11 +20641,11 @@ fi
- if test "${with_networkmanager+set}" = set; then
-   withval=$with_networkmanager;
- else
--  test x$have_networkmanager == xyes && with_networkmanager=yes
-+  test x$have_networkmanager = xyes && with_networkmanager=yes
- fi
- 
+ 		AC_SUBST(MOZJS_CFLAGS)
+@@ -133,9 +133,9 @@ AC_ARG_WITH([networkmanager],
+             [AS_HELP_STRING([--with-networkmanager],
+             [build NetworkManager plugin @<:@automatic@:>@])],
+             [],
+-            [test x$have_networkmanager == xyes && with_networkmanager=yes])
++            [test x$have_networkmanager = xyes && with_networkmanager=yes])
  if test x$with_networkmanager = xyes; then
 -	if test x$have_networkmanager == xyes; then
 +	if test x$have_networkmanager = xyes; then
  		NETWORKMANAGER_CFLAGS="$NetworkManager_CFLAGS"
  		NETWORKMANAGER_LIBS="$NetworkManager_LIBS"
+ 		AC_SUBST(NETWORKMANAGER_CFLAGS)
+@@ -182,6 +182,9 @@ CFLAGS="-g -std=c99 $CFLAGS -DPLUGINDIR=
+ AC_FUNC_MALLOC
+ #AC_CHECK_FUNCS([gethostbyname gethostname memset socket strdup strstr])
  
-@@ -21611,6 +21611,11 @@ fi
- PLUGINDIR=$libdir/$PACKAGE_NAME/$PACKAGE_VERSION/plugins
- 
- CFLAGS="-g -std=c99 $CFLAGS -DPLUGINDIR=\\\"$PLUGINDIR\\\" -DSYSCONFDIR=\\\"$sysconfdir\\\" -D_POSIX_C_SOURCE=1"
-+case $host_os in
-+  netbsd*)
-+    CFLAGS="$CFLAGS -D_NETBSD_SOURCE"
-+    ;;
-+esac
- 
- ### Checks for library functions.
- 
++AC_CHECK_LIB(dl, dlopen, DL_LIBS="-ldl")
++AC_SUBST(DL_LIBS)
++
+ AC_CONFIG_FILES([libproxy-1.0.pc Makefile src/Makefile src/lib/Makefile
+                  src/plugins/Makefile src/bin/Makefile src/bindings/Makefile
+                  src/bindings/python/Makefile src/bindings/java/Makefile

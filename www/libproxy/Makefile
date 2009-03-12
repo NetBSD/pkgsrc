@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/12 13:31:48 hasso Exp $
 #
 
 DISTNAME=	libproxy-0.2.3
@@ -13,15 +13,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake
+USE_TOOLS+=	pkg-config gmake autoreconf autoconf automake
 PY_PATCHPLIST=	yes
 
 PKGCONFIG_OVERRIDE+=	libproxy-1.0.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} == "NetBSD")
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
+pre-configure:
+	cd ${WRKSRC} && autoreconf --force
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/dlopen.buildlink3.mk"
