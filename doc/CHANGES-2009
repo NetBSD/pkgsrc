@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.985 2009/03/12 15:19:58 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.986 2009/03/12 23:57:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1321,3 +1321,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/pidgin-silc to 2.5.5 [mlelstv 2009-03-12]
 	Updated chat/finch to 2.5.5 [mlelstv 2009-03-12]
 	Updated net/gnome-netstatus to 2.26.0 [wiz 2009-03-12]
+	Updated devel/cpuflags to 1.40 [abs 2009-03-12]
