@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.37 2009/03/08 15:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/03/12 15:19:38 wiz Exp $
 #
 
-DISTNAME=	gnome-netstatus-2.12.2
+DISTNAME=	gnome-netstatus-2.26.0
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.12/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-netstatus/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,10 +24,10 @@ GCONF_SCHEMAS=		netstatus.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
