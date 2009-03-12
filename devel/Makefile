@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1136 2009/03/12 00:54:28 minskim Exp $
+# $NetBSD: Makefile,v 1.1137 2009/03/12 04:43:23 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -682,6 +682,7 @@ SUBDIR+=	p5-MouseX-Types
 SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
 SUBDIR+=	p5-Net-LDAP-Batch
+SUBDIR+=	p5-Net-LDAP-Class
 SUBDIR+=	p5-Net-LDAP-Server-Test
 SUBDIR+=	p5-Net-Netmask
 SUBDIR+=	p5-OLE-Storage_Lite
