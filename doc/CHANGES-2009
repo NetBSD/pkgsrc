@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.982 2009/03/12 04:55:52 seb Exp $
+$NetBSD: CHANGES-2009,v 1.983 2009/03/12 07:41:55 mlelstv Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1315,3 +1315,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/libmaa version 1.1.0 [minskim 2009-03-12]
 	Added devel/p5-Net-LDAP-Class version 0.18 [seb 2009-03-12]
 	Updated devel/p5-Net-LDAP-Batch to 0.02nb1 [seb 2009-03-12]
+	Updated chat/libpurple to 2.5.5 [mlelstv 2009-03-12]
+	Updated chat/pidgin to 2.5.5 [mlelstv 2009-03-12]
+	Updated chat/pidgin-sametime to 2.5.5 [mlelstv 2009-03-12]
+	Updated chat/pidgin-silc to 2.5.5 [mlelstv 2009-03-12]
+	Updated chat/finch to 2.5.5 [mlelstv 2009-03-12]
