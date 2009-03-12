@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/03 08:42:25 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/12 09:21:01 wiz Exp $
 #
 
 DISTNAME=		ming-0.3.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://ming.sourceforge.net/
 COMMENT=		Create SWF (Macromedia Flash) files with this library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		bison flex
