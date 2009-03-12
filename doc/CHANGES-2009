@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.981 2009/03/12 04:44:47 seb Exp $
+$NetBSD: CHANGES-2009,v 1.982 2009/03/12 04:55:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Net-LDAP-Server-Test to 0.8.0.01 [seb 2009-03-11]
 	Added devel/libmaa version 1.1.0 [minskim 2009-03-12]
 	Added devel/p5-Net-LDAP-Class version 0.18 [seb 2009-03-12]
+	Updated devel/p5-Net-LDAP-Batch to 0.02nb1 [seb 2009-03-12]
