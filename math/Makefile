@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2009/03/07 02:20:35 hubertf Exp $
+# $NetBSD: Makefile,v 1.186 2009/03/12 22:31:41 jnemeth Exp $
 
 COMMENT=	Mathematics
 
@@ -112,8 +112,8 @@ SUBDIR+=	p5-Excel-Template-Plus
 SUBDIR+=	p5-Math-Base85
 SUBDIR+=	p5-Math-BaseCnv
 SUBDIR+=	p5-Math-Bezier
-SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-BigInt-GMP
+SUBDIR+=	p5-Math-BigInteger
 SUBDIR+=	p5-Math-FFT
 SUBDIR+=	p5-Math-GMP
 SUBDIR+=	p5-Math-Interpolate
