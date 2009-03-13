@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
+$NetBSD: patch-ag,v 1.11 2009/03/13 13:33:34 hasso Exp $
 
---- unix/unix.cpp.orig	2004-12-30 23:15:47.000000000 +0100
-+++ unix/unix.cpp	2006-10-18 14:03:16.729013960 +0200
+--- unix/unix.cpp.orig	2004-12-31 00:15:47 +0200
++++ unix/unix.cpp	2009-03-13 15:14:04 +0200
 @@ -117,15 +117,25 @@
  
  #ifdef USE_THREADS
@@ -39,16 +39,12 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  
  #include "snes9x.h"
  #include "memmap.h"
-@@ -168,6 +181,62 @@ uint32 joypads [5] = {0};
+@@ -168,6 +181,58 @@ uint32 joypads [5] = {0};
  int NumControllers = 5;
  
  #ifdef JOYSTICK_SUPPORT
 +#if defined(__NetBSD__) || defined(__DragonFly__)
-+#if defined(__DragonFly__)
-+extern "C" {
-+#include <libusbhid.h>
-+}
-+#elif defined(HAVE_USBHID_H)
++#if defined(HAVE_USBHID_H)
 +START_EXTERN_C
 +#include <usbhid.h>
 +END_EXTERN_C
@@ -102,7 +98,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  #if defined(__linux)
  #include <linux/joystick.h>
  int js_fd [4] = {-1, -1, -1, -1};
-@@ -227,7 +296,7 @@ char *snapshot_filename = NULL;
+@@ -227,7 +292,7 @@ char *snapshot_filename = NULL;
  char *SDD1_pack = NULL;
  
  //FIXME: I see no reason not to configureenable this for all Unixen
@@ -111,7 +107,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  static void sigbrkhandler(int)
  {
      CPU.Flags |= DEBUG_MODE_FLAG;
-@@ -700,6 +769,110 @@ void S9xInitInputDevices ()
+@@ -700,6 +765,104 @@ void S9xInitInputDevices ()
  #ifdef JOYSTICK_SUPPORT
  void InitJoysticks ()
  {
@@ -142,11 +138,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
 +               close (js_fd [i]);
 +           }
 +
-+#if defined(__DragonFly__)
-+           size = hid_report_size(rd, report_id, hid_input);
-+#else
 +           size = hid_report_size(rd, hid_input, report_id);
-+#endif
 +           priv_joy_data[i].offset = 0;
 +#else
 +           size = hid_report_size(rd, hid_input, &report_id);
@@ -160,10 +152,8 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
 +           priv_joy_data[i].dlen = size;
 +
 +           is_joystick = 0;
-+#if defined(HAVE_USBHID_H) && !defined(__DragonFly__)
++#if defined(HAVE_USBHID_H)
 +           for (d = hid_start_parse(rd, 1 << hid_input, report_id); hid_get_item(d, &h); )
-+#else
-+           for (d = hid_start_parse(rd, 1 << hid_input); hid_get_item(d, &h); )
 +#endif
 +           {
 +               int axes = 0, buttons = 0, usage, page, interesting_hid;
@@ -222,7 +212,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  #ifdef JSIOCGVERSION
      int version;
      unsigned char axes, buttons;
-@@ -756,6 +929,77 @@ void InitJoysticks ()
+@@ -756,6 +919,77 @@ void InitJoysticks ()
  
  void ReadJoysticks ()
  {
@@ -300,7 +290,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  #ifdef JSIOCGVERSION
      struct js_event js_ev;
      int i;
-@@ -1129,11 +1373,11 @@ void _splitpath (const char *path, char 
+@@ -1129,11 +1363,11 @@ void _splitpath (const char *path, char 
  {
      *drive = 0;
  
@@ -314,7 +304,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  
      if (dot && slash && dot < slash)
  	dot = NULL;
-@@ -1646,7 +1890,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
+@@ -1646,7 +1880,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  }
  #endif
  
@@ -323,7 +313,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  static int Rates[8] =
  {
      0, 8000, 11025, 16000, 22050, 32000, 44100, 48000
-@@ -1662,12 +1906,19 @@ bool8 S9xOpenSoundDevice (int mode, bool
+@@ -1662,12 +1896,19 @@ bool8 S9xOpenSoundDevice (int mode, bool
      /* Linux version (OSS) */
      int J, K;
  
@@ -344,7 +334,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  #ifdef MMAP_SOUND 
     if (ioctl (so.sound_fd, SNDCTL_DSP_GETCAPS, &J) < 0)
      {
-@@ -1711,14 +1962,14 @@ bool8 S9xOpenSoundDevice (int mode, bool
+@@ -1711,14 +1952,14 @@ bool8 S9xOpenSoundDevice (int mode, bool
  	so.sixteen_bit = TRUE;
  
      so.stereo = stereo;
@@ -361,7 +351,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
      {
  	perror ("ioctl SNDCTL_DSP_SPEED");
  	return (FALSE);
-@@ -1743,7 +1994,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
+@@ -1743,7 +1984,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  	perror ("ioctl SNDCTL_DSP_SETFRAGMENT");
  	return (FALSE);
      }
@@ -370,7 +360,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
      
  #ifdef MMAP_SOUND
      J = PCM_ENABLE_OUTPUT;
-@@ -1768,7 +2019,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
+@@ -1768,7 +2009,7 @@ bool8 S9xOpenSoundDevice (int mode, bool
  #endif
  
  
@@ -379,7 +369,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  void S9xUnixProcessSound (void)
  {
  }
-@@ -1810,7 +2061,7 @@ void *S9xProcessSound (void *)
+@@ -1810,7 +2051,7 @@ void *S9xProcessSound (void *)
  }
  #endif
  
@@ -388,7 +378,7 @@ $NetBSD: patch-ag,v 1.10 2006/10/18 13:11:59 rillig Exp $
  void S9xGenerateSound ()
  {
      /* Linux and Sun versions */
-@@ -1902,7 +2153,7 @@ void *S9xProcessSound (void *)
+@@ -1902,7 +2143,7 @@ void *S9xProcessSound (void *)
      /* If threads in use, this is to loop indefinitely */
      /* If not, this will be called by timer */
      
