@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2009/02/27 22:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/13 20:11:23 kefren Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
 PKGNAME=		vlc08-${VLC_VER}
 VLC_VER=		0.8.6i
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -96,7 +96,6 @@ CONFIGURE_ARGS+=	--disable-fb
 CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .endif
 
-.include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
