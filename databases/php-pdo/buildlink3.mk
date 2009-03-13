@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/05 20:58:37 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/13 10:57:20 sborrill Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PHP_PDO_BUILDLINK3_MK:=		${PHP_PDO_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}php-pdo
 
 .if !empty(PHP_PDO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.php-pdo+=	${PHP_PKG_PREFIX}-pdo-5.*
-BUILDLINK_ABI_DEPENDS.php-pdo?=	${PHP_PKG_PREFIX}-pdo>=5.1.1.1.0.2nb1
+BUILDLINK_ABI_DEPENDS.php-pdo?=	${PHP_PKG_PREFIX}-pdo>=5.2.9
 BUILDLINK_PKGSRCDIR.php-pdo?=	../../databases/php-pdo
 BUILDLINK_INCDIRS.php-pdo?=	include/php/ext/pdo
 .endif  # PHP_PDO_BUILDLINK3_MK

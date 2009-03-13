@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/03 17:24:28 jdolecek Exp $
-
-SHA1 (php-PDO_ODBC/PDO_ODBC-1.0.tgz) = 1a0f88fc5b06a24975368b86bfc69b2a53e00384
-RMD160 (php-PDO_ODBC/PDO_ODBC-1.0.tgz) = 5fc75c10e8aa0b78bc99a8c76b070fad4f2102c6
-Size (php-PDO_ODBC/PDO_ODBC-1.0.tgz) = 13019 bytes
