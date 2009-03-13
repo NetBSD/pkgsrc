@@ -1,0 +1,45 @@
+$NetBSD: patch-aq,v 1.4 2009/03/13 07:48:57 hasso Exp $
+
+This is a only temporary workaround, not for inclusion into upstream and should
+be fixed in DragonFly really.
+
+--- boost/test/impl/execution_monitor.ipp.orig	2009-03-12 15:44:41 +0200
++++ boost/test/impl/execution_monitor.ipp	2009-03-12 19:39:10 +0200
+@@ -151,7 +151,8 @@ namespace { void _set_se_translator( voi
+ #  if defined(SIGPOLL) && !defined(__CYGWIN__)                              && \
+       !(defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__))  && \
+       !defined(__NetBSD__)                                                  && \
+-      !defined(__QNXNTO__)
++      !defined(__QNXNTO__)                                                  && \
++      !defined(__DragonFly__)
+ #    define BOOST_TEST_CATCH_SIGPOLL
+ #  endif
+ 
+@@ -261,6 +262,7 @@ system_signal_exception::report() const
+     if( !m_sig_info )
+         return; // no error actually occur?
+ 
++#if !defined(__DragonFly__)
+     switch( m_sig_info->si_code ) {
+     case SI_USER:
+         report_error( execution_exception::system_error,
+@@ -502,6 +504,7 @@ system_signal_exception::report() const
+     default:
+         report_error( execution_exception::system_error, "unrecognized signal" );
+     }
++#endif /* !__DragonFly__ */
+ }
+ 
+ //____________________________________________________________________________//
+@@ -695,7 +698,10 @@ extern "C" {
+ 
+ static bool ignore_sigchild( siginfo_t* info )
+ {
+-    return info->si_signo == SIGCHLD && info->si_code == CLD_EXITED 
++    return info->si_signo == SIGCHLD
++#ifndef __DragonFly__
++	    && info->si_code == CLD_EXITED 
++#endif
+ #ifdef BOOST_TEST_IGNORE_NON_ZERO_CHILD_CODE
+             ;
+ #else
