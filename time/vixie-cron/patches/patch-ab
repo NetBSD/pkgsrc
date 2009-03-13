@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.1 2009/03/13 11:24:16 hasso Exp $
+
+--- database.c.orig	2009-03-12 08:12:10 +0200
++++ database.c	2009-03-12 08:13:24 +0200
+@@ -30,6 +30,10 @@ static char rcsid[] = "$Id: database.c,v
+ 
+ #define TMAX(a,b) ((a)>(b)?(a):(b))
+ 
++#ifndef NAME_MAX
++#define NAME_MAX MAXNAMLEN
++#endif
++
+ static	void		process_crontab(const char *, const char *,
+ 					const char *, struct stat *,
+ 					cron_db *, cron_db *);
+@@ -93,7 +97,7 @@ load_database(cron_db *old_db) {
+ 	}
+ 
+ 	while (NULL != (dp = readdir(dir))) {
+-		char fname[MAXNAMLEN+1], tabname[MAXNAMLEN+1];
++		char fname[NAME_MAX+1], tabname[NAME_MAX+1];
+ 
+ 		/* avoid file names beginning with ".".  this is good
+ 		 * because we would otherwise waste two guaranteed calls
