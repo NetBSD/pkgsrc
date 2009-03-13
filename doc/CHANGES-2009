@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.986 2009/03/12 23:57:55 abs Exp $
+$NetBSD: CHANGES-2009,v 1.987 2009/03/13 10:59:51 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1322,3 +1322,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/finch to 2.5.5 [mlelstv 2009-03-12]
 	Updated net/gnome-netstatus to 2.26.0 [wiz 2009-03-12]
 	Updated devel/cpuflags to 1.40 [abs 2009-03-12]
+	Updated databases/php-pdo to 5.2.9.99 [sborrill 2009-03-13]
+	Updated databases/php-pdo_dblib to 5.2.9.99 [sborrill 2009-03-13]
+	Updated databases/php-pdo_mysql to 5.2.9.99 [sborrill 2009-03-13]
+	Updated databases/php-pdo_odbc to 5.2.9.99 [sborrill 2009-03-13]
+	Updated databases/php-pdo_pgsql to 5.2.9.99 [sborrill 2009-03-13]
+	Updated databases/php-pdo_sqlite to 5.2.9.99 [sborrill 2009-03-13]
