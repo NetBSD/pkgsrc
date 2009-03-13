@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1 2009/03/13 14:34:21 martin Exp $
+
+# Fix obvious C bugs and calm a warning. Without this, the app shows
+# bogus "last played" times and dies imediately with a bus error on
+# alignement critical bugs.
+
+--- mserv.c.orig	2001-01-28 20:11:21.000000000 +0100
++++ mserv.c	2009-03-13 15:11:04.000000000 +0100
+@@ -43,7 +43,7 @@ void mserv_connect(void)
+       return;
+    }
+ 
+-   if (connect(Session.socket, &sin, sizeof(sin)) == -1)
++   if (connect(Session.socket, (struct sockaddr *)&sin, sizeof(sin)) == -1)
+    {
+       strcat(buf, strerror(errno));
+       printf("Can't make Connection: (%d): %s\n", errno, buf);
+@@ -226,7 +226,8 @@ void mserv_key_next_song(char *data)
+ 
+ void mserv_key_update_status(char *data)
+ {
+-   char *token;
++   char *token, *endp;
++   time_t t;
+ 
+    if (!Session.StatusWin.window)
+       return;
+@@ -253,8 +254,9 @@ void mserv_key_update_status(char *data)
+    gtk_entry_set_text(GTK_ENTRY(Session.StatusWin.Song), token);
+ 
+    token = strtok(NULL, "\t");
++   t = strtoull(token, &endp, 10);
+    gtk_entry_set_text(GTK_ENTRY(Session.StatusWin.Last_Played),
+-		      ctime((const time_t *)token));
++		      ctime(&t));
+    token = strtok(NULL, "\t");
+    gtk_entry_set_text(GTK_ENTRY(Session.StatusWin.Length), token);
+ 
