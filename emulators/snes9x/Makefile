@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2009/03/13 13:33:34 hasso Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -82,9 +82,6 @@ MAKE_ENV+=	USBJOY=1
 .  if exists(/usr/include/usbhid.h)
 MAKE_ENV+=	USBHID_H=1
 .  endif
-.elif ${OPSYS} == "DragonFly" && exists(/usr/include/libusbhid.h)
-MAKE_ENV+=	USBJOY=1
-MAKE_ENV+=	USBHID_H=1
 .endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build
