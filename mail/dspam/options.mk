@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: options.mk,v 1.23 2009/03/13 10:11:14 roy Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -88,9 +88,9 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \\'${DSPAM_STORAGE_DRIVER}
 .if !empty(DSPAM_STORAGE_DRIVER:Mmysql) || \
     !empty(DSPAM_STORAGE_DRIVER:Mpgsql) || \
     !empty(DSPAM_STORAGE_DRIVER:Mhash)
-. if empty(MACHINE_PLATFORM:MNetBSD-1.*)
+.  if empty(MACHINE_PLATFORM:MNetBSD-1.*)
 CONFIGURE_ARGS+=	--enable-daemon
-. endif
+.  endif
 .endif
 
 ###
