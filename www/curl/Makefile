@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.85 2008/09/22 18:19:41 minskim Exp $
+# $NetBSD: Makefile,v 1.85.4.1 2009/03/13 04:51:54 rtr Exp $
 
 DISTNAME=	curl-7.18.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/
@@ -10,6 +10,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://curl.haxx.se/
 COMMENT=	Client that groks URLs
+
+PATCH_SITES=	http://curl.haxx.se/CVE-2009-0037/
+PATCHFILES=	curl-7.18.1-CVE-2009-0037.patch
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
