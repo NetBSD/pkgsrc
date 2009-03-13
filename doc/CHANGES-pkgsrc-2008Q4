@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.68 2009/03/13 04:52:46 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.69 2009/03/13 04:55:36 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -197,3 +197,5 @@ Pullup ticket #2719 - requested by tnn
 ns-flash: security update
 pullup ticket #2716 - requested by tron
 curl: fix for security vulnerability
+pullup ticket #2718 - requested by tron
+firefox3: update package
