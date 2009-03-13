@@ -1,0 +1,11 @@
+--- src/mmio.c.orig	2009-03-12 00:40:06 +0200
++++ src/mmio.c	2009-03-12 00:40:28 +0200
+@@ -40,7 +40,7 @@
+ #endif
+ 
+ 
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__DragonFly__)
+ 
+ /* FIXME: Are these and sys/stat.h really needed? */
+ 
