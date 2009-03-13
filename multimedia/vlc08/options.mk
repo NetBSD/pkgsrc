@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2009/01/30 13:35:26 sborrill Exp $
+# $NetBSD: options.mk,v 1.4 2009/03/13 20:11:23 kefren Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts sdl x11
+PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts esound sdl x11
 PKG_SUGGESTED_OPTIONS=		wxwidgets faad x11 sdl
 
 .include "../../mk/bsd.options.mk"
@@ -37,6 +37,14 @@ PLIST.arts=		yes
 .include "../../audio/arts/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-arts
+.endif
+
+.if !empty(PKG_OPTIONS:Mesound)
+CONFIGURE_ARGS+=	--enable-esd
+PLIST.esound=		yes
+.include "../../audio/esound/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-esd
 .endif
 
 ## SDL backend support

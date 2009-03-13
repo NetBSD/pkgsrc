@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/30 21:17:01 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/03/13 20:11:23 kefren Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -69,6 +69,7 @@ lib/vlc/audio_mixer/libtrivial_mixer_plugin.so
 lib/vlc/audio_output/libaout_file_plugin.so
 ${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.so
 ${PLIST.arts}lib/vlc/audio_output/libarts_plugin.so
+${PLIST.esound}lib/vlc/audio_output/libesd_plugin.so
 lib/vlc/audio_output/liboss_plugin.so
 lib/vlc/codec/liba52_plugin.so
 lib/vlc/codec/libadpcm_plugin.so
