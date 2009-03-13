@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.3 2009/03/13 12:48:51 hasso Exp $
+
+Pkgsrc sysutils/pciutils installs headers in include/pciutils regardless
+of the name of the library. Not for upstream.
+
+--- src/card_direct.c.orig	2009-03-12 00:37:31 +0200
++++ src/card_direct.c	2009-03-12 00:37:53 +0200
+@@ -44,11 +44,7 @@
+ #include <fcntl.h>
+ 
+ #ifdef HAVE_PCI
+-#ifdef HAVE_PCIUTILS
+ #include <pciutils/pci.h>
+-#else
+-#include <pci/pci.h>
+-#endif
+ #endif
+ #include <sys/mman.h>
+ #include <sys/ioctl.h>
