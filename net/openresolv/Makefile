@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/02/07 22:57:02 roy Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/14 22:33:20 roy Exp $
 #
 
-DISTNAME=		openresolv-2.0.1
+DISTNAME=		openresolv-2.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
 MASTER_SITES+=		http://roy.aydogan.net/openresolv/
@@ -22,14 +22,7 @@ MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} \
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/update.d
-OWN_DIRS+=		${PKG_SYSCONFDIR}/resolv.conf.d
-CONF_FILES=		${EGDIR}/resolv.conf.d/head \
-			${PKG_SYSCONFDIR}/resolv.conf.d/head
-
-CONF_FILES_PERMS=
-.for s in libc dnsmasq named
-CONF_FILES_PERMS+=	${EGDIR}/update.d/${s} ${PKG_SYSCONFDIR}/update.d/${s} \
-			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
-.endfor
+CONF_FILES=		${EGDIR}/resolv.conf.head \
+			${PKG_SYSCONFDIR}/resolv.conf.head
 
 .include "../../mk/bsd.pkg.mk"
