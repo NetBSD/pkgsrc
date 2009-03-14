@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.6 2009/03/14 13:45:38 adrianp Exp $
+
+--- configure.orig	2009-03-12 06:15:45.000000000 +0000
++++ configure
+@@ -5479,7 +5479,7 @@ fi
+ 
+ if test -z "${with_apr}"; then
+         if test -z "${apr_path}"; then
+-        test_paths="/usr/local/apr /usr/local /usr"
++        test_paths="@@PREFIX@@ /usr/local/apr /usr/local /usr"
+     else
+         test_paths="${apr_path}"
+     fi
+@@ -5562,7 +5562,7 @@ fi
+ 
+ if test -z "${with_apu}"; then
+         if test -z "${apu_path}"; then
+-        test_paths="/usr/local/apr-util /usr/local/apu /usr/local/apr /usr/local /usr"
++        test_paths="@@PREFIX@@ /usr/local/apr-util /usr/local/apu /usr/local/apr /usr/local /usr"
+     else
+         test_paths="${apu_path}"
+     fi
