@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2009/02/11 23:11:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.294 2009/03/14 19:42:28 manu Exp $
 #
 
 COMMENT=	Databases
@@ -64,6 +64,7 @@ SUBDIR+=	ocaml-mysql
 SUBDIR+=	odbc-postgresql
 SUBDIR+=	openldap
 SUBDIR+=	openldap-client
+SUBDIR+=	openldap-cloak
 SUBDIR+=	openldap-doc
 SUBDIR+=	openldap-nops
 SUBDIR+=	openldap-server
