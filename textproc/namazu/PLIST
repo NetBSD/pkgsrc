@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/13 16:50:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/14 15:04:39 taca Exp $
 bin/adnmz
 bin/bnamazu
 bin/gcnmz
@@ -31,14 +31,12 @@ include/namazu/search.h
 include/namazu/util.h
 include/namazu/var.h
 include/namazu/wakati.h
-@dirrm include/namazu
 lib/libnmz.la
 libexec/cgi-bin/namazu.cgi
 man/man1/mknmz.1
 man/man1/namazu.1
 share/examples/namazu/mknmzrc
 share/examples/namazu/namazurc
-@dirrm share/examples/namazu
 share/locale/de/LC_MESSAGES/namazu.mo
 share/locale/es/LC_MESSAGES/namazu.mo
 share/locale/fr/LC_MESSAGES/namazu.mo
@@ -49,14 +47,11 @@ share/namazu/doc/en/manual.html
 share/namazu/doc/en/nmz.html
 share/namazu/doc/en/tips.html
 share/namazu/doc/en/tutorial.html
-@dirrm share/namazu/doc/en
 share/namazu/doc/ja/manual.html
 share/namazu/doc/ja/nmz.html
 share/namazu/doc/ja/tips.html
 share/namazu/doc/ja/tutorial.html
-@dirrm share/namazu/doc/ja
 share/namazu/doc/namazu.css
-@dirrm share/namazu/doc
 share/namazu/etc/AUTHORS
 share/namazu/etc/COPYING
 share/namazu/etc/CREDITS
@@ -73,7 +68,6 @@ share/namazu/etc/README-ja
 share/namazu/etc/THANKS
 share/namazu/etc/TODO
 share/namazu/etc/namazu.png
-@dirrm share/namazu/etc
 share/namazu/filter/apachecache.pl
 share/namazu/filter/bzip2.pl
 share/namazu/filter/compress.pl
@@ -107,10 +101,12 @@ share/namazu/filter/taro7_10.pl
 share/namazu/filter/tex.pl
 share/namazu/filter/visio.pl
 share/namazu/filter/zip.pl
-@dirrm share/namazu/filter
 share/namazu/pl/codeconv.pl
 share/namazu/pl/conf.pl
 share/namazu/pl/document.pl
+share/namazu/pl/ext.pl
+share/namazu/pl/extutf8.pl
+share/namazu/pl/extzip.pl
 share/namazu/pl/filter.pl
 share/namazu/pl/gettext.pl
 share/namazu/pl/gfilter.pl
@@ -122,7 +118,6 @@ share/namazu/pl/usage.pl
 share/namazu/pl/util.pl
 share/namazu/pl/var.pl
 share/namazu/pl/wakati.pl
-@dirrm share/namazu/pl
 share/namazu/template/NMZ.body
 share/namazu/template/NMZ.body.es
 share/namazu/template/NMZ.body.fr
@@ -158,4 +153,12 @@ share/namazu/template/NMZ.tips.fr
 share/namazu/template/NMZ.tips.ja
 share/namazu/template/NMZ.tips.pl
 @dirrm share/namazu/template
+@dirrm share/namazu/pl
+@dirrm share/namazu/filter
+@dirrm share/namazu/etc
+@dirrm share/namazu/doc/ja
+@dirrm share/namazu/doc/en
+@dirrm share/namazu/doc
 @dirrm share/namazu
+@dirrm share/examples/namazu
+@dirrm include/namazu
