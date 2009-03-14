@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/03/13 16:50:40 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/14 15:04:39 taca Exp $
 
-DISTNAME=	namazu-2.0.18
+DISTNAME=	namazu-2.0.19
 CATEGORIES=	japanese textproc www
-MASTER_SITES=	http://www.namazu.org/stable/ \
+MASTER_SITES=	http://www.namazu.org/test/ \
+		http://www.namazu.org/stable/ \
 		http://namazu.ipmedia.de/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,9 +21,10 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		PKG_SYSCONFBASE
-CONFIGURE_ARGS+=	--localstatedir=${DATADIR:Q} \
+CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/${DATADIR:Q} \
 			--libexecdir=${PREFIX}/libexec/cgi-bin \
 			--sysconfdir=${PKG_SYSCONFBASE:Q}
 CONFIGURE_ENV+=		KAKASI="module_kakasi"
@@ -31,9 +33,10 @@ CONFIGURE_ENV+=		CHASEN="module_chasen"
 CONFIGURE_ENV+=		ac_cv_path_CHASEN="module_chasen"
 CONFIGURE_ENV+=		MECAB="module_mecab"
 CONFIGURE_ENV+=		ac_cv_path_MECAB="module_mecab"
-DATADIR=		${PREFIX}/libdata
-EXAMPLESDIR=		${PREFIX}/share/examples/namazu
+DATADIR=		libdata
+EXAMPLESDIR=		share/examples/namazu
 EXAMPLES=		mknmzrc namazurc
+INSTALLATION_DIRS+=	${DATADIR}/namazu ${EXAMPLESDIR}
 
 SUBST_CLASSES+=		wakati
 SUBST_STAGE.wakati=	pre-configure
@@ -50,10 +53,9 @@ MAKE_DIRS+=		${DATADIR}/namazu/index
 OWN_DIRS+=		${PKG_SYSCONFDIR} ${DATADIR}/namazu
 
 post-install:
-	${INSTALL_DATA_DIR} ${DATADIR}/namazu
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	cd ${WRKSRC}/conf && ${INSTALL_DATA} ${f}-sample ${EXAMPLESDIR}/${f}
+	cd ${WRKSRC}/conf && ${INSTALL_DATA} ${f}-sample \
+		${DESTDIR}${PREFIX}/${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/03/13 16:50:40 taca Exp $
+$NetBSD: distinfo,v 1.3 2009/03/14 15:04:39 taca Exp $
 
-SHA1 (namazu-2.0.18.tar.gz) = a6e9e5522deda04559088e96fd192f203ac7432e
-RMD160 (namazu-2.0.18.tar.gz) = 3dd598cbe63e515649d1bd798aff90442e2949bc
-Size (namazu-2.0.18.tar.gz) = 1388095 bytes
+SHA1 (namazu-2.0.19.tar.gz) = 9d52d873dffa48fa0455e79005e9a43e751157ca
+RMD160 (namazu-2.0.19.tar.gz) = 935ef748a45ea2407f532ca8d1fe1d678914a0d4
+Size (namazu-2.0.19.tar.gz) = 1392466 bytes
 SHA1 (patch-ab) = 15e8b6b67885fe76932e8b749fa8ab64f6faf1d8
