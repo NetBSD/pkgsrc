@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/02/23 22:01:11 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/14 13:45:38 adrianp Exp $
 
-DISTNAME=	modsecurity-apache_2.5.7
+DISTNAME=	modsecurity-apache_2.5.9
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
-PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	http://www.modsecurity.org/download/
 
@@ -23,9 +22,13 @@ USE_LANGUAGES+=		c++ c
 
 CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 CONFIGURE_ARGS+=	--with-pcre=${PREFIX}
-CONFIGURE_ARGS+=	--with-apr=${PREFIX}
-CONFIGURE_ARGS+=	--with-apu=${PREFIX}
 CONFIGURE_ARGS+=        --with-libxml=${PREFIX}
+
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-patch
+SUBST_FILES.config=	configure
+SUBST_SED.config=       -e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_MESSAGE.config=   Fixing configuration files.
 
 EGDIR=			${PREFIX}/share/examples/ap-modsecurity
 CONF_FILES=		${EGDIR}/modsecurity.conf-minimal \
