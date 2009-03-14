@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/01/30 16:35:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/03/14 03:56:56 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -543,6 +543,12 @@ ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ja.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/lv.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/nl.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/nl_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typobox.html
