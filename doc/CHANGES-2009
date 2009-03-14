@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.992 2009/03/14 21:10:29 seb Exp $
+$NetBSD: CHANGES-2009,v 1.993 2009/03/14 22:35:19 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1334,3 +1334,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/namazu to 2.0.19 [taca 2009-03-14]
 	Added databases/openldap-cloak version 2.4.15 [manu 2009-03-14]
 	Added devel/p5-ex-lib version 0.05 [seb 2009-03-14]
+	Updated net/openresolv to 2.1 [roy 2009-03-14]
