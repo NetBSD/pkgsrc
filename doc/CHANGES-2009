@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.989 2009/03/14 13:45:53 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.990 2009/03/14 15:07:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1331,3 +1331,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight to 2.6.7 [taca 2009-03-14]
 	Updated www/typolight-translations to 20090312 [taca 2009-03-14]
 	Updated security/ap-modsecurity2 to 2.5.9 [adrianp 2009-03-14]
+	Updated textproc/namazu to 2.0.19 [taca 2009-03-14]
