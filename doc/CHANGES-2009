@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.987 2009/03/13 10:59:51 sborrill Exp $
+$NetBSD: CHANGES-2009,v 1.988 2009/03/14 04:00:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1328,3 +1328,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/php-pdo_odbc to 5.2.9.99 [sborrill 2009-03-13]
 	Updated databases/php-pdo_pgsql to 5.2.9.99 [sborrill 2009-03-13]
 	Updated databases/php-pdo_sqlite to 5.2.9.99 [sborrill 2009-03-13]
+	Updated www/typolight to 2.6.7 [taca 2009-03-14]
+	Updated www/typolight-translations to 20090312 [taca 2009-03-14]
