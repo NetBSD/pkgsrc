@@ -1,9 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/12/16 15:49:14 roy Exp $
+$NetBSD: MESSAGE,v 1.3 2009/03/14 22:33:20 roy Exp $
 
 To ensure that resolvconf works correctly, you should ensure that
 ${PREFIX} is available before any clients attempt to use it.
 On NetBSD, for example, you could do this by setting this in /etc/rc.conf
 critical_filesystems_local="/usr /var"
+and adding ${PREFIX}/sbin to PATH in /etc/rc.
 
 ===========================================================================
