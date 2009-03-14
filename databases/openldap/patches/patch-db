@@ -1,0 +1,16 @@
+$NetBSD: patch-db,v 1.3 2009/03/14 19:40:19 manu Exp $
+--- contrib/slapd-modules/cloak/cloak.c.orig	2009-03-14 16:30:13.000000000 +0000
++++ contrib/slapd-modules/cloak/cloak.c	2009-03-14 16:28:02.000000000 +0000
+@@ -268,10 +268,10 @@
+ 		return SLAP_CB_CONTINUE;
+ 
+ 	sc = op->o_tmpcalloc( 1, sizeof( *sc ), op->o_tmpmemctx );
+ 	sc->sc_response = cloak_search_cb;
+-	sc->sc_cleanup = NULL;
+-	sc->sc_next = NULL;
++	sc->sc_cleanup = slap_freeself_cb;
++	sc->sc_next = op->o_callback;
+ 	sc->sc_private = ci;
+ 	op->o_callback = sc;
+ 
+ 	return SLAP_CB_CONTINUE;
