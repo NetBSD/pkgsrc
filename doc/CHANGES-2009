@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1010 2009/03/15 19:57:12 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1011 2009/03/15 20:13:40 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added games/gnome-games-extra-data version 2.26.0 [jmcneill 2009-03-15]
 	Updated fonts/gucharmap to 2.26.0 [jmcneill 2009-03-15]
 	Updated x11/gtksourceview2 to 2.6.0 [jmcneill 2009-03-15]
+	Updated editors/gedit to 2.26.0 [jmcneill 2009-03-15]
