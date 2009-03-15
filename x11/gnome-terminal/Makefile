@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2009/02/09 21:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/15 17:06:15 jmcneill Exp $
 #
 
-DISTNAME=		gnome-terminal-2.24.3
+DISTNAME=		gnome-terminal-2.26.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -34,13 +34,8 @@ BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.14.0
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.6
@@ -49,6 +44,6 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.13.6
 .include "../../x11/libXft/buildlink3.mk"
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 .include "../../x11/startup-notification/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vte+=	vte>=0.17.0
+BUILDLINK_API_DEPENDS.vte+=	vte>=0.19.1
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
