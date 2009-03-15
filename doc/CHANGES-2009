@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1004 2009/03/15 18:01:50 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1005 2009/03/15 18:14:49 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1346,3 +1346,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/vte to 0.19.4 [jmcneill 2009-03-15]
 	Updated x11/gnome-terminal to 2.26.0 [jmcneill 2009-03-15]
 	Updated x11/gtk2 to 2.16.0nb1 [jmcneill 2009-03-15]
+	Updated security/gnome-keyring to 2.26.0 [jmcneill 2009-03-15]
