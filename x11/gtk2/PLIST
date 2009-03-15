@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2009/01/12 02:08:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.62 2009/03/15 14:01:37 jmcneill Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -64,6 +64,7 @@ include/gtk-2.0/gtk/gtkaccelmap.h
 include/gtk-2.0/gtk/gtkaccessible.h
 include/gtk-2.0/gtk/gtkaction.h
 include/gtk-2.0/gtk/gtkactiongroup.h
+include/gtk-2.0/gtk/gtkactivatable.h
 include/gtk-2.0/gtk/gtkadjustment.h
 include/gtk-2.0/gtk/gtkalignment.h
 include/gtk-2.0/gtk/gtkarrow.h
@@ -166,6 +167,7 @@ include/gtk-2.0/gtk/gtknotebook.h
 include/gtk-2.0/gtk/gtkobject.h
 include/gtk-2.0/gtk/gtkoldeditable.h
 include/gtk-2.0/gtk/gtkoptionmenu.h
+include/gtk-2.0/gtk/gtkorientable.h
 include/gtk-2.0/gtk/gtkpagesetup.h
 include/gtk-2.0/gtk/gtkpaned.h
 include/gtk-2.0/gtk/gtkpapersize.h
@@ -362,6 +364,7 @@ share/gtk-2.0/demo/pickers.c
 share/gtk-2.0/demo/pixbufs.c
 share/gtk-2.0/demo/printing.c
 share/gtk-2.0/demo/rotated_text.c
+share/gtk-2.0/demo/search_entry.c
 share/gtk-2.0/demo/sizegroup.c
 share/gtk-2.0/demo/stock_browser.c
 share/gtk-2.0/demo/textscroll.c
@@ -432,6 +435,7 @@ share/gtk-doc/html/gdk/X_cursor.png
 share/gtk-doc/html/gdk/api-index-2-10.html
 share/gtk-doc/html/gdk/api-index-2-12.html
 share/gtk-doc/html/gdk/api-index-2-14.html
+share/gtk-doc/html/gdk/api-index-2-16.html
 share/gtk-doc/html/gdk/api-index-2-2.html
 share/gtk-doc/html/gdk/api-index-2-4.html
 share/gtk-doc/html/gdk/api-index-2-6.html
@@ -564,6 +568,7 @@ share/gtk-doc/html/gtk/GtkAccelLabel.html
 share/gtk-doc/html/gtk/GtkAccessible.html
 share/gtk-doc/html/gtk/GtkAction.html
 share/gtk-doc/html/gtk/GtkActionGroup.html
+share/gtk-doc/html/gtk/GtkActivatable.html
 share/gtk-doc/html/gtk/GtkAdjustment.html
 share/gtk-doc/html/gtk/GtkAlignment.html
 share/gtk-doc/html/gtk/GtkArrow.html
@@ -749,10 +754,12 @@ share/gtk-doc/html/gtk/TextWidgetObjects.html
 share/gtk-doc/html/gtk/TreeWidget.html
 share/gtk-doc/html/gtk/TreeWidgetObjects.html
 share/gtk-doc/html/gtk/WindowWidgets.html
+share/gtk-doc/html/gtk/aboutdialog.png
 share/gtk-doc/html/gtk/accel-label.png
 share/gtk-doc/html/gtk/api-index-2-10.html
 share/gtk-doc/html/gtk/api-index-2-12.html
 share/gtk-doc/html/gtk/api-index-2-14.html
+share/gtk-doc/html/gtk/api-index-2-16.html
 share/gtk-doc/html/gtk/api-index-2-2.html
 share/gtk-doc/html/gtk/api-index-2-4.html
 share/gtk-doc/html/gtk/api-index-2-6.html
@@ -763,6 +770,7 @@ share/gtk-doc/html/gtk/assistant.png
 share/gtk-doc/html/gtk/button.png
 share/gtk-doc/html/gtk/ch01.html
 share/gtk-doc/html/gtk/ch02.html
+share/gtk-doc/html/gtk/chap-drawing-model.html
 share/gtk-doc/html/gtk/check-button.png
 share/gtk-doc/html/gtk/checklist-gdkeventexpose-region.html
 share/gtk-doc/html/gtk/checklist-modifiers.html
@@ -773,6 +781,8 @@ share/gtk-doc/html/gtk/combo-box-entry.png
 share/gtk-doc/html/gtk/combo-box.png
 share/gtk-doc/html/gtk/decorating-the-assistant-pages.html
 share/gtk-doc/html/gtk/entry.png
+share/gtk-doc/html/gtk/figure-hierarchical-drawing.png
+share/gtk-doc/html/gtk/figure-windowed-label.png
 share/gtk-doc/html/gtk/file-button.png
 share/gtk-doc/html/gtk/filechooser.png
 share/gtk-doc/html/gtk/font-button.png
@@ -787,11 +797,13 @@ share/gtk-doc/html/gtk/gtk-Feature-Test-Macros.html
 share/gtk-doc/html/gtk/gtk-Filesystem-utilities.html
 share/gtk-doc/html/gtk/gtk-General.html
 share/gtk-doc/html/gtk/gtk-Graphics-Contexts.html
+share/gtk-doc/html/gtk/gtk-GtkHSV.html
 share/gtk-doc/html/gtk/gtk-GtkPaperSize.html
 share/gtk-doc/html/gtk/gtk-GtkTextIter.html
 share/gtk-doc/html/gtk/gtk-GtkTreeView-drag-and-drop.html
 share/gtk-doc/html/gtk/gtk-High-level-Printing-API.html
 share/gtk-doc/html/gtk/gtk-Keyboard-Accelerators.html
+share/gtk-doc/html/gtk/gtk-Orientable.html
 share/gtk-doc/html/gtk/gtk-Resource-Files.html
 share/gtk-doc/html/gtk/gtk-Selections.html
 share/gtk-doc/html/gtk/gtk-Signals.html
@@ -807,6 +819,7 @@ share/gtk-doc/html/gtk/gtk-bold.png
 share/gtk-doc/html/gtk/gtk-builder-convert.html
 share/gtk-doc/html/gtk/gtk-building.html
 share/gtk-doc/html/gtk/gtk-cancel.png
+share/gtk-doc/html/gtk/gtk-caps-lock-warning.png
 share/gtk-doc/html/gtk/gtk-cdrom.png
 share/gtk-doc/html/gtk/gtk-changes-1-2.html
 share/gtk-doc/html/gtk/gtk-changes-2-0.html
@@ -890,6 +903,7 @@ share/gtk-doc/html/gtk/gtk-migrating-GtkIconView.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkLinkButton.html
 share/gtk-doc/html/gtk/gtk-migrating-GtkRecentChooser.html
 share/gtk-doc/html/gtk/gtk-migrating-checklist.html
+share/gtk-doc/html/gtk/gtk-migrating-entry-icons.html
 share/gtk-doc/html/gtk/gtk-migrating-tooltips.html
 share/gtk-doc/html/gtk/gtk-missing-image.png
 share/gtk-doc/html/gtk/gtk-network.png
@@ -963,6 +977,14 @@ share/gtk-doc/html/gtk/image.png
 share/gtk-doc/html/gtk/index.html
 share/gtk-doc/html/gtk/index.sgml
 share/gtk-doc/html/gtk/label.png
+share/gtk-doc/html/gtk/layout-btlr.png
+share/gtk-doc/html/gtk/layout-btrl.png
+share/gtk-doc/html/gtk/layout-lrbt.png
+share/gtk-doc/html/gtk/layout-lrtb.png
+share/gtk-doc/html/gtk/layout-rlbt.png
+share/gtk-doc/html/gtk/layout-rltb.png
+share/gtk-doc/html/gtk/layout-tblr.png
+share/gtk-doc/html/gtk/layout-tbrl.png
 share/gtk-doc/html/gtk/left.png
 share/gtk-doc/html/gtk/link-button.png
 share/gtk-doc/html/gtk/list-and-tree.png
@@ -1030,6 +1052,8 @@ share/locale/ca/LC_MESSAGES/gtk20-properties.mo
 share/locale/ca/LC_MESSAGES/gtk20.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk20-properties.mo
 share/locale/ca@valencia/LC_MESSAGES/gtk20.mo
+share/locale/crh/LC_MESSAGES/gtk20-properties.mo
+share/locale/crh/LC_MESSAGES/gtk20.mo
 share/locale/cs/LC_MESSAGES/gtk20-properties.mo
 share/locale/cs/LC_MESSAGES/gtk20.mo
 share/locale/cy/LC_MESSAGES/gtk20-properties.mo
