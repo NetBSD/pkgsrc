@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/03/15 16:47:29 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/03/15 20:38:53 jmcneill Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -15,7 +15,6 @@ lib/vte/osc
 lib/vte/slowcat
 lib/vte/window
 libexec/gnome-pty-helper
-share/gtk-doc/html/vte/VteReaper.html
 share/gtk-doc/html/vte/VteTerminal.html
 share/gtk-doc/html/vte/VteTerminalAccessible.html
 share/gtk-doc/html/vte/ch01.html
@@ -31,6 +30,7 @@ share/gtk-doc/html/vte/vte.devhelp2
 share/locale/am/LC_MESSAGES/vte.mo
 share/locale/ang/LC_MESSAGES/vte.mo
 share/locale/ar/LC_MESSAGES/vte.mo
+share/locale/as/LC_MESSAGES/vte.mo
 share/locale/az/LC_MESSAGES/vte.mo
 share/locale/be/LC_MESSAGES/vte.mo
 share/locale/be@latin/LC_MESSAGES/vte.mo
