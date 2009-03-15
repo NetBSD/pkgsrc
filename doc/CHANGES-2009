@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1011 2009/03/15 20:13:40 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1012 2009/03/15 20:39:18 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1354,3 +1354,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/gucharmap to 2.26.0 [jmcneill 2009-03-15]
 	Updated x11/gtksourceview2 to 2.6.0 [jmcneill 2009-03-15]
 	Updated editors/gedit to 2.26.0 [jmcneill 2009-03-15]
+	Updated x11/vte to 0.20.0 [jmcneill 2009-03-15]
