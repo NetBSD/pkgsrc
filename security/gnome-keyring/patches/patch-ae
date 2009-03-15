@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/03/15 18:14:24 jmcneill Exp $
+
+--- daemon/Makefile.in.orig	2009-03-14 14:57:47.000000000 -0400
++++ daemon/Makefile.in
+@@ -364,7 +364,7 @@ servicedir = $(DBUS_SERVICES_DIR)
+ service_in_files = org.gnome.keyring.service.in
+ service_DATA = $(service_in_files:.service.in=.service)
+ desktop_in_files = gnome-keyring-daemon.desktop.in
+-desktopdir = $(sysconfdir)/xdg/autostart
++desktopdir = $(PREFIX)/share/gnome/autostart
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ all: all-recursive
+ 
