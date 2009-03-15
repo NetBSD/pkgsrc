@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.19 2008/12/21 16:00:04 spz Exp $
+$NetBSD: distinfo,v 1.20 2009/03/15 15:00:50 spz Exp $
 
-SHA1 (inn-2.4.5.tar.gz) = ca0f96e908633590e5e0e2e8b2f00762f7a97e9a
-RMD160 (inn-2.4.5.tar.gz) = ae01b1e793f99a3081cc03c4340c0b89ecba00e6
-Size (inn-2.4.5.tar.gz) = 1908550 bytes
+SHA1 (inn-2.4.6.tar.gz) = e9ef0a356c48f14cf89f50d8c9584959e061a795
+RMD160 (inn-2.4.6.tar.gz) = 58c35418a89fe26b1b2f44f6d2114865acce0b14
+Size (inn-2.4.6.tar.gz) = 1942874 bytes
 SHA1 (patch-aa) = 908b169b944cd10a385428de8897fa55c05b858c
 SHA1 (patch-ab) = a681fdecf562088cfb25e8625be1380b32331af0
 SHA1 (patch-ac) = 586748ecfbe0bb48dd42b422f262a1741cef9e90

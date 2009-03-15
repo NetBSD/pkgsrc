@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: innd.sh,v 1.16 2008/12/21 16:00:04 spz Exp $
+# $NetBSD: innd.sh,v 1.17 2009/03/15 15:00:51 spz Exp $
 #
 # PROVIDE: inn
 # REQUIRE: DAEMON
@@ -21,6 +21,11 @@ fi
 
 if [ -x @INN_PATHBIN@/rc.news -a -s @INN_DATA_DIR@/db/active ]
 then
+	if [ ! -d @PREFIX@/etc/nntp ]
+	then
+		mkdir @PREFIX@/etc/nntp
+	fi
+
 	if [ ! -f @PREFIX@/etc/nntp/server ]
 	then
 		hostname >@PREFIX@/etc/nntp/server
