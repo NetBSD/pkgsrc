@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/18 21:19:15 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/15 11:34:06 hasso Exp $
 #
 
 DISTNAME=	dvipng-1.11
@@ -18,5 +18,6 @@ USE_TOOLS+=		makeinfo
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../print/kpathsea/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
