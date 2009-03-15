@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1006 2009/03/15 18:33:26 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1007 2009/03/15 19:17:38 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1348,3 +1348,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtk2 to 2.16.0nb1 [jmcneill 2009-03-15]
 	Updated security/gnome-keyring to 2.26.0 [jmcneill 2009-03-15]
 	Updated security/seahorse to 2.26.0 [jmcneill 2009-03-15]
+	Updated www/epiphany to 2.26.0 [jmcneill 2009-03-15]
+	Updated www/epiphany-extensions to 2.26.0 [jmcneill 2009-03-15]
