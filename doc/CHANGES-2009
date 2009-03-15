@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1008 2009/03/15 19:32:10 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1009 2009/03/15 19:42:58 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/epiphany to 2.26.0 [jmcneill 2009-03-15]
 	Updated www/epiphany-extensions to 2.26.0 [jmcneill 2009-03-15]
 	Added games/gnome-games-extra-data version 2.26.0 [jmcneill 2009-03-15]
+	Updated fonts/gucharmap to 2.26.0 [jmcneill 2009-03-15]
