@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1.2.1 2009/03/15 15:07:23 tron Exp $
+
+Taken from http://curl.haxx.se/CVE-2009-0037/curl-7.18.1-CVE-2009-0037.patch
+
+--- lib/easy.c.orig
++++ lib/easy.c
+@@ -756,6 +756,13 @@ void curl_easy_reset(CURL *curl)
+                                                       type */
+   data->set.new_file_perms = 0644;    /* Default permissions */
+   data->set.new_directory_perms = 0755; /* Default permissions */
++
++  /* for the *protocols fields we don't use the CURLPROTO_ALL convenience
++     define since we internally only use the lower 16 bits for the passed
++     in bitmask to not conflict with the private bits */
++  data->set.allowed_protocols = PROT_EXTMASK;
++  data->set.redir_protocols =
++    PROT_EXTMASK & ~(CURLPROTO_FILE|CURLPROTO_SCP); /* not FILE or SCP */
+ }
+ 
+ /*
