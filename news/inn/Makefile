@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.95 2008/12/21 16:00:04 spz Exp $
+# $NetBSD: Makefile,v 1.96 2009/03/15 15:00:50 spz Exp $
 
-DISTNAME=		inn-2.4.5
-PKGREVISION=		3
+DISTNAME=		inn-2.4.6
 CATEGORIES=		news
 MASTER_SITES=		ftp://ftp.isc.org/isc/inn/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/
 
 MAINTAINER=		spz@NetBSD.org
-HOMEPAGE=		http://www.isc.org/sw/inn/
+HOMEPAGE=		http://www.isc.org/software/inn/
 COMMENT=		The public release of InterNet News (INN)
 
 CONFLICTS+=		libradius-[0-9]* nntpclnt-[0-9]*
@@ -158,14 +157,14 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/etc/nntp
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
 	for FILE in cnfsstat ctlinnd inndstart makehistory ; do		\
-		${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/$$FILE \
-				${DESTDIR}${PREFIX}/sbin/$$FILE ;	\
+		${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/$$FILE	\
+				${DESTDIR}${PREFIX}/sbin ;		\
 	done
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-	${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews	\
-			${DESTDIR}${PREFIX}/bin/inews
-	${INSTALL} -l rs ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews	\
-			${DESTDIR}${PREFIX}/bin/rnews
+	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/inews		\
+			${DESTDIR}${PREFIX}/bin
+	${LN} -s ${DESTDIR}${PREFIX}/${INN_PATHBIN}/rnews		\
+			${DESTDIR}${PREFIX}/bin
 	for FILE in libinn.a libstorage.a libinnhist.a ; do		\
 		${CHMOD} 644 ${DESTDIR}${PREFIX}/lib/$$FILE ;		\
 	done
