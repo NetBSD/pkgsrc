@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.995 2009/03/15 12:04:05 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.996 2009/03/15 13:33:13 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1337,3 +1337,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/openresolv to 2.1 [roy 2009-03-14]
 	Updated textproc/p5-Pod-POM to 0.18 [seb 2009-03-15]
 	Updated devel/re2c to 0.13.5 [tnn 2009-03-15]
+	Updated devel/glib2 to 2.20.0 [jmcneill 2009-03-15]
