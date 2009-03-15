@@ -1,39 +1,15 @@
-# $NetBSD: Makefile,v 1.13 2008/11/24 21:48:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/15 21:27:47 jmcneill Exp $
 
-DISTNAME=	gamin-0.1.10
-CATEGORIES=	sysutils
-MASTER_SITES=	http://www.gnome.org/~veillard/gamin/sources/
+.include "../../sysutils/gamin/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/~veillard/gamin/
-COMMENT=	File alteration monitor
+PKGREVISION=		1
+CONFIGURE_ARGS+=	--enable-server
 
-CONFLICTS=	fam-[0-9]*
-
-USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--enable-debug
-CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--without-threads
-CONFIGURE_ARGS+=	--with-html-dir=${DOCDIR:Q}
-CONFIGURE_ARGS+=	--without-python
-
-PKG_SYSCONFSUBDIR=	gamin
-DOCDIR=			${PREFIX}/share/doc/gamin
-
-SUBST_CLASSES+=		sysconfdir
-SUBST_MESSAGE.sysconfdir=fixing up sysconfdir
-SUBST_STAGE.sysconfdir=	pre-configure
-SUBST_FILES.sysconfdir=	doc/config.html doc/gamin.html server/gam_conf.c
-SUBST_SED.sysconfdir=	-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
+do-install:
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_LIB} ${WRKSRC}/server/gam_server \
+		${DESTDIR}${PREFIX}/libexec
 
 .include "../../devel/glib2/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}/doc; for file in *.html *.gif *.txt *.xml; do	\
-		${INSTALL_DATA} $$file ${DOCDIR}/$$file;		\
-	done
-
+.include "../../sysutils/libgamin/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
