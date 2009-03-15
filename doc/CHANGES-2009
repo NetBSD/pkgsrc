@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1000 2009/03/15 16:05:40 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1001 2009/03/15 16:16:26 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1342,3 +1342,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libgnomekbd to 2.26.0 [jmcneill 2009-03-15]
 	Updated news/inn to 2.4.6 [spz 2009-03-15]
 	Updated x11/py-gnome2 to 2.26.0 [jmcneill 2009-03-15]
+	Updated x11/py-gnome2-desktop to 2.26.0 [jmcneill 2009-03-15]
