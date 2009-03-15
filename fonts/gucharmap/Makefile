@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2009/01/13 14:58:09 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2009/03/15 19:42:26 jmcneill Exp $
 #
 
-DISTNAME=	gucharmap-2.24.3
+DISTNAME=	gucharmap-2.26.0
 CATEGORIES=	fonts gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,15 +24,11 @@ GTK2_IMMODULES=		yes
 
 GCONF_SCHEMAS+=	gucharmap.schemas
 
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.6.0
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.7
-BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.3
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.6
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
