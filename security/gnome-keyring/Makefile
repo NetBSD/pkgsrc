@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2009/01/11 20:32:18 ahoka Exp $
+# $NetBSD: Makefile,v 1.43 2009/03/15 18:14:24 jmcneill Exp $
 
-DISTNAME=	gnome-keyring-2.24.1
-PKGREVISION=	2
+DISTNAME=	gnome-keyring-2.26.0
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,7 +24,9 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gcr/gcr.pc.in
 PKGCONFIG_OVERRIDE=	${WRKSRC}/library/gnome-keyring-1.pc.in
+PKGCONFIG_OVERRIDE=	${WRKSRC}/gp11/gp11.pc.in
 
 GCONF_SCHEMAS+=		gnome-keyring.schemas
 
@@ -35,6 +36,12 @@ CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 # The bug is described in PR security/39313
 #
 CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
+
+.include "../../mk/dlopen.buildlink3.mk"
+
+.if !defined(BUILDLINK_LDADD.dl)
+BUILDLINK_TRANSFORM+=	rm:-ldl
+.endif
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
