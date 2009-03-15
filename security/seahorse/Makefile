@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2008/11/08 23:46:00 jnemeth Exp $
+# $NetBSD: Makefile,v 1.77 2009/03/15 18:32:43 jmcneill Exp $
 
-DISTNAME=	seahorse-2.24.1
+DISTNAME=	seahorse-2.26.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -53,6 +53,7 @@ post-patch:
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
+.include "../../net/avahi/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
@@ -63,5 +64,4 @@ post-patch:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-# XXX: avahi for SHARING
 .include "../../mk/bsd.pkg.mk"
