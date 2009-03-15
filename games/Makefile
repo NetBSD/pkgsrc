@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.318 2009/02/15 16:06:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.319 2009/03/15 19:31:46 jmcneill Exp $
 #
 
 COMMENT=	Games
@@ -109,6 +109,7 @@ SUBDIR+=	glaxium
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
 SUBDIR+=	gnome-games
+SUBDIR+=	gnome-games-extra-data
 SUBDIR+=	gnome-mastermind
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
