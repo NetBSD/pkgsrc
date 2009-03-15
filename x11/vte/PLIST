@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/10/16 13:35:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/03/15 16:47:29 jmcneill Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -7,16 +7,12 @@ include/vte/vteaccess.h
 include/vte/vtetypebuiltins.h
 include/vte/vteversion.h
 lib/libvte.la
+lib/pkgconfig/pyvte.pc
 lib/pkgconfig/vte.pc
 lib/vte/decset
 lib/vte/interpret
-lib/vte/iso8859mode
-lib/vte/nativeecho
 lib/vte/osc
 lib/vte/slowcat
-lib/vte/utf8echo
-lib/vte/utf8mode
-lib/vte/vterdb
 lib/vte/window
 libexec/gnome-pty-helper
 share/gtk-doc/html/vte/VteReaper.html
@@ -114,6 +110,7 @@ share/locale/xh/LC_MESSAGES/vte.mo
 share/locale/zh_CN/LC_MESSAGES/vte.mo
 share/locale/zh_HK/LC_MESSAGES/vte.mo
 share/locale/zh_TW/LC_MESSAGES/vte.mo
+share/pygtk/2.0/defs/vte.defs
 share/vte/termcap/xterm
 @dirrm share/vte/termcap
 @dirrm share/vte
