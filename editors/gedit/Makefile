@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2009/01/12 21:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2009/03/15 20:13:11 jmcneill Exp $
 #
 
-DISTNAME=		gedit-2.24.3
+DISTNAME=		gedit-2.26.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gedit/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -22,21 +22,21 @@ PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 
 GCONF_SCHEMAS=		gedit.schemas gedit-file-browser.schemas
 
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
+
 .include "options.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.6.0
-.include "../../devel/libglade/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.16.0
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-#BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.16.0
-#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.0
