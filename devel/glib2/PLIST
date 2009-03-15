@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2008/09/06 11:07:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.44 2009/03/15 13:32:31 jmcneill Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -87,6 +87,7 @@ include/glib/glib-2.0/glib/gmessages.h
 include/glib/glib-2.0/glib/gnode.h
 include/glib/glib-2.0/glib/goption.h
 include/glib/glib-2.0/glib/gpattern.h
+include/glib/glib-2.0/glib/gpoll.h
 include/glib/glib-2.0/glib/gprimes.h
 include/glib/glib-2.0/glib/gprintf.h
 include/glib/glib-2.0/glib/gqsort.h
@@ -223,6 +224,7 @@ share/gtk-doc/html/gio/index.html
 share/gtk-doc/html/gio/index.sgml
 share/gtk-doc/html/gio/ix01.html
 share/gtk-doc/html/gio/ix02.html
+share/gtk-doc/html/gio/ix03.html
 share/gtk-doc/html/gio/left.png
 share/gtk-doc/html/gio/migrating.html
 share/gtk-doc/html/gio/pt01.html
@@ -331,6 +333,7 @@ share/gtk-doc/html/glib/ix08.html
 share/gtk-doc/html/glib/ix09.html
 share/gtk-doc/html/glib/ix10.html
 share/gtk-doc/html/glib/ix11.html
+share/gtk-doc/html/glib/ix12.html
 share/gtk-doc/html/glib/left.png
 share/gtk-doc/html/glib/mainloop-states.gif
 share/gtk-doc/html/glib/right.png
