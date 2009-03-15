@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.6 2008/10/28 07:07:59 adam Exp $
+$NetBSD: patch-an,v 1.6.2.1 2009/03/15 19:21:22 tron Exp $
 
---- configure.orig	2008-04-30 20:37:32.000000000 +0200
+--- configure.orig	2008-12-07 11:31:12.000000000 -0800
 +++ configure
-@@ -12437,7 +12437,7 @@ EOF
+@@ -12471,7 +12471,7 @@ EOF
  
      echo "$ac_t""$PHP_PATH_INFO_CHECK" 1>&6
  
@@ -11,7 +11,43 @@ $NetBSD: patch-an,v 1.6 2008/10/28 07:07:59 adam Exp $
      
    PHP_SAPI=cgi
    
-@@ -107515,12 +107515,7 @@ old_CC=$CC
+@@ -21467,7 +21467,7 @@ fi
+     if test "$found_openssl" = "no"; then
+   
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -34588,7 +34588,7 @@ fi
+     if test "$found_openssl" = "no"; then
+   
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -48878,7 +48878,7 @@ fi
+     if test "$found_openssl" = "no"; then
+   
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -87996,7 +87996,7 @@ fi
+     if test "$found_openssl" = "no"; then
+   
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -108297,12 +108297,7 @@ old_CC=$CC
  if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
    CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
    INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
