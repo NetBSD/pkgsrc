@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/12/01 13:25:47 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2009/03/15 21:48:05 jmcneill Exp $
 #
 # This file is *not* included for HPUX and OSF1, as they don't have
 # a working FAM implementation. 
@@ -11,7 +11,8 @@ PKG_SUGGESTED_OPTIONS=	fam
 
 .if !empty(PKG_OPTIONS:Mfam)
 PLIST.fam=		yes
-FAM_ACCEPTED=		fam
+FAM_ACCEPTED=		fam gamin
+FAM_SERVER=		no
 .  include "../../mk/fam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-fam
 
