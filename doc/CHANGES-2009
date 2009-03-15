@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.998 2009/03/15 14:49:43 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.999 2009/03/15 15:19:59 spz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1340,3 +1340,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/glib2 to 2.20.0 [jmcneill 2009-03-15]
 	Updated x11/gtk2 to 2.16.0 [jmcneill 2009-03-15]
 	Updated x11/libgnomekbd to 2.26.0 [jmcneill 2009-03-15]
+	Updated news/inn to 2.4.6 [spz 2009-03-15]
