@@ -9,3 +9,5 @@ The main goals of the project are:
       of FAM.
    3. Provide an API and ABI compatible replacement for FAM.
    4. Try to fix some other issues like resource consumption.
+
+This package provides the Gamin server.
