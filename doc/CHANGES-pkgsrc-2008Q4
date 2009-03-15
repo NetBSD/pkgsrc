@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.69 2009/03/13 04:55:36 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q4,v 1.1.2.70 2009/03/15 15:09:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q4 branch:
@@ -199,3 +199,5 @@ pullup ticket #2716 - requested by tron
 curl: fix for security vulnerability
 pullup ticket #2718 - requested by tron
 firefox3: update package
+Pullup ticket 2722 - requested by bouyer
+curl: build fix
