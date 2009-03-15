@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/15 21:29:14 jmcneill Exp $
+include/fam.h
+lib/libfam.la
+lib/libgamin-1.la
+lib/libgamin_shared.a
+lib/pkgconfig/gamin.pc
+share/doc/gamin/FAQ.html
+share/doc/gamin/callbacks.gif
+share/doc/gamin/client_server.gif
+share/doc/gamin/config.html
+share/doc/gamin/contacts.html
+share/doc/gamin/debug.html
+share/doc/gamin/debugging.txt
+share/doc/gamin/devel.html
+share/doc/gamin/differences.html
+share/doc/gamin/downloads.html
+share/doc/gamin/gamin-api.xml
+share/doc/gamin/gamin-refs.xml
+share/doc/gamin/gamin.html
+share/doc/gamin/index.html
+share/doc/gamin/internals.html
+share/doc/gamin/news.html
+share/doc/gamin/overview.html
+share/doc/gamin/python.html
+share/doc/gamin/security.html
+share/doc/gamin/server_structs.gif
+share/doc/gamin/socket.txt
+share/doc/gamin/using.html
+@dirrm share/doc/gamin
