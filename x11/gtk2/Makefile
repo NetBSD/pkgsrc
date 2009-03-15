@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.167 2009/03/15 14:01:37 jmcneill Exp $
+# $NetBSD: Makefile,v 1.168 2009/03/15 18:01:36 jmcneill Exp $
 
 DISTNAME=		gtk+-2.16.0
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.16/ \
@@ -55,6 +56,8 @@ SUBST_MESSAGE.pthread=	Fixing pthread flags.
 SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
+PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
+
 .include "options.mk"
 
 # We remove the module databases during post-install since we create them
@@ -91,5 +94,6 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.6.0
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../lang/python/application.mk"
 
 .include "../../mk/bsd.pkg.mk"
