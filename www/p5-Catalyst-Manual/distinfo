@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/03/09 20:34:09 rhaen Exp $
+$NetBSD: distinfo,v 1.4 2009/03/15 22:00:45 seb Exp $
 
-SHA1 (Catalyst-Manual-5.7018.tar.gz) = 062a9a5ff4fa8da4387d1ae58d6840420cf3cabc
-RMD160 (Catalyst-Manual-5.7018.tar.gz) = 353c5841af1c532632ac0f40679dde4f29176d90
-Size (Catalyst-Manual-5.7018.tar.gz) = 160355 bytes
+SHA1 (Catalyst-Manual-5.7020.tar.gz) = 4b254d27a41337345b767896903cbda647f8c11f
+RMD160 (Catalyst-Manual-5.7020.tar.gz) = 0f455586c8d451adec3b84c7c597c74d605a79bb
+Size (Catalyst-Manual-5.7020.tar.gz) = 160096 bytes
