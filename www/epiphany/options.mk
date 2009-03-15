@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2009/02/06 17:29:42 drochner Exp $
+# $NetBSD: options.mk,v 1.6 2009/03/15 19:15:45 jmcneill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.epiphany
 PKG_SUPPORTED_OPTIONS=		avahi
 # browser crashes with enchant
 PKG_OPTIONS_OPTIONAL_GROUPS=	engine
-PKG_OPTIONS_GROUP.engine=	firefox webkit
+PKG_OPTIONS_GROUP.engine=	firefox
 PKG_SUGGESTED_OPTIONS=		avahi firefox
 PLIST_VARS=			gecko
 
@@ -35,9 +35,4 @@ CONFIGURE_ARGS+=	--with-engine=mozilla
 CONFIGURE_ARGS+=	--with-gecko=firefox
 PLIST.gecko=	yes
 .include "../../www/firefox/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mwebkit)
-CONFIGURE_ARGS+=	--with-engine=webkit
-.include "../../www/webkit-gtk/buildlink3.mk"
 .endif
