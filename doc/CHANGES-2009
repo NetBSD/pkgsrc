@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1014 2009/03/15 21:29:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1015 2009/03/15 21:42:05 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/vte to 0.20.0 [jmcneill 2009-03-15]
 	Updated sysutils/gamin to 0.1.10nb1 [jmcneill 2009-03-15]
 	Updated x11/gnome-mag to 0.15.5 [wiz 2009-03-15]
+	Added sysutils/libgamin version 0.1.10 [jmcneill 2009-03-15]
