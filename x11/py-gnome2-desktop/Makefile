@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2009/01/07 14:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2009/03/15 16:15:58 jmcneill Exp $
 #
 
-DISTNAME=	gnome-python-desktop-2.24.1
+DISTNAME=	gnome-python-desktop-2.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
