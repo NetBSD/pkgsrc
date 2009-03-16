@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7910 2009/03/16 18:04:23 jmcneill Exp $
+$NetBSD: TODO,v 1.7911 2009/03/16 18:14:29 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -910,6 +910,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o modular-xorg-server-1.6.0
 	o moserial-1.0.6 [GNOME 2.26]
+	o mousetweaks-2.26.0 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
