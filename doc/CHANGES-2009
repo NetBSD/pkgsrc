@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1021 2009/03/16 10:50:46 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1022 2009/03/16 11:25:09 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1364,3 +1364,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/orca to 2.26.0 [jmcneill 2009-03-16]
 	Updated mail/milter-greylist to 4.2rc1 [tron 2009-03-16]
 	Added sysutils/brasero version 2.26.0 [jmcneill 2009-03-16]
+	Updated x11/gnome-applets to 2.26.0 [jmcneill 2009-03-16]
