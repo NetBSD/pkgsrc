@@ -1,35 +1,31 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2008/12/20 23:38:56 jmcneill Exp $
+$NetBSD: MESSAGE,v 1.5 2009/03/16 08:50:43 jmcneill Exp $
 
 In order to get the GNOME Desktop running properly, you need to follow
 these manual steps:
 
-1) Enable the File Alteration Monitor.  See 'pkg_info -D fam' for more
-   information.  If you chose to use gamin instead of fam, you do not need
-   to take this step.
-
-2) Enable the system dbus daemon.  In order to do that, copy the
+1) Enable the system dbus daemon.  In order to do that, copy the
    ${PREFIX}/share/examples/rc.d/dbus script to /etc/rc.d and add
    dbus=YES to your /etc/rc.conf file.
 
-3) Enable the hal daemon if GNOME has been built with the hal option (the
+2) Enable the hal daemon if GNOME has been built with the hal option (the
    default).  In order to do that, copy the ${PREFIX}/share/examples/rc.d/hal
    script to /etc/rc.d and set hal=YES in your /etc/rc.conf file.
 
-4) Enable the cups daemon if you installed it.  In order to do that, copy
+3) Enable the cups daemon if you installed it.  In order to do that, copy
    the ${PREFIX}/share/examples/rc.d/{cupsd,slpd} scripts to /etc/rc.d and
    set cupsd=YES and slpd=NO in your /etc/rc.conf file.
 
-5) Set up the gnome-screensaver PAM service by creating the
+4) Set up the gnome-screensaver PAM service by creating the
    /etc/pam.d/gnome-screensaver file.  You can use one of the files
    in ${PREFIX}/share/examples/gnome-screensaver/pam.d as templates.
 
-6) Optionally enable the Avahi DNS Service Discovery service if you
+5) Optionally enable the Avahi DNS Service Discovery service if you
    installed it.  In order to do that, copy the
    ${PREFIX}/share/examples/rc.d/avahidaemon script to /etc/rc.d and set
    avahidaemon=YES in your /etc/rc.conf file.
 
-7) Optionally enable GDM (highly recommended).  Just copy the
+6) Optionally enable GDM (highly recommended).  Just copy the
    ${PREFIX}/share/examples/rc.d/gdm script to /etc/rc.d and add
    gdm=YES to your /etc/rc.conf file.
 
