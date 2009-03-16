@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7901 2009/03/16 11:49:41 jmcneill Exp $
+$NetBSD: TODO,v 1.7902 2009/03/16 12:15:31 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1295,8 +1295,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
-	o totem-2.26.0 [GNOME 2.26]
-	o totem-pl-parser-2.26.0 [GNOME 2.26]
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.1.1
