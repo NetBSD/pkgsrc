@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/02/21 17:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/16 12:13:59 jmcneill Exp $
 #
 
-DISTNAME=	totem-pl-parser-2.24.4
+DISTNAME=	totem-pl-parser-2.26.0
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem-pl-parser/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem-pl-parser/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +24,5 @@ PKGCONFIG_OVERRIDE+=	totem-plparser.pc.in
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
