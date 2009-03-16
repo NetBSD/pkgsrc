@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7921 2009/03/16 21:24:12 jmcneill Exp $
+$NetBSD: TODO,v 1.7922 2009/03/16 22:22:46 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -415,7 +415,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk-1.6.0.6
 	o astyle-1.15.3
-	o at-spi-1.26.0 [GNOME 2.26]
 	o aterm-1.0.1
 	o atk-1.26.0 [GNOME 2.26]
 	o auctex-11.85
