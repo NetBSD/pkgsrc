@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7912 2009/03/16 18:27:54 jmcneill Exp $
+$NetBSD: TODO,v 1.7913 2009/03/16 18:44:34 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -550,6 +550,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elscreen-1.4.6
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
+	o empathy-2.26.0 [GNOME 2.26]
 	o enlightenment-0.16.8.12
 	o epdfview-0.1.7
 	o epic4-2.6
@@ -644,6 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.4
+	o glade3-3.6.0 [GNOME 2.26]
 	o glchess-1.0.5
 	o glibmm-2.20.0 [GNOME 2.26]
 	o global-5.7.2 [pkg/39760]
@@ -1270,6 +1272,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
+	o swfdec-gnome-2.26.0 [GNOME 2.26]
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o systrace-1.6e
