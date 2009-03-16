@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1027 2009/03/16 12:37:46 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1028 2009/03/16 12:49:39 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1374,3 +1374,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/totem-pl-parser to 2.26.0 [jmcneill 2009-03-16]
 	Updated x11/gnome-desktop to 2.25.92 [jmcneill 2009-03-16]
 	Updated devel/eel to 2.26.0 [jmcneill 2009-03-16]
+	Updated net/libsoup24 to 2.25.91 [jmcneill 2009-03-16]
