@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7900 2009/03/16 11:36:41 jmcneill Exp $
+$NetBSD: TODO,v 1.7901 2009/03/16 11:49:41 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -535,6 +535,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.2
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o eel-2.26.0 [GNOME 2.26]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.0
@@ -622,6 +623,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.16
 	o geda-1.5.1.20081221
+	o gedit-plugins-2.26.0 [GNOME 2.26]
 	o geeklog-1.5.2
 	o genius-1.0.5
 	o gentoo-0.15.2
@@ -692,6 +694,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
 	o gv-3.6.6
+	o gvfs-1.2.0 [GNOME 2.26]
 	o gwaei-0.15.2
 	o gworkspace-0.8.6
 	o gxemul-0.4.7.1
