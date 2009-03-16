@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7904 2009/03/16 13:07:24 jmcneill Exp $
+$NetBSD: TODO,v 1.7905 2009/03/16 16:24:20 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -415,6 +415,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk-1.6.0.6
 	o astyle-1.15.3
+	o at-spi-1.26.0 [GNOME 2.26]
 	o aterm-1.0.1
 	o auctex-11.85
 	o autoconvert-0.3.16
@@ -563,6 +564,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evolution-2.26.0 [GNOME 2.26]
 	o evolution-data-server-2.26.0 [GNOME 2.26]
 	o evolution-exchange-2.26.0 [GNOME 2.26]
+	o evolution-mapi-0.26.0 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
