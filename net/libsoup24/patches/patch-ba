@@ -1,0 +1,13 @@
+$NetBSD: patch-ba,v 1.1 2009/03/16 12:49:02 jmcneill Exp $
+
+--- configure.orig	2009-03-03 20:07:51.000000000 -0500
++++ configure
+@@ -23620,7 +23620,7 @@ _ACEOF
+     fi
+ else
+     have_apache=0
+-    if test "$APACHE_HTTPD" == "no" -o -z "$APACHE_MODULE_DIR"; then
++    if test "$APACHE_HTTPD" = "no" -o -z "$APACHE_MODULE_DIR"; then
+         MISSING_REGRESSION_TEST_PACKAGES="$MISSING_REGRESSION_TEST_PACKAGES apache"
+     else
+         MISSING_REGRESSION_TEST_PACKAGES="$MISSING_REGRESSION_TEST_PACKAGES mod_ssl"
