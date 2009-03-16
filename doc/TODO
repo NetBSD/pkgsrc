@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7932 2009/03/16 23:29:51 jmcneill Exp $
+$NetBSD: TODO,v 1.7933 2009/03/16 23:41:42 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1475,6 +1475,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yabause-0.9.9
 	o yacas-1.2.0
 	o yafc-1.1
+	o yelp-2.26.0 [GNOME 2.26]
 	o yodl-2.01.02
 	o youtube-dl-20090207
 	o ysm-2.9.9.1
