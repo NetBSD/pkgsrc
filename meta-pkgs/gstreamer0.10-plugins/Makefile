@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/12/18 17:35:18 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/16 11:43:14 jmcneill Exp $
 
 DISTNAME=	# empty
 PKGNAME=	gstreamer0.10-plugins-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs multimedia
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -39,6 +39,7 @@ DEPENDS+=	gst-plugins0.10-dvdread-[0-9]*:../../multimedia/gst-plugins0.10-dvdrea
 DEPENDS+=	gst-gnonlin-[0-9]*:../../multimedia/gst-plugins0.10-gnonlin
 DEPENDS+=	gst-plugins0.10-mpeg2dec-[0-9]*:../../multimedia/gst-plugins0.10-mpeg2dec
 DEPENDS+=	gst-plugins0.10-ogg-[0-9]*:../../multimedia/gst-plugins0.10-ogg
+DEPENDS+=	gst-plugins0.10-resindvd-[0-9]*:../../multimedia/gst-plugins0.10-resindvd
 DEPENDS+=	gst-plugins0.10-theora-[0-9]*:../../multimedia/gst-plugins0.10-theora
 DEPENDS+=	gst-plugins0.10-x264-[0-9]*:../../multimedia/gst-plugins0.10-x264
 DEPENDS+=	gst-plugins0.10-xvid-[0-9]*:../../multimedia/gst-plugins0.10-xvid
