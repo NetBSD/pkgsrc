@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7894 2009/03/16 10:21:54 jmcneill Exp $
+$NetBSD: TODO,v 1.7895 2009/03/16 10:31:17 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -561,6 +561,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o evolution-2.26.0 [GNOME 2.26]
+	o evolution-data-server-2.26.0 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -682,6 +684,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
+	o gtkhtml-3.26.0 [GNOME 2.26]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
