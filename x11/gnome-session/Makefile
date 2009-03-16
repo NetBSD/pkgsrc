@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.110 2009/01/14 13:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.111 2009/03/16 18:26:43 jmcneill Exp $
 #
 
-DISTNAME=		gnome-session-2.24.3
+DISTNAME=		gnome-session-2.25.92
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.25/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
