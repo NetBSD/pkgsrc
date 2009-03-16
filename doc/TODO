@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7924 2009/03/16 22:33:43 jmcneill Exp $
+$NetBSD: TODO,v 1.7925 2009/03/16 22:46:07 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -466,7 +466,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o cheese-2.26.0 [GNOME 2.26]
 	o chemtool-1.6.11
 	o cherokee-0.99.4
 	o cinepaint-0.23
