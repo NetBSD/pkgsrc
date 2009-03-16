@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.25 2008/09/22 17:11:02 ahoka Exp $
+# $NetBSD: OSF1.mk,v 1.26 2009/03/16 08:59:28 tnn Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -68,9 +68,6 @@ SERIAL_DEVICES?=	/dev/tty00 \
 			/dev/tty01
 
 _INCOMPAT_ICONV=   OSF1-*-*
-
-# sysutils/fam is not usable on OSF1.
-FAM_DEFAULT?=		gamin
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
