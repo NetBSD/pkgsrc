@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.69 2009/02/09 22:56:28 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2009/03/16 11:24:34 jmcneill Exp $
 #
 
-DISTNAME=		gnome-applets-2.24.3.1
-PKGREVISION=		1
+DISTNAME=		gnome-applets-2.26.0
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -25,6 +24,11 @@ USE_LIBTOOL=		yes
 .include "options.mk"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+# obsolete; replaced by PA mixer in gnome-media>=2.26
+CONFIGURE_ARGS+=	--enable-mixer-applet
+# obsolete; replaced by gnome-power-manager>=2.24
+CONFIGURE_ARGS+=	--disable-battstat
+CONFIGURE_ARGS+=	--disable-cpufreq
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
@@ -36,32 +40,6 @@ GCONF_SCHEMAS+=	mixer.schemas
 GCONF_SCHEMAS+=	multiload.schemas
 GCONF_SCHEMAS+=	stickynotes.schemas
 
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		battstat
-.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
-    (${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h))
-GCONF_SCHEMAS+=	battstat.schemas
-PLIST.battstat=		yes
-CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
-			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
-.else
-CONFIGURE_ARGS+=	--disable-battstat
-.endif
-
-PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${PLIST.battstat}"$$0; next; }
-PRINT_PLIST_AWK+=	/examples/ { print "$${PLIST.battstat}"$$0; next; }
-
-PLIST_VARS+=		cpufreq
-.if ${OPSYS} == "Linux" && exists(/usr/include/cpufreq.h)
-GCONF_SCHEMAS+=	cpufreq-applet.schemas
-PLIST.cpufreq=		yes
-.else
-CONFIGURE_ARGS+=	--disable-cpufreq
-.endif
-
-PRINT_PLIST_AWK+=	/[Cc][Pp][Uu][Ff]req/ { print "$${CPUFREQ}"$$0; next; }
-
 .include "../../devel/GConf/schemas.mk"
 
 PY_PATCHPLIST=	yes
@@ -71,8 +49,6 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../devel/gettext-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.18.0
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.22.1
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
