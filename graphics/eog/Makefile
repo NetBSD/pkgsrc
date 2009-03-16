@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2009/01/14 15:19:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/03/16 23:09:18 jmcneill Exp $
 #
 
-DISTNAME=	eog-2.24.3.1
+DISTNAME=	eog-2.26.0
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eog/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,6 +18,14 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	YES
 
 GCONF_SCHEMAS=	eog.schemas
+
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
