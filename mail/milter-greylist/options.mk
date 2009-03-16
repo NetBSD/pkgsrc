@@ -1,12 +1,21 @@
-# $NetBSD: options.mk,v 1.6 2009/03/08 15:54:26 tron Exp $
+# $NetBSD: options.mk,v 1.7 2009/03/16 10:15:23 tron Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.milter-greylist
 PKG_OPTIONS_REQUIRED_GROUPS=	mta
 PKG_OPTIONS_GROUP.mta=		postfix-milter sendmail-milter
-PKG_SUPPORTED_OPTIONS=		dnsrbl drac spf
-PKG_SUGGESTED_OPTIONS=		dnsrbl sendmail-milter spf
+PKG_SUPPORTED_OPTIONS=		curl dnsrbl drac ldap p0f spamassassin spf
+PKG_SUGGESTED_OPTIONS=		dnsrbl p0f sendmail-milter spamassassin spf
 
 .include "../../mk/bsd.options.mk"
+
+###
+### URL checking
+###
+.if !empty(PKG_OPTIONS:Mcurl)
+.include "../../www/curl/buildlink3.mk"
+
+CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
+.endif
 
 ###
 ### DNS Realtime Black List
@@ -24,6 +33,22 @@ CONFIGURE_ARGS+=	--disable-drac
 DRACD_DB?=		/etc/mail/dracd.db
 
 CONFIGURE_ARGS+=	--enable-drac --with-drac-db=${DRACD_DB}
+.endif
+
+###
+### LDAP support
+###
+.if !empty(PKG_OPTIONS:Mldap)
+.include "../../databases/openldap-client/buildlink3.mk"
+
+CONFIGURE_ARGS+=	--with-openldap=${BUILDLINK_PREFIX.openldap-client}
+.endif
+
+###
+### P0f support
+###
+.if !empty(PKG_OPTIONS:Mp0f)
+CONFIGURE_ARGS+=	--enable-p0f
 .endif
 
 ###
@@ -55,6 +80,13 @@ MILTER_USER=		smmsp
 .endif
 
 ###
+### SpamAssassin support
+###
+.if !empty(PKG_OPTIONS:Mspamassassin)
+CONFIGURE_ARGS+=	--enable-spamassassin
+.endif
+
+###
 ### Sender Policy Framework
 ###
 .if empty(PKG_OPTIONS:Mspf)
@@ -62,5 +94,5 @@ CONFIGURE_ARGS+=	--disable-libspf2
 .else
 .include "../../mail/libspf2/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--with-libspf2=${PREFIX:Q}
+CONFIGURE_ARGS+=	--with-libspf2=${BUILDLINK_PREFIX.libspf2}
 .endif
