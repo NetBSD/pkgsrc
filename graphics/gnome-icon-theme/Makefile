@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2009/02/27 07:38:08 hira Exp $
+# $NetBSD: Makefile,v 1.62 2009/03/16 18:00:53 jmcneill Exp $
 #
 
-DISTNAME=		gnome-icon-theme-2.24.0
-PKGREVISION=		2
+DISTNAME=		gnome-icon-theme-2.25.92
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-icon-theme/2.25/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -30,11 +29,11 @@ BUILDLINK_API_DEPENDS.icon-naming-utils+=	icon-naming-utils>=0.8.90
 # so we control the subdirs not belonging to a single application.
 post-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/share/icons/gnome/48x48/mimetypes
-	${INSTALL_DATA} ${FILESDIR}/distributor-logo.svg ${DESTDIR}${PREFIX}/share/icons/gnome/scalable/places/distributor-logo.svg
-	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 16 -h 16 -o ${DESTDIR}${PREFIX}/share/icons/gnome/16x16/places/distributor-logo.png
-	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 22 -h 22 -o ${DESTDIR}${PREFIX}/share/icons/gnome/22x22/places/distributor-logo.png
-	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 24 -h 24 -o ${DESTDIR}${PREFIX}/share/icons/gnome/24x24/places/distributor-logo.png
-	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 32 -h 32 -o ${DESTDIR}${PREFIX}/share/icons/gnome/32x32/places/distributor-logo.png
+	${INSTALL_DATA} ${FILESDIR}/distributor-logo.svg ${DESTDIR}${PREFIX}/share/icons/gnome/scalable/places/start-here.svg
+	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 16 -h 16 -o ${DESTDIR}${PREFIX}/share/icons/gnome/16x16/places/start-here.png
+	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 22 -h 22 -o ${DESTDIR}${PREFIX}/share/icons/gnome/22x22/places/start-here.png
+	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 24 -h 24 -o ${DESTDIR}${PREFIX}/share/icons/gnome/24x24/places/start-here.png
+	${PREFIX}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg -w 32 -h 32 -o ${DESTDIR}${PREFIX}/share/icons/gnome/32x32/places/start-here.png
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/icon-naming-utils/buildlink3.mk"
