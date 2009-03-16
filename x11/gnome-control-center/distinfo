@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/12/10 11:57:18 dsainty Exp $
+$NetBSD: distinfo,v 1.7 2009/03/16 17:22:57 jmcneill Exp $
 
-SHA1 (gnome-control-center-2.24.0.1.tar.bz2) = daf737c762d53ef984a55fc5008e6a4e85b88294
-RMD160 (gnome-control-center-2.24.0.1.tar.bz2) = 5f211b12f7260a8af8c602066133d72cb61cc3f6
-Size (gnome-control-center-2.24.0.1.tar.bz2) = 2113356 bytes
-SHA1 (patch-aa) = 377d07ac5071fa19063cd3ecd47c589c53b81b5a
+SHA1 (gnome-control-center-2.25.92.tar.bz2) = b488628ed7a3270b04fbc94094b8108ffbc0aae1
+RMD160 (gnome-control-center-2.25.92.tar.bz2) = c800760d9d75ad7fab5db54e4f74889efca5a907
+Size (gnome-control-center-2.25.92.tar.bz2) = 2220041 bytes
 SHA1 (patch-ab) = 82e7da7e90d8c30aa061c49f9f26ae270c122462
 SHA1 (patch-ad) = fe6ae649237fe3b07a449b92c35d8a803b4533fb
 SHA1 (patch-ae) = fc38771eef736338a70038cf0218005cd0bffb56
