@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2009/03/13 10:11:14 roy Exp $
+# $NetBSD: Makefile,v 1.60 2009/03/16 18:13:34 adrianp Exp $
 
 DISTNAME=	dspam-3.8.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://dspam.nuclearelephant.com/sources/
 
@@ -41,6 +41,8 @@ BUILD_DEFS+=		DSPAM_LOGFILE
 BUILD_DEFS+=		DSPAM_DOMAIN
 BUILD_DEFS+=		DSPAM_WWWHOME
 BUILD_DEFS+=		DSPAM_PIDDIR
+BUILD_DEFS+=		APACHE_USER
+BUILD_DEFS+=		APACHE_GROUP
 
 .include "../../mk/bsd.prefs.mk"
 
