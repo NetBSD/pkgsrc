@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7890 2009/03/14 15:23:34 wiz Exp $
+$NetBSD: TODO,v 1.7891 2009/03/16 01:02:19 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -971,6 +971,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssh-5.2
 	o openttd-0.6.1
 	o opera-9.64
+	o orca-2.26.0 [GNOME 2.26]
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
