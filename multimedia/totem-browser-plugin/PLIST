@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 00:46:44 jmcneill Exp $
-lib/firefox3/plugins/libtotem-basic-plugin.la
+@comment $NetBSD: PLIST,v 1.2 2009/03/16 12:13:31 jmcneill Exp $
 lib/firefox3/plugins/libtotem-cone-plugin.la
 lib/firefox3/plugins/libtotem-gmp-plugin.la
 lib/firefox3/plugins/libtotem-mully-plugin.la
