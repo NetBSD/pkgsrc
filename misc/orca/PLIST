@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/27 00:33:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/16 09:12:25 jmcneill Exp $
 bin/orca
 ${PYSITELIB}/orca/__init__.py
 ${PYSITELIB}/orca/__init__.pyc
@@ -238,6 +238,9 @@ ${PYSITELIB}/orca/scripts/apps/nautilus.pyo
 ${PYSITELIB}/orca/scripts/apps/notification-daemon.py
 ${PYSITELIB}/orca/scripts/apps/notification-daemon.pyc
 ${PYSITELIB}/orca/scripts/apps/notification-daemon.pyo
+${PYSITELIB}/orca/scripts/apps/notify-osd.py
+${PYSITELIB}/orca/scripts/apps/notify-osd.pyc
+${PYSITELIB}/orca/scripts/apps/notify-osd.pyo
 ${PYSITELIB}/orca/scripts/apps/pidgin/__init__.py
 ${PYSITELIB}/orca/scripts/apps/pidgin/__init__.pyc
 ${PYSITELIB}/orca/scripts/apps/pidgin/__init__.pyo
@@ -404,6 +407,7 @@ share/locale/fi/LC_MESSAGES/orca.mo
 share/locale/fr/LC_MESSAGES/orca.mo
 share/locale/gl/LC_MESSAGES/orca.mo
 share/locale/gu/LC_MESSAGES/orca.mo
+share/locale/he/LC_MESSAGES/orca.mo
 share/locale/hi/LC_MESSAGES/orca.mo
 share/locale/hu/LC_MESSAGES/orca.mo
 share/locale/it/LC_MESSAGES/orca.mo
@@ -426,6 +430,7 @@ share/locale/pa/LC_MESSAGES/orca.mo
 share/locale/pl/LC_MESSAGES/orca.mo
 share/locale/pt/LC_MESSAGES/orca.mo
 share/locale/pt_BR/LC_MESSAGES/orca.mo
+share/locale/ro/LC_MESSAGES/orca.mo
 share/locale/ru/LC_MESSAGES/orca.mo
 share/locale/rw/LC_MESSAGES/orca.mo
 share/locale/si/LC_MESSAGES/orca.mo
