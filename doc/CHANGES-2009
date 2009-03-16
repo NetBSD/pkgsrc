@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1029 2009/03/16 13:07:24 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1030 2009/03/16 14:06:16 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1376,3 +1376,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/eel to 2.26.0 [jmcneill 2009-03-16]
 	Updated net/libsoup24 to 2.25.91 [jmcneill 2009-03-16]
 	Updated sysutils/gvfs to 1.2.0 [jmcneill 2009-03-16]
+	Updated sysutils/nautilus to 2.26.0 [jmcneill 2009-03-16]
