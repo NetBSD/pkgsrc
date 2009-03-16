@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2008/12/20 01:08:57 jmcneill Exp $
+# $NetBSD: Makefile,v 1.21 2009/03/16 17:22:57 jmcneill Exp $
 #
 
-DISTNAME=	gnome-control-center-2.24.0.1
-PKGREVISION=	3
+DISTNAME=	gnome-control-center-2.25.92
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.25/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -34,6 +33,7 @@ INSTALL_MAKE_FLAGS+=	autostartdir=${PREFIX}/share/applications
 INSTALLATION_DIRS=	${EGDIR}
 
 GCONF_SCHEMAS+=	control-center.schemas
+GCONF_SCHEMAS+=	fontilus.schemas
 
 EGDIR=			${PREFIX}/share/examples/gnome-control-center
 CONF_FILES+=		${EGDIR}/gnomecc.menu \
@@ -92,6 +92,8 @@ post-patch:
 DEPENDS+=	gst-plugins0.10-hal>=0.10.11:../../multimedia/gst-plugins0.10-hal
 .endif
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../security/policykit/buildlink3.mk"
+.include "../../security/policykit-gnome/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
