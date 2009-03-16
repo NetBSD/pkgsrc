@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.203 2008/06/22 23:54:06 dholland Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.204 2009/03/16 18:37:07 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,19 +81,6 @@
 # BUILDLINK_*	public buildlink-related variables usable in other Makefiles
 # _BLNK_*	private buildlink-related variables to this Makefile
 
-_VARGROUPS+=		bl3
-.for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDFLAGS LIBS
-_SYS_VARS.bl3+=		BUILDLINK_${v}
-.endfor
-.for p in ${BUILDLINK_PACKAGES}
-.  for v in AUTO_VARS BUILTIN_MK CONTENTS_FILTER CPPFLAGS DEPMETHOD FILES_CMD INCDIRS IS_DEPOT LDFLAGS LIBDIRS PKGNAME PREFIX RPATHDIRS
-_SYS_VARS.bl3+=		BUILDLINK_${v}.${p}
-.  endfor
-.  for v in IGNORE_PKG USE_BUILTIN
-_SYS_VARS.bl3+=		${v}.${p}
-.  endfor
-.endfor
-
 .if ${PKG_DEBUG_LEVEL} > 0
 ECHO_BUILDLINK_MSG?=	${ECHO}
 .else
@@ -147,6 +134,19 @@ _BLNK_PACKAGES=		# empty
 .  if empty(_BLNK_PACKAGES:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_})
 _BLNK_PACKAGES+=	${_pkg_}
 .  endif
+.endfor
+
+_VARGROUPS+=		bl3
+.for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDFLAGS LIBS
+_SYS_VARS.bl3+=		BUILDLINK_${v}
+.endfor
+.for p in ${BUILDLINK_PACKAGES}
+.  for v in AUTO_VARS BUILTIN_MK CONTENTS_FILTER CPPFLAGS DEPMETHOD FILES_CMD INCDIRS IS_DEPOT LDFLAGS LIBDIRS PKGNAME PREFIX RPATHDIRS
+_SYS_VARS.bl3+=		BUILDLINK_${v}.${p}
+.  endfor
+.  for v in IGNORE_PKG USE_BUILTIN
+_SYS_VARS.bl3+=		${v}.${p}
+.  endfor
 .endfor
 
 # By default, every package receives a full dependency.
