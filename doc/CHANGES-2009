@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1039 2009/03/16 20:10:47 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1040 2009/03/16 20:20:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1387,3 +1387,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dspam to 3.8.0nb2 [adrianp 2009-03-16]
 	Updated x11/gnome-session to 2.25.92 [jmcneill 2009-03-16]
 	Updated wm/metacity to 2.26.0 [jmcneill 2009-03-16]
+	Updated x11/gtk2-engines to 2.18.0 [jmcneill 2009-03-16]
