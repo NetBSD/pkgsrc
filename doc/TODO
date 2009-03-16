@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7896 2009/03/16 10:38:29 jmcneill Exp $
+$NetBSD: TODO,v 1.7897 2009/03/16 10:50:46 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -448,7 +448,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
-	o brasero-2.26.0 [GNOME 2.26]
 	o btpd-0.13 [pkg/38144]
 	o bugzilla-3.3.2
 	o byacc-20080824
