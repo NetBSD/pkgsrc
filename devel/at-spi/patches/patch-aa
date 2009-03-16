@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2009/01/16 11:46:01 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2009/03/16 22:22:07 jmcneill Exp $
 
---- Makefile.in.orig	2008-12-19 03:58:57.000000000 +0100
+--- Makefile.in.orig	2009-03-16 10:01:12.000000000 -0400
 +++ Makefile.in
-@@ -294,7 +294,7 @@ sysconfdir = @sysconfdir@
+@@ -298,7 +298,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
 -SUBDIRS = docs idl libspi login-helper registryd atk-bridge cspi pyatspi test po
 +SUBDIRS = docs idl libspi login-helper registryd atk-bridge cspi test po
  pkgconfigdir = $(libdir)/pkgconfig
