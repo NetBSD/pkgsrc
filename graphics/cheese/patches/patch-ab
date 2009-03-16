@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
+$NetBSD: patch-ab,v 1.7 2009/03/16 22:45:14 jmcneill Exp $
 
---- ./src/cheese-webcam.c.orig	2008-11-24 23:03:19.000000000 +0000
-+++ ./src/cheese-webcam.c	2009-02-04 01:19:38.000000000 +0000
-@@ -32,13 +32,26 @@
+--- src/cheese-webcam.c.orig	2009-03-16 13:46:10.000000000 -0400
++++ src/cheese-webcam.c
+@@ -31,13 +31,26 @@
  #include <gst/gst.h>
  #include <gdk-pixbuf/gdk-pixbuf.h>
  #include <X11/Xlib.h>
@@ -31,7 +31,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
  
  #include "cheese-webcam.h"
  #include "cheese-flash.h"
-@@ -244,6 +257,7 @@ cheese_webcam_bus_message_cb (GstBus *bu
+@@ -243,6 +256,7 @@ cheese_webcam_bus_message_cb (GstBus *bu
    }
  }
  
@@ -39,7 +39,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
  static void
  cheese_webcam_get_video_devices_from_hal (CheeseWebcam *webcam)
  {
-@@ -305,8 +319,12 @@ cheese_webcam_get_video_devices_from_hal
+@@ -304,8 +318,12 @@ cheese_webcam_get_video_devices_from_hal
      char                   *parent_udi = NULL;
      char                   *subsystem = NULL;
      char                   *gstreamer_src, *product_name;
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
      gint vendor_id = 0;
      gint product_id = 0;
      gchar *property_name = NULL;
-@@ -320,14 +338,17 @@ cheese_webcam_get_video_devices_from_hal
+@@ -319,15 +337,17 @@ cheese_webcam_get_video_devices_from_hal
  
      if (parent_udi != NULL) {
        subsystem = libhal_device_get_property_string (hal_ctx, parent_udi, "info.subsystem", NULL);
@@ -60,25 +60,25 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
 -      property_name = g_strjoin (".", subsystem, "vendor_id", NULL);
 -      vendor_id = libhal_device_get_property_int (hal_ctx, parent_udi, property_name , &error);
 -      if (dbus_error_is_set (&error)) {
--        g_warning ("error getting vendor id: %s: %s\n", error.name, error.message);
+-        g_warning ("error getting vendor id: %s: %s", error.name, error.message);
 -        dbus_error_free (&error);
--      }
--      g_free (property_name);
 +      if (subsystem == NULL) {
-+        vendor_id = g_strdup("{No vendor ID}");
++	vendor_id = g_strdup("{No vendor ID}");
 +      } else {
 +        property_name = g_strjoin (".", subsystem, "vendor_id", NULL);
 +        vendor_id = libhal_device_get_property_int (hal_ctx, parent_udi, property_name , &error);
 +        if (dbus_error_is_set (&error)) {
-+          g_warning ("error getting vendor id: %s: %s\n", error.name, error.message);
++          g_warning ("error getting vendor id: %s: %s", error.name, error.message);
 +          dbus_error_free (&error);
 +        }
 +        g_free (property_name);
-+      } /*no subsystem patch*/
- 
+       }
+-      g_free (property_name);
+-
        property_name = g_strjoin (".", subsystem, "product_id", NULL);
        product_id = libhal_device_get_property_int (hal_ctx, parent_udi, property_name, &error);
-@@ -365,9 +386,14 @@ cheese_webcam_get_video_devices_from_hal
+       if (dbus_error_is_set (&error)) {
+@@ -364,9 +384,14 @@ cheese_webcam_get_video_devices_from_hal
        libhal_free_string (device);
        continue;
      }
@@ -93,7 +93,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
        ok = ioctl (fd, VIDIOCGCAP, &v1cap);
        if (ok < 0)
        {
-@@ -381,14 +407,22 @@ cheese_webcam_get_video_devices_from_hal
+@@ -380,14 +405,22 @@ cheese_webcam_get_video_devices_from_hal
        g_print ("Device type: %d\n", v1cap.type);
        gstreamer_src = "v4lsrc";
        product_name  = v1cap.name;
@@ -117,7 +117,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
        if (!(cap & V4L2_CAP_VIDEO_CAPTURE))
        {
          g_print ("Device %s seems to not have the capture capability, (radio tuner?)\n"
-@@ -399,6 +433,10 @@ cheese_webcam_get_video_devices_from_hal
+@@ -398,6 +431,10 @@ cheese_webcam_get_video_devices_from_hal
        }
        gstreamer_src = "v4l2src";
        product_name  = (char *) v2cap.card;
@@ -128,7 +128,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
      }
  
      g_print ("\n");
-@@ -434,6 +472,55 @@ fallback:
+@@ -433,6 +470,55 @@ fallback:
      priv->webcam_devices[0].hal_udi = g_strdup ("cheese_fake_videodevice");
    }
  }
@@ -184,7 +184,7 @@ $NetBSD: patch-ab,v 1.6 2009/02/06 17:01:49 jmorse Exp $
  
  static void
  cheese_webcam_get_supported_framerates (CheeseVideoFormat *video_format, GstStructure *structure)
-@@ -739,7 +826,11 @@ cheese_webcam_detect_webcam_devices (Che
+@@ -738,7 +824,11 @@ cheese_webcam_detect_webcam_devices (Che
  
    int i;
  
