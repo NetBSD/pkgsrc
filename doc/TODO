@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7902 2009/03/16 12:15:31 jmcneill Exp $
+$NetBSD: TODO,v 1.7903 2009/03/16 12:39:30 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -535,7 +535,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ed-1.2
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel-2.26.0 [GNOME 2.26]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.0
