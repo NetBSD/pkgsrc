@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/24 21:54:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/16 12:49:02 jmcneill Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-cookie-jar-text.h
 include/libsoup-2.4/libsoup/soup-cookie-jar.h
 include/libsoup-2.4/libsoup/soup-cookie.h
 include/libsoup-2.4/libsoup/soup-date.h
@@ -16,7 +17,9 @@ include/libsoup-2.4/libsoup/soup-message-headers.h
 include/libsoup-2.4/libsoup/soup-message.h
 include/libsoup-2.4/libsoup/soup-method.h
 include/libsoup-2.4/libsoup/soup-misc.h
+include/libsoup-2.4/libsoup/soup-multipart.h
 include/libsoup-2.4/libsoup/soup-portability.h
+include/libsoup-2.4/libsoup/soup-proxy-resolver.h
 include/libsoup-2.4/libsoup/soup-server.h
 include/libsoup-2.4/libsoup/soup-session-async.h
 include/libsoup-2.4/libsoup/soup-session-feature.h
@@ -29,23 +32,35 @@ include/libsoup-2.4/libsoup/soup-uri.h
 include/libsoup-2.4/libsoup/soup-value-utils.h
 include/libsoup-2.4/libsoup/soup-xmlrpc.h
 include/libsoup-2.4/libsoup/soup.h
+include/libsoup-gnome-2.4/libsoup/soup-cookie-jar-sqlite.h
+include/libsoup-gnome-2.4/libsoup/soup-gnome-features.h
+include/libsoup-gnome-2.4/libsoup/soup-gnome.h
 lib/libsoup-2.4.la
+lib/libsoup-gnome-2.4.la
 lib/pkgconfig/libsoup-2.4.pc
+lib/pkgconfig/libsoup-gnome-2.4.pc
 share/gtk-doc/html/libsoup-2.4/SoupAddress.html
 share/gtk-doc/html/libsoup-2.4/SoupAuth.html
 share/gtk-doc/html/libsoup-2.4/SoupAuthDomain.html
 share/gtk-doc/html/libsoup-2.4/SoupAuthDomainBasic.html
 share/gtk-doc/html/libsoup-2.4/SoupAuthDomainDigest.html
 share/gtk-doc/html/libsoup-2.4/SoupCookieJar.html
+share/gtk-doc/html/libsoup-2.4/SoupCookieJarSqlite.html
+share/gtk-doc/html/libsoup-2.4/SoupCookieJarText.html
 share/gtk-doc/html/libsoup-2.4/SoupLogger.html
 share/gtk-doc/html/libsoup-2.4/SoupMessage.html
+share/gtk-doc/html/libsoup-2.4/SoupProxyResolver.html
 share/gtk-doc/html/libsoup-2.4/SoupServer.html
 share/gtk-doc/html/libsoup-2.4/SoupSession.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionAsync.html
+share/gtk-doc/html/libsoup-2.4/SoupSessionFeature.html
 share/gtk-doc/html/libsoup-2.4/SoupSessionSync.html
 share/gtk-doc/html/libsoup-2.4/SoupSocket.html
 share/gtk-doc/html/libsoup-2.4/ch01.html
 share/gtk-doc/html/libsoup-2.4/ch02.html
+share/gtk-doc/html/libsoup-2.4/ch03.html
+share/gtk-doc/html/libsoup-2.4/ch04.html
+share/gtk-doc/html/libsoup-2.4/ch05.html
 share/gtk-doc/html/libsoup-2.4/home.png
 share/gtk-doc/html/libsoup-2.4/index.html
 share/gtk-doc/html/libsoup-2.4/index.sgml
@@ -54,14 +69,18 @@ share/gtk-doc/html/libsoup-2.4/left.png
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4.devhelp
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4.devhelp2
 share/gtk-doc/html/libsoup-2.4/libsoup-24-GValue-Support.html
+share/gtk-doc/html/libsoup-2.4/libsoup-24-HTML-Form-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-Soup-Miscellaneous-Utilities.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupCookie.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMessageBody.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMessageHeaders.html
+share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupMultipart.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-SoupURI.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-XMLRPC-Support.html
+share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-gnome-features.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-method.html
 share/gtk-doc/html/libsoup-2.4/libsoup-24-soup-status.html
+share/gtk-doc/html/libsoup-2.4/libsoup-build-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-client-howto.html
 share/gtk-doc/html/libsoup-2.4/libsoup-porting-2.2-2.4.html
 share/gtk-doc/html/libsoup-2.4/libsoup-server-howto.html
@@ -69,5 +88,7 @@ share/gtk-doc/html/libsoup-2.4/right.png
 share/gtk-doc/html/libsoup-2.4/style.css
 share/gtk-doc/html/libsoup-2.4/up.png
 @dirrm share/gtk-doc/html/libsoup-2.4
+@dirrm include/libsoup-gnome-2.4/libsoup
+@dirrm include/libsoup-gnome-2.4
 @dirrm include/libsoup-2.4/libsoup
 @dirrm include/libsoup-2.4
