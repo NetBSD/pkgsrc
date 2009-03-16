@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1051 2009/03/16 23:20:50 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1052 2009/03/16 23:29:04 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1400,3 +1400,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/zenity to 2.26.0 [jmcneill 2009-03-16]
 	Updated graphics/eog to 2.26.0 [jmcneill 2009-03-16]
 	Updated x11/gnome-session to 2.26.0 [jmcneill 2009-03-16]
+	Updated x11/gnome-desktop to 2.26.0 [jmcneill 2009-03-16]
