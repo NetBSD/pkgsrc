@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7891 2009/03/16 01:02:19 jmcneill Exp $
+$NetBSD: TODO,v 1.7892 2009/03/16 08:45:20 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -448,6 +448,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
+	o brasero-2.26.0 [GNOME 2.26]
 	o btpd-0.13 [pkg/38144]
 	o bugzilla-3.3.2
 	o byacc-20080824
@@ -637,7 +638,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.4
 	o glchess-1.0.5
-	o glib2-2.20.0
+	o glibmm-2.20.0 [GNOME 2.26]
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o gmpc-0.18.0
@@ -645,7 +646,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-mag-0.15.5
-	o gnome-netstatus-2.26.0
 	o gnome-packagekit-0.4.4
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -680,7 +680,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gthumb-2.10.11
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-2.16.0
 	o gtkglarea-2.0.0
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
