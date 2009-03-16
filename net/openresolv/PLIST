@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/14 22:33:20 roy Exp $
-man/man8/resolvconf.8
-sbin/resolvconf
-share/examples/resolvconf/resolv.conf.head
+@comment $NetBSD: PLIST,v 1.3 2009/03/16 21:55:44 roy Exp $
 libexec/resolvconf/dnsmasq
 libexec/resolvconf/libc
 libexec/resolvconf/named
+man/man5/resolvconf.conf.5
+man/man8/resolvconf.8
+sbin/resolvconf
+share/examples/resolvconf/resolvconf.conf
 @dirrm share/examples/resolvconf
