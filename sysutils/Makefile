@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.463 2009/03/15 21:30:21 jmcneill Exp $
+# $NetBSD: Makefile,v 1.464 2009/03/16 10:49:49 jmcneill Exp $
 #
 
 COMMENT=	System utilities
@@ -32,6 +32,7 @@ SUBDIR+=	bcmfw
 SUBDIR+=	bkpupsd
 SUBDIR+=	boxbackup-client
 SUBDIR+=	boxbackup-server
+SUBDIR+=	brasero
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
 SUBDIR+=	burn
