@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1044 2009/03/16 22:22:46 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1045 2009/03/16 22:26:21 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/gnome-media to 2.26.0 [jmcneill 2009-03-16]
 	Updated devel/at-spi to 1.26.0 [jmcneill 2009-03-16]
 	Updated devel/py-at-spi to 1.26.0 [jmcneill 2009-03-16]
+	Updated devel/atk to 1.26.0 [jmcneill 2009-03-16]
