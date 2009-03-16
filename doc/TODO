@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7893 2009/03/16 09:13:04 jmcneill Exp $
+$NetBSD: TODO,v 1.7894 2009/03/16 10:21:54 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -645,6 +645,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-applets-2.26.0 [GNOME 2.26]
 	o gnome-mag-0.15.5
 	o gnome-packagekit-0.4.4
 	o gnomeicu-0.99.14
