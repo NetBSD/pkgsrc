@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2007/11/05 19:10:29 drochner Exp $
+$NetBSD: patch-af,v 1.5 2009/03/16 14:05:04 jmcneill Exp $
 
---- src/nautilus-main.c.orig	2007-07-24 11:56:20.000000000 +0200
+--- src/nautilus-main.c.orig	2009-02-17 05:50:24.000000000 -0500
 +++ src/nautilus-main.c
-@@ -67,6 +67,24 @@
+@@ -65,6 +65,24 @@
  #include <exempi/xmp.h>
  #endif
  
@@ -27,14 +27,14 @@ $NetBSD: patch-af,v 1.4 2007/11/05 19:10:29 drochner Exp $
  /* Keeps track of everyone who wants the main event loop kept active */
  static GSList *event_loop_registrants;
  
-@@ -538,6 +556,10 @@ main (int argc, char *argv[])
- 	} else {
- 		/* Run the nautilus application. */
- 		application = nautilus_application_new ();
+@@ -505,6 +523,10 @@ main (int argc, char *argv[])
+ 		if (egg_sm_client_is_resumed (application->smclient)) {
+ 			no_default_window = TRUE;
+ 		}
 +
 +#ifdef _PTH_PTHREAD_H_
-+	gtk_timeout_add (200, pth_nbschedule, NULL);
++		gtk_timeout_add (200, pth_nbschedule, NULL);
 +#endif
+ 		
  		nautilus_application_startup
  			(application,
- 			 kill_shell, restart_shell, no_default_window, no_desktop,
