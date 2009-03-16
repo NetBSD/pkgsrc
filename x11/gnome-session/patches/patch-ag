@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/03/16 18:26:43 jmcneill Exp $
+
+--- compat/Makefile.in.orig	2009-03-16 14:11:24.000000000 -0400
++++ compat/Makefile.in
+@@ -285,7 +285,7 @@ LDADD = \
+ 	$(COMPAT_LIBS)
+ 
+ helperdir = $(pkglibdir)/helpers
+-default_sessiondir = $(sysconfdir)/xdg/autostart
++default_sessiondir = $(PREFIX)/share/gnome/autostart
+ default_session_in_in_files = \
+ 	at-spi-registryd-wrapper.desktop.in.in	\
+ 	gnome-settings-daemon-helper.desktop.in.in

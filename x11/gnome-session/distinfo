@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.44 2009/01/14 13:01:42 wiz Exp $
+$NetBSD: distinfo,v 1.45 2009/03/16 18:26:43 jmcneill Exp $
 
-SHA1 (gnome-session-2.24.3.tar.bz2) = a48bcf47b879db439cec193e4191909409e7efcb
-RMD160 (gnome-session-2.24.3.tar.bz2) = 2cd9fb8435f452873ca8bd34fd51276d24282a48
-Size (gnome-session-2.24.3.tar.bz2) = 792300 bytes
+SHA1 (gnome-session-2.25.92.tar.bz2) = aa75cb9ed45d437bedeac9c366ee127dfbf0fe4f
+RMD160 (gnome-session-2.25.92.tar.bz2) = 55c1ba14b9de4a943d479be1f267e77a2bcf23d3
+Size (gnome-session-2.25.92.tar.bz2) = 827877 bytes
 SHA1 (gnome-splash-2.16.0.png) = 0d321be84c5668a2c0fecb494edc820d6b74ee9d
 RMD160 (gnome-splash-2.16.0.png) = 28667abaaef6ac20dde9f4101554a5043b4f9c96
 Size (gnome-splash-2.16.0.png) = 36601 bytes
@@ -11,3 +11,4 @@ SHA1 (patch-ac) = f3a74bd3942269f44fab2d52262c2fedb3fd2848
 SHA1 (patch-ad) = fe18ad5dbb6851b81bf23a4dcb2eec2d32981730
 SHA1 (patch-ae) = 31759f8ee3f4415c43feb9ce5e93cba549de06a3
 SHA1 (patch-af) = b307190d2c0f8cc2e5aef8fec00868eaf5ddf8b9
+SHA1 (patch-ag) = 7b609bf7a2be8fa9845678347de6e644623f1d6d
