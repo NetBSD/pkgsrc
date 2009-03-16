@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2008/08/08 21:27:25 shannonjr Exp $
+$NetBSD: patch-aa,v 1.4 2009/03/16 14:10:47 hasso Exp $
 
 --- configure.in.orig	2008-06-27 03:47:16.000000000 -0600
 +++ configure.in
@@ -13,14 +13,3 @@ $NetBSD: patch-aa,v 1.3 2008/08/08 21:27:25 shannonjr Exp $
  *-*-openbsd*)
  	BUNDLE_HOST="OpenBSD"
  	DYN_LIB_EXT="so.0.0"
-@@ -106,6 +110,10 @@ case "$host" in
- 	BUNDLE_HOST="DragonFly"
- 	DYN_LIB_EXT="so"
- 	;;
-+*-*-dragonfly*)
-+	BUNDLE_HOST="DragonFly"
-+	DYN_LIB_EXT="so"
-+	;;
- *)
- 	BUNDLE_HOST="Linux"
- 	DYN_LIB_EXT="so"
