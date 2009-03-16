@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1041 2009/03/16 20:30:16 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1042 2009/03/16 21:56:01 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1389,3 +1389,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/metacity to 2.26.0 [jmcneill 2009-03-16]
 	Updated x11/gtk2-engines to 2.18.0 [jmcneill 2009-03-16]
 	Updated security/pcsc-tools to 1.4.15 [hasso 2009-03-16]
+	Updated net/openresolv to 3.0 [roy 2009-03-16]
