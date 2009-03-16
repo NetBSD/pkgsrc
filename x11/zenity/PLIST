@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/10/16 18:15:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/03/16 23:00:17 jmcneill Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -63,6 +63,18 @@ share/gnome/help/zenity/es/figures/zenity-question-screenshot.png
 share/gnome/help/zenity/es/figures/zenity-text-screenshot.png
 share/gnome/help/zenity/es/figures/zenity-warning-screenshot.png
 share/gnome/help/zenity/es/zenity.xml
+share/gnome/help/zenity/eu/figures/zenity-calendar-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-entry-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-error-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-fileselection-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-information-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-list-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-notification-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-progress-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-question-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-text-screenshot.png
+share/gnome/help/zenity/eu/figures/zenity-warning-screenshot.png
+share/gnome/help/zenity/eu/zenity.xml
 share/gnome/help/zenity/fi/figures/zenity-calendar-screenshot.png
 share/gnome/help/zenity/fi/figures/zenity-entry-screenshot.png
 share/gnome/help/zenity/fi/figures/zenity-error-screenshot.png
@@ -192,6 +204,7 @@ share/locale/oc/LC_MESSAGES/zenity.mo
 share/locale/or/LC_MESSAGES/zenity.mo
 share/locale/pa/LC_MESSAGES/zenity.mo
 share/locale/pl/LC_MESSAGES/zenity.mo
+share/locale/ps/LC_MESSAGES/zenity.mo
 share/locale/pt/LC_MESSAGES/zenity.mo
 share/locale/pt_BR/LC_MESSAGES/zenity.mo
 share/locale/ro/LC_MESSAGES/zenity.mo
@@ -220,6 +233,7 @@ share/omf/zenity/zenity-bg.omf
 share/omf/zenity/zenity-de.omf
 share/omf/zenity/zenity-en_GB.omf
 share/omf/zenity/zenity-es.omf
+share/omf/zenity/zenity-eu.omf
 share/omf/zenity/zenity-fi.omf
 share/omf/zenity/zenity-fr.omf
 share/omf/zenity/zenity-oc.omf
@@ -257,6 +271,8 @@ share/zenity/zenity.png
 @dirrm share/gnome/help/zenity/fr
 @dirrm share/gnome/help/zenity/fi/figures
 @dirrm share/gnome/help/zenity/fi
+@dirrm share/gnome/help/zenity/eu/figures
+@dirrm share/gnome/help/zenity/eu
 @dirrm share/gnome/help/zenity/es/figures
 @dirrm share/gnome/help/zenity/es
 @dirrm share/gnome/help/zenity/en_GB/figures
@@ -269,3 +285,4 @@ share/zenity/zenity.png
 @dirrm share/gnome/help/zenity/C
 @dirrm share/gnome/help/zenity
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
