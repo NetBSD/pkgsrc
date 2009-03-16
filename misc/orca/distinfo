@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/02/24 12:13:14 wiz Exp $
+$NetBSD: distinfo,v 1.8 2009/03/16 09:12:25 jmcneill Exp $
 
-SHA1 (orca-2.24.4.tar.bz2) = 4f111364339f1618baaa5a9ac4ee8691023eba30
-RMD160 (orca-2.24.4.tar.bz2) = 1dae151be2eb828da66c2068555d4efe3b4eed3a
-Size (orca-2.24.4.tar.bz2) = 2125363 bytes
+SHA1 (orca-2.26.0.tar.bz2) = 8e6ee4e7021f5f68f888fd39aaa84cfdbdda3bd7
+RMD160 (orca-2.26.0.tar.bz2) = 41273cc7ddeb69191746a728a0176364ff41ec7a
+Size (orca-2.26.0.tar.bz2) = 2234371 bytes
 SHA1 (patch-aa) = 26b665c54ccff55b258b27349ea12207b51c898b
