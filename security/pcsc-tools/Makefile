@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/04/10 07:56:09 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/16 19:14:08 hasso Exp $
 #
 
-DISTNAME=	pcsc-tools-1.4.12
+DISTNAME=	pcsc-tools-1.4.15
 CATEGORIES=	security
 MASTER_SITES=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 
@@ -20,7 +20,7 @@ INSTALL_ENV+=	DESTDIR=${PREFIX:Q}
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	ATR_analysis ./ATR_analysis.1p
-SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},'
+SUBST_SED.prefix=	-e 's,/usr/local/pcsc,${PREFIX}/share/pcsc,'
 
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-patch
