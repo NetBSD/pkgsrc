@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.87 2009/02/09 22:56:28 joerg Exp $
+# $NetBSD: Makefile,v 1.88 2009/03/16 12:35:59 jmcneill Exp $
 #
 
-DISTNAME=		gnome-desktop-2.24.3
-PKGREVISION=		1
+DISTNAME=		gnome-desktop-2.25.92
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.25/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		drochner@NetBSD.org
@@ -35,11 +34,10 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/${f} ${DESTDIR}${PREFIX}/share/pixmaps/${f}
 .endfor
 
+.include "../../devel/GConf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.4
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.11.3
