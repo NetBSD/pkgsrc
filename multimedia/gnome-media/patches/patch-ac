@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.6 2009/03/16 22:09:28 jmcneill Exp $
+
+--- gnome-volume-control/data/Makefile.in.orig	2009-03-16 17:49:40.000000000 -0400
++++ gnome-volume-control/data/Makefile.in
+@@ -295,7 +295,7 @@ SUBDIRS = \
+ 	icons			\
+ 	$(NULL)
+ 
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(PREFIX)/share/gnome/autostart
+ autostart_in_files = gnome-volume-control-applet.desktop.in
+ autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ appsdir = $(datadir)/applications
