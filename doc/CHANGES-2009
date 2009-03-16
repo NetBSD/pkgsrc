@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1023 2009/03/16 11:36:40 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1024 2009/03/16 11:43:47 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1366,3 +1366,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/brasero version 2.26.0 [jmcneill 2009-03-16]
 	Updated x11/gnome-applets to 2.26.0 [jmcneill 2009-03-16]
 	Updated www/gtkhtml314 to 3.26.0 [jmcneill 2009-03-16]
+	Updated meta-pkgs/gstreamer0.10-plugins to 1.0nb2 [jmcneill 2009-03-16]
