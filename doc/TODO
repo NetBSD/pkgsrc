@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7895 2009/03/16 10:31:17 jmcneill Exp $
+$NetBSD: TODO,v 1.7896 2009/03/16 10:38:29 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -563,6 +563,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o etach-1.4.1
 	o evolution-2.26.0 [GNOME 2.26]
 	o evolution-data-server-2.26.0 [GNOME 2.26]
+	o evolution-exchange-2.26.0 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -650,6 +651,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-applets-2.26.0 [GNOME 2.26]
 	o gnome-mag-0.15.5
 	o gnome-packagekit-0.4.4
+	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
