@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7914 2009/03/16 19:09:29 jmcneill Exp $
+$NetBSD: TODO,v 1.7915 2009/03/16 19:54:17 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -586,6 +586,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
+	o file-roller-2.26.0 [GNOME 2.26]
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -656,9 +657,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-doc-utils-0.16.0 [GNOME 2.26]
 	o gnome-mag-0.15.5
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-user-docs-2.26.0 [GNOME 2.26]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-vfsmm-2.26.0 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -804,7 +807,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdrm-2.4.5
 	o libextractor-0.5.22
 	o libflash-0.4.13
-	o libgda-3.1.5
+	o libgda-4.0.0 [GNOME 2.26]
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -896,6 +899,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
+	o metacity-2.26.0 [GNOME 2.26]
 	o mew-6.2 [pkg/40808|as mew6?]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
