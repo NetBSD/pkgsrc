@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1034 2009/03/16 16:49:14 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1035 2009/03/16 17:23:20 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/p5-pcsc to 1.4.7 [hasso 2009-03-16]
 	Updated sysutils/gnome-settings-daemon to 2.26.0 [jmcneill 2009-03-16]
 	Updated net/libsoup24 to 2.26.0 [jmcneill 2009-03-16]
+	Updated x11/gnome-control-center to 2.25.92 [jmcneill 2009-03-16]
