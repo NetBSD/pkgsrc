@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7899 2009/03/16 11:27:31 jmcneill Exp $
+$NetBSD: TODO,v 1.7900 2009/03/16 11:36:41 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -685,7 +685,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtick-0.4.2
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
-	o gtkhtml-3.26.0 [GNOME 2.26]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
