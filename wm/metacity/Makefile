@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.79 2008/12/24 18:49:55 jmcneill Exp $
+# $NetBSD: Makefile,v 1.80 2009/03/16 20:10:19 jmcneill Exp $
 #
 
-DISTNAME=	metacity-2.24.0
+DISTNAME=	metacity-2.26.0
 CATEGORIES=	wm x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/metacity/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -45,6 +45,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
@@ -53,4 +54,5 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
+DEPENDS+=	zenity-[0-9]*:../../x11/zenity
 .include "../../mk/bsd.pkg.mk"
