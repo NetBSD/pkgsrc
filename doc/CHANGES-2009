@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1037 2009/03/16 18:13:46 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1038 2009/03/16 18:28:02 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1385,3 +1385,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-control-center to 2.25.92 [jmcneill 2009-03-16]
 	Updated graphics/gnome-icon-theme to 2.25.92 [jmcneill 2009-03-16]
 	Updated mail/dspam to 3.8.0nb2 [adrianp 2009-03-16]
+	Updated x11/gnome-session to 2.25.92 [jmcneill 2009-03-16]
