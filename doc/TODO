@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7929 2009/03/16 23:14:54 jmcneill Exp $
+$NetBSD: TODO,v 1.7930 2009/03/16 23:20:51 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -664,7 +664,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-packagekit-0.4.4
 	o gnome-panel-2.26.0 [GNOME 2.26]
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-session-2.26.0 [GNOME 2.26]
 	o gnome-user-docs-2.26.0 [GNOME 2.26]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-utils-2.26.0 [GNOME 2.26]
