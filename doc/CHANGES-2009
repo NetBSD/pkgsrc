@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1048 2009/03/16 22:51:53 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1049 2009/03/16 23:00:52 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1397,3 +1397,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Abstract to 1.50 [seb 2009-03-16]
 	Updated graphics/cheese to 2.26.0 [jmcneill 2009-03-16]
 	Updated sysutils/gnome-menus to 2.26.0 [jmcneill 2009-03-16]
+	Updated x11/zenity to 2.26.0 [jmcneill 2009-03-16]
