@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7920 2009/03/16 21:06:46 jmcneill Exp $
+$NetBSD: TODO,v 1.7921 2009/03/16 21:24:12 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -504,6 +504,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dansguardian-2.10.0.3
 	o dap-3.7
 	o darcs-2.1.2
+	o dasher-4.10.0 [GNOME 2.26]
 	o dbench-4.0
 	o dbus-1.2.12 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbxml-2.1.8
