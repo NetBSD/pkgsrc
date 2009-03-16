@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7898 2009/03/16 11:25:09 jmcneill Exp $
+$NetBSD: TODO,v 1.7899 2009/03/16 11:27:31 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -650,6 +650,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-mag-0.15.5
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -1292,6 +1293,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
+	o totem-2.26.0 [GNOME 2.26]
+	o totem-pl-parser-2.26.0 [GNOME 2.26]
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transcode-1.1.1
