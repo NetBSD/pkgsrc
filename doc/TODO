@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7927 2009/03/16 23:00:52 jmcneill Exp $
+$NetBSD: TODO,v 1.7928 2009/03/16 23:09:43 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.26.0 [GNOME 2.26]
 	o enlightenment-0.16.8.12
-	o eog-2.26.0 [GNOME 2.26]
 	o epdfview-0.1.7
 	o epic4-2.6
 	o epsg-6.14
