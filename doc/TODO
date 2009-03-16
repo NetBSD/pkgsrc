@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7916 2009/03/16 20:10:47 jmcneill Exp $
+$NetBSD: TODO,v 1.7917 2009/03/16 20:14:07 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -657,6 +657,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-devel-docs-2.26.0 [GNOME 2.26]
 	o gnome-doc-utils-0.16.0 [GNOME 2.26]
 	o gnome-mag-0.15.5
 	o gnome-packagekit-0.4.4
@@ -698,6 +699,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gthumb-2.10.11
 	o gtick-0.4.2
 	o gtk-systrace-20030623
+	o gtk2-engines-2.18.0 [GNOME 2.26]
 	o gtkglarea-2.0.0
 	o gtkmm-2.16.0 [GNOME 2.26]
 	o gtkyahoo-0.18.3
