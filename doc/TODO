@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7907 2009/03/16 16:51:09 jmcneill Exp $
+$NetBSD: TODO,v 1.7908 2009/03/16 17:12:28 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -666,6 +666,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
+	o gok-2.26.0 [GNOME 2.26]
 	o golem-0.0.6
 	o gossip-0.31
 	o gourmet-0.13.3
