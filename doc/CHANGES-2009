@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1045 2009/03/16 22:26:21 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1046 2009/03/16 22:31:30 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1394,3 +1394,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/at-spi to 1.26.0 [jmcneill 2009-03-16]
 	Updated devel/py-at-spi to 1.26.0 [jmcneill 2009-03-16]
 	Updated devel/atk to 1.26.0 [jmcneill 2009-03-16]
+	Updated databases/p5-SQL-Abstract to 1.50 [seb 2009-03-16]
