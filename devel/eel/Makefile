@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2009/01/27 20:31:29 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2009/03/16 12:37:22 jmcneill Exp $
 
-DISTNAME=	eel-2.24.1
+DISTNAME=	eel-2.26.0
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/eel/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,19 +20,14 @@ PKGCONFIG_OVERRIDE=	eel-2.0.pc.in
 
 CONFLICTS+=		eel2-[0-9]*
 
-BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.6.0
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.15.0
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.9.4
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.23.0
-BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=2.23.3
+BUILDLINK_API_DEPENDS.gnome-desktop+=	gnome-desktop>=2.25.5
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
