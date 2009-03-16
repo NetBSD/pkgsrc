@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2009/03/16 18:13:34 adrianp Exp $
+
+Fix a bug when using SMTP/LMTP which can cause the mbox to be written
+with trailing ^M's which causes the www interface to stop working.
+
+--- src/dspam.c.orig	2006-12-12 15:33:45.000000000 +0000
++++ src/dspam.c
+@@ -762,7 +762,12 @@ process_message (
+ 
+   /* Reassemble message from components */
+ 
+-  copyback = _ds_assemble_message (CTX->message, (USE_LMTP || USE_SMTP) ? "\r\n" : "\n");
++  if (CTX->result == DSR_ISSPAM && (!(ATX->flags & DAF_DELIVER_SPAM))) {
++      copyback = _ds_assemble_message (CTX->message, "\n");
++  } else {
++      copyback = _ds_assemble_message (CTX->message,
++            (USE_LMTP || USE_SMTP) ? "\r\n" : "\n");
++  }
+   buffer_clear (message);
+   buffer_cat (message, copyback);
+   free (copyback);
