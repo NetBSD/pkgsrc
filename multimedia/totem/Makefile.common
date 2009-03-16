@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.43 2009/02/21 17:40:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.44 2009/03/16 12:13:31 jmcneill Exp $
 #
 # used by multimedia/totem-nautilus/Makefile
 # used by multimedia/totem-xine/Makefile
 
-DISTNAME=	totem-2.24.4
+DISTNAME=	totem-2.26.0
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
@@ -13,11 +13,12 @@ COMMENT=	Movie player for the GNOME Desktop
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
+FILESDIR=	${.CURDIR}/../../multimedia/totem/files
 PLIST_SRC=	${.CURDIR}/../../multimedia/totem/PLIST
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config gawk
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
@@ -30,6 +31,14 @@ BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.8.2
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
+
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

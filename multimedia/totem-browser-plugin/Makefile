@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/18 00:46:44 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/16 12:13:31 jmcneill Exp $
 #
 
 .include "../../multimedia/totem/Makefile.common"
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-browser-plugins
 
-BROWSER_PLUGINS=	basic cone gmp mully narrowspace
+BROWSER_PLUGINS=	cone gmp mully narrowspace
 
 do-install:
 .for plugin in ${BROWSER_PLUGINS}

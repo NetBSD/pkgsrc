@@ -1,15 +1,34 @@
-@comment $NetBSD: PLIST,v 1.17 2009/02/21 17:40:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/03/16 12:13:31 jmcneill Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
 lib/libbaconvideowidget.la
+lib/totem/plugins/brasero-disc-recorder/brasero-disc-recorder.totem-plugin
+lib/totem/plugins/brasero-disc-recorder/libbrasero-disc-recorder.la
+lib/totem/plugins/coherence_upnp/coherence_upnp.py
+lib/totem/plugins/coherence_upnp/coherence_upnp.pyc
+lib/totem/plugins/coherence_upnp/coherence_upnp.pyo
+lib/totem/plugins/coherence_upnp/coherence_upnp.totem-plugin
 lib/totem/plugins/gromit/gromit.totem-plugin
 lib/totem/plugins/gromit/libgromit.la
+lib/totem/plugins/jamendo/jamendo.py
+lib/totem/plugins/jamendo/jamendo.pyc
+lib/totem/plugins/jamendo/jamendo.pyo
+lib/totem/plugins/jamendo/jamendo.totem-plugin
+lib/totem/plugins/jamendo/jamendo.ui
 lib/totem/plugins/media-player-keys/libmedia_player_keys.la
 lib/totem/plugins/media-player-keys/media-player-keys.totem-plugin
 lib/totem/plugins/ontop/libontop.la
 lib/totem/plugins/ontop/ontop.totem-plugin
+lib/totem/plugins/opensubtitles/hash.py
+lib/totem/plugins/opensubtitles/hash.pyc
+lib/totem/plugins/opensubtitles/hash.pyo
+lib/totem/plugins/opensubtitles/opensubtitles.py
+lib/totem/plugins/opensubtitles/opensubtitles.pyc
+lib/totem/plugins/opensubtitles/opensubtitles.pyo
+lib/totem/plugins/opensubtitles/opensubtitles.totem-plugin
+lib/totem/plugins/opensubtitles/opensubtitles.ui
 lib/totem/plugins/properties/libmovie-properties.la
 lib/totem/plugins/properties/movie-properties.totem-plugin
 lib/totem/plugins/pythonconsole/console.py
@@ -21,6 +40,9 @@ lib/totem/plugins/pythonconsole/pythonconsole.pyo
 lib/totem/plugins/pythonconsole/pythonconsole.totem-plugin
 lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/screensaver.totem-plugin
+lib/totem/plugins/screenshot/gallery.ui
+lib/totem/plugins/screenshot/libscreenshot.la
+lib/totem/plugins/screenshot/screenshot.totem-plugin
 lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/skipto.totem-plugin
 lib/totem/plugins/skipto/skipto.ui
@@ -62,6 +84,15 @@ share/gnome/help/totem/ca/figures/totem_start_window.png
 share/gnome/help/totem/ca/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/ca/figures/totem_volume_mute_button.png
 share/gnome/help/totem/ca/totem.xml
+share/gnome/help/totem/cs/figures/totem_next_button.png
+share/gnome/help/totem/cs/figures/totem_pause_button.png
+share/gnome/help/totem/cs/figures/totem_play_button.png
+share/gnome/help/totem/cs/figures/totem_previous_button.png
+share/gnome/help/totem/cs/figures/totem_show_playlist_button.png
+share/gnome/help/totem/cs/figures/totem_start_window.png
+share/gnome/help/totem/cs/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/cs/figures/totem_volume_mute_button.png
+share/gnome/help/totem/cs/totem.xml
 share/gnome/help/totem/de/figures/totem_next_button.png
 share/gnome/help/totem/de/figures/totem_pause_button.png
 share/gnome/help/totem/de/figures/totem_play_button.png
@@ -98,6 +129,15 @@ share/gnome/help/totem/es/figures/totem_start_window.png
 share/gnome/help/totem/es/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/es/figures/totem_volume_mute_button.png
 share/gnome/help/totem/es/totem.xml
+share/gnome/help/totem/eu/figures/totem_next_button.png
+share/gnome/help/totem/eu/figures/totem_pause_button.png
+share/gnome/help/totem/eu/figures/totem_play_button.png
+share/gnome/help/totem/eu/figures/totem_previous_button.png
+share/gnome/help/totem/eu/figures/totem_show_playlist_button.png
+share/gnome/help/totem/eu/figures/totem_start_window.png
+share/gnome/help/totem/eu/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/eu/figures/totem_volume_mute_button.png
+share/gnome/help/totem/eu/totem.xml
 share/gnome/help/totem/fr/figures/totem_next_button.png
 share/gnome/help/totem/fr/figures/totem_pause_button.png
 share/gnome/help/totem/fr/figures/totem_play_button.png
@@ -206,15 +246,40 @@ share/gnome/help/totem/zh_TW/figures/totem_start_window.png
 share/gnome/help/totem/zh_TW/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/zh_TW/figures/totem_volume_mute_button.png
 share/gnome/help/totem/zh_TW/totem.xml
+share/gtk-doc/html/totem/TotemCellRendererVideo.html
+share/gtk-doc/html/totem/TotemObject.html
+share/gtk-doc/html/totem/TotemPlugin.html
+share/gtk-doc/html/totem/TotemVideoList.html
+share/gtk-doc/html/totem/api-index-deprecated.html
+share/gtk-doc/html/totem/api-index-full.html
+share/gtk-doc/html/totem/core-api.html
+share/gtk-doc/html/totem/home.png
+share/gtk-doc/html/totem/index.html
+share/gtk-doc/html/totem/index.sgml
+share/gtk-doc/html/totem/left.png
+share/gtk-doc/html/totem/right.png
+share/gtk-doc/html/totem/style.css
+share/gtk-doc/html/totem/totem-Interface.html
+share/gtk-doc/html/totem/totem.devhelp
+share/gtk-doc/html/totem/totem.devhelp2
+share/gtk-doc/html/totem/up.png
+share/gtk-doc/html/totem/widget-api.html
 share/icons/hicolor/16x16/apps/totem.png
+share/icons/hicolor/16x16/devices/totem-tv.png
 share/icons/hicolor/22x22/apps/totem.png
+share/icons/hicolor/22x22/devices/totem-tv.png
 share/icons/hicolor/24x24/apps/totem.png
+share/icons/hicolor/24x24/devices/totem-tv.png
 share/icons/hicolor/32x32/apps/totem.png
+share/icons/hicolor/32x32/devices/totem-tv.png
 share/icons/hicolor/48x48/apps/totem.png
+share/icons/hicolor/48x48/devices/totem-tv.png
 share/icons/hicolor/scalable/apps/totem.svg
+share/icons/hicolor/scalable/devices/totem-tv.svg
 share/locale/am/LC_MESSAGES/totem.mo
 share/locale/ar/LC_MESSAGES/totem.mo
 share/locale/as/LC_MESSAGES/totem.mo
+share/locale/ast/LC_MESSAGES/totem.mo
 share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
 share/locale/be@latin/LC_MESSAGES/totem.mo
@@ -252,9 +317,9 @@ share/locale/ka/LC_MESSAGES/totem.mo
 share/locale/kn/LC_MESSAGES/totem.mo
 share/locale/ko/LC_MESSAGES/totem.mo
 share/locale/ku/LC_MESSAGES/totem.mo
-share/locale/la/LC_MESSAGES/totem.mo
 share/locale/lt/LC_MESSAGES/totem.mo
 share/locale/lv/LC_MESSAGES/totem.mo
+share/locale/mai/LC_MESSAGES/totem.mo
 share/locale/mg/LC_MESSAGES/totem.mo
 share/locale/mk/LC_MESSAGES/totem.mo
 share/locale/ml/LC_MESSAGES/totem.mo
@@ -295,10 +360,12 @@ share/locale/zh_TW/LC_MESSAGES/totem.mo
 share/omf/totem/totem-C.omf
 share/omf/totem/totem-bg.omf
 share/omf/totem/totem-ca.omf
+share/omf/totem/totem-cs.omf
 share/omf/totem/totem-de.omf
 share/omf/totem/totem-el.omf
 share/omf/totem/totem-en_GB.omf
 share/omf/totem/totem-es.omf
+share/omf/totem/totem-eu.omf
 share/omf/totem/totem-fr.omf
 share/omf/totem/totem-it.omf
 share/omf/totem/totem-ja.omf
@@ -326,20 +393,27 @@ share/totem/video-list.ui
 @dirrm share/totem
 @dirrm share/omf/totem
 @comment in rarian: @dirrm share/omf
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/devices
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/icons
+@dirrm share/gtk-doc/html/totem
 @dirrm share/gnome/help/totem/zh_TW/figures
 @dirrm share/gnome/help/totem/zh_TW
 @dirrm share/gnome/help/totem/zh_HK/figures
@@ -364,6 +438,8 @@ share/totem/video-list.ui
 @dirrm share/gnome/help/totem/it
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
+@dirrm share/gnome/help/totem/eu/figures
+@dirrm share/gnome/help/totem/eu
 @dirrm share/gnome/help/totem/es/figures
 @dirrm share/gnome/help/totem/es
 @dirrm share/gnome/help/totem/en_GB/figures
@@ -372,6 +448,8 @@ share/totem/video-list.ui
 @dirrm share/gnome/help/totem/el
 @dirrm share/gnome/help/totem/de/figures
 @dirrm share/gnome/help/totem/de
+@dirrm share/gnome/help/totem/cs/figures
+@dirrm share/gnome/help/totem/cs
 @dirrm share/gnome/help/totem/ca/figures
 @dirrm share/gnome/help/totem/ca
 @dirrm share/gnome/help/totem/bg/figures
@@ -387,11 +465,16 @@ share/totem/video-list.ui
 @dirrm lib/totem/plugins/totem
 @dirrm lib/totem/plugins/thumbnail
 @dirrm lib/totem/plugins/skipto
+@dirrm lib/totem/plugins/screenshot
 @dirrm lib/totem/plugins/screensaver
 @dirrm lib/totem/plugins/pythonconsole
 @dirrm lib/totem/plugins/properties
+@dirrm lib/totem/plugins/opensubtitles
 @dirrm lib/totem/plugins/ontop
 @dirrm lib/totem/plugins/media-player-keys
+@dirrm lib/totem/plugins/jamendo
 @dirrm lib/totem/plugins/gromit
+@dirrm lib/totem/plugins/coherence_upnp
+@dirrm lib/totem/plugins/brasero-disc-recorder
 @dirrm lib/totem/plugins
 @dirrm lib/totem
