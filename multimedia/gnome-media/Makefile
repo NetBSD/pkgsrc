@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/10/16 17:36:38 drochner Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/16 22:09:28 jmcneill Exp $
 
-DISTNAME=		gnome-media-2.24.0.1
+DISTNAME=		gnome-media-2.26.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -11,7 +11,7 @@ COMMENT=		Set of audio/multimedia applications for GNOME2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		gst-plugins0.10-esound>=0.10.0:../../audio/gst-plugins0.10-esound
+DEPENDS+=		gst-plugins0.10-pulse>=0.10.0:../../audio/gst-plugins0.10-pulse
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
@@ -20,7 +20,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config xgettext
 
 CONFIGURE_ARGS+=	--enable-gtk-doc=no
-CONFIGURE_ENV+=		XGETTEXT=${TOOLS_PATH.xgettext:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -40,16 +39,24 @@ CONFIGURE_ARGS+=	--disable-ipv6
 
 GCONF_SCHEMAS+=	gnome-audio-profiles.schemas
 GCONF_SCHEMAS+=	gnome-sound-recorder.schemas
-GCONF_SCHEMAS+=	gnome-volume-control.schemas
 
-BUILDLINK_API_DEPENDS.esound+=			esound>=0.2.23
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/*/doc/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
+
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.3
 BUILDLINK_API_DEPENDS.gstreamer0.10+=		gstreamer0.10>=0.10.3
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.libgnome+=		libgnome>=2.13.7
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 
-.include "../../audio/esound/buildlink3.mk"
+.include "../../audio/libcanberra/buildlink3.mk"
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -63,12 +70,12 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
-#.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libunique/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
