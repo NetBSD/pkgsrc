@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7913 2009/03/16 18:44:34 jmcneill Exp $
+$NetBSD: TODO,v 1.7914 2009/03/16 19:09:29 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -568,6 +568,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o evolution-data-server-2.26.0 [GNOME 2.26]
 	o evolution-exchange-2.26.0 [GNOME 2.26]
 	o evolution-mapi-0.26.0 [GNOME 2.26]
+	o evolution-webcal-2.26.0 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
