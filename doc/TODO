@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7915 2009/03/16 19:54:17 jmcneill Exp $
+$NetBSD: TODO,v 1.7916 2009/03/16 20:10:47 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metacity-2.26.0 [GNOME 2.26]
 	o mew-6.2 [pkg/40808|as mew6?]
 	o mftrace-1.2.15
 	o mgetty+sendfax-1.1.35
