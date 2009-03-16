@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1017 2009/03/15 22:01:10 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1018 2009/03/16 08:40:17 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1360,3 +1360,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/libgamin version 0.1.10 [jmcneill 2009-03-15]
 	Updated devel/glib2 to 2.20.0nb1 [jmcneill 2009-03-15]
 	Updated www/p5-Catalyst-Manual to 5.7020 [seb 2009-03-15]
+	Added x11/gtk2-engines-murrine version 0.90.0 [jmcneill 2009-03-16]
