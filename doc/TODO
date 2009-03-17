@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7955 2009/03/17 21:10:54 jmcneill Exp $
+$NetBSD: TODO,v 1.7956 2009/03/17 21:20:17 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -841,7 +841,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libotf-0.9.9
 	o libpciaccess-0.10.5
 	o librep-0.17.2
-	o librsvg-2.26.0 [GNOME 2.26]
 	o libshout-2.2.2
 	o libssh-0.2
 	o libstatgrab-0.16
