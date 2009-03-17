@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7938 2009/03/17 00:48:03 jmcneill Exp $
+$NetBSD: TODO,v 1.7939 2009/03/17 08:48:12 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
+	o GConf-2.26.0 [GNOME 2.26]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
@@ -663,6 +664,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-doc-utils-0.16.0 [GNOME 2.26]
 	o gnome-games-2.26.0 [GNOME 2.26]
 	o gnome-mag-0.15.5
+	o gnome-nettool-2.26.0 [GNOME 2.26]
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-user-docs-2.26.0 [GNOME 2.26]
