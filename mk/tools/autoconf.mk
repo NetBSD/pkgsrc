@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.14 2006/12/15 13:15:07 martti Exp $
+# $NetBSD: autoconf.mk,v 1.15 2009/03/17 22:13:36 rillig Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -206,7 +206,7 @@ LIBTOOL_M4_OVERRIDE?=	libtool.m4 */libtool.m4 */*/libtool.m4
 .PHONY: tools-libtool-m4-override
 tools-libtool-m4-override:
 .for _pattern_ in ${LIBTOOL_M4_OVERRIDE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	cd ${WRKSRC};							\
 	for cfile in ${_pattern_:S/libtool.m4$/configure/}; do		\
 		if ${TEST} -f "$$cfile"; then				\

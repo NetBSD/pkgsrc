@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.49 2008/01/04 01:46:27 rillig Exp $
+# $NetBSD: bsd.tools.mk,v 1.50 2009/03/17 22:13:36 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -118,9 +118,9 @@ tools-message:
 ###
 .PHONY: tools-cookie
 tools-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.tools} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.tools:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${USE_TOOLS:Q} > ${_COOKIE.tools}
+	${RUN} ${TEST} ! -f ${_COOKIE.tools} || ${FALSE}
+	${RUN} ${MKDIR} ${_COOKIE.tools:H}
+	${RUN} ${ECHO} ${USE_TOOLS:Q} > ${_COOKIE.tools}
 
 ######################################################################
 ### override-tools (PRIVATE)

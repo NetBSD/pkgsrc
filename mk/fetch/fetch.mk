@@ -1,4 +1,4 @@
-# $NetBSD: fetch.mk,v 1.41 2009/02/17 10:42:45 joerg Exp $
+# $NetBSD: fetch.mk,v 1.42 2009/03/17 22:13:36 rillig Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
@@ -249,8 +249,8 @@ _FETCH_ARGS+=	-d ${DIST_SUBDIR}
 .PHONY: do-fetch-file
 do-fetch-file: .USE
 	@${STEP_MSG} "Fetching ${.TARGET:T}"
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${.TARGET:H}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${MKDIR} ${.TARGET:H}
+	${RUN}								\
 	for d in "" ${DIST_PATH:S/:/ /g}; do				\
 		case $$d in						\
 		""|${DISTDIR})	continue ;;				\
@@ -262,12 +262,12 @@ do-fetch-file: .USE
 			${LN} -s $$file ${.TARGET};			\
 		fi;							\
 	done
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN}								\
 	unsorted_sites="${SITES.${.TARGET:T:S/=/--/}}";			\
 	sites="${_ORDERED_SITES} ${_MASTER_SITE_BACKUP}";		\
 	cd ${.TARGET:H:S/\/${DIST_SUBDIR}$//} &&			\
 	${_FETCH_CMD} ${_FETCH_ARGS} ${.TARGET:T} $$sites
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	if ${TEST} ! -f ${.TARGET}; then				\
 		${ERROR_MSG} "Could not fetch the following file:";	\
 		${ERROR_MSG} "    ${.TARGET:T}";			\
@@ -302,9 +302,9 @@ mirror-distfiles: fetch
 .if !target(show-distfiles)
 show-distfiles:
 .  if defined(PKG_FAIL_REASON)
-	${_PKG_SILENT}${_PKG_DEBUG}${DO_NADA}
+	${RUN} ${DO_NADA}
 .  else
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	for file in "" ${_CKSUMFILES}; do				\
 		if [ "X$$file" = "X" ]; then continue; fi;		\
 		${ECHO} $$file;						\
