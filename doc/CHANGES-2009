@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1055 2009/03/17 00:28:12 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1056 2009/03/17 05:03:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1404,3 +1404,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-panel to 2.26.0 [jmcneill 2009-03-16]
 	Updated graphics/gnome-icon-theme to 2.26.0 [jmcneill 2009-03-16]
 	Updated x11/gnome-control-center to 2.26.0 [jmcneill 2009-03-16]
+	Updated converters/skf to 1.95.7 [obache 2009-03-17]
