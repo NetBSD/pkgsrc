@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/17 21:40:45 darcy Exp $
 #
 
 DISTNAME=		sparsehash-0.4
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=goog-sparsehash/}
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://goog-sparsehash.sourceforge.net/
 COMMENT=		Several hash-map implementations in use at Google
 

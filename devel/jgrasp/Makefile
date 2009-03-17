@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/17 21:40:45 darcy Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.eng.auburn.edu/pub/grasp/jgrasp/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jgrasp.org/
 COMMENT=		IDE with support for Software Visualizations
 
