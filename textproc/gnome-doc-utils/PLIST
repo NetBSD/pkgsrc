@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/10/16 14:00:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/03/17 10:50:14 jmcneill Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
@@ -72,6 +72,7 @@ share/gnome/help/gnome-doc-xslt/C/legal.xml
 share/gnome/help/gnome-doc-xslt/C/theme.xml
 share/gnome/help/gnome-doc-xslt/C/translating.xml
 share/locale/ar/LC_MESSAGES/gnome-doc-utils.mo
+share/locale/as/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/be@latin/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/bg/LC_MESSAGES/gnome-doc-utils.mo
 share/locale/bn/LC_MESSAGES/gnome-doc-utils.mo
