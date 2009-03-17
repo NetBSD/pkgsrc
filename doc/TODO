@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7935 2009/03/17 00:15:16 jmcneill Exp $
+$NetBSD: TODO,v 1.7936 2009/03/17 00:28:21 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -658,7 +658,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-control-center-2.26.0 [GNOME 2.26]
 	o gnome-devel-docs-2.26.0 [GNOME 2.26]
 	o gnome-doc-utils-0.16.0 [GNOME 2.26]
 	o gnome-games-2.26.0 [GNOME 2.26]
