@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/01/23 21:14:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.18 2009/03/17 21:40:46 darcy Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	misc x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
-MAINTAINER=	pkgsrc-users@@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=1
 COMMENT=	Configure the behaviour of an application under Blackbox
 

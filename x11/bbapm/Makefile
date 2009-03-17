@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/01/23 21:14:16 jschauma Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/17 21:40:48 darcy Exp $
 # based on
 #    FreeBSD port:
 #    ID: ports/x11-wm/bbapm/Makefile,v 1.5 2002/09/02 01:30:15 lioux Exp
@@ -10,7 +10,7 @@ PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bbtools/}
 
-MAINTAINER=	pkgsrc-users@@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=14
 COMMENT=	APM monitor for Blackbox
 

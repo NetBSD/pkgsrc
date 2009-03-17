@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/01/23 21:14:17 jschauma Exp $
+# $NetBSD: Makefile,v 1.31 2009/03/17 21:40:47 darcy Exp $
 #
 
 DISTNAME=	blackbox-0.65.0
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blackboxwm/}
 
-MAINTAINER=	pkgsrc-users@@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blackboxwm.sourceforge.net/
 COMMENT=	Small and fast X11R6 window manager
 
