@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1083 2009/03/17 23:39:38 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1084 2009/03/17 23:54:54 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1435,3 +1435,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/libgnomecanvasmm to 2.26.0 [jmcneill 2009-03-17]
 	Updated misc/mousetweaks to 2.26.0 [jmcneill 2009-03-17]
 	Updated audio/sound-juicer to 2.26.0 [jmcneill 2009-03-17]
+	Updated multimedia/swfdec-gnome to 2.26.0 [jmcneill 2009-03-17]
