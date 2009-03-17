@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/02 20:32:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/17 23:37:24 jmcneill Exp $
 bin/sound-juicer
 man/man1/sound-juicer.1
 share/applications/sound-juicer.desktop
@@ -7,6 +7,10 @@ share/gnome/help/sound-juicer/C/figures/prefs.png
 share/gnome/help/sound-juicer/C/figures/startup.png
 share/gnome/help/sound-juicer/C/legal.xml
 share/gnome/help/sound-juicer/C/sound-juicer.xml
+share/gnome/help/sound-juicer/ar/figures/prefs.png
+share/gnome/help/sound-juicer/ar/figures/startup.png
+share/gnome/help/sound-juicer/ar/legal.xml
+share/gnome/help/sound-juicer/ar/sound-juicer.xml
 share/gnome/help/sound-juicer/ca/figures/prefs.png
 share/gnome/help/sound-juicer/ca/figures/startup.png
 share/gnome/help/sound-juicer/ca/legal.xml
@@ -27,6 +31,10 @@ share/gnome/help/sound-juicer/es/figures/prefs.png
 share/gnome/help/sound-juicer/es/figures/startup.png
 share/gnome/help/sound-juicer/es/legal.xml
 share/gnome/help/sound-juicer/es/sound-juicer.xml
+share/gnome/help/sound-juicer/eu/figures/prefs.png
+share/gnome/help/sound-juicer/eu/figures/startup.png
+share/gnome/help/sound-juicer/eu/legal.xml
+share/gnome/help/sound-juicer/eu/sound-juicer.xml
 share/gnome/help/sound-juicer/fr/figures/prefs.png
 share/gnome/help/sound-juicer/fr/figures/startup.png
 share/gnome/help/sound-juicer/fr/legal.xml
@@ -99,6 +107,7 @@ share/locale/id/LC_MESSAGES/sound-juicer.mo
 share/locale/it/LC_MESSAGES/sound-juicer.mo
 share/locale/ja/LC_MESSAGES/sound-juicer.mo
 share/locale/ka/LC_MESSAGES/sound-juicer.mo
+share/locale/kn/LC_MESSAGES/sound-juicer.mo
 share/locale/ko/LC_MESSAGES/sound-juicer.mo
 share/locale/ku/LC_MESSAGES/sound-juicer.mo
 share/locale/lt/LC_MESSAGES/sound-juicer.mo
@@ -140,11 +149,13 @@ share/locale/zh_CN/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_HK/LC_MESSAGES/sound-juicer.mo
 share/locale/zh_TW/LC_MESSAGES/sound-juicer.mo
 share/omf/sound-juicer/sound-juicer-C.omf
+share/omf/sound-juicer/sound-juicer-ar.omf
 share/omf/sound-juicer/sound-juicer-ca.omf
 share/omf/sound-juicer/sound-juicer-de.omf
 share/omf/sound-juicer/sound-juicer-el.omf
 share/omf/sound-juicer/sound-juicer-en_GB.omf
 share/omf/sound-juicer/sound-juicer-es.omf
+share/omf/sound-juicer/sound-juicer-eu.omf
 share/omf/sound-juicer/sound-juicer-fr.omf
 share/omf/sound-juicer/sound-juicer-nl.omf
 share/omf/sound-juicer/sound-juicer-oc.omf
@@ -158,12 +169,19 @@ share/sound-juicer/sound-juicer.glade
 @dirrm share/omf/sound-juicer
 @comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gnome/help/sound-juicer/uk/figures
 @dirrm share/gnome/help/sound-juicer/uk
 @dirrm share/gnome/help/sound-juicer/sv/figures
@@ -180,6 +198,8 @@ share/sound-juicer/sound-juicer.glade
 @dirrm share/gnome/help/sound-juicer/nl
 @dirrm share/gnome/help/sound-juicer/fr/figures
 @dirrm share/gnome/help/sound-juicer/fr
+@dirrm share/gnome/help/sound-juicer/eu/figures
+@dirrm share/gnome/help/sound-juicer/eu
 @dirrm share/gnome/help/sound-juicer/es/figures
 @dirrm share/gnome/help/sound-juicer/es
 @dirrm share/gnome/help/sound-juicer/en_GB/figures
@@ -190,9 +210,12 @@ share/sound-juicer/sound-juicer.glade
 @dirrm share/gnome/help/sound-juicer/de
 @dirrm share/gnome/help/sound-juicer/ca/figures
 @dirrm share/gnome/help/sound-juicer/ca
+@dirrm share/gnome/help/sound-juicer/ar/figures
+@dirrm share/gnome/help/sound-juicer/ar
 @dirrm share/gnome/help/sound-juicer/C/figures
 @dirrm share/gnome/help/sound-juicer/C
 @dirrm share/gnome/help/sound-juicer
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
