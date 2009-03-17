@@ -1,18 +1,10 @@
-@comment $NetBSD: PLIST,v 1.19 2008/10/27 01:37:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/03/17 09:10:03 jmcneill Exp $
 bin/bug-buddy
 lib/gtk-2.0/modules/libgnomebreakpad.la
 man/man1/bug-buddy.1
 share/applications/bug-buddy.desktop
 share/bug-buddy/bug-buddy.gtkbuilder
 share/bug-buddy/bug-buddy.menu
-share/bug-buddy/bugzilla/gnome.bugzilla
-share/bug-buddy/bugzilla/gnome/config
-share/bug-buddy/bugzilla/gnome/mostfreq
-share/bug-buddy/bugzilla/gnome/products
-share/bug-buddy/bugzilla/ximian.bugzilla
-share/bug-buddy/bugzilla/ximian/config
-share/bug-buddy/bugzilla/ximian/mostfreq
-share/bug-buddy/bugzilla/ximian/products
 share/bug-buddy/gdb-cmd
 share/gconf/schemas/bug-buddy.schemas
 share/icons/HighContrastLargePrint/48x48/apps/bug-buddy.png
@@ -109,9 +101,6 @@ share/locale/zh_TW/LC_MESSAGES/bug-buddy.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/bug-buddy/bugzilla/ximian
-@dirrm share/bug-buddy/bugzilla/gnome
-@dirrm share/bug-buddy/bugzilla
 @dirrm share/bug-buddy
 @comment in xdg-dirs: @dirrm share/applications
 @comment in gtk2: @dirrm lib/gtk-2.0/modules
