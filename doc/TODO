@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7939 2009/03/17 08:48:12 jmcneill Exp $
+$NetBSD: TODO,v 1.7940 2009/03/17 08:55:23 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
-	o GConf-2.26.0 [GNOME 2.26]
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
