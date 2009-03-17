@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7965 2009/03/17 23:39:38 jmcneill Exp $
+$NetBSD: TODO,v 1.7966 2009/03/17 23:54:54 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1276,7 +1276,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o streamripper-1.63.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
-	o swfdec-gnome-2.26.0 [GNOME 2.26]
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o systrace-1.6e
