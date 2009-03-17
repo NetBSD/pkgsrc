@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2009/03/08 15:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.92 2009/03/17 12:07:47 jmcneill Exp $
 #
 
-DISTNAME=		gnome-utils-2.24.1
+DISTNAME=		gnome-utils-2.26.0
 CATEGORIES=		misc gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -36,7 +36,7 @@ GCONF_SCHEMAS+=	baobab.schemas
 GCONF_SCHEMAS+=	gnome-dictionary.schemas
 GCONF_SCHEMAS+=	gnome-screenshot.schemas
 GCONF_SCHEMAS+=	gnome-search-tool.schemas
-GCONF_SCHEMAS+=	logview.schemas
+GCONF_SCHEMAS+=	gnome-system-log.schemas
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.1
 BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.13.4
