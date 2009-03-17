@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2008/10/16 11:11:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.42 2009/03/17 20:41:34 jmcneill Exp $
 bin/pango-querymodules
 ${PLIST.x11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
@@ -61,6 +61,8 @@ ${PLIST.x11}lib/pkgconfig/pangox.pc
 ${PLIST.x11}lib/pkgconfig/pangoxft.pc
 ${PLIST.x11}libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
+man/man1/pango-view.1
+man/man1/preload.1.gz
 share/gtk-doc/html/pango/PangoEngineLang.html
 share/gtk-doc/html/pango/PangoEngineShape.html
 share/gtk-doc/html/pango/PangoFcDecoder.html
