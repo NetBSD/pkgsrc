@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1069 2009/03/17 15:56:34 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1070 2009/03/17 16:04:35 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1421,3 +1421,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/gimp to 2.6.6 [adam 2009-03-17]
 	Updated x11/gnome-themes to 2.26.0 [jmcneill 2009-03-17]
 	Updated devel/libgnome to 2.26.0 [jmcneill 2009-03-17]
+	Updated sysutils/gnome-system-monitor to 2.26.0.1 [jmcneill 2009-03-17]
