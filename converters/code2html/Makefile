@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/17 21:40:45 darcy Exp $
 #
 
 DISTNAME=	code2html-0.9.1
 CATEGORIES=	converters devel textproc
 MASTER_SITES=	http://www.palfrader.org/code2html/all/
 
-MAINTAINER=	pkgsrc-users@@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.palfrader.org/code2html/
 COMMENT=	Convert a program source code to syntax highlighted HTML
 

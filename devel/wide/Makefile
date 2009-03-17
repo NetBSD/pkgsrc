@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/17 21:40:45 darcy Exp $
 #
 
 DISTNAME=		wide
@@ -8,7 +8,7 @@ CATEGORIES=		devel lang
 MASTER_SITES=		http://www2.mta.ac.il/~tal/WIDE/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www2.mta.ac.il/~tal/WIDE/
 COMMENT=		IDE for the While programming language
 

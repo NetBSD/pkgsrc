@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.39 2009/03/17 21:40:45 darcy Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -21,7 +21,7 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-MAINTAINER=		pkgsrc-users@@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pvs.csl.sri.com/
 COMMENT=		The PVS Specification and Verification System
 

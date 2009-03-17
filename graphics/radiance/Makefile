@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.22 2009/03/17 21:40:46 darcy Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.radiance-online.org/software/non-cvs/	\
 		http://www.radiance-online.org/software/
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}supp${EXTRACT_SUFX}
 
-MAINTAINER=	pkgsrc-users@@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 
