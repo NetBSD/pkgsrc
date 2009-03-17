@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1073 2009/03/17 21:10:54 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1074 2009/03/17 21:20:17 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1425,3 +1425,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/seahorse-plugins to 2.26.0 [jmcneill 2009-03-17]
 	Updated devel/pango to 1.24.0 [jmcneill 2009-03-17]
 	Updated devel/libwnck to 2.26.0 [jmcneill 2009-03-17]
+	Updated graphics/librsvg to 2.26.0 [jmcneill 2009-03-17]
