@@ -1,6 +1,32 @@
-# $NetBSD: gcc.mk,v 1.95 2008/11/16 17:01:53 ahoka Exp $
+# $NetBSD: gcc.mk,v 1.96 2009/03/17 21:28:10 rillig Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
+#
+# User-settable variables:
+#
+# USE_NATIVE_GCC
+#	When set to "yes", the native gcc is used, no matter which
+#	compiler version a package requires.
+#
+# Package-settable variables:
+#
+# GCC_REQD
+#	The minimum version of the GNU Compiler Collection that is
+#	required to build this package. Setting this variable doesn't
+#	change the compiler that is used for building packages. See
+#	ONLY_FOR_COMPILER for that purpose. This is a list of version
+#	numbers, of which the maximum version is the definitive one.
+#
+# System-defined variables:
+#
+# CC_VERSION
+#	A string of the form "gcc-4.3.2"
+#
+# CC_VERSION_STRING
+#	The same(?) as CC_VERSION. FIXME: What's the difference between
+#	the two?
+#
+# Keywords: gcc
 #
 
 .if !defined(COMPILER_GCC_MK)
