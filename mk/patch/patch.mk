@@ -1,4 +1,4 @@
-# $NetBSD: patch.mk,v 1.17 2007/09/19 08:37:37 rillig Exp $
+# $NetBSD: patch.mk,v 1.18 2009/03/17 21:43:54 rillig Exp $
 #
 # The following variables may be set in a package Makefile and control
 # how pkgsrc patches are applied.
@@ -116,8 +116,8 @@ patch-message:
 ###
 .PHONY: patch-cookie
 patch-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.patch} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${TEST} ! -f ${_COOKIE.patch} || ${FALSE}
+	${RUN}								\
 	if ${TEST} -f ${_PATCH_APPLIED_FILE:Q}; then			\
 		${MV} -f ${_PATCH_APPLIED_FILE:Q} ${_COOKIE.patch:Q};	\
 	else								\
@@ -245,11 +245,11 @@ distribution-patch-message:
 do-distribution-patch:
 .for i in ${PATCHFILES}
 	@${ECHO_PATCH_MSG} "Applying distribution patch ${i}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${_DISTDIR};			\
+	${RUN} cd ${_DISTDIR};						\
 	${PATCH_DIST_CAT.${i:S/=/--/}} |				\
 	${PATCH} ${PATCH_DIST_ARGS.${i:S/=/--/}} ||			\
 		{ ${ERROR_MSG} "Patch ${i} failed"; ${_PKGSRC_PATCH_FAIL}; }
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${_DISTDIR:Q}/${i:Q} >> ${_PATCH_APPLIED_FILE:Q}
+	${RUN} ${ECHO} ${_DISTDIR:Q}/${i:Q} >> ${_PATCH_APPLIED_FILE:Q}
 .endfor
 
 ######################################################################
@@ -274,7 +274,7 @@ pkgsrc-patch-message:
 	@${STEP_MSG} "Applying pkgsrc patches for ${PKGNAME}"
 
 do-pkgsrc-patch:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	fail=;								\
 	patches=${_PKGSRC_PATCHES:Q};					\
 	patch_warning() {						\
