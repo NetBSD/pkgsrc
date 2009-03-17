@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7937 2009/03/17 00:35:19 jmcneill Exp $
+$NetBSD: TODO,v 1.7938 2009/03/17 00:48:03 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -450,6 +450,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.1
 	o btpd-0.13 [pkg/38144]
+	o bug-buddy-2.26.0 [GNOME 2.26]
 	o bugzilla-3.3.2
 	o byacc-20080824
 	o c4-1.10 [schmonz]
@@ -1352,6 +1353,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vice-2.1
 	o vicq-0.4.2
 	o vifm-0.4
+	o vinagre-2.26.0 [GNOME 2.26]
 	o vino-2.26.0 [GNOME 2.26]
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
