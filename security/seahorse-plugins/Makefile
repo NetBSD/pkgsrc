@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/12/04 17:34:14 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/17 16:39:12 jmcneill Exp $
 
-DISTNAME=	seahorse-plugins-2.24.1
-PKGREVISION=	1
+DISTNAME=	seahorse-plugins-2.26.0
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,6 +21,16 @@ USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		seahorse-gedit.schemas
 GCONF_SCHEMAS+=		seahorse-plugins.schemas
+
+# In pkgsrc, the shipped gettext cannot handle the .po files,
+# so we strip out usage of the newer features (context and fuzzy matches)
+SHFILESDIR=	${FILESDIR:S/-plugins//}
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po \
+	    ${WRKSRC}/plugins/applet/docs/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${SHFILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
