@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/06 01:55:27 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/17 12:03:38 roy Exp $
 #
 
 DISTNAME=		dhcpcd-gtk-0.3.0
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		roy@marples.name
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
 COMMENT=		GTK+ systray monitor for dhcpcd
 
