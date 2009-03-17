@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1065 2009/03/17 12:20:00 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1066 2009/03/17 13:34:54 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1416,3 +1416,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gnome-user-docs to 2.26.0 [jmcneill 2009-03-17]
 	Updated misc/gnome-utils to 2.26.0 [jmcneill 2009-03-17]
 	Updated misc/yelp to 2.26.0 [jmcneill 2009-03-17]
+	Updated sysutils/gamin to 0.1.10nb2 [jmcneill 2009-03-17]
+	Updated sysutils/libgamin to 0.1.10nb1 [jmcneill 2009-03-17]
