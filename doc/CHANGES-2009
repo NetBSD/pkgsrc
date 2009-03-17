@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1060 2009/03/17 10:46:31 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1061 2009/03/17 10:50:49 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/bug-buddy to 2.26.0 [jmcneill 2009-03-17]
 	Updated devel/GConf to 2.26.0nb1 [jmcneill 2009-03-17]
 	Updated misc/gnome-devel-docs to 2.26.0 [jmcneill 2009-03-17]
+	Updated textproc/gnome-doc-utils to 0.16.0 [jmcneill 2009-03-17]
