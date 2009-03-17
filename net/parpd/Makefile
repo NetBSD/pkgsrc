@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/29 13:25:01 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/17 12:05:02 roy Exp $
 #
 
 DISTNAME=		parpd-1.2
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/parpd/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		roy@marples.name
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/parpd/
 COMMENT=		RFC1027 compliant Proxy ARP Daemon
 
