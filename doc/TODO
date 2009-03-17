@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7950 2009/03/17 15:56:34 jmcneill Exp $
+$NetBSD: TODO,v 1.7951 2009/03/17 16:40:42 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1237,7 +1237,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sdlmame-0.130
-	o seahorse-plugins-2.26.0 [GNOME 2.26]
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
