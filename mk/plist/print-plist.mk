@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.16 2008/07/23 23:46:26 seb Exp $
+# $NetBSD: print-plist.mk,v 1.17 2009/03/17 22:13:36 rillig Exp $
 
 ###
 ### Automatic PLIST generation
@@ -139,9 +139,8 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
 .PHONY: print-PLIST
 .if !target(print-PLIST)
 print-PLIST:
-	${_PKG_SILENT}${_PKG_DEBUG}\
-	${ECHO} '@comment $$'NetBSD'$$'
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${RUN} ${ECHO} '@comment $$'NetBSD'$$'
+	${RUN}\
 	shlib_type=${SHLIB_TYPE:Q};					\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
@@ -175,7 +174,7 @@ print-PLIST:
 			next;						\
 		}							\
 		{ print $$0; }'
-	${_PKG_SILENT}${_PKG_DEBUG}\
+	${RUN}\
 	for i in `${_PRINT_PLIST_DIRS_CMD}				\
 			| ${SORT} -r					\
 			| ${AWK} '					\
