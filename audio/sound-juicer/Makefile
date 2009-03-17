@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2009/03/08 15:56:43 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/03/17 23:37:24 jmcneill Exp $
 #
 
-DISTNAME=		sound-juicer-2.24.0
+DISTNAME=		sound-juicer-2.26.0
 CATEGORIES=		audio
 MASTER_SITES=		http://www.burtonini.com/computing/ \
-			${MASTER_SITE_GNOME:=sources/sound-juicer/2.24/}
+			${MASTER_SITE_GNOME:=sources/sound-juicer/2.26/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.burtonini.com/computing/
@@ -25,25 +25,26 @@ CONFIGURE_ENV+=		GST_INSPECT="${LOCALBASE}/bin/gst-inspect-0.10"
 GCONF_SCHEMAS+=	sound-juicer.schemas
 
 DEPENDS+=	gst-plugins0.10-flac>=0.10.11:../../audio/gst-plugins0.10-flac
+DEPENDS+=	gst-plugins0.10-vorbis>=0.10.22:../../audio/gst-plugins0.10-vorbis
 DEPENDS+=	gst-plugins0.10-gio>=0.10.21:../../sysutils/gst-plugins0.10-gio
 
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../audio/musicbrainz/buildlink3.mk"
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.0
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libcdio+=		libcdio>=0.70
 .include "../../misc/libcdio/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.5
+BUILDLINK_API_DEPENDS.gstreamer0.10+=	gstreamer0.10>=0.10.15
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
+.include "../../sysutils/brasero/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
-.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
