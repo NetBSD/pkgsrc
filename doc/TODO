@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7958 2009/03/17 22:03:09 jmcneill Exp $
+$NetBSD: TODO,v 1.7959 2009/03/17 22:10:48 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1013,7 +1013,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.51
 	o packagekit-0.4.4
 	o pam-smbpass-3.0.13
-	o pangomm-2.24.0 [GNOME 2.26]
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-0.9.1
