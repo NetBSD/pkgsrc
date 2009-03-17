@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.9 2009/01/28 18:06:21 drochner Exp $
+# $NetBSD: options.mk,v 1.10 2009/03/17 18:16:20 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.musicpd
-PKG_SUPPORTED_OPTIONS=	aac audiofile flac id3 libmikmod musepack ogg inet6
-PKG_SUGGESTED_OPTIONS=	aac audiofile flac id3 musepack ogg
+PKG_SUPPORTED_OPTIONS=	aac audiofile curl flac id3 libao libmikmod musepack ogg inet6
+PKG_SUGGESTED_OPTIONS=	aac audiofile curl flac id3 libao musepack ogg
 
 .include "../../mk/bsd.options.mk"
 
@@ -20,6 +20,13 @@ CONFIGURE_ARGS+=	--enable-audiofile
 CONFIGURE_ARGS+=	--disable-audiofile
 .endif
 
+.if !empty(PKG_OPTIONS:Mcurl)
+.  include "../../www/curl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-curl
+.else
+CONFIGURE_ARGS+=	--disable-curl
+.endif
+
 .if !empty(PKG_OPTIONS:Mflac)
 .  include "../../audio/flac/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-flac
@@ -32,6 +39,13 @@ CONFIGURE_ARGS+=	--disable-flac
 CONFIGURE_ARGS+=	--enable-id3
 .else
 CONFIGURE_ARGS+=	--disable-id3
+.endif
+
+.if !empty(PKG_OPTIONS:Mlibao)
+.  include "../../audio/libao/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-ao
+.else
+CONFIGURE_ARGS+=	--disable-ao
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibmikmod)
