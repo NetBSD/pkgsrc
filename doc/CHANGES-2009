@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1061 2009/03/17 10:50:49 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1062 2009/03/17 11:17:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1329,6 +1329,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/php-pdo_pgsql to 5.2.9.99 [sborrill 2009-03-13]
 	Updated databases/php-pdo_sqlite to 5.2.9.99 [sborrill 2009-03-13]
 	Updated www/typolight to 2.6.7 [taca 2009-03-14]
+	Updated www/typolight-example to 2.6.7 [taca 2009-03-14]
 	Updated www/typolight-translations to 20090312 [taca 2009-03-14]
 	Updated security/ap-modsecurity2 to 2.5.9 [adrianp 2009-03-14]
 	Updated textproc/namazu to 2.0.19 [taca 2009-03-14]
@@ -1411,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/GConf to 2.26.0nb1 [jmcneill 2009-03-17]
 	Updated misc/gnome-devel-docs to 2.26.0 [jmcneill 2009-03-17]
 	Updated textproc/gnome-doc-utils to 0.16.0 [jmcneill 2009-03-17]
+	Updated www/typolight to 2.6.7nb1 [taca 2009-03-17]
