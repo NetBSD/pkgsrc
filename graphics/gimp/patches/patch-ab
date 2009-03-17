@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.27 2009/01/24 20:55:06 adam Exp $
+$NetBSD: patch-ab,v 1.28 2009/03/17 15:41:42 adam Exp $
 
---- configure.orig	2008-11-20 23:48:56.000000000 +0100
+--- configure.orig	2009-03-15 21:58:20.000000000 +0100
 +++ configure
-@@ -31444,6 +31444,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
+@@ -32048,6 +32048,7 @@ if (eval "$ac_cpp conftest.$ac_ext") 2>&
    gimp_ok=yes
  fi
  rm -f conftest*
@@ -10,15 +10,15 @@ $NetBSD: patch-ab,v 1.27 2009/01/24 20:55:06 adam Exp $
  
        if test "x$gimp_ok" = xyes; then
  
-@@ -31452,7 +31453,6 @@ cat >>confdefs.h <<\_ACEOF
+@@ -32056,7 +32057,6 @@ cat >>confdefs.h <<\_ACEOF
  _ACEOF
  
        fi
 -  fi
-   { echo "$as_me:$LINENO: result: $gimp_ok" >&5
- echo "${ECHO_T}$gimp_ok" >&6; }
+   { $as_echo "$as_me:$LINENO: result: $gimp_ok" >&5
+ $as_echo "$gimp_ok" >&6; }
    if test "x$gimp_ok" = xno; then
-@@ -34171,7 +34171,7 @@ if test "x$with_print" != xno; then
+@@ -34846,7 +34846,7 @@ if test "x$with_print" != xno; then
    enable_print="yes"
  fi
  
@@ -27,7 +27,7 @@ $NetBSD: patch-ab,v 1.27 2009/01/24 20:55:06 adam Exp $
    BUILD_PRINT_TRUE=
    BUILD_PRINT_FALSE='#'
  else
-@@ -36840,7 +36840,7 @@ fi
+@@ -37532,7 +37532,7 @@ fi
  
  gimpdatadir="$datadir/$PACKAGE/2.0"
  gimpplugindir="$libdir/$PACKAGE/2.0"
