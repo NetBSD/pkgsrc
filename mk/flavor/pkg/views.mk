@@ -1,4 +1,4 @@
-# $NetBSD: views.mk,v 1.5 2007/01/05 18:52:08 rillig Exp $
+# $NetBSD: views.mk,v 1.6 2009/03/17 22:13:36 rillig Exp $
 
 # By default, all packages attempt to link into the views.
 .if ${PKG_INSTALLATION_TYPE} == "pkgviews"
@@ -36,7 +36,7 @@ build-views: su-target
 	@${STEP_MSG} "Building views for ${PKGNAME}"
 
 su-build-views:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${MKDIR} ${LOCALBASE};						\
 	for v in ${PKGVIEWS}; do					\
 		case "$$v" in						\
@@ -78,7 +78,7 @@ remove-views: su-target
 	@${STEP_MSG} "Removing ${PKGNAME} from views"
 
 su-remove-views:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	for v in "" ${PKGVIEWS}; do					\
 		${TEST} -n "$$v" || continue;				\
 		case "$$v" in						\

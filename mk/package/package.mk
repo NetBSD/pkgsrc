@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.19 2007/03/08 23:33:35 rillig Exp $
+# $NetBSD: package.mk,v 1.20 2009/03/17 22:13:36 rillig Exp $
 #
 # This file provides the code for the "package" phase.
 #
@@ -69,9 +69,9 @@ package-message:
 ###
 .PHONY: package-cookie
 package-cookie:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} ! -f ${_COOKIE.package} || ${FALSE}
-	${_PKG_SILENT}${_PKG_DEBUG}${MKDIR} ${_COOKIE.package:H}
-	${_PKG_SILENT}${_PKG_DEBUG}${ECHO} ${PKGNAME} > ${_COOKIE.package}
+	${RUN} ${TEST} ! -f ${_COOKIE.package} || ${FALSE}
+	${RUN} ${MKDIR} ${_COOKIE.package:H}
+	${RUN} ${ECHO} ${PKGNAME} > ${_COOKIE.package}
 
 ######################################################################
 ### The targets below are run with elevated privileges.

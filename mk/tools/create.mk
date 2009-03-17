@@ -1,4 +1,4 @@
-# $NetBSD: create.mk,v 1.3 2008/02/13 09:11:01 rillig Exp $
+# $NetBSD: create.mk,v 1.4 2009/03/17 22:13:36 rillig Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -148,9 +148,8 @@ TOOLS_SCRIPT_DFLT.${_t_}=	\
 override-tools: ${TOOLS_CMD.${_t_}}
 
 ${TOOLS_CMD.${_t_}}:
-	${_PKG_SILENT}${_PKG_DEBUG}${TEST} -d ${.TARGET:H:Q} ||		\
-		${MKDIR} ${.TARGET:H:Q}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN} ${TEST} -d ${.TARGET:H:Q} || ${MKDIR} ${.TARGET:H:Q}
+	${RUN}								\
 	if ${TEST} -n ${TOOLS_SCRIPT.${_t_}:Q}""; then			\
 		create=wrapper;						\
 		script=${TOOLS_SCRIPT.${_t_}:Q};			\
@@ -183,7 +182,7 @@ ${TOOLS_CMD.${_t_}}:
 		;;							\
 	esac
 .  for _a_ in ${TOOLS_ALIASES.${_t_}}
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${TEST} ${.TARGET:Q} = ${.TARGET:H:Q}/${_a_} ||			\
 		${LN} -fs ${.TARGET:T:Q} ${.TARGET:H:Q}/${_a_}
 .  endfor
