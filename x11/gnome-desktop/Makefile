@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2009/03/16 23:28:33 jmcneill Exp $
+# $NetBSD: Makefile,v 1.90 2009/03/17 16:22:57 drochner Exp $
 #
 
 DISTNAME=		gnome-desktop-2.26.0
@@ -6,7 +6,7 @@ CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-desktop/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		drochner@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
 
