@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2008/12/25 01:01:00 obache Exp $
+$NetBSD: distinfo,v 1.14 2009/03/17 05:03:15 obache Exp $
 
-SHA1 (skf_1.95.6.tar.gz) = 07f310836c37b92434d8058eab8d9572ebbb5c7c
-RMD160 (skf_1.95.6.tar.gz) = 24a24dcacf0f38c5759599500e89159de948bd80
-Size (skf_1.95.6.tar.gz) = 1050015 bytes
+SHA1 (skf_1.95.7.tar.gz) = 1fece5758b9a45ac223cd0d19ce7792dc885c9ea
+RMD160 (skf_1.95.7.tar.gz) = 3b2f2d75507290b321a8e997eed78d47c0bcb2a1
+Size (skf_1.95.7.tar.gz) = 1046314 bytes
 SHA1 (patch-aa) = 66e0c6225b23739348dde120040d37224d9a000f
