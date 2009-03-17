@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 23:43:08 roy Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/17 12:03:08 roy Exp $
 #
 
 DISTNAME=		dhcpcd-dbus-0.3.0
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		roy@marples.name
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
 COMMENT=		DBus binding for dhcpcd
 

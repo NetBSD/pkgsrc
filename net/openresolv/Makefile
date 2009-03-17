@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/16 21:55:44 roy Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/17 12:04:21 roy Exp $
 #
 
 DISTNAME=		openresolv-3.0
@@ -7,7 +7,7 @@ MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
 MASTER_SITES+=		http://roy.aydogan.net/openresolv/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		roy@marples.name
+MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/openresolv/
 COMMENT=		Framework for managing /etc/resolv.conf
 
