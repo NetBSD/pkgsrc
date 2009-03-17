@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2009/03/17 10:12:25 jmcneill Exp $
+
+--- gconf/default.path.in.orig	2009-02-16 14:34:10.000000000 -0500
++++ gconf/default.path.in
+@@ -21,7 +21,7 @@ include "$(HOME)/.gconf.path"
+ xml:readwrite:$(HOME)/.gconf
+ 
+ # Location for system-wide settings that are set by the defaults mechanism
+-xml:readonly:/etc/gconf/gconf.xml.system
++xml:readonly:@sysgconfdir@/gconf.xml.system
+ 
+ # To read in any defaults settings that the Sys Admin may have created
+ # prior to a desktop system upgrade. The SysAdmin can stick default values
