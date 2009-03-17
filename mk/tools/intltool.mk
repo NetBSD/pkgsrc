@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.4 2008/12/05 08:25:15 wiz Exp $
+# $NetBSD: intltool.mk,v 1.5 2009/03/17 22:13:36 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -84,7 +84,7 @@ override-message-intltool:
 .PHONY: override-intltool-${_t_}
 override-intltool: override-intltool-${_t_}
 override-intltool-${_t_}:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN}								\
 	cd ${WRKSRC}; for f in ${_t_} */${_t_} */*/${_t_}; do		\
 		if ${TEST} -f "$$f"; then				\
 			${RM} -f $$f;					\

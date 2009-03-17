@@ -1,4 +1,4 @@
-# $NetBSD: oss.builtin.mk,v 1.2 2006/04/06 06:23:06 reed Exp $
+# $NetBSD: oss.builtin.mk,v 1.3 2009/03/17 22:13:36 rillig Exp $
 
 BUILTIN_PKG:=	oss
 
@@ -77,7 +77,7 @@ BUILDLINK_TRANSFORM+=	rm:-lossaudio
 BUILDLINK_TARGETS+=	buildlink-oss-soundcard-h
 .PHONY: buildlink-oss-soundcard-h
 buildlink-oss-soundcard-h:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	sys_soundcard_h=${BUILDLINK_DIR}/include/sys/soundcard.h;	\
 	soundcard_h=${BUILDLINK_PREFIX.oss}/include/soundcard.h;	\
 	if ${TEST} ! -f $${sys_soundcard_h} -a -f $${soundcard_h}; then	\

@@ -1,4 +1,4 @@
-# $NetBSD: bsd.package.mk,v 1.10 2008/01/04 01:46:27 rillig Exp $
+# $NetBSD: bsd.package.mk,v 1.11 2009/03/17 22:13:36 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to binary packages.
@@ -50,4 +50,4 @@ repackage: package-clean package
 ### phase so that the "package" target may be re-invoked.
 ###
 package-clean:
-	${_PKG_SILENT}${_PKG_DEBUG}${RM} -f ${_COOKIE.package}
+	${RUN} ${RM} -f ${_COOKIE.package}

@@ -1,4 +1,4 @@
-# $NetBSD: fuse.buildlink3.mk,v 1.8 2007/10/17 10:43:38 rillig Exp $
+# $NetBSD: fuse.buildlink3.mk,v 1.9 2009/03/17 22:13:36 rillig Exp $
 #
 # Makefile fragment for packages using the FUSE framework.
 #
@@ -28,7 +28,7 @@ override-message-fuse-pkgconfig:
 	@${STEP_MSG} "Magical transformations for fuse on NetBSD."
 
 override-fuse-pkgconfig:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;		\
+	${RUN}						\
 	${MKDIR} ${BLKDIR_PKGCFG};			\
 	{						\
 	${ECHO} "prefix=/usr";				\
