@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1058 2009/03/17 09:10:50 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1059 2009/03/17 10:12:52 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1408,3 +1408,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/GConf to 2.26.0 [jmcneill 2009-03-17]
 	Updated devel/GConf-ui to 2.26.0 [jmcneill 2009-03-17]
 	Updated net/bug-buddy to 2.26.0 [jmcneill 2009-03-17]
+	Updated devel/GConf to 2.26.0nb1 [jmcneill 2009-03-17]
