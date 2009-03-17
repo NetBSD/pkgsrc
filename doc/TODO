@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7962 2009/03/17 22:50:51 jmcneill Exp $
+$NetBSD: TODO,v 1.7963 2009/03/17 23:04:42 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -818,7 +818,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libgnomecanvasmm-2.26.0 [GNOME 2.26]
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
 	o libgnomeuimm-2.26.0 [GNOME 2.26]
