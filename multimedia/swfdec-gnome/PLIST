@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/31 12:46:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/17 23:54:24 jmcneill Exp $
 bin/swfdec-player
 bin/swfdec-thumbnailer
 man/man1/swfdec-player.1
@@ -12,6 +12,7 @@ share/icons/hicolor/32x32/apps/swfdec-gnome.png
 share/icons/hicolor/48x48/apps/swfdec-gnome.png
 share/icons/hicolor/scalable/apps/swfdec-gnome.svg
 share/locale/ar/LC_MESSAGES/swfdec-gnome.mo
+share/locale/as/LC_MESSAGES/swfdec-gnome.mo
 share/locale/be@latin/LC_MESSAGES/swfdec-gnome.mo
 share/locale/bg/LC_MESSAGES/swfdec-gnome.mo
 share/locale/bn_IN/LC_MESSAGES/swfdec-gnome.mo
@@ -33,7 +34,10 @@ share/locale/hi/LC_MESSAGES/swfdec-gnome.mo
 share/locale/hu/LC_MESSAGES/swfdec-gnome.mo
 share/locale/it/LC_MESSAGES/swfdec-gnome.mo
 share/locale/ja/LC_MESSAGES/swfdec-gnome.mo
+share/locale/kk/LC_MESSAGES/swfdec-gnome.mo
+share/locale/kn/LC_MESSAGES/swfdec-gnome.mo
 share/locale/ko/LC_MESSAGES/swfdec-gnome.mo
+share/locale/ku/LC_MESSAGES/swfdec-gnome.mo
 share/locale/lt/LC_MESSAGES/swfdec-gnome.mo
 share/locale/mk/LC_MESSAGES/swfdec-gnome.mo
 share/locale/ml/LC_MESSAGES/swfdec-gnome.mo
@@ -41,10 +45,13 @@ share/locale/mr/LC_MESSAGES/swfdec-gnome.mo
 share/locale/nb/LC_MESSAGES/swfdec-gnome.mo
 share/locale/nl/LC_MESSAGES/swfdec-gnome.mo
 share/locale/nn/LC_MESSAGES/swfdec-gnome.mo
+share/locale/or/LC_MESSAGES/swfdec-gnome.mo
 share/locale/pa/LC_MESSAGES/swfdec-gnome.mo
 share/locale/pl/LC_MESSAGES/swfdec-gnome.mo
+share/locale/ps/LC_MESSAGES/swfdec-gnome.mo
 share/locale/pt/LC_MESSAGES/swfdec-gnome.mo
 share/locale/pt_BR/LC_MESSAGES/swfdec-gnome.mo
+share/locale/ro/LC_MESSAGES/swfdec-gnome.mo
 share/locale/ru/LC_MESSAGES/swfdec-gnome.mo
 share/locale/sl/LC_MESSAGES/swfdec-gnome.mo
 share/locale/sq/LC_MESSAGES/swfdec-gnome.mo
@@ -52,6 +59,7 @@ share/locale/sr/LC_MESSAGES/swfdec-gnome.mo
 share/locale/sr@latin/LC_MESSAGES/swfdec-gnome.mo
 share/locale/sv/LC_MESSAGES/swfdec-gnome.mo
 share/locale/ta/LC_MESSAGES/swfdec-gnome.mo
+share/locale/te/LC_MESSAGES/swfdec-gnome.mo
 share/locale/th/LC_MESSAGES/swfdec-gnome.mo
 share/locale/tr/LC_MESSAGES/swfdec-gnome.mo
 share/locale/uk/LC_MESSAGES/swfdec-gnome.mo
@@ -62,11 +70,18 @@ share/locale/zh_TW/LC_MESSAGES/swfdec-gnome.mo
 share/swfdec-gnome/swfdec-player.ui
 @dirrm share/swfdec-gnome
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
