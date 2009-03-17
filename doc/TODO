@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7947 2009/03/17 12:20:00 jmcneill Exp $
+$NetBSD: TODO,v 1.7948 2009/03/17 15:37:29 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -623,6 +623,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
 	o gcombust-0.1.55
+	o gconf-editor-2.26.0 [GNOME 2.26]
 	o gcpio-2.7
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
@@ -664,8 +665,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-nettool-2.26.0 [GNOME 2.26]
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
+	o gnome-themes-2.26.0 [GNOME 2.26]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-vfsmm-2.26.0 [GNOME 2.26]
+	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -702,6 +705,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtkglarea-2.0.0
 	o gtkmm-2.16.0 [GNOME 2.26]
+	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -816,6 +820,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
+	o libgnome-2.26.0 [GNOME 2.26]
+	o libgnomecanvas-2.26.0 [GNOME 2.26]
 	o libgnomecanvasmm-2.26.0 [GNOME 2.26]
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
