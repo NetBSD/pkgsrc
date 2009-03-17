@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.62 2008/11/15 00:05:02 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2009/03/17 22:39:33 jmcneill Exp $
 
-DISTNAME=	gtkmm-2.14.3
+DISTNAME=	gtkmm-2.16.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.14/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/2.16/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE=	atk/atkmm-1.6.pc.in
 PKGCONFIG_OVERRIDE+=	gdk/gdkmm-2.4.pc.in
 PKGCONFIG_OVERRIDE+=	gtk/gtkmm-2.4.pc.in
 
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.3
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.16.0
 
 .include "../../devel/pangomm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
