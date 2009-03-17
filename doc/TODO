@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7940 2009/03/17 08:55:23 jmcneill Exp $
+$NetBSD: TODO,v 1.7941 2009/03/17 09:09:05 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -541,6 +541,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.0
+	o ekiga-3.2.0 [GNOME 2.26]
 	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
