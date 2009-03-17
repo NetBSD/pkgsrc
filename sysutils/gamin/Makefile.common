@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.3 2009/03/17 22:31:10 asau Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -14,6 +14,8 @@ HOMEPAGE=	http://www.gnome.org/~veillard/gamin/
 COMMENT=	File alteration monitor
 
 CONFLICTS=	fam-[0-9]*
+
+MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
