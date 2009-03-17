@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/10/25 02:09:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/03/17 12:19:35 jmcneill Exp $
 bin/gnome-help
 bin/yelp
 share/applications/yelp.desktop
@@ -8,6 +8,7 @@ share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
 share/locale/ar/LC_MESSAGES/yelp.mo
 share/locale/as/LC_MESSAGES/yelp.mo
+share/locale/ast/LC_MESSAGES/yelp.mo
 share/locale/az/LC_MESSAGES/yelp.mo
 share/locale/be/LC_MESSAGES/yelp.mo
 share/locale/be@latin/LC_MESSAGES/yelp.mo
@@ -50,9 +51,11 @@ share/locale/ko/LC_MESSAGES/yelp.mo
 share/locale/ks/LC_MESSAGES/yelp.mo
 share/locale/ku/LC_MESSAGES/yelp.mo
 share/locale/ky/LC_MESSAGES/yelp.mo
+share/locale/la/LC_MESSAGES/yelp.mo
 share/locale/li/LC_MESSAGES/yelp.mo
 share/locale/lt/LC_MESSAGES/yelp.mo
 share/locale/lv/LC_MESSAGES/yelp.mo
+share/locale/mai/LC_MESSAGES/yelp.mo
 share/locale/mg/LC_MESSAGES/yelp.mo
 share/locale/mk/LC_MESSAGES/yelp.mo
 share/locale/ml/LC_MESSAGES/yelp.mo
@@ -69,6 +72,7 @@ share/locale/oc/LC_MESSAGES/yelp.mo
 share/locale/or/LC_MESSAGES/yelp.mo
 share/locale/pa/LC_MESSAGES/yelp.mo
 share/locale/pl/LC_MESSAGES/yelp.mo
+share/locale/ps/LC_MESSAGES/yelp.mo
 share/locale/pt/LC_MESSAGES/yelp.mo
 share/locale/pt_BR/LC_MESSAGES/yelp.mo
 share/locale/ro/LC_MESSAGES/yelp.mo
@@ -88,6 +92,8 @@ share/locale/th/LC_MESSAGES/yelp.mo
 share/locale/tr/LC_MESSAGES/yelp.mo
 share/locale/ug/LC_MESSAGES/yelp.mo
 share/locale/uk/LC_MESSAGES/yelp.mo
+share/locale/uz/LC_MESSAGES/yelp.mo
+share/locale/uz@cyrillic/LC_MESSAGES/yelp.mo
 share/locale/vi/LC_MESSAGES/yelp.mo
 share/locale/wa/LC_MESSAGES/yelp.mo
 share/locale/xh/LC_MESSAGES/yelp.mo
@@ -127,6 +133,8 @@ share/yelp/yelp.js
 @dirrm share/yelp/icons
 @dirrm share/yelp
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/192x192
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
