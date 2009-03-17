@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2009/03/16 17:22:57 jmcneill Exp $
+# $NetBSD: Makefile,v 1.22 2009/03/17 00:27:37 jmcneill Exp $
 #
 
-DISTNAME=	gnome-control-center-2.25.92
+DISTNAME=	gnome-control-center-2.26.0
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.25/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -47,20 +47,14 @@ BUILDLINK_API_DEPENDS.libxklavier=	libxklavier>=3.6
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-control-center
-PKG_SUPPORTED_OPTIONS=	evolution hal
-PKG_SUGGESTED_OPTIONS=	evolution hal
+PKG_SUPPORTED_OPTIONS=	evolution
+PKG_SUGGESTED_OPTIONS=	evolution
 .include "../../mk/bsd.options.mk"
 PLIST_VARS+=		evolution
 .if !empty(PKG_OPTIONS:Mevolution)
 CONFIGURE_ARGS+=	--enable-aboutme
 PLIST.evolution=	yes
 .endif
-.if !empty(PKG_OPTIONS:Mhal)
-CONFIGURE_ARGS+=	--enable-hal
-.else
-CONFIGURE_ARGS+=	--disable-hal
-.endif
-
 
 _TOOLS_USE_MSGFMT_SH=	yes
 
@@ -88,9 +82,7 @@ post-patch:
 .endif
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mhal)
 DEPENDS+=	gst-plugins0.10-hal>=0.10.11:../../multimedia/gst-plugins0.10-hal
-.endif
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../security/policykit-gnome/buildlink3.mk"
@@ -99,9 +91,7 @@ DEPENDS+=	gst-plugins0.10-hal>=0.10.11:../../multimedia/gst-plugins0.10-hal
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.if !empty(PKG_OPTIONS:Mhal)
 .include "../../sysutils/hal/buildlink3.mk"
-.endif
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
