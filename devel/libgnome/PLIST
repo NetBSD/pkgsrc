@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/16 13:24:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/03/17 15:56:05 jmcneill Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -83,6 +83,7 @@ share/gtk-doc/html/libgnome/up.png
 share/locale/am/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ar/LC_MESSAGES/libgnome-2.0.mo
 share/locale/as/LC_MESSAGES/libgnome-2.0.mo
+share/locale/ast/LC_MESSAGES/libgnome-2.0.mo
 share/locale/az/LC_MESSAGES/libgnome-2.0.mo
 share/locale/be/LC_MESSAGES/libgnome-2.0.mo
 share/locale/bg/LC_MESSAGES/libgnome-2.0.mo
@@ -90,6 +91,7 @@ share/locale/bn/LC_MESSAGES/libgnome-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/libgnome-2.0.mo
 share/locale/bs/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ca/LC_MESSAGES/libgnome-2.0.mo
+share/locale/crh/LC_MESSAGES/libgnome-2.0.mo
 share/locale/cs/LC_MESSAGES/libgnome-2.0.mo
 share/locale/cy/LC_MESSAGES/libgnome-2.0.mo
 share/locale/da/LC_MESSAGES/libgnome-2.0.mo
