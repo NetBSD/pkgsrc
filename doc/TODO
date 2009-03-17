@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7964 2009/03/17 23:20:38 jmcneill Exp $
+$NetBSD: TODO,v 1.7965 2009/03/17 23:39:38 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snownews-1.5.10 [pkg/39887]
 	o solfege-3.13.0
 	o sope-4.5.9
-	o sound-juicer-2.26.0 [GNOME 2.26]
 	o source-highlight-2.11.1
 	o sox-14.2.0
 	o spcaview-20060501
