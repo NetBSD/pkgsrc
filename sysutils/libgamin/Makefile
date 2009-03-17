@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/03/16 13:06:46 tron Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/17 13:34:06 jmcneill Exp $
 
 .include "../../sysutils/gamin/Makefile.common"
 PKGNAME=	${DISTNAME:S/^gamin/lib&/}
+
+PKGREVISION=	1
 
 CONFIGURE_ARGS+=	--enable-libgamin
 

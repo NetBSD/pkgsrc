@@ -1,8 +1,11 @@
-$NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
+$NetBSD: patch-af,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
 
---- server/gam_channel.c.orig	2005-08-09 12:17:39.000000000 -0400
+--- server/gam_channel.c.orig	2007-07-04 09:36:49.000000000 -0400
 +++ server/gam_channel.c
-@@ -3,6 +3,7 @@
+@@ -1,8 +1,10 @@
+ #include "server_config.h"
++#include <string.h>
+ #include <stdlib.h>
  #include <unistd.h>
  #include <errno.h>
  #include <glib.h>
@@ -10,11 +13,28 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
  #include <sys/socket.h>
  #include <sys/stat.h>
  #include <sys/un.h>
-@@ -12,6 +13,20 @@
+@@ -12,6 +14,37 @@
  #include "gam_channel.h"
  #include "gam_protocol.h"
  
-+#if defined(SOCKCREDSIZE)
++#if defined(LOCAL_PEEREID)
++static gboolean
++gam_nb_getpeereid(int fd, pid_t *pid, uid_t *uid, gid_t *gid)
++{
++    struct unpcbid cred;
++    socklen_t len = sizeof(cred);
++
++    if (getsockopt(fd, 0, LOCAL_PEEREID, &cred, &len) < 0)
++	return FALSE;
++    if (pid)
++	*pid = cred.unp_pid;
++    if (uid)
++	*uid = cred.unp_euid;
++    if (gid)
++	*gid = cred.unp_egid;
++    return TRUE;
++}
++#elif defined(SOCKCREDSIZE)
 +#define BSDCRED	struct sockcred
 +#define CRED_DATASIZE	(SOCKCREDSIZE(NGROUPS))
 +#define credpid(c,p)	(p)
@@ -31,7 +51,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
  /* #define CHANNEL_VERBOSE_DEBUGGING */
  /************************************************************************
   *									*
-@@ -28,37 +43,35 @@
+@@ -28,37 +61,35 @@
  static gboolean
  gam_client_conn_send_cred(int fd)
  {
@@ -87,7 +107,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
      if (written < 0) {
          if (errno == EINTR)
              goto retry;
-@@ -66,7 +79,7 @@ retry:
+@@ -66,7 +97,7 @@ retry:
  		  "Failed to write credential bytes to socket %d\n", fd);
  	return (-1);
      }
@@ -96,7 +116,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
  	gam_error(DEBUG_INFO, "Wrote %d credential bytes to socket %d\n",
  		  written, fd);
  	return (-1);
-@@ -89,43 +102,26 @@ gam_client_conn_check_cred(GIOChannel * 
+@@ -89,43 +120,26 @@ gam_client_conn_check_cred(GIOChannel * 
  {
      struct msghdr msg;
      struct iovec iov;
@@ -111,11 +131,8 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -	    struct cmsghdr hdr;
 -	    struct cmsgcred cred;
 -    } cmsg;
-+#if defined(BSDCRED)
-+    struct cmsghdr *cmsg;
-+    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
- #endif
- 
+-#endif
+-
 -    s_uid = getuid();
 -
 -#if defined(LOCAL_CREDS) && defined(HAVE_CMSGCRED)
@@ -128,8 +145,11 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -            return FALSE;
 -        }
 -    }
--#endif
--
++#if defined(BSDCRED)
++    struct cmsghdr *cmsg;
++    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
+ #endif
+ 
 -    iov.iov_base = &buf;
 -    iov.iov_len = 1;
 +    iov.iov_base = &pid;
@@ -150,7 +170,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
  #endif
  
    retry:
-@@ -133,26 +129,33 @@ gam_client_conn_check_cred(GIOChannel * 
+@@ -133,26 +147,33 @@ gam_client_conn_check_cred(GIOChannel * 
          if (errno == EINTR)
              goto retry;
  
@@ -166,15 +186,15 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
 +    if (msg.msg_controllen == 0) {
 +        GAM_DEBUG(DEBUG_INFO,
 +                  "No control message received over recvmsg()\n");
-+        goto failed;
-+    }
-+    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
-+        GAM_DEBUG(DEBUG_INFO,
-+                  "Lost control message data over recvmsg()\n");
          goto failed;
      }
 -#ifdef HAVE_CMSGCRED
 -    if (cmsg.hdr.cmsg_len < sizeof(cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS) {
++    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
++        GAM_DEBUG(DEBUG_INFO,
++                  "Lost control message data over recvmsg()\n");
++        goto failed;
++    }
 +    cmsg = CMSG_FIRSTHDR(&msg);
 +    if (cmsg->cmsg_type != SCM_CREDS) {
          GAM_DEBUG(DEBUG_INFO,
@@ -192,7 +212,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
          struct ucred cr;
          socklen_t cr_len = sizeof(cr);
  
-@@ -167,23 +170,31 @@ gam_client_conn_check_cred(GIOChannel * 
+@@ -167,23 +188,37 @@ gam_client_conn_check_cred(GIOChannel * 
                        fd, cr_len, (int) sizeof(cr));
              goto failed;
          }
@@ -201,6 +221,12 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -	c_uid = cmsg.cred.cmcred_euid;
 -	c_gid = cmsg.cred.cmcred_groups[0];
 -#else /* !SO_PEERCRED && !HAVE_CMSGCRED */
++#elif defined(LOCAL_PEEREID)
++        if (gam_nb_getpeereid(fd, &c_pid, &c_uid, &c_gid) == FALSE) {
++	    GAM_DEBUG(DEBUG_INFO,
++		      "Failed to gam_nb_getpeereid() credentials on %d\n", fd);
++            goto failed;
++	}
 +#elif defined(BSDCRED)
 +        BSDCRED *cr = (BSDCRED *)CMSG_DATA(cmsg);
 +        c_pid = credpid(cr, pid);
@@ -229,7 +255,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
      GAM_DEBUG(DEBUG_INFO,
                "Credentials: s_uid %d, c_uid %d, c_gid %d, c_pid %d\n",
                (int) s_uid, (int) c_uid, (int) c_gid, (int) c_pid);
-@@ -194,7 +205,7 @@ gam_client_conn_check_cred(GIOChannel * 
+@@ -194,7 +229,7 @@ gam_client_conn_check_cred(GIOChannel * 
      }
  
      if (!gam_client_conn_send_cred(fd)) {
@@ -238,7 +264,7 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
          goto failed;
      }
  
-@@ -551,12 +562,6 @@ gam_check_secure_path(const char *path)
+@@ -551,12 +586,6 @@ gam_check_secure_path(const char *path)
  	goto cleanup;
      }
  #endif
@@ -251,7 +277,15 @@ $NetBSD: patch-af,v 1.1 2005/08/30 23:24:33 jlam Exp $
      /*
       * Looks good though binding may fail due to an existing server
       */
-@@ -646,6 +651,18 @@ gam_listen_unix_socket(const char *path)
+@@ -620,6 +649,7 @@ gam_listen_unix_socket(const char *path)
+ {
+     int fd;
+     struct sockaddr_un addr;
++    struct stat st;
+ 
+     fd = socket(PF_UNIX, SOCK_STREAM, 0);
+     if (fd < 0) {
+@@ -646,6 +676,18 @@ gam_listen_unix_socket(const char *path)
      strncpy(&addr.sun_path[0], path, (sizeof(addr) - 4) - 1);
      umask(0077);
  #endif

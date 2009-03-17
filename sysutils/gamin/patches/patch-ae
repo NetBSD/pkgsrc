@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
+$NetBSD: patch-ae,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
 
---- libgamin/gam_api.c.orig	2005-08-05 18:31:46.000000000 -0400
+--- libgamin/gam_api.c.orig	2007-08-27 06:21:03.000000000 -0400
 +++ libgamin/gam_api.c
 @@ -7,6 +7,7 @@
  #include <stdlib.h>
@@ -10,11 +10,28 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
  #include <sys/types.h>
  #include <fcntl.h>
  #include <errno.h>
-@@ -51,6 +52,20 @@ const char *FamErrlist[] = {
+@@ -51,6 +52,37 @@ const char *FamErrlist[] = {
      NULL
  };
  
-+#if defined(SOCKCREDSIZE)
++#if defined(LOCAL_PEEREID)
++static int
++gam_nb_getpeereid(int fd, pid_t *pid, uid_t *uid, gid_t *gid)
++{
++    struct unpcbid cred;
++    socklen_t len = sizeof(cred);
++
++    if (getsockopt(fd, 0, LOCAL_PEEREID, &cred, &len) < 0)
++        return 0;
++    if (pid)
++        *pid = cred.unp_pid;
++    if (uid)
++        *uid = cred.unp_euid;
++    if (gid)
++        *gid = cred.unp_egid;
++    return 1;
++}
++#elif defined(SOCKCREDSIZE)
 +#define BSDCRED		struct sockcred
 +#define CRED_DATASIZE	(SOCKCREDSIZE(NGROUPS))
 +#define credpid(c,p)	(p)
@@ -31,7 +48,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
  #ifdef GAMIN_DEBUG_API
  int FAMDebug(FAMConnection *fc, const char *filename, FAMRequest * fr,
               void *userData);
-@@ -307,12 +322,6 @@ gamin_check_secure_path(const char *path
+@@ -314,12 +346,6 @@ gamin_check_secure_path(const char *path
  	goto cleanup;
      }
  #endif
@@ -44,7 +61,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
      /*
       * Looks good though binding may fail due to an existing server
       */
-@@ -372,6 +381,18 @@ gamin_connect_unix_socket(const char *pa
+@@ -379,6 +405,18 @@ gamin_connect_unix_socket(const char *pa
      }
      strncpy(&addr.sun_path[0], path, (sizeof(addr) - 4) - 1);
  #endif
@@ -63,7 +80,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
  
      if (connect(fd, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
          if (retries == 0) {
-@@ -419,37 +440,35 @@ gamin_connect_unix_socket(const char *pa
+@@ -426,37 +464,35 @@ gamin_connect_unix_socket(const char *pa
  static int
  gamin_write_credential_byte(int fd)
  {
@@ -79,18 +96,18 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
 +    struct iovec iov;
 +    pid_t pid = getpid();
 +    int written;
- 
--    iov.iov_base = &data[0];
--    iov.iov_len = 1;
++
 +#if defined(BSDCRED) && !defined(LOCAL_CREDS)
 +    struct cmsghdr *cmsg;
 +    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
 +#endif
  
--    memset (&msg, 0, sizeof (msg));
+-    iov.iov_base = &data[0];
+-    iov.iov_len = 1;
 +    iov.iov_base = &pid;
 +    iov.iov_len = sizeof(pid_t);
-+
+ 
+-    memset (&msg, 0, sizeof (msg));
 +    memset (&msg, 0, sizeof(msg));
      msg.msg_iov = &iov;
      msg.msg_iovlen = 1;
@@ -120,7 +137,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
      if (written < 0) {
          if (errno == EINTR)
              goto retry;
-@@ -457,7 +476,7 @@ retry:
+@@ -464,7 +500,7 @@ retry:
                    "Failed to write credential bytes to socket %d\n", fd);
          return (-1);
      }
@@ -129,7 +146,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
          gam_error(DEBUG_INFO, "Wrote %d credential bytes to socket %d\n",
                    written, fd);
          return (-1);
-@@ -641,43 +660,26 @@ gamin_check_cred(GAMDataPtr conn, int fd
+@@ -648,43 +684,26 @@ gamin_check_cred(GAMDataPtr conn, int fd
  {
      struct msghdr msg;
      struct iovec iov;
@@ -144,8 +161,11 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -	    struct cmsghdr hdr;
 -	    struct cmsgcred cred;
 -    } cmsg;
--#endif
--
++#if defined(BSDCRED)
++    struct cmsghdr *cmsg;
++    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
+ #endif
+ 
 -    s_uid = getuid();
 -
 -#if defined(LOCAL_CREDS) && defined(HAVE_CMSGCRED)
@@ -158,11 +178,8 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -            return(-1);
 -        }
 -    }
-+#if defined(BSDCRED)
-+    struct cmsghdr *cmsg;
-+    char cmsgbuf[CMSG_SPACE(CRED_DATASIZE)];
- #endif
- 
+-#endif
+-
 -    iov.iov_base = &buf;
 -    iov.iov_len = 1;
 +    iov.iov_base = &pid;
@@ -183,7 +200,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
  #endif
  
  retry:
-@@ -685,26 +687,33 @@ retry:
+@@ -692,26 +711,33 @@ retry:
          if (errno == EINTR)
              goto retry;
  
@@ -199,15 +216,15 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
 +    if (msg.msg_controllen == 0) {
 +        GAM_DEBUG(DEBUG_INFO,
 +                  "No control message received over recvmsg()\n");
-+        goto failed;
-+    }
-+    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
-+        GAM_DEBUG(DEBUG_INFO,
-+                  "Lost control message data over recvmsg()\n");
          goto failed;
      }
 -#ifdef HAVE_CMSGCRED
 -    if (cmsg.hdr.cmsg_len < sizeof(cmsg) || cmsg.hdr.cmsg_type != SCM_CREDS) {
++    if ((msg.msg_flags & MSG_CTRUNC) != 0) {
++        GAM_DEBUG(DEBUG_INFO,
++                  "Lost control message data over recvmsg()\n");
++        goto failed;
++    }
 +    cmsg = CMSG_FIRSTHDR(&msg);
 +    if (cmsg->cmsg_type != SCM_CREDS) {
          GAM_DEBUG(DEBUG_INFO,
@@ -225,7 +242,7 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
          struct ucred cr;
          socklen_t cr_len = sizeof(cr);
  
-@@ -719,23 +728,31 @@ retry:
+@@ -726,23 +752,37 @@ retry:
                        fd, cr_len, (int) sizeof(cr));
              goto failed;
          }
@@ -234,6 +251,12 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
 -        c_uid = cmsg.cred.cmcred_euid;
 -        c_gid = cmsg.cred.cmcred_groups[0];
 -#else /* !SO_PEERCRED && !HAVE_CMSGCRED */
++#elif defined(LOCAL_PEEREID)
++        if (gam_nb_getpeereid(fd, &c_pid, &c_uid, &c_gid) == 0) {
++            GAM_DEBUG(DEBUG_INFO,
++                      "Failed to gam_nb_getpeereid() credentials on %d\n", fd);
++            goto failed; 
++        }
 +#elif defined(BSDCRED)
 +        BSDCRED *cr = (BSDCRED *)CMSG_DATA(cmsg);
 +        c_pid = credpid(cr, pid);
@@ -262,3 +285,22 @@ $NetBSD: patch-ae,v 1.1 2005/08/30 23:24:33 jlam Exp $
      GAM_DEBUG(DEBUG_INFO,
                "Credentials: s_uid %d, c_uid %d, c_gid %d, c_pid %d\n",
                (int) s_uid, (int) c_uid, (int) c_gid, (int) c_pid);
+@@ -1288,14 +1328,16 @@ FAMNextEvent(FAMConnection * fc, FAMEven
+ 
+     // FIXME: drop and reacquire lock while blocked?
+     gamin_data_lock(conn);
+-    if (!gamin_data_event_ready(conn)) {
++    while ((ret = gamin_data_event_ready(conn)) == 0) {
+         if (gamin_read_data(conn, fc->fd, 1) < 0) {
+ 	    gamin_try_reconnect(conn, fc->fd);
+ 	    FAMErrno = FAM_CONNECT;
+ 	    return (-1);
+ 	}
+     }
+-    ret = gamin_data_read_event(conn, fe);
++    if (ret > 0)
++        ret = gamin_data_read_event(conn, fe);
++
+     gamin_data_unlock(conn);
+ 
+     if (ret < 0) {

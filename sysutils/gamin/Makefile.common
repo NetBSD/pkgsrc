@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2009/03/15 21:27:47 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/03/17 13:34:06 jmcneill Exp $
 #
 # used by sysutils/gamin/Makefile
 # used by sysutils/libgamin/Makefile
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${DOCDIR:Q}
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--disable-libgamin
 CONFIGURE_ARGS+=	--disable-server
+CONFIGURE_ARGS+=	CPPFLAGS="-D_NETBSD_SOURCE"
 
 PKG_SYSCONFSUBDIR=	gamin
 DOCDIR=			${PREFIX}/share/doc/gamin
@@ -37,4 +38,4 @@ SUBST_SED.sysconfdir=	-e "s,/etc/gamin/,${PKG_SYSCONFDIR}/,"
 
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/gamin/distinfo
 FILESDIR=	${.CURDIR}/../../sysutils/gamin/files
-PATCHES=	${.CURDIR}/../../sysutils/gamin/patches
+PATCHDIR=	${.CURDIR}/../../sysutils/gamin/patches
