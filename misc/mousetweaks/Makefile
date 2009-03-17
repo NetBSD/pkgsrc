@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2009/03/08 15:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/17 23:20:11 jmcneill Exp $
 #
 
-DISTNAME=	mousetweaks-2.24.3
+DISTNAME=	mousetweaks-2.26.0
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Mousetweaks/Home
 COMMENT=	Mouse accessibility software
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
