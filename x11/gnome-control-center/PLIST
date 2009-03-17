@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/03/16 17:22:57 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/03/17 00:27:37 jmcneill Exp $
 ${PLIST.evolution}bin/gnome-about-me
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
@@ -95,6 +95,7 @@ share/gnome/help/control-center/C/config-themes.xml
 share/gnome/help/control-center/C/control-center.xml
 share/gnome/help/control-center/ca/control-center.xml
 share/gnome/help/control-center/ca@valencia/control-center.xml
+share/gnome/help/control-center/cs/control-center.xml
 share/gnome/help/control-center/de/control-center.xml
 share/gnome/help/control-center/en_GB/control-center.xml
 share/gnome/help/control-center/es/control-center.xml
@@ -175,6 +176,7 @@ share/locale/ko/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ku/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/lt/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/lv/LC_MESSAGES/gnome-control-center-2.0.mo
+share/locale/mai/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/mg/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/mk/LC_MESSAGES/gnome-control-center-2.0.mo
 share/locale/ml/LC_MESSAGES/gnome-control-center-2.0.mo
@@ -220,6 +222,7 @@ share/mime/packages/gnome-theme-package.xml
 share/omf/control-center/control-center-C.omf
 share/omf/control-center/control-center-ca.omf
 share/omf/control-center/control-center-ca@valencia.omf
+share/omf/control-center/control-center-cs.omf
 share/omf/control-center/control-center-de.omf
 share/omf/control-center/control-center-en_GB.omf
 share/omf/control-center/control-center-es.omf
@@ -264,6 +267,7 @@ share/pkgconfig/gnome-keybindings.pc
 @dirrm share/gnome/help/control-center/es
 @dirrm share/gnome/help/control-center/en_GB
 @dirrm share/gnome/help/control-center/de
+@dirrm share/gnome/help/control-center/cs
 @dirrm share/gnome/help/control-center/ca@valencia
 @dirrm share/gnome/help/control-center/ca
 @dirrm share/gnome/help/control-center/C
