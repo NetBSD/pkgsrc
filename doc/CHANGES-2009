@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1095 2009/03/18 08:47:45 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.1096 2009/03/18 11:59:21 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1451,3 +1451,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzrtools to 1.13.0nb1 [epg 2009-03-18]
 	Updated devel/bzr-svn to 0.5.3 [epg 2009-03-18]
 	Updated mail/dovecot to 1.1.12 [ghen 2009-03-18]
+	Updated devel/ptlib to 2.6.1 [jmcneill 2009-03-18]
+	Updated devel/opal to 3.6.1 [jmcneill 2009-03-18]
