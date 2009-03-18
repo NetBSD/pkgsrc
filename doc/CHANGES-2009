@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1091 2009/03/18 02:15:27 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1092 2009/03/18 02:52:31 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/deskbar-applet to 2.26.0 [jmcneill 2009-03-17]
 	Updated editors/gconf-editor to 2.26.0 [jmcneill 2009-03-17]
 	Updated misc/gok to 2.26.0 [jmcneill 2009-03-17]
+	Updated devel/libgnomeuimm to 2.26.0 [jmcneill 2009-03-17]
