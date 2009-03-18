@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7975 2009/03/18 03:15:31 snj Exp $
+$NetBSD: TODO,v 1.7976 2009/03/18 09:15:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -364,6 +364,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o abcm2ps-5.9.3
 	o abcmidi-20080928
 	o abiword-2.6.6
+	o accerciser-1.6.0
 	o acme-091
 	o acr-0.5.2
 	o adns-1.4
@@ -624,13 +625,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
+	o gdl-2.26.0
 	o gdm-2.26.0 [GNOME 2.26]
 	o gdsreader-0.3.2
 	o geany-0.16
 	o geda-1.5.1.20081221
 	o gedit-plugins-2.26.0 [GNOME 2.26]
 	o geeklog-1.5.2
-	o genius-1.0.5
+	o genius-1.0.6
 	o gentoo-0.15.2
 	o gettext-0.17
 	o gettext-m4-0.17
@@ -646,6 +648,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.4
+	o glade-3.6.0
 	o glade3-3.6.0 [GNOME 2.26]
 	o glchess-1.0.5
 	o global-5.7.2 [pkg/39760]
@@ -742,6 +745,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.13
 	o intercal-0.24
+	o intltool-0.40.6
 	o ioquake3-0.0.1496
 	o ircservices-5.1.14
 	o irrd-2.3.4 [pkg/36813|38002]
@@ -907,6 +911,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.6.0
+	o monodevelop-1.9.3
 	o moserial-1.0.6 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mpc-0.15
