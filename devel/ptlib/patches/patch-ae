@@ -1,8 +1,26 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+$NetBSD: patch-ae,v 1.2 2009/03/18 11:57:16 jmcneill Exp $
 
---- src/ptlib/common/osutils.cxx.orig	2008-09-08 15:37:04.000000000 -0400
-+++ src/ptlib/common/osutils.cxx	2008-09-08 15:37:31.000000000 -0400
-@@ -2091,21 +2091,21 @@
+--- src/ptlib/common/osutils.cxx.orig	2009-03-17 23:43:33.000000000 -0400
++++ src/ptlib/common/osutils.cxx
+@@ -1548,7 +1548,7 @@ PProcess::PProcess(const char * manuf, c
+   , m_library(false)
+ {
+   activeThreads.DisallowDeleteObjects();
+-  activeThreads.SetAt((PINDEX)GetCurrentThreadId(), this);
++  activeThreads.SetAt((uintptr_t)GetCurrentThreadId(), this);
+ 
+   PProcessInstance = this;
+ 
+@@ -1912,7 +1912,7 @@ PThread * PThread::Current()
+   PProcess & process = PProcess::Current();
+ 
+   process.activeThreadMutex.Wait();
+-  PThread * thread = process.activeThreads.GetAt((unsigned)GetCurrentThreadId());
++  PThread * thread = process.activeThreads.GetAt((uintptr_t)GetCurrentThreadId());
+   process.activeThreadMutex.Signal();
+ 
+   if (thread == NULL)
+@@ -2210,21 +2210,21 @@ PReadWriteMutex::~PReadWriteMutex()
  PReadWriteMutex::Nest * PReadWriteMutex::GetNest() const
  {
    PWaitAndSignal mutex(nestingMutex);
