@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.1 2009/03/18 11:57:16 jmcneill Exp $
+
+--- src/ptlib/unix/config.cxx.orig	2009-03-17 23:43:30.000000000 -0400
++++ src/ptlib/unix/config.cxx
+@@ -53,6 +53,10 @@
+ #define environ (NULL)
+ #endif
+ 
++#if defined(__NetBSD__)
++extern char **environ;
++#endif
++
+ //
+ //  a single key/value pair
+ //

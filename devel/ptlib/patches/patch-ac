@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+$NetBSD: patch-ac,v 1.2 2009/03/18 11:57:16 jmcneill Exp $
 
---- src/ptlib/unix/tlib.cxx.orig	2008-09-08 15:34:39.000000000 -0400
-+++ src/ptlib/unix/tlib.cxx	2008-09-08 15:34:54.000000000 -0400
-@@ -400,7 +400,7 @@
+--- src/ptlib/unix/tlib.cxx.orig	2009-03-17 23:43:30.000000000 -0400
++++ src/ptlib/unix/tlib.cxx
+@@ -400,7 +400,7 @@ PString PX_GetThreadName(pthread_t id)
  {
    if (PProcessInstance != NULL) {
-     PWaitAndSignal m(PProcessInstance->threadMutex);
+     PWaitAndSignal m(PProcessInstance->activeThreadMutex);
 -    PThread & thread = PProcessInstance->activeThreads[(unsigned)id];
 +    PThread & thread = PProcessInstance->activeThreads[(uintptr_t)id];
      return thread.GetThreadName();
