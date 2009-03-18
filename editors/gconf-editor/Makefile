@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2008/10/29 02:21:24 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2009/03/18 01:59:43 jmcneill Exp $
 #
 
-DISTNAME=		gconf-editor-2.24.1
+DISTNAME=		gconf-editor-2.26.0
 CATEGORIES=		editors gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gconf-editor/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -33,6 +33,7 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.14.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../security/policykit/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
