@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/12 13:31:48 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/18 17:19:30 snj Exp $
 #
 
 DISTNAME=	libproxy-0.2.3
@@ -20,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	libproxy-1.0.pc.in
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force
+
+PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/dlopen.buildlink3.mk"
