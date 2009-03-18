@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/02/19 07:06:40 epg Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/03/18 06:05:44 epg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -174,6 +174,9 @@ ${PYSITELIB}/bzrlib/check.pyo
 ${PYSITELIB}/bzrlib/chunk_writer.py
 ${PYSITELIB}/bzrlib/chunk_writer.pyc
 ${PYSITELIB}/bzrlib/chunk_writer.pyo
+${PYSITELIB}/bzrlib/clean_tree.py
+${PYSITELIB}/bzrlib/clean_tree.pyc
+${PYSITELIB}/bzrlib/clean_tree.pyo
 ${PYSITELIB}/bzrlib/cmd_version_info.py
 ${PYSITELIB}/bzrlib/cmd_version_info.pyc
 ${PYSITELIB}/bzrlib/cmd_version_info.pyo
@@ -606,6 +609,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_check.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_checkout.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_checkout.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_checkout.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_clean_tree.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_clean_tree.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_clean_tree.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_command_encoding.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_command_encoding.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_command_encoding.pyo
@@ -633,6 +639,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_export.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_filesystem_cicp.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_filtered_view_ops.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_filtered_view_ops.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_filtered_view_ops.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.pyo
@@ -795,6 +804,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_version_info.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_versioning.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_versioning.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_versioning.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_view.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_view.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_view.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_whoami.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_whoami.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_whoami.pyo
@@ -819,6 +831,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_commit.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_checkout.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_clone.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_clone.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_create_clone.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_dotted_revno_to_revision_id.pyo
@@ -963,6 +978,12 @@ ${PYSITELIB}/bzrlib/tests/inventory_implementations/basics.pyo
 ${PYSITELIB}/bzrlib/tests/lock_helpers.py
 ${PYSITELIB}/bzrlib/tests/lock_helpers.pyc
 ${PYSITELIB}/bzrlib/tests/lock_helpers.pyo
+${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.py
+${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.pyc
+${PYSITELIB}/bzrlib/tests/per_interbranch/__init__.pyo
+${PYSITELIB}/bzrlib/tests/per_interbranch/test_update_revisions.py
+${PYSITELIB}/bzrlib/tests/per_interbranch/test_update_revisions.pyc
+${PYSITELIB}/bzrlib/tests/per_interbranch/test_update_revisions.pyo
 ${PYSITELIB}/bzrlib/tests/per_lock/__init__.py
 ${PYSITELIB}/bzrlib/tests/per_lock/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/per_lock/__init__.pyo
@@ -1062,6 +1083,9 @@ ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_break_lock.pyo
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.py
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.pyc
 ${PYSITELIB}/bzrlib/tests/per_repository_reference/test_check.pyo
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_default_stacking.py
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_default_stacking.pyc
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_default_stacking.pyo
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.py
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/ssl_certs/__init__.pyo
@@ -1122,6 +1146,9 @@ ${PYSITELIB}/bzrlib/tests/test_cache_utf8.pyo
 ${PYSITELIB}/bzrlib/tests/test_chunk_writer.py
 ${PYSITELIB}/bzrlib/tests/test_chunk_writer.pyc
 ${PYSITELIB}/bzrlib/tests/test_chunk_writer.pyo
+${PYSITELIB}/bzrlib/tests/test_clean_tree.py
+${PYSITELIB}/bzrlib/tests/test_clean_tree.pyc
+${PYSITELIB}/bzrlib/tests/test_clean_tree.pyo
 ${PYSITELIB}/bzrlib/tests/test_commands.py
 ${PYSITELIB}/bzrlib/tests/test_commands.pyc
 ${PYSITELIB}/bzrlib/tests/test_commands.pyo
@@ -1140,6 +1167,9 @@ ${PYSITELIB}/bzrlib/tests/test_conflicts.pyo
 ${PYSITELIB}/bzrlib/tests/test_counted_lock.py
 ${PYSITELIB}/bzrlib/tests/test_counted_lock.pyc
 ${PYSITELIB}/bzrlib/tests/test_counted_lock.pyo
+${PYSITELIB}/bzrlib/tests/test_debug.py
+${PYSITELIB}/bzrlib/tests/test_debug.pyc
+${PYSITELIB}/bzrlib/tests/test_debug.pyo
 ${PYSITELIB}/bzrlib/tests/test_decorators.py
 ${PYSITELIB}/bzrlib/tests/test_decorators.pyc
 ${PYSITELIB}/bzrlib/tests/test_decorators.pyo
@@ -1164,6 +1194,9 @@ ${PYSITELIB}/bzrlib/tests/test_email_message.pyo
 ${PYSITELIB}/bzrlib/tests/test_errors.py
 ${PYSITELIB}/bzrlib/tests/test_errors.pyc
 ${PYSITELIB}/bzrlib/tests/test_errors.pyo
+${PYSITELIB}/bzrlib/tests/test_export.py
+${PYSITELIB}/bzrlib/tests/test_export.pyc
+${PYSITELIB}/bzrlib/tests/test_export.pyo
 ${PYSITELIB}/bzrlib/tests/test_extract.py
 ${PYSITELIB}/bzrlib/tests/test_extract.pyc
 ${PYSITELIB}/bzrlib/tests/test_extract.pyo
@@ -1314,6 +1347,7 @@ ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-3
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-4
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-5
 ${PYSITELIB}/bzrlib/tests/test_patches_data/diff-6
+${PYSITELIB}/bzrlib/tests/test_patches_data/diff-7
 ${PYSITELIB}/bzrlib/tests/test_patches_data/insert_top.patch
 ${PYSITELIB}/bzrlib/tests/test_patches_data/mod
 ${PYSITELIB}/bzrlib/tests/test_patches_data/mod-2
@@ -1321,12 +1355,14 @@ ${PYSITELIB}/bzrlib/tests/test_patches_data/mod-3
 ${PYSITELIB}/bzrlib/tests/test_patches_data/mod-4
 ${PYSITELIB}/bzrlib/tests/test_patches_data/mod-5
 ${PYSITELIB}/bzrlib/tests/test_patches_data/mod-6
+${PYSITELIB}/bzrlib/tests/test_patches_data/mod-7
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig-2
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig-3
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig-4
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig-5
 ${PYSITELIB}/bzrlib/tests/test_patches_data/orig-6
+${PYSITELIB}/bzrlib/tests/test_patches_data/orig-7
 ${PYSITELIB}/bzrlib/tests/test_patches_data/patchtext.patch
 ${PYSITELIB}/bzrlib/tests/test_permissions.py
 ${PYSITELIB}/bzrlib/tests/test_permissions.pyc
@@ -1397,6 +1433,9 @@ ${PYSITELIB}/bzrlib/tests/test_smart.pyo
 ${PYSITELIB}/bzrlib/tests/test_smart_add.py
 ${PYSITELIB}/bzrlib/tests/test_smart_add.pyc
 ${PYSITELIB}/bzrlib/tests/test_smart_add.pyo
+${PYSITELIB}/bzrlib/tests/test_smart_request.py
+${PYSITELIB}/bzrlib/tests/test_smart_request.pyc
+${PYSITELIB}/bzrlib/tests/test_smart_request.pyo
 ${PYSITELIB}/bzrlib/tests/test_smart_transport.py
 ${PYSITELIB}/bzrlib/tests/test_smart_transport.pyc
 ${PYSITELIB}/bzrlib/tests/test_smart_transport.pyo
@@ -1664,6 +1703,9 @@ ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_uncommit.pyo
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_unversion.py
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_unversion.pyc
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_unversion.pyo
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_views.py
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_views.pyc
+${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_views.pyo
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_walkdirs.py
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_walkdirs.pyc
 ${PYSITELIB}/bzrlib/tests/workingtree_implementations/test_walkdirs.pyo
@@ -1856,6 +1898,9 @@ ${PYSITELIB}/bzrlib/version_info_formats/format_rio.pyo
 ${PYSITELIB}/bzrlib/versionedfile.py
 ${PYSITELIB}/bzrlib/versionedfile.pyc
 ${PYSITELIB}/bzrlib/versionedfile.pyo
+${PYSITELIB}/bzrlib/views.py
+${PYSITELIB}/bzrlib/views.pyc
+${PYSITELIB}/bzrlib/views.pyo
 ${PYSITELIB}/bzrlib/weave.py
 ${PYSITELIB}/bzrlib/weave.pyc
 ${PYSITELIB}/bzrlib/weave.pyo
@@ -1911,6 +1956,7 @@ man/man1/bzr.1
 @dirrm ${PYSITELIB}/bzrlib/tests/per_repository_reference
 @dirrm ${PYSITELIB}/bzrlib/tests/per_repository
 @dirrm ${PYSITELIB}/bzrlib/tests/per_lock
+@dirrm ${PYSITELIB}/bzrlib/tests/per_interbranch
 @dirrm ${PYSITELIB}/bzrlib/tests/inventory_implementations
 @dirrm ${PYSITELIB}/bzrlib/tests/intertree_implementations
 @dirrm ${PYSITELIB}/bzrlib/tests/interrepository_implementations
