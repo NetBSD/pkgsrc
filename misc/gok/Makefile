@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.60 2008/10/28 06:34:31 obache Exp $
+# $NetBSD: Makefile,v 1.61 2009/03/18 02:14:42 jmcneill Exp $
 #
 
-DISTNAME=		gok-2.24.0
+DISTNAME=		gok-2.26.0
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -21,6 +21,14 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	gok-1.0.pc.in
 
 GCONF_SCHEMAS=		gok.schemas
+
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

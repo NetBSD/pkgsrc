@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/10/28 06:34:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/03/18 02:14:42 jmcneill Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -440,6 +440,16 @@ share/gok/lv/numberpad.kbd
 share/gok/lv/quit.kbd
 share/gok/lv/text-operations.kbd
 share/gok/lv/valuator.kbd
+share/gok/mai/gok-controls.kbd
+share/gok/mai/hide.kbd
+share/gok/mai/launcher.kbd
+share/gok/mai/main.kbd
+share/gok/mai/mouse.kbd
+share/gok/mai/move-resize.kbd
+share/gok/mai/numberpad.kbd
+share/gok/mai/quit.kbd
+share/gok/mai/text-operations.kbd
+share/gok/mai/valuator.kbd
 share/gok/manage.kbd
 share/gok/mk/gok-controls.kbd
 share/gok/mk/hide.kbd
@@ -890,6 +900,7 @@ share/locale/ko/LC_MESSAGES/gok.mo
 share/locale/ku/LC_MESSAGES/gok.mo
 share/locale/lt/LC_MESSAGES/gok.mo
 share/locale/lv/LC_MESSAGES/gok.mo
+share/locale/mai/LC_MESSAGES/gok.mo
 share/locale/mk/LC_MESSAGES/gok.mo
 share/locale/ml/LC_MESSAGES/gok.mo
 share/locale/mn/LC_MESSAGES/gok.mo
@@ -968,6 +979,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/mn
 @dirrm share/gok/ml
 @dirrm share/gok/mk
+@dirrm share/gok/mai
 @dirrm share/gok/lv
 @dirrm share/gok/lt
 @dirrm share/gok/ku
