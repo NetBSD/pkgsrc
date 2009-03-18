@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/03/18 03:14:11 snj Exp $
+
+--- wscript.orig	2009-03-17 18:29:37.000000000 -0700
++++ wscript	2009-03-17 18:29:33.000000000 -0700
+@@ -311,7 +311,7 @@ def build (bld):
+             'AUTHORS ChangeLog COPYING EXPAT README TRANSLATE')
+ 
+     # Install default configuration
+-    bld.install_files ('${SYSCONFDIR}/xdg/' + APPNAME + '/', 'data/search')
++    bld.install_files ('${DESTDIR}${PREFIX}/share/examples/midori/', 'data/search')
+ 
+     if bld.env['RST2HTML']:
+         # FIXME: Build only if needed

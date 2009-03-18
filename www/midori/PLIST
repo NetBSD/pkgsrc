@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/29 16:56:08 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/18 03:14:11 snj Exp $
 bin/midori
+lib/midori/libmouse-gestures.so
 lib/midori/libpage-holder.so
 lib/midori/libstatusbar-features.so
 lib/midori/libtab-panel.so
@@ -11,7 +12,7 @@ share/doc/midori/EXPAT
 share/doc/midori/README
 share/doc/midori/TRANSLATE
 share/doc/midori/user/midori.html
-share/midori/logo-shade.png
+share/examples/midori/search
 share/icons/hicolor/32x32/apps/midori.png
 share/icons/hicolor/32x32/categories/extension.png
 share/icons/hicolor/32x32/status/news-feed.png
@@ -24,7 +25,9 @@ share/icons/hicolor/16x16/status/news-feed.png
 share/icons/hicolor/22x22/apps/midori.png
 share/icons/hicolor/22x22/categories/extension.png
 share/icons/hicolor/22x22/status/news-feed.png
+share/locale/da/LC_MESSAGES/midori.mo
 share/locale/de/LC_MESSAGES/midori.mo
+share/locale/el/LC_MESSAGES/midori.mo
 share/locale/en_GB/LC_MESSAGES/midori.mo
 share/locale/es/LC_MESSAGES/midori.mo
 share/locale/et/LC_MESSAGES/midori.mo
@@ -33,12 +36,23 @@ share/locale/fr/LC_MESSAGES/midori.mo
 share/locale/gl/LC_MESSAGES/midori.mo
 share/locale/hu/LC_MESSAGES/midori.mo
 share/locale/id/LC_MESSAGES/midori.mo
+share/locale/it/LC_MESSAGES/midori.mo
+share/locale/ja/LC_MESSAGES/midori.mo
 share/locale/nl/LC_MESSAGES/midori.mo
 share/locale/pl/LC_MESSAGES/midori.mo
+share/locale/pt_PT/LC_MESSAGES/midori.mo
 share/locale/ru/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
 share/locale/tr/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
+share/midori/logo-shade.png
+@dirrm share/midori
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/categories
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/categories
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/status
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/categories
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
@@ -46,8 +60,8 @@ share/locale/uk/LC_MESSAGES/midori.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/categories
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/examples/midori
 @dirrm share/doc/midori/user
 @dirrm share/doc/midori
-@dirrm share/midori
-@dirrm lib/midori
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/midori
