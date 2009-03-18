@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1097 2009/03/18 12:28:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1098 2009/03/18 13:09:02 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ptlib to 2.6.1 [jmcneill 2009-03-18]
 	Updated devel/opal to 3.6.1 [jmcneill 2009-03-18]
 	Updated net/libsoup24 to 2.26.0nb1 [wiz 2009-03-18]
+	Updated net/ekiga to 3.2.0 [jmcneill 2009-03-18]
