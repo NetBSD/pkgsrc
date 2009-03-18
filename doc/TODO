@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7968 2009/03/18 00:33:14 jmcneill Exp $
+$NetBSD: TODO,v 1.7969 2009/03/18 00:43:13 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
-	o file-roller-2.26.0 [GNOME 2.26]
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
