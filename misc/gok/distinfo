@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.22 2008/10/28 06:34:31 obache Exp $
+$NetBSD: distinfo,v 1.23 2009/03/18 02:14:42 jmcneill Exp $
 
-SHA1 (gok-2.24.0.tar.bz2) = bdcce76a073eb066d2820b60855b5a8d7562f600
-RMD160 (gok-2.24.0.tar.bz2) = c445605887b3051c28865f2c3a1725f19805627f
-Size (gok-2.24.0.tar.bz2) = 1304251 bytes
+SHA1 (gok-2.26.0.tar.bz2) = 8b97b61b1f88d4fe5ddd706481ce6b70d57c33ac
+RMD160 (gok-2.26.0.tar.bz2) = e7e15019819f46fd7d6839183eb5cda2db8fc4cb
+Size (gok-2.26.0.tar.bz2) = 1341889 bytes
