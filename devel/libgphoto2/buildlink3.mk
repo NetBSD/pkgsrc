@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/04/29 19:10:11 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/18 13:25:11 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGPHOTO2_BUILDLINK3_MK:=	${LIBGPHOTO2_BUILDLINK3_MK}+
@@ -25,7 +25,6 @@ BUILDLINK_PKGSRCDIR.libgphoto2?=	../../devel/libgphoto2
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
