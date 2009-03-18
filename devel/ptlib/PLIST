@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/25 18:12:34 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/18 11:57:15 jmcneill Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
@@ -23,6 +23,7 @@ include/ptclib/mime.h
 include/ptclib/modem.h
 include/ptclib/paec.h
 include/ptclib/pasn.h
+include/ptclib/pffvdev.h
 include/ptclib/pdns.h
 include/ptclib/pils.h
 include/ptclib/pldap.h
@@ -67,7 +68,6 @@ include/ptlib/config.h
 include/ptlib/contain.h
 include/ptlib/contain.inl
 include/ptlib/critsec.h
-include/ptlib/devplugin.h
 include/ptlib/dict.h
 include/ptlib/dynalink.h
 include/ptlib/ethsock.h
@@ -155,7 +155,6 @@ include/ptlib/unix/ptlib/timeint.h
 include/ptlib/unix/ptlib/timer.h
 include/ptlib/unix/ptlib/udpsock.h
 include/ptlib/unix/ptlib/video.h
-include/ptlib/unix/ptlib/videoio.h
 include/ptlib/vconvert.h
 include/ptlib/video.h
 include/ptlib/videoio.h
