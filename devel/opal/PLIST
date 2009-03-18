@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/13 02:41:12 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/18 11:58:08 jmcneill Exp $
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
 include/opal/asn/h235.h
@@ -26,6 +26,7 @@ include/opal/codec/g711codec.h
 include/opal/codec/opalplugin.h
 include/opal/codec/opalpluginmgr.h
 include/opal/codec/opalwavfile.h
+include/opal/codec/ratectl.h
 include/opal/codec/rfc2833.h
 include/opal/codec/rfc4175.h
 include/opal/codec/silencedetect.h
@@ -78,6 +79,11 @@ include/opal/iax2/sound.h
 include/opal/iax2/specialprocessor.h
 include/opal/iax2/transmit.h
 include/opal/iax2/version.h
+include/opal/im/im.h
+include/opal/im/msrp.h
+include/opal/im/rfc4103.h
+include/opal/im/sipim.h
+include/opal/im/t140.h
 include/opal/lids/lid.h
 include/opal/lids/lidep.h
 include/opal/lids/lidplugin.h
@@ -110,7 +116,6 @@ include/opal/rtp/srtp.h
 include/opal/rtp/zrtpudp.h
 include/opal/sip/handlers.h
 include/opal/sip/sdp.h
-include/opal/sip/sdpcaps.h
 include/opal/sip/sip.h
 include/opal/sip/sipcon.h
 include/opal/sip/sipep.h
@@ -124,8 +129,9 @@ include/opal/t38/t38proto.h
 include/opal/zrtp/opalzrtp.h
 include/opal/zrtp/zrtpeventproc.h
 lib/libopal.so
-lib/libopal.so.3.4-beta4
+lib/libopal.so.3.6.1
 lib/libopal_s.a
+lib/${OPALLIBDIR}/codecs/audio/g722_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/g726_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/gsm0610_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/gsmamrcodec_pwplugin.so
