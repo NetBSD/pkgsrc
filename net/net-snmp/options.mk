@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.7 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2009/03/18 22:50:28 adrianp Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
-PKG_SUPPORTED_OPTIONS=		ssl
+PKG_SUPPORTED_OPTIONS=		ssl snmp-unprived snmp-nokmem
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,4 +25,12 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--with-openssl
 .else
 CONFIGURE_ARGS+=	--without-openssl
+.endif
+
+.if !empty(PKG_OPTIONS:Msnmp-nokmem)
+CONFIGURE_ARGS+=	--without-kmem-usage
+.endif
+
+.if !empty(PKG_OPTIONS:Msnmp-unprived)
+CONFIGURE_ARGS+=	--without-root-access
 .endif
