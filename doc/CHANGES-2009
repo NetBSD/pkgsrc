@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1088 2009/03/18 01:03:46 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1089 2009/03/18 01:52:18 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1441,3 +1441,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/gcalctool to 5.26.0 [jmcneill 2009-03-17]
 	Updated archivers/file-roller to 2.26.0 [jmcneill 2009-03-17]
 	Updated games/gnome-games to 2.26.0 [jmcneill 2009-03-17]
+	Updated misc/deskbar-applet to 2.26.0 [jmcneill 2009-03-17]
