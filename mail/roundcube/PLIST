@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/03/11 12:55:10 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/03/18 11:45:23 ghen Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -921,6 +921,7 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/localization/et_EE
 @dirrm share/roundcube/program/localization/es_ES
 @dirrm share/roundcube/program/localization/eo
+@dirrm share/roundcube/program/localization/es_AR
 @dirrm share/roundcube/program/localization/en_US
 @dirrm share/roundcube/program/localization/en_GB
 @dirrm share/roundcube/program/localization/el_GR
@@ -931,8 +932,10 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/localization/cs_CZ
 @dirrm share/roundcube/program/localization/ca_ES
 @dirrm share/roundcube/program/localization/bs_BA
+@dirrm share/roundcube/program/localization/bn_BD
 @dirrm share/roundcube/program/localization/bg_BG
 @dirrm share/roundcube/program/localization/az_AZ
+@dirrm share/roundcube/program/localization/ast
 @dirrm share/roundcube/program/localization/ar_SA
 @dirrm share/roundcube/program/localization
 @dirrm share/roundcube/program/lib
