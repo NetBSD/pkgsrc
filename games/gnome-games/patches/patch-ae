@@ -1,18 +1,16 @@
-$NetBSD: patch-ae,v 1.5 2007/09/20 00:05:58 wiz Exp $
+$NetBSD: patch-ae,v 1.6 2009/03/18 01:03:36 jmcneill Exp $
 
-Yes, C++ needs prototypes. ;)
-
---- blackjack/src/game.cpp.orig	Tue Apr 12 11:50:34 2005
-+++ blackjack/src/game.cpp	Tue Jun 14 09:20:10 2005
-@@ -39,6 +39,7 @@
- #include "hand.h"
- #include "game.h"
+--- blackjack/src/game.cpp.orig	2009-01-18 19:18:40.000000000 -0500
++++ blackjack/src/game.cpp
+@@ -41,6 +41,7 @@
+ 
+ #define RULES_GROUP "Blackjack Rules"
  
 +#include <cctype>
  #include <iostream>
  using namespace std;
  
-@@ -117,7 +118,7 @@ bj_game_file_to_name (const gchar* file)
+@@ -119,7 +120,7 @@ bj_game_file_to_name (const gchar* file)
                  *p = ' ';
          for (p = buf; p = strchr (p, '-'), p && *p;)
                  *p = ' ';
