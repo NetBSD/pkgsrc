@@ -1,0 +1,139 @@
+$NetBSD: patch-ag,v 1.1 2009/03/18 14:44:38 jmcneill Exp $
+
+--- server/gam_fs.c.orig	2008-11-12 15:45:28.000000000 -0500
++++ server/gam_fs.c
+@@ -10,6 +10,10 @@
+ #include "gam_error.h"
+ #include "gam_fs.h"
+ 
++#if defined(__NetBSD__)
++#include <sys/statvfs.h>
++#endif
++
+ #define DEFAULT_POLL_TIMEOUT 0
+ 
+ typedef struct _gam_fs_properties {
+@@ -21,12 +25,16 @@ typedef struct _gam_fs_properties {
+ typedef struct _gam_fs {
+ 	char *path;
+ 	char *fsname;
++	guint64 flags;
+ } gam_fs;
+ 
+ static gboolean initialized = FALSE;
++#if defined(__NetBSD__)
++static gboolean initializing = FALSE;
++#endif
+ static GList *filesystems = NULL;
+ static GList *fs_props = NULL;
+-static struct stat mtab_sbuf;
++static struct stat mtab_sbuf, hal_mtab_sbuf;
+ 
+ static void
+ gam_fs_free_filesystems (void)
+@@ -110,6 +118,7 @@ gam_fs_filesystem_sort_cb (gconstpointer
+ 	return strlen(fsb->path) - strlen (fsa->path);
+ }
+ 
++#if defined(__linux__)
+ static void
+ gam_fs_scan_mtab (void)
+ {
+@@ -165,10 +174,40 @@ gam_fs_scan_mtab (void)
+ 	gam_fs_free_filesystems ();
+ 	filesystems = g_list_sort (new_filesystems, gam_fs_filesystem_sort_cb);
+ }
++#endif
++
++#if defined(__NetBSD__)
++static void
++gam_fs_getmntinfo (void)
++{
++	struct statvfs *stat;
++	GList *new_filesystems = NULL;
++	gam_fs *fs = NULL;
++	int i, n;
++
++	n = getmntinfo(&stat, MNT_NOWAIT);
++	if (n == -1)
++		return;
++
++	for (i = 0; i < n; i++)
++	{
++		fs = g_new0 (gam_fs, 1);
++		fs->path = g_strdup (stat[i].f_mntonname);
++		fs->fsname = g_strdup (stat[i].f_fstypename);
++		fs->flags = stat[i].f_flag;
++
++		new_filesystems = g_list_prepend (new_filesystems, fs);
++	}
++
++	gam_fs_free_filesystems ();
++	filesystems = g_list_sort (new_filesystems, gam_fs_filesystem_sort_cb);
++}
++#endif
+ 
+ void
+ gam_fs_init (void)
+ {
++#if defined(__linux__)
+ 	if (initialized == FALSE)
+ 	{
+ 		initialized = TRUE;
+@@ -199,6 +238,56 @@ gam_fs_init (void)
+ 
+ 		mtab_sbuf = sbuf;
+ 	}
++#elif defined(__NetBSD__)
++	if (initialized == FALSE && initializing == FALSE)
++	{
++		GList *iterator = NULL;
++		GHashTable *fs_hash = NULL;
++		gam_fs *fs = NULL;
++
++		initialized = initializing = TRUE;
++
++		gam_fs_getmntinfo ();
++
++		iterator = filesystems;
++		fs_hash = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, NULL);
++
++		while (iterator) {
++			fs = iterator->data;
++
++			if (!g_hash_table_lookup (fs_hash, fs->fsname)) {
++				if (fs->flags & MNT_LOCAL)
++					gam_fs_set (fs->fsname, GFS_MT_DEFAULT, 0);
++				else
++					gam_fs_set (fs->fsname, GFS_MT_POLL, 5);
++
++				g_hash_table_insert (fs_hash, g_strdup (fs->fsname), GINT_TO_POINTER (1));
++			}
++
++			iterator = g_list_next (iterator);
++		}
++
++		g_hash_table_destroy (fs_hash);
++		initializing = FALSE;
++	} else if (initializing == FALSE) {
++		struct stat sbuf;
++		gboolean need_update = FALSE;
++
++		if (stat ("/etc/fstab", &sbuf) == 0)
++			if (sbuf.st_mtime != mtab_sbuf.st_mtime) {
++				mtab_sbuf = sbuf;
++				need_update = TRUE;
++			}
++		if (stat ("/media/.hal-mtab", &sbuf) == 0)
++			if (sbuf.st_mtime != hal_mtab_sbuf.st_mtime) {
++				hal_mtab_sbuf = sbuf;
++				need_update = TRUE;
++			}
++
++		if (need_update == TRUE)
++			gam_fs_getmntinfo ();
++	}
++#endif
+ }
+ 
+ gam_fs_mon_type
