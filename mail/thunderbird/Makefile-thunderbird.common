@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.42 2009/01/07 14:23:03 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.43 2009/03/18 00:08:39 abs Exp $
 # used by mail/thunderbird/Makefile
 # used by mail/thunderbird-gtk1/Makefile
 
@@ -19,18 +19,16 @@ PATCHDIR=		${.CURDIR}/../../mail/thunderbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=mail
 CONFIGURE_ARGS+=	--enable-debug=-g
-CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
 
-INSTALL_TEMPLATES+=	${.CURDIR}/../../mail/thunderbird/INSTALL
-
 USE_DIRS+=		xdg-1.4
 
-post-install:
-	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
+.PHONY: install-desktop
+post-install: install-desktop
+install-desktop:
 	${SED}		\
 		-e 's|@MOZILLA@|${MOZILLA}|g' \
 		-e 's|@MOZILLA_NAME@|Thunderbird|g' \
@@ -42,10 +40,7 @@ post-install:
 	${LN} -sf ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/chrome/icons/default/default.xpm \
 	    ${DESTDIR:Q}${PREFIX:Q}/share/pixmaps/${MOZILLA}.xpm
 
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
-.endif
+INSTALLATION_DIRS+=	share/applications share/pixmaps
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../www/seamonkey/Makefile.common"
