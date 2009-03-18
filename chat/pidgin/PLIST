@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/12/22 18:47:44 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/03/18 04:44:03 snj Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -590,6 +590,7 @@ share/pixmaps/pidgin/tray/48/tray-online.png
 @dirrm share/pixmaps/pidgin/protocols/22
 @dirrm share/pixmaps/pidgin/protocols/16
 @dirrm share/pixmaps/pidgin/protocols
+@dirrm share/pixmaps/pidgin/emotes/small
 @dirrm share/pixmaps/pidgin/emotes/none
 @dirrm share/pixmaps/pidgin/emotes/default
 @dirrm share/pixmaps/pidgin/emotes
