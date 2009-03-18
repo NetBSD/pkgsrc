@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/02/18 12:39:04 drochner Exp $
+# $NetBSD: options.mk,v 1.4 2009/03/18 00:16:46 jmcneill Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
 PKG_SUPPORTED_OPTIONS=	dvi djvu gnome
@@ -24,10 +24,8 @@ GCONF_SCHEMAS+=	evince-thumbnailer-djvu.schemas
 
 .if !empty(PKG_OPTIONS:Mgnome)
 COMMENT+=		for the GNOME Desktop
-BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.14.0
-.include "../../devel/libgnomeui/buildlink3.mk"
 .else
 COMMENT+=		(GTK version)
-CONFIGURE_ARGS+=	--without-libgnome --disable-nautilus
+CONFIGURE_ARGS+=	--disable-nautilus
 .endif
 
