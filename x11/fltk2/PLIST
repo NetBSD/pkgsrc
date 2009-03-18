@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/25 15:29:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/18 11:09:33 abs Exp $
 bin/fltk2-config
 bin/fluid2
 include/fltk/Adjuster.h
@@ -191,8 +191,8 @@ include/fltk/x11.h
 include/fltk/xbmImage.h
 include/fltk/xpmImage.h
 lib/libfltk2.a
-lib/libfltk2_gl.a
-lib/libfltk2_glut.a
+${PLIST.opengl}lib/libfltk2_gl.a
+${PLIST.opengl}lib/libfltk2_glut.a
 lib/libfltk2_images.a
 @dirrm include/fltk/compat/FL
 @dirrm include/fltk/compat
