@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/13 02:35:15 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/03/18 03:13:12 snj Exp $
 bin/jsc
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -12,17 +12,20 @@ include/webkit-1.0/JavaScriptCore/JavaScriptCore.h
 include/webkit-1.0/JavaScriptCore/WebKitAvailability.h
 include/webkit-1.0/webkit/webkit.h
 include/webkit-1.0/webkit/webkitdefines.h
+include/webkit-1.0/webkit/webkitdownload.h
 include/webkit-1.0/webkit/webkitenumtypes.h
 include/webkit-1.0/webkit/webkitnetworkrequest.h
+include/webkit-1.0/webkit/webkitsoupauthdialog.h
 include/webkit-1.0/webkit/webkitversion.h
 include/webkit-1.0/webkit/webkitwebbackforwardlist.h
 include/webkit-1.0/webkit/webkitwebframe.h
 include/webkit-1.0/webkit/webkitwebhistoryitem.h
 include/webkit-1.0/webkit/webkitwebinspector.h
+include/webkit-1.0/webkit/webkitwebnavigationaction.h
+include/webkit-1.0/webkit/webkitwebpolicydecision.h
 include/webkit-1.0/webkit/webkitwebsettings.h
 include/webkit-1.0/webkit/webkitwebview.h
 include/webkit-1.0/webkit/webkitwebwindowfeatures.h
-lib/libtestnetscapeplugin.la
 lib/libwebkit-1.0.la
 lib/pkgconfig/webkit-1.0.pc
 share/webkit-1.0/webinspector/Images/back.png
@@ -48,6 +51,7 @@ share/webkit-1.0/webinspector/Images/disclosureTriangleSmallRightDownBlack.png
 share/webkit-1.0/webinspector/Images/disclosureTriangleSmallRightDownWhite.png
 share/webkit-1.0/webinspector/Images/disclosureTriangleSmallRightWhite.png
 share/webkit-1.0/webinspector/Images/dockButtons.png
+share/webkit-1.0/webinspector/Images/domStorage.png
 share/webkit-1.0/webinspector/Images/elementsIcon.png
 share/webkit-1.0/webinspector/Images/enableButtons.png
 share/webkit-1.0/webinspector/Images/errorIcon.png
@@ -133,6 +137,7 @@ share/webkit-1.0/webinspector/Images/treeUpTriangleBlack.png
 share/webkit-1.0/webinspector/Images/treeUpTriangleWhite.png
 share/webkit-1.0/webinspector/Images/userInputIcon.png
 share/webkit-1.0/webinspector/Images/userInputPreviousIcon.png
+share/webkit-1.0/webinspector/Images/userInputResultIcon.png
 share/webkit-1.0/webinspector/Images/warningIcon.png
 share/webkit-1.0/webinspector/Images/warningMediumIcon.png
 share/webkit-1.0/webinspector/Images/warningsErrors.png

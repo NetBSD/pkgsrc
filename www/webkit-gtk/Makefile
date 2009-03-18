@@ -1,56 +1,42 @@
-# $NetBSD: Makefile,v 1.3 2008/12/29 14:57:32 hasso Exp $
-#
-# pkg-config says 1.0.3, let's combine it with the revision
-# to give a sane version number.
-#
-DISTNAME=	WebKit-r39230
-PKGNAME=	${DISTNAME:S/WebKit/webkit-gtk/:S/r/1.0.3./}
+# $NetBSD: Makefile,v 1.4 2009/03/18 03:13:12 snj Exp $
+
+DISTNAME=	webkit-1.1.3
+PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
 CATEGORIES=	www
-MASTER_SITES=	http://nightly.webkit.org/files/trunk/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.webkitgtk.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://webkit.org/
+HOMEPAGE=	http://www.webkitgtk.org/
 COMMENT=	GTK2 port of the WebKit browser engine
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison gmake perl:build \
-		automake autoconf autoheader \
-		aclocal pkg-config bash:build
+USE_TOOLS+=	bison gmake perl:build pkg-config
+
+PKGCONFIG_OVERRIDE=	WebKit/gtk/webkit.pc.in
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	GNUmakefile
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-target=x11 \
-			--with-http-backend=curl \
 			--with-font-backend=freetype
 
-REPLACE_PERL+=	JavaScriptCore/kjs/create_hash_table \
-		JavaScriptCore/pcre/dftables \
-		SunSpider/make-hosted \
-		SunSpider/sunspider \
-		SunSpider/sunspider-compare-results \
-		WebCore/bindings/scripts/*.pl \
+REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
+		JavaScriptCore/create_hash_table \
+		WebCore/bindings/scripts/generate-bindings.pl \
+		WebCore/bindings/scripts/InFilesParser.pm \
+		WebCore/platform/text/mac/make-charset-table.pl \
 		WebCore/css/*.pl \
 		WebCore/dom/*.pl \
-		WebCore/platform/text/mac/*.pl \
-		WebKit/WebKit.xcodeproj/project.pbxproj \
-		WebKit/win/WebKit.vcproj/*.pl \
-		WebKitTools/BuildSlaveSupport/build-launcher-app \
-		WebKitTools/BuildSlaveSupport/build-launcher-dmg \
-		WebKitTools/BuildSlaveSupport/run-performance-tests \
-		WebKitTools/Scripts/*
-
-pre-configure:
-	cd ${WRKSRC} && ${BASH} autogen.sh
+		WebCore/platform/text/mac/*.pl
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-# These are optional, but they need testing.
-#.include "../../net/libsoup24/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
+# This is optional, but needs testing.
 #.include "../../devel/pango/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
 .include "../../devel/flex/buildlink3.mk"
