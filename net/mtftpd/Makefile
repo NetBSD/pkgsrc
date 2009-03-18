@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/11 20:27:04 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/18 13:29:32 jmcneill Exp $
 
 DISTNAME=		mtftpd-20080229
 CATEGORIES=		net
 MASTER_SITES=		http://www.invisible.ca/~jmcneill/netbsd/
 
-MAINTAINER=		jmcneill@invisible.ca
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Open-loop multicast TFTP server
 
 WRKSRC=			${WRKDIR}/mtftpd
