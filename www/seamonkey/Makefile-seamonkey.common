@@ -1,29 +1,26 @@
-# $NetBSD: Makefile-seamonkey.common,v 1.22 2009/01/05 19:41:06 ghen Exp $
+# $NetBSD: Makefile-seamonkey.common,v 1.23 2009/03/18 00:08:40 abs Exp $
+# used by www/seamonkey/Makefile
+# used by www/seamonkey-gtk1/Makefile
 
 MOZILLA_BIN=		seamonkey-bin
 MOZ_VER=		1.1.14
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		seamonkey-${MOZ_DIST_VER}.source
-
-MASTER_SITES=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 CATEGORIES=		www
+MASTER_SITES=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/seamonkey/
-
 
 DISTINFO_FILE=		${.CURDIR}/../../www/seamonkey/distinfo
 PATCHDIR=		${.CURDIR}/../../www/seamonkey/patches
 
 CONFIGURE_ARGS+=	--enable-application=suite
 
+USE_LANGUAGES+=		c++
 BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
-.endif
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../www/seamonkey/Makefile.common"
