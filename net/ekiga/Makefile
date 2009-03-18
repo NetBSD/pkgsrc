@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/01/13 03:23:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/18 13:08:07 jmcneill Exp $
 #
 
-DISTNAME=		ekiga-3.0.2
+DISTNAME=		ekiga-3.2.0
 CATEGORIES=		net comms
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.0/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.2/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -14,9 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		autoconf
 USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client:Q}
+CONFIGURE_ARGS+=	--enable-gstreamer
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.ekiga
 PKG_SUPPORTED_OPTIONS+= avahi
@@ -35,6 +37,17 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 
+# The gettext version in pkgsrc cannot handle the .po files, so
+# we strip out usage of the newer features (context and fuzzy matches)
+post-patch:
+	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
+		mv $$f $$f.original ; \
+		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
+	done
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
+
 .include "../../audio/esound/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
@@ -49,6 +62,9 @@ USE_LANGUAGES=		c c++
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
