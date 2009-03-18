@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/19 18:24:15 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/18 18:20:36 darcy Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
@@ -10,7 +10,7 @@ DISTFILES+=	${DISTNAME}-mappack.tar.bz2
 
 WRKSRC=		${WRKDIR}/${DISTNAME}-source
 
-MAINTAINER=	pkgsrc-users@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	UFO Alien Invasion
 HOMEPAGE=	http://ufoai.sourceforge.net/
 
