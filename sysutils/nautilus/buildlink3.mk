@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2008/05/29 11:25:28 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2009/03/18 06:17:39 snj Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -23,21 +23,12 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-1.0$$/ \
 .endif	# NAUTILUS_BUILDLINK3_MK
 
 .include "../../devel/GConf/buildlink3.mk"
-.include "../../devel/eel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libbonobo/buildlink3.mk"
-.include "../../devel/libbonoboui/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../devel/libgsf/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../net/ORBit2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
