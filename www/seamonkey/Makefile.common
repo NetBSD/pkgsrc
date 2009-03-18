@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.32 2009/02/18 10:51:40 abs Exp $
+# $NetBSD: Makefile.common,v 1.33 2009/03/18 00:08:40 abs Exp $
+# used by www/firefox/Makefile-firefox.common
 # used by mail/thunderbird/Makefile-thunderbird.common
 # used by www/seamonkey/Makefile-seamonkey.common
 # used by time/sunbird/Makefile-sunbird.common
@@ -6,8 +7,8 @@
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		seamonkey-${MOZ_DIST_VER}.source
 PKGNAME=		${MOZILLA}-${MOZ_VER}
-MASTER_SITES?=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 CATEGORIES?=		www
+MASTER_SITES?=		${MASTER_SITE_MOZILLA:=seamonkey/releases/${MOZ_DIST_VER}/}
 
 FILESDIR=		${.CURDIR}/../../www/seamonkey/files
 
@@ -18,34 +19,28 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		autoconf213 gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
+# Mozilla applications require the frame-pointer
+BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
+
 INSTALL_TEMPLATES+=	${.CURDIR}/../../www/seamonkey/INSTALL
 
-CONFIG_GUESS_OVERRIDE=	build/autoconf/config.guess
-CONFIG_GUESS_OVERRIDE+=	nsprpub/build/autoconf/config.guess
-CONFIG_GUESS_OVERRIDE+=	directory/c-sdk/config/autoconf/config.guess
-CONFIG_SUB_OVERRIDE=	build/autoconf/config.sub
-CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
-CONFIG_SUB_OVERRIDE+=	directory/c-sdk/config/autoconf/config.sub
+CONFIG_GUESS_OVERRIDE+=	*/*/*/config.guess */*/*/*/config.guess
+CONFIG_SUB_OVERRIDE+=	*/*/*/config.sub */*/*/*/config.sub
 CONFIG_STATUS_OVERRIDE=		build/config.status
 CONFIG_STATUS_OVERRIDE+=	nsprpub/config.status
 CONFIG_STATUS_OVERRIDE+=	directory/c-sdk/config.status
 
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-gtkmozembed.pc
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-js.pc
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-nspr.pc
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-nss.pc
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-plugin.pc
-PKGCONFIG_OVERRIDE+=	build/unix/${MOZILLA}-xpcom.pc
 # Some .pc files are filled in by the build process, so we can't fix the
 # rpaths until this has happened.
 PKGCONFIG_OVERRIDE_STAGE=	post-build
+PKGCONFIG_OVERRIDE+=   build/unix/*.pc
 
+CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--disable-pedantic
 CONFIGURE_ARGS+=	--with-system-jpeg=${BUILDLINK_PREFIX.jpeg:Q}
 CONFIGURE_ARGS+=	--with-system-png=${BUILDLINK_PREFIX.png:Q}
 CONFIGURE_ARGS+=	--enable-crypto
-CONFIGURE_ENV+=	ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
 
 SHAREMODE?=		644
 BUILD_TARGET=		# empty
@@ -53,28 +48,27 @@ BUILD_TARGET=		# empty
 UNLIMIT_RESOURCES=	datasize memorysize stacksize
 
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+
 .if defined(MOZILLA_USE_GTK2)
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk2 --disable-gnomevfs
 .else
-.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf/buildlink3.mk"
 .include "../../net/ORBit/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/gtk/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-default-toolkit=gtk
 .endif
 
 # NetBSD-*-m68k builds, but "regchrome" dumps core.
 NOT_FOR_PLATFORM=	NetBSD-1.4.*-* NetBSD-*-m68k
-
-# Mozilla applications require the frame-pointer
-BUILDLINK_TRANSFORM+=	rm:-fomit-frame-pointer
 
 MAKE_ENV+=		MOZILLA_PKG_NAME=${MOZILLA:Q}
 
@@ -84,10 +78,7 @@ CONFIGURE_ENV+=		LIBRUNPATH=${MOZ_LIBDIR:Q}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${MOZ_LIBDIR}
 
 .if defined(BUILD_SVG)
-MAKE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
-CONFIGURE_ENV+=		MOZ_INTERNAL_LIBART_LGPL=1
 CONFIGURE_ARGS+=	--enable-svg
-CONFIGURE_ARGS+=	--enable-svg-renderer-libart
 CONFIGURE_ARGS+=	--enable-svg-renderer=cairo
 .include "../../graphics/cairo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-system-cairo
@@ -163,14 +154,17 @@ CONFIGURE_ARGS+=	--enable-optimize=${COPTS:Q}
 XPTCFILES+=		xptcinvoke_asm_sparc64_netbsd.s xptcstubs_asm_sparc64_netbsd.s
 XPTCFILES+=		xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_netbsd.cpp
 
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+CPPFLAGS+=              -DSQLITE_THREAD_OVERRIDE_LOCK=0
+.endif
+
 .if ${OPSYS} == "Darwin"
 BUILDLINK_PASSTHRU_DIRS+=/Developer
 .endif
 
 post-extract:
-.for f in ${XPTCFILES}
-	${CP} ${FILESDIR:Q}/${f:Q} ${WRKSRC:Q}/xpcom/reflect/xptcall/src/md/unix/${f:Q}
-.endfor
+	cd ${FILESDIR:Q}						\
+	&& ${CP} ${XPTCFILES} ${WRKSRC:Q}/xpcom/reflect/xptcall/src/md/unix/
 
 pre-configure:
 	cd ${WRKSRC:Q} && autoconf
@@ -195,7 +189,7 @@ post-build:
 # do that part dynamically rather than trying to always keep our conditionals
 # up to date.  Note that the exact set of libfreebl libs has had a history
 # of changing even on minor releases.
-PLIST_SRC=      ${WRKDIR}/PLIST
+PLIST_SRC=	${WRKDIR}/PLIST
 pre-install:
 	cd ${WRKSRC:Q}/dist/bin && ls libfreebl*.${SO_SUFFIX} | ${SORT} | \
 		${AWK} '{print "lib/$${MOZILLA}/" $$0}' > ${WRKSRC}/PLIST.libfreebl
@@ -210,13 +204,10 @@ pre-install:
 		${.CURDIR}/PLIST >> ${PLIST_SRC}
 
 do-install:
-	${SETENV} ${SCRIPTS_ENV} ${SH} ${FILESDIR:Q}/moz-install
+	${SETENV} ${SCRIPTS_ENV} DESTDIR=${DESTDIR} ${SH} ${FILESDIR:Q}/moz-install
 
-.if !target(do-install)
 post-install:
-	${FIND} ${PREFIX}/lib/${MOZILLA}/defaults -type f -print | \
-	${XARGS} ${CHMOD} u+w
-.endif
+	${FIND} ${DESTDIR:Q}${PREFIX:Q}/lib/${MOZILLA}/defaults -type f -exec ${CHMOD} u+w {} \;
 
 .include "../../mk/pthread.buildlink3.mk"
 

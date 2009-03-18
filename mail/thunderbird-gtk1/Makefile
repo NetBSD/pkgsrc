@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/01/07 14:23:03 ghen Exp $
+# $NetBSD: Makefile,v 1.21 2009/03/18 00:08:39 abs Exp $
 
 MOZILLA=	thunderbird-gtk1
-PKGREVISION=	1
+PKGREVISION=	2
 
 COMMENT=	Mozilla mail client using the older GTK1 toolkit
 
