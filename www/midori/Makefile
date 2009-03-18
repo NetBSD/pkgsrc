@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/02/09 22:56:27 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.6 2009/03/18 03:14:11 snj Exp $
 
-DISTNAME=	midori-0.1.1
-PKGREVISION=	4
+DISTNAME=	midori-0.1.4
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -19,22 +17,46 @@ USE_TOOLS+=	gmake intltool msgfmt pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
-REPLACE_PYTHON=		waf wscript po/wscript_build katze/wscript_build
-REPLACE_PYTHON+=	docs/api/wscript_build icons/wscript_build
-REPLACE_PYTHON+=	midori/wscript_build
+REPLACE_PYTHON=		waf wscript docs/api/wscript_build
+REPLACE_PYTHON+=	katze/wscript_build extensions/wscript_build
+REPLACE_PYTHON+=	icons/wscript_build midori/wscript_build
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0.4:../../textproc/py-docutils
 BUILD_DEPENDS+=		librsvg>=2.18:../../graphics/librsvg
 
-.include "../../lang/python/application.mk"
+DEPENDS+=		gnome-themes-[0-9]*:../../x11/gnome-themes
+
+EGDIR=			${PREFIX}/share/examples/midori
+OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/midori
+CONF_FILES=		${EGDIR}/search ${PKG_SYSCONFDIR}/xdg/midori/search
+
+PRIVILEGED_STAGES+=	clean
+
+# XXX stupid hack. python has a marshal.h that gets included before
+# the local marshal.h
+SUBST_CLASSES+=		marshal marshal2
+SUBST_STAGE.marshal=	pre-configure
+SUBST_MESSAGE.marshal=	Gross hack (part one) in progress
+SUBST_FILES.marshal=	midori/midori-locationaction.c midori/midori-panel.c
+SUBST_FILES.marshal+=	midori/midori-view.c midori/midori-searchaction.c
+SUBST_SED.marshal=	-e 's/"marshal/"marshallocal/'
+SUBST_STAGE.marshal2=	pre-configure
+SUBST_MESSAGE.marshal2=	Gross hack (part two) in progress
+SUBST_FILES.marshal2=	midori/wscript_build
+SUBST_SED.marshal2=	-e s/\'marshal/\'marshallocal/
+
+pre-configure:
+	${MV} ${WRKSRC}/midori/marshal.list ${WRKSRC}/midori/marshallocal.list
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../net/libsoup24/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
