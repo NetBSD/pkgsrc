@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7971 2009/03/18 01:52:18 jmcneill Exp $
+$NetBSD: TODO,v 1.7972 2009/03/18 02:00:43 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -620,7 +620,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
 	o gcombust-0.1.55
-	o gconf-editor-2.26.0 [GNOME 2.26]
 	o gcpio-2.7
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
