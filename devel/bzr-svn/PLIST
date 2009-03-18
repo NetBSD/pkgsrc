@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/19 07:34:08 epg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/18 06:06:12 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/svn/annotate.py
+${PYSITELIB}/bzrlib/plugins/svn/annotate.pyc
+${PYSITELIB}/bzrlib/plugins/svn/annotate.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/auth.py
 ${PYSITELIB}/bzrlib/plugins/svn/auth.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/auth.pyo
@@ -11,6 +14,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/branch.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/branchprops.py
 ${PYSITELIB}/bzrlib/plugins/svn/branchprops.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/branchprops.pyo
+${PYSITELIB}/bzrlib/plugins/svn/cache/__init__.py
+${PYSITELIB}/bzrlib/plugins/svn/cache/__init__.pyc
+${PYSITELIB}/bzrlib/plugins/svn/cache/__init__.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/changes.py
 ${PYSITELIB}/bzrlib/plugins/svn/changes.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/changes.pyo
@@ -74,6 +80,12 @@ ${PYSITELIB}/bzrlib/plugins/svn/mapping2.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/__init__.pyo
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/base.py
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/base.pyc
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/base.pyo
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/commands.py
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/commands.pyc
+${PYSITELIB}/bzrlib/plugins/svn/mapping3/commands.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/scheme.py
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/scheme.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/mapping3/scheme.pyo
@@ -239,6 +251,7 @@ ${PYSITELIB}/bzrlib/plugins/svn/workingtree.pyo
 @dirrm ${PYSITELIB}/bzrlib/plugins/svn/mapping3
 @dirrm ${PYSITELIB}/bzrlib/plugins/svn/layout
 @dirrm ${PYSITELIB}/bzrlib/plugins/svn/foreign
+@dirrm ${PYSITELIB}/bzrlib/plugins/svn/cache
 @dirrm ${PYSITELIB}/bzrlib/plugins/svn
 @comment in bzr: @dirrm ${PYSITELIB}/bzrlib/plugins
 @comment in bzr: @dirrm ${PYSITELIB}/bzrlib
