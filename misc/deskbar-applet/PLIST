@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/11/23 11:14:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/03/18 01:51:36 jmcneill Exp $
 lib/bonobo/servers/Deskbar_Applet.server
 lib/deskbar-applet/deskbar-applet
 lib/deskbar-applet/modules-2.20-compatible/beagle-live.py
@@ -40,6 +40,9 @@ lib/deskbar-applet/modules-2.20-compatible/iswitch-window.pyo
 lib/deskbar-applet/modules-2.20-compatible/mozilla.py
 lib/deskbar-applet/modules-2.20-compatible/mozilla.pyc
 lib/deskbar-applet/modules-2.20-compatible/mozilla.pyo
+lib/deskbar-applet/modules-2.20-compatible/opensearch.py
+lib/deskbar-applet/modules-2.20-compatible/opensearch.pyc
+lib/deskbar-applet/modules-2.20-compatible/opensearch.pyo
 lib/deskbar-applet/modules-2.20-compatible/programs.py
 lib/deskbar-applet/modules-2.20-compatible/programs.pyc
 lib/deskbar-applet/modules-2.20-compatible/programs.pyo
@@ -306,9 +309,9 @@ share/deskbar-applet/art/note.png
 share/deskbar-applet/art/web-search.png
 share/deskbar-applet/art/wikipedia.png
 share/deskbar-applet/art/yahoo.png
-share/deskbar-applet/mozilla-search.glade
-share/deskbar-applet/prefs-dialog.glade
-share/deskbar-applet/smart-bookmarks.glade
+share/deskbar-applet/mozilla-search.ui
+share/deskbar-applet/prefs-dialog.ui
+share/deskbar-applet/smart-bookmarks.ui
 share/gconf/schemas/deskbar-applet.schemas
 share/gnome/help/deskbar/C/deskbar.xml
 share/gnome/help/deskbar/C/figures/deskbar-applet.png
@@ -316,6 +319,9 @@ share/gnome/help/deskbar/C/legal.xml
 share/gnome/help/deskbar/ca/deskbar.xml
 share/gnome/help/deskbar/ca/figures/deskbar-applet.png
 share/gnome/help/deskbar/ca/legal.xml
+share/gnome/help/deskbar/de/deskbar.xml
+share/gnome/help/deskbar/de/figures/deskbar-applet.png
+share/gnome/help/deskbar/de/legal.xml
 share/gnome/help/deskbar/el/deskbar.xml
 share/gnome/help/deskbar/el/figures/deskbar-applet.png
 share/gnome/help/deskbar/el/legal.xml
@@ -429,6 +435,7 @@ share/locale/zh_HK/LC_MESSAGES/deskbar-applet.mo
 share/locale/zh_TW/LC_MESSAGES/deskbar-applet.mo
 share/omf/deskbar/deskbar-C.omf
 share/omf/deskbar/deskbar-ca.omf
+share/omf/deskbar/deskbar-de.omf
 share/omf/deskbar/deskbar-el.omf
 share/omf/deskbar/deskbar-en_GB.omf
 share/omf/deskbar/deskbar-es.omf
@@ -443,11 +450,17 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm share/omf/deskbar
 @comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gnome/help/deskbar/zh_CN/figures
 @dirrm share/gnome/help/deskbar/zh_CN
 @dirrm share/gnome/help/deskbar/uk/figures
@@ -470,12 +483,15 @@ share/omf/deskbar/deskbar-zh_CN.omf
 @dirrm share/gnome/help/deskbar/en_GB
 @dirrm share/gnome/help/deskbar/el/figures
 @dirrm share/gnome/help/deskbar/el
+@dirrm share/gnome/help/deskbar/de/figures
+@dirrm share/gnome/help/deskbar/de
 @dirrm share/gnome/help/deskbar/ca/figures
 @dirrm share/gnome/help/deskbar/ca
 @dirrm share/gnome/help/deskbar/C/figures
 @dirrm share/gnome/help/deskbar/C
 @dirrm share/gnome/help/deskbar
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/deskbar-applet/art
 @dirrm share/deskbar-applet
