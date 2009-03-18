@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/03/14 12:10:21 abs Exp $
+# $NetBSD: options.mk,v 1.3 2009/03/18 11:09:33 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk2
 PKG_SUPPORTED_OPTIONS=	opengl
@@ -12,9 +12,15 @@ PKG_SUGGESTED_OPTIONS+=	opengl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Mgl)
+PLIST_VARS+=    opengl
+.if !empty(PKG_OPTIONS:Mopengl)
+PLIST.opengl=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-gl
+SUBST_CLASSES+=		opengl
+SUBST_STAGE.opengl=	post-configure
+SUBST_FILES.opengl=	Makefile
+SUBST_SED.opengl=	-e 's|OpenGL fluid glut test|fluid|g'
 .endif
