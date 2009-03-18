@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/03/02 11:36:33 tron Exp $
+# $NetBSD: Makefile,v 1.39 2009/03/18 13:30:45 jmcneill Exp $
 
 DISTNAME=		hal-0.5.11
 PKGREVISION=		23
@@ -6,7 +6,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://hal.freedesktop.org/releases/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmcneill@NetBSD.org
+MAINTAINER=		netbsd-desktop@NetBSD.org
 HOMEPAGE=		http://hal.freedesktop.org/
 COMMENT=		FreeDesktop hardware abstraction layer
 
