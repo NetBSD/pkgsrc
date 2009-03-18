@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2009/03/15 16:15:58 jmcneill Exp $
+# $NetBSD: Makefile,v 1.27 2009/03/18 13:00:54 drochner Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.26.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -31,6 +32,7 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
+.include "../../print/evince/buildlink3.mk"
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"
