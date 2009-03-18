@@ -1,40 +1,31 @@
-# $NetBSD: Makefile-firefox.common,v 1.62 2008/12/17 17:05:52 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.63 2009/03/18 00:08:39 abs Exp $
 # used by www/firefox/Makefile
+# used by www/firefox-gtk1/Makefile
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		2.0.0.19
 EXTRACT_SUFX=		.tar.bz2
-
 DISTNAME=		firefox-${MOZ_VER}-source
-
+CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_MOZILLA:=firefox/releases/${MOZ_VER}/source/}
 
+MAINTAINER=		taya@NetBSD.org
 HOMEPAGE=		http://www.mozilla.com/en-US/firefox/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../www/firefox/distinfo
 PATCHDIR=		${.CURDIR}/../../www/firefox/patches
 
 CONFIGURE_ARGS+=	--enable-application=browser
 CONFIGURE_ARGS+=	--without-gssapi
-
 CONFIGURE_ARGS+=	--enable-canvas
-
-MOZILLA_EXTENSIONS=	default
-CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
-CONFIGURE_ENV+=		ac_cv_visibility_pragma=no ac_cv_visibility_hidden=no
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
-CPPFLAGS+=		-DSQLITE_THREAD_OVERRIDE_LOCK=0
-.endif
 
 USE_LANGUAGES+=		c++
 BUILD_SVG=		# yes
 BUILD_MATHML=		# yes
 
-.include "../../www/firefox/Makefile.common"
+MOZILLA_EXTENSIONS=	default
+CONFIGURE_ARGS+=	--enable-extensions=${MOZILLA_EXTENSIONS:Q}
 
-INSTALL_TEMPLATES+=	${.CURDIR}/../../www/firefox/INSTALL
+PKG_DESTDIR_SUPPORT=    user-destdir
+
+.include "../../www/seamonkey/Makefile.common"

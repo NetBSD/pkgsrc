@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2008/09/24 14:34:36 ghen Exp $
+# $NetBSD: Makefile,v 1.49 2009/03/18 00:08:39 abs Exp $
 
 MOZILLA=		firefox
+PKGREVISION=		1
 COMMENT=		Lightweight gecko-based web browser
 
 MOZILLA_USE_GTK2=	# yes
