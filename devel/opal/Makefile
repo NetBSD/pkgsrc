@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2009/02/02 06:35:44 obache Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/18 11:58:08 jmcneill Exp $
 #
 
-DISTNAME=		opal-3.4.4
+DISTNAME=		opal-3.6.1
 CATEGORIES=		devel net comms
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/opal/3.4/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/opal/3.6/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opalvoip.org/
 COMMENT=		Open Phone Abstraction Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 OPALLIBDIR=		${DISTNAME}
 
