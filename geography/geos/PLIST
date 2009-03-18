@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/17 23:04:17 gdt Exp $
-bin/XMLTester
+@comment $NetBSD: PLIST,v 1.5 2009/03/18 20:16:12 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/LineIntersector.h
