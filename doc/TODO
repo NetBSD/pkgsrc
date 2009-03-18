@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7970 2009/03/18 01:03:46 jmcneill Exp $
+$NetBSD: TODO,v 1.7971 2009/03/18 01:52:18 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -511,7 +511,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddclient-3.7.3
 	o ddrescue-1.10
 	o defendguin-0.0.11
-	o deskbar-applet-2.26.0 [GNOME 2.26]
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
