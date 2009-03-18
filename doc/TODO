@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7976 2009/03/18 09:15:08 wiz Exp $
+$NetBSD: TODO,v 1.7977 2009/03/18 13:09:02 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -541,7 +541,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.0
-	o ekiga-3.2.0 [GNOME 2.26]
 	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -981,7 +980,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o opal-3.6.0
 	o openafs-1.4.8
 	o opencobol-1.0
 	o openh323-1.19.1
@@ -1073,7 +1071,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o psmisc-21.9
 	o pspp-0.6.1
 	o pstoedit-3.45
-	o ptlib-2.6.0
 	o puf-0.93.3
 	o puzzle-5.2
 	o pv-1.1.4
