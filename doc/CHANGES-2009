@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1092 2009/03/18 02:52:31 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1093 2009/03/18 03:15:12 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1445,3 +1445,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/gconf-editor to 2.26.0 [jmcneill 2009-03-17]
 	Updated misc/gok to 2.26.0 [jmcneill 2009-03-17]
 	Updated devel/libgnomeuimm to 2.26.0 [jmcneill 2009-03-17]
+	Updated www/webkit-gtk to 1.1.3 [snj 2009-03-18]
+	Updated www/midori to 0.1.4 [snj 2009-03-18]
