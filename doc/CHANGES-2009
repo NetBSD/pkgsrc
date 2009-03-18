@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1085 2009/03/18 00:17:27 jmcneill Exp $
+$NetBSD: CHANGES-2009,v 1.1086 2009/03/18 00:33:14 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1438,3 +1438,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/swfdec-gnome to 2.26.0 [jmcneill 2009-03-17]
 	Updated print/evince to 2.26.0 [jmcneill 2009-03-17]
 	Updated print/evince-nautilus to 2.26.0 [jmcneill 2009-03-17]
+	Updated math/gcalctool to 5.26.0 [jmcneill 2009-03-17]

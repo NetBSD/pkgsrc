@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7967 2009/03/18 00:17:27 jmcneill Exp $
+$NetBSD: TODO,v 1.7968 2009/03/18 00:33:14 jmcneill Exp $
 
 Suggested new packages
 ======================
@@ -618,7 +618,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gauche-0.8.14
 	o gbdfed-1.5
 	o gbrainy-1.10
-	o gcalctool-5.26.0 [GNOME 2.26]
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
