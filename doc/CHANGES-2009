@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1099 2009/03/18 19:42:07 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.1100 2009/03/18 21:49:51 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1456,3 +1456,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libsoup24 to 2.26.0nb1 [wiz 2009-03-18]
 	Updated net/ekiga to 3.2.0 [jmcneill 2009-03-18]
 	Updated geography/geos to 3.1.0 [gdt 2009-03-18]
+	Updated net/openresolv to 3.1 [roy 2009-03-18]
