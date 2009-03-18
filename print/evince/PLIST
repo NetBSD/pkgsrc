@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/03/18 00:16:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/03/18 12:15:24 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
 include/evince/2.25/evince-document.h
@@ -40,7 +40,11 @@ include/evince/2.25/libview/ev-page-cache.h
 include/evince/2.25/libview/ev-view-type-builtins.h
 include/evince/2.25/libview/ev-view.h
 lib/evince/1/backends/comicsdocument.evince-backend
+${PLIST.djvu}lib/evince/1/backends/djvudocument.evince-backend
+${PLIST.dvi}lib/evince/1/backends/dvidocument.evince-backend
 lib/evince/1/backends/libcomicsdocument.la
+${PLIST.djvu}lib/evince/1/backends/libdjvudocument.la
+${PLIST.dvi}lib/evince/1/backends/libdvidocument.la
 lib/evince/1/backends/libpdfdocument.la
 lib/evince/1/backends/libpsdocument.la
 lib/evince/1/backends/libtiffdocument.la
@@ -77,6 +81,8 @@ share/evince/icons/hicolor/32x32/actions/view-page-facing.png
 share/evince/icons/hicolor/48x48/actions/view-page-continuous.png
 share/evince/icons/hicolor/48x48/actions/view-page-facing.png
 share/gconf/schemas/evince-thumbnailer-comics.schemas
+${PLIST.djvu}share/gconf/schemas/evince-thumbnailer-djvu.schemas
+${PLIST.dvi}share/gconf/schemas/evince-thumbnailer-dvi.schemas
 share/gconf/schemas/evince-thumbnailer-ps.schemas
 share/gconf/schemas/evince-thumbnailer.schemas
 share/gconf/schemas/evince.schemas
