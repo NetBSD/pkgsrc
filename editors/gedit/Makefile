@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2009/03/15 20:13:11 jmcneill Exp $
+# $NetBSD: Makefile,v 1.92 2009/03/19 12:14:37 drochner Exp $
 #
 
 DISTNAME=		gedit-2.26.0
@@ -43,4 +43,5 @@ BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtksourceview2+=	gtksourceview2>=2.2.0
 .include "../../x11/gtksourceview2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
