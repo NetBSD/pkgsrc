@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.26 2008/10/16 13:57:31 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2009/03/19 12:02:09 drochner Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 EVOLUTION_DATA_SERVER_BUILDLINK3_MK:=	${EVOLUTION_DATA_SERVER_BUILDLINK3_MK}+
@@ -30,5 +30,6 @@ PRINT_PLIST_AWK+=/^@dirrm lib\/evolution-data-server-1.2$$/ \
 .include "../../devel/nss/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
+.include "../../time/libical/buildlink3.mk"
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
