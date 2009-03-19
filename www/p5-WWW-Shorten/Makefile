@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/03 06:17:00 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/19 19:46:28 seb Exp $
 
-DISTNAME=	WWW-Shorten-2.02
+DISTNAME=	WWW-Shorten-2.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
