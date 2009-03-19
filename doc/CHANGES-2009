@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1106 2009/03/19 19:47:10 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1107 2009/03/19 19:54:07 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1466,4 +1466,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey to 1.1.15 [ghen 2009-03-19]
 	Updated www/seamonkey-bin to 1.1.15 [ghen 2009-03-19]
 	Updated www/seamonkey-gtk1 to 1.1.15 [ghen 2009-03-19]
+	Updated x11/gnome-desktop-sharp to 2.26.0 [drochner 2009-03-19]
+	Updated print/poppler to 0.10.5 [drochner 2009-03-19]
+	Updated mail/evolution to 2.26.0 [drochner 2009-03-19]
+	Updated mail/evolution-data-server [drochner 2009-03-19]
+	Updated time/libical to 0.43 [drochner 2009-03-19]
+	Updated math/mpfr to 2.4.1 [drochner 2009-03-19]
+	Updated misc/stellarium to 0.10.2 [drochner 2009-03-19]
+	Updated sysutils/gnome-vfs to 2.24.1 [drochner 2009-03-19]
+	Updated net/libIDL to 0.8.13 [drochner 2009-03-19]
+	Updated devel/libglade to 2.6.4 [drochner 2009-03-19]
 	Updated www/p5-WWW-Shorten to 2.03 [seb 2009-03-19]
