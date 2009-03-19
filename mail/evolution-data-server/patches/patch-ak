@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.8 2009/02/27 17:40:43 wiz Exp $
+$NetBSD: patch-ak,v 1.9 2009/03/19 12:02:09 drochner Exp $
 
---- configure.orig	2009-02-25 02:39:01.000000000 +0000
+--- configure.orig	2009-03-13 19:09:14.000000000 +0100
 +++ configure
-@@ -28684,6 +28684,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28838,6 +28838,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -10,7 +10,7 @@ $NetBSD: patch-ak,v 1.8 2009/02/27 17:40:43 wiz Exp $
  
  
  int
-@@ -31541,13 +31542,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
+@@ -31793,13 +31794,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
  
  
  	PTHREAD_LIB=""
@@ -27,10 +27,10 @@ $NetBSD: patch-ak,v 1.8 2009/02/27 17:40:43 wiz Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -31607,7 +31608,7 @@ fi
+@@ -31859,7 +31860,7 @@ fi
  { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
  $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
- if test "x$ac_cv_lib_pthread_pthread_create" = x""yes; then
+ if test $ac_cv_lib_pthread_pthread_create = yes; then
 -  PTHREAD_LIB="-lpthread"
 +  PTHREAD_LIB="${PTHREAD_LIB}"
  else
