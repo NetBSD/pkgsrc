@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/19 21:48:05 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/19 11:57:48 drochner Exp $
 #
 
-DISTNAME=	libical-0.42
+DISTNAME=	libical-0.43
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeassociation/}
 
@@ -16,5 +16,11 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	libical.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# zone.tab file in /usr/share/zoneinfo
+DEPENDS+= zonetab-[0-9]*:../../time/zonetab
+.endif
 
 .include "../../mk/bsd.pkg.mk"
