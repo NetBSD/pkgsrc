@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/19 15:26:33 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 WXGTK28_BUILDLINK3_MK:=	${WXGTK_BUILDLINK3_MK}+
@@ -14,7 +14,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK28
 .if ${WXGTK28_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.wxGTK28+=	wxGTK28>=2.8.8
 BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
-.endif	# WXGTK_BUILDLINK3_MK
+.endif	# WXGTK28_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
