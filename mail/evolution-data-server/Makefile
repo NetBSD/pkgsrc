@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.82 2009/02/27 17:40:43 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2009/03/19 12:02:09 drochner Exp $
 #
 
-DISTNAME=	evolution-data-server-2.24.5
+DISTNAME=	evolution-data-server-2.26.0
 CATEGORIES=	mail gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -70,11 +70,6 @@ PKGCONFIG_OVERRIDE+=	evolution-data-server.pc.in
 
 BUILDLINK_TRANSFORM+=	rm:-ldl
 
-.if ${OPSYS} == "NetBSD"
-# zone.tab file in /usr/share/zoneinfo
-DEPENDS+= zonetab-[0-9]*:../../time/zonetab
-.endif
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
@@ -86,12 +81,14 @@ DEPENDS+= zonetab-[0-9]*:../../time/zonetab
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../time/libical/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
