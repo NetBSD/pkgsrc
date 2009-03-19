@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/16 10:49:06 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/19 23:20:07 hasso Exp $
 #
 
 DISTNAME=	brasero-2.26.0
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config gmake intltool autoconf automake gawk
+USE_TOOLS+=	pkg-config gmake intltool autoconf automake gawk msgfmt
 USE_DIRS+=	gnome2-1.6
 
 CONFIGURE_ARGS+=	--disable-inotify
