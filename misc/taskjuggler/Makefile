@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/09/18 09:12:42 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/19 09:44:58 hasso Exp $
 #
 
-DISTNAME=	taskjuggler-2.3.1
-PKGREVISION=	4
+DISTNAME=	taskjuggler-2.4.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.taskjuggler.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,10 +13,22 @@ COMMENT=	Project management tool
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/taskjuggler
+CONFIGURE_ARGS+=--with-docdir=${PREFIX}/share/doc/taskjuggler/
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	perl msgfmt
+
+REPLACE_SH=	TestSuite/runtests
+
+SUBST_CLASSES+=		tz
+SUBST_STAGE.tz=		post-patch
+SUBST_FILES.tz=		TestSuite/Misc/export/project_a.tjp \
+			TestSuite/Misc/export/project_b1.tjp \
+			TestSuite/Misc/export/project_b2.tjp \
+			TestSuite/Misc/export/project_b3.tjp \
+			TestSuite/Misc/export/projectReference_a_1.tjp
+SUBST_MESSAGE.tz=	Fixing old timezone names.
+SUBST_SED.tz=		-e "s|timezone \"US/Mountain\"|timezone \"America/Denver\"|"
 
 pre-build:
 	# I have no idea why this test fails, and it is undocumented.
