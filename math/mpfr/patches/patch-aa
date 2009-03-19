@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2007/09/18 20:15:58 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2009/03/19 11:54:53 drochner Exp $
 
---- mpfr.h.orig	2007-08-29 12:18:11.000000000 +0200
+--- mpfr.h.orig	2009-03-18 19:16:07.000000000 +0100
 +++ mpfr.h
 @@ -23,6 +23,10 @@ MA 02110-1301, USA. */
  #ifndef __MPFR_H
@@ -12,4 +12,4 @@ $NetBSD: patch-aa,v 1.4 2007/09/18 20:15:58 drochner Exp $
 +
  /* Define MPFR version number */
  #define MPFR_VERSION_MAJOR 2
- #define MPFR_VERSION_MINOR 3
+ #define MPFR_VERSION_MINOR 4
