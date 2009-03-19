@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1108 2009/03/19 21:37:03 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1109 2009/03/19 22:18:06 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1469,7 +1469,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-desktop-sharp to 2.26.0 [drochner 2009-03-19]
 	Updated print/poppler to 0.10.5 [drochner 2009-03-19]
 	Updated mail/evolution to 2.26.0 [drochner 2009-03-19]
-	Updated mail/evolution-data-server [drochner 2009-03-19]
+	Updated mail/evolution-data-server to 2.26.0 [drochner 2009-03-19]
 	Updated time/libical to 0.43 [drochner 2009-03-19]
 	Updated math/mpfr to 2.4.1 [drochner 2009-03-19]
 	Updated misc/stellarium to 0.10.2 [drochner 2009-03-19]
