@@ -1,12 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2007/04/04 18:07:41 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2009/03/19 09:44:58 hasso Exp $
 
---- taskjuggler/XMLReport.cpp.orig	2007-04-04 17:44:57.000000000 +0000
-+++ taskjuggler/XMLReport.cpp
-@@ -13,6 +13,7 @@
- #include "XMLReport.h"
- 
- #include <config.h>
-+#include <unistd.h>
- #include <zlib.h>
- 
- #include <qfile.h>
+--- docs/en/Makefile.in.orig	2009-03-18 21:38:20 +0200
++++ docs/en/Makefile.in	2009-03-18 21:38:32 +0200
+@@ -301,7 +301,7 @@ xdg_directorydir = @xdg_directorydir@
+ xdg_menudir = @xdg_menudir@
+ EXTRA_DIST = taskjuggler/*.html 
+ docprefix = @PACKAGES_DIR@
+-kdeprefix = $(prefix)/share/doc/HTML/en/taskjuggler/
++kdeprefix = $(prefix)/share/doc/kde/HTML/en/taskjuggler/
+ SGMLSOURCES = taskjuggler.xml ChangeLog.xml FirstProject.xml UsageGuide.xml Example.xml SyntaxReference.xml GenPropertyReference.xml index.docbook
+ CLEANFILES = *.log *.aux *.dvi *.ps *.tex taskjuggler.xml GenPropertyReference.xml Example.xml taskjuggler.log CATALOG.local
+ #>- all: all-am
