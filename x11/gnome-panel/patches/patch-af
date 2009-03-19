@@ -1,0 +1,125 @@
+$NetBSD: patch-af,v 1.4 2009/03/19 18:54:42 drochner Exp $
+
+--- applets/clock/calendar-window.c.orig	2009-03-04 09:59:24.000000000 +0100
++++ applets/clock/calendar-window.c
+@@ -280,12 +280,12 @@ handle_tasks_changed (CalendarWindow *ca
+                                     TASK_COLUMN_UID,                   task->uid,
+                                     TASK_COLUMN_SUMMARY,               task->summary,
+                                     TASK_COLUMN_DESCRIPTION,           task->description,
+-                                    TASK_COLUMN_START_TIME,            task->start_time,
+-                                    TASK_COLUMN_DUE_TIME,              task->due_time,
++                                    TASK_COLUMN_START_TIME,            (gint64)task->start_time,
++                                    TASK_COLUMN_DUE_TIME,              (gint64)task->due_time,
+                                     TASK_COLUMN_PERCENT_COMPLETE,      task->percent_complete,
+                                     TASK_COLUMN_PERCENT_COMPLETE_TEXT, percent_complete_text,
+                                     TASK_COLUMN_COMPLETED,             task->percent_complete == 100,
+-                                    TASK_COLUMN_COMPLETED_TIME,        task->completed_time,
++                                    TASK_COLUMN_COMPLETED_TIME,        (gint64)task->completed_time,
+                                     TASK_COLUMN_COLOR,                 task->color_string,
+                                     TASK_COLUMN_PRIORITY,              task->priority,
+                                     -1);
+@@ -425,15 +425,19 @@ filter_out_tasks (GtkTreeModel   *model,
+                   GtkTreeIter    *iter,
+                   CalendarWindow *calwin)
+ {
+-        GTime    start_time;
+-        GTime    completed_time;
+-        GTime    one_day_ago;
++        gint64   start_time64;
++        gint64   completed_time64;
++        time_t   start_time;
++        time_t   completed_time;
++        time_t   one_day_ago;
+         gboolean visible;
+ 
+         gtk_tree_model_get (model, iter,
+-                            TASK_COLUMN_START_TIME,     &start_time,
+-                            TASK_COLUMN_COMPLETED_TIME, &completed_time,
++                            TASK_COLUMN_START_TIME,     &start_time64,
++                            TASK_COLUMN_COMPLETED_TIME, &completed_time64,
+                             -1);
++	start_time = start_time64;
++	completed_time = completed_time64;
+ 
+         one_day_ago = *(calwin->priv->current_time) - (24 * 60 * 60);
+ 
+@@ -451,7 +455,8 @@ modify_task_text_attributes (GtkTreeMode
+                              gint            column,
+                              CalendarWindow *calwin)
+ {
+-        GTime           due_time;
++        gint64          due_time64;
++        time_t          due_time;
+         PangoAttrList  *attr_list;
+         PangoAttribute *attr;
+         GtkTreeIter     child_iter;
+@@ -469,8 +474,9 @@ modify_task_text_attributes (GtkTreeMode
+         }
+ 
+         gtk_tree_model_get (GTK_TREE_MODEL (calwin->priv->tasks_model),
+-			    &child_iter, TASK_COLUMN_DUE_TIME, &due_time,
++			    &child_iter, TASK_COLUMN_DUE_TIME, &due_time64,
+                             -1);
++	due_time = due_time64;
+         if (due_time && due_time > *(calwin->priv->current_time))
+                 return;
+ 
+@@ -702,12 +708,15 @@ compare_tasks  (GtkTreeModel *model,
+ 	else if (priority_a > priority_b)
+ 		return 1;
+ 	else {
+-                GTime due_time_a, due_time_b;
++                gint64 due_time_a64, due_time_b64;
++                time_t due_time_a, due_time_b;
+ 
+                 gtk_tree_model_get (model, a,
+-				    TASK_COLUMN_DUE_TIME, &due_time_a, -1);
++				    TASK_COLUMN_DUE_TIME, &due_time_a64, -1);
+                 gtk_tree_model_get (model, b,
+-				    TASK_COLUMN_DUE_TIME, &due_time_b, -1);
++				    TASK_COLUMN_DUE_TIME, &due_time_b64, -1);
++		due_time_a = due_time_a64;
++		due_time_b = due_time_b64;
+ 
+                 if (due_time_a < due_time_b)
+                         return -1;
+@@ -906,9 +915,9 @@ handle_appointments_changed (CalendarWin
+                                     APPOINTMENT_COLUMN_URI,         appointment->uri,
+                                     APPOINTMENT_COLUMN_SUMMARY,     appointment->summary,
+                                     APPOINTMENT_COLUMN_DESCRIPTION, appointment->description,
+-                                    APPOINTMENT_COLUMN_START_TIME,  appointment->start_time,
++                                    APPOINTMENT_COLUMN_START_TIME,  (gint64)appointment->start_time,
+                                     APPOINTMENT_COLUMN_START_TEXT,  start_text,
+-                                    APPOINTMENT_COLUMN_END_TIME,    appointment->end_time,
++                                    APPOINTMENT_COLUMN_END_TIME,    (gint64)appointment->end_time,
+                                     APPOINTMENT_COLUMN_ALL_DAY,     appointment->is_all_day,
+                                     APPOINTMENT_COLUMN_PIXBUF,      appointment->color_string,
+                                     -1);
+@@ -1098,12 +1107,12 @@ calendar_window_create_tasks_model (Cale
+ 		G_TYPE_STRING,         /* uid                     */
+ 		G_TYPE_STRING,         /* summary                 */
+ 		G_TYPE_STRING,         /* description             */
+-		G_TYPE_LONG,           /* start time              */
+-		G_TYPE_LONG,           /* due time                */
++		G_TYPE_INT64,          /* start time              */
++		G_TYPE_INT64,          /* due time                */
+ 		G_TYPE_UINT,           /* percent complete        */
+ 		G_TYPE_STRING,         /* percent complete text   */
+ 		G_TYPE_BOOLEAN,        /* completed               */
+-		G_TYPE_LONG,           /* completed time          */
++		G_TYPE_INT64,          /* completed time          */
+ 		PANGO_TYPE_ATTR_LIST,  /* summary text attributes */
+ 		G_TYPE_STRING,         /* color                   */
+ 		G_TYPE_INT             /* priority                */
+@@ -1147,9 +1156,9 @@ calendar_window_create_appointments_mode
+ 				    G_TYPE_STRING,   /* uri              */
+ 				    G_TYPE_STRING,   /* summary          */
+ 				    G_TYPE_STRING,   /* description      */
+-				    G_TYPE_LONG,     /* start time       */
++				    G_TYPE_INT64,    /* start time       */
+ 				    G_TYPE_STRING,   /* start time text  */
+-				    G_TYPE_LONG,     /* end time         */
++				    G_TYPE_INT64,    /* end time         */
+ 				    G_TYPE_BOOLEAN,  /* all day          */
+ 				    G_TYPE_STRING);  /* color            */
+ 
