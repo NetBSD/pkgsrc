@@ -1,0 +1,40 @@
+$NetBSD: patch-as,v 1.1 2009/03/19 11:57:48 drochner Exp $
+
+--- src/libical/icaltz-util.c.orig	2009-01-08 17:50:21.000000000 +0100
++++ src/libical/icaltz-util.c
+@@ -25,6 +25,7 @@
+ #endif
+ #include <string.h>
+ 
++#if 0 /* XXX see below */
+ #if defined(sun) && defined(__SVR4)
+ #include <sys/byteorder.h>
+ #else
+@@ -43,6 +44,7 @@
+ #  include <endian.h>
+ # endif 
+ #endif
++#endif
+ 
+ #ifdef WIN32
+ #if !defined(HAVE_BYTESWAP_H) && !defined(HAVE_SYS_ENDIAN_H) && !defined(HAVE_ENDIAN_H)
+@@ -128,6 +130,7 @@ extern const char *ical_tzid_prefix;
+ static int
+ decode (const void *ptr)
+ {
++#if 0 /* XXX nonportable, possibly alignment problems */
+ #if defined(sun) && defined(__SVR4)
+     if (sizeof (int) == 4)
+ #ifdef _BIG_ENDIAN
+@@ -142,9 +145,10 @@ decode (const void *ptr)
+         return bswap_32 (*(const int *) ptr);
+ #endif
+ 	else
++#endif
+ 	{
+ 		const unsigned char *p = ptr;
+-		int result = *p & (1 << (CHAR_BIT - 1)) ? ~0 : 0;
++		unsigned int result = *p & (1 << (CHAR_BIT - 1)) ? ~0 : 0;
+ 
+ 		result = (result << 8) | *p++;
+ 		result = (result << 8) | *p++;
