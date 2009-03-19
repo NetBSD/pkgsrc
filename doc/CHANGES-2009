@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1104 2009/03/19 10:01:17 roy Exp $
+$NetBSD: CHANGES-2009,v 1.1105 2009/03/19 15:10:55 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1461,3 +1461,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.13 [ghen 2009-03-19]
 	Updated misc/taskjuggler to 2.4.1 [hasso 2009-03-19]
 	Updated net/openresolv to 3.1.1 [roy 2009-03-19]
+	Updated mail/thunderbird to 2.0.0.21 [ghen 2009-03-19]
+	Updated mail/thunderbird-gtk1 to 2.0.0.21 [ghen 2009-03-19]
+	Updated www/seamonkey to 1.1.15 [ghen 2009-03-19]
+	Updated www/seamonkey-bin to 1.1.15 [ghen 2009-03-19]
+	Updated www/seamonkey-gtk1 to 1.1.15 [ghen 2009-03-19]
