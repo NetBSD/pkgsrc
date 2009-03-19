@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1109 2009/03/19 22:18:06 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1110 2009/03/19 23:00:29 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1478,3 +1478,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libglade to 2.6.4 [drochner 2009-03-19]
 	Updated www/p5-WWW-Shorten to 2.03 [seb 2009-03-19]
 	Updated audio/musicpd to 0.14.2 [asau 2009-03-20]
+	Updated devel/gnome-common to 2.26.0 [snj 2009-03-19]
