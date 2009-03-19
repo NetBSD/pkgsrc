@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/20 22:19:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/19 16:11:09 joerg Exp $
 #
 
 DISTNAME=	pcmanfm-0.1.8.9
@@ -17,6 +17,6 @@ USE_TOOLS+=		gmake pkg-config msgfmt
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../sysutils/gamin/buildlink3.mk"
+.include "../../sysutils/libgamin/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
