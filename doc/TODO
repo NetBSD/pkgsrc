@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7980 2009/03/19 18:46:17 snj Exp $
+$NetBSD: TODO,v 1.7981 2009/03/19 21:40:16 snj Exp $
 
 Suggested new packages
 ======================
@@ -913,7 +913,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
-	o mpfr-2.4.1
 	o mpg123-1.6.4
 	o mpop-1.0.16
 	o mserv-devel-0.41
@@ -1056,7 +1055,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poedit-1.4.2
 	o polsms-2.1.0
 	o poppass-4.0.14
-	o poppler-0.10.5
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1259,7 +1257,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o star-1.5
 	o statist-1.3.0
 	o stella-2.7.3
-	o stellarium-0.10.2
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
