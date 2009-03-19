@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/08 15:56:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/19 18:27:27 drochner Exp $
 #
 
 DISTNAME=	f-spot-0.5.0.3
@@ -29,6 +29,7 @@ REPLACE_BASH+=	tools/f-spot-import
 .include "../../devel/libgphoto2/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
