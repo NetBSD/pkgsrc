@@ -1,44 +1,15 @@
-$NetBSD: patch-bd,v 1.1 2009/02/17 11:01:43 drochner Exp $
+$NetBSD: patch-bd,v 1.2 2009/03/19 12:02:09 drochner Exp $
 
---- camel/camel-smime-context.c.orig	2008-10-13 10:07:53.000000000 +0200
+--- camel/camel-smime-context.c.orig	2009-03-17 20:28:40.000000000 +0100
 +++ camel/camel-smime-context.c
-@@ -40,6 +40,7 @@
- #include <smime.h>
- #include <pkcs11t.h>
- #include <pk11func.h>
-+#include <secoid.h>
+@@ -380,8 +380,10 @@ nss_error_to_string (long errorcode)
+ 	cs (SEC_ERROR_CRL_ALREADY_EXISTS, "CRL already exists.")
+ 	cs (SEC_ERROR_NOT_INITIALIZED, "NSS is not initialized.")
+ 	cs (SEC_ERROR_TOKEN_NOT_LOGGED_IN, "The operation failed because the PKCS#11 token is not logged in.")
++#if defined(NSS_VMAJOR) && defined(NSS_VMINOR) && defined(NSS_VPATCH) && (NSS_VMAJOR > 3 || (NSS_VMAJOR == 3 && NSS_VMINOR > 11) || (NSS_VMAJOR == 3 && NSS_VMINOR == 11 && NSS_VPATCH >= 6))
+ 	cs (SEC_ERROR_OCSP_RESPONDER_CERT_INVALID, "Configured OCSP responder's certificate is invalid.")
+ 	cs (SEC_ERROR_OCSP_BAD_SIGNATURE, "OCSP response has an invalid signature.")
++#endif
  
- #include <errno.h>
- 
-@@ -545,6 +546,11 @@ sm_verify_cmsg(CamelCipherContext *conte
- 
- 			/* need to build digests of the content */
- 			if (!NSS_CMSSignedData_HasDigests(sigd)) {
-+				camel_exception_set (ex, CAMEL_EXCEPTION_SYSTEM, _("Cannot set message digests"));
-+				goto fail;
-+			} else {
-+				int which_digest;
-+
- 				if (extstream == NULL) {
- 					camel_exception_set (ex, CAMEL_EXCEPTION_SYSTEM, _("Digests missing from enveloped data"));
- 					goto fail;
-@@ -573,9 +579,16 @@ sm_verify_cmsg(CamelCipherContext *conte
- 					goto fail;
- 				}
- 
--				if (NSS_CMSSignedData_SetDigests(sigd, digestalgs, digests) != SECSuccess) {
--					camel_exception_set (ex, CAMEL_EXCEPTION_SYSTEM, _("Cannot set message digests"));
--					goto fail;
-+				for (which_digest = 0; digests[which_digest] != NULL; which_digest++) {
-+					SECOidData *digest_alg = SECOID_FindOID(&digestalgs[which_digest]->algorithm);
-+					if (digest_alg == NULL) {
-+						camel_exception_set (ex, CAMEL_EXCEPTION_SYSTEM, _("Cannot set message digests"));
-+						goto fail;
-+					}
-+					if (NSS_CMSSignedData_SetDigestValue(sigd, digest_alg->offset, digests[which_digest]) != SECSuccess) {
-+						camel_exception_set (ex, CAMEL_EXCEPTION_SYSTEM, _("Cannot set message digests"));
-+						goto fail;
-+					}
- 				}
- 
- 				PORT_FreeArena(poolp, PR_FALSE);
+ 	#if defined(NSS_VMAJOR) && defined(NSS_VMINOR) && defined(NSS_VPATCH) && (NSS_VMAJOR > 3 || (NSS_VMAJOR == 3 && NSS_VMINOR > 12) || (NSS_VMAJOR == 3 && NSS_VMINOR == 12 && NSS_VPATCH >= 2))
+ 	cs (SEC_ERROR_OUT_OF_SEARCH_LIMITS, "Cert validation search is out of search limits")

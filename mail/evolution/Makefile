@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.146 2009/03/07 16:32:33 apb Exp $
+# $NetBSD: Makefile,v 1.147 2009/03/19 12:05:04 drochner Exp $
 
-DISTNAME=		evolution-2.24.5
+DISTNAME=		evolution-2.26.0
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.24/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.26/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -77,6 +77,7 @@ BUILDLINK_API_DEPENDS.libbonoboui+=	libbonoboui>=2.4.2
 .include "../../devel/libgnome/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.19.91
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
