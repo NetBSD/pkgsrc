@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1107 2009/03/19 19:54:07 drochner Exp $
+$NetBSD: CHANGES-2009,v 1.1108 2009/03/19 21:37:03 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libIDL to 0.8.13 [drochner 2009-03-19]
 	Updated devel/libglade to 2.6.4 [drochner 2009-03-19]
 	Updated www/p5-WWW-Shorten to 2.03 [seb 2009-03-19]
+	Updated audio/musicpd to 0.14.2 [asau 2009-03-20]
