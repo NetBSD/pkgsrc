@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1102 2009/03/19 09:05:11 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.1103 2009/03/19 09:48:24 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/openresolv to 3.1 [roy 2009-03-18]
 	Updated devel/gnome-common to 2.24.0 [snj 2009-03-19]
 	Updated mail/dovecot to 1.1.13 [ghen 2009-03-19]
+	Updated misc/taskjuggler to 2.4.1 [hasso 2009-03-19]
