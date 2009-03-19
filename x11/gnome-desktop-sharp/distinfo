@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/10/24 20:59:54 wiz Exp $
+$NetBSD: distinfo,v 1.3 2009/03/19 18:49:21 drochner Exp $
 
-SHA1 (gnome-desktop-sharp-2.24.0.tar.gz) = cd37f52db9daa1fb3ba02824eeff5b626288c44e
-RMD160 (gnome-desktop-sharp-2.24.0.tar.gz) = c3bf3ae18d1a51f70e141008d3adc8478c20d8c3
-Size (gnome-desktop-sharp-2.24.0.tar.gz) = 444598 bytes
+SHA1 (gnome-desktop-sharp-2.26.0.tar.gz) = 34cfeabdfff739c413d77767937139f60d6b3576
+RMD160 (gnome-desktop-sharp-2.26.0.tar.gz) = d5e9b35ceabddebce1dea3e4005a7622d43ca71a
+Size (gnome-desktop-sharp-2.26.0.tar.gz) = 450922 bytes
