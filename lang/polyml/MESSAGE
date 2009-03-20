@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/03/20 21:12:51 asau Exp $
+
+Default value for immutable buffer size is 1024 MB,
+unless you have sufficient resources, you might wish
+to use lower values, like 10 MB:
+
+    poly -H 10
+
+===========================================================================
