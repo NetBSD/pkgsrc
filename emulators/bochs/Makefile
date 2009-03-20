@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2009/03/20 12:57:48 mishka Exp $
+# $NetBSD: Makefile,v 1.57 2009/03/20 17:17:48 mishka Exp $
 
 DISTNAME=		bochs-2.3.7
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -22,15 +22,17 @@ CXXFLAGS+=		-DPARANOID
 
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
+CONFIGURE_ARGS+=	--with-nogui
 
 MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
 MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
 MAKE_ENV+=		WGET=${FETCH_CMD:Q}
 
-PLIST_VARS+=		tiny
+PLIST_VARS+=		notiny
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
-PKG_SUPPORTED_OPTIONS+=	debug tiny
+PKG_SUPPORTED_OPTIONS+=	debug tiny x11
+PKG_SUGGESTED_OPTIONS+=	x11
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
@@ -45,7 +47,7 @@ CONFIGURE_ARGS+=	--enable-x86-debugger
 .endif
 
 .if empty(PKG_OPTIONS:Mtiny)
-PLIST.tiny=		yes
+PLIST.notiny=		yes
 
 #CONFIGURE_ARGS+=	--enable-3dnow
 CONFIGURE_ARGS+=	--enable-4meg-pages
@@ -98,6 +100,12 @@ CONFIGURE_ARGS+=	--enable-sb16=dummy
 .  endif
 .endif
 
+.if empty(PKG_OPTIONS:Mx11)
+CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--without-x11
+CONFIGURE_ARGS+=	--with-term
+.endif
+
 .if ${OPSYS} == "Linux"
 BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,\#,'
 BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,,'
@@ -125,12 +133,16 @@ post-install:
 	${RM} -rf ${PREFIX}/libexec/bochs.app/.build
 	${INSTALL_SCRIPT} ${WRKDIR}/bochs.sh ${PREFIX}/bin/bochs
 .else
+.  if empty(PKG_OPTIONS:Mx11)
+.  include "../../mk/curses.buildlink3.mk"
+.  else
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .  include "../../x11/libSM/buildlink3.mk"
 .  include "../../x11/libX11/buildlink3.mk"
 .  include "../../x11/libXpm/buildlink3.mk"
 .  include "../../x11/libXt/buildlink3.mk"
+.  endif
 .endif
 
 pre-configure:
