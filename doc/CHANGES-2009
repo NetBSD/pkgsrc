@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1115 2009/03/20 22:15:10 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1116 2009/03/20 22:45:08 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1505,3 +1505,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/postgresql83-pltcl to 8.3.7 [adam 2009-03-20]
 	Updated www/typolight-translations to 20090317 [taca 2009-03-20]
 	Added lang/polyml version 5.2.1 [asau 2009-03-20]
+	mk/bsd.pkg.mk: format of buildlink3.mk files changed [joerg 2009-03-20]
