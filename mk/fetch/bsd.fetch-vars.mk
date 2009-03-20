@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.12 2009/02/10 18:55:54 joerg Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.13 2009/03/20 16:23:48 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -83,5 +83,7 @@ _FETCH_DEPENDS.wget=		wget-[0-9]*:../../net/wget
 _FETCH_DEPENDS.curl=		curl-[0-9]*:../../www/curl
 _FETCH_TOOLS.manual=		false
 
+.if !empty(_ALLFILES)
 USE_TOOLS+=	${_FETCH_TOOLS.${FETCH_USING}:C/$/:bootstrap/}
 BOOTSTRAP_DEPENDS+=	${_FETCH_DEPENDS.${FETCH_USING}}
+.endif
