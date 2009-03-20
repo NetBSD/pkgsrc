@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/02/29 13:11:14 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:52 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SIGSCHEME_BUILDLINK3_MK:=	${SIGSCHEME_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	sigscheme
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	sigscheme
-.endif
+.if !defined(SIGSCHEME_BUILDLINK3_MK)
+SIGSCHEME_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsigscheme}
-BUILDLINK_PACKAGES+=	sigscheme
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}sigscheme
-
-.if ${SIGSCHEME_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.sigscheme+=	sigscheme>=0.8.0
 BUILDLINK_PKGSRCDIR.sigscheme?=	../../lang/sigscheme
-.endif	# SIGSCHEME_BUILDLINK3_MK
 
 .include "../../devel/libgcroots/buildlink3.mk"
+.endif # SIGSCHEME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-sigscheme

@@ -1,4 +1,4 @@
-# $NetBSD: termcap.builtin.mk,v 1.5 2008/03/11 15:39:16 jlam Exp $
+# $NetBSD: termcap.builtin.mk,v 1.6 2009/03/20 19:25:01 joerg Exp $
 
 BUILTIN_PKG:=	termcap
 
@@ -95,7 +95,7 @@ BUILDLINK_LIBNAME.termcap=	${BUILTIN_LIBNAME.termcap}
 # remove them as GNU configure scripts commonly check for one or both
 # of those library options.
 #
-.  if empty(BUILDLINK_PACKAGES:Mcurses) && empty(BUILDLINK_PACKAGES:Mncurses)
+.  if empty(BUILDLINK_TREE:Mcurses) && empty(BUILDLINK_TREE:Mncurses)
 BUILDLINK_TRANSFORM+=		rm:-lcurses
 BUILDLINK_TRANSFORM+=		rm:-lncurses
 .  endif

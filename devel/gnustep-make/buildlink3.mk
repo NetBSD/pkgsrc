@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.12 2007/11/25 14:42:02 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:14 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNUSTEP_MAKE_BUILDLINK3_MK:=	${GNUSTEP_MAKE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnustep-make
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnustep-make
-.endif
+.if !defined(GNUSTEP_MAKE_BUILDLINK3_MK)
+GNUSTEP_MAKE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-make}
-BUILDLINK_PACKAGES+=	gnustep-make
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-make
-
-.if !empty(GNUSTEP_MAKE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-make+=	gnustep-make>=2.0.2
 BUILDLINK_ABI_DEPENDS.gnustep-make?=	gnustep-make>=2.0.2
 BUILDLINK_PKGSRCDIR.gnustep-make?=	../../devel/gnustep-make
@@ -109,7 +102,6 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Tools$$/ { next
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Tools\/Java$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Tools\/Resources$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/share$$/ { next; }
+.endif # GNUSTEP_MAKE_BUILDLINK3_MK
 
-.endif	# GNUSTEP_MAKE_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnustep-make

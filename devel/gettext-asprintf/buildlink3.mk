@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 23:10:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:24:13 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-GETTEXT_ASPRINTF_BUILDLINK3_MK:=	${GETTEXT_ASPRINTF_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gettext-asprintf
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gettext-asprintf
-.endif
+.if !defined(GETTEXT_ASPRINTF_BUILDLINK3_MK)
+GETTEXT_ASPRINTF_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngettext-asprintf}
-BUILDLINK_PACKAGES+=	gettext-asprintf
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gettext-asprintf
-
-.if !empty(GETTEXT_ASPRINTF_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gettext-asprintf+=	gettext-asprintf>=0.14.5
 BUILDLINK_PKGSRCDIR.gettext-asprintf?=	../../devel/gettext-asprintf
-.endif	# GETTEXT_ASPRINTF_BUILDLINK3_MK
+.endif # GETTEXT_ASPRINTF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gettext-asprintf

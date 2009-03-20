@@ -1,23 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/19 15:32:42 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:22 joerg Exp $
 #
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-QCA2_BUILDLINK3_MK:=	${QCA2_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	qca2
-.endif
+BUILDLINK_TREE+=	qca2
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqca2}
-BUILDLINK_PACKAGES+=	qca2
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}qca2
+.if !defined(QCA2_BUILDLINK3_MK)
+QCA2_BUILDLINK3_MK:=
 
-.if !empty(QCA2_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qca2+=	qca2>=2.0.0
 BUILDLINK_ABI_DEPENDS.qca2?=	qca2>=2.0.0
 BUILDLINK_PKGSRCDIR.qca2?=	../../security/qca2
-.endif	# QCA2_BUILDLINK3_MK
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.endif # QCA2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-qca2

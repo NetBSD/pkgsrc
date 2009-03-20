@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/04/05 02:00:39 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:42 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBLQR_BUILDLINK3_MK:=	${LIBLQR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	liblqr
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	liblqr
-.endif
+.if !defined(LIBLQR_BUILDLINK3_MK)
+LIBLQR_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nliblqr}
-BUILDLINK_PACKAGES+=	liblqr
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}liblqr
-
-.if ${LIBLQR_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.liblqr+=	liblqr>=0.1.0.2
 BUILDLINK_PKGSRCDIR.liblqr?=	../../graphics/liblqr
-.endif	# LIBLQR_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
+.endif # LIBLQR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-liblqr

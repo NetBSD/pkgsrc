@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/11/30 11:26:35 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:11 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-MONOTORRENT_BUILDLINK3_MK:=	${MONOTORRENT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	monotorrent
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	monotorrent
-.endif
+.if !defined(MONOTORRENT_BUILDLINK3_MK)
+MONOTORRENT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmonotorrent}
-BUILDLINK_PACKAGES+=	monotorrent
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}monotorrent
-
-.if ${MONOTORRENT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.monotorrent+=	monotorrent>=0.62
 BUILDLINK_PKGSRCDIR.monotorrent?=	../../net/monotorrent
-.endif	# MONOTORRENT_BUILDLINK3_MK
 
 .include "../../lang/mono/buildlink3.mk"
+.endif # MONOTORRENT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-monotorrent

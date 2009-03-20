@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:44 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBXDAMAGE_BUILDLINK3_MK:=	${LIBXDAMAGE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libXdamage
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libXdamage
-.endif
+.if !defined(LIBXDAMAGE_BUILDLINK3_MK)
+LIBXDAMAGE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXdamage}
-BUILDLINK_PACKAGES+=	libXdamage
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXdamage
-
-.if ${LIBXDAMAGE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libXdamage+=	libXdamage>=1.0.3
 BUILDLINK_PKGSRCDIR.libXdamage?=	../../x11/libXdamage
-.endif	# LIBXDAMAGE_BUILDLINK3_MK
 
 .include "../../x11/damageproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
+.endif # LIBXDAMAGE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libXdamage

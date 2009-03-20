@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/01/13 16:27:24 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:24:40 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-HICOLOR_ICON_THEME_BUILDLINK3_MK:=	${HICOLOR_ICON_THEME_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	hicolor-icon-theme
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	hicolor-icon-theme
-.endif
+.if !defined(HICOLOR_ICON_THEME_BUILDLINK3_MK)
+HICOLOR_ICON_THEME_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nhicolor-icon-theme}
-BUILDLINK_PACKAGES+=	hicolor-icon-theme
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hicolor-icon-theme
-
-.if !empty(HICOLOR_ICON_THEME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.4
 BUILDLINK_ABI_DEPENDS.hicolor-icon-theme+=	hicolor-icon-theme>=0.9nb1
 BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
@@ -53,6 +46,6 @@ guic-buildlink-fake:
 		${CHMOD} +x ${_GUIC_FAKE};				\
 	fi
 .endif	# HICOLOR_ICON_THEME_DEPEND_ONLY
-.endif	# HICOLOR_ICON_THEME_BUILDLINK3_MK
+.endif # HICOLOR_ICON_THEME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-hicolor-icon-theme

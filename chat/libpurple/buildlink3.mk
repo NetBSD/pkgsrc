@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.12 2008/08/19 18:18:10 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:01 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBPURPLE_BUILDLINK3_MK:=	${LIBPURPLE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libpurple
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libpurple
-.endif
+.if !defined(LIBPURPLE_BUILDLINK3_MK)
+LIBPURPLE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpurple}
-BUILDLINK_PACKAGES+=	libpurple
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libpurple
-
-.if ${LIBPURPLE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libpurple+=	libpurple>=2.5.0
 BUILDLINK_PKGSRCDIR.libpurple?=	../../chat/libpurple
-.endif	# LIBPURPLE_BUILDLINK3_MK
 
 pkgbase := libpurple
 .include "../../mk/pkg-build-options.mk"
@@ -24,5 +16,6 @@ pkgbase := libpurple
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
 .  include "../../sysutils/py-dbus/buildlink3.mk"
 .endif
+.endif # LIBPURPLE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libpurple

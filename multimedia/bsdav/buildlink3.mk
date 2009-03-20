@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/01/30 19:21:08 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:02 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-BSDAV_BUILDLINK3_MK:=	${BSDAV_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	bsdav
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	bsdav
-.endif
+.if !defined(BSDAV_BUILDLINK3_MK)
+BSDAV_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbsdav}
-BUILDLINK_PACKAGES+=	bsdav
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}bsdav
-
-.if ${BSDAV_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.bsdav+=	bsdav>=1.4
 BUILDLINK_PKGSRCDIR.bsdav?=	../../multimedia/bsdav
 BUILDLINK_LDADD.bsdav=		-lbsdav
@@ -20,10 +13,10 @@ LIBBSDAV?= ${BUILDLINK_LDADD.bsdav}
 
 pkgbase := bsdav
 .  include "../../mk/pkg-build-options.mk"
-.endif	# BSDAV_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.bsdav:Mx11)
 .  include "../../x11/libXv/buildlink3.mk"
 .endif
+.endif # BSDAV_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-bsdav

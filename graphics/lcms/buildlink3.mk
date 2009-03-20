@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:52 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:41 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LCMS_BUILDLINK3_MK:=	${LCMS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	lcms
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	lcms
-.endif
+.if !defined(LCMS_BUILDLINK3_MK)
+LCMS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlcms}
-BUILDLINK_PACKAGES+=	lcms
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}lcms
-
-.if !empty(LCMS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.lcms+=	lcms>=1.06
 BUILDLINK_ABI_DEPENDS.lcms+=	lcms>=1.12nb2
 BUILDLINK_PKGSRCDIR.lcms?=	../../graphics/lcms
@@ -28,7 +21,6 @@ buildlink-include-lcms:
 		${LN} -s ${BUILDLINK_PREFIX.lcms}/include/${_h_} ${BUILDLINK_DIR}/include/lcms/${_h_}; \
 	fi
 .endfor
+.endif # LCMS_BUILDLINK3_MK
 
-.endif	# LCMS_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-lcms

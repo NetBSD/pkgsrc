@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/08/30 17:03:28 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:37 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-DJVULIBRE_LIB_BUILDLINK3_MK:=	${DJVULIBRE_LIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	djvulibre-lib
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	djvulibre-lib
-.endif
+.if !defined(DJVULIBRE_LIB_BUILDLINK3_MK)
+DJVULIBRE_LIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndjvulibre-lib}
-BUILDLINK_PACKAGES+=	djvulibre-lib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}djvulibre-lib
-
-.if ${DJVULIBRE_LIB_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.djvulibre-lib+=	djvulibre-lib>=3.5.17
 BUILDLINK_PKGSRCDIR.djvulibre-lib?=	../../graphics/djvulibre-lib
-.endif	# DJVULIBRE_LIB_BUILDLINK3_MK
+.endif # DJVULIBRE_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-djvulibre-lib

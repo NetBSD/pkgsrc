@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.11 2008/01/18 05:08:33 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:25:00 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-ADDRESSES_BUILDLINK3_MK:=	${ADDRESSES_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	Addresses
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	Addresses
-.endif
+.if !defined(ADDRESSES_BUILDLINK3_MK)
+ADDRESSES_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NAddresses}
-BUILDLINK_PACKAGES+=	Addresses
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}Addresses
-
-.if !empty(ADDRESSES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.Addresses+=	Addresses>=0.4.5
 BUILDLINK_ABI_DEPENDS.Addresses+=	Addresses>=0.4.6nb6
 BUILDLINK_PKGSRCDIR.Addresses?=	../../misc/Addresses
@@ -26,8 +19,7 @@ BUILDLINK_FILES.Addresses+=	${GNUSTEP_SUBDIR}/Local/Library/Headers/AddressBook/
 BUILDLINK_FILES.Addresses+=	${GNUSTEP_SUBDIR}/Local/Library/Headers/AddressView/*.h
 BUILDLINK_FILES.Addresses+=	${GNUSTEP_SUBDIR}/Local/Library/Headers/Addresses/*.h
 
-.endif	# ADDRESSES_BUILDLINK3_MK
-
 .include "../../x11/gnustep-back/buildlink3.mk"
+.endif # ADDRESSES_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-Addresses

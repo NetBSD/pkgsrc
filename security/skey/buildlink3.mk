@@ -1,22 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/01/20 14:48:56 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:22 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-SKEY_BUILDLINK3_MK:=	${SKEY_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	skey
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	skey
-.endif
+.if !defined(SKEY_BUILDLINK3_MK)
+SKEY_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nskey}
-BUILDLINK_PACKAGES+=	skey
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}skey
-
-.if !empty(SKEY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.skey+=	skey>=1.1.5
 BUILDLINK_ABI_DEPENDS.skey?=	skey>=1.1.5nb2
 BUILDLINK_PKGSRCDIR.skey?=	../../security/skey
 BUILDLINK_DEPMETHOD.skey?=	build
-.endif	# SKEY_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -24,5 +16,6 @@ BUILDLINK_DEPMETHOD.skey?=	build
 .if ${OPSYS} == "SunOS"
 BUILDLINK_TRANSFORM+=	l:skey:skey:md5
 .endif
+.endif # SKEY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-skey
