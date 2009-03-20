@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/05/30 08:54:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:23:55 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBMIKMOD_BUILDLINK3_MK:=	${LIBMIKMOD_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libmikmod
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libmikmod
-.endif
+.if !defined(LIBMIKMOD_BUILDLINK3_MK)
+LIBMIKMOD_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmikmod}
-BUILDLINK_PACKAGES+=	libmikmod
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmikmod
-
-.if ${LIBMIKMOD_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libmikmod+=	libmikmod>=3.1.9
 BUILDLINK_ABI_DEPENDS.libmikmod+=	libmikmod>=3.1.11.1nb2
 BUILDLINK_PKGSRCDIR.libmikmod?=	../../audio/libmikmod
@@ -25,6 +18,6 @@ pkgbase := libmikmod
   empty(OPSYS:MNetBSD) && empty(OPSYS:MLinux)
 .    include "../../audio/esound/buildlink3.mk"
 .  endif
-.endif	# LIBMIKMOD_BUILDLINK3_MK
+.endif # LIBMIKMOD_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libmikmod

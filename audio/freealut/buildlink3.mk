@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/13 14:50:17 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:23:53 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-FREEALUT_BUILDLINK3_MK:=	${FREEALUT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	freealut
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	freealut
-.endif
+.if !defined(FREEALUT_BUILDLINK3_MK)
+FREEALUT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreealut}
-BUILDLINK_PACKAGES+=	freealut
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}freealut
-
-.if ${FREEALUT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.freealut+=	freealut>=1.1.0
 BUILDLINK_PKGSRCDIR.freealut?=	../../audio/freealut
-.endif	# FREEALUT_BUILDLINK3_MK
 
 .include "../../audio/openal/buildlink3.mk"
+.endif # FREEALUT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-freealut

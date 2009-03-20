@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.21 2008/12/18 16:46:29 hira Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2009/03/20 19:25:47 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBXFCE4UTIL_BUILDLINK3_MK:=	${LIBXFCE4UTIL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libxfce4util
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libxfce4util
-.endif
+.if !defined(LIBXFCE4UTIL_BUILDLINK3_MK)
+LIBXFCE4UTIL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxfce4util}
-BUILDLINK_PACKAGES+=	libxfce4util
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxfce4util
-
-.if ${LIBXFCE4UTIL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libxfce4util+=	libxfce4util>=4.4.3nb1
 BUILDLINK_PKGSRCDIR.libxfce4util?=	../../x11/libxfce4util
-.endif	# LIBXFCE4UTIL_BUILDLINK3_MK
 
 .include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.endif # LIBXFCE4UTIL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libxfce4util

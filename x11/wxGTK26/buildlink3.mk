@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/09/22 19:58:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:52 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-WXGTK_BUILDLINK3_MK:=	${WXGTK_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	wxGTK
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	wxGTK
-.endif
+.if !defined(WXGTK_BUILDLINK3_MK)
+WXGTK_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK}
-BUILDLINK_PACKAGES+=	wxGTK
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK
-
-.if !empty(WXGTK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wxGTK+=	wxGTK>=2.6.0nb2
 BUILDLINK_ABI_DEPENDS.wxGTK+=	wxGTK>=2.6.3nb1
 BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK26
-.endif	# WXGTK_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -23,5 +15,6 @@ BUILDLINK_PKGSRCDIR.wxGTK?=	../../x11/wxGTK26
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # WXGTK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-wxGTK

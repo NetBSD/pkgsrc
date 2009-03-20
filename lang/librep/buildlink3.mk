@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:50 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBREP_BUILDLINK3_MK:=	${LIBREP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	librep
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	librep
-.endif
+.if !defined(LIBREP_BUILDLINK3_MK)
+LIBREP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibrep}
-BUILDLINK_PACKAGES+=	librep
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}librep
-
-.if !empty(LIBREP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.librep+=	librep>=0.17
 BUILDLINK_ABI_DEPENDS.librep+=	librep>=0.17nb2
 BUILDLINK_PKGSRCDIR.librep?=	../../lang/librep
 MAKE_FLAGS+=			rep_LIBTOOL=${LIBTOOL:Q}
-.endif	# LIBREP_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.endif # LIBREP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-librep

@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.20 2006/12/12 21:52:36 joerg Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBPCAP_BUILDLINK3_MK:=	${LIBPCAP_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.21 2009/03/20 19:25:10 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libpcap
-.endif
+BUILDLINK_TREE+=	libpcap
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpcap}
-BUILDLINK_PACKAGES+=	libpcap
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libpcap
+.if !defined(LIBPCAP_BUILDLINK3_MK)
+LIBPCAP_BUILDLINK3_MK:=
 
-.if !empty(LIBPCAP_BUILDLINK3_MK:M+)
 # XXX?
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.5.0
 BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
@@ -24,7 +17,6 @@ BUILDLINK_PKGSRCDIR.libpcap?=	../../net/libpcap
 BUILDLINK_LDADD.libpcap+=	-lnsl -lsocket
 BUILDLINK_LDFLAGS.libpcap?=	${BUILDLINK_LDADD.libpcap}
 .  endif
+.endif # LIBPCAP_BUILDLINK3_MK
 
-.endif	# LIBPCAP_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libpcap

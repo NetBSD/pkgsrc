@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.46 2008/05/15 19:46:47 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.47 2009/03/20 19:24:36 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	MesaLib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	MesaLib
-.endif
+.if !defined(MESALIB_BUILDLINK3_MK)
+MESALIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NMesaLib}
-BUILDLINK_PACKAGES+=	MesaLib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}MesaLib
-
-.if !empty(MESALIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.0.3
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
@@ -30,12 +23,11 @@ pkgbase:= MesaLib
 .  include "../../graphics/MesaLib/dri.mk"
 .endif
 
-.endif	# MESALIB_BUILDLINK3_MK
-
 .if !empty(MACHINE_PLATFORM:MNetBSD-[12].*)
 .include "../../devel/pthread-stublib/buildlink3.mk"
 .endif
 
 .include "../../x11/libXext/buildlink3.mk"
+.endif # MESALIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-MesaLib

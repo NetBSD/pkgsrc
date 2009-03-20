@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/02/27 21:32:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:24:26 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PDCURSES_BUILDLINK3_MK:=	${PDCURSES_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pdcurses
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pdcurses
-.endif
+.if !defined(PDCURSES_BUILDLINK3_MK)
+PDCURSES_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npdcurses}
-BUILDLINK_PACKAGES+=	pdcurses
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pdcurses
-
-.if !empty(PDCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pdcurses+=	pdcurses>=3.3
 BUILDLINK_PKGSRCDIR.pdcurses?=		../../devel/pdcurses
 
@@ -26,8 +19,6 @@ BUILDLINK_INCDIRS.pdcurses+=	include/xcurses
 BUILDLINK_TRANSFORM+=   	l:curses:XCurses
 .  endif
 
-.endif	# PDCURSES_BUILDLINK3_MK
-
 .include "../../mk/xaw.buildlink3.mk"
 
 .include "../../x11/libICE/buildlink3.mk"
@@ -38,5 +29,6 @@ BUILDLINK_TRANSFORM+=   	l:curses:XCurses
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.endif # PDCURSES_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pdcurses

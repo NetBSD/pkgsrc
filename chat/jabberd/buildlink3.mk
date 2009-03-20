@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/01/18 05:06:24 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:01 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-JABBERD_BUILDLINK3_MK:=	${JABBERD_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	jabberd
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	jabberd
-.endif
+.if !defined(JABBERD_BUILDLINK3_MK)
+JABBERD_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njabberd}
-BUILDLINK_PACKAGES+=	jabberd
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jabberd
-
-.if !empty(JABBERD_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jabberd+=	jabberd>=1.4.2
 BUILDLINK_ABI_DEPENDS.jabberd?=	jabberd>=1.4.2nb6
 BUILDLINK_PKGSRCDIR.jabberd?=	../../chat/jabberd
-.endif	# JABBERD_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
+.endif # JABBERD_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-jabberd

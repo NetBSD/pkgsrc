@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.11 2008/11/08 21:06:46 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:23:59 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-SPEEX_BUILDLINK3_MK:=	${SPEEX_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	speex
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	speex
-.endif
+.if !defined(SPEEX_BUILDLINK3_MK)
+SPEEX_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nspeex}
-BUILDLINK_PACKAGES+=	speex
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}speex
-
-.if !empty(SPEEX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.speex+=	speex>=1.2rc1
 BUILDLINK_PKGSRCDIR.speex?=	../../audio/speex
-.endif	# SPEEX_BUILDLINK3_MK
 
 .include "../../multimedia/libogg/buildlink3.mk"
+.endif # SPEEX_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-speex

@@ -1,22 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.18 2008/10/05 22:42:36 smb Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2009/03/20 19:24:55 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBETPAN_BUILDLINK3_MK:=	${LIBETPAN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libetpan
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libetpan
-.endif
+.if !defined(LIBETPAN_BUILDLINK3_MK)
+LIBETPAN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibetpan}
-BUILDLINK_PACKAGES+=	libetpan
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libetpan
-
-.if !empty(LIBETPAN_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libetpan+=	libetpan>=0.38nb1
 BUILDLINK_ABI_DEPENDS.libetpan?=	libetpan>=0.52nb4
 BUILDLINK_ABI_DEPENDS.libetpan?=	libetpan>=0.56
 BUILDLINK_PKGSRCDIR.libetpan?=	../../mail/libetpan
-.endif	# LIBETPAN_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
@@ -25,5 +17,6 @@ BUILDLINK_PKGSRCDIR.libetpan?=	../../mail/libetpan
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif # LIBETPAN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libetpan

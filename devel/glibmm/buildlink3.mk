@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/09/21 13:03:35 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:14 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GLIBMM_BUILDLINK3_MK:=	${GLIBMM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	glibmm
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	glibmm
-.endif
+.if !defined(GLIBMM_BUILDLINK3_MK)
+GLIBMM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglibmm}
-BUILDLINK_PACKAGES+=	glibmm
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}glibmm
-
-.if !empty(GLIBMM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.glibmm+=	glibmm>=2.6.1
 BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.8.3nb1
 BUILDLINK_PKGSRCDIR.glibmm?=	../../devel/glibmm
-.endif	# GLIBMM_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
+.endif # GLIBMM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-glibmm

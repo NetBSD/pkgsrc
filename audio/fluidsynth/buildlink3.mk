@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:10:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:23:53 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-FLUIDSYNTH_BUILDLINK3_MK:=	${FLUIDSYNTH_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	fluidsynth
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	fluidsynth
-.endif
+.if !defined(FLUIDSYNTH_BUILDLINK3_MK)
+FLUIDSYNTH_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfluidsynth}
-BUILDLINK_PACKAGES+=	fluidsynth
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}fluidsynth
-
-.if !empty(FLUIDSYNTH_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.fluidsynth+=		fluidsynth>=1.0.5
 BUILDLINK_PKGSRCDIR.fluidsynth?=	../../audio/fluidsynth
-.endif	# FLUIDSYNTH_BUILDLINK3_MK
 
 .include "../../devel/readline/buildlink3.mk"
+.endif # FLUIDSYNTH_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-fluidsynth
