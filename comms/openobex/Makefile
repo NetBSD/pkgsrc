@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/03/20 19:42:20 hasso Exp $
 #
 
 DISTNAME=	openobex-1.3
@@ -20,12 +20,12 @@ PKGCONFIG_OVERRIDE=	openobex.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h))
+.if ((${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h)) || ${OPSYS} == "DragonFly")
 SUBST_CLASSES+=		bt
 SUBST_STAGE.bt=		post-patch
 SUBST_FILES.bt=		include/obex.h
-SUBST_SED.bt=		-e "s|\#ifndef SOL_RFCOMM|\#ifdef __NetBSD__|"
-SUBST_SED.bt+=		-e "s|typedef char\* bdaddr_t\;|\#include \<bluetooth.h\>|"
+SUBST_SED.bt=		-e "s,\#ifndef SOL_RFCOMM,\#if defined(__NetBSD__) || defined(__DragonFly__),"
+SUBST_SED.bt+=		-e "s,typedef char\* bdaddr_t\;,\#include \<bluetooth.h\>,"
 SUBST_MESSAGE.bt=	Fixing bluetooth detection.
 .endif
 
