@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1111 2009/03/19 23:51:56 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1112 2009/03/20 15:46:11 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1480,3 +1480,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/musicpd to 0.14.2 [asau 2009-03-20]
 	Updated devel/gnome-common to 2.26.0 [snj 2009-03-19]
 	Updated x11/gtk2-engines-murrine to 0.90.2 [snj 2009-03-19]
+	Updated net/dhcpcd to 4.99.15 [roy 2009-03-20]
