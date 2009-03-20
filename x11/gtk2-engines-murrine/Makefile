@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/19 23:51:31 snj Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/20 18:36:59 hasso Exp $
 
 DISTNAME=	murrine-0.90.2
 PKGNAME=	${DISTNAME:S/^/gtk2-engines-/}
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.4
-USE_TOOLS+=		gmake pkg-config intltool
+USE_TOOLS+=		gmake pkg-config intltool msgfmt
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--enable-animation
