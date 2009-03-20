@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/02/27 14:07:46 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:47 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-M17N_IM_CONFIG_BUILDLINK3_MK:=	${M17N_IM_CONFIG_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	m17n-im-config
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	m17n-im-config
-.endif
+.if !defined(M17N_IM_CONFIG_BUILDLINK3_MK)
+M17N_IM_CONFIG_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nm17n-im-config}
-BUILDLINK_PACKAGES+=	m17n-im-config
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}m17n-im-config
-
-.if ${M17N_IM_CONFIG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.m17n-im-config+=	m17n-im-config>=0.9.0
 BUILDLINK_PKGSRCDIR.m17n-im-config?=	../../inputmethod/m17n-im-config
-.endif	# M17N_IM_CONFIG_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/m17n-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # M17N_IM_CONFIG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-m17n-im-config

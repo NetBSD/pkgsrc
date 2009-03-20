@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 20:11:57 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:51 joerg Exp $
 
 BUILDLINK_DEPMETHOD.scrnsaverproto?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SCRNSAVERPROTO_BUILDLINK3_MK:=	${SCRNSAVERPROTO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	scrnsaverproto
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	scrnsaverproto
-.endif
+.if !defined(SCRNSAVERPROTO_BUILDLINK3_MK)
+SCRNSAVERPROTO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nscrnsaverproto}
-BUILDLINK_PACKAGES+=	scrnsaverproto
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}scrnsaverproto
-
-.if ${SCRNSAVERPROTO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1.0
 BUILDLINK_PKGSRCDIR.scrnsaverproto?=	../../x11/scrnsaverproto
-.endif	# SCRNSAVERPROTO_BUILDLINK3_MK
 
 .include "../../x11/xproto/buildlink3.mk"
+.endif # SCRNSAVERPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-scrnsaverproto

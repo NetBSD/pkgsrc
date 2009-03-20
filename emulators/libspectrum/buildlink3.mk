@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:49 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:33 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBSPECTRUM_BUILDLINK3_MK:=	${LIBSPECTRUM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libspectrum
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libspectrum
-.endif
+.if !defined(LIBSPECTRUM_BUILDLINK3_MK)
+LIBSPECTRUM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspectrum}
-BUILDLINK_PACKAGES+=	libspectrum
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libspectrum
-
-.if !empty(LIBSPECTRUM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libspectrum+=		libspectrum>=0.2.2
 BUILDLINK_ABI_DEPENDS.libspectrum+=	libspectrum>=0.2.2nb2
 BUILDLINK_PKGSRCDIR.libspectrum?=	../../emulators/libspectrum
-.endif	# LIBSPECTRUM_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.endif # LIBSPECTRUM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libspectrum

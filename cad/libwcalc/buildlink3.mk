@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:38 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:00 joerg Exp $
 #
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBWCALC_BUILDLINK3_MK:=	${LIBWCALC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libwcalc
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libwcalc
-.endif
+.if !defined(LIBWCALC_BUILDLINK3_MK)
+LIBWCALC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibwcalc}
-BUILDLINK_PACKAGES+=	libwcalc
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libwcalc
-
-.if !empty(LIBWCALC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libwcalc+=	libwcalc-1.0*
 BUILDLINK_ABI_DEPENDS.libwcalc?=	libwcalc>=1.0nb1
 BUILDLINK_PKGSRCDIR.libwcalc?=	../../cad/libwcalc
-.endif	# LIBWCALC_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # LIBWCALC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libwcalc

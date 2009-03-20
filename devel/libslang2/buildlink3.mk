@@ -1,24 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:23 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBSLANG2_BUILDLINK3_MK:=	${LIBSLANG2_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libslang2
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libslang2
-.endif
+.if !defined(LIBSLANG2_BUILDLINK3_MK)
+LIBSLANG2_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibslang2}
-BUILDLINK_PACKAGES+=	libslang2
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libslang2
-
-.if ${LIBSLANG2_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libslang2+=	libslang2>=2.1.3
 BUILDLINK_PKGSRCDIR.libslang2?=	../../devel/libslang2
 BUILDLINK_FNAME_TRANSFORM.libslang2+=	-e 's|include/slang2/|include/|g'
 BUILDLINK_TRANSFORM+=		l:slang:slang2
 pkgbase:=	libslang2
 .  include "../../mk/pkg-build-options.mk"
-.endif	# LIBSLANG2_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.libslang2:Mpng)
 .  include "../../graphics/png/buildlink3.mk"
@@ -32,5 +24,6 @@ pkgbase:=	libslang2
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.endif # LIBSLANG2_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libslang2

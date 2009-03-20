@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/04/13 05:45:36 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:25:40 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-FOX_BUILDLINK3_MK:=	${FOX_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	fox
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	fox
-.endif
+.if !defined(FOX_BUILDLINK3_MK)
+FOX_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfox}
-BUILDLINK_PACKAGES+=	fox
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}fox
-
-.if !empty(FOX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.fox+=	fox>=1.6.25
 BUILDLINK_PKGSRCDIR.fox?=	../../x11/fox
 BUILDLINK_INCDIRS.fox?=		include/fox-1.6
-.endif	# FOX_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
@@ -28,5 +20,6 @@ BUILDLINK_INCDIRS.fox?=		include/fox-1.6
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.endif # FOX_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-fox

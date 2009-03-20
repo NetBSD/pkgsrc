@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.23 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2009/03/20 19:25:06 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	vlc
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	vlc
-.endif
+.if !defined(VLC_BUILDLINK3_MK)
+VLC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvlc}
-BUILDLINK_PACKAGES+=	vlc
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc
-
-.if ${VLC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.8.6d
 BUILDLINK_ABI_DEPENDS.vlc?=	vlc>=0.9.8anb1
 BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
-.endif	# VLC_BUILDLINK3_MK
 
 pkgbase:= vlc
 .include "../../mk/pkg-build-options.mk"
@@ -50,5 +42,6 @@ pkgbase:= vlc
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.endif # VLC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-vlc

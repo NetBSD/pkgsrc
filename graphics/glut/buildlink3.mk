@@ -1,25 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.18 2009/01/16 07:55:17 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2009/03/20 19:24:39 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GLUT_BUILDLINK3_MK:=	${GLUT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	glut
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	glut
-.endif
+.if !defined(GLUT_BUILDLINK3_MK)
+GLUT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nglut}
-BUILDLINK_PACKAGES+=	glut
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}glut
-
-.if !empty(GLUT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.glut+=	glut>=3.4.2
 BUILDLINK_ABI_DEPENDS.glut+=	glut>=7.0.3
 BUILDLINK_PKGSRCDIR.glut?=	../../graphics/glut
-.endif	# GLUT_BUILDLINK3_MK
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
+.endif # GLUT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-glut

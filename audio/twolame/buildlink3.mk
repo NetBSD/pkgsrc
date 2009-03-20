@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/01/07 12:25:53 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:23:59 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-TWOLAME_BUILDLINK3_MK:=	${TWOLAME_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	twolame
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	twolame
-.endif
+.if !defined(TWOLAME_BUILDLINK3_MK)
+TWOLAME_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntwolame}
-BUILDLINK_PACKAGES+=	twolame
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}twolame
-
-.if ${TWOLAME_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.7
 BUILDLINK_ABI_DEPENDS.twolame?=	twolame>=0.3.7nb1
 BUILDLINK_PKGSRCDIR.twolame?=	../../audio/twolame
-.endif	# TWOLAME_BUILDLINK3_MK
 
 .include "../../audio/libsndfile/buildlink3.mk"
+.endif # TWOLAME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-twolame

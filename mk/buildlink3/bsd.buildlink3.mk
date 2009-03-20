@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.204 2009/03/16 18:37:07 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.205 2009/03/20 19:25:01 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -37,33 +37,26 @@
 # An example package buildlink3.mk file:
 #
 # -------------8<-------------8<-------------8<-------------8<-------------
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-# FOO_BUILDLINK3_MK:=	${FOO_BUILDLINK3_MK}+
+# BUILDLINK_TREE+=	foo
 #
-# .if !empty(BUILDLINK_DEPTH:M+)
-# BUILDLINK_DEPENDS+=	foo
-# .endif
+# .if !defined(FOO_BUILDLINK3_MK)
+# FOO_BUILDLINK3_MK:=
 #
-# BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfoo}
-# BUILDLINK_PACKAGES+=	foo
-#
-# .if !empty(FOO_BUILDLINK3_MK:M+)
 # BUILDLINK_API_DEPENDS.foo+=	foo-lib>=1.0
 # BUILDLINK_ABI_DEPENDS.foo?=	foo-lib>=1.0nb1
 # BUILDLINK_PKGSRCDIR.foo?=	../../category/foo-lib
 #
 # # We want "-lbar" to eventually resolve to "-lfoo".
 # BUILDLINK_TRANSFORM+=		l:bar:foo
-# .endif  # FOO_BUILDLINK3_MK
 #
 # .include "../../category/baz/buildlink3.mk"
+# .endif  # FOO_BUILDLINK3_MK
 #
-# BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+# BUILDLINK_TREE+=	-foo
 # -------------8<-------------8<-------------8<-------------8<-------------
 #
 # Most of the buildlink3.mk file is protected against multiple inclusion,
-# except for the parts related to manipulating BUILDLINK_DEPTH and adding
-# to BUILDLINK_DEPENDS.
+# except for the parts related to manipulating BUILDLINK_TREE.
 #
 # Note that if a buildlink3.mk file is included, then the package Makefile
 # has the expectation that it can use the value of BUILDLINK_PREFIX.<pkg>.
@@ -100,23 +93,42 @@ BUILDLINK_X11_DIR=	${BUILDLINK_DIR:H}/.x11-buildlink
 # Prepend ${BUILDLINK_BINDIR} to the PATH.
 PREPEND_PATH+=	${BUILDLINK_BINDIR}
 
-# BUILDLINK_DEPENDS contains the list of packages for which we add
-# dependencies.
+# _BUILDLINK_DEPENDS contains the list of packages for which we add
+# dependencies.  This is only done for direct dependencies.
 #
-BUILDLINK_DEPENDS?=	# empty
+_BUILDLINK_DEPENDS:=
+_BUILDLINK_DEPTH:=
+.for _pkg_ in ${BUILDLINK_TREE}
+_BUILDLINK_pkg:=	${_pkg_:N-*}
+.  if empty(_BUILDLINK_pkg)
+_BUILDLINK_DEPTH:=	${_BUILDLINK_DEPTH:S/+$//}
+.  else
+.    if empty(_BUILDLINK_DEPTH)
+_BUILDLINK_DEPENDS+=	${_pkg_}
+.    endif
+_BUILDLINK_DEPTH:=	${_BUILDLINK_DEPTH}+
+.  endif
+.endfor
 
 # For each package we use, check whether we are using the built-in
 # version of the package or if we are using the pkgsrc version.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${BUILDLINK_TREE:N-*}
+.if !defined(_BUILDLINK_BUILTIN_MK_INCLUDED.${_pkg_})
+_BUILDLINK_BUILTIN_MK_INCLUDED.${_pkg_}=
 BUILDLINK_BUILTIN_MK.${_pkg_}?=	${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk
 .  sinclude "${BUILDLINK_BUILTIN_MK.${_pkg_}}"
+.endif
 .endfor
+
+# Sorted and unified version of BUILDLINK_TREE without recursion
+# data.
+_BUILDLINK_TREE:=	${BUILDLINK_TREE:N-*:O:u}
 
 # Set IGNORE_PKG.<pkg> if <pkg> is the current package we're building.
 # We can then check for this value to avoid build loops.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES}
+.for _pkg_ in ${_BUILDLINK_TREE}
 .  if defined(BUILDLINK_PKGSRCDIR.${_pkg_})
 .    if !defined(IGNORE_PKG.${_pkg_}) && \
         (${BUILDLINK_PKGSRCDIR.${_pkg_}:C|.*/([^/]*/[^/]*)$|\1|} == ${PKGPATH})
@@ -126,12 +138,15 @@ MAKEFLAGS+=		IGNORE_PKG.${_pkg_}=${IGNORE_PKG.${_pkg_}}
 .  endif
 .endfor
 
-# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_PACKAGES
+# _BLNK_PACKAGES contains all of the unique elements of BUILDLINK_TREE
 # that shouldn't be skipped.
 #
+# This does not use _BUILDLINK_TREE as the order matters.  x11-links is
+# sorted first to allow other packages to override the content.
+#
 _BLNK_PACKAGES=		# empty
-.for _pkg_ in ${BUILDLINK_PACKAGES}
-.  if empty(_BLNK_PACKAGES:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_})
+.for _pkg_ in ${BUILDLINK_TREE:N-*:Mx11-links} ${BUILDLINK_TREE:N-*:Nx11-links}
+.  if !defined(IGNORE_PKG.${_pkg_})
 _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
@@ -140,7 +155,7 @@ _VARGROUPS+=		bl3
 .for v in BINDIR CFLAGS CPPFLAGS DEPENDS LDFLAGS LIBS
 _SYS_VARS.bl3+=		BUILDLINK_${v}
 .endfor
-.for p in ${BUILDLINK_PACKAGES}
+.for p in ${_BUILDLINK_TREE}
 .  for v in AUTO_VARS BUILTIN_MK CONTENTS_FILTER CPPFLAGS DEPMETHOD FILES_CMD INCDIRS IS_DEPOT LDFLAGS LIBDIRS PKGNAME PREFIX RPATHDIRS
 _SYS_VARS.bl3+=		BUILDLINK_${v}.${p}
 .  endfor
@@ -157,7 +172,7 @@ BUILDLINK_DEPMETHOD.${_pkg_}?=	full
 # _BLNK_DEPENDS contains all of the elements of _BLNK_PACKAGES for which
 # we must add a dependency.  We add a dependency if we aren't using the
 # built-in version of the package, and the package was either explicitly
-# requested as a dependency (BUILDLINK_DEPENDS) or is a build dependency
+# requested as a dependency (_BUILDLINK_DEPENDS) or is a build dependency
 # somewhere in the chain.
 #
 _BLNK_DEPENDS=	# empty
@@ -165,7 +180,7 @@ _BLNK_DEPENDS=	# empty
 USE_BUILTIN.${_pkg_}?=	no
 .  if empty(_BLNK_DEPENDS:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_}) && \
       !empty(USE_BUILTIN.${_pkg_}:M[nN][oO]) && \
-      (!empty(BUILDLINK_DEPENDS:M${_pkg_}) || \
+      (!empty(_BUILDLINK_DEPENDS:M${_pkg_}) || \
        !empty(BUILDLINK_DEPMETHOD.${_pkg_}:Mbuild))
 _BLNK_DEPENDS+=	${_pkg_}
 .  endif
@@ -1120,4 +1135,4 @@ do-buildlink:
 
 .PHONY: show-buildlink3
 show-buildlink3:
-	@${SH} ${PKGSRCDIR}/mk/buildlink3/show-buildlink3.sh ${BUILDLINK_ORDER}
+	@${SH} ${PKGSRCDIR}/mk/buildlink3/show-buildlink3.sh ${BUILDLINK_TREE}

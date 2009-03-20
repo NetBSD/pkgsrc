@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/09/06 20:54:31 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/03/20 19:24:02 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNOME_PILOT_BUILDLINK3_MK:=	${GNOME_PILOT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnome-pilot
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnome-pilot
-.endif
+.if !defined(GNOME_PILOT_BUILDLINK3_MK)
+GNOME_PILOT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-pilot}
-BUILDLINK_PACKAGES+=	gnome-pilot
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-pilot
-
-.if !empty(GNOME_PILOT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-pilot?=		gnome-pilot>=2.0.12nb2
 BUILDLINK_ABI_DEPENDS.gnome-pilot?=	gnome-pilot>=2.0.15nb6
 BUILDLINK_PKGSRCDIR.gnome-pilot?=	../../comms/gnome-pilot
-.endif	# GNOME_PILOT_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
+.endif # GNOME_PILOT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnome-pilot

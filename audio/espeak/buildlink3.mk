@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/07/17 19:18:44 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:23:53 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ESPEAK_BUILDLINK3_MK:=	${ESPEAK_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	espeak
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	espeak
-.endif
+.if !defined(ESPEAK_BUILDLINK3_MK)
+ESPEAK_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nespeak}
-BUILDLINK_PACKAGES+=	espeak
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}espeak
-
-.if ${ESPEAK_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.espeak+=	espeak>=1.26
 BUILDLINK_PKGSRCDIR.espeak?=	../../audio/espeak
-.endif	# ESPEAK_BUILDLINK3_MK
 
 .include "../../audio/portaudio/buildlink3.mk"
+.endif # ESPEAK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-espeak

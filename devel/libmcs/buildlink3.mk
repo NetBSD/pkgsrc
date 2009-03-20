@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/11/10 11:39:48 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:20 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBMCS_BUILDLINK3_MK:=	${LIBMCS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libmcs
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libmcs
-.endif
+.if !defined(LIBMCS_BUILDLINK3_MK)
+LIBMCS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmcs}
-BUILDLINK_PACKAGES+=	libmcs
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmcs
-
-.if ${LIBMCS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libmcs+=	libmcs>=0.7.1
 BUILDLINK_PKGSRCDIR.libmcs?=	../../devel/libmcs
-.endif	# LIBMCS_BUILDLINK3_MK
 
 .include "../../devel/libmowgli/buildlink3.mk"
+.endif # LIBMCS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libmcs

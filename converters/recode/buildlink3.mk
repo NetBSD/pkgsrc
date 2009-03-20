@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:39 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:04 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-RECODE_BUILDLINK3_MK:=	${RECODE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	recode
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	recode
-.endif
+.if !defined(RECODE_BUILDLINK3_MK)
+RECODE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrecode}
-BUILDLINK_PACKAGES+=	recode
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}recode
-
-.if !empty(RECODE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.recode+=	recode>=3.6nb1
 BUILDLINK_ABI_DEPENDS.recode+=	recode>=3.6nb3
 BUILDLINK_PKGSRCDIR.recode?=	../../converters/recode
-.endif	# RECODE_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # RECODE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-recode

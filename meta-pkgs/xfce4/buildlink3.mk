@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.19 2008/01/18 05:08:32 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:24:59 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-XFCE4_BUILDLINK3_MK:=	${XFCE4_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4
-.endif
+.if !defined(XFCE4_BUILDLINK3_MK)
+XFCE4_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4}
-BUILDLINK_PACKAGES+=	xfce4
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4
-
-.if ${XFCE4_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4+=	xfce4>=4.4.1
 BUILDLINK_ABI_DEPENDS.xfce4?=	xfce4>=4.4.2nb1
 BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
-.endif	# XFCE4_BUILDLINK3_MK
 
 .include "../../audio/xfce4-mixer/buildlink3.mk"
 .include "../../editors/xfce4-mousepad/buildlink3.mk"
@@ -36,5 +28,6 @@ BUILDLINK_PKGSRCDIR.xfce4?=	../../meta-pkgs/xfce4
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.endif # XFCE4_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4

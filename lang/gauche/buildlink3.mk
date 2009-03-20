@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:10:54 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:49 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GAUCHE_BUILDLINK3_MK:=	${GAUCHE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	Gauche
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	Gauche
-.endif
+.if !defined(GAUCHE_BUILDLINK3_MK)
+GAUCHE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NGauche}
-BUILDLINK_PACKAGES+=	Gauche
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}Gauche
-
-.if !empty(GAUCHE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.Gauche+=	Gauche>=0.8.1
 BUILDLINK_PKGSRCDIR.Gauche?=	../../lang/gauche
-.endif	# GAUCHE_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.endif # GAUCHE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-Gauche

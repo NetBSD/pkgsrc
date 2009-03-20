@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/12/12 21:52:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:52 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SPIDERMONKEY_BUILDLINK3_MK:=	${SPIDERMONKEY_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	spidermonkey
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	spidermonkey
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nspidermonkey}
-BUILDLINK_PACKAGES+=	spidermonkey
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}spidermonkey
+.if !defined(SPIDERMONKEY_BUILDLINK3_MK)
+SPIDERMONKEY_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(SPIDERMONKEY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.spidermonkey+=	spidermonkey>=1.5
 .if ${OPSYS} == "Darwin"
 BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb6
@@ -21,9 +14,9 @@ BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb6
 BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb8
 .endif
 BUILDLINK_PKGSRCDIR.spidermonkey?=	../../lang/spidermonkey
-.endif	# SPIDERMONKEY_BUILDLINK3_MK
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
+.endif # SPIDERMONKEY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-spidermonkey

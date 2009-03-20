@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.13 2008/10/05 21:36:34 cube Exp $
+# $NetBSD: builtin.mk,v 1.14 2009/03/20 19:25:52 joerg Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -86,9 +86,7 @@ CHECK_BUILTIN.xcursor?=	no
 BUILDLINK_API_DEPENDS.xcursor+=	xcursor>=1.1.1
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 .    for _mkfile_ in buildlink3.mk builtin.mk
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .      sinclude "../../x11/Xfixes/${_mkfile_}"
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .    endfor
 .  endif
 
