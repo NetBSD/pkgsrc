@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7985 2009/03/20 22:19:31 asau Exp $
+$NetBSD: TODO,v 1.7986 2009/03/20 22:22:53 asau Exp $
 
 Suggested new packages
 ======================
@@ -1239,8 +1239,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o skype-2.0.0.43
 	o smalleiffel-0.90
 	o smalltalk-3.0.4
-	o smlnj-110.59 [pkgsrc-wip]
-	o smlnj-110.67
+	o smlnj-110.69 [pkgsrc-wip]
 	o smtpfeed-1.20
 	o snd-10.4
 	o snes9x-1.51
