@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2008/03/26 19:06:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.48 2009/03/20 13:47:59 joerg Exp $
 #
 
 DISTNAME=	bzip2-1.0.5
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.bzip.org/1.0.5/
 
