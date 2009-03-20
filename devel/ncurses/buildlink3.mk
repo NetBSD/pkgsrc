@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.32 2008/02/27 21:32:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.33 2009/03/20 19:24:24 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ncurses
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	ncurses
-.endif
+.if !defined(NCURSES_BUILDLINK3_MK)
+NCURSES_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nncurses}
-BUILDLINK_PACKAGES+=	ncurses
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ncurses
-
-.if !empty(NCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ncurses+=	ncurses>=5.3nb1
 BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses>=5.4nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
@@ -35,7 +28,6 @@ buildlink-ncurses-curses-h:
 		${MKDIR} `${DIRNAME} "$$dest"`;				\
 		${LN} -s "$$src" "$$dest";				\
 	fi
+.endif # NCURSES_BUILDLINK3_MK
 
-.endif	# NCURSES_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ncurses

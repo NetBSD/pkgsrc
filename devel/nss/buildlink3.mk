@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:10:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:25 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-NSS_BUILDLINK3_MK:=	${NSS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	nss
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	nss
-.endif
+.if !defined(NSS_BUILDLINK3_MK)
+NSS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnss}
-BUILDLINK_PACKAGES+=	nss
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}nss
-
-.if !empty(NSS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.nss+=		nss>=3.9.2nb1
 BUILDLINK_ABI_DEPENDS.nss+=	nss>=3.9.2nb4
 BUILDLINK_PKGSRCDIR.nss?=	../../devel/nss
@@ -23,8 +16,7 @@ BUILDLINK_INCDIRS.nss+=		include/nss
 BUILDLINK_LIBDIRS.nss+=		lib/nss
 BUILDLINK_RPATHDIRS.nss+=	lib/nss
 
-.endif	# NSS_BUILDLINK3_MK
-
 .include "../../devel/nspr/buildlink3.mk"
+.endif # NSS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-nss

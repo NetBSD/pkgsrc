@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/07/08 23:11:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:25:18 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBGCRYPT_BUILDLINK3_MK:=	${LIBGCRYPT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgcrypt
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libgcrypt
-.endif
+.if !defined(LIBGCRYPT_BUILDLINK3_MK)
+LIBGCRYPT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgcrypt}
-BUILDLINK_PACKAGES+=	libgcrypt
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgcrypt
-
-.if !empty(LIBGCRYPT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.0
 BUILDLINK_ABI_DEPENDS.libgcrypt+=	libgcrypt>=1.2.2nb1
 BUILDLINK_PKGSRCDIR.libgcrypt?=	../../security/libgcrypt
-.endif	# LIBGCRYPT_BUILDLINK3_MK
 
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif # LIBGCRYPT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgcrypt

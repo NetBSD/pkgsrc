@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/02/03 06:21:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:39 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GEGL_BUILDLINK3_MK:=	${GEGL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gegl
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gegl
-.endif
+.if !defined(GEGL_BUILDLINK3_MK)
+GEGL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngegl}
-BUILDLINK_PACKAGES+=	gegl
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gegl
-
-.if ${GEGL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gegl+=	gegl>=0.0.20
 BUILDLINK_PKGSRCDIR.gegl?=	../../graphics/gegl
-.endif	# GEGL_BUILDLINK3_MK
 
 pkgbase := gegl
 .include "../../mk/pkg-build-options.mk"
@@ -28,5 +20,6 @@ pkgbase := gegl
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # GEGL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gegl

@@ -1,4 +1,4 @@
-# $NetBSD: pam.buildlink3.mk,v 1.10 2007/10/13 11:04:16 dsl Exp $
+# $NetBSD: pam.buildlink3.mk,v 1.11 2009/03/20 19:25:01 joerg Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a PAM implementation.
@@ -96,7 +96,5 @@ PKG_FAIL_REASON=	\
 .elif ${PAM_TYPE} == "openpam"
 .  include "../../security/openpam/buildlink3.mk"
 .elif ${PAM_TYPE} == "solaris-pam"
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsolaris-pam}
-BUILDLINK_PACKAGES+=	solaris-pam
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}solaris-pam
+BUILDLINK_TREE+=	solaris-pam -solaris-pam
 .endif

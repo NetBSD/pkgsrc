@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/03/06 14:53:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/03/20 19:24:16 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBBONOBOUI_BUILDLINK3_MK:=	${LIBBONOBOUI_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libbonoboui
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libbonoboui
-.endif
+.if !defined(LIBBONOBOUI_BUILDLINK3_MK)
+LIBBONOBOUI_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibbonoboui}
-BUILDLINK_PACKAGES+=	libbonoboui
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libbonoboui
-
-.if !empty(LIBBONOBOUI_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libbonoboui+=		libbonoboui>=2.8.0
 BUILDLINK_ABI_DEPENDS.libbonoboui+=	libbonoboui>=2.20.0nb2
 BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
-.endif	# LIBBONOBOUI_BUILDLINK3_MK
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -26,5 +18,6 @@ BUILDLINK_PKGSRCDIR.libbonoboui?=	../../devel/libbonoboui
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # LIBBONOBOUI_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libbonoboui

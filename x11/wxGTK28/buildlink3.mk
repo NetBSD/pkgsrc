@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/19 15:26:33 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:52 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-WXGTK28_BUILDLINK3_MK:=	${WXGTK_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	wxGTK28
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	wxGTK28
-.endif
+.if !defined(WXGTK28_BUILDLINK3_MK)
+WXGTK28_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK28}
-BUILDLINK_PACKAGES+=	wxGTK28
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK28
-
-.if ${WXGTK28_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.wxGTK28+=	wxGTK28>=2.8.8
 BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
-.endif	# WXGTK28_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -25,5 +17,6 @@ BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.endif # WXGTK28_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-wxGTK28

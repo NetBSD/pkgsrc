@@ -1,4 +1,4 @@
-# $NetBSD: dlopen.builtin.mk,v 1.19 2009/01/23 14:21:38 obache Exp $
+# $NetBSD: dlopen.builtin.mk,v 1.20 2009/03/20 19:25:01 joerg Exp $
 
 BUILTIN_PKG:=	dl
 
@@ -93,9 +93,7 @@ BUILDLINK_PREFIX.dl=	/usr
 BUILDLINK_LDADD.dl=	-ldl
 .    endif
 .    if !empty(_BLNK_DLOPEN_REQUIRE_PTHREADS:M[yY][eE][sS])
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 .      include "../../mk/pthread.buildlink3.mk"
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
 .      include "../../mk/pthread.builtin.mk"
 BUILDLINK_CFLAGS.dl+=	${PTHREAD_CFLAGS}
 BUILDLINK_LDFLAGS.dl+=	${PTHREAD_LDFLAGS}

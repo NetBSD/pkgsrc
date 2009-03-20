@@ -1,27 +1,20 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/10/29 21:14:01 cube Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:46 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBXV_BUILDLINK3_MK:=	${LIBXV_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libXv
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libXv
-.endif
+.if !defined(LIBXV_BUILDLINK3_MK)
+LIBXV_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibXv}
-BUILDLINK_PACKAGES+=	libXv
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXv
-
-.if ${LIBXV_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libXv+=	libXv>=1.0.1
 BUILDLINK_PKGSRCDIR.libXv?=	../../x11/libXv
-.endif	# LIBXV_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
+.endif # LIBXV_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libXv

@@ -1,22 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/02/26 10:07:49 hasso Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:21 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-OPENCT_BUILDLINK3_MK:=	${OPENCT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	openct
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	openct
-.endif
+.if !defined(OPENCT_BUILDLINK3_MK)
+OPENCT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenct}
-BUILDLINK_PACKAGES+=	openct
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openct
-
-.if !empty(OPENCT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.openct+=	openct>=0.6.15
 BUILDLINK_PKGSRCDIR.openct?=	../../security/openct
 pkgbase := openct
 .include "../../mk/pkg-build-options.mk"
-.endif	# OPENCT_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.openct:Mpcsc-lite)
 .include "../../security/pcsc-lite/buildlink3.mk"
@@ -27,5 +19,6 @@ pkgbase := openct
 .endif
 
 .include "../../devel/libltdl/buildlink3.mk"
+.endif # OPENCT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-openct

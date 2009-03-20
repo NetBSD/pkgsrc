@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.14 2007/01/06 22:07:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:28 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ASPELL_BUILDLINK3_MK:=	${ASPELL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	aspell
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	aspell
-.endif
+.if !defined(ASPELL_BUILDLINK3_MK)
+ASPELL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Naspell}
-BUILDLINK_PACKAGES+=	aspell
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}aspell
-
-.if ${ASPELL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.aspell+=	aspell>=0.50.3
 BUILDLINK_ABI_DEPENDS.aspell+=	aspell>=0.60.4nb1
 BUILDLINK_PKGSRCDIR.aspell?=	../../textproc/aspell
-.endif	# ASPELL_BUILDLINK3_MK
 
 BUILDLINK_FILES.aspell=	bin/aspell bin/prezip-bin bin/word-list-compress
+.endif # ASPELL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-aspell

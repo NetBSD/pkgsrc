@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/11/03 20:07:33 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:54 joerg Exp $
 
 BUILDLINK_DEPMETHOD.xineramaproto?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XINERAMAPROTO_BUILDLINK3_MK:=	${XINERAMAPROTO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xineramaproto
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xineramaproto
-.endif
+.if !defined(XINERAMAPROTO_BUILDLINK3_MK)
+XINERAMAPROTO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxineramaproto}
-BUILDLINK_PACKAGES+=	xineramaproto
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xineramaproto
-
-.if ${XINERAMAPROTO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xineramaproto+=	xineramaproto>=1.1.1
 BUILDLINK_PKGSRCDIR.xineramaproto?=	../../x11/xineramaproto
-.endif	# XINERAMAPROTO_BUILDLINK3_MK
 
 .include "../../x11/libX11/buildlink3.mk"
+.endif # XINERAMAPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xineramaproto
