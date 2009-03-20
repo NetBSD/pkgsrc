@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:04 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 17:30:12 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_SOAPPY_BUILDLINK3_MK:=	${PY_SOAPPY_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	py-SOAPpy
@@ -14,6 +12,8 @@ BUILDLINK_PACKAGES+=	py-SOAPpy
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-SOAPpy
 
 .if !empty(PY_SOAPPY_BUILDLINK3_MK:M+)
+.include "../../lang/python/pyversion.mk"
+
 BUILDLINK_API_DEPENDS.py-SOAPpy+=	${PYPKGPREFIX}-SOAPpy>=0.11.4
 BUILDLINK_ABI_DEPENDS.py-SOAPpy?=	${PYPKGPREFIX}-SOAPpy>=0.11.4nb4
 BUILDLINK_PKGSRCDIR.py-SOAPpy?=	../../net/py-soappy
