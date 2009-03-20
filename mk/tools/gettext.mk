@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.9 2009/03/20 16:13:02 joerg Exp $
+# $NetBSD: gettext.mk,v 1.10 2009/03/20 20:17:30 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,6 +81,9 @@ MSGFMT_STRIP_MSGID_PLURAL!=						\
 	fi
 .          endif
 .      endif
+.    else
+_TOOLS_USE_PKGSRC.msgfmt=	yes
+.    endif
 MSGFMT_STRIP_MSGID_PLURAL?=	no
 MSGFMT_STRIP_MSGCTX?=		no
 .if ${MSGFMT_STRIP_MSGID_PLURAL} == "yes" || ${MSGFMT_STRIP_MSGCTX} == "yes"
@@ -89,9 +92,6 @@ _TOOLS_USE_MSGFMT_SH=		yes
 _TOOLS_USE_MSGFMT_SH=		no
 .endif
 MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
-.    else
-_TOOLS_USE_PKGSRC.msgfmt=	yes
-.    endif
 
 # If we're not using the builtin gettext implementation, then we should
 # definitely be using the pkgsrc version of msgfmt (gettext-tools).
