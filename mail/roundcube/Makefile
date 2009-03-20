@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/03/18 12:12:40 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/20 10:50:02 adrianp Exp $
 #
 
 DISTNAME=	roundcubemail-${RCVERSION}-dep
@@ -24,7 +24,6 @@ INSTALLATION_DIRS+=	${RCDIR}/bin
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	php5-dom-5.2.*:../../textproc/php5-dom
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_SMTP>=1.2.10:../../net/pear-Net_SMTP
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_Mime>=1.3:../../mail/pear-Mail_Mime
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2>=2.4.1:../../databases/pear-MDB2
