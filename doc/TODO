@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7984 2009/03/20 17:16:01 taca Exp $
+$NetBSD: TODO,v 1.7985 2009/03/20 22:19:31 asau Exp $
 
 Suggested new packages
 ======================
@@ -360,7 +360,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZenTest-3.11.1
 	o ZIPIdent-2.9
-	o aap-0.144
 	o abcm2ps-5.9.3
 	o abcmidi-20080928
 	o abiword-2.6.6
