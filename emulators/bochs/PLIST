@@ -1,32 +1,32 @@
-@comment $NetBSD: PLIST,v 1.10 2008/12/06 12:00:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/03/20 12:57:48 mishka Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
-lib/bochs/plugins/libbx_acpi.la
-lib/bochs/plugins/libbx_biosdev.la
-lib/bochs/plugins/libbx_busmouse.la
-lib/bochs/plugins/libbx_cmos.la
-lib/bochs/plugins/libbx_dma.la
-lib/bochs/plugins/libbx_extfpuirq.la
-lib/bochs/plugins/libbx_floppy.la
-lib/bochs/plugins/libbx_gameport.la
-lib/bochs/plugins/libbx_harddrv.la
-lib/bochs/plugins/libbx_keyboard.la
-lib/bochs/plugins/libbx_ne2k.la
-lib/bochs/plugins/libbx_parallel.la
-lib/bochs/plugins/libbx_pci.la
-lib/bochs/plugins/libbx_pci2isa.la
-lib/bochs/plugins/libbx_pci_ide.la
-lib/bochs/plugins/libbx_pcipnic.la
-lib/bochs/plugins/libbx_pciusb.la
-lib/bochs/plugins/libbx_pcivga.la
-lib/bochs/plugins/libbx_pic.la
-lib/bochs/plugins/libbx_sb16.la
-lib/bochs/plugins/libbx_serial.la
-lib/bochs/plugins/libbx_speaker.la
-lib/bochs/plugins/libbx_unmapped.la
-lib/bochs/plugins/libbx_vga.la
-lib/bochs/plugins/libbx_x.la
+${PLIST.tiny}lib/bochs/plugins/libbx_acpi.la
+${PLIST.tiny}lib/bochs/plugins/libbx_biosdev.la
+${PLIST.tiny}lib/bochs/plugins/libbx_busmouse.la
+${PLIST.tiny}lib/bochs/plugins/libbx_cmos.la
+${PLIST.tiny}lib/bochs/plugins/libbx_dma.la
+${PLIST.tiny}lib/bochs/plugins/libbx_extfpuirq.la
+${PLIST.tiny}lib/bochs/plugins/libbx_floppy.la
+${PLIST.tiny}lib/bochs/plugins/libbx_gameport.la
+${PLIST.tiny}lib/bochs/plugins/libbx_harddrv.la
+${PLIST.tiny}lib/bochs/plugins/libbx_keyboard.la
+${PLIST.tiny}lib/bochs/plugins/libbx_ne2k.la
+${PLIST.tiny}lib/bochs/plugins/libbx_parallel.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pci.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pci2isa.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pci_ide.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pcipnic.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pciusb.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pcivga.la
+${PLIST.tiny}lib/bochs/plugins/libbx_pic.la
+${PLIST.tiny}lib/bochs/plugins/libbx_sb16.la
+${PLIST.tiny}lib/bochs/plugins/libbx_serial.la
+${PLIST.tiny}lib/bochs/plugins/libbx_speaker.la
+${PLIST.tiny}lib/bochs/plugins/libbx_unmapped.la
+${PLIST.tiny}lib/bochs/plugins/libbx_vga.la
+${PLIST.tiny}lib/bochs/plugins/libbx_x.la
 man/man1/bochs-dlx.1
 man/man1/bochs.1
 man/man1/bxcommit.1
@@ -62,5 +62,5 @@ share/doc/bochs/bochsrc-sample.txt
 @dirrm share/doc/bochs
 @dirrm share/bochs/keymaps
 @dirrm share/bochs
-@dirrm lib/bochs/plugins
-@dirrm lib/bochs
+${PLIST.tiny}@dirrm lib/bochs/plugins
+${PLIST.tiny}@dirrm lib/bochs
