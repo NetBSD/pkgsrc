@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.205 2009/03/20 19:25:01 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.206 2009/03/20 20:10:15 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -146,7 +146,7 @@ MAKEFLAGS+=		IGNORE_PKG.${_pkg_}=${IGNORE_PKG.${_pkg_}}
 #
 _BLNK_PACKAGES=		# empty
 .for _pkg_ in ${BUILDLINK_TREE:N-*:Mx11-links} ${BUILDLINK_TREE:N-*:Nx11-links}
-.  if !defined(IGNORE_PKG.${_pkg_})
+.  if empty(_BLNK_PACKAGES:M${_pkg_}) && !defined(IGNORE_PKG.${_pkg_})
 _BLNK_PACKAGES+=	${_pkg_}
 .  endif
 .endfor
