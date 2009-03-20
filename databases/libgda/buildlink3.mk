@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.16 2007/08/09 19:07:38 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:05 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBGDA_BUILDLINK3_MK:=	${LIBGDA_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgda
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libgda
-.endif
+.if !defined(LIBGDA_BUILDLINK3_MK)
+LIBGDA_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgda}
-BUILDLINK_PACKAGES+=	libgda
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgda
-
-.if !empty(LIBGDA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgda+=	libgda>=2.99.2
 BUILDLINK_ABI_DEPENDS.libgda+=	libgda>=3.0.0
 BUILDLINK_PKGSRCDIR.libgda?=	../../databases/libgda
@@ -20,7 +13,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/libgda-3.0\/providers$$/ \
 				{ print "@comment in libgda: " $$0; next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/libgda-3.0$$/ \
 				{ print "@comment in libgda: " $$0; next; }
-.endif	# LIBGDA_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -34,5 +26,6 @@ pkgbase := libgda
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # LIBGDA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgda

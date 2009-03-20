@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:06 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-VLC08_BUILDLINK3_MK:=	${VLC08_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	vlc08
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	vlc08
-.endif
+.if !defined(VLC08_BUILDLINK3_MK)
+VLC08_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nvlc08}
-BUILDLINK_PACKAGES+=	vlc08
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc08
-
-.if ${VLC08_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.vlc08+=	vlc08>=0.8.6d
 BUILDLINK_ABI_DEPENDS.vlc08?=	vlc08>=0.8.6inb1
 BUILDLINK_PKGSRCDIR.vlc08?=	../../multimedia/vlc08
-.endif	# VLC08_BUILDLINK3_MK
 
 pkgbase:= vlc08
 .include "../../mk/pkg-build-options.mk"
@@ -50,5 +42,6 @@ pkgbase:= vlc08
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.endif # VLC08_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-vlc08

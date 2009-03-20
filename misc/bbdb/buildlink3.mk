@@ -1,24 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:00 joerg Exp $
 #
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-BBDB_BUILDLINK3_MK:=	${BBDB_BUILDLINK3_MK}+
 
 .include "../../editors/emacs/modules.mk"
 .if ${EMACS_FLAVOR} == "emacs"
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	bbdb
-.endif
+BUILDLINK_TREE+=	bbdb
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nbbdb}
-BUILDLINK_PACKAGES+=	bbdb
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}bbdb
+.if !defined(BBDB_BUILDLINK3_MK)
+BBDB_BUILDLINK3_MK:=
 
-.if ${BBDB_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.bbdb+=	${EMACS_PKGNAME_PREFIX}bbdb>=2
 BUILDLINK_PKGSRCDIR.bbdb?=	../../misc/bbdb
-.endif	# BBDB_BUILDLINK3_MK
 
 BUILDLINK_CONTENTS_FILTER.bbdb=	${EGREP} '.*\.el$$|.*\.elc$$'
 
@@ -28,5 +20,6 @@ BUILDLINK_CONTENTS_FILTER.bbdb=	${EGREP} '.*\.el$$|.*\.elc$$'
 EMACS_MODULES+=		base
 
 .endif
+.endif # BBDB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-bbdb

@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/04/13 23:21:38 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:44 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-P5_CAIRO_BUILDLINK3_MK:=	${P5_CAIRO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	p5-cairo
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	p5-cairo
-.endif
+.if !defined(P5_CAIRO_BUILDLINK3_MK)
+P5_CAIRO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Np5-cairo}
-BUILDLINK_PACKAGES+=	p5-cairo
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}p5-cairo
-
-.if ${P5_CAIRO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.p5-cairo+=	p5-cairo>=1.023
 BUILDLINK_PKGSRCDIR.p5-cairo?=	../../graphics/p5-cairo
-.endif	# P5_CAIRO_BUILDLINK3_MK
 
 .include "../../graphics/cairo/buildlink3.mk"
+.endif # P5_CAIRO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-p5-cairo

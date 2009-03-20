@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/09/21 13:03:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:12 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-DEVHELP_BUILDLINK3_MK:=	${DEVHELP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	devhelp
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	devhelp
-.endif
+.if !defined(DEVHELP_BUILDLINK3_MK)
+DEVHELP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndevhelp}
-BUILDLINK_PACKAGES+=	devhelp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}devhelp
-
-.if ${DEVHELP_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.devhelp+=	devhelp>=0.12nb1
 BUILDLINK_PKGSRCDIR.devhelp?=	../../devel/devhelp
-.endif	# DEVHELP_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -23,5 +15,6 @@ BUILDLINK_PKGSRCDIR.devhelp?=	../../devel/devhelp
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # DEVHELP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-devhelp

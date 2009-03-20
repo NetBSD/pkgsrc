@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/08/29 14:17:06 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:38 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-SWISH_E_BUILDLINK3_MK:=	${SWISH_E_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	swish-e
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	swish-e
-.endif
+.if !defined(SWISH_E_BUILDLINK3_MK)
+SWISH_E_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nswish-e}
-BUILDLINK_PACKAGES+=	swish-e
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}swish-e
-
-.if ${SWISH_E_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.swish-e+=	swish-e>=2.4.5nb1
 BUILDLINK_PKGSRCDIR.swish-e?=	../../www/swish-e
-.endif	# SWISH_E_BUILDLINK3_MK
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.endif # SWISH_E_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-swish-e

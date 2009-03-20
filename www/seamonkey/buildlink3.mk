@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/05/19 10:43:02 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:37 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SEAMONKEY_BUILDLINK3_MK:=	${SEAMONKEY_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	seamonkey
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	seamonkey
-.endif
+.if !defined(SEAMONKEY_BUILDLINK3_MK)
+SEAMONKEY_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nseamonkey}
-BUILDLINK_PACKAGES+=	seamonkey
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}seamonkey
-
-.if !empty(SEAMONKEY_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.seamonkey+=	seamonkey>=1.0
 BUILDLINK_ABI_DEPENDS.seamonkey?=	seamonkey>=1.0.1nb1
 BUILDLINK_PKGSRCDIR.seamonkey?=		../../www/seamonkey
-.endif	# SEAMONKEY_BUILDLINK3_MK
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # SEAMONKEY_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-seamonkey

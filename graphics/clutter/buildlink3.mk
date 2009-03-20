@@ -1,24 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/12/14 10:57:18 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:37 joerg Exp $
 #
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-CLUTTER_BUILDLINK3_MK:=	${CLUTTER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	clutter
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	clutter
-.endif
+.if !defined(CLUTTER_BUILDLINK3_MK)
+CLUTTER_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nclutter}
-BUILDLINK_PACKAGES+=	clutter
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}clutter
-
-.if ${CLUTTER_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.clutter+=	clutter>=0.8.0
 BUILDLINK_PKGSRCDIR.clutter?=	../../graphics/clutter
 
 PRINT_PLIST_AWK+=	/^@dirrm include\/clutter-0.8$$/ \
 				{ print "@comment in clutter: " $$0; next; }
-.endif	# CLUTTER_BUILDLINK3_MK
 
 pkgbase := clutter
 .include "../../mk/pkg-build-options.mk"
@@ -36,5 +28,6 @@ pkgbase := clutter
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
+.endif # CLUTTER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-clutter

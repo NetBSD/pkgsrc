@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/12/27 13:37:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:20 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBMATCHBOX_BUILDLINK3_MK:=	${LIBMATCHBOX_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libmatchbox
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libmatchbox
-.endif
+.if !defined(LIBMATCHBOX_BUILDLINK3_MK)
+LIBMATCHBOX_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmatchbox}
-BUILDLINK_PACKAGES+=	libmatchbox
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmatchbox
-
-.if !empty(LIBMATCHBOX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libmatchbox+=	libmatchbox>=1.4
 BUILDLINK_ABI_DEPENDS.libmatchbox+=	libmatchbox>=1.7nb3
 BUILDLINK_PKGSRCDIR.libmatchbox?=	../../devel/libmatchbox
-.endif	# LIBMATCHBOX_BUILDLINK3_MK
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.endif # LIBMATCHBOX_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libmatchbox

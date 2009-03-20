@@ -1,20 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/09/15 15:05:52 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:29 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNOME_DOC_UTILS_BUILDLINK3_MK:=	${GNOME_DOC_UTILS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnome-doc-utils
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnome-doc-utils
-.endif
+.if !defined(GNOME_DOC_UTILS_BUILDLINK3_MK)
+GNOME_DOC_UTILS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-doc-utils}
-BUILDLINK_PACKAGES+=	gnome-doc-utils
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-doc-utils
-
-.if !empty(GNOME_DOC_UTILS_BUILDLINK3_MK:M+)
 BUILDLINK_DEPMETHOD.gnome-doc-utils+=	build
 BUILDLINK_API_DEPENDS.gnome-doc-utils+=	gnome-doc-utils>=0.8.0
 BUILDLINK_PKGSRCDIR.gnome-doc-utils?=	../../textproc/gnome-doc-utils
-.endif	# GNOME_DOC_UTILS_BUILDLINK3_MK
+.endif # GNOME_DOC_UTILS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnome-doc-utils

@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/04/25 23:24:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:34 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GGZ_CLIENT_LIBS_BUILDLINK3_MK:=	${GGZ_CLIENT_LIBS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ggz-client-libs
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	ggz-client-libs
-.endif
+.if !defined(GGZ_CLIENT_LIBS_BUILDLINK3_MK)
+GGZ_CLIENT_LIBS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nggz-client-libs}
-BUILDLINK_PACKAGES+=	ggz-client-libs
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ggz-client-libs
-
-.if ${GGZ_CLIENT_LIBS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ggz-client-libs+=	ggz-client-libs>=0.0.14.1
 BUILDLINK_PKGSRCDIR.ggz-client-libs?=	../../games/ggz-client-libs
-.endif	# GGZ_CLIENT_LIBS_BUILDLINK3_MK
 
 .include "../../games/libggz/buildlink3.mk"
+.endif # GGZ_CLIENT_LIBS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ggz-client-libs

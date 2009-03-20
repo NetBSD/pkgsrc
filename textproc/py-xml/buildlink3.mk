@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 17:30:12 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:32 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PYXML_BUILDLINK3_MK:=	${PYXML_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pyxml
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pyxml
-.endif
+.if !defined(PYXML_BUILDLINK3_MK)
+PYXML_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npyxml}
-BUILDLINK_PACKAGES+=	pyxml
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pyxml
-
-.if !empty(PYXML_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pyxml+=	${PYPKGPREFIX}-xml>=0.8.3nb1
 BUILDLINK_ABI_DEPENDS.pyxml?=	${PYPKGPREFIX}-xml>=0.8.4nb2
 BUILDLINK_PKGSRCDIR.pyxml?=	../../textproc/py-xml
-.endif	# PYXML_BUILDLINK3_MK
 
 .include "../../textproc/expat/buildlink3.mk"
+.endif # PYXML_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pyxml

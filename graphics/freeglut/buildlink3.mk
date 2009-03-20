@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/11/08 01:10:12 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:38 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-FREEGLUT_BUILDLINK3_MK:=	${FREEGLUT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	freeglut
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	freeglut
-.endif
+.if !defined(FREEGLUT_BUILDLINK3_MK)
+FREEGLUT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreeglut}
-BUILDLINK_PACKAGES+=	freeglut
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}freeglut
-
-.if !empty(FREEGLUT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.freeglut+=	freeglut>=2.2.0
 BUILDLINK_ABI_DEPENDS.freeglut+=	freeglut>=2.2.0nb3
 BUILDLINK_PKGSRCDIR.freeglut?=	../../graphics/freeglut
-.endif	# FREEGLUT_BUILDLINK3_MK
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.endif # FREEGLUT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-freeglut

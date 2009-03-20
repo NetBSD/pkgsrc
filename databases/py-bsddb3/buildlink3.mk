@@ -1,25 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/09/18 16:54:22 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:24:06 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_BSDDB3_BUILDLINK3_MK:=	${PY_BSDDB3_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	py-bsddb3
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	py-bsddb3
-.endif
+.if !defined(PY_BSDDB3_BUILDLINK3_MK)
+PY_BSDDB3_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-bsddb3}
-BUILDLINK_PACKAGES+=	py-bsddb3
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-bsddb3
-
-.if !empty(PY_BSDDB3_BUILDLINK3_MK:M+)
 .  include "../../mk/pthread.buildlink3.mk"
 .  include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.7.2
 BUILDLINK_ABI_DEPENDS.py-bsddb3+=	${PYPKGPREFIX}-bsddb3>=4.7.2
 BUILDLINK_PKGSRCDIR.py-bsddb3?=	../../databases/py-bsddb3
-.endif	# PY_BSDDB3_BUILDLINK3_MK
 
 .include "../../databases/db4/buildlink3.mk"
+.endif # PY_BSDDB3_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-py-bsddb3

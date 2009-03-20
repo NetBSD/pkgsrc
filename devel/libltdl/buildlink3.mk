@@ -1,7 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/12/12 21:52:35 joerg Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBLTDL_BUILDLINK3_MK:=	${LIBLTDL_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:20 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} == "NetBSD"
@@ -11,20 +8,17 @@ _SKIP_LIBLTDL=		yes
 .endif
 
 .if !defined(_SKIP_LIBLTDL)
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libltdl
-.endif
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibltdl}
-BUILDLINK_PACKAGES+=	libltdl
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libltdl
+BUILDLINK_TREE+=	libltdl
 
-.if !empty(LIBLTDL_BUILDLINK3_MK:M+)
+.if !defined(LIBLTDL_BUILDLINK3_MK)
+LIBLTDL_BUILDLINK3_MK:=
+
 BUILDLINK_API_DEPENDS.libltdl+=	libltdl>=1.5.10
 BUILDLINK_PKGSRCDIR.libltdl?=	../../devel/libltdl
-.endif	# LIBLTDL_BUILDLINK3_MK
 
 .include "../../mk/dlopen.buildlink3.mk"
 .endif
+.endif # LIBLTDL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libltdl

@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.23 2008/01/18 05:08:36 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2009/03/20 19:25:00 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-KDEPIM_BUILDLINK3_MK:=	${KDEPIM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	kdepim
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	kdepim
-.endif
+.if !defined(KDEPIM_BUILDLINK3_MK)
+KDEPIM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdepim}
-BUILDLINK_PACKAGES+=	kdepim
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdepim
-
-.if !empty(KDEPIM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.kdepim+=	kdepim>=3.5.0nb1
 BUILDLINK_ABI_DEPENDS.kdepim?=	kdepim>=3.5.8nb2
 BUILDLINK_PKGSRCDIR.kdepim?=	../../misc/kdepim3
-.endif	# KDEPIM_BUILDLINK3_MK
 
 pkgbase := kdepim
 .include "../../mk/pkg-build-options.mk"
@@ -28,5 +20,6 @@ pkgbase := kdepim
 .endif
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.endif # KDEPIM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-kdepim

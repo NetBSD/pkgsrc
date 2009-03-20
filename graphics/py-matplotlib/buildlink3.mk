@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 17:30:11 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:24:44 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_MATPLOTLIB_BUILDLINK3_MK:=	${PY_MATPLOTLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pymatplotlib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pymatplotlib
-.endif
+.if !defined(PY_MATPLOTLIB_BUILDLINK3_MK)
+PY_MATPLOTLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npymatplotlib}
-BUILDLINK_PACKAGES+=	pymatplotlib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pymatplotlib
-
-.if !empty(PY_MATPLOTLIB_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pymatplotlib+=	${PYPKGPREFIX}-matplotlib>=0.87.2
 BUILDLINK_PKGSRCDIR.pymatplotlib?=	../../graphics/py-matplotlib
-.endif	# PY_MATPLOTLIB_BUILDLINK3_MK
+.endif # PY_MATPLOTLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pymatplotlib

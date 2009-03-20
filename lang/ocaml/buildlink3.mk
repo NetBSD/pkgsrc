@@ -1,18 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.21 2008/01/23 20:42:25 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2009/03/20 19:24:51 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-OCAML_BUILDLINK3_MK:=	${OCAML_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ocaml
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	ocaml
-.endif
+.if !defined(OCAML_BUILDLINK3_MK)
+OCAML_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Nocaml}
-BUILDLINK_PACKAGES+=		ocaml
-
-BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ocaml
-
-.if !empty(OCAML_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
 BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.09.1nb2
 BUILDLINK_PKGSRCDIR.ocaml?=	../../lang/ocaml
@@ -48,7 +40,6 @@ ocaml-wrappers:
 		${LN} -s ${BUILDLINK_PREFIX.ocaml}/bin/"$$w"		\
 		         ${BUILDLINK_DIR}/bin/"$$w";			\
 	done
+.endif # OCAML_BUILDLINK3_MK
 
-.endif	# OCAML_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ocaml

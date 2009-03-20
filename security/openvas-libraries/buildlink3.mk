@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/04 01:08:52 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:21 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-OPENVAS_LIBRARIES_BUILDLINK3_MK:=	${OPENVAS_LIBRARIES_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	openvas-libraries
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	openvas-libraries
-.endif
+.if !defined(OPENVAS_LIBRARIES_BUILDLINK3_MK)
+OPENVAS_LIBRARIES_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenvas-libraries}
-BUILDLINK_PACKAGES+=	openvas-libraries
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openvas-libraries
-
-.if ${OPENVAS_LIBRARIES_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.openvas-libraries+=	openvas-libraries>=2.0.0
 BUILDLINK_PKGSRCDIR.openvas-libraries?=	../../security/openvas-libraries
-.endif	# OPENVAS_LIBRARIES_BUILDLINK3_MK
+.endif # OPENVAS_LIBRARIES_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-openvas-libraries

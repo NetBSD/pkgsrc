@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/12/13 03:20:41 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:38 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-XAW_XPM_BUILDLINK3_MK:=	${XAW_XPM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	Xaw-Xpm
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	Xaw-Xpm
-.endif
+.if !defined(XAW_XPM_BUILDLINK3_MK)
+XAW_XPM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NXaw-Xpm}
-BUILDLINK_PACKAGES+=	Xaw-Xpm
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}Xaw-Xpm
-
-.if !empty(XAW_XPM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.Xaw-Xpm+=	Xaw-Xpm>=1.1
 BUILDLINK_ABI_DEPENDS.Xaw-Xpm?=	Xaw-Xpm>=1.1nb2
 BUILDLINK_PKGSRCDIR.Xaw-Xpm?=	../../x11/Xaw-Xpm
@@ -33,9 +26,8 @@ LIBXAW?=	-L${BUILDLINK_PREFIX.Xaw-Xpm}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.libXpm}/lib	\
 		-lXaw3d -lXpm
 
-.endif	# XAW_XPM_BUILDLINK3_MK
-
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.endif # XAW_XPM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-Xaw-Xpm

@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.27 2008/01/18 05:10:05 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.28 2009/03/20 19:25:42 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-KDEBASE_BUILDLINK3_MK:=	${KDEBASE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	kdebase
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	kdebase
-.endif
+.if !defined(KDEBASE_BUILDLINK3_MK)
+KDEBASE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkdebase}
-BUILDLINK_PACKAGES+=	kdebase
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}kdebase
-
-.if !empty(KDEBASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.kdebase+=	kdebase>=3.5.0nb2
 BUILDLINK_ABI_DEPENDS.kdebase?=	kdebase>=3.5.8nb5
 BUILDLINK_PKGSRCDIR.kdebase?=	../../x11/kdebase3
-.endif	# KDEBASE_BUILDLINK3_MK
 
 pkgbase := kdebase
 .include "../../mk/pkg-build-options.mk"
@@ -35,5 +27,6 @@ BUILDLINK_API_DEPENDS.Xrandr+=      Xrandr>=1.0
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
+.endif # KDEBASE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-kdebase

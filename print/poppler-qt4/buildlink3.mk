@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/12/12 01:29:22 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:15 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-POPPLER_QT4_BUILDLINK3_MK:=	${POPPLER_QT4_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	poppler-qt4
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	poppler-qt4
-.endif
+.if !defined(POPPLER_QT4_BUILDLINK3_MK)
+POPPLER_QT4_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npoppler-qt4}
-BUILDLINK_PACKAGES+=	poppler-qt4
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}poppler-qt4
-
-.if ${POPPLER_QT4_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.poppler-qt4+=	poppler-qt4>=0.6.1
 BUILDLINK_PKGSRCDIR.poppler-qt4?=	../../print/poppler-qt4
-.endif	# POPPLER_QT4_BUILDLINK3_MK
 
 .include "../../print/poppler/buildlink3.mk"
+.endif # POPPLER_QT4_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-poppler-qt4

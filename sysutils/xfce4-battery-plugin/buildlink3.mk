@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/05/04 10:18:17 hira Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:26 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK:=	${XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4-battery-plugin
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4-battery-plugin
-.endif
+.if !defined(XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK)
+XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-battery-plugin}
-BUILDLINK_PACKAGES+=	xfce4-battery-plugin
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-battery-plugin
-
-.if ${XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4-battery-plugin+=	xfce4-battery-plugin>=0.5.0nb2
 BUILDLINK_PKGSRCDIR.xfce4-battery-plugin?=	../../sysutils/xfce4-battery-plugin
-.endif	# XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-panel/buildlink3.mk"
@@ -22,5 +14,6 @@ BUILDLINK_PKGSRCDIR.xfce4-battery-plugin?=	../../sysutils/xfce4-battery-plugin
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.endif # XFCE4_BATTERY_PLUGIN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4-battery-plugin

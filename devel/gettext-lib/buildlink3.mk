@@ -1,23 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.30 2008/02/27 22:10:34 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2009/03/20 19:24:13 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GETTEXT_BUILDLINK3_MK:=	${GETTEXT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gettext
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gettext
-.endif
+.if !defined(GETTEXT_BUILDLINK3_MK)
+GETTEXT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngettext}
-BUILDLINK_PACKAGES+=	gettext
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gettext
-
-.if !empty(GETTEXT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gettext+=	gettext-lib>=0.14.5
 BUILDLINK_PKGSRCDIR.gettext?=	../../devel/gettext-lib
 BUILDLINK_LIBNAME.gettext=	intl
 BUILDLINK_LDADD.gettext=	${BUILDLINK_LIBNAME.gettext:S/^/-l/:S/^-l$//}
 BUILDLINK_LDADD.gettext+=	${BUILDLINK_LDADD.iconv}
-.endif	# GETTEXT_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -44,5 +36,6 @@ USE_BUILTIN.iconv=	yes
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.endif # GETTEXT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gettext

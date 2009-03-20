@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.12 2006/07/08 23:11:07 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:25:19 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBGPG_ERROR_BUILDLINK3_MK:=	${LIBGPG_ERROR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgpg-error
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libgpg-error
-.endif
+.if !defined(LIBGPG_ERROR_BUILDLINK3_MK)
+LIBGPG_ERROR_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgpg-error}
-BUILDLINK_PACKAGES+=	libgpg-error
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgpg-error
-
-.if !empty(LIBGPG_ERROR_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=0.6
 BUILDLINK_ABI_DEPENDS.libgpg-error+=	libgpg-error>=1.0nb1
 BUILDLINK_PKGSRCDIR.libgpg-error?=	../../security/libgpg-error
-.endif	# LIBGPG_ERROR_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # LIBGPG_ERROR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgpg-error

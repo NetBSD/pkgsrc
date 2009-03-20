@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/09/20 21:03:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:31 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBXMLPP_BUILDLINK3_MK:=	${LIBXMLPP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libxmlpp
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libxmlpp
-.endif
+.if !defined(LIBXMLPP_BUILDLINK3_MK)
+LIBXMLPP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxmlpp}
-BUILDLINK_PACKAGES+=	libxmlpp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxmlpp
-
-.if !empty(LIBXMLPP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libxmlpp+=	libxml++>=2.10.0
 BUILDLINK_ABI_DEPENDS.libxmlpp+=	libxml++>=2.10.0nb1
 BUILDLINK_PKGSRCDIR.libxmlpp?=	../../textproc/libxml++
-.endif	# LIBXMLPP_BUILDLINK3_MK
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
+.endif # LIBXMLPP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libxmlpp

@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 17:30:10 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:27 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-PY_CURSESPANEL_BUILDLINK3_MK:=	${PY_CURSESPANEL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pycursespanel
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pycursespanel
-.endif
+.if !defined(PY_CURSESPANEL_BUILDLINK3_MK)
+PY_CURSESPANEL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npycursespanel}
-BUILDLINK_PACKAGES+=	pycursespanel
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pycursespanel
-
-.if !empty(PY_CURSESPANEL_BUILDLINK3_MK:M+)
 .include "../../lang/python/pyversion.mk"
 
 BUILDLINK_API_DEPENDS.pycursespanel+=	${PYPKGPREFIX}-cursespanel-[0-9]*
 BUILDLINK_ABI_DEPENDS.pycursespanel?=	${PYPKGPREFIX}-cursespanel>=0nb3
 BUILDLINK_PKGSRCDIR.pycursespanel?=	../../devel/py-cursespanel
-.endif	# PY_CURSESPANEL_BUILDLINK3_MK
 
 .include "../../devel/ncurses/buildlink3.mk"
+.endif # PY_CURSESPANEL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pycursespanel

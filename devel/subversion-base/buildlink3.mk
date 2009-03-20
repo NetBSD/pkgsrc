@@ -1,20 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/09/06 20:54:32 wiz Exp $
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:30 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	subversion-base
-.endif
+BUILDLINK_TREE+=	subversion-base
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsubversion-base}
-BUILDLINK_PACKAGES+=	subversion-base
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}subversion-base
+.if !defined(SUBVERSION_BASE_BUILDLINK3_MK)
+SUBVERSION_BASE_BUILDLINK3_MK:=
 
-.if !empty(SUBVERSION_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=1.0.0
 BUILDLINK_ABI_DEPENDS.subversion-base?=	subversion-base>=1.5.2nb1
 BUILDLINK_PKGSRCDIR.subversion-base?=	../../devel/subversion-base
@@ -23,8 +16,6 @@ BUILDLINK_FILES.subversion-base+=	bin/svn-config
 
 pkgbase := subversion-base
 .include "../../mk/pkg-build-options.mk"
-
-.endif	# SUBVERSION_BASE_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.subversion-base:Msasl)
 .include "../../security/cyrus-sasl/buildlink3.mk"
@@ -42,5 +33,6 @@ pkgbase := subversion-base
 .  include "../../devel/apr0/buildlink3.mk"
 .  include "../../www/neon/buildlink3.mk"
 .endif
+.endif # SUBVERSION_BASE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-subversion-base

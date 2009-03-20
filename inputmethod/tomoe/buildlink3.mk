@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/04/13 06:05:44 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:47 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-TOMOE_BUILDLINK3_MK:=	${TOMOE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tomoe
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	tomoe
-.endif
+.if !defined(TOMOE_BUILDLINK3_MK)
+TOMOE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntomoe}
-BUILDLINK_PACKAGES+=	tomoe
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}tomoe
-
-.if ${TOMOE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.tomoe+=	tomoe>=0.6.0
 BUILDLINK_PKGSRCDIR.tomoe?=	../../inputmethod/tomoe
-.endif	# TOMOE_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
+.endif # TOMOE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tomoe

@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:42 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:14 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GIBLIB_BUILDLINK3_MK:=	${GIBLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	giblib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	giblib
-.endif
+.if !defined(GIBLIB_BUILDLINK3_MK)
+GIBLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngiblib}
-BUILDLINK_PACKAGES+=	giblib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}giblib
-
-.if !empty(GIBLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.giblib+=	giblib>=1.2.3nb3
 BUILDLINK_ABI_DEPENDS.giblib+=	giblib>=1.2.4nb4
 BUILDLINK_PKGSRCDIR.giblib?=	../../devel/giblib
-.endif	# GIBLIB_BUILDLINK3_MK
 
 .include "../../graphics/imlib2/buildlink3.mk"
+.endif # GIBLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-giblib

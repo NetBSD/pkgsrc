@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/17 22:10:15 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:26 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PANGOMM_BUILDLINK3_MK:=	${PANGOMM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pangomm
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	pangomm
-.endif
+.if !defined(PANGOMM_BUILDLINK3_MK)
+PANGOMM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npangomm}
-BUILDLINK_PACKAGES+=	pangomm
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pangomm
-
-.if ${PANGOMM_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.pangomm+=	pangomm>=2.24.0
 BUILDLINK_PKGSRCDIR.pangomm?=	../../devel/pangomm
-.endif	# PANGOMM_BUILDLINK3_MK
 
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairomm/buildlink3.mk"
+.endif # PANGOMM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pangomm

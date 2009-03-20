@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.12 2008/10/09 19:01:57 bad Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:02 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-JPILOT_BUILDLINK3_MK:=	${JPILOT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	jpilot
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	jpilot
-.endif
+.if !defined(JPILOT_BUILDLINK3_MK)
+JPILOT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njpilot}
-BUILDLINK_PACKAGES+=	jpilot
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jpilot
-
-.if !empty(JPILOT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jpilot+=	jpilot>=1.6.0
 BUILDLINK_ABI_DEPENDS.jpilot+=	jpilot>=1.6.0
 BUILDLINK_PKGSRCDIR.jpilot?=	../../comms/jpilot
-.endif	# JPILOT_BUILDLINK3_MK
 
 .include "../../comms/pilot-link-libs/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # JPILOT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-jpilot

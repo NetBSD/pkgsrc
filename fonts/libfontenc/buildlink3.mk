@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/06/30 03:06:58 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:34 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBFONTENC_BUILDLINK3_MK:=	${LIBFONTENC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libfontenc
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libfontenc
-.endif
+.if !defined(LIBFONTENC_BUILDLINK3_MK)
+LIBFONTENC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibfontenc}
-BUILDLINK_PACKAGES+=	libfontenc
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libfontenc
-
-.if ${LIBFONTENC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libfontenc+=	libfontenc>=0.99
 BUILDLINK_PKGSRCDIR.libfontenc?=	../../fonts/libfontenc
-.endif	# LIBFONTENC_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
+.endif # LIBFONTENC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libfontenc

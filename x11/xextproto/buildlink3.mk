@@ -1,25 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/01/07 13:59:36 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:52 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_DEPMETHOD.xextproto?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XEXTPROTO_BUILDLINK3_MK:=	${XEXTPROTO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xextproto
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	xextproto
-.endif
+.if !defined(XEXTPROTO_BUILDLINK3_MK)
+XEXTPROTO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxextproto}
-BUILDLINK_PACKAGES+=	xextproto
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xextproto
-
-.if !empty(XEXTPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0
 BUILDLINK_PKGSRCDIR.xextproto?=	../../x11/xextproto
-.endif	# XEXTPROTO_BUILDLINK3_MK
 
 .include "../../x11/inputproto/buildlink3.mk"
+.endif # XEXTPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xextproto

@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/11/20 17:25:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:38 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GD_BUILDLINK3_MK:=	${GD_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gd
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gd
-.endif
+.if !defined(GD_BUILDLINK3_MK)
+GD_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngd}
-BUILDLINK_PACKAGES+=	gd
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gd
-
-.if !empty(GD_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gd+=		gd>=2.0.15nb1
 BUILDLINK_ABI_DEPENDS.gd+=	gd>=2.0.33nb3
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
-.endif	# GD_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -24,5 +16,6 @@ BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
 .include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.endif # GD_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gd

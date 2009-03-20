@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.4 2006/07/08 23:11:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:25:29 joerg Exp $
 
 # provided mostly for pkg-config
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GTK_DOC_BUILDLINK3_MK:=	${GTK_DOC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gtk-doc
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gtk-doc
-.endif
+.if !defined(GTK_DOC_BUILDLINK3_MK)
+GTK_DOC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtk-doc}
-BUILDLINK_PACKAGES+=	gtk-doc
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtk-doc
-
-.if !empty(GTK_DOC_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gtk-doc+=	gtk-doc>=1.4nb1
 BUILDLINK_PKGSRCDIR.gtk-doc?=	../../textproc/gtk-doc
-.endif	# GTK_DOC_BUILDLINK3_MK
 
 BUILDLINK_DEPMETHOD.gtk-doc?=	build
+.endif # GTK_DOC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gtk-doc

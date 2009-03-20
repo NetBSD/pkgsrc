@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/03/09 11:17:27 hira Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:24 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-M17N_LIB_BUILDLINK3_MK:=	${M17N_LIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	m17n-lib
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	m17n-lib
-.endif
+.if !defined(M17N_LIB_BUILDLINK3_MK)
+M17N_LIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nm17n-lib}
-BUILDLINK_PACKAGES+=	m17n-lib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}m17n-lib
-
-.if ${M17N_LIB_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.m17n-lib+=	m17n-lib>=1.5.1
 BUILDLINK_PKGSRCDIR.m17n-lib?=	../../devel/m17n-lib
-.endif	# M17N_LIB_BUILDLINK3_MK
 
 pkgbase := m17n-lib
 .include "../../mk/pkg-build-options.mk"
@@ -44,5 +36,6 @@ pkgbase := m17n-lib
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../misc/m17n-db/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # M17N_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-m17n-lib

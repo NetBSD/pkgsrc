@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.17 2007/02/15 14:35:16 rillig Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GCC3_C_BUILDLINK3_MK:=	${GCC3_C_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.18 2009/03/20 19:24:49 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gcc3-c
-.endif
+BUILDLINK_TREE+=	gcc3-c
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngcc3-c}
-BUILDLINK_PACKAGES+=	gcc3-c
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gcc3-c
+.if !defined(GCC3_C_BUILDLINK3_MK)
+GCC3_C_BUILDLINK3_MK:=
 
-.if !empty(GCC3_C_BUILDLINK3_MK:M+)
 .  include "../../mk/bsd.prefs.mk"
 .  if defined(GCC3_INSTALLTO_SUBPREFIX)
 #
@@ -42,6 +35,6 @@ BUILDLINK_DEPMETHOD.gcc3-c+=	full
 .  else
 BUILDLINK_DEPMETHOD.gcc3-c?=	build
 .  endif
-.endif	# GCC3_C_BUILDLINK3_MK
+.endif # GCC3_C_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gcc3-c

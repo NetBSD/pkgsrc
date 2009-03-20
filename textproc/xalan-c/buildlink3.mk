@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/08 23:11:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:25:33 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-XALAN_C_BUILDLINK3_MK:=	${XALAN_C_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xalan-c
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	xalan-c
-.endif
+.if !defined(XALAN_C_BUILDLINK3_MK)
+XALAN_C_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxalan-c}
-BUILDLINK_PACKAGES+=	xalan-c
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xalan-c
-
-.if !empty(XALAN_C_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.xalan-c+=	xalan-c>=1.6nb3
 BUILDLINK_ABI_DEPENDS.xalan-c?=	xalan-c>=1.6nb4
 BUILDLINK_PKGSRCDIR.xalan-c?=	../../textproc/xalan-c
-.endif	# XALAN_C_BUILDLINK3_MK
 
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
+.endif # XALAN_C_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xalan-c

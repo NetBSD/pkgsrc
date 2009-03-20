@@ -1,22 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/07/08 23:11:16 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:50 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-QT3_TOOLS_BUILDLINK3_MK:=	${QT3_TOOLS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	qt3-tools
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	qt3-tools
-.endif
+.if !defined(QT3_TOOLS_BUILDLINK3_MK)
+QT3_TOOLS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqt3-tools}
-BUILDLINK_PACKAGES+=	qt3-tools
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}qt3-tools
-
-.if !empty(QT3_TOOLS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.qt3-tools+=	qt3-tools>=3.1.2nb3
 BUILDLINK_ABI_DEPENDS.qt3-tools+=	qt3-tools>=3.3.6nb1
 BUILDLINK_PKGSRCDIR.qt3-tools?=	../../x11/qt3-tools
 BUILDLINK_DEPMETHOD.qt3-tools?=	build
-.endif	# QT3_TOOLS_BUILDLINK3_MK
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 
@@ -31,5 +23,6 @@ MAKE_ENV+=		QMAKE="${QTDIR}/bin/qmake"
 # platforms (solaris for example)
 CONFIGURE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
 MAKE_ENV+=		QMAKESPEC=${QTDIR}/mkspecs/netbsd-g++
+.endif # QT3_TOOLS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-qt3-tools

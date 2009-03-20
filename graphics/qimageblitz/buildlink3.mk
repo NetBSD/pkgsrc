@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/11/04 10:07:38 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:44 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-QIMAGEBLITZ_BUILDLINK3_MK:=	${QIMAGEBLITZ_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	qimageblitz
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	qimageblitz
-.endif
+.if !defined(QIMAGEBLITZ_BUILDLINK3_MK)
+QIMAGEBLITZ_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nqimageblitz}
-BUILDLINK_PACKAGES+=	qimageblitz
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}qimageblitz
-
-.if ${QIMAGEBLITZ_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.qimageblitz+=	qimageblitz>=0.0.4
 BUILDLINK_PKGSRCDIR.qimageblitz?=	../../graphics/qimageblitz
-.endif	# QIMAGEBLITZ_BUILDLINK3_MK
 
 .include "../../x11/qt4-libs/buildlink3.mk"
+.endif # QIMAGEBLITZ_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-qimageblitz

@@ -1,18 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/07/28 09:48:48 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:49 joerg Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
 BUILDLINK_PREFIX.gcc34:=${LOCALBASE}/gcc34
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     gcc34
-.endif
+BUILDLINK_TREE+=	gcc34
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ngcc34}
-BUILDLINK_PACKAGES+=    gcc34
-BUILDLINK_ORDER:=    ${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gcc34
+.if !defined(GCC34_BUILDLINK3_MK)
+GCC34_BUILDLINK3_MK:=
 
-.if !empty(GCC34_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gcc34+=	gcc34>=${_GCC_REQD}
 BUILDLINK_ABI_DEPENDS.gcc34?=	gcc34>=3.4.5nb1
 BUILDLINK_PKGSRCDIR.gcc34?=	../../lang/gcc34
@@ -31,7 +25,6 @@ BUILDLINK_LIBDIRS.gcc34+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/adali
 BUILDLINK_INCDIRS.gcc34+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34}\///}/include
 .    endif
 .  endif
-.endif  # GCC34_BUILDLINK3_MK
 
 BUILDLINK_FILES_CMD.gcc34=	\
 	(cd  ${BUILDLINK_PREFIX.gcc34} &&	\
@@ -45,8 +38,8 @@ BUILDLINK_DEPMETHOD.gcc34+=	full
 BUILDLINK_DEPMETHOD.gcc34?=	build
 .  endif
 
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # GCC34_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gcc34

@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.18 2008/11/27 06:07:49 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2009/03/20 19:24:54 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-CLAMAV_BUILDLINK3_MK:=	${CLAMAV_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	clamav
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	clamav
-.endif
+.if !defined(CLAMAV_BUILDLINK3_MK)
+CLAMAV_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nclamav}
-BUILDLINK_PACKAGES+=	clamav
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}clamav
-
-.if ${CLAMAV_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.clamav+=	clamav>=0.94.2
 BUILDLINK_PKGSRCDIR.clamav?=	../../mail/clamav
-.endif	# CLAMAV_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+.endif # CLAMAV_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-clamav

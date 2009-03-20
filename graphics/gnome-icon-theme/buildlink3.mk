@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/12/12 21:52:36 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:39 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-GNOME_ICON_THEME_BUILDLINK3_MK:=	${GNOME_ICON_THEME_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnome-icon-theme
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnome-icon-theme
-.endif
+.if !defined(GNOME_ICON_THEME_BUILDLINK3_MK)
+GNOME_ICON_THEME_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-icon-theme}
-BUILDLINK_PACKAGES+=	gnome-icon-theme
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-icon-theme
-
-.if !empty(GNOME_ICON_THEME_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.8.0
 BUILDLINK_ABI_DEPENDS.gnome-icon-theme?=	gnome-icon-theme>=2.12.1nb2
 BUILDLINK_PKGSRCDIR.gnome-icon-theme?=	../../graphics/gnome-icon-theme
@@ -30,6 +23,6 @@ PRINT_PLIST_AWK+=	/^@dirrm ${d:S/\//\\\//g}$$/ \
 			{ print "@comment in gnome-icon-theme: " $$0; next; }
 .  endfor
 .  undef dirs
-.endif	# GNOME_ICON_THEME_BUILDLINK3_MK
+.endif # GNOME_ICON_THEME_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnome-icon-theme

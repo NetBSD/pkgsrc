@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/04/25 22:16:20 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:33 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-PY_FUSE_BINDINGS_BUILDLINK3_MK:=	${PY_FUSE_BINDINGS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	py-fuse-bindings
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	py-fuse-bindings
-.endif
+.if !defined(PY_FUSE_BINDINGS_BUILDLINK3_MK)
+PY_FUSE_BINDINGS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-fuse-bindings}
-BUILDLINK_PACKAGES+=	py-fuse-bindings
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-fuse-bindings
-
-.if ${PY_FUSE_BINDINGS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py-fuse-bindings+=	${PYPKGPREFIX}-fuse-bindings>=0.2pre1
 BUILDLINK_PKGSRCDIR.py-fuse-bindings?=	../../filesystems/py-fuse-bindings
-.endif	# PY_FUSE_BINDINGS_BUILDLINK3_MK
+.endif # PY_FUSE_BINDINGS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-py-fuse-bindings
