@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.15 2009/03/20 14:50:49 mishka Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.16 2009/03/20 14:55:41 mishka Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -170,7 +170,7 @@ PLIST.foo=	yes
 
     <para>And then in <filename>PLIST</filename>:</para>
     <programlisting>
-@comment $NetBSD: plist.xml,v 1.15 2009/03/20 14:50:49 mishka Exp $
+@comment &#36;NetBSD&#36;
 bin/bar
 man/man1/bar.1
 ${PLIST.foo}bin/foo
