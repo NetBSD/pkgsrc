@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.7 2007/07/13 10:42:44 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 17:30:13 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PYTK_BUILDLINK3_MK:=	${PYTK_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pytk
@@ -14,6 +12,8 @@ BUILDLINK_PACKAGES+=	pytk
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pytk
 
 .if !empty(PYTK_BUILDLINK3_MK:M+)
+.include "../../lang/python/pyversion.mk"
+
 BUILDLINK_API_DEPENDS.pytk+=	${PYPKGPREFIX}-Tk-[0-9]*
 BUILDLINK_ABI_DEPENDS.pytk?=	${PYPKGPREFIX}-Tk>=0nb4
 BUILDLINK_PKGSRCDIR.pytk?=	../../x11/py-Tk
