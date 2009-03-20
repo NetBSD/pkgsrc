@@ -355,7 +355,7 @@ II. The pkgsrc developer's guide
             19.6.7. Packages installing info files
             19.6.8. Packages installing man pages
             19.6.9. Packages installing GConf data files
-            19.6.10. Packages installing scrollkeeper data files
+            19.6.10. Packages installing scrollkeeper/rarian data files
             19.6.11. Packages installing X11 fonts
             19.6.12. Packages installing GTK2 modules
             19.6.13. Packages installing SGML or XML data
@@ -3404,7 +3404,7 @@ Table of Contents
         19.6.7. Packages installing info files
         19.6.8. Packages installing man pages
         19.6.9. Packages installing GConf data files
-        19.6.10. Packages installing scrollkeeper data files
+        19.6.10. Packages installing scrollkeeper/rarian data files
         19.6.11. Packages installing X11 fonts
         19.6.12. Packages installing GTK2 modules
         19.6.13. Packages installing SGML or XML data
@@ -4571,6 +4571,29 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
 
 
 This replaces all occurrences of "${SOMEVAR}" in the PLIST with "somevalue".
+
+The PLIST_VARS can be used to simplify the common case of conditionally
+including some PLIST entries. It can be done by adding PLIST_VARS+=foo and
+setting the coresponding PLIST.foo variable to yes, if the entry should be
+included. This will substitute "${PLIST.foo}" in the PLIST with either """" or
+""@comment "". For example, in Makefile:
+
+PLIST_VARS+=    foo
+.if condition
+PLIST.foo=      yes
+.else
+
+
+And then in PLIST:
+
+@comment $NetBSD$
+bin/bar
+man/man1/bar.1
+${PLIST.foo}bin/foo
+${PLIST.foo}man/man1/foo.1
+${PLIST.foo}share/bar/foo.data
+${PLIST.foo}@dirrm share/bar
+
 
 13.5. Man page compression
 
@@ -6530,7 +6553,7 @@ Table of Contents
     19.6.7. Packages installing info files
     19.6.8. Packages installing man pages
     19.6.9. Packages installing GConf data files
-    19.6.10. Packages installing scrollkeeper data files
+    19.6.10. Packages installing scrollkeeper/rarian data files
     19.6.11. Packages installing X11 fonts
     19.6.12. Packages installing GTK2 modules
     19.6.13. Packages installing SGML or XML data
@@ -7622,21 +7645,21 @@ take some extra steps to make sure they get registered in the database:
     .entries files installed by the package, if any. Names must not contain any
     directories in them.
 
-19.6.10. Packages installing scrollkeeper data files
+19.6.10. Packages installing scrollkeeper/rarian data files
 
-If a package installs .omf files, used by scrollkeeper, you need to take some
-extra steps to make sure they get registered in the database:
+If a package installs .omf files, used by scrollkeeper/rarian, you need to take
+some extra steps to make sure they get registered in the database:
 
- 1. Include ../../textproc/rarian/omf.mk instead of its buildlink3.mk file.
-    This takes care of rebuilding the scrollkeeper database at installation and
-    deinstallation time, and disallows any access to it directly from the
-    package.
+ 1. Include ../../mk/omf-scrollkeeper.mk instead of rarian's buildlink3.mk
+    file. This takes care of rebuilding the scrollkeeper database at
+    installation and deinstallation time, and disallows any access to it
+    directly from the package.
 
  2. Check the PLIST and remove any entries under the libdata/scrollkeeper
     directory, as they will be handled automatically.
 
  3. Remove the share/omf directory from the PLIST. It will be handled by
-    scrollkeeper.
+    rarian. (make print-PLIST does this automatically.)
 
 19.6.11. Packages installing X11 fonts
 
@@ -8320,8 +8343,8 @@ Table 23.1. PLIST handling for GNOME packages
 |             If the package...             |             Then...             |
 |-------------------------------------------+---------------------------------|
 |                                           |See Section 19.6.10, "Packages   |
-|Installs OMF files under share/omf.        |installing scrollkeeper data     |
-|                                           |files".                          |
+|Installs OMF files under share/omf.        |installing scrollkeeper/rarian   |
+|                                           |data files".                     |
 |-------------------------------------------+---------------------------------|
 |Installs icons under the share/icons/      |See Section 19.6.19, "Packages   |
 |hicolor hierarchy or updates share/icons/  |installing hicolor theme icons". |
