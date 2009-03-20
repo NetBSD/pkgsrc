@@ -366,7 +366,7 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
 <dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper/rarian data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
 <dt><span class="sect2"><a href="#sgml-xml-data">19.6.13. Packages installing SGML or XML data</a></span></dt>
@@ -3854,7 +3854,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
 <dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper/rarian data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
 <dt><span class="sect2"><a href="#sgml-xml-data">19.6.13. Packages installing SGML or XML data</a></span></dt>
@@ -5307,6 +5307,33 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
 <p>This replaces all occurrences of &#8220;<span class="quote">${SOMEVAR}</span>&#8221;
     in the <code class="filename">PLIST</code> with
     &#8220;<span class="quote">somevalue</span>&#8221;.</p>
+<p>The <code class="varname">PLIST_VARS</code> can be used to simplify
+    the common case of conditionally including some
+    <code class="filename">PLIST</code> entries. It can be done by adding
+    <code class="literal"><code class="varname">PLIST_VARS</code>+=foo</code> and
+    setting the coresponding <code class="varname">PLIST.foo</code> variable
+    to <code class="literal">yes</code>, if the entry should be included.
+    This will substitute &#8220;<span class="quote"><code class="varname">${PLIST.foo}</code></span>&#8221;
+    in the <code class="filename">PLIST</code> with either
+    &#8220;<span class="quote"><code class="literal">""</code></span>&#8221; or
+    &#8220;<span class="quote"><code class="literal">"@comment "</code></span>&#8221;.
+    For example, in <code class="filename">Makefile</code>:</p>
+<pre class="programlisting">
+PLIST_VARS+=	foo
+.if <em class="replaceable"><code>condition</code></em>
+PLIST.foo=	yes
+.else
+    </pre>
+<p>And then in <code class="filename">PLIST</code>:</p>
+<pre class="programlisting">
+@comment $NetBSD$
+bin/bar
+man/man1/bar.1
+${PLIST.foo}bin/foo
+${PLIST.foo}man/man1/foo.1
+${PLIST.foo}share/bar/foo.data
+${PLIST.foo}@dirrm share/bar
+    </pre>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -7634,7 +7661,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id52054999"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230286379"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7644,7 +7671,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id52055008"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230286388"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7655,7 +7682,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id52055016"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230286396"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7728,7 +7755,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#faq.info-files">19.6.7. Packages installing info files</a></span></dt>
 <dt><span class="sect2"><a href="#manpages">19.6.8. Packages installing man pages</a></span></dt>
 <dt><span class="sect2"><a href="#gconf-data-files">19.6.9. Packages installing GConf data files</a></span></dt>
-<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper data files</a></span></dt>
+<dt><span class="sect2"><a href="#scrollkeeper-data-files">19.6.10. Packages installing scrollkeeper/rarian data files</a></span></dt>
 <dt><span class="sect2"><a href="#x11-fonts">19.6.11. Packages installing X11 fonts</a></span></dt>
 <dt><span class="sect2"><a href="#gtk2-modules">19.6.12. Packages installing GTK2 modules</a></span></dt>
 <dt><span class="sect2"><a href="#sgml-xml-data">19.6.13. Packages installing SGML or XML data</a></span></dt>
@@ -9098,14 +9125,14 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="scrollkeeper-data-files"></a>19.6.10. Packages installing scrollkeeper data files</h3></div></div></div>
+<a name="scrollkeeper-data-files"></a>19.6.10. Packages installing scrollkeeper/rarian data files</h3></div></div></div>
 <p>If a package installs <code class="filename">.omf</code> files, used by
-    scrollkeeper, you need to take some extra steps to make sure they
+    scrollkeeper/rarian, you need to take some extra steps to make sure they
     get registered in the database:</p>
 <div class="orderedlist"><ol type="1">
 <li><p>Include
-	<code class="filename">../../textproc/rarian/omf.mk</code>
-	instead of its <code class="filename">buildlink3.mk</code> file.  This
+	<code class="filename">../../mk/omf-scrollkeeper.mk</code>
+	instead of rarian's <code class="filename">buildlink3.mk</code> file.  This
 	takes care of rebuilding the scrollkeeper database at
 	installation and deinstallation time, and disallows any access
 	to it directly from the package.</p></li>
@@ -9113,7 +9140,8 @@ PERL5_PACKLIST= ${PERL5_SITEARCH}/auto/Pg/.packlist
 	<code class="filename">libdata/scrollkeeper</code> directory, as they
 	will be handled automatically.</p></li>
 <li><p>Remove the <code class="filename">share/omf</code> directory from
-	the PLIST.  It will be handled by scrollkeeper.</p></li>
+	the PLIST.  It will be handled by rarian. (<span class="command"><strong>make
+	print-PLIST</strong></span> does this automatically.)</p></li>
 </ol></div>
 </div>
 <div class="sect2" lang="en">
@@ -9666,7 +9694,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id52059900"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230291165"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9682,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id52059936"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230291198"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9700,7 +9728,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id52059974"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230291236"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9718,7 +9746,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id52060009"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230291270"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9731,7 +9759,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id52060097"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230291289"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9747,7 +9775,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id52060122"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230291315"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9771,7 +9799,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id52060325"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230291450"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9796,7 +9824,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id52060359"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230291481"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9844,7 +9872,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id52060413"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230291536"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10027,7 +10055,7 @@ solution is given.  After applying the solution be sure to
 <tbody>
 <tr>
 <td>Installs OMF files under <code class="filename">share/omf</code>.</td>
-<td>See <a class="xref" href="#scrollkeeper-data-files" title="19.6.10. Packages installing scrollkeeper data files">Section 19.6.10, &#8220;Packages installing scrollkeeper data files&#8221;</a>.</td>
+<td>See <a class="xref" href="#scrollkeeper-data-files" title="19.6.10. Packages installing scrollkeeper/rarian data files">Section 19.6.10, &#8220;Packages installing scrollkeeper/rarian data files&#8221;</a>.</td>
 </tr>
 <tr>
 <td>Installs icons under the
