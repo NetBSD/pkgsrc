@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.14 2007/06/01 11:07:26 rillig Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.15 2009/03/20 14:50:49 mishka Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -147,6 +147,40 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
     <para>This replaces all occurrences of <quote>${SOMEVAR}</quote>
     in the <filename>PLIST</filename> with
     <quote>somevalue</quote>.</para>
+
+
+    <para>The <varname>PLIST_VARS</varname> can be used to simplify
+    the common case of conditionally including some
+    <filename>PLIST</filename> entries. It can be done by adding
+    <literal><varname>PLIST_VARS</varname>+=foo</literal> and
+    setting the coresponding <varname>PLIST.foo</varname> variable
+    to <literal>yes</literal>, if the entry should be included.
+    This will substitute <quote><varname>${PLIST.foo}</varname></quote>
+    in the <filename>PLIST</filename> with either
+    <quote><literal>""</literal></quote> or
+    <quote><literal>"@comment "</literal></quote>.
+    For example, in <filename>Makefile</filename>:</para>
+
+    <programlisting>
+PLIST_VARS+=	foo
+.if <replaceable>condition</replaceable>
+PLIST.foo=	yes
+.else
+    </programlisting>
+
+    <para>And then in <filename>PLIST</filename>:</para>
+    <programlisting>
+@comment $NetBSD: plist.xml,v 1.15 2009/03/20 14:50:49 mishka Exp $
+bin/bar
+man/man1/bar.1
+${PLIST.foo}bin/foo
+${PLIST.foo}man/man1/foo.1
+${PLIST.foo}share/bar/foo.data
+${PLIST.foo}@dirrm share/bar
+    </programlisting>
+
+
+
   </sect1>
 
   <sect1 id="manpage-compression">
