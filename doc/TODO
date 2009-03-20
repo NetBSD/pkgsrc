@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7982 2009/03/20 07:01:51 obache Exp $
+$NetBSD: TODO,v 1.7983 2009/03/20 17:14:30 snj Exp $
 
 Suggested new packages
 ======================
@@ -1131,6 +1131,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o regionset-0.2
 	o rep-gtk-0.18.3
 	o resize_image-0.7
+	o rhythmbox-0.12.0
 	o rio500-0.8.1
 	o ripmime-1.4.0.9
 	o robodoc-4.99.6
