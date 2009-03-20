@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2009/03/20 12:20:29 mishka Exp $
+# $NetBSD: Makefile,v 1.56 2009/03/20 12:57:48 mishka Exp $
 
 DISTNAME=		bochs-2.3.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bochs/}
 
@@ -27,6 +27,8 @@ MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
 MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
 MAKE_ENV+=		WGET=${FETCH_CMD:Q}
 
+PLIST_VARS+=		tiny
+
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
 PKG_SUPPORTED_OPTIONS+=	debug tiny
 
@@ -43,6 +45,8 @@ CONFIGURE_ARGS+=	--enable-x86-debugger
 .endif
 
 .if empty(PKG_OPTIONS:Mtiny)
+PLIST.tiny=		yes
+
 #CONFIGURE_ARGS+=	--enable-3dnow
 CONFIGURE_ARGS+=	--enable-4meg-pages
 CONFIGURE_ARGS+=	--enable-all-optimizations
