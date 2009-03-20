@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:00 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 17:30:11 joerg Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PY_NUMARRAY_BUILDLINK3_MK:=	${PY_NUMARRAY_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pynumarray
@@ -14,6 +12,8 @@ BUILDLINK_PACKAGES+=	pynumarray
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pynumarray
 
 .if !empty(PY_NUMARRAY_BUILDLINK3_MK:M+)
+.include "../../lang/python/pyversion.mk"
+
 BUILDLINK_API_DEPENDS.pynumarray+=	${PYPKGPREFIX}-numarray>=1.1.1
 BUILDLINK_ABI_DEPENDS.pynumarray?=	${PYPKGPREFIX}-numarray>=1.3.3nb1
 BUILDLINK_PKGSRCDIR.pynumarray?=	../../math/py-numarray

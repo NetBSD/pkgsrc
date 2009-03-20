@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 17:30:13 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PY_SIP_BUILDLINK3_MK:=	${PY_SIP_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	py-sip
@@ -14,6 +12,8 @@ BUILDLINK_PACKAGES+=	py-sip
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-sip
 
 .if ${PY_SIP_BUILDLINK3_MK} == "+"
+.include "../../lang/python/pyversion.mk"
+
 BUILDLINK_API_DEPENDS.py-sip+=	${PYPKGPREFIX}-sip>=4.7.7
 BUILDLINK_PKGSRCDIR.py-sip?=	../../x11/py-sip
 .endif	# PY_SIP_BUILDLINK3_MK

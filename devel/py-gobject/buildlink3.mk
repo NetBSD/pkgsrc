@@ -1,9 +1,7 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:10:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 17:30:11 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PY_GOBJECT_BUILDLINK3_MK:=	${PY_GOBJECT_BUILDLINK3_MK}+
-
-.include "../../lang/python/pyversion.mk"
 
 .if !empty(BUILDLINK_DEPTH:M+)
 BUILDLINK_DEPENDS+=	pygobject
@@ -14,6 +12,8 @@ BUILDLINK_PACKAGES+=	pygobject
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pygobject
 
 .if !empty(PY_GOBJECT_BUILDLINK3_MK:M+)
+.include "../../lang/python/pyversion.mk"
+
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.10.1nb1
 BUILDLINK_PKGSRCDIR.pygobject?=	../../devel/py-gobject
 .endif	# PY_GOBJECT_BUILDLINK3_MK
