@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2008/09/18 05:22:19 yyamano Exp $
+# $NetBSD: Makefile,v 1.83 2009/03/20 05:51:53 yyamano Exp $
 
 DISTNAME=		lftp-3.5.11
 PKGREVISION=		1
@@ -34,6 +34,10 @@ CONFIGURE_ARGS+=	--with-modules
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 LDFLAGS.Darwin+=	-flat_namespace
+
+.if ${OPSYS} == "Darwin"
+INSTALL_UNSTRIPPED=	yes
+.endif
 
 EGDIR=			${PREFIX}/share/examples/lftp
 CONF_FILES=		${EGDIR}/lftp.conf.default ${PKG_SYSCONFDIR}/lftp.conf
