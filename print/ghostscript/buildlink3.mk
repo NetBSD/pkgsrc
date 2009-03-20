@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/09/03 21:31:12 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:14 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GHOSTSCRIPT_BUILDLINK3_MK:=	${GHOSTSCRIPT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ghostscript
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	ghostscript
-.endif
+.if !defined(GHOSTSCRIPT_BUILDLINK3_MK)
+GHOSTSCRIPT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nghostscript}
-BUILDLINK_PACKAGES+=	ghostscript
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ghostscript
-
-.if ${GHOSTSCRIPT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ghostscript+=	ghostscript>=8.63nb1
 BUILDLINK_PKGSRCDIR.ghostscript?=	../../print/ghostscript
-.endif	# GHOSTSCRIPT_BUILDLINK3_MK
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -35,5 +27,6 @@ pkgbase := ghostscript
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .endif
+.endif # GHOSTSCRIPT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ghostscript

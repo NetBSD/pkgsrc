@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/12/19 23:54:47 hira Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:27 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-XFCE4_THUNAR_BUILDLINK3_MK:=	${XFCE4_THUNAR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	xfce4-thunar
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	xfce4-thunar
-.endif
+.if !defined(XFCE4_THUNAR_BUILDLINK3_MK)
+XFCE4_THUNAR_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nxfce4-thunar}
-BUILDLINK_PACKAGES+=	xfce4-thunar
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}xfce4-thunar
-
-.if ${XFCE4_THUNAR_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.xfce4-thunar+=	xfce4-thunar>=0.9.3nb2
 BUILDLINK_PKGSRCDIR.xfce4-thunar?=	../../sysutils/xfce4-thunar
-.endif	# XFCE4_THUNAR_BUILDLINK3_MK
 
 pkgbase := xfce4-thunar
 .include "../../mk/pkg-build-options.mk"
@@ -35,5 +27,6 @@ pkgbase := xfce4-thunar
 .include "../../devel/xfce4-dev-tools/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/fam.buildlink3.mk"
+.endif # XFCE4_THUNAR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-xfce4-thunar

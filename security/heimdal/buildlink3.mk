@@ -1,24 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.34 2008/02/28 08:14:41 jlam Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-HEIMDAL_BUILDLINK3_MK:=	${HEIMDAL_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.35 2009/03/20 19:25:18 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	heimdal
-.endif
+BUILDLINK_TREE+=	heimdal
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nheimdal}
-BUILDLINK_PACKAGES+=	heimdal
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}heimdal
+.if !defined(HEIMDAL_BUILDLINK3_MK)
+HEIMDAL_BUILDLINK3_MK:=
 
-.if !empty(HEIMDAL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.heimdal+=	heimdal>=0.4e
 BUILDLINK_ABI_DEPENDS.heimdal+=	heimdal>=1.1
 BUILDLINK_PKGSRCDIR.heimdal?=	../../security/heimdal
 BUILDLINK_INCDIRS.heimdal?=	include/krb5
-.endif	# HEIMDAL_BUILDLINK3_MK
 
 pkgbase := heimdal
 .include "../../mk/pkg-build-options.mk"
@@ -28,5 +20,6 @@ pkgbase := heimdal
 .endif
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bdb.buildlink3.mk"
+.endif # HEIMDAL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-heimdal

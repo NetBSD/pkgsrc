@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.7 2008/07/17 10:11:19 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:25:09 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBLIVE_BUILDLINK3_MK:=	${LIBLIVE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	liblive
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	liblive
-.endif
+.if !defined(LIBLIVE_BUILDLINK3_MK)
+LIBLIVE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nliblive}
-BUILDLINK_PACKAGES+=	liblive
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}liblive
-
-.if !empty(LIBLIVE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.liblive+=	liblive>=20080706
 BUILDLINK_ABI_DEPENDS.liblive+=	liblive>=20080706
 BUILDLINK_PKGSRCDIR.liblive?=	../../net/liblive
@@ -19,6 +12,6 @@ BUILDLINK_INCDIRS.liblive+=     include/BasicUsageEnvironment
 BUILDLINK_INCDIRS.liblive+=     include/UsageEnvironment
 BUILDLINK_INCDIRS.liblive+=     include/groupsock
 BUILDLINK_INCDIRS.liblive+=     include/liveMedia
-.endif	# LIBLIVE_BUILDLINK3_MK
+.endif # LIBLIVE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-liblive

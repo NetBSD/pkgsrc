@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/03/17 22:54:02 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:24:24 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-MONO_ADDINS_BUILDLINK3_MK:=	${MONO_ADDINS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	mono-addins
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	mono-addins
-.endif
+.if !defined(MONO_ADDINS_BUILDLINK3_MK)
+MONO_ADDINS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nmono-addins}
-BUILDLINK_PACKAGES+=	mono-addins
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}mono-addins
-
-.if ${MONO_ADDINS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3
 BUILDLINK_PKGSRCDIR.mono-addins?=	../../devel/mono-addins
-.endif	# MONO_ADDINS_BUILDLINK3_MK
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
+.endif # MONO_ADDINS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-mono-addins

@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/04 01:09:31 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:21 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-OPENVAS_LIBNASL_BUILDLINK3_MK:=	${OPENVAS_LIBNASL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	openvas-libnasl
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	openvas-libnasl
-.endif
+.if !defined(OPENVAS_LIBNASL_BUILDLINK3_MK)
+OPENVAS_LIBNASL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenvas-libnasl}
-BUILDLINK_PACKAGES+=	openvas-libnasl
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openvas-libnasl
-
-.if ${OPENVAS_LIBNASL_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.openvas-libnasl+=	openvas-libnasl>=2.0.0
 BUILDLINK_PKGSRCDIR.openvas-libnasl?=	../../security/openvas-libnasl
-.endif	# OPENVAS_LIBNASL_BUILDLINK3_MK
+.endif # OPENVAS_LIBNASL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-openvas-libnasl

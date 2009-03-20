@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/04/15 18:37:22 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:31 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GEDIT_BUILDLINK3_MK:=	${GEDIT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gedit
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gedit
-.endif
+.if !defined(GEDIT_BUILDLINK3_MK)
+GEDIT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngedit}
-BUILDLINK_PACKAGES+=	gedit
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gedit
-
-.if !empty(GEDIT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gedit+=	gedit>=2.12.1nb4
 BUILDLINK_ABI_DEPENDS.gedit?=	gedit>=2.20.4nb2
 BUILDLINK_PKGSRCDIR.gedit?=	../../editors/gedit
-.endif	# GEDIT_BUILDLINK3_MK
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtksourceview2/buildlink3.mk"
+.endif # GEDIT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gedit

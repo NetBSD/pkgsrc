@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/11/13 14:20:20 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:55 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	imap-uw
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	imap-uw
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nimap-uw}
-BUILDLINK_PACKAGES+=	imap-uw
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}imap-uw
+.if !defined(IMAP_UW_BUILDLINK3_MK)
+IMAP_UW_BUILDLINK3_MK:=
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(IMAP_UW_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2007dnb1
 BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2007dnb1
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
@@ -23,8 +16,8 @@ BUILDLINK_LDFLAGS.imap-uw+=	-flat_namespace
 # function symbols from the executable unless we do this:
 INSTALL_UNSTRIPPED?=	yes
 . endif
-.endif	# IMAP_UW_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
+.endif # IMAP_UW_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-imap-uw

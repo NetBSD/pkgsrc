@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/01/03 19:34:02 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:23:58 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PULSEAUDIO_BUILDLINK3_MK:=	${PULSEAUDIO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pulseaudio
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	pulseaudio
-.endif
+.if !defined(PULSEAUDIO_BUILDLINK3_MK)
+PULSEAUDIO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npulseaudio}
-BUILDLINK_PACKAGES+=	pulseaudio
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pulseaudio
-
-.if ${PULSEAUDIO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.pulseaudio+=	pulseaudio>=0.9.13
 BUILDLINK_PKGSRCDIR.pulseaudio?=	../../audio/pulseaudio
-.endif	# PULSEAUDIO_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
+.endif # PULSEAUDIO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pulseaudio

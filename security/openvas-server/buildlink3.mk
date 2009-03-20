@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/04 01:11:55 adrianp Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:21 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-OPENVAS_SERVER_BUILDLINK3_MK:=	${OPENVAS_SERVER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	openvas-server
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	openvas-server
-.endif
+.if !defined(OPENVAS_SERVER_BUILDLINK3_MK)
+OPENVAS_SERVER_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nopenvas-server}
-BUILDLINK_PACKAGES+=	openvas-server
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}openvas-server
-
-.if ${OPENVAS_SERVER_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.openvas-server+=	openvas-server>=2.0.0
 BUILDLINK_PKGSRCDIR.openvas-server?=	../../security/openvas-server
-.endif	# OPENVAS_SERVER_BUILDLINK3_MK
+.endif # OPENVAS_SERVER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-openvas-server

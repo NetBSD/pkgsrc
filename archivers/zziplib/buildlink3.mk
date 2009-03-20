@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:10:35 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:23:51 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ZZIPLIB_BUILDLINK3_MK:=	${ZZIPLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	zziplib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	zziplib
-.endif
+.if !defined(ZZIPLIB_BUILDLINK3_MK)
+ZZIPLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nzziplib}
-BUILDLINK_PACKAGES+=	zziplib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}zziplib
-
-.if !empty(ZZIPLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.zziplib+=	zziplib>=0.10.82
 BUILDLINK_PKGSRCDIR.zziplib?=	../../archivers/zziplib
-.endif	# ZZIPLIB_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
+.endif # ZZIPLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-zziplib

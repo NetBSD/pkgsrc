@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/03/04 12:42:53 adam Exp $
-
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-POSTGRESQL83_CLIENT_BUILDLINK3_MK:=	${POSTGRESQL83_CLIENT_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:06 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	postgresql83-client
-.endif
+BUILDLINK_TREE+=	postgresql83-client
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npostgresql83-client}
-BUILDLINK_PACKAGES+=	postgresql83-client
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}postgresql83-client
+.if !defined(POSTGRESQL83_CLIENT_BUILDLINK3_MK)
+POSTGRESQL83_CLIENT_BUILDLINK3_MK:=
 
-.if ${POSTGRESQL83_CLIENT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.postgresql83-client+=	postgresql83-client>=8.3.0
 BUILDLINK_ABI_DEPENDS.postgresql83-client?=	postgresql83-client>=8.3.0
 BUILDLINK_PKGSRCDIR.postgresql83-client?=	../../databases/postgresql83-client
@@ -27,9 +20,9 @@ BUILDLINK_LIBDIRS.postgresql83-client?=	${PG_SUBPREFIX}/lib
 BUILDLINK_LDADD.postgresql83-client=	-lpq ${BUILDLINK_LDADD.gettext}
 
 BUILDLINK_FILES.postgresql83-client+=	bin/pg_config
-.endif	# POSTGRESQL83_CLIENT_BUILDLINK3_MK
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # POSTGRESQL83_CLIENT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-postgresql83-client

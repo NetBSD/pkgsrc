@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.22 2008/08/18 21:35:37 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2009/03/20 19:24:44 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PNG_BUILDLINK3_MK:=	${PNG_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	png
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	png
-.endif
+.if !defined(PNG_BUILDLINK3_MK)
+PNG_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npng}
-BUILDLINK_PACKAGES+=	png
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}png
-
-.if !empty(PNG_BUILDLINK3_MK:M+)
 # XXX tv - remove this OPSYS block the next time ABI_DEPENDS is bumped:
 .  include "../../mk/bsd.fast.prefs.mk"
 .  if ${OPSYS} == "Interix"
@@ -26,7 +19,6 @@ BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
 .  if ${MACHINE_ARCH} != "i386" && ${MACHINE_ARCH} != "x86_64"
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .  endif
-.endif	# PNG_BUILDLINK3_MK
 
 # Work around broken libtool archive "/usr/X11/lib/libpng12.la" under
 # Mac OS 10.5.4 or newer which references a non-existing version of the
@@ -36,5 +28,6 @@ BUILDLINK_TRANSFORM+=	rename:-lpng12.0.26.0:-lpng
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
+.endif # PNG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-png

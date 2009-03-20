@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:45 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:24:20 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBMEMMGR_BUILDLINK3_MK:=	${LIBMEMMGR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libmemmgr
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libmemmgr
-.endif
+.if !defined(LIBMEMMGR_BUILDLINK3_MK)
+LIBMEMMGR_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibmemmgr}
-BUILDLINK_PACKAGES+=	libmemmgr
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmemmgr
-
-.if !empty(LIBMEMMGR_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libmemmgr+=	libmemmgr>=1.04
 BUILDLINK_PKGSRCDIR.libmemmgr?=	../../devel/libmemmgr
 BUILDLINK_DEPMETHOD.libmemmgr?=	build
-.endif	# LIBMEMMGR_BUILDLINK3_MK
 
 .include "../../devel/libetm/buildlink3.mk"
+.endif # LIBMEMMGR_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libmemmgr

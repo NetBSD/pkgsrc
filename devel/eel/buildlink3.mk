@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.5 2008/10/16 13:46:59 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:24:12 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-EEL_BUILDLINK3_MK:=	${EEL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	eel
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	eel
-.endif
+.if !defined(EEL_BUILDLINK3_MK)
+EEL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Neel}
-BUILDLINK_PACKAGES+=	eel
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}eel
-
-.if !empty(EEL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.eel+=	eel>=2.10.0
 BUILDLINK_ABI_DEPENDS.eel?=	eel>=2.20.0nb1
 BUILDLINK_PKGSRCDIR.eel?=	../../devel/eel
-.endif	# EEL_BUILDLINK3_MK
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
@@ -30,5 +22,6 @@ BUILDLINK_PKGSRCDIR.eel?=	../../devel/eel
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.endif # EEL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-eel

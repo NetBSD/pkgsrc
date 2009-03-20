@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.30 2008/02/29 22:41:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2009/03/20 19:24:28 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	readline
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	readline
-.endif
+.if !defined(READLINE_BUILDLINK3_MK)
+READLINE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nreadline}
-BUILDLINK_PACKAGES+=	readline
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}readline
-
-.if !empty(READLINE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.readline+=	readline>=2.2
 BUILDLINK_ABI_DEPENDS.readline+=	readline>=5.0
 BUILDLINK_PKGSRCDIR.readline?=		../../devel/readline
@@ -32,7 +25,6 @@ BROKEN_READLINE_DETECTION?=	no
 .  if !empty(BROKEN_READLINE_DETECTION:M[yY][eE][sS])
 BUILDLINK_TRANSFORM+=		l:readline:readline:${BUILDLINK_LIBNAME.termcap}
 .  endif
-.endif	# READLINE_BUILDLINK3_MK
 
 CHECK_BUILTIN.readline:=	yes
 .include "../../devel/readline/builtin.mk"
@@ -44,5 +36,6 @@ USE_BUILTIN.termcap=	yes
 .endif
 
 .include "../../mk/termcap.buildlink3.mk"
+.endif # READLINE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-readline

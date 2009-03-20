@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:11:03 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:25:07 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-BOINC_LIBS_BUILDLINK3_MK:=	${BOINC_LIBS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	boinclibs
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	boinclibs
-.endif
+.if !defined(BOINC_LIBS_BUILDLINK3_MK)
+BOINC_LIBS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nboinclibs}
-BUILDLINK_PACKAGES+=	boinclibs
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}boinclibs
-
-.if !empty(BOINC_LIBS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.boinclibs+=	boinc3-libs>=3.19.20040714
 BUILDLINK_PKGSRCDIR.boinclibs?=	../../net/boinc3-libs
 
 # installs static libraries only
 BUILDLINK_DEPMETHOD.boinclibs?=	build
-.endif	# BOINC_LIBS_BUILDLINK3_MK
+.endif # BOINC_LIBS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-boinclibs

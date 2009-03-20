@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2006/07/08 23:10:47 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:24:27 joerg Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.10.
 # XXX After this file has been verified as correct, the comment lines
@@ -10,22 +10,15 @@
 # XXX
 # XXX	BUILDLINK_DEPMETHOD.pthread-stublib?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PTHREAD_STUBLIB_BUILDLINK3_MK:=	${PTHREAD_STUBLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pthread-stublib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pthread-stublib
-.endif
+.if !defined(PTHREAD_STUBLIB_BUILDLINK3_MK)
+PTHREAD_STUBLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npthread-stublib}
-BUILDLINK_PACKAGES+=	pthread-stublib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pthread-stublib
-
-.if !empty(PTHREAD_STUBLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pthread-stublib+=	pthread-stublib>=1.0
 BUILDLINK_PKGSRCDIR.pthread-stublib?=	../../devel/pthread-stublib
-.endif	# PTHREAD_STUBLIB_BUILDLINK3_MK
 
 IS_BUILTIN.pthread-stublib=no
+.endif # PTHREAD_STUBLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pthread-stublib

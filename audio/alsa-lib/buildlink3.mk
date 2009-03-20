@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/01/28 05:38:53 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:23:52 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-ALSA_LIB_BUILDLINK3_MK:=	${ALSA_LIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	alsa-lib
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	alsa-lib
-.endif
+.if !defined(ALSA_LIB_BUILDLINK3_MK)
+ALSA_LIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nalsa-lib}
-BUILDLINK_PACKAGES+=	alsa-lib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}alsa-lib
-
-.if ${ALSA_LIB_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.alsa-lib+=	alsa-lib>=1.0.18
 BUILDLINK_PKGSRCDIR.alsa-lib?=	../../audio/alsa-lib
-.endif	# ALSA_LIB_BUILDLINK3_MK
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif # ALSA_LIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-alsa-lib

@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.1 2006/11/30 00:07:03 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:02 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-OBEXFTP_BUILDLINK3_MK:=	${OBEXFTP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	obexftp
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	obexftp
-.endif
+.if !defined(OBEXFTP_BUILDLINK3_MK)
+OBEXFTP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nobexftp}
-BUILDLINK_PACKAGES+=	obexftp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}obexftp
-
-.if ${OBEXFTP_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.obexftp+=	obexftp>=0.20nb1
 BUILDLINK_PKGSRCDIR.obexftp?=	../../comms/obexftp
-.endif	# OBEXFTP_BUILDLINK3_MK
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
+.endif # OBEXFTP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-obexftp

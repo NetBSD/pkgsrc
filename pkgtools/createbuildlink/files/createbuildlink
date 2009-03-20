@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.33 2007/07/10 15:27:57 joerg Exp $
+#	$NetBSD: createbuildlink,v 1.34 2009/03/20 19:25:13 joerg Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.33 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.34 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -138,21 +138,11 @@ for i in 1 2 3; do
 done
 
 sed -f $sedrules <<EOF
-BUILDLINK_DEPTH:=${gap}\${BUILDLINK_DEPTH}+
-${PKGUPPER}_BUILDLINK3_MK:=	\${${PKGUPPER}_BUILDLINK3_MK}+
-EOF
+BUILDLINK_TREE+=	$PKGNOVER
 
-sed -f $sedrules <<EOF
+.if !defined(${PKGUPPER}_BUILDLINK3_MK)
+${PKGUPPER}_BUILDLINK3_MK:=
 
-.if \${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	${PKGNOVER}
-.endif
-
-BUILDLINK_PACKAGES:=	\${BUILDLINK_PACKAGES:N${PKGNOVER}}
-BUILDLINK_PACKAGES+=	$PKGNOVER
-BUILDLINK_ORDER:=	\${BUILDLINK_ORDER} \${BUILDLINK_DEPTH}$PKGNOVER
-
-.if \${${PKGUPPER}_BUILDLINK3_MK} == "+"
 EOF
 
 sed -f $sedrules <<EOF
@@ -168,10 +158,6 @@ if [ $CREATEPLSUBST = "true" ]; then
 	substplistbasedirs
 	echo ""
 fi
-
-sed -f $sedrules <<EOF
-.endif	# ${PKGUPPER}_BUILDLINK3_MK
-EOF
 
 ##
 ## buildlinked dependencies
@@ -192,8 +178,9 @@ for i in $makefile $commons ; do
 done
 
 sed -f $sedrules <<EOF
+.endif	# ${PKGUPPER}_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=${gap}\${BUILDLINK_DEPTH:S/+\$//}
+BUILDLINK_TREE+=	-$PKGNOVER
 EOF
 
 rm -f $sedrules

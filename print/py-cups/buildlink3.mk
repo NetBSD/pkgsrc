@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/01/10 20:13:29 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:25:16 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_CUPS_BUILDLINK3_MK:=	${PY_CUPS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	py-cups
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	py-cups
-.endif
+.if !defined(PY_CUPS_BUILDLINK3_MK)
+PY_CUPS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-cups}
-BUILDLINK_PACKAGES+=	py-cups
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-cups
-
-.if ${PY_CUPS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py-cups+=	${PYPKGPREFIX}-cups>=1.9.44
 BUILDLINK_PKGSRCDIR.py-cups?=	../../print/py-cups
-.endif	# PY_CUPS_BUILDLINK3_MK
 
 #.include "../../print/cups/buildlink3.mk"
+.endif # PY_CUPS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-py-cups

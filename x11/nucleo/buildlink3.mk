@@ -1,23 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/12/18 17:28:16 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/20 19:25:48 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-NUCLEO_BUILDLINK3_MK:=	${NUCLEO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	nucleo
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	nucleo
-.endif
+.if !defined(NUCLEO_BUILDLINK3_MK)
+NUCLEO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnucleo}
-BUILDLINK_PACKAGES+=	nucleo
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}nucleo
-
-.if ${NUCLEO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.nucleo+=	nucleo>=0.6
 BUILDLINK_ABI_DEPENDS.nucleo?=	nucleo>=0.7.1nb2
 BUILDLINK_PKGSRCDIR.nucleo?=	../../x11/nucleo
 pkgbase:=nucleo
 .  include "../../mk/pkg-build-options.mk"
-.endif	# NUCLEO_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.nucleo:Mgnutls)
 .  include "../../security/gnutls/buildlink3.mk"
@@ -36,5 +28,6 @@ pkgbase:=nucleo
 .include "../../net/mDNSResponder/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
+.endif # NUCLEO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-nucleo

@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/07/29 17:35:14 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:23:50 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBARCHIVE_BUILDLINK3_MK:=	${LIBARCHIVE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libarchive
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libarchive
-.endif
+.if !defined(LIBARCHIVE_BUILDLINK3_MK)
+LIBARCHIVE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibarchive}
-BUILDLINK_PACKAGES+=	libarchive
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libarchive
-
-.if ${LIBARCHIVE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.2
 BUILDLINK_PKGSRCDIR.libarchive?=	../../archivers/libarchive
-.endif	# LIBARCHIVE_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.endif # LIBARCHIVE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libarchive

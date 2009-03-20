@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/10/24 20:51:11 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:41 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNOME_SHARP_BUILDLINK3_MK:=	${GNOME_SHARP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnome-sharp
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gnome-sharp
-.endif
+.if !defined(GNOME_SHARP_BUILDLINK3_MK)
+GNOME_SHARP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-sharp}
-BUILDLINK_PACKAGES+=	gnome-sharp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-sharp
-
-.if ${GNOME_SHARP_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gnome-sharp+=	gnome-sharp>=2.24.0
 BUILDLINK_PKGSRCDIR.gnome-sharp?=	../../x11/gnome-sharp
-.endif	# GNOME_SHARP_BUILDLINK3_MK
 
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
@@ -23,5 +15,6 @@ BUILDLINK_PKGSRCDIR.gnome-sharp?=	../../x11/gnome-sharp
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
+.endif # GNOME_SHARP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnome-sharp

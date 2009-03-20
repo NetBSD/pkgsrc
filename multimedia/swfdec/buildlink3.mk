@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/10/31 12:44:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:05 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-SWFDEC_BUILDLINK3_MK:=	${SWFDEC_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	swfdec
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	swfdec
-.endif
+.if !defined(SWFDEC_BUILDLINK3_MK)
+SWFDEC_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nswfdec}
-BUILDLINK_PACKAGES+=	swfdec
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}swfdec
-
-.if ${SWFDEC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.swfdec+=	swfdec>=0.8.2
 BUILDLINK_PKGSRCDIR.swfdec?=	../../multimedia/swfdec
-.endif	# SWFDEC_BUILDLINK3_MK
 
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -25,5 +17,6 @@ BUILDLINK_PKGSRCDIR.swfdec?=	../../multimedia/swfdec
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # SWFDEC_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-swfdec

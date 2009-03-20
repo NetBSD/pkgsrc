@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.19 2008/01/18 05:08:36 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:25:00 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-KOFFICE_BUILDLINK3_MK:=	${KOFFICE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	koffice
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	koffice
-.endif
+.if !defined(KOFFICE_BUILDLINK3_MK)
+KOFFICE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nkoffice}
-BUILDLINK_PACKAGES+=	koffice
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}koffice
-
-.if !empty(KOFFICE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.koffice?=	koffice>=1.4.2nb5
 BUILDLINK_ABI_DEPENDS.koffice?=	koffice>=1.6.3nb6
 BUILDLINK_PKGSRCDIR.koffice?=	../../misc/koffice
-.endif	# KOFFICE_BUILDLINK3_MK
 
 .include "../../converters/wv2/buildlink3.mk"
 .include "../../textproc/aspell/buildlink3.mk"
@@ -27,5 +19,6 @@ BUILDLINK_PKGSRCDIR.koffice?=	../../misc/koffice
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdebase3/buildlink3.mk"
+.endif # KOFFICE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-koffice

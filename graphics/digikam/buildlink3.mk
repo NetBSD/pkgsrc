@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.19 2009/01/07 01:43:49 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2009/03/20 19:24:37 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-DIGIKAM_BUILDLINK3_MK:=	${DIGIKAM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	digikam
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	digikam
-.endif
+.if !defined(DIGIKAM_BUILDLINK3_MK)
+DIGIKAM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ndigikam}
-BUILDLINK_PACKAGES+=	digikam
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}digikam
-
-.if !empty(DIGIKAM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.digikam+=	digikam>=0.8.1
 BUILDLINK_ABI_DEPENDS.digikam?=	digikam>=0.9.5beta1nb1
 BUILDLINK_PKGSRCDIR.digikam?=	../../graphics/digikam
-.endif	# DIGIKAM_BUILDLINK3_MK
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
@@ -24,5 +16,6 @@ BUILDLINK_PKGSRCDIR.digikam?=	../../graphics/digikam
 .include "../../graphics/libkipi/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
+.endif # DIGIKAM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-digikam

@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/06 18:13:58 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:49 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-PY_KIWI_BUILDLINK3_MK:=		${PY_KIWI_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	py-kiwi
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	py-kiwi
-.endif
+.if !defined(PY_KIWI_BUILDLINK3_MK)
+PY_KIWI_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npy-kiwi}
-BUILDLINK_PACKAGES+=	py-kiwi
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}py-kiwi
-
-.if ${PY_KIWI_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.py-kiwi+=	${PYPKGPREFIX}-kiwi>=1.9.22
 BUILDLINK_PKGSRCDIR.py-kiwi?=	../../x11/py-kiwi
-.endif	# PY_KIWI_BUILDLINK3_MK
 
 .include "../../x11/py-gtk2/buildlink3.mk"
+.endif # PY_KIWI_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-py-kiwi

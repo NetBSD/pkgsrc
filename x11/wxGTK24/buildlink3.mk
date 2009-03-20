@@ -1,23 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/12/12 21:52:38 joerg Exp $
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-WXGTK24_BUILDLINK3_MK:=	${WXGTK24_BUILDLINK3_MK}+
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:25:51 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	wxGTK24
-.endif
+BUILDLINK_TREE+=	wxGTK24
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK24}
-BUILDLINK_PACKAGES+=	wxGTK24
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK24
+.if !defined(WXGTK24_BUILDLINK3_MK)
+WXGTK24_BUILDLINK3_MK:=
 
-.if !empty(WXGTK24_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wxGTK24+=	wxGTK24>=2.4.2
 BUILDLINK_ABI_DEPENDS.wxGTK24?=	wxGTK24>=2.4.2nb10
 BUILDLINK_PKGSRCDIR.wxGTK24?=	../../x11/wxGTK24
-.endif	# WXGTK24_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
@@ -25,5 +17,6 @@ BUILDLINK_PKGSRCDIR.wxGTK24?=	../../x11/wxGTK24
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # WXGTK24_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-wxGTK24

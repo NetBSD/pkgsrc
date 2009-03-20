@@ -1,23 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.20 2009/03/08 00:03:37 snj Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/03/20 19:25:13 joerg Exp $
 #
 # Don't include this file manually!  It will be included as necessary
 # by bsd.buildlink3.mk.
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-X11_LINKS_BUILDLINK3_MK:=	${X11_LINKS_BUILDLINK3_MK}+
-
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	x11-links
-.endif
-
-# x11-links must come first so that packages listed later can overwrite
-# any symlinks created by buildlinking x11-links.
+# x11-links is sorted first in mk/buildlink3/bsd.buildlink3.mk,
+# so that symlinks created from it can be overriden by other packages.
 #
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nx11-links}
-BUILDLINK_PACKAGES:=	x11-links ${BUILDLINK_PACKAGES}
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}x11-links
 
-.if !empty(X11_LINKS_BUILDLINK3_MK:M+)
+BUILDLINK_TREE+=	x11-links
+
+.if !defined(X11_LINKS_BUILDLINK3_MK)
+X11_LINKS_BUILDLINK3_MK:=
+
 BUILDLINK_API_DEPENDS.x11-links+=	x11-links>=0.43
 BUILDLINK_PKGSRCDIR.x11-links?=	../../pkgtools/x11-links
 BUILDLINK_DEPMETHOD.x11-links?=	build
@@ -32,7 +26,6 @@ BUILDLINK_CONTENTS_FILTER.x11-links=					\
 # and ${BUILDLINK_X11_DIR}/lib.
 #
 BUILDLINK_FNAME_TRANSFORM.x11-links+=	-e "s|/share/x11-links/|/|"
+.endif # X11_LINKS_BUILDLINK3_MK
 
-.endif	# X11_LINKS_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-x11-links

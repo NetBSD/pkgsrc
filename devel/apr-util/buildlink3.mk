@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.7 2008/09/06 20:54:32 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:09 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-APR_UTIL_BUILDLINK3_MK:=	${APR_UTIL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	apr-util
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	apr-util
-.endif
+.if !defined(APR_UTIL_BUILDLINK3_MK)
+APR_UTIL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napr-util}
-BUILDLINK_PACKAGES+=	apr-util
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}apr-util
-
-.if !empty(APR_UTIL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.2.8
 BUILDLINK_ABI_DEPENDS.apr-util?=	apr-util>=1.3.4
 BUILDLINK_PKGSRCDIR.apr-util?=	../../devel/apr-util
@@ -23,7 +16,6 @@ ${BUILDLINK_DIR}/bin/apu-config: buildlink-directories
 	${MKDIR} ${BUILDLINK_DIR}/bin && ${LN} -fs apu-1-config ${BUILDLINK_DIR}/bin/apu-config
 
 buildlink-apr-util-cookie: ${BUILDLINK_DIR}/bin/apu-config
-.endif	# APR_UTIL_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -42,5 +34,6 @@ pkgbase := apr-util
 .include "../../devel/apr/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+.endif # APR_UTIL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-apr-util

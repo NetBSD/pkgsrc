@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/01/18 05:09:55 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:41 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNUSTEP_GUI_BUILDLINK3_MK:=	${GNUSTEP_GUI_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnustep-gui
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnustep-gui
-.endif
+.if !defined(GNUSTEP_GUI_BUILDLINK3_MK)
+GNUSTEP_GUI_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-gui}
-BUILDLINK_PACKAGES+=	gnustep-gui
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-gui
-
-.if !empty(GNUSTEP_GUI_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-gui+=	gnustep-gui>=0.9.2
 BUILDLINK_ABI_DEPENDS.gnustep-gui+=	gnustep-gui>=0.12.0nb1
 BUILDLINK_PKGSRCDIR.gnustep-gui?=	../../x11/gnustep-gui
@@ -41,13 +34,12 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/PostSc
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Services\/GSspell.service$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Services\/GSspell.service\/Resources$$/ { next; }
 
-.endif	# GNUSTEP_GUI_BUILDLINK3_MK
-
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.endif # GNUSTEP_GUI_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnustep-gui

@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/03/01 14:14:20 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2009/03/20 19:25:14 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-CUPS_BUILDLINK3_MK:=	${CUPS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	cups
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	cups
-.endif
+.if !defined(CUPS_BUILDLINK3_MK)
+CUPS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncups}
-BUILDLINK_PACKAGES+=	cups
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cups
-
-.if !empty(CUPS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.cups+=	cups>=1.1.19nb3
 BUILDLINK_ABI_DEPENDS.cups+=	cups>=1.2.12nb3
 BUILDLINK_PKGSRCDIR.cups?=	../../print/cups
-.endif	# CUPS_BUILDLINK3_MK
 
 pkgbase := cups
 .include "../../mk/pkg-build-options.mk"
@@ -27,5 +19,6 @@ pkgbase := cups
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.endif # CUPS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-cups

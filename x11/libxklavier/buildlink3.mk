@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.14 2007/01/15 19:26:33 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:25:47 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBXKLAVIER_BUILDLINK3_MK:=	${LIBXKLAVIER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libxklavier
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libxklavier
-.endif
+.if !defined(LIBXKLAVIER_BUILDLINK3_MK)
+LIBXKLAVIER_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibxklavier}
-BUILDLINK_PACKAGES+=	libxklavier
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libxklavier
-
-.if !empty(LIBXKLAVIER_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.0
 BUILDLINK_PKGSRCDIR.libxklavier?=	../../x11/libxklavier
-.endif	# LIBXKLAVIER_BUILDLINK3_MK
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
+.endif # LIBXKLAVIER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libxklavier

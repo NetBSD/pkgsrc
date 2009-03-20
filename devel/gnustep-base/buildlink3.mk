@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/01/18 05:14:33 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/03/20 19:24:14 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GNUSTEP_BASE_BUILDLINK3_MK:=	${GNUSTEP_BASE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnustep-base
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gnustep-base
-.endif
+.if !defined(GNUSTEP_BASE_BUILDLINK3_MK)
+GNUSTEP_BASE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnustep-base}
-BUILDLINK_PACKAGES+=	gnustep-base
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnustep-base
-
-.if !empty(GNUSTEP_BASE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gnustep-base+=	gnustep-base>=1.9.1
 BUILDLINK_ABI_DEPENDS.gnustep-base+=	gnustep-base>=1.14.1nb1
 BUILDLINK_PKGSRCDIR.gnustep-base?=	../../devel/gnustep-base
@@ -53,13 +46,12 @@ PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Librar
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-base\/NSTimeZones$$/ { next; }
 PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/share\/GNUstep\/System\/Library\/Libraries\/Resources\/gnustep-base\/NSTimeZones\/zones$$/ { next; }
 
-.endif	# GNUSTEP_BASE_BUILDLINK3_MK
-
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ffcall/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gnustep-make/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # GNUSTEP_BASE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnustep-base

@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.11 2009/02/21 02:09:00 gdt Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:13 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-G_WRAP_BUILDLINK3_MK:=	${G_WRAP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	g-wrap
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	g-wrap
-.endif
+.if !defined(G_WRAP_BUILDLINK3_MK)
+G_WRAP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ng-wrap}
-BUILDLINK_PACKAGES+=	g-wrap
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}g-wrap
-
-.if !empty(G_WRAP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.g-wrap+=	g-wrap>=1.9.5
 BUILDLINK_ABI_DEPENDS.g-wrap?=	g-wrap>=1.9.6nb1
 BUILDLINK_PKGSRCDIR.g-wrap?=	../../devel/g-wrap
-.endif	# G_WRAP_BUILDLINK3_MK
 
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
+.endif # G_WRAP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-g-wrap

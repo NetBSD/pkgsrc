@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:35 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-APACHE_BUILDLINK3_MK:=	${APACHE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	apache
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	apache
-.endif
+.if !defined(APACHE_BUILDLINK3_MK)
+APACHE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Napache}
-BUILDLINK_PACKAGES+=	apache
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}apache
-
-.if !empty(APACHE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.2.3
 BUILDLINK_ABI_DEPENDS.apache?=	apache>=2.2.9nb3
 BUILDLINK_PKGSRCDIR.apache?=	../../www/apache22
@@ -26,9 +19,9 @@ APXS?=		${BUILDLINK_PREFIX.apache}/sbin/apxs
 .  if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS+=	--with-apxs2=${APXS:Q}
 .  endif
-.endif	# APACHE_BUILDLINK3_MK
 
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
+.endif # APACHE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-apache

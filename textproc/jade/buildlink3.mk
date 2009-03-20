@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:11:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:25:29 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-JADE_BUILDLINK3_MK:=	${JADE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	jade
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	jade
-.endif
+.if !defined(JADE_BUILDLINK3_MK)
+JADE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njade}
-BUILDLINK_PACKAGES+=	jade
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jade
-
-.if !empty(JADE_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.jade+=	jade>=1.2.1nb7
 BUILDLINK_ABI_DEPENDS.jade+=	jade>=1.2.1nb10
 BUILDLINK_PKGSRCDIR.jade?=	../../textproc/jade
-.endif	# JADE_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.endif # JADE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-jade

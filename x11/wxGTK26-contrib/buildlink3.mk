@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/09/22 19:58:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:52 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-WXGTK_CONTRIB_BUILDLINK3_MK:=	${WXGTK_CONTRIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	wxGTK-contrib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	wxGTK-contrib
-.endif
+.if !defined(WXGTK_CONTRIB_BUILDLINK3_MK)
+WXGTK_CONTRIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NwxGTK-contrib}
-BUILDLINK_PACKAGES+=	wxGTK-contrib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}wxGTK-contrib
-
-.if !empty(WXGTK_CONTRIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.wxGTK-contrib+=	wxGTK-contrib>=2.6.0nb2
 BUILDLINK_ABI_DEPENDS.wxGTK-contrib?=	wxGTK-contrib>=2.6.3nb1
 BUILDLINK_PKGSRCDIR.wxGTK-contrib?=	../../x11/wxGTK26-contrib
@@ -23,7 +16,6 @@ BUILDLINK_PKGSRCDIR.wxGTK-contrib?=	../../x11/wxGTK26-contrib
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/wxGTK26/buildlink3.mk"
+.endif # WXGTK_CONTRIB_BUILDLINK3_MK
 
-.endif	# WXGTK_CONTRIB_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-wxGTK-contrib

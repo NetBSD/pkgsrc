@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/09/24 16:49:19 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:42 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-LIBGNOMECANVASMM_BUILDLINK3_MK:=	${LIBGNOMECANVASMM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgnomecanvasmm
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libgnomecanvasmm
-.endif
+.if !defined(LIBGNOMECANVASMM_BUILDLINK3_MK)
+LIBGNOMECANVASMM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgnomecanvasmm}
-BUILDLINK_PACKAGES+=	libgnomecanvasmm
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgnomecanvasmm
-
-.if !empty(LIBGNOMECANVASMM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libgnomecanvasmm+=	libgnomecanvasmm>=2.10.0
 BUILDLINK_ABI_DEPENDS.libgnomecanvasmm+=	libgnomecanvasmm>=2.14.0nb1
 BUILDLINK_PKGSRCDIR.libgnomecanvasmm?=	../../graphics/libgnomecanvasmm
-.endif	# LIBGNOMECANVASMM_BUILDLINK3_MK
 
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
+.endif # LIBGNOMECANVASMM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgnomecanvasmm

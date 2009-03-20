@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:40 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-GNOME_CONTROL_CENTER_BUILDLINK3_MK:=	${GNOME_CONTROL_CENTER_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gnome-control-center
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gnome-control-center
-.endif
+.if !defined(GNOME_CONTROL_CENTER_BUILDLINK3_MK)
+GNOME_CONTROL_CENTER_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngnome-control-center}
-BUILDLINK_PACKAGES+=	gnome-control-center
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-control-center
-
-.if ${GNOME_CONTROL_CENTER_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gnome-control-center+=	gnome-control-center>=2.20.0.1
 BUILDLINK_ABI_DEPENDS.gnome-control-center?=	gnome-control-center>=2.22.2.1nb1
 BUILDLINK_PKGSRCDIR.gnome-control-center?=	../../x11/gnome-control-center
-.endif	# GNOME_CONTROL_CENTER_BUILDLINK3_MK
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
@@ -27,5 +19,6 @@ BUILDLINK_PKGSRCDIR.gnome-control-center?=	../../x11/gnome-control-center
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
+.endif # GNOME_CONTROL_CENTER_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gnome-control-center

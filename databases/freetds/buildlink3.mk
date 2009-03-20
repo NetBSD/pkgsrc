@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.12 2008/05/08 20:14:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:05 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-FREETDS_BUILDLINK3_MK:=	${FREETDS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	freetds
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	freetds
-.endif
+.if !defined(FREETDS_BUILDLINK3_MK)
+FREETDS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nfreetds}
-BUILDLINK_PACKAGES+=	freetds
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}freetds
-
-.if !empty(FREETDS_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.freetds+=	freetds>=0.82
 BUILDLINK_ABI_DEPENDS.freetds?=	freetds>=0.63nb4
 BUILDLINK_PKGSRCDIR.freetds?=	../../databases/freetds
-.endif	# FREETDS_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
 
@@ -29,5 +21,6 @@ pkgbase := freetds
 .if !empty(PKG_BUILD_OPTIONS.freetds:Mopenssl)
 .  include "../../security/openssl/buildlink3.mk"
 .endif
+.endif # FREETDS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-freetds

@@ -1,25 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/01/06 22:58:49 reed Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:15 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-POPPLER_GLIB_BUILDLINK3_MK:=	${POPPLER_GLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	poppler-glib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	poppler-glib
-.endif
+.if !defined(POPPLER_GLIB_BUILDLINK3_MK)
+POPPLER_GLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npoppler-glib}
-BUILDLINK_PACKAGES+=	poppler-glib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}poppler-glib
-
-.if !empty(POPPLER_GLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.poppler-glib+=	poppler-glib>=0.5.1
 BUILDLINK_ABI_DEPENDS.poppler-glib+=	poppler-glib>=0.10.0
 BUILDLINK_PKGSRCDIR.poppler-glib?=	../../print/poppler-glib
-.endif	# POPPLER_GLIB_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # POPPLER_GLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-poppler-glib

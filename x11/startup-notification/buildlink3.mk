@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.9 2009/03/17 16:28:36 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:25:51 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-STARTUP_NOTIFICATION_BUILDLINK3_MK:=	${STARTUP_NOTIFICATION_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	startup-notification
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	startup-notification
-.endif
+.if !defined(STARTUP_NOTIFICATION_BUILDLINK3_MK)
+STARTUP_NOTIFICATION_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nstartup-notification}
-BUILDLINK_PACKAGES+=	startup-notification
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}startup-notification
-
-.if !empty(STARTUP_NOTIFICATION_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.5
 BUILDLINK_ABI_DEPENDS.startup-notification+=	startup-notification>=0.8nb1
 BUILDLINK_PKGSRCDIR.startup-notification?=	../../x11/startup-notification
-.endif	# STARTUP_NOTIFICATION_BUILDLINK3_MK
 
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.endif # STARTUP_NOTIFICATION_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-startup-notification

@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.8 2006/07/08 23:11:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:33 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-SABLOTRON_BUILDLINK3_MK:=	${SABLOTRON_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	sablotron
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	sablotron
-.endif
+.if !defined(SABLOTRON_BUILDLINK3_MK)
+SABLOTRON_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nsablotron}
-BUILDLINK_PACKAGES+=	sablotron
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}sablotron
-
-.if !empty(SABLOTRON_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.sablotron+=	sablotron>=1.0
 BUILDLINK_ABI_DEPENDS.sablotron+=	sablotron>=1.0.2nb2
 BUILDLINK_PKGSRCDIR.sablotron?=	../../textproc/sablotron
-.endif	# SABLOTRON_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.endif # SABLOTRON_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-sablotron

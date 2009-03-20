@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:17 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBDOCKAPP_BUILDLINK3_MK:=	${LIBDOCKAPP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libdockapp
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libdockapp
-.endif
+.if !defined(LIBDOCKAPP_BUILDLINK3_MK)
+LIBDOCKAPP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibdockapp}
-BUILDLINK_PACKAGES+=	libdockapp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libdockapp
-
-.if !empty(LIBDOCKAPP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libdockapp+=		libdockapp>=0.4.0
 BUILDLINK_ABI_DEPENDS.libdockapp+=	libdockapp>=0.4.0nb2
 BUILDLINK_PKGSRCDIR.libdockapp?=	../../devel/libdockapp
-.endif	# LIBDOCKAPP_BUILDLINK3_MK
 
 .include "../../x11/libXpm/buildlink3.mk"
+.endif # LIBDOCKAPP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libdockapp

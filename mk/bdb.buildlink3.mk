@@ -1,4 +1,4 @@
-# $NetBSD: bdb.buildlink3.mk,v 1.22 2008/11/26 09:10:30 rillig Exp $
+# $NetBSD: bdb.buildlink3.mk,v 1.23 2009/03/20 19:25:01 joerg Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Berkeley DB (BDB) implementation and that are not restricted
@@ -134,9 +134,7 @@ BUILD_DEFS_EFFECTS+=	BDBBASE BDB_LIBS BDB_TYPE
 PKG_FAIL_REASON=	\
 	"[bdb.buildlink3.mk] ${_BDB_TYPE} is not an acceptable Berkeley DB type for ${PKGNAME}."
 .elif ${BDB_TYPE} == "db1"
-BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ndb1}
-BUILDLINK_PACKAGES+=		db1
-BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}db1
+BUILDLINK_TREE+=		db1 -db1
 BUILDLINK_BUILTIN_MK.db1=	../../mk/db1.builtin.mk
 .else
 .  include "${_BDB_PKGSRCDIR.${BDB_TYPE}}/buildlink3.mk"

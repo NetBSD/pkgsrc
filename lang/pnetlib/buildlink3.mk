@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:10:55 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:24:51 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-PNETLIB_BUILDLINK3_MK:=	${PNETLIB_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	pnetlib
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	pnetlib
-.endif
+.if !defined(PNETLIB_BUILDLINK3_MK)
+PNETLIB_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Npnetlib}
-BUILDLINK_PACKAGES+=	pnetlib
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pnetlib
-
-.if !empty(PNETLIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pnetlib+=	pnetlib>=0.6.4
 BUILDLINK_ABI_DEPENDS.pnetlib+=	pnetlib>=0.6.6nb2
 BUILDLINK_PKGSRCDIR.pnetlib?=	../../lang/pnetlib
-.endif	# PNETLIB_BUILDLINK3_MK
 
 .include "../../lang/pnet/buildlink3.mk"
+.endif # PNETLIB_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-pnetlib

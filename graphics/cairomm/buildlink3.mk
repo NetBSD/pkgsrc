@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/09/06 19:56:40 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:37 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-CAIROMM_BUILDLINK3_MK:=	${CAIROMM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	cairomm
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	cairomm
-.endif
+.if !defined(CAIROMM_BUILDLINK3_MK)
+CAIROMM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncairomm}
-BUILDLINK_PACKAGES+=	cairomm
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cairomm
-
-.if ${CAIROMM_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.cairomm+=	cairomm>=1.2.2
 BUILDLINK_PKGSRCDIR.cairomm?=	../../graphics/cairomm
-.endif	# CAIROMM_BUILDLINK3_MK
 
 .include "../../graphics/cairo/buildlink3.mk"
+.endif # CAIROMM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-cairomm

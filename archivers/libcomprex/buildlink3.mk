@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.12 2008/01/18 05:06:19 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:23:51 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBCOMPREX_BUILDLINK3_MK:=	${LIBCOMPREX_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libcomprex
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libcomprex
-.endif
+.if !defined(LIBCOMPREX_BUILDLINK3_MK)
+LIBCOMPREX_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibcomprex}
-BUILDLINK_PACKAGES+=	libcomprex
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libcomprex
-
-.if !empty(LIBCOMPREX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libcomprex+=		libcomprex>=0.3.2
 BUILDLINK_ABI_DEPENDS.libcomprex+=	libcomprex>=0.3.3nb3
 BUILDLINK_PKGSRCDIR.libcomprex?=	../../archivers/libcomprex
-.endif	# LIBCOMPREX_BUILDLINK3_MK
 
 .include "../../www/curl/buildlink3.mk"
+.endif # LIBCOMPREX_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libcomprex

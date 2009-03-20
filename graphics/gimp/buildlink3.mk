@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.26 2008/09/30 19:55:03 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.27 2009/03/20 19:24:39 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gimp
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gimp
-.endif
+.if !defined(GIMP_BUILDLINK3_MK)
+GIMP_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngimp}
-BUILDLINK_PACKAGES+=	gimp
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gimp
-
-.if !empty(GIMP_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gimp+=	gimp>=2.4.0
 BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.4.4
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
-.endif	# GIMP_BUILDLINK3_MK
 
 pkgbase := gimp
 .include "../../mk/pkg-build-options.mk"
@@ -44,5 +36,6 @@ pkgbase := gimp
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # GIMP_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gimp

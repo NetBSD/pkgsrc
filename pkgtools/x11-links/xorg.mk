@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.14 2008/12/04 04:16:41 cube Exp $
+# $NetBSD: xorg.mk,v 1.15 2009/03/20 19:25:13 joerg Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -76,14 +76,14 @@ FILES_LIST=	${FILESDIR}/xorg
 # ${X11BASE} actually belong to the base Xorg or not.
 #
 # XXX: maybe skip iconv and zlib too?
-.for _pkg_ in ${BUILDLINK_PACKAGES:Nx11-links}
+.for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 CHECK_BUILTIN.${_pkg_}:=	yes
 USE_BUILTIN.${_pkg_}=		yes
 .  sinclude "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 CHECK_BUILTIN.${_pkg_}:=	no
 .endfor
 
-.for _pkg_ in ${BUILDLINK_PACKAGES:Nx11-links}
+.for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 IGNORE_PKG.${_pkg_}=	yes
 .  if defined(IS_BUILTIN.${_pkg_}) && !empty(IS_BUILTIN.${_pkg_}:M[yY][eE][sS])
 .    if exists(${FILESDIR}/xorg.${_pkg_})

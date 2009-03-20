@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.7 2006/07/08 23:10:48 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2009/03/20 19:24:30 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-TEEM_BUILDLINK3_MK:=	${TEEM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	teem
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	teem
-.endif
+.if !defined(TEEM_BUILDLINK3_MK)
+TEEM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nteem}
-BUILDLINK_PACKAGES+=	teem
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}teem
-
-.if !empty(TEEM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.teem+=		teem>=1.8.0
 BUILDLINK_ABI_DEPENDS.teem+=		teem>=1.8.0nb1
 BUILDLINK_PKGSRCDIR.teem?=		../../devel/teem
@@ -39,7 +32,6 @@ BUILDLINK_FILES.teem+=	lib/libnrrd.*
 BUILDLINK_FILES.teem+=	lib/libteem.*
 BUILDLINK_FILES.teem+=	lib/libten.*
 BUILDLINK_FILES.teem+=	lib/libunrrdu.*
+.endif # TEEM_BUILDLINK3_MK
 
-.endif	# TEEM_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-teem

@@ -1,20 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/02/20 11:28:19 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:25:42 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GTKSOURCEVIEW_BUILDLINK3_MK:=	${GTKSOURCEVIEW_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gtksourceview
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gtksourceview
-.endif
+.if !defined(GTKSOURCEVIEW_BUILDLINK3_MK)
+GTKSOURCEVIEW_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngtksourceview}
-BUILDLINK_PACKAGES+=	gtksourceview
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtksourceview
-
-.if ${GTKSOURCEVIEW_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gtksourceview+=	gtksourceview>=1.8.5
 BUILDLINK_PKGSRCDIR.gtksourceview?=	../../x11/gtksourceview
-.endif	# GTKSOURCEVIEW_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -22,5 +14,6 @@ BUILDLINK_PKGSRCDIR.gtksourceview?=	../../x11/gtksourceview
 .include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # GTKSOURCEVIEW_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gtksourceview

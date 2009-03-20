@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/11/10 11:24:27 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:36 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-GRAPHICSMAGICK_BUILDLINK3_MK:=	${GRAPHICSMAGICK_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	GraphicsMagick
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	GraphicsMagick
-.endif
+.if !defined(GRAPHICSMAGICK_BUILDLINK3_MK)
+GRAPHICSMAGICK_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NGraphicsMagick}
-BUILDLINK_PACKAGES+=	GraphicsMagick
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}GraphicsMagick
-
-.if ${GRAPHICSMAGICK_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.GraphicsMagick+=	GraphicsMagick>=1.2
 BUILDLINK_ABI_DEPENDS.GraphicsMagick?=	GraphicsMagick>=1.3
 BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
-.endif	# GRAPHICSMAGICK_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -33,5 +25,6 @@ BUILDLINK_PKGSRCDIR.GraphicsMagick?=	../../graphics/GraphicsMagick
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif # GRAPHICSMAGICK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-GraphicsMagick

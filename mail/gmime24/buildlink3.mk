@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/10/24 16:37:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:55 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GMIME24_BUILDLINK3_MK:=	${GMIME24_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	gmime24
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	gmime24
-.endif
+.if !defined(GMIME24_BUILDLINK3_MK)
+GMIME24_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngmime24}
-BUILDLINK_PACKAGES+=	gmime24
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gmime24
-
-.if ${GMIME24_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gmime24+=	gmime24>=2.4.3
 BUILDLINK_PKGSRCDIR.gmime24?=	../../mail/gmime24
-.endif	# GMIME24_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.endif # GMIME24_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gmime24

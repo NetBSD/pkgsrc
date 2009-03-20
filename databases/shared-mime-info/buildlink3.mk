@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/12/06 11:38:26 markd Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:07 joerg Exp $
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
-SHARED_MIME_INFO_BUILDLINK3_MK:=	${SHARED_MIME_INFO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	shared-mime-info
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	shared-mime-info
-.endif
+.if !defined(SHARED_MIME_INFO_BUILDLINK3_MK)
+SHARED_MIME_INFO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nshared-mime-info}
-BUILDLINK_PACKAGES+=	shared-mime-info
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}shared-mime-info
-
-.if !empty(SHARED_MIME_INFO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.shared-mime-info+=	shared-mime-info>=0.15
 BUILDLINK_ABI_DEPENDS.shared-mime-info+=	shared-mime-info>=0.16nb2
 BUILDLINK_PKGSRCDIR.shared-mime-info?=	../../databases/shared-mime-info
@@ -31,10 +24,10 @@ shared-mime-info-buildlink-fake:
 		${ECHO} "echo '[pkgsrc] Doing nothing for update-mime-database' \$$*" >> ${_SMI_FAKE_UPDATEDB};		\
 		${CHMOD} +x ${_SMI_FAKE_UPDATEDB};			\
 	fi
-.endif	# SHARED_MIME_INFO_BUILDLINK3_MK
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # SHARED_MIME_INFO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-shared-mime-info

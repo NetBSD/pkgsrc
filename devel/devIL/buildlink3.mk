@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.14 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:24:12 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-DEVIL_BUILDLINK3_MK:=	${DEVIL_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	devIL
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	devIL
-.endif
+.if !defined(DEVIL_BUILDLINK3_MK)
+DEVIL_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NdevIL}
-BUILDLINK_PACKAGES+=	devIL
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}devIL
-
-.if !empty(DEVIL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.devIL+=	devIL>=1.6.6nb1
 BUILDLINK_ABI_DEPENDS.devIL+=	devIL>=1.6.6nb9
 BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
-.endif	# DEVIL_BUILDLINK3_MK
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
@@ -24,5 +16,6 @@ BUILDLINK_PKGSRCDIR.devIL?=	../../devel/devIL
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.endif # DEVIL_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-devIL

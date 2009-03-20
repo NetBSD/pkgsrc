@@ -1,18 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:24:49 joerg Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-GCC3_ADA_BUILDLINK3_MK:=  ${GCC3_ADA_BUILDLINK3_MK}+
 BUILDLINK_PREFIX.gcc3-ada:=${LOCALBASE}/gcc3
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=     gcc3-ada
-.endif
+BUILDLINK_TREE+=	gcc3-ada
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ngcc3-ada}
-BUILDLINK_PACKAGES+=    gcc3-ada
-BUILDLINK_ORDER:=    ${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gcc3-ada
+.if !defined(GCC3_ADA_BUILDLINK3_MK)
+GCC3_ADA_BUILDLINK3_MK:=
 
-.if !empty(GCC3_ADA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gcc3-ada+=      gcc3-ada>=3.3.3
 BUILDLINK_ABI_DEPENDS.gcc3-ada?=    gcc3-ada>=3.3.5nb1
 BUILDLINK_PKGSRCDIR.gcc3-ada?=    ../../lang/gcc3-ada
@@ -23,7 +17,6 @@ BUILDLINK_LIBDIRS.gcc3-ada+=       lib ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3
 BUILDLINK_LIBDIRS.gcc3-ada+=       ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3-ada}\///}/adalib
 BUILDLINK_INCDIRS.gcc3-ada+=       include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc3-ada}\///}/adainclude
 .  endif
-.endif  # GCC3_ADA_BUILDLINK3_MK
 
 BUILDLINK_PKGSRCDIR.gcc3-ada?=     ../../lang/gcc3-ada
 BUILDLINK_FILES_CMD.gcc3-ada=	(cd  ${BUILDLINK_PREFIX.gcc3-ada} && \
@@ -34,5 +27,6 @@ BUILDLINK_DEPMETHOD.gcc3-ada?=	build
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.endif # GCC3_ADA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gcc3-ada

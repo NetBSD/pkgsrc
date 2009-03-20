@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/01/07 13:59:36 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2009/03/20 19:25:39 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILDLINK_DEPMETHOD.compositeproto?=	build
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-COMPOSITEPROTO_BUILDLINK3_MK:=	${COMPOSITEPROTO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	compositeproto
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	compositeproto
-.endif
+.if !defined(COMPOSITEPROTO_BUILDLINK3_MK)
+COMPOSITEPROTO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncompositeproto}
-BUILDLINK_PACKAGES+=	compositeproto
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}compositeproto
-
-.if !empty(COMPOSITEPROTO_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.3.1
 BUILDLINK_PKGSRCDIR.compositeproto?=	../../x11/compositeproto
-.endif	# COMPOSITEPROTO_BUILDLINK3_MK
 
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
+.endif # COMPOSITEPROTO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=     ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-compositeproto

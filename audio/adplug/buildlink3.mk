@@ -1,21 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/09/10 16:02:26 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:23:51 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-ADPLUG_BUILDLINK3_MK:=	${ADPLUG_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	adplug
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	adplug
-.endif
+.if !defined(ADPLUG_BUILDLINK3_MK)
+ADPLUG_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nadplug}
-BUILDLINK_PACKAGES+=	adplug
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}adplug
-
-.if ${ADPLUG_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.adplug+=	adplug>=2.1
 BUILDLINK_PKGSRCDIR.adplug?=	../../audio/adplug
-.endif	# ADPLUG_BUILDLINK3_MK
 
 .include "../../devel/libbinio/buildlink3.mk"
+.endif # ADPLUG_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-adplug

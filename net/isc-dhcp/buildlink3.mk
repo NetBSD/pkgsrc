@@ -1,19 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/06/16 14:52:58 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:08 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-ISC_DHCP_BASE_BUILDLINK3_MK:=	${ISC_DHCP_BASE_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	isc-dhcp-base
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	isc-dhcp-base
-.endif
+.if !defined(ISC_DHCP_BASE_BUILDLINK3_MK)
+ISC_DHCP_BASE_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nisc-dhcp-base}
-BUILDLINK_PACKAGES+=	isc-dhcp-base
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}isc-dhcp-base
-
-.if ${ISC_DHCP_BASE_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.isc-dhcp-base+=	isc-dhcp-base>=3.1.0<4
 BUILDLINK_PKGSRCDIR.isc-dhcp-base?=	../../net/isc-dhcp
-.endif	# ISC_DHCP_BASE_BUILDLINK3_MK
+.endif # ISC_DHCP_BASE_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-isc-dhcp-base

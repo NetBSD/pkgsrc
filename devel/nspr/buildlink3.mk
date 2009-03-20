@@ -1,17 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.9 2007/09/25 04:18:25 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:25 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-NSPR_BUILDLINK3_MK:=	${NSPR_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	nspr
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	nspr
-.endif
-
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nnspr}
-BUILDLINK_PACKAGES+=	nspr
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}nspr
-
-.if ${NSPR_BUILDLINK3_MK} == "+"
+.if !defined(NSPR_BUILDLINK3_MK)
+NSPR_BUILDLINK3_MK:=
 
 .  include "../../mk/bsd.fast.prefs.mk"
 
@@ -29,7 +21,6 @@ BUILDLINK_FILES.nspr+=          include/nspr/*
 BUILDLINK_INCDIRS.nspr+=        include/nspr
 BUILDLINK_LIBDIRS.nspr+=        lib/nspr
 BUILDLINK_RPATHDIRS.nspr+=      lib/nspr
+.endif # NSPR_BUILDLINK3_MK
 
-.endif	# NSPR_BUILDLINK3_MK
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-nspr

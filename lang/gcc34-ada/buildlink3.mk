@@ -1,18 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:49 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-GCCADA_BUILDLINK3_MK:=	${GCCADA_BUILDLINK3_MK}+
 BUILDLINK_PREFIX.gcc34-ada:=${LOCALBASE}/gcc34-ada
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	gcc34-ada
-.endif
+BUILDLINK_TREE+=	gcc34-ada
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ngcc34-ada}
-BUILDLINK_PACKAGES+=	gcc34-ada
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gcc34-ada
+.if !defined(GCCADA_BUILDLINK3_MK)
+GCCADA_BUILDLINK3_MK:=
 
-.if !empty(GCCADA_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gcc34-ada+=	gcc34-ada>=3.4.1nb4
 BUILDLINK_ABI_DEPENDS.gcc34-ada?=	gcc34-ada>=3.4.4nb1
 BUILDLINK_PKGSRCDIR.gcc34-ada?=	../../lang/gcc34-ada
@@ -25,7 +19,6 @@ BUILDLINK_LIBDIRS.gcc34-ada+=	${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34-ada}\//
 BUILDLINK_INCDIRS.gcc34-ada+=	include ${_GCC_ARCHDIR:S/^${BUILDLINK_PREFIX.gcc34-ada}\///}/adainclude
 .     endif
 .  endif
-.endif  # GCCADA_BUILDLINK3_MK
 
 BUILDLINK_FILES_CMD.gcc34-ada=	(cd  ${BUILDLINK_PREFIX.gcc34-ada} && \
 	${FIND} bin libexec lib \( -type file -o -type link \) -print)
@@ -40,5 +33,6 @@ BUILDLINK_DEPMETHOD.gcc34-ada?=	build
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.endif # GCCADA_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-gcc34-ada

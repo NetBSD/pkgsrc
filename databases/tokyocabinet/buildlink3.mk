@@ -1,26 +1,19 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/12/15 11:15:05 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:08 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-TOKYOCABINET_BUILDLINK3_MK:=	${TOKYOCABINET_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tokyocabinet
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	tokyocabinet
-.endif
+.if !defined(TOKYOCABINET_BUILDLINK3_MK)
+TOKYOCABINET_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntokyocabinet}
-BUILDLINK_PACKAGES+=	tokyocabinet
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}tokyocabinet
-
-.if ${TOKYOCABINET_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.7
 BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.24
 BUILDLINK_PKGSRCDIR.tokyocabinet?=	../../databases/tokyocabinet
-.endif	# TOKYOCABINET_BUILDLINK3_MK
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzmalib/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif # TOKYOCABINET_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tokyocabinet

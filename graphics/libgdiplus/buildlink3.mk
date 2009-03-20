@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.24 2008/10/07 13:23:25 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2009/03/20 19:24:41 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBGDIPLUS_BUILDLINK3_MK:=	${LIBGDIPLUS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libgdiplus
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libgdiplus
-.endif
+.if !defined(LIBGDIPLUS_BUILDLINK3_MK)
+LIBGDIPLUS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibgdiplus}
-BUILDLINK_PACKAGES+=	libgdiplus
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgdiplus
-
-.if ${LIBGDIPLUS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libgdiplus+=	libgdiplus>=2.0
 BUILDLINK_ABI_DEPENDS.libgdiplus?=	libgdiplus>=2.0
 BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
-.endif	# LIBGDIPLUS_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
@@ -26,5 +18,6 @@ BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.endif # LIBGDIPLUS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libgdiplus

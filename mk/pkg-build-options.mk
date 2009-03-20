@@ -1,4 +1,4 @@
-# $NetBSD: pkg-build-options.mk,v 1.7 2007/10/13 11:04:17 dsl Exp $
+# $NetBSD: pkg-build-options.mk,v 1.8 2009/03/20 19:25:01 joerg Exp $
 #
 # This procedure determines the PKG_OPTIONS that have been in effect
 # when the package ${pkgbase} has been built. When the package is not
@@ -21,7 +21,24 @@
 
 .include "bsd.fast.prefs.mk"
 
-.if defined(BUILDLINK_DEPTH) && !empty(BUILDLINK_DEPTH)
+# For the check for inclusion from non-buildlink3.mk, it is irrelevant
+# whether BUILDLINK_TREE was empty or undefined, so defining it here
+# avoids dealing one case.
+BUILDLINK_TREE?=
+
+# Counting words doesn't work as expected for empty strings, they
+# still have one word.  Older make doesn't like the code without
+# variable assignment for unknown reasons.
+_BUILDLINK_TREE_WITH:= ${BUILDLINK_TREE:M-*:[\#]}
+_BUILDLINK_TREE_WITHOUT:= ${BUILDLINK_TREE:N-*:[\#]}
+.if (empty(BUILDLINK_TREE:M-*) && empty(BUILDLINK_TREE:N-*)) || \
+    (!empty(BUILDLINK_TREE:M-*) && !empty(BUILDLINK_TREE:N-*) && \
+     ${_BUILDLINK_TREE_WITH} == ${_BUILDLINK_TREE_WITHOUT})
+.  for b in ${pkgbase}
+PKG_BUILD_OPTIONS.${b}=
+PKG_FAIL_REASON+=	"[pkg-build-options.mk] This file may only be included from a buildlink3.mk file (pkgbase=${b})."
+.  endfor
+.else
 .  for b in ${pkgbase}
 .    if !defined(PKG_BUILD_OPTIONS.${b})
 PKG_BUILD_OPTIONS.${b} != \
@@ -34,9 +51,5 @@ MAKEFLAGS+=	PKG_BUILD_OPTIONS.${b}=${PKG_BUILD_OPTIONS.${b}:Q}
 .    endif
 
 MAKEVARS+=	PKG_BUILD_OPTIONS.${b}
-.  endfor
-.else
-.  for b in ${pkgbase}
-PKG_FAIL_REASON+=	"[pkg-build-options.mk] This file may only be included from a buildlink3.mk file (pkgbase=${b})."
 .  endfor
 .endif

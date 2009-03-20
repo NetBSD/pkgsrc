@@ -1,24 +1,17 @@
-# $NetBSD: buildlink3.mk,v 1.11 2008/03/07 07:07:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:25:06 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-TOTEM_BUILDLINK3_MK:=	${TOTEM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	totem
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	totem
-.endif
+.if !defined(TOTEM_BUILDLINK3_MK)
+TOTEM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntotem}
-BUILDLINK_PACKAGES+=	totem
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}totem
-
-.if !empty(TOTEM_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.totem+=	{totem,totem-xine}>=1.4.0
 BUILDLINK_ABI_DEPENDS.totem+=	{totem,totem-xine}>=2.20.3nb2
 BUILDLINK_PKGSRCDIR.totem?=	../../multimedia/totem
-.endif	# TOTEM_BUILDLINK3_MK
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.endif # TOTEM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-totem
