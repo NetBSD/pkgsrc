@@ -1,4 +1,4 @@
-# $NetBSD: xfree.mk,v 1.15 2006/12/15 20:33:00 joerg Exp $
+# $NetBSD: xfree.mk,v 1.16 2009/03/20 19:25:13 joerg Exp $
 
 FILES_LIST=	${FILESDIR}/xfree
 
@@ -18,14 +18,14 @@ FILES_LIST=	${FILESDIR}/xfree
 # Check if any headers and libraries for ${X11_MODULES} found in
 # ${X11BASE} actually belong to the base XFree86 or not.
 #
-.for _pkg_ in ${BUILDLINK_PACKAGES:Nx11-links}
+.for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 CHECK_BUILTIN.${_pkg_}:=	yes
 USE_BUILTIN.${_pkg_}=		yes
 .  sinclude "${BUILDLINK_PKGSRCDIR.${_pkg_}}/builtin.mk"
 CHECK_BUILTIN.${_pkg_}:=	no
 .endfor
 
-.for _pkg_ in ${BUILDLINK_PACKAGES:Nx11-links}
+.for _pkg_ in ${BUILDLINK_TREE:N-*:Nx11-links:O:u}
 IGNORE_PKG.${_pkg_}=	yes
 .  if (defined(IS_BUILTIN.${_pkg_}) && !empty(IS_BUILTIN.${_pkg_}:M[yY][eE][sS]) ) && \
       exists(${FILESDIR}/xfree.${_pkg_})

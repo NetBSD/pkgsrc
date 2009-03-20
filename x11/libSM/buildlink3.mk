@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2007/12/17 14:24:06 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:43 joerg Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -6,24 +6,17 @@
 .include "../../mk/x11.buildlink3.mk"
 .else
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-LIBSM_BUILDLINK3_MK:=	${LIBSM_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libSM
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	libSM
-.endif
+.if !defined(LIBSM_BUILDLINK3_MK)
+LIBSM_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NlibSM}
-BUILDLINK_PACKAGES+=	libSM
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libSM
-
-.if ${LIBSM_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libSM+=	libSM>=0.99.2
 BUILDLINK_PKGSRCDIR.libSM?=	../../x11/libSM
-.endif	# LIBSM_BUILDLINK3_MK
 
 .include "../../x11/libICE/buildlink3.mk"
+.endif # LIBSM_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libSM
 
 .endif

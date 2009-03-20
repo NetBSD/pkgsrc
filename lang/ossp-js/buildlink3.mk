@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/02/06 10:10:45 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:51 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-OSSP_JS_BUILDLINK3_MK:=	${OSSP_JS_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ossp-js
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	ossp-js
-.endif
+.if !defined(OSSP_JS_BUILDLINK3_MK)
+OSSP_JS_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nossp-js}
-BUILDLINK_PACKAGES+=	ossp-js
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ossp-js
-
-.if ${OSSP_JS_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.ossp-js+=	ossp-js>=1.6.20070208nb1
 BUILDLINK_PKGSRCDIR.ossp-js?=	../../lang/ossp-js
 .  include "../../lang/ossp-js/libm.mk"
-.endif	# OSSP_JS_BUILDLINK3_MK
 
 .include "../../mk/dlopen.buildlink3.mk"
+.endif # OSSP_JS_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ossp-js

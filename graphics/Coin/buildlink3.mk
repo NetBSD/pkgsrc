@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/03/08 13:39:20 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:35 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-COIN_BUILDLINK3_MK:=	${COIN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	Coin
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	Coin
-.endif
+.if !defined(COIN_BUILDLINK3_MK)
+COIN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NCoin}
-BUILDLINK_PACKAGES+=	Coin
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}Coin
-
-.if ${COIN_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.Coin+=		Coin>=2.2.1
 BUILDLINK_ABI_DEPENDS.Coin+=		Coin>=2.4.4nb3
 BUILDLINK_PKGSRCDIR.Coin?=		../../graphics/Coin
@@ -20,7 +13,6 @@ BUILDLINK_PKGSRCDIR.Coin?=		../../graphics/Coin
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
-
 .endif # COIN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-Coin

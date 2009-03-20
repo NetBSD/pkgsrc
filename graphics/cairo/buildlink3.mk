@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.30 2008/10/17 13:00:44 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2009/03/20 19:24:37 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	cairo
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	cairo
-.endif
+.if !defined(CAIRO_BUILDLINK3_MK)
+CAIRO_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ncairo}
-BUILDLINK_PACKAGES+=	cairo
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cairo
-
-.if ${CAIRO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
 BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.6.4
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
@@ -19,7 +12,6 @@ BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
 BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.12.0
-.endif	# CAIRO_BUILDLINK3_MK
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -35,5 +27,6 @@ pkgbase := cairo
 .include "../../graphics/glitz/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+.endif # CAIRO_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-cairo

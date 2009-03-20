@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.11 2006/07/08 23:11:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:25:39 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-BLT_BUILDLINK3_MK:=	${BLT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	blt
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	blt
-.endif
+.if !defined(BLT_BUILDLINK3_MK)
+BLT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nblt}
-BUILDLINK_PACKAGES+=	blt
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}blt
-
-.if !empty(BLT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.blt+=		blt>=2.4z
 BUILDLINK_ABI_DEPENDS.blt?=	blt>=2.4znb2
 BUILDLINK_PKGSRCDIR.blt?=	../../x11/blt
-.endif	# BLT_BUILDLINK3_MK
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.endif # BLT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-blt

@@ -1,21 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.22 2009/01/13 12:55:30 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2009/03/20 19:24:36 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-IMAGEMAGICK_BUILDLINK3_MK:=	${IMAGEMAGICK_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	ImageMagick
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	ImageMagick
-.endif
+.if !defined(IMAGEMAGICK_BUILDLINK3_MK)
+IMAGEMAGICK_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:NImageMagick}
-BUILDLINK_PACKAGES+=	ImageMagick
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ImageMagick
-
-.if !empty(IMAGEMAGICK_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=5.5.7.11nb1
 BUILDLINK_ABI_DEPENDS.ImageMagick+=	ImageMagick>=6.3.1.6nb1
 BUILDLINK_PKGSRCDIR.ImageMagick?=	../../graphics/ImageMagick
-.endif	# IMAGEMAGICK_BUILDLINK3_MK
 
 pkgbase := ImageMagick
 .include "../../mk/pkg-build-options.mk"
@@ -38,5 +30,6 @@ pkgbase := ImageMagick
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # IMAGEMAGICK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-ImageMagick

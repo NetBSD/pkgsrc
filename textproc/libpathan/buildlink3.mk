@@ -1,22 +1,15 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:11:11 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/03/20 19:25:30 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBPATHAN_BUILDLINK3_MK:=	${LIBPATHAN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libpathan
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libpathan
-.endif
+.if !defined(LIBPATHAN_BUILDLINK3_MK)
+LIBPATHAN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibpathan}
-BUILDLINK_PACKAGES+=	libpathan
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libpathan
-
-.if !empty(LIBPATHAN_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libpathan+=	libpathan>=1.2.2
 BUILDLINK_ABI_DEPENDS.libpathan+=	libpathan>=1.2.2nb2
 BUILDLINK_PKGSRCDIR.libpathan?=	../../textproc/libpathan
-.endif	# LIBPATHAN_BUILDLINK3_MK
 
 .include "../../textproc/xerces-c/buildlink3.mk"
+.endif # LIBPATHAN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libpathan

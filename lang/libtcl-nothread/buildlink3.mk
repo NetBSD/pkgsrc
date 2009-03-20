@@ -1,17 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:24:50 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-TCLNT_BUILDLINK3_MK:=	${TCLNT_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tclnt
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	tclnt
-.endif
+.if !defined(TCLNT_BUILDLINK3_MK)
+TCLNT_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Ntclnt}
-BUILDLINK_PACKAGES+=	tclnt
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}tclnt
-
-.if !empty(TCLNT_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.tclnt+=	libtcl-nothread>=8.4.6
 BUILDLINK_ABI_DEPENDS.tclnt+=	libtcl-nothread>=8.4.6nb1
 BUILDLINK_PKGSRCDIR.tclnt?=	../../lang/libtcl-nothread
@@ -27,9 +20,8 @@ BUILDLINK_TRANSFORM+=	l:tcl8.4:tcl84-nothread
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tclConfig-nothread.sh
 PKGSRC_MAKE_ENV+=	_TCL_NOTHREAD=yes
 
-.endif	# TCLNT_BUILDLINK3_MK
-
 _TCL_NOTHREAD=		yes
 .include "../../lang/tcl/buildlink3.mk"
+.endif # TCLNT_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tclnt

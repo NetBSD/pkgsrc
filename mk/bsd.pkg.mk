@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1953 2009/02/06 15:27:00 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1954 2009/03/20 19:25:01 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -124,6 +124,11 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 ############################################################################
 # Sanity checks
 ############################################################################
+
+.if defined(BUILDLINK_DEPTH) || defined(BUILDLINK_PACKAGES) || \
+    defined(BUILDLINK_DEPENDS) || defined(BUILDLINK_ORDER)
+PKG_FAIL_REASON+=	"Out-dated buildlink3.mk detected, please update"
+.endif
 
 # PKG_INSTALLATION_TYPE can only be one of two values: "pkgviews" or
 # "overwrite".

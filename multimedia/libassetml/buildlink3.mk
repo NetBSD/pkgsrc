@@ -1,23 +1,16 @@
-# $NetBSD: buildlink3.mk,v 1.6 2006/07/08 23:11:01 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2009/03/20 19:25:03 joerg Exp $
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-LIBASSETML_BUILDLINK3_MK:=	${LIBASSETML_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	libassetml
 
-.if !empty(BUILDLINK_DEPTH:M+)
-BUILDLINK_DEPENDS+=	libassetml
-.endif
+.if !defined(LIBASSETML_BUILDLINK3_MK)
+LIBASSETML_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibassetml}
-BUILDLINK_PACKAGES+=	libassetml
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libassetml
-
-.if !empty(LIBASSETML_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libassetml+=	libassetml>=1.2.1
 BUILDLINK_ABI_DEPENDS.libassetml?=	libassetml>=1.2.1nb1
 BUILDLINK_PKGSRCDIR.libassetml?=	../../multimedia/libassetml
-.endif	# LIBASSETML_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.endif # LIBASSETML_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-libassetml

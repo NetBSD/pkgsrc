@@ -1,22 +1,13 @@
-# $NetBSD: buildlink3.mk,v 1.2 2007/11/05 17:06:33 jmmv Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:32 joerg Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
-RARIAN_BUILDLINK3_MK:=	${RARIAN_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	rarian
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=	rarian
-.endif
+.if !defined(RARIAN_BUILDLINK3_MK)
+RARIAN_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nrarian}
-BUILDLINK_PACKAGES+=	rarian
-BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}rarian
-
-.if ${RARIAN_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.rarian+=	rarian>=0.6.0
 BUILDLINK_PKGSRCDIR.rarian?=	../../textproc/rarian
-.endif	# RARIAN_BUILDLINK3_MK
 
-.if !empty(RARIAN_BUILDLINK3_MK:M+)
 BUILDLINK_TARGETS+=	rarian-buildlink-fake
 
 rarian-buildlink-fake:
@@ -36,6 +27,6 @@ rarian-buildlink-fake:
 			${CHMOD} +x ${BUILDLINK_DIR}/bin/$${fake};	\
 		fi;							\
 	done
-.endif	# RARIAN_BUILDLINK3_MK
+.endif # RARIAN_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-rarian
