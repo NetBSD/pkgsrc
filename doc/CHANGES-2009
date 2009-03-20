@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1112 2009/03/20 15:46:11 roy Exp $
+$NetBSD: CHANGES-2009,v 1.1113 2009/03/20 16:06:31 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1481,3 +1481,25 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gnome-common to 2.26.0 [snj 2009-03-19]
 	Updated x11/gtk2-engines-murrine to 0.90.2 [snj 2009-03-19]
 	Updated net/dhcpcd to 4.99.15 [roy 2009-03-20]
+	Updated databases/postgresql81 to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-client to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-server to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-plperl to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-plpython to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-pltcl to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql81-tsearch2 to 8.1.17 [adam 2009-03-20]
+	Updated databases/postgresql82 to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-client to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-server to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-adminpack to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-plperl to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-plpython to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-pltcl to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql82-tsearch2 to 8.2.13 [adam 2009-03-20]
+	Updated databases/postgresql83 to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-client to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-server to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-adminpack to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-plperl to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-plpython to 8.3.7 [adam 2009-03-20]
+	Updated databases/postgresql83-pltcl to 8.3.7 [adam 2009-03-20]
