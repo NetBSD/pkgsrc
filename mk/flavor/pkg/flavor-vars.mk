@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.10 2009/02/11 14:34:36 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.11 2009/03/20 16:52:40 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -49,7 +49,7 @@ BOOTSTRAP_DEPENDS+=	pkg_install>=${PKGTOOLS_REQD}:../../pkgtools/pkg_install
 _PKG_INSTALL_DEPENDS=	yes
 .endif
 
-.if !defined(NO_PKGTOOLS_REQD_CHECK) && ${PKGTOOLS_VERSION} >= 20090201
+.if ${PKGTOOLS_VERSION} >= 20090201
 AUDIT_PACKAGES?=	${PKG_ADMIN}
 _AUDIT_PACKAGES_CMD?=	audit-pkg
 _EXTRACT_PKGVULNDIR=	${PKG_ADMIN} config-var PKGVULNDIR
