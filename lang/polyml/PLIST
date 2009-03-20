@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/20 21:12:51 asau Exp $
+bin/poly
+bin/polyimport
+lib/libpolymain.la
+lib/libpolyml.la
+man/man1/poly.1
+man/man1/polyimport.1
