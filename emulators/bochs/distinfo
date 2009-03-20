@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2008/12/06 12:00:56 wiz Exp $
+$NetBSD: distinfo,v 1.24 2009/03/20 12:11:59 mishka Exp $
 
 SHA1 (bochs-2.3.7.tar.gz) = e687c697a8be8396ae75106d0cd6149bd52ca67d
 RMD160 (bochs-2.3.7.tar.gz) = b4c9cb8e777c4e484f653085783bce9645804fe0
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 51ebcc673c60258d19e4ec18f2464fb694548228
 SHA1 (patch-ac) = ab21b4c2c38d798e24244163b2c447430e012e8e
 SHA1 (patch-ad) = 44181a229d81a6462e3e44c2425d62a415c5f6f9
 SHA1 (patch-ae) = 4c466afb1d780ce7cdfbaef8e8fa00447d0ebcb7
+SHA1 (patch-af) = 1619912c0aa6b5504c191a78bc193b38915b4e64
