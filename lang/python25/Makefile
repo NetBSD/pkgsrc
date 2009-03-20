@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/03/16 21:11:51 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/20 18:19:20 joerg Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.5.2/ \
 		http://www.python.org/ftp/python/2.5.2/
@@ -22,6 +22,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
+CONFIGURE_ARGS+=	--with-system-ffi
 
 LDFLAGS+=		-L${WRKSRC}
 
@@ -159,6 +160,7 @@ BUILDLINK_DEPMETHOD.readline=		build
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
