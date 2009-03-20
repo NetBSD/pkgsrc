@@ -1,4 +1,4 @@
-<!-- $NetBSD: buildlink.xml,v 1.25 2007/10/01 22:38:42 rillig Exp $ -->
+<!-- $NetBSD: buildlink.xml,v 1.26 2009/03/20 19:33:28 joerg Exp $ -->
 
 <chapter id="buildlink">
   <title>Buildlink methodology</title>
@@ -189,51 +189,30 @@ BUILDLINK_API_DEPENDS.foo+=   foo>=1.1.0
       from <filename>pkgsrc/graphics/tiff</filename>:</para>
 
 <programlisting>
-# &#36;NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp &#36;
+# &#36;NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp &#36;
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tiff
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=     tiff
-.endif
+.if !defined(TIFF_BUILDLINK3_MK)
+TIFF_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
-
-.if ${TIFF_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.tiff+=        tiff>=3.6.1
-BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.tiff+=	tiff>=3.6.1
+BUILDLINK_ABI_DEPENDS.tiff+=	tiff>=3.7.2nb1
+BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.endif # TIFF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tiff
 </programlisting>
 
       <para>The header and footer manipulate
-      <varname>BUILDLINK_DEPTH</varname>, which is common across all
+      <varname>BUILDLINK_TREE</varname>, which is common across all
       <filename>buildlink3.mk</filename> files and is used to track
-      at what depth we are including
-      <filename>buildlink3.mk</filename> files.</para>
+      the dependency tree.</para>
 
-      <para>The first section controls if the dependency on
-      <replaceable>pkg</replaceable> is added.
-      <varname>BUILDLINK_DEPENDS</varname> is the global list of
-      packages for which dependencies are added by
-      buildlink3.</para>
-
-      <para>The second section advises pkgsrc that the
-      <filename>buildlink3.mk</filename> file for
-      <replaceable>pkg</replaceable> has been included at some point.
-      <varname>BUILDLINK_PACKAGES</varname> is the global list of
-      packages for which <filename>buildlink3.mk</filename> files
-      have been included.  It must <emphasis>always</emphasis> be
-      appended to within a <filename>buildlink3.mk</filename>
-      file.</para>
-
-      <para>The third section is protected from multiple inclusion
+      <para>The main section is protected from multiple inclusion
       and controls how the dependency on <replaceable>pkg</replaceable> is
       added.  Several important variables are set in the section:</para>
 
@@ -341,7 +320,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
 	</listitem>
       </itemizedlist>
 
-      <para>The last section includes any
+      <para>This section can additionally include any
       <filename>buildlink3.mk</filename> needed for
       <replaceable>pkg</replaceable>'s library dependencies.
       Including these <filename>buildlink3.mk</filename> files
@@ -350,7 +329,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
       <filename>${BUILDLINK_DIR}</filename>
       whenever the <replaceable>pkg</replaceable>
       <filename>buildlink3.mk</filename>
-      file is included.</para>
+      file is included. Dependencies are only added for directly
+      include <filename>buildlink3.mk</filename> files.</para>
     </sect2>
 
     <sect2 id="updating-buildlink-depends">
