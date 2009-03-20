@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/18 20:16:12 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/03/20 18:57:18 gdt Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/LineIntersector.h
@@ -41,7 +41,22 @@ include/geos/geom/Point.h
 include/geos/geom/Polygon.h
 include/geos/geom/PrecisionModel.h
 include/geos/geom/PrecisionModel.inl
+include/geos/geom/prep/AbstractPreparedPolygonContains.h
+include/geos/geom/prep/BasicPreparedGeometry.h
+include/geos/geom/prep/PreparedGeometry.h
+include/geos/geom/prep/PreparedGeometryFactory.h
+include/geos/geom/prep/PreparedLineString.h
+include/geos/geom/prep/PreparedLineStringIntersects.h
+include/geos/geom/prep/PreparedPoint.h
+include/geos/geom/prep/PreparedPolygon.h
+include/geos/geom/prep/PreparedPolygonContains.h
+include/geos/geom/prep/PreparedPolygonContainsProperly.h
+include/geos/geom/prep/PreparedPolygonCovers.h
+include/geos/geom/prep/PreparedPolygonIntersects.h
+include/geos/geom/prep/PreparedPolygonPredicate.h
+include/geos/geom/util/ComponentCoordinateExtracter.h
 include/geos/geom/util/CoordinateOperation.h
+include/geos/geom/util/GeometryCombiner.h
 include/geos/geom/util/GeometryEditor.h
 include/geos/geom/util/GeometryEditorOperation.h
 include/geos/geom/util/GeometryTransformer.h
@@ -131,6 +146,7 @@ include/geos/operation/overlay/OverlayOp.h
 include/geos/operation/polygonize/Polygonizer.h
 include/geos/operation/relate/RelateComputer.h
 include/geos/operation/relate/RelateOp.h
+include/geos/operation/union/CascadedPolygonUnion.h
 include/geos/operation/valid/IsValidOp.h
 include/geos/operation/valid/TopologyValidationError.h
 include/geos/planargraph.h
@@ -141,6 +157,7 @@ include/geos/precision.h
 include/geos/precision/CommonBitsOp.h
 include/geos/precision/CommonBitsRemover.h
 include/geos/precision/EnhancedPrecisionOp.h
+include/geos/precision/GeometrySnapper.h
 include/geos/precision/SimpleGeometryPrecisionReducer.h
 include/geos/simplify/DouglasPeuckerSimplifier.h
 include/geos/simplify/TopologyPreservingSimplifier.h
@@ -161,6 +178,7 @@ lib/libgeos_c.la
 @dirrm include/geos/precision
 @dirrm include/geos/planargraph
 @dirrm include/geos/operation/valid
+@dirrm include/geos/operation/union
 @dirrm include/geos/operation/relate
 @dirrm include/geos/operation/polygonize
 @dirrm include/geos/operation/overlay
@@ -172,12 +190,17 @@ lib/libgeos_c.la
 @dirrm include/geos/index/sweepline
 @dirrm include/geos/index/strtree
 @dirrm include/geos/index/quadtree
+@exec ${MKDIR} %D/include/geos/index/intervalrtree
+@dirrm include/geos/index/intervalrtree
 @dirrm include/geos/index/chain
 @dirrm include/geos/index/bintree
 @dirrm include/geos/index
 @dirrm include/geos/geomgraph/index
 @dirrm include/geos/geomgraph
 @dirrm include/geos/geom/util
+@dirrm include/geos/geom/prep
 @dirrm include/geos/geom
+@exec ${MKDIR} %D/include/geos/algorithm/locate
+@dirrm include/geos/algorithm/locate
 @dirrm include/geos/algorithm
 @dirrm include/geos
