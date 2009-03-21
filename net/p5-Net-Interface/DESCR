@@ -1,0 +1,16 @@
+Net::Interface is a module that allows access to the host network interfaces
+in a manner similar to ifconfig(8). Version 1.00 is a complete re-write and
+includes support for IPV6 as well as the traditional IPV4.
+
+Both read and write access to network device attributes including the
+creation of new logical and physical interfaces is available where supported
+by the OS and this module.
+
+NOTE: if your OS is not supported, please feel free to contribute new
+capabilities, patches, etc.... see: Net::Interface::Developer
+
+ANOTHER NOTE: Many of the operations of Net::Interface, particularly those
+that set interface values require privileged access to OS resources. Wherever
+possible, Net::Interface will simply fail softly when there are not adequate
+privileges to perform the requested operation or where the operation is not
+supported.
