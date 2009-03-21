@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.57 2008/12/20 13:08:00 joerg Exp $
+# $NetBSD: module.mk,v 1.58 2009/03/21 23:11:29 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -69,7 +69,7 @@ BUILDLINK_DEPMETHOD.perl+=	full
 
 .if empty(PKGPATH:Mdevel/p5-Module-Build) && \
     (${PERL5_MODULE_TYPE} == "Module::Build")
-BUILD_DEPENDS+=		p5-Module-Build>=0.2608nb1:../../devel/p5-Module-Build
+BUILD_DEPENDS+=		{perl>=5.10,p5-Module-Build>=0.2608nb1}:../../devel/p5-Module-Build
 .endif
 
 
