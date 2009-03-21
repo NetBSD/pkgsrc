@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1123 2009/03/21 17:36:20 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1124 2009/03/21 18:08:57 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1520,3 +1520,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-Getopt to 0.16 [seb 2009-03-21]
 	Updated devel/p5-MooseX-Types to 0.10 [seb 2009-03-21]
 	Updated sysutils/pscpug to 0.3.5 [snj 2009-03-21]
+	Updated lang/vala to 0.5.7nb1 [ahoka 2009-03-21]
+	Updated devel/valide to 0.4.0 [ahoka 2009-03-21]
