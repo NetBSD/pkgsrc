@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2008/07/15 19:02:11 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.48 2009/03/21 21:30:58 jnemeth Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -11,7 +11,7 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 		ftp://ftp.fu-berlin.de/pub/unix/mail/sendmail/ \
 		ftp://ftp.ayamura.org/pub/sendmail/
 
-OWNER=		jnemeth@NetBSD.org
+OWNER?=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
 
 LICENSE=	sendmail-license
@@ -22,17 +22,17 @@ PATCHDIR=	${.CURDIR}/../../mail/sendmail/patches
 
 DIST_VERS=	8.14.3
 
-MAKE_ENV+=	BSD_BINOWN=${BINOWN:Q} BSD_BINGRP=${BINGRP:Q} \
-		BSD_MANOWN=${MANOWN:Q} BSD_MANGRP=${MANGRP:Q} \
-		BUILDLINK_DIR=${BUILDLINK_DIR:Q} \
-		SMRSH_CMDDIR=${SMRSH_CMDDIR:Q}
+MAKE_ENV+=	BSD_BINOWN=${BINOWN} BSD_BINGRP=${BINGRP} \
+		BSD_MANOWN=${MANOWN} BSD_MANGRP=${MANGRP} \
+		BUILDLINK_DIR=${BUILDLINK_DIR} \
+		SMRSH_CMDDIR=${SMRSH_CMDDIR}
 SITECONFIG=	${WRKSRC}/devtools/Site/site.config.m4
 
 BUILD_DEFS+=	SMRSH_CMDDIR
 
 WRKSRC=		${WRKDIR}/sendmail-${DIST_VERS}
 USE_TOOLS+=	gm4
-MAKE_ENV+=	M4=${TOOLS_M4:Q}
+MAKE_ENV+=	M4=${TOOLS_M4}
 
 .PHONY: make-sendmail-siteconfig
 make-sendmail-siteconfig:
