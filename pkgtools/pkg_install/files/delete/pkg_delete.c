@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.2 2009/03/02 15:15:06 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.3 2009/03/21 16:43:50 tnn Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -767,6 +767,7 @@ main(int argc, char *argv[])
 	TAILQ_INIT(&pkgs);
 	TAILQ_INIT(&sorted_pkgs);
 
+	setprogname(argv[0]);
 	while ((ch = getopt(argc, argv, "ADdFfNnORrVvK:P:p:")) != -1) {
 		switch (ch) {
 		case 'A':
