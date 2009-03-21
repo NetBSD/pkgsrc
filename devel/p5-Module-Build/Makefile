@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/03/02 17:22:15 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/03/21 23:11:29 sno Exp $
 
 DISTNAME=	Module-Build-0.32
 PKGNAME=	p5-${DISTNAME}000
@@ -12,7 +12,7 @@ COMMENT=	Build and install Perl modules
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#.include "options.mk"
+.include "options.mk"
 
 USE_LANGUAGES=	c	# For the tests
 BUILDING_MODULE_BUILD=	yes
