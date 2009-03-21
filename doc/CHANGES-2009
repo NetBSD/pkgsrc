@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1125 2009/03/21 18:25:46 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1126 2009/03/21 20:26:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1523,3 +1523,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/vala to 0.5.7nb1 [ahoka 2009-03-21]
 	Updated devel/valide to 0.4.0 [ahoka 2009-03-21]
 	Updated net/samba to 3.0.34 [tron 2009-03-21]
+	Updated x11/gnome-screensaver to 2.26.0 [wiz 2009-03-21]
