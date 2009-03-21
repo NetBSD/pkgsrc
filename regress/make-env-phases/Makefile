@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/21 05:43:53 darcy Exp $
 #
 
 DISTNAME=	make-env-phases-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	tech-pkg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tests whether MAKE_ENV changes between build and install phase
 
 NO_CHECKSUM=	yes
