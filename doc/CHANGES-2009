@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1131 2009/03/21 23:27:08 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1132 2009/03/21 23:52:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Parse-CPAN-Meta to 0.05 [sno 2009-03-21]
 	Updated devel/p5-Term-ReadLine to 1.19 [sno 2009-03-21]
 	Updated textproc/p5-Text-CSV_XS to 0.63 [sno 2009-03-21]
+	Added devel/coccinelle version 0.1.6 [wiz 2009-03-21]
