@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2009/02/16 11:25:35 obache Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/21 05:33:12 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-perl-1.23
+DISTNAME=	tokyocabinet-perl-1.24
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
-DIST_SUBDIR=	${DISTNAME}-1
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/perldoc/
@@ -24,7 +22,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/index.html \
 		${DESTDIR}${PREFIX}/share/tokyocabinet/doc/perl/index.html
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.6
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.10
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
