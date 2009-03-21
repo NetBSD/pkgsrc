@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/17 00:00:30 abs Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/21 16:29:45 darcy Exp $
 #
 
 DISTNAME=		jwm-2.0.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/ \
 			${MASTER_SITE_SOURCEFORGE:=jwm/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pip88nl@gmail.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.joewing.net/programs/jwm/
 COMMENT=		Lightweight window manager with virtual desktops
 
