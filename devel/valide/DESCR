@@ -1,0 +1,10 @@
+Val(a)IDE is an Integrated Development Environment (IDE) for the
+Vala programming language.
+
+Features:
+
+    * Syntax highlighting for Vala
+    * Project compilation
+    * Plugins:
+          o Symbols browser
+          o Tasks manager
