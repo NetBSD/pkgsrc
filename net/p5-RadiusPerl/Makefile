@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/04 00:31:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/21 22:27:53 adrianp Exp $
 #
 
 DISTNAME=	RadiusPerl-0.13
@@ -15,7 +15,7 @@ DEPENDS+=	p5-IO>=1.12:../../devel/p5-IO
 DEPENDS+=	p5-Data-HexDump>=0.02:../../textproc/p5-Data-HexDump
 
 WRKSRC=		${WRKDIR}/Authen-Radius-0.13
-PERL5_PACKLIST=	auto/RadiusPerl/.packlist
+PERL5_PACKLIST=	auto/Authen/Radius/.packlist
 USE_LANGUAGES=	# none
 
 .include "../../lang/perl5/module.mk"
