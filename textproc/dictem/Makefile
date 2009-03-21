@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/12 12:25:27 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/21 16:07:03 darcy Exp $
 
 DISTNAME=		dictem-1.0.0
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
                         http://www.mova.org/~cheusov/pub/dictem/
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		vle@gmx.net
 HOMEPAGE=		http://freshmeat.net/projects/dictem/
 COMMENT=		Dictionary client (RFC-2229) for [X]Emacs
 
