@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/02/19 06:31:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/03/21 05:36:53 obache Exp $
 bin/tcrmgr
 bin/tcrmttest
 bin/tcrtest
@@ -10,8 +10,8 @@ include/tculog.h
 include/ttutil.h
 lib/libtokyotyrant.a
 lib/libtokyotyrant.so
-lib/libtokyotyrant.so.2
-lib/libtokyotyrant.so.2.7.0
+lib/libtokyotyrant.so.3
+lib/libtokyotyrant.so.3.1.0
 lib/pkgconfig/tokyotyrant.pc
 man/man1/tcrmgr.1
 man/man1/tcrmttest.1
