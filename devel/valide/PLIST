@@ -1,0 +1,187 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/21 18:06:16 ahoka Exp $
+bin/ctags-vala
+bin/valide
+include/valide-0.4/libvalide/aboutdialog.h
+include/valide-0.4/libvalide/abstract-config-manager.h
+include/valide-0.4/libvalide/abstract-executable.h
+include/valide-0.4/libvalide/abstract-text-document.h
+include/valide-0.4/libvalide/compiler.h
+include/valide-0.4/libvalide/config-manager.h
+include/valide-0.4/libvalide/document-manager.h
+include/valide-0.4/libvalide/document-message.h
+include/valide-0.4/libvalide/document.h
+include/valide-0.4/libvalide/executable-manager.h
+include/valide-0.4/libvalide/executable.h
+include/valide-0.4/libvalide/goto-dialog.h
+include/valide-0.4/libvalide/idocument.h
+include/valide-0.4/libvalide/panel.h
+include/valide-0.4/libvalide/plugin-manager.h
+include/valide-0.4/libvalide/plugin-preferences.h
+include/valide-0.4/libvalide/plugin-registrar.h
+include/valide-0.4/libvalide/plugin.h
+include/valide-0.4/libvalide/preferences-dialog.h
+include/valide-0.4/libvalide/project-dialog-options.h
+include/valide-0.4/libvalide/project-dialog-remove.h
+include/valide-0.4/libvalide/project-dialog.h
+include/valide-0.4/libvalide/project-manager.h
+include/valide-0.4/libvalide/project.h
+include/valide-0.4/libvalide/recent-manager-ui.h
+include/valide-0.4/libvalide/searching.h
+include/valide-0.4/libvalide/source-view.h
+include/valide-0.4/libvalide/split-source-view.h
+include/valide-0.4/libvalide/start-page.h
+include/valide-0.4/libvalide/statusbar.h
+include/valide-0.4/libvalide/template-manager.h
+include/valide-0.4/libvalide/template.h
+include/valide-0.4/libvalide/ui/abstract-close-dialog.h
+include/valide-0.4/libvalide/ui/abstract-preferences-dialog.h
+include/valide-0.4/libvalide/ui/abstract-project-dialog-options.h
+include/valide-0.4/libvalide/ui/abstract-project-dialog-remove.h
+include/valide-0.4/libvalide/ui/abstract-project-dialog.h
+include/valide-0.4/libvalide/uimanager.h
+include/valide-0.4/libvalide/utils.h
+include/valide-0.4/libvalide/window.h
+include/valide-0.4/plugins/completion/completion.h
+include/valide-0.4/plugins/completion/item.h
+include/valide-0.4/plugins/completion/parser.h
+include/valide-0.4/plugins/completion/result.h
+include/valide-0.4/plugins/completion/source-buffer.h
+include/valide-0.4/plugins/completion/source-completion/documentwords-provider.h
+include/valide-0.4/plugins/completion/source-completion/info.h
+include/valide-0.4/plugins/completion/source-completion/manager.h
+include/valide-0.4/plugins/completion/source-completion/popup.h
+include/valide-0.4/plugins/completion/source-completion/proposal.h
+include/valide-0.4/plugins/completion/source-completion/provider-file.h
+include/valide-0.4/plugins/completion/source-completion/provider.h
+include/valide-0.4/plugins/completion/source-completion/tree.h
+include/valide-0.4/plugins/completion/source-completion/trigger-autowords.h
+include/valide-0.4/plugins/completion/source-completion/trigger-customkey.h
+include/valide-0.4/plugins/completion/source-completion/trigger.h
+include/valide-0.4/plugins/completion/source-completion/utils.h
+include/valide-0.4/plugins/completion/vala-provider.h
+include/valide-0.4/plugins/file-browser/file-browser.h
+include/valide-0.4/plugins/opened-documents/opened-documents.h
+include/valide-0.4/plugins/symbol/symbol.h
+include/valide-0.4/plugins/todo/todo.h
+lib/libvalide-0.0.so
+share/locale/fr/LC_MESSAGES/valide.mo
+share/pixmaps/valide/icone-16.xpm
+share/pixmaps/valide/icone-32.xpm
+share/pixmaps/valide/icone-48.xpm
+share/pixmaps/valide/icone-64.xpm
+share/pixmaps/valide/icone.xcf
+share/pixmaps/valide/logo.png
+share/pixmaps/valide/logo.xcf
+share/pixmaps/valide/pref-compiler.png
+share/pixmaps/valide/pref-general.png
+share/pixmaps/valide/pref-pkg.png
+share/pixmaps/valide/vide-file.png
+share/vala/vapi/completion.deps
+share/vala/vapi/completion.vapi
+share/vala/vapi/file-browser.deps
+share/vala/vapi/file-browser.vapi
+share/vala/vapi/opened-documents.deps
+share/vala/vapi/opened-documents.vapi
+share/vala/vapi/symbol.deps
+share/vala/vapi/symbol.vapi
+share/vala/vapi/todo.deps
+share/vala/vapi/todo.vapi
+share/vala/vapi/valide-0.0.deps
+share/vala/vapi/valide-0.0.vapi
+share/valide/AUTHORS
+share/valide/COPYING
+share/valide/licenses/BSD
+share/valide/licenses/GPL-2.0
+share/valide/licenses/GPL-3.0
+share/valide/licenses/LGPL-2.1
+share/valide/licenses/LGPL-3.0
+share/valide/licenses/None
+share/valide/plugins/completion/completion.valide-plugin
+share/valide/plugins/completion/libcompletion.so
+share/valide/plugins/completion/pixmaps/default.png
+share/valide/plugins/completion/pixmaps/element-class-16.png
+share/valide/plugins/completion/pixmaps/element-delegate-16.png
+share/valide/plugins/completion/pixmaps/element-enumeration-16.png
+share/valide/plugins/completion/pixmaps/element-event-16.png
+share/valide/plugins/completion/pixmaps/element-field-16.png
+share/valide/plugins/completion/pixmaps/element-interface-16.png
+share/valide/plugins/completion/pixmaps/element-literal-16.png
+share/valide/plugins/completion/pixmaps/element-method-16.png
+share/valide/plugins/completion/pixmaps/element-namespace-16.png
+share/valide/plugins/completion/pixmaps/element-property-16.png
+share/valide/plugins/completion/pixmaps/element-structure-16.png
+share/valide/plugins/file-browser/file-browser.valide-plugin
+share/valide/plugins/file-browser/libfile-browser.so
+share/valide/plugins/opened-documents/libopened-documents.so
+share/valide/plugins/opened-documents/opened-documents.valide-plugin
+share/valide/plugins/symbol/libsymbol.so
+share/valide/plugins/symbol/pixmaps/class.png
+share/valide/plugins/symbol/pixmaps/constant.png
+share/valide/plugins/symbol/pixmaps/define.png
+share/valide/plugins/symbol/pixmaps/delegate.png
+share/valide/plugins/symbol/pixmaps/enum.png
+share/valide/plugins/symbol/pixmaps/enumerator.png
+share/valide/plugins/symbol/pixmaps/enumvalue.png
+share/valide/plugins/symbol/pixmaps/errorcode.png
+share/valide/plugins/symbol/pixmaps/errordomain.png
+share/valide/plugins/symbol/pixmaps/field.png
+share/valide/plugins/symbol/pixmaps/interface.png
+share/valide/plugins/symbol/pixmaps/method.png
+share/valide/plugins/symbol/pixmaps/namespace.png
+share/valide/plugins/symbol/pixmaps/property.png
+share/valide/plugins/symbol/pixmaps/signal.png
+share/valide/plugins/symbol/pixmaps/struct.png
+share/valide/plugins/symbol/pixmaps/typedef.png
+share/valide/plugins/symbol/pixmaps/variable.png
+share/valide/plugins/symbol/symbol-browser.png
+share/valide/plugins/symbol/symbol.valide-plugin
+share/valide/plugins/todo/libtodo.so
+share/valide/plugins/todo/todo.valide-plugin
+share/valide/template/cmd/icon.png
+share/valide/template/cmd/main.vala
+share/valide/template/cmd/template.xml
+share/valide/template/empty/icon.png
+share/valide/template/empty/template.xml
+share/valide/template/gnome/icon.png
+share/valide/template/gnome/main.vala
+share/valide/template/gnome/template.xml
+share/valide/template/gtk/icon.png
+share/valide/template/gtk/main.vala
+share/valide/template/gtk/template.xml
+share/valide/template/opengl/icon.png
+share/valide/template/opengl/main.vala
+share/valide/template/opengl/template.xml
+share/valide/template/sdl/icon.png
+share/valide/template/sdl/main.vala
+share/valide/template/sdl/template.xml
+share/valide/template/sdl/valide.bmp
+@dirrm share/valide/template/sdl
+@dirrm share/valide/template/opengl
+@dirrm share/valide/template/gtk
+@dirrm share/valide/template/gnome
+@dirrm share/valide/template/empty
+@dirrm share/valide/template/cmd
+@dirrm share/valide/template
+@dirrm share/valide/plugins/todo
+@dirrm share/valide/plugins/symbol/pixmaps
+@dirrm share/valide/plugins/symbol
+@dirrm share/valide/plugins/opened-documents
+@dirrm share/valide/plugins/file-browser
+@dirrm share/valide/plugins/completion/pixmaps
+@dirrm share/valide/plugins/completion
+@dirrm share/valide/plugins
+@dirrm share/valide/licenses
+@dirrm share/valide
+@dirrm share/vala/vapi
+@dirrm share/vala
+@dirrm share/pixmaps/valide
+@dirrm include/valide-0.4/plugins/todo
+@dirrm include/valide-0.4/plugins/symbol
+@dirrm include/valide-0.4/plugins/opened-documents
+@dirrm include/valide-0.4/plugins/file-browser
+@dirrm include/valide-0.4/plugins/completion/source-completion
+@dirrm include/valide-0.4/plugins/completion
+@dirrm include/valide-0.4/plugins
+@dirrm include/valide-0.4/libvalide/ui
+@dirrm include/valide-0.4/libvalide
+@dirrm include/valide-0.4
