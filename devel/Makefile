@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1140 2009/03/21 18:07:52 ahoka Exp $
+# $NetBSD: Makefile,v 1.1141 2009/03/21 23:51:44 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -95,6 +95,7 @@ SUBDIR+=	chmlib
 SUBDIR+=	chrpath
 SUBDIR+=	cmake
 SUBDIR+=	cmake-mode
+SUBDIR+=	coccinelle
 SUBDIR+=	coconut
 SUBDIR+=	codeville
 SUBDIR+=	cogito
@@ -1075,8 +1076,8 @@ SUBDIR+=	ucl
 SUBDIR+=	ucpp
 SUBDIR+=	unidiff
 SUBDIR+=	uno
-SUBDIR+=	valide
 SUBDIR+=	valgrind
+SUBDIR+=	valide
 SUBDIR+=	vanessa_adt
 SUBDIR+=	vanessa_logger
 SUBDIR+=	vanessa_socket
