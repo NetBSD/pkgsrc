@@ -1,7 +1,7 @@
-$NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
+$NetBSD: patch-at,v 1.12 2009/03/21 18:25:34 tron Exp $
 
---- configure.orig	2008-08-25 22:16:26.000000000 +0100
-+++ configure	2009-03-03 16:24:13.000000000 +0000
+--- configure.orig	2009-01-19 11:00:12.000000000 +0000
++++ configure	2009-03-21 14:45:27.000000000 +0000
 @@ -667,6 +667,7 @@
  target_os
  configdir
@@ -10,7 +10,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  piddir
  logfilebase
  privatedir
-@@ -1396,6 +1397,7 @@
+@@ -1399,6 +1400,7 @@
    --with-privatedir=DIR   Where to put smbpasswd ($ac_default_prefix/private)
    --with-rootsbindir=DIR  Which directory to use for root sbin ($ac_default_prefix/sbin)
    --with-lockdir=DIR      Where to put lock files ($ac_default_prefix/var/locks)
@@ -18,7 +18,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
    --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
    --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
    --with-configdir=DIR    Where to put configuration files ($libdir)
-@@ -2137,6 +2139,7 @@
+@@ -2141,6 +2143,7 @@
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -26,7 +26,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -2151,7 +2154,8 @@
+@@ -2155,7 +2158,8 @@
  if test "${with_fhs+set}" = set; then
    withval=$with_fhs;  case "$withval" in
    yes)
@@ -36,7 +36,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -2225,6 +2229,26 @@
+@@ -2229,6 +2233,26 @@
  
  
  #################################################
@@ -63,7 +63,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  # set pid directory location
  
  # Check whether --with-piddir was given.
-@@ -2462,6 +2486,7 @@
+@@ -2469,6 +2493,7 @@
  
  
  
@@ -71,7 +71,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  ## check for --enable-debug first before checking CFLAGS before
  ## so that we don't mix -O and -g
  # Check whether --enable-debug was given.
-@@ -31343,7 +31368,8 @@
+@@ -31354,7 +31379,8 @@
  
  
  
@@ -81,7 +81,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -46809,6 +46835,74 @@
+@@ -46820,6 +46846,74 @@
  ##################
  # look for a method of finding the list of network interfaces
  iface=no;
@@ -156,7 +156,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  { echo "$as_me:$LINENO: checking for iface AIX" >&5
  echo $ECHO_N "checking for iface AIX... $ECHO_C" >&6; }
  if test "${samba_cv_HAVE_IFACE_AIX+set}" = set; then
-@@ -46876,6 +46970,7 @@
+@@ -46887,6 +46981,7 @@
  _ACEOF
  
  fi
@@ -164,7 +164,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  
  if test $iface = no; then
  { echo "$as_me:$LINENO: checking for iface ifconf" >&5
-@@ -50253,9 +50348,9 @@
+@@ -50266,9 +50361,9 @@
  
  
  
@@ -177,7 +177,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -50271,11 +50366,11 @@
+@@ -50284,11 +50379,11 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -191,7 +191,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
    ;
    return 0;
  }
-@@ -50298,13 +50393,13 @@
+@@ -50311,13 +50406,13 @@
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -207,7 +207,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  		  ac_cv_lib_ext_crypto=no
  fi
  
-@@ -50312,11 +50407,11 @@
+@@ -50325,11 +50420,11 @@
        conftest$ac_exeext conftest.$ac_ext
  
  fi
@@ -223,7 +223,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  _ACEOF
  
  fi
-@@ -63340,31 +63435,39 @@
+@@ -63573,31 +63668,39 @@
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -285,7 +285,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -67893,6 +67998,7 @@
+@@ -68126,6 +68229,7 @@
  target_os!$target_os$ac_delim
  configdir!$configdir$ac_delim
  lockdir!$lockdir$ac_delim
@@ -293,7 +293,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  piddir!$piddir$ac_delim
  logfilebase!$logfilebase$ac_delim
  privatedir!$privatedir$ac_delim
-@@ -67936,7 +68042,6 @@
+@@ -68169,7 +68273,6 @@
  KRB5_LIBS!$KRB5_LIBS$ac_delim
  UUID_LIBS!$UUID_LIBS$ac_delim
  LDAP_LIBS!$LDAP_LIBS$ac_delim
@@ -301,7 +301,7 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  _ACEOF
  
    if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-@@ -67978,6 +68083,7 @@
+@@ -68211,6 +68314,7 @@
  ac_delim='%!_!# '
  for ac_last_try in false false false false false :; do
    cat >conf$$subs.sed <<_ACEOF
@@ -309,12 +309,12 @@ $NetBSD: patch-at,v 1.11 2009/03/03 17:50:49 sborrill Exp $
  INSTALL_PAM_MODULES!$INSTALL_PAM_MODULES$ac_delim
  UNINSTALL_PAM_MODULES!$UNINSTALL_PAM_MODULES$ac_delim
  NSS_MODULES!$NSS_MODULES$ac_delim
-@@ -68062,7 +68168,7 @@
+@@ -68298,7 +68402,7 @@
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 82; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 83; then
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 85; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 86; then
      break
    elif $ac_last_try; then
      { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5

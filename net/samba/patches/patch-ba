@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
+$NetBSD: patch-ba,v 1.8 2009/03/21 18:25:35 tron Exp $
 
---- Makefile.in.orig	2008-03-08 10:56:26.000000000 -0500
-+++ Makefile.in
-@@ -106,6 +106,9 @@ SWATDIR = @swatdir@
+--- Makefile.in.orig	2009-01-19 10:40:09.000000000 +0000
++++ Makefile.in	2009-03-21 14:48:11.000000000 +0000
+@@ -106,6 +106,9 @@
  # the directory where lock files go
  LOCKDIR = @lockdir@
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  # the directory where pid files go
  PIDDIR = @piddir@
  
-@@ -136,7 +139,7 @@ PASSWD_FLAGS = -DSMB_PASSWD_FILE=\"$(SMB
+@@ -136,7 +139,7 @@
  PATH_FLAGS1 = -DCONFIGFILE=\"$(CONFIGFILE)\"  -DSBINDIR=\"$(SBINDIR)\"
  PATH_FLAGS2 = $(PATH_FLAGS1) -DBINDIR=\"$(BINDIR)\"
  PATH_FLAGS3 = $(PATH_FLAGS2) -DLMHOSTSFILE=\"$(LMHOSTSFILE)\"
@@ -21,7 +21,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  PATH_FLAGS5 = $(PATH_FLAGS4) -DLIBDIR=\"$(LIBDIR)\" \
  	      -DLOGFILEBASE=\"$(LOGFILEBASE)\" -DSHLIBEXT=\"@SHLIBEXT@\"
  PATH_FLAGS6 = $(PATH_FLAGS5) -DCONFIGDIR=\"$(CONFIGDIR)\"
-@@ -1052,7 +1055,7 @@ bin/pdbedit@EXEEXT@: proto_exists $(PDBE
+@@ -1059,7 +1062,7 @@
  
  bin/smbget@EXEEXT@: proto_exists $(SMBGET_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
@@ -30,7 +30,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  
  bin/samtest@EXEEXT@: $(SAMTEST_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
-@@ -1087,12 +1090,12 @@ bin/msgtest@EXEEXT@: proto_exists $(MSGT
+@@ -1094,12 +1097,12 @@
  bin/smbcacls@EXEEXT@: proto_exists $(SMBCACLS_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
  	@$(CC) $(FLAGS) -o $@ $(SMBCACLS_OBJ) $(DYNEXP) $(LDFLAGS) $(LIBS) @POPTLIBS@ \
@@ -45,7 +45,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  
  bin/eventlogadm@EXEEXT@: proto_exists $(EVTLOGADM_OBJ) @BUILD_POPT@ bin/.dummy
  	@echo Linking $@
-@@ -1155,7 +1158,7 @@ bin/libaddns.a: proto_exists $(LIBADDNS_
+@@ -1162,7 +1165,7 @@
  bin/libsmbclient.@SHLIBEXT@: proto_exists $(LIBSMBCLIENT_OBJ)
  	@echo Linking libsmbclient shared library $@
  	@$(SHLD) $(LDSHFLAGS) -o $@ $(LIBSMBCLIENT_OBJ) $(LIBS) \
@@ -54,7 +54,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  		@SONAMEFLAG@`basename $@`.$(LIBSMBCLIENT_MAJOR)
  
  bin/libsmbclient.a: proto_exists $(LIBSMBCLIENT_OBJ)
-@@ -1527,11 +1530,11 @@ bin/ntlm_auth@EXEEXT@: proto_exists $(NT
+@@ -1534,11 +1537,11 @@
  	@echo Linking $@
  	@$(CC) $(FLAGS) -o $@ $(LDFLAGS) $(DYNEXP) $(NTLM_AUTH_OBJ) \
  		$(PARAM_OBJ) $(LIB_NONSMBD_OBJ) $(LIBS) \
@@ -68,16 +68,16 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  
  bin/tdbbackup@EXEEXT@: proto_exists $(TDBBACKUP_OBJ) bin/.dummy
  	@echo Linking $@
-@@ -1566,7 +1569,7 @@ bin/timelimit@EXEEXT@: script/tests/time
+@@ -1573,7 +1576,7 @@
  	@echo Linking $@
  	@$(CC) $(FLAGS) -o $@ $(DYNEXP) script/tests/timelimit.o
  
--install: installservers installbin @INSTALL_CIFSMOUNT@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@
-+install: installservers installbin @INSTALL_CIFSMOUNT@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@ @INSTALL_LIBADDNS@
- 
+-install: installservers installbin @INSTALL_CIFSMOUNT@ @INSTALL_CIFSUPCALL@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@
++install: installservers installbin @INSTALL_CIFSMOUNT@ @INSTALL_CIFSUPCALL@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@ @INSTALL_LIBADDNS@
  
  install-everything: install installmodules
-@@ -1580,7 +1583,7 @@ install-everything: install installmodul
+ 
+@@ -1586,7 +1589,7 @@
  # is not used
  
  installdirs:
@@ -86,7 +86,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  
  installservers: all installdirs
  	@$(SHELL) script/installbin.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(SBINDIR) $(SBIN_PROGS)
-@@ -1599,7 +1602,9 @@ installmodules: modules installdirs
+@@ -1609,7 +1612,9 @@
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(PDBLIBDIR) $(PDB_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(RPCLIBDIR) $(RPC_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(IDMAPLIBDIR) $(IDMAP_MODULES)
@@ -97,7 +97,7 @@ $NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(CHARSETLIBDIR) $(CHARSET_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(AUTHLIBDIR) $(AUTH_MODULES)
  	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(PDBLIBDIR) ldapsam.@SHLIBEXT@ ldapsam_compat.@SHLIBEXT@
-@@ -1705,6 +1710,7 @@ showlayout:
+@@ -1715,6 +1720,7 @@
  	@echo "  privatedir:  $(PRIVATE_DIR)"
  	@echo "  configdir:   $(CONFIGDIR)"
  	@echo "  lockdir:     $(LOCKDIR)"
