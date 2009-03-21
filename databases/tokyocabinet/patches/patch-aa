@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
+$NetBSD: patch-aa,v 1.9 2009/03/21 05:32:04 obache Exp $
 
---- configure.orig	2009-02-12 05:04:07.000000000 +0000
+--- configure.orig	2009-03-14 10:48:48.000000000 +0000
 +++ configure
-@@ -1744,19 +1744,16 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+@@ -1744,22 +1744,19 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
  MYPCFILES="tokyocabinet.pc"
  
  # Building flags
@@ -19,13 +19,16 @@ $NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
  MYPOSTCMD="true"
  
  # Building paths
--pathtmp="$PATH"
--PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
--PATH="$PATH:/usr/ccs/bin:/usr/ucb:/usr/xpg4/bin:/usr/xpg6/bin:$pathtmp"
+-PATH="$PATH:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+-PATH="$PATH:/opt/SUNWspro/bin:/usr/ccs/bin:/usr/xpg4/bin:/usr/xpg6/bin:/usr/ucb"
  CPATH="$HOME/include:/usr/local/include:$CPATH"
  LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LIBRARY_PATH"
  LD_LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LD_LIBRARY_PATH"
-@@ -4186,7 +4183,7 @@ _ACEOF
+-PKG_CONFIG_PATH="$HOME/lib/pkgconfig:/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+ export PATH CPATH LIBRARY_PATH LD_LIBRARY_PATH PKG_CONFIG_PATH
+ 
+ 
+@@ -4191,7 +4188,7 @@ _ACEOF
  fi
  
  fi
@@ -34,7 +37,7 @@ $NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzma" >&5
-@@ -4254,7 +4251,7 @@ _ACEOF
+@@ -4259,7 +4256,7 @@ _ACEOF
  fi
  
  fi
@@ -43,7 +46,7 @@ $NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzo2" >&5
-@@ -5599,7 +5596,7 @@ fi
+@@ -5604,7 +5601,7 @@ fi
  
  
  fi
@@ -52,7 +55,7 @@ $NetBSD: patch-aa,v 1.8 2009/02/12 11:52:46 obache Exp $
  then
    if test "${ac_cv_header_lzmalib_h+set}" = set; then
    { echo "$as_me:$LINENO: checking for lzmalib.h" >&5
-@@ -5736,7 +5733,7 @@ fi
+@@ -5741,7 +5738,7 @@ fi
  
  
  fi
