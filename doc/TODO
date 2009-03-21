@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7988 2009/03/21 18:25:46 tron Exp $
+$NetBSD: TODO,v 1.7989 2009/03/21 21:37:09 snj Exp $
 
 Suggested new packages
 ======================
@@ -659,7 +659,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-nettool-2.26.0 [GNOME 2.26]
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-screensaver-2.26.0 [pkg/41037]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-vfsmm-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
