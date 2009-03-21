@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:24:08 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/03/21 05:32:04 obache Exp $
 
 BUILDLINK_TREE+=	tokyocabinet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	tokyocabinet
 TOKYOCABINET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.7
-BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.3.24
+BUILDLINK_ABI_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.10
 BUILDLINK_PKGSRCDIR.tokyocabinet?=	../../databases/tokyocabinet
 
 .include "../../archivers/bzip2/buildlink3.mk"
