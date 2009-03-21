@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1116 2009/03/20 22:45:08 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.1117 2009/03/21 05:39:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1506,3 +1506,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight-translations to 20090317 [taca 2009-03-20]
 	Added lang/polyml version 5.2.1 [asau 2009-03-20]
 	mk/bsd.pkg.mk: format of buildlink3.mk files changed [joerg 2009-03-20]
+	Updated databases/tokyocabinet to 1.4.11 [root 2009-03-21]
+	Updated databases/p5-tokyocabinet to 1.24 [root 2009-03-21]
+	Updated databases/ruby-tokyocabinet to 1.21 [root 2009-03-21]
+	Updated databases/lua-tokyocabinet to 1.4nb1 [root 2009-03-21]
+	Updated databases/tokyotyrant to 1.1.17 [root 2009-03-21]
+	Updated databases/p5-tokyotyrant to 1.8 [root 2009-03-21]
+	Updated databases/ruby-tokyotyrant to 1.4 [root 2009-03-21]
+	Updated textproc/tokyodystopia to 0.9.9nb1 [root 2009-03-21]
