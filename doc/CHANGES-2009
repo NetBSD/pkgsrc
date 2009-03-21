@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1128 2009/03/21 23:19:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1129 2009/03/21 23:22:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1526,3 +1526,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-screensaver to 2.26.0 [wiz 2009-03-21]
 	Updated devel/p5-File-HomeDir to 0.84 [sno 2009-03-21]
 	Updated devel/p5-Module-Pluggable to 3.9 [sno 2009-03-21]
+	Updated devel/p5-Parse-CPAN-Meta to 0.05 [sno 2009-03-21]
