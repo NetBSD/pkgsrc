@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1121 2009/03/21 15:24:13 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1122 2009/03/21 16:26:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1518,3 +1518,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/p5-Net-Interface version 1.010 [sno 2009-03-21]
 	Added devel/p5-IPC-SysV version 2.01 [sno 2009-03-21]
 	Updated devel/p5-MooseX-Getopt to 0.16 [seb 2009-03-21]
+	Updated devel/p5-MooseX-Types to 0.10 [seb 2009-03-21]
