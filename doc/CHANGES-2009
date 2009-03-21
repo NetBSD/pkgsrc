@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1120 2009/03/21 14:04:52 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1121 2009/03/21 15:24:13 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1517,3 +1517,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.18 [obache 2009-03-21]
 	Added net/p5-Net-Interface version 1.010 [sno 2009-03-21]
 	Added devel/p5-IPC-SysV version 2.01 [sno 2009-03-21]
+	Updated devel/p5-MooseX-Getopt to 0.16 [seb 2009-03-21]
