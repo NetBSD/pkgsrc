@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/03/21 20:01:11 adrianp Exp $
 
 DISTNAME=	whisker-2.1
 PKGREVISION=	1
 CATEGORIES=	security www
 MASTER_SITES=	http://www.wiretrip.net/rfp/bins/whisker/
 
-MAINTAINER=	adrianp@stindustries.net
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.wiretrip.net/rfp/
 COMMENT=	URL scanner used to search for known vulnerable CGIs on websites
 
