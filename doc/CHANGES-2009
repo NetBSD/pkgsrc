@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1122 2009/03/21 16:26:28 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1123 2009/03/21 17:36:20 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1519,3 +1519,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-IPC-SysV version 2.01 [sno 2009-03-21]
 	Updated devel/p5-MooseX-Getopt to 0.16 [seb 2009-03-21]
 	Updated devel/p5-MooseX-Types to 0.10 [seb 2009-03-21]
+	Updated sysutils/pscpug to 0.3.5 [snj 2009-03-21]
