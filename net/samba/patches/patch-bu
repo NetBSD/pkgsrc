@@ -1,9 +1,9 @@
-$NetBSD: patch-bu,v 1.6 2008/06/28 22:51:22 tron Exp $
+$NetBSD: patch-bu,v 1.7 2009/03/21 18:25:35 tron Exp $
 
---- ../docs/manpages/smb.conf.5.orig	2008-05-28 14:53:22.000000000 +0100
-+++ ../docs/manpages/smb.conf.5	2008-06-28 13:29:43.000000000 +0100
-@@ -6129,6 +6129,14 @@
- \fI\fIpasswd chat\fR\fR\fI = \fR\fI"*Enter NEW password*" %n\en "*Reenter NEW password*" %n\en "*Password changed*"\fR\fI \fR
+--- ../docs/manpages/smb.conf.5.orig	2009-01-19 10:44:00.000000000 +0000
++++ ../docs/manpages/smb.conf.5	2009-03-21 14:50:38.000000000 +0000
+@@ -6152,6 +6152,15 @@
+ \fI\fIpasswd chat timeout\fR\fR\fI = \fR\fI2\fR\fI \fR
  .RE
  
 +passwd expand gecos (G)
@@ -14,10 +14,11 @@ $NetBSD: patch-bu,v 1.6 2008/06/28 22:51:22 tron Exp $
 +Default: \fB\fIpasswd expand gecos\fR = no \fR 
 +.TP 3n
 +.sp
++
  passwd program (G)
  .PP
  .RS 4
-@@ -7990,6 +7998,15 @@
+@@ -8030,6 +8039,15 @@
  \fI\fIstat cache\fR\fR\fI = \fR\fIyes\fR\fI \fR
  .RE
  
