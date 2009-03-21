@@ -1,0 +1,32 @@
+The Linux operating system (OS) is evolving rapidly to improve
+performance and to provide new features. This evolution, however,
+makes it difficult to maintain platform-specific code such as device
+drivers. Indeed, an evolution in a driver support library often
+triggers the need for multiple collateral evolutions in dependent
+device drivers, to bring the drivers up to date with the new library
+API. Currently, collateral evolutions are mostly done manually.
+The large number of drivers, however, implies that this approach
+is time-consuming and unreliable, leading to subtle errors when
+modifications are not done consistently. Moreover, as these collateral
+evolutions are often poorly documented, the resulting maintenance
+is difficult and costly, frequently introducing errors. If a driver
+maintainer becomes unavailable, the driver quickly falls behind
+the rest of the OS.
+
+In this project, we propose a language-based approach to address
+the problem of collateral evolution in drivers. Specifically, we
+are developing the development environment, Coccinelle, that provides
+a transformation language for precisely expressing collateral
+evolutions and an interactive transformation tool for applying
+them. The key idea of Coccinelle is to shift the burden of collateral
+evolution from the driver maintainer to the OS developer who performs
+the original OS evolution, and who thus understands this evolution
+best. In our vision, the OS developer first uses the Coccinelle
+transformation language to write a semantic patch describing the
+required collateral evolution in device drivers and then uses the
+Coccinelle transformation tool to validate the semantic patch on
+the drivers in the Linux source distribution. When he has confidence
+in the correctness of the semantic patch, he distributes it for
+use by the maintainers of other drivers. Overall, Coccinelle will
+provide a means for formally documenting collateral evolutions and
+for easing the application of these evolutions to driver code.
