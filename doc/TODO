@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7987 2009/03/21 01:42:11 obache Exp $
+$NetBSD: TODO,v 1.7988 2009/03/21 18:25:46 tron Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rxvt-unicode-9.05 [pkg/38988]
 	o rxvt-unicode-9.06
 	o sablecc-3.2
-	o samba-3.0.34 (We should keep it for compatibility or license change.)
 	o samba-3.2.8
 	o samba-3.3.2
 	o sarg-2.2.5

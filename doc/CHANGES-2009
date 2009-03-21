@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1124 2009/03/21 18:08:57 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.1125 2009/03/21 18:25:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1522,3 +1522,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/pscpug to 0.3.5 [snj 2009-03-21]
 	Updated lang/vala to 0.5.7nb1 [ahoka 2009-03-21]
 	Updated devel/valide to 0.4.0 [ahoka 2009-03-21]
+	Updated net/samba to 3.0.34 [tron 2009-03-21]
