@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/06/12 02:14:46 joerg Exp $
+$NetBSD: distinfo,v 1.4 2009/03/21 17:35:07 snj Exp $
 
-SHA1 (pscpug032.tgz) = 03da889738d791e3316a91da10b20be83662d977
-RMD160 (pscpug032.tgz) = fc3aa7289e0051f0f25b5695987d77a7f93d4fbb
-Size (pscpug032.tgz) = 40378 bytes
-SHA1 (patch-aa) = 1d354ff4f38170ed1eebefff10b2c98312465b47
-SHA1 (patch-ab) = c252d1f567ca510d3cb3542e5ad36eaece107f19
+SHA1 (pscpug035.tgz) = 5c19191001b35ddaa4399d63de79d8b1873619e2
+RMD160 (pscpug035.tgz) = 25931ad9d0a5f867a6bb5b1fa6e17ef8180a9880
+Size (pscpug035.tgz) = 41552 bytes
+SHA1 (patch-aa) = bf5953870246fa5c602ca526a160fca66711cbfd
