@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/05 18:51:27 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.4 2009/03/21 21:38:09 snj Exp $
 
 DISTNAME=	chardet-1.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +6,7 @@ CATEGORIES=	converters python
 MASTER_SITES=	http://chardet.feedparser.org/download/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	bartosz@atom.eu.org
+MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://chardet.feedparser.org/
 COMMENT=	Character encoding auto-detection in Python
 
