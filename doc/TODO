@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7986 2009/03/20 22:22:53 asau Exp $
+$NetBSD: TODO,v 1.7987 2009/03/21 01:42:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -514,6 +514,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
+	o dictem-1.0.1 [pkg/41047]
 	o diffuse-0.3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
