@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1138 2009/03/14 21:10:17 seb Exp $
+# $NetBSD: Makefile,v 1.1139 2009/03/21 14:04:52 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -631,6 +631,7 @@ SUBDIR+=	p5-IPC-Run3
 SUBDIR+=	p5-IPC-ShareLite
 SUBDIR+=	p5-IPC-Shareable
 SUBDIR+=	p5-IPC-SharedCache
+SUBDIR+=	p5-IPC-SysV
 SUBDIR+=	p5-Inline
 SUBDIR+=	p5-Internals
 SUBDIR+=	p5-LDAP
