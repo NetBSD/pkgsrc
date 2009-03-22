@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2009/03/16 14:05:04 jmcneill Exp $
+# $NetBSD: Makefile,v 1.97 2009/03/22 19:01:41 wiz Exp $
 #
 
 DISTNAME=		nautilus-2.26.0
@@ -22,14 +22,6 @@ PKGCONFIG_OVERRIDE=	libnautilus-extension/libnautilus-extension.pc.in
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 GCONF_SCHEMAS=		apps_nautilus_preferences.schemas
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 post-install:
 	# for nautilus-cd-burner, remove when it's no longer needed

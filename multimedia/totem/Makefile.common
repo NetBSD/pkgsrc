@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2009/03/16 12:13:31 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.45 2009/03/22 19:01:40 wiz Exp $
 #
 # used by multimedia/totem-nautilus/Makefile
 # used by multimedia/totem-xine/Makefile
@@ -27,31 +27,21 @@ GCONF_SCHEMAS=	totem.schemas
 GCONF_SCHEMAS+=	totem-handlers.schemas
 GCONF_SCHEMAS+=	totem-video-thumbnail.schemas
 
-BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
-BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
-BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.8.2
-BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
-
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../www/py-gdata/buildlink3.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.gnome-vfs+=		gnome-vfs>=2.8.2
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
@@ -61,5 +51,6 @@ post-patch:
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/totem-pl-parser/buildlink3.mk"
