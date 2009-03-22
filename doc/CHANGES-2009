@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1154 2009/03/22 14:59:46 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1155 2009/03/22 15:01:09 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1552,3 +1552,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/alacarte to 0.11.10 [wiz 2009-03-22]
 	Updated security/gnome-keyring to 2.26.0nb1 [snj 2009-03-22]
 	Added devel/p5-autobox-Core version 0.6 [seb 2009-03-22]
+	Updated graphics/lcms to 1.18 [gdt 2009-03-22]
