@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/03/22 19:53:15 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/03/22 19:57:08 wiz Exp $
 
 DISTNAME=		libgtop-2.26.0
 CATEGORIES=		sysutils gnome
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Library to retrieve system information, used in GNOME2
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 OSVERSION_SPECIFIC=	YES
 
@@ -57,7 +59,7 @@ PLIST.suid.h=	yes
 
 .if defined(PLIST.server)
 post-install:
-	${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
+	${CHMOD} g+s ${DESTDIR}${PREFIX}/bin/libgtop_server2
 .endif
 
 # XXX This needs a check in the configure script, which should be clean
