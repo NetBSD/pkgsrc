@@ -1,13 +1,65 @@
-$NetBSD: patch-ad,v 1.1 2006/10/17 08:42:03 markd Exp $
+$NetBSD: patch-ad,v 1.2 2009/03/22 19:55:42 markd Exp $
 
---- spim.c.orig	2006-10-17 21:33:10.000000000 +1300
-+++ spim.c
-@@ -111,7 +111,7 @@ int spim_return_value;		/* Value returne
+--- spim/Makefile.orig	2006-08-29 14:23:19.000000000 +1200
++++ spim/Makefile
+@@ -54,13 +54,13 @@ DOC_DIR = ../Documentation
  
- /* Non-zero => load standard exception handler */
- static int load_exception_handler = 1;
--static char *exception_file_name = DEFAULT_EXCEPTION_HANDLER;
-+char *exception_file_name = DEFAULT_EXCEPTION_HANDLER;
- static int console_state_saved;
- #ifdef USE_TERMIOS
- static struct termios saved_console_state;
+ 
+ # Full path for the directory that will hold the executable files:
+-BIN_DIR = /usr/local/bin
++BIN_DIR = $(DESTDIR)$(PREFIX)/bin
+ 
+ # Full path for the directory that will hold the exception handler:
+-EXCEPTION_DIR = /usr/local/lib
++EXCEPTION_DIR = $(PREFIX)/share/spim
+ 
+ # Full path for the directory that will hold the man files:
+-MAN_DIR = /usr/man/mann
++MAN_DIR = $(DESTDIR)$(PREFIX)/man/man1
+ 
+ 
+ # If you have flex, use it instead of lex.  If you use flex, define this
+@@ -92,7 +92,7 @@ ENDIAN=`cat configuration`
+ 
+ DEFINES = $(ENDIAN) $(MEM_SIZES) -DDEFAULT_EXCEPTION_HANDLER="\"$(EXCEPTION_DIR)/exceptions.s\"" -DSPIM_VERSION="\"`cat ../VERSION`\""
+ 
+-CC = gcc
++#CC = gcc
+ CFLAGS = -I. -I$(CPU_DIR) $(DEFINES) -g -Wall
+-YFLAGS = -d --file-prefix=y
++YFLAGS = -d # --file-prefix=y
+ YCFLAGS =
+@@ -108,6 +108,7 @@ LEXCFLAGS = -O $(CFLAGS)
+ OBJS = spim-utils.o run.o mem.o inst.o data.o sym-tbl.o y.tab.o lex.yy.o \
+        syscall.o display-utils.o string-stream.o
+ 
++all: spim
+ 
+ spim:   force
+ 	make -f Makefile spim2
+@@ -174,11 +175,11 @@ clean:
+ 	rm -f spim spim.exe *.o TAGS test.out lex.yy.c y.tab.c y.tab.h y.output
+ 
+ install: spim
+ 	install -c -s  spim $(BIN_DIR)
+-	install -c -m 0444 $(CPU_DIR)/exceptions.s $(EXCEPTION_DIR)
++	install -c -m 0444 $(CPU_DIR)/exceptions.s $(DESTDIR)$(EXCEPTION_DIR)
+ 
+-install-man:
+-	install -c -m 0444 $(DOC_DIR)/spim.man $(MAN_DIR)
++install.man:
++	install -c -m 0444 $(DOC_DIR)/spim.man $(MAN_DIR)/spim.1
+ 
+ very-clean: clean
+ 	rm -f configuration
+@@ -195,8 +196,8 @@ splint: spim
+
+ y.tab.h: y.tab.c
+
+ y.tab.c: $(CPU_DIR)/parser.y
+-	bison $(YFLAGS) $(CPU_DIR)/parser.y
++	$(YACC) $(YFLAGS) $(CPUDIR)/parser.y
+
+ y.tab.o: y.tab.c
+	$(CC) $(CFLAGS) $(YCFLAGS) -c y.tab.c
+
