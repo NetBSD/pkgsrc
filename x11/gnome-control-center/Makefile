@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/03/17 00:27:37 jmcneill Exp $
+# $NetBSD: Makefile,v 1.23 2009/03/22 19:01:41 wiz Exp $
 #
 
 DISTNAME=	gnome-control-center-2.26.0
@@ -57,14 +57,6 @@ PLIST.evolution=	yes
 .endif
 
 _TOOLS_USE_MSGFMT_SH=	yes
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ; do \
-	    mv $$f $$f.original ; \
-	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
