@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2009/03/22 21:30:30 sno Exp $
+# $NetBSD: Makefile,v 1.467 2009/03/22 21:36:24 sno Exp $
 #
 
 COMMENT=	System utilities
@@ -207,6 +207,7 @@ SUBDIR+=	p5-File-Copy-Recursive
 SUBDIR+=	p5-File-Remove
 SUBDIR+=	p5-File-chmod
 SUBDIR+=	p5-Filesys-Df
+SUBDIR+=	p5-Filesys-DfPortable
 SUBDIR+=	p5-GTop
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Parse-Syslog
