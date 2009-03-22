@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2009/03/16 10:49:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.465 2009/03/22 21:21:40 sno Exp $
 #
 
 COMMENT=	System utilities
@@ -213,6 +213,7 @@ SUBDIR+=	p5-Sys-CpuLoad
 SUBDIR+=	p5-Sys-Filesystem
 SUBDIR+=	p5-Sys-Hostname-Long
 SUBDIR+=	p5-Sys-SigAction
+SUBDIR+=	p5-Sys-Utmp
 SUBDIR+=	p5-Unix-ConfigFile
 SUBDIR+=	p5-Unix-Syslog
 SUBDIR+=	pciutils
