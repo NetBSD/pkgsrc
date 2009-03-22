@@ -1,0 +1,8 @@
+To create a POD filter for translating POD documentation into some other
+format, you create a subclass of Pod::Parser which typically overrides just
+the base class implementation for the following methods:
+
+    * command()
+    * verbatim()
+    * textblock()
+    * interior_sequence()
