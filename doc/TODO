@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7995 2009/03/22 16:08:29 snj Exp $
+$NetBSD: TODO,v 1.7996 2009/03/22 16:33:26 snj Exp $
 
 Suggested new packages
 ======================
@@ -622,7 +622,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
-	o gdl-2.26.0 [GNOME 2.26]
 	o gdm-2.26.0 [GNOME 2.26]
 	o gdsreader-0.3.2
 	o geany-0.16
