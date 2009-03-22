@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1173 2009/03/22 20:17:15 markd Exp $
+$NetBSD: CHANGES-2009,v 1.1174 2009/03/22 20:31:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/hamster-applet to 2.26.0 [wiz 2009-03-22]
 	Updated sysutils/libgtop to 2.26.0 [wiz 2009-03-22]
 	Updated emulators/spim to 7.3 [markd 2009-03-22]
+	Updated devel/libvolume_id to 0.81.1 [wiz 2009-03-22]
