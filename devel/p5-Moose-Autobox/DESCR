@@ -1,0 +1,5 @@
+The Perl 5 module Moose::Autobox provides an implementation of
+SCALAR, ARRAY, HASH & CODE for use with autobox. It does this using
+a hierarchy of roles in a manner similar to what Perl 6 might do.
+This module, like Class::MOP and Moose, was inspired by my work on
+the Perl 6 Object Space, and the 'core types' implemented there.
