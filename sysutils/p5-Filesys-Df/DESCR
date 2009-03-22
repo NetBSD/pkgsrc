@@ -1,0 +1,9 @@
+This module provides a way to obtain filesystem disk space information. This
+is a Unix only distribution. If those information needs to be gathered for
+Unix and Windows, use Filesys::DfPortable. The only major benefit of using
+Filesys::Df over Filesys::DfPortable, is that Filesys::Df supports the use of
+open filehandles as arguments.
+
+The module should work with all flavors of Unix that implement the statvfs()
+and fstatvfs() calls, or the statfs() and fstatfs() calls. This would include
+Linux, *BSD, HP-UX, AIX, Solaris, Mac OS X, Irix, Cygwin, etc ...
