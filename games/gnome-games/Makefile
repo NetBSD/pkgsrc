@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2009/03/18 01:03:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.91 2009/03/22 19:01:38 wiz Exp $
 
 DISTNAME=		gnome-games-2.26.0
 CATEGORIES=		games gnome
@@ -47,52 +47,25 @@ PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess.in.in
 PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku.in.in
 PY_PATCHPLIST=		yes
 
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in \
-	    ${WRKSRC}/aisleriot/help/*/*.po \
-	    ${WRKSRC}/blackjack/help/*/*.po \
-	    ${WRKSRC}/glchess/help/*/*.po \
-	    ${WRKSRC}/glines/help/*/*.po \
-	    ${WRKSRC}/gnect/help/*/*.po \
-	    ${WRKSRC}/gnibbles/help/*/*.po \
-	    ${WRKSRC}/gnome-sudoku/help/*/*.po \
-	    ${WRKSRC}/gnometris/help/*/*.po \
-	    ${WRKSRC}/gnomine/help/*/*.po \
-	    ${WRKSRC}/gnobots2/help/*/*.po \
-	    ${WRKSRC}/gnotravex/help/*/*.po \
-	    ${WRKSRC}/gnotski/help/*/*.po \
-	    ${WRKSRC}/gtali/help/*/*.po \
-	    ${WRKSRC}/iagno/help/*/*.po \
-	    ${WRKSRC}/mahjongg/help/*/*.po \
-	    ${WRKSRC}/same-gnome/help/*/*.po \
-	    ${WRKSRC}/po/*.po \
-	    ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
-
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
-BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
-BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
-
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.10.0
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../lang/guile/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

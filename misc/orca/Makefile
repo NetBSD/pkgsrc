@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/16 09:12:25 jmcneill Exp $
+# $NetBSD: Makefile,v 1.14 2009/03/22 19:01:40 wiz Exp $
 #
 
 DISTNAME=	orca-2.26.0
@@ -20,14 +20,6 @@ USE_DIRS+=	xdg-1.1
 PYTHON_VERSIONS_ACCEPTED= 25 24
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 BUILDLINK_API_DEPENDS.gnome-speech+=	gnome-speech>=0.3.10
 .include "../../audio/gnome-speech/buildlink3.mk"

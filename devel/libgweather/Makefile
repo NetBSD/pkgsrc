@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/17 21:49:02 jmcneill Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/22 19:01:37 wiz Exp $
 #
 
 DISTNAME=	libgweather-2.26.0
@@ -20,14 +20,6 @@ GCONF_SCHEMAS+=	gweather.schemas
 PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
 
 CONFLICTS+=	gnome-applets<2.22.0
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ${WRKSRC}/po-locations/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../x11/gtk2/buildlink3.mk"

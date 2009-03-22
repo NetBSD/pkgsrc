@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/22 09:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/22 19:01:41 wiz Exp $
 #
 
 DISTNAME=	brasero-2.26.0
@@ -27,14 +27,6 @@ PKGCONFIG_OVERRIDE+=	libbrasero-media.pc.in
 
 post-extract:
 	cp ${FILESDIR}/scsi-netbsd.c ${WRKSRC}/libbrasero-media/
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 pre-configure:
 	cd ${WRKSRC} && automake && autoconf

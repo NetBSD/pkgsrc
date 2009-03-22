@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2009/03/19 12:14:37 drochner Exp $
+# $NetBSD: Makefile,v 1.93 2009/03/22 19:01:38 wiz Exp $
 #
 
 DISTNAME=		gedit-2.26.0
@@ -21,14 +21,6 @@ GNU_CONFIGURE=		YES
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 
 GCONF_SCHEMAS=		gedit.schemas gedit-file-browser.schemas
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/22 08:51:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/03/22 19:01:40 wiz Exp $
 #
 
 DISTNAME=		ekiga-3.2.0
@@ -28,14 +28,6 @@ GCONF_SCHEMAS=		ekiga.schemas
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 pre-configure:
 	cd ${WRKSRC} && autoconf

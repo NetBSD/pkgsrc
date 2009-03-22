@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/22 19:01:37 wiz Exp $
 
 DISTNAME=	empathy-2.24.1
-PKGREVISION=	2
+PKGREVISION=	1
 CATEGORIES=	chat gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/empathy/2.24/}
 
@@ -22,14 +22,6 @@ USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS+=	GNOME_Megaphone_Applet.schemas
 GCONF_SCHEMAS+=	empathy.schemas
-
-# In pkgsrc, the shipped gettext cannot handle the .po files,
-# so we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ; do \
-	    mv $$f $$f.original ; \
-	    ${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 pre-configure:
 	cd ${WRKSRC} && autoconf -f
