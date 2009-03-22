@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2009/03/22 16:07:51 wiz Exp $
+# $NetBSD: Makefile,v 1.115 2009/03/22 16:12:11 snj Exp $
 
 DISTNAME=	gnome-2.25.99.0
 CATEGORIES=	meta-pkgs x11 gnome
@@ -116,8 +116,7 @@ DEPENDS+=	nautilus>=2.26.0:../../sysutils/nautilus
 .if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/libXdamage.so)
 DEPENDS+=	orca>=2.26.0:../../misc/orca
 .endif
-# XXX: 2.5.0
-DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.4.0:../../x11/py-gtksourceview
+DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.6.0:../../x11/py-gtksourceview
 DEPENDS+=	seahorse>=2.26.0:../../security/seahorse
 DEPENDS+=	seahorse-plugins>=2.26.0:../../security/seahorse-plugins
 DEPENDS+=	sound-juicer>=2.26.0:../../audio/sound-juicer
