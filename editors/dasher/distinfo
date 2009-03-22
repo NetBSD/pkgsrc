@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.27 2008/10/29 02:37:05 wiz Exp $
+$NetBSD: distinfo,v 1.28 2009/03/22 15:30:51 wiz Exp $
 
-SHA1 (dasher-4.9.0.tar.bz2) = c897804aa4701cee00b50c6dd83bf8003a3ae4a5
-RMD160 (dasher-4.9.0.tar.bz2) = 7540daeeb48f97dccd50c45593e20f228f57a3f7
-Size (dasher-4.9.0.tar.bz2) = 6734895 bytes
-SHA1 (patch-ac) = 9c21bac777158e564a69b5f2735380c6a2b985e8
-SHA1 (patch-ad) = 8261c0e7de41fd2729413ee24c24e07cb939a1ae
-SHA1 (patch-ae) = 6e16f33e9ae2a75e0a11294af478cf5d0ab08cdc
-SHA1 (patch-af) = 63b6bb074834cc8203cfe2fdaddd838439ac5b60
-SHA1 (patch-ag) = b8948dc2a0f2c52db3cd697c6b9eaef7abb650f2
+SHA1 (dasher-4.10.0.tar.bz2) = 07d35933aeaf8d911abb221135e9dd2118dd8e19
+RMD160 (dasher-4.10.0.tar.bz2) = 5b2bcc5298bbbaeca1f030e62e54ba2aa6e59bc2
+Size (dasher-4.10.0.tar.bz2) = 6645541 bytes
+SHA1 (patch-ag) = f5f5c519d6ae9f5ec3f5b04688a0930b02bcbd2e
