@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1151 2009/03/22 14:38:45 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1152 2009/03/22 14:40:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/c++-gnome-bindings to 2.26.0 [wiz 2009-03-22]
 	Updated devel/accerciser to 1.6.0 [wiz 2009-03-22]
 	Added devel/p5-autobox version 2.55 [seb 2009-03-22]
+	Updated x11/alacarte to 0.11.10 [wiz 2009-03-22]
