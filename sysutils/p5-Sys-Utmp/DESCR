@@ -1,0 +1,8 @@
+Sys::Utmp provides a vaguely object oriented interface to the Unix user
+accounting file (sometimes /etc/utmp or /var/run/utmp). Whilst it would
+prefer to use the getutent() function from the systems C libraries it will
+attempt to provide its own if they are missing.
+
+This may not be the module that you are looking for - there is a User::Utmp
+which provides a different procedural interface and may well be more
+complete for your purposes.
