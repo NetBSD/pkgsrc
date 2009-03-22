@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2008/10/27 00:00:56 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/03/22 17:06:53 wiz Exp $
 #
 
-DISTNAME=	evolution-webcal-2.24.0
+DISTNAME=	evolution-webcal-2.26.0
 CATEGORIES=	time gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-webcal/2.24/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-webcal/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,7 +21,6 @@ GCONF_SCHEMAS=		evolution-webcal.schemas
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
