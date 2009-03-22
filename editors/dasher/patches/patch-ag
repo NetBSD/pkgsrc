@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.3 2008/05/29 17:53:36 drochner Exp $
+$NetBSD: patch-ag,v 1.4 2009/03/22 15:30:51 wiz Exp $
 
---- Src/DasherCore/DasherViewSquare.cpp.orig	2008-04-07 19:25:34.000000000 +0200
+--- Src/DasherCore/DasherViewSquare.cpp.orig	2009-03-16 17:02:53.000000000 +0000
 +++ Src/DasherCore/DasherViewSquare.cpp
-@@ -805,7 +805,7 @@ void CDasherViewSquare::GetScaleFactor( 
- inline myint CDasherViewSquare::CustomIDiv(myint iNumerator, myint iDenominator) { 
-   // Integer division rounding away from zero
-   
+@@ -41,7 +41,7 @@
+ using namespace Dasher;
+ 
+ // Track memory leaks on Windows to the line that new'd the memory
 -#ifdef _WIN32
 +#if defined(_WIN32) || defined(__DragonFly__)
-   myint quot = iNumerator / iDenominator;
-   myint rem = (int64)iNumerator % (int64)iDenominator;
- 
+ #ifdef _DEBUG_MEMLEAKS
+ #define DEBUG_NEW new( _NORMAL_BLOCK, THIS_FILE, __LINE__ )
+ #define new DEBUG_NEW
