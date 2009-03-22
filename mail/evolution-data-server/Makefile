@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2009/03/19 12:02:09 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2009/03/22 00:03:10 wiz Exp $
 #
 
 DISTNAME=	evolution-data-server-2.26.0
@@ -88,6 +88,7 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libical+=	libical>=0.43
 .include "../../time/libical/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
