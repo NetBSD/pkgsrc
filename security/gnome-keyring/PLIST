@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/03/15 18:14:24 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/03/22 14:45:19 snj Exp $
 bin/gnome-keyring
 bin/gnome-keyring-daemon
 include/gcr/gcr-certificate-basics-widget.h
@@ -150,6 +150,8 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm lib/security
+@dirrm lib/gnome-keyring/standalone
+@dirrm lib/gnome-keyring/devel
 @dirrm lib/gnome-keyring
 @dirrm include/gp11
 @dirrm include/gnome-keyring-1
