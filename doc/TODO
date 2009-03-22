@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7993 2009/03/22 15:49:03 wiz Exp $
+$NetBSD: TODO,v 1.7994 2009/03/22 16:00:13 snj Exp $
 
 Suggested new packages
 ======================
@@ -656,7 +656,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-backgrounds-2.24.1
 	o gnome-nettool-2.26.0 [GNOME 2.26]
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
@@ -1136,7 +1135,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdiff-backup-1.2.8
 	o rdp-1.6
 	o regionset-0.2
 	o rep-gtk-0.18.3
