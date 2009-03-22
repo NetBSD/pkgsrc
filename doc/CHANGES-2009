@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1169 2009/03/22 18:20:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1170 2009/03/22 18:57:06 plunky Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/coccinelle to 0.1.6nb1 [wiz 2009-03-22]
 	Updated net/gnome-nettool to 2.26.0 [wiz 2009-03-22]
 	Updated sysutils/gnome-system-tools to 2.22.2 [wiz 2009-03-22]
+	Removed net/ppp-lzs [plunky 2009-03-22]
