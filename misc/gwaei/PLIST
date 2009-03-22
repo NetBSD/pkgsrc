@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/01 15:13:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/22 17:37:39 wiz Exp $
 bin/waei
 bin/gwaei
 share/applications/gwaei.desktop
@@ -33,6 +33,7 @@ share/icons/hicolor/32x32/apps/gwaei.png
 share/icons/hicolor/48x48/apps/gwaei.png
 share/locale/en@boldquot/LC_MESSAGES/gwaei.mo
 share/locale/en@quot/LC_MESSAGES/gwaei.mo
+share/locale/es/LC_MESSAGES/gwaei.mo
 share/locale/it/LC_MESSAGES/gwaei.mo
 share/locale/ja/LC_MESSAGES/gwaei.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
