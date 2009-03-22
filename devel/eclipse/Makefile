@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/01/23 21:14:18 jschauma Exp $
+# $NetBSD: Makefile,v 1.23 2009/03/22 02:31:39 jschauma Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -8,7 +8,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/pkgsrc-users@/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jschauma@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 
