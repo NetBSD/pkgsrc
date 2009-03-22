@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1183 2009/03/22 22:04:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1184 2009/03/22 22:37:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/p5-Filesys-DfPortable version 0.85 [sno 2009-03-22]
 	Added sysutils/p5-Filesys-Statvfs version 0.82 [sno 2009-03-22]
 	Added textproc/p5-Pod-Parser version 1.38 [sno 2009-03-22]
+	mk/emulator/aix.mk: Support for AIX binary only packages added [sno 2009-03-22]
