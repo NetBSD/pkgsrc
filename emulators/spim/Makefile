@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2008/11/10 17:21:35 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/03/22 19:55:42 markd Exp $
 
-DISTNAME=	spim-7.1
-PKGREVISION=	4
+DISTNAME=	spim-7.3
 CATEGORIES=	emulators
 MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/ \
 		ftp://ftp.cs.wisc.edu/pub/spim/
@@ -10,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pages.cs.wisc.edu/~larus/spim.html
 COMMENT=	MIPS R2000 Simulator
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 LICENSE=		spim-license
 RESTRICTED=		No permission to copy, and prohibited commercially.
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -17,34 +18,41 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-#DIST_SUBDIR=		${PKGNAME}
-
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes
+CONFIGURE_DIRS=		xspim
+BUILD_DIRS=		spim xspim
 CONFIGURE_SCRIPT=	./Configure
 USE_IMAKE=		yes
-USE_TOOLS+=		gzip lex yacc
+USE_TOOLS+=		gzip flex yacc
 XMKMF=			${X11BASE}/bin/xmkmf # don't specify -a option
+INSTALL_TARGET=		install
 
-BUILD_TARGET=		y.tab.c depend all
+SUBST_CLASSES+=		cpudir
+SUBST_STAGE.cpudir=	post-patch
+SUBST_MESSAGE.cpudir=	rename CPU_DIR
+SUBST_FILES.cpudir=	spim/Makefile xspim/Imakefile
+SUBST_SED.cpudir=	-e s:CPU_DIR:CPUDIR:
 
-pre-configure:
-	@${RM} -f ${WRKSRC}/y.tab.*
+INSTALLATION_DIRS=	bin share/spim share/doc/spim man/man1
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/spim
-	${CHMOD} a+rx ${PREFIX}/share/spim
+post-configure:
+	cd ${WRKSRC}/spim && ${SETENV} ${_CONFIGURE_SCRIPT_ENV}		\
+                ${CONFIG_SHELL} ${CONFIG_SHELL_FLAGS}			\
+                        ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS}
 
 post-install:
 	@${ECHO} "Installing spim/xspim documentation"
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/spim \
-		&& ${CHMOD} a+rx ${PREFIX}/share/doc/spim
-	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.tex \
-		${PREFIX}/share/doc/spim
-	${INSTALL_DATA} ${WRKSRC}/Documentation/*.id \
-		${PREFIX}/share/doc/spim
-	${INSTALL_DATA} ${WRKSRC}/Documentation/cycle.ps \
-		${PREFIX}/share/doc/spim
+	${INSTALL_DATA} ${WRKSRC}/Documentation/spim.man \
+		${DESTDIR}${PREFIX}/man/man1/spim.1
+	${INSTALL_DATA} ${WRKSRC}/Documentation/xspim.man \
+		${DESTDIR}${PREFIX}/man/man1/xspim.1
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/spim.tex \
+		${DESTDIR}${PREFIX}/share/doc/spim
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/*.id \
+		${DESTDIR}${PREFIX}/share/doc/spim
+	${INSTALL_DATA} ${WRKSRC}/Documentation/TeX/cycle.ps \
+		${DESTDIR}${PREFIX}/share/doc/spim
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
