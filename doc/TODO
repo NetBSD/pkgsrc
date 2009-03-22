@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7994 2009/03/22 16:00:13 snj Exp $
+$NetBSD: TODO,v 1.7995 2009/03/22 16:08:29 snj Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-gtksourceview-2.6.0
 	o py-html2text-2.35
 	o py-kenosis-0.96
 	o py-ldap-2.3.6
