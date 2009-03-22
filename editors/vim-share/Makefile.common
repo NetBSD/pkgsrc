@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.121 2009/02/06 06:28:53 martti Exp $
+# $NetBSD: Makefile.common,v 1.122 2009/03/22 10:24:19 martti Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -28,7 +28,13 @@ PATCH_SITES=		ftp://ftp.vim.org/pub/editors/vim/patches/${VIM_VERSION}/
 PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 
 PATCHFILES+=		7.2.001-100.gz
-PATCHFILES+=		7.2.101 7.2.102
+PATCHFILES+=		7.2.101 7.2.102 7.2.103 7.2.104 7.2.105 7.2.106 7.2.107
+PATCHFILES+=		7.2.108 7.2.109 7.2.110 7.2.111 7.2.112 7.2.113 7.2.114
+PATCHFILES+=		7.2.115 7.2.116 7.2.117 7.2.118 7.2.119 7.2.120 7.2.121
+PATCHFILES+=		7.2.122 7.2.123 7.2.124 7.2.125 7.2.126 7.2.127 7.2.128
+PATCHFILES+=		7.2.129 7.2.130 7.2.131 7.2.132 7.2.133 7.2.134 7.2.135
+PATCHFILES+=		7.2.136 7.2.137 7.2.138 7.2.139 7.2.140 7.2.141 7.2.142
+PATCHFILES+=		7.2.143 7.2.144 7.2.145 7.2.146 7.2.147 7.2.148
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
