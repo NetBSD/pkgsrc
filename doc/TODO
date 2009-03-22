@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7990 2009/03/22 07:59:32 obache Exp $
+$NetBSD: TODO,v 1.7991 2009/03/22 14:33:05 snj Exp $
 
 Suggested new packages
 ======================
@@ -660,7 +660,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnome-packagekit-0.4.4
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
-	o gnome-vfsmm-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
@@ -837,7 +836,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.6a
 	o libv4l-0.5.8
 	o libvolume_id-0.81.1
-	o libxml++-2.26.0 [GNOME 2.26]
 	o licq-1.3.6
 	o liferea-1.4.27
 	o lighttpd-1.4.21
