@@ -1,0 +1,13 @@
+$NetBSD: patch-ft,v 1.1 2009/03/22 23:51:10 joerg Exp $
+
+--- macro.c.orig	2009-03-17 11:22:31.000000000 +0100
++++ macro.c
+@@ -107,7 +107,7 @@ const	struct mdoc_macro __mdoc_macros[MD
+ 	{ in_line_eoln, 0 }, /* Fd */ 
+ 	{ in_line, MDOC_CALLABLE | MDOC_PARSED }, /* Fl */
+ 	{ in_line, MDOC_CALLABLE | MDOC_PARSED }, /* Fn */ 
+-	{ in_line, MDOC_PARSED }, /* Ft */ 
++	{ in_line, MDOC_CALLABLE | MDOC_PARSED }, /* Ft */ 
+ 	{ in_line, MDOC_CALLABLE | MDOC_PARSED }, /* Ic */ 
+ 	{ in_line_eoln, 0 }, /* In */ 
+ 	{ in_line, MDOC_CALLABLE | MDOC_PARSED }, /* Li */
