@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1159 2009/03/22 15:31:57 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1160 2009/03/22 15:34:15 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/rdiff-backup to 1.2.8 [snj 2009-03-22]
 	Updated editors/dasher to 4.10.0 [wiz 2009-03-22]
 	Updated net/bind9 to 9.4.3pl2 [adrianp 2009-03-22]
+	Updated net/bind95 to 9.5.1pl2 [adrianp 2009-03-22]
