@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.190 2009/02/09 21:09:22 joerg Exp $
+# $NetBSD: makevars.map,v 1.191 2009/03/22 05:41:44 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -184,6 +184,7 @@ BUILDLINK_RPATHDIRS.*	List of Pathname [b:a]
 BUILDLINK_TARGETS	List of Identifier []
 BUILDLINK_FNAME_TRANSFORM.*	SedCommands [m:a,builtin.mk:a,h:a,b:a]
 BUILDLINK_TRANSFORM	List of WrapperTransform [*:a]
+BUILDLINK_TREE		List of Identifier [b:a]
 BUILD_DEFS		List of Varname [m:a,c:a,o:a]
 BUILD_DEPENDS		InternalList of DependencyWithPath [c:a,m:a,o:a,*.mk:a]
 BUILD_DIRS		List of WrksrcSubdirectory [$package_list]
