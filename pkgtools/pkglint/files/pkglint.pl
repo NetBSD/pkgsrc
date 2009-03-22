@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.803 2009/03/22 05:50:12 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.804 2009/03/22 05:57:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6652,7 +6652,7 @@ sub checklines_buildlink3_mk_2009($$$) {
 			|| expect($lines, \$lineno, qr"^\.\s*include \"\.\./\.\./mk/(\S+)\.buildlink3\.mk\"$")) {
 			# TODO: Maybe check dependency lines.
 
-		} elsif (expect($lines, \$lineno, qr"^\.if !empty\(PKG_BUILD_OPTIONS\.\Q${bl_pkgbase}\E:M\S+\)$")) {
+		} elsif (expect($lines, \$lineno, qr"^\.if\s")) {
 			$if_level++;
 
 		} elsif (expect($lines, \$lineno, qr"^\.endif.*$")) {
