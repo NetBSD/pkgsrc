@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/03/18 13:08:07 jmcneill Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/22 08:51:24 wiz Exp $
 #
 
 DISTNAME=		ekiga-3.2.0
+PKGREVISION=		1
 CATEGORIES=		net comms
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/ekiga/3.2/}
 EXTRACT_SUFX=		.tar.bz2
@@ -20,16 +21,7 @@ USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--with-ldap-dir=${BUILDLINK_PREFIX.openldap-client:Q}
 CONFIGURE_ARGS+=	--enable-gstreamer
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.ekiga
-PKG_SUPPORTED_OPTIONS+= avahi
-PKG_SUGGESTED_OPTIONS+= avahi
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mavahi)
-.include "../../net/avahi/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--disable-avahi
-.endif
+.include "options.mk"
 
 GCONF_SCHEMAS=		ekiga.schemas
 
@@ -67,9 +59,9 @@ pre-configure:
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
