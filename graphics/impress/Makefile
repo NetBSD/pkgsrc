@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/04 21:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/22 04:53:39 manu Exp $
 #
 
 DISTNAME=	imp1.1b9
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ntlug.org/~ccox/impress/
 
-MAINTAINER=	manu@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.ntlug.org/~ccox/impress/
 # AWOL, but ccox@ is listed as board member of ntlug.org
 COMMENT=	WYSIWYG vector graphics application
