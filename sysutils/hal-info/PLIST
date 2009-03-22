@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/21 13:49:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/22 20:50:10 wiz Exp $
 share/hal/fdi/information/10freedesktop/10-battery.fdi
 share/hal/fdi/information/10freedesktop/10-camera-ptp.fdi
 share/hal/fdi/information/10freedesktop/10-cd-dvd-burner.fdi
@@ -43,7 +43,6 @@ share/hal/fdi/information/10freedesktop/30-keymap-dell.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-hp.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-lenovo.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-misc.fdi
-share/hal/fdi/information/10freedesktop/30-keymap-module-asus-laptop.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-module-sony-laptop.fdi
 share/hal/fdi/information/10freedesktop/30-keymap-module-thinkpad-acpi.fdi
 share/hal/fdi/information/10freedesktop/99-video-quirk-default.fdi
@@ -53,9 +52,6 @@ share/hal/fdi/preprobe/10osvendor/20-broken-usb-sticks.fdi
 @dirrm share/hal/fdi/preprobe/20thirdparty
 @dirrm share/hal/fdi/preprobe/10osvendor
 @dirrm share/hal/fdi/preprobe
-@exec ${MKDIR} %D/share/hal/fdi/policy/10osvendor
-@dirrm share/hal/fdi/policy/10osvendor
-@dirrm share/hal/fdi/policy
 @exec ${MKDIR} %D/share/hal/fdi/information/20thirdparty
 @dirrm share/hal/fdi/information/20thirdparty
 @dirrm share/hal/fdi/information/10freedesktop
