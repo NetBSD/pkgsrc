@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/12 19:27:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/22 19:55:42 markd Exp $
 bin/spim
 bin/xspim
-${IMAKE_MAN_DIR}/spim.${IMAKE_MAN_SUFFIX}
-${IMAKE_MAN_DIR}/xspim.${IMAKE_MAN_SUFFIX}
+man/man1/spim.1
+man/man1/xspim.1
 share/doc/spim/cause_reg.id
 share/doc/spim/cycle.ps
 share/doc/spim/io_reg.id
