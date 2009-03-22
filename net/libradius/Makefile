@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/01/31 03:12:33 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/03/22 04:53:40 manu Exp $
 
 DISTNAME=	libradius-linux-20040827
 PKGNAME=	${DISTNAME:S/-linux//}
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://portal-to-web.de/tacacs/
 
-MAINTAINER=	manu@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	RADIUS client library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
