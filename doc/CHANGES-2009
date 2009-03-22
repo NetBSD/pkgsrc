@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1137 2009/03/22 09:37:13 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1138 2009/03/22 09:40:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1535,3 +1535,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ekiga to 3.2.0nb1 [wiz 2009-03-22]
 	Updated sysutils/brasero to 2.26.0nb1 [wiz 2009-03-22]
 	Updated textproc/intltool to 0.40.6 [wiz 2009-03-22]
+	Updated devel/mercurial to 1.2.1 [wiz 2009-03-22]
