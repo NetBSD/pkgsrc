@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1133 2009/03/22 05:47:39 rillig Exp $
+$NetBSD: CHANGES-2009,v 1.1134 2009/03/22 07:33:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-CSV_XS to 0.63 [sno 2009-03-21]
 	Added devel/coccinelle version 0.1.6 [wiz 2009-03-21]
 	Updated pkgtools/pkglint to 4.91 [roland 2009-03-22]
+	Added devel/p5-Hash-Util-FieldHash-Compat version 0.03 [seb 2009-03-22]
