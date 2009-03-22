@@ -1,4 +1,4 @@
-/* $NetBSD: scsi-netbsd.c,v 1.1.1.1 2009/03/16 10:49:06 jmcneill Exp $ */
+/* $NetBSD: scsi-netbsd.c,v 1.2 2009/03/22 09:30:39 wiz Exp $ */
 /* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 8; tab-width: 8 -*- */
 /*
  * Libbrasero-media
@@ -67,7 +67,8 @@ typedef struct _BraseroScsiCmd BraseroScsiCmd;
 #define BRASERO_SCSI_CMD_OPCODE_OFF			0
 #define BRASERO_SCSI_CMD_SET_OPCODE(command)		(command->cmd [BRASERO_SCSI_CMD_OPCODE_OFF] = command->info->opcode)
 
-#define OPEN_FLAGS			O_RDWR /*|O_EXCL */|O_NONBLOCK
+#define OPEN_FLAGS			(O_RDWR|O_NONBLOCK)
+#define SCSIREQ_TIMEOUT			(30 * 1000)
 
 /**
  * This is to send a command
@@ -85,6 +86,7 @@ brasero_sg_command_setup (scsireq_t *req,
 	memcpy(req->cmd, cmd->cmd, req->cmdlen);
 	req->databuf = buffer;
 	req->datalen = size;
+	req->timeout = SCSIREQ_TIMEOUT;
 
 	/* where to output the scsi sense buffer */
 	req->senselen = BRASERO_SENSE_DATA_SIZE;
@@ -112,7 +114,7 @@ brasero_scsi_command_issue_sync (gpointer command,
 				  size);
 
 	res = ioctl (cmd->handle->fd, SCIOCCOMMAND, &req);
-	if (res) {
+	if (res == -1) {
 		BRASERO_SCSI_SET_ERRCODE (error, BRASERO_SCSI_ERRNO);
 		return BRASERO_SCSI_FAILURE;
 	}
@@ -162,11 +164,14 @@ brasero_device_handle_open (const gchar *path,
 	int fd;
 	int flags = OPEN_FLAGS;
 	BraseroDeviceHandle *handle;
+	gchar *rdevnode;
 
 	if (exclusive)
 		flags |= O_EXCL;
 
-	fd = open (path, flags);
+	rdevnode = g_strdup_printf ("/dev/r%s", path + strlen ("/dev/"));
+	fd = open (rdevnode, flags);
+	g_free (rdevnode);
 	if (fd < 0) {
 		if (code) {
 			if (errno == EAGAIN
