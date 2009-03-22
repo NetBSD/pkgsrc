@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/04 12:00:18 jmcneill Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/22 19:01:38 wiz Exp $
 #
 
 DISTNAME=	warzone2100-2.1.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
+
+DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,14 +23,6 @@ TOOLS_PLATFORM.gsed=	#empty, override nonsense in tools
 CONFIGURE_ARGS+=	--with-distributor=pkgsrc
 
 CHECK_WRKREF_SKIP=	share/warzone2100/mods/global/aivolution.wz
-
-post-patch:
-	for f in ${WRKSRC}/po/*.po; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
-
-DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
