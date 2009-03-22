@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1149 2009/03/22 12:21:37 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1150 2009/03/22 14:09:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1547,3 +1547,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed games/baduki [bad 2009-03-22]
 	Updated textproc/libxml++ to 2.26.0 [wiz 2009-03-22]
 	Updated meta-pkgs/c++-gnome-bindings to 2.26.0 [wiz 2009-03-22]
+	Updated devel/accerciser to 1.6.0 [wiz 2009-03-22]
