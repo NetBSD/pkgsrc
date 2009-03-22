@@ -1,0 +1,9 @@
+Interface for statvfs() and fstatvfs()
+
+Unless access to the bsize, flag, and namemax values is required, either
+Filesys::DfPortable or Filesys::Df could be a better choice.  They will
+generally provide more functionality and portability.
+
+The module should work with all flavors of Unix that implement the statvfs()
+and fstatvfs() calls. This would include Linux, *BSD, HP-UX, AIX, Solaris,
+Mac OS X, Irix, Cygwin, etc ...
