@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1142 2009/03/22 10:25:26 martti Exp $
+$NetBSD: CHANGES-2009,v 1.1143 2009/03/22 10:28:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/mono-gnome-bindings to 2.26.0 [wiz 2009-03-22]
 	Updated meta-pkgs/py-gnome-bindings to 2.26.0 [wiz 2009-03-22]
 	Updated editors/vim-share to 7.2.148 [martti 2009-03-22]
+	Updated sysutils/gnome-vfsmm to 2.26.0 [wiz 2009-03-22]
