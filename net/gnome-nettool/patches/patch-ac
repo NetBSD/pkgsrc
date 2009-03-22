@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
+$NetBSD: patch-ac,v 1.3 2009/03/22 18:11:57 wiz Exp $
 
---- src/netstat.c.orig	2008-09-22 22:04:12.000000000 +0000
+--- src/netstat.c.orig	2009-03-17 02:15:43.000000000 +0000
 +++ src/netstat.c
 @@ -123,7 +123,7 @@ netstat_get_active_option (Netinfo * net
  	}
  	if (gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (netinfo->protocol))) {
  		/* Only works for Solaris */
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	    	option = g_strdup ("-a -f inet -ln");
  #else
@@ -15,7 +15,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  	g_return_if_fail (line != NULL);
  
  	count = strip_protocol_line (line, &data);
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (count == 5 || count == 6 || count == 9 || count == 10) {
  #else
@@ -24,7 +24,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  strip_protocol_line (gchar * line, netstat_protocol_data *data)
  {
  	gint count = 0;
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	gint a1, a2, a3, a4;
  	gchar s9[30];
@@ -33,7 +33,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  
  	/*line = g_strdelimit (line, ":", ' ');*/
  
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	line = g_strdelimit (line, ":", ' ');
  	
@@ -42,7 +42,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  	g_return_if_fail (line != NULL);
  
  	count = strip_route_line (line, &data);
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	if (count == 6) {
  #else
@@ -51,7 +51,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  	gchar **items;
  #endif
  
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	count = sscanf (line, NETSTAT_ROUTE_FORMAT,
  			data->destination,
@@ -60,7 +60,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  	renderer = gtk_cell_renderer_text_new ();
  	column =
  	    gtk_tree_view_column_new_with_attributes
--#if defined(__FreeBSD__) || defined(__OpenBSD__)
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
 +#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
  	    (_("Destination/Prefix"), renderer, "text", 0, NULL);
  #else
@@ -69,7 +69,7 @@ $NetBSD: patch-ac,v 1.2 2008/12/25 05:35:50 hasso Exp $
  	gtk_tree_view_column_set_alignment (column, 0.5);
  	gtk_tree_view_append_column (widget, column);
  
--#if ! (defined(__FreeBSD__) || defined(__OpenBSD__))
+-#if ! (defined(__FreeBSD__) || defined(__OpenBSD__)) || defined(__NetBSD__)
 +#if ! (defined(__FreeBSD__) || defined(__OpenBSD__)) || defined(__NetBSD__) || defined(__DragonFly__)
  	renderer = gtk_cell_renderer_text_new ();
  	column =
