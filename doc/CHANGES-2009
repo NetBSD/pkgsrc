@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1156 2009/03/22 15:09:13 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1157 2009/03/22 15:25:10 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1554,3 +1554,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-autobox-Core version 0.6 [seb 2009-03-22]
 	Updated graphics/lcms to 1.18 [gdt 2009-03-22]
 	Added devel/p5-Moose-Autobox version 0.09 [seb 2009-03-22]
+	Updated sysutils/rdiff-backup to 1.2.8 [snj 2009-03-22]
