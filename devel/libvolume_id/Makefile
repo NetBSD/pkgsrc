@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/18 13:29:32 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/22 20:31:11 wiz Exp $
 #
 
-DISTNAME=		libvolume_id-0.81.0
-PKGREVISION=		1
+DISTNAME=		libvolume_id-0.81.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.marcuscom.com/downloads/
 EXTRACT_SUFX=		.tar.bz2
