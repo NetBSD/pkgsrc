@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/02/09 22:56:28 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/03/22 14:40:39 wiz Exp $
 #
 
-DISTNAME=	alacarte-0.11.6
-PKGREVISION=	1
+DISTNAME=	alacarte-0.11.10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/alacarte/0.11/}
 EXTRACT_SUFX=	.tar.bz2
@@ -25,12 +24,16 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	Alacarte/util.py
 SUBST_SED.paths=	-e "s;@PREFIX@;${PREFIX};g" -e "s;@PKG_SYSCONFBASE@;${PKG_SYSCONFBASE};g"
 
-.include "../../sysutils/gnome-menus/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
-.include "../../x11/py-gnome2/buildlink3.mk"
-.include "../../sysutils/py-gnome-menus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.15.1
+.include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILDLINK_API_DEPENDS.gnome-menus+=	gnome-menus>=2.22.2
+.include "../../sysutils/gnome-menus/buildlink3.mk"
+.include "../../sysutils/py-gnome-menus/buildlink3.mk"
+.include "../../x11/py-gnome2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pygtk2+=		${PYPKGPREFIX}-gtk2>=2.13.0
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

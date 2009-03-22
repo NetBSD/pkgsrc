@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/08 14:12:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/22 14:40:39 wiz Exp $
 bin/alacarte
 ${PYSITELIB}/Alacarte/MainWindow.py
 ${PYSITELIB}/Alacarte/MainWindow.pyc
@@ -25,12 +25,14 @@ share/icons/hicolor/32x32/apps/alacarte.png
 share/icons/hicolor/48x48/apps/alacarte.png
 share/locale/ar/LC_MESSAGES/alacarte.mo
 share/locale/as/LC_MESSAGES/alacarte.mo
+share/locale/ast/LC_MESSAGES/alacarte.mo
 share/locale/be/LC_MESSAGES/alacarte.mo
 share/locale/be@latin/LC_MESSAGES/alacarte.mo
 share/locale/bg/LC_MESSAGES/alacarte.mo
 share/locale/bn/LC_MESSAGES/alacarte.mo
 share/locale/bn_IN/LC_MESSAGES/alacarte.mo
 share/locale/ca/LC_MESSAGES/alacarte.mo
+share/locale/crh/LC_MESSAGES/alacarte.mo
 share/locale/cs/LC_MESSAGES/alacarte.mo
 share/locale/da/LC_MESSAGES/alacarte.mo
 share/locale/de/LC_MESSAGES/alacarte.mo
@@ -58,6 +60,7 @@ share/locale/io/LC_MESSAGES/alacarte.mo
 share/locale/it/LC_MESSAGES/alacarte.mo
 share/locale/ja/LC_MESSAGES/alacarte.mo
 share/locale/ka/LC_MESSAGES/alacarte.mo
+share/locale/kk/LC_MESSAGES/alacarte.mo
 share/locale/kn/LC_MESSAGES/alacarte.mo
 share/locale/ko/LC_MESSAGES/alacarte.mo
 share/locale/ku/LC_MESSAGES/alacarte.mo
