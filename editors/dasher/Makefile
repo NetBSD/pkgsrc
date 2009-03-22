@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.48 2008/10/29 02:37:05 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2009/03/22 15:30:51 wiz Exp $
 
-DISTNAME=	dasher-4.9.0
+DISTNAME=	dasher-4.10.0
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.9/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
@@ -15,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+
+INSTALLATION_DIRS=	${GCONF_SCHEMAS_DIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,7 +33,7 @@ post-build:
 	cd ${WRKSRC}/Data && ../Src/Gtk2/generate-schema >dasher.schemas
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/Data/dasher.schemas ${GCONF_SCHEMAS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/Data/dasher.schemas ${DESTDIR}${GCONF_SCHEMAS_DIR}
 
 .include "../../audio/gnome-speech/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
