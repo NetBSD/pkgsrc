@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.2 2008/11/12 13:13:59 martti Exp $
+$NetBSD: patch-ad,v 1.3 2009/03/22 10:39:44 martti Exp $
 
 Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
 
---- src/ejabberd.cfg.example.orig	2008-11-12 15:15:04.000000000 +0200
-+++ src/ejabberd.cfg.example
-@@ -107,10 +107,9 @@
+--- src/ejabberd.cfg.example.orig	2009-03-12 08:41:02.000000000 +0000
++++ src/ejabberd.cfg.example	2009-03-22 10:27:16.000000000 +0000
+@@ -108,10 +108,9 @@
   [
  
    {5222, ejabberd_c2s, [
@@ -16,7 +16,7 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  			%% file and uncomment this line:
  			%%
  			%%{certfile, "/path/to/ssl.pem"}, starttls,
-@@ -123,12 +122,12 @@
+@@ -124,12 +123,12 @@
    %%
    %% To enable the old SSL connection method in port 5223:
    %%
@@ -35,7 +35,7 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  
    {5269, ejabberd_s2s_in, [
  			   {shaper, s2s_shaper},
-@@ -138,14 +137,14 @@
+@@ -139,14 +138,14 @@
    %%
    %% ejabberd_service: Interact with external components (transports...)
    %%
@@ -58,7 +58,7 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  
    {5280, ejabberd_http, [
  			 http_poll, 
-@@ -224,17 +223,26 @@
+@@ -225,17 +224,26 @@
  %% List of LDAP servers:
  %%{ldap_servers, ["localhost"]}.    
  %%
