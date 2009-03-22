@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2009/03/08 13:30:46 seb Exp $
+# $NetBSD: Makefile,v 1.471 2009/03/22 22:04:44 sno Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -218,6 +218,7 @@ SUBDIR+=	p5-PPI-HTML
 SUBDIR+=	p5-Pod-Coverage
 SUBDIR+=	p5-Pod-Escapes
 SUBDIR+=	p5-Pod-POM
+SUBDIR+=	p5-Pod-Parser
 SUBDIR+=	p5-Pod-Readme
 SUBDIR+=	p5-Pod-Simple
 SUBDIR+=	p5-Pod-Spell
