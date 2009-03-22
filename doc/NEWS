@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.5 2008/04/13 13:24:16 tnn Exp $
+# $NetBSD: NEWS,v 1.6 2009/03/22 22:44:18 joerg Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,12 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+buildlink3.mk layout changed [joerg 2009-03-20]
+	The buildlink3.mk files have been reorganized to reduce
+	redundant parsing for deeply nested buildlink3 trees.
+	The createbuildlink package has been updated to create
+	the new format.
 
 PLIST_VARS introduced [jlam 20080413]
 	PLIST_VARS is a simpler way to do conditional PLIST entries.
