@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/03/19 18:39:14 drochner Exp $
+# $NetBSD: Makefile,v 1.44 2009/03/22 19:01:38 wiz Exp $
 #
 
 DISTNAME=	eog-2.26.0
@@ -19,14 +19,6 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		yes
 
 GCONF_SCHEMAS=	eog.schemas
-
-# The gettext version in pkgsrc cannot handle the .po files, so
-# we strip out usage of the newer features (context and fuzzy matches)
-post-patch:
-	for f in ${WRKSRC}/po/*.po ${WRKSRC}/help/*/*.po ; do \
-		mv $$f $$f.original ; \
-		${AWK} -f ${FILESDIR}/msgfmtstrip $$f.original > $$f ; \
-	done
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.3
