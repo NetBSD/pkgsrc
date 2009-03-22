@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/21 23:50:53 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.2 2009/03/22 17:51:36 wiz Exp $
 
 DISTNAME=	coccinelle-0.1.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.emn.fr/x-info/coccinelle/distrib/
 EXTRACT_SUFX=	.tgz
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 HAS_CONFIGURE=	yes
 USE_TOOLS=	gmake perl
 REPLACE_PERL=	configure
+REPLACE_SH=	runspatch.opt scripts/spatch.sh
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIG_SHELL=	${PERL5}
