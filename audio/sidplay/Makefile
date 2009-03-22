@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:07 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/03/22 10:33:42 pooka Exp $
 #
 
 DISTNAME=	sidplay-base-1.0.9
@@ -8,7 +8,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	pooka@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Tools for playing sidtunes
 
