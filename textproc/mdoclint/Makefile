@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/05 10:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/22 23:47:05 joerg Exp $
 
 DISTNAME=	mdoclint-1.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -12,7 +13,7 @@ COMMENT=	Tool for verifying man pages
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-CONFLICTS=	mdocml-[0-9]*
+CONFLICTS=	mdocml<1.6.9
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
