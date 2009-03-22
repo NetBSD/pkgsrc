@@ -1,0 +1,15 @@
+The Perl 5 module autobox::Core wraps perl's built-in functions for
+manipulating numbers, strings, arrays, hashes, and code references.
+It can be handy to use built-in functions as methods to avoid messy
+dereferencing syntaxes and parentheses pile ups.
+
+The autobox module lets you call methods in scalars that aren't
+object references but perl but does not itself provide any methods
+to call. That is left to the user or another module, for example,
+autobox::Core.
+
+autobox::Core is a stub module. It is merely glue, presenting
+existing functions with a new interface.  Besides built-ins that
+operate on hashes, arrays, scalars, and code references, some Perl
+6-ish things were thrown in, and some keyword like foreach have
+been turned into methods.
