@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/01/23 01:53:06 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2009/03/22 10:33:43 pooka Exp $
 
 DISTNAME=		mz-360-src-unix
 PKGNAME=		mzscheme-360
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://download.plt-scheme.org/bundles/360/mz/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pooka@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.plt-scheme.org/software/mzscheme/
 COMMENT=		R5RS-compliant scheme
 
