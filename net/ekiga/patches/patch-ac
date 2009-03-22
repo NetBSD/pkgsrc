@@ -1,0 +1,34 @@
+$NetBSD: patch-ac,v 1.1 2009/03/22 08:51:24 wiz Exp $
+
+http://svn.gnome.org/viewvc/ekiga?view=revision&revision=7785
+
+--- lib/engine/components/gstreamer/gst-audioinput.cpp.orig	2009-01-18 15:45:41.000000000 +0000
++++ lib/engine/components/gstreamer/gst-audioinput.cpp
+@@ -304,8 +304,11 @@ GST::AudioInputManager::detect_alsasrc_d
+ 	descr = g_strdup_printf ("alsasrc device=%s ! volume name=ekiga_volume",
+ 				 g_value_get_string (device));
+ 
+-	devices_by_name[std::pair<std::string,std::string>("ALSA", name)] = descr;
+-	g_free (name);
++	if (name != 0) {
++
++	  devices_by_name[std::pair<std::string,std::string>("ALSA", name)] = descr;
++	  g_free (name);
++	}
+ 	g_free (descr);
+       }
+       g_value_array_free (array);
+@@ -350,8 +353,11 @@ GST::AudioInputManager::detect_pulsesrc_
+ 	descr = g_strdup_printf ("pulsesrc device=%s ! volume name=ekiga_volume",
+ 				 g_value_get_string (device));
+ 
+-	devices_by_name[std::pair<std::string,std::string>("PULSEAUDIO", name)] = descr;
+-	g_free (name);
++	if (name != 0) {
++
++	  devices_by_name[std::pair<std::string,std::string>("PULSEAUDIO", name)] = descr;
++	  g_free (name);
++	}
+ 	g_free (descr);
+       }
+       g_value_array_free (array);

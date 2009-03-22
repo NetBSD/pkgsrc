@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 2009/03/22 08:51:24 wiz Exp $
+
+http://svn.gnome.org/viewvc/ekiga?view=revision&revision=7785
+
+--- lib/engine/components/gstreamer/gst-videoinput.cpp.orig	2009-01-23 09:29:44.000000000 +0000
++++ lib/engine/components/gstreamer/gst-videoinput.cpp
+@@ -274,7 +274,11 @@ GST::VideoInputManager::detect_v4l2src_d
+ 	descr = g_strdup_printf ("v4l2src device=%s"
+ 				 " ! videoscale ! ffmpegcolorspace",
+ 				 g_value_get_string (device));
+-	devices_by_name[std::pair<std::string,std::string>("V4L2",name)] = descr;
++	if (name != 0) {
++
++	  devices_by_name[std::pair<std::string,std::string>("V4L2",name)] = descr;
++	  g_free (name);
++	}
+ 	g_free (descr);
+       }
+ 
+@@ -339,7 +343,11 @@ GST::VideoInputManager::detect_dv1394src
+ 				 " ! videoscale"
+ 				 " ! ffmpegcolorspace",
+ 				 g_value_get_uint64 (guid));
+-	devices_by_name[std::pair<std::string,std::string>("DV",name)] = descr;
++	if (name != 0) {
++
++	  devices_by_name[std::pair<std::string,std::string>("DV",name)] = descr;
++	  g_free (name);
++	}
+ 	g_free (descr);
+       }
+ 
