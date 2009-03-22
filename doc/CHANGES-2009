@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1164 2009/03/22 16:54:21 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1165 2009/03/22 17:07:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1562,3 +1562,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-gtksourceview to 2.6.0 [snj 2009-03-22]
 	Updated devel/gdl to 2.26.0 [snj 2009-03-22]
 	Updated mail/evolution-exchange to 2.26.0 [wiz 2009-03-22]
+	Updated time/evolution-webcal to 2.26.0 [wiz 2009-03-22]
