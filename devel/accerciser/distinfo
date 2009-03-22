@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/16 23:38:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/03/22 14:09:42 wiz Exp $
 
-SHA1 (accerciser-1.4.0.tar.bz2) = 91152a3d31ed070457a46d1aff00081350874a5e
-RMD160 (accerciser-1.4.0.tar.bz2) = 65f37de65d579f4bf1223376deaa55954bd8fe27
-Size (accerciser-1.4.0.tar.bz2) = 1338182 bytes
+SHA1 (accerciser-1.6.0.tar.bz2) = d5a74127ed53f08bd03fb583cdec8a0b09a69e47
+RMD160 (accerciser-1.6.0.tar.bz2) = e3c1dbdce7fbd853ef0d54f9bcea4b713f8cf936
+Size (accerciser-1.6.0.tar.bz2) = 1341848 bytes
