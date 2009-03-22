@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7997 2009/03/22 20:17:15 markd Exp $
+$NetBSD: TODO,v 1.7998 2009/03/22 21:08:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -514,6 +514,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o devhelp-0.22
 	o dhid-5.3
 	o dictem-1.0.1 [pkg/41047]
+	o dictem-1.0.2
 	o diffuse-0.3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -564,9 +565,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o evolution-exchange-2.26.0 [GNOME 2.26]
 	o evolution-mapi-0.26.0.1 [GNOME 2.26]
-	o evolution-webcal-2.26.0 [GNOME 2.26]
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -644,7 +643,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.4
-	o glade-3.6.0 [GNOME 2.26]
 	o glade3-3.6.0 [GNOME 2.26]
 	o glchess-1.0.5
 	o global-5.7.2 [pkg/39760]
@@ -655,10 +653,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-nettool-2.26.0 [GNOME 2.26]
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.0 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-system-tools-2.22.2 [GNOME 2.26]
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -704,13 +700,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtranscript-0.2.0
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
-	o gv-3.6.6
-	o gwaei-0.15.2
+	o gv-3.6.7
 	o gworkspace-0.8.6
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-info-20090309
-	o hamster-applet-2.26.0 [GNOME 2.26]
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -749,7 +743,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o irrd-2.3.4 [pkg/36813|38002]
 	o isc-dhcp-3.1.2
 	o iselect-1.4.0
-	o iso-codes-3.7
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
@@ -825,7 +818,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libntlm-1.0
-	o liboil-0.3.16
 	o libole2-2.2.8
 	o libosip-3.3.0
 	o libotf-0.9.9
@@ -840,7 +832,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.6a
 	o libunique-1.0.8
 	o libv4l-0.5.9
-	o libvolume_id-0.81.1
 	o libxklavier-3.9
 	o licq-1.3.6
 	o liferea-1.4.27
@@ -998,7 +989,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-CGI-Session-4.41
 	o p5-DBD-Sybase-1.08
 	o p5-DateTime-TimeZone-0.85
-	o p5-Filter-1.36
 	o p5-Net-Twitter-2.10 [pkg/40812]
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1416,7 +1406,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-tseng-1.2.1
 	o xf86-video-vesa-2.2.0
 	o xf86-video-vmware-10.16.5
-	o xf86-video-vesa-2.2.0
 	o xfce-4.6.0 [pkg/40984]
 	o xfe-1.19.1
 	o xforms-1.0.91
