@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2009/03/22 16:12:11 snj Exp $
+# $NetBSD: Makefile,v 1.116 2009/03/22 20:10:32 wiz Exp $
 
-DISTNAME=	gnome-2.25.99.0
+DISTNAME=	gnome-2.25.99.1
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -34,12 +34,10 @@ DEPENDS+=	epiphany>=2.26.0:../../www/epiphany
 DEPENDS+=	evince>=2.26.0:../../print/evince
 DEPENDS+=	evolution>=2.26.0:../../mail/evolution
 DEPENDS+=	evolution-data-server>=2.26.0:../../mail/evolution-data-server
-# XXX: 2.26.0
-DEPENDS+=	evolution-exchange>=2.24.3:../../mail/evolution-exchange
+DEPENDS+=	evolution-exchange>=2.26.0:../../mail/evolution-exchange
 # XXX: unpackaged
-#DEPENDS+=	evolution-mapi>=0.26.0:../../mail/evolution-exchange
-# XXX: 2.26.0
-DEPENDS+=	evolution-webcal>=2.24.0:../../time/evolution-webcal
+#DEPENDS+=	evolution-mapi>=0.26.0:../../mail/evolution-mapi
+DEPENDS+=	evolution-webcal>=2.26.0:../../time/evolution-webcal
 DEPENDS+=	file-roller>=2.26.0:../../archivers/file-roller
 DEPENDS+=	gcalctool>=5.26.0:../../math/gcalctool
 DEPENDS+=	gconf-editor>=2.26.0:../../editors/gconf-editor
@@ -61,8 +59,7 @@ DEPENDS+=	gnome-mag>=0.15.5:../../x11/gnome-mag
 DEPENDS+=	gnome-media>=2.26.0:../../multimedia/gnome-media
 DEPENDS+=	gnome-menus>=2.26.0:../../sysutils/gnome-menus
 DEPENDS+=	gnome-netstatus>=2.26.0:../../net/gnome-netstatus
-# XXX: 2.26.0
-DEPENDS+=	gnome-nettool>=2.22.1:../../net/gnome-nettool
+DEPENDS+=	gnome-nettool>=2.26.0:../../net/gnome-nettool
 DEPENDS+=	gnome-panel>=2.26.0:../../x11/gnome-panel
 .if ${X11_TYPE} != "native" || exists(${X11BASE}/lib/pkgconfig/xrender.pc)
 # XXX: 2.26.0
@@ -75,8 +72,7 @@ DEPENDS+=	gnome-settings-daemon>=2.26.0:../../sysutils/gnome-settings-daemon
 DEPENDS+=	gnome-sharp>=2.24.1:../../x11/gnome-sharp
 DEPENDS+=	gnome-speech>=0.4.25:../../audio/gnome-speech
 DEPENDS+=	gnome-system-monitor>=2.26.0.1:../../sysutils/gnome-system-monitor
-# XXX: 2.22.2
-DEPENDS+=	gnome-system-tools>=2.22.1:../../sysutils/gnome-system-tools
+DEPENDS+=	gnome-system-tools>=2.22.2:../../sysutils/gnome-system-tools
 DEPENDS+=	gnome-terminal>=2.26.0:../../x11/gnome-terminal
 DEPENDS+=	gnome-themes>=2.26.0:../../x11/gnome-themes
 DEPENDS+=	gnome-user-docs>=2.26.0:../../misc/gnome-user-docs
@@ -95,14 +91,12 @@ DEPENDS+=	gtkhtml314>=3.26.0:../../www/gtkhtml314
 DEPENDS+=	gtksourceview2>=2.6.0:../../x11/gtksourceview2
 DEPENDS+=	gucharmap>=2.26.0:../../fonts/gucharmap
 DEPENDS+=	gvfs>=1.2.0:../../sysutils/gvfs
-# XXX: 2.26.0
-DEPENDS+=	hamster-applet>=2.24.3:../../time/hamster-applet
+DEPENDS+=	hamster-applet>=2.26.0:../../time/hamster-applet
 DEPENDS+=	libgail-gnome>=1.20.1:../../devel/libgail-gnome
 DEPENDS+=	libgnomekbd>=2.26.0:../../x11/libgnomekbd
 DEPENDS+=	libgnomeprint>=2.18.6:../../print/libgnomeprint
 DEPENDS+=	libgnomeprintui>=2.18.4:../../print/libgnomeprintui
-# XXX: 2.26.0
-DEPENDS+=	libgtop>=2.24.3:../../sysutils/libgtop
+DEPENDS+=	libgtop>=2.26.0:../../sysutils/libgtop
 DEPENDS+=	libgweather>=2.26.0:../../devel/libgweather
 DEPENDS+=	liboobs>=2.22.0:../../sysutils/liboobs
 DEPENDS+=	librsvg>=2.26.0:../../graphics/librsvg
