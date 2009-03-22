@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1181 2009/03/22 21:36:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1182 2009/03/22 21:53:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1579,3 +1579,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/p5-Sys-Utmp version 1.6 [sno 2009-03-22]
 	Added sysutils/p5-Filesys-Df version 0.92 [sno 2009-03-22]
 	Added sysutils/p5-Filesys-DfPortable version 0.85 [sno 2009-03-22]
+	Added sysutils/p5-Filesys-Statvfs version 0.82 [sno 2009-03-22]
