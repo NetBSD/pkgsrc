@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.319 2009/03/15 19:31:46 jmcneill Exp $
+# $NetBSD: Makefile,v 1.320 2009/03/22 12:02:05 bad Exp $
 #
 
 COMMENT=	Games
@@ -19,7 +19,6 @@ SUBDIR+=	anise
 SUBDIR+=	aop
 SUBDIR+=	asc
 SUBDIR+=	atomix
-SUBDIR+=	baduki
 SUBDIR+=	bastet
 SUBDIR+=	battalion
 SUBDIR+=	battleball
