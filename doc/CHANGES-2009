@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1134 2009/03/22 07:33:00 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1135 2009/03/22 08:51:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1532,3 +1532,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/coccinelle version 0.1.6 [wiz 2009-03-21]
 	Updated pkgtools/pkglint to 4.91 [roland 2009-03-22]
 	Added devel/p5-Hash-Util-FieldHash-Compat version 0.03 [seb 2009-03-22]
+	Updated net/ekiga to 3.2.0nb1 [wiz 2009-03-22]
