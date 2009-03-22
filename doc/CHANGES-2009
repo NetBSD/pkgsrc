@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1157 2009/03/22 15:25:10 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1158 2009/03/22 15:31:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/lcms to 1.18 [gdt 2009-03-22]
 	Added devel/p5-Moose-Autobox version 0.09 [seb 2009-03-22]
 	Updated sysutils/rdiff-backup to 1.2.8 [snj 2009-03-22]
+	Updated editors/dasher to 4.10.0 [wiz 2009-03-22]
