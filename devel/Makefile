@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1143 2009/03/22 14:38:22 seb Exp $
+# $NetBSD: Makefile,v 1.1144 2009/03/22 14:58:30 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -851,6 +851,7 @@ SUBDIR+=	p5-XSLoader
 SUBDIR+=	p5-accessors
 SUBDIR+=	p5-aliased
 SUBDIR+=	p5-autobox
+SUBDIR+=	p5-autobox-Core
 SUBDIR+=	p5-boolean
 SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-enum
