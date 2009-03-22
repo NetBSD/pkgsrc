@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2009/01/04 17:24:46 he Exp $
+$NetBSD: distinfo,v 1.11 2009/03/22 22:15:20 sno Exp $
 
 SHA1 (BSD-Resource-1.2902.tar.gz) = 9d317a36874b5dda32a41275b506b9ee58bc8837
 RMD160 (BSD-Resource-1.2902.tar.gz) = bb3f31e599792b25a7252b0094cacec8729d541e
 Size (BSD-Resource-1.2902.tar.gz) = 59156 bytes
+SHA1 (patch-aa) = 7ca4bbda8072b98409d286b841c93b006805187d
