@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.802 2009/03/22 05:41:44 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.803 2009/03/22 05:50:12 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6640,7 +6640,7 @@ sub checklines_buildlink3_mk_2009($$$) {
 			}
 
 			if ($varname eq "pkgbase") {
-				expect_re($lines, \$lineno, "^\.\s*include \"../../mk/pkg-build-options.mk\"$");
+				expect_re($lines, \$lineno, qr"^\.\s*include \"../../mk/pkg-build-options.mk\"$");
 			}
 
 			# TODO: More checks.
