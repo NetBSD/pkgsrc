@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/22 04:53:40 manu Exp $
 #
 
 DISTNAME=	httptunnel-3.0.5
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.nocrew.org/pub/nocrew/unix/
 
-MAINTAINER=	manu@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nocrew.org/software/httptunnel.html
 COMMENT=	Encapsulate TCP/IP connections in HTTP requests
 
