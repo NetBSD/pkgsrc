@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/02 22:36:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/22 19:38:38 wiz Exp $
 lib/bonobo/servers/Hamster_Applet.server
 lib/hamster-applet/hamster-applet
 ${PYSITELIB}/hamster/Configuration.py
@@ -34,6 +34,9 @@ ${PYSITELIB}/hamster/dispatcher.pyo
 ${PYSITELIB}/hamster/eds.py
 ${PYSITELIB}/hamster/eds.pyc
 ${PYSITELIB}/hamster/eds.pyo
+${PYSITELIB}/hamster/hamsterdbus.py
+${PYSITELIB}/hamster/hamsterdbus.pyc
+${PYSITELIB}/hamster/hamsterdbus.pyo
 ${PYSITELIB}/hamster/idle.py
 ${PYSITELIB}/hamster/idle.pyc
 ${PYSITELIB}/hamster/idle.pyo
@@ -73,6 +76,7 @@ share/icons/hicolor/32x32/apps/hamster-applet.png
 share/icons/hicolor/48x48/apps/hamster-applet.png
 share/icons/hicolor/scalable/apps/hamster-applet.svg
 share/locale/ar/LC_MESSAGES/hamster-applet.mo
+share/locale/as/LC_MESSAGES/hamster-applet.mo
 share/locale/bg/LC_MESSAGES/hamster-applet.mo
 share/locale/bn_IN/LC_MESSAGES/hamster-applet.mo
 share/locale/ca/LC_MESSAGES/hamster-applet.mo
@@ -95,6 +99,7 @@ share/locale/it/LC_MESSAGES/hamster-applet.mo
 share/locale/ja/LC_MESSAGES/hamster-applet.mo
 share/locale/kn/LC_MESSAGES/hamster-applet.mo
 share/locale/ko/LC_MESSAGES/hamster-applet.mo
+share/locale/ku/LC_MESSAGES/hamster-applet.mo
 share/locale/lt/LC_MESSAGES/hamster-applet.mo
 share/locale/lv/LC_MESSAGES/hamster-applet.mo
 share/locale/mk/LC_MESSAGES/hamster-applet.mo
@@ -102,10 +107,12 @@ share/locale/ml/LC_MESSAGES/hamster-applet.mo
 share/locale/mr/LC_MESSAGES/hamster-applet.mo
 share/locale/nb/LC_MESSAGES/hamster-applet.mo
 share/locale/nl/LC_MESSAGES/hamster-applet.mo
+share/locale/or/LC_MESSAGES/hamster-applet.mo
 share/locale/pa/LC_MESSAGES/hamster-applet.mo
 share/locale/pl/LC_MESSAGES/hamster-applet.mo
 share/locale/pt/LC_MESSAGES/hamster-applet.mo
 share/locale/pt_BR/LC_MESSAGES/hamster-applet.mo
+share/locale/ro/LC_MESSAGES/hamster-applet.mo
 share/locale/ru/LC_MESSAGES/hamster-applet.mo
 share/locale/sl/LC_MESSAGES/hamster-applet.mo
 share/locale/sq/LC_MESSAGES/hamster-applet.mo
@@ -113,11 +120,25 @@ share/locale/sr/LC_MESSAGES/hamster-applet.mo
 share/locale/sr@latin/LC_MESSAGES/hamster-applet.mo
 share/locale/sv/LC_MESSAGES/hamster-applet.mo
 share/locale/ta/LC_MESSAGES/hamster-applet.mo
+share/locale/te/LC_MESSAGES/hamster-applet.mo
 share/locale/th/LC_MESSAGES/hamster-applet.mo
 share/locale/tr/LC_MESSAGES/hamster-applet.mo
+share/locale/vi/LC_MESSAGES/hamster-applet.mo
 share/locale/zh_CN/LC_MESSAGES/hamster-applet.mo
 share/locale/zh_HK/LC_MESSAGES/hamster-applet.mo
 share/locale/zh_TW/LC_MESSAGES/hamster-applet.mo
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/hamster-applet/art
 @dirrm share/hamster-applet
 @comment in GConf: @dirrm share/gconf/schemas
