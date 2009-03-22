@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.9 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.10 2009/03/22 22:33:13 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -35,9 +35,7 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
-#if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: getopt_long.c,v 1.9 2008/04/29 05:46:08 martin Exp $");
-#endif /* LIBC_SCCS and not lint */
+__RCSID("$NetBSD: getopt_long.c,v 1.10 2009/03/22 22:33:13 joerg Exp $");
 
 #if 0
 #include "namespace.h"
@@ -45,9 +43,7 @@ __RCSID("$NetBSD: getopt_long.c,v 1.9 2008/04/29 05:46:08 martin Exp $");
 
 #include <nbcompat/assert.h>
 #include <nbcompat/err.h>
-#if HAVE_ERRNO_H
 #include <errno.h>
-#endif
 #if HAVE_NBTOOL_CONFIG_H
 #include "compat_getopt.h"
 #else
@@ -56,15 +52,16 @@ __RCSID("$NetBSD: getopt_long.c,v 1.9 2008/04/29 05:46:08 martin Exp $");
 #include <nbcompat/stdlib.h>
 #include <nbcompat/string.h>
 
-#if (HAVE_NBTOOL_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_DECL_OPTIND) || 1
+#undef __UNCONST
+#define __UNCONST(a)	((void *)(size_t)(const void *)(a))
+
+#if HAVE_NBTOOL_CONFIG_H && !HAVE_GETOPT_LONG && !HAVE_DECL_OPTIND
 #define REPLACE_GETOPT
 #endif
 
 #ifdef REPLACE_GETOPT
-#if 0
 #ifdef __weak_alias
 __weak_alias(getopt,_getopt)
-#endif
 #endif
 int	opterr = 1;		/* if error message should be printed */
 int	optind = 1;		/* index into parent argv vector */
@@ -72,7 +69,7 @@ int	optopt = '?';		/* character checked for validity */
 int	optreset;		/* reset getopt */
 char    *optarg;		/* argument associated with option */
 #elif HAVE_NBTOOL_CONFIG_H && !HAVE_DECL_OPTRESET
-static int optreset;
+int optreset;
 #endif
 
 #if 0
@@ -81,7 +78,6 @@ __weak_alias(getopt_long,_getopt_long)
 #endif
 #endif
 
-#if !HAVE_GETOPT_LONG
 #define IGNORE_FIRST	(*options == '-' || *options == '+')
 #define PRINT_ERROR	((opterr) && ((*options != ':') \
 				      || (IGNORE_FIRST && options[1] != ':')))
@@ -98,11 +94,11 @@ __weak_alias(getopt_long,_getopt_long)
 
 #define	EMSG	""
 
-static int getopt_internal __P((int, char * const *, const char *));
-static int gcd __P((int, int));
-static void permute_args __P((int, int, int, char * const *));
+static int getopt_internal(int, char **, const char *);
+static int gcd(int, int);
+static void permute_args(int, int, int, char **);
 
-static char *place = EMSG; /* option letter processing */
+static const char *place = EMSG; /* option letter processing */
 
 /* XXX: set optreset to 1 rather than these two */
 static int nonopt_start = -1; /* first non option argument (for permute) */
@@ -121,9 +117,7 @@ static const char illoptstring[] = "unknown option -- %s";
  * Compute the greatest common divisor of a and b.
  */
 static int
-gcd(a, b)
-	int a;
-	int b;
+gcd(int a, int b)
 {
 	int c;
 
@@ -143,11 +137,7 @@ gcd(a, b)
  * in each block).
  */
 static void
-permute_args(panonopt_start, panonopt_end, opt_end, nargv)
-	int panonopt_start;
-	int panonopt_end;
-	int opt_end;
-	char * const *nargv;
+permute_args(int panonopt_start, int panonopt_end, int opt_end, char **nargv)
 {
 	int cstart, cyclelen, i, j, ncycle, nnonopts, nopts, pos;
 	char *swap;
@@ -171,10 +161,8 @@ permute_args(panonopt_start, panonopt_end, opt_end, nargv)
 			else
 				pos += nopts;
 			swap = nargv[pos];
-			/* LINTED const cast */
-			((char **) nargv)[pos] = nargv[cstart];
-			/* LINTED const cast */
-			((char **)nargv)[cstart] = swap;
+			nargv[pos] = nargv[cstart];
+			nargv[cstart] = swap;
 		}
 	}
 }
@@ -185,10 +173,7 @@ permute_args(panonopt_start, panonopt_end, opt_end, nargv)
  *  Returns -2 if -- is found (can be long option or end of options marker).
  */
 static int
-getopt_internal(nargc, nargv, options)
-	int nargc;
-	char * const *nargv;
-	const char *options;
+getopt_internal(int nargc, char **nargv, const char *options)
 {
 	char *oli;				/* option letter list index */
 	int optchar;
@@ -303,7 +288,7 @@ start:
 	} else {				/* takes (optional) argument */
 		optarg = NULL;
 		if (*place)			/* no white space */
-			optarg = place;
+			optarg = __UNCONST(place);
 		/* XXX: disable test for :: if PC? (GNU doesn't) */
 		else if (oli[1] != ':') {	/* arg not optional */
 			if (++optind >= nargc) {	/* no arg */
@@ -340,7 +325,8 @@ getopt(nargc, nargv, options)
 	_DIAGASSERT(nargv != NULL);
 	_DIAGASSERT(options != NULL);
 
-	if ((retval = getopt_internal(nargc, nargv, options)) == -2) {
+	retval = getopt_internal(nargc, __UNCONST(nargv), options);
+	if (retval == -2) {
 		++optind;
 		/*
 		 * We found an option (--), so if we skipped non-options,
@@ -363,27 +349,30 @@ getopt(nargc, nargv, options)
  *	Parse argc/argv argument vector.
  */
 int
-getopt_long(nargc, nargv, options, long_options, idx)
-	int nargc;
-	char * const *nargv;
-	const char *options;
-	const struct option *long_options;
-	int *idx;
+getopt_long(int nargc, char * const *nargv, const char *options,
+    const struct option *long_options, int *idx)
 {
 	int retval;
+
+#define IDENTICAL_INTERPRETATION(_x, _y)				\
+	(long_options[(_x)].has_arg == long_options[(_y)].has_arg &&	\
+	 long_options[(_x)].flag == long_options[(_y)].flag &&		\
+	 long_options[(_x)].val == long_options[(_y)].val)
 
 	_DIAGASSERT(nargv != NULL);
 	_DIAGASSERT(options != NULL);
 	_DIAGASSERT(long_options != NULL);
 	/* idx may be NULL */
 
-	if ((retval = getopt_internal(nargc, nargv, options)) == -2) {
+	retval = getopt_internal(nargc, __UNCONST(nargv), options);
+	if (retval == -2) {
 		char *current_argv, *has_equal;
 		size_t current_argv_len;
-		int i, match;
+		int i, ambiguous, match;
 
-		current_argv = place;
+		current_argv = __UNCONST(place);
 		match = -1;
+		ambiguous = 0;
 
 		optind++;
 		place = EMSG;
@@ -395,7 +384,7 @@ getopt_long(nargc, nargv, options, long_options, idx)
 			 */
 			if (nonopt_end != -1) {
 				permute_args(nonopt_start, nonopt_end,
-				    optind, nargv);
+				    optind, __UNCONST(nargv));
 				optind -= nonopt_end - nonopt_start;
 			}
 			nonopt_start = nonopt_end = -1;
@@ -418,18 +407,21 @@ getopt_long(nargc, nargv, options, long_options, idx)
 			    (unsigned)current_argv_len) {
 				/* exact match */
 				match = i;
+				ambiguous = 0;
 				break;
 			}
 			if (match == -1)		/* partial match */
 				match = i;
-			else {
-				/* ambiguous abbreviation */
-				if (PRINT_ERROR)
-					warnx(ambig, (int)current_argv_len,
-					     current_argv);
-				optopt = 0;
-				return BADCH;
-			}
+			else if (!IDENTICAL_INTERPRETATION(i, match))
+				ambiguous = 1;
+		}
+		if (ambiguous) {
+			/* ambiguous abbreviation */
+			if (PRINT_ERROR)
+				warnx(ambig, (int)current_argv_len,
+				     current_argv);
+			optopt = 0;
+			return BADCH;
 		}
 		if (match != -1) {			/* option found */
 		        if (long_options[match].has_arg == no_argument
@@ -494,5 +486,5 @@ getopt_long(nargc, nargv, options, long_options, idx)
 			*idx = match;
 	}
 	return retval;
+#undef IDENTICAL_INTERPRETATION
 }
-#endif /* !GETOPT_LONG */
