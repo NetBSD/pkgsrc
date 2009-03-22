@@ -1,0 +1,9 @@
+This module provides a portable way to obtain filesystem disk space
+information.
+
+The module should work with all versions of Windows (95 and up), and with all
+flavors of Unix that implement the statvfs or the statfs calls. This would
+include Linux, *BSD, HP-UX, AIX, Solaris, Mac OS X, Irix, Cygwin, etc ...
+
+This module differs from Filesys::Df in that it has added support for
+Windows, but does not support open filehandles as a argument.
