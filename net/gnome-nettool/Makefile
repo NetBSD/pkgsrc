@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/03/08 15:56:47 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/22 18:11:57 wiz Exp $
 #
 
-DISTNAME=	gnome-nettool-2.22.1
+DISTNAME=	gnome-nettool-2.26.0
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-nettool/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-nettool/2.26/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,7 +21,9 @@ USE_PKGLOCALEDIR=	yes
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
