@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1172 2009/03/22 19:53:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1173 2009/03/22 20:17:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1570,3 +1570,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed net/ppp-lzs [plunky 2009-03-22]
 	Updated time/hamster-applet to 2.26.0 [wiz 2009-03-22]
 	Updated sysutils/libgtop to 2.26.0 [wiz 2009-03-22]
+	Updated emulators/spim to 7.3 [markd 2009-03-22]
