@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1144 2009/03/22 10:33:31 tonio Exp $
+$NetBSD: CHANGES-2009,v 1.1145 2009/03/22 10:40:12 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1542,3 +1542,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.148 [martti 2009-03-22]
 	Updated sysutils/gnome-vfsmm to 2.26.0 [wiz 2009-03-22]
 	Updated chat/weechat to 0.2.6.1 [tonio 2009-03-22]
+	Updated chat/ejabberd to 2.0.4 [martti 2009-03-22]
