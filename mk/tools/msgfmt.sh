@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: msgfmt.sh,v 1.30 2009/03/20 16:13:02 joerg Exp $
+# $NetBSD: msgfmt.sh,v 1.31 2009/03/22 17:57:58 joerg Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -159,8 +159,8 @@ if test "$pofile" != "-" -a ! -e "$pofile"; then
 fi
 
 ${CAT} $pofile | \
-if test "${MSGFMT_STRIP_MSGCTX}" = "yes"; then
-	${AWK} -f ${PKGSRCDIR}/mk/tools/msgfmt-msgctx.awk
+if test "${MSGFMT_STRIP_MSGCTXT}" = "yes"; then
+	${AWK} -f ${PKGSRCDIR}/mk/tools/msgfmt-msgctxt.awk
 else
 	${CAT}
 fi | if test "$MSGFMT_STRIP_MSGID_PLURAL" = "yes"; then
