@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/11/10 09:26:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/03/22 10:09:12 wiz Exp $
 bin/digikam
 bin/digikamthemedesigner
 bin/digitaglinktree
@@ -640,6 +640,7 @@ share/kde/apps/digikam/themes/Blue
 share/kde/apps/digikam/themes/Clean
 share/kde/apps/digikam/themes/DLR
 share/kde/apps/digikam/themes/Dark
+share/kde/apps/digikam/themes/DarkRoom
 share/kde/apps/digikam/themes/Dessert
 share/kde/apps/digikam/themes/Digikasa
 share/kde/apps/digikam/themes/Dreary
