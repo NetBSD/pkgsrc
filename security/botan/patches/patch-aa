@@ -1,7 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2009/03/23 13:16:13 jmmv Exp $
 
---- configure.pl.orig	2006-01-01 01:02:28.000000000 +0000
+--- configure.pl.orig	2006-01-01 02:02:28.000000000 +0100
 +++ configure.pl
+@@ -1,4 +1,4 @@
+-#!/usr/bin/perl -w
++#!/Users/jmmv/Applications/pkg/bin/perl -w
+ 
+ # Warning: This file is machine-generated; any changes will be lost. Instead,
+ # change mkconfig.pl and the system description files. If you find a bug in
 @@ -74,7 +74,6 @@ my %DOCS = (
     'deprecated.txt' => $DOC_DIR,
     'license.txt' => $DOC_DIR,
@@ -34,7 +40,15 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
     'hpux'           => 'unix',
     'irix'           => 'unix',
     'linux'          => 'unix',
-@@ -387,6 +389,9 @@ my %INSTALL_INFO = (
+@@ -372,7 +374,6 @@ my %INSTALL_INFO = (
+       'root'       => 'c:\Botan',
+       },
+    'darwin'     => {
+-      'docs'       => 'doc',
+       'group'      => 'wheel',
+       },
+    'defaults'   => {
+@@ -387,6 +388,9 @@ my %INSTALL_INFO = (
     'freebsd'    => {
        'group'      => 'wheel',
        },
@@ -44,7 +58,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
     'netbsd'     => {
        'group'      => 'wheel',
        },
-@@ -406,7 +411,7 @@ my %CC_SUPPORTS_OS = (
+@@ -406,7 +410,7 @@ my %CC_SUPPORTS_OS = (
     'bcc'        => [ 'windows', ],
     'compaq'     => [ 'linux', 'tru64', ],
     'ekopath'    => [ 'linux', ],
@@ -53,7 +67,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
                       'linux', 'netbsd', 'openbsd', 'qnx', 'solaris', 'tru64', 
                       'windows', ],
     'hpcc'       => [ 'hpux', ],
-@@ -663,6 +668,7 @@ my %CC_ABI_FLAGS = (
+@@ -663,6 +667,7 @@ my %CC_ABI_FLAGS = (
     'gcc'        => {
        'amd64'      => '-m64',
        'freebsd'    => '-pthread',
@@ -61,7 +75,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
        'mips32'     => '-mabi=n32',
        'mips64'     => '-mabi=64',
        'netbsd'     => '-pthread',
-@@ -772,6 +778,7 @@ my %REALNAME = (
+@@ -772,6 +777,7 @@ my %REALNAME = (
     'darwin'         => 'Darwin / MacOS X',
     'ekopath'        => 'PathScale EKOPath C++',
     'freebsd'        => 'FreeBSD',
@@ -69,7 +83,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
     'gcc'            => 'GNU C++',
     'hpcc'           => 'HP-UX C++',
     'hppa'           => 'HP-PA',
-@@ -1696,12 +1703,6 @@ sub guess_triple
+@@ -1696,12 +1702,6 @@ sub guess_triple
          my @CCS = ('gcc', 'icc', 'compaq', 'kai'); # Skips several, oh well...
  
          # First try the CC enviornmental variable, if it's set
@@ -82,7 +96,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
  
          my $cc = '';
          foreach (@CCS)
-@@ -2040,8 +2041,12 @@ sub print_unix_makefile {
+@@ -2040,8 +2040,12 @@ sub print_unix_makefile {
     my $link_to = "-lm";
     foreach my $lib (@{ $lib_list })
     {
@@ -95,7 +109,7 @@ $NetBSD: patch-aa,v 1.3 2006/03/01 00:33:30 joerg Exp $
  
     ##################################################
     # Generate a few variables                       #
-@@ -2279,12 +2284,12 @@ $__TAB__\@for i in \$(HEADERS); do \\
+@@ -2279,12 +2283,12 @@ $__TAB__\@for i in \$(HEADERS); do \\
  $__TAB__   \$(INSTALL_CMD_DATA) \$\$i \$(HEADERDIR); \\
  $__TAB__ done
  $__TAB__\@\$(INSTALL_CMD_DATA) \$(STATIC_LIB) \$(LIBDIR)
