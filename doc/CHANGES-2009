@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1186 2009/03/22 23:54:54 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.1187 2009/03/23 00:41:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1584,3 +1584,5 @@ Changes to the packages collection and infrastructure in 2009:
 	mk/emulator/aix.mk: Support for AIX binary only packages added [sno 2009-03-22]
 	Updated www/midori to 0.1.5 [joerg 2009-03-22]
 	Updated textproc/mdocml to 1.6.9 [joerg 2009-03-22]
+	Updated x11/wxGTK28 to 2.8.10 [joerg 2009-03-23]
+	Updated x11/wxGTK28-contrib to 2.8.10 [joerg 2009-03-23]
