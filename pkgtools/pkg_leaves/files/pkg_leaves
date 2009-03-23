@@ -63,7 +63,7 @@ done
 ${PKG_INFO} -K "${PKG_DBDIR}" -e '*' | while read pkg; do
 	if [ -z "`${PKG_INFO} -K "${PKG_DBDIR}" -q -R ${pkg}`" ]; then
 		if [ ${skip_manual} = "yes" ]; then
-			if [ "`${PKG_INFO} -K "${PKG_DBDIR}" -Q automatic ${pkg}`" != yes ]; then
+			if [ "`${PKG_INFO} -K "${PKG_DBDIR}" -Q automatic ${pkg} 2> /dev/null`" != yes ]; then
 				continue
 			fi
 		fi
