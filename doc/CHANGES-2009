@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1188 2009/03/23 00:52:33 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.1189 2009/03/23 00:54:42 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1587,3 +1587,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/wxGTK28 to 2.8.10 [joerg 2009-03-23]
 	Updated x11/wxGTK28-contrib to 2.8.10 [joerg 2009-03-23]
 	Added databases/pgadmin3 version 1.8.4 [joerg 2009-03-23]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q1 branch [agc 2009-03-22]
