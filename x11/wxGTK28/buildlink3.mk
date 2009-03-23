@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/03/23 00:38:55 joerg Exp $
 
 BUILDLINK_TREE+=	wxGTK28
 
 .if !defined(WXGTK28_BUILDLINK3_MK)
 WXGTK28_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.wxGTK28+=	wxGTK28>=2.8.8
+BUILDLINK_API_DEPENDS.wxGTK28+=	wxGTK28>=2.8.10
 BUILDLINK_PKGSRCDIR.wxGTK28?=	../../x11/wxGTK28
 
 .include "../../devel/gettext-lib/buildlink3.mk"
