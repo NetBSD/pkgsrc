@@ -4,8 +4,9 @@ and the various *.bkl files into the wxGTK tree and run
 in build/bakefiles. manual-bakefile.diff contains the necessary patch for
 the bakefile ruleset to use libtool.
 
---- build/bakefiles/regex.bkl.orig	2008-06-20 11:07:14.000000000 +0200
-+++ build/bakefiles/regex.bkl	2008-09-08 19:55:08.000000000 +0200
+diff -uNr wxWidgets-2.8.10.orig/build/bakefiles/regex.bkl wxWidgets-2.8.10/build/bakefiles/regex.bkl
+--- wxWidgets-2.8.10.orig/build/bakefiles/regex.bkl	2009-03-06 13:10:54.000000000 +0100
++++ wxWidgets-2.8.10/build/bakefiles/regex.bkl	2009-03-22 20:09:05.000000000 +0100
 @@ -27,16 +27,13 @@
          <if cond="wxUSE_REGEX=='builtin'">$(TOP_SRCDIR)src/regex</if>
      </set>
@@ -37,8 +38,9 @@ the bakefile ruleset to use libtool.
 +    </dll>
  
  </makefile>
---- build/bakefiles/wx.bkl.orig	2008-06-20 11:07:14.000000000 +0200
-+++ build/bakefiles/wx.bkl	2008-09-08 19:55:08.000000000 +0200
+diff -uNr wxWidgets-2.8.10.orig/build/bakefiles/wx.bkl wxWidgets-2.8.10/build/bakefiles/wx.bkl
+--- wxWidgets-2.8.10.orig/build/bakefiles/wx.bkl	2009-03-06 13:10:54.000000000 +0100
++++ wxWidgets-2.8.10/build/bakefiles/wx.bkl	2009-03-22 20:09:05.000000000 +0100
 @@ -96,7 +96,7 @@
              <command>
                  $(INSTALL_DIR) $(DESTDIR)$(BINDIR)
@@ -48,3 +50,15 @@ the bakefile ruleset to use libtool.
                  (cd $(DESTDIR)$(BINDIR) &amp;&amp; rm -f wx-config &amp;&amp; $(LN_S) $(LIBDIR)/wx/config/$(TOOLCHAIN_FULLNAME) wx-config)
              </command>
          </action>
+diff -uNr wxWidgets-2.8.10.orig/utils/wxrc/wxrc.bkl wxWidgets-2.8.10/utils/wxrc/wxrc.bkl
+--- wxWidgets-2.8.10.orig/utils/wxrc/wxrc.bkl	2009-03-06 13:11:15.000000000 +0100
++++ wxWidgets-2.8.10/utils/wxrc/wxrc.bkl	2009-03-22 20:10:17.000000000 +0100
+@@ -21,7 +21,7 @@
+         <modify-target target="install_wxrc">
+             <command>
+ 	        rm -f $(DESTDIR)$(BINDIR)/wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)/$(versioned_name)
+-		$(INSTALL_PROGRAM) wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)
++		${LIBTOOL} --mode=install $(INSTALL_PROGRAM) wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)
+                 mv -f $(DESTDIR)$(BINDIR)/wxrc$(EXEEXT) $(DESTDIR)$(BINDIR)/$(versioned_name)
+                 (cd $(DESTDIR)$(BINDIR) &amp;&amp; $(LN_S) $(versioned_name) wxrc$(EXEEXT))
+             </command>
