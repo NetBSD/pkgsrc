@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1189 2009/03/23 00:54:42 agc Exp $
+$NetBSD: CHANGES-2009,v 1.1190 2009/03/23 07:46:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1576,6 +1576,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/iso-codes to 3.7 [wiz 2009-03-22]
 	Updated sysutils/hal-info to 20090309 [wiz 2009-03-22]
 	Updated graphics/libotf to 0.9.9 [wiz 2009-03-22]
+	Updated devel/liboil to 0.3.16 [wiz 2009-03-22]
 	Added sysutils/p5-Sys-Utmp version 1.6 [sno 2009-03-22]
 	Added sysutils/p5-Filesys-Df version 0.92 [sno 2009-03-22]
 	Added sysutils/p5-Filesys-DfPortable version 0.85 [sno 2009-03-22]
