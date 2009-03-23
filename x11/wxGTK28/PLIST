@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/03/23 00:38:55 joerg Exp $
 bin/wx-config
 bin/wxrc
 bin/wxrc-2.8
@@ -16,6 +16,7 @@ include/wx-2.8/wx/arrimpl.cpp
 include/wx-2.8/wx/arrstr.h
 include/wx-2.8/wx/artprov.h
 include/wx-2.8/wx/aui/aui.h
+include/wx-2.8/wx/aui/auibar.h
 include/wx-2.8/wx/aui/auibook.h
 include/wx-2.8/wx/aui/dockart.h
 include/wx-2.8/wx/aui/floatpane.h
@@ -540,20 +541,34 @@ include/wx-2.8/wx/xtistrm.h
 include/wx-2.8/wx/xtixml.h
 include/wx-2.8/wx/zipstrm.h
 include/wx-2.8/wx/zstream.h
-lib/libwx_base-2.8.la
-lib/libwx_base_net-2.8.la
-lib/libwx_base_xml-2.8.la
-lib/libwx_gtk2_adv-2.8.la
-lib/libwx_gtk2_aui-2.8.la
-lib/libwx_gtk2_core-2.8.la
-lib/libwx_gtk2_gl-2.8.la
-lib/libwx_gtk2_html-2.8.la
-lib/libwx_gtk2_qa-2.8.la
-lib/libwx_gtk2_richtext-2.8.la
-lib/libwx_gtk2_xrc-2.8.la
-lib/libwxregex-2.8.la
-lib/wx/config/gtk2-ansi-release-2.8
-lib/wx/include/gtk2-ansi-release-2.8/wx/setup.h
+lib/libwx_base${DEBUG_LIB}-2.8.la
+lib/libwx_base${DEBUG_LIB}_net-2.8.la
+lib/libwx_base${DEBUG_LIB}_xml-2.8.la
+lib/libwx_baseu${DEBUG_LIB}-2.8.la
+lib/libwx_baseu${DEBUG_LIB}_net-2.8.la
+lib/libwx_baseu${DEBUG_LIB}_xml-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_adv-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_aui-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_core-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_gl-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_html-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_qa-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_richtext-2.8.la
+lib/libwx_gtk2${DEBUG_LIB}_xrc-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_adv-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_aui-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_core-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_gl-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_html-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_qa-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_richtext-2.8.la
+lib/libwx_gtk2u${DEBUG_LIB}_xrc-2.8.la
+lib/libwxregex${DEBUG_LIB}-2.8.la
+lib/libwxregexu${DEBUG_LIB}-2.8.la
+lib/wx/config/gtk2-ansi${DEBUG_CONFIG}-2.8
+lib/wx/config/gtk2-unicode${DEBUG_CONFIG}-2.8
+lib/wx/include/gtk2-ansi${DEBUG_CONFIG}-2.8/wx/setup.h
+lib/wx/include/gtk2-unicode${DEBUG_CONFIG}-2.8/wx/setup.h
 share/aclocal/wxwin.m4
 share/bakefile/presets/wx.bkl
 share/bakefile/presets/wx_unix.bkl
@@ -584,8 +599,10 @@ share/locale/zh_TW/LC_MESSAGES/wxstd.mo
 @dirrm share/doc/wxGTK
 @dirrm share/bakefile/presets
 @dirrm share/bakefile
-@dirrm lib/wx/include/gtk2-ansi-release-2.8/wx
-@dirrm lib/wx/include/gtk2-ansi-release-2.8
+@dirrm lib/wx/include/gtk2-unicode${DEBUG_CONFIG}-2.8/wx
+@dirrm lib/wx/include/gtk2-unicode${DEBUG_CONFIG}-2.8
+@dirrm lib/wx/include/gtk2-ansi${DEBUG_CONFIG}-2.8/wx
+@dirrm lib/wx/include/gtk2-ansi${DEBUG_CONFIG}-2.8
 @dirrm lib/wx/include
 @dirrm lib/wx/config
 @dirrm lib/wx
