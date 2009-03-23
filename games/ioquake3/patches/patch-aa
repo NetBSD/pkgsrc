@@ -1,8 +1,26 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/23 09:57:37 hasso Exp $
 
---- code/qcommon/q_platform.h.orig	2009-01-12 12:28:35.000000000 -0500
-+++ code/qcommon/q_platform.h
-@@ -194,6 +194,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+--- code/qcommon/q_platform.h.orig	2009-01-12 19:28:35 +0200
++++ code/qcommon/q_platform.h	2009-03-23 11:14:03 +0200
+@@ -170,7 +170,7 @@ Foundation, Inc., 51 Franklin St, Fifth 
+ 
+ //=================================================================== BSD ===
+ 
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ 
+ #include <sys/types.h>
+ #include <machine/endian.h>
+@@ -185,6 +185,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
+ #define OS_STRING "openbsd"
+ #elif defined(__NetBSD__)
+ #define OS_STRING "netbsd"
++#elif defined(__DragonFly__)
++#define OS_STRING "dragonfly"
+ #endif
+ 
+ #define ID_INLINE inline
+@@ -194,6 +196,8 @@ Foundation, Inc., 51 Franklin St, Fifth 
  #define ARCH_STRING "i386"
  #elif defined __axp__
  #define ARCH_STRING "alpha"
