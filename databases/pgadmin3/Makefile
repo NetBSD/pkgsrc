@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/23 00:07:34 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/03/23 00:51:47 joerg Exp $
 
 DISTNAME=	pgadmin3-1.8.4
 CATEGORIES=	databases
@@ -15,6 +15,11 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake msgfmt
 
 CONFIGURE_ARGS+=	--with-wx=${BUILDLINK_PREFIX.wxGTK28}
+
+# CONFIGURE_ARGS+=	--enable-debug
+# PLIST_VARS.debug=	yes
+
+PLIST_VARS+=	debug
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
