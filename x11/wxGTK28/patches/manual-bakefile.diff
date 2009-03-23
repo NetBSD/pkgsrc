@@ -1,7 +1,8 @@
-diff -ur ../bakefile-0.2.3.orig/rules/autoconf.bkl ./rules/autoconf.bkl
---- ../bakefile-0.2.3.orig/rules/autoconf.bkl	2008-01-06 15:43:17.000000000 +0100
-+++ ./rules/autoconf.bkl	2008-09-08 19:43:18.000000000 +0200
-@@ -195,67 +195,19 @@
+$NetBSD: manual-bakefile.diff,v 1.2 2009/03/23 00:38:55 joerg Exp $
+
+--- rules/autoconf.bkl.orig	2008-09-20 19:58:53.000000000 +0000
++++ rules/autoconf.bkl
+@@ -199,67 +199,19 @@
  
          <set var="__linkname1">$(__linkname)</set>
          
@@ -72,7 +73,7 @@ diff -ur ../bakefile-0.2.3.orig/rules/autoconf.bkl ./rules/autoconf.bkl
          <set var="__mac_instname">$(__linkname2)</set>
     
          <clean-files>
-@@ -278,12 +230,6 @@
+@@ -282,12 +234,6 @@
          <set var="__macinstname" eval="0">
              $(ifthenelse(__mac_instname=='',ref('__targetname',id),ref('__mac_instname',id)))
          </set>
@@ -85,10 +86,11 @@ diff -ur ../bakefile-0.2.3.orig/rules/autoconf.bkl ./rules/autoconf.bkl
  
          <modify-target target="install_$(id)">
              <command>(cd $(DESTDIR)$(value) ; $(ref('__so_symlinks_inst_cmd',id)))</command>
-diff -ur ../bakefile-0.2.3.orig/rules/makefile.bkl ./rules/makefile.bkl
---- ../bakefile-0.2.3.orig/rules/makefile.bkl	2008-01-06 15:43:17.000000000 +0100
-+++ ./rules/makefile.bkl	2008-09-08 19:46:12.000000000 +0200
-@@ -663,7 +663,7 @@
+$NetBSD: manual-bakefile.diff,v 1.2 2009/03/23 00:38:55 joerg Exp $
+
+--- rules/makefile.bkl.orig	2008-09-20 19:58:53.000000000 +0000
++++ rules/makefile.bkl
+@@ -749,7 +749,7 @@
          <define-tag name="install-to" rules="exe">
              <modify-target target="install_$(id)">
                  <command>
@@ -97,7 +99,7 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile.bkl ./rules/makefile.bkl
                  </command>
              </modify-target>
              <modify-target target="uninstall_$(id)">
-@@ -676,8 +676,7 @@
+@@ -762,8 +762,7 @@
          <define-tag name="install-to" rules="dll">
              <modify-target target="install_$(id)">
                  <command>
@@ -107,7 +109,7 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile.bkl ./rules/makefile.bkl
                  </command>
              </modify-target>
              <modify-target target="uninstall_$(id)">
-@@ -691,7 +690,7 @@
+@@ -777,7 +776,7 @@
          <define-tag name="install-to" rules="module">
              <modify-target target="install_$(id)">
                  <command>
@@ -116,9 +118,10 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile.bkl ./rules/makefile.bkl
                  </command>
              </modify-target>
              <modify-target target="uninstall_$(id)">
-diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_gnu.bkl ./rules/makefile_defs_gnu.bkl
---- ../bakefile-0.2.3.orig/rules/makefile_defs_gnu.bkl	2008-01-06 15:43:17.000000000 +0100
-+++ ./rules/makefile_defs_gnu.bkl	2008-09-08 19:43:18.000000000 +0200
+$NetBSD: manual-bakefile.diff,v 1.2 2009/03/23 00:38:55 joerg Exp $
+
+--- rules/makefile_defs_gnu.bkl.orig	2008-09-20 19:58:53.000000000 +0000
++++ rules/makefile_defs_gnu.bkl
 @@ -62,12 +62,12 @@
  
              <template id="__commands_templ_C">
@@ -134,9 +137,10 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_gnu.bkl ./rules/makefile_def
                  </set>
              </template>
  
-diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl ./rules/makefile_defs_unix.bkl
---- ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl	2008-01-06 15:43:17.000000000 +0100
-+++ ./rules/makefile_defs_unix.bkl	2008-09-08 19:43:18.000000000 +0200
+$NetBSD: manual-bakefile.diff,v 1.2 2009/03/23 00:38:55 joerg Exp $
+
+--- rules/makefile_defs_unix.bkl.orig	2008-09-20 19:58:53.000000000 +0000
++++ rules/makefile_defs_unix.bkl
 @@ -39,22 +39,23 @@
  
      <set var="DIRSEP">/</set>
@@ -167,7 +171,7 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl ./rules/makefile_de
  
      <set var="UNINSTALL_PROGRAM" overwrite="0">$(RM)</set>
      <set var="UNINSTALL_DATA" overwrite="0">$(RM)</set>
-@@ -120,12 +121,12 @@
+@@ -122,12 +123,12 @@
      <if cond="FORMAT!='gnu'">
          <template id="__commands_templ_C">
              <set var="__COMPILE_C_CMD" eval="0">
@@ -181,37 +185,37 @@ diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl ./rules/makefile_de
 +                $(LIBTOOL) --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__cxxflags) $(src)
              </set>
          </template>
-     </if>
-@@ -133,18 +134,16 @@
+         <!-- FIXME: We should allow for a different Objective-C compiler -->
+@@ -154,18 +155,16 @@
+         </set>
  
-     <template id="__commands_templ">
          <set var="__LINK_EXE_CMD" eval="0">
--            $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
-+            $(LIBTOOL) --mode=link $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+-            $(__linker) -o $@ $(__objects_var) $(__ldargs)
++            $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldargs)
          </set>        
          <set var="__LINK_LIB_CMD" eval="0">
 -            $(RM) $@
 -            $(AR) $(AROPTIONS) $@ $(__objects_var)
 -            $(RANLIB) $@
-+            $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
          </set>
          <set var="__LINK_DLL_CMD" eval="0">
--            $(__dll_linker) $@ $(__objects_var) $(__ldflags) $(__ldlibs)
-+            $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+-            $(__dll_linker) $@ $(__objects_var) $(__ldargs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
          </set>
          <set var="__LINK_MODULE_CMD" eval="0">
--            $(__module_linker) $@ $(__objects_var) $(__ldflags) $(__ldlibs)
-+            $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+-            $(__module_linker) $@ $(__objects_var) $(__ldargs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
          </set>
      </template>
      
-$NetBSD: manual-bakefile.diff,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+$NetBSD: manual-bakefile.diff,v 1.2 2009/03/23 00:38:55 joerg Exp $
 
---- src/bottlenecks_wrap.c.orig	2008-09-08 20:08:03.000000000 +0200
-+++ src/bottlenecks_wrap.c
-@@ -270,6 +270,16 @@
- #define SWIG_DelTmpMask(r)         (SWIG_IsOK(r) ? (r & ~SWIG_TMPOBJMASK) : r)
- #define SWIG_IsTmpObj(r)           (SWIG_IsOK(r) && (r & SWIG_TMPOBJMASK))
+--- src/bkl_c_wrap.c.orig	2008-10-20 17:41:13.000000000 +0000
++++ src/bkl_c_wrap.c
+@@ -2600,6 +2600,14 @@ SWIG_FromCharPtr(const char *cptr)
+   return SWIG_FromCharPtrAndSize(cptr, (cptr ? strlen(cptr) : 0));
+ }
  
 +const char *doEvalExpr(const char *expr,
 +                       PyObject *varCallb,
@@ -221,8 +225,14 @@ $NetBSD: manual-bakefile.diff,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
 +                       PyObject *target,
 +                       PyObject *add_dict);
 +
-+PyObject *proxydict_create(void);
-+
+ #ifdef __cplusplus
+ extern "C" {
+ #endif
+@@ -2649,6 +2657,7 @@ fail:
+   return NULL;
+ }
  
- /* Cast-Rank Mode */
- #if defined(SWIG_CASTRANK_MODE)
++PyObject *proxydict_create(void);
+ 
+ SWIGINTERN PyObject *_wrap_proxydict_create(PyObject *SWIGUNUSEDPARM(self), PyObject *args) {
+   PyObject *resultobj = 0;

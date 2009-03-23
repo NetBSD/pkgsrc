@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/03/23 00:38:55 joerg Exp $
 #
 
-DISTNAME=		wxGTK-2.8.8
+DISTNAME=		wxGTK-2.8.10
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
 EXTRACT_SUFX=		.tar.bz2
@@ -14,6 +14,7 @@ DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK28/distinfo
 
 PATCHFILES=		${DISTNAME}-libtool.diff.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
+PATCH_DIST_STRIP.${DISTNAME}-libtool.diff.bz2= -p1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -32,6 +33,22 @@ CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 
 DOCDIR=			${PREFIX}/share/doc/wxGTK
+
+CONFIGURE_DIRS=	${WRKSRC}/build-non-unicode ${WRKSRC}/build-unicode
+
+INSTALL_MAKE_FLAGS+=	LN_S="ln -fs"
+
+#CONFIGURE_ARGS+=	--enable-debug
+#PLIST_SUBST+=	DEBUG_LIB=d DEBUG_CONFIG=-config
+
+PLIST_SUBST+=	DEBUG_LIB= DEBUG_CONFIG=-release
+
+pre-configure:
+	mkdir ${WRKSRC}/build-non-unicode ${WRKSRC}/build-unicode
+	printf '#!%s\n../configure --enable-unicode "$$@"' ${SH:Q} \
+	    > ${WRKSRC}/build-unicode/configure
+	printf '#!%s\n../configure --disable-unicode "$$@"' ${SH:Q} \
+	    > ${WRKSRC}/build-non-unicode/configure
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
