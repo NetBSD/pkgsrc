@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/03/05 00:43:19 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/03/23 13:58:14 abs Exp $
 #
 
 DISTNAME=	jdk1.7.0.20090129-i386-netbsd5
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:C:-i386.*:::C:.*\.:openjdk7-bin-:}
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/java/
@@ -12,8 +13,8 @@ COMMENT=	Binary OpenJDK package
 
 JAVA_NAME=	openjdk7-bin
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
-JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
-		servertool tnameserv
+JAVA_WRAPPERS=  jar java javac javadoc javah javap keytool orbd \
+		policytool rmid rmiregistry servertool tnameserv
 
 WRKSRC=		${WRKDIR}/jdk1.7.0
 USE_LANGUAGES=	# none
