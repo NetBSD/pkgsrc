@@ -1,8 +1,25 @@
-$NetBSD: patch-aa,v 1.10 2009/01/26 14:08:13 sketch Exp $
+$NetBSD: patch-aa,v 1.11 2009/03/23 17:10:21 tron Exp $
 
---- configure.orig	Mon Jan 26 13:57:43 2009
-+++ configure	Mon Jan 26 13:58:58 2009
-@@ -16800,6 +16800,9 @@
+The first patch fixes the build under Mac OS X PowerPC, see here:
+
+https://bugs.freedesktop.org/show_bug.cgi?id=20815
+
+--- configure.orig	2009-03-19 05:41:27.000000000 +0000
++++ configure	2009-03-23 16:58:20.000000000 +0000
+@@ -11668,6 +11668,12 @@
+ main ()
+ {
+ 
++#ifdef __APPLE__
++#ifdef __ppc__
++#error Assembler support is broken under Mac OS X PowerPC.
++#endif
++#endif
++
+ #ifndef __GNUC__
+ #error Not GCC
+ #endif
+@@ -17694,6 +17700,9 @@
  #error GCC before 4.2 has critical bugs compiling SSE2 intrinsics
  #endif
  #endif
