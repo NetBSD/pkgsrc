@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.1 2008/11/12 13:13:59 martti Exp $
+$NetBSD: patch-ai,v 1.1.2.1 2009/03/23 18:34:29 tron Exp $
 
 Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
 
---- src/web/ejabberd_web_admin.erl.orig	2008-08-27 12:37:52.000000000 +0300
-+++ src/web/ejabberd_web_admin.erl
-@@ -1806,15 +1806,21 @@ get_node(global, Node, ["ports"], Query,
+--- src/web/ejabberd_web_admin.erl.orig	2009-03-12 08:41:02.000000000 +0000
++++ src/web/ejabberd_web_admin.erl	2009-03-22 10:28:12.000000000 +0000
+@@ -1805,15 +1805,21 @@
  		  ok;
  	      {'EXIT', _Reason} ->
  		  error;
@@ -26,7 +26,7 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  	    nothing -> []
  	end ++
  	[?XAE("form", [{"action", ""}, {"method", "post"}],
-@@ -2052,58 +2058,76 @@ node_ports_to_xhtml(Ports, Lang) ->
+@@ -2051,58 +2057,76 @@
  	 [?XE("thead",
  	      [?XE("tr",
  		   [?XCT("td", "Port"),
@@ -124,7 +124,7 @@ Modified to use IPv6/v4 patch (https://support.process-one.net/browse/EJAB-389)
  			      throw(submitted);
  			  _ ->
  			      ok
-@@ -2113,17 +2137,28 @@ node_ports_parse_query(Node, Ports, Quer
+@@ -2112,17 +2136,28 @@
      case lists:keysearch("addnew", 1, Query) of
  	{value, _} ->
  	    {{value, {_, SPort}},
