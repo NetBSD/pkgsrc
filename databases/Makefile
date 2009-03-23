@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2009/03/14 19:42:28 manu Exp $
+# $NetBSD: Makefile,v 1.295 2009/03/23 00:52:33 joerg Exp $
 #
 
 COMMENT=	Databases
@@ -157,6 +157,7 @@ SUBDIR+=	pear-MDB2
 SUBDIR+=	pear-MDB2_Driver_mysql
 SUBDIR+=	pear-MDB2_Driver_pgsql
 SUBDIR+=	pear-MDB2_Driver_sqlite
+SUBDIR+=	pgadmin3
 SUBDIR+=	pgpool
 SUBDIR+=	pgtcl
 SUBDIR+=	pgtclng
