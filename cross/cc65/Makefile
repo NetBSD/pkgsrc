@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/08 19:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/23 17:43:15 darcy Exp $
 #
 
 DISTNAME=	cc65-sources-2.12.0
@@ -7,7 +7,7 @@ CATEGORIES=	cross lang
 MASTER_SITES=	ftp://ftp.musoftware.de/pub/uz/cc65/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	christtrekker@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cc65.org/
 COMMENT=	C cross compiler for 6502 target systems
 
