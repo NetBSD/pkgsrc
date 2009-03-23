@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.6.2.1 2009/02/04 12:30:42 rtr Exp $
+# $NetBSD: Makefile,v 1.6.2.2 2009/03/23 18:34:29 tron Exp $
 
-DISTNAME=	ejabberd-2.0.3
+DISTNAME=	ejabberd-2.0.4
 #PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.3/
+MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.4/
 
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	jabberd-[0-9]*
 
@@ -49,8 +51,6 @@ BUILD_DEFS+=		EJABBERD_EXDIR
 BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	ejabberd
 
-PKG_DESTDIR_SUPPORT=	destdir
-
 .include "../../mk/bsd.prefs.mk"
 
 EJABBERD_USER=		ejabberd
@@ -63,7 +63,6 @@ EJABBERD_EXDIR=		share/examples/ejabberd
 OWN_DIRS+=		${EJABBERD_PIDDIR}
 OWN_DIRS+=		${EJABBERD_LOGDIR}
 OWN_DIRS+=		${EJABBERD_DB}
-
 OWN_DIRS_PERMS+=	${EJABBERD_PIDDIR} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 OWN_DIRS_PERMS+=	${EJABBERD_LOGDIR} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
 OWN_DIRS_PERMS+=	${EJABBERD_DB} ${EJABBERD_USER} ${EJABBERD_GROUP} 0770
@@ -90,10 +89,10 @@ post-patch:
 	${RM} -f ${WRKSRC}/doc/guide.tex.orig
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${PREFIX}/share/doc/${PKGNAME_NOREV}
-	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${PREFIX}/share/doc/${PKGNAME_NOREV}/api
+	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/api
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
