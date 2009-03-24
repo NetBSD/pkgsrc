@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/03/24 16:22:57 abs Exp $
+
+--- src/mlview-tree-view.h.orig	2005-07-22 20:14:28.000000000 +0100
++++ src/mlview-tree-view.h
+@@ -178,7 +178,7 @@ protected:
+ 
+ 	enum MlViewStatus build_app_edit_menu () ;
+ 
+-	GtkDialog * TreeView::get_expand_tree_dialog ()  ;
++	GtkDialog * get_expand_tree_dialog ()  ;
+ 
+ 	void clear_completion_popup_submenus () ;
+ 

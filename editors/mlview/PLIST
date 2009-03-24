@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/25 10:54:12 hira Exp $
-bin/mlv
+@comment $NetBSD: PLIST,v 1.6 2009/03/24 16:22:57 abs Exp $
+bin/mlview
+bin/mlviewctl
 lib/libmlview.la
+lib/libmlviewdbusclient.la
+lib/mlview/plugins/firstplugin.xml
+lib/mlview/plugins/libfirstplugin.la
+share/application-registry/mlview.applications
 share/applications/mlview.desktop
 share/gconf/schemas/mlview.schemas
 share/locale/az/LC_MESSAGES/mlview.mo
@@ -24,20 +29,29 @@ share/locale/ru/LC_MESSAGES/mlview.mo
 share/locale/sr/LC_MESSAGES/mlview.mo
 share/locale/sr@Latn/LC_MESSAGES/mlview.mo
 share/locale/sv/LC_MESSAGES/mlview.mo
+share/mime-info/mlview.keys
 share/mlview/main-menu-bar.xml
 share/mlview/main-toolbar.xml
 share/mlview/mlview-app-icon.png
-share/mlview/mlview-app-icon.xpm
 share/mlview/mlview-css-picker.glade
 share/mlview/mlview-dtd-choice-dtd-not-resolved.glade
 share/mlview/mlview-dtd-choice.glade
+share/mlview/mlview-dtd-schema.png
+share/mlview/mlview-exec-command.glade
 share/mlview/mlview-main-app-win.glade
 share/mlview/mlview-main-app-win2.glade
-share/mlview/mlview-preferences.glade
+share/mlview/mlview-new-document.glade
+share/mlview/mlview-node-editor.glade
+share/mlview/mlview-plugins-window.glade
+share/mlview/mlview-prefs-window.glade
+share/mlview/mlview-rng-schema.png
 share/mlview/mlview-schemas-window.glade
+share/mlview/mlview-search-box.glade
 share/mlview/mlview-search-node.glade
 share/mlview/mlview-uri-dialog.glade
 share/mlview/mlview-validation-report.glade
+share/mlview/mlview-xsd-schema.png
+share/mlview/source-view-edit-menu.xml
 share/mlview/tree-view-edit-menu.xml
 share/mlview/xml-comment-node.png
 share/mlview/xml-element-node-open.png
@@ -47,6 +61,8 @@ share/mlview/xml-pi-node.png
 share/mlview/xml-root-open.png
 share/mlview/xml-root.png
 share/mlview/xml-text-node.png
+share/pixmaps/mlview-app-icon.png
+share/pixmaps/mlview-app-icon.xpm
 @dirrm share/mlview
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
