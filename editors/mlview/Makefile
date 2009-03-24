@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2008/07/14 12:56:03 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/03/24 16:22:57 abs Exp $
 #
 
-DISTNAME=	mlview-0.7.0
-PKGREVISION=	14
+DISTNAME=	mlview-0.9.0
 CATEGORIES=	editors gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mlview/0.7/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mlview/0.9/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -17,15 +16,16 @@ GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++
 USE_PKGLOCALEDIR=	yes
 
 GCONF_SCHEMAS=		mlview.schemas
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/eel/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libglademm/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
@@ -33,4 +33,8 @@ GCONF_SCHEMAS=		mlview.schemas
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/gtkmm/buildlink3.mk"
+.include "../../x11/gtksourceview/buildlink3.mk"
+.include "../../x11/vte/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
