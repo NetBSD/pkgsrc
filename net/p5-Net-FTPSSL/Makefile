@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:32 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/24 13:35:47 darcy Exp $
 #
 
 DISTNAME=		Net-FTPSSL-0.04
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		net perl5 security
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
-MAINTAINER=		dieter.NetBSD@pandora.be
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.berlios.de/projects/net-ftpssl/
 COMMENT=		Perl FTP over SSL/TLS class
 
