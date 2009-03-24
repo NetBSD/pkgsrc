@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/21 00:35:42 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/03/24 19:28:26 bouyer Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -31,6 +31,7 @@ share/examples/nagios/objects/timeperiods.cfg-sample
 share/examples/nagios/objects/windows.cfg-sample
 share/examples/nagios/resource.cfg-sample
 share/examples/rc.d/nagios
+share/nagios/config.inc.php
 share/nagios/contexthelp/A1.html
 share/nagios/contexthelp/A2.html
 share/nagios/contexthelp/A3.html
@@ -103,6 +104,7 @@ share/nagios/docs/cachedchecks.html
 share/nagios/docs/cgiauth.html
 share/nagios/docs/cgiincludes.html
 share/nagios/docs/cgis.html
+share/nagios/docs/cgisecurity.html
 share/nagios/docs/checkscheduling.html
 share/nagios/docs/clusters.html
 share/nagios/docs/config.html
@@ -315,7 +317,7 @@ share/nagios/images/redudancy.png
 share/nagios/images/redundancy.png
 share/nagios/images/restart.gif
 share/nagios/images/right.gif
-share/nagios/images/sblogo.jpg
+share/nagios/images/sblogo.png
 share/nagios/images/serviceevent.gif
 share/nagios/images/splunk1.gif
 share/nagios/images/splunk2.gif
@@ -341,13 +343,11 @@ share/nagios/images/warning.png
 share/nagios/images/weblogo1.png
 share/nagios/images/zoom1.gif
 share/nagios/images/zoom2.gif
-share/nagios/index.html
-share/nagios/main.html
-share/nagios/media/critical.wav
-share/nagios/media/hostdown.wav
-share/nagios/media/warning.wav
+share/nagios/includes/utils.inc.php
+share/nagios/index.php
+share/nagios/main.php
 share/nagios/robots.txt
-share/nagios/side.html
+share/nagios/side.php
 share/nagios/stylesheets/avail.css
 share/nagios/stylesheets/checksanity.css
 share/nagios/stylesheets/cmd.css
@@ -368,6 +368,7 @@ share/nagios/stylesheets/trends.css
 @dirrm share/nagios/stylesheets
 @exec ${MKDIR} %D/share/nagios/ssi 2>/dev/null || ${TRUE}
 @dirrm share/nagios/ssi
+@dirrm share/nagios/includes
 @dirrm share/nagios/media
 @dirrm share/nagios/images/logos
 @dirrm share/nagios/images
