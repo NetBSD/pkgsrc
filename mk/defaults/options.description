@@ -314,7 +314,8 @@ openldap		Enable OpenLDAP support.
 oracle			Enable Oracle support.
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
-otr				Enable Off-the-record encrypted messaging
+otr			Enable Off-the-record encrypted messaging
+p0f			Enable support for passive OS fingerprinting.
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
@@ -374,6 +375,7 @@ snort-flexresp2		NEW Flexible Responses on hostile connection attempts
 snort-prelude		Enable prelude support.
 socks4			Enable Socks4 support.
 socks5			Enable Socks5 support.
+spamassassin		Enable SpamAssassin support.
 spamassassin-perl-warnings	Enable Perl warnings at run-time.
 spamassassin-taint-checks	Enable Perl taint checks to improve security.
 spamassassin-test-awl-sql	Enable tests of the SQL module for the automatic whitelist.
