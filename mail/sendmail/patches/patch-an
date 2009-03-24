@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2009/03/24 21:05:42 jnemeth Exp $
+
+--- sendmail/Makefile.m4.orig	2008-03-27 09:13:33.000000000 -0700
++++ sendmail/Makefile.m4
+@@ -4,7 +4,7 @@ include(confBUILDTOOLSDIR`/M4/switch.m4'
+ define(`confREQUIRE_LIBSM', `true')
+ define(`confREQUIRE_SM_OS_H', `true')
+ bldPRODUCT_START(`executable', `sendmail')
+-define(`bldBIN_TYPE', `G')
++dnl define(`bldBIN_TYPE', `G')
+ define(`bldINSTALL_DIR', `')
+ define(`bldSOURCES', `main.c alias.c arpadate.c bf.c collect.c conf.c control.c convtime.c daemon.c deliver.c domain.c envelope.c err.c headers.c macro.c map.c mci.c milter.c mime.c parseaddr.c queue.c ratectrl.c readcf.c recipient.c sasl.c savemail.c sfsasl.c shmticklib.c sm_resolve.c srvrsmtp.c stab.c stats.c sysexits.c timers.c tls.c trace.c udb.c usersmtp.c util.c version.c ')
+ PREPENDDEF(`confENVDEF', `confMAPDEF')
