@@ -1,18 +1,24 @@
-$NetBSD: patch-ao,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+$NetBSD: patch-ao,v 1.2 2009/03/24 20:04:51 abs Exp $
 
---- ioemu/configure.orig	2006-10-04 04:28:06.000000000 +0200
-+++ ioemu/configure	2006-10-18 17:37:42.000000000 +0200
-@@ -517,7 +517,7 @@
+--- ioemu/configure.orig	2008-04-25 14:03:12.000000000 +0100
++++ ioemu/configure
+@@ -513,11 +513,11 @@ else
+ if test -z "$prefix" ; then
+     prefix="/usr/local"
+ fi
+-mandir="$prefix/share/man"
++mandir="$prefix/man"
  datadir="$prefix/share/xen/qemu"
- docdir="$prefix/share/doc/qemu"
+-docdir="$prefix/share/doc/qemu"
 -bindir="$prefix/$libdir/xen/bin"
-+bindir="$prefix/libexec"
 -configdir="/etc/xen"
-+configdir="@XENDCONFDIR@"
++docdir="$prefix/share/doc/xen"
++bindir="$prefix/libexec"
++configdir="/usr/pkg/etc/xen"
  fi
  
  echo "Install prefix    $prefix"
-@@ -653,6 +653,8 @@
+@@ -653,6 +653,8 @@ if test "$mingw32" = "yes" ; then
    echo "#define CONFIG_WIN32 1" >> $config_h
  elif test -f "/usr/include/byteswap.h" ; then
    echo "#define HAVE_BYTESWAP_H 1" >> $config_h
