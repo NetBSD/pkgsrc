@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/03/24 16:22:57 abs Exp $
+
+--- src/mlview-exec-command-dialog.cc.orig	2005-08-07 08:47:54.000000000 +0100
++++ src/mlview-exec-command-dialog.cc
+@@ -33,6 +33,8 @@
+ #include <libglademm.h>
+ #include "mlview-exec-command-dialog.h"
+ 
++extern char **environ;
++
+ namespace mlview
+ {
+ 

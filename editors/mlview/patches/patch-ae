@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/03/24 16:22:57 abs Exp $
+
+--- src/mlview-editor.cc.orig	2005-08-07 08:42:28.000000000 +0100
++++ src/mlview-editor.cc
+@@ -157,7 +157,7 @@ struct EditorPriv
+ 			contextual_menu (NULL)
+ 	{}
+ 
+-	static void EditorPriv::schemas_window_destroy_cb
++	static void schemas_window_destroy_cb
+ 	(GtkWidget *a_widget, struct DocumentWindowData *a_win) ;
+ 
+ 	static void validation_window_destroy_cb
