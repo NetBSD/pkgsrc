@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/17 12:03:38 roy Exp $
+# $NetBSD: Makefile,v 1.4 2009/03/24 16:38:26 roy Exp $
 #
 
 DISTNAME=		dhcpcd-gtk-0.3.0
@@ -14,6 +14,7 @@ COMMENT=		GTK+ systray monitor for dhcpcd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c99
+USE_TOOLS+=		pkg-config
 
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${PREFIX}/share/gnome/autostart
 
