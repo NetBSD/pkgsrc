@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7998 2009/03/22 21:08:46 wiz Exp $
+$NetBSD: TODO,v 1.7999 2009/03/24 16:23:23 abs Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mksh-36b
 	o mkvtoolnix-2.5.3
 	o mlterm-2.9.4
-	o mlview-0.9.0
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.6.0
