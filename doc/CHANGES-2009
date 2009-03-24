@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1191 2009/03/24 16:23:23 abs Exp $
+$NetBSD: CHANGES-2009,v 1.1192 2009/03/24 19:57:28 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1590,3 +1590,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/pgadmin3 version 1.8.4 [joerg 2009-03-23]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2009Q1 branch [agc 2009-03-22]
 	Updated editors/mlview to 0.9.0 [abs 2009-03-24]
+	Updated net/nagios-base to 3.1.0 [bouyer 2009-03-24]
+	Updated net/nagios-plugins to 1.4.11 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-ldap to 1.4.11 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-mysql to 1.4.11 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-pgsql to 1.4.11 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-radius to 1.4.11 [bouyer 2009-03-24]
+	Updated net/nagios-plugin-snmp to 1.4.11 [bouyer 2009-03-24]
