@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.3 2009/03/24 16:22:57 abs Exp $
+
+--- src/mlview-utils.h.orig	2005-08-07 08:42:29.000000000 +0100
++++ src/mlview-utils.h
+@@ -143,6 +143,10 @@ struct NameValuePair
+ 
+ #define MLVIEW_LOG_DOMAIN "MLVIEW"
+ 
++/* Not all systems provide __ASSERT_FUNCTION */
++#ifndef __ASSERT_FUNCTION
++# define __ASSERT_FUNCTION __func__
++#endif
+ 
+ #define mlview_utils_trace(message, ...) \
+ fprintf (stderr, "mlview-debug: %s: in file %s: line %d: (%s)\n",\
