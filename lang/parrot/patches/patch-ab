@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.4 2009/03/25 23:01:48 he Exp $
+
+Handle a few ELF-related symbols named differently in NetBSD
+compared to Linux.
+
+--- src/exec_save.c.orig	2009-03-08 21:32:43.000000000 +0100
++++ src/exec_save.c
+@@ -30,6 +30,11 @@ static void save_int(FILE *fp, int i);
+ static void save_short(FILE *fp, short s);
+ static void save_struct(FILE *fp, void *sp, size_t size);
+ 
++#if defined(PARROT_PPC) && defined(__NetBSD__)
++#define	R_PPC_ADDR16_HI	R_PPC_16_HI
++#define	R_PPC_ADDR16_LO	R_PPC_16_LO
++#endif /* PARROT_PPC && __NetBSD__ */
++
+ #ifdef EXEC_A_OUT
+ 
+ #  include <a.out.h>
