@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2008/12/18 00:29:19 roy Exp $
+# $NetBSD: Makefile,v 1.58 2009/03/25 22:30:19 he Exp $
 #
 
-DISTNAME=	icu4c-3_6-src
-PKGNAME=	icu-3.6
-PKGREVISION=	2
+DISTNAME=	icu4c-4_0_1-src
+PKGNAME=	icu-4.0.1
 CATEGORIES=	textproc
-MASTER_SITES=	ftp://ftp.software.ibm.com/software/globalization/icu/${PKGVERSION_NOREV}/
+MASTER_SITES=	http://download.icu-project.org/files/icu4c/4.0.1/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ COMMENT=	Robust and full-featured Unicode services
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
-WRKSRC=			${WRKDIR}/${PKGBASE}/source
+WRKSRC=			${WRKDIR}/icu/source
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 TEST_TARGET=		check
