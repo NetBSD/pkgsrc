@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2009/03/03 08:57:58 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.17 2009/03/25 22:37:13 he Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -9,6 +9,8 @@ BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
 CATEGORIES=		devel
+
+PKGREVISION=		1
 
 .if ${BOOST_PACKAGE} == "meta-pkg"
 
