@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.805 2009/03/25 14:12:58 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.806 2009/03/25 16:33:25 wiz Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -7777,9 +7777,9 @@ sub checkfile_PLIST($) {
 					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
 					$opt_warn_extra and $line->explain_warning(
 "All programs that can be run directly by the user should have a manual",
-"page for quick reference. The programs in the bin/ directory should have",
-"corresponding manual pages in section 1 (filename program.1), not in",
-"section 8.");
+"page for quick reference. The programs in the sbin/ directory should have",
+"corresponding manual pages in section 8 (filename program.8), not in",
+"section 1.");
 				}
 
 			} elsif ($text =~ m"^share/applications/.*\.desktop$") {
