@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.62 2009/02/21 20:50:06 abs Exp $
+# $Id: pkg_chk.sh,v 1.63 2009/03/25 00:00:52 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -257,22 +257,24 @@ get_bin_pkg_info()
     summary_file=$PACKAGES/$SUMMARY_FILE
     if [ -f $summary_file ] ; then
 	if [ -z "$(find $PACKAGES -type f -newer $summary_file -name '*.t[bg]z')" ] ; then
+	    msg_progress Reading $summary_file
 	    zcat $summary_file
 	    return;
 	fi
 	echo "*** Ignoring $SUMMARY_FILE as PACKAGES contains newer files" >&2
     fi
+    msg_progress Scan $PACKAGES
     list_bin_pkgs | ${XARGS} ${PKG_INFO} -X
     }
 
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
-	${PKG_INFO} -. -q -b $PACKAGES/$PKGNAME$PKG_SUFX | ${GREP} .
+	${PKG_INFO} -q -b $PACKAGES/$PKGNAME$PKG_SUFX | ${GREP} .
 	return
     fi
-    # Unfortunately pkgsrc always outputs to a file, but it does helpfully
-    # allows # us to specify the name
+    # Unfortunately pkgsrc always outputs to a file, but it does
+    # helpfully allows us to specify the name
     rm -f $MY_TMPFILE
     ${MAKE} _BUILD_VERSION_FILE=$MY_TMPFILE $MY_TMPFILE
     cat $MY_TMPFILE
@@ -289,7 +291,7 @@ list_bin_pkgs ()
 #
 list_dependencies()
     {
-    ${PKG_INFO} -. -q -n $1 | ${GREP} .. || true
+    ${PKG_INFO} -q -n $1 | ${GREP} .. || true
     }
 
 # Pass a list of pkgdirs, outputs a tsorted list including any dependencies
@@ -839,7 +841,6 @@ if [ -n "$opt_b" -a -z "$opt_s" ] ; then
 	    fi;;
 	*)
 	    if [ -d "$PACKAGES" ] ; then
-		msg_progress Scan $PACKAGES
 		PKGDB=$(get_bin_pkg_info | bin_pkg_info2pkgdb)
 		PKGSRCDIR=NONE
 	    fi;;
