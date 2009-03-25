@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/01/19 22:41:10 kefren Exp $
+# $NetBSD: Makefile,v 1.10 2009/03/25 22:37:12 he Exp $
 
 DISTNAME=	mono-tools-2.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono-tools/
 EXTRACT_SUFX=	.tar.bz2
