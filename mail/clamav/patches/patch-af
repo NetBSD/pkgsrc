@@ -1,10 +1,8 @@
-$NetBSD: patch-af,v 1.7 2008/11/04 07:16:18 martti Exp $
+$NetBSD: patch-af,v 1.8 2009/03/25 09:21:20 adam Exp $
 
-Installation fixes.
-
---- database/Makefile.in.orig	2008-10-30 18:13:31.000000000 +0200
-+++ database/Makefile.in	2008-11-04 08:19:27.000000000 +0200
-@@ -386,17 +386,6 @@
+--- database/Makefile.in.orig	2009-03-23 18:09:28.000000000 +0100
++++ database/Makefile.in
+@@ -400,17 +400,6 @@ install-data-local:
  	$(mkinstalldirs) $(DESTDIR)$(DBINST);\
  	test -f $(DESTDIR)$(DBINST)/main.cvd || test -f $(DESTDIR)$(DBINST)/main.cld || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST);\
  	test -f $(DESTDIR)$(DBINST)/daily.cvd || test -f $(DESTDIR)$(DBINST)/daily.cld || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST);\
