@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1195 2009/03/25 09:22:34 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1196 2009/03/25 18:27:11 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1600,3 +1600,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_chk to 1.98 [abs 2009-03-25]
 	Updated x11/gtk2 to 2.16.0nb2 [wiz 2009-03-25]
 	Updated mail/clamav to 0.95 [adam 2009-03-25]
+	Removed net/p5-Net-Z3950 [he 2009-03-25]
