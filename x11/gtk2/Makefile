@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.169 2009/03/17 20:16:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.170 2009/03/25 09:13:16 wiz Exp $
 
 DISTNAME=		gtk+-2.16.0
-PKGREVISION=		1
+PKGREVISION=		2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/2.16/ \
@@ -57,6 +57,11 @@ SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 PYTHON_PATCH_SCRIPTS=	gtk/gtk-builder-convert
+# gtk-builder-convert uses minidom from xml.dom, which needs expat
+.include "../../lang/python/pyversion.mk"
+.if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+.endif
 
 .include "options.mk"
 
