@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1193 2009/03/25 00:01:24 abs Exp $
+$NetBSD: CHANGES-2009,v 1.1194 2009/03/25 09:13:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1598,3 +1598,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/nagios-plugin-radius to 1.4.11 [bouyer 2009-03-24]
 	Updated net/nagios-plugin-snmp to 1.4.11 [bouyer 2009-03-24]
 	Updated pkgtools/pkg_chk to 1.98 [abs 2009-03-25]
+	Updated x11/gtk2 to 2.16.0nb2 [wiz 2009-03-25]
