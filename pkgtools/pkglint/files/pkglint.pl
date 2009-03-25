@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.804 2009/03/22 05:57:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.805 2009/03/25 14:12:58 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2532,6 +2532,7 @@ sub resolve_relative_path($$) {
 	$relpath =~ s,\$\{PHPPKGSRCDIR\},../../lang/php5,;
 	$relpath =~ s,\$\{SUSE_DIR_PREFIX\},suse91,;
 	$relpath =~ s,\$\{PYPKGSRCDIR\},../../lang/python23,;
+	$relpath =~ s,\$\{FILESDIR\},$filesdir, if defined($filesdir);
 	if ($adjust_depth && $relpath =~ m"^\.\./\.\./([^.].*)$") {
 		$relpath = "${cur_pkgsrcdir}/$1";
 	}
@@ -3507,6 +3508,11 @@ sub checkline_trailing_whitespace($) {
 
 	if ($line->text =~ /\s+$/) {
 		$line->log_note("Trailing white-space.");
+		$line->explain_note(
+"When a line ends with some white-space, that space is in most cases",
+"irrelevant and can be removed, leading to a \"normal form\" syntax.",
+"",
+"Note: This is mostly for aesthetic reasons.");
 		$line->replace_regex(qr"\s+\n$", "\n");
 	}
 }
@@ -3933,6 +3939,12 @@ sub checkline_mk_varuse($$$$) {
 	assert(defined($mkctx_build_defs), "The build_defs variable must be defined here.");
 	if (exists(get_userdefined_variables()->{$varname}) && !exists(get_system_build_defs()->{$varname}) && !exists($mkctx_build_defs->{$varname})) {
 		$line->log_warning("The user-defined variable ${varname} is used but not added to BUILD_DEFS.");
+		$line->explain_warning(
+"When a pkgsrc package is built, many things can be configured by the",
+"pkgsrc user in the mk.conf file. All these configurations should be",
+"recorded in the binary package, so the package can be reliably rebuilt.",
+"The BUILD_DEFS variable contains a list of all these user-settable",
+"variables, so please add your variable to it, too.");
 	}
 }
 
@@ -5565,6 +5577,14 @@ sub checkline_mk_varassign($$$$$) {
 			# FIXME: What about these ones? They occur quite often.
 		} else {
 			$opt_warn_extra and $line->log_warning("Please include \"../../mk/bsd.prefs.mk\" before using \"?=\".");
+			$opt_warn_extra and $line->explain_warning(
+"The ?= operator is used to provide a default value to a variable. In",
+"pkgsrc, many variables can be set by the pkgsrc user in the mk.conf",
+"file. This file must be included explicitly. If a ?= operator appears",
+"before mk.conf has been included, it will not care about the user's",
+"preferences, which can result in unexpected behavior. The easiest way",
+"to include the mk.conf file is by including the bsd.prefs.mk file,",
+"which will take care of everything.");
 		}
 	}
 
@@ -7639,6 +7659,9 @@ sub checkfile_PLIST($) {
 				if (defined($last_file_seen)) {
 					if ($last_file_seen gt $text) {
 						$line->log_warning("${text} should be sorted before ${last_file_seen}.");
+						$line->explain_warning(
+"For aesthetic reasons, the files in the PLIST should be sorted",
+"alphabetically.");
 					} elsif ($last_file_seen eq $text) {
 						$line->log_warning("Duplicate filename.");
 					}
@@ -7663,6 +7686,11 @@ sub checkfile_PLIST($) {
 					# Fine.
 				} else {
 					$opt_warn_extra and $line->log_warning("Manual page missing for bin/${basename}.");
+					$opt_warn_extra and $line->explain_warning(
+"All programs that can be run directly by the user should have a manual",
+"page for quick reference. The programs in the bin/ directory should have",
+"corresponding manual pages in section 1 (filename program.1), not in",
+"section 8.");
 				}
 
 			} elsif ($text =~ m"^doc/") {
@@ -7747,6 +7775,11 @@ sub checkfile_PLIST($) {
 
 				if (!exists($all_files->{"man/man8/${binname}.8"})) {
 					$opt_warn_extra and $line->log_warning("Manual page missing for sbin/${binname}.");
+					$opt_warn_extra and $line->explain_warning(
+"All programs that can be run directly by the user should have a manual",
+"page for quick reference. The programs in the bin/ directory should have",
+"corresponding manual pages in section 1 (filename program.1), not in",
+"section 8.");
 				}
 
 			} elsif ($text =~ m"^share/applications/.*\.desktop$") {
