@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2009/03/04 08:44:13 yyamano Exp $
+$NetBSD: patch-aa,v 1.2 2009/03/25 06:08:17 yyamano Exp $
 
 --- lib/Makefile.in.orig	2001-01-22 10:14:14.000000000 -0800
 +++ lib/Makefile.in
-@@ -108,14 +108,18 @@ AUTOMAKE_OPTIONS = gnits
+@@ -108,7 +108,11 @@ AUTOMAKE_OPTIONS = gnits
  
  noinst_LIBRARIES = libreco.a
  noinst_HEADERS = error.h getopt.h gettext.h pathmax.h xstring.h
@@ -14,14 +14,6 @@ $NetBSD: patch-aa,v 1.1 2009/03/04 08:44:13 yyamano Exp $
  
  EXTRA_DIST = alloca.c gettext.c malloc.c realloc.c strtol.c strtoul.c
  
- INCLUDES = -I.. -I$(srcdir)
- 
- libreco_a_LIBADD = @ALLOCA@ @LIBOBJS@
--localedir = $(prefix)/share/locale
-+localedir = /usr/pkg/share/locale
- aliaspath = $(localedir):.
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = ../config.h
 @@ -128,7 +132,11 @@ CPPFLAGS = @CPPFLAGS@
  LDFLAGS = @LDFLAGS@
  LIBS = @LIBS@
