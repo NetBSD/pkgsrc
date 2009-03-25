@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.18 2009/03/25 09:21:20 adam Exp $
+
+--- clamdtop/clamdtop.c.orig	2009-03-25 10:02:38.000000000 +0100
++++ clamdtop/clamdtop.c
+@@ -29,6 +29,7 @@
+ #endif
+ 
+ #include <unistd.h>
++#include <stdarg.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
