@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.192 2009/03/22 08:17:02 rillig Exp $
+# $NetBSD: makevars.map,v 1.193 2009/03/25 14:12:04 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -404,6 +404,7 @@ LIBTOOL			ShellCommand [$system]
 LIBTOOL_OVERRIDE	List of Pathmask [m:as]
 LICENCE			License [m:s,c:s,o:s]
 LICENSE			License [m:s,c:s,o:s]
+LICENSE_FILE		Pathname [$package]
 LINKER_RPATH_FLAG	ShellWord [$system]
 LOWER_OPSYS		Identifier [$system]
 LTCONFIG_OVERRIDE	List of Pathmask [m:as,c:a]
