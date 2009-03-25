@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7999 2009/03/24 16:23:23 abs Exp $
+$NetBSD: TODO,v 1.8000 2009/03/25 06:55:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -451,6 +451,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o btpd-0.13 [pkg/38144]
 	o bugzilla-3.3.2
 	o byacc-20080824
+	o bzr-1.13.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -472,6 +473,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
+	o clamav-0.95
 	o classpath-0.98
 	o claws-mail-3.7.1
 	o climm-0.6.4
@@ -529,7 +531,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drupal-6.10
 	o duplicity-0.5.9
 	o dvdrip-0.98.10
-	o dvdstyler-1.7.1
+	o dvdstyler-1.7.2
 	o dvipng-1.12
 	o dwm-5.4.1
 	o eagle-4.16
@@ -648,7 +650,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
-	o gmime-2.4.4
 	o gmpc-0.18.0
 	o gnash-0.8.5
 	o gnet1-1.1.9
@@ -704,7 +705,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gworkspace-0.8.6
 	o gxemul-0.4.7.1
 	o hackbot-2.21
-	o hal-info-20090309
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -820,7 +820,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libosip-3.3.0
-	o libotf-0.9.9
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
@@ -897,12 +896,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mksh-36b
-	o mkvtoolnix-2.5.3
+	o mkvtoolnix-2.6.0
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.6.0
 	o monodevelop-1.9.3
+	o monotone-0.43
 	o moserial-1.0.8 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mpc-0.15
@@ -1077,7 +1077,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-cairo-1.8.4
+	o py-cairo-1.8.4 [pkg/41063]
 	o py-checker-0.8.17
 	o py-cups-1.9.45
 	o py-dateutil-1.4
@@ -1277,7 +1277,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-23.2.0
+	o tea-23.3.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.23
