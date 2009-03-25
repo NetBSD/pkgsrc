@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2008/08/30 08:06:33 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2009/03/25 23:01:48 he Exp $
 #
 
-DISTNAME=		parrot-0.4.11
-PKGREVISION=		1
+DISTNAME=		parrot-1.0.0
 CATEGORIES=		lang
-MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/M/MD/MDIEP/}
+MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/stable/1.0.0/
 
-MAINTAINER=		debolaz@gmail.com
+MAINTAINER=		he@NetBSD.org
 HOMEPAGE=		http://www.parrotcode.org/
 COMMENT=		Virtual machine made to run Perl 6 and other languages
 
@@ -15,7 +14,6 @@ USE_TOOLS+=		perl
 PTHREAD_OPTS+=		require
 BUILD_TARGET=		world
 TEST_TARGET=		test
-INSTALL_TARGET=		reallyinstall
 HAS_CONFIGURE=		yes
 
 .include "../../mk/pthread.buildlink3.mk"
@@ -25,14 +23,6 @@ CONFIG_SHELL=		perl
 CONFIGURE_SCRIPT=	Configure.pl
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--icu-config=${PREFIX}/bin/icu-config
-
-# If you have another architecture, please test if it can compile
-# with (working) jit support and report status to the maintainer.
-
-.if ${MACHINE_ARCH} == "i386"
-CONFIGURE_ARGS+=	--jitcapable \
-			--execcapable
-.endif
 
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	post-configure
@@ -45,8 +35,8 @@ SUBST_SED.pthread+=	-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}
 SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 
 post-install:
-	if [ -e ${PREFIX}/lib/libparrot.so.0.4.1 ]; then \
-		${LN} -s libparrot.so.0.4.1 ${PREFIX}/lib/libparrot.so ; \
+	if [ -e ${PREFIX}/lib/libparrot.so.1.0.0 ]; then \
+		${LN} -s libparrot.so.1.0.0 ${PREFIX}/lib/libparrot.so ; \
 	fi
 
 .include "../../textproc/icu/buildlink3.mk"
