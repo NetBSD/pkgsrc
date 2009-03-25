@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.11 2009/03/25 09:21:20 adam Exp $
+
+--- libclamunrar_iface/unrar_iface.h.orig	2009-03-20 22:16:29.000000000 +0100
++++ libclamunrar_iface/unrar_iface.h
+@@ -24,10 +24,6 @@
+ #include "clamav-config.h"
+ #endif
+ 
+-#define unrar_open libclamunrar_iface_LTX_unrar_open
+-#define unrar_extract_next_prepare libclamunrar_iface_LTX_unrar_extract_next_prepare
+-#define unrar_extract_next libclamunrar_iface_LTX_unrar_extract_next
+-#define unrar_close libclamunrar_iface_LTX_unrar_close
+ 
+ #ifndef HAVE_ATTRIB_PACKED
+ #define __attribute__(x)
