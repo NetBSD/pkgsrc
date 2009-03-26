@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2009/03/26 16:49:46 roy Exp $
+
+--- src/applet.c	2009-03-26 16:08:23.000000000 +0000
++++ src/applet.c	2009-03-26 16:08:40.000000000 +0000
+@@ -22,6 +22,7 @@
+ #include <glib/gi18n.h>
+ 
+ #include <string.h>
++#include <unistd.h>
+ 
+ #include <gdk/gdkkeysyms.h>
+ 
