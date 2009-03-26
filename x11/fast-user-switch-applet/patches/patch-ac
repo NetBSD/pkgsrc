@@ -1,0 +1,84 @@
+$NetBSD: patch-ac,v 1.1 2009/03/26 16:49:46 roy Exp $
+
+--- configure	2009-03-26 16:02:51.000000000 +0000
++++ configure	2009-03-26 16:06:55.000000000 +0000
+@@ -21191,6 +21191,7 @@
+ PANEL_REQUIRED_VERSION=2.0.0
+ GLADE_REQUIRED_VERSION=2.0.0
+ GLIB_REQUIRED_VERSION=2.15.3
++GNOMEUI_REQUIRED_VERSION=2.6.0
+ 
+ 
+ 
+@@ -21325,10 +21326,12 @@
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= \$GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= \$PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= \$GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= \$GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= \$GLIB_REQUIRED_VERSION\"") >&5
+   ($PKG_CONFIG --exists --print-errors "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+@@ -21336,6 +21339,7 @@
+   pkg_cv_APPLET_CFLAGS=`$PKG_CONFIG --cflags "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION" 2>/dev/null`
+ else
+   pkg_failed=yes
+@@ -21352,10 +21356,12 @@
+     { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"gtk+-2.0 >= \$GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= \$PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= \$GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= \$GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= \$GLIB_REQUIRED_VERSION\"") >&5
+   ($PKG_CONFIG --exists --print-errors "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION") 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+@@ -21363,6 +21369,7 @@
+   pkg_cv_APPLET_LIBS=`$PKG_CONFIG --libs "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION" 2>/dev/null`
+ else
+   pkg_failed=yes
+@@ -21385,11 +21392,13 @@
+ 	        APPLET_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION"`
+         else
+ 	        APPLET_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION"`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+@@ -21398,6 +21407,7 @@
+ 	{ { echo "$as_me:$LINENO: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION) were not met:
+ 
+ $APPLET_PKG_ERRORS
+@@ -21412,6 +21422,7 @@
+ echo "$as_me: error: Package requirements (gtk+-2.0 >= $GTK_REQUIRED_VERSION
+ 	     libpanelapplet-2.0 >= $PANEL_REQUIRED_VERSION
+ 	     libglade-2.0 >= $GLADE_REQUIRED_VERSION
++	     libgnomeui-2.0 >= $GNOMEUI_REQUIRED_VERSION
+ 	     gio-2.0 >= $GLIB_REQUIRED_VERSION) were not met:
+ 
+ $APPLET_PKG_ERRORS
