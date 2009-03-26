@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/18 18:54:10 darcy Exp $
+# $NetBSD: Makefile,v 1.12 2009/03/26 20:46:38 joerg Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -12,6 +12,8 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.tug.org/tetex/
 COMMENT=	Sources for machine-independent part of teTeX
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	teTeX-texmf>=3.0nb3:../../print/teTeX3-texmf
 
 CONFLICTS+=	teTeX-sharesrc-[0-9]*
@@ -21,12 +23,15 @@ DIST_SUBDIR=	teTeX
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-NO_MTREE=	yes
+
+CHECK_INTERPRETER_SKIP+=	share/texmf-dist/source/*
+
+INSTALLATION_DIRS=	share/texmf-dist
 
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
 	extract_file=${_DISTDIR:Q}/${DISTFILES:Q};			\
-	cd ${PREFIX}/share/texmf-dist; ${EXTRACT_CMD}
+	cd ${DESTDIR}${PREFIX}/share/texmf-dist; ${EXTRACT_CMD}
 
 .include "../../mk/bsd.pkg.mk"
