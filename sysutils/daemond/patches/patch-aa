@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2009/03/26 19:05:29 joerg Exp $
+
+--- Makefile.orig	2009-03-26 19:50:47.000000000 +0100
++++ Makefile
+@@ -1,5 +1,3 @@
+-DESTDIR=/usr/pkg
+-
+ all: daemond
+ 
+ daemond: daemond.c
+@@ -9,7 +7,7 @@ daemond.0: daemond.8
+ 	nroff -man $? >$* || rm -f $*
+ 
+ install: all
+-	install daemond ${DESTDIR}/bin
+-	install -m 0644 daemond.8 ${DESTDIR}/man/man8
++	${BSD_INSTALL_PROGRAM} daemond ${DESTDIR}${PREFIX}/bin
++	${BSD_INSTALL_MAN} daemond.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+ clean:
+ 	rm -f daemond
