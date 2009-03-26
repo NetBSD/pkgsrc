@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/02/25 01:39:28 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/03/26 23:12:22 wiz Exp $
 #
 
 DISTNAME=	bmpx-0.40.14
@@ -10,9 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bmpx.backtrace.info/site/BMPx_Homepage
 COMMENT=	Audio player to be used with a frontend or as a daemon
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2 kde3-1.0
