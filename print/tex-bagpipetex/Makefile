@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2009/03/26 20:06:31 joerg Exp $
 #
 
 DISTNAME=	bagpipetex-3.01
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print
 MASTER_SITES=	http://www.stanford.edu/~wrinnes/bagpipe.tex/distribution/
 DISTFILES=	bagpipe301.tar.gz
@@ -12,19 +12,21 @@ MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://www.stanford.edu/~wrinnes/bagpipe.tex/
 COMMENT=	MusixTeX macros to typeset bagpipe music
 
+BUILD_DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=	tex-musixtex>=112:../../print/tex-musixtex
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
-TEXMF_CNF=	${LOCALBASE}/share/texmf/web2c/texmf.cnf
+INSTALLATION_DIRS=	share/texmf/doc/bagpipetex \
+			share/texmf/doc/bagpipetex/examples \
+			share/texmf/fonts/tfm/bagpipetex \
+			share/texmf/fonts/source/bagpipetex \
+			share/texmf/tex/latex/bagpipetex
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/bagpipetex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/doc/bagpipetex/examples
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/tfm/bagpipetex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/fonts/source/bagpipetex
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/bagpipetex
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${WRKSRC}/bagdoc.dvi \
 		${WRKSRC}/bagdoc.ps \
@@ -32,26 +34,25 @@ do-install:
 		${WRKSRC}/quickref.dvi \
 		${WRKSRC}/quickref.ps \
 		${WRKSRC}/quickref.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex
 	${INSTALL_DATA} ${WRKSRC}/Green.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex/examples
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex/examples
 	${INSTALL_DATA} ${WRKSRC}/GreenTwo.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex/examples
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex/examples
 	${INSTALL_DATA} ${WRKSRC}/Bonnets.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex/examples
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex/examples
 	${INSTALL_DATA} ${WRKSRC}/Washer.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex/examples
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex/examples
 	${INSTALL_DATA} ${WRKSRC}/BlackDonald.tex \
-		${PREFIX}/share/texmf/doc/bagpipetex/examples
+		${DESTDIR}${PREFIX}/share/texmf/doc/bagpipetex/examples
 	${INSTALL_DATA} ${WRKSRC}/*.mf \
-		${PREFIX}/share/texmf/fonts/source/bagpipetex
+		${DESTDIR}${PREFIX}/share/texmf/fonts/source/bagpipetex
 	${INSTALL_DATA} ${WRKSRC}/*.tfm \
-		${PREFIX}/share/texmf/fonts/tfm/bagpipetex
+		${DESTDIR}${PREFIX}/share/texmf/fonts/tfm/bagpipetex
 	${INSTALL_DATA} ${WRKSRC}/bagpipe.tex \
-		${PREFIX}/share/texmf/tex/latex/bagpipetex
+		${DESTDIR}${PREFIX}/share/texmf/tex/latex/bagpipetex
 	${INSTALL_DATA} ${WRKSRC}/*.ini \
-		${PREFIX}/share/texmf/tex/latex/bagpipetex
-	${LOCALBASE}/bin/texconfig rehash
+		${DESTDIR}${PREFIX}/share/texmf/tex/latex/bagpipetex
 
 do-build:
 	cd ${WRKDIR} ; \
@@ -62,4 +63,5 @@ do-build:
 	musixtex quickref ; \
 	dvips quickref.dvi -o quickref.ps
 
+.include "../../print/kpathsea/texmf.mk"
 .include "../../mk/bsd.pkg.mk"
