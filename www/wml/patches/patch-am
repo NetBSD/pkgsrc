@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2009/03/26 18:19:31 joerg Exp $
+
+--- wml_backend/p3_eperl/configure.in.orig	2009-03-26 19:09:40.000000000 +0100
++++ wml_backend/p3_eperl/configure.in
+@@ -159,7 +159,7 @@ case $usedl in
+     define )
+         rc=yes
+         AC_DEFINE(HAVE_PERL_DYNALOADER)
+-        perl_dla=$perl_archlib/auto/DynaLoader/DynaLoader.a
++        perl_dla=
+         ;;
+     * )
+         rc=no
