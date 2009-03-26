@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8002 2009/03/26 00:47:41 taca Exp $
+$NetBSD: TODO,v 1.8003 2009/03/26 01:00:44 snj Exp $
 
 Suggested new packages
 ======================
@@ -685,6 +685,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsharutils-4.7
 	o gss-0.0.22
 	o gst-plugins0.10-bad-0.10.11
+	o gst-plugins0.10-ffmpeg-0.10.7
 	o gst-plugins0.10-ugly-0.10.11
 	o gtar-1.22
 	o gtar-base-1.22
