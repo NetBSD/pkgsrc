@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/07 17:25:14 smb Exp $
+# $NetBSD: Makefile,v 1.2 2009/03/26 19:05:29 joerg Exp $
 #
 
 DISTNAME=	daemond-1.0
@@ -10,5 +10,7 @@ HOMEPAGE=	http://www.cs.columbia.edu/~smb/src/
 COMMENT=	Run a command as a daemon
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"
