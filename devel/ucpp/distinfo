@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/03/21 16:41:06 darcy Exp $
+$NetBSD: distinfo,v 1.3 2009/03/26 17:14:32 joerg Exp $
 
 SHA1 (ucpp-1.3.tar.bz2) = 12caf535986e3919d58c47ca35ae9ed4efaa1cf0
 RMD160 (ucpp-1.3.tar.bz2) = 08f9ef1ada15c7451b7966733fb0a63bbe6b179a
 Size (ucpp-1.3.tar.bz2) = 73958 bytes
-SHA1 (patch-aa) = 9059b1f9c1ed58c99414dda920ee07b7d3c7e530
+SHA1 (patch-aa) = 120c4f63cbd44e6831c3ca8dee0bca885debd99d

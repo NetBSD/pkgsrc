@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/21 16:41:06 darcy Exp $
+# $NetBSD: Makefile,v 1.6 2009/03/26 17:14:32 joerg Exp $
 #
 
 DISTNAME=	ucpp-1.3
@@ -13,6 +13,11 @@ COMMENT=	C preprocessor and lexer
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "../../mk/bsd.prefs.mk"
+
+CFLAGS+=	-DSTD_MACROS=NULL -DSTD_ASSERT=NULL
+MAKE_FLAGS+=	FLAGS=${CFLAGS:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ucpp ${DESTDIR}${PREFIX}/bin
