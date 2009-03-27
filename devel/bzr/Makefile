@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.36 2009/03/20 06:49:10 epg Exp $
+# $NetBSD: Makefile,v 1.37 2009/03/27 19:52:19 epg Exp $
 
 DISTNAME=		bzr-${VER}
 #PKGREVISION=		1
 CATEGORIES=		devel scm
-MASTER_SITES=		http://launchpad.net/bzr/${VER}/${VER}/+download/
-VER=			1.13
+MASTER_SITES=		http://launchpad.net/bzr/1.13/${VER}/+download/
+VER=			1.13.1
 
 MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://bazaar-vcs.org/
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 BUILD_DEPENDS+=		${PYPKGPREFIX}-docutils>=0:../../textproc/py-docutils
-BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex>=0.9.3:../../lang/py-pyrex
 
 USE_TOOLS+=		gmake
 
