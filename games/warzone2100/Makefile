@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/22 19:01:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/27 06:54:53 wiz Exp $
 #
 
 DISTNAME=	warzone2100-2.1.1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wz2100.net/
 COMMENT=	Real-time strategy and real-time tactics hybrid computer game
 
+BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	dejavu-ttf-[0-9]*:../../fonts/dejavu-ttf
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -24,10 +26,16 @@ CONFIGURE_ARGS+=	--with-distributor=pkgsrc
 
 CHECK_WRKREF_SKIP=	share/warzone2100/mods/global/aivolution.wz
 
+post-build:
+	cd ${WRKSRC}/po && ${SETENV} ${MAKE_ENV} ${MAKE} update-gmo
+
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
+# API depends is not enough to pull in flex; NetBSD one is 2.5.4 which
+# is too old
+_TOOLS_USE_PKGSRC.flex=		yes
 BUILDLINK_API_DEPENDS.flex+=	flex>=2.5.35
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

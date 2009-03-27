@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/15 16:05:43 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/03/27 06:54:53 wiz Exp $
 
 SHA1 (warzone2100-2.1.1.tar.bz2) = 5f0cb41b283ec709cffa8e00c4c1fda8fc9a63d7
 RMD160 (warzone2100-2.1.1.tar.bz2) = 4eca8c00c917061e93d4c70db07b698a123ce37f
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 95c066ff4340ba6e4c021846541b53eb4cad0704
 SHA1 (patch-ab) = e82a085ddf27a5443e011ada57e78cca1ab66c79
 SHA1 (patch-ac) = b15234c26cbbeffe58e623feb49e9930bd3846d0
 SHA1 (patch-ad) = 1afe3527241d142e1af6c5e432a64324675d74f3
+SHA1 (patch-ae) = 9a5f2fccd93100e87968d2dc9d783acc595ad5d3
