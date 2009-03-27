@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8004 2009/03/26 20:28:25 wiz Exp $
+$NetBSD: TODO,v 1.8005 2009/03/27 23:28:13 epg Exp $
 
 Suggested new packages
 ======================
@@ -451,7 +451,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o btpd-0.13 [pkg/38144]
 	o bugzilla-3.3.2
 	o byacc-20080824
-	o bzr-1.13.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
