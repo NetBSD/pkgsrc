@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8005 2009/03/27 23:28:13 epg Exp $
+$NetBSD: TODO,v 1.8006 2009/03/28 13:23:55 taca Exp $
 
 Suggested new packages
 ======================
@@ -589,6 +589,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
 	o firefox-2.0.0.20
+	o firefox-3.0.8
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
