@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1198 2009/03/27 23:27:49 epg Exp $
+$NetBSD: CHANGES-2009,v 1.1199 2009/03/28 16:53:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtksourceview-sharp2 to 0.12nb6 [he 2009-03-25]
 	Updated lang/parrot to 1.0.0 [he 2009-03-25]
 	Updated devel/bzr to 1.13.1 [epg 2009-03-27]
+	Updated www/firefox3 to 3.0.8 [tnn 2009-03-28]
