@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/03/25 22:37:13 he Exp $
+# $NetBSD: Makefile,v 1.26 2009/03/28 18:11:43 manu Exp $
 #
 
 OO_VER=			3.0.1
@@ -199,6 +199,7 @@ post-install:
 .include "../../mk/compiler.mk"
 
 .include "../../databases/db4/buildlink3.mk"
+.include "../../databases/openldap-client/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
