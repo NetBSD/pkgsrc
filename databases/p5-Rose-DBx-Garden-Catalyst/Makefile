@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/20 16:12:47 he Exp $
+# $NetBSD: Makefile,v 1.5 2009/03/28 17:01:05 wiz Exp $
 
 DISTNAME=	Rose-DBx-Garden-Catalyst-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -20,8 +20,8 @@ DEPENDS+=	p5-Rose-DBx-AutoReconnect>=0:../../databases/p5-Rose-DBx-AutoReconnect
 DEPENDS+=	p5-Rose-DB-Object>=0.77:../../databases/p5-Rose-DB-Object
 DEPENDS+=	p5-Rose-DBx-Garden>=0.11:../../databases/p5-Rose-DBx-Garden
 DEPENDS+=	p5-YAML-Syck>=0:../../textproc/p5-YAML-Syck
-DEPENDS+=	p5-JSON>=>2.00:../../converters/p5-JSON
-DEPENDS+=	p5-JSON-XS>=>2.00:../../converters/p5-JSON-XS
+DEPENDS+=	p5-JSON>=2.00:../../converters/p5-JSON
+DEPENDS+=	p5-JSON-XS>=2.00:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Data-Dump>=0:../../devel/p5-Data-Dump
 DEPENDS+=	p5-Tree-Simple>=0:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
