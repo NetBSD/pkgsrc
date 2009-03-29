@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1199 2009/03/28 16:53:01 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1200 2009/03/29 08:49:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1641,3 +1641,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/parrot to 1.0.0 [he 2009-03-25]
 	Updated devel/bzr to 1.13.1 [epg 2009-03-27]
 	Updated www/firefox3 to 3.0.8 [tnn 2009-03-28]
+	Removed sysutils/xenconsole [martti 2009-03-29]
