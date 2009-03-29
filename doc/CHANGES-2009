@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1200 2009/03/29 08:49:40 martti Exp $
+$NetBSD: CHANGES-2009,v 1.1201 2009/03/29 09:07:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1642,3 +1642,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzr to 1.13.1 [epg 2009-03-27]
 	Updated www/firefox3 to 3.0.8 [tnn 2009-03-28]
 	Removed sysutils/xenconsole [martti 2009-03-29]
+	Updated wm/wmii to 3.6nb4 [wiz 2009-03-29]
