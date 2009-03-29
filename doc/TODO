@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8006 2009/03/28 13:23:55 taca Exp $
+$NetBSD: TODO,v 1.8007 2009/03/29 00:46:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -347,7 +347,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
-	o MesaLib-7.3
+	o MesaLib-7.4
 	o PAM-0.99.7.1
 	o R-2.8.1
 	o REminiscence-0.1.9
@@ -468,16 +468,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.4
 	o cgicc-3.2.7
 	o chemtool-1.6.11
-	o cherokee-0.99.6
+	o cherokee-0.99.7
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.98
 	o claws-mail-3.7.1
 	o climm-0.6.4
-	o clive-2.1.8
+	o clive-2.1.9
 	o clutter-0.8.8
 	o clutter-gtk-0.8.3
+	o coccinelle-0.1.6a [wiz]
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.8.0
@@ -578,7 +579,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o faac-1.26
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbreader-0.10.5
+	o fbreader-0.10.6
 	o fcrackzip-1.0 [pkg/40113]
 	o fd-2.09c
 	o fdgw-20040609
@@ -685,7 +686,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o grep-2.5.4
 	o gsasl-1.1
 	o gsharutils-4.7
-	o gss-0.0.22
+	o gss-0.0.26
 	o gst-plugins0.10-bad-0.10.11
 	o gst-plugins0.10-ffmpeg-0.10.7
 	o gst-plugins0.10-ugly-0.10.11
@@ -803,6 +804,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libextractor-0.5.22
 	o libflash-0.4.13
 	o libgda-4.0.0 [GNOME 2.26]
+	o libgda-4.0.1
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -836,7 +838,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libxklavier-3.9
 	o licq-1.3.6
 	o liferea-1.4.27
-	o lighttpd-1.4.21
+	o lighttpd-1.4.22
 	o lilypond-2.12.1
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -1243,6 +1245,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o smtpfeed-1.20
 	o snd-10.4
 	o snes9x-1.51
+	o snes9x-gtk-1.51.70 [wiz]
 	o snort-2.8.3.2
 	o snownews-1.5.10 [pkg/39887]
 	o snownews-1.5.11
@@ -1256,7 +1259,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ssh-askpass-1.2.4.1
 	o star-1.5
 	o statist-1.3.0
-	o stella-2.7.3
+	o stella-2.7.5
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
@@ -1304,7 +1307,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o transcode-1.1.1
+	o transcode-1.1.2
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
@@ -1355,7 +1358,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wesnoth-1.6
 	o whohas-0.23
 	o windowlab-1.34
-	o wine-devel-1.1.17
+	o wine-devel-1.1.18
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1459,7 +1462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yacas-1.2.0
 	o yafc-1.1
 	o yodl-2.01.02
-	o youtube-dl-20090207
+	o youtube-dl-20090328
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
