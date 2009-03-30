@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2009/03/30 17:07:46 drochner Exp $
+
+--- src/storage/sqlite3/sqlite3_storage.h.orig	2008-03-01 23:48:34.000000000 +0100
++++ src/storage/sqlite3/sqlite3_storage.h
+@@ -148,6 +148,7 @@ private:
+     virtual inline zmm::String quote(unsigned int val) { return zmm::String::from(val); }
+     virtual inline zmm::String quote(long val) { return zmm::String::from(val); }
+     virtual inline zmm::String quote(unsigned long val) { return zmm::String::from(val); }
++    virtual inline zmm::String quote(long long val) { return zmm::String::from(val); }
+     virtual inline zmm::String quote(bool val) { return zmm::String(val ? '1' : '0'); }
+     virtual inline zmm::String quote(char val) { return quote(zmm::String(val)); }
+     virtual zmm::Ref<SQLResult> select(const char *query, int length);
