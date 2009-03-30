@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2009/03/22 14:45:19 snj Exp $
+# $NetBSD: Makefile,v 1.45 2009/03/30 14:14:19 dsainty Exp $
 
 DISTNAME=	gnome-keyring-2.26.0
 PKGREVISION=	1
@@ -40,9 +40,7 @@ CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 .include "../../mk/dlopen.buildlink3.mk"
 
-.if !defined(BUILDLINK_LDADD.dl)
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
