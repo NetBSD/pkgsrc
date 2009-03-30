@@ -1,0 +1,12 @@
+$NetBSD: patch-ba,v 1.1 2009/03/30 17:07:46 drochner Exp $
+
+--- src/storage/sql_storage.h.orig	2008-03-01 23:48:34.000000000 +0100
++++ src/storage/sql_storage.h
+@@ -78,6 +78,7 @@ public:
+     virtual zmm::String quote(unsigned int val) = 0;
+     virtual zmm::String quote(long val) = 0;
+     virtual zmm::String quote(unsigned long val) = 0;
++    virtual zmm::String quote(long long val) = 0;
+     virtual zmm::String quote(bool val) = 0;
+     virtual zmm::String quote(char val) = 0;
+     virtual zmm::Ref<SQLResult> select(const char *query, int length) = 0;
