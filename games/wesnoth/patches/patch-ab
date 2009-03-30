@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.9 2009/03/30 09:31:00 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2009/03/30 09:48:53 wiz Exp $
+
+http://gna.org/bugs/?13293
 
 --- src/Makefile.in.orig	2009-03-18 16:51:06.000000000 +0000
 +++ src/Makefile.in
