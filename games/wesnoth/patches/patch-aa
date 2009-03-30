@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.11 2009/03/30 09:31:00 wiz Exp $
+
+--- utils/update_unit_tree.orig	2008-04-10 16:14:11.000000000 +0000
++++ utils/update_unit_tree
+@@ -40,7 +40,7 @@ fi
+ #echo 'svn update...'
+ #svn update
+ #svn status
+-if [ "$VERSION" == "trunk"]; then
++if [ "$VERSION" = "trunk"]; then
+ 	data/tools/wmlunits -d data/ -o $SITE/temp || exit 1
+ 	rm -rf $SITE/$VERSION
+ 	# move the generated files to their proper place
