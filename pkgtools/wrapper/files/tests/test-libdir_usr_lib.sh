@@ -1,4 +1,4 @@
-# $NetBSD: test-libdir_usr_lib.sh,v 1.1.2.3 2008/07/13 20:40:28 schmonz Exp $
+# $NetBSD: test-libdir_usr_lib.sh,v 1.1.2.4 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case libdir_usr_lib
@@ -8,7 +8,7 @@ libdir_usr_lib_head() {
 libdir_usr_lib_body() {
     input="-L/usr/lib"
     echo > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case libdir_usr_lib_slashdot
@@ -18,7 +18,7 @@ libdir_usr_lib_slashdot_head() {
 libdir_usr_lib_slashdot_body() {
     input="-L/usr/lib/."
     echo > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case libdir_usr_lib_subdir
@@ -28,7 +28,7 @@ libdir_usr_lib_subdir_head() {
 libdir_usr_lib_subdir_body() {
     input="-L/usr/lib/i18n"
     echo "-L/usr/lib/i18n" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {

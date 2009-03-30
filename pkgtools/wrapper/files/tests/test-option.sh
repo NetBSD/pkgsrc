@@ -1,4 +1,4 @@
-# $NetBSD: test-option.sh,v 1.1.2.1 2008/07/13 20:40:28 schmonz Exp $
+# $NetBSD: test-option.sh,v 1.1.2.2 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case preserve_option
@@ -8,7 +8,7 @@ preserve_option_head() {
 preserve_option_body() {
     input="-O2ABC"
     echo "-O2ABC" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case remove_option
@@ -18,7 +18,7 @@ remove_option_head() {
 remove_option_body() {
     input="-O2 -O5 -O9"
     echo > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {
