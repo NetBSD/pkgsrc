@@ -1,4 +1,4 @@
-# $NetBSD: test-include_pkgdir.sh,v 1.1.2.2 2008/07/13 20:40:28 schmonz Exp $
+# $NetBSD: test-include_pkgdir.sh,v 1.1.2.3 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case include_pkgdir
@@ -8,7 +8,7 @@ include_pkgdir_head() {
 include_pkgdir_body() {
     input="-I${LOCALBASE}/include"
     echo "-I${BUILDLINK_DIR}/include" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case include_pkgdir_slashdot
@@ -18,7 +18,7 @@ include_pkgdir_slashdot_head() {
 include_pkgdir_slashdot_body() {
     input="-I${LOCALBASE}/include/."
     echo "-I${BUILDLINK_DIR}/include" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case include_pkgsubdir
@@ -28,7 +28,7 @@ include_pkgsubdir_head() {
 include_pkgsubdir_body() {
     input="-I${LOCALBASE}/include/krb5"
     echo "-I${BUILDLINK_DIR}/include/krb5" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {

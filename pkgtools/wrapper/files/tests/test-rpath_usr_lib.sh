@@ -1,4 +1,4 @@
-# $NetBSD: test-rpath_usr_lib.sh,v 1.1.2.3 2008/07/13 20:40:28 schmonz Exp $
+# $NetBSD: test-rpath_usr_lib.sh,v 1.1.2.4 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case rpath_usr_lib
@@ -8,7 +8,7 @@ rpath_usr_lib_head() {
 rpath_usr_lib_body() {
     input="${COMPILER_RPATH_FLAG}/usr/lib"
     echo > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case rpath_usr_lib_slashdot
@@ -18,7 +18,7 @@ rpath_usr_lib_slashdot_head() {
 rpath_usr_lib_slashdot_body() {
     input="${COMPILER_RPATH_FLAG}/usr/lib/."
     echo > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case rpath_usr_lib_subdir
@@ -35,7 +35,7 @@ rpath_usr_lib_subdir_body() {
         echo > expout
         ;;
     esac
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {

@@ -1,4 +1,4 @@
-# $NetBSD: test-quoted_arg.sh,v 1.1.2.2 2008/07/12 06:57:49 schmonz Exp $
+# $NetBSD: test-quoted_arg.sh,v 1.1.2.3 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case quoted_arg
@@ -8,7 +8,7 @@ quoted_arg_head() {
 quoted_arg_body() {
     input='-D"DEFAULT_MODULE_PATH=\"${LOCALBASE}/lib/security/\""'
     echo "${input}" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {

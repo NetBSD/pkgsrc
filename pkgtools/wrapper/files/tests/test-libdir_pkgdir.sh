@@ -1,4 +1,4 @@
-# $NetBSD: test-libdir_pkgdir.sh,v 1.1.2.2 2008/07/13 20:40:28 schmonz Exp $
+# $NetBSD: test-libdir_pkgdir.sh,v 1.1.2.3 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case libdir_pkgdir
@@ -8,7 +8,7 @@ libdir_pkgdir_head() {
 libdir_pkgdir_body() {
     input="-L${LOCALBASE}/lib"
     echo "-L${BUILDLINK_DIR}/lib" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case libdir_pkgdir_slashdot
@@ -18,7 +18,7 @@ libdir_pkgdir_slashdot_head() {
 libdir_pkgdir_slashdot_body() {
     input="-L${LOCALBASE}/lib/."
     echo "-L${BUILDLINK_DIR}/lib" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_test_case libdir_pkgsubdir
@@ -28,7 +28,7 @@ libdir_pkgsubdir_head() {
 libdir_pkgsubdir_body() {
     input="-L${LOCALBASE}/lib/mysql"
     echo "-L${BUILDLINK_DIR}/lib/mysql" > expout
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {
