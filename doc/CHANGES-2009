@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1203 2009/03/30 09:31:14 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1204 2009/03/30 21:03:11 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1645,3 +1645,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/wmii to 3.6nb4 [wiz 2009-03-29]
 	Updated pkgtools/pkg_select to 20090329 [wiz 2009-03-29]
 	Updated games/wesnoth to 1.6 [wiz 2009-03-30]
+	Updated devel/cpuflags to 1.41 [abs 2009-03-30]
