@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1202 2009/03/29 09:09:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1203 2009/03/30 09:31:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1644,3 +1644,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed sysutils/xenconsole [martti 2009-03-29]
 	Updated wm/wmii to 3.6nb4 [wiz 2009-03-29]
 	Updated pkgtools/pkg_select to 20090329 [wiz 2009-03-29]
+	Updated games/wesnoth to 1.6 [wiz 2009-03-30]
