@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.2.4 2008/07/14 05:27:58 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.2.5 2009/03/30 01:02:25 schmonz Exp $
 #
 
-DISTNAME=		wrapper-20080714
+DISTNAME=		wrapper-20090329
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty

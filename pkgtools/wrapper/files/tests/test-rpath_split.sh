@@ -1,4 +1,4 @@
-# $NetBSD: test-rpath_split.sh,v 1.1.2.1 2008/07/13 20:10:37 schmonz Exp $
+# $NetBSD: test-rpath_split.sh,v 1.1.2.2 2009/03/30 01:02:26 schmonz Exp $
 #
 
 atf_test_case rpath_split
@@ -15,7 +15,7 @@ rpath_split_body() {
         echo > expout
         ;;
     esac
-    atf_check 'echowrapper ${input}' 0 expout ignore
+    atf-check -s eq:0 -o file:expout e ignore 'echowrapper ${input}'
 }
 
 atf_init_test_cases() {

@@ -1,9 +1,9 @@
-# $NetBSD: tests.mk,v 1.1.2.3 2008/07/13 20:46:18 schmonz Exp $
+# $NetBSD: tests.mk,v 1.1.2.4 2009/03/30 01:02:25 schmonz Exp $
 #
 
 TEST_TARGET=	test
 TEST_DIRS=	tests
-DEPENDS+=	atf-[0-9]*:../../devel/atf	# XXX should be TEST_DEPENDS
+DEPENDS+=	atf>=0.6:../../devel/atf	# XXX should be TEST_DEPENDS
 
 .include "../../mk/bsd.prefs.mk"
 
