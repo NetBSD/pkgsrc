@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1 2009/03/30 17:07:46 drochner Exp $
+
+--- src/storage/sql_storage.cc.orig	2008-03-01 23:48:34.000000000 +0100
++++ src/storage/sql_storage.cc
+@@ -1908,7 +1908,7 @@ void SQLStorage::autoscanUpdateLM(Ref<Au
+             throw _Exception(_("autoscanUpdateLM called with adir with illegal objectID and location"));
+     }
+     */
+-    log_debug("id: %d; last_modified: %d\n", adir->getStorageID(), adir->getPreviousLMT());
++    log_debug("id: %d; last_modified: %lld\n", adir->getStorageID(), (long long)adir->getPreviousLMT());
+     Ref<StringBuffer> q(new StringBuffer());
+     *q << "UPDATE " << TQ(AUTOSCAN_TABLE)
+         << " SET " << TQ("last_modified") << '=' << quote(adir->getPreviousLMT())
