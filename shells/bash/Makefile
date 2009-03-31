@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/03/31 10:09:06 hasso Exp $
+# $NetBSD: Makefile,v 1.43 2009/03/31 11:14:42 hasso Exp $
 
 BASH_VERSION=		4.0
 BASH_PATCHLEVEL=	10
@@ -66,11 +66,6 @@ PKG_SUPPORTED_OPTIONS=	static
 CONFIGURE_ARGS+=	--enable-static-link
 BUILDLINK_DEPMETHOD.gettext=	build
 BUILDLINK_DEPMETHOD.readline=	build
-.endif
-
-# the code has problems with older versions of yacc
-.if !empty(MACHINE_PLATFORM:MIRIX-5*)
-USE_TOOLS+=	bison
 .endif
 
 # Use "readline" package on Darwin to avoid link erros.
