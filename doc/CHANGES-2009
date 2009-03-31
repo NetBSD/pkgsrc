@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1205 2009/03/31 10:45:20 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1206 2009/03/31 17:46:43 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/wesnoth to 1.6 [wiz 2009-03-30]
 	Updated devel/cpuflags to 1.41 [abs 2009-03-30]
 	Updated shells/bash to 4.0.10 [hasso 2009-03-31]
+	Updated sysutils/xentools3-hvm to 3.1.4nb3 [bouyer 2009-03-31]
