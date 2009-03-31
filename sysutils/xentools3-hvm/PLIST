@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/24 20:04:51 abs Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/03/31 17:37:36 bouyer Exp $
 lib/xen/boot/hvmloader
 libexec/qemu-dm
-man/man1/xen-qemu-img.1
-man/man1/xen-qemu.1
-share/doc/xen/qemu-doc.html
-share/doc/xen/qemu-tech.html
 share/examples/xen/hvm
 share/examples/xen/qemu-ifup
 share/xen/qemu/keymaps/ar
@@ -44,6 +40,5 @@ share/xen/qemu/keymaps/th
 share/xen/qemu/keymaps/tr
 @dirrm share/xen/qemu/keymaps
 @dirrm share/xen/qemu
-@dirrm share/doc/xen
 @dirrm lib/xen/boot
 @dirrm lib/xen
