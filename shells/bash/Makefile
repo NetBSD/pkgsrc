@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.41 2009/02/24 12:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/03/31 10:09:06 hasso Exp $
 
-DISTNAME=	bash-4.0
+BASH_VERSION=		4.0
+BASH_PATCHLEVEL=	10
+
+DISTNAME=	bash-${BASH_VERSION}
+PKGNAME=	bash-${BASH_VERSION}.${BASH_PATCHLEVEL}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
 
-#PATCH_SITES=	${MASTER_SITES:=bash-3.2-patches/}
-#PATCHFILES=	bash32-001 bash32-002 bash32-003 bash32-004 bash32-005
+PATCH_SITES=	${MASTER_SITES:=bash-4.0-patches/}
+PATCHFILES+=	bash40-001 bash40-002 bash40-003 bash40-004 bash40-005
+PATCHFILES+=	bash40-006 bash40-007 bash40-008 bash40-009 bash40-010
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
@@ -17,7 +22,7 @@ CONFLICTS=	static-bash-[0-9]*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		makeinfo yacc
+USE_TOOLS+=		makeinfo bison
 USE_PKGLOCALEDIR=	yes
 TEXINFO_REQD=		4.1
 GNU_CONFIGURE=		yes
