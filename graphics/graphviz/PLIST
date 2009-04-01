@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2009/04/01 16:36:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.31 2009/04/01 17:12:57 tron Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -50,7 +50,6 @@ include/graphviz/pathplan.h
 include/graphviz/textpara.h
 include/graphviz/types.h
 include/graphviz/usershape.h
-lib/graphviz/config
 lib/graphviz/libgvplugin_core.la
 lib/graphviz/libgvplugin_dot_layout.la
 lib/graphviz/libgvplugin_gd.la
