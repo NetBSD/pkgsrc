@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/23 11:05:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/01 16:20:41 roy Exp $
 #
 
 DISTNAME=	telepathy-gabble-0.7.21
@@ -19,6 +19,7 @@ USE_TOOLS+=	gmake pkg-config
 .if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
 BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.7.23
 .include "../../chat/telepathy-glib/buildlink3.mk"

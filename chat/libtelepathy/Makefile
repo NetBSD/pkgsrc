@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/01 16:20:41 roy Exp $
 #
 
 DISTNAME=	libtelepathy-0.3.3
@@ -15,6 +15,9 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	libtelepathy.pc.in
+
+.include "../../lang/python/pyversion.mk"
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
