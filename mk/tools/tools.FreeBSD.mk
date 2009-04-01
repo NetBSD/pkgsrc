@@ -1,4 +1,4 @@
-# $NetBSD: tools.FreeBSD.mk,v 1.31 2007/08/20 11:00:33 joerg Exp $
+# $NetBSD: tools.FreeBSD.mk,v 1.32 2009/04/01 12:07:08 joerg Exp $
 #
 # System-supplied tools for the FreeBSD operating system.
 
@@ -59,7 +59,6 @@ TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
-TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
