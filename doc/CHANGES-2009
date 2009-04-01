@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1206 2009/03/31 17:46:43 bouyer Exp $
+$NetBSD: CHANGES-2009,v 1.1207 2009/04/01 16:36:20 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cpuflags to 1.41 [abs 2009-03-30]
 	Updated shells/bash to 4.0.10 [hasso 2009-03-31]
 	Updated sysutils/xentools3-hvm to 3.1.4nb3 [bouyer 2009-03-31]
+	Updated graphics/graphviz to 2.20.3nb3 [tron 2009-04-01]
