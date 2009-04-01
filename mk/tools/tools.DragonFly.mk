@@ -1,4 +1,4 @@
-# $NetBSD: tools.DragonFly.mk,v 1.35 2008/05/25 21:40:59 joerg Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.36 2009/04/01 12:07:08 joerg Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
@@ -66,7 +66,6 @@ TOOLS_PLATFORM.nice?=		/usr/bin/nice
 TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
-TOOLS_PLATFORM.pax?=		/bin/pax
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.readelf?=	/usr/bin/readelf
