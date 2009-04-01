@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/09 22:56:22 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/01 16:20:41 roy Exp $
 #
 
 DISTNAME=	telepathy-mission-control-4.67
@@ -17,6 +17,9 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	libmcclient.pc.in
 PKGCONFIG_OVERRIDE+=	libmissioncontrol.pc.in
 PKGCONFIG_OVERRIDE+=	mission-control.pc.in
+
+.include "../../lang/python/pyversion.mk"
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
 .include "../../chat/libtelepathy/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
