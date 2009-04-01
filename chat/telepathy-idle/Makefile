@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/23 10:59:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/01 16:20:41 roy Exp $
 #
 
 DISTNAME=	telepathy-idle-0.1.3
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	OPENSSL_LIBS="-L${BUILDLINK_PREFIX.openssl}/lib ${COMPILER_RPAT
 .if ${PYPKGPREFIX} == "py24" || ${PYPKGPREFIX} == "py23"
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
+CONFIGURE_ENV+=		ac_cv_prog_PYTHON=${PYTHONBIN}
 
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
