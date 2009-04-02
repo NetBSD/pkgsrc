@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1210 2009/04/02 18:15:00 tez Exp $
+$NetBSD: CHANGES-2009,v 1.1211 2009/04/02 18:34:30 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/graphviz to 2.20.3nb4 [tron 2009-04-01]
 	Updated sysutils/etcmanage to 0.6.1 [gdt 2009-04-01]
 	Updated mail/p5-Mail-Mbox-MessageParser to 1.5000nb2 [tez 2009-04-02]
+	Updated mail/milter-greylist to 4.2 [tron 2009-04-02]
