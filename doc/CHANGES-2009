@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1209 2009/04/01 19:05:17 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.1210 2009/04/02 18:15:00 tez Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1650,3 +1650,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/xentools3-hvm to 3.1.4nb3 [bouyer 2009-03-31]
 	Updated graphics/graphviz to 2.20.3nb4 [tron 2009-04-01]
 	Updated sysutils/etcmanage to 0.6.1 [gdt 2009-04-01]
+	Updated mail/p5-Mail-Mbox-MessageParser to 1.5000nb2 [tez 2009-04-02]
