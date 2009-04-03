@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.58 2009/02/11 05:05:20 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.59 2009/04/03 01:52:24 snj Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -10,7 +10,7 @@
     built. Building a package is separated into different
     <emphasis>phases</emphasis> (for example <varname>fetch</varname>,
     <varname>build</varname>, <varname>install</varname>), all of which are
-    described in the following sections. Each phase is splitted into
+    described in the following sections. Each phase is split into
     so-called <emphasis>stages</emphasis>, which take the name of the
     containing phase, prefixed by one of <varname>pre-</varname>,
     <varname>do-</varname> or <varname>post-</varname>. (Examples are
