@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.8 2007/06/01 11:07:25 rillig Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.9 2009/04/03 01:52:24 snj Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -265,7 +265,7 @@ followed:</para>
   <listitem>
     <para>Get a list of all the tarballs that form the new release by
     using the following commands.  These will leave the full list of the
-    components's distfiles into the <filename>list.txt</filename>
+    components' distfiles into the <filename>list.txt</filename>
     file:</para>
 
     <screen>&cprompt; <userinput>echo ls "*.tar.bz2" | \
