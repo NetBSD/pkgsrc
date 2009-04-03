@@ -2434,7 +2434,7 @@ PKG_DEFAULT_OPTIONS=    -arts -dvdread -esound
 PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec </pre>
 <p>It is important to note that options that were specifically
-    suggested by the package maintainer must be explicitely removed if
+    suggested by the package maintainer must be explicitly removed if
     you do not wish to include the option.  If you are unsure you can view
     the current state with <span class="command"><strong>make show-options</strong></span>.</p>
 <p>The following settings are consulted in the order given, and
@@ -5307,12 +5307,12 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
 <p>This replaces all occurrences of &#8220;<span class="quote">${SOMEVAR}</span>&#8221;
     in the <code class="filename">PLIST</code> with
     &#8220;<span class="quote">somevalue</span>&#8221;.</p>
-<p>The <code class="varname">PLIST_VARS</code> can be used to simplify
+<p>The <code class="varname">PLIST_VARS</code> variable can be used to simplify
     the common case of conditionally including some
     <code class="filename">PLIST</code> entries. It can be done by adding
     <code class="literal"><code class="varname">PLIST_VARS</code>+=foo</code> and
-    setting the coresponding <code class="varname">PLIST.foo</code> variable
-    to <code class="literal">yes</code>, if the entry should be included.
+    setting the corresponding <code class="varname">PLIST.foo</code> variable
+    to <code class="literal">yes</code> if the entry should be included.
     This will substitute &#8220;<span class="quote"><code class="varname">${PLIST.foo}</code></span>&#8221;
     in the <code class="filename">PLIST</code> with either
     &#8220;<span class="quote"><code class="literal">""</code></span>&#8221; or
@@ -5573,47 +5573,28 @@ BUILDLINK_API_DEPENDS.foo+=   foo&gt;=1.1.0
       <code class="filename">buildlink3.mk</code> is taken
       from <code class="filename">pkgsrc/graphics/tiff</code>:</p>
 <pre class="programlisting">
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+BUILDLINK_TREE+=	tiff
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=     tiff
-.endif
+.if !defined(TIFF_BUILDLINK3_MK)
+TIFF_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
-
-.if ${TIFF_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.tiff+=        tiff&gt;=3.6.1
-BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
+BUILDLINK_API_DEPENDS.tiff+=	tiff&gt;=3.6.1
+BUILDLINK_ABI_DEPENDS.tiff+=	tiff&gt;=3.7.2nb1
+BUILDLINK_PKGSRCDIR.tiff?=	../../graphics/tiff
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.endif # TIFF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=	-tiff
 </pre>
 <p>The header and footer manipulate
-      <code class="varname">BUILDLINK_DEPTH</code>, which is common across all
+      <code class="varname">BUILDLINK_TREE</code>, which is common across all
       <code class="filename">buildlink3.mk</code> files and is used to track
-      at what depth we are including
-      <code class="filename">buildlink3.mk</code> files.</p>
-<p>The first section controls if the dependency on
-      <em class="replaceable"><code>pkg</code></em> is added.
-      <code class="varname">BUILDLINK_DEPENDS</code> is the global list of
-      packages for which dependencies are added by
-      buildlink3.</p>
-<p>The second section advises pkgsrc that the
-      <code class="filename">buildlink3.mk</code> file for
-      <em class="replaceable"><code>pkg</code></em> has been included at some point.
-      <code class="varname">BUILDLINK_PACKAGES</code> is the global list of
-      packages for which <code class="filename">buildlink3.mk</code> files
-      have been included.  It must <span class="emphasis"><em>always</em></span> be
-      appended to within a <code class="filename">buildlink3.mk</code>
-      file.</p>
-<p>The third section is protected from multiple inclusion
+      the dependency tree.</p>
+<p>The main section is protected from multiple inclusion
       and controls how the dependency on <em class="replaceable"><code>pkg</code></em> is
       added.  Several important variables are set in the section:</p>
 <div class="itemizedlist"><ul type="disc">
@@ -5692,7 +5673,7 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
 	    destination filename, e.g. <span class="command"><strong>-e
 	    "s|/curses.h|/ncurses.h|g"</strong></span>.</p></li>
 </ul></div>
-<p>The last section includes any
+<p>This section can additionally include any
       <code class="filename">buildlink3.mk</code> needed for
       <em class="replaceable"><code>pkg</code></em>'s library dependencies.
       Including these <code class="filename">buildlink3.mk</code> files
@@ -5701,7 +5682,8 @@ BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
       <code class="filename">${BUILDLINK_DIR}</code>
       whenever the <em class="replaceable"><code>pkg</code></em>
       <code class="filename">buildlink3.mk</code>
-      file is included.</p>
+      file is included. Dependencies are only added for directly
+      include <code class="filename">buildlink3.mk</code> files.</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -6570,7 +6552,7 @@ details.</p>
     built. Building a package is separated into different
     <span class="emphasis"><em>phases</em></span> (for example <code class="varname">fetch</code>,
     <code class="varname">build</code>, <code class="varname">install</code>), all of which are
-    described in the following sections. Each phase is splitted into
+    described in the following sections. Each phase is split into
     so-called <span class="emphasis"><em>stages</em></span>, which take the name of the
     containing phase, prefixed by one of <code class="varname">pre-</code>,
     <code class="varname">do-</code> or <code class="varname">post-</code>. (Examples are
@@ -7661,7 +7643,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230286379"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230299317"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7671,7 +7653,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230286388"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230299325"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7682,7 +7664,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230286396"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230299334"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9694,7 +9676,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230291165"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230286353"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9710,7 +9692,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230291198"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230286387"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9728,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230291236"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230286423"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9746,7 +9728,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230291270"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230286458"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9759,7 +9741,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230291289"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230286476"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9775,7 +9757,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230291315"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230286502"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9799,7 +9781,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230291450"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230286569"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9824,7 +9806,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230291481"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230286669"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9872,7 +9854,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230291536"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230286724"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10119,7 +10101,7 @@ followed:</p>
 <li>
 <p>Get a list of all the tarballs that form the new release by
     using the following commands.  These will leave the full list of the
-    components's distfiles into the <code class="filename">list.txt</code>
+    components' distfiles into the <code class="filename">list.txt</code>
     file:</p>
 <pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>echo ls "*.tar.bz2" | \
     ftp -V ftp://ftp.gnome.org/pub/gnome/platform/x.y/x.y.z/sources/ | \
@@ -10911,7 +10893,7 @@ Connected to ftp.plig.net.
 230-Please note that all transfers from this FTP site are logged. If you
 230-do not like this, please disconnect now.
 230-
-230-This arhive is available via
+230-This archive is available via
 230-
 230-HTTP:  http://ftp.plig.org/
 230-FTP:   ftp://ftp.plig.org/     (max 500 connections)

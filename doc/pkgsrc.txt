@@ -2102,9 +2102,9 @@ PKG_OPTIONS.kdebase=    debug -sasl
 PKG_OPTIONS.apache=     suexec
 
 It is important to note that options that were specifically suggested by the
-package maintainer must be explicitely removed if you do not wish to include
-the option. If you are unsure you can view the current state with make
-show-options.
+package maintainer must be explicitly removed if you do not wish to include the
+option. If you are unsure you can view the current state with make show-options
+.
 
 The following settings are consulted in the order given, and the last setting
 that selects or disables an option is used:
@@ -4572,11 +4572,11 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
 
 This replaces all occurrences of "${SOMEVAR}" in the PLIST with "somevalue".
 
-The PLIST_VARS can be used to simplify the common case of conditionally
-including some PLIST entries. It can be done by adding PLIST_VARS+=foo and
-setting the coresponding PLIST.foo variable to yes, if the entry should be
-included. This will substitute "${PLIST.foo}" in the PLIST with either """" or
-""@comment "". For example, in Makefile:
+The PLIST_VARS variable can be used to simplify the common case of
+conditionally including some PLIST entries. It can be done by adding
+PLIST_VARS+=foo and setting the corresponding PLIST.foo variable to yes if the
+entry should be included. This will substitute "${PLIST.foo}" in the PLIST with
+either """" or ""@comment "". For example, in Makefile:
 
 PLIST_VARS+=    foo
 .if condition
@@ -4797,41 +4797,27 @@ following command will generate a good starting point for buildlink3.mk files:
 The following real-life example buildlink3.mk is taken from pkgsrc/graphics/
 tiff:
 
-# $NetBSD: buildlink3.mk,v 1.7 2004/03/18 09:12:12 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/03/20 19:24:45 joerg Exp $
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
-TIFF_BUILDLINK3_MK:=    ${TIFF_BUILDLINK3_MK}+
+BUILDLINK_TREE+=        tiff
 
-.if ${BUILDLINK_DEPTH} == "+"
-BUILDLINK_DEPENDS+=     tiff
-.endif
+.if !defined(TIFF_BUILDLINK3_MK)
+TIFF_BUILDLINK3_MK:=
 
-BUILDLINK_PACKAGES:=    ${BUILDLINK_PACKAGES:Ntiff}
-BUILDLINK_PACKAGES+=    tiff
-
-.if ${TIFF_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.tiff+=        tiff>=3.6.1
+BUILDLINK_API_DEPENDS.tiff+=    tiff>=3.6.1
+BUILDLINK_ABI_DEPENDS.tiff+=    tiff>=3.7.2nb1
 BUILDLINK_PKGSRCDIR.tiff?=      ../../graphics/tiff
-.endif  # TIFF_BUILDLINK3_MK
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.endif # TIFF_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_TREE+=        -tiff
 
-The header and footer manipulate BUILDLINK_DEPTH, which is common across all
-buildlink3.mk files and is used to track at what depth we are including
-buildlink3.mk files.
+The header and footer manipulate BUILDLINK_TREE, which is common across all
+buildlink3.mk files and is used to track the dependency tree.
 
-The first section controls if the dependency on pkg is added. BUILDLINK_DEPENDS
-is the global list of packages for which dependencies are added by buildlink3.
-
-The second section advises pkgsrc that the buildlink3.mk file for pkg has been
-included at some point. BUILDLINK_PACKAGES is the global list of packages for
-which buildlink3.mk files have been included. It must always be appended to
-within a buildlink3.mk file.
-
-The third section is protected from multiple inclusion and controls how the
+The main section is protected from multiple inclusion and controls how the
 dependency on pkg is added. Several important variables are set in the section:
 
   * BUILDLINK_API_DEPENDS.pkg is the actual dependency recorded in the
@@ -4881,10 +4867,11 @@ symlinking:
     used to transform the name of the source filename into a destination
     filename, e.g. -e "s|/curses.h|/ncurses.h|g".
 
-The last section includes any buildlink3.mk needed for pkg's library
-dependencies. Including these buildlink3.mk files means that the headers and
-libraries for these dependencies are also symlinked into ${BUILDLINK_DIR}
-whenever the pkg buildlink3.mk file is included.
+This section can additionally include any buildlink3.mk needed for pkg's
+library dependencies. Including these buildlink3.mk files means that the
+headers and libraries for these dependencies are also symlinked into $
+{BUILDLINK_DIR} whenever the pkg buildlink3.mk file is included. Dependencies
+are only added for directly include buildlink3.mk files.
 
 14.2.2. Updating BUILDLINK_API_DEPENDS.pkg in buildlink3.mk files
 
@@ -5603,10 +5590,10 @@ Table of Contents
 
 This chapter gives a detailed description on how a package is built. Building a
 package is separated into different phases (for example fetch, build, install),
-all of which are described in the following sections. Each phase is splitted
-into so-called stages, which take the name of the containing phase, prefixed by
-one of pre-, do- or post-. (Examples are pre-configure, post-build.) Most of
-the actual work is done in the do-* stages.
+all of which are described in the following sections. Each phase is split into
+so-called stages, which take the name of the containing phase, prefixed by one
+of pre-, do- or post-. (Examples are pre-configure, post-build.) Most of the
+actual work is done in the do-* stages.
 
 Never override the regular targets (like fetch), if you have to, override the
 do-* ones instead.
@@ -8391,7 +8378,7 @@ In order to update the GNOME components in pkgsrc to a new stable release
 (either major or minor), the following steps should be followed:
 
  1. Get a list of all the tarballs that form the new release by using the
-    following commands. These will leave the full list of the components's
+    following commands. These will leave the full list of the components'
     distfiles into the list.txt file:
 
     % echo ls "*.tar.bz2" | \
@@ -9076,7 +9063,7 @@ Connected to ftp.plig.net.
 230-Please note that all transfers from this FTP site are logged. If you
 230-do not like this, please disconnect now.
 230-
-230-This arhive is available via
+230-This archive is available via
 230-
 230-HTTP:  http://ftp.plig.org/
 230-FTP:   ftp://ftp.plig.org/     (max 500 connections)
