@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/03/28 18:11:43 manu Exp $
+# $NetBSD: Makefile,v 1.27 2009/04/03 15:03:30 tnn Exp $
 #
 
 OO_VER=			3.0.1
@@ -37,6 +37,8 @@ CONFIGURE_DIRS=		config_office
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
+# Use of ccache causes "error 65280" while making OOO300_m15/svx/source/gengal
+IGNORE_CCACHE=		yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
