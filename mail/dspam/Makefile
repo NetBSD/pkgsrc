@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/03/16 18:13:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.61 2009/04/03 19:52:38 joerg Exp $
 
 DISTNAME=	dspam-3.8.0
 PKGREVISION=	2
@@ -142,14 +142,14 @@ post-install:
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
 	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
 	cd ${WRKSRC}/src/tools.${drv}_drv && \
-		pax -rwppm ./*.sql ${DATADIR}/${drv}
+		pax -rwpm ./*.sql ${DATADIR}/${drv}
 .  endif
 .endfor
 
 .if !empty(DSPAM_STORAGE_DRIVER:Msqlite*)
 	${INSTALL_DATA_DIR} ${DATADIR}/sqlite
 	 cd ${WRKSRC}/src/tools.sqlite_drv && \
-	 	pax -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
+	 	pax -rwpm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
 .endif
 
 	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/*.txt
