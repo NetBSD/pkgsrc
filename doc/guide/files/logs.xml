@@ -1,4 +1,4 @@
-<!-- $NetBSD: logs.xml,v 1.2 2006/02/12 14:44:59 rillig Exp $ -->
+<!-- $NetBSD: logs.xml,v 1.3 2009/04/03 01:52:24 snj Exp $ -->
 
 <appendix id="logs">
   <title>Build logs</title>
@@ -27,7 +27,7 @@ Connected to ftp.plig.net.
 230-Please note that all transfers from this FTP site are logged. If you
 230-do not like this, please disconnect now.
 230-
-230-This arhive is available via
+230-This archive is available via
 230-
 230-HTTP:  http://ftp.plig.org/
 230-FTP:   ftp://ftp.plig.org/     (max 500 connections)
