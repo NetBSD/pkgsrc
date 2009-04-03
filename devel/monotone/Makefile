@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/01/18 21:24:12 jmmv Exp $
+# $NetBSD: Makefile,v 1.58 2009/04/03 19:40:22 joerg Exp $
 #
 
 DISTNAME=	monotone-0.42
@@ -41,9 +41,9 @@ CONFIGURE_ARGS+=	--disable-ipv6
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/monotone
 	cd ${WRKSRC} && rm -rf contrib/.deps && \
-	    pax -rw -pp -pm contrib \
+	    pax -rw -pm contrib \
 	    ${DESTDIR}${PREFIX}/share/monotone
-	cd ${WRKSRC} && pax -rw -pp -pm figures/*.png \
+	cd ${WRKSRC} && pax -rw -pm figures/*.png \
 	    ${DESTDIR}${PREFIX}/share/doc/monotone
 
 BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
