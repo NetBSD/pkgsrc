@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/12 04:40:57 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/04 12:41:13 he Exp $
 #
 
 DISTNAME=	Net-LDAP-Class-0.18
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Net-LDAP-Class/
 COMMENT=	Perl 5 module providing an object-relational mapper for Net::LDAP
 
 DEPENDS+=	p5-Rose-Object-[0-9]*:../../devel/p5-Rose-Object
-DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-LDAP
+DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 DEPENDS+=	p5-Net-LDAP-Batch-[0-9]*:../../devel/p5-Net-LDAP-Batch
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 BUILD_DEPENDS+=	p5-Net-LDAP-Server-Test>=0.8.0.01:../../devel/p5-Net-LDAP-Server-Test
