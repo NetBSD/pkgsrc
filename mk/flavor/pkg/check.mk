@@ -1,4 +1,4 @@
-# $NetBSD: check.mk,v 1.12 2009/03/20 16:52:40 joerg Exp $
+# $NetBSD: check.mk,v 1.13 2009/04/04 19:07:58 joerg Exp $
 #
 
 # _flavor-check-vulnerable:
@@ -21,5 +21,5 @@ _flavor-check-vulnerable: .PHONY
 	fi;							\
 	${PHASE_MSG} "Checking for vulnerabilities in ${PKGNAME}"; \
 	${AUDIT_PACKAGES} ${_AUDIT_PACKAGES_CMD} ${AUDIT_PACKAGES_FLAGS} ${PKGNAME} \
-	|| ${FAIL_MSG} "Define ALLOW_VULNERABLE_PACKAGES in mk.conf or IGNORE_URLS in audit-packages.conf(5) if this package is absolutely essential."
+	|| ${FAIL_MSG} "Define ALLOW_VULNERABLE_PACKAGES in mk.conf or ${_AUDIT_CONFIG_OPTION} in ${_AUDIT_CONFIG_FILE}(5) if this package is absolutely essential."
 .endif
