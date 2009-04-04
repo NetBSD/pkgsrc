@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2000/11/13 14:34:41 abs Exp $
+$NetBSD: patch-ag,v 1.2 2009/04/04 20:44:58 joerg Exp $
 
 --- vncserver.orig	Thu Oct 26 16:16:37 2000
 +++ vncserver
@@ -8,8 +8,8 @@ $NetBSD: patch-ag,v 1.1 2000/11/13 14:34:41 abs Exp $
  #
 -# $cmd .= " -fp /usr/lib/X11/fonts/misc/,/usr/lib/X11/fonts/75dpi/";
 -# $cmd .= " -co /usr/lib/X11/rgb";
-+$cmd .= " -fp /usr/X11R6/lib/X11/fonts/misc/,/usr/X11R6/lib/X11/fonts/75dpi/";
-+$cmd .= " -co /usr/X11R6/lib/X11/rgb";
++$cmd .= " -fp @X11BASE@/lib/X11/fonts/misc/,@X11BASE@/lib/X11/fonts/75dpi/";
++$cmd .= " -co @X11BASE@/lib/X11/rgb";
  #
  
  foreach $arg (@ARGV) {
