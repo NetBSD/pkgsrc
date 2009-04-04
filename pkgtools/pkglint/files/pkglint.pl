@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.806 2009/03/25 16:33:25 wiz Exp $
+# $NetBSD: pkglint.pl,v 1.807 2009/04/04 18:36:04 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6378,6 +6378,12 @@ sub checklines_buildlink3_mk_pre2009($$) {
 		lines_log_warning($lines, $lineno, "Expected BUILDLINK_TREE line.");
 		return;
 	}
+	$lines->[$lineno - 1]->log_warning("Please switch to the new buildlink3.mk format.");
+	$lines->[$lineno - 1]->explain_warning(
+"The format for buildlink3.mk files has changed in 2009Q1. You can",
+"generate a new-style buildlink3.mk file with the createbuildlink>=3.14",
+"package and then adjust the variable's values manually.");
+
 	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t*\$\{\1_BUILDLINK3_MK\}\+$"))) {
 		$bl_PKGBASE_line = $lines->[$lineno - 1];
 		$bl_PKGBASE = $m->text(1);
