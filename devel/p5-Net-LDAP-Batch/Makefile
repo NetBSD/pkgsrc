@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/12 04:54:54 seb Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/04 12:41:13 he Exp $
 #
 
 DISTNAME=	Net-LDAP-Batch-0.02
@@ -12,7 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Net-LDAP-Batch/
 COMMENT=	Perl 5 module to perform a batch of LDAP actions
 
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
-DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-LDAP
+DEPENDS+=	p5-perl-ldap-[0-9]*:../../databases/p5-perl-ldap
 BUILD_DEPENDS+=	p5-Net-LDAP-Server-Test>=0.4:../../devel/p5-Net-LDAP-Server-Test
 
 USE_LANGUAGES=		# empty
