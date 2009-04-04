@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.11 2009/03/20 16:52:40 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.12 2009/04/04 19:07:58 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -54,11 +54,15 @@ AUDIT_PACKAGES?=	${PKG_ADMIN}
 _AUDIT_PACKAGES_CMD?=	audit-pkg
 _EXTRACT_PKGVULNDIR=	${PKG_ADMIN} config-var PKGVULNDIR
 DOWNLOAD_VULN_LIST?=	${PKG_ADMIN} fetch-pkg-vulnerabilities
+_AUDIT_CONFIG_FILE=	pkg_install.conf
+_AUDIT_CONFIG_OPTION=	IGNORE_URL
 .else
 AUDIT_PACKAGES?=	${PKG_TOOLS_BIN}/audit-packages
 _AUDIT_PACKAGES_CMD?=	-n
 _EXTRACT_PKGVULNDIR=	${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR
 DOWNLOAD_VULN_LIST?=	${PKG_TOOLS_BIN}/download-vulnerability-list
+_AUDIT_CONFIG_FILE=	audit-packages.conf
+_AUDIT_CONFIG_OPTION=	IGNORE_URLS
 .endif
 
 
