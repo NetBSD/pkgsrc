@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/04/04 13:49:17 wiz Exp $
 #
 
 DISTNAME=		gdb-6.2.1
@@ -23,9 +23,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/gdb6
 CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/gdb6
 CONFIGURE_ARGS+=	--enable-libada
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 pre-patch:
 	${CP} ${FILESDIR}/nbsd-nat.c ${WRKSRC}/gdb
@@ -38,5 +38,4 @@ do-test:
 	fi
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

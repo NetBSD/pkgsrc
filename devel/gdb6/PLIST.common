@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.1 2009/02/11 21:58:40 shattered Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2009/04/04 13:49:17 wiz Exp $
 bin/gdb
-bin/gdbtui
+${PLIST.tui}bin/gdbtui
 include/gdb6/ansidecl.h
 include/gdb6/bfd.h
 include/gdb6/bfdlink.h
@@ -19,7 +19,7 @@ lib/gdb6/libiberty.a
 lib/gdb6/libmmalloc.a
 lib/gdb6/libopcodes.la
 man/man1/gdb.1
-man/man1/gdbtui.1
+${PLIST.tui}man/man1/gdbtui.1
 share/locale/da/LC_MESSAGES/bfd.mo
 share/locale/da/LC_MESSAGES/opcodes.mo
 share/locale/de/LC_MESSAGES/opcodes.mo
