@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2008/06/18 11:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/04 20:44:58 joerg Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		net x11
 MASTER_SITES=		ftp://ftp.uk.research.att.com/pub/vnc/dist/
 DISTFILES=		vnc-3.3.3r2_unixsrc.tgz \
@@ -16,13 +16,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
+
 DEPENDS+=		vncviewer-[0-9]*:../../net/vncviewer
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 NO_INSTALL_MANPAGES=	yes
 USE_IMAKE=		yes
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run xauth:run
 BUILD_DEFS+=		IPV6_READY
 
 BUILD_TARGET=		World
@@ -34,22 +37,28 @@ MAKE_ENV+= CC=${CC:Q}	#for make imake in Xvnc/config/imake
 
 .include "../../mk/bsd.prefs.mk"
 
-post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	vncserver
+SUBST_SED.paths+=	-e 's,@X11BASE@,${X11BASE},g'
+SUBST_STAGE.paths=	pre-configure
+
+INSTALLATION_DIRS=	bin share/doc/vnc
+
 .if ${OPSYS} == "SunOS"
-	${CHOWN} ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/bin/Xvnc
-	${CHMOD} 2555 ${PREFIX}/bin/Xvnc
+SPECIAL_PERMS+=	bin/Xvnc ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 2555
 .endif
-	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${PREFIX}/bin/vncconnect
+
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect ${DESTDIR}${PREFIX}/bin/vncconnect
 	${SED} -e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g' \
 		-e 's|/usr/bin/perl|${PERL5}|g' \
 		< ${WRKSRC}/vncserver \
 		> ${WRKSRC}/vncserver.local
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${PREFIX}/bin/vncserver
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vnc
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver.local ${DESTDIR}${PREFIX}/bin/vncserver
 	cd ${WRKDIR}; \
 	${INSTALL_DATA} *.GIF *.css *.gif *.jpg *.htm *.html *.pdf \
-	  ${PREFIX}/share/doc/vnc
+	  ${DESTDIR}${PREFIX}/share/doc/vnc
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
