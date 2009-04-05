@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1212 2009/04/03 16:11:48 imil Exp $
+$NetBSD: CHANGES-2009,v 1.1213 2009/04/05 15:51:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Mail-Mbox-MessageParser to 1.5000nb2 [tez 2009-04-02]
 	Updated mail/milter-greylist to 4.2 [tron 2009-04-02]
 	Updated pkgtools/pkg_select to 20090308nb1 [imil 2009-04-03]
+	Updated security/openssl to 0.9.8k [tnn 2009-04-05]
