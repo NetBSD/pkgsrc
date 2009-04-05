@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.69 2008/11/25 19:11:39 rillig Exp $
+$NetBSD: TODO,v 1.70 2009/04/05 13:05:16 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -53,3 +53,10 @@ PLIST regexes to sets of required packages, or something.
 %
 
 if package A conflicts with B, then B should also conflict with A.
+
+%
+
+* When pkglint runs on a case-insensitive filesystem, it should still
+  point out problems that only occur on case-sensitive filesystems. For
+  example, devel/p5-Net-LDAP and devel/p5-Net-ldap should be considered
+  different paths.
