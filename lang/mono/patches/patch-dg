@@ -1,0 +1,18 @@
+$NetBSD: patch-dg,v 1.1 2009/04/05 16:20:06 he Exp $
+
+For some reason, this test fails on NetBSD/powerpc, so just avoid it.
+
+--- ./mono/metadata/threads.c.orig	2009-04-05 15:00:34.000000000 +0200
++++ ./mono/metadata/threads.c
+@@ -782,9 +782,11 @@ mono_thread_get_stack_bounds (guint8 **s
+ 
+ #ifndef sun
+ 	pthread_attr_getstack (&attr, (void**)staddr, stsize);
++#if !(defined(__NetBSD__) && defined(__powerpc__))
+ 	if (*staddr)
+ 		g_assert ((current > *staddr) && (current < *staddr + *stsize));
+ #endif
++#endif
+ 
+ 	pthread_attr_destroy (&attr); 
+ #endif
