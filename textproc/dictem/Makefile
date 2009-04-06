@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/03/21 16:07:03 darcy Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/06 10:34:55 wiz Exp $
 
-DISTNAME=		dictem-1.0.0
+DISTNAME=		dictem-1.0.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=		textproc editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dictem/} \
@@ -29,7 +29,7 @@ do-build:
 do-install:
 	set -e; \
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${DESTDIR}${EMACS_LISPPREFIX:Q};		\
+			${DESTDIR}${EMACS_LISPPREFIX};		\
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS}				\
 			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
