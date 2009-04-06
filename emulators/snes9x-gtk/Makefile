@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/03 18:46:27 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/06 10:11:47 wiz Exp $
 #
 
-DISTNAME=	snes9x-1.51-src-gtk-61
-PKGNAME=	snes9x-gtk-1.51.61
+DISTNAME=	snes9x-1.51-src-gtk-70
+PKGNAME=	snes9x-gtk-1.51.70
 CATEGORIES=	emulators
-MASTER_SITES=	http://bearoso.googlepages.com/
+MASTER_SITES=	http://snes9x-gtk.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snes9x.com/phpbb2/viewtopic.php?p=22874
 COMMENT=	SNES emulator with GTK frontend
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/snes9x-1.51-src/gtk
 GNU_CONFIGURE=	yes
@@ -23,6 +25,8 @@ CONFIGURE_ARGS+=	--without-opengl
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

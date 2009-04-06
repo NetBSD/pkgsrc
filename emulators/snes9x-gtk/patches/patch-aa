@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/04/06 10:11:47 wiz Exp $
+
+--- src/gtk_sound_driver_oss.cpp.orig	2009-03-13 12:34:50.000000000 +0000
++++ src/gtk_sound_driver_oss.cpp
+@@ -145,7 +145,7 @@ S9xOSSSoundDriver::open_device (int mode
+     printf ("OK\n");
+ 
+     printf ("    --> (Frequency: %d)...", so.playback_rate);
+-    if (ioctl (filedes, SNDCTL_DSP_SPEED, &so.playback_rate) < 0)
++    if (ioctl (filedes, SNDCTL_DSP_SPEED, (void*)&so.playback_rate) < 0)
+         goto close_fail;
+ 
+     printf ("OK\n");
