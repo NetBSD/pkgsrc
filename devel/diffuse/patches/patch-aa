@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2009/01/20 19:16:15 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/06 10:13:28 wiz Exp $
 
---- src/usr/bin/diffuse.orig	2009-01-19 17:58:19.000000000 +0100
+--- src/usr/bin/diffuse.orig	2009-03-30 09:58:33.000000000 +0000
 +++ src/usr/bin/diffuse
-@@ -177,6 +177,8 @@ def getExePath(s):
- # find the help directory for the current locale
- def getLocalisedDir(s):
-     lang = locale.getdefaultlocale()[0]
-+    if not lang:
-+	lang = 'C'
-     path = os.path.join(s, lang)
-     if os.path.exists(path):
-         return path
+@@ -100,7 +100,7 @@ import shlex
+ import stat
+ import string
+ import subprocess
+-import urllib
++#import urllib
+ import webbrowser
+ 
+ # platform tests
