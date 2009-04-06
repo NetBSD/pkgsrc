@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1214 2009/04/06 01:50:46 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1215 2009/04/06 06:27:36 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1655,3 +1655,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_select to 20090308nb1 [imil 2009-04-03]
 	Updated security/openssl to 0.9.8k [tnn 2009-04-05]
 	Updated www/ja-trac to 0.11.3pl1 [obache 2009-04-06]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2009Q1 branch [agc 2009-04-05]
