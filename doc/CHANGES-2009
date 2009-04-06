@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1220 2009/04/06 10:13:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1221 2009/04/06 10:18:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1661,3 +1661,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/coccinelle to 0.1.6a [wiz 2009-04-06]
 	Updated emulators/snes9x-gtk to 1.51.70 [wiz 2009-04-06]
 	Updated devel/diffuse to 0.3.1 [wiz 2009-04-06]
+	Added net/gtk-vnc version 0.3.8nb1 [wiz 2009-04-06]
