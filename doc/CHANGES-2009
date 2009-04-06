@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1222 2009/04/06 10:20:41 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1223 2009/04/06 10:21:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1663,3 +1663,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/diffuse to 0.3.1 [wiz 2009-04-06]
 	Added net/gtk-vnc version 0.3.8nb1 [wiz 2009-04-06]
 	Added net/vinagre version 2.26.0 [wiz 2009-04-06]
+	Updated meta-pkgs/gnome to 2.25.99.2 [wiz 2009-04-06]
