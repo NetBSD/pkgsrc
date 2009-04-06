@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.141 2009/02/05 18:53:03 joerg Exp $
+# $NetBSD: bootstrap,v 1.142 2009/04/06 14:21:05 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -637,12 +637,6 @@ QNX)
 	;;
 esac
 
-if [ -z "$fetch_cmd" ]; then
-	need_ftp=yes
-else
-	need_ftp=no
-fi
-
 # If "--full" is specified, then install all of the platform-independent
 # bootstrap software.
 #
@@ -651,7 +645,6 @@ yes)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
-	need_ftp=yes
 	need_ksh=yes
 	;;
 esac
