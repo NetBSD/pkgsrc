@@ -1,0 +1,205 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 10:19:06 wiz Exp $
+bin/vinagre
+lib/bonobo/servers/GNOME_VinagreApplet.server
+libexec/vinagre-applet
+man/man1/vinagre.1
+share/applications/vinagre-file.desktop
+share/applications/vinagre.desktop
+share/doc/vinagre/AUTHORS
+share/doc/vinagre/COPYING
+share/doc/vinagre/ChangeLog
+share/doc/vinagre/INSTALL
+share/doc/vinagre/MAINTAINERS
+share/doc/vinagre/NEWS
+share/doc/vinagre/README
+share/gconf/schemas/vinagre.schemas
+share/gnome/help/vinagre/C/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/C/legal.xml
+share/gnome/help/vinagre/C/vinagre.xml
+share/gnome/help/vinagre/ca/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/ca/vinagre.xml
+share/gnome/help/vinagre/cs/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/cs/vinagre.xml
+share/gnome/help/vinagre/de/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/de/vinagre.xml
+share/gnome/help/vinagre/en_GB/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/en_GB/vinagre.xml
+share/gnome/help/vinagre/es/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/es/vinagre.xml
+share/gnome/help/vinagre/fr/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/fr/vinagre.xml
+share/gnome/help/vinagre/it/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/it/vinagre.xml
+share/gnome/help/vinagre/oc/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/oc/vinagre.xml
+share/gnome/help/vinagre/pt/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/pt/vinagre.xml
+share/gnome/help/vinagre/pt_BR/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/pt_BR/vinagre.xml
+share/gnome/help/vinagre/sq/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/sq/vinagre.xml
+share/gnome/help/vinagre/sv/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/sv/vinagre.xml
+share/gnome/help/vinagre/th/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/th/vinagre.xml
+share/icons/hicolor/16x16/apps/vinagre.png
+share/icons/hicolor/16x16/mimetypes/application-x-remote-connection.png
+share/icons/hicolor/16x16/mimetypes/application-x-vnc.png
+share/icons/hicolor/16x16/status/view-minimize.png
+share/icons/hicolor/22x22/apps/vinagre.png
+share/icons/hicolor/22x22/mimetypes/application-x-remote-connection.png
+share/icons/hicolor/22x22/mimetypes/application-x-vnc.png
+share/icons/hicolor/22x22/status/view-minimize.png
+share/icons/hicolor/24x24/apps/vinagre.png
+share/icons/hicolor/24x24/mimetypes/application-x-remote-connection.png
+share/icons/hicolor/24x24/mimetypes/application-x-vnc.png
+share/icons/hicolor/32x32/apps/vinagre.png
+share/icons/hicolor/32x32/mimetypes/application-x-remote-connection.png
+share/icons/hicolor/32x32/mimetypes/application-x-vnc.png
+share/icons/hicolor/32x32/status/view-minimize.png
+share/icons/hicolor/48x48/apps/vinagre.png
+share/icons/hicolor/48x48/mimetypes/application-x-remote-connection.png
+share/icons/hicolor/48x48/mimetypes/application-x-vnc.png
+share/icons/hicolor/48x48/status/view-minimize.png
+share/icons/hicolor/scalable/apps/vinagre.svg
+share/icons/hicolor/scalable/mimetypes/application-x-remote-connection.svg
+share/icons/hicolor/scalable/mimetypes/application-x-vnc.svg
+share/locale/ar/LC_MESSAGES/vinagre.mo
+share/locale/as/LC_MESSAGES/vinagre.mo
+share/locale/ast/LC_MESSAGES/vinagre.mo
+share/locale/be@latin/LC_MESSAGES/vinagre.mo
+share/locale/bg/LC_MESSAGES/vinagre.mo
+share/locale/bn_IN/LC_MESSAGES/vinagre.mo
+share/locale/ca/LC_MESSAGES/vinagre.mo
+share/locale/cs/LC_MESSAGES/vinagre.mo
+share/locale/da/LC_MESSAGES/vinagre.mo
+share/locale/de/LC_MESSAGES/vinagre.mo
+share/locale/el/LC_MESSAGES/vinagre.mo
+share/locale/en_GB/LC_MESSAGES/vinagre.mo
+share/locale/es/LC_MESSAGES/vinagre.mo
+share/locale/et/LC_MESSAGES/vinagre.mo
+share/locale/eu/LC_MESSAGES/vinagre.mo
+share/locale/fi/LC_MESSAGES/vinagre.mo
+share/locale/fr/LC_MESSAGES/vinagre.mo
+share/locale/gl/LC_MESSAGES/vinagre.mo
+share/locale/gu/LC_MESSAGES/vinagre.mo
+share/locale/he/LC_MESSAGES/vinagre.mo
+share/locale/hi/LC_MESSAGES/vinagre.mo
+share/locale/hu/LC_MESSAGES/vinagre.mo
+share/locale/it/LC_MESSAGES/vinagre.mo
+share/locale/ja/LC_MESSAGES/vinagre.mo
+share/locale/kn/LC_MESSAGES/vinagre.mo
+share/locale/ko/LC_MESSAGES/vinagre.mo
+share/locale/ku/LC_MESSAGES/vinagre.mo
+share/locale/lt/LC_MESSAGES/vinagre.mo
+share/locale/lv/LC_MESSAGES/vinagre.mo
+share/locale/mk/LC_MESSAGES/vinagre.mo
+share/locale/ml/LC_MESSAGES/vinagre.mo
+share/locale/mr/LC_MESSAGES/vinagre.mo
+share/locale/nb/LC_MESSAGES/vinagre.mo
+share/locale/nl/LC_MESSAGES/vinagre.mo
+share/locale/nn/LC_MESSAGES/vinagre.mo
+share/locale/oc/LC_MESSAGES/vinagre.mo
+share/locale/or/LC_MESSAGES/vinagre.mo
+share/locale/pa/LC_MESSAGES/vinagre.mo
+share/locale/pl/LC_MESSAGES/vinagre.mo
+share/locale/pt/LC_MESSAGES/vinagre.mo
+share/locale/pt_BR/LC_MESSAGES/vinagre.mo
+share/locale/ro/LC_MESSAGES/vinagre.mo
+share/locale/ru/LC_MESSAGES/vinagre.mo
+share/locale/si/LC_MESSAGES/vinagre.mo
+share/locale/sl/LC_MESSAGES/vinagre.mo
+share/locale/sq/LC_MESSAGES/vinagre.mo
+share/locale/sr/LC_MESSAGES/vinagre.mo
+share/locale/sr@latin/LC_MESSAGES/vinagre.mo
+share/locale/sv/LC_MESSAGES/vinagre.mo
+share/locale/ta/LC_MESSAGES/vinagre.mo
+share/locale/te/LC_MESSAGES/vinagre.mo
+share/locale/th/LC_MESSAGES/vinagre.mo
+share/locale/tr/LC_MESSAGES/vinagre.mo
+share/locale/uk/LC_MESSAGES/vinagre.mo
+share/locale/vi/LC_MESSAGES/vinagre.mo
+share/locale/zh_CN/LC_MESSAGES/vinagre.mo
+share/locale/zh_HK/LC_MESSAGES/vinagre.mo
+share/locale/zh_TW/LC_MESSAGES/vinagre.mo
+share/mime/packages/vinagre-mime.xml
+share/omf/vinagre/vinagre-C.omf
+share/omf/vinagre/vinagre-ca.omf
+share/omf/vinagre/vinagre-cs.omf
+share/omf/vinagre/vinagre-de.omf
+share/omf/vinagre/vinagre-en_GB.omf
+share/omf/vinagre/vinagre-es.omf
+share/omf/vinagre/vinagre-fr.omf
+share/omf/vinagre/vinagre-it.omf
+share/omf/vinagre/vinagre-oc.omf
+share/omf/vinagre/vinagre-pt.omf
+share/omf/vinagre/vinagre-pt_BR.omf
+share/omf/vinagre/vinagre-sq.omf
+share/omf/vinagre/vinagre-sv.omf
+share/omf/vinagre/vinagre-th.omf
+share/vinagre/GNOME_VinagreApplet.xml
+share/vinagre/vinagre-ui.xml
+share/vinagre/vinagre.glade
+@dirrm share/vinagre
+@dirrm share/omf/vinagre
+@comment in rarian: @dirrm share/omf
+@comment in shared-mime-info: @dirrm share/mime/packages
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/status
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
+@dirrm share/gnome/help/vinagre/th/figures
+@dirrm share/gnome/help/vinagre/th
+@dirrm share/gnome/help/vinagre/sv/figures
+@dirrm share/gnome/help/vinagre/sv
+@dirrm share/gnome/help/vinagre/sq/figures
+@dirrm share/gnome/help/vinagre/sq
+@dirrm share/gnome/help/vinagre/pt_BR/figures
+@dirrm share/gnome/help/vinagre/pt_BR
+@dirrm share/gnome/help/vinagre/pt/figures
+@dirrm share/gnome/help/vinagre/pt
+@dirrm share/gnome/help/vinagre/oc/figures
+@dirrm share/gnome/help/vinagre/oc
+@dirrm share/gnome/help/vinagre/it/figures
+@dirrm share/gnome/help/vinagre/it
+@dirrm share/gnome/help/vinagre/fr/figures
+@dirrm share/gnome/help/vinagre/fr
+@dirrm share/gnome/help/vinagre/es/figures
+@dirrm share/gnome/help/vinagre/es
+@dirrm share/gnome/help/vinagre/en_GB/figures
+@dirrm share/gnome/help/vinagre/en_GB
+@dirrm share/gnome/help/vinagre/de/figures
+@dirrm share/gnome/help/vinagre/de
+@dirrm share/gnome/help/vinagre/cs/figures
+@dirrm share/gnome/help/vinagre/cs
+@dirrm share/gnome/help/vinagre/ca/figures
+@dirrm share/gnome/help/vinagre/ca
+@dirrm share/gnome/help/vinagre/C/figures
+@dirrm share/gnome/help/vinagre/C
+@dirrm share/gnome/help/vinagre
+@comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
+@comment in GConf: @dirrm share/gconf/schemas
+@dirrm share/doc/vinagre
+@comment in xdg-dirs: @dirrm share/applications
+@comment in libbonobo: @dirrm lib/bonobo/servers
