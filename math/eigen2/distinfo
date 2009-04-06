@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/01/27 12:22:46 markd Exp $
+$NetBSD: distinfo,v 1.5 2009/04/06 12:37:49 markd Exp $
 
-SHA1 (eigen-2.0-beta6.tar.bz2) = 323fd1641332a60ef4f0c97d886d34220f5d9040
-RMD160 (eigen-2.0-beta6.tar.bz2) = 9e45b2b9b068a91a994bee01d28c34cc2769ee6b
-Size (eigen-2.0-beta6.tar.bz2) = 329351 bytes
-SHA1 (patch-aa) = c5690df51a7b0095f8a2d9de5b32b37a30d142ba
+SHA1 (eigen-2.0.0.tar.bz2) = ce7d035b2b27351130d8094375e54a605118233b
+RMD160 (eigen-2.0.0.tar.bz2) = 21781944a034792b1c939e48b1d8f54ff1c0e008
+Size (eigen-2.0.0.tar.bz2) = 346043 bytes
