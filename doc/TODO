@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8015 2009/04/05 17:04:12 wiz Exp $
+$NetBSD: TODO,v 1.8016 2009/04/06 10:41:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.1
 	o climm-0.6.4
-	o clive-2.1.9
+	o clive-2.1.10
 	o clutter-0.8.8
 	o clutter-gtk-0.8.3
 	o cmake-2.6.3
@@ -520,10 +520,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
-	o dictem-1.0.1 [pkg/41047]
-	o dictem-1.0.2
 	o diffstat-1.47
-	o diffuse-0.3.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0.2
@@ -640,6 +637,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geeklog-1.5.2
 	o genius-1.0.6 [GNOME 2.26]
 	o gentoo-0.15.3
+	o getmail-4.9.0
 	o gettext-0.17
 	o gettext-m4-0.17
 	o gforth-0.7.0
@@ -729,7 +727,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o heel-1.0.2
 	o hercules-3.04.1
 	o hesiod-3.1.0
-	o heyu-2.5.0
+	o heyu-2.5.1
 	o hiawatha-6.12
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3
@@ -857,6 +855,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-base-2.2.6a
 	o libunique-1.0.8
 	o libv4l-0.5.9
+	o libxcb-1.2
 	o libxklavier-3.9
 	o licq-1.3.6
 	o liferea-1.4.27
@@ -920,9 +919,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mimedefang-2.67
 	o minivmac-3.0.4
 	o mirmon-1.37
-	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
-	o mksh-36b
+	o mksh-37b
 	o mkvtoolnix-2.6.0
 	o mlterm-2.9.4
 	o mmg-2.0.2
@@ -937,7 +935,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
-	o mpg123-1.7.1
+	o mpg123-1.7.2
 	o mpop-1.0.16
 	o mserv-devel-0.41
 	o msf-2.7
@@ -1249,7 +1247,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o scmgit-docs-1.6.2.2
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o sdlmame-0.130 [wiz]
 	o sdlmess-0.130
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1364,7 +1361,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o upx-2.90
 	o uriparser-0.7.5
 	o userppp-030706
-	o vala-0.6
+	o vala-0.7.0
 	o valgrind-3.4.1
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
@@ -1458,6 +1455,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xhippo-3.5
 	o xine-0.5.904
 	o xine-lib-1.1.16.3
+	o xinput-1.4.1
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbset-0.5
