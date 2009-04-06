@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1224 2009/04/06 10:35:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1225 2009/04/06 11:32:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added net/vinagre version 2.26.0 [wiz 2009-04-06]
 	Updated meta-pkgs/gnome to 2.25.99.2 [wiz 2009-04-06]
 	Updated textproc/dictem to 1.0.2 [wiz 2009-04-06]
+	Updated www/wordpress to 2.7.1 [adrianp 2009-04-06]
