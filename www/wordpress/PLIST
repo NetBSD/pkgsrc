@@ -1,0 +1,685 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 11:31:02 adrianp Exp $
+share/doc/wordpress/license.txt
+share/doc/wordpress/readme.html
+share/examples/wordpress/wordpress.conf
+share/examples/wordpress/wp-config-sample.php
+share/wordpress/index.php
+share/wordpress/wp-admin/admin-ajax.php
+share/wordpress/wp-admin/admin-footer.php
+share/wordpress/wp-admin/admin-functions.php
+share/wordpress/wp-admin/admin-header.php
+share/wordpress/wp-admin/admin-post.php
+share/wordpress/wp-admin/admin.php
+share/wordpress/wp-admin/async-upload.php
+share/wordpress/wp-admin/categories.php
+share/wordpress/wp-admin/comment.php
+share/wordpress/wp-admin/css/colors-classic-rtl.css
+share/wordpress/wp-admin/css/colors-classic.css
+share/wordpress/wp-admin/css/colors-fresh-rtl.css
+share/wordpress/wp-admin/css/colors-fresh.css
+share/wordpress/wp-admin/css/dashboard-rtl.css
+share/wordpress/wp-admin/css/dashboard.css
+share/wordpress/wp-admin/css/farbtastic-rtl.css
+share/wordpress/wp-admin/css/farbtastic.css
+share/wordpress/wp-admin/css/global-rtl.css
+share/wordpress/wp-admin/css/global.css
+share/wordpress/wp-admin/css/ie-rtl.css
+share/wordpress/wp-admin/css/ie.css
+share/wordpress/wp-admin/css/install-rtl.css
+share/wordpress/wp-admin/css/install.css
+share/wordpress/wp-admin/css/login-rtl.css
+share/wordpress/wp-admin/css/login.css
+share/wordpress/wp-admin/css/media-rtl.css
+share/wordpress/wp-admin/css/media.css
+share/wordpress/wp-admin/css/plugin-install-rtl.css
+share/wordpress/wp-admin/css/plugin-install.css
+share/wordpress/wp-admin/css/press-this-rtl.css
+share/wordpress/wp-admin/css/press-this.css
+share/wordpress/wp-admin/css/theme-editor-rtl.css
+share/wordpress/wp-admin/css/theme-editor.css
+share/wordpress/wp-admin/css/widgets-rtl.css
+share/wordpress/wp-admin/css/widgets.css
+share/wordpress/wp-admin/custom-header.php
+share/wordpress/wp-admin/edit-attachment-rows.php
+share/wordpress/wp-admin/edit-category-form.php
+share/wordpress/wp-admin/edit-comments.php
+share/wordpress/wp-admin/edit-form-advanced.php
+share/wordpress/wp-admin/edit-form-comment.php
+share/wordpress/wp-admin/edit-link-categories.php
+share/wordpress/wp-admin/edit-link-category-form.php
+share/wordpress/wp-admin/edit-link-form.php
+share/wordpress/wp-admin/edit-page-form.php
+share/wordpress/wp-admin/edit-pages.php
+share/wordpress/wp-admin/edit-post-rows.php
+share/wordpress/wp-admin/edit-tag-form.php
+share/wordpress/wp-admin/edit-tags.php
+share/wordpress/wp-admin/edit.php
+share/wordpress/wp-admin/export.php
+share/wordpress/wp-admin/gears-manifest.php
+share/wordpress/wp-admin/images/align-center.png
+share/wordpress/wp-admin/images/align-left.png
+share/wordpress/wp-admin/images/align-none.png
+share/wordpress/wp-admin/images/align-right.png
+share/wordpress/wp-admin/images/archive-link.png
+share/wordpress/wp-admin/images/blue-grad.png
+share/wordpress/wp-admin/images/browse-happy.gif
+share/wordpress/wp-admin/images/bubble_bg-rtl.gif
+share/wordpress/wp-admin/images/bubble_bg.gif
+share/wordpress/wp-admin/images/button-grad-active.png
+share/wordpress/wp-admin/images/button-grad.png
+share/wordpress/wp-admin/images/comment-grey-bubble.png
+share/wordpress/wp-admin/images/date-button.gif
+share/wordpress/wp-admin/images/ed-bg.gif
+share/wordpress/wp-admin/images/fade-butt.png
+share/wordpress/wp-admin/images/fav-arrow-rtl.gif
+share/wordpress/wp-admin/images/fav-arrow.gif
+share/wordpress/wp-admin/images/fav-top.png
+share/wordpress/wp-admin/images/fav.png
+share/wordpress/wp-admin/images/generic.png
+share/wordpress/wp-admin/images/gray-grad.png
+share/wordpress/wp-admin/images/icons32-vs.png
+share/wordpress/wp-admin/images/icons32.png
+share/wordpress/wp-admin/images/list-vs.png
+share/wordpress/wp-admin/images/list.png
+share/wordpress/wp-admin/images/loading-publish.gif
+share/wordpress/wp-admin/images/loading.gif
+share/wordpress/wp-admin/images/logo-ghost.png
+share/wordpress/wp-admin/images/logo-login.gif
+share/wordpress/wp-admin/images/logo.gif
+share/wordpress/wp-admin/images/marker.png
+share/wordpress/wp-admin/images/mask.png
+share/wordpress/wp-admin/images/media-button-image.gif
+share/wordpress/wp-admin/images/media-button-music.gif
+share/wordpress/wp-admin/images/media-button-other.gif
+share/wordpress/wp-admin/images/media-button-video.gif
+share/wordpress/wp-admin/images/menu-arrows.gif
+share/wordpress/wp-admin/images/menu-bits-rtl.gif
+share/wordpress/wp-admin/images/menu-bits.gif
+share/wordpress/wp-admin/images/menu-dark-rtl.gif
+share/wordpress/wp-admin/images/menu-dark.gif
+share/wordpress/wp-admin/images/menu-vs.png
+share/wordpress/wp-admin/images/menu.png
+share/wordpress/wp-admin/images/no.png
+share/wordpress/wp-admin/images/required.gif
+share/wordpress/wp-admin/images/resize.gif
+share/wordpress/wp-admin/images/screen-options-left.gif
+share/wordpress/wp-admin/images/screen-options-right-up.gif
+share/wordpress/wp-admin/images/screen-options-right.gif
+share/wordpress/wp-admin/images/se.png
+share/wordpress/wp-admin/images/star.gif
+share/wordpress/wp-admin/images/toggle-arrow-rtl.gif
+share/wordpress/wp-admin/images/toggle-arrow.gif
+share/wordpress/wp-admin/images/wheel.png
+share/wordpress/wp-admin/images/white-grad-active.png
+share/wordpress/wp-admin/images/white-grad.png
+share/wordpress/wp-admin/images/wordpress-logo.png
+share/wordpress/wp-admin/images/wp-logo.gif
+share/wordpress/wp-admin/images/xit.gif
+share/wordpress/wp-admin/images/yes.png
+share/wordpress/wp-admin/import.php
+share/wordpress/wp-admin/import/blogger.php
+share/wordpress/wp-admin/import/blogware.php
+share/wordpress/wp-admin/import/btt.php
+share/wordpress/wp-admin/import/dotclear.php
+share/wordpress/wp-admin/import/greymatter.php
+share/wordpress/wp-admin/import/jkw.php
+share/wordpress/wp-admin/import/livejournal.php
+share/wordpress/wp-admin/import/mt.php
+share/wordpress/wp-admin/import/opml.php
+share/wordpress/wp-admin/import/rss.php
+share/wordpress/wp-admin/import/stp.php
+share/wordpress/wp-admin/import/textpattern.php
+share/wordpress/wp-admin/import/utw.php
+share/wordpress/wp-admin/import/wordpress.php
+share/wordpress/wp-admin/import/wp-cat2tag.php
+share/wordpress/wp-admin/includes/admin.php
+share/wordpress/wp-admin/includes/bookmark.php
+share/wordpress/wp-admin/includes/class-ftp-pure.php
+share/wordpress/wp-admin/includes/class-ftp-sockets.php
+share/wordpress/wp-admin/includes/class-ftp.php
+share/wordpress/wp-admin/includes/class-pclzip.php
+share/wordpress/wp-admin/includes/class-wp-filesystem-base.php
+share/wordpress/wp-admin/includes/class-wp-filesystem-direct.php
+share/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php
+share/wordpress/wp-admin/includes/class-wp-filesystem-ftpsockets.php
+share/wordpress/wp-admin/includes/class-wp-filesystem-ssh2.php
+share/wordpress/wp-admin/includes/comment.php
+share/wordpress/wp-admin/includes/dashboard.php
+share/wordpress/wp-admin/includes/export.php
+share/wordpress/wp-admin/includes/file.php
+share/wordpress/wp-admin/includes/image.php
+share/wordpress/wp-admin/includes/import.php
+share/wordpress/wp-admin/includes/media.php
+share/wordpress/wp-admin/includes/misc.php
+share/wordpress/wp-admin/includes/plugin-install.php
+share/wordpress/wp-admin/includes/plugin.php
+share/wordpress/wp-admin/includes/post.php
+share/wordpress/wp-admin/includes/schema.php
+share/wordpress/wp-admin/includes/taxonomy.php
+share/wordpress/wp-admin/includes/template.php
+share/wordpress/wp-admin/includes/theme.php
+share/wordpress/wp-admin/includes/update-core.php
+share/wordpress/wp-admin/includes/update.php
+share/wordpress/wp-admin/includes/upgrade.php
+share/wordpress/wp-admin/includes/user.php
+share/wordpress/wp-admin/includes/widgets.php
+share/wordpress/wp-admin/index-extra.php
+share/wordpress/wp-admin/index.php
+share/wordpress/wp-admin/install-helper.php
+share/wordpress/wp-admin/install.php
+share/wordpress/wp-admin/js/cat.js
+share/wordpress/wp-admin/js/categories.js
+share/wordpress/wp-admin/js/comment.js
+share/wordpress/wp-admin/js/common.js
+share/wordpress/wp-admin/js/custom-fields.js
+share/wordpress/wp-admin/js/dashboard.js
+share/wordpress/wp-admin/js/edit-comments.js
+share/wordpress/wp-admin/js/editor.js
+share/wordpress/wp-admin/js/farbtastic.js
+share/wordpress/wp-admin/js/gallery.js
+share/wordpress/wp-admin/js/inline-edit-post.js
+share/wordpress/wp-admin/js/inline-edit-tax.js
+share/wordpress/wp-admin/js/link.js
+share/wordpress/wp-admin/js/media-upload.js
+share/wordpress/wp-admin/js/page.js
+share/wordpress/wp-admin/js/password-strength-meter.js
+share/wordpress/wp-admin/js/plugin-install.js
+share/wordpress/wp-admin/js/post.js
+share/wordpress/wp-admin/js/postbox.js
+share/wordpress/wp-admin/js/revisions-js.php
+share/wordpress/wp-admin/js/slug.js
+share/wordpress/wp-admin/js/tags.js
+share/wordpress/wp-admin/js/theme-preview.js
+share/wordpress/wp-admin/js/users.js
+share/wordpress/wp-admin/js/widgets.js
+share/wordpress/wp-admin/js/word-count.js
+share/wordpress/wp-admin/js/wp-gears.js
+share/wordpress/wp-admin/js/xfn.js
+share/wordpress/wp-admin/link-add.php
+share/wordpress/wp-admin/link-category.php
+share/wordpress/wp-admin/link-manager.php
+share/wordpress/wp-admin/link-parse-opml.php
+share/wordpress/wp-admin/link.php
+share/wordpress/wp-admin/media-new.php
+share/wordpress/wp-admin/media-upload.php
+share/wordpress/wp-admin/media.php
+share/wordpress/wp-admin/menu-header.php
+share/wordpress/wp-admin/menu.php
+share/wordpress/wp-admin/moderation.php
+share/wordpress/wp-admin/options-discussion.php
+share/wordpress/wp-admin/options-general.php
+share/wordpress/wp-admin/options-head.php
+share/wordpress/wp-admin/options-media.php
+share/wordpress/wp-admin/options-misc.php
+share/wordpress/wp-admin/options-permalink.php
+share/wordpress/wp-admin/options-privacy.php
+share/wordpress/wp-admin/options-reading.php
+share/wordpress/wp-admin/options-writing.php
+share/wordpress/wp-admin/options.php
+share/wordpress/wp-admin/page-new.php
+share/wordpress/wp-admin/page.php
+share/wordpress/wp-admin/plugin-editor.php
+share/wordpress/wp-admin/plugin-install.php
+share/wordpress/wp-admin/plugins.php
+share/wordpress/wp-admin/post-new.php
+share/wordpress/wp-admin/post.php
+share/wordpress/wp-admin/press-this.php
+share/wordpress/wp-admin/profile.php
+share/wordpress/wp-admin/revision.php
+share/wordpress/wp-admin/rtl.css
+share/wordpress/wp-admin/setup-config.php
+share/wordpress/wp-admin/sidebar.php
+share/wordpress/wp-admin/theme-editor.php
+share/wordpress/wp-admin/themes.php
+share/wordpress/wp-admin/tools.php
+share/wordpress/wp-admin/update-core.php
+share/wordpress/wp-admin/update-links.php
+share/wordpress/wp-admin/update.php
+share/wordpress/wp-admin/upgrade-functions.php
+share/wordpress/wp-admin/upgrade.php
+share/wordpress/wp-admin/upload.php
+share/wordpress/wp-admin/user-edit.php
+share/wordpress/wp-admin/user-new.php
+share/wordpress/wp-admin/users.php
+share/wordpress/wp-admin/widgets.php
+share/wordpress/wp-admin/wp-admin.css
+share/wordpress/wp-app.php
+share/wordpress/wp-atom.php
+share/wordpress/wp-blog-header.php
+share/wordpress/wp-comments-post.php
+share/wordpress/wp-commentsrss2.php
+share/wordpress/wp-content/index.php
+share/wordpress/wp-content/plugins/akismet/akismet.gif
+share/wordpress/wp-content/plugins/akismet/akismet.php
+share/wordpress/wp-content/plugins/akismet/readme.txt
+share/wordpress/wp-content/plugins/hello.php
+share/wordpress/wp-content/plugins/index.html
+share/wordpress/wp-content/themes/classic/comments-popup.php
+share/wordpress/wp-content/themes/classic/comments.php
+share/wordpress/wp-content/themes/classic/footer.php
+share/wordpress/wp-content/themes/classic/functions.php
+share/wordpress/wp-content/themes/classic/header.php
+share/wordpress/wp-content/themes/classic/index.php
+share/wordpress/wp-content/themes/classic/rtl.css
+share/wordpress/wp-content/themes/classic/screenshot.png
+share/wordpress/wp-content/themes/classic/sidebar.php
+share/wordpress/wp-content/themes/classic/style.css
+share/wordpress/wp-content/themes/default/404.php
+share/wordpress/wp-content/themes/default/archive.php
+share/wordpress/wp-content/themes/default/archives.php
+share/wordpress/wp-content/themes/default/comments-popup.php
+share/wordpress/wp-content/themes/default/comments.php
+share/wordpress/wp-content/themes/default/footer.php
+share/wordpress/wp-content/themes/default/functions.php
+share/wordpress/wp-content/themes/default/header.php
+share/wordpress/wp-content/themes/default/image.php
+share/wordpress/wp-content/themes/default/images/audio.jpg
+share/wordpress/wp-content/themes/default/images/header-img.php
+share/wordpress/wp-content/themes/default/images/kubrickbg-ltr.jpg
+share/wordpress/wp-content/themes/default/images/kubrickbg-rtl.jpg
+share/wordpress/wp-content/themes/default/images/kubrickbgcolor.jpg
+share/wordpress/wp-content/themes/default/images/kubrickbgwide.jpg
+share/wordpress/wp-content/themes/default/images/kubrickfooter.jpg
+share/wordpress/wp-content/themes/default/images/kubrickheader.jpg
+share/wordpress/wp-content/themes/default/index.php
+share/wordpress/wp-content/themes/default/links.php
+share/wordpress/wp-content/themes/default/page.php
+share/wordpress/wp-content/themes/default/rtl.css
+share/wordpress/wp-content/themes/default/screenshot.png
+share/wordpress/wp-content/themes/default/search.php
+share/wordpress/wp-content/themes/default/sidebar.php
+share/wordpress/wp-content/themes/default/single.php
+share/wordpress/wp-content/themes/default/style.css
+share/wordpress/wp-cron.php
+share/wordpress/wp-feed.php
+share/wordpress/wp-includes/Text/Diff.php
+share/wordpress/wp-includes/Text/Diff/Engine/native.php
+share/wordpress/wp-includes/Text/Diff/Engine/shell.php
+share/wordpress/wp-includes/Text/Diff/Engine/string.php
+share/wordpress/wp-includes/Text/Diff/Engine/xdiff.php
+share/wordpress/wp-includes/Text/Diff/Renderer.php
+share/wordpress/wp-includes/Text/Diff/Renderer/inline.php
+share/wordpress/wp-includes/atomlib.php
+share/wordpress/wp-includes/author-template.php
+share/wordpress/wp-includes/bookmark-template.php
+share/wordpress/wp-includes/bookmark.php
+share/wordpress/wp-includes/cache.php
+share/wordpress/wp-includes/canonical.php
+share/wordpress/wp-includes/capabilities.php
+share/wordpress/wp-includes/category-template.php
+share/wordpress/wp-includes/category.php
+share/wordpress/wp-includes/class-IXR.php
+share/wordpress/wp-includes/class-phpass.php
+share/wordpress/wp-includes/class-phpmailer.php
+share/wordpress/wp-includes/class-pop3.php
+share/wordpress/wp-includes/class-smtp.php
+share/wordpress/wp-includes/class-snoopy.php
+share/wordpress/wp-includes/class.wp-dependencies.php
+share/wordpress/wp-includes/class.wp-scripts.php
+share/wordpress/wp-includes/class.wp-styles.php
+share/wordpress/wp-includes/classes.php
+share/wordpress/wp-includes/comment-template.php
+share/wordpress/wp-includes/comment.php
+share/wordpress/wp-includes/compat.php
+share/wordpress/wp-includes/cron.php
+share/wordpress/wp-includes/default-filters.php
+share/wordpress/wp-includes/deprecated.php
+share/wordpress/wp-includes/feed-atom-comments.php
+share/wordpress/wp-includes/feed-atom.php
+share/wordpress/wp-includes/feed-rdf.php
+share/wordpress/wp-includes/feed-rss.php
+share/wordpress/wp-includes/feed-rss2-comments.php
+share/wordpress/wp-includes/feed-rss2.php
+share/wordpress/wp-includes/feed.php
+share/wordpress/wp-includes/formatting.php
+share/wordpress/wp-includes/functions.php
+share/wordpress/wp-includes/functions.wp-scripts.php
+share/wordpress/wp-includes/functions.wp-styles.php
+share/wordpress/wp-includes/general-template.php
+share/wordpress/wp-includes/gettext.php
+share/wordpress/wp-includes/http.php
+share/wordpress/wp-includes/images/blank.gif
+share/wordpress/wp-includes/images/crystal/archive.png
+share/wordpress/wp-includes/images/crystal/audio.png
+share/wordpress/wp-includes/images/crystal/code.png
+share/wordpress/wp-includes/images/crystal/default.png
+share/wordpress/wp-includes/images/crystal/document.png
+share/wordpress/wp-includes/images/crystal/interactive.png
+share/wordpress/wp-includes/images/crystal/license.txt
+share/wordpress/wp-includes/images/crystal/spreadsheet.png
+share/wordpress/wp-includes/images/crystal/text.png
+share/wordpress/wp-includes/images/crystal/video.png
+share/wordpress/wp-includes/images/rss.png
+share/wordpress/wp-includes/images/smilies/icon_arrow.gif
+share/wordpress/wp-includes/images/smilies/icon_biggrin.gif
+share/wordpress/wp-includes/images/smilies/icon_confused.gif
+share/wordpress/wp-includes/images/smilies/icon_cool.gif
+share/wordpress/wp-includes/images/smilies/icon_cry.gif
+share/wordpress/wp-includes/images/smilies/icon_eek.gif
+share/wordpress/wp-includes/images/smilies/icon_evil.gif
+share/wordpress/wp-includes/images/smilies/icon_exclaim.gif
+share/wordpress/wp-includes/images/smilies/icon_idea.gif
+share/wordpress/wp-includes/images/smilies/icon_lol.gif
+share/wordpress/wp-includes/images/smilies/icon_mad.gif
+share/wordpress/wp-includes/images/smilies/icon_mrgreen.gif
+share/wordpress/wp-includes/images/smilies/icon_neutral.gif
+share/wordpress/wp-includes/images/smilies/icon_question.gif
+share/wordpress/wp-includes/images/smilies/icon_razz.gif
+share/wordpress/wp-includes/images/smilies/icon_redface.gif
+share/wordpress/wp-includes/images/smilies/icon_rolleyes.gif
+share/wordpress/wp-includes/images/smilies/icon_sad.gif
+share/wordpress/wp-includes/images/smilies/icon_smile.gif
+share/wordpress/wp-includes/images/smilies/icon_surprised.gif
+share/wordpress/wp-includes/images/smilies/icon_twisted.gif
+share/wordpress/wp-includes/images/smilies/icon_wink.gif
+share/wordpress/wp-includes/images/upload.png
+share/wordpress/wp-includes/images/wlw/wp-comments.png
+share/wordpress/wp-includes/images/wlw/wp-icon.png
+share/wordpress/wp-includes/images/wlw/wp-watermark.png
+share/wordpress/wp-includes/js/autosave.js
+share/wordpress/wp-includes/js/colorpicker.js
+share/wordpress/wp-includes/js/comment-reply.js
+share/wordpress/wp-includes/js/crop/cropper.css
+share/wordpress/wp-includes/js/crop/cropper.js
+share/wordpress/wp-includes/js/crop/marqueeHoriz.gif
+share/wordpress/wp-includes/js/crop/marqueeVert.gif
+share/wordpress/wp-includes/js/hoverIntent.js
+share/wordpress/wp-includes/js/jquery/interface.js
+share/wordpress/wp-includes/js/jquery/jquery.color.js
+share/wordpress/wp-includes/js/jquery/jquery.form.js
+share/wordpress/wp-includes/js/jquery/jquery.hotkeys.js
+share/wordpress/wp-includes/js/jquery/jquery.js
+share/wordpress/wp-includes/js/jquery/jquery.schedule.js
+share/wordpress/wp-includes/js/jquery/jquery.table-hotkeys.js
+share/wordpress/wp-includes/js/jquery/suggest.js
+share/wordpress/wp-includes/js/jquery/ui.core.js
+share/wordpress/wp-includes/js/jquery/ui.dialog.js
+share/wordpress/wp-includes/js/jquery/ui.draggable.js
+share/wordpress/wp-includes/js/jquery/ui.resizable.js
+share/wordpress/wp-includes/js/jquery/ui.sortable.js
+share/wordpress/wp-includes/js/jquery/ui.tabs.js
+share/wordpress/wp-includes/js/prototype.js
+share/wordpress/wp-includes/js/quicktags.js
+share/wordpress/wp-includes/js/scriptaculous/MIT-LICENSE
+share/wordpress/wp-includes/js/scriptaculous/builder.js
+share/wordpress/wp-includes/js/scriptaculous/controls.js
+share/wordpress/wp-includes/js/scriptaculous/dragdrop.js
+share/wordpress/wp-includes/js/scriptaculous/effects.js
+share/wordpress/wp-includes/js/scriptaculous/prototype.js
+share/wordpress/wp-includes/js/scriptaculous/scriptaculous.js
+share/wordpress/wp-includes/js/scriptaculous/slider.js
+share/wordpress/wp-includes/js/scriptaculous/sound.js
+share/wordpress/wp-includes/js/scriptaculous/unittest.js
+share/wordpress/wp-includes/js/scriptaculous/wp-scriptaculous.js
+share/wordpress/wp-includes/js/swfupload/handlers.js
+share/wordpress/wp-includes/js/swfupload/plugins/swfupload.cookies.js
+share/wordpress/wp-includes/js/swfupload/plugins/swfupload.documentready.js
+share/wordpress/wp-includes/js/swfupload/plugins/swfupload.graceful_degradation.js
+share/wordpress/wp-includes/js/swfupload/plugins/swfupload.queue.js
+share/wordpress/wp-includes/js/swfupload/plugins/swfupload.swfobject.js
+share/wordpress/wp-includes/js/swfupload/swfupload.js
+share/wordpress/wp-includes/js/swfupload/swfupload.swf
+share/wordpress/wp-includes/js/swfupload/swfupload_f9.swf
+share/wordpress/wp-includes/js/thickbox/loadingAnimation.gif
+share/wordpress/wp-includes/js/thickbox/macFFBgHack.png
+share/wordpress/wp-includes/js/thickbox/tb-close.png
+share/wordpress/wp-includes/js/thickbox/thickbox.css
+share/wordpress/wp-includes/js/thickbox/thickbox.js
+share/wordpress/wp-includes/js/tinymce/blank.htm
+share/wordpress/wp-includes/js/tinymce/langs/wp-langs-en.js
+share/wordpress/wp-includes/js/tinymce/langs/wp-langs.php
+share/wordpress/wp-includes/js/tinymce/license.txt
+share/wordpress/wp-includes/js/tinymce/plugins/autosave/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/directionality/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/fullscreen/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/fullscreen/fullscreen.htm
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/alert.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/button.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/corners.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/drag.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/window.css
+share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/template.htm
+share/wordpress/wp-includes/js/tinymce/plugins/media/css/content.css
+share/wordpress/wp-includes/js/tinymce/plugins/media/css/media.css
+share/wordpress/wp-includes/js/tinymce/plugins/media/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/flash.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/flv_player.swf
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/quicktime.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/realmedia.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/shockwave.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/trans.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/img/windowsmedia.gif
+share/wordpress/wp-includes/js/tinymce/plugins/media/js/embed.js
+share/wordpress/wp-includes/js/tinymce/plugins/media/js/media.js
+share/wordpress/wp-includes/js/tinymce/plugins/media/media.htm
+share/wordpress/wp-includes/js/tinymce/plugins/paste/blank.htm
+share/wordpress/wp-includes/js/tinymce/plugins/paste/css/blank.css
+share/wordpress/wp-includes/js/tinymce/plugins/paste/css/pasteword.css
+share/wordpress/wp-includes/js/tinymce/plugins/paste/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/paste/js/pastetext.js
+share/wordpress/wp-includes/js/tinymce/plugins/paste/js/pasteword.js
+share/wordpress/wp-includes/js/tinymce/plugins/paste/pastetext.htm
+share/wordpress/wp-includes/js/tinymce/plugins/paste/pasteword.htm
+share/wordpress/wp-includes/js/tinymce/plugins/safari/blank.htm
+share/wordpress/wp-includes/js/tinymce/plugins/safari/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/EnchantSpell.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/GoogleSpell.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/PSpell.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/PSpellShell.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/SpellChecker.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/utils/JSON.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/utils/Logger.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/config.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/css/content.css
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/img/wline.gif
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/includes/general.php
+share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/rpc.php
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/css/content.css
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/audio.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/help.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/image.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/media.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/more.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/more_bug.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/page.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/page_bug.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/toolbars.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img/video.gif
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/css/editimage-rtl.css
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/css/editimage.css
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editimage.html
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img/delete.png
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img/image.png
+share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/js/editimage.js
+share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/editor_plugin.js
+share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img/delete.png
+share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img/edit.png
+share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img/gallery.png
+share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img/t.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/about.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/anchor.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/charmap.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/color_picker.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/editor_template.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/image.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/img/colorpicker.jpg
+share/wordpress/wp-includes/js/tinymce/themes/advanced/img/fm.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/img/gotmoxie.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/img/icons.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/img/sflogo.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/about.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/anchor.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/charmap.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/color_picker.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/image.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/link.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/js/source_editor.js
+share/wordpress/wp-includes/js/tinymce/themes/advanced/link.htm
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/content.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/dialog.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/buttons.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/items.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/menu_arrow.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/menu_check.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/progress.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img/tabs.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/ui.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/content.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/dialog.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/img/button_bg.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/img/button_bg_black.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/img/button_bg_silver.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/ui.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/ui_black.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/ui_silver.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/content.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/dialog.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/butt2.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/button_bg.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/down_arrow.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/fade-butt.png
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/separator.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img/tabs.gif
+share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/ui.css
+share/wordpress/wp-includes/js/tinymce/themes/advanced/source_editor.htm
+share/wordpress/wp-includes/js/tinymce/tiny_mce.js
+share/wordpress/wp-includes/js/tinymce/tiny_mce_popup.js
+share/wordpress/wp-includes/js/tinymce/utils/editable_selects.js
+share/wordpress/wp-includes/js/tinymce/utils/form_utils.js
+share/wordpress/wp-includes/js/tinymce/utils/mclayer.js
+share/wordpress/wp-includes/js/tinymce/utils/mctabs.js
+share/wordpress/wp-includes/js/tinymce/utils/validate.js
+share/wordpress/wp-includes/js/tinymce/wordpress.css
+share/wordpress/wp-includes/js/tinymce/wp-mce-help.php
+share/wordpress/wp-includes/js/tw-sack.js
+share/wordpress/wp-includes/js/wp-ajax-response.js
+share/wordpress/wp-includes/js/wp-lists.js
+share/wordpress/wp-includes/kses.php
+share/wordpress/wp-includes/l10n.php
+share/wordpress/wp-includes/link-template.php
+share/wordpress/wp-includes/locale.php
+share/wordpress/wp-includes/media.php
+share/wordpress/wp-includes/pluggable.php
+share/wordpress/wp-includes/plugin.php
+share/wordpress/wp-includes/post-template.php
+share/wordpress/wp-includes/post.php
+share/wordpress/wp-includes/query.php
+share/wordpress/wp-includes/registration-functions.php
+share/wordpress/wp-includes/registration.php
+share/wordpress/wp-includes/rewrite.php
+share/wordpress/wp-includes/rss-functions.php
+share/wordpress/wp-includes/rss.php
+share/wordpress/wp-includes/script-loader.php
+share/wordpress/wp-includes/shortcodes.php
+share/wordpress/wp-includes/streams.php
+share/wordpress/wp-includes/taxonomy.php
+share/wordpress/wp-includes/template-loader.php
+share/wordpress/wp-includes/theme.php
+share/wordpress/wp-includes/update.php
+share/wordpress/wp-includes/user.php
+share/wordpress/wp-includes/vars.php
+share/wordpress/wp-includes/version.php
+share/wordpress/wp-includes/widgets.php
+share/wordpress/wp-includes/wlwmanifest.xml
+share/wordpress/wp-includes/wp-db.php
+share/wordpress/wp-includes/wp-diff.php
+share/wordpress/wp-links-opml.php
+share/wordpress/wp-load.php
+share/wordpress/wp-login.php
+share/wordpress/wp-mail.php
+share/wordpress/wp-pass.php
+share/wordpress/wp-rdf.php
+share/wordpress/wp-register.php
+share/wordpress/wp-rss.php
+share/wordpress/wp-rss2.php
+share/wordpress/wp-settings.php
+share/wordpress/wp-trackback.php
+share/wordpress/xmlrpc.php
+@dirrm share/wordpress/wp-includes/js/tinymce/utils
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme/img
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/wp_theme
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7/img
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/o2k7
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default/img
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins/default
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/skins
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/js
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced/img
+@dirrm share/wordpress/wp-includes/js/tinymce/themes/advanced
+@dirrm share/wordpress/wp-includes/js/tinymce/themes
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpgallery/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpgallery
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/js
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage/css
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wpeditimage
+@exec ${MKDIR} %D/share/wordpress/wp-includes/js/tinymce/plugins/wordpress/js
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/js
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress/css
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/wordpress
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/includes
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/css
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes/utils
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker/classes
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/spellchecker
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/safari
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste/js
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste/css
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/paste
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/js
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media/css
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/media
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2/img
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins/clearlooks2
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups/skins
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/inlinepopups
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/fullscreen
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/directionality
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins/autosave
+@dirrm share/wordpress/wp-includes/js/tinymce/plugins
+@dirrm share/wordpress/wp-includes/js/tinymce/langs
+@dirrm share/wordpress/wp-includes/js/tinymce
+@dirrm share/wordpress/wp-includes/js/thickbox
+@dirrm share/wordpress/wp-includes/js/swfupload/plugins
+@dirrm share/wordpress/wp-includes/js/swfupload
+@dirrm share/wordpress/wp-includes/js/scriptaculous
+@dirrm share/wordpress/wp-includes/js/jquery
+@dirrm share/wordpress/wp-includes/js/crop
+@dirrm share/wordpress/wp-includes/js
+@dirrm share/wordpress/wp-includes/images/wlw
+@dirrm share/wordpress/wp-includes/images/smilies
+@dirrm share/wordpress/wp-includes/images/crystal
+@dirrm share/wordpress/wp-includes/images
+@dirrm share/wordpress/wp-includes/Text/Diff/Renderer
+@dirrm share/wordpress/wp-includes/Text/Diff/Engine
+@dirrm share/wordpress/wp-includes/Text/Diff
+@dirrm share/wordpress/wp-includes/Text
+@dirrm share/wordpress/wp-includes
+@dirrm share/wordpress/wp-content/themes/default/images
+@dirrm share/wordpress/wp-content/themes/default
+@dirrm share/wordpress/wp-content/themes/classic
+@dirrm share/wordpress/wp-content/themes
+@dirrm share/wordpress/wp-content/plugins/akismet
+@dirrm share/wordpress/wp-content/plugins
+@dirrm share/wordpress/wp-content
+@dirrm share/wordpress/wp-admin/js
+@dirrm share/wordpress/wp-admin/includes
+@dirrm share/wordpress/wp-admin/import
+@dirrm share/wordpress/wp-admin/images
+@dirrm share/wordpress/wp-admin/css
+@dirrm share/wordpress/wp-admin
+@dirrm share/wordpress
+@dirrm share/examples/wordpress
+@dirrm share/doc/wordpress
