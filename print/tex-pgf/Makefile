@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/05/25 21:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/06 09:28:25 is Exp $
 #
 
 DISTNAME=	pgf-1.10
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pgf/}
 
@@ -24,14 +24,14 @@ do-build:
 
 do-install:
 	cd ${WRKSRC}/context && \
-		pax -ppa -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/context/
+		pax -pmap -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/context/
 	cd ${WRKSRC}/doc/generic && \
-		pax -ppa -rw pgf ${PKG_LOCALTEXMFPREFIX}/doc/generic/
+		pax -pmap -rw pgf ${PKG_LOCALTEXMFPREFIX}/doc/generic/
 	cd ${WRKSRC}/generic && \
-		pax -ppa -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/generic/
+		pax -pmap -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/generic/
 	cd ${WRKSRC}/latex && \
-		pax -ppa -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/latex/
+		pax -pmap -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/latex/
 	cd ${WRKSRC}/plain && \
-		pax -ppa -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/plain/
+		pax -pmap -rw pgf ${PKG_LOCALTEXMFPREFIX}/tex/plain/
 
 .include "../../mk/bsd.pkg.mk"
