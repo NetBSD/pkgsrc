@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.22 2008/01/05 21:48:53 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/06 10:25:51 wiz Exp $
 #
 
-DISTNAME=	mk-20050405
-PKGNAME=	mk-files-20050405
-PKGREVISION=	1
+DISTNAME=	mk-20081111
+PKGNAME=	${DISTNAME:S/mk/mk-files/1}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
-
-CONFLICTS+=	bootstrap-mk-files-[0-9]*
 
 MAINTAINER=	sjg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable *.mk files for the NetBSD portable bmake utility
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mk
 
@@ -28,7 +27,7 @@ PKG_FAIL_REASON=	"Recurses against itself"
 PLIST_SRC=${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${WRKSRC}/install-mk ${PREFIX}/share/mk
+	${SH} ${WRKSRC}/install-mk ${DESTDIR}${PREFIX}/share/mk
 
 .include "../../mk/bsd.pkg.mk"
 
@@ -37,7 +36,7 @@ do-install:
 # same goes for the bsd.*.mk files (it makes the symlinks to *.mk)
 ${WRKSRC}/FILES:	extract
 ${WRKDIR}/.PLIST_SRC:	${WRKSRC}/FILES
-	@( ${GREP} '^[A-Za-z].*\.mk' ${.ALLSRC} ; \
+	( ${GREP} '^[A-Za-z].*\.mk' ${.ALLSRC} ; \
 	[ -f /usr/share/mk/sys.mk ] || ${ECHO} sys.mk; \
 	[ -f /usr/share/mk/bsd.prog.mk ] || \
 	for f in dep doc init lib man nls obj own prog subdir; do \
