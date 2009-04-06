@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1226 2009/04/06 11:33:32 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1227 2009/04/06 13:16:15 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1666,3 +1666,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/gnome to 2.25.99.2 [wiz 2009-04-06]
 	Updated textproc/dictem to 1.0.2 [wiz 2009-04-06]
 	Added www/wordpress version 2.7.1 [adrianp 2009-04-06]
+	Updated math/eigen2 to 2.0.0 [markd 2009-04-06]
+	Updated www/neon to 0.28.3 [markd 2009-04-06]
+	Updated multimedia/phonon to 4.3.1 [markd 2009-04-06]
