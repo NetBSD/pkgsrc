@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2009/04/06 10:28:31 drochner Exp $
+# $NetBSD: Makefile,v 1.583 2009/04/06 11:40:07 drochner Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -454,6 +454,7 @@ SUBDIR+=	xglobe
 SUBDIR+=	xgrk
 SUBDIR+=	xhangglider
 SUBDIR+=	xhost
+SUBDIR+=	xine-xcb
 SUBDIR+=	xineramaproto
 SUBDIR+=	xinit
 SUBDIR+=	xinput
