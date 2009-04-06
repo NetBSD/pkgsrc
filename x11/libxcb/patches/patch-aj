@@ -1,0 +1,11 @@
+$NetBSD: patch-aj,v 1.1.1.1 2009/04/06 10:23:59 drochner Exp $
+
+--- src/c_client.py.orig	2009-04-01 16:08:31.000000000 +0200
++++ src/c_client.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python
+-from xml.etree.cElementTree import *
++from xml.etree.ElementTree import *
+ from os.path import basename
+ import getopt
+ import sys
