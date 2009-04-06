@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/06 10:09:06 wiz Exp $
 
---- makefile.orig	2008-08-31 18:48:22.000000000 +0200
+--- makefile.orig	2009-03-05 14:16:35.000000000 +0000
 +++ makefile
 @@ -125,10 +125,10 @@ endif
  # BIGENDIAN = 1
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
  
  # uncomment next line to include the symbols
  # SYMBOLS = 1
-@@ -193,9 +193,9 @@ BUILD_EXE = $(EXE)
+@@ -196,9 +196,9 @@ BUILD_EXE = $(EXE)
  endif
  
  # compiler, linker and utilities
@@ -28,56 +28,56 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
  MD = -mkdir$(EXE)
  RM = @rm -f
  
-@@ -219,7 +219,8 @@ NAME = $(TARGET)$(SUBTARGET)
+@@ -227,7 +227,7 @@ NAME = $(TARGET)$(SUBTARGET)
  endif
  
  # fullname is prefix+name+suffix+debugsuffix
--FULLNAME = $(PREFIX)$(NAME)$(SUFFIX)$(DEBUGSUFFIX)
-+#FULLNAME = $(PREFIX)$(NAME)$(SUFFIX)$(DEBUGSUFFIX)
-+FULLNAME = $(NAME)$(SUFFIX)$(DEBUGSUFFIX)
+-FULLNAME = $(PREFIX)$(NAME)$(CPPSUFFIX)$(SUFFIX)$(DEBUGSUFFIX)
++FULLNAME = $(NAME)$(CPPSUFFIX)$(SUFFIX)$(DEBUGSUFFIX)
  
  # add an EXE suffix to get the final emulator name
  EMULATOR = $(FULLNAME)$(EXE)
-@@ -284,10 +285,10 @@ endif
- #-------------------------------------------------
+@@ -309,11 +309,11 @@ endif
  
- # we compile to C89 standard with GNU extensions
--CFLAGS = -std=gnu89
-+#CFLAGS = -std=gnu89
+ # we compile C-only to C89 standard with GNU extensions
+ # we compile C++ code to C++98 standard with GNU extensions
+-CONLYFLAGS += -std=gnu89
+-CPPONLYFLAGS += -x c++ -std=gnu++98
++#CONLYFLAGS += -std=gnu89
++#CPPONLYFLAGS += -x c++ -std=gnu++98
  
  # this speeds it up a bit by piping between the preprocessor/compiler/assembler
--CFLAGS += -pipe
-+#CFLAGS += -pipe
+-CCOMFLAGS += -pipe
++#CCOMFLAGS += -pipe
  
- # add -g if we need symbols
+ # add -g if we need symbols, and ensure we have frame pointers
  ifdef SYMBOLS
-@@ -321,14 +322,14 @@ CFLAGS += -Wdeclaration-after-statement
+@@ -331,13 +331,13 @@ CCOMFLAGS += -pg
  endif
  
  # add the optimization flag
--CFLAGS += -O$(OPTIMIZE)
-+#CFLAGS += -O$(OPTIMIZE)
+-CCOMFLAGS += -O$(OPTIMIZE)
++#CCOMFLAGS += -O$(OPTIMIZE)
  
  # if we are optimizing, include optimization options
  # and make all errors into warnings
  ifneq ($(OPTIMIZE),0)
- CFLAGS += $(ARCHOPTS) -fno-strict-aliasing
  ifneq ($(TARGETOS),os2)
--CFLAGS += -Werror
-+#CFLAGS += -Werror
+-CCOMFLAGS += -Werror -fno-strict-aliasing $(ARCHOPTS)
++#CCOMFLAGS += -Werror -fno-strict-aliasing $(ARCHOPTS)
+ else
+ CCOMFLAGS += -fno-strict-aliasing $(ARCHOPTS)
  endif
- endif
- 
-@@ -344,7 +345,7 @@ endif
+@@ -369,7 +369,7 @@ endif
  #-------------------------------------------------
  
  # add core include paths
--CFLAGS += \
-+CFLAGS := \
+-CCOMFLAGS += \
++CCOMFLAGS := \
  	-I$(SRC)/$(TARGET) \
  	-I$(SRC)/$(TARGET)/includes \
  	-I$(OBJ)/$(TARGET)/layout \
-@@ -354,7 +355,7 @@ CFLAGS += \
+@@ -379,7 +379,7 @@ CCOMFLAGS += \
  	-I$(SRC)/lib/util \
  	-I$(SRC)/osd \
  	-I$(SRC)/osd/$(OSD) \
@@ -86,7 +86,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
  
  
  #-------------------------------------------------
-@@ -363,11 +364,11 @@ CFLAGS += \
+@@ -388,11 +388,11 @@ CCOMFLAGS += \
  
  # LDFLAGS are used generally; LDFLAGSEMULATOR are additional
  # flags only used when linking the core emulator
@@ -100,7 +100,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
  endif
  endif
  endif
-@@ -382,7 +383,7 @@ endif
+@@ -407,7 +407,7 @@ endif
  ifndef SYMBOLS
  ifndef PROFILE
  ifneq ($(TARGETOS),macosx)
@@ -109,7 +109,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
  endif
  endif
  endif
-@@ -535,7 +536,7 @@ $(VERSIONOBJ): $(DRVLIBS) $(LIBOSD) $(LI
+@@ -562,7 +562,7 @@ $(VERSIONOBJ): $(DRVLIBS) $(LIBOSD) $(LI
  
  $(EMULATOR): $(VERSIONOBJ) $(DRVLIBS) $(LIBOSD) $(LIBEMU) $(LIBCPU) $(LIBSOUND) $(LIBUTIL) $(EXPAT) $(ZLIB) $(LIBOCORE) $(RESFILE)
  	@echo Linking $@...
