@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/04/06 09:28:25 is Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/06 09:31:59 is Exp $
 #
 
-DISTNAME=	pgf-1.10
+DISTNAME=	pgf-2.00
 PKGNAME=	tex-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	print graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pgf/}
 
