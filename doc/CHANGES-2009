@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1217 2009/04/06 10:09:55 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1218 2009/04/06 10:11:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1658,3 +1658,4 @@ Changes to the packages collection and infrastructure in 2009:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2009Q1 branch [agc 2009-04-05]
 	Updated print/tex-pgf to 2.00 [is 2009-04-06]
 	Updated emulators/sdlmame to 0.130 [wiz 2009-04-06]
+	Updated devel/coccinelle to 0.1.6a [wiz 2009-04-06]
