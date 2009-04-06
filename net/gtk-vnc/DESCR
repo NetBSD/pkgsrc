@@ -1,0 +1,4 @@
+gtk-vnc is a VNC viewer widget for GTK. It is built using coroutines
+allowing it to be completely asynchronous while remaining single
+threaded. It provides a core C library, and bindings for Python
+(PyGTK).
