@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1227 2009/04/06 13:16:15 markd Exp $
+$NetBSD: CHANGES-2009,v 1.1228 2009/04/06 19:02:32 chuck Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1669,3 +1669,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/eigen2 to 2.0.0 [markd 2009-04-06]
 	Updated www/neon to 0.28.3 [markd 2009-04-06]
 	Updated multimedia/phonon to 4.3.1 [markd 2009-04-06]
+	Added math/p5-Statistics-Descriptive version 2.6 [chuck 2009-04-06]
