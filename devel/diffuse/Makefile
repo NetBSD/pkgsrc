@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/03/07 03:02:09 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/06 10:13:28 wiz Exp $
 #
 
-DISTNAME=	diffuse-0.2.15
-PKGREVISION=	2
+DISTNAME=	diffuse-0.3.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=diffuse/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,7 @@ USE_DIRS=	xdg-1.4 gnome2-1.6
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications
 INSTALLATION_DIRS+=	share/diffuse/syntax share/examples/diffuse
 INSTALLATION_DIRS+=	share/gnome/help/diffuse share/pixmaps
+INSTALLATION_DIRS+=	share/gnome/help/diffuse/C share/omf/diffuse
 
 CONF_FILES+=	${PREFIX}/share/examples/diffuse/diffuserc \
 		${PKG_SYSCONFDIR}/diffuserc
@@ -43,10 +43,8 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/usr/bin/diffuse ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/pixmaps/diffuse.png \
 		${DESTDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/gnome/help/diffuse/C/diffuse.xml \
 		${DESTDIR}${PREFIX}/share/gnome/help/diffuse/C
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/omf/diffuse
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/omf/diffuse/diffuse-C.omf \
 		${DESTDIR}${PREFIX}/share/omf/diffuse
 	${INSTALL_DATA} ${WRKSRC}/src/usr/share/applications/diffuse.desktop \
