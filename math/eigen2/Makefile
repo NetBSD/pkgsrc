@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/01/27 12:22:46 markd Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/06 12:37:49 markd Exp $
 
-DISTNAME=	eigen-2.0-beta6
-PKGNAME=	${DISTNAME:S/-beta/beta/}
+DISTNAME=	eigen-2.0.0
 CATEGORIES=	math
 MASTER_SITES=   http://download.tuxfamily.org/eigen/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,8 +11,6 @@ COMMENT=	C++ template library for linear algebra
 
 USE_LANGUAGES+= c c++
 USE_CMAKE= yes
-
-WRKSRC=		${WRKDIR}/eigen2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
