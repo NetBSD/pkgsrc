@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/03/16 12:13:31 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/04/07 10:26:58 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
@@ -333,6 +333,7 @@ share/locale/oc/LC_MESSAGES/totem.mo
 share/locale/or/LC_MESSAGES/totem.mo
 share/locale/pa/LC_MESSAGES/totem.mo
 share/locale/pl/LC_MESSAGES/totem.mo
+share/locale/ps/LC_MESSAGES/totem.mo
 share/locale/pt/LC_MESSAGES/totem.mo
 share/locale/pt_BR/LC_MESSAGES/totem.mo
 share/locale/ro/LC_MESSAGES/totem.mo
