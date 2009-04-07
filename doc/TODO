@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8021 2009/04/07 17:16:45 minskim Exp $
+$NetBSD: TODO,v 1.8022 2009/04/07 17:31:11 minskim Exp $
 
 Suggested new packages
 ======================
@@ -885,7 +885,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.3.6
 	o mc-4.6.2
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
