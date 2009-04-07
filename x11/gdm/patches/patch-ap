@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.2 2008/01/11 13:02:33 drochner Exp $
+$NetBSD: patch-ap,v 1.3 2009/04/07 11:40:20 drochner Exp $
 
---- ./daemon/gdm-xdmcp-manager.c.orig	2008-01-07 20:39:37.000000000 +0100
+--- ./daemon/gdm-xdmcp-manager.c.orig	2009-03-19 05:59:27.000000000 +0100
 +++ ./daemon/gdm-xdmcp-manager.c
 @@ -64,7 +64,7 @@
   * On Sun, we need to define allow_severity and deny_severity to link
@@ -39,9 +39,9 @@ $NetBSD: patch-ap,v 1.2 2008/01/11 13:02:33 drochner Exp $
 +#endif
 +
  	if (bind (sock, ai->ai_addr, ai->ai_addrlen) < 0) {
- 		gdm_debug ("bind: %s", g_strerror (errno));
+ 		gdm_error ("bind: %s", g_strerror (errno));
  		close (sock);
-@@ -1260,7 +1270,9 @@ create_sa_from_request (ARRAY8 *req_addr
+@@ -1259,7 +1269,9 @@ create_sa_from_request (ARRAY8 *req_addr
  
  	memset (&hints, 0, sizeof (hints));
  	hints.ai_family = family;
@@ -51,7 +51,7 @@ $NetBSD: patch-ap,v 1.2 2008/01/11 13:02:33 drochner Exp $
  	if ((gaierr = getaddrinfo (host, serv, &hints, &ai_list)) != 0) {
  		gdm_debug ("Unable get address: %s", gai_strerror (gaierr));
  		return FALSE;
-@@ -1279,6 +1291,20 @@ create_sa_from_request (ARRAY8 *req_addr
+@@ -1278,6 +1290,20 @@ create_sa_from_request (ARRAY8 *req_addr
  
  	freeaddrinfo (ai_list);
  
