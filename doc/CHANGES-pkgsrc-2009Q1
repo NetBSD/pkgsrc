@@ -1,6 +1,11 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.1 2009/04/06 14:09:07 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.2 2009/04/07 14:35:00 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
 
 Created pkgsrc-2009Q1 branch [agc 2009-04-06 07:00 GMT]
+
+Pullup ticket #2727 - requested by joerg
+epydoc: fix destdir support
+Pullup ticket #2728 - requested by dsainty
+libproxy: fix build of dependent packages
