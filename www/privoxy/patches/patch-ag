@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2009/04/07 00:21:47 mjl Exp $
+$NetBSD: patch-ag,v 1.2 2009/04/07 14:02:06 mjl Exp $
 
---- jbsockets.c.orig	2009-03-31 14:08:54.000000000 +0200
-+++ jbsockets.c	2009-03-31 14:36:35.000000000 +0200
+--- jbsockets.c.orig	2008-12-20 15:53:55.000000000 +0100
++++ jbsockets.c	2009-04-07 15:54:10.000000000 +0200
 @@ -945,6 +945,14 @@
     struct sockaddr_in inaddr;
     struct hostent *hostp;
@@ -17,7 +17,7 @@ $NetBSD: patch-ag,v 1.1 2009/04/07 00:21:47 mjl Exp $
  #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS) || defined(HAVE_GETHOSTBYNAME_R_3_ARGS)
     struct hostent result;
  #if defined(HAVE_GETHOSTBYNAME_R_6_ARGS) || defined(HAVE_GETHOSTBYNAME_R_5_ARGS)
-@@ -995,7 +1003,39 @@
+@@ -995,6 +1003,39 @@
        {
           hostp = NULL;
        }
@@ -27,6 +27,7 @@ $NetBSD: patch-ag,v 1.1 2009/04/07 00:21:47 mjl Exp $
 +	struct addrinfo *resp = NULL;
 +	struct addrinfo hints;
 +
++	hostp = NULL;
 +	memset(&hints, '\0', sizeof(struct addrinfo));
 +	hints.ai_family = AF_INET;
 +
@@ -56,4 +57,3 @@ $NetBSD: patch-ag,v 1.1 2009/04/07 00:21:47 mjl Exp $
  #elif FEATURE_PTHREAD
        privoxy_mutex_lock(&resolver_mutex);
        while (NULL == (hostp = gethostbyname(host))
-              && (h_errno == TRY_AGAIN) && (dns_retries++ < MAX_DNS_RETRIES))
