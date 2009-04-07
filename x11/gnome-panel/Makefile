@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2009/03/22 19:01:42 wiz Exp $
+# $NetBSD: Makefile,v 1.109 2009/04/07 10:57:42 kefren Exp $
 #
 
 DISTNAME=		gnome-panel-2.26.0
@@ -36,7 +36,7 @@ GCONF_SCHEMAS+=	workspace-switcher.schemas
 GCONF_SCHEMAS+=	window-list.schemas
 GCONF_ENTRIES=		panel-default-setup.entries
 
-BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.12.0
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.15.1
 BUILDLINK_API_DEPENDS.libglade+=	libglade>=2.5.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.0
 
