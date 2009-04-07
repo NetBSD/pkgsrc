@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2009/04/07 08:03:38 hasso Exp $
+$NetBSD: patch-ad,v 1.5 2009/04/07 08:05:50 hasso Exp $
 
 --- pr/src/misc/prnetdb.c.orig	2006-11-14 19:41:59 +0200
 +++ pr/src/misc/prnetdb.c	2009-04-03 18:29:50 +0300
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.4 2009/04/07 08:03:38 hasso Exp $
  #define _PR_HAVE_5_ARG_GETPROTO_R
  #endif
  
-+#if __DragonFly_version >= 200201
++#if __DragonFly_version >= 200202
 +#define _PR_HAVE_GETPROTO_R
 +#define _PR_HAVE_5_ARG_GETPROTO_R
 +#endif
