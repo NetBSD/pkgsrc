@@ -1,0 +1,14 @@
+$NetBSD: patch-an,v 1.1 2009/04/07 10:53:08 drochner Exp $
+
+--- config.h.in.orig	2008-12-08 18:49:18.000000000 +0100
++++ config.h.in
+@@ -436,6 +436,9 @@ Boston, MA 02110-1301, USA.
+ /* Define to 1 if you have the `pthread_getattr_np' function. */
+ #undef HAVE_PTHREAD_GETATTR_NP
+ 
++/* XXX manually patched */
++#undef HAVE_PTHREAD_ATTR_GET_NP
++
+ /* Define to 1 if you have the `pthread_get_stackaddr_np' function. */
+ #undef HAVE_PTHREAD_GET_STACKADDR_NP
+ 
