@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/02/19 12:49:12 kefren Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/04/07 11:47:05 kefren Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -29,6 +29,18 @@ lib/monodevelop/AddIns/MonoDevelop.Autotools/expansions.m4
 lib/monodevelop/AddIns/MonoDevelop.Autotools/make-dist.targets
 lib/monodevelop/AddIns/MonoDevelop.Autotools/package.pc.template
 lib/monodevelop/AddIns/MonoDevelop.Autotools/rules.make
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.am.project.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.include
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.noauto.project.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/Makefile.solution.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/autogen.sh.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/configure.ac.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/configure.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/exe.wrapper.in.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/expansions.m4
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/make-dist.targets
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/package.pc.template
+lib/monodevelop/AddIns/MonoDevelop.Autotools/templates/rules.make
 lib/monodevelop/AddIns/MonoDevelop.AspNet/MonoDevelop.AspNet.dll
 lib/monodevelop/AddIns/MonoDevelop.AspNet/MonoDevelop.AspNet.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas/W3C-License.html
@@ -59,9 +71,6 @@ lib/monodevelop/AddIns/MonoDevelop.GtkCore/libstetic.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll.config
 lib/monodevelop/AddIns/MonoDevelop.GtkCore/libsteticui.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/MonoDevelop.Moonlight.dll
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/MonoDevelop.Moonlight.dll.mdb
-lib/monodevelop/AddIns/MonoDevelop.Moonlight/Silverlight.js
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll
 lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio/MonoDevelop.MsVisualStudio.dll.mdb
 lib/monodevelop/AddIns/MonoDevelop.RegexToolkit/MonoDevelop.RegexToolkit.dll
@@ -97,6 +106,7 @@ lib/monodevelop/AddIns/VersionControl/Diff.dll.mdb
 lib/monodevelop/AddIns/VersionControl/DiffWidget.dll
 lib/monodevelop/AddIns/VersionControl/DiffWidget.dll.mdb
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll
+lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll.config
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.Subversion.dll.mdb
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll
 lib/monodevelop/AddIns/VersionControl/MonoDevelop.VersionControl.dll.mdb
@@ -192,13 +202,13 @@ share/mime/packages/monodevelop.xml
 @dirrm lib/monodevelop/AddIns/MonoDevelop.WebReferences
 @dirrm lib/monodevelop/AddIns/MonoDevelop.RegexToolkit
 @dirrm lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Moonlight
 @dirrm lib/monodevelop/AddIns/MonoDevelop.GtkCore
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Gettext
 @dirrm lib/monodevelop/AddIns/MonoDevelop.DesignerSupport
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Deployment
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Debugger
 @dirrm lib/monodevelop/AddIns/MonoDevelop.CodeMetrics
+@dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools/templates
 @dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas
 @dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet
