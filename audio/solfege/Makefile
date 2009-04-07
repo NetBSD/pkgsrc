@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/02/09 22:56:21 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/04/07 05:07:03 schmonz Exp $
 #
 
-DISTNAME=		solfege-3.8.0
-PKGREVISION=		4
+DISTNAME=		solfege-3.14.1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=		http://www.solfege.org/
 COMMENT=		Practice several musical ear training exercises
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+BUILD_DEPENDS+=		txt2man-[0-9]*:../../converters/txt2man
 
 USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
@@ -33,6 +33,8 @@ SUBST_STAGE.sound=	do-configure
 SUBST_FILES.sound=	default.config
 SUBST_SED.sound=	-e 's|@WAVPLAYER@|${WAVPLAYER}|g'
 SUBST_SED.sound+=	-e 's|@MIDIPLAYER@|${MIDIPLAYER}|g'
+SUBST_SED.sound+=	-e 's|@MP3PLAYER@|${MP3PLAYER}|g'
+SUBST_SED.sound+=	-e 's|@OGGPLAYER@|${OGGPLAYER}|g'
 SUBST_MESSAGE.sound=	Setting default audio player.
 
 EGDIR=			${PREFIX}/share/examples/solfege
@@ -46,9 +48,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 .if ${OPSYS} == "NetBSD"
 WAVPLAYER=	/usr/bin/audioplay
 MIDIPLAYER=	/usr/bin/midiplay
+MP3PLAYER=	${LOCALBASE}/bin/mpg123
+OGGPLAYER=	${LOCALBASE}/bin/ogg123
 .elif ${OPSYS} == "Darwin"
 WAVPLAYER=	${LOCALBASE}/bin/qtplay
 MIDIPLAYER=	${LOCALBASE}/bin/qtplay
+MP3PLAYER=	${LOCALBASE}/bin/qtplay
+OGGPLAYER=	${LOCALBASE}/bin/qtplay
 DEPENDS+=	qtplay-[0-9]*:../../audio/qtplay
 .endif
 
@@ -58,6 +64,7 @@ post-install:
 		${PREFIX}/share/solfege/src
 
 .include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
