@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2009/04/07 18:45:04 hasso Exp $
+
+--- encode.c.orig	2009-04-06 11:39:05 +0300
++++ encode.c	2009-04-06 11:39:26 +0300
+@@ -37,7 +37,7 @@ int encode_file (char *name, long blocks
+    tune = 0;
+   #endif
+ 
+-  if (fls)
++  if (cfls)
+     if (!test_exist (_7PLUS_FLS))
+       unlink (_7PLUS_FLS);
+ 
+@@ -738,7 +738,7 @@ int encode_file (char *name, long blocks
+     }
+ 
+     fprintf (o, "\n\nEncoding successful!\n");
+-    if (fls)
++    if (cfls)
+     {
+       if (!*altname)
+         sprintf (filename, "%s%s", searchbin?searchbin:"", _7PLUS_FLS);
