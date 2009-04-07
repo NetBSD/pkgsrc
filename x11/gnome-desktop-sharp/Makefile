@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/25 22:37:15 he Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/07 11:06:45 kefren Exp $
 #
 
 DISTNAME=	gnome-desktop-sharp-2.26.0
@@ -33,7 +33,7 @@ SUBST_FILES.pc=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.pc=		-e "s|\$${pcfiledir}/../..|@prefix@|g"
 SUBST_MESSAGE.pc=	Fixing hardcoded paths.
 
-BUILDLINK_API_DEPENDS.libwnck+=		libwnck>=2.23.0
+BUILDLINK_API_DEPENDS.libwnck+=		libwnck>=2.26.0
 .include "../../devel/libwnck/buildlink3.mk"
 BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.22.2
 .include "../../graphics/librsvg/buildlink3.mk"
@@ -44,9 +44,12 @@ BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.18.0
 # XXX: needs 2.22.1 of libnautilus-burn, not yet in pkgsrc
 #BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.22.1
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
+.include "../../time/libical/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.23.5
 .include "../../www/gtkhtml314/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.23.0
+.include "../../www/libproxy/buildlink3.mk"
+.include "../../x11/gnome-desktop/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.26.0
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.12.2
