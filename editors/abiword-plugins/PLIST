@@ -1,37 +1,43 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/15 10:47:25 adam Exp $
-lib/AbiWord-2.4/plugins/libAbiApplix.la
-lib/AbiWord-2.4/plugins/libAbiBMP.la
-lib/AbiWord-2.4/plugins/libAbiBZ2.la
-lib/AbiWord-2.4/plugins/libAbiBabelfish.la
-lib/AbiWord-2.4/plugins/libAbiCAPI.la
-lib/AbiWord-2.4/plugins/libAbiClarisWorks.la
-lib/AbiWord-2.4/plugins/libAbiCommand.la
-lib/AbiWord-2.4/plugins/libAbiDash.la
-lib/AbiWord-2.4/plugins/libAbiDocBook.la
-lib/AbiWord-2.4/plugins/libAbiEML.la
-lib/AbiWord-2.4/plugins/libAbiFreeTranslation.la
-lib/AbiWord-2.4/plugins/libAbiGdict.la
-lib/AbiWord-2.4/plugins/libAbiGoogle.la
-lib/AbiWord-2.4/plugins/libAbiHRText.la
-lib/AbiWord-2.4/plugins/libAbiHancom.la
-lib/AbiWord-2.4/plugins/libAbiISCII.la
-lib/AbiWord-2.4/plugins/libAbiJPEG.la
-lib/AbiWord-2.4/plugins/libAbiKWord.la
-lib/AbiWord-2.4/plugins/libAbiLaTeX.la
-lib/AbiWord-2.4/plugins/libAbiMIF.la
-lib/AbiWord-2.4/plugins/libAbiMSWrite.la
-lib/AbiWord-2.4/plugins/libAbiNroff.la
-lib/AbiWord-2.4/plugins/libAbiOpenDocument.la
-lib/AbiWord-2.4/plugins/libAbiOpenWriter.la
-lib/AbiWord-2.4/plugins/libAbiPassepartout.la
-lib/AbiWord-2.4/plugins/libAbiSDW.la
-lib/AbiWord-2.4/plugins/libAbiT602.la
-lib/AbiWord-2.4/plugins/libAbiURLDict.la
-lib/AbiWord-2.4/plugins/libAbiWMF.la
-lib/AbiWord-2.4/plugins/libAbiWML.la
-lib/AbiWord-2.4/plugins/libAbiWikipedia.la
-lib/AbiWord-2.4/plugins/libAbiWordPerfect.la
-lib/AbiWord-2.4/plugins/libAbiXHTML.la
-lib/AbiWord-2.4/plugins/libAbiXSLFO.la
-@dirrm lib/AbiWord-2.4/plugins
-@dirrm lib/AbiWord-2.4
+@comment $NetBSD: PLIST,v 1.11 2009/04/07 16:27:09 drochner Exp $
+lib/abiword-2.6/plugins/libAbiApplix.la
+lib/abiword-2.6/plugins/libAbiBMP.la
+lib/abiword-2.6/plugins/libAbiBabelfish.la
+lib/abiword-2.6/plugins/libAbiClarisWorks.la
+lib/abiword-2.6/plugins/libAbiCommand.la
+lib/abiword-2.6/plugins/libAbiDocBook.la
+lib/abiword-2.6/plugins/libAbiEML.la
+lib/abiword-2.6/plugins/libAbiFreeTranslation.la
+lib/abiword-2.6/plugins/libAbiGdict.la
+lib/abiword-2.6/plugins/libAbiGoogle.la
+lib/abiword-2.6/plugins/libAbiHRText.la
+lib/abiword-2.6/plugins/libAbiHancom.la
+lib/abiword-2.6/plugins/libAbiISCII.la
+lib/abiword-2.6/plugins/libAbiJPEG.la
+lib/abiword-2.6/plugins/libAbiKWord.la
+lib/abiword-2.6/plugins/libAbiLaTeX.la
+lib/abiword-2.6/plugins/libAbiMIF.la
+lib/abiword-2.6/plugins/libAbiMSWrite.la
+lib/abiword-2.6/plugins/libAbiNroff.la
+lib/abiword-2.6/plugins/libAbiOpenDocument.la
+lib/abiword-2.6/plugins/libAbiOpenWriter.la
+lib/abiword-2.6/plugins/libAbiPassepartout.la
+lib/abiword-2.6/plugins/libAbiSDW.la
+lib/abiword-2.6/plugins/libAbiT602.la
+lib/abiword-2.6/plugins/libAbiURLDict.la
+lib/abiword-2.6/plugins/libAbiWMF.la
+lib/abiword-2.6/plugins/libAbiWML.la
+lib/abiword-2.6/plugins/libAbiWikipedia.la
+lib/abiword-2.6/plugins/libAbiWordPerfect.la
+lib/abiword-2.6/plugins/libAbiXHTML.la
+lib/abiword-2.6/plugins/libAbiXSLFO.la
+share/abiword-2.6/xsltml/README
+share/abiword-2.6/xsltml/cmarkup.xsl
+share/abiword-2.6/xsltml/entities.xsl
+share/abiword-2.6/xsltml/glayout.xsl
+share/abiword-2.6/xsltml/mmltex.xsl
+share/abiword-2.6/xsltml/scripts.xsl
+share/abiword-2.6/xsltml/tables.xsl
+share/abiword-2.6/xsltml/tokens.xsl
+@dirrm share/abiword-2.6/xsltml
+@dirrm lib/abiword-2.6/plugins
+@dirrm lib/abiword-2.6
