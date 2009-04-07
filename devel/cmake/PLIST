@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/11/08 13:20:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/04/07 10:42:14 drochner Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -19,6 +19,7 @@ share/cmake-${CMAKE_API}/Modules/CMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASM-ATTInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeASMCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeASMInformation.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeASM_MASMInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeBackwardCompatibilityC.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeBackwardCompatibilityCXX.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeBorlandFindMake.cmake
@@ -37,6 +38,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeConfigurableFile.in
 share/cmake-${CMAKE_API}/Modules/CMakeDependentOption.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeDetermineASM_MASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCXXCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeDetermineCompilerABI.cmake
@@ -69,6 +71,7 @@ share/cmake-${CMAKE_API}/Modules/CMakeSystem.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeSystemSpecificInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASM-ATTCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestASMCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeTestASM_MASMCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestCXXCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeTestForFreeVC.cxx
@@ -139,11 +142,14 @@ share/cmake-${CMAKE_API}/Modules/FindBoost.cmake
 share/cmake-${CMAKE_API}/Modules/FindCABLE.cmake
 share/cmake-${CMAKE_API}/Modules/FindCURL.cmake
 share/cmake-${CMAKE_API}/Modules/FindCVS.cmake
+share/cmake-${CMAKE_API}/Modules/FindCoin3D.cmake
 share/cmake-${CMAKE_API}/Modules/FindCups.cmake
 share/cmake-${CMAKE_API}/Modules/FindCurses.cmake
+share/cmake-${CMAKE_API}/Modules/FindCxxTest.cmake
 share/cmake-${CMAKE_API}/Modules/FindCygwin.cmake
 share/cmake-${CMAKE_API}/Modules/FindDCMTK.cmake
 share/cmake-${CMAKE_API}/Modules/FindDart.cmake
+share/cmake-${CMAKE_API}/Modules/FindDevIL.cmake
 share/cmake-${CMAKE_API}/Modules/FindDoxygen.cmake
 share/cmake-${CMAKE_API}/Modules/FindEXPAT.cmake
 share/cmake-${CMAKE_API}/Modules/FindFLTK.cmake
@@ -181,7 +187,9 @@ share/cmake-${CMAKE_API}/Modules/FindMatlab.cmake
 share/cmake-${CMAKE_API}/Modules/FindMotif.cmake
 share/cmake-${CMAKE_API}/Modules/FindOpenAL.cmake
 share/cmake-${CMAKE_API}/Modules/FindOpenGL.cmake
+share/cmake-${CMAKE_API}/Modules/FindOpenMP.cmake
 share/cmake-${CMAKE_API}/Modules/FindOpenSSL.cmake
+share/cmake-${CMAKE_API}/Modules/FindOpenSceneGraph.cmake
 share/cmake-${CMAKE_API}/Modules/FindOpenThreads.cmake
 share/cmake-${CMAKE_API}/Modules/FindPHP4.cmake
 share/cmake-${CMAKE_API}/Modules/FindPNG.cmake
@@ -199,6 +207,7 @@ share/cmake-${CMAKE_API}/Modules/FindQt.cmake
 share/cmake-${CMAKE_API}/Modules/FindQt3.cmake
 share/cmake-${CMAKE_API}/Modules/FindQt4.cmake
 share/cmake-${CMAKE_API}/Modules/FindQuickTime.cmake
+share/cmake-${CMAKE_API}/Modules/FindRTI.cmake
 share/cmake-${CMAKE_API}/Modules/FindRuby.cmake
 share/cmake-${CMAKE_API}/Modules/FindSDL.cmake
 share/cmake-${CMAKE_API}/Modules/FindSDL_image.cmake
@@ -208,6 +217,7 @@ share/cmake-${CMAKE_API}/Modules/FindSDL_sound.cmake
 share/cmake-${CMAKE_API}/Modules/FindSDL_ttf.cmake
 share/cmake-${CMAKE_API}/Modules/FindSWIG.cmake
 share/cmake-${CMAKE_API}/Modules/FindSelfPackers.cmake
+share/cmake-${CMAKE_API}/Modules/FindSquish.cmake
 share/cmake-${CMAKE_API}/Modules/FindSubversion.cmake
 share/cmake-${CMAKE_API}/Modules/FindTCL.cmake
 share/cmake-${CMAKE_API}/Modules/FindTIFF.cmake
@@ -222,6 +232,7 @@ share/cmake-${CMAKE_API}/Modules/FindX11.cmake
 share/cmake-${CMAKE_API}/Modules/FindXMLRPC.cmake
 share/cmake-${CMAKE_API}/Modules/FindZLIB.cmake
 share/cmake-${CMAKE_API}/Modules/Findosg.cmake
+share/cmake-${CMAKE_API}/Modules/FindosgAnimation.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgDB.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgFX.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgGA.cmake
@@ -235,8 +246,13 @@ share/cmake-${CMAKE_API}/Modules/FindosgTerrain.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgText.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgUtil.cmake
 share/cmake-${CMAKE_API}/Modules/FindosgViewer.cmake
+share/cmake-${CMAKE_API}/Modules/FindosgVolume.cmake
+share/cmake-${CMAKE_API}/Modules/FindosgWidget.cmake
+share/cmake-${CMAKE_API}/Modules/Findosg_functions.cmake
 share/cmake-${CMAKE_API}/Modules/FindwxWidgets.cmake
 share/cmake-${CMAKE_API}/Modules/FindwxWindows.cmake
+share/cmake-${CMAKE_API}/Modules/FortranCInterface.cmake
+share/cmake-${CMAKE_API}/Modules/FortranCInterface.h.in
 share/cmake-${CMAKE_API}/Modules/GetPrerequisites.cmake
 share/cmake-${CMAKE_API}/Modules/ITKCompatibility.cmake
 share/cmake-${CMAKE_API}/Modules/InstallRequiredSystemLibraries.cmake
@@ -268,6 +284,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/Generic-ADSP-Common.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Generic-SDCC-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Generic.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/HP-UX.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/Haiku.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/IRIX.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/IRIX64.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Linux-GNU-Fortran.cmake
@@ -322,6 +339,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/gcc.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/kFreeBSD.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/syllable.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/xlf.cmake
+share/cmake-${CMAKE_API}/Modules/SquishTestScript.cmake
 share/cmake-${CMAKE_API}/Modules/SystemInformation.cmake
 share/cmake-${CMAKE_API}/Modules/SystemInformation.in
 share/cmake-${CMAKE_API}/Modules/TestBigEndian.cmake
