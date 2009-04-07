@@ -1,13 +1,24 @@
-$NetBSD: patch-ah,v 1.1 2008/06/21 22:13:09 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2009/04/07 18:36:52 hasso Exp $
 
---- lib/erl_interface/src/connect/ei_resolve.c.orig	2008-06-20 20:15:09.000000000 +0200
-+++ lib/erl_interface/src/connect/ei_resolve.c
-@@ -614,7 +614,7 @@ struct hostent *ei_gethostbyname_r(const
+--- lib/erl_interface/src/connect/ei_resolve.c.orig	2007-11-26 20:57:25 +0200
++++ lib/erl_interface/src/connect/ei_resolve.c	2009-04-07 21:11:49 +0300
+@@ -46,6 +46,10 @@
+ #include <errno.h>
+ #endif 
+ 
++#ifdef __DragonFly__
++#include <sys/param.h> /* for __DragonFly_version */
++#endif
++
+ /* common to all platforms */
+ #include "eidef.h"
+ #include "ei_resolve.h"
+@@ -614,7 +618,7 @@ struct hostent *ei_gethostbyname_r(const
  #ifndef HAVE_GETHOSTBYNAME_R
    return my_gethostbyname_r(name,hostp,buffer,buflen,h_errnop);
  #else
 -#ifdef __GLIBC__
-+#if defined(__GLIBC__) || defined(__FreeBSD__)
++#if defined(__GLIBC__) || defined(__FreeBSD__) || (defined(__DragonFly__) && (__DragonFly_version + 0 >= 200202))
    struct hostent *result;
  
    gethostbyname_r(name, hostp, buffer, buflen, &result, h_errnop);
