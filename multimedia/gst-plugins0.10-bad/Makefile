@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/09 16:02:07 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/07 09:53:54 drochner Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,6 @@ USE_LANGUAGES=		c c++
 
 .include "Makefile.common"
 
-PKGREVISION=		2
 COMMENT+=		bad plugins
 
 .include "../../mk/bsd.prefs.mk"
