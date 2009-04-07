@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1238 2009/04/07 17:31:11 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1239 2009/04/07 21:07:52 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/ruby-actionmailer to 2.3.2 [minskim 2009-04-07]
 	Updated www/rails to 2.3.2 [minskim 2009-04-07]
 	Updated math/mathomatic to 14.3.6 [minskim 2009-04-07]
+	Updated archivers/ruby-archive-tar-minitar to 0.5.2nb1 [seb 2009-04-07]
