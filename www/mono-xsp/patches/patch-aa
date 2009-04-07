@@ -1,3 +1,4 @@
+$NetBSD: patch-aa,v 1.2 2009/04/07 11:29:52 kefren Exp $
 --- test/2.0/treeview/Makefile.in.orig	2009-01-20 15:33:32.000000000 +0200
 +++ test/2.0/treeview/Makefile.in	2009-01-20 15:34:40.000000000 +0200
 @@ -381,10 +381,12 @@
