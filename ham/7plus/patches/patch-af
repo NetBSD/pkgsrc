@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/04/07 18:45:04 hasso Exp $
+
+--- decode.c.orig	2009-04-06 11:38:47 +0300
++++ decode.c	2009-04-06 11:38:57 +0300
+@@ -44,7 +44,7 @@ int control_decode (char *name)
+ 
+   /* write 7plus.fls (for server use) */
+   sprintf (filename, "%s"_7PLUS_FLS, genpath);
+-  if (!i && fls)
++  if (!i && cfls)
+   {
+     if ((out = fopen (filename, OPEN_WRITE_TEXT)) == NULLFP)
+       return (14);
