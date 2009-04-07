@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2008/07/14 12:56:11 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/04/07 11:12:27 drochner Exp $
 #
 
-DISTNAME=	libgnomecups-0.2.2
-PKGREVISION=	5
+DISTNAME=	libgnomecups-0.2.3
 CATEGORIES=	print gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnomecups/0.2/}
 
@@ -12,7 +11,7 @@ COMMENT=	GNOME interface to CUPS
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_TOOLS+=		intltool msgfmt pkg-config gmake
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
