@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2009/04/07 16:27:09 drochner Exp $
+
+--- configure.orig	2009-03-19 13:47:26.000000000 +0100
++++ configure
+@@ -25370,7 +25370,7 @@ else
+ 
+ fi
+ 
+-if test "$abi_cv_libxslt" == "yes"; then
++if test "$abi_cv_libxslt" = "yes"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:$LINENO: checking for LIBXSLT" >&5
+@@ -25498,7 +25498,7 @@ fi
+ LATEX_CFLAGS="$LATEX_CFLAGS "'${PLUGIN_CFLAGS}'
+ LATEX_LIBS="$LATEX_LIBS "'${PLUGIN_LIBS}'
+ 
+-if test "$enable_latex_builtin" == "yes"; then
++if test "$enable_latex_builtin" = "yes"; then
+ 	LATEX_CFLAGS="$LATEX_CFLAGS -DABI_PLUGIN_BUILTIN"
+ fi
+ 
