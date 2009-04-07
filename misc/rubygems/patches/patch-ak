@@ -1,18 +1,19 @@
-$NetBSD: patch-ak,v 1.2 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-ak,v 1.3 2009/04/07 07:35:44 minskim Exp $
 
---- test/test_gem.rb.orig	2008-06-19 06:27:03.000000000 +0900
+--- test/test_gem.rb.orig	2008-10-09 15:42:25.000000000 -0700
 +++ test/test_gem.rb
-@@ -345,17 +345,17 @@ class TestGem < RubyGemTestCase
+@@ -384,18 +384,18 @@ class TestGem < RubyGemTestCase
      Gem::ConfigMap[:libdir] = orig_libdir
    end
  
 -  def test_self_prefix_sitelibdir
 -    orig_sitelibdir = Gem::ConfigMap[:sitelibdir]
 +  def test_self_prefix_vendorlibdir
-+    orig_vendorlibdir = Gem::ConfigMap[:vendorlibdir]
++    orig_sitelibdir = Gem::ConfigMap[:vendorlibdir]
  
      file_name = File.expand_path __FILE__
      prefix = File.dirname File.dirname(file_name)
+     prefix = File.dirname prefix if File.basename(prefix) == 'test'
  
 -    Gem::ConfigMap[:sitelibdir] = prefix
 +    Gem::ConfigMap[:vendorlibdir] = prefix
@@ -20,7 +21,7 @@ $NetBSD: patch-ak,v 1.2 2008/09/15 08:43:44 taca Exp $
      assert_nil Gem.prefix
    ensure
 -    Gem::ConfigMap[:sitelibdir] = orig_sitelibdir
-+    Gem::ConfigMap[:vendorlibdir] = orig_vendorlibdir
++    Gem::ConfigMap[:vendorlibdir] = orig_sitelibdir
    end
  
    def test_self_refresh
