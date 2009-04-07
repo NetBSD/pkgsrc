@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/11/07 08:52:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/04/07 11:43:57 drochner Exp $
 bin/gthumb
 lib/bonobo/servers/GNOME_GThumb.server
 lib/gthumb/modules/libduplicates.la
@@ -9,6 +9,7 @@ lib/gthumb/modules/libsearch.la
 lib/gthumb/modules/libwebexporter.la
 lib/libgthumb.la
 man/man1/gthumb.1
+share/applications/gthumb-import.desktop
 share/applications/gthumb.desktop
 share/gconf/schemas/gthumb.schemas
 share/gnome/help/gthumb/C/figures/comment.png
@@ -17,6 +18,11 @@ share/gnome/help/gthumb/C/figures/nav-button.png
 share/gnome/help/gthumb/C/figures/preferences.png
 share/gnome/help/gthumb/C/gthumb.xml
 share/gnome/help/gthumb/C/legal.xml
+share/gnome/help/gthumb/de/figures/comment.png
+share/gnome/help/gthumb/de/figures/main-win.png
+share/gnome/help/gthumb/de/figures/nav-button.png
+share/gnome/help/gthumb/de/figures/preferences.png
+share/gnome/help/gthumb/de/gthumb.xml
 share/gnome/help/gthumb/es/figures/comment.png
 share/gnome/help/gthumb/es/figures/main-win.png
 share/gnome/help/gthumb/es/figures/nav-button.png
@@ -164,6 +170,7 @@ share/locale/ro/LC_MESSAGES/gthumb.mo
 share/locale/ru/LC_MESSAGES/gthumb.mo
 share/locale/rw/LC_MESSAGES/gthumb.mo
 share/locale/sk/LC_MESSAGES/gthumb.mo
+share/locale/sl/LC_MESSAGES/gthumb.mo
 share/locale/sq/LC_MESSAGES/gthumb.mo
 share/locale/sr/LC_MESSAGES/gthumb.mo
 share/locale/sr@Latn/LC_MESSAGES/gthumb.mo
@@ -177,11 +184,12 @@ share/locale/zh_CN/LC_MESSAGES/gthumb.mo
 share/locale/zh_HK/LC_MESSAGES/gthumb.mo
 share/locale/zh_TW/LC_MESSAGES/gthumb.mo
 share/omf/gthumb/gthumb-C.omf
+share/omf/gthumb/gthumb-de.omf
 share/omf/gthumb/gthumb-es.omf
 share/omf/gthumb/gthumb-fr.omf
 share/omf/gthumb/gthumb-sv.omf
 @dirrm share/omf/gthumb
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gthumb/glade
@@ -199,6 +207,8 @@ share/omf/gthumb/gthumb-sv.omf
 @dirrm share/gnome/help/gthumb/fr
 @dirrm share/gnome/help/gthumb/es/figures
 @dirrm share/gnome/help/gthumb/es
+@dirrm share/gnome/help/gthumb/de/figures
+@dirrm share/gnome/help/gthumb/de
 @dirrm share/gnome/help/gthumb/C/figures
 @dirrm share/gnome/help/gthumb/C
 @dirrm share/gnome/help/gthumb
