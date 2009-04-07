@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8019 2009/04/07 07:38:13 minskim Exp $
+$NetBSD: TODO,v 1.8020 2009/04/07 15:08:38 kefren Exp $
 
 Suggested new packages
 ======================
@@ -924,10 +924,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.6.0
-	o mono-2.4
-	o mono-tools-2.4
-	o mono-xsp-2.4
-	o monodevelop-2.0
 	o monotone-0.43
 	o moserial-1.0.8 [GNOME 2.26]
 	o mp3blaster-3.2.3
