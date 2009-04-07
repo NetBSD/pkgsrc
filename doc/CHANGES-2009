@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1236 2009/04/07 16:59:53 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.1237 2009/04/07 17:16:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1688,3 +1688,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/mono-basic to 2.4 [kefren 2009-04-07]
 	Updated devel/monodevelop to 2.0 [kefren 2009-04-07]
 	Updated www/serf to 0.3.0 [gdt 2009-04-07]
+	Updated devel/ruby-activesupport to 2.3.2 [minskim 2009-04-07]
+	Updated databases/ruby-activerecord to 2.3.2 [minskim 2009-04-07]
+	Updated www/ruby-activeresource to 2.3.2 [minskim 2009-04-07]
+	Updated www/ruby-actionpack to 2.3.2 [minskim 2009-04-07]
+	Updated mail/ruby-actionmailer to 2.3.2 [minskim 2009-04-07]
+	Updated www/rails to 2.3.2 [minskim 2009-04-07]

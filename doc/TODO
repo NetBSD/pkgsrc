@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8020 2009/04/07 15:08:38 kefren Exp $
+$NetBSD: TODO,v 1.8021 2009/04/07 17:16:45 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1142,7 +1142,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o quagga-0.99.11
 	o qvplay-0.95
 	o radiance-3.7.2
-	o rails-2.2.2
 	o raine-0.51.3
 	o ramaze-2009.01
 	o randread-0.2
@@ -1177,12 +1176,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-DBD-mysql-0.4.2 [should be replace with new ruby-dbi]
 	o ruby-DBI-0.4.1 [should be replace with new ruby-dbi]
 	o ruby-SDL-2.0.1b
-	o ruby-actionmailer-2.2.2
-	o ruby-actionpack-2.2.2
 	o ruby-activemerchant-1.4.1
-	o ruby-activerecord-2.2.2
-	o ruby-activeresource-2.2.2
-	o ruby-activesupport-2.2.2
 	o ruby-builder-2.2.0
 	o ruby-cmd-0.8.0
 	o ruby-coderay-0.8.1
