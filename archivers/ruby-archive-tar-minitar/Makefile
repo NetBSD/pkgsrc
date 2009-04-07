@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/08/15 16:03:51 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/07 21:06:54 seb Exp $
 
 DISTNAME=	archive-tar-minitar-0.5.2
+PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
 
