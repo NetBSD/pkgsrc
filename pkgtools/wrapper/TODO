@@ -1,0 +1,27 @@
+understand failing tests for:
+* OS X: test-rpath_merge.atf:rpath_merge
+* NetBSD 4/5: ?
+
+write better descriptions for:
+* all tests
+
+write tests for:
+* WRAPPER_UPDATE_CACHE: but this is an optimization we won't be
+    needing
+* WRAPPER_REORDER_CMDS: test reordering when there is some, test
+    that none happens when there isn't any
+* _WRAP_TRANSFORM_CMDS: make sure _USE_RPATH is respected and that
+    nothing else makes no-rpath happen
+* WRAPPER_TRANSFORM_CMDS: test every type of transform individually;
+    then test them together, combinatorially
+* _WRAP_PATH: make sure WRAPPER_BINDIR ain't in it, and/or make
+    sure whatever's being found when calling "gcc" (or whatever)
+    ain't a wrapper
+* WRAPPEES: test that the default list of wrappers makes all the
+    right ones; test that adding a WRAPPEE makes it happen
+* _WRAPPER_UNIQUE_CMDS: wtf is this doing? stripping WRAPPEES so
+    _WRAPPEES has no duplicates? what's a duplicate, exactly?
+* _WRAP_ALIASES: make sure that these generate the right aliases
+    and they have the right targets
+* "strip the leading paths from the toolchain variables": hm? path
+    test like the others?
