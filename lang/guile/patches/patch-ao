@@ -1,0 +1,31 @@
+$NetBSD: patch-ao,v 1.3 2009/04/07 10:53:08 drochner Exp $
+
+--- libguile/threads.c.orig	2008-12-08 18:42:56.000000000 +0100
++++ libguile/threads.c
+@@ -624,7 +624,7 @@ scm_i_init_thread_for_guile (SCM_STACKIT
+ 
+ #if SCM_USE_PTHREAD_THREADS
+ 
+-#if HAVE_PTHREAD_ATTR_GETSTACK && HAVE_PTHREAD_GETATTR_NP
++#if HAVE_PTHREAD_ATTR_GETSTACK && (HAVE_PTHREAD_GETATTR_NP || HAVE_PTHREAD_ATTR_GET_NP)
+ /* This method for GNU/Linux and perhaps some other systems.
+    It's not for MacOS X or Solaris 10, since pthread_getattr_np is not
+    available on them.  */
+@@ -637,9 +637,17 @@ get_thread_stack_base ()
+   void *start, *end;
+   size_t size;
+ 
++#ifdef HAVE_PTHREAD_ATTR_GET_NP
++  pthread_attr_init(&attr);
++  pthread_attr_get_np(pthread_self (), &attr);
++#else
+   pthread_getattr_np (pthread_self (), &attr);
++#endif
+   pthread_attr_getstack (&attr, &start, &size);
+   end = (char *)start + size;
++#ifdef HAVE_PTHREAD_ATTR_GET_NP
++  pthread_attr_destroy(&attr);
++#endif
+ 
+   /* XXX - pthread_getattr_np from LinuxThreads does not seem to work
+      for the main thread, but we can use scm_get_stack_base in that
