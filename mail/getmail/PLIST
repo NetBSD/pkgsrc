@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/11/21 05:23:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/04/07 04:39:44 schmonz Exp $
 bin/getmail
 bin/getmail_fetch
 bin/getmail_maildir
@@ -35,6 +35,9 @@ ${PYSITELIB}/getmailcore/_retrieverbases.pyo
 ${PYSITELIB}/getmailcore/baseclasses.py
 ${PYSITELIB}/getmailcore/baseclasses.pyc
 ${PYSITELIB}/getmailcore/baseclasses.pyo
+${PYSITELIB}/getmailcore/compatibility.py
+${PYSITELIB}/getmailcore/compatibility.pyc
+${PYSITELIB}/getmailcore/compatibility.pyo
 ${PYSITELIB}/getmailcore/constants.py
 ${PYSITELIB}/getmailcore/constants.pyc
 ${PYSITELIB}/getmailcore/constants.pyo
