@@ -1,11 +1,10 @@
-$NetBSD: patch-ch,v 1.3 2009/01/19 22:35:53 kefren Exp $
---- mcs/tools/csharplib/Makefile.orig	2009-01-19 19:19:08.000000000 +0200
-+++ mcs/tools/csharplib/Makefile	2009-01-19 19:14:53.000000000 +0200
-@@ -31,6 +31,6 @@
+--- mcs/tools/csharplib/Makefile.orig	2009-04-07 07:16:59.000000000 +0300
++++ mcs/tools/csharplib/Makefile	2009-04-07 07:17:14.000000000 +0300
+@@ -33,6 +33,6 @@
  
  $(the_lib): $(the_libdir)/.stamp Makefile Mono.CSharp.dll.sources $(build_lib)
  	$(MKINSTALLDIRS) fixup
--	$(MONO_PATH) $(RUNTIME) ../linker/monolinker.exe -d fixup/$(PROFILE) -o out -l none -c skip -b true -x link.xml -s Mono.Tuner.AdjustVisibility,Mono.Tuner:OutputStep -s Mono.Tuner.PrintStatus,Mono.Tuner:OutputStep  -i compiler.info
-+	$(MONO_PATH) $(RUNTIME) ../linker/monolinker.exe -d fixup/$(PROFILE) -o out -lnone -c skip -b true -x link.xml -s Mono.Tuner.AdjustVisibility,Mono.Tuner:OutputStep -s Mono.Tuner.PrintStatus,Mono.Tuner:OutputStep  -i compiler.info
+-	$(MONO_PATH) $(RUNTIME) $(LINKER) -d fixup/$(PROFILE) -o out -l none -c skip -b true -x link.xml -s Mono.Tuner.AdjustVisibility,Mono.Tuner:OutputStep -s Mono.Tuner.PrintStatus,Mono.Tuner:OutputStep  -i compiler.info
++	$(MONO_PATH) $(RUNTIME) $(LINKER) -d fixup/$(PROFILE) -o out -lnone -c skip -b true -x link.xml -s Mono.Tuner.AdjustVisibility,Mono.Tuner:OutputStep -s Mono.Tuner.PrintStatus,Mono.Tuner:OutputStep  -i compiler.info
  	$(SN) $(SNFLAGS) out/Mono.CSharp.dll $(topdir)/class/mono.snk
  	cp out/Mono.CSharp.dll $(the_lib)
