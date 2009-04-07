@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/09/15 21:24:00 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/04/07 19:29:50 wiz Exp $
 bin/ffmpeg
 bin/ffserver
 ${PLIST.sdl}bin/ffplay
@@ -77,3 +77,12 @@ share/doc/ffmpeg/optimization.txt
 share/doc/ffmpeg/snow.txt
 share/doc/ffmpeg/soc.txt
 share/examples/ffmpeg/ffserver.conf
+@dirrm share/examples/ffmpeg
+@dirrm share/doc/ffmpeg
+@dirrm include/libswscale
+@dirrm include/libpostproc
+@dirrm include/libavutil
+@dirrm include/libavformat
+@dirrm include/libavfilter
+@dirrm include/libavdevice
+@dirrm include/libavcodec
