@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1235 2009/04/07 15:08:09 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.1236 2009/04/07 16:59:53 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ap-mono to 2.4 [kefren 2009-04-07]
 	Updated lang/mono-basic to 2.4 [kefren 2009-04-07]
 	Updated devel/monodevelop to 2.0 [kefren 2009-04-07]
+	Updated www/serf to 0.3.0 [gdt 2009-04-07]
