@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/15 05:38:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/04/07 17:13:26 minskim Exp $
 ${GEM_HOME}/cache/activerecord-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
@@ -20,9 +20,12 @@ ${GEM_LIBDIR}/lib/active_record/associations/has_many_through_association.rb
 ${GEM_LIBDIR}/lib/active_record/associations/has_one_association.rb
 ${GEM_LIBDIR}/lib/active_record/associations/has_one_through_association.rb
 ${GEM_LIBDIR}/lib/active_record/attribute_methods.rb
+${GEM_LIBDIR}/lib/active_record/autosave_association.rb
 ${GEM_LIBDIR}/lib/active_record/base.rb
+${GEM_LIBDIR}/lib/active_record/batches.rb
 ${GEM_LIBDIR}/lib/active_record/calculations.rb
 ${GEM_LIBDIR}/lib/active_record/callbacks.rb
+${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract/connection_pool.rb
 ${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract/connection_specification.rb
 ${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract/database_statements.rb
 ${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract/query_cache.rb
@@ -35,11 +38,16 @@ ${GEM_LIBDIR}/lib/active_record/connection_adapters/postgresql_adapter.rb
 ${GEM_LIBDIR}/lib/active_record/connection_adapters/sqlite3_adapter.rb
 ${GEM_LIBDIR}/lib/active_record/connection_adapters/sqlite_adapter.rb
 ${GEM_LIBDIR}/lib/active_record/dirty.rb
+${GEM_LIBDIR}/lib/active_record/dynamic_finder_match.rb
+${GEM_LIBDIR}/lib/active_record/dynamic_scope_match.rb
 ${GEM_LIBDIR}/lib/active_record/fixtures.rb
+${GEM_LIBDIR}/lib/active_record/i18n_interpolation_deprecation.rb
+${GEM_LIBDIR}/lib/active_record/locale/en.yml
 ${GEM_LIBDIR}/lib/active_record/locking/optimistic.rb
 ${GEM_LIBDIR}/lib/active_record/locking/pessimistic.rb
 ${GEM_LIBDIR}/lib/active_record/migration.rb
 ${GEM_LIBDIR}/lib/active_record/named_scope.rb
+${GEM_LIBDIR}/lib/active_record/nested_attributes.rb
 ${GEM_LIBDIR}/lib/active_record/observer.rb
 ${GEM_LIBDIR}/lib/active_record/query_cache.rb
 ${GEM_LIBDIR}/lib/active_record/reflection.rb
@@ -48,11 +56,11 @@ ${GEM_LIBDIR}/lib/active_record/schema_dumper.rb
 ${GEM_LIBDIR}/lib/active_record/serialization.rb
 ${GEM_LIBDIR}/lib/active_record/serializers/json_serializer.rb
 ${GEM_LIBDIR}/lib/active_record/serializers/xml_serializer.rb
+${GEM_LIBDIR}/lib/active_record/session_store.rb
 ${GEM_LIBDIR}/lib/active_record/test_case.rb
 ${GEM_LIBDIR}/lib/active_record/timestamp.rb
 ${GEM_LIBDIR}/lib/active_record/transactions.rb
 ${GEM_LIBDIR}/lib/active_record/validations.rb
-${GEM_LIBDIR}/lib/active_record/vendor/mysql.rb
 ${GEM_LIBDIR}/lib/active_record/version.rb
 ${GEM_LIBDIR}/lib/activerecord.rb
 ${GEM_LIBDIR}/test/assets/example.log
@@ -61,7 +69,6 @@ ${GEM_LIBDIR}/test/cases/aaa_create_tables_test.rb
 ${GEM_LIBDIR}/test/cases/active_schema_test_mysql.rb
 ${GEM_LIBDIR}/test/cases/active_schema_test_postgresql.rb
 ${GEM_LIBDIR}/test/cases/adapter_test.rb
-${GEM_LIBDIR}/test/cases/adapter_test_sqlserver.rb
 ${GEM_LIBDIR}/test/cases/aggregations_test.rb
 ${GEM_LIBDIR}/test/cases/ar_schema_test.rb
 ${GEM_LIBDIR}/test/cases/associations/belongs_to_associations_test.rb
@@ -81,13 +88,17 @@ ${GEM_LIBDIR}/test/cases/associations/inner_join_association_test.rb
 ${GEM_LIBDIR}/test/cases/associations/join_model_test.rb
 ${GEM_LIBDIR}/test/cases/associations_test.rb
 ${GEM_LIBDIR}/test/cases/attribute_methods_test.rb
+${GEM_LIBDIR}/test/cases/autosave_association_test.rb
 ${GEM_LIBDIR}/test/cases/base_test.rb
+${GEM_LIBDIR}/test/cases/batches_test.rb
 ${GEM_LIBDIR}/test/cases/binary_test.rb
 ${GEM_LIBDIR}/test/cases/calculations_test.rb
+${GEM_LIBDIR}/test/cases/callbacks_observers_test.rb
 ${GEM_LIBDIR}/test/cases/callbacks_test.rb
 ${GEM_LIBDIR}/test/cases/class_inheritable_attributes_test.rb
 ${GEM_LIBDIR}/test/cases/column_alias_test.rb
 ${GEM_LIBDIR}/test/cases/column_definition_test.rb
+${GEM_LIBDIR}/test/cases/connection_pool_test.rb
 ${GEM_LIBDIR}/test/cases/connection_test_firebird.rb
 ${GEM_LIBDIR}/test/cases/connection_test_mysql.rb
 ${GEM_LIBDIR}/test/cases/copy_table_test_sqlite.rb
@@ -102,6 +113,7 @@ ${GEM_LIBDIR}/test/cases/finder_respond_to_test.rb
 ${GEM_LIBDIR}/test/cases/finder_test.rb
 ${GEM_LIBDIR}/test/cases/fixtures_test.rb
 ${GEM_LIBDIR}/test/cases/helper.rb
+${GEM_LIBDIR}/test/cases/i18n_test.rb
 ${GEM_LIBDIR}/test/cases/inheritance_test.rb
 ${GEM_LIBDIR}/test/cases/invalid_date_test.rb
 ${GEM_LIBDIR}/test/cases/json_serialization_test.rb
@@ -114,23 +126,33 @@ ${GEM_LIBDIR}/test/cases/mixin_test.rb
 ${GEM_LIBDIR}/test/cases/modules_test.rb
 ${GEM_LIBDIR}/test/cases/multiple_db_test.rb
 ${GEM_LIBDIR}/test/cases/named_scope_test.rb
+${GEM_LIBDIR}/test/cases/nested_attributes_test.rb
 ${GEM_LIBDIR}/test/cases/pk_test.rb
+${GEM_LIBDIR}/test/cases/pooled_connections_test.rb
 ${GEM_LIBDIR}/test/cases/query_cache_test.rb
 ${GEM_LIBDIR}/test/cases/readonly_test.rb
 ${GEM_LIBDIR}/test/cases/reflection_test.rb
+${GEM_LIBDIR}/test/cases/reload_models_test.rb
+${GEM_LIBDIR}/test/cases/repair_helper.rb
 ${GEM_LIBDIR}/test/cases/reserved_word_test_mysql.rb
+${GEM_LIBDIR}/test/cases/sanitize_test.rb
 ${GEM_LIBDIR}/test/cases/schema_authorization_test_postgresql.rb
 ${GEM_LIBDIR}/test/cases/schema_dumper_test.rb
 ${GEM_LIBDIR}/test/cases/schema_test_postgresql.rb
 ${GEM_LIBDIR}/test/cases/serialization_test.rb
 ${GEM_LIBDIR}/test/cases/synonym_test_oracle.rb
-${GEM_LIBDIR}/test/cases/table_name_test_sqlserver.rb
-${GEM_LIBDIR}/test/cases/threaded_connections_test.rb
 ${GEM_LIBDIR}/test/cases/transactions_test.rb
 ${GEM_LIBDIR}/test/cases/unconnected_test.rb
+${GEM_LIBDIR}/test/cases/validations_i18n_test.rb
 ${GEM_LIBDIR}/test/cases/validations_test.rb
 ${GEM_LIBDIR}/test/cases/xml_serialization_test.rb
 ${GEM_LIBDIR}/test/config.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbcderby/connection.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbch2/connection.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbchsqldb/connection.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbcmysql/connection.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbcpostgresql/connection.rb
+${GEM_LIBDIR}/test/connections/jdbc_jdbcsqlite3/connection.rb
 ${GEM_LIBDIR}/test/connections/native_db2/connection.rb
 ${GEM_LIBDIR}/test/connections/native_firebird/connection.rb
 ${GEM_LIBDIR}/test/connections/native_frontbase/connection.rb
@@ -142,7 +164,6 @@ ${GEM_LIBDIR}/test/connections/native_sqlite/connection.rb
 ${GEM_LIBDIR}/test/connections/native_sqlite3/connection.rb
 ${GEM_LIBDIR}/test/connections/native_sqlite3/in_memory_connection.rb
 ${GEM_LIBDIR}/test/connections/native_sybase/connection.rb
-${GEM_LIBDIR}/test/debug.log
 ${GEM_LIBDIR}/test/fixtures/accounts.yml
 ${GEM_LIBDIR}/test/fixtures/all/developers.yml
 ${GEM_LIBDIR}/test/fixtures/all/people.csv
@@ -177,6 +198,7 @@ ${GEM_LIBDIR}/test/fixtures/items.yml
 ${GEM_LIBDIR}/test/fixtures/jobs.yml
 ${GEM_LIBDIR}/test/fixtures/legacy_things.yml
 ${GEM_LIBDIR}/test/fixtures/mateys.yml
+${GEM_LIBDIR}/test/fixtures/member_types.yml
 ${GEM_LIBDIR}/test/fixtures/members.yml
 ${GEM_LIBDIR}/test/fixtures/memberships.yml
 ${GEM_LIBDIR}/test/fixtures/minimalistics.yml
@@ -187,6 +209,7 @@ ${GEM_LIBDIR}/test/fixtures/naked/csv/accounts.csv
 ${GEM_LIBDIR}/test/fixtures/naked/yml/accounts.yml
 ${GEM_LIBDIR}/test/fixtures/naked/yml/companies.yml
 ${GEM_LIBDIR}/test/fixtures/naked/yml/courses.yml
+${GEM_LIBDIR}/test/fixtures/organizations.yml
 ${GEM_LIBDIR}/test/fixtures/owners.yml
 ${GEM_LIBDIR}/test/fixtures/parrots.yml
 ${GEM_LIBDIR}/test/fixtures/parrots_pirates.yml
@@ -211,9 +234,11 @@ ${GEM_LIBDIR}/test/fixtures/taggings.yml
 ${GEM_LIBDIR}/test/fixtures/tags.yml
 ${GEM_LIBDIR}/test/fixtures/tasks.yml
 ${GEM_LIBDIR}/test/fixtures/topics.yml
+${GEM_LIBDIR}/test/fixtures/toys.yml
 ${GEM_LIBDIR}/test/fixtures/treasures.yml
 ${GEM_LIBDIR}/test/fixtures/vertices.yml
 ${GEM_LIBDIR}/test/fixtures/warehouse-things.yml
+${GEM_LIBDIR}/test/migrations/broken/100_migration_that_raises_exception.rb
 ${GEM_LIBDIR}/test/migrations/decimal/1_give_me_big_numbers.rb
 ${GEM_LIBDIR}/test/migrations/duplicate/1_people_have_last_names.rb
 ${GEM_LIBDIR}/test/migrations/duplicate/2_we_need_reminders.rb
@@ -237,6 +262,7 @@ ${GEM_LIBDIR}/test/migrations/valid/3_innocent_jointable.rb
 ${GEM_LIBDIR}/test/models/author.rb
 ${GEM_LIBDIR}/test/models/auto_id.rb
 ${GEM_LIBDIR}/test/models/binary.rb
+${GEM_LIBDIR}/test/models/bird.rb
 ${GEM_LIBDIR}/test/models/book.rb
 ${GEM_LIBDIR}/test/models/categorization.rb
 ${GEM_LIBDIR}/test/models/category.rb
@@ -254,6 +280,7 @@ ${GEM_LIBDIR}/test/models/default.rb
 ${GEM_LIBDIR}/test/models/developer.rb
 ${GEM_LIBDIR}/test/models/edge.rb
 ${GEM_LIBDIR}/test/models/entrant.rb
+${GEM_LIBDIR}/test/models/event.rb
 ${GEM_LIBDIR}/test/models/guid.rb
 ${GEM_LIBDIR}/test/models/item.rb
 ${GEM_LIBDIR}/test/models/job.rb
@@ -262,11 +289,14 @@ ${GEM_LIBDIR}/test/models/keyboard.rb
 ${GEM_LIBDIR}/test/models/legacy_thing.rb
 ${GEM_LIBDIR}/test/models/matey.rb
 ${GEM_LIBDIR}/test/models/member.rb
+${GEM_LIBDIR}/test/models/member_detail.rb
+${GEM_LIBDIR}/test/models/member_type.rb
 ${GEM_LIBDIR}/test/models/membership.rb
 ${GEM_LIBDIR}/test/models/minimalistic.rb
 ${GEM_LIBDIR}/test/models/mixed_case_monkey.rb
 ${GEM_LIBDIR}/test/models/movie.rb
 ${GEM_LIBDIR}/test/models/order.rb
+${GEM_LIBDIR}/test/models/organization.rb
 ${GEM_LIBDIR}/test/models/owner.rb
 ${GEM_LIBDIR}/test/models/parrot.rb
 ${GEM_LIBDIR}/test/models/person.rb
@@ -279,6 +309,7 @@ ${GEM_LIBDIR}/test/models/reader.rb
 ${GEM_LIBDIR}/test/models/reference.rb
 ${GEM_LIBDIR}/test/models/reply.rb
 ${GEM_LIBDIR}/test/models/ship.rb
+${GEM_LIBDIR}/test/models/ship_part.rb
 ${GEM_LIBDIR}/test/models/sponsor.rb
 ${GEM_LIBDIR}/test/models/subject.rb
 ${GEM_LIBDIR}/test/models/subscriber.rb
@@ -287,6 +318,7 @@ ${GEM_LIBDIR}/test/models/tag.rb
 ${GEM_LIBDIR}/test/models/tagging.rb
 ${GEM_LIBDIR}/test/models/task.rb
 ${GEM_LIBDIR}/test/models/topic.rb
+${GEM_LIBDIR}/test/models/toy.rb
 ${GEM_LIBDIR}/test/models/treasure.rb
 ${GEM_LIBDIR}/test/models/vertex.rb
 ${GEM_LIBDIR}/test/models/warehouse_thing.rb
@@ -295,7 +327,6 @@ ${GEM_LIBDIR}/test/schema/postgresql_specific_schema.rb
 ${GEM_LIBDIR}/test/schema/schema.rb
 ${GEM_LIBDIR}/test/schema/schema2.rb
 ${GEM_LIBDIR}/test/schema/sqlite_specific_schema.rb
-${GEM_LIBDIR}/test/schema/sqlserver_specific_schema.rb
 ${GEM_HOME}/specifications/activerecord-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/schema
 @dirrm ${GEM_LIBDIR}/test/models
@@ -308,6 +339,7 @@ ${GEM_HOME}/specifications/activerecord-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/migrations/duplicate_names
 @dirrm ${GEM_LIBDIR}/test/migrations/duplicate
 @dirrm ${GEM_LIBDIR}/test/migrations/decimal
+@dirrm ${GEM_LIBDIR}/test/migrations/broken
 @dirrm ${GEM_LIBDIR}/test/migrations
 @dirrm ${GEM_LIBDIR}/test/fixtures/reserved_words
 @dirrm ${GEM_LIBDIR}/test/fixtures/naked/yml
@@ -327,14 +359,20 @@ ${GEM_HOME}/specifications/activerecord-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/connections/native_frontbase
 @dirrm ${GEM_LIBDIR}/test/connections/native_firebird
 @dirrm ${GEM_LIBDIR}/test/connections/native_db2
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcsqlite3
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcpostgresql
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcmysql
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbchsqldb
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbch2
+@dirrm ${GEM_LIBDIR}/test/connections/jdbc_jdbcderby
 @dirrm ${GEM_LIBDIR}/test/connections
 @dirrm ${GEM_LIBDIR}/test/cases/associations
 @dirrm ${GEM_LIBDIR}/test/cases
 @dirrm ${GEM_LIBDIR}/test/assets
 @dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/active_record/vendor
 @dirrm ${GEM_LIBDIR}/lib/active_record/serializers
 @dirrm ${GEM_LIBDIR}/lib/active_record/locking
+@dirrm ${GEM_LIBDIR}/lib/active_record/locale
 @dirrm ${GEM_LIBDIR}/lib/active_record/connection_adapters/abstract
 @dirrm ${GEM_LIBDIR}/lib/active_record/connection_adapters
 @dirrm ${GEM_LIBDIR}/lib/active_record/associations
