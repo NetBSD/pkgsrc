@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.lib.mk,v 1.2 2007/08/10 13:04:13 joerg Exp $
+#	$NetBSD: bsd.lib.mk,v 1.3 2009/04/07 23:42:17 tez Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -171,7 +171,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.c:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.c} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
@@ -204,7 +204,7 @@ FFLAGS+=	${FOPTS}
 .else
 	@echo ${COMPILE.cc:Q} -pg ${.IMPSRC} -o ${.TARGET}
 	@${COMPILE.cc} -pg ${.IMPSRC} -o ${.TARGET}.o
-	@${LD} -X -r ${.TARGET}.o -o ${.TARGET}
+	@${LD} -r ${.TARGET}.o -o ${.TARGET}
 	@rm -f ${.TARGET}.o
 .endif
 
