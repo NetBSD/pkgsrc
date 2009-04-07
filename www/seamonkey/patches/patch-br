@@ -1,8 +1,29 @@
-$NetBSD: patch-br,v 1.1.1.1 2006/03/30 19:15:49 ghen Exp $
+$NetBSD: patch-br,v 1.2 2009/04/07 08:01:01 hasso Exp $
 
---- nsprpub/pr/src/misc/prnetdb.c.orig	2005-08-18 19:24:38.000000000 +0200
-+++ nsprpub/pr/src/misc/prnetdb.c
-@@ -2110,7 +2110,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
+--- nsprpub/pr/src/misc/prnetdb.c.orig	2006-11-14 19:41:59 +0200
++++ nsprpub/pr/src/misc/prnetdb.c	2009-04-04 18:10:55 +0300
+@@ -113,6 +113,11 @@ PRLock *_pr_dnsLock = NULL;
+ #define _PR_HAVE_5_ARG_GETPROTO_R
+ #endif
+ 
++#if __DragonFly_version >= 200202
++#define _PR_HAVE_GETPROTO_R
++#define _PR_HAVE_5_ARG_GETPROTO_R
++#endif
++
+ #if (defined(LINUX) && defined(__GLIBC__) && __GLIBC__ >= 2)
+ #define _PR_HAVE_GETPROTO_R
+ #define _PR_HAVE_5_ARG_GETPROTO_R
+@@ -329,7 +334,7 @@ _pr_QueryNetIfs(void)
+ }
+ 
+ #elif (defined(DARWIN) && defined(HAVE_GETIFADDRS)) || defined(FREEBSD) \
+-    || defined(NETBSD) || defined(OPENBSD)
++    || defined(NETBSD) || defined(OPENBSD) || defined(DRAGONFLY)
+ 
+ /*
+  * Use the BSD getifaddrs function.
+@@ -2115,7 +2120,17 @@ PR_IMPLEMENT(PRAddrInfo *) PR_GetAddrInf
           */
          hints.ai_socktype = SOCK_STREAM;
  
