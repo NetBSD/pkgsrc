@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2007/06/20 18:45:39 schmonz Exp $
+$NetBSD: patch-ac,v 1.2 2009/04/07 05:07:03 schmonz Exp $
 
---- po/Makefile.orig	2007-05-10 05:21:47.000000000 -0400
+--- po/Makefile.orig	2008-04-29 13:31:56.000000000 -0400
 +++ po/Makefile
-@@ -49,8 +49,8 @@ dist-po:
+@@ -42,8 +42,8 @@ run-from-srcdir: $(MOFILES)
  install-po:
  	echo $(POLANGUAGES)
  	for lang in $(POLANGUAGES); do \
