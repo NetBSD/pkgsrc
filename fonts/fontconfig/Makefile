@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2008/06/21 18:47:44 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2009/04/07 19:27:57 drochner Exp $
 
 DISTNAME=	fontconfig-2.6.0
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontconfig.org/release/
 
@@ -60,6 +61,7 @@ CONF_FILES+=	${EGDIR}/conf.d/65-nonlatin.conf ${PKG_SYSCONFDIR}/conf.d/65-nonlat
 CONF_FILES+=	${EGDIR}/conf.d/69-unifont.conf ${PKG_SYSCONFDIR}/conf.d/69-unifont.conf
 CONF_FILES+=	${EGDIR}/conf.d/80-delicious.conf ${PKG_SYSCONFDIR}/conf.d/80-delicious.conf
 CONF_FILES+=	${EGDIR}/conf.d/90-synthetic.conf ${PKG_SYSCONFDIR}/conf.d/90-synthetic.conf
+CONF_FILES+=	${EGDIR}/conf.d/30-pkgsrc-aliases.conf ${PKG_SYSCONFDIR}/conf.d/30-pkgsrc-aliases.conf
 
 MAKE_DIRS+=	${VARBASE}/cache
 BUILD_DEFS+=	VARBASE
@@ -74,6 +76,10 @@ CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q}
 
 pre-configure:
 	${ECHO} '#define FC_ARCHITECTURE "@host_cpu@"' > ${WRKSRC}/fc-arch/fcarch.h.in
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/30-pkgsrc-aliases.conf \
+		${EGDIR}/conf.d
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
