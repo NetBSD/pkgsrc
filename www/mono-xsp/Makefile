@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/03/25 22:37:15 he Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/07 11:29:52 kefren Exp $
 
-DISTNAME=	xsp-2.2
+DISTNAME=	xsp-2.4
 PKGNAME=	mono-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/xsp/
 EXTRACT_SUFX=	.tar.bz2
