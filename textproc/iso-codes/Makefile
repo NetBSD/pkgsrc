@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/03/22 20:47:05 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2009/04/07 10:30:20 drochner Exp $
 #
 
 DISTNAME=	iso-codes-3.7
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE=	iso-codes.pc.in
 
 REPLACE_PYTHON=		*.py */*.py
 
-DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
 PYTHON_FOR_BUILD_ONLY=		yes
 
