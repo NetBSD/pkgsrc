@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2009/03/17 16:22:57 drochner Exp $
+# $NetBSD: Makefile,v 1.91 2009/04/07 10:36:52 kefren Exp $
 #
 
 DISTNAME=		gnome-desktop-2.26.0
@@ -35,7 +35,7 @@ post-install:
 .endfor
 
 .include "../../devel/GConf/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.15.4
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.19.1
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
