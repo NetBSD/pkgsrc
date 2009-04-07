@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2009/03/09 11:52:11 jmcneill Exp $
+$NetBSD: patch-aa,v 1.5 2009/04/07 09:53:54 drochner Exp $
 
---- configure.orig	2009-01-19 17:06:28.000000000 -0500
+--- configure.orig	2009-03-20 23:01:00.000000000 +0100
 +++ configure
-@@ -26361,7 +26361,7 @@ rm -f core conftest.err conftest.$ac_obj
- echo "${ECHO_T}$flag_ok" >&6; }
+@@ -28313,7 +28313,7 @@ rm -f core conftest.err conftest.$ac_obj
+ $as_echo "$flag_ok" >&6; }
  
  
 -        if test "x$ERROR_CFLAGS" == "x"
 +        if test "x$ERROR_CFLAGS" = "x"
      then
  
-   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -33364,11 +33364,7 @@ fi
+   { $as_echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
+@@ -35901,11 +35901,7 @@ fi
      DVDNAV_CFLAGS=
      HAVE_DVDNAV=no
    else
