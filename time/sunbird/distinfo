@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2007/03/02 09:34:18 ghen Exp $
+$NetBSD: distinfo,v 1.10 2009/04/07 17:25:54 hasso Exp $
 
 SHA1 (sunbird-0.3.1.source.tar.bz2) = f8a397746f0e3abf15273de5232c447746a8d370
 RMD160 (sunbird-0.3.1.source.tar.bz2) = b2fe3d03ce20500641e18da07fafda031d7b882e
@@ -26,7 +26,7 @@ SHA1 (patch-bb) = e9d6fb2fd23765963fa69685d40189c6a810db07
 SHA1 (patch-bm) = 99276d866a1b9ae108fcde5d198f80231fdffd2b
 SHA1 (patch-bo) = 05b13cec917445eb9e99c1619ae89e86e660d945
 SHA1 (patch-bq) = c178922beb612f8ff659c909b8873bf6a0077916
-SHA1 (patch-br) = 17bb5d7ceaa31ed78fb4003e4763adcd07517a15
+SHA1 (patch-br) = 5e0bb533d65726ec439d625f55dbb50846e641cb
 SHA1 (patch-bs) = b1e929f13bec6525a251203328b3e5e35ec45f1e
 SHA1 (patch-bu) = 76e0f7b3789ecdfda0a92d969efaec82fa36d283
 SHA1 (patch-bv) = aa54e6552c9a25eb17a0aa9f500980853d076853
