@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/01/09 20:02:02 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2009/04/07 18:45:04 hasso Exp $
 
---- 7plus.c.orig	2006-01-09 19:56:29.000000000 +0000
-+++ 7plus.c
+--- 7plus.c.orig	2000-03-20 16:35:56 +0200
++++ 7plus.c	2009-04-06 11:37:24 +0300
+@@ -118,7 +118,7 @@ const char nomem[]   = "\007Argh error: 
+                        "Can't continue.....\n";
+ int     noquery  = 0;
+ int     force    = 0;
+-int     fls      = 0;
++int     cfls     = 0;
+ int     autokill = 0;
+ int     simulate = 0;
+ int     sysop    = 0;
 @@ -264,7 +264,7 @@ const char *help[] = {
   #define EXMPL "dh0:/pr/"
  #endif
@@ -11,3 +20,12 @@ $NetBSD: patch-ab,v 1.1 2006/01/09 20:02:02 joerg Exp $
   #undef EXMPL
   #define EXMPL "/pr/"
  #endif
+@@ -634,7 +634,7 @@ int go_at_it (int argc, char **argv)
+     }
+ 
+     if (!stricmp (argv[i], "-#")) /* Create 7PLUS.FLS. Contents e.g.:     */
+-      fls = 1;                    /* 10 TEST */
++      cfls = 1;                   /* 10 TEST */
+                                   /* for TEST.EXE encoded into 10 parts   */
+ 
+     if (!stricmp (argv[i], "-C")) /* Use 7PLUS-file as a correction file  */
