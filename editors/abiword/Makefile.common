@@ -1,12 +1,11 @@
-# $NetBSD: Makefile.common,v 1.37 2006/11/16 02:31:48 markd Exp $
+# $NetBSD: Makefile.common,v 1.38 2009/04/07 16:27:08 drochner Exp $
 
 # Be sure to update PLIST and distinfo for editors/abiword-plugins when updating
-ABIWORD_VERSION=	2.4.6
-DISTNAME=	abiword-${ABIWORD_VERSION}
+ABIWORD_VERSION=	2.6.8
+DISTNAME?=	abiword-${ABIWORD_VERSION}
 
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abisource.com/downloads/abiword/${ABIWORD_VERSION}/source/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.abisource.com/
@@ -24,6 +23,7 @@ CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 .include "../../converters/wv/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
