@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/04/07 18:45:04 hasso Exp $
+
+--- globals.h.orig	2009-04-06 11:37:54 +0300
++++ globals.h	2009-04-06 11:38:05 +0300
+@@ -22,7 +22,7 @@ extern char    notsame[];
+ extern char    def_format[];
+ extern int     noquery;
+ extern int     force;
+-extern int     fls;
++extern int     cfls;
+ extern int     autokill;
+ extern int     sysop;
+ extern int     simulate;
