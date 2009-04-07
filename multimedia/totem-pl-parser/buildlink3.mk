@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:25:06 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2009/04/07 10:00:57 drochner Exp $
 
 BUILDLINK_TREE+=	totem-pl-parser
 
@@ -12,7 +12,6 @@ BUILDLINK_PKGSRCDIR.totem-pl-parser?=	../../multimedia/totem-pl-parser
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .endif # TOTEM_PL_PARSER_BUILDLINK3_MK
 
