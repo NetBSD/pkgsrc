@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-ag,v 1.3 2009/04/07 07:35:44 minskim Exp $
 
---- lib/rubygems/uninstaller.rb.orig	2008-06-21 03:34:46.000000000 +0900
+--- lib/rubygems/uninstaller.rb.orig	2008-08-14 15:57:27.000000000 -0700
 +++ lib/rubygems/uninstaller.rb
-@@ -31,6 +31,11 @@ class Gem::Uninstaller
+@@ -45,6 +45,11 @@ class Gem::Uninstaller
      @force_all = options[:all]
      @force_ignore = options[:ignore]
      @bin_dir = options[:bin_dir]
@@ -11,10 +11,10 @@ $NetBSD: patch-ag,v 1.2 2008/09/15 08:43:44 taca Exp $
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
 +    end
-   end
  
-   ##
-@@ -74,7 +79,11 @@ class Gem::Uninstaller
+     spec_dir = File.join @gem_home, 'specifications'
+     @source_index = Gem::SourceIndex.from_gems_in spec_dir
+@@ -109,7 +114,11 @@ class Gem::Uninstaller
      return if gemspec.nil?
  
      if gemspec.executables.size > 0 then
@@ -25,5 +25,5 @@ $NetBSD: patch-ag,v 1.2 2008/09/15 08:43:44 taca Exp $
 +        bindir = File.join(@install_root, bindir)
 +      end
  
-       list = Gem.source_index.search(gemspec.name).delete_if { |spec|
+       list = @source_index.find_name(gemspec.name).delete_if { |spec|
          spec.version == gemspec.version
