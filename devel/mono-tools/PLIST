@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/19 22:41:10 kefren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/07 11:18:31 kefren Exp $
 bin/create-native-map
 bin/gasnview
 bin/gendarme
 bin/gendarme-wizard
 bin/gsharp
-bin/gnunit
-bin/gnunit2
 bin/gui-compare
 bin/monodoc
 bin/mperfmon
@@ -35,7 +33,6 @@ lib/gendarme/gendarme-wizard.exe
 lib/gendarme/gendarme.exe
 lib/gendarme/rules.xml
 lib/gsharp/gsharp.exe
-lib/gui-compare/Mono.Cecil.dll
 lib/gui-compare/gui-compare.exe
 lib/mono-tools/mprof-decoder-library.dll
 lib/mono-tools/mprof-decoder-library.dll.mdb
@@ -46,11 +43,12 @@ lib/mono-tools/mprof-heap-snapshot-explorer.dll.mdb
 lib/mono-tools/mprof-heap-viewer.exe
 lib/mono-tools/mprof-heap-viewer.exe.mdb
 lib/mono/1.0/gasnview.exe
-lib/mono/1.0/gnunit.exe
-lib/mono/2.0/gnunit2.exe
 lib/monodoc/GtkHtmlHtmlRender.dll
 lib/monodoc/MonoWebBrowserHtmlRender.dll
 lib/monodoc/browser.exe
+lib/monodoc/sources/gendarme.source
+lib/monodoc/sources/gendarme.tree
+lib/monodoc/sources/gendarme.zip
 lib/monodoc/sources/Gendarme.Framework.source
 lib/monodoc/sources/Gendarme.Framework.tree
 lib/monodoc/sources/Gendarme.Framework.zip
