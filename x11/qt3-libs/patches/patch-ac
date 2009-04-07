@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.5 2004/04/16 14:30:45 recht Exp $
+$NetBSD: patch-ac,v 1.6 2009/04/07 10:59:48 hasso Exp $
 
---- src/tools/qdir_unix.cpp.orig	2004-02-18 14:22:42.000000000 +0100
-+++ src/tools/qdir_unix.cpp	2004-04-15 01:49:24.000000000 +0200
+--- src/tools/qdir_unix.cpp.orig	2007-02-02 16:01:05 +0200
++++ src/tools/qdir_unix.cpp	2009-04-07 13:10:26 +0300
 @@ -36,6 +36,16 @@
  **********************************************************************/
  
@@ -19,7 +19,17 @@ $NetBSD: patch-ac,v 1.5 2004/04/16 14:30:45 recht Exp $
  #include "qdir.h"
  
  #ifndef QT_NO_DIR
-@@ -88,10 +98,19 @@
+@@ -53,6 +63,9 @@
+ #include <limits.h>
+ #include <errno.h>
+ 
++#ifndef MAXNAMLEN
++#define MAXNAMLEN NAME_MAX
++#endif
+ 
+ void QDir::slashify( QString& )
+ {
+@@ -88,10 +101,19 @@ QString QDir::canonicalPath() const
  
  bool QDir::mkdir( const QString &dirName, bool acceptAbsPath ) const
  {
@@ -42,7 +52,7 @@ $NetBSD: patch-ac,v 1.5 2004/04/16 14:30:45 recht Exp $
      int status =
  	::mkdir( QFile::encodeName(filePath(name,acceptAbsPath)), 0777 );
  #else
-@@ -103,7 +122,24 @@
+@@ -103,7 +125,24 @@ bool QDir::mkdir( const QString &dirName
  
  bool QDir::rmdir( const QString &dirName, bool acceptAbsPath ) const
  {
