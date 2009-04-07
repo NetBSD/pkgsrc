@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1 2009/04/07 18:03:14 hasso Exp $
+
+--- node.c.orig
++++ node.c
+@@ -89,7 +89,9 @@ struct t_node *b_getnext(struct t_node *
+ static int b_collectgarbage(int tab_no);
+ static int b_countfree(int tab_no);
+ static struct t_node *b_getfree(int tab_no);
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ static int fls(int i);
++#endif
+ #ifdef IPV6
+ static int node_comp_id(long *a, long *b);
+ #endif
+@@ -598,6 +600,7 @@ static struct t_node *b_getfree(int tab_
+     return np;
+ }
+ 
++#if !defined(__FreeBSD__) && !defined(__DragonFly__)
+ /* fls - find last set bit  --- reverse function of vax ffs */
+ static int fls(int i)
+ {
+@@ -623,6 +626,7 @@ static int fls(int i)
+     assert(0);
+     return 0;
+ }
++#endif
+ 
+ static int node_comp_id(long *a, long *b)
+ {
