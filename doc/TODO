@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8017 2009/04/06 13:16:15 markd Exp $
+$NetBSD: TODO,v 1.8018 2009/04/07 05:08:27 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -636,7 +636,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o geeklog-1.5.2
 	o genius-1.0.6 [GNOME 2.26]
 	o gentoo-0.15.3
-	o getmail-4.9.0
 	o gettext-0.17
 	o gettext-m4-0.17
 	o gforth-0.7.0
@@ -1119,7 +1118,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-html2text-2.35
 	o py-kenosis-0.96
 	o py-ldap-2.3.6
 	o py-logging-0.4.9.6
@@ -1279,7 +1277,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snownews-1.5.10 [pkg/39887]
 	o snownews-1.5.11
 	o socat-1.7.1.0
-	o solfege-3.13.0
 	o sope-4.5.9
 	o source-highlight-2.11.1
 	o sox-14.2.0
