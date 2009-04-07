@@ -1,13 +1,13 @@
-$NetBSD: patch-aj,v 1.2 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-aj,v 1.3 2009/04/07 07:35:44 minskim Exp $
 
---- lib/rubygems/defaults.rb.orig	2008-06-05 11:34:47.000000000 +0900
+--- lib/rubygems/defaults.rb.orig	2008-10-10 13:29:53.000000000 -0700
 +++ lib/rubygems/defaults.rb
-@@ -9,7 +9,7 @@ module Gem
-   # specified in the environment.
+@@ -18,7 +18,7 @@ module Gem
+ 
    def self.default_dir
      if defined? RUBY_FRAMEWORK_VERSION then
 -      File.join File.dirname(ConfigMap[:sitedir]), 'Gems',
 +      File.join File.dirname(ConfigMap[:vendordir]), 'Gems',
                  ConfigMap[:ruby_version]
-     elsif defined? RUBY_ENGINE then
-       File.join ConfigMap[:libdir], RUBY_ENGINE, 'gems',
+     else
+       File.join(ConfigMap[:libdir], ruby_engine, 'gems',
