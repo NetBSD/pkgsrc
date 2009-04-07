@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.39 2008/09/15 08:42:37 taca Exp $
+# $NetBSD: rubygem.mk,v 1.40 2009/04/07 07:35:44 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -156,7 +156,7 @@ GEM_SPECFILE?=	${WRKDIR}/${DISTNAME}.gemspec
 .PHONY: gem-extract
 post-extract: gem-extract
 .if !target(gem-extract)
-gem-extract:
+gem-extract: fake-home
 .  for _gem_ in ${DISTFILES:M*.gem}
 	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
