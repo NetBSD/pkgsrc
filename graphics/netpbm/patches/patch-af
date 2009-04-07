@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.11 2006/02/14 21:57:44 adam Exp $
+$NetBSD: patch-af,v 1.12 2009/04/07 08:09:06 hasso Exp $
 
 --- converter/other/cameratopam/identify.c.orig	2005-08-27 19:29:58.000000000 +0200
 +++ converter/other/cameratopam/identify.c
-@@ -23,7 +23,11 @@
+@@ -23,7 +23,12 @@
  
  static loadRawFn load_raw;
  
@@ -10,7 +10,8 @@ $NetBSD: patch-af,v 1.11 2006/02/14 21:57:44 adam Exp $
  
 +#if !(defined(__GLIBC__) \
 +  || (defined(__NetBSD__) && (__NetBSD_Version__ >= 300000000)) \
-+  || (defined(__FreeBSD__) && (__FreeBSD_version >=  600000)))
++  || (defined(__FreeBSD__) && (__FreeBSD_version >=  600000)) \
++  || (defined(__DragonFly__) && (__DragonFly_version >= 200202)))
  /* This does the same as the function of the same name in the GNU C library */
  static const char *memmem (const char *haystack, size_t haystacklen,
                       const char *needle, size_t needlelen)
