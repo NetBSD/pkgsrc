@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8022 2009/04/07 17:31:11 minskim Exp $
+$NetBSD: TODO,v 1.8023 2009/04/08 01:45:17 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -875,7 +875,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mail-notification-5.3
-	o mailfront-1.11 [pkg/34765]
 	o mailgraph-1.14
 	o mailscanner-4.74
 	o mailx-12.3 [pkg/38262, replace mail/nail]
