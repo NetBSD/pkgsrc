@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/02/25 15:39:38 tron Exp $
+# $NetBSD: Makefile,v 1.40 2009/04/08 17:03:25 tron Exp $
 
 DISTNAME=	httpd-2.2.11
 PKGREVISION=	2
@@ -104,19 +104,6 @@ DFLT_APACHE_MODULES+=	ldap authnz_ldap
 .endif
 
 .include "options.mk"
-
-# APACHE_MODULES are the modules that are linked statically into the
-# apache httpd executable.
-#
-#.if ${APACHE_MODULES} == "all-shared"
-.if !empty(PKG_OPTIONS:Mapache-shared-modules)
-# XXX ldap and suexec?
-CONFIGURE_ARGS+=	--enable-mods-shared=${DFLT_APACHE_MODULES:Q}
-PLIST_SRC+=		${PKGDIR}/PLIST.all-shared
-.else
-CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
-.endif
-BUILD_DEFS+=		APACHE_MODULES
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
