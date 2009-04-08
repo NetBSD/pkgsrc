@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- config.h.orig	1997-07-17 19:27:58.000000000 +0300
++++ config.h
+@@ -62,14 +62,14 @@
+              in the same directory as the score file.
+ */
+ #ifndef LOCKFILE
+-#define LOCKFILE ROOTDIR "/scores/lock"
++#define LOCKFILE SAVEPATH "/lock"
+ #endif
+ 
+ /*
+    SCOREFILE: the full pathname of the score file
+ */
+ #ifndef SCOREFILE
+-#define SCOREFILE ROOTDIR "/scores/scores"
++#define SCOREFILE SAVEPATH "/scores"
+ #endif
+ 
+ /*
+@@ -108,7 +108,7 @@
+ /*
+    ANYLEVEL: Allow any user to play any level and enter a score for it
+ */
+-#define ANYLEVEL 0
++#define ANYLEVEL 1
+ 
+ /*
+    MAXSOLNRANK: The maximum solution rank for which an entry is retained
+@@ -147,7 +147,7 @@
+ */
+ 
+ #ifndef WWW
+-#define WWW 1
++#define WWW 0
+ #endif
+ 
+ #define DEBUG_SERVER(x)
