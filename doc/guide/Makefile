@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/01/09 11:11:40 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2009/04/08 22:43:23 joerg Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -15,7 +15,6 @@ COMMENT=		The pkgsrc guide
 
 PKGVERSION!=		date '+%Y%m%d'
 DIST_SUBDIR=		${PKGBASE}
-NO_MTREE=		yes
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		SED=${SED:Q}
 
