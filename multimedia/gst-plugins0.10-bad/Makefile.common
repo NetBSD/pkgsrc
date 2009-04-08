@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2009/04/07 09:53:54 drochner Exp $
+# $NetBSD: Makefile.common,v 1.11 2009/04/08 19:04:54 drochner Exp $
 #
 # used by audio/gst-plugins0.10-dts/Makefile
 # used by audio/gst-plugins0.10-faad/Makefile
@@ -14,24 +14,25 @@ GST_PLUGINS0.10_VER=	0.10.11
 # Disable all drivers and features by default.
 .for driver in	amrwb \
 		cdaudio \
-		dfbvideosink \
+		directfb \
+		dts \
+		dvb \
 		dvdnav \
 		divx \
-		tsdec \
 		faac \
 		faad \
-		glsink \
-		gsmenc gsmdec \
-		ivorbisdec \
+		fbdev \
+		gsm \
+		ivorbis \
 		libmms \
 		musepack \
 		musicbrainz \
-		neonhttpsrc \
-		sdlvideosink sdlaudiosink \
+		neon \
+		sdl \
 		soundtouch \
 		swfdec \
-		theoraexpdec \
-		v4l2src \
+		theoradec \
+		vcd \
 		xvid
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
