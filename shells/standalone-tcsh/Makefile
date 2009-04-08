@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/08/12 14:51:45 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/04/08 22:43:25 joerg Exp $
 #
 
 # FIXME: This is because of PREFIX=/ below.
 CHECK_FILES_SUPPORTED=	no
-
-NO_MTREE=		YES
 
 PKGNAME=		standalone-${DISTNAME}
 

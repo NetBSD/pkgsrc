@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/12/05 20:50:23 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/08 22:43:23 joerg Exp $
 #
 
 PKGNAME=	ja-FreeWnn-dict-1.10
@@ -21,7 +21,6 @@ PATCHDIR=	${.CURDIR}/../ja-freewnn-lib/patches
 
 .include "../../mk/bsd.prefs.mk"
 
-NO_MTREE=		YES
 INSTALLATION_PREFIX=	${IMDICTDIR}
 
 .include "../../inputmethod/ja-freewnn-lib/Makefile.common"

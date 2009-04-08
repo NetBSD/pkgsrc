@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/10/04 21:46:14 wiz Exp $
+# $NetBSD: Makefile.common,v 1.10 2009/04/08 22:43:24 joerg Exp $
 #
 
 DISTNAME=	sablevm-classpath-1.13
@@ -15,7 +15,6 @@ DISTINFO_FILE=		${.CURDIR}/../../lang/sablevm-classpath/distinfo
 
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${PREFIX}/java/sablevm
-NO_MTREE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
