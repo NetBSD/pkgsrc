@@ -1,0 +1,19 @@
+$NetBSD: patch-ah,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- score.c.orig	1996-08-27 21:23:58.000000000 +0200
++++ score.c
+@@ -633,10 +633,11 @@ static short WriteScore()
+   char tempfile[MAXPATHLEN];
+   strcpy(tempfile, tempnm);
+ 
+-  (void)mktemp(tempfile);
+-  scorefile = fopen(tempfile, "w");
++  sfdbn = mkstemp(tempfile);
++  if (sfdbn < 0)
++	return E_FOPENSCORE;
++  scorefile = fdopen(sfdbn, "w");
+   if (!scorefile) return E_FOPENSCORE;
+-  sfdbn = fileno(scorefile);
+ 
+   scoreentries = htons(scoreentries);
+   if (fwrite(SCORE_VERSION, 4, 1, scorefile) != 1) {

@@ -1,0 +1,7 @@
+xsokoban is an implementation of the game sokoban, written on top of X(1).
+
+The goal of xsokoban is to push all the round objects into  the score area
+of each level using the mouse or the arrow keys. The arrow keys move the
+player in the corresponding direction, pushing an object if it is in the way
+and there  is a clear space on the other side. The mouse buttons each have a
+distinct function.

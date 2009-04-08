@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- display.c.orig	1997-07-17 19:25:52.000000000 +0300
++++ display.c
+@@ -1,5 +1,6 @@
+ #include <stdio.h>
+ #include <string.h>
++#include <stdlib.h>
+ #include <assert.h>
+ 
+ #include "config_local.h"
+@@ -19,7 +20,7 @@
+ #include "display.h"
+ 
+ #if USE_XPM
+-#include "xpm.h"
++#include "X11/xpm.h"
+ #endif
+ 
+ static short LoadBitmaps(void);

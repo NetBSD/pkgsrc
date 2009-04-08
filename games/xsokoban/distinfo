@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+SHA1 (xsokoban-3.3c.tar.gz) = d5a829a8a507c60458093baa431e4fe9ff619aed
+RMD160 (xsokoban-3.3c.tar.gz) = 394cc9663982004f27135baad4e26c18c2c6817c
+Size (xsokoban-3.3c.tar.gz) = 98961 bytes
+SHA1 (patch-aa) = ba21be16ffdf2640014a2a91a4e042bee3660cfc
+SHA1 (patch-ab) = 17791f14cfba86154b12eb3bef61fedf8c6e1f8c
+SHA1 (patch-ac) = eeaa85eb12c473b2703b55b1602eae4c89639a0f
+SHA1 (patch-ad) = 2338d0e6afac7709abfe55eb57e809247d42b6f1
+SHA1 (patch-ae) = 234e46167bf5b3786462488c99bf10de60736452
+SHA1 (patch-af) = 43b4abe82c6cb7d51ad65e3eb1ef05fc345916a4
+SHA1 (patch-ag) = 77a33b22e071637377e25636dd2df8ec45ac9d1e
+SHA1 (patch-ah) = 1d8cb6cf6c5e57c8bb4a019e73eca9c56c21306f
