@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- main.c.orig	1996-07-03 16:56:06.000000000 +0300
++++ main.c
+@@ -47,7 +47,7 @@ static struct passwd *pwd;
+ static int movelen;
+ /* Length of the verified move sequence waiting on stdin if -v is used */
+ 
+-void main(int argc, char **argv)
++int main(int argc, char **argv)
+ {
+   short ret = 0;
+ 
+@@ -93,7 +93,7 @@ void main(int argc, char **argv)
+     }
+ #endif
+     /* see if we are the owner */
+-    owner = (strcmp(username, OWNER) == 0) ? _true_ : _false_;
++    owner = _true_;
+     if (ret == 0) {
+       if (opt_show_score) {
+ 	DEBUG_SERVER("sending score file");
+@@ -106,9 +106,9 @@ void main(int argc, char **argv)
+       } else if (opt_make_score) {
+ 	if (owner) {
+ 	  /* make sure of that, shall we? */
+-	  ret = GetGamePassword();
+-	  if (ret == 0)
+-	    ret = MakeNewScore(optfile);
++/*	  ret = GetGamePassword();
++	  if (ret == 0)*/
++	  ret = MakeNewScore(optfile);
+ 	} else
+ 	  /* sorry, BAD owner */
+ 	  ret = E_NOSUPER;
