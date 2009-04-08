@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- externs.h.orig	1995-04-16 01:46:14.000000000 +0300
++++ externs.h
+@@ -5,7 +5,6 @@
+ #include <X11/Xresource.h>
+ #include <sys/stat.h>
+ #include <sys/types.h>
+-#include <malloc.h>
+ 
+ #ifdef NEED_NETINET_IN
+ #include <netinet/in.h>

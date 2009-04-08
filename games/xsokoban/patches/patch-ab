@@ -1,0 +1,75 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- configure.in.orig	1996-10-29 18:51:14.000000000 +0100
++++ configure.in
+@@ -42,40 +42,7 @@ AC_FEATURE_CHECK(www, WWW, WWW scoring)
+ if test $use_xpm = 1; then
+     libxpm=1
+     incxpm=1
+-    AC_CHECK_LIB(Xpm, main, [LIBS="$LIBS -lXpm"],
+-	[ 
+-	  libok=no;
+-	  AC_MSG_CHECKING(other locations for libXpm)
+-	  for lib in /usr/local/lib xpm*/lib ../xpm*/lib;
+-	  do
+-	    if test -r $lib/libXpm.a; then
+-		AC_MSG_RESULT(Found it in $lib!)
+-		LIBS="$LIBS -L$lib -lXpm";
+-		libok=yes;
+-		break;
+-	    fi
+-	  done
+-	  if test $libok = no; then
+-	    AC_MSG_WARN(Can't find libXpm.a! You must add it to LIBS in Makefile.)
+-	  fi
+-	])
+-    AC_HEADER_CHECK(xpm.h,,
+-	[
+-	  incok=no;
+-	  for inc in /usr/local/include /usr/local/include/X11* \
+-		/usr/local/X11*/include xpm*/lib ../xpm*/lib;
+-	  do
+-	    if test -r $inc/xpm.h; then
+-		AC_MSG_RESULT(Found it in $inc!)
+-		INCS="$INCS -I$inc";
+-		incok=yes;
+-		break;
+-	    fi
+-	  done
+-	  if test $incok = no; then
+-	    AC_MSG_WARN(Can't find xpm.h! You must add its location to INCS in Makefile.)
+-	  fi
+-	  ])
++    LIBS="$LIBS -L${X11BASE}/lib -Wl,-R${X11BASE}/lib -lXpm"
+ fi
+ rm -f tmp.$$.c tmp2.$$
+ 
+@@ -114,28 +81,6 @@ if test $www = 1; then
+ fi
+ 
+ ##############
+-# Figure out OWNER
+-AC_MSG_CHECKING(owner of game)
+-AC_VAR_CHECK(OWNER, OWNER)
+-OWNER=`echo $OWNER | sed -e 's/"//g'`
+-AC_TRY_RUN([
+-#include <stdio.h>
+-#include <pwd.h>
+-#include <stdlib.h>
+-
+-main(int argc, char **argv) {
+-    struct passwd *p;
+-    p = getpwnam("$OWNER");
+-    exit((p == 0) ? 1 : 0);
+-}], ownerok=1, ownerok="", ownerok=1)
+-if test -n "$ownerok"; then
+-    AC_MSG_RESULT("owner is $OWNER")
+-    AC_SUBST(OWNER)
+-else
+-    AC_MSG_WARN(\"$OWNER\" seems not to be a username. \nEdit \"config.h\" and change OWNER.),
+-fi
+-
+-##############
+ # DEC bogosity
+ 
+ AC_CHECK_LIB(dnet_stub,main)

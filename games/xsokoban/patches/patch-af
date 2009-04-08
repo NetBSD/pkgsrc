@@ -1,0 +1,63 @@
+$NetBSD: patch-af,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- Makefile.in.orig	1996-07-03 15:56:27.000000000 +0200
++++ Makefile.in
+@@ -13,28 +13,30 @@ INCS = @INCS@
+ WARN = @WARN@
+ LIBS = @LIBS@
+ DEFS =
+-OWNER = @OWNER@
+ 
+ ############################################################
+ # Other programs
+ ############################################################
+-INSTALL = @INSTALL@ -o $(OWNER)
++#INSTALL = @INSTALL@ -o $(OWNER)
+ CP = /bin/cp
+ CHOWN = /bin/chown
++CHGRP = /bin/chgrp
+ MKDIR = /bin/mkdir
+ 
+ ############################################################
+ # Where to install the executable, data files, and man page
+ ############################################################
+-INSTALL_BIN = /usr/local/bin
+-INSTALL_LIB = /usr/local/lib/xsokoban
+-INSTALL_MAN = /usr/local/man/man1
++prefix      = @prefix@
++exec_prefix = @exec_prefix@
++BINDIR      = ${DESTDIR}@bindir@
++DATADIR     = ${DESTDIR}@datadir@
++MANDIR      = ${DESTDIR}@mandir@/man1
+ 
+ ##### Nothing from here on should need customization ######################
+ 
+ CFLAGS = $(OPTIMIZER) $(WARN) $(INCS) $(DEFS)
+ OBJECTS = display.o main.o resources.o play.o score.o screen.o save.o \
+-	  scoredisp.o qtelnet.o
++	  scoredisp.o
+ 
+ xsokoban: $(OBJECTS)
+ 	$(CC) $(CFLAGS) -o xsokoban $(OBJECTS) $(LIBS)
+@@ -46,15 +48,12 @@ clobber: clean
+ 	rm -f xsokoban config.cache config.status Makefile
+ 
+ install: xsokoban
+-	$(INSTALL) -s -o $(OWNER) -m 4755 xsokoban $(INSTALL_BIN)/xsokoban
+-	$(INSTALL) xsokoban.man $(INSTALL_MAN)/xsokoban.1
+-	-$(MKDIR) $(INSTALL_LIB)
+-	-$(MKDIR) $(INSTALL_LIB)/scores
+-	-$(MKDIR) $(INSTALL_LIB)/saves
+-	-$(MKDIR) $(INSTALL_LIB)/screens
+-	$(CP) screens/screen.* $(INSTALL_LIB)/screens
+-	$(CP) -r bitmaps $(INSTALL_LIB)
+-	$(CHOWN) $(OWNER) $(INSTALL_LIB)/scores
++	$(INSTALL_PROGRAM) xsokoban $(BINDIR)/xsokoban
++	$(INSTALL_MAN) xsokoban.man $(MANDIR)/xsokoban.1
++	-$(MKDIR) $(DATADIR)
++	-$(MKDIR) $(DATADIR)/screens
++	$(INSTALL_DATA) screens/screen.* $(DATADIR)/screens
++	$(CP) -r bitmaps $(DATADIR)
+ 	@echo "Remember to run 'xsokoban -c' if you have no score file yet."
+ 
+ # DO NOT DELETE THIS LINE -- make depend depends on it.
