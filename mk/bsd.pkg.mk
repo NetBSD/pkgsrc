@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1954 2009/03/20 19:25:01 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1955 2009/04/08 14:47:26 wiz Exp $
 #
 # This file is in the public domain.
 #
@@ -82,15 +82,6 @@ PKG_FAIL_REASON+=	"Circular dependency detected"
 ############################################################################
 
 MKCRYPTO?=		YES	# build crypto packages by default
-
-##### Variant spellings
-
-.if defined(LICENCE) && !defined(LICENSE)
-LICENSE=		${LICENCE}
-.endif
-.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
-ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
-.endif
 
 ##### Others
 
@@ -529,25 +520,7 @@ PKG_FAIL_REASON+= "${PKGNAME} uses X11, but ${X11BASE} not found"
 PKG_FAIL_REASON+= "${PKGNAME} is marked as broken:" ${BROKEN:Q}
 .  endif
 
-.  if defined(LICENSE)
-.    if defined(ACCEPTABLE_LICENSES) && !empty(ACCEPTABLE_LICENSES:M${LICENSE})
-_ACCEPTABLE=	yes
-.    endif	# ACCEPTABLE_LICENSES
-.    if !defined(_ACCEPTABLE)
-.      if defined(MAKECONF)
-_MAKECONF?=	${MAKECONF}
-.      elif ${OPSYS} == "NetBSD" && ${MAKE} != "${PREFIX}/bin/bmake"
-_MAKECONF?=     /etc/mk.conf
-.      else
-_MAKECONF?=	${PREFIX}/etc/mk.conf
-.  endif
-
-PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
-	 "    To view the license, enter \"${MAKE} show-license\"." \
-	 "    To indicate acceptance, add this line to ${_MAKECONF}:" \
-	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
-.    endif	# _ACCEPTABLE
-.  endif	# LICENSE
+.include "license.mk"
 
 # Define __PLATFORM_OK only if the OS matches the pkg's allowed list.
 .  if defined(ONLY_FOR_PLATFORM) && !empty(ONLY_FOR_PLATFORM)
