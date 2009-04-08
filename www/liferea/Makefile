@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2009/04/07 11:36:27 drochner Exp $
+# $NetBSD: Makefile,v 1.82 2009/04/08 16:44:23 drochner Exp $
 
 DISTNAME=		liferea-1.4.27
 CATEGORIES=		www
@@ -19,11 +19,11 @@ USE_LANGUAGES+=		c
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.liferea
 PKG_OPTIONS_REQUIRED_GROUPS=	renderer
-PKG_OPTIONS_GROUP.renderer=	liferea-gtkhtml liferea-seamonkey liferea-firefox
+PKG_OPTIONS_GROUP.renderer=	liferea-gtkhtml liferea-seamonkey liferea-firefox liferea-webkit
 PKG_SUGGESTED_OPTIONS=	liferea-gtkhtml
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	gtkhtml mozilla
+PLIST_VARS+=	gtkhtml mozilla webkit
 .if !empty(PKG_OPTIONS:Mliferea-gtkhtml)
 CONFIGURE_ARGS+=	--disable-gecko
 .include "../../www/libgtkhtml/buildlink3.mk"
@@ -36,6 +36,11 @@ PLIST.mozilla=	yes
 .if !empty(PKG_OPTIONS:Mliferea-seamonkey)
 .include "../../www/firefox/buildlink3.mk"
 PLIST.mozilla=	yes
+.endif
+.if !empty(PKG_OPTIONS:Mliferea-webkit)
+CONFIGURE_ARGS+=	--disable-gecko
+.include "../../www/webkit-gtk/buildlink3.mk"
+PLIST.webkit=	yes
 .endif
 
 SHLIBTOOL_OVERRIDE=	# empty
