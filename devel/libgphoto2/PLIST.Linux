@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2007/12/23 05:11:34 minskim Exp $
+@comment $NetBSD: PLIST.Linux,v 1.5 2009/04/08 19:17:35 drochner Exp $
+lib/udev/check-mtp-device
+lib/udev/check-ptp-camera
 share/doc/libgphoto2/linux-hotplug/usbcam.console
 share/doc/libgphoto2/linux-hotplug/usbcam.group
 share/doc/libgphoto2/linux-hotplug/usbcam.user
