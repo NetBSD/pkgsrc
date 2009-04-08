@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/04/06 10:22:12 drochner Exp $
+$NetBSD: patch-ac,v 1.1 2009/04/08 13:06:22 drochner Exp $
 
 --- xcbgen/state.py.orig	2009-04-01 16:05:28.000000000 +0200
 +++ xcbgen/state.py

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/06 10:23:59 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/08 13:06:22 drochner Exp $
 #
 
 DISTNAME=	libxcb-1.1.93
@@ -75,11 +75,15 @@ SUBST_VARS.pc=		XTHREADLIB XTHREAD_CPPFLAGS
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v -i -f
 
+BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen-[0-9]*:../../x11/py-xcbgen
+
 ###
 ### XXX needed to build from scratch, but we're patching right now
 ###	so it's not needed (nor should it ever be, really).
 ###
 #.include "../../devel/gperf/buildlink3.mk"
+PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/python/application.mk"
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
