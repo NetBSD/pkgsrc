@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/07 09:53:54 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/08 19:04:54 drochner Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,4 +17,6 @@ PLIST.x86=	yes
 
 # bzip2 is likely present anyway, make it default
 .include "../../archivers/bzip2/buildlink3.mk"
+# same for OpenSSL
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
