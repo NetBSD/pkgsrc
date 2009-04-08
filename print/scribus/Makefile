@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2009/02/17 17:19:29 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2009/04/08 16:56:53 drochner Exp $
 
 DISTNAME=		scribus-1.3.3.12
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scribus/}
 EXTRACT_SUFX=		.tar.bz2
@@ -44,5 +44,6 @@ BUILDLINK_API_DEPENDS.libart+= libart>=2.3.19nb1
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../mk/bsd.pkg.mk"
