@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2008/10/13 22:32:54 bad Exp $
+# $NetBSD: Makefile,v 1.36 2009/04/08 23:27:51 joerg Exp $
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+META_PACKAGE=		# empty
 
 .include	"../../security/nessus/Makefile.common"
 
@@ -12,12 +12,5 @@ DISTFILES=	# empty
 COMMENT=	The Nessus Network Security Scanner
 
 DEPENDS+=	nessus-plugins-${VERS}nb*:../../security/nessus-plugins
-
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
