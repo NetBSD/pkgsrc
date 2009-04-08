@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/10/11 09:31:56 uebayasi Exp $
+# $NetBSD: Makefile,v 1.25 2009/04/08 22:55:07 joerg Exp $
 
 DISTNAME=	emacs-packages-0.9
 CATEGORIES=	meta-pkgs editors
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Meta-package for the GNU Emacs lisp packages
+
+META_PACKAGE=	# empty
 
 .include "../../editors/emacs/modules.mk"
 
@@ -73,13 +75,5 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}w3-[0-9]*:../../www/w3
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}wl-[0-9]*:../../mail/wl
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenicb-[0-9]*:../../chat/zenicb
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}zenirc-[0-9]*:../../chat/zenirc
-
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
