@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/04/06 10:22:12 drochner Exp $
+$NetBSD: patch-ad,v 1.1 2009/04/08 13:06:22 drochner Exp $
 
 --- xcbgen/matcher.py.orig	2009-04-01 16:06:02.000000000 +0200
 +++ xcbgen/matcher.py

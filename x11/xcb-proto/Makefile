@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/04/08 09:58:20 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/08 13:06:22 drochner Exp $
 #
 
 DISTNAME=	xcb-proto-1.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,10 +20,10 @@ USE_LANGUAGES=	# none
 PKGCONFIG_OVERRIDE+=	xcb-proto.pc.in
 
 CONFIGURE_ENV+=		XMLLLINT=${BUILDLINK_PREFIX.libxml}/bin/xmllint
-PY_PATCHPLIST=		yes
 
+# XXX just for the "configure" check
+PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

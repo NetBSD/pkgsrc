@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2009/04/08 13:06:22 drochner Exp $
+${PYSITELIB}/xcbgen/__init__.py
+${PYSITELIB}/xcbgen/__init__.pyc
+${PYSITELIB}/xcbgen/__init__.pyo
+${PYSITELIB}/xcbgen/error.py
+${PYSITELIB}/xcbgen/error.pyc
+${PYSITELIB}/xcbgen/error.pyo
+${PYSITELIB}/xcbgen/expr.py
+${PYSITELIB}/xcbgen/expr.pyc
+${PYSITELIB}/xcbgen/expr.pyo
+${PYSITELIB}/xcbgen/matcher.py
+${PYSITELIB}/xcbgen/matcher.pyc
+${PYSITELIB}/xcbgen/matcher.pyo
+${PYSITELIB}/xcbgen/state.py
+${PYSITELIB}/xcbgen/state.pyc
+${PYSITELIB}/xcbgen/state.pyo
+${PYSITELIB}/xcbgen/xtypes.py
+${PYSITELIB}/xcbgen/xtypes.pyc
+${PYSITELIB}/xcbgen/xtypes.pyo
+@dirrm ${PYSITELIB}/xcbgen
