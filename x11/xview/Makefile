@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/08/30 20:07:30 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2009/04/08 23:16:55 joerg Exp $
 #
 
 DISTNAME=	xview3.2p1-X11R6
@@ -11,6 +11,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	OpenLook Toolkit meta-package
 
+META_PACKAGE=		# empty
+
 DEPENDS+=	xview-config>=3.2.1:../../x11/xview-config
 DEPENDS+=	xview-lib>=3.2.1:../../x11/xview-lib
 DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
@@ -18,13 +20,5 @@ DEPENDS+=	xview-clients>=3.2.1:../../x11/xview-clients
 NOT_FOR_PLATFORM=	*-*-alpha       # broken va_arg handling in xview-lib
 
 USE_X11BASE=	yes
-
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
