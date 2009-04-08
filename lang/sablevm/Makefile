@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:23 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/08 22:43:24 joerg Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -18,7 +18,6 @@ DEPENDS+=	sablevm-classpath-1.13nb1:../../lang/sablevm-classpath
 GNU_CONFIGURE=		yes
 GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
-NO_MTREE=		yes
 USE_TOOLS+=		gmake gm4
 USE_LIBTOOL=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/19 06:46:52 tron Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/08 22:43:26 joerg Exp $
 
 DISTNAME=	dtxsession-1.0
 CATEGORIES=	x11
@@ -18,7 +18,6 @@ LOCALBASE=	/usr/dt
 .endif
 NO_BUILD=	YES
 NO_CHECKSUM=	YES
-NO_MTREE=	YES
 
 CONFIG_DIR=	${PREFIX}/config
 

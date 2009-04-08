@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:27:14 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/04/08 22:43:25 joerg Exp $
 #
 
 DISTNAME=	html-4.01
@@ -15,7 +15,6 @@ DEPENDS+=	iso8879>=1986:../../textproc/iso8879
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 WRKSRC=		${WRKDIR}
-NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 USE_TOOLS+=	tar
