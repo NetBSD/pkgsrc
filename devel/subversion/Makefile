@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2009/04/08 22:54:22 joerg Exp $
 
 PKGNAME=	subversion-${SVNVER}
 PKGREVISION=	1
 COMMENT=	Version control system, meta-package
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+META_PACKAGE=	# empty
 
 .include "../../devel/subversion/Makefile.common"
 
@@ -22,20 +22,8 @@ DEPENDS+=	java-subversion-${SVNVER}{,nb[0-9]*}:../../devel/java-subversion
 
 CATEGORIES+=	meta-pkgs
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	YES
-NO_CONFIGURE=	YES
-NO_BUILD=	YES
-PLIST_SRC=	# empty (meta-package)
-
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/apache.mk"
-
-# The NO_PATCH macro is gone so we have to do this to prevent the
-# patches from being applied:
-do-patch:
-
-do-install:
 
 .include "../../mk/bsd.pkg.mk"
