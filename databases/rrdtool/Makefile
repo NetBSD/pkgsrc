@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2009/01/22 16:47:02 martti Exp $
+# $NetBSD: Makefile,v 1.77 2009/04/08 18:41:25 martti Exp $
 
-DISTNAME=	rrdtool-1.3.6
+DISTNAME=	rrdtool-1.3.7
 
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
@@ -8,7 +8,7 @@ MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://oss.oetiker.ch/rrdtool/
 COMMENT=	Data analysis tool generating graphical representations
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
