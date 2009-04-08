@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2007/02/22 19:26:38 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2009/04/08 22:43:24 joerg Exp $
 
 DISTNAME=		kaffe-1.1.7
 CATEGORIES=		lang java
@@ -16,7 +16,6 @@ GNU_CONFIGURE_PREFIX=	${JAVA_HOME}
 GNU_CONFIGURE_MANDIR=	${PREFIX}/${PKGMANDIR}
 JAVA_HOME=		${PREFIX}/java/kaffe
 JAVA_NAME=		kaffe
-NO_MTREE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 TEST_TARGET=		check
