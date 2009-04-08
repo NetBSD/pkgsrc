@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.97 2009/03/08 15:55:32 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.98 2009/04/08 15:01:11 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -122,22 +122,30 @@ INTERACTIVE_STAGE=      configure install
     this is a bug.)</para>
 
     <para>One might want to only install packages with a BSD license,
-    or the GPL, and not the other.  The pkgsrc license tag mechanism
-    does not provide a way to do this.  It might be possible to put in
-    tags for free licenses, and have a default
-    <varname>ACCEPTABLE_LICENSES</varname> variable value, but this is
-    widely viewed as having a very poor ratio of benefit to
-    work.</para>
+    or the GPL, and not the other.  The free licenses are added to the 
+    default <varname>ACCEPTABLE_LICENSES</varname> variable.  The
+    user can override the default by setting the
+    <varname>ACCEPTABLE_LICENSES</varname> variable with "=" instead
+    of "+=".  The licenses accepted by default are:
+    <programlisting>
+    public-domain
+    gnu-gpl-v2 gnu-lgpl-v2
+    gnu-gpl-v3 gnu-lgpl-v3
+    original-bsd modified-bsd
+    x11
+    apache-2.0
+    cddl-1.0
+    open-font-license
+    </programlisting>
+    </para>
 
     <para>The license tag mechanism is intended to address
     copyright-related issues surrounding building, installing and
     using a package, and not to address redistribution issues (see
     <varname>RESTRICTED</varname> and
-    <varname>NO_SRC_ON_FTP</varname>, etc.).  However, the above
-    definition of licenses for which tags are not needed implies
-    that packages with redistribution restrictions should have
-    tags, because Free or Open Source programs do not have
-    redistribution restrictions.</para>
+    <varname>NO_SRC_ON_FTP</varname>, etc.).  
+    Packages with redistribution restrictions should set these
+    tags.</para>
 
     <para>Denoting that a package may be copied according to a
     particular license is done by placing the license in
