@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 03:30:19 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/08 01:44:04 schmonz Exp $
 bin/imapfront-auth
+bin/mailfront
 bin/pop3front-auth
 bin/pop3front-maildir
 bin/qmqpfront-echo
@@ -8,5 +9,58 @@ bin/qmtpfront-echo
 bin/qmtpfront-qmail
 bin/smtpfront-echo
 bin/smtpfront-qmail
-bin/smtpfront-reject
+include/mailfront/constants.h
+include/mailfront/mailfront.h
+include/mailfront/responses.h
+lib/mailfront/backend-echo.so
+lib/mailfront/backend-qmail.so
+lib/mailfront/plugin-add-received.so
+lib/mailfront/plugin-check-fqdn.so
+lib/mailfront/plugin-clamav.so
+lib/mailfront/plugin-counters.so
+lib/mailfront/plugin-cvm-validate.so
+lib/mailfront/plugin-mailrules.so
+lib/mailfront/plugin-patterns.so
+lib/mailfront/plugin-qmail-validate.so
+lib/mailfront/plugin-reject.so
+lib/mailfront/plugin-relayclient.so
+lib/mailfront/plugin-require-auth.so
+lib/mailfront/protocol-qmqp.so
+lib/mailfront/protocol-qmtp.so
+lib/mailfront/protocol-smtp.so
+share/doc/mailfront/ANNOUNCEMENT
+share/doc/mailfront/NEWS
+share/doc/mailfront/README
+share/doc/mailfront/backend-echo.html
+share/doc/mailfront/backend-qmail.html
+share/doc/mailfront/imapfront.html
+share/doc/mailfront/mailfront.html
+share/doc/mailfront/mailrules.html
+share/doc/mailfront/mailrulesx.html
+share/doc/mailfront/msa.html
+share/doc/mailfront/plugin-accept-recipient.html
+share/doc/mailfront/plugin-accept-sender.html
+share/doc/mailfront/plugin-accept.html
+share/doc/mailfront/plugin-add-received.html
+share/doc/mailfront/plugin-api.html
+share/doc/mailfront/plugin-check-fqdn.html
+share/doc/mailfront/plugin-clamav.html
+share/doc/mailfront/plugin-counters.html
+share/doc/mailfront/plugin-cvm-validate.html
+share/doc/mailfront/plugin-force-file.html
+share/doc/mailfront/plugin-mailrules.html
+share/doc/mailfront/plugin-patterns.html
+share/doc/mailfront/plugin-qmail-validate.html
+share/doc/mailfront/plugin-reject.html
+share/doc/mailfront/plugin-relayclient.html
+share/doc/mailfront/plugin-require-auth.html
+share/doc/mailfront/plugin-template.html
+share/doc/mailfront/pop3front.html
+share/doc/mailfront/protocol-qmqp.html
+share/doc/mailfront/protocol-qmtp.html
+share/doc/mailfront/protocol-smtp.html
+share/doc/mailfront/std-handle.html
 share/examples/rc.d/smtpfront
+@dirrm share/doc/mailfront
+@dirrm lib/mailfront
+@dirrm include/mailfront
