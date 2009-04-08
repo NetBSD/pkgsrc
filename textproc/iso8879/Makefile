@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/08/08 14:57:39 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/04/08 22:43:26 joerg Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	unzip
-NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
