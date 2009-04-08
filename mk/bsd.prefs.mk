@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.289 2009/04/08 23:02:03 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.290 2009/04/08 23:03:14 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -370,6 +370,7 @@ NO_BUILD=		yes
 DISTFILES=		# none
 PLIST_SRC=		# none
 CHECK_PERMS=		no
+USE_LANGUAGES=		# empty
 do-patch:
 	@${DO_NADA}
 do-install:
