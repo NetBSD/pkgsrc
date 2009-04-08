@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/03/25 22:37:15 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/08 16:42:50 drochner Exp $
 
-DISTNAME=	webkit-1.1.3
+DISTNAME=	webkit-1.1.4
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
 
@@ -33,6 +32,8 @@ REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 		WebCore/dom/*.pl \
 		WebCore/platform/text/mac/*.pl
 
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
