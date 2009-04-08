@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.11 2009/03/25 13:50:44 rillig Exp $
+# $NetBSD: license.mk,v 1.12 2009/04/08 14:47:27 wiz Exp $
 #
 # Note: This file is in draft state and not yet included in default
 # pkgsrc operations.
@@ -72,7 +72,7 @@
 #
 #	../doc/TODO, section "Licenses of packages"
 #
-# Keywords: licence
+# Keywords: licence license
 #
 
 # This list is not complete.  Free and Open Source licenses should be
@@ -97,12 +97,14 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	cddl-1.0 \
 	open-font-license
 
+##### Variant spellings
+
+.if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
+ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
+.endif
+
 .if !defined(LICENSE)
-# XXX Revisit date.
-.  if defined(AFTER_2007Q3)
-LICENSE?=		unknown
-PKG_FAIL_REASON+=	"[license.mk] Every package must define a LICENSE."
-.  else
+.  if defined(PKG_DEVELOPER)
 WARNINGS+=		"[license.mk] Every package should define a LICENSE."
 .  endif
 
@@ -116,9 +118,16 @@ _ACCEPTABLE=	yes
 .  endif
 
 .  if !defined(_ACCEPTABLE)
+.    if defined(MAKECONF)
+_MAKECONF?=	${MAKECONF}
+.    elif ${OPSYS} == "NetBSD" && ${MAKE} != "${PREFIX}/bin/bmake"
+_MAKECONF?=	/etc/mk.conf
+.    else
+_MAKECONF?=	${PREFIX}/etc/mk.conf
+.    endif
 PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
 	 "    To view the license, enter \"${MAKE} show-license\"." \
-	 "    To indicate acceptance, add this line to your mk.conf:" \
+	 "    To indicate acceptance, add this line to ${_MAKECONF}:" \
 	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
 .  endif
 .endif
