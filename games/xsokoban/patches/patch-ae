@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1.1.1 2009/04/08 16:31:56 drochner Exp $
+
+--- play.c.orig	1995-04-10 21:11:28.000000000 +0300
++++ play.c
+@@ -3,6 +3,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <ctype.h>
++#include <unistd.h>
+ 
+ #include "externs.h"
+ #include "globals.h"
