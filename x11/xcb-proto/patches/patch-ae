@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/04/08 13:06:22 drochner Exp $
+
+--- Makefile.in.orig	2009-04-08 13:05:03.000000000 +0200
++++ Makefile.in
+@@ -158,7 +158,7 @@ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ xcbincludedir = @xcbincludedir@
+-SUBDIRS = src xcbgen
++SUBDIRS = src
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = xcb-proto.pc
+ EXTRA_DIST = doc xcb-proto.pc.in
