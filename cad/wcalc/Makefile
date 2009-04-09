@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2007/10/25 22:00:40 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/09 00:41:53 joerg Exp $
 #
+
+META_PACKAGE=		# empty
 
 .include "../../cad/wcalc/Makefile.common"
 PKGREVISION=	3
@@ -33,13 +35,5 @@ DEPENDS+=	gtk2-wcalc-${VER}*:../../cad/gtk2-wcalc
 ONLY_FOR_PLATFORM=	Linux-*-i386 SunOS-*-sparc*
 DEPENDS+=	mex-wcalc-${VER}*:../../cad/mex-wcalc
 .endif
-
-EXTRACT_ONLY=	# none
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-PLIST_SRC=	# empty (meta-package)
-
-do-patch:	# empty
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"
