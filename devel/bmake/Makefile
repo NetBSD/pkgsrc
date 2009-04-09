@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/11/11 20:01:58 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2009/04/09 00:48:07 joerg Exp $
 #
 
 DISTNAME=	bmake-20081111
@@ -19,7 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BOOTSTRAP_PKG=	yes
 
 WRKSRC=		${WRKDIR}/bmake
-NO_CHECKSUM=	yes
 
 USE_FEATURES=	nbcompat
 

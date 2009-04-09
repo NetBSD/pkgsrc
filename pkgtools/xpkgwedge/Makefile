@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/04/12 22:43:09 jlam Exp $
+# $NetBSD: Makefile,v 1.76 2009/04/09 00:48:14 joerg Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -14,11 +14,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-NO_CHECKSUM=	yes
 
 .include "../../mk/bsd.prefs.mk"
 

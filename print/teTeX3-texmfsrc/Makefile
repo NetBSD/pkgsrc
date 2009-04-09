@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/03/26 20:46:38 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/09 00:48:15 joerg Exp $
 # FreeBSD Id: Makefile,v 1.20 1997/08/05 06:56:41 tg Exp
 #
 
@@ -20,7 +20,6 @@ CONFLICTS+=	teTeX-sharesrc-[0-9]*
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
-EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
