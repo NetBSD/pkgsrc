@@ -1,28 +1,22 @@
-$NetBSD: patch-az,v 1.1 2008/07/25 02:55:28 tonnerre Exp $
-
---- mailboxes/search_form.cgi.orig	2007-09-21 23:28:31.000000000 +0200
-+++ mailboxes/search_form.cgi
-@@ -12,8 +12,10 @@ require './mailboxes-lib.pl';
- 	&folder_link($in{'user'}, $folder));
+--- mailboxes/search_form.cgi.orig	2009-03-18 07:30:35.000000000 +0200
++++ mailboxes/search_form.cgi	2009-04-09 12:47:29.000000000 +0300
+@@ -13,8 +13,8 @@
  
- print "<form action=mail_search.cgi>\n";
--print "<input type=hidden name=user value='$in{'user'}'>\n";
--print "<input type=hidden name=ofolder value='$in{'folder'}'>\n";
-+print "<input type=hidden name=user value='" . &html_escape($in{'user'}) .
-+	"'>\n";
-+print "<input type=hidden name=ofolder value='" . &html_escape($in{'folder'}) .
-+	"'>\n";
- print "<input type=radio name=and value=1 checked> $text{'sform_and'}\n";
- print "<input type=radio name=and value=0> $text{'sform_or'}<p>\n";
+ # Start of form
+ print &ui_form_start("mail_search.cgi");
+-print &ui_hidden("user", $in{'user'});
+-print &ui_hidden("ofolder", $in{'folder'});
++print &ui_hidden("user", &html_escape($in{'user'}));
++print &ui_hidden("ofolder", &html_escape($in{'folder'}));
+ print &ui_table_start($text{'sform_header'}, "width=100%", 2);
  
-@@ -48,7 +50,7 @@ print " $text{'sform_folder'} ",&folder_
- 					       $extra);
- print "</form>\n";
+ # And/or mode
+@@ -54,7 +54,7 @@
+ print &ui_table_end();
+ print &ui_form_end([ [ undef, $text{'sform_ok'} ] ]);
  
 -&ui_print_footer("list_mail.cgi?folder=$in{'folder'}&user=".
--		  &urlize($in{'user'}), $text{'mail_return'},
--		 "", $text{'index_return'});
 +&ui_print_footer("list_mail.cgi?folder=" . &urlize($in{'folder'}) . "&user=".
-+		  &urlize($in{'user'}), $text{'mail_return'}, "",
-+		  $text{'index_return'});
+ 		  &urlize($in{'user'}), $text{'mail_return'},
+ 		 "", $text{'index_return'});
  

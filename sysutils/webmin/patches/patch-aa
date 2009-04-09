@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
-
---- setup.sh.orig	2007-09-21 21:26:02.000000000 +0000
-+++ setup.sh
-@@ -35,6 +35,11 @@ echo ""
+--- setup.sh.orig	2009-03-18 07:30:26.000000000 +0200
++++ setup.sh	2009-04-09 12:24:40.000000000 +0300
+@@ -35,6 +35,11 @@
  
  # Only root can run this
  id | grep "uid=0(" >/dev/null
@@ -14,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
  if [ $? != "0" ]; then
  	uname -a | grep -i CYGWIN >/dev/null
  	if [ $? != "0" ]; then
-@@ -122,6 +127,9 @@ if [ -r "$config_dir/config" ]; then
+@@ -122,6 +127,9 @@
  	upgrading=1
  fi
  
@@ -24,7 +22,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
  # Check if upgrading from an old version
  if [ "$upgrading" = 1 ]; then
  	echo ""
-@@ -199,6 +207,10 @@ if [ "$upgrading" = 1 ]; then
+@@ -199,6 +207,10 @@
  else
  	# Config directory exists .. make sure it is not in use
  	ls $config_dir | grep -v rpmsave >/dev/null 2>&1
@@ -35,7 +33,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
  	if [ "$?" = "0" -a "$config_dir" != "/etc/webmin" ]; then
  		echo "ERROR: Config directory $config_dir is not empty"
  		echo ""
-@@ -527,6 +539,12 @@ else
+@@ -528,6 +540,12 @@
  
  	kfile=$config_dir/miniserv.pem
  	openssl version >/dev/null 2>&1
@@ -48,16 +46,18 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
  	if [ "$?" = "0" ]; then
  		# We can generate a new SSL key for this host
  		host=`hostname`
-@@ -733,31 +751,34 @@ EOF
+@@ -742,44 +760,47 @@
  	echo ""
  fi
  
 -echo "Changing ownership and permissions .."
+-# Make all config dirs non-world-readable
 -for m in $newmods; do
 -	chown -R root $config_dir/$m
 -	chgrp -R bin $config_dir/$m
 -	chmod -R og-rw $config_dir/$m
 -done
+-# Make miniserv config files non-world-readable
 -for f in miniserv.conf miniserv.pem miniserv.users; do
 -	chown -R root $config_dir/$f
 -	chgrp -R bin $config_dir/$f
@@ -65,27 +65,40 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
 -done
 -chmod +r $config_dir/version
 -if [ "$nochown" = "" ]; then
+-	# Make program directory non-world-writable, but executable
 -	chown -R root "$wadir"
 -	chgrp -R bin "$wadir"
 -	chmod -R og-w "$wadir"
 -	chmod -R a+rx "$wadir"
 -fi
 -if [ $var_dir != "/var" ]; then
+-	# Make log directory non-world-readable or writable
 -	chown -R root $var_dir
 -	chgrp -R bin $var_dir
 -	chmod -R og-rwx $var_dir
 -fi
+-# Fix up bad permissions from some older installs
+-for m in ldap-client ldap-server ldap-useradmin mailboxes mysql postgresql servers virtual-server; do
+-	if [ -d "$config_dir/$m" ]; then
+-		chown root $config_dir/$m
+-		chgrp bin $config_dir/$m
+-		chmod og-rw $config_dir/$m
+-		chmod og-rw $config_dir/$m/config 2>/dev/null
+-	fi
+-done
 -echo "..done"
 -echo ""
 +# For pkgsrc, we skip changing ownership and permissions as we allow the
 +# INSTALL/DEINSTALL to manage this for us.
 +#
 +#echo "Changing ownership and permissions .."
++## Make all config dirs non-world-readable
 +#for m in $newmods; do
 +#	chown -R root $config_dir/$m
 +#	chgrp -R bin $config_dir/$m
 +#	chmod -R og-rw $config_dir/$m
 +#done
++## Make miniserv config files non-world-readable
 +#for f in miniserv.conf miniserv.pem miniserv.users; do
 +#	chown -R root $config_dir/$f
 +#	chgrp -R bin $config_dir/$f
@@ -93,16 +106,27 @@ $NetBSD: patch-aa,v 1.6 2007/10/05 15:47:00 obache Exp $
 +#done
 +#chmod +r $config_dir/version
 +#if [ "$nochown" = "" ]; then
++#	# Make program directory non-world-writable, but executable
 +#	chown -R root "$wadir"
 +#	chgrp -R bin "$wadir"
 +#	chmod -R og-w "$wadir"
 +#	chmod -R a+rx "$wadir"
 +#fi
 +#if [ $var_dir != "/var" ]; then
++#	# Make log directory non-world-readable or writable
 +#	chown -R root $var_dir
 +#	chgrp -R bin $var_dir
 +#	chmod -R og-rwx $var_dir
 +#fi
++## Fix up bad permissions from some older installs
++#for m in ldap-client ldap-server ldap-useradmin mailboxes mysql postgresql servers virtual-server; do
++#	if [ -d "$config_dir/$m" ]; then
++#		chown root $config_dir/$m
++#		chgrp bin $config_dir/$m
++#		chmod og-rw $config_dir/$m
++#		chmod og-rw $config_dir/$m/config 2>/dev/null
++#	fi
++#done
 +#echo "..done"
 +#echo ""
  

@@ -1,13 +1,11 @@
-$NetBSD: patch-ag,v 1.2 2007/04/21 05:22:58 obache Exp $
-
---- proc/module.info.orig	2007-04-09 05:00:48.000000000 +0000
-+++ proc/module.info
-@@ -13,7 +13,7 @@ desc_pt=Processos em Curso
- category=system
- desc_zh_TW.UTF-8=鍩疯涓殑绋嬪簭
+--- proc/module.info.orig	2009-03-18 07:30:39.000000000 +0200
++++ proc/module.info	2009-04-09 12:34:49.000000000 +0300
+@@ -11,7 +11,7 @@
+ name=Process Manager
  desc_tr=莂lan S黵e鏻er
+ desc_de=Laufende Prozesse
 -os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows
 +os_support=solaris *-linux hpux freebsd osf1 irix unixware openserver macos aix netbsd openbsd windows dragonfly
- desc=Running Processes
- desc_es=Procesos en curso
- desc_sv=Processhanterare
+ desc_zh_CN=进程管理器
+ risk=medium high
+ desc_ja_JP.UTF-8=瀹熻銉椼儹銈汇偣
