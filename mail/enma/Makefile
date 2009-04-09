@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/05 07:23:44 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/09 02:25:37 obache Exp $
 #
 
-DISTNAME=	enma-1.0.0
+DISTNAME=	enma-1.1.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enma/}
 
@@ -50,12 +50,16 @@ SUBST_SED.daemon=	-e 's;daemon;${ENMA_USER};g'
 
 OWN_DIRS_PERMS+=	${VARBASE}/run/enma ${ENMA_USER} ${ENMA_GROUP} 0700
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/ja_JP.EUC/man1
+INSTALLATION_DIRS+=	share/examples/enma
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/enma/man/enma.ja.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/enma.1
+	${INSTALL_DATA} ${WRKSRC}/enma/etc/enma.conf.sample \
+		${DESTDIR}${PREFIX}/share/examples/enma/enma.conf.sample
 
 .include "../../mail/libmilter/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.if ${OPSYS} == "DragonFly"
+USE_BUILTIN.resolv=	no
+.endif
 .include "../../mk/resolv.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
