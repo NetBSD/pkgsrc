@@ -1,0 +1,409 @@
+$NetBSD: patch-ae,v 1.1 2009/04/09 03:33:13 manu Exp $
+--- src/chirctl.c.orig	2008-06-19 03:27:08.000000000 +0200
++++ src/chirctl.c	2009-03-28 22:54:07.000000000 +0100
+@@ -29,9 +29,11 @@
+ #include <fuse/fuse_opt.h>
+ 
+ #else
+ 
++#ifndef __NetBSD__
+ typedef  uint64_t cpuset_t;
++#endif
+ 
+ // 
+ // The lines below are from a patch contributed by Antti Kantee
+ // to make ChironFS run on NetBSD
+--- src/chiron-conf.c.orig	2008-06-12 03:55:22.000000000 +0200
++++ src/chiron-conf.c	2009-03-28 22:54:07.000000000 +0100
+@@ -188,8 +188,13 @@
+             fo[i] = 0;
+             quiet_mode = 1;
+             sprintf(fo+start,"%s",fo+6);
+             i = start - 1;
++         } else if (!strncmp(fo+start,"nochown", 7)) {
++            fo[i] = 0;
++            nochown_mode = 1;
++            sprintf(fo+start,"%s",fo+7);
++            i = start - 1;
+          } else {
+             start = i + 1;
+          }
+       }
+--- src/chirondbg.c.orig	2008-06-15 21:10:49.000000000 +0200
++++ src/chirondbg.c	2009-03-29 12:14:03.000000000 +0200
+@@ -40,9 +40,11 @@
+ #include <fuse/fuse_opt.h>
+ 
+ #else
+ 
++#ifndef __NetBSD__
+ typedef  uint64_t cpuset_t;
++#endif
+ 
+ // 
+ // The lines below are from a patch contributed by Antti Kantee
+ // to make ChironFS run on NetBSD
+@@ -204,18 +206,24 @@
+ ////////////////////////////////////////////////////////////////////////////
+ 
+ void print_err(int err, char *specifier)
+ {
++   char       errbuf[1024];
++
+    if (!quiet_mode) {
+       if (specifier==NULL) {
+          if (err>0) {
+-            fprintf(stderr,"%s\n",strerror(err));
++            if (strerror_r(err, errbuf, sizeof(errbuf)) != 0)
++              strncpy(errbuf, "strerror_r() failure", sizeof(errbuf));
++            fprintf(stderr,"%s\n",errbuf);
+          } else {
+             fprintf(stderr,"%s\n",errtab[-(err+1)]);
+          }
+       } else {
+          if (err>0) {
+-            fprintf(stderr,"%s: %s\n",specifier,strerror(err));
++            if (strerror_r(err, errbuf, sizeof(errbuf)) != 0)
++              strncpy(errbuf, "strerror_r() failure", sizeof(errbuf));
++            fprintf(stderr,"%s: %s\n",specifier,errbuf);
+          } else {
+             fprintf(stderr,"%s: %s\n",specifier,errtab[-(err+1)]);
+          }
+       }
+@@ -225,16 +233,17 @@
+ 
+ void call_log(char *fnname, char *resource, int err)
+ {
+    time_t     t;
+-   struct tm *ptm;
++   struct tm *ptm, tmbuf;
+    char       tmstr[20];
++   char       errbuf[1024];
+ 
+    if (logfd!=NULL) {
+       attach_log();
+       flockfile(logfd);
+       t   = time(NULL);
+-      ptm = localtime(&t);
++      ptm = localtime_r(&t, &tmbuf);
+       strftime(tmstr,19,"%Y/%m/%d %H:%M ",ptm);
+       fputs(tmstr,logfd);
+       fputs(fnname,logfd);
+       if (err!=CHIRONFS_ADM_FORCED) {
+@@ -245,9 +254,11 @@
+       fputs(resource,logfd);
+       if (err) {
+          fputs(" ",logfd);
+          if (err>0) {
+-            fputs(strerror(err),logfd);
++            if (strerror_r(err, errbuf, sizeof(errbuf)) != 0)
++              strncpy(errbuf, "strerror_r() failure", sizeof(errbuf));
++            fputs(errbuf,logfd);
+          } else {
+             fputs(errtab[-(err+1)],logfd);
+          }
+       }
+--- src/chironfn.c.orig	2008-06-09 20:02:39.000000000 +0200
++++ src/chironfn.c	2009-03-29 11:46:25.000000000 +0200
+@@ -104,4 +104,79 @@
+                                                 dbg(("\nxlate:%s",rname));
+    return(rname);
+ }
+ 
++/* 
++ * chiron_dirname is derived from NetBSD's libc dirname(3), with 
++ * changes from Emmanuel Dreyfus <manu@netbsd.org>. This code is
++ * subject to the 2-clauses BSD license below 
++ */
++
++/*-
++ * Copyright (c) 1997, 2002 The NetBSD Foundation, Inc.
++ * All rights reserved.
++ *
++ * This code is derived from software contributed to The NetBSD Foundation
++ * by Klaus Klein and Jason R. Thorpe.
++ *
++ * Redistribution and use in source and binary forms, with or without
++ * modification, are permitted provided that the following conditions
++ * are met:
++ * 1. Redistributions of source code must retain the above copyright
++ *    notice, this list of conditions and the following disclaimer.
++ * 2. Redistributions in binary form must reproduce the above copyright
++ *    notice, this list of conditions and the following disclaimer in the
++ *    documentation and/or other materials provided with the distribution.
++ *
++ * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
++ * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
++ * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
++ * PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
++ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
++ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
++ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
++ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
++ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
++ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
++ * POSSIBILITY OF SUCH DAMAGE.
++ */
++
++char *
++chiron_dirname(char *path) {
++        static char singledot[] = ".";
++        const char *lastp;
++        size_t len;
++
++        /*
++         * If `path' is a null pointer or points to an empty string,
++         * return a pointer to the string ".".
++         */
++        if ((path == NULL) || (*path == '\0'))
++                return (singledot);
++
++        /* Strip trailing slashes, if any. */
++        lastp = path + strlen(path) - 1;
++        while (lastp != path && *lastp == '/')
++                lastp--;
++
++        /* Terminate path at the last occurence of '/'. */
++       do {
++                if (*lastp == '/') {
++                        /* Strip trailing slashes, if any. */
++                        while (lastp != path && *lastp == '/')
++                                lastp--;
++
++                        /* ...and copy the result into the result buffer. */
++                        len = (lastp - path) + 1 /* last char */;
++                        if (len > (PATH_MAX - 1))
++                                len = PATH_MAX - 1;
++
++                        path[len] = '\0';
++                        return(path);
++                }
++        } while (--lastp >= path);
++
++        /* No /'s found, return a pointer to the string ".". */
++        return (singledot);
++}
++
++
+--- src/chironfn.h.orig	2008-06-08 08:26:58.000000000 +0200
++++ src/chironfn.h	2009-03-28 22:55:55.000000000 +0100
+@@ -10,4 +10,5 @@
+ 
+ 
+ int read_a_line(char **buf, int *c, FILE *f);
+ char *xlate(const char *fname, char *rpath);
++char *chiron_dirname(char *path);
+--- src/chironfs.c.orig	2008-06-21 03:09:19.000000000 +0200
++++ src/chironfs.c	2009-03-29 12:12:26.000000000 +0200
+@@ -37,9 +37,11 @@
+ #include <fuse/fuse_opt.h>
+ 
+ #else
+ 
++#ifndef __NetBSD__
+ typedef  uint64_t cpuset_t;
++#endif
+ 
+ // 
+ // The line below are from a patch contributed by Antti Kantee
+ // to make ChironFS run on NetBSD
+@@ -125,8 +127,9 @@
+ #include "chironfn.h"
+ #define _CHIRON_H_
+ #include "chironfs.h"
+ 
++int nochown_mode = 0;
+ 
+ ////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////
+ //
+@@ -405,13 +408,18 @@
+       }                                                           \
+       if (result!=NULL) {                                         \
+          member = result->gr_mem;                                 \
+          while (*member) {                                        \
+-           pw = getpwnam(*member);                                \
+-           pw_uid = pw->pw_uid;                                   \
+-           if (pw_uid==context->uid) {                            \
+-              perm = (stbuf.st_mode&070) >> 3;                    \
+-              break;                                              \
++           struct passwd pwres;                                   \
++           char pwbuf[1024];                                      \
++                                                                  \
++           if (getpwnam_r(*member, &pwres, pwbuf,                 \
++                          sizeof(pwbuf), &pw) == 0) {             \
++             pw_uid = pw->pw_uid;                                 \
++             if (pw_uid==context->uid) {                          \
++                perm = (stbuf.st_mode&070) >> 3;                  \
++                break;                                            \
++             }                                                    \
+            }                                                      \
+            member++;                                              \
+          }                                                        \
+          if (*member==NULL) {                                     \
+@@ -432,9 +440,9 @@
+       return(-1);                                    \
+    }                                                 \
+    bkdname = dname;                                  \
+    do {                                              \
+-      dname = dirname(dname);                        \
++      dname = chiron_dirname(dname);                 \
+       get_rights(stat,dname);                        \
+       process_rights();                              \
+       if (!(perm&1)) {                               \
+          free(dname);                                \
+@@ -570,9 +578,9 @@
+                   if (dname==NULL) {
+                      errno = ENOMEM;
+                      perm  = -1;
+                   } else {
+-                     perm = get_rights_by_name(dirname(dname));
++                     perm = get_rights_by_name(chiron_dirname(dname));
+                      free(dname);
+                   }
+                } else {
+                   perm = get_rights_by_name(fname);
+@@ -600,9 +608,9 @@
+                         err_list[i] = errno;
+                      } else {
+                         if (!file_exists) {
+                            get_ownership();
+-                           if (lchown(fname, context->uid, gid)==(-1)) {
++                           if (!nochown_mode && lchown(fname, context->uid, gid)==(-1)) {
+                               fail_cnt++;
+                               err_list[i] = -errno;
+                               close(fd[i]);
+                               fd[i] = -1;
+@@ -1245,9 +1253,9 @@
+                if (dname==NULL) {
+                   perm  = -1;
+                   errno = ENOMEM;
+                } else {
+-                  perm = get_rights_by_name(dirname(dname));
++                  perm = get_rights_by_name(chiron_dirname(dname));
+                   free(dname);
+                }
+                if (perm<0) {
+                   fail_cnt++;
+@@ -1262,9 +1270,9 @@
+                      fd[i] = open(fname, O_CREAT | O_EXCL | O_WRONLY, mode);
+                      if (fd[i] >= 0) {
+                         fd[i] = close(fd[i]);
+                         get_ownership();
+-                        if (lchown(fname, context->uid, gid)==(-1)) {
++                        if (!nochown_mode && lchown(fname, context->uid, gid)==(-1)) { 
+                            fail_cnt++;
+                            err_list[i] = -errno;
+                            fd[i] = -1;
+                         } else {
+@@ -1288,9 +1296,9 @@
+                         }
+                      }
+                      if (fd[i]==0) {
+                         get_ownership();
+-                        if (lchown(fname, context->uid, gid)==(-1)) {
++                        if (!nochown_mode && lchown(fname, context->uid, gid)==(-1)) {
+                            fail_cnt++;
+                            err_list[i] = -errno;
+                            fd[i] = -1;
+                         } else {
+@@ -1519,9 +1527,9 @@
+                                                          dbg(("\nrmdir: %s\n",path_orig));
+    do_byname_rw(rmdir(fname), "rmdir",(
+       ((dname=strdup(fname))==NULL)
+       ? ( errno = ENOMEM, -1 )
+-      : ( tmpperm = get_rights_by_name(dirname(dname)), free(dname), tmpperm)
++      : ( tmpperm = get_rights_by_name(chiron_dirname(dname)), free(dname), tmpperm)
+    ),||,0,EACCES);
+ }
+ 
+ static int chiron_unlink(const char *path_orig)
+@@ -1531,9 +1539,9 @@
+                                                          dbg(("\nunlink: %s\n",path_orig));
+    do_byname_rw(unlink(fname), "unlink",(
+       ((dname=strdup(fname))==NULL)
+       ? ( errno = ENOMEM, -1 )
+-      : ( tmpperm = get_rights_by_name(dirname(dname)), free(dname), tmpperm)
++      : ( tmpperm = get_rights_by_name(chiron_dirname(dname)), free(dname), tmpperm)
+    ),||,0,EACCES);
+ }
+ 
+ int chiron_mkdir(const char *path_orig, mode_t mode)
+@@ -1571,9 +1579,9 @@
+                if (dname==NULL) {
+                   perm  = -1;
+                   errno = ENOMEM;
+                } else {
+-                  perm = get_rights_by_name(dirname(dname));
++                  perm = get_rights_by_name(chiron_dirname(dname));
+                   free(dname);
+                }
+                if (perm<0) {
+                   fail_cnt++;
+@@ -1586,9 +1594,9 @@
+                } else {
+                   fd[i] = mkdir(fname, mode);
+                   if (fd[i]==0) {
+                      get_ownership();
+-                     if (lchown(fname, context->uid, gid)==(-1)) {                  
++                     if (!nochown_mode && lchown(fname, context->uid, gid)==(-1)) {                  
+                         fail_cnt++;
+                         err_list[i] = -errno;
+                         fd[i] = -1;
+                      } else {
+@@ -1683,9 +1691,9 @@
+             if (dname==NULL) {
+                perm  = -1;
+                errno = ENOMEM;
+             } else {
+-               perm = get_rights_by_name(dirname(dname));
++               perm = get_rights_by_name(chiron_dirname(dname));
+                free(dname);
+             }
+             if (perm<0) {
+                fail_cnt++;
+@@ -1701,9 +1709,9 @@
+                   fail_cnt++;
+                   err_list[i] = errno;
+                } else {
+                   get_ownership();
+-                  if (lchown(fname, context->uid, gid)==(-1)) {
++                  if (!nochown_mode && lchown(fname, context->uid, gid)==(-1)) {
+                      fail_cnt++;
+                      err_list[i] = -errno;
+                      fd[i] = -1;
+                   } else {
+@@ -1775,9 +1783,9 @@
+             if (dname==NULL) {                                             \
+                perm  = -1;                                                 \
+                errno = -ENOMEM;                                            \
+             } else {                                                       \
+-               perm = get_rights_by_name(dirname(dname));                  \
++               perm = get_rights_by_name(chiron_dirname(dname));           \
+                free(dname);                                                \
+             }                                                              \
+          }                                                                 \
+          if (perm<0) {                                                     \
+@@ -1798,9 +1806,9 @@
+                if (dname==NULL) {                                          \
+                   perm  = -1;                                              \
+                   errno = -ENOMEM;                                         \
+                } else {                                                    \
+-                  perm = get_rights_by_name(dirname(dname));               \
++                  perm = get_rights_by_name(chiron_dirname(dname));        \
+                   free(dname);                                             \
+                }                                                           \
+             }                                                              \
+             if (perm<0) {                                                  \
+--- src/chironfs.h.orig	2008-06-16 01:32:23.000000000 +0200
++++ src/chironfs.h	2009-03-28 22:54:07.000000000 +0100
+@@ -150,8 +150,9 @@
+ extern int   mount_ctl;
+ 
+ #endif
+ 
++extern int nochown_mode;
+ 
+ void help(void);
+ void free_tab_fd(void);
+ int **mk_round_robin(int *tmp_list, int dim);

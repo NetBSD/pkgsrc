@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/27 18:55:40 pooka Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/09 03:33:12 manu Exp $
 #
 
-DISTNAME=	chironfs-1.0-RC9
-PKGNAME=	fuse-chironfs-1.0RC9
+DISTNAME=	chironfs-1.1.1
+PKGNAME=	fuse-chironfs-1.1.1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://chironfs.googlecode.com/files/
 
