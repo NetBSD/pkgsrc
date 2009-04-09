@@ -1,4 +1,4 @@
-# $NetBSD: deprecated.map,v 1.60 2008/02/12 07:39:09 rillig Exp $
+# $NetBSD: deprecated.map,v 1.61 2009/04/09 00:55:12 joerg Exp $
 #
 
 # This file contains names of Makefile variables and a short explanation
@@ -147,3 +147,7 @@ LICENCE			Use LICENSE instead.
 
 # December 2007
 INSTALLATION_DIRS_FROM_PLIST	Use AUTO_MKDIRS instead.
+
+# April 2009
+NO_PACKAGE		It doesn't exist anymore.
+NO_MTREE		You can just remove it.
