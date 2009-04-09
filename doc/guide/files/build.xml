@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.59 2009/04/03 01:52:24 snj Exp $ -->
+<!-- $NetBSD: build.xml,v 1.60 2009/04/09 00:51:31 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -778,12 +778,6 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     one for each category in the <varname>CATEGORIES</varname>
     variable.  <varname>PACKAGES</varname> defaults to
     <filename>pkgsrc/packages</filename>.</para>
-
-    <para>If there should be no binary package, set
-    <varname>NO_PACKAGE</varname> to <quote>yes</quote>.
-    This should only be used in rare cases, like when a package
-    definitely is only usable on the machine where it is built and even
-    then, a binary package can be useful.</para>
   </sect1>
 
   <sect1 id="build.clean">
