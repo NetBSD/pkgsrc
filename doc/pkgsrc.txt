@@ -6103,10 +6103,6 @@ By default, the binary packages are created in ${PACKAGES}/All and symlinks are
 created in ${PACKAGES}/category, one for each category in the CATEGORIES
 variable. PACKAGES defaults to pkgsrc/packages.
 
-If there should be no binary package, set NO_PACKAGE to "yes". This should only
-be used in rare cases, like when a package definitely is only usable on the
-machine where it is built and even then, a binary package can be useful.
-
 17.16. Cleaning up
 
 Once you're finished with a package, you can clean the work directory by
@@ -6636,17 +6632,24 @@ responsibility remain with the user. (Installation of binary packages are not
 currently subject to this mechanism; this is a bug.)
 
 One might want to only install packages with a BSD license, or the GPL, and not
-the other. The pkgsrc license tag mechanism does not provide a way to do this.
-It might be possible to put in tags for free licenses, and have a default
-ACCEPTABLE_LICENSES variable value, but this is widely viewed as having a very
-poor ratio of benefit to work.
+the other. The free licenses are added to the default ACCEPTABLE_LICENSES
+variable. The user can override the default by setting the ACCEPTABLE_LICENSES
+variable with "=" instead of "+=". The licenses accepted by default are:
+
+    public-domain
+    gnu-gpl-v2 gnu-lgpl-v2
+    gnu-gpl-v3 gnu-lgpl-v3
+    original-bsd modified-bsd
+    x11
+    apache-2.0
+    cddl-1.0
+    open-font-license
+
 
 The license tag mechanism is intended to address copyright-related issues
 surrounding building, installing and using a package, and not to address
-redistribution issues (see RESTRICTED and NO_SRC_ON_FTP, etc.). However, the
-above definition of licenses for which tags are not needed implies that
-packages with redistribution restrictions should have tags, because Free or
-Open Source programs do not have redistribution restrictions.
+redistribution issues (see RESTRICTED and NO_SRC_ON_FTP, etc.). Packages with
+redistribution restrictions should set these tags.
 
 Denoting that a package may be copied according to a particular license is done
 by placing the license in pkgsrc/licenses and setting the LICENSE variable to a
@@ -6742,10 +6745,6 @@ variables that can be set to note these restrictions:
     Distfiles may not made available via FTP at no charge. In this case, set
     this variable to ${RESTRICTED}. If this variable is set, the distfile(s)
     will not be mirrored on ftp.NetBSD.org.
-
-Please note that the use of NO_PACKAGE, IGNORE, NO_CDROM, or other generic make
-variables to denote restrictions is deprecated, because they unconditionally
-prevent users from generating binary packages!
 
 19.1.6. Handling dependencies
 
