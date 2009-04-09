@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/08 22:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/09 00:47:12 joerg Exp $
 #
 
 DISTNAME=	print-plist-0.0
@@ -9,7 +9,6 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test print-PLIST and related functionality
 
-EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 
 PRINT_PLIST_AWK+=	/^print-plist\/foo$$/ \

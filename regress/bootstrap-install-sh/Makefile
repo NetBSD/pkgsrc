@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/12 18:27:54 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/09 00:47:11 joerg Exp $
 
 DISTNAME=	bootstrap-install-sh-0.0
 CATEGORIES=	regress
@@ -9,11 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Test functionality of sysutils/install-sh
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 NO_INSTALL=	yes
-NO_PACKAGE=	yes
 
 INSTALL_SH?=	${WRKSRC}/install-sh
 

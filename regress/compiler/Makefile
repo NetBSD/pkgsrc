@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/09 00:47:12 joerg Exp $
 #
 
 DISTNAME=	compiler-1.1
@@ -9,7 +9,6 @@ DISTFILES=	# none
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tests whether the pkgsrc compilers work as expected
 
-NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
 
