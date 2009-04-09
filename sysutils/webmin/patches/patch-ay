@@ -1,8 +1,6 @@
-$NetBSD: patch-ay,v 1.1 2008/07/25 02:55:28 tonnerre Exp $
-
---- mailboxes/mail_search.cgi.orig	2007-09-21 23:28:31.000000000 +0200
-+++ mailboxes/mail_search.cgi
-@@ -46,7 +46,8 @@ if ($in{'simple'}) {
+--- mailboxes/mail_search.cgi.orig	2009-03-18 07:30:35.000000000 +0200
++++ mailboxes/mail_search.cgi	2009-04-09 12:43:30.000000000 +0300
+@@ -46,7 +46,8 @@
  		@searchlist = ( [ $field, $what ] );
  		@rv = &mailbox_search_mail(\@searchlist, 0, $folder);
  		print "<p><b>",&text('search_results5', scalar(@rv),
@@ -12,7 +10,7 @@ $NetBSD: patch-ay,v 1.1 2008/07/25 02:55:28 tonnerre Exp $
  		}
  	else {
  		# Just search by Subject and From in one folder
-@@ -73,7 +74,8 @@ if ($in{'simple'}) {
+@@ -73,7 +74,8 @@
  			&error($text{'search_eboolean'});
  			}
  		print "<p><b>",&text('search_results2', scalar(@rv),
@@ -22,20 +20,18 @@ $NetBSD: patch-ay,v 1.1 2008/07/25 02:55:28 tonnerre Exp $
  		}
  	foreach $mail (@rv) {
  		$mail->{'folder'} = $folder;
-@@ -106,8 +108,10 @@ else {
- $showto = $folder->{'sent'} || $folder->{'drafts'};
+@@ -106,8 +108,8 @@
+ # Show list of messages, with form
  if (@rv) {
- 	print "<form action=delete_mail.cgi method=post>\n";
--	print "<input type=hidden name=folder value='$in{'folder'}'>\n";
--	print "<input type=hidden name=user value='$in{'user'}'>\n";
-+	print "<input type=hidden name=folder value='" .
-+		&html_escape($in{'folder'}) . "'>\n";
-+	print "<input type=hidden name=user value='" .
-+		&html_escape($in{'user'}) . "'>\n";
- 	if ($config{'top_buttons'}) {
- 		if (!$multi_folder) {
- 			&show_buttons(1, \@folders, $folder, \@rv, $in{'user'},
-@@ -200,8 +204,9 @@ else {
+ 	print &ui_form_start("delete_mail.cgi", "post");
+-	print &ui_hidden("user", $in{'user'});
+-	print &ui_hidden("folder", $in{'folder'});
++	print &ui_hidden("user", &html_escape($in{'user'}));
++	print &ui_hidden("folder", &html_escape($in{'folder'}));
+ 	if ($config{'top_buttons'} && !$multi_folder) {
+ 		&show_buttons(1, \@folders, $folder, \@rv, $in{'user'}, 1);
+ 		}
+@@ -121,8 +123,9 @@
  	print "<b>$text{'search_none'}</b> <p>\n";
  	}
  

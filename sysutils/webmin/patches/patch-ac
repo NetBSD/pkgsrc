@@ -1,18 +1,15 @@
-$NetBSD: patch-ac,v 1.3 2008/07/25 02:55:27 tonnerre Exp $
-
---- software/search.cgi.orig	2007-09-21 23:26:13.000000000 +0200
-+++ software/search.cgi
-@@ -34,7 +34,8 @@ if (@match == 1 && $in{'goto'}) {
+--- software/search.cgi.orig	2009-03-18 07:30:27.000000000 +0200
++++ software/search.cgi	2009-04-09 12:27:58.000000000 +0300
+@@ -34,7 +34,7 @@
  if (@match) {
  	@match = sort { lc($packages{$a,'name'}) cmp lc($packages{$b,'name'}) }
  		      @match;
 -	print "<b>",&text('search_match', "<tt>$s</tt>"),"</b><p>\n";
-+	print "<b>",&text('search_match', "<tt>" . &html_escape($s) . "</tt>"),
-+		"</b><p>\n";
- 	print "<form action=delete_packs.cgi method=post>\n";
- 	print "<input type=hidden name=search value='$in{'search'}'>\n";
++	print "<b>",&text('search_match', "<tt>" . &html_escape($s) . "</tt>"),"</b><p>\n";
+ 	print &ui_form_start("delete_packs.cgi", "post");
+ 	print &ui_hidden("search", $in{'search'});
  	@tds = ( "width=5" );
-@@ -47,7 +48,8 @@ if (@match) {
+@@ -47,7 +47,8 @@
  				  $text{'search_desc'} ], 100, 0, \@tds);
  	foreach $i (@match) {
  		local @cols;
@@ -22,13 +19,12 @@ $NetBSD: patch-ac,v 1.3 2008/07/25 02:55:27 tonnerre Exp $
  		      &urlize($packages{$i,'name'})."&version=".
  		      &urlize($packages{$i,'version'})."\">".&html_escape(
  			$packages{$i,'name'}.($packages{$i,'version'} ?
-@@ -69,7 +71,8 @@ if (@match) {
- 	print "<input type=submit value='$text{'search_delete'}'></form>\n";
+@@ -69,7 +70,7 @@
+ 	print &ui_form_end([ [ undef, $text{'search_delete'} ] ]);
  	}
  else {
 -	print "<b>",&text('search_nomatch', "<tt>$s</tt>"),"</b><p>\n";
-+	print "<b>",&text('search_nomatch', "<tt>" . &html_escape($s) .
-+		"</tt>"),"</b><p>\n";
++	print "<b>",&text('search_nomatch', "<tt>" . &html_escape($s) . "</tt>"),"</b><p>\n";
  	}
  
  &ui_print_footer("", $text{'index_return'});
