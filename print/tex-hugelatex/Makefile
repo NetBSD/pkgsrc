@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/01/11 09:13:00 minskim Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/09 00:48:15 joerg Exp $
 #
 
 DISTNAME=	hugelatex-2.0
@@ -14,8 +14,6 @@ COMMENT=	LaTeX format files with large limits
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# nothing
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf

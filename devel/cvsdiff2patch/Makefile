@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/29 10:11:13 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/09 00:48:07 joerg Exp $
 #
 
 DISTNAME=	cvsdiff2patch-1.0.1
@@ -12,7 +12,6 @@ COMMENT=	Convert CVS diffs into something that patch(1) understands
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 

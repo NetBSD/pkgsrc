@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/09 00:48:08 joerg Exp $
 #
 
 DISTNAME=	sysexits-1.1
@@ -12,7 +12,6 @@ COMMENT=	Substitute <sysexits.h> for OS's lacking it
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CHECKSUM=	YES
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	include
