@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/16 16:42:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:15 joerg Exp $
 
 DISTNAME=	pam-mkhomedir-1
 CATEGORIES=	security
@@ -15,8 +15,6 @@ LDLIBS=			-lpam
 
 USE_LIBTOOL=		yes
 
-NO_FETCH=		yes
-NO_CHECKSUM=		yes
 WRKSRC=			${WRKDIR}
 
 do-extract:

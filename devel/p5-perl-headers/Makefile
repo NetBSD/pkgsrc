@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/10/19 19:17:58 he Exp $
+# $NetBSD: Makefile,v 1.34 2009/04/09 00:48:08 joerg Exp $
 
 DISTNAME=		p5-perl-headers
 PKGNAME=		${DISTNAME}-${OS_VERSION}
@@ -20,8 +20,6 @@ USE_TOOLS+=	pax
 WRKSRC=			${WRKDIR}
 PERL5_PACKLIST=		.packlist.h2ph
 
-EXTRACT_ONLY=		# empty
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 OSVERSION_SPECIFIC=	yes
 

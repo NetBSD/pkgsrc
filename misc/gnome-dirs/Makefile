@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.21 2009/04/09 00:48:09 joerg Exp $
 #
 
 DISTNAME=	gnome-dirs-1.6
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
 USE_X11BASE=	yes
-NO_CHECKSUM=	yes
-NO_EXTRACT=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 PLIST_SRC=	# empty

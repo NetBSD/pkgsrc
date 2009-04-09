@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/07 01:44:50 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/04/09 00:48:11 joerg Exp $
 
 DISTNAME=	p5-pkgsrc-Dewey-1.1
 CATEGORIES=	pkgtools perl5
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CPPFLAGS+=	-DHAVE_CTYPE_H -DHAVE_STDLIB_H -DHAVE_STRING_H
 CPPFLAGS.NetBSD+=	-DHAVE_ERR_H
-
-NO_CHECKSUM=	yes
 
 USE_LANGUAGES=		c
 
