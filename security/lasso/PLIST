@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/02 16:46:01 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/09 03:23:55 manu Exp $
 share/doc/lasso/writing-a-c-sp.txt
 share/doc/lasso/writing-a-php-sp.txt
 share/doc/lasso/writing-a-java-sp.txt
@@ -296,11 +296,16 @@ include/lasso/export.h
 include/lasso/lasso.h
 include/lasso/lasso_config.h
 include/lasso/errors.h
+include/lasso/debug.h
+include/lasso/registry-private.h
+include/lasso/registry.h
+include/lasso/utils.h
 @dirrm include/lasso/xml/saml-2.0
 @dirrm include/lasso/xml/id-wsf-2.0
 @dirrm include/lasso/xml/ws
 @dirrm include/lasso/xml
 @dirrm include/lasso/id-ff
+@dirrm include/lasso/id-wsf
 @dirrm include/lasso/saml-2.0
 @dirrm include/lasso/id-wsf-2.0
 @dirrm include/lasso

@@ -1,0 +1,13 @@
+--- lasso/xml/tools.c.orig	2009-04-05 11:24:03.000000000 +0200
++++ lasso/xml/tools.c	2009-04-05 11:24:47.000000000 +0200
+@@ -1209,9 +1209,9 @@
+ {
+ 	const char *c;
+ 
+ 	c = message;
+-	while (*c != 0 && (isalnum(*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
++	while (*c != 0 && (isalnum((int)*c) || *c == '+' || *c == '/' || *c == '\n' || *c == '\r')) c++;
+ 	while (*c == '=' || *c == '\n' || *c == '\r') c++; /* trailing = */
+ 
+ 	if (*c == 0)
+ 		return TRUE;
