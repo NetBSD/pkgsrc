@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.98 2009/04/08 15:01:11 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.99 2009/04/09 00:51:31 joerg Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -278,12 +278,6 @@ ACCEPTABLE_LICENSES+=xv-license
 	the distfile(s) will not be mirrored on ftp.NetBSD.org.</para>
       </listitem>
     </itemizedlist>
-
-    <para>Please note that the use of <varname>NO_PACKAGE</varname>,
-    <varname>IGNORE</varname>, <varname>NO_CDROM</varname>, or other
-    generic make variables to denote restrictions is deprecated,
-    because they unconditionally prevent users from generating
-    binary packages!</para>
   </sect2>
 
 
