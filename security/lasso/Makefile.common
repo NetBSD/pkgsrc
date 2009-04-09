@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/03/02 16:46:01 manu Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/04/09 03:23:55 manu Exp $
 #
 # used by security/lasso/Makefile
 # used by security/py-lasso/Makefile
 
-DISTNAME=	lasso-2.2.1
+DISTNAME=	lasso-2.2.2
 CATEGORIES=	security
-MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/673/
+MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/735/
 
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://lasso.entrouvert.org/
