@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/04/09 02:25:38 obache Exp $
+
+--- configure.orig	2009-03-02 05:01:02.000000000 +0000
++++ configure
+@@ -4170,8 +4170,8 @@ fi
+ 
+ 
+ CFLAGS="$CFLAGS -std=gnu99 -Wall -Wextra"
+-CPPFLAGS="$CPPFLAGS -I$includedir -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
+-LDFLAGS="$LDFLAGS -L$libdir -lpthread"
++CPPFLAGS="$CPPFLAGS -I$includedir $PTHREAD_CFLAGS"
++LDFLAGS="$LDFLAGS -L$libdir $PTHREAD_LDFLAGS $PTHREAD_LIBS"
+ 
+ { echo "$as_me:$LINENO: checking for __res_ndestroy in -lbind" >&5
+ echo $ECHO_N "checking for __res_ndestroy in -lbind... $ECHO_C" >&6; }
