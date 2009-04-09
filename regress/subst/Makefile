@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/09 00:47:12 joerg Exp $
 #
 
 DISTNAME=	subst-1.0
@@ -8,7 +8,6 @@ DISTFILES=	# none
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test the SUBST framework
 
-NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	diff
 
