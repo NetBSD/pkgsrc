@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1242 2009/04/09 02:03:43 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.1243 2009/04/09 02:25:55 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1699,3 +1699,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/mailfront to 1.12 [schmonz 2009-04-08]
 	Updated databases/rrdtool to 1.3.7 [martti 2009-04-08]
 	Updated textproc/mdocml to 1.7.12 [joerg 2009-04-09]
+	Updated mail/enma to 1.1.0 [obache 2009-04-09]
