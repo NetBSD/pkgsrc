@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/02/20 05:16:51 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.30 2009/04/09 00:48:11 joerg Exp $
 #
 
 DISTNAME=	cdpack-1.9
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 USE_TOOLS+=	awk:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/02/10 00:15:20 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2009/04/09 00:48:12 joerg Exp $
 #
 
 DISTNAME=		pkg_filecheck-0.4
@@ -16,8 +16,6 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 USE_FEATURES=	fts_open
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 FILES_SUBST+=	X11PREFIX=${X11PREFIX:Q}

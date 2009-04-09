@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/16 20:02:31 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/09 00:48:12 joerg Exp $
 #
 
 DISTNAME=		pkg_install-info-${VERSION}
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
-NO_CHECKSUM=		yes
 CHECK_PERMS=		no
 
 # Don't change this unless the sources are updated from GNU Texinfo.

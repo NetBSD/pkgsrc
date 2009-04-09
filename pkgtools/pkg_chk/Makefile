@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2009/03/25 00:00:52 abs Exp $
+# $NetBSD: Makefile,v 1.72 2009/04/09 00:48:12 joerg Exp $
 
 DISTNAME=	pkg_chk-1.98
 CATEGORIES=	pkgtools
@@ -13,11 +13,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	mktemp:run
 USE_TOOLS+= 	gzip:run
-NO_CHECKSUM=	YES
 NO_BUILD=	yes
 
 CONFLICTS=	pkgchk-[0-9]*

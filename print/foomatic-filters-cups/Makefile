@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/15 09:56:37 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/09 00:48:14 joerg Exp $
 
 META_PACKAGE=	yes
 
@@ -6,8 +6,6 @@ META_PACKAGE=	yes
 
 DISTNAME=	foomatic-filters-cups-${FOOMATIC_FILTERS_VERSION}
 PKGREVISION=	1
-MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Foomatic support for CUPS
@@ -15,7 +13,6 @@ COMMENT=	Foomatic support for CUPS
 DEPENDS+=	cups>=1.0:../../print/cups
 DEPENDS+=	foomatic-filters-${FOOMATIC_FILTERS_VERSION}{,nb[0-9]*}:../../print/foomatic-filters
 
-EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 
 EVAL_PREFIX+=		CUPS_PREFIX=cups

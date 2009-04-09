@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/04 15:25:54 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/09 00:48:15 joerg Exp $
 
 DISTNAME=	texmf-dirs-1.4
 CATEGORIES=	print
@@ -11,8 +11,6 @@ COMMENT=	Local TeX directory structure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CHECKSUM=	yes
-NO_EXTRACT=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 PLIST_SRC=	# empty

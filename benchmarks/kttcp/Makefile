@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/04/09 00:48:07 joerg Exp $
 
 DISTNAME=	kttcp-20020711
 CATEGORIES=	benchmarks net
@@ -14,7 +14,6 @@ ONLY_FOR_PLATFORM=	NetBSD-1.6[B-Z]*-* NetBSD-[2-9]*-*
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CHECKSUM=		yes
 USE_BSD_MAKEFILE=	yes
 WRKSRC=			${WRKDIR}
 

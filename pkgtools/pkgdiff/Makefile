@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/11/05 23:18:18 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2009/04/09 00:48:13 joerg Exp $
 #
 
 DISTNAME=	pkgdiff-0.121
@@ -13,8 +13,6 @@ COMMENT=	Tools to create, maintain and send back patches for pkgsrc
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/05/25 21:20:07 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2009/04/09 00:48:16 joerg Exp $
 
 DISTNAME=	mklivecd-0.16
 CATEGORIES=	sysutils
@@ -21,8 +21,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	YES
 NO_CONFIGURE=	YES
 USE_TOOLS+=	tar
 

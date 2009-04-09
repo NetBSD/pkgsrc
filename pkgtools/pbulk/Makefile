@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/01/31 23:25:37 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2009/04/09 00:48:11 joerg Exp $
 
 DISTNAME=	pbulk-0.37
 CATEGORIES=	pkgtools
@@ -12,9 +12,6 @@ COMMENT=	Modular bulk build framework
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pbulk
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	YES
-
 MAKE_JOBS_SAFE=	no
 
 USE_FEATURES=	nbcompat

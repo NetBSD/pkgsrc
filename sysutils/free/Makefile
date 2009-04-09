@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/16 15:41:44 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/09 00:48:16 joerg Exp $
 #
 
 DISTNAME=		free-1.0
@@ -14,8 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEFS+=	IPV6_READY
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

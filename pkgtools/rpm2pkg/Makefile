@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/01/23 11:27:16 sketch Exp $
+# $NetBSD: Makefile,v 1.40 2009/04/09 00:48:14 joerg Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	2
@@ -15,7 +15,6 @@ CONFLICTS+=	suse-base<=6.4
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	YES
 
 CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
 		${BUILDLINK_CPPFLAGS.zlib}

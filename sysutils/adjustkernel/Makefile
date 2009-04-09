@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/04/08 22:43:25 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/09 00:48:16 joerg Exp $
 
 DISTNAME=	adjustkernel-1.7
 CATEGORIES=	sysutils
@@ -11,7 +11,6 @@ COMMENT=	Generate a NetBSD kernel config
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 USE_TOOLS+=	perl:run

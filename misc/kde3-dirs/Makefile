@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/25 22:01:01 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:09 joerg Exp $
 #
 
 DISTNAME=	kde3-dirs-1.0
@@ -14,8 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# empty
-NO_EXTRACT=	yes
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 PLIST_SRC=	# empty

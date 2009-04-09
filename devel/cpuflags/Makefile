@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2009/03/30 21:02:25 abs Exp $
+# $NetBSD: Makefile,v 1.148 2009/04/09 00:48:07 joerg Exp $
 
 DISTNAME=	cpuflags-1.41
 CATEGORIES=	devel sysutils
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-*
 
 USE_LANGUAGES=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 SUBST_CLASSES+=		cpuflags

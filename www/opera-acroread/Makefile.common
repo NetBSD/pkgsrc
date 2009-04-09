@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2007/10/25 22:01:08 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2009/04/09 00:48:18 joerg Exp $
 
 PKGNAME=		${DISTNAME:C|MozillaFirebird|firefox|}
 CATEGORIES=		www print
@@ -14,7 +14,6 @@ EMUL_REQD=		suse>=7.3
 ACRO_PLATFORM=		intellinux
 
 WRKSRC=			${WRKDIR}
-NO_CHECKSUM=		YES
 NO_CONFIGURE=		YES
 BUILD_DIRS=		# empty
 PLIST_SRC=		# empty

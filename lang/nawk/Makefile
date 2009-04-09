@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2009/04/08 22:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2009/04/09 00:48:08 joerg Exp $
 
 DISTNAME=	nawk-20050424
 PKGREVISION=	3
@@ -18,7 +18,6 @@ BOOTSTRAP_PKG=	yes
 CFLAGS+=	${CPPFLAGS}
 MAKE_FLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
 
-NO_CHECKSUM=	yes
 BUILD_TARGET=	a.out
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

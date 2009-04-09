@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/20 21:44:03 agc Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/09 00:48:11 joerg Exp $
 
 DISTNAME=	genrpm-1.1
 CATEGORIES=	pkgtools
@@ -17,7 +17,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 sbin
 

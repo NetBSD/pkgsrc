@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/12 12:35:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/09 00:48:08 joerg Exp $
 
 DISTNAME=	pthread-stublib-1.0
 CATEGORIES=	devel
@@ -8,7 +8,6 @@ MAINTAINER=	drochner@NetBSD.org
 COMMENT=	Library providing noop-stubs for pthread functions
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 USE_LIBTOOL=	yes
 
 ONLY_FOR_PLATFORM= NetBSD-[12].*-*
