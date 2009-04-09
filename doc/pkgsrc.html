@@ -7174,11 +7174,6 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     one for each category in the <code class="varname">CATEGORIES</code>
     variable.  <code class="varname">PACKAGES</code> defaults to
     <code class="filename">pkgsrc/packages</code>.</p>
-<p>If there should be no binary package, set
-    <code class="varname">NO_PACKAGE</code> to &#8220;<span class="quote">yes</span>&#8221;.
-    This should only be used in rare cases, like when a package
-    definitely is only usable on the machine where it is built and even
-    then, a binary package can be useful.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -7643,7 +7638,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id1168230299317"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id9503882"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7653,7 +7648,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id1168230299325"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id9503891"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7664,7 +7659,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id1168230299334"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id9503899"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7848,21 +7843,31 @@ INTERACTIVE_STAGE=      configure install
     of binary packages are not currently subject to this mechanism;
     this is a bug.)</p>
 <p>One might want to only install packages with a BSD license,
-    or the GPL, and not the other.  The pkgsrc license tag mechanism
-    does not provide a way to do this.  It might be possible to put in
-    tags for free licenses, and have a default
-    <code class="varname">ACCEPTABLE_LICENSES</code> variable value, but this is
-    widely viewed as having a very poor ratio of benefit to
-    work.</p>
+    or the GPL, and not the other.  The free licenses are added to the 
+    default <code class="varname">ACCEPTABLE_LICENSES</code> variable.  The
+    user can override the default by setting the
+    <code class="varname">ACCEPTABLE_LICENSES</code> variable with "=" instead
+    of "+=".  The licenses accepted by default are:
+    </p>
+<pre class="programlisting">
+    public-domain
+    gnu-gpl-v2 gnu-lgpl-v2
+    gnu-gpl-v3 gnu-lgpl-v3
+    original-bsd modified-bsd
+    x11
+    apache-2.0
+    cddl-1.0
+    open-font-license
+    </pre>
+<p>
+    </p>
 <p>The license tag mechanism is intended to address
     copyright-related issues surrounding building, installing and
     using a package, and not to address redistribution issues (see
     <code class="varname">RESTRICTED</code> and
-    <code class="varname">NO_SRC_ON_FTP</code>, etc.).  However, the above
-    definition of licenses for which tags are not needed implies
-    that packages with redistribution restrictions should have
-    tags, because Free or Open Source programs do not have
-    redistribution restrictions.</p>
+    <code class="varname">NO_SRC_ON_FTP</code>, etc.).  
+    Packages with redistribution restrictions should set these
+    tags.</p>
 <p>Denoting that a package may be copied according to a
     particular license is done by placing the license in
     <code class="filename">pkgsrc/licenses</code> and setting the
@@ -7973,11 +7978,6 @@ ACCEPTABLE_LICENSES+=xv-license
 	the distfile(s) will not be mirrored on ftp.NetBSD.org.</p>
 </li>
 </ul></div>
-<p>Please note that the use of <code class="varname">NO_PACKAGE</code>,
-    <code class="varname">IGNORE</code>, <code class="varname">NO_CDROM</code>, or other
-    generic make variables to denote restrictions is deprecated,
-    because they unconditionally prevent users from generating
-    binary packages!</p>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -9676,7 +9676,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id1168230286353"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id9508424"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9692,7 +9692,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id1168230286387"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id9508458"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9710,7 +9710,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id1168230286423"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id9508494"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9728,7 +9728,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id1168230286458"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id9508530"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9741,7 +9741,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id1168230286476"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id9508548"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9757,7 +9757,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id1168230286502"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id9508573"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9781,7 +9781,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id1168230286569"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id9508641"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9806,7 +9806,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id1168230286669"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id9508741"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9854,7 +9854,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id1168230286724"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id9508794"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
