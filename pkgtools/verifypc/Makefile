@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/11/02 18:02:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/09 00:48:14 joerg Exp $
 #
 
 DISTNAME=	verifypc-1.4
@@ -12,8 +12,6 @@ COMMENT=	Sanity check package dependencies according to pkg-config
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-EXTRACT_ONLY=		# empty
-NO_CHECKSUM=		YES
 NO_BUILD=		YES
 WRKSRC=			${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/08/23 18:20:35 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/09 00:48:18 joerg Exp $
 
 DISTNAME=	opera-plugins-1.0
 PKGREVISION=	1
@@ -17,8 +17,6 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	motif
 EMUL_REQD=		suse>=7.3
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	YES
 NO_BUILD=	YES
 PLIST_SRC=	${WRKDIR}/PLIST
 

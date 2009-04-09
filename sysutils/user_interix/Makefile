@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/04/04 14:37:53 tv Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/09 00:48:17 joerg Exp $
 #
 
 DISTNAME=		user-20040426
@@ -13,7 +13,6 @@ ONLY_FOR_PLATFORM=	Interix-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 

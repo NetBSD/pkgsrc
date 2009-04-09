@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/16 15:36:07 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/04/09 00:48:16 joerg Exp $
 #
 
 DISTNAME=		dmesg2gif-1.3
@@ -15,9 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 
 WRKSRC=			${WRKDIR}
-EXTRACT_ONLY=		# empty
 NO_BUILD=		yes
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 USE_TOOLS+=		perl:run
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

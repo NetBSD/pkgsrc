@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/02/13 22:32:48 abs Exp $
+# $NetBSD: Makefile,v 1.25 2009/04/09 00:48:18 joerg Exp $
 #
 
 DISTNAME=	netscape-20040123
@@ -23,7 +23,6 @@ NETSCAPE_PREFERRED=${NETSCAPE_PREFERRED_DEFAULT}
 .endif
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/10/17 14:23:58 he Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/09 00:48:14 joerg Exp $
 
 DISTNAME=		revbump-1.9
 CATEGORIES=		pkgtools
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
 USE_LANGUAGES=	# empty

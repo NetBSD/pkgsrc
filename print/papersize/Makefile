@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/16 13:21:49 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/04/09 00:48:15 joerg Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -13,7 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1

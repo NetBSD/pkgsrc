@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/12/10 15:30:29 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2009/04/09 00:48:07 joerg Exp $
 #
 
 DISTNAME=	libgetopt-1.4.4
@@ -11,7 +11,6 @@ COMMENT=	Library for handling --long options
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CHECKSUM=	YES
 USE_LIBTOOL=	YES
 WRKSRC=		${WRKDIR}/libgetopt
 

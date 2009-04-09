@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/09/07 22:12:17 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/04/09 00:48:10 joerg Exp $
 #
 
 DISTNAME=		hf6to4-1.3
@@ -20,8 +20,6 @@ NOT_FOR_PLATFORM+=	Interix-*-* # no IPv6 support or ifconfig command
 #
 BUILD_DEFS+=	IPV6_READY
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 

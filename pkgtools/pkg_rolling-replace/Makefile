@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/02/10 00:16:01 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/09 00:48:13 joerg Exp $
 
 DISTNAME=	pkg_rolling-replace-0.16
 PKGREVISION=	2
@@ -18,7 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	patch
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 

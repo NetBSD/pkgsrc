@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/07/30 16:12:57 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/09 00:48:18 joerg Exp $
 
 DISTNAME= 		firefox-bin-realplayer-1.0
 PKGREVISION=		4
@@ -14,7 +14,6 @@ DEPENDS+=		RealPlayerGold-[0-9]*:../../multimedia/RealPlayerGold
 
 EMUL_PLATFORMS=		linux-i386
 
-NO_CHECKSUM=		yes
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 

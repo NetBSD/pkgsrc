@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/12/01 13:48:34 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2009/04/09 00:48:14 joerg Exp $
 #
 
 DISTNAME=	url2pkg-2.8
@@ -14,7 +14,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
-NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run

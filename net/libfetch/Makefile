@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2009/03/10 00:33:38 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/04/09 00:48:10 joerg Exp $
 #
 
 DISTNAME=	libfetch-2.23
 CATEGORIES=	net
 MASTER_SITES=	# empty
 DISTFILES=	# empty
-
-NO_CHECKSUM=	yes
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.FreeBSD.org/

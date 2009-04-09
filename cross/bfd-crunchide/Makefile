@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/06/16 13:32:55 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/09 00:48:07 joerg Exp $
 
 DISTNAME=	bfd-crunchide-1.2
 CATEGORIES=	cross
@@ -13,8 +13,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILDLINK_DEPMETHOD.cross-binutils=	build
 
 WRKSRC=		${WRKDIR}
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 USE_CROSSBASE=	yes

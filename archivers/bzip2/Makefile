@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2009/03/20 13:47:59 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2009/04/09 00:48:06 joerg Exp $
 #
 
 DISTNAME=	bzip2-1.0.5
@@ -11,13 +11,11 @@ HOMEPAGE=	http://www.bzip.org/
 COMMENT=	Block-sorting file compressor
 
 DISTFILES=	# empty
-EXTRACT_ONLY=	# empty
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
-NO_CHECKSUM=		yes
 USE_LIBTOOL=		yes
 
 .include "../../mk/compiler.mk"

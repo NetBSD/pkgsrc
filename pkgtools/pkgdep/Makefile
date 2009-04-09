@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/10 00:17:08 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/04/09 00:48:13 joerg Exp $
 #
 
 DISTNAME=	pkgdep-1.0
@@ -14,8 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin

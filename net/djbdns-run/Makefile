@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/16 14:48:42 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/04/09 00:48:10 joerg Exp $
 #
 
 DISTNAME=		djbdns-run-20050415
@@ -18,7 +18,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
-NO_CHECKSUM=		yes
 NO_BUILD=		yes
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/axfrdns
