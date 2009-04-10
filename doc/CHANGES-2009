@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1250 2009/04/10 08:51:06 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1251 2009/04/10 09:52:21 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1708,3 +1708,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wireshark to 1.0.7 [tron 2009-04-10]
 	Updated databases/sqlite3 to 3.6.12 [adam 2009-04-10]
 	Updated fonts/fontforge to 20090408 [adam 2009-04-10]
+	Updated devel/p5-Class-C3-Componentised to 1.0004 [abs 2009-04-10]
+	Updated databases/p5-SQL-Abstract to 1.51 [abs 2009-04-10]
+	Updated devel/p5-Class-Accessor-Grouped to 0.08003 [abs 2009-04-10]
+	Updated databases/p5-DBIx-Class to 0.08013 [abs 2009-04-10]
