@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.3 2009/04/10 08:30:49 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.4 2009/04/10 21:19:01 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -11,3 +11,5 @@ Pullup ticket #2728 - requested by dsainty
 libproxy: fix build of dependent packages
 Pullup ticket #2730 - requested by martti
 clamav: bug fix update
+Pullup ticket #2731 - requested by tron
+wireshark: security fix
