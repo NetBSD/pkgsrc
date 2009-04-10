@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/28 20:08:18 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/10 05:21:59 asau Exp $
 #
 
-DISTNAME=		open-axiom-1.2.0
+DISTNAME=		open-axiom-1.2.1
 PKGNAME=		${DISTNAME:S/open-/open/}
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
@@ -15,15 +15,19 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake gawk makeinfo
+USE_TOOLS+=		gmake makeinfo awk:run
 USE_LANGUAGES+=		fortran
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
+CONFIGURE_ENV=		HOST_AWK=${TOOLS_PLATFORM.awk:Q}
 BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
 
 .include "options.mk"
 
-pre-configure:
-	${RUN} cd ${WRKSRC} && ./build-setup.sh
+SUBST_CLASSES+=			dragonfly
+SUBST_STAGE.dragonfly=		post-patch
+SUBST_MESSAGE.dragonfly=	Fixing BSD Family pattern
+SUBST_FILES.dragonfly+=		configure
+SUBST_SED.dragonfly=		-e 's/\*bsd\*)/*bsd*|*dragonfly*)/'
 
 .include "../../mk/bsd.pkg.mk"
