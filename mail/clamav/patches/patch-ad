@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.17 2009/03/25 09:21:20 adam Exp $
+$NetBSD: patch-ad,v 1.17.2.1 2009/04/10 08:29:38 tron Exp $
 
---- docs/Makefile.in.orig	2009-03-23 18:09:28.000000000 +0100
-+++ docs/Makefile.in
-@@ -235,6 +235,8 @@ EXTRA_DIST = html $(top_srcdir)/docs/man
+--- docs/Makefile.in.orig	2009-04-07 20:56:26.000000000 +0300
++++ docs/Makefile.in	2009-04-09 09:06:09.000000000 +0300
+@@ -236,6 +236,8 @@
  man_MANS = man/clamscan.1 man/freshclam.1 man/sigtool.1 man/clamd.8 man/clamd.conf.5 man/clamdscan.1 man/clamav-milter.8 man/freshclam.conf.5 man/clamconf.1 man/clamdtop.1
  all: all-am
  
