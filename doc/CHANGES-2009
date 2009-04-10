@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1249 2009/04/10 07:21:43 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1250 2009/04/10 08:51:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1706,3 +1706,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/openaxiom to 1.2.1 [asau 2009-04-10]
 	Updated sysutils/webmin to 1.470nb1 [kefren 2009-04-10]
 	Updated net/wireshark to 1.0.7 [tron 2009-04-10]
+	Updated databases/sqlite3 to 3.6.12 [adam 2009-04-10]
+	Updated fonts/fontforge to 20090408 [adam 2009-04-10]
