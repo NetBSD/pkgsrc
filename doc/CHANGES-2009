@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1255 2009/04/10 18:45:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1256 2009/04/10 20:08:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1716,3 +1716,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/smalltalk to 3.1 [asau 2009-04-10]
 	Updated print/ja-ptex-share to 2.4nb1 [minskim 2009-04-10]
 	Updated audio/timidity to 2.13.2nb11 [wiz 2009-04-10]
+	Updated print/ja-ptex-bin to 3.1.9nb4 [minskim 2009-04-10]
