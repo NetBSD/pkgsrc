@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/02/27 19:39:48 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2009/04/10 08:44:03 adam Exp $
 
---- Makefile.in.orig	2009-02-15 14:07:08.000000000 +0100
+--- Makefile.in.orig	2009-03-30 18:37:16.000000000 +0200
 +++ Makefile.in
-@@ -163,7 +163,7 @@ NAWK = @AWK@
- 
- # Object files for the SQLite library (non-amalgamation).
- #
--OBJS0 = alter.lo analyze.lo attach.lo auth.lo bitvec.lo btmutex.lo \
-+OBJS0 = alter.lo analyze.lo attach.lo auth.lo backup.lo bitvec.lo btmutex.lo \
-         btree.lo build.lo callback.lo complete.lo date.lo \
-         delete.lo expr.lo fault.lo func.lo global.lo \
-         hash.lo journal.lo insert.lo legacy.lo loadext.lo \
-@@ -466,7 +466,7 @@ libsqlite3.la:	$(LIBOBJ)
+@@ -467,7 +467,7 @@ libsqlite3.la:	$(LIBOBJ)
  
  libtclsqlite3.la:	tclsqlite.lo libsqlite3.la
  	$(LTLINK) -o $@ tclsqlite.lo \
@@ -20,13 +11,3 @@ $NetBSD: patch-aa,v 1.7 2009/02/27 19:39:48 drochner Exp $
  		-rpath "$(TCLLIBDIR)" \
  		-version-info "8:6:8" \
  		-avoid-version
-@@ -518,6 +518,9 @@ attach.lo:	$(TOP)/src/attach.c $(HDR)
- auth.lo:	$(TOP)/src/auth.c $(HDR)
- 	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/auth.c
- 
-+backup.lo:	$(TOP)/src/backup.c $(HDR)
-+	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/backup.c
-+
- bitvec.lo:	$(TOP)/src/bitvec.c $(HDR)
- 	$(LTCOMPILE) $(TEMP_STORE) -c $(TOP)/src/bitvec.c
- 
