@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/02/21 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2009/04/10 18:47:59 wiz Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -59,7 +59,7 @@ SUBST_SED.padsp=	-e 's@libpulsedsp\.so@${PREFIX}/lib/&@'
 CONFIGURE_ENV+=		cc_cv_tls___thread=no
 .endif
 
-PLIST_VARS+=		hal oss
+PLIST_VARS+=		evdev hal oss
 
 .if ${OPSYS} == "Darwin"
 BUILDLINK_TRANSFORM+=	rm:-Wl,-version-script=./map-file
@@ -84,6 +84,11 @@ CONFIGURE_ARGS+=	--enable-netbsd-atomic-ops
 .else
 CONFIGURE_ARGS+=	--disable-netbsd-atomic-ops
 .include "../../devel/libatomic_ops/buildlink3.mk"
+.endif
+
+# Build module-mmkbd-evdev.so under Linux
+.if ${OPSYS} == "Linux" && exists(/usr/include/linux/input.h)
+PLIST.evdev=           yes
 .endif
 
 .include "options.mk"
