@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1252 2009/04/10 10:25:43 abs Exp $
+$NetBSD: CHANGES-2009,v 1.1253 2009/04/10 17:38:27 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1713,3 +1713,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-Accessor-Grouped to 0.08003 [abs 2009-04-10]
 	Updated databases/p5-DBIx-Class to 0.08013 [abs 2009-04-10]
 	Updated multimedia/dvdrip to 0.98.10 [abs 2009-04-10]
+	Updated lang/smalltalk to 3.1 [asau 2009-04-10]
