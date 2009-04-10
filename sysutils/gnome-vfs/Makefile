@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2009/03/19 11:32:45 drochner Exp $
+# $NetBSD: Makefile,v 1.74 2009/04/10 22:27:16 asau Exp $
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -24,8 +24,6 @@ MAKE_JOBS_SAFE=		no
 .include "Makefile.common"
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--enable-fam
-
 CONFLICTS+=		gnome-vfs2-[0-9]*
 
 .include "../../devel/GConf/schemas.mk"
@@ -33,5 +31,4 @@ CONFLICTS+=		gnome-vfs2-[0-9]*
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
-.include "../../mk/fam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
