@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2008/09/06 17:54:15 ahoka Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/10 17:36:42 asau Exp $
 
-DISTNAME=	smalltalk-2.3.5
-PKGREVISION=	1
+DISTNAME=	smalltalk-3.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
@@ -11,10 +10,16 @@ COMMENT=	GNU Smalltalk: A smalltalk-80 implementation
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-powerpc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
+
 USE_TOOLS+=		gawk gmake makeinfo pkg-config
 USE_GNU_READLINE=	YES
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--with-system-libsigsegv=${BUILDLINK_PREFIX.libsigsegv}/lib
+CONFIGURE_ARGS+=	--with-system-libffi=${BUILDLINK_PREFIX.libffi}/lib
 CONFIGURE_ARGS+=	--with-gdbm=${BUILDLINK_PREFIX.gdbm}/lib
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}/lib
 CONFIGURE_ARGS+=	--with-lispdir=${PREFIX}/share/emacs/site-lisp
@@ -25,17 +30,17 @@ CONFIGURE_ARGS+=	--without-emacs
 #CONFIGURE_ARGS+=	--without-glib --without-gtk
 #CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
 
-SUBST_CLASSES+=		sed
-SUBST_STAGE.sed=	pre-configure
-SUBST_MESSAGE.sed=	Replacing sed interpreter.
-SUBST_FILES.sed=	examples/*.sed
-SUBST_SED.sed=		-e "s|/bin/sed|${SED}|"
-
-REPLACE_PERL+=		vfs/mailfs vfs/deb
-
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES
 TEST_TARGET=		check
+
+REPLACE_PERL=		packages/vfs/deb packages/vfs/mailfs
+REPLACE_SED=		examples/pepe.sed examples/xml.sed
+
+REPLACE_INTERPRETER+=	sys-sed
+REPLACE.sys-sed.old=	[^[:space:]]*sed
+REPLACE.sys-sed.new=	${SED}
+REPLACE_FILES.sys-sed=	${REPLACE_SED}
 
 post-extract:
 	sed -e "s/long double/double/g" -e "s/1.0L/1.0/g" -e  "s/0.0L/0.0/g" \
@@ -45,8 +50,13 @@ post-extract:
 	-e "s/LDBL_EPSILON/FLT_EPSILON/g" -e "s/truncl/truncf/g" \
 	${WRKSRC}/lib-src/truncl.c > ${WRKSRC}/lib-src/truncf.c
 
+.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"
+.include "../../devel/libsigsegv/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
