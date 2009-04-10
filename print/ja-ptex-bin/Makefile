@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2008/12/09 19:49:22 minskim Exp $
+# $NetBSD: Makefile,v 1.37 2009/04/10 20:07:28 minskim Exp $
 
 DISTNAME=	ptex-src-${PTEX_VERS}
 PKGNAME=	ja-ptex-bin-${PTEX_VERS}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/tetex/
@@ -24,13 +24,12 @@ SITES.mendexk2.6d.tar.gz= \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/mendex/ \
 		ftp://ftp.ring.gr.jp/pub/text/TeX/ascii-ptex/mendex/
 
-DEPENDS+=	ja-ptex-share>=2.4:../../print/ja-ptex-share
+DEPENDS+=	ja-ptex-share>=2.4nb1:../../print/ja-ptex-share
+DEPENDS+=	teTeX-bin>=3.0nb26:../../print/teTeX3-bin
+DEPENDS+=	teTeX-texmf>=3.0nb10:../../print/teTeX3-texmf
+DEPENDS+=	tex-bin-dvipsk-[0-9]*:../../print/tex-bin-dvipsk
 
-USE_DIRS+=	texmf-1.3
-
-.include "../../print/teTeX3-bin/buildlink3.mk"
 .include "../../print/teTeX3-bin/Makefile.common"
-.include "../../print/teTeX/module.mk"
 
 PTEX_VERS=		3.1.9
 DVIPSK_PATCH_VERS=	p1.7a
@@ -47,6 +46,10 @@ WRKSRC=			${TETEX_DIR}
 WRKSRC_PTEX=		${WRKSRC}/texk/web2c/${DISTNAME}
 EXTRACT_ONLY=		# none
 MAKE_ENV+=		TRUE=${TRUE}
+
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf-local
+
+.include "../../print/kpathsea/texmf.mk"
 
 pre-extract:
 	if [ ! -r ${WRKSRC} ]; then \
@@ -68,12 +71,9 @@ post-extract:
 	cd ${WRKSRC}/texk;						\
 		extract_file=${_DISTDIR:Q}/${DF_MENDEXK:Q};		\
 		${EXTRACT_CMD}
-	${SED} -e "s|\$$PKG_TEXMFPREFIX/ptex/plain/||" \
-	${PKG_LOCALTEXMFPREFIX}/ptex/plain/base/ptex.tex > \
-		${WRKSRC_PTEX}/ptex.tex
 	${RM} -f ${WRKSRC}/texmf
-	${LN} -s ${PKG_TEXMFPREFIX} ${WRKSRC}
-	${LN} -s ${PKG_LOCALTEXMFPREFIX} ${WRKSRC}
+	${LN} -s ${LOCALBASE}/share/texmf ${WRKSRC}
+	${LN} -s ${LOCALBASE}/share/texmf-local ${WRKSRC}
 
 pre-patch:
 	${PATCH} -d ${WRKSRC}/texk -p0 -s \
@@ -83,12 +83,12 @@ post-patch:
 	${MV} ${WRKSRC}/texk/kpathsea/texmf.in \
 		${WRKSRC}/texk/kpathsea/texmf.in.orig
 	${SED} -e 's,@texmfsite@,${TEXMFSITE},' \
-		-e 's,@texmflocal@,${PKG_LOCALTEXMFPREFIX},' \
+		-e 's,@texmflocal@,${PREFIX}/share/texmf-local,' \
 		${WRKSRC}/texk/kpathsea/texmf.in.orig > \
 		${WRKSRC}/texk/kpathsea/texmf.in
 
 post-configure:
-	cd ${WRKSRC_PTEX}; ./configure EUC ${PKG_LOCALTEXMFPREFIX}
+	cd ${WRKSRC_PTEX}; ./configure EUC ${PREFIX}/share/texmf-local
 
 do-build:
 	cd ${WRKSRC}/texk/web2c; ${MAKE_PROGRAM}
@@ -99,21 +99,19 @@ do-build:
 
 do-install:
 	cd ${WRKSRC_PTEX}; \
-		${SETENV} texmflcl=${PKG_LOCALTEXMFPREFIX} ${MAKE_PROGRAM} install
+		${SETENV} texmflcl=${PREFIX}/share/texmf-local ${MAKE_PROGRAM} install
 	cd ${WRKSRC}/texk/dvipsk; \
-		${SETENV} texmflcl=${PKG_LOCALTEXMFPREFIX} ${MAKE_PROGRAM} install; \
-	${INSTALL_DATA} psfonts.map ${PKG_LOCALTEXMFPREFIX}/dvips/base
+		${SETENV} texmflcl=${PREFIX}/share/texmf-local ${MAKE_PROGRAM} install; \
+	${INSTALL_DATA} psfonts.map ${PREFIX}/share/texmf-local/dvips/base
 	${INSTALL_PROGRAM} ${WRKSRC}/texk/mendexk${MENDEXK_VERS}/mendex \
 		${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/dvips/pstricks
-	cd ${PKG_LOCALTEXMFPREFIX}/dvips/pstricks; \
-		${CP} ${PKG_TEXMFPREFIX}-dist/dvips/pstricks/pst-text.pro .; \
+	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf-local/dvips/pstricks
+	cd ${PREFIX}/share/texmf-local/dvips/pstricks; \
+		${CP} ${LOCALBASE}/share/texmf-dist/dvips/pstricks/pst-text.pro .; \
 		${PATCH} < ${WRKSRC}/texk/PSTricks.patch; \
 		${RM} -f pst-text.pro.orig
 
 pre-clean:
 	cd ../../print/teTeX3-bin && ${MAKE} clean
 
-.include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
