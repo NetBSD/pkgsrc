@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1248 2009/04/10 06:32:21 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.1249 2009/04/10 07:21:43 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/clamav to 0.95.1 [martti 2009-04-09]
 	Updated math/openaxiom to 1.2.1 [asau 2009-04-10]
 	Updated sysutils/webmin to 1.470nb1 [kefren 2009-04-10]
+	Updated net/wireshark to 1.0.7 [tron 2009-04-10]
