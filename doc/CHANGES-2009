@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1247 2009/04/10 05:23:39 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1248 2009/04/10 06:32:21 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1704,3 +1704,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated filesystems/chironfs to 1.1.1 [manu 2009-04-09]
 	Updated mail/clamav to 0.95.1 [martti 2009-04-09]
 	Updated math/openaxiom to 1.2.1 [asau 2009-04-10]
+	Updated sysutils/webmin to 1.470nb1 [kefren 2009-04-10]
