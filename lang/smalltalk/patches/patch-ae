@@ -1,22 +1,12 @@
-$NetBSD: patch-ae,v 1.1 2007/09/03 13:36:30 obache Exp $
+$NetBSD: patch-ae,v 1.2 2009/04/10 17:36:43 asau Exp $
 
---- configure.orig	2007-06-02 15:45:21.000000000 +0000
-+++ configure
-@@ -16230,7 +16230,7 @@ fi
- 
+--- configure.orig	2009-04-07 20:00:09.000000000 +0400
++++ configure	2009-04-07 20:23:39.000000000 +0400
+@@ -20386,6 +20386,7 @@
  for ac_func in putenv strdup strerror strsignal mkstemp getpagesize \
  	getdtablesize strstr ftruncate floorl ceill sqrtl frexpl ldexpl asinl \
--	acosl atanl logl expl tanl sinl cosl truncl lrintl strsep strpbrk
-+	acosl atanl logl expl tanl sinl cosl trunc truncf truncl lrintl strsep strpbrk
+ 	acosl atanl logl expl tanl sinl cosl powl truncl lrintl strsep strpbrk \
++	acosl atanl logl expl tanl sinl cosl trunc truncf truncl lrintl strsep strpbrk \
+ 	symlink mkdtemp
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
- { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -21414,7 +21414,7 @@ EOF
-         gst_cv_readline_libs="-lreadline $lib"
-         test "x$with_readline" != x && test "$with_readline" != yes \
- 	  && test -d "$with_readline" \
--	  && gst_cv_readline_libs="-L$with_readline $gst_readline_libs"
-+	  && gst_cv_readline_libs="-L$with_readline $gst_cv_readline_libs"
-         break
-       fi
-     done
