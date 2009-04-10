@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2006/06/24 10:48:06 hira Exp $
+# $NetBSD: Makefile,v 1.21 2009/04/10 17:49:45 minskim Exp $
 
 DISTNAME=	ptex-texmf-2.4
 PKGNAME=	ja-ptex-share-2.4
+PKGREVISION=	1
 CATEGORIES=	print japanese
 MASTER_SITES=	ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/tetex/ \
 		ftp://ftp.ascii.co.jp/pub/TeX/ascii-ptex/jvf/ \
@@ -17,90 +18,95 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www.ascii.co.jp/pb/ptex/
 COMMENT=	Library files for pTeX
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	teTeX
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
-USE_DIRS+=	texmf-1.3
 
-.include "../../print/teTeX/module.mk"
+TEX_TEXMF_DIRS=	${PREFIX}/share/texmf
+TEXMFPREFIX=	${DESTDIR}${PREFIX}/share/texmf
+
+.include "../../print/kpathsea/texmf.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/bibtex/bib/jbibtex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/bibtex/bib/jbibtex
 	${INSTALL_DATA} ${WRKSRC}/jbibtex/bib/jxampl.bib \
-		${PKG_LOCALTEXMFPREFIX}/bibtex/bib/jbibtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/bibtex/bst/jbibtex
+		${TEXMFPREFIX}/bibtex/bib/jbibtex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/bibtex/bst/jbibtex
 	${INSTALL_DATA} ${WRKSRC}/jbibtex/bst/* \
-		${PKG_LOCALTEXMFPREFIX}/bibtex/bst/jbibtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/bibtex/jbibtex
+		${TEXMFPREFIX}/bibtex/bst/jbibtex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/doc/bibtex/jbibtex
 	${INSTALL_DATA} ${WRKSRC}/doc/jbibtex/doc-ascii/* \
-		${PKG_LOCALTEXMFPREFIX}/doc/bibtex/jbibtex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/ptex
-	${INSTALL_DATA} ${WRKSRC}/doc/ptex/* ${PKG_LOCALTEXMFPREFIX}/doc/ptex
+		${TEXMFPREFIX}/doc/bibtex/jbibtex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/doc/ptex
+	${INSTALL_DATA} ${WRKSRC}/doc/ptex/* ${TEXMFPREFIX}/doc/ptex
 .for f in COPYRIGHT COPYRIGHT.jis Changes.txt README.txt
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/doc/ptex
+	${INSTALL_DATA} ${WRKSRC}/${f} ${TEXMFPREFIX}/doc/ptex
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/ptex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/ptex
 .for type in plain platex
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/ptex/${type}
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/ptex/${type}
 .  for dir in base config
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/ptex/${type}/${dir}
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/ptex/${type}/${dir}
 	${INSTALL_DATA} ${WRKSRC}/ptex/${type}/${dir}/* \
-		${PKG_LOCALTEXMFPREFIX}/ptex/${type}/${dir}
+		${TEXMFPREFIX}/ptex/${type}/${dir}
 .  endfor
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/jis
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/doc/fonts/jis
 	${INSTALL_DATA} ${WRKSRC}/jis/README.txt \
-		${PKG_LOCALTEXMFPREFIX}/doc/fonts/jis
+		${TEXMFPREFIX}/doc/fonts/jis
 .for font in morisawa nmin-ngoth
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/${font}
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/doc/fonts/${font}
 .  for f in COPYRIGHT COPYRIGHT.jis README.txt
 	${INSTALL_DATA} ${WRKSRC}/${font}/${f} \
-		${PKG_LOCALTEXMFPREFIX}/doc/fonts/${font}
+		${TEXMFPREFIX}/doc/fonts/${font}
 .  endfor
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ptex-standard
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/doc/fonts/ptex-standard
 .  for f in COPYRIGHT COPYRIGHT.jis README.txt
 	${INSTALL_DATA} ${WRKSRC}/standard/${f} \
-		${PKG_LOCALTEXMFPREFIX}/doc/fonts/ptex-standard
+		${TEXMFPREFIX}/doc/fonts/ptex-standard
 .  endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/map/dvips/ptex
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/map/dvips/ptex
 .for font in jis morisawa nmin-ngoth
 	${INSTALL_DATA} ${WRKSRC}/${font}/*.map \
-		${PKG_LOCALTEXMFPREFIX}/fonts/map/dvips/ptex
+		${TEXMFPREFIX}/fonts/map/dvips/ptex
+.endfor
+.for type in source tfm
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/${type}/ascgrp
+	${INSTALL_DATA} ${WRKSRC}/fonts/${type}/ascgrp/* \
+		${TEXMFPREFIX}/fonts/${type}/ascgrp
 .endfor
 .for type in source tfm vf
-.  for font in ascgrp ptex
-.    if exists(${WRKSRC}/fonts/${type}/${font})
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/${type}/${font}
-	${INSTALL_DATA} ${WRKSRC}/fonts/${type}/${font}/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/${type}/${font}
-.    endif
-.  endfor
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/${type}/ptex
+	${INSTALL_DATA} ${WRKSRC}/fonts/${type}/ptex/* \
+		${TEXMFPREFIX}/fonts/${type}/ptex
 .endfor
 .for font in jis morisawa nmin-ngoth
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/${font}
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/${font}/dvips
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/${font}
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/${font}/dvips
 	${INSTALL_DATA} ${WRKSRC}/${font}/tfm/dvips/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/${font}/dvips
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/${font}/ptex
+		${TEXMFPREFIX}/fonts/tfm/${font}/dvips
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/${font}/ptex
 	${INSTALL_DATA} ${WRKSRC}/${font}/tfm/ptex/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/${font}/ptex
+		${TEXMFPREFIX}/fonts/tfm/${font}/ptex
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ptex-standard
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ptex-standard/dvips
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/ptex-standard
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/ptex-standard/dvips
 	${INSTALL_DATA} ${WRKSRC}/standard/tfm/dvips/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ptex-standard/dvips
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ptex-standard/ptex
+		${TEXMFPREFIX}/fonts/tfm/ptex-standard/dvips
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/tfm/ptex-standard/ptex
 	${INSTALL_DATA} ${WRKSRC}/standard/tfm/ptex/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/ptex-standard/ptex
+		${TEXMFPREFIX}/fonts/tfm/ptex-standard/ptex
 .for font in jis morisawa nmin-ngoth
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/vf/${font}
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/vf/${font}
 	${INSTALL_DATA} ${WRKSRC}/${font}/vf/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/vf/${font}
+		${TEXMFPREFIX}/fonts/vf/${font}
 .endfor
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/fonts/vf/ptex-standard
+	${INSTALL_DATA_DIR} ${TEXMFPREFIX}/fonts/vf/ptex-standard
 	${INSTALL_DATA} ${WRKSRC}/standard/vf/* \
-		${PKG_LOCALTEXMFPREFIX}/fonts/vf/ptex-standard
+		${TEXMFPREFIX}/fonts/vf/ptex-standard
 
 .include "../../mk/bsd.pkg.mk"
