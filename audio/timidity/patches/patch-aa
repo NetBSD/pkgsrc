@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2007/06/08 17:18:53 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2009/04/10 18:45:16 wiz Exp $
 
---- timidity/sun_a.c.orig	2007-06-08 17:14:22.000000000 +0000
+--- timidity/sun_a.c.orig	2004-09-26 23:40:14.000000000 +0000
 +++ timidity/sun_a.c
-@@ -300,6 +300,18 @@ int output_data(char *buff, int32 nbytes
+@@ -296,6 +296,18 @@ int output_data(char *buff, int32 nbytes
  
  
  #if !defined(I_FLUSH) || !defined(FLUSHW)
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.7 2007/06/08 17:18:53 wiz Exp $
  static void null_proc(){}
  static int sun_discard_playing(void)
  {
-@@ -312,6 +324,7 @@ static int sun_discard_playing(void)
+@@ -308,6 +320,7 @@ static int sun_discard_playing(void)
      signal(SIGALRM, orig_alarm_handler);
      return open_output();
  }
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.7 2007/06/08 17:18:53 wiz Exp $
  #else
  static int sun_discard_playing(void)
  {
-@@ -332,6 +345,21 @@ static int acntl(int request, void *arg)
+@@ -328,6 +341,23 @@ static int acntl(int request, void *arg)
  
      switch(request)
      {
@@ -37,12 +37,14 @@ $NetBSD: patch-aa,v 1.7 2007/06/08 17:18:53 wiz Exp $
 +      case PM_REQ_GETQSIZ:
 +	if(ioctl(audioctl_fd, AUDIO_GETINFO, &auinfo) < 0)
 +	    return -1;
-+	return auinfo.play.buffer_size;
++	*((int *)arg) = auinfo.play.buffer_size;
++	return 0;
 +
 +      case PM_REQ_GETFRAGSIZ:
 +	if(ioctl(audioctl_fd, AUDIO_GETINFO, &auinfo) < 0)
 +	    return -1;
-+	return auinfo.blocksize;
++	*((int *)arg) = auinfo.blocksize;
++	return 0;
 +
 +      case PM_REQ_OUTPUT_FINISH:
 +	return ioctl(audioctl_fd, AUDIO_DRAIN, NULL);
