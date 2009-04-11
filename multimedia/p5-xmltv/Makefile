@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2008/10/19 19:18:31 he Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/11 23:15:20 sno Exp $
 
 DISTNAME=	xmltv-0.5.45
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmltv/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +38,7 @@ DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
 DEPENDS+=	p5-Text-Kakasi-[0-9]*:../../textproc/p5-Text-Kakasi
 # needed by se grabber
 DEPENDS+=	p5-XML-LibXML-[0-9]*:../../textproc/p5-XML-LibXML
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-HTTP-Cache-Transparent-[0-9]*:../../www/p5-HTTP-Cache-Transparent
 # needed by pt grabber
 DEPENDS+=	p5-Unicode-UTF8simple-[0-9]*:../../converters/p5-Unicode-UTF8simple

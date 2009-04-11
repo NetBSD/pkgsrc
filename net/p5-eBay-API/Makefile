@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/26 19:14:48 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/11 23:15:20 sno Exp $
 
 DISTNAME=		eBay-API-0.25
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net perl5 www
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TK/TKEEFER/}
 
@@ -11,7 +12,7 @@ COMMENT=		Non SOAP based XML schema library for eBay API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Compress-Zlib>=1.41:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Crypt-SSLeay>=0.51:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-Devel-StackTrace>=1.03:../../devel/p5-Devel-StackTrace
 DEPENDS+=	p5-Error>=0.15:../../devel/p5-Error
