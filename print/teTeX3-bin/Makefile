@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2009/03/06 20:41:03 minskim Exp $
+# $NetBSD: Makefile,v 1.41 2009/04/11 22:09:43 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	26
+PKGREVISION=	27
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -25,6 +25,7 @@ USE_TOOLS+=	bison lex
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
+CONFIGURE_ARGS+=	--without-dvipng
 CONFIGURE_ARGS+=	--without-dvipsk --without-odvipsk
 CONFIGURE_ARGS+=	--without-xdvik --without-oxdvik
 
