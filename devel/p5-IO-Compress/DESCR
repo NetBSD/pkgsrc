@@ -1,0 +1,5 @@
+This distribution provides a Perl interface to allow reading and writing of
+compressed data created with the zlib and bzip2 libraries.
+
+IO-Compress supports reading and writing of bzip2, RFC 1950, RFC
+1951, RFC 1952 (i.e. gzip) and zip files/buffers.
