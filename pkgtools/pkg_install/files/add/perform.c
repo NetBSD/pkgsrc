@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.84 2009/03/08 14:50:36 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.84.2.1 2009/04/11 17:38:48 spz Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.84 2009/03/08 14:50:36 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.84.2.1 2009/04/11 17:38:48 spz Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -762,9 +762,6 @@ pkg_register_depends(struct pkg_task *pkg)
 
 	if (Fake)
 		return;
-
-	if (pkg->other_version != NULL)
-		return; /* XXX It's using the old dependencies. */
 
 	text = xasprintf("%s\n", pkg->pkgname);
 	text_len = strlen(text);
