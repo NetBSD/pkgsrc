@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1263 2009/04/11 19:17:21 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1264 2009/04/11 19:22:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added games/ninvaders version 0.1.1 [snj 2009-04-11]
 	Updated print/tex-bin-tetex to 3.0.12298 [minskim 2009-04-11]
 	Updated print/kpathsea to 3.5.7nb4 [minskim 2009-04-11]
+	Updated print/tex-bin-kpathsea to 2008.12509 [minskim 2009-04-11]
