@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1264 2009/04/11 19:22:55 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1265 2009/04/11 19:43:28 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1727,3 +1727,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-tetex to 3.0.12298 [minskim 2009-04-11]
 	Updated print/kpathsea to 3.5.7nb4 [minskim 2009-04-11]
 	Updated print/tex-bin-kpathsea to 2008.12509 [minskim 2009-04-11]
+	Updated lang/python25 to 2.5.4 [snj 2009-04-11]
