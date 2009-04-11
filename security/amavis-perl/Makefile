@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/04/11 23:15:21 sno Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 		${MASTER_SITE_SOURCEFORGE:=amavis/}
@@ -29,7 +29,7 @@ DEPENDS+=	freeze-[0-9]*:../../archivers/freeze
 DEPENDS+=	arc-[0-9]*:../../archivers/arc
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools

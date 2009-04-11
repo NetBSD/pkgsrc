@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/10/13 12:40:18 obache Exp $
-
-SHA1 (IO-Compress-Zlib-2.015.tar.gz) = a2dd277f083b53d50d683dcf8bff4c7b9177d295
-RMD160 (IO-Compress-Zlib-2.015.tar.gz) = 6be8bb18881fd8c2b37f6ec6262e0c3b1ec9c41c
-Size (IO-Compress-Zlib-2.015.tar.gz) = 141649 bytes

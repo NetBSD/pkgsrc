@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2008/11/17 23:33:37 bad Exp $
+# $NetBSD: Makefile,v 1.32 2009/04/11 23:15:20 sno Exp $
 
 DISTNAME=	SVK-v2.2.1
 PKGNAME=	svk-2.2.1
+PKGREVISION=	1
 CATEGORIES=	devel perl5 scm
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=OurNet/CLKAO/}
 
@@ -23,7 +24,7 @@ DEPENDS+=	p5-App-CLI>=0.07:../../devel/p5-App-CLI
 DEPENDS+=	p5-Class-Accessor>=0.25:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
 DEPENDS+=	p5-Class-Data-Inheritable>=0.06:../../devel/p5-Class-Data-Inheritable
-DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Data-Hierarchy>=0.30:../../devel/p5-Data-Hierarchy
 DEPENDS+=	p5-File-Temp>=0.17:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Type>=0.22:../../devel/p5-File-Type
@@ -31,8 +32,8 @@ DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
 DEPENDS+=	p5-IO-Digest>=0.10:../../devel/p5-IO-Digest
 DEPENDS+=	p5-IO-Pager>=0.06:../../devel/p5-IO-Pager
 DEPENDS+=	p5-List-MoreUtils>=0.22:../../devel/p5-List-MoreUtils
-DEPENDS+=p5-Locale-Maketext-Lexicon>=0.62:../../misc/p5-Locale-Maketext-Lexicon
-DEPENDS+=p5-Locale-Maketext-Simple>=0.16:../../misc/p5-Locale-Maketext-Simple
+DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.62:../../misc/p5-Locale-Maketext-Lexicon
+DEPENDS+=	p5-Locale-Maketext-Simple>=0.16:../../misc/p5-Locale-Maketext-Simple
 DEPENDS+=	p5-Path-Class>=0.16:../../devel/p5-Path-Class
 DEPENDS+=	p5-PathTools>=3.19:../../devel/p5-PathTools
 DEPENDS+=	p5-PerlIO-eol>=0.13:../../devel/p5-PerlIO-eol
