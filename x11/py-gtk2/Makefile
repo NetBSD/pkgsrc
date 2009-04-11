@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2009/04/11 17:23:42 reed Exp $
+# $NetBSD: Makefile,v 1.63 2009/04/11 21:47:39 snj Exp $
 #
 
 DISTNAME=	pygtk-2.14.1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.14/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	recht@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	http://www.pygtk.org/
 COMMENT=	Python bindings for GTK+2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
