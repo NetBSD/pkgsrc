@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2008/12/20 21:48:23 he Exp $
+# $NetBSD: Makefile,v 1.25 2009/04/11 23:15:20 sno Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.710.08
 PKGNAME=	p5-${DISTNAME:S/710.08/71.08/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SOAP/}
 
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.soaplite.com/
 #HOMEPAGE=	http://search.cpan.org/dist/SOAP-Lite/
 COMMENT=	Perl5 module providing a lightweight interface to SOAP
 
-DEPENDS+=	p5-Compress-Zlib>=0:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-FCGI>=0:../../www/p5-FCGI
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww
