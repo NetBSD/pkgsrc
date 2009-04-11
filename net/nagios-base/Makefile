@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/03/24 19:28:26 bouyer Exp $
+# $NetBSD: Makefile,v 1.24 2009/04/11 17:24:00 tonnerre Exp $
 #
 
 DISTNAME=		nagios-3.1.0
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/-/-base-/}
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
-MAINTAINER=		tonnerre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Network monitor
 
