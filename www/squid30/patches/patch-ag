@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+$NetBSD: patch-ag,v 1.2 2009/04/11 14:04:16 taca Exp $
+
+Add support of machine/byte_swap.h.
 
 --- include/squid_endian.h.orig	2008-06-22 12:35:50.000000000 +0900
 +++ include/squid_endian.h
