@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/11 18:00:42 snj Exp $
+
+SHA1 (ninvaders-0.1.1.tar.gz) = 5ab825694b108cbfa988377ca216188fa9a76e89
+RMD160 (ninvaders-0.1.1.tar.gz) = 987ead3eb05d2e07ab5e476284df7488858c775a
+Size (ninvaders-0.1.1.tar.gz) = 31275 bytes
+SHA1 (patch-aa) = d27201e0ef5c01ab72eec8902c9ae5a372f1d522
+SHA1 (patch-ab) = 52af53c9d4d88931b5c8e426a271d647ab21fd43
+SHA1 (patch-ac) = 07ebe6e4761f09259f3bac006ffcfd190deef5bb
