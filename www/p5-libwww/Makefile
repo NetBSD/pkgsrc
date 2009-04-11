@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.67 2009/02/22 15:50:25 wiz Exp $
+# $NetBSD: Makefile,v 1.68 2009/04/11 23:15:21 sno Exp $
 
 DISTNAME=	libwww-perl-5.825
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
@@ -13,7 +14,7 @@ COMMENT=	Perl5 library for WWW access
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Compress-Zlib>=1.10:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
