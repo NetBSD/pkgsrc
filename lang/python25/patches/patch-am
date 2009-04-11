@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+$NetBSD: patch-am,v 1.2 2009/04/11 19:42:23 snj Exp $
 
---- setup.py.orig	2008-02-05 00:41:02.000000000 +0100
-+++ setup.py
+--- setup.py.orig	2008-10-16 11:58:19.000000000 -0700
++++ setup.py	2009-03-20 15:01:44.000000000 -0700
 @@ -15,7 +15,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
  
@@ -30,7 +30,7 @@ $NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -533,9 +539,7 @@ class PyBuildExt(build_ext):
+@@ -534,9 +540,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -41,7 +41,7 @@ $NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -608,269 +612,51 @@ class PyBuildExt(build_ext):
+@@ -609,269 +613,51 @@ class PyBuildExt(build_ext):
          # a release.  Most open source OSes come with one or more
          # versions of BerkeleyDB already installed.
  
@@ -233,7 +233,7 @@ $NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
 -                        break
 -                    else:
 -                        if sqlite_setup_debug:
--                            print "%s: version %d is too old, need >= %s"%(d,
+-                            print "%s: version %r is too old, need >= %r"%(d,
 -                                        sqlite_version, MIN_SQLITE_VERSION)
 -                elif sqlite_setup_debug:
 -                    print "sqlite: %s had no SQLITE_VERSION"%(f,)
@@ -350,7 +350,7 @@ $NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
  
          # The standard Unix dbm module:
          if platform not in ['cygwin']:
-@@ -883,6 +669,13 @@ class PyBuildExt(build_ext):
+@@ -884,6 +670,13 @@ class PyBuildExt(build_ext):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
                                         define_macros=[('HAVE_NDBM_H',None)],
                                         libraries = ndbm_libs ) )
@@ -364,7 +364,7 @@ $NetBSD: patch-am,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
              elif (self.compiler.find_library_file(lib_dirs, 'gdbm')
                    and find_file("gdbm/ndbm.h", inc_dirs, []) is not None):
                  exts.append( Extension('dbm', ['dbmmodule.c'],
-@@ -1535,8 +1328,8 @@ def main():
+@@ -1536,8 +1329,8 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
