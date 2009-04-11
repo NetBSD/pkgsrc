@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/04/03 07:54:13 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/11 16:53:36 reed Exp $
 #
 
 DISTNAME=		gst-python-0.10.14
@@ -25,6 +25,7 @@ PY_PATCHPLIST=		yes
 PKGCONFIG_OVERRIDE+=	pkgconfig/gst-python.pc.in
 
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gst-plugins0.10-base+=	gst-plugins0.10-base>=0.10.22
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
