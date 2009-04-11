@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1259 2009/04/11 14:05:08 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1260 2009/04/11 17:28:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1722,3 +1722,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey-gtk1 to 1.1.16 [ghen 2009-04-11]
 	Updated x11/libxcb to 1.2 [wiz 2009-04-11]
 	Updated www/squid30 to 3.0.14 [taca 2009-04-11]
+	Updated sysutils/mklivecd to 0.17 [wiz 2009-04-11]
