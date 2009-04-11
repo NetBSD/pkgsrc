@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1261 2009/04/11 18:02:54 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1262 2009/04/11 18:52:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squid30 to 3.0.14 [taca 2009-04-11]
 	Updated sysutils/mklivecd to 0.17 [wiz 2009-04-11]
 	Added games/ninvaders version 0.1.1 [snj 2009-04-11]
+	Updated print/tex-bin-tetex to 3.0.12298 [minskim 2009-04-11]
