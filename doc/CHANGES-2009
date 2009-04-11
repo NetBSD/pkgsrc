@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1275 2009/04/11 22:38:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1276 2009/04/11 22:44:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1741,3 +1741,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX to 3.0nb4 [minskim 2009-04-11]
 	Updated devel/p5-Compress-Raw-Zlib to 2.017 [sno 2009-04-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.017 [sno 2009-04-11]
+	Added devel/p5-IO-Compress version 2.017 [sno 2009-04-11]
