@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2009/02/08 20:00:03 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
 
 - Set paths to texmf trees for pkgsrc.
-- Sync with TeX Live Revision 12107.
+- Sync with TeX Live Revision 12509.
 
 --- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
 +++ texmf.cnf
@@ -183,7 +183,25 @@ $NetBSD: patch-aa,v 1.3 2009/02/08 20:00:03 minskim Exp $
  TTF2TFMINPUTS =                 .;$TEXMF/ttf2pk//
  
  % Metafont, MetaPost inputs.
-@@ -447,7 +450,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -384,14 +387,11 @@ FONTCONFIG_FILE=fonts.conf
+ FONTCONFIG_PATH=$TEXMFSYSVAR/fonts/conf
+ FC_CACHEDIR=$TEXMFSYSVAR/fonts/cache
+ 
+-% TeX documentation and source files, for use with kpsewhich.
++% TeX documentation and source files, for use with kpsewhich (and texdoc).
+ % TeX Live has a separate hierarchy with just documentation, texmf-doc,
+ % in addition to the doc files in the other hierarchies.
+-% Also, find the English documentation first -- better than random, when
+-% there are name collisions.
+-% Also, find things from man pages first, same reason.
+-TEXMFDOCDIR = $TEXMFDOC/doc{/english,}
+-TEXDOCS = .;$TEXMF/doc{/man,}//;$TEXMFDOCDIR//
++TEXMFDOCDIR = $TEXMFDOC/doc
++TEXDOCS = .;$TEXMF/doc//;$TEXMFDOCDIR//
+ TEXSOURCES = .;$TEXMF/source//
+ 
+ % Web and CWeb input paths.
+@@ -447,7 +447,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
  %
@@ -192,7 +210,7 @@ $NetBSD: patch-aa,v 1.3 2009/02/08 20:00:03 minskim Exp $
  
  # kpathsea 3.5.3 and later sets these at runtime. To avoid empty
  # expansions from binaries linked against an earlier version of the
-@@ -458,11 +461,10 @@ engine = unsetengine
+@@ -458,11 +458,10 @@ engine = unsetengine
  
  %  Part 2: Options.
  
@@ -208,7 +226,7 @@ $NetBSD: patch-aa,v 1.3 2009/02/08 20:00:03 minskim Exp $
  %
  % Both names are always tried; the difference is the order in which they
  % are tried.  The setting applies to all searches, not just .tex.
-@@ -472,7 +474,7 @@ engine = unsetengine
+@@ -472,7 +471,7 @@ engine = unsetengine
  % always have an extension added first.
  %
  % The default is true, because we already avoid adding the standard
@@ -217,7 +235,7 @@ $NetBSD: patch-aa,v 1.3 2009/02/08 20:00:03 minskim Exp $
  % babel.sty, not babel.sty.tex, regardless of this setting.
  try_std_extension_first = t
  
-@@ -612,7 +614,7 @@ buf_size = 200000
+@@ -612,7 +611,7 @@ buf_size = 200000
  % for all known free hyphenation patterns to be loaded simultaneously
  % (as TeX Live does).
  %
