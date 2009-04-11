@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1268 2009/04/11 21:18:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1269 2009/04/11 21:26:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1732,3 +1732,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Renamed devel/p5-PAR to p5-PAR [sno 2009-04-11]
 	Renamed graphics/p5-SWF-File to p5-SWF-File [sno 2009-04-11]
 	Updated databases/p5-DBD-Google to 0.51 [sno 2009-04-11]
+	Updated databases/p5-DBD-SQLite to 1.21 [sno 2009-04-11]
