@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1272 2009/04/11 21:38:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1273 2009/04/11 22:11:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1736,3 +1736,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/web2c to 7.5.7nb1 [minskim 2009-04-11]
 	Added print/xetex version 0.999.6 [minskim 2009-04-11]
 	Updated databases/p5-DBD-postgresql to 2.12.0 [sno 2009-04-11]
+	Updated print/teTeX3-bin to 3.0nb27 [minskim 2009-04-11]
+	Updated graphics/dvipng to 1.11nb1 [minskim 2009-04-11]
+	Updated print/teTeX to 3.0nb4 [minskim 2009-04-11]
