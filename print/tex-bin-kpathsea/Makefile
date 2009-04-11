@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/08 20:40:32 minskim Exp $
-# TeX Live Revision 12107
+# $NetBSD: Makefile,v 1.2 2009/04/11 19:22:11 minskim Exp $
+# TeX Live Revision 12509
 
 DISTNAME=	bin-kpathsea
-PKGNAME=	tex-${DISTNAME}-2008.12107
+PKGNAME=	tex-${DISTNAME}-2008.12509
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
 DIST_SUBDIR=	${PKGNAME_NOREV}
