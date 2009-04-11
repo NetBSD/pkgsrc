@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1266 2009/04/11 21:00:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1267 2009/04/11 21:03:52 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1730,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/python25 to 2.5.4 [snj 2009-04-11]
 	Updated devel/p5-PAR to 0.992 [sno 2009-04-11]
 	Renamed devel/p5-PAR to p5-PAR [sno 2009-04-11]
+	Renamed graphics/p5-SWF-File to p5-SWF-File [sno 2009-04-11]
