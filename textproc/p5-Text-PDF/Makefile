@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:56 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/11 23:15:21 sno Exp $
 #
 
 DISTNAME=	Text-PDF-0.29a
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/Text-PDF-0.29
 USE_LANGUAGES=	# empty
 
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 
 PERL5_PACKLIST=	auto/Text/PDF/.packlist
 

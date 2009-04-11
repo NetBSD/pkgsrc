@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/10/13 12:37:58 obache Exp $
-
-SHA1 (IO-Compress-Base-2.015.tar.gz) = 595529168a46e8b195b7b0942c107f5fa2206af2
-RMD160 (IO-Compress-Base-2.015.tar.gz) = 85a9033066a5c030e673c7e328f867608eb29fd6
-Size (IO-Compress-Base-2.015.tar.gz) = 95844 bytes

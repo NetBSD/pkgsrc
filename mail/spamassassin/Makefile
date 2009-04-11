@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.92 2009/03/07 13:25:19 seb Exp $
+# $NetBSD: Makefile,v 1.93 2009/04/11 23:15:20 sno Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.2.5
 PKGNAME=	spamassassin-3.2.5
-PKGREVISION=	2
+PKGREVISION=	3
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -24,7 +24,7 @@ DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
 DEPENDS+=	{p5-MIME-Base64>=2.11,perl>=5.8.0}:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
