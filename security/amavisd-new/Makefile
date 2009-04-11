@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2009/01/01 14:30:02 obache Exp $
+# $NetBSD: Makefile,v 1.41 2009/04/11 23:15:21 sno Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
+PKGREVISION=	1
 CATEGORIES=	security mail
 MASTER_SITES=	http://www.ijs.si/software/amavisd/ \
 		http://mirrors.catpipe.net/amavisd-new/ \
@@ -21,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
 DEPENDS+=	p5-BerkeleyDB-[0-9]*:../../databases/p5-BerkeleyDB
-DEPENDS+=	p5-Compress-Zlib>=1.35:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress>=2.017:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib>=1.05:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-Digest-MD5>=2.22:../../security/p5-Digest-MD5
