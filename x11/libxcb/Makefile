@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/04/08 13:06:22 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/11 12:48:07 wiz Exp $
 #
 
-DISTNAME=	libxcb-1.1.93
+DISTNAME=	libxcb-1.2
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
