@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8028 2009/04/10 17:38:27 asau Exp $
+$NetBSD: TODO,v 1.8029 2009/04/11 00:17:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avrdude-5.3.1
 	o awesome-3.2.1
 	o baci-20040415
-	o bakefile-2.6
+	o bacula-3.0.0
 	o balance-3.42
 	o bbdb-2.35
 	o bbkeys-0.9.0
@@ -601,7 +601,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
-	o fotoxx-6.1
+	o fotoxx-6.4.2
 	o freeciv-2.1.9
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -653,10 +653,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade-3.6.1
 	o glade3-3.6.0 [GNOME 2.26]
 	o glchess-1.0.5
+	o glib2-2.20.1
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.37
+	o gmime-2.4.6
 	o gmpc-0.18.0
 	o gnash-0.8.5
 	o gnet1-1.1.9
@@ -725,6 +727,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hesiod-3.1.0
 	o heyu-2.5.1
 	o hiawatha-6.12
+	o highlight-2.8
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3
 	o honeyd-1.5c
@@ -814,7 +817,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdaemon-0.13
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
-	o libdrm-2.4.6
+	o libdrm-2.4.9
 	o libextractor-0.5.22
 	o libflash-0.4.13
 	o libgda-4.0.0 [GNOME 2.26]
@@ -842,6 +845,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libpciaccess-0.10.5
 	o librep-0.17.2
 	o libshout-2.2.2
+	o libsoup24-2.26.0.9
 	o libssh-0.2
 	o libssh2-1.1
 	o libstatgrab-0.16
@@ -1262,6 +1266,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snownews-1.5.11
 	o socat-1.7.1.0
 	o sope-4.5.9
+	o soprano-2.2.3
+	o sound-juicer-2.26.1
 	o source-highlight-2.11.1
 	o sox-14.2.0
 	o spcaview-20060501
@@ -1275,7 +1281,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o subversion-1.6.0
+	o subversion-1.6.1
 	o subversion-base-1.6.0
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
@@ -1372,6 +1378,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o whohas-0.23
 	o windowlab-1.34
 	o wine-devel-1.1.18
+	o wireshark-1.0.7
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1410,10 +1417,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-glint-1.2.2
 	o xf86-video-i128-1.3.1
 	o xf86-video-i740-1.3.0
-	o xf86-video-intel-2.6.99.902
+	o xf86-video-intel-2.6.99.903
 	o xf86-video-neomagic-1.2.2
 	o xf86-video-nsc-2.8.3
 	o xf86-video-nv-2.1.13
+	o xf86-video-radeonhd-1.2.5
 	o xf86-video-rendition-4.2.1
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
@@ -1479,6 +1487,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yabause-0.9.9
 	o yacas-1.2.0
 	o yafc-1.1
+	o yasm-0.8.0
 	o yaz-3.0.45
 	o yodl-2.01.02
 	o youtube-dl-20090406
@@ -1487,7 +1496,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yorick-2.1.05
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.3.5
+	o zile-2.3.6
 	o zircon-1.18.256
 	o zoom-1.1.3
 	o zope-3.4.0
