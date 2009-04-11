@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1276 2009/04/11 22:44:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1277 2009/04/11 23:16:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1742,3 +1742,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Compress-Raw-Zlib to 2.017 [sno 2009-04-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.017 [sno 2009-04-11]
 	Added devel/p5-IO-Compress version 2.017 [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Base [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Zlib [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Bzip2 [sno 2009-04-11]
+	Removed devel/p5-Compress-Zlib [sno 2009-04-11]
