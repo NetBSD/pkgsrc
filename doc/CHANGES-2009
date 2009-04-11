@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1257 2009/04/11 09:15:07 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.1258 2009/04/11 12:48:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1720,3 +1720,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/seamonkey to 1.1.16 [ghen 2009-04-11]
 	Updated www/seamonkey-bin to 1.1.16 [ghen 2009-04-11]
 	Updated www/seamonkey-gtk1 to 1.1.16 [ghen 2009-04-11]
+	Updated x11/libxcb to 1.2 [wiz 2009-04-11]
