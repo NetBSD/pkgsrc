@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/04/11 18:00:42 snj Exp $
+
+--- view.c.orig	2009-04-01 14:05:49.000000000 -0700
++++ view.c	2009-04-01 14:07:07.000000000 -0700
+@@ -564,6 +564,7 @@ void graphicEngineInit()
+ 	(void) cbreak();		// <curses.h> do not buffer typed characters, use at once
+ 	(void) noecho();		// <curses.h> do not echo typed characters
+ 	start_color();			// <curses.h> use colors
++	curs_set(0);
+ 	init_pair(RED, COLOR_RED, COLOR_BLACK);		// <curses.h> define color-pair
+ 	init_pair(GREEN, COLOR_GREEN, COLOR_BLACK);	// <curses.h> define color-pair
+ 	init_pair(YELLOW, COLOR_YELLOW, COLOR_BLACK);	// <curses.h> define color-pair
