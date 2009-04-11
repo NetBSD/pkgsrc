@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2009/03/06 13:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2009/04/11 17:23:42 reed Exp $
 #
 
 DISTNAME=	pygtk-2.14.1
@@ -26,6 +26,7 @@ PLIST_VARS+=	py25
 PYTHON_VERSIONS_ACCEPTED=	25 24
 
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.15.3
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.16.0
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
