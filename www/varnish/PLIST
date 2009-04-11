@@ -1,17 +1,33 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/12/04 16:04:54 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/11 19:03:53 spz Exp $
+bin/varnishadm
 bin/varnishhist
 bin/varnishlog
 bin/varnishncsa
+bin/varnishreplay
 bin/varnishstat
+bin/varnishtest
 bin/varnishtop
+etc/varnish/default.vcl
+include/varnish/shmlog.h
+include/varnish/shmlog_tags.h
+include/varnish/stat_field.h
+include/varnish/stats.h
+include/varnish/varnishapi.h
 lib/libvarnish.la
 lib/libvarnishapi.la
+lib/libvarnishcompat.la
 lib/libvcl.la
+lib/pkgconfig/varnishapi.pc
+man/man1/varnishadm.1
 man/man1/varnishd.1
 man/man1/varnishhist.1
 man/man1/varnishlog.1
 man/man1/varnishncsa.1
+man/man1/varnishreplay.1
 man/man1/varnishstat.1
+man/man1/varnishtest.1
 man/man1/varnishtop.1
 man/man7/vcl.7
 sbin/varnishd
+@dirrm include/varnish
+@dirrm etc/varnish
