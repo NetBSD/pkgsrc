@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/04/07 11:18:31 kefren Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/12 14:06:14 wiz Exp $
 
 DISTNAME=	mono-tools-2.4
 CATEGORIES=	devel
@@ -21,8 +21,9 @@ MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--mandir=${PKGMANDIR}
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../graphics/libgdiplus/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
