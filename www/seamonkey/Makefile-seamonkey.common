@@ -1,9 +1,9 @@
-# $NetBSD: Makefile-seamonkey.common,v 1.24 2009/03/19 15:09:45 ghen Exp $
+# $NetBSD: Makefile-seamonkey.common,v 1.24.2.1 2009/04/12 20:31:19 tron Exp $
 # used by www/seamonkey/Makefile
 # used by www/seamonkey-gtk1/Makefile
 
 MOZILLA_BIN=		seamonkey-bin
-MOZ_VER=		1.1.15
+MOZ_VER=		1.1.16
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		seamonkey-${MOZ_DIST_VER}.source
 CATEGORIES=		www
