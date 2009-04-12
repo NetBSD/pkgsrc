@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8031 2009/04/12 11:13:29 wiz Exp $
+$NetBSD: TODO,v 1.8032 2009/04/12 14:34:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -570,7 +570,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o evolution-mapi-0.26.0.1 [GNOME 2.26]
-	o evolution-sharp-0.20.0
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
 	o exempi-2.1.0
@@ -614,7 +613,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
 	o fuse-archivemount-0.6.0
-	o fuse-ntfs-3g-2009.2.1
+	o fuse-ntfs-3g-2009.4.4
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
@@ -679,6 +678,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
+	o gnutls-2.6.5
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -1016,9 +1016,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Compress-Raw-Zlib-2.017
 	o p5-DBD-Sybase-1.08
 	o p5-DB_File-1.820
-	o p5-DateTime-TimeZone-0.86
+	o p5-DateTime-TimeZone-0.88
 	o p5-IO-Socket-SSL-1.24
 	o p5-Net-Twitter-2.10 [pkg/40812]
+	o p5-WWW-Curl-4.06
 	o p5-XML-Feed-0.42
 	o p5-XML-RSS-1.44
 	o p5-ispman-1.2
@@ -1128,9 +1129,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.15
 	o py-psycopg-2.0.9
-	o py-pytz-2009d
+	o py-pytz-2009e
+	o py-setuptools-0.6
 	o py-sqlite2-2.5.1
-	o py-subversion-1.6.0
+	o py-subversion-1.6.1
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.4
@@ -1288,7 +1290,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subversion-1.6.1
-	o subversion-base-1.6.0
+	o subversion-base-1.6.1
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o suse_base-11.0
 	o swi-prolog-5.6.31
@@ -1399,7 +1401,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wyrd-1.4.4
 	o x11perf-1.5
 	o x11vnc-0.9.7
-	o x264-devel-20090404
+	o x264-devel-20090411
 	o xanalyser-1.30
 	o xapian-1.0.11
 	o xapian-omega-1.0.11
