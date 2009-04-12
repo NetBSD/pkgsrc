@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/04/11 22:09:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/04/12 02:44:08 minskim Exp $
 bin/a2ping
 bin/aleph
 bin/bibtex
@@ -13,12 +13,9 @@ bin/dvilj2p
 bin/dvilj4
 bin/dvilj4l
 bin/dvilj6
-bin/dvipdfm
-bin/dvipdft
 bin/dvitomp
 bin/dvitype
 bin/e2pall
-bin/ebb
 bin/epstopdf
 bin/fdf2tan
 bin/fdf2tex
@@ -95,11 +92,8 @@ man/man1/dvilj2p.1
 man/man1/dvilj4.1
 man/man1/dvilj4l.1
 man/man1/dvilj6.1
-man/man1/dvipdfm.1
-man/man1/dvipdft.1
 man/man1/dvitomp.1
 man/man1/dvitype.1
-man/man1/ebb.1
 man/man1/eplain.1
 man/man1/etex.1
 man/man1/fdf2tex.1

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2009/03/18 18:54:10 darcy Exp $
+# $NetBSD: Makefile,v 1.26 2009/04/12 02:44:07 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -23,7 +23,6 @@ EXTRACT_ELEMENTS+=	aliases
 EXTRACT_ELEMENTS+=	bibtex
 EXTRACT_ELEMENTS+=	context
 EXTRACT_ELEMENTS+=	doc
-EXTRACT_ELEMENTS+=	dvipdfm
 EXTRACT_ELEMENTS+=	dvips
 EXTRACT_ELEMENTS+=	fonts
 EXTRACT_ELEMENTS+=	makeindex
@@ -165,6 +164,7 @@ post-extract:
 	rm -f ${WRKSRC}/tex/generic/hyphen/hyphen.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/hypht1.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/zerohyph.tex
+	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
 	rm -f ${WRKSRC}/tex/plain/config/language.def
 
 do-install:
