@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1305 2009/04/12 11:08:41 he Exp $
+$NetBSD: CHANGES-2009,v 1.1306 2009/04/12 11:56:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1785,3 +1785,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Attribute-Handlers to 0.83 [he 2009-04-12]
 	Updated devel/p5-Cache-Cache to 1.06 [he 2009-04-12]
 	Updated devel/p5-Class-C3 to 0.21 [he 2009-04-12]
+	Updated devel/p5-Test-POE-Server-TCP to 1.02 [sno 2009-04-12]
