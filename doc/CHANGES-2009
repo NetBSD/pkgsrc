@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1327 2009/04/12 19:25:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1328 2009/04/12 19:27:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1807,3 +1807,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-Load to 0.16 [sno 2009-04-12]
 	Updated devel/p5-Class-Accessor-Grouped to 0.08003 [abs 2009-04-12]
 	Updated devel/p5-Getopt-Long to 2.38 [sno 2009-04-12]
+	Added databases/p5-Class-DBI-Plugin version 0.03 [abs 2009-04-12]
+	Added databases/p5-Class-DBI-Plugin-DeepAbstractSearch version 0.08 [abs 2009-04-12]
