@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1338 2009/04/12 20:42:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1339 2009/04/12 20:48:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1819,3 +1819,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-StrictConstructor to 0.08 [sno 2009-04-12]
 	Updated devel/p5-Hash-Merge to 0.11 [sno 2009-04-12]
 	Updated mail/p5-Email-Stuff to 2.08 [sno 2009-04-12]
+	Updated mail/p5-Email-Valid to 0.181 [sno 2009-04-12]
