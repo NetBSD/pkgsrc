@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/10/25 08:26:12 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/04/12 20:46:20 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -159,6 +159,7 @@ include/octave-${PKGVERSION}/octave/lo-sysdep.h
 include/octave-${PKGVERSION}/octave/lo-utils.h
 include/octave-${PKGVERSION}/octave/load-path.h
 include/octave-${PKGVERSION}/octave/load-save.h
+include/octave-${PKGVERSION}/octave/ls-ascii-helper.h
 include/octave-${PKGVERSION}/octave/ls-hdf5.h
 include/octave-${PKGVERSION}/octave/ls-mat-ascii.h
 include/octave-${PKGVERSION}/octave/ls-mat4.h
@@ -693,6 +694,7 @@ man/man1/mkoctfile.1
 man/man1/octave-bug.1
 man/man1/octave-config.1
 man/man1/octave.1
+share/applications/www.octave.org-octave.desktop
 share/octave/${PKGVERSION}/NEWS
 share/octave/${PKGVERSION}/doc/Octave-FAQ.ps
 share/octave/${PKGVERSION}/doc/liboctave.ps
@@ -1452,6 +1454,7 @@ share/octave/${PKGVERSION}/m/special-matrix/vander.m
 share/octave/${PKGVERSION}/m/special-matrix/wilkinson.m
 share/octave/${PKGVERSION}/m/startup/inputrc
 share/octave/${PKGVERSION}/m/startup/octaverc
+share/octave/${PKGVERSION}/m/statistics/base/__quantile__.m
 share/octave/${PKGVERSION}/m/statistics/base/center.m
 share/octave/${PKGVERSION}/m/statistics/base/cloglog.m
 share/octave/${PKGVERSION}/m/statistics/base/cor.m
@@ -1471,8 +1474,10 @@ share/octave/${PKGVERSION}/m/statistics/base/mode.m
 share/octave/${PKGVERSION}/m/statistics/base/moment.m
 share/octave/${PKGVERSION}/m/statistics/base/ols.m
 share/octave/${PKGVERSION}/m/statistics/base/ppplot.m
+share/octave/${PKGVERSION}/m/statistics/base/prctile.m
 share/octave/${PKGVERSION}/m/statistics/base/probit.m
 share/octave/${PKGVERSION}/m/statistics/base/qqplot.m
+share/octave/${PKGVERSION}/m/statistics/base/quantile.m
 share/octave/${PKGVERSION}/m/statistics/base/range.m
 share/octave/${PKGVERSION}/m/statistics/base/ranks.m
 share/octave/${PKGVERSION}/m/statistics/base/run_count.m
