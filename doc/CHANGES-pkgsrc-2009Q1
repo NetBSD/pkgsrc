@@ -1,17 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.5 2009/04/11 17:40:38 spz Exp $
-
-Changes to the packages collection and infrastructure on the
-pkgsrc-2009Q1 branch:
-
-Created pkgsrc-2009Q1 branch [agc 2009-04-06 07:00 GMT]
-
-Pullup ticket #2727 - requested by joerg
-epydoc: fix destdir support
-Pullup ticket #2728 - requested by dsainty
-libproxy: fix build of dependent packages
-Pullup ticket #2730 - requested by martti
-clamav: bug fix update
-Pullup ticket #2731 - requested by tron
-wireshark: security fix
-Pullup ticket #2732 - requested by joerg
-pkg_install: bug fix
+Pullup ticket #2733 - requested by ghen
+seamonkey: security update
+seamonkey-gtk1: security update
+seamonkey-bin: security update
