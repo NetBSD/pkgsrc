@@ -1,0 +1,15 @@
+Class::DBI::Plugin is an abstract base class for Class::DBI plugins.
+Its purpose is to make writing plugins easier. Writers of plugins
+should be able to concentrate on the functionality their module
+provides, instead of having to deal with the symbol table hackery
+involved when writing a plugin module. Only three things must be
+remembered:
+
+   1. All methods which are to exported are given the "Plugged"
+      attribute. All other methods are not exported to the plugged-in
+      class.
+   2. Method calls which are to be sent to the plugged-in class
+      are put in the init() method. Examples of these are set_sql(),
+      add_trigger() and so on.
+   3. The class parameter for the init() method and the "Plugged"
+      methods is the plugged-in class, not the plugin class.
