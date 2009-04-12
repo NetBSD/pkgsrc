@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2009/02/21 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2009/04/12 20:46:20 adam Exp $
 
 DISTNAME=	octave-${OCTAVE_VER}
-PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	ftp://ftp.octave.org/pub/octave/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +13,7 @@ BUILD_DEPENDS+=	bison>=1.875:../../devel/bison
 BUILD_DEPENDS+=	gperf>=2.7:../../devel/gperf
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 
-OCTAVE_VER=	3.0.3
+OCTAVE_VER=	3.0.5
 CONFLICTS+=	octave-2.*
 
 .if (${MACHINE_ARCH} == "arm32")
@@ -90,5 +89,7 @@ post-install:
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
