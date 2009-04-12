@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.2 2009/03/25 22:37:13 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/12 13:16:28 wiz Exp $
 #
 
-DISTNAME=	evolution-sharp-0.18.1
-PKGREVISION=	1
+DISTNAME=	evolution-sharp-0.20.0
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.18/}
+HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
 COMMENT=	.NET language binding for various Evolution libraries
+
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -19,8 +22,6 @@ USE_TOOLS+=		gmake pkg-config
 
 .include "../../lang/mono/buildlink3.mk"
 BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server>=2.24.0
-BUILDLINK_API_DEPENDS.evolution-data-server+=	evolution-data-server<2.25.0
 .include "../../mail/evolution-data-server/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.12.5
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
