@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/09 10:16:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/12 16:37:25 wiz Exp $
 bin/mnemosyne
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -84,7 +84,9 @@ ${PYSITELIB}/mnemosyne/pyqt_ui/import_frm.pyc
 ${PYSITELIB}/mnemosyne/pyqt_ui/import_frm.pyo
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_XX.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_cs.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_da.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_de.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_eo.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_es.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_fa.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_fr.qm
@@ -98,14 +100,20 @@ ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_CN.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_HK.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_SG.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/mnemosyne_zh_TW.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_ar.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_ca.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_cs.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_de.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_es.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_fr.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_he.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_it.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_ja.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_nb.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_pl.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_pt-br.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_ru.qm
+${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_sk.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_zh-cn.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/locale/qt_zh-tw.qm
 ${PYSITELIB}/mnemosyne/pyqt_ui/main_dlg.py
