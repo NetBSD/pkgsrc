@@ -1,4 +1,4 @@
-# $NetBSD: octave.mk,v 1.7 2009/01/18 02:43:38 obache Exp $
+# $NetBSD: octave.mk,v 1.8 2009/04/12 20:46:20 adam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,4 +27,3 @@ REPLACE.octave.old=	.*octave
 REPLACE.octave.new=	${LOCALBASE}/bin/octave
 REPLACE_FILES.octave=	${REPLACE_OCTAVE}
 .endif # defined(REPLACE_OCTAVE)
-
