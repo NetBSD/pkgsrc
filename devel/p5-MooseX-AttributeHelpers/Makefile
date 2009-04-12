@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/01/17 12:23:03 seb Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/12 20:07:24 sno Exp $
 #
 
-DISTNAME=	MooseX-AttributeHelpers-0.14
+DISTNAME=	MooseX-AttributeHelpers-0.17
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-AttributeHelpers/
 COMMENT=	Perl 5 module providing extensions to Moose attributes interface
+LICENSE=	artistic-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
