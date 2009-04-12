@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1323 2009/04/12 19:08:12 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1324 2009/04/12 19:14:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1803,3 +1803,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-Format-Strptime to 1.0900 [sno 2009-04-12]
 	Updated time/p5-DateTime-TimeZone to 0.88 [sno 2009-04-12]
 	Updated devel/p5-NEXT to 0.63 [sno 2009-04-12]
+	Updated devel/p5-Test-Output to 0.13 [sno 2009-04-12]
