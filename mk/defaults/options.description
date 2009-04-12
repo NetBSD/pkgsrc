@@ -259,6 +259,7 @@ liferea-gtkhtml		Use libgtkhtml2 to render HTML.
 liferea-seamonkey	Use Seamonkey to render HTML.
 links			Use and enable support for the links browser.
 links-zlib		Enable zlib support for the links WWW browser.
+live			Enable live555 support.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
 lua			Enable Lua support.
@@ -290,6 +291,8 @@ mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 mutt-compressed-mbox    Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
+mutt-sidebar		Enable the mutt mailbox sidebar patch.
+mutt-smtp		Enable smpt support in mutt.
 mysql			Enable MySQL support.
 nas			Enable usage of the Network Audio System.
 ncurses			Enable ncurses support.
