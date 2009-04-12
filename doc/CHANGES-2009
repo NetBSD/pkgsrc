@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1292 2009/04/12 02:38:24 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1293 2009/04/12 02:45:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1761,3 +1761,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-YAML-LibYAML to 0.32 [sno 2009-04-12]
 	Added print/tex-bin-dvipdfm version 0.13.2d [minskim 2009-04-12]
 	Added print/dvipdfm version 0.13.2d [minskim 2009-04-12]
+	Updated print/teTeX3-texmf to 3.0nb11 [minskim 2009-04-12]
+	Updated print/teTeX3-bin to 3.0nb28 [minskim 2009-04-12]
+	Updated print/teTeX to 3.0nb5 [minskim 2009-04-12]
