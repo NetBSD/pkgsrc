@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1330 2009/04/12 19:41:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1331 2009/04/12 19:48:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1811,3 +1811,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/p5-Class-DBI-Plugin-DeepAbstractSearch version 0.08 [abs 2009-04-12]
 	Updated devel/p5-Config-IniFiles to 2.48 [sno 2009-04-12]
 	Updated devel/p5-Devel-Declare to 0.004000 [sno 2009-04-12]
+	Updated devel/p5-Variable-Magic to 0.33 [sno 2009-04-12]
