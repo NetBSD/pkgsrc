@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1285 2009/04/12 00:51:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1286 2009/04/12 00:53:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1754,3 +1754,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-Install to 0.82 [sno 2009-04-12]
 	Updated devel/p5-IPC-ShareLite to 0.17 [sno 2009-04-12]
 	Updated textproc/p5-Text-CSV_XS to 0.64 [sno 2009-04-12]
+	Updated devel/p5-PAR-Dist to 0.44 [sno 2009-04-12]
