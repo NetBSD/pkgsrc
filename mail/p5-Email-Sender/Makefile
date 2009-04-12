@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/02/22 12:18:39 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/12 12:46:05 sno Exp $
 
-DISTNAME=	Email-Sender-0.002
+DISTNAME=	Email-Sender-0.004
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
@@ -8,15 +8,18 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-Sender/
 COMMENT=	Email::Sender - a library for sending email
+LICENSE=	artistic-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	p5-Capture-Tiny-[0-9]*:../../devel/p5-Capture-Tiny
 DEPENDS+=	p5-Class-Method-Modifiers>=0:../../devel/p5-Class-Method-Modifiers
 DEPENDS+=	p5-Email-Abstract>=3:../../mail/p5-Email-Abstract
 DEPENDS+=	p5-Email-Address>=0:../../mail/p5-Email-Address
 DEPENDS+=	p5-Email-Simple>=1.998:../../mail/p5-Email-Simple
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
-DEPENDS+=	p5-Mouse>=0.12:../../devel/p5-Mouse
+DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
+DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
 DEPENDS+=	p5-Sys-Hostname-Long>=0:../../sysutils/p5-Sys-Hostname-Long
 
 PERL5_REQD+=	5.8.0
