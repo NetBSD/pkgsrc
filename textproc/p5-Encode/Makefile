@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/03/09 20:22:43 rhaen Exp $
+# $NetBSD: Makefile,v 1.10 2009/04/12 00:42:50 sno Exp $
 
-DISTNAME=	Encode-2.32
+DISTNAME=	Encode-2.33
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Encode/}
