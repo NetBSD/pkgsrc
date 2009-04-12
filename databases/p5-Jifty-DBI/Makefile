@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:45 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/12 10:35:45 he Exp $
 
-DISTNAME=	Jifty-DBI-0.49
+DISTNAME=	Jifty-DBI-0.53
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Jifty/}
 
@@ -41,7 +40,7 @@ DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
-DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
+DEPENDS+=	{perl>=5.10,p5-version-[0-9]*}:../../devel/p5-version
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
