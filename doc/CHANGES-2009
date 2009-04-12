@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1304 2009/04/12 11:00:47 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1305 2009/04/12 11:08:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1778,3 +1778,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Base to 0.58 [sno 2009-04-12]
 	Added devel/p5-Data-Dumper-Names version 0.03 [sno 2009-04-12]
 	Updated devel/p5-Test-Most to 0.21 [sno 2009-04-12]
+	Updated databases/p5-Catalyst-Model-DBIC-Schema to 0.23 [he 2009-04-12]
+	Updated databases/p5-DBD-Google to 0.51nb1 [he 2009-04-12]
+	Updated databases/p5-DB_File to 1.820 [he 2009-04-12]
+	Updated databases/p5-Jifty-DBI to 0.53 [he 2009-04-12]
+	Updated devel/p5-Attribute-Handlers to 0.83 [he 2009-04-12]
+	Updated devel/p5-Cache-Cache to 1.06 [he 2009-04-12]
+	Updated devel/p5-Class-C3 to 0.21 [he 2009-04-12]
