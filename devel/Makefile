@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1148 2009/04/12 10:57:05 sno Exp $
+# $NetBSD: Makefile,v 1.1149 2009/04/12 12:41:30 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -441,6 +441,7 @@ SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Memcached
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
+SUBDIR+=	p5-Capture-Tiny
 SUBDIR+=	p5-Carp-Assert
 SUBDIR+=	p5-Carp-Assert-More
 SUBDIR+=	p5-Carp-Clan
