@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/02/10 05:51:04 seb Exp $
+# $NetBSD: Makefile,v 1.10 2009/04/12 18:26:34 sno Exp $
 
-DISTNAME=	Mouse-0.16
+DISTNAME=	Mouse-0.21
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SARTAK/}
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SARTAK/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Mouse/
 COMMENT=	Perl module implementing an extension of the perl object system
+LICENSE=	artistic-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
