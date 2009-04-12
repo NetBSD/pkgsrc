@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1311 2009/04/12 12:56:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1312 2009/04/12 13:01:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1791,3 +1791,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Capture-Tiny version 0.05 [sno 2009-04-12]
 	Updated mail/p5-Email-Sender to 0.004 [sno 2009-04-12]
 	Updated devel/p5-Class-MOP to 0.81 [sno 2009-04-12]
+	Updated devel/p5-Moose to 0.74 [sno 2009-04-12]
