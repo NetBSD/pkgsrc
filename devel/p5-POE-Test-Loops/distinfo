@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/12 12:54:04 he Exp $
+$NetBSD: distinfo,v 1.2 2009/04/12 10:10:20 sno Exp $
 
-SHA1 (POE-Test-Loops-1.002.tar.gz) = 2d76336da4c930ddbebc02834583cb4264f107be
-RMD160 (POE-Test-Loops-1.002.tar.gz) = 5530bb0570a5dba7d6918d4d85c6e7ffab30afaa
-Size (POE-Test-Loops-1.002.tar.gz) = 49303 bytes
+SHA1 (POE-Test-Loops-1.005.tar.gz) = 85a7b805542ecfae32cec5319a3d4eb8f44e1fd1
+RMD160 (POE-Test-Loops-1.005.tar.gz) = 329483ad3c3ef76d6d6f6020dff93672dd0d3746
+Size (POE-Test-Loops-1.005.tar.gz) = 51385 bytes
