@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.208 2009/04/12 02:28:07 minskim Exp $
+# $NetBSD: Makefile,v 1.209 2009/04/12 02:38:25 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -26,6 +26,7 @@ SUBDIR+=	cjk-lyx
 SUBDIR+=	cnprint
 SUBDIR+=	cups
 SUBDIR+=	dvidvi
+SUBDIR+=	dvipdfm
 SUBDIR+=	dvipdfmx
 SUBDIR+=	dvipsk
 SUBDIR+=	enscript
