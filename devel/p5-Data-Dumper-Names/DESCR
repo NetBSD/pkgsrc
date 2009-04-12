@@ -1,0 +1,7 @@
+This module is an alternative to Data::Dumper::Simple. Many people like the
+aforementioned module but do not like the fact that it uses a source filter.
+In order to pull off the trick with this module, we use PadWalker. This
+introduces its own set of problems, not the least of which is that PadWalker
+uses undocumented features of the Perl internals and has an annoying tendency
+to break. Thus, if this module doesn't work on your machine you may have to
+go back to Data::Dumper::Simple.
