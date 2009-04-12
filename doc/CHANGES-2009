@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1288 2009/04/12 01:17:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1289 2009/04/12 01:21:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1757,3 +1757,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-PAR-Dist to 0.44 [sno 2009-04-12]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.50 [sno 2009-04-12]
 	Updated devel/p5-Devel-PPPort to 3.17 [sno 2009-04-12]
+	Updated archivers/p5-Archive-Tar to 1.46nb1 [sno 2009-04-12]
