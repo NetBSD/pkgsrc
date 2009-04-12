@@ -1,0 +1,10 @@
+Capture::Tiny provides a simple, portable way to capture anything sent to
+STDOUT or STDERR, regardless of whether it comes from Perl, from XS code
+or from an external program. Optionally, output can be teed so that it is
+captured while being passed through to the original handles. Yes, it even
+works on Windows. Stop guessing which of a dozen capturing modules to use
+in any particular situation and just use this one.
+
+This module was heavily inspired by IO::CaptureOutput, which provides
+similar functionality without the ability to tee output and with more
+complicated code and API.
