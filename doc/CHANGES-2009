@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1300 2009/04/12 10:10:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1301 2009/04/12 10:27:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1774,3 +1774,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE to 1.004 [sno 2009-04-12]
 	Updated devel/p5-POE-Component-Pluggable to 1.18 [sno 2009-04-12]
 	Updated devel/p5-POE-Test-Loops to 1.005 [sno 2009-04-12]
+	Updated devel/p5-Test-Deep to 0.104 [sno 2009-04-12]
