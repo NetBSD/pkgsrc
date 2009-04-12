@@ -1,13 +1,22 @@
-# $NetBSD: buildlink3.mk,v 1.17 2009/03/20 19:24:38 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2009/04/12 00:29:26 sno Exp $
 
 BUILDLINK_TREE+=	gd
 
 .if !defined(GD_BUILDLINK3_MK)
 GD_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gd+=		gd>=2.0.15nb1
+BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.15nb1
 BUILDLINK_ABI_DEPENDS.gd+=	gd>=2.0.33nb3
 BUILDLINK_PKGSRCDIR.gd?=	../../graphics/gd
+
+pkgbase := gd
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.gd:Mx11)
+.include "../../x11/libXpm/buildlink3.mk"
+#.include "../../x11/libXp/buildlink3.mk"
+#.include "../../mk/xaw.buildlink3.mk"
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
