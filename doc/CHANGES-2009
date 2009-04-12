@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1308 2009/04/12 12:06:27 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1309 2009/04/12 12:41:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-POE-Server-TCP to 1.02 [sno 2009-04-12]
 	Updated www/p5-CGI to 3.43 [sno 2009-04-12]
 	Updated graphics/p5-Image-Size to 3.2 [sno 2009-04-12]
+	Added devel/p5-Capture-Tiny version 0.05 [sno 2009-04-12]
