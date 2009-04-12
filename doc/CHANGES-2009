@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1309 2009/04/12 12:41:30 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1310 2009/04/12 12:47:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI to 3.43 [sno 2009-04-12]
 	Updated graphics/p5-Image-Size to 3.2 [sno 2009-04-12]
 	Added devel/p5-Capture-Tiny version 0.05 [sno 2009-04-12]
+	Updated mail/p5-Email-Sender to 0.004 [sno 2009-04-12]
