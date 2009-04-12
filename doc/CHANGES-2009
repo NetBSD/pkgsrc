@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1333 2009/04/12 20:08:50 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1334 2009/04/12 20:13:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1814,3 +1814,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Variable-Magic to 0.33 [sno 2009-04-12]
 	Updated devel/p5-String-Format to 1.15 [sno 2009-04-12]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.17 [sno 2009-04-12]
+	Updated devel/p5-MooseX-ClassAttribute to 0.08 [sno 2009-04-12]
