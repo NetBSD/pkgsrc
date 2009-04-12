@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/11 21:32:46 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/12 07:33:35 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.lzma
@@ -11,7 +11,7 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/web2c/
 COMMENT=	TeX implementation translating WEB to C
 
-CONFLICTS+=	teTeX-bin-[0-9]*
+CONFLICTS+=	teTeX-bin<=3.0nb28
 
 EXTRACT_ELEMENTS=	${DISTNAME}/config \
 			${DISTNAME}/libs/lua51 \
