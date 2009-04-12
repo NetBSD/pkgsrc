@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1294 2009/04/12 06:46:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1295 2009/04/12 07:21:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1764,3 +1764,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb11 [minskim 2009-04-12]
 	Updated print/teTeX3-bin to 3.0nb28 [minskim 2009-04-12]
 	Updated print/teTeX to 3.0nb5 [minskim 2009-04-12]
+	Updated textproc/iso8879 to 1986nb7 [minskim 2009-04-12]
+	Updated textproc/iso8879 to 1986nb8 [minskim 2009-04-12]
+	Updated textproc/docbook to 4.4nb3 [minskim 2009-04-12]
+	Updated textproc/dsssl-docbook-modular to 1.79nb3 [minskim 2009-04-12]
