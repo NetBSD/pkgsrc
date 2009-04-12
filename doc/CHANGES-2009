@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1315 2009/04/12 16:37:36 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1316 2009/04/12 16:52:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1795,3 +1795,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution-sharp to 0.20.0 [wiz 2009-04-12]
 	Updated sysutils/cdrtools to 2.01.01alpha59pre2 [wiz 2009-04-12]
 	Updated misc/mnemosyne to 1.2.1 [wiz 2009-04-12]
+	Updated x11/gnome-desktop-sharp to 2.26.0nb3 [wiz 2009-04-12]
