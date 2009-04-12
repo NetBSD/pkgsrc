@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1290 2009/04/12 01:31:42 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1291 2009/04/12 02:28:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1759,3 +1759,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-PPPort to 3.17 [sno 2009-04-12]
 	Updated archivers/p5-Archive-Tar to 1.46nb1 [sno 2009-04-12]
 	Updated textproc/p5-YAML-LibYAML to 0.32 [sno 2009-04-12]
+	Added print/tex-bin-dvipdfm version 0.13.2d [minskim 2009-04-12]
