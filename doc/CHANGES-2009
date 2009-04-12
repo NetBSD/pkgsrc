@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1293 2009/04/12 02:45:17 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1294 2009/04/12 06:46:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1742,10 +1742,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Compress-Raw-Zlib to 2.017 [sno 2009-04-11]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.017 [sno 2009-04-11]
 	Added devel/p5-IO-Compress version 2.017 [sno 2009-04-11]
-	Removed devel/p5-IO-Compress-Base [sno 2009-04-11]
-	Removed devel/p5-IO-Compress-Zlib [sno 2009-04-11]
-	Removed devel/p5-IO-Compress-Bzip2 [sno 2009-04-11]
-	Removed devel/p5-Compress-Zlib [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Base successor devel/p5-IO-Compress [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Zlib successor devel/p5-IO-Compress [sno 2009-04-11]
+	Removed devel/p5-IO-Compress-Bzip2 successor devel/p5-IO-Compress [sno 2009-04-11]
+	Removed devel/p5-Compress-Zlib successor devel/p5-IO-Compress [sno 2009-04-11]
 	Updated devel/p5-File-HomeDir to 0.86 [sno 2009-04-12]
 	Updated graphics/p5-GD to 2.41 [sno 2009-04-12]
 	Updated devel/p5-BSD-Resource to 1.29.03 [sno 2009-04-12]
