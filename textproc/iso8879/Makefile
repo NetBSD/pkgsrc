@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2009/04/08 22:43:26 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2009/04/12 07:00:29 minskim Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.oasis-open.org/cover/
 EXTRACT_SUFX=	.zip
@@ -23,7 +23,7 @@ INSTALLATION_DIRS=	share/sgml/iso8879
 
 INSTDIR=	${DESTDIR}${PREFIX}/share/sgml/iso8879
 
-SGML_CATALOGS=	${INSTDIR}/catalog
+SGML_CATALOGS=	${PREFIX}/share/sgml/iso8879
 
 do-install:
 	@unzip -a -q -o ${DISTDIR}/${DISTFILES} -d ${INSTDIR}
