@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1280 2009/04/12 00:35:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1281 2009/04/12 00:41:03 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1749,3 +1749,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-File-HomeDir to 0.86 [sno 2009-04-12]
 	Updated graphics/p5-GD to 2.41 [sno 2009-04-12]
 	Updated devel/p5-BSD-Resource to 1.29.03 [sno 2009-04-12]
+	Updated security/p5-IO-Socket-SSL to 1.24 [sno 2009-04-12]
