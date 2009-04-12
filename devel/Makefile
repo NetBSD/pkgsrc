@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1147 2009/04/11 23:16:40 sno Exp $
+# $NetBSD: Makefile,v 1.1148 2009/04/12 10:57:05 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -503,6 +503,7 @@ SUBDIR+=	p5-Data-Compare
 SUBDIR+=	p5-Data-Denter
 SUBDIR+=	p5-Data-Dump
 SUBDIR+=	p5-Data-Dump-Streamer
+SUBDIR+=	p5-Data-Dumper-Names
 SUBDIR+=	p5-Data-Hierarchy
 SUBDIR+=	p5-Data-OptList
 SUBDIR+=	p5-Data-Page
