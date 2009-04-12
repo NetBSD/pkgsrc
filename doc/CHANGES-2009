@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1296 2009/04/12 07:34:32 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1297 2009/04/12 09:29:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/dsssl-docbook-modular to 1.79nb3 [minskim 2009-04-12]
 	Updated print/web2c to 7.5.7nb2 [minskim 2009-04-12]
 	Updated print/teTeX3-bin to 3.0nb29 [minskim 2009-04-12]
+	Updated devel/p5-Net-CIDR to 0.13 [sno 2009-04-12]
