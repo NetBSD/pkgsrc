@@ -1,12 +1,12 @@
-$NetBSD: patch-af,v 1.1 2008/12/30 15:03:03 he Exp $
+$NetBSD: patch-af,v 1.2 2009/04/12 01:03:24 sno Exp $
 
 Fix culled from following references in
 http://rt.cpan.org/Public/Bug/Display.html?id=40698
 Expected output is now only present when VERBINST=1.
 
---- t/basic.t.orig	2008-10-10 04:28:25.000000000 +0200
-+++ t/basic.t
-@@ -130,7 +130,7 @@ is( $?, 0,                              
+--- t/basic.t.orig	2009-02-20 00:30:36.000000000 +0000
++++ t/basic.t	2009-04-12 00:52:42.000000000 +0000
+@@ -130,7 +130,7 @@
      diag $test_out;
  
  
@@ -14,8 +14,8 @@ Expected output is now only present when VERBINST=1.
 +my $install_out = run("$make install VERBINST=1");
  is( $?, 0, 'install' ) || diag $install_out;
  like( $install_out, qr/^Installing /m );
- like( $install_out, qr/^Writing /m );
-@@ -156,7 +156,7 @@ ok( $files{'perllocal.pod'},'  perllocal
+ 
+@@ -155,7 +155,7 @@
  SKIP: {
      skip 'VMS install targets do not preserve $(PREFIX)', 9 if $Is_VMS;
  
@@ -23,8 +23,8 @@ Expected output is now only present when VERBINST=1.
 +    $install_out = run("$make install VERBINST=1 PREFIX=elsewhere");
      is( $?, 0, 'install with PREFIX override' ) || diag $install_out;
      like( $install_out, qr/^Installing /m );
-     like( $install_out, qr/^Writing /m );
-@@ -176,7 +176,7 @@ SKIP: {
+ 
+@@ -174,7 +174,7 @@
  SKIP: {
      skip 'VMS install targets do not preserve $(DESTDIR)', 11 if $Is_VMS;
  
@@ -33,7 +33,7 @@ Expected output is now only present when VERBINST=1.
      is( $?, 0, 'install with DESTDIR' ) || 
          diag $install_out;
      like( $install_out, qr/^Installing /m );
-@@ -217,7 +217,7 @@ SKIP: {
+@@ -214,7 +214,7 @@
  SKIP: {
      skip 'VMS install targets do not preserve $(PREFIX)', 10 if $Is_VMS;
  
