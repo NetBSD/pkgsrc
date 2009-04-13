@@ -1,0 +1,12 @@
+e-TeX intends to fill the gap between TeX3 and the future NTS (New
+Typesetting System).  It consists of a series of features extending
+the capabilities of TeX3.
+
+Since compatibility between e-TeX and TeX3 has been a main concern,
+e-TeX has two modes of operation.  In TeX compatibility mode it fully
+deserves the name TeX and there are neither extended features nor
+additional primitive commands. That means in particular that e-TeX
+passes the TRIP test without any restriction.  There are, however, a
+few minor modifications that would be legitimate in any implementation
+of TeX.  In extended mode there are additional primitive commands and
+the extended features of e-TeX are available.
