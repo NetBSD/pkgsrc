@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1369 2009/04/13 19:00:51 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1370 2009/04/13 19:06:41 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1850,3 +1850,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ptlib to 2.6.1nb1 [cube 2009-04-13]
 	Added print/tex-etex-doc version 2.1 [minskim 2009-04-13]
 	Added print/tex-luatex version 0.1 [minskim 2009-04-13]
+	Added print/tex-luatex-doc version 0.1 [minskim 2009-04-13]
