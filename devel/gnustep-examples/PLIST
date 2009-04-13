@@ -1,157 +1,202 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/21 22:43:21 joerg Exp $
-share/GNUstep/Local/Applications/Calculator.app/Calculator
-share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.app.tiff
-share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.desktop
-share/GNUstep/Local/Applications/Calculator.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/Calculator.app/stamp.make
-share/GNUstep/Local/Applications/CurrencyConverter.app/CurrencyConverter
-share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/CurrencyConverter.desktop
-share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/CurrencyConverter.app/stamp.make
-share/GNUstep/Local/Applications/GSTest.app/GSTest
-share/GNUstep/Local/Applications/GSTest.app/Resources/GSTest.desktop
-share/GNUstep/Local/Applications/GSTest.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/GSTest.app/Resources/MainMenu.gorm/data.classes
-share/GNUstep/Local/Applications/GSTest.app/Resources/MainMenu.gorm/objects.gorm
-share/GNUstep/Local/Applications/GSTest.app/stamp.make
-share/GNUstep/Local/Applications/Ink.app/Ink
-share/GNUstep/Local/Applications/Ink.app/Resources/FileIcon_rtf.tiff
-share/GNUstep/Local/Applications/Ink.app/Resources/FileIcon_txt.tiff
-share/GNUstep/Local/Applications/Ink.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/Ink.app/Resources/Ink.desktop
-share/GNUstep/Local/Applications/Ink.app/Resources/Ink_app.tiff
-share/GNUstep/Local/Applications/Ink.app/Resources/Readme.rtf
-share/GNUstep/Local/Applications/Ink.app/stamp.make
-share/GNUstep/Local/Applications/NSBrowserTest.app/NSBrowserTest
-share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/NSBrowserTest.desktop
-share/GNUstep/Local/Applications/NSBrowserTest.app/stamp.make
-share/GNUstep/Local/Applications/NSPanelTest.app/NSPanelTest
-share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/NSPanelTest.app/Resources/NSPanelTest.desktop
-share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Test.strings
-share/GNUstep/Local/Applications/NSPanelTest.app/Resources/icon.tiff
-share/GNUstep/Local/Applications/NSPanelTest.app/stamp.make
-share/GNUstep/Local/Applications/NSScreenTest.app/NSScreenTest
-share/GNUstep/Local/Applications/NSScreenTest.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/NSScreenTest.app/Resources/NSScreenTest.desktop
-share/GNUstep/Local/Applications/NSScreenTest.app/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/Composite-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/CoordinateCheck-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/GSHbox-test.bundle/GSHbox-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/GSHbox-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/GSHbox-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/KeyboardInput-test.bundle/KeyboardInput-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/KeyboardInput-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/KeyboardInput-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSBox-test.bundle/NSBox-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSBox-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSBox-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorList-test.bundle/NSColorList-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorList-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorList-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorWell-test.bundle/NSColorWell-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorWell-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorWell-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSForm-test.bundle/NSForm-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSForm-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSForm-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSOutlineView-test.bundle/NSOutlineView-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSOutlineView-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSOutlineView-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSavePanel-test.bundle/NSSavePanel-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSavePanel-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSavePanel-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSScrollView-test.bundle/NSScrollView-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSScrollView-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSScrollView-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/NSSecureTextField-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSlider-test.bundle/NSSlider-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSlider-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSlider-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSplitView-test.bundle/NSSplitView-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSplitView-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSplitView-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTableView-test.bundle/NSTableView-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTableView-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTableView-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTextView-test.bundle/NSTextView-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTextView-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTextView-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/NSWindowStyleMask-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/stamp.make
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/StringDrawing-test
-share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/stamp.make
-share/GNUstep/Local/Tools/Calculator
-share/GNUstep/Local/Tools/CurrencyConverter
-share/GNUstep/Local/Tools/GSTest
-share/GNUstep/Local/Tools/Ink
-share/GNUstep/Local/Tools/NSBrowserTest
-share/GNUstep/Local/Tools/NSPanelTest
-share/GNUstep/Local/Tools/NSScreenTest
-@dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTextView-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTextView-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTableView-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSTableView-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSplitView-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSplitView-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSlider-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSlider-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSecureTextField-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSScrollView-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSScrollView-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSavePanel-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSSavePanel-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSOutlineView-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSOutlineView-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSForm-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSForm-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorWell-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorWell-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorList-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSColorList-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSBox-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSBox-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/KeyboardInput-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/KeyboardInput-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/GSHbox-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/GSHbox-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/CoordinateCheck-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/Resources
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle
-@dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest
-@dirrm share/GNUstep/Local/Library/ApplicationSupport
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library
-@dirrm share/GNUstep/Local/Applications/NSScreenTest.app/Resources
-@dirrm share/GNUstep/Local/Applications/NSScreenTest.app
-@dirrm share/GNUstep/Local/Applications/NSPanelTest.app/Resources
-@dirrm share/GNUstep/Local/Applications/NSPanelTest.app
-@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app/Resources
-@dirrm share/GNUstep/Local/Applications/NSBrowserTest.app
-@dirrm share/GNUstep/Local/Applications/Ink.app/Resources
-@dirrm share/GNUstep/Local/Applications/Ink.app
-@dirrm share/GNUstep/Local/Applications/GSTest.app/Resources/MainMenu.gorm
-@dirrm share/GNUstep/Local/Applications/GSTest.app/Resources
-@dirrm share/GNUstep/Local/Applications/GSTest.app
-@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app/Resources
-@dirrm share/GNUstep/Local/Applications/CurrencyConverter.app
-@dirrm share/GNUstep/Local/Applications/Calculator.app/Resources
-@dirrm share/GNUstep/Local/Applications/Calculator.app
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
-@comment in devel/gnustep-make: @dirrm share/GNUstep
+@comment $NetBSD: PLIST,v 1.7 2009/04/13 12:24:28 rh Exp $
+bin/Calculator
+bin/CurrencyConverter
+bin/GSTest
+bin/Ink
+bin/MyGL
+bin/NSBrowserTest
+bin/NSImageTest
+bin/NSPanelTest
+bin/NSScreenTest
+bin/md5Digest
+lib/GNUstep/ApplicationSupport/GSTest/Composite-test.bundle/Composite-test
+lib/GNUstep/ApplicationSupport/GSTest/Composite-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/Composite-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/CoordinateCheck-test
+lib/GNUstep/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/GSHbox-test.bundle/GSHbox-test
+lib/GNUstep/ApplicationSupport/GSTest/GSHbox-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/GSHbox-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/KeyboardInput-test.bundle/KeyboardInput-test
+lib/GNUstep/ApplicationSupport/GSTest/KeyboardInput-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/KeyboardInput-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle/NSAnimation-test
+lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/NSBox-test
+lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/NSColorList-test
+lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle/NSColorWell-test
+lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/NSForm-test
+lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/NSOutlineView-test
+lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSSavePanel-test.bundle/NSSavePanel-test
+lib/GNUstep/ApplicationSupport/GSTest/NSSavePanel-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSSavePanel-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSScrollView-test.bundle/NSScrollView-test
+lib/GNUstep/ApplicationSupport/GSTest/NSScrollView-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSScrollView-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/NSSecureTextField-test
+lib/GNUstep/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSSlider-test.bundle/NSSlider-test
+lib/GNUstep/ApplicationSupport/GSTest/NSSlider-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSSlider-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSSplitView-test.bundle/NSSplitView-test
+lib/GNUstep/ApplicationSupport/GSTest/NSSplitView-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSSplitView-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSTableView-test.bundle/NSTableView-test
+lib/GNUstep/ApplicationSupport/GSTest/NSTableView-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSTableView-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSTextView-test.bundle/NSTextView-test
+lib/GNUstep/ApplicationSupport/GSTest/NSTextView-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSTextView-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSViewAnimation-test.bundle/NSViewAnimation-test
+lib/GNUstep/ApplicationSupport/GSTest/NSViewAnimation-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSViewAnimation-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/NSWindowStyleMask-test
+lib/GNUstep/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/stamp.make
+lib/GNUstep/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/ApplicationSupport/GSTest/StringDrawing-test.bundle/StringDrawing-test
+lib/GNUstep/ApplicationSupport/GSTest/StringDrawing-test.bundle/stamp.make
+lib/GNUstep/Applications/Calculator.app/Calculator
+lib/GNUstep/Applications/Calculator.app/Resources/Calculator.app.tiff
+lib/GNUstep/Applications/Calculator.app/Resources/Calculator.desktop
+lib/GNUstep/Applications/Calculator.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/Calculator.app/stamp.make
+lib/GNUstep/Applications/CurrencyConverter.app/CurrencyConverter
+lib/GNUstep/Applications/CurrencyConverter.app/Resources/CurrencyConverter.desktop
+lib/GNUstep/Applications/CurrencyConverter.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/CurrencyConverter.app/stamp.make
+lib/GNUstep/Applications/GSTest.app/GSTest
+lib/GNUstep/Applications/GSTest.app/Resources/GSTest.desktop
+lib/GNUstep/Applications/GSTest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/GSTest.app/Resources/MainMenu.gorm/data.classes
+lib/GNUstep/Applications/GSTest.app/Resources/MainMenu.gorm/objects.gorm
+lib/GNUstep/Applications/GSTest.app/stamp.make
+lib/GNUstep/Applications/Ink.app/Ink
+lib/GNUstep/Applications/Ink.app/Resources/Document.gorm/data.classes
+lib/GNUstep/Applications/Ink.app/Resources/Document.gorm/data.info
+lib/GNUstep/Applications/Ink.app/Resources/Document.gorm/objects.gorm
+lib/GNUstep/Applications/Ink.app/Resources/English.lproj/MainMenu.gorm/data.classes
+lib/GNUstep/Applications/Ink.app/Resources/English.lproj/MainMenu.gorm/data.info
+lib/GNUstep/Applications/Ink.app/Resources/English.lproj/MainMenu.gorm/objects.gorm
+lib/GNUstep/Applications/Ink.app/Resources/FileIcon_rtf.tiff
+lib/GNUstep/Applications/Ink.app/Resources/FileIcon_txt.tiff
+lib/GNUstep/Applications/Ink.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/Ink.app/Resources/Ink.desktop
+lib/GNUstep/Applications/Ink.app/Resources/Ink_app.tiff
+lib/GNUstep/Applications/Ink.app/stamp.make
+lib/GNUstep/Applications/MyGL.app/MyGL
+lib/GNUstep/Applications/MyGL.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/MyGL.app/Resources/MyGL.desktop
+lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/data.classes
+lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/data.info
+lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm/objects.gorm
+lib/GNUstep/Applications/MyGL.app/stamp.make
+lib/GNUstep/Applications/NSBrowserTest.app/NSBrowserTest
+lib/GNUstep/Applications/NSBrowserTest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/NSBrowserTest.app/Resources/NSBrowserTest.desktop
+lib/GNUstep/Applications/NSBrowserTest.app/stamp.make
+lib/GNUstep/Applications/NSImageTest.app/NSImageTest
+lib/GNUstep/Applications/NSImageTest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/NSImageTest.app/Resources/NSImageTest.desktop
+lib/GNUstep/Applications/NSImageTest.app/stamp.make
+lib/GNUstep/Applications/NSPanelTest.app/NSPanelTest
+lib/GNUstep/Applications/NSPanelTest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/NSPanelTest.app/Resources/NSPanelTest.desktop
+lib/GNUstep/Applications/NSPanelTest.app/Resources/Test.strings
+lib/GNUstep/Applications/NSPanelTest.app/Resources/icon.tiff
+lib/GNUstep/Applications/NSPanelTest.app/stamp.make
+lib/GNUstep/Applications/NSScreenTest.app/NSScreenTest
+lib/GNUstep/Applications/NSScreenTest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/NSScreenTest.app/Resources/NSScreenTest.desktop
+lib/GNUstep/Applications/NSScreenTest.app/stamp.make
+lib/GNUstep/Applications/md5Digest.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/md5Digest.app/Resources/md5Digest.desktop
+lib/GNUstep/Applications/md5Digest.app/md5Digest
+lib/GNUstep/Applications/md5Digest.app/stamp.make
+lib/GNUstep/Services/example.service/Resources/Info-gnustep.plist
+lib/GNUstep/Services/example.service/example
+@dirrm lib/GNUstep/Services/example.service/Resources
+@dirrm lib/GNUstep/Services/example.service
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Services
+@dirrm lib/GNUstep/Applications/md5Digest.app/Resources
+@dirrm lib/GNUstep/Applications/md5Digest.app
+@dirrm lib/GNUstep/Applications/NSScreenTest.app/Resources
+@dirrm lib/GNUstep/Applications/NSScreenTest.app
+@dirrm lib/GNUstep/Applications/NSPanelTest.app/Resources
+@dirrm lib/GNUstep/Applications/NSPanelTest.app
+@dirrm lib/GNUstep/Applications/NSImageTest.app/Resources
+@dirrm lib/GNUstep/Applications/NSImageTest.app
+@dirrm lib/GNUstep/Applications/NSBrowserTest.app/Resources
+@dirrm lib/GNUstep/Applications/NSBrowserTest.app
+@dirrm lib/GNUstep/Applications/MyGL.app/Resources/MyGL.gorm
+@dirrm lib/GNUstep/Applications/MyGL.app/Resources
+@dirrm lib/GNUstep/Applications/MyGL.app
+@dirrm lib/GNUstep/Applications/Ink.app/Resources/English.lproj/MainMenu.gorm
+@dirrm lib/GNUstep/Applications/Ink.app/Resources/English.lproj
+@dirrm lib/GNUstep/Applications/Ink.app/Resources/Document.gorm
+@dirrm lib/GNUstep/Applications/Ink.app/Resources
+@dirrm lib/GNUstep/Applications/Ink.app
+@dirrm lib/GNUstep/Applications/GSTest.app/Resources/MainMenu.gorm
+@dirrm lib/GNUstep/Applications/GSTest.app/Resources
+@dirrm lib/GNUstep/Applications/GSTest.app
+@dirrm lib/GNUstep/Applications/CurrencyConverter.app/Resources
+@dirrm lib/GNUstep/Applications/CurrencyConverter.app
+@dirrm lib/GNUstep/Applications/Calculator.app/Resources
+@dirrm lib/GNUstep/Applications/Calculator.app
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/StringDrawing-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSViewAnimation-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSViewAnimation-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSTextView-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSTextView-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSTableView-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSTableView-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSplitView-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSplitView-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSlider-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSlider-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSecureTextField-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSecureTextField-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSScrollView-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSScrollView-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSavePanel-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSSavePanel-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSOutlineView-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSForm-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSColorWell-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSColorList-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSBox-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/NSAnimation-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/KeyboardInput-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/KeyboardInput-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/GSHbox-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/GSHbox-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/CoordinateCheck-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/CoordinateCheck-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/Composite-test.bundle/Resources
+@dirrm lib/GNUstep/ApplicationSupport/GSTest/Composite-test.bundle
+@dirrm lib/GNUstep/ApplicationSupport/GSTest
+@unexec ${RMDIR} -p %D/lib/GNUstep/ApplicationSupport 2>/dev/null || ${TRUE}
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
