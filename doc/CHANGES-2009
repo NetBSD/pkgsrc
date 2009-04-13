@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1348 2009/04/13 08:37:12 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1349 2009/04/13 12:10:29 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1830,3 +1830,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb12 [minskim 2009-04-13]
 	Updated print/teTeX3-bin to 3.0nb30 [minskim 2009-04-13]
 	Updated archivers/fcrackzip to 1.0 [wiz 2009-04-13]
+	Updated devel/gnustep-make to 2.0.8 [rh 2009-04-13]
