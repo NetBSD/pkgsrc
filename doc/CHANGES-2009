@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1341 2009/04/13 07:06:46 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1342 2009/04/13 07:13:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1822,3 +1822,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/p5-Email-Valid to 0.181 [sno 2009-04-12]
 	Updated math/octave to 3.0.5 [adam 2009-04-22]
 	Added fonts/tex-cm version 2008.7621 [minskim 2009-04-13]
+	Added print/tex-misc version 2008.11278 [minskim 2009-04-13]
