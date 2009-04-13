@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2008/01/18 05:08:19 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2009/04/13 12:40:40 rh Exp $
 #
 
-DISTNAME=	Pantomime-1.1.2
-PKGREVISION=	5
+DISTNAME=	Pantomime-1.2.0pre3
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 
@@ -10,10 +9,15 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.collaboration-world.com/pantomime/
 COMMENT=	Objective-C mail system class library
 
+LICENSE=	gnu-lgpl-v2
+
+PKG_DESTDIR_SUPPORT=	destdir
+
 USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/Pantomime
 NO_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS=-DMKDIR
 MAKE_FILE=	GNUmakefile
 
