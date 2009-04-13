@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8034 2009/04/13 12:25:15 rh Exp $
+$NetBSD: TODO,v 1.8035 2009/04/13 12:30:02 rh Exp $
 
 Suggested new packages
 ======================
@@ -343,7 +343,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
-	o Gorm-1.2.8
 	o GridSim-3.3
 	o GutenMark-20090216
 	o MAMEDiff-2.30
