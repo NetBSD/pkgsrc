@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8037 2009/04/13 12:48:30 rh Exp $
+$NetBSD: TODO,v 1.8038 2009/04/13 20:31:38 snj Exp $
 
 Suggested new packages
 ======================
@@ -915,7 +915,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o minivmac-3.0.4
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mksh-37c
 	o mkvtoolnix-2.6.0
 	o mlterm-2.9.4
 	o mmg-2.0.2
