@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2004/11/05 14:25:19 adam Exp $
+$NetBSD: patch-ab,v 1.6 2009/04/13 12:16:24 rh Exp $
 
---- base.make.in.orig	2004-10-26 19:08:17.000000000 +0000
+--- base.make.in.orig	2008-06-12 20:44:00.000000000 +1000
 +++ base.make.in
-@@ -40,6 +40,7 @@ ifeq ($(FOUNDATION_LIB),gnu)
+@@ -39,7 +39,8 @@ ifeq ($(FOUNDATION_LIB),gnu)
+   GNUSTEP_BASE_SUBMINOR_VERSION = @SUBMINOR_VERSION@
  
    FND_LDFLAGS =
-   FND_LIBS = -lgnustep-base
-+  OBJC_LIBS = -lobjc @PTHREAD_LIBS@
+-  FND_LIBS = -lgnustep-base
++  FND_LIBS = -lobjc -lgnustep-base
++  OBJC_LIBS = -lpthread
    FND_DEFINE = -DGNUSTEP_BASE_LIBRARY=1
    GNUSTEP_DEFINE = -DGNUSTEP
    # If gc=yes was passed, use the appropriate library and defines
