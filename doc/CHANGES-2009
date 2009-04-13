@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1370 2009/04/13 19:06:41 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1371 2009/04/13 20:22:13 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1851,3 +1851,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-etex-doc version 2.1 [minskim 2009-04-13]
 	Added print/tex-luatex version 0.1 [minskim 2009-04-13]
 	Added print/tex-luatex-doc version 0.1 [minskim 2009-04-13]
+	Updated shells/mksh to 37c [ahoka 2009-04-13]
