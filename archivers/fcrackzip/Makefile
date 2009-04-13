@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2009/03/18 18:20:36 darcy Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/13 08:37:00 wiz Exp $
 
-DISTNAME=	fcrackzip-0.3
-MASTER_SITES=	http://www.goof.com/pcg/marc/data/
+DISTNAME=	fcrackzip-1.0
+MASTER_SITES=	http://home.schmorp.de/marc/data/
 CATEGORIES=	archivers
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.goof.com/pcg/marc/fcrackzip.html
+HOMEPAGE=	http://home.schmorp.de/marc/fcrackzip.html
 COMMENT=	Zip password cracker
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
