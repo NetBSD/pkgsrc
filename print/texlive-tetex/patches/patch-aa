@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/13 20:52:56 minskim Exp $
 
 --- Makefile.in.orig	2008-07-05 09:43:44.000000000 -0700
 +++ Makefile.in
@@ -11,7 +11,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
-@@ -53,22 +53,12 @@ install-data::
+@@ -46,29 +46,18 @@ install-data::
+ 	$(INSTALL_DATA) $(srcdir)/fmtutil.cnf.5 $(man5dir)/fmtutil.cnf.5
+ 	$(INSTALL_DATA) $(srcdir)/updmap.cfg.5 $(man5dir)/updmap.cfg.5
+ 	cd $(man1dir); rm -f allec.$(manext) texhash.$(manext) \
+-	  lambda.$(manext) pdflatex.$(manext) kpsepath.$(manext) \
+-	  kpsexpand.$(manext) mf-nowin.$(manext) ctangle.$(manext) \
+-	  cweave.$(manext) odvicopy.$(manext) \
+-	  odvitype.$(manext) texconfig-sys.$(manext) \
++	  kpsepath.$(manext) \
++	  kpsexpand.$(manext) \
++	  texconfig-sys.$(manext) \
  	  updmap-sys.$(manext) mktexfmt.$(manext) fmtutil-sys.$(manext)
  	ln -s allcm.$(manext) $(man1dir)/allec.$(manext)
  	ln -s mktexlsr.$(manext) $(man1dir)/texhash.$(manext)
@@ -34,7 +44,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
  	$(SHELL) $(top_srcdir)/../mkinstalldirs $(texmf)/texconfig $(texmf)/texconfig/g $(texmf)/texconfig/v $(texmf)/texconfig/x
  	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/g/generic $(texmf)/texconfig/g
  	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/v/vt100 $(texmf)/texconfig/v
-@@ -77,7 +67,6 @@ install-data::
+@@ -77,7 +66,6 @@ install-data::
  	$(INSTALL_DATA) $(srcdir)/texmf/texconfig/generic $(texmf)/texconfig
  	$(INSTALL_SCRIPT) $(srcdir)/tcfmgr $(texmf)/texconfig/tcfmgr
  	$(INSTALL_DATA) $(srcdir)/tcfmgr.map $(texmf)/texconfig/tcfmgr.map
