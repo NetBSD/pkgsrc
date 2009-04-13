@@ -1,9 +1,18 @@
-# $NetBSD: module.mk,v 1.1 2009/04/13 00:03:26 minskim Exp $
+# $NetBSD: module.mk,v 1.2 2009/04/13 02:20:14 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
 #
 # Package-settable variables:
+#
+# TEX_FORMAT_NAMES
+#	See ../../print/texlive-tetex/format.mk.
+#
+# TEX_MAP_FILES
+#	See ../../print/texlive-tetex/map.mk.
+#
+# TEX_MIXEDMAP_FILES
+#	See ../../print/texlive-tetex/map.mk.
 #
 # TEX_TEXMF_DIRS
 #	See ../../print/kpathsea/texmf.mk.
@@ -51,6 +60,12 @@ _texlive-install:
 	fi
 
 .include "../../print/kpathsea/texmf.mk"
+.if !empty(TEX_FORMAT_NAMES)
+.  include "../../print/texlive-tetex/format.mk"
+.endif
+.if !empty(TEX_MAP_FILES) || !empty(TEX_MIXEDMAP_FILES)
+.  include "../../print/texlive-tetex/map.mk"
+.endif
 
 post-extract: _texlive-set-permission
 do-install: _texlive-install
