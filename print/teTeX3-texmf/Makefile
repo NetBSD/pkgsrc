@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2009/04/12 02:44:07 minskim Exp $
+# $NetBSD: Makefile,v 1.27 2009/04/13 07:48:24 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -16,6 +16,10 @@ NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 CONFLICTS+=	teTeX-share-[0-9]*
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
+DEPENDS+=	tex-cm-[0-9]*:../../fonts/tex-cm
+DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
+DEPENDS+=	tex-misc-[0-9]*:../../print/tex-misc
+DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
 
 EXTRACT_ELEMENTS+=	ChangeLog
 EXTRACT_ELEMENTS+=	LICENSE.texmf
@@ -118,8 +122,6 @@ TEX_MAP_FILES+=		urwvn.map
 TEX_MAP_FILES+=		dstroke.map
 TEX_MAP_FILES+=		fpls.map
 TEX_MIXEDMAP_FILES+=	ttcmex.map
-TEX_MIXEDMAP_FILES+=	bsr.map
-TEX_MIXEDMAP_FILES+=	bsr-interpolated.map
 TEX_MIXEDMAP_FILES+=	cs.map
 TEX_MIXEDMAP_FILES+=	hoekwater.map
 TEX_MIXEDMAP_FILES+=	pl.map
@@ -134,11 +136,13 @@ TEX_MIXEDMAP_FILES+=	vnr.map
 post-extract:
 	rm -f ${WRKSRC}/ls-R
 	rmdir ${WRKSRC}/doc/generic/pdfcrop
+	rm -f ${WRKSRC}/dvips/bluesky/config.cm*
 	rm -rf ${WRKSRC}/dvips/config
 	rm -rf ${WRKSRC}/dvips/tetex
 	rmdir ${WRKSRC}/fonts/cmap
 	rmdir ${WRKSRC}/fonts/lig
 	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
+	rm -f ${WRKSRC}/fonts/map/dvips/tetex/bsr*
 	rmdir ${WRKSRC}/fonts/map/dvips/updmap
 	rmdir ${WRKSRC}/fonts/map/pdftex/updmap
 	rmdir ${WRKSRC}/fonts/misc
@@ -159,13 +163,35 @@ post-extract:
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/mt-yy.map
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/pdftex35.map
 	rm -f ${WRKSRC}/fonts/map/dvips/tetex/ps2pk35.map
+	rm -rf ${WRKSRC}/fonts/source/public/cm
+	rm -f ${WRKSRC}/fonts/source/public/misc/[b-q]*.mf
+	rm -f ${WRKSRC}/fonts/source/public/misc/random.mf
+	rm -f ${WRKSRC}/fonts/source/public/misc/s*.mf
+	rm -rf ${WRKSRC}/fonts/tfm/public/cm
+	rm -f ${WRKSRC}/fonts/tfm/public/misc/[b-q]*.tfm
+	rm -rf ${WRKSRC}/fonts/type1/bluesky/cm
+	rm -rf ${WRKSRC}/omega/ocp/misc
+	rm -rf ${WRKSRC}/omega/otp/misc
 	rm -f ${WRKSRC}/tex/generic/config/language.dat
+	rm -f ${WRKSRC}/tex/generic/config/pdftexconfig.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/dumyhyph.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/hyphen.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/hypht1.tex
 	rm -f ${WRKSRC}/tex/generic/hyphen/zerohyph.tex
+	rm -rf ${WRKSRC}/tex/generic/null
+	rm -rf ${WRKSRC}/tex/generic/texnames
 	rm -f ${WRKSRC}/tex/latex/dvipdfm/dvipdfm.def
-	rm -f ${WRKSRC}/tex/plain/config/language.def
+	rm -f ${WRKSRC}/tex/plain/base/[gmp-z]*
+	rm -f ${WRKSRC}/tex/plain/base/letter*
+	rm -rf ${WRKSRC}/tex/plain/config
+	rm -rf ${WRKSRC}/tex/plain/etex
+	rm -rf ${WRKSRC}/tex/plain/fontchart
+	rm -rf ${WRKSRC}/tex/plain/[i-l]*
+	rm -rf ${WRKSRC}/tex/plain/mproof
+	rm -rf ${WRKSRC}/tex/plain/pdfcolor
+	rm -rf ${WRKSRC}/tex/plain/tetex
+	rm -rf ${WRKSRC}/tex/plain/wlist
+	rm -rf ${WRKSRC}/tex/plain/xepsf
 
 do-install:
 	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist
