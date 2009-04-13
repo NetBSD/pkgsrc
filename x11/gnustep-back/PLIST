@@ -1,42 +1,41 @@
-@comment $NetBSD: PLIST,v 1.13 2008/11/25 12:52:33 adam Exp $
-share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/English.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Info-gnustep.plist
-share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
-share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/libgnustep-back-014
-share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/stamp.make
-share/GNUstep/System/Library/Documentation/man/man1/gpbs.1
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/FontInfo.plist
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019003l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019003l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019003l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019004l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019004l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019004l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019023l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019023l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019023l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019024l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019024l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019024l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019043l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019043l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019043l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019044l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019044l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019044l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019063l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019063l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019063l.pfm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.afm
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.pfb
-share/GNUstep/System/Library/Fonts/Helvetica.nfont/n019064l.pfm
-share/GNUstep/System/Tools/gpbs
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Tools
-@comment in devel/gnustep-base: @dirrm share/GNUstep/System/Library/Documentation/man/man1
-@dirrm share/GNUstep/System/Library/Fonts/Helvetica.nfont
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Fonts
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Bundles
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/Swedish.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources/English.lproj
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle/Resources
-@dirrm share/GNUstep/System/Library/Bundles/libgnustep-back-014.bundle
+@comment $NetBSD: PLIST,v 1.14 2009/04/13 12:21:37 rh Exp $
+bin/gpbs
+lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/English.lproj/nfontFaceNames.strings
+lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/Info-gnustep.plist
+lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/Swedish.lproj/nfontFaceNames.strings
+lib/GNUstep/Bundles/libgnustep-back-016.bundle/libgnustep-back-016
+lib/GNUstep/Bundles/libgnustep-back-016.bundle/stamp.make
+lib/GNUstep/Fonts/Helvetica.nfont/FontInfo.plist
+lib/GNUstep/Fonts/Helvetica.nfont/n019003l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019003l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019003l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019004l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019004l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019004l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019023l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019023l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019023l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019024l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019024l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019024l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019043l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019043l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019043l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019044l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019044l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019044l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019063l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019063l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019063l.pfm
+lib/GNUstep/Fonts/Helvetica.nfont/n019064l.afm
+lib/GNUstep/Fonts/Helvetica.nfont/n019064l.pfb
+lib/GNUstep/Fonts/Helvetica.nfont/n019064l.pfm
+man/man1/gpbs.1
+@dirrm lib/GNUstep/Fonts/Helvetica.nfont
+@dirrm lib/GNUstep/Fonts
+@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/Swedish.lproj
+@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources/English.lproj
+@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle/Resources
+@dirrm lib/GNUstep/Bundles/libgnustep-back-016.bundle
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Bundles
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
