@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
+$NetBSD: patch-as,v 1.5 2009/04/13 07:48:24 minskim Exp $
 
 --- texk/tetex/Makefile.in.orig	2005-02-04 14:20:54.000000000 -0800
 +++ texk/tetex/Makefile.in
@@ -29,7 +29,7 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
  
  INFOFILES= latex.info
  POOLFILES = pdfetex-pl.pool
-@@ -39,30 +34,13 @@ install-data:: $(INFOFILES)
+@@ -39,30 +34,12 @@ install-data:: $(INFOFILES)
  	for p in $(manpgs); do \
  	  $(INSTALL_DATA) $(srcdir)/$$p.man $(man1dir)/$$p.$(manext); \
  	done
@@ -40,7 +40,7 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
 -	  lambda.$(manext) pdflatex.$(manext) kpsepath.$(manext) \
 -	  kpsexpand.$(manext) mf-nowin.$(manext) ctangle.$(manext) \
 +	cd $(man1dir); rm -f \
-+	  lambda.$(manext) pdflatex.$(manext) \
++	  lambda.$(manext) \
 +	  mf-nowin.$(manext) ctangle.$(manext) \
  	  cweave.$(manext) odvicopy.$(manext) \
 -	  odvitype.$(manext) texconfig-sys.$(manext) \
@@ -49,7 +49,7 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
 -	ln -s mktexlsr.$(manext) $(man1dir)/texhash.$(manext)
 +	  odvitype.$(manext)
  	ln -s omega.$(manext) $(man1dir)/lambda.$(manext)
- 	ln -s pdfetex.$(manext) $(man1dir)/pdflatex.$(manext)
+-	ln -s pdfetex.$(manext) $(man1dir)/pdflatex.$(manext)
 -	ln -s kpsetool.$(manext) $(man1dir)/kpsepath.$(manext)
 -	ln -s kpsetool.$(manext) $(man1dir)/kpsexpand.$(manext)
 -	ln -s mf.$(manext) $(man1dir)/mf-nowin.$(manext)
@@ -64,7 +64,7 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
  	test -r ./latex.info || cd $(srcdir) && for i in latex.info*; do \
  	  $(INSTALL_DATA) $$i $(infodir)/$$i; done
  	if $(SHELL) -c 'install-info --version' >/dev/null 2>&1; then \
-@@ -74,14 +52,6 @@ install-data:: $(INFOFILES)
+@@ -74,14 +51,6 @@ install-data:: $(INFOFILES)
  	for p in TETEXDOC.pdf TETEXDOC.ps TETEXDOC.dvi teTeX-FAQ; do \
  	  $(INSTALL_DATA) $(srcdir)/doc/$$p $(texmf)/doc/tetex; \
  	done
@@ -79,7 +79,7 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
  
  install-exec:
  	-$(SHELL) $(srcdir)/../mkinstalldirs $(scriptdir)
-@@ -96,16 +66,10 @@ install-exec:
+@@ -96,16 +65,10 @@ install-exec:
  	else \
  	  true; \
  	fi
@@ -96,3 +96,4 @@ $NetBSD: patch-as,v 1.4 2009/04/12 07:33:35 minskim Exp $
  
  ac_include ../make/clean.mk
  
+-

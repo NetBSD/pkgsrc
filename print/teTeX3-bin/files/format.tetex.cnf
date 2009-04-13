@@ -35,17 +35,8 @@ mpost		mpost		-		-translate-file=cp227.tcx mpost.mp
 metafun		mpost		-		-translate-file=cp227.tcx metafun.mp
 
 # Standard formats (plain, latex) with all engines:
-
-# Change "tex.ini -> bplain.ini" and "- -> language.dat"
-# if you want babel support in tex:
-tex		tex		-		-translate-file=cp227.tcx tex.ini
 latex		pdftex		language.dat	-translate-file=cp227.tcx *latex.ini
-etex		pdftex		language.def	-translate-file=cp227.tcx *etex.ini
-pdftex		pdftex		-	-translate-file=cp227.tcx *pdftex.ini
 pdflatex	pdftex		language.dat	-translate-file=cp227.tcx *pdflatex.ini
-pdfetex		pdftex		language.def	-translate-file=cp227.tcx *pdfetex.ini
-#! pdfxlatex	pdfxtex		language.dat	-translate-file=cp227.tcx *pdfxlatex.ini
-#! pdfxtex		pdfxtex		-		-translate-file=cp227.tcx *pdfxtex.ini
 omega		omega		-	omega.ini
 lambda		omega		language.dat	lambda.ini
 aleph		aleph		-		*aleph.ini

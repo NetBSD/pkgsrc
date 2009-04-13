@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2009/04/12 07:33:35 minskim Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/13 07:48:24 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb10:../../print/teTeX3-texmf
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
+DEPENDS+=	tex-bin-tex-[0-9]*:../../print/tex-bin-tex
+DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
 
 # games/omega previously installed an omega executable too
