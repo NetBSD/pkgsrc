@@ -1,0 +1,4 @@
+An extension of TeX which can be configured to directly generate PDF
+documents instead of DVI.  All current TeX distributions including TeX
+live, MacTeX, and MiKTeX include pdfTeX (Plain TeX) and pdfLaTeX
+(LaTeX).  ConTeXt is designed around use of pdfTeX.

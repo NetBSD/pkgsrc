@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/13 07:36:07 minskim Exp $
+share/texmf/fmtutil/format.pdftex.cnf
+share/texmf/fonts/map/pdftex/updmap/pdftex.map
+share/texmf/fonts/map/pdftex/updmap/pdftex_dl14.map
+share/texmf/fonts/map/pdftex/updmap/pdftex_ndl14.map
+share/texmf/scripts/simpdftex/simpdftex
+share/texmf/tex/generic/config/pdftex-dvi.tex
+share/texmf/tex/generic/config/pdftexconfig.tex
+share/texmf/tex/generic/pdftex/glyphtounicode.tex
