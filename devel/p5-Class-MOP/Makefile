@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/04/12 12:55:56 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/13 09:09:19 abs Exp $
 #
 
 DISTNAME=	Class-MOP-0.81
@@ -21,6 +21,9 @@ DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 BUILD_DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
+
+USE_LANGUAGES=	c
+MAKE_JOBS_SAFE= no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
