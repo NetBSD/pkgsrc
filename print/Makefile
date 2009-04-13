@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.216 2009/04/13 19:00:51 minskim Exp $
+# $NetBSD: Makefile,v 1.217 2009/04/13 19:06:41 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -149,6 +149,7 @@ SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-luatex
+SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-memhangul-ucs
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-misc
