@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1352 2009/04/13 12:19:58 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1353 2009/04/13 12:22:05 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1834,3 +1834,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gnustep-objc to 1.6.0 [rh 2009-04-13]
 	Updated devel/gnustep-base to 1.18.0 [rh 2009-04-13]
 	Updated x11/gnustep-gui to 0.16.0 [rh 2009-04-13]
+	Updated x11/gnustep-back to 0.16.0 [rh 2009-04-13]
