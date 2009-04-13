@@ -1,13 +1,74 @@
-$NetBSD: patch-ad,v 1.8 2008/11/25 12:51:35 adam Exp $
+$NetBSD: patch-ad,v 1.9 2009/04/13 12:09:26 rh Exp $
 
---- configure.orig	2008-05-25 13:16:03.000000000 +0200
+--- configure.orig	2008-12-19 22:48:59.000000000 +1000
 +++ configure
-@@ -5880,7 +5880,7 @@ echo $ECHO_N "checking if the compiler s
+@@ -2125,13 +2125,13 @@ echo "${ECHO_T}$ac_cv_prog_cc_g" >&6
+ if test "$ac_test_CFLAGS" = set; then
+   CFLAGS=$ac_save_CFLAGS
+ elif test $ac_cv_prog_cc_g = yes; then
+-  if test "$GCC" = yes; then
++  if test "X${GCC}" = "Xyes" ; then
+     CFLAGS="-g -O2"
+   else
+     CFLAGS="-g"
+   fi
+ else
+-  if test "$GCC" = yes; then
++  if test "X${GCC}" = "Xyes" ; then
+     CFLAGS="-O2"
+   else
+     CFLAGS=
+@@ -5030,7 +5030,7 @@ rm -f core *.core gmon.out bb.out confte
+ fi
+   fi
+   if test x"$objc_threaded" = x""; then
+-    LIBS="-lobjc $saved_LIBS -lthread "
++    LIBS="-lobjc $saved_LIBS ${OBJC_THREAD} "
+     if test "$cross_compiling" = yes; then
+   objc_threaded=""
+ else
+@@ -5100,7 +5100,7 @@ echo $ECHO_N "checking whether we should
+ if test x"$USE_OBJC_EXCEPTIONS" = x"yes"; then
+   # What we want to do: set USE_OBJC_EXCEPTIONS to yes if we can compile
+   # something with @try/@catch/@finally in it.
+-  if test ! ${GCC} = "yes" ; then
++  if test "X${GCC}" != "Xyes" ; then
+     USE_OBJC_EXCEPTIONS=no
+     echo "$as_me:$LINENO: result: no: compiler isn't gcc" >&5
+ echo "${ECHO_T}no: compiler isn't gcc" >&6
+@@ -5190,7 +5190,7 @@ fi
+ 
+ echo "$as_me:$LINENO: checking for the GCC version" >&5
+ echo $ECHO_N "checking for the GCC version... $ECHO_C" >&6
+-if test ! ${GCC} = "yes" ; then
++if test "X${GCC}" != "Xyes" ; then
+   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6
+ else
+@@ -5229,7 +5229,7 @@ echo $ECHO_N "checking if the compiler s
  # What we want to do: set AUTO_DEPENDENCIES to yes if gcc => 3.x
  
  AUTO_DEPENDENCIES=""
 -if test ! ${GCC} = "yes" ; then
 +if test "X${GCC}" != "Xyes" ; then
-   { echo "$as_me:$LINENO: result: no: it's not gcc" >&5
- echo "${ECHO_T}no: it's not gcc" >&6; }
+   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6
+ else
+@@ -5272,7 +5272,7 @@ GCC_WITH_PRECOMPILED_HEADERS="no"
+ 
+ # First, a preliminary test.  If this is not gcc, precompiled headers
+ # are not supported.
+-if test ! "${GCC}" = "yes" ; then
++if test "X${GCC}" != "Xyes" ; then
+   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6
+ else
+@@ -5314,7 +5314,7 @@ echo $ECHO_N "checking if the compiler r
+ # set SOLARIS_SHARED to yes if gcc => 4.x
+ 
+ SOLARIS_SHARED=""
+-if test ! ${GCC} = "yes" ; then
++if test "X${GCC}" != "Xyes" ; then
+   echo "$as_me:$LINENO: result: no: it's not gcc" >&5
+ echo "${ECHO_T}no: it's not gcc" >&6
  else

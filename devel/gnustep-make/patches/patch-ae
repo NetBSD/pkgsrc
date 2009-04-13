@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2008/05/25 08:16:06 adam Exp $
+$NetBSD: patch-ae,v 1.8 2009/04/13 12:09:26 rh Exp $
 
---- GNUmakefile.in.orig	2008-01-17 03:44:27.000000000 +0100
+--- GNUmakefile.in.orig	2008-10-22 00:45:48.000000000 +1000
 +++ GNUmakefile.in
 @@ -171,9 +171,9 @@ install: generated-files
  		"$(makedir)/Instance" \
@@ -10,8 +10,8 @@ $NetBSD: patch-ae,v 1.7 2008/05/25 08:16:06 adam Exp $
 -	 "$(srcdir)/mkinstalldirs" "$(GNUSTEP_CONFIG_FILE_DIR)"; \
 -	 $(INSTALL_DATA) $(GNUSTEP_DOT_CONF_FILE) "$(GNUSTEP_CONFIG_FILE)")
 +	$(EC)(echo "Installing GNUstep configuration file"; \
-+	 "$(srcdir)/mkinstalldirs" "${PREFIX}/share/examples/GNUstep"; \
-+	 $(INSTALL_DATA) $(GNUSTEP_DOT_CONF_FILE) "${PREFIX}/share/examples/GNUstep")
++	 "$(srcdir)/mkinstalldirs" "${DESTDIR}${PREFIX}/share/examples/GNUstep"; \
++	 $(INSTALL_DATA) $(GNUSTEP_DOT_CONF_FILE) "${DESTDIR}${PREFIX}/share/examples/GNUstep")
  	 $(EC)(echo "Installing gnustep-make support software")
  	 $(EC)(for f in config.guess config.sub install-sh mkinstalldirs \
  		clean_cpu.sh clean_os.sh \
