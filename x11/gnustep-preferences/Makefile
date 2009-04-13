@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2008/12/28 07:56:38 adam Exp $
+# $NetBSD: Makefile,v 1.33 2009/04/13 12:26:38 rh Exp $
 
 DISTNAME=	Preferences-1.2.0
 PKGNAME=	gnustep-${DISTNAME:S/P/p/}
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	x11 gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=prefsapp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +10,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://prefsapp.sourceforge.net/
 COMMENT=	Application for setting preferences for the GNUstep system
+
+PKG_DESTDIR_SUPPORT=	destdir
+
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	objc
 
