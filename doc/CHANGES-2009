@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1364 2009/04/13 14:38:05 mishka Exp $
+$NetBSD: CHANGES-2009,v 1.1365 2009/04/13 16:21:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1845,3 +1845,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/GNUMail to 1.2.0pre3 [rh 2009-04-13]
 	Updated sysutils/gworkspace to 0.8.6 [rh 2009-04-13]
 	Updated meta-pkgs/gnustep to 2.0.8 [rh 2009-04-13]
+	Updated chat/unrealircd to 3.2.7nb2 [adrianp 2009-04-13]
