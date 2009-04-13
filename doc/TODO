@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8035 2009/04/13 12:30:02 rh Exp $
+$NetBSD: TODO,v 1.8036 2009/04/13 12:45:59 rh Exp $
 
 Suggested new packages
 ======================
@@ -715,7 +715,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gv-3.6.7
 	o gvfs-1.2.1
 	o gwaei-0.15.4
-	o gworkspace-0.8.6
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-info-20090330
