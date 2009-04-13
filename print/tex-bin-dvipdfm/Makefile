@@ -1,36 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/12 02:26:40 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/13 00:13:03 minskim Exp $
 # TeX Live Revision 12298
 
 DISTNAME=	bin-dvipdfm
 PKGNAME=	tex-${DISTNAME}-0.13.2d
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/tlnet/2008/archive/}
-DIST_SUBDIR=	${PKGNAME_NOREV}
-EXTRACT_SUFX=	.tar.lzma
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	Supplementary files for dvipdfm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=	pax
-
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}
 
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
-.include "../../print/kpathsea/texmf.mk"
+TEXLIVE_IGNORE_PATTERNS=	texmf/fonts
 
-post-extract:
-	${RM} -rf ${WRKSRC}/texmf/fonts
-	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
-	${FIND} ${WRKSRC}/texmf* -type f -exec ${CHMOD} ${SHAREMODE} {} \;
-
-do-install:
-	cd ${WRKSRC} && \
-		pax -rwpm -s ',.*\.orig$$,,' texmf* ${DESTDIR}${PREFIX}/share
-
+.include "../../print/texlive/module.mk"
 .include "../../mk/bsd.pkg.mk"
