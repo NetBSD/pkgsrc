@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1355 2009/04/13 12:30:02 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1356 2009/04/13 12:32:33 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnustep-back to 0.16.0 [rh 2009-04-13]
 	Updated devel/gnustep-examples to 1.2.0 [rh 2009-04-13]
 	Updated devel/Gorm to 1.2.8 [rh 2009-04-13]
+	Updated devel/ProjectCenter to 0.5.0 [rh 2009-04-13]
