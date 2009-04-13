@@ -1,229 +1,281 @@
-@comment $NetBSD: PLIST,v 1.7 2008/06/21 18:52:21 joerg Exp $
-share/GNUstep/Local/Applications/ProjectCenter.app/ProjectCenter
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/AggregateProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/ApplicationProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/AppController.h
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/AppController.m
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Main.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Main.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Main.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/main.m
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Build.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/BundleProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Clean.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Debug.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileC.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileCH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileHH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileM.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileMH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileProject.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/FileRTF.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Files.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Find.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Inspector.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Install.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/LibraryProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Version
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/MultiFiles.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Options.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.desktop
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_add.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_cvs.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_dist.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_documentation.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_profile.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_rpm.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter_uml.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/RenaissanceProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/AppController.h
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/AppController.m
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Main.gsmarkup
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/MainMenu-GNUstep.gsmarkup
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/MainMenu-OSX.gsmarkup
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/main.m
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Run.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/Stop.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Inspector.gorm/data.classes
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Inspector.gorm/data.info
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Inspector.gorm/objects.gorm
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/PC.project
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/main.m
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/ToolProject
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/stamp.make
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/classSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/classSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/genericSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/genericSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/headerSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/headerSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/helpSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/helpSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/iconSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/iconSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/librarySuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/librarySuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/nibSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/nibSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/otherSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/otherSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/projectSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/projectSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/soundSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/soundSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/subprojectSuitcase.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/Resources/subprojectSuitcaseH.tiff
-share/GNUstep/Local/Applications/ProjectCenter.app/stamp.make
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Headers
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/ProjectCenter
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Resources
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCAddFilesPanel.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCBuildPanel.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCBundleLoader.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCButton.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCDefines.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditor.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditorView+Highlighting.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditorView.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileCreator.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileManager.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLaunchPanel.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLoadedFilesPanel.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLogController.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCMakefileFactory.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCPrefController.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProject.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBrowser.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBuilder.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectEditor.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectInspector.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLauncher.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLoadedFiles.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectManager.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectWindow.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCServer.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCSplitView.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCTextFinder+UInterface.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCTextFinder.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/ProjectCenter.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/ProjectType.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Server.h
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/ProjectCenter
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/LogPanel.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/LogPanel.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/LogPanel.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Preferences.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Preferences.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Preferences.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/data.classes
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/data.info
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm/objects.gorm
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cfile.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cheader.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/class.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/gsmarkup.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/header.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/postamble.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/protocol.template
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so.${PKGVERSION}
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/Current
-share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/libProjectCenter.so
-share/GNUstep/Local/Library/Headers/ProjectCenter
-share/GNUstep/Local/Library/Libraries/libProjectCenter.so
-share/GNUstep/Local/Library/Libraries/libProjectCenter.so.${PKGVERSION}
-share/GNUstep/Local/Tools/ProjectCenter
-@dirrm share/GNUstep/Local/Tools
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectInspector.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/ProjectDescription.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Preferences.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewSubproject.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/NewFile.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/LogPanel.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/FileAttributes.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/BuildAttributes.gorm
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework/Versions
-@dirrm share/GNUstep/Local/Library/Frameworks/ProjectCenter.framework
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Frameworks
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ToolProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/RenaissanceProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ProjectCenter.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/LibraryProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/BundleProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Main.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/ApplicationProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources/Inspector.gorm
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources/AggregateProject.bundle
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app/Resources
-@dirrm share/GNUstep/Local/Applications/ProjectCenter.app
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
+@comment $NetBSD: PLIST,v 1.8 2009/04/13 12:31:54 rh Exp $
+bin/ProjectCenter
+include/ProjectCenter
+lib/GNUstep/Applications/ProjectCenter.app/ProjectCenter
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Aggregate
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Application
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/AppController.h
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/AppController.m
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Info.gnustep
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gsmarkup
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/MainMenu-GNUstep.gsmarkup
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/MainMenu-OSX.gsmarkup
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/main.m
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Build.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Bundle
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Clean.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Debug.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/FindPanel.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/FindPanel.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/FindPanel.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm/Info.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/ProjectCenter.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/ProjectCenter.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/ProjectCenter.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/FileProject.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Files.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Find.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Framework
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Inspector.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Install.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Library
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Version
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/MultiFiles.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.desktop
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/ProjectCenter
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/C.syntax
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileC.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileCH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileHH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileM.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/FileMH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/ObjC.syntax
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources/Plist.syntax
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/ProjectCenter
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_add.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_cvs.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_dist.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_documentation.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_profile.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_rpm.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter_uml.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/ResourceSet
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Run.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Info.gnustep
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Info.table
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Inspector.gorm/data.classes
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Inspector.gorm/data.info
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Inspector.gorm/objects.gorm
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/PC.project
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/main.m
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Tool
+lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/stamp.make
+lib/GNUstep/Applications/ProjectCenter.app/Resources/classSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/classSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/genericSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/genericSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/headerSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/headerSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/helpSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/helpSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/iconSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/iconSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/librarySuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/librarySuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/nibSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/nibSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/otherSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/otherSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/projectSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/projectSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/soundSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/soundSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/subprojectSuitcase.tiff
+lib/GNUstep/Applications/ProjectCenter.app/Resources/subprojectSuitcaseH.tiff
+lib/GNUstep/Applications/ProjectCenter.app/stamp.make
+lib/GNUstep/Frameworks/ProjectCenter.framework/Headers
+lib/GNUstep/Frameworks/ProjectCenter.framework/ProjectCenter
+lib/GNUstep/Frameworks/ProjectCenter.framework/Resources
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCAddFilesPanel.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCBundleManager.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCDefines.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCEditorManager.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileCreator.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCFileManager.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCLogController.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCMakefileFactory.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCPrefController.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProject.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBrowser.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBuilder.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBuilderOptions.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectBuilderPanel.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectEditor.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectInspector.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLauncher.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLauncherPanel.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLoadedFiles.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectLoadedFilesPanel.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectManager.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/PCProjectWindow.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/ProjectCenter.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Protocols/CodeEditor.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Protocols/CodeParser.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Protocols/ProjectType.h
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/ProjectCenter
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuildAttributes.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuildAttributes.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuildAttributes.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Builder.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Builder.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Builder.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderOptions.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderOptions.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderOptions.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderPanel.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderPanel.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderPanel.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/FileAttributes.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/FileAttributes.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/FileAttributes.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/LogPanel.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/LogPanel.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/LogPanel.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewFile.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewFile.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewFile.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewSubproject.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewSubproject.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewSubproject.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Preferences.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Preferences.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Preferences.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectAttributes.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectAttributes.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectAttributes.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectDescription.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectDescription.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectDescription.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectInspector.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectInspector.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectInspector.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectWindow.gorm/data.classes
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectWindow.gorm/data.info
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectWindow.gorm/objects.gorm
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/Info-gnustep.plist
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cfile.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/cheader.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/class.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/gsmarkup.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/header.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/postamble.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/protocol.template
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/libProjectCenter.so.${PKGVERSION}
+lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/Current
+lib/GNUstep/Frameworks/ProjectCenter.framework/libProjectCenter.so
+lib/libProjectCenter.so
+lib/libProjectCenter.so.${PKGVERSION}
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectWindow.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectInspector.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectDescription.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/ProjectAttributes.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Preferences.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewSubproject.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/NewFile.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/LogPanel.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/FileAttributes.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderPanel.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuilderOptions.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/Builder.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj/BuildAttributes.gorm
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources/English.lproj
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Resources
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers/Protocols
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}/Headers
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions/${PKGVERSION}
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework/Versions
+@dirrm lib/GNUstep/Frameworks/ProjectCenter.framework
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Frameworks
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Tool.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ResourceSet.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.parser
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/ProjectCenter.editor
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Library.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Framework.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/ProjectCenter.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/Info.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj/FindPanel.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/English.lproj
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Bundle.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Main.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Application.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources/Inspector.gorm
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources/Aggregate.project
+@dirrm lib/GNUstep/Applications/ProjectCenter.app/Resources
+@dirrm lib/GNUstep/Applications/ProjectCenter.app
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
