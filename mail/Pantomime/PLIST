@@ -1,68 +1,99 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/05 11:25:58 adam Exp $
-share/GNUstep/Local/Library/Headers/Pantomime/Charset.h
-share/GNUstep/Local/Library/Headers/Pantomime/Connection.h
-share/GNUstep/Local/Library/Headers/Pantomime/Constants.h
-share/GNUstep/Local/Library/Headers/Pantomime/Container.h
-share/GNUstep/Local/Library/Headers/Pantomime/Flags.h
-share/GNUstep/Local/Library/Headers/Pantomime/Folder.h
-share/GNUstep/Local/Library/Headers/Pantomime/FolderInformation.h
-share/GNUstep/Local/Library/Headers/Pantomime/IMAPCacheManager.h
-share/GNUstep/Local/Library/Headers/Pantomime/IMAPFolder.h
-share/GNUstep/Local/Library/Headers/Pantomime/IMAPMessage.h
-share/GNUstep/Local/Library/Headers/Pantomime/IMAPStore.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_1.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_10.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_11.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_13.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_14.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_15.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_2.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_3.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_4.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_5.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_6.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_7.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_8.h
-share/GNUstep/Local/Library/Headers/Pantomime/ISO8859_9.h
-share/GNUstep/Local/Library/Headers/Pantomime/InternetAddress.h
-share/GNUstep/Local/Library/Headers/Pantomime/KOI8_R.h
-share/GNUstep/Local/Library/Headers/Pantomime/KOI8_U.h
-share/GNUstep/Local/Library/Headers/Pantomime/LocalFolder.h
-share/GNUstep/Local/Library/Headers/Pantomime/LocalFolderCacheManager.h
-share/GNUstep/Local/Library/Headers/Pantomime/LocalMessage.h
-share/GNUstep/Local/Library/Headers/Pantomime/LocalStore.h
-share/GNUstep/Local/Library/Headers/Pantomime/MD5.h
-share/GNUstep/Local/Library/Headers/Pantomime/Message.h
-share/GNUstep/Local/Library/Headers/Pantomime/MimeMultipart.h
-share/GNUstep/Local/Library/Headers/Pantomime/MimeUtility.h
-share/GNUstep/Local/Library/Headers/Pantomime/NSData+Extensions.h
-share/GNUstep/Local/Library/Headers/Pantomime/NSRegEx.h
-share/GNUstep/Local/Library/Headers/Pantomime/NSString+Extensions.h
-share/GNUstep/Local/Library/Headers/Pantomime/POP3CacheManager.h
-share/GNUstep/Local/Library/Headers/Pantomime/POP3CacheObject.h
-share/GNUstep/Local/Library/Headers/Pantomime/POP3Folder.h
-share/GNUstep/Local/Library/Headers/Pantomime/POP3Message.h
-share/GNUstep/Local/Library/Headers/Pantomime/POP3Store.h
-share/GNUstep/Local/Library/Headers/Pantomime/Pantomime.h
-share/GNUstep/Local/Library/Headers/Pantomime/Parser.h
-share/GNUstep/Local/Library/Headers/Pantomime/Part.h
-share/GNUstep/Local/Library/Headers/Pantomime/SMTP.h
-share/GNUstep/Local/Library/Headers/Pantomime/Sendmail.h
-share/GNUstep/Local/Library/Headers/Pantomime/Service.h
-share/GNUstep/Local/Library/Headers/Pantomime/Store.h
-share/GNUstep/Local/Library/Headers/Pantomime/TCPConnection.h
-share/GNUstep/Local/Library/Headers/Pantomime/Transport.h
-share/GNUstep/Local/Library/Headers/Pantomime/URLName.h
-share/GNUstep/Local/Library/Headers/Pantomime/UTF8.h
-share/GNUstep/Local/Library/Headers/Pantomime/UUFile.h
-share/GNUstep/Local/Library/Headers/Pantomime/WINDOWS_1250.h
-share/GNUstep/Local/Library/Headers/Pantomime/WINDOWS_1251.h
-share/GNUstep/Local/Library/Headers/Pantomime/WINDOWS_1252.h
-share/GNUstep/Local/Library/Headers/Pantomime/WINDOWS_1253.h
-share/GNUstep/Local/Library/Headers/Pantomime/WINDOWS_1254.h
-share/GNUstep/Local/Library/Headers/Pantomime/elm_defs.h
-share/GNUstep/Local/Library/Headers/Pantomime/elm_lib.h
-share/GNUstep/Local/Library/Headers/Pantomime/parseaddrs.h
-share/GNUstep/Local/Library/Libraries/libPantomime.so
-share/GNUstep/Local/Library/Libraries/libPantomime.so.1.1.0
-@dirrm share/GNUstep/Local/Library/Headers/Pantomime
+@comment $NetBSD: PLIST,v 1.3 2009/04/13 12:40:40 rh Exp $
+include/Pantomime
+lib/GNUstep/Frameworks/Pantomime.framework/Headers
+lib/GNUstep/Frameworks/Pantomime.framework/Pantomime
+lib/GNUstep/Frameworks/Pantomime.framework/Resources
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWCacheManager.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWCharset.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWConnection.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWConstants.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWContainer.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWDNSManager.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWFlags.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWFolder.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWFolderInformation.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWIMAPCacheManager.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWIMAPFolder.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWIMAPMessage.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWIMAPStore.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_1.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_10.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_11.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_13.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_14.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_15.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_2.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_3.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_4.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_5.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_6.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_7.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_8.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWISO8859_9.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWInternetAddress.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWKOI8_R.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWKOI8_U.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalCacheManager.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalFolder+maildir.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalFolder+mbox.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalFolder.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalMessage.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWLocalStore.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWMD5.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWMIMEMultipart.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWMIMEUtility.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWMessage.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPOP3CacheManager.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPOP3CacheObject.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPOP3Folder.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPOP3Message.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPOP3Store.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWParser.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWPart.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWRegEx.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWSMTP.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWSendmail.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWService.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWStore.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWTCPConnection.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWTransport.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWURLName.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWUUFile.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWVirtualFolder.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWWINDOWS_1250.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWWINDOWS_1251.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWWINDOWS_1252.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWWINDOWS_1253.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/CWWINDOWS_1254.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/NSData+Extensions.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/NSFileManager+Extensions.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/NSScanner+Extensions.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/NSString+Extensions.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/Pantomime.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers/io.h
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Pantomime
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/English.lproj/InfoPlist.strings
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/English.lproj/Localizable.strings
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/German.lproj/InfoPlist.strings
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/German.lproj/Localizable.strings
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/Info-gnustep.plist
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/libPantomime.so
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/libPantomime.so.1.2.0
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/Current
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/Resources/English.lproj/Localizable.strings
+lib/GNUstep/Frameworks/Pantomime.framework/Versions/Resources/German.lproj/Localizable.strings
+lib/GNUstep/Frameworks/Pantomime.framework/libPantomime.so
+lib/libPantomime.so
+lib/libPantomime.so.1.2.0
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/Resources/German.lproj
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/Resources/English.lproj
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/Resources
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/German.lproj
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources/English.lproj
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Resources
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2/Headers
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions/1.2
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework/Versions
+@dirrm lib/GNUstep/Frameworks/Pantomime.framework
+@comment in devel/gnustep-base: @dirrm lib/GNUstep/Frameworks
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
