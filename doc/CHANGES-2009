@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1363 2009/04/13 12:48:30 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1364 2009/04/13 14:38:05 mishka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1701,7 +1701,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/mdocml to 1.7.12 [joerg 2009-04-09]
 	Updated mail/enma to 1.1.0 [obache 2009-04-09]
 	Updated security/lasso to 2.2.2 [manu 2009-04-09]
-	Updated filesystems/chironfs to 1.1.1 [manu 2009-04-09]
+	Updated filesystems/fuse-chironfs to 1.1.1 [manu 2009-04-09]
 	Updated mail/clamav to 0.95.1 [martti 2009-04-09]
 	Updated math/openaxiom to 1.2.1 [asau 2009-04-10]
 	Updated sysutils/webmin to 1.470nb1 [kefren 2009-04-10]
