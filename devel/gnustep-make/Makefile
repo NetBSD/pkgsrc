@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2008/11/25 12:51:35 adam Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/13 12:09:25 rh Exp $
 
-DISTNAME=	gnustep-make-2.0.6
+DISTNAME=	gnustep-make-2.0.8
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -8,25 +8,30 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep makefile package
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-#LICENSE=		gnu-gplv3
+LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		objc
 USE_TOOLS+=		csh
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 CONFIGURE_ARGS+=	--disable-importing-config-file
+CONFIGURE_ARGS+=	--with-layout=fhs
 CONFIGURE_ARGS+=	--with-config-file=${PKG_SYSCONFDIR}/GNUstep.conf
 MAKE_FILE=		GNUmakefile
 
 CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 			${PKG_SYSCONFDIR}/GNUstep.conf
 
-REPLACE_INTERPRETER+=	csh
-REPLACE.csh.old=	/bin/csh
-REPLACE.csh.new=	${CSH}
-REPLACE_FILES.csh=	ld_lib_path.csh
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
+PTHREAD_LIBS+=          -lpth
+.endif
+
+CONFIGURE_ARGS+=	--with-thread-lib=${PTHREAD_LIBS:Q}
 
 .include "gnustep.mk"
 
@@ -40,39 +45,17 @@ PLIST_SUBST+=	GNUSTEP_ARCH=${GNUSTEP_ARCH}
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
 SUBST_FILES.target=	target.make
-SUBST_SED.target+=	-e 's|/usr/pkg|${LOCALBASE}|g'
+SUBST_SED.target+=	-e 's|/usr/pkg|${PREFIX}|g'
 
-INSTALLATION_DIRS+=	share/GNUstep/Local/Applications
-INSTALLATION_DIRS+=	share/GNUstep/Local/Library
-INSTALLATION_DIRS+=	share/GNUstep/Local/Library/Bundles
-INSTALLATION_DIRS+=	share/GNUstep/Local/Library/Frameworks
-INSTALLATION_DIRS+=	share/GNUstep/Local/Library/Headers
-INSTALLATION_DIRS+=	share/GNUstep/Local/Library/Libraries
-INSTALLATION_DIRS+=	share/GNUstep/Network
-INSTALLATION_DIRS+=	share/GNUstep/System/Applications
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/ApplicationSupport
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Bundles
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/ColorPickers
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Colors
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/DocTemplates
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Documentation/Developer
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Documentation/User
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Documentation/info
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Documentation/man
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Fonts
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Frameworks
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Headers
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Images
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/KeyBindings
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Libraries/Java
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Libraries/Resources
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Makefiles/${GNUSTEP_ARCH}
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Makefiles/Additional
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Makefiles/Auxiliary
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/PostScript
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Services
-INSTALLATION_DIRS+=	share/GNUstep/System/Library/Sounds
-INSTALLATION_DIRS+=	share/GNUstep/System/Tools/Java
-INSTALLATION_DIRS+=	share/GNUstep/System/Tools/Resources
+SUBST_CLASSES+=		maninfo
+SUBST_STAGE.maninfo=	pre-configure
+SUBST_MESSAGE.maninfo=	Fixing man directory references.
+SUBST_FILES.maninfo=	${WRKSRC}/FilesystemLayouts/fhs
+SUBST_SED.maninfo=	-e 's|share/man|${PKGMANDIR}|'
+SUBST_SED.maninfo+=	-e 's|share/info|${PKGINFODIR}|'
+
+INSTALLATION_DIRS+=	share/GNUstep/Makefiles/${GNUSTEP_ARCH}
+INSTALLATION_DIRS+=	share/GNUstep/Makefiles/Additional
+INSTALLATION_DIRS+=	share/GNUstep/Makefiles/Auxiliary
 
 .include "../../mk/bsd.pkg.mk"
