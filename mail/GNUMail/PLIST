@@ -1,175 +1,218 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/27 17:06:57 joerg Exp $
-share/GNUstep/Local/Applications/GNUMail.app/GNUMail
-share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_bcc.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_cc.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Address_to.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Czech.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/English.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/French.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/GNUMail.desktop
-share/GNUstep/Local/Applications/GNUMail.app/Resources/GNUMail.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/GNUMail_Full.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/GNUMail_big.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/German.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/GNUMail.app/Resources/ScriptingInfo.plist
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Spanish.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Swedish.lproj/Localizable.strings
-share/GNUstep/Local/Applications/GNUMail.app/Resources/Welcome
-share/GNUstep/Local/Applications/GNUMail.app/Resources/add.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/add_bcc_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/add_bcc_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/add_cc_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/add_cc_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/addresses_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/addresses_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-1.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-2.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-3.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-4.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-5.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-6.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-7.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/anim-logo-8.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/answered-flag.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/attach_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/attach_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/closedFolder.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/common_Unknown.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/create_16.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/create_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/create_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/delete_16.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/delete_20.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/delete_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/delete_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/down.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/down_15.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/drag_mail.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/drag_mails.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/duplicate.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/edit.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/find_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/find_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/forward_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/forward_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/hand.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailbox_add_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailbox_copy_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailbox_move_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailbox_rename_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailboxes_16.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailboxes_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mailboxes_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/mime-flag.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/new-flag.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/openFolder.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/pgp-mail-small.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/pgp-mail.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/raw_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/raw_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/remove_bcc_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/remove_bcc_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/remove_cc_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/remove_cc_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/reply_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/reply_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/retrieve_16.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/retrieve_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/retrieve_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/send_16.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/send_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/send_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/show_all_headers_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/show_all_headers_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_down.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_left.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_right.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/sort_up.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/stop_32.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/stop_48.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/up.tiff
-share/GNUstep/Local/Applications/GNUMail.app/Resources/up_15.tiff
-share/GNUstep/Local/Applications/GNUMail.app/stamp.make
-share/GNUstep/Local/Library/GNUMail/Account.prefs/Account
-share/GNUstep/Local/Library/GNUMail/Account.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Account.prefs/Resources/account.tiff
-share/GNUstep/Local/Library/GNUMail/Account.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Advanced.prefs/Advanced
-share/GNUstep/Local/Library/GNUMail/Advanced.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Advanced.prefs/Resources/advanced.tiff
-share/GNUstep/Local/Library/GNUMail/Advanced.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Colors.prefs/Colors
-share/GNUstep/Local/Library/GNUMail/Colors.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Colors.prefs/Resources/colors.tiff
-share/GNUstep/Local/Library/GNUMail/Colors.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Compose.prefs/Compose
-share/GNUstep/Local/Library/GNUMail/Compose.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Compose.prefs/Resources/MailIcon_create.tiff
-share/GNUstep/Local/Library/GNUMail/Compose.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Filtering.prefs/Filtering
-share/GNUstep/Local/Library/GNUMail/Filtering.prefs/Resources/Filtering.tiff
-share/GNUstep/Local/Library/GNUMail/Filtering.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Filtering.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Fonts
-share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources/fonts.tiff
-share/GNUstep/Local/Library/GNUMail/Fonts.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Import.bundle/Import
-share/GNUstep/Local/Library/GNUMail/Import.bundle/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Import.bundle/stamp.make
-share/GNUstep/Local/Library/GNUMail/MIME.prefs/MIME
-share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources/mime.tiff
-share/GNUstep/Local/Library/GNUMail/MIME.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Receiving.prefs/Receiving
-share/GNUstep/Local/Library/GNUMail/Receiving.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Receiving.prefs/Resources/MailIcon_retrieve.tiff
-share/GNUstep/Local/Library/GNUMail/Receiving.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Sending.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Sending.prefs/Resources/MailIcon_send.tiff
-share/GNUstep/Local/Library/GNUMail/Sending.prefs/Sending
-share/GNUstep/Local/Library/GNUMail/Sending.prefs/stamp.make
-share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources/viewing.tiff
-share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Viewing
-share/GNUstep/Local/Library/GNUMail/Viewing.prefs/stamp.make
-share/GNUstep/Local/Library/Libraries/libGNUMail.so
-share/GNUstep/Local/Library/Libraries/libGNUMail.so.0.0.1
-share/GNUstep/Local/Tools/GNUMail
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Sending.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Sending.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Receiving.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Receiving.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/MIME.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/MIME.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Import.bundle/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Import.bundle
-@dirrm share/GNUstep/Local/Library/GNUMail/Fonts.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Fonts.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Filtering.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Filtering.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Compose.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Compose.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Colors.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Colors.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Advanced.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Advanced.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail/Account.prefs/Resources
-@dirrm share/GNUstep/Local/Library/GNUMail/Account.prefs
-@dirrm share/GNUstep/Local/Library/GNUMail
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Swedish.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Spanish.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/German.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/French.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/English.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources/Czech.lproj
-@dirrm share/GNUstep/Local/Applications/GNUMail.app/Resources
-@dirrm share/GNUstep/Local/Applications/GNUMail.app
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Applications
+@comment $NetBSD: PLIST,v 1.8 2009/04/13 12:42:38 rh Exp $
+bin/GNUMail
+include/GNUMail
+lib/GNUstep/Applications/GNUMail.app/GNUMail
+lib/GNUstep/Applications/GNUMail.app/Resources/AddressBook_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/AddressManager_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/Address_bcc.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/Address_cc.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/Address_to.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/Arabic.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Czech.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AddressBookPanel.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AddressBookPanel.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AddressBookPanel.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/EditWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/EditWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/EditWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/GNUMail.scriptTerminology
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/InfoPlist.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailboxInspectorPanel.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailboxInspectorPanel.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailboxInspectorPanel.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PasswordPanel.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PasswordPanel.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PasswordPanel.nib/objects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PreferencesWindow.nib/classes.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PreferencesWindow.nib/info.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PreferencesWindow.nib/keyedobjects.nib
+lib/GNUstep/Applications/GNUMail.app/Resources/French.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/GNUMail.desktop
+lib/GNUstep/Applications/GNUMail.app/Resources/GNUMail.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/GNUMail_128.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/GNUMail_Full.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/GNUMail_big.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/German.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Info-gnustep.plist
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Arabic.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Czech.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/English.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/French.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/German.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Russian.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Spanish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Swedish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Turkish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Russian.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/ScriptingInfo.plist
+lib/GNUstep/Applications/GNUMail.app/Resources/Spanish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Swedish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Turkish.lproj/Localizable.strings
+lib/GNUstep/Applications/GNUMail.app/Resources/Welcome
+lib/GNUstep/Applications/GNUMail.app/Resources/add.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/add_bcc_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/add_bcc_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/add_cc_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/add_cc_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/addresses_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/addresses_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-1.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-2.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-3.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-4.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-5.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-6.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-7.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/anim-logo-8.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/answered-flag.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/attach_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/attach_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/common_Unknown.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/create_12.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/create_16.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/create_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/create_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/create_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/delete_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/delete_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/delete_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/down_15.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/drafts_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/drafts_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/drag_mail.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/drag_mails.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/duplicate.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/edit.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/find_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/find_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/flagged-flag.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/folder_12.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/folder_16.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/folder_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/forward_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/forward_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/hand.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/headers_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/headers_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/mailbox_add_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/mailbox_rename_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/mailboxes_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/mailboxes_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/pgp-mail-small.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/pgp-mail.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/print_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/print_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/raw_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/raw_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/recent-flag.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/remove_bcc_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/remove_bcc_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/remove_cc_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/remove_cc_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/reply_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/reply_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/restart_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/retrieve_12.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/retrieve_16.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/retrieve_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/retrieve_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/retrieve_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/send_12.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/send_16.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/send_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/send_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/send_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/show_all_headers_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/show_all_headers_48.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/sort_down.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/sort_left.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/sort_right.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/sort_up.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/stop_32.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/trash_12.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/trash_16.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/trash_20.tiff
+lib/GNUstep/Applications/GNUMail.app/Resources/up_15.tiff
+lib/GNUstep/Applications/GNUMail.app/stamp.make
+lib/GNUstep/Frameworks/GNUMail.framework/GNUMail
+lib/GNUstep/Frameworks/GNUMail.framework/Headers
+lib/GNUstep/Frameworks/GNUMail.framework/Resources
+lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/GNUMail
+lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Resources/Info-gnustep.plist
+lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/libGNUMail.so
+lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/libGNUMail.so.1.2.0
+lib/GNUstep/Frameworks/GNUMail.framework/Versions/Current
+lib/GNUstep/Frameworks/GNUMail.framework/libGNUMail.so
+lib/libGNUMail.so
+lib/libGNUMail.so.1.2.0
+@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Resources
+@exec ${MKDIR} %D/lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
+@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
+@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1
+@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions
+@dirrm lib/GNUstep/Frameworks/GNUMail.framework
+@comment in x11/gnustep-base: @dirrm lib/GNUstep/Frameworks
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Turkish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Swedish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Spanish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Russian.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Turkish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Swedish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Spanish.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Russian.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/German.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/French.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/English.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Czech.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Arabic.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/German.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/French.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PreferencesWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PasswordPanel.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailboxInspectorPanel.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/EditWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AddressBookPanel.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Czech.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Arabic.lproj
+@dirrm lib/GNUstep/Applications/GNUMail.app/Resources
+@dirrm lib/GNUstep/Applications/GNUMail.app
+@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
