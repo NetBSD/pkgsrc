@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1344 2009/04/13 07:27:43 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1345 2009/04/13 07:32:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1825,3 +1825,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-misc version 2008.11278 [minskim 2009-04-13]
 	Added print/tex-plain version 3.14159265 [minskim 2009-04-13]
 	Added print/tex-bin-tex version 2008.10592 [minskim 2009-04-13]
+	Added print/tex-etex version 2.1 [minskim 2009-04-13]
