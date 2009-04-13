@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/07/10 13:27:02 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/04/13 12:33:43 rh Exp $
 #
 
-DISTNAME=	Renaissance-0.8.0
-PKGREVISION=	8
+DISTNAME=	Renaissance-0.9.0
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://www.gnustep.it/Renaissance/Download/
 
@@ -15,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 USE_LANGUAGES=	objc
 
 NO_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
 
 .include "../../x11/gnustep-back/buildlink3.mk"
