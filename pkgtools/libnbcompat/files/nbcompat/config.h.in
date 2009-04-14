@@ -206,9 +206,6 @@
 /* Define to 1 if the `fts_*' functions are built into the library. */
 #undef HAVE_NBCOMPAT_FTS
 
-/* Define to 1 if the `getopt_long' function is built into the library. */
-#undef HAVE_NBCOMPAT_GETOPT_LONG
-
 /* Define to 1 if the `glob' function is built into the library. */
 #undef HAVE_NBCOMPAT_GLOB
 
@@ -368,6 +365,9 @@
 
 /* Define to 1 if the system has the type `struct in6_addr'. */
 #undef HAVE_STRUCT_IN6_ADDR
+
+/* Define to 1 if the system has the type `struct option'. */
+#undef HAVE_STRUCT_OPTION
 
 /* Define to 1 if the system has the type `struct sockaddr_in6'. */
 #undef HAVE_STRUCT_SOCKADDR_IN6
