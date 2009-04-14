@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/04/08 17:03:25 tron Exp $
+# $NetBSD: Makefile,v 1.41 2009/04/14 18:26:34 sno Exp $
 
 DISTNAME=	httpd-2.2.11
 PKGREVISION=	2
@@ -99,8 +99,10 @@ DFLT_APACHE_MODULES+=	cgid dav_lock proxy_ajp proxy_balancer
 PLIST_SRC+=		${PKGDIR}/PLIST
 
 # LDAP support
+PLIST_VARS+=		ldap
 .if !empty(PKG_BUILD_OPTIONS.apr-util:Mldap)
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
+PLIST.ldap=		yes
 .endif
 
 .include "options.mk"
