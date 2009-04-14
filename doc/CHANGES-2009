@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1373 2009/04/13 22:25:39 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1374 2009/04/14 01:48:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1854,3 +1854,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated shells/mksh to 37c [ahoka 2009-04-13]
 	Updated textproc/mdoclint to 1.2 [wiz 2009-04-13]
 	Updated mail/imp to 4.3.4 [adrianp 2009-04-13]
+	Updated print/tex-pdftex to 1.40.9nb1 [minskim 2009-04-14]
