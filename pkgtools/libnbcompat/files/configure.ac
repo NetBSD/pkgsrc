@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.72 2009/03/22 22:33:13 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.72.2.1 2009/04/14 21:18:35 tron Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -148,12 +148,13 @@ AC_CHECK_DECLS([optind, optreset], [:], [:], [
 ])
 
 
-AC_CHECK_HEADERS([getopt.h], [
-	AC_MSG_TRY_COMPILE([for struct option], pkg_cv_have_struct_option,
-		[ #include <getopt.h> ], [ struct option X; ],
-		[:],
-		[AC_LIBOBJ(getopt_long)])
-])
+AC_CHECK_HEADERS([getopt.h],
+	[ AC_CHECK_TYPES([struct option],
+	    [:],
+	    [ AC_LIBOBJ(getopt_long)],
+	    [#include <getopt.h>])],
+	[ AC_LIBOBJ(getopt_long)]
+)
 
 if test "$enable_bsd_getopt" = yes; then
 	if test "$ac_cv_have_decl_optreset" = no; then
