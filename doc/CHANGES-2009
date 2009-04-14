@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1381 2009/04/14 18:10:05 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1382 2009/04/14 18:17:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-bin to 3.0nb31 [minskim 2009-04-14]
 	Added fonts/tex-latex-fonts version 2008.7340 [minskim 2009-04-14]
 	Added print/tex-latexconfig version 2008.9276 [minskim 2009-04-14]
+	Added print/tex-latex version 2008.11896 [minskim 2009-04-14]
