@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/18 11:57:15 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2009/04/14 20:51:17 tron Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
@@ -163,8 +163,8 @@ lib/libpt.so
 lib/libpt.so.${PKGVERSION}
 lib/libpt_s.a
 lib/pkgconfig/ptlib.pc
-lib/ptlib-${PKGVERSION}/devices/sound/oss_pwplugin.so
-lib/ptlib-${PKGVERSION}/devices/videoinput/v4l2_pwplugin.so
+lib/${PKGNAME}/devices/sound/oss_pwplugin.so
+lib/${PKGNAME}/devices/videoinput/v4l2_pwplugin.so
 share/ptlib/make/common.mak
 share/ptlib/make/lib.mak
 share/ptlib/make/plugins.mak
@@ -175,10 +175,10 @@ share/ptlib/make/unix.mak
 share/ptlib/version.h
 @dirrm share/ptlib/make
 @dirrm share/ptlib
-@dirrm lib/ptlib-2.4.2/devices/videoinput
-@dirrm lib/ptlib-2.4.2/devices/sound
-@dirrm lib/ptlib-2.4.2/devices
-@dirrm lib/ptlib-2.4.2
+@dirrm lib/${PKGNAME}/devices/videoinput
+@dirrm lib/${PKGNAME}/devices/sound
+@dirrm lib/${PKGNAME}/devices
+@dirrm lib/${PKGNAME}
 @dirrm include/ptlib/unix/ptlib
 @dirrm include/ptlib/unix
 @dirrm include/ptlib
