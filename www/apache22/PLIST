@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/04/08 17:03:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/04/14 18:26:34 sno Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -58,6 +58,7 @@ ${PLIST.all-shared}lib/httpd/mod_authn_dbd.so
 ${PLIST.all-shared}lib/httpd/mod_authn_dbm.so
 ${PLIST.all-shared}lib/httpd/mod_authn_default.so
 ${PLIST.all-shared}lib/httpd/mod_authn_file.so
+${PLIST.ldap}lib/httpd/mod_authnz_ldap.so
 ${PLIST.all-shared}lib/httpd/mod_authz_dbm.so
 ${PLIST.all-shared}lib/httpd/mod_authz_default.so
 ${PLIST.all-shared}lib/httpd/mod_authz_groupfile.so
@@ -94,6 +95,7 @@ ${PLIST.all-shared}lib/httpd/mod_imagemap.so
 ${PLIST.all-shared}lib/httpd/mod_include.so
 ${PLIST.all-shared}lib/httpd/mod_info.so
 ${PLIST.all-shared}lib/httpd/mod_isapi.so
+${PLIST.ldap}lib/httpd/mod_ldap.so
 ${PLIST.all-shared}lib/httpd/mod_log_config.so
 ${PLIST.all-shared}lib/httpd/mod_log_forensic.so
 ${PLIST.all-shared}lib/httpd/mod_logio.so
