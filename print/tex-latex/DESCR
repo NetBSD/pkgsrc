@@ -1,0 +1,6 @@
+LaTeX is a widely-used macro package for TeX, providing many basic
+document formating commands extended by a wide range of packages.  It
+is a development of Leslie Lamport's original LaTeX 2.09, and
+superseded the older system in June 1994.  This package includes
+a bunch of required packages, which LaTeX authors are "entitled to
+assume" will be present on any system running LaTeX.
