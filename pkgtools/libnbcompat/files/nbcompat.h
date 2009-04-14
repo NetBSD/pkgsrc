@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.42 2008/10/19 21:02:07 joerg Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.42.4.1 2009/04/14 21:18:35 tron Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -128,9 +128,7 @@
 # include <nbcompat/vis.h>
 #endif
 
-#if HAVE_NBCOMPAT_GETOPT_LONG
-# if HAVE_GETOPT_H
-#  undef HAVE_GETOPT_H
-# endif
+#if !HAVE_GETOPT_H || !HAVE_STRUCT_OPTION
+# undef HAVE_GETOPT_H
 # include <nbcompat/getopt.h>
 #endif
