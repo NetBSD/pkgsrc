@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 18:24:07 minskim Exp $
+bin/latex
+bin/lualatex
+bin/pdflatex
+bin/pdflualatex
+share/texmf/fmtutil/format.latex.cnf
+share/texmf/tex/latex/config/color.cfg
+share/texmf/tex/latex/config/graphics.cfg
+share/texmf/tex/latex/config/hyperref.cfg
