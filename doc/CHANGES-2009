@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1375 2009/04/14 02:30:01 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1376 2009/04/14 06:00:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1856,3 +1856,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/imp to 4.3.4 [adrianp 2009-04-13]
 	Updated print/tex-pdftex to 1.40.9nb1 [minskim 2009-04-14]
 	Updated print/tex-luatex to 0.1nb1 [minskim 2009-04-14]
+	Updated converters/skf to 1.96.0 [obache 2009-04-14]
