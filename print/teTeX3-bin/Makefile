@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2009/04/13 07:48:24 minskim Exp $
+# $NetBSD: Makefile,v 1.45 2009/04/14 07:48:59 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	30
+PKGREVISION=	31
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -80,7 +80,6 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/texk/tetex/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
 	${LN} -sf texexec ${DESTDIR}${PREFIX}/bin/mptopdf
-	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/pdfetex
 	${INSTALL_DATA} ${FILESDIR}/format.tetex.cnf \
 		${DESTDIR}${PREFIX}/share/texmf/fmtutil
 
