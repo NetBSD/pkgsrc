@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/13 07:36:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/14 01:47:18 minskim Exp $
+bin/etex
+bin/pdfetex
 share/texmf/fmtutil/format.pdftex.cnf
 share/texmf/fonts/map/pdftex/updmap/pdftex.map
 share/texmf/fonts/map/pdftex/updmap/pdftex_dl14.map
