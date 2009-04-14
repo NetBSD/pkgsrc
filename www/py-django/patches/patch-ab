@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1 2009/04/14 09:14:25 joerg Exp $
+
+--- django/db/backends/sqlite3/base.py.orig	2009-04-11 22:01:24.000000000 +0200
++++ django/db/backends/sqlite3/base.py
+@@ -12,18 +12,11 @@ from django.db.backends.sqlite3.creation
+ from django.db.backends.sqlite3.introspection import DatabaseIntrospection
+ 
+ try:
+-    try:
+-        from sqlite3 import dbapi2 as Database
+-    except ImportError, e1:
+-        from pysqlite2 import dbapi2 as Database
++    from pysqlite2 import dbapi2 as Database
+ except ImportError, exc:
+     import sys
+     from django.core.exceptions import ImproperlyConfigured
+-    if sys.version_info < (2, 5, 0):
+-        module = 'pysqlite2'
+-    else:
+-        module = 'sqlite3'
+-        exc = e1
++    module = 'pysqlite2'
+     raise ImproperlyConfigured, "Error loading %s module: %s" % (module, exc)
+ 
+ try:
