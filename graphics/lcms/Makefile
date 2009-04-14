@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2009/03/22 18:17:15 gdt Exp $
+# $NetBSD: Makefile,v 1.29 2009/04/14 18:54:38 tron Exp $
 
 DISTNAME=	lcms-1.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/
 
