@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/14 18:33:30 wiz Exp $
+
+SHA1 (OdfConverter--src-1.1.zip) = 7254502a15024a668a2c6d788a4ff4cc7cf4523e
+RMD160 (OdfConverter--src-1.1.zip) = 57b10317453bd9a84cc787c9cb600844c88f7696
+Size (OdfConverter--src-1.1.zip) = 46541334 bytes
+SHA1 (patch-aa) = e880c861a9c7d0968ac10899c80c8bd05fa601f6
