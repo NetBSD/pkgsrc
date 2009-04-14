@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.10 2009/04/14 18:54:38 tron Exp $
+
+Patch for SA34634/CVE-2009-0793 taken for Redhat's Bugzilla:
+
+https://bugzilla.redhat.com/attachment.cgi?id=337279
+
+--- src/cmsxform.c.orig	2009-03-21 15:31:52.000000000 +0000
++++ src/cmsxform.c	2009-04-14 19:18:05.000000000 +0100
+@@ -660,6 +660,9 @@
+                 GrayTRC = cmsReadICCGamma(hProfile, icSigGrayTRCTag);
+                 FromLstarToXYZ(GrayTRC, Shapes1);
+ 
++		if (GrayTRC == NULL)
++			return NULL;
++
+                 // Reversing must be done after curve translation
+ 
+                 Shapes[0] = cmsReverseGamma(Shapes1[0]->nEntries, Shapes1[0]);
+@@ -675,6 +678,9 @@
+ 
+                 GrayTRC = cmsReadICCGammaReversed(hProfile, icSigGrayTRCTag);   // Y
+ 
++		if (GrayTRC == NULL)
++			return NULL;
++
+                 Shapes[0] = cmsDupGamma(GrayTRC);
+                 Shapes[1] = cmsDupGamma(GrayTRC);
+                 Shapes[2] = cmsDupGamma(GrayTRC); 
