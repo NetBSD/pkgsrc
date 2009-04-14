@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1378 2009/04/14 07:43:40 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1379 2009/04/14 18:03:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1859,3 +1859,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/skf to 1.96.0 [obache 2009-04-14]
 	Updated mail/clamav to 0.95.1nb1 [martti 2009-04-14]
 	Updated textproc/p5-Text-Diff-Parser to 0.09.00 [sno 2009-04-14]
+	Updated print/teTeX3-bin to 3.0nb31 [minskim 2009-04-14]
