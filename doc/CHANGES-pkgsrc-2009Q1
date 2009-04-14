@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.7 2009/04/12 23:17:12 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.8 2009/04/14 21:18:59 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -19,3 +19,9 @@ Pullup ticket #2733 - requested by ghen
 seamonkey: security update
 seamonkey-gtk1: security update
 seamonkey-bin: security update
+Pullup ticket #2734 - requested by cube
+ptlib: package list fix
+Pullup ticket #2735 - requested by adrianp:
+unrealircd: security patch
+Pullup ticket #2736 - requested by joerg
+libnbcompat: portability fix
