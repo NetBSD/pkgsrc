@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2009/04/14 23:50:20 he Exp $
+
+Perldoc's -d is incompatible with doing the build as root.
+
+--- config/gen/makefiles/docs.in.orig	2009-03-09 05:41:01.000000000 +0100
++++ config/gen/makefiles/docs.in
+@@ -37,7 +37,7 @@ doc-prep:
+ 	$(MKPATH) ops
+ 
+ packfile-c.pod: ../src/packfile.c
+-#IF(new_perldoc):	$(PERLDOC) -ud packfile-c.pod ../src/packfile.c
++#IF(new_perldoc):	$(PERLDOC) -u ../src/packfile.c > packfile-c.pod 
+ #ELSE:	$(PERLDOC) -u ../src/packfile.c > packfile-c.pod
+ 
+ clean:
