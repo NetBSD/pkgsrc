@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1383 2009/04/14 18:25:20 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1384 2009/04/14 18:34:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1864,3 +1864,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-latexconfig version 2008.9276 [minskim 2009-04-14]
 	Added print/tex-latex version 2008.11896 [minskim 2009-04-14]
 	Added print/tex-bin-latex version 2008.10592 [minskim 2009-04-14]
+	Added textproc/OdfConverter version 1.1 [wiz 2009-04-14]
