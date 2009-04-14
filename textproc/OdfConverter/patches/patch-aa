@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/14 18:33:30 wiz Exp $
+
+--- source/Shell/OdfConverterTest/Makefile.orig	2007-12-19 15:16:04.000000000 +0100
++++ source/Shell/OdfConverterTest/Makefile
+@@ -71,9 +71,9 @@ else
+ 	    bundle.o \
+ 	    $(EXPORTDYNAMIC) \
+ 	    -Wl,--undefined=$(ZIPOPEN) -Wl,--undefined=$(UNZOPEN) \
+-	    `pkg-config --libs-only-L mono` -L../../AdditionalTools/zlib123/contrib/minizip \
++	    -L../../AdditionalTools/zlib123/contrib/minizip \
+ 	    -Wl,-Bstatic -lmono -lzlibwapi -Wl,-Bdynamic  \
+-	    `pkg-config --libs-only-l mono | sed -e "s/\-lmono //"` \
++	    `pkg-config --libs mono | sed -e "s/\-lmono //"` \
+ 	    $(ZLIB) $(OTHERLIBS)
+ endif
+ ifeq ($(OS),Cygwin)

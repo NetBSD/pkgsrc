@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/14 18:33:30 wiz Exp $
+bin/OdfConverter
+share/doc/OdfConverter/README.TXT
+@dirrm share/doc/OdfConverter
