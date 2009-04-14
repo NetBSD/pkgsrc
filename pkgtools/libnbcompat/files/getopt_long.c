@@ -1,4 +1,4 @@
-/*	$NetBSD: getopt_long.c,v 1.10 2009/03/22 22:33:13 joerg Exp $	*/
+/*	$NetBSD: getopt_long.c,v 1.11 2009/04/14 17:34:41 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -35,7 +35,7 @@
 
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
-__RCSID("$NetBSD: getopt_long.c,v 1.10 2009/03/22 22:33:13 joerg Exp $");
+__RCSID("$NetBSD: getopt_long.c,v 1.11 2009/04/14 17:34:41 joerg Exp $");
 
 #if 0
 #include "namespace.h"
@@ -66,10 +66,10 @@ __weak_alias(getopt,_getopt)
 int	opterr = 1;		/* if error message should be printed */
 int	optind = 1;		/* index into parent argv vector */
 int	optopt = '?';		/* character checked for validity */
-int	optreset;		/* reset getopt */
 char    *optarg;		/* argument associated with option */
-#elif HAVE_NBTOOL_CONFIG_H && !HAVE_DECL_OPTRESET
-int optreset;
+#endif
+#if !HAVE_DECL_OPTRESET
+int	optreset;		/* reset getopt */
 #endif
 
 #if 0
