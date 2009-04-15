@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1386 2009/04/14 19:33:10 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1387 2009/04/15 04:06:42 reed Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1867,3 +1867,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/OdfConverter version 1.1 [wiz 2009-04-14]
 	Updated graphics/lcms to 1.18nb2 [tron 2009-04-14]
 	Updated print/ghostscript to 8.64nb2 [tron 2009-04-14]
+	Added graphics/gimmage version 0.2.3 [reed 2009-04-15]
