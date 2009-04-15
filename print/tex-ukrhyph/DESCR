@@ -1,0 +1,3 @@
+A range of patterns for Ukrainian, depending on the encoding of the
+output font (including the standard T2A, so one can use the patterns
+with free fonts).
