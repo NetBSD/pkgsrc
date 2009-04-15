@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 05:12:25 minskim Exp $
+share/texmf-dist/tex/generic/ruhyphen/catkoi.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryoal.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryoas.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryoct.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryodv.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryomg.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryovl.tex
+share/texmf-dist/tex/generic/ruhyphen/cyryozn.tex
+share/texmf-dist/tex/generic/ruhyphen/enrhm2.tex
+share/texmf-dist/tex/generic/ruhyphen/hypht2.tex
+share/texmf-dist/tex/generic/ruhyphen/koi2koi.tex
+share/texmf-dist/tex/generic/ruhyphen/koi2lcy.tex
+share/texmf-dist/tex/generic/ruhyphen/koi2ot2.tex
+share/texmf-dist/tex/generic/ruhyphen/koi2t2a.tex
+share/texmf-dist/tex/generic/ruhyphen/koi2ucy.tex
+share/texmf-dist/tex/generic/ruhyphen/ruenhyph.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphal.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphas.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphct.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphdv.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphen.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphmg.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphvl.tex
+share/texmf-dist/tex/generic/ruhyphen/ruhyphzn.tex
