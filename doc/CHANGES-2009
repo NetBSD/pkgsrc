@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1399 2009/04/15 19:36:00 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1400 2009/04/15 20:43:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb13 [minskim 2009-04-15]
 	Updated print/teTeX3-bin to 3.0nb32 [minskim 2009-04-15]
 	Updated www/webkit-gtk to 1.1.5 [snj 2009-04-15]
+	Added x11/qt4-mysql version 4.4.3 [markd 2009-04-15]
