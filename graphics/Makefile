@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.519 2009/04/06 19:10:31 chuck Exp $
+# $NetBSD: Makefile,v 1.520 2009/04/15 04:06:42 reed Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -123,6 +123,7 @@ SUBDIR+=	gif320
 SUBDIR+=	gifsicle
 SUBDIR+=	giftrans
 SUBDIR+=	gimageview
+SUBDIR+=	gimmage
 SUBDIR+=	gimp
 SUBDIR+=	gimp-color-manager
 SUBDIR+=	gimp-docs
