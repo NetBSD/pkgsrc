@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/01/27 10:47:19 markd Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/15 20:45:29 markd Exp $
 
 DISTNAME=	akonadi-1.1.1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
+DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
 
 USE_DIRS+=	kde4-1.0
 USE_TOOLS+=	pkg-config
@@ -28,6 +31,12 @@ pre-configure:
 	${MKDIR} ${WRKSRC}/_build
 
 PKGCONFIG_OVERRIDE+=	akonadi.pc.cmake
+
+SUBST_CLASSES+=		mysql
+SUBST_STAGE.mysql=	post-patch
+SUBST_MESSAGE.mysql=	Fix mysqld path.
+SUBST_FILES.mysql=	server/CMakeLists.txt
+SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
