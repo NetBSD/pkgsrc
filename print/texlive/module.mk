@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.2 2009/04/13 02:20:14 minskim Exp $
+# $NetBSD: module.mk,v 1.3 2009/04/15 05:02:47 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -7,6 +7,12 @@
 #
 # TEX_FORMAT_NAMES
 #	See ../../print/texlive-tetex/format.mk.
+#
+# TEX_HYPHEN_DAT
+#	See ../../print/texlive-tetex/hyphen.mk.
+#
+# TEX_HYPHEN_DEF
+#	See ../../print/texlive-tetex/hyphen.mk.
 #
 # TEX_MAP_FILES
 #	See ../../print/texlive-tetex/map.mk.
@@ -41,8 +47,12 @@ _texlive-set-permission:
 .for _pat in ${TEXLIVE_IGNORE_PATTERNS}
 	${RM} -rf ${WRKSRC}/${_pat}
 .endfor
-	${FIND} ${WRKSRC}/texmf* -type d -exec ${CHMOD} ${PKGDIRMODE} {} \;
-	${FIND} ${WRKSRC}/texmf* -type f -exec ${CHMOD} ${SHAREMODE} {} \;
+.for _texmf in texmf texmf-dist texmf-doc
+	if [ -d ${_texmf} ]; then \
+	  ${FIND} ${WRKSRC}/${_texmf} -type d -exec ${CHMOD} ${PKGDIRMODE} {} \; ; \
+	  ${FIND} ${WRKSRC}/${_texmf} -type f -exec ${CHMOD} ${SHAREMODE} {} \; ; \
+	fi
+.endfor
 
 .PHONY: _texlive-install:
 _texlive-install:
@@ -62,6 +72,9 @@ _texlive-install:
 .include "../../print/kpathsea/texmf.mk"
 .if !empty(TEX_FORMAT_NAMES)
 .  include "../../print/texlive-tetex/format.mk"
+.endif
+.if !empty(TEX_HYPHEN_DAT) || !empty(TEX_HYPHEN_DEF)
+.  include "../../print/texlive-tetex/hyphen.mk"
 .endif
 .if !empty(TEX_MAP_FILES) || !empty(TEX_MIXEDMAP_FILES)
 .  include "../../print/texlive-tetex/map.mk"
