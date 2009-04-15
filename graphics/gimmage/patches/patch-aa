@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/15 04:04:13 reed Exp $
+
+--- src/FileManager.cpp.orig	2008-07-08 15:06:19.000000000 -0500
++++ src/FileManager.cpp	2008-07-08 15:06:54.000000000 -0500
+@@ -20,6 +20,8 @@
+ // gimmage: FileManager.cpp
+ 
+ // we make extensive use of get_current_dir_name() from Glib
++// maybe should check for this?
++#define get_current_dir_name() getcwd(NULL, PATH_MAX)
+ 
+ #include "FileManager.h"
+ #include "defines.h"
