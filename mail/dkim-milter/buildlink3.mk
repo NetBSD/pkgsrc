@@ -1,4 +1,4 @@
-$NetBSD: buildlink3.mk,v 1.1 2009/04/15 03:51:03 manu Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2009/04/15 03:52:23 manu Exp $
 
 BUILDLINK_TREE+=	dkim-milter
 
