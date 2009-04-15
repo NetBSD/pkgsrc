@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2009/04/15 05:27:01 minskim Exp $
+# $NetBSD: Makefile,v 1.225 2009/04/15 07:59:40 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -147,7 +147,51 @@ SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-hyph-utf8
+SUBDIR+=	tex-hyphen-ancientgreek
+SUBDIR+=	tex-hyphen-arabic
 SUBDIR+=	tex-hyphen-base
+SUBDIR+=	tex-hyphen-basque
+SUBDIR+=	tex-hyphen-bulgarian
+SUBDIR+=	tex-hyphen-catalan
+SUBDIR+=	tex-hyphen-chinese
+SUBDIR+=	tex-hyphen-coptic
+SUBDIR+=	tex-hyphen-croatian
+SUBDIR+=	tex-hyphen-czech
+SUBDIR+=	tex-hyphen-danish
+SUBDIR+=	tex-hyphen-dutch
+SUBDIR+=	tex-hyphen-esperanto
+SUBDIR+=	tex-hyphen-estonian
+SUBDIR+=	tex-hyphen-farsi
+SUBDIR+=	tex-hyphen-finnish
+SUBDIR+=	tex-hyphen-french
+SUBDIR+=	tex-hyphen-galician
+SUBDIR+=	tex-hyphen-german
+SUBDIR+=	tex-hyphen-greek
+SUBDIR+=	tex-hyphen-hungarian
+SUBDIR+=	tex-hyphen-icelandic
+SUBDIR+=	tex-hyphen-indonesian
+SUBDIR+=	tex-hyphen-interlingua
+SUBDIR+=	tex-hyphen-irish
+SUBDIR+=	tex-hyphen-italian
+SUBDIR+=	tex-hyphen-latin
+SUBDIR+=	tex-hyphen-lithuanian
+SUBDIR+=	tex-hyphen-mongolian
+SUBDIR+=	tex-hyphen-norwegian
+SUBDIR+=	tex-hyphen-polish
+SUBDIR+=	tex-hyphen-portuguese
+SUBDIR+=	tex-hyphen-romanian
+SUBDIR+=	tex-hyphen-russian
+SUBDIR+=	tex-hyphen-sanskrit
+SUBDIR+=	tex-hyphen-serbian
+SUBDIR+=	tex-hyphen-slovak
+SUBDIR+=	tex-hyphen-slovenian
+SUBDIR+=	tex-hyphen-spanish
+SUBDIR+=	tex-hyphen-swedish
+SUBDIR+=	tex-hyphen-turkish
+SUBDIR+=	tex-hyphen-ukenglish
+SUBDIR+=	tex-hyphen-ukrainian
+SUBDIR+=	tex-hyphen-uppersorbian
+SUBDIR+=	tex-hyphen-welsh
 SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-jadetex
