@@ -1,0 +1,27 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 20:39:42 markd Exp $
+
+.include "../../x11/qt4-libs/Makefile.common"
+
+PKGNAME=	qt4-mysql-${QTVERSION}
+COMMENT=	QT mysql driver
+
+CONFIGURE_ARGS+=	-I${QTDIR}/include
+CONFIGURE_ARGS+=	-L${QTDIR}/lib
+
+BUILD_QT4=		yes
+
+do-build:
+	cd ${WRKSRC}/src/tools/moc && env ${MAKE_ENV} ${GMAKE}
+	cd ${WRKSRC}/src/plugins/sqldrivers/mysql && env ${MAKE_ENV} ${GMAKE}
+
+SQLDRVDIR=	${QTPREFIX}/plugins/sqldrivers
+
+do-install:
+	${INSTALL_DATA_DIR} ${SQLDRVDIR}
+	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/plugins/sqldrivers/libqsqlmysql.la \
+		${SQLDRVDIR}
+
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
