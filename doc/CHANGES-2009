@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1397 2009/04/15 09:08:15 mjl Exp $
+$NetBSD: CHANGES-2009,v 1.1398 2009/04/15 09:21:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1921,3 +1921,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-hyphen-uppersorbian version 2008.9017 [minskim 2009-04-15]
 	Added print/tex-hyphen-welsh version 2008.8985 [minskim 2009-04-15]
 	Updated devel/memcached to 1.2.8 [mjl 2009-04-15]
+	Updated print/teTeX3-texmf to 3.0nb13 [minskim 2009-04-15]
+	Updated print/teTeX3-bin to 3.0nb32 [minskim 2009-04-15]
