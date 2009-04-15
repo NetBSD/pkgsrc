@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2009/04/11 21:37:46 sno Exp $
+# $NetBSD: Makefile,v 1.51 2009/04/15 07:16:26 sno Exp $
 #
 
-VER=		2.12.0
+VER=		2.13.0
 DISTNAME=	DBD-Pg-${VER}
 PKGNAME=	p5-DBD-postgresql-${VER}
 SVR4_PKGNAME=	p5dpo
@@ -15,13 +15,11 @@ COMMENT=	Perl DBI/DBD driver for PostgreSQL databases
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{p5-version-[0-9]*,perl>=5.10.0}:../../devel/p5-version
+DEPENDS+=	p5-DBI>1.52:../../databases/p5-DBI
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/DBD/Pg/.packlist
-
-PGUSER?=	pgsql
-PGPREFIX=	${PREFIX}/${PGUSER}
 
 POSTGRES_INCLUDE=	${PGSQL_PREFIX}/include/postgresql
 POSTGRES_LIB=		${PGSQL_PREFIX}/lib
