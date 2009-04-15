@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 05:16:22 minskim Exp $
+share/texmf-dist/tex/generic/ukrhyph/catlcy.tex
+share/texmf-dist/tex/generic/ukrhyph/lcy2koi.tex
+share/texmf-dist/tex/generic/ukrhyph/lcy2lcy.tex
+share/texmf-dist/tex/generic/ukrhyph/lcy2ot2.tex
+share/texmf-dist/tex/generic/ukrhyph/lcy2t2a.tex
+share/texmf-dist/tex/generic/ukrhyph/lcy2ucy.tex
+share/texmf-dist/tex/generic/ukrhyph/rules60.tex
+share/texmf-dist/tex/generic/ukrhyph/rules90.tex
+share/texmf-dist/tex/generic/ukrhyph/rules_ph.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrenhyp.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhypfa.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.koi
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.lcy
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.ot2
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.t2a
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhyph.ucy
+share/texmf-dist/tex/generic/ukrhyph/ukrhypmp.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhypmt.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhypsm.tex
+share/texmf-dist/tex/generic/ukrhyph/ukrhypst.tex
