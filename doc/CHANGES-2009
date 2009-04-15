@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1389 2009/04/15 05:13:27 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1390 2009/04/15 05:17:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1870,3 +1870,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/gimmage version 0.2.3 [reed 2009-04-15]
 	Added print/tex-hyph-utf8 version 2008.11171 [minskim 2009-04-15]
 	Added print/tex-ruhyphen version 1.6 [minskim 2009-04-15]
+	Added print/tex-ukrhyph version 2008.7340 [minskim 2009-04-15]
