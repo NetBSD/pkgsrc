@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1394 2009/04/15 07:32:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1395 2009/04/15 07:40:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1875,3 +1875,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBD-postgresql to 2.13.0 [sno 2009-04-15]
 	Updated time/p5-DateTime-TimeZone to 0.89 [sno 2009-04-15]
 	Updated devel/p5-Module-Install to 0.84 [sno 2009-04-15]
+	Updated net/p5-NetAddr-IP to 4.026 [sno 2009-04-15]
