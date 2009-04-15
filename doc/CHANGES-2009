@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1392 2009/04/15 07:17:33 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1393 2009/04/15 07:30:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1873,3 +1873,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-ukrhyph version 2008.7340 [minskim 2009-04-15]
 	Added print/tex-dehyph-exptl version 0.13 [minskim 2009-04-15]
 	Updated databases/p5-DBD-postgresql to 2.13.0 [sno 2009-04-15]
+	Updated time/p5-DateTime-TimeZone to 0.89 [sno 2009-04-15]
