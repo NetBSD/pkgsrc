@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2009/04/14 07:48:59 minskim Exp $
+# $NetBSD: Makefile,v 1.46 2009/04/15 09:19:45 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	31
+PKGREVISION=	32
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	teTeX-texmf>=3.0nb10:../../print/teTeX3-texmf
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
+DEPENDS+=	tex-bin-latex-[0-9]*:../../print/tex-bin-latex
 DEPENDS+=	tex-bin-tex-[0-9]*:../../print/tex-bin-tex
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
@@ -79,7 +80,10 @@ post-install:
 .for f in a2ping e2pall epstopdf
 	${INSTALL_SCRIPT} ${WRKSRC}/texk/tetex/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${LN} -sf texexec ${DESTDIR}${PREFIX}/bin/mptopdf
+	${LN} -sf mpost ${DESTDIR}${PREFIX}/bin/metafun
+	${LN} -sf omega ${DESTDIR}${PREFIX}/bin/lambda
+	${LN} -sf aleph ${DESTDIR}${PREFIX}/bin/lamed
+	${LN} -sf pdftex ${DESTDIR}${PREFIX}/bin/mptopdf
 	${INSTALL_DATA} ${FILESDIR}/format.tetex.cnf \
 		${DESTDIR}${PREFIX}/share/texmf/fmtutil
 
