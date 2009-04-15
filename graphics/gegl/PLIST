@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/02/03 06:21:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/04/15 12:25:30 wiz Exp $
 bin/gegl
 include/gegl-0.0/gegl-buffer.h
 include/gegl-0.0/gegl-chant.h
@@ -108,6 +108,7 @@ lib/gegl-0.0/text.la
 lib/gegl-0.0/threshold.la
 lib/gegl-0.0/tonemap.la
 lib/gegl-0.0/unsharp-mask.la
+${PLIST.v4l}lib/gegl-0.0/v4l.la
 lib/gegl-0.0/value-invert.la
 lib/gegl-0.0/whitebalance.la
 lib/gegl-0.0/write-buffer.la
