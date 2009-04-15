@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/04/06 12:59:30 markd Exp $
+# $NetBSD: Makefile,v 1.59 2009/04/15 23:01:42 gdt Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 PKGREVISION=	1
@@ -34,14 +34,14 @@ CONFIGURE_ARGS+=	--without-apxs
 DAV_RA=				serf
 .    include "../../www/serf/buildlink3.mk"
 .  else
-BUILDLINK_API_DEPENDS.neon+=	neon>=0.24.7
+BUILDLINK_API_DEPENDS.neon+=	neon>=0.25.0
 DAV_RA=				neon
 .    include "../../www/neon/buildlink3.mk"
 .  endif
 .else
 .  include "../../devel/apr0/buildlink3.mk"
 BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.5
-BUILDLINK_API_DEPENDS.neon+=	neon>=0.24.7
+BUILDLINK_API_DEPENDS.neon+=	neon>=0.25.0
 DAV_RA=				neon
 .  include "../../www/neon/buildlink3.mk"
 .endif
