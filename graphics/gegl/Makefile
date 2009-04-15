@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/03 06:21:40 adam Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/15 12:25:30 wiz Exp $
 
 DISTNAME=	gegl-0.0.22
 PKGREVISION=	2
@@ -22,6 +22,14 @@ CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
 CONFIGURE_ENV+=		ac_cv_prog_RUBY=no
 
 PKGCONFIG_OVERRIDE+=	gegl.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=    v4l
+
+.if ${OPSYS} == "Linux" && exists(/usr/include/linux/videodev.h)
+PLIST.v4l=	yes
+.endif
 
 .include "options.mk"
 
