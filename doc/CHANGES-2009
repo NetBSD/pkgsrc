@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1387 2009/04/15 04:06:42 reed Exp $
+$NetBSD: CHANGES-2009,v 1.1388 2009/04/15 05:09:00 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1868,3 +1868,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/lcms to 1.18nb2 [tron 2009-04-14]
 	Updated print/ghostscript to 8.64nb2 [tron 2009-04-14]
 	Added graphics/gimmage version 0.2.3 [reed 2009-04-15]
+	Added print/tex-hyph-utf8 version 2008.11171 [minskim 2009-04-15]
