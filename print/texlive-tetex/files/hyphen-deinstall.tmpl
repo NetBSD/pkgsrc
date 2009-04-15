@@ -1,4 +1,4 @@
-# $NetBSD: hyphen-deinstall.tmpl,v 1.1 2009/03/06 18:13:00 minskim Exp $
+# $NetBSD: hyphen-deinstall.tmpl,v 1.2 2009/04/15 05:01:28 minskim Exp $
 #
 # Deinstall hyphenation patterns.
 #
@@ -14,12 +14,14 @@ BEGIN { do_print=1; } \
 { if (do_print) print \$0; } \
 /^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DAT} > ${LANGUAGE_DAT}.tmp &&
 	${MV} ${LANGUAGE_DAT}.tmp ${LANGUAGE_DAT}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DAT}
 	${AWK} "\
 BEGIN { do_print=1; } \
 /^%%% BEGIN @PKGBASE@\$/ { do_print=0; } \
 { if (do_print) print \$0; } \
 /^%%% END @PKGBASE@\$/ { do_print=1; }" ${LANGUAGE_DEF} > ${LANGUAGE_DEF}.tmp &&
 	${MV} ${LANGUAGE_DEF}.tmp ${LANGUAGE_DEF}
+	@FMTUTIL_SYS@ --byhyphen ${LANGUAGE_DEF}
 	;;
 *)
 	;;
