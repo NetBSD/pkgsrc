@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1403 2009/04/16 12:31:31 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1404 2009/04/16 17:14:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1928,3 +1928,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gnustep-objc to 1.6.0nb1 [rh 2009-04-16]
 	Updated time/titrax to 1.98nb4 [he 2009-04-16]
 	Updated x11/xlockmore to 5.28 [tron 2009-04-16]
+	Updated lang/ruby18-base to 1.8.7.160 [taca 2009-04-16]
+	Updated databases/ruby-gdbm to 1.8.7.160 [taca 2009-04-16]
+	Updated devel/ruby-curses to 1.8.7.160 [taca 2009-04-16]
+	Updated devel/ruby-readline to 1.8.7.160 [taca 2009-04-16]
+	Updated x11/ruby-tk to 1.8.7.160 [taca 2009-04-16]
+	Updated lang/ruby18 to 1.8.7.160 [taca 2009-04-16]
+	Updated lang/ruby to 1.8.7.160 [taca 2009-04-16]
