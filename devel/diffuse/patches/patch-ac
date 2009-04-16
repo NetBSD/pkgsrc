@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1 2009/04/16 22:43:31 wiz Exp $
+
+--- src/etc/diffuserc.orig	2009-04-13 22:24:25.000000000 +0000
++++ src/etc/diffuserc
+@@ -1,4 +1,4 @@
+-# initialisation file for diffuse
++# /etc/diffuserc: System-wide initialisation file for Diffuse
+ #
+ # Copyright (C) 2006-2009 Derrick Moser <derrick_moser@yahoo.com>
+ 
