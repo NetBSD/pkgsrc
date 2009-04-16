@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.40 2009/03/20 19:25:21 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.41 2009/04/16 14:05:38 tnn Exp $
 
 BUILDLINK_TREE+=	openssl
 
@@ -19,12 +19,6 @@ WRAPPER_REORDER_CMDS+=	reorder:l:crypt:crypto
 SSLBASE=	${BUILDLINK_PREFIX.openssl}
 BUILD_DEFS+=	SSLBASE
 
-pkgbase := openssl
-.include "../../mk/pkg-build-options.mk"
-
-.if !empty(PKG_BUILD_OPTIONS.openssl:Mrsaref)
-.  include "../../security/rsaref/buildlink3.mk"
-.endif
 .endif # OPENSSL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-openssl
