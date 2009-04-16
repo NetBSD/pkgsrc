@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1401 2009/04/16 00:25:21 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1402 2009/04/16 09:55:08 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/webkit-gtk to 1.1.5 [snj 2009-04-15]
 	Added x11/qt4-mysql version 4.4.3 [markd 2009-04-15]
 	Updated devel/gnustep-objc to 1.6.0nb1 [rh 2009-04-16]
+	Updated time/titrax to 1.98nb4 [he 2009-04-16]
