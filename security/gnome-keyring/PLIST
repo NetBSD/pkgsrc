@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/03/22 14:45:19 snj Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/04/16 19:35:29 drochner Exp $
 bin/gnome-keyring
 bin/gnome-keyring-daemon
 include/gcr/gcr-certificate-basics-widget.h
@@ -15,9 +15,9 @@ include/gp11/gp11.h
 include/gp11/pkcs11.h
 include/gp11/pkcs11g.h
 include/gp11/pkcs11n.h
-lib/gnome-keyring/gnome-keyring-pkcs11.la
 lib/gnome-keyring/devel/gck-ssh-store-standalone.la
 lib/gnome-keyring/devel/gck-user-store-standalone.la
+lib/gnome-keyring/gnome-keyring-pkcs11.la
 lib/gnome-keyring/standalone/gck-roots-store-standalone.la
 lib/libgcr.la
 lib/libgnome-keyring.la
@@ -32,15 +32,33 @@ share/gconf/schemas/gnome-keyring.schemas
 share/gcr/ui/gcr-certificate-basics-widget.ui
 share/gcr/ui/gcr-import-dialog.ui
 share/gnome/autostart/gnome-keyring-daemon.desktop
+share/gtk-doc/html/gcr/GcrCertificateBasicsWidget.html
+share/gtk-doc/html/gcr/GcrCertificateDetailsWidget.html
+share/gtk-doc/html/gcr/GcrImporter.html
+share/gtk-doc/html/gcr/GcrParser.html
+share/gtk-doc/html/gcr/GcrSimpleCertificate.html
+share/gtk-doc/html/gcr/ch01.html
+share/gtk-doc/html/gcr/gcr-GcrImportDialog.html
+share/gtk-doc/html/gcr/gcr-GcrTokenManager.html
+share/gtk-doc/html/gcr/gcr-GcrXxx.html
+share/gtk-doc/html/gcr/gcr-gcr-certificate.html
+share/gtk-doc/html/gcr/gcr-gcr-types.html
+share/gtk-doc/html/gcr/gcr.devhelp
+share/gtk-doc/html/gcr/gcr.devhelp2
+share/gtk-doc/html/gcr/home.png
+share/gtk-doc/html/gcr/index.html
+share/gtk-doc/html/gcr/index.sgml
+share/gtk-doc/html/gcr/left.png
+share/gtk-doc/html/gcr/right.png
+share/gtk-doc/html/gcr/style.css
+share/gtk-doc/html/gcr/up.png
 share/gtk-doc/html/gnome-keyring/ch01.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-acl.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-attributes.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-daemon.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-find.html
-share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-generic-callbacks.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-item-info.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-items.html
-share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-keyring-info.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-keyrings.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-memory.html
 share/gtk-doc/html/gnome-keyring/gnome-keyring-gnome-keyring-misc.html
@@ -56,11 +74,15 @@ share/gtk-doc/html/gnome-keyring/left.png
 share/gtk-doc/html/gnome-keyring/right.png
 share/gtk-doc/html/gnome-keyring/style.css
 share/gtk-doc/html/gnome-keyring/up.png
-share/gtk-doc/html/gp11/GP11Object.html
 share/gtk-doc/html/gp11/ch01.html
-share/gtk-doc/html/gp11/gp11-GP11Call.html
-share/gtk-doc/html/gp11/gp11-gp11-test.html
-share/gtk-doc/html/gp11/gp11-pkcs11.html
+share/gtk-doc/html/gp11/gp11-gp11-attribute.html
+share/gtk-doc/html/gp11/gp11-gp11-attributes.html
+share/gtk-doc/html/gp11/gp11-gp11-error.html
+share/gtk-doc/html/gp11/gp11-gp11-misc.html
+share/gtk-doc/html/gp11/gp11-gp11-module.html
+share/gtk-doc/html/gp11/gp11-gp11-object.html
+share/gtk-doc/html/gp11/gp11-gp11-session.html
+share/gtk-doc/html/gp11/gp11-gp11-slot.html
 share/gtk-doc/html/gp11/gp11.devhelp
 share/gtk-doc/html/gp11/gp11.devhelp2
 share/gtk-doc/html/gp11/home.png
@@ -71,6 +93,7 @@ share/gtk-doc/html/gp11/right.png
 share/gtk-doc/html/gp11/style.css
 share/gtk-doc/html/gp11/up.png
 share/locale/ar/LC_MESSAGES/gnome-keyring.mo
+share/locale/as/LC_MESSAGES/gnome-keyring.mo
 share/locale/ast/LC_MESSAGES/gnome-keyring.mo
 share/locale/az/LC_MESSAGES/gnome-keyring.mo
 share/locale/be/LC_MESSAGES/gnome-keyring.mo
@@ -109,6 +132,7 @@ share/locale/kn/LC_MESSAGES/gnome-keyring.mo
 share/locale/ko/LC_MESSAGES/gnome-keyring.mo
 share/locale/lt/LC_MESSAGES/gnome-keyring.mo
 share/locale/lv/LC_MESSAGES/gnome-keyring.mo
+share/locale/mai/LC_MESSAGES/gnome-keyring.mo
 share/locale/mg/LC_MESSAGES/gnome-keyring.mo
 share/locale/mk/LC_MESSAGES/gnome-keyring.mo
 share/locale/ml/LC_MESSAGES/gnome-keyring.mo
@@ -147,6 +171,8 @@ share/locale/zh_HK/LC_MESSAGES/gnome-keyring.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm share/gtk-doc/html/gp11
 @dirrm share/gtk-doc/html/gnome-keyring
+@dirrm share/gtk-doc/html/gcr
+@dirrm share/gcr/ui
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
 @dirrm lib/security
@@ -155,3 +181,4 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm lib/gnome-keyring
 @dirrm include/gp11
 @dirrm include/gnome-keyring-1
+@dirrm include/gcr
