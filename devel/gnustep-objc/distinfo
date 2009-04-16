@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/04/13 12:12:44 rh Exp $
+$NetBSD: distinfo,v 1.7 2009/04/16 00:24:22 rh Exp $
 
 SHA1 (gnustep-objc-1.6.0.tar.gz) = 6577ae955bcd1ec5ab65db570800053f78e3767a
 RMD160 (gnustep-objc-1.6.0.tar.gz) = 6eaec5ef3ce0857f07c4038f1cc6cced9d845e53
 Size (gnustep-objc-1.6.0.tar.gz) = 169586 bytes
-SHA1 (patch-aa) = d40bf234cd97d85137dc13c740c3e80b1e8b8fd6
+SHA1 (patch-aa) = 440047485d21bcdfe045db0c0f42d7afbac40efa
