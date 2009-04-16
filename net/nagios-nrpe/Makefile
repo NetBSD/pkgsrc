@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/06/21 14:52:48 tonnerre Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/16 09:32:35 apb Exp $
 #
 
 DISTNAME=		nrpe-2.12
 PKGNAME=		nagios-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
@@ -29,6 +30,8 @@ PKG_USERS_VARS+=	NAGIOS_USER
 
 CONFIGURE_ARGS+=	--with-nrpe-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nrpe-group=${NAGIOS_GROUP:Q}
+CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
+CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/nagios/nrpe.cfg ${PKG_SYSCONFDIR}/nrpe.cfg
 RCD_SCRIPTS+=		nrpe
