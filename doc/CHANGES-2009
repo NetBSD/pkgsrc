@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1405 2009/04/16 19:57:26 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1406 2009/04/16 22:43:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/Transmission to 1.52 [tnn 2009-04-16]
 	Updated lang/librep to 0.17.3 [tnn 2009-04-16]
 	Updated x11/rep-gtk2 to 0.18.4 [tnn 2009-04-16]
+	Updated devel/diffuse to 0.3.3 [wiz 2009-04-16]
