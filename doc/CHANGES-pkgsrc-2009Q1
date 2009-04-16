@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.8 2009/04/14 21:18:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.9 2009/04/16 21:56:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -25,3 +25,5 @@ Pullup ticket #2735 - requested by adrianp:
 unrealircd: security patch
 Pullup ticket #2736 - requested by joerg
 libnbcompat: portability fix
+Pullup ticket #2739 - requested by he
+parrot: build fix
