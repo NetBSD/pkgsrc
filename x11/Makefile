@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.585 2009/04/15 20:40:54 markd Exp $
+# $NetBSD: Makefile,v 1.586 2009/04/16 19:08:02 drochner Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -375,6 +375,7 @@ SUBDIR+=	xcursorgen
 SUBDIR+=	xdaemon
 SUBDIR+=	xdaemon2
 SUBDIR+=	xdesktopwaves
+SUBDIR+=	xdg-user-dirs
 SUBDIR+=	xdialog
 SUBDIR+=	xdm
 SUBDIR+=	xdm3d
