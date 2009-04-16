@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:45 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/16 18:14:25 tnn Exp $
 
-DISTNAME=		rep-gtk-0.18
-PKGNAME=		rep-gtk2-0.18
-PKGREVISION=		1
+DISTNAME=		rep-gtk-0.18.4
+PKGNAME=		rep-gtk2-0.18.4
 CATEGORIES=		x11 lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rep-gtk/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		tnn@NetBSD.org
 HOMEPAGE=		http://rep-gtk.sourceforge.net/
@@ -17,8 +17,8 @@ CONFLICTS=		rep-gtk-[0-9]*
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
+PKGCONFIG_OVERRIDE=	rep-gtk.pc-in
 
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../lang/librep/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
