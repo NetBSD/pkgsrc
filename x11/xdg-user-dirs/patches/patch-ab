@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/04/16 19:06:56 drochner Exp $
+
+--- configure.orig	2009-04-16 16:43:21.000000000 +0200
++++ configure
+@@ -6744,12 +6744,11 @@ extern
+ #ifdef __cplusplus
+ "C"
+ #endif
+-const char *_nl_expand_alias (const char *);
+ int
+ main ()
+ {
+ bindtextdomain ("", "");
+-return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr + *_nl_expand_alias ("")
++return * gettext ("")$gt_expression_test_code + _nl_msg_cat_cntr
+   ;
+   return 0;
+ }
