@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/16 18:14:25 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/16 19:08:07 tnn Exp $
 
 DISTNAME=		rep-gtk-0.18.4
 PKGNAME=		rep-gtk2-0.18.4
@@ -17,7 +17,7 @@ CONFLICTS=		rep-gtk-[0-9]*
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
-PKGCONFIG_OVERRIDE=	rep-gtk.pc-in
+PKGCONFIG_OVERRIDE=	rep-gtk.pc.in
 
 .include "../../lang/librep/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
