@@ -1,0 +1,100 @@
+$NetBSD: patch-ab,v 1.1 2009/04/16 22:43:31 wiz Exp $
+
+--- install.py.orig	2009-04-13 22:24:25.000000000 +0000
++++ install.py
+@@ -39,7 +39,12 @@ if os.name == 'nt':
+ os.umask(stat.S_IWGRP | stat.S_IWOTH)
+ 
+ # option defaults
+-options = { 'destdir': '/', 'prefix': '/usr/local/', 'sysconfdir': '/etc/', 'python-interpreter': '/usr/bin/env python' }
++options = { 'destdir': '/',
++            'prefix': '/usr/local/',
++            'sysconfdir': '/etc/',
++            'examplesdir': '${sysconfdir}',
++            'mandir': '${prefix}/share/man/',
++            'pythonbin': '/usr/bin/env python' }
+ install = True
+ files_only = False
+ 
+@@ -68,12 +73,20 @@ Options:
+      directory for installing read-only single-machine data
+      default: %s
+ 
+-  --python-interpreter=PATH
++  --examplesdir=PATH
++     directory for example configuration files
++     default: %s
++
++  --mandir=PATH
++     directory for man pages
++     default: %s
++
++  --pythonbin=PATH
+      command for python interpreter
+      default: %s
+ 
+   --files-only
+-     only install/remove files; skip the post install/removal tasks""" % (app_path, options['destdir'], options['prefix'], options['sysconfdir'], options['python-interpreter'])
++     only install/remove files; skip the post install/removal tasks""" % (app_path, options['destdir'], options['prefix'], options['sysconfdir'], options['examplesdir'], options['mandir'], options['pythonbin'])
+     sys.exit(0)
+  
+ # returns the list of components used in a path
+@@ -149,8 +162,14 @@ for arg in sys.argv[1:]:
+             logError('Unknown option "%s".' % (arg, ))
+             sys.exit(1)
+ 
++# expand variables
++for s in 'sysconfdir', 'examplesdir', 'mandir':
++    for k in 'prefix', 'sysconfdir':
++        if s != k:
++            options[s] = options[s].replace('${%s}' % (k, ), options[k])
++
+ # validate inputs
+-for opt in 'prefix', 'sysconfdir':
++for opt in 'prefix', 'sysconfdir', 'examplesdir', 'mandir':
+     p = options[opt]
+     c = components(p)
+     if os.pardir in c or os.curdir in c:
+@@ -163,7 +182,9 @@ for opt in 'prefix', 'sysconfdir':
+ destdir = options['destdir']
+ prefix = options['prefix']
+ sysconfdir = options['sysconfdir']
+-python = options['python-interpreter']
++examplesdir = options['examplesdir']
++mandir = options['mandir']
++pythonbin = options['pythonbin']
+ 
+ # tell the user what we are about to do
+ if install:
+@@ -174,21 +195,27 @@ print '''Performing %s with:
+     destdir=%s
+     prefix=%s
+     sysconfdir=%s
+-    python-interpreter=%s''' % (stage, destdir, prefix, sysconfdir, python)
++    examplesdir=%s
++    mandir=%s
++    pythonbin=%s''' % (stage, destdir, prefix, sysconfdir, examplesdir, mandir, pythonbin)
+ 
+ # install files to prefix
+ processFiles(install, destdir, prefix, 'src/usr', {
+-        'bin/diffuse': [ ("'../../etc/diffuserc'", repr(relpath(os.path.join(prefix, 'bin'), os.path.join(sysconfdir, 'diffuserc')))), ('/usr/bin/env python', python) ],
++        'bin/diffuse': [ ("'../../etc/diffuserc'", repr(relpath(os.path.join(prefix, 'bin'), os.path.join(sysconfdir, 'diffuserc')))), ('/usr/bin/env python', pythonbin) ],
+         'share/applications/diffuse.desktop': None,
+         'share/diffuse/syntax/*.syntax': None,
+         'share/gnome/help/diffuse/C/diffuse.xml': [ ('/usr/', prefix), ('/etc/', sysconfdir) ],
+-        'share/man/man1/diffuse.1': [ ('/usr/', prefix), ('/etc/', sysconfdir) ],
+         'share/omf/diffuse/diffuse-C.omf': [ ('/usr/', prefix) ],
+         'share/pixmaps/diffuse.png': None
+     })
+ 
++# install manual
++processFiles(install, destdir, mandir, 'src/usr/share/man', {
++        'man1/diffuse.1': [ ('/usr/', prefix), ('/etc/', sysconfdir) ]
++    })
++
+ # install files to sysconfdir
+-processFiles(install, destdir, sysconfdir, 'src/etc', { 'diffuserc': [ ('../usr', relpath(sysconfdir, prefix)) ] })
++processFiles(install, destdir, examplesdir, 'src/etc', { 'diffuserc': [ ('/etc/', sysconfdir), ('../usr', relpath(sysconfdir, prefix)) ] })
+ 
+ if not install:
+     # remove directories we own
