@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/04/16 18:08:32 tnn Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -11,6 +11,7 @@ include/rep_regexp.h
 include/rep_subrs.h
 info/librep.info
 lib/librep.la
+lib/pkgconfig/librep.pc
 libexec/rep/${MACHINE_GNU_PLATFORM}/install-aliases
 libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
 libexec/rep/${MACHINE_GNU_PLATFORM}/rep_config.h
@@ -34,7 +35,6 @@ libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/vm/safe-interpreter.la
 libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sdbm.la
 libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/tables.la
 libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/timers.la
-share/aclocal/rep.m4
 share/emacs/site-lisp/rep-debugger.el
 share/rep/${PKGVERSION}/lisp/cgi-get.jl
 share/rep/${PKGVERSION}/lisp/cgi-get.jlc

@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.46 2007/05/07 12:42:19 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2009/04/16 18:08:32 tnn Exp $
 #
 
-DISTNAME=		librep-0.17
-PKGREVISION=		3
+DISTNAME=		librep-0.17.3
 CATEGORIES=		lang devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=librep/}
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://librep.sourceforge.net/
 COMMENT=		Emacs Lisp-like runtime library, interpreter, compiler and VM
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake makeinfo
-USE_GNU_READLINE=	# uses rl_basic_quote_characters
-
+USE_GNU_READLINE=	yes # uses rl_basic_quote_characters
 USE_LIBTOOL=		yes
+INFO_FILES=		yes
+PKGCONFIG_OVERRIDE=	librep.pc.in
+
 REP_LIBTOOL=		${PREFIX}/libexec/rep/${MACHINE_GNU_PLATFORM}/libtool
 
 GNU_CONFIGURE=		yes
@@ -21,13 +24,14 @@ CONFIGURE_ARGS+=	--with-readline
 CONFIGURE_ARGS+=	--with-gmp
 CONFIGURE_ARGS+=	--enable-static
 
-CONFIG_STATUS_OVERRIDE=	# empty
-
-INFO_FILES=	# PLIST
+REPLACE_INTERPRETER+=	rep
+REPLACE.rep.old=	.*/bin/rep
+REPLACE.rep.new=	${PREFIX}/bin/rep
+REPLACE_FILES.rep=	src/rep-xgettext.jl
 
 post-install:
-	${RM} -f ${REP_LIBTOOL}
-	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${REP_LIBTOOL}
+	${RM} -f ${DESTDIR}${REP_LIBTOOL}
+	${INSTALL_SCRIPT} ${PKG_LIBTOOL} ${DESTDIR}${REP_LIBTOOL}
 
 .include "../../databases/gdbm/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
