@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.34 2008/06/16 20:18:20 tonnerre Exp $
+$NetBSD: patch-ac,v 1.35 2009/04/16 09:50:37 tnn Exp $
 
 --- Configure.orig	2007-09-16 14:24:17.000000000 +0200
 +++ Configure	2007-10-21 13:21:36.000000000 +0200
@@ -34,7 +34,7 @@ $NetBSD: patch-ac,v 1.34 2008/06/16 20:18:20 tonnerre Exp $
 +"NetBSD-ns32k", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-powerpc", "gcc:-DTERMIOS -DB_ENDIAN -O2 -Wall::(unknown):::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-sparc", "gcc:-DTERMIOS -DB_ENDIAN -O2 -Wall::(unknown):::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
-+"NetBSD-sparc64", "gcc:-DB_ENDIAN -DTERMIOS -O3 -DMD32_REG_T=int -Wall::(unknown):ULTRASPARC::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2 BF_PTR::::::md5-sparcv9.o::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
++"NetBSD-sparc64", "gcc:-DB_ENDIAN -DTERMIOS -O3 -DMD32_REG_T=int -Wall::(unknown):ULTRASPARC::SIXTY_FOUR_BIT_LONG DES_INT DES_PTR DES_RISC2 BF_PTR::::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-vax", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG MD2_CHAR RC4_INDEX DES_UNROLL::::::::::::dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-x86-aout", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_out_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
 +"NetBSD-x86-elf", "gcc:-DTERMIOS -DL_ENDIAN -O2 -Wall::(unknown):::BN_LLONG ${x86_gcc_des} ${x86_gcc_opts}:${x86_elf_asm}:dlfcn:bsd-gcc-shared:-fPIC::.so.\$(SHLIB_MAJOR).\$(SHLIB_MINOR)",
