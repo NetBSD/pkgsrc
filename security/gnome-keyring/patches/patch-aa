@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.9 2009/03/15 18:14:24 jmcneill Exp $
+$NetBSD: patch-aa,v 1.10 2009/04/16 19:35:29 drochner Exp $
 
---- configure.orig	2009-03-14 14:57:51.000000000 -0400
+--- configure.orig	2009-04-12 16:12:49.000000000 +0200
 +++ configure
-@@ -18124,7 +18124,7 @@ fi
+@@ -19198,7 +19198,7 @@ fi
  
- { echo "$as_me:$LINENO: checking build test tools, unit tests, and -Werror" >&5
- echo $ECHO_N "checking build test tools, unit tests, and -Werror... $ECHO_C" >&6; }
+ { $as_echo "$as_me:$LINENO: checking build test tools, unit tests, and -Werror" >&5
+ $as_echo_n "checking build test tools, unit tests, and -Werror... " >&6; }
 -if test "$enable_tests" == "yes"; then
 +if test "$enable_tests" = "yes"; then
  
  cat >>confdefs.h <<_ACEOF
  #define WITH_TESTS 1
-@@ -18140,7 +18140,7 @@ echo "${ECHO_T}no" >&6; }
+@@ -19214,7 +19214,7 @@ $as_echo "no" >&6; }
    	tests_status="no"
  fi
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.9 2009/03/15 18:14:24 jmcneill Exp $
    WITH_TESTS_TRUE=
    WITH_TESTS_FALSE='#'
  else
-@@ -18155,7 +18155,7 @@ if test "${enable_coverage+set}" = set; 
+@@ -19229,7 +19229,7 @@ if test "${enable_coverage+set}" = set; 
  fi
  
  
@@ -29,8 +29,8 @@ $NetBSD: patch-aa,v 1.9 2009/03/15 18:14:24 jmcneill Exp $
  	CFLAGS="$CFLAGS -fprofile-arcs -ftest-coverage"
  	LDFLAGS="$LDFLAGS -fprofile-arcs -ftest-coverage"
  fi
-@@ -18173,7 +18173,7 @@ fi
- echo $ECHO_N "checking valgrind... $ECHO_C" >&6; }
+@@ -19247,7 +19247,7 @@ fi
+ $as_echo_n "checking valgrind... " >&6; }
  valgrind_status="yes"
  
 - if test "$enable_valgrind" == "run"; then
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.9 2009/03/15 18:14:24 jmcneill Exp $
    WITH_VALGRIND_TRUE=
    WITH_VALGRIND_FALSE='#'
  else
-@@ -18183,7 +18183,7 @@ fi
+@@ -19257,7 +19257,7 @@ fi
  
  
  # Run gnome-keyring-daemon under valgrind as default
@@ -46,22 +46,22 @@ $NetBSD: patch-aa,v 1.9 2009/03/15 18:14:24 jmcneill Exp $
 +if test "$enable_valgrind" = "run"; then
  	# Extract the first word of "valgrind", so it can be a program name with args.
  set dummy valgrind; ac_word=$2
- { echo "$as_me:$LINENO: checking for $ac_word" >&5
-@@ -18254,7 +18254,7 @@ fi
+ { $as_echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -19328,7 +19328,7 @@ fi
  
  
  # Build valgrind support into code
 -if test "$enable_valgrind" == "yes"; then
 +if test "$enable_valgrind" = "yes"; then
  	if test "${ac_cv_header_valgrind_valgrind_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for valgrind/valgrind.h" >&5
- echo $ECHO_N "checking for valgrind/valgrind.h... $ECHO_C" >&6; }
-@@ -18387,7 +18387,7 @@ else
+   { $as_echo "$as_me:$LINENO: checking for valgrind/valgrind.h" >&5
+ $as_echo_n "checking for valgrind/valgrind.h... " >&6; }
+@@ -19463,7 +19463,7 @@ else
  fi
  
  
 -	if test "$have_valgrind" == "no"; then
 +	if test "$have_valgrind" = "no"; then
- 		{ { echo "$as_me:$LINENO: error: The valgrind headers are missing" >&5
- echo "$as_me: error: The valgrind headers are missing" >&2;}
+ 		{ { $as_echo "$as_me:$LINENO: error: The valgrind headers are missing" >&5
+ $as_echo "$as_me: error: The valgrind headers are missing" >&2;}
     { (exit 1); exit 1; }; }
