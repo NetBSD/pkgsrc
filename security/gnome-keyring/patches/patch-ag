@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1 2009/04/16 19:35:29 drochner Exp $
+
+--- egg/egg-asn1.c.orig	2009-04-15 16:55:43.000000000 +0200
++++ egg/egg-asn1.c
+@@ -572,7 +572,7 @@ when_to_time (struct tm *when, gint offs
+ 	return result;
+ }
+ 
+-glong
++time_t
+ egg_asn1_time_parse_utc (const gchar *time)
+ {
+ 	struct tm when;
+@@ -690,7 +690,7 @@ parse_general_time (const gchar *time, s
+ 	return TRUE;
+ }
+ 
+-glong
++time_t
+ egg_asn1_time_parse_general (const gchar *time)
+ {
+ 	struct tm when;
