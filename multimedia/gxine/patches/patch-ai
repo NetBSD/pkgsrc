@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
+$NetBSD: patch-ai,v 1.5 2009/04/17 16:51:07 drochner Exp $
 
---- src/key_events.c.orig	2006-10-03 01:43:11.000000000 +0200
+--- src/key_events.c.orig	2009-03-25 17:41:49.000000000 +0100
 +++ src/key_events.c
-@@ -731,6 +731,7 @@ void kb_edit_show (void)
+@@ -767,6 +767,7 @@ void kb_edit_show (void)
  
  static void do_edit_binding (void)
  {
@@ -10,7 +10,7 @@ $NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
    editkey = *lookup_binding (&catch_key_iter);
    editdesc = editkey.desc;
    editkey.desc = getdesc (&editkey);
-@@ -739,7 +740,7 @@ static void do_edit_binding (void)
+@@ -775,7 +776,7 @@ static void do_edit_binding (void)
    gtk_text_buffer_set_text (kb_binding_command_buf, editkey.cmd, -1);
    gtk_entry_set_text (GTK_ENTRY (kb_binding_key), editkey.keyname);
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
    gtk_window_set_title (GTK_WINDOW (kb_binding_edit_dlg), title);
    free (title);
  
-@@ -1069,9 +1070,7 @@ static JSBool js_keypad_show (JSContext 
+@@ -1110,9 +1111,7 @@ static JSBool js_keypad_show (JSContext 
  
  /* Xine event mapping data */
  
@@ -30,7 +30,7 @@ $NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
      { "ANGLE_NEXT", XINE_EVENT_INPUT_ANGLE_NEXT },
      { "ANGLE_PREVIOUS", XINE_EVENT_INPUT_ANGLE_PREVIOUS },
      { "DOWN", XINE_EVENT_INPUT_DOWN },
-@@ -1112,7 +1111,10 @@ static const kb_xine_event_map_t xine_in
+@@ -1153,7 +1152,10 @@ static const kb_xine_event_map_t xine_in
      { "9", XINE_EVENT_INPUT_NUMBER_9 },
      { "-", -1 }, /* null event */
      { "" }
@@ -42,18 +42,18 @@ $NetBSD: patch-ai,v 1.4 2006/10/17 16:23:47 drochner Exp $
  };
  
  
-@@ -1159,9 +1161,7 @@ static void kb_xine_event_help (se_t *se
- 
+@@ -1199,9 +1201,7 @@ static void kb_xine_event_help (se_t *se
+ }
  
  
 -static const kb_xine_event_map_t xine_vdr = {
 -  "VDR",
 -  {
 +static const kb_xine_event_id_t xine_vdr_ids[] = {
-     { "AUDIO", XINE_EVENT_VDR_MUTE + 1 /* ..._VDR_AUDIO */ },
+     { "AUDIO", XINE_EVENT_VDR_AUDIO },
      { "BACK", XINE_EVENT_VDR_BACK },
      { "BLUE", XINE_EVENT_VDR_BLUE },
-@@ -1197,7 +1197,10 @@ static const kb_xine_event_map_t xine_vd
+@@ -1239,7 +1239,10 @@ static const kb_xine_event_map_t xine_vd
      { "VOLPLUS", XINE_EVENT_VDR_VOLPLUS },
      { "YELLOW", XINE_EVENT_VDR_YELLOW },
      { "" }
