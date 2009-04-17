@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1410 2009/04/17 16:36:42 jakllsch Exp $
+$NetBSD: CHANGES-2009,v 1.1411 2009/04/17 16:47:55 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1953,3 +1953,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/pango to 1.24.1 [drochner 2009-04-17]
 	Updated devel/glib2 to 2.20.1 [drochner 2009-04-17]
 	Updated fonts/dejavu-ttf to 2.29 [jakllsch 2009-04-17]
+	Added devel/p5-TAP-Harness-Archive version 0.13 [he 2009-04-17]
