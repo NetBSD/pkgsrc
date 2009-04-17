@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2009/03/18 00:16:45 jmcneill Exp $
+# $NetBSD: Makefile,v 1.54 2009/04/17 16:10:21 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,5 +25,6 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.70
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
