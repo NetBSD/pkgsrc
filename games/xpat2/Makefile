@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/04/17 08:21:18 wiz Exp $
 
 DISTNAME=	xpat2-1.07
 PKGREVISION=	3
@@ -9,9 +9,9 @@ EXTRACT_SUFX=	-src.tar.gz
 MAINTAINER=	kuebart@mathematik.uni-ulm.de
 COMMENT=	X11 solitaire game with 14 variations
 
+MAKE_JOBS_SAFE=		no
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_X11BASE=	YES
 USE_TOOLS+=	imake
 
 MAKE_ENV+=	XPMDIR=${BUILDLINK_PREFIX.libXpm:Q} XMKMF=${XMKMF_CMD:Q}
