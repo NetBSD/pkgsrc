@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/11/10 17:21:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/17 01:07:29 dsainty Exp $
 #
 
 DISTNAME=		xmore-1.0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,5 +19,4 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2009/04/17 01:07:30 dsainty Exp $
+
+XawPrintDialogClosePrinterConnection isn't available if USE_XPRINT isn't
+defined.
+
+--- xmore.c.orig	2009-04-16 15:00:34.037637683 +1200
++++ xmore.c	2009-04-16 15:01:03.532901704 +1200
+@@ -147,14 +147,14 @@
+     XtCallActionProc(w, "quit", NULL, NULL, 0);
+ }
+ 
++#ifdef USE_XPRINT
++
+ static void
+ printshellDestroyXtProc(Widget w, XtPointer client_data, XtPointer callData)
+ {
+     XawPrintDialogClosePrinterConnection(printdialog, False);
+ }
+ 
+-#ifdef USE_XPRINT
+-
+ static void
+ printOKXtProc(Widget w, XtPointer client_data, XtPointer callData)
+ {
