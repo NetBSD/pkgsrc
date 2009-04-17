@@ -1,80 +1,81 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/30 11:56:01 rh Exp $
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Headers
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Resources
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/EDCommon
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/CollectionMapping.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDAOMTagProcessor.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDActivityIndicator.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDApplication.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDBitmapCharset.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDCanvas.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDCommon.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDCommonDefines.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDIPSocket.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDIRCObject.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDKeyControlWindow.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDLRUCache.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDLightWeightLock.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDMLParser.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDMLTagProcessorProtocol.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDMLToken.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDMutableObjectPair.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDNumberSet.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDObjcRuntime.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDObjectPair.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDObjectReference.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDObjectWell.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDRange.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDSocket.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDSortedArray+Private.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDSortedArray.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDSparseClusterArray.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDStack.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDStream.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDStringScanner.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDSwapView.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDTCPSocket.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDTVScrollView.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDTableView.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/EDUDPSocket.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSApplication+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSArray+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSAttributedString+AppKitExtensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSAttributedString+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSData+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSDate+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSDictionary+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSFileHandle+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSHost+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSInvocation+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSMatrix+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSObject+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSPasteboard+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSProcessInfo+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSScanner+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSSet+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSString+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSTableColumn+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSTableView+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSWindow+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/NSWorkspace+Extensions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/functions.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers/osdep.h
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Resources/Info-gnustep.plist
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Resources/MIME.plist
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Resources/XMLEntities.plist
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Resources/arrows.tiff
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/libEDCommon.so
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/libEDCommon.so.0.0.1
-share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/Current
-share/GNUstep/Local/Library/Headers/EDCommon
-share/GNUstep/Local/Library/Libraries/libEDCommon.so
-share/GNUstep/Local/Library/Libraries/libEDCommon.so.0.0.1
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Resources
-@dirrm share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A/Headers
-@dirrm share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions/A
-@dirrm share/GNUstep/Local/Library/Frameworks/EDCommon.framework/Versions
-@dirrm share/GNUstep/Local/Library/Frameworks/EDCommon.framework
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Frameworks
+@comment $NetBSD: PLIST,v 1.2 2009/04/17 22:01:19 rh Exp $
+include/EDCommon
+lib/GNUstep/Frameworks/EDCommon.framework/EDCommon
+lib/GNUstep/Frameworks/EDCommon.framework/Headers
+lib/GNUstep/Frameworks/EDCommon.framework/Resources
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/EDCommon
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/CollectionMapping.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDAOMTagProcessor.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDActivityIndicator.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDApplication.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDBitmapCharset.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDCanvas.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDCommon.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDCommonDefines.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDIPSocket.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDIRCObject.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDKeyControlWindow.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDLRUCache.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDLightWeightLock.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDMLParser.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDMLTagProcessorProtocol.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDMLToken.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDMutableObjectPair.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDNumberSet.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDObjcRuntime.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDObjectPair.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDObjectReference.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDObjectWell.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDRange.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDSocket.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDSortedArray+Private.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDSortedArray.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDSparseClusterArray.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDStack.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDStream.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDStringScanner.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDSwapView.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDTCPSocket.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDTVScrollView.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDTableView.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/EDUDPSocket.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSApplication+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSArray+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSAttributedString+AppKitExtensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSAttributedString+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSData+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSDate+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSDictionary+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSFileHandle+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSHost+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSInvocation+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSMatrix+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSObject+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSPasteboard+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSProcessInfo+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSScanner+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSSet+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSString+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSTableColumn+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSTableView+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSWindow+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/NSWorkspace+Extensions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/functions.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers/osdep.h
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources/Info-gnustep.plist
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources/MIME.plist
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources/XMLEntities.plist
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources/arrows.tiff
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/libEDCommon.so
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/libEDCommon.so.0.0.1
+lib/GNUstep/Frameworks/EDCommon.framework/Versions/Current
+lib/GNUstep/Frameworks/EDCommon.framework/libEDCommon.so
+lib/libEDCommon.so
+lib/libEDCommon.so.0.0.1
+@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources
+@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers
+@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0
+@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions
+@dirrm lib/GNUstep/Frameworks/EDCommon.framework
+@comment in x11/gnustep-base: @dirrm lib/GNUstep/Frameworks
+@comment in devel/gnustep-base: @dirrm lib/GNUstep
