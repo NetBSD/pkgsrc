@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/04/07 19:29:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/04/17 17:27:48 drochner Exp $
 include/evolution-data-server-2.26/camel/camel-address.h
 include/evolution-data-server-2.26/camel/camel-arg.h
 include/evolution-data-server-2.26/camel/camel-block-file.h
@@ -660,6 +660,7 @@ share/locale/ko/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/ku/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/lt/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/lv/LC_MESSAGES/evolution-data-server-2.26.mo
+share/locale/mai/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/mk/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/ml/LC_MESSAGES/evolution-data-server-2.26.mo
 share/locale/mn/LC_MESSAGES/evolution-data-server-2.26.mo
