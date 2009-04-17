@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/04/16 00:24:22 rh Exp $
+# $NetBSD: Makefile,v 1.18 2009/04/17 21:55:13 rh Exp $
 #
 
 DISTNAME=	gnustep-objc-1.6.0
@@ -10,7 +10,7 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Objective-C runtime
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	destdir
 
 LICENSE=		gnu-gpl-v3
 
