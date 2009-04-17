@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2009/01/12 21:50:17 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2009/04/17 18:40:42 drochner Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.esound
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gedit
 PKG_SUPPORTED_OPTIONS=	enchant
 #PKG_SUGGESTED_OPTIONS=	enchant
 
