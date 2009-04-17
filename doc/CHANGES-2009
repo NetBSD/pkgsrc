@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1407 2009/04/17 09:40:27 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1408 2009/04/17 12:09:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1940,3 +1940,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/rep-gtk2 to 0.18.4 [tnn 2009-04-16]
 	Updated devel/diffuse to 0.3.3 [wiz 2009-04-16]
 	Updated databases/phpmyadmin to 2.11.9.5 [tron 2009-04-17]
+	Updated print/xpdf to 3.02pl3 [tron 2009-04-17]
