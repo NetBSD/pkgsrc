@@ -1,17 +1,8 @@
-$NetBSD: patch-ad,v 1.3 2008/10/29 01:39:57 wiz Exp $
+$NetBSD: patch-ad,v 1.4 2009/04/17 17:51:01 drochner Exp $
 
---- configure.orig	2008-10-29 00:42:46.000000000 +0000
+--- configure.orig	2009-03-19 10:02:53.000000000 +0100
 +++ configure
-@@ -14258,7 +14258,7 @@ else
- echo "${ECHO_T}yes" >&6; }
- 	have_gio=yes
- fi
--if test x$have_gio == "xyes"; then
-+if test x$have_gio = "xyes"; then
- 
- cat >>confdefs.h <<\_ACEOF
- #define HAVE_GIO 1
-@@ -14350,7 +14350,7 @@ echo "$as_me: error: HAL support explici
+@@ -14206,7 +14206,7 @@ $as_echo "$as_me: error: HAL support exp
     { (exit 1); exit 1; }; }
    fi
  
@@ -20,3 +11,20 @@ $NetBSD: patch-ad,v 1.3 2008/10/29 01:39:57 wiz Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_HAL 1
+@@ -20058,6 +20058,7 @@ if test "x$have_python" != "xno"; then
+ 
+ 
+ 
++if false; then
+ 
+ 		{ $as_echo "$as_me:$LINENO: checking whether we can build a shared library depending on libpython" >&5
+ $as_echo_n "checking whether we can build a shared library depending on libpython... " >&6; }
+@@ -20095,6 +20096,8 @@ $as_echo "$as_me: WARNING: Disabling pyt
+ $as_echo "$result" >&6; }
+ fi
+ 
++fi
++
+ if test "x$have_python" != "xno"; then
+ 	PYGTK_REQUIRED=2.8.0
+ 	GST_PYTHON_REQUIRED=0.10.1
