@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/02/03 20:38:01 jakllsch Exp $
+$NetBSD: distinfo,v 1.8 2009/04/17 16:31:13 jakllsch Exp $
 
-SHA1 (dejavu-fonts-ttf-2.28.tar.bz2) = ada46202728152a95acfd4e2f46633749eb6c7c5
-RMD160 (dejavu-fonts-ttf-2.28.tar.bz2) = 4edf28f5e1832053cda0f57b21bd58daf04bb291
-Size (dejavu-fonts-ttf-2.28.tar.bz2) = 4315592 bytes
+SHA1 (dejavu-fonts-ttf-2.29.tar.bz2) = cf208ec13353bb08310612e48c89cd0974480194
+RMD160 (dejavu-fonts-ttf-2.29.tar.bz2) = 2b675489d902847d15ab9dd770f07c040b7dfca2
+Size (dejavu-fonts-ttf-2.29.tar.bz2) = 4157803 bytes
