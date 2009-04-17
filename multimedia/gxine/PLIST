@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/11/28 21:49:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/04/17 16:51:07 drochner Exp $
 bin/gxine
 bin/gxine_client
 lib/gxine/gxineplugin.la
@@ -14,17 +14,33 @@ share/gxine/logo.mpv
 share/gxine/mediamarks
 share/gxine/pixmaps/gxine-icon.xpm
 share/gxine/pixmaps/nospeaker.png
+share/gxine/pixmaps/set-brightness.png
 share/gxine/pixmaps/set-brightness.svg
+share/gxine/pixmaps/set-channel.png
+share/gxine/pixmaps/set-channel.svg
+share/gxine/pixmaps/set-contrast.png
 share/gxine/pixmaps/set-contrast.svg
+share/gxine/pixmaps/set-hue.png
+share/gxine/pixmaps/set-hue.svg
+share/gxine/pixmaps/set-saturation.png
 share/gxine/pixmaps/set-saturation.svg
+share/gxine/pixmaps/set-sync.png
+share/gxine/pixmaps/set-sync.svg
+share/gxine/pixmaps/set-volume.png
 share/gxine/pixmaps/set-volume.svg
 share/gxine/pixmaps/speaker.png
 share/gxine/pixmaps/splash.png
+share/gxine/pixmaps/subtitle.png
+share/gxine/pixmaps/subtitle.svg
 share/icons/hicolor/64x64/apps/gxine.png
 share/locale/cs/LC_MESSAGES/gxine.mo
 share/locale/cs/LC_MESSAGES/gxine.theme.mo
 share/locale/de/LC_MESSAGES/gxine.mo
 share/locale/de/LC_MESSAGES/gxine.theme.mo
+share/locale/es/LC_MESSAGES/gxine.mo
+share/locale/es/LC_MESSAGES/gxine.theme.mo
+share/locale/fi/LC_MESSAGES/gxine.mo
+share/locale/fi/LC_MESSAGES/gxine.theme.mo
 share/locale/fr/LC_MESSAGES/gxine.mo
 share/locale/fr/LC_MESSAGES/gxine.theme.mo
 share/locale/it/LC_MESSAGES/gxine.mo
