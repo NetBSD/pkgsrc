@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:32 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/17 16:19:27 abs Exp $
 #
 
 DISTNAME=		x2vnc-1.7.2
@@ -15,13 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 LDFLAGS.SunOS+=		-lresolv
 
+.include "options.mk"
+
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/scrnsaverproto/buildlink3.mk"
-.include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
