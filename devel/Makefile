@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1149 2009/04/12 12:41:30 sno Exp $
+# $NetBSD: Makefile,v 1.1150 2009/04/17 16:47:39 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -771,6 +771,7 @@ SUBDIR+=	p5-Sub-Name
 SUBDIR+=	p5-Sub-Override
 SUBDIR+=	p5-Sub-Uplevel
 SUBDIR+=	p5-TAP-Formatter-HTML
+SUBDIR+=	p5-TAP-Harness-Archive
 SUBDIR+=	p5-Task-Weaken
 SUBDIR+=	p5-Tee
 SUBDIR+=	p5-Template-Plugin-Handy
