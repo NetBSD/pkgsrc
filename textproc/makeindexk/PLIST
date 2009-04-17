@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/17 21:40:25 minskim Exp $
+bin/makeindex
+bin/mkindex
+man/man1/makeindex.1
+man/man1/mkindex.1
