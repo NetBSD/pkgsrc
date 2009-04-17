@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1408 2009/04/17 12:09:59 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1409 2009/04/17 16:00:24 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1941,3 +1941,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/diffuse to 0.3.3 [wiz 2009-04-16]
 	Updated databases/phpmyadmin to 2.11.9.5 [tron 2009-04-17]
 	Updated print/xpdf to 3.02pl3 [tron 2009-04-17]
+	Updated x11/vte to 0.20.1 [drochner 2009-04-17]
+	Updated graphics/freetype2 to 2.3.9 [drochner 2009-04-17]
+	Updated www/gtkhtml314 to 3.26.1.1 [drochner 2009-04-17]
+	Updated net/libsoup24 to 2.26.1 [drochner 2009-04-17]
+	Updated devel/libwnck to 2.26.1 [drochner 2009-04-17]
+	Updated devel/libgweather to 2.26.1 [drochner 2009-04-17]
+	Updated security/gnome-keyring to 2.26.1 [drochner 2009-04-17]
+	Added x11/xdg-user-dirs version 0.10 [drochner 2009-04-17]
+	Updated x11/gtk2 to 2.16.1 [drochner 2009-04-17]
+	Updated devel/pango to 1.24.1 [drochner 2009-04-17]
+	Updated devel/glib2 to 2.20.1 [drochner 2009-04-17]
