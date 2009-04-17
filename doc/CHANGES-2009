@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1415 2009/04/17 22:37:40 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1416 2009/04/17 22:46:56 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1958,3 +1958,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/makeindexk version 2.15 [minskim 2009-04-17]
 	Updated devel/edcommon to 32nb6 [rh 2009-04-17]
 	Updated games/cgoban-java to 3.3.25 [rh 2009-04-17]
+	Updated devel/libffi to 3.0.8nb1 [rh 2009-04-17]
