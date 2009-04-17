@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2009/03/18 00:32:45 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/04/17 17:30:02 drochner Exp $
 bin/gcalctool
 bin/gnome-calculator
 man/man1/gcalctool.1
@@ -35,6 +35,13 @@ share/gnome/help/gcalctool/de/figures/gcalctool_menu_symbol.png
 share/gnome/help/gcalctool/de/figures/gcalctool_programming_window.png
 share/gnome/help/gcalctool/de/figures/gcalctool_scientific_window.png
 share/gnome/help/gcalctool/de/gcalctool.xml
+share/gnome/help/gcalctool/el/figures/gcalctool_advanced_window.png
+share/gnome/help/gcalctool/el/figures/gcalctool_basic_window.png
+share/gnome/help/gcalctool/el/figures/gcalctool_financial_window.png
+share/gnome/help/gcalctool/el/figures/gcalctool_menu_symbol.png
+share/gnome/help/gcalctool/el/figures/gcalctool_programming_window.png
+share/gnome/help/gcalctool/el/figures/gcalctool_scientific_window.png
+share/gnome/help/gcalctool/el/gcalctool.xml
 share/gnome/help/gcalctool/es/figures/gcalctool_advanced_window.png
 share/gnome/help/gcalctool/es/figures/gcalctool_basic_window.png
 share/gnome/help/gcalctool/es/figures/gcalctool_financial_window.png
@@ -212,6 +219,7 @@ share/omf/gcalctool/gcalctool-C.omf
 share/omf/gcalctool/gcalctool-bg.omf
 share/omf/gcalctool/gcalctool-ca.omf
 share/omf/gcalctool/gcalctool-de.omf
+share/omf/gcalctool/gcalctool-el.omf
 share/omf/gcalctool/gcalctool-es.omf
 share/omf/gcalctool/gcalctool-eu.omf
 share/omf/gcalctool/gcalctool-fr.omf
@@ -253,6 +261,8 @@ share/omf/gcalctool/gcalctool-zh_TW.omf
 @dirrm share/gnome/help/gcalctool/eu
 @dirrm share/gnome/help/gcalctool/es/figures
 @dirrm share/gnome/help/gcalctool/es
+@dirrm share/gnome/help/gcalctool/el/figures
+@dirrm share/gnome/help/gcalctool/el
 @dirrm share/gnome/help/gcalctool/de/figures
 @dirrm share/gnome/help/gcalctool/de
 @dirrm share/gnome/help/gcalctool/ca/figures
@@ -263,7 +273,6 @@ share/omf/gcalctool/gcalctool-zh_TW.omf
 @dirrm share/gnome/help/gcalctool/C
 @dirrm share/gnome/help/gcalctool
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/gcalctool
 @comment in xdg-dirs: @dirrm share/applications
