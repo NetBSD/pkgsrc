@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/02/05 23:40:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/17 16:31:13 jakllsch Exp $
 #
 
-DISTNAME=	dejavu-fonts-ttf-2.28
+DISTNAME=	dejavu-fonts-ttf-2.29
 PKGNAME=        ${DISTNAME:S/fonts-//}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dejavu/}
@@ -17,13 +17,12 @@ USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-USE_TOOLS+=	pax
-
 FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
-EGDIR=		${PREFIX}/share/examples/dejavu-ttf
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 FCEGDIR=	${EGDIR}/fontconfig-conf.d
 FCCFDIR=	${PKG_SYSCONFDIR}/fontconfig/conf.d
+DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 MAKE_DIRS+=	${FCCFDIR}
 
@@ -44,14 +43,13 @@ CONF_FILES+=	${FCEGDIR}/57-dejavu-serif.conf \
 REQD_DIRS=	${EGDIR}
 REQD_DIRS+=	${FCEGDIR}
 
-INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf ${FCEGDIR}
+INSTALLATION_DIRS=	lib/X11/fonts/TTF ${DOCSDIR} ${FCEGDIR}
 
 do-install:
-	cd ${WRKSRC}/ttf && pax -rw -pm *.ttf \
-		${DESTDIR}${FONTS_DIRS.ttf}
-	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS LICENSE NEWS README \
-		${DESTDIR}${PREFIX}/share/doc/dejavu-ttf
-	cd ${WRKSRC}/fontconfig && pax -rw -pm *.conf \
-		${DESTDIR}${FCEGDIR}
+	${INSTALL_DATA} ${WRKSRC}/ttf/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/fontconfig/*.conf ${DESTDIR}${FCEGDIR}
+.for docfile in AUTHORS BUGS LICENSE NEWS README
+	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
