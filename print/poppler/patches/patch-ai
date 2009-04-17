@@ -1,17 +1,25 @@
-$NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
+$NetBSD: patch-ai,v 1.8 2009/04/17 16:08:17 drochner Exp $
 
---- configure.orig	2009-03-12 00:15:52.000000000 +0100
+--- configure.orig	2009-04-16 22:21:56.000000000 +0200
 +++ configure
-@@ -948,6 +948,8 @@ BUILD_ABIWORD_OUTPUT_TRUE
- BUILD_ABIWORD_OUTPUT_FALSE
- BUILD_UTILS_TRUE
- BUILD_UTILS_FALSE
-+USE_CMS_TRUE
-+USE_CMS_FALSE
- PC_REQUIRES
- PC_REQUIRES_PRIVATE
+@@ -787,6 +787,8 @@ ac_subst_vars='LTLIBOBJS
  LIBOBJS
-@@ -1597,6 +1599,7 @@ Optional Features:
+ PC_REQUIRES_PRIVATE
+ PC_REQUIRES
++USE_CMS_FALSE
++USE_CMS_TRUE
+ BUILD_UTILS_FALSE
+ BUILD_UTILS_TRUE
+ BUILD_ABIWORD_OUTPUT_FALSE
+@@ -1005,6 +1007,7 @@ enable_gtk_test
+ enable_abiword_output
+ enable_utils
+ enable_compile_warnings
++enable_cms
+ '
+       ac_precious_vars='build_alias
+ host_alias
+@@ -1701,6 +1704,7 @@ Optional Features:
    --enable-compile-warnings=[no/yes/kde]
                               Turn on compiler warnings.
  
@@ -19,48 +27,16 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
  
  Optional Packages:
    --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
-@@ -20355,13 +20358,11 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--#include <sys/types.h> /* for off_t */
--     #include <stdio.h>
-+#include <stdio.h>
- int
- main ()
- {
--int (*fp) (FILE *, off_t, int) = fseeko;
--     return fseeko (stdin, 0, 0) && fp (stdin, 0, 0);
-+return fseeko (stdin, 0, 0) && (fseeko) (stdin, 0, 0);
-   ;
-   return 0;
- }
-@@ -20401,13 +20402,11 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #define _LARGEFILE_SOURCE 1
--#include <sys/types.h> /* for off_t */
--     #include <stdio.h>
-+#include <stdio.h>
- int
- main ()
- {
--int (*fp) (FILE *, off_t, int) = fseeko;
--     return fseeko (stdin, 0, 0) && fp (stdin, 0, 0);
-+return fseeko (stdin, 0, 0) && (fseeko) (stdin, 0, 0);
-   ;
-   return 0;
- }
-@@ -24123,7 +24122,7 @@ fi
+@@ -24668,7 +24672,7 @@ fi
  if test x$enable_poppler_qt4 = xyes; then
-   { echo "$as_me:$LINENO: checking for Qt4 moc" >&5
- echo $ECHO_N "checking for Qt4 moc... $ECHO_C" >&6; }
+   { $as_echo "$as_me:$LINENO: checking for Qt4 moc" >&5
+ $as_echo_n "checking for Qt4 moc... " >&6; }
 -  MOCQT4=`which moc`
 +  MOCQT4=${QTDIR}/bin/moc
    mocversion=`$MOCQT4 -v 2>&1`
    mocversiongrep=`echo $mocversion | grep "Qt 4"`
    if test x"$mocversiongrep" != x"$mocversion"; then
-@@ -24578,6 +24577,249 @@ else
+@@ -25127,6 +25131,259 @@ else
  fi
  
  
@@ -74,10 +50,10 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
 +
 +if test x$enable_cms = xyes; then
 +
-+{ echo "$as_me:$LINENO: checking for cmsOpenProfileFromFile in -llcms" >&5
-+echo $ECHO_N "checking for cmsOpenProfileFromFile in -llcms... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking for cmsOpenProfileFromFile in -llcms" >&5
++$as_echo_n "checking for cmsOpenProfileFromFile in -llcms... " >&6; }
 +if test "${ac_cv_lib_lcms_cmsOpenProfileFromFile+set}" = set; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
++  $as_echo_n "(cached) " >&6
 +else
 +  ac_check_lib_save_LIBS=$LIBS
 +LIBS="-llcms  $LIBS"
@@ -109,33 +85,37 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
 +  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 +  *) ac_try_echo=$ac_try;;
 +esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
 +  (eval "$ac_link") 2>conftest.er1
 +  ac_status=$?
 +  grep -v '^ *+' conftest.er1 >conftest.err
 +  rm -f conftest.er1
 +  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } && {
 +	 test -z "$ac_c_werror_flag" ||
 +	 test ! -s conftest.err
-+       } && test -s conftest$ac_exeext &&
-+       $as_test_x conftest$ac_exeext; then
++       } && test -s conftest$ac_exeext && {
++	 test "$cross_compiling" = yes ||
++	 $as_test_x conftest$ac_exeext
++       }; then
 +  ac_cv_lib_lcms_cmsOpenProfileFromFile=yes
 +else
-+  echo "$as_me: failed program was:" >&5
++  $as_echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +	ac_cv_lib_lcms_cmsOpenProfileFromFile=no
 +fi
 +
++rm -rf conftest.dSYM
 +rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 +      conftest$ac_exeext conftest.$ac_ext
 +LIBS=$ac_check_lib_save_LIBS
 +fi
-+{ echo "$as_me:$LINENO: result: $ac_cv_lib_lcms_cmsOpenProfileFromFile" >&5
-+echo "${ECHO_T}$ac_cv_lib_lcms_cmsOpenProfileFromFile" >&6; }
-+if test $ac_cv_lib_lcms_cmsOpenProfileFromFile = yes; then
++{ $as_echo "$as_me:$LINENO: result: $ac_cv_lib_lcms_cmsOpenProfileFromFile" >&5
++$as_echo "$ac_cv_lib_lcms_cmsOpenProfileFromFile" >&6; }
++if test "x$ac_cv_lib_lcms_cmsOpenProfileFromFile" = x""yes; then
 +  cat >>confdefs.h <<_ACEOF
 +#define HAVE_LIBLCMS 1
 +_ACEOF
@@ -143,28 +123,29 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
 +  LIBS="-llcms $LIBS"
 +
 +else
-+  { { echo "$as_me:$LINENO: error: \"*** lcms library not found ***\"" >&5
-+echo "$as_me: error: \"*** lcms library not found ***\"" >&2;}
++  { { $as_echo "$as_me:$LINENO: error: \"*** lcms library not found ***\"" >&5
++$as_echo "$as_me: error: \"*** lcms library not found ***\"" >&2;}
 +   { (exit 1); exit 1; }; }
 +fi
 +
 +
 +for ac_header in lcms.h
 +do
-+as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
++as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
 +if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
-+  { echo "$as_me:$LINENO: checking for $ac_header" >&5
-+echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++  { $as_echo "$as_me:$LINENO: checking for $ac_header" >&5
++$as_echo_n "checking for $ac_header... " >&6; }
 +if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
++  $as_echo_n "(cached) " >&6
 +fi
-+ac_res=`eval echo '${'$as_ac_Header'}'`
-+	       { echo "$as_me:$LINENO: result: $ac_res" >&5
-+echo "${ECHO_T}$ac_res" >&6; }
++ac_res=`eval 'as_val=${'$as_ac_Header'}
++		 $as_echo "$as_val"'`
++	       { $as_echo "$as_me:$LINENO: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
 +else
 +  # Is the header compilable?
-+{ echo "$as_me:$LINENO: checking $ac_header usability" >&5
-+echo $ECHO_N "checking $ac_header usability... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking $ac_header usability" >&5
++$as_echo_n "checking $ac_header usability... " >&6; }
 +cat >conftest.$ac_ext <<_ACEOF
 +/* confdefs.h.  */
 +_ACEOF
@@ -180,32 +161,33 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
 +  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 +  *) ac_try_echo=$ac_try;;
 +esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
 +  (eval "$ac_compile") 2>conftest.er1
 +  ac_status=$?
 +  grep -v '^ *+' conftest.er1 >conftest.err
 +  rm -f conftest.er1
 +  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } && {
 +	 test -z "$ac_c_werror_flag" ||
 +	 test ! -s conftest.err
 +       } && test -s conftest.$ac_objext; then
 +  ac_header_compiler=yes
 +else
-+  echo "$as_me: failed program was:" >&5
++  $as_echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +	ac_header_compiler=no
 +fi
 +
 +rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
-+echo "${ECHO_T}$ac_header_compiler" >&6; }
++{ $as_echo "$as_me:$LINENO: result: $ac_header_compiler" >&5
++$as_echo "$ac_header_compiler" >&6; }
 +
 +# Is the header present?
-+{ echo "$as_me:$LINENO: checking $ac_header presence" >&5
-+echo $ECHO_N "checking $ac_header presence... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking $ac_header presence" >&5
++$as_echo_n "checking $ac_header presence... " >&6; }
 +cat >conftest.$ac_ext <<_ACEOF
 +/* confdefs.h.  */
 +_ACEOF
@@ -219,74 +201,78 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
 +  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 +  *) ac_try_echo=$ac_try;;
 +esac
-+eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
++$as_echo "$ac_try_echo") >&5
 +  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
 +  ac_status=$?
 +  grep -v '^ *+' conftest.er1 >conftest.err
 +  rm -f conftest.er1
 +  cat conftest.err >&5
-+  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 +  (exit $ac_status); } >/dev/null && {
 +	 test -z "$ac_c_preproc_warn_flag$ac_c_werror_flag" ||
 +	 test ! -s conftest.err
 +       }; then
 +  ac_header_preproc=yes
 +else
-+  echo "$as_me: failed program was:" >&5
++  $as_echo "$as_me: failed program was:" >&5
 +sed 's/^/| /' conftest.$ac_ext >&5
 +
 +  ac_header_preproc=no
 +fi
 +
 +rm -f conftest.err conftest.$ac_ext
-+{ echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
-+echo "${ECHO_T}$ac_header_preproc" >&6; }
++{ $as_echo "$as_me:$LINENO: result: $ac_header_preproc" >&5
++$as_echo "$ac_header_preproc" >&6; }
 +
 +# So?  What about this header?
 +case $ac_header_compiler:$ac_header_preproc:$ac_c_preproc_warn_flag in
 +  yes:no: )
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
-+echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the compiler's result" >&5
-+echo "$as_me: WARNING: $ac_header: proceeding with the compiler's result" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&5
++$as_echo "$as_me: WARNING: $ac_header: accepted by the compiler, rejected by the preprocessor!" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the compiler's result" >&5
++$as_echo "$as_me: WARNING: $ac_header: proceeding with the compiler's result" >&2;}
 +    ac_header_preproc=yes
 +    ;;
 +  no:yes:* )
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
-+echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header:     check for missing prerequisite headers?" >&5
-+echo "$as_me: WARNING: $ac_header:     check for missing prerequisite headers?" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: see the Autoconf documentation" >&5
-+echo "$as_me: WARNING: $ac_header: see the Autoconf documentation" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&5
-+echo "$as_me: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
-+echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
-+    { echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
-+echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: present but cannot be compiled" >&5
++$as_echo "$as_me: WARNING: $ac_header: present but cannot be compiled" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header:     check for missing prerequisite headers?" >&5
++$as_echo "$as_me: WARNING: $ac_header:     check for missing prerequisite headers?" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: see the Autoconf documentation" >&5
++$as_echo "$as_me: WARNING: $ac_header: see the Autoconf documentation" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&5
++$as_echo "$as_me: WARNING: $ac_header:     section \"Present But Cannot Be Compiled\"" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: proceeding with the preprocessor's result" >&5
++$as_echo "$as_me: WARNING: $ac_header: proceeding with the preprocessor's result" >&2;}
++    { $as_echo "$as_me:$LINENO: WARNING: $ac_header: in the future, the compiler will take precedence" >&5
++$as_echo "$as_me: WARNING: $ac_header: in the future, the compiler will take precedence" >&2;}
 +
 +    ;;
 +esac
-+{ echo "$as_me:$LINENO: checking for $ac_header" >&5
-+echo $ECHO_N "checking for $ac_header... $ECHO_C" >&6; }
++{ $as_echo "$as_me:$LINENO: checking for $ac_header" >&5
++$as_echo_n "checking for $ac_header... " >&6; }
 +if { as_var=$as_ac_Header; eval "test \"\${$as_var+set}\" = set"; }; then
-+  echo $ECHO_N "(cached) $ECHO_C" >&6
++  $as_echo_n "(cached) " >&6
 +else
 +  eval "$as_ac_Header=\$ac_header_preproc"
 +fi
-+ac_res=`eval echo '${'$as_ac_Header'}'`
-+	       { echo "$as_me:$LINENO: result: $ac_res" >&5
-+echo "${ECHO_T}$ac_res" >&6; }
++ac_res=`eval 'as_val=${'$as_ac_Header'}
++		 $as_echo "$as_val"'`
++	       { $as_echo "$as_me:$LINENO: result: $ac_res" >&5
++$as_echo "$ac_res" >&6; }
 +
 +fi
-+if test `eval echo '${'$as_ac_Header'}'` = yes; then
++as_val=`eval 'as_val=${'$as_ac_Header'}
++		 $as_echo "$as_val"'`
++   if test "x$as_val" = x""yes; then
 +  cat >>confdefs.h <<_ACEOF
-+#define `echo "HAVE_$ac_header" | $as_tr_cpp` 1
++#define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
 +_ACEOF
 +
 +else
-+  { { echo "$as_me:$LINENO: error: \"*** lcms headers not found ***\"" >&5
-+echo "$as_me: error: \"*** lcms headers not found ***\"" >&2;}
++  { { $as_echo "$as_me:$LINENO: error: \"*** lcms headers not found ***\"" >&5
++$as_echo "$as_me: error: \"*** lcms headers not found ***\"" >&2;}
 +   { (exit 1); exit 1; }; }
 +fi
 +
@@ -310,65 +296,21 @@ $NetBSD: patch-ai,v 1.7 2009/03/19 12:12:24 drochner Exp $
  if test "x$GCC" != xyes; then
    enable_compile_warnings=no
  fi
-@@ -24849,6 +25091,13 @@ echo "$as_me: error: conditional \"BUILD
+@@ -25399,6 +25656,13 @@ $as_echo "$as_me: error: conditional \"B
  Usually this means the macro was only invoked conditionally." >&2;}
     { (exit 1); exit 1; }; }
  fi
 +if test -z "${USE_CMS_TRUE}" && test -z "${USE_CMS_FALSE}"; then
-+  { { echo "$as_me:$LINENO: error: conditional \"USE_CMS\" was never defined.
++  { { $as_echo "$as_me:$LINENO: error: conditional \"USE_CMS\" was never defined.
 +Usually this means the macro was only invoked conditionally." >&5
-+echo "$as_me: error: conditional \"USE_CMS\" was never defined.
++$as_echo "$as_me: error: conditional \"USE_CMS\" was never defined.
 +Usually this means the macro was only invoked conditionally." >&2;}
 +   { (exit 1); exit 1; }; }
 +fi
  
  : ${CONFIG_STATUS=./config.status}
- ac_clean_files_save=$ac_clean_files
-@@ -25984,13 +26233,15 @@ BUILD_ABIWORD_OUTPUT_TRUE!$BUILD_ABIWORD
- BUILD_ABIWORD_OUTPUT_FALSE!$BUILD_ABIWORD_OUTPUT_FALSE$ac_delim
- BUILD_UTILS_TRUE!$BUILD_UTILS_TRUE$ac_delim
- BUILD_UTILS_FALSE!$BUILD_UTILS_FALSE$ac_delim
-+USE_CMS_TRUE!$USE_CMS_TRUE$ac_delim
-+USE_CMS_FALSE!$USE_CMS_FALSE$ac_delim
- PC_REQUIRES!$PC_REQUIRES$ac_delim
- PC_REQUIRES_PRIVATE!$PC_REQUIRES_PRIVATE$ac_delim
- LIBOBJS!$LIBOBJS$ac_delim
- LTLIBOBJS!$LTLIBOBJS$ac_delim
- _ACEOF
- 
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 94; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 96; then
-     break
-   elif $ac_last_try; then
-     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
-@@ -26009,7 +26260,7 @@ fi
- 
- cat >>$CONFIG_STATUS <<_ACEOF
- cat >"\$tmp/subs-2.sed" <<\CEOF$ac_eof
--/@[a-zA-Z_][a-zA-Z_0-9]*@/!b end
-+/@[a-zA-Z_][a-zA-Z_0-9]*@/!b
- _ACEOF
- sed '
- s/[,\\&]/\\&/g; s/@/@|#_!!_#|/g
-@@ -26022,8 +26273,6 @@ N; s/^.*\n//; s/[,\\&]/\\&/g; s/@/@|#_!!
- ' >>$CONFIG_STATUS <conf$$subs.sed
- rm -f conf$$subs.sed
- cat >>$CONFIG_STATUS <<_ACEOF
--:end
--s/|#_!!_#|//g
- CEOF$ac_eof
- _ACEOF
- 
-@@ -26277,7 +26526,7 @@ s&@abs_top_builddir@&$ac_abs_top_builddi
- s&@INSTALL@&$ac_INSTALL&;t t
- s&@MKDIR_P@&$ac_MKDIR_P&;t t
- $ac_datarootdir_hack
--" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed -f "$tmp/subs-2.sed" >$tmp/out
-+" $ac_file_inputs | sed -f "$tmp/subs-1.sed" | sed -f "$tmp/subs-2.sed" | sed 's/|#_!!_#|//g' >$tmp/out
- 
- test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
-   { ac_out=`sed -n '/\${datarootdir}/p' "$tmp/out"`; test -n "$ac_out"; } &&
-@@ -27412,6 +27661,7 @@ echo "  use gtk-doc:        $enable_gtk_
+ ac_write_fail=0
+@@ -27938,6 +28202,7 @@ echo "  use gtk-doc:        $enable_gtk_
  echo "  use libjpeg:        $enable_libjpeg"
  echo "  use zlib:           $enable_zlib"
  echo "  use libopenjpeg:    $enable_libopenjpeg"
