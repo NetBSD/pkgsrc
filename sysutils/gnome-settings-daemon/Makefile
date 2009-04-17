@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/03/16 16:21:36 jmcneill Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/17 18:00:52 drochner Exp $
 #
 
-DISTNAME=	gnome-settings-daemon-2.26.0
+DISTNAME=	gnome-settings-daemon-2.26.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.26/}
 EXTRACT_SUFX=	.tar.bz2
