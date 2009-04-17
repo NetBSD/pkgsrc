@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 2009/04/17 16:14:56 drochner Exp $
+
+--- src/expo/expo.c.orig	2007-10-15 19:43:43.000000000 +0200
++++ src/expo/expo.c
+@@ -1030,10 +1030,6 @@ expoDonePaintScreen (CompScreen * s)
+ 			continue;
+ 		}
+ 
+-		if (!(w->type & (CompWindowTypeNormalMask |
+-				 CompWindowTypeFullscreenMask)))
+-		    continue;
+-
+ 		xOffset = s->hsize * s->width;
+ 		yOffset = s->vsize * s->height;
+ 
+@@ -1052,6 +1048,18 @@ expoDonePaintScreen (CompScreen * s)
+ 		if (!inWindow)
+ 		    continue;
+ 
++		/* make sure we never move windows we're not allowed to move */
++		if (!w->managed)
++		    w = NULL;
++		else if (!(w->actions & CompWindowActionMoveMask))
++		    w = NULL;
++		else if (w->type & (CompWindowTypeDockMask |
++				    CompWindowTypeDesktopMask))
++		    w = NULL;
++
++		if (!w)
++		    break;
++
+ 		es->dndState  = DnDDuring;
+ 		es->dndWindow = w;
+ 
+@@ -1068,7 +1076,7 @@ expoDonePaintScreen (CompScreen * s)
+ 	    }
+ 	    else
+ 	    {
+-		/* no window was hovered */
++		/* no (movable) window was hovered */
+ 		es->dndState = DnDNone;
+ 	    }
+     
