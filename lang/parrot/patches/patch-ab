@@ -1,18 +1,35 @@
-$NetBSD: patch-ab,v 1.4 2009/03/25 23:01:48 he Exp $
+$NetBSD: patch-ab,v 1.5 2009/04/17 19:54:39 he Exp $
 
-Handle a few ELF-related symbols named differently in NetBSD
-compared to Linux.
+The R_PPC_ADDR16{HI,LO} constants are named something else on
+NetBSD, and might be elsewhere.
+Also add workarounds for NetBSD/powerpc 3.x, which has a minimal
+<powerpc/elf_machdep.h> file.
 
---- src/exec_save.c.orig	2009-03-08 21:32:43.000000000 +0100
+--- src/exec_save.c.orig	2009-03-08 20:32:43.000000000 +0000
 +++ src/exec_save.c
-@@ -30,6 +30,11 @@ static void save_int(FILE *fp, int i);
+@@ -30,6 +30,26 @@ static void save_int(FILE *fp, int i);
  static void save_short(FILE *fp, short s);
  static void save_struct(FILE *fp, void *sp, size_t size);
  
-+#if defined(PARROT_PPC) && defined(__NetBSD__)
-+#define	R_PPC_ADDR16_HI	R_PPC_16_HI
-+#define	R_PPC_ADDR16_LO	R_PPC_16_LO
-+#endif /* PARROT_PPC && __NetBSD__ */
++#if defined(PARROT_PPC)
++#if !defined(R_PPC_ADDR16_HI) && !defined(R_PPC_ADDR16_LO) && \
++	defined(R_PPC_16_HI) && defined(R_PPC_16_LO)
++# define	R_PPC_ADDR16_HI	R_PPC_16_HI
++# define	R_PPC_ADDR16_LO	R_PPC_16_LO
++#endif
++/*
++ * NetBSD/powerpc 3.x doesn't define these constants,
++ * so add some workarounds for it.
++ */
++#if !defined(R_PPC_ADDR16_HI) && !defined(R_PPC_ADDR16_LO) && \
++	defined(__NetBSD__)
++# define	R_PPC_ADDR16_HI 5
++# define	R_PPC_ADDR16_LO 4
++#endif
++#if !defined(R_PPC_REL24) && defined(__NetBSD__)
++# define	R_PPC_REL24	10
++#endif
++#endif /* PARROT_PPC */
 +
  #ifdef EXEC_A_OUT
  
