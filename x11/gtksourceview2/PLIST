@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/15 19:56:42 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/04/17 17:31:33 drochner Exp $
 include/gtksourceview-2.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-2.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
@@ -21,9 +21,9 @@ share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyle.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyleScheme.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceStyleSchemeManager.html
 share/gtk-doc/html/gtksourceview-2.0/GtkSourceView.html
+share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0-Searching-in-a-GtkSourceBuffer.html
 share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0.devhelp
 share/gtk-doc/html/gtksourceview-2.0/gtksourceview-2.0.devhelp2
-share/gtk-doc/html/gtksourceview-2.0/gtksourceview-20-Searching-in-a-GtkSourceBuffer.html
 share/gtk-doc/html/gtksourceview-2.0/home.png
 share/gtk-doc/html/gtksourceview-2.0/index.html
 share/gtk-doc/html/gtksourceview-2.0/index.sgml
@@ -118,6 +118,7 @@ share/gtksourceview-2.0/styles/oblivion.xml
 share/gtksourceview-2.0/styles/styles.rng
 share/gtksourceview-2.0/styles/tango.xml
 share/locale/ar/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/as/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/az/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/be/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/bg/LC_MESSAGES/gtksourceview-2.0.mo
@@ -153,6 +154,7 @@ share/locale/kn/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ko/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/lt/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/lv/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/mai/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/mg/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/mk/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ml/LC_MESSAGES/gtksourceview-2.0.mo
