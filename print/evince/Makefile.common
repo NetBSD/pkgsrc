@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.26 2009/03/18 00:16:46 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.27 2009/04/17 16:10:21 drochner Exp $
 #
 # used by print/evince/Makefile
 # used by print/evince-nautilus/Makefile
 
-DISTNAME=		evince-2.26.0
+DISTNAME=		evince-2.26.1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evince/2.26/}
 EXTRACT_SUFX=		.tar.bz2
