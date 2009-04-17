@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/03/16 23:20:18 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/04/17 18:09:09 drochner Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-save
@@ -9,8 +9,7 @@ lib/gnome-session/helpers/gnome-settings-daemon-helper
 man/man1/gnome-session-save.1
 man/man1/gnome-session.1
 man/man1/gnome-wm.1
-man/man1/session-properties.1
-man/man5/default.session.5
+man/man1/gnome-session-properties.1
 share/applications/session-properties.desktop
 share/doc/gnome-session/dbus/gnome-session.html
 share/gconf/schemas/gnome-session.schemas
