@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.3 2009/04/15 05:02:47 minskim Exp $
+# $NetBSD: module.mk,v 1.4 2009/04/17 17:41:23 minskim Exp $
 #
 # This Makefile fragment is inteded to be included by packages that build
 # TeX Live packages.
@@ -38,7 +38,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
-NO_CONFIGURE?=	yes
 NO_BUILD?=	yes
 WRKSRC?=	${WRKDIR}
 
@@ -48,7 +47,7 @@ _texlive-set-permission:
 	${RM} -rf ${WRKSRC}/${_pat}
 .endfor
 .for _texmf in texmf texmf-dist texmf-doc
-	if [ -d ${_texmf} ]; then \
+	if [ -d ${WRKSRC}/${_texmf} ]; then \
 	  ${FIND} ${WRKSRC}/${_texmf} -type d -exec ${CHMOD} ${PKGDIRMODE} {} \; ; \
 	  ${FIND} ${WRKSRC}/${_texmf} -type f -exec ${CHMOD} ${SHAREMODE} {} \; ; \
 	fi
