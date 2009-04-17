@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/17 21:40:25 minskim Exp $
+
+Use the kpathsea library in print/kpathsea.
+
+--- Makefile.in.orig	2008-02-01 03:23:16.000000000 -0800
++++ Makefile.in
+@@ -14,7 +14,6 @@ default all: $(programs)
+ 
+ $(program): $(kpathsea) $(objects)
+ 	$(kpathsea_link) $(objects) $(LOADLIBES)
+-kpse_include ../make/tkpathsea.mk
+ 
+ install: install-exec install-data
+ uninstall: uninstall-exec uninstall-data
