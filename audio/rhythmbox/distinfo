@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2008/12/26 20:42:26 jmcneill Exp $
+$NetBSD: distinfo,v 1.25 2009/04/17 17:51:00 drochner Exp $
 
-SHA1 (rhythmbox-0.11.6.tar.bz2) = 4364447bd4f6fb0e969039213cea37d6d3e4fb58
-RMD160 (rhythmbox-0.11.6.tar.bz2) = 3fd6b8595705a91c779c458a26333575ba5e2233
-Size (rhythmbox-0.11.6.tar.bz2) = 4683400 bytes
+SHA1 (rhythmbox-0.12.0.tar.bz2) = b9c478099d9a1dc3a201d5d217d0b08b111f81b9
+RMD160 (rhythmbox-0.12.0.tar.bz2) = d7bbf03b44d6b2ac22e4fb466122471e6368762e
+Size (rhythmbox-0.12.0.tar.bz2) = 4925468 bytes
 SHA1 (patch-aa) = fa82e1d8176f4ee0b82e8fc307d506444ae22600
 SHA1 (patch-ac) = c2cad1c4b074910797a21117f6809d8e00d12f30
-SHA1 (patch-ad) = 64139d56a250543b82d5d5586f58f38912a2cdc4
-SHA1 (patch-ae) = 216c726428342448eee4b8ce4fea884d43cdd600
+SHA1 (patch-ad) = db302f38ca3d4455b4088d80bda80f5653b5d8da
+SHA1 (patch-af) = 03129bac59d0a2cd40a2d342907afb48be39c8f6
