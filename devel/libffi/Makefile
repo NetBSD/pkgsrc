@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/02/21 15:51:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2009/04/17 22:45:52 rh Exp $
 #
 
 DISTNAME=	libffi-3.0.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
@@ -16,7 +17,7 @@ CONFIGURE_ARGS=	--includedir=${PREFIX}/include
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
-INFO_FILES=	# PLIST
+INFO_FILES=	yes
 
 PKGCONFIG_OVERRIDE+=	libffi.pc.in
 
