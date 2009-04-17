@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2009/03/15 17:06:15 jmcneill Exp $
+# $NetBSD: Makefile,v 1.20 2009/04/17 18:16:07 drochner Exp $
 #
 
-DISTNAME=		gnome-terminal-2.26.0
+DISTNAME=		gnome-terminal-2.26.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.26/}
 EXTRACT_SUFX=		.tar.bz2
@@ -30,6 +30,7 @@ PYTHON_FOR_BUILD_ONLY=	YES
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 .endif
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
