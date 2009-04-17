@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/06/21 22:46:36 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/04/17 23:10:30 rh Exp $
 #
 
 DISTNAME=	gnustep-objc-lf2.95.3-r88
 PKGNAME=	${DISTNAME:S/.9/-2.9/:S/-r/./}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://download.opengroupware.org/nightly/sources/releases/
 
@@ -11,12 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sope.opengroupware.org/en/build/thirdparty.html\#gstep_objc
 COMMENT=	Objective-C library required for libFoundation
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 USE_LANGUAGES=	objc
 
 WRKSRC=		${WRKDIR}/libobjc-lf2
 USE_TOOLS+=	gmake
+MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
 
 .include "../../devel/gnustep-make/buildlink3.mk"

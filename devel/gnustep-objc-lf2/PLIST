@@ -1,18 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/21 22:46:36 joerg Exp $
-share/GNUstep/Local/Library/Headers/objc_lf2/Object.h
-share/GNUstep/Local/Library/Headers/objc_lf2/Protocol.h
-share/GNUstep/Local/Library/Headers/objc_lf2/encoding.h
-share/GNUstep/Local/Library/Headers/objc_lf2/hash.h
-share/GNUstep/Local/Library/Headers/objc_lf2/objc-api.h
-share/GNUstep/Local/Library/Headers/objc_lf2/objc-decls.h
-share/GNUstep/Local/Library/Headers/objc_lf2/objc-list.h
-share/GNUstep/Local/Library/Headers/objc_lf2/objc-mem.h
-share/GNUstep/Local/Library/Headers/objc_lf2/objc.h
-share/GNUstep/Local/Library/Headers/objc_lf2/sarray.h
-share/GNUstep/Local/Library/Headers/objc_lf2/thr.h
-share/GNUstep/Local/Library/Headers/objc_lf2/typedstream.h
-share/GNUstep/Local/Library/Libraries/libobjc_lf2.so
-share/GNUstep/Local/Library/Libraries/libobjc_lf2.so.2.95.3
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers/objc_lf2
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
+@comment $NetBSD: PLIST,v 1.3 2009/04/17 23:10:30 rh Exp $
+include/objc_lf2/Object.h
+include/objc_lf2/Protocol.h
+include/objc_lf2/encoding.h
+include/objc_lf2/hash.h
+include/objc_lf2/objc-api.h
+include/objc_lf2/objc-decls.h
+include/objc_lf2/objc-list.h
+include/objc_lf2/objc-mem.h
+include/objc_lf2/objc.h
+include/objc_lf2/sarray.h
+include/objc_lf2/thr.h
+include/objc_lf2/typedstream.h
+lib/libobjc_lf2.so
+lib/libobjc_lf2.so.2.95.3
+@dirrm include/objc_lf2
