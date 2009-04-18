@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.12 2009/04/18 03:32:17 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.13 2009/04/18 23:50:13 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -48,12 +48,41 @@ SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Librari
 SUBST_SED.gnustep_installation_dir+=	-e 's|INSTALL_ROOT_DIR|DESTDIR|g'
 .endif
 
+GNUSTEP_FAKE_PRIVILEGED_BUILD?=	YES
+
+.if !empty(GNUSTEP_FAKE_PRIVILEGED_BUILD:M[yY][eE][sS])
+post-wrapper: create-gnustep-chown-links
+
+create-gnustep-chown-links:
+	${ECHO}  > ${BUILDLINK_BINDIR}/chown '#!${SH:Q}'
+	${ECHO} >> ${BUILDLINK_BINDIR}/chown '${CHOWN:Q} "$$@" 2>/dev/null || \'
+	${ECHO} >> ${BUILDLINK_BINDIR}/chown '${TRUE}'
+	${ECHO}  > ${BUILDLINK_BINDIR}/chgrp '#!${SH:Q}'
+	${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${CHGRP:Q} "$$@" 2>/dev/null || \'
+	${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${TRUE}'
+	${ECHO}  > ${BUILDLINK_BINDIR}/install '#!${SH:Q}'
+	${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} "$$@" 2>/dev/null || \'
+	${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} `${ECHO} "$$@" | \
+		${SED} -e "s/-[og][ 	]*[^ 	]*//g"`'
+	${CHMOD} +x ${BUILDLINK_BINDIR}/chown
+	${CHMOD} +x ${BUILDLINK_BINDIR}/chgrp
+	${CHMOD} +x ${BUILDLINK_BINDIR}/install
+
+GNUSTEP_INSTALL=	${BUILDLINK_BINDIR}/install
+GNUSTEP_INSTALL_DATA=	${INSTALL_DATA:S/${INSTALL}/${GNUSTEP_INSTALL}/}
+GNUSTEP_INSTALL_PROGRAM=${INSTALL_PROGRAM:S/${INSTALL}/${GNUSTEP_INSTALL}/}
+.else
+GNUSTEP_INSTALL=	${INSTALL}
+GNUSTEP_INSTALL_DATA=	${INSTALL_DATA}
+GNUSTEP_INSTALL_PROGRAM=${INSTALL_PROGRAM}
+.endif
+
 GNUSTEP_OVERRIDE_INSTALL?=	YES
 
 .if !empty(GNUSTEP_OVERRIDE_INSTALL:M[yY][eE][sS])
-MAKE_ENV+=	INSTALL=${INSTALL:Q}
-MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
-MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
+MAKE_ENV+=	INSTALL=${GNUSTEP_INSTALL:Q}
+MAKE_ENV+=	INSTALL_DATA=${GNUSTEP_INSTALL_DATA:Q}
+MAKE_ENV+=	INSTALL_PROGRAM=${GNUSTEP_INSTALL_PROGRAM:Q}
 .endif
 
 .if !defined(NO_GNUSTEP_ENV)
