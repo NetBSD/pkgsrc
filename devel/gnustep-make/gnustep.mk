@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.10 2009/04/18 01:09:03 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.11 2009/04/18 03:10:33 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -46,6 +46,12 @@ SUBST_FILES.gnustep_installation_dir?=	GNUmakefile
 SUBST_SED.gnustep_installation_dir+=	-e 's|GNUSTEP_INSTALLATION_DIR.*=.*..GNUSTEP_\(.*\)_ROOT.*|GNUSTEP_INSTALLATION_DOMAIN = \1|'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME}|g'
 SUBST_SED.gnustep_installation_dir+=	-e 's|INSTALL_ROOT_DIR|DESTDIR|g'
+.endif
+
+.if defined(GNUSTEP_OVERRIDE_INSTALL)
+MAKE_ENV+=	INSTALL=${INSTALL:Q}
+MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
+MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 .endif
 
 .if !defined(NO_GNUSTEP_ENV)
