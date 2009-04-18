@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1420 2009/04/18 03:11:49 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1421 2009/04/18 03:21:43 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1963,3 +1963,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libFoundation to 1.1.7.168 [rh 2009-04-18]
 	Added devel/libFoundation-examples version 1.1.7.168 [rh 2009-04-18]
 	Updated devel/gnustep-make to 2.0.8nb1 [rh 2009-04-18]
+	Updated devel/gnustep-objc to 1.6.0nb2 [rh 2009-04-18]
