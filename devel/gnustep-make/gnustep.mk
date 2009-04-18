@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.11 2009/04/18 03:10:33 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.12 2009/04/18 03:32:17 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -48,7 +48,9 @@ SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Librari
 SUBST_SED.gnustep_installation_dir+=	-e 's|INSTALL_ROOT_DIR|DESTDIR|g'
 .endif
 
-.if defined(GNUSTEP_OVERRIDE_INSTALL)
+GNUSTEP_OVERRIDE_INSTALL?=	YES
+
+.if !empty(GNUSTEP_OVERRIDE_INSTALL:M[yY][eE][sS])
 MAKE_ENV+=	INSTALL=${INSTALL:Q}
 MAKE_ENV+=	INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
