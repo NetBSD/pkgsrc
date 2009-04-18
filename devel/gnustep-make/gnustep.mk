@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.9 2009/04/13 12:09:25 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.10 2009/04/18 01:09:03 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -7,6 +7,7 @@ GNUSTEP_MK=		#defined
 
 GNUSTEP_SUBDIR=		share/GNUstep
 GNUSTEP_ROOT=		${PREFIX}
+GNUSTEP_LIB_DIR=	${GNUSTEP_ROOT}/lib/GNUstep
 GNUSTEP_SYSTEM_ROOT=	${GNUSTEP_ROOT}/System
 GNUSTEP_LOCAL_ROOT=	${GNUSTEP_ROOT}/Local
 GNUSTEP_NETWORK_ROOT=	${GNUSTEP_ROOT}/Network
@@ -37,6 +38,15 @@ GNUSTEP_RFLAGS=		${GNUSTEP_LFLAGS:S/-L/${COMPILER_RPATH_FLAG}/g}
 GNUSTEP_RFLAGS?=
 .endif
 GNUSTEP_LDFLAGS=	${GNUSTEP_LFLAGS} ${GNUSTEP_RFLAGS}
+
+.if defined(FIX_GNUSTEP_INSTALLATION_DIR)
+SUBST_CLASSES+=				gnustep_installation_dir
+SUBST_STAGE.gnustep_installation_dir=	post-patch
+SUBST_FILES.gnustep_installation_dir?=	GNUmakefile
+SUBST_SED.gnustep_installation_dir+=	-e 's|GNUSTEP_INSTALLATION_DIR.*=.*..GNUSTEP_\(.*\)_ROOT.*|GNUSTEP_INSTALLATION_DOMAIN = \1|'
+SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME}|g'
+SUBST_SED.gnustep_installation_dir+=	-e 's|INSTALL_ROOT_DIR|DESTDIR|g'
+.endif
 
 .if !defined(NO_GNUSTEP_ENV)
 
