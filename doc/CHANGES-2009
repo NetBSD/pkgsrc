@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1422 2009/04/18 05:27:56 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1423 2009/04/18 07:05:51 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/gnustep-make to 2.0.8nb1 [rh 2009-04-18]
 	Updated devel/gnustep-objc to 1.6.0nb2 [rh 2009-04-18]
 	Added print/dviljk version 2.6.5 [minskim 2009-04-18]
+	Updated www/bozohttpd to 20090417 [mrg 2009-04-18]
