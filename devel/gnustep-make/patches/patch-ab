@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.6 2009/04/18 03:10:33 rh Exp $
+
+--- config.make.in.orig	2008-05-22 23:16:43.000000000 +1000
++++ config.make.in
+@@ -116,9 +116,9 @@ LEX             = lex
+ CHOWN           = chown
+ STRIP           = strip
+ 
+-INSTALL		= @HOST_INSTALL@
+-INSTALL_PROGRAM	= @INSTALL_PROGRAM@
+-INSTALL_DATA	= @INSTALL_DATA@
++INSTALL		?= @HOST_INSTALL@
++INSTALL_PROGRAM	?= @INSTALL_PROGRAM@
++INSTALL_DATA	?= @INSTALL_DATA@
+ TAR		= @TAR@
+ MKDIRS		= $(GNUSTEP_MAKEFILES)/mkinstalldirs
+ 
