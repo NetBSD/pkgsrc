@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.14 2009/04/13 12:09:25 rh Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2009/04/18 03:10:33 rh Exp $
 
 BUILDLINK_TREE+=	gnustep-make
 
 .if !defined(GNUSTEP_MAKE_BUILDLINK3_MK)
 GNUSTEP_MAKE_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.gnustep-make+=	gnustep-make>=2.0.8
-BUILDLINK_ABI_DEPENDS.gnustep-make?=	gnustep-make>=2.0.8
+BUILDLINK_API_DEPENDS.gnustep-make+=	gnustep-make>=2.0.8nb1
+BUILDLINK_ABI_DEPENDS.gnustep-make?=	gnustep-make>=2.0.8nb1
 BUILDLINK_PKGSRCDIR.gnustep-make?=	../../devel/gnustep-make
 
 .include "../../devel/gnustep-make/gnustep.mk"
