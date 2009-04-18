@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/08/19 23:41:05 epg Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/18 14:29:07 wiz Exp $
 #
 
 DISTNAME=		xapply-3.4
@@ -10,12 +10,14 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		epg@NetBSD.org
 COMMENT=		Parallel Execution tool a la xargs/apply
 
+BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
-
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+USE_TOOLS+=		m4
 
 do-build:
 	cd ${WRKSRC}/bin/xapply && \
