@@ -1,0 +1,2 @@
+This package provides a DVI driver for the LaserJet printers, using
+kpathsea recursive file searching.
