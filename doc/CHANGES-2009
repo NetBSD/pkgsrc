@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1417 2009/04/17 23:12:29 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1418 2009/04/18 02:20:50 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1960,3 +1960,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/cgoban-java to 3.3.25 [rh 2009-04-17]
 	Updated devel/libffi to 3.0.8nb1 [rh 2009-04-17]
 	Updated devel/gnustep-objc-lf2 to 2.95.3.88nb3 [rh 2009-04-17]
+	Updated devel/libFoundation to 1.1.7.168 [rh 2009-04-18]
