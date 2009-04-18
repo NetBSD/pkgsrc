@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/18 05:26:31 minskim Exp $
+bin/dvihp
+bin/dvilj
+bin/dvilj2p
+bin/dvilj4
+bin/dvilj4l
+bin/dvilj6
+man/man1/dvihp.1
+man/man1/dvilj.1
+man/man1/dvilj2p.1
+man/man1/dvilj4.1
+man/man1/dvilj4l.1
+man/man1/dvilj6.1

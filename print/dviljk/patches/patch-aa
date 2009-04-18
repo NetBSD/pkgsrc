@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/18 05:26:31 minskim Exp $
+
+Use the kpathsea library in print/kpathsea.
+
+--- Makefile.in.orig	2008-02-01 03:23:16.000000000 -0800
++++ Makefile.in
+@@ -53,8 +53,6 @@ dvilj.man: dvilj.pod dvi2xx.c
+ dvilj.ps: dvilj.man
+ 	man -t -l $< >$@
+ 
+-kpse_include ../make/tkpathsea.mk
+-
+ install: install-exec install-data
+ uninstall: uninstall-exec uninstall-data
+ 
