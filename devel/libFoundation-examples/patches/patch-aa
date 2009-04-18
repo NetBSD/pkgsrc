@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/04/18 02:27:21 rh Exp $
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/18 02:28:36 rh Exp $
 
 --- GNUmakefile.orig	2009-04-18 11:56:31.000000000 +1000
 +++ GNUmakefile
