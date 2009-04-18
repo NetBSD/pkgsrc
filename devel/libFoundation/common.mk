@@ -1,6 +1,6 @@
-# $NetBSD: common.mk,v 1.1 2009/04/18 02:19:23 rh Exp $
+# $NetBSD: common.mk,v 1.2 2009/04/18 03:43:46 rh Exp $
 #
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		objc
 
