@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/08/28 20:07:51 ahoka Exp $
+# $NetBSD: options.mk,v 1.2 2009/04/18 11:17:33 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openaxiom
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -13,12 +13,12 @@ PKG_SUGGESTED_OPTIONS+=		clisp x11
 # Select Lisp backend
 .if !empty(PKG_OPTIONS:Mclisp)
 FASL=			fas
-DEPENDS+=		clisp>=2.41:../../lang/clisp
+BUILD_DEPENDS+=		clisp>=2.41:../../lang/clisp
 CONFIGURE_ARGS+=	--with-lisp=clisp
 .endif
 .if !empty(PKG_OPTIONS:Msbcl)
 FASL=			fasl
-DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
+BUILD_DEPENDS+=		sbcl-[0-9]*:../../lang/sbcl
 CONFIGURE_ARGS+=	--with-lisp=sbcl
 .endif
 .if !empty(PKG_OPTIONS:Mecl)
