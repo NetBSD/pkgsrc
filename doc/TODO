@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8044 2009/04/17 14:39:28 taca Exp $
+$NetBSD: TODO,v 1.8045 2009/04/18 02:20:51 rh Exp $
 
 Suggested new packages
 ======================
@@ -830,7 +830,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.3 [pkg/39809]
 	o lftp-3.7.11
-	o libFoundation-1.1.3
 	o libX11-1.2.1
 	o libXfont-1.4.0
 	o libXrandr-1.2.99.4
