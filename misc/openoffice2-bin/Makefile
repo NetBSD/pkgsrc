@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.39 2009/01/31 22:10:36 bad Exp $
+# $NetBSD: Makefile,v 1.40 2009/04/18 15:03:58 wiz Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_RELEASE}/}
 
-MAINTAINER=		mrauch@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (binary pkg)
 
