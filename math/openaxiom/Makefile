@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/04/10 05:21:59 asau Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/18 11:17:33 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.2.1
 PKGNAME=		${DISTNAME:S/open-/open/}
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
 EXTRACT_SUFX=		.tar.bz2
@@ -16,7 +17,6 @@ MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
-USE_LANGUAGES+=		fortran
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 CONFIGURE_ENV=		HOST_AWK=${TOOLS_PLATFORM.awk:Q}
