@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/18 02:28:36 rh Exp $
+
+SHA1 (libFoundation-1.1.7-r168.tar.gz) = ddd1a732b19fb802e4b7cfac3e1248b26c1c1576
+RMD160 (libFoundation-1.1.7-r168.tar.gz) = 73beb75f1bdc983ce9b17348cc7437800b442070
+Size (libFoundation-1.1.7-r168.tar.gz) = 563456 bytes
+SHA1 (patch-aa) = 3af8ec986350df9ce435ddda634034a4cba382f0
