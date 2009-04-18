@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/04/13 12:16:24 rh Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/18 03:22:31 rh Exp $
 
 DISTNAME=	gnustep-base-1.18.0
 CATEGORIES=	devel gnustep
@@ -18,6 +18,8 @@ CONFIGURE_ARGS+=	--exec-prefix=${PREFIX}/libexec/GNUstep
 CONFIGURE_ENV+=		INSTALL_PROGRAM=${INSTALL_SCRIPT:Q}
 MAKE_FILE=		GNUmakefile
 MAKE_JOBS_SAFE=		no
+
+GNUSTEP_OVERRIDE_INSTALL=	YES
 
 pre-configure:
 	sed 's|@PREFIX@|${PREFIX}|g' <${FILESDIR}/openapp >${WRKDIR}/openapp
