@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1438 2009/04/19 11:44:06 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1439 2009/04/19 14:43:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1981,3 +1981,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/ruby-rb-appscript version 0.5.1 [seb 2009-04-19]
 	Updated devel/cmake to 2.6.3nb1 [hasso 2009-04-19]
 	Updated audio/cdplayer to 0.5 [rh 2009-04-19]
+	Added lang/python26 version 2.6.2 [wiz 2009-04-19]
