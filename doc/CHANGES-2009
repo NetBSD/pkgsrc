@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1433 2009/04/19 07:58:29 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1434 2009/04/19 08:20:15 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1976,3 +1976,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/vym to 1.12.2 [reed 2009-04-19]
 	Updated textproc/expatobjc to 1.0nb5 [rh 2009-04-19]
 	Updated graphics/Cenon to 3.83nb2 [rh 2009-04-19]
+	Updated audio/cddb-bundle to 0.2nb3 [rh 2009-04-19]
