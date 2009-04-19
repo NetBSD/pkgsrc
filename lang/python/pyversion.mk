@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.69 2009/04/19 15:09:51 snj Exp $
+# $NetBSD: pyversion.mk,v 1.70 2009/04/19 15:14:19 snj Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -75,7 +75,7 @@ PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 BUILDLINK_API_DEPENDS.python23?=		python23>=2.3
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
-BUILDLINK_API_DEPENDS.python26?=		python26>=2.6.2
+BUILDLINK_API_DEPENDS.python26?=		python26>=2.6
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
