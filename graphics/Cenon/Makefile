@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:31 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/19 07:57:27 rh Exp $
 #
 
 DISTNAME=		Cenon-3.83
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics cad gnustep
 MASTER_SITES=		http://www.vhf-group.com/vhfInterservice/download/source/
 EXTRACT_SUFX=		.tar.bz2
@@ -11,12 +11,22 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cenon.info/
 COMMENT=		Vector graphics / CAD / DTP program
 
+LICENSE=		vhf-public-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		objc
 
 WRKSRC=			${WRKDIR}/Cenon
 NO_CONFIGURE=		yes
+MAKE_JOBS_SAFE=		no
 
-INSTALLATION_DIRS=	share/doc/Cenon
+INSTALLATION_DIRS+=	share/doc/Cenon
+INSTALLATION_DIRS+=	share/GNUstep/Library/Cenon
+
+FIX_GNUSTEP_INSTALLATION_DIR= yes
+SUBST_FILES.gnustep_installation_dir+=	GNUmakefile
+SUBST_FILES.gnustep_installation_dir+=	GNUmakefile.postamble
 
 post-install:
 .for doc in LICENSE README
