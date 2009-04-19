@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2009/03/29 08:49:29 martti Exp $
+# $NetBSD: Makefile,v 1.470 2009/04/19 09:28:29 seb Exp $
 #
 
 COMMENT=	System utilities
@@ -253,6 +253,7 @@ SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-gnome2-gnomevfs
 SUBDIR+=	ruby-quota
+SUBDIR+=	ruby-rb-appscript
 SUBDIR+=	safetynet
 SUBDIR+=	same
 SUBDIR+=	sarah
