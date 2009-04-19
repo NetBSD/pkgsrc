@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.13 2009/04/18 23:50:13 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.14 2009/04/19 00:09:49 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -54,19 +54,19 @@ GNUSTEP_FAKE_PRIVILEGED_BUILD?=	YES
 post-wrapper: create-gnustep-chown-links
 
 create-gnustep-chown-links:
-	${ECHO}  > ${BUILDLINK_BINDIR}/chown '#!${SH:Q}'
-	${ECHO} >> ${BUILDLINK_BINDIR}/chown '${CHOWN:Q} "$$@" 2>/dev/null || \'
-	${ECHO} >> ${BUILDLINK_BINDIR}/chown '${TRUE}'
-	${ECHO}  > ${BUILDLINK_BINDIR}/chgrp '#!${SH:Q}'
-	${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${CHGRP:Q} "$$@" 2>/dev/null || \'
-	${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${TRUE}'
-	${ECHO}  > ${BUILDLINK_BINDIR}/install '#!${SH:Q}'
-	${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} "$$@" 2>/dev/null || \'
-	${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} `${ECHO} "$$@" | \
+	${RUN}${ECHO}  > ${BUILDLINK_BINDIR}/chown '#!${SH:Q}'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/chown '${CHOWN:Q} "$$@" 2>/dev/null || \'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/chown '${TRUE}'
+	${RUN}${ECHO}  > ${BUILDLINK_BINDIR}/chgrp '#!${SH:Q}'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${CHGRP:Q} "$$@" 2>/dev/null || \'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/chgrp '${TRUE}'
+	${RUN}${ECHO}  > ${BUILDLINK_BINDIR}/install '#!${SH:Q}'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} "$$@" 2>/dev/null || \'
+	${RUN}${ECHO} >> ${BUILDLINK_BINDIR}/install '${INSTALL:Q} `${ECHO} "$$@" | \
 		${SED} -e "s/-[og][ 	]*[^ 	]*//g"`'
-	${CHMOD} +x ${BUILDLINK_BINDIR}/chown
-	${CHMOD} +x ${BUILDLINK_BINDIR}/chgrp
-	${CHMOD} +x ${BUILDLINK_BINDIR}/install
+	${RUN}${CHMOD} +x ${BUILDLINK_BINDIR}/chown
+	${RUN}${CHMOD} +x ${BUILDLINK_BINDIR}/chgrp
+	${RUN}${CHMOD} +x ${BUILDLINK_BINDIR}/install
 
 GNUSTEP_INSTALL=	${BUILDLINK_BINDIR}/install
 GNUSTEP_INSTALL_DATA=	${INSTALL_DATA:S/${INSTALL}/${GNUSTEP_INSTALL}/}
