@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.5 2009/04/19 10:35:55 hasso Exp $
+
+--- Modules/Platform/UnixPaths.cmake.orig	2009-03-15 06:17:18 +0200
++++ Modules/Platform/UnixPaths.cmake	2009-03-15 06:18:24 +0200
+@@ -24,7 +24,7 @@ LIST(APPEND CMAKE_SYSTEM_INCLUDE_PATH
+   /usr/include/w32api
+ 
+   # X11
+-  /usr/X11R6/include /usr/include/X11
++  @X11BASE@/include /usr/X11R6/include /usr/include/X11
+ 
+   # Other
+   /opt/local/include /usr/pkg/include
+@@ -37,7 +37,7 @@ LIST(APPEND CMAKE_SYSTEM_LIBRARY_PATH
+   /usr/lib/w32api
+ 
+   # X11
+-  /usr/X11R6/lib /usr/lib/X11
++  @X11BASE@/lib /usr/X11R6/lib /usr/lib/X11
+ 
+   # Other
+   /opt/local/lib /usr/pkg/lib
