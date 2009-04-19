@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1429 2009/04/19 00:51:21 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1430 2009/04/19 01:01:35 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1972,3 +1972,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Devel-Declare to 0.005000 [sno 2009-04-18]
 	Updated mail/p5-Email-MIME-Encodings to 1.313 [sno 2009-04-18]
 	Updated devel/gnustep-make to 2.0.8nb2 [rh 2009-04-19]
+	Updated mail/GNUMail to 1.2.0pre3nb1 [rh 2009-04-19]
