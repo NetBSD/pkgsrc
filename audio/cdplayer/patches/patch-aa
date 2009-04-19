@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/04/19 11:43:16 rh Exp $
+
+--- AudioCD/AudioCDPrefs/GNUmakefile.orig	2009-04-19 14:37:41.000000000 +1000
++++ AudioCD/AudioCDPrefs/GNUmakefile
+@@ -13,6 +13,7 @@ ifeq ($(prefs), sysprefs)
+   ADDITIONAL_CPPFLAGS += -DSYSPREFS=1
+ else
+   BUNDLE_EXTENSION = .prefs
++  BUNDLE_INSTALL_DIR = ${DESTDIR}${GNUSTEP_LIB_DIR}/Preferences
+   ADDITIONAL_CPPFLAGS += -DSYSPREFS=0
+ endif
+ 

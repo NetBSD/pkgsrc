@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/16 09:55:04 rh Exp $
+$NetBSD: distinfo,v 1.2 2009/04/19 11:43:16 rh Exp $
 
-SHA1 (cdplayer-0.4.2.tar.gz) = 0d16c0adc02a9884f8ef01e6fe028b72711c898a
-RMD160 (cdplayer-0.4.2.tar.gz) = 7d955295cfde801ae3cf1a6e03fdda994504544d
-Size (cdplayer-0.4.2.tar.gz) = 171280 bytes
+SHA1 (cdplayer-0.5.tar.bz2) = a8a0efdde4bb0bb8f1b7f22b0f4473a611101881
+RMD160 (cdplayer-0.5.tar.bz2) = 7a34be771c6b633a1e63953367379e69390b4245
+Size (cdplayer-0.5.tar.bz2) = 164389 bytes
+SHA1 (patch-aa) = ebd48949eb75b21420e04911dfa964bf6b8e58cf

@@ -1,29 +1,33 @@
-# $NetBSD: Makefile,v 1.15 2008/09/30 15:50:24 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/04/19 11:43:16 rh Exp $
 #
 
-DISTNAME=	cdplayer-0.4.2
-PKGREVISION=	7
+DISTNAME=	cdplayer-0.5
 CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gsburn.sourceforge.net/
 COMMENT=	GNUstep CD player with CDDB support
 
-WRKSRC=		${WRKDIR}/${PKGBASE}
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/CDPlayer-${PKGVERSION_NOREV}
 USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake
+NO_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS="-Wno-import"
-MAKE_ENV+=	GNUSTEP_INSTALLATION_DIR=${PREFIX}/share/GNUstep/Local/
+MAKE_ENV+=	GNUSTEP_LIB_DIR=${GNUSTEP_LIB_DIR:Q}
 
-do-configure:
-	${LN} -s ${BUILDLINK_DIR}/${GNUSTEP_SUBDIR}/Local/Library/Frameworks/PrefsModule.framework/Versions/0/Headers ${WRKSRC}/AudioCD/AudioCDPrefs/PrefsModule
+INSTALLATION_DIRS+=include/CDPlayer
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/CDPlayer
 	${INSTALL_DATA} ${WRKSRC}/CDPlayer/AudioCDProtocol.h		\
-			${PREFIX}/include/CDPlayer
+			${DESTDIR}${PREFIX}/include/CDPlayer
 
 .include "../../audio/libcdaudio/buildlink3.mk"
 .include "../../audio/cddb-bundle/buildlink3.mk"
