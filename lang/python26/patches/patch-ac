@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+
+--- Misc/build.sh.orig	2009-04-07 19:27:36.000000000 +0000
++++ Misc/build.sh
+@@ -275,7 +275,7 @@ fi
+ 
+ F="make-doc-dist.out"
+ start=`current_time`
+-if [ $conflict_count == 0 ]; then
++if [ $conflict_count = 0 ]; then
+     make dist >& ../build/$F
+     err=$?
+ fi

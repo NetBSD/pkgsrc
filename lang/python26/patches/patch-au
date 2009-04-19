@@ -1,0 +1,27 @@
+$NetBSD: patch-au,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+
+--- Makefile.pre.in.orig	2009-02-24 11:07:44.000000000 +0000
++++ Makefile.pre.in
+@@ -425,6 +425,12 @@ libpython$(VERSION).dylib: $(LIBRARY_OBJ
+ libpython$(VERSION).sl: $(LIBRARY_OBJS)
+ 	$(LDSHARED) $(LDFLAGS) -o $@ $(LIBRARY_OBJS) $(MODLIBS) $(SHLIBS) $(LIBC) $(LIBM) $(LDLAST)
+ 
++libpython$(VERSION).dylib: $(LIBRARY_OBJS)
++	$(LINKCC) -dynamiclib -install_name $(LIBDIR)/$@ \
++	    -current_version 2.5.2 -compatibility_version $(VERSION) \
++	    -o $@ -flat_namespace -undefined suppress $(LDFLAGS) \
++	    $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM)
++
+ # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
+ # minimal framework (not including the Lib directory and such) in the current
+ # directory.
+@@ -785,7 +791,8 @@ altbininstall:	$(BUILDPYTHON)
+ 				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
+ 			fi \
+ 		fi; \
+-	else	true; \
++	elif test -f $(INSTSONAME); then \
++		$(INSTALL_SHARED) $(INSTSONAME) $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 
+ # Install the manual page
