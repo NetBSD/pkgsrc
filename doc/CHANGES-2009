@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1434 2009/04/19 08:20:15 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1435 2009/04/19 09:31:13 rh Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/expatobjc to 1.0nb5 [rh 2009-04-19]
 	Updated graphics/Cenon to 3.83nb2 [rh 2009-04-19]
 	Updated audio/cddb-bundle to 0.2nb3 [rh 2009-04-19]
+	Updated x11/gnustep-preferences to 1.2.0nb19 [rh 2009-04-19]
