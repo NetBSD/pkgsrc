@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2009/04/07 10:42:14 drochner Exp $
+# $NetBSD: Makefile,v 1.43 2009/04/19 10:35:55 hasso Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v2.6/
 
 CMAKE_API=	2.6
+PKGREVISION=	1
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
@@ -34,27 +35,9 @@ TEST_TARGET=		test
 
 SUBST_CLASSES+=		cmake
 SUBST_STAGE.cmake=	pre-configure
-SUBST_MESSAGE.cmake=	Fixing hard-coded prefix.
-SUBST_FILES.cmake=	${REPLACE_CMAKE.Modules:@m@Modules/${m}.cmake@}
-SUBST_FILES.cmake+=	Modules/FindCURL.cmake
-SUBST_SED.cmake=	-e 's|/usr/X11R6|${X11BASE}|g'
-SUBST_SED.cmake+=	-e 's|/usr/local|${LOCALBASE}|g'
-SUBST_VARS.cmake=	PREFIX
-
-REPLACE_CMAKE.Modules=\
-	CMakeDetermineJavaCompiler CMakeDetermineSystem 		\
-	CMakeGenericSystem FindAVIFile FindBLAS FindFLTK FindFLTK2 	\
-	FindFreetype FindGDAL FindGIF FindGTK FindITK FindJNI 		\
-	FindJava FindKDE3 FindLAPACK FindLua50 FindLua51 FindMPEG 	\
-	FindMPEG2 FindMPI FindMatlab FindOpenAL FindOpenThreads		\
-	FindPHP4 FindPNG FindPhysFS FindPike FindProducer FindQt	\
-	FindQt3 FindSDL FindSDL_image FindSDL_mixer FindSDL_net 	\
-	FindSDL_sound FindSDL_ttf FindSelfPackers FindTCL FindTclStub	\
-	FindUnixCommands FindVTK FindX11 Findosg FindosgDB FindosgFX	\
-	FindosgGA FindosgIntrospection FindosgManipulator		\
-	FindosgParticle FindosgProducer FindosgShadow FindosgSim	\
-	FindosgTerrain FindosgText FindosgUtil FindosgViewer		\
-	GetPrerequisites Platform/UnixPaths UsePkgConfig
+SUBST_MESSAGE.cmake=	Fixing X11 prefix.
+SUBST_FILES.cmake+=	Modules/Platform/UnixPaths.cmake
+SUBST_VARS.cmake=	X11BASE
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
