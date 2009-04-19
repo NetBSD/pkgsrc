@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8048 2009/04/19 14:30:55 schmonz Exp $
+$NetBSD: TODO,v 1.8049 2009/04/19 20:02:48 schwarz Exp $
 
 Suggested new packages
 ======================
@@ -859,7 +859,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.0
 	o libole2-2.2.8
-	o libosip-3.3.0
 	o libpciaccess-0.10.5
 	o libshout-2.2.2
 	o libssh-0.2
