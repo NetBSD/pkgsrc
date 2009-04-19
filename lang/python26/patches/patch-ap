@@ -1,0 +1,67 @@
+$NetBSD: patch-ap,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+
+--- Modules/socketmodule.c.orig	2009-03-31 18:20:48.000000000 +0000
++++ Modules/socketmodule.c
+@@ -398,6 +398,8 @@ const char *inet_ntop(int af, const void
+ #define sockaddr_rc sockaddr_bt
+ #define sockaddr_hci sockaddr_bt
+ #define sockaddr_sco sockaddr_bt
++#define SOL_HCI BTPROTO_HCI
++#define HCI_DATA_DIR SO_HCI_DIRECTION
+ #define _BT_L2_MEMB(sa, memb) ((sa)->bt_##memb)
+ #define _BT_RC_MEMB(sa, memb) ((sa)->bt_##memb)
+ #define _BT_HCI_MEMB(sa, memb) ((sa)->bt_##memb)
+@@ -1076,9 +1078,13 @@ makesockaddr(int sockfd, struct sockaddr
+ 		case BTPROTO_HCI:
+ 		{
+ 			struct sockaddr_hci *a = (struct sockaddr_hci *) addr;
++#if defined(__NetBSD__)
++			return makebdaddr(&_BT_HCI_MEMB(a, bdaddr));
++#else
+ 			PyObject *ret = NULL;
+ 			ret = Py_BuildValue("i", _BT_HCI_MEMB(a, dev));
+ 			return ret;
++#endif
+ 		}
+ 
+ #if !defined(__FreeBSD__)
+@@ -1345,12 +1351,25 @@ getsockaddrarg(PySocketSockObject *s, Py
+ 		case BTPROTO_HCI:
+ 		{
+ 			struct sockaddr_hci *addr = (struct sockaddr_hci *)addr_ret;
++#if defined(__NetBSD__)
++			char *straddr = PyString_AsString(args);
++
++			_BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
++			if (straddr == NULL) {
++				PyErr_SetString(socket_error, "getsockaddrarg: "
++						"wrong format");
++				return 0;
++			}
++			if (setbdaddr(straddr, &_BT_HCI_MEMB(addr, bdaddr)) < 0)
++				return 0;
++#else
+ 			_BT_HCI_MEMB(addr, family) = AF_BLUETOOTH;
+ 			if (!PyArg_ParseTuple(args, "i", &_BT_HCI_MEMB(addr, dev))) {
+ 				PyErr_SetString(socket_error, "getsockaddrarg: "
+ 						"wrong format");
+ 				return 0;
+ 			}
++#endif
+ 			*len_ret = sizeof *addr;
+ 			return 1;
+ 		}
+@@ -4564,9 +4583,13 @@ init_socket(void)
+ 	PyModule_AddIntConstant(m, "BTPROTO_L2CAP", BTPROTO_L2CAP);
+ 	PyModule_AddIntConstant(m, "BTPROTO_HCI", BTPROTO_HCI);
+ 	PyModule_AddIntConstant(m, "SOL_HCI", SOL_HCI);
++#if !defined(__NetBSD__)
+ 	PyModule_AddIntConstant(m, "HCI_FILTER", HCI_FILTER);
++#endif
+ #if !defined(__FreeBSD__)
++#if !defined(__NetBSD__)
+ 	PyModule_AddIntConstant(m, "HCI_TIME_STAMP", HCI_TIME_STAMP);
++#endif
+ 	PyModule_AddIntConstant(m, "HCI_DATA_DIR", HCI_DATA_DIR);
+ 	PyModule_AddIntConstant(m, "BTPROTO_SCO", BTPROTO_SCO);
+ #endif

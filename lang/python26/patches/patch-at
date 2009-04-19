@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+
+--- Modules/mmapmodule.c.orig	2009-03-31 20:22:13.000000000 +0000
++++ Modules/mmapmodule.c
+@@ -508,6 +508,8 @@ mmap_resize_method(mmap_object *self,
+ 
+ #ifdef MREMAP_MAYMOVE
+ 		newmap = mremap(self->data, self->size, new_size, MREMAP_MAYMOVE);
++#elif defined(__NetBSD__)
++		newmap = mremap(self->data, self->size, self->data, new_size, 0);
+ #else
+ 		#if defined(__NetBSD__)
+ 			newmap = mremap(self->data, self->size, self->data, new_size, 0);
