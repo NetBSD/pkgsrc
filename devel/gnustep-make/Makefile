@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2009/04/18 03:10:33 rh Exp $
+# $NetBSD: Makefile,v 1.46 2009/04/19 00:50:11 rh Exp $
 
 DISTNAME=	gnustep-make-2.0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel gnustep
 MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 
@@ -55,6 +55,7 @@ SUBST_FILES.maninfo=	${WRKSRC}/FilesystemLayouts/fhs
 SUBST_SED.maninfo=	-e 's|share/man|${PKGMANDIR}|'
 SUBST_SED.maninfo+=	-e 's|share/info|${PKGINFODIR}|'
 
+INSTALLATION_DIRS+=	share/GNUstep/Library
 INSTALLATION_DIRS+=	share/GNUstep/Makefiles/${GNUSTEP_ARCH}
 INSTALLATION_DIRS+=	share/GNUstep/Makefiles/Additional
 INSTALLATION_DIRS+=	share/GNUstep/Makefiles/Auxiliary

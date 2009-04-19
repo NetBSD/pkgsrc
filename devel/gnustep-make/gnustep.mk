@@ -1,4 +1,4 @@
-#	$NetBSD: gnustep.mk,v 1.14 2009/04/19 00:09:49 rh Exp $
+#	$NetBSD: gnustep.mk,v 1.15 2009/04/19 00:50:11 rh Exp $
 
 .if !defined(GNUSTEP_MK)
 GNUSTEP_MK=		#defined
@@ -45,6 +45,7 @@ SUBST_STAGE.gnustep_installation_dir=	post-patch
 SUBST_FILES.gnustep_installation_dir?=	GNUmakefile
 SUBST_SED.gnustep_installation_dir+=	-e 's|GNUSTEP_INSTALLATION_DIR.*=.*..GNUSTEP_\(.*\)_ROOT.*|GNUSTEP_INSTALLATION_DOMAIN = \1|'
 SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Libraries|$${DESTDIR}${GNUSTEP_LIB_DIR}/Libraries/${PKGNAME}|g'
+SUBST_SED.gnustep_installation_dir+=	-e 's|\$$(GNUSTEP_INSTALLATION_DIR)/Library|$${DESTDIR}${GNUSTEP_ROOT}/${GNUSTEP_SUBDIR}/Library|g'
 SUBST_SED.gnustep_installation_dir+=	-e 's|INSTALL_ROOT_DIR|DESTDIR|g'
 .endif
 
