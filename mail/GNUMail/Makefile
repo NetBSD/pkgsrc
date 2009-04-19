@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2009/04/13 12:42:38 rh Exp $
+# $NetBSD: Makefile,v 1.30 2009/04/19 01:00:48 rh Exp $
 #
 
 DISTNAME=	GNUMail-1.2.0pre3
+PKGREVISION=	1
 CATEGORIES=	mail gnustep
 MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 
@@ -11,7 +12,7 @@ COMMENT=	GNUstep clone of NeXT's Mail.app application
 
 LICENSE=	gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	objc
 
@@ -19,6 +20,12 @@ WRKSRC=		${WRKDIR}/GNUMail
 NO_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
 MAKE_FILE=	GNUmakefile
+
+FIX_GNUSTEP_INSTALLATION_DIR= yes
+.for _dir_ in Account Advanced Clock Colors Compose Face Filtering	\
+	Fonts Import MIME PGP Receiving Sending Viewing
+SUBST_FILES.gnustep_installation_dir+=	Bundles/${_dir_}/GNUmakefile
+.endfor
 
 .include "../../mail/Pantomime/buildlink3.mk"
 .include "../../misc/Addresses/buildlink3.mk"
