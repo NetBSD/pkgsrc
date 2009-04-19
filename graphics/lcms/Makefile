@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2009/04/14 18:54:38 tron Exp $
+# $NetBSD: Makefile,v 1.30 2009/04/19 16:58:29 gdt Exp $
 
-DISTNAME=	lcms-1.18
-PKGREVISION=	2
+DISTNAME=	lcms-1.18a
+# 1.18a is a bugfix semi-release after 1.18, and it's just 1.18 with a
+# security patch
+PKGNAME=	lcms-1.18.0.1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.littlecms.com/
 
@@ -11,6 +13,10 @@ COMMENT=	Little Color Management System -- a color management library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# lcms-1.18a should unpack to lcms-1.18a, but it isn't really a normal
+# release
+WRKSRC=		${WRKDIR}/lcms-1.18
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
