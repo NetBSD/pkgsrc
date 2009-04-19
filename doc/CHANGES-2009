@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1441 2009/04/19 21:56:07 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.1442 2009/04/19 23:09:48 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added lang/python26 version 2.6.2 [wiz 2009-04-19]
 	Updated devel/libosip to 3.3.0 [schwarz 2009-04-19]
 	Added sysutils/patchadd version 0.1durchstich [tonnerre 2009-04-19]
+	Updated devel/fromcvs to 0.0.0.131 [tonnerre 2009-04-19]
