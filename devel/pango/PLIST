@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.42 2009/03/17 20:41:34 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.43 2009/04/19 07:48:09 adam Exp $
 bin/pango-querymodules
+${PLIST.carbon}bin/pango-view
 ${PLIST.x11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-bidi-type.h
