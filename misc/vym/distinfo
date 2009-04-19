@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/08/05 16:36:11 joerg Exp $
+$NetBSD: distinfo,v 1.3 2009/04/19 04:07:52 reed Exp $
 
-SHA1 (vym-1.8.1.tar.gz) = 39e565203bee2a55b97c19b67dc39dc3a8085d71
-RMD160 (vym-1.8.1.tar.gz) = 63ee9a31625b44ef3d28a143174f98bbf961b531
-Size (vym-1.8.1.tar.gz) = 1377030 bytes
-SHA1 (patch-aa) = 583f2eb639091f44d56bf24489dfef2195a0e5f6
-SHA1 (patch-ab) = 3ec57cc0210637006ae34b9450c062c44869f214
+SHA1 (vym-1.12.2.tar.bz2) = 2fd8319707668f3e87f8ecfc06d8a91e5a0c1f2c
+RMD160 (vym-1.12.2.tar.bz2) = 02a42d0a697981ea1301c6126455115ef8ea4f9c
+Size (vym-1.12.2.tar.bz2) = 4198516 bytes
