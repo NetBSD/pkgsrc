@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1442 2009/04/19 23:09:48 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.1443 2009/04/19 23:15:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1985,3 +1985,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libosip to 3.3.0 [schwarz 2009-04-19]
 	Added sysutils/patchadd version 0.1durchstich [tonnerre 2009-04-19]
 	Updated devel/fromcvs to 0.0.0.131 [tonnerre 2009-04-19]
+	Updated devel/p5-namespace-clean to 0.11 [seb 2009-04-19]
