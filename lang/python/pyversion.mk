@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.67 2009/03/21 06:24:48 snj Exp $
+# $NetBSD: pyversion.mk,v 1.68 2009/04/19 14:48:17 wiz Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 23 24 25
+#	Possible values: 23 24 25 26
 #	Default: 25
 #
 # === Package-settable variables ===
@@ -18,13 +18,13 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 25 24 23
-#	Default: 25 24 23
+#	Possible values: 26 25 24 23
+#	Default: 26 25 24 23
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 23 24 25
+#	Possible values: 23 24 25 26
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -39,13 +39,13 @@
 #	The prefix to use in PKGNAME for extensions which are meant
 #	to be installed for multiple Python versions.
 #
-#	Example: py24
+#	Example: py25
 #
 # PYVERSSUFFIX
 #	The suffix to executables and in the library path, equal to
 #	sys.version[0:3].
 #
-#	Example: 2.4
+#	Example: 2.5
 #
 # Keywords: python
 #
@@ -116,7 +116,13 @@ _PYTHON_VERSION?=	${pv}
 _PYTHON_VERSION=	none
 .endif
 
-.if ${_PYTHON_VERSION} == "25"
+.if ${_PYTHON_VERSION} == "26"
+PYPKGSRCDIR=	../../lang/python26
+PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python26}:${PYPKGSRCDIR}
+PYPACKAGE=	python26
+PYVERSSUFFIX=	2.6
+PYPKGPREFIX=	py26
+.elif ${_PYTHON_VERSION} == "25"
 PYPKGSRCDIR=	../../lang/python25
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python25}:${PYPKGSRCDIR}
 PYPACKAGE=	python25
