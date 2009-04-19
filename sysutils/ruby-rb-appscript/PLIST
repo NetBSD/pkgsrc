@@ -1,0 +1,127 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/19 09:27:36 seb Exp $
+${GEM_HOME}/cache/rb-appscript-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Makefile
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/SendThreadSafe.o
+${GEM_LIBDIR}/TODO
+${GEM_LIBDIR}/ae.${RUBY_DLEXT}
+${GEM_LIBDIR}/doc/aem-manual/01_introduction.html
+${GEM_LIBDIR}/doc/aem-manual/02_apioverview.html
+${GEM_LIBDIR}/doc/aem-manual/03_packingandunpackingdata.html
+${GEM_LIBDIR}/doc/aem-manual/04_references.html
+${GEM_LIBDIR}/doc/aem-manual/05_targettingapplications.html
+${GEM_LIBDIR}/doc/aem-manual/06_buildingandsendingevents.html
+${GEM_LIBDIR}/doc/aem-manual/07_findapp.html
+${GEM_LIBDIR}/doc/aem-manual/08_examples.html
+${GEM_LIBDIR}/doc/aem-manual/aemreferenceinheritance.gif
+${GEM_LIBDIR}/doc/aem-manual/index.html
+${GEM_LIBDIR}/doc/appscript-manual/01_introduction.html
+${GEM_LIBDIR}/doc/appscript-manual/02_aboutappscripting.html
+${GEM_LIBDIR}/doc/appscript-manual/03_quicktutorial.html
+${GEM_LIBDIR}/doc/appscript-manual/04_gettinghelp.html
+${GEM_LIBDIR}/doc/appscript-manual/05_keywordconversion.html
+${GEM_LIBDIR}/doc/appscript-manual/06_classesandenums.html
+${GEM_LIBDIR}/doc/appscript-manual/07_applicationobjects.html
+${GEM_LIBDIR}/doc/appscript-manual/08_realvsgenericreferences.html
+${GEM_LIBDIR}/doc/appscript-manual/09_referenceforms.html
+${GEM_LIBDIR}/doc/appscript-manual/10_referenceexamples.html
+${GEM_LIBDIR}/doc/appscript-manual/11_applicationcommands.html
+${GEM_LIBDIR}/doc/appscript-manual/12_commandexamples.html
+${GEM_LIBDIR}/doc/appscript-manual/13_performanceissues.html
+${GEM_LIBDIR}/doc/appscript-manual/14_notes.html
+${GEM_LIBDIR}/doc/appscript-manual/application_architecture.gif
+${GEM_LIBDIR}/doc/appscript-manual/application_architecture2.gif
+${GEM_LIBDIR}/doc/appscript-manual/finder_to_textedit_event.gif
+${GEM_LIBDIR}/doc/appscript-manual/index.html
+${GEM_LIBDIR}/doc/appscript-manual/relationships_example.gif
+${GEM_LIBDIR}/doc/appscript-manual/ruby_to_itunes_event.gif
+${GEM_LIBDIR}/doc/full.css
+${GEM_LIBDIR}/doc/index.html
+${GEM_LIBDIR}/doc/mactypes-manual/index.html
+${GEM_LIBDIR}/doc/osax-manual/index.html
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/_aem/aemreference.rb
+${GEM_LIBDIR}/lib/_aem/codecs.rb
+${GEM_LIBDIR}/lib/_aem/connect.rb
+${GEM_LIBDIR}/lib/_aem/findapp.rb
+${GEM_LIBDIR}/lib/_aem/mactypes.rb
+${GEM_LIBDIR}/lib/_aem/send.rb
+${GEM_LIBDIR}/lib/_aem/typewrappers.rb
+${GEM_LIBDIR}/lib/_appscript/defaultterminology.rb
+${GEM_LIBDIR}/lib/_appscript/referencerenderer.rb
+${GEM_LIBDIR}/lib/_appscript/reservedkeywords.rb
+${GEM_LIBDIR}/lib/_appscript/safeobject.rb
+${GEM_LIBDIR}/lib/_appscript/terminology.rb
+${GEM_LIBDIR}/lib/ae.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/aem.rb
+${GEM_LIBDIR}/lib/appscript.rb
+${GEM_LIBDIR}/lib/kae.rb
+${GEM_LIBDIR}/lib/osax.rb
+${GEM_LIBDIR}/rb-appscript.gemspec
+${GEM_LIBDIR}/rbae.o
+${GEM_LIBDIR}/sample/AB_export_vcard.rb
+${GEM_LIBDIR}/sample/AB_list_people_with_emails.rb
+${GEM_LIBDIR}/sample/Add_iCal_event.rb
+${GEM_LIBDIR}/sample/Create_daily_iCal_todos.rb
+${GEM_LIBDIR}/sample/Export_Address_Book_phone_numbers.rb
+${GEM_LIBDIR}/sample/Hello_world.rb
+${GEM_LIBDIR}/sample/List_iTunes_playlist_names.rb
+${GEM_LIBDIR}/sample/Make_Mail_message.rb
+${GEM_LIBDIR}/sample/Open_file_in_TextEdit.rb
+${GEM_LIBDIR}/sample/Organize_Mail_messages.rb
+${GEM_LIBDIR}/sample/Print_folder_tree.rb
+${GEM_LIBDIR}/sample/Select_all_HTML_files.rb
+${GEM_LIBDIR}/sample/Set_iChat_status.rb
+${GEM_LIBDIR}/sample/Simple_Finder_GUI_Scripting.rb
+${GEM_LIBDIR}/sample/Stagger_Finder_windows.rb
+${GEM_LIBDIR}/sample/TextEdit_demo.rb
+${GEM_LIBDIR}/sample/iTunes_top40_to_html.rb
+${GEM_LIBDIR}/src/SendThreadSafe.c
+${GEM_LIBDIR}/src/SendThreadSafe.h
+${GEM_LIBDIR}/src/lib/_aem/aemreference.rb
+${GEM_LIBDIR}/src/lib/_aem/codecs.rb
+${GEM_LIBDIR}/src/lib/_aem/connect.rb
+${GEM_LIBDIR}/src/lib/_aem/findapp.rb
+${GEM_LIBDIR}/src/lib/_aem/mactypes.rb
+${GEM_LIBDIR}/src/lib/_aem/send.rb
+${GEM_LIBDIR}/src/lib/_aem/typewrappers.rb
+${GEM_LIBDIR}/src/lib/_appscript/defaultterminology.rb
+${GEM_LIBDIR}/src/lib/_appscript/referencerenderer.rb
+${GEM_LIBDIR}/src/lib/_appscript/reservedkeywords.rb
+${GEM_LIBDIR}/src/lib/_appscript/safeobject.rb
+${GEM_LIBDIR}/src/lib/_appscript/terminology.rb
+${GEM_LIBDIR}/src/lib/aem.rb
+${GEM_LIBDIR}/src/lib/appscript.rb
+${GEM_LIBDIR}/src/lib/kae.rb
+${GEM_LIBDIR}/src/lib/osax.rb
+${GEM_LIBDIR}/src/osx_intern.h
+${GEM_LIBDIR}/src/osx_ruby.h
+${GEM_LIBDIR}/src/rbae.c
+${GEM_LIBDIR}/test/README
+${GEM_LIBDIR}/test/test_aemreference.rb
+${GEM_LIBDIR}/test/test_appscriptcommands.rb
+${GEM_LIBDIR}/test/test_appscriptreference.rb
+${GEM_LIBDIR}/test/test_codecs.rb
+${GEM_LIBDIR}/test/test_findapp.rb
+${GEM_LIBDIR}/test/test_mactypes.rb
+${GEM_LIBDIR}/test/test_osax.rb
+${GEM_LIBDIR}/test/testall.sh
+${GEM_HOME}/specifications/rb-appscript-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/src/lib/_appscript
+@dirrm ${GEM_LIBDIR}/src/lib/_aem
+@dirrm ${GEM_LIBDIR}/src/lib
+@dirrm ${GEM_LIBDIR}/src
+@dirrm ${GEM_LIBDIR}/sample
+@dirrm ${GEM_LIBDIR}/lib/_appscript
+@dirrm ${GEM_LIBDIR}/lib/_aem
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/doc/osax-manual
+@dirrm ${GEM_LIBDIR}/doc/mactypes-manual
+@dirrm ${GEM_LIBDIR}/doc/appscript-manual
+@dirrm ${GEM_LIBDIR}/doc/aem-manual
+@dirrm ${GEM_LIBDIR}/doc
+@dirrm ${GEM_LIBDIR}
+@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/rb-appscript-${PKGVERSION}
