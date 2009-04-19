@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.269 2009/03/20 22:12:03 asau Exp $
+# $NetBSD: Makefile,v 1.270 2009/04/19 14:43:30 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -133,6 +133,7 @@ SUBDIR+=	py25-html-docs
 SUBDIR+=	python23
 SUBDIR+=	python24
 SUBDIR+=	python25
+SUBDIR+=	python26
 SUBDIR+=	rexx-imc
 SUBDIR+=	rexx-regina
 SUBDIR+=	ruby
