@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/01/07 22:40:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/20 22:25:38 schmonz Exp $
 #
 
-DISTNAME=		xapian-omega-1.0.10
+DISTNAME=		xapian-omega-1.0.12
 CATEGORIES=		textproc
-MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.10/
+MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.12/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/docs/omega/overview.html
@@ -14,6 +14,8 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run
+
+TEST_TARGET=		check
 
 REPLACE_PERL=		dbi2omega htdig2omega mbox2omega
 
