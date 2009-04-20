@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1449 2009/04/20 09:45:35 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1450 2009/04/20 09:57:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bugzilla3 to 3.2.3 [abs 2009-04-20]
 	Updated misc/cksfv to 1.3.14 [wiz 2009-04-20]
 	Updated time/py-dateutil to 1.4 [wiz 2009-04-20]
+	Updated devel/m4 to 1.4.13 [wiz 2009-04-20]
