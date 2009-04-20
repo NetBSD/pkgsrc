@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/20 22:25:38 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/20 22:29:09 schmonz Exp $
 #
 
 DISTNAME=		xapian-omega-1.0.12
@@ -8,6 +8,7 @@ MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.12/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://xapian.org/docs/omega/overview.html
 COMMENT=		Search engine application for websites using Xapian
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
