@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8049 2009/04/19 20:02:48 schwarz Exp $
+$NetBSD: TODO,v 1.8050 2009/04/20 09:29:04 abs Exp $
 
 Suggested new packages
 ======================
@@ -452,7 +452,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o botan-1.8.1
 	o brasero-2.26.1
 	o btpd-0.13 [pkg/38144]
-	o bugzilla-3.2.3
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
