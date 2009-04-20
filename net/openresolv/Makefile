@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2009/04/20 06:26:54 roy Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/20 06:34:00 roy Exp $
 #
 
 DISTNAME=		openresolv-3.2
 CATEGORIES=		net
+LICENSE=		modified-bsd
 MASTER_SITES=		ftp://roy.marples.name/pub/openresolv/
 MASTER_SITES+=		http://roy.aydogan.net/openresolv/
 EXTRACT_SUFX=		.tar.bz2
