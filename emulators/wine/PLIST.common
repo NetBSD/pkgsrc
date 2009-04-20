@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2008/06/28 12:34:48 sborrill Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2009/04/20 18:55:42 adam Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -1086,16 +1086,3 @@ ${PLIST.x11}share/wine/fonts/vgasysr.fon
 ${PLIST.x11}share/wine/fonts/vgasyst.fon
 share/wine/generic.ppd
 share/wine/wine.inf
-${PLIST.x11}@dirrm share/wine/fonts
-@dirrm share/wine
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm man/fr.UTF-8/man1
-@dirrm man/fr.UTF-8
-@dirrm man/de.UTF-8/man1
-@dirrm man/de.UTF-8
-@dirrm lib/wine
-@dirrm include/wine/windows/ddk
-@dirrm include/wine/windows
-@dirrm include/wine/msvcrt/sys
-@dirrm include/wine/msvcrt
-@dirrm include/wine
