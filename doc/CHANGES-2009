@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1457 2009/04/20 12:00:22 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1458 2009/04/20 12:15:54 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2000,3 +2000,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libidn to 1.14 [wiz 2009-04-20]
 	Updated sysutils/hal-info to 20090414 [wiz 2009-04-20]
 	Updated textproc/iso-codes to 3.8 [wiz 2009-04-20]
+	Updated www/firefox3 to 3.0.8nb1 [hasso 2009-04-20]
