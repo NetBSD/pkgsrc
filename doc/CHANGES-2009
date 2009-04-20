@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1462 2009/04/20 14:06:42 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.1463 2009/04/20 14:34:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2005,3 +2005,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gnutls to 2.6.5 [wiz 2009-04-20]
 	Updated finance/p5-Finance-Quote to 1.16 [wiz 2009-04-20]
 	Updated mail/dovecot to 1.1.14 [ghen 2009-04-20]
+	Updated emulators/sdlmess to 0.130 [wiz 2009-04-20]
