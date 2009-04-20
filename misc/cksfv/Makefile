@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2008/09/06 13:46:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/04/20 09:36:59 wiz Exp $
 #
 
-DISTNAME=	cksfv-1.3.13
+DISTNAME=	cksfv-1.3.14
 CATEGORIES=	misc
 MASTER_SITES=	http://zakalwe.fi/~shd/foss/cksfv/files/ \
 		http://zakalwe.fi/~shd/foss/cksfv/files/devel/
@@ -11,14 +11,19 @@ MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://zakalwe.fi/~shd/foss/cksfv/
 COMMENT=	Check and create simple file verification (SFV) listings
 
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	share/doc/cksfv
+
 HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--package-prefix=${DESTDIR:Q}
 CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/man
 CONFIGURE_ARGS+=	--compiler=${CC:Q}
 TEST_TARGET=		check
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cksfv
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/cksfv
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cksfv
 
 .include "../../mk/bsd.pkg.mk"
