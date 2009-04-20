@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.28 2009/04/07 10:30:20 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2009/04/20 12:00:11 wiz Exp $
 #
 
-DISTNAME=	iso-codes-3.7
+DISTNAME=	iso-codes-3.8
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/projects/pkg-isocodes/
 COMMENT=	List of country, language and currency names
+
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
