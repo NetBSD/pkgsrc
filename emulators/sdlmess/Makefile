@@ -1,19 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/18 16:02:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/20 14:34:24 wiz Exp $
 #
 
-DISTNAME=		sdlmess0129
-PKGNAME=		sdlmess-0.129
+DISTNAME=		sdlmess0130
+PKGNAME=		sdlmess-0.130
 
 COMMENT=		Multi Emulator Super System, SDL port
 
 CONFLICTS=		xmess-[0-9]*
 
-MAKE_FILE=		makefile.sdl
+MAKE_FILE=		makefile
+
+PATCHDIR=		${.CURDIR}/../../emulators/sdlmame/patches
 
 DOCDIR=			share/doc/mess
 SHAREDIR=		share/mess
 INSTALLATION_DIRS=	bin ${DOCDIR}/sysinfo ${SHAREDIR}/artwork \
 			${SHAREDIR}/hash
+
+pre-patch:
+	cd ${WRKSRC} && mv makefile.sdl makefile
 
 post-build:
 	cd ${WRKSRC} && ./dat2html
