@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/18 16:02:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/20 14:34:24 wiz Exp $
 bin/imgtool
 bin/mess
 share/doc/mess/sysinfo.htm
@@ -276,6 +276,11 @@ share/mess/artwork/dir.txt
 share/mess/artwork/floppyr.png
 share/mess/artwork/floppyw.png
 share/mess/artwork/glasgow.zip
+share/mess/artwork/hp48g.zip
+share/mess/artwork/hp48gp.zip
+share/mess/artwork/hp48gx.zip
+share/mess/artwork/hp48s.zip
+share/mess/artwork/hp48sx.zip
 share/mess/artwork/kim1.zip
 share/mess/artwork/ledoff.png
 share/mess/artwork/ledon.png
