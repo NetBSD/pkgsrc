@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1465 2009/04/20 19:08:52 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1466 2009/04/20 19:44:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/sdlmess to 0.130 [wiz 2009-04-20]
 	Updated net/parpd to 1.3 [roy 2009-04-20]
 	Updated emulators/wine to 1.0.1nb2 [adam 2009-04-20]
+	Added devel/p5-MooseX-InsideOut version 0.102 [seb 2009-04-20]
