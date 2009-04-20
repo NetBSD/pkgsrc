@@ -1,0 +1,13 @@
+$NetBSD: patch-be,v 1.1 2009/04/20 18:55:42 adam Exp $
+
+--- programs/Makeprog.rules.in.orig	2008-10-17 17:45:25.000000000 +0200
++++ programs/Makeprog.rules.in
+@@ -44,7 +44,7 @@ $(TESTRESULTS): $(MODULE)$(DLLEXT)
+ .PHONY: install_prog install_prog.so uninstall_prog uninstall_prog.so
+ 
+ install_prog.so: $(MODULE).so $(DESTDIR)$(dlldir) dummy
+-	$(INSTALL_PROGRAM) $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
++	${BSD_INSTALL_LIB} $(MODULE).so $(DESTDIR)$(dlldir)/$(MODULE).so
+ 
+ install_prog: $(MODULE) $(DESTDIR)$(bindir) dummy
+ 	$(INSTALL_PROGRAM) $(MODULE) $(DESTDIR)$(bindir)/$(MODULE)
