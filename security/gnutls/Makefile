@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.77 2009/02/21 13:45:31 wiz Exp $
+# $NetBSD: Makefile,v 1.78 2009/04/20 13:11:57 wiz Exp $
 
-DISTNAME=	gnutls-2.6.4
+DISTNAME=	gnutls-2.6.5
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/ \
 		http://www.mirrors.wiretapped.net/security/network-security/gnutls/ \
@@ -11,7 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
-#LICENSE=	gnu-gpl-v2 gnu-lgpl-v2.1
+
+#LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -26,10 +27,6 @@ INFO_FILES=		yes
 
 PKGCONFIG_OVERRIDE=	lib/gnutls.pc.in
 PKGCONFIG_OVERRIDE+=	libextra/gnutls-extra.pc.in
-
-BUILDLINK_API_DEPENDS.opencdk+=		opencdk>=0.6.5
-BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
-BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.4
 
 MAKE_ENV+=		RM=${RM:Q}
 MAKE_ENV+=		TZ=UTC
@@ -51,8 +48,11 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.2.4
 .include "../../security/libgcrypt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
 .include "../../security/libtasn1/buildlink3.mk"
+BUILDLINK_API_DEPENDS.opencdk+=		opencdk>=0.6.5
 .include "../../security/opencdk/buildlink3.mk"
 # guile is useful for selftests, but bindings should be separate pkgs
 #.include "../../lang/guile/buildlink3.mk"
