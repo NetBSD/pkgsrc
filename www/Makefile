@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.640 2009/04/06 11:31:45 adrianp Exp $
+# $NetBSD: Makefile,v 1.641 2009/04/20 21:29:53 tron Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -478,6 +478,7 @@ SUBDIR+=	sope
 #SUBDIR+=	squid		# only contains Makefile fragments
 SUBDIR+=	squid27
 SUBDIR+=	squid30
+SUBDIR+=	squid31
 SUBDIR+=	squidGuard
 SUBDIR+=	squidpurge
 SUBDIR+=	squirm
