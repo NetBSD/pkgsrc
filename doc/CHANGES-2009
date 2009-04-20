@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1446 2009/04/20 09:25:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1447 2009/04/20 09:29:04 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1989,3 +1989,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/openresolv to 3.2 [roy 2009-04-20]
 	Updated graphics/comix to 4.0.4 [wiz 2009-04-20]
 	Updated games/gbrainy to 1.10 [wiz 2009-04-20]
+	Updated devel/bugzilla3 to 3.2.3 [abs 2009-04-20]
