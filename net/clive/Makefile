@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/02/21 13:31:52 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2009/04/20 11:18:48 wiz Exp $
 #
 
-DISTNAME=	clive-2.1.6
+DISTNAME=	clive-2.1.10
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://clive.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,9 +17,12 @@ DEPENDS+=	p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
 DEPENDS+=	p5-Expect>=1.21:../../devel/p5-Expect
 DEPENDS+=	p5-HTML-Parser>=2.37:../../www/p5-HTML-Parser
 DEPENDS+=	p5-IO-Pager>=0.05:../../devel/p5-IO-Pager
+DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-URI>=1.37:../../www/p5-URI
 DEPENDS+=	p5-WWW-Curl>=4.05:../../www/p5-WWW-Curl
-DEPENDS+=	p5-XML-Simple>=2.18:../../textproc/p5-XML-Simple
+
+# similar, but not exact wording
+#LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
