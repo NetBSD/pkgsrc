@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8053 2009/04/20 22:26:12 schmonz Exp $
+$NetBSD: TODO,v 1.8054 2009/04/20 22:44:37 asau Exp $
 
 Suggested new packages
 ======================
@@ -802,7 +802,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o kphotobook-0.0.7
 	o kronolith-2.3.1
 	o krusader-2.0
-	o ksi-3.4.2
 	o lapack-3.2
 	o latd-1.21
 	o latex2rtf-1.9.19
