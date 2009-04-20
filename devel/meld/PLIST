@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/11/24 14:03:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/04/20 10:53:58 wiz Exp $
 bin/meld
 lib/meld/diffutil.py
 lib/meld/diffutil.pyc
@@ -9,9 +9,15 @@ lib/meld/dirdiff.pyo
 lib/meld/filediff.py
 lib/meld/filediff.pyc
 lib/meld/filediff.pyo
+lib/meld/findbar.py
+lib/meld/findbar.pyc
+lib/meld/findbar.pyo
 lib/meld/gnomeglade.py
 lib/meld/gnomeglade.pyc
 lib/meld/gnomeglade.pyo
+lib/meld/historyentry.py
+lib/meld/historyentry.pyc
+lib/meld/historyentry.pyo
 lib/meld/meldapp.py
 lib/meld/meldapp.pyc
 lib/meld/meldapp.pyo
@@ -27,6 +33,9 @@ lib/meld/paths.pyo
 lib/meld/prefs.py
 lib/meld/prefs.pyc
 lib/meld/prefs.pyo
+lib/meld/sourceviewer.py
+lib/meld/sourceviewer.pyc
+lib/meld/sourceviewer.pyo
 lib/meld/task.py
 lib/meld/task.pyc
 lib/meld/task.pyo
@@ -48,6 +57,9 @@ lib/meld/vc/_vc.pyo
 lib/meld/vc/bzr.py
 lib/meld/vc/bzr.pyc
 lib/meld/vc/bzr.pyo
+lib/meld/vc/cdv.py
+lib/meld/vc/cdv.pyc
+lib/meld/vc/cdv.pyo
 lib/meld/vc/cvs.py
 lib/meld/vc/cvs.pyc
 lib/meld/vc/cvs.pyo
@@ -63,6 +75,9 @@ lib/meld/vc/mercurial.pyo
 lib/meld/vc/monotone.py
 lib/meld/vc/monotone.pyc
 lib/meld/vc/monotone.pyo
+lib/meld/vc/rcs.py
+lib/meld/vc/rcs.pyc
+lib/meld/vc/rcs.pyo
 lib/meld/vc/svn.py
 lib/meld/vc/svn.pyc
 lib/meld/vc/svn.pyo
@@ -106,6 +121,7 @@ share/locale/pt/LC_MESSAGES/meld.mo
 share/locale/pt_BR/LC_MESSAGES/meld.mo
 share/locale/ru/LC_MESSAGES/meld.mo
 share/locale/rw/LC_MESSAGES/meld.mo
+share/locale/sq/LC_MESSAGES/meld.mo
 share/locale/sr/LC_MESSAGES/meld.mo
 share/locale/sr@Latn/LC_MESSAGES/meld.mo
 share/locale/sv/LC_MESSAGES/meld.mo
@@ -116,6 +132,7 @@ share/meld/glade2/dirdiff-ui.xml
 share/meld/glade2/dirdiff.glade
 share/meld/glade2/filediff-ui.xml
 share/meld/glade2/filediff.glade
+share/meld/glade2/findbar.glade
 share/meld/glade2/meldapp-ui.xml
 share/meld/glade2/meldapp.glade
 share/meld/glade2/pixmaps/button_apply0.xpm
@@ -165,6 +182,7 @@ share/pixmaps/meld.png
 @dirrm share/gnome/help/meld/C
 @dirrm share/gnome/help/meld
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in xdg-dirs: @dirrm share/applications
 @comment in xdg-dirs: @dirrm share/application-registry
 @dirrm lib/meld/vc
