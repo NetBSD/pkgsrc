@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1 2009/04/20 18:55:42 adam Exp $
+
+--- dlls/Makedll.rules.in.orig	2008-10-17 17:45:25.000000000 +0200
++++ dlls/Makedll.rules.in
+@@ -96,7 +96,7 @@ install_static_implib_a:
+ $(IMPLIB_SRCS:%=_install_static_implib_/%): install_static_implib_$(IMPLIBEXT)
+ 
+ install install-lib:: $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir) dummy
+-	$(INSTALL_PROGRAM) $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir)/$(MODULE)$(DLLEXT)
++	${BSD_INSTALL_LIB} $(MODULE)$(DLLEXT) $(DESTDIR)$(dlldir)/$(MODULE)$(DLLEXT)
+ 
+ install install-dev:: $(IMPORTLIB:%=_install_/%) $(IMPLIB_SRCS:%=_install_static_implib_/%)
+ 
