@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1468 2009/04/20 22:00:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1469 2009/04/20 22:26:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2011,3 +2011,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-InsideOut version 0.102 [seb 2009-04-20]
 	Added www/squid31 version 3.1.0.7 [tron 2009-04-20]
 	Updated net/yaz to 3.0.45 [wiz 2009-04-20]
+	Updated textproc/xapian to 1.0.12 [schmonz 2009-04-20]
+	Updated textproc/xapian-omega to 1.0.12 [schmonz 2009-04-20]
