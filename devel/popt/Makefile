@@ -1,12 +1,15 @@
-# $NetBSD: Makefile,v 1.39 2008/04/13 23:17:52 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/04/20 11:23:57 wiz Exp $
 #
 
-DISTNAME=	popt-1.14
+DISTNAME=	popt-1.15
 CATEGORIES=	devel
 MASTER_SITES=	http://rpm5.org/files/popt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
+
+# mit license with advertising clause
+#LICENSE=	mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
