@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.44 2009/02/11 05:14:28 kano Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.45 2009/04/20 17:07:13 ver Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -517,7 +517,7 @@ do this, refer to the following two tools (installed as part of the
 <orderedlist>
 
   <listitem>
-    <para><command>download-vulnerability-list</command>, an easy way to
+    <para><command>pkg_admin fetch-pkg-vulnerabilities</command>, an easy way to
     download a list of the security vulnerabilities information.  This list
     is kept up to date by the NetBSD security officer and the NetBSD
     packages team, and is distributed from the NetBSD ftp server:</para>
@@ -527,7 +527,7 @@ do this, refer to the following two tools (installed as part of the
   </listitem>
 
   <listitem>
-    <para><command>audit-packages</command>, an easy way to audit the
+    <para><command>pkg_admin audit</command>, an easy way to audit the
     current machine, checking each vulnerability which is known.  If a
     vulnerable package is installed, it will be shown by output to stdout,
     including a description of the type of vulnerability, and a URL
