@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/20 21:27:40 tron Exp $
+
+SHA1 (squid-3.1.0.7.tar.bz2) = feba409242548f0ca2041ac1c968873453f3e0c6
+RMD160 (squid-3.1.0.7.tar.bz2) = a58496c69ee54e8495f2f959452ef8bed51a6f9e
+Size (squid-3.1.0.7.tar.bz2) = 2254073 bytes
+SHA1 (patch-aa) = 5f040d8e35cc1640633e0997363a6a615ae769b2
+SHA1 (patch-ab) = 7b89982f19c97398684dfca192a56e7077bfa21f
+SHA1 (patch-ac) = bf2508739b8917d9d7bebba3deae01b8b49986da
+SHA1 (patch-ad) = 6e67574732b38d2ddf8b351854abfd78a5903420
+SHA1 (patch-af) = 4f584a053df4f59c55af7f06a31787c9e36c8aa6
+SHA1 (patch-ag) = 1d4172d406d3e34a9582d60ebab649dbe369d985
+SHA1 (patch-ah) = e4cb16cbd65f558146204e450e794ab247c7b617
+SHA1 (patch-ai) = 0390e101199a81f782aa94815098351000f300cf
+SHA1 (patch-aj) = fbdde957ef10fc87dad7b4486aba5a0f3625e49b
+SHA1 (patch-ak) = 8cb0aaa7ea9d2241096cf82cf3640eea060ae85c
+SHA1 (patch-al) = cd8eca5a945de8901d84beb432c3be59a6814e9c
+SHA1 (patch-am) = ca5280be592db8b4037f6f8e11866972cd44a6b9
+SHA1 (patch-an) = 940c7a212a5ecfc3a2ae3bb545d4c3de8a6d6e08
+SHA1 (patch-ao) = 38e056cbffccf0c38731403f6319cc0a51af0325
+SHA1 (patch-ap) = 3b307114608b898d6462ef193c0a8be8ac074772
+SHA1 (patch-aq) = 3a13380ab91a3d4fb15ff3548c6511990cde0bbc
