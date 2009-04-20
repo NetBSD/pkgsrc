@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1469 2009/04/20 22:26:12 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.1470 2009/04/20 22:35:29 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2013,3 +2013,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/yaz to 3.0.45 [wiz 2009-04-20]
 	Updated textproc/xapian to 1.0.12 [schmonz 2009-04-20]
 	Updated textproc/xapian-omega to 1.0.12 [schmonz 2009-04-20]
+	Updated textproc/p5-Search-Xapian to 1.0.12.0 [schmonz 2009-04-20]
