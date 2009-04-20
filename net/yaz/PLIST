@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/07 22:26:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/04/20 21:59:53 wiz Exp $
 bin/yaz-asncomp
 bin/yaz-client
 bin/yaz-config
@@ -19,6 +19,7 @@ include/yaz/daemon.h
 include/yaz/diagbib1.h
 include/yaz/diagsru_update.h
 include/yaz/diagsrw.h
+include/yaz/errno.h
 include/yaz/icu.h
 include/yaz/ill-core.h
 include/yaz/ill.h
