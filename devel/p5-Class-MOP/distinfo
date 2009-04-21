@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2009/04/12 12:55:56 sno Exp $
+$NetBSD: distinfo,v 1.17 2009/04/21 18:54:41 seb Exp $
 
-SHA1 (Class-MOP-0.81.tar.gz) = d2b36aa09cf243a166d637992cba176a1aaa3646
-RMD160 (Class-MOP-0.81.tar.gz) = 5168022d35197b06c2d1110017c78a4fb35ac3ff
-Size (Class-MOP-0.81.tar.gz) = 170994 bytes
+SHA1 (Class-MOP-0.82.tar.gz) = 5f26575bf8253dc0ecdd3e0ec4fa07a1eb23a403
+RMD160 (Class-MOP-0.82.tar.gz) = 22ea6385835d2d359b1b52c518b798ffe89a8268
+Size (Class-MOP-0.82.tar.gz) = 172406 bytes
