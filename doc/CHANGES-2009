@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1473 2009/04/21 15:15:15 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1474 2009/04/21 16:29:20 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2017,3 +2017,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/ksi to 3.4.3 [asau 2009-04-20]
 	Added net/powerdns-recursor version 3.1.7 [roy 2009-04-21]
 	Updated time/py-dateutil to 1.4.1 [wiz 2009-04-21]
+	Removed www/firefox-gtk1 [tnn 2009-04-21]
+	Removed multimedia/mplayer-plugin-firefox-gtk1 [tnn 2009-04-21]
