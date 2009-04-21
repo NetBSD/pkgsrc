@@ -1,6 +1,6 @@
-$NetBSD: patch-ea,v 1.2 2009/01/05 09:58:36 martin Exp $
+$NetBSD: patch-ea,v 1.3 2009/04/21 13:00:55 tnn Exp $
 
---- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2006-02-02 20:55:17.000000000 +0100
+--- toolkit/components/history/src/nsGlobalHistory.cpp.orig	2007-11-29 08:04:26.000000000 +0100
 +++ toolkit/components/history/src/nsGlobalHistory.cpp
 @@ -322,7 +322,9 @@ matchAgeInDaysCallback(nsIMdbRow *row, v
    if (err != 0) return PR_FALSE;
@@ -34,4 +34,3 @@ $NetBSD: patch-ea,v 1.2 2009/01/05 09:58:36 martin Exp $
    nsCOMPtr<nsIMdbRow> row;
    rv = FindRow(kToken_URLColumn, URISpec.get(), getter_AddRefs(row));
  
-
