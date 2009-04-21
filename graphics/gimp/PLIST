@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2009/03/17 15:41:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2009/04/21 10:03:31 adam Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -289,7 +289,7 @@ lib/gimp/2.0/plug-ins/file-header
 lib/gimp/2.0/plug-ins/file-html-table
 lib/gimp/2.0/plug-ins/file-ico
 lib/gimp/2.0/plug-ins/file-jpeg
-lib/gimp/2.0/plug-ins/file-mng
+${PLIST.mng}lib/gimp/2.0/plug-ins/file-mng
 lib/gimp/2.0/plug-ins/file-pat
 lib/gimp/2.0/plug-ins/file-pcx
 lib/gimp/2.0/plug-ins/file-pix
