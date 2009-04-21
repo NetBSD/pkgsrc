@@ -1,17 +1,19 @@
-$NetBSD: patch-aa,v 1.7 2008/09/09 17:19:13 schmonz Exp $
+$NetBSD: patch-aa,v 1.8 2009/04/21 16:34:43 schmonz Exp $
 
---- Makefile.PL.orig	2008-09-08 11:51:42.000000000 -0400
+--- Makefile.PL.orig	2009-04-04 17:26:07.000000000 -0400
 +++ Makefile.PL
-@@ -95,9 +95,9 @@ extra_install:
+@@ -117,10 +117,10 @@ extra_install:
  	
  	# These might fail if a regular user is installing into a home
  	# directory.
 -	-install -d $(DESTDIR)/etc/ikiwiki
 -	-install -m 0644 wikilist $(DESTDIR)/etc/ikiwiki
 -	-install -m 0644 auto.setup $(DESTDIR)/etc/ikiwiki
+-	-install -m 0644 auto-blog.setup $(DESTDIR)/etc/ikiwiki
 +	-install -d $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
 +	-install -m 0644 wikilist $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
 +	-install -m 0644 auto.setup $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
++	-install -m 0644 auto-blog.setup $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
  }
  }
  
