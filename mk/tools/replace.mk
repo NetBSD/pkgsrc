@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.218 2009/02/05 18:44:43 joerg Exp $
+# $NetBSD: replace.mk,v 1.219 2009/04/21 21:26:13 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -642,12 +642,12 @@ TOOLS_PATH.openssl=		${TOOLS_PREFIX.openssl}/bin/openssl
 .  if !empty(PKGPATH:Mdevel/patch)
 MAKEFLAGS+=			TOOLS_IGNORE.patch=
 .  elif !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
-TOOLS_DEPENDS.patch?=		patch>=2.2:../../devel/patch
+TOOLS_DEPENDS.patch?=		nbpatch-[0-9]*:../../devel/nbpatch
 TOOLS_CREATE+=			patch
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.patch=patch
-TOOLS_PATH.patch=		${TOOLS_PREFIX.patch}/bin/gpatch
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.patch=nbpatch
+TOOLS_PATH.patch=		${TOOLS_PREFIX.patch}/bin/nbpatch
 _PATCH_CAN_BACKUP=		yes
-_PATCH_BACKUP_ARG?=		-b -V simple -z
+_PATCH_BACKUP_ARG?=		-V simple -z
 .  endif
 .endif
 
