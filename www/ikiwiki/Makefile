@@ -1,30 +1,20 @@
-# $NetBSD: Makefile,v 1.22 2008/10/19 19:19:01 he Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/21 16:34:43 schmonz Exp $
 #
 
-DISTNAME=	ikiwiki_2.66
+DISTNAME=	ikiwiki_3.10
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
 MAINTAINER=	reed@NetBSD.org
 HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
+LICENSE=	gnu-gpl-v2
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=	amazon_s3 imagemagick svn w3m
-PKG_SUGGESTED_OPTIONS=	# none on by default
-
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/bsd.options.mk"
-
-# http://ikiwiki.info/install/index.html
-# needed dependencies:
 DEPENDS+=	p5-Text-Markdown-[0-9]*:../../textproc/p5-Text-Markdown
 DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Template-[0-9]*:../../www/p5-HTML-Template
-# used if available:
 DEPENDS+=	p5-CGI-Session-[0-9]*:../../www/p5-CGI-Session
 DEPENDS+=	p5-CGI-FormBuilder>=3.05:../../www/p5-CGI-FormBuilder
 DEPENDS+=	p5-Mail-Sendmail-[0-9]*:../../mail/p5-Mail-Sendmail
@@ -32,77 +22,43 @@ DEPENDS+=	p5-Time-Duration-[0-9]*:../../time/p5-Time-Duration
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
 DEPENDS+=	p5-RPC-XML-[0-9]*:../../net/p5-RPC-XML
-DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-XML-Atom-[0-9]*:../../textproc/p5-XML-Atom
 DEPENDS+=	p5-XML-Feed-[0-9]*:../../textproc/p5-XML-Feed
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-XML-RSS-[0-9]*:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
 
-# for amazon_s3 plugin which injects wiki pages into Amazon S3
-# allowing ikiwiki to be used without a dedicated web server.
-.if !empty(PKG_OPTIONS:Mamazon_s3)
-DEPENDS+=	p5-Net-Amazon-S3-[0-9]*:../../net/p5-Net-Amazon-S3
-.endif
+WRKSRC=			${WRKDIR}/${PKGBASE}
+PERL5_PACKLIST=		auto/IkiWiki/.packlist
+USE_LANGUAGES=		# none
+USE_TOOLS+=		gmake perl:run xgettext
 
-# for img plugin
-.if !empty(PKG_OPTIONS:Mimagemagick)
-# the plugin uses the ImageMagick tools via PerlMagic
-DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
-.endif
+REPLACE_PERL+=	ikiwiki-mass-rebuild ikiwiki-transition ikiwiki-update-wikilist
+REPLACE_PERL+=	ikiwiki-w3m.cgi ikiwiki.in mdwn2man pm_filter
+REPLACE_PERL+=	*.pm IkiWiki/*.pm IkiWiki/*/*.pm* *.setup */*/*.setup t/*.t
+REPLACE_PERL+=	plugins/externaldemo	# XXX not installed
 
-.if !empty(PKG_OPTIONS:Msvn)
-DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
-.endif
-
-PLIST_VARS+=	w3m
-.if !empty(PKG_OPTIONS:Mw3m)
-DEPENDS+=	w3m-[0-9]*:../../www/w3m
-PLIST.w3m=	yes
-SUBST_SED.makefile+=	-e 's,/lib/w3m/cgi-bin,/libexec/w3m/cgi-bin,'
-INSTALLATION_DIRS+=	share/doc/ikiwiki/w3mmode
-.else
-SUBST_SED.makefile+=	-e 's,^\(.*install .*/lib/w3m/cgi-bin\),\#\1,'
-.endif
-
-INSTALLATION_DIRS+=	share/doc/ikiwiki
-WRKSRC=		${WRKDIR}/ikiwiki
-PERL5_PACKLIST=	auto/IkiWiki/.packlist
-USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake perl:run xgettext
-
-# TODO: check these
-REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
-REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild ikiwiki-update-wikilist
-REPLACE_PERL+=	ikiwiki-transition
-REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm*
-REPLACE_PERL+=	auto.setup doc/w3mmode/ikiwiki.setup
-#REPLACE_PERL+=	plugins/externaldemo	# not installed anymore
-
-# not installed anymore
-#REPLACE_PYTHON+=	plugins/rst
-# TODO: add an rst option
-# rst plugin (reStructuredText) needs the python-docutils module
-#CHECK_INTERPRETER_SKIP+=	lib/ikiwiki/plugins/rst
-
-SUBST_CLASSES+=	makefile
+SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	post-patch
 SUBST_FILES.makefile=	Makefile.PL
 SUBST_SED.makefile+=	-e 's,share/man/man,${PKGMANDIR}/man,g'
 
+SUBST_CLASSES+=		perlpath
+SUBST_STAGE.perlpath=	post-patch
+SUBST_FILES.perlpath=	IkiWiki/Setup/Standard.pm
+SUBST_SED.perlpath+=	-e 's,@PERL5@,${PERL5},g'
+
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/auto.setup ${PKG_SYSCONFDIR}/auto.setup
+CONF_FILES+=		${EGDIR}/auto-blog.setup ${PKG_SYSCONFDIR}/auto-blog.setup
 CONF_FILES+=		${EGDIR}/wikilist ${PKG_SYSCONFDIR}/wikilist
+
+.include "options.mk"
 
 pre-configure:
 	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
-
-post-install:
-.if !empty(PKG_OPTIONS:Mw3m)
-	${INSTALL_DATA} ${WRKSRC}/html/w3mmode.html \
-		${PREFIX}/share/doc/ikiwiki/
-	${INSTALL_DATA} ${WRKSRC}/doc/w3mmode/ikiwiki.setup \
-		${PREFIX}/share/doc/ikiwiki/w3mmode/ikiwiki.setup
-.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

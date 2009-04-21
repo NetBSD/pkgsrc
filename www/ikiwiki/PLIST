@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.11 2008/09/22 15:09:05 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/04/21 16:34:43 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
 bin/ikiwiki-update-wikilist
+lib/ikiwiki/plugins/proxy.py
+lib/ikiwiki/plugins/rst
 ${PLIST.w3m}libexec/w3m/cgi-bin/ikiwiki-w3m.cgi
 man/man1/ikiwiki-makerepo.1
 man/man1/ikiwiki-transition.1
@@ -12,9 +14,9 @@ man/man8/ikiwiki-mass-rebuild.8
 sbin/ikiwiki-mass-rebuild
 ${PLIST.w3m}share/doc/ikiwiki/w3mmode.html
 ${PLIST.w3m}share/doc/ikiwiki/w3mmode/ikiwiki.setup
+share/examples/ikiwiki/auto-blog.setup
 share/examples/ikiwiki/auto.setup
 share/examples/ikiwiki/wikilist
-share/ikiwiki/basewiki/directive.mdwn
 share/ikiwiki/basewiki/favicon.ico
 share/ikiwiki/basewiki/ikiwiki.mdwn
 share/ikiwiki/basewiki/ikiwiki/blog.mdwn
@@ -49,6 +51,7 @@ share/ikiwiki/directives/ikiwiki/directive/copy.mdwn
 share/ikiwiki/directives/ikiwiki/directive/cut.mdwn
 share/ikiwiki/directives/ikiwiki/directive/cutpaste.mdwn
 share/ikiwiki/directives/ikiwiki/directive/edittemplate.mdwn
+share/ikiwiki/directives/ikiwiki/directive/format.mdwn
 share/ikiwiki/directives/ikiwiki/directive/fortune.mdwn
 share/ikiwiki/directives/ikiwiki/directive/graph.mdwn
 share/ikiwiki/directives/ikiwiki/directive/haiku.mdwn
@@ -82,6 +85,33 @@ share/ikiwiki/directives/ikiwiki/directive/toc.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
 share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
 share/ikiwiki/directives/ikiwiki/directive/version.mdwn
+share/ikiwiki/examples/blog.mdwn
+share/ikiwiki/examples/blog/index.mdwn
+share/ikiwiki/examples/blog/posts.mdwn
+share/ikiwiki/examples/blog/posts/first_post.mdwn
+share/ikiwiki/examples/blog/sidebar.mdwn
+share/ikiwiki/examples/blog/tags.mdwn
+share/ikiwiki/examples/blog/tags/life.mdwn
+share/ikiwiki/examples/blog/tags/tech.mdwn
+share/ikiwiki/examples/softwaresite.mdwn
+share/ikiwiki/examples/softwaresite/Makefile
+share/ikiwiki/examples/softwaresite/bugs.mdwn
+share/ikiwiki/examples/softwaresite/bugs/done.mdwn
+share/ikiwiki/examples/softwaresite/bugs/fails_to_frobnicate.mdwn
+share/ikiwiki/examples/softwaresite/bugs/needs_more_bugs.mdwn
+share/ikiwiki/examples/softwaresite/contact.mdwn
+share/ikiwiki/examples/softwaresite/doc.mdwn
+share/ikiwiki/examples/softwaresite/doc/faq.mdwn
+share/ikiwiki/examples/softwaresite/doc/install.mdwn
+share/ikiwiki/examples/softwaresite/doc/setup.mdwn
+share/ikiwiki/examples/softwaresite/download.mdwn
+share/ikiwiki/examples/softwaresite/index.mdwn
+share/ikiwiki/examples/softwaresite/news.mdwn
+share/ikiwiki/examples/softwaresite/news/version_1.0.mdwn
+share/ikiwiki/examples/softwaresite/templates/release.mdwn
+share/ikiwiki/javascript/ikiwiki.js
+share/ikiwiki/javascript/relativedate.js
+share/ikiwiki/javascript/toggle.js
 share/ikiwiki/smiley/smileys.mdwn
 share/ikiwiki/smiley/smileys/alert.png
 share/ikiwiki/smiley/smileys/angry.png
@@ -117,13 +147,18 @@ share/ikiwiki/templates/atompage.tmpl
 share/ikiwiki/templates/autoindex.tmpl
 share/ikiwiki/templates/blogpost.tmpl
 share/ikiwiki/templates/change.tmpl
+share/ikiwiki/templates/comment.tmpl
+share/ikiwiki/templates/commentmoderation.tmpl
+share/ikiwiki/templates/editcomment.tmpl
 share/ikiwiki/templates/editconflict.tmpl
 share/ikiwiki/templates/editcreationconflict.tmpl
 share/ikiwiki/templates/editfailedsave.tmpl
 share/ikiwiki/templates/editpage.tmpl
 share/ikiwiki/templates/editpagegone.tmpl
 share/ikiwiki/templates/feedlink.tmpl
+share/ikiwiki/templates/googleform.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
+share/ikiwiki/templates/microblog.tmpl
 share/ikiwiki/templates/misc.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
@@ -147,6 +182,16 @@ share/locale/vi/LC_MESSAGES/ikiwiki.mo
 @dirrm share/ikiwiki/templates
 @dirrm share/ikiwiki/smiley/smileys
 @dirrm share/ikiwiki/smiley
+@dirrm share/ikiwiki/javascript
+@dirrm share/ikiwiki/examples/softwaresite/templates
+@dirrm share/ikiwiki/examples/softwaresite/news
+@dirrm share/ikiwiki/examples/softwaresite/doc
+@dirrm share/ikiwiki/examples/softwaresite/bugs
+@dirrm share/ikiwiki/examples/softwaresite
+@dirrm share/ikiwiki/examples/blog/tags
+@dirrm share/ikiwiki/examples/blog/posts
+@dirrm share/ikiwiki/examples/blog
+@dirrm share/ikiwiki/examples
 @dirrm share/ikiwiki/directives/ikiwiki/directive
 @dirrm share/ikiwiki/directives/ikiwiki
 @dirrm share/ikiwiki/directives
@@ -159,5 +204,7 @@ share/locale/vi/LC_MESSAGES/ikiwiki.mo
 @dirrm share/ikiwiki
 @dirrm share/examples/ikiwiki
 ${PLIST.w3m}@dirrm share/doc/ikiwiki/w3mmode
-@dirrm share/doc/ikiwiki
-${PLIST.w3m}@dirrm libexec/w3m/cgi-bin
+${PLIST.w3m}@dirrm share/doc/ikiwiki
+${PLIST.w3m}@unexec ${RMDIR} %D/libexec/w3m/cgi-bin 2>/dev/null || ${TRUE}
+@dirrm lib/ikiwiki/plugins
+@dirrm lib/ikiwiki
