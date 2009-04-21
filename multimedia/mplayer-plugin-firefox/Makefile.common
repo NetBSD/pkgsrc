@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2008/10/20 07:45:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.21 2009/04/21 16:58:18 tnn Exp $
 #
 
 DISTNAME=		mplayerplug-in-${DIST_VER}
@@ -42,6 +42,7 @@ post-extract:
 		-e "s|@X11BASELIB@|${X11BASE}/lib|g"		\
 		${FILESDIR}/mozilla-${f}.pc.in > ${WRKSRC}/mozilla-${f}.pc
 .endfor
+_PKG_CONFIG_LIBDIR=	${BUILDLINK_DIR}/lib/pkgconfig:${WRKSRC}
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
