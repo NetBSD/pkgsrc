@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: mozilla-Mach-O.in,v 1.2 2009/04/21 16:40:13 tnn Exp $
 MOZILLA_FIVE_HOME=@PREFIX@/lib/@MOZILLA@
 export MOZILLA_FIVE_HOME
 exec @PREFIX@/lib/@MOZILLA@/@MOZILLA_BIN@ "$@"
