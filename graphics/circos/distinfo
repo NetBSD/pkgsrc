@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/04/21 17:51:05 schmonz Exp $
+
+SHA1 (circos-0.49.tgz) = 04cbdd25ba86104d2f68d5feb611f37ddc409bca
+RMD160 (circos-0.49.tgz) = 00f2d9913530781849a2ea48097eb05a5824f0c4
+Size (circos-0.49.tgz) = 73468067 bytes
+SHA1 (patch-aa) = 4a6dc1be8b3c57a9a6c2a31fd67b6f09aebf6cc5

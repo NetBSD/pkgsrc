@@ -1,0 +1,5 @@
+Circos is a Perl application for the generation of publication-quality,
+circularly composited renditions of genomic data and related annotations.
+
+Circos is particularly suited for visualizing alignments, conservation and
+intra and inter-chromosomal relationships.
