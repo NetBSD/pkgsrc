@@ -162,6 +162,8 @@ i586-optimized		Optimize for i586 (only).
 icu			Enable icu support.
 idea			Enable support for the IDEA cryptographic algorithm (possible license+patent problems).
 idn			Internationalized Domain Names (IDN) support.
+ikiwiki-amazon-s3	Enable publishing rendered pages to Amazon S3 servers.
+ikiwiki-search		Enable full-text search using xapian.
 imagemagick		Use ImageMagick as imaging library.
 imap			Enable imap support.
 imapuw-cleartextpwd	Allow cleartext passwords over non-encrypted connections.
