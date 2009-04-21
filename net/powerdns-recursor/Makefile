@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/21 14:16:47 roy Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/21 22:52:37 roy Exp $
 #
 
 DISTNAME=		pdns-recursor-3.1.7
@@ -31,8 +31,7 @@ post-patch:
 	${SED} -e "s:/etc/powerdns:${PKG_SYSCONFDIR}:" \
 		${WRKSRC}/config.h >${WRKSRC}/config.h.new
 	${MV} ${WRKSRC}/config.h.new ${WRKSRC}/config.h
-	@# TODO Make kqueue work
-	@#${LN} -s FreeBSD.inc ${WRKSRC}/sysdeps/NetBSD.inc
+	${LN} -s FreeBSD.inc ${WRKSRC}/sysdeps/NetBSD.inc
 	${MV} ${WRKSRC}/pdns_recursor.1 ${WRKSRC}/pdns_recursor.8
 	${MV} ${WRKSRC}/rec_control.1 ${WRKSRC}/rec_control.8
 
