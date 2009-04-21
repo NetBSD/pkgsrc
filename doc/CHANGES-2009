@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1475 2009/04/21 16:35:26 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.1476 2009/04/21 17:53:17 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2020,3 +2020,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed www/firefox-gtk1 [tnn 2009-04-21]
 	Removed multimedia/mplayer-plugin-firefox-gtk1 [tnn 2009-04-21]
 	Updated www/ikiwiki to 3.10 [schmonz 2009-04-21]
+	Added math/p5-Math-Round version 0.06 [schmonz 2009-04-21]
+	Added math/p5-Math-VecStat version 0.08 [schmonz 2009-04-21]
+	Added graphics/circos version 0.49 [schmonz 2009-04-21]
