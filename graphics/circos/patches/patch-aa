@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/21 17:51:05 schmonz Exp $
+
+--- bin/circos.orig	2009-01-30 18:31:20.000000000 -0500
++++ bin/circos
+@@ -317,6 +317,8 @@ use vars qw(%OPT %CONF);
+ #print Dumper(\%INC);
+ #exit;
+ 
++chdir "@PREFIX@/share/circos" || die "error - cannot chdir";
++
+ GetOptions(\%OPT,
+ 	   "imagemap",
+ 	   "silent",
