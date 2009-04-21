@@ -1,0 +1,77 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/04/21 14:16:47 roy Exp $
+
+--- Makefile	(revision 1354)
++++ Makefile-recursor	(working copy)
+@@ -1,6 +1,8 @@
+ # user editable stuff:
+-SBINDIR=/usr/sbin/
+-BINDIR=/usr/bin/
++PREFIX?=/usr
++SBINDIR=$(PREFIX)/sbin
++BINDIR=$(PREFIX)/bin
++MANDIR=$(PREFIX)/share/man
+ CONFIGDIR="/etc/powerdns/"
+ OPTFLAGS?=-O3
+ CXXFLAGS:= $(CXXFLAGS) -Wall -DBOOST_SP_DISABLE_THREADS $(OPTFLAGS) $(PROFILEFLAGS)
+@@ -8,6 +10,13 @@
+ LINKCC=$(CXX)
+ CC?=gcc
+ 
++INSTALL?=install
++SHAREMODE?=644
++MANMODE?=444
++INSTALL_DIR?=$(INSTALL) -d
++INSTALL_DATA?=$(INSTALL) -m $(SHAREMODE)
++INSTALL_MAN?=$(INSTALL) -m $(MANMODE)
++
+ # Lua 5.1 settings
+ LUA_CPPFLAGS_CONFIG ?= -I/usr/include/lua5.1
+ LUA_LIBS_CONFIG ?= -llua5.1
+@@ -28,7 +37,7 @@
+ REC_CONTROL_OBJECTS=rec_channel.o rec_control.o arguments.o 
+ 
+ # what we need 
+-all: message pdns_recursor rec_control 
++all: message pdns_recursor rec_control recursor.conf-dist
+ 
+ # OS specific instructions
+ -include sysdeps/$(shell uname).inc
+@@ -72,17 +81,19 @@
+ 		rm -f dep ; \
+ 	 fi
+ 
++recursor.conf-dist: pdns_recursor
++	@# Not cross-compile friendly :/
++	./pdns_recursor --config > $@
++
+ install: all
+-	-mkdir -p $(DESTDIR)/$(SBINDIR)
+-	mv pdns_recursor $(DESTDIR)/$(SBINDIR)
+-	strip $(DESTDIR)/$(SBINDIR)/pdns_recursor
+-	mkdir -p $(DESTDIR)/$(BINDIR)
+-	mv rec_control $(DESTDIR)/$(BINDIR)
+-	strip $(DESTDIR)/$(BINDIR)/rec_control
+-	-mkdir -p $(DESTDIR)/$(CONFIGDIR)
+-	$(DESTDIR)/$(SBINDIR)/pdns_recursor --config > $(DESTDIR)/$(CONFIGDIR)/recursor.conf-dist
+-	-mkdir -p $(DESTDIR)/usr/share/man/man1
+-	cp pdns_recursor.1 rec_control.1 $(DESTDIR)/usr/share/man/man1
++	$(INSTALL_DIR) $(DESTDIR)/$(SBINDIR)
++	$(INSTALL) pdns_recursor $(DESTDIR)/$(SBINDIR)
++	$(INSTALL_DIR) $(DESTDIR)/$(BINDIR)
++	$(INSTALL) rec_control $(DESTDIR)/$(BINDIR)
++	$(INSTALL_DIR) $(DESTDIR)/$(CONFIGDIR)
++	$(INSTALL_DATA) recursor.conf-dist $(DESTDIR)/$(CONFIGDIR)
++	$(INSTALL_DIR) $(DESTDIR)/$(MANDIR)/man8
++	$(INSTALL_MAN) pdns_recursor.8 rec_control.8 $(DESTDIR)/$(MANDIR)/man8
+ 	$(OS_SPECIFIC_INSTALL)	
+ 
+ clean:
+@@ -94,7 +105,7 @@
+ -include dep
+ 
+ optional:
+-	mkdir optional
++	$(INSTALL_DIR) optional
+ 
+ pdns_recursor: optional $(OPTIONALS) $(PDNS_RECURSOR_OBJECTS) malloc.o
+ 	$(LINKCC) $(PDNS_RECURSOR_OBJECTS) $(wildcard optional/*.o) $(LDFLAGS) -o $@
