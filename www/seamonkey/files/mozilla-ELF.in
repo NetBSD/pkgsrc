@@ -1,6 +1,11 @@
 #!/bin/sh
+if [ `ulimit -n` -lt 256 ]; then
+	if [ `ulimit -H -n` -lt 256 ]; then
+		ulimit -n `ulimit -H -n`
+	else
+		ulimit -n 256
+	fi
+fi
 MOZILLA_FIVE_HOME=@PREFIX@/lib/@MOZILLA@
 export MOZILLA_FIVE_HOME
-LD_LIBRARY_PATH=@PREFIX@/lib/@MOZILLA@:@PREFIX@/lib:${LD_LIBRARY_PATH}
-export LD_LIBRARY_PATH
 exec @PREFIX@/lib/@MOZILLA@/@MOZILLA_BIN@ "$@"
