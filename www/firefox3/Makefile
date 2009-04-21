@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/04/20 12:13:03 hasso Exp $
+# $NetBSD: Makefile,v 1.28 2009/04/21 13:08:37 tnn Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 PKGREVISION=		1
@@ -115,5 +115,5 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 CONFIGURE_ARGS+=	--enable-system-sqlite
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.5.9
 .include "../../databases/sqlite3/buildlink3.mk"
-
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
