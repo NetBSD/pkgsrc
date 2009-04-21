@@ -1,0 +1,10 @@
+--- lib/krb5/asn.1/asn1_decode.c.orig	2009-04-17 16:24:41.318878800 -0500
++++ lib/krb5/asn.1/asn1_decode.c	2009-04-17 16:25:52.914274500 -0500
+@@ -231,6 +231,7 @@
+ 
+   if(length != 15) return ASN1_BAD_LENGTH;
+   retval = asn1buf_remove_charstring(buf,15,&s);
++  if (retval) return retval;
+   /* Time encoding: YYYYMMDDhhmmssZ */
+   if(s[14] != 'Z') {
+       free(s);
