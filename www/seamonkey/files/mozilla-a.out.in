@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# $NetBSD: mozilla-a.out.in,v 1.2 2009/04/21 16:40:13 tnn Exp $
 MOZILLA_FIVE_HOME=@PREFIX@/lib/@MOZILLA@
 LD_LIBRARY_PATH=@PREFIX@/lib/@MOZILLA@
 export MOZILLA_FIVE_HOME
