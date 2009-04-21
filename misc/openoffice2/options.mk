@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2008/11/24 11:58:44 hira Exp $
+# $NetBSD: options.mk,v 1.24 2009/04/21 16:47:48 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -46,9 +46,6 @@ CONFIGURE_ARGS+=	--with-system-mozilla=firefox3
 CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey/buildlink3.mk"
 # The following browsers do not install *.pc files.
-#.elif !empty(PKG_OPTIONS:Mfirefox-gtk1)
-#CONFIGURE_ARGS+=	--with-system-mozilla=firefox
-#.include "../../www/firefox-gtk1/buildlink3.mk"
 #.elif !empty(PKG_OPTIONS:Mseamonkey-gtk1)
 #CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 #.include "../../www/seamonkey-gtk1/buildlink3.mk"

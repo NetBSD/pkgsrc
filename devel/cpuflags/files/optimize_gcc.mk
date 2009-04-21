@@ -1,4 +1,4 @@
-# $Id: optimize_gcc.mk,v 1.35 2007/09/20 10:19:03 abs Exp $
+# $Id: optimize_gcc.mk,v 1.36 2009/04/21 16:47:48 tnn Exp $
 
 # This file is 'experimental' - which is doublespeak for unspeakably
 # ugly, and quite broken by design.
@@ -14,10 +14,8 @@
 # Per package exclusions
 
 # firefox-1: v1.0, NetBSD i386/2.0
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=www/firefox www/firefox-gtk1
-PKG_EXCLUDE_OMIT_FRAME_POINTER+=www/firefox15 www/firefox15-gtk1
-PKG_EXCLUDE_FAST_MATH+=www/firefox www/firefox-gtk1
-PKG_EXCLUDE_FAST_MATH+=www/firefox15 www/firefox15-gtk1
+PKG_EXCLUDE_OMIT_FRAME_POINTER+=www/firefox
+PKG_EXCLUDE_FAST_MATH+=www/firefox
 
 # seamonkey-1.0.5: gcc-4.1.2 NetBSD 4.99.3 i386
 PKG_EXCLUDE_OMIT_FRAME_POINTER+=www/seamonkey www/seamonkey-gtk1
