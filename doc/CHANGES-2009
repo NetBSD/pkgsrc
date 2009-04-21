@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1471 2009/04/20 22:44:37 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1472 2009/04/21 14:21:36 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2015,3 +2015,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/xapian-omega to 1.0.12 [schmonz 2009-04-20]
 	Updated textproc/p5-Search-Xapian to 1.0.12.0 [schmonz 2009-04-20]
 	Updated lang/ksi to 3.4.3 [asau 2009-04-20]
+	Added net/powerdns-recursor version 3.1.7 [roy 2009-04-21]
