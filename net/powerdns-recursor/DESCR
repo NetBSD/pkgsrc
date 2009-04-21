@@ -1,0 +1,6 @@
+The PowerDNS recursor is part of the source tarball of the main PowerDNS
+distribution, but it is released separately. Starting from the version 3.0
+pre-releases, there are zero known bugs or issues with the recursor. It is
+known to power the resolving needs of over 2 million internet connections.
+
+PowerDNS recursor can gets names from /etc/hosts.
