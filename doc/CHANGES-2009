@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1476 2009/04/21 17:53:17 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.1477 2009/04/21 18:57:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2023,3 +2023,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added math/p5-Math-Round version 0.06 [schmonz 2009-04-21]
 	Added math/p5-Math-VecStat version 0.08 [schmonz 2009-04-21]
 	Added graphics/circos version 0.49 [schmonz 2009-04-21]
+	Updated devel/p5-Class-MOP to 0.82 [seb 2009-04-21]
+	Updated devel/p5-Moose to 0.75 [seb 2009-04-21]
