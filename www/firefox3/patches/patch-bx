@@ -1,9 +1,38 @@
-$NetBSD: patch-bx,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+$NetBSD: patch-bx,v 1.2 2009/04/21 12:58:22 tnn Exp $
 
-diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp
---- ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp	2004-04-18 23:18:18.000000000 +0900
-+++ ./xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp	2005-12-04 19:34:41.000000000 +0900
-@@ -119,8 +119,10 @@
+--- xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp.orig	2004-04-18 16:18:18.000000000 +0200
++++ xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd.cpp
+@@ -41,6 +41,7 @@
+ // Implement shared vtbl methods.
+ 
+ #include "xptcprivate.h"
++#include "xptiprivate.h"
+ 
+ // The Linux/PPC ABI (aka PPC/SYSV ABI) passes the first 8 integral
+ // parameters and the first 8 floating point parameters in registers
+@@ -71,7 +72,6 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+ {
+     nsXPTCMiniVariant paramBuffer[PARAM_BUFFER_COUNT];
+     nsXPTCMiniVariant* dispatchParams = NULL;
+-    nsIInterfaceInfo* iface_info = NULL;
+     const nsXPTMethodInfo* info;
+     PRUint32 paramCount;
+     PRUint32 i;
+@@ -79,12 +79,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+ 
+     NS_ASSERTION(self,"no self");
+ 
+-    self->GetInterfaceInfo(&iface_info);
+-    NS_ASSERTION(iface_info,"no interface info");
+-    if (! iface_info)
+-        return NS_ERROR_UNEXPECTED;
+-
+-    iface_info->GetMethodInfo(PRUint16(methodIndex), &info);
++    self->mEntry->GetMethodInfo(PRUint16(methodIndex), &info);
+     NS_ASSERTION(info,"no method info");
+     if (! info)
+         return NS_ERROR_UNEXPECTED;
+@@ -119,8 +114,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
                  if ((PRUint32) ap & 4) ap++; // doubles are 8-byte aligned on stack
                  dp->val.d = *(double*) ap;
                  ap += 2;
@@ -14,7 +43,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd
              }
              continue;
          }
-@@ -130,8 +132,10 @@
+@@ -130,8 +127,10 @@ PrepareAndDispatch(nsXPTCStubBase* self,
              else {
                  dp->val.f = *(float*) ap;
  		ap += 1;
@@ -25,7 +54,20 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd
              }
              continue;
          }
-@@ -195,7 +199,9 @@
+@@ -179,9 +178,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
+         }
+     }
+ 
+-    result = self->CallMethod((PRUint16) methodIndex, info, dispatchParams);
+-
+-    NS_RELEASE(iface_info);
++    result = self->mOuter->CallMethod((PRUint16) methodIndex,
++                                      info,
++                                      dispatchParams);
+ 
+     if (dispatchParams != paramBuffer)
+         delete [] dispatchParams;
+@@ -195,7 +194,9 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  // however, it's quick, dirty, and'll break when the ABI changes on
  // us, which is what we want ;-).
  
@@ -36,7 +78,7 @@ diff -ruN ../Orig/mozilla/xpcom/reflect/xptcall/src/md/unix/xptcstubs_ppc_netbsd
  __asm__ (                                                   \
          ".section \".text\" \n\t"                           \
          ".align 2 \n\t"                                     \
-@@ -206,6 +212,46 @@
+@@ -206,6 +207,46 @@ __asm__ (                               
  	"li     11,"#n" \n\t"                               \
  	"b      SharedStub@local \n"                        \
  );
