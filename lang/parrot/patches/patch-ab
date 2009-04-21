@@ -1,19 +1,36 @@
-$NetBSD: patch-ab,v 1.4 2009/03/25 23:01:48 he Exp $
+$NetBSD: patch-ab,v 1.4.2.1 2009/04/21 19:12:01 tron Exp $
 
-Handle a few ELF-related symbols named differently in NetBSD
-compared to Linux.
+The R_PPC_ADDR16{HI,LO} constants are named something else on
+NetBSD, and might be elsewhere.
+Also add workarounds for NetBSD/powerpc 3.x, which has some
+constants defined as enums.
 
 --- src/exec_save.c.orig	2009-03-08 21:32:43.000000000 +0100
-+++ src/exec_save.c
-@@ -30,6 +30,11 @@ static void save_int(FILE *fp, int i);
- static void save_short(FILE *fp, short s);
- static void save_struct(FILE *fp, void *sp, size_t size);
++++ src/exec_save.c	2009-04-19 12:55:25.000000000 +0200
+@@ -150,6 +150,26 @@
+ #    include <elf.h>
+ #  endif
  
-+#if defined(PARROT_PPC) && defined(__NetBSD__)
-+#define	R_PPC_ADDR16_HI	R_PPC_16_HI
-+#define	R_PPC_ADDR16_LO	R_PPC_16_LO
-+#endif /* PARROT_PPC && __NetBSD__ */
++#  if defined(PARROT_PPC)
++#    if !defined(R_PPC_ADDR16_HI) && !defined(R_PPC_ADDR16_LO) && \
++         defined(R_PPC_16_HI) && defined(R_PPC_16_LO)
++#      define	R_PPC_ADDR16_HI	R_PPC_16_HI
++#      define	R_PPC_ADDR16_LO	R_PPC_16_LO
++#    endif
++     /*
++      * NetBSD/powerpc 3.x and OpenBSD/powerpc doesn't define these constants,
++      * but instead has them as enums, so add some workarounds for those.
++      */
++#    if !defined(R_PPC_ADDR16_HI) && !defined(R_PPC_ADDR16_LO) && \
++         (defined(__NetBSD__) || defined(__OpenBSD__))
++#      define	R_PPC_ADDR16_HI RELOC_16_HI
++#      define	R_PPC_ADDR16_LO RELOC_16_LO
++#    endif
++#    if !defined(R_PPC_REL24) && (defined(__NetBSD__) || defined(__OpenBSD__))
++#      define	R_PPC_REL24	RELOC_REL24
++#    endif
++#  endif /* PARROT_PPC */
 +
- #ifdef EXEC_A_OUT
- 
- #  include <a.out.h>
+ /* Add a section to the file
+  *
+  * n = Name
