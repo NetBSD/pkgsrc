@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1479 2009/04/22 04:55:01 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.1480 2009/04/22 05:46:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2027,3 +2027,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Moose to 0.75 [seb 2009-04-21]
 	Updated net/djbdns to 1.05nb9 [schmonz 2009-04-22]
 	Updated pkgtools/url2pkg to 2.9 [schmonz 2009-04-22]
+	Updated devel/p5-Data-Dump-Streamer to 2.09 [seb 2009-04-22]
