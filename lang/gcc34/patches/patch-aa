@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/04/22 18:59:54 hasso Exp $
+
+--- boehm-gc/include/private/gcconfig.h.orig	2009-04-08 14:54:58 +0300
++++ boehm-gc/include/private/gcconfig.h	2009-04-08 14:55:38 +0300
+@@ -55,7 +55,7 @@
+ # endif
+ 
+ /* And one for FreeBSD: */
+-# if defined(__FreeBSD__)
++# if defined(__FreeBSD__) || defined(__DragonFly__)
+ #    define FREEBSD
+ # endif
+ 
