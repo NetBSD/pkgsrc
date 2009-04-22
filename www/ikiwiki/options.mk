@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/04/21 16:34:43 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2009/04/22 02:33:06 schmonz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ikiwiki
 PKG_SUPPORTED_OPTIONS=		ikiwiki-amazon-s3 ikiwiki-search
@@ -10,6 +10,7 @@ PKG_OPTIONS_LEGACY_OPTS+=	amazon_s3:ikiwiki-amazon-s3
 .if !empty(PKG_OPTIONS:Mikiwiki-search)
 DEPENDS+=	p5-Search-Xapian-[0-9]*:../../textproc/p5-Search-Xapian
 DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
+DEPENDS+=	xapian-omega-[0-9]*:../../textproc/xapian-omega
 .endif
 
 .if !empty(PKG_OPTIONS:Mikiwiki-amazon-s3)
@@ -25,6 +26,8 @@ DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 REPLACE_PYTHON+=plugins/proxy.py plugins/rst
 DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
 .include "../../lang/python/application.mk"
+.else
+CHECK_INTERPRETER_SKIP+=	lib/ikiwiki/plugins/*
 .endif
 
 .if !empty(PKG_OPTIONS:Msvn)
