@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1488 2009/04/22 13:00:50 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1489 2009/04/22 16:11:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2036,3 +2036,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-B-Hooks-EndOfScope to 0.08 [sno 2009-04-22]
 	Updated net/ruby-netaddr to 1.5.0 [seb 2009-04-22]
 	Updated mail/milter-greylist to 4.2.2 [tron 2009-04-22]
+	Updated devel/p5-ex-lib to 0.06 [seb 2009-04-22]
