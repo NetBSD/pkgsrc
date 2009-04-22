@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:50 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/22 05:45:26 seb Exp $
 #
 
-DISTNAME=		Data-Dump-Streamer-2.08-40
-PKGNAME=		p5-${DISTNAME:C/-([0-9]*)$/.\1/}
-PKGREVISION=		1
+DISTNAME=		Data-Dump-Streamer-2.09
+PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Data/}
 
