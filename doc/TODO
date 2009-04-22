@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8056 2009/04/22 05:09:57 taca Exp $
+$NetBSD: TODO,v 1.8057 2009/04/22 11:44:08 seb Exp $
 
 Suggested new packages
 ======================
@@ -1211,7 +1211,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-mocha-0.9.4
 	o ruby-mysql-2.7.7 [or 2.8?]
 	o ruby-net-ssh-1.1.4
-	o ruby-netaddr-1.5.0
 	o ruby-parsetree-3.0.3
 	o ruby-postgres-pr-0.5.0
 	o ruby-racc-1.4.6
