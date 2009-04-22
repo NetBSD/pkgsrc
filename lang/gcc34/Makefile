@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/10/25 21:04:22 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2009/04/22 18:59:54 hasso Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -89,6 +89,12 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		ICONVPREFIX=${BUILDLINK_PREFIX.iconv}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
+
+# FIXME Because gcc ignores rpath for some reason, it breaks on DragonFly -
+# binaries are linked against libintl. Disabling NLS for now.
+.if ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-nls
+.endif
 
 UNLIMIT_RESOURCES+=	datasize
 
@@ -194,6 +200,12 @@ pre-configure:
 		${CHMOD} +x $${filename}; \
 	done )
 .  endif
+.endif
+.if ${OPSYS} == "DragonFly"
+	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/gcc/config/dragonfly.h
+	${CP} ${FILESDIR}/dragonfly-spec.h ${WRKSRC}/gcc/config/dragonfly-spec.h
+	${CP} ${FILESDIR}/i386-dragonfly.h ${WRKSRC}/gcc/config/i386/dragonfly.h
+	${CP} ${FILESDIR}/i386-dragonfly64.h ${WRKSRC}/gcc/config/i386/dragonfly64.h
 .endif
 
 do-configure:

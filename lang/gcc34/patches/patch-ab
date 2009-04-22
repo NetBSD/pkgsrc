@@ -1,0 +1,51 @@
+$NetBSD: patch-ab,v 1.1 2009/04/22 18:59:54 hasso Exp $
+
+--- ../gcc-3.4.6/gcc/config.gcc	2005-07-20 00:08:48 +0300
++++ gcc/config.gcc	2009-04-09 09:26:24 +0300
+@@ -451,6 +451,33 @@ case ${target} in
+     "" | yes | posix) thread_file='posix' ;;
+   esac
+   ;;
++*-*-dragonfly*)
++  gas=yes
++  gnu_ld=yes
++  extra_parts="crtbegin.o crtend.o crtbeginS.o crtendS.o"
++  case ${target} in
++    *-*-dragonfly1 | *-*-dragonfly[1].*)
++      tm_defines="${tm_defines} DFBSD_MAJOR=1" ;;
++    *-*-dragonfly2 | *-*-dragonfly[2].*)
++      tm_defines="${tm_defines} DFBSD_MAJOR=2" ;;
++    *-*-dragonfly3 | *-*-dragonfly[3].*)
++      tm_defines="${tm_defines} DFBSD_MAJOR=3" ;;
++    *-*-dragonfly4 | *-*-dragonfly[4].*)
++      tm_defines="${tm_defines} DFBSD_MAJOR=4" ;;
++    *)
++      echo 'Please update *-*-dragonfly* in gcc/config.gcc'
++      exit 1
++      ;;
++  esac
++  tmake_file="t-slibgcc-elf-ver t-dragonfly"
++  case ${enable_threads} in
++    "" | yes | posix)
++      thread_file='posix'
++      tmake_file="${tmake_file} t-dragonfly-thread"
++      ;;
++  esac
++  dfbsd_tm_file="${dfbsd_tm_file} dragonfly-spec.h dragonfly.h"
++  ;;
+ *-*-linux*libc1* | *-*-linux*aout*)
+   # Avoid the generic linux case.
+   ;;
+@@ -964,6 +991,12 @@ i[34567]86-*-freebsd*)
+ x86_64-*-freebsd*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
+ 	;;
++i[34567]86-*-dragonfly*)
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${dfbsd_tm_file} i386/dragonfly.h"
++	;;
++x86_64-*-dragonfly*)
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${dfbsd_tm_file} i386/x86-64.h i386/dragonfly.h i386/dragonfly64.h"
++	;;
+ i[34567]86-*-netbsdelf*)
+ 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
+ 	;;
