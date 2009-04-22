@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1477 2009/04/21 18:57:12 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1478 2009/04/22 04:48:22 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2025,3 +2025,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/circos version 0.49 [schmonz 2009-04-21]
 	Updated devel/p5-Class-MOP to 0.82 [seb 2009-04-21]
 	Updated devel/p5-Moose to 0.75 [seb 2009-04-21]
+	Updated net/djbdns to 1.05nb9 [schmonz 2009-04-22]
