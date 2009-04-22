@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2009/04/02 18:34:17 tron Exp $
+# $NetBSD: Makefile,v 1.43 2009/04/22 13:00:36 tron Exp $
 
-DISTNAME=	milter-greylist-4.2
+DISTNAME=	milter-greylist-4.2.2
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail
+
+LICENSE=	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
