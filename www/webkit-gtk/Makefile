@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/15 19:35:19 snj Exp $
+# $NetBSD: Makefile,v 1.8 2009/04/22 12:36:46 hasso Exp $
 
 DISTNAME=	webkit-1.1.5
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
@@ -11,7 +11,7 @@ COMMENT=	GTK2 port of the WebKit browser engine
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison gmake perl:build pkg-config
+USE_TOOLS+=	bison gmake perl:build pkg-config msgfmt
 
 PKGCONFIG_OVERRIDE=	WebKit/gtk/webkit.pc.in
 
