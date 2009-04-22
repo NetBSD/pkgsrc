@@ -113,7 +113,9 @@ OOPPTTIIOONNSS
      ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess [--ssuu]
              Fetch a new pkg-vulnerabilities file, check the format and if --ss
              is given the signature.  If all checks are passed, write it to
-             pkgdb.
+             pkgdb.  If --uu is given, the fetch is conditional and the file
+             transfer is only done if the remote version is newer than the one
+             in pkgdb.
 
      llssaallll _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
 
