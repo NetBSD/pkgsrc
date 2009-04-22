@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1481 2009/04/22 06:39:34 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1482 2009/04/22 08:26:57 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2029,3 +2029,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/url2pkg to 2.9 [schmonz 2009-04-22]
 	Updated devel/p5-Data-Dump-Streamer to 2.09 [seb 2009-04-22]
 	Updated devel/p5-Devel-NYTProf to 2.09 [seb 2009-04-22]
+	Updated devel/p5-Module-Install to 0.85 [sno 2009-04-22]
