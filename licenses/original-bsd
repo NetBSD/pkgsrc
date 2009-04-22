@@ -1,6 +1,6 @@
-$NetBSD: original-bsd,v 1.1 2009/04/22 14:50:18 gdt Exp $
+$NetBSD: original-bsd,v 1.2 2009/04/22 16:24:18 wiz Exp $
 
-This is an example; packages setting LICENSE=modified-bsd of course
+This is an example; packages setting LICENSE=original-bsd of course
 have different copyright holders, but should have the same terms.
 This license is also called "4-clause BSD".
 
