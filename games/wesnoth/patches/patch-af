@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.3 2009/04/22 19:29:26 hasso Exp $
+
+--- src/preferences.cpp.orig	2009-04-13 06:03:51 +0300
++++ src/preferences.cpp	2009-04-13 06:04:17 +0300
+@@ -30,6 +30,7 @@
+ #include "serialization/parser.hpp"
+ 
+ #include <sys/stat.h> // for setting the permissions of the preferences file
++#include <unistd.h>
+ 
+ namespace {
+ 
