@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.25 2009/04/23 19:35:52 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.26 2009/04/23 19:38:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: plist.c,v 1.25 2009/04/23 19:35:52 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.26 2009/04/23 19:38:14 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -83,7 +83,6 @@ typedef struct cmd_t {
 static const cmd_t cmdv[] = {
 	{"cwd", PLIST_CWD, 1, 1},
 	{"src", PLIST_SRC, 1, 1},
-	{"cd", PLIST_CWD, 1, 1},
 	{"exec", PLIST_CMD, 1, 0},
 	{"unexec", PLIST_UNEXEC, 1, 0},
 	{"mode", PLIST_CHMOD, 1, 0},
