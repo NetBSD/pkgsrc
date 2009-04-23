@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/23 22:33:55 minskim Exp $
+share/texmf-dist/tex/latex/graphics/color.sty
+share/texmf-dist/tex/latex/graphics/dvipdf.def
+share/texmf-dist/tex/latex/graphics/dvips.def
+share/texmf-dist/tex/latex/graphics/dvipsnam.def
+share/texmf-dist/tex/latex/graphics/dvipsone.def
+share/texmf-dist/tex/latex/graphics/dviwin.def
+share/texmf-dist/tex/latex/graphics/emtex.def
+share/texmf-dist/tex/latex/graphics/epsfig.sty
+share/texmf-dist/tex/latex/graphics/graphics.sty
+share/texmf-dist/tex/latex/graphics/graphicx.sty
+share/texmf-dist/tex/latex/graphics/keyval.sty
+share/texmf-dist/tex/latex/graphics/lscape.sty
+share/texmf-dist/tex/latex/graphics/pctex32.def
+share/texmf-dist/tex/latex/graphics/pctexhp.def
+share/texmf-dist/tex/latex/graphics/pctexps.def
+share/texmf-dist/tex/latex/graphics/pctexwin.def
+share/texmf-dist/tex/latex/graphics/tcidvi.def
+share/texmf-dist/tex/latex/graphics/trig.sty
+share/texmf-dist/tex/latex/graphics/truetex.def
