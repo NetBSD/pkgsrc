@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.26 2009/04/23 19:34:04 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.27 2009/04/23 19:35:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: show.c,v 1.26 2009/04/23 19:34:04 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.27 2009/04/23 19:35:52 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -90,7 +90,6 @@ static const show_t showv[] = {
 	{PLIST_SRC, "@src: %s", "\tSRC to: %s"},
 	{PLIST_DISPLAY, "@display %s", "\tInstall message file: %s"},
 	{PLIST_PKGDEP, "@pkgdep %s", "\tPackage depends on: %s"},
-	{PLIST_MTREE, "@mtree %s", "\tPackage mtree file: %s"},
 	{PLIST_DIR_RM, "@dirrm %s", "\tDeinstall directory remove: %s"},
 	{PLIST_OPTION, "@option %s", "\tPackage has option: %s"},
 	{PLIST_PKGCFL, "@pkgcfl %s", "\tPackage conflicts with: %s"},
@@ -189,7 +188,6 @@ show_plist(const char *title, package_t *plist, pl_ent_t type)
 			case PLIST_NAME:
 			case PLIST_DISPLAY:
 			case PLIST_PKGDEP:
-			case PLIST_MTREE:
 			case PLIST_DIR_RM:
 			case PLIST_OPTION:
 			case PLIST_PKGCFL:
