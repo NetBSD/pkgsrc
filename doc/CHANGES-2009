@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1501 2009/04/23 20:11:31 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1502 2009/04/23 21:38:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/freeradius2 to 2.1.4 [adam 2009-04-23]
 	Added print/tex-pdftex-def version 0.04l [minskim 2009-04-23]
 	Updated devel/p5-Mouse to 0.22 [seb 2009-04-23]
+	Updated pkgtools/rpm2pkg to 2.2 [tron 2009-04-23]
