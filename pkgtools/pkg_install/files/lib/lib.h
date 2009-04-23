@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.50 2009/03/08 14:50:37 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.51 2009/04/23 19:34:04 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -167,10 +167,9 @@ typedef enum pl_ent_t {
 	PLIST_PKGDEP,		/* 12 */
 	PLIST_MTREE,		/* 13 */
 	PLIST_DIR_RM,		/* 14 */
-	PLIST_IGNORE_INST,	/* 15 */
-	PLIST_OPTION,		/* 16 */
-	PLIST_PKGCFL,		/* 17 */
-	PLIST_BLDDEP		/* 18 */
+	PLIST_OPTION,		/* 15 */
+	PLIST_PKGCFL,		/* 16 */
+	PLIST_BLDDEP		/* 17 */
 }       pl_ent_t;
 
 /* Enumerated constants for build info */
