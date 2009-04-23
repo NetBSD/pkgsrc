@@ -1,0 +1,32 @@
+--- lib/krb5/asn.1/asn1buf.c.orig	2009-04-17 16:07:27.348357800 -0500
++++ lib/krb5/asn.1/asn1buf.c	2009-04-17 16:23:10.726869700 -0500
+@@ -78,11 +78,11 @@
+ 
+ asn1_error_code asn1buf_imbed(asn1buf *subbuf, const asn1buf *buf, const unsigned int length, const int indef)
+ {
++  if (buf->next > buf->bound + 1) return ASN1_OVERRUN;
+   subbuf->base = subbuf->next = buf->next;
+   if (!indef) {
++      if (length > (size_t)(buf->bound + 1 - buf->next)) return ASN1_OVERRUN;
+       subbuf->bound = subbuf->base + length - 1;
+-      if (subbuf->bound > buf->bound)
+-	  return ASN1_OVERRUN;
+   } else /* constructed indefinite */
+       subbuf->bound = buf->bound;
+   return 0;
+@@ -200,6 +200,7 @@
+ {
+   int i;
+ 
++  if (buf->next > buf->bound + 1) return ASN1_OVERRUN;
+   if (len > buf->bound + 1 - buf->next) return ASN1_OVERRUN;
+   if (len == 0) {
+       *s = 0;
+@@ -218,6 +219,7 @@
+ {
+   int i;
+ 
++  if (buf->next > buf->bound + 1) return ASN1_OVERRUN;
+   if (len > buf->bound + 1 - buf->next) return ASN1_OVERRUN;
+   if (len == 0) {
+       *s = 0;
