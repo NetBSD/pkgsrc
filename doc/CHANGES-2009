@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1496 2009/04/23 08:39:01 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1497 2009/04/23 10:48:03 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2044,3 +2044,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-prefork to 1.03 [sno 2009-04-23]
 	Updated devel/p5-POE to 1.005 [sno 2009-04-23]
 	Updated x11/pixman to 0.15.2 [sno 2009-04-23]
+	Updated devel/mantis to 1.1.7 [gavan 2009-04-23]
