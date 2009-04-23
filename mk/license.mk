@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.12 2009/04/08 14:47:27 wiz Exp $
+# $NetBSD: license.mk,v 1.13 2009/04/23 12:06:05 gdt Exp $
 #
 # Note: This file is in draft state and not yet included in default
 # pkgsrc operations.
@@ -89,7 +89,7 @@
 
 DEFAULT_ACCEPTABLE_LICENSES= \
 	public-domain \
-	gnu-gpl-v2 gnu-lgpl-v2 \
+	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
 	original-bsd modified-bsd \
 	x11 \
