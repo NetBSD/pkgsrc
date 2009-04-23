@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/23 23:50:46 minskim Exp $
+share/texmf-dist/doc/latex/exam/README
+share/texmf-dist/doc/latex/exam/exam-${PKGVERSION}.md5
+share/texmf-dist/doc/latex/exam/examdoc.pdf
+share/texmf-dist/doc/latex/exam/examdoc.tex
