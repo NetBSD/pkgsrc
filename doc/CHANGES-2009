@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1493 2009/04/23 07:09:43 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1494 2009/04/23 07:13:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBD-SQLite to 1.23 [sno 2009-04-23]
 	Updated devel/p5-Class-Inspector to 1.24 [sno 2009-04-23]
 	Updated archivers/p5-Archive-Tar to 1.48 [sno 2009-04-23]
+	Updated devel/p5-prefork to 1.03 [sno 2009-04-23]
