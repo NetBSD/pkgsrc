@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1497 2009/04/23 10:48:03 gavan Exp $
+$NetBSD: CHANGES-2009,v 1.1498 2009/04/23 13:18:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2045,3 +2045,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-POE to 1.005 [sno 2009-04-23]
 	Updated x11/pixman to 0.15.2 [sno 2009-04-23]
 	Updated devel/mantis to 1.1.7 [gavan 2009-04-23]
+	Updated games/wormux to 0.8.3 [adam 2009-04-23]
