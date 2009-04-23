@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.24 2009/04/23 19:34:04 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.25 2009/04/23 19:35:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: plist.c,v 1.24 2009/04/23 19:34:04 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.25 2009/04/23 19:35:52 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -95,7 +95,6 @@ static const cmd_t cmdv[] = {
 	{"display", PLIST_DISPLAY, 1, 0},
 	{"pkgdep", PLIST_PKGDEP, 1, 0},
 	{"pkgcfl", PLIST_PKGCFL, 1, 0},
-	{"mtree", PLIST_MTREE, 1, 0},
 	{"dirrm", PLIST_DIR_RM, 1, 0},
 	{"option", PLIST_OPTION, 1, 0},
 	{"blddep", PLIST_BLDDEP, 1, 0},
