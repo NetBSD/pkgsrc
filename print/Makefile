@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2009/04/18 05:27:56 minskim Exp $
+# $NetBSD: Makefile,v 1.227 2009/04/23 19:26:22 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -207,6 +207,7 @@ SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-ocrb
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-pdftex
+SUBDIR+=	tex-pdftex-def
 SUBDIR+=	tex-pgf
 SUBDIR+=	tex-plain
 SUBDIR+=	tex-prosper
