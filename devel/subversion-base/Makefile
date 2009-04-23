@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/04/16 21:42:42 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/04/23 18:03:42 minskim Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 PKGREVISION=	2
@@ -6,6 +6,10 @@ COMMENT=	Version control system, base programs and libraries
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# on at least solaris, configure fails to figure out
+# that you need -lintl
+BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/subversion/Makefile.common"
 
@@ -18,10 +22,6 @@ APU_OPTIONS=		PKG_BUILD_OPTIONS.apr
 BUILD_DEFS+=		${APU_OPTIONS}
 
 USE_TOOLS+=		msgfmt
-
-# on at least solaris, configure fails to figure out
-# that you need -lintl
-BROKEN_GETTEXT_DETECTION=	yes
 
 CONFIGURE_ARGS+=	--disable-neon-version-check
 CONFIGURE_ARGS+=	--without-apache
