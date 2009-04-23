@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1504 2009/04/23 22:38:43 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1505 2009/04/23 23:52:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2053,3 +2053,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Path-Dispatcher version 0.12 [seb 2009-04-23]
 	Added print/tex-graphics version 1.0o [minskim 2009-04-23]
 	Added print/tex-graphics-doc version 1.0o [minskim 2009-04-23]
+	Added print/tex-exam version 2.3 [minskim 2009-04-23]
+	Added print/tex-exam-doc version 2.3 [minskim 2009-04-23]
