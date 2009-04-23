@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.49 2009/04/23 19:34:04 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.50 2009/04/23 19:35:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.49 2009/04/23 19:34:04 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.50 2009/04/23 19:35:52 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
@@ -197,7 +197,6 @@ add_pkg(const char *pkgdir, void *vp)
 		case PLIST_UNEXEC:
 		case PLIST_DISPLAY:
 		case PLIST_PKGDEP:
-		case PLIST_MTREE:
 		case PLIST_DIR_RM:
 		case PLIST_OPTION:
 		case PLIST_PKGCFL:
