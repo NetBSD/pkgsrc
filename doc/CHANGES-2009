@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1498 2009/04/23 13:18:20 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1499 2009/04/23 18:30:32 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2046,3 +2046,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/pixman to 0.15.2 [sno 2009-04-23]
 	Updated devel/mantis to 1.1.7 [gavan 2009-04-23]
 	Updated games/wormux to 0.8.3 [adam 2009-04-23]
+	Updated net/freeradius2 to 2.1.4 [adam 2009-04-23]
