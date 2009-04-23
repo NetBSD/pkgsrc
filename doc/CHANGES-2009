@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1500 2009/04/23 19:26:22 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1501 2009/04/23 20:11:31 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2048,3 +2048,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/wormux to 0.8.3 [adam 2009-04-23]
 	Updated net/freeradius2 to 2.1.4 [adam 2009-04-23]
 	Added print/tex-pdftex-def version 0.04l [minskim 2009-04-23]
+	Updated devel/p5-Mouse to 0.22 [seb 2009-04-23]
