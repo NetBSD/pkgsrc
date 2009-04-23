@@ -1,0 +1,2 @@
+The file pdftex.def provides device-specific definitions for color and
+graphics support when running pdf(La)TeX.
