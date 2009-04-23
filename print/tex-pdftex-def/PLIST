@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/23 19:25:03 minskim Exp $
+share/texmf-dist/tex/latex/pdftex-def/pdftex.def
