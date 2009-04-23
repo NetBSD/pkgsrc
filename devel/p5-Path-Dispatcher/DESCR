@@ -1,0 +1,8 @@
+The Perl 5 module Path::Dispatcher is similar to the module
+Jifty::Dispatcher but its use is for the command line.
+
+The basic operation is that of dispatch. Dispatch takes a path and
+a list of rules, and it returns a list of matches. From there you
+can "run" the rules that matched. These phases are distinct so that,
+if you need to, you can inspect which rules were matched without
+ever running their codeblocks.
