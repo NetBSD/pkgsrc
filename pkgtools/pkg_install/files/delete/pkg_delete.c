@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.4 2009/03/30 19:26:39 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.5 2009/04/23 22:13:00 joerg Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -669,6 +669,12 @@ remove_pkg(const char *pkg)
 	if ((p = find_plist(&plist, PLIST_CWD)) == NULL) {
 		warnx("Package `%s' doesn't have a prefix", pkg);
 		return 1;
+	}
+
+	if (find_plist(&plist, PLIST_NAME) == NULL) {
+		/* Cheat a bit to allow removal of such bad packages. */
+		warnx("Package `%s' doesn't have a name", pkg);
+		add_plist_top(&plist, PLIST_NAME, pkg);
 	}
 
 	setenv(PKG_PREFIX_VNAME, p->name, 1);
