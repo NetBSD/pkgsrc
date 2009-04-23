@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2009/04/23 19:43:06 schwarz Exp $
+
+--- Drivers/Postgre7.1/md5.h.orig	2009-04-20 23:47:18.000000000 +0200
++++ Drivers/Postgre7.1/md5.h	2009-04-20 23:48:30.000000000 +0200
+@@ -13,6 +13,9 @@
+ 
+ #include <stdlib.h>
+ #include <string.h>
++#ifdef __APPLE__
++#include <stdbool.h>
++#endif
+ 
+ #define MD5_PASSWD_LEN	35
+ 
