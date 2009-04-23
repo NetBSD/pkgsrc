@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/19 22:49:18 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/04/23 18:26:05 adam Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -8,6 +8,9 @@ bin/radsqlrelay
 bin/radtest
 bin/radwho
 bin/radzap
+${PLIST.dbm}bin/rlm_dbm_cat
+${PLIST.dbm}bin/rlm_dbm_parser
+bin/rlm_ippool_tool
 bin/smbencrypt
 include/freeradius/hash.h
 include/freeradius/ident.h
@@ -42,6 +45,10 @@ lib/rlm_checkval-${RADVER}.la
 lib/rlm_checkval.la
 lib/rlm_copy_packet-${RADVER}.la
 lib/rlm_copy_packet.la
+${PLIST.gdbm}lib/rlm_counter-${RADVER}.la
+${PLIST.gdbm}lib/rlm_counter.la
+${PLIST.dbm}lib/rlm_dbm-${RADVER}.la
+${PLIST.dbm}lib/rlm_dbm.la
 lib/rlm_detail-${RADVER}.la
 lib/rlm_detail.la
 lib/rlm_digest-${RADVER}.la
@@ -76,18 +83,30 @@ lib/rlm_fastusers-${RADVER}.la
 lib/rlm_fastusers.la
 lib/rlm_files-${RADVER}.la
 lib/rlm_files.la
+lib/rlm_ippool-${RADVER}.la
+lib/rlm_ippool.la
+${PLIST.kerberos}lib/rlm_krb5-${RADVER}.la
+${PLIST.kerberos}lib/rlm_krb5.la
+${PLIST.ldap}lib/rlm_ldap-${RADVER}.la
+${PLIST.ldap}lib/rlm_ldap.la
 lib/rlm_linelog-${RADVER}.la
 lib/rlm_linelog.la
 lib/rlm_logintime-${RADVER}.la
 lib/rlm_logintime.la
 lib/rlm_mschap-${RADVER}.la
 lib/rlm_mschap.la
+${PLIST.mysql}lib/rlm_sql_mysql-${RADVER}.la
+${PLIST.mysql}lib/rlm_sql_mysql.la
 lib/rlm_otp-${RADVER}.la
 lib/rlm_otp.la
+${PLIST.pam}lib/rlm_pam-${RADVER}.la
+${PLIST.pam}lib/rlm_pam.la
 lib/rlm_pap-${RADVER}.la
 lib/rlm_pap.la
 lib/rlm_passwd-${RADVER}.la
 lib/rlm_passwd.la
+${PLIST.pgsql}lib/rlm_sql_postgresql-${RADVER}.la
+${PLIST.pgsql}lib/rlm_sql_postgresql.la
 lib/rlm_policy-${RADVER}.la
 lib/rlm_policy.la
 lib/rlm_preprocess-${RADVER}.la
@@ -98,8 +117,12 @@ lib/rlm_realm-${RADVER}.la
 lib/rlm_realm.la
 lib/rlm_sql-${RADVER}.la
 lib/rlm_sql.la
+${PLIST.iodbc}lib/rlm_sql_iodbc-${RADVER}.la
+${PLIST.iodbc}lib/rlm_sql_iodbc.la
 lib/rlm_sql_log-${RADVER}.la
 lib/rlm_sql_log.la
+${PLIST.unixodbc}lib/rlm_sql_unixodbc-${RADVER}.la
+${PLIST.unixodbc}lib/rlm_sql_unixodbc.la
 lib/rlm_sqlcounter-${RADVER}.la
 lib/rlm_sqlcounter.la
 lib/rlm_sqlippool-${RADVER}.la
@@ -137,12 +160,15 @@ man/man5/rlm_sql_log.5
 man/man5/rlm_unix.5
 man/man5/unlang.5
 man/man5/users.5
+man/man8/raddebug.8
 man/man8/radiusd.8
 man/man8/radmin.8
 man/man8/radrelay.8
 man/man8/radsqlrelay.8
 man/man8/radwatch.8
+man/man8/rlm_ippool_tool.8
 sbin/checkrad
+sbin/raddebug
 sbin/radiusd
 sbin/radmin
 sbin/radwatch
@@ -185,7 +211,6 @@ share/doc/freeradius/rfc/draft-kamath-pppext-eap-mschapv2-00.txt
 share/doc/freeradius/rfc/draft-sterman-aaa-sip-00.txt
 share/doc/freeradius/rfc/leap.txt
 share/doc/freeradius/rfc/pppext-eap-sim-12.txt
-share/doc/freeradius/rfc/rfc5281.txt
 share/doc/freeradius/rfc/rfc1157.txt
 share/doc/freeradius/rfc/rfc1227.txt
 share/doc/freeradius/rfc/rfc1448.txt
@@ -233,6 +258,7 @@ share/doc/freeradius/rfc/rfc5080.txt
 share/doc/freeradius/rfc/rfc5090.txt
 share/doc/freeradius/rfc/rfc5176.txt
 share/doc/freeradius/rfc/rfc5247.txt
+share/doc/freeradius/rfc/rfc5281.txt
 share/doc/freeradius/rlm_dbm
 share/doc/freeradius/rlm_eap
 share/doc/freeradius/rlm_expiration
@@ -271,7 +297,48 @@ share/examples/freeradius/experimental.conf
 share/examples/freeradius/hints
 share/examples/freeradius/huntgroups
 share/examples/freeradius/ldap.attrmap
-share/examples/freeradius/otp.conf
+share/examples/freeradius/modules/acct_unique
+share/examples/freeradius/modules/always
+share/examples/freeradius/modules/attr_filter
+share/examples/freeradius/modules/attr_rewrite
+share/examples/freeradius/modules/chap
+share/examples/freeradius/modules/checkval
+share/examples/freeradius/modules/counter
+share/examples/freeradius/modules/detail
+share/examples/freeradius/modules/detail.example.com
+share/examples/freeradius/modules/detail.log
+share/examples/freeradius/modules/digest
+share/examples/freeradius/modules/echo
+share/examples/freeradius/modules/etc_group
+share/examples/freeradius/modules/exec
+share/examples/freeradius/modules/expiration
+share/examples/freeradius/modules/expr
+share/examples/freeradius/modules/files
+share/examples/freeradius/modules/inner-eap
+share/examples/freeradius/modules/ippool
+share/examples/freeradius/modules/krb5
+share/examples/freeradius/modules/ldap
+share/examples/freeradius/modules/linelog
+share/examples/freeradius/modules/logintime
+share/examples/freeradius/modules/mac2ip
+share/examples/freeradius/modules/mac2vlan
+share/examples/freeradius/modules/mschap
+share/examples/freeradius/modules/otp
+share/examples/freeradius/modules/pam
+share/examples/freeradius/modules/pap
+share/examples/freeradius/modules/passwd
+share/examples/freeradius/modules/perl
+share/examples/freeradius/modules/policy
+share/examples/freeradius/modules/preprocess
+share/examples/freeradius/modules/radutmp
+share/examples/freeradius/modules/realm
+share/examples/freeradius/modules/smbpasswd
+share/examples/freeradius/modules/smsotp
+share/examples/freeradius/modules/sql_log
+share/examples/freeradius/modules/sqlcounter_expire_on_login
+share/examples/freeradius/modules/sradutmp
+share/examples/freeradius/modules/unix
+share/examples/freeradius/modules/wimax
 share/examples/freeradius/policy.conf
 share/examples/freeradius/policy.txt
 share/examples/freeradius/preproxy_users
@@ -279,13 +346,18 @@ share/examples/freeradius/proxy.conf
 share/examples/freeradius/radiusd.conf
 share/examples/freeradius/sites-available/README
 share/examples/freeradius/sites-available/buffered-sql
+share/examples/freeradius/sites-available/control-socket
 share/examples/freeradius/sites-available/copy-acct-to-home-server
+share/examples/freeradius/sites-available/decoupled-accounting
 share/examples/freeradius/sites-available/default
 share/examples/freeradius/sites-available/dhcp
+share/examples/freeradius/sites-available/dynamic-clients
 share/examples/freeradius/sites-available/example
 share/examples/freeradius/sites-available/inner-tunnel
+share/examples/freeradius/sites-available/originate-coa
 share/examples/freeradius/sites-available/proxy-inner-tunnel
 share/examples/freeradius/sites-available/robust-proxy-accounting
+share/examples/freeradius/sites-available/status
 share/examples/freeradius/sites-available/virtual.example.com
 share/examples/freeradius/sites-available/vmps
 share/examples/freeradius/sql.conf
@@ -298,8 +370,12 @@ share/examples/freeradius/sql/mysql/ippool.conf
 share/examples/freeradius/sql/mysql/ippool.sql
 share/examples/freeradius/sql/mysql/nas.sql
 share/examples/freeradius/sql/mysql/schema.sql
+share/examples/freeradius/sql/mysql/wimax.conf
+share/examples/freeradius/sql/mysql/wimax.sql
 share/examples/freeradius/sql/oracle/dialup.conf
+share/examples/freeradius/sql/oracle/ippool.conf
 share/examples/freeradius/sql/oracle/ippool.sql
+share/examples/freeradius/sql/oracle/msqlippool.txt
 share/examples/freeradius/sql/oracle/nas.sql
 share/examples/freeradius/sql/oracle/schema.sql
 share/examples/freeradius/sql/postgresql/admin.sql
@@ -315,7 +391,6 @@ share/examples/freeradius/sql/postgresql/voip-postpaid.conf
 share/examples/freeradius/sqlippool.conf
 share/examples/freeradius/templates.conf
 share/examples/freeradius/users
-share/examples/freeradius/vmpsd.conf.in
 share/examples/rc.d/radiusd
 share/freeradius/dictionary
 share/freeradius/dictionary.3com
@@ -359,6 +434,7 @@ share/freeradius/dictionary.fortinet
 share/freeradius/dictionary.foundry
 share/freeradius/dictionary.freeradius
 share/freeradius/dictionary.freeradius.internal
+share/freeradius/dictionary.freeswitch
 share/freeradius/dictionary.gandalf
 share/freeradius/dictionary.garderos
 share/freeradius/dictionary.gemtek
@@ -457,6 +533,7 @@ share/freeradius/dictionary.zyxel
 @dirrm share/examples/freeradius/sql/mssql
 @dirrm share/examples/freeradius/sql
 @dirrm share/examples/freeradius/sites-available
+@dirrm share/examples/freeradius/modules
 @dirrm share/examples/freeradius/certs/demoCA
 @dirrm share/examples/freeradius/certs
 @dirrm share/examples/freeradius
