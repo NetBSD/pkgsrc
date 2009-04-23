@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/19 22:49:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/23 18:26:05 adam Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -15,13 +15,11 @@ COMMENT=	Free RADIUS server implementation
 CONFLICTS+=		radiusd-cistron-[0-9]*
 CONFLICTS+=		freeradius<2.0
 USE_TOOLS+=		gmake perl:run
-GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_OLD_DES_API=	YES
 MAKE_JOBS_SAFE=		NO
 
 BUILD_DEFS=		VARBASE
-PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
 FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
 PLIST_SUBST+=		RADVER=${RADVER}
@@ -45,27 +43,21 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.3
+RADVER=			2.1.4
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
-CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--quiet
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
-CONFIGURE_ARGS+=	--disable-ltdl-install
+CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
 CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
-CONFIGURE_ARGS+=	--without-rlm_ippool
 CONFIGURE_ARGS+=	--without-rlm_smb
-CONFIGURE_ARGS+=	--without-rlm_sql_iodbc
 CONFIGURE_ARGS+=	--without-rlm_sql_oracle
 CONFIGURE_ARGS+=	--without-rlm_sql_unixodbc
-CONFIGURE_ARGS+=	--quiet
-#CONFIGURE_ARGS+=	--without-rlm_eap_peap
-#CONFIGURE_ARGS+=	--without-rlm_eap_sim
-#CONFIGURE_ARGS+=	--without-rlm_eap_tls
-#CONFIGURE_ARGS+=	--without-rlm_eap_ttls
 
 REPLACE_PERL=		scripts/radsqlrelay
 
@@ -73,7 +65,7 @@ SUBST_CLASSES=		make
 SUBST_STAGE.make=	post-patch
 SUBST_FILES.make=	src/modules/rlm_sql/drivers/rlm_sql_postgresql/Makefile.in
 SUBST_SED.make+=	-e "s|RLM_SQL_LIBS	=|RLM_SQL_LIBS	= \
-				-L${PREFIX}/lib|g"
+			-L${PREFIX}/lib|g"
 SUBST_MESSAGE.make=	Fixing Makefiles.
 
 SUBST_CLASSES+=		config
@@ -85,42 +77,51 @@ SUBST_MESSAGE.config=	Fixing configuration files.
 
 .include "options.mk"
 
-EGFILES=	certs/demoCA/cacert.pem certs/bootstrap certs/xpextensions \
-		certs/client.cnf certs/server.cnf certs/README certs/ca.cnf \
-		sql/mssql/dialup.conf sql/mssql/schema.sql \
-		sql/mysql/dialup.conf sql/mysql/nas.sql sql/mysql/ippool.conf \
-		sql/mysql/schema.sql sql/mysql/counter.conf \
-		sql/mysql/ippool.sql sql/oracle/dialup.conf sql/oracle/nas.sql \
-		sql/oracle/schema.sql sql/oracle/ippool.sql \
-		sql/postgresql/dialup.conf sql/postgresql/nas.sql \
-		sql/postgresql/voip-postpaid.conf sql/postgresql/ippool.conf \
-		sql/postgresql/schema.sql sql/postgresql/ippool.sql \
-		sql/postgresql/cisco_h323_db_schema.sql \
-		sql/postgresql/counter.conf sql/postgresql/admin.sql \
-		sql/postgresql/update_radacct_group_trigger.sql policy.txt \
-		experimental.conf radiusd.conf otp.conf policy.conf \
-		preproxy_users users vmpsd.conf.in acct_users \
-		ldap.attrmap clients.conf huntgroups sql.conf sqlippool.conf \
-		sites-available/inner-tunnel sites-available/example \
-		sites-available/buffered-sql sites-available/default \
-		sites-available/vmps sites-available/README \
-		sites-available/proxy-inner-tunnel \
-		sites-available/copy-acct-to-home-server attrs.pre-proxy \
-		sites-available/dhcp sites-available/robust-proxy-accounting \
-		sites-available/virtual.example.com sql/mysql/admin.sql \
-		eap.conf attrs.accounting_response hints attrs.access_reject \
-		templates.conf attrs proxy.conf dictionary
-
-EGDIRS=		certs certs/demoCA sql sql/mssql sql/mysql sql/oracle \
-		sql/postgresql sites-available
+EGFILES=acct_users attrs attrs.access_reject attrs.accounting_response \
+	attrs.pre-proxy certs/README certs/bootstrap certs/ca.cnf \
+	certs/client.cnf certs/demoCA/cacert.pem certs/server.cnf \
+	certs/xpextensions clients.conf dictionary eap.conf experimental.conf \
+	hints huntgroups ldap.attrmap modules/acct_unique modules/always \
+	modules/attr_filter modules/attr_rewrite modules/chap modules/checkval \
+	modules/counter modules/detail modules/detail.example.com \
+	modules/detail.log modules/digest modules/echo modules/etc_group \
+	modules/exec modules/expiration modules/expr modules/files \
+	modules/inner-eap modules/ippool modules/krb5 modules/ldap \
+	modules/linelog modules/logintime modules/mac2ip modules/mac2vlan \
+	modules/mschap modules/otp modules/pam modules/pap modules/passwd \
+	modules/perl modules/policy modules/preprocess modules/radutmp \
+	modules/realm modules/smbpasswd modules/smsotp modules/sql_log \
+	modules/sqlcounter_expire_on_login modules/sradutmp modules/unix \
+	modules/wimax policy.conf policy.txt preproxy_users proxy.conf \
+	radiusd.conf sites-available/README sites-available/buffered-sql \
+	sites-available/control-socket \
+	sites-available/copy-acct-to-home-server \
+	sites-available/decoupled-accounting sites-available/default \
+	sites-available/dhcp sites-available/dynamic-clients \
+	sites-available/example sites-available/inner-tunnel \
+	sites-available/originate-coa sites-available/proxy-inner-tunnel \
+	sites-available/robust-proxy-accounting sites-available/status \
+	sites-available/virtual.example.com sites-available/vmps sql.conf \
+	sql/mssql/dialup.conf sql/mssql/schema.sql sql/mysql/admin.sql \
+	sql/mysql/counter.conf sql/mysql/dialup.conf sql/mysql/ippool.conf \
+	sql/mysql/ippool.sql sql/mysql/nas.sql sql/mysql/schema.sql \
+	sql/mysql/wimax.conf sql/mysql/wimax.sql sql/oracle/dialup.conf \
+	sql/oracle/ippool.conf sql/oracle/ippool.sql sql/oracle/msqlippool.txt \
+	sql/oracle/nas.sql sql/oracle/schema.sql sql/postgresql/admin.sql \
+	sql/postgresql/cisco_h323_db_schema.sql sql/postgresql/counter.conf \
+	sql/postgresql/dialup.conf sql/postgresql/ippool.conf \
+	sql/postgresql/ippool.sql sql/postgresql/nas.sql \
+	sql/postgresql/schema.sql \
+	sql/postgresql/update_radacct_group_trigger.sql \
+	sql/postgresql/voip-postpaid.conf sqlippool.conf templates.conf users
+EGDIRS=	certs certs/demoCA modules sql sql/mssql sql/mysql sql/oracle \
+	sql/postgresql sites-available
 
 .for f in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f} \
 			${RADIUS_USER} ${RADIUS_GROUP} 0640
 .endfor
 
-.include "../../security/openssl/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "none"
@@ -138,38 +139,31 @@ SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}|g'
 .endif
 
-.if ${MACHINE_ARCH} == "amd64"
-CFLAGS+= -fPIC
-.endif
+# fix for wrong version number in freeradius-2.1.4
+post-patch:
+	${ECHO} ${RADVER} > ${WRKSRC}/VERSION
 
 post-build:
-	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
-	${CP} ${PKGDIR:Q}/MESSAGE ${WRKDIR:Q}/.MESSAGE_SRC
-
-.	if !empty(PKG_OPTIONS:Mpam)
-		${CP} ${PKGDIR}/MESSAGE.pam ${WRKDIR}/.MESSAGE_SRC.pam
-.	endif
+	${CP} ${PKGDIR}/MESSAGE ${WRKDIR}/.MESSAGE_SRC
+.if !empty(PKG_OPTIONS:Mpam)
+	${CP} ${PKGDIR}/MESSAGE.pam ${WRKDIR}/.MESSAGE_SRC.pam
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
-
-.	for d in ${EGDIRS}
-		${INSTALL_DATA_DIR} ${EGDIR}/${d}
-.	endfor
-
-.	for f in ${EGFILES}
-		${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
-.	endfor
-
+.for d in ${EGDIRS}
+	${INSTALL_DATA_DIR} ${EGDIR}/${d}
+	${MKDIR} ${PKG_SYSCONFDIR}/${d}
+.endfor
+.for f in ${EGFILES}
+	${INSTALL_DATA} ${WRKSRC}/raddb/${f} ${EGDIR}/${f}
+.endfor
 	${INSTALL_DATA} ${WRKSRC}/src/modules/rlm_perl/example.pl ${EGDIR}
-
-.	for d in ${EGDIRS}
-		${MKDIR} ${PKG_SYSCONFDIR}/${d}
-.	endfor
-
 	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs
 	${CHOWN} ${RADIUS_USER}:${RADIUS_GROUP} ${PKG_SYSCONFDIR}/certs/demoCA
 	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs
 	${CHMOD} 0750 ${PKG_SYSCONFDIR}/certs/demoCA
 
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
