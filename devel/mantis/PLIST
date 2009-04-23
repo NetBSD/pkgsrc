@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2008/06/21 15:17:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/04/23 10:45:21 gavan Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
 share/examples/mantis/mantis.conf
 share/examples/mantis/mantis_offline.php.sample
+share/mantis/.gitignore
 share/mantis/account_delete.php
 share/mantis/account_page.php
 share/mantis/account_prefs_inc.php
@@ -212,7 +213,6 @@ share/mantis/core/adodb/drivers/adodb-proxy.inc.php
 share/mantis/core/adodb/drivers/adodb-sapdb.inc.php
 share/mantis/core/adodb/drivers/adodb-sqlanywhere.inc.php
 share/mantis/core/adodb/drivers/adodb-sqlite.inc.php
-share/mantis/core/adodb/drivers/adodb-sqlite.inc.php.bak
 share/mantis/core/adodb/drivers/adodb-sqlitepo.inc.php
 share/mantis/core/adodb/drivers/adodb-sybase.inc.php
 share/mantis/core/adodb/drivers/adodb-sybase_ase.inc.php
@@ -292,6 +292,7 @@ share/mantis/core/bug_group_action_api.php
 share/mantis/core/bugnote_api.php
 share/mantis/core/category_api.php
 share/mantis/core/checkin.php
+share/mantis/core/checkincurl.php
 share/mantis/core/class.RSSBuilder.inc.php
 share/mantis/core/class.period.php
 share/mantis/core/class.urlmatch.php
