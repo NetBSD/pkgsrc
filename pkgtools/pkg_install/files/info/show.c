@@ -1,4 +1,4 @@
-/*	$NetBSD: show.c,v 1.25 2009/03/02 17:13:49 joerg Exp $	*/
+/*	$NetBSD: show.c,v 1.26 2009/04/23 19:34:04 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: show.c,v 1.25 2009/03/02 17:13:49 joerg Exp $");
+__RCSID("$NetBSD: show.c,v 1.26 2009/04/23 19:34:04 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -92,8 +92,6 @@ static const show_t showv[] = {
 	{PLIST_PKGDEP, "@pkgdep %s", "\tPackage depends on: %s"},
 	{PLIST_MTREE, "@mtree %s", "\tPackage mtree file: %s"},
 	{PLIST_DIR_RM, "@dirrm %s", "\tDeinstall directory remove: %s"},
-	{PLIST_IGNORE_INST, "@ignore_inst ??? doesn't belong here",
-	"\tIgnore next file installation directive (doesn't belong)"},
 	{PLIST_OPTION, "@option %s", "\tPackage has option: %s"},
 	{PLIST_PKGCFL, "@pkgcfl %s", "\tPackage conflicts with: %s"},
 	{PLIST_BLDDEP, "@blddep %s", "\tPackage depends exactly on: %s"},
@@ -181,10 +179,6 @@ show_plist(const char *title, package_t *plist, pl_ent_t type)
 				break;
 			case PLIST_IGNORE:
 				printf(Quiet ? showv[p->type].sh_quiet : showv[p->type].sh_verbose);
-				ign = TRUE;
-				break;
-			case PLIST_IGNORE_INST:
-				printf(Quiet ? showv[p->type].sh_quiet : showv[p->type].sh_verbose, p->name);
 				ign = TRUE;
 				break;
 			case PLIST_CWD:
