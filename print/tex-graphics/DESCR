@@ -1,0 +1,4 @@
+The primary LaTeX package for the support of the inclusion of graphics
+generally produced with other tools.  This package aims to give a
+consistent interface to including the file types that are understood
+by your printer driver.
