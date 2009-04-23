@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_create.1,v 1.17 2009/02/08 23:12:10 wiz Exp $
+.\" $NetBSD: pkg_create.1,v 1.18 2009/04/23 19:34:04 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -425,15 +425,6 @@ may trip someone up later.
 .It Cm @ignore
 Used internally to tell extraction to ignore the next file (don't
 copy it anywhere), as it's used for some special purpose.
-.It Cm @ignore_inst
-Similar to
-.Cm @ignore ,
-but the ignoring of the next file is delayed one evaluation cycle.
-This makes it possible to use this directive in the
-.Ar packinglist
-file, so you can pack a
-specialized datafile in with a distribution for your install script (or
-something) yet have the installer ignore it.
 .It Cm @name Ar name
 Set the name of the package.
 This is mandatory and is usually put at the top.
