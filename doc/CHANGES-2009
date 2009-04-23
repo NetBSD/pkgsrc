@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1492 2009/04/23 07:01:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1493 2009/04/23 07:09:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2040,3 +2040,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.9 [tnn 2009-04-22]
 	Updated databases/p5-DBD-SQLite to 1.23 [sno 2009-04-23]
 	Updated devel/p5-Class-Inspector to 1.24 [sno 2009-04-23]
+	Updated archivers/p5-Archive-Tar to 1.48 [sno 2009-04-23]
