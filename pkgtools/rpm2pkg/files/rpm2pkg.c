@@ -1,7 +1,7 @@
-/*	$NetBSD: rpm2pkg.c,v 1.6 2006/01/21 20:46:29 tron Exp $	*/
+/*	$NetBSD: rpm2pkg.c,v 1.7 2009/04/23 21:38:02 tron Exp $	*/
 
 /*-
- * Copyright (c) 2004 The NetBSD Foundation, Inc.
+ * Copyright (c) 2004-2009 The NetBSD Foundation, Inc.
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
@@ -15,9 +15,6 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. Neither the name of The NetBSD Foundation nor the names of its
- *    contributors may be used to endorse or promote products derived
- *    from this software without specific prior written permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
  * ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
@@ -128,10 +125,10 @@ typedef struct FileHandleStruct {
 } FileHandle;
 
 static int
-InitBuffer(void **Buffer, int *BufferSizePtr)
+InitBuffer(void **Buffer, size_t *BufferSizePtr)
 {
 	if (*Buffer == NULL) {
-		int	BufferSize;
+		size_t BufferSize;
 
 		BufferSize = sysconf(_SC_PAGESIZE) * 256;
 		while ((*Buffer = malloc(BufferSize)) == NULL) {
@@ -236,7 +233,7 @@ SkipAndAlign(FileHandle *fh, off_t Skip)
 		return FALSE;
 	} else {
 		static void	*Buffer = NULL;
-		static int	BufferSize = 0;
+		static size_t	BufferSize = 0;
 
 		if (!InitBuffer(&Buffer, &BufferSize))
 			return FALSE;
@@ -246,7 +243,8 @@ SkipAndAlign(FileHandle *fh, off_t Skip)
 			int	Chunk;
 
 			Length = NewPos - fh->fh_Pos;
-			Chunk = (Length > BufferSize) ? BufferSize : Length;
+			Chunk = (Length > (off_t)BufferSize) ?
+			    (off_t)BufferSize : Length;
 			if (!Read(fh, Buffer, Chunk))
 				return FALSE;
 		}
@@ -559,7 +557,7 @@ WriteFile(FileHandle *In, char *Name, mode_t Mode, unsigned long Length,
 	int		Out;
 	struct stat	Stat;
 	static void	*Buffer = NULL;
-	static int	BufferSize = 0;
+	static size_t	BufferSize = 0;
 
 	if ((lstat(Name, &Stat) == 0) &&
 	    (!S_ISREG(Stat.st_mode) || (unlink(Name) < 0))) {

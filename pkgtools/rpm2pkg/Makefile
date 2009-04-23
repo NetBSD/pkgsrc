@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2009/04/09 00:48:14 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2009/04/23 21:38:02 tron Exp $
 
-DISTNAME=	rpm2pkg-2.1.1
-PKGREVISION=	2
+DISTNAME=	rpm2pkg-2.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,6 +11,8 @@ COMMENT=	Convert RPM archives to NetBSD packages
 
 CONFLICTS+=	suse-base<=6.4
 
+LICENSE=	modified-bsd
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
@@ -20,10 +21,10 @@ CPPFLAGS+=	${BUILDLINK_CPPFLAGS.bzip2} ${BUILDLINK_CPPFLAGS.rpm} \
 		${BUILDLINK_CPPFLAGS.zlib}
 LIBS+=		-lrpm -lintl -lz -lbz2
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../mk/compiler.mk"
 
-.if (${CC} == gcc)
-CFLAGS+=	-Wall
+.if !empty(CC_VERSION:Mgcc-*)
+CFLAGS+=	-Wall -Wshadow -Wsign-compare -Wunused-value
 .endif
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
