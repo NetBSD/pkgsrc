@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1490 2009/04/22 18:18:04 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1491 2009/04/23 06:56:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/milter-greylist to 4.2.2 [tron 2009-04-22]
 	Updated devel/p5-ex-lib to 0.06 [seb 2009-04-22]
 	Updated www/firefox3 to 3.0.9 [tnn 2009-04-22]
+	Updated databases/p5-DBD-SQLite to 1.23 [sno 2009-04-23]
