@@ -1,16 +1,16 @@
-$NetBSD: patch-ae,v 1.7 2008/09/06 20:09:16 bjs Exp $
+$NetBSD: patch-ae,v 1.8 2009/04/23 08:30:53 sno Exp $
 
---- configure.orig	2008-09-06 06:07:45.000000000 -0400
-+++ configure
-@@ -20218,6 +20218,7 @@ fi
+--- configure.orig	2009-02-06 22:33:17.000000000 +0000
++++ configure	2009-04-12 08:19:38.000000000 +0000
+@@ -20588,6 +20588,7 @@
  
  
  have_gcc4=no
 +if false; then
- { echo "$as_me:$LINENO: checking for -fvisibility" >&5
- echo $ECHO_N "checking for -fvisibility... $ECHO_C" >&6; }
+ { $as_echo "$as_me:$LINENO: checking for -fvisibility" >&5
+ $as_echo_n "checking for -fvisibility... " >&6; }
  cat >conftest.$ac_ext <<_ACEOF
-@@ -20255,7 +20256,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -20626,7 +20627,7 @@
  fi
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
