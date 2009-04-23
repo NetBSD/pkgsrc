@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.13 2009/04/23 12:06:05 gdt Exp $
+# $NetBSD: license.mk,v 1.14 2009/04/23 12:10:15 gdt Exp $
 #
 # Note: This file is in draft state and not yet included in default
 # pkgsrc operations.
@@ -39,12 +39,8 @@
 #	licensing (a choice) or where multiple licenses apply
 #	simultaneously.
 # 
-#	Every package should specify its license.  (Prior to July 2007,
+#	Every package should specify its license.  (Prior to early 2009,
 #	Open Source and Free software did not have license tags.)
-#
-# 	As of 2008-01, we are adding #LICENSE=; until this file is
-#	included from bsd.pkg.mk such tags will cause failure because
-#	DEFAULT_ACCEPTABLE_LICENSES is not yet implemented.
 #
 #	Licenses are collected in the licenses/ subdirectory of
 #	pkgsrc.  For open source license, we generally use the same
@@ -68,6 +64,11 @@
 #	ACCEPTABLE_LICENSES; the point is to have a default that very
 #	few people want to shrink.)
 #
+#	Licenses not formally approved as Free or Open Source may be
+#	added if they have terms that would obviously be approved if
+#	the effort were made.  Such license names will have a comment
+#	near them in the assignment to DEFAULT_ACCEPTABLE_LICENSES.
+#
 # === See also ===
 #
 #	../doc/TODO, section "Licenses of packages"
@@ -82,10 +83,6 @@
 # -license suffix, and nonfree licenses end in -license.
 
 # XXX open-font-license should perhaps be changed to open-font
-
-# XXX Surely we will encounter licenses that clearly are Free, but
-# which have not been formally approved.  These licenses, if added,
-# should be somehow marked.
 
 DEFAULT_ACCEPTABLE_LICENSES= \
 	public-domain \
