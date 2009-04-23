@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.26 2009/04/23 19:38:14 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: plist.c,v 1.26 2009/04/23 19:38:14 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -264,7 +264,7 @@ plist_cmd(const char *s, char **arg)
 
 	for (cmdp = cmdv; cmdp->c_s; ++cmdp) {
 		for (sp = s, cp = cmdp->c_s; *sp && *cp; ++cp, ++sp)
-			if (tolower((unsigned char)*sp) != *cp)
+			if (*sp != *cp)
 				break;
 		if (*cp == '\0')
 			break;
