@@ -1,0 +1,6 @@
+This is the VIA openchrome video driver for the modular Xorg server.
+
+The OpenChrome project is committed to providing and supporting fully free
+and Open Source drivers that take full advantage of the hardware
+acceleration of VIA chipsets featuring the VIA UniChrome, UniChrome Pro and
+Chrome9 integrated graphics processors.
