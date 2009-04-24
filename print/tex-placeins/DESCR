@@ -1,0 +1,3 @@
+This package defines a \FloatBarrier command, beyond which floats may
+not pass.  It is useful, for example, to ensure all floats for a
+section appear before the next \section command.
