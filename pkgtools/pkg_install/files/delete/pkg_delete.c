@@ -34,7 +34,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_delete.c,v 1.5 2009/04/23 22:13:00 joerg Exp $");
+__RCSID("$NetBSD: pkg_delete.c,v 1.6 2009/04/24 14:00:25 joerg Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -53,7 +53,6 @@ static const char *destdir;
 static const char *prefix;
 
 static int no_deinstall;
-static int prune_empty;
 static int find_by_filename;
 static int unregister_only;
 static int pkgdb_update_only;
@@ -64,7 +63,7 @@ static int delete_automatic_leaves;
 static void
 usage(void)
 {
-	fprintf(stderr, "usage: pkg_delete [-DdFfNnORrVv] [-K pkg_dbdir]"
+	fprintf(stderr, "usage: pkg_delete [-DFfNnORrVv] [-K pkg_dbdir]"
 	    " [-P destdir] [-p prefix] pkg-name ...\n");
 	exit(1);
 }
@@ -691,7 +690,7 @@ remove_pkg(const char *pkg)
 
 	if (Fake)
 		printf("Attempting to delete package `%s'\n", pkg);
-	else if (delete_package(FALSE, prune_empty, &plist, unregister_only,
+	else if (delete_package(FALSE, &plist, unregister_only,
 			        destdir) == FAIL) {
 		warnx("couldn't entirely delete package `%s'", pkg);
 		/*
@@ -774,16 +773,13 @@ main(int argc, char *argv[])
 	TAILQ_INIT(&sorted_pkgs);
 
 	setprogname(argv[0]);
-	while ((ch = getopt(argc, argv, "ADdFfNnORrVvK:P:p:")) != -1) {
+	while ((ch = getopt(argc, argv, "ADFfNnORrVvK:P:p:")) != -1) {
 		switch (ch) {
 		case 'A':
 			delete_automatic_leaves = 1;
 			break;
 		case 'D':
 			no_deinstall = 1;
-			break;
-		case 'd':
-			prune_empty = 1;
 			break;
 		case 'F':
 			find_by_filename = 1;
