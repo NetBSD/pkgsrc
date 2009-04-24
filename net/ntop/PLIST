@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/11/22 14:35:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/04/24 10:18:03 adam Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libcpacketPlugin.a
@@ -140,7 +140,7 @@ share/ntop/html/marchio_unipi_pant541_144.gif
 share/ntop/html/marker.gif
 share/ntop/html/marker.png
 share/ntop/html/minor.gif
-share/ntop/html/multihomed.gif
+share/ntop/html/multihomed.png
 share/ntop/html/multivlaned.gif
 share/ntop/html/nboxLogo.gif
 share/ntop/html/ntop.gif
@@ -411,7 +411,6 @@ share/ntop/html/zoom.js
 share/ntop/ntop/etter.finger.os.gz
 share/ntop/ntop/ntop-cert.pem
 share/ntop/ntop/oui.txt.gz
-share/ntop/ntop/p2c.opt.table.gz
 share/ntop/ntop/specialMAC.txt.gz
 share/ntop/perl/report.pl
 share/ntop/perl/report/basic.xml
