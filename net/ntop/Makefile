@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2009/01/09 08:53:26 dbj Exp $
+# $NetBSD: Makefile,v 1.51 2009/04/24 10:18:03 adam Exp $
 
-DISTNAME=	ntop-3.3.8
+DISTNAME=	ntop-3.3.9
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 
@@ -38,10 +38,8 @@ CONFIGURE_ARGS+=	--disable-mt
 .if ${OPSYS} == "Darwin"
 # This package uses "-flat_namespace -undefined suppress" and exports
 # symbols from the executable that get stripped unless we set this:
-
 INSTALL_UNSTRIPPED=	YES
 .endif
-
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
@@ -53,6 +51,7 @@ pre-configure:
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/gdchart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../net/GeoIP/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
