@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1514 2009/04/24 06:51:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1515 2009/04/24 06:57:12 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2066,3 +2066,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CGI-Ajax to 0.707 [sno 2009-04-24]
 	Updated www/p5-CGI-Session to 4.41 [sno 2009-04-24]
 	Updated www/p5-CGI-Simple to 1.109 [sno 2009-04-24]
+	Updated devel/p5-Term-ANSIColor to 2.00 [sno 2009-04-24]
