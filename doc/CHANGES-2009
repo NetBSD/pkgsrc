@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1532 2009/04/24 19:19:10 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1533 2009/04/24 19:23:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2090,3 +2090,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-bin-metafont version 2008.12778 [minskim 2009-04-24]
 	Added print/tex-tools version 2008.11806 [minskim 2009-04-24]
 	Added print/tex-tools-doc version 2008.11806 [minskim 2009-04-24]
+	Updated textproc/p5-XML-RSS to 1.44 [sno 2009-04-24]
