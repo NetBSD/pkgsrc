@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1528 2009/04/24 17:28:52 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1529 2009/04/24 17:36:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2084,3 +2084,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-xdvi to 22.84.14.12778 [minskim 2009-04-24]
 	Updated print/tex-bin-latex to 2008.12778 [minskim 2009-04-24]
 	Updated print/tex-bin-dvipsk to 2008.12497 [minskim 2009-04-24]
+	Updated databases/p5-DBIx-Class to 0.08100 [sno 2009-04-24]
