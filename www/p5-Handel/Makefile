@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/24 08:25:32 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/24 17:15:23 sno Exp $
 
 DISTNAME=	Handel-1.00011
 PKGNAME=	p5-${DISTNAME}
@@ -21,15 +21,15 @@ DEPENDS+=	p5-Clone>=0.28:../../devel/p5-Clone
 DEPENDS+=	p5-Locale-Maketext>=1.06:../../misc/p5-Locale-Maketext
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.1}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Module-Starter>=1.42:../../devel/p5-Module-Starter
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
 DEPENDS+=	p5-DateTime-Format-MySQL>=0:../../time/p5-DateTime-Format-MySQL
 DEPENDS+=	p5-Locale-Codes>=2.07:../../misc/p5-Locale-Codes
 DEPENDS+=	p5-Locale-Currency-Format>=1.22:../../finance/p5-Locale-Currency-Format
 DEPENDS+=	p5-FormValidator-Simple>=0.17:../../textproc/p5-FormValidator-Simple
 DEPENDS+=	p5-Finance-Currency-Convert-WebserviceX>=0.03:../../finance/p5-Finance-Currency-Convert-WebserviceX
-DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
-DEPENDS+=	p5-PathTools>=0:../../devel/p5-PathTools
+DEPENDS+=	{perl>=5.10,p5-NEXT>=0}:../../devel/p5-NEXT
+DEPENDS+=	{perl>=5.10,p5-PathTools>=0}:../../devel/p5-PathTools
 DEPENDS+=	p5-SQL-Translator>=0.08:../../databases/p5-SQL-Translator
 DEPENDS+=	p5-DBD-SQLite>=0:../../databases/p5-DBD-SQLite
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:01 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	Test-MockObject-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Tests remote URLs or local web files
 
 DEPENDS+=	p5-UNIVERSAL-can>=1.00:../../devel/p5-UNIVERSAL-can
 DEPENDS+=	p5-UNIVERSAL-isa>=0.02:../../devel/p5-UNIVERSAL-isa
-BUILD_DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+BUILD_DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn>=0:../../devel/p5-Test-Warn
 

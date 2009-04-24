@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/10 22:51:47 rhaen Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/24 17:15:23 sno Exp $
 
 DISTNAME=	Catalyst-Runtime-5.7015
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Body>=0.9:../../www/p5-HTTP-Body
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../www/p5-HTTP-Request-AsCGI
-DEPENDS+=	p5-Module-Pluggable>=3.01:../../devel/p5-Module-Pluggable
+DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.01}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils

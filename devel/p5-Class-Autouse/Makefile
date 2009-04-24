@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/10/19 19:17:48 he Exp $
+# $NetBSD: Makefile,v 1.15 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	Class-Autouse-1.29
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0.61:../../devel/p5-ExtUtils-AutoInstall
-DEPENDS+=	p5-Scalar-List-Utils>=1.19:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.19}:../../devel/p5-Scalar-List-Utils
 
 PERL5_PACKLIST=		auto/Class/Autouse/.packlist
 

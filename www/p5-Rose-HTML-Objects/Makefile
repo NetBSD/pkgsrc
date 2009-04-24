@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/13 00:02:22 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/24 17:15:23 sno Exp $
 
 DISTNAME=	Rose-HTML-Objects-0.601
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Email-Valid>=0:../../mail/p5-Email-Valid
 DEPENDS+=	p5-HTML-Parser>=0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Image-Size>=0:../../graphics/p5-Image-Size
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Rose-Object>=0.85.4:../../devel/p5-Rose-Object
 DEPENDS+=	p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
 DEPENDS+=	p5-Rose-URI>=0.021:../../www/p5-Rose-URI

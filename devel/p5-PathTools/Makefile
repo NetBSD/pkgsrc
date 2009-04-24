@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/02/22 18:09:24 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	PathTools-3.29
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Perl module for portably manipulating file specifications
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Scalar-List-Utils>=1.14:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.14}:../../devel/p5-Scalar-List-Utils
 
 CONFLICTS+=	p5-File-Spec-[0-9]*
 

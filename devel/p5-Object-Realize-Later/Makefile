@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/10/19 19:17:57 he Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	Object-Realize-Later-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Object-Realize-Later/
 COMMENT=	Delayed creation of objects
 
-DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 BUILD_DEPENDS+=	p5-Test-Pod>=1.00:../../devel/p5-Test-Pod
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
