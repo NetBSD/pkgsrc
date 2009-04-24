@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/28 17:01:05 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/24 17:15:21 sno Exp $
 
 DISTNAME=	Rose-DBx-Garden-Catalyst-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -31,11 +31,11 @@ DEPENDS+=	p5-Catalyst-View-TT>=0:../../www/p5-Catalyst-View-TT
 DEPENDS+=	p5-CatalystX-CRUD>=0:../../databases/p5-CatalystX-CRUD
 DEPENDS+=	p5-CatalystX-CRUD-Model-RDBO>=0.16:../../databases/p5-CatalystX-CRUD-Model-RDBO
 DEPENDS+=	p5-CatalystX-CRUD-Controller-RHTMLO>=0.10:../../www/p5-CatalystX-CRUD-Controller-RHTMLO
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 
 # For tests:
 BUILD_DEPENDS+=	sqlite3>=0:../../databases/sqlite3
-BUILD_DEPENDS+=	p5-IPC-Cmd>=0:../../devel/p5-IPC-Cmd
+BUILD_DEPENDS+=	{perl>5.10,p5-IPC-Cmd>=0}:../../devel/p5-IPC-Cmd
 
 SUBST_CLASSES+=	sqlite3
 SUBST_MESSAGE.sqlite3=	Fixing sqlite3-using test
