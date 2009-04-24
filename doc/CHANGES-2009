@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1508 2009/04/24 01:48:29 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1509 2009/04/24 02:28:32 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2060,3 +2060,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-ifxetex-doc version 0.5 [minskim 2009-04-24]
 	Added print/tex-placeins version 2.2 [minskim 2009-04-24]
 	Added print/tex-placeins-doc version 2.2 [minskim 2009-04-24]
+	Updated lang/python26 to 2.6.2nb1 [hasso 2009-04-24]
