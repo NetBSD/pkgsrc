@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.8 2009/04/23 19:35:52 joerg Exp $	*/
+/*	$NetBSD: check.c,v 1.9 2009/04/24 14:00:25 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: check.c,v 1.8 2009/04/23 19:35:52 joerg Exp $");
+__RCSID("$NetBSD: check.c,v 1.9 2009/04/24 14:00:25 joerg Exp $");
 
 /*-
  * Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
@@ -173,6 +173,7 @@ check1pkg(const char *pkgdir, int *filecnt, int *pkgcnt)
 		case PLIST_OPTION:
 		case PLIST_PKGCFL:
 		case PLIST_BLDDEP:
+		case PLIST_PKGDIR:
 			break;
 		}
 	}
