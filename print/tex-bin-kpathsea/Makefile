@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/13 00:13:03 minskim Exp $
-# TeX Live Revision 12509
+# $NetBSD: Makefile,v 1.4 2009/04/24 17:07:03 minskim Exp $
+# TeX Live Revision 12778
 
 DISTNAME=	bin-kpathsea
-PKGNAME=	tex-${DISTNAME}-2008.12509
+PKGNAME=	tex-${DISTNAME}-2008.12778
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Translation tables for TeX
