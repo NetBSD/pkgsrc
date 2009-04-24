@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1527 2009/04/24 16:53:54 sborrill Exp $
+$NetBSD: CHANGES-2009,v 1.1528 2009/04/24 17:28:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2080,3 +2080,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-AnyEvent to 4.352 [sno 2009-04-24]
 	Updated devel/p5-Class-C3-Componentised to 1.0005 [sno 2009-04-24]
 	Added x11/xf86-video-openchrome version 0.2.903 [sborrill 2009-04-24]
+	Updated print/tex-bin-kpathsea to 2008.12778 [minskim 2009-04-24]
+	Updated print/tex-bin-xdvi to 22.84.14.12778 [minskim 2009-04-24]
+	Updated print/tex-bin-latex to 2008.12778 [minskim 2009-04-24]
+	Updated print/tex-bin-dvipsk to 2008.12497 [minskim 2009-04-24]
