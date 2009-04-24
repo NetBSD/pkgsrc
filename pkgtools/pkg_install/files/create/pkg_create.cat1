@@ -4,7 +4,7 @@ NNAAMMEE
      ppkkgg__ccrreeaattee -- a utility for creating software package distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ccrreeaattee [--EEllOORRUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e]
+     ppkkgg__ccrreeaattee [--EEllOOUUVVvv] [--BB _b_u_i_l_d_-_i_n_f_o_-_f_i_l_e] [--bb _b_u_i_l_d_-_v_e_r_s_i_o_n_-_f_i_l_e]
                 [--CC _c_p_k_g_s] [--DD _d_i_s_p_l_a_y_f_i_l_e] [--gg _g_r_o_u_p] [--II _r_e_a_l_p_r_e_f_i_x]
                 [--ii _i_s_c_r_i_p_t] [--KK _p_k_g___d_b_d_i_r] [--kk _d_s_c_r_i_p_t] [--LL _S_r_c_D_i_r]
                 [--nn _p_r_e_s_e_r_v_e_-_f_i_l_e] [--PP _d_p_k_g_s] [--TT _b_u_i_l_d_p_k_g_s] [--pp _p_r_e_f_i_x]
@@ -129,10 +129,6 @@ OOPPTTIIOONNSS
              Set _p_r_e_f_i_x as the initial directory (base) to start from in
              selecting files for the package.
 
-     --RR      Re-order any directories in the PLIST file into reverse alpha-
-             betic order, so that child directories will automatically be
-             removed before parent directories.
-
      --SS _s_i_z_e_-_a_l_l_-_f_i_l_e
              Store the given file for later querying with the pkg_info(1) --SS
              flag.  The file is expected to contain the size (in bytes) of all
@@ -234,12 +230,6 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
      @@iiggnnoorree
              Used internally to tell extraction to ignore the next file (don't
              copy it anywhere), as it's used for some special purpose.
-     @@iiggnnoorree__iinnsstt
-             Similar to @@iiggnnoorree, but the ignoring of the next file is delayed
-             one evaluation cycle.  This makes it possible to use this direc-
-             tive in the _p_a_c_k_i_n_g_l_i_s_t file, so you can pack a specialized
-             datafile in with a distribution for your install script (or some-
-             thing) yet have the installer ignore it.
      @@nnaammee _n_a_m_e
              Set the name of the package.  This is mandatory and is usually
              put at the top.  This name is potentially different than the name
@@ -247,14 +237,14 @@ PPAACCKKIINNGG LLIISSTT DDEETTAAIILLSS
              package for later deinstallation.  Note that ppkkgg__ccrreeaattee will
              derive this field from the _p_k_g_-_n_a_m_e and add it automatically if
              none is given.
+     @@ppkkggddiirr _n_a_m_e
+             Declare directory _n_a_m_e as managed.  If it does not exist at
+             installation time, it is created.  If this directory is no longer
+             referenced by packages and the last file or directory in it is
+             deleted, the directory is removed as well.
      @@ddiirrrrmm _n_a_m_e
-             Declare directory _n_a_m_e to be deleted at deinstall time.  By
-             default, directories created by a package installation are not
-             deleted when the package is deinstalled; this provides an
-             explicit directory cleanup method.  This directive should appear
-             at the end of the package list.  If more than one @@ddiirrrrmm direc-
-             tives are used, the directories are removed in the order speci-
-             fied.  The _n_a_m_e directory will not be removed unless it is empty.
+             This command is supported for compatibility only.  If directory
+             _n_a_m_e exists, it will be deleted at deinstall time.
      @@ddiissppllaayy _n_a_m_e
              Declare _n_a_m_e as the file to be displayed at install time (see --DD
              above).
@@ -289,4 +279,4 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, pkg size recording
              etc.
 
-NetBSD 5.0                       July 28, 2008                      NetBSD 5.0
+NetBSD 5.0                      April 24, 2009                      NetBSD 5.0
