@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/10/19 19:17:48 he Exp $
+# $NetBSD: Makefile,v 1.14 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	Class-Container-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=	p5-Params-Validate>=0.23:../../devel/p5-Params-Validate
-DEPENDS+=	p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 
 USE_LANGUAGES=		# none
 PERL5_MODULE_TYPE=	Module::Build

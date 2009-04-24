@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.13 2009/04/24 17:15:22 sno Exp $
 #
 
 DISTNAME=	Tree-Simple-1.18
@@ -11,7 +11,7 @@ MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Tree-Simple/
 COMMENT=	Simple extension to manipulate tree objects
 
-DEPENDS+=	p5-Scalar-List-Utils>=0.18:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=1.18}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Test-Exception>=0.20:../../devel/p5-Test-Exception
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

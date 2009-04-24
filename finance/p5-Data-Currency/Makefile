@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/24 17:15:22 sno Exp $
 
 DISTNAME=	Data-Currency-0.04002
 PKGNAME=	p5-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Finance-Currency-Convert-WebserviceX>=0.03:../../finance/p5-Finance-Currency-Convert-WebserviceX
 DEPENDS+=	p5-Locale-Codes>=2.07:../../misc/p5-Locale-Codes
 DEPENDS+=	p5-Locale-Currency-Format>=1.22:../../finance/p5-Locale-Currency-Format
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Data/Currency/.packlist
