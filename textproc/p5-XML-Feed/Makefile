@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/02/23 23:40:18 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/24 17:38:51 sno Exp $
 #
 
-DISTNAME=		XML-Feed-0.41
+DISTNAME=		XML-Feed-0.42
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5xfe
 CATEGORIES=		textproc perl5
@@ -18,8 +18,8 @@ DEPENDS+=		p5-DateTime-[0-9]*:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Format-Mail-[0-9]*:../../time/p5-DateTime-Format-Mail
 DEPENDS+=		p5-DateTime-Format-W3CDTF-[0-9]*:../../time/p5-DateTime-Format-W3CDTF
 DEPENDS+=		p5-Feed-Find-[0-9]*:../../textproc/p5-Feed-Find
-DEPENDS+=		p5-Scalar-List-Utils-[0-9]*:../../devel/p5-Scalar-List-Utils
-DEPENDS+=		p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+DEPENDS+=		{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
+DEPENDS+=		{perl>=5.10,p5-Module-Pluggable-[0-9]*}:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-URI-Fetch-[0-9]*:../../www/p5-URI-Fetch
 DEPENDS+=		p5-XML-Atom>=0.32:../../textproc/p5-XML-Atom
 DEPENDS+=		p5-XML-LibXML>=1.66:../../textproc/p5-XML-LibXML
