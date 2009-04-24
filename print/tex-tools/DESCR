@@ -1,0 +1,6 @@
+A collection of (variously) simple tools provided as part of the LaTeX
+required tools distribution, comprising afterpage, array, calc,
+dcolumn, delarray enumerate, fileerr, fontsmpl, ftnright, hhline,
+indentfirst, layout, longtable, multicol, rawfonts, showkeys,
+somedefs, theorem, tabularx, trace, varioref, verbatim, xr, and
+xspace.
