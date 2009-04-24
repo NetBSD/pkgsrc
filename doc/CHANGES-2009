@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1518 2009/04/24 07:27:29 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1519 2009/04/24 07:32:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Pod-POM to 0.25 [sno 2009-04-24]
 	Updated textproc/p5-Pod-Tree to 1.16 [sno 2009-04-24]
 	Updated databases/p5-DBD-postgresql to 2.13.1 [sno 2009-04-24]
+	Updated databases/p5-DBD-SQLite to 1.25 [sno 2009-04-24]
