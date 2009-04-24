@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1523 2009/04/24 10:19:15 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1524 2009/04/24 15:00:27 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/parpd to 1.4 [roy 2009-04-24]
 	Updated net/GeoIP to 1.4.6 [adam 2009-04-24]
 	Updated net/ntop to 3.3.9 [adam 2009-04-24]
+	Updated databases/p5-DBD-PgPP to 0.06 [sno 2009-04-24]
