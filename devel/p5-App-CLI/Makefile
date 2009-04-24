@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:47 he Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/24 09:41:48 seb Exp $
 #
 
-DISTNAME=	App-CLI-0.07
+DISTNAME=	App-CLI-0.08
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CL/CLKAO/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 
 MAINTAINER=	bad@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~clkao/App-CLI-0.07/
+HOMEPAGE=	http://search.cpan.org/dist/App-CLI/
 COMMENT=	Dispatcher module for command line interface programs
+#LICENSE=	artistic OR gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_LANGUAGES=	# empty
 
 PERL5_PACKLIST=	auto/App/CLI/.packlist
 
-BUILD_DEPENDS+=	p5-ExtUtils-AutoInstall>=0.61:../../devel/p5-ExtUtils-AutoInstall
 #IC5.8.8DEPENDS+=       p5-Getopt-Long>=2.35:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-Locale-Maketext-Simple>=0.16:../../misc/p5-Locale-Maketext-Simple
-#IC5.9.3
-DEPENDS+=	p5-Pod-Simple>=3.02:../../textproc/p5-Pod-Simple
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
