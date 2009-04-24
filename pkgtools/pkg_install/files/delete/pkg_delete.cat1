@@ -5,7 +5,7 @@ NNAAMMEE
      age distributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__ddeelleettee [--AADDddFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
+     ppkkgg__ddeelleettee [--AADDFFffNNnnOORRrrVVvv] [--KK _p_k_g___d_b_d_i_r] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
                 _p_k_g_-_n_a_m_e _._._.
 
 DDEESSCCRRIIPPTTIIOONN
@@ -46,13 +46,6 @@ OOPPTTIIOONNSS
 
      --DD      If a deinstallation script exists for a given package, do not
              execute it.
-
-     --dd      Remove empty directories created by file cleanup.  By default,
-             only files/directories explicitly listed in a package's contents
-             (either as normal files/directories or with the @@ddiirrrrmm directive)
-             will be removed at deinstallation time.  This option tells
-             ppkkgg__ddeelleettee to also remove any directories that were emptied as a
-             result of removing the package.
 
      --FF      Any pkg-name given will be interpreted as pathname which is sub-
              sequently transformed in a (real) package name via the Package
@@ -174,4 +167,4 @@ AAUUTTHHOORRSS
              Rewrote most of the code to compute correct order of deinstalla-
              tion and to improve error handling.
 
-NetBSD 5.0                     February 25, 2009                    NetBSD 5.0
+NetBSD 5.0                      April 24, 2009                      NetBSD 5.0
