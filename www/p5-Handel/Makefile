@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/15 23:42:37 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/24 08:25:32 sno Exp $
 
 DISTNAME=	Handel-1.00011
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Class-ISA>=0:../../devel/p5-Class-ISA
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 DEPENDS+=	p5-Clone>=0.28:../../devel/p5-Clone
 DEPENDS+=	p5-Locale-Maketext>=1.06:../../misc/p5-Locale-Maketext
-DEPENDS+=	p5-Module-Pluggable>=3.1:../../devel/p5-Module-Pluggable
+DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.1}:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-Module-Starter>=1.42:../../devel/p5-Module-Starter
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
