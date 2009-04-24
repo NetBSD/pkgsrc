@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/02/08 13:41:59 seb Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/24 08:19:11 sno Exp $
 
 DISTNAME=	Config-Any-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Config-Any/
 COMMENT=	Perl extension for handling config files
 
-DEPENDS+=	p5-Module-Pluggable>=3.01:../../devel/p5-Module-Pluggable
+DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.01}:../../devel/p5-Module-Pluggable
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Config/Any/.packlist
