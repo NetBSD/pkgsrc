@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.28 2009/04/24 14:00:26 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.28 2009/04/24 14:00:26 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -30,7 +30,7 @@ __RCSID("$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $");
  */
 
 /*-
- * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
+ * Copyright (c) 2008, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -71,6 +71,8 @@ __RCSID("$NetBSD: plist.c,v 1.27 2009/04/23 19:53:52 joerg Exp $");
 #include <md5.h>
 #endif
 
+static int     delete_with_parents(const char *, Boolean, Boolean);
+
 /* This struct defines a plist command type */
 typedef struct cmd_t {
 	const char   *c_s;		/* string to recognise */
@@ -94,6 +96,7 @@ static const cmd_t cmdv[] = {
 	{"display", PLIST_DISPLAY, 1, 0},
 	{"pkgdep", PLIST_PKGDEP, 1, 0},
 	{"pkgcfl", PLIST_PKGCFL, 1, 0},
+	{"pkgdir", PLIST_PKGDIR, 1, 0},
 	{"dirrm", PLIST_DIR_RM, 1, 0},
 	{"option", PLIST_OPTION, 1, 0},
 	{"blddep", PLIST_BLDDEP, 1, 0},
@@ -501,40 +504,81 @@ do {									\
  * run it too in cases of failure.
  */
 int
-delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
-    Boolean NoDeleteFiles, const char *destdir)
+delete_package(Boolean ign_err, package_t *pkg, Boolean NoDeleteFiles,
+    const char *destdir)
 {
 	plist_t *p;
-	char   *Where = ".", *last_file = "";
+	char   *last_file = "";
 	int     fail = SUCCESS;
 	Boolean preserve;
-	char    tmp[MaxPathSize], *name = NULL;
+	char    tmp[MaxPathSize];
+	const char *prefix = NULL, *name = NULL;
 
 	if (!pkgdb_open(ReadWrite)) {
 		err(EXIT_FAILURE, "cannot open pkgdb");
 	}
 
 	preserve = find_plist_option(pkg, "preserve") ? TRUE : FALSE;
+
 	for (p = pkg->head; p; p = p->next) {
 		switch (p->type) {
 		case PLIST_NAME:
 			name = p->name;
+			break;
+		case PLIST_CWD:
+			if (prefix == NULL)
+				prefix = p->name;
+			break;
+		default:
+			break;
+		}
+	}
+
+	if (name == NULL || prefix == NULL)
+		errx(EXIT_FAILURE, "broken PLIST");
+
+	/*
+	 * Remove database entries first, directory removal is done
+	 * in the main loop below.
+	 */
+	for (p = pkg->head; p; p = p->next) {
+		if (p->type == PLIST_PKGDIR)
+			delete_pkgdir(name, prefix, p->name);
+	}
+
+	for (p = pkg->head; p; p = p->next) {
+		switch (p->type) {
+		case PLIST_NAME:
+			/* Handled already */
+			break;
+
+		case PLIST_PKGDIR:
+		case PLIST_DIR_RM:
+			(void) snprintf(tmp, sizeof(tmp), "%s/%s",
+			    prefix, p->name);
+			if (has_pkgdir(tmp))
+				continue;
+			(void) snprintf(tmp, sizeof(tmp), "%s%s%s/%s",
+			    destdir ? destdir : "", destdir ? "/" : "",
+			    prefix, p->name);
+			if (!fexists(tmp)) {
+				if (p->type == PLIST_PKGDIR)
+					warnx("Directory `%s' disappeared, skipping", tmp);
+			} else if (!isdir(tmp)) {
+				warnx("attempting to delete a file `%s' as a directory\n"
+				    "this packing list is incorrect - ignoring delete request", tmp);
+			} else if (delete_with_parents(tmp, ign_err, TRUE))
+				fail = FAIL;
 			break;
 
 		case PLIST_IGNORE:
 			p = p->next;
 			break;
 
-		case PLIST_CWD:
-			Where = p->name;
-			if (Verbose)
-				printf("Change working directory to %s\n", Where);
-			break;
-
 		case PLIST_UNEXEC:
 			if (NoDeleteFiles)
 				break;
-			format_cmd(tmp, sizeof(tmp), p->name, Where, last_file);
+			format_cmd(tmp, sizeof(tmp), p->name, prefix, last_file);
 			/* XXX cleanup(0); */
 			printf("Executing `%s'\n", tmp);
 			if (!Fake && system(tmp)) {
@@ -547,7 +591,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 			last_file = p->name;
 			(void) snprintf(tmp, sizeof(tmp), "%s%s%s/%s",
 			    destdir ? destdir : "", destdir ? "/" : "",
-			    Where, p->name);
+			    prefix, p->name);
 			if (isdir(tmp)) {
 				warnx("attempting to delete directory `%s' as a file\n"
 				    "this packing list is incorrect - ignoring delete request", tmp);
@@ -606,7 +650,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 				if (Verbose && !NoDeleteFiles)
 					printf("Delete file %s\n", tmp);
 				if (!Fake && !NoDeleteFiles) {
-					if (delete_hierarchy(tmp, ign_err, nukedirs))
+					if (delete_with_parents(tmp, ign_err, FALSE))
 						fail = FAIL;
 					if (preserve && name) {
 						char    tmp2[MaxPathSize];
@@ -633,32 +677,6 @@ pkgdb_cleanup:
 				}
 			}
 			break;
-
-		case PLIST_DIR_RM:
-			if (NoDeleteFiles || nukedirs)
-				break;
-
-			(void) snprintf(tmp, sizeof(tmp), "%s%s%s/%s",
-			    destdir ? destdir : "", destdir ? "/" : "",
-			    Where, p->name);
-			if (fexists(tmp)) {
-			    if (!isdir(tmp)) {
-				warnx("cannot remove `%s' as a directory\n"
-				    "this packing list is incorrect - ignoring delete request", tmp);
-			    } else {
-				if (Verbose)
-					printf("Delete directory %s\n", tmp);
-				if (!Fake && delete_hierarchy(tmp, ign_err, FALSE)) {
-					warnx("unable to completely remove directory '%s'", tmp);
-					fail = FAIL;
-				}
-			    }
-			} else {
-			    warnx("cannot remove non-existent directory `%s'\n"
-			            "this packing list is incorrect - ignoring delete request", tmp);
-			}
-			last_file = p->name;
-			break;
 		default:
 			break;
 		}
@@ -671,51 +689,94 @@ pkgdb_cleanup:
  * Selectively delete a hierarchy
  * Returns 1 on error, 0 else.
  */
-int
-delete_hierarchy(const char *dir, Boolean ign_err, Boolean nukedirs)
+static int
+delete_with_parents(const char *fname, Boolean ign_err, Boolean ign_nonempty)
 {
-	char   *cp1, *cp2, *tmp_dir;
+	char   *cp, *cp2;
 
-	if (!fexists(dir)) {
-		if (!ign_err)
-			warnx("%s `%s' doesn't really exist",
-			    isdir(dir) ? "directory" : "file", dir);
-		return !ign_err;
-	} else if (nukedirs) {
-		if (recursive_remove(dir, ign_err)) {
-			warn("Couldn't remove %s", dir);
-			return 1;
-		}
-	} else if (isdir(dir)) {
-		if (rmdir(dir) && !ign_err)
-			return 1;
-	} else {
-		if (remove(dir) && !ign_err)
-			return 1;
-	}
-
-	if (!nukedirs)
+	if (remove(fname)) {
+		if (!ign_err && (!ign_nonempty || errno != ENOTEMPTY))
+			warnx("Couldn't remove %s", fname);
 		return 0;
-
-	cp1 = cp2 = tmp_dir = xstrdup(dir);;
-
-	while (cp2) {
-		if ((cp2 = strrchr(cp1, '/')) != NULL)
-			*cp2 = '\0';
-		if (!isemptydir(tmp_dir))
-			break;
-		if (rmdir(tmp_dir) && !ign_err) {
-			if (fexists(tmp_dir)) {
-				free(tmp_dir);
-				return 1;
-			}
-			warnx("directory `%s' doesn't really exist", tmp_dir);
-		}
-		/* back up the pathname one component */
-		if (cp2) {
-			cp1 = tmp_dir;
-		}
 	}
-	free(tmp_dir);
+	cp = xstrdup(fname);
+	while (*cp) {
+		if ((cp2 = strrchr(cp, '/')) != NULL)
+			*cp2 = '\0';
+		if (!isemptydir(cp))
+			break;
+		if (has_pkgdir(cp))
+			break;
+		if (rmdir(cp))
+			break;
+	}
+	free(cp);
+
 	return 0;
+}
+
+void
+add_pkgdir(const char *pkg, const char *prefix, const char *path)
+{
+	char *fullpath, *oldvalue, *newvalue;
+
+	fullpath = xasprintf("%s/%s", prefix, path);
+	oldvalue = pkgdb_retrieve(fullpath);
+	if (oldvalue) {
+		if (strncmp(oldvalue, "@pkgdir ", 8) != 0)
+			errx(EXIT_FAILURE, "Internal error while processing pkgdb, run pkg_admin rebuild");
+		newvalue = xasprintf("%s %s", oldvalue, pkg);
+		pkgdb_remove(fullpath);
+	} else {
+		newvalue = xasprintf("@pkgdir %s", pkg);
+	}
+	pkgdb_store(fullpath, newvalue);
+
+	free(fullpath);
+	free(newvalue);
+}
+
+void
+delete_pkgdir(const char *pkg, const char *prefix, const char *path)
+{
+	size_t pkg_len, len;
+	char *fullpath, *oldvalue, *newvalue, *iter;
+
+	fullpath = xasprintf("%s/%s", prefix, path);
+	oldvalue = pkgdb_retrieve(fullpath);
+	if (oldvalue && strncmp(oldvalue, "@pkgdir ", 8) == 0) {
+		newvalue = xstrdup(oldvalue);
+		iter = newvalue + 8;
+		pkg_len = strlen(pkg);
+		while (*iter) {
+			if (strncmp(iter, pkg, pkg_len) == 0 &&
+			    (iter[pkg_len] == ' ' || iter[pkg_len] == '\0')) {
+				len = strlen(iter + pkg_len);
+				memmove(iter, iter + pkg_len + 1, len);
+				if (len == 0)
+					*iter = '\0';
+			} else {
+				iter += strcspn(iter, " ");
+				iter += strspn(iter, " ");
+			}
+		}
+		pkgdb_remove(fullpath);
+		if (iter != newvalue + 8)
+			pkgdb_store(fullpath, newvalue);
+		free(newvalue);
+	}
+	free(fullpath);
+}
+
+int
+has_pkgdir(const char *path)
+{
+	const char *value;
+
+	value = pkgdb_retrieve(path);
+
+	if (value && strncmp(value, "@pkgdir ", 8) == 0)
+		return 1;
+	else
+		return 0;
 }
