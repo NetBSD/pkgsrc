@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/13 00:13:03 minskim Exp $
-# TeX Live Revision 12172
+# $NetBSD: Makefile,v 1.4 2009/04/24 17:27:28 minskim Exp $
+# TeX Live Revision 12497
 
 DISTNAME=	bin-dvipsk
-PKGNAME=	tex-${DISTNAME}-2008.12172
+PKGNAME=	tex-${DISTNAME}-2008.12497
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for dvipsk
