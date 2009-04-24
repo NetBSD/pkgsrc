@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1521 2009/04/24 09:42:50 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1522 2009/04/24 09:48:15 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2073,3 +2073,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBD-SQLite to 1.25 [sno 2009-04-24]
 	Updated devel/p5-Any-Moose to 0.07 [seb 2009-04-24]
 	Updated devel/p5-App-CLI to 0.08 [seb 2009-04-24]
+	Updated net/parpd to 1.4 [roy 2009-04-24]
