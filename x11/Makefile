@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.586 2009/04/16 19:08:02 drochner Exp $
+# $NetBSD: Makefile,v 1.587 2009/04/24 16:54:32 sborrill Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -408,6 +408,7 @@ SUBDIR+=	xf86-video-neomagic
 SUBDIR+=	xf86-video-nsc
 SUBDIR+=	xf86-video-nv
 SUBDIR+=	xf86-video-nvxbox
+SUBDIR+=	xf86-video-openchrome
 SUBDIR+=	xf86-video-r128
 SUBDIR+=	xf86-video-radeonhd
 SUBDIR+=	xf86-video-rendition
