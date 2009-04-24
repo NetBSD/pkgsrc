@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+$NetBSD: patch-am,v 1.2 2009/04/24 01:32:50 hasso Exp $
 
---- setup.py.orig	2009-03-31 18:20:48.000000000 +0000
-+++ setup.py
+--- setup.py.orig	2009-03-31 21:20:48 +0300
++++ setup.py	2009-04-20 16:30:08 +0300
 @@ -17,7 +17,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
  
@@ -41,7 +41,22 @@ $NetBSD: patch-am,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -1891,9 +1902,9 @@ def main():
+@@ -1300,6 +1304,14 @@ class PyBuildExt(build_ext):
+                 )
+             libraries = []
+ 
++	elif platform.startswith('dragonfly'):
++	    macros = dict(
++		HAVE_SEM_OPEN=0,
++		HAVE_SEM_TIMEDWAIT=0,
++		HAVE_FD_TRANSFER=1,
++		)
++	    libraries = []
++
+         else:                                   # Linux and other unices
+             macros = dict(
+                 HAVE_SEM_OPEN=1,
+@@ -1891,9 +1903,9 @@ def main():
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
            # Scripts to install
