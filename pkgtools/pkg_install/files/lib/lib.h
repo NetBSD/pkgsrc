@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.52 2009/04/23 19:35:52 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.53 2009/04/24 01:03:41 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -302,7 +302,7 @@ Boolean isfile(const char *);
 Boolean isbrokenlink(const char *);
 Boolean isempty(const char *);
 int     URLlength(const char *);
-Boolean make_preserve_name(char *, size_t, char *, char *);
+Boolean make_preserve_name(char *, size_t, const char *, const char *);
 void    remove_files(const char *, const char *);
 int     delete_hierarchy(const char *, Boolean, Boolean);
 int     format_cmd(char *, size_t, const char *, const char *, const char *);

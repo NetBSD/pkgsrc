@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.26 2009/02/02 12:35:01 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.27 2009/04/24 01:03:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -13,7 +13,7 @@
 #if HAVE_SYS_QUEUE_H
 #include <sys/queue.h>
 #endif
-__RCSID("$NetBSD: file.c,v 1.26 2009/02/02 12:35:01 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.27 2009/04/24 01:03:41 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -217,7 +217,7 @@ URLlength(const char *fname)
  * "preserve" name for it.
  */
 Boolean
-make_preserve_name(char *try, size_t max, char *name, char *file)
+make_preserve_name(char *try, size_t max, const char *name, const char *file)
 {
 	int     len, i;
 
