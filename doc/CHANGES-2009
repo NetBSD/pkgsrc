@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1530 2009/04/24 17:40:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1531 2009/04/24 18:23:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2086,3 +2086,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-dvipsk to 2008.12497 [minskim 2009-04-24]
 	Updated databases/p5-DBIx-Class to 0.08100 [sno 2009-04-24]
 	Updated textproc/p5-XML-Feed to 0.42 [sno 2009-04-24]
+	Added fonts/tex-metafont version 2008.11896 [minskim 2009-04-24]
+	Added fonts/tex-bin-metafont version 2008.12778 [minskim 2009-04-24]
