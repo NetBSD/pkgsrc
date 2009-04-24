@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1510 2009/04/24 06:16:22 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1511 2009/04/24 06:27:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2062,3 +2062,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-placeins-doc version 2.2 [minskim 2009-04-24]
 	Updated lang/python26 to 2.6.2nb1 [hasso 2009-04-24]
 	Added fonts/tex-glyphlist version 2.0 [minskim 2009-04-24]
+	Added print/tex-dvipdfmx-def version 3.0i [minskim 2009-04-24]
