@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:54 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/24 17:15:23 sno Exp $
 
 DISTNAME=	FormValidator-Simple-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Email-Valid-Loose>=0.04:../../mail/p5-Email-Valid-Loose
 DEPENDS+=	p5-Tie-IxHash>=1.21:../../devel/p5-Tie-IxHash
 DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 DEPENDS+=	p5-List-MoreUtils>=0.16:../../devel/p5-List-MoreUtils
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-DateTime-Format-Strptime>=1.0700:../../time/p5-DateTime-Format-Strptime
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 
