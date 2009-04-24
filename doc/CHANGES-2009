@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1507 2009/04/24 01:05:14 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1508 2009/04/24 01:48:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2058,3 +2058,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-RewriteRules to 0.18 [seb 2009-04-23]
 	Updated print/tex-ifxetex to 0.5 [minskim 2009-04-24]
 	Added print/tex-ifxetex-doc version 0.5 [minskim 2009-04-24]
+	Added print/tex-placeins version 2.2 [minskim 2009-04-24]
+	Added print/tex-placeins-doc version 2.2 [minskim 2009-04-24]
