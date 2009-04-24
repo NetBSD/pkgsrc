@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/14 18:01:55 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/24 06:13:31 minskim Exp $
 # TeX Live Revision 7340
 
 DISTNAME=	latex-fonts
 PKGNAME=	tex-${DISTNAME}-2008.7340
+CATEGORIES=	fonts
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Collection of fonts used in LaTeX distributions
