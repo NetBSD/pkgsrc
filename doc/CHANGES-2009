@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1525 2009/04/24 15:05:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1526 2009/04/24 15:38:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2078,3 +2078,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ntop to 3.3.9 [adam 2009-04-24]
 	Updated databases/p5-DBD-PgPP to 0.06 [sno 2009-04-24]
 	Updated devel/p5-AnyEvent to 4.352 [sno 2009-04-24]
+	Updated devel/p5-Class-C3-Componentised to 1.0005 [sno 2009-04-24]
