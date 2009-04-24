@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/24 01:03:12 minskim Exp $
+share/texmf-dist/doc/generic/ifxetex/README
+share/texmf-dist/doc/generic/ifxetex/ifxetex.pdf
