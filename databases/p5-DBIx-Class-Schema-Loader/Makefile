@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:44 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/24 17:15:21 sno Exp $
 
 DISTNAME=	DBIx-Class-Schema-Loader-0.04005
 PKGNAME=	p5-${DISTNAME}
@@ -23,8 +23,8 @@ DEPENDS+=	p5-DBD-SQLite>=1.12:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-Carp-Clan>=0:../../devel/p5-Carp-Clan
 DEPENDS+=	p5-DBIx-Class>=0.06003:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-Data-Dump>=1.06:../../devel/p5-Data-Dump
-DEPENDS+=	p5-PathTools>=0:../../devel/p5-PathTools
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-PathTools>=0}:../../devel/p5-PathTools
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Class-Inspector>=0:../../devel/p5-Class-Inspector
 
 # Avoid complaints if we do not have DB2, Oracle, Pg and mysql
