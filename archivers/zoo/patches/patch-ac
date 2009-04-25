@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2009/02/11 14:23:32 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2009/04/25 23:46:47 gdt Exp $
 
---- makefile.orig	1991-07-16 10:52:08.000000000 -0500
+--- makefile.orig	1991-07-16 17:52:08.000000000 +0200
 +++ makefile
 @@ -18,13 +18,12 @@
  

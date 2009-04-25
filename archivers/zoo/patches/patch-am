@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1 2007/05/13 16:59:39 taca Exp $
+$NetBSD: patch-am,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- portable.c.orig	1991-07-17 00:55:11.000000000 +0900
+--- portable.c.orig	1991-07-16 17:55:11.000000000 +0200
 +++ portable.c
 @@ -87,6 +87,12 @@ ZOOFILE zoocreate (fname)
  char *fname;
@@ -15,3 +15,26 @@ $NetBSD: patch-am,v 1.1 2007/05/13 16:59:39 taca Exp $
  #endif /* FIZ */
  
  #ifndef zooseek
+@@ -220,6 +226,13 @@ BYTE data[];
+          ((unsigned long) data[2] << 16) | ((unsigned long) data[3] << 24));
+ }
+ 
++long to_signed_long(data)
++BYTE data[];
++{
++   return (long) ((long) data[0] | ((long) data[1] << 8) |
++         ((long) data[2] << 16) | ((long) (char)data[3] << 24));
++}
++
+ #ifndef FIZ
+ /********************
+ splitlong() converts a long integer to four consecutive BYTEs in order
+@@ -426,7 +439,7 @@ BYTE bytes[];
+       zoo_header->text[i] = bytes[TEXT_I + i];
+    zoo_header->zoo_tag = to_long(&bytes[ZTAG_I]);     /* copy zoo_tag */
+    zoo_header->zoo_start = to_long(&bytes[ZST_I]);    /* copy zoo_start */
+-   zoo_header->zoo_minus = to_long(&bytes[ZSTM_I]);
++   zoo_header->zoo_minus = to_signed_long(&bytes[ZSTM_I]);
+    zoo_header->major_ver = bytes[MAJV_I];          /* copy versions */
+    zoo_header->minor_ver = bytes[MINV_I];
+ 	/* default is no archive comment and a header type of 0 */

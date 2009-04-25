@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2006/06/10 17:18:48 adrianp Exp $
+$NetBSD: patch-aj,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- parse.c.orig	1991-07-16 16:54:43.000000000 +0100
+--- parse.c.orig	1991-07-16 17:54:43.000000000 +0200
 +++ parse.c
 @@ -39,7 +39,7 @@ char *fname;
     char *namep;                   /* points to relevant part of tempname */
