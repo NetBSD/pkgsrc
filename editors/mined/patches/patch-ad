@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2007/06/21 13:48:27 tnn Exp $
+$NetBSD: patch-ad,v 1.4 2009/04/25 11:25:43 tnn Exp $
 
---- makemined.orig	2007-06-21 14:50:30.000000000 +0200
+--- makemined.orig	2009-04-08 00:00:00.000000000 +0200
 +++ makemined
 @@ -81,7 +81,7 @@ confmake () {
  
@@ -10,4 +10,4 @@ $NetBSD: patch-ad,v 1.3 2007/06/21 13:48:27 tnn Exp $
 +case BSD in
  Linux*)	$MAKE -f makefile.linux $1 $makevars;;
  Sun*)	if type $CC > /dev/null 2> /dev/null
- 	then	if $CC | grep "software package not installed"
+ 	then	if $CC | grep "software package not installed" > /dev/null
