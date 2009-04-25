@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2000/09/04 14:54:06 kim Exp $
+$NetBSD: patch-aa,v 1.5 2009/04/25 23:46:47 gdt Exp $
 
---- ar.h.orig	Sat May  1 00:04:22 1993
-+++ ar.h	Mon Sep  4 10:41:33 2000
-@@ -15,11 +15,15 @@
+--- ar.h.orig	1993-05-01 06:04:22.000000000 +0200
++++ ar.h
+@@ -15,11 +15,15 @@ Adapted from "ar" archiver written by Ha
  /* uchar should be 8 bits or more */
  /* typedef unsigned char  uchar;   -- already in zoo.h */
  
