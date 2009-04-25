@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/24 17:15:23 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/25 09:33:40 sno Exp $
 
 DISTNAME=	Catalyst-Runtime-5.7015
 PKGNAME=	p5-${DISTNAME}
@@ -22,11 +22,11 @@ DEPENDS+=	p5-HTTP-Body>=0.9:../../www/p5-HTTP-Body
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0.5:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.01}:../../devel/p5-Module-Pluggable
-DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
+DEPENDS+=	{perl>=5.10,p5-NEXT>=0}:../../devel/p5-NEXT
 DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
-DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
+DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils>=0}:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-Text-SimpleTable>=0.03:../../textproc/p5-Text-SimpleTable
-DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
+DEPENDS+=	{perl>=5.10,p5-Time-HiRes>=0}:../../time/p5-Time-HiRes
 DEPENDS+=	p5-Tree-Simple>=1.15:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
 DEPENDS+=	p5-URI>=1.35:../../www/p5-URI
