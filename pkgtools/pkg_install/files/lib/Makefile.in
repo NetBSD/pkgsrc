@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.26 2009/02/28 16:03:56 joerg Exp $
+# $NetBSD: Makefile.in,v 1.27 2009/04/25 21:31:13 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -27,7 +27,7 @@ INSTALL=	@INSTALL@
 LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
-	gpgsig.o global.o iterate.o lpkg.o opattern.o \
+	gpgsig.o global.o iterate.o license.o lpkg.o opattern.o \
 	parse-config.o pkgdb.o plist.o remove.o \
 	str.o var.o version.o vulnerabilities-file.o xwrapper.o
 
