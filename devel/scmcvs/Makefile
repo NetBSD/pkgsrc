@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/25 11:41:59 sno Exp $
 #
 
-DISTNAME=	cvs-1.11.22
-PKGREVISION=	1
+DISTNAME=	cvs-1.11.23
 CATEGORIES=	devel scm
-MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/stable/1.11.22/
+MASTER_SITES=	http://ftp.gnu.org/non-gnu/cvs/source/stable/1.11.23/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cvs.nongnu.org/
 COMMENT=	Concurrent Versions System
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
