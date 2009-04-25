@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1535 2009/04/25 11:26:19 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1536 2009/04/25 11:31:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-RSS to 1.44 [sno 2009-04-24]
 	Updated net/p5-Net-Twitter to 2.12 [sno 2009-04-25]
 	Updated editors/mined to 2000.15 [tnn 2009-04-25]
+	Updated x11/xcb-util to 0.3.4 [wiz 2009-04-25]
