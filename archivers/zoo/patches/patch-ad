@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 1999/11/12 05:17:21 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- ./misc2.c	Tue Jul 16 17:53:02 1991
-+++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/misc2.c	Fri Nov 12 06:19:38 1999
-@@ -314,10 +314,12 @@
+--- misc2.c.orig	1991-07-16 17:53:02.000000000 +0200
++++ misc2.c
+@@ -314,10 +314,12 @@ struct direntry *direntry;
  {
  	long diff_tz;
  	long longtime;

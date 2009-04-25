@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2007/05/13 16:59:40 taca Exp $
+$NetBSD: patch-ao,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- zoopack.c.orig	1993-05-01 12:59:21.000000000 +0900
+--- zoopack.c.orig	1993-05-01 05:59:21.000000000 +0200
 +++ zoopack.c
 @@ -32,7 +32,9 @@ Copyright (C) 1986, 1987 Rahul Dhesi -- 
  #include <signal.h>

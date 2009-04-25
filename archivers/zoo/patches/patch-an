@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1 2007/05/13 16:59:40 taca Exp $
+$NetBSD: patch-an,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- zooio.h.orig	1993-05-01 12:39:50.000000000 +0900
+--- zooio.h.orig	1993-05-01 05:39:50.000000000 +0200
 +++ zooio.h
 @@ -53,6 +53,9 @@ long zootell PARMS((ZOOFILE));
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 1999/11/12 05:17:21 hubertf Exp $
+$NetBSD: patch-ah,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- ./zoofns.h	Sat May  1 05:57:35 1993
-+++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/zoofns.h	Fri Nov 12 06:19:39 1999
-@@ -94,7 +94,11 @@
+--- zoofns.h.orig	1993-05-01 05:57:35.000000000 +0200
++++ zoofns.h
+@@ -94,7 +94,11 @@ void exit PARMS ((int));
  void fixslash PARMS ((char *));
  void makelist PARMS ((int, char *[], char *[], int, char *, char *, char *, int *));
  void memerr PARMS ((unsigned int));

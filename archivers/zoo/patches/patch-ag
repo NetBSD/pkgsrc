@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 1999/11/12 05:17:21 hubertf Exp $
+$NetBSD: patch-ag,v 1.2 2009/04/25 23:46:47 gdt Exp $
 
---- ./zooadd2.c	Sat Jul 20 01:38:10 1991
-+++ /usr/pkgsrc/archivers/zoo/work.i386.unpatched/zooadd2.c	Fri Nov 12 06:19:39 1999
-@@ -258,12 +258,15 @@
+--- zooadd2.c.orig	1991-07-20 01:38:10.000000000 +0200
++++ zooadd2.c
+@@ -258,12 +258,15 @@ void newdir (direntry)
  register struct direntry *direntry;
  {
  #ifdef GETTZ
