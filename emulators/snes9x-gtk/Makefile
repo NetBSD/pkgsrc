@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/25 15:09:02 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/25 15:15:20 tnn Exp $
 #
 
 DISTNAME=	snes9x-1.51-src-gtk-70
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	intltool pkg-config
 
 CONFIGURE_ARGS+=	--without-opengl
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
