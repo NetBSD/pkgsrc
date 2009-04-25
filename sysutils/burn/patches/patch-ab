@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2009/04/25 12:07:04 rh Exp $
+
+--- WorkInProgress.m.orig	2005-05-13 01:58:49.000000000 +1000
++++ WorkInProgress.m
+@@ -23,6 +23,7 @@
+ 
+ #include <Foundation/Foundation.h>
+ #include <AppKit/AppKit.h>
++#include <GNUstepGUI/GSTheme.h>
+ 
+ #include "Functions.h"
+ #include "Constants.h"
