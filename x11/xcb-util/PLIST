@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 10:25:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/04/25 11:31:32 wiz Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
@@ -10,7 +10,6 @@ include/xcb/xcb_pixel.h
 include/xcb/xcb_property.h
 include/xcb/xcb_renderutil.h
 include/xcb/xcb_reply.h
-include/xcb/xcb_wm.h
 lib/libxcb-atom.la
 lib/libxcb-aux.la
 lib/libxcb-event.la
@@ -20,7 +19,6 @@ lib/libxcb-keysyms.la
 lib/libxcb-property.la
 lib/libxcb-render-util.la
 lib/libxcb-reply.la
-lib/libxcb-wm.la
 lib/pkgconfig/xcb-atom.pc
 lib/pkgconfig/xcb-aux.pc
 lib/pkgconfig/xcb-event.pc
@@ -30,5 +28,4 @@ lib/pkgconfig/xcb-keysyms.pc
 lib/pkgconfig/xcb-property.pc
 lib/pkgconfig/xcb-renderutil.pc
 lib/pkgconfig/xcb-reply.pc
-lib/pkgconfig/xcb-wm.pc
 @comment in libxcb: @dirrm include/xcb
