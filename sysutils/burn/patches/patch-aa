@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2009/04/25 12:07:04 rh Exp $
+
+--- ExtProgressIndicator.m.orig	2005-05-13 01:58:49.000000000 +1000
++++ ExtProgressIndicator.m
+@@ -22,8 +22,11 @@
+  */
+ 
+ #include <AppKit/NSColor.h>
++#include <AppKit/NSGraphics.h>
+ #include <AppKit/NSParagraphStyle.h>
++#include <AppKit/NSAttributedString.h>
+ #include <Foundation/Foundation.h>
++#include <GNUstepGUI/GSTheme.h>
+ 
+ #include "ExtProgressIndicator.h"
+ 
