@@ -89,12 +89,22 @@ OOPPTTIIOONNSS
              targets on disk are the same as the contents recorded at package
              installation time.
 
+     cchheecckk--lliicceennssee _c_o_n_d_i_t_i_o_n
+             Check if _c_o_n_d_i_t_i_o_n can be fulfilled with the currently set of
+             accepted licenses.  Prints either yes or no to stdout if the con-
+             dition can be parsed, otherwise it exits with error.
+
      cchheecckk--ppkkgg--vvuullnneerraabbiilliittiieess [--ss] _f_i_l_e
              Check format and hashes in the pkg-vulnerabilities file _f_i_l_e.  If
              --ss is given, also check the embedded signature.
 
      cchheecckk--ssiiggnnaattuurree _f_i_l_e _._._.
              Reports if _f_i_l_e is a correctly signed package.
+
+     cchheecckk--ssiinnggllee--lliicceennssee _l_i_c_c_e_n_s_e
+             Check if _l_i_c_e_n_s_e is a valid license name and if it is in the set
+             of acceptable licenses.  Prints either yes or no to stdout if the
+             condition can be parsed, otherwise it exits with error.
 
      ccoonnffiigg--vvaarr _v_a_r_i_a_b_l_e
              Print the current value of _v_a_r_i_a_b_l_e as used after parsing the
@@ -226,4 +236,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 5.0                       May 30, 2008                       NetBSD 5.0
+NetBSD 5.0                      April 25, 2009                      NetBSD 5.0
