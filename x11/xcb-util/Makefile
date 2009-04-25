@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/06 10:25:19 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/04/25 11:31:32 wiz Exp $
 #
 
-DISTNAME=	xcb-util-0.3.3
+DISTNAME=	xcb-util-0.3.4
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,6 +27,6 @@ PKGCONFIG_OVERRIDE+=	renderutil/xcb-renderutil.pc.in
 PKGCONFIG_OVERRIDE+=	reply/xcb-reply.pc.in
 PKGCONFIG_OVERRIDE+=	wm/xcb-wm.pc.in
 
-#.include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
