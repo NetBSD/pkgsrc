@@ -14,6 +14,9 @@ DDEESSCCRRIIPPTTIIOONN
 
      The following variables are supported:
 
+     ACCEPTABLE_LICENSES
+             List of licenses packages are allowed to carry.
+
      ACTIVE_FTP
              Force the use of active FTP.
 
@@ -45,6 +48,10 @@ DDEESSCCRRIIPPTTIIOONN
 
              interactive    The user is always asked to confirm installation
                             of vulnerable packages.
+
+     DEFAULT_ACCEPTABLE_LICENSES
+             List of common Free and Open Source licenses packages are allowed
+             to carry.
 
      GPG     Path to gpg(1), which can be used to verify the signature in the
              _p_k_g_-_v_u_l_n_e_r_a_b_i_l_i_t_i_e_s file when running
@@ -120,4 +127,4 @@ FFIILLEESS
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1)
 
-NetBSD 5.0                     February 27, 2009                    NetBSD 5.0
+NetBSD 5.0                      April 25, 2009                      NetBSD 5.0
