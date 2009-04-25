@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.73 2009/02/27 22:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2009/04/25 17:46:28 tnn Exp $
 #
 
 DISTNAME=		vlc-${VLC_VERSION}
-PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
 
-VLC_VERSION=		0.9.8a
+VLC_VERSION=		0.9.9
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
@@ -15,9 +14,10 @@ COMMENT=		VLC media player and streaming server
 
 CONFLICTS=		vlc07-[0-9]* vlc08-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config \
-			aclocal autoconf automake autoheader
+			autoconf automake autoreconf
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
@@ -67,35 +67,30 @@ PLIST.v4l2=		yes
 CONFIGURE_ARGS+=	--disable-v4l2
 .endif
 
-INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
-			${PREFIX}/share/vlc/http/images \
-			${PREFIX}/share/vlc/http/js \
-			${PREFIX}/share/vlc/http/old \
-			${PREFIX}/share/vlc/http/old/admin \
-			${PREFIX}/share/vlc/http/old/vlm \
-			${PREFIX}/share/vlc/http/requests \
-			${PREFIX}/share/vlc/osdmenu/default \
-			${PREFIX}/share/vlc/osdmenu/default/selected \
-			${PREFIX}/share/vlc/osdmenu/default/selection \
-			${PREFIX}/share/vlc/osdmenu/default/volume \
-			${PREFIX}/share/vlc/osdmenu/dvd/selected \
-			${PREFIX}/share/vlc/osdmenu/dvd/volume \
-			${PREFIX}/share/vlc/osdmenu/dvd/unselect \
-			${PREFIX}/share/vlc/osdmenu/dvd/selection \
-			${PREFIX}/share/vlc/skins2 \
-			${PREFIX}/share/vlc/skins2/fonts
-
+INSTALLATION_DIRS+=	share/vlc/http/dialogs share/vlc/http/images \
+			share/vlc/http/js share/vlc/http/old \
+			share/vlc/http/old/admin share/vlc/http/old/vlm \
+			share/vlc/http/requests share/vlc/osdmenu/default \
+			share/vlc/osdmenu/default/selected \
+			share/vlc/osdmenu/default/selection \
+			share/vlc/osdmenu/default/volume \
+			share/vlc/osdmenu/dvd/selected \
+			share/vlc/osdmenu/dvd/volume \
+			share/vlc/osdmenu/dvd/unselect \
+			share/vlc/osdmenu/dvd/selection \
+			share/vlc/skins2 share/vlc/skins2/fonts \
+			${PKGMANDIR}/man1
 pre-configure:
-	cd ${WRKSRC} && autoreconf
+	cd ${WRKSRC} && autoreconf -f
 
-pre-install:
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 # Let's use dejavu-ttf as it has nice unicode support
 #
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
-DEFAULT_FONT?=		${LOCALBASE}/lib/X11/fonts/TTF/DejaVuSans.ttf
+DEFAULT_FONT?=		${PREFIX}/lib/X11/fonts/TTF/DejaVuSans.ttf
 DEPENDS+=		dejavu-ttf>=2.26:../../fonts/dejavu-ttf
 
 SUBST_CLASSES+=		oss
@@ -159,6 +154,7 @@ CHECK_WRKREF_SKIP=	lib/libvlccore.a \
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../multimedia/x264-devel/buildlink3.mk"
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
