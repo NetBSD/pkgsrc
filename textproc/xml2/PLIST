@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/25 12:36:01 rh Exp $
+bin/2csv
+bin/2html
+bin/2xml
+bin/csv2
+bin/html2
+bin/xml2

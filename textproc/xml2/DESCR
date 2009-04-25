@@ -1,0 +1,7 @@
+These tools are used to convert XML and HTML to and from a line-oriented
+format more amenable to processing by classic Unix pipeline processing
+tools, like grep, sed, awk, cut, shell scripts, and so forth.  There are
+four tools, xml2, 2xml, html2, and 2html.  None of them take any command-
+line arguments; they are all simple filters, reading information from
+standard input in one format and writing the same information to standard
+output in a different format.
