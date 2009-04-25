@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/10/01 21:46:09 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/04/25 12:07:04 rh Exp $
 #
 
-DISTNAME=	burn-0.4.0
-PKGREVISION=	8
+DISTNAME=	burn-0.4.1
 CATEGORIES=	sysutils gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 
@@ -15,15 +14,25 @@ DEPENDS+=	cdrtools>=1.10:../../sysutils/cdrtools
 DEPENDS+=	cdrdao>=1.1.5:../../sysutils/cdrdao
 DEPENDS+=	gworkspace-[0-9]*:../../sysutils/gworkspace
 
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	YES
 MAKE_FILE=	GNUmakefile
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	objc
-WRKSRC=		${WRKDIR}/${PKGBASE}
+WRKSRC=		${WRKDIR}/Burn
+MAKE_JOBS_SAFE=	no
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS=-D_POSIX_SOURCE
 MAKE_ENV+=	ADDITIONAL_LDFLAGS=-lutil
 
-MAKE_ENV+=	GNUSTEP_INSTALLATION_DIR=${PREFIX}/share/GNUstep/Local/
+FIX_GNUSTEP_INSTALLATION_DIR=	yes
+SUBST_FILES.gnustep_installation_dir+=	Bundles/CDparanoia/GNUmakefile
+SUBST_FILES.gnustep_installation_dir+=	Bundles/CDrecord/GNUmakefile
+SUBST_FILES.gnustep_installation_dir+=	Bundles/MkIsoFs/GNUmakefile
+
+.include "../../devel/gnustep-make/gnustep.mk"
 
 .include "../../audio/cdplayer/buildlink3.mk"
 .include "../../x11/gnustep-back/buildlink3.mk"
