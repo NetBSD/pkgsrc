@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1536 2009/04/25 11:31:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1537 2009/04/25 11:44:28 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2094,3 +2094,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-Net-Twitter to 2.12 [sno 2009-04-25]
 	Updated editors/mined to 2000.15 [tnn 2009-04-25]
 	Updated x11/xcb-util to 0.3.4 [wiz 2009-04-25]
+	Updated devel/scmcvs to 1.11.23 [sno 2009-04-25]
