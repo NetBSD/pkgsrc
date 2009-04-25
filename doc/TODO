@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8060 2009/04/24 10:19:15 adam Exp $
+$NetBSD: TODO,v 1.8061 2009/04/25 08:04:46 sno Exp $
 
 Suggested new packages
 ======================
@@ -1009,15 +1009,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Archive-Tar-1.46
-	o p5-CGI-Session-4.41
 	o p5-DBD-Sybase-1.08
 	o p5-DB_File-1.820
 	o p5-DateTime-TimeZone-0.88
 	o p5-Net-Twitter-2.10 [pkg/40812]
 	o p5-WWW-Curl-4.06
-	o p5-XML-Feed-0.42
-	o p5-XML-RSS-1.44
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.55
