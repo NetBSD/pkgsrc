@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1539 2009/04/25 12:38:22 rh Exp $
+$NetBSD: CHANGES-2009,v 1.1540 2009/04/25 13:53:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmcvs to 1.11.23 [sno 2009-04-25]
 	Updated sysutils/burn to 0.4.1 [rh 2009-04-25]
 	Added textproc/xml2 version 0.4 [rh 2009-04-25]
+	Updated print/tex-bin-dvipsk to 2008.12785 [minskim 2009-04-25]
