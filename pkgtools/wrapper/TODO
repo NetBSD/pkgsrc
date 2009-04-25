@@ -25,3 +25,4 @@ write tests for:
     and they have the right targets
 * "strip the leading paths from the toolchain variables": hm? path
     test like the others?
+* XXX all other current behaviors, whether we like them or not
