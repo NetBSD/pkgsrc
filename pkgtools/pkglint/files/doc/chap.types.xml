@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.15 2009/04/26 11:00:17 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.16 2009/04/26 11:27:42 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -357,6 +357,13 @@
 	when <varname>PKGBASE</varname> is not yet defined. This type
 	prevent that mistake from being done again.</para>
 	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>PkgPath</type></literal></term>
+	<listitem><para>A directory name that is relative to the
+	top-level pkgsrc directory. This is only used in specifying
+	specific packages in bulk builds. Despite its name, this type is
+	more similar to <type>RelativePkgDir</type> than to
+	<type>RelativePkgPath</type>.</para></listitem></varlistentry>
 
 	<varlistentry><term><literal><type>PkgRevision</type></literal></term>
 	<listitem><para>The package revision must be a small integer.
