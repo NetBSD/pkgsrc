@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.example,v 1.1 2009/04/26 03:34:13 taca Exp $
+#
+
+DISTNAME=	typolight-${TL_VERSION}
+PKGNAME=	typolight${TL_VER}-example-${TL_PKGVER}
+CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
+
+MAINTAINER=	taca@NetBSD.org
+HOMEPAGE=	http://www.typolight.org/
+COMMENT=	Sample site data for TYPOlight
+
+DEPENDS+=	typolight${TL_VER}>=${TL_PKGVER}:../../www/typolight${TL_VER}
+
+DISTINFO_FILE=	${.CURDIR}/../../www/typolight${TL_VER}/distinfo
+
+USE_TOOLS=	pax
+NO_BUILD=	yes
+NO_CONFIGURE=	yes
+
+PKG_DESTDIR_SUPPORT=	destdir
+
+WWW_EG_FILES=	music_academy.css tl_files/music_academy
+WWW_FILE=	templates/example_website.sql
+
+.for f in ${WWW_EG_FILES} ${WWW_FILE}
+EXTRACT_ELEMENTS+=	${DISTNAME}/${f}
+.endfor
+
+PKG_GROUPS_VARS+=	APACHE_GROUP
+PKG_USERS_VARS+=	APACHE_USER
+
+INSTALLATION_DIRS+=	${TL_WEBDIR}/templates
+
+do-install:
+	cd ${WRKSRC}; \
+		pax -rw -pm ${WWW_EG_FILES} ${DESTDIR}${PREFIX}/${TL_EGDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} ${WWW_FILE} \
+		${DESTDIR}${PREFIX}/${TL_WEBDIR}/templates
