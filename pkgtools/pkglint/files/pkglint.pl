@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.810 2009/04/26 12:51:35 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.811 2009/04/26 16:08:40 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -279,8 +279,8 @@ sub new($$) {
 	return $self;
 }
 
-sub string($)		{ return shift(@_)->[STRING]; }
-sub n($)		{ return shift(@_)->[N]; }
+sub string($)		{ return shift()->[STRING]; }
+sub n($)		{ return shift()->[N]; }
 
 sub has($$) {
 	my ($self, $n) = @_;
@@ -343,11 +343,11 @@ sub new($$$$) {
 	return $self;
 }
 
-sub fname($)		{ return shift(@_)->[FNAME]; }
-sub lines($)		{ return shift(@_)->[LINES]; }
-sub text($)		{ return shift(@_)->[TEXT]; }
-# Note: physlines is _not_ a usual getter method.
-sub is_changed($)	{ return shift(@_)->[CHANGED]; }
+sub fname($)		{ return shift()->[FNAME]; }
+sub lines($)		{ return shift()->[LINES]; }
+sub text($)		{ return shift()->[TEXT]; }
+# Note: physlines is _not_ a simple getter method.
+sub is_changed($)	{ return shift()->[CHANGED]; }
 
 # querying, getting and setting the extra values.
 sub has($$) {
@@ -388,7 +388,6 @@ sub physlines($) {
 # Only for PkgLint::String support
 sub substring($$$$) {
 	my ($self, $line, $start, $end) = @_;
-	my ($text, $physlines);
 
 	return substr($self->[PHYSLINES]->[$line]->[1], $start, $end);
 }
@@ -719,10 +718,10 @@ sub new($$$) {
 	return $self;
 }
 
-sub kind_of_list($)	{ return shift(@_)->[KIND_OF_LIST]; }
-sub basic_type($)	{ return shift(@_)->[BASIC_TYPE]; }
+sub kind_of_list($)	{ return shift()->[KIND_OF_LIST]; }
+sub basic_type($)	{ return shift()->[BASIC_TYPE]; }
 # no getter method for acls
-sub is_guessed($)	{ return shift(@_)->[IS_GUESSED]; }
+sub is_guessed($)	{ return shift()->[IS_GUESSED]; }
 
 sub perms($$) {
 	my ($self, $fname) = @_;
@@ -836,10 +835,10 @@ sub new_from_pool($$$$$) {
 	return $pool->{$key};
 }
 
-sub time($)		{ return shift(@_)->[TIME]; }
-sub type($)		{ return shift(@_)->[TYPE]; }
-sub shellword($)	{ return shift(@_)->[SHELLWORD]; }
-sub extent($)		{ return shift(@_)->[EXTENT]; }
+sub time($)		{ return shift()->[TIME]; }
+sub type($)		{ return shift()->[TYPE]; }
+sub shellword($)	{ return shift()->[SHELLWORD]; }
+sub extent($)		{ return shift()->[EXTENT]; }
 
 sub to_string($) {
 	my ($self) = @_;
@@ -879,14 +878,14 @@ sub new($) {
 	return $self;
 }
 
-sub subst_class($)		{ return shift(@_)->[SUBST_CLASS]; }
-sub subst_stage($)		{ return shift(@_)->[SUBST_STAGE]; }
-sub subst_message($)		{ return shift(@_)->[SUBST_MESSAGE]; }
-sub subst_files($)		{ return shift(@_)->[SUBST_FILES]; }
-sub subst_sed($)		{ return shift(@_)->[SUBST_SED]; }
-sub subst_vars($)		{ return shift(@_)->[SUBST_VARS]; }
-sub subst_filter_cmd($)		{ return shift(@_)->[SUBST_FILTER_CMD]; }
-sub subst_id($)			{ return shift(@_)->[SUBST_ID]; }
+sub subst_class($)		{ return shift()->[SUBST_CLASS]; }
+sub subst_stage($)		{ return shift()->[SUBST_STAGE]; }
+sub subst_message($)		{ return shift()->[SUBST_MESSAGE]; }
+sub subst_files($)		{ return shift()->[SUBST_FILES]; }
+sub subst_sed($)		{ return shift()->[SUBST_SED]; }
+sub subst_vars($)		{ return shift()->[SUBST_VARS]; }
+sub subst_filter_cmd($)		{ return shift()->[SUBST_FILTER_CMD]; }
+sub subst_id($)			{ return shift()->[SUBST_ID]; }
 
 sub init($) {
 	my ($self) = @_;
@@ -1053,15 +1052,6 @@ package CVS_Entry;
 #==========================================================================
 # A CVS_Entry represents one line from a CVS/Entries file.
 #==========================================================================
-
-BEGIN {
-	import PkgLint::Util qw(
-		false true
-	);
-	import PkgLint::Logging qw(
-		log_warning
-	);
-}
 
 use enum qw(FNAME REVISION MTIME TAG);
 
