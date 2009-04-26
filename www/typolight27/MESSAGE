@@ -1,0 +1,15 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/04/26 03:58:42 taca Exp $
+
+To complete the setup, please read:
+
+	${PREFIX}/share/doc/typolight/README
+
+If you customize your frontend template (fe_page) befor TYPOlight 2.6.3
+and before, you need to update it for current release.
+
+Check corresponding articles in TYPOligt's form:
+
+	http://www.typolight.org/forum/topic/9798.html
+
+===========================================================================
