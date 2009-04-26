@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.807 2009/04/04 18:36:04 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.808 2009/04/26 08:44:42 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -50,7 +50,6 @@ BEGIN {
 	@EXPORT_OK = qw(
 		assert
 		false true dont_know doesnt_matter
-		min max
 		array_to_hash normalize_pathname print_table
 	);
 }
@@ -74,18 +73,6 @@ sub assert($$) {
 		}
 		exit(1);
 	}
-}
-
-sub min($$) {
-	my ($a, $b) = @_;
-
-	return ($a < $b) ? $a : $b;
-}
-
-sub max($$) {
-	my ($a, $b) = @_;
-
-	return ($a > $b) ? $a : $b;
 }
 
 # Prints the C<$table> on the C<$out> stream. The C<$table> shall be an
