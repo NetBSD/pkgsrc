@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1542 2009/04/26 03:48:14 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1543 2009/04/26 04:13:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2100,3 +2100,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/xml2 version 0.4 [rh 2009-04-25]
 	Updated print/tex-bin-dvipsk to 2008.12785 [minskim 2009-04-25]
 	Updated multimedia/vlc to 0.9.9 [tnn 2009-04-25]
+	Renamed www/typolight to www/typolight26 [taca 2009-04-26]
+	Renamed www/typolight-example to www/typolight26-example [taca 2009-04-26]
+	Renamed www/typolight-translations to www/typolight26-translations [taca 2009-04-26]
+	Added www/typolight27 version 2.7rc2 [taca 2009-04-26]
+	Added www/typolight27-example version 2.7rc2 [taca 2009-04-26]
+	Added www/typolight27-translations version 20090423 [taca 2009-04-26]
