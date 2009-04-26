@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.14 2006/11/25 20:27:42 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.15 2009/04/26 11:00:17 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -154,36 +154,36 @@
 
 	<itemizedlist>
 
-	<listitem>The variable may be either used at preprocessing time
+	<listitem><para>The variable may be either used at preprocessing time
 	or at runtime. Some variables are defined in
 	<filename>bsd.pkg.mk</filename> and thus are not available until
 	that file has been included. As this should always be the very
 	last thing a package includes, it practically means that these
-	variables are only available at runtime.</listitem>
+	variables are only available at runtime.</para></listitem>
 
-	<listitem>The variable may appear as the whole right hand side
+	<listitem><para>The variable may appear as the whole right hand side
 	of an assignment, as a single word, or even as part of a word.
 	First, the types on the right and left side should be
 	compatible. Second, some variables need to be quoted correctly,
-	depending on whether they are part of a word or not.</listitem>
+	depending on whether they are part of a word or not.</para></listitem>
 
-	<listitem>In shell commands, the variable may also appear as a
+	<listitem><para>In shell commands, the variable may also appear as a
 	whole word or as part of a word. This is similar to the case
-	above.</listitem>
+	above.</para></listitem>
 
-	<listitem>The variable may appear inside some sort of quotes.
+	<listitem><para>The variable may appear inside some sort of quotes.
 	For some variables this is acceptable, as they are assumed to
 	never contain special characters. For others it
-	isn't.</listitem>
+	isn't.</para></listitem>
 
-	<listitem>The various operators in conditional statements like
+	<listitem><para>The various operators in conditional statements like
 	<literal>.if</literal> may further restrict the valid values.
 	For example, the <varname>OPSYS</varname> variable should only
 	be compared to well-known operating system names. The
 	<varname>exists()</varname> function should only be called on
 	pathnames. The <varname>defined()</varname> operator only checks
 	if the variable is defined and does not access its
-	value.</listitem>
+	value.</para></listitem>
 
 	</itemizedlist>
 
