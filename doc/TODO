@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8062 2009/04/25 17:48:26 tnn Exp $
+$NetBSD: TODO,v 1.8063 2009/04/26 05:50:19 taca Exp $
 
 Suggested new packages
 ======================
@@ -848,7 +848,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.0
 	o libole2-2.2.8
-	o libpciaccess-0.10.5
+	o libpciaccess-0.10.6
 	o libshout-2.2.2
 	o libssh-0.2
 	o libssh2-1.1
