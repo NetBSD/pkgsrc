@@ -1,6 +1,6 @@
-# $NetBSD: options.mk,v 1.1 2008/11/06 11:23:15 taca Exp $
+# $NetBSD: options.mk,v 1.2 2009/04/26 03:34:13 taca Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight
+PKG_OPTIONS_VAR=	PKG_OPTIONS.typolight${TL_VER}
 PKG_SUPPORTED_OPTIONS=	typolight-liveupdate
 
 .include "../../mk/bsd.options.mk"
