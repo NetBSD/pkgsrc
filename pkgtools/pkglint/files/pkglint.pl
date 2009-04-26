@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.809 2009/04/26 11:24:23 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.810 2009/04/26 12:51:35 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2189,21 +2189,21 @@ sub load_doc_CHANGES($) {
 	my ($fname) = @_;
 	my $lines = load_file($fname) or die;
 
-	my @changes = ();
+	my $changes = {}; # { pkgpath -> @changes }
 	foreach my $line (@$lines) {
 		my $text = $line->text;
 		next unless $text =~ m"^\t[A-Z]";
 
 		if ($text =~ m"^\t(Updated) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+			push(@{$changes->{$2}}, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
 		} elsif ($text =~ m"^\t(Added) (\S+) version (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+			push(@{$changes->{$2}}, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
 		} elsif ($text =~ m"^\t(Removed) (\S+) (?:successor (\S+) )?\[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-			push(@changes, PkgLint::Change->new($line, $1, $2, undef, $3, $4));
+			push(@{$changes->{$2}}, PkgLint::Change->new($line, $1, $2, undef, $3, $4));
 		} elsif ($text =~ m"^\t(Downgraded) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+			push(@{$changes->{$2}}, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
 		} elsif ($text =~ m"^\t(Renamed|Moved) (\S+) to (\S+) \[(\S+) (\d\d\d\d-\d\d-\d\d)\]$") {
-			push(@changes, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
+			push(@{$changes->{$2}}, PkgLint::Change->new($line, $1, $2, $3, $4, $5));
 		} else {
 			$line->log_warning("Unknown doc/CHANGES line: " . $line->text);
 			$line->explain_warning(
@@ -2211,10 +2211,10 @@ sub load_doc_CHANGES($) {
 "established by mk/misc/developer.mk?");
 		}
 	}
-	return \@changes;
+	return $changes;
 }
 
-my $get_doc_CHANGES_docs = undef; # [ $fname, undef or $lines ]
+my $get_doc_CHANGES_docs = undef; # [ $fname, undef or { pkgpath -> @changes } ]
 sub get_doc_CHANGES($) {
 	my ($pkgpath) = @_;
 
@@ -2243,7 +2243,7 @@ sub get_doc_CHANGES($) {
 			$doc->[1] = load_doc_CHANGES("${cwd_pkgsrcdir}/doc/$doc->[0]");
 		}
 
-		foreach my $change (@{$doc->[1]}) {
+		foreach my $change (@{$doc->[1]->{$pkgpath}}) {
 			next unless $pkgpath eq $change->pkgpath;
 			push(@result, $change);
 		}
