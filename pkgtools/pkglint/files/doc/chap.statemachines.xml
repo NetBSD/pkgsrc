@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.statemachines.xml,v 1.3 2006/07/27 09:19:37 rillig Exp $ -->
+<!-- $NetBSD: chap.statemachines.xml,v 1.4 2009/04/26 11:00:17 rillig Exp $ -->
 
 <chapter id="statemachines">
 <title>State machines</title>
@@ -31,7 +31,7 @@
 	<imageobject>
 	<imagedata fileref="statemachine.shellcmd.png" format="PNG"/>
 	</imageobject>
-	<textobject>(Here should be a drawing of the state transitions.)</textobject>
+	<textobject><para>(Here should be a drawing of the state transitions.)</para></textobject>
 	</mediaobject>
 	</figure>
 
@@ -56,7 +56,7 @@
 	<imageobject>
 	<imagedata fileref="statemachine.patch.png" format="PNG"/>
 	</imageobject>
-	<textobject>(Here should be a drawing of the state transitions.)</textobject>
+	<textobject><para>(Here should be a drawing of the state transitions.)</para></textobject>
 	</mediaobject>
 	</figure>
 
