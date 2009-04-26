@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.808 2009/04/26 08:44:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.809 2009/04/26 11:24:23 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1687,6 +1687,23 @@ sub parse_acls($$) {
 	return $acls;
 }
 
+my $get_vartypes_basictypes_result = undef;
+sub get_vartypes_basictypes() {
+	if (defined($get_vartypes_basictypes_result)) {
+		return $get_vartypes_basictypes_result;
+	}
+
+	my $lines = load_file($0);
+	my $types = {};
+	assert($lines, "Couldn't load pkglint.pl from $0");
+	foreach my $line (@$lines) {
+		if ($line->text =~ m"^\s+\} elsif \(\$type eq \"(\w+)\"\) \{$") {
+			$types->{$1} = 1;
+		}
+	}
+	return ($get_vartypes_basictypes_result = $types);
+}
+
 my $get_vartypes_map_result = undef;
 sub get_vartypes_map() {
 	my ($fname, $vartypes);
@@ -1704,12 +1721,13 @@ sub get_vartypes_map() {
 		$"x;
 
 	use constant re_vartypedef => qr"^
-		([\w\d_.]+?)				# variable name
-		(\*|\.\*|) \s+				# parameterized?
-		(?:(InternalList|List) \s+ of \s+)?	# kind of list
-		(?:([\w\d_]+) | \{\s*([\w\d_+,\-.\s]+?)\s*\}) # basic type
-		(?:\s+ \[ ([^\]]*) \])?			# optional ACL
-		(?:\s*\#.*)?				# optional comment
+		([\w\d_.]+?)				# $1 = variable name
+		(\*|\.\*|) \s+				# $2 = parameterized?
+		(?:(InternalList|List) \s+ of \s+)?	# $3 ?= kind of list
+		(?:([\w\d_]+)				# $4 ?= basic type
+		  | \{\s*([\w\d_+,\-.\s]+?)\s*\})	# $5 ?= enumeration values
+		(?:\s+ \[ ([^\]]*) \])?			# $6 ?= optional ACL
+		(?:\s*\#.*)?				# $7 ?= optional comment
 		$"x;
 
 	$fname = conf_datadir."/makevars.map";
@@ -1730,6 +1748,13 @@ sub get_vartypes_map() {
 				my $kind_of_list = !defined($kind_of_list_text) ? LK_NONE
 				    : ($kind_of_list_text eq "List") ? LK_EXTERNAL
 				    : LK_INTERNAL;
+
+				if (defined($typename) && !exists(get_vartypes_basictypes()->{$typename})) {
+					$line->log_fatal("Unknown basic type \"$typename\" for variable $varname. "
+						. "Valid basic types are "
+						. join(", ", sort keys %{get_vartypes_basictypes()})
+						. ".");
+				}
 
 				my $basic_type = defined($enums)
 				    ? array_to_hash(split(qr"\s+", $enums))
@@ -2881,7 +2906,7 @@ sub get_variable_type($$) {
 		: ($varname =~ m"FILES$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathmask", allow_runtime, GUESSED)
 		: ($varname =~ m"FILE$") ? PkgLint::Type->new(LK_NONE, "Pathname", allow_runtime, GUESSED)
 		: ($varname =~ m"PATH$") ? PkgLint::Type->new(LK_NONE, "Pathlist", allow_runtime, GUESSED)
-		: ($varname =~ m"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "List of Pathname", allow_runtime, GUESSED)
+		: ($varname =~ m"PATHS$") ? PkgLint::Type->new(LK_EXTERNAL, "Pathname", allow_runtime, GUESSED)
 		: ($varname =~ m"_USER$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
 		: ($varname =~ m"_GROUP$") ? PkgLint::Type->new(LK_NONE, "UserGroupName", allow_all, GUESSED)
 		: ($varname =~ m"_ENV$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
@@ -5145,6 +5170,9 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value eq $value_novar && $value !~ regex_pkgname) {
 			$line->log_warning("\"${value}\" is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.");
 		}
+
+	} elsif ($type eq "PkgPath") {
+		checkline_relative_pkgdir($line, "$cur_pkgsrcdir/$value");
 
 	} elsif ($type eq "PkgOptionsVar") {
 		checkline_mk_vartype_basic($line, $varname, "Varname", $op, $value, $comment, false, $is_guessed);
