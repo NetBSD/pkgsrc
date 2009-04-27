@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1545 2009/04/27 07:17:10 ghen Exp $
+$NetBSD: CHANGES-2009,v 1.1546 2009/04/27 09:33:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1669,6 +1669,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/eigen2 to 2.0.0 [markd 2009-04-06]
 	Updated www/neon to 0.28.3 [markd 2009-04-06]
 	Updated multimedia/phonon to 4.3.1 [markd 2009-04-06]
+	Updated devel/coccinelle to 0.1.7 [wiz 2009-04-06]
 	Added math/p5-Statistics-Descriptive version 2.6 [chuck 2009-04-06]
 	Added graphics/p5-GDGraph-boxplot version 1.00 [chuck 2009-04-06]
 	Updated www/privoxy to 3.0.12 [mjl 2009-04-07]
