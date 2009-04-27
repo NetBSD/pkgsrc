@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1544 2009/04/27 04:22:00 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1545 2009/04/27 07:17:10 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2107,3 +2107,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/typolight27-example version 2.7rc2 [taca 2009-04-26]
 	Added www/typolight27-translations version 20090423 [taca 2009-04-26]
 	Added devel/p5-MooseX-Singleton version 0.17 [seb 2009-04-27]
+	Updated databases/openldap to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-client to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-cloak to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-nops to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-smbk5pwd to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-doc to 2.4.16 [ghen 2009-04-27]
+	Updated databases/openldap-server to 2.4.16 [ghen 2009-04-27]
