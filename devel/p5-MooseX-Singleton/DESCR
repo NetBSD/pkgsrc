@@ -1,0 +1,5 @@
+The Perl 5 module MooseX::Singleton lets you easily upgrade your
+Moose class to a singleton.  All you should need to do to transform
+your class is to change 'use Moose' to 'use MooseX::Singleton'.
+MooseX::Singleton gives your class an 'instance' method that can
+be used to get a handle on the singleton.
