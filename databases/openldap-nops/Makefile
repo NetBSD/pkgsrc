@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/25 20:31:41 manu Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/27 07:13:02 ghen Exp $
 
 PKGNAME=		${DISTNAME:S/-/-nops-/}
 COMMENT=		Remove null-ops for OpenLDAP
@@ -24,7 +24,7 @@ do-install:
 
 .include "../../databases/openldap/Makefile.common"
 
-.include "../../databases/db46/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
 .include "../../databases/openldap-client/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
