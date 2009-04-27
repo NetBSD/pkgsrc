@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1562 2009/04/27 22:13:23 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1563 2009/04/27 22:58:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2134,3 +2134,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-psnfss-doc version 9.2a [minskim 2009-04-27]
 	Updated devel/p5-Class-MOP to 0.83 [seb 2009-04-27]
 	Updated devel/p5-Moose to 0.76 [seb 2009-04-27]
+	Updated devel/p5-MooseX-InsideOut to 0.103 [seb 2009-04-27]
