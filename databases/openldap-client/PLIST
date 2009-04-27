@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/24 21:10:48 manu Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/04/27 07:15:44 ghen Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -23,6 +23,7 @@ lib/libldap_r.la
 man/man1/ldapadd.1
 man/man1/ldapcompare.1
 man/man1/ldapdelete.1
+man/man1/ldapexop.1
 man/man1/ldapmodify.1
 man/man1/ldapmodrdn.1
 man/man1/ldappasswd.1
