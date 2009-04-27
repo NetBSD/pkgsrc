@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1546 2009/04/27 09:33:27 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1547 2009/04/27 14:33:06 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2115,3 +2115,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/openldap-smbk5pwd to 2.4.16 [ghen 2009-04-27]
 	Updated databases/openldap-doc to 2.4.16 [ghen 2009-04-27]
 	Updated databases/openldap-server to 2.4.16 [ghen 2009-04-27]
+	Updated print/tex-bin-kpathsea to 2008.12778nb1 [minskim 2009-04-27]
