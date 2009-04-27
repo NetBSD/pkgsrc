@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/04/24 17:23:53 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/04/27 15:40:17 minskim Exp $
 # TeX Live Revision 12778
 
 DISTNAME=	bin-latex
 PKGNAME=	tex-${DISTNAME}-2008.12778
+PKGREVISION=	1
+DIST_SUBDIR=	${PKGNAME}
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX macro package that defines LaTeX
