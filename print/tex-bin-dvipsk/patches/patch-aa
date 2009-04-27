@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1 2009/04/27 15:18:47 minskim Exp $
+
+--- bin/pkfix.orig	2009-03-23 10:15:15.000000000 -0700
++++ bin/pkfix
+@@ -1,5 +1,4 @@
+-eval '(exit $?0)' && eval 'exec perl -S $0 ${1+"$@"}' && eval 'exec perl -S $0 $argv:q'
+-    if 0;
++#! /usr/bin/perl
+ use strict;
+ $^W=1; # turn warning on
+ #
