@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/27 18:45:29 minskim Exp $
+share/texmf-dist/doc/latex/psnfss/00readme.txt
+share/texmf-dist/doc/latex/psnfss/changes.txt
+share/texmf-dist/doc/latex/psnfss/manifest.txt
+share/texmf-dist/doc/latex/psnfss/psfonts.pdf
+share/texmf-dist/doc/latex/psnfss/psnfss2e.pdf
+share/texmf-dist/doc/latex/psnfss/test/mathtest.tex
+share/texmf-dist/doc/latex/psnfss/test/pitest.tex
+share/texmf-dist/doc/latex/psnfss/test/test0.tex
+share/texmf-dist/doc/latex/psnfss/test/test1.tex
+share/texmf-dist/doc/latex/psnfss/test/test2.tex
+share/texmf-dist/doc/latex/psnfss/test/test3.tex
