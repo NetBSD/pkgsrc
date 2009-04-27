@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/20 19:40:56 seb Exp $
+$NetBSD: distinfo,v 1.2 2009/04/27 22:56:54 seb Exp $
 
-SHA1 (MooseX-InsideOut-0.102.tar.gz) = 47335207e5cd3916a098b1b403edc37115b579a7
-RMD160 (MooseX-InsideOut-0.102.tar.gz) = 4be9b8951305495ab0262df07c26c8281af8131f
-Size (MooseX-InsideOut-0.102.tar.gz) = 10553 bytes
+SHA1 (MooseX-InsideOut-0.103.tar.gz) = fefd04c9faf4b2579579fe47f90fb322aaf3baf8
+RMD160 (MooseX-InsideOut-0.103.tar.gz) = e7a8e061a8b14f471e3e74f1fcb2de2c7f9dff49
+Size (MooseX-InsideOut-0.103.tar.gz) = 10596 bytes
