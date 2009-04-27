@@ -1,0 +1,8 @@
+Font definition files, macros, and font metrics for freely-available
+Adobe Type 1 fonts.  The font set consists of the `LaserWriter 35' set
+(originally `freely available' because embedded in PostScript
+printers), and a variety of other free fonts such as Bitstream
+Charter, Adobe Utopia (both donated to the public domain by their
+commercial foundries), and Pazo Math (optionally extended with the fpl
+small-caps and old- style figures fonts).  The bundle is part of the
+LaTeX `required' set of packages.
