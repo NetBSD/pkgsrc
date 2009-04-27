@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.35 2009/04/24 11:54:14 tron Exp $
+# $NetBSD: Darwin.mk,v 1.36 2009/04/27 12:03:36 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -32,12 +32,6 @@ TYPE?=		type				# Shell builtin
 IMAKEOPTS+=	-DBuildHtmlManPages=NO
 .if defined(UNPRIVILEGED) && !empty(UNPRIVILEGED:M[Yy][Ee][Ss])
 IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
-.endif
-
-# Use "/bin/ksh" under Mac OS X Leopard and newer because it is
-# considerably faster that "/bin/sh" (BASH).
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-SH?=		/bin/ksh
 .endif
 
 .if !defined(PKGSRC_COMPILER) || !empty(PKGSRC_COMPILER:Mgcc)
