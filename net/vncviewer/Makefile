@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/02/27 13:05:20 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2009/04/27 18:35:30 tron Exp $
 
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		vncviewer-4.1.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 
@@ -12,7 +12,7 @@ COMMENT=		Viewer for remote X and Win32 VNC servers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS=		tightvncviewer-[0-9]*
+CONFLICTS=		tightvnc-[0-9]* tightvncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
 CRYPTO=			yes
