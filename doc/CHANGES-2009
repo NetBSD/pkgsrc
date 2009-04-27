@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1560 2009/04/27 18:37:57 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1561 2009/04/27 18:46:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2130,3 +2130,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-natbib-doc version 8.3 [minskim 2009-04-27]
 	Updated net/tightvnc to 1.3.9nb3 [tron 2009-04-27]
 	Updated net/vncviewer to 4.1.2nb [tron 2009-04-27]
+	Added fonts/tex-psnfss version 9.2a [minskim 2009-04-27]
+	Added fonts/tex-psnfss-doc version 9.2a [minskim 2009-04-27]
