@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1557 2009/04/27 17:09:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1558 2009/04/27 18:01:31 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-pdftex to 1.40.9.12785 [minskim 2009-04-27]
 	Added print/tex-pdftex-doc version 1.40.9 [minskim 2009-04-27]
 	Updated devel/py-game to 1.8.1nb2 [wiz 2009-04-27]
+	Added print/tex-natbib version 8.3 [minskim 2009-04-27]
