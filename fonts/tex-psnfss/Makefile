@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.1.1.1 2009/04/27 18:45:00 minskim Exp $
+# TeX Live Revision 7978
+
+DISTNAME=	psnfss
+PKGNAME=	tex-${DISTNAME}-9.2a
+
+MAINTAINER=	minskim@NetBSD.org
+COMMENT=	Font support for common PostScript fonts
+
+CONFLICTS+=	teTeX-texmf<=3.0nb13
+DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+
+TEX_MAP_FILES+=	charter.map
+TEX_MAP_FILES+=	fpls.map
+TEX_MAP_FILES+=	pazo.map
+TEX_MAP_FILES+=	utopia.map
+
+.include "../../print/texlive/module.mk"
+.include "../../mk/bsd.pkg.mk"
