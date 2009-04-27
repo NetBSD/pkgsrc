@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1543 2009/04/26 04:13:32 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1544 2009/04/27 04:22:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2106,3 +2106,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/typolight27 version 2.7rc2 [taca 2009-04-26]
 	Added www/typolight27-example version 2.7rc2 [taca 2009-04-26]
 	Added www/typolight27-translations version 20090423 [taca 2009-04-26]
+	Added devel/p5-MooseX-Singleton version 0.17 [seb 2009-04-27]
