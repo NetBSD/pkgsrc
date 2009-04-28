@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1570 2009/04/28 18:35:28 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1571 2009/04/28 19:08:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/youtube-dl to 20090425 [tnn 2009-04-28]
 	Added fonts/tex-amsfonts version 2.2 [minskim 2009-04-28]
 	Added fonts/tex-amsfonts-doc version 2.2 [minskim 2009-04-28]
+	Added print/tex-ltxmisc version 2008.12680 [minskim 2009-04-28]
