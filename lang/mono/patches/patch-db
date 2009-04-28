@@ -1,3 +1,5 @@
+$NetBSD: patch-db,v 1.2 2009/04/28 10:31:58 hasso Exp $
+
 --- mono/utils/mono-proclib.c.orig	2008-11-10 20:56:14 -0800
 +++ mono/utils/mono-proclib.c	2009-03-03 15:30:03 -0800
 @@ -13,14 +13,19 @@
