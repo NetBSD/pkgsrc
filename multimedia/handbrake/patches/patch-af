@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+$NetBSD: patch-af,v 1.2 2009/04/28 11:57:55 hasso Exp $
 
 --- libhb/ports.c.orig	2008-10-09 20:41:15.000000000 -0400
 +++ libhb/ports.c	2009-01-21 08:57:58.000000000 -0500
@@ -6,7 +6,7 @@ $NetBSD: patch-af,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
  #include <sys/processor.h>
  #endif
  
-+#if defined( SYS_NETBSD )
++#if defined( SYS_NETBSD ) || defined( SYS_DRAGONFLY )
 +#include <sys/param.h>
 +#include <sys/sysctl.h>
 +#endif
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
  #if defined( SYS_BEOS )
      snooze( 1000 * delay );
 -#elif defined( SYS_DARWIN ) || defined( SYS_LINUX ) || defined( SYS_FREEBSD) || defined( SYS_SunOS )
-+#elif defined( SYS_DARWIN ) || defined( SYS_LINUX ) || defined( SYS_FREEBSD) || defined( SYS_SunOS ) || defined( SYS_NETBSD )
++#elif defined( SYS_DARWIN ) || defined( SYS_LINUX ) || defined( SYS_FREEBSD) || defined( SYS_SunOS ) || defined( SYS_NETBSD ) || defined( SYS_DRAGONFLY )
      usleep( 1000 * delay );
  #elif defined( SYS_CYGWIN )
      Sleep( delay );
@@ -27,7 +27,7 @@ $NetBSD: patch-af,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
          fclose( info );
      }
  
-+#elif defined( SYS_NETBSD )
++#elif defined( SYS_NETBSD ) || defined( SYS_DRAGONFLY )
 +    size_t oldlen = sizeof( cpu_count );
 +
 +    if ( sysctlbyname( "hw.ncpu", &cpu_count, &oldlen, NULL, 0 ) != 0 )

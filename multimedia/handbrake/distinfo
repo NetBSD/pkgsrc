@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/04/28 11:57:54 hasso Exp $
 
 SHA1 (handbrake/HandBrake-0.9.3.tar.gz) = f52389b1226bf81ba58bca67f3a1aa468cfee624
 RMD160 (handbrake/HandBrake-0.9.3.tar.gz) = 50085816875439ee82bc213252f683352bbdbbb0
@@ -63,13 +63,13 @@ Size (handbrake/xvidcore-1.1.3.tar.gz) = 739835 bytes
 SHA1 (handbrake/zlib-1.2.3.tar.gz) = db9f8380cd0652b5b8e75e43bcf7c4a4431df9f8
 RMD160 (handbrake/zlib-1.2.3.tar.gz) = 292c1bc8d80040bf446bc6ca59341cf50d64dca2
 Size (handbrake/zlib-1.2.3.tar.gz) = 502411 bytes
-SHA1 (patch-aa) = 03362c540efc30c28ecb5f31f583883795b89b9e
-SHA1 (patch-ab) = 9122a96f4f2aa847c7cd0f23aae3d883d00f8967
-SHA1 (patch-ac) = e2d1e35ec81bfb290bcb402cd163f6bcf582c8cd
+SHA1 (patch-aa) = b7c4057caf6aebca7cc47f0435e67937dd25a6f2
+SHA1 (patch-ab) = 45443e0cd7fdc37420f29e526327ebd008f25e15
+SHA1 (patch-ac) = a42d8ae30e4550064eeb3de8f6fcc5312a170982
 SHA1 (patch-ad) = 4059de9d2242f13f9fb5f00e9bddca744796f2d1
-SHA1 (patch-ae) = cace5dc913f68a6d16bcedc21f456d90cc8c3ff5
-SHA1 (patch-af) = 51de27bfa474bf134f97e105ef5fb8b7c0b14862
-SHA1 (patch-ag) = 5b8d90b34a2302c54354c6b9742778658c5024c8
+SHA1 (patch-ae) = 136cbda7c23b5aab2c211444c07c4ec57dc5f06d
+SHA1 (patch-af) = 8f0606f5a44c27e418110a47713ccad7d0b05adf
+SHA1 (patch-ag) = b5a6882280b9f907334618be5ab617d5596fe360
 SHA1 (patch-ah) = c6c050245b990429751c6fe243fb488028253af4
 SHA1 (patch-ai) = d1a77b07ca338f522f7eaec3c2a4a71dacd61268
 SHA1 (patch-aj) = 3855b048017581adac91c8a4d146d41a27840486
