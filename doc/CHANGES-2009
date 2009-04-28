@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1564 2009/04/28 01:03:12 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1565 2009/04/28 01:18:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2136,3 +2136,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Moose to 0.76 [seb 2009-04-27]
 	Updated devel/p5-MooseX-InsideOut to 0.103 [seb 2009-04-27]
 	Added print/tex-ams version 2008.7997 [minskim 2009-04-28]
+	Added print/tex-amsmath version 2.13 [minskim 2009-04-28]
+	Added print/tex-amsmath-doc version 2.13 [minskim 2009-04-28]
