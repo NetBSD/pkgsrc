@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2009/03/22 19:55:42 markd Exp $
+# $NetBSD: Makefile,v 1.38 2009/04/28 21:19:00 zafer Exp $
 
 DISTNAME=	spim-7.3
 CATEGORIES=	emulators
-MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/ \
-		ftp://ftp.cs.wisc.edu/pub/spim/
+MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/ 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pages.cs.wisc.edu/~larus/spim.html
