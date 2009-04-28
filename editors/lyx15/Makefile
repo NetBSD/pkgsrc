@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/28 19:55:34 zafer Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/28 19:56:45 zafer Exp $
 #
 
 DISTNAME=		lyx-1.5.4
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/1.5.x/ \
 			ftp://ftp.lip6.fr/pub/lyx/stable/1.5.x/ \
 			http://sunsite.icm.edu.pl/pub/unix/editors/lyx/stable/1.5.x/ \
 			http://lyx.cybermirror.org/stable/1.5.x/ \
-			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/1.5.x/ \
+			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/1.5.x/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
