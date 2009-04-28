@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1568 2009/04/28 11:03:10 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1569 2009/04/28 14:51:34 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/scummvm to 0.13.1 [adam 2009-04-28]
 	Updated www/firefox3 to 3.0.10 [tnn 2009-04-28]
 	Updated lang/mono to 2.4nb1 [hasso 2009-04-28]
+	Updated net/youtube-dl to 20090425 [tnn 2009-04-28]
