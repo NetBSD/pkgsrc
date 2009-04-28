@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1569 2009/04/28 14:51:34 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1570 2009/04/28 18:35:28 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2142,3 +2142,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.10 [tnn 2009-04-28]
 	Updated lang/mono to 2.4nb1 [hasso 2009-04-28]
 	Updated net/youtube-dl to 20090425 [tnn 2009-04-28]
+	Added fonts/tex-amsfonts version 2.2 [minskim 2009-04-28]
+	Added fonts/tex-amsfonts-doc version 2.2 [minskim 2009-04-28]
