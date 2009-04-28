@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1566 2009/04/28 06:29:19 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1567 2009/04/28 09:30:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-amsmath version 2.13 [minskim 2009-04-28]
 	Added print/tex-amsmath-doc version 2.13 [minskim 2009-04-28]
 	Updated games/scummvm to 0.13.1 [adam 2009-04-28]
+	Updated www/firefox3 to 3.0.10 [tnn 2009-04-28]
