@@ -1,3 +1,5 @@
+$NetBSD: patch-ae,v 1.10 2009/04/28 10:31:58 hasso Exp $
+
 --- libgc/configure.orig	2009-01-09 07:56:17 -0800
 +++ libgc/configure	2009-03-03 15:25:59 -0800
 @@ -4604,7 +4604,27 @@
