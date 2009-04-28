@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1565 2009/04/28 01:18:49 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1566 2009/04/28 06:29:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2138,3 +2138,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-ams version 2008.7997 [minskim 2009-04-28]
 	Added print/tex-amsmath version 2.13 [minskim 2009-04-28]
 	Added print/tex-amsmath-doc version 2.13 [minskim 2009-04-28]
+	Updated games/scummvm to 0.13.1 [adam 2009-04-28]
