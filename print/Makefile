@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2009/04/28 19:08:58 minskim Exp $
+# $NetBSD: Makefile,v 1.241 2009/04/28 19:52:39 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -146,6 +146,8 @@ SUBDIR+=	tex-draftwatermark
 SUBDIR+=	tex-dvipdfmx-def
 SUBDIR+=	tex-etex
 SUBDIR+=	tex-etex-doc
+SUBDIR+=	tex-etex-pkg
+SUBDIR+=	tex-etex-pkg-doc
 SUBDIR+=	tex-everypage
 SUBDIR+=	tex-exam
 SUBDIR+=	tex-exam-doc
