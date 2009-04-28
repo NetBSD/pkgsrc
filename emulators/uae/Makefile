@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2009/04/28 21:22:01 zafer Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	3
 CATEGORIES=	emulators
-MASTER_SITES=	ftp://ftp.coresystems.de/pub/uae/sources/develop/ \
-		http://www.freiburg.linux.de/~uae/bin/sources/develop/
+MASTER_SITES=	http://www.freiburg.linux.de/~uae/bin/sources/develop/
 
 MAINTAINER=	kristerw@NetBSD.org
 HOMEPAGE=	http://uae.coresystems.de/
