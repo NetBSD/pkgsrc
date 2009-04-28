@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/03/06 01:55:27 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2009/04/28 21:39:13 roy Exp $
 
-SHA1 (dhcpcd-gtk-0.3.0.tar.bz2) = b16368ab39a7189b2056cef9f1d4b5bda46c539a
-RMD160 (dhcpcd-gtk-0.3.0.tar.bz2) = 01dbf5cf585359edcc5b05cc79147c46d872f0b3
-Size (dhcpcd-gtk-0.3.0.tar.bz2) = 14445 bytes
-SHA1 (patch-aa) = af08d0a93a3d4c5fc70edcfffe1661e2697e510b
+SHA1 (dhcpcd-ui-0.4.0.tar.bz2) = 4f35be6073a559b58d0be949658a891cc8bb158e
+RMD160 (dhcpcd-ui-0.4.0.tar.bz2) = 966c05597d24d042e36c33fe936ee24c02404090
+Size (dhcpcd-ui-0.4.0.tar.bz2) = 49068 bytes
