@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/04/28 11:57:54 hasso Exp $
 
 --- Makefile.orig	2008-11-21 15:54:03.000000000 -0500
 +++ Makefile
-@@ -1,6 +1,12 @@
+@@ -1,6 +1,15 @@
  include Makefile.config
  
  SYSTEM = $(shell uname -s)
@@ -12,10 +12,13 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/01/21 14:15:15 jmcneill Exp $
 +ifeq ($(SYSTEM),NetBSD)
 +  SYSTEM = UNIX
 +endif
++ifeq ($(SYSTEM),DragonFly)
++ SYSTEM = UNIX
++endif
  
  # Special case for Mac OS X: everything is handled from the Xcode project
  
-@@ -65,9 +71,9 @@ cli-snapshot-release:
+@@ -68,9 +74,9 @@ cli-snapshot-release:
  endif
  
  #
