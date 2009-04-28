@@ -1,15 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/28 21:30:09 zafer Exp $
 #
 
 DISTNAME=	fgfs-base-1.0.0
 PKGNAME=	${DISTNAME:S/fgfs/flightgear/}
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.flightgear.org/pub/fgfs/Shared/ \
-		ftp://ftp.sunsite.org.uk/sites/ftp.flightgear.org/flightgear-ftp/Shared/ \
-		ftp://ftp.kingmont.com/flightsims/flightgear/Shared/ \
 		http://mirrors.ibiblio.org/pub/mirrors/flightgear/ftp/Shared/ \
-		ftp://ftp.de.flightgear.org/pub/fgfs/Shared/ \
-		ftp://obgyn.edu.pl/fgfs/Shared/
+		ftp://ftp.de.flightgear.org/pub/fgfs/Shared/ 
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
