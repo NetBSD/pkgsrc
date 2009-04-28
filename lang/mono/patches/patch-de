@@ -1,3 +1,5 @@
+$NetBSD: patch-de,v 1.2 2009/04/28 10:31:58 hasso Exp $
+
 --- ikvm-native/jni.c.orig	2009-03-03 16:07:20 -0800
 +++ ikvm-native/jni.c	2009-03-03 16:07:43 -0800
 @@ -28,7 +28,7 @@

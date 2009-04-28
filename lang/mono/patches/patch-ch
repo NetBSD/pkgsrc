@@ -1,3 +1,5 @@
+$NetBSD: patch-ch,v 1.5 2009/04/28 10:31:58 hasso Exp $
+
 --- mcs/tools/csharplib/Makefile.orig	2009-04-07 07:16:59.000000000 +0300
 +++ mcs/tools/csharplib/Makefile	2009-04-07 07:17:14.000000000 +0300
 @@ -33,6 +33,6 @@
