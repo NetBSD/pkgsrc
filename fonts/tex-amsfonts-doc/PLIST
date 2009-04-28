@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/28 18:33:56 minskim Exp $
+share/texmf-dist/doc/fonts/amsfonts/READ.ME
+share/texmf-dist/doc/fonts/amsfonts/README-amsps.txt
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.cyr
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.def
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.fnt
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.ins
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.pdf
+share/texmf-dist/doc/fonts/amsfonts/amsfndoc.tex
+share/texmf-dist/doc/fonts/amsfonts/amsfonts.bug
+share/texmf-dist/doc/fonts/amsfonts/amsfonts.faq
+share/texmf-dist/doc/fonts/amsfonts/eufrak.dvi
+share/texmf-dist/doc/fonts/amsfonts/euscript.dvi
