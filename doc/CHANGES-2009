@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1573 2009/04/28 21:10:55 roy Exp $
+$NetBSD: CHANGES-2009,v 1.1574 2009/04/28 21:17:59 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2148,3 +2148,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-etex-pkg version 2.0 [minskim 2009-04-28]
 	Added print/tex-etex-pkg-doc version 2.0 [minskim 2009-04-28]
 	Updated net/dhcpcd to 5.0.0 [roy 2009-04-28]
+	Updated net/dhcpcd-dbus to 0.4.0 [roy 2009-04-28]
