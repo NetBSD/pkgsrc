@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.9 2009/02/09 22:56:26 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/04/28 14:50:29 tnn Exp $
 #
 
-DISTNAME=	youtube-dl-2008.09.20
-PKGNAME=	${DISTNAME:S/.//g}
-PKGREVISION=	1
+DISTNAME=	youtube-dl
+PKGNAME=	youtube-dl-20090425 # master site needs to be updated in tandem
 CATEGORIES=	net
-MASTER_SITES=	http://www.arrakis.es/~rggi3/youtube-dl/
+MASTER_SITES=	http://bitbucket.org/rg3/youtube-dl/raw/c42582904adf/
 EXTRACT_SUFX=	# none
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.arrakis.es/~rggi3/youtube-dl/
+HOMEPAGE=	http://bitbucket.org/rg3/youtube-dl/
 COMMENT=	Download videos from youtube.com
 
 PKG_DESTDIR_SUPPORT=	user-destdir
