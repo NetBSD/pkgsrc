@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29.2.1 2009/04/10 21:16:49 spz Exp $
+# $NetBSD: Makefile,v 1.29.2.2 2009/04/28 11:16:12 tron Exp $
 
 DISTNAME=		wireshark-1.0.7
 CATEGORIES=		net
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		ethereal-[0-9]*
 
-LICENSE=		gnu-gpl-v2
+#LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config
