@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2008/07/13 16:14:00 tonnerre Exp $
+$NetBSD: patch-ac,v 1.3 2009/04/28 13:01:39 hasso Exp $
 
---- vobcopy.h.orig	2008-02-19 06:27:04.000000000 +0100
-+++ vobcopy.h
+--- vobcopy.h.orig	2008-02-19 07:27:04 +0200
++++ vobcopy.h	2009-04-28 15:31:42 +0300
 @@ -43,7 +43,11 @@
  #include <sys/mnttab.h>
  #include <sys/statvfs.h>
@@ -23,7 +23,14 @@ $NetBSD: patch-ac,v 1.2 2008/07/13 16:14:00 tonnerre Exp $
         ( defined( __NetBSD__) && ( __NetBSD_Version__ < 200040000 ) )
  #include <sys/mount.h>
  #define USE_STATFS 1
-@@ -94,9 +98,15 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+@@ -88,15 +92,21 @@ typedef enum  { FALSE=0, TRUE=1 }  bool;
+ 
+ #    endif
+ 
+-#  else
++#  elif !defined(__DragonFly__)
+ 
+ #include <sys/vfs.h>
  
  #  endif
  
@@ -84,3 +91,11 @@ $NetBSD: patch-ac,v 1.2 2008/07/13 16:14:00 tonnerre Exp $
  
  #if defined( __USE_FILE_OFFSET64 )
  #  define HAS_LARGEFILE 1
+@@ -212,6 +236,6 @@ void watchdog_handler( int signal );
+ void shutdown_handler( int signal );
+ char *safestrncpy(char *dest, const char *src, size_t n);
+ 
+-#if defined(__APPLE__) && defined(__GNUC__)
++#if (defined(__APPLE__) && defined(__GNUC__)) || defined(__DragonFly__)
+ int fdatasync( int value );
+ #endif
