@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/03/17 18:59:00 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/28 21:10:36 roy Exp $
 #
 
-DISTNAME=		dhcpcd-dbus-0.3.0
+DISTNAME=		dhcpcd-dbus-0.4.0
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
@@ -22,7 +22,7 @@ INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${EGDIR}
 CONF_FILES+=		${EGDIR}/dhcpcd-dbus.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/dhcpcd-dbus.conf
 
-DEPENDS+=		dhcpcd>=4.99.14:../../net/dhcpcd
+DEPENDS+=		dhcpcd>=5.0.0:../../net/dhcpcd
 DEPENDS+=		dbus>=1.1:../../sysutils/dbus
 
 .include "../../sysutils/dbus/buildlink3.mk"
