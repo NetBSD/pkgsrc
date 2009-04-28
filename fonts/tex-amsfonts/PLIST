@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/28 18:30:42 minskim Exp $
+share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+share/texmf-dist/tex/latex/amsfonts/cmmib57.sty
+share/texmf-dist/tex/latex/amsfonts/eucal.sty
+share/texmf-dist/tex/latex/amsfonts/eufrak.sty
+share/texmf-dist/tex/latex/amsfonts/euscript.sty
+share/texmf-dist/tex/latex/amsfonts/ueuex.fd
+share/texmf-dist/tex/latex/amsfonts/ueuex57.fd
+share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+share/texmf-dist/tex/latex/amsfonts/ueuf57.fd
+share/texmf-dist/tex/latex/amsfonts/ueur.fd
+share/texmf-dist/tex/latex/amsfonts/ueur57.fd
+share/texmf-dist/tex/latex/amsfonts/ueus.fd
+share/texmf-dist/tex/latex/amsfonts/ueus57.fd
+share/texmf-dist/tex/latex/amsfonts/umsa.fd
+share/texmf-dist/tex/latex/amsfonts/umsa57.fd
+share/texmf-dist/tex/latex/amsfonts/umsb.fd
+share/texmf-dist/tex/latex/amsfonts/umsb57.fd
+share/texmf-dist/tex/plain/amsfonts/amssym.def
+share/texmf-dist/tex/plain/amsfonts/amssym.tex
+share/texmf-dist/tex/plain/amsfonts/cyracc.def

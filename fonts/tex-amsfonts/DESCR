@@ -1,0 +1,9 @@
+This package augments the standard set normally distributed with TeX,
+including extra mathematical symbols, blackboard bold letters
+(uppercase only), fraktur letters, subscript sizes of bold math italic
+and bold Greek letters, subscript sizes of large symbols such as sum
+and product, added sizes of the Computer Modern small caps font,
+cyrillic fonts (from the University of Washington), and Euler
+mathematical fonts.  Adobe Type 1 versions of these fonts are also
+available, and bitmap PK font versions are available via the fonts'
+home page.
