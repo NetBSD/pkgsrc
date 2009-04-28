@@ -1,6 +1,8 @@
---- configure.orig	2009-01-09 07:56:07 -0800
-+++ configure	2009-03-03 16:24:30 -0800
-@@ -2938,11 +2938,11 @@
+$NetBSD: patch-ab,v 1.17 2009/04/28 10:31:58 hasso Exp $
+
+--- configure.orig	2009-03-13 16:51:11 +0200
++++ configure	2009-04-27 12:56:28 +0300
+@@ -2939,11 +2939,11 @@ _ACEOF
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
  		need_link_unlink=yes
@@ -14,7 +16,17 @@
  		platform_win32=no
  		if test "x$PTHREAD_CFLAGS" = "x"; then
  			CPPFLAGS="$CPPFLAGS -DGC_FREEBSD_THREADS"
-@@ -32216,6 +32216,9 @@
+@@ -2959,7 +2959,8 @@ _ACEOF
+ 			LDFLAGS="$LDFLAGS $PTHREAD_LIBS"
+ 			libmono_ldflags="$PTHREAD_LIBS"
+ 		fi
+-		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
++		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD -DPLATFORM_BSD6 -D_GNU_SOURCE -D_REENTRANT -DUSE_MMAP -DUSE_MUNMAP"
++		libmono_cflags="$libmono_cflags -D_REENTRANT"
+ 		need_link_unlink=yes
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -32274,6 +32275,9 @@ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
  #include <$ac_header>
@@ -24,7 +36,7 @@
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -32256,6 +32259,9 @@
+@@ -32314,6 +32318,9 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <$ac_header>
@@ -34,3 +46,12 @@
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
+@@ -40049,7 +40056,7 @@ case "$host" in
+ 	LIBC="libc.so.12"
+ 	INTL="libintl.so.0"
+ 	;;
+-    *-*-*freebsd*)
++    *-*-*freebsd*|*-*-*dragonfly*)
+     	LIBC="libc.so"
+ 	INTL="libintl.so"
+ 	;;
