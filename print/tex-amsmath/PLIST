@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/28 01:17:12 minskim Exp $
+share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+share/texmf-dist/tex/latex/amsmath/amscd.sty
+share/texmf-dist/tex/latex/amsmath/amsgen.sty
+share/texmf-dist/tex/latex/amsmath/amsmath.sty
+share/texmf-dist/tex/latex/amsmath/amsopn.sty
+share/texmf-dist/tex/latex/amsmath/amstex.sty
+share/texmf-dist/tex/latex/amsmath/amstext.sty
+share/texmf-dist/tex/latex/amsmath/amsxtra.sty

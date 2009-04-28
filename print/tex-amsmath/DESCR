@@ -1,0 +1,10 @@
+This package is the principal package in the AMS-LaTeX distribution.
+It adapts for use in LaTeX most of the mathematical features found in
+AMS-TeX; it is a near-indispensable adjunct to serious mathematical
+typesetting in LaTeX.  When amsmath is loaded, AMS-LaTeX packages
+amsbsy (for bold symbols), amsopn (for operator names) and amstext
+(for text embdedded in mathematics) are also loaded.  Amsmath is part
+of the LaTeX required distribution; however, several contributed
+packages add still further to its appeal; examples are empheq, which
+provides functions for decorating and highlighting mathematics, and
+ntheorem, for specifying theorem (and similar) definitions.
