@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 22:08:33 minskim Exp $
+share/texmf-dist/tex/latex/hyperref/backref.sty
+share/texmf-dist/tex/latex/hyperref/hdvipdfm.def
+share/texmf-dist/tex/latex/hyperref/hdvips.def
+share/texmf-dist/tex/latex/hyperref/hdvipson.def
+share/texmf-dist/tex/latex/hyperref/hdviwind.def
+share/texmf-dist/tex/latex/hyperref/hpdftex.def
+share/texmf-dist/tex/latex/hyperref/htex4ht.cfg
+share/texmf-dist/tex/latex/hyperref/htex4ht.def
+share/texmf-dist/tex/latex/hyperref/htexture.def
+share/texmf-dist/tex/latex/hyperref/hvtex.def
+share/texmf-dist/tex/latex/hyperref/hvtexhtm.def
+share/texmf-dist/tex/latex/hyperref/hvtexmrk.def
+share/texmf-dist/tex/latex/hyperref/hylatex.ltx
+share/texmf-dist/tex/latex/hyperref/hyperref.sty
+share/texmf-dist/tex/latex/hyperref/hypertex.def
+share/texmf-dist/tex/latex/hyperref/minitoc-hyper.sty
+share/texmf-dist/tex/latex/hyperref/nameref.sty
+share/texmf-dist/tex/latex/hyperref/nohyperref.sty
+share/texmf-dist/tex/latex/hyperref/ntheorem-hyper.sty
+share/texmf-dist/tex/latex/hyperref/pd1enc.def
+share/texmf-dist/tex/latex/hyperref/pdfmark.def
+share/texmf-dist/tex/latex/hyperref/puarenc.def
+share/texmf-dist/tex/latex/hyperref/puenc.def
+share/texmf-dist/tex/latex/hyperref/puvnenc.def
+share/texmf-dist/tex/latex/hyperref/xr-hyper.sty
