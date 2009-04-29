@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 05:49:05 minskim Exp $
+share/texmf-dist/tex/latex/fancyhdr/extramarks.sty
+share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+share/texmf-dist/tex/latex/fancyhdr/fancyheadings.sty
