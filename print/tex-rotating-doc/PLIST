@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 18:28:26 minskim Exp $
+share/texmf-dist/doc/latex/rotating/README
+share/texmf-dist/doc/latex/rotating/cat.eps
+share/texmf-dist/doc/latex/rotating/examples.tex
+share/texmf-dist/doc/latex/rotating/rotating.pdf
