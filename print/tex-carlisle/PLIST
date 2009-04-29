@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 02:39:38 minskim Exp $
+share/texmf-dist/tex/latex/carlisle/blkarray.sty
+share/texmf-dist/tex/latex/carlisle/comma.sty
+share/texmf-dist/tex/latex/carlisle/dotlessj.sty
+share/texmf-dist/tex/latex/carlisle/fix2col.sty
+share/texmf-dist/tex/latex/carlisle/ltxtable.sty
+share/texmf-dist/tex/latex/carlisle/mylatex.ltx
+share/texmf-dist/tex/latex/carlisle/nopageno.sty
+share/texmf-dist/tex/latex/carlisle/plain.sty
+share/texmf-dist/tex/latex/carlisle/remreset.sty
+share/texmf-dist/tex/latex/carlisle/scalefnt.sty
+share/texmf-dist/tex/latex/carlisle/slashed.sty
+share/texmf-dist/tex/latex/carlisle/typehtml.sty
