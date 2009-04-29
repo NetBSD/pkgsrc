@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1586 2009/04/29 07:40:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1587 2009/04/29 07:47:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-fancyhdr-doc version 3.1 [minskim 2009-04-29]
 	Added textproc/tex-xmltex-doc version 0.8 [minskim 2009-04-29]
 	Updated www/p5-libwww to 5.826 [sno 2009-04-29]
+	Updated time/p5-DateTime-TimeZone to 0.90 [sno 2009-04-29]
