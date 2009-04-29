@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1589 2009/04/29 10:54:22 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1590 2009/04/29 11:22:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1669,7 +1669,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/eigen2 to 2.0.0 [markd 2009-04-06]
 	Updated www/neon to 0.28.3 [markd 2009-04-06]
 	Updated multimedia/phonon to 4.3.1 [markd 2009-04-06]
-	Updated devel/coccinelle to 0.1.7 [wiz 2009-04-06]
 	Added math/p5-Statistics-Descriptive version 2.6 [chuck 2009-04-06]
 	Added graphics/p5-GDGraph-boxplot version 1.00 [chuck 2009-04-06]
 	Updated www/privoxy to 3.0.12 [mjl 2009-04-07]
@@ -2169,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-TimeZone to 0.90 [sno 2009-04-29]
 	Updated databases/p5-DBIx-Class to 0.08101 [sno 2009-04-29]
 	Updated news/leafnode to 1.11.7 [wiz 2009-04-29]
+	Updated devel/coccinelle to 0.1.7 [wiz 2009-04-29]
