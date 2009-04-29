@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.347 2009/03/07 02:17:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.348 2009/04/29 04:55:29 agc Exp $
 #
 
 COMMENT=	Security tools
@@ -129,6 +129,7 @@ SUBDIR+=	nessus
 SUBDIR+=	nessus-core
 SUBDIR+=	nessus-libraries
 SUBDIR+=	nessus-plugins
+SUBDIR+=	netpgp
 SUBDIR+=	netramet
 SUBDIR+=	nfsbug
 SUBDIR+=	nikto
