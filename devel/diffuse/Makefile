@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/16 22:43:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/29 09:16:47 wiz Exp $
 #
 
 DISTNAME=	diffuse-0.3.3
@@ -26,7 +26,7 @@ do-build:
 	# nothing
 
 do-install:
-	cd ${WRKSRC} && ${PYTHONBIN} ./install.py --destdir=${DESTDIR} \
+	cd ${WRKSRC} && ${PYTHONBIN} ./install.py --destdir=/${DESTDIR} \
 		--examplesdir=${PREFIX}/share/examples/diffuse \
 		--mandir=${PREFIX}/${PKGMANDIR} \
 		--prefix=${PREFIX} --sysconfdir=${PKG_SYSCONFDIR} \
