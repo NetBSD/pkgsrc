@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: patch.c,v 1.45 2007/04/18 21:52:24 sobrado Exp $
  * $DragonFly: src/usr.bin/patch/patch.c,v 1.10 2008/08/10 23:39:56 joerg Exp $
- * $NetBSD: patch.c,v 1.1.1.1 2008/09/10 11:03:21 joerg Exp $
+ * $NetBSD: patch.c,v 1.2 2009/04/29 13:41:16 joerg Exp $
  */
 
 /*
@@ -117,7 +117,13 @@ static bool	remove_empty_files = false;
 static bool	reverse_flag_specified = false;
 
 /* buffer holding the name of the rejected patch file. */
+#ifdef NAME_MAX
 static char	rejname[NAME_MAX + 1];
+#elif defined(PATH_MAX)
+static char	rejname[PATH_MAX + 1];
+#else
+static char	rejname[MAXPATHLEN + 1];
+#endif
 
 /* buffer for stderr */
 static char	serrbuf[BUFSIZ];
