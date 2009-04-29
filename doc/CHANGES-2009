@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1609 2009/04/29 22:35:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1610 2009/04/29 22:39:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2191,3 +2191,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-hyperref version 6.78q [minskim 2009-04-29]
 	Updated www/p5-HTTP-Request-AsCGI to 0.9 [sno 2009-04-29]
 	Updated www/p5-Catalyst-Runtime to 5.80002 [sno 2009-04-29]
+	Updated www/p5-Catalyst-View-Mason to 0.17 [sno 2009-04-29]
