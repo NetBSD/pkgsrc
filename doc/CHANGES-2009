@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1603 2009/04/29 20:07:16 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1604 2009/04/29 20:42:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2184,3 +2184,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Test-Aggregate version 0.35 [sno 2009-04-29]
 	Updated devel/p5-Data-Dump to 1.14 [sno 2009-04-29]
 	Updated devel/p5-Log-Log4perl to 1.21 [sno 2009-04-29]
+	Updated devel/p5-Data-Visitor to 0.24 [abs 2009-04-29]
