@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1605 2009/04/29 21:36:32 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1606 2009/04/29 21:39:04 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-Visitor to 0.24 [abs 2009-04-29]
 	Added print/tex-babel version 3.8l [minskim 2009-04-29]
 	Added print/tex-babel-doc version 3.8l [minskim 2009-04-29]
+	Updated print/tex-bin-latex to 2008.12778nb2 [minskim 2009-04-29]
