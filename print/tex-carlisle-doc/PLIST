@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 02:40:12 minskim Exp $
+share/texmf-dist/doc/latex/carlisle/README
+share/texmf-dist/doc/latex/carlisle/fix2col.pdf
+share/texmf-dist/doc/latex/carlisle/ltx1.tex
+share/texmf-dist/doc/latex/carlisle/ltxtable.pdf
+share/texmf-dist/doc/latex/carlisle/typehtml.pdf
