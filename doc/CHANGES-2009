@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1585 2009/04/29 06:20:58 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1586 2009/04/29 07:40:20 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2165,3 +2165,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-fancyhdr version 3.1 [minskim 2009-04-29]
 	Added print/tex-fancyhdr-doc version 3.1 [minskim 2009-04-29]
 	Added textproc/tex-xmltex-doc version 0.8 [minskim 2009-04-29]
+	Updated www/p5-libwww to 5.826 [sno 2009-04-29]
