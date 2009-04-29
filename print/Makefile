@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2009/04/29 05:50:51 minskim Exp $
+# $NetBSD: Makefile,v 1.246 2009/04/29 18:30:48 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -238,6 +238,8 @@ SUBDIR+=	tex-placeins-doc
 SUBDIR+=	tex-plain
 SUBDIR+=	tex-prosper
 SUBDIR+=	tex-resume
+SUBDIR+=	tex-rotating
+SUBDIR+=	tex-rotating-doc
 SUBDIR+=	tex-ruhyphen
 SUBDIR+=	tex-tools
 SUBDIR+=	tex-tools-doc

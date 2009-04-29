@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1593 2009/04/29 18:28:53 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1594 2009/04/29 18:30:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2172,3 +2172,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/irssi-icb to 0.14nb13 [wiz 2009-04-29]
 	Added devel/p5-MooseX-Emulate-Class-Accessor-Fast version 0.00802 [sno 2009-04-29]
 	Updated math/maxima to 5.18.1 [asau 2009-04-29]
+	Added print/tex-rotating version 2.16a [minskim 2009-04-29]
+	Added print/tex-rotating-doc version 2.16a [minskim 2009-04-29]
