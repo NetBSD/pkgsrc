@@ -1,0 +1,5 @@
+These fonts are considered the `ultimate answer' to IPA typesetting.
+The encoding of these 8-bit fonts has been registered as LaTeX
+standard encoding T3, and the set of addendum symbols as encoding TS3.
+`Times-like' Adobe Type 1 versions are provided for both the T3 and
+the TS3 fonts.
