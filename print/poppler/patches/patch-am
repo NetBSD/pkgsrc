@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1.2.2 2009/04/29 21:29:23 tron Exp $
+
+--- glib/poppler-form-field.cc.orig	2008-10-09 22:30:34.000000000 +0200
++++ glib/poppler-form-field.cc
+@@ -279,7 +279,7 @@ poppler_form_field_text_set_text (Popple
+ 	
+   g_return_if_fail (field->widget->getType () == formText);
+ 
+-  tmp = text ? g_convert (text, -1, "UTF16BE", "UTF8", NULL, &length, NULL) : NULL;
++  tmp = text ? g_convert (text, -1, "UTF-16BE", "UTF-8", NULL, &length, NULL) : NULL;
+   goo_tmp = new GooString (tmp, length);
+   g_free (tmp);
+   static_cast<FormWidgetText*>(field->widget)->setContent (goo_tmp);
+@@ -552,7 +552,7 @@ poppler_form_field_choice_set_text (Popp
+ 
+   g_return_if_fail (field->widget->getType () == formChoice);
+ 
+-  tmp = text ? g_convert (text, -1, "UTF16BE", "UTF8", NULL, &length, NULL) : NULL;
++  tmp = text ? g_convert (text, -1, "UTF-16BE", "UTF-8", NULL, &length, NULL) : NULL;
+   goo_tmp = new GooString (tmp, length);
+   g_free (tmp);
+   static_cast<FormWidgetChoice*>(field->widget)->setEditChoice (goo_tmp);
