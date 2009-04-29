@@ -1,0 +1,9 @@
+The hyperref package is used to handle cross-referencing commands in
+LaTeX to produce hypertext links in the document.  The package
+provides backends for the \special set defined for HyperTeX DVI
+processors; for embedded pdfmark commands for processing by Acrobat
+Distiller (dvips and Y&Y's dvipsone); for Y&Y's dviwindo; for PDF
+control within pdfTeX and dvipdfm; for TeX4ht; and for VTeX's pdf and
+HTML backends.  The package is distributed with the backref and
+nameref packages, which make use of the facilities of hyperref.  The
+package depends on the author's kvoptions and refcount packages.
