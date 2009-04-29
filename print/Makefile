@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2009/04/29 02:42:50 minskim Exp $
+# $NetBSD: Makefile,v 1.243 2009/04/29 03:14:11 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -221,6 +221,8 @@ SUBDIR+=	tex-misc
 SUBDIR+=	tex-musixtex
 SUBDIR+=	tex-natbib
 SUBDIR+=	tex-natbib-doc
+SUBDIR+=	tex-oberdiek
+SUBDIR+=	tex-oberdiek-doc
 SUBDIR+=	tex-ocrb
 SUBDIR+=	tex-passivetex
 SUBDIR+=	tex-pdftex
