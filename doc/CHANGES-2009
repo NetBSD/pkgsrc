@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1582 2009/04/29 05:15:38 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.1583 2009/04/29 05:30:19 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2160,3 +2160,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-colortbl-doc version 0.1 [minskim 2009-04-29]
 	Added security/netpgp version 20080428 [agc 2009-04-28]
 	Updated graphics/radiance to 3.6.1nb4 [dholland 2009-04-29]
+	Added fonts/tex-marvosym version 2.1 [minskim 2009-04-29]
+	Added fonts/tex-marvosym-doc version 2.1 [minskim 2009-04-29]
