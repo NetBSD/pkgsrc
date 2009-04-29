@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.248 2009/04/29 21:36:32 minskim Exp $
+# $NetBSD: Makefile,v 1.249 2009/04/29 22:09:34 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -166,6 +166,7 @@ SUBDIR+=	tex-graphics
 SUBDIR+=	tex-graphics-doc
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
+SUBDIR+=	tex-hyperref
 SUBDIR+=	tex-hyph-utf8
 SUBDIR+=	tex-hyphen-ancientgreek
 SUBDIR+=	tex-hyphen-arabic
