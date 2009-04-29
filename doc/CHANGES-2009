@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1580 2009/04/29 04:42:33 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1581 2009/04/29 04:57:00 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2158,3 +2158,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated fonts/tex-amsfonts to 2.2nb1 [minskim 2009-04-29]
 	Added print/tex-colortbl version 0.1 [minskim 2009-04-29]
 	Added print/tex-colortbl-doc version 0.1 [minskim 2009-04-29]
+	Added security/netpgp version 20080428 [agc 2009-04-28]
