@@ -1,0 +1,5 @@
+The package manages culturally-determined typographical (and other)
+rules, and hyphenation patterns for a wide range of languages.  A
+document may select a single language to be supported, or it may
+select several, and the document may then switch from one language to
+another in a variety of ways.
