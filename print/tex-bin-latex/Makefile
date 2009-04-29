@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.3 2009/04/27 15:40:17 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/29 21:38:28 minskim Exp $
 # TeX Live Revision 12778
 
 DISTNAME=	bin-latex
 PKGNAME=	tex-${DISTNAME}-2008.12778
-PKGREVISION=	1
-DIST_SUBDIR=	${PKGNAME}
+PKGREVISION=	2
+DIST_SUBDIR=	${PKGNAME_NOREV}nb1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	TeX macro package that defines LaTeX
 
 CONFLICTS+=	teTeX-bin<=3.0nb31
+DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=	tex-latexconfig-[0-9]*:../../print/tex-latexconfig
 DEPENDS+=	tex-luatex-[0-9]*:../../print/tex-luatex
