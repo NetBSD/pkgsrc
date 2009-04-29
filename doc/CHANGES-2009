@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1592 2009/04/29 17:15:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1593 2009/04/29 18:28:53 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/coccinelle to 0.1.7 [wiz 2009-04-29]
 	Updated chat/irssi-icb to 0.14nb13 [wiz 2009-04-29]
 	Added devel/p5-MooseX-Emulate-Class-Accessor-Fast version 0.00802 [sno 2009-04-29]
+	Updated math/maxima to 5.18.1 [asau 2009-04-29]
