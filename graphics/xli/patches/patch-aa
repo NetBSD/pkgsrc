@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2005/03/05 23:02:30 fredb Exp $
+$NetBSD: patch-aa,v 1.10 2009/04/29 09:24:18 wiz Exp $
 
---- Imakefile.orig	2005-02-27 18:42:39.000000000 -0600
+--- Imakefile.orig	2005-02-28 02:42:39.000000000 +0200
 +++ Imakefile
 @@ -13,17 +13,17 @@
        CCOPTIONS = -Aa -D_HPUX_SOURCE
@@ -16,13 +16,26 @@ $NetBSD: patch-aa,v 1.9 2005/03/05 23:02:30 fredb Exp $
 +PNG_INCLUDES =  -I${BUILDLINK_DIR}/include
 +PNG_LDFLAGS =  -L${BUILDLINK_DIR}/lib -Wl,-R${LOCALBASE}/lib
  
- SYSPATHFILE = $(XAPPLOADDIR)/Xli
+-SYSPATHFILE = $(XAPPLOADDIR)/Xli
++SYSPATHFILE = $(DESTDIR)$(XAPPLOADDIR)/Xli
  DEPLIBS = $(DEPXLIB)
--LOCAL_LIBRARIES = $(XLIB) $(JPEG_LDFLAGS) $(PNG_LDFLAGS) -ljpeg -lpng -lz
-+LOCAL_LIBRARIES = $(XLIB) $(JPEG_LDFLAGS) $(PNG_LDFLAGS) -ljpeg -lpng -lz
+ LOCAL_LIBRARIES = $(XLIB) $(JPEG_LDFLAGS) $(PNG_LDFLAGS) -ljpeg -lpng -lz
  SYS_LIBRARIES = -lm
 -DEFINES = -DHAS_MEMCPY
 +DEFINES = -DHAS_MEMCPY -DHAVE_GUNZIP -DHAVE_BUNZIP2
  EXTRA_INCLUDES = $(JPEG_INCLUDES) $(PNG_INCLUDES)
  
  SRCS1 = bright.c clip.c cmuwmrast.c compress.c dither.c faces.c fbm.c fill.c  g3.c gif.c halftone.c imagetypes.c img.c mac.c mcidas.c mc_tables.c merge.c misc.c new.c options.c path.c pbm.c pcx.c reduce.c jpeg.c rle.c rlelib.c root.c rotate.c send.c smooth.c sunraster.c  value.c window.c xbitmap.c xli.c xpixmap.c xwd.c zio.c zoom.c ddxli.c tga.c bmp.c pcd.c png.c
+@@ -37,9 +37,9 @@ ComplexProgramTarget_1(xli,$(DEFINES) $(
+ ComplexProgramTarget_2(xlito,,)
+ 
+ install:: $(SYSPATHFILE)
+-	$(RM) $(BINDIR)/xview $(BINDIR)/xsetbg
+-	$(LN) $(BINDIR)/xli $(BINDIR)/xview
+-	$(LN) $(BINDIR)/xli $(BINDIR)/xsetbg
++	$(RM) $(DESTDIR)$(BINDIR)/xview $(DESTDIR)$(BINDIR)/xsetbg
++	$(LN) $(BINDIR)/xli $(DESTDIR)$(BINDIR)/xview
++	$(LN) $(BINDIR)/xli $(DESTDIR)$(BINDIR)/xsetbg
+ 
+ $(SYSPATHFILE):
+ 	@echo "*** Creating default $(SYSPATHFILE) since you"
