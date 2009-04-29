@@ -1,0 +1,9 @@
+A common problem with many test suites is that they can take a long time to
+run. The longer they run, the less likely you are to run the tests. This
+module borrows a trick from Apache::Registry to load up your tests at once,
+create a separate package for each test and wraps each package in a method
+named run_the_tests. This allows us to load perl only once and related
+modules only once. If you have modules which are expensive to load, this can
+dramatically speed up a test suite.
+
+WARNING: this is ALPHA code. The interface is not guaranteed to be stable.
