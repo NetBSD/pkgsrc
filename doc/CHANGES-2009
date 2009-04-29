@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1590 2009/04/29 11:22:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1591 2009/04/29 12:47:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2169,3 +2169,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-Class to 0.08101 [sno 2009-04-29]
 	Updated news/leafnode to 1.11.7 [wiz 2009-04-29]
 	Updated devel/coccinelle to 0.1.7 [wiz 2009-04-29]
+	Updated chat/irssi-icb to 0.14nb13 [wiz 2009-04-29]
