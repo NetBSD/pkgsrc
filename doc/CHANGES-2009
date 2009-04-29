@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1600 2009/04/29 19:37:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1601 2009/04/29 19:40:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2181,3 +2181,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-MethodAttributes version 0.09 [sno 2009-04-29]
 	Added devel/p5-Scope-Upper version 0.08 [sno 2009-04-29]
 	Updated devel/SDL_gfx to 2.0.19 [wiz 2009-04-29]
+	Added devel/p5-Test-Aggregate version 0.35 [sno 2009-04-29]
