@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 05:49:33 minskim Exp $
+share/texmf-dist/doc/latex/fancyhdr/README
+share/texmf-dist/doc/latex/fancyhdr/fancyhdr.pdf
+share/texmf-dist/doc/latex/fancyhdr/fancyhdr.tex
