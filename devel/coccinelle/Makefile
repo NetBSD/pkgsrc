@@ -1,15 +1,21 @@
-# $NetBSD: Makefile,v 1.3 2009/04/06 10:11:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/04/29 11:21:52 wiz Exp $
 
-DISTNAME=	coccinelle-0.1.6a
+DISTNAME=	coccinelle-0.1.7
 CATEGORIES=	devel
-MASTER_SITES=	http://www.emn.fr/x-info/coccinelle/distrib/
+MASTER_SITES=	http://aryx.cs.uiuc.edu/~pad/software/project-coccinelle/#http://www.emn.fr/x-info/coccinelle/distrib/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.emn.fr/x-info/coccinelle/
 COMMENT=	Tool for writing and applying semantic patches
 
+BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+DEPENDS+=	menhir-[0-9]*:../../devel/menhir
+
+LICENSE=	gnu-gpl-v2
+
 PKG_DESTDIR_SUPPORT=	user-destdir
+#MAKE_JOBS_SAFE=		no
 
 HAS_CONFIGURE=	yes
 USE_TOOLS=	gmake perl
@@ -37,7 +43,7 @@ TEST_TARGET=	test
 
 .include "../../mk/dlopen.buildlink3.mk"
 
-BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../lang/python/application.mk"
