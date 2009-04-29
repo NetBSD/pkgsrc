@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1602 2009/04/29 20:02:37 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1603 2009/04/29 20:07:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/SDL_gfx to 2.0.19 [wiz 2009-04-29]
 	Added devel/p5-Test-Aggregate version 0.35 [sno 2009-04-29]
 	Updated devel/p5-Data-Dump to 1.14 [sno 2009-04-29]
+	Updated devel/p5-Log-Log4perl to 1.21 [sno 2009-04-29]
