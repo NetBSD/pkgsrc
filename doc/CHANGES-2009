@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1610 2009/04/29 22:39:14 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1611 2009/04/29 22:48:36 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2192,3 +2192,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-HTTP-Request-AsCGI to 0.9 [sno 2009-04-29]
 	Updated www/p5-Catalyst-Runtime to 5.80002 [sno 2009-04-29]
 	Updated www/p5-Catalyst-View-Mason to 0.17 [sno 2009-04-29]
+	Updated www/p5-URI-Escape-XS to 0.05 [sno 2009-04-29]
