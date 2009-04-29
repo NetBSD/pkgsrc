@@ -1,0 +1,9 @@
+Martin Vogel's Symbol (marvosym) font contains the Euro currency
+symbol as defined by the European commission, and also in shapes to
+blend with typefaces Times, Helvetica and Courier; symbols for
+structural engineering; symbols for steel cross- sections; astronomy
+signs (sun, moon, planets); the 12 signs of the zodiac; scissor
+symbols; CE sign and others.  The font is distributed here as an Adobe
+Type 1 font, which was converted from Vogel's original TrueType;
+support macros for use with LaTeX are also provided.  Separate
+packaging for OzTeX users is available.
