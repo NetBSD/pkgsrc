@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/01/07 10:55:22 wiz Exp $
+$NetBSD: distinfo,v 1.10 2009/04/29 19:37:12 wiz Exp $
 
-SHA1 (SDL_gfx-2.0.18.tar.gz) = 99b5728d718c852cbb0ea973285ad81fe7d6f404
-RMD160 (SDL_gfx-2.0.18.tar.gz) = 57cb3f7b734485cc15d30e6132f63fc59d40872e
-Size (SDL_gfx-2.0.18.tar.gz) = 860005 bytes
+SHA1 (SDL_gfx-2.0.19.tar.gz) = bba39cf83e84d8e61b8078ea095cc0a96023e27f
+RMD160 (SDL_gfx-2.0.19.tar.gz) = 354c939e4901644b80c82e7a9e5c04b93a70306b
+Size (SDL_gfx-2.0.19.tar.gz) = 1223213 bytes

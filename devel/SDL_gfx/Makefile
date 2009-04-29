@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2009/01/07 10:55:22 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2009/04/29 19:37:12 wiz Exp $
 
-DISTNAME=	SDL_gfx-2.0.18
+DISTNAME=	SDL_gfx-2.0.19
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 
@@ -8,11 +8,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ferzkopp.net/Software/SDL_gfx-2.0/
 COMMENT=	Basic drawing routines for SDL
 
+LICENSE=	gnu-lgpl-v2.1
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	SDL_gfx.pc.in
+
 .if (${MACHINE_ARCH} != "i386")
 CONFIGURE_ARGS+=	--disable-mmx
 .endif
