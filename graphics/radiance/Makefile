@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2009/03/17 21:40:46 darcy Exp $
+# $NetBSD: Makefile,v 1.23 2009/04/29 05:15:14 dholland Exp $
 #
 
 DISTNAME=	rad3R6P1
 PKGNAME=	radiance-3.6.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.radiance-online.org/software/non-cvs/	\
 		http://www.radiance-online.org/software/
@@ -70,8 +70,8 @@ do-configure:
 	${RM} ${WRKSRC}/lib/.gdb_history
 
 do-build:
-	cd ${WRKSRC} && ${MAKE_ENV} csh ./makeall install
-	@${RM} -f ${WRKSRC}/radiance/bin/wish*
+	cd ${WRKSRC} && ${MAKE_ENV} ${SH} ./makeall install
+	${RM} -f ${WRKSRC}/radiance/bin/wish*
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance
