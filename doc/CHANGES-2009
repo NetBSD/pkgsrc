@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1588 2009/04/29 08:57:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1589 2009/04/29 10:54:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2168,3 +2168,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-libwww to 5.826 [sno 2009-04-29]
 	Updated time/p5-DateTime-TimeZone to 0.90 [sno 2009-04-29]
 	Updated databases/p5-DBIx-Class to 0.08101 [sno 2009-04-29]
+	Updated news/leafnode to 1.11.7 [wiz 2009-04-29]
