@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1594 2009/04/29 18:30:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1595 2009/04/29 18:40:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2174,3 +2174,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/maxima to 5.18.1 [asau 2009-04-29]
 	Added print/tex-rotating version 2.16a [minskim 2009-04-29]
 	Added print/tex-rotating-doc version 2.16a [minskim 2009-04-29]
+	Added fonts/tex-tipa version 1.3 [minskim 2009-04-29]
+	Added fonts/tex-tipa-doc version 1.3 [minskim 2009-04-29]
