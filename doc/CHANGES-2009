@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1583 2009/04/29 05:30:19 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1584 2009/04/29 05:50:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2162,3 +2162,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/radiance to 3.6.1nb4 [dholland 2009-04-29]
 	Added fonts/tex-marvosym version 2.1 [minskim 2009-04-29]
 	Added fonts/tex-marvosym-doc version 2.1 [minskim 2009-04-29]
+	Added print/tex-fancyhdr version 3.1 [minskim 2009-04-29]
+	Added print/tex-fancyhdr-doc version 3.1 [minskim 2009-04-29]
