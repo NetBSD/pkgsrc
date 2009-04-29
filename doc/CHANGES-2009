@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1577 2009/04/29 03:14:11 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1578 2009/04/29 03:32:49 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2154,3 +2154,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-carlisle-doc version 2008.7340 [minskim 2009-04-29]
 	Added print/tex-oberdiek version 2008.12705 [minskim 2009-04-29]
 	Added print/tex-oberdiek-doc version 2008.12705 [minskim 2009-04-29]
+	Added fonts/tex-cmex version 2008.7340 [minskim 2009-04-29]
