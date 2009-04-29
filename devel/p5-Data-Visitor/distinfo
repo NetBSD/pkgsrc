@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/12/20 21:04:13 he Exp $
+$NetBSD: distinfo,v 1.6 2009/04/29 20:42:09 abs Exp $
 
-SHA1 (Data-Visitor-0.22.tar.gz) = 9d18f6366ad8e597e57d6f780dd7196ca62f4dce
-RMD160 (Data-Visitor-0.22.tar.gz) = 485b975ecfcf6491ebe16d7ea5f61fdd1e98e83c
-Size (Data-Visitor-0.22.tar.gz) = 14329 bytes
+SHA1 (Data-Visitor-0.24.tar.gz) = a59ddd1c2de17533226faaf619cefe6e1d561dd0
+RMD160 (Data-Visitor-0.24.tar.gz) = f0a5f488bd0f1dd435e4451ff2d8e84e1e467407
+Size (Data-Visitor-0.24.tar.gz) = 14487 bytes
