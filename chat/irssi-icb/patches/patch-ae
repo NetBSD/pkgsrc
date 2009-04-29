@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2009/04/29 12:47:23 wiz Exp $
+
+--- configure.orig	2002-11-24 13:17:37.000000000 +0000
++++ configure
+@@ -5892,6 +5892,9 @@ rm -f conftest*
+   rm -f conf.glibtest
+ 
+ 
++GLIB_CFLAGS="`pkg-config --cflags glib-2.0`"
++GLIB_LIBS="`pkg-config --libs glib-2.0`"
++
+ # gcc specific options
+ if test "x$ac_cv_prog_gcc" = "xyes"; then
+   CFLAGS="$CFLAGS -Wall"

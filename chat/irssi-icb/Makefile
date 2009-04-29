@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2009/01/19 10:20:03 sketch Exp $
+# $NetBSD: Makefile,v 1.26 2009/04/29 12:47:23 wiz Exp $
 #
 
 DISTNAME=	irssi-icb-0.14
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	chat
 MASTER_SITES=	http://www.irssi.org/files/plugins/icb/
 DISTFILES=	${DISTNAME}.tar.gz ${IRSSI_DISTFILE}
@@ -22,9 +22,12 @@ DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 GNU_CONFIGURE=	yes
 
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 SHLIBTOOL_OVERRIDE=	# empty
 
 CONFIGURE_ARGS+=	--with-irssi=${WRKDIR}/${IRSSI_DISTNAME}
+CONFIGURE_ARGS+=	--with-glib-prefix=${BUILDLINK_PREFIX.glib2}
+CONFIGURE_ARGS+=	--disable-glibtest
 
 INSTALLATION_DIRS+=	share/doc/irssi
 
@@ -37,5 +40,5 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/irssi/README.icb
 
-.include "../../devel/glib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
