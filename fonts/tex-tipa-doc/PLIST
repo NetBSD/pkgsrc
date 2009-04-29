@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/29 18:39:03 minskim Exp $
+share/texmf-dist/doc/fonts/tipa/00README
+share/texmf-dist/doc/fonts/tipa/Makefile
+share/texmf-dist/doc/fonts/tipa/boxchar.sty
+share/texmf-dist/doc/fonts/tipa/codelist.sty
+share/texmf-dist/doc/fonts/tipa/tipa.bib
+share/texmf-dist/doc/fonts/tipa/tipaman.bbl
+share/texmf-dist/doc/fonts/tipa/tipaman.pdf
+share/texmf-dist/doc/fonts/tipa/tipaman.sty
+share/texmf-dist/doc/fonts/tipa/tipaman.tex
+share/texmf-dist/doc/fonts/tipa/tipaman0.tex
+share/texmf-dist/doc/fonts/tipa/tipaman1.tex
+share/texmf-dist/doc/fonts/tipa/tipaman2.tex
+share/texmf-dist/doc/fonts/tipa/tipaman3.tex
+share/texmf-dist/doc/fonts/tipa/tipaman4.tex
+share/texmf-dist/doc/fonts/tipa/vowel.tex
