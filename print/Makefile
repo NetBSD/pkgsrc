@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2009/04/28 19:52:39 minskim Exp $
+# $NetBSD: Makefile,v 1.242 2009/04/29 02:42:50 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -138,6 +138,8 @@ SUBDIR+=	tex-bin-tetex
 SUBDIR+=	tex-bin-tex
 SUBDIR+=	tex-bin-texlive
 SUBDIR+=	tex-bin-xdvi
+SUBDIR+=	tex-carlisle
+SUBDIR+=	tex-carlisle-doc
 SUBDIR+=	tex-chemarrow
 SUBDIR+=	tex-cooking
 SUBDIR+=	tex-dehyph-exptl
