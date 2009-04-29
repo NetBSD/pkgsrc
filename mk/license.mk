@@ -1,7 +1,4 @@
-# $NetBSD: license.mk,v 1.15 2009/04/25 13:15:43 gdt Exp $
-#
-# Note: This file is in draft state and not yet included in default
-# pkgsrc operations.
+# $NetBSD: license.mk,v 1.16 2009/04/29 23:50:07 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -90,7 +87,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	gnu-gpl-v3 gnu-lgpl-v3 \
 	original-bsd modified-bsd \
 	x11 \
-	apache-2.0 \
+	apache-1.1 apache-2.0 \
 	artistic artistic-2.0 \
 	cddl-1.0 \
 	open-font-license
