@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1576 2009/04/29 02:42:50 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1577 2009/04/29 03:14:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2152,3 +2152,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dhcpcd-gtk to 0.4.0 [roy 2009-04-28]
 	Added print/tex-carlisle version 2008.7340 [minskim 2009-04-29]
 	Added print/tex-carlisle-doc version 2008.7340 [minskim 2009-04-29]
+	Added print/tex-oberdiek version 2008.12705 [minskim 2009-04-29]
+	Added print/tex-oberdiek-doc version 2008.12705 [minskim 2009-04-29]
