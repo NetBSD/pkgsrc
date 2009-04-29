@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/07 06:09:12 martti Exp $
+$NetBSD: distinfo,v 1.2 2009/04/29 22:47:35 sno Exp $
 
-SHA1 (URI-Escape-XS-0.02.tar.gz) = b8be4b0a762dd3ac4eb5e9b26ba24c6f42402710
-RMD160 (URI-Escape-XS-0.02.tar.gz) = 10f1d738105f64e868ba58d4216122c255877821
-Size (URI-Escape-XS-0.02.tar.gz) = 7161 bytes
+SHA1 (URI-Escape-XS-0.05.tar.gz) = 8683473b7813f8ed65c6099ff5087d502b80a533
+RMD160 (URI-Escape-XS-0.05.tar.gz) = 2c1f447dc691a577a8a79bc530500e72af3f6702
+Size (URI-Escape-XS-0.05.tar.gz) = 8575 bytes
