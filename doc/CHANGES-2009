@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1614 2009/04/30 01:03:09 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1615 2009/04/30 02:27:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2198,3 +2198,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb14 [minskim 2009-04-30]
 	Updated print/teTeX3-bin to 3.0nb33 [minskim 2009-04-30]
 	Updated print/teTeX to 3.0nb6 [minskim 2009-04-30]
+	Updated print/tex-hyphen-german to 2008.8935nb1 [minskim 2009-04-30]
