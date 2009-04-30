@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2009/04/30 00:59:09 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2009/04/30 05:09:12 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/}
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -61,7 +61,9 @@ DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
+DEPENDS+=	tex-symbol-[0-9]*:../../fonts/symbol
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/zapfding
 
 EXTRACT_ELEMENTS+=	ChangeLog
 EXTRACT_ELEMENTS+=	LICENSE.texmf
@@ -156,7 +158,11 @@ post-extract:
 	rm -rf ${WRKSRC}/doc/pdftex
 	rm -rf ${WRKSRC}/dvips/[b-l]*
 	rm -rf ${WRKSRC}/dvips/tetex
+	rm -rf ${WRKSRC}/fonts/afm/adobe/symbol
+	rm -rf ${WRKSRC}/fonts/afm/adobe/zapfding
 	rm -rf ${WRKSRC}/fonts/afm/public/marvosym
+	rm -rf ${WRKSRC}/fonts/afm/urw/symbol
+	rm -rf ${WRKSRC}/fonts/afm/urw/zapfding
 	rmdir ${WRKSRC}/fonts/cmap
 	rmdir ${WRKSRC}/fonts/lig
 	rmdir ${WRKSRC}/fonts/map/dvipdfm/updmap
@@ -169,8 +175,13 @@ post-extract:
 	rmdir ${WRKSRC}/fonts/opentype
 	rmdir ${WRKSRC}/fonts/pk
 	rmdir ${WRKSRC}/fonts/sfd
+	rm -rf ${WRKSRC}/fonts/tfm/adobe/symbol
+	rm -rf ${WRKSRC}/fonts/tfm/adobe/zapfding
+	rm -rf ${WRKSRC}/fonts/tfm/cg/symbol
 	rmdir ${WRKSRC}/fonts/truetype
 	rm -rf ${WRKSRC}/fonts/type1/public/tt2001
+	rm -rf ${WRKSRC}/fonts/type1/urw/symbol
+	rm -rf ${WRKSRC}/fonts/type1/urw/zapfding
 	rmdir ${WRKSRC}/fonts/type3
 	rmdir ${WRKSRC}/fonts/type42
 	rm -rf ${WRKSRC}/fonts/enc/dvipdfm/tetex

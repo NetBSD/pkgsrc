@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/04/30 00:59:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/04/30 05:09:12 minskim Exp $
 share/texmf-dist/ChangeLog
 share/texmf-dist/LICENSE.texmf
 share/texmf-dist/aliases
@@ -3712,13 +3712,11 @@ share/texmf-dist/fonts/afm/adobe/palatino/pplb8a.afm
 share/texmf-dist/fonts/afm/adobe/palatino/pplbi8a.afm
 share/texmf-dist/fonts/afm/adobe/palatino/pplr8a.afm
 share/texmf-dist/fonts/afm/adobe/palatino/pplri8a.afm
-share/texmf-dist/fonts/afm/adobe/symbol/psyr.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmb8a.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmbi8a.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmr8a.afm
 share/texmf-dist/fonts/afm/adobe/times/ptmri8a.afm
 share/texmf-dist/fonts/afm/adobe/zapfchan/pzcmi8a.afm
-share/texmf-dist/fonts/afm/adobe/zapfding/pzdr.afm
 share/texmf-dist/fonts/afm/bitstrea/charter/bchb8a.afm
 share/texmf-dist/fonts/afm/bitstrea/charter/bchbi8a.afm
 share/texmf-dist/fonts/afm/bitstrea/charter/bchr8a.afm
@@ -4040,13 +4038,11 @@ share/texmf-dist/fonts/afm/urw/palatino/uplb8a.afm
 share/texmf-dist/fonts/afm/urw/palatino/uplbi8a.afm
 share/texmf-dist/fonts/afm/urw/palatino/uplr8a.afm
 share/texmf-dist/fonts/afm/urw/palatino/uplri8a.afm
-share/texmf-dist/fonts/afm/urw/symbol/usyr.afm
 share/texmf-dist/fonts/afm/urw/times/utmb8a.afm
 share/texmf-dist/fonts/afm/urw/times/utmbi8a.afm
 share/texmf-dist/fonts/afm/urw/times/utmr8a.afm
 share/texmf-dist/fonts/afm/urw/times/utmri8a.afm
 share/texmf-dist/fonts/afm/urw/zapfchan/uzcmi8a.afm
-share/texmf-dist/fonts/afm/urw/zapfding/uzdr.afm
 share/texmf-dist/fonts/afm/yandy/lubright/lbd.afm
 share/texmf-dist/fonts/afm/yandy/lubright/lbdi.afm
 share/texmf-dist/fonts/afm/yandy/lubright/lbdsc.afm
@@ -6073,9 +6069,6 @@ share/texmf-dist/fonts/tfm/adobe/palatino/zppler7y.tfm
 share/texmf-dist/fonts/tfm/adobe/pslatex/pcrr7tn.tfm
 share/texmf-dist/fonts/tfm/adobe/pslatex/pcrr8rn.tfm
 share/texmf-dist/fonts/tfm/adobe/pslatex/pcrr8tn.tfm
-share/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm
-share/texmf-dist/fonts/tfm/adobe/symbol/rpsyr.tfm
-share/texmf-dist/fonts/tfm/adobe/symbol/rpsyro.tfm
 share/texmf-dist/fonts/tfm/adobe/times/psyro.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmb.tfm
 share/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
@@ -6154,8 +6147,6 @@ share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8r.tfm
 share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8t.tfm
 share/texmf-dist/fonts/tfm/adobe/zapfchan/pzcmi8z.tfm
 share/texmf-dist/fonts/tfm/adobe/zapfchan/rpzcmi.tfm
-share/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm
-share/texmf-dist/fonts/tfm/adobe/zapfding/rpzdr.tfm
 share/texmf-dist/fonts/tfm/bh/lubright/hlhb8a.tfm
 share/texmf-dist/fonts/tfm/bh/lubright/hlhb8c.tfm
 share/texmf-dist/fonts/tfm/bh/lubright/hlhb8r.tfm
@@ -6523,7 +6514,6 @@ share/texmf-dist/fonts/tfm/cg/optima/omr10u.tfm
 share/texmf-dist/fonts/tfm/cg/optima/omr6j.tfm
 share/texmf-dist/fonts/tfm/cg/optima/omr7j.tfm
 share/texmf-dist/fonts/tfm/cg/optima/omr8u.tfm
-share/texmf-dist/fonts/tfm/cg/symbol/msyr.tfm
 share/texmf-dist/fonts/tfm/cg/times/ctmb.tfm
 share/texmf-dist/fonts/tfm/cg/times/ctmbi.tfm
 share/texmf-dist/fonts/tfm/cg/times/ctmbiq.tfm
@@ -8993,13 +8983,11 @@ share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
 share/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb
 share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb
-share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
 share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb
 share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 share/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb
-share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb
 share/texmf-dist/fonts/vf/adobe/avantgar/pagd.vf
 share/texmf-dist/fonts/vf/adobe/avantgar/pagd7t.vf
 share/texmf-dist/fonts/vf/adobe/avantgar/pagd8c.vf
