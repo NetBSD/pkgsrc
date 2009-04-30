@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/02/22 15:55:19 wiz Exp $
+$NetBSD: distinfo,v 1.10 2009/04/30 20:51:38 sno Exp $
 
-SHA1 (XML-Atom-0.33.tar.gz) = f3604f07763ae63a4fb6e1ce3d85f5fef01c8f29
-RMD160 (XML-Atom-0.33.tar.gz) = 0a9098f7e131e54158121e55886ade50d97dc266
-Size (XML-Atom-0.33.tar.gz) = 67114 bytes
+SHA1 (XML-Atom-0.34.tar.gz) = 60e1799be1e0f101029301f96a5d967ffac22ba8
+RMD160 (XML-Atom-0.34.tar.gz) = fecbfef4fe1988bd1a240a1b9553b311e100462b
+Size (XML-Atom-0.34.tar.gz) = 69083 bytes
