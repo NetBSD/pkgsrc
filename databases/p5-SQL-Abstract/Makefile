@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/04/24 17:15:21 sno Exp $
+# $NetBSD: Makefile,v 1.12 2009/04/30 21:07:59 sno Exp $
 #
 
-DISTNAME=	SQL-Abstract-1.51
+DISTNAME=	SQL-Abstract-1.53
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sqa
 CATEGORIES=	databases perl5
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SQL/}
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/SQL-Abstract/
 COMMENT=	Generate SQL from Perl data structures
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
