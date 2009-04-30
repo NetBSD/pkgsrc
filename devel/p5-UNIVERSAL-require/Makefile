@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/30 21:49:08 sno Exp $
 
-DISTNAME=	UNIVERSAL-require-0.11
+DISTNAME=	UNIVERSAL-require-0.13
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHWERN/}
+#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/MS/MSCHWERN/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=UNIVERSAL/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/UNIVERSAL-require/
 COMMENT=	Perl module to require() from a variable
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
