@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2009/04/26 03:34:13 taca Exp $
+# $NetBSD: Makefile.common,v 1.11 2009/04/30 13:08:50 taca Exp $
 #
 # used by www/typolight26/Makefile
 # used by www/typolight27/Makefile
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 FILES_SUBST+=	PAX=${PAX} TL_EGDIR=${TL_EGDIR:Q} TL_WEBDIR=${TL_WEBDIR:Q} \
 		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}
+MESSAGE_SUBST+=	TL_VER=${TL_VER}
 PLIST_SUBST+=	TL_DOCDIR=${TL_DOCDIR:Q} TL_EGDIR=${TL_EGDIR:Q} \
 		TL_WEBDIR=${TL_WEBDIR:Q}
 
