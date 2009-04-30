@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/04/30 21:09:48 zafer Exp $
 #
 
 DISTNAME=		hlfl-0.60.1
 PKGREVISION=		1
 CATEGORIES=		net
-MASTER_SITES=		http://www.hlfl.org/hlfl/ \
-			ftp://ftp.hlfl.org/pub/hlfl/
+MASTER_SITES=		http://www.hlfl.org/hlfl/ 
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
