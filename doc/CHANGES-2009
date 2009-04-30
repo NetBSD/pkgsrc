@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1630 2009/04/30 20:44:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1631 2009/04/30 20:53:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2215,3 +2215,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-Format-Pg to 0.16003 [sno 2009-04-30]
 	Updated mail/p5-Email-MIME-Creator to 1.456 [sno 2009-04-30]
 	Updated mail/p5-Email-MIME-Modifier to 1.444 [sno 2009-04-30]
+	Updated textproc/p5-XML-Atom to 0.34 [sno 2009-04-30]
