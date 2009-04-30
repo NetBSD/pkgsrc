@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/04/30 17:11:46 wiz Exp $
 #
 
 DISTNAME=	ltsa2.2
@@ -16,7 +16,7 @@ COMMENT=	Labelled Transition System Analyser
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		YES
-USE_JAVA2=		YES
+USE_JAVA2=		yes
 USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	bin
