@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/04/20 11:30:06 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2009/04/30 05:51:04 dsainty Exp $
 
 DISTNAME=	libidn-1.14
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		makeinfo pkg-config perl:build
-TEXINFO_REQD=		4.1
+TEXINFO_REQD=		4.7
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 CONFIGURE_ENV+=		EMACS=${FALSE}
