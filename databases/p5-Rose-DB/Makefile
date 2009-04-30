@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/30 21:15:08 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/04/30 21:17:24 sno Exp $
 
 DISTNAME=	Rose-DB-0.751
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,6 @@ DEPENDS+= p5-Rose-DateTime>=0.532:../../time/p5-Rose-DateTime
 DEPENDS+= p5-Rose-Object>=0.854:../../devel/p5-Rose-Object
 DEPENDS+= p5-SQL-ReservedWords-[0-9]*:../../databases/p5-SQL-ReservedWords
 DEPENDS+= p5-Time-Clock-[0-9]*:../../time/p5-Time-Clock
-DEPENDS+= p5-YAML-Syck-[0-9]*:../../textproc/p5-YAML-Syck
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Rose/DB/.packlist
