@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2008/06/03 22:17:00 markd Exp $
+# $NetBSD: Makefile.common,v 1.6 2009/04/30 17:22:06 hasso Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
@@ -45,8 +45,8 @@ CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 LDFLAGS+=	-Wl,-z,nocombreloc
 .endif
 
-.if ${OPSYS} == "DragonFly" && exists(/usr/lib/crtbegin.o)
-CPPFLAGS+=	-DDFLY_PRE_17_CRT
+.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
+CPPFLAGS+=	-DDFLY_CRT_USRLIB
 .endif
 
 PLIST_VARS+=	fns.el

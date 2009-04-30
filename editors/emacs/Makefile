@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2008/11/10 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.119 2009/04/30 17:22:06 hasso Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -53,8 +53,8 @@ CONF_FILES_PERMS+=	/dev/null ${VARBASE}/games/emacs/tetris-scores \
 			${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEDATAMODE:Q}
 SPECIAL_PERMS+=		libexec/emacs/${PKGVERSION_NOREV}/${MACHINE_GNU_PLATFORM}/update-game-score ${GAMEOWN:Q} ${GAMEGRP:Q} ${GAMEMODE:Q}
 
-.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtbegin.o)
-CPPFLAGS+=		-DDFLY_PRE_17_CRT
+.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
+CPPFLAGS+=		-DDFLY_CRT_USRLIB
 .endif
 
 post-extract:
