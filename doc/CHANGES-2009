@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1634 2009/04/30 21:16:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1635 2009/04/30 21:27:33 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2219,3 +2219,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-YAML-Syck to 1.07 [sno 2009-04-30]
 	Updated databases/p5-SQL-Abstract to 1.53 [sno 2009-04-30]
 	Updated databases/p5-Rose-DB to 0.751 [sno 2009-04-30]
+	Updated databases/p5-Rose-DB-Object to 0.781 [sno 2009-04-30]
