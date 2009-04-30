@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1618 2009/04/30 05:09:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1619 2009/04/30 05:11:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2202,3 +2202,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-zapfding version 2008.7340 [minskim 2009-04-30]
 	Added fonts/tex-symbol version 2008.7340 [minskim 2009-04-30]
 	Updated print/teTeX3-texmf to 3.0nb15 [minskim 2009-04-30]
+	Updated fonts/tex-psnfss to 9.2anb1 [minskim 2009-04-30]
