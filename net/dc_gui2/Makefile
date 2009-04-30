@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2009/04/30 20:57:57 zafer Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
 PKGREVISION=	24
 CATEGORIES=	net
-MASTER_SITES=	http://ac2i.homelinux.com/dctc/ \
-		http://dc.tddm.se/clients/
+MASTER_SITES=	http://ac2i.homelinux.com/dctc/ 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ac2i.homelinux.com/dctc/
