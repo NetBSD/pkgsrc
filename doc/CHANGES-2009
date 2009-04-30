@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1624 2009/04/30 19:57:03 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1625 2009/04/30 20:03:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2209,3 +2209,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27 to 2.7rc2nb1 [taca 2009-04-30]
 	Updated lang/pcc-current to 0.9.9.20090430 [hasso 2009-04-30]
 	Updated math/fricas to 1.0.6 [asau 2009-04-30]
+	Updated databases/p5-DBD-Oracle to 1.23 [sno 2009-04-30]
