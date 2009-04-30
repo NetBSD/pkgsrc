@@ -1,16 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2009/02/24 03:24:15 rh Exp $
+# $NetBSD: Makefile,v 1.38 2009/04/30 21:07:45 zafer Exp $
 
 DISTNAME=	delegate9.9.1
 PKGNAME=	delegate-9.9.1
 CATEGORIES=	net
-MASTER_SITES=	ftp://ftp.delegate.org/pub/DeleGate/ \
-		ftp://etlport.etl.go.jp/pub/DeleGate/ \
-		ftp://ftp.fujitsu.co.jp/pub/networking/DeleGate/ \
-		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/ \
-		ftp://ftp.ntua.gr/pub/net/gwtools/DeleGate/ \
-		ftp://ftp.netsw.org/netsw/Network/IP/Firewall/Proxy/delegate/ \
-		ftp://ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/ \
-		ftp://ftp.ecrc.de/ftp/data/ftp.ecrc.net/pub/netsw/Network/IP/Firewall/Proxy/delegate/
+MASTER_SITES=	http://www.delegate.org/anonftp/DeleGate/ \
+		ftp://ftp.u-aizu.ac.jp/pub/net/DeleGate/delegate.org/ 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.delegate.org/delegate/
