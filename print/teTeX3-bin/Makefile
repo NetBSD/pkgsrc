@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2009/04/15 09:19:45 minskim Exp $
+# $NetBSD: Makefile,v 1.47 2009/04/30 01:01:40 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	32
+PKGREVISION=	33
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
@@ -12,9 +12,11 @@ COMMENT=	TeX distribution for UNIX compatible systems - binaries
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	teTeX-texmf>=3.0nb10:../../print/teTeX3-texmf
+DEPENDS+=	makeindexk-[0-9]*:../../textproc/makeindexk
+DEPENDS+=	teTeX-texmf>=3.0nb14:../../print/teTeX3-texmf
 DEPENDS+=	tex-bin-kpathsea-[0-9]*:../../print/tex-bin-kpathsea
 DEPENDS+=	tex-bin-latex-[0-9]*:../../print/tex-bin-latex
+DEPENDS+=	tex-bin-metafont-[0-9]*:../../fonts/tex-bin-metafont
 DEPENDS+=	tex-bin-tex-[0-9]*:../../print/tex-bin-tex
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	web2c>=7.5.7nb2:../../print/web2c
@@ -31,6 +33,7 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--without-texinfo --without-texi2html
 CONFIGURE_ARGS+=	--without-dvipdfm --without-dvipng
 CONFIGURE_ARGS+=	--without-dvipsk --without-odvipsk
+CONFIGURE_ARGS+=	--without-dviljk --without-makeindexk
 CONFIGURE_ARGS+=	--without-etex --without-omega --without-aleph \
 			--without-pdftex --without-pdfetex --without-pdfxtex
 CONFIGURE_ARGS+=	--without-xdvik --without-oxdvik
