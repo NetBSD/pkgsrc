@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1623 2009/04/30 18:51:02 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1624 2009/04/30 19:57:03 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight26 to 2.6.7nb1 [taca 2009-04-30]
 	Updated www/typolight27 to 2.7rc2nb1 [taca 2009-04-30]
 	Updated lang/pcc-current to 0.9.9.20090430 [hasso 2009-04-30]
+	Updated math/fricas to 1.0.6 [asau 2009-04-30]
