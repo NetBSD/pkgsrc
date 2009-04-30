@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1616 2009/04/30 04:46:15 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1617 2009/04/30 05:07:10 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2200,3 +2200,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX to 3.0nb6 [minskim 2009-04-30]
 	Updated print/tex-hyphen-german to 2008.8935nb1 [minskim 2009-04-30]
 	Added fonts/tex-zapfding version 2008.7340 [minskim 2009-04-30]
+	Added fonts/tex-symbol version 2008.7340 [minskim 2009-04-30]
