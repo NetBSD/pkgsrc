@@ -1,16 +1,13 @@
-# $NetBSD: Makefile,v 1.39 2008/06/12 02:14:36 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2009/04/30 20:50:43 zafer Exp $
 #
 
 DISTNAME=	pspp-0.3.0
 PKGREVISION=	5
 CATEGORIES=	math
 MASTER_SITES=	ftp://alpha.gnu.org/gnu/pspp/ \
-		ftp://ftp.gwdg.de/pub/gnu-alpha/pspp/ \
 		ftp://ftp.unex.es/pub/gnu-beta/pspp/ \
-		ftp://ftp.cs.columbia.edu/.archives/gnu/alpha/pspp/ \
-		ftp://ftp.kddlabs.co.jp/.1/alpha-gnu/pspp/ \
-		ftp://ftp.icm.edu.pl/vol/rzm0/gnu-alpha/pspp/ \
-		ftp://ftp.tuniv.szczecin.pl/mirrors/alpha.gnu.org/pub/gnu/pspp/
+		ftp://ftp.kddlabs.co.jp/gnusoftware/alpha-gnu/pspp/ \
+		ftp://ftp.icm.edu.pl/vol/rzm1/gnu-alpha/pspp/ 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/pspp/
