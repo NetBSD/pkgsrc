@@ -34,19 +34,12 @@
 #endif
 #define LD_SWITCH_SYSTEM
 
-#if defined(__GNUC__) && __GNUC__ == 3 && __GNUC_MINOR__ == 4
-#  ifndef DFLY_PRE_17_CRT
-#define START_FILES pre-crt0.o /usr/lib/gcc34/crt1.o /usr/lib/gcc34/crti.o /usr/lib/gcc34/crtbegin.o
-#define LIB_STANDARD -L/usr/lib/gcc34 -lgcc -lc -lgcc /usr/lib/gcc34/crtend.o /usr/lib/gcc34/crtn.o
-#  else
-#define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o
-#define LIB_STANDARD -L/usr/lib/gcc34 -lgcc -lc -lgcc /usr/lib/crtend.o /usr/lib/crtn.o
-#  endif
-#elif defined(__GNUC__) && __GNUC__ == 4 && __GNUC_MINOR__ == 1
+#ifdef DFLY_CRT_USRLIB
+#define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/gcc41/crtbegin.o
+#define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/crtn.o
+#else
 #define START_FILES pre-crt0.o /usr/lib/gcc41/crt1.o /usr/lib/gcc41/crti.o /usr/lib/gcc41/crtbegin.o
 #define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/gcc41/crtn.o
-#else
-#error "Add compiler version magic"
 #endif
 
 #define UNEXEC "unexelf.o"
