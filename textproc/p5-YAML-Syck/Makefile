@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:19:00 he Exp $
+# $NetBSD: Makefile,v 1.7 2009/04/30 21:00:18 sno Exp $
 
-DISTNAME=	YAML-Syck-1.05
+DISTNAME=	YAML-Syck-1.07
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	perl5 textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AU/AUDREYT/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=YAML/}
+#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AU/AUDREYT/}
 
 MAINTAINER=	bad@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~audreyt/YAML-Syck/
 COMMENT=	Fast, lightweight YAML loader and dumper
+#LICENSE=	mit AND bsd
 
 USE_LANGUAGES=	c
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
