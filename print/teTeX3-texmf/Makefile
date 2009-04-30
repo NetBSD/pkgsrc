@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/04/30 05:09:12 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2009/04/30 07:56:18 minskim Exp $
 #
 
 DISTNAME=	tetex-texmf-3.0
@@ -61,7 +61,7 @@ DEPENDS+=	tex-natbib-[0-9]*:../../print/tex-natbib
 DEPENDS+=	tex-oberdiek-[0-9]*:../../print/tex-oberdiek
 DEPENDS+=	tex-placeins-[0-9]*:../../print/tex-placeins
 DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
-DEPENDS+=	tex-symbol-[0-9]*:../../fonts/symbol
+DEPENDS+=	tex-symbol-[0-9]*:../../fonts/tex-symbol
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
 DEPENDS+=	tex-zapfding-[0-9]*:../../fonts/zapfding
 
