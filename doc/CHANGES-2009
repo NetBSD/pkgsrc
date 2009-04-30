@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1626 2009/04/30 20:07:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1627 2009/04/30 20:15:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2211,3 +2211,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/fricas to 1.0.6 [asau 2009-04-30]
 	Updated databases/p5-DBD-Oracle to 1.23 [sno 2009-04-30]
 	Updated www/p5-Catalyst-Component-ACCEPT_CONTEXT to 0.06 [sno 2009-04-30]
+	Updated databases/p5-CatalystX-CRUD to 0.43 [sno 2009-04-30]
