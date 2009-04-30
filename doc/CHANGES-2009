@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1620 2009/04/30 07:16:03 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1621 2009/04/30 07:21:49 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2204,3 +2204,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/teTeX3-texmf to 3.0nb15 [minskim 2009-04-30]
 	Updated fonts/tex-psnfss to 9.2anb1 [minskim 2009-04-30]
 	Updated www/p5-Catalyst-Runtime to 5.80003 [sno 2009-04-30]
+	Updated security/pcsc-lite to 1.5.3 [hasso 2009-04-30]
