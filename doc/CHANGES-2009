@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1613 2009/04/29 23:15:14 gdt Exp $
+$NetBSD: CHANGES-2009,v 1.1614 2009/04/30 01:03:09 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2195,3 +2195,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-URI-Escape-XS to 0.05 [sno 2009-04-29]
 	Updated devel/p5-AnyEvent to 4.400 [sno 2009-04-29]
 	Updated www/ap2-wsgi to 2.4 [gdt 2009-04-29]
+	Updated print/teTeX3-texmf to 3.0nb14 [minskim 2009-04-30]
+	Updated print/teTeX3-bin to 3.0nb33 [minskim 2009-04-30]
+	Updated print/teTeX to 3.0nb6 [minskim 2009-04-30]
