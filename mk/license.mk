@@ -1,7 +1,11 @@
-# $NetBSD: license.mk,v 1.16 2009/04/29 23:50:07 gdt Exp $
+# $NetBSD: license.mk,v 1.17 2009/04/30 12:27:16 gdt Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
+#
+# XXX There should be one place to set the default list and for users
+# to set the ACCEPTABLE_LICENSES list, used by both source builds and
+# binary installs#
 #
 # XXX: Some of this content arguably belongs in the pkgsrc guide
 # instead.
@@ -9,12 +13,12 @@
 # === User-settable variables ===
 #
 # ACCEPTABLE_LICENSES
-#	If a package declares a license and that license is not a
-#	member of the list defined by this variable, pkgsrc will
-#	refuse to build the package.
 #
-#	XXX: pkg_install should also check LICENSE and decline to
-#	install if it is not in ACCEPTABLE_LICENSES.
+#	If a package declares a license and that license is not a
+#	member of the list defined by this variable, pkgsrc will not
+#	build the package and instead print an error message.
+#	(pkg_install has code to behave the same way, but it is not
+#	yet turned on.)
 #
 #	XXX: Perhaps there should be some mechanism to prevent running
 #	programs that are part of packages that declare LICENSEs that
@@ -29,6 +33,7 @@
 # === Package-settable variables ===
 #
 # LICENSE
+#
 #	The license of the package.
 #
 #	Sometimes licensing is other than a single text file.  See
@@ -65,6 +70,11 @@
 #	added if they have terms that would obviously be approved if
 #	the effort were made.  Such license names will have a comment
 #	near them in the assignment to DEFAULT_ACCEPTABLE_LICENSES.
+#
+#	The pkg_install sources also have a
+#	DEFAULT_ACCEPTABLE_LICENSES list, and that should be updated
+#	to match the list here.  See
+#	pkgsrc/pkgtools/pkg_install/files/lib/license.c
 #
 # === See also ===
 #
