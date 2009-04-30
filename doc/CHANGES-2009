@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1637 2009/04/30 21:43:13 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1638 2009/04/30 21:49:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2222,3 +2222,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-Rose-DB-Object to 0.781 [sno 2009-04-30]
 	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.20 [sno 2009-04-30]
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.08 [sno 2009-04-30]
+	Updated devel/p5-UNIVERSAL-require to 0.13 [sno 2009-04-30]
