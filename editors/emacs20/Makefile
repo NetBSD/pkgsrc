@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/11/10 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/04/30 17:22:06 hasso Exp $
 
 DISTNAME=	emacs-20.7
 PKGREVISION=	12
@@ -51,8 +51,8 @@ CHECK_WRKREF_SKIP+=	bin/emacs-20.7
 LDFLAGS+=	-Wl,-z,nocombreloc
 .endif
 
-.if ${OPSYS} == "DragonFly" && exists(/usr/lib/crtbegin.o)
-CPPFLAGS+=	-DDFLY_PRE_17_CRT
+.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
+CPPFLAGS+=	-DDFLY_CRT_USRLIB
 .endif
 
 .include "options.mk"
