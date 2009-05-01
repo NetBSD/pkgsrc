@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/20 22:29:09 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/01 23:38:38 schmonz Exp $
 #
 
 DISTNAME=		xapian-omega-1.0.12
@@ -43,4 +43,5 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 BUILD_DEFS+=		VARBASE
 
 .include "../../textproc/xapian/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
