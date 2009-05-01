@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1660 2009/05/01 19:50:50 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1661 2009/05/01 19:51:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-Rose-HTMLx-Form-Field-PopUpMenuNumeric version 0.001 [sno 2009-05-01]
 	Updated www/p5-Rose-HTMLx-Form-Related to 0.17 [sno 2009-05-01]
 	Updated www/drupal6 to 6.11 [adrianp 2009-05-01]
+	Updated www/drupal to 5.17 [adrianp 2009-05-01]
