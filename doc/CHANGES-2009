@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1674 2009/05/01 21:17:17 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1675 2009/05/01 21:22:40 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-Format-Flexible to 0.08 [sno 2009-05-01]
 	Updated time/p5-DateTime-Format-HTTP to 0.38 [sno 2009-05-01]
 	Updated time/p5-Time to 2006.0814 [sno 2009-05-01]
+	Updated devel/p5-Object-InsideOut to 3.54 [sno 2009-05-01]
