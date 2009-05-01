@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uk,v 1.1.1.1 2009/04/26 04:01:49 taca Exp $
+@comment $NetBSD: PLIST.uk,v 1.2 2009/05/01 14:50:37 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/uk/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/default.php
@@ -37,10 +37,6 @@ ${TL_WEBDIR}/system/modules/comments/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/comments/languages/uk/modules.php
 ${TL_WEBDIR}/system/modules/comments/languages/uk/tl_comments.php
 ${TL_WEBDIR}/system/modules/comments/languages/uk/tl_content.php
-${TL_WEBDIR}/system/modules/development/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/development/languages/uk/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/uk/tl_labels.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/default.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/modules.php
@@ -82,8 +78,6 @@ ${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_channel.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_recipients.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user_group.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/registration/languages/uk/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/uk/modules.php
@@ -107,7 +101,6 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/rep_client/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/rep_base/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/uk
@@ -115,7 +108,6 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/faq/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/development/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/comments/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/calendar/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/backend/languages/uk
