@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/02/24 04:52:16 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/01 14:47:29 zafer Exp $
 #
 
 DISTNAME=	ipa-2.0.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://ipa-system.sourceforge.net/ \
-		http://www.mirrors.wiretapped.net/security/network-monitoring/ipa/ \
-		ftp://ftp.mirrors.wiretapped.net/pub/security/network-monitoring/ipa/
+MASTER_SITES=	http://ipa-system.sourceforge.net/ 
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
