@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/04/02 12:42:28 adrianp Exp $
+$NetBSD: distinfo,v 1.4 2009/05/01 21:15:34 sno Exp $
 
-SHA1 (Time-modules-2003.1126.tar.gz) = c6996386642678a2d0c8eaa28ecb5b564c8ccb6c
-RMD160 (Time-modules-2003.1126.tar.gz) = 6786aeca784b92674f25a605d766674055bfefd3
-Size (Time-modules-2003.1126.tar.gz) = 22296 bytes
+SHA1 (Time-modules-2006.0814.tar.gz) = a79c6bcce924fcb3a0b08eea37dbad27d2880ebf
+RMD160 (Time-modules-2006.0814.tar.gz) = 555fd3eca2201d4c422514af4a7e74586f0aca13
+Size (Time-modules-2006.0814.tar.gz) = 23997 bytes
