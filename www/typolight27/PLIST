@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/26 03:58:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/01 03:04:48 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -38,107 +38,40 @@ ${TL_WEBDIR}/plugins/calendar/calendar.js
 ${TL_WEBDIR}/plugins/calendar/calendar.png
 ${TL_WEBDIR}/plugins/calendar/calendar_src.css
 ${TL_WEBDIR}/plugins/calendar/calendar_src.js
-${TL_WEBDIR}/plugins/dompdf/dompdf_config.inc.php
-${TL_WEBDIR}/plugins/dompdf/include/abstract_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/attribute_translator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/block_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/block_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/block_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/block_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/cached_pdf_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/canvas.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/canvas_factory.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/cellmap.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/cpdf_adapter.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/dompdf.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/dompdf_exception.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/dompdf_internal_exception.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/font_metrics.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/frame.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/frame_factory.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/frame_tree.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/functions.inc.php
-${TL_WEBDIR}/plugins/dompdf/include/gd_adapter.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/generated_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/image_cache.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/image_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/image_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/image_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/inline_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/inline_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/inline_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/inline_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/list_bullet_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/list_bullet_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/list_bullet_image_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/list_bullet_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/list_bullet_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/null_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/null_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/null_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/page_cache.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/page_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/page_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/pdflib_adapter.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/php_evaluator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/style.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/stylesheet.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_cell_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_cell_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_cell_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_cell_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_row_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_row_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_row_group_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_row_group_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/table_row_positioner.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/tcpdf_adapter.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/text_frame_decorator.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/text_frame_reflower.cls.php
-${TL_WEBDIR}/plugins/dompdf/include/text_renderer.cls.php
-${TL_WEBDIR}/plugins/dompdf/lib/class.pdf.php
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-Bold.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-BoldOblique.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-Oblique.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-Bold.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-BoldOblique.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-Oblique.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Bold.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-BoldItalic.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Italic.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Roman.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/ZapfDingbats.afm
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/dompdf_font_family_cache
-${TL_WEBDIR}/plugins/dompdf/lib/fonts/dompdf_font_family_cache.dist
-${TL_WEBDIR}/plugins/dompdf/lib/res/broken_image.png
-${TL_WEBDIR}/plugins/dompdf/lib/res/html.css
-${TL_WEBDIR}/plugins/dpsyntax/bg.gif
-${TL_WEBDIR}/plugins/dpsyntax/clipboard.swf
-${TL_WEBDIR}/plugins/dpsyntax/dpsyntax.css
-${TL_WEBDIR}/plugins/dpsyntax/dpsyntax_src.css
-${TL_WEBDIR}/plugins/dpsyntax/iefixes.css
-${TL_WEBDIR}/plugins/dpsyntax/shBrushCSharp.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushCpp.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushCss.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushDelphi.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushJScript.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushJava.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushPhp.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushPython.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushRuby.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushSql.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushVb.js
-${TL_WEBDIR}/plugins/dpsyntax/shBrushXml.js
-${TL_WEBDIR}/plugins/dpsyntax/shCore.js
-${TL_WEBDIR}/plugins/dpsyntax/shCore.uncompressed.js
+${TL_WEBDIR}/plugins/highlighter/scripts/clipboard.swf
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushBash.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushCSharp.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushCpp.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushCss.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushDelphi.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushDiff.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushGroovy.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushJScript.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushJava.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushPerl.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushPhp.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushPlain.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushPython.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushRuby.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushScala.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushSql.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushVb.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shBrushXml.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shCore.js
+${TL_WEBDIR}/plugins/highlighter/scripts/shCore.js.gz
+${TL_WEBDIR}/plugins/highlighter/scripts/shInit.js
+${TL_WEBDIR}/plugins/highlighter/src/shCore.css
+${TL_WEBDIR}/plugins/highlighter/src/shCore.js
+${TL_WEBDIR}/plugins/highlighter/src/shThemeTYPOlight.css
+${TL_WEBDIR}/plugins/highlighter/styles/help.png
+${TL_WEBDIR}/plugins/highlighter/styles/magnifier.png
+${TL_WEBDIR}/plugins/highlighter/styles/page_white_code.png
+${TL_WEBDIR}/plugins/highlighter/styles/page_white_copy.png
+${TL_WEBDIR}/plugins/highlighter/styles/printer.png
+${TL_WEBDIR}/plugins/highlighter/styles/shCore.css
+${TL_WEBDIR}/plugins/highlighter/styles/shThemeDefault.css
+${TL_WEBDIR}/plugins/highlighter/styles/shThemeTYPOlight.css
+${TL_WEBDIR}/plugins/highlighter/styles/wrapping.png
 ${TL_WEBDIR}/plugins/mootools/images/blank.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_arrows.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_boverlay.png
@@ -146,6 +79,7 @@ ${TL_WEBDIR}/plugins/mootools/images/moor_cursor.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_slider.png
 ${TL_WEBDIR}/plugins/mootools/images/moor_woverlay.png
 ${TL_WEBDIR}/plugins/mootools/mootools.js
+${TL_WEBDIR}/plugins/mootools/mootools.js.gz
 ${TL_WEBDIR}/plugins/mootools/mootools_src.js
 ${TL_WEBDIR}/plugins/mootools/rainbow.css
 ${TL_WEBDIR}/plugins/mootools/rainbow.js
@@ -166,6 +100,7 @@ ${TL_WEBDIR}/plugins/slimbox/css/slimbox_src.css
 ${TL_WEBDIR}/plugins/slimbox/js/slimbox.js
 ${TL_WEBDIR}/plugins/slimbox/js/slimbox_src.js
 ${TL_WEBDIR}/plugins/swfobject/swfobject.js
+${TL_WEBDIR}/plugins/swfobject/swfobject.js.gz
 ${TL_WEBDIR}/plugins/swfobject/swfobject_src.js
 ${TL_WEBDIR}/plugins/tablesort/css/tablesort.css
 ${TL_WEBDIR}/plugins/tablesort/css/tablesort_src.css
@@ -178,12 +113,6 @@ ${TL_WEBDIR}/plugins/tcpdf/cache/.htaccess
 ${TL_WEBDIR}/plugins/tcpdf/config/lang/eng.php
 ${TL_WEBDIR}/plugins/tcpdf/config/tcpdf_config.php
 ${TL_WEBDIR}/plugins/tcpdf/fonts/courier.php
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/AUTHORS
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/COPYING
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/CREDITS
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/ChangeLog
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/INSTALL
-${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323/README
 ${TL_WEBDIR}/plugins/tcpdf/fonts/freeserif.ctg.z
 ${TL_WEBDIR}/plugins/tcpdf/fonts/freeserif.php
 ${TL_WEBDIR}/plugins/tcpdf/fonts/freeserif.z
@@ -1061,37 +990,6 @@ ${TL_WEBDIR}/system/modules/comments/languages/en/tl_content.php
 ${TL_WEBDIR}/system/modules/comments/templates/.htaccess
 ${TL_WEBDIR}/system/modules/comments/templates/ce_comments.tpl
 ${TL_WEBDIR}/system/modules/comments/templates/com_default.tpl
-${TL_WEBDIR}/system/modules/development/ModuleExtension.php
-${TL_WEBDIR}/system/modules/development/ModuleLabels.php
-${TL_WEBDIR}/system/modules/development/config/.htaccess
-${TL_WEBDIR}/system/modules/development/config/config.php
-${TL_WEBDIR}/system/modules/development/config/database.sql
-${TL_WEBDIR}/system/modules/development/dca/.htaccess
-${TL_WEBDIR}/system/modules/development/dca/tl_extension.php
-${TL_WEBDIR}/system/modules/development/html/apply.gif
-${TL_WEBDIR}/system/modules/development/html/extension.gif
-${TL_WEBDIR}/system/modules/development/html/labels.css
-${TL_WEBDIR}/system/modules/development/html/labels.gif
-${TL_WEBDIR}/system/modules/development/languages/de/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/de/modules.php
-${TL_WEBDIR}/system/modules/development/languages/de/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/de/tl_labels.php
-${TL_WEBDIR}/system/modules/development/languages/en/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/en/modules.php
-${TL_WEBDIR}/system/modules/development/languages/en/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/en/tl_labels.php
-${TL_WEBDIR}/system/modules/development/templates/.htaccess
-${TL_WEBDIR}/system/modules/development/templates/dev_beClass.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_config.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_database.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_dca.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_default.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_extension.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_feClass.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_htaccess.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_labels.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_modules.tpl
-${TL_WEBDIR}/system/modules/development/templates/dev_table.tpl
 ${TL_WEBDIR}/system/modules/dfGallery/ContentDfGallery.php
 ${TL_WEBDIR}/system/modules/dfGallery/DfGallery.swf
 ${TL_WEBDIR}/system/modules/dfGallery/config/.htaccess
@@ -1101,9 +999,11 @@ ${TL_WEBDIR}/system/modules/dfGallery/dca/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/dca/tl_content.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/de/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/de/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/de/modules.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/de/tl_content.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/en/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/en/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/en/modules.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/en/tl_content.php
 ${TL_WEBDIR}/system/modules/dfGallery/resources/locale/dfgallery_en.eden
 ${TL_WEBDIR}/system/modules/dfGallery/resources/themes/standard/properties.php
@@ -1184,7 +1084,7 @@ ${TL_WEBDIR}/system/modules/frontend/Hybrid.php
 ${TL_WEBDIR}/system/modules/frontend/Module.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleArticle.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleArticleList.php
-${TL_WEBDIR}/system/modules/frontend/ModuleArticleNav.php
+${TL_WEBDIR}/system/modules/frontend/ModuleArticlenav.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleBooknav.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleBreadcrumb.php
 ${TL_WEBDIR}/system/modules/frontend/ModuleCustomnav.php
@@ -1283,6 +1183,29 @@ ${TL_WEBDIR}/system/modules/frontend/templates/moo_modify_foreground.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/nav_default.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/pagination.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/search_default.tpl
+${TL_WEBDIR}/system/modules/glossary/ModuleGlossaryList.php
+${TL_WEBDIR}/system/modules/glossary/ModuleGlossaryMenu.php
+${TL_WEBDIR}/system/modules/glossary/config/.htaccess
+${TL_WEBDIR}/system/modules/glossary/config/config.php
+${TL_WEBDIR}/system/modules/glossary/config/database.sql
+${TL_WEBDIR}/system/modules/glossary/dca/.htaccess
+${TL_WEBDIR}/system/modules/glossary/dca/tl_glossary.php
+${TL_WEBDIR}/system/modules/glossary/dca/tl_glossary_term.php
+${TL_WEBDIR}/system/modules/glossary/dca/tl_module.php
+${TL_WEBDIR}/system/modules/glossary/html/icon.gif
+${TL_WEBDIR}/system/modules/glossary/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/glossary/languages/de/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/de/tl_glossary.php
+${TL_WEBDIR}/system/modules/glossary/languages/de/tl_glossary_term.php
+${TL_WEBDIR}/system/modules/glossary/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/glossary/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/glossary/languages/en/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/en/tl_glossary.php
+${TL_WEBDIR}/system/modules/glossary/languages/en/tl_glossary_term.php
+${TL_WEBDIR}/system/modules/glossary/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/glossary/templates/.htaccess
+${TL_WEBDIR}/system/modules/glossary/templates/mod_glossary_list.tpl
+${TL_WEBDIR}/system/modules/glossary/templates/mod_glossary_menu.tpl
 ${TL_WEBDIR}/system/modules/listing/ModuleListing.php
 ${TL_WEBDIR}/system/modules/listing/config/.htaccess
 ${TL_WEBDIR}/system/modules/listing/config/config.php
@@ -1416,17 +1339,6 @@ ${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter.tpl
 ${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter_list.tpl
 ${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter_reader.tpl
 ${TL_WEBDIR}/system/modules/newsletter/templates/nl_default.tpl
-${TL_WEBDIR}/system/modules/pun_bridge/._htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/PunBridge.php
-${TL_WEBDIR}/system/modules/pun_bridge/README.txt
-${TL_WEBDIR}/system/modules/pun_bridge/config/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/config/config.php
-${TL_WEBDIR}/system/modules/pun_bridge/dca/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/dca/tl_member.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/de/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/de/modules.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/en/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/en/modules.php
 ${TL_WEBDIR}/system/modules/registration/ModulePassword.php
 ${TL_WEBDIR}/system/modules/registration/ModuleRegistration.php
 ${TL_WEBDIR}/system/modules/registration/config/.htaccess
@@ -1766,12 +1678,6 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/registration/dca
 @dirrm ${TL_WEBDIR}/system/modules/registration/config
 @dirrm ${TL_WEBDIR}/system/modules/registration
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/en
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/de
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/dca
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/config
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/templates
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/en
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/de
@@ -1804,6 +1710,14 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/listing/dca
 @dirrm ${TL_WEBDIR}/system/modules/listing/config
 @dirrm ${TL_WEBDIR}/system/modules/listing
+@dirrm ${TL_WEBDIR}/system/modules/glossary/templates
+@dirrm ${TL_WEBDIR}/system/modules/glossary/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/glossary/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/glossary/languages
+@dirrm ${TL_WEBDIR}/system/modules/glossary/html
+@dirrm ${TL_WEBDIR}/system/modules/glossary/dca
+@dirrm ${TL_WEBDIR}/system/modules/glossary/config
+@dirrm ${TL_WEBDIR}/system/modules/glossary
 @dirrm ${TL_WEBDIR}/system/modules/frontend/templates
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/en
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/de
@@ -1830,14 +1744,6 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery/dca
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery/config
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery
-@dirrm ${TL_WEBDIR}/system/modules/development/templates
-@dirrm ${TL_WEBDIR}/system/modules/development/languages/en
-@dirrm ${TL_WEBDIR}/system/modules/development/languages/de
-@dirrm ${TL_WEBDIR}/system/modules/development/languages
-@dirrm ${TL_WEBDIR}/system/modules/development/html
-@dirrm ${TL_WEBDIR}/system/modules/development/dca
-@dirrm ${TL_WEBDIR}/system/modules/development/config
-@dirrm ${TL_WEBDIR}/system/modules/development
 @dirrm ${TL_WEBDIR}/system/modules/comments/templates
 @dirrm ${TL_WEBDIR}/system/modules/comments/languages/en
 @dirrm ${TL_WEBDIR}/system/modules/comments/languages/de
@@ -1935,7 +1841,6 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE/langs
 @dirrm ${TL_WEBDIR}/plugins/tinyMCE
 @dirrm ${TL_WEBDIR}/plugins/tcpdf/images
-@dirrm ${TL_WEBDIR}/plugins/tcpdf/fonts/freefont-20080323
 @dirrm ${TL_WEBDIR}/plugins/tcpdf/fonts
 @dirrm ${TL_WEBDIR}/plugins/tcpdf/config/lang
 @dirrm ${TL_WEBDIR}/plugins/tcpdf/config
@@ -1954,12 +1859,10 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/plugins/phpmailer
 @dirrm ${TL_WEBDIR}/plugins/mootools/images
 @dirrm ${TL_WEBDIR}/plugins/mootools
-@dirrm ${TL_WEBDIR}/plugins/dpsyntax
-@dirrm ${TL_WEBDIR}/plugins/dompdf/lib/res
-@dirrm ${TL_WEBDIR}/plugins/dompdf/lib/fonts
-@dirrm ${TL_WEBDIR}/plugins/dompdf/lib
-@dirrm ${TL_WEBDIR}/plugins/dompdf/include
-@dirrm ${TL_WEBDIR}/plugins/dompdf
+@dirrm ${TL_WEBDIR}/plugins/highlighter/styles
+@dirrm ${TL_WEBDIR}/plugins/highlighter/src
+@dirrm ${TL_WEBDIR}/plugins/highlighter/scripts
+@dirrm ${TL_WEBDIR}/plugins/highlighter
 @dirrm ${TL_WEBDIR}/plugins/calendar
 @dirrm ${TL_WEBDIR}/plugins
 @dirrm ${TL_EGDIR}/tl_files/xBrowser_style_sheets
