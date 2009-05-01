@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8067 2009/04/30 11:52:33 taca Exp $
+$NetBSD: TODO,v 1.8068 2009/05/01 14:42:49 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1070,6 +1070,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pircbot-1.4.4
 	o pixman-0.14.0
 	o pkg_select-20051209
+	o pks-0.9.6
 	o planner-0.14.4
 	o plone-3.2.2 [should be plone-32?]
 	o ploticus-2.41
