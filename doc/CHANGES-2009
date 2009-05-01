@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1641 2009/05/01 09:04:47 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1642 2009/05/01 11:52:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2226,3 +2226,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-hyperref-doc version 6.78q [minskim 2009-05-01]
 	Updated www/typolight27 to 2.7.0 [taca 2009-05-01]
 	Updated mail/p5-Mail-ClamAV to 0.29 [sno 2009-05-01]
+	Updated www/p5-Catalyst-Devel to 1.12 [sno 2009-05-01]
