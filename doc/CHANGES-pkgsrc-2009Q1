@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.20 2009/04/29 21:29:42 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.21 2009/05/01 12:49:21 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -53,3 +53,7 @@ Pullup ticket #2750 - requested by tnn
 firefox3: security update
 Pullup ticket #2751 - requested by drochner
 poppler: security update
+Pullup ticket #2752 - requested by taca
+ruby18-base: security update
+ruby18-curses: security update
+ruby18-tk: security update
