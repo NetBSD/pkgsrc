@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/23 03:01:52 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/05/01 18:31:58 sno Exp $
 
-SHA1 (Template-Timer-0.04.tar.gz) = b47db55a9d96390c1218543b4ea1386c95d2bfdf
-RMD160 (Template-Timer-0.04.tar.gz) = a44f54a162a8a3a6178c93b6123039e0badcae05
-Size (Template-Timer-0.04.tar.gz) = 2924 bytes
+SHA1 (Template-Timer-1.00.tar.gz) = 909dcec55edc4f6957f74f6db554138849befcc2
+RMD160 (Template-Timer-1.00.tar.gz) = 23f4259205563cf4c0133d0c6853127386ff628d
+Size (Template-Timer-1.00.tar.gz) = 3809 bytes
