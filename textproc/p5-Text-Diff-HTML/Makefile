@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:18:56 he Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/01 22:27:49 sno Exp $
 
-DISTNAME=	Text-Diff-HTML-0.05
+DISTNAME=	Text-Diff-HTML-0.06
 PKGNAME=	p5-${DISTNAME}
-# PKGREVISION=	2
-PKGREVISION=	1
 CATEGORIES=	perl5 textproc
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DW/DWHEELER/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
+#MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DW/DWHEELER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Diff-HTML/
 COMMENT=	HTML formatting class for Text::Diff
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
