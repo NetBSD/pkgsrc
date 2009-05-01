@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.tr,v 1.1.1.1 2009/04/26 04:01:49 taca Exp $
+@comment $NetBSD: PLIST.tr,v 1.2 2009/05/01 14:50:37 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/tr/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/tr/default.php
@@ -37,10 +37,6 @@ ${TL_WEBDIR}/system/modules/comments/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/comments/languages/tr/modules.php
 ${TL_WEBDIR}/system/modules/comments/languages/tr/tl_comments.php
 ${TL_WEBDIR}/system/modules/comments/languages/tr/tl_content.php
-${TL_WEBDIR}/system/modules/development/languages/tr/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/tr/modules.php
-${TL_WEBDIR}/system/modules/development/languages/tr/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/tr/tl_labels.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/tr/modules.php
@@ -77,8 +73,6 @@ ${TL_WEBDIR}/system/modules/newsletter/languages/tr/tl_newsletter_channel.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/tr/tl_newsletter_recipients.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/tr/tl_user.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/tr/tl_user_group.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/tr/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/tr/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/tr/.htaccess
 ${TL_WEBDIR}/system/modules/registration/languages/tr/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/tr/modules.php
@@ -92,14 +86,12 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/tr/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/tr
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/faq/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/tr
-@dirrm ${TL_WEBDIR}/system/modules/development/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/comments/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/calendar/languages/tr
 @dirrm ${TL_WEBDIR}/system/modules/backend/languages/tr

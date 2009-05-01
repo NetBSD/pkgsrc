@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/26 04:01:49 taca Exp $
+$NetBSD: distinfo,v 1.2 2009/05/01 14:50:37 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -33,9 +33,9 @@ Size (TYPOlight-Icelandic-v2.zip) = 76117 bytes
 SHA1 (TYPOlight-Indonesian-v1.zip) = b814c0903c4f4efe3deec2f25977befe98f9c9cb
 RMD160 (TYPOlight-Indonesian-v1.zip) = 67d09a5aba444e103d60428c8c010cd05ed2c7b4
 Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
-SHA1 (TYPOlight-Italian-v11.zip) = aacc771ae9763f1f0c88ffdf8e7db6c2c88c3dbd
-RMD160 (TYPOlight-Italian-v11.zip) = 49faaa7bdddb6fb31a85c3c7528c80a9c6b0880b
-Size (TYPOlight-Italian-v11.zip) = 142710 bytes
+SHA1 (TYPOlight-Italian-v13.zip) = 5e0a09223f5cf410111d8214917b8dca320753ac
+RMD160 (TYPOlight-Italian-v13.zip) = 6c5ec846cec06778b71c72583ccee3179acaa00b
+Size (TYPOlight-Italian-v13.zip) = 150245 bytes
 SHA1 (TYPOlight-Japanese-v18.zip) = f539680f8ec5e34b2bdb990c8c5857c7d8763a60
 RMD160 (TYPOlight-Japanese-v18.zip) = 194d30608d37e54820112c3063c4121c56ec15e5
 Size (TYPOlight-Japanese-v18.zip) = 151943 bytes
@@ -72,9 +72,9 @@ Size (TYPOlight-Slovak-v5.zip) = 120777 bytes
 SHA1 (TYPOlight-Spanish-v10.zip) = 831b9af311f6efe6becab12688f894ffdb324d01
 RMD160 (TYPOlight-Spanish-v10.zip) = cfede961879b1dcc1221174bdbd53e2545101e63
 Size (TYPOlight-Spanish-v10.zip) = 118115 bytes
-SHA1 (TYPOlight-Swedish-v29.zip) = c0933879fec3b15a7bd8d573d0230dff29c348e7
-RMD160 (TYPOlight-Swedish-v29.zip) = d24890118ee207eefb6a4099e60a4b8a5dcfb3c1
-Size (TYPOlight-Swedish-v29.zip) = 145161 bytes
+SHA1 (TYPOlight-Swedish-v31.zip) = cd0cebbf2f9b369c8ee0689d6c7f016fb716160b
+RMD160 (TYPOlight-Swedish-v31.zip) = a7bb33f91e862d86abade7e662dfa5d8ce7223ff
+Size (TYPOlight-Swedish-v31.zip) = 150354 bytes
 SHA1 (TYPOlight-Thai-v2.zip) = 90e87265f460fb917f57fb5ba25a0aeecaa9a54a
 RMD160 (TYPOlight-Thai-v2.zip) = e3fb7addc9a57b1ffb11b0ec8cab248927dd0822
 Size (TYPOlight-Thai-v2.zip) = 153160 bytes
