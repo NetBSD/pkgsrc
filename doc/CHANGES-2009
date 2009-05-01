@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1673 2009/05/01 21:09:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1674 2009/05/01 21:17:17 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2260,3 +2260,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-String-BufferStack to 1.14 [sno 2009-05-01]
 	Updated time/p5-DateTime-Format-Flexible to 0.08 [sno 2009-05-01]
 	Updated time/p5-DateTime-Format-HTTP to 0.38 [sno 2009-05-01]
+	Updated time/p5-Time to 2006.0814 [sno 2009-05-01]
