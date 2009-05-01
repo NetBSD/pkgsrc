@@ -1,0 +1,6 @@
+Rose::HTMLx::Form::Field::PopUpMenuNumeric is like a normal RHTMLO PopUpMenu
+but it returns an internal_value() like Rose::HTML::Form::Field::Numeric does.
+
+This module exists mostly to ensure that popup menus representing numeric
+values properly return undef instead of an empty string -- an important
+distinction when you *really* want a numeric value and not a string.
