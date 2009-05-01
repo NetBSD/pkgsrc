@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1662 2009/05/01 19:52:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1663 2009/05/01 19:56:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2248,3 +2248,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/drupal6 to 6.11 [adrianp 2009-05-01]
 	Updated www/drupal to 5.17 [adrianp 2009-05-01]
 	Updated www/p5-Rose-HTML-Objects to 0.602 [sno 2009-05-01]
+	Updated devel/p5-Template-Plugin-Handy to 0.003 [sno 2009-05-01]
