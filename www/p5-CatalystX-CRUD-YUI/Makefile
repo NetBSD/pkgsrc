@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/02/22 18:15:33 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/01 20:35:04 sno Exp $
 
-DISTNAME=	CatalystX-CRUD-YUI-0.015
+DISTNAME=	CatalystX-CRUD-YUI-0.017
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
@@ -8,11 +8,15 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/CatalystX-CRUD-YUI/
 COMMENT=	YUI for your CatalystX::CRUD view
+LICENSE=	gnu-gpl-v2 # OR artistic
 
+# Recommended dependencies
 DEPENDS+=	p5-CatalystX-CRUD-Model-RDBO>=0.14:../../databases/p5-CatalystX-CRUD-Model-RDBO
 DEPENDS+=	p5-CatalystX-CRUD-ModelAdapter-DBIC>=0.06:../../databases/p5-CatalystX-CRUD-ModelAdapter-DBIC
 DEPENDS+=	p5-DBIx-Class-RDBOHelpers>=0.05:../../databases/p5-DBIx-Class-RDBOHelpers
 DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers>=0.02:../../databases/p5-Rose-DBx-Object-MoreHelpers
+
+# Required dependencies
 DEPENDS+=	p5-Catalyst-View-TT>=0:../../www/p5-Catalyst-View-TT
 DEPENDS+=       p5-CatalystX-CRUD>=0.3:../../databases/p5-CatalystX-CRUD
 DEPENDS+=	p5-CatalystX-CRUD-Controller-RHTMLO>=0.17:../../www/p5-CatalystX-CRUD-Controller-RHTMLO
@@ -20,7 +24,7 @@ DEPENDS+=	p5-CatalystX-CRUD-View-Excel>=0.05:../../www/p5-CatalystX-CRUD-View-Ex
 DEPENDS+=	p5-Class-C3>=0:../../devel/p5-Class-C3
 DEPENDS+=	p5-JSON-XS>=2:../../converters/p5-JSON-XS
 DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
-DEPENDS+=	p5-Rose-HTMLx-Form-Related>=0.07:../../www/p5-Rose-HTMLx-Form-Related
+DEPENDS+=	p5-Rose-HTMLx-Form-Related>=0.17:../../www/p5-Rose-HTMLx-Form-Related
 DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-Text-Autoformat>=0:../../textproc/p5-Text-Autoformat/
 
