@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.25 2007/12/28 11:47:24 obache Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/01 14:28:45 zafer Exp $
 
 DISTNAME=	pakemon-0.3.1
 PKGREVISION=	4
 CATEGORIES=	security
-MASTER_SITES=	http://www.binarii.com/files/security/ \
-		http://www.mirrors.wiretapped.net/security/network-intrusion-detection/pakemon/
-
+MASTER_SITES=	http://www.binarii.com/files/security/ 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# removed in 2001
 COMMENT=	Packet monster, an Open Source Intrusion Detection System
