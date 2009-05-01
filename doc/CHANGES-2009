@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1639 2009/05/01 01:28:10 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1640 2009/05/01 03:05:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2224,3 +2224,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-CatalystX-CRUD-ModelAdapter-DBIC to 0.08 [sno 2009-04-30]
 	Updated devel/p5-UNIVERSAL-require to 0.13 [sno 2009-04-30]
 	Added print/tex-hyperref-doc version 6.78q [minskim 2009-05-01]
+	Updated www/typolight27 to 2.7.0 [taca 2009-05-01]
