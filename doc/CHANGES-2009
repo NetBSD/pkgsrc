@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1657 2009/05/01 18:33:11 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1658 2009/05/01 19:31:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2243,3 +2243,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-View-JSON to 0.25 [sno 2009-05-01]
 	Updated www/p5-Catalyst-View-TT to 0.29 [sno 2009-05-01]
 	Updated www/p5-Template-Timer to 1.00 [sno 2009-05-01]
+	Added www/p5-Rose-HTMLx-Form-Field-PopUpMenuNumeric version 0.001 [sno 2009-05-01]
