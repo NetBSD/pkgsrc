@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.250 2009/05/01 01:28:10 minskim Exp $
+# $NetBSD: Makefile,v 1.251 2009/05/01 22:08:42 sno Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -84,6 +84,7 @@ SUBDIR+=	mgv
 SUBDIR+=	mp
 SUBDIR+=	mpage
 SUBDIR+=	p5-PostScript-MailLabels
+SUBDIR+=	p5-PostScript-Simple
 SUBDIR+=	papersize
 SUBDIR+=	pcps
 SUBDIR+=	pdfjam
