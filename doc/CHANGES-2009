@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1648 2009/05/01 13:13:08 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1649 2009/05/01 13:23:39 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2233,3 +2233,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Static-Simple to 0.21 [sno 2009-05-01]
 	Updated databases/p5-DBIx-Class-TimeStamp to 0.08 [sno 2009-05-01]
 	Updated www/p5-Test-WWW-Mechanize-Catalyst to 0.51 [sno 2009-05-01]
+	Updated www/p5-WWW-Mechanize to 1.54 [sno 2009-05-01]
