@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1679 2009/05/01 21:59:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1680 2009/05/01 22:03:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2266,3 +2266,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/p5-NetPacket to 0.41.1 [sno 2009-05-01]
 	Updated devel/p5-Algorithm-Dependency to 1.110 [sno 2009-05-01]
 	Added print/p5-PostScript-Simple version 0.07 [sno 2009-05-01]
+	Updated graphics/p5-SVG to 2.49 [sno 2009-05-01]
