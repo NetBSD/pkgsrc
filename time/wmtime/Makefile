@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/01 15:03:21 zafer Exp $
 #
 
 DISTNAME=	wmtime-1.0b2
 PKGREVISION=	1
 CATEGORIES=	x11 time
-MASTER_SITES=	ftp://ftp.alpha.alt.ru/pub/UNIX/X11/WMaker/ \
+MASTER_SITES=	http://web.cs.mun.ca/~gstarkes/wmaker/dockapps/files/ \
 		http://www.NetBSD.org/~ad/distfiles/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
