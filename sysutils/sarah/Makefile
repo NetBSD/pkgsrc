@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:12 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/01 14:52:02 zafer Exp $
 
 DISTNAME=	sarah-0.9.1b
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.conundrum.com/pub/sarah/ \
-		http://prdownloads.sourceforge.net/sarah/
+MASTER_SITES=	http://prdownloads.sourceforge.net/sarah/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sarah.sourceforge.net/
