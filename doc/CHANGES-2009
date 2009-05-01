@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1677 2009/05/01 21:34:04 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1678 2009/05/01 21:39:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Object-InsideOut to 3.54 [sno 2009-05-01]
 	Updated textproc/p5-Text-Tabs+Wrap to 2009.0305 [sno 2009-05-01]
 	Updated net/p5-NetPacket to 0.41.1 [sno 2009-05-01]
+	Updated devel/p5-Algorithm-Dependency to 1.110 [sno 2009-05-01]
