@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/12/02 12:21:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/01 13:51:41 zafer Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.psy.uq.oz.au/pub/Crypto/libeay/ \
-		ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ \
-		ftp://ftp.ntnu.no/pub/unix/security/
+MASTER_SITES=	ftp://ftp.funet.fi/pub/mirrors/ftp.psy.uq.oz.au/libeay/ 
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.schneier.com/blowfish.html
