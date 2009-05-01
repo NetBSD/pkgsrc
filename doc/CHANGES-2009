@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1665 2009/05/01 20:09:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1666 2009/05/01 20:24:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Template-Plugin-Handy to 0.003 [sno 2009-05-01]
 	Updated www/p5-Test-HTTP-Server-Simple to 0.10 [sno 2009-05-01]
 	Updated textproc/p5-Text-Autoformat to 1.666.0 [sno 2009-05-01]
+	Updated devel/p5-Cache-FastMmap to 1.29 [sno 2009-05-01]
