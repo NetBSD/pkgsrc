@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2007/07/04 20:54:58 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/01 14:43:29 zafer Exp $
 
 DISTNAME=	pks-0.9.4
 PKGREVISION=	3
 CATEGORIES=	security www
 MASTER_SITES+=	http://www.mit.edu/people/marc/pks/ \
-		ftp://ftp.neonramp.com/pub/pksd/
-
-PATCH_SITES=	http://www.mit.edu/people/marc/pks/ \
-		ftp://ftp.neonramp.com/pub/pksd/
+	${MASTER_SITE_SOURCEFORGE:=pks/} 
+PATCH_SITES=	http://www.mit.edu/people/marc/pks/
 PATCHFILES=	pks094-patch2 \
 		pks094-patch3
 PATCH_DIST_STRIP=	-p1
