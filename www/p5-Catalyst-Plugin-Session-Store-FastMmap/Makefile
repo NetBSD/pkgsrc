@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/02/22 17:43:41 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/01 17:59:35 sno Exp $
 
-DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.06
+DISTNAME=	Catalyst-Plugin-Session-Store-FastMmap-0.07
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -8,11 +8,14 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-Store-FastMmap/
 COMMENT=	FastMmap session storage backend
+LICENSE=	gnu-gpl-v2 # OR artistic
 
-DEPENDS+=	p5-Catalyst-Plugin-Session>=0.09:../../www/p5-Catalyst-Plugin-Session
 DEPENDS+=       p5-Cache-FastMmap>=1.13:../../devel/p5-Cache-FastMmap
-DEPENDS+=       p5-File-Temp>=0:../../devel/p5-File-Temp
+DEPENDS+=	p5-Catalyst-Plugin-Session>=0.09:../../www/p5-Catalyst-Plugin-Session
+DEPENDS+=       {perl>=5.10,p5-File-Temp-[0-9]*}:../../devel/p5-File-Temp
+DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
 DEPENDS+=       p5-Path-Class>=0:../../devel/p5-Path-Class
+DEPENDS+=       {perl>=5.10,p5-PathTools-[0-9]*}:../../devel/p5-PathTools
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Plugin/Session/Store/FastMmap/.packlist
