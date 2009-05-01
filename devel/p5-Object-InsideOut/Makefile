@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/11/17 04:08:55 he Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/01 21:21:49 sno Exp $
 #
 
-DISTNAME=	Object-InsideOut-3.52
+DISTNAME=	Object-InsideOut-3.54
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Object/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Object-InsideOut/
 COMMENT=	Perl 5 module providing comprehensive inside-out object support
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
