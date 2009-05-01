@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2009/04/22 08:25:14 sno Exp $
+$NetBSD: distinfo,v 1.10 2009/05/01 20:54:06 sno Exp $
 
-SHA1 (Module-Install-0.85.tar.gz) = 4a8c9ca669e5f79ca14366b51b93687d11b29648
-RMD160 (Module-Install-0.85.tar.gz) = 83e61472ceffb2cb7a7c699f154bc7d1dfa9858d
-Size (Module-Install-0.85.tar.gz) = 145308 bytes
+SHA1 (Module-Install-0.86.tar.gz) = 498f8e38b61c9f6721ffd7e1af3c3beac7f494ab
+RMD160 (Module-Install-0.86.tar.gz) = f7087f96e845beb4a9c58e21575a3d9e0d2ef98c
+Size (Module-Install-0.86.tar.gz) = 145669 bytes
