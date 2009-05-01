@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2009/02/23 18:32:36 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/01 15:33:43 zafer Exp $
 #
 
 DISTNAME=		xworld-2.0
 PKGREVISION=		3
 CATEGORIES=		x11
-MASTER_SITES=		ftp://gutemine.geo.uni-koeln.de/pub/xworld/ \
-			ftp://ftp.Uni-Koeln.DE/misc/
+MASTER_SITES=		ftp://ftp.Uni-Koeln.DE/misc/
 
 MAINTAINER=		wennmach@NetBSD.org
 COMMENT=		Earth as seen from the direction of the sun
