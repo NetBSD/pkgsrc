@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1652 2009/05/01 14:51:27 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1653 2009/05/01 17:56:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2237,3 +2237,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Session to 0.21 [sno 2009-05-01]
 	Updated www/p5-Catalyst-Plugin-Authentication to 0.100110 [sno 2009-05-01]
 	Updated www/typolight27-translations to 20090501 [taca 2009-05-01]
+	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.09 [sno 2009-05-01]
