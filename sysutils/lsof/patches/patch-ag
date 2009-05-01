@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
+$NetBSD: patch-ag,v 1.5 2009/05/01 12:56:50 apb Exp $
 
 --- Configure.orig	2007-04-24 21:00:22.000000000 +0200
 +++ Configure
@@ -10,7 +10,19 @@ $NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
  #	$LSOF_N_UNIXV	    *BSD system's kernel file
  #	$LSOF_PL	    patch level
  #	$LSOF_RANLIB	    randomizing command for the lsof library
-@@ -2447,6 +2448,19 @@ return(0); }
+@@ -2391,6 +2392,11 @@ return(0); }
+       # Validate the NetBSD version.
+ 
+       case $LSOF_VSTR in	# {
++      0*|1.[01]*)
++	LSOF_VERS="1006000"
++	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for NetBSD 1.2"
++	;;
+       1.2*)
+ 	LSOF_VERS="1002000"
+ 	;;
+@@ -2447,10 +2453,36 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -27,19 +39,52 @@ $NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
 +	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
 +	echo "!!!WARNING!!!  Configuring for NetBSD 4.0"
 +	;;
++      5.0*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="5000000"
++	;;
++      5.99.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="5099000"
++	;;
++      5*)
++	LSOF_VERS="5000000"
++	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
++	echo "!!!WARNING!!!  Configuring for NetBSD 5.0"
++	;;
        *)
++	LSOF_VERS="5000000"
  	echo "Unknown NetBSD release: $LSOF_VSTR"
- 	echo Assuming NetBSD 1.6
-@@ -2464,6 +2478,8 @@ return(0); }
+-	echo Assuming NetBSD 1.6
+-	LSOF_VERS="1006000"
++	echo "!!!WARNING!!!  Configuring for NetBSD 5.0"
+ 	;;
+       esac	# }
+     fi	# }
+@@ -2464,6 +2496,10 @@ return(0); }
        ;;
      3000000|3099000)
        ;;
 +    4000000|4099000)
 +      ;;
++    5000000|5099000)
++      ;;
      *)
        echo "Unknown NetBSD version: $LSOF_VERS"
        rm -f $LSOF_HLP
-@@ -2871,6 +2887,7 @@ return(0); }
+@@ -2472,7 +2508,10 @@ return(0); }
+     esac	# }
+     LSOF_CFGF="-DNETBSDV=$LSOF_VERS"
+     LSOF_TMP1="-DN_UNIXV=/netbsd"
+-    if test -r ${LSOF_INCLUDE}/util.h	# {
++    if test -r /dev/ksyms		# {
++    then
++      LSOF_TMP1="-DN_UNIXV=/dev/ksyms"
++    elif test -r ${LSOF_INCLUDE}/util.h	# } {
+     then
+       grep -q getbootfile ${LSOF_INCLUDE}/util.h
+       if test $? -eq 0	# {
+@@ -2871,6 +2910,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -47,7 +92,7 @@ $NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -2948,6 +2965,24 @@ return(0); }
+@@ -2948,6 +2988,24 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
@@ -72,7 +117,7 @@ $NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
        if test "X$NETBSD_UVM" = "X"	# {
        then
  	grep -q UVM $LSOF_TMP3
-@@ -3233,6 +3268,28 @@ return(0); }
+@@ -3233,6 +3291,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
@@ -101,7 +146,7 @@ $NetBSD: patch-ag,v 1.4 2007/12/28 16:15:40 adam Exp $
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -4833,7 +4890,7 @@ fi	# }
+@@ -4833,7 +4913,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then
