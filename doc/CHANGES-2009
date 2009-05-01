@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1670 2009/05/01 20:50:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1671 2009/05/01 20:55:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2256,3 +2256,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.017 [sno 2009-05-01]
 	Updated www/p5-Catalyst-Plugin-I18N to 0.09 [sno 2009-05-01]
 	Updated www/p5-Template-Multilingual to 1.00 [sno 2009-05-01]
+	Updated devel/p5-Module-Install to 0.86 [sno 2009-05-01]
