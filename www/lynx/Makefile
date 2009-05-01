@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2008/12/04 13:13:48 obache Exp $
+# $NetBSD: Makefile,v 1.105 2009/05/01 15:16:12 zafer Exp $
 
 #
 # NOTE: Please do not enable the lynxcgi feature unless it is lynx
@@ -11,9 +11,7 @@ PKGNAME=	lynx-2.8.6.5
 PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
-		ftp://ftp.nl.uu.net/pub/unix/www/lynx/${SUBDIR:Q}/ \
-		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/ \
-		ftp://ftp.netlab.is.tsukuba.ac.jp/pub/network/WWW/lynx/${SUBDIR:Q}/
+		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/ 
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
