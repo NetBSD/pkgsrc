@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/26 04:01:50 taca Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/01 14:50:37 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
@@ -14,7 +14,7 @@ COMMENT=	Language files for TYPOlight CMS
 DEPENDS+=	typolight${TL_VER}>=${TL_PKGVER}:../../www/typolight${TL_VER}
 
 # Use time stamp of latest translation.
-VERS=		20090423
+VERS=		20090501
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -24,7 +24,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 pre-install:
-	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
+	cd ${WRKSRC}; \
+		${RM} -fr system/modules/development system/modules/pun_bridge
 
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TL_WEBDIR}
