@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1681 2009/05/01 22:23:51 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1682 2009/05/01 22:28:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2268,3 +2268,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/p5-PostScript-Simple version 0.07 [sno 2009-05-01]
 	Updated graphics/p5-SVG to 2.49 [sno 2009-05-01]
 	Updated devel/p5-Module-Dependency to 1.86 [sno 2009-05-01]
+	Updated textproc/p5-Text-Diff-HTML to 0.06 [sno 2009-05-01]
