@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1698 2009/05/02 21:27:36 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1699 2009/05/02 21:34:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Date-Simple to 3.03 [sno 2009-05-02]
 	Added time/p5-Test-MockTime version 0.12 [sno 2009-05-02]
 	Updated time/p5-DateTime-Format-Natural to 0.76 [sno 2009-05-02]
+	Updated devel/p5-Moose to 0.77 [seb 2009-05-02]
