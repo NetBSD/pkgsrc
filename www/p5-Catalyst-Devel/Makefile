@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/01 11:52:08 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/02 19:27:07 sno Exp $
 
 DISTNAME=	Catalyst-Devel-1.12
 PKGNAME=	p5-${DISTNAME}
@@ -22,8 +22,6 @@ DEPENDS+=	p5-Path-Class>=0.09:../../devel/p5-Path-Class
 DEPENDS+=       p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-parent-[0-9]*:../../devel/p5-parent
 DEPENDS+=	p5-File-Copy-Recursive>=0:../../sysutils/p5-File-Copy-Recursive
-
-MAKE_ENV+=	CATALYST_DEVEL_NO_510_CHECK=yes
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Devel/.packlist
