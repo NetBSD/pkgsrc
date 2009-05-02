@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/22 12:21:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/02 16:21:44 reed Exp $
 
 DISTNAME=	c++-gnome-bindings-2.26.0
 CATEGORIES=	meta-pkgs x11 gnome
@@ -9,6 +9,9 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for C++ bindings for the GNOME desktop
 
 META_PACKAGE=	yes
+
+PREV_PKGPATH=   meta-pkgs/gnome-bindings-c++
+SUPERSEDES=	gnome-bindings-c++-[0-9]*
 
 # see http://ftp.gnome.org/pub/GNOME/bindings/2.26/2.26.0/sources/c++/
 
