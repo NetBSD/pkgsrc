@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.30 2008/05/21 20:39:52 abs Exp $
+# $NetBSD: metadata.mk,v 1.31 2009/05/02 16:14:37 reed Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -47,6 +47,12 @@ ${_BUILD_INFO_FILE}: plist
 .if defined(OWNER)
 	${RUN}${ECHO} "OWNER=${OWNER}" >> ${.TARGET}.tmp
 .endif	
+.if defined(PREV_PKGPATH)
+	${RUN}${ECHO} "PREV_PKGPATH=${PREV_PKGPATH}" >> ${.TARGET}.tmp
+.endif
+.if defined(SUPERSEDES)
+	${RUN}${ECHO} "SUPERSEDES=${SUPERSEDES}" >> ${.TARGET}.tmp
+.endif
 	${RUN}${ECHO} "BUILD_DATE=${_BUILD_DATE_cmd:sh}" >> ${.TARGET}.tmp
 	${RUN}${ECHO} "BUILD_HOST=${_BUILD_HOST_cmd:sh}" >> ${.TARGET}.tmp
 .if !empty(CHECK_SHLIBS_SUPPORTED:M[yY][eE][sS])
