@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1692 2009/05/02 19:19:56 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1693 2009/05/02 19:24:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2279,3 +2279,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.04006 [sno 2009-05-02]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.018 [sno 2009-05-02]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.08 [sno 2009-05-02]
+	Updated lang/perl5 to 5.10.0nb6 [sno 2009-05-02]
