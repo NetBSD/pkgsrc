@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/25 22:37:12 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/02 08:57:52 hasso Exp $
 #
 
 DISTNAME=		tomboy-0.12.2
@@ -13,7 +13,7 @@ COMMENT=		Gnome desktop note application
 GNU_CONFIGURE=  yes
 USE_DIRS=	xdg-1.4 gnome2-1.6
 USE_LIBTOOL=    yes
-USE_TOOLS+=     gmake intltool pkg-config bash:run
+USE_TOOLS+=     gmake intltool pkg-config bash:run msgfmt
 
 CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
