@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/02 21:19:46 sno Exp $
+
+SHA1 (Test-MockTime-0.12.tar.gz) = b01738ff218fc46754a23381eb3bff9681d8400a
+RMD160 (Test-MockTime-0.12.tar.gz) = 40a9e55e41fdc23401cbed287ced81572e6ee4cf
+Size (Test-MockTime-0.12.tar.gz) = 4431 bytes
