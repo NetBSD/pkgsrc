@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.19 2007/08/15 06:33:46 rillig Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.20 2009/05/02 16:14:37 reed Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -149,8 +149,36 @@
   stability is to be preferred above new and possibly untested features.</para>
 </sect1>
 
+<sect1 id="renaming-package">
+<title>Renaming a package in pkgsrc</title>
+
+<para>Renaming packages is not recommended.</para>
+
+
+<para>When renaming packages, be sure to fix any references to old name
+  in other Makefiles, options, buildlink files, etc.</para>
+
+<para>Also When renaming a package, please define
+  <varname>SUPERSEDES</varname> to the package name and dewey version
+  pattern(s) of the previous package name.
+  This may be repeated for multiple renames.
+  The new package would be an exact replacement.
+</para>
+
+<para>Note that <quote>successor</quote> in the
+  CHANGES-<replaceable>YYYY</replaceable> file doesn't necessarily
+  mean that it <emphasis>supersedes</emphasis>, as that successor may
+  not be an exact replacement but is a suggestion for the replaced
+  functionality.</para>
+
+</sect1>
+
 <sect1 id="moving-package">
 <title>Moving a package in pkgsrc</title>
+
+<para>It is preferred that packages are not renamed or moved, but if needed
+  please follow these steps.
+</para>
 
 <orderedlist>
 <listitem><para>Make a copy of the directory somewhere else.</para></listitem>
@@ -164,6 +192,19 @@
 <listitem><para>Fix <varname>CATEGORIES</varname> and any
 <varname>DEPENDS</varname> paths that just did <quote>../package</quote>
 instead of <quote>../../category/package</quote>.</para>
+</listitem>
+
+<listitem><para>In the modified package's Makefile, consider setting
+<varname>PREV_PKGPATH</varname> to the previous category/package
+pathname.  The <varname>PREV_PKGPATH</varname> can be used by tools
+for doing an update using pkgsrc building; for example, it can
+search the &man.pkg.summary.5; database for <varname>PREV_PKGPATH</varname>
+(if no <varname>SUPERSEDES</varname>) and then use the corresponding
+new <varname>PKGPATH</varname> for that moved package.  Note that
+it may have multiple matches, so the tool should also check on the
+<varname>PKGBASE</varname> too.  The <varname>PREV_PKGPATH</varname>
+probably has no value unless <varname>SUPERSEDES</varname> is not
+set, i.e.  <varname>PKGBASE</varname> stays the same.  </para>
 </listitem>
 
 <listitem><para><command>cvs import</command> the modified package in the new
