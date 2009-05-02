@@ -1,0 +1,35 @@
+$NetBSD: patch-ab,v 1.1 2009/05/02 17:35:43 minskim Exp $
+
+--- configure.orig	2009-02-04 13:07:26.000000000 -0800
++++ configure
+@@ -9824,7 +9824,11 @@ darwin* | rhapsody*)
+   soname_spec='${libname}${release}${major}$shared_ext'
+   shlibpath_overrides_runpath=yes
+   shlibpath_var=DYLD_LIBRARY_PATH
+-  shrext_cmds='`test .$module = .yes && echo .so || echo .dylib`'
++  if test .$module = .yes ; then
++    shrext_cmds=".so"
++  else
++    shrext_cmds=".dylib"
++  fi
+ 
+   sys_lib_search_path_spec="$sys_lib_search_path_spec /usr/local/lib"
+   sys_lib_dlsearch_path_spec='/usr/local/lib /lib /usr/lib'
+@@ -22072,7 +22076,7 @@ libdnet_version=
+ enable_fragroute=no
+ trydnetdir=/usr/local
+ 
+-if test $have_cygwin == no ; then
++if test $have_cygwin = no ; then
+ 	{ $as_echo "$as_me:$LINENO: checking for libdnet" >&5
+ $as_echo_n "checking for libdnet... " >&6; }
+ 
+@@ -22806,7 +22810,7 @@ esac
+ fi
+ 
+ 
+- if test "$osx_frameworks" == "yes"; then
++ if test "$osx_frameworks" = "yes"; then
+   ENABLE_OSX_FRAMEWORKS_TRUE=
+   ENABLE_OSX_FRAMEWORKS_FALSE='#'
+ else
