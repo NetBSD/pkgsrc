@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1684 2009/05/02 11:06:31 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1685 2009/05/02 11:41:30 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2271,3 +2271,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Diff-HTML to 0.06 [sno 2009-05-01]
 	Updated print/tex-bin-kpathsea to 2008.12871 [minskim 2009-05-02]
 	Updated misc/tmux to 0.8 [hasso 2009-05-02]
+	Updated textproc/p5-XML-Atom to 0.35 [kleink 2009-05-02]
