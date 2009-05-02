@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2009/03/05 03:20:03 smb Exp $
+# $NetBSD: Makefile,v 1.93 2009/05/02 21:21:55 sno Exp $
 #
 
 COMMENT=	Clocks, calendars, daily planners and other time related applications
@@ -69,6 +69,7 @@ SUBDIR+=	p5-DateTimeX-Easy
 SUBDIR+=	p5-MooseX-Types-DateTime
 SUBDIR+=	p5-Rose-DateTime
 SUBDIR+=	p5-Schedule-Cron-Events
+SUBDIR+=	p5-Test-MockTime
 SUBDIR+=	p5-Time
 SUBDIR+=	p5-Time-Clock
 SUBDIR+=	p5-Time-Duration

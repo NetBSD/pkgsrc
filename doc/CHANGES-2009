@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1696 2009/05/02 21:05:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1697 2009/05/02 21:21:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gnutls to 2.6.6 [tnn 2009-05-02]
 	Updated devel/p5-MooseX-Object-Pluggable to 0.0011 [sno 2009-05-02]
 	Updated devel/p5-Date-Simple to 3.03 [sno 2009-05-02]
+	Added time/p5-Test-MockTime version 0.12 [sno 2009-05-02]
