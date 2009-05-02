@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/02 16:23:50 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/02 17:35:43 minskim Exp $
 bin/tcpbridge
 bin/tcpprep
 bin/tcpreplay
+bin/tcpreplay-edit
 bin/tcprewrite
-lib/libopts.la
 man/man1/tcpbridge.1
 man/man1/tcpprep.1
 man/man1/tcpreplay.1
+man/man1/tcpreplay-edit.1
 man/man1/tcprewrite.1
