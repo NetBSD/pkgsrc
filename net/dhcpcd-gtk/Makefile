@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/28 21:39:13 roy Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/02 22:56:12 abs Exp $
 #
 
 DISTNAME=		dhcpcd-ui-0.4.0
@@ -20,6 +20,8 @@ USE_TOOLS+=		pkg-config
 INSTALL_MAKE_FLAGS+=	SYSCONFDIR=${PREFIX}/share/gnome/autostart
 
 DEPENDS+=		dhcpcd-dbus>=0.4.0:../../net/dhcpcd-dbus
+
+BUILD_DEPENDS+=		librsvg>=0:../../graphics/librsvg
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
