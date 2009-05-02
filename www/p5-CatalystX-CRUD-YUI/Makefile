@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/05/01 20:35:04 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/02 19:14:12 sno Exp $
 
-DISTNAME=	CatalystX-CRUD-YUI-0.017
+DISTNAME=	CatalystX-CRUD-YUI-0.018
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
@@ -18,7 +18,7 @@ DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers>=0.02:../../databases/p5-Rose-DBx-Objec
 
 # Required dependencies
 DEPENDS+=	p5-Catalyst-View-TT>=0:../../www/p5-Catalyst-View-TT
-DEPENDS+=       p5-CatalystX-CRUD>=0.3:../../databases/p5-CatalystX-CRUD
+DEPENDS+=       p5-CatalystX-CRUD>=0.40:../../databases/p5-CatalystX-CRUD
 DEPENDS+=	p5-CatalystX-CRUD-Controller-RHTMLO>=0.17:../../www/p5-CatalystX-CRUD-Controller-RHTMLO
 DEPENDS+=	p5-CatalystX-CRUD-View-Excel>=0.05:../../www/p5-CatalystX-CRUD-View-Excel
 DEPENDS+=	p5-Class-C3>=0:../../devel/p5-Class-C3
