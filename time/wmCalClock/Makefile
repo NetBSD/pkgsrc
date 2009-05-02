@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/16 11:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/02 16:21:45 reed Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
@@ -9,6 +9,8 @@ MASTER_SITES=	http://reality.sgiweb.org/freeware/source/wmCalClock/
 MAINTAINER=	wiz@NetBSD.org
 # HOMEPAGE=	http://nis-www.lanl.gov/~mgh/WindowMaker/DockApps.shtml
 COMMENT=	Another WindowMaker calendar/clock dockapp
+
+PREV_PKGPATH=	time/wmcalclock
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 USE_TOOLS+=	gmake

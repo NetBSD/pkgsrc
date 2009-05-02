@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2009/04/16 18:54:41 drochner Exp $
+# $NetBSD: Makefile,v 1.173 2009/05/02 16:21:46 reed Exp $
 
 DISTNAME=		gtk+-2.16.1
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		gtk2-engines<2.6.0
 CONFLICTS+=		gail-[0-9]*
+
+SUPERSEDES=		gail-[0-9]*
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
