@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/13 23:48:50 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/05/02 21:26:36 sno Exp $
 
-SHA1 (DateTime-Format-Natural-0.74.tar.gz) = 4ac80701f526f606be45bc4b9b0be32951fb02c6
-RMD160 (DateTime-Format-Natural-0.74.tar.gz) = 7214f715b78ccc967db522e2421a519553f1b777
-Size (DateTime-Format-Natural-0.74.tar.gz) = 25919 bytes
+SHA1 (DateTime-Format-Natural-0.76.tar.gz) = 717d6c01dd46e6b2ce72c90581d4529b075be101
+RMD160 (DateTime-Format-Natural-0.76.tar.gz) = 5604bda767feb93cf3dc868a71d5e81ff2bf3c02
+Size (DateTime-Format-Natural-0.76.tar.gz) = 30916 bytes
