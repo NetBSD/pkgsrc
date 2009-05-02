@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/01 13:30:35 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/02 23:52:48 abs Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-0.21
 PKGNAME=	p5-${DISTNAME}
@@ -24,7 +24,8 @@ DEPENDS+=	p5-namespace-clean>=0.10:../../devel/p5-namespace-clean
 BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-MockObject>=1.01:../../devel/p5-Test-MockObject
-BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst>=0:../../www/p5-Test-WWW-Mechanize-Catalyst
+# p5-Test-WWW-Mechanize-Catalyst has BUILD_DEPENDS on p5-Catalyst-Plugin-Session
+# BUILD_DEPENDS+=	p5-Test-WWW-Mechanize-Catalyst>=0:../../www/p5-Test-WWW-Mechanize-Catalyst
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Catalyst/Plugin/Session/.packlist
