@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1695 2009/05/02 20:59:51 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1696 2009/05/02 21:05:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2283,3 +2283,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libmodplug to 0.8.7 [tnn 2009-05-02]
 	Updated security/gnutls to 2.6.6 [tnn 2009-05-02]
 	Updated devel/p5-MooseX-Object-Pluggable to 0.0011 [sno 2009-05-02]
+	Updated devel/p5-Date-Simple to 3.03 [sno 2009-05-02]
