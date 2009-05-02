@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1686 2009/05/02 15:03:47 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1687 2009/05/02 17:27:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2273,3 +2273,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/tmux to 0.8 [hasso 2009-05-02]
 	Updated textproc/p5-XML-Atom to 0.35 [kleink 2009-05-02]
 	Updated www/typolight27-translations to 20090501nb1 [taca 2009-05-02]
+	Updated devel/ltsa to 2.2nb2 [wiz 2009-05-02]
