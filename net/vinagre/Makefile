@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/06 10:19:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/02 09:20:54 hasso Exp $
 #
 
 DISTNAME=	vinagre-2.26.0
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_DIRS=	xdg-1.4 gnome2-1.6
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 GCONF_SCHEMAS+=	vinagre.schemas
 
