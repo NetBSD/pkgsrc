@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/08 09:43:57 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/02 16:21:45 reed Exp $
 #
 
 DISTNAME=		CGI-Lite-2.02
@@ -11,6 +11,9 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 MAINTAINER=		bad@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/CGI-Lite/
 COMMENT=		Simple perl5 module for writing forms-based CGI programs
+
+PREV_PKGPATH=		www/p5-CGI_Lite
+SUPERSEDES=		p5-CGI_Lite-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

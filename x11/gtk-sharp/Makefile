@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/03/25 22:37:15 he Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/02 16:21:46 reed Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.8
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mono-project.com/GtkSharp
 COMMENT=		C\# bindings for GTK
+
+PREV_PKGPATH=		x11/gtk2-sharp
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
