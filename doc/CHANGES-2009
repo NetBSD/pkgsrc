@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1693 2009/05/02 19:24:31 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1694 2009/05/02 20:18:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2280,3 +2280,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.018 [sno 2009-05-02]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.08 [sno 2009-05-02]
 	Updated lang/perl5 to 5.10.0nb6 [sno 2009-05-02]
+	Updated audio/libmodplug to 0.8.7 [tnn 2009-05-02]
+	Updated security/gnutls to 2.6.6 [tnn 2009-05-02]
