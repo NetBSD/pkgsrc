@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1689 2009/05/02 18:05:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1690 2009/05/02 19:01:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2276,3 +2276,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ltsa to 2.2nb2 [wiz 2009-05-02]
 	Updated net/tcpreplay to 3.4.1 [minskim 2009-05-02]
 	Updated devel/fromcvs to 0.0.0.132 [wiz 2009-05-02]
+	Updated databases/p5-DBIx-Class-Schema-Loader to 0.04006 [sno 2009-05-02]
