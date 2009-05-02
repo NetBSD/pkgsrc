@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8068 2009/05/01 14:42:49 zafer Exp $
+$NetBSD: TODO,v 1.8069 2009/05/02 04:13:58 taca Exp $
 
 Suggested new packages
 ======================
@@ -1429,6 +1429,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-i128-1.3.1
 	o xf86-video-i740-1.3.0
 	o xf86-video-intel-2.7.0
+	o xf86-video-mach64-6.8.1
+	o xf86-video-mga-1.4.10
 	o xf86-video-neomagic-1.2.2
 	o xf86-video-nsc-2.8.3
 	o xf86-video-nv-2.1.13
@@ -1436,7 +1438,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-rendition-4.2.1
 	o xf86-video-s3-0.6.1
 	o xf86-video-s3virge-1.10.2
-	o xf86-video-siliconmotion-1.7.0
+	o xf86-video-siliconmotion-1.7.1
 	o xf86-video-sis-0.10.1
 	o xf86-video-tdfx-1.4.1
 	o xf86-video-tga-1.2.0
