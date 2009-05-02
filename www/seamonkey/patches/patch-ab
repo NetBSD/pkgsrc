@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
+$NetBSD: patch-ab,v 1.8 2009/05/02 07:51:03 hasso Exp $
 
---- configure.in.orig	2007-01-11 19:45:06.000000000 +0100
-+++ configure.in
-@@ -1433,7 +1433,6 @@ case "$target" in
+--- configure.in.orig	2008-10-31 00:05:31 +0200
++++ configure.in	2009-05-02 00:41:14 +0300
+@@ -1532,7 +1532,6 @@ case "$target" in
      DSO_LDOPTS=''
      STRIP="$STRIP -x -S"
      _PLATFORM_DEFAULT_TOOLKIT='mac'
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
      TARGET_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      # set MACOSX to generate lib/mac/MoreFiles/Makefile
      MACOSX=1
-@@ -1452,7 +1451,7 @@ case "$target" in
+@@ -1551,7 +1550,7 @@ case "$target" in
      LDFLAGS=$_SAVE_LDFLAGS
      ;;
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1466,6 +1465,9 @@ case "$target" in
+@@ -1565,6 +1564,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
      ;; 
  
  *-hpux*)
-@@ -1898,6 +1900,13 @@ case "$target" in
+@@ -1997,6 +1999,13 @@ case "$target" in
      fi
      MKSHLIB='$(CXX) $(CXXFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -Wl,-soname,lib$(LIBRARY_NAME)$(DLL_SUFFIX) -o $@'
      MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -Wl,-soname,lib$(LIBRARY_NAME)$(DLL_SUFFIX) -o $@'
@@ -43,7 +43,7 @@ $NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
      ;;
  
  *-nto*) 
-@@ -2136,7 +2145,7 @@ dnl the qsort routine under solaris is f
+@@ -2235,7 +2244,7 @@ dnl the qsort routine under solaris is f
         MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_FLAGS) -G -Wl,-z -Wl,muldefs -h $@ -o $@'
         MKSHLIB_FORCE_ALL='-Qoption ld -z,allextract'
         MKSHLIB_UNFORCE_ALL=''
@@ -52,7 +52,17 @@ $NetBSD: patch-ab,v 1.7 2007/04/15 12:17:06 rillig Exp $
         AR_LIST="$AR t"
         AR_EXTRACT="$AR x"
         AR_DELETE="$AR d"
-@@ -5638,7 +5647,7 @@ dnl ====================================
+@@ -2749,6 +2758,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -5714,7 +5726,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
