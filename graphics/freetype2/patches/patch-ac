@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.4 2009/05/02 19:44:51 tnn Exp $
+
+http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/?id=0a05ba257b6ddd87dacf8d54b626e4b360e0a596
+
+diff --git a/src/lzw/ftzopen.c b/src/lzw/ftzopen.c
+index fc78315..c0483de 100644
+--- src/lzw/ftzopen.c
++++ src/lzw/ftzopen.c
+@@ -332,6 +332,9 @@
+ 
+           while ( code >= 256U )
+           {
++            if ( !state->prefix )
++              goto Eof;
++
+             FTLZW_STACK_PUSH( state->suffix[code - 256] );
+             code = state->prefix[code - 256];
+           }
+--
+cgit v0.8.2.1
