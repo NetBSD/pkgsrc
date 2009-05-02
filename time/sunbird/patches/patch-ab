@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2009/05/02 07:51:03 hasso Exp $
 
---- configure.in.orig	2006-05-06 17:53:27.000000000 +0000
-+++ configure.in
-@@ -1489,7 +1489,6 @@ case "$target" in
+--- configure.in.orig	2006-09-28 00:02:07 +0300
++++ configure.in	2009-05-02 10:04:27 +0300
+@@ -1490,7 +1490,6 @@ case "$target" in
      DSO_LDOPTS=''
      STRIP="$STRIP -x -S"
      _PLATFORM_DEFAULT_TOOLKIT='mac'
@@ -10,7 +10,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
      TARGET_NSPR_MDCPUCFG='\"md/_darwin.cfg\"'
      # set MACOSX to generate lib/mac/MoreFiles/Makefile
      MACOSX=1
-@@ -1522,6 +1521,18 @@ case "$target" in
+@@ -1523,6 +1522,18 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
      ;; 
  
  *-hpux*)
-@@ -1705,7 +1716,6 @@ case "$target" in
+@@ -1708,7 +1719,6 @@ case "$target" in
      BIN_SUFFIX='.exe'
      USE_SHORT_LIBNAME=1
      MOZ_ENABLE_COREXFONTS=
@@ -37,7 +37,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
      MOZ_USER_DIR="Mozilla"
  ;;
  
-@@ -1952,6 +1962,14 @@ case "$target" in
+@@ -1955,6 +1965,14 @@ case "$target" in
      fi
      MKSHLIB='$(CXX) $(CXXFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -Wl,-soname,lib$(LIBRARY_NAME)$(DLL_SUFFIX) -o $@'
      MKCSHLIB='$(CC) $(CFLAGS) $(DSO_PIC_CFLAGS) $(DSO_LDOPTS) -Wl,-soname,lib$(LIBRARY_NAME)$(DLL_SUFFIX) -o $@'
@@ -52,7 +52,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
      ;;
  
  *-nto*) 
-@@ -1992,6 +2010,13 @@ case "$target" in
+@@ -1995,6 +2013,13 @@ case "$target" in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
      fi
@@ -66,7 +66,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
      ;;
  
  *-openvms*) 
-@@ -2688,7 +2713,7 @@ dnl Checks for header files.
+@@ -2691,7 +2716,7 @@ dnl Checks for header files.
  dnl ========================================================
  AC_HEADER_DIRENT
  case "$target_os" in
@@ -75,7 +75,17 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
  # for stuff like -lXshm
      CPPFLAGS="${CPPFLAGS} ${X_CFLAGS}"
      ;;
-@@ -2948,6 +2973,10 @@ then
+@@ -2731,6 +2756,9 @@ dnl ====================================
+ case $target in
+ *-hpux11.*)
+ 	;;
++*-dragonfly*)
++	AC_CHECK_LIB(c, gethostbyname_r)
++	;;
+ *)
+ 	AC_CHECK_LIB(c_r, gethostbyname_r)
+ 	;;
+@@ -2951,6 +2979,10 @@ then
  			fi
  			;;
  
@@ -86,7 +96,7 @@ $NetBSD: patch-ab,v 1.3 2006/06/27 11:11:52 joerg Exp $
  	    *-*-openbsd*|*-*-bsdi*)
  			AC_DEFINE(_REENTRANT)
  			AC_DEFINE(_THREAD_SAFE)
-@@ -5929,7 +5958,7 @@ dnl ====================================
+@@ -6041,7 +6073,7 @@ dnl ====================================
  dnl = Enable code optimization. ON by default.
  dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
