@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2009/04/24 10:17:22 adam Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/03 13:34:24 abs Exp $
 
 DISTNAME=	GeoIP-1.4.6
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.maxmind.com/download/geoip/api/c/
 
