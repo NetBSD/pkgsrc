@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/12/03 12:57:40 tron Exp $
+# $NetBSD: Makefile,v 1.29.4.1 2009/05/03 12:29:52 spz Exp $
 
 DISTNAME=	libtorrent-0.12.2
 CATEGORIES=	net
@@ -7,6 +7,8 @@ MASTER_SITES=	${HOMEPAGE:=downloads/}
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://libtorrent.rakshasa.no/
 COMMENT=	BitTorrent library written in C++ for *nix
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
