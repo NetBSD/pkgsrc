@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/02/09 23:23:56 abs Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/03 14:24:57 abs Exp $
 
-DISTNAME=	signatures-0.03
+DISTNAME=	signatures-0.05
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/F/FL/FLORA/}
@@ -14,9 +14,10 @@ PERL5_PACKLIST=	auto/signatures/.packlist
 
 BUILD_DEPENDS+=    p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
 
-DEPENDS+=	p5-B-Hooks-OP-Check>=0.13:../../devel/p5-B-Hooks-OP-Check
+DEPENDS+=	p5-B-Hooks-OP-Check>=0.17:../../devel/p5-B-Hooks-OP-Check
 DEPENDS+=	p5-B-Hooks-OP-PPAddr>=0:../../devel/p5-B-Hooks-OP-PPAddr
 DEPENDS+=	p5-B-Hooks-Parser>=0.07:../../devel/p5-B-Hooks-Parser
+DEPENDS+=	p5-B-Hooks-EndOfScope>=0.08:../../devel/p5-B-Hooks-EndOfScope
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
