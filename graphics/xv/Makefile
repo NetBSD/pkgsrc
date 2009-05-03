@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/03/17 12:18:47 obache Exp $
+# $NetBSD: Makefile,v 1.76 2009/05/03 22:58:31 abs Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	13
@@ -35,9 +35,12 @@ BUILD_TARGET=	depend all
 
 SUBST_CLASSES+=		gspath
 SUBST_FILES.gspath=	config.h
-SUBST_SED.gspath=	-e 's|@LOCALBASE@|${LOCALBASE}|g'
+SUBST_SED.gspath=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_STAGE.gspath=	post-configure
 SUBST_MESSAGE.gspath=	Fixing path to ghostscript interpreter.
+
+INSTALLATION_DIRS+= share/doc/xv
+PKG_DESTDIR_SUPPORT=  user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -56,9 +59,8 @@ CPPFLAGS+=	-DNEED_ALLOCA_H
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xv
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xv
-	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${PREFIX}/share/doc/xv
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xv
+	${INSTALL_DATA} ${WRKSRC}/docs/xvdocs.ps ${DESTDIR}${PREFIX}/share/doc/xv
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
