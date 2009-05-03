@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2009/02/07 20:59:37 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/03 13:03:37 wiz Exp $
 #
 
-DISTNAME=	liblinebreak-1.1
+DISTNAME=	liblinebreak-1.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vimgadgets/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vimgadgets.sourceforge.net/liblinebreak/
 COMMENT=	Library for line breaking in a Unicode sequence
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
