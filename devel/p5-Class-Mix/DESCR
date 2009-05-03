@@ -1,0 +1,2 @@
+The Perl 5 module Class::Mix provides a mix_class function which
+dynamically generates `anonymous' classes with specified inheritance.
