@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+$NetBSD: MESSAGE,v 1.2 2009/05/03 14:29:15 abs Exp $
 
 Please refer to the following file on how to setup your Ampache
 installation.
@@ -14,7 +14,9 @@ lines to httpd.conf:
 
 You will also need to ensure php.ini has the following enabled:
 
-	extension=mysql.so
+	extension=gettext.so
 	extension=iconv.so
+	extension=mbstring.so
+	extension=mysql.so
 
 ===========================================================================
