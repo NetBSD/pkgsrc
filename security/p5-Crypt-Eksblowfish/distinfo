@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/07 20:52:54 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/05/03 06:41:23 seb Exp $
 
-SHA1 (Crypt-Eksblowfish-0.005.tar.gz) = 8806ec69ab71b67ca033383d390ff11c8caf42df
-RMD160 (Crypt-Eksblowfish-0.005.tar.gz) = c7fccc618b2250bf8ac2800bc2c40b6a71bcfeea
-Size (Crypt-Eksblowfish-0.005.tar.gz) = 28303 bytes
+SHA1 (Crypt-Eksblowfish-0.007.tar.gz) = d91b9fac79a33eb11b19df7147f8daaef2297e67
+RMD160 (Crypt-Eksblowfish-0.007.tar.gz) = 7f5be5da5e4fa2efbca2170795e230a034ad8762
+Size (Crypt-Eksblowfish-0.007.tar.gz) = 29850 bytes
