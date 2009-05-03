@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1701 2009/05/03 06:42:36 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1702 2009/05/03 07:48:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2289,3 +2289,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Moose to 0.77 [seb 2009-05-02]
 	Added devel/p5-Class-Mix version 0.002 [seb 2009-05-03]
 	Updated security/p5-Crypt-Eksblowfish to 0.007 [seb 2009-05-03]
+	Updated devel/p5-Software-License to 0.010 [sno 2009-05-03]
