@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2007/07/27 23:42:17 joerg Exp $
+$NetBSD: distinfo,v 1.16 2009/05/03 22:58:31 abs Exp $
 
 SHA1 (xv-3.10a-jumbo-patches-20070520.tar.gz) = d00308c1687d9d803d26ef40c73d19a0f593c626
 RMD160 (xv-3.10a-jumbo-patches-20070520.tar.gz) = 23bc07030416ebaca5ce4d223921e33094c37b93
@@ -8,6 +8,6 @@ RMD160 (xv-3.10a.tar.gz) = 7d545e0c0e5b0120a7d026ea549cba19a53fbc0d
 Size (xv-3.10a.tar.gz) = 2259124 bytes
 SHA1 (patch-aa) = bd6ef51bf962e1994e2e47ba5197c9729ec5221a
 SHA1 (patch-ab) = 5bfc8ae09b029e4661b27d94bba46540c7f320fb
-SHA1 (patch-ac) = 39933efe8411df805abfac5a1e43f1e5bee2ea8f
-SHA1 (patch-ad) = b0d0d4f4243ceb091e0734c0024c997bdf7e86c7
+SHA1 (patch-ac) = a17b0095e6586b595190a07126ac58752d8a2562
+SHA1 (patch-ad) = d1fa6ae4c432528148ebe37b7a8bef8bd2059997
 SHA1 (patch-af) = c6ede0291556f7739274e8352d6fb626480927e8

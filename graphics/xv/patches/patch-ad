@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.10 2007/07/08 10:50:26 wiz Exp $
+$NetBSD: patch-ad,v 1.11 2009/05/03 22:58:31 abs Exp $
 
 diff -u Imakefile Imakefile
 --- Imakefile.orig
@@ -41,8 +41,8 @@ diff -u Imakefile Imakefile
  
 +#ifdef UseInstalledJpeg
 +JPEG = -DDOJPEG
-+LIBJPEG = $(LDFLAGS) -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -ljpeg
-+JPEGINCLUDE = -I$(LOCALBASE)/include
++LIBJPEG = $(LDFLAGS) -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -ljpeg
++JPEGINCLUDE = -I$(PREFIX)/include
 +#endif
 +
  #ifdef HaveTiff
@@ -55,8 +55,8 @@ diff -u Imakefile Imakefile
  
 +#ifdef UseInstalledTiff
 +TIFF = -DDOTIFF
-+LIBTIFF = -L$(LOCALBASE)/lib -Wl,-R$(LOCALBASE)/lib -ltiff -ljpeg -lz
-+TIFFINCLUDE = -I$(LOCALBASE)/include
++LIBTIFF = -L$(PREFIX)/lib -Wl,-R$(PREFIX)/lib -ltiff -ljpeg -lz
++TIFFINCLUDE = -I$(PREFIX)/include
 +#endif
 +
  #ifdef HavePDS
@@ -71,7 +71,7 @@ diff -u Imakefile Imakefile
 +*/
 +#ifdef UseInstalledPng
 +PNG    = -DDOPNG
-+PNGDIR = ${LOCALBASE}
++PNGDIR = ${PREFIX}
 +PNGINC = -I$(PNGDIR)/include
 +PNGLIB = -L$(PNGDIR)/lib -lpng -lz
 +LIBPNG = ${PNGLIB}
@@ -85,7 +85,7 @@ diff -u Imakefile Imakefile
 +###
 +*/
 +#ifdef UseInstalledZlib
-+ZLIBDIR = $(LOCALBASE)
++ZLIBDIR = $(PREFIX)
 +ZLIBINC = -I$(ZLIBDIR)/include
 +ZLIBLIB = -L$(ZLIBDIR)/lib -lz
 +LIBZLIB = ${ZLIB}
