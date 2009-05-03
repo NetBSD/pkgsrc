@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/02/13 22:34:52 bouyer Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/03 23:10:50 abs Exp $
 #
 
 VERSION=	3.1.4
@@ -7,14 +7,13 @@ PKGNAME=	xenkernel3-${VERSION}
 PKGREVISION=	3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://xen.org/
 COMMENT=	Xen3 Kernel
 
 ONLY_FOR_PLATFORM=	Linux-2.[46]*-i386 NetBSD-*-i386 Linux-2.[46]*-x86_64 NetBSD-*-x86_64
-CONFLICTS=	xenkernel30-*
+CONFLICTS=	xenkernel30-[0-9]*
 
 
 WRKSRC=		${WRKDIR}/xen-${VERSION}
@@ -22,7 +21,7 @@ WRKSRC=		${WRKDIR}/xen-${VERSION}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-PYTHON_FOR_BUILD_ONLY=	# empty
+PYTHON_FOR_BUILD_ONLY=	YES
 PY_PATCHPLIST=		NO
 
 SUBST_CLASSES+=		py
@@ -52,6 +51,9 @@ PLIST_SRC=		PLIST.i386 PLIST
 PLIST_SRC=		PLIST
 .endif
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+= 	xen3-kernel
+
 do-build:
 	cd ${WRKSRC} && ${GMAKE} XEN_TARGET_X86_PAE=n debug=n xen
 	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
@@ -68,12 +70,11 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/xen3-kernel
-	${INSTALL_DATA} ${WRKDIR}/xen.gz ${PREFIX}/xen3-kernel/xen.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${PREFIX}/xen3-kernel/xen-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-debug.gz
 .if  ${MACHINE_ARCH} == "i386"
-	${INSTALL_DATA} ${WRKDIR}/xen-PAE.gz ${PREFIX}/xen3-kernel/xen-PAE.gz
-	${INSTALL_DATA} ${WRKDIR}/xen-PAE-debug.gz ${PREFIX}/xen3-kernel/xen-PAE-debug.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-PAE.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-PAE-debug.gz ${DESTDIR}${PREFIX}/xen3-kernel/xen-PAE-debug.gz
 .endif
 
 .include "../../lang/python/application.mk"
