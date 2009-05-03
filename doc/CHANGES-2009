@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1704 2009/05/03 14:25:20 abs Exp $
+$NetBSD: CHANGES-2009,v 1.1705 2009/05/03 14:29:39 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2292,3 +2292,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Software-License to 0.010 [sno 2009-05-03]
 	Updated textproc/liblinebreak to 1.2 [wiz 2009-05-03]
 	Updated devel/p5-signatures to 0.05 [abs 2009-05-03]
+	Updated audio/ampache to 3.5beta2 [abs 2009-05-03]
