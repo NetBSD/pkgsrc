@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/03 14:29:15 abs Exp $
 #
 
-DISTNAME=	ampache-3.4.3
+DISTNAME=	ampache-3.5-beta2
+PKGNAME=	${DISTNAME:S:-beta:beta:}
 CATEGORIES=	audio
 MASTER_SITES=	http://ampache.org/downloads/
 
 MAINTAINER=	abs@NetBSD.org
-HOMEPAGE=	http://ampache.org/downloads/
+HOMEPAGE=	http://ampache.org/
 COMMENT=	Web-based Audio file manager
 
-DEPENDS+=       ${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=0:../../www/ap-php
-DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=0:../../databases/php-mysql
+DEPENDS+=       ${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
+DEPENDS+=       ${PHP_PKG_PREFIX}-gettext>=0:../../devel/php-gettext
 DEPENDS+=       ${PHP_PKG_PREFIX}-iconv>=0:../../converters/php-iconv
+DEPENDS+=       ${PHP_PKG_PREFIX}-mbstring>=0:../../misc/php-mbstring
+DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=0:../../databases/php-mysql
 
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
@@ -34,13 +37,13 @@ CONF_FILES=		${EGDIR}/ampache.conf \
 			${PKG_SYSCONFDIR}/ampache.conf
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-extract:
 	${CP} ${FILESDIR}/ampache.conf ${WRKSRC}/ampache.conf
 
 do-install:
-	${CHMOD} -x ${WRKSRC}/docs/*
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${CHMOD} -x ${WRKSRC}/docs/[A-Z]*
 	${INSTALL_DATA} ${WRKSRC}/ampache.conf ${DESTDIR}${EGDIR}/ampache.conf
 	set -e; cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${INSTDIR}
 	${RM} -f ${DESTDIR}${INSTDIR}/ampache.conf

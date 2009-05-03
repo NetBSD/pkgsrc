@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/03 14:29:15 abs Exp $
 share/ampache/admin/access.php
 share/ampache/admin/catalog.php
 share/ampache/admin/duplicates.php
@@ -34,6 +34,7 @@ share/ampache/docs/GPL-LICENSE
 share/ampache/docs/INSTALL
 share/ampache/docs/MIGRATION
 share/ampache/docs/README
+share/ampache/docs/man/man1/ampache.1
 share/ampache/favicon.ico
 share/ampache/flag.php
 share/ampache/genre.php
@@ -41,13 +42,15 @@ share/ampache/image.php
 share/ampache/images/ampache.png
 share/ampache/images/blank-pixel.gif
 share/ampache/images/blankalbum.gif
+share/ampache/images/blankalbum.jpg
 share/ampache/images/icon_add.png
+share/ampache/images/icon_add_key.png
+share/ampache/images/icon_add_tag.png
 share/ampache/images/icon_add_user.png
 share/ampache/images/icon_admin.png
 share/ampache/images/icon_all.png
 share/ampache/images/icon_ampache.png
 share/ampache/images/icon_batch_download.png
-share/ampache/images/icon_browse.png
 share/ampache/images/icon_cog.png
 share/ampache/images/icon_comment.png
 share/ampache/images/icon_delete.png
@@ -70,6 +73,7 @@ share/ampache/images/icon_pause_hover.png
 share/ampache/images/icon_play.png
 share/ampache/images/icon_play_hover.png
 share/ampache/images/icon_playlist_add.png
+share/ampache/images/icon_plugin.png
 share/ampache/images/icon_preferences.png
 share/ampache/images/icon_prev.png
 share/ampache/images/icon_prev_hover.png
@@ -78,12 +82,12 @@ share/ampache/images/icon_server_lightning.png
 share/ampache/images/icon_statistics.png
 share/ampache/images/icon_stop.png
 share/ampache/images/icon_stop_hover.png
-share/ampache/images/icon_thumb_down.png
-share/ampache/images/icon_thumb_up.png
+share/ampache/images/icon_tick.png
 share/ampache/images/icon_view.png
 share/ampache/images/icon_volumedn.png
 share/ampache/images/icon_volumemute.png
 share/ampache/images/icon_volumeup.png
+share/ampache/images/icon_wand.png
 share/ampache/images/icon_world_link.png
 share/ampache/images/ratings/star_rating.gif
 share/ampache/images/ratings/x.gif
@@ -91,45 +95,46 @@ share/ampache/images/ratings/x_off.gif
 share/ampache/images/top_bg.jpg
 share/ampache/index.php
 share/ampache/install.php
-share/ampache/lib/album.lib.php
-share/ampache/lib/artist.lib.php
 share/ampache/lib/batch.lib.php
 share/ampache/lib/class/access.class.php
 share/ampache/lib/class/ajax.class.php
 share/ampache/lib/class/album.class.php
 share/ampache/lib/class/ampachemail.class.php
+share/ampache/lib/class/ampacherss.class.php
 share/ampache/lib/class/api.class.php
 share/ampache/lib/class/artist.class.php
 share/ampache/lib/class/browse.class.php
 share/ampache/lib/class/catalog.class.php
 share/ampache/lib/class/config.class.php
+share/ampache/lib/class/core.class.php
+share/ampache/lib/class/database_object.abstract.php
 share/ampache/lib/class/dba.class.php
 share/ampache/lib/class/democratic.class.php
 share/ampache/lib/class/error.class.php
 share/ampache/lib/class/flag.class.php
-share/ampache/lib/class/genre.class.php
 share/ampache/lib/class/localplay.abstract.php
 share/ampache/lib/class/localplay.class.php
-share/ampache/lib/class/metadata.class.php
+share/ampache/lib/class/media.interface.php
 share/ampache/lib/class/playlist.class.php
 share/ampache/lib/class/plugin.class.php
 share/ampache/lib/class/preference.class.php
+share/ampache/lib/class/query.class.php
 share/ampache/lib/class/radio.class.php
 share/ampache/lib/class/random.class.php
 share/ampache/lib/class/rating.class.php
 share/ampache/lib/class/registration.class.php
-share/ampache/lib/class/rss.class.php
 share/ampache/lib/class/scrobbler.class.php
 share/ampache/lib/class/shoutbox.class.php
 share/ampache/lib/class/song.class.php
 share/ampache/lib/class/stats.class.php
 share/ampache/lib/class/stream.class.php
+share/ampache/lib/class/tag.class.php
 share/ampache/lib/class/tmpplaylist.class.php
 share/ampache/lib/class/update.class.php
 share/ampache/lib/class/user.class.php
 share/ampache/lib/class/vainfo.class.php
 share/ampache/lib/class/vauth.class.php
-share/ampache/lib/class/view.class.php
+share/ampache/lib/class/video.class.php
 share/ampache/lib/class/xmldata.class.php
 share/ampache/lib/class/xmlrpcclient.class.php
 share/ampache/lib/class/xmlrpcserver.class.php
@@ -142,17 +147,17 @@ share/ampache/lib/javascript-base.js
 share/ampache/lib/log.lib.php
 share/ampache/lib/preferences.php
 share/ampache/lib/rating.lib.php
-share/ampache/lib/rss.php
 share/ampache/lib/search.php
-share/ampache/lib/stream.lib.php
 share/ampache/lib/themes.php
 share/ampache/lib/ui.lib.php
 share/ampache/lib/xmlrpc.php
+share/ampache/locale/base/LANGLIST
 share/ampache/locale/base/TRANSLATIONS
-share/ampache/locale/base/merge-messages.sh
-share/ampache/locale/base/messages.po
-share/ampache/locale/ca_CA/LC_MESSAGES/messages.mo
-share/ampache/locale/ca_CA/LC_MESSAGES/messages.po
+share/ampache/locale/base/gather-messages.sh
+share/ampache/locale/base/messages.pot
+share/ampache/locale/base/translation-words.txt
+share/ampache/locale/ca_ES/LC_MESSAGES/messages.mo
+share/ampache/locale/ca_ES/LC_MESSAGES/messages.po
 share/ampache/locale/de_DE/LC_MESSAGES/messages.mo
 share/ampache/locale/de_DE/LC_MESSAGES/messages.po
 share/ampache/locale/el_GR/LC_MESSAGES/messages.mo
@@ -167,20 +172,21 @@ share/ampache/locale/it_IT/LC_MESSAGES/messages.mo
 share/ampache/locale/it_IT/LC_MESSAGES/messages.po
 share/ampache/locale/ja_JP/LC_MESSAGES/messages.mo
 share/ampache/locale/ja_JP/LC_MESSAGES/messages.po
+share/ampache/locale/nb_NO/LC_MESSAGES/messages.mo
+share/ampache/locale/nb_NO/LC_MESSAGES/messages.po
 share/ampache/locale/nl_NL/LC_MESSAGES/messages.mo
 share/ampache/locale/nl_NL/LC_MESSAGES/messages.po
 share/ampache/locale/ru_RU/LC_MESSAGES/messages.mo
 share/ampache/locale/ru_RU/LC_MESSAGES/messages.po
-share/ampache/locale/tr_TR/LC_MESSAGES/messages.mo
-share/ampache/locale/tr_TR/LC_MESSAGES/messages.po
-share/ampache/locale/zh_CN/LC_MESSAGES/messages.mo
-share/ampache/locale/zh_CN/LC_MESSAGES/messages.po
+share/ampache/locale/sv_SE/LC_MESSAGES/messages.mo
+share/ampache/locale/sv_SE/LC_MESSAGES/messages.po
 share/ampache/localplay.php
 share/ampache/login.php
 share/ampache/logout.php
 share/ampache/modules/archive/archive.lib.php
 share/ampache/modules/captcha/FreeMono-Medium.ttf
 share/ampache/modules/captcha/captcha.php
+share/ampache/modules/emulator/gettext.php
 share/ampache/modules/flash/LICENSE
 share/ampache/modules/flash/Original/skin.xml
 share/ampache/modules/flash/crossdomain.xml
@@ -220,7 +226,8 @@ share/ampache/modules/getid3/module.audio.lpac.php
 share/ampache/modules/getid3/module.audio.midi.php
 share/ampache/modules/getid3/module.audio.monkey.php
 share/ampache/modules/getid3/module.audio.mp3.php
-share/ampache/modules/getid3/module.audio.mpc.php
+share/ampache/modules/getid3/module.audio.mpc7.php
+share/ampache/modules/getid3/module.audio.mpc8.php
 share/ampache/modules/getid3/module.audio.mpc_old.php
 share/ampache/modules/getid3/module.audio.optimfrog.php
 share/ampache/modules/getid3/module.audio.rkau.php
@@ -256,7 +263,7 @@ share/ampache/modules/infotools/AmazonSearchEngine.class.php
 share/ampache/modules/infotools/Snoopy.class.php
 share/ampache/modules/infotools/jamendoSearch.class.php
 share/ampache/modules/infotools/lastfm.class.php
-share/ampache/modules/infotools/openstrands.class.php
+share/ampache/modules/infotools/mp3tunes.class.php
 share/ampache/modules/kajax/README
 share/ampache/modules/kajax/ajax.js
 share/ampache/modules/localplay/httpq.controller.php
@@ -266,16 +273,27 @@ share/ampache/modules/mpd/CHANGELOG
 share/ampache/modules/mpd/README
 share/ampache/modules/mpd/USAGE
 share/ampache/modules/mpd/mpd.class.php
+share/ampache/modules/nusoap/changelog
+share/ampache/modules/nusoap/class.nusoap_base.php
+share/ampache/modules/nusoap/class.soap_fault.php
+share/ampache/modules/nusoap/class.soap_parser.php
+share/ampache/modules/nusoap/class.soap_server.php
+share/ampache/modules/nusoap/class.soap_transport_http.php
+share/ampache/modules/nusoap/class.soap_val.php
+share/ampache/modules/nusoap/class.soapclient.php
+share/ampache/modules/nusoap/class.wsdl.php
+share/ampache/modules/nusoap/class.wsdlcache.php
+share/ampache/modules/nusoap/class.xmlschema.php
+share/ampache/modules/nusoap/nusoap.php
+share/ampache/modules/nusoap/nusoapmime.php
+share/ampache/modules/pearxmlrpc/Dump.php
+share/ampache/modules/pearxmlrpc/rpc.php
+share/ampache/modules/pearxmlrpc/server.php
 share/ampache/modules/plugins/Lastfm.plugin.php
-share/ampache/modules/plugins/OpenStrands.plugin.php
 share/ampache/modules/plugins/RioPlayer.plugin.php
 share/ampache/modules/prototype/prototype.js
 share/ampache/modules/validatemail/validateEmail.php
 share/ampache/modules/validatemail/validateEmailFormat.php
-share/ampache/modules/xmlrpc/ChangeLog
-share/ampache/modules/xmlrpc/README
-share/ampache/modules/xmlrpc/xmlrpc.inc
-share/ampache/modules/xmlrpc/xmlrpcs.inc
 share/ampache/play/index.php
 share/ampache/playlist.php
 share/ampache/preferences.php
@@ -295,6 +313,7 @@ share/ampache/server/random.ajax.php
 share/ampache/server/song.ajax.php
 share/ampache/server/stats.ajax.php
 share/ampache/server/stream.ajax.php
+share/ampache/server/tag.ajax.php
 share/ampache/server/xml.server.php
 share/ampache/server/xmlrpc.server.php
 share/ampache/shout.php
@@ -303,9 +322,9 @@ share/ampache/sql/ampache.sql
 share/ampache/sql/ampache40.sql
 share/ampache/stats.php
 share/ampache/stream.php
+share/ampache/templates/base.css
 share/ampache/templates/csshover2.htc
 share/ampache/templates/footer.inc.php
-share/ampache/templates/handheld.css
 share/ampache/templates/header.inc.php
 share/ampache/templates/install.css
 share/ampache/templates/javascript_refresh.inc.php
@@ -315,6 +334,9 @@ share/ampache/templates/rightbar.inc.php
 share/ampache/templates/show_access_list.inc.php
 share/ampache/templates/show_account.inc.php
 share/ampache/templates/show_add_access.inc.php
+share/ampache/templates/show_add_access_current.inc.php
+share/ampache/templates/show_add_access_local.inc.php
+share/ampache/templates/show_add_access_rpc.inc.php
 share/ampache/templates/show_add_catalog.inc.php
 share/ampache/templates/show_add_live_stream.inc.php
 share/ampache/templates/show_add_playlist.inc.php
@@ -330,7 +352,6 @@ share/ampache/templates/show_albums.inc.php
 share/ampache/templates/show_all_popular.inc.php
 share/ampache/templates/show_alphabet_form.inc.php
 share/ampache/templates/show_artist.inc.php
-share/ampache/templates/show_artist_box.inc.php
 share/ampache/templates/show_artist_row.inc.php
 share/ampache/templates/show_artists.inc.php
 share/ampache/templates/show_big_art.inc.php
@@ -348,6 +369,7 @@ share/ampache/templates/show_denied.inc.php
 share/ampache/templates/show_disabled_songs.inc.php
 share/ampache/templates/show_duplicate.inc.php
 share/ampache/templates/show_duplicates.inc.php
+share/ampache/templates/show_dynamic.inc.php
 share/ampache/templates/show_edit_access.inc.php
 share/ampache/templates/show_edit_album.inc.php
 share/ampache/templates/show_edit_album_row.inc.php
@@ -374,12 +396,13 @@ share/ampache/templates/show_import_playlist.inc.php
 share/ampache/templates/show_index.inc.php
 share/ampache/templates/show_install.inc.php
 share/ampache/templates/show_install_account.inc.php
+share/ampache/templates/show_install_check.inc.php
 share/ampache/templates/show_install_config.inc.php
 share/ampache/templates/show_install_lang.inc.php
 share/ampache/templates/show_ip_history.inc.php
+share/ampache/templates/show_live_stream.inc.php
 share/ampache/templates/show_live_stream_row.inc.php
 share/ampache/templates/show_live_streams.inc.php
-share/ampache/templates/show_local_catalog_info.inc.php
 share/ampache/templates/show_localplay_add_instance.inc.php
 share/ampache/templates/show_localplay_control.inc.php
 share/ampache/templates/show_localplay_controllers.inc.php
@@ -388,9 +411,12 @@ share/ampache/templates/show_localplay_instances.inc.php
 share/ampache/templates/show_localplay_playlist.inc.php
 share/ampache/templates/show_localplay_status.inc.php
 share/ampache/templates/show_login_form.inc.php
+share/ampache/templates/show_lyrics.inc.php
 share/ampache/templates/show_mail_users.inc.php
+share/ampache/templates/show_manage_catalogs.inc.php
 share/ampache/templates/show_manage_democratic.inc.php
 share/ampache/templates/show_manage_shoutbox.inc.php
+share/ampache/templates/show_newest.inc.php
 share/ampache/templates/show_now_playing.inc.php
 share/ampache/templates/show_now_playing_row.inc.php
 share/ampache/templates/show_object_rating.inc.php
@@ -406,11 +432,13 @@ share/ampache/templates/show_playlist_songs.inc.php
 share/ampache/templates/show_playlists.inc.php
 share/ampache/templates/show_playtype_switch.inc.php
 share/ampache/templates/show_plugins.inc.php
+share/ampache/templates/show_popular.inc.php
 share/ampache/templates/show_preference_admin.inc.php
 share/ampache/templates/show_preference_box.inc.php
 share/ampache/templates/show_preferences.inc.php
 share/ampache/templates/show_random.inc.php
 share/ampache/templates/show_random_albums.inc.php
+share/ampache/templates/show_random_rules.inc.php
 share/ampache/templates/show_recently_played.inc.php
 share/ampache/templates/show_registration_confirmation.inc.php
 share/ampache/templates/show_rename_artist.inc.php
@@ -424,24 +452,30 @@ share/ampache/templates/show_similar_artists.inc.php
 share/ampache/templates/show_song.inc.php
 share/ampache/templates/show_song_row.inc.php
 share/ampache/templates/show_songs.inc.php
+share/ampache/templates/show_stats.inc.php
 share/ampache/templates/show_stats_newest.inc.php
 share/ampache/templates/show_stats_popular.inc.php
+share/ampache/templates/show_tagcloud.inc.php
 share/ampache/templates/show_test.inc.php
 share/ampache/templates/show_test_config.inc.php
+share/ampache/templates/show_update_items.inc.php
 share/ampache/templates/show_user.inc.php
 share/ampache/templates/show_user_activate.inc.php
 share/ampache/templates/show_user_preferences.inc.php
 share/ampache/templates/show_user_recommendations.inc.php
 share/ampache/templates/show_user_registration.inc.php
+share/ampache/templates/show_user_row.inc.php
 share/ampache/templates/show_user_stats.inc.php
 share/ampache/templates/show_users.inc.php
 share/ampache/templates/show_verify_catalog.inc.php
+share/ampache/templates/show_video_row.inc.php
+share/ampache/templates/show_videos.inc.php
 share/ampache/templates/show_xspf_player.inc.php
 share/ampache/templates/sidebar.inc.php
 share/ampache/templates/sidebar_admin.inc.php
-share/ampache/templates/sidebar_browse.inc.php
 share/ampache/templates/sidebar_home.inc.php
 share/ampache/templates/sidebar_localplay.inc.php
+share/ampache/templates/sidebar_modules.inc.php
 share/ampache/templates/sidebar_preferences.inc.php
 share/ampache/templates/subnavbar.inc.php
 share/ampache/test.php
@@ -450,6 +484,7 @@ share/ampache/themes/classic/images/ampache.png
 share/ampache/themes/classic/images/bg_login.jpg
 share/ampache/themes/classic/images/blank-pixel.gif
 share/ampache/themes/classic/images/blankalbum.gif
+share/ampache/themes/classic/images/blankalbum.jpg
 share/ampache/themes/classic/images/bottom.gif
 share/ampache/themes/classic/images/bottomleft.gif
 share/ampache/themes/classic/images/bottomright.gif
@@ -469,6 +504,7 @@ share/ampache/themes/greysme/images/ampache_menu.gif
 share/ampache/themes/greysme/images/back-box.gif
 share/ampache/themes/greysme/images/background.jpg
 share/ampache/themes/greysme/images/blankalbum.gif
+share/ampache/themes/greysme/images/blankalbum.jpg
 share/ampache/themes/greysme/images/box_bottom.png
 share/ampache/themes/greysme/images/box_top.png
 share/ampache/themes/greysme/images/button_back.png
@@ -517,10 +553,11 @@ share/examples/ampache.conf
 @dirrm share/ampache/sql
 @dirrm share/ampache/server
 @dirrm share/ampache/play
-@dirrm share/ampache/modules/xmlrpc
 @dirrm share/ampache/modules/validatemail
 @dirrm share/ampache/modules/prototype
 @dirrm share/ampache/modules/plugins
+@dirrm share/ampache/modules/pearxmlrpc
+@dirrm share/ampache/modules/nusoap
 @dirrm share/ampache/modules/mpd
 @dirrm share/ampache/modules/localplay
 @dirrm share/ampache/modules/kajax
@@ -531,17 +568,18 @@ share/examples/ampache.conf
 @dirrm share/ampache/modules/getid3
 @dirrm share/ampache/modules/flash/Original
 @dirrm share/ampache/modules/flash
+@dirrm share/ampache/modules/emulator
 @dirrm share/ampache/modules/captcha
 @dirrm share/ampache/modules/archive
 @dirrm share/ampache/modules
-@dirrm share/ampache/locale/zh_CN/LC_MESSAGES
-@dirrm share/ampache/locale/zh_CN
-@dirrm share/ampache/locale/tr_TR/LC_MESSAGES
-@dirrm share/ampache/locale/tr_TR
+@dirrm share/ampache/locale/sv_SE/LC_MESSAGES
+@dirrm share/ampache/locale/sv_SE
 @dirrm share/ampache/locale/ru_RU/LC_MESSAGES
 @dirrm share/ampache/locale/ru_RU
 @dirrm share/ampache/locale/nl_NL/LC_MESSAGES
 @dirrm share/ampache/locale/nl_NL
+@dirrm share/ampache/locale/ja_JP/LC_MESSAGES
+@dirrm share/ampache/locale/ja_JP
 @dirrm share/ampache/locale/it_IT/LC_MESSAGES
 @dirrm share/ampache/locale/it_IT
 @dirrm share/ampache/locale/fr_FR/LC_MESSAGES
@@ -554,8 +592,8 @@ share/examples/ampache.conf
 @dirrm share/ampache/locale/el_GR
 @dirrm share/ampache/locale/de_DE/LC_MESSAGES
 @dirrm share/ampache/locale/de_DE
-@dirrm share/ampache/locale/ca_CA/LC_MESSAGES
-@dirrm share/ampache/locale/ca_CA
+@dirrm share/ampache/locale/ca_ES/LC_MESSAGES
+@dirrm share/ampache/locale/ca_ES
 @dirrm share/ampache/locale/base
 @dirrm share/ampache/locale
 @dirrm share/ampache/lib/class
