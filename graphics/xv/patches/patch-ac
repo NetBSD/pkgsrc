@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.9 2007/07/08 10:50:25 wiz Exp $
+$NetBSD: patch-ac,v 1.10 2009/05/03 22:58:31 abs Exp $
 
 --- config.h.orig	2007-06-08 07:29:49.000000000 +0000
 +++ config.h
@@ -9,8 +9,8 @@ $NetBSD: patch-ac,v 1.9 2007/07/08 10:50:25 wiz Exp $
 -#define GS_PATH "gs"
 -/* #define GS_LIB  "."                 */
 -/* #define GS_DEV  "ppmraw"            */
-+#define GS_PATH "@LOCALBASE@/bin/gs"
-+#define GS_LIB "@LOCALBASE@/share/ghostscript"
++#define GS_PATH "@PREFIX@/bin/gs"
++#define GS_LIB "@PREFIX@/share/ghostscript"
 +#define GS_DEV "ppmraw"
  
  
