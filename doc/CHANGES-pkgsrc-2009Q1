@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.23 2009/05/03 12:32:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.24 2009/05/03 14:19:18 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -62,3 +62,5 @@ typolight: bug fix
 Pullup ticket #2754 - requested by tron
 libtorrent: Solaris build fix
 rtorrent: Solaris build fix
+Pullup ticket #2755 and #2758 - requested by tnn
+freetype2: Security fix
