@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2009/05/02 19:13:34 hasso Exp $
+# $NetBSD: options.mk,v 1.14 2009/05/03 11:28:41 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.djbdns
 PKG_SUPPORTED_OPTIONS+=		inet6 djbdns-cachestats djbdns-ignoreip2
@@ -49,12 +49,16 @@ SITES.${DNSCACHE_SOA_PATCH}=	http://www.your.org/dnscache/
 
 .if !empty(PKG_OPTIONS:Mdjbdns-qmerge2)
 USE_TOOLS+=			patch
-post-patch:
+post-patch: patch-qmerge2
+.PHONY: patch-qmerge2
+patch-qmerge2:
 	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-qmerge2
 .endif
 
 .if !empty(PKG_OPTIONS:Mdjbdns-tinydns64)
 USE_TOOLS+=			patch
-post-patch:
+post-patch: patch-tinydns64
+.PHONY: patch-tinydns64
+patch-tinydns64:
 	cd ${WRKSRC} && ${PATCH} ${PATCH_ARGS} < ${FILESDIR}/patch-tinydns64
 .endif
