@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.63 2009/03/25 00:00:52 abs Exp $
+# $Id: pkg_chk.sh,v 1.64 2009/05/04 22:45:16 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -488,7 +488,7 @@ pkgdirs_from_conf()
 
 pkgdirs_from_installed()
     {
-    ${PKG_INFO} -Bqa | ${AWK} -F= '/PKGPATH=/{print $2}' | ${SORT}
+    ${PKG_INFO} -Bqa | ${AWK} -F= '/^PKGPATH=/{print $2}' | ${SORT}
     }
 
 msg()
