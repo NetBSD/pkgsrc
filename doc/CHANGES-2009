@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1712 2009/05/04 13:43:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1713 2009/05/04 16:43:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2300,3 +2300,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Compress-Raw-Zlib to 2.018 [sno 2009-05-04]
 	Updated devel/p5-IO-Compress to 2.018 [sno 2009-05-04]
 	Updated pkgtools/pkg_select to 20090308nb2 [wiz 2009-05-04]
+	Updated time/wmCalClock to 1.25nb2 [wiz 2009-05-04]
