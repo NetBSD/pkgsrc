@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/04/12 14:06:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/04 18:42:26 hasso Exp $
 
 DISTNAME=	mono-tools-2.4
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ PKGCONFIG_OVERRIDE+=	create-native-map/lib/pkgconfig/create-native-map.pc.in
 PKGCONFIG_OVERRIDE+=	gendarme/framework/gendarme-framework.pc.in
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake msgfmt
 
 MAKE_JOBS_SAFE=		no
 
