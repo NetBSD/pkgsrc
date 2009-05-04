@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8071 2009/05/03 14:22:12 wiz Exp $
+$NetBSD: TODO,v 1.8072 2009/05/04 23:28:19 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1032,6 +1032,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-DB_File-1.820
 	o p5-DateTime-Set-0.27
 	o p5-DateTime-TimeZone-0.88
+	o p5-Net-OpenID-Consumer-1.03
 	o p5-Net-Twitter-2.10 [pkg/40812]
 	o p5-WWW-Curl-4.06
 	o p5-ispman-1.2
