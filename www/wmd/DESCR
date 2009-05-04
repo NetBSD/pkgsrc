@@ -1,0 +1,12 @@
+WMD is a simple, lightweight HTML editor for blog comments, forum
+posts, and basic content management. You can add WMD to any textarea
+with one line of code. Add live preview with one line more. WMD
+works in nearly all modern browsers, and is now completely free to
+use. The next release will be open source under an MIT-style license.
+
+This is not a WYSIWYG editor. Writing HTML to look a certain way
+can make your text less accessible to blind people, search engines,
+mobile users, and feed readers. HTML describes a document's logical
+structure -- not its appearance. It just wasn't built for WYSIWYG.
+
+So WMD is something new: a Wysiwym Markdown editor.
