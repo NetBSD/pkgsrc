@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1714 2009/05/04 22:30:04 tron Exp $
+$NetBSD: CHANGES-2009,v 1.1715 2009/05/04 22:45:55 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2302,3 +2302,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/pkg_select to 20090308nb2 [wiz 2009-05-04]
 	Updated time/wmCalClock to 1.25nb2 [wiz 2009-05-04]
 	Updated www/squid31 to 3.1.0.7nb1 [tron 2009-05-04]
+	Updated pkgtools/pkg_chk to 1.99 [abs 2009-05-04]
