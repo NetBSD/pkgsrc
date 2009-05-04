@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/25 22:37:14 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/04 11:20:42 hasso Exp $
 
 DISTNAME=	monsoon-0.15
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Open source GTK+ bittorrent client
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
-USE_TOOLS+=	gmake gtar perl pkg-config
+USE_TOOLS+=	gmake gtar perl pkg-config msgfmt
 EXTRACT_USING=	gtar
 
 DEPENDS+=	intltool>0.40.0:../../textproc/intltool
