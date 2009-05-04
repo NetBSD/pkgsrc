@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_chk.8,v 1.26 2008/05/02 19:10:26 apb Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.27 2009/05/04 20:45:41 wiz Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
@@ -27,7 +27,6 @@ based on the hostname, architecture, and other characteristics.
 When updating packages that depend on each other
 .Nm
 will skip dependent packages to reduce unnecessary rebuilding.
-.Pp
 .Ss Options
 .Bl -tag -width xxxxxxxx
 .It Fl a
@@ -168,14 +167,14 @@ and all packages checked.
 .It Fl c
 Check versions of packages specified in
 .Pa pkgchk.conf .
-This is a synomyn for 
+This is a synonym for
 .Nm
 .Fl a q ,
 and will be removed in a future version.
 .It Fl i
 Check versions of installed packages, ignoring
-.Pa pkgchk.conf.
-This is a synomyn for 
+.Pa pkgchk.conf .
+This is a synonym for
 .Fl u q ,
 and will be removed in a future version.
 .El
@@ -186,7 +185,7 @@ on a line is considered a comment.
 .Pp
 Each line in
 .Pa pkgchk.conf
-can either define a new tag or a package directory 
+can either define a new tag or a package directory
 (such as sysutils/skill), in each case followed by a list of tags.
 .Ss New tag groups
 Lines that define a new tag can be used to group tags to avoid
