@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/25 22:37:12 he Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/04 01:37:43 hasso Exp $
 #
 
 DISTNAME=	f-spot-0.5.0.3
@@ -13,7 +13,7 @@ COMMENT=	Full-featured personal photo management application
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config bash:run
+USE_TOOLS+=	gmake intltool pkg-config bash:run msgfmt
 USE_DIRS+=	gnome2-1.6
 
 MAKE_JOBS_SAFE=	no
