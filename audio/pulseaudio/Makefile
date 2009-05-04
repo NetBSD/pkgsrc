@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2009/04/10 18:47:59 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/04 06:21:02 wiz Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
 
 DISTNAME=	pulseaudio-0.9.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://0pointer.de/lennart/projects/pulseaudio/
 
@@ -106,6 +106,7 @@ pre-configure:
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/consolekit/buildlink3.mk"
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
