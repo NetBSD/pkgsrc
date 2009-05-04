@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.645 2009/05/01 19:31:14 sno Exp $
+# $NetBSD: Makefile,v 1.646 2009/05/04 22:49:15 schmonz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -526,6 +526,7 @@ SUBDIR+=	websvn
 SUBDIR+=	weex
 SUBDIR+=	whisker
 SUBDIR+=	wiliki
+SUBDIR+=	wmd
 SUBDIR+=	wml
 SUBDIR+=	wordpress
 SUBDIR+=	www6to4
