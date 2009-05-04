@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/04 22:48:26 schmonz Exp $
+share/doc/wmd/apiExample.html
+share/doc/wmd/minimalExample.html
+share/doc/wmd/optionsExample.html
+share/doc/wmd/readme.txt
+share/wmd/images/bg-fill.png
+share/wmd/images/bg.png
+share/wmd/images/blockquote.png
+share/wmd/images/bold.png
+share/wmd/images/code.png
+share/wmd/images/h1.png
+share/wmd/images/hr.png
+share/wmd/images/img.png
+share/wmd/images/italic.png
+share/wmd/images/link.png
+share/wmd/images/ol.png
+share/wmd/images/redo.png
+share/wmd/images/separator.png
+share/wmd/images/ul.png
+share/wmd/images/undo.png
+share/wmd/images/wmd-on.png
+share/wmd/images/wmd.png
+share/wmd/showdown.js
+share/wmd/wmd-base.js
+share/wmd/wmd-plus.js
+share/wmd/wmd.js
+@dirrm share/wmd/images
+@dirrm share/wmd
+@dirrm share/doc/wmd
