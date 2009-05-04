@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1708 2009/05/03 22:46:37 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1709 2009/05/04 05:48:49 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime-Set to 0.27 [seb 2009-05-03]
 	Updated math/p5-Math-BigInt-GMP to 1.24 [sno 2009-05-03]
 	Updated sysutils/dbus to 1.2.4.2nb3 [wiz 2009-05-03]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.018 [sno 2009-05-04]
