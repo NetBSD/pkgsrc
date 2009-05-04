@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/20 21:27:40 tron Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/04 22:29:41 tron Exp $
 
 DISTNAME=	squid-3.1.0.7
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
+PKGREVISION=    1
 CATEGORIES=	www
 MASTER_SITES=	http://www.squid-cache.org/Versions/v3/3.1/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +20,10 @@ PKG_DESTDIR_SUPPORT=	destdir
 .include "../../www/squid/Makefile.squid"
 
 CONFIGURE_ARGS+=	--with-default-user=${SQUID_USER}
+CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/squid.pid
+
+EGFILES+=     errors/errorpage.css
+CONF_FILES+=  ${PREFIX}/${EGDIR}/errorpage.css ${PKG_SYSCONFDIR}/errorpage.css
 
 SQUID_BACKENDS?=           ufs
 SQUID_NTLM_AUTH_HELPERS?=  fakeauth
