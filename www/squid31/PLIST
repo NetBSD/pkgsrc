@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/20 21:27:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/04 22:29:41 tron Exp $
 bin/squidclient
 libexec/cachemgr.cgi
 ${PLIST.da_ldap}libexec/digest_ldap_auth
@@ -37,4 +37,6 @@ share/examples/squid/cachemgr.conf
 share/examples/squid/mime.conf
 share/examples/squid/msntauth.conf
 share/examples/squid/squid.conf
+share/examples/squid/errorpage.css
+share/examples/squid/msntauth.conf
 ${PLIST.snmp}share/squid/mib.txt
