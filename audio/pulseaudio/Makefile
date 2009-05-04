@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/05/04 06:21:02 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/04 16:20:48 tron Exp $
 
 # NOTE: Please send a copy of any patches that are not pkgsrc-specific
 # to <pulseaudio-discuss@mail.0pointer.de>
@@ -106,7 +106,9 @@ pre-configure:
 .include "../../devel/liboil/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
+.if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"
+.endif
 .include "../../sysutils/hal/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
