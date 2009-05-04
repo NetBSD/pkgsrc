@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/04/03 16:06:43 imil Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/04 13:43:39 wiz Exp $
 #
 
 DISTNAME=	pkg_select-20090308
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/imil/
 
@@ -25,7 +25,7 @@ SUBST_MESSAGE.path=	Adjusting path.
 SUBST_FILES.path=	Makefile pkg_select.1 ${PKGBASE}.conf.example
 SUBST_SED.path=		-e "s|/usr/pkgsrc|${PKGSRCDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g"
-SUBST_SED.path+=	-e "s|/usr/pkg/|${PREFIX}|g"
+SUBST_SED.path+=	-e "s|/usr/pkg/|${PREFIX}/|g"
 SUBST_SED.path+=	-e "s|/var/db/pkg|${PKG_DBDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/bin/make|${MAKE}|g"
 
