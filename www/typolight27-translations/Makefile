@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/02 15:02:22 taca Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/05 03:28:53 taca Exp $
 #
 
 DISTNAME=	typolight${TL_VER}-translations-${VERS}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.typolight.org/download.html?file=tl_files/languages/ja/
 DISTFILES=	${TL_DISTFILES}
@@ -15,7 +14,7 @@ COMMENT=	Language files for TYPOlight CMS
 DEPENDS+=	typolight${TL_VER}>=${TL_PKGVER}:../../www/typolight${TL_VER}
 
 # Use time stamp of latest translation.
-VERS=		20090501
+VERS=		20090504
 USE_TOOLS=	pax
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
