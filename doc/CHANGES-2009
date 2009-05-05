@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1718 2009/05/05 02:41:31 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1719 2009/05/05 03:07:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2306,3 +2306,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/wmd version 1.0.1 [schmonz 2009-05-04]
 	Updated fonts/vlgothic-ttf to 20090422 [obache 2009-05-05]
 	Updated net/msdl to 1.2.4r1 [obache 2009-05-05]
+	Updated www/ja-trac to 0.11.4pl1 [obache 2009-05-05]
