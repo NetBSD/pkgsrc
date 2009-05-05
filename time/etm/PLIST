@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/05 13:00:12 wiz Exp $
+bin/e.py
+bin/ew.py
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/etm/__init__.py
+${PYSITELIB}/etm/__init__.pyc
+${PYSITELIB}/etm/__init__.pyo
+${PYSITELIB}/etm/data.py
+${PYSITELIB}/etm/data.pyc
+${PYSITELIB}/etm/data.pyo
+${PYSITELIB}/etm/gui.py
+${PYSITELIB}/etm/gui.pyc
+${PYSITELIB}/etm/gui.pyo
+${PYSITELIB}/etm/rc.py
+${PYSITELIB}/etm/rc.pyc
+${PYSITELIB}/etm/rc.pyo
+${PYSITELIB}/etm/sunmoon.py
+${PYSITELIB}/etm/sunmoon.pyc
+${PYSITELIB}/etm/sunmoon.pyo
+${PYSITELIB}/etm/v.py
+${PYSITELIB}/etm/v.pyc
+${PYSITELIB}/etm/v.pyo
+${PYSITELIB}/etm/warn.py
+${PYSITELIB}/etm/warn.pyc
+${PYSITELIB}/etm/warn.pyo
+${PYSITELIB}/etm/weather.py
+${PYSITELIB}/etm/weather.pyc
+${PYSITELIB}/etm/weather.pyo
+${PYSITELIB}/ez_setup.py
+${PYSITELIB}/ez_setup.pyc
+${PYSITELIB}/ez_setup.pyo
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/etm

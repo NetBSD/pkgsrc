@@ -1,0 +1,20 @@
+etm is an acronym for Event and Task Manager. It provides a format
+for using simple text files to store event and task information,
+a command line interface for viewing tasks and events in a variety
+of convenient ways and a curses-based GUI for creating and modifying
+events and tasks as well as viewing them. Alarms are supported for
+events and repetition for both events and tasks in a powerful and
+flexible manner.
+
+Compared to the combination of wxRemind and yeaGTD, etm provides
+the following advantages:
+
+  * an agenda view that shows events and tasks together for the
+    next few days rather than one day at a time in separate task
+    and event windows.
+  * a quick and simple way to enter events and tasks on a single
+    line.
+  * support for remind but also an independent way of entering
+    events with contexts, notes and optional alarms.
+  * an interactive GUI that uses curses and thus requires nothing
+    more than a terminal window.
