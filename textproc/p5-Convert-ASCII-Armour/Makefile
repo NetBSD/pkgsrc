@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/04/11 23:15:21 sno Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/05 09:05:10 hasso Exp $
 #
 
 DISTNAME=		Convert-ASCII-Armour-1.4
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
-DEPENDS+=		p5-IO-Compress-[0-9]:../../devel/p5-IO-Compress
+DEPENDS+=		p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Convert/ASCII/Armour/.packlist
