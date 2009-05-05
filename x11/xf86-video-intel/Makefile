@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2009/01/05 13:18:18 hasso Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/05 04:27:29 joerg Exp $
 
-DISTNAME=	xf86-video-intel-2.4.3
-PKGREVISION=	1
+DISTNAME=	xf86-video-intel-2.7.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,8 +19,11 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
 
+BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
+
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libXvMC/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/xineramaproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
