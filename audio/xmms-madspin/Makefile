@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2007/01/11 11:51:12 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/05 18:54:40 zafer Exp $
 #
 
 DISTNAME=	madspin-0.05
 PKGNAME=	xmms-${DISTNAME}
 PKGREVISION=	5
 CATEGORIES=	xmms audio
-MASTER_SITES=	http://www.students.uiuc.edu/~birck/
+MASTER_SITES=	# http://www.students.uiuc.edu/~birck/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.students.uiuc.edu/~birck/madspin.html
