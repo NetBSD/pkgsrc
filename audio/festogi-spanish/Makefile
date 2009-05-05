@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/05 18:58:59 zafer Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
+MASTER_SITES=	# ftp://cslu.cse.ogi.edu/pub/tts/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
