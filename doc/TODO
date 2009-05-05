@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8073 2009/05/05 02:33:47 obache Exp $
+$NetBSD: TODO,v 1.8074 2009/05/05 06:22:56 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1261,8 +1261,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
-	o scmgit-base-1.6.2.4
-	o scmgit-docs-1.6.2.4
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
