@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1723 2009/05/05 05:48:40 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1724 2009/05/05 05:50:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2312,3 +2312,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-intel to 2.7.0 [joerg 2009-05-05]
 	Updated devel/p5-Compress-Raw-Zlib to 2.019 [sno 2009-05-05]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.019 [sno 2009-05-05]
+	Updated devel/p5-IO-Compress to 2.019 [sno 2009-05-05]
