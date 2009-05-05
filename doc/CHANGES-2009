@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1729 2009/05/05 13:01:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1730 2009/05/05 18:02:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2320,3 +2320,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/gtk-gnutella to 0.96.6 [adam 2009-05-05]
 	Updated www/squid31 to 3.1.0.7nb2 [tron 2009-05-05]
 	Added time/etm version 203 [wiz 2009-05-05]
+	Updated www/ikiwiki to 3.11 [schmonz 2009-05-05]
