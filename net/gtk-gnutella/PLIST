@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/10/14 08:32:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/05/05 06:46:55 adam Exp $
 bin/gtk-gnutella
 share/applications/gtk-gnutella.desktop
 share/gtk-gnutella/bogons.txt
@@ -14,6 +14,7 @@ share/gtk-gnutella/pixmaps/booklib.xpm
 share/gtk-gnutella/pixmaps/booksha.xpm
 share/gtk-gnutella/pixmaps/bookshav.xpm
 share/gtk-gnutella/pixmaps/booktth.xpm
+share/gtk-gnutella/pixmaps/booktthv.xpm
 share/gtk-gnutella/pixmaps/chip.xpm
 share/gtk-gnutella/pixmaps/clanbomber_red.xpm
 share/gtk-gnutella/pixmaps/clanbomber_yellow.xpm
