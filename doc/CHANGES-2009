@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1720 2009/05/05 03:29:59 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1721 2009/05/05 04:28:58 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2308,3 +2308,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/msdl to 1.2.4r1 [obache 2009-05-05]
 	Updated www/ja-trac to 0.11.4pl1 [obache 2009-05-05]
 	Updated www/typolight27-translations to 20090504 [taca 2009-05-05]
+	Updated x11/libdrm to 2.4.9 [joerg 2009-05-05]
+	Updated x11/xf86-video-intel to 2.7.0 [joerg 2009-05-05]
