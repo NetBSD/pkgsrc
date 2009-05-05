@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1727 2009/05/05 06:49:48 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1728 2009/05/05 07:50:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2318,3 +2318,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/scmgit-docs to 1.6.2.5 [minskim 2009-05-05]
 	Updated devel/scmgit to 1.6.2.5 [minskim 2009-05-05]
 	Updated net/gtk-gnutella to 0.96.6 [adam 2009-05-05]
+	Updated www/squid31 to 3.1.0.7nb2 [tron 2009-05-05]
