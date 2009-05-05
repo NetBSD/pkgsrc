@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/24 08:21:04 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/05 06:21:17 minskim Exp $
 man/man1/git-add.1
 man/man1/git-am.1
 man/man1/git-annotate.1
@@ -108,6 +108,7 @@ man/man1/git-show-branch.1
 man/man1/git-show-index.1
 man/man1/git-show-ref.1
 man/man1/git-show.1
+man/man1/git-stage.1
 man/man1/git-stash.1
 man/man1/git-status.1
 man/man1/git-stripspace.1
@@ -143,3 +144,4 @@ man/man7/gitdiffcore.7
 man/man7/gitglossary.7
 man/man7/gittutorial-2.7
 man/man7/gittutorial.7
+man/man7/gitworkflows.7
