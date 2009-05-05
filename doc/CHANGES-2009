@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1721 2009/05/05 04:28:58 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.1722 2009/05/05 05:42:34 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2310,3 +2310,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090504 [taca 2009-05-05]
 	Updated x11/libdrm to 2.4.9 [joerg 2009-05-05]
 	Updated x11/xf86-video-intel to 2.7.0 [joerg 2009-05-05]
+	Updated devel/p5-Compress-Raw-Zlib to 2.019 [sno 2009-05-05]
