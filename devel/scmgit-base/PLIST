@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/09 13:42:15 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/05/05 06:21:16 minskim Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -55,7 +55,9 @@ libexec/git-core/git-gc
 libexec/git-core/git-get-tar-commit-id
 libexec/git-core/git-grep
 ${PLIST.gui}libexec/git-core/git-gui
+${PLIST.gui}libexec/git-core/git-gui--askpass
 libexec/git-core/git-hash-object
+libexec/git-core/git-help
 libexec/git-core/git-http-fetch
 libexec/git-core/git-http-push
 libexec/git-core/git-imap-send
@@ -122,6 +124,7 @@ libexec/git-core/git-show
 libexec/git-core/git-show-branch
 libexec/git-core/git-show-index
 libexec/git-core/git-show-ref
+libexec/git-core/git-stage
 libexec/git-core/git-stash
 libexec/git-core/git-status
 libexec/git-core/git-stripspace
@@ -184,21 +187,28 @@ ${PLIST.macosx}share/git-gui/lib/git-gui.tcl
 ${PLIST.gui}share/git-gui/lib/index.tcl
 ${PLIST.gui}share/git-gui/lib/logo.tcl
 ${PLIST.gui}share/git-gui/lib/merge.tcl
+${PLIST.gui}share/git-gui/lib/mergetool.tcl
 ${PLIST.gui}share/git-gui/lib/msgs/de.msg
 ${PLIST.gui}share/git-gui/lib/msgs/fr.msg
 ${PLIST.gui}share/git-gui/lib/msgs/hu.msg
 ${PLIST.gui}share/git-gui/lib/msgs/it.msg
 ${PLIST.gui}share/git-gui/lib/msgs/ja.msg
+${PLIST.gui}share/git-gui/lib/msgs/nb.msg
 ${PLIST.gui}share/git-gui/lib/msgs/ru.msg
 ${PLIST.gui}share/git-gui/lib/msgs/sv.msg
 ${PLIST.gui}share/git-gui/lib/msgs/zh_cn.msg
 ${PLIST.gui}share/git-gui/lib/option.tcl
 ${PLIST.gui}share/git-gui/lib/remote.tcl
+${PLIST.gui}share/git-gui/lib/remote_add.tcl
 ${PLIST.gui}share/git-gui/lib/remote_branch_delete.tcl
+${PLIST.gui}share/git-gui/lib/search.tcl
 ${PLIST.gui}share/git-gui/lib/shortcut.tcl
 ${PLIST.gui}share/git-gui/lib/spellcheck.tcl
+${PLIST.gui}share/git-gui/lib/sshkey.tcl
 ${PLIST.gui}share/git-gui/lib/status_bar.tcl
 ${PLIST.gui}share/git-gui/lib/tclIndex
+${PLIST.gui}share/git-gui/lib/tools.tcl
+${PLIST.gui}share/git-gui/lib/tools_dlg.tcl
 ${PLIST.gui}share/git-gui/lib/transport.tcl
 ${PLIST.gui}share/git-gui/lib/win32.tcl
 ${PLIST.gui}share/git-gui/lib/win32_shortcut.js

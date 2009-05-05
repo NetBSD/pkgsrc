@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
+$NetBSD: patch-aa,v 1.7 2009/05/05 06:21:16 minskim Exp $
 
---- Makefile.orig	2008-12-20 06:54:30.000000000 +0100
+--- Makefile.orig	2009-03-04 08:18:50.000000000 +0000
 +++ Makefile
-@@ -217,12 +217,8 @@ GITWEB_SITE_FOOTER =
+@@ -230,12 +230,8 @@ GITWEB_SITE_FOOTER =
  
- export prefix bindir sharedir htmldir sysconfdir
+ export prefix bindir sharedir sysconfdir
  
 -CC = gcc
 -AR = ar
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
  RPMBUILD = rpmbuild
  TCL_PATH = tclsh
  TCLTK_PATH = wish
-@@ -630,9 +626,10 @@ ifeq ($(uname_S),Darwin)
- 	COMPAT_OBJS += compat/regex/regex.o
+@@ -659,9 +655,10 @@ ifeq ($(uname_S),Darwin)
+ 	THREADED_DELTA_SEARCH = YesPlease
  endif
  ifeq ($(uname_S),SunOS)
 +	NEEDS_LIBICONV = YesPlease
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
  	NO_STRCASESTR = YesPlease
  	NO_MEMMEM = YesPlease
  	NO_HSTRERROR = YesPlease
-@@ -650,8 +647,6 @@ ifeq ($(uname_S),SunOS)
+@@ -679,8 +676,6 @@ ifeq ($(uname_S),SunOS)
  		NO_C99_FORMAT = YesPlease
  		NO_STRTOUMAX = YesPlease
  	endif
@@ -36,8 +36,8 @@ $NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
  	BASIC_CFLAGS += -D__EXTENSIONS__
  endif
  ifeq ($(uname_O),Cygwin)
-@@ -688,9 +683,7 @@ ifeq ($(uname_S),OpenBSD)
- 	BASIC_LDFLAGS += -L/usr/local/lib
+@@ -722,9 +717,7 @@ ifeq ($(uname_S),OpenBSD)
+ 	THREADED_DELTA_SEARCH = YesPlease
  endif
  ifeq ($(uname_S),NetBSD)
 -	ifeq ($(shell expr "$(uname_R)" : '[01]\.'),2)
@@ -45,9 +45,9 @@ $NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
 -	endif
 +	NEEDS_LIBICONV = YesPlease
  	BASIC_CFLAGS += -I/usr/pkg/include
- 	BASIC_LDFLAGS += -L/usr/pkg/lib
- 	ALL_LDFLAGS += -Wl,-rpath,/usr/pkg/lib
-@@ -1053,7 +1046,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
+ 	BASIC_LDFLAGS += -L/usr/pkg/lib $(CC_LD_DYNPATH)/usr/pkg/lib
+ 	THREADED_DELTA_SEARCH = YesPlease
+@@ -1116,7 +1109,7 @@ SHELL_PATH_SQ = $(subst ','\'',$(SHELL_P
  PERL_PATH_SQ = $(subst ','\'',$(PERL_PATH))
  TCLTK_PATH_SQ = $(subst ','\'',$(TCLTK_PATH))
  
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.6 2009/01/09 13:42:15 tonnerre Exp $
  
  BASIC_CFLAGS += -DSHA1_HEADER='$(SHA1_HEADER_SQ)' \
  	$(COMPAT_CFLAGS)
-@@ -1361,10 +1354,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
+@@ -1452,10 +1445,10 @@ gitexec_instdir_SQ = $(subst ','\'',$(gi
  export gitexec_instdir
  
  install: all
