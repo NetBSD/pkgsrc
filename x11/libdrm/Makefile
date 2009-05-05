@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/07/16 06:41:17 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/05 04:22:30 joerg Exp $
 #
 
-DISTNAME=		libdrm-2.3.1
+DISTNAME=		libdrm-2.4.9
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -13,6 +13,7 @@ COMMENT=		Userspace interface to kernel DRM services
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 GNU_CONFIGURE=		yes
@@ -36,5 +37,8 @@ ATOMIC_OPS_CHECK!=\
     ${ECHO} "0";	\
   fi
 .endif
+
+CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
+			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
