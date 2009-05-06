@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/05 13:00:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/06 13:37:35 wiz Exp $
 bin/e.py
 bin/ew.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -12,6 +12,9 @@ ${PYSITELIB}/etm/__init__.pyo
 ${PYSITELIB}/etm/data.py
 ${PYSITELIB}/etm/data.pyc
 ${PYSITELIB}/etm/data.pyo
+${PYSITELIB}/etm/freetime.py
+${PYSITELIB}/etm/freetime.pyc
+${PYSITELIB}/etm/freetime.pyo
 ${PYSITELIB}/etm/gui.py
 ${PYSITELIB}/etm/gui.pyc
 ${PYSITELIB}/etm/gui.pyo
