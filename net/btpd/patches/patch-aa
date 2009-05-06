@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2009/05/06 04:03:52 snj Exp $
+
+--- configure.orig	2009-05-05 20:54:59.000000000 -0700
++++ configure	2009-05-05 20:55:22.000000000 -0700
+@@ -4780,7 +4780,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ { echo "$as_me:$LINENO: result: $clock_gettime" >&5
+ echo "${ECHO_T}$clock_gettime" >&6; }
+-if test $clock_gettime == yes; then
++if test $clock_gettime = yes; then
+     old_LIBS=$LIBS
+     LIBS=""
+     { echo "$as_me:$LINENO: checking for library containing clock_gettime" >&5
+@@ -4876,7 +4876,7 @@ fi
+ _ACEOF
+ 
+ fi
+-if test $clock_gettime == no; then
++if test $clock_gettime = no; then
+ 
+ for ac_func in mach_absolute_time
+ do
+@@ -5374,7 +5374,7 @@ echo "$as_me: error: $m is not a valid e
+         ;;
+     esac
+ done
+-if test x"$EVLOOP_METHOD" == x; then
++if test x"$EVLOOP_METHOD" = x; then
+     { { echo "$as_me:$LINENO: error: no suitable evloop method found
+ See \`config.log' for more details." >&5
+ echo "$as_me: error: no suitable evloop method found
+@@ -5388,7 +5388,7 @@ fi
+ 
+ for i in 0 1 2 3 4 5 6 7; do
+     case $i in
+-    0) if test x"$TD_CFLAGS$TD_LIBS" == x; then continue; fi;;
++    0) if test x"$TD_CFLAGS$TD_LIBS" = x; then continue; fi;;
+     1) TD_CFLAGS=-pthread;;
+     2) TD_CFLAGS=-pthreads;;
+     3) TD_CFLAGS=-kthread;;
