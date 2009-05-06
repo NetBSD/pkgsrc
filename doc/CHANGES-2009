@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1733 2009/05/06 04:04:18 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1734 2009/05/06 06:36:29 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2324,3 +2324,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-kpathsea to 2008.12897 [minskim 2009-05-06]
 	Updated net/nslint to 2.1a9 [snj 2009-05-06]
 	Updated net/btpd to 0.15 [snj 2009-05-06]
+	Updated databases/p5-DBI to 1.608 [sno 2009-05-06]
