@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8078 2009/05/06 04:04:18 snj Exp $
+$NetBSD: TODO,v 1.8079 2009/05/06 11:10:06 markd Exp $
 
 Suggested new packages
 ======================
@@ -372,7 +372,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
-	o akonadi-1.1.2
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
