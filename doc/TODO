@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8077 2009/05/06 03:44:40 snj Exp $
+$NetBSD: TODO,v 1.8078 2009/05/06 04:04:18 snj Exp $
 
 Suggested new packages
 ======================
@@ -457,7 +457,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.1
 	o brasero-2.26.1
-	o btpd-0.13 [pkg/38144]
 	o byacc-20080824
 	o bzr-1.14.1
 	o c4-1.10 [schmonz]
