@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/04/15 20:45:29 markd Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/06 11:08:17 markd Exp $
 
-DISTNAME=	akonadi-1.1.1
-PKGREVISION=	1
+DISTNAME=	akonadi-1.1.2
 CATEGORIES=	mail
 MASTER_SITES=	http://download.akonadi-project.org/
 EXTRACT_SUFX=	.tar.bz2
