@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.25 2009/05/05 09:39:28 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.26 2009/05/06 09:35:56 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -66,3 +66,5 @@ Pullup ticket #2755 and #2758 - requested by tnn
 freetype2: Security fix
 Pullup ticket #2757 - requested by tnn
 libmodplug: security update
+Pullup ticket #2756 - requested by tnn
+gnutls: security update
