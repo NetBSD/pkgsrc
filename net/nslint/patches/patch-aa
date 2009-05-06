@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/06/07 11:53:04 rh Exp $
+$NetBSD: patch-aa,v 1.2 2009/05/06 03:44:02 snj Exp $
 
---- nslint.8.orig	Wed Mar 21 02:49:00 2001
-+++ nslint.8
-@@ -101,14 +101,14 @@
+--- nslint.8.orig	2009-05-05 20:25:47.000000000 -0700
++++ nslint.8	2009-05-05 20:23:54.000000000 -0700
+@@ -101,14 +101,14 @@ Missing semicolons and quotes.
  Specify an alternate
  .I named.boot
  file. The default is
@@ -19,12 +19,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/06/07 11:53:04 rh Exp $
  .TP
  .B -B
  Specify an alternate
-@@ -422,7 +422,7 @@
+@@ -466,8 +466,8 @@ This will suppress "name referenced with
  .na
  .nh
  .nf
--/etc/named.boot - default named configuration file
-+/etc/namedb/named.boot - default named configuration file
- nslint.boot - default nslint configuration file
+-/etc/named.conf - default named configuration file
+-/etc/named.boot - old style named configuration file
++/etc/namedb/named.conf - default named configuration file
++/etc/namedb/named.boot - old style named configuration file
+ nslint.conf - default nslint configuration file
+ nslint.boot - old style nslint configuration file
  .ad
- .hy
