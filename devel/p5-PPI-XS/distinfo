@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/14 12:45:50 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/05/06 06:46:46 sno Exp $
 
-SHA1 (PPI-XS-0.900.tar.gz) = 2247db8793ce8b44b422e379b65136b1848c22dd
-RMD160 (PPI-XS-0.900.tar.gz) = 6526ee3ba8ebb85a44e757af83b8a4b4b13d1c57
-Size (PPI-XS-0.900.tar.gz) = 23526
+SHA1 (PPI-XS-0.901.tar.gz) = aff8117e851ab058bde21517471e6cff1b57a63f
+RMD160 (PPI-XS-0.901.tar.gz) = f2a3157305637f28f9b1b1f015b80fa7f3f5b75c
+Size (PPI-XS-0.901.tar.gz) = 67307
