@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/02/24 00:44:26 cube Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/06 21:54:54 adrianp Exp $
 #
 
 DISTNAME=	libnids-1.23
@@ -28,5 +28,4 @@ INSTALL_MAKE_FLAGS+=	install_prefix=${DESTDIR}
 .include "options.mk"
 
 .include "../../net/libpcap/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
