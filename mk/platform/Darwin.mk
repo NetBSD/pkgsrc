@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.36 2009/04/27 12:03:36 tron Exp $
+# $NetBSD: Darwin.mk,v 1.37 2009/05/06 10:28:01 tron Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -110,6 +110,11 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
 .  if !exists(/usr/include/poll.h) && !exists(/usr/include/sys/poll.h)
 CONFIGURE_ENV+=		ac_cv_func_poll=no
 .  endif
+.endif
+
+# Use "/bin/ksh" for buildlink3 wrapper script to improve build performance.
+.if exists(/bin/ksh)
+WRAPPER_BIN_SH?=	/bin/ksh
 .endif
 
 # If games are to be installed setgid, then SETGIDGAME is set to 'yes'
