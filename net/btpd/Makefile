@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/06 04:03:52 snj Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/06 15:54:50 snj Exp $
 
 DISTNAME=	btpd-0.15
 CATEGORIES=	net
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.murmeldjur.se/btpd/
 COMMENT=	Daemon for file sharing over bittorrent
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.9
 
 GNU_CONFIGURE=		YES
 
