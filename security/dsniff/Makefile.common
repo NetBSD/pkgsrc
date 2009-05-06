@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/01/28 00:45:26 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/05/06 21:41:29 adrianp Exp $
 
 DISTNAME=	dsniff-${VERS}
 VERS=		2.3
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
 
 GNU_CONFIGURE=	yes
+MAKE_JOBS_SAFE=	no
 
 PATCHDIR=	${.CURDIR}/../../security/dsniff/patches
 DISTINFO_FILE=	${.CURDIR}/../../security/dsniff/distinfo
