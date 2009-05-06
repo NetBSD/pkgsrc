@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/05 13:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/06 13:37:35 wiz Exp $
 #
 
-DISTNAME=	etm-203
+DISTNAME=	etm-212
 CATEGORIES=	time
 MASTER_SITES=	http://www.duke.edu/~dgraham/ETM/
 
@@ -24,7 +24,7 @@ SUBST_FILES.python=	ez_setup.py
 SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Replacing python interpreter.
 
-REPLACE_PYTHON=		e.py ew.py
+REPLACE_PYTHON=		e.py ew.py etm/freetime.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
