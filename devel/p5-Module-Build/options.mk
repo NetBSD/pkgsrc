@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/03/01 21:47:22 sno Exp $
+# $NetBSD: options.mk,v 1.2 2009/05/06 06:55:50 sno Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.p5-Module-Build
 
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS+=	pod-readme yaml version
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Marchive-tar)
-DEPENDS+=	{perl>=5.10,p5-Archive-Tar>=1.08}:../../archivers/p5-Archive-Tar
+DEPENDS+=	p5-Archive-Tar>=1.08:../../archivers/p5-Archive-Tar
 .endif
 .if !empty(PKG_OPTIONS:Myaml)
 BUILD_DEPENDS+=	p5-YAML>=0.50:../../textproc/p5-YAML
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=	p5-YAML>=0.50:../../textproc/p5-YAML
 DEPENDS+=	p5-Module-Signature>=0.55:../../security/p5-Module-Signature
 .endif
 .if !empty(PKG_OPTIONS:Mextutils-parsexs)
-DEPENDS+=	{perl>=5.10,p5-ExtUtils-ParseXS>=1.02}:../../devel/p5-ExtUtils-ParseXS
+DEPENDS+=	p5-ExtUtils-ParseXS>=1.02:../../devel/p5-ExtUtils-ParseXS
 .endif
 .if !empty(PKG_OPTIONS:Mextutils-cbuilder)
 DEPENDS+=	p5-ExtUtils-CBuilder>=0.15:../../devel/p5-ExtUtils-CBuilder
