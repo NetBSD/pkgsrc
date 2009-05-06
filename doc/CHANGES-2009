@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1730 2009/05/05 18:02:48 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.1731 2009/05/06 03:14:51 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2321,3 +2321,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/squid31 to 3.1.0.7nb2 [tron 2009-05-05]
 	Added time/etm version 203 [wiz 2009-05-05]
 	Updated www/ikiwiki to 3.11 [schmonz 2009-05-05]
+	Updated print/tex-bin-kpathsea to 2008.12897 [minskim 2009-05-06]
