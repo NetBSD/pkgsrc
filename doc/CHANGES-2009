@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1736 2009/05/06 07:01:14 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1737 2009/05/06 07:07:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Exception-Class to 1.27 [sno 2009-05-06]
 	Updated devel/p5-PPI-XS to 0.901 [sno 2009-05-06]
 	Updated devel/p5-Module-Build to 0.33000 [sno 2009-05-06]
+	Updated time/p5-DateTime to 0.4900 [sno 2009-05-06]
