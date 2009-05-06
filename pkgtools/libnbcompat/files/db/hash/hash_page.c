@@ -1,4 +1,4 @@
-/*	$NetBSD: hash_page.c,v 1.3 2009/02/09 20:35:22 joerg Exp $	*/
+/*	$NetBSD: hash_page.c,v 1.4 2009/05/06 16:57:31 joerg Exp $	*/
 /*	NetBSD: hash_page.c,v 1.23 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: hash_page.c,v 1.3 2009/02/09 20:35:22 joerg Exp $");
+__RCSID("$NetBSD: hash_page.c,v 1.4 2009/05/06 16:57:31 joerg Exp $");
 
 /*
  * PACKAGE:  hashing
@@ -865,7 +865,11 @@ open_temp(HTAB *hashp)
 {
 	sigset_t set, oset;
 	char *envtmp;
+#ifdef PATH_MAX
 	char namestr[PATH_MAX];
+#lse
+	char namestr[MAXPATHLEN];
+#endif
 
 #if HAVE_ISSETUGID
 	if (issetugid())
