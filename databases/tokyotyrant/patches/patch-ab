@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.6 2009/03/21 05:36:53 obache Exp $
+$NetBSD: patch-ab,v 1.7 2009/05/07 11:03:50 obache Exp $
 
 Avoid to break pkgsrc's tools.
 
---- configure.orig	2009-03-10 02:09:03.000000000 +0000
+--- configure.orig	2009-05-05 07:54:12.000000000 +0000
 +++ configure
-@@ -1746,12 +1746,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+@@ -1747,12 +1747,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
  MYPOSTCMD="true"
  
  # Building paths
@@ -17,21 +17,3 @@ Avoid to break pkgsrc's tools.
  export PATH CPATH LIBRARY_PATH LD_LIBRARY_PATH PKG_CONFIG_PATH
  if type pkg-config > /dev/null 2>&1
  then
-@@ -4433,7 +4430,7 @@ _ACEOF
- 
- fi
- 
--if test "$enable_lua" == "yes"
-+if test "$enable_lua" = "yes"
- then
- 
- { echo "$as_me:$LINENO: checking for main in -llua" >&5
-@@ -5300,7 +5297,7 @@ echo "$as_me: error: tcutil.h is require
- fi
- 
- 
--if test "$enable_lua" == "yes"
-+if test "$enable_lua" = "yes"
- then
-   if test "${ac_cv_header_lua_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for lua.h" >&5
