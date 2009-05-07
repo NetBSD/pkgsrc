@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1741 2009/05/07 10:55:23 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1742 2009/05/07 10:57:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2333,3 +2333,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 212 [wiz 2009-05-06]
 	Updated databases/sqlite3 to 3.6.14 [adam 2009-05-07]
 	Updated databases/tokyocabinet to 1.4.19 [obache 2009-05-07]
+	Updated databases/p5-tokyocabinet to 1.26 [obache 2009-05-07]
