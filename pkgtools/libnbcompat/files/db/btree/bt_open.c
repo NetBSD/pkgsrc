@@ -1,4 +1,4 @@
-/*	$NetBSD: bt_open.c,v 1.4 2009/05/06 16:57:31 joerg Exp $	*/
+/*	$NetBSD: bt_open.c,v 1.5 2009/05/07 00:23:45 schmonz Exp $	*/
 /*	NetBSD: bt_open.c,v 1.24 2008/09/11 12:58:00 joerg Exp 	*/
 
 /*-
@@ -36,7 +36,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 
-__RCSID("$NetBSD: bt_open.c,v 1.4 2009/05/06 16:57:31 joerg Exp $");
+__RCSID("$NetBSD: bt_open.c,v 1.5 2009/05/07 00:23:45 schmonz Exp $");
 
 /*
  * Implementation of btree access method for 4.4BSD.
@@ -393,9 +393,9 @@ tmp(void)
 	int fd;
 	char *envtmp;
 #ifdef PATH_MAX
-	char namestr[PATH_MAX];
-#lse
-	char namestr[MAXPATHLEN];
+	char path[PATH_MAX];
+#else
+	char path[MAXPATHLEN];
 #endif
 
 #if HAVE_ISSETUGID
