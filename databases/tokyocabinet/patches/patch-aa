@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2009/03/21 05:32:04 obache Exp $
+$NetBSD: patch-aa,v 1.10 2009/05/07 10:55:07 obache Exp $
 
---- configure.orig	2009-03-14 10:48:48.000000000 +0000
+--- configure.orig	2009-04-30 09:20:57.000000000 +0000
 +++ configure
-@@ -1744,22 +1744,19 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+@@ -1853,22 +1853,19 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
  MYPCFILES="tokyocabinet.pc"
  
  # Building flags
@@ -28,39 +28,3 @@ $NetBSD: patch-aa,v 1.9 2009/03/21 05:32:04 obache Exp $
  export PATH CPATH LIBRARY_PATH LD_LIBRARY_PATH PKG_CONFIG_PATH
  
  
-@@ -4191,7 +4188,7 @@ _ACEOF
- fi
- 
- fi
--if test "$enable_exlzma" == "yes"
-+if test "$enable_exlzma" = "yes"
- then
- 
- { echo "$as_me:$LINENO: checking for main in -llzma" >&5
-@@ -4259,7 +4256,7 @@ _ACEOF
- fi
- 
- fi
--if test "$enable_exlzo" == "yes"
-+if test "$enable_exlzo" = "yes"
- then
- 
- { echo "$as_me:$LINENO: checking for main in -llzo2" >&5
-@@ -5604,7 +5601,7 @@ fi
- 
- 
- fi
--if test "$enable_exlzma" == "yes"
-+if test "$enable_exlzma" = "yes"
- then
-   if test "${ac_cv_header_lzmalib_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for lzmalib.h" >&5
-@@ -5741,7 +5738,7 @@ fi
- 
- 
- fi
--if test "$enable_exlzo" == "yes"
-+if test "$enable_exlzo" = "yes"
- then
-   if test "${ac_cv_header_lzo_lzo1x_h+set}" = set; then
-   { echo "$as_me:$LINENO: checking for lzo/lzo1x.h" >&5
