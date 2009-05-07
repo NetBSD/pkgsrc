@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.ru,v 1.2 2009/05/01 14:50:37 taca Exp $
+@comment $NetBSD: PLIST.ru,v 1.3 2009/05/07 15:10:01 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/ru/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/ru/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/ru/default.php
@@ -50,6 +50,11 @@ ${TL_WEBDIR}/system/modules/faq/languages/ru/tl_module.php
 ${TL_WEBDIR}/system/modules/frontend/languages/ru/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/ru/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/ru/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/ru/.htaccess
+${TL_WEBDIR}/system/modules/glossary/languages/ru/modules.php
+${TL_WEBDIR}/system/modules/glossary/languages/ru/tl_glossary.php
+${TL_WEBDIR}/system/modules/glossary/languages/ru/tl_glossary_term.php
+${TL_WEBDIR}/system/modules/glossary/languages/ru/tl_module.php
 ${TL_WEBDIR}/system/modules/listing/languages/ru/.htaccess
 ${TL_WEBDIR}/system/modules/listing/languages/ru/default.php
 ${TL_WEBDIR}/system/modules/listing/languages/ru/modules.php
@@ -105,6 +110,7 @@ ${TL_WEBDIR}/system/modules/tpl_editor/languages/ru/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/ru
 @dirrm ${TL_WEBDIR}/system/modules/memberlist/languages/ru
 @dirrm ${TL_WEBDIR}/system/modules/listing/languages/ru
+@dirrm ${TL_WEBDIR}/system/modules/glossary/languages/ru
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/ru
 @dirrm ${TL_WEBDIR}/system/modules/faq/languages/ru
 @dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/ru
