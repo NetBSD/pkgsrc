@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1751 2009/05/07 14:03:47 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1752 2009/05/07 15:11:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2343,3 +2343,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 220 [wiz 2009-05-07]
 	Updated net/libvncserver to 0.9.7 [obache 2009-05-07]
 	Updated x11/x11vnc to 0.9.7 [obache 2009-05-07]
+	Updated www/typolight27-translations to 20090506 [taca 2009-05-07]
