@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1748 2009/05/07 11:10:40 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1749 2009/05/07 11:33:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2340,3 +2340,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.24 [obache 2009-05-07]
 	Updated databases/p5-tokyotyrant to 1.10 [obache 2009-05-07]
 	Updated databases/ruby-tokyotyrant to 1.5 [obache 2009-05-07]
+	Updated time/etm to 220 [wiz 2009-05-07]
