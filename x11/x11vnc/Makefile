@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.18 2008/12/11 07:27:00 obache Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/07 14:03:26 obache Exp $
 #
 
-DISTNAME=	x11vnc-0.9.6
+DISTNAME=	x11vnc-0.9.7
 CATEGORIES=	x11 net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.karlrunge.com/x11vnc/
 COMMENT=	VNC server for real X displays
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -30,5 +32,6 @@ INSTALL_DIRS=	x11vnc classes
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
