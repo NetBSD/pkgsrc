@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.7 2009/03/21 05:35:38 obache Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/07 11:01:09 obache Exp $
 #
 
-DISTNAME=	tokyodystopia-0.9.9
-PKGREVISION=	1
+DISTNAME=	tokyodystopia-0.9.11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/dystopiadoc/
 COMMENT=	Full-text search system
+
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,6 +23,7 @@ CONFIGURE_ARGS+=	--enable-bzip
 
 TEST_TARGET=	check
 
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.15
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
