@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8080 2009/05/07 04:29:10 obache Exp $
+$NetBSD: TODO,v 1.8081 2009/05/07 11:54:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
+	o GConf-2.26.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
@@ -350,7 +351,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o PAM-0.99.7.1
 	o R-2.8.1
 	o REminiscence-0.1.9
-	o ROMBuild-2.12
+	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SDL_gfx-2.0.19
@@ -372,6 +373,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
+	o alacarte-0.12.1
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
@@ -476,7 +478,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cgdb-0.6.4
 	o cgicc-3.2.7
 	o chemtool-1.6.11
-	o cherokee-0.99.13
+	o cherokee-0.99.14
 	o chicken-4.0.0
 	o cinepaint-0.23
 	o cint-5.16
@@ -525,6 +527,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
+	o dia-0.97
 	o diffstat-1.47
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -572,7 +575,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o epiphany-extensions-2.26.1
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.3.2 [now called eric4]
+	o eric3-4.3.3 [now called eric4]
 	o erlang-13b
 	o erubis-2.6.2
 	o esh-0.8.5
@@ -600,6 +603,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o festival-1.96
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
+	o file-5.01
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.1
@@ -613,7 +617,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
-	o fotoxx-6.4.2
+	o fotoxx-6.7
 	o freeciv-2.1.9
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -742,7 +746,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.6.0
-	o hiawatha-6.12
+	o hiawatha-6.13
 	o highlight-2.9
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.8.3
@@ -770,7 +774,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o instiki-0.13
 	o intercal-0.24
 	o ioquake3-1.36
-	o ircservices-5.1.15
+	o ircservices-5.1.16
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irssi-0.8.13
 	o isc-dhcp-3.1.2
@@ -850,7 +854,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgpg-error-1.7
-	o libgsf-1.14.12
+	o libgsf-1.14.13
 	o libhydrogen-0.9.2
 	o libiconv-1.13
 	o libjit-1.0.2
@@ -958,12 +962,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o musicpd-0.14.2
 	o mysql-5.1.34
 	o mysql-5.2.3
-	o mysql5-client-5.0.79
-	o mysql5-server-5.0.79
+	o mysql5-client-5.0.81
+	o mysql5-server-5.0.81
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
-	o nautilus-sendto-1.1.4.1
+	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
@@ -1013,6 +1017,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openldap-client-2.4.16
 	o openmortal-0.7.1
 	o openmsx-0.7.0
+	o openoffice3-3.1
 	o openssh-5.2
 	o openssl-0.9.8k
 	o openttd-0.7.0
@@ -1034,6 +1039,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-xmltv-0.5.55
 	o packagekit-0.4.6
 	o pam-smbpass-3.0.13
+	o pango-1.24.2
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
@@ -1157,7 +1163,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o python-2.6.1
 	o qbrew-0.3.9
 	o qca2-2.0.2
-	o qemu-0.10.2
+	o qemu-0.10.3
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.3.2
@@ -1176,6 +1182,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rdp-1.6
 	o redland-1.0.9
 	o regionset-0.2
+	o rep-gtk-0.18.5
 	o resize_image-0.7
 	o rhythmbox-0.12.1
 	o rio500-0.8.1
@@ -1246,6 +1253,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sablecc-3.2
 	o samba-3.2.11
 	o samba-3.3.4
+	o sane-backends-1.0.20
 	o sarg-2.2.5
 	o sawfish-1.3.5.1
 	o sbcl-1.0.28
@@ -1354,6 +1362,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-0.14.1 [GNOME 2.26]
 	o top-3.8beta1
+	o totem-2.26.2
 	o totem-pl-parser-2.26.2
 	o tpasm-1.2
 	o tpb-0.6.4
@@ -1384,6 +1393,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.03
 	o vice-2.1
 	o vicq-0.4.2
+	o viewvc-1.0.8
 	o vifm-0.4
 	o vinagre-2.26.1 [GNOME 2.26]
 	o vino-2.26.1 [GNOME 2.26]
@@ -1396,6 +1406,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vobcopy-1.1.2
 	o vp-1.6
 	o vsftpd-2.1.0
+	o vte-0.20.2
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1429,6 +1440,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xchm-1.15
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
+	o xdelta-3.0v2
 	o xdesktopwaves-1.3
 	o xdm-1.1.8
 	o xdx-2.4
@@ -1469,7 +1481,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xforms-1.0.91
 	o xfstt-1.7
 	o xhippo-3.5
-	o xinput-1.4.1
+	o xinput-1.4.2
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbset-0.5
