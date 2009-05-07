@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/21 20:47:28 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/07 17:59:37 plunky Exp $
 
 DISTNAME=		bthfp-0.1
 CATEGORIES=		comms
@@ -15,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 USE_BSD_MAKEFILE=	yes
+
+# (work in progress) make sure it uses old SDP API
+CPPFLAGS+=	-DSDP_COMPAT
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bthfp ${DESTDIR}${PREFIX}/bin
