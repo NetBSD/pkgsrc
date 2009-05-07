@@ -1,11 +1,18 @@
-# $NetBSD: options.mk,v 1.1 2008/10/25 06:12:06 obache Exp $
+# $NetBSD: options.mk,v 1.2 2009/05/07 14:03:26 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x11vnc
-PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUPPORTED_OPTIONS=	avahi x11
 PKG_SUGGESTED_OPTIONS=	x11
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mavahi)
+.include "../../net/avahi/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-avahi=${BUILDLINK_PREFIX.avahi}
+.else
+CONFIGURE_ARGS+=	--without-avahi
+.endif
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=		--with-x
