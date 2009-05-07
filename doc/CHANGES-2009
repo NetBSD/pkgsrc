@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1739 2009/05/06 13:37:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1740 2009/05/07 09:36:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2331,3 +2331,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-DateTime to 0.4900 [sno 2009-05-06]
 	Updated mail/akonadi to 1.1.2 [markd 2009-05-06]
 	Updated time/etm to 212 [wiz 2009-05-06]
+	Updated databases/sqlite3 to 3.6.14 [adam 2009-05-07]
