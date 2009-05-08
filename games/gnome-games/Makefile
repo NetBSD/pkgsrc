@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2009/05/02 16:21:44 reed Exp $
+# $NetBSD: Makefile,v 1.93 2009/05/08 21:36:09 jnemeth Exp $
 
 DISTNAME=		gnome-games-2.26.0
 CATEGORIES=		games gnome
@@ -23,6 +23,7 @@ USE_LIBTOOL=		yes
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
+CONFIGURE_ENV+=		ac_cv_path_MSGFMT=msgfmt
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--without-ggz-server
 
