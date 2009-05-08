@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1754 2009/05/08 08:57:58 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1755 2009/05/08 11:03:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090506 [taca 2009-05-07]
 	Updated security/opensc to 0.11.8 [hasso 2009-05-08]
 	Updated security/openct to 0.6.16 [hasso 2009-05-08]
+	Updated graphics/clutter to 0.8.8 [obache 2009-05-08]
