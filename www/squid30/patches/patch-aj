@@ -1,10 +1,10 @@
-$NetBSD: patch-aj,v 1.2 2009/04/11 14:04:16 taca Exp $
+$NetBSD: patch-aj,v 1.3 2009/05/08 13:39:09 taca Exp $
 
 Change pid file's directory and don't install configuration files.
 
---- src/Makefile.in.orig	2008-06-22 12:35:52.000000000 +0900
+--- src/Makefile.in.orig	2009-05-06 20:11:40.000000000 +0900
 +++ src/Makefile.in
-@@ -2616,7 +2616,7 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+@@ -2636,7 +2636,7 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
  DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
  DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
  DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
@@ -13,16 +13,18 @@ Change pid file's directory and don't install configuration files.
  DEFAULT_SWAP_DIR = $(localstatedir)/cache
  DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
  DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
-@@ -5366,10 +5366,10 @@ info: info-recursive
+@@ -5397,12 +5397,12 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-data-local install-dataDATA
 +install-data-am: install-dataDATA
  
+ install-dvi: install-dvi-recursive
+ 
  install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
 -	install-sbinPROGRAMS install-sysconfDATA
 +	install-sbinPROGRAMS
  
- install-info: install-info-recursive
+ install-html: install-html-recursive
  
