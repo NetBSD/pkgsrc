@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2009/05/03 22:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2009/05/08 13:13:51 abs Exp $
 
 DISTNAME=	dbus-1.2.4.2permissive
 PKGNAME=	dbus-1.2.4.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -26,7 +26,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
-SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4500
+SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4511
 
 .include "../../mk/bsd.prefs.mk"
 
