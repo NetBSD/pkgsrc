@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1758 2009/05/08 13:40:38 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1759 2009/05/08 14:11:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2350,3 +2350,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/clutter-box2d to 0.8.2 [obache 2009-05-08]
 	Updated graphics/clutter-gtk to 0.8.3 [obache 2009-05-08]
 	Updated www/squid30 to 3.0.15 [taca 2009-05-08]
+	Added textproc/p5-XML-Generator version 1.01 [seb 2009-05-08]
