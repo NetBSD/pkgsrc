@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 11:02:30 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/08 11:06:33 obache Exp $
+include/clutter-0.8/clutter-box2d/clutter-box2d-collision.h
+include/clutter-0.8/clutter-box2d/clutter-box2d-contact.h
 include/clutter-0.8/clutter-box2d/clutter-box2d-joint.h
+include/clutter-0.8/clutter-box2d/clutter-box2d-marshal.h
 include/clutter-0.8/clutter-box2d/clutter-box2d-util.h
 include/clutter-0.8/clutter-box2d/clutter-box2d.h
 lib/libclutter-box2d-0.8.la
 lib/pkgconfig/clutter-box2d-0.8.pc
+share/gtk-doc/html/clutter-box2d/ClutterBox2D.html
 share/gtk-doc/html/clutter-box2d/ch01.html
 share/gtk-doc/html/clutter-box2d/ch02.html
 share/gtk-doc/html/clutter-box2d/clutter-box2d-ClutterBox2D-Actor.html
@@ -20,3 +24,4 @@ share/gtk-doc/html/clutter-box2d/style.css
 share/gtk-doc/html/clutter-box2d/up.png
 @dirrm share/gtk-doc/html/clutter-box2d
 @dirrm include/clutter-0.8/clutter-box2d
+@comment in clutter: @dirrm include/clutter-0.8
