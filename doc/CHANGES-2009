@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1756 2009/05/08 11:07:46 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1757 2009/05/08 11:10:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2348,3 +2348,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/openct to 0.6.16 [hasso 2009-05-08]
 	Updated graphics/clutter to 0.8.8 [obache 2009-05-08]
 	Updated graphics/clutter-box2d to 0.8.2 [obache 2009-05-08]
+	Updated graphics/clutter-gtk to 0.8.3 [obache 2009-05-08]
