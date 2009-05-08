@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 10:07:49 hasso Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/08 08:55:56 hasso Exp $
 bin/openct-tool
 include/openct/apdu.h
 include/openct/buffer.h
@@ -26,6 +26,38 @@ sbin/ifdproxy
 sbin/openct-control
 share/doc/openct/NEWS
 share/doc/openct/README
+share/doc/openct/api/annotated.html
+share/doc/openct/api/apdu_8h-source.html
+share/doc/openct/api/buffer_8h-source.html
+share/doc/openct/api/classes.html
+share/doc/openct/api/conf_8h-source.html
+share/doc/openct/api/device_8h-source.html
+share/doc/openct/api/dir_c35229a911af2f480aef06e8035e7826.html
+share/doc/openct/api/dirs.html
+share/doc/openct/api/doxygen.css
+share/doc/openct/api/doxygen.png
+share/doc/openct/api/driver_8h-source.html
+share/doc/openct/api/driver_8h.html
+share/doc/openct/api/error_8h-source.html
+share/doc/openct/api/files.html
+share/doc/openct/api/functions.html
+share/doc/openct/api/functions_vars.html
+share/doc/openct/api/ifd_8h-source.html
+share/doc/openct/api/index.html
+share/doc/openct/api/logging_8h-source.html
+share/doc/openct/api/openct_8h-source.html
+share/doc/openct/api/opensc-logo.gif
+share/doc/openct/api/path_8h-source.html
+share/doc/openct/api/protocol_8h-source.html
+share/doc/openct/api/server_8h-source.html
+share/doc/openct/api/socket_8h-source.html
+share/doc/openct/api/structifd__driver__ops.html
+share/doc/openct/api/tab_b.gif
+share/doc/openct/api/tab_l.gif
+share/doc/openct/api/tab_r.gif
+share/doc/openct/api/tabs.css
+share/doc/openct/api/tlv_8h-source.html
+share/doc/openct/api/types_8h-source.html
 share/examples/openct/openct.conf
 share/examples/openct/reader.conf
 share/examples/rc.d/openct
