@@ -1,0 +1,3 @@
+The Perl 5 module XML::Generator is a class for generating XML
+elements: you simply  call methods named for each XML tag you wish
+to generate on instance objects of this class.
