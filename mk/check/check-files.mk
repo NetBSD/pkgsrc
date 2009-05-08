@@ -1,4 +1,4 @@
-# $NetBSD: check-files.mk,v 1.23 2008/02/08 23:13:35 adrianp Exp $
+# $NetBSD: check-files.mk,v 1.24 2009/05/08 20:46:29 minskim Exp $
 #
 # This file checks that the list of installed files matches the PLIST.
 # For that purpose it records the file list of LOCALBASE before and
@@ -37,7 +37,7 @@ CHECK_FILES_STRICT?=	no
 
 # Info index files updated when a new info file is added.
 .if defined(INFO_FILES)
-CHECK_FILES_SKIP+=	${PREFIX}/.*/dir$$$$
+CHECK_FILES_SKIP+=	${PREFIX}/.*/dir
 .endif
 
 # Perl's perllocal.pod index that is regenerated when a local module
