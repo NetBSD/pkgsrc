@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1752 2009/05/07 15:11:11 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1753 2009/05/08 07:37:32 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2344,3 +2344,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libvncserver to 0.9.7 [obache 2009-05-07]
 	Updated x11/x11vnc to 0.9.7 [obache 2009-05-07]
 	Updated www/typolight27-translations to 20090506 [taca 2009-05-07]
+	Updated security/opensc to 0.11.8 [hasso 2009-05-08]
