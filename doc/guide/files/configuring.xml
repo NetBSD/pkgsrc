@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.34 2009/04/03 01:52:24 snj Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.35 2009/05/09 14:59:09 joerg Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -146,13 +146,9 @@ works.</para>
       installation and packaging as normal user. Root privileges are
       only needed to add packages.</para></listitem>
     </itemizedlist>
-    <para>To use the DESTDIR support, set either
-    <varname>USE_DESTDIR=yes</varname> to use the basic support for
-    packages that offer it or <varname>USE_DESTDIR=full</varname> to
-    get the full support with fallback to basic
-    support. <varname>USE_DESTDIR=full</varname> needs <filename
-    role="pkg">pkgtools/pkg_install</filename> version 20070802 (or
-    newer). It might become the default DESTDIR support later.</para>
+    <para>To use the DESTDIR support, set
+    <varname>USE_DESTDIR=yes</varname> to get the full support for packages
+    that support it and with fallback to basic support. </para>
     <para>DESTDIR support changes the behaviour of various targets
     slightly. To install a package after building it, use
     <literal>package-install</literal>. <literal>package</literal> and
@@ -178,20 +174,20 @@ uid=1000(myusername) gid=100(users) groups=100(users),0(wheel)
     should be needed
 
 <programlisting>
-&uprompt; make USE_DESTDIR=full install
+&uprompt; make USE_DESTDIR=yes install
 </programlisting>
 
     Create a package without root privileges
 
 <programlisting>
-&uprompt; make USE_DESTDIR=full PACKAGES=$HOME/packages package
+&uprompt; make USE_DESTDIR=yes PACKAGES=$HOME/packages package
 </programlisting>
 
     For the following command, you must be able to gain root
     privileges using &man.su.1;
 
 <programlisting>
-&uprompt; make USE_DESTDIR=full PACKAGES=$HOME/packages package-install
+&uprompt; make USE_DESTDIR=yes PACKAGES=$HOME/packages package-install
 </programlisting>
 
     Then, as a simple user

@@ -1,4 +1,4 @@
-# $NetBSD: destdir.help,v 1.3 2008/08/10 17:39:15 joerg Exp $
+# $NetBSD: destdir.help,v 1.4 2009/05/09 14:59:08 joerg Exp $
 #
 # ===
 # Warning: This file is still under construction. Don't rely on it.
@@ -20,10 +20,10 @@
 #
 # USE_DESTDIR
 #	* "yes" to enable DESTDIR support for those packages that
-#	  explicitly support it.
-#
-#	* "full": This makes the build completely unprivileged and in
-#	  turn detects any attempt to write e.g. to ${LOCALBASE}.
+#	  explicitly support it.  If the package supports it,
+#	  the build will run completely under the privileges of the
+#	  calling users, only package installation via pkg_add is done
+#	  as root.
 #
 # === Package-settable variables ===
 #

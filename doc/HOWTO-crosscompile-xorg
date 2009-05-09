@@ -1,4 +1,4 @@
-$NetBSD: HOWTO-crosscompile-xorg,v 1.4 2008/04/25 11:46:07 ghen Exp $
+$NetBSD: HOWTO-crosscompile-xorg,v 1.5 2009/05/09 14:59:09 joerg Exp $
 
 How to cross-compile modular Xorg on NetBSD
 -------------------------------------------
@@ -11,7 +11,7 @@ cross-compiled packages).
 where you wrote the tools to and where the destdir is.
 
 (c) You have to add the following options to your mk.conf:
-USE_DESTDIR=		full    
+USE_DESTDIR=		yes
 DEPENDS_TARGET=		package-install
 
 X11_TYPE =		modular 
