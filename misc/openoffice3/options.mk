@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.14 2009/04/21 16:47:48 tnn Exp $
+# $NetBSD: options.mk,v 1.15 2009/05/09 18:43:41 hira Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
@@ -6,14 +6,15 @@ PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde ooo-external-libwpd
 PKG_OPTIONS_OPTIONAL_GROUPS=	browser
 PKG_OPTIONS_GROUP.browser=	firefox firefox3 seamonkey
 # The list from completelangiso in solenv/inc/postset.mk.
-OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs by \
-				ca cs cy da de dz el en-GB en-US en-ZA eo es \
-				et eu fa fi fr ga gd gl gu gu-IN he hi-IN hr \
-				hu it ja ka km kn ko ku lo lt lv mk mn ms    \
-				ml-IN mr-IN my ne nb nl nn nr ns oc or-IN    \
-				pa-IN pl pt pt-BR ru rw sk sl sh sr ss st sv \
-				sw sw-TZ te-IN ti-ER ta-IN th tn tr ts tg    \
-				ur-IN uk uz ve vi xh zh-CN zh-TW zu all
+OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br brx bn bn-BD bn-IN bs \
+				by ca cs cy da de dgo dz el en-GB en-US en-ZA \
+				eo es et eu fa fi fr ga gd gl gu gu-IN he     \
+				hi-IN hr hu it ja ka kk km kn kn-IN ko kok ks \
+				ku lo lt lv mai mk mn mni ms ml-IN mr-IN my   \
+				ne nb nl nn nr ns oc or-IN pa-IN pl pt pt-BR  \
+				ru rw sat sa-IN sc sd sk sl sh sr ss st sv sw \
+				sw-TZ te-IN ti-ER ta-IN th tn tr ts tg ur-IN  \
+				uk uz ve vi xh zh-CN zh-TW zu all
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
@@ -89,7 +90,7 @@ CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
+CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2 --disable-gconf
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)

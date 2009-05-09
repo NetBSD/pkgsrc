@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-as,v 1.2 2009/05/09 18:43:41 hira Exp $
 
---- sal/osl/unx/file.cxx.orig	2008-04-28 22:46:10.000000000 +0900
-+++ sal/osl/unx/file.cxx	2008-08-23 12:06:31.000000000 +0900
-@@ -1418,7 +1418,7 @@
+--- sal/osl/unx/file.cxx.orig	2009-02-19 00:18:51.000000000 +0900
++++ sal/osl/unx/file.cxx	2009-05-09 12:40:10.000000000 +0900
+@@ -1447,7 +1447,7 @@
  
  #ifdef HAVE_STATFS_H
  
@@ -11,11 +11,11 @@ $NetBSD: patch-as,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
  #   define __OSL_STATFS_STRUCT      			struct statfs
  #   define __OSL_STATFS(dir, sfs)   			statfs((dir), (sfs))
  #   define __OSL_STATFS_BLKSIZ(a)   			((sal_uInt64)((a).f_bsize))
-@@ -1430,7 +1430,33 @@
+@@ -1459,7 +1459,33 @@
     of the target platforms fix it!!!! */
  #	define __OSL_STATFS_IS_CASE_SENSITIVE_FS(a)	 (1)
  #	define __OSL_STATFS_IS_CASE_PRESERVING_FS(a) (1)
--#endif /* FREEBSD || NETBSD */
+-#endif /* FREEBSD || NETBSD || MACOSX */
 +#endif /* FREEBSD || MACOSX */
 +
 +#if defined(NETBSD)
@@ -25,23 +25,23 @@ $NetBSD: patch-as,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
 +/* statvfs() replaced statfs() in 2.99.9 */
 +# if __NetBSD_Version__ >= 299000900
 +       /* 2.0D or later */
-+#   define __OSL_STATFS_STRUCT                         struct statvfs
-+#   define __OSL_STATFS(dir, sfs)                      statvfs((dir), (sfs))
-+#   define __OSL_STATFS_ISREMOTE(a)                    (((a).f_flag & ST_LOCAL) == 0)
++#   define __OSL_STATFS_STRUCT				struct statvfs
++#   define __OSL_STATFS(dir, sfs)			statvfs((dir), (sfs))
++#   define __OSL_STATFS_ISREMOTE(a)			(((a).f_flag & ST_LOCAL) == 0)
 +
 +# else
 +       /* version before 2.0D */
-+#   define __OSL_STATFS_STRUCT                         struct statfs
-+#   define __OSL_STATFS(dir, sfs)                      statfs((dir), (sfs))
-+#   define __OSL_STATFS_ISREMOTE(a)                    (((a).f_type & MNT_LOCAL) == 0)
++#   define __OSL_STATFS_STRUCT				struct statfs
++#   define __OSL_STATFS(dir, sfs)			statfs((dir), (sfs))
++#   define __OSL_STATFS_ISREMOTE(a)			(((a).f_type & MNT_LOCAL) == 0)
 +
 +# endif /* >2.0D */
 +
-+#   define __OSL_STATFS_BLKSIZ(a)                      ((sal_uInt64)((a).f_bsize))
-+#   define __OSL_STATFS_TYPENAME(a)                    ((a).f_fstypename)
++#   define __OSL_STATFS_BLKSIZ(a)			((sal_uInt64)((a).f_bsize))
++#   define __OSL_STATFS_TYPENAME(a)			((a).f_fstypename)
 +
-+#      define __OSL_STATFS_IS_CASE_SENSITIVE_FS(a)      (strcmp((a).f_fstypename, "msdos") != 0 && strcmp((a).f_fstypename, "ntfs") != 0 && strcmp((a).f_fstypename, "smbfs") != 0)
-+#      define __OSL_STATFS_IS_CASE_PRESERVING_FS(a)    (strcmp((a).f_fstypename, "msdos") != 0)
++#	define __OSL_STATFS_IS_CASE_SENSITIVE_FS(a)	(strcmp((a).f_fstypename, "msdos") != 0 && strcmp((a).f_fstypename, "ntfs") != 0 && strcmp((a).f_fstypename, "smbfs") != 0)
++#	define __OSL_STATFS_IS_CASE_PRESERVING_FS(a)	(strcmp((a).f_fstypename, "msdos") != 0)
 +#endif /* NETBSD */
  
  #if defined(LINUX)

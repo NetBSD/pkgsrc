@@ -1,7 +1,7 @@
-$NetBSD: patch-ee,v 1.1 2008/10/24 11:35:28 hira Exp $
+$NetBSD: patch-ee,v 1.2 2009/05/09 18:43:42 hira Exp $
 
---- desktop/source/deployment/misc/dp_platform.cxx.orig	2008-10-24 00:09:00.000000000 +0900
-+++ desktop/source/deployment/misc/dp_platform.cxx	2008-10-24 00:33:34.000000000 +0900
+--- desktop/source/deployment/misc/dp_platform.cxx.orig	2009-05-09 04:49:36.000000000 +0900
++++ desktop/source/deployment/misc/dp_platform.cxx	2009-05-09 04:49:58.000000000 +0900
 @@ -61,6 +61,8 @@
  #define PLATFORM_SOLARIS_X86        "solaris_x86"
  #define PLATFORM_FREEBSD_X86        "freebsd_x86"
@@ -10,8 +10,8 @@ $NetBSD: patch-ee,v 1.1 2008/10/24 11:35:28 hira Exp $
 +#define PLATFORM_NETBSD_X86_64      "netbsd_x86_64"
  #define PLATFORM_MACOSX_X86         "macosx_x86"
  #define PLATFORM_MACOSX_PPC         "macosx_powerpc"
- #define PLATFORM_OS2_X86            "os/2_x86"
-@@ -158,6 +160,10 @@
+ #define PLATFORM_OS2_X86            "os2_x86"
+@@ -160,6 +162,10 @@
              ret = checkOSandCPU(OUSTR("FreeBSD"), OUSTR("x86"));
          else if (token.equals(OUSTR(PLATFORM_FREEBSD_X86_64)))
              ret = checkOSandCPU(OUSTR("FreeBSD"), OUSTR("X86_64"));
