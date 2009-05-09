@@ -1,0 +1,10 @@
+Reaction is a Catalyst extension providing you with:
+- Model mutations abstracted into Action objects.
+- Reflection to generate interface models using the Action objects
+from a DBIx::Class schema.
+- An abstract UI expression system based on view, skin, rendering
+context, widget and layout set.
+- Stylable via skins. Parts of the skins can be extended and flexibly
+from large down to very small parts.
+- Full separation of interface rendering structure and templating,
+making re-usable extensions even easier.
