@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1761 2009/05/09 16:33:20 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1762 2009/05/09 17:26:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-XML-Generator version 1.01 [seb 2009-05-08]
 	Added www/p5-Reaction version 0.2.0 [seb 2009-05-09]
 	Updated security/dsniff to 2.3nb7 [adrianp 2009-05-09]
+	Updated devel/p5-Devel-REPL to 1.003006 [seb 2009-05-09]
