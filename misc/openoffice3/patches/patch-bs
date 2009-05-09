@@ -1,15 +1,15 @@
-$NetBSD: patch-bs,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-bs,v 1.2 2009/05/09 18:43:41 hira Exp $
 
---- xmlsecurity/util/makefile.mk.orig	2008-04-14 05:03:09.000000000 +0000
-+++ xmlsecurity/util/makefile.mk	2008-04-14 05:10:23.000000000 +0000
-@@ -101,6 +101,7 @@
+--- xmlsecurity/util/makefile.mk.orig	2008-08-22 18:34:45.000000000 +0900
++++ xmlsecurity/util/makefile.mk	2009-05-09 04:54:44.000000000 +0900
+@@ -97,6 +97,7 @@
  	$(TOOLSLIB)			\
  	$(COMPHELPERLIB)	\
  	$(CPPUHELPERLIB)	\
-+	$(LIBXML_LIBS)		\
- 	$(XMLOFFLIB)
++	$(LIBXML_LIBS)          \
+ 	$(XMLOFFLIB)        
  
- .IF "$(SYSTEM_MOZILLA)" == "YES"
+ .IF "$(OS)"=="SOLARIS"
 @@ -110,6 +111,9 @@
  .IF "$(NSS_LIB)" != ""
  SHL2STDLIBS += $(NSS_LIB)
@@ -20,17 +20,11 @@ $NetBSD: patch-bs,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
  .ENDIF
  
  .IF "$(CRYPTO_ENGINE)" == "mscrypto"
-@@ -159,11 +163,12 @@
+@@ -155,6 +159,7 @@
  				$(SOTLIB)			\
  				$(SVLLIB)			\
  				$(SFXLIB)			\
-+				$(LIBXML_LIBS)		\
++				$(LIBXML_LIBS)          \
  				$(XMLOFFLIB)		\
  				$(SVXLIB)
  
- #MT: Remove libxml2 and xs_comm (above) by cerating service for base encodings
--SHL4STDLIBS+= $(LIBXML2LIB) $(XMLSECLIB)
-+SHL4STDLIBS+= $(LIBXML_LIBS) $(LIBXML2LIB) $(XMLSECLIB)
- 
- SHL4VERSIONMAP = xmlsecurity.map
- SHL4DEPN=
