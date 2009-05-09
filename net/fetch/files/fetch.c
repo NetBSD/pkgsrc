@@ -344,6 +344,7 @@ fetch(char *URL, const char *path)
 	FILE *of;
 	fetchIO *f;
 	size_t size, wr;
+	ssize_t ssize;
 	off_t count;
 	char flags[8];
 	char *tmppath;
@@ -656,12 +657,13 @@ fetch(char *URL, const char *path)
 			stat_display(&xs, 1);
 			siginfo = 0;
 		}
-		if ((size = fetchIO_read(f, buf, B_size)) == 0)
+		if ((ssize = fetchIO_read(f, buf, B_size)) == 0)
 			break;
-		if (size == -1 && errno == EINTR)
+		if (ssize == -1 && errno == EINTR)
 			continue;
-		if (size == -1)
+		if (ssize == -1)
 			break;
+		size = ssize;
 		stat_update(&xs, count += size);
 		for (ptr = buf; size > 0; ptr += wr, size -= wr) {
 			if ((wr = fwrite(ptr, 1, size, of)) < size) {
