@@ -1,0 +1,58 @@
+$NetBSD: patch-bf,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/mailsnarf.c dsniff-2.3/mailsnarf.c
+--- mailsnarf.c.orig	2000-11-19 19:39:41.000000000 +0000
++++ mailsnarf.c	2009-05-06 23:23:49.000000000 +0100
+@@ -57,7 +57,7 @@
+ usage(void)
+ {
+ 	fprintf(stderr, "Version: " VERSION "\n"
+-		"Usage: mailsnarf [-i interface] [[-v] pattern [expression]]\n");
++		"Usage: mailsnarf [-i interface | -p pcapfile] [[-v] pattern [expression]]\n");
+ 	exit(1);
+ }
+ 
+@@ -340,11 +340,14 @@
+ {
+ 	int c;
+ 	
+-	while ((c = getopt(argc, argv, "i:vh?V")) != -1) {
++	while ((c = getopt(argc, argv, "i:p:vh?V")) != -1) {
+ 		switch (c) {
+ 		case 'i':
+ 			nids_params.device = optarg;
+ 			break;
++                case 'p':
++                        nids_params.filename = optarg;
++                        break;
+ 		case 'v':
+ 			Opt_invert = 1;
+ 			break;
+@@ -374,10 +377,23 @@
+ 	nids_register_tcp(sniff_pop_session);
+ 
+ 	if (nids_params.pcap_filter != NULL) {
+-		warnx("listening on %s [%s]", nids_params.device,
+-		      nids_params.pcap_filter);
+-	}
+-	else warnx("listening on %s", nids_params.device);
++                if (nids_params.filename == NULL) {
++		        warnx("listening on %s [%s]", nids_params.device,
++		              nids_params.pcap_filter);
++                }
++                else {
++		        warnx("using %s [%s]", nids_params.filename,
++		              nids_params.pcap_filter);
++                }
++	}
++	else {
++                if (nids_params.filename == NULL) {
++                    warnx("listening on %s", nids_params.device);
++                }
++                else {
++                    warnx("using %s", nids_params.filename);
++                }
++        }
+ 	
+ 	nids_run();
+ 	
