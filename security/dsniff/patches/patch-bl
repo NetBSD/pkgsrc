@@ -1,0 +1,45 @@
+$NetBSD: patch-bl,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/webspy.c dsniff-2.3/webspy.c
+--- webspy.c.orig	2000-11-14 15:51:04.000000000 +0000
++++ webspy.c	2009-05-06 23:24:07.000000000 +0100
+@@ -40,7 +40,7 @@
+ usage(void)
+ {
+ 	fprintf(stderr, "Version: " VERSION "\n"
+-		"Usage: %s [-i interface] host\n", progname);
++		"Usage: %s [-i interface | -p pcapfile] host\n", progname);
+ 	exit(1);
+ }
+ 
+@@ -180,11 +180,14 @@
+ {
+ 	int c;
+ 	
+-	while ((c = getopt(argc, argv, "i:h?V")) != -1) {
++	while ((c = getopt(argc, argv, "i:p:h?V")) != -1) {
+ 		switch (c) {
+ 		case 'i':
+ 			nids_params.device = optarg;
+ 			break;
++		case 'p':
++			nids_params.filename = optarg;
++			break;
+ 		default:
+ 			usage();
+ 		}
+@@ -212,7 +215,13 @@
+ 	
+ 	nids_register_tcp(sniff_http_client);
+ 
+-	warnx("listening on %s", nids_params.device);
++        if (nids_params.filename == NULL) {
++                warnx("listening on %s", nids_params.device);
++        }
++        else {
++                warnx("using %s", nids_params.filename);
++        }
++
+ 
+ 	nids_run();
+ 	
