@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2009/05/09 03:44:43 reed Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -20,10 +20,9 @@ CHECK_PORTABILITY_SKIP+=	\
 	src/tla/tests/changeset-tests/run-spaces-test.sh \
 	src/tla/tests/changeset-tests/run-test.sh
 
-
+MAKE_JOBS_SAFE=	no
 REPLACE_BASH+=	src/tla/tests/changeset-tests/chmod_random
 USE_TOOLS+=	bash
-
 USE_TOOLS+=	gmake pax
 
 HAS_CONFIGURE=		yes
