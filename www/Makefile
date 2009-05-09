@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.646 2009/05/04 22:49:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.647 2009/05/09 16:32:06 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -371,6 +371,7 @@ SUBDIR+=	p5-LWPx-ParanoidAgent
 SUBDIR+=	p5-MasonX-Request-WithApacheSession
 SUBDIR+=	p5-ParallelUserAgent
 SUBDIR+=	p5-Pod-POM-Web
+SUBDIR+=	p5-Reaction
 SUBDIR+=	p5-Rose-HTML-Objects
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Autocomplete
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Boolean
