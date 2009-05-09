@@ -1,0 +1,63 @@
+$NetBSD: patch-bb,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/dsniff.c dsniff-2.3/dsniff.c
+--- dsniff.c.orig	2000-12-01 21:27:15.000000000 +0000
++++ dsniff.c	2009-05-06 23:23:49.000000000 +0100
+@@ -44,8 +44,9 @@
+ usage(void)
+ {
+ 	fprintf(stderr, "Version: " VERSION "\n"
+-		"Usage: dsniff [-cdmn] [-i interface] [-s snaplen] [-f services]\n"
+-		"              [-t trigger[,...]] [-r|-w savefile] [expression]\n");
++		"Usage: dsniff [-cdmn] [-i interface | -p pcapfile] [-s snaplen]\n"
++		"              [-f services] [-t trigger[,...]] [-r|-w savefile]\n"
++		"              [expression]\n");
+ 	exit(1);
+ }
+ 
+@@ -75,7 +76,7 @@
+ 
+ 	services = savefile = triggers = NULL;
+ 	
+-	while ((c = getopt(argc, argv, "cdf:i:mnr:s:t:w:h?V")) != -1) {
++	while ((c = getopt(argc, argv, "cdf:i:mnp:r:s:t:w:h?V")) != -1) {
+ 		switch (c) {
+ 		case 'c':
+ 			Opt_client = 1;
+@@ -95,6 +96,9 @@
+ 		case 'n':
+ 			Opt_dns = 0;
+ 			break;
++		case 'p':
++			nids_params.filename = optarg;
++			break;
+ 		case 'r':
+ 			Opt_read = 1;
+ 			savefile = optarg;
+@@ -164,10 +168,23 @@
+ 	else nids_register_tcp(trigger_tcp);
+ 	
+ 	if (nids_params.pcap_filter != NULL) {
+-		warnx("listening on %s [%s]", nids_params.device,
+-		      nids_params.pcap_filter);
++		if (nids_params.filename == NULL) {
++			warnx("listening on %s [%s]", nids_params.device,
++		        nids_params.pcap_filter);
++		}
++		else {
++			warnx("using %s [%s]", nids_params.filename,
++		        nids_params.pcap_filter);
++		}
++	}
++	else {
++		if (nids_params.filename == NULL) {
++			warnx("listening on %s", nids_params.device);
++		}
++		else {
++			warnx("using %s", nids_params.filename);
++		}
+ 	}
+-	else warnx("listening on %s", nids_params.device);
+ 	
+ 	nids_run();
+ 	
