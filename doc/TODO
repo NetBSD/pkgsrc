@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8083 2009/05/08 11:21:40 obache Exp $
+$NetBSD: TODO,v 1.8084 2009/05/09 18:48:08 hira Exp $
 
 Suggested new packages
 ======================
@@ -1015,7 +1015,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openldap-client-2.4.16
 	o openmortal-0.7.1
 	o openmsx-0.7.0
-	o openoffice3-3.1
+	o openoffice3-bin-3.1.0
 	o openssh-5.2
 	o openssl-0.9.8k
 	o openttd-0.7.0
