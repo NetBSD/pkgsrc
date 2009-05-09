@@ -1,0 +1,23 @@
+$NetBSD: patch-bg,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/msgsnarf.8 dsniff-2.3/msgsnarf.8
+--- msgsnarf.8.orig	2000-11-19 06:10:50.000000000 +0000
++++ msgsnarf.8	2009-05-06 23:23:49.000000000 +0100
+@@ -9,7 +9,7 @@
+ .na
+ .nf
+ .fi
+-\fBmsgsnarf\fR [\fB-i \fIinterface\fR] [[\fB-v\fR] \fIpattern [\fIexpression\fR]]
++\fBmsgsnarf\fR [\fB-i \fIinterface\fR | \fB-p \fIpcapfile\fR] [[\fB-v\fR] \fIpattern [\fIexpression\fR]]
+ .SH DESCRIPTION
+ .ad
+ .fi
+@@ -19,6 +19,8 @@
+ .SH OPTIONS
+ .IP "\fB-i \fIinterface\fR"
+ Specify the interface to listen on.
++.IP "\fB-p \fIpcapfile\fR"
++Process packets from the specified PCAP capture file instead of the network.
+ .IP \fB-v\fR
+ "Versus" mode. Invert the sense of matching, to select non-matching
+ messages.

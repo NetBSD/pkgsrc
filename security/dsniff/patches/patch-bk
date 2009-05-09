@@ -1,0 +1,23 @@
+$NetBSD: patch-bk,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/webspy.8 dsniff-2.3/webspy.8
+--- webspy.8.orig	2000-11-14 15:51:05.000000000 +0000
++++ webspy.8	2009-05-06 23:24:07.000000000 +0100
+@@ -9,7 +9,7 @@
+ .na
+ .nf
+ .fi
+-\fBwebspy\fR [\fB-i \fIinterface\fR] \fIhost\fR
++\fBwebspy\fR [\fB-i \fIinterface\fR | \fB-p \fIpcapfile\fR] \fIhost\fR
+ .SH DESCRIPTION
+ .ad
+ .fi
+@@ -20,6 +20,8 @@
+ .SH OPTIONS
+ .IP "\fB-i \fIinterface\fR"
+ Specify the interface to listen on.
++.IP "\fB-p \fIpcapfile\fR"
++Process packets from the specified PCAP capture file instead of the network.
+ .IP \fIhost\fR
+ Specify the web client to spy on.
+ .SH "SEE ALSO"

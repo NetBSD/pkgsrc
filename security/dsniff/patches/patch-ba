@@ -1,0 +1,24 @@
+$NetBSD: patch-ba,v 1.1 2009/05/09 16:33:04 adrianp Exp $
+
+diff -ur dsniff-2.3.orig/dsniff.8 dsniff-2.3/dsniff.8
+--- dsniff.8.orig	2000-12-15 16:05:36.000000000 +0000
++++ dsniff.8	2009-05-06 23:23:49.000000000 +0100
+@@ -10,7 +10,7 @@
+ .nf
+ .fi
+ \fBdsniff\fR [\fB-c\fR] [\fB-d\fR] [\fB-m\fR] [\fB-n\fR] [\fB-i
+-\fIinterface\fR] [\fB-s \fIsnaplen\fR] [\fB-f \fIservices\fR]
++\fIinterface\fR | \fB-p \fIpcapfile\fR] [\fB-s \fIsnaplen\fR] [\fB-f \fIservices\fR]
+ [\fB-t \fItrigger[,...]\fR]]
+ [\fB-r\fR|\fB-w\fR \fIsavefile\fR] [\fIexpression\fR]
+ .SH DESCRIPTION
+@@ -45,6 +45,9 @@
+ Do not resolve IP addresses to hostnames.
+ .IP "\fB-i \fIinterface\fR"
+ Specify the interface to listen on.
++.IP "\fB-p \fIpcapfile\fR"
++Rather than processing the contents of packets observed upon the network 
++process the given PCAP capture file.
+ .IP "\fB-s \fIsnaplen\fR"
+ Analyze at most the first \fIsnaplen\fR bytes of each TCP connection,
+ rather than the default of 1024.
