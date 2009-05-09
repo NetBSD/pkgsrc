@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-ap,v 1.2 2009/05/09 18:43:41 hira Exp $
 
---- stlport/STLport-4.5.patch.orig	2008-07-23 01:55:11.000000000 +0900
-+++ stlport/STLport-4.5.patch	2008-07-26 06:44:43.000000000 +0900
-@@ -1138,3 +1138,74 @@
+--- stlport/STLport-4.5.patch.orig	2008-12-30 23:32:01.000000000 +0900
++++ stlport/STLport-4.5.patch	2009-05-09 23:08:06.000000000 +0900
+@@ -1045,3 +1045,74 @@
   # elif defined (__FreeBSD__)
   
   # define _Locale_CNTRL _CTYPE_C
