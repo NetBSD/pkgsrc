@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1763 2009/05/09 18:45:06 hira Exp $
+$NetBSD: CHANGES-2009,v 1.1764 2009/05/09 23:41:36 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2355,3 +2355,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/dsniff to 2.3nb7 [adrianp 2009-05-09]
 	Updated devel/p5-Devel-REPL to 1.003006 [seb 2009-05-09]
 	Updated misc/openoffice3 to 3.1.0 [hira 2009-05-09]
+	Added misc/p5-App-MrShell version 2.0200 [seb 2009-05-09]
