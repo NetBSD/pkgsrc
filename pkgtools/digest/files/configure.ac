@@ -1,4 +1,4 @@
-dnl $Id: configure.ac,v 1.15 2008/05/11 18:39:21 joerg Exp $
+dnl $Id: configure.ac,v 1.16 2009/05/09 01:45:10 joerg Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.57)
 AC_INIT([nbsd-digest],[20080510],[agc@netbsd.org])
@@ -30,6 +30,7 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/param.h])
 AC_TYPE_UINT8_T
 AC_TYPE_UINT16_T
 AC_TYPE_UINT32_T
+AC_TYPE_INT64_T
 AC_TYPE_UINT64_T
 
 AC_C_BIGENDIAN
