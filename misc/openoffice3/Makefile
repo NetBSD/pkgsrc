@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2009/04/16 21:42:43 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2009/05/09 18:43:41 hira Exp $
 #
 
-OO_VER=			3.0.1
-OO_TAG=			OOO300_m15
+OO_VER=			3.1.0
+OO_TAG=			OOO310_m11
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
-PKGREVISION=		4
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
 DIST_SUBDIR=		${DISTNAME}
@@ -32,7 +31,6 @@ DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=			${WRKDIR}/${OO_TAG}
-CONFIGURE_DIRS=		config_office
 
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
 GCC_REQD+=		3.4
@@ -116,6 +114,13 @@ CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
 
+# Dictionaries
+CONFIGURE_ARGS+=	--without-myspell-dicts
+CONFIGURE_ARGS+=	--with-system-dicts
+CONFIGURE_ARGS+=	--with-external-dict-dir=${PREFIX}/share/hunspell
+#CONFIGURE_ARGS+=	--with-external-hyph-dir=${PREFIX}/share/hyphen
+#CONFIGURE_ARGS+=	--with-external-thes-dir=${PREFIX}/share/mythes
+
 # Extensions
 CONFIGURE_ARGS+=	--enable-minimizer
 CONFIGURE_ARGS+=	--enable-presenter-console
@@ -177,7 +182,7 @@ do-install:
 		ln -sf ${DESTDIR}${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;			\
 	done
-	cd ${WRKSRC}/solver/300/${OPENOFFICE_OUTPATH}.pro/bin &&  \
+	cd ${WRKSRC}/solver/310/${OPENOFFICE_OUTPATH}.pro/bin &&  \
 	${INSTALL_DATA}	${OO_EXTENSIONS} ${DESTDIR}${OO_PREFIX}/extensions
 	cd ${WRKSRC}/sysui/${OPENOFFICE_OUTPATH}.pro/misc/openoffice.org && \
 	${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR} _PREFIX=${PREFIX}	\

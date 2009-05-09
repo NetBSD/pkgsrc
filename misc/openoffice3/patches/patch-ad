@@ -1,47 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-ad,v 1.2 2009/05/09 18:43:41 hira Exp $
 
---- sal/osl/unx/system.c.orig	2008-04-10 20:13:33.000000000 +0900
-+++ sal/osl/unx/system.c	2008-08-23 12:45:39.000000000 +0900
-@@ -66,8 +66,11 @@
+--- sal/osl/unx/system.c.orig	2008-10-01 18:19:55.000000000 +0900
++++ sal/osl/unx/system.c	2009-05-09 13:52:08.000000000 +0900
+@@ -35,7 +35,7 @@
+ static pthread_mutex_t getrtl_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 
+ /* struct passwd differs on some platforms */
+-#if defined NETBSD
++#if defined NETBSD && (__NetBSD_Version__ < 299001000)
  struct passwd *getpwnam_r(const char* name, struct passwd* s, char* buffer, int size )
- #endif /* BUILD_OS_APPLEOSX */
- #else /* MACOSX */
-+#if defined (NETBSD) && (__NetBSD_Version__ < 299001000)
- struct passwd *getpwnam_r(const char* name, struct passwd* s, char* buffer, int size )
-+#endif /* (NETBSD) && (__NetBSD_Version__ < 299001000) */
- #endif /* MACOSX */
-+#if defined (NETBSD) && (__NetBSD_Version__ < 299001000)
  {
    	struct passwd* res;
- 
-@@ -133,8 +136,9 @@
-         return(res);
- #endif /* MACOSX */
- }
-+#endif /* (NETBSD) && (__NetBSD_Version__ < 299001000) */
- 
--#if defined(NETBSD) || defined(MACOSX)
-+#if (defined(NETBSD) && (__NetBSD_Version__ < 299001000)) || defined(MACOSX)
- int getpwuid_r(uid_t uid, struct passwd *pwd, char *buffer,
-            size_t buflen, struct passwd **result)
- {
-@@ -427,7 +431,7 @@
- }
- #endif /* !defined(FREEBSD) || (__FreeBSD_version < 601103) */
- 
--#if defined(MACOSX)
-+#if defined(MACOSX) || defined(NETBSD)
- /*
-  * This section works around calls that are missing or broken
-  * in MacOS X 10.1.x and earlier.
-@@ -471,6 +475,10 @@
-     return nRet;
- }
- 
-+#endif /* defined(MACOSX) || defined(NETBSD) */
-+
-+#if defined(MACOSX)
-+
- /* No reentrant asctime() either... */
- 
- /*******************************************************************************/

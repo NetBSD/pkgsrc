@@ -1,8 +1,8 @@
-$NetBSD: patch-aw,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-aw,v 1.2 2009/05/09 18:43:41 hira Exp $
 
---- sal/osl/unx/system.h.orig	2007-02-17 23:26:16.000000000 +0900
-+++ sal/osl/unx/system.h	2007-02-17 22:59:36.000000000 +0900
-@@ -136,7 +136,10 @@
+--- sal/osl/unx/system.h.orig	2008-10-01 18:19:55.000000000 +0900
++++ sal/osl/unx/system.h	2009-05-09 23:08:19.000000000 +0900
+@@ -129,7 +129,10 @@
  #endif
  
  #ifdef NETBSD
@@ -13,7 +13,7 @@ $NetBSD: patch-aw,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
  #	define _POSIX_THREAD_SYSCALL_SOFT 1
  #	include <pthread.h>
  #	include <netdb.h>
-@@ -530,7 +533,6 @@
+@@ -505,7 +508,6 @@
  
  #ifdef NO_PTHREAD_RTL
  #if !defined FREEBSD || (__FreeBSD_version < 500112)
