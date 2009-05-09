@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: util.c,v 1.32 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/util.c,v 1.9 2007/09/29 23:11:10 swildner Exp $
- * $NetBSD: util.c,v 1.2 2008/09/16 11:59:29 joerg Exp $
+ * $NetBSD: util.c,v 1.3 2009/05/09 20:09:33 joerg Exp $
  */
 
 /*
@@ -42,7 +42,6 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <libgen.h>
-#include <paths.h>
 #include <signal.h>
 #include <stdarg.h>
 #include <stdlib.h>
