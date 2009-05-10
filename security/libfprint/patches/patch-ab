@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/05/10 18:25:34 hasso Exp $
+
+--- libfprint/imgdev.c.orig	2009-05-10 19:55:15 +0300
++++ libfprint/imgdev.c	2009-05-10 19:55:34 +0300
+@@ -175,7 +175,7 @@ int fpi_imgdev_capture(struct fp_img_dev
+ 
+ 	if (img == NULL) {
+ 		fp_err("capture succeeded but no image returned?");
+-		return -ENODATA;
++		return -EIO;
+ 	}
+ 
+ 	if (!unconditional && imgdrv->await_finger_off) {
