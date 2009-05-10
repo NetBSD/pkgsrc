@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1772 2009/05/10 13:12:40 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1773 2009/05/10 14:54:43 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2364,3 +2364,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added graphics/py-goocanvas version 0.14.0 [obache 2009-05-10]
 	Added security/xml-security-c version 1.4.0 [hasso 2009-05-10]
 	Added graphics/goocanvasmm version 0.14.0 [obache 2009-05-10]
+	Added devel/xsd version 3.2.0 [hasso 2009-05-10]
