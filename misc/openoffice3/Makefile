@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2009/05/09 18:43:41 hira Exp $
+# $NetBSD: Makefile,v 1.32 2009/05/10 03:41:22 hira Exp $
 #
 
 OO_VER=			3.1.0
@@ -113,13 +113,6 @@ CONFIGURE_ARGS+=	--with-system-openssl
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
-
-# Dictionaries
-CONFIGURE_ARGS+=	--without-myspell-dicts
-CONFIGURE_ARGS+=	--with-system-dicts
-CONFIGURE_ARGS+=	--with-external-dict-dir=${PREFIX}/share/hunspell
-#CONFIGURE_ARGS+=	--with-external-hyph-dir=${PREFIX}/share/hyphen
-#CONFIGURE_ARGS+=	--with-external-thes-dir=${PREFIX}/share/mythes
 
 # Extensions
 CONFIGURE_ARGS+=	--enable-minimizer
