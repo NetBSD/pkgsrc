@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8084 2009/05/09 18:48:08 hira Exp $
+$NetBSD: TODO,v 1.8085 2009/05/10 17:11:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -373,11 +373,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aegis-4.24
 	o aewm++-1.0.27
 	o afterstep-2.2.8
+	o akonadi-1.1.85
 	o alacarte-0.12.1
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
-	o alsa-lib-1.0.19
+	o alsa-lib-1.0.20
 	o alsa-plugins-oss-1.0.19
 	o alsa-plugins-pulse-1.0.19
 	o amanda-2.6.1
@@ -406,7 +407,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aqsis-1.4.1
 	o aranym-0.9.7
 	o argtable-2.9
-	o aria2-1.3.2
+	o aria2-1.3.3
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
@@ -486,6 +487,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.1
 	o climm-0.6.4
+	o clive-2.1.12
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.8.0
@@ -495,7 +497,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o courier-0.61.2
 	o courier-authlib-0.62.2
 	o courier-imap-4.4.0
-	o covered-0.7
+	o covered-0.7.1
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -515,7 +517,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o darcs-2.1.2
 	o dasher-4.10.1
 	o dbench-4.0
-	o dbus-1.2.12 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
+	o dbus-1.2.14 [don't update until https://bugs.freedesktop.org/show_bug.cgi?id=18980 is fixed]
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -581,6 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o etm-221
 	o evolution-2.26.1.1
 	o evolution-exchange-2.26.1
 	o evolution-mapi-0.26.1 [GNOME 2.26]
@@ -767,6 +770,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
+	o ikiwiki-3.12
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imp-4.3.4
 	o instiki-0.13
@@ -862,9 +866,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libmpd-0.18.0
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
-	o libntlm-1.0
+	o libntlm-1.1
 	o libole2-2.2.8
 	o libpciaccess-0.10.6
+	o librep-0.17.4
 	o libshout-2.2.2
 	o libssh-0.2
 	o libssh2-1.1
@@ -939,11 +944,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o miredo-1.1.6
 	o mirmon-1.37
 	o mknmz-wwwoffle-0.7.2
-	o mkvtoolnix-2.7.0
+	o mkvtoolnix-2.8.0
 	o mlterm-2.9.4
 	o mmg-2.0.2
 	o moc-2.4.4
-	o modular-xorg-server-1.6.1
+	o modular-xorg-server-1.6.1.901
 	o monotone-0.43
 	o moserial-2.26.0 [GNOME 2.26]
 	o mp3blaster-3.2.3
@@ -1025,17 +1030,20 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
+	o p5-Class-Accessor-0.33
 	o p5-DBD-Sybase-1.08
 	o p5-DB_File-1.820
 	o p5-DateTime-Set-0.27
 	o p5-DateTime-TimeZone-0.88
 	o p5-Net-OpenID-Consumer-1.03
 	o p5-Net-Twitter-2.10 [pkg/40812]
+	o p5-PathTools-3.30
 	o p5-WWW-Curl-4.06
+	o p5-XML-Feed-0.43
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.55
-	o packagekit-0.4.6
+	o packagekit-0.4.7
 	o pam-smbpass-3.0.13
 	o pango-1.24.2
 	o paprefs-0.9.8
@@ -1094,7 +1102,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.8
+	o png-1.2.36
 	o pngcheck-2.3.0
+	o pngcrush-1.6.17
 	o po4a-0.29
 	o poedit-1.4.2
 	o polsms-2.1.0
@@ -1198,6 +1208,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rpm-5.1.4
 	o rrdtool-1.3.7
 	o rsnapshot-1.3.1
+	o rsync-3.0.6
 	o rt-3.8.2
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
@@ -1261,11 +1272,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
+	o scmgit-base-1.6.3
+	o scmgit-docs-1.6.3
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o sdcc-2.9.0
 	o sdlmame-0.131
+	o sdlmess-0.131
 	o seahorse-2.26.1
 	o seahorse-plugins-2.26.1
 	o sendfile-20010424
@@ -1297,7 +1311,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snort-2.8.4
 	o snownews-1.5.10 [pkg/39887]
 	o snownews-1.5.11
-	o socat-1.7.1.0
+	o socat-1.7.1.1
 	o sope-4.6
 	o soprano-2.2.3
 	o sound-juicer-2.26.1
@@ -1340,7 +1354,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tea-23.4.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o telepathy-gabble-0.7.26
+	o telepathy-gabble-0.7.27
 	o telepathy-glib-0.7.29
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
@@ -1417,7 +1431,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o weewm-0.01
 	o whohas-0.23
 	o windowlab-1.34
-	o wine-devel-1.1.20
+	o wine-devel-1.1.21
 	o wml-2.0.11
 	o wmnd-0.4.13
 	o wmweather-2.4.4
@@ -1429,7 +1443,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090502
+	o x264-devel-20090509
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
@@ -1451,6 +1465,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-amd-2.11.1 [now xf86-video-geode]
 	o xf86-video-ati-6.12.0
 	o xf86-video-chips-1.2.1
+	o xf86-video-cirrus-1.3.0
 	o xf86-video-glint-1.2.2
 	o xf86-video-i128-1.3.1
 	o xf86-video-i740-1.3.0
