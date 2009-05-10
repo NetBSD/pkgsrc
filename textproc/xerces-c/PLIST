@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/05/10 11:24:26 hasso Exp $
 include/xercesc/dom/DOM.hpp
 include/xercesc/dom/DOMAttr.hpp
 include/xercesc/dom/DOMBuilder.hpp
@@ -502,11 +502,11 @@ include/xercesc/validators/schema/identity/XPathMatcherStack.hpp
 include/xercesc/validators/schema/identity/XPathSymbols.hpp
 include/xercesc/validators/schema/identity/XercesXPath.hpp
 lib/libxerces-c.so
-lib/libxerces-c.so.27
-lib/libxerces-c.so.27.0
+lib/libxerces-c.so.28
+lib/libxerces-c.so.28.0
 lib/libxerces-depdom.so
-lib/libxerces-depdom.so.27
-lib/libxerces-depdom.so.27.0
+lib/libxerces-depdom.so.28
+lib/libxerces-depdom.so.28.0
 @dirrm include/xercesc/validators/schema/identity
 @dirrm include/xercesc/validators/schema
 @dirrm include/xercesc/validators/datatype

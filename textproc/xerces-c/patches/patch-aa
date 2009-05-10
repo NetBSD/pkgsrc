@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2006/08/10 13:44:22 abs Exp $
+$NetBSD: patch-aa,v 1.5 2009/05/10 11:24:27 hasso Exp $
 
---- ../../samples/Makefile.incl.orig	2005-09-07 16:56:50.000000000 +0100
-+++ ../../samples/Makefile.incl
-@@ -240,6 +240,21 @@ ifeq (${PLATFORM}, FREEBSD)
-   SHLIBSUFFIX=.so
+--- ../../samples/Makefile.incl.orig	2007-08-28 21:47:02 +0300
++++ ../../samples/Makefile.incl	2009-05-08 12:50:45 +0300
+@@ -270,6 +270,20 @@ ifeq (${PLATFORM}, FREEBSD)
+   endif
  endif
  
 +#=============== DRAGONFLY SPECIFIC OPTIONS =========================
@@ -18,7 +18,6 @@ $NetBSD: patch-aa,v 1.4 2006/08/10 13:44:22 abs Exp $
 +  else
 +    EXTRA_LINK_OPTIONS=${EXTRA_LIBS} -lstdc++
 +  endif
-+  SHLIBSUFFIX=.so
 +endif
 +
  #=============== NETBSD SPECIFIC OPTIONS =========================

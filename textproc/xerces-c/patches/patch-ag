@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2006/08/10 13:44:22 abs Exp $
+$NetBSD: patch-ag,v 1.6 2009/05/10 11:24:27 hasso Exp $
 
---- configure.orig	2005-09-07 16:55:53.000000000 +0100
-+++ configure
-@@ -1309,6 +1309,7 @@ case "${host}" in
+--- configure.orig	2007-08-28 21:44:56 +0300
++++ configure	2009-05-08 12:58:10 +0300
+@@ -3943,6 +3943,7 @@ case "${host}" in
          *-*-nto*)       platform=QNX ;;
          *-*-linux*)     platform=LINUX ;;
          *-*-freebsd*)   platform=FREEBSD ;;
@@ -10,19 +10,20 @@ $NetBSD: patch-ag,v 1.5 2006/08/10 13:44:22 abs Exp $
          *-*-netbsd*)    platform=NETBSD ;;
          *-*-irix*)      platform=IRIX ;;
          *-*-aix*)       platform=AIX
-@@ -1520,6 +1521,7 @@ util/Platforms/BeOS/Makefile \
- util/Platforms/QNX/Makefile \
- util/Platforms/Interix/Makefile \
- util/Platforms/Linux/Makefile \
-+util/Platforms/DragonFly/Makefile \
- util/Platforms/FreeBSD/Makefile \
- util/Platforms/NetBSD/Makefile \
- util/Platforms/HPUX/Makefile \
-@@ -1681,6 +1683,7 @@ util/Platforms/QNX/Makefile \
- util/Platforms/Interix/Makefile \
- util/Platforms/Linux/Makefile \
- util/Platforms/FreeBSD/Makefile \
-+util/Platforms/DragonFly/Makefile \
- util/Platforms/NetBSD/Makefile \
- util/Platforms/HPUX/Makefile \
- util/Platforms/OS390/Makefile \
+@@ -4024,7 +4025,7 @@ libtype=${LIBTYPE}
+ bitstobuild=${BITSTOBUILD}
+ 
+ 
+-ac_config_files="$ac_config_files Makefile util/Makefile util/Transcoders/Cygwin/Makefile util/Transcoders/Win32/Makefile util/Transcoders/ICU/Makefile util/Transcoders/Iconv/Makefile util/Transcoders/Iconv390/Makefile util/Transcoders/Uniconv390/Makefile util/Transcoders/Iconv400/Makefile util/Transcoders/IconvFBSD/Makefile util/Transcoders/IconvGNU/Makefile util/Transcoders/MacOSUnicodeConverter/Makefile util/Platforms/Makefile util/Platforms/Solaris/Makefile util/Platforms/AIX/Makefile util/Platforms/BeOS/Makefile util/Platforms/QNX/Makefile util/Platforms/Linux/Makefile util/Platforms/FreeBSD/Makefile util/Platforms/NetBSD/Makefile util/Platforms/HPUX/Makefile util/Platforms/OS390/Makefile util/Platforms/OS400/Makefile util/Platforms/IRIX/Makefile util/Platforms/PTX/Makefile util/Platforms/OpenServer/Makefile util/Platforms/UnixWare/Makefile util/Platforms/Tru64/Makefile util/Platforms/MacOS/Makefile util/Platforms/Win32/Makefile util/Platforms/Cygwin/Makefile util/Compilers/Makefile util/MsgLoaders/InMemory/Makefile util/MsgLoaders/ICU/Makefile util/MsgLoaders/ICU/resources/Makefile util/MsgLoaders/MsgCatalog/Makefile util/MsgLoaders/MsgFile/Makefile util/NetAccessors/Socket/Makefile util/NetAccessors/WinSock/Makefile util/NetAccessors/libWWW/Makefile util/NetAccessors/MacOSURLAccessCF/Makefile util/regx/Makefile validators/Makefile validators/common/Makefile validators/datatype/Makefile validators/DTD/Makefile validators/schema/Makefile validators/schema/identity/Makefile framework/Makefile framework/psvi/Makefile dom/Makefile dom/impl/Makefile dom/deprecated/Makefile parsers/Makefile internal/Makefile sax/Makefile sax2/Makefile ../../obj/Makefile"
++ac_config_files="$ac_config_files Makefile util/Makefile util/Transcoders/Cygwin/Makefile util/Transcoders/Win32/Makefile util/Transcoders/ICU/Makefile util/Transcoders/Iconv/Makefile util/Transcoders/Iconv390/Makefile util/Transcoders/Uniconv390/Makefile util/Transcoders/Iconv400/Makefile util/Transcoders/IconvFBSD/Makefile util/Transcoders/IconvGNU/Makefile util/Transcoders/MacOSUnicodeConverter/Makefile util/Platforms/Makefile util/Platforms/Solaris/Makefile util/Platforms/AIX/Makefile util/Platforms/BeOS/Makefile util/Platforms/QNX/Makefile util/Platforms/Linux/Makefile util/Platforms/FreeBSD/Makefile util/Platforms/DragonFly/Makefile util/Platforms/NetBSD/Makefile util/Platforms/HPUX/Makefile util/Platforms/OS390/Makefile util/Platforms/OS400/Makefile util/Platforms/IRIX/Makefile util/Platforms/PTX/Makefile util/Platforms/OpenServer/Makefile util/Platforms/UnixWare/Makefile util/Platforms/Tru64/Makefile util/Platforms/MacOS/Makefile util/Platforms/Win32/Makefile util/Platforms/Cygwin/Makefile util/Compilers/Makefile util/MsgLoaders/InMemory/Makefile util/MsgLoaders/ICU/Makefile util/MsgLoaders/ICU/resources/Makefile util/MsgLoaders/MsgCatalog/Makefile util/MsgLoaders/MsgFile/Makefile util/NetAccessors/Socket/Makefile util/NetAccessors/WinSock/Makefile util/NetAccessors/libWWW/Makefile util/NetAccessors/MacOSURLAccessCF/Makefile util/regx/Makefile validators/Makefile validators/common/Makefile validators/datatype/Makefile validators/DTD/Makefile validators/schema/Makefile validators/schema/identity/Makefile framework/Makefile framework/psvi/Makefile dom/Makefile dom/impl/Makefile dom/deprecated/Makefile parsers/Makefile internal/Makefile sax/Makefile sax2/Makefile ../../obj/Makefile"
+ 
+ ac_config_commands="$ac_config_commands default"
+ 
+@@ -4624,6 +4625,7 @@ do
+     "util/Platforms/QNX/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/QNX/Makefile" ;;
+     "util/Platforms/Linux/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/Linux/Makefile" ;;
+     "util/Platforms/FreeBSD/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/FreeBSD/Makefile" ;;
++    "util/Platforms/DragonFly/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/DragonFly/Makefile" ;;
+     "util/Platforms/NetBSD/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/NetBSD/Makefile" ;;
+     "util/Platforms/HPUX/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/HPUX/Makefile" ;;
+     "util/Platforms/OS390/Makefile") CONFIG_FILES="$CONFIG_FILES util/Platforms/OS390/Makefile" ;;
