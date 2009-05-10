@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.348 2009/04/29 04:55:29 agc Exp $
+# $NetBSD: Makefile,v 1.349 2009/05/10 12:30:25 hasso Exp $
 #
 
 COMMENT=	Security tools
@@ -308,6 +308,7 @@ SUBDIR+=	tct
 SUBDIR+=	tkpasman
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
+SUBDIR+=	xml-security-c
 SUBDIR+=	xmlsec1
 SUBDIR+=	yafic
 SUBDIR+=	zebedee
