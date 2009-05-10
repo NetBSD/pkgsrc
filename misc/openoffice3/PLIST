@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/20 10:19:30 hira Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/05/10 01:58:20 hira Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
@@ -13,6 +13,7 @@ share/applications/${OO_UNXNAME}-draw.desktop
 share/applications/${OO_UNXNAME}-impress.desktop
 share/applications/${OO_UNXNAME}-math.desktop
 share/applications/${OO_UNXNAME}-printeradmin.desktop
+share/applications/${OO_UNXNAME}-startcenter.desktop
 share/applications/${OO_UNXNAME}-writer.desktop
 share/application-registry/${OO_UNXNAME}.applications
 share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-base.png
@@ -21,6 +22,7 @@ share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-draw.png
 share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-impress.png
 share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-math.png
 share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-printeradmin.png
+share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-startcenter.png
 share/icons/hicolor/16x16/apps/${OO_ICON_PREFIX}-writer.png
 share/icons/hicolor/16x16/mimetypes/${OO_ICON_PREFIX}-database.png
 share/icons/hicolor/16x16/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -52,6 +54,7 @@ share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-draw.png
 share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-impress.png
 share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-math.png
 share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-printeradmin.png
+share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-startcenter.png
 share/icons/hicolor/32x32/apps/${OO_ICON_PREFIX}-writer.png
 share/icons/hicolor/32x32/mimetypes/${OO_ICON_PREFIX}-database.png
 share/icons/hicolor/32x32/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -83,6 +86,7 @@ share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-draw.png
 share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-impress.png
 share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-math.png
 share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-printeradmin.png
+share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-startcenter.png
 share/icons/hicolor/48x48/apps/${OO_ICON_PREFIX}-writer.png
 share/icons/hicolor/48x48/mimetypes/${OO_ICON_PREFIX}-database.png
 share/icons/hicolor/48x48/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -114,6 +118,7 @@ ${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-draw.png
 ${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-impress.png
 ${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-math.png
 ${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-printeradmin.png
+${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-startcenter.png
 ${PLIST.kde}share/icons/locolor/16x16/apps/${OO_ICON_PREFIX}-writer.png
 ${PLIST.kde}share/icons/locolor/16x16/mimetypes/${OO_ICON_PREFIX}-database.png
 ${PLIST.kde}share/icons/locolor/16x16/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -145,6 +150,7 @@ ${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-draw.png
 ${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-impress.png
 ${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-math.png
 ${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-printeradmin.png
+${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-startcenter.png
 ${PLIST.kde}share/icons/locolor/32x32/apps/${OO_ICON_PREFIX}-writer.png
 ${PLIST.kde}share/icons/locolor/32x32/mimetypes/${OO_ICON_PREFIX}-database.png
 ${PLIST.kde}share/icons/locolor/32x32/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -176,6 +182,7 @@ ${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-draw.png
 ${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-impress.png
 ${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-math.png
 ${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-printeradmin.png
+${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-startcenter.png
 ${PLIST.gnome}share/icons/gnome/16x16/apps/${OO_ICON_PREFIX}-writer.png
 ${PLIST.gnome}share/icons/gnome/16x16/mimetypes/${OO_ICON_PREFIX}-database.png
 ${PLIST.gnome}share/icons/gnome/16x16/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -207,6 +214,7 @@ ${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-draw.png
 ${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-impress.png
 ${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-math.png
 ${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-printeradmin.png
+${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-startcenter.png
 ${PLIST.gnome}share/icons/gnome/32x32/apps/${OO_ICON_PREFIX}-writer.png
 ${PLIST.gnome}share/icons/gnome/32x32/mimetypes/${OO_ICON_PREFIX}-database.png
 ${PLIST.gnome}share/icons/gnome/32x32/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
@@ -238,6 +246,7 @@ ${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-draw.png
 ${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-impress.png
 ${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-math.png
 ${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-printeradmin.png
+${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-startcenter.png
 ${PLIST.gnome}share/icons/gnome/48x48/apps/${OO_ICON_PREFIX}-writer.png
 ${PLIST.gnome}share/icons/gnome/48x48/mimetypes/${OO_ICON_PREFIX}-database.png
 ${PLIST.gnome}share/icons/gnome/48x48/mimetypes/${OO_ICON_PREFIX}-drawing-template.png
