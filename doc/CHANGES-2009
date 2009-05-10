@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1775 2009/05/10 21:26:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1776 2009/05/10 21:27:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2367,3 +2367,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/xsd version 3.2.0 [hasso 2009-05-10]
 	Updated security/p5-Authen-CAS-Client to 0.04 [seb 2009-05-10]
 	Updated devel/coccinelle to 0.1.8 [wiz 2009-05-10]
+	Updated time/etm to 221 [wiz 2009-05-10]
