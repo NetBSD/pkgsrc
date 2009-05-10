@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1773 2009/05/10 14:54:43 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1774 2009/05/10 20:02:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2365,3 +2365,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/xml-security-c version 1.4.0 [hasso 2009-05-10]
 	Added graphics/goocanvasmm version 0.14.0 [obache 2009-05-10]
 	Added devel/xsd version 3.2.0 [hasso 2009-05-10]
+	Updated security/p5-Authen-CAS-Client to 0.04 [seb 2009-05-10]
