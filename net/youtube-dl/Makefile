@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/04/28 14:50:29 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/10 10:28:50 zafer Exp $
 #
 
 DISTNAME=	youtube-dl
@@ -15,7 +15,7 @@ COMMENT=	Download videos from youtube.com
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 NO_BUILD=			yes
 WRKSRC=				${WRKDIR}
 
