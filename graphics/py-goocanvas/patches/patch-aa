@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/05/10 11:39:26 obache Exp $
+
+Portability fix:
+  http://bugzilla.gnome.org/show_bug.cgi?id=582057
+
+--- configure.orig	2009-03-17 21:28:37.000000000 +0000
++++ configure
+@@ -11801,7 +11801,7 @@ fi
+   fi
+ fi
+ 
+-if test x$enable_docs == xyes; then
++if test x$enable_docs = xyes; then
+    if ! $PKG_CONFIG "pygobject-2.0 >= 2.11.3"; then
+        { echo "$as_me:$LINENO: WARNING: pygobject-2.0 < 2.11.3; disabling generation of docs" >&5
+ echo "$as_me: WARNING: pygobject-2.0 < 2.11.3; disabling generation of docs" >&2;}
