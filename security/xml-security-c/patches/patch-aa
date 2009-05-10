@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/05/10 12:23:36 hasso Exp $
+
+--- configure.orig	2009-05-08 15:30:32 +0300
++++ configure	2009-05-08 15:32:13 +0300
+@@ -21751,6 +21751,19 @@ case "${host}" in
+ 
+ 						;;
+ 
++  *-*-dragonfly*)   platform=DRAGONFLY
++    shlibsuffix=.so
++    lib_name="lib${PACKAGE_TARNAME}.so.${package_lib_version}"
++    lib_major_name="lib${PACKAGE_TARNAME}.so.${package_version_major}"
++    lib_short_name="lib${PACKAGE_TARNAME}.so"
++
++    # Should use -D_REENTRANT - but not yet OK
++    PLATFORM_OPTIONS="${PLATFORM_OPTIONS} -DFREEBSD"
++    SHARED_OPTIONS="-DFREEBSD -shared -pthread"
++    LINK_OPTIONS="-DFREEBSD -pthread"
++
++						;;
++
+   *-*-linux*)     platform=LINUX ;
+     shlibsuffix=.so
+     lib_name="lib${PACKAGE_TARNAME}.so.${package_lib_version}"
