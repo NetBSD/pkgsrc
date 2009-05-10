@@ -1,0 +1,237 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/10 14:50:50 hasso Exp $
+bin/xsd
+include/xsd/cxx/auto-array.hxx
+include/xsd/cxx/compilers/vc-7/post.hxx
+include/xsd/cxx/compilers/vc-7/pre.hxx
+include/xsd/cxx/compilers/vc-8/post.hxx
+include/xsd/cxx/compilers/vc-8/pre.hxx
+include/xsd/cxx/config.hxx
+include/xsd/cxx/exceptions.hxx
+include/xsd/cxx/parser/document.hxx
+include/xsd/cxx/parser/document.txx
+include/xsd/cxx/parser/elements.hxx
+include/xsd/cxx/parser/elements.txx
+include/xsd/cxx/parser/error-handler.hxx
+include/xsd/cxx/parser/error-handler.txx
+include/xsd/cxx/parser/exceptions.hxx
+include/xsd/cxx/parser/exceptions.ixx
+include/xsd/cxx/parser/exceptions.txx
+include/xsd/cxx/parser/expat/elements.hxx
+include/xsd/cxx/parser/expat/elements.txx
+include/xsd/cxx/parser/map.hxx
+include/xsd/cxx/parser/map.ixx
+include/xsd/cxx/parser/map.txx
+include/xsd/cxx/parser/non-validating/parser.hxx
+include/xsd/cxx/parser/non-validating/parser.txx
+include/xsd/cxx/parser/non-validating/xml-schema-pimpl.hxx
+include/xsd/cxx/parser/non-validating/xml-schema-pimpl.ixx
+include/xsd/cxx/parser/non-validating/xml-schema-pimpl.txx
+include/xsd/cxx/parser/non-validating/xml-schema-pskel.hxx
+include/xsd/cxx/parser/non-validating/xml-schema-pskel.ixx
+include/xsd/cxx/parser/non-validating/xml-schema-pskel.txx
+include/xsd/cxx/parser/schema-exceptions.hxx
+include/xsd/cxx/parser/schema-exceptions.ixx
+include/xsd/cxx/parser/schema-exceptions.txx
+include/xsd/cxx/parser/substitution-map.hxx
+include/xsd/cxx/parser/substitution-map.txx
+include/xsd/cxx/parser/validating/exceptions.hxx
+include/xsd/cxx/parser/validating/exceptions.ixx
+include/xsd/cxx/parser/validating/exceptions.txx
+include/xsd/cxx/parser/validating/inheritance-map.hxx
+include/xsd/cxx/parser/validating/inheritance-map.txx
+include/xsd/cxx/parser/validating/parser.hxx
+include/xsd/cxx/parser/validating/parser.txx
+include/xsd/cxx/parser/validating/xml-schema-pimpl.hxx
+include/xsd/cxx/parser/validating/xml-schema-pimpl.ixx
+include/xsd/cxx/parser/validating/xml-schema-pimpl.txx
+include/xsd/cxx/parser/validating/xml-schema-pskel.hxx
+include/xsd/cxx/parser/validating/xml-schema-pskel.ixx
+include/xsd/cxx/parser/validating/xml-schema-pskel.txx
+include/xsd/cxx/parser/xerces/elements.hxx
+include/xsd/cxx/parser/xerces/elements.txx
+include/xsd/cxx/parser/xml-schema.hxx
+include/xsd/cxx/parser/xml-schema.ixx
+include/xsd/cxx/parser/xml-schema.txx
+include/xsd/cxx/post.hxx
+include/xsd/cxx/pre.hxx
+include/xsd/cxx/ro-string.hxx
+include/xsd/cxx/ro-string.txx
+include/xsd/cxx/tree/ace-cdr-stream-common.hxx
+include/xsd/cxx/tree/ace-cdr-stream-extraction.hxx
+include/xsd/cxx/tree/ace-cdr-stream-insertion.hxx
+include/xsd/cxx/tree/bits/literals.hxx
+include/xsd/cxx/tree/bits/literals.ixx
+include/xsd/cxx/tree/buffer.hxx
+include/xsd/cxx/tree/buffer.txx
+include/xsd/cxx/tree/comparison-map.hxx
+include/xsd/cxx/tree/comparison-map.txx
+include/xsd/cxx/tree/containers-wildcard.hxx
+include/xsd/cxx/tree/containers.hxx
+include/xsd/cxx/tree/containers.txx
+include/xsd/cxx/tree/date-time-extraction.txx
+include/xsd/cxx/tree/date-time-insertion.txx
+include/xsd/cxx/tree/date-time-ostream.txx
+include/xsd/cxx/tree/date-time.hxx
+include/xsd/cxx/tree/date-time.ixx
+include/xsd/cxx/tree/date-time.txx
+include/xsd/cxx/tree/elements.hxx
+include/xsd/cxx/tree/elements.txx
+include/xsd/cxx/tree/error-handler.hxx
+include/xsd/cxx/tree/error-handler.txx
+include/xsd/cxx/tree/exceptions.hxx
+include/xsd/cxx/tree/exceptions.ixx
+include/xsd/cxx/tree/exceptions.txx
+include/xsd/cxx/tree/facet.hxx
+include/xsd/cxx/tree/istream-fwd.hxx
+include/xsd/cxx/tree/istream.hxx
+include/xsd/cxx/tree/list.hxx
+include/xsd/cxx/tree/ostream.hxx
+include/xsd/cxx/tree/parsing.hxx
+include/xsd/cxx/tree/parsing.txx
+include/xsd/cxx/tree/parsing/boolean.hxx
+include/xsd/cxx/tree/parsing/byte.hxx
+include/xsd/cxx/tree/parsing/date-time.txx
+include/xsd/cxx/tree/parsing/decimal.hxx
+include/xsd/cxx/tree/parsing/double.hxx
+include/xsd/cxx/tree/parsing/float.hxx
+include/xsd/cxx/tree/parsing/int.hxx
+include/xsd/cxx/tree/parsing/long.hxx
+include/xsd/cxx/tree/parsing/short.hxx
+include/xsd/cxx/tree/parsing/unsigned-byte.hxx
+include/xsd/cxx/tree/parsing/unsigned-int.hxx
+include/xsd/cxx/tree/parsing/unsigned-long.hxx
+include/xsd/cxx/tree/parsing/unsigned-short.hxx
+include/xsd/cxx/tree/serialization.hxx
+include/xsd/cxx/tree/serialization.txx
+include/xsd/cxx/tree/serialization/boolean.hxx
+include/xsd/cxx/tree/serialization/byte.hxx
+include/xsd/cxx/tree/serialization/date-time.txx
+include/xsd/cxx/tree/serialization/decimal.hxx
+include/xsd/cxx/tree/serialization/double.hxx
+include/xsd/cxx/tree/serialization/float.hxx
+include/xsd/cxx/tree/serialization/int.hxx
+include/xsd/cxx/tree/serialization/long.hxx
+include/xsd/cxx/tree/serialization/short.hxx
+include/xsd/cxx/tree/serialization/unsigned-byte.hxx
+include/xsd/cxx/tree/serialization/unsigned-int.hxx
+include/xsd/cxx/tree/serialization/unsigned-long.hxx
+include/xsd/cxx/tree/serialization/unsigned-short.hxx
+include/xsd/cxx/tree/std-ostream-map.hxx
+include/xsd/cxx/tree/std-ostream-map.txx
+include/xsd/cxx/tree/std-ostream-operators.hxx
+include/xsd/cxx/tree/stream-extraction-map.hxx
+include/xsd/cxx/tree/stream-extraction-map.txx
+include/xsd/cxx/tree/stream-extraction.hxx
+include/xsd/cxx/tree/stream-insertion-map.hxx
+include/xsd/cxx/tree/stream-insertion-map.txx
+include/xsd/cxx/tree/stream-insertion.hxx
+include/xsd/cxx/tree/text.hxx
+include/xsd/cxx/tree/text.txx
+include/xsd/cxx/tree/type-factory-map.hxx
+include/xsd/cxx/tree/type-factory-map.txx
+include/xsd/cxx/tree/type-serializer-map.hxx
+include/xsd/cxx/tree/type-serializer-map.txx
+include/xsd/cxx/tree/types.hxx
+include/xsd/cxx/tree/types.txx
+include/xsd/cxx/tree/xdr-stream-common.hxx
+include/xsd/cxx/tree/xdr-stream-extraction.hxx
+include/xsd/cxx/tree/xdr-stream-insertion.hxx
+include/xsd/cxx/version.hxx
+include/xsd/cxx/xml/bits/literals.hxx
+include/xsd/cxx/xml/bits/literals.ixx
+include/xsd/cxx/xml/dom/auto-ptr.hxx
+include/xsd/cxx/xml/dom/bits/error-handler-proxy.hxx
+include/xsd/cxx/xml/dom/bits/error-handler-proxy.txx
+include/xsd/cxx/xml/dom/elements.hxx
+include/xsd/cxx/xml/dom/elements.txx
+include/xsd/cxx/xml/dom/parsing-header.hxx
+include/xsd/cxx/xml/dom/parsing-source.hxx
+include/xsd/cxx/xml/dom/parsing-source.txx
+include/xsd/cxx/xml/dom/serialization-header.hxx
+include/xsd/cxx/xml/dom/serialization-header.txx
+include/xsd/cxx/xml/dom/serialization-source.hxx
+include/xsd/cxx/xml/dom/serialization-source.txx
+include/xsd/cxx/xml/dom/wildcard-source.hxx
+include/xsd/cxx/xml/dom/wildcard-source.txx
+include/xsd/cxx/xml/elements.hxx
+include/xsd/cxx/xml/elements.txx
+include/xsd/cxx/xml/error-handler.hxx
+include/xsd/cxx/xml/qualified-name.hxx
+include/xsd/cxx/xml/sax/bits/error-handler-proxy.hxx
+include/xsd/cxx/xml/sax/bits/error-handler-proxy.txx
+include/xsd/cxx/xml/sax/std-input-source.hxx
+include/xsd/cxx/xml/std-memory-manager.hxx
+include/xsd/cxx/xml/string.hxx
+include/xsd/cxx/xml/string.ixx
+include/xsd/cxx/xml/string.txx
+include/xsd/cxx/zc-istream.hxx
+include/xsd/cxx/zc-istream.txx
+man/man1/xsd.1
+share/doc/libxsd/FLOSSE
+share/doc/libxsd/GPLv2
+share/doc/libxsd/LICENSE
+share/doc/libxsd/README
+share/doc/xsd/FLOSSE
+share/doc/xsd/GPLv2
+share/doc/xsd/LICENSE
+share/doc/xsd/NEWS
+share/doc/xsd/README
+share/doc/xsd/cxx/parser/guide/cxx-parser-guide.pdf
+share/doc/xsd/cxx/parser/guide/cxx-parser-guide.ps
+share/doc/xsd/cxx/parser/guide/figure-1.png
+share/doc/xsd/cxx/parser/guide/figure-1.svg
+share/doc/xsd/cxx/parser/guide/guide.html2ps
+share/doc/xsd/cxx/parser/guide/index.xhtml
+share/doc/xsd/cxx/parser/guide/makefile
+share/doc/xsd/cxx/tree/dbxml/driver.cxx
+share/doc/xsd/cxx/tree/dbxml/index.xhtml
+share/doc/xsd/cxx/tree/dbxml/library.cxx
+share/doc/xsd/cxx/tree/dbxml/library.hxx
+share/doc/xsd/cxx/tree/dbxml/library.xsd
+share/doc/xsd/cxx/tree/guide/cxx-tree-guide.pdf
+share/doc/xsd/cxx/tree/guide/cxx-tree-guide.ps
+share/doc/xsd/cxx/tree/guide/guide.html2ps
+share/doc/xsd/cxx/tree/guide/index.xhtml
+share/doc/xsd/cxx/tree/guide/makefile
+share/doc/xsd/cxx/tree/manual/cxx-tree-manual.pdf
+share/doc/xsd/cxx/tree/manual/cxx-tree-manual.ps
+share/doc/xsd/cxx/tree/manual/index.xhtml
+share/doc/xsd/cxx/tree/manual/makefile
+share/doc/xsd/cxx/tree/manual/manual.html2ps
+share/doc/xsd/cxx/tree/reference/footer.html
+share/doc/xsd/cxx/tree/reference/libxsd.doxygen
+share/doc/xsd/cxx/tree/reference/makefile
+share/doc/xsd/default.css
+share/doc/xsd/future.xhtml
+share/doc/xsd/schema-authoring-guide.xhtml
+share/doc/xsd/xsd.xhtml
+@dirrm share/doc/xsd/cxx/tree/reference
+@dirrm share/doc/xsd/cxx/tree/manual
+@dirrm share/doc/xsd/cxx/tree/guide
+@dirrm share/doc/xsd/cxx/tree/dbxml
+@dirrm share/doc/xsd/cxx/tree
+@dirrm share/doc/xsd/cxx/parser/guide
+@dirrm share/doc/xsd/cxx/parser
+@dirrm share/doc/xsd/cxx
+@dirrm share/doc/xsd
+@dirrm share/doc/libxsd
+@dirrm include/xsd/cxx/xml/sax/bits
+@dirrm include/xsd/cxx/xml/sax
+@dirrm include/xsd/cxx/xml/dom/bits
+@dirrm include/xsd/cxx/xml/dom
+@dirrm include/xsd/cxx/xml/bits
+@dirrm include/xsd/cxx/xml
+@dirrm include/xsd/cxx/tree/serialization
+@dirrm include/xsd/cxx/tree/parsing
+@dirrm include/xsd/cxx/tree/bits
+@dirrm include/xsd/cxx/tree
+@dirrm include/xsd/cxx/parser/xerces
+@dirrm include/xsd/cxx/parser/validating
+@dirrm include/xsd/cxx/parser/non-validating
+@dirrm include/xsd/cxx/parser/expat
+@dirrm include/xsd/cxx/parser
+@dirrm include/xsd/cxx/compilers/vc-8
+@dirrm include/xsd/cxx/compilers/vc-7
+@dirrm include/xsd/cxx/compilers
+@dirrm include/xsd/cxx
+@dirrm include/xsd
