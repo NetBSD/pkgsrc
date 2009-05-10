@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.522 2009/05/10 11:43:22 obache Exp $
+# $NetBSD: Makefile,v 1.523 2009/05/10 13:13:56 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -154,6 +154,7 @@ SUBDIR+=	gnuplot
 SUBDIR+=	gnuplot-nox11
 SUBDIR+=	gocr
 SUBDIR+=	goocanvas
+SUBDIR+=	goocanvasmm
 SUBDIR+=	gphoto
 SUBDIR+=	gphoto2
 SUBDIR+=	gqview
