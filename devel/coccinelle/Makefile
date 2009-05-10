@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/04/29 11:21:52 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/10 21:26:12 wiz Exp $
 
-DISTNAME=	coccinelle-0.1.7
+DISTNAME=	coccinelle-0.1.8
 CATEGORIES=	devel
-MASTER_SITES=	http://aryx.cs.uiuc.edu/~pad/software/project-coccinelle/#http://www.emn.fr/x-info/coccinelle/distrib/
+MASTER_SITES=	http://www.emn.fr/x-info/coccinelle/distrib/
+#http://aryx.cs.uiuc.edu/~pad/software/project-coccinelle/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
