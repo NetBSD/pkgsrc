@@ -1,0 +1,20 @@
+$NetBSD: patch-ek,v 1.1 2009/05/10 01:58:20 hira Exp $
+
+--- scp2/source/ooo/common_brand.scp.orig	2009-01-20 21:48:05.000000000 +0900
++++ scp2/source/ooo/common_brand.scp	2009-05-10 10:16:16.000000000 +0900
+@@ -646,6 +646,15 @@
+ #endif
+ 
+ #if defined UNX && ! defined MACOSX
++File gid_Brand_File_Share_Xdg_Startcenter
++    TXT_FILE_BODY;
++    Dir = gid_Brand_Dir_Share_Xdg;
++    Styles = (PACKED,SCPZIP_REPLACE);
++    Name = "startcenter.desktop";
++End
++#endif
++
++#if defined UNX && ! defined MACOSX
+ #ifdef ENABLE_GTK
+ File gid_Brand_File_Share_Xdg_QStart
+     TXT_FILE_BODY;
