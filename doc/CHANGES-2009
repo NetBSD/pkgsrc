@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1767 2009/05/10 04:44:21 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1768 2009/05/10 05:01:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2359,3 +2359,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Module-ScanDeps version 0.90 [seb 2009-05-10]
 	Updated databases/tokyocabinet to 1.4.20 [obache 2009-05-10]
 	Updated databases/tokyotyrant to 1.1.26 [obache 2009-05-10]
+	Updated graphics/goocanvas to 0.14 [obache 2009-05-10]
