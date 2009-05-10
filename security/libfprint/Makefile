@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 21:51:06 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/10 18:25:34 hasso Exp $
 
 DISTNAME=	libfprint-0.0.6
 CATEGORIES=	security devel
@@ -11,15 +11,17 @@ COMMENT=	Fingerprint reader access library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	c c++ fortran
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config autoconf automake autoheader autoreconf
 
 CPPFLAGS+=	-DHAVE_MEMMEM
 
 CONFIGURE_ARGS+=CRYPTO_CFLAGS=-I${SSLBASE}/include/openssl \
 		CRYPTO_LIBS="-L${SSLBASE}/lib -lcrypto"
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
