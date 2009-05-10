@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/10 11:39:26 obache Exp $
+lib/pkgconfig/pygoocanvas.pc
+${PYSITELIB}/goocanvasmodule.la
