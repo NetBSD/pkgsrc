@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/01/07 21:20:28 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/10 10:30:18 zafer Exp $
 #
 
 DISTNAME=	dbus-python-0.83.0
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PY_PATCHPLIST=			YES
 
 .include "../../devel/glib2/buildlink3.mk"
