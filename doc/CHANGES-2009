@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1766 2009/05/10 04:43:58 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1767 2009/05/10 04:44:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2358,3 +2358,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added misc/p5-App-MrShell version 2.0200 [seb 2009-05-09]
 	Added devel/p5-Module-ScanDeps version 0.90 [seb 2009-05-10]
 	Updated databases/tokyocabinet to 1.4.20 [obache 2009-05-10]
+	Updated databases/tokyotyrant to 1.1.26 [obache 2009-05-10]
