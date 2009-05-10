@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/22 10:27:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/10 04:59:38 obache Exp $
 include/goocanvas-1.0/goocanvas.h
 include/goocanvas-1.0/goocanvasellipse.h
 include/goocanvas-1.0/goocanvasenumtypes.h
+include/goocanvas-1.0/goocanvasgrid.h
 include/goocanvas-1.0/goocanvasgroup.h
 include/goocanvas-1.0/goocanvasimage.h
 include/goocanvas-1.0/goocanvasitem.h
@@ -21,6 +22,8 @@ lib/pkgconfig/goocanvas.pc
 share/gtk-doc/html/goocanvas/GooCanvas.html
 share/gtk-doc/html/goocanvas/GooCanvasEllipse.html
 share/gtk-doc/html/goocanvas/GooCanvasEllipseModel.html
+share/gtk-doc/html/goocanvas/GooCanvasGrid.html
+share/gtk-doc/html/goocanvas/GooCanvasGridModel.html
 share/gtk-doc/html/goocanvas/GooCanvasGroup.html
 share/gtk-doc/html/goocanvas/GooCanvasGroupModel.html
 share/gtk-doc/html/goocanvas/GooCanvasImage.html
