@@ -1,0 +1,3 @@
+XML Security is an C++ implementation of the W3C digital signature
+specification that makes it possible for programmers to create and
+validate signed XML documents.
