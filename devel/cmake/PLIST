@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/04/07 10:42:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/05/11 08:02:09 hasso Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -92,6 +92,8 @@ share/cmake-${CMAKE_API}/Modules/CPack.DS_Store.in
 share/cmake-${CMAKE_API}/Modules/CPack.Description.plist.in
 share/cmake-${CMAKE_API}/Modules/CPack.Info.plist.in
 share/cmake-${CMAKE_API}/Modules/CPack.OSXScriptLauncher.in
+share/cmake-${CMAKE_API}/Modules/CPack.OSXScriptLauncher.rsrc.in
+share/cmake-${CMAKE_API}/Modules/CPack.OSXX11.main.scpt.in
 share/cmake-${CMAKE_API}/Modules/CPack.OSXX11.Info.plist.in
 share/cmake-${CMAKE_API}/Modules/CPack.RuntimeScript.in
 share/cmake-${CMAKE_API}/Modules/CPack.STGZ_Header.sh.in
