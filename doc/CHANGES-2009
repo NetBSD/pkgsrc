@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1778 2009/05/11 08:04:04 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1779 2009/05/11 08:32:26 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2370,3 +2370,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 221 [wiz 2009-05-10]
 	Updated x11/xf86-video-vmware to 10.16.5 [obache 2009-05-11]
 	Updated devel/cmake to 2.6.4 [hasso 2009-05-11]
+	Updated net/dhcpcd to 5.0.3 [roy 2009-05-11]
