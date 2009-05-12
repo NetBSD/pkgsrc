@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1787 2009/05/12 13:59:08 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1788 2009/05/12 18:37:40 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2384,3 +2384,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/boost-docs to 1.38.0nb1 [hasso 2009-05-12]
 	Updated textproc/py-pygments to 1.0 [obache 2009-05-12]
 	Updated net/xorp to 1.6 [obache 2009-05-12]
+	Updated chat/ejabberd to 2.0.5 [martti 2009-05-12]
