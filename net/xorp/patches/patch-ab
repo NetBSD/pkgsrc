@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2009/02/07 18:39:20 joerg Exp $
+$NetBSD: patch-ab,v 1.9 2009/05/12 13:58:44 obache Exp $
 
---- fea/data_plane/control_socket/click_socket.cc.orig	2008-07-23 07:10:15.000000000 +0200
+--- fea/data_plane/control_socket/click_socket.cc.orig	2009-01-05 18:30:51.000000000 +0000
 +++ fea/data_plane/control_socket/click_socket.cc
-@@ -731,7 +731,10 @@ ClickSocket::mount_click_file_system(str
+@@ -736,7 +736,10 @@ ClickSocket::mount_click_file_system(str
  #ifdef HOST_OS_LINUX
      ret_value = mount("none", _kernel_click_mount_directory.c_str(),
  		      CLICK_FILE_SYSTEM_TYPE.c_str(), 0, 0);

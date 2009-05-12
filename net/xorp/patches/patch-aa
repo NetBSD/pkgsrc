@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2008/10/02 13:13:05 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2009/05/12 13:58:44 obache Exp $
 
---- libxipc/sockutil.cc.orig	2008-09-30 15:19:41.000000000 +0200
+--- libxipc/sockutil.cc.orig	2009-01-05 18:30:56.000000000 +0000
 +++ libxipc/sockutil.cc
-@@ -299,13 +299,13 @@ get_active_ipv4_addrs(vector<IPv4>& addr
+@@ -305,13 +305,13 @@ get_active_ipv4_addrs(vector<IPv4>& addr
      for ( ; ; ) {
  	ifconf.ifc_len = ifnum * sizeof(struct ifreq);
  	if (ifconf.ifc_buf != NULL)
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.6 2008/10/02 13:13:05 joerg Exp $
  		comm_close(s);
  		return;
  	    }
-@@ -322,7 +322,7 @@ get_active_ipv4_addrs(vector<IPv4>& addr
+@@ -328,7 +328,7 @@ get_active_ipv4_addrs(vector<IPv4>& addr
      //
      vector<uint8_t> buffer(ifconf.ifc_len);
      memcpy(&buffer[0], ifconf.ifc_buf, ifconf.ifc_len);

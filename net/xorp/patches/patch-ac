@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2008/10/02 13:13:05 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2009/05/12 13:58:44 obache Exp $
 
---- fea/data_plane/ifconfig/ifconfig_get_ioctl.cc.orig	2008-09-30 15:53:56.000000000 +0200
+--- fea/data_plane/ifconfig/ifconfig_get_ioctl.cc.orig	2009-01-05 18:30:53.000000000 +0000
 +++ fea/data_plane/ifconfig/ifconfig_get_ioctl.cc
-@@ -154,7 +154,7 @@ IfConfigGetIoctl::read_config(IfTree& if
+@@ -159,7 +159,7 @@ IfConfigGetIoctl::read_config(IfTree& if
  	    return (XORP_ERROR);
  	vector<uint8_t> buffer(ifconf.ifc_len);
  	memcpy(&buffer[0], ifconf.ifc_buf, ifconf.ifc_len);
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2008/10/02 13:13:05 joerg Exp $
  
  	parse_buffer_ioctl(ifconfig(), iftree, AF_INET, buffer);
      }
-@@ -168,7 +168,7 @@ IfConfigGetIoctl::read_config(IfTree& if
+@@ -173,7 +173,7 @@ IfConfigGetIoctl::read_config(IfTree& if
  	    return (XORP_ERROR);
  	vector<uint8_t> buffer(ifconf.ifc_len);
  	memcpy(&buffer[0], ifconf.ifc_buf, ifconf.ifc_len);
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.4 2008/10/02 13:13:05 joerg Exp $
  
  	parse_buffer_ioctl(ifconfig(), iftree, AF_INET6, buffer);
      }
-@@ -204,13 +204,13 @@ ioctl_read_ifconf(int family, ifconf *if
+@@ -209,13 +209,13 @@ ioctl_read_ifconf(int family, ifconf *if
      for ( ; ; ) {
  	ifconf->ifc_len = ifnum * sizeof(struct ifreq);
  	if (ifconf->ifc_buf != NULL)
