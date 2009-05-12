@@ -1,4 +1,4 @@
-#	$NetBSD: Darwin.bsd.lib.mk,v 1.2 2007/08/10 13:04:13 joerg Exp $
+#	$NetBSD: Darwin.bsd.lib.mk,v 1.3 2009/05/12 23:21:10 minskim Exp $
 #	@(#)bsd.lib.mk	8.3 (Berkeley) 4/22/94
 
 .if !target(__initialized__)
@@ -352,7 +352,7 @@ __archivebuild: .USE
 __archiveinstall: .USE
 	${INSTALL} ${RENAME} ${PRESERVE} ${COPY} ${INSTPRIV} -o ${LIBOWN} \
 	    -g ${LIBGRP} -m 600 ${.ALLSRC} ${.TARGET}
-	${RANLIB} -t ${.TARGET}
+	touch ${.TARGET}
 	chmod ${LIBMODE} ${.TARGET}
 
 DPSRCS+=	${SRCS:M*.l:.l=.c} ${SRCS:M*.y:.y=.c}
