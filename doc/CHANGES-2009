@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1781 2009/05/12 08:16:16 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1782 2009/05/12 08:17:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/dhcpcd to 5.0.3 [roy 2009-05-11]
 	Updated misc/m17n-docs to 1.5.2 [obache 2009-05-12]
 	Updated misc/m17n-db to 1.5.4 [obache 2009-05-12]
+	Updated misc/m17n-contrib to 1.1.9 [obache 2009-05-12]
