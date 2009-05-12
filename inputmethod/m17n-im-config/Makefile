@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/27 14:07:46 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/12 08:21:09 obache Exp $
 #
 
 DISTNAME=	m17n-im-config-0.9.0
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/common/im-config/index.html
 COMMENT=	Configuration input methods of the m17n library
 
+LICENSE=	gnu-gpl-v2
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
@@ -17,6 +19,8 @@ USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	m17n-im-config.pc.in
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/m17n-lib/buildlink3.mk"
