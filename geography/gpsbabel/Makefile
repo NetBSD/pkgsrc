@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/02/09 13:41:50 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/12 12:27:19 martti Exp $
 #
 
 DISTNAME=	gpsbabel-1.3.6
@@ -13,7 +13,7 @@ MAINTAINER=	martti@NetBSD.org
 # MAINTAINER+=	gdt@NetBSD.org
 HOMEPAGE=	http://www.gpsbabel.org/
 COMMENT=	Utility to convert and fetch GPS related data
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
