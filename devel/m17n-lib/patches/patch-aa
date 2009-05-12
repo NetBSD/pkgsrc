@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+$NetBSD: patch-aa,v 1.2 2009/05/12 08:19:54 obache Exp $
 
---- configure.ac.orig	2008-01-15 06:42:46.000000000 +0000
+--- configure.ac.orig	2009-02-25 02:43:55.000000000 +0000
 +++ configure.ac
 @@ -351,7 +351,7 @@ dnl In addition, set THAI_WORDSEG_LD_FLA
  PKG_CHECK_MODULES(LIBTHAI, libthai, HAVE_LIBTHAI=yes, HAVE_LIBTHAI=no)
