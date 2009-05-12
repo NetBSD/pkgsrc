@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1784 2009/05/12 08:48:09 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1785 2009/05/12 09:08:49 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/emacs to 22.3nb2 [hasso 2009-05-12]
 	Updated cad/pcb to 20081128nb1 [hasso 2009-05-12]
 	Updated cad/geda-examples to 1.4.3nb1 [hasso 2009-05-12]
+	Updated devel/boost-docs to 1.38.0nb1 [hasso 2009-05-12]
