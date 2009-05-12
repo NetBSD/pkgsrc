@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1 2009/05/12 14:36:28 plunky Exp $
+
+--- Makefile.orig	2009-05-12 13:22:31.000000000 +0100
++++ Makefile	2009-05-12 13:23:00.000000000 +0100
+@@ -4,7 +4,14 @@
+ SRCS=	bthfp.c
+ MAN=	bthfp.1
+ 
+-DPADD+=	${LIBBLUETOOTH} ${LIBEVENT} ${LIBSDP}
+-LDADD+=	-lbluetooth -levent -lsdp
++DPADD+=	${LIBBLUETOOTH} ${LIBEVENT}
++LDADD+=	-lbluetooth -levent
++
++.if (${HAVE_LIBSDP:Uyes} == "no")
++CPPFLAGS+=	-DSDP_COMPAT
++.else
++DPADD+=	${LIBSDP}
++LDADD+=	-lsdp
++.endif
+ 
+ .include <bsd.prog.mk>
