@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2008/06/21 20:47:28 joerg Exp $
+$NetBSD: distinfo,v 1.3 2009/05/12 14:36:28 plunky Exp $
 
 SHA1 (bthfp-0.1.tar.gz) = f0cefa424596545dec3c7d61eb9e608e8178871b
 RMD160 (bthfp-0.1.tar.gz) = 5185c59ee67a7482ec8c424172fdeebed5bb3238
 Size (bthfp-0.1.tar.gz) = 8522 bytes
 SHA1 (patch-aa) = 66e1d2be8a9de92b7a47bea8bba0adb68510d740
+SHA1 (patch-ab) = 83a4185d99f658ca7a1779c5854dc71855277baf
