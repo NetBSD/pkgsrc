@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/05/07 17:59:37 plunky Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/12 14:43:17 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.11
@@ -35,8 +35,13 @@ SUBST_SED.paths+=	-e "s|/var|${VARBASE}|"
 USE_GNU_ICONV=		yes
 USE_BSD_MAKEFILE=	yes
 
-# (work in progress) make sure it uses old SDP API
-CPPFLAGS+=	-DSDP_COMPAT
+.include "../../mk/bsd.prefs.mk"
+
+# This uses the older ServiceDiscovery API
+.if (${OPSYS} == "NetBSD" && \
+    (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*)))
+MAKE_ENV+=	HAVE_LIBSDP=no
+.endif
 
 # because the directory name conflicts with the rc.d script
 post-extract:

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.3 2008/07/09 20:14:37 plunky Exp $
+$NetBSD: patch-af,v 1.4 2009/05/12 14:43:17 plunky Exp $
 
 --- Makefile.orig	2007-04-23 20:29:18.000000000 +0200
 +++ Makefile	2007-05-24 15:43:11.000000000 +0200
@@ -11,15 +11,22 @@ $NetBSD: patch-af,v 1.3 2008/07/09 20:14:37 plunky Exp $
  
  SRCS=		client.c event.c log.c main.c sdp.c server.c stream.c \
  		transport.c util.c
-@@ -17,9 +17,9 @@
+@@ -17,9 +17,16 @@
  		-I/usr/local/include/openobex \
  		-fno-strict-aliasing
  
 -DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBBSDXML} ${LIBREADLINE}
-+DPADD=		${LIBBLUETOOTH} ${LIBSDP} ${LIBREADLINE}
++DPADD=		${LIBBLUETOOTH} ${LIBREADLINE}
  LDADD=		-L/usr/lib -L/usr/local/lib \
 -		-lbluetooth -lsdp -lopenobex -lbsdxml -lreadline -liconv
-+		-lbluetooth -lsdp -lopenobex -lexpat -lreadline -liconv
++		-lbluetooth -lopenobex -lexpat -lreadline -liconv
++
++.if (${HAVE_LIBSDP:Uyes} == "no")
++CPPFLAGS+=	-DSDP_COMPAT
++.else
++DPADD+=	${LIBSDP}
++LDADD+=	-lsdp
++.endif
  
  .include <bsd.prog.mk>
  
