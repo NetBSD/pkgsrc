@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8085 2009/05/10 17:11:41 wiz Exp $
+$NetBSD: TODO,v 1.8086 2009/05/12 14:03:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -1516,7 +1516,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xorg-util-macros-1.2.0
-	o xorp-1.6 [pkg/41115]
 	o xpad-2.13
 	o xpuyopuyo-0.9.8
 	o xrandr-1.3.0
