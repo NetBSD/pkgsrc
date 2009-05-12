@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/11/23 07:48:55 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/12 21:25:25 zafer Exp $
 #
 
 DISTNAME=		xrestop-0.4
 CATEGORIES=		x11
-MASTER_SITES=		http://projects.o-hand.com/sources/xrestop/
+MASTER_SITES=		http://labs.o-hand.com/sources/xrestop/
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.freedesktop.org/wiki/Software/xrestop
