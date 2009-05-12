@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2008/12/03 00:28:39 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.45 2009/05/12 08:39:23 hasso Exp $
 #
 
 DISTNAME=	pcb-20081128
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -61,6 +62,9 @@ EXPORTERS+=	png
 .endif
 
 CONFIGURE_ARGS+=	--with-exporters=${EXPORTERS:Q}
+
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 # remove some stuff that is either broken or unmaintained
 # and would require another runtime depends
