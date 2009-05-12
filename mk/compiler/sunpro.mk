@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.44 2008/06/17 11:23:48 sketch Exp $
+# $NetBSD: sunpro.mk,v 1.45 2009/05/12 05:44:02 rillig Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -6,6 +6,8 @@
 #
 # SUNWSPROBASE
 #	The base directory where the compiler is installed.
+#
+# Keywords: sun sunpro sunwspro
 #
 
 .if !defined(COMPILER_SUNPRO_MK)
