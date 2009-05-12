@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/30 19:31:41 martti Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/12 11:09:26 martti Exp $
 
 DISTNAME=	corkscrew-2.0
 CATEGORIES=	net
@@ -9,10 +9,12 @@ HOMEPAGE=	http://www.agroman.net/corkscrew/
 COMMENT=	Tool for tunneling SSH through HTTP proxies
 #LICENSE=	gnu-gpl-v2
 
+INSTALLATION_DIRS=	share/doc/corkscrew
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/corkscrew
-	${INSTALL_DATA} ${WRKSRC:Q}/README ${PREFIX:Q}/share/doc/corkscrew
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/corkscrew
 
 .include "../../mk/bsd.pkg.mk"
