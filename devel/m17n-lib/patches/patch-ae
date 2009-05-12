@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2009/01/12 12:17:22 obache Exp $
+$NetBSD: patch-ae,v 1.3 2009/05/12 08:19:54 obache Exp $
 
---- example/Makefile.am.orig	2007-11-13 02:22:21.000000000 +0000
+--- example/Makefile.am.orig	2007-11-13 02:29:20.000000000 +0000
 +++ example/Makefile.am
 @@ -45,7 +45,7 @@ m17n_conv_LDADD = ${common_ldflags}
  X_LD_FLAGS = ${X_PRE_LIBS} ${X_LIBS} @XAW_LD_FLAGS@ @X11_LD_FLAGS@ ${X_EXTRA_LIBS}
