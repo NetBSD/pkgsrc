@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/22 10:39:43 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/12 18:36:19 martti Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
 ${EJABBERD_EXDIR}/ejabberdctl.cfg
 ${EJABBERD_EXDIR}/inetrc
@@ -166,34 +166,16 @@ share/doc/${PKGNAME}/Makefile
 share/doc/${PKGNAME}/api/Makefile
 share/doc/${PKGNAME}/api/overview.edoc
 share/doc/${PKGNAME}/api/process-one.css
-share/doc/${PKGNAME}/contributed_modules.aux
-share/doc/${PKGNAME}/contributed_modules.tex
-share/doc/${PKGNAME}/dev.haux
 share/doc/${PKGNAME}/dev.html
-share/doc/${PKGNAME}/dev.htoc
 share/doc/${PKGNAME}/dev.tex
 share/doc/${PKGNAME}/discorus.png
-share/doc/${PKGNAME}/features.aux
-share/doc/${PKGNAME}/features.haux
 share/doc/${PKGNAME}/features.html
-share/doc/${PKGNAME}/features.htoc
-share/doc/${PKGNAME}/features.log
-share/doc/${PKGNAME}/features.out
 share/doc/${PKGNAME}/features.pdf
 share/doc/${PKGNAME}/features.tex
 share/doc/${PKGNAME}/flow.dot
-share/doc/${PKGNAME}/guide.aux
-share/doc/${PKGNAME}/guide.haux
 share/doc/${PKGNAME}/guide.html
-share/doc/${PKGNAME}/guide.htoc
-share/doc/${PKGNAME}/guide.idx
-share/doc/${PKGNAME}/guide.ilg
-share/doc/${PKGNAME}/guide.ind
-share/doc/${PKGNAME}/guide.log
-share/doc/${PKGNAME}/guide.out
 share/doc/${PKGNAME}/guide.pdf
 share/doc/${PKGNAME}/guide.tex
-share/doc/${PKGNAME}/guide.toc
 share/doc/${PKGNAME}/introduction.tex
 share/doc/${PKGNAME}/logo.png
 share/doc/${PKGNAME}/mod_http_bind.tex
@@ -212,7 +194,7 @@ share/doc/${PKGNAME}/release_notes_2.0.0.txt
 share/doc/${PKGNAME}/release_notes_2.0.1.txt
 share/doc/${PKGNAME}/release_notes_2.0.2.txt
 share/doc/${PKGNAME}/release_notes_2.0.3.txt
-share/doc/${PKGNAME}/version.aux
+share/doc/${PKGNAME}/release_notes_2.0.4.txt
 share/doc/${PKGNAME}/version.tex
 share/doc/${PKGNAME}/webadmmain.png
 share/doc/${PKGNAME}/webadmmainru.png
