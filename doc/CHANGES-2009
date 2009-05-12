@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1783 2009/05/12 08:20:20 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1784 2009/05/12 08:48:09 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2375,3 +2375,9 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/m17n-db to 1.5.4 [obache 2009-05-12]
 	Updated misc/m17n-contrib to 1.1.9 [obache 2009-05-12]
 	Updated devel/m17n-lib to 1.5.4 [obache 2009-05-12]
+	Updated mail/dspam to 3.8.0nb3 [hasso 2009-05-12]
+	Updated games/gcompris to 8.4.4nb3 [hasso 2009-05-12]
+	Updated finance/libofx to 0.8.3nb3 [hasso 2009-05-12]
+	Updated editors/emacs to 22.3nb2 [hasso 2009-05-12]
+	Updated cad/pcb to 20081128nb1 [hasso 2009-05-12]
+	Updated cad/geda-examples to 1.4.3nb1 [hasso 2009-05-12]
