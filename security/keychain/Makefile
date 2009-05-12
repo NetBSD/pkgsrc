@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/12 11:09:26 martti Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/12 12:27:20 martti Exp $
 
 DISTNAME=	keychain-2.6.8
 CATEGORIES=	security
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.gentoo.org/proj/en/keychain/
 COMMENT=	Nice ssh-agent front-end
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 .if !exists(/usr/bin/ssh-agent)
 DEPENDS+=	openssh-[0-9]*:../../security/openssh
