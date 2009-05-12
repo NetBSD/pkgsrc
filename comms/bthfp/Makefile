@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/07 18:01:22 plunky Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/12 14:36:28 plunky Exp $
 
 DISTNAME=		bthfp-0.1
 CATEGORIES=		comms
@@ -18,8 +18,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 USE_BSD_MAKEFILE=	yes
 
-# (work in progress) make sure it uses old SDP API
-CPPFLAGS+=	-DSDP_COMPAT
+.include "../../mk/bsd.prefs.mk"
+
+# This uses the older ServiceDiscovery API
+.if (${OPSYS} == "NetBSD" && \
+    (!empty(OS_VERSION:M5.99.*) || !empty(OS_VERSION:M[6-9].*)))
+MAKE_ENV+=	HAVE_LIBSDP=no
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bthfp ${DESTDIR}${PREFIX}/bin
