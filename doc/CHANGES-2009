@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1788 2009/05/12 18:37:40 martti Exp $
+$NetBSD: CHANGES-2009,v 1.1789 2009/05/12 23:21:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2385,3 +2385,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/py-pygments to 1.0 [obache 2009-05-12]
 	Updated net/xorp to 1.6 [obache 2009-05-12]
 	Updated chat/ejabberd to 2.0.5 [martti 2009-05-12]
+	Updated pkgtools/bootstrap-mk-files to 20090512 [minskim 2009-05-12]
