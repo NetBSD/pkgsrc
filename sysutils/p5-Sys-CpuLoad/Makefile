@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:47 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/12 12:51:07 martti Exp $
 
 DISTNAME=	Sys-CpuLoad-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sys/}
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Sys-CpuLoad
 COMMENT=	Module to retrieve system load averages
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
