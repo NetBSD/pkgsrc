@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/01/18 05:06:34 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/12 08:31:02 hasso Exp $
 #
 
 DISTNAME=	libofx-0.8.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	finance devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libofx/}
 
@@ -18,6 +18,9 @@ CONFIGURE_ARGS+=	--with-opensp-includes=${BUILDLINK_PREFIX.opensp}/include/OpenS
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
+
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../textproc/libxml++1/buildlink3.mk"
 .include "../../textproc/opensp/buildlink3.mk"
