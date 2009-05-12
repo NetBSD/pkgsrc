@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/03/22 11:21:04 martti Exp $
+# $NetBSD: Makefile,v 1.40 2009/05/12 11:09:26 martti Exp $
 
 DISTNAME=		clamsmtp-1.10
 #PKGREVISION=		1
@@ -11,11 +11,12 @@ COMMENT=		SMTP filter that allows you to check for viruses
 #LICENSE=		modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 RCD_SCRIPTS=		clamsmtpd
 
-MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
+MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE:Q}
 FILES_SUBST+=		CLAMAV_USER=${CLAMAV_USER}
 
 # Doesn't work with GNU pth (missing required mutex features)
@@ -30,8 +31,8 @@ INSTALLATION_DIRS=	share/examples/${PKGBASE}
 PKG_USERS_VARS=		CLAMAV_USER
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/virus_action.sh ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/clamsmtpd.conf ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/virus_action.sh ${DESTDIR}${EGDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
