@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:50 he Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/12 12:51:07 martti Exp $
 
 DISTNAME=	Curses-UI-0.9605
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Curses-UI
 COMMENT=	Curses based user user interface framework
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
