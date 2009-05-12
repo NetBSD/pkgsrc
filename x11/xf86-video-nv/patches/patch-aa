@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.4 2009/05/12 13:20:41 tnn Exp $
+
+--- src/nv_driver.c.orig	2009-04-07 19:33:51.000000000 +0200
++++ src/nv_driver.c
+@@ -365,6 +365,7 @@ static SymTabRec NVKnownChipsets[] =
+   { 0x10DE0242, "GeForce 6100" },
+   { 0x10DE0244, "GeForce Go 6150" },
+   { 0x10DE0247, "GeForce Go 6100" },
++  { 0x10DE0533, "GeForce 7000M" },
+ 
+ /*************** G8x ***************/
+   { 0x10DE0191, "GeForce 8800 GTX" },
+@@ -844,6 +845,7 @@ NVIsSupported(CARD32 id)
+     case 0x0340:
+     case 0x0390:
+     case 0x03D0:
++    case 0x0530:
+         return TRUE;
+     }
+ 
+@@ -1772,6 +1774,7 @@ NVPreInit(ScrnInfoPtr pScrn, int flags)
+     case 0x0390:   /* GeForce 7600 */
+     case 0x0240:   /* GeForce 6100 */
+     case 0x03D0:
++    case 0x0530:   /* GeForce 7000M */
+          pNv->Architecture =  NV_ARCH_40;
+          break;
+     default:
