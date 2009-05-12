@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/11 10:59:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/12 13:58:44 obache Exp $
 xorp/bgp/tools/xorpsh_print_peers
 xorp/bgp/tools/xorpsh_print_routes
 xorp/bgp/xorp_bgp
@@ -6,6 +6,7 @@ xorp/bin/call_xrl
 xorp/bin/xorp_profiler
 xorp/bin/xorp_rtrmgr
 xorp/bin/xorpsh
+xorp/cli/tools/cli_generic
 xorp/cli/tools/send_cli_processor_xrl
 xorp/contrib/olsr/tools/clear_database
 xorp/contrib/olsr/tools/print_databases
@@ -74,6 +75,7 @@ xorp/rip/tools/show_stats
 xorp/rip/xorp_rip
 xorp/rip/xorp_ripng
 xorp/static_routes/xorp_static_routes
+xorp/vrrp/xorp_vrrp
 xorp/xrl/targets/bgp.xrls
 xorp/xrl/targets/bgp4_mib.xrls
 xorp/xrl/targets/cli.xrls
@@ -107,10 +109,12 @@ xorp/xrl/targets/test_peer.xrls
 xorp/xrl/targets/test_socket4.xrls
 xorp/xrl/targets/test_socket6.xrls
 xorp/xrl/targets/test_xrls.xrls
+xorp/xrl/targets/vrrp.xrls
 xorp/xrl/targets/xorp_if_mib.xrls
 xorp/xrl/targets/xorpsh.xrls
 @dirrm xorp/xrl/targets
 @dirrm xorp/xrl
+@dirrm xorp/vrrp
 @dirrm xorp/static_routes
 @dirrm xorp/rip/tools
 @dirrm xorp/rip

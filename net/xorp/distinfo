@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2009/02/07 18:39:20 joerg Exp $
+$NetBSD: distinfo,v 1.16 2009/05/12 13:58:44 obache Exp $
 
-SHA1 (xorp-1.5.tar.gz) = cc6a0ec42d5dd49b57b9dab365a247c646d5e843
-RMD160 (xorp-1.5.tar.gz) = 4dd5cc7162a0f8087ed973b45279718ea2a337b8
-Size (xorp-1.5.tar.gz) = 7384564 bytes
-SHA1 (patch-aa) = b4d698f072cfc6f822716ef3193cb43f6f282f7c
-SHA1 (patch-ab) = 87ccbf0370386e50b3b5a3bd78e1ed66d4ebdba2
-SHA1 (patch-ac) = ebf26bd28368b50633c900c3041d15e2853eb57e
+SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
+RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
+Size (xorp-1.6.tar.gz) = 7895108 bytes
+SHA1 (patch-aa) = 0c4bceca2560e963885069eaa7e868676c856694
+SHA1 (patch-ab) = 248719bb3ffc5fa92a2fd6a5cc63c0f77ba8d5b6
+SHA1 (patch-ac) = 87710604d945b8a58cdabeb08dbd5c484f2ad3ba
