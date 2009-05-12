@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/05/12 18:36:19 martti Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/12 18:37:01 martti Exp $
 
 DISTNAME=	ejabberd-2.0.5
 #PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.5/
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
+
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
