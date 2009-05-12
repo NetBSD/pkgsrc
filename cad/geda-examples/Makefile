@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/12 08:42:37 hasso Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
+PKGREVISION=	1
 CATEGORIES=	cad
 
 MAINTAINER=	dmcmahill@NetBSD.org
@@ -18,6 +19,9 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		find gmake tar
 
 CHECK_INTERPRETER_SKIP+=	share/examples/*
+
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 pre-install:
 	${RM} -f ${WRKSRC}/config.status.overridden
