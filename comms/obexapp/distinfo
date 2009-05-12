@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2009/05/07 17:45:22 plunky Exp $
+$NetBSD: distinfo,v 1.12 2009/05/12 14:43:17 plunky Exp $
 
 SHA1 (obexapp-1.4.11.tar.gz) = 7f6fd43c226b1d30f90c8b03bd2f3aa88567c3f2
 RMD160 (obexapp-1.4.11.tar.gz) = d93b361873f7b3a31adaaf752a3debb8a2086fd0
 Size (obexapp-1.4.11.tar.gz) = 30981 bytes
 SHA1 (patch-ac) = 7cae80c5a71fdd6cd97785dbf723aecf55e8cb2f
-SHA1 (patch-af) = a2e7b5f139c46085122d4154473e1b9061e9d42c
+SHA1 (patch-af) = cbab3674b8b5fabcddea20c350586986e834c29f
