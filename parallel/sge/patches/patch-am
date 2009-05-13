@@ -1,17 +1,29 @@
-$NetBSD: patch-am,v 1.4 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-am,v 1.5 2009/05/13 21:00:25 markd Exp $
 
---- source/aimk.orig	Wed Aug 29 14:27:51 2007
-+++ source/aimk	Fri May 30 11:03:28 2008
-@@ -368,7 +368,7 @@
+Pkgsrc stuff
+GridEngine dev mailing list patch for "nbsd-1" issue
+
+--- source/aimk.orig	2009-02-17 22:27:39.000000000 +1300
++++ source/aimk
+@@ -265,7 +265,7 @@ set DEBUGGED         = 0
+ set COMPILE_DC       = 0
+ set CC               = cc
+ set CXX              = CC
+-set CFLAGS           = "-DSGE_ARCH_STRING=$buildarch -D$TARGET_BITS $INP_CFLAGS"
++set CFLAGS           = "-D$TARGET_BITS $INP_CFLAGS"
+ set CORE_INCLUDE     = "-I../common -I../libs -I../libs/uti -I../libs/juti -I../libs/gdi -I../libs/japi -I../libs/sgeobj -I../libs/cull -I../libs/rmon -I../libs/comm -I../libs/comm/lists -I../libs/sched -I../libs/evc -I../libs/evm -I../libs/mir -I../libs/lck -I../daemons/common -I../daemons/qmaster -I../daemons/execd -I../daemons/schedd -I../clients/common -I."
+ set DEBUG_FLAG       = ""
+ set INSURE_FLAG      = ""
+@@ -386,7 +386,7 @@ set SPOOLING_DEPS   = "spoolloaderlib sp
  # we generate a berkeley db shared lib, so we need bdb include and lib path
  set CFLAGS            = "-I$BERKELEYDB_HOME/include/${BDB_INCLUDE_SUBDIR} $CFLAGS"
  set LFLAGS            = "-L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR} $LFLAGS"
--set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib"
+-set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib/${BDB_LIB_SUBDIR}"
 +set SHARED_LFLAGS    = "$SHARED_LFLAGS -L$BERKELEYDB_HOME/lib -R$BERKELEYDB_HOME/lib"
  
  # JUTI Targets
  set JUTI_ALL  = juti_all
-@@ -1101,9 +1101,9 @@
+@@ -1169,9 +1169,9 @@ case NETBSD_*:
     set DLLIB    = ""
     set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
     set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
@@ -23,7 +35,7 @@ $NetBSD: patch-am,v 1.4 2008/09/15 16:30:57 ahoka Exp $
     set LIBS     = "$LIBS -lkvm"
     set SHAREDLD = $CC
     set SHARED_CFLAGS = "-fPIC"
-@@ -1111,9 +1111,9 @@
+@@ -1179,9 +1179,9 @@ case NETBSD_*:
     set AUTHLIBS = "-lcrypt -lpam"
  
     set XMTDEF   = ""
@@ -35,3 +47,16 @@ $NetBSD: patch-am,v 1.4 2008/09/15 16:30:57 ahoka Exp $
     set XLFLAGS  = "$XLIBD"
     set XLIBS    = " -lXm -lXpm -lXt -lXext -lX11 -lSM -lICE -lXp"
     set RM       = "rm -f"
+@@ -1875,6 +1875,12 @@ default:
+ endsw
+ 
+ set DEPEND_FLAGS = "`echo $DEPEND_FLAGS | sed -e 's/-[^DI][^ ]*//g'`"
++ 
++# we set SGE_ARCH_STRING down here because the sed command above
++# would mess up the quotes around buildarch
++set ARCH_STRING = SGE_ARCH_STRING='\"'${buildarch}'\"'
++set CFLAGS = "-D$ARCH_STRING $CFLAGS"
++set DEPEND_FLAGS = "-D$ARCH_STRING $DEPEND_FLAGS"
+ 
+ if ( $JNI == 1 ) then
+    set CORE_INCLUDE = "$CORE_INCLUDE -I${JAVA_HOME}/${JAVA_INCL}"
