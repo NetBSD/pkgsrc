@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/07 10:59:04 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/13 08:56:55 hasso Exp $
 #
 
 DISTNAME=	tokyocabinet-lua-1.5
+PKGREVISION=	1
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
@@ -30,6 +31,9 @@ REPLACE.lua.new=	${LUADIR}/bin/lua
 REPLACE_FILES.lua=	*.lua
 
 INSTALLATION_DIRS+=	share/tokyocabinet/doc/lua
+
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 post-install:
 	cd ${WRKSRC}/doc && pax -rwpe . \
