@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.14 2009/05/13 03:18:05 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.15 2009/05/13 03:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.14 2009/05/13 03:18:05 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.15 2009/05/13 03:33:50 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -26,7 +26,7 @@ __RCSID("$NetBSD: main.c,v 1.14 2009/05/13 03:18:05 joerg Exp $");
 #include "lib.h"
 #include "create.h"
 
-static const char Options[] = "B:C:D:EFI:K:L:OP:S:T:UVb:c:d:f:g:i:k:ln:p:r:s:u:v";
+static const char Options[] = "B:C:D:EF:I:K:L:OP:S:T:UVb:c:d:f:g:i:k:ln:p:r:s:u:v";
 
 char   *Prefix = NULL;
 char   *Comment = NULL;
@@ -47,6 +47,7 @@ char   *SrcDir = NULL;
 char   *DefaultOwner = NULL;
 char   *DefaultGroup = NULL;
 char   *realprefix = NULL;
+char   *CompressionType = NULL;
 int	update_pkgdb = 1;
 int	create_views = 0;
 int     PlistOnly = 0;
@@ -58,7 +59,8 @@ usage(void)
 {
 	fprintf(stderr,
 	    "usage: pkg_create [-ElOUVv] [-B build-info-file] [-b build-version-file]\n"
-            "                  [-C cpkgs] [-D displayfile] [-I realprefix] [-i iscript]\n"
+            "                  [-C cpkgs] [-D displayfile] [-F compression] \n"
+	    "                  [-I realprefix] [-i iscript]\n"
             "                  [-K pkg_dbdir] [-k dscript] [-L SrcDir]\n"
             "                  [-n preserve-file] [-P dpkgs] [-p prefix] [-r rscript]\n"
             "                  [-S size-all-file] [-s size-pkg-file]\n"
@@ -87,6 +89,10 @@ main(int argc, char **argv)
 
 		case 'E':
 			create_views = 1;
+			break;
+
+		case 'F':
+			CompressionType = optarg;
 			break;
 
 		case 'I':
