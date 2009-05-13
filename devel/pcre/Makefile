@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2008/09/06 14:25:28 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2009/05/13 10:08:27 wiz Exp $
 
-DISTNAME=	pcre-7.8
+DISTNAME=	pcre-7.9
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pcre.org/
 COMMENT=	Perl Compatible Regular Expressions library
-#LICENSE=	modified-bsd
+LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
