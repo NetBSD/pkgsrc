@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8091 2009/05/13 10:35:33 martti Exp $
+$NetBSD: TODO,v 1.8092 2009/05/13 13:03:40 obache Exp $
 
 Suggested new packages
 ======================
@@ -1140,7 +1140,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.7.6
-	o py-cairo-1.8.4 [pkg/41063]
 	o py-checker-0.8.17
 	o py-cups-1.9.45
 	o py-dns-2.3.3
@@ -1148,7 +1147,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-goocanvas-0.14.1
 	o py-kenosis-0.96
 	o py-ldap-2.3.8
 	o py-logging-0.4.9.6
