@@ -149,16 +149,15 @@ I. The pkgsrc user's guide
         9.7. How to fetch files from behind a firewall
         9.8. How do I tell make fetch to do passive FTP?
         9.9. How to fetch all distfiles at once
-        9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc"
-            mean?
-        9.11. What does "Could not find bsd.own.mk" mean?
+        9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
+        9.11. What does Could not find bsd.own.mk mean?
         9.12. Using 'sudo' with pkgsrc
         9.13. How do I change the location of configuration files?
         9.14. Automated security checks
         9.15. Why do some packages ignore my CFLAGS?
         9.16. A package does not build. What shall I do?
-        9.17. What does "Makefile appears to contain unresolved cvs/rcs/???
-            merge conflicts" mean?
+        9.17. What does Makefile appears to contain unresolved cvs/rcs/???
+            merge conflicts mean?
 
 II. The pkgsrc developer's guide
 
@@ -305,7 +304,7 @@ II. The pkgsrc developer's guide
         19.1. General operation
 
             19.1.1. Portability of packages
-            19.1.2. How to pull in user-settable variables from mk.conf
+            19.1.2. How to pull in user-settable variables from ???
             19.1.3. User interaction
             19.1.4. Handling licenses
             19.1.5. Restricted packages
@@ -342,7 +341,7 @@ II. The pkgsrc developer's guide
 
             19.5.1. Compiling C and C++ code conditionally
             19.5.2. How to handle compiler bugs
-            19.5.3. Undefined reference to "..."
+            19.5.3. Undefined reference to ...
             19.5.4. Running out of memory
 
         19.6. Fixing problems in the install phase
@@ -793,15 +792,15 @@ Table of Contents
     9.7. How to fetch files from behind a firewall
     9.8. How do I tell make fetch to do passive FTP?
     9.9. How to fetch all distfiles at once
-    9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-    9.11. What does "Could not find bsd.own.mk" mean?
+    9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
+    9.11. What does Could not find bsd.own.mk mean?
     9.12. Using 'sudo' with pkgsrc
     9.13. How do I change the location of configuration files?
     9.14. Automated security checks
     9.15. Why do some packages ignore my CFLAGS?
     9.16. A package does not build. What shall I do?
-    9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
-        conflicts" mean?
+    9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge
+        conflicts mean?
 
 Chapter 2. Where to get pkgsrc and how to keep it up-to-date
 
@@ -1956,10 +1955,8 @@ touched. DESTDIR support exists in two variations:
   * Full DESTDIR support can run the complete build, installation and packaging
     as normal user. Root privileges are only needed to add packages.
 
-To use the DESTDIR support, set either USE_DESTDIR=yes to use the basic support
-for packages that offer it or USE_DESTDIR=full to get the full support with
-fallback to basic support. USE_DESTDIR=full needs pkgtools/pkg_install version
-20070802 (or newer). It might become the default DESTDIR support later.
+To use the DESTDIR support, set USE_DESTDIR=yes to get the full support for
+packages that support it and with fallback to basic support.
 
 DESTDIR support changes the behaviour of various targets slightly. To install a
 package after building it, use package-install. package and install don't do
@@ -1979,15 +1976,15 @@ $ cd $PKGSRCDIR/foo/bar
 
 Verify DESTDIR full support, no root privileges should be needed
 
-$ make USE_DESTDIR=full install
+$ make USE_DESTDIR=yes install
 
 Create a package without root privileges
 
-$ make USE_DESTDIR=full PACKAGES=$HOME/packages package
+$ make USE_DESTDIR=yes PACKAGES=$HOME/packages package
 
 For the following command, you must be able to gain root privileges using su(1)
 
-$ make USE_DESTDIR=full PACKAGES=$HOME/packages package-install
+$ make USE_DESTDIR=yes PACKAGES=$HOME/packages package-install
 
 Then, as a simple user
 
@@ -2484,7 +2481,7 @@ src/etc, be sure the following items are present and properly configured:
 10. Make /usr/sandbox/usr/pkgsrc/packages and .../distfiles point somewhere
     appropriate. NFS- and/or nullfs-mounts may come in handy!
 
-11. Edit mk.conf, see Section 7.3.1.2, "mk.conf".
+11. Edit mk.conf, see Section 7.3.1.2, "???".
 
 12. Adjust mk/bulk/build.conf to suit your needs.
 
@@ -2851,15 +2848,15 @@ Table of Contents
 9.7. How to fetch files from behind a firewall
 9.8. How do I tell make fetch to do passive FTP?
 9.9. How to fetch all distfiles at once
-9.10. What does "Don't know how to make /usr/share/tmac/tmac.andoc" mean?
-9.11. What does "Could not find bsd.own.mk" mean?
+9.10. What does Don't know how to make /usr/share/tmac/tmac.andoc mean?
+9.11. What does Could not find bsd.own.mk mean?
 9.12. Using 'sudo' with pkgsrc
 9.13. How do I change the location of configuration files?
 9.14. Automated security checks
 9.15. Why do some packages ignore my CFLAGS?
 9.16. A package does not build. What shall I do?
-9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
-    conflicts" mean?
+9.17. What does Makefile appears to contain unresolved cvs/rcs/??? merge
+    conflicts mean?
 
 This section contains hints, tips & tricks on special things in pkgsrc that we
 didn't find a better place for in the previous chapters, and it contains items
@@ -3356,7 +3353,7 @@ Table of Contents
     19.1. General operation
 
         19.1.1. Portability of packages
-        19.1.2. How to pull in user-settable variables from mk.conf
+        19.1.2. How to pull in user-settable variables from ???
         19.1.3. User interaction
         19.1.4. Handling licenses
         19.1.5. Restricted packages
@@ -3392,7 +3389,7 @@ Table of Contents
 
         19.5.1. Compiling C and C++ code conditionally
         19.5.2. How to handle compiler bugs
-        19.5.3. Undefined reference to "..."
+        19.5.3. Undefined reference to ...
         19.5.4. Running out of memory
 
     19.6. Fixing problems in the install phase
@@ -6489,7 +6486,7 @@ Table of Contents
 19.1. General operation
 
     19.1.1. Portability of packages
-    19.1.2. How to pull in user-settable variables from mk.conf
+    19.1.2. How to pull in user-settable variables from ???
     19.1.3. User interaction
     19.1.4. Handling licenses
     19.1.5. Restricted packages
@@ -6525,7 +6522,7 @@ Table of Contents
 
     19.5.1. Compiling C and C++ code conditionally
     19.5.2. How to handle compiler bugs
-    19.5.3. Undefined reference to "..."
+    19.5.3. Undefined reference to ...
     19.5.4. Running out of memory
 
 19.6. Fixing problems in the install phase
