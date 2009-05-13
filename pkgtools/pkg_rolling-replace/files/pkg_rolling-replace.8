@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.13 2008/06/08 17:29:01 gdt Exp $
+.\" $NetBSD: pkg_rolling-replace.8,v 1.14 2009/05/13 10:47:02 wiz Exp $
 .Dd May 22, 2008
 .Dt PKG_ROLLING-REPLACE 8
 .Os
@@ -8,8 +8,8 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl hnrsuv
-.Op Fl x Ar pkgs
 .Op Fl X Ar pkgs
+.Op Fl x Ar pkgs
 .Sh DESCRIPTION
 .Nm
 runs
@@ -91,6 +91,9 @@ Use
 to check for outdated packages, and replace those too.
 .It Fl v
 Verbose output.
+.It Fl X Ar pkgs
+Exclude the comma-separated list of package base names
+from being rebuilt for any reason.
 .It Fl x Ar pkgs
 Exclude the comma-separated list of package base names
 from the check for outdated packages.
@@ -100,43 +103,14 @@ flag is not given,
 and does not prevent packages from being rebuilt for any other reason
 (such as being a dependency of another package that is also rebuilt,
 or having any of the
-.Xr pkg_admin 8
+.Xr pkg_admin 1
 .Dq unsafe_depends ,
 .Dq unsafe_depends_strict ,
 or
 .Dq rebuild
 variables set to
 .Dq YES ) .
-.It Fl X Ar pkgs
-Exclude the comma-separated list of package base names
-from being rebuilt for any reason.
 .El
-.Sh EXAMPLES
-.Pp
-To update all packages on the system and ensure correct shared library
-dependencies:
-.Bd -literal -offset indent
-pkg_rolling-replace -rsuv
-.Ed
-.Pp
-To update all packages on the system, do as little rebuilding as possible,
-and also produce binary packages:
-.Bd -literal -offset indent
-pkg_rolling-replace -uv
-.Ed
-.Pp
-To update gtk2+ and all packages that depend on it, except openoffice2:
-.Bd -literal -offset indent
-pkg_admin set rebuild=YES gtk2+
-pkg_rolling-replace -rsv -X openoffice2
-.Ed
-.Pp
-To mark all packages that compiled against X11 as needing rebuild
-(used after switching to X11_TYPE=modular):
-.Bd -literal -offset indent
-cd /var/db/pkg && grep "blddep x11-links" */* | cut -d/ -f1 | \\
-sort -u | xargs pkg_admin set rebuild=YES
-.Ed
 .Sh ENVIRONMENT
 .Nm
 uses the following environment variables.
@@ -163,6 +137,31 @@ pkgsrc database directory.
 If not set in environment then defaults to
 .Pa /var/db/pkg .
 .El
+.Sh EXAMPLES
+To update all packages on the system and ensure correct shared library
+dependencies:
+.Bd -literal -offset indent
+pkg_rolling-replace -rsuv
+.Ed
+.Pp
+To update all packages on the system, do as little rebuilding as possible,
+and also produce binary packages:
+.Bd -literal -offset indent
+pkg_rolling-replace -uv
+.Ed
+.Pp
+To update gtk2+ and all packages that depend on it, except openoffice2:
+.Bd -literal -offset indent
+pkg_admin set rebuild=YES gtk2+
+pkg_rolling-replace -rsv -X openoffice2
+.Ed
+.Pp
+To mark all packages that compiled against X11 as needing rebuild
+(used after switching to X11_TYPE=modular):
+.Bd -literal -offset indent
+cd /var/db/pkg \*[Am]\*[Am] grep "blddep x11-links" */* | cut -d/ -f1 | \\
+sort -u | xargs pkg_admin set rebuild=YES
+.Ed
 .Sh AUTHORS
 .An -nosplit
 .An Nick Goffee
