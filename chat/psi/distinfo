@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2007/12/20 20:15:25 jdolecek Exp $
+$NetBSD: distinfo,v 1.24 2009/05/13 07:26:29 jdolecek Exp $
 
-SHA1 (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 834fac4b51d92e2502cb08d01d40f05ffcdce4a2
-RMD160 (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 0e4ce707d7659e02d29b16d6d95a4c4c8ba9850a
-Size (psi-0.11-20071115-1/psi-0.11.tar.bz2) = 2000216 bytes
+SHA1 (psi-0.12.1-20071115-1/psi-0.12.1.tar.bz2) = 6fdcea3a072b40333faecc37acdb925f9bf8c5c3
+RMD160 (psi-0.12.1-20071115-1/psi-0.12.1.tar.bz2) = a5fc850796b0078bc1a03f4ff93a03611ee11e80
+Size (psi-0.12.1-20071115-1/psi-0.12.1.tar.bz2) = 2112404 bytes
