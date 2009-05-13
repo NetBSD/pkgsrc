@@ -1,4 +1,4 @@
-<!-- $NetBSD: bulk.xml,v 1.4 2009/01/07 19:59:12 joerg Exp $ -->
+<!-- $NetBSD: bulk.xml,v 1.5 2009/05/13 10:49:00 wiz Exp $ -->
 
 <chapter id="bulk">
 <title>Creating binary packages for everything in pkgsrc (bulk
@@ -31,7 +31,7 @@ by a NetBSD developer on a trusted machine (that is, where you and only
 you have root access).</para></listitem>
 
 <listitem><para>Packages on ftp.NetBSD.org should only be created from
-the stable branches (like 2007Q1), so that users browsing the available
+the stable branches (like 2009Q1), so that users browsing the available
 collections can see at a glance how old the packages
 are.</para></listitem>
 
