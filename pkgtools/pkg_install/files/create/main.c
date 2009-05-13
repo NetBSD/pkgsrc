@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.13 2009/04/24 14:00:25 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.14 2009/05/13 03:18:05 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.13 2009/04/24 14:00:25 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.14 2009/05/13 03:18:05 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -47,8 +47,6 @@ char   *SrcDir = NULL;
 char   *DefaultOwner = NULL;
 char   *DefaultGroup = NULL;
 char   *realprefix = NULL;
-char    PlayPen[MaxPathSize];
-size_t  PlayPenSize = sizeof(PlayPen);
 int	update_pkgdb = 1;
 int	create_views = 0;
 int     PlistOnly = 0;
