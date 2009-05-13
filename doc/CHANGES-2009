@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1801 2009/05/13 10:59:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1802 2009/05/13 12:08:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2401,3 +2401,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix to 2.6.0 [martti 2009-05-13]
 	Updated mail/postfix-current to 2.7.20090511 [martti 2009-05-13]
 	Updated security/qca2 to 2.0.2 [wiz 2009-05-13]
+	Updated net/clive to 2.1.12 [wiz 2009-05-13]
