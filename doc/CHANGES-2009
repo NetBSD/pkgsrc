@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1791 2009/05/13 07:27:37 jdolecek Exp $
+$NetBSD: CHANGES-2009,v 1.1792 2009/05/13 08:30:26 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2388,3 +2388,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/bootstrap-mk-files to 20090512 [minskim 2009-05-12]
 	Updated time/planner to 0.14.4 [dsainty 2009-05-13]
 	Updated chat/psi to 0.12.1 [jdolecek 2009-05-13]
+	Updated www/hiawatha to 0.1nb4 [hasso 2009-05-13]
+	Updated print/py-pisa to 3.0.29nb1 [hasso 2009-05-13]
