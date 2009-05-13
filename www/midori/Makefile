@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/03/25 22:37:15 he Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/13 18:41:31 snj Exp $
 
-DISTNAME=	midori-0.1.5
-PKGREVISION=	1
+DISTNAME=	midori-0.1.6
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -40,14 +39,16 @@ SUBST_STAGE.marshal=	pre-configure
 SUBST_MESSAGE.marshal=	Gross hack (part one) in progress
 SUBST_FILES.marshal=	midori/midori-locationaction.c midori/midori-panel.c
 SUBST_FILES.marshal+=	midori/midori-view.c midori/midori-searchaction.c
+SUBST_FILES.marshal+=	katze/katze-array.c
 SUBST_SED.marshal=	-e 's/"marshal/"marshallocal/'
 SUBST_STAGE.marshal2=	pre-configure
 SUBST_MESSAGE.marshal2=	Gross hack (part two) in progress
-SUBST_FILES.marshal2=	midori/wscript_build
+SUBST_FILES.marshal2=	midori/wscript_build katze/wscript_build
 SUBST_SED.marshal2=	-e s/\'marshal/\'marshallocal/
 
 pre-configure:
 	${MV} ${WRKSRC}/midori/marshal.list ${WRKSRC}/midori/marshallocal.list
+	${MV} ${WRKSRC}/katze/marshal.list ${WRKSRC}/katze/marshallocal.list
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
