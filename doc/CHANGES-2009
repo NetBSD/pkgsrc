@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1799 2009/05/13 10:20:31 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1800 2009/05/13 10:35:33 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2397,3 +2397,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/pcre to 7.9 [wiz 2009-05-13]
 	Updated devel/pango to 1.24.2 [wiz 2009-05-13]
 	Updated graphics/libkdcraw to 0.1.9 [wiz 2009-05-13]
+	Updated mail/postfix to 2.5.7 [martti 2009-05-13]
+	Updated mail/postfix to 2.6.0 [martti 2009-05-13]
+	Updated mail/postfix-current to 2.7.20090511 [martti 2009-05-13]
