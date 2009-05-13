@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.10 2009/01/22 07:27:28 jmmv Exp $
+$NetBSD: patch-ac,v 1.11 2009/05/13 19:02:18 kefren Exp $
 
---- vl.c.orig	2008-01-06 20:38:42.000000000 +0100
-+++ vl.c
+--- vl.c.orig	2008-01-06 21:38:42.000000000 +0200
++++ vl.c	2009-05-13 21:49:15.000000000 +0300
 @@ -61,7 +61,7 @@
  #include <arpa/inet.h>
  #ifdef _BSD
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.10 2009/01/22 07:27:28 jmmv Exp $
  #include <libutil.h>
  #endif
  #elif defined (__GLIBC__) && defined (__FreeBSD_kernel__)
-@@ -2385,6 +2385,9 @@ static int pp_hw_mode(ParallelCharDriver
+@@ -2385,6 +2385,9 @@
  
  static int pp_ioctl(CharDriverState *chr, int cmd, void *arg)
  {
@@ -21,7 +21,7 @@ $NetBSD: patch-ac,v 1.10 2009/01/22 07:27:28 jmmv Exp $
      ParallelCharDriver *drv = chr->opaque;
      int fd = drv->fd;
      uint8_t b;
-@@ -2473,6 +2476,9 @@ static void pp_close(CharDriverState *ch
+@@ -2473,6 +2476,9 @@
  
  static CharDriverState *qemu_chr_open_pp(const char *filename)
  {
@@ -31,3 +31,43 @@ $NetBSD: patch-ac,v 1.10 2009/01/22 07:27:28 jmmv Exp $
      CharDriverState *chr;
      ParallelCharDriver *drv;
      int fd;
+@@ -4877,13 +4883,14 @@
+     int bus_id, unit_id;
+     int cyls, heads, secs, translation;
+     BlockDriverState *bdrv;
++    BlockDriver *drv = NULL;
+     int max_devs;
+     int index;
+     int cache;
+     int bdrv_flags;
+     char *params[] = { "bus", "unit", "if", "index", "cyls", "heads",
+                        "secs", "trans", "media", "snapshot", "file",
+-                       "cache", NULL };
++                       "cache", "format", NULL };
+ 
+     if (check_params(buf, sizeof(buf), params, str) < 0) {
+          fprintf(stderr, "qemu: unknowm parameter '%s' in '%s'\n",
+@@ -5051,6 +5058,14 @@
+         }
+     }
+ 
++    if (get_param_value(buf, sizeof(buf), "format", str)) {
++	drv = bdrv_find_format(buf);
++	if (!drv) {
++	    fprintf(stderr, "qemu: '%s' invalid format\n", buf);
++	    return -1;
++	}
++    }
++
+     get_param_value(file, sizeof(file), "file", str);
+ 
+     /* compute bus and unit according index */
+@@ -5150,7 +5165,7 @@
+         bdrv_flags |= BDRV_O_SNAPSHOT;
+     if (!cache)
+         bdrv_flags |= BDRV_O_DIRECT;
+-    if (bdrv_open(bdrv, file, bdrv_flags) < 0 || qemu_key_check(bdrv, file)) {
++    if (bdrv_open2(bdrv, file, bdrv_flags, drv) < 0 || qemu_key_check(bdrv, file)) {
+         fprintf(stderr, "qemu: could not open disk image %s\n",
+                         file);
+         return -1;
