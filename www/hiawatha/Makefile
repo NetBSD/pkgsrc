@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/13 07:53:49 hasso Exp $
 #
 
 DISTNAME=	hiawatha
 PKGNAME=	hiawatha-0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc www
 MASTER_SITES=	${HOMEPAGE} ${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.zip
@@ -38,6 +38,7 @@ post-extract:
 	${SED}  -e "s,@PREFIX@,${PREFIX},g" \
 		-e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" \
 		< ${FILESDIR}/hiawatha.cfg > ${WRKDIR}/hiawatha.cfg
+	${CHMOD} -R go-w ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/hiawatha
