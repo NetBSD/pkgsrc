@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1792 2009/05/13 08:30:26 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1793 2009/05/13 09:00:53 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/psi to 0.12.1 [jdolecek 2009-05-13]
 	Updated www/hiawatha to 0.1nb4 [hasso 2009-05-13]
 	Updated print/py-pisa to 3.0.29nb1 [hasso 2009-05-13]
+	Updated databases/lua-tokyocabinet to 1.5nb1 [hasso 2009-05-13]
