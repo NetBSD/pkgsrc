@@ -1,4 +1,4 @@
-.\" $NetBSD: cddist.1,v 1.2 2009/02/20 07:46:15 wiz Exp $
+.\" $NetBSD: cddist.1,v 1.3 2009/05/13 10:43:19 wiz Exp $
 .\"
 .\" Copyright (c) 2008 Dan McMahill, All rights reserved.
 .\"
@@ -37,12 +37,12 @@
 .Nd produce multi-CD/DVD distfile archive images
 .Sh SYNOPSIS
 .Nm
-.Op -dRVv
-.Op -dvd
-.Op -h | --help
-.Op -l logfile
-.Op -X extras_directory
-.Op -x common_directory
+.Op Fl dRVv
+.Op Fl dvd
+.Op Fl h | Fl Fl help
+.Op Fl l Ar logfile
+.Op Fl X Ar extras_directory
+.Op Fl x Ar common_directory
 .Ar distfiles_directory
 .Ar image_directory
 .Sh DESCRIPTION
