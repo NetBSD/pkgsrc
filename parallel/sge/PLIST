@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/09/15 16:30:57 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/13 21:00:25 markd Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -11,9 +11,12 @@ bin/qmod
 bin/qmon
 bin/qping
 bin/qquota
+bin/qrdel
 bin/qresub
 bin/qrls
 bin/qrsh
+bin/qrstat
+bin/qrsub
 bin/qselect
 bin/qsh
 bin/qstat
@@ -33,9 +36,12 @@ sge/bin/${SGE_ARCH}/qmod
 sge/bin/${SGE_ARCH}/qmon
 sge/bin/${SGE_ARCH}/qping
 sge/bin/${SGE_ARCH}/qquota
+sge/bin/${SGE_ARCH}/qrdel
 sge/bin/${SGE_ARCH}/qresub
 sge/bin/${SGE_ARCH}/qrls
 sge/bin/${SGE_ARCH}/qrsh
+sge/bin/${SGE_ARCH}/qrstat
+sge/bin/${SGE_ARCH}/qrsub
 sge/bin/${SGE_ARCH}/qselect
 sge/bin/${SGE_ARCH}/qsh
 sge/bin/${SGE_ARCH}/qstat
@@ -44,7 +50,6 @@ sge/bin/${SGE_ARCH}/qtcsh
 sge/bin/${SGE_ARCH}/sge_coshepherd
 sge/bin/${SGE_ARCH}/sge_execd
 sge/bin/${SGE_ARCH}/sge_qmaster
-sge/bin/${SGE_ARCH}/sge_schedd
 sge/bin/${SGE_ARCH}/sge_shadowd
 sge/bin/${SGE_ARCH}/sge_shepherd
 sge/bin/${SGE_ARCH}/sgepasswd
@@ -53,6 +58,7 @@ sge/catman/cat/cat1/gethostbyname.1
 sge/catman/cat/cat1/gethostname.1
 sge/catman/cat/cat1/getservbyname.1
 sge/catman/cat/cat1/hostnameutils.1
+sge/catman/cat/cat1/jsv.1
 sge/catman/cat/cat1/qacct.1
 sge/catman/cat/cat1/qalter.1
 sge/catman/cat/cat1/qconf.1
@@ -65,9 +71,12 @@ sge/catman/cat/cat1/qmod.1
 sge/catman/cat/cat1/qmon.1
 sge/catman/cat/cat1/qping.1
 sge/catman/cat/cat1/qquota.1
+sge/catman/cat/cat1/qrdel.1
 sge/catman/cat/cat1/qresub.1
 sge/catman/cat/cat1/qrls.1
 sge/catman/cat/cat1/qrsh.1
+sge/catman/cat/cat1/qrstat.1
+sge/catman/cat/cat1/qrsub.1
 sge/catman/cat/cat1/qselect.1
 sge/catman/cat/cat1/qsh.1
 sge/catman/cat/cat1/qstat.1
@@ -120,6 +129,7 @@ sge/catman/cat/cat3/drmaa_wifaborted.3
 sge/catman/cat/cat3/drmaa_wifexited.3
 sge/catman/cat/cat3/drmaa_wifsignaled.3
 sge/catman/cat/cat3/drmaa_wtermsig.3
+sge/catman/cat/cat3/jsv_script_interface.3
 sge/catman/cat/cat5/access_list.5
 sge/catman/cat/cat5/accounting.5
 sge/catman/cat/cat5/bootstrap.5
@@ -146,11 +156,12 @@ sge/catman/cat/cat5/share_tree.5
 sge/catman/cat/cat5/user.5
 sge/catman/cat/cat5/usermapping.5
 sge/catman/cat/cat8/SGE_Helper_Service.exe.8
+sge/catman/cat/cat8/sge_ca.8
 sge/catman/cat/cat8/sge_execd.8
 sge/catman/cat/cat8/sge_qmaster.8
-sge/catman/cat/cat8/sge_schedd.8
 sge/catman/cat/cat8/sge_shadowd.8
 sge/catman/cat/cat8/sge_shepherd.8
+sge/catman/cat/cat8/sge_st.8
 sge/ckpt/README.cpr
 sge/ckpt/README.cray
 sge/ckpt/checkpoint_command
@@ -169,9 +180,7 @@ sge/ckpt/sx6_ckpt_command
 sge/ckpt/sx6_clean_command
 sge/ckpt/sx6_migration_command
 sge/ckpt/sx6_restart_command
-sge/doc/README-Autoinstall.txt
 sge/doc/README-DRMAA.txt
-sge/doc/README-Upgrade.txt
 sge/doc/arc_depend_irix.asc
 sge/doc/arc_depend_solaris.asc
 sge/doc/load_parameters.asc
@@ -191,7 +200,6 @@ sge/examples/drmaa/howto4.c
 sge/examples/drmaa/howto5.c
 sge/examples/drmaa/howto6.c
 sge/examples/jobs/array_submitter.sh
-sge/examples/jobs/hello.bat
 sge/examples/jobs/jobnet_submitter.sh
 sge/examples/jobs/pascal.sh
 sge/examples/jobs/pminiworm.sh
@@ -199,7 +207,6 @@ sge/examples/jobs/simple.sh
 sge/examples/jobs/sleeper.sh
 sge/examples/jobs/step_A_array_submitter.sh
 sge/examples/jobs/step_B_array_submitter.sh
-sge/examples/jobs/worker.exe
 sge/examples/jobs/worker.sh
 sge/examples/jobsbin/${SGE_ARCH}/work
 sge/include/drmaa.h
@@ -208,7 +215,6 @@ sge/install_execd
 sge/install_qmaster
 sge/lib/${SGE_ARCH}/libXltree.so
 sge/lib/${SGE_ARCH}/libdrmaa.so
-sge/lib/${SGE_ARCH}/libdrmaa.so.0.95
 sge/lib/${SGE_ARCH}/libdrmaa.so.1.0
 sge/lib/${SGE_ARCH}/libjuti.so
 sge/lib/${SGE_ARCH}/libspoolb.so
@@ -218,6 +224,7 @@ sge/man/man1/gethostbyname.1
 sge/man/man1/gethostname.1
 sge/man/man1/getservbyname.1
 sge/man/man1/hostnameutils.1
+sge/man/man1/jsv.1
 sge/man/man1/qacct.1
 sge/man/man1/qalter.1
 sge/man/man1/qconf.1
@@ -230,9 +237,12 @@ sge/man/man1/qmod.1
 sge/man/man1/qmon.1
 sge/man/man1/qping.1
 sge/man/man1/qquota.1
+sge/man/man1/qrdel.1
 sge/man/man1/qresub.1
 sge/man/man1/qrls.1
 sge/man/man1/qrsh.1
+sge/man/man1/qrstat.1
+sge/man/man1/qrsub.1
 sge/man/man1/qselect.1
 sge/man/man1/qsh.1
 sge/man/man1/qstat.1
@@ -285,6 +295,7 @@ sge/man/man3/drmaa_wifaborted.3
 sge/man/man3/drmaa_wifexited.3
 sge/man/man3/drmaa_wifsignaled.3
 sge/man/man3/drmaa_wtermsig.3
+sge/man/man3/jsv_script_interface.3
 sge/man/man5/access_list.5
 sge/man/man5/accounting.5
 sge/man/man5/bootstrap.5
@@ -311,11 +322,12 @@ sge/man/man5/share_tree.5
 sge/man/man5/user.5
 sge/man/man5/usermapping.5
 sge/man/man8/SGE_Helper_Service.exe.8
+sge/man/man8/sge_ca.8
 sge/man/man8/sge_execd.8
 sge/man/man8/sge_qmaster.8
-sge/man/man8/sge_schedd.8
 sge/man/man8/sge_shadowd.8
 sge/man/man8/sge_shepherd.8
+sge/man/man8/sge_st.8
 sge/mpi/README
 sge/mpi/README.atm
 sge/mpi/SunHPCT5/README
@@ -358,6 +370,8 @@ sge/pvm/stoppvm.sh
 sge/qmon/PIXMAPS/21cal.xpm
 sge/qmon/PIXMAPS/21cal_ins.xpm
 sge/qmon/PIXMAPS/aclask.xpm
+sge/qmon/PIXMAPS/ar.xpm
+sge/qmon/PIXMAPS/big/toolbar_ar.xpm
 sge/qmon/PIXMAPS/big/toolbar_browser.xpm
 sge/qmon/PIXMAPS/big/toolbar_calendar.xpm
 sge/qmon/PIXMAPS/big/toolbar_ckpt.xpm
@@ -440,6 +454,7 @@ sge/qmon/PIXMAPS/stdoutput.xpm
 sge/qmon/PIXMAPS/stdoutput_ins.xpm
 sge/qmon/PIXMAPS/str.xpm
 sge/qmon/PIXMAPS/time.xpm
+sge/qmon/PIXMAPS/toolbar_ar.xpm
 sge/qmon/PIXMAPS/toolbar_browser.xpm
 sge/qmon/PIXMAPS/toolbar_calendar.xpm
 sge/qmon/PIXMAPS/toolbar_ckpt.xpm
@@ -494,9 +509,15 @@ sge/util/install_modules/inst_qmaster_uninst.sh
 sge/util/install_modules/inst_schedd_high.conf
 sge/util/install_modules/inst_schedd_max.conf
 sge/util/install_modules/inst_schedd_normal.conf
+sge/util/install_modules/inst_st.sh
 sge/util/install_modules/inst_template.conf
-sge/util/install_modules/inst_update.sh
+sge/util/jaas.config.template
+sge/util/java.policy.template
+sge/util/jmxremote.access
+sge/util/jmxremote.password
 sge/util/logchecker.sh
+sge/util/logging.properties.template
+sge/util/management.properties.template
 sge/util/qtask
 sge/util/rctemplates/darwin_template
 sge/util/rctemplates/sgebdb_template
@@ -553,6 +574,12 @@ sge/util/resources/centry/tmpdir
 sge/util/resources/centry/virtual_free
 sge/util/resources/centry/virtual_total
 sge/util/resources/centry/virtual_used
+sge/util/resources/jsv/JSV.pm
+sge/util/resources/jsv/jsv.pl
+sge/util/resources/jsv/jsv.sh
+sge/util/resources/jsv/jsv.tcl
+sge/util/resources/jsv/jsv_include.sh
+sge/util/resources/jsv/jsv_include.tcl
 sge/util/resources/loadsensors/calendar.sh
 sge/util/resources/loadsensors/ibm-loadsensor
 sge/util/resources/loadsensors/interix-loadsensor.sh
@@ -565,12 +592,15 @@ sge/util/resources/pe/make
 sge/util/resources/pe/make.sge_pqs_api
 sge/util/resources/schemas/qhost/qhost.xsd
 sge/util/resources/schemas/qquota/qquota.xsd
+sge/util/resources/schemas/qrstat/qrstat.xsd
 sge/util/resources/schemas/qstat/detailed_job_info.xsd
 sge/util/resources/schemas/qstat/message.xsd
 sge/util/resources/schemas/qstat/qstat.xsd
 sge/util/resources/starter_methods/settaskid.sh
+sge/util/resources/usersets/arusers
 sge/util/resources/usersets/deadlineusers
 sge/util/resources/usersets/defaultdepartment
+sge/util/rmiconsole.policy
 sge/util/setfileperm.sh
 sge/util/setfileperm.sh.orig
 sge/util/sgeCA/renew_all_certs.csh
@@ -578,9 +608,20 @@ sge/util/sgeCA/sge_ca
 sge/util/sgeCA/sge_ca.cnf
 sge/util/sgeCA/sge_ssl.cnf
 sge/util/sgeCA/sge_ssl_template.cnf
+sge/util/sgeSMF/bdb_template.xml
+sge/util/sgeSMF/execd_template.xml
+sge/util/sgeSMF/qmaster_template.xml
+sge/util/sgeSMF/sge_smf.sh
+sge/util/sgeSMF/sge_smf_support.sh
+sge/util/sgeSMF/shadowd_template.xml
+sge/util/sgeST/sge_st
+sge/util/sgeST/st_settings.sh
 sge/util/sge_aliases
 sge/util/sge_request
 sge/util/sgeremoterun
+sge/util/upgrade_modules/inst_upgrade.sh
+sge/util/upgrade_modules/load_sge_config.sh
+sge/util/upgrade_modules/save_sge_config.sh
 sge/utilbin/${SGE_ARCH}/adminrun
 sge/utilbin/${SGE_ARCH}/authuser
 sge/utilbin/${SGE_ARCH}/berkeley_db_svc
@@ -596,6 +637,7 @@ sge/utilbin/${SGE_ARCH}/db_recover
 sge/utilbin/${SGE_ARCH}/db_stat
 sge/utilbin/${SGE_ARCH}/db_upgrade
 sge/utilbin/${SGE_ARCH}/db_verify
+sge/utilbin/${SGE_ARCH}/echo_raw
 sge/utilbin/${SGE_ARCH}/filestat
 sge/utilbin/${SGE_ARCH}/fstype
 sge/utilbin/${SGE_ARCH}/gethostbyaddr
@@ -607,6 +649,7 @@ sge/utilbin/${SGE_ARCH}/loadcheck
 sge/utilbin/${SGE_ARCH}/now
 sge/utilbin/${SGE_ARCH}/openssl
 sge/utilbin/${SGE_ARCH}/qrsh_starter
+sge/utilbin/${SGE_ARCH}/read_raw
 sge/utilbin/${SGE_ARCH}/rlogin
 sge/utilbin/${SGE_ARCH}/rsh
 sge/utilbin/${SGE_ARCH}/rshd
@@ -618,15 +661,20 @@ sge/utilbin/${SGE_ARCH}/testsuidroot
 sge/utilbin/${SGE_ARCH}/uidgid
 @dirrm sge/utilbin/${SGE_ARCH}
 @dirrm sge/utilbin
+@dirrm sge/util/upgrade_modules
+@dirrm sge/util/sgeST
+@dirrm sge/util/sgeSMF
 @dirrm sge/util/sgeCA
 @dirrm sge/util/resources/usersets
 @dirrm sge/util/resources/starter_methods
 @dirrm sge/util/resources/schemas/qstat
+@dirrm sge/util/resources/schemas/qrstat
 @dirrm sge/util/resources/schemas/qquota
 @dirrm sge/util/resources/schemas/qhost
 @dirrm sge/util/resources/schemas
 @dirrm sge/util/resources/pe
 @dirrm sge/util/resources/loadsensors
+@dirrm sge/util/resources/jsv
 @dirrm sge/util/resources/centry
 @dirrm sge/util/resources/calendars
 @dirrm sge/util/resources

@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/10/19 11:51:27 markd Exp $
+$NetBSD: MESSAGE,v 1.4 2009/05/13 21:00:25 markd Exp $
 
 You will need to add the following lines to /etc/services:
 
-sge_qmaster     536/tcp
-sge_execd       537/tcp
+sge_qmaster     6444/tcp
+sge_execd       6445/tcp
 
 In addition after installation, you need to set up SGE.  To configure the
 master node of the cluster, run:

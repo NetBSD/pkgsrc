@@ -1,10 +1,10 @@
-$NetBSD: patch-bm,v 1.1 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-bm,v 1.2 2009/05/13 21:00:25 markd Exp $
 
 DESTDIR support.
 
---- source/dist/util/setfileperm.sh.orig	Fri Jul  1 12:45:13 2005
-+++ source/dist/util/setfileperm.sh	Fri May 30 13:48:16 2008
-@@ -81,7 +81,7 @@
+--- source/dist/util/setfileperm.sh.orig	2008-10-18 03:48:04.000000000 +1300
++++ source/dist/util/setfileperm.sh
+@@ -81,7 +81,7 @@ SetFilePerm()
  
  instauto=false
  
@@ -13,7 +13,7 @@ DESTDIR support.
     echo 
     echo ERROR: Please set your \$SGE_ROOT environment variable
     echo and start this script again. Exit.
-@@ -89,7 +89,7 @@
+@@ -89,7 +89,7 @@ if [ -z "$SGE_ROOT" -o ! -d "$SGE_ROOT" 
     exit 1
  fi
  
@@ -22,7 +22,7 @@ DESTDIR support.
     echo 
     echo ERROR: The shell script \"$SGE_ROOT/util/arch\" does not exist.
     echo Please verify your distribution and restart this script. Exit.
-@@ -97,7 +97,7 @@
+@@ -97,7 +97,7 @@ if [ ! -f "$SGE_ROOT/util/arch" ]; then
     exit 1
  fi
  
@@ -31,7 +31,7 @@ DESTDIR support.
     echo
     echo ERROR: Missing shell script \"$SGE_ROOT/util/arch_variables\".
     echo Please verify your distribution and restart this script. Exit.
-@@ -105,7 +105,7 @@
+@@ -105,7 +105,7 @@ if [ ! -f $SGE_ROOT/util/arch_variables 
     exit 1
  fi
  
@@ -40,7 +40,7 @@ DESTDIR support.
  
  if [ $ARCH = "win32-x86" ]; then
     echo
-@@ -182,7 +182,7 @@
+@@ -183,7 +183,7 @@ else
     done
  fi
  
@@ -49,14 +49,14 @@ DESTDIR support.
  if [ $? != 0 ]; then
     $ECHO "ERROR: can't change to directory \"$1\". Exiting."
     exit 1
-@@ -203,17 +203,17 @@
+@@ -204,17 +204,17 @@ for f in $FILELIST; do
  done
  
  for f in $FILELIST $OPTFILES; do
 -   if [ -d $f -o -f $f ]; then
--      SetFilePerm $f 
+-      SetFilePerm $f
 +   if [ -d $DESTDIR$f -o -f $DESTDIR$f ]; then
-+      SetFilePerm $DESTDIR$f 
++      SetFilePerm $DESTDIR$f
     fi
  done
  

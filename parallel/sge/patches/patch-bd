@@ -1,13 +1,13 @@
-$NetBSD: patch-bd,v 1.3 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-bd,v 1.4 2009/05/13 21:00:25 markd Exp $
 
 Exclude Java files.
 DESTDIR support.
 
---- source/scripts/distinst.orig	Tue Nov 20 12:16:24 2007
-+++ source/scripts/distinst	Fri May 30 12:14:08 2008
-@@ -75,12 +75,12 @@
+--- source/scripts/distinst.orig	2009-01-31 05:04:08.000000000 +1300
++++ source/scripts/distinst
+@@ -75,12 +75,12 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
  # The last number listed here will be the verson linked from libdrmaa.so
- DRMAA_SHARED_LIB_VERSIONS="0.95 1.0"
+ DRMAA_SHARED_LIB_VERSIONS="1.0"
  DRMAA_HEADER_FILES="libs/japi/drmaa.h"
 -DRMAAJ_FILES="CLASSES/drmaa"
 +#DRMAAJ_FILES="CLASSES/drmaa"
@@ -21,7 +21,16 @@ DESTDIR support.
  
  PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
  PVMSRCSCRIPTS="install.sh aimk"
-@@ -517,11 +517,11 @@
+@@ -420,7 +420,7 @@ instclassictargets=false
+ instopenssl=true
+ instbdb=true
+ instarco=false
+-instguiinst=true
++instguiinst=false
+ enforce_shlibpath=false
+ 
+ cmdname=`basename $0`
+@@ -518,11 +518,11 @@ while [ $# -ge 1 ]; do
           echo Please set variable SGE_ROOT. Installation failed.
           exit 1
        fi
