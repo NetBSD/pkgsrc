@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/01 14:05:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/05/13 21:48:38 wiz Exp $
 
-SHA1 (gnome-nds-thumbnailer-1.2.0.tar.bz2) = 43c6444e7a0648dd7dbb03993b465abba9d86001
-RMD160 (gnome-nds-thumbnailer-1.2.0.tar.bz2) = 75aeae6dc3b304a5f713d421ad1919321aefba26
-Size (gnome-nds-thumbnailer-1.2.0.tar.bz2) = 69531 bytes
+SHA1 (gnome-nds-thumbnailer-1.2.1.tar.bz2) = 71516c47cff6bd31090802c6e347f70465122160
+RMD160 (gnome-nds-thumbnailer-1.2.1.tar.bz2) = f24b9ae363c475c10ef89d3bbcc85f4f85357033
+Size (gnome-nds-thumbnailer-1.2.1.tar.bz2) = 69560 bytes
