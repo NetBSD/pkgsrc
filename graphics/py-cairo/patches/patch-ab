@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2008/11/18 12:46:52 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/13 12:56:47 obache Exp $
 
---- cairo/pycairo-matrix.c.orig	2008-11-18 12:43:06.000000000 +0100
+--- cairo/pycairo-matrix.c.orig	2008-12-27 08:25:55.000000000 +0000
 +++ cairo/pycairo-matrix.c
-@@ -206,7 +206,7 @@ matrix_transform_point (PycairoMatrix *o
+@@ -222,7 +222,7 @@ matrix_translate (PycairoMatrix *o, PyOb
  }
  
  static PyObject *
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1 2008/11/18 12:46:52 drochner Exp $
  {
      switch (i) {
      case 0:
-@@ -266,14 +266,13 @@ static PyNumberMethods matrix_as_number 
+@@ -282,14 +282,13 @@ static PyNumberMethods matrix_as_number 
    0,	           /* nb_true_divide */
    0,		   /* nb_inplace_floor_divide */
    0,		   /* nb_inplace_true_divide */
