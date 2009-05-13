@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2009/04/22 12:36:46 hasso Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/13 18:39:46 snj Exp $
 
-DISTNAME=	webkit-1.1.5
+DISTNAME=	webkit-1.1.6
 PKGNAME=	${DISTNAME:S/webkit/webkit-gtk/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.webkitgtk.org/
@@ -32,22 +32,23 @@ REPLACE_PERL+=	JavaScriptCore/pcre/dftables \
 		WebCore/dom/*.pl \
 		WebCore/platform/text/mac/*.pl
 
-.include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../net/libsoup24/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/flex/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
 # This is optional, but needs testing.
 #.include "../../devel/pango/buildlink3.mk"
 # A correct Webkit build requires flex 2.5.33
-.include "../../devel/flex/buildlink3.mk"
-.include "../../textproc/icu/buildlink3.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../devel/gperf/buildlink3.mk"
+.include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
+.include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
