@@ -1,4 +1,4 @@
-/* $NetBSD: info.h,v 1.18 2009/03/02 17:13:49 joerg Exp $ */
+/* $NetBSD: info.h,v 1.19 2009/05/13 03:18:05 joerg Exp $ */
 
 /* from FreeBSD Id: info.h,v 1.10 1997/02/22 16:09:40 peter Exp */
 
@@ -114,8 +114,6 @@ extern Boolean File2Pkg;
 extern Boolean Quiet;
 extern char *InfoPrefix;
 extern char *BuildInfoVariable;
-extern char PlayPen[];
-extern size_t PlayPenSize;
 extern size_t termwidth;
 extern lpkg_head_t pkgs;
 
