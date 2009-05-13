@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.4 2008/10/16 09:40:20 martti Exp $
+$NetBSD: patch-as,v 1.5 2009/05/13 10:33:23 martti Exp $
 
 Support for sqlite.
 
---- src/global/Makefile.in.orig	2007-12-06 14:49:03.000000000 +0100
-+++ src/global/Makefile.in
-@@ -4,7 +4,7 @@ SRCS	= abounce.c anvil_clnt.c been_here.
+--- src/global/Makefile.in.orig	2009-02-13 03:25:05.000000000 +0200
++++ src/global/Makefile.in	2009-05-13 12:27:54.000000000 +0300
+@@ -4,7 +4,7 @@
  	clnt_stream.c conv_time.c db_common.c debug_peer.c debug_process.c \
  	defer.c deliver_completed.c deliver_flock.c deliver_pass.c \
  	deliver_request.c dict_ldap.c dict_mysql.c dict_pgsql.c \
@@ -13,7 +13,7 @@ Support for sqlite.
  	dsb_scan.c dsn.c dsn_buf.c dsn_mask.c dsn_print.c dsn_util.c \
  	ehlo_mask.c ext_prop.c file_id.c flush_clnt.c header_opts.c \
  	header_token.c input_transp.c int_filt.c is_header.c log_adhoc.c \
-@@ -34,7 +34,7 @@ OBJS	= abounce.o anvil_clnt.o been_here.
+@@ -35,7 +35,7 @@
  	clnt_stream.o conv_time.o db_common.o debug_peer.o debug_process.o \
  	defer.o deliver_completed.o deliver_flock.o deliver_pass.o \
  	deliver_request.o dict_ldap.o dict_mysql.o dict_pgsql.o \
@@ -22,7 +22,7 @@ Support for sqlite.
  	dsb_scan.o dsn.o dsn_buf.o dsn_mask.o dsn_print.o dsn_util.o \
  	ehlo_mask.o ext_prop.o file_id.o flush_clnt.o header_opts.o \
  	header_token.o input_transp.o int_filt.o is_header.o log_adhoc.o \
-@@ -63,7 +63,7 @@ HDRS	= abounce.h anvil_clnt.h been_here.
+@@ -65,7 +65,7 @@
  	canon_addr.h cfg_parser.h cleanup_user.h clnt_stream.h config.h \
  	conv_time.h db_common.h debug_peer.h debug_process.h defer.h \
  	deliver_completed.h deliver_flock.h deliver_pass.h deliver_request.h \
@@ -31,7 +31,7 @@ Support for sqlite.
  	dot_lockfile.h dot_lockfile_as.h dsb_scan.h dsn.h dsn_buf.h \
  	dsn_mask.h dsn_print.h dsn_util.h ehlo_mask.h ext_prop.h \
  	file_id.h flush_clnt.h header_opts.h header_token.h input_transp.h \
-@@ -860,6 +860,13 @@ dict_proxy.o: dict_proxy.c
+@@ -862,6 +862,13 @@
  dict_proxy.o: dict_proxy.h
  dict_proxy.o: mail_params.h
  dict_proxy.o: mail_proto.h
@@ -45,7 +45,7 @@ Support for sqlite.
  domain_list.o: ../../include/match_list.h
  domain_list.o: ../../include/match_ops.h
  domain_list.o: ../../include/sys_defs.h
-@@ -1219,6 +1226,7 @@ mail_dict.o: dict_ldap.h
+@@ -1233,6 +1240,7 @@
  mail_dict.o: dict_mysql.h
  mail_dict.o: dict_pgsql.h
  mail_dict.o: dict_proxy.h
