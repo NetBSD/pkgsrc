@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2009/01/27 11:10:46 markd Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/13 10:59:39 wiz Exp $
 
-DISTNAME=	qca-2.0.1
+DISTNAME=	qca-2.0.2
 PKGNAME=	qca2-${DISTNAME:C/.*-//}
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/
@@ -10,7 +10,9 @@ MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT
 
-USE_TOOLS+= gmake
+LICENSE=	gnu-lgpl-v2.1
+
+USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c++
@@ -23,7 +25,7 @@ CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--disable-tests
 
 post-install:
-	${CP} ${QTDIR}/lib/pkgconfig/qca2.pc ${PREFIX}/lib/pkgconfig/qca2.pc
+	${INSTALL_DATA} ${QTDIR}/lib/pkgconfig/qca2.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/qca2.pc
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
