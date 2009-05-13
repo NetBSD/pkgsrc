@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1790 2009/05/13 00:10:47 dsainty Exp $
+$NetBSD: CHANGES-2009,v 1.1791 2009/05/13 07:27:37 jdolecek Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2387,3 +2387,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/ejabberd to 2.0.5 [martti 2009-05-12]
 	Updated pkgtools/bootstrap-mk-files to 20090512 [minskim 2009-05-12]
 	Updated time/planner to 0.14.4 [dsainty 2009-05-13]
+	Updated chat/psi to 0.12.1 [jdolecek 2009-05-13]
