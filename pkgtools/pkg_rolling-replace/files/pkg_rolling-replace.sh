@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.19 2008/05/02 19:04:03 apb Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.20 2009/05/13 10:47:35 wiz Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -107,8 +107,8 @@ usage()
         -s         Replace even if the ABIs are still compatible ("strict")
         -u         Update outdated packages
         -v         Verbose
-        -x <pkg>   exclude <pkg> from outdated check
         -X <pkg>   exclude <pkg> from being rebuilt
+        -x <pkg>   exclude <pkg> from outdated check
 
 pkg_rolling-replace does 'make replace' on one package at a time,
 tsorting the packages being replaced according to their
