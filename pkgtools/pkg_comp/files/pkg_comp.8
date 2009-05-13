@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.31 2007/10/27 17:11:24 seb Exp $
+.\" $NetBSD: pkg_comp.8,v 1.32 2009/05/13 10:39:52 wiz Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -40,8 +40,7 @@
 .Pc
 .Ar conf_file
 .Oc
-.Op Fl n
-.Op Fl N
+.Op Fl Nn
 .Ar target
 .Op Ar pkg_name ...
 .Sh DESCRIPTION
@@ -73,16 +72,18 @@ as configuration file (full path expected).
 Use
 .Ar conf_file
 as configuration file (only base name expected).
-.It Fl n
-Avoid installation of
+.It Fl N
+With the exception of
+.Pa pkgtools/libkver
+(see
+.Va NETBSD_RELEASE )
+avoid installation of default packages as well as
 .Va INSTALL_PACKAGES
 and
 .Va BUILD_PACKAGES
 during the creation of the chroot.
-.It Fl N
-With the exception of pkgtools/libkver ( see
-.Va NETBSD_RELEASE )
-avoid installation of default packages as well as
+.It Fl n
+Avoid installation of
 .Va INSTALL_PACKAGES
 and
 .Va BUILD_PACKAGES
@@ -97,9 +98,9 @@ Here are some ideas:
 .It
 Build packages for other system versions.
 For example, build packages for
-.Nx 1.5
+.Nx 4.0
 while you are running
-.Nx 1.6 .
+.Nx 5.0 .
 .It
 Build packages using different
 .Pa mk.conf
@@ -254,9 +255,12 @@ The libkver library will be configured inside the chroot, with the symbolic link
 and
 .Va LD_PRELOAD
 in default shells environments,
-so that the NetBSD version specified in
+so that the
+.Nx
+version specified in
 .Va NETBSD_RELEASE
-overrides the host system version. See
+overrides the host system version.
+See
 .Xr kver 3
 for more information.
 Defaults to
@@ -519,7 +523,7 @@ if you want security checks to work inside the
 chroot environment.
 .Sh SEE ALSO
 .Xr pkg_delete 1 ,
-.Xr packages 7 ,
+.Xr pkgsrc 7 ,
 .Xr mount_null 8 ,
 .Xr sync 8 ,
 .Xr sysctl 8
