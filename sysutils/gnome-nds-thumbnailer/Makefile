@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/01 14:05:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/13 21:48:38 wiz Exp $
 #
 
-DISTNAME=	gnome-nds-thumbnailer-1.2.0
+DISTNAME=	gnome-nds-thumbnailer-1.2.1
 CATEGORIES=	sysutils graphics emulators
 MASTER_SITES=	http://download.gnome.org/sources/gnome-nds-thumbnailer/1.2/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,11 +10,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://download.gnome.org/sources/gnome-nds-thumbnailer/1.2/
 COMMENT=	Thumbnailer for GNOME for Nintendo DS ROMs
 
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
-
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
 GCONF_SCHEMAS+=	gnome-nds-thumbnailer.schemas
 
