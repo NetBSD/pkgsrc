@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1804 2009/05/13 12:32:21 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1805 2009/05/13 12:57:12 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2404,3 +2404,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/clive to 2.1.12 [wiz 2009-05-13]
 	Updated textproc/iso-codes to 3.9 [wiz 2009-05-13]
 	Updated x11/libxklavier to 3.9 [wiz 2009-05-13]
+	Updated graphics/py-cairo to 1.8.4 [obache 2009-05-13]
