@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/13 00:06:12 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/13 00:45:20 dsainty Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -261,8 +261,6 @@ share/planner/ui/xml-planner-plugin.ui
 @dirrm share/omf/planner
 @comment in rarian: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/icons/hicolor/48x48/mimetypes
-@dirrm share/icons/hicolor/48x48
 @exec ${MKDIR} %D/share/gtk-doc/html/libplanner
 @dirrm share/gtk-doc/html/libplanner
 @dirrm share/gnome/help/planner/eu/figures
