@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/05/13 18:46:17 hasso Exp $
+
+--- gsoap/stdsoap2.cpp.orig	2009-05-13 17:52:06 +0300
++++ gsoap/stdsoap2.cpp	2009-05-13 17:52:37 +0300
+@@ -3585,7 +3585,7 @@ tcp_gethost(struct soap *soap, const cha
+   { memcpy(inaddr, &iadd, sizeof(iadd));
+     return SOAP_OK;
+   }
+-#if defined(__GLIBC__) || (defined(HAVE_GETHOSTBYNAME_R) && (defined(FREEBSD) || defined(__FreeBSD__)))
++#if defined(__GLIBC__) || (defined(HAVE_GETHOSTBYNAME_R) && (defined(FREEBSD) || defined(__FreeBSD__) || defined(__DragonFly__)))
+   if (gethostbyname_r(addr, &hostent, soap->buf, SOAP_BUFLEN, &host, &soap->errnum) < 0)
+     host = NULL;
+ #elif defined(_AIX43) || ((defined(TRU64) || defined(HP_UX)) && defined(HAVE_GETHOSTBYNAME_R))
