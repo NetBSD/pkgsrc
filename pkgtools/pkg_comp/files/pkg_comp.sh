@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.34 2008/10/10 15:56:31 sborrill Exp $
+# $NetBSD: pkg_comp.sh,v 1.35 2009/05/13 10:40:24 wiz Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -172,7 +172,7 @@ warn()
 #
 usage()
 {
-    echo "usage: $ProgName [-(c|C) conf_file] [-n] [-N] target [pkg_names]" 1>&2
+    echo "usage: $ProgName [-(c|C) conf_file] [-Nn] target [pkg_names]" 1>&2
     exit 1
 }
 
