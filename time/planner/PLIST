@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/03 08:23:32 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/13 00:06:12 dsainty Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -147,6 +147,7 @@ share/locale/fi/LC_MESSAGES/planner.mo
 share/locale/fr/LC_MESSAGES/planner.mo
 share/locale/ga/LC_MESSAGES/planner.mo
 share/locale/gl/LC_MESSAGES/planner.mo
+share/locale/gu/LC_MESSAGES/planner.mo
 share/locale/hi/LC_MESSAGES/planner.mo
 share/locale/hr/LC_MESSAGES/planner.mo
 share/locale/hu/LC_MESSAGES/planner.mo
@@ -161,6 +162,7 @@ share/locale/lv/LC_MESSAGES/planner.mo
 share/locale/mk/LC_MESSAGES/planner.mo
 share/locale/ml/LC_MESSAGES/planner.mo
 share/locale/mn/LC_MESSAGES/planner.mo
+share/locale/mr/LC_MESSAGES/planner.mo
 share/locale/ms/LC_MESSAGES/planner.mo
 share/locale/nb/LC_MESSAGES/planner.mo
 share/locale/ne/LC_MESSAGES/planner.mo
@@ -230,6 +232,7 @@ share/planner/sql/upgrade-0.11-0.13.sql
 share/planner/sql/upgrade-0.6.x-0.11.sql
 share/planner/stylesheets/html1_css.xsl
 share/planner/stylesheets/html1_css_ie.xsl
+share/planner/stylesheets/html1_css_ie7.xsl
 share/planner/stylesheets/html1_gantt.xsl
 share/planner/stylesheets/html1_resources.xsl
 share/planner/stylesheets/html1_tasks.xsl
@@ -259,6 +262,7 @@ share/planner/ui/xml-planner-plugin.ui
 @comment in rarian: @dirrm share/omf
 @comment in shared-mime-info: @dirrm share/mime/packages
 @dirrm share/icons/hicolor/48x48/mimetypes
+@dirrm share/icons/hicolor/48x48
 @exec ${MKDIR} %D/share/gtk-doc/html/libplanner
 @dirrm share/gtk-doc/html/libplanner
 @dirrm share/gnome/help/planner/eu/figures
