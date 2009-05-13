@@ -1,4 +1,4 @@
-/* $NetBSD: create.h,v 1.11 2009/05/13 03:18:05 joerg Exp $ */
+/* $NetBSD: create.h,v 1.12 2009/05/13 03:33:50 joerg Exp $ */
 
 /* from FreeBSD Id: create.h,v 1.13 1997/10/08 07:46:19 charnier Exp */
 
@@ -55,6 +55,7 @@ extern char *SrcDir;
 extern char *realprefix;
 extern char *DefaultOwner;
 extern char *DefaultGroup;
+extern char *CompressionType;
 extern int PlistOnly;
 extern int RelativeLinks;
 extern int update_pkgdb;

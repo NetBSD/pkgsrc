@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.11 2009/03/08 17:26:23 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.12 2009/05/13 03:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: build.c,v 1.11 2009/03/08 17:26:23 joerg Exp $");
+__RCSID("$NetBSD: build.c,v 1.12 2009/05/13 03:33:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -239,12 +239,26 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 	archive_entry_linkresolver_set_strategy(resolver,
 	    archive_format(archive));
 
-	if (strcmp(suffix, "tbz") == 0 || strcmp(suffix, "tar.bz2") == 0)
+	if (CompressionType == NULL) {
+		if (strcmp(suffix, "tbz") == 0 ||
+		    strcmp(suffix, "tar.bz2") == 0)
+			CompressionType = "bzip2";
+		else if (strcmp(suffix, "tgz") == 0 ||
+		    strcmp(suffix, "tar.gz") == 0)
+			CompressionType = "gzip";
+		else
+			CompressionType = "none";
+	}
+
+	if (strcmp(CompressionType, "bzip2") == 0)
 		archive_write_set_compression_bzip2(archive);
-	else if (strcmp(suffix, "tgz") == 0 || strcmp(suffix, "tar.gz") == 0)
+	else if (strcmp(CompressionType, "gzip") == 0)
 		archive_write_set_compression_gzip(archive);
-	else
+	else if (strcmp(CompressionType, "none") == 0)
 		archive_write_set_compression_none(archive);
+	else
+		errx(1, "Unspported compression type for -F: %s",
+		    CompressionType);
 
 	archive_name = xasprintf("%s.%s", pkg, suffix);
 
