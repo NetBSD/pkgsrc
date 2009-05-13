@@ -1,12 +1,19 @@
-$NetBSD: patch-aa,v 1.3 2008/11/18 12:46:52 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2009/05/13 12:56:47 obache Exp $
 
---- configure.orig	2008-11-18 12:40:01.000000000 +0100
+--- configure.orig	2009-03-19 08:46:52.000000000 +0000
 +++ configure
-@@ -19384,7 +19384,7 @@ echo $ECHO_N "checking whether $PYTHON v
+@@ -19941,12 +19941,12 @@ LIBTOOL='$(SHELL) $(top_builddir)/libtoo
+ 
+         if test -n "$PYTHON"; then
+       # If the user set $PYTHON, use it and don't search something else.
+-      { $as_echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.6" >&5
+-$as_echo_n "checking whether $PYTHON version >= 2.6... " >&6; }
++      { $as_echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.4" >&5
++$as_echo_n "checking whether $PYTHON version >= 2.4... " >&6; }
        prog="import sys, string
  # split strings by '.' and convert to numeric.  Append some zeros
  # because we need at least 4 digits for the hex conversion.
--minver = map(int, string.split('2.5', '.')) + [0, 0, 0]
+-minver = map(int, string.split('2.6', '.')) + [0, 0, 0]
 +minver = map(int, string.split('2.4', '.')) + [0, 0, 0]
  minverhex = 0
  for i in xrange(0, 4): minverhex = (minverhex << 8) + minver[i]

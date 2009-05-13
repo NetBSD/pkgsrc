@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2008/11/18 12:46:52 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2009/05/13 12:56:47 obache Exp $
 
---- cairo/pycairo-surface.c.orig	2008-11-18 12:50:34.000000000 +0100
+--- cairo/pycairo-surface.c.orig	2009-03-03 11:11:20.000000000 +0000
 +++ cairo/pycairo-surface.c
-@@ -122,7 +122,7 @@ static cairo_status_t
- _write_func (void *closure, const unsigned char *data, unsigned int length)
+@@ -123,7 +123,7 @@ _write_func (void *closure, const unsign
  {
+     PyGILState_STATE gstate = PyGILState_Ensure();
      PyObject *res = PyObject_CallMethod ((PyObject *)closure, "write", "(s#)",
 -					 data, (Py_ssize_t)length);
 +					 data, length);
      if (res == NULL) {
  	/* an exception has occurred, it will be picked up later by
  	 * Pycairo_Check_Status()
-@@ -392,7 +392,7 @@ image_surface_create_for_data (PyTypeObj
+@@ -424,7 +424,7 @@ image_surface_create_for_data (PyTypeObj
      cairo_format_t format;
      unsigned char *buffer;
      int width, height, stride = -1, res;
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.1 2008/11/18 12:46:52 drochner Exp $
      PyObject *obj;
  
      if (!PyArg_ParseTuple(args, "Oiii|i:Surface.create_for_data",
-@@ -570,10 +570,10 @@ image_surface_buffer_getsegcount (Pycair
+@@ -616,10 +616,10 @@ image_surface_buffer_getsegcount (Pycair
  
  /* See Python C API Manual 10.7 */
  static PyBufferProcs image_surface_as_buffer = {
