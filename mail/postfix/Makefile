@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.223 2009/05/13 10:32:23 martti Exp $
+# $NetBSD: Makefile,v 1.224 2009/05/13 10:33:23 martti Exp $
 
-DISTNAME=	postfix-2.5.7
+DISTNAME=	postfix-2.6.0
 #PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
@@ -116,7 +116,7 @@ PKG_GECOS.postfix=	Postfix User
 PKG_HOME.postfix=	${POSTFIX_QUEUE_DIR}
 
 CONF_FILES=		# empty
-.for i in main.cf master.cf postfix-files
+.for i in main.cf master.cf
 CONF_FILES+=		${EXAMPLEDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 CONF_FILES_PERMS=	# empty
