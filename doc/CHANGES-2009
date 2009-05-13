@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1798 2009/05/13 10:15:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1799 2009/05/13 10:20:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2396,3 +2396,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/quagga-devel to 0.99.12 [hasso 2009-05-13]
 	Updated devel/pcre to 7.9 [wiz 2009-05-13]
 	Updated devel/pango to 1.24.2 [wiz 2009-05-13]
+	Updated graphics/libkdcraw to 0.1.9 [wiz 2009-05-13]
