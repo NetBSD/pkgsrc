@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8086 2009/05/12 14:03:27 obache Exp $
+$NetBSD: TODO,v 1.8087 2009/05/13 00:12:25 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1095,7 +1095,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pixman-0.14.0
 	o pkg_select-20051209
 	o pks-0.9.6
-	o planner-0.14.4
 	o plone-3.2.2 [should be plone-32?]
 	o ploticus-2.41
 	o ploticus-examples-230
