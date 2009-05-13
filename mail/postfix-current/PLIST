@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/05/13 10:34:06 martti Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -9,7 +9,9 @@ libexec/postfix/error
 libexec/postfix/flush
 libexec/postfix/lmtp
 libexec/postfix/local
+libexec/postfix/main.cf
 libexec/postfix/master
+libexec/postfix/master.cf
 libexec/postfix/nqmgr
 libexec/postfix/oqmgr
 libexec/postfix/pickup
@@ -17,6 +19,8 @@ libexec/postfix/pipe
 libexec/postfix/post-install
 libexec/postfix/postfix-files
 libexec/postfix/postfix-script
+libexec/postfix/postfix-wrapper
+libexec/postfix/postmulti-script
 libexec/postfix/proxymap
 libexec/postfix/qmgr
 libexec/postfix/qmqpd
@@ -40,6 +44,7 @@ man/man1/postkick.1
 man/man1/postlock.1
 man/man1/postlog.1
 man/man1/postmap.1
+man/man1/postmulti.1
 man/man1/postqueue.1
 man/man1/postsuper.1
 man/man1/qshape.1
@@ -59,6 +64,7 @@ man/man5/nisplus_table.5
 man/man5/pcre_table.5
 man/man5/pgsql_table.5
 man/man5/postconf.5
+man/man5/postfix-wrapper.5
 man/man5/regexp_table.5
 man/man5/relocated.5
 man/man5/tcp_table.5
@@ -126,6 +132,7 @@ share/doc/postfix/LINUX_README
 share/doc/postfix/LOCAL_RECIPIENT_README
 share/doc/postfix/MAILDROP_README
 share/doc/postfix/MILTER_README
+share/doc/postfix/MULTI_INSTANCE_README
 share/doc/postfix/MYSQL_README
 share/doc/postfix/NFS_README
 share/doc/postfix/OVERVIEW
