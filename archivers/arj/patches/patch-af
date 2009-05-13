@@ -1,7 +1,25 @@
-$NetBSD: patch-af,v 1.1 2005/10/07 16:52:06 joerg Exp $
+$NetBSD: patch-af,v 1.2 2009/05/13 14:26:24 hasso Exp $
 
---- fardata.c.orig	2005-07-22 13:27:50.000000000 +0000
-+++ fardata.c
+--- fardata.c.orig	2004-04-17 14:39:42 +0300
++++ fardata.c	2009-05-03 08:53:46 +0300
+@@ -190,7 +190,7 @@ int msg_sprintf(char *str, FMSG *fmt, ..
+ 
+ /* Length-limited strlen() */
+ 
+-static int strnlen(const char FAR *s, int count)
++static int _strnlen(const char FAR *s, int count)
+ {
+  const char FAR *sc;
+ 
+@@ -569,7 +569,7 @@ int vcprintf(int ccode, FMSG *fmt, va_li
+     if(!s)
+      s="(null)";
+ #endif
+-    len=strnlen(s, precision);
++    len=_strnlen(s, precision);
+     if(!(flags&LEFT))
+     {
+      while(len<field_width--)
 @@ -655,7 +655,7 @@ int vcprintf(int ccode, FMSG *fmt, va_li
      num=va_arg(args, unsigned long);
     else if(qualifier=='h')
