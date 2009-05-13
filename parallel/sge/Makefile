@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2008/11/26 10:20:08 markd Exp $
+# $NetBSD: Makefile,v 1.35 2009/05/13 21:00:25 markd Exp $
 #
 
-PKGNAME=		sge-6.1.5
-DISTNAME=		ge-V61u5_TAG-src
+PKGNAME=		sge-6.2.2.1
+DISTNAME=		ge-V62u2_1_TAG-src
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/182/
+MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/197/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gridengine.sunsource.net/
@@ -91,16 +91,18 @@ post-patch:
 		${ECHO} "        `${WRKSRC}/source/dist/util/arch`" ; \
 		${FALSE} ; \
 	fi
+	( ${ECHO} "set OPENSSL_HOME = ${SSL_PREFIX}" ; \
+	${ECHO} "set BERKELEYDB_HOME = ${BUILDLINK_PREFIX.db4}" ; \
+	${ECHO} "set BDB_INCLUDE_SUBDIR = db4" ; \
+	${ECHO} "set BDB_LIB_SUFFIX = 4" ; \
+	${ECHO} "set PERL = ${PERL5}" ) > ${WRKSRC}/source/aimk.private
+	( ${ECHO} "OPENSSLBASE=${SSL_PREFIX}" ; \
+	${ECHO} "BERKELEYDBBASE=${BUILDLINK_PREFIX.db4}" ) > ${WRKSRC}/source/distinst.private
 
-pre-configure:
-.for __tmp__ in source/dist/util/arch_variables source/scripts/distinst.site source/aimk.site
-	${MV} ${WRKSRC}/${__tmp__} ${WRKSRC}/${__tmp__}.bak
-	${SED} -e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};g' -e 's;@ssl_prefix@;${SSL_PREFIX};g' \
-		-e 's;@db4_prefix@;${BUILDLINK_PREFIX.db4};g' \
-		-e 's;@perl5@;${PERL5};g' ${WRKSRC}/${__tmp__}.bak > \
-		${WRKSRC}/${__tmp__}
-	${RM} ${WRKSRC}/${__tmp__}.bak
-.endfor
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	source/dist/util/arch_variables
+SUBST_SED.paths=	-e 's;@rcd_dir@;${RCD_SCRIPTS_DIR};' 
 
 do-configure:
 .for __prog__ in qmake qtcsh
@@ -123,7 +125,7 @@ do-install:
 	#${CHOWN} ${SGE_USER} ${DESTDIR}${SGE_ROOT}
 	#${CHGRP} ${SGE_GROUP} ${DESTDIR}${SGE_ROOT}
 	cd ${WRKSRC}/source && \
-		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -allall -nobdb -noopenssl ${SGE_ARCH}
+		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -all -nobdb -noopenssl ${SGE_ARCH} -- doc man
 	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
 		ln -s ${DESTDIR}${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
 	ln -s ${DESTDIR}${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc

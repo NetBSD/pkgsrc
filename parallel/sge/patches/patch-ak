@@ -1,23 +1,33 @@
-$NetBSD: patch-ak,v 1.5 2008/09/15 16:30:57 ahoka Exp $
+$NetBSD: patch-ak,v 1.6 2009/05/13 21:00:25 markd Exp $
 
---- source/utilbin/Makefile.orig	Wed Feb  7 13:49:17 2007
-+++ source/utilbin/Makefile	Fri May 30 11:13:22 2008
-@@ -206,7 +206,7 @@
+Add LDFLAGS
+
+--- source/utilbin/Makefile.orig	2009-02-11 22:27:33.000000000 +1300
++++ source/utilbin/Makefile
+@@ -145,7 +145,7 @@ read_raw.o:		$(UTILBIN_DIR)/read_raw.c
+ 
+ #---------------------------------------------------------------------
+ echo_raw:		echo_raw.o version.o $(UTILIB) $(RMONLIB) $(COMMLISTSLIB) $(LCKLIB)
+-		$(CC) $(CFLAGS) -o $@ $(LFLAGS) echo_raw.o version.o -luti -lrmon -llck $(COMMLISTSLIB) $(LIBS)
++		$(CC) $(CFLAGS) -o $@ $(LFLAGS) echo_raw.o version.o -luti -lrmon -llck -lcommlists $(LIBS)
+ 
+ echo_raw.o:		$(UTILBIN_DIR)/echo_raw.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/echo_raw.c
+@@ -221,7 +221,7 @@ fstype.o: $(UTILBIN_DIR)/fstype.c
  		$(CC) $(CFLAGS) $(MEMCFLAG) $(GCC_NODUPLWARN) -c $(UTILBIN_DIR)/fstype.c
  #---------------------------------------------------------------------
- spooldefaults:   spooldefaults.o  version.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLCLIB) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SECLIBS) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(LCKLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB)
--		$(CC) -o $@ spooldefaults.o version.o sge_mt_init.o $(LFLAGS) -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
-+		$(CC) -o $@ spooldefaults.o version.o sge_mt_init.o $(LFLAGS) $(LDFLAGS) -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
+ spooldefaults:   spooldefaults.o  version.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLCLIB) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(LCKLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(RMONLIB)
+-		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) spooldefaults.o version.o sge_mt_init.o $(LDFLAGS) -lspoolc $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon $(DLLIB) $(SLIBS) $(LIBS)
  
  spooldefaults.o: $(UTILBIN_DIR)/spooldefaults.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooldefaults.c
-@@ -241,8 +241,7 @@
+@@ -256,7 +256,7 @@ tst_pthread_signals.o: $(UTILBIN_DIR)/ts
  
  #---------------------------------------------------------------------
- spooledit: spooledit.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SECLIBS) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(LCKLIB) $(RMONLIB)
--		$(CC) -o $@ spooledit.o version.o sge_mt_init.o $(LFLAGS) -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
--
-+		$(CC) -o $@ spooledit.o version.o sge_mt_init.o $(LFLAGS) $(LDFLAGS) -lspoolb $(SPOOLING_LIBS) -lsched -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
+ spooledit: spooledit.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(LCKLIB) $(RMONLIB)
+-		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o $(LDFLAGS) -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
+ 
  spooledit.o: $(UTILBIN_DIR)/spooledit.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooledit.c
- 
