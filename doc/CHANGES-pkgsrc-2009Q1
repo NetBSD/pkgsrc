@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.29 2009/05/11 09:37:56 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.30 2009/05/13 12:19:44 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -74,3 +74,7 @@ Pullup ticket #2761 - requested by taca
 ruby18-base: Solaris build fix
 Pullup ticket #2762 - requested by tnn
 dovecot: bug fix
+Pullup ticket #2763 - requested by hasso
+quagga-devel: security update
+Pullup ticket #2764 - requested by martti
+postfix: bug fix update
