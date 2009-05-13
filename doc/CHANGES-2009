@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1808 2009/05/13 17:47:21 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1809 2009/05/13 18:42:33 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2409,3 +2409,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090510 [taca 2009-05-13]
 	Updated devel/p5-Class-MOP to 0.84 [seb 2009-05-13]
 	Updated devel/p5-Moose to 0.78 [seb 2009-05-13]
+	Updated www/webkit-gtk to 1.1.6 [snj 2009-05-13]
+	Updated www/midori to 0.1.6 [snj 2009-05-13]
