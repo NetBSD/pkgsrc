@@ -1,4 +1,4 @@
-$NetBSD: patch-av,v 1.4 2008/10/16 09:56:58 martti Exp $
+$NetBSD: patch-av,v 1.5 2009/05/13 10:34:06 martti Exp $
 
 Support for sqlite.
 
@@ -12,13 +12,13 @@ Support for sqlite.
  #include <mail_dict.h>
  
  typedef struct {
-@@ -53,6 +54,9 @@
- #endif
+@@ -54,6 +55,9 @@ static const DICT_OPEN_INFO dict_open_in
  #ifdef HAS_PGSQL
      DICT_TYPE_PGSQL, dict_pgsql_open,
-+#endif
+ #endif
 +#ifdef HAS_SQLITE
 +    DICT_TYPE_SQLITE, dict_sqlite_open,
- #endif
++#endif
      0,
  };
+ 

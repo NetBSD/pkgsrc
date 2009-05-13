@@ -1,10 +1,10 @@
-$NetBSD: patch-at,v 1.4 2008/10/16 09:56:58 martti Exp $
+$NetBSD: patch-at,v 1.5 2009/05/13 10:34:06 martti Exp $
 
 Support for sqlite.
 
 --- src/global/dict_sqlite.c.orig	2008-10-17 00:40:21.000000000 +0200
 +++ src/global/dict_sqlite.c
-@@ -0,0 +1,278 @@
+@@ -0,0 +1,254 @@
 +/*++
 +/* NAME
 +/*	dict_sqlite 3
@@ -46,15 +46,18 @@ Support for sqlite.
 +/*	Configuration parameters:
 +/*
 +/*	The parameters encodes a number of pieces of information:
-+/*	dbpath, query, result_format and expansion_limit:
++/*	dbpath, query, table, select_field and where_field:
 +/* .IP \fIdbpath\fR
 +/*	Path to SQLite database
 +/* .IP \fIquery\fR
-+/*	Query template, before the query is actually issued, variable
-+/*	substitutions are performed. See sqlite_table(5) for details. 
++/*      Query template, before the query is actually issued, variable
++/*	substitutions are performed. See sqlite_table(5) for details. If
++/*	No query is specified, the legacy variables \fItable\fR,
++/*	\fIselect_field\fR, \fIwhere_field\fR and \fIadditional_conditions\fR
++/*	are used to construct the query template.
 +/* .IP \fIresult_format\fR
-+/*	The format used to expand results from queries.  Substitutions
-+/*	are performed as described in sqlite_table(5). Defaults to returning
++/*      The format used to expand results from queries.  Substitutions
++/*      are performed as described in sqlite_table(5). Defaults to returning
 +/*	the lookup result unchanged.
 +/* .IP expansion_limit
 +/*	Limit (if any) on the total number of lookup result values. Lookups which
@@ -75,17 +78,12 @@ Support for sqlite.
 +#ifdef HAS_SQLITE
 +#include <sqlite3.h> 
 +
-+#if !defined(SQLITE_VERSION_NUMBER) || (SQLITE_VERSION_NUMBER < 3005004)
-+#error "Your SQLite version is too old"
-+#endif
-+
 +/* Utility library. */
 +
 +#include "msg.h"
 +#include "dict.h"
 +#include "vstring.h"
 +#include "stringops.h"
-+#include "mymalloc.h"
 +
 +/* Global library. */
 +
@@ -116,24 +114,6 @@ Support for sqlite.
 +static void dict_sqlite_close(DICT *);
 +static void sqlite_parse_config(DICT_SQLITE *, const char *);
 +
-+/* dict_sqlite_quote - escape SQL metacharacters in input string */
-+
-+static void dict_sqlite_quote(DICT *dict, const char *name, VSTRING *result) {
-+	DICT_SQLITE *dict_sqlite = (DICT_SQLITE *) dict;
-+	int len = strlen(name);
-+	int buflen = 2*len + 1;
-+	char *q;
-+	
-+	if (buflen < len)
-+		msg_panic("dict_sqlite_quote: integer overflow in 2*%d+1", len);
-+    
-+	VSTRING_SPACE(result, buflen);
-+	q = sqlite3_mprintf("%q",name);
-+	vstring_strncat(result,q, strlen(q));
-+	sqlite3_free(q);
-+	VSTRING_SKIP(result);
-+}
-+
 +
 +/* dict_sqlite_close - close the database */
 +
@@ -146,11 +126,6 @@ Support for sqlite.
 +	if (sqlite3_close(dict_sqlite->db) != SQLITE_OK)
 +		msg_fatal("%s: DB close failed", myname);
 +	cfg_parser_free(dict_sqlite->parser);
-+	myfree(dict_sqlite->dbpath);
-+	myfree(dict_sqlite->query);
-+	myfree(dict_sqlite->result_format);
-+	if (dict_sqlite->ctx)
-+		db_common_free_ctx(dict_sqlite->ctx);
 +	if (dict->fold_buf)
 +		vstring_free(dict->fold_buf);
 +	dict_free(dict);
@@ -172,9 +147,7 @@ Support for sqlite.
 +	/*
 +	 * Optionally fold the key.
 +	 */
-+	if (dict->flags & DICT_FLAG_FOLD_FIX) {
-+		if (dict->fold_buf == 0)
-+			dict->fold_buf = vstring_alloc(10);
++	if (dict->fold_buf) {
 +		vstring_strcpy(dict->fold_buf, name);
 +		name = lowercase(vstring_str(dict->fold_buf));
 +	}
@@ -195,7 +168,7 @@ Support for sqlite.
 +	INIT_VSTR(query, 10);
 +
 +	if (!db_common_expand(dict_sqlite->ctx, dict_sqlite->query,
-+			name, 0, query, dict_sqlite_quote))
++			name, 0, query, NULL))
 +		return (0); 
 +
 +	if (msg_verbose)
@@ -251,10 +224,14 @@ Support for sqlite.
 +	(void) db_common_parse(0, &dict_sqlite->ctx, dict_sqlite->result_format, 0);
 +
 +	db_common_parse_domain(p, dict_sqlite->ctx);
-+	
-+	if (dict_sqlite->dict.flags & DICT_FLAG_FOLD_FIX)
-+		dict_sqlite->dict.fold_buf = vstring_alloc(10);
 +
++	if (db_common_dict_partial(dict_sqlite->ctx))
++		dict_sqlite->dict.flags |= DICT_FLAG_PATTERN;
++	else
++		dict_sqlite->dict.flags |= DICT_FLAG_FIXED;
++
++	if (dict_sqlite->dict.flags & DICT_FLAG_FOLD_FIX)
++		dict_sqlite->dict.fold_buf = vstring_alloc(10); 
 +} 
 +
 +/* dict_sqlite_open - open sqlite database */
@@ -272,7 +249,6 @@ Support for sqlite.
 +	dict_sqlite->dict.lookup = dict_sqlite_lookup;
 +	dict_sqlite->dict.close = dict_sqlite_close;
 +	dict_sqlite->dict.flags = dict_flags;
-+	dict_sqlite->dict.flags |= DICT_FLAG_FIXED;
 +	sqlite_parse_config(dict_sqlite, name);
 +
 +	if (sqlite3_open(dict_sqlite->dbpath, &dict_sqlite->db)) {
