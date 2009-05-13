@@ -4,7 +4,7 @@ NNAAMMEE
      ppkkgg__aaddmmiinn -- perform various administrative tasks to the pkg system
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aaddmmiinn [--bbqqSSvvVV] [--CC _c_o_n_f_i_g] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n]
+     ppkkgg__aaddmmiinn [--bbqqSSVVvv] [--CC _c_o_n_f_i_g] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n]
                _c_o_m_m_a_n_d [args ...]
 
 DDEESSCCRRIIPPTTIIOONN
