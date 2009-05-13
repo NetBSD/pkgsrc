@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1813 2009/05/13 21:48:52 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1814 2009/05/13 22:08:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2415,3 +2415,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated parallel/sge to 6.2.2.1 [markd 2009-05-13]
 	Updated textproc/gnome-doc-utils to 0.16.1 [wiz 2009-05-13]
 	Updated sysutils/gnome-nds-thumbnailer to 1.2.1 [wiz 2009-05-13]
+	Updated audio/fluidsynth to 1.0.9 [wiz 2009-05-13]
