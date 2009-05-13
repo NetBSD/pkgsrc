@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1810 2009/05/13 18:48:17 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1811 2009/05/13 21:02:28 markd Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2412,3 +2412,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/webkit-gtk to 1.1.6 [snj 2009-05-13]
 	Updated www/midori to 0.1.6 [snj 2009-05-13]
 	Updated devel/gsoap to 2.7.13 [hasso 2009-05-13]
+	Updated parallel/sge to 6.2.2.1 [markd 2009-05-13]
