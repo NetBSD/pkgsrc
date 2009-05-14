@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1831 2009/05/14 19:37:15 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1832 2009/05/14 19:37:35 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2434,4 +2434,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/py-networkx to 0.37nb1 [he 2009-05-14]
 	Added graphics/py-matplotlib-tk version 0.98.0 [he 2009-05-14]
 	Updated mail/postfix to 2.6.0nb1 [martti 2009-05-14]
+	Updated www/drupal to 5.18 [adrianp 2009-05-14]
 	Updated www/drupal to 5.18 [adrianp 2009-05-14]
