@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1833 2009/05/14 19:38:16 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1834 2009/05/14 19:38:47 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2436,4 +2436,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix to 2.6.0nb1 [martti 2009-05-14]
 	Updated www/drupal to 5.18 [adrianp 2009-05-14]
 	Updated www/drupal to 5.18 [adrianp 2009-05-14]
+	Updated www/drupal6 to 6.12 [adrianp 2009-05-14]
 	Updated www/drupal6 to 6.12 [adrianp 2009-05-14]
