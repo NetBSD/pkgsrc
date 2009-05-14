@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
+$NetBSD: patch-af,v 1.3 2009/05/14 23:00:46 obache Exp $
 
---- configure.orig	2006-05-19 04:30:20.000000000 +0900
+--- configure.orig	2009-05-07 14:25:24.000000000 +0000
 +++ configure
-@@ -9458,75 +9458,23 @@ if test "$with_pam" != no; then
+@@ -9480,75 +9480,23 @@ if test "$with_pam" != no; then
      CPPFLAGS="$CPPFLAGS -I${with_pam}/include"
      LDFLAGS="$LDFLAGS -L${with_pam}/lib"
    fi
@@ -89,7 +89,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -9535,7 +9483,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -9557,7 +9505,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -98,7 +98,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (eval echo "$as_me:$LINENO: \"$ac_compile\"") >&5
-@@ -9561,8 +9509,8 @@ echo "$as_me:$LINENO: result: $ac_header
+@@ -9583,8 +9531,8 @@ echo "$as_me:$LINENO: result: $ac_header
  echo "${ECHO_T}$ac_header_compiler" >&6
  
  # Is the header present?
@@ -109,7 +109,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
  cat >conftest.$ac_ext <<_ACEOF
  #line $LINENO "configure"
  /* confdefs.h.  */
-@@ -9570,7 +9518,7 @@ _ACEOF
+@@ -9592,7 +9540,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -118,7 +118,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
  _ACEOF
  if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
    (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-@@ -9603,10 +9551,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
+@@ -9625,10 +9573,10 @@ echo "${ECHO_T}$ac_header_preproc" >&6
  # So?  What about this header?
  case $ac_header_compiler:$ac_header_preproc in
    yes:no )
@@ -133,7 +133,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------ ##
-@@ -9617,12 +9565,12 @@ _ASBOX
+@@ -9639,12 +9587,12 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
    no:yes )
@@ -152,7 +152,7 @@ $NetBSD: patch-af,v 1.2 2006/10/04 12:07:53 obache Exp $
      (
        cat <<\_ASBOX
  ## ------------------------------------ ##
-@@ -9633,29 +9581,157 @@ _ASBOX
+@@ -9655,29 +9603,157 @@ _ASBOX
        sed "s/^/$as_me: WARNING:     /" >&2
      ;;
  esac
