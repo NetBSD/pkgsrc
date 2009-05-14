@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2009/05/01 22:08:42 sno Exp $
+# $NetBSD: Makefile,v 1.252 2009/05/14 04:59:45 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -170,6 +170,7 @@ SUBDIR+=	tex-hugelatex
 SUBDIR+=	tex-hyperref
 SUBDIR+=	tex-hyperref-doc
 SUBDIR+=	tex-hyph-utf8
+SUBDIR+=	tex-hyph-utf8-doc
 SUBDIR+=	tex-hyphen-ancientgreek
 SUBDIR+=	tex-hyphen-arabic
 SUBDIR+=	tex-hyphen-base
