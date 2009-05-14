@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.28 2008/12/04 07:18:46 martti Exp $
+@comment $NetBSD: PLIST,v 1.28.4.1 2009/05/14 09:08:59 tron Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
-share/squirrelmail/AUTHORS
-share/squirrelmail/COPYING
-share/squirrelmail/ChangeLog
-share/squirrelmail/INSTALL
 share/squirrelmail/README
-share/squirrelmail/ReleaseNotes
-share/squirrelmail/UPGRADE
+share/squirrelmail/class/.htaccess
 share/squirrelmail/class/deliver/Deliver.class.php
 share/squirrelmail/class/deliver/Deliver_IMAP.class.php
 share/squirrelmail/class/deliver/Deliver_SMTP.class.php
@@ -27,11 +22,13 @@ share/squirrelmail/class/mime/MessageHeader.class.php
 share/squirrelmail/class/mime/Rfc822Header.class.php
 share/squirrelmail/class/mime/SMimeMessage.class.php
 share/squirrelmail/class/mime/index.php
+share/squirrelmail/config/.htaccess
 share/squirrelmail/config/conf.pl
 share/squirrelmail/config/config_default.php
 share/squirrelmail/config/config_local.php
 share/squirrelmail/config/index.php
 share/squirrelmail/configure
+share/squirrelmail/contrib/.htaccess
 share/squirrelmail/contrib/RPM/config.php.redhat
 share/squirrelmail/contrib/RPM/squirrelmail.conf
 share/squirrelmail/contrib/RPM/squirrelmail.cron
@@ -42,43 +39,54 @@ share/squirrelmail/contrib/squirrelmail.mailto.Win9x.reg
 share/squirrelmail/data/.htaccess
 share/squirrelmail/data/default_pref
 share/squirrelmail/data/index.php
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.0.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.1.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.2.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.3.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.4.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.5.txt
-share/squirrelmail/doc/ReleaseNotes/1.2/Notes-1.2.6.txt
-share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.0.txt
-share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.1.txt
-share/squirrelmail/doc/ReleaseNotes/1.3/Notes-1.3.2.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.0.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.1.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10a.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.11.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.12.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.13.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.15.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.16.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.4.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.5.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.6.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.7.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.8.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.9.txt
-share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.9a.txt
+share/squirrelmail/doc/.htaccess
+share/squirrelmail/doc/AUTHORS
+share/squirrelmail/doc/COPYING
+share/squirrelmail/doc/ChangeLog
+share/squirrelmail/doc/INSTALL
+share/squirrelmail/doc/README
+share/squirrelmail/doc/ReleaseNotes
+share/squirrelmail/doc/UPGRADE
 share/squirrelmail/doc/authentication.txt
 share/squirrelmail/doc/ie_ssl.txt
 share/squirrelmail/doc/index.html
+share/squirrelmail/doc/index.php
 share/squirrelmail/doc/presets.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.0.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.1.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.2.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.3.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.4.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.5.txt
+share/squirrelmail/doc/release_notes_archive/1.2/Notes-1.2.6.txt
+share/squirrelmail/doc/release_notes_archive/1.3/Notes-1.3.0.txt
+share/squirrelmail/doc/release_notes_archive/1.3/Notes-1.3.1.txt
+share/squirrelmail/doc/release_notes_archive/1.3/Notes-1.3.2.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.0.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.1.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.10.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.10a.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.11.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.12.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.13.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.15.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.16.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.17.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.2.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.3.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.3a.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.4.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.5.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.6.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.7.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.8.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.9.txt
+share/squirrelmail/doc/release_notes_archive/1.4/Notes-1.4.9a.txt
 share/squirrelmail/doc/russian_apache.txt
 share/squirrelmail/doc/security.txt
 share/squirrelmail/doc/translating.txt
 share/squirrelmail/doc/translating_help.txt
+share/squirrelmail/functions/.htaccess
 share/squirrelmail/functions/abook_database.php
 share/squirrelmail/functions/abook_ldap_server.php
 share/squirrelmail/functions/abook_local_file.php
@@ -160,6 +168,7 @@ share/squirrelmail/functions/prefs.php
 share/squirrelmail/functions/strings.php
 share/squirrelmail/functions/tree.php
 share/squirrelmail/functions/url_parser.php
+share/squirrelmail/help/.htaccess
 share/squirrelmail/help/en_US/FAQ.hlp
 share/squirrelmail/help/en_US/addresses.hlp
 share/squirrelmail/help/en_US/basic.hlp
@@ -184,6 +193,7 @@ share/squirrelmail/images/senti.png
 share/squirrelmail/images/sm_logo.png
 share/squirrelmail/images/sort_none.png
 share/squirrelmail/images/up_pointer.png
+share/squirrelmail/include/.htaccess
 share/squirrelmail/include/index.php
 share/squirrelmail/include/load_prefs.php
 share/squirrelmail/include/options/display.php
@@ -192,6 +202,7 @@ share/squirrelmail/include/options/index.php
 share/squirrelmail/include/options/personal.php
 share/squirrelmail/include/validate.php
 share/squirrelmail/index.php
+share/squirrelmail/locale/.htaccess
 share/squirrelmail/locale/README.locales
 share/squirrelmail/locale/index.php
 share/squirrelmail/locale/timezones.cfg
@@ -333,6 +344,7 @@ share/squirrelmail/plugins/translate/README
 share/squirrelmail/plugins/translate/index.php
 share/squirrelmail/plugins/translate/options.php
 share/squirrelmail/plugins/translate/setup.php
+share/squirrelmail/po/.htaccess
 share/squirrelmail/po/compilepo
 share/squirrelmail/po/independent_strings.txt
 share/squirrelmail/po/index.php
@@ -482,10 +494,10 @@ share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/functions/encode
 @dirrm share/squirrelmail/functions/decode
 @dirrm share/squirrelmail/functions
-@dirrm share/squirrelmail/doc/ReleaseNotes/1.4
-@dirrm share/squirrelmail/doc/ReleaseNotes/1.3
-@dirrm share/squirrelmail/doc/ReleaseNotes/1.2
-@dirrm share/squirrelmail/doc/ReleaseNotes
+@dirrm share/squirrelmail/doc/release_notes_archive/1.4
+@dirrm share/squirrelmail/doc/release_notes_archive/1.3
+@dirrm share/squirrelmail/doc/release_notes_archive/1.2
+@dirrm share/squirrelmail/doc/release_notes_archive
 @dirrm share/squirrelmail/doc
 @dirrm share/squirrelmail/data
 @dirrm share/squirrelmail/contrib/RPM
