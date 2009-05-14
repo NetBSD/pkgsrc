@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2008/01/23 08:53:06 obache Exp $
+# $NetBSD: Makefile.common,v 1.14 2009/05/14 23:00:46 obache Exp $
 #
 # This file is currently included by:
 #
@@ -17,7 +17,7 @@
 # This Makefile fragment should be included _below_ any SASL_PLUGIN
 # definition and _above_ any CONFIGURE_ARGS definitions.
 
-DISTNAME=	cyrus-sasl-2.1.22
+DISTNAME=	cyrus-sasl-2.1.23
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/sasl/ \
