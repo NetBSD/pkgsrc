@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/22 11:40:55 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/14 09:16:39 obache Exp $
 ${GEM_HOME}/cache/net-irc-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/examples/client.rb
+${GEM_LIBDIR}/examples/echo_bot.rb
+${GEM_LIBDIR}/examples/gmail.rb
 ${GEM_LIBDIR}/examples/hatena-star-stream.rb
+${GEM_LIBDIR}/examples/hig.rb
+${GEM_LIBDIR}/examples/iig.rb
 ${GEM_LIBDIR}/examples/lig.rb
 ${GEM_LIBDIR}/examples/lingr.rb
 ${GEM_LIBDIR}/examples/mixi.rb
