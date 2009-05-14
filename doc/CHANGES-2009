@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1829 2009/05/14 13:55:32 he Exp $
+$NetBSD: CHANGES-2009,v 1.1830 2009/05/14 17:12:41 martti Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2433,3 +2433,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libsndfile to 1.0.20 [adam 2009-05-14]
 	Updated math/py-networkx to 0.37nb1 [he 2009-05-14]
 	Added graphics/py-matplotlib-tk version 0.98.0 [he 2009-05-14]
+	Updated mail/postfix to 2.6.0nb1 [martti 2009-05-14]
