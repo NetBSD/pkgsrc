@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2009/05/02 17:25:03 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2009/05/14 12:58:27 adam Exp $
 
-DISTNAME=	libsndfile-1.0.19
+DISTNAME=	libsndfile-1.0.20
 CATEGORIES=	audio
 MASTER_SITES=	http://www.mega-nerd.com/libsndfile/
 
@@ -13,7 +13,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS=		pkg-config
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	sndfile.pc.in
 GNU_CONFIGURE=		yes
 
