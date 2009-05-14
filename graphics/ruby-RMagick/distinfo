@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.42 2009/02/03 12:44:52 obache Exp $
+$NetBSD: distinfo,v 1.43 2009/05/14 23:31:37 obache Exp $
 
-SHA1 (rmagick-2.9.1.gem) = 7f969d3f58ce481b5d0848a03cd4c6ae69f13919
-RMD160 (rmagick-2.9.1.gem) = 27f5bfc4c310b19a15a5fde741bf2254fe15849f
-Size (rmagick-2.9.1.gem) = 1264128 bytes
+SHA1 (rmagick-2.9.2.gem) = 48a17bbcf8877f547be12c11038dd324e8ba5a67
+RMD160 (rmagick-2.9.2.gem) = 7b934326609edbe86ff137eb8a9a401f052a595a
+Size (rmagick-2.9.2.gem) = 1265664 bytes
