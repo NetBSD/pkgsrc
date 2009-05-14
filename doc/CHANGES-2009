@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1820 2009/05/14 05:54:09 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1821 2009/05/14 06:10:40 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2424,3 +2424,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-tetex to 3.0.12897 [minskim 2009-05-14]
 	Added print/tex-hyph-utf8-doc version 2008.11171 [minskim 2009-05-14]
 	Added devel/lua-mode version 20071122 [minskim 2009-05-14]
+	Added textproc/markdown-mode version 1.6 [minskim 2009-05-14]
