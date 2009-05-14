@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/04/27 16:07:00 minskim Exp $
-# TeX Live Revision 12785
+# $NetBSD: Makefile,v 1.7 2009/05/14 04:44:33 minskim Exp $
+# TeX Live Revision 12897
 
 DISTNAME=	bin-tetex
-PKGNAME=	tex-${DISTNAME}-3.0.12785
+PKGNAME=	tex-${DISTNAME}-3.0.12897
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Supplementary files for updmap
