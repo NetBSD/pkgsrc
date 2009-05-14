@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/05/14 13:54:13 he Exp $
+
+Only turn on building of the Tk part.
+
+--- setupext.py.orig	2008-05-30 10:47:10.000000000 +1200
++++ setupext.py
+@@ -103,17 +103,17 @@ numpy_inc_dirs = []
+ # matplotlib build options, which can be altered using setup.cfg
+ options = {'display_status': True,
+            'verbose': False,
+-           'provide_pytz': 'auto',
+-           'provide_dateutil': 'auto',
+-           'provide_configobj': 'auto',
+-           'provide_traits': 'auto',
+-           'build_agg': True,
+-           'build_gtk': 'auto',
+-           'build_gtkagg': 'auto',
+-           'build_tkagg': 'auto',
+-           'build_wxagg': 'auto',
+-           'build_image': True,
+-           'build_windowing': True,
++           'provide_pytz': False,
++           'provide_dateutil': False,
++           'provide_configobj': False,
++           'provide_traits': False,
++           'build_agg': False,
++           'build_gtk': False,
++           'build_gtkagg': False,
++           'build_tkagg': True,
++           'build_wxagg': False,
++           'build_image': False,
++           'build_windowing': False,
+            'backend': None,
+            'numerix': None}
+ 
+@@ -321,11 +321,8 @@ def check_for_libpng():
+     return True
+ 
+ def add_base_flags(module):
+-    incdirs = filter(os.path.exists,
+-                     [os.path.join(p, 'include') for p in basedir[sys.platform] ])
+-    libdirs = filter(os.path.exists,
+-                     [os.path.join(p, 'lib')     for p in basedir[sys.platform] ]+
+-                     [os.path.join(p, 'lib64')     for p in basedir[sys.platform] ] )
++    incdirs = os.path.join(os.environ['LOCALBASE'], 'include')
++    libdirs = os.path.join(os.environ['LOCALBASE'], 'lib')
+ 
+     module.include_dirs.extend(incdirs)
+     module.include_dirs.append('.')

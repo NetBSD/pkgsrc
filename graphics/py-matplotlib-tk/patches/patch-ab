@@ -1,0 +1,68 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/05/14 13:54:13 he Exp $
+
+Ensure we skip installation of the non-Tk stuff, installed
+by py-matplotlib itself.
+
+--- setup.py.orig	2008-05-30 10:47:09.000000000 +1200
++++ setup.py
+@@ -92,11 +92,11 @@ if not check_for_numpy():
+ if not check_for_freetype():
+     sys.exit(1)
+ 
+-build_ft2font(ext_modules, packages)
+-build_ttconv(ext_modules, packages)
+-build_contour(ext_modules, packages)
+-build_nxutils(ext_modules, packages)
+-build_path(ext_modules, packages)
++#build_ft2font(ext_modules, packages)
++#build_ttconv(ext_modules, packages)
++#build_contour(ext_modules, packages)
++#build_nxutils(ext_modules, packages)
++#build_path(ext_modules, packages)
+ 
+ print_raw("")
+ print_raw("OPTIONAL BACKEND DEPENDENCIES")
+@@ -133,13 +133,13 @@ if options['build_wxagg']:
+             print_message("WxAgg extension not required for wxPython >= 2.8")
+         rc['backend'] = 'WXAgg'
+ 
+-hasgtk = check_for_gtk()
++hasgtk = 1   # check_for_gtk()
+ if options['build_gtk']:
+     if hasgtk or (options['build_gtk'] is True):
+         build_gdk(ext_modules, packages)
+ if options['build_gtkagg']:
+     if hasgtk or (options['build_gtkagg'] is True):
+-        options['build_agg'] = 1
++        options['build_agg'] = 0
+         build_gtkagg(ext_modules, packages)
+         rc['backend'] = 'GTKAgg'
+ 
+@@ -197,9 +197,9 @@ check_for_pdftops()
+ # TODO: comment out for mpl release:
+ print_raw("")
+ print_raw("EXPERIMENTAL CONFIG PACKAGE DEPENDENCIES")
+-packages.append('matplotlib.config')
+-if check_provide_configobj(): py_modules.append('configobj')
+-if check_provide_traits(): build_traits(ext_modules, packages)
++#packages.append('matplotlib.config')
++#if check_provide_configobj(): py_modules.append('configobj')
++#if check_provide_traits(): build_traits(ext_modules, packages)
+ 
+ print_raw("")
+ print_raw("[Edit setup.cfg to suppress the above messages]")
+@@ -238,11 +238,11 @@ distrib = setup(name="matplotlib",
+       interfaces and hardcopy output formats.  There is a 'pylab' mode
+       which emulates matlab graphics
+       """,
+-      packages = packages,
++#      packages = packages,
+       platforms='any',
+-      py_modules = py_modules,
++#      py_modules = py_modules,
+       ext_modules = ext_modules,
+       package_dir = {'': 'lib'},
+-      package_data = package_data,
++#      package_data = package_data,
+       **additional_params
+       )
