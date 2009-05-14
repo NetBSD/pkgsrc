@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/14 05:52:12 minskim Exp $
+
+SHA1 (lua-mode-20071122.tar.gz) = 6c01b9f835704b369d16cefa01ec96a7e1bebda5
+RMD160 (lua-mode-20071122.tar.gz) = a001e26d6b9f18a28a78c812d7c9b0bf650d4353
+Size (lua-mode-20071122.tar.gz) = 12705 bytes
