@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.224 2009/05/13 10:33:23 martti Exp $
+# $NetBSD: Makefile,v 1.225 2009/05/14 17:12:10 martti Exp $
 
 DISTNAME=	postfix-2.6.0
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/official/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/official/
@@ -12,6 +12,7 @@ DIST_SUBDIR=	postfix
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
+
 LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
