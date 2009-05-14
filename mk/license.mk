@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.17 2009/04/30 12:27:16 gdt Exp $
+# $NetBSD: license.mk,v 1.18 2009/05/14 06:01:00 martti Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -100,6 +100,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	apache-1.1 apache-2.0 \
 	artistic artistic-2.0 \
 	cddl-1.0 \
+	cpl-1.0 \
 	open-font-license
 
 ##### Variant spellings
