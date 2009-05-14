@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1835 2009/05/14 19:39:26 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.1836 2009/05/14 23:02:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2436,3 +2436,15 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix to 2.6.0nb1 [martti 2009-05-14]
 	Updated www/drupal to 5.18 [adrianp 2009-05-14]
 	Updated www/drupal6 to 6.12 [adrianp 2009-05-14]
+	Updated security/cyrus-sasl to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-anonymous to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-crammd5 to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-digestmd5 to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-gssapi to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-ldapdb to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-login to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-ntlm to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-otp to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-plain to 2.1.23 [obache 2009-05-14]
+	Updated security/cy2-sql to 2.1.23 [obache 2009-05-14]
+	Updated security/cyrus-saslauthd to 2.1.23 [obache 2009-05-14]
