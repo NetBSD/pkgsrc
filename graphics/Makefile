@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.523 2009/05/10 13:13:56 obache Exp $
+# $NetBSD: Makefile,v 1.524 2009/05/14 13:55:54 he Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -317,6 +317,7 @@ SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
+SUBDIR+=	py-matplotlib-tk
 SUBDIR+=	py-piddle
 SUBDIR+=	qcamview
 SUBDIR+=	qimageblitz
