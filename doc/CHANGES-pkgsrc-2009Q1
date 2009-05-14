@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.30 2009/05/13 12:19:44 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.31 2009/05/14 09:09:22 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -78,3 +78,5 @@ Pullup ticket #2763 - requested by hasso
 quagga-devel: security update
 Pullup ticket #2764 - requested by martti
 postfix: bug fix update
+Ticket #2765 - requested by martti
+squirrelmail: security update
