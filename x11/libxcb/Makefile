@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/04/11 12:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/14 02:57:28 hasso Exp $
 #
 
 DISTNAME=	libxcb-1.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -71,6 +72,9 @@ SUBST_FILES.pc=		xcb.pc.in
 SUBST_MESSAGE.pc=	Configuring threading in xcb.pc.in.
 SUBST_STAGE.pc=		pre-configure
 SUBST_VARS.pc=		XTHREADLIB XTHREAD_CPPFLAGS
+
+post-extract:
+	${CHMOD} -R go-w ${WRKSRC}
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v -i -f
