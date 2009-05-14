@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/14 05:52:12 minskim Exp $
+${EMACS_LISPPREFIX}/lua-mode.el
+${EMACS_LISPPREFIX}/lua-mode.elc
