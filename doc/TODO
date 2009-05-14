@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8094 2009/05/14 06:55:09 martti Exp $
+$NetBSD: TODO,v 1.8095 2009/05/14 12:34:03 obache Exp $
 
 Suggested new packages
 ======================
@@ -899,7 +899,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mail-notification-5.3
 	o mailgraph-1.14
 	o mailscanner-4.74
-	o mailx-12.3 [pkg/38262, replace mail/nail]
 	o maketool-0.8.4
 	o makeztxt-1.60
 	o manedit-1.2.1
