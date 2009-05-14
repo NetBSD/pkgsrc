@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
+$NetBSD: patch-ai,v 1.8 2009/05/14 23:00:46 obache Exp $
 
---- configure.orig	2006-05-18 15:30:13.000000000 -0400
+--- configure.orig	2009-05-07 14:24:25.000000000 +0000
 +++ configure
 @@ -1334,8 +1334,6 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
  ac_aux_dir=
  for ac_dir in config $srcdir/config; do
    if test -f $ac_dir/install-sh; then
-@@ -5125,7 +5121,7 @@ if test $ac_cv_header_db_h = yes; then
+@@ -5147,7 +5143,7 @@ if test $ac_cv_header_db_h = yes; then
  	fi
  
  	saved_LIBS=$LIBS
@@ -29,7 +29,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
            do
  	    LIBS="$saved_LIBS -l$dbname"
  	    cat >conftest.$ac_ext <<_ACEOF
-@@ -5156,7 +5152,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5178,7 +5174,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -38,7 +38,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -5882,7 +5878,7 @@ if test $ac_cv_header_db_h = yes; then
+@@ -5904,7 +5900,7 @@ if test $ac_cv_header_db_h = yes; then
  	fi
  
  	saved_LIBS=$LIBS
@@ -47,7 +47,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
            do
  	    LIBS="$saved_LIBS -l$dbname"
  	    cat >conftest.$ac_ext <<_ACEOF
-@@ -5913,7 +5909,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
+@@ -5935,7 +5931,7 @@ if { (eval echo "$as_me:$LINENO: \"$ac_l
    ac_status=$?
    echo "$as_me:$LINENO: \$? = $ac_status" >&5
    (exit $ac_status); }; }; then
@@ -56,7 +56,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
  else
    echo "$as_me: failed program was:" >&5
  sed 's/^/| /' conftest.$ac_ext >&5
-@@ -11304,8 +11300,15 @@ if test $ac_cv_lib_resolv_res_search = y
+@@ -11326,8 +11322,15 @@ if test $ac_cv_lib_resolv_res_search = y
  fi
  
    SASL_MECHS="$SASL_MECHS libgssapiv2.la"
@@ -74,7 +74,7 @@ $NetBSD: patch-ai,v 1.7 2006/11/02 13:02:39 obache Exp $
  
    cmu_save_LIBS="$LIBS"
    LIBS="$LIBS $GSSAPIBASE_LIBS"
-@@ -11403,11 +11406,6 @@ fi
+@@ -11425,11 +11428,6 @@ fi
  
  
  if test "$gssapi" != "no"; then
