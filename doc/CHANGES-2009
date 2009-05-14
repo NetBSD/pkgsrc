@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1817 2009/05/14 02:59:30 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1818 2009/05/14 04:45:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2421,3 +2421,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-hyphen-coptic to 2008.8935nb1 [minskim 2009-05-14]
 	Updated print/tex-hyphen-greek to 2008.11160nb1 [minskim 2009-05-14]
 	Updated x11/libxcb to 1.2nb1 [hasso 2009-05-14]
+	Updated print/tex-bin-tetex to 3.0.12897 [minskim 2009-05-14]
