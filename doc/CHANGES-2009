@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1826 2009/05/14 12:59:37 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1827 2009/05/14 13:00:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2429,4 +2429,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/squirrelmail to 1.4.18 [martti 2009-05-14]
 	Updated databases/ruby-tokyotyrant to 1.6 [obache 2009-05-14]
 	Updated chat/ruby-net-irc to 0.0.7 [obache 2009-05-14]
+	Updated x11/xf86-video-intel to 2.7.1 [taca 2009-05-14]
 	Updated audio/libsndfile to 1.0.20 [adam 2009-05-14]
