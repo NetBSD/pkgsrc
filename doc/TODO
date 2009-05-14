@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8097 2009/05/14 13:01:10 taca Exp $
+$NetBSD: TODO,v 1.8098 2009/05/14 22:07:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -511,6 +511,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cvs2svn-2.2.0
 	o cvsd-1.0.16
 	o cygwin_lib-1.5.24.2
+	o cyrus-sasl-2.1.23 [obache]
 	o dansguardian-2.10.0.3
 	o dap-3.7
 	o darcs-2.1.2
