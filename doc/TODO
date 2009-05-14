@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8095 2009/05/14 12:34:03 obache Exp $
+$NetBSD: TODO,v 1.8096 2009/05/14 12:39:33 adam Exp $
 
 Suggested new packages
 ======================
@@ -1095,7 +1095,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.8
 	o pngcheck-2.3.0
-	o pngcrush-1.6.17
 	o po4a-0.29
 	o poedit-1.4.2
 	o polsms-2.1.0
