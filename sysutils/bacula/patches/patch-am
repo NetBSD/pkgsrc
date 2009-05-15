@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2008/01/08 16:52:20 ghen Exp $
+$NetBSD: patch-am,v 1.2 2009/05/15 10:29:05 adam Exp $
 
---- scripts/Makefile.in.orig	2007-04-18 19:06:43.000000000 +0200
+--- scripts/Makefile.in.orig	2009-03-12 19:05:33.000000000 +0100
 +++ scripts/Makefile.in
-@@ -51,11 +51,6 @@ install: installdirs
+@@ -58,11 +58,6 @@ install: installdirs
  	   $(MV) -f ${DESTDIR}${scriptdir}/disk-changer ${DESTDIR}${scriptdir}/disk-changer.old; \
  	fi
  	$(INSTALL_SCRIPT) disk-changer $(DESTDIR)$(scriptdir)/disk-changer
