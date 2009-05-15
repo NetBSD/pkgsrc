@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1838 2009/05/15 08:28:20 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.1839 2009/05/15 08:52:57 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2451,3 +2451,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/cy2-sql to 2.1.23 [obache 2009-05-14]
 	Updated security/cyrus-saslauthd to 2.1.23 [obache 2009-05-14]
 	Updated graphics/ruby-RMagick to 2.9.2 [obache 2009-05-14]
+	Updated devel/libdatrie to 0.2.2 [obache 2009-05-15]
