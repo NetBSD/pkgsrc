@@ -1,13 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/26 11:38:41 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/15 08:57:44 obache Exp $
 #
 
 DISTNAME=	gtk-im-libthai-0.1.4
+PKGREVISION=	1
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/
+MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
+		ftp://linux.thai.net/pub/ThaiLinux/software/libthai/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://linux.thai.net/projects/gtk-im-libthai
 COMMENT=	GTK+-2.0 Thai Input Module
+
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
