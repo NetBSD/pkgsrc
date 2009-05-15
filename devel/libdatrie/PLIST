@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/11 02:11:24 obache Exp $
-bin/trietool
-include/datrie/sb-trie.h
+@comment $NetBSD: PLIST,v 1.2 2009/05/15 08:52:42 obache Exp $
+bin/trietool-0.2
+include/datrie/alpha-map.h
 include/datrie/trie.h
 include/datrie/triedefs.h
 include/datrie/typedefs.h
 lib/libdatrie.la
-lib/pkgconfig/datrie.pc
-man/man1/trietool.1
+lib/pkgconfig/datrie-0.2.pc
+man/man1/trietool-0.2.1
+share/doc/libdatrie/README.migration
+@dirrm share/doc/libdatrie
 @dirrm include/datrie
