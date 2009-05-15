@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.2 2005/12/08 01:04:45 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2009/05/15 10:29:05 adam Exp $
 
---- src/dird/Makefile.in.orig	2005-09-28 21:24:56.000000000 +0200
+--- src/dird/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
 +++ src/dird/Makefile.in
-@@ -110,14 +110,14 @@ devclean: realclean
+@@ -63,7 +63,7 @@ all: Makefile bacula-dir @STATIC_DIR@
+ bacula-dir: Makefile $(SVROBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
+ 	@echo "Linking $@ ..."
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../cats -L../findlib -o $@ $(SVROBJS) \
+-	      -lbacfind -lbacsql -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
++	      ../findlib/libbacfind.la ../cats/libbacsql.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(DLIB) $(DB_LIBS) $(LIBS) \
+ 	      $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 
+ static-bacula-dir:  Makefile $(SVROBJS) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../cats/libbacsql$(DEFAULT_ARCHIVE_TYPE) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE)
+@@ -97,14 +97,14 @@ devclean: realclean
  install: all
- 	$(INSTALL_PROGRAM) bacula-dir $(DESTDIR)$(sbindir)/bacula-dir
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-dir $(DESTDIR)$(sbindir)/bacula-dir
  	@srcconf=bacula-dir.conf; \
 -	   if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	   if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	   if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	      destconf=$$srcconf.new; \
  	      echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	   else \
@@ -15,8 +24,8 @@ $NetBSD: patch-aa,v 1.2 2005/12/08 01:04:45 wiz Exp $
  	   fi; \
 -	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	   echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	   ${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  	@if  test -f ${DESTDIR}${scriptdir}/query.sql; then \
  	   echo "  ==> Saving existing query.sql to query.sql.old"; \
  	   $(MV) -f ${DESTDIR}${scriptdir}/query.sql ${DESTDIR}${scriptdir}/query.sql.old; \
