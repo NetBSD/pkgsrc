@@ -1,13 +1,22 @@
-$NetBSD: patch-ae,v 1.3 2008/11/21 14:09:31 adam Exp $
+$NetBSD: patch-ae,v 1.4 2009/05/15 10:29:05 adam Exp $
 
---- src/filed/Makefile.in.orig	2007-05-27 11:34:40.000000000 +0200
+--- src/filed/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
 +++ src/filed/Makefile.in
-@@ -120,14 +120,14 @@ devclean: realclean
+@@ -86,7 +86,7 @@ win32:	$(WIN32OBJS)
+ bacula-fd:  Makefile $(SVROBJS) ../findlib/libbacfind$(DEFAULT_ARCHIVE_TYPE) ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
+ 	@echo "Linking $@ ..."
+ 	$(LIBTOOL_LINK) $(CXX) $(WLDFLAGS) $(LDFLAGS) -L../lib -L../findlib -o $@ $(SVROBJS) \
+-	  $(WIN32LIBS) $(FDLIBS) -lbacfind -lbacpy -lbaccfg -lbac -lm $(PYTHON_LIBS) $(LIBS) \
++	  $(WIN32LIBS) $(FDLIBS) ../findlib/libbacfind.la ../lib/libbacpy.la ../lib/libbaccfg.la ../lib/libbac.la -lm $(PYTHON_LIBS) $(LIBS) \
+ 	  $(DLIB) $(WRAPLIBS) $(GETTEXT_LIBS) $(OPENSSL_LIBS)
+ 
+ static-bacula-fd: Makefile $(SVROBJS) ../findlib/libbacfind.a ../lib/libbacpy$(DEFAULT_ARCHIVE_TYPE) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) @WIN32@
+@@ -129,14 +129,14 @@ devclean: realclean
  install: all
- 	$(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd 
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-fd $(DESTDIR)$(sbindir)/bacula-fd 
  	@srcconf=bacula-fd.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -15,8 +24,8 @@ $NetBSD: patch-ae,v 1.3 2008/11/21 14:09:31 adam Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  	@if test -f static-bacula-fd; then \
- 	   $(INSTALL_PROGRAM) static-bacula-fd $(DESTDIR)$(sbindir)/static-bacula-fd; \
+ 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bacula-fd $(DESTDIR)$(sbindir)/static-bacula-fd; \
  	fi
