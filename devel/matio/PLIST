@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/15 23:08:14 dmcmahill Exp $
+include/matio.h
+include/matioConfig.h
+lib/libmatio.la
+lib/pkgconfig/matio.pc
