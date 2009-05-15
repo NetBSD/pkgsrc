@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.31 2009/05/14 09:09:22 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.32 2009/05/15 12:15:27 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -80,3 +80,11 @@ Pullup ticket #2764 - requested by martti
 postfix: bug fix update
 Ticket #2765 - requested by martti
 squirrelmail: security update
+Pullup ticket #2766 - requested by he
+py-networkx: package list fix
+Pullup ticket #2768 - requested by kefren
+qemu: security patch
+Pullup ticket #2769 - requested by adrianp
+drupal: security update
+Pullup ticket #2770 - requested by adrianp
+drupal6: security update
