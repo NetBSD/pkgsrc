@@ -1,0 +1,3 @@
+libmatio is an open-source library for reading/writing Matlab MAT files.  This
+library is designed for use by programs/libraries that do not have access or
+do not want to rely on Matlab's libmat shared library.
