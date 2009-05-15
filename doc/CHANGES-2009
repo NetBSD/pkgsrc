@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1841 2009/05/15 08:58:28 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1842 2009/05/15 09:31:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2454,3 +2454,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libdatrie to 0.2.2 [obache 2009-05-15]
 	Updated devel/libthai to 0.1.11 [obache 2009-05-15]
 	Updated inputmethod/gtk-im-libthai to 0.1.4nb1 [obache 2009-05-15]
+	Updated textproc/ruby-libxml to 1.1.3 [obache 2009-05-15]
