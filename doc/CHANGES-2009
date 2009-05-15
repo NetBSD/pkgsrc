@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1844 2009/05/15 13:03:52 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1845 2009/05/15 23:11:03 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2457,3 +2457,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/ruby-libxml to 1.1.3 [obache 2009-05-15]
 	Updated net/Transmission to 1.61 [tnn 2009-05-15]
 	Updated mail/squirrelmail to 1.4.18nb1 [taca 2009-05-15]
+	Added devel/matio version 1.3.3 [dmcmahill 2009-05-15]
