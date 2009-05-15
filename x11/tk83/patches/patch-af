@@ -1,0 +1,23 @@
+$NetBSD: patch-af,v 1.1 2009/05/15 12:12:28 sborrill Exp $
+
+Tk uses X event numbers to index this array, as well as adding a few of its
+own, starting with "VirtualEvent" (Which is correctly set to LASTEvent,
+defined in include/X11/X.h).  In xproto-7.0.13, a new event "GenericEvent" was
+added - making the array broken for all of Tk's internal events.
+
+A cleaner fix, but a much bigger patch, is listed in the Tk bug tracker:
+
+http://sourceforge.net/tracker/index.php?func=detail&aid=2010422&group_id=12997&atid=112997
+
+--- generic/tkBind.c.orig	2009-05-15 14:14:34.000000000 +0100
++++ generic/tkBind.c	2009-05-15 14:16:15.000000000 +0100
+@@ -575,6 +575,9 @@
+    /* ColormapNotify */		COLORMAP,
+    /* ClientMessage */		0,
+    /* MappingNotify */		0,
++#ifdef GenericEvent
++   /* GenericEvent */		0, /* Introduced in xproto-7.0.13 */
++#endif
+    /* VirtualEvent */		VIRTUAL,
+    /* Activate */		ACTIVATE,	    
+    /* Deactivate */		ACTIVATE,
