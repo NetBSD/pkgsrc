@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.3 2009/05/15 10:29:05 adam Exp $
+
+--- src/cats/sql.c.orig	2009-04-10 13:40:54.000000000 +0200
++++ src/cats/sql.c
+@@ -758,9 +758,6 @@ void _dbg_print_db(JCR *jcr, FILE *fp)
+    fprintf(fp, "\tcmd=\"%s\" changes=%i\n", NPRTB(mdb->cmd), mdb->changes);
+    if (mdb->lock.valid == RWLOCK_VALID) { 
+       fprintf(fp, "\tRWLOCK=%p w_active=%i w_wait=%i\n", &mdb->lock, mdb->lock.w_active, mdb->lock.w_wait);
+-#ifndef HAVE_WIN32
+-      fprintf(fp, "\t\tthreadid=0x%x mutex=%p\n", (int)mdb->lock.writer_id, &mdb->lock.mutex);
+-#endif
+    }
+ }
+ 

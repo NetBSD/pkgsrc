@@ -1,13 +1,22 @@
-$NetBSD: patch-ag,v 1.4 2007/09/07 15:15:35 ghen Exp $
+$NetBSD: patch-ag,v 1.5 2009/05/15 10:29:05 adam Exp $
 
---- src/gnome2-console/Makefile.in.orig	2007-06-14 18:54:30.000000000 +0200
+--- src/gnome2-console/Makefile.in.orig	2009-02-18 12:40:09.000000000 +0100
 +++ src/gnome2-console/Makefile.in
-@@ -103,14 +103,14 @@ install: all
+@@ -64,7 +64,7 @@ support.o:   support.c
+ 
+ bgnome-console: Makefile $(CONSOBJS) ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE) 
+ 	$(LIBTOOL_LINK) $(CXX) $(LDFLAGS) $(CONS_LDFLAGS) -L../lib -o $@ $(CONSOBJS) \
+-	      $(LIBS) $(DLIB) $(CONS_LIBS) -lbaccfg -lbac -lm
++	      $(LIBS) $(DLIB) $(CONS_LIBS) ../lib/libbaccfg.la ../lib/libbac.la -lm
+ 
+ static-console: static-bgnome-console
+ 
+@@ -106,14 +106,14 @@ install: all
  	fi
- 	$(INSTALL_PROGRAM) bgnome-console $(DESTDIR)$(sbindir)/bgnome-console
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bgnome-console $(DESTDIR)$(sbindir)/bgnome-console
  	@srcconf=bgnome-console.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -15,8 +24,8 @@ $NetBSD: patch-ag,v 1.4 2007/09/07 15:15:35 ghen Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  	if test -f static-bgnome-console; then \
- 	   $(INSTALL_PROGRAM) static-bgnome-console $(DESTDIR)$(sbindir)/static-bgnome-console; \
+ 	   $(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) static-bgnome-console $(DESTDIR)$(sbindir)/static-bgnome-console; \
  	fi 

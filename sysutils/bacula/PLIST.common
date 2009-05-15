@@ -1,4 +1,11 @@
-@comment $NetBSD: PLIST.common,v 1.8 2009/01/15 13:32:18 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2009/05/15 10:29:05 adam Exp $
+lib/bpipe-fd.a
+lib/bpipe-fd.so
+lib/libbac.la
+lib/libbaccfg.la
+lib/libbacfind.la
+lib/libbacpy.la
+lib/libbacsql.la
 libexec/bacula/bacula
 libexec/bacula/bacula-ctl-dir
 libexec/bacula/bacula-ctl-fd
@@ -9,6 +16,7 @@ libexec/bacula/btraceback.gdb
 libexec/bacula/disk-changer
 libexec/bacula/gconsole
 libexec/bacula/mtx-changer
+libexec/bacula/mtx-changer.conf
 libexec/bacula/startmysql
 libexec/bacula/stopmysql
 man/man1/bacula-bgnome-console.1
@@ -28,11 +36,19 @@ man/man8/bscan.8
 man/man8/btape.8
 man/man8/btraceback.8
 man/man8/dbcheck.8
+sbin/bacula
 sbin/bacula-fd
 sbin/bconsole
 sbin/btraceback
 ${STATIC}sbin/static-bacula-fd
 ${STATIC}sbin/static-bconsole
+share/doc/ChangeLog
+share/doc/INSTALL
+share/doc/LICENSE
+share/doc/README
+share/doc/ReleaseNotes
+share/doc/VERIFYING
+share/doc/technotes
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bconsole.conf
 share/examples/bacula/dvd-handler

@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2009/05/15 10:29:05 adam Exp $
+
+--- configure.orig	2009-05-15 10:52:32.000000000 +0200
++++ configure
+@@ -45609,7 +45609,7 @@ if test "${support_bat}" = "yes" ; then
+       exit 1
+    fi
+ 
+-   QMAKEBIN="qmake"
++   QMAKEBIN=${QMAKE}
+ 
+    if test "x$QMAKEQT4" != "xnone"; then
+        QMAKEBIN=qmake-qt4
