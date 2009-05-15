@@ -1,13 +1,22 @@
-$NetBSD: patch-ah,v 1.4 2007/09/07 15:15:35 ghen Exp $
+$NetBSD: patch-ah,v 1.5 2009/05/15 10:29:05 adam Exp $
 
---- src/wx-console/Makefile.in.orig	2007-05-27 11:34:40.000000000 +0200
+--- src/wx-console/Makefile.in.orig	2009-03-09 16:34:05.000000000 +0100
 +++ src/wx-console/Makefile.in
-@@ -111,14 +111,14 @@ install: all
+@@ -83,7 +83,7 @@ bwx-console.app: bwx-console
+ 
+ bwx-console: Makefile $(CONSOBJS) @WIN32@ ../lib/libbaccfg$(DEFAULT_ARCHIVE_TYPE) ../lib/libbac$(DEFAULT_ARCHIVE_TYPE)
+ 	$(LIBTOOL_LINK) $(CXX) $(CONSOBJS) $(WIN32RES) -o $@ $(LIBS) -L../lib $(CONS_LDFLAGS) \
+-	  -lbaccfg -lbac $(OPENSSL_LIBS)
++	  ../lib/libbaccfg.la ../lib/libbac.la $(OPENSSL_LIBS)
+ 
+ win32: bwx-console_private.res
+ 	
+@@ -114,14 +114,14 @@ install: all
  	fi
- 	$(INSTALL_PROGRAM) bwx-console $(DESTDIR)$(sbindir)/bwx-console
+ 	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bwx-console $(DESTDIR)$(sbindir)/bwx-console
  	@srcconf=bwx-console.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
++	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -15,8 +24,8 @@ $NetBSD: patch-ah,v 1.4 2007/09/07 15:15:35 ghen Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
  
  uninstall:
  	(cd $(DESTDIR)$(sbindir); $(RMF) bwx-console)
