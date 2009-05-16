@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2008/06/23 20:34:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.85 2009/05/16 07:21:05 rillig Exp $
 #
 # This is the top-level Makefile of pkgsrc. It contains a list of the
 # categories of packages, as well as some targets that operate on the
@@ -94,4 +94,4 @@ SUBDIR+=	www
 
 SUBDIR+=	${USER_ADDITIONAL_PKGS}
 
-.include "${.PARSEDIR}/mk/misc/toplevel.mk"
+.include "mk/misc/toplevel.mk"
