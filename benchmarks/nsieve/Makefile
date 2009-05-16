@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/16 20:46:19 zafer Exp $
 
 DISTNAME=		nsieve.c
 PKGNAME=		nsieve-1.2b
 CATEGORIES=		benchmarks
-MASTER_SITES=		ftp://ftp.nosc.mil/pub/aburto/nsieve/
+MASTER_SITES=		ftp://ftp.kreonet.re.kr/tools/benchmark/aburto/nsieve/
 EXTRACT_SUFX=		#empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
