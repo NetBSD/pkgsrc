@@ -1,21 +1,25 @@
-@comment $NetBSD: PLIST,v 1.6 2007/10/05 15:47:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/05/16 17:57:05 kefren Exp $
 share/examples/webmin/bind8/config
 share/webmin/bind8/CHANGELOG
 share/webmin/bind8/acl_security.pl
 share/webmin/bind8/backup_config.pl
 share/webmin/bind8/bind8-lib.pl
+share/webmin/bind8/check_zone.cgi
 share/webmin/bind8/close.cgi
 share/webmin/bind8/conf_acls.cgi
 share/webmin/bind8/conf_controls.cgi
+share/webmin/bind8/conf_dnssec.cgi
 share/webmin/bind8/conf_files.cgi
 share/webmin/bind8/conf_forwarding.cgi
 share/webmin/bind8/conf_keys.cgi
 share/webmin/bind8/conf_logging.cgi
 share/webmin/bind8/conf_manual.cgi
 share/webmin/bind8/conf_misc.cgi
+share/webmin/bind8/conf_ncheck.cgi
 share/webmin/bind8/conf_net.cgi
 share/webmin/bind8/conf_rndc.cgi
 share/webmin/bind8/conf_servers.cgi
+share/webmin/bind8/conf_trusted.cgi
 share/webmin/bind8/conf_zonedef.cgi
 share/webmin/bind8/config-aix
 share/webmin/bind8/config-cobalt-linux
@@ -65,6 +69,7 @@ share/webmin/bind8/config-trustix-linux-2.2-*
 share/webmin/bind8/config-turbo-linux
 share/webmin/bind8/config-united-linux
 share/webmin/bind8/config-unixware
+share/webmin/bind8/config-windows
 share/webmin/bind8/config.info
 share/webmin/bind8/config.info.bg
 share/webmin/bind8/config.info.ca
@@ -75,6 +80,7 @@ share/webmin/bind8/config.info.fa
 share/webmin/bind8/config.info.fr
 share/webmin/bind8/config.info.ja_JP.UTF-8
 share/webmin/bind8/config.info.ja_JP.euc
+share/webmin/bind8/config.info.nl
 share/webmin/bind8/config.info.pl
 share/webmin/bind8/config.info.pt_BR
 share/webmin/bind8/config.info.ru_RU
@@ -100,6 +106,7 @@ share/webmin/bind8/delegation_form.cgi
 share/webmin/bind8/delete_recs.cgi
 share/webmin/bind8/delete_view.cgi
 share/webmin/bind8/delete_zone.cgi
+share/webmin/bind8/disable_zonekey.cgi
 share/webmin/bind8/dns_boot.cgi
 share/webmin/bind8/edit_delegation.cgi
 share/webmin/bind8/edit_forward.cgi
@@ -114,11 +121,13 @@ share/webmin/bind8/edit_soptions.cgi
 share/webmin/bind8/edit_stub.cgi
 share/webmin/bind8/edit_text.cgi
 share/webmin/bind8/edit_view.cgi
+share/webmin/bind8/edit_zonekey.cgi
 share/webmin/bind8/feedback_files.pl
 share/webmin/bind8/find_free.cgi
 share/webmin/bind8/find_zones.cgi
 share/webmin/bind8/forward_form.cgi
 share/webmin/bind8/free_chooser.cgi
+share/webmin/bind8/freeze_zone.cgi
 share/webmin/bind8/hint_form.cgi
 share/webmin/bind8/images/A.gif
 share/webmin/bind8/images/AAAA.gif
@@ -139,6 +148,7 @@ share/webmin/bind8/images/acls.gif
 share/webmin/bind8/images/close.gif
 share/webmin/bind8/images/controls.gif
 share/webmin/bind8/images/delegation.gif
+share/webmin/bind8/images/dnssec.gif
 share/webmin/bind8/images/extra.gif
 share/webmin/bind8/images/files.gif
 share/webmin/bind8/images/findfree.gif
@@ -153,6 +163,7 @@ share/webmin/bind8/images/logging.gif
 share/webmin/bind8/images/manual.gif
 share/webmin/bind8/images/master.gif
 share/webmin/bind8/images/misc.gif
+share/webmin/bind8/images/ncheck.gif
 share/webmin/bind8/images/net.gif
 share/webmin/bind8/images/no-home.gif
 share/webmin/bind8/images/open.gif
@@ -165,9 +176,11 @@ share/webmin/bind8/images/smallicon.gif
 share/webmin/bind8/images/soa.gif
 share/webmin/bind8/images/stub.gif
 share/webmin/bind8/images/text.gif
+share/webmin/bind8/images/trusted.gif
 share/webmin/bind8/images/view.gif
 share/webmin/bind8/images/whois.gif
 share/webmin/bind8/images/zonedef.gif
+share/webmin/bind8/images/zonekey.gif
 share/webmin/bind8/index.cgi
 share/webmin/bind8/install_check.pl
 share/webmin/bind8/lang/bg
@@ -184,6 +197,7 @@ share/webmin/bind8/lang/ja_JP.euc
 share/webmin/bind8/lang/ja_JP.jis
 share/webmin/bind8/lang/ko_KR.UTF-8
 share/webmin/bind8/lang/ko_KR.euc
+share/webmin/bind8/lang/nl
 share/webmin/bind8/lang/pl
 share/webmin/bind8/lang/pt
 share/webmin/bind8/lang/pt_BR
@@ -209,16 +223,18 @@ share/webmin/bind8/mass_update_form.cgi
 share/webmin/bind8/master_form.cgi
 share/webmin/bind8/module.info
 share/webmin/bind8/move_zone.cgi
-share/webmin/bind8/old_conf_controls.cgi
 share/webmin/bind8/old_save_controls.cgi
 share/webmin/bind8/open.cgi
 share/webmin/bind8/records-lib.pl
 share/webmin/bind8/refetch.cgi
+share/webmin/bind8/resign.pl
+share/webmin/bind8/resign_zone.cgi
 share/webmin/bind8/restart.cgi
 share/webmin/bind8/restart_zone.cgi
 share/webmin/bind8/save_acls.cgi
 share/webmin/bind8/save_controls.cgi
 share/webmin/bind8/save_delegation.cgi
+share/webmin/bind8/save_dnssec.cgi
 share/webmin/bind8/save_files.cgi
 share/webmin/bind8/save_forward.cgi
 share/webmin/bind8/save_forwarding.cgi
@@ -235,8 +251,11 @@ share/webmin/bind8/save_servers.cgi
 share/webmin/bind8/save_slave.cgi
 share/webmin/bind8/save_soa.cgi
 share/webmin/bind8/save_text.cgi
+share/webmin/bind8/save_trusted.cgi
 share/webmin/bind8/save_view.cgi
 share/webmin/bind8/save_zonedef.cgi
+share/webmin/bind8/setup_trusted.cgi
+share/webmin/bind8/sign_zone.cgi
 share/webmin/bind8/slave_add.cgi
 share/webmin/bind8/slave_delete.cgi
 share/webmin/bind8/slave_form.cgi
@@ -246,6 +265,7 @@ share/webmin/bind8/stub_form.cgi
 share/webmin/bind8/syslog_logs.pl
 share/webmin/bind8/view_form.cgi
 share/webmin/bind8/view_text.cgi
+share/webmin/bind8/unfreeze_zone.cgi
 share/webmin/bind8/whois-servers
 share/webmin/bind8/whois.cgi
 @dirrm share/webmin/bind8/lang
