@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/16 05:53:16 rillig Exp $
 #
 
 DISTNAME=	qnetwalk-1.2
@@ -18,7 +18,7 @@ QNETWALK_BIN=	${PREFIX}/bin
 QNETWALK_MAN=	${PREFIX}/${PKGMANDIR}/man6
 QNETWALK_DATA=	${PREFIX}/share/games/${PKGBASE}
 QNETWALK_TR=	${QNETWALK_DATA}
-KDEDIR=		${PREFIX:Q}/share/kde
+KDEDIR=		${PREFIX}/share/kde
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qnetwalk.pro)
