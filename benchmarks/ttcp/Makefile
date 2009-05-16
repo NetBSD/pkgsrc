@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2007/10/28 15:29:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/16 21:06:49 zafer Exp $
 
 DISTNAME=	ttcp
 PKGNAME=	${DISTNAME}-1.12
 PKGREVISION=	2
 CATEGORIES=	benchmarks net
-MASTER_SITES=	http://www.ccci.com/tools/ttcp/
+MASTER_SITES=	ftp://ftp.ptb.de/pub/benchmarks/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	thorpej@NetBSD.org
