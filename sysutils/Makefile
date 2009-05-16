@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2009/04/19 09:28:29 seb Exp $
+# $NetBSD: Makefile,v 1.471 2009/05/16 08:08:22 adam Exp $
 #
 
 COMMENT=	System utilities
@@ -24,6 +24,7 @@ SUBDIR+=	bacula
 SUBDIR+=	bacula-clientonly
 SUBDIR+=	bacula-doc
 SUBDIR+=	bacula-gnome-console
+SUBDIR+=	bacula-qt-console
 SUBDIR+=	bacula-tray-monitor
 SUBDIR+=	bacula-wx-console
 SUBDIR+=	bbsload
