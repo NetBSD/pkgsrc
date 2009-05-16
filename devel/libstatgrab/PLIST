@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/09 16:18:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/16 11:46:09 obache Exp $
 ${PLIST.saidar}bin/saidar
 ${PLIST.statgrab}bin/statgrab
 ${PLIST.statgrab}bin/statgrab-make-mrtg-config
@@ -7,10 +7,10 @@ include/statgrab.h
 include/statgrab_deprecated.h
 lib/libstatgrab.la
 lib/pkgconfig/libstatgrab.pc
-man/man1/saidar.1
-man/man1/statgrab-make-mrtg-config.1
-man/man1/statgrab-make-mrtg-index.1
-man/man1/statgrab.1
+${PLIST.saidar}man/man1/saidar.1
+${PLIST.statgrab}man/man1/statgrab-make-mrtg-config.1
+${PLIST.statgrab}man/man1/statgrab-make-mrtg-index.1
+${PLIST.statgrab}man/man1/statgrab.1
 man/man3/sg_get_cpu_percents.3
 man/man3/sg_get_cpu_stats.3
 man/man3/sg_get_cpu_stats_diff.3
