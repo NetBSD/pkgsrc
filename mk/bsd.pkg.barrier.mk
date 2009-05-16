@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.barrier.mk,v 1.16 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.pkg.barrier.mk,v 1.17 2009/05/16 01:27:30 joerg Exp $
 
 _COOKIE.barrier=	${WRKDIR}/.barrier_cookie
 
@@ -64,13 +64,18 @@ barrier: ${_BARRIER_PRE_TARGETS} ${_COOKIE.barrier}
 	@${PHASE_MSG} "Invoking \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
 	${RUN}					\
+	if ${TEST} -n "${_PKGSRC_UPDATE_CHECK}" && \
+	   ${PKG_INFO} -qe ${PKGNAME}; then \
+		${PHASE_MSG} "Skipping installation of already handled package"; \
+	else \
 	cd ${.CURDIR}							\
 	&& ${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes ALLOW_VULNERABLE_PACKAGES= ${_BARRIER_CMDLINE_TARGETS} \
 	|| {								\
 		exitcode="$$?";						\
 		${RECURSIVE_MAKE} ${MAKEFLAGS} _PKGSRC_BARRIER=yes barrier-error-check; \
 		exit "$$exitcode";					\
-	}
+	}; \
+	fi
 .  if defined(PKG_VERBOSE)
 	@${PHASE_MSG} "Leaving \`\`"${_BARRIER_CMDLINE_TARGETS:Q}"'' after barrier for ${PKGNAME}"
 .  endif
