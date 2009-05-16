@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:14:47 kefren Exp $
 share/examples/webmin/useradmin/config
 share/webmin/useradmin/CHANGELOG
 share/webmin/useradmin/acl_security.pl
@@ -37,6 +37,7 @@ share/webmin/useradmin/config-united-linux
 share/webmin/useradmin/config-unixware
 share/webmin/useradmin/config.info
 share/webmin/useradmin/config.info.ca
+share/webmin/useradmin/config.info.cz
 share/webmin/useradmin/config.info.da
 share/webmin/useradmin/config.info.de
 share/webmin/useradmin/config.info.es
@@ -65,6 +66,10 @@ share/webmin/useradmin/edit_user.cgi
 share/webmin/useradmin/export_exec.cgi
 share/webmin/useradmin/export_form.cgi
 share/webmin/useradmin/freebsd-lib.pl
+share/webmin/useradmin/gbatch_exec.cgi
+share/webmin/useradmin/gbatch_form.cgi
+share/webmin/useradmin/gexport_exec.cgi
+share/webmin/useradmin/gexport_form.cgi
 share/webmin/useradmin/help.html
 share/webmin/useradmin/help/2nd.ca.html
 share/webmin/useradmin/help/2nd.es.html
@@ -252,6 +257,8 @@ share/webmin/useradmin/help/flags.fa.html
 share/webmin/useradmin/help/flags.html
 share/webmin/useradmin/help/flags.nl.html
 share/webmin/useradmin/help/flags.pl.html
+share/webmin/useradmin/help/forcechange.ca.html
+share/webmin/useradmin/help/forcechange.html
 share/webmin/useradmin/help/gchgid.ca.html
 share/webmin/useradmin/help/gchgid.es.html
 share/webmin/useradmin/help/gchgid.fa.html
@@ -311,6 +318,10 @@ share/webmin/useradmin/help/gpasswd.ru_SU.html
 share/webmin/useradmin/help/gpasswd.sv.html
 share/webmin/useradmin/help/gpasswd.zh_TW.Big5.html
 share/webmin/useradmin/help/gpasswd.zh_TW.UTF-8.html
+share/webmin/useradmin/help/gpri.ca.html
+share/webmin/useradmin/help/gpri.html
+share/webmin/useradmin/help/grename.ca.html
+share/webmin/useradmin/help/grename.html
 share/webmin/useradmin/help/group.ca.html
 share/webmin/useradmin/help/group.es.html
 share/webmin/useradmin/help/group.fa.html

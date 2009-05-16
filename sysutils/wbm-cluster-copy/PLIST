@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:39:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:07:48 kefren Exp $
 share/examples/webmin/cluster-copy/config
 share/webmin/cluster-copy/CHANGELOG
 share/webmin/cluster-copy/chooser.cgi
 share/webmin/cluster-copy/cluster-copy-lib.pl
 share/webmin/cluster-copy/copy.pl
+share/webmin/cluster-copy/config
+share/webmin/cluster-copy/config.info
+share/webmin/cluster-copy/config.info.ca
+share/webmin/cluster-copy/config.info.nl
 share/webmin/cluster-copy/delete.cgi
 share/webmin/cluster-copy/edit.cgi
 share/webmin/cluster-copy/exec.cgi
@@ -13,10 +17,12 @@ share/webmin/cluster-copy/images/icon.gif
 share/webmin/cluster-copy/images/smallicon.gif
 share/webmin/cluster-copy/index.cgi
 share/webmin/cluster-copy/lang/ca
+share/webmin/cluster-copy/lang/cz
 share/webmin/cluster-copy/lang/de
 share/webmin/cluster-copy/lang/en
 share/webmin/cluster-copy/lang/es
 share/webmin/cluster-copy/lang/fr
+share/webmin/cluster-copy/lang/hr
 share/webmin/cluster-copy/lang/nl
 share/webmin/cluster-copy/log_parser.pl
 share/webmin/cluster-copy/module.info

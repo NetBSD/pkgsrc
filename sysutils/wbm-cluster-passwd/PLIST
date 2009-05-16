@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:40:03 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:20:17 kefren Exp $
 share/examples/webmin/cluster-passwd/config
 share/webmin/cluster-passwd/CHANGELOG
 share/webmin/cluster-passwd/acl_security.pl
@@ -7,9 +7,12 @@ share/webmin/cluster-passwd/cluster-passwd-lib.pl
 share/webmin/cluster-passwd/config
 share/webmin/cluster-passwd/config.info
 share/webmin/cluster-passwd/config.info.ca
+share/webmin/cluster-passwd/config.info.cz
 share/webmin/cluster-passwd/config.info.de
+share/webmin/cluster-passwd/config.info.el
 share/webmin/cluster-passwd/config.info.es
 share/webmin/cluster-passwd/config.info.fr
+share/webmin/cluster-passwd/config.info.hr
 share/webmin/cluster-passwd/config.info.ms
 share/webmin/cluster-passwd/config.info.nl
 share/webmin/cluster-passwd/defaultacl
@@ -18,10 +21,13 @@ share/webmin/cluster-passwd/images/icon.gif
 share/webmin/cluster-passwd/images/smallicon.gif
 share/webmin/cluster-passwd/index.cgi
 share/webmin/cluster-passwd/lang/ca
+share/webmin/cluster-passwd/lang/cz
 share/webmin/cluster-passwd/lang/de
+share/webmin/cluster-passwd/lang/el
 share/webmin/cluster-passwd/lang/en
 share/webmin/cluster-passwd/lang/es
 share/webmin/cluster-passwd/lang/fr
+share/webmin/cluster-passwd/lang/hr
 share/webmin/cluster-passwd/lang/ms
 share/webmin/cluster-passwd/lang/nl
 share/webmin/cluster-passwd/log_parser.pl
