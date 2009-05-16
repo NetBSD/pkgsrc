@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1849 2009/05/16 15:24:17 epg Exp $
+$NetBSD: CHANGES-2009,v 1.1850 2009/05/16 16:22:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2472,3 +2472,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/bzrtools to 1.14.0 [epg 2009-05-16]
 	Updated devel/bzr-svn to 0.5.4 [epg 2009-05-16]
 	Updated devel/qbzr to 0.9.9 [epg 2009-05-16]
+	Updated devel/p5-Moose to 0.79 [seb 2009-05-16]
