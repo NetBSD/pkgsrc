@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8101 2009/05/16 08:10:33 adam Exp $
+$NetBSD: TODO,v 1.8102 2009/05/16 11:47:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -869,7 +869,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libshout-2.2.2
 	o libssh-0.2
 	o libssh2-1.1
-	o libstatgrab-0.16
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libthai-0.1.11
