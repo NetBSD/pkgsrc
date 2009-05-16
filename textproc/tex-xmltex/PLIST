@@ -1,32 +1,13 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/22 02:55:53 reed Exp $
-bin/pdfxmltex
-bin/xmltex
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/englishutf16.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/englishutf8.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/iso-8859-1.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/iso-8859-2.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/koi8-r.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/langtest.tex
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/langtest.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/langtest.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/mathml2.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/pdfxmltex.ini
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/portugeselatin1.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/russiankoi8.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/russianutf8.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/sec.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/tei.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/testascii.cfg
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/testascii.tex
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/testascii.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/testsec.tex
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/testsec.xml
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/utf-16.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/windows-1250.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/xmltex.cfg
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/xmltex.ini
-${PKG_LOCALTEXMFPREFIX}/tex/xmltex/xmltex.tex
-${PKG_LOCALTEXMFPREFIX}/web2c/pdfxmltex.fmt
-${PKG_LOCALTEXMFPREFIX}/web2c/xmltex.fmt
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/web2c
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/xmltex
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 20:41:12 minskim Exp $
+share/texmf-dist/tex/xmltex/base/iso-8859-1.xmt
+share/texmf-dist/tex/xmltex/base/iso-8859-2.xmt
+share/texmf-dist/tex/xmltex/base/koi8-r.xmt
+share/texmf-dist/tex/xmltex/base/langtest.xmt
+share/texmf-dist/tex/xmltex/base/mathml2.xmt
+share/texmf-dist/tex/xmltex/base/sec.xmt
+share/texmf-dist/tex/xmltex/base/utf-16.xmt
+share/texmf-dist/tex/xmltex/base/windows-1250.xmt
+share/texmf-dist/tex/xmltex/base/xmltex.cfg
+share/texmf-dist/tex/xmltex/base/xmltex.tex
+share/texmf-dist/tex/xmltex/config/pdfxmltex.ini
+share/texmf-dist/tex/xmltex/config/xmltex.ini
