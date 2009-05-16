@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/16 19:07:10 kefren Exp $
 share/examples/webmin/mailboxes/config
 share/webmin/mailboxes/CHANGELOG
 share/webmin/mailboxes/Makefile
@@ -7,13 +7,23 @@ share/webmin/mailboxes/boxes-lib.pl
 share/webmin/mailboxes/config
 share/webmin/mailboxes/config.info
 share/webmin/mailboxes/config.info.ca
+share/webmin/mailboxes/config.info.cz
 share/webmin/mailboxes/config.info.de
+share/webmin/mailboxes/config.info.el
+share/webmin/mailboxes/config.info.it
+share/webmin/mailboxes/config.info.ja_JP.UTF-8
+share/webmin/mailboxes/config.info.ja_JP.euc
+share/webmin/mailboxes/config.info.ko_KR.UTF-8
+share/webmin/mailboxes/config.info.ko_KR.euc
+share/webmin/mailboxes/config.info.nl
 share/webmin/mailboxes/config_info.pl
+share/webmin/mailboxes/config.info.ru_RU
 share/webmin/mailboxes/config.info.fi
 share/webmin/mailboxes/defaultacl
 share/webmin/mailboxes/delete_all.cgi
 share/webmin/mailboxes/delete_mail.cgi
 share/webmin/mailboxes/detach.cgi
+share/webmin/mailboxes/detachall.cgi
 share/webmin/mailboxes/find.cgi
 share/webmin/mailboxes/folders-lib.pl
 share/webmin/mailboxes/images/attach.gif
@@ -27,7 +37,9 @@ share/webmin/mailboxes/images/smallicon.gif
 share/webmin/mailboxes/images/special.gif
 share/webmin/mailboxes/index.cgi
 share/webmin/mailboxes/lang/ca
+share/webmin/mailboxes/lang/cz
 share/webmin/mailboxes/lang/de
+share/webmin/mailboxes/lang/el
 share/webmin/mailboxes/lang/en
 share/webmin/mailboxes/lang/es
 share/webmin/mailboxes/lang/fi
@@ -38,8 +50,10 @@ share/webmin/mailboxes/lang/ja_JP.euc
 share/webmin/mailboxes/lang/ja_JP.jis
 share/webmin/mailboxes/lang/ko_KR.UTF-8
 share/webmin/mailboxes/lang/ko_KR.euc
+share/webmin/mailboxes/lang/nl
 share/webmin/mailboxes/lang/pl
 share/webmin/mailboxes/lang/pt
+share/webmin/mailboxes/lang/ru_RU
 share/webmin/mailboxes/lang/sv
 share/webmin/mailboxes/lang/tr
 share/webmin/mailboxes/lang/zh_CN
@@ -55,6 +69,7 @@ share/webmin/mailboxes/module.info
 share/webmin/mailboxes/reply_mail.cgi
 share/webmin/mailboxes/search_form.cgi
 share/webmin/mailboxes/send_mail.cgi
+share/webmin/mailboxes/slideshow.cgi
 share/webmin/mailboxes/useradmin_update.pl
 share/webmin/mailboxes/view_mail.cgi
 share/webmin/mailboxes/xinha/Xinha.css
