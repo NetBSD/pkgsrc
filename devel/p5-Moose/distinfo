@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.20 2009/05/13 17:46:51 seb Exp $
+$NetBSD: distinfo,v 1.21 2009/05/16 16:22:13 seb Exp $
 
-SHA1 (Moose-0.78.tar.gz) = f00a89cf0d8adb20fc08d69b13772ab31c6f39d5
-RMD160 (Moose-0.78.tar.gz) = ad8725fb49f8099a9f5084af24580e6730c7d719
-Size (Moose-0.78.tar.gz) = 319027 bytes
+SHA1 (Moose-0.79.tar.gz) = 23d58c2c5459b032698e233642e09d8332aa7bf8
+RMD160 (Moose-0.79.tar.gz) = 7d1ece71900579fb63d51f46120a41a43a04164f
+Size (Moose-0.79.tar.gz) = 319162 bytes
