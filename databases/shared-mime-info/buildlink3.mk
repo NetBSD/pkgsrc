@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:24:07 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2009/05/16 07:22:02 rillig Exp $
 
 BUILDLINK_TREE+=	shared-mime-info
 
@@ -15,7 +15,7 @@ _SMI_FAKE_UPDATEDB=	${BUILDLINK_DIR}/bin/update-mime-database
 
 .PHONY: shared-mime-info-buildlink-fake
 shared-mime-info-buildlink-fake:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
+	${RUN} \
 	if [ ! -f ${_SMI_FAKE_UPDATEDB:Q} ]; then			\
 		${ECHO_BUILDLINK_MSG} "Creating "${_SMI_FAKE_UPDATEDB:Q}; \
 		${MKDIR} ${_SMI_FAKE_UPDATEDB:H};			\

@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.58 2009/03/21 23:11:29 sno Exp $
+# $NetBSD: module.mk,v 1.59 2009/05/16 07:22:04 rillig Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -93,7 +93,7 @@ MAKE_PARAMS+=	${MAKE_PARAMS.${_PERL5_MODTYPE}}
 
 .PHONY: do-makemaker-configure
 do-makemaker-configure:
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		cd ${WRKSRC};						\
 		if ${TEST} -f "$$dir"/Makefile.PL; then			\
@@ -105,7 +105,7 @@ do-makemaker-configure:
 
 .PHONY: do-modbuild-configure
 do-modbuild-configure:
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
 		cd ${WRKSRC};						\
 		if ${TEST} -f "$$dir"/Build.PL; then			\

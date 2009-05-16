@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/20 19:43:56 sketch Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/16 07:22:02 rillig Exp $
 
 PKGNAME=	postgresql83-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -72,9 +72,9 @@ post-wrapper:
 .endif
 
 pre-build:
-	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
+	${RUN} ${_ULIMIT_CMD}						\
 	cd ${WRKSRC}/src/backend &&					\
-	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}	\
+	env ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS}		\
 		../../src/include/parser/parse.h			\
 		../../src/include/utils/fmgroids.h
 

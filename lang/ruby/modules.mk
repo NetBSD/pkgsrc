@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.25 2009/02/15 03:20:03 taca Exp $
+# $NetBSD: modules.mk,v 1.26 2009/05/16 07:22:04 rillig Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -39,10 +39,10 @@ do-configure:	ruby-extconf-configure
 ruby-extconf-configure:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} in ${d} to configure"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; \
+	${RUN}cd ${WRKSRC}/${d}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; \
+	${RUN}cd ${WRKSRC}/${d}; \
 		${TEST} -f ${RUBY_EXTCONF_MAKEFILE}
 .endif
 .endfor
@@ -53,7 +53,7 @@ do-build:	ruby-extconf-build
 ruby-extconf-build:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Building ${d}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_TARGET}
+	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${MAKE_ENV} ${MAKE} ${BUILD_TARGET}
 .endfor
 .endif
 
@@ -63,17 +63,17 @@ do-install:	ruby-extconf-install
 ruby-extconf-install:
 .for d in ${RUBY_EXTCONF_SUBDIRS}
 	@${ECHO_MSG} "===>  Installing ${d}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
+	${RUN}cd ${WRKSRC}/${d}; ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${MAKE} ${INSTALL_TARGET}
 .endfor
 .endif
 
 .else
 ruby-extconf-configure:
 	@${ECHO_MSG} "===>  Running ${RUBY_EXTCONF} to configure"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_EXTCONF} ${CONFIGURE_ARGS}
 .if empty(RUBY_EXTCONF_CHECK:M[nN][oO])
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}/${d}; \
+	${RUN}cd ${WRKSRC}/${d}; \
 		${TEST} -f ${RUBY_EXTCONF_MAKEFILE}
 .endif
 .endif
@@ -100,11 +100,11 @@ do-configure:	ruby-setup-configure
 ruby-setup-configure:
 .if defined(USE_RUBY_SETUP_PKG) && empty(USE_RUBY_SETUP_PKG:M[nN][oO])
 	@${ECHO_MSG} "===>  Use pkgsrc's ruby-setup"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 		${CP} ${PREFIX}/${RUBY_VENDORLIB}/setup.rb ${RUBY_SETUP}
 .endif
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to configure"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${CONFIGURE_ENV} ${RUBY} ${RUBY_SETUP} config ${CONFIGURE_ARGS}
 .endif
 
@@ -113,7 +113,7 @@ do-build:	ruby-setup-build
 
 ruby-setup-build:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to build"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} setup
 .endif
 
@@ -127,7 +127,7 @@ _RUBY_SETUP_INSTALLARGS+=   --prefix=${DESTDIR:Q}
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SETUP} ${_RUBY_SETUP_INSTALLARGS}
 .endif
 
@@ -157,7 +157,7 @@ do-install:	ruby-simple-install
 
 ruby-simple-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SIMPLE_INSTALL} to ${INSTALL_TARGET}"
-	${_PKG_SILENT}${_PKG_DEBUG}cd ${WRKSRC}; \
+	${RUN}cd ${WRKSRC}; \
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBY} ${RUBY_SIMPLE_INSTALL} ${INSTALL_TARGET}
 .endif
 .endif # USE_RUBY_INSTALL
