@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.5 2009/05/15 10:29:05 adam Exp $
+$NetBSD: patch-ai,v 1.6 2009/05/16 08:06:57 adam Exp $
 
 --- src/tray-monitor/Makefile.in.orig	2008-10-19 12:34:03.000000000 +0200
 +++ src/tray-monitor/Makefile.in
@@ -16,7 +16,7 @@ $NetBSD: patch-ai,v 1.5 2009/05/15 10:29:05 adam Exp $
  	$(LIBTOOL_INSTALL) $(INSTALL_PROGRAM) bacula-tray-monitor $(DESTDIR)$(sbindir)/bacula-tray-monitor
  	@srcconf=tray-monitor.conf; \
 -	if  test -f ${DESTDIR}${sysconfdir}/$$srcconf; then \
-+	if  test -f ${DESTDIR}/usr/pkg/share/examples/bacula/$$srcconf; then \
++	if  test -f ${DESTDIR}%%EXAMPLESDIR%%/$$srcconf; then \
  	   destconf=$$srcconf.new; \
  	   echo "  ==> Found existing $$srcconf, installing new conf file as $$destconf"; \
  	else \
@@ -24,8 +24,8 @@ $NetBSD: patch-ai,v 1.5 2009/05/15 10:29:05 adam Exp $
  	fi; \
 -	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf"; \
 -	${INSTALL_CONFIG} $$srcconf ${DESTDIR}${sysconfdir}/$$destconf
-+	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf"; \
-+	${INSTALL_CONFIG} $$srcconf ${DESTDIR}/usr/pkg/share/examples/bacula/$$destconf
++	echo "${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf"; \
++	${INSTALL_CONFIG} $$srcconf ${DESTDIR}%%EXAMPLESDIR%%/$$destconf
  
  uninstall:
  	(cd $(DESTDIR)$(sbindir); $(RMF) bacula-tray-monitor)
