@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/process_stats.c.orig	2006-10-09 14:47:58.000000000 +0000
++++ src/libstatgrab/process_stats.c
+@@ -564,7 +564,11 @@ sg_process_stats *sg_get_process_stats(i
+ 			kp_stats[i].kp_eproc.e_vm.vm_rssize * getpagesize();
+ #if defined(NETBSD) || defined(OPENBSD)
+ 		proc_state_ptr->time_spent =
++#if defined(__NetBSD_Version__) && (499004400 <= __NetBSD_Version__)
++			kp_stats[i].kp_proc.p_rtime.sec;
++#else
+ 			kp_stats[i].kp_proc.p_rtime.tv_sec;
++#endif
+ #elif defined(DFBSD)
+ 		proc_state_ptr->time_spent = 
+ 			( kp_stats[i].kp_thread.td_uticks +
