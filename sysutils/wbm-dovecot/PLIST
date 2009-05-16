@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:44:25 kefren Exp $
 share/examples/webmin/dovecot/config
 share/webmin/dovecot/CHANGELOG
 share/webmin/dovecot/apply.cgi
@@ -12,8 +12,14 @@ share/webmin/dovecot/config-redhat-linux-11.0-*
 share/webmin/dovecot/config-suse-linux
 share/webmin/dovecot/config.info
 share/webmin/dovecot/config.info.ca
+share/webmin/dovecot/config.info.cz
 share/webmin/dovecot/config.info.de
 share/webmin/dovecot/config.info.es
+share/webmin/dovecot/config.info.hr
+share/webmin/dovecot/config.info.nl
+share/webmin/dovecot/config.info.ru_RU
+share/webmin/dovecot/config.info.zh_TW.Big5
+share/webmin/dovecot/config.info.zh_TW.UTF-8
 share/webmin/dovecot/dovecot-lib.pl
 share/webmin/dovecot/edit_login.cgi
 share/webmin/dovecot/edit_mail.cgi
@@ -33,9 +39,15 @@ share/webmin/dovecot/images/ssl.gif
 share/webmin/dovecot/index.cgi
 share/webmin/dovecot/install_check.pl
 share/webmin/dovecot/lang/ca
+share/webmin/dovecot/lang/cz
 share/webmin/dovecot/lang/de
 share/webmin/dovecot/lang/en
 share/webmin/dovecot/lang/es
+share/webmin/dovecot/lang/hr
+share/webmin/dovecot/lang/nl
+share/webmin/dovecot/lang/ru_RU
+share/webmin/dovecot/lang/zh_TW.Big5
+share/webmin/dovecot/lang/zh_TW.UTF-8
 share/webmin/dovecot/log_parser.pl
 share/webmin/dovecot/module.info
 share/webmin/dovecot/save_login.cgi
