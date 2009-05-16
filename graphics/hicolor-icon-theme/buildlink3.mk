@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2009/03/20 19:24:40 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2009/05/16 07:22:03 rillig Exp $
 
 BUILDLINK_TREE+=	hicolor-icon-theme
 
@@ -38,9 +38,9 @@ _GUIC_FAKE=		${BUILDLINK_DIR}/bin/gtk-update-icon-cache
 
 .PHONY: guic-buildlink-fake
 guic-buildlink-fake:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	if [ ! -f ${_GUIC_FAKE} ]; then					\
-		${ECHO_BUILDLINK_MSG} "Creating ${_GUIC_FAKE}";	\
+		${ECHO_BUILDLINK_MSG} "Creating ${_GUIC_FAKE}";		\
 		${MKDIR} ${_GUIC_FAKE:H};				\
 		${ECHO} "#!${SH}" > ${_GUIC_FAKE};			\
 		${CHMOD} +x ${_GUIC_FAKE};				\
