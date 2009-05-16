@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/10/05 15:47:01 obache Exp $
+$NetBSD: distinfo,v 1.7 2009/05/16 17:10:40 kefren Exp $
 
-SHA1 (webmin-1.370.tar.gz) = ed4c1ee751953146356f308c4091eb8ad21df309
-RMD160 (webmin-1.370.tar.gz) = 28805b553adc85b642ad3acffa3765a5127a529d
-Size (webmin-1.370.tar.gz) = 13132344 bytes
+SHA1 (webmin-1.470.tar.gz) = ace7931c33495fb9a1c76500060feb7019d6acbf
+RMD160 (webmin-1.470.tar.gz) = 58acf6703c6469850837796b2e0cbcdb258cf07f
+Size (webmin-1.470.tar.gz) = 14105863 bytes
