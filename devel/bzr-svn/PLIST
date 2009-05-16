@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/18 06:06:12 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/16 15:21:04 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
@@ -56,6 +56,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/foreign/versionedfiles.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/format.py
 ${PYSITELIB}/bzrlib/plugins/svn/format.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/format.pyo
+${PYSITELIB}/bzrlib/plugins/svn/keywords.py
+${PYSITELIB}/bzrlib/plugins/svn/keywords.pyc
+${PYSITELIB}/bzrlib/plugins/svn/keywords.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/layout/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/layout/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/layout/__init__.pyo
@@ -98,6 +101,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/parents.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/push.py
 ${PYSITELIB}/bzrlib/plugins/svn/push.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/push.pyo
+${PYSITELIB}/bzrlib/plugins/svn/pycompat.py
+${PYSITELIB}/bzrlib/plugins/svn/pycompat.pyc
+${PYSITELIB}/bzrlib/plugins/svn/pycompat.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/remote.py
 ${PYSITELIB}/bzrlib/plugins/svn/remote.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/remote.pyo
@@ -176,6 +182,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/tests/test_fetch.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_fileids.py
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_fileids.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_fileids.pyo
+${PYSITELIB}/bzrlib/plugins/svn/tests/test_keywords.py
+${PYSITELIB}/bzrlib/plugins/svn/tests/test_keywords.pyc
+${PYSITELIB}/bzrlib/plugins/svn/tests/test_keywords.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_layout.py
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_layout.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/tests/test_layout.pyo
