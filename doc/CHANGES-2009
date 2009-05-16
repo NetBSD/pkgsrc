@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1851 2009/05/16 20:47:01 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.1852 2009/05/16 21:01:48 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2474,3 +2474,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/qbzr to 0.9.9 [epg 2009-05-16]
 	Updated devel/p5-Moose to 0.79 [seb 2009-05-16]
 	Updated textproc/tex-xmltex to 1.9nb5 [minskim 2009-05-16]
+	Added textproc/tex-bin-xmltex version 0.8 [minskim 2009-05-16]
