@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/16 07:22:03 rillig Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -39,7 +39,7 @@ FONTS_DIRS.ttf=	${FONTDIR}
 INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
 
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	for f in ${WRKSRC}/*.TTF ; do					\
 		${MV} $$f `echo $$f | ${SED} 's|TTF$$|ttf|'`;		\
 	done
