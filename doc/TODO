@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8102 2009/05/16 11:47:21 obache Exp $
+$NetBSD: TODO,v 1.8103 2009/05/16 15:24:17 epg Exp $
 
 Suggested new packages
 ======================
@@ -459,7 +459,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o botan-1.8.1
 	o brasero-2.26.1
 	o byacc-20080824
-	o bzr-1.14.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
