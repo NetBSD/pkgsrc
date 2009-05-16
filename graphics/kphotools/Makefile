@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/18 05:06:41 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/16 07:22:03 rillig Exp $
 #
 
 DISTNAME=	kphotools-0.2.1
@@ -23,7 +23,7 @@ SUBST_SED.kphotools=	-e 's|@kphotoolsdir@|${KDEDIR}/share/kde/apps/kphotools|'
 SUBST_STAGE.kphotools=	post-patch
 
 post-configure:
-	${_PKG_DEBUG}${_PKG_SILENT}${LN} -s ${FILESDIR}/pkgsrc_fixes.h ${BUILDLINK_DIR}/include/
+	${RUN}${LN} -s ${FILESDIR}/pkgsrc_fixes.h ${BUILDLINK_DIR}/include/
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
