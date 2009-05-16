@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/memory_stats.c.orig	2007-06-18 20:56:22.000000000 +0000
++++ src/libstatgrab/memory_stats.c
+@@ -92,8 +92,12 @@ sg_mem_stats *sg_get_mem_stats(){
+ 	int pagesize;
+ #endif
+ #if defined(NETBSD)
++#if defined(__NetBSD_Version__) &&  (__NetBSD_Version__ > 106000000)
++	struct uvmexp_sysctl *uvm;
++#else
+ 	struct uvmexp *uvm;
+ #endif
++#endif
+ #if defined(OPENBSD)
+ 	int mib[2];
+ 	struct vmtotal vmtotal;

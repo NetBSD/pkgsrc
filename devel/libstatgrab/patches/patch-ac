@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/06/12 16:30:33 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2009/05/16 11:46:09 obache Exp $
 
---- src/libstatgrab/disk_stats.c.orig	2006-06-12 16:18:08.000000000 +0000
+--- src/libstatgrab/disk_stats.c.orig	2006-10-09 14:09:38.000000000 +0000
 +++ src/libstatgrab/disk_stats.c
 @@ -64,7 +64,9 @@
  #include <sys/mount.h>
@@ -12,3 +12,76 @@ $NetBSD: patch-ac,v 1.1 2006/06/12 16:30:33 joerg Exp $
  #include <devstat.h>
  #define VALID_FS_TYPES {"hpfs", "msdosfs", "ntfs", "udf", "ext2fs", \
  			"ufs", "mfs", "nfs"}
+@@ -430,7 +432,11 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 	struct devstat *dev_ptr;
+ #endif
+ #ifdef NETBSD
++#ifdef HW_DISKSTATS
+ 	struct disk_sysctl *stats;
++#else
++	struct io_sysctl *stats;
++#endif
+ #endif
+ #ifdef OPENBSD
+ 	int diskcount;
+@@ -577,9 +583,15 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 
+ #if defined(NETBSD) || defined(OPENBSD)
+ 	mib[0] = CTL_HW;
++#ifdef HW_DISKSTATS
+ 	mib[1] = HW_DISKSTATS;
++#endif
+ #ifdef NETBSD
++#ifdef HW_DISKSTATS
+ 	mib[2] = sizeof(struct disk_sysctl);
++#else
++	mib[2] = sizeof(struct io_sysctl);
++#endif
+ #endif
+ 
+ 	if (sysctl(mib, MIBSIZE, NULL, &size, NULL, 0) < 0) {
+@@ -588,8 +600,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 	}
+ 
+ #ifdef NETBSD
++#ifdef HW_DISKSTATS
+ 	num_disks = size / sizeof(struct disk_sysctl);
+ #else
++	num_disks = size / sizeof(struct io_sysctl);
++#endif
++#else
+ 	num_disks = size / sizeof(struct diskstats);
+ #endif
+ 
+@@ -608,6 +624,7 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 		u_int64_t rbytes, wbytes;
+ 
+ #ifdef NETBSD
++#ifdef HW_DISKSTATS
+ #ifdef HAVE_DK_RBYTES
+ 		rbytes = stats[i].dk_rbytes;
+ 		wbytes = stats[i].dk_wbytes;
+@@ -616,6 +633,10 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 		rbytes = wbytes = stats[i].dk_bytes;
+ #endif
+ #else
++		rbytes = stats[i].rbytes;
++		wbytes = stats[i].wbytes;
++#endif
++#else
+ #ifdef HAVE_DS_RBYTES
+ 		rbytes = stats[i].ds_rbytes;
+ 		wbytes = stats[i].ds_wbytes;
+@@ -638,8 +659,12 @@ sg_disk_io_stats *sg_get_disk_io_stats(i
+ 		diskio_stats_ptr->read_bytes = rbytes;
+ 		diskio_stats_ptr->write_bytes = wbytes;
+ #ifdef NETBSD
++#ifdef HAVE_DISKSTATS
+ 		name = stats[i].dk_name;
+ #else
++		name = stats[i].name;
++#endif
++#else
+ 		name = dk_name[i];
+ #endif
+ 		if (sg_update_string(&diskio_stats_ptr->disk_name, name) < 0) {

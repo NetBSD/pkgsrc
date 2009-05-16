@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/page_stats.c.orig	2005-09-24 13:29:22.000000000 +0000
++++ src/libstatgrab/page_stats.c
+@@ -68,8 +68,12 @@ sg_page_stats *sg_get_page_stats(){
+ 	size_t size;
+ #endif
+ #if defined(NETBSD) || defined(OPENBSD)
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ > 106000000)
++	struct uvmexp_sysctl *uvm;
++#else
+ 	struct uvmexp *uvm;
+ #endif
++#endif
+ 
+ 	page_stats.systime = time(NULL);
+ 	page_stats.pages_pagein=0;

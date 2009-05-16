@@ -1,0 +1,20 @@
+$NetBSD: patch-al,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/network_stats.c.orig	2006-10-09 17:25:06.000000000 +0000
++++ src/libstatgrab/network_stats.c
+@@ -177,6 +177,7 @@ sg_network_io_stats *sg_get_network_io_s
+ 				     net_ptr->ifa_name) < 0) {
+ 			return NULL;
+ 		}
++		if (net_ptr->ifa_data != NULL) {
+ 		net_data=(struct if_data *)net_ptr->ifa_data;
+ 		network_stat_ptr->rx=net_data->ifi_ibytes;
+ 		network_stat_ptr->tx=net_data->ifi_obytes;
+@@ -187,6 +188,7 @@ sg_network_io_stats *sg_get_network_io_s
+ 		network_stat_ptr->collisions=net_data->ifi_collisions;
+ 		network_stat_ptr->systime=time(NULL);
+ 		interfaces++;
++		}
+ 	}
+ 	freeifaddrs(net);	
+ #endif
