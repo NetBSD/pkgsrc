@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8106 2009/05/16 23:53:02 zafer Exp $
+$NetBSD: TODO,v 1.8107 2009/05/16 23:57:59 zafer Exp $
 
 Suggested new packages
 ======================
@@ -596,6 +596,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
+	o felt-3.07
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
 	o file-5.01
