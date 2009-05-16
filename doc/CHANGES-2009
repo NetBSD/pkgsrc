@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1847 2009/05/16 08:10:33 adam Exp $
+$NetBSD: CHANGES-2009,v 1.1848 2009/05/16 11:46:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2466,3 +2466,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/bacula-tray-monitor to 3.0.1 [adam 2009-05-15]
 	Updated sysutils/bacula-wx-console to 3.0.1 [adam 2009-05-15]
 	Added sysutils/bacula-qt-console version 3.0.1 [adam 2009-05-16]
+	Updated devel/libstatgrab to 0.16 [obache 2009-05-16]
