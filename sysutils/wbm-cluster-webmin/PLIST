@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/16 21:40:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:23:22 kefren Exp $
 share/examples/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/CHANGELOG
 share/webmin/cluster-webmin/add.cgi
@@ -6,9 +6,11 @@ share/webmin/cluster-webmin/cluster-webmin-lib.pl
 share/webmin/cluster-webmin/config
 share/webmin/cluster-webmin/config.info
 share/webmin/cluster-webmin/config.info.ca
+share/webmin/cluster-webmin/config.info.cz
 share/webmin/cluster-webmin/config.info.de
 share/webmin/cluster-webmin/config.info.es
 share/webmin/cluster-webmin/config.info.fr
+share/webmin/cluster-webmin/config.info.hr
 share/webmin/cluster-webmin/config.info.nl
 share/webmin/cluster-webmin/create_group.cgi
 share/webmin/cluster-webmin/create_user.cgi
@@ -30,10 +32,12 @@ share/webmin/cluster-webmin/images/smallicon.gif
 share/webmin/cluster-webmin/index.cgi
 share/webmin/cluster-webmin/install.cgi
 share/webmin/cluster-webmin/lang/ca
+share/webmin/cluster-webmin/lang/cz
 share/webmin/cluster-webmin/lang/de
 share/webmin/cluster-webmin/lang/en
 share/webmin/cluster-webmin/lang/es
 share/webmin/cluster-webmin/lang/fr
+share/webmin/cluster-webmin/lang/hr
 share/webmin/cluster-webmin/lang/nl
 share/webmin/cluster-webmin/module.info
 share/webmin/cluster-webmin/refresh.cgi
