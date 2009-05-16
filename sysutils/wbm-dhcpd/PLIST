@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:41:06 kefren Exp $
 share/examples/webmin/dhcpd/config
 share/webmin/dhcpd/CHANGELOG
 share/webmin/dhcpd/acl_security.pl
 share/webmin/dhcpd/backup_config.pl
+share/webmin/dhcpd/config-CentOS-Linux-5
+share/webmin/dhcpd/config-Ubuntu-Linux-8.10-*
 share/webmin/dhcpd/config-cobalt-linux
 share/webmin/dhcpd/config-coherent-linux
 share/webmin/dhcpd/config-corel-linux
@@ -45,6 +47,7 @@ share/webmin/dhcpd/config-united-linux
 share/webmin/dhcpd/config-unixware
 share/webmin/dhcpd/config.info
 share/webmin/dhcpd/config.info.ca
+share/webmin/dhcpd/config.info.cz
 share/webmin/dhcpd/config.info.da
 share/webmin/dhcpd/config.info.de
 share/webmin/dhcpd/config.info.es
@@ -108,6 +111,7 @@ share/webmin/dhcpd/images/subnet.gif
 share/webmin/dhcpd/index.cgi
 share/webmin/dhcpd/install_check.pl
 share/webmin/dhcpd/lang/ca
+share/webmin/dhcpd/lang/cz
 share/webmin/dhcpd/lang/da
 share/webmin/dhcpd/lang/de
 share/webmin/dhcpd/lang/en
