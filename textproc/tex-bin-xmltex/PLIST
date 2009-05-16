@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/16 21:00:35 minskim Exp $
+bin/pdfxmltex
+bin/xmltex
+share/texmf/fmtutil/format.xmltex.cnf

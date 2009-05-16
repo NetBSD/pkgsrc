@@ -1,0 +1,7 @@
+This package provides an implementation of a parser for documents
+matching the XML 1.0 and XML Namespace Recommendations. In addition to
+parsing commands are provided to attatch TeX typesetting instructions to
+the various markup elemenets as they are encounted. Sample files for
+typesetting a subset of TEI, MathML, are included. Element and Attribute
+names, as well as character data, may use any characters allowed in XML,
+using UTF-8 or a suitable 8-bit encoding.
