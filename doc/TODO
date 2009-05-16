@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8104 2009/05/16 23:41:20 zafer Exp $
+$NetBSD: TODO,v 1.8105 2009/05/16 23:46:13 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1075,7 +1075,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
 	o phpmyadmin-3.1.4
-	o phylip-3.65
+	o phylip-3.68
 	o picp-0.6.8
 	o pidgin-2.5.4
 	o pim6dd-20040819a
