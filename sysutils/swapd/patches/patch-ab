@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/10/30 05:06:15 xtraeme Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/16 08:10:03 obache Exp $
 
 --- Makefile.in.orig	2004-10-30 05:53:53.000000000 +0200
 +++ Makefile.in	2004-10-30 05:56:22.000000000 +0200
@@ -23,11 +23,11 @@ $NetBSD: patch-ab,v 1.1.1.1 2004/10/30 05:06:15 xtraeme Exp $
 -	$(INSTALL) -m 644 swapd.conf $(sysconfdir)/swapd.conf
 -	$(INSTALL) -m 644 swapd.8 $(mandir)/man8/swapd.8
 -	$(INSTALL) -m 644 swapd.conf.5 $(mandir)/man5/swapd.conf.5
-+	$(BSD_INSTALL_DATA_DIR) $(sbindir)
-+	$(BSD_INSTALL_DATA_DIR) $(datadir)
-+	$(BSD_INSTALL_MAN_DIR) $(mandir)/man8
-+	$(BSD_INSTALL_MAN_DIR) $(mandir)/man5
-+	$(BSD_INSTALL_PROGRAM) swapd$(EXEEXT) $(sbindir)/swapd$(EXEEXT)
-+	$(BSD_INSTALL_DATA) swapd.conf $(datadir)/swapd.conf
-+	$(BSD_INSTALL_MAN) swapd.8 $(mandir)/man8/swapd.8
-+	$(BSD_INSTALL_MAN) swapd.conf.5 $(mandir)/man5/swapd.conf.5
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(sbindir)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(datadir)
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man8
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(mandir)/man5
++	$(BSD_INSTALL_PROGRAM) swapd$(EXEEXT) $(DESTDIR)$(sbindir)/swapd$(EXEEXT)
++	$(BSD_INSTALL_DATA) swapd.conf $(DESTDIR)$(datadir)/swapd.conf
++	$(BSD_INSTALL_MAN) swapd.8 $(DESTDIR)$(mandir)/man8/swapd.8
++	$(BSD_INSTALL_MAN) swapd.conf.5 $(DESTDIR)$(mandir)/man5/swapd.conf.5
