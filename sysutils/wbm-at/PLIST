@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 17:14:32 kefren Exp $
 share/examples/webmin/at/config
 share/webmin/at/CHANGELOG
 share/webmin/at/acl_security.pl
@@ -31,10 +31,13 @@ share/webmin/at/config-united-linux
 share/webmin/at/config.info
 share/webmin/at/config.info.bg
 share/webmin/at/config.info.ca
+share/webmin/at/config.info.cz
 share/webmin/at/config.info.de
 share/webmin/at/config.info.es
 share/webmin/at/config.info.fr
+share/webmin/at/config.info.hr
 share/webmin/at/config.info.hu
+share/webmin/at/config.info.it
 share/webmin/at/config.info.ms
 share/webmin/at/config.info.nl
 share/webmin/at/config.info.pl
@@ -60,10 +63,12 @@ share/webmin/at/install_check.pl
 share/webmin/at/irix-lib.pl
 share/webmin/at/lang/bg
 share/webmin/at/lang/ca
+share/webmin/at/lang/cz
 share/webmin/at/lang/de
 share/webmin/at/lang/en
 share/webmin/at/lang/es
 share/webmin/at/lang/fr
+share/webmin/at/lang/hr
 share/webmin/at/lang/hu
 share/webmin/at/lang/it
 share/webmin/at/lang/ms
