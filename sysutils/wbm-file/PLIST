@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/07 15:13:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:49:31 kefren Exp $
 share/examples/webmin/file/config
 share/webmin/file/ACLEditor.class
 share/webmin/file/ACLEntry.class
@@ -29,6 +29,7 @@ share/webmin/file/CbScrollbarCallback.class
 share/webmin/file/CbSlider.class
 share/webmin/file/CbSlider.java
 share/webmin/file/CbSliderCallback.class
+share/webmin/file/ContentsWindow.class
 share/webmin/file/DFSAdminExport.class
 share/webmin/file/DeleteWindow.class
 share/webmin/file/DownloadDirWindow.class
@@ -96,15 +97,22 @@ share/webmin/file/acl_security.pl
 share/webmin/file/chmod.cgi
 share/webmin/file/config
 share/webmin/file/config-*-linux
+share/webmin/file/config-freebsd
 share/webmin/file/config-irix
 share/webmin/file/config-solaris
 share/webmin/file/config.info
 share/webmin/file/config.info.ca
+share/webmin/file/config.info.cz
 share/webmin/file/config.info.de
+share/webmin/file/config.info.el
 share/webmin/file/config.info.es
 share/webmin/file/config.info.fa
 share/webmin/file/config.info.it
+share/webmin/file/config.info.ko_KR.UTF-8
+share/webmin/file/config.info.ko_KR.euc
+share/webmin/file/config.info.nl
 share/webmin/file/config.info.tr
+share/webmin/file/contents.cgi
 share/webmin/file/copy.cgi
 share/webmin/file/defaultacl
 share/webmin/file/delete.cgi
@@ -174,7 +182,9 @@ share/webmin/file/irix-setfacl.pl
 share/webmin/file/lang.cgi
 share/webmin/file/lang/bg
 share/webmin/file/lang/ca
+share/webmin/file/lang/cz
 share/webmin/file/lang/de
+share/webmin/file/lang/el
 share/webmin/file/lang/en
 share/webmin/file/lang/es
 share/webmin/file/lang/fa
@@ -184,6 +194,7 @@ share/webmin/file/lang/ja_JP.UTF-8
 share/webmin/file/lang/ja_JP.euc
 share/webmin/file/lang/ko_KR.UTF-8
 share/webmin/file/lang/ko_KR.euc
+share/webmin/file/lang/nl
 share/webmin/file/lang/pl
 share/webmin/file/lang/pt
 share/webmin/file/lang/pt_BR
