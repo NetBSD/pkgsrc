@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2009/05/16 23:19:19 zafer Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/16 23:28:13 zafer Exp $
 #
 
 DISTNAME=		hmmer-2.3.2
 CATEGORIES=		biology
-MASTER_SITES=		# ftp://selab.janelia.org/pub/software/hmmer/2.3.2/
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://hmmer.janelia.org/
