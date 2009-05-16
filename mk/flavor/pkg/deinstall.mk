@@ -1,4 +1,4 @@
-# $NetBSD: deinstall.mk,v 1.8 2008/03/20 20:02:29 agc Exp $
+# $NetBSD: deinstall.mk,v 1.9 2009/05/16 01:34:22 joerg Exp $
 
 # Set the appropriate flags to pass to pkg_delete(1) based on the value
 # of DEINSTALLDEPENDS (see pkgsrc/mk/install/deinstall.mk).
@@ -19,7 +19,7 @@ _PKG_ARGS_DEINSTALL+=	-v
 
 .if defined(PKG_PRESERVE)
 .  if defined(_UPDATE_RUNNING) && !empty(_UPDATE_RUNNING:M[yY][eE][sS])
-_PKG_ARGS_DEINSTALL+=	-N -f	# update w/o removing any files
+_PKG_ARGS_DEINSTALL+=	-N -f -f	# update w/o removing any files
 .  endif
 .endif
 
