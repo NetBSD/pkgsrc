@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/01 06:35:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/16 18:54:37 kefren Exp $
 share/examples/webmin/inetd/config
 share/webmin/inetd/backup_config.pl
 share/webmin/inetd/config-aix
@@ -37,10 +37,12 @@ share/webmin/inetd/config-unixware
 share/webmin/inetd/config-windows
 share/webmin/inetd/config.info
 share/webmin/inetd/config.info.ca
+share/webmin/inetd/config.info.cz
 share/webmin/inetd/config.info.de
 share/webmin/inetd/config.info.es
 share/webmin/inetd/config.info.fr
 share/webmin/inetd/config.info.hu
+share/webmin/inetd/config.info.nl
 share/webmin/inetd/config.info.pl
 share/webmin/inetd/config.info.ru_RU
 share/webmin/inetd/config.info.ru_SU
@@ -67,6 +69,7 @@ share/webmin/inetd/index.cgi
 share/webmin/inetd/inetd-generic-lib.pl
 share/webmin/inetd/inetd-lib.pl
 share/webmin/inetd/inetd-solaris-10-lib.pl
+share/webmin/inetd/install_check.pl
 share/webmin/inetd/lang/ca
 share/webmin/inetd/lang/cz
 share/webmin/inetd/lang/de
@@ -79,6 +82,7 @@ share/webmin/inetd/lang/ja_JP.UTF-8
 share/webmin/inetd/lang/ja_JP.euc
 share/webmin/inetd/lang/ko_KR.UTF-8
 share/webmin/inetd/lang/ko_KR.euc
+share/webmin/inetd/lang/nl
 share/webmin/inetd/lang/pl
 share/webmin/inetd/lang/sv
 share/webmin/inetd/lang/tr
