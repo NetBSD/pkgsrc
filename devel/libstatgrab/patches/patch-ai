@@ -1,0 +1,25 @@
+$NetBSD: patch-ai,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/tools.h.orig	2005-09-24 13:29:23.000000000 +0000
++++ src/libstatgrab/tools.h
+@@ -30,6 +30,7 @@
+ #endif
+ #ifdef NETBSD
+ #include <uvm/uvm_extern.h>
++#include <sys/param.h>
+ #endif
+ #ifdef HPUX
+ #include <sys/param.h>
+@@ -59,8 +60,12 @@ kvm_t *sg_get_kvm2(void);
+ #endif
+ 
+ #if defined(NETBSD) || defined(OPENBSD)
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ > 106000000)
++struct uvmexp_sysctl *sg_get_uvmexp(void);
++#else
+ struct uvmexp *sg_get_uvmexp(void);
+ #endif
++#endif
+ 
+ #ifdef HPUX
+ struct pst_static *sg_get_pstat_static(void);
