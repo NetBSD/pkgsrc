@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/16 21:30:37 zafer Exp $
 #
 
 DISTNAME=	blogbench-1.0
 PKGREVISION=	1
 CATEGORIES=	benchmarks
-MASTER_SITES=	ftp://ftp.blogbench.pureftpd.org/blogbench/
+MASTER_SITES=	ftp://ftp.uvsq.fr/pub/networking/ftp/pure-ftpd/misc/blogbench/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
