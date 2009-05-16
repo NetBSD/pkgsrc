@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.26 2009/04/10 05:03:12 kefren Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/16 17:45:26 kefren Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
 CATEGORIES=	sysutils www
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -33,7 +33,7 @@ FILES_SUBST+=		WEBMIN_VARDIR=${WEBMIN_VARDIR:Q}
 MESSAGE_SUBST+=		WEBMIN_DIR=${WEBMIN_DIR:Q}
 BUILD_DEFS+=		VARBASE
 
-WEBMIN_MINIMAL_MODULES=	acl cron init inittab man net proc servers webmin webminlog
+WEBMIN_MINIMAL_MODULES=	acl cron init inittab man proc servers webmin webminlog
 
 PKG_SYSCONFSUBDIR=	webmin
 OWN_DIRS_PERMS+=	${WEBMIN_VARDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
