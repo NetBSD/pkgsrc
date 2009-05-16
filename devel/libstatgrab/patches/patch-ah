@@ -1,0 +1,32 @@
+$NetBSD: patch-ah,v 1.1 2009/05/16 11:46:09 obache Exp $
+
+--- src/libstatgrab/tools.c.orig	2007-06-18 20:58:12.000000000 +0000
++++ src/libstatgrab/tools.c
+@@ -498,14 +498,27 @@ kvm_t *sg_get_kvm2() {
+ #endif
+ 
+ #if defined(NETBSD) || defined(OPENBSD)
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ > 106000000)
++struct uvmexp_sysctl *sg_get_uvmexp() {
++#else
+ struct uvmexp *sg_get_uvmexp() {
++#endif
+ 	int mib[2];
++#if defined(__NetBSD_Version__) && (__NetBSD_Version__ > 106000000)
++	size_t size = sizeof(struct uvmexp_sysctl);
++	static struct uvmexp_sysctl uvm;
++	struct uvmexp_sysctl *new;
++
++	mib[0] = CTL_VM;
++	mib[1] = VM_UVMEXP2;
++#else
+ 	size_t size = sizeof(struct uvmexp);
+ 	static struct uvmexp uvm;
+ 	struct uvmexp *new;
+ 
+ 	mib[0] = CTL_VM;
+ 	mib[1] = VM_UVMEXP;
++#endif
+ 
+ 	if (sysctl(mib, 2, &uvm, &size, NULL, 0) < 0) {
+ 		sg_set_error_with_errno(SG_ERROR_SYSCTL, "CTL_VM.VM_UVMEXP");
