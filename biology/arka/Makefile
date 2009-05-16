@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/04/07 16:33:03 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/16 21:56:15 zafer Exp $
 #
 
 DISTNAME=	arka-0.11
 PKGREVISION=	1
 CATEGORIES=	biology
-MASTER_SITES=	http://bioinformatics.org/genpak/download/
+MASTER_SITES=	http://www.bioinformatics.org/genpak/download/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hdp@cs.nmsu.edu
