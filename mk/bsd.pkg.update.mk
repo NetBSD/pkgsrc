@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.17 2009/03/07 19:36:31 joerg Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.18 2009/05/16 01:27:30 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -72,6 +72,7 @@ update:
 				${RECURSIVE_MAKE} ${MAKEFLAGS} deinstall _UPDATE_RUNNING=YES; \
 			fi &&						\
 			${RECURSIVE_MAKE} ${MAKEFLAGS} ${UPDATE_TARGET}	\
+				_PKGSRC_UPDATE_CHECK=yes		\
 				DEPENDS_TARGET=${DEPENDS_TARGET:Q} ;	\
 		else							\
 			${PHASE_MSG} "Skipping removed directory $${dep}"; \
