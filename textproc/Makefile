@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.477 2009/05/14 06:10:40 minskim Exp $
+# $NetBSD: Makefile,v 1.478 2009/05/16 21:01:48 minskim Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -452,6 +452,7 @@ SUBDIR+=	tcl-xml
 SUBDIR+=	tei
 SUBDIR+=	tei-p5-schema
 SUBDIR+=	tei-xsl
+SUBDIR+=	tex-bin-xmltex
 SUBDIR+=	tex-xmltex
 SUBDIR+=	tex-xmltex-doc
 SUBDIR+=	tex2page
