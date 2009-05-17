@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1855 2009/05/17 10:26:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1856 2009/05/17 10:30:41 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2478,3 +2478,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Number-Format to 1.72a [sno 2009-05-17]
 	Added print/p5-LaTeX-Driver version 0.08 [sno 2009-05-17]
 	Added print/p5-LaTeX-Encode version 0.03 [sno 2009-05-17]
+	Added devel/p5-Moose-Policy version 0.03 [sno 2009-05-17]
