@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.291 2009/05/09 14:59:08 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.292 2009/05/17 23:44:53 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -387,6 +387,9 @@ USE_DESTDIR:=		yes
 .endif
 
 .if empty(PKG_DESTDIR_SUPPORT) || empty(USE_DESTDIR:M[Yy][Ee][Ss])
+.  if empty(USE_DESTDIR:M[Nn][Oo])
+PKG_FAIL_REASON+=	"USE_DESTDIR must be either \`\`yes'' or \`\`no''"
+.  endif
 _USE_DESTDIR=		no
 .elif ${PKG_DESTDIR_SUPPORT} == "user-destdir"
 _USE_DESTDIR=		user-destdir
