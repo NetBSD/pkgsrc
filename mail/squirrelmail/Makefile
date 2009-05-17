@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101.4.1 2009/05/14 09:08:59 tron Exp $
+# $NetBSD: Makefile,v 1.101.4.2 2009/05/17 14:33:22 tron Exp $
 
 DISTNAME=	squirrelmail-1.4.18
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squirrelmail/}
 EXTRACT_SUFX=	.tar.bz2
@@ -75,9 +75,6 @@ post-extract:
 pre-configure:
 	find ${WRKSRC} \( -name '*.orig*' -o -name '.cvsignore' \) \
 		-exec rm -f {} \;
-# currently, we use iso_2022_jp.php in squirrelmail-decode package.
-#
-	rm -f ${WRKSRC}/functions/decode/iso_2022_jp.php
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/squirrelmail.conf.dist ${EGDIR}/squirrelmail.conf
