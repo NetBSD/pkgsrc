@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1861 2009/05/17 10:50:09 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1862 2009/05/17 12:56:44 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added textproc/p5-Template-Plugin-Latex version 3.02 [sno 2009-05-17]
 	Updated www/typolight27-translations to 20090514 [taca 2009-05-17]
 	Updated textproc/p5-Text-CSV_XS to 0.65 [sno 2009-05-17]
+	Updated graphics/graphviz to 2.22.2 [sno 2009-05-17]
