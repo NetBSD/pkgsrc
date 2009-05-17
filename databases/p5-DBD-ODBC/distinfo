@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/17 13:29:15 sno Exp $
+
+SHA1 (DBD-ODBC-1.21.tar.gz) = 7984e031ce3614b523920deebac03b80aa473a71
+RMD160 (DBD-ODBC-1.21.tar.gz) = 738d1d57676658a75ceb4676567547dc5292f25e
+Size (DBD-ODBC-1.21.tar.gz) = 174208 bytes
+SHA1 (patch-aa) = e731a710838e86f05c4f3b223f768968ba1d9489
