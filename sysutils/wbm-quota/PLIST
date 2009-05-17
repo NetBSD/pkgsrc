@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:14:48 kefren Exp $
 share/examples/webmin/quota/config
 share/webmin/quota/CHANGELOG
 share/webmin/quota/acl_security.pl
@@ -15,11 +15,14 @@ share/webmin/quota/config-solaris
 share/webmin/quota/config-unixware
 share/webmin/quota/config.info
 share/webmin/quota/config.info.ca
+share/webmin/quota/config.info.cz
 share/webmin/quota/config.info.da
 share/webmin/quota/config.info.de
 share/webmin/quota/config.info.es
 share/webmin/quota/config.info.fr
 share/webmin/quota/config.info.it
+share/webmin/quota/config.info.ko_KR.UTF-8
+share/webmin/quota/config.info.ko_KR.euc
 share/webmin/quota/config.info.nl
 share/webmin/quota/config.info.pl
 share/webmin/quota/config.info.ru_RU
