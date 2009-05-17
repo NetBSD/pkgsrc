@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1864 2009/05/17 13:46:15 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1865 2009/05/17 13:55:31 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/graphviz to 2.22.2 [sno 2009-05-17]
 	Added databases/p5-DBD-ODBC version 1.21 [sno 2009-05-17]
 	Updated www/opera to 9.64 [obache 2009-05-17]
+	Updated devel/p5-File-LibMagic to 0.94 [sno 2009-05-17]
