@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/02/22 17:39:15 he Exp $
+$NetBSD: distinfo,v 1.3 2009/05/17 19:41:14 sno Exp $
 
-SHA1 (Catalyst-Plugin-Session-Store-Delegate-0.03.tar.gz) = 5397e5929385549fd45e81e10cc47235d8373cc1
-RMD160 (Catalyst-Plugin-Session-Store-Delegate-0.03.tar.gz) = e9ae44669e3aeebd4b1304f754a812e2a086789f
-Size (Catalyst-Plugin-Session-Store-Delegate-0.03.tar.gz) = 5131 bytes
+SHA1 (Catalyst-Plugin-Session-Store-Delegate-0.04.tar.gz) = 740f11c5925674125f8c4a3e15d79868e6b13f56
+RMD160 (Catalyst-Plugin-Session-Store-Delegate-0.04.tar.gz) = f911743f7e50bef9135909d7a1441a1809c58186
+Size (Catalyst-Plugin-Session-Store-Delegate-0.04.tar.gz) = 17159 bytes
