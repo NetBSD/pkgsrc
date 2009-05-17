@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.4 2009/05/17 17:34:01 plunky Exp $
+
+include <time.h> and <utime.h> so that where time_t has been changed to 64-bit
+values on NetBSD, we we get correctly referred to __utime50() which can handle
+64-bit values. This fixes a problem where mailbox mtimes were being reset to 0
+
+Note that this actually causes some build warnings as the code uses
+"time_t tp[2]" instead of "struct utimbuf tp" (contains two time_t values)
+
+Although the <os_bsi.h> file says it is used for BSDI, it seems to be used by
+NetBSD and OpenBSD, both of which have the <utime.h> and <time.h>
+
+  - plunky
+
+--- imap/src/osdep/unix/os_bsi.h.orig	2008-06-04 19:18:34.000000000 +0100
++++ imap/src/osdep/unix/os_bsi.h	2009-05-17 18:00:44.000000000 +0100
+@@ -34,6 +34,8 @@
+ #include <fcntl.h>
+ #include <syslog.h>
+ #include <sys/file.h>
++#include <time.h>
++#include <utime.h>
+ 
+ 
+ #include "env_unix.h"
