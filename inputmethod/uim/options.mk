@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2009/01/23 13:40:32 obache Exp $
+# $NetBSD: options.mk,v 1.16 2009/05/17 05:06:02 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
 #PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 uim-fep wnn xim
@@ -57,6 +57,9 @@ CONFIGURE_ARGS+=	--with-eb
 
 .if !empty(PKG_OPTIONS:Mgnome)
 .  include "../../x11/gnome-panel/buildlink3.mk"
+.  include "../../devel/libgnomeui/buildlink3.mk"
+CFLAGS+=		-I$(BUILDLINK_PREFIX.libgnomeui)/include/libgnomeui-2.0
+BUILDLINK_TRANSFORM+=	l:panel-applet-2:panel-applet-2:gnomeui-2
 PLIST.gnome=		yes
 .else
 CONFIGURE_ARGS+=	--disable-gnome-applet
