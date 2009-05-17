@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-ae,v 1.6 2009/05/17 21:29:34 dholland Exp $
 
---- main.c.orig	2001-03-25 19:44:50.000000000 -0800
-+++ main.c
-@@ -49,12 +49,18 @@
+--- main.c.orig	2001-03-25 22:44:50.000000000 -0500
++++ main.c	2009-05-17 17:20:20.000000000 -0400
+@@ -49,7 +49,9 @@
  #include <unistd.h>
  #include <string.h>
  #include <fcntl.h>
@@ -12,16 +12,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  #include <errno.h>
  #include <math.h>
  #include <sys/time.h>
- #include <sys/stat.h>
- 
-+#ifdef HAVE_GETRAWPARTITION
-+#include <util.h>
-+#endif
-+
- #include "interface/cdda_interface.h"
- #include "paranoia/cdda_paranoia.h"
- #include "utils.h"
-@@ -231,6 +237,7 @@ VERSION"\n"
+@@ -231,6 +233,7 @@ VERSION"\n"
  "  cdparanoia [options] <span> [outfile]\n\n"
  
  "OPTIONS:\n"
@@ -29,7 +20,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  "  -v --verbose                    : extra verbose operation\n"
  "  -q --quiet                      : quiet operation\n"
  "  -e --stderr-progress            : force output of progress information to\n"
-@@ -256,9 +263,11 @@ VERSION"\n"
+@@ -256,9 +259,11 @@ VERSION"\n"
  "                                    to n sectors\n"
  "  -o --force-search-overlap  <n>  : force minimum overlap search during\n"
  "                                    verification to n sectors\n"
@@ -41,7 +32,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  "  -S --force-read-speed <n>       : read from device at specified speed\n"
  "  -t --toc-offset <n>             : Add <n> sectors to the values reported\n"
  "                                    when addressing tracks. May be negative\n"
-@@ -276,6 +285,52 @@ VERSION"\n"
+@@ -276,6 +281,52 @@ VERSION"\n"
  "  -Z --disable-paranoia           : disable all paranoia checking\n"
  "  -Y --disable-extra-paranoia     : only do cdda2wav-style overlap checking\n"
  "  -X --abort-on-skip              : abort on imperfect reads/skips\n\n"
@@ -94,7 +85,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  
  "OUTPUT SMILIES:\n"
  "  :-)   Normal operation, low/no jitter\n"
-@@ -376,7 +431,7 @@ static void callback(long inpos, int fun
+@@ -376,7 +427,7 @@ static void callback(long inpos, int fun
    int graph=30;
    char buffer[256];
    static long c_sector=0,v_sector=0;
@@ -103,7 +94,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
    static int last=0;
    static long lasttime=0;
    long sector,osector=0;
-@@ -587,6 +642,7 @@ static void callback(long inpos, int fun
+@@ -587,6 +638,7 @@ static void callback(long inpos, int fun
  
  const char *optstring = "escCn:o:O:d:g:S:prRwafvqVQhZz::YXWBi:Tt:";
  
@@ -111,7 +102,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  struct option options [] = {
  	{"stderr-progress",no_argument,NULL,'e'},
  	{"search-for-drive",no_argument,NULL,'s'},
-@@ -621,6 +677,7 @@ struct option options [] = {
+@@ -621,6 +673,7 @@ struct option options [] = {
  
  	{NULL,0,NULL,0}
  };
@@ -119,7 +110,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  
  long blocking_write(int outf, char *buffer, long num){
    long words=0,temp;
-@@ -673,7 +730,12 @@ int main(int argc,char *argv[]){
+@@ -673,7 +726,12 @@ int main(int argc,char *argv[]){
  
    atexit(cleanup);
  
@@ -133,7 +124,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
      switch(c){
      case 'B':
        batch=1;
-@@ -690,6 +752,7 @@ int main(int argc,char *argv[]){
+@@ -690,6 +748,7 @@ int main(int argc,char *argv[]){
      case 'o':
        force_cdrom_overlap=atoi(optarg);
        break;
@@ -141,7 +132,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
      case 'd':
        if(force_cdrom_device)free(force_cdrom_device);
        force_cdrom_device=copystring(optarg);
-@@ -698,6 +761,7 @@ int main(int argc,char *argv[]){
+@@ -698,6 +757,7 @@ int main(int argc,char *argv[]){
        if(force_generic_device)free(force_generic_device);
        force_generic_device=copystring(optarg);
        break;
@@ -149,7 +140,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
      case 'S':
        force_cdrom_speed=atoi(optarg);
        break;
-@@ -811,6 +875,30 @@ int main(int argc,char *argv[]){
+@@ -811,6 +871,18 @@ int main(int argc,char *argv[]){
  
    /* Query the cdrom/disc; we may need to override some settings */
  
@@ -157,19 +148,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
 +  d=cdda_find_a_cdrom(verbose,NULL);
 +#else
 +#ifndef __linux__	/* XXX */
-+#ifdef __NetBSD__
-+  if (!force_generic_device) {
-+    int raw;
-+    static char devstring[16];
-+#ifdef HAVE_GETRAWPARTITION
-+    raw = getrawpartition();
-+#else
-+    raw = 'c' - 'a';
-+#endif
-+    snprintf(devstring, sizeof(devstring) - 1, "/dev/rcd0%c", raw + 'a');
-+    force_generic_device=devstring;
-+  }
-+#else
++#ifndef __NetBSD__ /* XXX: is this needed? */
 +  if (!force_generic_device)
 +    errx(1, "-g option is currently required by the NetBSD pkg version");
 +#endif
@@ -180,7 +159,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
    if(force_generic_device)
      d=cdda_identify_scsi(force_generic_device,force_cdrom_device,verbose,NULL);
    else
-@@ -841,6 +929,7 @@ int main(int argc,char *argv[]){
+@@ -841,6 +913,7 @@ int main(int argc,char *argv[]){
  	    report("");
  	}
        }
@@ -188,7 +167,7 @@ $NetBSD: patch-ae,v 1.5 2006/09/03 17:13:30 ben Exp $
  
    if(!d){
      if(!verbose)
-@@ -878,7 +967,9 @@ int main(int argc,char *argv[]){
+@@ -878,7 +951,9 @@ int main(int argc,char *argv[]){
  	      "ignoring preset and autosense",force_cdrom_sectors);
        report(buffer);
        d->nsectors=force_cdrom_sectors;
