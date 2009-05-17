@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/17 13:55:26 kefren Exp $
 share/examples/webmin/mysql/config
 share/webmin/mysql/CHANGELOG
 share/webmin/mysql/acl_security.pl
@@ -23,7 +23,8 @@ share/webmin/mysql/config-redhat-linux
 share/webmin/mysql/config-redhat-linux-7.0-*
 share/webmin/mysql/config-slackware-linux-8.0-*
 share/webmin/mysql/config-sol-linux
-share/webmin/mysql/config-solaris-10-*
+share/webmin/mysql/config-solaris-10
+share/webmin/mysql/config-solaris-11-*
 share/webmin/mysql/config-solaris-9
 share/webmin/mysql/config-suse-linux
 share/webmin/mysql/config-suse-linux-7.1-*
@@ -31,6 +32,7 @@ share/webmin/mysql/config-trustix-linux
 share/webmin/mysql/config-turbo-linux
 share/webmin/mysql/config-united-linux
 share/webmin/mysql/config-windows
+share/webmin/mysql/config_info.pl
 share/webmin/mysql/config.info
 share/webmin/mysql/config.info.ca
 share/webmin/mysql/config.info.cz
@@ -38,8 +40,10 @@ share/webmin/mysql/config.info.de
 share/webmin/mysql/config.info.es
 share/webmin/mysql/config.info.fi
 share/webmin/mysql/config.info.hu
+share/webmin/mysql/config.info.it
 share/webmin/mysql/config.info.ja_JP.UTF-8
 share/webmin/mysql/config.info.ja_JP.euc
+share/webmin/mysql/config.info.nl
 share/webmin/mysql/config.info.pl
 share/webmin/mysql/config.info.ru_RU
 share/webmin/mysql/config.info.ru_SU
@@ -84,12 +88,15 @@ share/webmin/mysql/help/backup_form.ca.html
 share/webmin/mysql/help/backup_form.es.html
 share/webmin/mysql/help/backup_form.html
 share/webmin/mysql/help/backup_form.hu.html
+share/webmin/mysql/help/backup_form.it.html
 share/webmin/mysql/help/cnf.ca.html
 share/webmin/mysql/help/cnf.html
+share/webmin/mysql/help/cnf.it.html
 share/webmin/mysql/help/cpriv.ca.html
 share/webmin/mysql/help/cpriv.es.html
 share/webmin/mysql/help/cpriv.html
 share/webmin/mysql/help/cpriv.hu.html
+share/webmin/mysql/help/cpriv.it.html
 share/webmin/mysql/help/cpriv.sv.html
 share/webmin/mysql/help/cpriv.zh_TW.Big5.html
 share/webmin/mysql/help/cpriv.zh_TW.UTF-8.html
@@ -97,6 +104,7 @@ share/webmin/mysql/help/cprivs.ca.html
 share/webmin/mysql/help/cprivs.es.html
 share/webmin/mysql/help/cprivs.html
 share/webmin/mysql/help/cprivs.hu.html
+share/webmin/mysql/help/cprivs.it.html
 share/webmin/mysql/help/cprivs.sv.html
 share/webmin/mysql/help/cprivs.zh_TW.Big5.html
 share/webmin/mysql/help/cprivs.zh_TW.UTF-8.html
@@ -104,6 +112,7 @@ share/webmin/mysql/help/create_cpriv.ca.html
 share/webmin/mysql/help/create_cpriv.es.html
 share/webmin/mysql/help/create_cpriv.html
 share/webmin/mysql/help/create_cpriv.hu.html
+share/webmin/mysql/help/create_cpriv.it.html
 share/webmin/mysql/help/create_cpriv.sv.html
 share/webmin/mysql/help/create_cpriv.zh_TW.Big5.html
 share/webmin/mysql/help/create_cpriv.zh_TW.UTF-8.html
@@ -111,6 +120,7 @@ share/webmin/mysql/help/create_db.ca.html
 share/webmin/mysql/help/create_db.es.html
 share/webmin/mysql/help/create_db.html
 share/webmin/mysql/help/create_db.hu.html
+share/webmin/mysql/help/create_db.it.html
 share/webmin/mysql/help/create_db.sv.html
 share/webmin/mysql/help/create_db.zh_TW.Big5.html
 share/webmin/mysql/help/create_db.zh_TW.UTF-8.html
@@ -118,6 +128,7 @@ share/webmin/mysql/help/create_field.ca.html
 share/webmin/mysql/help/create_field.es.html
 share/webmin/mysql/help/create_field.html
 share/webmin/mysql/help/create_field.hu.html
+share/webmin/mysql/help/create_field.it.html
 share/webmin/mysql/help/create_field.sv.html
 share/webmin/mysql/help/create_field.zh_TW.Big5.html
 share/webmin/mysql/help/create_field.zh_TW.UTF-8.html
@@ -125,6 +136,7 @@ share/webmin/mysql/help/create_tpriv.ca.html
 share/webmin/mysql/help/create_tpriv.es.html
 share/webmin/mysql/help/create_tpriv.html
 share/webmin/mysql/help/create_tpriv.hu.html
+share/webmin/mysql/help/create_tpriv.it.html
 share/webmin/mysql/help/create_tpriv.sv.html
 share/webmin/mysql/help/create_tpriv.zh_TW.Big5.html
 share/webmin/mysql/help/create_tpriv.zh_TW.UTF-8.html
@@ -132,15 +144,18 @@ share/webmin/mysql/help/create_user.ca.html
 share/webmin/mysql/help/create_user.es.html
 share/webmin/mysql/help/create_user.html
 share/webmin/mysql/help/create_user.hu.html
+share/webmin/mysql/help/create_user.it.html
 share/webmin/mysql/help/create_user.sv.html
 share/webmin/mysql/help/create_user.zh_TW.Big5.html
 share/webmin/mysql/help/create_user.zh_TW.UTF-8.html
 share/webmin/mysql/help/csv.ca.html
 share/webmin/mysql/help/csv.html
+share/webmin/mysql/help/csv.it.html
 share/webmin/mysql/help/db.ca.html
 share/webmin/mysql/help/db.es.html
 share/webmin/mysql/help/db.html
 share/webmin/mysql/help/db.hu.html
+share/webmin/mysql/help/db.it.html
 share/webmin/mysql/help/db.sv.html
 share/webmin/mysql/help/db.zh_TW.Big5.html
 share/webmin/mysql/help/db.zh_TW.UTF-8.html
@@ -148,6 +163,7 @@ share/webmin/mysql/help/dbs.ca.html
 share/webmin/mysql/help/dbs.es.html
 share/webmin/mysql/help/dbs.html
 share/webmin/mysql/help/dbs.hu.html
+share/webmin/mysql/help/dbs.it.html
 share/webmin/mysql/help/dbs.sv.html
 share/webmin/mysql/help/dbs.zh_TW.Big5.html
 share/webmin/mysql/help/dbs.zh_TW.UTF-8.html
@@ -155,6 +171,7 @@ share/webmin/mysql/help/edit_cpriv.ca.html
 share/webmin/mysql/help/edit_cpriv.es.html
 share/webmin/mysql/help/edit_cpriv.html
 share/webmin/mysql/help/edit_cpriv.hu.html
+share/webmin/mysql/help/edit_cpriv.it.html
 share/webmin/mysql/help/edit_cpriv.sv.html
 share/webmin/mysql/help/edit_cpriv.zh_TW.Big5.html
 share/webmin/mysql/help/edit_cpriv.zh_TW.UTF-8.html
@@ -162,6 +179,7 @@ share/webmin/mysql/help/edit_db.ca.html
 share/webmin/mysql/help/edit_db.es.html
 share/webmin/mysql/help/edit_db.html
 share/webmin/mysql/help/edit_db.hu.html
+share/webmin/mysql/help/edit_db.it.html
 share/webmin/mysql/help/edit_db.sv.html
 share/webmin/mysql/help/edit_db.zh_TW.Big5.html
 share/webmin/mysql/help/edit_db.zh_TW.UTF-8.html
@@ -169,6 +187,7 @@ share/webmin/mysql/help/edit_dbase.ca.html
 share/webmin/mysql/help/edit_dbase.es.html
 share/webmin/mysql/help/edit_dbase.html
 share/webmin/mysql/help/edit_dbase.hu.html
+share/webmin/mysql/help/edit_dbase.it.html
 share/webmin/mysql/help/edit_dbase.sv.html
 share/webmin/mysql/help/edit_dbase.zh_TW.Big5.html
 share/webmin/mysql/help/edit_dbase.zh_TW.UTF-8.html
@@ -176,6 +195,7 @@ share/webmin/mysql/help/edit_field.ca.html
 share/webmin/mysql/help/edit_field.es.html
 share/webmin/mysql/help/edit_field.html
 share/webmin/mysql/help/edit_field.hu.html
+share/webmin/mysql/help/edit_field.it.html
 share/webmin/mysql/help/edit_field.sv.html
 share/webmin/mysql/help/edit_field.zh_TW.Big5.html
 share/webmin/mysql/help/edit_field.zh_TW.UTF-8.html
@@ -183,6 +203,7 @@ share/webmin/mysql/help/edit_table.ca.html
 share/webmin/mysql/help/edit_table.es.html
 share/webmin/mysql/help/edit_table.html
 share/webmin/mysql/help/edit_table.hu.html
+share/webmin/mysql/help/edit_table.it.html
 share/webmin/mysql/help/edit_table.sv.html
 share/webmin/mysql/help/edit_table.zh_TW.Big5.html
 share/webmin/mysql/help/edit_table.zh_TW.UTF-8.html
@@ -190,6 +211,7 @@ share/webmin/mysql/help/edit_tpriv.ca.html
 share/webmin/mysql/help/edit_tpriv.es.html
 share/webmin/mysql/help/edit_tpriv.html
 share/webmin/mysql/help/edit_tpriv.hu.html
+share/webmin/mysql/help/edit_tpriv.it.html
 share/webmin/mysql/help/edit_tpriv.sv.html
 share/webmin/mysql/help/edit_tpriv.zh_TW.Big5.html
 share/webmin/mysql/help/edit_tpriv.zh_TW.UTF-8.html
@@ -197,6 +219,7 @@ share/webmin/mysql/help/edit_user.ca.html
 share/webmin/mysql/help/edit_user.es.html
 share/webmin/mysql/help/edit_user.html
 share/webmin/mysql/help/edit_user.hu.html
+share/webmin/mysql/help/edit_user.it.html
 share/webmin/mysql/help/edit_user.sv.html
 share/webmin/mysql/help/edit_user.zh_TW.Big5.html
 share/webmin/mysql/help/edit_user.zh_TW.UTF-8.html
@@ -204,6 +227,7 @@ share/webmin/mysql/help/exec_form.ca.html
 share/webmin/mysql/help/exec_form.es.html
 share/webmin/mysql/help/exec_form.html
 share/webmin/mysql/help/exec_form.hu.html
+share/webmin/mysql/help/exec_form.it.html
 share/webmin/mysql/help/exec_form.sv.html
 share/webmin/mysql/help/exec_form.zh_TW.Big5.html
 share/webmin/mysql/help/exec_form.zh_TW.UTF-8.html
@@ -211,6 +235,7 @@ share/webmin/mysql/help/field.ca.html
 share/webmin/mysql/help/field.es.html
 share/webmin/mysql/help/field.html
 share/webmin/mysql/help/field.hu.html
+share/webmin/mysql/help/field.it.html
 share/webmin/mysql/help/field.sv.html
 share/webmin/mysql/help/field.zh_TW.Big5.html
 share/webmin/mysql/help/field.zh_TW.UTF-8.html
@@ -218,6 +243,7 @@ share/webmin/mysql/help/intro.ca.html
 share/webmin/mysql/help/intro.es.html
 share/webmin/mysql/help/intro.html
 share/webmin/mysql/help/intro.hu.html
+share/webmin/mysql/help/intro.it.html
 share/webmin/mysql/help/intro.sv.html
 share/webmin/mysql/help/intro.zh_TW.Big5.html
 share/webmin/mysql/help/intro.zh_TW.UTF-8.html
@@ -225,15 +251,18 @@ share/webmin/mysql/help/newdb_form.ca.html
 share/webmin/mysql/help/newdb_form.es.html
 share/webmin/mysql/help/newdb_form.html
 share/webmin/mysql/help/newdb_form.hu.html
+share/webmin/mysql/help/newdb_form.it.html
 share/webmin/mysql/help/newdb_form.sv.html
 share/webmin/mysql/help/newdb_form.zh_TW.Big5.html
 share/webmin/mysql/help/newdb_form.zh_TW.UTF-8.html
 share/webmin/mysql/help/procs.ca.html
 share/webmin/mysql/help/procs.html
+share/webmin/mysql/help/procs.it.html
 share/webmin/mysql/help/table_form.ca.html
 share/webmin/mysql/help/table_form.es.html
 share/webmin/mysql/help/table_form.html
 share/webmin/mysql/help/table_form.hu.html
+share/webmin/mysql/help/table_form.it.html
 share/webmin/mysql/help/table_form.sv.html
 share/webmin/mysql/help/table_form.zh_TW.Big5.html
 share/webmin/mysql/help/table_form.zh_TW.UTF-8.html
@@ -241,6 +270,7 @@ share/webmin/mysql/help/tpriv.ca.html
 share/webmin/mysql/help/tpriv.es.html
 share/webmin/mysql/help/tpriv.html
 share/webmin/mysql/help/tpriv.hu.html
+share/webmin/mysql/help/tpriv.it.html
 share/webmin/mysql/help/tpriv.sv.html
 share/webmin/mysql/help/tpriv.zh_TW.Big5.html
 share/webmin/mysql/help/tpriv.zh_TW.UTF-8.html
@@ -248,6 +278,7 @@ share/webmin/mysql/help/tprivs.ca.html
 share/webmin/mysql/help/tprivs.es.html
 share/webmin/mysql/help/tprivs.html
 share/webmin/mysql/help/tprivs.hu.html
+share/webmin/mysql/help/tprivs.it.html
 share/webmin/mysql/help/tprivs.sv.html
 share/webmin/mysql/help/tprivs.zh_TW.Big5.html
 share/webmin/mysql/help/tprivs.zh_TW.UTF-8.html
@@ -255,6 +286,7 @@ share/webmin/mysql/help/user.ca.html
 share/webmin/mysql/help/user.es.html
 share/webmin/mysql/help/user.html
 share/webmin/mysql/help/user.hu.html
+share/webmin/mysql/help/user.it.html
 share/webmin/mysql/help/user.sv.html
 share/webmin/mysql/help/user.zh_TW.Big5.html
 share/webmin/mysql/help/user.zh_TW.UTF-8.html
@@ -262,11 +294,13 @@ share/webmin/mysql/help/users.ca.html
 share/webmin/mysql/help/users.es.html
 share/webmin/mysql/help/users.html
 share/webmin/mysql/help/users.hu.html
+share/webmin/mysql/help/users.it.html
 share/webmin/mysql/help/users.sv.html
 share/webmin/mysql/help/users.zh_TW.Big5.html
 share/webmin/mysql/help/users.zh_TW.UTF-8.html
 share/webmin/mysql/help/vars.ca.html
 share/webmin/mysql/help/vars.html
+share/webmin/mysql/help/vars.it.html
 share/webmin/mysql/images/cnf.gif
 share/webmin/mysql/images/cprivs.gif
 share/webmin/mysql/images/db.gif
@@ -278,6 +312,7 @@ share/webmin/mysql/images/icon.gif
 share/webmin/mysql/images/index.gif
 share/webmin/mysql/images/mysql.gif
 share/webmin/mysql/images/procs.gif
+share/webmin/mysql/images/root.gif
 share/webmin/mysql/images/smallicon.gif
 share/webmin/mysql/images/table.gif
 share/webmin/mysql/images/tprivs.gif
@@ -302,6 +337,7 @@ share/webmin/mysql/lang/ja_JP.UTF-8
 share/webmin/mysql/lang/ja_JP.euc
 share/webmin/mysql/lang/ko_KR.UTF-8
 share/webmin/mysql/lang/ko_KR.euc
+share/webmin/mysql/lang/nl
 share/webmin/mysql/lang/pl
 share/webmin/mysql/lang/ru_RU
 share/webmin/mysql/lang/ru_SU
@@ -325,12 +361,14 @@ share/webmin/mysql/module.info
 share/webmin/mysql/mysql-lib.pl
 share/webmin/mysql/newdb.cgi
 share/webmin/mysql/newdb_form.cgi
+share/webmin/mysql/root_form.cgi
 share/webmin/mysql/save_cnf.cgi
 share/webmin/mysql/save_cpriv.cgi
 share/webmin/mysql/save_db.cgi
 share/webmin/mysql/save_field.cgi
 share/webmin/mysql/save_host.cgi
 share/webmin/mysql/save_index.cgi
+share/webmin/mysql/save_root.cgi
 share/webmin/mysql/save_sync.cgi
 share/webmin/mysql/save_tpriv.cgi
 share/webmin/mysql/save_user.cgi
