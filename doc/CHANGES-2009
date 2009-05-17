@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1869 2009/05/17 14:26:43 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1870 2009/05/17 14:34:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2492,3 +2492,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Array-Diff to 0.05.002 [sno 2009-05-17]
 	Updated www/squid31 to 3.1.0.7nb3 [tron 2009-05-17]
 	Updated databases/p5-SQL-Abstract to 1.55 [sno 2009-05-17]
+	Updated devel/p5-Parse-CPAN-Meta to 1.38 [sno 2009-05-17]
