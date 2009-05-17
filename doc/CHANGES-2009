@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1873 2009/05/17 14:52:46 kefren Exp $
+$NetBSD: CHANGES-2009,v 1.1874 2009/05/17 17:38:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/wbm-time to 1.470 [kefren 2009-05-17]
 	Updated sysutils/wbm-tunnel to 1.470 [kefren 2009-05-17]
 	Updated sysutils/wbm-useradmin to 1.470 [kefren 2009-05-17]
+	Updated devel/p5-Class-Accessor to 0.33 [sno 2009-05-17]
