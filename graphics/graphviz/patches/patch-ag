@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.13 2009/02/26 19:45:14 sno Exp $
+$NetBSD: patch-ag,v 1.14 2009/05/17 12:55:52 sno Exp $
 
---- lib/gvc/Makefile.in.orig	2008-12-01 12:32:24.000000000 +0100
-+++ lib/gvc/Makefile.in	2008-12-01 12:32:52.000000000 +0100
-@@ -465,7 +465,7 @@
+--- lib/gvc/Makefile.in.orig	2009-03-13 18:19:15.000000000 +0000
++++ lib/gvc/Makefile.in	2009-04-25 20:20:54.000000000 +0000
+@@ -433,7 +431,7 @@
  	$(top_builddir)/lib/cdt/libcdt.la \
- 	$(top_builddir)/lib/graph/libgraph.la \
+ 	$(top_builddir)/lib/$(GRAPH)/lib$(GRAPH).la \
  	$(top_builddir)/lib/pathplan/libpathplan.la \
--	@EXPAT_LIBS@ @Z_LIBS@ @MATH_LIBS@
-+	@EXPAT_LIBS@ @Z_LIBS@ @MATH_LIBS@ ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+-	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS)
++	$(EXPAT_LIBS) $(Z_LIBS) $(MATH_LIBS) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS\
  
- 
- #For use without plugins.
+ libgvc_la_DEPENDENCIES = $(libgvc_C_la_DEPENDENCIES)
+ EXTRA_DIST = $(man_MANS) $(pdf_DATA) Makefile.old regex_win32.h regex_win32.c gvc.vcproj
