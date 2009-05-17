@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/17 14:29:25 kefren Exp $
 share/examples/webmin/sshd/config
 share/webmin/sshd/CHANGELOG
 share/webmin/sshd/apply.cgi
@@ -24,12 +24,16 @@ share/webmin/sshd/config-united-linux
 share/webmin/sshd/config-windows
 share/webmin/sshd/config.info
 share/webmin/sshd/config.info.ca
+share/webmin/sshd/config.info.cz
 share/webmin/sshd/config.info.de
 share/webmin/sshd/config.info.es
 share/webmin/sshd/config.info.fa
 share/webmin/sshd/config.info.fr
 share/webmin/sshd/config.info.ja_JP.UTF-8
 share/webmin/sshd/config.info.ja_JP.euc
+share/webmin/sshd/config.info.ko_KR.UTF-8
+share/webmin/sshd/config.info.ko_KR.euc
+share/webmin/sshd/config.info.nl
 share/webmin/sshd/config.info.pl
 share/webmin/sshd/config.info.ru_RU
 share/webmin/sshd/config.info.ru_SU
@@ -39,6 +43,7 @@ share/webmin/sshd/edit_access.cgi
 share/webmin/sshd/edit_host.cgi
 share/webmin/sshd/edit_manual.cgi
 share/webmin/sshd/edit_misc.cgi
+share/webmin/sshd/edit_keys.cgi
 share/webmin/sshd/edit_net.cgi
 share/webmin/sshd/edit_sync.cgi
 share/webmin/sshd/edit_users.cgi
@@ -99,6 +104,7 @@ share/webmin/sshd/images/access.gif
 share/webmin/sshd/images/host.gif
 share/webmin/sshd/images/hosts.gif
 share/webmin/sshd/images/icon.gif
+share/webmin/sshd/images/keys.gif
 share/webmin/sshd/images/manual.gif
 share/webmin/sshd/images/misc.gif
 share/webmin/sshd/images/net.gif
@@ -108,6 +114,7 @@ share/webmin/sshd/images/users.gif
 share/webmin/sshd/index.cgi
 share/webmin/sshd/install_check.pl
 share/webmin/sshd/lang/ca
+share/webmin/sshd/lang/cz
 share/webmin/sshd/lang/de
 share/webmin/sshd/lang/en
 share/webmin/sshd/lang/es
@@ -116,6 +123,9 @@ share/webmin/sshd/lang/fr
 share/webmin/sshd/lang/it
 share/webmin/sshd/lang/ja_JP.UTF-8
 share/webmin/sshd/lang/ja_JP.euc
+share/webmin/sshd/lang/ko_KR.UTF-8
+share/webmin/sshd/lang/ko_KR.euc
+share/webmin/sshd/lang/nl
 share/webmin/sshd/lang/pl
 share/webmin/sshd/lang/ru_RU
 share/webmin/sshd/lang/ru_SU
