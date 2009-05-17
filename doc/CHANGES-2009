@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1863 2009/05/17 13:30:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1864 2009/05/17 13:46:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2486,3 +2486,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-CSV_XS to 0.65 [sno 2009-05-17]
 	Updated graphics/graphviz to 2.22.2 [sno 2009-05-17]
 	Added databases/p5-DBD-ODBC version 1.21 [sno 2009-05-17]
+	Updated www/opera to 9.64 [obache 2009-05-17]
