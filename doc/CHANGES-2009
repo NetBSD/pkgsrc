@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1871 2009/05/17 14:41:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1872 2009/05/17 14:48:50 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2494,3 +2494,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-SQL-Abstract to 1.55 [sno 2009-05-17]
 	Updated devel/p5-Parse-CPAN-Meta to 1.38 [sno 2009-05-17]
 	Updated textproc/p5-YAML-Tiny to 1.38 [sno 2009-05-17]
+	Updated devel/p5-PathTools to 3.30 [sno 2009-05-17]
