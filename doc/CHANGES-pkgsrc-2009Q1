@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.32 2009/05/15 12:15:27 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.33 2009/05/17 15:13:17 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -88,3 +88,20 @@ Pullup ticket #2769 - requested by adrianp
 drupal: security update
 Pullup ticket #2770 - requested by adrianp
 drupal6: security update
+Pullup ticket #2772 - requested by taca
+squirrelmail: Re-add Japanese language option
+Pullup ticket #2773 - requested by obache
+security/cy2-anonymous: security update
+security/cy2-crammd5: security update
+security/cy2-digestmd5: security update
+security/cy2-gssapi: security update
+security/cy2-ldapdb: security update
+security/cy2-login: security update
+security/cy2-ntlm: security update
+security/cy2-otp: security update
+security/cy2-plain: security update
+security/cy2-sql: security update
+security/cyrus-sasl: security update
+security/cyrus-saslauthd: security update
+Pullup ticket #2774 - requested by obache
+cyrus-imapd: bug fix and destdir support
