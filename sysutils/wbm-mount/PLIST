@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/01 06:35:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/17 13:30:14 kefren Exp $
 share/examples/webmin/mount/config
 share/webmin/mount/CHANGELOG
 share/webmin/mount/acl_security.pl
@@ -36,10 +36,16 @@ share/webmin/mount/config-united-linux
 share/webmin/mount/config-unixware
 share/webmin/mount/config.info
 share/webmin/mount/config.info.ca
+share/webmin/mount/config.info.cz
 share/webmin/mount/config.info.de
 share/webmin/mount/config.info.es
 share/webmin/mount/config.info.fa
 share/webmin/mount/config.info.fr
+share/webmin/mount/config.info.ja_JP.UTF-8
+share/webmin/mount/config.info.ja_JP.euc
+share/webmin/mount/config.info.ko_KR.UTF-8
+share/webmin/mount/config.info.ko_KR.euc
+share/webmin/mount/config.info.nl
 share/webmin/mount/config.info.pl
 share/webmin/mount/config.info.ru_RU
 share/webmin/mount/config.info.ru_SU
@@ -62,13 +68,15 @@ share/webmin/mount/freebsd-mounts-4
 share/webmin/mount/freebsd-mounts-4.c
 share/webmin/mount/freebsd-mounts-5
 share/webmin/mount/freebsd-mounts-5.c
+share/webmin/mount/freebsd-mounts-7.c
 share/webmin/mount/help/edit_dir.ca.html
 share/webmin/mount/help/edit_dir.fa.html
 share/webmin/mount/help/edit_dir.fr.html
+share/webmin/mount/help/edit_dir.ko_KR.UTF-8.html
+share/webmin/mount/help/edit_dir.ko_KR.euc.html
 share/webmin/mount/help/edit_dir.html
 share/webmin/mount/help/help.ca.html
 share/webmin/mount/help/help.es.html
-share/webmin/mount/help/help.html
 share/webmin/mount/help/help.sv.html
 share/webmin/mount/help/help.zh_TW.Big5.html
 share/webmin/mount/help/help.zh_TW.UTF-8.html
@@ -78,6 +86,8 @@ share/webmin/mount/help/linux_auth.html
 share/webmin/mount/help/linux_bg.ca.html
 share/webmin/mount/help/linux_bg.fa.html
 share/webmin/mount/help/linux_bg.fr.html
+share/webmin/mount/help/linux_bg.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_bg.ko_KR.euc.html
 share/webmin/mount/help/linux_bg.html
 share/webmin/mount/help/linux_intr.ca.html
 share/webmin/mount/help/linux_intr.fr.html
@@ -85,14 +95,20 @@ share/webmin/mount/help/linux_intr.html
 share/webmin/mount/help/linux_nodev.ca.html
 share/webmin/mount/help/linux_nodev.fa.html
 share/webmin/mount/help/linux_nodev.fr.html
+share/webmin/mount/help/linux_nodev.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_nodev.ko_KR.euc.html
 share/webmin/mount/help/linux_nodev.html
 share/webmin/mount/help/linux_noexec.ca.html
 share/webmin/mount/help/linux_noexec.fa.html
 share/webmin/mount/help/linux_noexec.fr.html
+share/webmin/mount/help/linux_noexec.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_noexec.ko_KR.euc.html
 share/webmin/mount/help/linux_noexec.html
 share/webmin/mount/help/linux_nosuid.ca.html
 share/webmin/mount/help/linux_nosuid.fa.html
 share/webmin/mount/help/linux_nosuid.fr.html
+share/webmin/mount/help/linux_nosuid.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_nosuid.ko_KR.euc.html
 share/webmin/mount/help/linux_nosuid.html
 share/webmin/mount/help/linux_port.ca.html
 share/webmin/mount/help/linux_port.fa.html
@@ -105,6 +121,8 @@ share/webmin/mount/help/linux_retrans.html
 share/webmin/mount/help/linux_ro.ca.html
 share/webmin/mount/help/linux_ro.fa.html
 share/webmin/mount/help/linux_ro.fr.html
+share/webmin/mount/help/linux_ro.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_ro.ko_KR.euc.html
 share/webmin/mount/help/linux_ro.html
 share/webmin/mount/help/linux_rsize.ca.html
 share/webmin/mount/help/linux_rsize.fr.html
@@ -120,6 +138,8 @@ share/webmin/mount/help/linux_soft.html
 share/webmin/mount/help/linux_sync.ca.html
 share/webmin/mount/help/linux_sync.fa.html
 share/webmin/mount/help/linux_sync.fr.html
+share/webmin/mount/help/linux_sync.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_sync.ko_KR.euc.html
 share/webmin/mount/help/linux_sync.html
 share/webmin/mount/help/linux_timeo.ca.html
 share/webmin/mount/help/linux_timeo.fa.html
@@ -132,6 +152,8 @@ share/webmin/mount/help/linux_transfert.html
 share/webmin/mount/help/linux_user.ca.html
 share/webmin/mount/help/linux_user.fa.html
 share/webmin/mount/help/linux_user.fr.html
+share/webmin/mount/help/linux_user.ko_KR.UTF-8.html
+share/webmin/mount/help/linux_user.ko_KR.euc.html
 share/webmin/mount/help/linux_user.html
 share/webmin/mount/help/linux_vers.ca.html
 share/webmin/mount/help/linux_vers.fa.html
@@ -181,6 +203,7 @@ share/webmin/mount/images/xmemfs.gif
 share/webmin/mount/index.cgi
 share/webmin/mount/irix-lib.pl
 share/webmin/mount/lang/ca
+share/webmin/mount/lang/cz
 share/webmin/mount/lang/de
 share/webmin/mount/lang/en
 share/webmin/mount/lang/es
@@ -192,6 +215,7 @@ share/webmin/mount/lang/ja_JP.UTF-8
 share/webmin/mount/lang/ja_JP.euc
 share/webmin/mount/lang/ko_KR.UTF-8
 share/webmin/mount/lang/ko_KR.euc
+share/webmin/mount/lang/nl
 share/webmin/mount/lang/pl
 share/webmin/mount/lang/ru_RU
 share/webmin/mount/lang/ru_SU
