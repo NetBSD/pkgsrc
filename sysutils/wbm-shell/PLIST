@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:20:52 kefren Exp $
 share/examples/webmin/shell/config
 share/webmin/shell/acl_security.pl
 share/webmin/shell/config
 share/webmin/shell/config.info
 share/webmin/shell/config.info.ca
+share/webmin/shell/config.info.cz
 share/webmin/shell/config.info.es
 share/webmin/shell/config.info.fr
+share/webmin/shell/config.info.it
+share/webmin/shell/config.info.ja_JP.UTF-8
+share/webmin/shell/config.info.ja_JP.euc
+share/webmin/shell/config.info.ko_KR.UTF-8
+share/webmin/shell/config.info.ko_KR.euc
+share/webmin/shell/config.info.nl
 share/webmin/shell/config.info.sk
 share/webmin/shell/defaultacl
 share/webmin/shell/images/icon.gif
@@ -13,16 +20,19 @@ share/webmin/shell/images/shell.jpg
 share/webmin/shell/images/smallicon.gif
 share/webmin/shell/index.cgi
 share/webmin/shell/lang/ca
+share/webmin/shell/lang/cz
 share/webmin/shell/lang/de
 share/webmin/shell/lang/en
 share/webmin/shell/lang/es
 share/webmin/shell/lang/fr
 share/webmin/shell/lang/hu
+share/webmin/shell/lang/it
 share/webmin/shell/lang/ja_JP.UTF-8
 share/webmin/shell/lang/ja_JP.euc
 share/webmin/shell/lang/ko_KR.UTF-8
 share/webmin/shell/lang/ko_KR.euc
 share/webmin/shell/lang/ms
+share/webmin/shell/lang/nl
 share/webmin/shell/lang/pl
 share/webmin/shell/lang/ru_RU
 share/webmin/shell/lang/ru_SU
