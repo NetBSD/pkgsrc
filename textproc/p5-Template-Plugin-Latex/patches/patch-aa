@@ -1,0 +1,11 @@
+--- Makefile.PL.orig	2009-05-17 10:00:40.000000000 +0000
++++ Makefile.PL	2009-05-17 10:00:56.000000000 +0000
+@@ -51,7 +51,7 @@
+ #------------------------------------------------------------------------
+ 
+ my %opts = (
+-    'NAME'	       => 'Template-Plugin-Latex',
++    'NAME'	       => 'Template::Plugin::Latex',
+     'VERSION_FROM' => 'lib/Template/Plugin/Latex.pm',
+     'PMLIBDIRS'    => [ 'lib' ], 
+     'PREREQ_PM'    => { 
