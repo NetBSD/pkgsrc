@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2009/02/04 04:52:46 dholland Exp $
+$NetBSD: patch-ae,v 1.7 2009/05/17 22:04:11 dholland Exp $
 
 Fix insecure-temp-files. Replaces older nonworking patch with similar
 intent. XXX inadequately tested, lack of time.
@@ -6,16 +6,21 @@ intent. XXX inadequately tested, lack of time.
 Upstream: sent upstream by obache@: http://sourceforge.net/tracker/?func=detail&atid=406763&aid=2537314&group_id=32880
 
 --- src/types.c.orig	2008-07-09 15:51:26.000000000 -0400
-+++ src/types.c	2009-01-25 23:36:47.000000000 -0500
-@@ -27,6 +27,7 @@
- #include <signal.h>
++++ src/types.c	2009-05-17 17:55:28.000000000 -0400
+@@ -28,6 +28,12 @@
  #include <sys/wait.h>
  #include <unistd.h>
-+#include <paths.h>
  
++#ifdef __sun /* paths.h missing in solaris */
++#define _PATH_TMP "/tmp/"
++#else
++#include <paths.h>
++#endif
++
  #include <stddef.h>
  
-@@ -345,14 +346,18 @@ static FType * match_file(GList *list, D
+ #include "strutil.h"
+@@ -345,14 +351,18 @@ static FType * match_file(GList *list, D
  void typ_identify_end(MainInfo *min, const gchar *path)
  {
  	const GList	*here;
@@ -36,7 +41,7 @@ Upstream: sent upstream by obache@: http://sourceforge.net/tracker/?func=detail&
  		return;
  	if(pipe(fd) != 0)
  		return;
-@@ -360,20 +365,16 @@ void typ_identify_end(MainInfo *min, con
+@@ -360,20 +370,16 @@ void typ_identify_end(MainInfo *min, con
  	file_pid = fork();
  	if(file_pid == 0)
  	{
@@ -67,7 +72,7 @@ Upstream: sent upstream by obache@: http://sourceforge.net/tracker/?func=detail&
  		_exit(EXIT_FAILURE);
  	}
  	else if(file_pid < 0)
-@@ -382,21 +381,21 @@ void typ_identify_end(MainInfo *min, con
+@@ -382,21 +388,21 @@ void typ_identify_end(MainInfo *min, con
  		return;
  	}
  	/* We don't need the input part of the pipe, so close it. */
@@ -93,7 +98,7 @@ Upstream: sent upstream by obache@: http://sourceforge.net/tracker/?func=detail&
  		{
  			const gchar	*fout;
  			gchar		line[MAXNAMLEN + 256];
-@@ -412,10 +411,14 @@ void typ_identify_end(MainInfo *min, con
+@@ -412,10 +418,14 @@ void typ_identify_end(MainInfo *min, con
  			}
  			fclose(in);
  		}
