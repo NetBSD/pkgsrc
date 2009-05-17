@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/29 19:10:22 sno Exp $
+$NetBSD: distinfo,v 1.2 2009/05/17 18:28:57 sno Exp $
 
-SHA1 (Class-C3-Adopt-NEXT-0.09.tar.gz) = 51d58be67d1ab2271ae8af56f82bc48f378c64bc
-RMD160 (Class-C3-Adopt-NEXT-0.09.tar.gz) = ddd570d711e513cf03925a84941e586ee643f96f
-Size (Class-C3-Adopt-NEXT-0.09.tar.gz) = 18804 bytes
+SHA1 (Class-C3-Adopt-NEXT-0.10.tar.gz) = de5707e15279b2fdd43e192504d342d47c1b03b2
+RMD160 (Class-C3-Adopt-NEXT-0.10.tar.gz) = 8769a7d092ed50be6ee9665a165d97a735d50bed
+Size (Class-C3-Adopt-NEXT-0.10.tar.gz) = 20851 bytes
