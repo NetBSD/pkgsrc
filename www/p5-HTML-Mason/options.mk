@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2008/07/22 21:41:56 rhaen Exp $
+# $NetBSD: options.mk,v 1.2 2009/05/17 19:56:58 sno Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-HTML-Mason
-PKG_SUPPORTED_OPTIONS=	cache fcgi modperl
-PKG_SUGGESTED_OPTIONS=	cache
+PKG_SUPPORTED_OPTIONS=	fcgi modperl
+PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,11 +25,4 @@ DEPENDS+=	p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 ###
 .if !empty(PKG_OPTIONS:Mfcgi)
 DEPENDS+=	p5-FCGI-[0-9]*:../../www/p5-FCGI
-.endif
-
-###
-### The Perl module Cache-Cache for optional caching
-###
-.if !empty(PKG_OPTIONS:Mcache)
-DEPENDS+=	p5-Cache-Cache>=1.0:../../devel/p5-Cache-Cache
 .endif
