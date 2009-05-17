@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1892 2009/05/17 20:10:29 seb Exp $
+$NetBSD: CHANGES-2009,v 1.1893 2009/05/17 21:30:01 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-MethodAttributes to 0.11 [sno 2009-05-17]
 	Updated www/p5-HTML-Mason to 1.42 [sno 2009-05-17]
 	Added sysutils/p5-SSH-Batch version 0.021 [seb 2009-05-17]
+	Updated audio/cdparanoia to 3.0.9.8nb7 [dholland 2009-05-17]
