@@ -1,0 +1,18 @@
+This module provides a function to encode text that is to be formatted with
+LaTeX. It encodes characters that are special to LaTeX or that are
+represented in LaTeX by LaTeX commands.
+
+The special characters are: \ (command character), { (open group), }
+(end group), & (table column separator), # (parameter specifier),
+% (comment character), _ (subscript), ^ (superscript),
+~ (non-breakable space), $ (mathematics mode).
+
+Note that some of the LaTeX commands for characters are defined in the LaTeX
+textcomp package. If your text includes such characters, you will need to
+include the following lines in the preamble to your LaTeX document.
+
+    \usepackage[T1]{fontenc}
+    \usepackage{textcomp}
+
+The function is useful for encoding data that is interpolated into LaTeX
+document templates, say with Template::Plugin::Latex (shameless plug!).
