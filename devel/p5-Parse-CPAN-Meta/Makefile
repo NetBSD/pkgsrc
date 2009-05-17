@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/03/21 23:21:42 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/17 14:33:55 sno Exp $
 #
 
-DISTNAME=	Parse-CPAN-Meta-0.05
+DISTNAME=	Parse-CPAN-Meta-1.38
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Parse/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Parse-CPAN-Meta/
 COMMENT=	Perl5 module to parse META.yml and other similar CPAN metadata files
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
