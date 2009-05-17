@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.349 2009/05/10 12:30:25 hasso Exp $
+# $NetBSD: Makefile,v 1.350 2009/05/17 10:38:46 seb Exp $
 #
 
 COMMENT=	Security tools
@@ -201,6 +201,7 @@ SUBDIR+=	p5-IO-Socket-SSL
 SUBDIR+=	p5-Module-Signature
 SUBDIR+=	p5-Net-DNS-SEC
 SUBDIR+=	p5-Net-DNS-SEC-Maint-Key
+SUBDIR+=	p5-Net-OpenSSH
 SUBDIR+=	p5-Net-SSH
 SUBDIR+=	p5-Net-SSLeay
 SUBDIR+=	p5-OpenSSL
