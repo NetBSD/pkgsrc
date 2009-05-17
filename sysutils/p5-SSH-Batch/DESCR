@@ -1,0 +1,7 @@
+The Perl 5 module SSH::Batch provides cluster operations based on
+parallel SSH, set and interval arithmetic.
+The following scripts are provided:
+- fornodes: Expand patterns to machine host list
+- atnodes: Run command on clusters
+- tonodes: Upload local files/directories to remote clusters
+- key2nodes: Push SSH public key to the remote clusters
