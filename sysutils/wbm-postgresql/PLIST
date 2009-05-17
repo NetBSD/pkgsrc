@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/05 15:47:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/17 14:09:01 kefren Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -32,11 +32,13 @@ share/webmin/postgresql/config-united-linux
 share/webmin/postgresql/config-windows
 share/webmin/postgresql/config.info
 share/webmin/postgresql/config.info.ca
+share/webmin/postgresql/config.info.cz
 share/webmin/postgresql/config.info.de
 share/webmin/postgresql/config.info.es
 share/webmin/postgresql/config.info.fr
 share/webmin/postgresql/config.info.ja_JP.UTF-8
 share/webmin/postgresql/config.info.ja_JP.euc
+share/webmin/postgresql/config.info.ko_KR.UTF-8
 share/webmin/postgresql/config.info.ko_KR.euc
 share/webmin/postgresql/config.info.pl
 share/webmin/postgresql/config.info.ru_RU
@@ -53,6 +55,7 @@ share/webmin/postgresql/create_table.cgi
 share/webmin/postgresql/csv.cgi
 share/webmin/postgresql/csv_form.cgi
 share/webmin/postgresql/defaultacl
+share/webmin/postgresql/delete_fields.cgi
 share/webmin/postgresql/delete_grants.cgi
 share/webmin/postgresql/delete_groups.cgi
 share/webmin/postgresql/delete_hosts.cgi
@@ -61,7 +64,6 @@ share/webmin/postgresql/down.cgi
 share/webmin/postgresql/download.cgi
 share/webmin/postgresql/drop_dbase.cgi
 share/webmin/postgresql/drop_dbases.cgi
-share/webmin/postgresql/drop_field.cgi
 share/webmin/postgresql/drop_table.cgi
 share/webmin/postgresql/drop_tables.cgi
 share/webmin/postgresql/edit_dbase.cgi
@@ -208,6 +210,7 @@ share/webmin/postgresql/index.cgi
 share/webmin/postgresql/install_check.pl
 share/webmin/postgresql/lang/bg
 share/webmin/postgresql/lang/ca
+share/webmin/postgresql/lang/cz
 share/webmin/postgresql/lang/de
 share/webmin/postgresql/lang/en
 share/webmin/postgresql/lang/es
@@ -231,7 +234,6 @@ share/webmin/postgresql/lang/zh_TW.UTF-8
 share/webmin/postgresql/list_grants.cgi
 share/webmin/postgresql/list_groups.cgi
 share/webmin/postgresql/list_hosts.cgi
-share/webmin/postgresql/list_locals.cgi
 share/webmin/postgresql/list_users.cgi
 share/webmin/postgresql/log_parser.pl
 share/webmin/postgresql/login.cgi
