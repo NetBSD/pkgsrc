@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2009/05/14 04:59:45 minskim Exp $
+# $NetBSD: Makefile,v 1.253 2009/05/17 10:22:30 sno Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -83,6 +83,7 @@ SUBDIR+=	magicfilter
 SUBDIR+=	mgv
 SUBDIR+=	mp
 SUBDIR+=	mpage
+SUBDIR+=	p5-LaTeX-Driver
 SUBDIR+=	p5-PostScript-MailLabels
 SUBDIR+=	p5-PostScript-Simple
 SUBDIR+=	papersize
