@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/04/18 21:34:24 sno Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/17 18:23:55 sno Exp $
 #
 
-DISTNAME=	Devel-Declare-0.005000
+DISTNAME=	Devel-Declare-0.005002
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
@@ -13,7 +13,7 @@ LICENSE=	artistic-2.0
 
 DEPENDS+=	p5-B-Hooks-EndOfScope>0.05:../../devel/p5-B-Hooks-EndOfScope
 DEPENDS+=	p5-B-Hooks-OP-Check>=0.10:../../devel/p5-B-Hooks-OP-Check
-DEPENDS+=	p5-Sub-Name>0:../../devel/p5-Sub-Name
+DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 BUILD_DEPENDS+=	p5-ExtUtils-Depends>0:../../devel/p5-ExtUtils-Depends
 BUILD_DEPENDS+=	p5-ExtUtils-MakeMaker>=6.42:../../devel/p5-ExtUtils-MakeMaker
