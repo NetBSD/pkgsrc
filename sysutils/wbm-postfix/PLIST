@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/05 15:47:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/05/17 14:05:30 kefren Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -7,10 +7,12 @@ share/webmin/postfix/aliases-lib.pl
 share/webmin/postfix/aliases.cgi
 share/webmin/postfix/autoreply.pl
 share/webmin/postfix/backup_config.pl
+share/webmin/postfix/bcc.cgi
 share/webmin/postfix/body.cgi
 share/webmin/postfix/boxes-lib.pl
 share/webmin/postfix/canonical.cgi
 share/webmin/postfix/canonical_edit.cgi
+share/webmin/postfix/client.cgi
 share/webmin/postfix/config
 share/webmin/postfix/config-freebsd
 share/webmin/postfix/config-mandrake-linux
@@ -18,11 +20,13 @@ share/webmin/postfix/config-msc-linux
 share/webmin/postfix/config-netbsd
 share/webmin/postfix/config.info
 share/webmin/postfix/config.info.ca
+share/webmin/postfix/config.info.cz
 share/webmin/postfix/config.info.de
 share/webmin/postfix/config.info.es
 share/webmin/postfix/config.info.fr
 share/webmin/postfix/config.info.ja_JP.UTF-8
 share/webmin/postfix/config.info.ja_JP.euc
+share/webmin/postfix/config.info.nl
 share/webmin/postfix/config.info.pl
 share/webmin/postfix/config.info.ru_RU
 share/webmin/postfix/config.info.ru_SU
@@ -91,6 +95,8 @@ share/webmin/postfix/help/aliases.es.html
 share/webmin/postfix/help/aliases.html
 share/webmin/postfix/help/aliases.pl.html
 share/webmin/postfix/help/aliases.sv.html
+share/webmin/postfix/help/bcc.ca.html
+share/webmin/postfix/help/bcc.html
 share/webmin/postfix/help/body.ca.html
 share/webmin/postfix/help/body.html
 share/webmin/postfix/help/canonical.ca.html
@@ -809,9 +815,11 @@ share/webmin/postfix/images/Image164.gif
 share/webmin/postfix/images/address_rewriting.gif
 share/webmin/postfix/images/aliases.gif
 share/webmin/postfix/images/attach.gif
+share/webmin/postfix/images/bcc.gif
 share/webmin/postfix/images/body.gif
 share/webmin/postfix/images/boxes.gif
 share/webmin/postfix/images/canonical.gif
+share/webmin/postfix/images/client.gif
 share/webmin/postfix/images/debug.gif
 share/webmin/postfix/images/general.gif
 share/webmin/postfix/images/header.gif
@@ -836,6 +844,7 @@ share/webmin/postfix/images/virtual.gif
 share/webmin/postfix/index.cgi
 share/webmin/postfix/install_check.pl
 share/webmin/postfix/lang/ca
+share/webmin/postfix/lang/cz
 share/webmin/postfix/lang/de
 share/webmin/postfix/lang/en
 share/webmin/postfix/lang/es
@@ -845,6 +854,7 @@ share/webmin/postfix/lang/ja_JP.euc
 share/webmin/postfix/lang/ja_JP.jis
 share/webmin/postfix/lang/ko_KR.UTF-8
 share/webmin/postfix/lang/ko_KR.euc
+share/webmin/postfix/lang/nl
 share/webmin/postfix/lang/pl
 share/webmin/postfix/lang/pt_BR
 share/webmin/postfix/lang/ru_RU
@@ -862,7 +872,8 @@ share/webmin/postfix/mailq.cgi
 share/webmin/postfix/mailq_search.cgi
 share/webmin/postfix/manual.cgi
 share/webmin/postfix/manual_update.cgi
-share/webmin/postfix/maps_edit.cgi
+share/webmin/postfix/map_chooser.cgi
+share/webmin/postfix/map_chooser_save.cgi
 share/webmin/postfix/master.cgi
 share/webmin/postfix/module.info
 share/webmin/postfix/postfinger.cgi
@@ -873,12 +884,14 @@ share/webmin/postfix/resource.cgi
 share/webmin/postfix/sasl.cgi
 share/webmin/postfix/save_afile.cgi
 share/webmin/postfix/save_alias.cgi
+share/webmin/postfix/save_client.cgi
 share/webmin/postfix/save_ffile.cgi
 share/webmin/postfix/save_manual.cgi
 share/webmin/postfix/save_map.cgi
 share/webmin/postfix/save_master.cgi
 share/webmin/postfix/save_opts.cgi
 share/webmin/postfix/save_opts_aliases.cgi
+share/webmin/postfix/save_opts_bcc.cgi
 share/webmin/postfix/save_opts_body.cgi
 share/webmin/postfix/save_opts_canonical.cgi
 share/webmin/postfix/save_opts_header.cgi
