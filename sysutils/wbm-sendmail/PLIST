@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:18:52 kefren Exp $
 share/examples/webmin/sendmail/config
 share/webmin/sendmail/CHANGELOG
 share/webmin/sendmail/access-lib.pl
@@ -57,6 +57,7 @@ share/webmin/sendmail/config.info.cz
 share/webmin/sendmail/config.info.de
 share/webmin/sendmail/config.info.es
 share/webmin/sendmail/config.info.fr
+share/webmin/sendmail/config.info.nl
 share/webmin/sendmail/config.info.pl
 share/webmin/sendmail/config.info.ru_RU
 share/webmin/sendmail/config.info.ru_SU
@@ -387,6 +388,7 @@ share/webmin/sendmail/images/masq.gif
 share/webmin/sendmail/images/opts.gif
 share/webmin/sendmail/images/p1.gif
 share/webmin/sendmail/images/p2.gif
+share/webmin/sendmail/images/ports.gif
 share/webmin/sendmail/images/read.gif
 share/webmin/sendmail/images/relay.gif
 share/webmin/sendmail/images/smallicon.gif
@@ -397,6 +399,7 @@ share/webmin/sendmail/images/virtusers.gif
 share/webmin/sendmail/index.cgi
 share/webmin/sendmail/install_check.pl
 share/webmin/sendmail/lang/ca
+share/webmin/sendmail/lang/cz
 share/webmin/sendmail/lang/de
 share/webmin/sendmail/lang/en
 share/webmin/sendmail/lang/es
@@ -429,6 +432,7 @@ share/webmin/sendmail/list_mailers.cgi
 share/webmin/sendmail/list_mailq.cgi
 share/webmin/sendmail/list_masq.cgi
 share/webmin/sendmail/list_opts.cgi
+share/webmin/sendmail/list_ports.cgi
 share/webmin/sendmail/list_relay.cgi
 share/webmin/sendmail/list_trusts.cgi
 share/webmin/sendmail/list_us
@@ -439,6 +443,7 @@ share/webmin/sendmail/mailq_search.cgi
 share/webmin/sendmail/manual_features.cgi
 share/webmin/sendmail/module.info
 share/webmin/sendmail/move.cgi
+share/webmin/sendmail/negativeacl
 share/webmin/sendmail/qdetach.cgi
 share/webmin/sendmail/rbac-mapping
 share/webmin/sendmail/save_access.cgi
@@ -454,6 +459,7 @@ share/webmin/sendmail/save_generic.cgi
 share/webmin/sendmail/save_mailer.cgi
 share/webmin/sendmail/save_masq.cgi
 share/webmin/sendmail/save_opts.cgi
+share/webmin/sendmail/save_ports.cgi
 share/webmin/sendmail/save_relay.cgi
 share/webmin/sendmail/save_rfile.cgi
 share/webmin/sendmail/save_trusts.cgi
