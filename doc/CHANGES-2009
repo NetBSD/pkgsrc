@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1878 2009/05/17 17:59:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1879 2009/05/17 18:05:13 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2541,3 +2541,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Log-Log4perl to 1.23 [sno 2009-05-17]
 	Updated devel/p5-Module-Install to 0.88 [sno 2009-05-17]
 	Updated devel/p5-Variable-Magic to 0.35 [sno 2009-05-17]
+	Updated devel/p5-Cache-FastMmap to 1.30 [sno 2009-05-17]
