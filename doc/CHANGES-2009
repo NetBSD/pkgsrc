@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1860 2009/05/17 10:44:15 taca Exp $
+$NetBSD: CHANGES-2009,v 1.1861 2009/05/17 10:50:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2483,3 +2483,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added security/p5-Net-OpenSSH version 0.34 [seb 2009-05-17]
 	Added textproc/p5-Template-Plugin-Latex version 3.02 [sno 2009-05-17]
 	Updated www/typolight27-translations to 20090514 [taca 2009-05-17]
+	Updated textproc/p5-Text-CSV_XS to 0.65 [sno 2009-05-17]
