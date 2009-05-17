@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 05:23:05 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:33:05 kefren Exp $
 share/examples/webmin/status/config
 share/webmin/status/CHANGELOG
 share/webmin/status/WEBMIN-STATUS-MIB.txt
@@ -20,10 +20,14 @@ share/webmin/status/config-netbsd
 share/webmin/status/config-solaris
 share/webmin/status/config.info
 share/webmin/status/config.info.ca
+share/webmin/status/config.info.cz
 share/webmin/status/config.info.de
 share/webmin/status/config.info.es
 share/webmin/status/config.info.fa
 share/webmin/status/config.info.fr
+share/webmin/status/config.info.it
+share/webmin/status/config.info.ko_KR.UTF-8
+share/webmin/status/config.info.ko_KR.euc
 share/webmin/status/config.info.ja_JP.UTF-8
 share/webmin/status/config.info.ja_JP.euc
 share/webmin/status/config.info.nl
@@ -40,11 +44,13 @@ share/webmin/status/config.info.zh_TW.UTF-8
 share/webmin/status/consume-monitor.pl
 share/webmin/status/defaultacl
 share/webmin/status/delete_mons.cgi
+share/webmin/status/delete_tmpls.cgi
 share/webmin/status/dhcpd-monitor.pl
 share/webmin/status/dns-monitor.pl
 share/webmin/status/dnsadmin-monitor.pl
 share/webmin/status/edit_mon.cgi
 share/webmin/status/edit_sched.cgi
+share/webmin/status/edit_tmpl.cgi
 share/webmin/status/exec-monitor.pl
 share/webmin/status/feedback_files.pl
 share/webmin/status/file-monitor.pl
@@ -65,11 +71,13 @@ share/webmin/status/index.cgi
 share/webmin/status/inetd-monitor.pl
 share/webmin/status/jabber-monitor.pl
 share/webmin/status/lang/ca
+share/webmin/status/lang/cz
 share/webmin/status/lang/de
 share/webmin/status/lang/en
 share/webmin/status/lang/es
 share/webmin/status/lang/fa
 share/webmin/status/lang/fr
+share/webmin/status/lang/it
 share/webmin/status/lang/ja_JP.UTF-8
 share/webmin/status/lang/ja_JP.euc
 share/webmin/status/lang/ko_KR.UTF-8
@@ -86,6 +94,7 @@ share/webmin/status/lang/zh_CN
 share/webmin/status/lang/zh_CN.UTF-8
 share/webmin/status/lang/zh_TW.Big5
 share/webmin/status/lang/zh_TW.UTF-8
+share/webmin/status/list_tmpls.cgi
 share/webmin/status/load-monitor.pl
 share/webmin/status/log_parser.pl
 share/webmin/status/mailq-monitor.pl
@@ -111,6 +120,7 @@ share/webmin/status/rssh-monitor.pl
 share/webmin/status/samba-monitor.pl
 share/webmin/status/save_mon.cgi
 share/webmin/status/save_sched.cgi
+share/webmin/status/save_tmpl.cgi
 share/webmin/status/sendmail-monitor.pl
 share/webmin/status/sensors-monitor.pl
 share/webmin/status/services/apache.serv
@@ -130,6 +140,7 @@ share/webmin/status/services/xinetd.serv
 share/webmin/status/space-monitor.pl
 share/webmin/status/squid-monitor.pl
 share/webmin/status/sshd-monitor.pl
+share/webmin/status/sslcert-monitor.pl
 share/webmin/status/status-lib.pl
 share/webmin/status/status_monitor_api.pl
 share/webmin/status/tcp-monitor.pl
