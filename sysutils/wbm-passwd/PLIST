@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/10/05 15:47:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/17 14:00:34 kefren Exp $
 share/examples/webmin/passwd/config
 share/webmin/passwd/CHANGELOG
 share/webmin/passwd/acl_security.pl
@@ -10,11 +10,16 @@ share/webmin/passwd/config.info.af
 share/webmin/passwd/config.info.ca
 share/webmin/passwd/config.info.cz
 share/webmin/passwd/config.info.de
+share/webmin/passwd/config.info.el
 share/webmin/passwd/config.info.es
 share/webmin/passwd/config.info.fa
 share/webmin/passwd/config.info.fi
 share/webmin/passwd/config.info.fr
+share/webmin/passwd/config.info.hr
 share/webmin/passwd/config.info.hu
+share/webmin/passwd/config.info.ja_JP.UTF-8
+share/webmin/passwd/config.info.ja_JP.euc
+share/webmin/passwd/config.info.ko_KR.UTF-8
 share/webmin/passwd/config.info.ko_KR.euc
 share/webmin/passwd/config.info.ms
 share/webmin/passwd/config.info.nl
@@ -35,13 +40,18 @@ share/webmin/passwd/lang/af
 share/webmin/passwd/lang/ca
 share/webmin/passwd/lang/cz
 share/webmin/passwd/lang/de
+share/webmin/passwd/lang/el
 share/webmin/passwd/lang/en
 share/webmin/passwd/lang/es
 share/webmin/passwd/lang/fa
 share/webmin/passwd/lang/fi
 share/webmin/passwd/lang/fr
+share/webmin/passwd/lang/hr
 share/webmin/passwd/lang/hu
 share/webmin/passwd/lang/it
+share/webmin/passwd/lang/ja_JP.UTF-8
+share/webmin/passwd/lang/ja_JP.euc
+share/webmin/passwd/lang/ko_KR.UTF-8
 share/webmin/passwd/lang/ko_KR.euc
 share/webmin/passwd/lang/ms
 share/webmin/passwd/lang/nl
