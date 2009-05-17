@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1857 2009/05/17 10:35:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1858 2009/05/17 10:39:39 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/p5-LaTeX-Encode version 0.03 [sno 2009-05-17]
 	Added devel/p5-Moose-Policy version 0.03 [sno 2009-05-17]
 	Added print/p5-LaTeX-Table version 0.9.14 [sno 2009-05-17]
+	Added security/p5-Net-OpenSSH version 0.34 [seb 2009-05-17]
