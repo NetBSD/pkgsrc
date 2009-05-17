@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2008/10/19 19:18:11 he Exp $
+# $NetBSD: Makefile,v 1.78.4.1 2009/05/17 15:11:14 tron Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 		ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/OLD-VERSIONS/imap/
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://cyrusimap.web.cmu.edu/imapd/
 COMMENT=	Cyrus IMAP server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	yes
@@ -165,19 +167,19 @@ post-patch:
 	done
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/mknewsgroups ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${PREFIX}/cyrus/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${PREFIX}/cyrus/bin
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/masssievec ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mkimap ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/mknewsgroups ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/translatesieve ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/rehash ${DESTDIR}${PREFIX}/cyrus/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/imapd.conf ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}/master/conf; for file in *.conf; do		\
-		${INSTALL_DATA} $$file ${EGDIR};			\
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR};		\
 	done
-	${INSTALL_DATA_DIR} ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
 	cd ${WRKSRC}/doc; for file in *.html cyrusv2.mc; do		\
-		${INSTALL_DATA} $$file ${HTMLDIR};			\
+		${INSTALL_DATA} $$file ${DESTDIR}${HTMLDIR};		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
