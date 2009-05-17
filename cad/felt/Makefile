@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2008/11/10 17:21:34 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2009/05/17 00:03:13 zafer Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
 PKGREVISION=	3
 CATEGORIES=		cad
-MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/felt/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=felt/}
 DISTFILES=		felt-3.05.src.tar.gz felt-3.05.ps.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
