@@ -1,0 +1,4 @@
+The Perl 5 module Net::OpenSSH is a secure shell client package
+implemented on top of OpenSSH binary client (ssh).
+This module is implemented around the multiplexing feature found
+in later versions of OpenSSH.
