@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/02/18 02:04:56 wiz Exp $
+$NetBSD: distinfo,v 1.8 2009/05/17 14:08:10 sno Exp $
 
-SHA1 (Scalar-List-Utils-1.19.tar.gz) = 9deeaad8d97730ffef39c8734ca582b821834a40
-RMD160 (Scalar-List-Utils-1.19.tar.gz) = 88f024d421343189f5895e1ccbeb7e239d17876e
-Size (Scalar-List-Utils-1.19.tar.gz) = 43620 bytes
+SHA1 (Scalar-List-Utils-1.20.tar.gz) = 22af9ae0e907f2dc20156db6fc65f66ae156e97e
+RMD160 (Scalar-List-Utils-1.20.tar.gz) = d0f60d701c3f090447bf0e16f5fb4ab8d6b37a62
+Size (Scalar-List-Utils-1.20.tar.gz) = 27836 bytes
