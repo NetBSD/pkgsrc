@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/01 06:35:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/17 13:57:08 kefren Exp $
 share/examples/webmin/openslp/config
 share/webmin/openslp/README
 share/webmin/openslp/backup_config.pl
@@ -16,7 +16,9 @@ share/webmin/openslp/config-turbo-linux
 share/webmin/openslp/config-united-linux
 share/webmin/openslp/config.info
 share/webmin/openslp/config.info.ca
+share/webmin/openslp/config.info.cz
 share/webmin/openslp/config.info.ms
+share/webmin/openslp/config.info.nl
 share/webmin/openslp/config.info.ru_RU
 share/webmin/openslp/config.info.ru_SU
 share/webmin/openslp/config.info.uk_UA
@@ -35,8 +37,10 @@ share/webmin/openslp/images/snda.gif
 share/webmin/openslp/index.cgi
 share/webmin/openslp/install_check.pl
 share/webmin/openslp/lang/ca
+share/webmin/openslp/lang/cz
 share/webmin/openslp/lang/en
 share/webmin/openslp/lang/ms
+share/webmin/openslp/lang/nl
 share/webmin/openslp/lang/ru_RU
 share/webmin/openslp/lang/ru_SU
 share/webmin/openslp/lang/uk_UA
