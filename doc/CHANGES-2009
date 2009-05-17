@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1890 2009/05/17 19:48:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1891 2009/05/17 19:57:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2553,3 +2553,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Plugin-Session-State-Cookie to 0.11 [sno 2009-05-17]
 	Updated www/p5-Catalyst-Plugin-Session-Store-Delegate to 0.04 [sno 2009-05-17]
 	Updated devel/p5-MooseX-MethodAttributes to 0.11 [sno 2009-05-17]
+	Updated www/p5-HTML-Mason to 1.42 [sno 2009-05-17]
