@@ -1,7 +1,16 @@
-$NetBSD: patch-ca,v 1.5 2006/09/03 17:13:30 ben Exp $
+$NetBSD: patch-ca,v 1.6 2009/05/17 21:29:34 dholland Exp $
 
---- interface/Makefile.in.orig	1999-12-13 20:27:59.000000000 -0800
-+++ interface/Makefile.in
+--- interface/Makefile.in.orig	1999-12-13 23:27:59.000000000 -0500
++++ interface/Makefile.in	2009-05-17 17:16:52.000000000 -0400
+@@ -7,7 +7,7 @@ VPATH=@srcdir@
+ srcdir=@srcdir@
+ 
+ @SET_MAKE@
+-FLAGS=@SBPCD_H@ @UCDROM_H@ @TYPESIZES@ @CFLAGS@
++FLAGS=@SBPCD_H@ @UCDROM_H@ @RAWPART@ @TYPESIZES@ @CFLAGS@
+ OPT=@OPT@ $(FLAGS)
+ DEBUG=@DEBUG@ $(FLAGS) -DCDDA_TEST
+ CC=@CC@
 @@ -18,12 +18,10 @@ RANLIB=@RANLIB@
  LIBS = -lm
  CPPFLAGS+=-D_REENTRANT
