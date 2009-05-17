@@ -1,0 +1,7 @@
+The Latex Template Toolkit plugin provides a latex filter that allows the use
+of LaTeX to generate PDF, PostScript and DVI output files from the Template
+Toolkit. The plugin uses LaTeX::Driver to run the various LaTeX programs.
+
+The Template::Latex module is a wrapper of convenience around the Template
+module, providing additional support for generating PDF, PostScript and DVI
+documents from LaTeX templates.
