@@ -1,0 +1,10 @@
+The LaTeX::Driver module encapsulates the details of invoking the Latex
+programs to format a LaTeX document. Formatting with LaTeX is complicated;
+there are potentially many programs to run and the output of those programs
+must be monitored to determine whether further processing is required.
+
+This module runs the required commands in the directory specified, either
+explicitly with the dirname option or implicitly by the directory part of
+basename, or in the current directory. As a result of the processing up to
+a dozen or more intermediate files are created. These can be removed with
+the cleanup method.
