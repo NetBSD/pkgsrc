@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1866 2009/05/17 14:08:46 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1867 2009/05/17 14:16:56 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2489,3 +2489,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/opera to 9.64 [obache 2009-05-17]
 	Updated devel/p5-File-LibMagic to 0.94 [sno 2009-05-17]
 	Updated devel/p5-Scalar-List-Utils to 1.20 [sno 2009-05-17]
+	Updated devel/p5-Array-Diff to 0.05.002 [sno 2009-05-17]
