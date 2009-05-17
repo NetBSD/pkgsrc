@@ -1,27 +1,26 @@
-# $NetBSD: Makefile,v 1.73 2009/04/01 17:12:57 tron Exp $
+# $NetBSD: Makefile,v 1.74 2009/05/17 12:55:52 sno Exp $
 
-DISTNAME=	graphviz-2.20.3
-PKGREVISION=	4
+DISTNAME=	graphviz-2.22.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.graphviz.org/pub/graphviz/stable/SOURCES/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	sno@NetBSD.org
 HOMEPAGE=	http://www.graphviz.org/
 COMMENT=	Graph Drawing Programs from AT&T Research and Lucent Bell Labs
+LICENSE=	cpl-1.0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+= ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
-CHECK_FILES_SKIP=	${PREFIX}/lib/graphviz/config
+CHECK_FILES_SKIP=	${PREFIX}/lib/graphviz/config6
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		bison pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-java
-CONFIGURE_ARGS+=	--disable-perl
 CONFIGURE_ARGS+=	--disable-php
 CONFIGURE_ARGS+=	--disable-python
 CONFIGURE_ARGS+=	--disable-ruby
@@ -50,6 +49,10 @@ REPLACE.tclsh.old=	.*tclsh
 REPLACE.tclsh.new=	${PREFIX}/bin/tclsh
 REPLACE_FILES.tclsh=	tclpkg/gv/demo/modgraph.tcl
 
+REPLACE_PERL+=		config/config_perl.pl lib/gd/configure.pl \
+			tclpkg/gv/demo/modgraph.pl contrib/dotmcl.pl \
+			contrib/dirgraph/dirgraph.pl
+
 .include "../../mk/bsd.prefs.mk"
 
 .include "../../mk/compiler.mk"
@@ -71,7 +74,8 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/libltdl/convenience.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+#.include "../../devel/libltdl/convenience.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 #.include "../../graphics/jpeg/buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
