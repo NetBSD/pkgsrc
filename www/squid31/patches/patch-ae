@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2009/05/17 14:17:42 tron Exp $
+
+--- errors/Makefile.in.orig	2009-04-08 11:51:20.000000000 +0100
++++ errors/Makefile.in	2009-05-17 14:32:03.000000000 +0100
+@@ -509,13 +509,13 @@
+ 		done; \
+ 	  fi \
+ 	done; \
+-	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
+-	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
+-		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
+-	else \
+-		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
+-		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
+-	fi
++#	$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET).default; \
++#	if test -f $(DESTDIR)$(DEFAULT_STYLESHEET) ; then \
++#		echo "$@ will not overwrite existing $(DESTDIR)$(DEFAULT_STYLESHEET)" ; \
++#	else \
++#		echo "$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET)"; \
++#		$(INSTALL_DATA) $(srcdir)/errorpage.css $(DESTDIR)$(DEFAULT_STYLESHEET); \
++#	fi
+ 
+ uninstall-local:
+ 	@ for l in $(LANGUAGES) templates; do \
