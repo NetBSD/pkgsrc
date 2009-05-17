@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.20 2009/05/02 16:14:37 reed Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.21 2009/05/17 23:35:01 snj Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -27,8 +27,11 @@
 	either with the &man.send-pr.1; command, or if you don't have
 	that, go to the web page
 	<ulink url="http://www.NetBSD.org/support/send-pr.html"/>,
-	which contains some instructions and a link to a form, where you
-	can submit packages.</para>
+	which contains some instructions and a link to a form where you
+	can submit packages.  The
+	<filename role="pkg">sysutils/gtk-send-pr</filename> package is
+	also available as a substitute for either of the above two tools.
+	</para>
 
 	<para>In the form of the problem report, the category should be
 	<quote>pkg</quote>, the synopsis should include the package name
