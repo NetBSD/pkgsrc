@@ -1,4 +1,4 @@
-$NetBSD: patch-ar,v 1.3 2005/10/10 15:13:58 joerg Exp $
+$NetBSD: patch-ar,v 1.4 2009/05/18 05:11:50 dholland Exp $
 
 --- configure.orig	1999-06-09 06:26:19.000000000 +0000
 +++ configure
@@ -6860,7 +6860,7 @@ $NetBSD: patch-ar,v 1.3 2005/10/10 15:13:58 joerg Exp $
 +#define HAVE_READLINE 1
 +_ACEOF
 +
-+		 RL_LIBS="-ledit -ltermcap"
++		 RL_LIBS="-lreadline"
  else
 -  echo "$ac_t""no" 1>&6
 +  -ltermcap
