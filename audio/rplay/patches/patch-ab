@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.5 2005/05/23 08:44:37 rillig Exp $
+$NetBSD: patch-ab,v 1.6 2009/05/18 05:11:50 dholland Exp $
 
 --- configure.in.orig	Wed Jun  9 02:26:28 1999
 +++ configure.in	Tue Jan 18 16:20:01 2000
@@ -25,7 +25,7 @@ $NetBSD: patch-ab,v 1.5 2005/05/23 08:44:37 rillig Exp $
 +	    [AC_CHECK_LIB(readline, readline,
 +		[AC_DEFINE(HAVE_LIBREADLINE)
 +		 AC_DEFINE(HAVE_READLINE)
-+		 RL_LIBS="-ledit -ltermcap"], -ltermcap)
++		 RL_LIBS="-lreadline"], -ltermcap)
 +	    ], -ltermcap)
 +	])
 +fi
