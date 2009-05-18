@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2008/04/04 15:24:56 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/18 05:44:13 dholland Exp $
 
 DISTNAME=	rx-1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	#
 EXTRACT_SUFX=	.tar.bz2
