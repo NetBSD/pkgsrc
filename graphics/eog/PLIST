@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/03/16 23:09:18 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/05/18 09:51:07 wiz Exp $
 bin/eog
 include/eog-2.20/eog/eog-application.h
 include/eog-2.20/eog/eog-debug.h
@@ -76,6 +76,10 @@ share/gnome/help/eog/de/eog.xml
 share/gnome/help/eog/de/figures/eog_save_as_window.png
 share/gnome/help/eog/de/figures/eog_start_window.png
 share/gnome/help/eog/de/figures/eog_toolbar_editor_window.png
+share/gnome/help/eog/el/eog.xml
+share/gnome/help/eog/el/figures/eog_save_as_window.png
+share/gnome/help/eog/el/figures/eog_start_window.png
+share/gnome/help/eog/el/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/en_GB/eog.xml
 share/gnome/help/eog/en_GB/figures/eog_save_as_window.png
 share/gnome/help/eog/en_GB/figures/eog_start_window.png
@@ -301,6 +305,7 @@ share/omf/eog/eog-ar.omf
 share/omf/eog/eog-ca.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
+share/omf/eog/eog-el.omf
 share/omf/eog/eog-en_GB.omf
 share/omf/eog/eog-es.omf
 share/omf/eog/eog-eu.omf
@@ -367,6 +372,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/es
 @dirrm share/gnome/help/eog/en_GB/figures
 @dirrm share/gnome/help/eog/en_GB
+@dirrm share/gnome/help/eog/el/figures
+@dirrm share/gnome/help/eog/el
 @dirrm share/gnome/help/eog/de/figures
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/da/figures
