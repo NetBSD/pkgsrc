@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/23 13:58:14 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/18 22:04:28 abs Exp $
 bin/openjdk7-bin-jar
 bin/openjdk7-bin-java
 bin/openjdk7-bin-javac
@@ -22,7 +22,7 @@ java/openjdk7-bin/bin/idlj
 java/openjdk7-bin/bin/jar
 java/openjdk7-bin/bin/jarsigner
 java/openjdk7-bin/bin/java
-java/openjdk7-bin/bin/java-rmi.cgi
+${PLIST.client}java/openjdk7-bin/bin/java-rmi.cgi
 java/openjdk7-bin/bin/javac
 java/openjdk7-bin/bin/javadoc
 java/openjdk7-bin/bin/javah
@@ -331,7 +331,6 @@ java/openjdk7-bin/jre/bin/rmiregistry
 java/openjdk7-bin/jre/bin/servertool
 java/openjdk7-bin/jre/bin/tnameserv
 java/openjdk7-bin/jre/bin/unpack200
-java/openjdk7-bin/jre/lib/audio/soundbank.gm
 java/openjdk7-bin/jre/lib/calendars.properties
 java/openjdk7-bin/jre/lib/charsets.jar
 java/openjdk7-bin/jre/lib/classlist
@@ -341,7 +340,6 @@ java/openjdk7-bin/jre/lib/cmm/LINEAR_RGB.pf
 java/openjdk7-bin/jre/lib/cmm/PYCC.pf
 java/openjdk7-bin/jre/lib/cmm/sRGB.pf
 java/openjdk7-bin/jre/lib/content-types.properties
-java/openjdk7-bin/jre/lib/ct.sym
 java/openjdk7-bin/jre/lib/currency.data
 java/openjdk7-bin/jre/lib/ext/dnsns.jar
 java/openjdk7-bin/jre/lib/ext/localedata.jar
@@ -351,47 +349,47 @@ java/openjdk7-bin/jre/lib/ext/sunpkcs11.jar
 java/openjdk7-bin/jre/lib/flavormap.properties
 java/openjdk7-bin/jre/lib/fontconfig.bfc
 java/openjdk7-bin/jre/lib/fontconfig.properties.src
-java/openjdk7-bin/jre/lib/i386/client/Xusage.txt
-java/openjdk7-bin/jre/lib/i386/client/libjsig.so
-java/openjdk7-bin/jre/lib/i386/client/libjvm.so
-java/openjdk7-bin/jre/lib/i386/headless/libmawt.so
-java/openjdk7-bin/jre/lib/i386/jexec
-java/openjdk7-bin/jre/lib/i386/jli/libjli.so
-java/openjdk7-bin/jre/lib/i386/jvm.cfg
-java/openjdk7-bin/jre/lib/i386/libattach.so
-java/openjdk7-bin/jre/lib/i386/libawt.so
-java/openjdk7-bin/jre/lib/i386/libdt_socket.so
-java/openjdk7-bin/jre/lib/i386/libfontmanager.so
-java/openjdk7-bin/jre/lib/i386/libhprof.so
-java/openjdk7-bin/jre/lib/i386/libinstrument.so
-java/openjdk7-bin/jre/lib/i386/libj2gss.so
-java/openjdk7-bin/jre/lib/i386/libj2pcsc.so
-java/openjdk7-bin/jre/lib/i386/libj2pkcs11.so
-java/openjdk7-bin/jre/lib/i386/libjaas_unix.so
-java/openjdk7-bin/jre/lib/i386/libjava.so
-java/openjdk7-bin/jre/lib/i386/libjava_crw_demo.so
-java/openjdk7-bin/jre/lib/i386/libjawt.so
-java/openjdk7-bin/jre/lib/i386/libjdwp.so
-java/openjdk7-bin/jre/lib/i386/libjpeg.so
-java/openjdk7-bin/jre/lib/i386/libjsdt.so
-java/openjdk7-bin/jre/lib/i386/libjsig.so
-java/openjdk7-bin/jre/lib/i386/libjsound.so
-java/openjdk7-bin/jre/lib/i386/liblcms.so
-java/openjdk7-bin/jre/lib/i386/libmanagement.so
-java/openjdk7-bin/jre/lib/i386/libmlib_image.so
-java/openjdk7-bin/jre/lib/i386/libnet.so
-java/openjdk7-bin/jre/lib/i386/libnio.so
-java/openjdk7-bin/jre/lib/i386/libnpt.so
-java/openjdk7-bin/jre/lib/i386/librmi.so
-java/openjdk7-bin/jre/lib/i386/libsplashscreen.so
-java/openjdk7-bin/jre/lib/i386/libunpack.so
-java/openjdk7-bin/jre/lib/i386/libverify.so
-java/openjdk7-bin/jre/lib/i386/libzip.so
-java/openjdk7-bin/jre/lib/i386/native_threads/libhpi.so
-java/openjdk7-bin/jre/lib/i386/server/Xusage.txt
-java/openjdk7-bin/jre/lib/i386/server/libjsig.so
-java/openjdk7-bin/jre/lib/i386/server/libjvm.so
-java/openjdk7-bin/jre/lib/i386/xawt/libmawt.so
+${PLIST.client}java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/client/Xusage.txt
+${PLIST.client}java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/client/libjsig.so
+${PLIST.client}java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/headless/libmawt.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/jexec
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/jli/libjli.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/jvm.cfg
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libattach.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libawt.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libdt_socket.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libfontmanager.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libhprof.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libinstrument.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libj2gss.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libj2pcsc.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libj2pkcs11.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjaas_unix.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjava.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjava_crw_demo.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjawt.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjdwp.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjpeg.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjsdt.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjsig.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libjsound.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/liblcms.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libmanagement.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libmlib_image.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libnet.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libnio.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libnpt.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/librmi.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libsplashscreen.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libunpack.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libverify.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/libzip.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/native_threads/libhpi.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/server/Xusage.txt
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/server/libjsig.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/server/libjvm.so
+java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/xawt/libmawt.so
 java/openjdk7-bin/jre/lib/im/indicim.jar
 java/openjdk7-bin/jre/lib/im/thaiim.jar
 java/openjdk7-bin/jre/lib/images/cursors/cursors.properties
@@ -487,6 +485,7 @@ java/openjdk7-bin/jre/lib/zi/America/Argentina/Jujuy
 java/openjdk7-bin/jre/lib/zi/America/Argentina/La_Rioja
 java/openjdk7-bin/jre/lib/zi/America/Argentina/Mendoza
 java/openjdk7-bin/jre/lib/zi/America/Argentina/Rio_Gallegos
+java/openjdk7-bin/jre/lib/zi/America/Argentina/Salta
 java/openjdk7-bin/jre/lib/zi/America/Argentina/San_Juan
 java/openjdk7-bin/jre/lib/zi/America/Argentina/San_Luis
 java/openjdk7-bin/jre/lib/zi/America/Argentina/Tucuman
@@ -653,7 +652,7 @@ java/openjdk7-bin/jre/lib/zi/Asia/Kabul
 java/openjdk7-bin/jre/lib/zi/Asia/Kamchatka
 java/openjdk7-bin/jre/lib/zi/Asia/Karachi
 java/openjdk7-bin/jre/lib/zi/Asia/Kashgar
-java/openjdk7-bin/jre/lib/zi/Asia/Katmandu
+java/openjdk7-bin/jre/lib/zi/Asia/Kathmandu
 java/openjdk7-bin/jre/lib/zi/Asia/Kolkata
 java/openjdk7-bin/jre/lib/zi/Asia/Krasnoyarsk
 java/openjdk7-bin/jre/lib/zi/Asia/Kuala_Lumpur
@@ -1107,13 +1106,13 @@ java/openjdk7-bin/src.zip
 @dirrm java/openjdk7-bin/jre/lib/images/cursors
 @dirrm java/openjdk7-bin/jre/lib/images
 @dirrm java/openjdk7-bin/jre/lib/im
-@dirrm java/openjdk7-bin/jre/lib/i386/xawt
-@dirrm java/openjdk7-bin/jre/lib/i386/server
-@dirrm java/openjdk7-bin/jre/lib/i386/native_threads
-@dirrm java/openjdk7-bin/jre/lib/i386/jli
-@dirrm java/openjdk7-bin/jre/lib/i386/headless
-@dirrm java/openjdk7-bin/jre/lib/i386/client
-@dirrm java/openjdk7-bin/jre/lib/i386
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/xawt
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/server
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/native_threads
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/jli
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/headless
+${PLIST.client}@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}/client
+@dirrm java/openjdk7-bin/jre/lib/${JAVA_MACHINE_ARCH}
 @dirrm java/openjdk7-bin/jre/lib/ext
 @dirrm java/openjdk7-bin/jre/lib/cmm
 @dirrm java/openjdk7-bin/jre/lib/audio
