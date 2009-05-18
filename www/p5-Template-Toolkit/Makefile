@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/11/17 02:17:09 he Exp $
+# $NetBSD: Makefile,v 1.29 2009/05/18 22:16:14 abs Exp $
 #
 
 DISTNAME=	Template-Toolkit-2.20
@@ -20,6 +20,8 @@ MAKE_PARAMS=	TT_ACCEPT=y
 #MAKE_PARAMS+=	TT_PREFIX=${PREFIX}/share/tt2
 #MAKE_PARAMS+=	TT_BUILD_DOCS=y
 #MAKE_PARAMS+=	TT_EXAMPLES=y
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
