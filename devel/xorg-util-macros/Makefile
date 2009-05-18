@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:20 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/18 18:16:14 hasso Exp $
 #
 
-DISTNAME=		util-macros-1.1.5
+DISTNAME=		util-macros-1.2.1
 PKGNAME=		xorg-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
