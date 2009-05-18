@@ -1,0 +1,15 @@
+$NetBSD: patch-bb,v 1.1 2009/05/18 05:11:50 dholland Exp $
+
+Fix inclusion of errno.h to work properly on e.g. Solaris.
+
+--- rplayd/cdrom.c~	1999-03-10 02:58:02.000000000 -0500
++++ rplayd/cdrom.c	2009-05-18 00:54:06.000000000 -0400
+@@ -34,7 +34,7 @@
+ #ifdef HAVE_CDROM
+ 
+ #include <sys/types.h>
+-#include <sys/errno.h>
++#include <errno.h>
+ #include "rplayd.h"
+ #include "cdrom.h"
+ 
