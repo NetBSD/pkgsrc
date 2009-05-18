@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8107 2009/05/16 23:57:59 zafer Exp $
+$NetBSD: TODO,v 1.8108 2009/05/18 08:42:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -340,7 +340,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o Coin-2.4.5
 	o DatLib-2.35
 	o DatUtil-2.45
-	o GConf-2.26.1
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
@@ -485,6 +484,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o classpath-0.98
 	o claws-mail-3.7.1
 	o climm-0.6.4
+	o clive-2.1.13
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.8.0
@@ -521,6 +521,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddclient-3.7.3
 	o ddrescue-1.10
 	o defendguin-0.0.11
+	o delegate-9.9.3
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
@@ -578,6 +579,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
+	o etm-230
 	o evolution-2.26.1.1
 	o evolution-exchange-2.26.1
 	o evolution-mapi-0.26.1 [GNOME 2.26]
@@ -613,7 +615,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
-	o fotoxx-6.7
+	o fotoxx-6.8
 	o freeciv-2.1.9
 	o freeglut-2.4.0
 	o freenet-0.7
@@ -636,6 +638,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcin-1.4.1
 	o gcombust-0.1.55
 	o gcpio-2.7
+	o gdal-1.6.1
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
@@ -664,6 +667,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.3 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
+	o glib2-2.20.2
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -725,6 +729,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
+	o gtksourceview-2.6.2
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -733,7 +738,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
 	o gv-3.6.7
-	o gwaei-1.0b2
+	o gwaei-1.0b3
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hanzim-2.4
@@ -841,6 +846,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdarie-0.2.1 [break ABI with 0.1.x]
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
+	o libdrm-2.4.11
 	o libevent-1.4.10
 	o libextractor-0.5.22
 	o libflash-0.4.13
@@ -903,7 +909,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-14.4.1
+	o mathomatic-14.4.2
 	o mc-4.6.2
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
@@ -1013,6 +1019,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openh323-1.19.1
 	o openldap-client-2.4.16
 	o openmortal-0.7.1
+	o openmotif-2.3.2
 	o openmsx-0.7.0
 	o openoffice3-bin-3.1.0
 	o openssh-5.2
@@ -1075,7 +1082,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-3.1.4
+	o phpmyadmin-3.1.5
 	o phylip-3.68
 	o picp-0.6.8
 	o pidgin-2.5.4
@@ -1084,6 +1091,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
+	o pixman-0.15.4
 	o pkg_select-20051209
 	o pks-0.9.6
 	o plone-3.2.2 [should be plone-32?]
@@ -1102,6 +1110,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o postal-0.70
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
+	o prboom-2.5.0.2
 	o privoxy-3.0.11
 	o profit-2.5.3
 	o projclock-0.9
@@ -1356,7 +1365,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o tomboy-0.14.1 [GNOME 2.26]
+	o tomboy-0.14.2 [GNOME 2.26]
 	o top-3.8beta1
 	o totem-2.26.2
 	o totem-pl-parser-2.26.2
@@ -1389,7 +1398,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vfu-4.03
 	o vice-2.1
 	o vicq-0.4.2
-	o viewvc-1.0.8
+	o viewvc-1.1.0
 	o vifm-0.4
 	o vinagre-2.26.1 [GNOME 2.26]
 	o vino-2.26.1 [GNOME 2.26]
@@ -1432,7 +1441,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xchm-1.15
+	o xchm-1.16
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
 	o xdelta-3.0v2
@@ -1501,6 +1510,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xnap-2.5r3
 	o xorg-util-macros-1.2.0
 	o xpad-2.13
+	o xplanet-1.2.1
 	o xpuyopuyo-0.9.8
 	o xrandr-1.3.0
 	o xrmap-anthems-1.2
@@ -1524,7 +1534,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yasm-0.8.0
 	o yodl-2.01.02
-	o youtube-dl-20090511
+	o youtube-dl-200905013
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
