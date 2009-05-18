@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/03/22 19:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/18 15:40:52 wiz Exp $
 
-DISTNAME=	seahorse-plugins-2.26.0
+DISTNAME=	seahorse-plugins-2.26.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse-plugins/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/seahorse/
 COMMENT=	Plugins for the GnuPG front end and bonobo component for GNOME
+
+#LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1
 
 DEPENDS+=	gnupg>=1.2.1:../../security/gnupg
 
