@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/18 06:33:20 agc Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/18 06:40:59 agc Exp $
 
 DISTNAME=	tre-0.7.5
 PKGREVISION=	5
@@ -18,8 +18,9 @@ USE_LIBTOOL=		YES
 CONFIGURE_ARGS+=	--disable-agrep
 CONFIGURE_ARGS+=	--disable-system-abi
 
+INSTALLATION_DIRS+=	share/doc/tre
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tre
 	${INSTALL_DATA} ${WRKSRC}/doc/tre-api.html ${DESTDIR}${PREFIX}/share/doc/tre/
 	${INSTALL_DATA} ${WRKSRC}/doc/tre-syntax.html ${DESTDIR}${PREFIX}/share/doc/tre/
 
