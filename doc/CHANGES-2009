@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1917 2009/05/18 13:41:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1918 2009/05/18 15:32:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/orca to 2.26.1 [wiz 2009-05-18]
 	Updated www/typolight27-translations to 20090518 [taca 2009-05-18]
 	Updated www/gtkhtml314 to 3.26.2 [wiz 2009-05-18]
+	Updated security/seahorse to 2.26.1 [wiz 2009-05-18]
