@@ -1,13 +1,7 @@
+$NetBSD: patch-aa,v 1.2 2009/05/18 18:22:13 rumble Exp $
+
 --- compiler/aslcompiler.y.orig	2008-07-29 10:26:13.000000000 -0700
 +++ compiler/aslcompiler.y	2009-04-22 12:39:19.000000000 -0700
-@@ -3,7 +3,6 @@
- /******************************************************************************
-  *
-  * Module Name: aslcompiler.y - Bison input file (ASL grammar and actions)
-- *              $Revision: 1.1 $
-  *
-  *****************************************************************************/
- 
 @@ -11,7 +10,7 @@
   *
   * 1. Copyright Notice
