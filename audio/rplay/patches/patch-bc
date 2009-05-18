@@ -1,0 +1,24 @@
+$NetBSD: patch-bc,v 1.1 2009/05/18 05:21:18 dholland Exp $
+
+Fix quality non-64-bit GNU code.
+
+--- lib/getopt.c~	1998-07-14 18:35:23.000000000 -0400
++++ lib/getopt.c	2009-05-18 01:17:34.000000000 -0400
+@@ -189,6 +189,7 @@ my_index (str, chr)
+ 
+ /* If using GCC, we can safely declare strlen this way.
+    If not using GCC, it is ok not to declare it.  */
++/* ...as if */
+ #ifdef __GNUC__
+ /* Note that Motorola Delta 68k R3V7 comes with GCC but not stddef.h.
+    That was relevant to code that was here before.  */
+@@ -196,6 +197,9 @@ my_index (str, chr)
+ /* gcc with -traditional declares the built-in strlen to return int,
+    and has done so at least since version 2.4.5. -- rms.  */
+ extern int strlen (const char *);
++#elif defined(_LP64)
++#include <stddef.h>
++size_t strlen();
+ #endif /* not __STDC__ */
+ #endif /* __GNUC__ */
+ 
