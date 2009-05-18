@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1904 2009/05/18 08:27:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1905 2009/05/18 09:51:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2567,3 +2567,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated math/gcalctool to 5.26.2 [wiz 2009-05-18]
 	Updated devel/GConf-ui to 2.26.2 [wiz 2009-05-18]
 	Updated devel/GConf to 2.26.2 [wiz 2009-05-18]
+	Updated graphics/eog to 2.26.1 [wiz 2009-05-18]
