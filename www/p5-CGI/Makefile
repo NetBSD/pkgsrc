@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2009/04/12 11:59:13 sno Exp $
+# $NetBSD: Makefile,v 1.48 2009/05/18 22:14:20 abs Exp $
 
 VERS=		3.43
 DISTNAME=	CGI.pm-${VERS}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/CGI.pm/
 COMMENT=	Perl5 module for writing forms-based CGI programs
 LICENSE=	artistic-2.0
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
@@ -27,12 +28,13 @@ post-build:
 	cd ${WRKSRC}/examples && chmod +x *.cgi && perl make_links.pl
 
 post-install:
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}/examples
-	cd ${WRKSRC} && ${INSTALL_DATA} *.html ${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/examples
+	cd ${WRKSRC} && ${INSTALL_DATA} *.html ${DESTDIR}${HTMLDIR}
 	cd ${WRKSRC}/examples &&					\
-	${INSTALL_DATA} *.gif *.html *.txt *.xbm ${HTMLDIR}/examples &&	\
-	${INSTALL_SCRIPT} *.cgi ${HTMLDIR}/examples
+	${INSTALL_DATA} *.gif *.html *.txt *.xbm			\
+	${DESTDIR}${HTMLDIR}/examples && ${INSTALL_SCRIPT} *.cgi 	\
+	${DESTDIR}${HTMLDIR}/examples
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
