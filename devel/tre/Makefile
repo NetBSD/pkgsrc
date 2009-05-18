@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2007/12/14 19:07:44 bjs Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/18 06:33:20 agc Exp $
 
 DISTNAME=	tre-0.7.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://laurikari.net/tre/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://laurikari.net/tre/
 COMMENT=	Lightweight and robust POSIX compliant regexp matching library
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,6 +17,11 @@ USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-agrep
 CONFIGURE_ARGS+=	--disable-system-abi
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tre
+	${INSTALL_DATA} ${WRKSRC}/doc/tre-api.html ${DESTDIR}${PREFIX}/share/doc/tre/
+	${INSTALL_DATA} ${WRKSRC}/doc/tre-syntax.html ${DESTDIR}${PREFIX}/share/doc/tre/
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 
