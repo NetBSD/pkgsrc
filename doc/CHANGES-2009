@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1894 2009/05/17 23:11:44 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.1895 2009/05/18 04:33:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2557,3 +2557,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added sysutils/p5-SSH-Batch version 0.021 [seb 2009-05-17]
 	Updated audio/cdparanoia to 3.0.9.8nb7 [dholland 2009-05-17]
 	Updated sysutils/coreutils to 6.12nb1 [dholland 2009-05-17]
+	Updated audio/libvisual-plugins to 0.4.0nb3 [dholland 2009-05-18]
