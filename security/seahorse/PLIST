@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/03/15 18:32:43 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/05/18 15:32:02 wiz Exp $
 bin/seahorse
 bin/seahorse-daemon
 include/libcryptui/cryptui-key-chooser.h
@@ -72,6 +72,7 @@ share/icons/hicolor/32x32/apps/seahorse.png
 share/icons/hicolor/48x48/apps/seahorse-preferences.png
 share/icons/hicolor/48x48/apps/seahorse.png
 share/locale/ar/LC_MESSAGES/seahorse.mo
+share/locale/as/LC_MESSAGES/seahorse.mo
 share/locale/az/LC_MESSAGES/seahorse.mo
 share/locale/be@latin/LC_MESSAGES/seahorse.mo
 share/locale/bg/LC_MESSAGES/seahorse.mo

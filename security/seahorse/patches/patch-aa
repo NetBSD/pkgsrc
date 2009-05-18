@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
+$NetBSD: patch-aa,v 1.11 2009/05/18 15:32:02 wiz Exp $
 
---- configure.orig	2008-10-27 14:54:33.000000000 +0000
+--- configure.orig	2009-04-12 14:33:21.000000000 +0000
 +++ configure
-@@ -17343,7 +17343,7 @@ _ACEOF
+@@ -17853,7 +17853,7 @@ _ACEOF
  
  fi
  
@@ -11,8 +11,8 @@ $NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
    WITH_PGP_TRUE=
    WITH_PGP_FALSE='#'
  else
-@@ -18602,7 +18602,7 @@ else
- echo "${ECHO_T}yes" >&6; }
+@@ -19016,7 +19016,7 @@ else
+ $as_echo "yes" >&6; }
  	enable_pkcs11="yes"
  fi
 -	if test "$enable_pkcs11" == "yes"; then
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define WITH_PKCS11 1
-@@ -18613,7 +18613,7 @@ _ACEOF
+@@ -19027,7 +19027,7 @@ _ACEOF
  	fi
  fi
  
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
    WITH_PKCS11_TRUE=
    WITH_PKCS11_FALSE='#'
  else
-@@ -18738,7 +18738,7 @@ _ACEOF
+@@ -19152,7 +19152,7 @@ _ACEOF
  
  fi
  
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.10 2008/10/27 16:51:59 wiz Exp $
    WITH_SSH_TRUE=
    WITH_SSH_FALSE='#'
  else
-@@ -18795,7 +18795,7 @@ if test "$enable_tests" != "yes"; then
+@@ -19209,7 +19209,7 @@ if test "$enable_tests" != "yes"; then
      enable_tests="no"
  fi
  

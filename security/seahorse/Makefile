@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.79 2009/03/22 19:01:40 wiz Exp $
+# $NetBSD: Makefile,v 1.80 2009/05/18 15:32:02 wiz Exp $
 
-DISTNAME=	seahorse-2.26.0
+DISTNAME=	seahorse-2.26.1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/seahorse/
 COMMENT=	GnuPG front end and bonobo component for GNOME
+
+#LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
