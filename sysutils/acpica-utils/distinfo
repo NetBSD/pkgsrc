@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/08/07 00:12:06 obache Exp $
+$NetBSD: distinfo,v 1.3 2009/05/18 18:18:03 rumble Exp $
 
 SHA1 (acpica-unix-20080729.tar.gz) = 34a17148c259c8c798b19f679966ba66d847916a
 RMD160 (acpica-unix-20080729.tar.gz) = 3f85ebf2a10de750e2d755355bc8a7a45d995d28
 Size (acpica-unix-20080729.tar.gz) = 897283 bytes
+SHA1 (patch-aa) = 621b81265d71df42fe7fc1c0f7f437c691ef340d
