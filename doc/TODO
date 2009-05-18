@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8108 2009/05/18 08:42:25 wiz Exp $
+$NetBSD: TODO,v 1.8109 2009/05/18 10:16:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -423,6 +423,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o atari800-2.1.0
 	o aterm-1.0.1
 	o auctex-11.85
+	o audacious-plugins-2.0.1
 	o autoconvert-0.3.16
 	o autogen-5.9.7
 	o avahi-0.6.25
@@ -471,7 +472,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.9
 	o cdrtools-2.01.01alpha59
-	o cfitsio-3140
+	o cfitsio-3181
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
@@ -562,7 +563,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o elscreen-1.4.6
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o empathy-2.26.1 [GNOME 2.26]
+	o empathy-2.26.2 [GNOME 2.26]
 	o enlightenment-0.16.8.12
 	o eog-2.26.1
 	o epdfview-0.1.7
@@ -673,7 +674,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glom-1.10.0 [GNOME 2.26]
 	o glpk-4.37
 	o gmime-2.4.7
-	o gmp-4.3.0
+	o gmp-4.3.1
 	o gmpc-0.18.0
 	o gnash-0.8.5
 	o gnet1-1.1.9
@@ -696,7 +697,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnu-crypto-2.1.0
 	o gnugo-3.8
 	o gnupg2-2.0.11
-	o gnustep-base-1.19.0
+	o gnustep-base-1.19.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -741,6 +742,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gwaei-1.0b3
 	o gxemul-0.4.7.1
 	o hackbot-2.21
+	o hal-0.5.12
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -847,7 +849,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libdrm-2.4.11
-	o libevent-1.4.10
+	o libevent-1.4.11
 	o libextractor-0.5.22
 	o libflash-0.4.13
 	o libgda-4.0.2 [GNOME 2.26]
@@ -881,7 +883,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libunique-1.0.8
-	o libv4l-0.5.9
+	o libv4l-0.5.97
 	o libxklavier-3.9
 	o licq-1.3.6
 	o lighttpd-1.4.22
@@ -949,7 +951,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mmg-2.0.2
 	o moc-2.4.4
 	o modular-xorg-server-1.6.1.901
-	o monotone-0.43
+	o monotone-0.44
 	o moserial-2.26.0 [GNOME 2.26]
 	o mp3blaster-3.2.3
 	o mpc-0.15
@@ -1105,6 +1107,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o poedit-1.4.2
 	o polsms-2.1.0
 	o poppass-4.0.14
+	o poppler-0.10.7
 	o poppy-4.01
 	o posh-0.5.5
 	o postal-0.70
@@ -1157,7 +1160,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-pytz-2009g
 	o py-setuptools-0.6
 	o py-sqlite2-2.5.1
-	o py-subversion-1.6.1
+	o py-subversion-1.6.2
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.4
@@ -1265,8 +1268,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sch-3.8.3
 	o scilab-5.1.1
 	o scm-5e5
-	o scmgit-base-1.6.3
-	o scmgit-docs-1.6.3
+	o scmgit-base-1.6.3.1
+	o scmgit-docs-1.6.3.1
 	o scribus-1.3.3.13
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1328,6 +1331,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subversion-base-1.6.2
 	o sudo-1.7.1
 	o sunbird-0.9 [ghen|pkgsrc-wip]
+	o surfraw-2.2.5
 	o suse_base-11.0
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
@@ -1436,7 +1440,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090509
+	o x264-devel-20090517
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
