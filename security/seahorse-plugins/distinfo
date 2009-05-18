@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/03/17 16:39:12 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2009/05/18 15:40:52 wiz Exp $
 
-SHA1 (seahorse-plugins-2.26.0.tar.bz2) = cc59421f31d1b9cbd6ecde203358da35cc9d8478
-RMD160 (seahorse-plugins-2.26.0.tar.bz2) = f40b265c7475432119d82906556d5bc02d7ed27d
-Size (seahorse-plugins-2.26.0.tar.bz2) = 1350051 bytes
+SHA1 (seahorse-plugins-2.26.1.tar.bz2) = 881655b46da21efd755f81b0449ec776ceb3f710
+RMD160 (seahorse-plugins-2.26.1.tar.bz2) = c7244d626874beb1e54ecb4037e052b69998ac49
+Size (seahorse-plugins-2.26.1.tar.bz2) = 1311443 bytes
 SHA1 (patch-aa) = 2dc2a2b59870033fbc594c419f6e02965d1bd1dd
