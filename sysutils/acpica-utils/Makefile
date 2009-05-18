@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/08/07 00:12:06 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/18 18:18:03 rumble Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPICA_UTILS_VERSION}
 PKGNAME=	acpica-utils-${ACPICA_UTILS_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.acpica.org/download/
 
