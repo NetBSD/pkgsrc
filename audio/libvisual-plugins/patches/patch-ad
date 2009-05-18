@@ -1,11 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2007/10/10 09:26:21 rillig Exp $
+$NetBSD: patch-ad,v 1.2 2009/05/18 04:33:28 dholland Exp $
 
---- plugins/input/mplayer/input_mplayer.c.orig	2006-01-22 13:25:27.000000000 +0000
-+++ plugins/input/mplayer/input_mplayer.c	2007-10-10 09:20:05.000000000 +0000
-@@ -176,6 +176,10 @@ int inp_mplayer_init( VisPluginData *plu
+NetBSD's mremap takes an extra argument; also not everything,
+including NetBSD 4.x, has mremap at all.
+
+--- plugins/input/mplayer/input_mplayer.c.orig	2006-01-22 08:25:27.000000000 -0500
++++ plugins/input/mplayer/input_mplayer.c	2009-05-17 23:40:38.000000000 -0400
+@@ -176,9 +176,28 @@ int inp_mplayer_init( VisPluginData *plu
  		return -6;
  	}
  
++#ifdef HAVE_MREMAP
++
 +#if defined(__NetBSD__)
 +#  define mremap(a, b, c, d) (mremap)((a), (b), NULL, (c), (d))
 +#endif
@@ -13,3 +18,19 @@ $NetBSD: patch-ad,v 1.1 2007/10/10 09:26:21 rillig Exp $
  	priv->mmap_area = mremap( priv->mmap_area, sizeof( mplayer_data_t ),
  			sizeof( mplayer_data_t ) + priv->mmap_area->bs,
  			0 );
++
++#else /* no mremap() */
++
++	{
++		size_t size = priv->mmap_area->bs;
++
++		munmap(priv->mmap_area, sizeof(mplayer_data_t));
++		priv->mmap_area = mmap(NULL, sizeof(mplayer_data_t) + size,
++				PROT_READ, MAP_SHARED, priv->fd, 0);
++	}
++
++#endif
++
+ 	if ( (int)priv->mmap_area == -1 )
+ 	{
+ 		visual_log( VISUAL_LOG_CRITICAL, 

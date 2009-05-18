@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2009/05/18 04:33:29 dholland Exp $
+
+Respin from autoheader after changes in patch-ae.
+(Note: must use autoconf-2.59, not current.)
+
+--- config.h.in.orig	2009-05-18 00:15:06.000000000 -0400
++++ config.h.in	2009-05-18 00:15:10.000000000 -0400
+@@ -74,6 +74,9 @@
+ /* Define to 1 if you have a working `mmap' system call. */
+ #undef HAVE_MMAP
+ 
++/* Define to 1 if you have the `mremap' function. */
++#undef HAVE_MREMAP
++
+ /* Define to 1 if you have the `pow' function. */
+ #undef HAVE_POW
+ 
