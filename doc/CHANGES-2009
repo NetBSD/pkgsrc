@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1919 2009/05/18 15:41:07 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1920 2009/05/18 18:18:03 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/gtkhtml314 to 3.26.2 [wiz 2009-05-18]
 	Updated security/seahorse to 2.26.1 [wiz 2009-05-18]
 	Updated security/seahorse-plugins to 2.26.1 [wiz 2009-05-18]
+	Updated devel/xorg-util-macros to 1.2.1 [hasso 2009-05-18]
