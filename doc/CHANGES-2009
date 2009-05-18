@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1903 2009/05/18 08:27:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1904 2009/05/18 08:27:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2566,3 +2566,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Cache-Memcached to 1.26 [sno 2009-05-18]
 	Updated math/gcalctool to 5.26.2 [wiz 2009-05-18]
 	Updated devel/GConf-ui to 2.26.2 [wiz 2009-05-18]
+	Updated devel/GConf to 2.26.2 [wiz 2009-05-18]
