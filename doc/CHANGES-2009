@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1921 2009/05/18 19:11:32 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.1922 2009/05/18 22:04:54 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/seahorse-plugins to 2.26.1 [wiz 2009-05-18]
 	Updated devel/xorg-util-macros to 1.2.1 [hasso 2009-05-18]
 	Updated sysutils/libpciaccess to 0.10.6 [hasso 2009-05-18]
+	Updated lang/openjdk7-bin to 20090502 [abs 2009-05-18]
