@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1908 2009/05/18 10:27:46 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1909 2009/05/18 10:39:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gnome-devel-docs to 2.26.1 [wiz 2009-05-18]
 	Updated pkgtools/pkg_install to 20090518 [wiz 2009-05-18]
 	Updated games/gnome-games to 2.26.1 [wiz 2009-05-18]
+	Updated x11/gnome-mag to 0.15.6 [wiz 2009-05-18]
