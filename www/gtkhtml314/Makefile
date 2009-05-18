@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2009/04/16 19:46:43 drochner Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/18 13:40:53 wiz Exp $
 #
 # PKGNAME derives from the supported API (still from
 # release 3.14). See also PLIST.
 #
 
-DISTNAME=	gtkhtml-3.26.1.1
+DISTNAME=	gtkhtml-3.26.2
 PKGNAME=	${DISTNAME:S/gtkhtml/gtkhtml314/}
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkhtml/3.26/}
@@ -13,6 +13,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
+
+#LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
