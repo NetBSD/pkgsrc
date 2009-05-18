@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8110 2009/05/18 13:30:23 wiz Exp $
+$NetBSD: TODO,v 1.8111 2009/05/18 15:41:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -566,7 +566,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
 	o enlightenment-0.16.8.12
-	o eog-2.26.1
 	o epdfview-0.1.7
 	o epic4-2.6
 	o epiphany-2.26.1
@@ -613,7 +612,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
 	o flpsed-0.4.4
-	o fluidsynth-1.0.9
 	o fluxbox-1.1.0
 	o fmsx-3.0
 	o fondu-040927
@@ -682,16 +680,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-devel-docs-2.26.1
-	o gnome-doc-utils-0.16.1
-	o gnome-games-2.26.1
-	o gnome-mag-0.15.6
-	o gnome-nds-thumbnailer-1.2.1
-	o gnome-nettool-2.26.1
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.1 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-screensaver-2.26.1
-	o gnome-themes-2.26.1
 	o gnome-user-docs-2.26.1
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
@@ -731,7 +721,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtk-systrace-20030623
 	o gtk2-engines-2.18.1
 	o gtkglarea-2.0.0
-	o gtkhtml314-3.26.2
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
 	o gtksourceview-2.6.2
@@ -1032,7 +1021,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-0.9.8k
 	o openttd-0.7.0
 	o opera-9.64
-	o orca-2.26.1
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1045,7 +1033,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o p5-Net-OpenID-Consumer-1.03
 	o p5-Net-Twitter-2.10 [pkg/40812]
 	o p5-PathTools-3.30
-	o p5-WWW-Curl-4.06
 	o p5-XML-Feed-0.43
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1280,8 +1267,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o sdcc-2.9.0
 	o sdlmame-0.131
 	o sdlmess-0.131
-	o seahorse-2.26.1
-	o seahorse-plugins-2.26.1
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
@@ -1525,7 +1510,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.6
-	o xscreensaver-5.08
 	o xskat-4.0
 	o xsoldier-1.4
 	o xterm-243
