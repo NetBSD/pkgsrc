@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2009/03/15 21:29:29 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2009/05/18 10:38:56 wiz Exp $
 #
 
-DISTNAME=		gnome-mag-0.15.5
+DISTNAME=		gnome-mag-0.15.6
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-mag/0.15/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME screen magnifier
+
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
