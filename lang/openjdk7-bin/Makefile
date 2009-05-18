@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/03/23 13:58:14 abs Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/18 22:04:28 abs Exp $
 #
 
-DISTNAME=	jdk1.7.0.20090129-i386-netbsd5
-PKGREVISION=	1
-PKGNAME=	${DISTNAME:C:-i386.*:::C:.*\.:openjdk7-bin-:}
+DISTNAME=	jdk1.7.0-20090502-${MACHINE_ARCH}-NetBSD_5.0
+PKGNAME=	${DISTNAME:C:-${MACHINE_ARCH}.*:::C:[^-]*-:openjdk7-bin-:}
 CATEGORIES=	lang
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/jmcneill/java/
+MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/java/openjdk/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://openjdk.java.net/projects/bsd-port/
@@ -16,12 +16,21 @@ JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=  jar java javac javadoc javah javap keytool orbd \
 		policytool rmid rmiregistry servertool tnameserv
 
-WRKSRC=		${WRKDIR}/jdk1.7.0
+WRKSRC=		${WRKDIR}/openjdk7-j2sdk
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
 CHECK_SHLIBS_SUPPORTED=	NO
 
-ONLY_FOR_PLATFORM=    NetBSD-[5-9]*-i386
+JAVA_MACHINE_ARCH=${MACHINE_ARCH}
+.if ${MACHINE_ARCH} == "i386"
+PLIST.client=		yes
+.elif ${MACHINE_ARCH} == "x86_64"
+JAVA_MACHINE_ARCH=	amd64
+.endif
+PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
+PLIST_VARS+=    client
+
+ONLY_FOR_PLATFORM=    NetBSD-[5-9]*-i386 NetBSD-[5-9]*-x86_64
 
 INSTALLATION_DIRS= 	java/${JAVA_NAME}
 PKG_DESTDIR_SUPPORT=    user-destdir
