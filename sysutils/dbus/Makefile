@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2009/05/08 13:13:51 abs Exp $
+# $NetBSD: Makefile,v 1.45 2009/05/18 21:55:30 abs Exp $
 
 DISTNAME=	dbus-1.2.4.2permissive
 PKGNAME=	dbus-1.2.4.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -26,7 +26,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEFS+=		VARBASE
 
 OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
-SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4511
+SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROUP} 4511
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -62,10 +62,14 @@ CONFIGURE_ARGS.with+=	xml=expat
 
 PTHREAD_AUTO_VARS=	yes
 
-.if ${OPSYS} != "Linux"
+.if ${OPSYS} == "Linux"
+PLIST.linux=		yes
+.else
 CONFIGURE_ARGS.disable+=\
 			${CONFIGURE_ARGS.Linux}
 .endif
+
+PLIST_VARS+=    	linux
 
 CONFIGURE_ARGS+=\
 	${CONFIGURE_ARGS_GROUPS:@.g.@			\
@@ -103,11 +107,13 @@ BUILDLINK_TRANSFORM+=	rm:-pie
 
 .include "options.mk"
 
+.if ${OPSYS} == "Linux"
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/bus/rc.messagebus \
 		${DESTDIR}${PREFIX}/share/examples/rc.d/rc.messagebus.slackware
 	${INSTALL_DATA} ${WRKSRC}/bus/messagebus \
 		${DESTDIR}${PREFIX}/share/examples/rc.d/messagebus.redhat
+.endif
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
