@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.6 2009/03/17 08:54:30 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.7 2009/05/18 08:26:24 wiz Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
 
-GCONF_VERSION=		2.26.0
+GCONF_VERSION=		2.26.2
 
 DISTNAME=		GConf-${GCONF_VERSION}
 CATEGORIES=		devel gnome
@@ -13,6 +13,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gconf/
 COMMENT=		Configuration database system used by GNOME
+
+LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
