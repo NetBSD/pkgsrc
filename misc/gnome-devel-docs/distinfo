@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/03/17 10:45:53 jmcneill Exp $
+$NetBSD: distinfo,v 1.3 2009/05/18 10:00:50 wiz Exp $
 
-SHA1 (gnome-devel-docs-2.26.0.tar.bz2) = 2b16161ac025134040e6bc0f8f8115f552cf9f00
-RMD160 (gnome-devel-docs-2.26.0.tar.bz2) = fbf49cd238a4316371ade4d64a61cab401f3b62d
-Size (gnome-devel-docs-2.26.0.tar.bz2) = 3420092 bytes
+SHA1 (gnome-devel-docs-2.26.1.tar.bz2) = 3af9254de2f976809a2efb2651a6d27f50832915
+RMD160 (gnome-devel-docs-2.26.1.tar.bz2) = 7e4f853a4303a03f9cbcd9cdfe9e588e969a9d55
+Size (gnome-devel-docs-2.26.1.tar.bz2) = 3545931 bytes
