@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/06/13 11:28:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/05/18 21:55:30 abs Exp $
 bin/dbus-cleanup-sockets
 bin/dbus-daemon
 bin/dbus-launch
@@ -34,8 +34,8 @@ man/man1/dbus-uuidgen.1
 share/examples/dbus/session.conf
 share/examples/dbus/system.conf
 share/examples/rc.d/dbus
-share/examples/rc.d/messagebus.redhat
-share/examples/rc.d/rc.messagebus.slackware
+${PLIST.linux}share/examples/rc.d/messagebus.redhat
+${PLIST.linux}share/examples/rc.d/rc.messagebus.slackware
 @dirrm share/examples/dbus
 @exec ${MKDIR} %D/share/dbus-1/system-services
 @dirrm share/dbus-1/system-services
