@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1911 2009/05/18 12:23:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1912 2009/05/18 12:59:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2574,3 +2574,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-mag to 0.15.6 [wiz 2009-05-18]
 	Updated net/gnome-nettool to 2.26.1 [wiz 2009-05-18]
 	Updated x11/gnome-screensaver to 2.26.1 [wiz 2009-05-18]
+	Updated x11/gnome-themes to 2.26.1 [wiz 2009-05-18]
