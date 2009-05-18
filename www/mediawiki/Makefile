@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/12 12:27:20 martti Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/18 21:14:50 abs Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -10,6 +10,12 @@ COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.10:../../databases/php-mysql
+
+EGDIR=			share/examples/mediawiki
+MEDIAWIKI=		${PREFIX}/share/mediawiki
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,10 +30,7 @@ BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 PKG_SYSCONFSUBDIR?=	httpd
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-EGDIR=			${PREFIX}/share/examples/mediawiki
-MEDIAWIKI=		${PREFIX}/share/mediawiki
-
-CONF_FILES=		${EGDIR}/mediawiki.conf \
+CONF_FILES=		${PREFIX}/${EGDIR}/mediawiki.conf \
 			${PKG_SYSCONFDIR}/mediawiki.conf
 
 NO_CONFIGURE=		YES
@@ -50,15 +53,14 @@ post-extract:
 	${CP} ${FILESDIR}/mediawiki.conf ${WRKDIR}/mediawiki.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${MEDIAWIKI}
-	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC} && ${FIND} . -type d -exec ${INSTALL_DATA_DIR} \
-	  ${MEDIAWIKI}/{} \; -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
-	  ${MEDIAWIKI}/{} \;
+	  ${DESTDIR}${MEDIAWIKI}/{} \; -exec ${CHOWN} \
+	  ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MEDIAWIKI}/{} \;
 	cd ${WRKSRC} && ${FIND} . \! -type d -exec ${INSTALL_DATA} {} \
-	  ${MEDIAWIKI}/{} \; -exec ${CHOWN} ${APACHE_USER}:${APACHE_GROUP} \
-	  ${MEDIAWIKI}/{} \;
-	${INSTALL_DATA} ${WRKDIR}/mediawiki.conf ${EGDIR}/mediawiki.conf
+	  ${DESTDIR}${MEDIAWIKI}/{} \; -exec ${CHOWN} \
+	  ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MEDIAWIKI}/{} \;
+	${INSTALL_DATA} ${WRKDIR}/mediawiki.conf \
+	  ${DESTDIR}${PREFIX}/${EGDIR}/mediawiki.conf
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"
