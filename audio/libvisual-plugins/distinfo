@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.8 2007/10/10 09:26:21 rillig Exp $
+$NetBSD: distinfo,v 1.9 2009/05/18 04:33:28 dholland Exp $
 
 SHA1 (libvisual-plugins-0.4.0.tar.gz) = 20490573c282d900ec0bd05133cb3707640254f5
 RMD160 (libvisual-plugins-0.4.0.tar.gz) = f7a82f4a9e4dec3e877833612ece570ffbf2404d
 Size (libvisual-plugins-0.4.0.tar.gz) = 828631 bytes
 SHA1 (patch-aa) = 9c84c7d8af69d603ea8ce4077247a217952c0cb3
 SHA1 (patch-ab) = 31a380ed59ed9eed1e5516c44fec54c1e7dcf25c
-SHA1 (patch-ac) = dea36f303b2b3f8d5aea970b22c06743490d07cc
-SHA1 (patch-ad) = 569785ee5c26cf7e58abbf0ff2e08e20bb515675
+SHA1 (patch-ac) = b431acd28d9ff7c8bf5a8655fe4969f08ad80772
+SHA1 (patch-ad) = 9f9adc7bc9074b6474b83a245be67f1db753d645
+SHA1 (patch-ae) = ce54b7682f0d7a184a15392ee8f3a7cd2510be13
+SHA1 (patch-af) = 35e2b6517a7c7bd5605fd6593a113f184d8dc1b3
