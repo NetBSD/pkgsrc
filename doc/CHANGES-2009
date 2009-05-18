@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1898 2009/05/18 06:35:35 agc Exp $
+$NetBSD: CHANGES-2009,v 1.1899 2009/05/18 06:55:47 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2561,3 +2561,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/rplay to 3.3.2nb6 [dholland 2009-05-18]
 	Updated devel/rx to 1.5nb2 [dholland 2009-05-18]
 	Updated devel/tre to 0.7.5nb5 [agc 2009-05-18]
+	Updated devel/p5-IO to 1.2500 [sno 2009-05-18]
