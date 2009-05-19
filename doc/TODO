@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8113 2009/05/19 11:06:42 wiz Exp $
+$NetBSD: TODO,v 1.8114 2009/05/19 13:45:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -386,7 +386,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amaya-11.0
 	o amule-2.2.4
 	o angband-3.0.9
-	o anjuta-2.26.1.0 [GNOME 2.26]
+	o anjuta-2.26.2.0 [GNOME 2.26]
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -426,6 +426,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.0.1
 	o autoconvert-0.3.16
 	o autogen-5.9.7
+	o automake-1.11
 	o avahi-0.6.25
 	o avcheck-0.91
 	o avl-2.0.2a
@@ -570,7 +571,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eog-2.26.2
 	o epdfview-0.1.7
 	o epic4-2.6
-	o epiphany-2.26.1
+	o epiphany-2.26.2
 	o epiphany-extensions-2.26.1
 	o epsg-6.14
 	o epstool-3.08
@@ -607,6 +608,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
 	o file-5.01
+	o file-roller-2.26.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.1
@@ -646,6 +648,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
+	o gdl-2.26.2
 	o gdm-2.26.1 [GNOME 2.26]
 	o gdsreader-0.3.2
 	o geany-0.17
@@ -683,10 +686,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-devel-docs-2.26.2
 	o gnome-games-2.26.2
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.1 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-user-docs-2.26.1
+	o gnome-terminal-2.26.2
+	o gnome-user-docs-2.26.2
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -733,6 +738,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o gtranslator-1.9.5
+	o gucharmap-2.26.2
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
 	o gv-3.6.7
@@ -740,6 +746,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-0.5.12
+	o hamster-applet-2.26.2
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -969,6 +976,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
+	o nautilus-2.26.3
 	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1398,8 +1406,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o vicq-0.4.2
 	o viewvc-1.1.0
 	o vifm-0.4
-	o vinagre-2.26.1 [GNOME 2.26]
-	o vino-2.26.1 [GNOME 2.26]
+	o vinagre-2.26.2 [GNOME 2.26]
+	o vino-2.26.2 [GNOME 2.26]
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
