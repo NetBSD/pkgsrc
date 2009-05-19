@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1167 2009/05/19 22:13:40 sno Exp $
+# $NetBSD: Makefile,v 1.1168 2009/05/19 22:17:09 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -569,6 +569,7 @@ SUBDIR+=	p5-ExtUtils-ParseXS
 SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-ExtUtils-XSBuilder
 SUBDIR+=	p5-File-BaseDir
+SUBDIR+=	p5-File-ChangeNotify
 SUBDIR+=	p5-File-DesktopEntry
 SUBDIR+=	p5-File-DirSync
 SUBDIR+=	p5-File-Find-Rule
