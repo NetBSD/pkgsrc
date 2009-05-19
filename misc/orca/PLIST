@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/16 09:12:25 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/19 14:07:24 wiz Exp $
 bin/orca
 ${PYSITELIB}/orca/__init__.py
 ${PYSITELIB}/orca/__init__.pyc
@@ -226,6 +226,9 @@ ${PYSITELIB}/orca/scripts/apps/gnome-window-properties/speech_generator.pyo
 ${PYSITELIB}/orca/scripts/apps/gnome_segv2.py
 ${PYSITELIB}/orca/scripts/apps/gnome_segv2.pyc
 ${PYSITELIB}/orca/scripts/apps/gnome_segv2.pyo
+${PYSITELIB}/orca/scripts/apps/gtk-window-decorator.py
+${PYSITELIB}/orca/scripts/apps/gtk-window-decorator.pyc
+${PYSITELIB}/orca/scripts/apps/gtk-window-decorator.pyo
 ${PYSITELIB}/orca/scripts/apps/liferea.py
 ${PYSITELIB}/orca/scripts/apps/liferea.pyc
 ${PYSITELIB}/orca/scripts/apps/liferea.pyo
@@ -455,12 +458,19 @@ share/orca/glade/orca-setup.glade
 @dirrm share/orca/glade
 @dirrm share/orca
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm ${PYSITELIB}/orca/scripts/toolkits/J2SE-access-bridge
 @dirrm ${PYSITELIB}/orca/scripts/toolkits/Gecko
