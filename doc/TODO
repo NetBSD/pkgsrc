@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8112 2009/05/19 06:51:42 hasso Exp $
+$NetBSD: TODO,v 1.8113 2009/05/19 11:06:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -457,7 +457,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
-	o brasero-2.26.1
+	o brasero-2.26.2
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -476,6 +476,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
+	o cheese-2.26.2
 	o chemtool-1.6.11
 	o cherokee-0.99.14
 	o chicken-4.0.0
@@ -524,6 +525,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddrescue-1.10
 	o defendguin-0.0.11
 	o delegate-9.9.3
+	o deskbar-applet-2.26.2
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
@@ -565,6 +567,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
 	o enlightenment-0.16.8.12
+	o eog-2.26.2
 	o epdfview-0.1.7
 	o epic4-2.6
 	o epiphany-2.26.1
@@ -580,6 +583,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o etm-230
+	o evince-2.26.2
 	o evolution-2.26.2
 	o evolution-data-server-2.26.2
 	o evolution-exchange-2.26.2
@@ -679,6 +683,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-games-2.26.2
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.1 [GNOME 2.26, wants DeviceKit-power]
 	o gnome-user-docs-2.26.1
@@ -718,7 +723,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-engines-2.18.1
+	o gtk2-engines-2.18.2
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -943,7 +948,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o moc-2.4.4
 	o modular-xorg-server-1.6.1.901
 	o monotone-0.44
-	o moserial-2.26.0 [GNOME 2.26]
+	o moserial-2.26.1 [GNOME 2.26]
+	o mousetweaks-2.26.2
 	o mp3blaster-3.2.3
 	o mpc-0.15
 	o mpeg4ip-1.6.1
@@ -1019,6 +1025,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-0.9.8k
 	o openttd-0.7.0
 	o opera-9.64
+	o orca-2.26.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
