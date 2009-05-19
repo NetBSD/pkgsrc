@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1953 2009/05/19 19:42:30 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1954 2009/05/19 20:19:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2616,3 +2616,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/youtube-dl to 20090513 [snj 2009-05-19]
 	Updated devel/p5-Storable to 2.20 [sno 2009-05-19]
 	Updated x11/rxvt-unicode to 9.06nb1 [snj 2009-05-19]
+	Updated multimedia/totem to 2.26.2 [wiz 2009-05-19]
