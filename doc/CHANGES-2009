@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1947 2009/05/19 15:17:39 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1948 2009/05/19 15:18:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gnome-user-docs to 2.26.2 [wiz 2009-05-19]
 	Updated misc/gnome-devel-docs to 2.26.2 [wiz 2009-05-19]
 	Updated pkgtools/url2pkg to 2.10 [wiz 2009-05-19]
+	Updated fonts/gucharmap to 2.26.2 [wiz 2009-05-19]
