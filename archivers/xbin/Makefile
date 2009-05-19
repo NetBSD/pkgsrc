@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:01 wiz Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -9,8 +9,8 @@ DISTFILES=	${DISTNAME}.c ${PRGNAME}.man
 
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Convert mailable BinHex format into binary
-
 LICENSE=	xbin-license
+
 RESTRICTED=	May not be sold without permission.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

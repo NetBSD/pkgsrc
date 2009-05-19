@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/01/08 18:21:54 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:17 wiz Exp $
 #
 
 DISTNAME=		exiv2-0.18
@@ -9,8 +9,7 @@ MASTER_SITES=		http://www.exiv2.org/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.exiv2.org/
 COMMENT=		Image metadata manipulation
-
-#LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

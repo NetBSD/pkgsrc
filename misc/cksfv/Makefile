@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/04/20 09:36:59 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:23 wiz Exp $
 #
 
 DISTNAME=	cksfv-1.3.14
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://zakalwe.fi/~shd/foss/cksfv/
 COMMENT=	Check and create simple file verification (SFV) listings
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

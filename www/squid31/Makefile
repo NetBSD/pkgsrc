@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/17 14:17:42 tron Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:38 wiz Exp $
 
 DISTNAME=	squid-3.1.0.7
 PKGNAME=	${DISTNAME}	# Necessary for "pkgsrc/www/squid/options.mk"
@@ -10,8 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://www.squid-cache.org/
 COMMENT=	Post-Harvest_cached WWW proxy cache and accelerator
+LICENSE=	gnu-gpl-v2
 
-LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl gmake
 GNU_CONFIGURE=		yes
