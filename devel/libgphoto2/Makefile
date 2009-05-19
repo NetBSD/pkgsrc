@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.45 2009/01/26 15:43:09 drochner Exp $
+# $NetBSD: Makefile,v 1.46 2009/05/19 07:50:13 obache Exp $
 
-DISTNAME=	libgphoto2-2.4.4
+DISTNAME=	libgphoto2-2.4.6
 CATEGORIES=	devel graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gphoto/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,7 +18,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
-PKGCONFIG_OVERRIDE+=	libgphoto2/libgphoto2.pc.in
+PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
 PLIST_VARS+=		libusb
 
 .include "../../mk/bsd.prefs.mk"
