@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.98 2009/04/17 18:06:12 drochner Exp $
+# $NetBSD: Makefile,v 1.99 2009/05/19 20:35:34 wiz Exp $
 #
 
-DISTNAME=		nautilus-2.26.2
+DISTNAME=		nautilus-2.26.3
 CATEGORIES=		sysutils gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/nautilus/2.26/}
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/nautilus/
 COMMENT=		Nautilus file manager for GNOME2
+#LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1 AND gnu-lgpl-v2 AND TRADEMARK_NOTICE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
