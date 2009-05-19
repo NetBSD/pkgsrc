@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/08 11:14:11 obache Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/19 22:03:44 abs Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -17,7 +17,8 @@ GNU_CONFIGURE=		yes
 # Override wrong usage of AC_DEFINE_UNQUOTED:
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LIBS.SunOS+=		-lsocket
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,8 +27,8 @@ LIBS.NetBSD+=		-lrt
 .endif
 
 do-install:
-	cd ${WRKSRC}/cdrecord;						\
-		${INSTALL_PROGRAM} dvdrecord ${PREFIX}/bin;		\
-		${INSTALL_MAN} dvdrecord.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/cdrecord/dvdrecord ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/cdrecord/dvdrecord.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
