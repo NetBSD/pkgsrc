@@ -1,0 +1,4 @@
+A File::ChangeNotify::Watcher class monitors a directory for changes made to
+any file. A regular expression can be provided to filter out interesting
+files.  It handles the addition of new subdirectories by adding them to the
+watch list.
