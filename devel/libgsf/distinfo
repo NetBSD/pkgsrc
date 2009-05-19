@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2009/05/13 10:04:25 wiz Exp $
+$NetBSD: distinfo,v 1.30 2009/05/20 00:02:50 wiz Exp $
 
 SHA1 (libgsf-1.14.13.tar.bz2) = 47a932dfc881845e1ef114e0fb3e2c37ea1486c3
 RMD160 (libgsf-1.14.13.tar.bz2) = 3601c1bd68af38ddd21a7912ce215485f1deebd5
 Size (libgsf-1.14.13.tar.bz2) = 596487 bytes
-SHA1 (patch-aa) = 2bfd206d45abd91ed8d5237df76a6128383e1322
+SHA1 (patch-aa) = 05b2c046b389cf81fa022b801903d66b58c2b701
