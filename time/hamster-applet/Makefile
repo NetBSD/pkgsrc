@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.6 2009/03/22 19:38:38 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/19 14:36:20 wiz Exp $
 #
 
-DISTNAME=	hamster-applet-2.26.0
+DISTNAME=	hamster-applet-2.26.2
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hamster-applet/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projecthamster.wordpress.com/
 COMMENT=	Time tracking applet for GNOME
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config

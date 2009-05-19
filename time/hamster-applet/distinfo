@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/03/22 19:38:38 wiz Exp $
+$NetBSD: distinfo,v 1.5 2009/05/19 14:36:20 wiz Exp $
 
-SHA1 (hamster-applet-2.26.0.tar.gz) = 063a8de2b8617e2784d1865ccbc283264106f6a9
-RMD160 (hamster-applet-2.26.0.tar.gz) = 718a822c8a19eb25de0b34b59360cfc460038a62
-Size (hamster-applet-2.26.0.tar.gz) = 512973 bytes
+SHA1 (hamster-applet-2.26.2.tar.gz) = 55ed807b33ad752453d99ba3c94b89ec522e430a
+RMD160 (hamster-applet-2.26.2.tar.gz) = 88cebe692f1dd67d05691f213ab21d7267fa09cd
+Size (hamster-applet-2.26.2.tar.gz) = 519561 bytes
 SHA1 (patch-aa) = 51a04c92c148fbd148af71a4982f8f34e7f3c03d
