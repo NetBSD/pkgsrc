@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1966 2009/05/19 22:46:44 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1967 2009/05/19 23:13:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Devel to 1.15 [sno 2009-05-19]
 	Updated www/p5-Catalyst-Controller-FormBuilder to 0.05 [sno 2009-05-19]
 	Updated devel/p5-Scalar-Defer to 0.20 [sno 2009-05-19]
+	Updated devel/p5-Object-InsideOut to 3.55 [sno 2009-05-19]
