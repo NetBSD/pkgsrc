@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/19 22:16:00 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 22:22:34 sno Exp $
 #
 
 DISTNAME=	File-ChangeNotify-0.05
@@ -19,6 +19,7 @@ DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 DEPENDS+=	p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
 DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
 
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/File/ChangeNotify/.packlist
 
 .include "../../lang/perl5/module.mk"
