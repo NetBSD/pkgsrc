@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/04/12 10:59:47 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 07:31:05 abs Exp $
 #
 
 DISTNAME=	Test-Most-0.21
@@ -23,13 +23,14 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Test-Most
 PKG_SUPPORTED_OPTIONS+=	data-dumper-names
 PKG_SUGGESTED_OPTIONS+=	# empty
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdata-dumper-names)
 DEPENDS+=	p5-Data-Dumper-Names>=0.03:../../devel/p5-Data-Dumper-Names
 .endif
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_MODULE_TYPE= Module::Build
 
 USE_LANGUAGES=	# empty
