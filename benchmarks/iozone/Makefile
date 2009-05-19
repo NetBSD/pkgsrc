@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/08/25 19:35:30 bjs Exp $
+# $NetBSD: Makefile,v 1.40 2009/05/19 08:59:04 wiz Exp $
 
 DISTNAME=	iozone3_308
 PKGNAME=	iozone-3.308
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.iozone.org/
 COMMENT=	Benchmark for file read and write speed
-
 # No derivative works
 LICENSE=	iozone-license
 

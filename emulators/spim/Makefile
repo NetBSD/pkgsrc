@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/04/28 21:19:00 zafer Exp $
+# $NetBSD: Makefile,v 1.39 2009/05/19 08:59:13 wiz Exp $
 
 DISTNAME=	spim-7.3
 CATEGORIES=	emulators
@@ -7,15 +7,15 @@ MASTER_SITES=	http://pages.cs.wisc.edu/~larus/SPIM/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pages.cs.wisc.edu/~larus/spim.html
 COMMENT=	MIPS R2000 Simulator
+LICENSE=	spim-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-LICENSE=		spim-license
 RESTRICTED=		No permission to copy, and prohibited commercially.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		yes

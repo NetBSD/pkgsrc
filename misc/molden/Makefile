@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:24 wiz Exp $
 
 DISTNAME=	molden4.6
 PKGNAME=	${DISTNAME:S/molden/&-/}
@@ -9,6 +9,13 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmbi.ru.nl/molden/molden.html
 COMMENT=	Displaying MOLecular DENsity
+LICENSE=	molden-license
+
+RESTRICTED=	Redistributing Molden by unregistered user is prohibited.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -19,13 +26,6 @@ BUILD_TARGET=	molden
 USE_LANGUAGES=		c fortran
 
 INSTALLATION_DIRS=	bin share/molden/doc share/molden/test share/molden/utils
-
-LICENSE=	molden-license
-RESTRICTED=	Redistributing Molden by unregistered user is prohibited.
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/molden ${DESTDIR}${PREFIX}/bin

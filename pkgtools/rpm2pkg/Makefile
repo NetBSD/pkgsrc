@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/04/23 21:38:02 tron Exp $
+# $NetBSD: Makefile,v 1.42 2009/05/19 08:59:29 wiz Exp $
 
 DISTNAME=	rpm2pkg-2.2
 CATEGORIES=	pkgtools
@@ -8,10 +8,9 @@ DISTFILES=	# empty
 OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Convert RPM archives to NetBSD packages
+LICENSE=	modified-bsd
 
 CONFLICTS+=	suse-base<=6.4
-
-LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

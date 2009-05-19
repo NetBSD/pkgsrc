@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2009/05/18 10:38:56 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2009/05/19 08:59:38 wiz Exp $
 #
 
 DISTNAME=		gnome-mag-0.15.6
@@ -9,7 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME screen magnifier
-
 LICENSE=		gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/09 13:40:37 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:24 wiz Exp $
 #
 
 DISTNAME=	rlwrap-0.30
@@ -8,8 +8,7 @@ MASTER_SITES=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 MAINTAINER=	heinz@NetBSD.org
 HOMEPAGE=	http://utopia.knoware.nl/~hlub/uck/rlwrap/
 COMMENT=	Provides command line editing and history for other commands
-
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

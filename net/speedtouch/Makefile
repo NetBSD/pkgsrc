@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/02/10 12:55:25 abs Exp $
+# $NetBSD: Makefile,v 1.28 2009/05/19 08:59:28 wiz Exp $
 
 DISTNAME=		speedtouch-1.3.1
 PKGREVISION=		4
@@ -15,11 +15,10 @@ SITES.${FIRMWARE_SRCS}=	http://www.speedtouch.com/download/drivers/USB/
 DISTFILES+=		${FIRMWARE_SRCS}
 EXTRACT_OPTS_ZIP=	-Laqo -d ${WRKDIR}/firmware
 
-LICENSE=		speedtouch-firmware-license
-
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xsproject.org/speedtouch/
 COMMENT=		Alcatel SpeedTouch USB ADSL modem driver
+LICENSE=		speedtouch-firmware-license
 
 DEPENDS+=		userppp>=001107:../../net/userppp
 

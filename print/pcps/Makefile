@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:30 wiz Exp $
 #
 
 DISTNAME=	pcps840
@@ -10,6 +10,11 @@ MASTER_SITES=	ftp://garbo.uwasa.fi/unix/pcps/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.swreg.org/soft_shop/695/shopscr3.shtml
 COMMENT=	Converts text files to PostScript(tm)
+LICENSE=	pcps-license
+
+RESTRICTED=	This is shareware for your evaluation and subsequent payment
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,11 +23,6 @@ MAKE_FILE=	makefile
 BUILD_TARGET=
 MAKE_ENV+=	"CC=${CC} ${CFLAGS} -DUNIX"
 NO_CONFIGURE=	yes
-
-LICENSE=	pcps-license
-RESTRICTED=	This is shareware for your evaluation and subsequent payment
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_BIN_ON_CDROM=${RESTRICTED}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pcps share/examples/pcps
 

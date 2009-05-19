@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/04/19 11:43:16 rh Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/19 08:59:01 wiz Exp $
 #
 
 DISTNAME=	cdplayer-0.5
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gsburn.sourceforge.net/
 COMMENT=	GNUstep CD player with CDDB support
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

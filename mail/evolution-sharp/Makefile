@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/12 13:16:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/19 08:59:21 wiz Exp $
 #
 
 DISTNAME=	evolution-sharp-0.20.0
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GNOME:=sources/evolution-sharp/0.20/}
 COMMENT=	.NET language binding for various Evolution libraries
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

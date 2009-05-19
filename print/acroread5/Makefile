@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/07/29 05:19:50 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2009/05/19 08:59:30 wiz Exp $
 
 DISTNAME=	acroread5	# overridden below
 PKGNAME=	acroread5-5.10
@@ -9,18 +9,18 @@ MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
-
-CONFLICTS+=	acroread-5.*
-# conflict with acroread7 due to bin/acroread
-CONFLICTS+=	acroread-7.*
-CONFLICTS+=	acroread7-7.*
+LICENSE=		adobe-acrobat-license
 
 RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-LICENSE=		adobe-acrobat-license
+
+CONFLICTS+=	acroread-5.*
+# conflict with acroread7 due to bin/acroread
+CONFLICTS+=	acroread-7.*
+CONFLICTS+=	acroread7-7.*
 
 WRKSRC=			${WRKDIR}/installers
 BUILD_DIRS=		# empty

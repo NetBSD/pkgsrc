@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/05/13 10:04:25 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/05/19 08:59:10 wiz Exp $
 #
 
 DISTNAME=	libgsf-1.14.13
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 structured file library
-
 LICENSE=	gnu-gpl-v2 # AND gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

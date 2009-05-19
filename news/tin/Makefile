@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2009/03/25 22:37:14 he Exp $
+# $NetBSD: Makefile,v 1.39 2009/05/19 08:59:29 wiz Exp $
 #
 
 DISTNAME=	tin-1.8.3
@@ -13,9 +13,9 @@ PKGREVISION=	1
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.tin.org/
 COMMENT=	TIN newsreader (termcap based)
-
 # See src/nntplib.c, vms/vms.c
 LICENSE=	tin-license
+
 RESTRICTED=	Profit from use, sale, trade, or reproduction disallowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

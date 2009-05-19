@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/05/24 23:00:18 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:01 wiz Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
@@ -8,15 +8,8 @@ MASTER_SITES=		http://www.cs.washington.edu/homes/suciu/XMILL/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Specialized compressor for XML
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=		gmake
-MAKE_FILE=		makefile
-USE_LANGUAGES=		c c++
-
 LICENSE=		xmill-license
+
 RESTRICTED=		Redistribution not permitted
 # It is not entirely clear that noncommercial redistribution is
 # permitted, but it's too hard to read the license, so it's marked as
@@ -25,6 +18,13 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
+MAKE_FILE=		makefile
+USE_LANGUAGES=		c c++
 
 INSTALLATION_DIRS=	bin
 

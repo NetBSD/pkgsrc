@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2009/04/10 07:21:28 tron Exp $
+# $NetBSD: Makefile,v 1.31 2009/05/19 08:59:29 wiz Exp $
 
 DISTNAME=		wireshark-1.0.7
 CATEGORIES=		net
@@ -9,12 +9,11 @@ EXTRACT_SUFX=		.tar.bz2
 OWNER=			tron@NetBSD.org
 HOMEPAGE=		http://www.wireshark.org/
 COMMENT=		Network protocol analyzer
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		ethereal-[0-9]*
-
-LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl pkg-config

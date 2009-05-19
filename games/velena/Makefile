@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/03 19:15:52 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/19 08:59:15 wiz Exp $
 #
 
 DISTNAME=	veleng10
@@ -11,8 +11,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ce.unipr.it/~gbe/
 COMMENT=	Perfect-play engine for connect four
+LICENSE=	velena-license
 
-LICENSE=		velena-license
 RESTRICTED=		You must not charge a fee for this software nor for any derived work in which this software is included.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

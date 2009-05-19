@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2009/04/14 06:16:24 martti Exp $
+# $NetBSD: Makefile,v 1.94 2009/05/19 08:59:20 wiz Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://www.clamav.net/
 COMMENT=	Anti-virus toolkit
-
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

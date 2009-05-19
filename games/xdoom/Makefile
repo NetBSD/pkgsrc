@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.44 2009/05/19 08:59:15 wiz Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -12,7 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 # HOMEPAGE=	http://www.idsoftware.com/archives/doomarc.html
 # AWOL
 COMMENT=	3D shoot-em-up for 8-bit X11 displays
-
 LICENSE=	xdoom-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir

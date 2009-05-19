@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/19 08:59:14 wiz Exp $
 #
 
 DISTNAME=	bakoma-20010719
@@ -11,8 +11,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ctan.org/tex-archive/fonts/cm/ps-type1/bakoma/
 COMMENT=	BaKoMa Fonts for TeX
-
 LICENSE+=		no-commercial-use
+
 NO_SRC_ON_CDROM=	#defined
 NO_BIN_ON_CDROM=	#defined
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/07/29 05:19:47 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2009/05/19 08:59:30 wiz Exp $
 
 DISTNAME=	acroread	# overridden below
 PKGNAME=	acroread-4.05
@@ -10,13 +10,13 @@ MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/4.x/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
+LICENSE=	adobe-acrobat-license
 
 RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-LICENSE=		adobe-acrobat-license
 
 BUILD_DIRS=		# empty
 

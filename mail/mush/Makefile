@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/09/10 14:07:23 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:22 wiz Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -19,8 +19,8 @@ PATCHFILES=	patch-7.2.6-alpha-1 \
 
 MAINTAINER=	christos@NetBSD.org
 COMMENT=	Text-based mail client
-
 LICENSE=	mush-license
+
 RESTRICTED=		Unmodified source may be distributed but not sold.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

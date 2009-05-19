@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/09/07 22:12:22 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:33 wiz Exp $
 
 DISTNAME=	ssh-3.2.9.1
 PKGNAME=	${DISTNAME:C/ssh-/ssh2-/}
@@ -8,6 +8,12 @@ MASTER_SITES=	ftp://ftp.ssh.com/pub/ssh/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ssh.com/
+LICENSE=	ssh-communications-security-license
+
+RESTRICTED=		Reciprocal grant required for derivative works.  Non-comercial use restrictions on some systems.
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+
 COMMENT=	Secure Shell client and server for V.2 SSH protocol
 
 PKG_DESTDIR_SUPPORT=	destdir
@@ -29,11 +35,6 @@ PLIST_SRC=		${.CURDIR}/../../security/ssh2/PLIST
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-LICENSE=		ssh-communications-security-license
-RESTRICTED=		Reciprocal grant required for derivative works.  Non-comercial use restrictions on some systems.
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "sparc64"
 # Later we may want to put an upper version bound on OS_VERSION or on

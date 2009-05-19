@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/19 08:59:06 wiz Exp $
 #
 
 DISTNAME=	dvi2tty
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files
-
 LICENSE=	no-commercial-use
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/19 08:59:30 wiz Exp $
 #
 
 DISTNAME=	amap-5.2
@@ -9,6 +9,7 @@ MASTER_SITES=	http://freeworld.thc.org/releases/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-amap/
 COMMENT=	Applications and Services scanner
+LICENSE=	amap-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,8 +18,6 @@ HAS_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 EGDIR=			${PREFIX}/share/examples/amap
 PKG_SYSCONFSUBDIR?=	amap
-
-LICENSE=	amap-license
 
 CONF_FILES=	${EGDIR}/appdefs.resp ${PKG_SYSCONFDIR}/appdefs.resp
 CONF_FILES+=	${EGDIR}/appdefs.rpc ${PKG_SYSCONFDIR}/appdefs.rpc

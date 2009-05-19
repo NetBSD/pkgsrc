@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/09/02 12:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:13 wiz Exp $
 #
 
 DISTNAME=	emulator_src_${POSE_VERSION}
@@ -12,6 +12,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.palmos.com/dev/tools/emulator/
 COMMENT=	Palm OS Emulator
+#LICENSE=       GPL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -21,8 +22,6 @@ DIST_SUBDIR=	${PKGBASE}
 
 # Source is under sources/ directory, skins are not...
 SITES.emulator-skins-19.tar.gz=	http://www.palmos.com/dev/tools/emulator/
-
-#LICENSE=       GPL
 
 WRKSRC=		${WRKDIR}/Emulator_Src_${POSE_VERSION}
 POSE_BUILD_DIR=	${WRKSRC}/BuildUnix

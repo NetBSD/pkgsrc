@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2009/05/18 10:27:15 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2009/05/19 08:59:15 wiz Exp $
 
 DISTNAME=		gnome-games-2.26.1
 CATEGORIES=		games gnome
@@ -8,7 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 games collection
-
 #LICENSE=		gnu-gpl-v2 AND gnu-fdl-v1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

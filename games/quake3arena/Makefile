@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2009/01/12 16:19:31 jmcneill Exp $
+# $NetBSD: Makefile,v 1.35 2009/05/19 08:59:15 wiz Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -11,18 +11,18 @@ EXTRACT_SUFX=	.run
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.quake3arena.com/
 COMMENT=	Quake 3 Arena -- first person shooter (binary only, no data files)
-
-CONFLICTS=	quake3arena-demo-[0-9]*
-
-EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base x11 glx
-
 LICENSE=	quake3arena-license
+
 RESTRICTED=	Terms are too complicated to evaluate.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+CONFLICTS=	quake3arena-demo-[0-9]*
+
+EMUL_PLATFORMS=		linux-i386
+EMUL_MODULES.linux=	base x11 glx
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

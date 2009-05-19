@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/19 08:59:17 wiz Exp $
 #
 
 DISTNAME=		jpeg_ls_v2.2
@@ -9,13 +9,13 @@ MASTER_SITES=		http://kt.ijs.si/aleks/jpeg-ls/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kt.ijs.si/aleks/jpeg-ls/mirror.htm
 COMMENT=		JPEG-LS codec (lossless/near-lossless codec)
+LICENSE=		no-commercial-use
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		${WRKSRC}/Decoder ${WRKSRC}/Encoder
 MAKE_FILE=		makefile
 
-LICENSE=		no-commercial-use
 INSTALLATION_DIRS=	bin
 
 do-install:

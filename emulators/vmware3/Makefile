@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/03 19:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/19 08:59:13 wiz Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -17,10 +17,9 @@ SITES.${VMWARE_BIN_PATCH}.tar.gz=	ftp://ftp.cvut.cz/vmware/obsolete/
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://www.vmware.com/
 COMMENT=	VMware emulator 3.x
+LICENSE=	vmware-license
 
 DEPENDS+=	vmware-module>=3.2.1.8:../../emulators/vmware-module3
-
-LICENSE=	vmware-license
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	vmware

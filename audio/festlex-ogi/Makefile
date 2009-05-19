@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/07/27 08:39:59 obache Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:02 wiz Exp $
 
 DISTNAME=	OGIlexicon-2.0
 PKGNAME=	festlex-ogi-2.0
@@ -9,13 +9,12 @@ MASTER_SITES=	http://www.cslu.ogi.edu/tts/download/data/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
 COMMENT=	Composite pronunciation dictionary from ogi.edu for festival
+LICENSE=	no-commercial-use
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 DEPENDS+=	festlex-poslex>=1.4.0:../../audio/festlex-poslex
 
 USE_TOOLS+=	pax
-
-LICENSE=	no-commercial-use
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

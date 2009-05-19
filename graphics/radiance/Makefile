@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/04/29 05:15:14 dholland Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:18 wiz Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -12,6 +12,7 @@ DISTFILES+=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME}supp${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
+LICENSE=	radiance-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM=	HPUX-*-*
@@ -19,8 +20,6 @@ NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/ray
-
-LICENSE=	radiance-license
 
 PATCHEES=	makeall ./src/rt/Rmakefile ./src/util/Rmakefile		\
 		./src/ot/Rmakefile ./src/meta/Rmakefile 		\

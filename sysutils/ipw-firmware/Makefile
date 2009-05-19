@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/02/10 00:42:02 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/19 08:59:34 wiz Exp $
 
 DISTNAME=	ipw2100-fw-1.2
 PKGNAME=	ipw-firmware-1.0
@@ -9,18 +9,17 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	Damien.Bergamini@Free.FR
 HOMEPAGE=	http://damien.bergamini.free.fr/ipw/
 COMMENT=	Firmware binary images for ipw(4) driver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	intel-ipw-license
-
-WRKSRC=		${WRKDIR}
 
 RESTRICTED=		Intel Licensed Software: see http://ipw2100.sourceforge.net/firmware.php?fid=3
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:06 wiz Exp $
 
 DISTNAME=	dvi2tty5.0
 PKGNAME=	ja-dvi2tty-5.0
@@ -14,14 +14,13 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files (ASCII Japanese TeX)
+LICENSE=	no-commercial-use
 
 DEPENDS+=	ja-less>=358:../../misc/ja-less
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	ja-dvi2tty
-
-LICENSE=	no-commercial-use
 
 MAKE_FLAGS+=	CFLAGS="${CFLAGS} -DDEFPAGER='\"${PREFIX}/bin/jless\"'"
 

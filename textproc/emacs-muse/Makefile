@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:35 wiz Exp $
 #
 
 DISTNAME=	muse-3.11
@@ -9,8 +9,8 @@ MASTER_SITES=	http://download.gna.org/muse-el/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mwolson.org/projects/EmacsMuse.html
 COMMENT=	Publishing environment for Emacs
+LICENSE=	gnu-gpl-v3
 
-#LICENSE=	gplv3
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake makeinfo
 INFO_FILES=	yes

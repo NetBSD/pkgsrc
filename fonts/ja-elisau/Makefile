@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/19 08:59:14 wiz Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -12,6 +12,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} clR5x8.bdf
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.wheel.gr.jp/~dai/software/#elisau10
 COMMENT=		10x8 dots X11 bitmap font for JIS X 0208
+LICENSE=		no-commercial-use
 
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.elisau10${EXTRACT_SUFX}=	\
@@ -27,8 +28,6 @@ DOCDIR=			${PREFIX}/share/doc/elisau
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FONTS_DIRS.x11=		${FONTDIR}
 DISTPATCH=		${WRKSRC}/clR5x8-s5x8.diff
-
-LICENSE=		no-commercial-use
 
 post-extract:
 	${CP} ${DISTDIR}/clR5x8.bdf ${WRKDIR}; \

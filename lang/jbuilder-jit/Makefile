@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2009/05/19 08:59:19 wiz Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -10,6 +10,7 @@ MASTER_SITES=	http://ftp.cdut.edu.cn/pub2/linux/develop/jbuilder/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.borland.com/
 COMMENT=	Just-In-Time compiler for Linux Java Virtual Machine
+LICENSE=		jbuilder-jit-license
 
 WRKSRC=		${WRKDIR}/javacomp-1.2.15
 USE_JAVA=	run
@@ -18,7 +19,6 @@ PLIST_SUBST+=	JAVADIR=${PKG_JAVA_HOME:C|${PREFIX}/||}
 
 EXTRACT_ELEMENTS=	LinuxJIT/javacomp-1.2.15.tar.gz
 
-LICENSE=		jbuilder-jit-license
 RESTRICTED=		Redistribution of binaries not permitted
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2009/02/05 00:53:09 jmcneill Exp $
+# $NetBSD: Makefile,v 1.30 2009/05/19 08:59:28 wiz Exp $
 #
 
 DISTNAME=		skype_static-1.4.0.118-oss
@@ -12,15 +12,15 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.skype.com/
 COMMENT=		P2P VoIP software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=		skype-license
+
 RESTRICTED=		Complex terms for redistribution.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base compat fontconfig freetype2 glx \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/11/11 21:12:20 chuck Exp $
+# $NetBSD: Makefile,v 1.34 2009/05/19 08:59:29 wiz Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	6
@@ -7,15 +7,15 @@ MASTER_SITES=	ftp://ftp.uu.net/networking/news/nntp/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NNTP client library and inews client posting program
-
-CONFLICTS+=	inn-[0-9]*
-
 LICENSE=	nntpclnt-license
+
 RESTRICTED=	Do not sell, rent, trade, market, or use for monetary profit
 # No permission granted for derivative works.
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+CONFLICTS+=	inn-[0-9]*
 
 BUILD_TARGET=	inews
 PKG_GROUPS=	news

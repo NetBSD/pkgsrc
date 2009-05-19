@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/10/30 14:52:14 bad Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:31 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}-src
@@ -10,6 +10,7 @@ MASTER_SITES=	http://freeworld.thc.org/releases/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-hydra/
 COMMENT=	Login password cracker
+LICENSE=	hydra-license
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -17,8 +18,6 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	all
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-LICENSE=	hydra-license
 
 SUBST_CLASSES+=		build
 SUBST_STAGE.build=	post-patch

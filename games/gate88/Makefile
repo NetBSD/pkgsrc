@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:19 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:14 wiz Exp $
 #
 
 DISTNAME=	Gate88_Mar19_05
@@ -9,6 +9,13 @@ MASTER_SITES=	http://www.queasygames.com/gate88/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.queasygames.com/gate88/
 COMMENT=	Deep space intergalactic battle
+LICENSE=	gate88-license
+
+RESTRICTED=	${LICENSE}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,13 +23,6 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11
 
 USE_LANGUAGES=	# none
-
-LICENSE=	gate88-license
-RESTRICTED=	${LICENSE}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
 
 INSTALLATION_DIRS=	bin lib/gate88 lib/gate88/lib lib/gate88/music
 INSTALLATION_DIRS+=	lib/gate88/music/non-ingame lib/gate88/sound

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/16 16:36:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:25 wiz Exp $
 #
 
 DISTNAME=	zyGrib-maps-2
@@ -9,7 +9,6 @@ DISTFILES=	zyGrib_maps2.tgz
 MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://www.zygrib.org/
 COMMENT=	High resolution map files for zyGrib
-
 #LICENSE=	gnu-gpl
 
 DEPENDS+=	zyGrib>=2.0:../../misc/zyGrib

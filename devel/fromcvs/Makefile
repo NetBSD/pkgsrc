@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/05/02 18:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:08 wiz Exp $
 
 DISTNAME=	c31a1dd9cbb2
 # Last part of PKGNAME is changeset number
@@ -10,12 +10,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/
 COMMENT=	CVS repository conversion tool
+LICENSE=        corecode-license
 
 DEPENDS+=	${RUBY_PKGPREFIX}-rbtree>=0.2.0:../../devel/ruby-rbtree
 DEPENDS+=	${RUBY_PKGPREFIX}-rcsparse>=0.0.0.37:../../devel/ruby-rcsparse
 DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
-
-LICENSE=        corecode-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

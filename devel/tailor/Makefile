@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/19 08:59:12 wiz Exp $
 #
 
 DISTNAME=		tailor-0.9.35
@@ -9,10 +9,10 @@ MASTER_SITES=		http://darcs.arstecnica.it/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wiki.darcs.net/DarcsWiki/Tailor
 COMMENT=		Tool to migrate changesets between various version control systems
+LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#LICENSE=		GPLv3
 PYDISTUTILSPKG=		yes
 PYTHON_PATCH_SCRIPTS=	tailor
 

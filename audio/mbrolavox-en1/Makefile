@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/05/02 12:41:52 zafer Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/19 08:59:03 wiz Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
@@ -10,12 +10,11 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/mbrola/
 COMMENT=	British English male voice for MBROLA
+LICENSE=	no-commercial-use
 
 DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
 
 USE_TOOLS+=	pax
-
-LICENSE=	no-commercial-use
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
