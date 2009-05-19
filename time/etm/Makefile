@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 09:10:57 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/19 09:28:51 wiz Exp $
 #
 
 DISTNAME=	etm-249
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.4:../../time/py-dateutil
+DEPENDS+=	${PYPKGPREFIX}-icalendar-[0-9]*:../../time/py-icalendar
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
