@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/03/06 00:20:27 snj Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/19 07:00:36 abs Exp $
 
 DISTNAME=		rxvt-unicode-9.06
 CATEGORIES=		x11
@@ -13,16 +13,20 @@ COMMENT=		rxvt clone supporting Xft fonts and Unicode
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=     	perl:run
 USE_FEATURES+=		snprintf
 
 CONFIGURE_ENV+=		ac_cv_path_TIC=no
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+= 	share/doc/rxvt-unicode share/examples/rxvt-unicode
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rxvt-unicode
-	${INSTALL_DATA} ${WRKSRC}/README.FAQ ${PREFIX}/share/doc/rxvt-unicode
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/rxvt-unicode
+	${INSTALL_DATA} ${WRKSRC}/README.FAQ \
+		${DESTDIR}${PREFIX}/share/doc/rxvt-unicode
 .for t in rxvt-unicode.termcap rxvt-unicode.terminfo
-	${INSTALL_DATA} ${WRKSRC}/doc/etc/${t} ${PREFIX}/share/examples/rxvt-unicode
+	${INSTALL_DATA} ${WRKSRC}/doc/etc/${t} \
+		${DESTDIR}${PREFIX}/share/examples/rxvt-unicode
 .endfor
 
 .include "options.mk"
