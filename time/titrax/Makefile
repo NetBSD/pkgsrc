@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/04/16 09:54:45 he Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/19 08:59:36 wiz Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -9,16 +9,16 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=office/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.alvestrand.no/titrax/TimeTracker.html
 COMMENT=		Little X11 tool to track project times
-
-USE_IMAKE=		YES
-USE_TOOLS+=		perl:run
-
 LICENSE=		titrax-license
+
 RESTRICTED=		Do not sell for "real money".
 # XXX Arguably NO_*_ON_CDROM is not necessary, because "real money" seems
 # to exclude CDROM distribution charges.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+USE_IMAKE=		YES
+USE_TOOLS+=		perl:run
 
 post-patch:
 	${MV} ${WRKSRC}/Imakefile ${WRKSRC}/Imakefile.bak

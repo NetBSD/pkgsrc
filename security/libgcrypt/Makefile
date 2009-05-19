@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/01/31 08:53:14 adam Exp $
+# $NetBSD: Makefile,v 1.44 2009/05/19 08:59:31 wiz Exp $
 
 DISTNAME=	libgcrypt-1.4.4
 CATEGORIES=	security
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://directory.fsf.org/security/libgcrypt.html
 COMMENT=	GNU cryptographic library
+#LICENSE=	gnu-gpl-v2 gnu-lgpl-v21
+
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,8 +22,6 @@ TEST_TARGET=		check
 
 TEXINFO_REQD=		4.0
 INFO_FILES=		yes # PLIST
-
-#LICENSE=		gnu-gpl-v2 gnu-lgpl-v21
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:15 wiz Exp $
 
 DISTNAME=	quake106
 PKGNAME=	quakedata-1.0
@@ -11,14 +11,14 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.idsoftware.com/
 COMMENT=	Game data files for Quake
-
-BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
-
 LICENSE=		quakedata-license
+
 RESTRICTED=		This software is shareware.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+BUILD_DEPENDS+=	lha-[0-9]*:../../archivers/lha
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

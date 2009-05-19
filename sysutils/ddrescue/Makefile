@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/28 14:08:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 08:59:34 wiz Exp $
 
 DISTNAME=	ddrescue-1.8
 CATEGORIES=	sysutils
@@ -8,8 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ef@math.uni-bonn.de
 HOMEPAGE=	http://www.gnu.org/software/ddrescue/ddrescue.html
 COMMENT=	GNU ddrescue is a data recovery tool
-
-#LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

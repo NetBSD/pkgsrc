@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2009/05/16 07:22:03 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/19 08:59:14 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -12,13 +12,13 @@ DISTFILES=	andale32.exe webdin32.exe trebuc32.exe georgi32.exe \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://corefonts.sourceforge.net/
 COMMENT=	TrueType fonts from Microsoft
+LICENSE=	ms-ttf-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+RESTRICTED=	No redistribution in altered form
 
 BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
 
-LICENSE=	ms-ttf-license
-RESTRICTED=	No redistribution in altered form
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
