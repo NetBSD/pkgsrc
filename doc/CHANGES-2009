@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1924 2009/05/19 06:46:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1925 2009/05/19 06:49:29 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2587,3 +2587,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/openjdk7-bin to 20090502 [abs 2009-05-18]
 	Updated audio/cdparanoia to 3.0.9.8nb8 [dholland 2009-05-19]
 	Updated www/p5-Catalyst-Plugin-Session-Store-FastMmap to 0.10 [sno 2009-05-19]
+	Added x11/dri2proto version 2.0 [hasso 2009-05-19]
