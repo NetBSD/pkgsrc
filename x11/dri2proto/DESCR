@@ -1,0 +1,6 @@
+This provides the DRI2 extension headers from modular X.org X11
+project.
+
+The headers contain the types and functions that define the interface
+between a DRI2 (direct rendering infrastructure) driver and driver
+loader.
