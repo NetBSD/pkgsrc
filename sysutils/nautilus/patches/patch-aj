@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.5 2009/03/16 14:05:04 jmcneill Exp $
+$NetBSD: patch-aj,v 1.6 2009/05/19 23:52:15 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583264
 
 --- configure.orig	2009-03-16 07:49:01.000000000 -0400
 +++ configure

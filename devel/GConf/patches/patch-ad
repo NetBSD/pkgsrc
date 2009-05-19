@@ -1,7 +1,9 @@
-$NetBSD: patch-ad,v 1.5 2007/09/21 12:58:14 wiz Exp $
+$NetBSD: patch-ad,v 1.6 2009/05/19 23:56:04 wiz Exp $
 
 Needed for Solaris 9. Without the <lber.h> header, struct berval, which
 is used as a member of another struct in <ldap.h>, has an unknown size.
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583287
 
 --- backends/evoldap-backend.c.orig	2007-03-02 22:10:18.000000000 +0000
 +++ backends/evoldap-backend.c
