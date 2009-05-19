@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1962 2009/05/19 22:13:40 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1963 2009/05/19 22:17:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2625,3 +2625,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/nautilus to 2.26.3nb1 [wiz 2009-05-19]
 	Added devel/p5-MooseX-Params-Validate version 0.09 [sno 2009-05-19]
 	Added devel/p5-MooseX-SemiAffordanceAccessor version 0.03 [sno 2009-05-19]
+	Added devel/p5-File-ChangeNotify version 0.05 [sno 2009-05-19]
