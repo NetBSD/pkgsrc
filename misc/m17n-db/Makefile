@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/12 08:16:03 obache Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 08:59:24 wiz Exp $
 #
 
 DISTNAME=	m17n-db-1.5.4
@@ -8,7 +8,6 @@ MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/m17n-lib-en/index.html
 COMMENT=	The m17n database used by the m17n library
-
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

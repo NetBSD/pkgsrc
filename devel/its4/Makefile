@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/19 08:59:09 wiz Exp $
 #
 
 DISTNAME=	its4-1.1.1
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cigital.com/its4/
 COMMENT=	Static C/C++ code scanner for potential security problems
-
 LICENSE=	no-commercial-use
 
 PKG_DESTDIR_SUPPORT=	user-destdir

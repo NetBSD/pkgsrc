@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21 2009/05/19 08:59:14 wiz Exp $
 #
 
 DISTNAME=	# empty
@@ -8,15 +8,15 @@ DISTFILES=	${FONT_FILE} ReadMe.htm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitstream.com/
-
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-
 LICENSE=	cyberbit-ttf-license
+
 RESTRICTED=	Redistribution not permitted; single user license only.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

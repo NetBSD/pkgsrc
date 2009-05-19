@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/22 04:53:40 manu Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/19 08:59:34 wiz Exp $
 #
 
 PKGNAME=		nvnet-20050620nb1
@@ -13,9 +13,6 @@ EXTRACT_SUFX=
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.morgart.com/NetBSD/nVidia/nvnet/
 COMMENT=		Driver for nVidia ethernet
-
-BROKEN_IN=		pkgsrc-2006Q1 pkgsrc-2006Q4
-
 LICENSE=		nvidia-license
 
 RESTRICTED=		nVidia Licensed Software: http://www.nvidia.com/object/nv_swlicense.html
@@ -24,6 +21,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+BROKEN_IN=		pkgsrc-2006Q1 pkgsrc-2006Q4
 
 WRKSRC=		${WRKDIR}/nvnet
 

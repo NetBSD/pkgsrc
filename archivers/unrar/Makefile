@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/05/02 12:37:10 zafer Exp $
+# $NetBSD: Makefile,v 1.61 2009/05/19 08:59:01 wiz Exp $
 
 DISTNAME=	unrarsrc-3.8.3
 PKGNAME=	${DISTNAME:S/src//}
@@ -8,18 +8,8 @@ MASTER_SITES=	http://www.rarlab.com/rar/
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.rarlab.com/
 COMMENT=	Extract, view & test RAR archives
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-NO_CONFIGURE=	YES
-USE_LANGUAGES=	c++
-# XXX: makefile.unix has DOS line endings
-USE_TOOLS+=	gmake
-
-MAKE_FILE=	makefile.unix
-
 LICENSE=	unrar-license
+
 RESTRICTED=	Do not charge a fee for redistribution.  Do not use to develop a rar archiver.
 # Reading the license implies NO_BIN_ON_FTP should be set because no
 # permission is granted to distribute derived works (e.g., binaries).
@@ -30,6 +20,16 @@ RESTRICTED=	Do not charge a fee for redistribution.  Do not use to develop a rar
 # You can redistribute either original or modified binaries or sources.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_CONFIGURE=	YES
+USE_LANGUAGES=	c++
+# XXX: makefile.unix has DOS line endings
+USE_TOOLS+=	gmake
+
+MAKE_FILE=	makefile.unix
 
 WRKSRC=		${WRKDIR}/unrar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2009/05/17 13:46:00 obache Exp $
+# $NetBSD: Makefile,v 1.88 2009/05/19 08:59:37 wiz Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
@@ -13,7 +13,6 @@ DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}${EXTRACT_SUFX}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
 COMMENT=		Small, fast and customizable WWW client
-
 LICENSE=		opera-850-license
 
 EMUL_PLATFORMS=		freebsd-i386

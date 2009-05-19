@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/09/10 00:28:43 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:03 wiz Exp $
 #
 
 DISTNAME=		gogo239b
@@ -11,6 +11,13 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://homepage1.nifty.com/herumi/gogo_e.html
 COMMENT=		Very fast lame-based mp3 encoder, i386 only
+LICENSE=		unclear-patent-claims
+
+RESTRICTED=		Source based on patent protected Fraunhofer code
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
@@ -19,13 +26,6 @@ ONLY_FOR_PLATFORM=	*-*-i386
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
-
-LICENSE=		unclear-patent-claims
-RESTRICTED=		Source based on patent protected Fraunhofer code
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
