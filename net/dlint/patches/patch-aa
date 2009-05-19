@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2005/11/08 14:14:36 tv Exp $
+$NetBSD: patch-aa,v 1.4 2009/05/19 07:00:50 abs Exp $
 
 --- Makefile.orig	2000-11-19 10:07:40.000000000 -0500
 +++ Makefile
@@ -18,9 +18,9 @@ $NetBSD: patch-aa,v 1.3 2005/11/08 14:14:36 tv Exp $
 -	$(INSTALL) -c -m 755 -o bin -g bin dlint $(BIN)
 -	$(INSTALL) -c -m 755 -o bin -g bin digparse $(BIN)
 -	$(INSTALL) -c -m 644 -o bin -g bin dlint.1 $(MAN)/dlint.$(MANEXT)
-+	$(BSD_INSTALL_SCRIPT) dlint $(BIN)
-+	$(BSD_INSTALL_SCRIPT) digparse $(BIN)
-+	$(BSD_INSTALL_DATA) dlint.1 $(MAN)/dlint.$(MANEXT)
++	$(BSD_INSTALL_SCRIPT) dlint $(DESTDIR)$(BIN)
++	$(BSD_INSTALL_SCRIPT) digparse $(DESTDIR)$(BIN)
++	$(BSD_INSTALL_DATA) dlint.1 $(DESTDIR)$(MAN)/dlint.$(MANEXT)
  
  clean:
  	-rm -f *.shar core
