@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.8 2009/05/17 21:29:34 dholland Exp $
+$NetBSD: patch-ab,v 1.9 2009/05/19 00:36:06 dholland Exp $
 
 --- Makefile.in.orig	2001-03-27 17:46:58.000000000 -0500
 +++ Makefile.in	2009-05-17 17:21:32.000000000 -0400
@@ -32,11 +32,11 @@ $NetBSD: patch-ab,v 1.8 2009/05/17 21:29:34 dholland Exp $
 -	LIBS = -lcdda_interface -lcdda_paranoia -lm
 -	LIBDEP = interface/libcdda_interface.so paranoia/libcdda_paranoia.so
 -endif
-+STLIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a @LIBUTIL@ -lm
++STLIBS = interface/libcdda_interface.a paranoia/libcdda_paranoia.a -lm
 +STLIBDEP = interface/libcdda_interface.a paranoia/libcdda_paranoia.a
  
 +SHLIBDEP = interface/libcdda_interface.la paranoia/libcdda_paranoia.la
-+SHLIBS = $(SHLIBDEP) @LIBUTIL@ @EXTRA_LIBS@ -lm
++SHLIBS = $(SHLIBDEP) @EXTRA_LIBS@ -lm
  
 -all: 	
 +
