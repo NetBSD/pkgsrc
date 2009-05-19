@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/01 20:30:39 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/19 06:49:14 abs Exp $
 
 DISTNAME=	DBIx-Class-0.08102
 PKGNAME=	p5-${DISTNAME}
@@ -31,12 +31,12 @@ BUILD_DEPENDS+=	p5-Test-Simple>=0.33:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Exception>=0:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Deep>=0:../../devel/p5-Test-Deep
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include 	"options.mk"
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
