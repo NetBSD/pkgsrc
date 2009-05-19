@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1938 2009/05/19 11:54:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1939 2009/05/19 13:45:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2601,3 +2601,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gtk2-engines to 2.18.2 [wiz 2009-05-19]
 	Updated games/gnome-games to 2.26.2 [wiz 2009-05-19]
 	Updated misc/deskbar-applet to 2.26.2 [wiz 2009-05-19]
+	Updated print/evince to 2.26.2 [wiz 2009-05-19]
