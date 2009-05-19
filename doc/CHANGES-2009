@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1952 2009/05/19 18:56:55 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1953 2009/05/19 19:42:30 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2615,3 +2615,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/eina version 0.0.2.060 [minskim 2009-05-19]
 	Updated net/youtube-dl to 20090513 [snj 2009-05-19]
 	Updated devel/p5-Storable to 2.20 [sno 2009-05-19]
+	Updated x11/rxvt-unicode to 9.06nb1 [snj 2009-05-19]
