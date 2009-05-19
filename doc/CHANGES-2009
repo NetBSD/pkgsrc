@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1931 2009/05/19 07:57:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1932 2009/05/19 09:11:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2594,3 +2594,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libgphoto2 to 2.4.6 [obache 2009-05-19]
 	Updated graphics/gphoto2 to 2.4.5 [obache 2009-05-19]
 	Updated misc/gnome-user-docs to 2.26.1 [wiz 2009-05-19]
+	Updated time/etm to 249 [wiz 2009-05-19]
