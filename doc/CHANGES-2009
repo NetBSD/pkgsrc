@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1940 2009/05/19 13:55:38 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1941 2009/05/19 14:07:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2603,3 +2603,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/deskbar-applet to 2.26.2 [wiz 2009-05-19]
 	Updated print/evince to 2.26.2 [wiz 2009-05-19]
 	Updated archivers/file-roller to 2.26.2 [wiz 2009-05-19]
+	Updated misc/orca to 2.26.2 [wiz 2009-05-19]
