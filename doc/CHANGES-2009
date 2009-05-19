@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1927 2009/05/19 06:59:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1928 2009/05/19 07:10:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added x11/dri2proto version 2.0 [hasso 2009-05-19]
 	Updated www/p5-Catalyst-Plugin-Session-Store-File to 0.17 [sno 2009-05-19]
 	Updated www/p5-CatalystX-CRUD-YUI to 0.019 [sno 2009-05-19]
+	Updated devel/p5-CPAN-DistnameInfo to 0.08 [sno 2009-05-19]
