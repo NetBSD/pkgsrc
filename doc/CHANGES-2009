@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1933 2009/05/19 09:20:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1934 2009/05/19 10:53:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated misc/gnome-user-docs to 2.26.1 [wiz 2009-05-19]
 	Updated time/etm to 249 [wiz 2009-05-19]
 	Added time/py-icalendar version 1.2 [wiz 2009-05-19]
+	Updated wm/windowmaker to 0.92.0nb8 [wiz 2009-05-19]
