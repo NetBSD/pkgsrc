@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/05/02 19:14:12 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 06:59:11 sno Exp $
 
-DISTNAME=	CatalystX-CRUD-YUI-0.018
+DISTNAME=	CatalystX-CRUD-YUI-0.019
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
@@ -11,24 +11,28 @@ COMMENT=	YUI for your CatalystX::CRUD view
 LICENSE=	gnu-gpl-v2 # OR artistic
 
 # Recommended dependencies
-DEPENDS+=	p5-CatalystX-CRUD-Model-RDBO>=0.14:../../databases/p5-CatalystX-CRUD-Model-RDBO
-DEPENDS+=	p5-CatalystX-CRUD-ModelAdapter-DBIC>=0.06:../../databases/p5-CatalystX-CRUD-ModelAdapter-DBIC
-DEPENDS+=	p5-DBIx-Class-RDBOHelpers>=0.05:../../databases/p5-DBIx-Class-RDBOHelpers
-DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers>=0.02:../../databases/p5-Rose-DBx-Object-MoreHelpers
+DEPENDS+=	p5-CatalystX-CRUD-Model-RDBO>=0.20:../../databases/p5-CatalystX-CRUD-Model-RDBO
+DEPENDS+=	p5-CatalystX-CRUD-ModelAdapter-DBIC>=0.08:../../databases/p5-CatalystX-CRUD-ModelAdapter-DBIC
+DEPENDS+=	p5-DBIx-Class-RDBOHelpers>=0.08:../../databases/p5-DBIx-Class-RDBOHelpers
+DEPENDS+=	p5-Rose-DBx-Object-MoreHelpers>=0.06:../../databases/p5-Rose-DBx-Object-MoreHelpers
 
 # Required dependencies
-DEPENDS+=	p5-Catalyst-View-TT>=0:../../www/p5-Catalyst-View-TT
-DEPENDS+=       p5-CatalystX-CRUD>=0.40:../../databases/p5-CatalystX-CRUD
-DEPENDS+=	p5-CatalystX-CRUD-Controller-RHTMLO>=0.17:../../www/p5-CatalystX-CRUD-Controller-RHTMLO
-DEPENDS+=	p5-CatalystX-CRUD-View-Excel>=0.05:../../www/p5-CatalystX-CRUD-View-Excel
-DEPENDS+=	p5-Class-C3>=0:../../devel/p5-Class-C3
-DEPENDS+=	p5-JSON-XS>=2:../../converters/p5-JSON-XS
-DEPENDS+=	p5-Path-Class>=0:../../devel/p5-Path-Class
+DEPENDS+=	p5-Catalyst-Action-RenderView-[0-9]*:../../www/p5-Catalyst-Action-RenderView
+DEPENDS+=	p5-Catalyst-Plugin-ConfigLoader-[0-9]*:../../www/p5-Catalyst-Plugin-ConfigLoader
+DEPENDS+=	p5-Catalyst-Plugin-Static-Simple-[0-9]*:../../www/p5-Catalyst-Plugin-Static-Simple
+DEPENDS+=	p5-Catalyst-View-TT-[0-9]*:../../www/p5-Catalyst-View-TT
+DEPENDS+=       p5-CatalystX-CRUD>=0.43:../../databases/p5-CatalystX-CRUD
+DEPENDS+=	p5-CatalystX-CRUD-Controller-RHTMLO>=0.19:../../www/p5-CatalystX-CRUD-Controller-RHTMLO
+DEPENDS+=	p5-CatalystX-CRUD-View-Excel>=0.06:../../www/p5-CatalystX-CRUD-View-Excel
+DEPENDS+=	p5-Class-Inspector-[0-9]*:../../devel/p5-Class-Inspector
+DEPENDS+=	p5-Config-General-[0-9]*:../../devel/p5-Config-General
+DEPENDS+=	p5-JSON-XS>=2.23:../../converters/p5-JSON-XS
+DEPENDS+=	p5-MRO-Compat-[0-9]*:../../devel/p5-MRO-Compat
+DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 DEPENDS+=	p5-Rose-HTMLx-Form-Related>=0.17:../../www/p5-Rose-HTMLx-Form-Related
-DEPENDS+=	p5-Template-Toolkit>=0:../../www/p5-Template-Toolkit
-DEPENDS+=	p5-Text-Autoformat>=0:../../textproc/p5-Text-Autoformat/
-
-BUILD_DEPENDS+=	p5-Template-Plugin-Handy>=0:../../devel/p5-Template-Plugin-Handy
+DEPENDS+=	p5-Template-Plugin-Handy>=0.002:../../devel/p5-Template-Plugin-Handy
+DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
+DEPENDS+=	p5-Text-Autoformat-[0-9]*:../../textproc/p5-Text-Autoformat
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/CatalystX/CRUD/YUI/.packlist
