@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/05/10 10:28:50 zafer Exp $
-#
+# $NetBSD: Makefile,v 1.12 2009/05/19 18:54:43 snj Exp $
 
 DISTNAME=	youtube-dl
-PKGNAME=	youtube-dl-20090425 # master site needs to be updated in tandem
+PKGNAME=	youtube-dl-20090513 # master site needs to be updated in tandem
 CATEGORIES=	net
-MASTER_SITES=	http://bitbucket.org/rg3/youtube-dl/raw/c42582904adf/
+MASTER_SITES=	http://bitbucket.org/rg3/youtube-dl/raw/2009.05.13/
 EXTRACT_SUFX=	# none
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
