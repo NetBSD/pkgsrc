@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1930 2009/05/19 07:52:18 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1931 2009/05/19 07:57:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-CPAN-DistnameInfo to 0.08 [sno 2009-05-19]
 	Updated devel/libgphoto2 to 2.4.6 [obache 2009-05-19]
 	Updated graphics/gphoto2 to 2.4.5 [obache 2009-05-19]
+	Updated misc/gnome-user-docs to 2.26.1 [wiz 2009-05-19]
