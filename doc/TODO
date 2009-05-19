@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8111 2009/05/18 15:41:46 wiz Exp $
+$NetBSD: TODO,v 1.8112 2009/05/19 06:51:42 hasso Exp $
 
 Suggested new packages
 ======================
@@ -537,7 +537,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dnstop-20070307
 	o dnstracer-1.9
 	o doxygen-1.5.9
-	o dri2proto-2.0
 	o drivel-2.0.4
 	o dropbear-0.52
 	o drscheme-4.0.2
@@ -865,7 +864,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libnasl-2.3.1
 	o libntlm-1.1
 	o libole2-2.2.8
-	o libpciaccess-0.10.6
 	o librep-0.17.4
 	o libshout-2.2.2
 	o libssh-0.2
@@ -1501,7 +1499,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xmon-1.5.6
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorg-util-macros-1.2.0
 	o xpad-2.13
 	o xplanet-1.2.1
 	o xpuyopuyo-0.9.8
