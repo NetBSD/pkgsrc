@@ -1,0 +1,39 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/19 09:19:45 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/icalendar/__init__.py
+${PYSITELIB}/icalendar/__init__.pyc
+${PYSITELIB}/icalendar/__init__.pyo
+${PYSITELIB}/icalendar/cal.py
+${PYSITELIB}/icalendar/cal.pyc
+${PYSITELIB}/icalendar/cal.pyo
+${PYSITELIB}/icalendar/caselessdict.py
+${PYSITELIB}/icalendar/caselessdict.pyc
+${PYSITELIB}/icalendar/caselessdict.pyo
+${PYSITELIB}/icalendar/interfaces.py
+${PYSITELIB}/icalendar/interfaces.pyc
+${PYSITELIB}/icalendar/interfaces.pyo
+${PYSITELIB}/icalendar/parser.py
+${PYSITELIB}/icalendar/parser.pyc
+${PYSITELIB}/icalendar/parser.pyo
+${PYSITELIB}/icalendar/prop.py
+${PYSITELIB}/icalendar/prop.pyc
+${PYSITELIB}/icalendar/prop.pyo
+${PYSITELIB}/icalendar/tools.py
+${PYSITELIB}/icalendar/tools.pyc
+${PYSITELIB}/icalendar/tools.pyo
+${PYSITELIB}/icalendar/util.py
+${PYSITELIB}/icalendar/util.pyc
+${PYSITELIB}/icalendar/util.pyo
+share/doc/${PKGNAME}/example.txt
+share/doc/${PKGNAME}/groupscheduled.ics
+share/doc/${PKGNAME}/groupscheduled.txt
+share/doc/${PKGNAME}/multiple.ics
+share/doc/${PKGNAME}/multiple.txt
+share/doc/${PKGNAME}/small.ics
+share/doc/${PKGNAME}/small.txt
+@dirrm share/doc/${PKGNAME}
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/icalendar
