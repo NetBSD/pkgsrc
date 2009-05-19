@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1949 2009/05/19 15:32:52 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1950 2009/05/19 17:27:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2612,3 +2612,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated pkgtools/url2pkg to 2.10 [wiz 2009-05-19]
 	Updated fonts/gucharmap to 2.26.2 [wiz 2009-05-19]
 	Updated multimedia/totem-pl-parser to 2.26.2 [wiz 2009-05-19]
+	Added devel/eina version 0.0.2.060 [minskim 2009-05-19]
