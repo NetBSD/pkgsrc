@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1963 2009/05/19 22:17:10 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1964 2009/05/19 22:26:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2626,3 +2626,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-MooseX-Params-Validate version 0.09 [sno 2009-05-19]
 	Added devel/p5-MooseX-SemiAffordanceAccessor version 0.03 [sno 2009-05-19]
 	Added devel/p5-File-ChangeNotify version 0.05 [sno 2009-05-19]
+	Updated www/p5-Catalyst-Devel to 1.15 [sno 2009-05-19]
