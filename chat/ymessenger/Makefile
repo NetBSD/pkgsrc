@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/29 05:18:37 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:05 wiz Exp $
 
 DISTNAME=		rh9.ymessenger-1.0.4-1.i386
 PKGNAME=		ymessenger-1.0.4
@@ -9,8 +9,8 @@ EXTRACT_SUFX=		.rpm
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://messenger.yahoo.com/
 COMMENT=		Yahoo! instant messaging client
-
 LICENSE=		generic-nonlicense
+
 RESTRICTED=		Commercial software (no permission to copy is evident).
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/10/07 09:57:58 sborrill Exp $
+# $NetBSD: Makefile,v 1.39 2009/05/19 08:59:26 wiz Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	1
@@ -8,8 +8,8 @@ MASTER_SITES=	# empty
 MAINTAINER=	sborrill@NetBSD.org
 HOMEPAGE=	http://www.citrix.com/English/SS/downloads/downloads.asp?dID=2755
 COMMENT=	Citrix(R) ICA client for the Citrix(R) Presentation Server(TM)
+LICENSE=	citrix_ica-license
 
-LICENSE=		citrix_ica-license
 RESTRICTED=		License prohibits redistribution
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

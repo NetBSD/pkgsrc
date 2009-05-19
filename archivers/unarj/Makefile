@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:01 wiz Exp $
 
 DISTNAME=	unarj-2.65
 PKGREVISION=	1
@@ -8,8 +8,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.arjsoftware.com/
 COMMENT=	Allows files to be extracted from ARJ archives
-
 LICENSE=	unarj-license
+
 RESTRICTED=	Do not charge a fee for use, copying, or distribution
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

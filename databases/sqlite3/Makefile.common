@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.36 2009/05/07 08:01:32 adam Exp $
+# $NetBSD: Makefile.common,v 1.37 2009/05/19 08:59:07 wiz Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
@@ -11,7 +11,6 @@ MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sqlite.org/
 COMMENT=	SQL Database Engine in a C Library
-
 #LICENSE=	public-domain
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/sqlite3/distinfo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/02/24 16:17:12 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/19 08:59:12 wiz Exp $
 
 DISTNAME=	0aa8fb608963
 PKGNAME=	${RUBY_PKGPREFIX}-rcsparse-0.0.0.43
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ww2.fs.ei.tum.de/~corecode/hg/rcsparse/
 COMMENT=	RCS parsing library for Ruby
-
 LICENSE=	corecode-license
 
 DIST_SUBDIR=	rcsparse

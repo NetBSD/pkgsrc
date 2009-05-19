@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.74 2009/03/23 23:03:58 joerg Exp $
+# $NetBSD: Makefile.common,v 1.75 2009/05/19 08:59:10 wiz Exp $
 
 ###########################################################################
 ###########################################################################
@@ -29,7 +29,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=libtool/}
 
 OWNER=		joerg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libtool/libtool.html
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	glibtool-[0-9]*
 

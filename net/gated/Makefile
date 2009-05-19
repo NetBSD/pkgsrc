@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/05/26 02:13:22 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:26 wiz Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
@@ -10,17 +10,17 @@ MASTER_SITES=	http://www.zcu.cz/ftp/pub/security/merit/gated/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
+LICENSE=	gated-license
 
-NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
-
-USE_TOOLS+=	pax
-
-LICENSE=		gated-license
 RESTRICTED=		Required license from Merit
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
+
+USE_TOOLS+=	pax
 
 RCD_SCRIPTS=		gated
 RCD_SCRIPT_SRC.gated=	${FILESDIR}/gated

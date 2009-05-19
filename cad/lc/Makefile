@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:05 wiz Exp $
 
 DISTNAME=	lc	# overridden below
 PKGNAME=	lc-2.10
@@ -9,18 +9,17 @@ MASTER_SITES=	http://lc.cray.com/download/
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://lc.cray.com/
 COMMENT=	Finite Difference Time Domain (FDTD) Electromagnetic Simulator
-
-DIST_SUBDIR=	${PKGNAME_NOREV}
+LICENSE=		lc-license
 
 RESTRICTED=		Original installer required to redistribute.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-LICENSE=		lc-license
 
 PKG_DESTDIR_SUPPORT=	destdir
 
+DIST_SUBDIR=		${PKGNAME_NOREV}
 WRKSRC=			${WRKDIR}/lc2.10
 BUILD_DIRS=		# empty
 

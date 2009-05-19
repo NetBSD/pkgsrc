@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2009/05/07 11:29:52 obache Exp $
+# $NetBSD: Makefile,v 1.26 2009/05/19 08:59:37 wiz Exp $
 #
 
 DISTNAME=	Trac-0.11.4.ja1
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.i-act.co.jp/project/products/products.html
 COMMENT=	Trac issue tracking system with Japanese localization
-
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir

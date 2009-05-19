@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/16 13:40:11 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:35 wiz Exp $
 #
 
 DISTNAME=		RAIDAdmin1.3.1archive
@@ -10,9 +10,6 @@ MASTER_SITES=		http://download.info.apple.com/Mac_OS_X/061-1325.20040706.bNhy4/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.apple.com/downloads/macosx/apple/xserveraidadmintools.html
 COMMENT=		Tool to administer Apple's Xserve RAID
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=		apple-admin-license
 
 RESTRICTED=		Redistribution not permitted
@@ -20,6 +17,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/RAID\ Admin\ 1.3.1
 

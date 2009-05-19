@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/12 13:27:55 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/19 08:59:37 wiz Exp $
 #
 
 DISTNAME=	Genshi-0.5.1
@@ -9,7 +9,6 @@ MASTER_SITES=	http://ftp.edgewall.com/pub/genshi/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://genshi.edgewall.org/
 COMMENT=	Python toolkit for generation of output for the web
-
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir

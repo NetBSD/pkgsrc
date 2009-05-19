@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/05/07 14:03:26 obache Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:39 wiz Exp $
 #
 
 DISTNAME=	x11vnc-0.9.7
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvncserver/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.karlrunge.com/x11vnc/
 COMMENT=	VNC server for real X displays
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

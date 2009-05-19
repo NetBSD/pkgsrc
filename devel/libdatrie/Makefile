@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/15 08:52:42 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:10 wiz Exp $
 #
 
 DISTNAME=	libdatrie-0.2.2
@@ -9,7 +9,6 @@ MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/libthai/ \
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://linux.thai.net/~thep/datrie/datrie.html
 COMMENT=	Implementation of Double-Array Trie
-
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

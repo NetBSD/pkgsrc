@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2009/05/19 08:59:19 wiz Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -7,6 +7,7 @@ PKGNAME=	sun-jre14-2.17
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
+LICENSE=	sun-jre14-license
 
 SHORT=		JRE
 
@@ -15,8 +16,6 @@ USE_TOOLS+=	pax
 WRKSRC=		${WRKDIR}/j2re1.4.2_17
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
-
-LICENSE=	sun-jre14-license
 
 .include "../../lang/sun-jre14/Makefile.common"
 
