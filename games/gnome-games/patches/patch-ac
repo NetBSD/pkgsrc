@@ -1,6 +1,0 @@
-$NetBSD: patch-ac,v 1.4 2007/09/20 00:05:58 wiz Exp $
-
---- gnect/src/malloc.h.orig	Tue May 11 20:30:32 2004
-+++ gnect/src/malloc.h
-@@ -0,0 +1 @@
-+#include <stdlib.h>
