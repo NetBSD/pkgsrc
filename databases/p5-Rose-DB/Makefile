@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/17 18:41:14 sno Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/19 21:32:08 sno Exp $
 
 DISTNAME=	Rose-DB-0.752
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	DBI wrapper and abstraction layer
 LICENSE=	gnu-gpl-v2 # OR artistic
 
 DEPENDS+=	p5-Bit-Vector>=6.4:../../devel/p5-Bit-Vector
-DEPENDS+=	p5-Class-Factory-Util-[0-9]*:../../devel/p5-Class-Factory-Util
 DEPENDS+=	p5-Clone-PP-[0-9]*:../../devel/p5-Clone-PP
 DEPENDS+=	p5-DateTime-Format-MySQL-[0-9]*:../../time/p5-DateTime-Format-MySQL
 DEPENDS+=	p5-DateTime-Format-Pg>=0.11:../../time/p5-DateTime-Format-Pg
