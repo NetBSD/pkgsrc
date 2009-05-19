@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:19:00 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/19 21:29:55 sno Exp $
 
 DISTNAME=	DateTime-Format-Builder-0.7901
 PKGNAME=	p5-${DISTNAME}
@@ -9,8 +9,14 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~drolsky/DateTime-Format-Builder/
 COMMENT=	Create DateTime parser classes and objects
+LICENSE=	gnu-gpl-v2 # OR artistic
 
+DEPENDS+=	p5-Class-Factory-Util>=1.6:../../devel/p5-Class-Factory-Util
 DEPENDS+=	p5-DateTime>=0.12:../../time/p5-DateTime
+DEPENDS+=	p5-DateTime-Format-Strptime>=1.04:../../time/p5-DateTime-Format-Strptime
+DEPENDS+=	p5-Params-Validate>=0.72:../../devel/p5-Params-Validate
+DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
+
 PERL5_MODULE_TYPE=   Module::Build
 
 USE_LANGUAGES=	# empty
