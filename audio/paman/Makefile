@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/19 01:09:24 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 07:04:44 abs Exp $
 #
 
 DISTNAME=	paman-0.9.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://0pointer.de/lennart/projects/paman/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://0pointer.de/lennart/projects/paman/
 COMMENT=	GTK frontend for the PulseAudio sound server
+
+PKG_DESTDIR_SUPPORT=   user-destdir
 
 GNU_CONFIGURE=	yes
 USE_DIRS=	gnome2-1.5
