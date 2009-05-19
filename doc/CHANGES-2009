@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1970 2009/05/19 23:22:24 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1971 2009/05/19 23:28:05 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2633,3 +2633,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Scope-Upper to 0.09 [sno 2009-05-19]
 	Updated devel/p5-Test-Output to 0.16 [sno 2009-05-19]
 	Updated x11/gtk2-engines to 2.18.2nb1 [wiz 2009-05-19]
+	Updated time/p5-Time-Piece to 1.14 [sno 2009-05-19]
