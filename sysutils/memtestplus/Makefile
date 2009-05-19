@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/11/26 11:28:27 tron Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 22:26:13 abs Exp $
 #
 
 # Note -- version number also in the do-install rule
@@ -23,6 +23,8 @@ SUBST_MESSAGE.delcr=	Deleting CRs
 SUBST_FILES.delcr=	README
 SUBST_SED.delcr=	-e 's/.$$//g'
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "options.mk"
 
 .include "../../mk/compiler.mk"
@@ -32,14 +34,17 @@ BUILDLINK_TRANSFORM+=	rm:-fno-stack-protector
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/mdec
-	${INSTALL_DATA} ${WRKSRC}/memtest.bin ${PREFIX}/mdec/memtestplus.bin
-	${INSTALL_DATA} ${WRKSRC}/memtest ${PREFIX}/mdec/memtestplus
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtestplus
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/memtestplus
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/memtestplus
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/mdec
+	${INSTALL_DATA} ${WRKSRC}/memtest.bin \
+		${DESTDIR}${PREFIX}/mdec/memtestplus.bin
+	${INSTALL_DATA} ${WRKSRC}/memtest ${DESTDIR}${PREFIX}/mdec/memtestplus
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/memtestplus
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/memtestplus
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${DESTDIR}${PREFIX}/share/doc/memtestplus
 .if !empty(PKG_OPTIONS:Miso)
-	${INSTALL_DATA} ${WRKSRC}/mt${MAJVER}${MINVER}.iso ${PREFIX}/mdec/memtestplus.iso
+	${INSTALL_DATA} ${WRKSRC}/mt${MAJVER}${MINVER}.iso \
+		${DESTDIR}${PREFIX}/mdec/memtestplus.iso
 .endif
 
 .include "../../mk/bsd.pkg.mk"
