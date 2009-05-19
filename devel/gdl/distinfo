@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/03/22 16:32:36 snj Exp $
+$NetBSD: distinfo,v 1.6 2009/05/19 21:23:45 wiz Exp $
 
-SHA1 (gdl-2.26.0.tar.bz2) = 2d015aea38087e946b1138e5fcb206ce008f0751
-RMD160 (gdl-2.26.0.tar.bz2) = db6fc69c7ffc3d06bbf95448f334b2e203d90759
-Size (gdl-2.26.0.tar.bz2) = 541006 bytes
+SHA1 (gdl-2.26.2.tar.bz2) = 29402c29c42fef5dc37748d4ff52e1f96e94f2b4
+RMD160 (gdl-2.26.2.tar.bz2) = c4a2dee8355f6b005490eda2cd0ef2399e2e5179
+Size (gdl-2.26.2.tar.bz2) = 552658 bytes
