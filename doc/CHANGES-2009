@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1942 2009/05/19 14:25:48 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1943 2009/05/19 14:36:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2605,3 +2605,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/file-roller to 2.26.2 [wiz 2009-05-19]
 	Updated misc/orca to 2.26.2 [wiz 2009-05-19]
 	Updated misc/mousetweaks to 2.26.2 [wiz 2009-05-19]
+	Updated time/hamster-applet to 2.26.2 [wiz 2009-05-19]
