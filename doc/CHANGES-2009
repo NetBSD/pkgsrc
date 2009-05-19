@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1956 2009/05/19 21:07:20 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1957 2009/05/19 21:19:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2619,3 +2619,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/totem to 2.26.2 [wiz 2009-05-19]
 	Updated sysutils/nautilus to 2.26.3 [wiz 2009-05-19]
 	Updated devel/p5-String-Format to 1.16 [sno 2009-05-19]
+	Updated devel/p5-Test-Inline to 2.209 [sno 2009-05-19]
