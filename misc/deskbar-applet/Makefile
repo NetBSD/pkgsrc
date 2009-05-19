@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2009/04/17 18:12:10 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2009/05/19 11:53:49 wiz Exp $
 #
 
-DISTNAME=	deskbar-applet-2.26.1
+DISTNAME=	deskbar-applet-2.26.2
 CATEGORIES=	misc gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskbar-applet/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://raphael.slinckx.net/deskbar/
 COMMENT=	Omnipresent, versatile search interface for the GNOME Desktop
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
