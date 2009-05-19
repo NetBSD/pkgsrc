@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2009/03/17 23:20:11 jmcneill Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/19 14:25:32 wiz Exp $
 #
 
-DISTNAME=	mousetweaks-2.26.0
+DISTNAME=	mousetweaks-2.26.2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mousetweaks/2.26/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Mousetweaks/Home
 COMMENT=	Mouse accessibility software
+# see also http://bugzilla.gnome.org/show_bug.cgi?id=583218
+#LICENSE=	gnu-gpl-v3 AND gnu-fdl-v1.3 (or v1.2?)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 
 GCONF_SCHEMAS+=	mousetweaks.schemas
 GCONF_SCHEMAS+=	pointer-capture-applet.schemas
