@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:45 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:31 wiz Exp $
 #
 
 DISTNAME=		Crypt-OpenSSL-AES-0.02
@@ -11,7 +11,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-OpenSSL-AES/
 COMMENT=		Perl5 wrapper module for the OpenSSL AES functions
-
 #LICENSE=		gnu-gpl-v2 # under same terms as Perl
 
 PKG_DESTDIR_SUPPORT=	user-destdir

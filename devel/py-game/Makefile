@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/04/27 17:08:48 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:11 wiz Exp $
 #
 
 DISTNAME=		pygame-1.8.1release
@@ -10,7 +10,6 @@ MASTER_SITES=		http://pygame.org/ftp/
 MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://pygame.org/
 COMMENT=		Set of Python modules designed for writing games
-
 LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 01:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/19 08:59:05 wiz Exp $
 #
 
 DISTNAME=	simian_man_12_98
@@ -10,9 +10,9 @@ EXTRACT_SUFX=	.pdf
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://weewave.mer.utexas.edu/MED_files/MED_research/Intrcncts/SIMIAN_stuff/simian_links.html
 COMMENT=	PDF manual for SIMIAN
+LICENSE=		simian-license
 
 RESTRICTED=		Personal use only
-LICENSE=		simian-license
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}

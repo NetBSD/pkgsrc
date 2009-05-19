@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2009/05/13 10:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2009/05/19 08:59:11 wiz Exp $
 
 DISTNAME=		pango-1.24.2
 CATEGORIES=		devel fonts
@@ -8,7 +8,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pango.org/
 COMMENT=		Library for layout and rendering of text
-
 LICENSE=		gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/09/12 12:06:06 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2009/05/19 08:59:35 wiz Exp $
 
 DISTNAME=	glimpse-4.18.5
 CATEGORIES=	textproc databases
@@ -7,13 +7,13 @@ MASTER_SITES=	http://webglimpse.net/trial/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://webglimpse.net/
 COMMENT=	Text search engine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	glimpse-license
+
 RESTRICTED=	Redistribution only on non-profit basis.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake lex
 GNU_CONFIGURE=	yes
