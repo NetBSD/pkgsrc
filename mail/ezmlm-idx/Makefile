@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/06/11 21:06:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.31 2009/05/19 09:07:13 wiz Exp $
 #
 
 .include "../../mail/ezmlm/Makefile.common"
@@ -10,7 +10,7 @@ SITES.${DISTNAME}.tar.gz=	http://www.ezmlm.org/archive/${IDXVERSION}/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.ezmlm.org/
 COMMENT=		Version of ezmlm with enhancements by third parties
-#LICENSE=		public-domain
+LICENSE=		public-domain
 
 CONFLICTS=		ezmlm-[0-9]*
 

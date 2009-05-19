@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2008/03/20 03:30:32 schmonz Exp $
+# $NetBSD: Makefile,v 1.59 2009/05/19 09:07:14 wiz Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -10,7 +10,7 @@ MASTER_SITES=		http://qmail.org/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/qmail.html
 COMMENT=		Secure, reliable, efficient, simple, and fast MTA
-#LICENSE=		public-domain
+LICENSE=		public-domain
 
 DEPENDS+=		checkpassword-[0-9]*:../../sysutils/checkpassword
 DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
