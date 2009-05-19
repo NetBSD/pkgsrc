@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2009/03/25 23:01:48 he Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/19 21:41:48 he Exp $
 #
 
-DISTNAME=		parrot-1.0.0
+VERSION=		1.1.0
+RTYPE=			devel
+DISTNAME=		parrot-${VERSION}
 CATEGORIES=		lang
-MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/stable/1.0.0/
+MASTER_SITES=		ftp://ftp.parrot.org/pub/parrot/releases/${RTYPE}/${VERSION}/
 
 MAINTAINER=		he@NetBSD.org
 HOMEPAGE=		http://www.parrotcode.org/
 COMMENT=		Virtual machine made to run Perl 6 and other languages
+LICENSE=		artistic-2.0
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl
 PTHREAD_OPTS+=		require
@@ -34,9 +38,12 @@ SUBST_SED.pthread+=	-e '/^CFLAGS /s|$$|${PTHREAD_CFLAGS:Q}|'
 SUBST_SED.pthread+=	-e '/^LINKFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 SUBST_SED.pthread+=	-e '/^LDFLAGS /s|$$|${PTHREAD_LDFLAGS:Q} ${PTHREAD_LIBS:Q}|'
 
+pre-install:
+	${CHMOD} -R g-w ${WRKSRC}
+
 post-install:
-	if [ -e ${PREFIX}/lib/libparrot.so.1.0.0 ]; then \
-		${LN} -s libparrot.so.1.0.0 ${PREFIX}/lib/libparrot.so ; \
+	if [ -e ${PREFIX}/lib/libparrot.so.${VERSION} ]; then \
+		${LN} -s libparrot.so.${VERSION} ${PREFIX}/lib/libparrot.so ; \
 	fi
 
 .include "../../textproc/icu/buildlink3.mk"
