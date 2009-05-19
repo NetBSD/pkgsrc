@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.27 2008/05/20 18:36:47 tnn Exp $
+$NetBSD: patch-aa,v 1.28 2009/05/19 22:16:08 abs Exp $
 
---- Makefile.orig	2008-05-20 20:33:45.000000000 +0200
+--- Makefile.orig	2009-05-19 23:13:41.000000000 +0100
 +++ Makefile
 @@ -6,7 +6,7 @@
  
@@ -295,3 +295,22 @@ $NetBSD: patch-aa,v 1.27 2008/05/20 18:36:47 tnn Exp $
  ###########################################################################
  ###########################################################################
  ###########################################################################
+@@ -644,12 +847,12 @@ system: mpg123.h system.c
+ install:	prepared-for-install
+ 	strip mpg123
+ 	if [ -x /usr/ccs/bin/mcs ]; then /usr/ccs/bin/mcs -d mpg123; fi
+-	mkdir -p $(BINDIR)
+-	mkdir -p $(MANDIR)/man$(SECTION)
+-	cp -f mpg123 $(BINDIR)
+-	chmod 755 $(BINDIR)/mpg123
+-	cp -f mpg123.1 $(MANDIR)/man$(SECTION)
+-	chmod 644 $(MANDIR)/man$(SECTION)/mpg123.1
++	mkdir -p $(DESTDIR)$(BINDIR)
++	mkdir -p $(DESTDIR)$(MANDIR)/man$(SECTION)
++	cp -f mpg123 $(DESTDIR)$(BINDIR)
++	chmod 755 $(DESTDIR)$(BINDIR)/mpg123
++	cp -f mpg123.1 $(DESTDIR)$(MANDIR)/man$(SECTION)
++	chmod 644 $(DESTDIR)$(MANDIR)/man$(SECTION)/mpg123.1
+ 
+ dist:	clean
+ 	DISTNAME="`basename \`pwd\``" ; \
