@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2009/04/17 18:06:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2009/05/19 21:46:23 wiz Exp $
 bin/nautilus
 bin/nautilus-autorun-software
 bin/nautilus-connect-server
@@ -238,8 +238,6 @@ share/pixmaps/nautilus/thumbnail_frame.png
 @comment in xdg-dirs: @dirrm share/applications
 @unexec ${MKDIR} %D/lib/nautilus/extensions-2.0 2>/dev/null || ${TRUE}
 @dirrm lib/nautilus/extensions-2.0
-@unexec ${MKDIR} %D/lib/nautilus/extensions-1.0 2>/dev/null || ${TRUE}
-@dirrm lib/nautilus/extensions-1.0
 @dirrm lib/nautilus
 @dirrm include/nautilus/libnautilus-extension
 @dirrm include/nautilus
