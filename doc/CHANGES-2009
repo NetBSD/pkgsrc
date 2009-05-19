@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1934 2009/05/19 10:53:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1935 2009/05/19 11:16:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2597,3 +2597,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 249 [wiz 2009-05-19]
 	Added time/py-icalendar version 1.2 [wiz 2009-05-19]
 	Updated wm/windowmaker to 0.92.0nb8 [wiz 2009-05-19]
+	Updated graphics/eog to 2.26.2 [wiz 2009-05-19]
