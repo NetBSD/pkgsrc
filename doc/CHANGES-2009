@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1973 2009/05/19 23:46:21 asau Exp $
+$NetBSD: CHANGES-2009,v 1.1974 2009/05/19 23:47:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2636,3 +2636,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-Time-Piece to 1.14 [sno 2009-05-19]
 	Updated devel/p5-Test-Harness to 3.17 [sno 2009-05-19]
 	Updated parallel/pvm3 to 3.4.6 [asau 2009-05-19]
+	Updated devel/p5-IPC-Cmd to 0.44 [sno 2009-05-19]
