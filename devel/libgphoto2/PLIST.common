@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.15 2009/01/26 15:43:09 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.16 2009/05/19 07:50:13 obache Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -155,8 +155,6 @@ share/locale/it/LC_MESSAGES/libgphoto2-2.mo
 share/locale/it/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/ja/LC_MESSAGES/libgphoto2-2.mo
 share/locale/ja/LC_MESSAGES/libgphoto2_port-0.mo
-share/locale/nb/LC_MESSAGES/libgphoto2-2.mo
-share/locale/nb/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/nl/LC_MESSAGES/libgphoto2-2.mo
 share/locale/nl/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/pl/LC_MESSAGES/libgphoto2-2.mo
@@ -165,8 +163,6 @@ share/locale/pt_BR/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/ru/LC_MESSAGES/libgphoto2-2.mo
 share/locale/ru/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/sk/LC_MESSAGES/libgphoto2_port-0.mo
-share/locale/sl/LC_MESSAGES/libgphoto2-2.mo
-share/locale/sl/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/sv/LC_MESSAGES/libgphoto2-2.mo
 share/locale/sv/LC_MESSAGES/libgphoto2_port-0.mo
 share/locale/uk/LC_MESSAGES/libgphoto2-2.mo
