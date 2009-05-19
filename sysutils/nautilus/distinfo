@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2009/05/19 21:38:33 wiz Exp $
+$NetBSD: distinfo,v 1.45 2009/05/19 23:52:15 wiz Exp $
 
 SHA1 (nautilus-2.26.3.tar.bz2) = e9ec2daac93eac185cef42a688c3ebefcca1f7fe
 RMD160 (nautilus-2.26.3.tar.bz2) = ba8b6dcd14c9d8615900d5ec236555223b3c315e
 Size (nautilus-2.26.3.tar.bz2) = 5913186 bytes
-SHA1 (patch-aj) = d259f39c9bf6e8aad67889bfb27c69fe12bdbfd6
+SHA1 (patch-aj) = 52df33053c30c12a5d6aac26bbd3e8c317800d1a
