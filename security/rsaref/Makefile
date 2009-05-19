@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/06/14 18:58:15 gdt Exp $
+# $NetBSD: Makefile,v 1.38 2009/05/19 08:59:33 wiz Exp $
 #
 
 DISTNAME=		rsaref
@@ -10,8 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Encryption/authentication library, RSA/MDX/DES
-
 LICENSE=		rsaref-license
+
 RESTRICTED=		No generation of income.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

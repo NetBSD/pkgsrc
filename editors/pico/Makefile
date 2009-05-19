@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/11/04 19:24:40 jwise Exp $
+# $NetBSD: Makefile,v 1.76 2009/05/19 08:59:12 wiz Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -17,7 +17,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
-
 LICENSE=	pine-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir

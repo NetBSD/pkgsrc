@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/05/26 02:13:16 joerg Exp $
+# $NetBSD: Makefile,v 1.56 2009/05/19 08:59:06 wiz Exp $
 
 DISTNAME=	libiconv-1.12
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GNU:=libiconv/}
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/libiconv/
 COMMENT=	Character set conversion library
+#LICENSE=		gnu-gplv3 gnu-lgplv2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -16,7 +17,6 @@ USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=	pax
 GNU_CONFIGURE=		yes
-#LICENSE=		gnu-gplv3 gnu-lgplv2
 
 # Explicitly disable NLS since libiconv is a dependency for gettext-lib
 # and we don't want libiconv to pick up any NLS functions from libc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:21 wiz Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -8,8 +8,8 @@ EXTRACT_SUFX=	#empty
 
 MAINTAINER=	bad@NetBSD.org
 COMMENT=	Sendmail logfile viewer
-
 LICENSE=	fromto-license  # XXX missing
+
 RESTRICTED=	Redistribution allowed for non-commercial purposes only
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}

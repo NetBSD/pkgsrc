@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/04/30 06:40:06 tron Exp $
+# $NetBSD: Makefile,v 1.32 2009/05/19 08:59:25 wiz Exp $
 
 DISTNAME=	windows-all-20071007
 PKGNAME=	win32-codecs-071007
@@ -15,6 +15,13 @@ DISTFILES+=	rp9codecs-win32-20050115.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mplayerhq.hu/MPlayer/releases/codecs/
 COMMENT=	Huge compilation of Win32 binary codecs
+LICENSE=	mplayer-codec-license
+
+RESTRICTED=	Unsure of codec's license
+NO_BIN_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_SRC_ON_FTP=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -24,13 +31,6 @@ ONLY_FOR_PLATFORM=	*-*-i386
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
-
-LICENSE=	mplayer-codec-license
-RESTRICTED=	Unsure of codec's license
-NO_BIN_ON_CDROM=${RESTRICTED}
-NO_BIN_ON_FTP=	${RESTRICTED}
-NO_SRC_ON_CDROM=${RESTRICTED}
-NO_SRC_ON_FTP=	${RESTRICTED}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/win32

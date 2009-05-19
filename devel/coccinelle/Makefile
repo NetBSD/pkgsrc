@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/10 21:26:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 08:59:08 wiz Exp $
 
 DISTNAME=	coccinelle-0.1.8
 CATEGORIES=	devel
@@ -9,11 +9,10 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.emn.fr/x-info/coccinelle/
 COMMENT=	Tool for writing and applying semantic patches
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 DEPENDS+=	menhir-[0-9]*:../../devel/menhir
-
-LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 #MAKE_JOBS_SAFE=		no

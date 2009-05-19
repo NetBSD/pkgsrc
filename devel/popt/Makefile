@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2009/04/20 11:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2009/05/19 08:59:11 wiz Exp $
 #
 
 DISTNAME=	popt-1.15
@@ -7,7 +7,6 @@ MASTER_SITES=	http://rpm5.org/files/popt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
-
 # mit license with advertising clause
 #LICENSE=	mit
 

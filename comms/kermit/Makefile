@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2008/03/03 05:33:32 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2009/05/19 08:59:06 wiz Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -9,7 +9,6 @@ MASTER_SITES=	ftp://kermit.columbia.edu/kermit/archives/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.columbia.edu/kermit/
 COMMENT=	Network and serial communication, file transfer, and scripting utility
-
 LICENSE=	kermit-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir

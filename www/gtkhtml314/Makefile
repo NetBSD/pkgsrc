@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/05/18 13:40:53 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:37 wiz Exp $
 #
 # PKGNAME derives from the supported API (still from
 # release 3.14). See also PLIST.
@@ -13,7 +13,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Lightweight HTML rendering/printing/editing engine
-
 #LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

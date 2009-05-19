@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2009/05/19 08:59:32 wiz Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -9,14 +9,13 @@ MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utility (v2)
+# use of IDEA as crypto function
+LICENSE=	idea-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/src
 CRYPTO=		yes
-
-# use of IDEA as crypto function
-LICENSE=	fee-based-commercial-use
 
 .include "options.mk"
 

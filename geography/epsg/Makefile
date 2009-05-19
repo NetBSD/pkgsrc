@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/09 19:27:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 08:59:16 wiz Exp $
 #
 
 DISTNAME=		epsg-v${VERS}sql-PostgreSQL
@@ -15,13 +15,12 @@ DIST_SUBDIR=		epsg-${VERS}
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.epsg.org/
 COMMENT=		EPSG geodetic parameters database
+LICENSE=		epsg-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Don't make filenames lowercase.
 EXTRACT_OPTS_ZIP=	-aqo
-
-LICENSE=		epsg-license
 
 WRKSRC=			${WRKDIR}
 

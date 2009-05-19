@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/12 16:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 08:59:24 wiz Exp $
 #
 
 DISTNAME=	mnemosyne-1.2.1
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mnemosyne-proj.org/
 COMMENT=	Sophisticated flash-card tool which optimizes your learning process
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

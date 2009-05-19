@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/03/06 15:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:09 wiz Exp $
 
 DISTNAME=	guile-www-2.22
 CATEGORIES=	devel www
@@ -9,8 +9,7 @@ HOMEPAGE=	http://www.gnuvola.org/software/guile-www/
 #Before ttn maintainership, formerly 1.1.1 at
 #HOMEPAGE=	http://www.gnu.org/software/guile/
 COMMENT=	Guile WWW module
-
-#LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2009/03/21 21:30:58 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.49 2009/05/19 08:59:22 wiz Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -13,7 +13,6 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/ \
 
 OWNER?=		jnemeth@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/
-
 LICENSE=	sendmail-license
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/sendmail/distinfo

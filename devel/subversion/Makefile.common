@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2009/04/29 23:52:14 gdt Exp $
+# $NetBSD: Makefile.common,v 1.32 2009/05/19 08:59:12 wiz Exp $
 # used by devel/java-subversion/Makefile
 # used by devel/p5-subversion/Makefile
 # used by devel/py-subversion/Makefile
@@ -13,7 +13,6 @@ MASTER_SITES=		http://subversion.tigris.org/tarballs/
 
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://subversion.tigris.org/
-
 LICENSE=		apache-1.1
 
 .include "../../devel/subversion/Makefile.version"

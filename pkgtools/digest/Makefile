@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/04/09 00:48:11 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2009/05/19 08:59:29 wiz Exp $
 #
 # When adding new digest algorithms, please use rmd160 as the template,
 # and bump the VERSION definition.
@@ -11,7 +11,7 @@ DISTFILES=	# empty
 MAINTAINER?=	agc@NetBSD.org
 HOMEPAGE?=	http://www.NetBSD.org/docs/software/packages.html
 COMMENT?=	Message digest wrapper utility
-#LICENSE=	original-bsd
+LICENSE=	original-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

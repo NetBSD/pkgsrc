@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2008/11/10 17:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2009/05/19 08:59:38 wiz Exp $
 
 PKGVER=		2.3.1
 DISTNAME=	openmotif-${PKGVER}
@@ -11,13 +11,10 @@ MASTER_SITES+=	ftp://ftp.ics.com/openmotif/2.3/2.3.1/
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.opengroup.org/openmotif/
 COMMENT=		The Open Group Motif toolkit for the X Window System
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		openmotif-license
 
 .include "../../mk/bsd.prefs.mk"
 
-LICENSE=		openmotif-license
 RESTRICTED=		Only for Open Source OS; complex terms for commercial distribution.
 
 # License grants permission to reproduce distfile for use on Open
@@ -36,6 +33,9 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 # offering.  Err on the side of caution and mark restricted.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		lesstif-[0-9]*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/09 16:52:05 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/19 08:59:00 wiz Exp $
 
 PKGNAME=		sapcar-7.00
 CATEGORIES=		archivers
@@ -60,8 +60,8 @@ BROKEN=		Plattform ${OPSYS} not supported
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		SAP archiver
-
 LICENSE=		sap-license
+
 RESTRICTED=		Only unmodified original package can be distributed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

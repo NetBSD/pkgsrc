@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/09/10 00:33:59 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:13 wiz Exp $
 #
 
 DISTNAME=		xm71010s
@@ -11,18 +11,18 @@ EXTRACT_SUFX=		.lzh
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		http://www.ipc-tokai.or.jp/~ytanaka/fm7/xm7.shtml
 COMMENT=		X11-based FM-7 emulator
-
-BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-NOT_FOR_BULK_PLATFORM=	Linux-*-*
-
 LICENSE=		xm7-license
+
 RESTRICTED=		source archive is not redistributable
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 EXTRACT_OPTS_LHA=	qt	# convert CRLF to LF
 

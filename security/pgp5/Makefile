@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2009/05/19 08:59:32 wiz Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -13,6 +13,8 @@ MASTER_SITES=	ftp://ftp.pgpi.com/pub/pgp/5.0/unix/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utilities (v5)
+# use of IDEA as crypto function
+LICENSE=	idea-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,9 +25,6 @@ CONFLICTS=	pgraf-[0-9]*  	# Both have a `pgps' executable
 WRKSRC=		${WRKDIR}/pgp50i/src
 CRYPTO=		YES
 GNU_CONFIGURE=	YES
-
-# use of IDEA as crypto function
-LICENSE=	fee-based-commercial-use
 
 PGPLIB=	${PREFIX}/share/pgp5
 

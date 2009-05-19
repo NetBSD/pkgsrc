@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2009/02/10 17:18:43 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2009/05/19 08:59:28 wiz Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -10,19 +10,19 @@ EXTRACT_SUFX=	_tar.gz
 MAINTAINER=	ambrisko@ambrisko.roble.com
 HOMEPAGE=	http://www.socks.permeo.com/
 COMMENT=	SOCKS v5 application layer gateway and clients
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS=	socks4-[0-9]*
-
 # XXX missing
 LICENSE=		socks5-license
+
 RESTRICTED=		no commercial use
 # Set all pending someone looking at the license.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=	socks4-[0-9]*
 
 # here are some extra configure args you may wish to use
 # see the readme file before screwing with them

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/19 08:59:02 wiz Exp $
 
 DISTNAME=	festlex_OALD
 PKGNAME=	festlex-oald-1.4.0
@@ -9,11 +9,11 @@ MASTER_SITES=	http://www.speech.cs.cmu.edu/festival/cstr/festival/1.4.1/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Oxford Advanced Learner's pronunciation dictionary for Festival
+LICENSE=	no-commercial-use
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
-USE_TOOLS+=	pax
 
-LICENSE=	no-commercial-use
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

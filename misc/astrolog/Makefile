@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2009/05/19 08:59:23 wiz Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -12,8 +12,8 @@ DISTFILES=	${DISTNAME}.shr ${EPHEM}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.astrolog.org/
 COMMENT=	Astrology program for X11 and alpha-numeric terminals
-
 LICENSE=	astrolog-license
+
 RESTRICTED=	Do not sell or profit from this software in any way
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}

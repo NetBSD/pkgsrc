@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/05/10 04:42:38 obache Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/19 08:59:07 wiz Exp $
 #
 
 DISTNAME=	tokyocabinet-1.4.20
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tokyocabinet.sourceforge.net/
 COMMENT=	Modern implementation of DBM
-
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir

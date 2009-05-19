@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/05 11:01:23 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:30 wiz Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.3
@@ -8,6 +8,13 @@ MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.3/enu/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
+LICENSE=	adobe-acrobat-license
+
+RESTRICTED=		Original installer required to redistribute.
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,13 +23,6 @@ CONFLICTS+=	acroread-5.*
 # maybe should do ALTERNATIVES?
 CONFLICTS+=	acroread5-5.*
 CONFLICTS+=	acroread7-7.*
-
-RESTRICTED=		Original installer required to redistribute.
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
-LICENSE=		adobe-acrobat-license
 
 WRKSRC=			${WRKDIR}/AdobeReader
 BUILD_DIRS=		# empty

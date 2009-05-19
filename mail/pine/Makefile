@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2008/11/13 14:21:05 tron Exp $
+# $NetBSD: Makefile,v 1.122 2009/05/19 08:59:22 wiz Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -11,11 +11,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	pine-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONF_FILES=    ${PREFIX}/share/examples/pine/pine.conf ${PKG_SYSCONFDIR}/pine.conf
 

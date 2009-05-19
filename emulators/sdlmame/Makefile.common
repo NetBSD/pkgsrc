@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/05/19 08:59:13 wiz Exp $
 #
 # used by emulators/sdlmess/Makefile
 
@@ -9,16 +9,16 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://rbelmont.mameworld.info/?page_id=163
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		mame-license
 
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
-LICENSE=		mame-license
 
 .if ${MACHINE_ARCH:Mi386}
 MAKE_FLAGS+=	X86_MIPS3_DRC=1

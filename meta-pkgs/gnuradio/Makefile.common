@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/05/19 08:59:23 wiz Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
@@ -12,6 +12,7 @@ MASTER_SITES?=	http://gnuradio.org/releases/gnuradio/
 
 MAINTAINER?=	wulf@NetBSD.org
 HOMEPAGE?=	http://www.gnu.org/software/gnuradio/
+LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -21,8 +22,6 @@ USE_TOOLS+=	gmake automake autoconf pkg-config
 BUILD_DEPENDS+=doxygen>=1.5.1:../../devel/doxygen
 
 PY_PATCHPLIST=	yes
-
-#LICENSE=	gplv3
 
 EGDIR=		${PREFIX}/share/examples/gnuradio/conf.d
 PKG_SYSCONFSUBDIR=gnuradio/conf.d

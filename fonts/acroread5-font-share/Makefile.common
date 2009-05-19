@@ -1,15 +1,15 @@
-# $NetBSD: Makefile.common,v 1.7 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/05/19 08:59:14 wiz Exp $
 #
 
 PKGNAME=	acroread5-${DISTNAME}-5.0
 MASTER_SITES=	ftp://ftp-pac.adobe.com/pub/adobe/acrobatreader/unix/5.x/
 
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
+LICENSE=	adobe-acrobat-license
 
 DEPENDS+=	acroread5-5.*:../../print/acroread5
 
 DIST_SUBDIR=	acrobat5-fonts
-LICENSE=	adobe-acrobat-license
 
 RESTRICTED=	Redistribution not permitted
 NO_SRC_ON_CDROM=${RESTRICTED}

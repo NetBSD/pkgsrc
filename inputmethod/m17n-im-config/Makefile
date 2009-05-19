@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/12 08:21:09 obache Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:19 wiz Exp $
 #
 
 DISTNAME=	m17n-im-config-0.9.0
@@ -8,7 +8,6 @@ MASTER_SITES=	http://www.m17n.org/m17n-lib-download/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.m17n.org/common/im-config/index.html
 COMMENT=	Configuration input methods of the m17n library
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

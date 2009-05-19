@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/24 19:21:34 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/19 08:59:39 wiz Exp $
 #
 
 DISTNAME=	xcruise-0.24
@@ -9,8 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcruiser/}
 MAINTAINER=	minoura@NetBSD.org
 HOMEPAGE=	http://xcruiser.sourceforge.net/
 COMMENT=	Navigate through a three-dimensional view of a file system
-
-# LICENSE=	GPL
+#LICENSE=	GPL
 
 USE_IMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/04/18 03:13:40 rh Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/19 08:59:09 wiz Exp $
 #
 
 DISTNAME=	gnustep-objc-1.6.0
@@ -9,10 +9,9 @@ MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/}
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	Objective-C runtime
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=		user-destdir
-
-LICENSE=			gnu-gpl-v3
 
 USE_LANGUAGES=			objc
 USE_TOOLS+=			gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2008/04/29 11:02:13 tron Exp $
+# $NetBSD: Makefile.common,v 1.31 2009/05/19 08:59:04 wiz Exp $
 
 DISTNAME=	mpg123-0.59r
 MPG123_VERSION=	0.59.18
@@ -11,12 +11,12 @@ PATCHFILES=	mpg123-059r-v6-20000713b.diff.gz
 
 MAINTAINER?=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mpg123.de/
+LICENSE=	mpg123-license
+
 DIST_SUBDIR=	mpg123
 PATCHDIR=	${.CURDIR}/../../audio/mpg123/patches
 FILESDIR=	${.CURDIR}/../../audio/mpg123/files
 DISTINFO_FILE=	${.CURDIR}/../../audio/mpg123/distinfo
-
-LICENSE=	mpg123-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

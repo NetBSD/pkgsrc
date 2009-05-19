@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/03/17 21:40:45 darcy Exp $
+# $NetBSD: Makefile,v 1.40 2009/05/19 08:59:11 wiz Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -12,8 +12,8 @@ EXTRACT_SUFX=		.tgz
 DISTFILES=		${DISTNAME}-${MAINFILEEXT}${EXTRACT_SUFX} \
 			pvs-${VERSION}-system${EXTRACT_SUFX} \
 			pvs-${VERSION}-libraries${EXTRACT_SUFX}
-
 LICENSE=		pvs-license
+
 # not quite sure about this, but to be on the safe side:
 RESTRICTED=		Redistribution not permitted - see ${HOMEPAGE}license.html
 NO_SRC_ON_CDROM=	${RESTRICTED}

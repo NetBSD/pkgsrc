@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2009/05/03 22:58:31 abs Exp $
+# $NetBSD: Makefile,v 1.77 2009/05/19 08:59:18 wiz Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	13
@@ -15,6 +15,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
 # and...	http://www.sonic.net/~roelofs/greg_xv.html
 COMMENT=	X11 program that displays images of various formats
+LICENSE=	xv-license
 
 SITES.xv-3.10a-jumbo-patches-20070520.tar.gz=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
 USE_IMAKE=	YES
@@ -30,7 +31,6 @@ MAKEFLAGS+=	PREFIX=${PREFIX:Q}
 MAKEFLAGS+=	PNGDIR=${BUILDLINK_PREFIX.png}
 CPPFLAGS+=	-DDOCDIR=\""${PREFIX:Q}/share/doc/xv"\"
 
-LICENSE=	xv-license
 BUILD_TARGET=	depend all
 
 SUBST_CLASSES+=		gspath

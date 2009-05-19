@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/09/14 13:54:45 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/19 08:59:25 wiz Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -13,17 +13,17 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	Simple library designed for accessing DVDs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
-
 # XXX missing
 LICENSE=	libdvdcss-license
+
 RESTRICTED=	Legal problems due to CSS code
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/19 08:59:00 wiz Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -10,14 +10,14 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=utils/compress/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=		unace-source-license
+
 RESTRICTED=		Only original file distribution.
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

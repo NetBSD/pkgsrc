@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/29 23:18:58 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/19 08:59:37 wiz Exp $
 #
 
 DISTNAME=	mod_wsgi-${VERSION}
@@ -9,7 +9,6 @@ MASTER_SITES=	http://modwsgi.googlecode.com/files/
 MAINTAINER=	jan.m.danielsson@gmail.com
 HOMEPAGE=	http://modwsgi.googlecode.com/
 COMMENT=	WSGI module for apache
-
 LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/03/10 03:29:37 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.40 2009/05/19 08:59:18 wiz Exp $
 
 DISTNAME=	pstoedit-3.45
 CATEGORIES=	converters graphics print
@@ -7,18 +7,18 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pstoedit.net/
 COMMENT=	Convert PostScript / PDF into various vector graphic formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=	unclear-license
 
 # man page indicates that there are many licenses and one has to read all
 # the source files
-LICENSE=	unclear-license
 RESTRICTED=	license is unclear
 RESTRICTED?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gs:run
 

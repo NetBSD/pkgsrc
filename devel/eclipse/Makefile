@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/03/22 02:31:39 jschauma Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/19 08:59:08 wiz Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
-
 LICENSE=	eclipse-license
 
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant

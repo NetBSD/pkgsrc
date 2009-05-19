@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.225 2009/05/14 17:12:10 martti Exp $
+# $NetBSD: Makefile,v 1.226 2009/05/19 08:59:22 wiz Exp $
 
 DISTNAME=	postfix-2.6.0
 PKGREVISION=	1
@@ -12,7 +12,6 @@ DIST_SUBDIR=	postfix
 MAINTAINER=	martti@NetBSD.org
 HOMEPAGE=	http://www.postfix.org/
 COMMENT=	Postfix SMTP server and tools
-
 LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/02/15 14:46:27 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2009/05/19 08:59:21 wiz Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	4
@@ -8,15 +8,15 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Visual mail, user and print face server
+LICENSE=	faces-license
+
+RESTRICTED=	Distribution not allowed if money exchanged
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 DEPENDS+=	netpbm>=9.2:../../graphics/netpbm
 
 CONFLICTS=	compface-[0-9]*
-
-LICENSE=	faces-license
-RESTRICTED=	Distribution not allowed if money exchanged
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=			${WRKDIR}/faces
 USE_X11BASE=		YES

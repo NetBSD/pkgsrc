@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:20 wiz Exp $
 #
 
 DISTNAME=	twelf-1-4
@@ -9,15 +9,15 @@ MASTER_SITES=	http://www.cs.cmu.edu/~twelf/dist/
 MAINTAINER=	richards+netbsd@CS.Princeton.EDU
 HOMEPAGE=	http://www.cs.cmu.edu/~twelf/
 COMMENT=	Meta-language for proving properties of languages and logics
-
-DEPENDS+=	smlnj>=110.38:../../lang/smlnj
-
 LICENSE=	generic-nonlicense
+
 RESTRICTED=	License terms not specified; assume no redistribution rights
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+DEPENDS+=	smlnj>=110.38:../../lang/smlnj
 
 USE_TOOLS+=	pax
 

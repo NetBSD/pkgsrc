@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/09/04 19:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2009/05/19 08:59:33 wiz Exp $
 
 DISTNAME=		vlp4510e
 PKGNAME=		uvscan-5.10
@@ -10,15 +10,15 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mcafee.com/us/enterprise/products/anti_virus/file_servers_desktops/virusscan_command_line_scanner_windows_unix.html
 COMMENT=		Evaluation version of a DOS/Windows file virus scanner
-
-CONFLICTS=		uvscan-dat-[0-9]*
-
 LICENSE=		uvscan-license
+
 RESTRICTED=		restrictive 30 day evaluation license
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+
+CONFLICTS=		uvscan-dat-[0-9]*
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	compat

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:25 wiz Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
@@ -11,6 +11,11 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://3proxy.ru/
 COMMENT=	Multi-protocol proxy
+# 3proxy-0.5.* is dual-licenced under GPL or custom terms.  It's not
+# clear exactly which version of the GPL is intended; ${WRKSRC}/License
+# says "current version of GNU GPL" without specifying a numeric version
+# number.  3proxy-0.6.* will have a different license.
+LICENSE=	3proxy-0.5-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,12 +23,6 @@ WRKSRC=		${WRKDIR}
 MAKE_FILE=	Makefile.unix
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
-
-# 3proxy-0.5.* is dual-licenced under GPL or custom terms.  It's not
-# clear exactly which version of the GPL is intended; ${WRKSRC}/License
-# says "current version of GNU GPL" without specifying a numeric version
-# number.  3proxy-0.6.* will have a different license.
-LICENSE=	3proxy-0.5-license
 
 # We install only 3proxy and its man pages.  There are several other
 # binaries which we don't install, because the 3proxy executable

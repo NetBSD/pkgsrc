@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2009/05/04 20:39:55 zafer Exp $
+# $NetBSD: Makefile,v 1.101 2009/05/19 08:59:31 wiz Exp $
 
 DISTNAME=	gnupg-1.4.9
 CATEGORIES=	security
@@ -15,6 +15,7 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnupg.org/
 COMMENT=	GNU Privacy Guard, public-Key encryption and digital signatures
+LICENSE=	gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -27,7 +28,6 @@ CONFIGURE_ARGS+=	--with-static-rnd=auto
 CONFIGURE_ARGS+=	--with-mailprog=/usr/sbin/sendmail
 TEST_TARGET=		check
 INFO_FILES=		# PLIST
-#LICENSE=		gnu-gplv3
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 

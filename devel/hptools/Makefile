@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/19 08:59:09 wiz Exp $
 #
 
 DISTNAME=	hptools-src-3.0.8
@@ -9,12 +9,12 @@ MASTER_SITES=	http://www.hpcalc.org/hp48/pc/programming/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hpcalc.org/hp48/pc/programming/
 COMMENT=	SDK for Hewlett-Packard HP-48G/49G/39G/40G calculators
+LICENSE=	hptools-license
 
 RESTRICTED=	Redistribution of unmodified source only; resale prohibited.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-LICENSE=	hptools-license
 
 WRKSRC=		${WRKDIR}/Hptools
 GNU_CONFIGURE=	YES

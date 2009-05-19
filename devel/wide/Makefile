@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/03/17 21:40:45 darcy Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:12 wiz Exp $
 #
 
 DISTNAME=		wide
@@ -11,14 +11,13 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www2.mta.ac.il/~tal/WIDE/
 COMMENT=		IDE for the While programming language
+LICENSE=		eclipse-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/WIDE
 EXTRACT_OPTS_ZIP=	-aqo
-
-LICENSE=		eclipse-license
 
 PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/19 08:59:33 wiz Exp $
 #
 
 DISTNAME=	checkperms-1.10
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.schlechte-software.de/checkperms/
 MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.schlechte-software.de/checkperms/
 COMMENT=	Check and correct file permissions
-#LICENSE=	modified-bsd
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=			yes

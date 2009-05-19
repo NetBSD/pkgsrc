@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2009/04/19 00:50:11 rh Exp $
+# $NetBSD: Makefile,v 1.47 2009/05/19 08:59:09 wiz Exp $
 
 DISTNAME=	gnustep-make-2.0.8
 PKGREVISION=	2
@@ -8,11 +8,10 @@ MASTER_SITES=	${MASTER_SITE_GNUSTEP:=core/}
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.org/
 COMMENT=	GNUstep makefile package
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		objc
 USE_TOOLS+=		csh
