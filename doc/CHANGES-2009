@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1936 2009/05/19 11:22:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1937 2009/05/19 11:45:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2599,3 +2599,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/windowmaker to 0.92.0nb8 [wiz 2009-05-19]
 	Updated graphics/eog to 2.26.2 [wiz 2009-05-19]
 	Updated x11/gtk2-engines to 2.18.2 [wiz 2009-05-19]
+	Updated games/gnome-games to 2.26.2 [wiz 2009-05-19]
