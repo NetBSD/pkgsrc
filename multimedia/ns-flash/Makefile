@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/03/06 19:10:52 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2009/05/19 08:59:25 wiz Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current/9/
@@ -6,17 +6,17 @@ MASTER_SITES=		http://download.macromedia.com/pub/flashplayer/installers/current
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.flash.com/
 COMMENT=		MacroMedia Flash Player Netscape plugin
-
-# Must update communicator/navigator to at least 4.76nb1
-CONFLICTS+=		communicator<=4.76nb1
-CONFLICTS+=		navigator<=4.76nb1
-
 LICENSE=		flash-license
+
 RESTRICTED=		Redistribution not permitted
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+# Must update communicator/navigator to at least 4.76nb1
+CONFLICTS+=		communicator<=4.76nb1
+CONFLICTS+=		navigator<=4.76nb1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

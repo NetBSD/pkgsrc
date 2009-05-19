@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2009/05/02 20:04:32 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2009/05/19 08:59:31 wiz Exp $
 
 DISTNAME=	gnutls-2.6.6
 CATEGORIES=	security devel
@@ -10,7 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnutls.org/
 COMMENT=	GNU Transport Layer Security library
-
 #LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v2.1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews

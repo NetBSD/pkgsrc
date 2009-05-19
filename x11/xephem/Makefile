@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/05/30 17:04:04 drochner Exp $
+# $NetBSD: Makefile,v 1.52 2009/05/19 08:59:39 wiz Exp $
 
 DISTNAME=	xephem-3.7.3
 CATEGORIES=	x11
@@ -7,8 +7,7 @@ MASTER_SITES=	http://www.clearskyinstitute.com/xephem/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.clearskyinstitute.com/xephem/
 COMMENT=	Interactive astronomical ephemeris program
-
-LICENSE=		xephem-license
+LICENSE=	xephem-license
 
 # Pending adjustment of license wording to clarify the copyright
 # holder's intent, permission has been granted to distribute the

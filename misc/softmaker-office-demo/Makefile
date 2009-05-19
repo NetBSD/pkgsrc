@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/25 21:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/19 08:59:24 wiz Exp $
 #
 
 DISTNAME=	ofl06trial
@@ -10,8 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.softmaker.net/
 COMMENT=	SoftMaker Office (TextMaker and PlanMaker) demo version (Linux binary)
+LICENSE=	softmaker-office-demo-license
 
-LICENSE=		softmaker-office-demo-license
 RESTRICTED=		Only separately distributed, exact copies, for no fee
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

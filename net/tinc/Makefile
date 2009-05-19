@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/04/18 19:27:11 tonnerre Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:28 wiz Exp $
 #
 
 DISTNAME=	tinc-1.0.9
@@ -7,8 +7,8 @@ MASTER_SITES=	http://www.tinc-vpn.org/packages/
 
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://www.tinc-vpn.org/
-LICENSE=	gnu-gpl-v2
 COMMENT=	Virtual Private Network (VPN) daemon
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

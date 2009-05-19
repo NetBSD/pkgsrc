@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/08/19 13:33:09 obache Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/19 08:59:39 wiz Exp $
 #
 
 DISTNAME=	xclip-0.11
@@ -8,8 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xclip/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/xclip/
 COMMENT=	Command line interface to the X windows clipboard
-
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2009/05/19 08:59:19 wiz Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -11,6 +11,13 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sun.com/software/jini/
 COMMENT=		Suns Jini(tm) Technology Starter Kit
+LICENSE=		scsl3-jini-tsa-1.0-license
+
+RESTRICTED=		Redistribution of repackaged binaries not permitted
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 
 ONLY_FOR_PLATFORM=	Darwin-*-* Linux-*-* NetBSD-1.[6-9]*-*
 ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-*
@@ -18,12 +25,6 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-*
 ONLY_FOR_PLATFORM+=	NetBSD-1.5Z[D-Z]-*
 
 INTERACTIVE_STAGE=	fetch
-LICENSE=		scsl3-jini-tsa-1.0-license
-RESTRICTED=		Redistribution of repackaged binaries not permitted
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_SRC_ON_FTP=		${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_FTP=		${RESTRICTED}
 
 USE_TOOLS+=	pax
 

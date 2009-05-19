@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/13 10:20:17 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/19 08:59:17 wiz Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.9
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/
 COMMENT=	C++ interface around dcraw
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

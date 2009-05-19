@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/04/09 00:48:11 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/19 08:59:29 wiz Exp $
 
 DISTNAME=	p5-pkgsrc-Dewey-1.1
 CATEGORIES=	pkgtools perl5
@@ -8,7 +8,7 @@ DISTFILES=	# empty
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Perl module to compare pkgsrc Dewey numbers
-#LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir

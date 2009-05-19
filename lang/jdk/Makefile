@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2009/05/19 08:59:19 wiz Exp $
 #
 
 VERSION=	1.1.8
@@ -11,7 +11,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sun's Java(tm) Development Kit
-
 LICENSE=	jdk-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir

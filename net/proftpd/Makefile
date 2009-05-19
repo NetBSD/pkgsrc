@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2009/02/09 11:57:48 tron Exp $
+# $NetBSD: Makefile,v 1.56 2009/05/19 08:59:28 wiz Exp $
 
 DISTNAME=		proftpd-1.3.2
 PKGREVISION=		1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.proftpd.org/
 COMMENT=		FTP server with Apache like configuration
-#LICENSE=		gnu-gpl-v2
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
