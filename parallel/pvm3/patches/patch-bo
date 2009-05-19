@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.4 2007/10/14 11:33:31 rillig Exp $
+$NetBSD: patch-bo,v 1.5 2009/05/19 23:44:55 asau Exp $
 
 --- src/host.c.orig	2004-01-14 19:50:55.000000000 +0100
 +++ src/host.c	2007-10-14 13:31:44.000000000 +0200
@@ -24,7 +24,7 @@ $NetBSD: patch-bo,v 1.4 2007/10/14 11:33:31 rillig Exp $
  		}
  		/* On some FreeBSD systems: */
  		/* if (IFF_UP & req.ifr_flags) { */
-+#ifdef IMA_DRAGONFLY
++#if defined(IMA_FREEBSD) || defined(IMA_DRAGONFLY)
 +		if (IFF_UP & req.ifr_flags) {
 +#else
  		if (IFF_UP & req.ifr_ifru.ifru_flags) {
