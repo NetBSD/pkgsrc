@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1968 2009/05/19 23:16:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1969 2009/05/19 23:21:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2631,3 +2631,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Scalar-Defer to 0.20 [sno 2009-05-19]
 	Updated devel/p5-Object-InsideOut to 3.55 [sno 2009-05-19]
 	Updated devel/p5-Scope-Upper to 0.09 [sno 2009-05-19]
+	Updated devel/p5-Test-Output to 0.16 [sno 2009-05-19]
