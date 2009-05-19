@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1922 2009/05/18 22:04:54 abs Exp $
+$NetBSD: CHANGES-2009,v 1.1923 2009/05/19 00:36:38 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/xorg-util-macros to 1.2.1 [hasso 2009-05-18]
 	Updated sysutils/libpciaccess to 0.10.6 [hasso 2009-05-18]
 	Updated lang/openjdk7-bin to 20090502 [abs 2009-05-18]
+	Updated audio/cdparanoia to 3.0.9.8nb8 [dholland 2009-05-19]
