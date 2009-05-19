@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1951 2009/05/19 18:55:32 snj Exp $
+$NetBSD: CHANGES-2009,v 1.1952 2009/05/19 18:56:55 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2614,3 +2614,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/totem-pl-parser to 2.26.2 [wiz 2009-05-19]
 	Added devel/eina version 0.0.2.060 [minskim 2009-05-19]
 	Updated net/youtube-dl to 20090513 [snj 2009-05-19]
+	Updated devel/p5-Storable to 2.20 [sno 2009-05-19]
