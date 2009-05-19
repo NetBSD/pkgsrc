@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2009/04/17 17:55:53 drochner Exp $
+# $NetBSD: Makefile,v 1.62 2009/05/19 15:18:26 wiz Exp $
 #
 
-DISTNAME=	gucharmap-2.26.1
+DISTNAME=	gucharmap-2.26.2
 CATEGORIES=	fonts gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Gucharmap
 COMMENT=	Unicode/ISO10646 character map and font viewer
+# unicode-license = BSD style?
+#LICENSE=	gnu-gpl-v2 AND unicode-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
