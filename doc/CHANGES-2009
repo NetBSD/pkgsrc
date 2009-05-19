@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1959 2009/05/19 21:42:32 he Exp $
+$NetBSD: CHANGES-2009,v 1.1960 2009/05/19 21:46:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2622,3 +2622,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Inline to 2.209 [sno 2009-05-19]
 	Updated devel/gdl to 2.26.2 [wiz 2009-05-19]
 	Updated lang/parrot to 1.1.0 [he 2009-05-19]
+	Updated sysutils/nautilus to 2.26.3nb1 [wiz 2009-05-19]
