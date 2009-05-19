@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1929 2009/05/19 07:50:29 obache Exp $
+$NetBSD: CHANGES-2009,v 1.1930 2009/05/19 07:52:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CatalystX-CRUD-YUI to 0.019 [sno 2009-05-19]
 	Updated devel/p5-CPAN-DistnameInfo to 0.08 [sno 2009-05-19]
 	Updated devel/libgphoto2 to 2.4.6 [obache 2009-05-19]
+	Updated graphics/gphoto2 to 2.4.5 [obache 2009-05-19]
