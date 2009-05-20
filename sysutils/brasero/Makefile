@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 13:21:13 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/20 13:43:21 wiz Exp $
 #
 
 DISTNAME=	brasero-2.26.2
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=	--disable-inotify
 GCONF_SCHEMAS+=		brasero.schemas
 PKGCONFIG_OVERRIDE+=	libbrasero-media.pc.in
 
+# sent upstream in http://bugzilla.gnome.org/show_bug.cgi?id=583332
 post-extract:
 	cp ${FILESDIR}/scsi-netbsd.c ${WRKSRC}/libbrasero-media/
 
