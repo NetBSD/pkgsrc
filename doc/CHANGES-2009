@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1992 2009/05/20 15:37:51 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1993 2009/05/20 20:21:51 asau Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/brasero to 2.26.2 [wiz 2009-05-20]
 	Updated time/py-icalendar to 2.0.1 [wiz 2009-05-20]
 	Updated graphics/cheese to 2.26.2 [wiz 2009-05-20]
+	Updated net/tcpdump to 4.0.0 [asau 2009-05-20]

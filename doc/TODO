@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8123 2009/05/20 15:54:36 wiz Exp $
+$NetBSD: TODO,v 1.8124 2009/05/20 20:21:51 asau Exp $
 
 Suggested new packages
 ======================
@@ -1298,7 +1298,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
-	o tcpdump-4.0.0
 	o tcpillust-1.00b
 	o tcpslice-1.2a3
 	o tct-1.16
