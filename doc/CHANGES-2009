@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1989 2009/05/20 13:11:00 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1990 2009/05/20 13:21:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2653,3 +2653,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/gedit to 2.26.2 [wiz 2009-05-20]
 	Updated devel/glib2 to 2.20.2 [wiz 2009-05-20]
 	Updated x11/gtksourceview2 to 2.6.2 [wiz 2009-05-20]
+	Updated sysutils/brasero to 2.26.2 [wiz 2009-05-20]
