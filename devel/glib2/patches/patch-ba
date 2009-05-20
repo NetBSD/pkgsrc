@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.6 2009/03/15 13:32:31 jmcneill Exp $
+$NetBSD: patch-ba,v 1.7 2009/05/20 13:07:36 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583330
 
 --- gio/gunixmounts.c.orig	2009-03-13 00:09:53.000000000 -0400
 +++ gio/gunixmounts.c

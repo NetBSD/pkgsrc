@@ -1,4 +1,7 @@
-$NetBSD: patch-ai,v 1.16 2008/11/30 22:25:01 ahoka Exp $
+$NetBSD: patch-ai,v 1.17 2009/05/20 13:07:36 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583321
+http://bugzilla.gnome.org/show_bug.cgi?id=583324
 
 --- glib/gmain.c.orig	2008-11-24 06:45:23.000000000 +0100
 +++ glib/gmain.c

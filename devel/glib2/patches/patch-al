@@ -1,4 +1,6 @@
-$NetBSD: patch-al,v 1.4 2008/09/06 11:07:20 obache Exp $
+$NetBSD: patch-al,v 1.5 2009/05/20 13:07:36 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583329
 
 --- tests/convert-test.c.orig	2008-09-02 15:09:28.000000000 +0000
 +++ tests/convert-test.c
