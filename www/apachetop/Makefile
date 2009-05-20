@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:55 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/20 00:58:29 wiz Exp $
 #
 
 DISTNAME=	apachetop-0.12.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils www
 MASTER_SITES=	http://spork.qfe3.net/apachetop/files/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2008/11/06 08:33:31 bjs Exp $
+# $NetBSD: Makefile,v 1.41 2009/05/20 00:58:29 wiz Exp $
 
 DISTNAME=		elinks-0.12pre2
 PKGNAME=		${DISTNAME:S/pre/rc/}
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://elinks.or.cz/download/ \
 			http://ftp.icm.edu.pl/packages/elinks/

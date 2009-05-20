@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/08/17 07:08:24 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/20 00:58:28 wiz Exp $
 #
 
 DISTNAME=	luaexpat-1.0a
 PKGNAME=	${DISTNAME:S/lua/lua-/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.keplerproject.org/luaexpat/
 

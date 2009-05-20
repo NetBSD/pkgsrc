@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:08 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/20 00:58:22 wiz Exp $
 #
 
 DISTNAME=		libmatheval-1.1.4
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_GNU:=libmatheval/}
 

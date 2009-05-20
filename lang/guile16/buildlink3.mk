@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:50 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2009/05/20 00:58:19 wiz Exp $
 
 BUILDLINK_TREE+=	guile16
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	guile16
 GUILE16_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.guile16+=	guile16>=1.6.8
-BUILDLINK_ABI_DEPENDS.guile16+=	guile16>=1.6.8
+BUILDLINK_ABI_DEPENDS.guile16+=	guile16>=1.6.8nb3
 BUILDLINK_PKGSRCDIR.guile16?=	../../lang/guile16
 
 BUILDLINK_PASSTHRU_DIRS=	${LOCALBASE}/guile/1.6

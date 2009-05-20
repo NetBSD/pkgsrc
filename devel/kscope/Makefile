@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/06/04 09:30:07 markd Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/20 00:58:13 wiz Exp $
 #
 
 DISTNAME=		kscope-1.6.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kscope/}
 
