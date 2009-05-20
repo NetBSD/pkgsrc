@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1987 2009/05/20 10:01:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1988 2009/05/20 11:09:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/dovecot to 1.1.15 [ghen 2009-05-20]
 	Updated editors/tomboy to 0.14.2 [wiz 2009-05-20]
 	Updated editors/gedit to 2.26.2 [wiz 2009-05-20]
+	Updated devel/glib2 to 2.20.2 [wiz 2009-05-20]
