@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2007/03/24 20:58:20 markd Exp $
+$NetBSD: patch-aj,v 1.5 2009/05/20 13:07:36 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=133344
 
 --- glib/giounix.c.orig	2007-01-30 02:23:28.238812000 +1300
 +++ glib/giounix.c
