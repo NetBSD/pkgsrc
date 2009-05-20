@@ -1,8 +1,17 @@
-$NetBSD: patch-ar,v 1.1 2007/04/06 12:44:38 markd Exp $
+$NetBSD: patch-ar,v 1.2 2009/05/20 01:00:40 wiz Exp $
 
---- src/tools/qstring.cpp
+--- src/tools/qstring.cpp.orig	2007-02-02 14:01:05.000000000 +0000
 +++ src/tools/qstring.cpp
-@@ -5805,6 +5805,7 @@
+@@ -1362,7 +1362,7 @@ QT_STATIC_CONST_IMPL QChar QChar::nbsp((
+ QStringData* QString::makeSharedNull()
+ {
+     QString::shared_null = new QStringData;
+-#if defined( Q_OS_MAC ) || defined(Q_OS_SOLARIS) || defined(Q_OS_HPUX) || defined(Q_OS_AIX)
++#if defined( Q_OS_MAC ) || defined(Q_OS_SOLARIS) || defined(Q_OS_HPUX) || defined(Q_OS_AIX) || defined(Q_OS_NETBSD)
+     QString *that = const_cast<QString *>(&QString::null);
+     that->d = QString::shared_null;
+ #endif
+@@ -5805,6 +5805,7 @@ QString QString::fromUtf8( const char* u
      result.setLength( len ); // worst case
      QChar *qch = (QChar *)result.unicode();
      uint uc = 0;
@@ -10,7 +19,7 @@ $NetBSD: patch-ar,v 1.1 2007/04/06 12:44:38 markd Exp $
      int need = 0;
      int error = -1;
      uchar ch;
-@@ -5822,6 +5823,12 @@
+@@ -5822,6 +5823,12 @@ QString QString::fromUtf8( const char* u
  			unsigned short low = uc%0x400 + 0xdc00;
  			*qch++ = QChar(high);
  			*qch++ = QChar(low);
@@ -23,7 +32,7 @@ $NetBSD: patch-ar,v 1.1 2007/04/06 12:44:38 markd Exp $
  		    } else {
  			*qch++ = uc;
  		    }
-@@ -5844,14 +5851,17 @@
+@@ -5844,14 +5851,17 @@ QString QString::fromUtf8( const char* u
  		uc = ch & 0x1f;
  		need = 1;
  		error = i;
