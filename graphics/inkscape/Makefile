@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2008/05/30 12:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/05/20 12:00:17 tnn Exp $
 
 DISTNAME=	inkscape-0.46
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,6 +40,7 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
