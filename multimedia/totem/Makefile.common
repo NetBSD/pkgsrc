@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2009/05/19 20:19:11 wiz Exp $
+# $NetBSD: Makefile.common,v 1.48 2009/05/20 00:51:24 wiz Exp $
 #
 # used by multimedia/totem-browser-plugin/Makefile
 # used by multimedia/totem-nautilus/Makefile
@@ -11,7 +11,7 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.26/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
 COMMENT=	Movie player for the GNOME Desktop
-#LICENSE=	gnu-gpl-v2 with an exception clause
+LICENSE=	gnu-gpl-v2 # with an exception clause
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
