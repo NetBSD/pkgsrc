@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/03/16 10:49:06 jmcneill Exp $
+$NetBSD: patch-aa,v 1.2 2009/05/20 13:43:21 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583332
 
 --- configure.in.orig	2009-03-15 20:47:59.000000000 -0400
 +++ configure.in
