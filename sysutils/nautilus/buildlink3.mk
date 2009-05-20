@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2009/03/20 19:25:25 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2009/05/20 13:19:04 wiz Exp $
 
 BUILDLINK_TREE+=	nautilus
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.nautilus?=	../../sysutils/nautilus
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus$$/ \
 				{ print "@comment in nautilus: " $$0; next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-1.0$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-2.0$$/ \
 				{ print "@comment in nautilus: " $$0; next; }
 
 .include "../../devel/GConf/buildlink3.mk"
