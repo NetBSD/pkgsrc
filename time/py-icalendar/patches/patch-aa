@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/05/20 13:38:47 wiz Exp $
+
+--- src/icalendar/prop.py.orig	2008-07-11 19:56:43.000000000 +0000
++++ src/icalendar/prop.py
+@@ -1059,7 +1059,7 @@ class vText(unicode):
+     encoding = 'utf-8'
+ 
+     def __init__(self, *args, **kwargs):
+-        unicode.__init__(self, *args, **kwargs)
++        unicode.__init__(self)
+         self.params = Parameters()
+ 
+     def escape(self):
