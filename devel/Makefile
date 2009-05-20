@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1169 2009/05/20 02:17:47 jakllsch Exp $
+# $NetBSD: Makefile,v 1.1170 2009/05/20 21:59:24 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -430,6 +430,7 @@ SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-B-Hooks-EndOfScope
 SUBDIR+=	p5-B-Hooks-OP-Check
+SUBDIR+=	p5-B-Hooks-OP-Check-StashChange
 SUBDIR+=	p5-B-Hooks-OP-PPAddr
 SUBDIR+=	p5-B-Hooks-Parser
 SUBDIR+=	p5-B-Keywords
