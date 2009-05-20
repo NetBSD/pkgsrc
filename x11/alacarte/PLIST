@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/22 14:40:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/20 06:40:30 wiz Exp $
 bin/alacarte
 ${PYSITELIB}/Alacarte/MainWindow.py
 ${PYSITELIB}/Alacarte/MainWindow.pyc
@@ -15,7 +15,7 @@ ${PYSITELIB}/Alacarte/config.pyo
 ${PYSITELIB}/Alacarte/util.py
 ${PYSITELIB}/Alacarte/util.pyc
 ${PYSITELIB}/Alacarte/util.pyo
-share/alacarte/alacarte.glade
+share/alacarte/alacarte.ui
 share/applications/alacarte.desktop
 share/icons/hicolor/16x16/apps/alacarte.png
 share/icons/hicolor/22x22/apps/alacarte.png
@@ -28,6 +28,7 @@ share/locale/as/LC_MESSAGES/alacarte.mo
 share/locale/ast/LC_MESSAGES/alacarte.mo
 share/locale/be/LC_MESSAGES/alacarte.mo
 share/locale/be@latin/LC_MESSAGES/alacarte.mo
+share/locale/bem/LC_MESSAGES/alacarte.mo
 share/locale/bg/LC_MESSAGES/alacarte.mo
 share/locale/bn/LC_MESSAGES/alacarte.mo
 share/locale/bn_IN/LC_MESSAGES/alacarte.mo
@@ -100,9 +101,18 @@ share/locale/vi/LC_MESSAGES/alacarte.mo
 share/locale/zh_CN/LC_MESSAGES/alacarte.mo
 share/locale/zh_HK/LC_MESSAGES/alacarte.mo
 share/locale/zh_TW/LC_MESSAGES/alacarte.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm share/alacarte
 @dirrm ${PYSITELIB}/Alacarte
