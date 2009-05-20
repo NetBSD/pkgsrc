@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8119 2009/05/20 00:12:32 asau Exp $
+$NetBSD: TODO,v 1.8120 2009/05/20 01:09:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -526,7 +526,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ddrescue-1.10
 	o defendguin-0.0.11
 	o delegate-9.9.3
-	o deskbar-applet-2.26.2
 	o devIL-1.7.8
 	o devhelp-0.22
 	o dhid-5.3
@@ -568,7 +567,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
 	o enlightenment-0.16.8.12
-	o eog-2.26.2
 	o epdfview-0.1.7
 	o epic4-2.6
 	o epiphany-2.26.2
@@ -584,7 +582,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o et-2.60
 	o etach-1.4.1
 	o etm-230
-	o evince-2.26.2
 	o evolution-2.26.2
 	o evolution-data-server-2.26.2
 	o evolution-exchange-2.26.2
@@ -608,7 +605,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fetchyahoo-2.13.0
 	o ffmpeg-0.5
 	o file-5.01
-	o file-roller-2.26.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.1
@@ -648,7 +644,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
-	o gdl-2.26.2
 	o gdm-2.26.1 [GNOME 2.26]
 	o gdsreader-0.3.2
 	o geany-0.17
@@ -686,12 +681,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnash-0.8.5
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-devel-docs-2.26.2
-	o gnome-games-2.26.2
 	o gnome-packagekit-0.4.5
 	o gnome-power-manager-2.26.1 [GNOME 2.26, wants DeviceKit-power]
-	o gnome-terminal-2.26.2
-	o gnome-user-docs-2.26.2
 	o gnome-user-share-2.26.0 [GNOME 2.26]
 	o gnome-web-photo-0.6 [GNOME 2.26]
 	o gnomeicu-0.99.14
@@ -728,7 +719,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtexinfo-4.13
 	o gtick-0.4.2
 	o gtk-systrace-20030623
-	o gtk2-engines-2.18.2
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
@@ -738,7 +728,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o gtranslator-1.9.5
-	o gucharmap-2.26.2
 	o guile-gtk-2.0
 	o gutenprint-5.2.2
 	o gv-3.6.7
@@ -746,7 +735,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gxemul-0.4.7.1
 	o hackbot-2.21
 	o hal-0.5.12
-	o hamster-applet-2.26.2
 	o hanzim-2.4
 	o haskell-mode-1.45
 	o hatari-1.2.0
@@ -956,7 +944,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o modular-xorg-server-1.6.1.901
 	o monotone-0.44
 	o moserial-2.26.1 [GNOME 2.26]
-	o mousetweaks-2.26.2
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
 	o mpg123-1.7.3
@@ -1031,7 +1018,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openssl-0.9.8k
 	o openttd-0.7.0
 	o opera-9.64
-	o orca-2.26.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1368,8 +1354,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tob-0.26
 	o tomboy-0.14.2 [GNOME 2.26]
 	o top-3.8beta1
-	o totem-2.26.2
-	o totem-pl-parser-2.26.2
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11.4
