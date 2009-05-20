@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/05/20 02:16:14 jakllsch Exp $
+
+SHA1 (pyusb-0.4.1.tar.gz) = 2673dc6d4532f1a07e4a5131eebce2489bf11111
+RMD160 (pyusb-0.4.1.tar.gz) = b85e59eb520814267438d7c9bb5026fa8d9b7986
+Size (pyusb-0.4.1.tar.gz) = 16703 bytes
