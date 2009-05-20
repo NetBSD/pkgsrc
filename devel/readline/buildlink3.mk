@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2009/03/20 19:24:28 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2009/05/20 00:58:14 wiz Exp $
 
 BUILDLINK_TREE+=	readline
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	readline
 READLINE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.readline+=	readline>=2.2
-BUILDLINK_ABI_DEPENDS.readline+=	readline>=5.0
+BUILDLINK_ABI_DEPENDS.readline+=	readline>=6.0
 BUILDLINK_PKGSRCDIR.readline?=		../../devel/readline
 
 BUILDLINK_FILES.readline+=	include/history.h

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2009/02/09 22:56:23 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/05/20 00:58:16 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
+PKGREVISION=		2
 COMMENT=	Freeciv game server
 
 DEPENDS+=	freeciv-share>=${FC_VERS}:../../games/freeciv-share

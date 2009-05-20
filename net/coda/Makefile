@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/20 00:58:25 wiz Exp $
 #
 
 DISTNAME=	coda-6.9.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 

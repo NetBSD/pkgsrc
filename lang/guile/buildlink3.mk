@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:24:50 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/05/20 00:58:19 wiz Exp $
 
 BUILDLINK_TREE+=	guile
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	guile
 GUILE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.guile+=	guile>=1.8.1
-BUILDLINK_ABI_DEPENDS.guile+=	guile>=1.8.1
+BUILDLINK_ABI_DEPENDS.guile+=	guile>=1.8.6nb4
 BUILDLINK_PKGSRCDIR.guile?=	../../lang/guile
 
 .include "../../devel/gmp/buildlink3.mk"

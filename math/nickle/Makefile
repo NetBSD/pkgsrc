@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/20 00:58:22 wiz Exp $
 #
 
 DISTNAME=	nickle-2.67
+PKGREVISION=	1
 CATEGORIES=	math lang
 MASTER_SITES=	http://nickle.org/release/
 

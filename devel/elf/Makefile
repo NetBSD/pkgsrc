@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2007/05/25 18:22:45 heinz Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/20 00:58:12 wiz Exp $
 #
 
 DISTNAME=	elf-0.5.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_BACKUP} \
 		http://www.kerneled.com/projects/elf/
