@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/03/22 19:01:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/20 13:21:13 wiz Exp $
 #
 
-DISTNAME=	brasero-2.26.0
-PKGREVISION=	1
+DISTNAME=	brasero-2.26.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/brasero/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,12 +9,11 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://projects.gnome.org/brasero/
 COMMENT=	Disc-burning software for the GNOME desktop
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake intltool autoconf automake gawk msgfmt
 USE_DIRS+=	gnome2-1.6
