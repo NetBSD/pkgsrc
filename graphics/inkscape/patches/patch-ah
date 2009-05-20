@@ -1,0 +1,28 @@
+$NetBSD: patch-ah,v 1.3 2009/05/20 12:00:17 tnn Exp $
+
+--- src/widgets/sp-color-slider.cpp.orig	2009-05-20 13:21:10.000000000 +0200
++++ src/widgets/sp-color-slider.cpp
+@@ -12,6 +12,7 @@
+  * This code is in public domain
+  */
+ 
++#include <gtk/gtkversion.h>
+ #include <gtk/gtksignal.h>
+ #include "sp-color-scales.h"
+ 
+@@ -330,8 +331,14 @@ sp_color_slider_set_adjustment (SPColorS
+ 	g_return_if_fail (SP_IS_COLOR_SLIDER (slider));
+ 
+ 	if (!adjustment) {
+-		adjustment = (GtkAdjustment *) gtk_adjustment_new (0.0, 0.0, 1.0, 0.01, 0.1, 0.1);
++		adjustment = (GtkAdjustment *) gtk_adjustment_new (0.0, 0.0, 1.0, 0.01, 0.0, 0.0);
+ 	}
++#if GTK_CHECK_VERSION (2,14,0)
++    else {
++        gtk_adjustment_set_page_increment(adjustment, 0.0);
++        gtk_adjustment_set_page_size(adjustment, 0.0);
++    }
++#endif
+ 
+ 	if (slider->adjustment != adjustment) {
+ 		if (slider->adjustment) {
