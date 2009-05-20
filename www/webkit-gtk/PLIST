@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/13 18:39:46 snj Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/20 03:28:48 snj Exp $
 bin/jsc
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -30,7 +30,10 @@ include/webkit-1.0/webkit/webkitwebwindowfeatures.h
 lib/libwebkit-1.0.la
 lib/pkgconfig/webkit-1.0.pc
 share/locale/de/LC_MESSAGES/webkit.mo
+share/locale/it/LC_MESSAGES/webkit.mo
 share/locale/pt_BR/LC_MESSAGES/webkit.mo
+share/locale/ru/LC_MESSAGES/webkit.mo
+share/locale/sv/LC_MESSAGES/webkit.mo
 share/webkit-1.0/resources/error.html
 share/webkit-1.0/webinspector/Images/back.png
 share/webkit-1.0/webinspector/Images/checker.png
@@ -145,6 +148,7 @@ share/webkit-1.0/webinspector/Images/userInputResultIcon.png
 share/webkit-1.0/webinspector/Images/warningIcon.png
 share/webkit-1.0/webinspector/Images/warningMediumIcon.png
 share/webkit-1.0/webinspector/Images/warningsErrors.png
+share/webkit-1.0/webinspector/localizedStrings.js
 @dirrm share/webkit-1.0/webinspector/Images
 @dirrm share/webkit-1.0/webinspector
 @dirrm share/webkit-1.0/resources
