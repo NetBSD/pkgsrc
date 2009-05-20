@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/20 02:16:14 jakllsch Exp $
+${PYSITELIB}/usb.so

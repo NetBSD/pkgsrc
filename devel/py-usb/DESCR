@@ -1,0 +1,2 @@
+The PyUSB module provides Python with easy access to the host
+machine's Universal Serial Bus (USB) system via libusb.
