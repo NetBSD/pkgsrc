@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/16 10:49:06 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/20 13:21:13 wiz Exp $
 bin/brasero
 include/brasero/brasero-drive-selection.h
 include/brasero/brasero-drive.h
@@ -197,6 +197,8 @@ share/gconf/schemas/brasero.schemas
 share/gnome/help/brasero/C/brasero.xml
 share/gnome/help/brasero/C/figures/brasero_main.png
 share/gnome/help/brasero/C/legal.xml
+share/gnome/help/brasero/ca/brasero.xml
+share/gnome/help/brasero/ca/figures/brasero_main.png
 share/gnome/help/brasero/de/brasero.xml
 share/gnome/help/brasero/de/figures/brasero_main.png
 share/gnome/help/brasero/el/brasero.xml
@@ -240,6 +242,7 @@ share/icons/hicolor/32x32/apps/brasero.png
 share/icons/hicolor/48x48/apps/brasero.png
 share/icons/hicolor/scalable/apps/brasero.svg
 share/locale/ar/LC_MESSAGES/brasero.mo
+share/locale/as/LC_MESSAGES/brasero.mo
 share/locale/bg/LC_MESSAGES/brasero.mo
 share/locale/bn_IN/LC_MESSAGES/brasero.mo
 share/locale/ca/LC_MESSAGES/brasero.mo
@@ -285,12 +288,15 @@ share/locale/sv/LC_MESSAGES/brasero.mo
 share/locale/ta/LC_MESSAGES/brasero.mo
 share/locale/te/LC_MESSAGES/brasero.mo
 share/locale/th/LC_MESSAGES/brasero.mo
+share/locale/tr/LC_MESSAGES/brasero.mo
+share/locale/uk/LC_MESSAGES/brasero.mo
 share/locale/vi/LC_MESSAGES/brasero.mo
 share/locale/zh_CN/LC_MESSAGES/brasero.mo
 share/locale/zh_HK/LC_MESSAGES/brasero.mo
 share/locale/zh_TW/LC_MESSAGES/brasero.mo
 share/mime/packages/brasero.xml
 share/omf/brasero/brasero-C.omf
+share/omf/brasero/brasero-ca.omf
 share/omf/brasero/brasero-de.omf
 share/omf/brasero/brasero-el.omf
 share/omf/brasero/brasero-en_GB.omf
@@ -336,6 +342,8 @@ share/omf/brasero/brasero-sv.omf
 @dirrm share/gnome/help/brasero/el
 @dirrm share/gnome/help/brasero/de/figures
 @dirrm share/gnome/help/brasero/de
+@dirrm share/gnome/help/brasero/ca/figures
+@dirrm share/gnome/help/brasero/ca
 @dirrm share/gnome/help/brasero/C/figures
 @dirrm share/gnome/help/brasero/C
 @dirrm share/gnome/help/brasero
