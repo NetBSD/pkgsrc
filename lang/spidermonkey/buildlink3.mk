@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:24:52 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/05/20 00:58:20 wiz Exp $
 
 BUILDLINK_TREE+=	spidermonkey
 
@@ -9,7 +9,7 @@ SPIDERMONKEY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spidermonkey+=	spidermonkey>=1.5
 .if ${OPSYS} == "Darwin"
-BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb6
+BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.60nb2
 .else
 BUILDLINK_ABI_DEPENDS.spidermonkey?=	spidermonkey>=1.5nb8
 .endif
