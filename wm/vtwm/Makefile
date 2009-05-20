@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/02/03 06:11:12 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:29 wiz Exp $
 #
 
 DISTNAME=	vtwm-5.4.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://www.vtwm.org/downloads/
 

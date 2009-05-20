@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2009/04/15 12:27:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/20 00:58:05 wiz Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
 PKGNAME=	jack-${JACK_VERSION}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2

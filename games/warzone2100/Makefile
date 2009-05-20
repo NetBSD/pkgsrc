@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/03/27 06:54:53 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/20 00:58:17 wiz Exp $
 #
 
 DISTNAME=	warzone2100-2.1.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/warzone/releases/2.1/
 EXTRACT_SUFX=	.tar.bz2
