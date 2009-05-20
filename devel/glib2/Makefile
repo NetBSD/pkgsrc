@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.158 2009/04/28 19:41:11 zafer Exp $
+# $NetBSD: Makefile,v 1.159 2009/05/20 11:09:02 wiz Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
-DISTNAME=		glib-2.20.1
+DISTNAME=		glib-2.20.2
 PKGNAME=		${DISTNAME:S/glib/glib2/}
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.20/ \
@@ -12,6 +12,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/doc/API/2.0/glib/glib.html
 COMMENT=		Some useful routines for C programming (glib2)
+LICENSE=		gnu-lgpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
