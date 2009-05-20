@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/16 22:45:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/20 15:37:38 wiz Exp $
 bin/cheese
 libexec/cheese/cheese-bugreport.sh
 share/applications/cheese.desktop
@@ -84,6 +84,7 @@ share/icons/hicolor/48x48/apps/cheese.png
 share/icons/hicolor/scalable/apps/cheese.svg
 share/locale/ar/LC_MESSAGES/cheese.mo
 share/locale/as/LC_MESSAGES/cheese.mo
+share/locale/be/LC_MESSAGES/cheese.mo
 share/locale/be@latin/LC_MESSAGES/cheese.mo
 share/locale/bg/LC_MESSAGES/cheese.mo
 share/locale/bn_IN/LC_MESSAGES/cheese.mo
@@ -158,12 +159,19 @@ share/omf/cheese/cheese-th.omf
 @dirrm share/omf/cheese
 @comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gnome/help/cheese/th/figures
 @dirrm share/gnome/help/cheese/th
 @dirrm share/gnome/help/cheese/sv/figures
@@ -192,8 +200,10 @@ share/omf/cheese/cheese-th.omf
 @dirrm share/gnome/help/cheese/C
 @dirrm share/gnome/help/cheese
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
+@comment in dbus: @dirrm share/dbus-1
 @dirrm share/cheese/sounds
 @dirrm share/cheese/pixmaps
 @dirrm share/cheese/icons/hicolor/scalable/actions
