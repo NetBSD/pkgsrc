@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/01/06 18:21:37 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 23:29:21 zafer Exp $
 #
 
 DISTNAME=	xmms-wma-1.0.5
 CATEGORIES=	audio
-MASTER_SITES=	http://mcmcc.bat.ru/xmms-wma/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
