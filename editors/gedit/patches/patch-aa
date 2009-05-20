@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.10 2009/04/17 18:40:42 drochner Exp $
+$NetBSD: patch-aa,v 1.11 2009/05/20 10:01:03 wiz Exp $
 
---- plugins/taglist/Makefile.in.orig	2009-04-13 17:52:06.000000000 +0200
+--- plugins/taglist/Makefile.in.orig	2009-05-16 19:45:09.000000000 +0000
 +++ plugins/taglist/Makefile.in
 @@ -143,6 +143,7 @@ GTKDOC_CHECK = @GTKDOC_CHECK@
  GTKDOC_MKPDF = @GTKDOC_MKPDF@
@@ -16,6 +16,6 @@ $NetBSD: patch-aa,v 1.10 2009/04/17 18:40:42 drochner Exp $
  	LC_ALL=C $(INTLTOOL_MERGE) $(top_srcdir)/po $< $(@:.gz=) -x -u -c $(top_builddir)/po/.intltool-merge-cache
 -	$(GZIP) --best -f $(@:.gz=)
 +	env GZIP=$(GZIP_ENV) $(GZIP) -f $(@:.gz=)
+ 
+ -include $(top_srcdir)/git.mk
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
- # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
