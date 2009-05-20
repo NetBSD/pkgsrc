@@ -1,16 +1,14 @@
-$NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
+$NetBSD: patch-ab,v 1.27 2009/05/20 08:07:38 ghen Exp $
 
---- dovecot-example.conf.orig	2009-03-13 22:23:14.000000000 +0100
+--- dovecot-example.conf.orig	2009-05-13 18:41:46.000000000 +0200
 +++ dovecot-example.conf
-@@ -10,17 +10,14 @@
- # value inside quotes, eg.: key = "# char and trailing whitespace  "
- 
+@@ -12,16 +12,13 @@
  # Default values are shown for each setting, it's not required to uncomment
--# any of the lines. Exception to this are paths, they're just examples with
--# the real defaults being based on configure options. The paths listed here
--# are for configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var
--# --with-ssldir=/etc/ssl
-+# any of the lines. 
+ # those. These are exceptions to this though: No sections (e.g. namespace {})
+ # or plugin settings are added by default, they're listed only as examples.
+-# Paths are also just examples with the real defaults being based on configure
+-# options. The paths listed here are for configure --prefix=/usr
+-# --sysconfdir=/etc --localstatedir=/var --with-ssldir=/etc/ssl
  
  # Base directory where to store runtime data.
  #base_dir = /var/run/dovecot/
@@ -22,16 +20,16 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
  # A space separated list of IP or host addresses where to listen in for
  # connections. "*" listens in all IPv4 interfaces. "[::]" listens in all IPv6
-@@ -85,7 +82,7 @@
+@@ -86,7 +83,7 @@
  #ssl_listen =
  
- # Disable SSL/TLS support. <doc/wiki/SSL>
+ # Disable SSL/TLS support. <doc/wiki/SSL.txt>
 -#ssl_disable = no
 +ssl_disable = yes
  
  # PEM encoded X.509 SSL/TLS certificate and private key. They're opened before
  # dropping root privileges, so keep the key file unreadable by anyone but
-@@ -149,7 +146,7 @@
+@@ -150,7 +147,7 @@
  
  # Set max. process size in megabytes. If you don't use
  # login_process_per_connection you might need to grow this.
@@ -40,7 +38,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
  # Should each login be processed in it's own process (yes), or should one
  # login process be allowed to process multiple connections (no)? Yes is more
-@@ -503,19 +500,19 @@
+@@ -504,19 +501,19 @@
  
  protocol imap {
    # Login executable location.
@@ -64,7 +62,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # Maximum IMAP command line length in bytes. Some clients generate very long
    # command lines with huge mailboxes, so you may need to raise this if you get
-@@ -529,7 +526,7 @@ protocol imap {
+@@ -530,7 +527,7 @@ protocol imap {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -73,7 +71,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # Send IMAP capabilities in greeting message. This makes it unnecessary for
    # clients to request it with CAPABILITY command, so it saves one round-trip.
-@@ -572,11 +569,11 @@ protocol imap {
+@@ -573,11 +570,11 @@ protocol imap {
  
  protocol pop3 {
    # Login executable location.
@@ -87,7 +85,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # Don't try to set mails non-recent or seen with POP3 sessions. This is
    # mostly intended to reduce disk I/O. With maildir it doesn't move files
-@@ -636,7 +633,7 @@ protocol pop3 {
+@@ -637,7 +634,7 @@ protocol pop3 {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -96,7 +94,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # Workarounds for various client bugs:
    #   outlook-no-nuls:
-@@ -664,7 +661,7 @@ protocol lda {
+@@ -665,7 +662,7 @@ protocol lda {
    # Support for dynamically loadable plugins. mail_plugins is a space separated
    # list of plugins to load.
    #mail_plugins = 
@@ -105,7 +103,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # If user is over quota, return with temporary failure instead of
    # bouncing the mail.
-@@ -678,7 +675,7 @@ protocol lda {
+@@ -679,7 +676,7 @@ protocol lda {
    #deliver_log_format = msgid=%m: %$
  
    # Binary to use for sending mails.
@@ -114,7 +112,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
    # Subject: header to use for rejection mails. You can use the same variables
    # as for rejection_reason below.
-@@ -697,7 +694,7 @@ protocol lda {
+@@ -698,7 +695,7 @@ protocol lda {
  ##
  
  # Executable location
@@ -123,7 +121,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
  
  # Set max. process size in megabytes.
  #auth_process_size = 256
-@@ -830,7 +827,7 @@ auth default {
+@@ -831,7 +828,7 @@ auth default {
    # database (passwd usually), you can use static userdb.
    # REMEMBER: You'll need /etc/pam.d/dovecot file created for PAM
    # authentication to actually work. <doc/wiki/PasswordDatabase.PAM.txt>
@@ -132,7 +130,7 @@ $NetBSD: patch-ab,v 1.26 2009/05/11 08:54:49 tnn Exp $
      # [session=yes] [setcred=yes] [failure_show_msg=yes]
      # [cache_key=<key>] [<service name>]
      #
-@@ -859,15 +856,15 @@ auth default {
+@@ -860,15 +857,15 @@ auth default {
      #   args = session=yes %Ls
      #   args = cache_key=%u dovecot
      #args = dovecot
