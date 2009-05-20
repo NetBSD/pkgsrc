@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/19 09:19:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/05/20 13:38:47 wiz Exp $
 
-SHA1 (iCalendar-1.2.tgz) = 76caea7deb43cd299fb20bc940f305d43747fde9
-RMD160 (iCalendar-1.2.tgz) = 6809c1c2bc4688032c0145919e4ed569b0de6a04
-Size (iCalendar-1.2.tgz) = 71947 bytes
+SHA1 (icalendar-2.0.1.tar.gz) = aae1f3e67eceba9d06461f5eccdb7560194dc58f
+RMD160 (icalendar-2.0.1.tar.gz) = e377c8591c0a014c0d84e5a8ebd072dd49839bf9
+Size (icalendar-2.0.1.tar.gz) = 73338 bytes
+SHA1 (patch-aa) = 7a322a70f5ec1915eb72d89421135f7b96dd1785
