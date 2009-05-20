@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2009/05/20 12:00:17 tnn Exp $
+
+--- src/dialogs/stroke-style.cpp.orig	2008-03-11 05:19:51.000000000 +0100
++++ src/dialogs/stroke-style.cpp
+@@ -1098,7 +1098,7 @@ sp_stroke_style_line_widget_new(void)
+ // with it, the two remaining calls of stroke_average_width, allowing us to get rid of that
+ // function in desktop-style.
+ 
+-    a = gtk_adjustment_new(1.0, 0.0, 1000.0, 0.1, 10.0, 10.0);
++    a = gtk_adjustment_new(1.0, 0.0, 1000.0, 0.1, 10.0, 0.0);
+     gtk_object_set_data(GTK_OBJECT(spw), "width", a);
+     sb = gtk_spin_button_new(GTK_ADJUSTMENT(a), 0.1, 3);
+     gtk_tooltips_set_tip(tt, sb, _("Stroke width"), NULL);
+@@ -1167,7 +1167,7 @@ sp_stroke_style_line_widget_new(void)
+ 
+     hb = spw_hbox(t, 3, 1, i);
+ 
+-    a = gtk_adjustment_new(4.0, 0.0, 100.0, 0.1, 10.0, 10.0);
++    a = gtk_adjustment_new(4.0, 0.0, 100.0, 0.1, 10.0, 0.0);
+     gtk_object_set_data(GTK_OBJECT(spw), "miterlimit", a);
+ 
+     sb = gtk_spin_button_new(GTK_ADJUSTMENT(a), 0.1, 2);
