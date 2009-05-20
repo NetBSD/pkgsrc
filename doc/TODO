@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8120 2009/05/20 01:09:52 wiz Exp $
+$NetBSD: TODO,v 1.8121 2009/05/20 01:12:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -353,7 +353,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ROMBuild-2.13
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o SDL_gfx-2.0.19
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.7.2
 	o TiffIO-130e
@@ -542,7 +541,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o drivel-2.0.4
 	o dropbear-0.52
 	o drscheme-4.0.2
-	o duplicity-0.5.9
 	o dvdstyler-1.7.2
 	o dvipng-1.12
 	o dwm-5.5
@@ -556,6 +554,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.1
+	o ekiga-3.2.1
 	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -581,7 +580,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-230
 	o evolution-2.26.2
 	o evolution-data-server-2.26.2
 	o evolution-exchange-2.26.2
@@ -705,7 +703,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gramofile-1.6P
 	o gramps3-3.1.1
 	o granulate-0.2
-	o graphviz-2.22.2
 	o grep-2.5.4
 	o gsasl-1.1
 	o gsed-4.2
@@ -762,20 +759,17 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ical-2.3.2
 	o icdprog-0.5
 	o icsi-finger-1.0.29
-	o icu-3.8.1
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o ikiwiki-3.12
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
-	o imp-4.3.4
 	o instiki-0.13
 	o intercal-0.24
 	o ioquake3-1.36
 	o ircservices-5.1.16
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irssi-0.8.13
-	o isc-dhcp-3.1.2
 	o iselect-1.4.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
@@ -828,7 +822,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lftp-3.7.12
 	o libX11-1.2.1
 	o libXfont-1.4.0
-	o libXrandr-1.2.99.4
 	o libarchive-2.7.0
 	o libast-0.7
 	o libcanberra-0.12
@@ -870,12 +863,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh2-1.1
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
-	o libthai-0.1.11
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libunique-1.0.8
 	o libv4l-0.5.97
-	o libxklavier-3.9
 	o licq-1.3.6
 	o lighttpd-1.4.22
 	o lilypond-2.12.1
@@ -961,7 +952,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mysqlcc-0.9.8
 	o nagios-3.1.0
 	o nap-1.5.3
-	o nautilus-2.26.3
 	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1009,26 +999,18 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openafs-1.4.10 [pkg/41262]
 	o opencobol-1.0
 	o openh323-1.19.1
-	o openldap-client-2.4.16
 	o openmortal-0.7.1
 	o openmotif-2.3.2
 	o openmsx-0.7.0
 	o openoffice3-bin-3.1.0
 	o openssh-5.2
-	o openssl-0.9.8k
 	o openttd-0.7.0
-	o opera-9.64
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Class-Accessor-0.33
 	o p5-DBD-Sybase-1.08
-	o p5-DB_File-1.820
-	o p5-DateTime-Set-0.27
-	o p5-DateTime-TimeZone-0.88
 	o p5-Net-OpenID-Consumer-1.03
-	o p5-PathTools-3.30
 	o p5-XML-Feed-0.43
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1038,7 +1020,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o paprefs-0.9.8
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
-	o parrot-1.1.0
 	o patchutils-0.3.1
 	o pavucontrol-0.9.8
 	o pcal-4.8
@@ -1063,7 +1044,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o pen-0.17.3
 	o pessulus-2.26.0 [GNOME 2.26]
 	o pfqueue-0.5.6
-	o pgadmin3-1.6.0
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
@@ -1074,14 +1054,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o phpmyadmin-3.1.5
 	o phylip-3.68
 	o picp-0.6.8
-	o pidgin-2.5.4
 	o pim6dd-20040819a
 	o pim6sd-20040824a
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
 	o pixman-0.15.4
-	o pkg_select-20051209
 	o pks-0.9.6
 	o plone-3.2.2 [should be plone-32?]
 	o ploticus-2.41
@@ -1101,13 +1079,11 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
 	o prboom-2.5.0.2
-	o privoxy-3.0.11
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o pspp-0.6.1
-	o pstoedit-3.45
 	o puf-0.93.3
 	o pulseaudio-0.9.15
 	o puppet-24.8
@@ -1189,7 +1165,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o rp-l2tp-0.4
 	o rp-pppoe-3.10
 	o rpm-5.1.4
-	o rrdtool-1.3.7
+	o rrdtool-1.3.8
 	o rsnapshot-1.3.1
 	o rsync-3.0.6
 	o rt-3.8.2
@@ -1217,7 +1193,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-haml-2.0.7
 	o ruby-itex2MML-1.3.5
 	o ruby-jsmin-1.0.1
-	o ruby-libxml-0.9.8
 	o ruby-logging-0.9.5
 	o ruby-mechanize-0.9.0
 	o ruby-ming-0.2.1
@@ -1433,7 +1408,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xdesktopwaves-1.3
 	o xdm-1.1.8
 	o xdx-2.4
-	o xemacs-21.4.21
+	o xemacs-21.4.22
 	o xemacs-current-21.5.28
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
@@ -1464,7 +1439,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xf86-video-trident-1.3.1
 	o xf86-video-tseng-1.2.1
 	o xf86-video-vesa-2.2.0
-	o xf86-video-vmware-10.16.5
 	o xfce-4.6.0 [pkg/40984]
 	o xfce-4.6.1
 	o xfe-1.19.1
