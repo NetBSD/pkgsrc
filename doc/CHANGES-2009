@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1996 2009/05/20 21:29:18 sno Exp $
+$NetBSD: CHANGES-2009,v 1.1997 2009/05/20 21:35:54 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2660,3 +2660,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/p5-DBIx-SearchBuilder to 1.55 [sno 2009-05-20]
 	Updated devel/p5-Any-Moose to 0.09 [sno 2009-05-20]
 	Updated devel/p5-Class-C3-Adopt-NEXT to 0.11 [sno 2009-05-20]
+	Updated devel/p5-Data-Visitor to 0.25 [sno 2009-05-20]
