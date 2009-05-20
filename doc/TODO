@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8121 2009/05/20 01:12:36 wiz Exp $
+$NetBSD: TODO,v 1.8122 2009/05/20 15:53:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -505,7 +505,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cscope-15.7a
 	o cssc-1.2.0
 	o cuetools-1.3.1
-	o cups-1.4
 	o curl-7.19.5
 	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
@@ -554,7 +553,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o eigen2-2.0.1
-	o ekiga-3.2.1
+	o ekiga-3.2.4
 	o electric-8.08
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -640,7 +639,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcpio-2.7
 	o gdal-1.6.1
 	o gdal-lib-1.4.4
-	o gdb-6.7.1
+	o gdb-6.8
 	o gdeskcal-1.01
 	o gdm-2.26.1 [GNOME 2.26]
 	o gdsreader-0.3.2
@@ -737,6 +736,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o hatari-1.2.0
 	o hdf-4.2r2
 	o heel-1.0.2
+	o heimdal-1.2.1
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o heyu-2.6.0
@@ -817,6 +817,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafpad-0.8.15
+	o less-429
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.3 [pkg/39809]
 	o lftp-3.7.12
@@ -954,6 +955,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nap-1.5.3
 	o nautilus-sendto-1.1.5
 	o navi2ch-1.8.1
+	o nawk-20071023
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncftp3-3.2.2
 	o ncmpc-0.14
@@ -996,6 +998,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
+	o opal-3.6.2
 	o openafs-1.4.10 [pkg/41262]
 	o opencobol-1.0
 	o openh323-1.19.1
@@ -1084,6 +1087,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o proxsmtp-1.6
 	o psmisc-21.9
 	o pspp-0.6.1
+	o ptlib-2.6.2
 	o puf-0.93.3
 	o pulseaudio-0.9.15
 	o puppet-24.8
