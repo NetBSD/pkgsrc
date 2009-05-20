@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/07/14 12:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/20 23:20:39 zafer Exp $
 
 DISTNAME=	jakdaw-0.0.4
 PKGNAME=	xmms-${DISTNAME}
 PKGREVISION=	6
 CATEGORIES=	audio xmms
-MASTER_SITES=	http://www.jakdaw.ucam.org/xmms/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jakdaw.ucam.org/xmms/
