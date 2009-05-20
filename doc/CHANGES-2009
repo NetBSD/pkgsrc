@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1982 2009/05/20 07:46:48 martti Exp $
+$NetBSD: CHANGES-2009,v 1.1983 2009/05/20 07:53:53 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2646,3 +2646,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/alacarte to 0.12.1 [wiz 2009-05-20]
 	Updated mail/postfix-current to 2.7.20090519 [martti 2009-05-20]
 	Updated mail/postfix to 2.6.1 [martti 2009-05-20]
+	Updated devel/p5-Scalar-List-Utils to 1.21 [sno 2009-05-20]
