@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8122 2009/05/20 15:53:46 wiz Exp $
+$NetBSD: TODO,v 1.8123 2009/05/20 15:54:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -372,13 +372,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o aewm++-1.0.27
 	o afterstep-2.2.8
 	o akonadi-1.1.85
-	o alacarte-0.12.1
 	o album-4.05
 	o alee-ttf-11.2
 	o aliados-0.2.0
 	o alsa-lib-1.0.20
-	o alsa-plugins-oss-1.0.19
-	o alsa-plugins-pulse-1.0.19
+	o alsa-plugins-oss-1.0.20
+	o alsa-plugins-pulse-1.0.20
 	o amanda-2.6.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.3
@@ -457,7 +456,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bos-2.5
 	o boson-0.13
 	o botan-1.8.1
-	o brasero-2.26.2
 	o byacc-20080824
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -476,7 +474,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o cheese-2.26.2
 	o chemtool-1.6.11
 	o cherokee-0.99.14
 	o chicken-4.0.0
@@ -645,7 +642,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gdsreader-0.3.2
 	o geany-0.17
 	o geda-1.5.2.20090328
-	o gedit-2.26.2
 	o gedit-plugins-2.26.1 [GNOME 2.26]
 	o geeklog-1.5.2
 	o gentoo-0.15.4
@@ -667,7 +663,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o glade3-3.6.3 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
-	o glib2-2.20.2
 	o global-5.7.2 [pkg/39760]
 	o global-5.7.3
 	o glom-1.10.0 [GNOME 2.26]
@@ -718,7 +713,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gtkglarea-2.0.0
 	o gtkimageview-1.6.4
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
-	o gtksourceview-2.6.2
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -1331,7 +1325,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o tomboy-0.14.2 [GNOME 2.26]
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
