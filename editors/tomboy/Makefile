@@ -1,28 +1,27 @@
-# $NetBSD: Makefile,v 1.6 2009/05/02 08:57:52 hasso Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/20 09:22:10 wiz Exp $
 #
 
-DISTNAME=		tomboy-0.12.2
-PKGREVISION=		1
+DISTNAME=		tomboy-0.14.2
 CATEGORIES=		editors misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/tomboy/0.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/tomboy/0.14/}
 
 MAINTAINER=		rhaen@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/tomboy
 COMMENT=		Gnome desktop note application
+LICENSE=		gnu-lgpl-v2.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=  yes
 USE_DIRS=	xdg-1.4 gnome2-1.6
 USE_LIBTOOL=    yes
 USE_TOOLS+=     gmake intltool pkg-config bash:run msgfmt
 
-CONFIGURE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
-MAKE_ENV+=	GCONF_SCHEMA_FILE_DIR=${PREFIX}/share/gconf/schemas/
 GCONF_SCHEMAS=	tomboy.schemas
 
 PKGCONFIG_OVERRIDE+=	data/tomboy-addins.pc.in
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/atk/buildlink3.mk"
 BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3.1
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -31,8 +30,6 @@ BUILDLINK_API_DEPENDS.mono-addins+=	mono-addins>=0.3.1
 #.include "../../mail/evolution/buildlink3.mk"
 #.include "../../mail/gmime-sharp/buildlink3.mk"
 #.include "../../net/galago-sharp/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
