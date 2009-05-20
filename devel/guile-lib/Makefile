@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/02/19 18:22:22 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/20 00:58:13 wiz Exp $
 
 DISTNAME=	guile-lib-0.1.6
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/guile-lib/
 # http://download.savannah.nongnu.org/releases/guile-lib/

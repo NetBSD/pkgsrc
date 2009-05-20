@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/06/20 01:09:16 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2009/05/20 00:58:14 wiz Exp $
 #
 
 DISTNAME=	rpc2-2.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/rpc2/src/
 
