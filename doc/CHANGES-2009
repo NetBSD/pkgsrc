@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1977 2009/05/20 01:24:08 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.1978 2009/05/20 01:56:57 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2640,3 +2640,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/mpc to 0.15 [asau 2009-05-20]
 	Updated x11/qt3-libs to 3.3.8nb9 [wiz 2009-05-20]
 	Updated net/gnome-nettool to 2.26.2 [wiz 2009-05-20]
+	Updated net/nsd to 3.2.2 [joerg 2009-05-20]
