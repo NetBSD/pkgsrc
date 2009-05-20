@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2008/06/22 17:41:23 ghen Exp $
+$NetBSD: patch-aa,v 1.9 2009/05/20 08:07:38 ghen Exp $
 
---- Makefile.in.orig	2006-10-09 20:53:16.000000000 +0200
+--- Makefile.in.orig	2009-05-18 03:39:56.000000000 +0200
 +++ Makefile.in
-@@ -220,7 +220,7 @@ SUBDIRS = \
+@@ -244,7 +244,7 @@ SUBDIRS = \
  	$(DOCS)
  
  confdir = $(sysconfdir)
