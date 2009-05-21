@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/04/29 23:06:24 sno Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/21 11:17:41 sno Exp $
 #
 
-DISTNAME=	AnyEvent-4.4
-PKGNAME=	p5-${DISTNAME}00
+DISTNAME=	AnyEvent-4.41
+PKGNAME=	p5-${DISTNAME}0
 CATEGORIES=	devel
 #MASTER_SITES=	http://www.cpan.org/modules/by-authors/Marc_Lehmann/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/M/ML/MLEHMANN/}
 MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://software.schmorp.de/pkg/AnyEvent.html
 COMMENT=	Simple API for io, timer and completion callbacks
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PERL5_PACKLIST=	auto/AnyEvent/.packlist
