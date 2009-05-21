@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2014 2009/05/21 11:19:09 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2015 2009/05/21 11:29:07 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2678,3 +2678,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/accerciser to 1.6.1 [wiz 2009-05-21]
 	Updated textproc/p5-YAML-Tiny to 1.39 [sno 2009-05-21]
 	Updated devel/p5-AnyEvent to 4.410 [sno 2009-05-21]
+	Updated www/p5-Apache-Session to 1.88 [sno 2009-05-21]
