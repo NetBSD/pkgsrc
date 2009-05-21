@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2031 2009/05/21 14:07:49 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2032 2009/05/21 14:18:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/chasen-base to 2.4.4nb1 [obache 2009-05-21]
 	Updated time/p5-DateTimeX-Easy to 0.087 [sno 2009-05-21]
 	Updated time/p5-Data-ICal to 0.15 [sno 2009-05-21]
+	Updated time/p5-DateTime-Format-ISO8601 to 0.0600 [sno 2009-05-21]
