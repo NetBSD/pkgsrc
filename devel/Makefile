@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1170 2009/05/20 21:59:24 sno Exp $
+# $NetBSD: Makefile,v 1.1171 2009/05/21 19:28:08 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -879,6 +879,7 @@ SUBDIR+=	p5-gettext
 SUBDIR+=	p5-glib2
 SUBDIR+=	p5-local-lib
 SUBDIR+=	p5-namespace-clean
+SUBDIR+=	p5-pango
 SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
