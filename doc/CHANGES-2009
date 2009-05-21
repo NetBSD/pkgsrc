@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2050 2009/05/21 20:15:35 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2051 2009/05/21 20:40:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2717,3 +2717,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-pango version 1.220 [sno 2009-05-21]
 	Updated x11/p5-gtk2 to 1.220 [sno 2009-05-21]
 	Updated time/etm to 255 [wiz 2009-05-21]
+	Updated meta-pkgs/p5-gnome-bindings to 2.26.1.91 [wiz 2009-05-21]
