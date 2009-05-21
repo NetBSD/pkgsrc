@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/04/24 17:15:23 sno Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/21 13:57:55 sno Exp $
 
-DISTNAME=	DateTimeX-Easy-0.085
+DISTNAME=	DateTimeX-Easy-0.087
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTimeX/}
@@ -8,12 +8,14 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTimeX/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?DateTimeX::Easy
 COMMENT=	Parse a date/time string using the best method available
+LICENSE=	gnu-gpl-v2 # OR artistic
 
-DEPENDS+=	p5-DateTime-Format-DateParse>0:../../time/p5-DateTime-Format-DateParse
-DEPENDS+=	p5-DateTime-Format-Natural>0:../../time/p5-DateTime-Format-Natural
-DEPENDS+=	p5-DateTime-Format-Flexible>0:../../time/p5-DateTime-Format-Flexible
-DEPENDS+=	p5-DateTime-Format-ICal>0:../../time/p5-DateTime-Format-ICal
-DEPENDS+=	p5-DateTime-Format-DateManip>0:../../time/p5-DateTime-Format-DateManip
+DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
+DEPENDS+=	p5-DateTime-Format-DateManip-[0-9]*:../../time/p5-DateTime-Format-DateManip
+DEPENDS+=	p5-DateTime-Format-DateParse-[0-9]*:../../time/p5-DateTime-Format-DateParse
+DEPENDS+=	p5-DateTime-Format-Flexible-[0-9]*:../../time/p5-DateTime-Format-Flexible
+DEPENDS+=	p5-DateTime-Format-ICal-[0-9]*:../../time/p5-DateTime-Format-ICal
+DEPENDS+=	p5-DateTime-Format-Natural-[0-9]*:../../time/p5-DateTime-Format-Natural
 DEPENDS+=	{perl>=5.10,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 
 BUILD_DEPENDS+=	p5-Test-Most>0:../../devel/p5-Test-Most
