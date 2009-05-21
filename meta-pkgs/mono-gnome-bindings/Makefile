@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2009/05/05 12:53:50 reed Exp $
+# $NetBSD: Makefile,v 1.7 2009/05/21 13:52:05 wiz Exp $
 
-DISTNAME=	mono-gnome-bindings-2.26.0
+DISTNAME=	mono-gnome-bindings-2.26.2
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -13,7 +13,7 @@ META_PACKAGE=	yes
 PREV_PKGPATH=	meta-pkgs/gnome-bindings-mono
 SUPERSEDES=	gnome-bindings-mono-[0-9]*
 
-# see http://ftp.gnome.org/pub/GNOME/bindings/2.26/2.26.0/sources/mono/
+# see http://ftp.gnome.org/pub/GNOME/bindings/2.26/2.26.2/sources/mono/
 
 DEPENDS+=	gtk-sharp>=2.12.8:../../x11/gtk-sharp
 
