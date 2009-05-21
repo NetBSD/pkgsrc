@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.19 2009/05/18 09:57:28 wiz Exp $
+# $NetBSD: license.mk,v 1.20 2009/05/21 18:54:39 sno Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -94,7 +94,7 @@
 DEFAULT_ACCEPTABLE_LICENSES= \
 	public-domain \
 	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3 \
-	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
+	gnu-gpl-v2 gnu-gpl-v2.1 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
 	original-bsd modified-bsd \
 	x11 \
