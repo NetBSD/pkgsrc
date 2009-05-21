@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2022 2009/05/21 12:02:02 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2023 2009/05/21 12:15:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2687,3 +2687,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-XML-Feed to 0.43 [sno 2009-05-21]
 	Updated devel/p5-Proc-Simple to 1.24 [sno 2009-05-21]
 	Updated devel/p5-Test-Inline to 2.210 [sno 2009-05-21]
+	Updated textproc/p5-Text-Context-EitherSide to 1.4 [sno 2009-05-21]
