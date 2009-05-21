@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2028 2009/05/21 13:47:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2029 2009/05/21 13:50:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-RewriteRules to 0.20 [sno 2009-05-21]
 	Updated textproc/p5-Text-WikiCreole to 0.07 [sno 2009-05-21]
 	Updated time/p5-Time-Progress to 1.5 [sno 2009-05-21]
+	Updated textproc/chasen-base to 2.4.4nb1 [obache 2009-05-21]
