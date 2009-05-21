@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/08/21 13:06:34 he Exp $
+$NetBSD: distinfo,v 1.3 2009/05/21 11:54:51 sno Exp $
 
-SHA1 (Proc-Simple-1.23.tar.gz) = 01796fdea759df0d5ac9450a6e545a434f0e8294
-RMD160 (Proc-Simple-1.23.tar.gz) = 4263599d8295dfa1f774c389a89334355aad63eb
-Size (Proc-Simple-1.23.tar.gz) = 13343 bytes
+SHA1 (Proc-Simple-1.24.tar.gz) = 7005c509d7030484bf54e76c5c2f5475493121a9
+RMD160 (Proc-Simple-1.24.tar.gz) = d61dab0c637abcdb43c2771c35027fd1f3af4c88
+Size (Proc-Simple-1.24.tar.gz) = 13377 bytes
