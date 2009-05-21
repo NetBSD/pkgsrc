@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2026 2009/05/21 13:26:13 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2027 2009/05/21 13:43:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2691,3 +2691,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/p5-Text-Kakasi to 2.04 [sno 2009-05-21]
 	Updated textproc/p5-Text-Reflow to 1.06 [sno 2009-05-21]
 	Updated textproc/p5-Text-RewriteRules to 0.20 [sno 2009-05-21]
+	Updated textproc/p5-Text-WikiCreole to 0.07 [sno 2009-05-21]
