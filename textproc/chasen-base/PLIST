@@ -1,12 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/02 15:03:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/21 13:49:59 obache Exp $
 bin/chasen
 bin/chasen-config
 include/chasen.h
 lib/libchasen.la
-lib/libchasen.so
-lib/libchasen.so.2
-lib/libchasen.so.2.0.4
 sbin/makeda
 sbin/makemat
-@dirrm ${CHASEN_DICDIR}
-@dirrm ${CHASEN_DIR}
