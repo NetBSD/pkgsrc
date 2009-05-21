@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2011 2009/05/21 11:06:59 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2012 2009/05/21 11:11:10 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2675,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/gnome-platform to 2.26.2 [wiz 2009-05-21]
 	Updated devel/p5-Module-Install to 0.89 [sno 2009-05-21]
 	Updated devel/p5-Parse-CPAN-Meta to 1.39 [sno 2009-05-21]
+	Updated textproc/p5-YAML-Tiny to 1.39 [sno 2009-05-21]
