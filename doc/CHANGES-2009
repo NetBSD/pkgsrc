@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2046 2009/05/21 18:15:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2047 2009/05/21 19:18:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2712,3 +2712,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/p5-cairo to 1.061 [sno 2009-05-21]
 	Updated graphics/p5-GD-SecurityImage to 1.70 [sno 2009-05-21]
 	Updated mail/p5-Mail-IMAPClient to 3.17 [sno 2009-05-21]
+	Updated sysutils/duplicity to 0.5.18 [tnn 2009-05-21]
