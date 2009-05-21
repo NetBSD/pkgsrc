@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/05 17:40:04 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/21 19:17:13 tnn Exp $
 bin/duplicity
 bin/rdiffdir
+${PYSITELIB}/duplicity/GnuPGInterface.py
+${PYSITELIB}/duplicity/GnuPGInterface.pyc
+${PYSITELIB}/duplicity/GnuPGInterface.pyo
 ${PYSITELIB}/duplicity/__init__.py
 ${PYSITELIB}/duplicity/__init__.pyc
 ${PYSITELIB}/duplicity/__init__.pyo
@@ -17,6 +20,9 @@ ${PYSITELIB}/duplicity/backends/__init__.pyo
 ${PYSITELIB}/duplicity/backends/botobackend.py
 ${PYSITELIB}/duplicity/backends/botobackend.pyc
 ${PYSITELIB}/duplicity/backends/botobackend.pyo
+${PYSITELIB}/duplicity/backends/cloudfilesbackend.py
+${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyc
+${PYSITELIB}/duplicity/backends/cloudfilesbackend.pyo
 ${PYSITELIB}/duplicity/backends/ftpbackend.py
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyc
 ${PYSITELIB}/duplicity/backends/ftpbackend.pyo
@@ -35,6 +41,9 @@ ${PYSITELIB}/duplicity/backends/rsyncbackend.pyo
 ${PYSITELIB}/duplicity/backends/sshbackend.py
 ${PYSITELIB}/duplicity/backends/sshbackend.pyc
 ${PYSITELIB}/duplicity/backends/sshbackend.pyo
+${PYSITELIB}/duplicity/backends/tahoebackend.py
+${PYSITELIB}/duplicity/backends/tahoebackend.pyc
+${PYSITELIB}/duplicity/backends/tahoebackend.pyo
 ${PYSITELIB}/duplicity/backends/webdavbackend.py
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyc
 ${PYSITELIB}/duplicity/backends/webdavbackend.pyo
