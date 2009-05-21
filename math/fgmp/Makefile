@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/02/11 11:41:53 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/21 11:21:44 zafer Exp $
 
 DISTNAME=	fgmp-1.0b5-src-10.10
 PKGNAME=	fgmp-1.0b5
 CATEGORIES=	math
-MASTER_SITES=	http://hpux.cs.utah.edu/hppd/cgi-bin/redirect?hpux/Maths/Misc/fgmp-1.0b5/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hpux.cs.utah.edu/hppd/hpux/Maths/Misc/fgmp-1.0b5/
