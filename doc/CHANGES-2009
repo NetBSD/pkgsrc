@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2004 2009/05/21 10:34:23 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2005 2009/05/21 10:41:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2668,3 +2668,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/sudo to 1.7.1 [taca 2009-05-21]
 	Updated finance/p5-Locale-Currency-Format to 1.28 [sno 2009-05-21]
 	Updated www/p5-LWP-UserAgent-Determined to 1.04 [sno 2009-05-21]
+	Updated security/seahorse to 2.26.2 [wiz 2009-05-21]
