@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2009/03/22 15:30:51 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2009/05/21 16:04:03 wiz Exp $
 
-DISTNAME=	dasher-4.10.0
+DISTNAME=	dasher-4.10.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dasher/4.10/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.inference.phy.cam.ac.uk/dasher/
 COMMENT=	Easy typing without using keyboard
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
