@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8127 2009/05/21 10:40:51 wiz Exp $
+$NetBSD: TODO,v 1.8128 2009/05/21 11:29:09 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1350,7 +1350,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o valgrind-3.4.1
 	o varnish-2.0.4 [pkg/41118]
 	o vera-1.17
-	o vfu-4.03
+	o vfu-4.09
 	o vice-2.1
 	o vicq-0.4.2
 	o viewvc-1.1.0
