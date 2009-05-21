@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.20 2009/02/05 13:48:12 taca Exp $
+$NetBSD: patch-aa,v 1.21 2009/05/21 03:42:49 taca Exp $
 
---- Makefile.in.orig	2008-12-04 05:40:58.000000000 +0900
+--- Makefile.in.orig	2009-03-12 08:19:56.000000000 +0900
 +++ Makefile.in
-@@ -197,7 +197,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
+@@ -198,7 +198,7 @@ sudo_noexec.lo: $(srcdir)/sudo_noexec.c
  	$(LIBTOOL) --mode=compile $(CC) -c $(CPPFLAGS) $(CFLAGS) $(DEFS) $(OPTIONS) $(srcdir)/sudo_noexec.c
  
  sudo_noexec.la: sudo_noexec.lo
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.20 2009/02/05 13:48:12 taca Exp $
  
  # Uncomment the following if you want "make distclean" to clean the parser
  @DEV@GENERATED = gram.h gram.c toke.c def_data.c def_data.h
-@@ -399,36 +399,36 @@ sudoers.ldap.cat: sudoers.ldap.man
+@@ -406,36 +406,36 @@ sudoers.ldap.cat: sudoers.ldap.man
  ChangeLog:
  	cvs2cl --follow-only trunk
  
@@ -25,27 +25,27 @@ $NetBSD: patch-aa,v 1.20 2009/02/05 13:48:12 taca Exp $
  	    $(DESTDIR)$(mandirsu) $(DESTDIR)$(mandirform) \
  	    $(DESTDIR)$(noexecdir)
  
- install-binaries: $(PROGS)
+ install-binaries: install-dirs $(PROGS)
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
-+	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4511 -s sudo $(DESTDIR)$(sudodir)/sudo
++	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 4111 -s sudo $(DESTDIR)$(sudodir)/sudo
  	rm -f $(DESTDIR)$(sudodir)/sudoedit
  	ln $(DESTDIR)$(sudodir)/sudo $(DESTDIR)$(sudodir)/sudoedit
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
 -@SELINUX@	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0111 -s sesh $(DESTDIR)$(libexecdir)/sesh
 +	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s visudo $(DESTDIR)$(visudodir)/visudo
-+@SELINUX@	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0511 -s sesh $(DESTDIR)$(libexecdir)/sesh
++@SELINUX@	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0111 -s sesh $(DESTDIR)$(libexecdir)/sesh
  
- install-noexec: sudo_noexec.la
+ install-noexec: install-dirs sudo_noexec.la
 -	test -f .libs/$(noexecfile) && $(INSTALL) -O $(install_uid) -G $(install_gid) -M 0755 .libs/$(noexecfile) $(DESTDIR)$(noexecdir)
 +	test -f .libs/$(noexecfile) && $(INSTALL) -o $(install_uid) -g $(install_gid) -m 0755 .libs/$(noexecfile) $(DESTDIR)$(noexecdir)
  
- install-sudoers:
+ install-sudoers: install-dirs
  	test -f $(DESTDIR)$(sudoersdir)/sudoers || \
 -	    $(INSTALL) -O $(sudoers_uid) -G $(sudoers_gid) -M $(sudoers_mode) \
 +	    $(INSTALL) -o $(sudoers_uid) -g $(sudoers_gid) -m $(sudoers_mode) \
  		$(srcdir)/sudoers $(DESTDIR)$(sudoersdir)/sudoers
  
- install-man:
+ install-man: install-dirs
 -	$(INSTALL) -O $(install_uid) -G $(install_gid) -M 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
 +	$(INSTALL) -o $(install_uid) -g $(install_gid) -m 0444 @mansrcdir@/sudo.$(mantype) $(DESTDIR)$(mandirsu)/sudo.$(mansectsu)
  	@rm -f $(DESTDIR)$(mandirsu)/sudoedit.$(mansectsu)
