@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2024 2009/05/21 12:32:58 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2025 2009/05/21 13:20:46 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2689,3 +2689,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Inline to 2.210 [sno 2009-05-21]
 	Updated textproc/p5-Text-Context-EitherSide to 1.4 [sno 2009-05-21]
 	Updated textproc/p5-Text-Kakasi to 2.04 [sno 2009-05-21]
+	Updated textproc/p5-Text-Reflow to 1.06 [sno 2009-05-21]
