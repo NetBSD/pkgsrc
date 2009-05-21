@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2008/01/19 09:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/21 10:58:05 zafer Exp $
 
 DISTNAME=		svb
 PKGNAME=		svb-1.0
 PKGREVISION=		1
 CATEGORIES=		games x11
-MASTER_SITES=		http://src.doc.ic.ac.uk/public/computing/graphics/systems/X11/R5contrib/
+MASTER_SITES=		http://ring.nict.go.jp/archives/X/opengroup/R5contrib/
 EXTRACT_SUFX=		.shar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
