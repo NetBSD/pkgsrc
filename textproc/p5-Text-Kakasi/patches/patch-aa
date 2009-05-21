@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.3 2009/05/21 12:32:05 sno Exp $
+
+--- Makefile.PL.orig	2009-05-21 12:15:56.000000000 +0000
++++ Makefile.PL	2009-05-21 12:17:08.000000000 +0000
+@@ -6,7 +6,7 @@
+ WriteMakefile(
+ 	      'NAME' => 'Text::Kakasi',
+ 	      'VERSION_FROM' => 'Kakasi.pm',
+-	      'INC' => '-I/usr/local/include',
+-	      'LIBS' => ['-L/usr/local/lib -lkakasi'],
++	      'INC' => '-I.',
++	      'LIBS' => [$ENV{LDFLAGS} . ' -lkakasi'],
+ 	      'DEFINE' => '-DWAKATIGAKI',
+ );
