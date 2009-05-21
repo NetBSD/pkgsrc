@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/24 12:00:22 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/21 14:28:45 tonnerre Exp $
 #
 
 DISTNAME=	Text-Unidecode-0.04
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	pkgsrc-p5-people@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Unidecode/
 COMMENT=	Perl5 module that transliterates Unicode to US-ASCII
 
