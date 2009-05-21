@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2038 2009/05/21 15:21:48 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2039 2009/05/21 15:33:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2703,3 +2703,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-Mix to 0.003 [sno 2009-05-21]
 	Updated devel/p5-Data-Compare to 1.21.01 [sno 2009-05-21]
 	Updated devel/p5-Data-Serializer to 0.49 [sno 2009-05-21]
+	Updated devel/p5-Data-UUID to 1.20.1 [sno 2009-05-21]
