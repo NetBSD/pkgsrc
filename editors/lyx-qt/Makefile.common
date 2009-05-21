@@ -1,15 +1,13 @@
-# $NetBSD: Makefile.common,v 1.46 2007/08/11 21:33:38 reed Exp $
+# $NetBSD: Makefile.common,v 1.47 2009/05/21 00:17:32 zafer Exp $
 #
 
 DISTNAME=		lyx-1.4.5.1
 CATEGORIES=		editors
-MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/ \
-			ftp://ftp.devel.lyx.org/pub/lyx/ \
-			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/ \
-			ftp://ftp.sdsc.edu/pub/other/lyx/stable/ \
-			http://lyx.mirror.fr/stable/ \
-			ftp://ftp.lip6.fr/pub/lyx/stable/ \
-			ftp://ftp.ntua.gr/pub/X11/LyX/stable/
+MASTER_SITES=		ftp://ftp.lyx.org/pub/lyx/stable/1.4.x/ \
+			ftp://ftp.devel.lyx.org/pub/lyx/stable/ \
+			ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/1.4.x/ \
+			ftp://ftp.lip6.fr/pub/lyx/stable/1.4.x/ \
+			ftp://ftp.ntua.gr/pub/X11/LyX/stable/1.4.x/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		reed@reedmedia.net
