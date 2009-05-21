@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/03/22 10:33:43 pooka Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/21 09:29:12 wiz Exp $
 
 DISTNAME=		mz-360-src-unix
 PKGNAME=		mzscheme-360
@@ -23,6 +23,7 @@ MAKE_JOBS_SAFE=		no
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
 ONLY_FOR_PLATFORM+=	Linux-*-i386
+ONLY_FOR_PLATFORM+=	Linux-*-x86_64
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
 INSTALLATION_DIRS+=	${PREFIX}/share/doc/${PKGNAME}
