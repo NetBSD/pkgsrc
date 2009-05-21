@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2006 2009/05/21 10:49:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2007 2009/05/21 10:52:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2670,3 +2670,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-LWP-UserAgent-Determined to 1.04 [sno 2009-05-21]
 	Updated security/seahorse to 2.26.2 [wiz 2009-05-21]
 	Updated net/p5-Net-RawIP to 0.25 [sno 2009-05-21]
+	Updated security/seahorse-plugins to 2.26.2 [wiz 2009-05-21]
