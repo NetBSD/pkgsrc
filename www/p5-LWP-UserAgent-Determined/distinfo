@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/21 22:05:31 he Exp $
+$NetBSD: distinfo,v 1.2 2009/05/21 10:32:13 sno Exp $
 
-SHA1 (LWP-UserAgent-Determined-1.03.tar.gz) = ef97253e38c007ee03730dd2d5340ef37bfe67a3
-RMD160 (LWP-UserAgent-Determined-1.03.tar.gz) = f5bbf903b680e26e246dd40b42453132c6968a33
-Size (LWP-UserAgent-Determined-1.03.tar.gz) = 6268 bytes
+SHA1 (LWP-UserAgent-Determined-1.04.tar.gz) = 97ede6cc68e21e5b9ed35bc48cfccced8d900eda
+RMD160 (LWP-UserAgent-Determined-1.04.tar.gz) = cdd709f39bc9c2aae717937c8af23013db5e768a
+Size (LWP-UserAgent-Determined-1.04.tar.gz) = 6137 bytes
