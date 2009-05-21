@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/02/23 08:10:01 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2009/05/21 18:50:43 sno Exp $
 #
 
 DISTNAME=	Glib-${DIST_VERSION}
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 #HOMEPAGE=	http://search.cpan.org/dist/Glib/
 COMMENT=	Perl bindings for Glib 2
+LICENSE=	gnu-gpl-v2.1
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.00:../../devel/p5-ExtUtils-PkgConfig
@@ -22,7 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 
-DIST_VERSION=	1.201
+DIST_VERSION=	1.221
 
 PERL5_PACKLIST=	auto/Glib/.packlist
 
