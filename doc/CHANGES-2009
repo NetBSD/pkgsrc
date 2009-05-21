@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2013 2009/05/21 11:14:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2014 2009/05/21 11:19:09 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Parse-CPAN-Meta to 1.39 [sno 2009-05-21]
 	Updated devel/accerciser to 1.6.1 [wiz 2009-05-21]
 	Updated textproc/p5-YAML-Tiny to 1.39 [sno 2009-05-21]
+	Updated devel/p5-AnyEvent to 4.410 [sno 2009-05-21]
