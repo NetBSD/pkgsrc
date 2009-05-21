@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/07 02:23:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/05/21 16:15:44 sno Exp $
 bin/latex2html
 bin/pstoimg
 bin/texexpand
@@ -193,6 +193,7 @@ share/latex2html/makeseg/makeseg
 share/latex2html/makeseg/makeseg.tex
 share/latex2html/readme.hthtml
 share/latex2html/styles/CJK.perl
+share/latex2html/styles/SIunits.perl
 share/latex2html/styles/TEMPLATE.perl
 share/latex2html/styles/afrikaan.perl
 share/latex2html/styles/alltt.perl
@@ -271,6 +272,7 @@ share/latex2html/styles/psfrag.perl
 share/latex2html/styles/report.perl
 share/latex2html/styles/rgb.txt
 share/latex2html/styles/romanian.perl
+share/latex2html/styles/russian.perl
 share/latex2html/styles/scottish.perl
 share/latex2html/styles/seminar.perl
 share/latex2html/styles/slides.perl
@@ -290,7 +292,6 @@ share/latex2html/styles/welsh.perl
 share/latex2html/styles/wrapfig.perl
 share/latex2html/styles/xspace.perl
 share/latex2html/styles/xy.perl
-share/latex2html/texinputs/floatflt.ins
 share/latex2html/texinputs/frames.sty
 share/latex2html/texinputs/heqn.sty
 share/latex2html/texinputs/hthtml.sty
@@ -332,7 +333,6 @@ share/latex2html/versions/table.pl
 share/latex2html/versions/techexpl.pl
 share/latex2html/versions/unicode.pl
 share/latex2html/versions/utf8.pl
-${PKG_LOCALTEXMFPREFIX}/tex/latex/html/floatflt.ins
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/frames.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/heqn.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/hthtml.sty
@@ -345,6 +345,7 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/techexplHTML.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/url.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/html/verbatimfiles.sty
 @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/html
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
 @dirrm share/latex2html/versions
 @dirrm share/latex2html/texinputs
 @dirrm share/latex2html/styles
