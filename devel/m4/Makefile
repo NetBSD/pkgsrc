@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2009/05/19 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2009/05/21 16:18:25 sno Exp $
 
 DISTNAME=	m4-1.4.13
 CATEGORIES=	devel
@@ -29,6 +29,10 @@ PLIST_VARS+=		gm4
 
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 PLIST.gm4=		yes
+.endif
+
+.if ${LOWER_OPSYS} == "aix"
+CFLAGS+=	-D_LINUX_SOURCE_COMPAT
 .endif
 
 .if ${OPSYS} == "DragonFly"
