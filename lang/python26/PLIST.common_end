@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2009/04/19 14:42:50 wiz Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/05/21 20:47:38 tnn Exp $
 @dirrm lib/python${PY_VER_SUFFIX}/xml/sax
 @dirrm lib/python${PY_VER_SUFFIX}/xml/parsers
 @dirrm lib/python${PY_VER_SUFFIX}/xml/etree
@@ -7,8 +7,6 @@
 @dirrm lib/python${PY_VER_SUFFIX}/wsgiref
 @dirrm lib/python${PY_VER_SUFFIX}/test/decimaltestdata
 @dirrm lib/python${PY_VER_SUFFIX}/test
-@dirrm lib/python${PY_VER_SUFFIX}/sqlite3/test
-@dirrm lib/python${PY_VER_SUFFIX}/sqlite3
 @dirrm lib/python${PY_VER_SUFFIX}/site-packages
 @dirrm lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}
 @dirrm lib/python${PY_VER_SUFFIX}/multiprocessing/dummy
