@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2048 2009/05/21 19:27:06 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2049 2009/05/21 19:39:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2715,3 +2715,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-glib2 to 1.221 [sno 2009-05-21]
 	Updated sysutils/duplicity to 0.5.18 [tnn 2009-05-21]
 	Added devel/p5-pango version 1.220 [sno 2009-05-21]
+	Updated x11/p5-gtk2 to 1.220 [sno 2009-05-21]
