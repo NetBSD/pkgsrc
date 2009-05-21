@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:30:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/21 21:59:13 zafer Exp $
 #
 
 DISTNAME=	mudsh
 PKGNAME=	mudsh-20010311
 CATEGORIES=	shells
-MASTER_SITES=	http://www.xirium.com/tech/mud-shell/download/
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
