@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.81 2009/05/19 08:59:33 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2009/05/21 10:41:23 wiz Exp $
 
-DISTNAME=	seahorse-2.26.1
+DISTNAME=	seahorse-2.26.2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.26/}
 EXTRACT_SUFX=	.tar.bz2
