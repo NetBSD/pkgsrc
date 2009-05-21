@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/03/06 10:11:44 imil Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/21 22:02:03 zafer Exp $
 #
 
 DISTNAME=	ftwin-0.8.2
 CATEGORIES=	sysutils
-MASTER_SITES=	http://meroware.com/~joke/sources/ftwin/
+MASTER_SITES=	http://download.meroware.org/ftwin/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	imil@gcu.info
