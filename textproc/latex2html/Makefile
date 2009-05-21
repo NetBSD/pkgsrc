@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.33 2009/02/25 17:18:08 minskim Exp $
+# $NetBSD: Makefile,v 1.34 2009/05/21 16:15:44 sno Exp $
 
-DISTNAME=	latex2html-2002-2-1
-PKGNAME=	latex2html-2002.2.1
-PKGREVISION=	8
+DISTNAME=	latex2html-2008
+#PKGNAME=	latex2html-2008
 CATEGORIES=	textproc converters
-MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
+#MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=support/latex2html/}
+MASTER_SITES=	http://saftsack.fs.uni-bayreuth.de/~latex2ht/current/
 
 MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	http://www.latex2html.org/
@@ -28,6 +28,9 @@ CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/share/latex2html
 CONFIGURE_ARGS+=	--with-iconpath=${LATEX2HTML_ICONPATH:Q}
 .endif
 CONFIGURE_ARGS+=	--with-gs=${TOOLS_PATH.gs:Q}
+
+REPLACE_PERL+=		l2hconf.pin cweb2html/cweb2html cweb2html/makemake.pl
+REPLACE_PERL+=		makemap makeseg/makeseg
 
 .include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"
