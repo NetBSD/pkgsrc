@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/05/17 14:33:55 sno Exp $
+$NetBSD: distinfo,v 1.4 2009/05/21 11:05:34 sno Exp $
 
-SHA1 (Parse-CPAN-Meta-1.38.tar.gz) = c4a975123d3b76021467ca92f386019e88647be3
-RMD160 (Parse-CPAN-Meta-1.38.tar.gz) = c0b489aaeb69cdb2253e443f8a1ac9acceeb2950
-Size (Parse-CPAN-Meta-1.38.tar.gz) = 25036 bytes
+SHA1 (Parse-CPAN-Meta-1.39.tar.gz) = af216fc12f3e5aeb0108252b95a85341ae15d3e3
+RMD160 (Parse-CPAN-Meta-1.39.tar.gz) = 4ddfd8d40e8ce89a74eeda5d1b36737e37a76f0d
+Size (Parse-CPAN-Meta-1.39.tar.gz) = 25134 bytes
