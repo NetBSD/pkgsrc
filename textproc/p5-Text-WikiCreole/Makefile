@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:57 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/21 13:42:30 sno Exp $
 #
 
-DISTNAME=		Text-WikiCreole-0.05
-PKGREVISION=		2
+DISTNAME=		Text-WikiCreole-0.07
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
@@ -10,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Text-WikiCreole/
 COMMENT=		Translate Wiki Creole markup into XHTML
+LICENSE=		gnu-gpl-v2 # OR artistic
 
 PERL5_PACKLIST=		auto/Text/WikiCreole/.packlist
 
