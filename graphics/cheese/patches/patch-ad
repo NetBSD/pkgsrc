@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2008/11/28 14:29:31 jmcneill Exp $
+$NetBSD: patch-ad,v 1.2 2009/05/21 16:11:25 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583469
 
 --- src/Makefile.am.orig	2008-10-20 12:01:47.000000000 -0400
 +++ src/Makefile.am
