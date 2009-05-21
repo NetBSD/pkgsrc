@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/02/20 12:27:03 obache Exp $
+# $NetBSD: Makefile,v 1.33 2009/05/21 01:40:21 snj Exp $
 #
 
-DISTNAME=	pekwm-0.1.10
+DISTNAME=	pekwm-0.1.11
 CATEGORIES=	wm
 MASTER_SITES=	http://www.pekwm.org/projects/3/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pekwm.org/
 COMMENT=	Window manager based on aewm++
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
