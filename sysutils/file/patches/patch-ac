@@ -1,30 +1,27 @@
-$NetBSD: patch-ab,v 1.2 2009/05/21 15:58:18 sno Exp $
+$NetBSD: patch-ac,v 1.1 2009/05/21 15:58:18 sno Exp $
 
 If $gcc is unset, original comparisation fails badly
 regardless 'if test  = no' or 'if test "" = no'
 
---- configure.orig	2009-05-18 17:20:11.000000000 +0000
-+++ configure	2009-05-18 17:21:26.000000000 +0000
-@@ -23563,17 +23563,17 @@
- fi
- else
- 
+--- configure.ac.orig	2009-05-18 17:20:17.000000000 +0000
++++ configure.ac	2009-05-18 17:22:15.000000000 +0000
+@@ -130,15 +130,15 @@
+        -Wsign-compare -Wreturn-type -Wswitch -Wshadow \
+        -Wcast-qual -Wwrite-strings -Wextra -Wunused-parameter"
+ fi], [
 -if test "$GCC" = no; then
 -   WARNINGS=
--   { echo "$as_me:$LINENO: result: no" >&5
--echo "${ECHO_T}no" >&6; }
+-   AC_MSG_RESULT(no)
 -else
 +if test "$GCC" = yes; then
-    { echo "$as_me:$LINENO: result: yes" >&5
- echo "${ECHO_T}yes" >&6; }
+    AC_MSG_RESULT(yes)
     WARNINGS="-Wall -Wstrict-prototypes -Wmissing-prototypes -Wpointer-arith \
         -Wmissing-declarations -Wredundant-decls -Wnested-externs \
         -Wsign-compare -Wreturn-type -Wswitch -Wshadow \
         -Wcast-qual -Wwrite-strings -Wextra -Wunused-parameter"
 +else
 +   WARNINGS=
-+   { echo "$as_me:$LINENO: result: no" >&5
-+echo "${ECHO_T}no" >&6; }
- fi
- fi
++   AC_MSG_RESULT(no)
+ fi])
  
+ dnl Checks for functions
