@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/05/21 15:33:12 sno Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/21 18:18:14 sno Exp $
 
 PNAME=		Data-UUID
 DISTNAME=	${PNAME}-1.201
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-UUID/
 COMMENT=	Perl module for generating UUIDs
-#LICENSE=	original-bsd # FIXME sure?
+LICENSE=	modified-bsd
 
 DEPENDS+=	{perl>=5.10,p5-Digest-MD5>0}:../../security/p5-Digest-MD5
 
