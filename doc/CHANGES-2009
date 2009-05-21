@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2041 2009/05/21 15:51:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2042 2009/05/21 15:59:16 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-UUID to 1.20.1 [sno 2009-05-21]
 	Updated devel/p5-IO-CaptureOutput to 1.11.01 [sno 2009-05-21]
 	Updated meta-pkgs/py-gnome-bindings to 2.26.2 [wiz 2009-05-21]
+	Updated sysutils/file to 5.03 [sno 2009-05-21]
