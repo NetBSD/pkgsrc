@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2009/05/21 21:13:15 zafer Exp $
 #
 
 DISTNAME=		cryptopp552
 PKGNAME=		cryptopp-5.5.2
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptopp/} \
-			http://gd.tuwien.ac.at/privacy/crypto/libs/cryptlib/ \
-			http://www.mirrors.wiretapped.net/security/cryptography/libraries/cryptolib/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptopp/} 
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
