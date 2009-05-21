@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.16 2008/10/19 19:18:56 he Exp $
+# $NetBSD: Makefile,v 1.17 2009/05/21 12:32:05 sno Exp $
 
-DISTNAME=		Text-Kakasi-1.05
+DISTNAME=		Text-Kakasi-2.04
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
 SVR4_PKGNAME=		p5tka
 CATEGORIES=		japanese textproc perl5
-MASTER_SITES=		http://www.daionet.gr.jp/~knok/kakasi/
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=		kei@NetBSD.org
-HOMEPAGE=		http://www.daionet.gr.jp/~knok/kakasi/
+HOMEPAGE=		http://search.cpan.org/dist/Text-Kakasi/
 COMMENT=		Perl5 module to use Kakasi
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
