@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.24 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ah,v 1.25 2009/05/21 03:22:29 taca Exp $
 
---- Makefile.in.orig	2006-09-12 20:54:10.000000000 +0900
+--- Makefile.in.orig	2008-11-05 14:20:46.000000000 +0900
 +++ Makefile.in
-@@ -21,7 +21,7 @@ top_srcdir=@top_srcdir@
+@@ -22,7 +22,7 @@ top_srcdir=@top_srcdir@
  DESTDIR=
  VPATH=@srcdir@
  SSH_PROGRAM=@bindir@/ssh
@@ -11,7 +11,7 @@ $NetBSD: patch-ah,v 1.24 2006/10/31 03:31:20 taca Exp $
  SFTP_SERVER=$(libexecdir)/sftp-server
  SSH_KEYSIGN=$(libexecdir)/ssh-keysign
  RAND_HELPER=$(libexecdir)/ssh-rand-helper
-@@ -234,7 +234,7 @@ distprep: catman-do
+@@ -233,7 +233,7 @@ distprep: catman-do
  	(cd scard && $(MAKE) -f Makefile.in distprep)
  
  install: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files install-sysconf host-key check-config
@@ -20,7 +20,7 @@ $NetBSD: patch-ah,v 1.24 2006/10/31 03:31:20 taca Exp $
  install-nosysconf: $(CONFIGFILES) ssh_prng_cmds.out $(MANPAGES) $(TARGETS) install-files
  
  check-config:
-@@ -243,7 +243,7 @@ check-config:
+@@ -242,7 +242,7 @@ check-config:
  scard-install:
  	(cd scard && $(MAKE) DESTDIR=$(DESTDIR) install)
  

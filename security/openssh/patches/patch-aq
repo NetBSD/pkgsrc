@@ -1,17 +1,17 @@
-$NetBSD: patch-aq,v 1.6 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-aq,v 1.7 2009/05/21 03:22:29 taca Exp $
 
---- sshpty.c.orig	2006-08-05 11:39:41.000000000 +0900
+--- sshpty.c.orig	2009-02-12 10:19:21.000000000 +0900
 +++ sshpty.c
-@@ -78,7 +78,7 @@ pty_allocate(int *ptyfd, int *ttyfd, cha
- void
+@@ -86,7 +86,7 @@ void
  pty_release(const char *tty)
  {
+ #ifndef __APPLE_PRIVPTY__
 -	if (chown(tty, (uid_t) 0, (gid_t) 0) < 0)
 +	if (chown(tty, (uid_t) ROOTUID, (gid_t) ROOTGID) < 0)
  		error("chown %.100s 0 0 failed: %.100s", tty, strerror(errno));
  	if (chmod(tty, (mode_t) 0666) < 0)
  		error("chmod %.100s 0666 failed: %.100s", tty, strerror(errno));
-@@ -224,7 +224,7 @@ pty_setowner(struct passwd *pw, const ch
+@@ -233,7 +233,7 @@ pty_setowner(struct passwd *pw, const ch
  	if (st.st_uid != pw->pw_uid || st.st_gid != gid) {
  		if (chown(tty, pw->pw_uid, gid) < 0) {
  			if (errno == EROFS &&
