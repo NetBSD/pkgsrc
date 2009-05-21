@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.7 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-al,v 1.8 2009/05/21 03:22:29 taca Exp $
 
---- auth1.c.orig	2006-09-01 14:38:36.000000000 +0900
+--- auth1.c.orig	2008-07-09 19:54:05.000000000 +0900
 +++ auth1.c
-@@ -325,7 +325,7 @@ do_authloop(Authctxt *authctxt)
+@@ -328,7 +328,7 @@ do_authloop(Authctxt *authctxt)
  		}
  #else
  		/* Special handling for root */
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.7 2006/10/31 03:31:20 taca Exp $
  		    !auth_root_allowed(meth->name)) {
   			authenticated = 0;
  # ifdef SSH_AUDIT_EVENTS
-@@ -423,8 +423,8 @@ do_authentication(Authctxt *authctxt)
+@@ -426,8 +426,8 @@ do_authentication(Authctxt *authctxt)
  	 * If we are not running as root, the user must have the same uid as
  	 * the server.
  	 */
