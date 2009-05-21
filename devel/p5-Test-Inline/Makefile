@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2009/05/19 21:19:00 sno Exp $
+# $NetBSD: Makefile,v 1.20 2009/05/21 12:01:25 sno Exp $
 
-DISTNAME=		Test-Inline-2.209
+DISTNAME=		Test-Inline-2.210
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5tin
 CATEGORIES=		devel perl5
@@ -13,12 +13,10 @@ LICENSE=		gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		p5-ExtUtils-AutoInstall>=0.49:../../devel/p5-ExtUtils-AutoInstall
 BUILD_DEPENDS+=		p5-Test-ClassAPI>=1.02:../../devel/p5-Test-ClassAPI
 BUILD_DEPENDS+=		p5-Test-Script>=1.02:../../devel/p5-Test-Script
 
 DEPENDS+=		p5-Algorithm-Dependency>=1.02:../../devel/p5-Algorithm-Dependency
-DEPENDS+=		p5-Class-Autouse>=1.15:../../devel/p5-Class-Autouse
 DEPENDS+=		p5-Config-Tiny>=2.00:../../devel/p5-Config-Tiny
 DEPENDS+=		p5-File-Find-Rule>=0.26:../../devel/p5-File-Find-Rule
 DEPENDS+=		p5-File-Flat>=1.00:../../devel/p5-File-Flat
