@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2045 2009/05/21 17:54:26 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2046 2009/05/21 18:15:48 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2710,3 +2710,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/dasher to 4.10.1 [wiz 2009-05-21]
 	Updated textproc/latex2html to 2008 [sno 2009-05-21]
 	Updated graphics/p5-cairo to 1.061 [sno 2009-05-21]
+	Updated graphics/p5-GD-SecurityImage to 1.70 [sno 2009-05-21]
+	Updated mail/p5-Mail-IMAPClient to 3.17 [sno 2009-05-21]
