@@ -1,15 +1,15 @@
-$NetBSD: patch-ab,v 1.1 2009/03/21 20:55:58 sno Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/21 15:58:18 sno Exp $
 
 If $gcc is unset, original comparisation fails badly
 regardless 'if test  = no' or 'if test "" = no'
 
---- configure.orig	2009-02-03 20:16:11.000000000 +0000
-+++ configure	2009-03-11 07:34:46.000000000 +0000
-@@ -23934,17 +23934,17 @@
+--- configure.orig	2009-05-18 17:20:11.000000000 +0000
++++ configure	2009-05-18 17:21:26.000000000 +0000
+@@ -23563,17 +23563,17 @@
  fi
  else
  
--if test $GCC = no; then
+-if test "$GCC" = no; then
 -   WARNINGS=
 -   { echo "$as_me:$LINENO: result: no" >&5
 -echo "${ECHO_T}no" >&6; }
