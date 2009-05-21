@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2007/08/17 23:10:19 agc Exp $
+# $NetBSD: Makefile,v 1.18 2009/05/21 00:21:57 zafer Exp $
 #
 
 DISTNAME=	ssam-1.9
 PKGREVISION=	1
 CATEGORIES=	editors
-MASTER_SITES=	http://www.alistaircrooks.co.uk/src/
+MASTER_SITES=	http://www.westley.demon.co.uk/src/
 
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://www.alistaircrooks.co.uk/software.html
