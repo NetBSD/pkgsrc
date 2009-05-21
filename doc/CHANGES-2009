@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.1999 2009/05/20 22:08:19 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2000 2009/05/21 01:40:58 snj Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2663,3 +2663,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Data-Visitor to 0.25 [sno 2009-05-20]
 	Added devel/p5-B-Hooks-OP-Check-StashChange version 0.06 [sno 2009-05-20]
 	Updated www/p5-Catalyst-Runtime to 5.80004 [sno 2009-05-20]
+	Updated wm/pekwm to 0.1.11 [snj 2009-05-21]
