@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.7 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ar,v 1.8 2009/05/21 03:22:29 taca Exp $
 
---- uidswap.c.orig	2006-08-05 11:39:41.000000000 +0900
+--- uidswap.c.orig	2009-01-21 14:04:24.000000000 +0900
 +++ uidswap.c
 @@ -66,13 +66,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
@@ -64,7 +64,7 @@ $NetBSD: patch-ar,v 1.7 2006/10/31 03:31:20 taca Exp $
  #if defined(HAVE_SETRESGID) && !defined(BROKEN_SETRESGID)
  	if (setresgid(pw->pw_gid, pw->pw_gid, pw->pw_gid) < 0)
  		fatal("setresgid %u: %.100s", (u_int)pw->pw_gid, strerror(errno));
-@@ -268,6 +278,7 @@ permanently_set_uid(struct passwd *pw)
+@@ -278,6 +288,7 @@ permanently_set_uid(struct passwd *pw)
  	    (setuid(old_uid) != -1 || seteuid(old_uid) != -1))
  		fatal("%s: was able to restore old [e]uid", __func__);
  #endif
