@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2007 2009/05/21 10:52:33 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2008 2009/05/21 10:55:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2671,3 +2671,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/seahorse to 2.26.2 [wiz 2009-05-21]
 	Updated net/p5-Net-RawIP to 0.25 [sno 2009-05-21]
 	Updated security/seahorse-plugins to 2.26.2 [wiz 2009-05-21]
+	Updated devel/p5-Software-License to 0.011 [sno 2009-05-21]
