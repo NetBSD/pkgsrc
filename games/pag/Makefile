@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2009/05/21 00:34:38 zafer Exp $
 #
 
 DISTNAME=	pag-0.92
 PKGREVISION=	1
 CATEGORIES=	games
-MASTER_SITES=	http://cvs.nopcode.org/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 
 MAINTAINER=	pancake@phreaker.net
 #HOMEPAGE=	http://pancake.host.sk/
