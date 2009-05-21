@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2019 2009/05/21 11:45:39 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2020 2009/05/21 11:50:21 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2682,4 +2682,6 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-CSS-Squish to 0.08 [sno 2009-05-21]
 	Updated security/p5-Crypt-Twofish to 2.13 [sno 2009-05-21]
 	Updated meta-pkgs/gnome-devtools to 2.26.1.99 [wiz 2009-05-21]
+	Updated www/p5-HTML-Tiny to 1.05 [sno 2009-05-21]
 	Updated databases/sqlite3 to 3.6.14.1 [adam 2009-05-21]
+	Updated textproc/p5-XML-Feed to 0.43 [sno 2009-05-21]
