@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2001 2009/05/21 03:23:25 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2002 2009/05/21 03:43:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2665,3 +2665,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/p5-Catalyst-Runtime to 5.80004 [sno 2009-05-20]
 	Updated wm/pekwm to 0.1.11 [snj 2009-05-21]
 	Updated security/openssh to 5.2.1 [taca 2009-05-21]
+	Updated security/sudo to 1.7.1 [taca 2009-05-21]
