@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2002 2009/05/21 03:43:32 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2003 2009/05/21 10:33:25 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/pekwm to 0.1.11 [snj 2009-05-21]
 	Updated security/openssh to 5.2.1 [taca 2009-05-21]
 	Updated security/sudo to 1.7.1 [taca 2009-05-21]
+	Updated finance/p5-Locale-Currency-Format to 1.28 [sno 2009-05-21]
