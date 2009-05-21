@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8125 2009/05/21 03:24:02 taca Exp $
+$NetBSD: TODO,v 1.8126 2009/05/21 03:44:31 taca Exp $
 
 Suggested new packages
 ======================
@@ -1284,7 +1284,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o subtitleeditor-0.31.0
 	o subversion-1.6.2
 	o subversion-base-1.6.2
-	o sudo-1.7.1
 	o sunbird-0.9 [ghen|pkgsrc-wip]
 	o surfraw-2.2.5
 	o suse_base-11.0
