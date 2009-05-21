@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2033 2009/05/21 14:36:05 tonnerre Exp $
+$NetBSD: CHANGES-2009,v 1.2034 2009/05/21 14:55:18 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/p5-Data-ICal to 0.15 [sno 2009-05-21]
 	Updated time/p5-DateTime-Format-ISO8601 to 0.0600 [sno 2009-05-21]
 	Removed databases/sqlitemanager [tonnerre 2009-05-21]
+	Updated textproc/p5-Text-ChaSen to 1.04 [sno 2009-05-21]
