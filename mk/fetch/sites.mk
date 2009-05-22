@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.60 2009/05/22 19:32:20 zafer Exp $
+# $NetBSD: sites.mk,v 1.61 2009/05/22 20:14:38 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -258,13 +258,9 @@ MASTER_SITE_APACHE+=    \
 MASTER_SITE_MYSQL+=	\
 	http://mysql.skynet.be/Downloads/ \
 	ftp://ftp.mysql.skynet.be/pub/ftp.mysql.com/Downloads/ \
-	http://mysql.easynet.be/Downloads/ \
-	ftp://ftp.easynet.be/mysql/Downloads/ \
 	http://mysql.mirror.kangaroot.net/Downloads/ \
 	ftp://mysql.mirror.kangaroot.net/pub/mysql/Downloads/ \
 	http://mysql.blic.net/Downloads/ \
-	http://mysql.online.bg/Downloads/ \
-	ftp://mysql.online.bg/Downloads/ \
 	http://mysql.linux.cz/Downloads/ \
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/ \
 	http://mirrors.dotsrc.org/mysql/Downloads/ \
@@ -284,36 +280,23 @@ MASTER_SITE_MYSQL+=	\
 	ftp://ftp.fu-berlin.de/unix/databases/mysql/Downloads/ \
 	http://ftp.ntua.gr/pub/databases/mysql/Downloads/ \
 	ftp://ftp.ntua.gr/pub/databases/mysql/Downloads/ \
-	http://ftp.uoi.gr/pub/databases/mysql/Downloads/ \
-	ftp://ftp.uoi.gr/pub/databases/mysql/Downloads/ \
 	http://mysql.mirrors.crysys.hit.bme.hu/Downloads/ \
 	ftp://ftp.crysys.hu/pub/mysql/Downloads/ \
-	http://mysql.rhnet.is/Downloads/ \
 	ftp://ftp.rhnet.is/pub/mysql/Downloads/ \
 	http://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	ftp://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
-	ftp://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
-	http://mysql.php.lv/Downloads/ \
 	http://mysql.bst.lt/Downloads/ \
-	http://mysql.mirrors.webazilla.nl/Downloads/ \
 	http://mysql.proserve.nl/Downloads/ \
-	ftp://mysql.proserve.nl/pub/mysql/Downloads/Downloads/ \
 	http://ftp.tpnet.pl/vol/d3/ftp.mysql.com/Downloads/ \
 	ftp://ftp.tpnet.pl/d3/ftp.mysql.com/Downloads/ \
 	http://mysql.nfsi.pt/Downloads/ \
 	ftp://ftp.nfsi.pt/pub/mysql/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
 	ftp://ftp.roedu.net/pub/mirrors/ftp.mysql.com/Downloads/ \
-	ftp://mirrors.fibernet.ro/1/MySQL/Downloads/ \
 	http://ftp.astral.ro/mirrors/mysql.com/Downloads/ \
 	ftp://ftp.astral.ro/mirrors/mysql.com/Downloads/ \
-	http://mysql.mix.su/Downloads/ \
-	ftp://mysql.mix.su/Downloads/ \
-	http://mirrors.paknet.org/mysql/Downloads/ \
-	http://www.wsection.com/mysql/Downloads/ \
 	http://mirrors.bevc.net/mysql/Downloads/ \
-	ftp://ftp.bevc.net/mirrors/mysql/Downloads/ \
 	http://mysql.rediris.es/Downloads/ \
 	ftp://ftp.rediris.es/mirror/mysql/Downloads/ \
 	http://ftp.sunet.se/pub/unix/databases/relational/mysql/Downloads/ \
@@ -327,26 +310,19 @@ MASTER_SITE_MYSQL+=	\
 	ftp://ftp.itu.edu.tr/Mirror/Mysql/Downloads/ \
 	http://mysql.infocom.ua/Downloads/ \
 	http://mirrors.dedipower.com/www.mysql.com/Downloads/ \
-	http://mirrors.ukfast.co.uk/sites/ftp.mysql.com/Downloads/ \
-	ftp://mirrors.ukfast.co.uk/ftp.mysql.com/Downloads/ \
 	http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
 	http://mysql.serenitynet.com/Downloads/ \
-	ftp://ftp.mysql.serenitynet.com/Downloads/ \
+	ftp://ftp.mysql.serenitynet.com/ \
 	http://mysql.mirror.rafal.ca/Downloads/ \
 	ftp://mysql.mirror.rafal.ca/pub/mysql/Downloads/ \
 	http://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	http://mirror.trouble-free.net/mysql_mirror/Downloads/ \
 	http://mysql.llarian.net/Downloads/ \
-	ftp://mysql.llarian.net/pub/mysqlDownloads/ \
+	ftp://mysql.llarian.net/pub/mysql/Downloads/ \
 	http://mysql.mirrors.hoobly.com/Downloads/ \
-	http://mysql.osuosl.org/Downloads/ \
-	ftp://ftp.osuosl.org/pub/mysql/Downloads/ \
 	http://mysql.mirror.redwire.net/Downloads/ \
-	ftp://mysql.mirror.redwire.net/pub/mysql/Downloads/ \
-	http://mirror.x10.com/mirror/mysql/Downloads/ \
-	ftp://mirror.x10.com/mysql/Downloads/ \
 	ftp://mirror.anl.gov/pub/mysql/Downloads/ \
 	http://mysql.mirrors.pair.com/Downloads/ \
 	http://mirror.services.wisc.edu/mysql/Downloads/ \
@@ -357,7 +333,7 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.localhost.net.ar/Downloads/ \
 	http://mysql.patan.com.ar/Downloads/ \
 	http://mysql.cce.usp.br/Downloads/ \
-	ftp://mysql.cce.usp.br/mysqlDownloads/ \
+	ftp://mysql.cce.usp.br/mysql/Downloads/ \
 	http://mysql.mirrors.adc.am/Downloads/ \
 	http://mysql.mirrors.arminco.com/Downloads/ \
 	http://mysql.spd.co.il/Downloads/ \
@@ -378,7 +354,7 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.cdpa.nsysu.edu.tw/Downloads/ \
 	ftp://mysql.cdpa.nsysu.edu.tw/Unix/Database/MySQL/Downloads/ \
 	http://mirror-fpt-telecom.fpt.net/mysql/Downloads/ \
-	ftp://mirror-fpt-telecom.fpt.net/mirror/mysql/Downloads/ \
+	ftp://mirror-fpt-telecom.fpt.net//mysql/Downloads/ \
 	http://mysql.mirror.ac.za/Downloads/ \
 	ftp://mysql.mirror.ac.za/Downloads/ \
 	http://mysql.inspire.net.nz/Downloads/ \
