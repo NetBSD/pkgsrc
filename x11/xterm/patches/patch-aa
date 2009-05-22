@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.9 2008/08/01 23:14:47 bjs Exp $
+$NetBSD: patch-aa,v 1.10 2009/05/22 19:52:02 tnn Exp $
 
-One needs to explicitly enable building in the toolbar code, yet 
+One needs to explicitly enable building in the toolbar code, yet
 this turns it on by default, which not everyone wants.
 
 Let's attempt to convince xterm of this here.
 
---- main.c.orig	2008-05-26 14:25:54.000000000 -0400
+--- main.c.orig	2009-01-24 17:08:01.000000000 +0100
 +++ main.c
 @@ -881,7 +881,7 @@ static XtResource application_resources[
      Bres("sessionMgt", "SessionMgt", sessionMgt, True),
@@ -14,5 +14,5 @@ Let's attempt to convince xterm of this here.
 -    Bres(XtNtoolBar, XtCToolBar, toolBar, True),
 +    Bres(XtNtoolBar, XtCToolBar, toolBar, False),
  #endif
- };
- 
+ #if OPT_MAXIMIZE
+     Bres(XtNmaximized, XtCMaximized, maximized, False),
