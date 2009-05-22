@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2009/05/22 07:16:58 plunky Exp $
 #
 
 DISTNAME=	obexftp-0.20
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--disable-swig
 .include "../../mk/bsd.prefs.mk"
 
 .if (${OPSYS} == "NetBSD" && exists(/usr/include/bluetooth.h))
-CPPFLAGS+=		-DCOMPAT_BLUEZ
+CPPFLAGS+=		-DCOMPAT_BLUEZ -DSDP_COMPAT
 .endif
 
 post-patch:
