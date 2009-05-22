@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.62 2009/05/22 20:15:35 tnn Exp $
+# $NetBSD: sites.mk,v 1.63 2009/05/22 20:17:44 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -358,7 +358,7 @@ MASTER_SITE_MYSQL+=	\
 	http://mysql.mirror.ac.za/Downloads/ \
 	ftp://mysql.mirror.ac.za/Downloads/ \
 	http://mysql.inspire.net.nz/Downloads/ \
-	ftp://mysql.inspire.net.nz/mysql/Downloads/ \
+	ftp://mysql.inspire.net.nz/mysql/Downloads/
 
 MASTER_SITE_DEBIAN+= \
 	http://ftp.debian.org/debian/ \
