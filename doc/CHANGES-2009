@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2052 2009/05/21 21:32:34 reed Exp $
+$NetBSD: CHANGES-2009,v 1.2053 2009/05/22 03:16:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2719,3 +2719,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 255 [wiz 2009-05-21]
 	Updated meta-pkgs/p5-gnome-bindings to 2.26.1.91 [wiz 2009-05-21]
 	Updated textproc/dblatex to 0.2.10 [reed 2009-05-21]
+	Updated www/typolight27-translations to 20090521 [taca 2009-05-22]
