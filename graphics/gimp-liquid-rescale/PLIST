@@ -1,5 +1,27 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/05 02:11:48 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/22 20:41:02 tnn Exp $
 lib/gimp/2.0/plug-ins/gimp-lqr-plugin
+lib/gimp/2.0/plug-ins/plug_in_lqr_iter
+share/gimp-lqr-plugin/help/en/gimp-help.xml
+share/gimp-lqr-plugin/help/en/index.html
+share/gimp-lqr-plugin/help/images/dialog1.jpg
+share/gimp-lqr-plugin/help/images/dialog1_it.jpg
+share/gimp-lqr-plugin/help/images/dialog1_ru.jpg
+share/gimp-lqr-plugin/help/images/dialog2.jpg
+share/gimp-lqr-plugin/help/images/dialog2_it.jpg
+share/gimp-lqr-plugin/help/images/dialog2_ru.jpg
+share/gimp-lqr-plugin/help/images/dialog3.jpg
+share/gimp-lqr-plugin/help/images/dialog3_it.jpg
+share/gimp-lqr-plugin/help/images/dialog3_ru.jpg
+share/gimp-lqr-plugin/help/images/dialog4.jpg
+share/gimp-lqr-plugin/help/images/dialog4_it.jpg
+share/gimp-lqr-plugin/help/images/dialog_interactive.jpg
+share/gimp-lqr-plugin/help/images/dialog_interactive_it.jpg
+share/gimp-lqr-plugin/help/images/wilber.png
+share/gimp-lqr-plugin/help/it/gimp-help.xml
+share/gimp-lqr-plugin/help/it/index.html
+share/gimp-lqr-plugin/help/ru/gimp-help.xml
+share/gimp-lqr-plugin/help/ru/index.html
+share/gimp/2.0/scripts/batch-gimp-lqr.scm
 share/locale/de/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/es_AR/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/es_ES/LC_MESSAGES/gimp20-lqr-plugin.mo
@@ -14,3 +36,15 @@ share/locale/ru/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/sr/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/zh_CN/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-lqr-plugin.mo
+@dirrm share/gimp/2.0/scripts
+@dirrm share/gimp/2.0
+@dirrm share/gimp-lqr-plugin/help/ru
+@dirrm share/gimp-lqr-plugin/help/it
+@dirrm share/gimp-lqr-plugin/help/images
+@dirrm share/gimp-lqr-plugin/help/en
+@dirrm share/gimp-lqr-plugin/help
+@dirrm share/gimp-lqr-plugin
+@dirrm share/gimp
+@dirrm lib/gimp/2.0/plug-ins
+@dirrm lib/gimp/2.0
+@dirrm lib/gimp
