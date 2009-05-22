@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/05/25 19:23:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/05/22 20:19:19 tnn Exp $
 bin/xaos
 info/xaos.info
 man/man6/xaos.6
@@ -8,6 +8,7 @@ share/XaoS/catalogs/deutsch.cat
 share/XaoS/catalogs/english.cat
 share/XaoS/catalogs/espanhol.cat
 share/XaoS/catalogs/francais.cat
+share/XaoS/catalogs/italiano.cat
 share/XaoS/catalogs/magyar.cat
 share/XaoS/catalogs/romanian.cat
 share/XaoS/doc/AUTHORS
@@ -231,6 +232,7 @@ share/locale/de/LC_MESSAGES/xaos.mo
 share/locale/es/LC_MESSAGES/xaos.mo
 share/locale/fr/LC_MESSAGES/xaos.mo
 share/locale/hu/LC_MESSAGES/xaos.mo
+share/locale/it/LC_MESSAGES/xaos.mo
 share/locale/ro/LC_MESSAGES/xaos.mo
 @dirrm share/XaoS/tutorial
 @dirrm share/XaoS/help
