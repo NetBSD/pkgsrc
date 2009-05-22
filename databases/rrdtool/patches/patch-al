@@ -1,12 +1,12 @@
-$NetBSD: patch-al,v 1.14 2008/09/10 05:38:12 martti Exp $
+$NetBSD: patch-al,v 1.15 2009/05/22 09:27:22 martti Exp $
 
 Correct examples directory.
 
---- examples/Makefile.in.orig	2008-09-06 17:26:10.000000000 +0300
-+++ examples/Makefile.in	2008-09-07 08:37:18.000000000 +0300
-@@ -284,7 +284,7 @@
- target_os = @target_os@
- target_vendor = @target_vendor@
+--- examples/Makefile.in.orig	2009-05-19 16:45:20.000000000 +0300
++++ examples/Makefile.in	2009-05-22 12:22:34.000000000 +0300
+@@ -251,7 +251,7 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  EXTRA_DIST = cgi-demo.cgi.in
 -examplesdir = $(pkgdatadir)/examples
 +examplesdir = $(prefix)/share/examples/rrdtool
