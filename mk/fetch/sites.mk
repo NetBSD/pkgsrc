@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.59 2009/05/22 19:24:58 zafer Exp $
+# $NetBSD: sites.mk,v 1.60 2009/05/22 19:32:20 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -246,7 +246,6 @@ MASTER_SITE_APACHE+=    \
 	http://www.meisei-u.ac.jp/mirror/apache/dist/ \
 	http://ftp.twaren.net/Unix/Web/apache/ \
 	http://ftp.cuhk.edu.hk/pub/packages/apache.org/ \
-	ftp://ftp.planetmirror.com.au/pub/apache/dist/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
 	ftp://www.ibiblio.org/pub/mirrors/apache/ \
 	ftp://mirror.nyi.net/apache/ \
@@ -449,7 +448,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://ftp.sunet.se/pub/Office/OpenOffice.org/ \
 	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	http://mirror.pacific.net.au/openoffice/ \
-	http://public.planetmirror.com.au/pub/openoffice/ \
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
