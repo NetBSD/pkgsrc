@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7.2.2 2009/05/22 11:55:35 tron Exp $
+
+--- configure.orig	2008-12-20 02:12:45.000000000 +1000
++++ configure
+@@ -21033,7 +21033,7 @@ case "$host" in
+   powerpc-*-aix* | rs6000-*-aix*)
+ 	TARGET=POWERPC_AIX; TARGETDIR=powerpc
+ 	;;
+-  powerpc-*-freebsd*)
++  powerpc-*-freebsd* | powerpc-*-netbsd*)
+ 	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
+ 	;;
+   powerpc*-*-rtems*)
