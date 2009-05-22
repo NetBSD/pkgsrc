@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2008/03/25 16:47:00 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2009/05/22 17:23:06 zafer Exp $
 #
 
 DISTNAME=		memtest86-3.4
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.memtest86.com/
+MASTER_SITES=		${MASTER_SITE_FREEBSD} \
+					${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.memtest86.com/
