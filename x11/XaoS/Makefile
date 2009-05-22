@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/05/25 19:23:02 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/22 20:19:19 tnn Exp $
 #
 
-DISTNAME=		XaoS-3.3
+DISTNAME=		XaoS-3.4
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xaos/}
 
@@ -27,6 +27,7 @@ SUBST_SED.paths=	-e 's,/usr/share/locale,${PREFIX}/${PKGLOCALEDIR}/locale,g'
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 
+CHECK_PORTABILITY_SKIP+=	help/applehelpconv
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../math/gsl/buildlink3.mk"
