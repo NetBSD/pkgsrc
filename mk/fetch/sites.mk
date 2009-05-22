@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.53 2009/05/20 23:25:12 zafer Exp $
+# $NetBSD: sites.mk,v 1.54 2009/05/22 18:39:50 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -8,7 +8,6 @@ MASTER_SITE_XCONTRIB+=  \
 	ftp://ftp.gwdg.de/pub/x11/x.org/contrib/ \
 	ftp://sunsite.icm.edu.pl/pub/X11/contrib/ \
 	ftp://mirror.switch.ch/mirror/X11/contrib/ \
-	ftp://ftp.cica.es/pub/X/contrib/ \
 	ftp://ftp.x.org/contrib/
 
 MASTER_SITE_GNU+=       \
