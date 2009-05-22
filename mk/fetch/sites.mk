@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.54 2009/05/22 18:39:50 zafer Exp $
+# $NetBSD: sites.mk,v 1.55 2009/05/22 18:44:16 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -23,9 +23,7 @@ MASTER_SITE_GNU+=       \
 	ftp://ftp.chg.ru/pub/gnu/
 
 MASTER_SITE_GNUSTEP+=   \
-	ftp://ftp.gnustep.org/pub/gnustep/ \
-	ftp://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/ \
-	http://ftp.easynet.nl/mirror/GNUstep/pub/gnustep/
+	ftp://ftp.gnustep.org/pub/gnustep/ 
 
 MASTER_SITE_PERL_CPAN+= \
 	ftp://cpan.pair.com/modules/by-module/ \
