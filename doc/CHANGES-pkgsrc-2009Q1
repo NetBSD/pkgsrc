@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.34 2009/05/22 10:19:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.35 2009/05/22 11:56:18 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -107,3 +107,7 @@ Pullup ticket #2774 - requested by obache
 cyrus-imapd: bug fix and destdir support
 Pullup ticket #2777 - requested by martti
 squirrelmail: security update
+Pullup ticket #2775 - requested by joerg
+nsd: security update
+Pullup ticket #2776 - requested by he
+libffi: build fix
