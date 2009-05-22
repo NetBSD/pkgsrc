@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/05/22 09:46:06 tron Exp $
+# $NetBSD: Makefile,v 1.44 2009/05/22 10:41:24 tron Exp $
 
 DISTNAME=	httpd-2.2.11
 PKGREVISION=	3
@@ -10,7 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/
-COMMENT=	Apache HTTP (Web) server, version 2
+COMMENT=	Apache HTTP (Web) server, version 2.2
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
