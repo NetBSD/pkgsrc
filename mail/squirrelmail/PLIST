@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.30 2009/05/22 07:04:12 martti Exp $
+@comment $NetBSD: PLIST,v 1.31 2009/05/22 08:23:02 martti Exp $
+${PLIST.japanese}share/squirrelmail/functions/decode/iso_2022_jp.php
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/README
@@ -109,7 +110,6 @@ share/squirrelmail/functions/decode/cp1258.php
 share/squirrelmail/functions/decode/cp855.php
 share/squirrelmail/functions/decode/cp866.php
 share/squirrelmail/functions/decode/index.php
-share/squirrelmail/functions/decode/iso_2022_jp.php
 share/squirrelmail/functions/decode/iso_8859_1.php
 share/squirrelmail/functions/decode/iso_8859_10.php
 share/squirrelmail/functions/decode/iso_8859_11.php
