@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/08/12 20:15:11 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/22 20:02:31 tnn Exp $
 #
 
-DISTNAME=	unfs3-0.9.21
+DISTNAME=	unfs3-0.9.22
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unfs3/}
 
@@ -11,6 +11,7 @@ COMMENT=	Userspace NFSv3 server
 
 GNU_CONFIGURE=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
+USE_TOOLS+=	gmake
 
 CONF_FILES+=		${PREFIX}/share/examples/unfs3/exports \
 			    ${PKG_SYSCONFDIR}/exports
@@ -25,11 +26,6 @@ SUBST_FILES.exports=	daemon.c unfsd.8
 SUBST_SED.exports=	-e 's,/etc/exports,${PKG_SYSCONFDIR}/exports,g'
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-BUILDLINK_TRANSFORM+=	rm:-lrpcsoc
-CPPFLAGS+=		-Dxp_sock=xp_fd
-.endif
 
 post-install:
 			${INSTALL_DATA} ${FILESDIR}/exports \
