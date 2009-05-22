@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2009/05/18 13:35:55 taca Exp $
+$NetBSD: distinfo,v 1.9 2009/05/22 03:16:11 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -33,9 +33,9 @@ Size (TYPOlight-Icelandic-v2.zip) = 76117 bytes
 SHA1 (TYPOlight-Indonesian-v1.zip) = b814c0903c4f4efe3deec2f25977befe98f9c9cb
 RMD160 (TYPOlight-Indonesian-v1.zip) = 67d09a5aba444e103d60428c8c010cd05ed2c7b4
 Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
-SHA1 (TYPOlight-Italian-v13.zip) = 5e0a09223f5cf410111d8214917b8dca320753ac
-RMD160 (TYPOlight-Italian-v13.zip) = 6c5ec846cec06778b71c72583ccee3179acaa00b
-Size (TYPOlight-Italian-v13.zip) = 150245 bytes
+SHA1 (TYPOlight-Italian-v14.zip) = 0c5f8f14ac17ee3fe9d0fe7994c89cd90a6ea878
+RMD160 (TYPOlight-Italian-v14.zip) = 6f239813a802ef22bf988b3597d708c5782726e9
+Size (TYPOlight-Italian-v14.zip) = 150220 bytes
 SHA1 (TYPOlight-Japanese-v20.zip) = 79ffba8fe182eec4e98366a1991a29f693f2f61b
 RMD160 (TYPOlight-Japanese-v20.zip) = a5c8554da7440767055c60de146ad048cd317e9b
 Size (TYPOlight-Japanese-v20.zip) = 157445 bytes
@@ -51,9 +51,9 @@ Size (TYPOlight-Norwegian-v8.zip) = 113084 bytes
 SHA1 (TYPOlight-Persian-v2.zip) = 608738973a0ab1c61422b77c45c3a55467a0f54e
 RMD160 (TYPOlight-Persian-v2.zip) = c3711d77c996068e95cadf765eaed65f7f7fddda
 Size (TYPOlight-Persian-v2.zip) = 117169 bytes
-SHA1 (TYPOlight-Polish-v21.zip) = 913f2c8cf3dc2e992c717e35ebfab14dad0d508c
-RMD160 (TYPOlight-Polish-v21.zip) = 90e8ae00c9a1eff0e7901579de2b6ff84be2a8f4
-Size (TYPOlight-Polish-v21.zip) = 148333 bytes
+SHA1 (TYPOlight-Polish-v22.zip) = df015627a348ce7c4b90194e3ec4a6e76718b1eb
+RMD160 (TYPOlight-Polish-v22.zip) = 2a1c9a24c8fe4b67f11d7d274e38b9a529a5d894
+Size (TYPOlight-Polish-v22.zip) = 150714 bytes
 SHA1 (TYPOlight-Portuguese-v4.zip) = e5409686b94974fba227d98e5e9a7d7e7d502b84
 RMD160 (TYPOlight-Portuguese-v4.zip) = 3800d9ab044efa8685d749c2f3bf95b50560c2ba
 Size (TYPOlight-Portuguese-v4.zip) = 143677 bytes
