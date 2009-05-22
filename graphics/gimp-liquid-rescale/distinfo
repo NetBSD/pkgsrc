@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/04/05 02:11:48 tnn Exp $
+$NetBSD: distinfo,v 1.4 2009/05/22 20:41:02 tnn Exp $
 
-SHA1 (gimp-lqr-plugin-0.4.0-4.tar.gz) = 7cec6270d9eac8fb2e599a5b095c022475c51268
-RMD160 (gimp-lqr-plugin-0.4.0-4.tar.gz) = 674b0dc8fe2280f766f55543edc620c852edcacc
-Size (gimp-lqr-plugin-0.4.0-4.tar.gz) = 824386 bytes
-SHA1 (patch-aa) = dbe67602802e6e187b131fdb734d71036508a628
+SHA1 (gimp-lqr-plugin-0.6.1.tar.bz2) = f202700ffe7981de14a4b69493903239dd963a54
+RMD160 (gimp-lqr-plugin-0.6.1.tar.bz2) = 42d61edbbd1446570f936daab5cab2c485f2c306
+Size (gimp-lqr-plugin-0.6.1.tar.bz2) = 636467 bytes
