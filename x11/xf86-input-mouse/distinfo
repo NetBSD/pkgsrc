@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.7 2009/03/14 11:09:37 apb Exp $
+$NetBSD: distinfo,v 1.8 2009/05/22 19:05:57 tnn Exp $
 
-SHA1 (xf86-input-mouse-1.3.0.tar.bz2) = 79ecd994b2820d24a00d4c4af9aa9189bdd9db93
-RMD160 (xf86-input-mouse-1.3.0.tar.bz2) = a691e809e61e14e2383f1d4533b0eb454373667f
-Size (xf86-input-mouse-1.3.0.tar.bz2) = 282157 bytes
+SHA1 (xf86-input-mouse-1.4.0.tar.bz2) = d16c09580a0a5deb1675874e914f616548859747
+RMD160 (xf86-input-mouse-1.4.0.tar.bz2) = 17985f0493711a25ffa8fdeae4d741d7f602ca4e
+Size (xf86-input-mouse-1.4.0.tar.bz2) = 292626 bytes
 SHA1 (patch-aa) = baf529a3ae260e98fb068cb9549f749705d8213b
 SHA1 (patch-ab) = 632ec0e3908ccd16678a480b5ffa00dba7db640f
+SHA1 (patch-ac) = d32bbb082c0898e6eb6bf9dadb2af401b1e79312
+SHA1 (patch-ad) = 8301f21624cecdb19b2f705d546b6bd37d105dc3
