@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2057 2009/05/22 09:48:41 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2058 2009/05/22 21:17:48 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2725,3 +2725,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.184 [martti 2009-05-22]
 	Updated databases/rrdtool to 1.3.8 [martti 2009-05-22]
 	Updated www/apache22 to 2.2.11nb3 [tron 2009-05-22]
+	Updated x11/xf86-input-mouse to 1.4.0 [tnn 2009-05-22]
+	Updated x11/libdrm to 2.4.11 [tnn 2009-05-22]
+	Updated x11/xterm to 243 [tnn 2009-05-22]
+	Updated net/unfs3 to 0.9.22 [tnn 2009-05-22]
+	Updated x11/XaoS to 3.4 [tnn 2009-05-22]
+	Updated graphics/liblqr to 0.4.1 [tnn 2009-05-22]
+	Updated graphics/gimp-liquid-rescale to 0.6.1 [tnn 2009-05-22]
