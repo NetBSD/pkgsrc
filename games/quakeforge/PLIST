@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/05/22 16:50:00 snj Exp $
 bin/bsp2img
 bin/hw-master
+${PLIST.linux}bin/nq-fbdev
 bin/nq-glx
 bin/nq-sdl
 bin/nq-sdl32
@@ -17,6 +18,7 @@ bin/qfprogs
 bin/qfvis
 bin/qfwavinfo
 bin/qtv
+${PLIST.linux}/bin/qw-client-fbdev
 bin/qw-client-glx
 bin/qw-client-sdl
 bin/qw-client-sdl32
@@ -173,6 +175,7 @@ lib/libQFruamoko.la
 lib/libQFsound.la
 lib/libQFutil.la
 lib/quakeforge/cd_file.la
+${PLIST.linux}lib/quakeforge/cd_linux.la
 lib/quakeforge/cd_sdl.la
 lib/quakeforge/console_client.la
 lib/quakeforge/console_server.la
