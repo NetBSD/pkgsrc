@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2009/05/23 09:04:01 tron Exp $
+# $NetBSD: Makefile,v 1.51 2009/05/23 09:06:44 tron Exp $
 
 DISTNAME=	cscope-15.7a
 CATEGORIES=	devel
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cscope.sourceforge.net/
 COMMENT=	Interactive C program browser
+LICENSE=	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
