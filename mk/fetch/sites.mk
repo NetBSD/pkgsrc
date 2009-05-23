@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.63 2009/05/22 20:17:44 zafer Exp $
+# $NetBSD: sites.mk,v 1.64 2009/05/23 11:32:14 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -393,15 +393,12 @@ MASTER_SITE_DEBIAN+= \
 
 MASTER_SITE_OPENOFFICE+=	\
 	http://mirrors.isc.org/pub/openoffice/ \
-	http://ftp.stardiv.de/pub/OpenOffice.org/ \
 	http://openoffice.mirrors.ilisys.com.au/ \
-	ftp://ftp.pucpr.br/openoffice/ \
 	http://www.ibiblio.org/pub/mirrors/openoffice/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
 	http://openoffice.mirrors.pair.com/ftp/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
 	http://ftp.belnet.be/pub/mirror/ftp.openoffice.org/ \
-	ftp://ftp.kulnet.kuleuven.ac.be/pub/mirror/openoffice.org/ \
 	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
 	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
 	ftp://openoffice.cict.fr/openoffice/ \
@@ -427,7 +424,6 @@ MASTER_SITE_OPENOFFICE+=	\
 	http://komo.vlsm.org/openoffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.t.ring.gr.jp/pub/misc/openoffice/ \
-	http://mymirror.asiaosc.org/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/ \
 	http://www.fs.tum.de/~mrauch/OpenOffice/download/
 
