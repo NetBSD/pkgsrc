@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.1 2009/05/23 15:02:42 dholland Exp $
+
+This patch fixes at least one set of "Bogus call to CARDS_RenderCard"
+problems - the problem being that if the card deck ran out, the server
+would start handing out card -1.
+
+I don't know if this is the same problem we used to see back in the
+day or a different one.
+
+upstream: AFAIK upstream is currently comatose/dead
+
+--- server.c~	2000-01-02 17:52:17.000000000 -0500
++++ server.c	2007-11-02 15:33:03.000000000 -0400
+@@ -427,11 +427,17 @@
+ 
+     case MSG_REQUESTCARD: {
+         MsgRequestCard *pMess = (MsgRequestCard *)pvMessage;
++	Int32 iCard;
++
++	iCard = DECK_GetCard(pCardDeck);
++	if (iCard < 0) {
++	    break;
++	}
+ 
+         RISK_SetCardOfPlayer(pMess->iPlayer,
+                              RISK_GetNumCardsOfPlayer
+                              (pMess->iPlayer),
+-                             DECK_GetCard(pCardDeck));
++                             iCard);
+         RISK_SetNumCardsOfPlayer(pMess->iPlayer,
+                                  RISK_GetNumCardsOfPlayer
+                                  (pMess->iPlayer)+1);
