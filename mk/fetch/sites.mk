@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.67 2009/05/23 12:58:34 zafer Exp $
+# $NetBSD: sites.mk,v 1.68 2009/05/23 17:06:24 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -679,7 +679,7 @@ MASTER_SITE_GENTOO+= \
 	http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
 	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
 	http://gentoo.virginmedia.com/ \
-	ftp://gentoo.virginmedia.com/mirrors/gentoo/
+	ftp://gentoo.virginmedia.com/mirrors/gentoo/ \
 	http://mirror.pacific.net.au/linux/Gentoo/ \
 	ftp://mirror.pacific.net.au/linux/Gentoo/ \
 	ftp://ftp.swin.edu.au/gentoo/ \
