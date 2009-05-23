@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2058 2009/05/22 21:17:48 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2059 2009/05/23 03:59:09 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2732,3 +2732,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/XaoS to 3.4 [tnn 2009-05-22]
 	Updated graphics/liblqr to 0.4.1 [tnn 2009-05-22]
 	Updated graphics/gimp-liquid-rescale to 0.6.1 [tnn 2009-05-22]
+	Updated www/bozohttpd to 20090522 [mrg 2009-05-22]
