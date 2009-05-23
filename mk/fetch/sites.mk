@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.66 2009/05/23 12:09:46 zafer Exp $
+# $NetBSD: sites.mk,v 1.67 2009/05/23 12:58:34 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -536,50 +536,45 @@ MASTER_SITE_PGSQL+=	\
 MASTER_SITE_GENTOO+= \
 	http://distfiles.gentoo.org/ \
 	ftp://gentoo.arcticnetwork.ca/pub/gentoo/ \
-	http://gentoo.arcticnetwork.ca/source/ \
-	ftp://mirrors.tera-byte.com/pub/gento/ \
+	http://gentoo.arcticnetwork.ca/ \
+	ftp://mirrors.tera-byte.com/pub/gentoo/ \
 	http://gentoo.mirrors.tera-byte.com/ \
 	ftp://mirror.csclub.uwaterloo.ca/gentoo-distfiles/ \
 	http://mirror.csclub.uwaterloo.ca/gentoo-distfiles/ \
 	http://mirror.mcs.anl.gov/pub/gentoo/ \
 	ftp://mirror.mcs.anl.gov/pub/gentoo/ \
-	http://gentoo.binarycompass.org/ \
 	ftp://gentoo.chem.wisc.edu/gentoo/ \
 	http://gentoo.chem.wisc.edu/gentoo/ \
-	http://mirrors.cs.wmich.edu/gento/ \
-	http://mirror.datapipe.net/gento/ \
+	http://mirrors.cs.wmich.edu/gentoo/ \
+	http://mirror.datapipe.net/gentoo/ \
 	ftp://mirror.datapipe.net/gento/ \
 	http://gentoo.mirrors.easynews.com/linux/gentoo/ \
-	http://mirror.fslutd.org/linux/distributions/gentoo/ \
-	ftp://mirror.fslutd.org/linux/distributions/gentoo/ \
-	ftp://ftp.gtlib.gatech.edu/pub/gento/ \
-	http://www.gtlib.gatech.edu/pub/gento/ \
+	ftp://ftp.gtlib.gatech.edu/pub/gentoo/ \
+	http://www.gtlib.gatech.edu/pub/gentoo/ \
 	http://gentoo.mirrors.hoobly.com/ \
 	ftp://distro.ibiblio.org/pub/linux/distributions/gentoo/ \
 	http://distro.ibiblio.org/pub/linux/distributions/gentoo/ \
-	ftp://ftp.ussg.iu.edu/pub/linux/gento/ \
+	ftp://ftp.ussg.iu.edu/pub/linux/gentoo/ \
 	ftp://lug.mtu.edu/gentoo/ \
 	http://lug.mtu.edu/gentoo/ \
 	http://gentoo.netnitco.net/ \
 	ftp://gentoo.netnitco.net/pub/mirrors/gentoo/source/ \
-	http://open-systems.ufl.edu/mirrors/gento/ \
 	http://gentoo.osuosl.org/ \
 	http://gentoo.mirrors.pair.com/ \
 	ftp://gentoo.mirrors.pair.com/ \
 	ftp://mirror.iawnet.sandia.gov/pub/gentoo/ \
 	http://gentoo.llarian.net/ \
-	ftp://gentoo.llarian.net/pub/gento/ \
-	http://gentoo.mirrors.tds.net/gento/ \
+	ftp://gentoo.llarian.net/pub/gentoo/ \
+	http://gentoo.mirrors.tds.net/gentoo/ \
 	ftp://gentoo.mirrors.tds.net/gento/ \
 	ftp://ftp.ucsb.edu/pub/mirrors/linux/gentoo/ \
 	http://ftp.ucsb.edu/pub/mirrors/linux/gentoo/ \
-	http://cudlug.cudenver.edu/gentoo/ \
 	http://gentoo.cites.uiuc.edu/pub/gentoo/ \
 	ftp://gentoo.cites.uiuc.edu/pub/gentoo/ \
 	http://mirror.usu.edu/mirrors/gentoo/ \
-	ftp://ftp.wallawalla.edu/pub/mirrors/ftp.gentoo.or/ \
+	ftp://ftp.wallawalla.edu/pub/mirrors/ftp.gentoo.org/ \
 	http://gentoo.localhost.net.ar/ \
-	ftp://mirrors.localhost.net.ar/pub/mirrors/gento/ \
+	ftp://mirrors.localhost.net.ar/pub/mirrors/gentoo/ \
 	http://www.las.ic.unicamp.br/pub/gentoo/ \
 	ftp://ftp.las.ic.unicamp.br/pub/gentoo/ \
 	http://gentoo.inode.at/ \
@@ -606,39 +601,31 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.linux.ee/pub/gentoo/distfiles/ \
 	http://trumpetti.atm.tut.fi/gentoo/ \
 	ftp://trumpetti.atm.tut.fi/gentoo/ \
-	ftp://ftp.first-world.info/ \
-	http://ftp.first-world.info/ \
 	ftp://ftp.free.fr/mirrors/ftp.gentoo.org/ \
 	ftp://gentoo.imj.fr/pub/gentoo/ \
 	http://mirror.ovh.net/gentoo-distfiles/ \
 	ftp://mirror.ovh.net/gentoo-distfiles/ \
 	ftp://de-mirror.org/distro/gentoo/ \
 	http://de-mirror.org/distro/gentoo/ \
-	ftp://ftp.wh2.tu-dresden.de/pub/mirrors/gento/ \
+	ftp://ftp.wh2.tu-dresden.de/pub/mirrors/gentoo/ \
 	ftp://ftp.gentoo.mesh-solutions.com/gentoo/ \
 	http://gentoo.mneisen.org/ \
 	http://linux.rz.ruhr-uni-bochum.de/download/gentoo-mirror/ \
 	ftp://linux.rz.ruhr-uni-bochum.de/gentoo-mirror/ \
-	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gento/ \
-	ftp://pandemonium.tiscali.de/pub/gentoo/ \
+	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/ \
 	ftp://ftp.tu-clausthal.de/pub/linux/gentoo/ \
-	http://ftp.uni-erlangen.de/pub/mirrors/gento/ \
-	ftp://ftp.uni-erlangen.de/pub/mirrors/gento/ \
-	http://ftp6.uni-erlangen.de/pub/mirrors/gento/ \
-	ftp://ftp6.uni-erlangen.de/pub/mirrors/gento/ \
-	ftp://ftp.join.uni-muenster.de/pub/linux/distributions/gento/ \
+	http://ftp.uni-erlangen.de/pub/mirrors/gentoo/ \
+	ftp://ftp.uni-erlangen.de/pub/mirrors/gentoo/ \
+	ftp://ftp.join.uni-muenster.de/pub/linux/distributions/gentoo/ \
 	http://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/gentoo/ \
-	ftp://ftp.ipv6.uni-muenster.de/pub/linux/distributions/gento/ \
-	ftp://ftp6.uni-muenster.de/pub/linux/distributions/gento/ \
+	ftp://ftp6.uni-muenster.de/pub/linux/distributions/gentoo/ \
 	ftp://files.gentoo.gr/ \
 	http://files.gentoo.gr/ \
 	ftp://ftp.ntua.gr/pub/linux/gentoo/ \
 	http://ftp.ntua.gr/pub/linux/gentoo/ \
 	ftp://ftp.cc.uoc.gr/mirrors/linux/gentoo/ \
 	http://ftp.cc.uoc.gr/mirrors/linux/gentoo/ \
-	ftp://ftp.uoi.gr/mirror/OS/gentoo/ \
-	http://ftp.uoi.gr/mirror/OS/gentoo/ \
 	http://gentoo.inf.elte.hu/ \
 	ftp://gentoo.inf.elte.hu/ \
 	http://ftp.rhnet.is/pub/gentoo/ \
@@ -646,18 +633,15 @@ MASTER_SITE_GENTOO+= \
 	http://ftp.heanet.ie/pub/gentoo/ \
 	ftp://ftp.heanet.ie/pub/gentoo/ \
 	http://mirror.hamakor.org.il/pub/mirrors/gentoo/ \
-	ftp://ftp.unina.it/pub/linux/distributions/gento/ \
+	ftp://ftp.unina.it/pub/linux/distributions/gentoo/ \
 	http://gentoo.tups.lv/source/ \
 	http://mirror.muntinternet.net/pub/gentoo/ \
 	ftp://mirror.muntinternet.net/pub/gentoo/ \
 	http://gentoo.tiscali.nl/ \
 	ftp://gentoo.tiscali.nl/pub/mirror/gentoo/ \
-	http://ftp.snt.utwente.nl/pub/os/linux/gento/ \
-	ftp://ftp.snt.utwente.nl/pub/os/linux/gento/ \
-	http://ftp.snt.ipv6.utwente.nl/pub/os/linux/gentoo/ \
-	ftp://ftp.snt.ipv6.utwente.nl/pub/os/linux/gentoo/ \
+	http://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
+	ftp://ftp.snt.utwente.nl/pub/os/linux/gentoo/ \
 	http://mirror.gentoo.no/ \
-	http://gentoo.zie.pg.gda.pl/ \
 	ftp://mirror.icis.pcz.pl/gentoo/ \
 	http://gentoo.prz.rzeszow.pl/ \
 	http://gentoo.po.opole.pl/ \
@@ -667,21 +651,17 @@ MASTER_SITE_GENTOO+= \
 	http://gentoo.mirror.pw.edu.pl/ \
 	http://darkstar.ist.utl.pt/gentoo/ \
 	ftp://darkstar.ist.utl.pt/pub/gentoo/ \
-	ftp://ftp.rnl.ist.utl.pt/pub/gentoo/ \
 	ftp://cesium.di.uminho.pt/pub/gentoo/ \
-	http://cesium.di.uminho.pt/pub/gentoo/ \
 	ftp://ftp.dei.uc.pt/pub/linux/gentoo/ \
 	http://ftp.dei.uc.pt/pub/linux/gentoo/ \
 	http://mirrors.evolva.ro/gentoo/ \
 	ftp://mirrors.evolva.ro/gentoo/ \
 	http://ftp.roedu.net/pub/mirrors/gentoo.org/ \
 	ftp://ftp.roedu.net/pub/mirrors/gentoo.org/ \
-	ftp://ftp.romnet.org/gentoo/ \
-	http://ftp.romnet.org/gentoo/ \
 	http://mirrors.xservers.ro/gentoo/ \
 	http://mirror.yandex.ru/gentoo-distfiles/ \
 	ftp://mirror.yandex.ru/gentoo-distfiles/ \
-	http://gentoo.ynet.sk/pu/ \
+	http://gentoo.ynet.sk/pub/ \
 	http://gentoo-euetib.upc.es/mirror/gentoo/ \
 	http://ftp.udc.es/gentoo/ \
 	ftp://ftp.udc.es/gentoo/ \
@@ -689,24 +669,21 @@ MASTER_SITE_GENTOO+= \
 	http://ftp.ds.karen.hj.se/gentoo/ \
 	ftp://ftp.ing.umu.se/linux/gentoo/ \
 	http://ftp.ing.umu.se/linux/gentoo/ \
-	ftp://mirror.mdfnet.se/gento/ \
-	http://mirror.mdfnet.se/mirror/gento/ \
+	ftp://mirror.mdfnet.se/gentoo/ \
+	http://mirror.mdfnet.se/mirror/gentoo/ \
 	http://mirror.switch.ch/ftp/mirror/gentoo/ \
 	ftp://mirror.switch.ch/mirror/gentoo/ \
-	http://ftp.ankara.edu.tr/gentoo/ \
-	ftp://ftp.ankara.edu.tr/gentoo/ \
-	ftp://mirror.bytemark.co.uk/gentoo/ \
 	http://mirror.bytemark.co.uk/gentoo/ \
 	http://mirror.qubenet.net/mirror/gentoo/ \
 	ftp://mirror.qubenet.net/mirror/gentoo/ \
 	http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
 	ftp://ftp.mirrorservice.org/sites/www.ibiblio.org/gentoo/ \
 	http://gentoo.virginmedia.com/ \
-	ftp://gentoo.virginmedia.com/sites/gento/ \
-	http://mirror.pacific.net.au/linux/Gento/ \
-	ftp://mirror.pacific.net.au/linux/Gento/ \
-	ftp://ftp.swin.edu.au/gento/ \
-	http://ftp.swin.edu.au/gento/ \
+	ftp://gentoo.virginmedia.com/mirrors/gentoo/
+	http://mirror.pacific.net.au/linux/Gentoo/ \
+	ftp://mirror.pacific.net.au/linux/Gentoo/ \
+	ftp://ftp.swin.edu.au/gentoo/ \
+	http://ftp.swin.edu.au/gentoo/ \
 	http://gentoo.channelx.biz/ \
 	http://gentoo.gg3.net/ \
 	ftp://gg3.net/pub/linux/gentoo/ \
@@ -714,7 +691,7 @@ MASTER_SITE_GENTOO+= \
 	ftp://ftp.iij.ad.jp/pub/linux/gentoo/ \
 	http://ftp.jaist.ac.jp/pub/Linux/Gentoo/ \
 	ftp://ftp.jaist.ac.jp/pub/Linux/Gentoo/ \
-	ftp://ftp.ecc.u-tokyo.ac.jp/GENTO/ \
+	ftp://ftp.ecc.u-tokyo.ac.jp/GENTOO/ \
 	http://ftp.daum.net/gentoo/ \
 	ftp://ftp.daum.net/gentoo/ \
 	http://ftp.kaist.ac.kr/pub/gentoo/ \
@@ -729,10 +706,8 @@ MASTER_SITE_GENTOO+= \
 	http://gentoo.cs.nctu.edu.tw/gentoo/ \
 	ftp://ftp.cs.pu.edu.tw/Linux/Gentoo/ \
 	http://ftp.cs.pu.edu.tw/Linux/Gentoo/ \
-	http://mirrors.64hosting.com/pub/mirrors/gentoo/ \
-	ftp://mirrors.64hosting.com/pub/mirrors/gentoo/ \
 	http://gentoo.kems.net/ \
-	ftp://gentoo.kems.net/mirrors/gento/
+	ftp://gentoo.kems.net/mirrors/gentoo/
 
 MASTER_SITE_XORG+= \
 	http://xorg.freedesktop.org/releases/individual/ \
