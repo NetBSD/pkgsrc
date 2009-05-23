@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2009/05/23 15:02:42 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2009/05/23 15:14:21 dholland Exp $
 #
 
 DISTNAME=	xfrisk-1.2
@@ -13,6 +13,8 @@ COMMENT=	X11 version of the classic Risk board game
 # "RESTRICTED implies LICENSE" pkgsrc rule.
 #LICENSE=	gnu-gpl-v2
 LICENSE+=	generic-nonlicense
+
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 WRKSRC=		${WRKDIR}/XFrisk
 USE_TOOLS+=	gmake

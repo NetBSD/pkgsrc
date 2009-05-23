@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2007/11/20 18:44:14 rillig Exp $
+$NetBSD: patch-aa,v 1.5 2009/05/23 15:14:21 dholland Exp $
 
---- Makefile.orig	2003-09-30 10:18:48.000000000 +0200
-+++ Makefile	2003-09-30 10:20:04.000000000 +0200
+- take build configuration from inherited pkgsrc variables
+- install under $(DESTDIR)
+
+--- Makefile.orig	2000-01-23 14:01:55.000000000 -0500
++++ Makefile	2009-05-23 11:08:33.000000000 -0400
 @@ -55,9 +55,9 @@
  ####################
  # C compiler options
@@ -53,3 +56,51 @@ $NetBSD: patch-aa,v 1.4 2007/11/20 18:44:14 rillig Exp $
  
  # On some systems -DNARROWPROTO is needed for working Xaw scrollbars
  # This includes FreeBSD 3.x and recent Linux
+@@ -208,16 +207,16 @@
+ 	$(RANLIB) $@
+ 
+ install: all
+-	-(umask 022; mkdir -p -m755 $(LIBDIR) $(BINDIR) $(APPLOADDIR))
+-	$(INSTALL_DATA) $(MAP) $(LIBDIR)
+-	$(INSTALL_DATA) $(COUNTRY) $(LIBDIR)
+-	$(INSTALL_DATA) $(HELP) $(LIBDIR)
+-	$(INSTALL_BIN) risk $(BINDIR)
+-	$(INSTALL_BIN) xfrisk $(BINDIR)
+-	$(INSTALL_BIN) friskserver $(BINDIR)
+-	$(INSTALL_BIN) aiDummy $(BINDIR)
+-	$(INSTALL_BIN) aiConway $(BINDIR)
+-	$(INSTALL_BIN) aiColson $(BINDIR)
++	-(umask 022; mkdir -p -m755 $(DESTDIR)$(LIBDIR) $(DESTDIR)$(BINDIR))
++	$(INSTALL_DATA) $(MAP) $(DESTDIR)$(LIBDIR)
++	$(INSTALL_DATA) $(COUNTRY) $(DESTDIR)$(LIBDIR)
++	$(INSTALL_DATA) $(HELP) $(DESTDIR)$(LIBDIR)
++	$(INSTALL_BIN) risk $(DESTDIR)$(BINDIR)
++	$(INSTALL_BIN) xfrisk $(DESTDIR)$(BINDIR)
++	$(INSTALL_BIN) friskserver $(DESTDIR)$(BINDIR)
++	$(INSTALL_BIN) aiDummy $(DESTDIR)$(BINDIR)
++	$(INSTALL_BIN) aiConway $(DESTDIR)$(BINDIR)
++	$(INSTALL_BIN) aiColson $(DESTDIR)$(BINDIR)
+ 
+ 
+ # Other targets
+@@ -225,13 +224,13 @@
+ 	./buildmap World.ppm World.risk Countries.risk
+ 
+ uninstall:
+-	rm -rf $(LIBDIR)
+-	rm -f  $(BINDIR)/risk
+-	rm -f  $(BINDIR)/xfrisk
+-	rm -f  $(BINDIR)/friskserver
+-	rm -f  $(BINDIR)/aiDummy
+-	rm -f  $(BINDIR)/aiConway
+-	rm -f  $(BINDIR)/aiColson
++	rm -rf $(DESTDIR)$(LIBDIR)
++	rm -f  $(DESTDIR)$(BINDIR)/risk
++	rm -f  $(DESTDIR)$(BINDIR)/xfrisk
++	rm -f  $(DESTDIR)$(BINDIR)/friskserver
++	rm -f  $(DESTDIR)$(BINDIR)/aiDummy
++	rm -f  $(DESTDIR)$(BINDIR)/aiConway
++	rm -f  $(DESTDIR)$(BINDIR)/aiColson
+ 
+ types.h: findtypes
+ 	./findtypes
