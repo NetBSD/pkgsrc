@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/01/24 03:04:54 obache Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/24 12:37:36 obache Exp $
 
---- configure.orig	2008-10-11 05:55:55.000000000 +0000
+--- configure.orig	2009-05-15 06:33:40.000000000 +0000
 +++ configure
-@@ -1697,16 +1697,13 @@ MYCOMMANDFILES="tcutest.lua tchtest.lua 
+@@ -1790,16 +1790,13 @@ MYCOMMANDFILES="tcutest.lua tchtest.lua 
  MYLUALIBDIR=""
  
  # Building flags
