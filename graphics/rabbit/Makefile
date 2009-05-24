@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/02/09 08:33:32 obache Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/24 02:33:14 obache Exp $
 #
 
-DISTNAME=	rabbit-0.5.9
+DISTNAME=	rabbit-0.6.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/
