@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/02/09 08:33:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/05/24 02:33:14 obache Exp $
 bin/rabbirc
 bin/rabbit
 bin/rabbit-command
@@ -394,10 +394,12 @@ share/rabbit/image/rabbit-images/lavie-icon.png
 share/rabbit/image/rabbit-images/lavie-with-logo.png
 share/rabbit/image/rabbit-images/lavie.png
 share/rabbit/image/rabbit-images/mini-alice.png
+share/rabbit/image/rabbit-images/mini-horizontal-bar.png
 share/rabbit/image/rabbit-images/mini-kame-taro.png
 share/rabbit/image/rabbit-images/mini-tanu-kitaro.png
 share/rabbit/image/rabbit-images/mini-usa-taro.png
 share/rabbit/image/rabbit-images/mini-usagi.png
+share/rabbit/image/rabbit-images/mini-vertical-bar.png
 share/rabbit/image/rabbit-images/mini-yukidaru-taro.png
 share/rabbit/image/rabbit-images/open-quote-blue.png
 share/rabbit/image/rabbit-images/open-quote-brown.png
