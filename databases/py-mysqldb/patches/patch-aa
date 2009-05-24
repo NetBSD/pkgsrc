@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.6 2009/05/24 10:51:18 tron Exp $
+
+--- _mysql.c.orig	2007-02-28 02:35:56.000000000 +0000
++++ _mysql.c	2009-05-24 11:47:17.000000000 +0100
+@@ -34,7 +34,7 @@
+ #else
+ #include "my_config.h"
+ #endif
+-#ifndef uint
++#if !defined(uint) && !defined(__APPLE__)
+ #define uint unsigned int
+ #endif
+ #include "mysql.h"
