@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2009/05/21 14:33:53 tonnerre Exp $
+# $NetBSD: Makefile,v 1.299 2009/05/24 12:43:45 obache Exp $
 #
 
 COMMENT=	Databases
@@ -31,6 +31,7 @@ SUBDIR+=	iodbc
 SUBDIR+=	ipa_sdb
 SUBDIR+=	java-db3
 SUBDIR+=	java-qdbm
+SUBDIR+=	java-tokyocabinet
 SUBDIR+=	jdb
 SUBDIR+=	jdbc-mysql31
 SUBDIR+=	jdbc-mysql5
