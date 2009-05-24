@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2063 2009/05/24 02:33:30 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2064 2009/05/24 12:49:01 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2737,3 +2737,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/cscope to 15.7a [tron 2009-05-23]
 	Updated games/xfrisk to 1.2nb5 [dholland 2009-05-23]
 	Updated graphics/rabbit to 0.6.0 [obache 2009-05-24]
+	Updated databases/tokyocabinet to 1.4.22 [root 2009-05-24]
+	Updated databases/p5-tokyocabinet to 1.28 [root 2009-05-24]
+	Updated databases/ruby-tokyocabinet to 1.25 [root 2009-05-24]
+	Updated databases/lua-tokyocabinet to 1.6 [root 2009-05-24]
+	Added databases/java-tokyocabinet version 1.19 [root 2009-05-24]
+	Updated databases/tokyotyrant to 1.1.27 [root 2009-05-24]
+	Updated databases/p5-tokyotyrant to 1.11 [root 2009-05-24]
+	Updated databases/ruby-tokyotyrant to 1.7 [root 2009-05-24]
