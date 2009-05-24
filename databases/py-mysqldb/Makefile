@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2009/03/05 18:51:28 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/24 10:51:06 tron Exp $
 
 DISTNAME=	MySQL-python-${PKGVER}
 PKGNAME=	${PYPKGPREFIX}-mysqldb-${PKGVER}
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mysql-python
 COMMENT=	MySQL interface for Python
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
