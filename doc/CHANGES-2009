@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2062 2009/05/23 15:03:10 dholland Exp $
+$NetBSD: CHANGES-2009,v 1.2063 2009/05/24 02:33:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2736,3 +2736,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/wireshark to 1.0.8 [tron 2009-05-23]
 	Updated devel/cscope to 15.7a [tron 2009-05-23]
 	Updated games/xfrisk to 1.2nb5 [dholland 2009-05-23]
+	Updated graphics/rabbit to 0.6.0 [obache 2009-05-24]
