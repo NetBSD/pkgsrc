@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 08:59:06 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/24 12:37:36 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-lua-1.5
-PKGREVISION=	1
+DISTNAME=	tokyocabinet-lua-1.6
 PKGNAME=	${LUA_PKGPREFIX}-${DISTNAME:S/-lua-/-/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
@@ -38,7 +37,7 @@ post-install:
 	cd ${WRKSRC}/doc && pax -rwpe . \
 		${DESTDIR}${PREFIX}/share/tokyocabinet/doc/lua
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.15
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.21
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/lua/module.mk"
 PTHREAD_AUTO_VARS=	yes
