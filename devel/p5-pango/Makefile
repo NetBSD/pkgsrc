@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/21 19:24:44 sno Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/24 05:45:47 kefren Exp $
 #
 
 DISTNAME=	Pango-${DIST_VER}
@@ -12,6 +12,8 @@ COMMENT=	Perl bindings to the pango library
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=	pkg-config
 
