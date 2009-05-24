@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8136 2009/05/24 09:39:05 wiz Exp $
+$NetBSD: TODO,v 1.8137 2009/05/24 12:57:33 obache Exp $
 
 Suggested new packages
 ======================
@@ -1341,7 +1341,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o tokyocabinet-1.4.21
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
