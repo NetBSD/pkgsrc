@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2009/05/07 11:03:50 obache Exp $
+$NetBSD: patch-ab,v 1.8 2009/05/24 12:42:45 obache Exp $
 
 Avoid to break pkgsrc's tools.
 
---- configure.orig	2009-05-05 07:54:12.000000000 +0000
+--- configure.orig	2009-05-11 01:33:19.000000000 +0000
 +++ configure
-@@ -1747,12 +1747,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+@@ -1850,12 +1850,9 @@ MYLDLIBPATHENV="LD_LIBRARY_PATH"
  MYPOSTCMD="true"
  
  # Building paths
