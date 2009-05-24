@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2009/05/07 10:56:26 obache Exp $
+$NetBSD: distinfo,v 1.11 2009/05/24 12:37:36 obache Exp $
 
-SHA1 (tokyocabinet-perl-1.26.tar.gz) = 9ad7b373afbefad5a1caf2c9e1494d1d551f082b
-RMD160 (tokyocabinet-perl-1.26.tar.gz) = 3ecdf009b74407a8453cc7ebd6e34d1722732f8c
-Size (tokyocabinet-perl-1.26.tar.gz) = 58029 bytes
+SHA1 (tokyocabinet-perl-1.28.tar.gz) = 4bcb92d00df62bb8b13e68c445ad9830b6f2b0be
+RMD160 (tokyocabinet-perl-1.28.tar.gz) = 22f1c16a4f5fc1259875f3bf35c5c936f427b00c
+Size (tokyocabinet-perl-1.28.tar.gz) = 59200 bytes

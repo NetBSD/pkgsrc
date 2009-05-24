@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 08:59:07 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2009/05/24 12:37:36 obache Exp $
 #
 
-DISTNAME=	tokyocabinet-ruby-1.23
+DISTNAME=	tokyocabinet-ruby-1.25
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
@@ -29,7 +29,7 @@ post-install:
 	cd ${WRKSRC}/doc && pax -rwpe . ${DESTDIR}${PREFIX}/${DOCDIR}
 	${RUBY_GENERATE_PLIST}
 
-BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.15
+BUILDLINK_API_DEPENDS.tokyocabinet+=	tokyocabinet>=1.4.21
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
