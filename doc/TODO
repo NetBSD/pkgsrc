@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8137 2009/05/24 12:57:33 obache Exp $
+$NetBSD: TODO,v 1.8138 2009/05/24 12:58:59 obache Exp $
 
 Suggested new packages
 ======================
@@ -1344,7 +1344,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
-	o trac-0.11.4
 	o transcode-1.1.2
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
