@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/02/27 21:10:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/05/25 15:50:12 drochner Exp $
 lib/gstreamer-0.10/libgstalaw.la
 lib/gstreamer-0.10/libgstalpha.la
 lib/gstreamer-0.10/libgstalphacolor.la
@@ -9,8 +9,12 @@ lib/gstreamer-0.10/libgstauparse.la
 lib/gstreamer-0.10/libgstautodetect.la
 lib/gstreamer-0.10/libgstavi.la
 lib/gstreamer-0.10/libgstcutter.la
+lib/gstreamer-0.10/libgstdebug.la
+lib/gstreamer-0.10/libgstdeinterlace.la
+lib/gstreamer-0.10/libgstefence.la
 lib/gstreamer-0.10/libgsteffectv.la
 lib/gstreamer-0.10/libgstequalizer.la
+lib/gstreamer-0.10/libgstflv.la
 lib/gstreamer-0.10/libgstflxdec.la
 lib/gstreamer-0.10/libgstgamma.la
 lib/gstreamer-0.10/libgstgconfelements.la
@@ -24,6 +28,7 @@ lib/gstreamer-0.10/libgstmatroska.la
 lib/gstreamer-0.10/libgstmulaw.la
 lib/gstreamer-0.10/libgstmultifile.la
 lib/gstreamer-0.10/libgstmultipart.la
+lib/gstreamer-0.10/libgstnavigationtest.la
 lib/gstreamer-0.10/libgstqtdemux.la
 lib/gstreamer-0.10/libgstreplaygain.la
 lib/gstreamer-0.10/libgstrtp.la
@@ -38,6 +43,7 @@ lib/gstreamer-0.10/libgstvideoflip.la
 lib/gstreamer-0.10/libgstvideomixer.la
 lib/gstreamer-0.10/libgstwavenc.la
 lib/gstreamer-0.10/libgstwavparse.la
+lib/gstreamer-0.10/libgsty4menc.la
 share/gconf/schemas/gstreamer-0.10.schemas
 share/gstreamer-0.10/presets/GstIirEqualizer10Bands.prs
 share/gstreamer-0.10/presets/GstIirEqualizer3Bands.prs
