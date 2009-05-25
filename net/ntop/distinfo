@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.12 2009/05/03 15:31:08 tnn Exp $
+$NetBSD: distinfo,v 1.13 2009/05/25 09:03:14 adam Exp $
 
-SHA1 (ntop-3.3.9.tar.gz) = 77c1976d096709c6e45dcfe4befc2045cf83774b
-RMD160 (ntop-3.3.9.tar.gz) = 3d7b14bff99a6652ae83fb86a2cda3206cc3392c
-Size (ntop-3.3.9.tar.gz) = 4955257 bytes
+SHA1 (ntop-3.3.10.tar.gz) = 8c6b5024a99e73241abd1c831f5ea241b67d0dbf
+RMD160 (ntop-3.3.10.tar.gz) = 85e73de0d7db041d12ae8d77a832b6ed199b6f4b
+Size (ntop-3.3.10.tar.gz) = 3235500 bytes
 SHA1 (patch-aa) = 64b2d4cda050cd9b8981b29b0e10d900469d4b7d
-SHA1 (patch-ab) = 6c700cf0c8ed7651d40420b6cb6eb41d4f78ef81
-SHA1 (patch-ac) = 101dd95636a09339cf3f2032e9d697ccc37f27c6
+SHA1 (patch-ab) = 2592d685f011eaf3268ec7a73b70c572e7f4354f
