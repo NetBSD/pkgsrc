@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/19 19:18:55 he Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/25 09:48:50 obache Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -9,6 +9,7 @@ PKGREVISION=	1
 CATEGORIES=	databases perl5
 
 COMMENT=	Perl native interface of Hyper Estraier
+LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=	p5-hyperestraier-[0-9]*
 
