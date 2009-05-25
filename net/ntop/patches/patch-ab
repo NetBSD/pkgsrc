@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.15 2009/04/24 10:18:04 adam Exp $
+$NetBSD: patch-ab,v 1.16 2009/05/25 09:03:15 adam Exp $
 
---- configure.in.orig	2008-12-03 23:00:22.000000000 +0100
+--- configure.in.orig	2009-05-06 16:55:22.000000000 +0200
 +++ configure.in
-@@ -428,6 +428,15 @@ case "${target}:${CC}" in
+@@ -431,6 +431,15 @@ case "${target}:${CC}" in
          echo "* This appears to be ${DEFINEOS} (release not checked)"
        ;;
  
@@ -18,8 +18,8 @@ $NetBSD: patch-ab,v 1.15 2009/04/24 10:18:04 adam Exp $
      * )
          echo "* ${target} is an unknown/unsupported OS"
          echo "*"
-@@ -573,8 +582,8 @@ dnl> user defined directory passed as op
- dnl>
+@@ -621,8 +630,8 @@ if test ".${PCAPRING_DIR}" != .; then
+ else
  if test ".${PCAP_ROOT}" != .; then
    if test -d $PCAP_ROOT &&
 -     test -r $PCAP_ROOT/libpcap.a &&
@@ -29,23 +29,41 @@ $NetBSD: patch-ab,v 1.15 2009/04/24 10:18:04 adam Exp $
         PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
         CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
         INCS="${INCS} -I$PCAP_ROOT"
-@@ -1887,39 +1896,19 @@ else
+@@ -1656,18 +1665,10 @@ LUA_VERSION=lua-5.1.4
+ if test -f "$LUA_VERSION.tar.gz"; then
+    echo "Lua already present on this machine"
+ else
+-   wget http://www.lua.org/ftp/$LUA_VERSION.tar.gz
  fi
  
- dnl> GeoIP (http://www.maxmind.com/)
--if test -f "GeoIP.tar.gz"; then
--   echo "GeoIP already present on this machine"
--else
+-tar xvfz $LUA_VERSION.tar.gz
+-cat $LUA_VERSION/src/Makefile | sed -e s,'MYCFLAGS=-DLUA_USE_POSIX',' MYCFLAGS="-fPIC -DLUA_USE_POSIX"',g > /tmp/lua.temp
+-cat /tmp/lua.temp >  $LUA_VERSION/src/Makefile
+-#rm -f /tmp/lua.temp
+-cd $LUA_VERSION; make posix; cd ..
+-
+-LUA_LIB_DIR=$PWD/$LUA_VERSION"/src"
+-LIBS="-L${LUA_LIB_DIR} -llua ${LIBS} "
+-INCS="${INCS} -I${LUA_LIB_DIR}"
++
++LIBS="-llua ${LIBS} "
+ AC_DEFINE_UNQUOTED(HAVE_LUA, 1, [LUA is supported])
+ 
+ dnl>
+@@ -1966,36 +1967,20 @@ dnl> GeoIP (http://www.maxmind.com/)
+ if test -f "GeoIP.tar.gz"; then
+    echo "GeoIP already present on this machine"
+ else
 -   wget http://www.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
--   tar xvfz GeoIP.tar.gz
--   GEO_DIR=`find $PWD -type d -name "GeoIP-*"`
--   cd $GEO_DIR; ./configure; make; cd ..
--   # OSX Fix
--   GEO_DYLIB="$GEO_DIR/libGeoIP/.libs/libGeoIP.dylib"
--   if test -f $GEO_DYLIB; then
--      ln -s $GEO_DYLIB .
--   fi
 -fi
+-tar xvfz GeoIP.tar.gz
+-GEO_DIR=`find $PWD -type d -name "GeoIP-*"`
+-cd $GEO_DIR; ./configure --prefix=${prefix}; make; cd ..
+-# OSX Fix
+-GEO_DYLIB="$GEO_DIR/libGeoIP/.libs/libGeoIP.dylib"
+-if test -f $GEO_DYLIB; then
+-   ln -s $GEO_DYLIB .
+ fi
  
  if test -f "GeoLiteCity.dat"; then
     echo "GeoLiteCity.dat already present"
@@ -65,8 +83,8 @@ $NetBSD: patch-ab,v 1.15 2009/04/24 10:18:04 adam Exp $
 -GEO_DIR=`find $PWD -type d -name "GeoIP-*"`
 -GEO_IP="$GEO_DIR/libGeoIP/"
 -CFLAGS="$CFLAGS -I$GEO_IP"
--LDFLAGS="$LDFLAGS -L$GEO_IP.libs/ -lGeoIP"
-+LDFLAGS="$LDFLAGS -lGeoIP"
+-LDFLAGS="-L$GEO_IP.libs/ -lGeoIP $LDFLAGS"
++LDFLAGS="-lGeoIP $LDFLAGS"
  
  dnl> NTOPCONFIGDEBUG_SETTINGS([precet])
  

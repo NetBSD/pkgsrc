@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/04/24 10:18:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/05/25 09:03:14 adam Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libcpacketPlugin.a
@@ -14,12 +14,6 @@ lib/libnetflowPlugin.a
 lib/libnetflowPlugin.so
 lib/libntop.la
 lib/libntopreport.la
-lib/libpdaPlugin-${PKGVERSION}.so
-lib/libpdaPlugin.a
-lib/libpdaPlugin.so
-lib/libremotePlugin-${PKGVERSION}.so
-lib/libremotePlugin.a
-lib/libremotePlugin.so
 lib/librrdPlugin-${PKGVERSION}.so
 lib/librrdPlugin.a
 lib/librrdPlugin.so
@@ -30,8 +24,6 @@ lib/ntop/plugins/cpacketPlugin.so
 lib/ntop/plugins/icmpPlugin.so
 lib/ntop/plugins/lastSeenPlugin.so
 lib/ntop/plugins/netflowPlugin.so
-lib/ntop/plugins/pdaPlugin.so
-lib/ntop/plugins/remotePlugin.so
 lib/ntop/plugins/rrdPlugin.so
 lib/ntop/plugins/sflowPlugin.so
 man/man8/ntop.8
@@ -67,12 +59,14 @@ share/ntop/html/Risk_medium.gif
 share/ntop/html/Risk_unknown.gif
 share/ntop/html/antenna.gif
 share/ntop/html/arrow.gif
-share/ntop/html/arrow_down.gif
-share/ntop/html/arrow_up.gif
+share/ntop/html/arrow_down.png
+share/ntop/html/arrow_up.png
 share/ntop/html/autosuggest.css
 share/ntop/html/autosuggest.js
-share/ntop/html/back.gif
+share/ntop/html/back.png
 share/ntop/html/bg_line.gif
+share/ntop/html/bit_off.png
+share/ntop/html/bit_on.png
 share/ntop/html/black.gif
 share/ntop/html/blank.gif
 share/ntop/html/bottom_corner.gif
@@ -104,9 +98,9 @@ share/ntop/html/expanded.gif
 share/ntop/html/external.png
 share/ntop/html/faq.html
 share/ntop/html/favicon.ico
-share/ntop/html/fback.gif
-share/ntop/html/fforward.gif
-share/ntop/html/forward.gif
+share/ntop/html/fback.png
+share/ntop/html/fforward.png
+share/ntop/html/forward.png
 share/ntop/html/functions.js
 share/ntop/html/gauge.jpg
 share/ntop/html/gaugeR.jpg
@@ -408,7 +402,6 @@ share/ntop/html/web.gif
 share/ntop/html/wheel.gif
 share/ntop/html/white_bg.gif
 share/ntop/html/zoom.js
-share/ntop/ntop/etter.finger.os.gz
 share/ntop/ntop/ntop-cert.pem
 share/ntop/ntop/oui.txt.gz
 share/ntop/ntop/specialMAC.txt.gz
