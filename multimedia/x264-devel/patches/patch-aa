@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
+$NetBSD: patch-aa,v 1.7 2009/05/25 20:56:38 drochner Exp $
 
---- configure.orig	2008-12-12 16:45:07.000000000 -0500
+--- configure.orig	2009-03-26 22:45:08.000000000 +0100
 +++ configure
-@@ -130,7 +130,7 @@ for opt do
+@@ -117,7 +117,7 @@ for opt do
              LDFLAGS="$LDFLAGS ${opt#--extra-ldflags=}"
              ;;
          --enable-pthread)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
              ;;
          --disable-pthread)
              pthread="no"
-@@ -150,7 +150,7 @@ for opt do
+@@ -137,7 +137,7 @@ for opt do
              shared="yes"
              ;;
          --enable-visualize)
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
              CFLAGS="$CFLAGS -DVISUALIZE=1"
              vis="yes"
              ;;
-@@ -192,6 +192,10 @@ case $host_os in
+@@ -188,6 +188,10 @@ case $host_os in
      SYS="FREEBSD"
      LDFLAGS="$LDFLAGS -lm"
      ;;
@@ -31,15 +31,15 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
    kfreebsd*-gnu)
      SYS="FREEBSD"
      CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
-@@ -247,7 +251,7 @@ case $host_cpu in
+@@ -244,7 +248,7 @@ case $host_cpu in
        ASFLAGS="$ASFLAGS -f elf"
      fi
      ;;
 -  x86_64)
 +  x86_64|amd64)
      ARCH="X86_64"
+     AS="yasm"
      if [ "$SYS" = MACOSX ];then
-       ASFLAGS="-f macho64 -m amd64 -DPIC -DPREFIX"
 @@ -258,11 +262,11 @@ case $host_cpu in
      fi
      ;;
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
 +      ARCH="POWERPC"
      else
 +      ARCH="PPC"
-       ALTIVECFLAGS="$ALTIVECFLAGS -maltivec -mabi=altivec"
+       ALTIVECFLAGS="$ALTIVECFLAGS -maltivec -mabi=altivec -DHAVE_ALTIVEC_H"
      fi
      ;;
 @@ -322,7 +326,7 @@ grep -q BIGE conftest.o && CFLAGS="$CFLA
@@ -63,7 +63,7 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
  if test "$pthread" = "auto" ; then
      pthread="no"
      case $SYS in
-@@ -348,7 +352,7 @@ if test "$pthread" = "auto" ; then
+@@ -355,7 +359,7 @@ if test "$pthread" = "auto" ; then
      esac
  fi
  if test "$pthread" = "yes" ; then
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.6 2008/12/18 16:19:07 bjs Exp $
      LDFLAGS="$LDFLAGS $libpthread"
  fi
  
-@@ -378,7 +382,8 @@ if [ "$avis_input" = "yes" ] ; then
+@@ -392,7 +396,8 @@ if [ "$avis_input" = "yes" ] ; then
  fi
  
  if [ "$pic" = "yes" ] ; then

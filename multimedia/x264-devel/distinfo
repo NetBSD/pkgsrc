@@ -1,18 +1,11 @@
-$NetBSD: distinfo,v 1.16 2009/02/03 08:44:15 obache Exp $
+$NetBSD: distinfo,v 1.17 2009/05/25 20:56:38 drochner Exp $
 
-SHA1 (x264-snapshot-20081217-2245.tar.bz2) = 81f51f72f8ba78e478f829d5cfe41fb6afe846b0
-RMD160 (x264-snapshot-20081217-2245.tar.bz2) = 20b8504c62189ed654a066d81433a91c0e0a97e3
-Size (x264-snapshot-20081217-2245.tar.bz2) = 2336751 bytes
-SHA1 (patch-aa) = 0ff1c2c0942a08dc1d0e35923490ca039cd16d12
-SHA1 (patch-ab) = 37884e2bc562ec63c941c5932c663b14ff2e7c53
-SHA1 (patch-ac) = a8259f4b21daa19a11547a6af470bbb2376e7049
-SHA1 (patch-ad) = f43841b2a10a999647b83faa6e845724b0e93847
-SHA1 (patch-ae) = bd9b4eb54e0d6f465eea9976d4337bc6650fd5aa
-SHA1 (patch-af) = b006c53478e03ffc7e799ff293878438c8682fd3
-SHA1 (patch-ag) = c616a8c0cae024d223aec4adb6564fb2a302d36e
-SHA1 (patch-ah) = f6f4c384cb84b517b771e720e8f789e2070d6a4f
-SHA1 (patch-ai) = 5c796c6591f6c3614be769e0276a2c4f77479bae
-SHA1 (patch-aj) = 06eeceeb04aefef3a433a2e5934b60a32fd9c116
+SHA1 (x264-snapshot-20090326-2245.tar.bz2) = 4d28a02db4586986162368c18e607ca3b10b3453
+RMD160 (x264-snapshot-20090326-2245.tar.bz2) = fc6581a33970f012c660489eb2ae48f8ac9c151d
+Size (x264-snapshot-20090326-2245.tar.bz2) = 2466701 bytes
+SHA1 (patch-aa) = b2222f1f9fa66ba46d1512dfca76d9ac4c14eea4
+SHA1 (patch-ab) = ba276318f8e12626bdddbc978c00609d42921965
+SHA1 (patch-ac) = 0659b7f6ad1195c59c6298bc270b15990b1a8204
 SHA1 (patch-ak) = d8362f3beadcc5cc19684a12b3794d542f502f14
-SHA1 (patch-al) = f2c5d0e8b38870e48105239b61999a06b8dbf5ce
 SHA1 (patch-am) = 07418547d05fd6c6e1703725a4cc5f1ddc36dca1
+SHA1 (patch-an) = 69e2a8f6167fd2410c69e4df3e3a071c8c0c835f
