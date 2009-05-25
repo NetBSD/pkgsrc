@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8138 2009/05/24 12:58:59 obache Exp $
+$NetBSD: TODO,v 1.8139 2009/05/25 09:04:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -991,7 +991,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o nsca-1.2.0
 	o nspr-4.7.4
 	o nss-3.11.7
-	o ntop-3.3.10
 	o ntp-4.2.5p161
 	o nucleo-0.7.3
 	o nulib2-220
