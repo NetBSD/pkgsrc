@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2071 2009/05/25 09:44:06 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2072 2009/05/25 12:10:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2752,3 +2752,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/ntop to 3.3.10 [adam 2009-05-25]
 	Added textproc/java-native-hyperestraier version 1.0.0.1.4.13 [obache 2009-05-25]
 	Added textproc/java-pure-hyperestraier version 1.0.0.1.4.13 [obache 2009-05-25]
+	Updated time/etm to 270 [wiz 2009-05-25]
