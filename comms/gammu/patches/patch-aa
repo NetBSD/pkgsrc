@@ -1,0 +1,44 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/05/25 12:50:00 wiz Exp $
+
+use "BSD" not "FreeBSD" for Bluetooth support.
+
+We add a check for the sdp_open() in libbluetooth as this is indicative
+of the capability to use the new service discovery API.
+
+--- CMakeLists.txt.orig	2009-04-15 14:39:54.000000000 +0100
++++ CMakeLists.txt	2009-05-22 09:46:03.000000000 +0100
+@@ -270,12 +271,12 @@
+             set(BLUETOOTH_SEARCH TRUE)
+             message(STATUS "Using BlueZ stack")
+         endif (BLUEZ_FOUND)
+-        find_package (FBSDBluetooth)
+-        if (FBSD_BLUE_FOUND)
++        find_package (BSDBluetooth)
++        if (BSD_BLUE_FOUND)
+             set(BLUETOOTH_FOUND ON)
+-            set(BLUETOOTH_SEARCH FALSE)
+-            message(STATUS "Using FreeBSD Bluetooth stack")
+-        endif (FBSD_BLUE_FOUND)
++	    check_library_exists(bluetooth sdp_open "" BLUETOOTH_SEARCH)
++            message(STATUS "Using BSD Bluetooth stack")
++        endif (BSD_BLUE_FOUND)
+         find_package (OSXBluetooth)
+         if (OSX_BLUE_FOUND)
+             set(BLUETOOTH_FOUND ON)
+@@ -360,11 +361,11 @@
+     endif (NOT "${BLUEZ_LIBRARIES}" STREQUAL "")
+ endif (BLUEZ_FOUND)
+ 
+-if (FBSD_BLUE_FOUND)
+-    if (NOT "${FBSD_BLUE_LIBRARIES}" STREQUAL "")
+-        set (GAMMU_LIBS "${GAMMU_LIBS} -l${FBSD_BLUE_LIBRARIES}")
+-    endif (NOT "${FBSD_BLUE_LIBRARIES}" STREQUAL "")
+-endif (FBSD_BLUE_FOUND)
++if (BSD_BLUE_FOUND)
++    if (NOT "${BSD_BLUE_LIBRARIES}" STREQUAL "")
++        set (GAMMU_LIBS "${GAMMU_LIBS} -l${BSD_BLUE_LIBRARIES}")
++    endif (NOT "${BSD_BLUE_LIBRARIES}" STREQUAL "")
++endif (BSD_BLUE_FOUND)
+ 
+ if (ICONV_FOUND)
+     if (NOT "${ICONV_LIBRARIES}" STREQUAL "")
