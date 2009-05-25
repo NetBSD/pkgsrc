@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/10 12:05:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/25 15:54:16 drochner Exp $
 lib/gstreamer-0.10/libgstx264.la
+share/gstreamer-0.10/presets/GstX264Enc.prs
