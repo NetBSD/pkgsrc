@@ -1,31 +1,25 @@
-# $NetBSD: Makefile,v 1.4 2008/06/16 14:48:28 reed Exp $
-#
+# $NetBSD: Makefile,v 1.5 2009/05/25 05:24:00 minskim Exp $
+# TeX Live Revision 9324
 
 DISTNAME=	passivetex
-PKGNAME=	tex-${DISTNAME}-1.24
-PKGREVISION=	2
-CATEGORIES=	print
-MASTER_SITES=	http://www.tei-c.org.uk/Software/passivetex/
-EXTRACT_SUFX=	.zip
+PKGNAME=	tex-${DISTNAME}-1.25
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tei-c.org.uk/Software/passivetex/
-COMMENT=	TeX macros for formatting objects
+COMMENT=	Support package for XML/SGML typesetting
 
-DEPENDS+=	tex-xmltex>=1.9:../../textproc/tex-xmltex
+DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
+DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
+DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
+DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=	tex-ltxmisc-[0-9]*:../../print/tex-ltxmisc
+DEPENDS+=	tex-marvosym-[0-9]*:../../fonts/tex-marvosym
+DEPENDS+=	tex-psnfss-[0-9]*:../../fonts/tex-psnfss
+DEPENDS+=	tex-rotating-[0-9]*:../../print/tex-rotating
+DEPENDS+=	tex-tipa-[0-9]*:../../fonts/tex-tipa
+DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
+DEPENDS+=	tex-xmltex-[0-9]*:../../textproc/tex-xmltex
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-USE_DIRS+=	texmf-1.0
-
-.include "../../print/teTeX/module.mk"
-
-do-install:
-	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/passivetex
-.for f in dummyels.sty fotex.xmt fotex.sty mlnames.sty \
-	  nomulticol.sty ucharacters.sty unicode.sty
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PKG_LOCALTEXMFPREFIX}/tex/passivetex
-.endfor
-
+.include "../../print/texlive/module.mk"
 .include "../../mk/bsd.pkg.mk"
