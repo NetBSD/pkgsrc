@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:25:02 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2009/05/25 20:37:00 drochner Exp $
 
 BUILDLINK_TREE+=	gnome-media
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.gnome-media?=	../../multimedia/gnome-media
 .include "../../devel/GConf-ui/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
+.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .endif # GNOME_MEDIA_BUILDLINK3_MK
 
