@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/01/26 10:34:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/05/25 15:59:21 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -126,6 +126,7 @@ share/gtk-doc/html/gstreamer-0.10/GstTypeFindFactory.html
 share/gtk-doc/html/gstreamer-0.10/GstXML.html
 share/gtk-doc/html/gstreamer-0.10/api-index-deprecated.html
 share/gtk-doc/html/gstreamer-0.10/api-index-full.html
+share/gtk-doc/html/gstreamer-0.10/gst-building.html
 share/gtk-doc/html/gstreamer-0.10/gst-running.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp
 share/gtk-doc/html/gstreamer-0.10/gstreamer-0.10.devhelp2
