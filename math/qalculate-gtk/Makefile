@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/03/08 15:56:46 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2009/05/25 15:25:01 drochner Exp $
 
 DISTNAME=	qalculate-gtk-0.9.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 
@@ -10,9 +10,6 @@ HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Modern multi-purpose desktop calculator (GNOME version)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
-DEPENDS+=	wget>=1.8:../../net/wget
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
@@ -26,4 +23,5 @@ pre-configure:
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../math/qalculate/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
