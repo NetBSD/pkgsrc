@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2069 2009/05/25 09:04:20 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2070 2009/05/25 09:43:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-passivetex to 1.25 [minskim 2009-05-25]
 	Updated security/netpgp to 20090525 [agc 2009-05-25]
 	Updated net/ntop to 3.3.10 [adam 2009-05-25]
+	Added textproc/java-native-hyperestraier version 1.0.0.1.4.13 [obache 2009-05-25]
