@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2074 2009/05/25 12:51:17 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2075 2009/05/25 21:33:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 270 [wiz 2009-05-25]
 	Updated audio/mp32ogg to 0.11nb4 [wiz 2009-05-25]
 	Added comms/gammu version 1.24.0 [wiz 2009-05-25]
+	Updated databases/tokyocabinet to 1.4.23 [obache 2009-05-25]
