@@ -1,0 +1,40 @@
+$NetBSD: patch-an,v 1.1 2009/05/25 20:56:38 drochner Exp $
+
+--- common/x86/predict-c.c.orig	2009-04-05 21:31:54.000000000 +0200
++++ common/x86/predict-c.c
+@@ -110,7 +110,7 @@ PREDICT_16x16_P( mmxext )
+ #endif
+ PREDICT_16x16_P( sse2   )
+ 
+-#ifdef __GNUC__
++#if 0
+ static void predict_16x16_p_ssse3( uint8_t *src )
+ {
+     int a, b, c, i00;
+@@ -170,7 +170,7 @@ PREDICT_8x8_P( mmxext )
+ #endif
+ PREDICT_8x8_P( sse2   )
+ 
+-#ifdef __GNUC__
++#if 0
+ static void predict_8x8c_p_ssse3( uint8_t *src )
+ {
+     int a, b, c, i00;
+@@ -394,7 +394,7 @@ void x264_predict_16x16_init_mmx( int cp
+     if( !(cpu&X264_CPU_SSSE3) )
+         return;
+     pf[I_PRED_16x16_H]      = predict_16x16_h_ssse3;
+-#ifdef __GNUC__
++#if 0
+     pf[I_PRED_16x16_P]      = predict_16x16_p_ssse3;
+ #endif
+ }
+@@ -421,7 +421,7 @@ void x264_predict_8x8c_init_mmx( int cpu
+     if( !(cpu&X264_CPU_SSSE3) )
+         return;
+     pf[I_PRED_CHROMA_H]       = predict_8x8c_h_ssse3;
+-#ifdef __GNUC__
++#if 0
+     pf[I_PRED_CHROMA_P]       = predict_8x8c_p_ssse3;
+ #endif
+ }

@@ -1,77 +1,38 @@
-$NetBSD: patch-ac,v 1.4 2008/12/18 16:19:07 bjs Exp $
+$NetBSD: patch-ac,v 1.5 2009/05/25 20:56:38 drochner Exp $
 
---- common/cpu.c.orig	2008-11-15 16:45:06.000000000 -0500
+--- common/cpu.c.orig	2009-04-05 21:01:48.000000000 +0200
 +++ common/cpu.c
-@@ -32,6 +32,10 @@
+@@ -33,7 +33,7 @@
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
+-#ifdef SYS_OPENBSD
 +#if defined(SYS_OPENBSD) || defined(SYS_NETBSD)
-+#include <sys/param.h>
-+#include <sys/sysctl.h>
-+#endif
- 
- #include "common.h"
- #include "cpu.h"
-@@ -185,17 +189,28 @@ uint32_t x264_cpu_detect( void )
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #include <machine/cpu.h>
+@@ -200,13 +200,13 @@ uint32_t x264_cpu_detect( void )
  
  #elif defined( ARCH_PPC )
  
--#ifdef SYS_MACOSX
+-#if defined(SYS_MACOSX) || defined(SYS_OPENBSD)
 +#if defined(SYS_MACOSX) || defined(SYS_OPENBSD) || defined(SYS_NETBSD)
  #include <sys/sysctl.h>
-+#if defined(SYS_OPENBSD) || defined(SYS_NETBSD)
-+#include <machine/cpu.h>
-+#endif
  uint32_t x264_cpu_detect( void )
  {
      /* Thank you VLC */
      uint32_t cpu = 0;
--    int      selectors[2] = { CTL_HW, HW_VECTORUNIT };
--    int      has_altivec = 0;
-+    int      selectors[2];
-+    int      has_altivec = 0, error;
-     size_t   length = sizeof( has_altivec );
--    int      error = sysctl( selectors, 2, &has_altivec, &length, NULL, 0 );
- 
+-#ifdef SYS_OPENBSD
 +#if defined(SYS_OPENBSD) || defined(SYS_NETBSD)
-+    selectors[0] = CTL_MACHDEP;
-+    selectors[1] = CPU_ALTIVEC;
-+#else
-+    selectors[0] = CTL_HW;
-+    selectors[1] = HW_VECTORUNIT;
-+#endif
-+
-+    error = sysctl( selectors, 2, &has_altivec, &length, NULL, 0 );
-     if( error == 0 && has_altivec != 0 )
-     {
-         cpu |= X264_CPU_ALTIVEC;
-@@ -285,7 +300,7 @@ int x264_cpu_num_processors( void )
-     get_system_info( &info );
-     return info.cpu_count;
- 
--#elif defined(SYS_MACOSX) || defined(SYS_FREEBSD)
-+#elif defined(SYS_MACOSX) || defined(SYS_FREEBSD)
-     int numberOfCPUs;
-     size_t length = sizeof( numberOfCPUs );
-     if( sysctlbyname("hw.ncpu", &numberOfCPUs, &length, NULL, 0) )
-@@ -294,6 +309,19 @@ int x264_cpu_num_processors( void )
-     }
-     return numberOfCPUs;
- 
-+#elif defined(SYS_OPENBSD) || defined(SYS_NETBSD)
-+    int mib[2], numberOfCPUs;
-+    size_t length = sizeof( numberOfCPUs );
-+
-+    mib[0] = CTL_HW;
-+    mib[1] = HW_NCPU;
-+
-+    if( sysctl(mib, 2, &numberOfCPUs, &length, NULL, 0) )
-+    {
-+        numberOfCPUs = 1;
-+    }
-+    return numberOfCPUs;
-+
+     int      selectors[2] = { CTL_MACHDEP, CPU_ALTIVEC };
  #else
-     return 1;
- #endif
+     int      selectors[2] = { CTL_HW, HW_VECTORUNIT };
+@@ -223,7 +223,7 @@ uint32_t x264_cpu_detect( void )
+     return cpu;
+ }
+ 
+-#elif defined( SYS_LINUX )
++#elif defined(SYS_LINUX) || defined(SYS_NETBSD)
+ #include <signal.h>
+ #include <setjmp.h>
+ static sigjmp_buf jmpbuf;
