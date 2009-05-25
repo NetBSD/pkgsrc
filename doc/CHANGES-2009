@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2066 2009/05/24 13:11:38 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2067 2009/05/25 05:26:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2747,3 +2747,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-tokyotyrant to 1.7 [root 2009-05-24]
 	Updated devel/p5-CPAN to 1.9400 [sno 2009-05-24]
 	Updated security/p5-Digest-SHA1 to 2.12 [sno 2009-05-24]
+	Updated print/tex-passivetex to 1.25 [minskim 2009-05-25]
