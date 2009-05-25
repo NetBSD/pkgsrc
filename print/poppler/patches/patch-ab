@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2009/05/25 21:05:24 drochner Exp $
 
---- utils/Makefile.in.orig	2008-10-09 19:13:22.000000000 +0000
+--- utils/Makefile.in.orig	2009-05-16 17:40:51.000000000 +0200
 +++ utils/Makefile.in
-@@ -49,7 +49,7 @@ mkinstalldirs = $(install_sh) -d
+@@ -51,7 +51,7 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = $(top_builddir)/config.h \
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
  @BUILD_ABIWORD_OUTPUT_TRUE@am__EXEEXT_2 = pdftoabw$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@@ -59,19 +59,19 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+@@ -61,19 +61,19 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
@@ -34,7 +34,7 @@ $NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
  	$(am__DEPENDENCIES_1)
  am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.c parseargs.h
  @BUILD_ABIWORD_OUTPUT_TRUE@am_pdftoabw_OBJECTS = pdftoabw.$(OBJEXT) \
-@@ -84,25 +84,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
+@@ -88,25 +88,25 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
  	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
@@ -66,7 +66,7 @@ $NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
  	$(am__DEPENDENCIES_1)
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -293,12 +293,12 @@ target_alias = @target_alias@
+@@ -307,12 +307,12 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
@@ -81,10 +81,10 @@ $NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
 -@BUILD_SPLASH_OUTPUT_TRUE@pdftoppm_manpage = pdftoppm.1
 +pdftoppm_binary = pdftoppm
 +pdftoppm_manpage = pdftoppm.1
- @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_SOURCES = \
- @BUILD_ABIWORD_OUTPUT_TRUE@	pdftoabw.cc				\
- @BUILD_ABIWORD_OUTPUT_TRUE@	$(common)
-@@ -313,9 +313,10 @@ INCLUDES = \
+ INCLUDES = \
+ 	-I$(top_srcdir)				\
+ 	-I$(top_srcdir)/utils			\
+@@ -322,9 +322,10 @@ INCLUDES = \
  	$(ABIWORD_CFLAGS)
  
  LDADD = \
@@ -95,5 +95,5 @@ $NetBSD: patch-ab,v 1.9 2008/10/24 23:28:53 wiz Exp $
 +	$(FONTCONFIG_LIBS) \
 +	$(PTHREAD_STUBLIB)
  
- dist_man1_MANS = \
- 	pdffonts.1				\
+ @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_SOURCES = \
+ @BUILD_ABIWORD_OUTPUT_TRUE@	pdftoabw.cc				\
