@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2070 2009/05/25 09:43:27 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2071 2009/05/25 09:44:06 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/netpgp to 20090525 [agc 2009-05-25]
 	Updated net/ntop to 3.3.10 [adam 2009-05-25]
 	Added textproc/java-native-hyperestraier version 1.0.0.1.4.13 [obache 2009-05-25]
+	Added textproc/java-pure-hyperestraier version 1.0.0.1.4.13 [obache 2009-05-25]
