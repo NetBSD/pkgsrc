@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
+$NetBSD: patch-ab,v 1.11 2009/05/25 20:56:38 drochner Exp $
 
---- Makefile.orig	2008-12-17 21:45:13.000000000 +0000
+--- Makefile.orig	2009-03-26 22:45:08.000000000 +0100
 +++ Makefile
 @@ -40,9 +40,9 @@ endif
  ifdef ARCH_X86
@@ -44,8 +44,8 @@ $NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
  default: $(DEP) x264$(EXE)
  
 -libx264.a: .depend $(OBJS) $(OBJASM)
--	ar rc libx264.a $(OBJS) $(OBJASM)
--	ranlib libx264.a
+-	$(AR) rc libx264.a $(OBJS) $(OBJASM)
+-	$(RANLIB) libx264.a
 +%.lo: %.c
 +	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} ${PICFLAGS} -o $@ $<
 +
@@ -59,7 +59,7 @@ $NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
  
 -x264$(EXE): $(OBJCLI) libx264.a 
 -	$(CC) -o $@ $+ $(LDFLAGS)
-+x264$(EXE): $(OBJCLI) libx264.la 
++x264$(EXE): $(OBJCLI) libx264.la
 +	${LIBTOOL} --mode=link $(CC) -o $@ $+ $(LDFLAGS)
  
 -checkasm: tools/checkasm.o libx264.a
@@ -73,12 +73,12 @@ $NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
 +	${LIBTOOL} --mode=compile --tag=CC \
 +		./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
  # delete local/anonymous symbols, so they don't show up in oprofile
--	-@ strip -x $@
-+	-@ strip -x $(@:.lo=.o)
+-	-@ $(STRIP) -x $@
++	-@ $(STRIP) -x $(@:.lo=.o)
  
  .depend: config.mak
  	rm -f .depend
-@@ -144,21 +149,16 @@ distclean: clean
+@@ -143,21 +148,16 @@ distclean: clean
  	rm -f config.mak config.h x264.pc
  	rm -rf test/
  
@@ -91,7 +91,7 @@ $NetBSD: patch-ab,v 1.10 2009/02/03 08:44:15 obache Exp $
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libx264.la $(DESTDIR)$(libdir)
  	install -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
 -	install x264$(EXE) $(DESTDIR)$(bindir)
--	ranlib $(DESTDIR)$(libdir)/libx264.a
+-	$(RANLIB) $(DESTDIR)$(libdir)/libx264.a
 +	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} x264$(EXE) $(DESTDIR)$(bindir)
  ifeq ($(SYS),MINGW)
  	$(if $(SONAME), install -m 755 $(SONAME) $(DESTDIR)$(bindir))
