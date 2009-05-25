@@ -1,0 +1,9 @@
+Gammu is a command line utility and library to work with mobile phones
+from many vendors. Support for different models differs, but basic
+functions should work with majority of them. The program can work with
+contacts, messages (SMS, EMS and MMS), calendar, todos, file system,
+integrated radio, camera, etc. It also supports a daemon mode to send
+and receive SMS messages.
+
+Gammu includes Python bindings, which allows easy scripting of
+desired functionality using core functions.
