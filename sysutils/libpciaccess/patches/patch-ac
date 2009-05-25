@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.4 2009/05/18 19:09:01 hasso Exp $
+$NetBSD: patch-ac,v 1.5 2009/05/25 20:11:05 drochner Exp $
 
---- src/netbsd_pci.c.orig	2008-12-20 05:21:22 +0200
-+++ src/netbsd_pci.c	2009-05-18 08:38:14 +0300
+--- src/netbsd_pci.c.orig	2008-12-20 04:21:22.000000000 +0100
++++ src/netbsd_pci.c
 @@ -20,12 +20,15 @@
  #include <sys/mman.h>
  #include <sys/types.h>
@@ -34,20 +34,20 @@ $NetBSD: patch-ac,v 1.4 2009/05/18 19:09:01 hasso Exp $
  {
 -	struct pciio_bdf_cfgreg io;
 -	int err;
-+	uint32_t rval;
- 
+-
 -	bzero(&io, sizeof(io));
 -	io.bus = bus;
 -	io.device = dev;
 -	io.function = func;
 -	io.cfgreg.reg = reg;
-+	if (pcibus_conf_read(pcifd, bus, dev, func, reg, &rval) == -1)
-+		return (-1);
++	uint32_t rval;
  
 -	err = ioctl(pcifd, PCI_IOC_BDF_CFGREAD, &io);
 -	if (err)
 -		return (err);
--
++	if (pcibus_conf_read(pcifd, bus, dev, func, reg, &rval) == -1)
++		return (-1);
+ 
 -	*val = io.cfgreg.val;
 +	*val = rval;
  
@@ -238,3 +238,39 @@ $NetBSD: patch-ac,v 1.4 2009/05/18 19:09:01 hasso Exp $
  			return errno;
  
  		offset += 4;
+@@ -222,6 +202,26 @@ pci_device_netbsd_write(struct pci_devic
+ 	return 0;
+ }
+ 
++static int
++pci_device_netbsd_read_rom(struct pci_device *device, void *buf)
++{
++	int fd, res, err;
++
++	fd = open("/dev/mem", O_RDONLY, 0);
++	if (fd < 0)
++		return errno;
++
++	lseek(fd, 0xc0000, SEEK_SET);
++	res = read(fd, buf, 64*1024);
++	if (res < 0) {
++		err = errno;
++		close(fd);
++		return err;
++	}
++	close(fd);
++	return 0;
++}
++
+ static void
+ pci_system_netbsd_destroy(void)
+ {
+@@ -312,7 +312,7 @@ pci_device_netbsd_probe(struct pci_devic
+ static const struct pci_system_methods netbsd_pci_methods = {
+ 	pci_system_netbsd_destroy,
+ 	NULL,
+-	NULL,
++	pci_device_netbsd_read_rom,
+ 	pci_device_netbsd_probe,
+ 	pci_device_netbsd_map_range,
+ 	pci_device_netbsd_unmap_range,
