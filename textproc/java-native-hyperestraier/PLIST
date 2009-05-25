@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/25 09:43:00 obache Exp $
+lib/estraier.jar
+lib/libjestraier.so
+lib/libjestraier.so.1
+lib/libjestraier.so.1.0.0
