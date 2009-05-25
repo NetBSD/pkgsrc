@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/05/25 15:10:28 drochner Exp $
+
+--- libqalculate/BuiltinFunctions.cc.orig	2009-05-12 12:55:15.000000000 +0200
++++ libqalculate/BuiltinFunctions.cc
+@@ -2283,7 +2283,7 @@ int TimestampFunction::calculate(MathStr
+ 	string str = vargs[0].symbol();
+ 	remove_blank_ends(str);
+ 	if(str == _("now") || str == "now") {
+-		mstruct.number().setInternal(time(NULL));
++		mstruct.number().setInternal((long)time(NULL));
+ 		return 1;
+ 	}
+ 	GDate *gtime = g_date_new();
