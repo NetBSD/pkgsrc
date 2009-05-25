@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/13 06:35:20 minskim Exp $
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/dummyels.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/fotex.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/fotex.xmt
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/mlnames.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/nomulticol.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/ucharacters.sty
-${PKG_LOCALTEXMFPREFIX}/tex/passivetex/unicode.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/passivetex
+@comment $NetBSD: PLIST,v 1.2 2009/05/25 05:24:00 minskim Exp $
+share/texmf-dist/tex/xmltex/passivetex/dummyels.sty
+share/texmf-dist/tex/xmltex/passivetex/fotex.sty
+share/texmf-dist/tex/xmltex/passivetex/fotex.xmt
+share/texmf-dist/tex/xmltex/passivetex/mlnames.sty
+share/texmf-dist/tex/xmltex/passivetex/tei.xmt
+share/texmf-dist/tex/xmltex/passivetex/teiprintslides.xmt
+share/texmf-dist/tex/xmltex/passivetex/teislides.xmt
+share/texmf-dist/tex/xmltex/passivetex/teixml.sty
+share/texmf-dist/tex/xmltex/passivetex/teixmlslides.sty
+share/texmf-dist/tex/xmltex/passivetex/ucharacters.sty
+share/texmf-dist/tex/xmltex/passivetex/unicode.sty
