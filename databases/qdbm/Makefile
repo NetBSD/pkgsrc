@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/14 14:48:01 obache Exp $
+# $NetBSD: Makefile,v 1.9 2009/05/25 09:40:57 obache Exp $
 #
 
 .include "Makefile.common"
@@ -6,6 +6,7 @@
 CATEGORIES=	databases
 
 COMMENT=	Quick Database Manager - library of routines for managing a db
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
