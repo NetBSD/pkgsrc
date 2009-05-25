@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2067 2009/05/25 05:26:29 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2068 2009/05/25 06:52:04 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2748,3 +2748,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-CPAN to 1.9400 [sno 2009-05-24]
 	Updated security/p5-Digest-SHA1 to 2.12 [sno 2009-05-24]
 	Updated print/tex-passivetex to 1.25 [minskim 2009-05-25]
+	Update security/netpgp to 20090525 [agc 2009-05-25]
