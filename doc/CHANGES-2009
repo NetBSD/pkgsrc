@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2080 2009/05/26 14:44:04 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2081 2009/05/26 14:54:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libffi to 3.0.8nb2 [he 2009-05-26]
 	Updated www/geeklog to 1.5.2.4 [taca 2009-05-26]
 	Updated www/typolight27-translations to 20090524 [taca 2009-05-26]
+	Updated x11/vte to 0.20.3 [wiz 2009-05-26]
