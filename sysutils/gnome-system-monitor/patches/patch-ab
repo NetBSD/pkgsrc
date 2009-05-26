@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2008/11/15 19:38:53 wiz Exp $
+$NetBSD: patch-ab,v 1.2 2009/05/26 19:11:55 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583923
 
 --- src/openfiles.cpp.orig	2008-09-11 19:55:34.000000000 +0000
 +++ src/openfiles.cpp

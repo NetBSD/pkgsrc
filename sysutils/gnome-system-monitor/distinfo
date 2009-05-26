@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2009/05/26 18:47:40 drochner Exp $
+$NetBSD: distinfo,v 1.12 2009/05/26 19:11:55 wiz Exp $
 
 SHA1 (gnome-system-monitor-2.26.2.tar.bz2) = a24d042ac3eefc77970a2ebdf56a94d77df96e34
 RMD160 (gnome-system-monitor-2.26.2.tar.bz2) = 31cc3c0e531275254bf9ba33cb94ad5258ea936c
 Size (gnome-system-monitor-2.26.2.tar.bz2) = 2188963 bytes
-SHA1 (patch-aa) = 76c5d94f36fd3c29e8c3cabc77925e93851465b9
-SHA1 (patch-ab) = 6899d479d82872e971710a41d2ea7324edb949a3
+SHA1 (patch-aa) = 46ed47a4f87551a30d572d931fb7bc9114850192
+SHA1 (patch-ab) = d0398e6309aa979ef270656ba61eac5d8f47aca2
