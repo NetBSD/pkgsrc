@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2009/05/06 11:04:18 markd Exp $
+# $NetBSD: Makefile,v 1.148 2009/05/26 21:41:06 rillig Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	2
@@ -73,7 +73,7 @@ LIBS.NetBSD+=		${EXPORT_SYMBOLS_LDFLAGS}
 
 PLIST_SRC=		${WRKDIR}/PLIST.Xdpms
 
-_KDE3_EXTRA_INCLUDES=	${LOCALBASE}/include:${X11BASE}/include:${BUILDLINK_PREFIX.freetype2}/include/freetype2
+_KDE3_EXTRA_INCLUDES=	${PREFIX}/include:${X11BASE}/include:${BUILDLINK_PREFIX.freetype2}/include/freetype2
 
 # Don't execute kappfinder_install at install-time.  This causes random
 # applications to be found which causes random .desktop files to be created
@@ -124,17 +124,19 @@ SUBST_SED.varlock=	-e s:/var/lock:/var/spool/lock:
 .endif
 .endif
 
-SUBST_CLASSES+=		htdig paths xkb
+SUBST_CLASSES+=		htdig
 SUBST_STAGE.htdig=	post-patch
 SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
 SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
+SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
-SUBST_SED.paths+=	-e 's,@LOCALBASE@,${LOCALBASE},g'
+SUBST_SED.paths+=	-e 's,@LOCALBASE@,${PREFIX},g'
 SUBST_STAGE.paths=	post-patch
 
+SUBST_CLASSES+=		xkb
 SUBST_FILES.xkb=	kxkb/x11helper.cpp
 SUBST_SED.xkb=		-e 's:XLIBDIR:"${X11BASE}/lib/X11/", "${X11BASE}/share/X11/", XLIBDIR:'
 SUBST_STAGE.xkb=	post-patch
@@ -195,6 +197,7 @@ CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
 .endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 
 .include "../../databases/openldap-client/buildlink3.mk"
 .if ${OPSYS} != "SunOS"
