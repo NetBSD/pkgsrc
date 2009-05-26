@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/17 16:04:07 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/05/26 18:47:40 drochner Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -73,6 +73,20 @@ share/gnome/help/gnome-system-monitor/de/figures/sortMenu2.png
 share/gnome/help/gnome-system-monitor/de/figures/systemMonitor.png
 share/gnome/help/gnome-system-monitor/de/figures/viewMenu.png
 share/gnome/help/gnome-system-monitor/de/gnome-system-monitor.xml
+share/gnome/help/gnome-system-monitor/el/figures/addColumn.png
+share/gnome/help/gnome-system-monitor/el/figures/changePriority.png
+share/gnome/help/gnome-system-monitor/el/figures/colorPanel.png
+share/gnome/help/gnome-system-monitor/el/figures/columnContextMenu.png
+share/gnome/help/gnome-system-monitor/el/figures/gnome-system-monitor_window.png
+share/gnome/help/gnome-system-monitor/el/figures/memoryMaps.png
+share/gnome/help/gnome-system-monitor/el/figures/moreInfo.png
+share/gnome/help/gnome-system-monitor/el/figures/processListing.png
+share/gnome/help/gnome-system-monitor/el/figures/sortButton.png
+share/gnome/help/gnome-system-monitor/el/figures/sortMenu.png
+share/gnome/help/gnome-system-monitor/el/figures/sortMenu2.png
+share/gnome/help/gnome-system-monitor/el/figures/systemMonitor.png
+share/gnome/help/gnome-system-monitor/el/figures/viewMenu.png
+share/gnome/help/gnome-system-monitor/el/gnome-system-monitor.xml
 share/gnome/help/gnome-system-monitor/es/figures/addColumn.png
 share/gnome/help/gnome-system-monitor/es/figures/changePriority.png
 share/gnome/help/gnome-system-monitor/es/figures/colorPanel.png
@@ -228,6 +242,7 @@ share/omf/gnome-system-monitor/gnome-system-monitor-ar.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-bg.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-ca.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-de.omf
+share/omf/gnome-system-monitor/gnome-system-monitor-el.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-es.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-fr.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-oc.omf
@@ -250,6 +265,8 @@ share/pixmaps/gnome-system-monitor/upload.svg
 @dirrm share/gnome/help/gnome-system-monitor/fr
 @dirrm share/gnome/help/gnome-system-monitor/es/figures
 @dirrm share/gnome/help/gnome-system-monitor/es
+@dirrm share/gnome/help/gnome-system-monitor/el/figures
+@dirrm share/gnome/help/gnome-system-monitor/el
 @dirrm share/gnome/help/gnome-system-monitor/de/figures
 @dirrm share/gnome/help/gnome-system-monitor/de
 @dirrm share/gnome/help/gnome-system-monitor/ca/figures
@@ -262,6 +279,5 @@ share/pixmaps/gnome-system-monitor/upload.svg
 @dirrm share/gnome/help/gnome-system-monitor/C
 @dirrm share/gnome/help/gnome-system-monitor
 @comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
