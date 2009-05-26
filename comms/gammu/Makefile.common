@@ -1,0 +1,14 @@
+# $NetBSD: Makefile.common,v 1.1 2009/05/26 21:31:21 wiz Exp $
+#
+
+DISTNAME=	gammu-1.24.0
+CATEGORIES=	comms
+MASTER_SITES=	http://dl.cihar.com/gammu/releases/ \
+		http://mirror.clickcreations.com/gammu/releases/ \
+		http://dl.cihar.com.nyud.net/gammu/releases/ \
+		ftp://dl.cihar.com/gammu/releases/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://cihar.com/gammu/
+LICENSE=	gnu-gpl-v2
