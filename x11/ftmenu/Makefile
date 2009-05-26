@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/09 15:47:24 obache Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/26 21:59:57 rillig Exp $
 #
 
 DISTNAME=	ftmenu-0.3
@@ -26,7 +26,7 @@ post-install:
 BUILDLINK_TARGETS+=	glib-fake-pc
 
 glib-fake-pc:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	{ ${ECHO} "Name: GLib";						\
 	${ECHO} "Description: C Utility Library";			\
 	${ECHO} "Version: 1.2.10";					\
