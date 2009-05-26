@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/09/06 12:59:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/26 22:08:59 wiz Exp $
 #
 
-DISTNAME=		glproto-1.4.9
-PKGREVISION=		1
+DISTNAME=		glproto-1.4.10
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
