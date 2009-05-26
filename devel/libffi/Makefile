@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.10 2009/04/17 22:45:52 rh Exp $
+# $NetBSD: Makefile,v 1.11 2009/05/26 12:27:12 he Exp $
 #
 
 DISTNAME=	libffi-3.0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://sources.redhat.com/libffi/
 COMMENT=	Foreign function interface
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
