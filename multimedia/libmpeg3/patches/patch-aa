@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2009/01/29 17:53:49 abs Exp $
+$NetBSD: patch-aa,v 1.6 2009/05/26 08:49:27 obache Exp $
 
---- Makefile.orig	2008-08-07 04:33:09.000000000 +0100
+--- Makefile.orig	2008-08-07 03:33:09.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
  CC = gcc
@@ -21,15 +21,22 @@ $NetBSD: patch-aa,v 1.5 2009/01/29 17:53:49 abs Exp $
  
  
  
-@@ -147,19 +147,19 @@ UTILS = $(OBJDIR)/mpeg3dump $(OBJDIR)/mp
+@@ -147,17 +147,17 @@ UTILS = $(OBJDIR)/mpeg3dump $(OBJDIR)/mp
  #$(OBJDIR)/mpeg3split
  
  
 -LIBS = -lm -lpthread
-+LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-+all: prepare $(OUTPUT) $(UTILS)
- 
+-
 -$(shell mkdir -p $(OBJDIR) )
+-
+-$(shell echo $(CFLAGS) > $(OBJDIR)/c_flags)
+-$(shell echo $(A52CFLAGS) > $(OBJDIR)/a52_flags)
+-$(shell echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs)
+-$(shell mkdir -p $(DIRS) )
+-
++LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ all: $(OUTPUT) $(UTILS)
+ 
 +prepare:
 +	mkdir -p $(OBJDIR)
 +	mkdir -p $(OBJDIR)/audio
@@ -39,16 +46,23 @@ $NetBSD: patch-aa,v 1.5 2009/01/29 17:53:49 abs Exp $
 +	echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs
 +	mkdir -p $(DIRS)
  
--$(shell echo $(CFLAGS) > $(OBJDIR)/c_flags)
--$(shell echo $(A52CFLAGS) > $(OBJDIR)/a52_flags)
--$(shell echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs)
--$(shell mkdir -p $(DIRS) )
--
--all: $(OUTPUT) $(UTILS)
--
--
--$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS)
-+$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS) prepare
+ $(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS)
  	ar rcs $(OUTPUT) `cat $(OBJDIR)/objs`
+@@ -203,13 +203,13 @@ backup: clean
+ wc:
+ 	cat *.c *.h audio/*.c audio/*.h video/*.c video/*.h | wc
  
+-$(OBJS): 
++$(OBJS): prepare
+ 	$(CC) -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
+-$(ASMOBJS): 
++$(ASMOBJS): prepare
+ 	$(CC) -c `cat $(OBJDIR)/c_flags` $(subst $(OBJDIR)/,, $*.S) -o $*.o
+-$(NASMOBJS): 
++$(NASMOBJS): prepare
+ 	$(NASM) -f elf $(subst $(OBJDIR)/,, $*.s) -o $*.o
+-$(A52OBJS):
++$(A52OBJS): prepare
+ 	$(CC) -c `cat $(OBJDIR)/a52_flags` $(subst $(OBJDIR)/,, $*.c) -o $*.o
  
+ $(OBJDIR)/libmpeg3.o: 				    libmpeg3.c
