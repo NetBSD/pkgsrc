@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2077 2009/05/26 09:23:15 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2078 2009/05/26 12:27:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2758,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyocabinet to 1.4.23 [obache 2009-05-25]
 	Updated ham/gnuradio-core-docs to 3.0.4nb3 [hasso 2009-05-26]
 	Updated time/etm to 271 [wiz 2009-05-26]
+	Updated devel/libffi to 3.0.8nb2 [he 2009-05-26]
