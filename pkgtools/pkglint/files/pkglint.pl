@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.811 2009/04/26 16:08:40 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.812 2009/05/26 21:40:42 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4377,7 +4377,7 @@ sub checkline_mk_shelltext($$) {
 
 	$set_e_mode = false;
 
-	if ($rest =~ s/^\s*([-@]*)(\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\}|\${RUN}|)//) {
+	if ($rest =~ s/^\s*([-@]*)(\$\{_PKG_SILENT\}\$\{_PKG_DEBUG\}|\$\{RUN\}|)//) {
 		my ($hidden, $macro) = ($1, $2);
 
 		if ($hidden !~ m"\@") {
@@ -4385,6 +4385,9 @@ sub checkline_mk_shelltext($$) {
 
 		} elsif (defined($mkctx_target) && $mkctx_target =~ m"^(?:show-.*|.*-message)$") {
 			# In some targets commands may be hidden.
+
+		} elsif ($rest =~ m"^#") {
+			# Shell comments may be hidden, as they have no side effects
 
 		} elsif ($rest =~ $regex_shellword) {
 			my ($cmd) = ($1);
