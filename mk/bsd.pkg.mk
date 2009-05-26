@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1956 2009/04/09 00:51:23 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1957 2009/05/26 06:03:02 obache Exp $
 #
 # This file is in the public domain.
 #
@@ -651,7 +651,7 @@ BIN_INSTALL_FLAGS?= 	# -v
 PKG_ARGS_ADD=		-W ${LOCALBASE} -w ${DEFAULT_VIEW}
 .endif
 _BIN_INSTALL_FLAGS=	${BIN_INSTALL_FLAGS}
-.if defined(_AUTOMATIC) && !empty(_AUTOMATIC:MYES)
+.if defined(_AUTOMATIC) && !empty(_AUTOMATIC:M[Yy][Ee][Ss])
 _BIN_INSTALL_FLAGS+=	-A
 .endif
 _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
