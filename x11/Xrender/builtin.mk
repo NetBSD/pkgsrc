@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.18 2008/10/05 21:36:32 cube Exp $
+# $NetBSD: builtin.mk,v 1.19 2009/05/26 21:59:57 rillig Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -118,8 +118,8 @@ USE_BUILTIN.render=		yes
 BUILDLINK_TARGETS+=	Xrender-fake-pc
 
 Xrender-fake-pc:
-	${_PKG_SILENT}${_PKG_DEBUG} \
-	src=${BUILDLINK_PREFIX.Xrender}/lib/pkgconfig/xrender.pc \
+	${RUN} \
+	src=${BUILDLINK_PREFIX.Xrender}/lib/pkgconfig/xrender.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/xrender.pc; \
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
 	if ${TEST} -f $${src}; then \
