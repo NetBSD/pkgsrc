@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2009/05/19 08:59:11 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2009/05/26 16:55:23 wiz Exp $
 
 DISTNAME=		pango-1.24.2
 CATEGORIES=		devel fonts
@@ -33,9 +33,6 @@ PKGCONFIG_OVERRIDE+=	pangoxft.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/libdata
 
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
-
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
 PLIST_VARS+=		carbon
@@ -43,15 +40,15 @@ PLIST_VARS+=		carbon
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.3
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
-BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
-BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
-
 .include "../../devel/glib2/buildlink3.mk"
 # XXX: later maybe add an option for libthai to provide pango-thai-lang.la?
 #.include "../../devel/libthai/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 .include "../../graphics/cairo/buildlink3.mk"
+BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
 .include "../../fonts/fontconfig/buildlink3.mk"
+BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
 .include "../../graphics/freetype2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

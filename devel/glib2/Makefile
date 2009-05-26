@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.159 2009/05/20 11:09:02 wiz Exp $
+# $NetBSD: Makefile,v 1.160 2009/05/26 16:55:23 wiz Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -107,4 +107,5 @@ CONFIGURE_ARGS+=	--disable-threads
 BUILDLINK_API_DEPENDS.pcre+= pcre>=7.4nb1
 .include "../../devel/pcre/buildlink3.mk"
 
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2009/05/19 08:59:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2009/05/26 16:55:23 wiz Exp $
 #
 # used by devel/GConf/Makefile
 # used by devel/GConf-ui/Makefile
@@ -38,5 +38,5 @@ CONFIGURE_ARGS+=	--with-sysconfsubdir=
 CONFIGURE_ARGS+=	--enable-gconf-source=xml::${PKG_SYSCONFDIR}/gconf.xml.defaults
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.10.0
-
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
