@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/11/21 23:18:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/26 05:55:15 hasso Exp $
 share/doc/gnuradio-${PKGVERSION}/core/README
 share/doc/gnuradio-${PKGVERSION}/core/README.hacking
 share/doc/gnuradio-${PKGVERSION}/core/html/ad9862_8h-source.html
@@ -304,6 +304,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classaudio__portaudio__source__inheri
 share/doc/gnuradio-${PKGVERSION}/core/html/classaudio__portaudio__source__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classboost_1_1shared__ptr-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classboost_1_1shared__ptr.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classboost_1_1shared__ptr__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classboost_1_1shared__ptr__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classboost_1_1shared__ptr__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classcircular__buffer-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classcircular__buffer.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classcircular__buffer__coll__graph.map
@@ -624,6 +627,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__coll__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__detail-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__detail.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__detail__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__detail__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__detail__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__block__inherit__graph.png
@@ -881,6 +887,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__diff__phasor__cc__inherit__g
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__diff__phasor__cc__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__dispatcher-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__dispatcher.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__dispatcher__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__dispatcher__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__dispatcher__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__divide__cc-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__divide__cc.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__divide__cc__coll__graph.map
@@ -1046,6 +1055,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__3dnowext__coll__gr
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__3dnowext__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__3dnowext__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__3dnowext__inherit__graph.png
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__generic-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__generic.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__ccc__generic__coll__graph.map
@@ -1123,6 +1135,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__3dnow__coll__graph
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__3dnow__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__3dnow__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__3dnow__inherit__graph.png
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__generic-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__generic.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__fcc__generic__coll__graph.map
@@ -1296,6 +1311,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__3dnowext__coll__gr
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__3dnowext__inherit__graph.map
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__3dnowext__inherit__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__3dnowext__inherit__graph.png
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__generic-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__generic.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__fir__scc__generic__coll__graph.map
@@ -2195,6 +2213,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__filter__f
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__filter__ff__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__ff-members.html
@@ -2602,6 +2623,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgri__goertzel-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__goertzel.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__iir-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__iir.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classgri__iir__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classgri__iir__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classgri__iir__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__lfsr__15__1__0-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__lfsr__15__1__0.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgri__lfsr__32k-members.html
@@ -2854,6 +2878,9 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classsdr__1000__base__coll__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classsdr__1000__base__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classstd_1_1vector-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classstd_1_1vector.html
+share/doc/gnuradio-${PKGVERSION}/core/html/classstd_1_1vector__coll__graph.map
+share/doc/gnuradio-${PKGVERSION}/core/html/classstd_1_1vector__coll__graph.md5
+share/doc/gnuradio-${PKGVERSION}/core/html/classstd_1_1vector__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classtrellis__encoder__bb-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classtrellis__encoder__bb.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classtrellis__encoder__bb__coll__graph.map
