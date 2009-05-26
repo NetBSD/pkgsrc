@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2009/05/26 21:31:21 wiz Exp $
+$NetBSD: patch-ak,v 1.2 2009/05/26 21:34:36 wiz Exp $
+
+https://bugs.cihar.com/view.php?id=916
 
 --- python/setup.py.orig	2009-05-25 21:28:01.000000000 +0200
 +++ python/setup.py
