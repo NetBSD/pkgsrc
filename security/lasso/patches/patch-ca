@@ -1,0 +1,14 @@
+$NetBSD: patch-ca,v 1.1 2009/05/26 05:26:00 manu Exp $
+--- lasso/saml-2.0/profile.c.orig	2009-03-27 16:12:48.000000000 +0000
++++ lasso/saml-2.0/profile.c	2009-05-25 15:40:40.000000000 +0000
+@@ -1106,10 +1106,8 @@
+ 
+ 	if (url == NULL) {
+ 		return critical_error(LASSO_PROFILE_ERROR_UNKNOWN_PROFILE_URL);
+ 	}
+-	/* No signature on the XML message */
+-	remove_all_signatures(msg);
+ 	query = lasso_saml20_profile_export_to_query(profile, msg, must_sign);
+ 	lasso_assign_new_string(profile->msg_url, lasso_concat_url_query(url, query));
+ 	lasso_release(profile->msg_body);
+ 	lasso_release(query);
