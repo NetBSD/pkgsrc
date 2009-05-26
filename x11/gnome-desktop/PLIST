@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2009/04/17 18:04:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.36 2009/05/26 18:34:50 drochner Exp $
 bin/gnome-about
 include/gnome-desktop-2.0/libgnome/gnome-desktop-item.h
 include/gnome-desktop-2.0/libgnome/gnome-desktop-utils.h
@@ -28,6 +28,7 @@ share/gnome-about/headers/header-bg-sunset01.png
 share/gnome/help/fdl/C/fdl.xml
 share/gnome/help/fdl/ar/fdl.xml
 share/gnome/help/fdl/de/fdl.xml
+share/gnome/help/fdl/el/fdl.xml
 share/gnome/help/fdl/es/fdl.xml
 share/gnome/help/fdl/eu/fdl.xml
 share/gnome/help/fdl/fr/fdl.xml
@@ -109,6 +110,7 @@ share/locale/bn_IN/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/br/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-desktop-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/crh/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-desktop-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-desktop-2.0.mo
@@ -200,6 +202,7 @@ share/locale/zu/LC_MESSAGES/gnome-desktop-2.0.mo
 share/omf/fdl/fdl-C.omf
 share/omf/fdl/fdl-ar.omf
 share/omf/fdl/fdl-de.omf
+share/omf/fdl/fdl-el.omf
 share/omf/fdl/fdl-es.omf
 share/omf/fdl/fdl-eu.omf
 share/omf/fdl/fdl-fr.omf
@@ -368,6 +371,7 @@ share/pixmaps/vnterm.xpm
 @dirrm share/gnome/help/fdl/fr
 @dirrm share/gnome/help/fdl/eu
 @dirrm share/gnome/help/fdl/es
+@dirrm share/gnome/help/fdl/el
 @dirrm share/gnome/help/fdl/de
 @dirrm share/gnome/help/fdl/ar
 @comment in gnome2-dirs: @dirrm share/gnome/help/fdl/C
