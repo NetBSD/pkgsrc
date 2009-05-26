@@ -1,0 +1,16 @@
+Index: lasso/xml/xml.c
+===================================================================
+--- lasso/xml/xml.c	(revision 4193)
++++ lasso/xml/xml.c	(revision 4194)
+@@ -1554,8 +1554,9 @@
+ 			}
+ 		}
+ 	}
+-
+-	node = lasso_node_new_from_xmlNode_with_type(xmlnode, typename);
++	if (typename) {
++		node = lasso_node_new_from_xmlNode_with_type(xmlnode, typename);
++	}
+ 	lasso_release(typename);
+ 
+ 	return node;
