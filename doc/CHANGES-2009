@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2083 2009/05/26 19:53:38 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.2084 2009/05/26 20:07:48 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2764,3 +2764,18 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/vte to 0.20.3 [wiz 2009-05-26]
 	Updated net/libsoup24 to 2.26.2 [wiz 2009-05-26]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.83 [kleink 2009-05-26]
+	Updated print/glabels to 2.2.5 [drochner 2009-05-26]
+	Updated sysutils/libgtop to 2.26.1 [drochner 2009-05-26]
+	Updated sysutils/gnome-system-monitor to 2.26.2 [drochner 2009-05-26]
+	Updated sysutils/gvfs to 1.2.3 [drochner 2009-05-26]
+	Updated x11/gnome-panel to 2.26.2 [drochner 2009-05-26]
+	Updated x11/gnome-desktop to 2.26.2 [drochner 2009-05-26]
+	Updated audio/sonata to 1.6.2 [drochner 2009-05-26]
+	Updated audio/rhythmbox to 0.12.1 [drochner 2009-05-26]
+	Added www/liferea-current version 1.6.0rc1 [drochner 2009-05-26]
+	Updated print/poppler to 0.10.7 [drochner 2009-05-26]
+	Updated multimedia/x264-devel to 20090326 [drochner 2009-05-26]
+	Updated multimedia/gst-plugins0.10-base to 0.10.23 [drochner 2009-05-26]
+	Updated multimedia/gstreamer0.10 to 0.10.23 [drochner 2009-05-26]
+	Updated multimedia/gst-plugins0.10-good to 0.10.15 [drochner 2009-05-26]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.12 [drochner 2009-05-26]
