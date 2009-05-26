@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2009/05/26 18:15:20 drochner Exp $
+$NetBSD: patch-ad,v 1.6 2009/05/26 20:23:50 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583938
 
 --- configure.orig	2009-04-28 09:40:11.000000000 +0200
 +++ configure
