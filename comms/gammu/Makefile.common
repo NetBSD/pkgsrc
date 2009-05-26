@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2009/05/26 21:31:21 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/05/26 22:04:42 wiz Exp $
 #
+# used by comms/gammu/Makefile
+# used by comms/py-gammu/Makefile
 
 DISTNAME=	gammu-1.24.0
 CATEGORIES=	comms
