@@ -1,0 +1,4 @@
+Python bindings for Gammu library.  The bindings currently do not
+support all Gammu features, but the range of covered functions is
+increasing.  If you need something specific, feel free to use the
+bug tracking system for feature requests.

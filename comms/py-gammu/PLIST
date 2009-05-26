@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/26 22:03:58 wiz Exp $
+${PYSITELIB}/gammu/Data.py
+${PYSITELIB}/gammu/Data.pyc
+${PYSITELIB}/gammu/Data.pyo
+${PYSITELIB}/gammu/Worker.py
+${PYSITELIB}/gammu/Worker.pyc
+${PYSITELIB}/gammu/Worker.pyo
+${PYSITELIB}/gammu/__init__.py
+${PYSITELIB}/gammu/__init__.pyc
+${PYSITELIB}/gammu/__init__.pyo
+${PYSITELIB}/gammu/_gammu.so
+@dirrm ${PYSITELIB}/gammu
