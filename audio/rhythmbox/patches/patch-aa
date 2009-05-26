@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2008/05/06 06:26:59 bjs Exp $
+$NetBSD: patch-aa,v 1.8 2009/05/26 20:23:50 wiz Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583926
 
 --- plugins/cd-recorder/rb-recorder-gst.c.orig	2007-02-24 18:27:43.000000000 -0500
 +++ plugins/cd-recorder/rb-recorder-gst.c
