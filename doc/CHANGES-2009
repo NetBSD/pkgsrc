@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2082 2009/05/26 16:33:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2083 2009/05/26 19:53:38 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2763,3 +2763,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090524 [taca 2009-05-26]
 	Updated x11/vte to 0.20.3 [wiz 2009-05-26]
 	Updated net/libsoup24 to 2.26.2 [wiz 2009-05-26]
+	Updated textproc/p5-XML-Atom-SimpleFeed to 0.83 [kleink 2009-05-26]
