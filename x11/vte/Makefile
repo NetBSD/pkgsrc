@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2009/04/16 20:34:46 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2009/05/26 14:54:12 wiz Exp $
 #
 
-DISTNAME=	vte-0.20.1
+DISTNAME=	vte-0.20.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.20/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Terminal widget with improved accessibility and I18N support
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
