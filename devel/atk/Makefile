@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2009/03/16 22:25:39 jmcneill Exp $
+# $NetBSD: Makefile,v 1.67 2009/05/26 16:55:23 wiz Exp $
 #
 
 DISTNAME=		atk-1.26.0
@@ -20,13 +20,8 @@ USE_LANGUAGES+=		c99
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	atk.pc.in
 
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
-
 # glib-mkenums overflows a 2048kb stack on atkobject.h
 UNLIMIT_RESOURCES=	stacksize
-
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.5.7
 
 SUBST_CLASSES+=		loc
 SUBST_STAGE.loc=	pre-configure
@@ -35,6 +30,8 @@ SUBST_FILES.loc=	configure
 SUBST_SED.loc=		-e 's,^\(\#define ATK_LOCALEDIR\).*,\1 "${PREFIX}/${PKGLOCALEDIR}/locale",'
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.5.7
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

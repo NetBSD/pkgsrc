@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2009/04/13 17:06:30 schwarz Exp $
+# $NetBSD: Makefile,v 1.68 2009/05/26 16:55:23 wiz Exp $
 #
 
 DISTNAME=		ORBit2-2.14.17
@@ -9,9 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://orbit-resource.sourceforge.net/
 COMMENT=		High-performance CORBA ORB with C language support
-
-# gtkdoc-rebase needed during installation
-BUILD_DEPENDS+=		gtk-doc>=1.9:../../textproc/gtk-doc
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -55,4 +52,5 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
