@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/25 12:50:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/26 21:31:21 wiz Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -33,14 +33,14 @@ include/gammu/gammu-types.h
 include/gammu/gammu-unicode.h
 include/gammu/gammu-wap.h
 include/gammu/gammu.h
-lib/libGammu.a
-lib/libgsmsd.a
+lib/libGammu.so
+lib/libGammu.so.6
+lib/libGammu.so.6.${PKGVERSION}
+lib/libgsmsd.so
+lib/libgsmsd.so.6
+lib/libgsmsd.so.6.${PKGVERSION}
 lib/pkgconfig/gammu-smsd.pc
 lib/pkgconfig/gammu.pc
-${PYSITELIB}/gammu/Data.py
-${PYSITELIB}/gammu/Worker.py
-${PYSITELIB}/gammu/__init__.py
-${PYSITELIB}/gammu/_gammu.so
 man/cs/man1/gammu-config.1
 man/cs/man1/gammu-smsd-inject.1
 man/cs/man1/gammu-smsd-monitor.1
@@ -189,5 +189,4 @@ share/locale/zh_TW/LC_MESSAGES/libgammu.mo
 @dirrm share/doc/gammu/devel/examples
 @dirrm share/doc/gammu/devel
 @dirrm share/doc/gammu
-@dirrm ${PYSITELIB}/gammu
 @dirrm include/gammu
