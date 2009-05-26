@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/08/10 13:48:23 abs Exp $
+$NetBSD: distinfo,v 1.5 2009/05/26 09:32:20 hasso Exp $
 
 SHA1 (XML-Xerces-2.7.0-0.tar.gz) = 7d9f90a5e9d46b3bff668a7a60034b944ac9e735
 RMD160 (XML-Xerces-2.7.0-0.tar.gz) = 033a8181e9c1400dfd4a49aa1bb258ad9f3d535e
 Size (XML-Xerces-2.7.0-0.tar.gz) = 291199 bytes
+SHA1 (patch-aa) = 8c066eaeaedf7361dcbb6afada866bae242841ff
