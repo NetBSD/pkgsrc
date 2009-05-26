@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/05/26 08:14:15 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/26 08:49:27 obache Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
@@ -13,7 +13,6 @@ HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 
