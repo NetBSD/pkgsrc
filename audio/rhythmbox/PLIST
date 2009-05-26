@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/04/17 17:51:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/05/26 18:15:20 drochner Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/librhythmbox-core.la
@@ -439,12 +439,14 @@ share/locale/id/LC_MESSAGES/rhythmbox.mo
 share/locale/is/LC_MESSAGES/rhythmbox.mo
 share/locale/it/LC_MESSAGES/rhythmbox.mo
 share/locale/ja/LC_MESSAGES/rhythmbox.mo
+share/locale/kn/LC_MESSAGES/rhythmbox.mo
 share/locale/ko/LC_MESSAGES/rhythmbox.mo
 share/locale/lt/LC_MESSAGES/rhythmbox.mo
 share/locale/lv/LC_MESSAGES/rhythmbox.mo
 share/locale/mk/LC_MESSAGES/rhythmbox.mo
 share/locale/ml/LC_MESSAGES/rhythmbox.mo
 share/locale/mn/LC_MESSAGES/rhythmbox.mo
+share/locale/mr/LC_MESSAGES/rhythmbox.mo
 share/locale/ms/LC_MESSAGES/rhythmbox.mo
 share/locale/nb/LC_MESSAGES/rhythmbox.mo
 share/locale/ne/LC_MESSAGES/rhythmbox.mo
@@ -493,7 +495,6 @@ share/rhythmbox/glade/podcast-properties.glade
 share/rhythmbox/glade/song-info-multiple.glade
 share/rhythmbox/glade/song-info.glade
 share/rhythmbox/glade/uri-new.glade
-share/rhythmbox/glade/uri.glade
 share/rhythmbox/icons/hicolor/16x16/actions/audio-cd-duplicate.png
 share/rhythmbox/icons/hicolor/16x16/actions/audio-cd-duplicate.svg
 share/rhythmbox/icons/hicolor/16x16/actions/audio-cd-new.png
