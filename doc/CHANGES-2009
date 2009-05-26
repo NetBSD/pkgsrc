@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2076 2009/05/26 05:57:14 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2077 2009/05/26 09:23:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2757,3 +2757,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added comms/gammu version 1.24.0 [wiz 2009-05-25]
 	Updated databases/tokyocabinet to 1.4.23 [obache 2009-05-25]
 	Updated ham/gnuradio-core-docs to 3.0.4nb3 [hasso 2009-05-26]
+	Updated time/etm to 271 [wiz 2009-05-26]
