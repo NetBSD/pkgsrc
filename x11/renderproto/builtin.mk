@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.9 2008/10/05 21:36:34 cube Exp $
+# $NetBSD: builtin.mk,v 1.10 2009/05/26 21:59:58 rillig Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -94,7 +94,7 @@ BUILDLINK_TARGETS+=	render-symlink-pc
 
 .PHONY: render-symlink-pc
 render-symlink-pc:
-	${_PKG_SILENT}${_PKG_DEBUG} set -e;				\
+	${RUN}								\
 	src=${BUILDLINK_PREFIX.renderproto}/lib/pkgconfig/renderproto.pc; \
 	dst=${BUILDLINK_DIR}/lib/pkgconfig/render.pc;			\
 	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig;			\
