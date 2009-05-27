@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8141 2009/05/27 05:40:55 obache Exp $
+$NetBSD: TODO,v 1.8142 2009/05/27 19:39:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -359,7 +359,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o YoSucker-81
 	o ZenTest-3.11.1
 	o ZIPIdent-2.9
-	o abcm2ps-5.9.4
+	o abcm2ps-5.9.5
 	o abcmidi-20090317
 	o accerciser-1.6.1
 	o acme-091
@@ -432,6 +432,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o awesome-3.2.1
+	o babl-0.1.0
 	o baci-20040415
 	o balance-3.42
 	o bbdb-2.35
@@ -545,12 +546,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-1.2
+	o ed-1.3
 	o ede-2.0
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
-	o eigen2-2.0.1
+	o eigen2-2.0.2
 	o ekiga-3.2.4
 	o electric-8.08
 	o electricfence-2.4.16
@@ -562,6 +563,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o empathy-2.26.2 [GNOME 2.26]
+	o enchant-1.5.0
 	o enlightenment-0.16.8.12
 	o epdfview-0.1.7
 	o epic4-2.6
@@ -577,7 +579,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o espeak-1.40
 	o et-2.60
 	o etach-1.4.1
-	o etm-254
 	o evolution-2.26.2
 	o evolution-data-server-2.26.2
 	o evolution-exchange-2.26.2
@@ -708,10 +709,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gsed-4.2
 	o gsharutils-4.7
 	o gss-0.1.0
-	o gst-plugins0.10-base-0.10.23
 	o gst-plugins0.10-ffmpeg-0.10.7
-	o gst-plugins0.10-good-0.10.15
-	o gstreamer0.10-0.10.23
 	o gtar-1.22
 	o gtar-base-1.22
 	o gtexinfo-4.13
@@ -849,6 +847,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgpg-error-1.7
+	o libgsf-1.14.14
 	o libhydrogen-0.9.2
 	o libiconv-1.13
 	o libjit-1.0.2
@@ -866,6 +865,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libssh-0.3
 	o libssh2-1.1
 	o libstree-0.4.2
+	o libtasn1-2.2
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
@@ -940,6 +940,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o monotone-0.44
 	o moserial-2.26.1 [GNOME 2.26]
 	o mp3blaster-3.2.3
+	o mpc-0.16
 	o mpeg4ip-1.6.1
 	o mpg123-1.7.3
 	o mpop-1.0.17
@@ -1015,7 +1016,9 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-DBD-Sybase-1.08
+	o p5-Digest-SHA1-2.12
 	o p5-Net-OpenID-Consumer-1.03
+	o p5-Search-Xapian-1.0.13.1
 	o p5-XML-Feed-0.43
 	o p5-glib2-1.220
 	o p5-gtk2-1.220
@@ -1116,6 +1119,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-gobject-2.18.0
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-lxml-2.2
@@ -1136,7 +1140,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o qbrew-0.3.9
-	o qemu-0.10.4
+	o qemu-0.10.5
 	o qnetwalk-1.3
 	o qpopper-4.0.14
 	o qt3-qscintilla-2.3.2
@@ -1278,6 +1282,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o spim-7.4
 	o srp_client-1.7.5 [jlam]
 	o squidGuard-1.4
+	o ssam-1.10
 	o ssh-askpass-1.2.4.1
 	o star-1.5
 	o statist-1.3.0
@@ -1308,13 +1313,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-23.4.0
+	o tea-23.6.0
 	o ted-2.17
 	o ted-en-us-2.17
 	o telepathy-gabble-0.7.27
-	o telepathy-glib-0.7.29
+	o telepathy-glib-0.7.30
 	o tex-musixtex-113 [pkg/34758]
-	o texmaker-1.9
+	o texmaker-1.9.1
 	o tfmxplay-1.1.6
 	o thin-1.0.0
 	o thoth-0.2.1
@@ -1397,12 +1402,14 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wxRemind-99
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20090517
+	o x264-devel-20090523
 	o xanalyser-1.30
+	o xapian-1.0.13
+	o xapian-omega-1.0.13
 	o xaric-0.13.2
 	o xbindkeys-1.8.3
 	o xbindkeys-tk-1.8.0
-	o xchm-1.16
+	o xchm-1.17
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
 	o xdelta-3.0v2
@@ -1491,7 +1498,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yasm-0.8.0
 	o yodl-2.01.02
-	o youtube-dl-20090523
+	o youtube-dl-20090525
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
