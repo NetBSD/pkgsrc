@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2088 2009/05/27 06:37:42 kleink Exp $
+$NetBSD: CHANGES-2009,v 1.2089 2009/05/27 16:21:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2783,3 +2783,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/glproto to 1.4.10 [wiz 2009-05-26]
 	Updated databases/py-ldap to 2.3.8 [obache 2009-05-27]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.84 [kleink 2009-05-27]
+	Updated time/etm to 274 [wiz 2009-05-27]
