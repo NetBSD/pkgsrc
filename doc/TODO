@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8140 2009/05/26 20:29:02 wiz Exp $
+$NetBSD: TODO,v 1.8141 2009/05/27 05:40:55 obache Exp $
 
 Suggested new packages
 ======================
@@ -1117,7 +1117,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
 	o py-kenosis-0.96
-	o py-ldap-2.3.8
 	o py-logging-0.4.9.6
 	o py-lxml-2.2
 	o py-m2crypto-0.19.1
