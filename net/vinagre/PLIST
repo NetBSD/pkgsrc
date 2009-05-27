@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 10:19:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/05/27 21:37:12 wiz Exp $
 bin/vinagre
 lib/bonobo/servers/GNOME_VinagreApplet.server
 libexec/vinagre-applet
@@ -22,6 +22,8 @@ share/gnome/help/vinagre/cs/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/cs/vinagre.xml
 share/gnome/help/vinagre/de/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/de/vinagre.xml
+share/gnome/help/vinagre/el/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/el/vinagre.xml
 share/gnome/help/vinagre/en_GB/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/en_GB/vinagre.xml
 share/gnome/help/vinagre/es/figures/vinagre-screenshot.png
@@ -42,6 +44,8 @@ share/gnome/help/vinagre/sv/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/sv/vinagre.xml
 share/gnome/help/vinagre/th/figures/vinagre-screenshot.png
 share/gnome/help/vinagre/th/vinagre.xml
+share/gnome/help/vinagre/zh_CN/figures/vinagre-screenshot.png
+share/gnome/help/vinagre/zh_CN/vinagre.xml
 share/icons/hicolor/16x16/apps/vinagre.png
 share/icons/hicolor/16x16/mimetypes/application-x-remote-connection.png
 share/icons/hicolor/16x16/mimetypes/application-x-vnc.png
@@ -127,6 +131,7 @@ share/omf/vinagre/vinagre-C.omf
 share/omf/vinagre/vinagre-ca.omf
 share/omf/vinagre/vinagre-cs.omf
 share/omf/vinagre/vinagre-de.omf
+share/omf/vinagre/vinagre-el.omf
 share/omf/vinagre/vinagre-en_GB.omf
 share/omf/vinagre/vinagre-es.omf
 share/omf/vinagre/vinagre-fr.omf
@@ -137,6 +142,7 @@ share/omf/vinagre/vinagre-pt_BR.omf
 share/omf/vinagre/vinagre-sq.omf
 share/omf/vinagre/vinagre-sv.omf
 share/omf/vinagre/vinagre-th.omf
+share/omf/vinagre/vinagre-zh_CN.omf
 share/vinagre/GNOME_VinagreApplet.xml
 share/vinagre/vinagre-ui.xml
 share/vinagre/vinagre.glade
@@ -168,6 +174,8 @@ share/vinagre/vinagre.glade
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/icons
+@dirrm share/gnome/help/vinagre/zh_CN/figures
+@dirrm share/gnome/help/vinagre/zh_CN
 @dirrm share/gnome/help/vinagre/th/figures
 @dirrm share/gnome/help/vinagre/th
 @dirrm share/gnome/help/vinagre/sv/figures
@@ -188,6 +196,8 @@ share/vinagre/vinagre.glade
 @dirrm share/gnome/help/vinagre/es
 @dirrm share/gnome/help/vinagre/en_GB/figures
 @dirrm share/gnome/help/vinagre/en_GB
+@dirrm share/gnome/help/vinagre/el/figures
+@dirrm share/gnome/help/vinagre/el
 @dirrm share/gnome/help/vinagre/de/figures
 @dirrm share/gnome/help/vinagre/de
 @dirrm share/gnome/help/vinagre/cs/figures
