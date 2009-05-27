@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2086 2009/05/26 22:09:11 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2087 2009/05/27 05:39:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2781,3 +2781,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/gst-plugins0.10-bad to 0.10.12 [drochner 2009-05-26]
 	Added comms/py-gammu version 1.24.0 [wiz 2009-05-26]
 	Updated x11/glproto to 1.4.10 [wiz 2009-05-26]
+	Updated databases/py-ldap to 2.3.8 [obache 2009-05-27]
