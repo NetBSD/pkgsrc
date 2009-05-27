@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/16 15:34:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/27 05:38:52 obache Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_ldap.so
 ${PYSITELIB}/dsml.py
 ${PYSITELIB}/dsml.pyc
@@ -59,10 +65,13 @@ share/doc/py-ldap/Demo/Lib/ldapurl/urlsearch.py
 share/doc/py-ldap/Demo/Lib/ldif/ldifcopy.py
 share/doc/py-ldap/Demo/initialize.py
 share/doc/py-ldap/Demo/ldapcontrols.py
+share/doc/py-ldap/Demo/matchedvalues.py
+share/doc/py-ldap/Demo/ms_ad_bind.py
 share/doc/py-ldap/Demo/options.py
 share/doc/py-ldap/Demo/page_control.py
 share/doc/py-ldap/Demo/passwd_ext_op.py
 share/doc/py-ldap/Demo/pickle_ldapobject.py
+share/doc/py-ldap/Demo/pyasn1/README
 share/doc/py-ldap/Demo/pyasn1/prereadcontrol.py
 share/doc/py-ldap/Demo/reconnect.py
 share/doc/py-ldap/Demo/rename.py
@@ -78,11 +87,10 @@ share/doc/py-ldap/TODO
 @dirrm share/doc/py-ldap/Demo/pyasn1
 @dirrm share/doc/py-ldap/Demo/Lib/ldif
 @dirrm share/doc/py-ldap/Demo/Lib/ldapurl
-@dirrm share/doc/py-ldap/Demo/Lib/ldap/res
 @dirrm share/doc/py-ldap/Demo/Lib/ldap/async
 @dirrm share/doc/py-ldap/Demo/Lib/ldap
 @dirrm share/doc/py-ldap/Demo/Lib
 @dirrm share/doc/py-ldap/Demo
-@dirrm share/doc/py-ldap/
+@dirrm share/doc/py-ldap
 @dirrm ${PYSITELIB}/ldap/schema
 @dirrm ${PYSITELIB}/ldap
