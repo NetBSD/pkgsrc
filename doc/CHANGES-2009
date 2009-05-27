@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2091 2009/05/27 20:53:29 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2092 2009/05/27 21:37:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2786,3 +2786,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 274 [wiz 2009-05-27]
 	Updated devel/libgsf to 1.14.14 [wiz 2009-05-27]
 	Updated x11/gnome-themes to 2.26.2 [wiz 2009-05-27]
+	Updated net/vinagre to 2.26.2 [wiz 2009-05-27]
