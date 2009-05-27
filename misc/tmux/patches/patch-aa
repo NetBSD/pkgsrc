@@ -1,8 +1,21 @@
-$NetBSD: patch-aa,v 1.2 2009/05/02 10:50:58 hasso Exp $
+$NetBSD: patch-aa,v 1.3 2009/05/27 06:11:23 minskim Exp $
 
 --- Makefile.orig	2009-04-27 17:38:18.000000000 +0200
 +++ Makefile
-@@ -91,10 +91,10 @@ LIBS+= -lcrypt
+@@ -81,6 +81,12 @@ LDFLAGS+= -pg
+ .endif
+ LIBS+= -lutil -lncurses
+ 
++# Darwin
++.if ${OS} == "Darwin"
++SRCS+= compat/strtonum.c compat/vis.c
++CFLAGS+= -DNO_SETPROCTITLE -DNO_STRTONUM -DNO_QUEUE_H -DNO_TREE_H
++.endif
++
+ # FreeBSD and DragonFly
+ .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
+ INCDIRS+= -Icompat
+@@ -91,10 +97,10 @@ LIBS+= -lcrypt
  
  # NetBSD
  .if ${OS} == "NetBSD"
