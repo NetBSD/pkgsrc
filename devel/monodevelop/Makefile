@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.21 2009/05/04 11:19:13 hasso Exp $
+# $NetBSD: Makefile,v 1.22 2009/05/28 21:18:40 zafer Exp $
 
 DISTNAME=	monodevelop-2.0
 CATEGORIES=	devel
 PKGREVISION=	1
-MASTER_SITES=	http://go-mono.com/sources/monodevelop/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kefren@NetBSD.org
-HOMEPAGE=	http://www.monodevelop.com/
+HOMEPAGE=	http://monodevelop.com/
 COMMENT=	IDE for C\# and other .NET languages
 
 GNU_CONFIGURE=	yes
