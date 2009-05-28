@@ -1,10 +1,7 @@
-$NetBSD: distinfo,v 1.13 2009/03/02 06:20:33 kefren Exp $
+$NetBSD: distinfo,v 1.14 2009/05/28 08:07:50 adam Exp $
 
-SHA1 (optipng-0.6.2.tar.gz) = 374b3537a262590ba2822f2b10d9241247b4da95
-RMD160 (optipng-0.6.2.tar.gz) = cd9ecfbd1c8901d14cb93fbc9f07403071cea37e
-Size (optipng-0.6.2.tar.gz) = 1052509 bytes
+SHA1 (optipng-0.6.3.tar.gz) = eba6e3c940588b1d02abfabc407e5c759a3fdd8a
+RMD160 (optipng-0.6.3.tar.gz) = 3ef55878defee86a57b8b0b268da1a7e9eca0d14
+Size (optipng-0.6.3.tar.gz) = 1060571 bytes
 SHA1 (patch-aa) = 0a0c92b9786193862465646373b82c6bc47cee2c
-SHA1 (patch-ab) = 7816dcfe5505695a3032bdb399b904e5db33a182
 SHA1 (patch-ac) = fb4eb567b5a24b2d26bf357061be80c57b4d4a3c
-SHA1 (patch-ad) = f44f5862de983da3a78529db1ba1b53d40d16dde
-SHA1 (patch-ae) = cf8a80e056bc25d59e2ffda73127e71056cc8ce2
