@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.144 2009/04/23 00:15:53 minskim Exp $
+# $NetBSD: bootstrap,v 1.145 2009/05/28 20:25:35 rillig Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -282,14 +282,10 @@ mkdir_p()
 
 mkdir_p_early()
 {
-	[ -d "$1" ] && return 0	
-	mkdir -p "$1" 2> /dev/null && return 0
-	mkdir_p_early `basename "$1"`
-	if [ ! -d "$1" ] && mkdir "$1"; then
-		echo_msg "mkdir $1 exited with status $?"
-		die "aborted."
-	fi
-	return 0
+	[ -d "$1" ] && return 0
+	mkdir -p "$1" && return 0
+	[ -d "$1" ] && return 0
+	die "aborted."
 }
 
 copy_src()
