@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/23 18:26:05 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/05/28 06:00:38 adam Exp $
 bin/radclient
 bin/radconf2xml
 bin/radeapclient
@@ -12,18 +12,34 @@ ${PLIST.dbm}bin/rlm_dbm_cat
 ${PLIST.dbm}bin/rlm_dbm_parser
 bin/rlm_ippool_tool
 bin/smbencrypt
+include/freeradius/autoconf.h
+include/freeradius/conf.h
+include/freeradius/conffile.h
+include/freeradius/detail.h
+include/freeradius/dhcp.h
+include/freeradius/event.h
 include/freeradius/hash.h
+include/freeradius/heap.h
 include/freeradius/ident.h
 include/freeradius/libradius.h
 include/freeradius/md4.h
 include/freeradius/md5.h
 include/freeradius/missing.h
+include/freeradius/modcall.h
+include/freeradius/modules.h
 include/freeradius/packet.h
+include/freeradius/rad_assert.h
 include/freeradius/radius.h
+include/freeradius/radiusd.h
 include/freeradius/radpaths.h
+include/freeradius/radutmp.h
+include/freeradius/realms.h
 include/freeradius/sha1.h
+include/freeradius/stats.h
+include/freeradius/sysutmp.h
 include/freeradius/token.h
 include/freeradius/udpfromto.h
+include/freeradius/vmps.h
 include/freeradius/vqp.h
 lib/libfreeradius-eap-${RADVER}.la
 lib/libfreeradius-eap.la
@@ -441,6 +457,7 @@ share/freeradius/dictionary.gemtek
 share/freeradius/dictionary.h3c
 share/freeradius/dictionary.hp
 share/freeradius/dictionary.huawei
+share/freeradius/dictionary.infonet
 share/freeradius/dictionary.ipunplugged
 share/freeradius/dictionary.issanni
 share/freeradius/dictionary.itk
