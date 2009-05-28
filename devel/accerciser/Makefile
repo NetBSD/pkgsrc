@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/28 21:17:14 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/28 21:25:32 wiz Exp $
 #
 
 DISTNAME=	accerciser-1.6.1
@@ -15,19 +15,13 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		intltool pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PYTHON_VERSIONS_ACCEPTED=	25 24
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
-
-SUBST_CLASSES+=		path
-SUBST_SED.path=		-e "s,/usr/local,${PREFIX},"
-SUBST_FILES.path=	accerciser.desktop accerciser.desktop.in
-SUBST_STAGE.path=	pre-build
-SUBST_MESSAGE.path=	Fixing path in desktop file.
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.py-at-spi+=	${PYPKGPREFIX}-at-spi>=1.23.3
@@ -39,4 +33,5 @@ BUILDLINK_API_DEPENDS.py-at-spi+=	${PYPKGPREFIX}-at-spi>=1.23.3
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
