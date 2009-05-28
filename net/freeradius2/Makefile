@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/23 18:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.6 2009/05/28 06:00:38 adam Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -43,7 +43,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.1.4
+RADVER=			2.1.6
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
@@ -138,10 +138,6 @@ SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}|g'
 .endif
-
-# fix for wrong version number in freeradius-2.1.4
-post-patch:
-	${ECHO} ${RADVER} > ${WRKSRC}/VERSION
 
 post-build:
 	${CP} ${PKGDIR}/MESSAGE ${WRKDIR}/.MESSAGE_SRC
