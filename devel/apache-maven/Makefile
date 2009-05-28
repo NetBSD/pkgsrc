@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/16 07:39:41 yyamano Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/28 23:27:12 yyamano Exp $
 #
 
-DISTNAME=	apache-maven-2.0.9
+DISTNAME=	apache-maven-2.1.0
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=maven/binaries/}
 EXTRACT_SUFX=	.tar.bz2
