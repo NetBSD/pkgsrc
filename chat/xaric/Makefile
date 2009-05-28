@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2008/07/27 09:48:50 obache Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/28 20:56:59 zafer Exp $
 #
 
 DISTNAME=	xaric-0.12.1
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	http://laeos.net/software/xaric/releases/
+MASTER_SITES=	http://rexfeany.com/software/xaric/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rf.cx/software/xaric/
