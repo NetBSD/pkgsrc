@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2092 2009/05/27 21:37:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2093 2009/05/28 06:04:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2787,3 +2787,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/libgsf to 1.14.14 [wiz 2009-05-27]
 	Updated x11/gnome-themes to 2.26.2 [wiz 2009-05-27]
 	Updated net/vinagre to 2.26.2 [wiz 2009-05-27]
+	Updated net/freeradius2 to 2.1.6 [adam 2009-05-28]
