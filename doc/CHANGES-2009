@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2093 2009/05/28 06:04:21 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2094 2009/05/28 08:08:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2788,3 +2788,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/gnome-themes to 2.26.2 [wiz 2009-05-27]
 	Updated net/vinagre to 2.26.2 [wiz 2009-05-27]
 	Updated net/freeradius2 to 2.1.6 [adam 2009-05-28]
+	Updated graphics/optipng to 0.6.3 [adam 2009-05-28]
