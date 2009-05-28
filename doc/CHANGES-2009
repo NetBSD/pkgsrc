@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2101 2009/05/28 22:45:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2102 2009/05/28 22:49:32 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2796,3 +2796,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/evolution-exchange to 2.26.2 [wiz 2009-05-28]
 	Updated devel/accerciser to 1.6.1nb1 [wiz 2009-05-28]
 	Updated devel/p5-Module-Install to 0.91 [sno 2009-05-28]
+	Updated devel/p5-File-LibMagic to 0.96 [sno 2009-05-28]
