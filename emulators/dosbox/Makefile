@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2008/11/08 21:13:27 bjs Exp $
+# $NetBSD: Makefile,v 1.27 2009/05/28 11:04:52 wiz Exp $
 
-DISTNAME=	dosbox-0.72
-PKGREVISION=	3
+DISTNAME=	dosbox-0.73
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dosbox/}
 
 MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://dosbox.sourceforge.net/
 COMMENT=	Multi-platform DOS emulator using SDL
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
