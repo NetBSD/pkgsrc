@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.88 2009/05/19 08:59:21 wiz Exp $
+# $NetBSD: Makefile,v 1.89 2009/05/28 20:25:25 wiz Exp $
 #
 
-DISTNAME=	evolution-data-server-2.26.1.1
+DISTNAME=	evolution-data-server-2.26.2
 CATEGORIES=	mail gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-data-server/2.26/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,9 +23,7 @@ USE_PKGLOCALEDIR=	YES
 PYTHON_FOR_BUILD_ONLY=	YES
 PYTHON_PATCH_SCRIPTS=	addressbook/libebook/gen-western-table.py
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution-data-server
-PKG_SUPPORTED_OPTIONS=	inet6
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -51,12 +49,6 @@ CONFIGURE_ARGS+=	--with-nss-libs=${BUILDLINK_PREFIX.nss}/lib
 CONFIGURE_ARGS+=	--with-openldap
 CONFIGURE_ARGS+=	--with-libdb=${LOCALBASE}
 BUILDLINK_TRANSFORM+=	l:db:db4
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
 
 PKGCONFIG_OVERRIDE+=	addressbook/libebook/libebook.pc.in
 PKGCONFIG_OVERRIDE+=	addressbook/libedata-book/libedata-book.pc.in
