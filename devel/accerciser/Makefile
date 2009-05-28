@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 11:10:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/05/28 21:17:14 wiz Exp $
 #
 
 DISTNAME=	accerciser-1.6.1
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/accerciser/1.6/}
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +22,12 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON=		plugins/ipython_view.py
 REPLACE_PYTHON+=	src/accerciser.in
+
+SUBST_CLASSES+=		path
+SUBST_SED.path=		-e "s,/usr/local,${PREFIX},"
+SUBST_FILES.path=	accerciser.desktop accerciser.desktop.in
+SUBST_STAGE.path=	pre-build
+SUBST_MESSAGE.path=	Fixing path in desktop file.
 
 .include "../../devel/GConf/schemas.mk"
 BUILDLINK_API_DEPENDS.py-at-spi+=	${PYPKGPREFIX}-at-spi>=1.23.3
