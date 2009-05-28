@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2009/02/16 12:46:00 drochner Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/28 20:40:49 zafer Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	4
 CATEGORIES=	audio
-MASTER_SITES=	http://www.openal.org/openal_webstf/downloads/
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openal.org/
