@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2008/07/14 12:55:59 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/28 20:50:55 zafer Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
 PKGNAME=	xmms-tv-scope-0.0.2
 PKGREVISION=	8
 CATEGORIES=	xmms audio
-MASTER_SITES=	http://zinx.xmms.org/xmms/
+MASTER_SITES=	http://zenthought.org/system/files/asset/2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zinx.xmms.org/xmms/
