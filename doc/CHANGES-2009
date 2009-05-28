@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2095 2009/05/28 11:05:02 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2096 2009/05/28 12:55:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2790,3 +2790,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/freeradius2 to 2.1.6 [adam 2009-05-28]
 	Updated graphics/optipng to 0.6.3 [adam 2009-05-28]
 	Updated emulators/dosbox to 0.73 [wiz 2009-05-28]
+	Updated x11/gtk-sharp to 2.12.9 [wiz 2009-05-28]
