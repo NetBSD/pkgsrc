@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.35 2008/03/04 02:39:37 jschauma Exp $ -->
+<!-- $NetBSD: using.xml,v 1.36 2009/05/28 09:29:30 wiz Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -99,7 +99,7 @@ and you can still use binary packages from someone else.</para>
     other packages depend on it. Instead, they are moved to the
     <filename>vulnerable</filename> subdirectory. So you may need to add
     this directory to the <varname>PKG_PATH</varname> variable. 
-    However, you should run <command>audit-packages</command>
+    However, you should run <command>pkg_admin audit</command>
     regularly, especially after installing new packages, and verify
     that the vulnerabilities are acceptable for your configuration.</para>
 
@@ -155,18 +155,18 @@ and you can still use binary packages from someone else.</para>
     </para>
 
     <para>
-      Through <filename role="pkg">security/audit-packages</filename>,
+      Through <command>pkg_admin fetch-pkg-vulnerabilities</command>,
       this list can be downloaded
       automatically, and a security audit of all packages installed on a system
       can take place.
     </para>
 
     <para>
-      There are two components to
-      <filename role="pkg">security/audit-packages</filename>.  The first
-      component, <quote>download-vulnerability-list</quote>, is for downloading
+      There are two components to auditing.  The first
+      step, <command>pkg_admin fetch-pkg-vulnerabilities</command>,
+      is for downloading
       the list of vulnerabilities from the NetBSD FTP site.  The second
-      component, <quote>audit-packages</quote>, checks to see if any of your
+      step, <command>pkg_admin audit</command>, checks to see if any of your
       installed packages are vulnerable.  If a package is vulnerable, you
       will see output similar to the following:
     </para>
@@ -175,13 +175,24 @@ and you can still use binary packages from someone else.</para>
     http://www.samba.org/samba/whatsnew/macroexploit.html</screen>
 
     <para>
-      One can set up <filename
-      role="pkg">security/audit-packages</filename> to download the
+      You may wish to have the
       <ulink url="ftp://ftp.NetBSD.org/pub/pkgsrc/distfiles/vulnerabilities">vulnerabilities</ulink>
-      file daily, and include a package audit in the daily security script.
-      Details on this are located in the <ulink
-      url="http://cvsweb.NetBSD.org/bsdweb.cgi/pkgsrc/security/audit-packages/MESSAGE?rev=HEAD&amp;content-type=text/x-cvsweb-markup">MESSAGE</ulink>
-      file for <filename role="pkg">security/audit-packages</filename>.
+      file downloaded daily so that
+      it remains current.  This may be done by adding an appropriate entry
+      to the root users &man.crontab.5; entry.  For example the entry
+      <screen>
+# download vulnerabilities file
+0 3 * * * /usr/sbin/pkg_admin fetch-pkg-vulnerabilities >/dev/null 2>&1
+      </screen>
+      will update the vulnerability list every day at 3AM. You may wish to do
+      this more often than once a day.
+
+      In addition, you may wish to run the package audit from the daily
+      security script.  This may be accomplished by adding the following
+      line to <filename>/etc/security.local</filename>:
+      <screen>
+/usr/sbin/pkg_admin audit
+      <screen>
     </para>
   </sect2>
 
