@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2009/05/21 10:58:15 sno Exp $
+# $NetBSD: Makefile,v 1.15 2009/05/28 22:44:05 sno Exp $
 
-DISTNAME=	Module-Install-0.89
+DISTNAME=	Module-Install-0.91
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5moi
 CATEGORIES=	devel perl5
@@ -21,7 +21,8 @@ DEPENDS+=	p5-Module-CoreList>=2.17:../../devel/p5-Module-CoreList
 DEPENDS+=	p5-Module-ScanDeps>=0.89:../../devel/p5-Module-ScanDeps
 DEPENDS+=	p5-PAR-Dist>=0.29:../../devel/p5-PAR-Dist
 DEPENDS+=	p5-PathTools>=3.28:../../devel/p5-PathTools
-DEPENDS+=	p5-YAML-Tiny>=1.36:../../textproc/p5-YAML-Tiny
+DEPENDS+=	p5-Parse-CPAN-Meta>=1.39:../../devel/p5-Parse-CPAN-Meta
+DEPENDS+=	p5-YAML-Tiny>=1.38:../../textproc/p5-YAML-Tiny
 
 PERL5_PACKLIST=		auto/Module/Install/.packlist
 
