@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2096 2009/05/28 12:55:28 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2097 2009/05/28 20:25:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2791,3 +2791,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/optipng to 0.6.3 [adam 2009-05-28]
 	Updated emulators/dosbox to 0.73 [wiz 2009-05-28]
 	Updated x11/gtk-sharp to 2.12.9 [wiz 2009-05-28]
+	Updated mail/evolution-data-server to 2.26.2 [wiz 2009-05-28]
