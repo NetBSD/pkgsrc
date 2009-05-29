@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2009/04/08 13:06:22 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/29 09:26:30 wiz Exp $
 #
 
-DISTNAME=	xcb-proto-1.4
-PKGNAME=	${PYPKGPREFIX}-xcbgen-1.4
+DISTNAME=	xcb-proto-1.5
+PKGNAME=	${PYPKGPREFIX}-xcbgen-1.5
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
