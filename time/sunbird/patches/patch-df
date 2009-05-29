@@ -1,8 +1,8 @@
-$NetBSD: patch-df,v 1.1 2006/06/27 11:11:52 joerg Exp $
+$NetBSD: patch-df,v 1.2 2009/05/29 13:22:11 he Exp $
 
---- directory/c-sdk/ldap/include/portable.h.orig	2006-06-26 13:42:37.000000000 +0000
+--- directory/c-sdk/ldap/include/portable.h.orig	2006-02-03 15:44:40.000000000 +0100
 +++ directory/c-sdk/ldap/include/portable.h
-@@ -122,7 +122,7 @@
+@@ -131,7 +131,7 @@
   * some systems don't have the BSD re_comp and re_exec routines
   */
  #ifndef NEED_BSDREGEX
@@ -11,7 +11,7 @@ $NetBSD: patch-df,v 1.1 2006/06/27 11:11:52 joerg Exp $
  #define NEED_BSDREGEX
  #endif
  #endif
-@@ -141,7 +141,7 @@
+@@ -150,7 +150,7 @@
   * Are sys_errlist and sys_nerr declared in stdio.h?
   */
  #ifndef SYSERRLIST_IN_STDIO
@@ -20,25 +20,25 @@ $NetBSD: patch-df,v 1.1 2006/06/27 11:11:52 joerg Exp $
  #define SYSERRLIST_IN_STDIO
  #endif
  #endif
-@@ -193,7 +193,7 @@
+@@ -202,7 +202,7 @@
   */
- #if !defined(NSLDAPI_CONNECT_MUST_NOT_BE_INTERRUPTED) && \
+ #if !defined(LDAP_CONNECT_MUST_NOT_BE_INTERRUPTED) && \
  	( defined(AIX) || defined(IRIX) || defined(HPUX) || defined(SUNOS4) \
 -	|| defined(SOLARIS) || defined(OSF1) ||defined(freebsd)) 
-+	|| defined(SOLARIS) || defined(OSF1) ||defined(freebsd) || defined(dragonfly))
- #define NSLDAPI_CONNECT_MUST_NOT_BE_INTERRUPTED
++	|| defined(SOLARIS) || defined(OSF1) ||defined(freebsd) || defined(dragonfly)) 
+ #define LDAP_CONNECT_MUST_NOT_BE_INTERRUPTED
  #endif
  
-@@ -276,7 +276,7 @@ int strncasecmp(const char *, const char
-     defined(UnixWare) || defined(NETBSD) || \
+@@ -293,7 +293,7 @@ int strncasecmp(const char *, const char
+     ( defined(HPUX10) && !defined(_REENTRANT)) || defined(HPUX11) || \
+     defined(UnixWare) || defined(LINUX) || defined(NETBSD) || \
      defined(FREEBSD) || defined(OPENBSD) || \
-     (defined(LINUX) && __GLIBC__ < 2) || \
 -    (defined(AIX) && !defined(USE_REENTRANT_LIBC))
 +    (defined(AIX) && !defined(USE_REENTRANT_LIBC) || defined(dragonfly))
  #define GETHOSTBYNAME( n, r, b, l, e )  gethostbyname( n )
  #elif defined(AIX)
  /* Maybe this is for another version of AIX?
-@@ -313,7 +313,7 @@ typedef char GETHOSTBYNAME_buf_t [NSLDAP
+@@ -326,7 +326,7 @@ typedef char GETHOSTBYNAME_buf_t [BUFSIZ
  	|| defined(OSF1V4) || defined(AIX) || defined(UnixWare) \
          || defined(hpux) || defined(HPUX11) || defined(NETBSD) \
          || defined(IRIX6) || defined(FREEBSD) || defined(VMS) \

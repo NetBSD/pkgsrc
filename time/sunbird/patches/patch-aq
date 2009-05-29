@@ -1,6 +1,6 @@
-$NetBSD: patch-aq,v 1.2 2006/06/27 11:11:52 joerg Exp $
+$NetBSD: patch-aq,v 1.3 2009/05/29 13:22:11 he Exp $
 
---- directory/c-sdk/configure.in.orig	2006-04-11 21:12:58.000000000 +0000
+--- directory/c-sdk/configure.in.orig	2007-07-11 22:43:19.000000000 +0200
 +++ directory/c-sdk/configure.in
 @@ -58,7 +58,7 @@ USE_64=
  USE_CPLUS=
@@ -11,13 +11,13 @@ $NetBSD: patch-aq,v 1.2 2006/06/27 11:11:52 joerg Exp $
  _DEBUG_FLAGS=-g
  MOZ_DEBUG=1
  MOZ_OPTIMIZE=
-@@ -1183,6 +1183,24 @@ tools are selected during the Xcode/Deve
-     DSO_LDOPTS=-Bshareable
+@@ -1049,6 +1049,24 @@ tools are selected during the Xcode/Deve
+     PR_MD_CSRCS=freebsd.c
      ;;
  
 +*-*-dragonfly*)
 +    if test -z "$USE_NSPR_THREADS"; then
-+        USE_PTHREADS=1
++	USE_PTHREADS=1
 +    fi
 +    AC_DEFINE(XP_UNIX)
 +    AC_DEFINE(DRAGONFLY)
@@ -36,7 +36,7 @@ $NetBSD: patch-aq,v 1.2 2006/06/27 11:11:52 joerg Exp $
  *-hpux*)
      AC_DEFINE(XP_UNIX)
      AC_DEFINE(HPUX)
-@@ -2270,7 +2288,7 @@ if test -n "$USE_PTHREADS"; then
+@@ -2180,7 +2198,7 @@ if test -n "$USE_PTHREADS"; then
              _PTHREAD_LDFLAGS=
          fi
  	    ;;
@@ -45,7 +45,7 @@ $NetBSD: patch-aq,v 1.2 2006/06/27 11:11:52 joerg Exp $
  	    AC_DEFINE(_THREAD_SAFE)
  	    dnl -pthread links in -lc_r, so don't specify it explicitly.
  	    if test "$ac_cv_have_dash_pthread" = "yes"; then
-@@ -2328,6 +2346,11 @@ case "$target" in
+@@ -2238,6 +2256,11 @@ case "$target" in
          AC_DEFINE(_PR_LOCAL_THREADS_ONLY)
      fi
      ;;
