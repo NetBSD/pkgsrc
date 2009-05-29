@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/04/25 11:31:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/05/29 09:28:17 wiz Exp $
 #
 
-DISTNAME=	xcb-util-0.3.4
+DISTNAME=	xcb-util-0.3.5
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -25,7 +25,6 @@ PKGCONFIG_OVERRIDE+=	keysyms/xcb-keysyms.pc.in
 PKGCONFIG_OVERRIDE+=	property/xcb-property.pc.in
 PKGCONFIG_OVERRIDE+=	renderutil/xcb-renderutil.pc.in
 PKGCONFIG_OVERRIDE+=	reply/xcb-reply.pc.in
-PKGCONFIG_OVERRIDE+=	wm/xcb-wm.pc.in
 
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
