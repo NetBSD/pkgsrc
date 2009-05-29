@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2111 2009/05/29 08:14:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2112 2009/05/29 08:19:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2806,3 +2806,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-Devel-CheckOS version 1.61 [sno 2009-05-29]
 	Updated databases/lua-tokyocabinet to 1.7 [obache 2009-05-29]
 	Added devel/p5-File-Find-Rule-Permissions version 2.0 [sno 2009-05-29]
+	Updated databases/tokyotyrant to 1.1.28 [obache 2009-05-29]
