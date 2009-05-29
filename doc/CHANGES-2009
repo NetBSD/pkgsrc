@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2112 2009/05/29 08:19:29 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2113 2009/05/29 08:23:01 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2807,3 +2807,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/lua-tokyocabinet to 1.7 [obache 2009-05-29]
 	Added devel/p5-File-Find-Rule-Permissions version 2.0 [sno 2009-05-29]
 	Updated databases/tokyotyrant to 1.1.28 [obache 2009-05-29]
+	Added devel/p5-File-Find-Rule-Age version 0.2 [sno 2009-05-29]
