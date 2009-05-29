@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2105 2009/05/29 07:28:21 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2106 2009/05/29 07:36:43 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2800,3 +2800,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/apache-maven to 2.1.0 [yyamano 2009-05-28]
 	Added devel/p5-Devel-Checklib version 0.6 [sno 2009-05-29]
 	Added devel/p5-String-PerlIdentifier version 0.05 [sno 2009-05-29]
+	Added devel/p5-File-Save-Home version 0.08 [sno 2009-05-29]
