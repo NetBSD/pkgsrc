@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/05/14 02:57:28 hasso Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/29 09:27:45 wiz Exp $
 #
 
-DISTNAME=	libxcb-1.2
-PKGREVISION=	1
+DISTNAME=	libxcb-1.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xcb.freedesktop.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,9 +10,10 @@ MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://xcb.freedesktop.org/
 COMMENT=	X protocol C-language Binding
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen>=1.5:../../x11/py-xcbgen
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -48,8 +48,6 @@ PKGCONFIG_OVERRIDE+=	xcb.pc.in
 # libXdmcp is optional; adds support for XDM-AUTHORIZATION-1 in
 # addition to MIT-MAGIC-COOKIE-1.
 
-BUILDLINK_API_DEPENDS.xcb-proto+=	xcb-proto>=1.1
-
 .include "../../mk/pthread.buildlink3.mk"
 
 ###
@@ -79,8 +77,6 @@ post-extract:
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v -i -f
 
-BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen-[0-9]*:../../x11/py-xcbgen
-
 ###
 ### XXX needed to build from scratch, but we're patching right now
 ###	so it's not needed (nor should it ever be, really).
@@ -88,6 +84,7 @@ BUILD_DEPENDS+= ${PYPKGPREFIX}-xcbgen-[0-9]*:../../x11/py-xcbgen
 #.include "../../devel/gperf/buildlink3.mk"
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/application.mk"
+BUILDLINK_API_DEPENDS.xcb-proto?=	xcb-proto>=1.5
 .include "../../x11/xcb-proto/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
