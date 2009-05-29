@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1174 2009/05/29 07:36:44 sno Exp $
+# $NetBSD: Makefile,v 1.1175 2009/05/29 07:43:24 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -567,6 +567,7 @@ SUBDIR+=	p5-ExtUtils-F77
 SUBDIR+=	p5-ExtUtils-Install
 SUBDIR+=	p5-ExtUtils-MakeMaker
 SUBDIR+=	p5-ExtUtils-Manifest
+SUBDIR+=	p5-ExtUtils-ModuleMaker
 SUBDIR+=	p5-ExtUtils-ParseXS
 SUBDIR+=	p5-ExtUtils-PkgConfig
 SUBDIR+=	p5-ExtUtils-XSBuilder
