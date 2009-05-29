@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2103 2009/05/28 23:27:12 yyamano Exp $
+$NetBSD: CHANGES-2009,v 1.2104 2009/05/29 07:16:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2798,3 +2798,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Module-Install to 0.91 [sno 2009-05-28]
 	Updated devel/p5-File-LibMagic to 0.96 [sno 2009-05-28]
 	Updated devel/apache-maven to 2.1.0 [yyamano 2009-05-28]
+	Added devel/p5-Devel-Checklib version 0.6 [sno 2009-05-29]
