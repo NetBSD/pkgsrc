@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
+$NetBSD: patch-ac,v 1.5 2009/05/29 13:22:11 he Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2006-03-28 20:03:49.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2008-02-19 22:11:34.000000000 +0100
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
-@@ -62,13 +62,16 @@ include $(topsrcdir)/config/config.mk
+@@ -62,7 +62,7 @@ include $(topsrcdir)/config/config.mk
  #
  # Lots of Unixish x86 flavors
  #
@@ -10,17 +10,19 @@ $NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
 +ifneq (,$(filter DragonFly FreeBSD NetBSD OpenBSD BSD_OS Darwin,$(OS_ARCH)))
  ifeq (86,$(findstring 86,$(OS_TEST)))
  CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
- ifeq (Darwin,$(OS_ARCH))
- DEFINES		+= -DKEEP_STACK_16_BYTE_ALIGNED
  endif
- endif
+@@ -72,6 +72,10 @@ endif
+ #
+ ifeq ($(OS_ARCH)$(OS_TEST),OpenBSDamd64)
+ CPPSRCS		:= xptcinvoke_openbsd_amd64.cpp xptcstubs_openbsd_amd64.cpp
++else
 +ifeq (amd64,$(OS_TEST))
 +CPPSRCS		:= xptcinvoke_x86_64_linux.cpp xptcstubs_x86_64_linux.cpp
 +endif
  endif
  #
  # New code for Linux, et. al., with gcc
-@@ -161,7 +164,7 @@ endif
+@@ -180,7 +184,7 @@ endif
  # NetBSD/ARM
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -29,7 +31,7 @@ $NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
  CPPSRCS		:= xptcinvoke_arm_netbsd.cpp xptcstubs_arm_netbsd.cpp
  endif
  endif
-@@ -195,7 +198,7 @@ endif
+@@ -224,7 +228,7 @@ endif
  # NetBSD/m68k
  #
  ifeq ($(OS_ARCH),NetBSD)
@@ -38,7 +40,7 @@ $NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
  CPPSRCS		:= xptcinvoke_netbsd_m68k.cpp xptcstubs_netbsd_m68k.cpp
  endif
  endif
-@@ -278,6 +281,7 @@ endif
+@@ -307,6 +311,7 @@ endif
  ifneq (,$(filter NetBSDmacppc NetBSDbebox NetBSDofppc NetBSDprep NetBSDamigappc,$(OS_ARCH)$(OS_TEST)))                           
  CPPSRCS		:= xptcinvoke_ppc_netbsd.cpp xptcstubs_ppc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_ppc_netbsd.s xptcstubs_asm_ppc_netbsd.s
@@ -46,7 +48,7 @@ $NetBSD: patch-ac,v 1.4 2006/09/26 19:41:48 salo Exp $
  endif
  
  #
-@@ -326,6 +330,13 @@ ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
+@@ -363,6 +368,13 @@ ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
  CPPSRCS		:= xptcinvoke_sparc_netbsd.cpp xptcstubs_sparc_netbsd.cpp
  ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
  endif
