@@ -1,0 +1,8 @@
+This module is a replacement for the most typical use of the h2xs utility
+bundled with all Perl distributions: the creation of the directories and
+files required for a pure-Perl module to be installable with make and
+distributable on the Comprehensive Perl Archive Network (CPAN).
+
+For Perl programmers, laziness is a virtue -- and modulemaker is far and
+away the laziest way to create a pure Perl distribution which meets all
+the requirements for worldwide distribution via CPAN.
