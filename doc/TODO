@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8145 2009/05/28 21:37:09 zafer Exp $
+$NetBSD: TODO,v 1.8146 2009/05/29 23:57:34 obache Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.3
 	o amaya-11.0
-	o amule-2.2.4
+	o amule-2.2.4 [pkg/41508]
 	o angband-3.0.9
 	o anjuta-2.26.2.0 [GNOME 2.26]
 	o antiright-8.6
@@ -1005,6 +1005,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openttd-0.7.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
+	o osh-20090527 [pkg/41509]
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-DBD-Sybase-1.08
