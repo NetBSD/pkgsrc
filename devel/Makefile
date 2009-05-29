@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1173 2009/05/29 07:28:21 sno Exp $
+# $NetBSD: Makefile,v 1.1174 2009/05/29 07:36:44 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -587,6 +587,7 @@ SUBDIR+=	p5-File-Path
 SUBDIR+=	p5-File-Path-Expand
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Policy
+SUBDIR+=	p5-File-Save-Home
 SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-Slurp
 SUBDIR+=	p5-File-Temp
