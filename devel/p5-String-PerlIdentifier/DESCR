@@ -1,0 +1,5 @@
+This module automatically exports a single subroutine, make_varname(), which
+returns a string composed of random characters that qualifies as the name for
+a Perl variable. The characters are limited to upper- and lower-case letters
+in the English alphabet, the numerals from 0 through 9 and the underscore
+character. The first character may not be a numeral.
