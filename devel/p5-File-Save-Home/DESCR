@@ -1,0 +1,6 @@
+This Perl extension provides several functions which try to determine whether
+you can, indeed, safely create directories and files underneath a user's home
+directory. Among other things, if you are placing a file in such a location
+only temporarily -- say, for testing purposes -- you can temporarily hide any
+already existing file with the same name and restore it to its original name
+and timestamps when you are done.
