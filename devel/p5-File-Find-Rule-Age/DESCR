@@ -1,0 +1,3 @@
+File::Find::Rule::Age makes it easy to search for files based on their age.
+DateTime and File::stat are used to do the behind the scenes work, with
+File::Find::Rule doing the Heavy Lifting.
