@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1.1.1 2006/02/05 21:56:26 ghen Exp $
+$NetBSD: patch-ba,v 1.2 2009/05/29 13:22:11 he Exp $
 
 --- nsprpub/pr/include/md/_netbsd.cfg.orig	2006-02-02 16:57:57.000000000 +0100
 +++ nsprpub/pr/include/md/_netbsd.cfg
@@ -17,7 +17,7 @@ $NetBSD: patch-ba,v 1.1.1.1 2006/02/05 21:56:26 ghen Exp $
  #define PR_ALIGN_OF_POINTER 4
  
 -#elif defined(__sparc__) || defined(__MIPSEB__)
-+#elif defined(__sparc_v9__)
++#elif defined(__sparc_v9)
 +
 +#undef IS_LITTLE_ENDIAN
 +#define  IS_BIG_ENDIAN 1

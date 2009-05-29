@@ -1,14 +1,17 @@
-# $NetBSD: Makefile-sunbird.common,v 1.13 2009/03/18 00:08:39 abs Exp $
+# $NetBSD: Makefile-sunbird.common,v 1.14 2009/05/29 13:22:11 he Exp $
 # used by time/sunbird/Makefile
 
 MOZILLA_BIN=		sunbird-bin
-MOZ_VER=		0.3.1
+MOZ_VER=		0.9
 EXTRACT_SUFX=		.tar.bz2
-DISTNAME=		sunbird-${MOZ_VER}.source
+DISTNAME=		lightning-sunbird-${MOZ_VER}-source
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_MOZILLA:=calendar/sunbird/releases/${MOZ_VER}/source/}
 
 HOMEPAGE=		http://www.mozilla.org/projects/calendar/sunbird/
+LICENSE=		mozilla-trademark-license
+
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 CONFIGURE_ENV+=		MOZ_SUNBIRD=1
 MAKE_ENV+=		MOZ_SUNBIRD=1
@@ -17,11 +20,12 @@ DISTINFO_FILE=		${.CURDIR}/../../time/sunbird/distinfo
 PATCHDIR=		${.CURDIR}/../../time/sunbird/patches
 
 CONFIGURE_ARGS+=	--enable-application=calendar
+# To avoid use of ancient cairo embedded in distribution:
+CONFIGURE_ARGS+=	--enable-system-cairo
+.include "../../graphics/cairo/buildlink3.mk"
 
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/chrome/app-chrome.manifest
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/compreg.dat
 CHECK_FILES_SKIP+=	${PREFIX}/lib/${MOZILLA}/components/xpti.dat
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 .include "../../www/seamonkey/Makefile.common"
