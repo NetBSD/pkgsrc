@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1180 2009/05/29 08:31:55 sno Exp $
+# $NetBSD: Makefile,v 1.1181 2009/05/29 08:40:11 sno Exp $
 #
 
 COMMENT=	Development utilities
@@ -579,6 +579,7 @@ SUBDIR+=	p5-File-DirSync
 SUBDIR+=	p5-File-Find-Rule
 SUBDIR+=	p5-File-Find-Rule-Age
 SUBDIR+=	p5-File-Find-Rule-PPI
+SUBDIR+=	p5-File-Find-Rule-Perl
 SUBDIR+=	p5-File-Find-Rule-Permissions
 SUBDIR+=	p5-File-Find-Rule-VCS
 SUBDIR+=	p5-File-Flat
