@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2115 2009/05/29 08:40:11 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2116 2009/05/29 08:50:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -1671,6 +1671,10 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/phonon to 4.3.1 [markd 2009-04-06]
 	Added math/p5-Statistics-Descriptive version 2.6 [chuck 2009-04-06]
 	Added graphics/p5-GDGraph-boxplot version 1.00 [chuck 2009-04-06]
+	Added x11/xcb-proto version 1.4 [drochner 2009-04-06]
+	Added x11/libxcb version 1.1.93 [drochner 2009-04-06]
+	Added x11/xcb-util version 0.3.3 [drochner 2009-04-06]
+	Added x11/xine-xcb version 1.1.16.2 [drochner 2009-04-06]
 	Updated www/privoxy to 3.0.12 [mjl 2009-04-07]
 	Updated devel/bglibs to 1.106 [schmonz 2009-04-07]
 	Updated security/cvm to 0.95 [schmonz 2009-04-07]
