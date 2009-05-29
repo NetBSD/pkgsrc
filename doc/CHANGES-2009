@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2108 2009/05/29 07:55:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2109 2009/05/29 08:10:08 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2803,3 +2803,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-File-Save-Home version 0.08 [sno 2009-05-29]
 	Added devel/p5-ExtUtils-ModuleMaker version 0.51 [sno 2009-05-29]
 	Added devel/p5-File-Find-Rule-PPI version 0.05 [sno 2009-05-29]
+	Added devel/p5-Devel-CheckOS version 1.61 [sno 2009-05-29]
