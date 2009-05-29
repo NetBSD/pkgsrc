@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2114 2009/05/29 08:31:55 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2115 2009/05/29 08:40:11 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2809,3 +2809,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/tokyotyrant to 1.1.28 [obache 2009-05-29]
 	Added devel/p5-File-Find-Rule-Age version 0.2 [sno 2009-05-29]
 	Added devel/p5-File-Find-Rule-VCS version 1.05 [sno 2009-05-29]
+	Added devel/p5-File-Find-Rule-Perl version 1.06 [sno 2009-05-29]
