@@ -1,0 +1,6 @@
+File::Find::Rule::PPI allows you to integrate PPI content queries into your
+File::Find::Rule searches.
+
+Initially, it provides the one additional method ppi_find_any, which takes an
+argument identical to the PPI::Node method find_any and checks each file as a
+perl document to see if matches the query.
