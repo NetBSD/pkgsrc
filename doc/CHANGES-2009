@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2118 2009/05/29 09:26:57 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2119 2009/05/29 09:27:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2816,3 +2816,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added devel/p5-File-Find-Rule-Perl version 1.06 [sno 2009-05-29]
 	Updated x11/xcb-proto to 1.5 [wiz 2009-05-29]
 	Updated x11/py-xcbgen to 1.5 [wiz 2009-05-29]
+	Updated x11/libxcb to 1.3 [wiz 2009-05-29]
