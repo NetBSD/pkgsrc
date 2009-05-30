@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8149 2009/05/30 01:42:12 obache Exp $
+$NetBSD: TODO,v 1.8150 2009/05/30 12:50:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o openttd-0.7.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
-	o osh-20090527 [pkg/41509]
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-DBD-Sybase-1.08
