@@ -1,14 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/05/30 00:20:42 zafer Exp $
 #
 
 DISTNAME=	catclock
 PKGNAME=	catclock-0.0
 PKGREVISION=	5
 CATEGORIES=	x11 time
-MASTER_SITES=	http://www2.cenaath.cena.dgac.fr/ftp/decwindows/ \
-		ftp://ftp2.cnam.fr/decwindows/ \
-		ftp://ftp.wku.edu/vms/decwindows/ \
-		ftp://sunsite.doc.ic.ac.uk/computing/graphics/systems/X11/contrib/vms/
+MASTER_SITES=	${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
