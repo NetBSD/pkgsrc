@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2122 2009/05/30 00:16:32 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2123 2009/05/30 00:45:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xcb-util to 0.3.5 [wiz 2009-05-29]
 	Updated time/sunbird to 0.9 [he 2009-05-29]
 	Added textproc/libnxml version 0.18.3 [obache 2009-05-30]
+	Updated audio/libmpd to 0.18.0 [obache 2009-05-30]
