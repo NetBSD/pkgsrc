@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.22 2009/01/09 11:46:34 joerg Exp $
+# $NetBSD: xlc.mk,v 1.23 2009/05/30 18:16:26 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -145,11 +145,16 @@ ${_XLC_CPP}:
 override-tools: ${_XLC_${_var_}}
 ${_XLC_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
+.    if !empty(COMPILER_USE_SYMLINKS:M[Yy][Ee][Ss])
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}${LN} -s ${XLCBASE}/bin/${.TARGET:T} ${.TARGET}
+.    else
 	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${XLCBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
+.    endif
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
