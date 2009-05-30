@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2125 2009/05/30 01:35:18 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2126 2009/05/30 03:14:57 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2823,3 +2823,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/libmpd to 0.18.0 [obache 2009-05-30]
 	Updated audio/gmpc to 0.18.0 [obache 2009-05-30]
 	Updated audio/gimmix to 0.5.6.1 [obache 2009-05-30]
+	Updated multimedia/vlc to 0.9.9a [hasso 2009-05-30]
