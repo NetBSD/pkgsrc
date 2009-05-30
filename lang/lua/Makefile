@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2009/05/20 00:58:19 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/05/30 16:08:58 joerg Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.tecgraf.puc-rio.br/pub/lua/ \
 		ftp://ftp.gwdg.de/pub/languages/lua/ \
@@ -22,6 +22,8 @@ COMMENT=	Powerful light-weight language for extending applications
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
@@ -30,8 +32,6 @@ CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
 
 DOCDIR=		${PREFIX}/share/doc/lua
 EGDIR=		${PREFIX}/share/examples/lua
-
-.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "FreeBSD"
 BUILD_TARGET=	freebsd
