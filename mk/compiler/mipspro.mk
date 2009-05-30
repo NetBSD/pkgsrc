@@ -1,4 +1,4 @@
-# $NetBSD: mipspro.mk,v 1.39 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: mipspro.mk,v 1.40 2009/05/30 18:16:26 joerg Exp $
 #
 # This is the compiler definition for the MIPSpro C compiler.
 #
@@ -91,11 +91,16 @@ PREPEND_PATH+=	${_MIPSPRO_DIR}/bin
 override-tools: ${_MIPSPRO_${_var_}}
 ${_MIPSPRO_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
+.    if !empty(COMPILER_USE_SYMLINKS:M[Yy][Ee][Ss])
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}${LN} -s ${MIPSPROBASE}/bin/${.TARGET:T} ${.TARGET}
+.    else
 	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${MIPSPROBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
+.    endif
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
