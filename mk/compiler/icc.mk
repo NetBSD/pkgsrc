@@ -1,4 +1,4 @@
-# $NetBSD: icc.mk,v 1.5 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: icc.mk,v 1.6 2009/05/30 18:16:26 joerg Exp $
 #
 # This is the compiler definition for the Intel compilers.
 #
@@ -81,11 +81,16 @@ CONFIGURE_ENV+=		ac_cv___attribute__=yes
 override-tools: ${_ICC_${_var_}}
 ${_ICC_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
+.    if !empty(COMPILER_USE_SYMLINKS:M[Yy][Ee][Ss])
+	${RUN}${RM} -f ${.TARGET}
+	${RUN}${LN} -s ${ICCBASE}/bin/${.TARGET:T} ${.TARGET}
+.    else
 	${RUN}					\
 	(${ECHO} '#!${TOOLS_SHELL}';					\
 	 ${ECHO} 'exec ${ICCBASE}/bin/${.TARGET:T} "$$@"';		\
 	) > ${.TARGET}
 	${RUN}${CHMOD} +x ${.TARGET}
+.    endif
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
