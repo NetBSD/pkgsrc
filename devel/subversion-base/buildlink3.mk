@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2009/04/16 21:42:42 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2009/05/30 00:16:47 gdt Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
@@ -21,18 +21,17 @@ pkgbase := subversion-base
 .include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.subversion-base:Mapr1)
-.  include "../../devel/apr/buildlink3.mk"
-.  include "../../devel/apr-util/buildlink3.mk"
-.  if !empty(PKG_BUILD_OPTIONS.subversion-base:Mserf)
-.    include "../../www/serf/buildlink3.mk"
-.  else
-.    include "../../www/neon/buildlink3.mk"
-.  endif
+.include "../../devel/apr/buildlink3.mk"
+.include "../../devel/apr-util/buildlink3.mk"
+.if !empty(PKG_BUILD_OPTIONS.subversion-base:Mserf)
+.  include "../../www/serf/buildlink3.mk"
 .else
-.  include "../../devel/apr0/buildlink3.mk"
 .  include "../../www/neon/buildlink3.mk"
 .endif
+
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.4
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .endif # SUBVERSION_BASE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-subversion-base
