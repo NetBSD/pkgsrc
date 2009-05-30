@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8147 2009/05/30 01:38:12 zafer Exp $
+$NetBSD: TODO,v 1.8148 2009/05/30 01:40:23 zafer Exp $
 
 Suggested new packages
 ======================
@@ -1394,7 +1394,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o wpa_gui-0.6.4 [pkg/39811]
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9e
-	o wxRemind-99
+	o wxRemind-101
 	o wyrd-1.4.4
 	o x11perf-1.5
 	o x264-devel-20090523
