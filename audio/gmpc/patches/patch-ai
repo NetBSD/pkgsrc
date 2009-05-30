@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2009/05/30 01:25:19 obache Exp $
+
+--- configure.orig	2009-03-09 16:23:16.000000000 +0000
++++ configure
+@@ -13376,7 +13376,7 @@ else
+ fi
+ 
+ 
+-    if test "x${libspiff}" == "x1";
++    if test "x${libspiff}" = "x1";
+     then
+ 
+ cat >>confdefs.h <<\_ACEOF
+@@ -13386,7 +13386,7 @@ _ACEOF
+         SPIFF_LIBS=-lspiff
+ 
+     else
+-        if test "x${enable_libspiff}" == "xyes"; then
++        if test "x${enable_libspiff}" = "xyes"; then
+             { { $as_echo "$as_me:$LINENO: error: libspiff not found" >&5
+ $as_echo "$as_me: error: libspiff not found" >&2;}
+    { (exit 1); exit 1; }; }
