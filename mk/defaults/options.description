@@ -271,6 +271,7 @@ lynx			Use and enable support for the lynx browser.
 lzw			Enable LZW (De)compression support
 m17nlib			Enable the m17n library support.
 m68060-optimized	Optimize for m68060 (only).
+mac			Enable Monkey's Audio Codec support.
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP
 mex			Enable matlab mex support (Linux and Solaris only).
