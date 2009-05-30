@@ -1,11 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2007/11/29 16:35:12 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2009/05/30 01:57:26 zafer Exp $
 
 DISTNAME=	opencdk-0.6.6
 CATEGORIES=	security devel
-MASTER_SITES=	http://www.stud.uni-hannover.de/~twoaday/opencdk/ \
-		http://josefsson.org/gnutls/releases/opencdk/ \
-		ftp://ftp.gnutls.org/pub/gnutls/opencdk/ \
-		http://www.gnu.org/software/gnutls/releases/opencdk/
+MASTER_SITES=	ftp://ftp.gnutls.org/pub/gnutls/opencdk/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
