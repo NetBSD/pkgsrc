@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: wrapper.sh,v 1.20 2009/05/30 17:48:20 joerg Exp $
+# $NetBSD: wrapper.sh,v 1.21 2009/05/30 19:18:01 joerg Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,6 +39,7 @@
 #set -eu
 
 # The list of include files for the wrapper.
+empty_file="@_WRAP_EMPTY_FILE@"
 arg_pp="@_WRAP_ARG_PP@"
 arg_pp_main="@_WRAP_ARG_PP_MAIN@"
 arg_source="@_WRAP_ARG_SOURCE@"
@@ -129,8 +130,14 @@ cmd="$cmd $libs"
 @_WRAP_ENV@
 
 msg_log $wrapperlog "<.>" "$cmd"
-wrapper_result=0
-eval "$cmd" || wrapper_result="$?"
+
+if [ "${empty_file}" = "${cleanup}" ] && [ "$debug" != "yes" ]; then
+	eval "exec $cmd"
+	wrapper_results=$?
+else
+	wrapper_result=0
+	eval "$cmd" || wrapper_result="$?"
+fi
 
 . $cleanup
 
