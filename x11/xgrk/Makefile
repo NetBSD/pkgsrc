@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2007/01/15 18:27:59 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/05/30 02:00:49 zafer Exp $
 #
 
 DISTNAME=		xgrk-1.6.3
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://www.softlab.ece.ntua.gr/~sivann/xgrk/
+MASTER_SITES=		http://users.softlab.ece.ntua.gr/~sivann/xgrk/
 EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		is@NetBSD.org
