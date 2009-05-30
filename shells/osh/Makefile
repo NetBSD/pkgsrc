@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2008/12/13 14:14:49 obache Exp $
+# $NetBSD: Makefile,v 1.24 2009/05/30 12:49:44 obache Exp $
 
-DISTNAME=	osh-20081213
+DISTNAME=	osh-20090527
 CATEGORIES=	shells
 MASTER_SITES=	http://v6shell.org/src/
 
