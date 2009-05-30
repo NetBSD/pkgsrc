@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.82 2008/12/29 20:47:17 joerg Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.83 2009/05/30 19:18:01 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -400,6 +400,7 @@ _WRAP_SUBST_SED=							\
 
 .for _wrappee_ in ${_WRAPPEES}
 _WRAP_SUBST_SED.${_wrappee_}=						\
+	-e "s|@_WRAP_EMPTY_FILE@|${_WRAP_EMPTY_FILEQ}|g"		\
 	-e "s|@_WRAP_ENV@|${_WRAP_ENV.${_wrappee_}:Q}|g"		\
 	-e "s|@_WRAP_EXTRA_ARGS@|${_WRAP_EXTRA_ARGS.${_wrappee_}:Q}|g"	\
 	-e "s|@_WRAP_ARG_PP@|${_WRAP_ARG_PP.${_wrappee_}:Q}|g"		\
