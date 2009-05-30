@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.100 2009/05/30 01:55:00 zafer Exp $
+# $NetBSD: Makefile,v 1.101 2009/05/30 11:10:56 zafer Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
 PKGREVISION=		4
 CATEGORIES=		sysutils
-MASTER_SITES=		ftp://ftp.sunet.se/pub/unix/admin/lsof/ \
+MASTER_SITES=		ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/  \
+			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/NEW/ \
+			ftp://lsof.itap.purdue.edu/pub/tools/unix/lsof/OLD/ \
+			ftp://ftp.sunet.se/pub/unix/admin/lsof/ \
 			http://ftp.sunet.se/pub/unix/admin/lsof/
 EXTRACT_SUFX=		.tar.bz2
 
