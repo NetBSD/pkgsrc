@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/01 03:04:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/05/30 16:53:26 taca Exp $
 ${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/print.css
@@ -14,12 +14,12 @@ ${TL_EGDIR}/system/config/timezones.php
 ${TL_EGDIR}/system/config/tinyFlash.php
 ${TL_EGDIR}/system/config/tinyMCE.php
 ${TL_EGDIR}/system/config/tinyNews.php
+${TL_EGDIR}/templates-htaccess
 ${TL_EGDIR}/tl_files/tiny_templates/index.html
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xBasic.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xElements.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xForm.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xNavigation.css
-${TL_EGDIR}/templates-htaccess
 ${TL_EGDIR}/typolight.conf
 ${TL_WEBDIR}/._htaccess
 ${TL_WEBDIR}/CHANGELOG.txt
@@ -72,6 +72,8 @@ ${TL_WEBDIR}/plugins/highlighter/styles/shCore.css
 ${TL_WEBDIR}/plugins/highlighter/styles/shThemeDefault.css
 ${TL_WEBDIR}/plugins/highlighter/styles/shThemeTYPOlight.css
 ${TL_WEBDIR}/plugins/highlighter/styles/wrapping.png
+${TL_WEBDIR}/plugins/http/class.http.php
+${TL_WEBDIR}/plugins/http/license.txt
 ${TL_WEBDIR}/plugins/mootools/images/blank.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_arrows.gif
 ${TL_WEBDIR}/plugins/mootools/images/moor_boverlay.png
@@ -1169,6 +1171,7 @@ ${TL_WEBDIR}/system/modules/frontend/templates/mod_login_1cl.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_login_2cl.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_logout_1cl.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_logout_2cl.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_message.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_navigation.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_quicklink.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_quicknav.tpl
@@ -1355,7 +1358,6 @@ ${TL_WEBDIR}/system/modules/registration/languages/en/default.php
 ${TL_WEBDIR}/system/modules/registration/languages/en/modules.php
 ${TL_WEBDIR}/system/modules/registration/languages/en/tl_module.php
 ${TL_WEBDIR}/system/modules/registration/templates/.htaccess
-${TL_WEBDIR}/system/modules/registration/templates/mod_message.tpl
 ${TL_WEBDIR}/system/modules/registration/templates/mod_password.tpl
 ${TL_WEBDIR}/system/modules/rep_base/GPL3.txt
 ${TL_WEBDIR}/system/modules/rep_base/LGPL3.txt
@@ -1586,6 +1588,9 @@ ${TL_WEBDIR}/system/themes/default/images/regular_4.gif
 ${TL_WEBDIR}/system/themes/default/images/regular_5.gif
 ${TL_WEBDIR}/system/themes/default/images/regular_6.gif
 ${TL_WEBDIR}/system/themes/default/images/regular_7.gif
+${TL_WEBDIR}/system/themes/default/images/reload.gif
+${TL_WEBDIR}/system/themes/default/images/resize.gif
+${TL_WEBDIR}/system/themes/default/images/resize_.gif
 ${TL_WEBDIR}/system/themes/default/images/right.gif
 ${TL_WEBDIR}/system/themes/default/images/root.gif
 ${TL_WEBDIR}/system/themes/default/images/root_1.gif
@@ -1859,6 +1864,7 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/plugins/phpmailer
 @dirrm ${TL_WEBDIR}/plugins/mootools/images
 @dirrm ${TL_WEBDIR}/plugins/mootools
+@dirrm ${TL_WEBDIR}/plugins/http
 @dirrm ${TL_WEBDIR}/plugins/highlighter/styles
 @dirrm ${TL_WEBDIR}/plugins/highlighter/src
 @dirrm ${TL_WEBDIR}/plugins/highlighter/scripts
