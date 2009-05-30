@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2127 2009/05/30 12:50:04 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2128 2009/05/30 16:54:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2825,3 +2825,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated audio/gimmix to 0.5.6.1 [obache 2009-05-30]
 	Updated multimedia/vlc to 0.9.9a [hasso 2009-05-30]
 	Updated shells/osh to 20090527 [obache 2009-05-30]
+	Updated www/typolight27 to 2.7.1 [taca 2009-05-30]
