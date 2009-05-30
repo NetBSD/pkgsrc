@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2009/04/16 21:42:43 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2009/05/30 00:16:47 gdt Exp $
 
 PKGNAME=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}
-PKGREVISION=	1
 COMMENT=	WebDAV server (Apache module) for Subversion
 
 PKG_DESTDIR_SUPPORT=	user-destdir
