@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/05/20 15:56:44 taca Exp $
-${GEEKLOG_BASE}/createdb.php
+@comment $NetBSD: PLIST,v 1.7.20.1 2009/05/30 21:14:02 tron Exp $
 ${GEEKLOG_BASE}/emailgeeklogstories
 ${GEEKLOG_BASE}/language/afrikaans.php
 ${GEEKLOG_BASE}/language/afrikaans_utf-8.php
@@ -41,8 +40,9 @@ ${GEEKLOG_BASE}/language/indonesian.php
 ${GEEKLOG_BASE}/language/indonesian_utf-8.php
 ${GEEKLOG_BASE}/language/italian.php
 ${GEEKLOG_BASE}/language/italian_utf-8.php
-${GEEKLOG_BASE}/language/japanese.php
 ${GEEKLOG_BASE}/language/japanese_utf-8.php
+${GEEKLOG_BASE}/language/korean.php
+${GEEKLOG_BASE}/language/korean_utf-8.php
 ${GEEKLOG_BASE}/language/norwegian.php
 ${GEEKLOG_BASE}/language/norwegian_utf-8.php
 ${GEEKLOG_BASE}/language/polish.php
@@ -71,21 +71,34 @@ ${GEEKLOG_BASE}/language/ukrainian.php
 ${GEEKLOG_BASE}/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/functions.inc
+${GEEKLOG_BASE}/plugins/calendar/install_defaults.php
 ${GEEKLOG_BASE}/plugins/calendar/language/README
+${GEEKLOG_BASE}/plugins/calendar/language/czech.php
+${GEEKLOG_BASE}/plugins/calendar/language/czech_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/danish.php
+${GEEKLOG_BASE}/plugins/calendar/language/danish_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/dutch.php
+${GEEKLOG_BASE}/plugins/calendar/language/dutch_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/english.php
 ${GEEKLOG_BASE}/plugins/calendar/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/estonian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/estonian_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/french_canada.php
+${GEEKLOG_BASE}/plugins/calendar/language/french_canada_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german_formal_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/german_utf-8.php
-${GEEKLOG_BASE}/plugins/calendar/language/japanese.php
+${GEEKLOG_BASE}/plugins/calendar/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/japanese_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/korean.php
+${GEEKLOG_BASE}/plugins/calendar/language/korean_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/russian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/russian_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/slovenian_utf-8.php
+${GEEKLOG_BASE}/plugins/calendar/language/spanish.php
+${GEEKLOG_BASE}/plugins/calendar/language/spanish_utf-8.php
 ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/calendar/language/ukrainian_utf-8.php
@@ -94,6 +107,7 @@ ${GEEKLOG_BASE}/plugins/calendar/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/calendar/templates/addevent.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addeventoption.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/addremoveevent.thtml
+${GEEKLOG_BASE}/plugins/calendar/templates/admin/batchdelete.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/admin/eventeditor.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/calendar.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/calendarday.thtml
@@ -111,34 +125,50 @@ ${GEEKLOG_BASE}/plugins/calendar/templates/personalcalendaroption.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/submitevent.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/weekview/events.thtml
 ${GEEKLOG_BASE}/plugins/calendar/templates/weekview/weekview.thtml
-${GEEKLOG_BASE}/plugins/developer.README
+${GEEKLOG_BASE}/plugins/links/README
 ${GEEKLOG_BASE}/plugins/links/functions.inc
+${GEEKLOG_BASE}/plugins/links/install_defaults.php
 ${GEEKLOG_BASE}/plugins/links/language/README
 ${GEEKLOG_BASE}/plugins/links/language/chinese_simplified_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/chinese_traditional_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/czech.php
+${GEEKLOG_BASE}/plugins/links/language/czech_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/dutch.php
+${GEEKLOG_BASE}/plugins/links/language/dutch_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/english.php
 ${GEEKLOG_BASE}/plugins/links/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/estonian.php
 ${GEEKLOG_BASE}/plugins/links/language/estonian_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/french_canada.php
+${GEEKLOG_BASE}/plugins/links/language/french_canada_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/german.php
 ${GEEKLOG_BASE}/plugins/links/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/links/language/german_formal_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/german_utf-8.php
-${GEEKLOG_BASE}/plugins/links/language/japanese.php
+${GEEKLOG_BASE}/plugins/links/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/japanese_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/korean.php
+${GEEKLOG_BASE}/plugins/links/language/korean_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/polish.php
+${GEEKLOG_BASE}/plugins/links/language/polish_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/russian.php
+${GEEKLOG_BASE}/plugins/links/language/russian_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/links/language/slovenian_utf-8.php
+${GEEKLOG_BASE}/plugins/links/language/spanish.php
+${GEEKLOG_BASE}/plugins/links/language/spanish_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/links/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/links/language/ukrainian_utf-8.php
 ${GEEKLOG_BASE}/plugins/links/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/links/sql/mysql_install.php
+${GEEKLOG_BASE}/plugins/links/templates/admin/categoryeditor.thtml
+${GEEKLOG_BASE}/plugins/links/templates/admin/categorylist.thtml
+${GEEKLOG_BASE}/plugins/links/templates/admin/catitem.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/admin/linkeditor.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/categoryactivecol.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/categorycol.thtml
+${GEEKLOG_BASE}/plugins/links/templates/categorydropdown.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/categorylinks.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/categorynavigation.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/categoryrow.thtml
@@ -146,25 +176,33 @@ ${GEEKLOG_BASE}/plugins/links/templates/linkdetails.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/links.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/pagenavigation.thtml
 ${GEEKLOG_BASE}/plugins/links/templates/submitlink.thtml
-${GEEKLOG_BASE}/plugins/plugin.INSTALL
 ${GEEKLOG_BASE}/plugins/polls/functions.inc
+${GEEKLOG_BASE}/plugins/polls/install_defaults.php
 ${GEEKLOG_BASE}/plugins/polls/language/README
 ${GEEKLOG_BASE}/plugins/polls/language/chinese_simplified_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/chinese_traditional_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/dutch.php
+${GEEKLOG_BASE}/plugins/polls/language/dutch_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/english.php
 ${GEEKLOG_BASE}/plugins/polls/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/estonian.php
 ${GEEKLOG_BASE}/plugins/polls/language/estonian_utf-8.php
+${GEEKLOG_BASE}/plugins/polls/language/french_canada.php
+${GEEKLOG_BASE}/plugins/polls/language/french_canada_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/german.php
 ${GEEKLOG_BASE}/plugins/polls/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/polls/language/german_formal_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/german_utf-8.php
-${GEEKLOG_BASE}/plugins/polls/language/japanese.php
+${GEEKLOG_BASE}/plugins/polls/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/japanese_utf-8.php
+${GEEKLOG_BASE}/plugins/polls/language/korean.php
+${GEEKLOG_BASE}/plugins/polls/language/korean_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/russian.php
+${GEEKLOG_BASE}/plugins/polls/language/russian_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/polls/language/slovenian_utf-8.php
+${GEEKLOG_BASE}/plugins/polls/language/spanish.php
+${GEEKLOG_BASE}/plugins/polls/language/spanish_utf-8.php
 ${GEEKLOG_BASE}/plugins/polls/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/polls/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/polls/language/ukrainian_utf-8.php
@@ -172,10 +210,13 @@ ${GEEKLOG_BASE}/plugins/polls/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/polls/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/polls/templates/admin/pollansweroption.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/admin/polleditor.thtml
+${GEEKLOG_BASE}/plugins/polls/templates/admin/pollquestions.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollanswer.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollblock.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollcomments.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/polllist.thtml
+${GEEKLOG_BASE}/plugins/polls/templates/pollquestion.thtml
+${GEEKLOG_BASE}/plugins/polls/templates/pollquestions.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollresult.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollvotes_bar.thtml
 ${GEEKLOG_BASE}/plugins/polls/templates/pollvotes_num.thtml
@@ -200,19 +241,26 @@ ${GEEKLOG_BASE}/plugins/spamx/SLVbase.class.php
 ${GEEKLOG_BASE}/plugins/spamx/SLVreport.Action.class.php
 ${GEEKLOG_BASE}/plugins/spamx/SLVwhitelist.Admin.class.php
 ${GEEKLOG_BASE}/plugins/spamx/functions.inc
+${GEEKLOG_BASE}/plugins/spamx/install_defaults.php
 ${GEEKLOG_BASE}/plugins/spamx/language/english.php
 ${GEEKLOG_BASE}/plugins/spamx/language/english_utf-8.php
+${GEEKLOG_BASE}/plugins/spamx/language/estonian.php
+${GEEKLOG_BASE}/plugins/spamx/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/farsi_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/french_canada.php
+${GEEKLOG_BASE}/plugins/spamx/language/french_canada_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/french_france.php
+${GEEKLOG_BASE}/plugins/spamx/language/french_france_utf-8.php
+${GEEKLOG_BASE}/plugins/spamx/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/italian.php
-${GEEKLOG_BASE}/plugins/spamx/language/japanese.php
+${GEEKLOG_BASE}/plugins/spamx/language/italian_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/japanese_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/russian.php
 ${GEEKLOG_BASE}/plugins/spamx/language/russian_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/spamx/language/slovenian_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/spanish.php
+${GEEKLOG_BASE}/plugins/spamx/language/spanish_utf-8.php
 ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/spamx/language/ukrainian_utf-8.php
@@ -222,40 +270,57 @@ ${GEEKLOG_BASE}/plugins/spamx/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/spamx/templates/admin.thtml
 ${GEEKLOG_BASE}/plugins/spamx/templates/install.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/functions.inc
+${GEEKLOG_BASE}/plugins/staticpages/install_defaults.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/README
 ${GEEKLOG_BASE}/plugins/staticpages/language/chinese_simplified_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/chinese_traditional_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/czech.php
+${GEEKLOG_BASE}/plugins/staticpages/language/czech_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/danish.php
+${GEEKLOG_BASE}/plugins/staticpages/language/danish_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/dutch.php
+${GEEKLOG_BASE}/plugins/staticpages/language/dutch_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/english.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/english_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/estonian.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/estonian_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/farsi_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/french_canada.php
+${GEEKLOG_BASE}/plugins/staticpages/language/french_canada_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german_formal.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german_formal_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/german_utf-8.php
+${GEEKLOG_BASE}/plugins/staticpages/language/hebrew_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/italian.php
-${GEEKLOG_BASE}/plugins/staticpages/language/japanese.php
+${GEEKLOG_BASE}/plugins/staticpages/language/italian_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/japanese_utf-8.php
+${GEEKLOG_BASE}/plugins/staticpages/language/korean.php
+${GEEKLOG_BASE}/plugins/staticpages/language/korean_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/polish.php
+${GEEKLOG_BASE}/plugins/staticpages/language/polish_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/portuguese_brazil.php
+${GEEKLOG_BASE}/plugins/staticpages/language/portuguese_brazil_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/slovenian.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/slovenian_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/spanish.php
+${GEEKLOG_BASE}/plugins/staticpages/language/spanish_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/swedish.php
+${GEEKLOG_BASE}/plugins/staticpages/language/swedish_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/turkish.php
+${GEEKLOG_BASE}/plugins/staticpages/language/turkish_utf-8.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/ukrainian.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/ukrainian_koi8-u.php
 ${GEEKLOG_BASE}/plugins/staticpages/language/ukrainian_utf-8.php
+${GEEKLOG_BASE}/plugins/staticpages/services.inc.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mssql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/sql/mysql_install.php
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/admin/editor_advanced.thtml
+${GEEKLOG_BASE}/plugins/staticpages/templates/centerblock.thtml
 ${GEEKLOG_BASE}/plugins/staticpages/templates/printable.thtml
+${GEEKLOG_BASE}/plugins/staticpages/templates/spcomments.thtml
+${GEEKLOG_BASE}/plugins/staticpages/templates/staticpage.thtml
 ${GEEKLOG_BASE}/readme
 ${GEEKLOG_BASE}/sql/mssql_tableanddata.php
 ${GEEKLOG_BASE}/sql/mysql_tableanddata.php
@@ -269,6 +334,9 @@ ${GEEKLOG_BASE}/sql/updates/1.1_to_1.2.sql
 ${GEEKLOG_BASE}/sql/updates/1.2.5-1_to_1.3.NOTES
 ${GEEKLOG_BASE}/sql/updates/1.2.5-1_to_1.3.sql
 ${GEEKLOG_BASE}/sql/updates/1.2_to_1.2.2.sql
+${GEEKLOG_BASE}/sql/updates/mssql_1.4.1_to_1.5.0.php
+${GEEKLOG_BASE}/sql/updates/mssql_1.5.0_to_1.5.1.php
+${GEEKLOG_BASE}/sql/updates/mssql_1.5.1_to_1.5.2.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.2.5-1_to_1.3.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.10_to_1.3.11.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.11_to_1.4.0.php
@@ -282,16 +350,33 @@ ${GEEKLOG_BASE}/sql/updates/mysql_1.3.8_to_1.3.9.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3.9_to_1.3.10.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.3_to_1.3.1.php
 ${GEEKLOG_BASE}/sql/updates/mysql_1.4.0_to_1.4.1.php
-${GEEKLOG_BASE}/system/classes/authentication/Blogger.auth.class.php
+${GEEKLOG_BASE}/sql/updates/mysql_1.4.1_to_1.5.0.php
+${GEEKLOG_BASE}/sql/updates/mysql_1.5.0_to_1.5.1.php
+${GEEKLOG_BASE}/sql/updates/mysql_1.5.1_to_1.5.2.php
+${GEEKLOG_BASE}/system/classes/authentication/LDAP.auth.class.php
 ${GEEKLOG_BASE}/system/classes/authentication/LiveJournal.auth.class.php
+${GEEKLOG_BASE}/system/classes/authentication/ldap/config.php
 ${GEEKLOG_BASE}/system/classes/calendar.class.php
+${GEEKLOG_BASE}/system/classes/config.class.php
 ${GEEKLOG_BASE}/system/classes/conversion.class.php
 ${GEEKLOG_BASE}/system/classes/downloader.class.php
 ${GEEKLOG_BASE}/system/classes/kses.class.php
 ${GEEKLOG_BASE}/system/classes/navbar.class.php
+${GEEKLOG_BASE}/system/classes/openid/COPYING
+${GEEKLOG_BASE}/system/classes/openid/LICENSE
+${GEEKLOG_BASE}/system/classes/openid/association.php
+${GEEKLOG_BASE}/system/classes/openid/consumer.php
+${GEEKLOG_BASE}/system/classes/openid/httpclient.php
+${GEEKLOG_BASE}/system/classes/openid/interface.php
+${GEEKLOG_BASE}/system/classes/openid/oid_parse.php
+${GEEKLOG_BASE}/system/classes/openid/oid_util.php
+${GEEKLOG_BASE}/system/classes/openid/server.php
+${GEEKLOG_BASE}/system/classes/openid/trustroot.php
+${GEEKLOG_BASE}/system/classes/openidhelper.class.php
 ${GEEKLOG_BASE}/system/classes/plugin.class.php
 ${GEEKLOG_BASE}/system/classes/sanitize.class.php
 ${GEEKLOG_BASE}/system/classes/search.class.php
+${GEEKLOG_BASE}/system/classes/story.class.php
 ${GEEKLOG_BASE}/system/classes/syndication/atom.feed.class.php
 ${GEEKLOG_BASE}/system/classes/syndication/feedparserbase.class.php
 ${GEEKLOG_BASE}/system/classes/syndication/parserfactory.class.php
@@ -303,7 +388,6 @@ ${GEEKLOG_BASE}/system/classes/upload.class.php
 ${GEEKLOG_BASE}/system/classes/url.class.php
 ${GEEKLOG_BASE}/system/databases/mssql.class.php
 ${GEEKLOG_BASE}/system/databases/mysql.class.php
-${GEEKLOG_BASE}/system/install_templates/databasesettings.tpl
 ${GEEKLOG_BASE}/system/lib-admin.php
 ${GEEKLOG_BASE}/system/lib-comment.php
 ${GEEKLOG_BASE}/system/lib-database.php
@@ -316,9 +400,23 @@ ${GEEKLOG_BASE}/system/lib-story.php
 ${GEEKLOG_BASE}/system/lib-syndication.php
 ${GEEKLOG_BASE}/system/lib-trackback.php
 ${GEEKLOG_BASE}/system/lib-user.php
+${GEEKLOG_BASE}/system/lib-webservices.php
 ${GEEKLOG_BASE}/system/memberdetail.thtml
 ${GEEKLOG_BASE}/system/pear/Archive/Tar.php
+${GEEKLOG_BASE}/system/pear/Archive/Zip.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/Anonymous.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/Common.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/CramMD5.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/DigestMD5.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/Login.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL/Plain.php
+${GEEKLOG_BASE}/system/pear/Auth/SASL.php
 ${GEEKLOG_BASE}/system/pear/Console/Getopt.php
+${GEEKLOG_BASE}/system/pear/Date/Calc.php
+${GEEKLOG_BASE}/system/pear/Date/Human.php
+${GEEKLOG_BASE}/system/pear/Date/Span.php
+${GEEKLOG_BASE}/system/pear/Date/TimeZone.php
+${GEEKLOG_BASE}/system/pear/Date.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request/Listener.php
 ${GEEKLOG_BASE}/system/pear/HTTP/Request.php
 ${GEEKLOG_BASE}/system/pear/Mail/RFC822.php
@@ -327,6 +425,24 @@ ${GEEKLOG_BASE}/system/pear/Mail/null.php
 ${GEEKLOG_BASE}/system/pear/Mail/sendmail.php
 ${GEEKLOG_BASE}/system/pear/Mail/smtp.php
 ${GEEKLOG_BASE}/system/pear/Mail.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/Header.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/Packet.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/Question.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/A.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/AAAA.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/CNAME.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/HINFO.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/MX.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/NAPTR.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/NS.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/PTR.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/SOA.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/SRV.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/TSIG.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR/TXT.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/RR.php
+${GEEKLOG_BASE}/system/pear/Net/DNS/Resolver.php
+${GEEKLOG_BASE}/system/pear/Net/DNS.php
 ${GEEKLOG_BASE}/system/pear/Net/SMTP.php
 ${GEEKLOG_BASE}/system/pear/Net/Socket.php
 ${GEEKLOG_BASE}/system/pear/Net/URL.php
@@ -368,8 +484,11 @@ ${GEEKLOG_BASE}/system/pear/PEAR/Downloader/Package.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Downloader.php
 ${GEEKLOG_BASE}/system/pear/PEAR/ErrorStack.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Exception.php
+${GEEKLOG_BASE}/system/pear/PEAR/FixPHP5PEARWarnings.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Frontend/CLI.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Frontend.php
+${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Cfg.php
+${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Cfg.xml
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Common.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Data.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Data.xml
@@ -385,6 +504,8 @@ ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Src.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Src.xml
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Test.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Test.xml
+${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Www.php
+${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role/Www.xml
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer/Role.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Installer.php
 ${GEEKLOG_BASE}/system/pear/PEAR/PackageFile/Generator/v1.php
@@ -399,6 +520,7 @@ ${GEEKLOG_BASE}/system/pear/PEAR/PackageFile.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Packager.php
 ${GEEKLOG_BASE}/system/pear/PEAR/REST/10.php
 ${GEEKLOG_BASE}/system/pear/PEAR/REST/11.php
+${GEEKLOG_BASE}/system/pear/PEAR/REST/13.php
 ${GEEKLOG_BASE}/system/pear/PEAR/REST.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Registry.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Remote.php
@@ -416,96 +538,192 @@ ${GEEKLOG_BASE}/system/pear/PEAR/Validate.php
 ${GEEKLOG_BASE}/system/pear/PEAR/Validator/PECL.php
 ${GEEKLOG_BASE}/system/pear/PEAR/XMLParser.php
 ${GEEKLOG_BASE}/system/pear/PEAR.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Components.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/DIRECTORY_SEPARATOR.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/E_STRICT.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/FILE.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/PATH_SEPARATOR.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/PHP_EOL.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/STD.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/T.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant/UPLOAD_ERR.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_change_key_case.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_chunk.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_combine.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_diff_assoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_diff_key.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_diff_uassoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_diff_ukey.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_intersect_assoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_intersect_key.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_intersect_uassoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_intersect_ukey.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_key_exists.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_product.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_search.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_udiff.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_udiff_assoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_udiff_uassoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_uintersect.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_uintersect_assoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_uintersect_uassoc.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/array_walk_recursive.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/bcinvert.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/bcpowmod.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/call_user_func_array.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/clone.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/constant.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/convert_uudecode.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/convert_uuencode.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/debug_print_backtrace.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/file_get_contents.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/file_put_contents.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/floatval.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/fprintf.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/fputcsv.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/get_headers.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/get_include_path.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/html_entity_decode.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/htmlspecialchars_decode.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/http_build_query.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ibase_timefmt.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/idate.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/image_type_to_mime_type.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/inet_ntop.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/inet_pton.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ini_get_all.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/is_a.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/md5_file.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/mhash.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/mime_content_type.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ob_clean.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ob_flush.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ob_get_clean.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/ob_get_flush.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/pg_affected_rows.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/pg_escape_bytea.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/pg_unescape_bytea.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/php_strip_whitespace.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/restore_include_path.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/scandir.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/set_include_path.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/str_ireplace.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/str_rot13.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/str_shuffle.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/str_split.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/str_word_count.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/stripos.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/strpbrk.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/strripos.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/substr_compare.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/time_sleep_until.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/var_export.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/version_compare.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/vprintf.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat/Function/vsprintf.php
-${GEEKLOG_BASE}/system/pear/PHP/Compat.php
 ${GEEKLOG_BASE}/system/pear/README
 ${GEEKLOG_BASE}/system/pear/System.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Default.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Anchor.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Blockquote.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Bold.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Break.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Center.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Code.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Colortext.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Deflist.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Delimiter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Embed.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Emphasis.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Freelink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Function.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Heading.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Horiz.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Html.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Image.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Include.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Interwiki.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Italic.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/List.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Newline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Paragraph.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Phplookup.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Prefilter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Raw.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Revise.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Smiley.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Strong.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Subscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Superscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Table.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Tighten.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Toc.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Tt.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Underline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Url.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default/Wikilink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Anchor.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Blockquote.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Bold.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Box.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Break.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Center.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Code.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Colortext.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Deflist.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Delimiter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Embed.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Emphasis.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Font.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Freelink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Function.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Heading.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Horiz.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Html.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Image.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Include.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Interwiki.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Italic.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/List.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Newline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Page.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Paragraph.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Phplookup.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Plugin.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Prefilter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Preformatted.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Raw.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Revise.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Smiley.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Specialchar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Strong.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Subscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Superscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Table.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Tighten.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Titlebar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Toc.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Tt.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Underline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Url.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex/Wikilink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Anchor.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Blockquote.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Bold.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Box.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Break.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Center.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Code.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Colortext.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Deflist.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Delimiter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Embed.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Emphasis.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Font.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Freelink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Function.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Heading.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Horiz.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Html.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Image.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Include.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Interwiki.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Italic.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/List.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Newline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Page.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Paragraph.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Phplookup.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Plugin.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Prefilter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Preformatted.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Raw.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Revise.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Smiley.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Specialchar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Strong.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Subscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Superscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Table.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Tighten.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Titlebar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Toc.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Tt.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Underline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Url.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain/Wikilink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Address.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Anchor.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Blockquote.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Bold.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Box.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Break.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Center.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Code.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Colortext.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Deflist.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Delimiter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Embed.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Emphasis.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Font.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Freelink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Function.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Heading.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Horiz.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Html.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Image.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Include.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Interwiki.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Italic.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/List.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Newline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Page.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Paragraph.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Phplookup.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Plugin.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Prefilter.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Preformatted.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Raw.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Revise.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Smiley.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Specialchar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Strong.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Subscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Superscript.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Table.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Tighten.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Titlebar.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Toc.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Tt.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Underline.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Url.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml/Wikilink.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki/Render.php
+${GEEKLOG_BASE}/system/pear/Text/Wiki.php
 ${GEEKLOG_BASE}/system/pear/XML/RPC/Dump.php
 ${GEEKLOG_BASE}/system/pear/XML/RPC/Server.php
 ${GEEKLOG_BASE}/system/pear/XML/RPC.php
-${GEEKLOG_BASE}/system/pear/package.dtd
 ${GEEKLOG_BASE}/system/pear/scripts/pear.bat
 ${GEEKLOG_BASE}/system/pear/scripts/pear.sh
 ${GEEKLOG_BASE}/system/pear/scripts/pearcmd.php
@@ -514,78 +732,90 @@ ${GEEKLOG_BASE}/system/pear/scripts/peardev.sh
 ${GEEKLOG_BASE}/system/pear/scripts/pecl.bat
 ${GEEKLOG_BASE}/system/pear/scripts/pecl.sh
 ${GEEKLOG_BASE}/system/pear/scripts/peclcmd.php
-${GEEKLOG_BASE}/system/pear/template.spec
-${GEEKLOG_ADMIN}/auth.inc.php
-${GEEKLOG_ADMIN}/block.php
-${GEEKLOG_ADMIN}/database.php
-${GEEKLOG_ADMIN}/group.php
-${GEEKLOG_ADMIN}/index.php
-${GEEKLOG_ADMIN}/install/addindex.php
-${GEEKLOG_ADMIN}/install/check.php
-${GEEKLOG_ADMIN}/install/configinfo.php
-${GEEKLOG_ADMIN}/install/info.php
-${GEEKLOG_ADMIN}/install/install.php
-${GEEKLOG_ADMIN}/install/success.php
-${GEEKLOG_ADMIN}/install/toinnodb.php
-${GEEKLOG_ADMIN}/mail.php
-${GEEKLOG_ADMIN}/moderation.php
-${GEEKLOG_ADMIN}/plugins/calendar/index.php
-${GEEKLOG_ADMIN}/plugins/calendar/install.php
-${GEEKLOG_ADMIN}/plugins/links/index.php
-${GEEKLOG_ADMIN}/plugins/links/install.php
-${GEEKLOG_ADMIN}/plugins/polls/index.php
-${GEEKLOG_ADMIN}/plugins/polls/install.php
-${GEEKLOG_ADMIN}/plugins/spamx/images/spamx.png
-${GEEKLOG_ADMIN}/plugins/spamx/index.php
-${GEEKLOG_ADMIN}/plugins/spamx/install.php
-${GEEKLOG_ADMIN}/plugins/staticpages/index.php
-${GEEKLOG_ADMIN}/plugins/staticpages/install.php
-${GEEKLOG_ADMIN}/plugins.php
-${GEEKLOG_ADMIN}/sectest.php
-${GEEKLOG_ADMIN}/story.php
-${GEEKLOG_ADMIN}/syndication.php
-${GEEKLOG_ADMIN}/topic.php
-${GEEKLOG_ADMIN}/trackback.php
-${GEEKLOG_ADMIN}/user.php
-${GEEKLOG_TMPL}/backend/geeklog.rss
-${GEEKLOG_TMPL}/images/articles/index.html
-${GEEKLOG_TMPL}/images/library/File/test.pdf
-${GEEKLOG_TMPL}/images/library/Flash/index.html
-${GEEKLOG_TMPL}/images/library/Image/icons/ai.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/avi.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/bmp.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/cs.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/default.icon.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/dll.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/doc.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/exe.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/fla.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/gif.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/htm.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/html.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/jpg.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/js.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/mdb.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/mp3.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/pdf.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/ppt.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/rdp.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/swf.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/swt.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/txt.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/vsd.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/xls.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/xml.gif
-${GEEKLOG_TMPL}/images/library/Image/icons/zip.gif
-${GEEKLOG_TMPL}/images/library/Image/image1.jpg
-${GEEKLOG_TMPL}/images/library/Image/image2.jpg
-${GEEKLOG_TMPL}/images/library/Image/image3.jpg
-${GEEKLOG_TMPL}/images/library/Media/index.html
-${GEEKLOG_TMPL}/images/topics/index.html
-${GEEKLOG_TMPL}/images/topics/topic_gl.gif
-${GEEKLOG_TMPL}/images/topics/topic_news.gif
-${GEEKLOG_TMPL}/images/userphotos/index.html
+${GL_TMPL}/backend/geeklog.rss
+${GL_TMPL}/images/articles/index.html
+${GL_TMPL}/images/library/File/test.pdf
+${GL_TMPL}/images/library/Flash/index.html
+${GL_TMPL}/images/library/Image/icons/ai.gif
+${GL_TMPL}/images/library/Image/icons/avi.gif
+${GL_TMPL}/images/library/Image/icons/bmp.gif
+${GL_TMPL}/images/library/Image/icons/cs.gif
+${GL_TMPL}/images/library/Image/icons/default.icon.gif
+${GL_TMPL}/images/library/Image/icons/dll.gif
+${GL_TMPL}/images/library/Image/icons/doc.gif
+${GL_TMPL}/images/library/Image/icons/exe.gif
+${GL_TMPL}/images/library/Image/icons/fla.gif
+${GL_TMPL}/images/library/Image/icons/gif.gif
+${GL_TMPL}/images/library/Image/icons/htm.gif
+${GL_TMPL}/images/library/Image/icons/html.gif
+${GL_TMPL}/images/library/Image/icons/jpg.gif
+${GL_TMPL}/images/library/Image/icons/js.gif
+${GL_TMPL}/images/library/Image/icons/mdb.gif
+${GL_TMPL}/images/library/Image/icons/mp3.gif
+${GL_TMPL}/images/library/Image/icons/pdf.gif
+${GL_TMPL}/images/library/Image/icons/ppt.gif
+${GL_TMPL}/images/library/Image/icons/rdp.gif
+${GL_TMPL}/images/library/Image/icons/swf.gif
+${GL_TMPL}/images/library/Image/icons/swt.gif
+${GL_TMPL}/images/library/Image/icons/txt.gif
+${GL_TMPL}/images/library/Image/icons/vsd.gif
+${GL_TMPL}/images/library/Image/icons/xls.gif
+${GL_TMPL}/images/library/Image/icons/xml.gif
+${GL_TMPL}/images/library/Image/icons/zip.gif
+${GL_TMPL}/images/library/Image/image1.jpg
+${GL_TMPL}/images/library/Image/image2.jpg
+${GL_TMPL}/images/library/Image/image3.jpg
+${GL_TMPL}/images/library/Media/index.html
+${GL_TMPL}/images/topics/index.html
+${GL_TMPL}/images/topics/topic_gl.gif
+${GL_TMPL}/images/topics/topic_news.gif
+${GL_TMPL}/images/userphotos/index.html
 ${GEEKLOG_PUB}/404.php
+${GL_ADMIN}/auth.inc.php
+${GL_ADMIN}/block.php
+${GL_ADMIN}/configuration.php
+${GL_ADMIN}/database.php
+${GL_ADMIN}/group.php
+${GL_ADMIN}/index.php
+${GL_ADMIN}/install/config-install.php
+${GL_ADMIN}/install/configinfo.php
+${GL_ADMIN}/install/help.php
+${GL_ADMIN}/install/index.php
+${GL_ADMIN}/install/info.php
+${GL_ADMIN}/install/install.php
+${GL_ADMIN}/install/language/chinese_simplified_utf-8.php
+${GL_ADMIN}/install/language/chinese_traditional_utf-8.php
+${GL_ADMIN}/install/language/english.php
+${GL_ADMIN}/install/language/german.php
+${GL_ADMIN}/install/language/hebrew_utf-8.php
+${GL_ADMIN}/install/language/japanese_utf-8.php
+${GL_ADMIN}/install/language/polish.php
+${GL_ADMIN}/install/layout/header-bg.png
+${GL_ADMIN}/install/layout/logo.png
+${GL_ADMIN}/install/layout/style.css
+${GL_ADMIN}/install/success.php
+${GL_ADMIN}/install/toinnodb.php
+${GL_ADMIN}/mail.php
+${GL_ADMIN}/moderation.php
+${GL_ADMIN}/plugins/calendar/index.php
+${GL_ADMIN}/plugins/calendar/install.php
+${GL_ADMIN}/plugins/links/category.php
+${GL_ADMIN}/plugins/links/index.php
+${GL_ADMIN}/plugins/links/install.php
+${GL_ADMIN}/plugins/polls/index.php
+${GL_ADMIN}/plugins/polls/install.php
+${GL_ADMIN}/plugins/spamx/images/spamx.png
+${GL_ADMIN}/plugins/spamx/index.php
+${GL_ADMIN}/plugins/spamx/install.php
+${GL_ADMIN}/plugins/staticpages/index.php
+${GL_ADMIN}/plugins/staticpages/install.php
+${GL_ADMIN}/plugins.php
+${GL_ADMIN}/sectest.php
+${GL_ADMIN}/story.php
+${GL_ADMIN}/syndication.php
+${GL_ADMIN}/topic.php
+${GL_ADMIN}/trackback.php
+${GL_ADMIN}/user.php
 ${GEEKLOG_PUB}/article.php
 ${GEEKLOG_PUB}/calendar/event.php
 ${GEEKLOG_PUB}/calendar/images/calendar.png
@@ -602,6 +832,7 @@ ${GEEKLOG_PUB}/docs/config.html
 ${GEEKLOG_PUB}/docs/docstyle.css
 ${GEEKLOG_PUB}/docs/history
 ${GEEKLOG_PUB}/docs/images/de.png
+${GEEKLOG_PUB}/docs/images/fr.png
 ${GEEKLOG_PUB}/docs/images/jp.png
 ${GEEKLOG_PUB}/docs/images/newlogo.gif
 ${GEEKLOG_PUB}/docs/images/pl.png
@@ -618,22 +849,33 @@ ${GEEKLOG_PUB}/docs/theme.html
 ${GEEKLOG_PUB}/docs/themevars.html
 ${GEEKLOG_PUB}/docs/trackback.html
 ${GEEKLOG_PUB}/fckeditor/_documentation.html
+${GEEKLOG_PUB}/fckeditor/_upgrade.html
 ${GEEKLOG_PUB}/fckeditor/_whatsnew.html
+${GEEKLOG_PUB}/fckeditor/_whatsnew_history.html
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckcontextmenu.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdataprocessor.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdocumentfragment_gecko.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdocumentfragment_ie.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdomrange.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdomrange_gecko.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdomrange_ie.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckdomrangeiterator.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckeditingarea.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckelementpath.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckenterkey.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckevents.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckhtmliterator.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckicon.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckiecleanup.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckimagepreloader.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckkeystrokehandler.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckmenublock.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckmenublockpanel.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckmenuitem.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckpanel.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckplugin.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckspecialcombo.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckstyledef.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckstyledef_gecko.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckstyledef_ie.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckstylesloader.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckstyle.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbar.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarbreak_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarbreak_ie.js
@@ -645,13 +887,22 @@ ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarfontsizecombo.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarpanelbutton.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarspecialcombo.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fcktoolbarstylecombo.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckw3crange.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckxml.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckxml_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/classes/fckxml_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fck_othercommands.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckblockquotecommand.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckcorestylecommand.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckfitwindow.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckindentcommands.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckjustifycommands.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fcklistcommands.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fcknamedcommand.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckpasteplaintextcommand.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckpastewordcommand.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckremoveformatcommand.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckshowblocks.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckspellcheckcommand_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckspellcheckcommand_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fckstylecommand.js
@@ -660,29 +911,28 @@ ${GEEKLOG_PUB}/fckeditor/editor/_source/commandclasses/fcktextcolorcommand.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/fckconstants.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/fckeditorapi.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/fckjscoreextensions.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/fckscriptloader.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_1.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_1_gecko.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_1_ie.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_2.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_2_gecko.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_2_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_contextmenu.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_gecko.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fck_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckbrowserinfo.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckcodeformatter.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckcommands.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckconfig.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdebug.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdialog.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdialog_gecko.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdialog_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdocumentprocessor.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckdomtools.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcklanguagemanager.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcklisthandler.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcklistslib.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckplugins.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckregexlib.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckselection_ie.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckstyles.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktablehandler.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktablehandler_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktablehandler_ie.js
@@ -691,33 +941,41 @@ ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktoolbarset.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktools.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktools_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fcktools_ie.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckundo_gecko.js
-${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckundo_ie.js
+${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckundo.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckurlparams.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckxhtml.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckxhtml_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckxhtml_ie.js
 ${GEEKLOG_PUB}/fckeditor/editor/_source/internals/fckxhtmlentities.js
 ${GEEKLOG_PUB}/fckeditor/editor/css/behaviors/disablehandles.htc
-${GEEKLOG_PUB}/fckeditor/editor/css/behaviors/hiddenfield.gif
-${GEEKLOG_PUB}/fckeditor/editor/css/behaviors/hiddenfield.htc
 ${GEEKLOG_PUB}/fckeditor/editor/css/behaviors/showtableborders.htc
 ${GEEKLOG_PUB}/fckeditor/editor/css/fck_editorarea.css
 ${GEEKLOG_PUB}/fckeditor/editor/css/fck_internal.css
 ${GEEKLOG_PUB}/fckeditor/editor/css/fck_showtableborders_gecko.css
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_address.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_blockquote.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_div.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h1.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h2.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h3.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h4.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h5.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_h6.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_p.png
+${GEEKLOG_PUB}/fckeditor/editor/css/images/block_pre.png
 ${GEEKLOG_PUB}/fckeditor/editor/css/images/fck_anchor.gif
 ${GEEKLOG_PUB}/fckeditor/editor/css/images/fck_flashlogo.gif
+${GEEKLOG_PUB}/fckeditor/editor/css/images/fck_hiddenfield.gif
 ${GEEKLOG_PUB}/fckeditor/editor/css/images/fck_pagebreak.gif
+${GEEKLOG_PUB}/fckeditor/editor/css/images/fck_plugin.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/fck_dialog_common.css
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/fck_dialog_common.js
-${GEEKLOG_PUB}/fckeditor/editor/dialog/common/fcknumericfield.htc
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/images/locked.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/images/reset.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/images/unlocked.gif
-${GEEKLOG_PUB}/fckeditor/editor/dialog/common/moz-bindings.xml
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about/lgpl.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about/logo_fckeditor.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about/logo_fredck.gif
+${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about/sponsors/spellchecker_net.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_anchor.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_button.html
@@ -725,7 +983,6 @@ ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_checkbox.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_colorselector.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_docprops/fck_document_preview.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_docprops.html
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_find.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_flash/fck_flash.js
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_flash/fck_flash_preview.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_flash.html
@@ -764,26 +1021,15 @@ ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_template/images/template3.gif
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_template.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_textarea.html
 ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_textfield.html
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/00.gif
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/data.js
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/diacritic.js
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/dialogue.js
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/fck_universalkey.css
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/keyboard_layout.gif
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey/multihexa.js
-${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey.html
-${GEEKLOG_PUB}/fckeditor/editor/fckblank.html
+${GEEKLOG_PUB}/fckeditor/editor/dtd/fck_dtd_test.html
+${GEEKLOG_PUB}/fckeditor/editor/dtd/fck_xhtml10strict.js
+${GEEKLOG_PUB}/fckeditor/editor/dtd/fck_xhtml10transitional.js
 ${GEEKLOG_PUB}/fckeditor/editor/fckdebug.html
 ${GEEKLOG_PUB}/fckeditor/editor/fckdialog.html
 ${GEEKLOG_PUB}/fckeditor/editor/fckeditor.html
+${GEEKLOG_PUB}/fckeditor/editor/fckeditor.original.html
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/browser.css
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/browser.html
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/basexml.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/commands.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/config.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/connector.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/io.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php/util.php
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/frmactualfolder.html
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/frmcreatefolder.html
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/frmfolders.html
@@ -813,6 +1059,7 @@ ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/js.g
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/mdb.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/mp3.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/pdf.gif
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/png.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/ppt.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/rdp.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32/swf.gif
@@ -839,6 +1086,7 @@ ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/js.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/mdb.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/mp3.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/pdf.gif
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/png.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/ppt.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/rdp.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/swf.gif
@@ -851,100 +1099,17 @@ ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/zip.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/spacer.gif
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/js/common.js
 ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/js/fckxml.js
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload/php/config.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload/php/upload.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload/php/util.php
-${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload/test.html
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/basexml.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/commands.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/config.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/connector.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/io.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/phpcompat.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/upload.php
+${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php/util.php
 ${GEEKLOG_PUB}/fckeditor/editor/images/anchor.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/arrow_ltr.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/arrow_rtl.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/aiua.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/ak.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/alien.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/alien2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/angry.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/angry1.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/apophys.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/assjani.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/asthanos.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/bazuzeus.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/beaute.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/bigsmile.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/blush.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/boid.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/bonk.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/bored.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/borg.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/capo.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/confused.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/cool.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/crazy.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/cwm14.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/demis_roussos.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/devil.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/devil2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/double0smile.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/eek3.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/eltaf.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/gele.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/halm.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/happy.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon12.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon23.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon26.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon_angel.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon_bandit.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon_bravo.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/icon_clown.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/jesors.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/jesors1.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/lol3.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/love.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/mad.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/megaphone.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/mmm.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/music.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/notify.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/nuts.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/obanon.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/ouaip.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/pleure.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/plugin.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/question.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/question2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/rasta2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/rastapop.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/rosebud.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sad.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sad2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/shocked.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sick.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sick2.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/slaap.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sleep.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/smile.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/smiley_peur.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sors.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/sovxx.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/spamafote.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/tap67.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/thumbdown.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/thumbup.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/tigi.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/toad666.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/tongue.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/tuffgong.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/urgeman.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/vanadium.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/wink.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/worship.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/wouaf.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/wow.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/xp1700.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/yltype.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/yopyopyop.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/youpi.gif
-${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun/zoor.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/angel_smile.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/angry_smile.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/broken_heart.gif
@@ -968,10 +1133,11 @@ ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/tounge_smile.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/whatchutalkingabout_smile.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn/wink_smile.gif
 ${GEEKLOG_PUB}/fckeditor/editor/images/spacer.gif
+${GEEKLOG_PUB}/fckeditor/editor/js/fckadobeair.js
 ${GEEKLOG_PUB}/fckeditor/editor/js/fckeditorcode_gecko.js
 ${GEEKLOG_PUB}/fckeditor/editor/js/fckeditorcode_ie.js
-${GEEKLOG_PUB}/fckeditor/editor/lang/_getfontformat.html
 ${GEEKLOG_PUB}/fckeditor/editor/lang/_translationstatus.txt
+${GEEKLOG_PUB}/fckeditor/editor/lang/af.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/ar.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/bg.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/bn.js
@@ -992,6 +1158,7 @@ ${GEEKLOG_PUB}/fckeditor/editor/lang/eu.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/fa.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/fi.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/fo.js
+${GEEKLOG_PUB}/fckeditor/editor/lang/fr-ca.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/fr.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/gl.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/he.js
@@ -1006,6 +1173,7 @@ ${GEEKLOG_PUB}/fckeditor/editor/lang/lt.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/lv.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/mn.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/ms.js
+${GEEKLOG_PUB}/fckeditor/editor/lang/nb.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/nl.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/no.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/pl.js
@@ -1025,10 +1193,15 @@ ${GEEKLOG_PUB}/fckeditor/editor/lang/vi.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/zh-cn.js
 ${GEEKLOG_PUB}/fckeditor/editor/lang/zh.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/autogrow/fckplugin.js
+${GEEKLOG_PUB}/fckeditor/editor/plugins/bbcode/_sample/sample.config.js
+${GEEKLOG_PUB}/fckeditor/editor/plugins/bbcode/_sample/sample.html
+${GEEKLOG_PUB}/fckeditor/editor/plugins/bbcode/fckplugin.js
+${GEEKLOG_PUB}/fckeditor/editor/plugins/dragresizetable/fckplugin.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/fck_placeholder.html
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/fckplugin.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/de.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/en.js
+${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/es.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/fr.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/it.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang/pl.js
@@ -1037,8 +1210,14 @@ ${GEEKLOG_PUB}/fckeditor/editor/plugins/simplecommands/fckplugin.js
 ${GEEKLOG_PUB}/fckeditor/editor/plugins/tablecommands/fckplugin.js
 ${GEEKLOG_PUB}/fckeditor/editor/skins/_fckviewstrips.html
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/fck_dialog.css
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/fck_dialog_ie6.js
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/fck_editor.css
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/fck_strip.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/dialog.sides.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/dialog.sides.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/dialog.sides.rtl.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/sprites.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/sprites.png
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.arrowright.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.buttonarrow.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.collapse.gif
@@ -1047,8 +1226,14 @@ ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.expand.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.separator.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/default/images/toolbar.start.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/fck_dialog.css
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/fck_dialog_ie6.js
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/fck_editor.css
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/fck_strip.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/dialog.sides.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/dialog.sides.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/dialog.sides.rtl.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/sprites.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/sprites.png
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.arrowright.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.bg.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.buttonarrow.gif
@@ -1058,8 +1243,14 @@ ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.expand.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.separator.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/office2003/images/toolbar.start.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/fck_dialog.css
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/fck_dialog_ie6.js
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/fck_editor.css
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/fck_strip.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/dialog.sides.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/dialog.sides.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/dialog.sides.rtl.png
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/sprites.gif
+${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/sprites.png
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/toolbar.arrowright.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/toolbar.buttonarrow.gif
 ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/toolbar.buttonbg.gif
@@ -1071,9 +1262,11 @@ ${GEEKLOG_PUB}/fckeditor/editor/skins/silver/images/toolbar.start.gif
 ${GEEKLOG_PUB}/fckeditor/fckconfig.js
 ${GEEKLOG_PUB}/fckeditor/fckeditor.js
 ${GEEKLOG_PUB}/fckeditor/fckeditor.php
+${GEEKLOG_PUB}/fckeditor/fckeditor_php4.php
+${GEEKLOG_PUB}/fckeditor/fckeditor_php5.php
+${GEEKLOG_PUB}/fckeditor/fckpackager.xml
 ${GEEKLOG_PUB}/fckeditor/fckstyles.xml
 ${GEEKLOG_PUB}/fckeditor/fcktemplates.xml
-${GEEKLOG_PUB}/fckeditor/htaccess.txt
 ${GEEKLOG_PUB}/fckeditor/license.txt
 ${GEEKLOG_PUB}/fckeditor/myconfig.js
 ${GEEKLOG_PUB}/getimage.php
@@ -1118,12 +1311,15 @@ ${GEEKLOG_PUB}/images/icons/themes.gif
 ${GEEKLOG_PUB}/images/icons/topic.gif
 ${GEEKLOG_PUB}/images/icons/user.gif
 ${GEEKLOG_PUB}/images/mail.gif
+${GEEKLOG_PUB}/images/openid_login_icon.png
 ${GEEKLOG_PUB}/images/print.gif
+${GEEKLOG_PUB}/images/right_arrow.png
 ${GEEKLOG_PUB}/images/speck.gif
 ${GEEKLOG_PUB}/images/sysmessage.gif
 ${GEEKLOG_PUB}/index.php
 ${GEEKLOG_PUB}/javascript/advanced_editor.js
 ${GEEKLOG_PUB}/javascript/common.js
+${GEEKLOG_PUB}/javascript/configmanager.js
 ${GEEKLOG_PUB}/javascript/moveusers.js
 ${GEEKLOG_PUB}/javascript/profile_editor.js
 ${GEEKLOG_PUB}/javascript/staticpages_fckeditor.js
@@ -1135,17 +1331,22 @@ ${GEEKLOG_PUB}/layout/professional/admin/block/blockeditor.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/block/defaultblockeditor.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/block/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/common/edit_permissions.thtml
+${GEEKLOG_PUB}/layout/professional/admin/common/index.html
+${GEEKLOG_PUB}/layout/professional/admin/config/config_element.thtml
+${GEEKLOG_PUB}/layout/professional/admin/config/configuration.thtml
+${GEEKLOG_PUB}/layout/professional/admin/config/index.html
+${GEEKLOG_PUB}/layout/professional/admin/config/menu_element.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/group/groupeditor.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/group/groupmembers.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/group/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/lists/field.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/lists/header.thtml
+${GEEKLOG_PUB}/layout/professional/admin/lists/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/lists/list.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/lists/listitem.thtml
-${GEEKLOG_PUB}/layout/professional/admin/lists/menufields.thtml
+${GEEKLOG_PUB}/layout/professional/admin/lists/searchmenu.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/lists/topmenu.thtml
-${GEEKLOG_PUB}/layout/professional/admin/lists/topmenu_nosearch.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/mail/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/mail/mailform.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/moderation/ccitem.thtml
@@ -1154,8 +1355,6 @@ ${GEEKLOG_PUB}/layout/professional/admin/moderation/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/moderation/moderation.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/plugins/editor.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/plugins/index.html
-${GEEKLOG_PUB}/layout/professional/admin/plugins/newlistitem.thtml
-${GEEKLOG_PUB}/layout/professional/admin/plugins/newpluginlist.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/story/index.html
 ${GEEKLOG_PUB}/layout/professional/admin/story/storyeditor.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/story/storyeditor_advanced.thtml
@@ -1182,6 +1381,7 @@ ${GEEKLOG_PUB}/layout/professional/admin/user/batchdelete_options.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/user/edituser.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/user/groupedit.thtml
 ${GEEKLOG_PUB}/layout/professional/admin/user/index.html
+${GEEKLOG_PUB}/layout/professional/admin/user/reminder.thtml
 ${GEEKLOG_PUB}/layout/professional/adminoption.thtml
 ${GEEKLOG_PUB}/layout/professional/adminoption_off.thtml
 ${GEEKLOG_PUB}/layout/professional/advanced_editor_header.thtml
@@ -1190,12 +1390,16 @@ ${GEEKLOG_PUB}/layout/professional/archivestorytext.thtml
 ${GEEKLOG_PUB}/layout/professional/article/article.thtml
 ${GEEKLOG_PUB}/layout/professional/article/index.html
 ${GEEKLOG_PUB}/layout/professional/article/printable.thtml
+${GEEKLOG_PUB}/layout/professional/blockfooter-config.thtml
 ${GEEKLOG_PUB}/layout/professional/blockfooter-left.thtml
+${GEEKLOG_PUB}/layout/professional/blockfooter-list.thtml
 ${GEEKLOG_PUB}/layout/professional/blockfooter-message.thtml
 ${GEEKLOG_PUB}/layout/professional/blockfooter-related.thtml
 ${GEEKLOG_PUB}/layout/professional/blockfooter-right.thtml
 ${GEEKLOG_PUB}/layout/professional/blockfooter.thtml
+${GEEKLOG_PUB}/layout/professional/blockheader-config.thtml
 ${GEEKLOG_PUB}/layout/professional/blockheader-left.thtml
+${GEEKLOG_PUB}/layout/professional/blockheader-list.thtml
 ${GEEKLOG_PUB}/layout/professional/blockheader-message.thtml
 ${GEEKLOG_PUB}/layout/professional/blockheader-related.thtml
 ${GEEKLOG_PUB}/layout/professional/blockheader-right.thtml
@@ -1214,6 +1418,7 @@ ${GEEKLOG_PUB}/layout/professional/featuredstorytext.thtml
 ${GEEKLOG_PUB}/layout/professional/footer.thtml
 ${GEEKLOG_PUB}/layout/professional/functions.php
 ${GEEKLOG_PUB}/layout/professional/header.thtml
+${GEEKLOG_PUB}/layout/professional/images/addchild.png
 ${GEEKLOG_PUB}/layout/professional/images/admin/block-left.png
 ${GEEKLOG_PUB}/layout/professional/images/admin/block-right.png
 ${GEEKLOG_PUB}/layout/professional/images/admin/index.html
@@ -1226,9 +1431,12 @@ ${GEEKLOG_PUB}/layout/professional/images/copy.png
 ${GEEKLOG_PUB}/layout/professional/images/deleteitem.png
 ${GEEKLOG_PUB}/layout/professional/images/edit.png
 ${GEEKLOG_PUB}/layout/professional/images/expand.png
+${GEEKLOG_PUB}/layout/professional/images/external.png
+${GEEKLOG_PUB}/layout/professional/images/feed.png
 ${GEEKLOG_PUB}/layout/professional/images/header-bg.png
 ${GEEKLOG_PUB}/layout/professional/images/icon_info.png
 ${GEEKLOG_PUB}/layout/professional/images/icons/block.png
+${GEEKLOG_PUB}/layout/professional/images/icons/configuration.png
 ${GEEKLOG_PUB}/layout/professional/images/icons/database.png
 ${GEEKLOG_PUB}/layout/professional/images/icons/delete_event.png
 ${GEEKLOG_PUB}/layout/professional/images/icons/docs.png
@@ -1258,6 +1466,7 @@ ${GEEKLOG_PUB}/layout/professional/leftblocks.thtml
 ${GEEKLOG_PUB}/layout/professional/list.thtml
 ${GEEKLOG_PUB}/layout/professional/listitem.thtml
 ${GEEKLOG_PUB}/layout/professional/loginform.thtml
+${GEEKLOG_PUB}/layout/professional/loginform_openid.thtml
 ${GEEKLOG_PUB}/layout/professional/menuitem.thtml
 ${GEEKLOG_PUB}/layout/professional/menuitem_last.thtml
 ${GEEKLOG_PUB}/layout/professional/menuitem_none.thtml
@@ -1265,10 +1474,12 @@ ${GEEKLOG_PUB}/layout/professional/navbar/breadcrumb_link.thtml
 ${GEEKLOG_PUB}/layout/professional/navbar/breadcrumbs.thtml
 ${GEEKLOG_PUB}/layout/professional/navbar/images/button.gif
 ${GEEKLOG_PUB}/layout/professional/navbar/images/button_over.gif
+${GEEKLOG_PUB}/layout/professional/navbar/images/index.html
 ${GEEKLOG_PUB}/layout/professional/navbar/images/tableftI.gif
 ${GEEKLOG_PUB}/layout/professional/navbar/images/tableftJ.gif
 ${GEEKLOG_PUB}/layout/professional/navbar/images/tabrightI.gif
 ${GEEKLOG_PUB}/layout/professional/navbar/images/tabrightJ.gif
+${GEEKLOG_PUB}/layout/professional/navbar/index.html
 ${GEEKLOG_PUB}/layout/professional/navbar/menuitem.thtml
 ${GEEKLOG_PUB}/layout/professional/navbar/navbar.thtml
 ${GEEKLOG_PUB}/layout/professional/preferences/boxesblock.thtml
@@ -1341,6 +1552,8 @@ ${GEEKLOG_PUB}/links/portal.php
 ${GEEKLOG_PUB}/pingback.php
 ${GEEKLOG_PUB}/polls/images/polls.png
 ${GEEKLOG_PUB}/polls/index.php
+${GEEKLOG_PUB}/polls/polls_editor.js
+${GEEKLOG_PUB}/polls/style.css
 ${GEEKLOG_PUB}/profiles.php
 ${GEEKLOG_PUB}/robots.txt
 ${GEEKLOG_PUB}/search.php
@@ -1352,24 +1565,16 @@ ${GEEKLOG_PUB}/switchlang.php
 ${GEEKLOG_PUB}/trackback.php
 ${GEEKLOG_PUB}/users.php
 ${GEEKLOG_PUB}/usersettings.php
-share/doc/geeklog/README
-share/examples/geeklog/config.php
-share/examples/geeklog/geeklog.conf
-share/examples/geeklog/plugins/calendar/config.php
-share/examples/geeklog/plugins/links/config.php
-share/examples/geeklog/plugins/polls/config.php
-share/examples/geeklog/plugins/spamx/config.php
-share/examples/geeklog/plugins/staticpages/config.php
-share/examples/geeklog/system/lib-custom.php
-@dirrm share/doc/geeklog
-@dirrm share/examples/geeklog/system
-@dirrm share/examples/geeklog/plugins/staticpages
-@dirrm share/examples/geeklog/plugins/spamx
-@dirrm share/examples/geeklog/plugins/polls
-@dirrm share/examples/geeklog/plugins/links
-@dirrm share/examples/geeklog/plugins/calendar
-@dirrm share/examples/geeklog/plugins
-@dirrm share/examples/geeklog
+${GEEKLOG_PUB}/webservices/atom/index.php
+${GL_DOC}/README
+${GL_EG}/db-config.php
+${GL_EG}/geeklog.conf
+${GL_EG}/lib-custom.php
+${GL_EG}/siteconfig.php
+@dirrm ${GL_DOC}
+@dirrm ${GL_EG}
+@dirrm ${GEEKLOG_PUB}/webservices/atom
+@dirrm ${GEEKLOG_PUB}/webservices
 @dirrm ${GEEKLOG_PUB}/staticpages/images
 @dirrm ${GEEKLOG_PUB}/staticpages
 @dirrm ${GEEKLOG_PUB}/polls/images
@@ -1400,6 +1605,7 @@ share/examples/geeklog/system/lib-custom.php
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin/mail
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin/lists
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin/group
+@dirrm ${GEEKLOG_PUB}/layout/professional/admin/config
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin/common
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin/block
 @dirrm ${GEEKLOG_PUB}/layout/professional/admin
@@ -1422,26 +1628,26 @@ share/examples/geeklog/system/lib-custom.php
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/simplecommands
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder/lang
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/placeholder
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/dragresizetable
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/bbcode/_sample
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/bbcode
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins/autogrow
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/plugins
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/lang
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/js
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/msn
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/images/smiley/fun
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/images/smiley
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/images
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload/php
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/upload
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors/php
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/connectors
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/js
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons/32
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images/icons
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/images
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors/php
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default/connectors
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser/default
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager/browser
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/filemanager
-@dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_universalkey
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/dtd
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_template/images
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_template
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_spellerpages/spellerpages/server-scripts
@@ -1452,6 +1658,7 @@ share/examples/geeklog/system/lib-custom.php
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_image
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_flash
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_docprops
+@dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about/sponsors
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/fck_about
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/common/images
 @dirrm ${GEEKLOG_PUB}/fckeditor/editor/dialog/common
@@ -1469,34 +1676,40 @@ share/examples/geeklog/system/lib-custom.php
 @dirrm ${GEEKLOG_PUB}/docs
 @dirrm ${GEEKLOG_PUB}/calendar/images
 @dirrm ${GEEKLOG_PUB}/calendar
-@dirrm ${GEEKLOG_TMPL}/backend
-@dirrm ${GEEKLOG_TMPL}/images/articles
-@dirrm ${GEEKLOG_TMPL}/images/library/File
-@dirrm ${GEEKLOG_TMPL}/images/library/Flash
-@dirrm ${GEEKLOG_TMPL}/images/library/Image/icons
-@dirrm ${GEEKLOG_TMPL}/images/library/Image
-@dirrm ${GEEKLOG_TMPL}/images/library/Media
-@dirrm ${GEEKLOG_TMPL}/images/library
-@dirrm ${GEEKLOG_TMPL}/images/topics
-@dirrm ${GEEKLOG_TMPL}/images/userphotos
-@dirrm ${GEEKLOG_TMPL}/images
-@dirrm ${GEEKLOG_TMPL}
-@dirrm ${GEEKLOG_ADMIN}/plugins/staticpages
-@dirrm ${GEEKLOG_ADMIN}/plugins/spamx/images
-@dirrm ${GEEKLOG_ADMIN}/plugins/spamx
-@dirrm ${GEEKLOG_ADMIN}/plugins/polls
-@dirrm ${GEEKLOG_ADMIN}/plugins/links
-@dirrm ${GEEKLOG_ADMIN}/plugins/calendar
-@dirrm ${GEEKLOG_ADMIN}/plugins
-@dirrm ${GEEKLOG_ADMIN}/install
-@dirrm ${GEEKLOG_ADMIN}
+@dirrm ${GL_TMPL}/backend
+@dirrm ${GL_TMPL}/images/userphotos
+@dirrm ${GL_TMPL}/images/topics
+@dirrm ${GL_TMPL}/images/library/Media
+@dirrm ${GL_TMPL}/images/library/Image/icons
+@dirrm ${GL_TMPL}/images/library/Image
+@dirrm ${GL_TMPL}/images/library/Flash
+@dirrm ${GL_TMPL}/images/library/File
+@dirrm ${GL_TMPL}/images/library
+@dirrm ${GL_TMPL}/images/articles
+@dirrm ${GL_TMPL}/images
+@dirrm ${GL_TMPL}
+@dirrm ${GL_ADMIN}/plugins/staticpages
+@dirrm ${GL_ADMIN}/plugins/spamx/images
+@dirrm ${GL_ADMIN}/plugins/spamx
+@dirrm ${GL_ADMIN}/plugins/polls
+@dirrm ${GL_ADMIN}/plugins/links
+@dirrm ${GL_ADMIN}/plugins/calendar
+@dirrm ${GL_ADMIN}/plugins
+@dirrm ${GL_ADMIN}/install/layout
+@dirrm ${GL_ADMIN}/install/language
+@dirrm ${GL_ADMIN}/install
+@dirrm ${GL_ADMIN}
 @dirrm ${GEEKLOG_BASE}/system/pear/scripts
 @dirrm ${GEEKLOG_BASE}/system/pear/XML/RPC
 @dirrm ${GEEKLOG_BASE}/system/pear/XML
-@dirrm ${GEEKLOG_BASE}/system/pear/PHP/Compat/Function
-@dirrm ${GEEKLOG_BASE}/system/pear/PHP/Compat/Constant
-@dirrm ${GEEKLOG_BASE}/system/pear/PHP/Compat
-@dirrm ${GEEKLOG_BASE}/system/pear/PHP
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Xhtml
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Plain
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Render/Latex
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Render
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse/Default
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki/Parse
+@dirrm ${GEEKLOG_BASE}/system/pear/Text/Wiki
+@dirrm ${GEEKLOG_BASE}/system/pear/Text
 @dirrm ${GEEKLOG_BASE}/system/pear/PEAR/Validator
 @dirrm ${GEEKLOG_BASE}/system/pear/PEAR/Task/Windowseol
 @dirrm ${GEEKLOG_BASE}/system/pear/PEAR/Task/Unixeol
@@ -1516,16 +1729,20 @@ share/examples/geeklog/system/lib-custom.php
 @dirrm ${GEEKLOG_BASE}/system/pear/PEAR/ChannelFile
 @dirrm ${GEEKLOG_BASE}/system/pear/PEAR
 @dirrm ${GEEKLOG_BASE}/system/pear/OS
+@dirrm ${GEEKLOG_BASE}/system/pear/Net/DNS/RR
+@dirrm ${GEEKLOG_BASE}/system/pear/Net/DNS
 @dirrm ${GEEKLOG_BASE}/system/pear/Net
 @dirrm ${GEEKLOG_BASE}/system/pear/Mail
 @dirrm ${GEEKLOG_BASE}/system/pear/HTTP/Request
 @dirrm ${GEEKLOG_BASE}/system/pear/HTTP
+@dirrm ${GEEKLOG_BASE}/system/pear/Date
 @dirrm ${GEEKLOG_BASE}/system/pear/Console
 @dirrm ${GEEKLOG_BASE}/system/pear/Archive
 @dirrm ${GEEKLOG_BASE}/system/pear
-@dirrm ${GEEKLOG_BASE}/system/install_templates
 @dirrm ${GEEKLOG_BASE}/system/databases
 @dirrm ${GEEKLOG_BASE}/system/classes/syndication
+@dirrm ${GEEKLOG_BASE}/system/classes/openid
+@dirrm ${GEEKLOG_BASE}/system/classes/authentication/ldap
 @dirrm ${GEEKLOG_BASE}/system/classes/authentication
 @dirrm ${GEEKLOG_BASE}/system/classes
 @dirrm ${GEEKLOG_BASE}/system
