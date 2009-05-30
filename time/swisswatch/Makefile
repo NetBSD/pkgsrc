@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/05/30 01:35:45 zafer Exp $
 
 DISTNAME=	swisswatch-0.06
 PKGREVISION=	2
 CATEGORIES=	x11 time
-MASTER_SITES=	ftp://ftp.iij.ad.jp/pub/X/R5contrib/
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	sanpei@yy.cs.keio.ac.jp
