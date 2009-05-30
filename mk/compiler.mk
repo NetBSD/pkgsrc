@@ -1,4 +1,4 @@
-# $NetBSD: compiler.mk,v 1.68 2008/10/20 20:44:49 wiz Exp $
+# $NetBSD: compiler.mk,v 1.69 2009/05/30 18:16:26 joerg Exp $
 #
 # This Makefile fragment implements handling for supported C/C++/Fortran
 # compilers.
@@ -36,6 +36,12 @@
 #	Force using the appropriate version of GCC from pkgsrc based on
 #	GCC_REQD instead of the native compiler.
 #
+#	This should be disabled only for debugging.
+#
+# COMPILER_USE_SYMLINKS
+#	If set to yes, use symlinks for the compiler drivers, otherwise
+#	shell scripts are created.  The default is yes.
+#
 # The following variables may be set by a package:
 #
 # GCC_REQD
@@ -72,7 +78,7 @@
 BSD_COMPILER_MK=	defined
 
 _VARGROUPS+=		compiler
-_USER_VARS.compiler=	PKGSRC_COMPILER USE_PKGSRC_GCC ABI
+_USER_VARS.compiler=	PKGSRC_COMPILER USE_PKGSRC_GCC ABI COMPILER_USE_SYMLINKS
 _PKG_VARS.compiler=	USE_LANGUAGES GCC_REQD NOT_FOR_COMPILER ONLY_FOR_COMPILER
 _SYS_VARS.compiler=	CC_VERSION
 
@@ -85,6 +91,8 @@ USE_LANGUAGES?=	c
 .if !empty(USE_LANGUAGES:Mc99)
 USE_LANGUAGES+=	c
 .endif
+
+COMPILER_USE_SYMLINKS?=	yes
 
 # For environments where there is an external gcc too, but pkgsrc
 # should use the pkgsrc one for consistency.

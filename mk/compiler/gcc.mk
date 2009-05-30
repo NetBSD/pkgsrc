@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.96 2009/03/17 21:28:10 rillig Exp $
+# $NetBSD: gcc.mk,v 1.97 2009/05/30 18:16:26 joerg Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -39,7 +39,6 @@ _SYS_VARS.gcc=	CC_VERSION CC_VERSION_STRING LANGUAGES.gcc
 _DEF_VARS.gcc=	\
 	CCPATH CPPPATH CXXPATH \
 	F77PATH FCPATH \
-	GCC_USE_SYMLINKS \
 	IMAKEOPTS \
 	LDFLAGS \
 	PKG_CC PKG_CPP PKG_CXX PKG_FC \
@@ -481,14 +480,12 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .  endfor
 .endif
 
-# Create compiler driver scripts in ${WRKDIR}.
-GCC_USE_SYMLINKS?=	no
 .for _var_ in ${_GCC_VARS}
 .  if !target(${_GCC_${_var_}})
 override-tools: ${_GCC_${_var_}}
 ${_GCC_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
-.    if !empty(GCC_USE_SYMLINKS:Myes)
+.    if !empty(COMPILER_USE_SYMLINKS:M[Yy][Ee][Ss])
 	${RUN}${RM} -f ${.TARGET}
 	${RUN}${LN} -s ${_GCCBINDIR}/${.TARGET:T} ${.TARGET}
 .    else
