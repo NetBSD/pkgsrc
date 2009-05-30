@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/01 12:09:44 obache Exp $
+# $NetBSD: Makefile,v 1.2 2009/05/30 01:00:11 zafer Exp $
 #
 
 DISTNAME=	calendar-2.0.4
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	time devel
-MASTER_SITES=	http://www.lri.fr/~signoles/prog/calendar/
+MASTER_SITES=	# http://www.lri.fr/~signoles/prog/calendar/
 
 MAINTAINER=	jaapb@kerguelen.org
 HOMEPAGE=	http://www.lri.fr/~signoles/prog.en.html/
