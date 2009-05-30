@@ -1,30 +1,38 @@
-# $NetBSD: Makefile,v 1.29 2009/01/28 12:47:35 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2009/05/30 01:25:19 obache Exp $
 #
 
-DISTNAME=		gmpc-0.17.0
-PKGREVISION=		1
+DISTNAME=		gmpc-0.18.0
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=musicpd/}
+MASTER_SITES=		http://download.sarine.nl/Programs/gmpc/0.18.0/ \
+			${MASTER_SITE_SOURCEFORGE:=musicpd/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://sarine.nl/gmpc
+HOMEPAGE=		http://gmpc.wikia.com/wiki/Gnome_Music_Player_Client
 COMMENT=		GNOME client for the Music Player Daemon
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool msgfmt pkg-config gmake
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 USE_DIRS+=		xdg-1.1
 
+.include "options.mk"
+
+CONFIGURE_ARGS+=	--enable-system-libsexy
+CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl}
+
+BUILDLINK_API_DEPENDS.libmpd+=	libmpd>=0.17.1
 .include "../../audio/libmpd/buildlink3.mk"
 .include "../../devel/gob2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
+.include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

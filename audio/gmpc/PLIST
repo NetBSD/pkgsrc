@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/20 22:46:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/05/30 01:25:19 obache Exp $
 bin/gmpc
 bin/gmpc-remote
 bin/gmpc-remote-stream
@@ -6,7 +6,7 @@ include/gmpc/TreeSearchWidget.h
 include/gmpc/config1.h
 include/gmpc/gmpc-clicklabel.h
 include/gmpc/gmpc-connection.h
-include/gmpc/gmpc-idle.h
+include/gmpc/gmpc-easy-command.h
 include/gmpc/gmpc-meta-watcher.h
 include/gmpc/gmpc-metaimage.h
 include/gmpc/gmpc-mpddata-model-sort.h
@@ -14,6 +14,7 @@ include/gmpc/gmpc-mpddata-model.h
 include/gmpc/gmpc-mpddata-treeview.h
 include/gmpc/gmpc-profiles.h
 include/gmpc/gmpc-signals.h
+include/gmpc/gmpc-version.h
 include/gmpc/gmpc_easy_download.h
 include/gmpc/metadata.h
 include/gmpc/misc.h
@@ -23,10 +24,17 @@ lib/pkgconfig/gmpc.pc
 man/man1/gmpc-remote.1
 man/man1/gmpc.1
 share/applications/gmpc.desktop
-share/gmpc/gmpc.glade
-share/gmpc/icons/gmpc-add-url.png
+share/gmpc/aboutdialog.ui
+share/gmpc/gmpc-gtk-win32.rc
 share/gmpc/icons/gmpc-loading-cover.png
 share/gmpc/icons/gmpc-no-cover.png
+share/gmpc/icons/hicolor/128x128/categories/mpd.png
+share/gmpc/icons/hicolor/128x128/status/fetching-artist.png
+share/gmpc/icons/hicolor/128x128/status/frame-artist.png
+share/gmpc/icons/hicolor/128x128/status/no-artist.png
+share/gmpc/icons/hicolor/128x128/status/stylized-cover.png
+share/gmpc/icons/hicolor/128x128/status/stylized-fetching-cover.png
+share/gmpc/icons/hicolor/128x128/status/stylized-no-cover.png
 share/gmpc/icons/hicolor/16x16/actions/media-playlist.png
 share/gmpc/icons/hicolor/16x16/actions/media-tag.png
 share/gmpc/icons/hicolor/16x16/actions/playlist-browser.png
@@ -37,6 +45,7 @@ share/gmpc/icons/hicolor/16x16/status/audio-volume-high.png
 share/gmpc/icons/hicolor/16x16/status/audio-volume-low.png
 share/gmpc/icons/hicolor/16x16/status/audio-volume-medium.png
 share/gmpc/icons/hicolor/16x16/status/audio-volume-muted.png
+share/gmpc/icons/hicolor/16x16/status/emblem-favorite.png
 share/gmpc/icons/hicolor/16x16/status/gmpc-tray-disconnected.png
 share/gmpc/icons/hicolor/16x16/status/gmpc-tray-pause.png
 share/gmpc/icons/hicolor/16x16/status/gmpc-tray-play.png
@@ -47,10 +56,12 @@ share/gmpc/icons/hicolor/22x22/status/audio-volume-high.png
 share/gmpc/icons/hicolor/22x22/status/audio-volume-low.png
 share/gmpc/icons/hicolor/22x22/status/audio-volume-medium.png
 share/gmpc/icons/hicolor/22x22/status/audio-volume-muted.png
+share/gmpc/icons/hicolor/22x22/status/emblem-favorite.png
 share/gmpc/icons/hicolor/22x22/status/gmpc-tray-disconnected.png
 share/gmpc/icons/hicolor/22x22/status/gmpc-tray-pause.png
 share/gmpc/icons/hicolor/22x22/status/gmpc-tray-play.png
 share/gmpc/icons/hicolor/22x22/status/gmpc-tray.png
+share/gmpc/icons/hicolor/32x32/actions/add-url.png
 share/gmpc/icons/hicolor/32x32/actions/media-playlist.png
 share/gmpc/icons/hicolor/32x32/actions/media-tag.png
 share/gmpc/icons/hicolor/32x32/actions/playlist-browser.png
@@ -61,59 +72,132 @@ share/gmpc/icons/hicolor/32x32/status/audio-volume-high.png
 share/gmpc/icons/hicolor/32x32/status/audio-volume-low.png
 share/gmpc/icons/hicolor/32x32/status/audio-volume-medium.png
 share/gmpc/icons/hicolor/32x32/status/audio-volume-muted.png
+share/gmpc/icons/hicolor/32x32/status/emblem-favorite.png
+share/gmpc/icons/hicolor/32x32/status/gmpc-tray.png
 share/gmpc/icons/hicolor/48x48/actions/media-playlist.png
 share/gmpc/icons/hicolor/48x48/actions/media-tag.png
 share/gmpc/icons/hicolor/48x48/actions/tag-browser.png
 share/gmpc/icons/hicolor/48x48/apps/gmpc.png
+share/gmpc/icons/hicolor/48x48/status/fetching-artist.png
+share/gmpc/icons/hicolor/48x48/status/frame-artist.png
+share/gmpc/icons/hicolor/48x48/status/gmpc-tray.png
+share/gmpc/icons/hicolor/48x48/status/no-artist.png
+share/gmpc/icons/hicolor/48x48/status/stylized-cover.png
+share/gmpc/icons/hicolor/64x64/status/fetching-artist.png
+share/gmpc/icons/hicolor/64x64/status/frame-artist.png
+share/gmpc/icons/hicolor/64x64/status/no-artist.png
+share/gmpc/icons/hicolor/64x64/status/stylized-cover.png
+share/gmpc/icons/hicolor/64x64/status/stylized-fetching-cover.png
+share/gmpc/icons/hicolor/64x64/status/stylized-no-cover.png
+share/gmpc/icons/hicolor/72x72/status/fetching-artist.png
+share/gmpc/icons/hicolor/72x72/status/frame-artist.png
+share/gmpc/icons/hicolor/72x72/status/no-artist.png
+share/gmpc/icons/hicolor/72x72/status/stylized-cover.png
+share/gmpc/icons/hicolor/72x72/status/stylized-fetching-cover.png
+share/gmpc/icons/hicolor/72x72/status/stylized-no-cover.png
+share/gmpc/icons/hicolor/96x96/status/fetching-artist.png
+share/gmpc/icons/hicolor/96x96/status/frame-artist.png
+share/gmpc/icons/hicolor/96x96/status/no-artist.png
+share/gmpc/icons/hicolor/96x96/status/stylized-fetching-cover.png
+share/gmpc/icons/hicolor/96x96/status/stylized-no-cover.png
 share/gmpc/icons/hicolor/scalable/apps/gmpc.svg
+share/gmpc/icons/hicolor/scalable/categories/mpd.svg
 share/gmpc/icons/hicolor/scalable/status/audio-volume-high.svg
 share/gmpc/icons/hicolor/scalable/status/audio-volume-low.svg
 share/gmpc/icons/hicolor/scalable/status/audio-volume-medium.svg
 share/gmpc/icons/hicolor/scalable/status/audio-volume-muted.svg
+share/gmpc/icons/hicolor/scalable/status/emblem-favorite.svg
+share/gmpc/icons/hicolor/scalable/status/fetching-artist.svg
+share/gmpc/icons/hicolor/scalable/status/frame-artist.svg
 share/gmpc/icons/hicolor/scalable/status/gmpc-tray-disconnected.svg
 share/gmpc/icons/hicolor/scalable/status/gmpc-tray-pause.svg
 share/gmpc/icons/hicolor/scalable/status/gmpc-tray-play.svg
 share/gmpc/icons/hicolor/scalable/status/gmpc-tray.svg
+share/gmpc/icons/hicolor/scalable/status/no-artist.svg
+share/gmpc/icons/hicolor/scalable/status/stylized-cover.svg
+share/gmpc/icons/hicolor/scalable/status/stylized-fetching-cover.svg
+share/gmpc/icons/hicolor/scalable/status/stylized-no-cover.svg
 share/gmpc/icons/media-album.png
 share/gmpc/icons/media-artist.png
 share/gmpc/icons/media-audiofile.png
-share/gmpc/icons/media-playback-start.png
 share/gmpc/icons/media-stream.png
 share/gmpc/icons/mpdBrowser_case.png
+share/gmpc/password-dialog.ui
+share/gmpc/playlist-message-window.ui
+share/gmpc/playlist-save-dialog.ui
 share/gmpc/playlist3.glade
+share/gmpc/preferences-connection.ui
+share/gmpc/preferences-esf-dialog.ui
+share/gmpc/preferences-mmkeys.ui
+share/gmpc/preferences-playlist.ui
+share/gmpc/preferences-plugins.ui
+share/gmpc/preferences-proxy.ui
+share/gmpc/preferences-server.ui
+share/gmpc/preferences-trayicon.ui
+share/gmpc/preferences.ui
+share/gmpc/weblinks.list
 share/icons/hicolor/16x16/apps/gmpc.png
 share/icons/hicolor/22x22/apps/gmpc.png
 share/icons/hicolor/32x32/apps/gmpc.png
 share/icons/hicolor/48x48/apps/gmpc.png
 share/icons/hicolor/scalable/apps/gmpc.svg
 share/locale/bg/LC_MESSAGES/gmpc.mo
+share/locale/bn/LC_MESSAGES/gmpc.mo
+share/locale/bs/LC_MESSAGES/gmpc.mo
 share/locale/cs/LC_MESSAGES/gmpc.mo
 share/locale/de/LC_MESSAGES/gmpc.mo
 share/locale/es/LC_MESSAGES/gmpc.mo
+share/locale/fi/LC_MESSAGES/gmpc.mo
 share/locale/fr/LC_MESSAGES/gmpc.mo
 share/locale/gl/LC_MESSAGES/gmpc.mo
 share/locale/he/LC_MESSAGES/gmpc.mo
+share/locale/hi/LC_MESSAGES/gmpc.mo
 share/locale/hu/LC_MESSAGES/gmpc.mo
+share/locale/id/LC_MESSAGES/gmpc.mo
 share/locale/it/LC_MESSAGES/gmpc.mo
+share/locale/jv/LC_MESSAGES/gmpc.mo
+share/locale/lv/LC_MESSAGES/gmpc.mo
+share/locale/ms/LC_MESSAGES/gmpc.mo
 share/locale/nb/LC_MESSAGES/gmpc.mo
+share/locale/ne/LC_MESSAGES/gmpc.mo
 share/locale/nl/LC_MESSAGES/gmpc.mo
 share/locale/pl/LC_MESSAGES/gmpc.mo
+share/locale/pt/LC_MESSAGES/gmpc.mo
+share/locale/pt_BR/LC_MESSAGES/gmpc.mo
 share/locale/ro/LC_MESSAGES/gmpc.mo
 share/locale/ru/LC_MESSAGES/gmpc.mo
+share/locale/sq/LC_MESSAGES/gmpc.mo
 share/locale/sv/LC_MESSAGES/gmpc.mo
 share/locale/tr/LC_MESSAGES/gmpc.mo
 share/locale/zh_CN/LC_MESSAGES/gmpc.mo
+share/locale/zh_TW/LC_MESSAGES/gmpc.mo
+@dirrm share/locale/jv/LC_MESSAGES
+@dirrm share/locale/jv
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gmpc/icons/hicolor/scalable/status
+@dirrm share/gmpc/icons/hicolor/scalable/categories
 @dirrm share/gmpc/icons/hicolor/scalable/apps
 @exec ${MKDIR} %D/share/gmpc/icons/hicolor/scalable/actions
 @dirrm share/gmpc/icons/hicolor/scalable/actions
 @dirrm share/gmpc/icons/hicolor/scalable
+@dirrm share/gmpc/icons/hicolor/96x96/status
+@dirrm share/gmpc/icons/hicolor/96x96
+@dirrm share/gmpc/icons/hicolor/72x72/status
+@dirrm share/gmpc/icons/hicolor/72x72
+@dirrm share/gmpc/icons/hicolor/64x64/status
+@dirrm share/gmpc/icons/hicolor/64x64
+@dirrm share/gmpc/icons/hicolor/48x48/status
 @dirrm share/gmpc/icons/hicolor/48x48/apps
 @dirrm share/gmpc/icons/hicolor/48x48/actions
 @dirrm share/gmpc/icons/hicolor/48x48
@@ -129,6 +213,9 @@ share/locale/zh_CN/LC_MESSAGES/gmpc.mo
 @dirrm share/gmpc/icons/hicolor/16x16/apps
 @dirrm share/gmpc/icons/hicolor/16x16/actions
 @dirrm share/gmpc/icons/hicolor/16x16
+@dirrm share/gmpc/icons/hicolor/128x128/status
+@dirrm share/gmpc/icons/hicolor/128x128/categories
+@dirrm share/gmpc/icons/hicolor/128x128
 @dirrm share/gmpc/icons/hicolor
 @dirrm share/gmpc/icons
 @dirrm share/gmpc
