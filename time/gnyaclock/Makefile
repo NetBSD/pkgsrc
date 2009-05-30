@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.15 2008/11/10 17:21:38 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/05/30 00:38:24 zafer Exp $
 #
 
 DISTNAME=	gnya
 PKGNAME=	gnyaclock-20001218
 PKGREVISION=	2
 CATEGORIES=	time x11
-MASTER_SITES=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/
+MASTER_SITES=	http://www.is.titech.ac.jp/~sadayosi/lab/h-takasi/
 EXTRACT_SUFX=	.shar
 
 MAINTAINER=	kei@NetBSD.org
-HOMEPAGE=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/h.html
+HOMEPAGE=	http://www.is.titech.ac.jp/~sadayosi/lab/h-takasi/h.html
 COMMENT=	Accessory with Bezier curve
 
 PKG_DESTDIR_SUPPORT=	user-destdir
