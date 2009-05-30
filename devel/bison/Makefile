@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2009/02/12 18:43:21 minskim Exp $
+# $NetBSD: Makefile,v 1.70 2009/05/30 14:47:07 joerg Exp $
 
 DISTNAME=		bison-2.4.1
 PKGREVISION=		1
@@ -19,7 +19,8 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		grep gm4:run msgfmt
 INFO_FILES=		# PLIST
 
-CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
+CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes \
+			ac_cv_prog_M4=${TOOLS_PATH.gm4}
 
 TEST_TARGET=		check
 
