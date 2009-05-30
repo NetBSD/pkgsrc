@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/20 22:41:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/05/30 00:44:59 obache Exp $
 include/libmpd-1.0/libmpd/debug_printf.h
 include/libmpd-1.0/libmpd/libmpd-database.h
 include/libmpd-1.0/libmpd/libmpd-internal.h
 include/libmpd-1.0/libmpd/libmpd-player.h
 include/libmpd-1.0/libmpd/libmpd-playlist.h
 include/libmpd-1.0/libmpd/libmpd-status.h
+include/libmpd-1.0/libmpd/libmpd-sticker.h
 include/libmpd-1.0/libmpd/libmpd-strfsong.h
 include/libmpd-1.0/libmpd/libmpd-version.h
 include/libmpd-1.0/libmpd/libmpd.h
