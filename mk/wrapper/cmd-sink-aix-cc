@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-cc,v 1.6 2009/01/15 16:55:33 joerg Exp $
+# $NetBSD: cmd-sink-aix-cc,v 1.7 2009/05/30 16:08:03 sno Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,8 +82,19 @@ while ! queue_is_empty cmdbuf; do
 		esac
 		$debug_log $wrapperlog "    (cmd-sink-aix-cc) drop: $dir [adding to blibpath]"
 		;;
+	-pthread)
+		arg=-qthreaded
+		. $buildcmd
+		;;
+	-fpic)
+	-fPIC)
+		arg=-qpic=large
+		. $buildcmd
+		;;
 	-shared)
-		arg="-bshared"
+		arg=-qmkshrobj
+		. $buildcmd
+		arg=-bshared
 		. $buildcmd
 		;;
 	-Wl,-soname*)
