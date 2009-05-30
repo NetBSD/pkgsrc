@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/30 00:16:10 obache Exp $
+include/nxml.h
+lib/libnxml.la
+lib/pkgconfig/nxml.pc
