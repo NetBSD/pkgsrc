@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.version,v 1.48 2009/03/22 15:27:06 gdt Exp $
+# $NetBSD: Makefile.version,v 1.49 2009/05/30 00:16:47 gdt Exp $
 
 .if !defined(SVNVER)
 # As of 2009-03-22 gdt@NetBSD.org knows 1.6.0 is out, but is
 # intentionally waiting until post-2009Q1 and until there is enough
 # experience with 1.6.0 before subjecting pkgsrc users to it.  Update
 # will probably come mid to late April; comments welcome.
-SVNVER=		1.5.6
+SVNVER=		1.6.2
 .endif

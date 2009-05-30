@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2009/04/16 21:42:42 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2009/05/30 00:16:47 gdt Exp $
 
 PKGNAME=	${RUBY_PKGPREFIX}-subversion-${SVNVER}
-PKGREVISION=	1
 COMMENT=	Ruby bindings for Subversion
 
 PKG_DESTDIR_SUPPORT=	user-destdir
