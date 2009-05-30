@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2009/05/25 09:46:10 obache Exp $
+# $NetBSD: Makefile,v 1.481 2009/05/30 01:40:13 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -158,6 +158,7 @@ SUBDIR+=	libclucene
 SUBDIR+=	libcroco
 SUBDIR+=	liblinebreak
 SUBDIR+=	liblrdf
+SUBDIR+=	libnxml
 SUBDIR+=	libpathan
 SUBDIR+=	libunicode
 SUBDIR+=	libxml
