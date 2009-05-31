@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 16:51:37 tron Exp $
-${PYSITELIB}/${EGG_INFODIR}/._PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/._SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/._dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/._top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2009/05/31 17:02:24 tron Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
