@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.2 2008/10/22 10:42:03 obache Exp $
+$NetBSD: patch-ap,v 1.3 2009/05/31 09:00:48 obache Exp $
+
+use gem version rcairo as fallback
 
 --- pango/src/lib/pango.rb.orig	2007-12-28 09:01:22.000000000 +0000
 +++ pango/src/lib/pango.rb
