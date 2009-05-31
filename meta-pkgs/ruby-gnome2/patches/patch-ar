@@ -1,0 +1,85 @@
+$NetBSD: patch-ar,v 1.1 2009/05/31 09:00:48 obache Exp $
+
+use GHashTable instead of Ruby's Hash to avoid object creation while GC.
+
+--- glib/src/rbgobj_type.c.orig	2009-05-18 12:47:11.000000000 +0000
++++ glib/src/rbgobj_type.c
+@@ -8,5 +8,5 @@
+   created at: Sun Jun  9 20:31:47 JST 2002
+ 
+-  Copyright (C) 2002-2008  Ruby-GNOME2 Project Team
++  Copyright (C) 2002-2009  Ruby-GNOME2 Project Team
+   Copyright (C) 2002,2003  Masahiro Sakai
+ 
+@@ -29,5 +29,5 @@ static ID id_superclass;
+ static ID id_lock;
+ static ID id_unlock;
+-static VALUE gtype_to_cinfo;
++static GHashTable *gtype_to_cinfo;
+ static VALUE klass_to_cinfo;
+ 
+@@ -132,9 +132,7 @@ rbgobj_lookup_class_by_gtype_without_loc
+         return NULL;
+ 
+-    c = rb_hash_aref(gtype_to_cinfo, INT2NUM(gtype));
+-    if (!NIL_P(c)) {
+-        Data_Get_Struct(c, RGObjClassInfo, cinfo);
++    cinfo = g_hash_table_lookup(gtype_to_cinfo, GUINT_TO_POINTER(gtype));
++    if (cinfo)
+         return cinfo;
+-    }
+ 
+     if (!create_class)
+@@ -185,5 +183,5 @@ rbgobj_lookup_class_by_gtype_without_loc
+ 
+     rb_hash_aset(klass_to_cinfo, cinfo->klass, c);
+-    rb_hash_aset(gtype_to_cinfo, INT2NUM(gtype), c);
++    g_hash_table_insert(gtype_to_cinfo, GUINT_TO_POINTER(gtype), cinfo);
+     
+     if (G_TYPE_IS_CLASSED(gtype))
+@@ -336,17 +334,25 @@ rbgobj_register_class(VALUE klass,
+                       gboolean gtype2klass)
+ {
+-    RGObjClassInfo* cinfo;
+-    VALUE c = Data_Make_Struct(rb_cData, RGObjClassInfo, cinfo_mark, NULL, cinfo);  
+-		    
+-    cinfo->klass = klass;
+-    cinfo->gtype = gtype;
+-    cinfo->mark  = NULL;
+-    cinfo->free  = NULL;
+-    cinfo->flags = 0;
+- 
++    RGObjClassInfo* cinfo = NULL;
++    VALUE c = Qnil;
++
++    if (klass2gtype)
++	c = Data_Make_Struct(rb_cData, RGObjClassInfo, cinfo_mark, NULL, cinfo);
++    if (gtype2klass && !cinfo)
++	cinfo = g_new(RGObjClassInfo, 1);
++
++    if (cinfo) {
++	cinfo->klass = klass;
++	cinfo->gtype = gtype;
++	cinfo->mark  = NULL;
++	cinfo->free  = NULL;
++	cinfo->flags = 0;
++    }
++
+     if (klass2gtype)
+-        rb_hash_aset(klass_to_cinfo, cinfo->klass, c); 
++        rb_hash_aset(klass_to_cinfo, cinfo->klass, c);
++
+     if (gtype2klass)
+-        rb_hash_aset(gtype_to_cinfo, INT2NUM(gtype), c);
++        g_hash_table_insert(gtype_to_cinfo, GUINT_TO_POINTER(gtype), cinfo);
+ }
+ 
+@@ -363,7 +369,6 @@ Init_typemap()
+     id_superclass = rb_intern("superclass");
+ 
+-    rb_global_variable(&gtype_to_cinfo);
++    gtype_to_cinfo = g_hash_table_new(g_direct_hash, g_direct_equal);
+     rb_global_variable(&klass_to_cinfo);
+-    gtype_to_cinfo = rb_hash_new();
+     klass_to_cinfo = rb_hash_new();
+ 
