@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2129 2009/05/31 09:01:56 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2130 2009/05/31 17:03:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.0 [obache 2009-05-31]
 	Updated x11/ruby-gnome2-panelapplet to 0.19.0 [obache 2009-05-31]
 	Updated x11/ruby-gnome2-vte to 0.19.0 [obache 2009-05-31]
+	Added time/py-parsedatetime version 0.8.7 [tron 2009-05-31]
