@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2128 2009/05/30 16:54:11 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2129 2009/05/31 09:01:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2826,3 +2826,30 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/vlc to 0.9.9a [hasso 2009-05-30]
 	Updated shells/osh to 20090527 [obache 2009-05-30]
 	Updated www/typolight27 to 2.7.1 [taca 2009-05-30]
+	Updated meta-pkgs/ruby-gnome2 to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-atk to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-bonobo to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-bonoboui to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-gconf to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-glib to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-libglade to 0.19.0 [obache 2009-05-31]
+	Updated devel/ruby-gnome2-pango to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-gnomecanvas to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-goocanvas to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-gtkglext to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-libart to 0.19.0 [obache 2009-05-31]
+	Updated graphics/ruby-gnome2-rsvg to 0.19.0 [obache 2009-05-31]
+	Updated multimedia/ruby-gnome2-gstreamer to 0.19.0 [obache 2009-05-31]
+	Updated print/ruby-gnome2-gnomeprint to 0.19.0 [obache 2009-05-31]
+	Updated print/ruby-gnome2-gnomeprintui to 0.19.0 [obache 2009-05-31]
+	Updated print/ruby-gnome2-poppler to 0.19.0 [obache 2009-05-31]
+	Updated sysutils/ruby-gnome2-gnomevfs to 0.19.0 [obache 2009-05-31]
+	Updated www/ruby-gnome2-gtkhtml2 to 0.19.0 [obache 2009-05-31]
+	Updated www/ruby-gnome2-gtkmozembed to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-gnome to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-gtk to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-gtksourceview to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-gtksourceview2 to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-panelapplet to 0.19.0 [obache 2009-05-31]
+	Updated x11/ruby-gnome2-vte to 0.19.0 [obache 2009-05-31]
