@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2008/10/22 10:42:02 obache Exp $
+$NetBSD: patch-ad,v 1.4 2009/05/31 09:00:48 obache Exp $
+
+Install files in vendor.
 
 --- gtk/src/depend.orig	2008-09-30 13:00:42.000000000 +0000
 +++ gtk/src/depend

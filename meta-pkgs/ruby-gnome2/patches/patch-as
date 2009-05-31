@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2009/05/31 09:00:48 obache Exp $
+
+choose only readable(existing) header files
+
+--- gtkmozembed/extconf.rb.orig	2009-05-18 12:47:19.000000000 +0000
++++ gtkmozembed/extconf.rb
+@@ -77,7 +77,7 @@ create_makefile_at_srcdir(PACKAGE_NAME, 
+   end
+   headers = include_paths.inject([]) do |result, path|
+     gtkmozembed_h = File.join(path, "gtkmozembed.h")
+-    result += [gtkmozembed_h] if gtkmozembed_h
++    result += [gtkmozembed_h] if File.readable?(gtkmozembed_h)
+     result
+   end
+   glib_mkenums(enum_type_prefix, headers, "GTK_TYPE_", ["gtkmozembed.h"])

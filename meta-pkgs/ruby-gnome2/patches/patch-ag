@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.3 2008/10/22 10:42:02 obache Exp $
+$NetBSD: patch-ag,v 1.4 2009/05/31 09:00:48 obache Exp $
+
+Install files in vendor.
 
 --- pango/src/depend.orig	2008-01-03 03:00:57.000000000 +0000
 +++ pango/src/depend
