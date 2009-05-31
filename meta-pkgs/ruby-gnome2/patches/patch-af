@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.3 2008/10/22 10:42:02 obache Exp $
+$NetBSD: patch-af,v 1.4 2009/05/31 09:00:48 obache Exp $
+
+Install files in vendor.
 
 --- libart/src/depend.orig	2008-01-03 02:59:38.000000000 +0000
 +++ libart/src/depend
