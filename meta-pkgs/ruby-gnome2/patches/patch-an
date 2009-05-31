@@ -1,4 +1,6 @@
-$NetBSD: patch-an,v 1.2 2008/10/22 10:42:02 obache Exp $
+$NetBSD: patch-an,v 1.3 2009/05/31 09:00:48 obache Exp $
+
+use gem version rcairo as fallback
 
 --- gdkpixbuf/lib/gdk_pixbuf2.rb.orig	2007-10-23 12:51:24.000000000 +0000
 +++ gdkpixbuf/lib/gdk_pixbuf2.rb
