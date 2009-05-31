@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/31 16:51:37 tron Exp $
+${PYSITELIB}/${EGG_INFODIR}/._PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/._SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/._dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/._top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/parsedatetime/__init__.py
+${PYSITELIB}/parsedatetime/__init__.pyc
+${PYSITELIB}/parsedatetime/__init__.pyo
+${PYSITELIB}/parsedatetime/parsedatetime.py
+${PYSITELIB}/parsedatetime/parsedatetime.pyc
+${PYSITELIB}/parsedatetime/parsedatetime.pyo
+${PYSITELIB}/parsedatetime/parsedatetime_consts.py
+${PYSITELIB}/parsedatetime/parsedatetime_consts.pyc
+${PYSITELIB}/parsedatetime/parsedatetime_consts.pyo
+${PYSITELIB}/parsedatetime/t2.py
+${PYSITELIB}/parsedatetime/t2.pyc
+${PYSITELIB}/parsedatetime/t2.pyo
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/parsedatetime
