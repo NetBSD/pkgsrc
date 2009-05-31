@@ -1,17 +1,17 @@
-$NetBSD: patch-ao,v 1.2 2008/10/22 10:42:02 obache Exp $
+$NetBSD: patch-ao,v 1.3 2009/05/31 09:00:48 obache Exp $
 
---- gtk/src/lib/gtk2/base.rb.orig	2008-04-10 14:01:35.000000000 +0000
+remove cairo loading because Ruby/Pango has tried it.
+
+--- gtk/src/lib/gtk2/base.rb.orig	2008-05-12 14:44:38.000000000 +0000
 +++ gtk/src/lib/gtk2/base.rb
-@@ -13,7 +13,12 @@ require 'glib2'
+@@ -12,10 +12,6 @@
+ require 'glib2'
  require 'atk'
  require 'pango'
- begin
-+ begin
-   require 'cairo'
-+ rescue LoadError
-+  require 'rubygems'
-+  require 'cairo'
-+ end
- rescue LoadError
- end
+-begin
+-  require 'cairo'
+-rescue LoadError
+-end
  require 'gtk2.so'
+ require 'gdk_pixbuf2'
+ 
