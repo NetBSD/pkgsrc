@@ -1,0 +1,2 @@
+A collection of routines to input, parse and manipulate date and times.
+The text can either be 'normal' date values or it can be human readable.
