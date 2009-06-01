@@ -1,9 +1,11 @@
-# $NetBSD: Makefile.version,v 1.49 2009/05/30 00:16:47 gdt Exp $
+# $NetBSD: Makefile.version,v 1.50 2009/06/01 18:56:08 gdt Exp $
+
+# When updating subversion, all packages are updated at the same time
+# to have a consistent set of packages.  A particularly tricky aspect
+# is our interaction with the svn build system.  See the make target
+# "svn-build-outputs-hack" in devel/subversion-base/Makefile when
+# changing the version.
 
 .if !defined(SVNVER)
-# As of 2009-03-22 gdt@NetBSD.org knows 1.6.0 is out, but is
-# intentionally waiting until post-2009Q1 and until there is enough
-# experience with 1.6.0 before subjecting pkgsrc users to it.  Update
-# will probably come mid to late April; comments welcome.
 SVNVER=		1.6.2
 .endif

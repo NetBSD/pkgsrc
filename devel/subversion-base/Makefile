@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2009/05/30 00:16:47 gdt Exp $
+# $NetBSD: Makefile,v 1.64 2009/06/01 18:56:08 gdt Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -64,10 +64,23 @@ post-install:
 		${DESTDIR}${SVNEXAMPLES}/hook-scripts/mailer/tests
 
 .PHONY: svn-build-outputs-hack
-# Use this target to update the build-outputs.mk hack for sub-packages.
+# Subversion's build system is set up to build everything from source
+# at once.  In pkgsrc, we install the base part of subversion, and
+# then build other pieces against installed libraries.  Here, we run
+# svn's equivalent of automake to say that the libraries installed as
+# part of subversion-base are installed, and save that generated file.
+# Other packages then copy this file into place when building to avoid
+# having to build these libraries again.
+#
+# The normal update procedure is
+#   test build and package subversion-base
+#   run make svn-build-outputs-hack
+#   test build and package other subversion packages
+#   commit the update to ../subversion/files/build-outputs.mk along with the version change
+#
 svn-build-outputs-hack:
 	cd ${WRKSRC} && ./gen-make.py --release --installed-libs libsvn_client,libsvn_delta,libsvn_diff,libsvn_fs,libsvn_ra,libsvn_repos,libsvn_subr,libsvn_wc
-	${MV} ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk
+	${MV} -f ${WRKSRC}/build-outputs.mk ${FILESDIR}/build-outputs.mk
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
