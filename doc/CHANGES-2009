@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2137 2009/06/01 18:50:24 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2138 2009/06/01 18:57:38 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Params-Util to 1.00 [sno 2009-06-01]
 	Updated www/p5-URI to 1.38 [sno 2009-06-01]
 	Added textproc/p5-Text-CSV version 1.12 [sno 2009-06-01]
+	Updated print/p5-LaTeX-Table to 0.9.15 [sno 2009-06-01]
