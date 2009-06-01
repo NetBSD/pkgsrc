@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/19 21:43:02 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2009/06/01 17:37:58 tonnerre Exp $
 
-SHA1 (patchadd-0.1-durchstich.tar.gz) = 78d88537e8e41652d9b2aa78f8821ac90a412203
-RMD160 (patchadd-0.1-durchstich.tar.gz) = b14382096a37f640b5235202aea684c18fe0ff77
-Size (patchadd-0.1-durchstich.tar.gz) = 51968 bytes
+SHA1 (patchadd-0.1.1-durchstich.tar.gz) = 43a9967800973038589cb2ad0fe79cf0119754b1
+RMD160 (patchadd-0.1.1-durchstich.tar.gz) = 6afe89f8d553531d8e2722a9b38e0288d1156be3
+Size (patchadd-0.1.1-durchstich.tar.gz) = 117110 bytes
