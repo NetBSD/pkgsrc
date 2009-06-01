@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2009/02/25 21:08:06 sno Exp $
+# $NetBSD: Makefile,v 1.11 2009/06/01 18:18:41 sno Exp $
 
-DISTNAME=	Params-Util-0.38
+DISTNAME=	Params-Util-1.00
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Params/}
