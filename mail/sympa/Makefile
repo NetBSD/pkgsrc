@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/12/20 19:02:12 bouyer Exp $
+# $NetBSD: Makefile,v 1.39 2009/06/01 19:38:57 sno Exp $
 #
 
 DISTNAME=	sympa-5.4.4
@@ -19,13 +19,13 @@ DEPENDS+=	p5-IO-stringy>=1.0:../../devel/p5-IO-stringy
 DEPENDS+=	mhonarc-[0-9]*:../../mail/mhonarc
 DEPENDS+=	p5-MIME-tools>=5.209:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.51:../../mail/p5-MailTools
-DEPENDS+=	p5-Net>=1.0:../../net/p5-Net
+DEPENDS+=	{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
 DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
 DEPENDS+=	p5-Crypt-CipherSaber>=0.50:../../security/p5-Crypt-CipherSaber
-DEPENDS+=	p5-Digest-MD5>=2.00:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=2.00]:../../security/p5-Digest-MD5
 DEPENDS+=	p5-IO-Socket-SSL>=0.90:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Net-SSLeay>=1.16:../../security/p5-Net-SSLeay
-DEPENDS+=	p5-CGI>=2.52:../../www/p5-CGI
+DEPENDS+=	{perl>=5.10,p5-CGI>=2.52}:../../www/p5-CGI
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
 DEPENDS+=	p5-libwww>=1.09:../../www/p5-libwww
 DEPENDS+=	p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
@@ -33,7 +33,7 @@ DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
 DEPENDS+=	p5-HTML-StripScripts-Parser>=1.02:../../www/p5-HTML-StripScripts-Parser
 DEPENDS+=	p5-MIME-EncWords>=1.010.101:../../mail/p5-MIME-EncWords
-DEPENDS.SunOS+=	p5-DB_File>=1.75:../../databases/p5-DB_File
+DEPENDS.SunOS+=	{perl>=5.10,p5-DB_File>=1.75}:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/04/12 12:46:05 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/01 19:38:57 sno Exp $
 
 DISTNAME=	Email-Sender-0.004
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-Email-Address>=0:../../mail/p5-Email-Address
 DEPENDS+=	p5-Email-Simple>=1.998:../../mail/p5-Email-Simple
 DEPENDS+=	p5-List-MoreUtils>=0:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
-DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+=	{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=	p5-Sys-Hostname-Long>=0:../../sysutils/p5-Sys-Hostname-Long
 
 PERL5_REQD+=	5.8.0
