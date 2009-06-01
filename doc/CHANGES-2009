@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2136 2009/06/01 18:31:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2137 2009/06/01 18:50:24 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed sysutils/patchadd [tonnerre 2009-06-01]
 	Updated devel/p5-Params-Util to 1.00 [sno 2009-06-01]
 	Updated www/p5-URI to 1.38 [sno 2009-06-01]
+	Added textproc/p5-Text-CSV version 1.12 [sno 2009-06-01]
