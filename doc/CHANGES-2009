@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2141 2009/06/01 20:16:33 schmonz Exp $
+$NetBSD: CHANGES-2009,v 1.2142 2009/06/01 20:26:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2865,3 +2865,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-Reporter to 1.5400 [sno 2009-06-01]
 	Updated devel/p5-CPAN-Reporter to 1.1707 [sno 2009-06-01]
 	Updated mail/getmail to 4.9.1 [schmonz 2009-06-01]
+	Updated www/ikiwiki to 3.13 [schmonz 2009-06-01]
