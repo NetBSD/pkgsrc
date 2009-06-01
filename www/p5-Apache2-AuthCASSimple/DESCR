@@ -1,0 +1,6 @@
+Apache2::AuthCASSimple is an authentication module for Apache2/mod_perl2.
+It allows you to authenticate users through a Yale CAS server. Users
+do not need to log in if they are already authenticated
+by the CAS server, only tickets are exchanged between Web client,
+Apache2 server and CAS server. If they are not yet authenticated,
+they will be redirected to the CAS server login form.
