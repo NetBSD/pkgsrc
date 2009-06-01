@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/19 21:34:56 tonnerre Exp $
-sbin/patch_add
-sbin/patch_delete
-sbin/patch_info

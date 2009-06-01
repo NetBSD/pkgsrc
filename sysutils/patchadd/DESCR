@@ -1,5 +1,0 @@
-patch_add/patch_delete/patch_info are tools for working with binary patches
-to systems.
-
-A short test suite can be found at
-ftp://ftp.netbsd.org/pub/NetBSD/misc/tonnerre/patchadd/patchadd-tests-0.1.tar.gz
