@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 08:59:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/01 07:42:21 obache Exp $
 #
 
 DISTNAME=	pygoocanvas-0.14.1
@@ -30,7 +30,7 @@ BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=2.10.0
 .include "../../devel/py-gobject/buildlink3.mk"
 BUILDLINK_API_DEPENDS.goocanvas+=	goocanvas>=0.14.0
 .include "../../graphics/goocanvas/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pycairo+=	${PYPKGPREFIX}-cairo>=1.8.0
+BUILDLINK_API_DEPENDS.pycairo+=	${PYPKGPREFIX}-cairo>=1.8.4
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
