@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/19 21:13:57 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/01 17:37:58 tonnerre Exp $
 #
 
-DISTNAME=		patchadd-0.1-durchstich
-PKGNAME=		patchadd-0.1durchstich
+DISTNAME=		patchadd-0.1.1-durchstich
+PKGNAME=		patchadd-0.1.1ds
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.netbsd.org/pub/NetBSD/misc/tonnerre/patchadd/
 
