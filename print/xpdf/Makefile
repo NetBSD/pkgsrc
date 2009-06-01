@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2009/04/17 12:09:35 tron Exp $
+# $NetBSD: Makefile,v 1.67 2009/06/01 13:48:36 reed Exp $
 
 DISTNAME=	xpdf-3.02
 PKGNAME=	xpdf-3.02pl3
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.foolabs.com/pub/xpdf/ \
 PATCH_SITES=	${MASTER_SITES}
 PATCHFILES=	xpdf-3.02pl1.patch xpdf-3.02pl2.patch xpdf-3.02pl3.patch
 PATCH_DIST_STRIP=	-p1
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.foolabs.com/xpdf/
@@ -21,6 +22,7 @@ MAKE_JOBS_SAFE=	no
 DEPENDS+=	ghostscript-fonts-[0-9]*:../../fonts/ghostscript-fonts
 
 CONFLICTS=	xpdf-crypto-[0-9]*
+CONFLICTS+=	poppler-utils-[0-9]*
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
