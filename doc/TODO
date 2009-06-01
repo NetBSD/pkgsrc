@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8150 2009/05/30 12:50:29 obache Exp $
+$NetBSD: TODO,v 1.8151 2009/06/01 11:59:29 obache Exp $
 
 Suggested new packages
 ======================
@@ -1262,8 +1262,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o snd-10.6
 	o snes9x-1.51
 	o snort-2.8.4
-	o snownews-1.5.10 [pkg/39887]
-	o snownews-1.5.11
 	o socat-1.7.1.1
 	o sope-4.6
 	o soprano-2.2.3
