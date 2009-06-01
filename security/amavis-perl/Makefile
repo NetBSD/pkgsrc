@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2009/04/11 23:15:21 sno Exp $
+# $NetBSD: Makefile,v 1.28 2009/06/01 19:38:57 sno Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -33,7 +33,7 @@ DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-Convert-TNEF-[0-9]*:../../converters/p5-Convert-TNEF
 DEPENDS+=	p5-Convert-UUlib-[0-9]*:../../converters/p5-Convert-UUlib
 DEPENDS+=	p5-MIME-tools>=5.313:../../mail/p5-MIME-tools
-DEPENDS+=	p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+=	{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=	p5-Unix-Syslog-[0-9]*:../../sysutils/p5-Unix-Syslog
 
 .include "options.mk"

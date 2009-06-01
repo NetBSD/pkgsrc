@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/07 17:07:45 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/01 19:38:56 sno Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -14,7 +14,7 @@ COMMENT=		Download mails from Yahoo webmail into mbox
 DEPENDS+=		p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=		p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=		p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
-DEPENDS+=		p5-Net-[0-9]*:../../net/p5-Net
+DEPENDS+=		{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=		p5-Crypt-SSLeay-[0-9]*:../../security/p5-Crypt-SSLeay
 DEPENDS+=		p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
