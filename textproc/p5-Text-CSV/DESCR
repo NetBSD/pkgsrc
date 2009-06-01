@@ -1,0 +1,2 @@
+Text::CSV provides facilities for the composition and decomposition of
+comma-separated values using Text::CSV_XS or its pure Perl version.
