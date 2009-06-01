@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2132 2009/06/01 11:57:04 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2133 2009/06/01 17:38:12 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2856,3 +2856,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added time/py-parsedatetime version 0.8.7 [tron 2009-05-31]
 	Updated security/netpgp to 20090531 [agc 2009-05-31]
 	Updated www/snownews to 1.5.11 [obache 2009-06-01]
+	Updated sysutils/patchadd to 0.1.1ds [tonnerre 2009-06-01]
