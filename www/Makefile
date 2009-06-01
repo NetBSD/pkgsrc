@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.648 2009/05/26 17:40:11 drochner Exp $
+# $NetBSD: Makefile,v 1.649 2009/06/01 21:42:32 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -231,6 +231,7 @@ SUBDIR+=	p5-Apache-SSI
 SUBDIR+=	p5-Apache-Session
 SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
+SUBDIR+=	p5-Apache2-AuthCASSimple
 SUBDIR+=	p5-Apache2-AuthCookie
 SUBDIR+=	p5-Apache2-AuthCookieDBI
 SUBDIR+=	p5-App-Nopaste
