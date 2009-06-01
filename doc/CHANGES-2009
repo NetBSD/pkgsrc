@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2131 2009/05/31 23:39:18 agc Exp $
+$NetBSD: CHANGES-2009,v 1.2132 2009/06/01 11:57:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2855,3 +2855,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/ruby-gnome2-vte to 0.19.0 [obache 2009-05-31]
 	Added time/py-parsedatetime version 0.8.7 [tron 2009-05-31]
 	Updated security/netpgp to 20090531 [agc 2009-05-31]
+	Updated www/snownews to 1.5.11 [obache 2009-06-01]
