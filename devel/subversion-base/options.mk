@@ -1,13 +1,12 @@
-# $NetBSD: options.mk,v 1.9 2009/05/30 00:16:47 gdt Exp $
+# $NetBSD: options.mk,v 1.10 2009/06/02 15:34:44 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
-PKG_SUPPORTED_OPTIONS=	serf sasl
-PKG_SUGGESTED_OPTIONS=	# empty
+PKG_SUPPORTED_OPTIONS=	apr1 serf sasl
+PKG_SUGGESTED_OPTIONS=	apr1
 
 # Note that this file is included as part of several packages.
-# Therefore this file only defines options, but does not include the
-# typical fragments to change behavior based on options, leaving those
-# to the individual Makefiles.
+# Therefore this file defines options and includes some but not all of
+# the typical fragments, leaving some to individual package files.
 
 .include "../../mk/bsd.options.mk"
 
