@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2009/06/01 18:56:08 gdt Exp $
+# $NetBSD: Makefile,v 1.65 2009/06/02 15:34:44 gdt Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
@@ -17,8 +17,21 @@ USE_TOOLS+=		msgfmt
 CONFIGURE_ARGS+=	--disable-neon-version-check
 CONFIGURE_ARGS+=	--without-apxs
 
-.include "../../devel/apr/buildlink3.mk"
-.include "../../devel/apr-util/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mapr1)
+APU_OPTIONS=		PKG_BUILD_OPTIONS.apr-util
+.else
+APU_OPTIONS=		PKG_BUILD_OPTIONS.apr
+.endif
+BUILD_DEFS+=		${APU_OPTIONS}
+
+.if !empty(PKG_OPTIONS:Mapr1)
+.  include "../../devel/apr/buildlink3.mk"
+.  include "../../devel/apr-util/buildlink3.mk"
+.else
+BUILDLINK_API_DEPENDS.apr+=	apr>=0.9.5
+.  include "../../devel/apr0/buildlink3.mk"
+.endif
+
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.4
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
