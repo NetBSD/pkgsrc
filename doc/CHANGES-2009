@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2145 2009/06/02 07:22:15 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2146 2009/06/02 09:50:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/p5-Apache2-AuthCASSimple version 0.10 [seb 2009-06-01]
 	Updated www/typolight27-translations to 20090530 [taca 2009-06-02]
 	Updated devel/p5-ExtUtils-MakeMaker to 6.52 [sno 2009-06-02]
+	Updated www/typolight27-translations to 20090530nb1 [taca 2009-06-02]
