@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2009/06/02 23:38:47 joerg Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	3
@@ -34,7 +34,7 @@ GCC_REQD+=		2.95.3
 .include "../../mk/compiler.mk"
 
 .if !empty(CC_VERSION:Mgcc-4*)
-WRAPPER_TRANSFORM_CMDS+=	opt:-mcpu=pentiumpro:-march=pentiumpro
+WRAPPER_TRANSFORM_CMDS+=	opt:-mcpu=pentiumpro:-mschedule=pentiumpro
 .endif
 
 MESSAGE_SUBST+=		PKGBASE=${PKGBASE}
