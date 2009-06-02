@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/26 21:31:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/02 10:23:58 hasso Exp $
 #
 
 .include "Makefile.common"
@@ -26,7 +26,7 @@ CMAKE_ARGS+=	-DWITH_LibDBI:BOOL=OFF
 CMAKE_ARGS+=	-DBASH_BIN:FILEPATH=
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run msgfmt
 REPLACE_BASH=	utils/gammu-config utils/jadmaker
 
 # needed because of https://bugs.cihar.com/view.php?id=908
