@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2143 2009/06/01 21:43:05 seb Exp $
+$NetBSD: CHANGES-2009,v 1.2144 2009/06/02 03:05:52 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2867,3 +2867,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/getmail to 4.9.1 [schmonz 2009-06-01]
 	Updated www/ikiwiki to 3.13 [schmonz 2009-06-01]
 	Added www/p5-Apache2-AuthCASSimple version 0.10 [seb 2009-06-01]
+	Updated www/typolight27-translations to 20090530 [taca 2009-06-02]
