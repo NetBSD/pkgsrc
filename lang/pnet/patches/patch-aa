@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.4 2009/06/02 18:39:20 hasso Exp $
+
+--- libffi/configure.orig	2009-06-02 16:37:36 +0300
++++ libffi/configure	2009-06-02 16:38:41 +0300
+@@ -20700,6 +20700,7 @@ i*86-*-solaris2.1[0-9]*) TARGET=X86_64; 
+ i*86-*-solaris*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-beos*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-freebsd* | i*86-*-kfreebsd*-gnu) TARGET=X86; TARGETDIR=x86;;
++i*86-*-dragonfly*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-netbsdelf* | i*86-*-knetbsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-rtems*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-win32*) TARGET=X86_WIN32; TARGETDIR=x86;;
+@@ -20731,7 +20732,7 @@ arm*-*-rtems*) TARGET=ARM; TARGETDIR=arm
+ cris-*-*) TARGET=LIBFFI_CRIS; TARGETDIR=cris;;
+ s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+ s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
+-x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu | x86_64-*-dragonfly*) TARGET=X86_64; TARGETDIR=x86;;
+ sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
+ sh-*-rtems*) TARGET=SH; TARGETDIR=sh;;
+ sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
