@@ -1,4 +1,4 @@
-# $NetBSD: xlc.mk,v 1.23 2009/05/30 18:16:26 joerg Exp $
+# $NetBSD: xlc.mk,v 1.24 2009/06/02 22:28:52 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -158,7 +158,7 @@ ${_XLC_${_var_}}:
 .    for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -f ${.TARGET} ${_alias_};				\
+		${LN} -f -s ${.TARGET} ${_alias_};			\
 	fi
 .    endfor
 .  endif
