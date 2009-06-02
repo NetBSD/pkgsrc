@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2009/05/19 08:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2009/06/02 18:21:39 christos Exp $
 
-DISTNAME=	jdk-6u12-linux-${DIST_ARCH}
+DISTNAME=	jdk-6u14-linux-${DIST_ARCH}
 #PKGREVISION=    1
-PKGNAME=	sun-jdk6-6.0.12
+PKGNAME=	sun-jdk6-6.0.14
 MASTER_SITES=	# empty
 
 DOWNLOAD_NAME=	JDK 6u12
@@ -11,7 +11,7 @@ LICENSE=	sun-jdk6-license
 
 DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre6
 
-WRKSRC=		${WRKDIR}/jdk1.6.0_12
+WRKSRC=		${WRKDIR}/jdk1.6.0_14
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
 
@@ -37,5 +37,18 @@ pre-install:
 	${RM} -f ${WRKSRC}/register.html
 	${RM} -f ${WRKSRC}/register_ja.html
 	${RM} -f ${WRKSRC}/register_zh_CN.html
+	${CHMOD} -x \
+		${WRKSRC}/db/bin/NetworkServerControl.bat \
+		${WRKSRC}/db/bin/dblook.bat \
+		${WRKSRC}/db/bin/derby_common.bat \
+		${WRKSRC}/db/bin/ij.bat \
+		${WRKSRC}/db/bin/setEmbeddedCP.bat \
+		${WRKSRC}/db/bin/setNetworkClientCP.bat \
+		${WRKSRC}/db/bin/setNetworkServerCP.bat \
+		${WRKSRC}/db/bin/startNetworkServer.bat \
+		${WRKSRC}/db/bin/stopNetworkServer.bat \
+		${WRKSRC}/db/bin/sysinfo.bat \
+		${WRKSRC}/sample/scripting/scriptpad/src/scripts/memory.sh
+
 
 .include "../../mk/bsd.pkg.mk"
