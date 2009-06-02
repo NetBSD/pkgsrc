@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
+$NetBSD: patch-ab,v 1.5 2009/06/02 17:10:53 drochner Exp $
 
---- configure.orig	2008-12-03 12:01:54.000000000 +0100
+--- configure.orig	2009-05-28 19:13:31.000000000 +0200
 +++ configure
-@@ -3800,7 +3800,7 @@ SHARED_EXTENSION=""
+@@ -3802,7 +3802,7 @@ SHARED_EXTENSION=""
  STATIC_EXTENSION=""
  OBJECT_EXTENSION=""
  case "$target_os" in
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
  	echo "$as_me:$LINENO: result: .so .a .o" >&5
  echo "${ECHO_T}.so .a .o" >&6
  	STATIC_EXTENSION="a"
-@@ -3851,7 +3851,7 @@ echo "${ECHO_T}ok" >&6
+@@ -3853,7 +3853,7 @@ echo "${ECHO_T}ok" >&6
  	SPECIFIC_LDFLAGS="-Wl,-soname,libxvidcore.\$(SHARED_EXTENSION).\$(API_MAJOR) -shared -Wl,--version-script=libxvidcore.ld -lc -lm"
  	SPECIFIC_CFLAGS="-fPIC"
  	;;
@@ -20,12 +20,12 @@ $NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
  	echo "$as_me:$LINENO: result: ok" >&5
  echo "${ECHO_T}ok" >&6
  	STATIC_LIB="libxvidcore.\$(STATIC_EXTENSION)"
-@@ -3874,13 +3874,13 @@ echo "${ECHO_T}ok" >&6
+@@ -3876,13 +3876,13 @@ echo "${ECHO_T}ok" >&6
  	   echo "$as_me:$LINENO: result: dylib options" >&5
  echo "${ECHO_T}dylib options" >&6
  	   SHARED_LIB="libxvidcore.\$(API_MAJOR).\$(SHARED_EXTENSION)"
--	   SPECIFIC_LDFLAGS="-dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB)"
-+	   SPECIFIC_LDFLAGS="-dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB) -Wl,-read_only_relocs -Wl,warning"
+-	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB)"
++	   SPECIFIC_LDFLAGS="-Wl,-read_only_relocs,suppress -dynamiclib -flat_namespace -compatibility_version \$(API_MAJOR) -current_version \$(API_MAJOR).\$(API_MINOR) -install_name \$(libdir)/\$(SHARED_LIB) -Wl,-read_only_relocs -Wl,warning"
  	else
  	   echo "$as_me:$LINENO: result: module options" >&5
  echo "${ECHO_T}module options" >&6
@@ -36,7 +36,7 @@ $NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
  	fi
  	;;
       beos)
-@@ -4001,7 +4001,7 @@ echo "$as_me: WARNING: nasm version is t
+@@ -4075,7 +4075,7 @@ echo "$as_me: WARNING: nasm version is t
         echo "$as_me:$LINENO: checking for asm object format" >&5
  echo $ECHO_N "checking for asm object format... $ECHO_C" >&6
         case "$target_os" in
@@ -45,7 +45,7 @@ $NetBSD: patch-ab,v 1.4 2009/01/07 10:52:12 wiz Exp $
                 if test "$ARCHITECTURE" = "X86_64" ; then
                     echo "$as_me:$LINENO: result: elf64" >&5
  echo "${ECHO_T}elf64" >&6
-@@ -4034,6 +4034,13 @@ echo "${ECHO_T}macho" >&6
+@@ -4108,6 +4108,13 @@ echo "${ECHO_T}macho" >&6
                 PREFIX="-DPREFIX"
                 MARK_FUNCS=""
                 ;;
