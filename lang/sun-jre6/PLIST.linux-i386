@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.13 2009/03/06 16:18:04 abs Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.14 2009/06/02 16:31:26 christos Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -480,7 +480,7 @@ java/sun-6/lib/zi/Asia/Kabul
 java/sun-6/lib/zi/Asia/Kamchatka
 java/sun-6/lib/zi/Asia/Karachi
 java/sun-6/lib/zi/Asia/Kashgar
-java/sun-6/lib/zi/Asia/Katmandu
+java/sun-6/lib/zi/Asia/Kathmandu
 java/sun-6/lib/zi/Asia/Kolkata
 java/sun-6/lib/zi/Asia/Krasnoyarsk
 java/sun-6/lib/zi/Asia/Kuala_Lumpur
