@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2144 2009/06/02 03:05:52 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2145 2009/06/02 07:22:15 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2868,3 +2868,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/ikiwiki to 3.13 [schmonz 2009-06-01]
 	Added www/p5-Apache2-AuthCASSimple version 0.10 [seb 2009-06-01]
 	Updated www/typolight27-translations to 20090530 [taca 2009-06-02]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.52 [sno 2009-06-02]
