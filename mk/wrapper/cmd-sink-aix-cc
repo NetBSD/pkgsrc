@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-cc,v 1.7 2009/05/30 16:08:03 sno Exp $
+# $NetBSD: cmd-sink-aix-cc,v 1.8 2009/06/02 17:39:28 sno Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -86,8 +86,7 @@ while ! queue_is_empty cmdbuf; do
 		arg=-qthreaded
 		. $buildcmd
 		;;
-	-fpic)
-	-fPIC)
+	-fpic|-fPIC)
 		arg=-qpic=large
 		. $buildcmd
 		;;
