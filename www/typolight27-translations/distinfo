@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2009/05/26 14:43:20 taca Exp $
+$NetBSD: distinfo,v 1.11 2009/06/02 03:05:12 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -36,9 +36,9 @@ Size (TYPOlight-Indonesian-v1.zip) = 72232 bytes
 SHA1 (TYPOlight-Italian-v14.zip) = 0c5f8f14ac17ee3fe9d0fe7994c89cd90a6ea878
 RMD160 (TYPOlight-Italian-v14.zip) = 6f239813a802ef22bf988b3597d708c5782726e9
 Size (TYPOlight-Italian-v14.zip) = 150220 bytes
-SHA1 (TYPOlight-Japanese-v20.zip) = 79ffba8fe182eec4e98366a1991a29f693f2f61b
-RMD160 (TYPOlight-Japanese-v20.zip) = a5c8554da7440767055c60de146ad048cd317e9b
-Size (TYPOlight-Japanese-v20.zip) = 157445 bytes
+SHA1 (TYPOlight-Japanese-v21.zip) = af8946f200048d000c8d343c89d3497e36cd9fe2
+RMD160 (TYPOlight-Japanese-v21.zip) = 332ba20123d8599fb4edf53e430e3504a0e590a7
+Size (TYPOlight-Japanese-v21.zip) = 157461 bytes
 SHA1 (TYPOlight-Latvian-v20.zip) = c77cc67534398ad28740ac12b09c9b7ba3699dbe
 RMD160 (TYPOlight-Latvian-v20.zip) = 8481bbc0fc9037b95b4a2052abd4813c1b9a9793
 Size (TYPOlight-Latvian-v20.zip) = 109088 bytes
@@ -72,9 +72,9 @@ Size (TYPOlight-Slovak-v7.zip) = 131292 bytes
 SHA1 (TYPOlight-Spanish-v10.zip) = 831b9af311f6efe6becab12688f894ffdb324d01
 RMD160 (TYPOlight-Spanish-v10.zip) = cfede961879b1dcc1221174bdbd53e2545101e63
 Size (TYPOlight-Spanish-v10.zip) = 118115 bytes
-SHA1 (TYPOlight-Swedish-v31.zip) = cd0cebbf2f9b369c8ee0689d6c7f016fb716160b
-RMD160 (TYPOlight-Swedish-v31.zip) = a7bb33f91e862d86abade7e662dfa5d8ce7223ff
-Size (TYPOlight-Swedish-v31.zip) = 150354 bytes
+SHA1 (TYPOlight-Swedish-v32.zip) = a711452aa4cf5b4c13a5b50c0fe030b32ddc4632
+RMD160 (TYPOlight-Swedish-v32.zip) = 873fc65396266d960375914f233f0cc0f7552b30
+Size (TYPOlight-Swedish-v32.zip) = 150727 bytes
 SHA1 (TYPOlight-Thai-v2.zip) = 90e87265f460fb917f57fb5ba25a0aeecaa9a54a
 RMD160 (TYPOlight-Thai-v2.zip) = e3fb7addc9a57b1ffb11b0ec8cab248927dd0822
 Size (TYPOlight-Thai-v2.zip) = 153160 bytes
