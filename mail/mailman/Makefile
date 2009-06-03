@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2009/02/09 22:56:25 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2009/06/03 06:55:07 adam Exp $
 
-DISTNAME=	mailman-2.1.11
-PKGREVISION=	1
+DISTNAME=	mailman-2.1.12
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailman/}
 EXTRACT_SUFX=	.tgz
@@ -22,12 +21,12 @@ GNU_CONFIGURE_PREFIX=	${EXECDIR}
 MAKE_FLAGS+=		DIRSETGID=${TRUE:Q}
 EXECDIR=		${PREFIX}/lib/mailman
 MAILMAN_DATADIR?=	${VARBASE}/db/mailman
-EGDIR=                  ${PREFIX}/share/examples/mailman
-DOCDIR=                 ${PREFIX}/share/doc/mailman
-MAILMAN_USER?= 		mailman
-MAILMAN_GROUP?= 	mailman
-MAILMAN_CGIGROUP?= 	${APACHE_GROUP}
-MAILMAN_MAILGROUP?= 	daemon	# group sendmail runs under;
+EGDIR=			${PREFIX}/share/examples/mailman
+DOCDIR=			${PREFIX}/share/doc/mailman
+MAILMAN_USER?=		mailman
+MAILMAN_GROUP?=		mailman
+MAILMAN_CGIGROUP?=	${APACHE_GROUP}
+MAILMAN_MAILGROUP?=	daemon	# group sendmail runs under;
                                 # use 'nobody' for postfix
 MAILMAN_CGIEXT?=	.cgi
 
