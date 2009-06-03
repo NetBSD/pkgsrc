@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/06/03 06:03:50 hasso Exp $
+
+--- libsee/math.c.orig	2009-06-03 06:31:41 +0300
++++ libsee/math.c	2009-06-03 06:33:02 +0300
+@@ -47,7 +47,7 @@ _SEE_isnan(n)
+ {
+ #if SEE_NUMBER_IS_FLOAT && HAVE_ISNANF
+ 	return isnanf(n);
+-#elif HAVE_ISNAN
++#elif HAVE_ISNAN || HAVE_DECL_ISNAN
+ 	return isnan(n);
+ #elif HAVE__ISNAN
+ 	return _isnan(n);
