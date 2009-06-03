@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8155 2009/06/03 17:34:57 hasso Exp $
+$NetBSD: TODO,v 1.8156 2009/06/03 19:54:51 hasso Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libv4l-0.5.98
 	o licq-1.3.6
 	o lighttpd-1.4.22
-	o lilypond-2.12.1
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
 	o lmms-0.2.1
