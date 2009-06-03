@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/04/25 17:46:28 tnn Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/06/03 11:42:27 wiz Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -21,6 +21,7 @@ ${PLIST.x11}lib/vlc/access/libscreen_plugin.la
 ${PLIST.sdl}lib/vlc/codec/libsdl_image_plugin.la
 ${PLIST.sdl}lib/vlc/audio_output/libaout_sdl_plugin.la
 ${PLIST.sdl}lib/vlc/video_output/libvout_sdl_plugin.la
+${PLIST.arts}lib/vlc/audio_output/libarts_plugin.la
 ${PLIST.esound}lib/vlc/audio_output/libesd_plugin.la
 ${PLIST.pulseaudio}lib/vlc/audio_output/libpulse_plugin.la
 ${PLIST.altivec}lib/vlc/video_chroma/libi420_yuy2_altivec_plugin.la
