@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/12/30 01:39:25 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/03 06:55:07 adam Exp $
 lib/mailman/Mailman/Archiver/Archiver.py
 lib/mailman/Mailman/Archiver/Archiver.pyc
 lib/mailman/Mailman/Archiver/HyperArch.py
@@ -445,50 +445,6 @@ lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_CN/LC_MESSAGES/mailman.po
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.mo
 lib/mailman/messages/zh_TW/LC_MESSAGES/mailman.po
-lib/mailman/pythonlib/email/Charset.py
-lib/mailman/pythonlib/email/Charset.pyc
-lib/mailman/pythonlib/email/Encoders.py
-lib/mailman/pythonlib/email/Encoders.pyc
-lib/mailman/pythonlib/email/Errors.py
-lib/mailman/pythonlib/email/Errors.pyc
-lib/mailman/pythonlib/email/Generator.py
-lib/mailman/pythonlib/email/Generator.pyc
-lib/mailman/pythonlib/email/Header.py
-lib/mailman/pythonlib/email/Header.pyc
-lib/mailman/pythonlib/email/Iterators.py
-lib/mailman/pythonlib/email/Iterators.pyc
-lib/mailman/pythonlib/email/MIMEAudio.py
-lib/mailman/pythonlib/email/MIMEAudio.pyc
-lib/mailman/pythonlib/email/MIMEBase.py
-lib/mailman/pythonlib/email/MIMEBase.pyc
-lib/mailman/pythonlib/email/MIMEImage.py
-lib/mailman/pythonlib/email/MIMEImage.pyc
-lib/mailman/pythonlib/email/MIMEMessage.py
-lib/mailman/pythonlib/email/MIMEMessage.pyc
-lib/mailman/pythonlib/email/MIMEMultipart.py
-lib/mailman/pythonlib/email/MIMEMultipart.pyc
-lib/mailman/pythonlib/email/MIMENonMultipart.py
-lib/mailman/pythonlib/email/MIMENonMultipart.pyc
-lib/mailman/pythonlib/email/MIMEText.py
-lib/mailman/pythonlib/email/MIMEText.pyc
-lib/mailman/pythonlib/email/Message.py
-lib/mailman/pythonlib/email/Message.pyc
-lib/mailman/pythonlib/email/Parser.py
-lib/mailman/pythonlib/email/Parser.pyc
-lib/mailman/pythonlib/email/Utils.py
-lib/mailman/pythonlib/email/Utils.pyc
-lib/mailman/pythonlib/email/__init__.py
-lib/mailman/pythonlib/email/__init__.pyc
-lib/mailman/pythonlib/email/_compat21.py
-lib/mailman/pythonlib/email/_compat21.pyc
-lib/mailman/pythonlib/email/_compat22.py
-lib/mailman/pythonlib/email/_compat22.pyc
-lib/mailman/pythonlib/email/_parseaddr.py
-lib/mailman/pythonlib/email/_parseaddr.pyc
-lib/mailman/pythonlib/email/base64MIME.py
-lib/mailman/pythonlib/email/base64MIME.pyc
-lib/mailman/pythonlib/email/quopriMIME.py
-lib/mailman/pythonlib/email/quopriMIME.pyc
 lib/mailman/pythonlib/japanese/__init__.py
 lib/mailman/pythonlib/japanese/__init__.pyc
 lib/mailman/pythonlib/japanese/aliases/__init__.py
@@ -2163,6 +2119,7 @@ lib/mailman/tests/bounces/qmail_02.txt
 lib/mailman/tests/bounces/qmail_03.txt
 lib/mailman/tests/bounces/qmail_04.txt
 lib/mailman/tests/bounces/qmail_05.txt
+lib/mailman/tests/bounces/qmail_06.txt
 lib/mailman/tests/bounces/sendmail_01.txt
 lib/mailman/tests/bounces/simple_01.txt
 lib/mailman/tests/bounces/simple_02.txt
@@ -2197,6 +2154,9 @@ lib/mailman/tests/bounces/simple_30.txt
 lib/mailman/tests/bounces/simple_31.txt
 lib/mailman/tests/bounces/simple_32.txt
 lib/mailman/tests/bounces/simple_33.txt
+lib/mailman/tests/bounces/simple_34.txt
+lib/mailman/tests/bounces/simple_35.txt
+lib/mailman/tests/bounces/simple_36.txt
 lib/mailman/tests/bounces/sina_01.txt
 lib/mailman/tests/bounces/smtp32_01.txt
 lib/mailman/tests/bounces/smtp32_02.txt
@@ -2313,7 +2273,6 @@ share/examples/rc.d/mailman
 @dirrm lib/mailman/pythonlib/japanese/c
 @dirrm lib/mailman/pythonlib/japanese/aliases
 @dirrm lib/mailman/pythonlib/japanese
-@dirrm lib/mailman/pythonlib/email
 @dirrm lib/mailman/pythonlib
 @dirrm lib/mailman/messages/zh_TW/LC_MESSAGES
 @dirrm lib/mailman/messages/zh_TW
