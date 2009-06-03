@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8154 2009/06/02 08:36:27 obache Exp $
+$NetBSD: TODO,v 1.8155 2009/06/03 17:34:57 hasso Exp $
 
 Suggested new packages
 ======================
@@ -635,8 +635,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gcin-1.4.1
 	o gcombust-0.1.55
 	o gcpio-2.7
-	o gdal-1.6.1
-	o gdal-lib-1.4.4
 	o gdb-6.8
 	o gdeskcal-1.01
 	o gdm-2.26.1 [GNOME 2.26]
