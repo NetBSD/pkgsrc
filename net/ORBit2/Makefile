@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2009/05/26 16:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2009/06/03 12:40:32 obache Exp $
 #
 
 DISTNAME=		ORBit2-2.14.17
@@ -48,9 +48,12 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/idl$$/ \
 				{ print "@unexec $${RMDIR} %D/" $$2 \
 				  " 2>/dev/null || $${TRUE}"; next; }
 
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
+
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
