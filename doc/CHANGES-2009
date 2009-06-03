@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2148 2009/06/03 07:08:21 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2149 2009/06/03 07:10:47 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2873,3 +2873,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated lang/sun-jre6 to 6u14 [christos 2009-06-02]
 	Updated lang/sun-jdk6 to 6u14 [christos 2009-06-02]
 	Updated mail/mailman to 2.1.12 [adam 2009-06-03]
+	Updated mail/dovecot to 1.1.16 [ghen 2009-06-03]
