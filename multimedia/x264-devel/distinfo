@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2009/05/25 20:56:38 drochner Exp $
+$NetBSD: distinfo,v 1.18 2009/06/03 09:08:31 drochner Exp $
 
 SHA1 (x264-snapshot-20090326-2245.tar.bz2) = 4d28a02db4586986162368c18e607ca3b10b3453
 RMD160 (x264-snapshot-20090326-2245.tar.bz2) = fc6581a33970f012c660489eb2ae48f8ac9c151d
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 0659b7f6ad1195c59c6298bc270b15990b1a8204
 SHA1 (patch-ak) = d8362f3beadcc5cc19684a12b3794d542f502f14
 SHA1 (patch-am) = 07418547d05fd6c6e1703725a4cc5f1ddc36dca1
 SHA1 (patch-an) = 69e2a8f6167fd2410c69e4df3e3a071c8c0c835f
+SHA1 (patch-ao) = 27866ab362625c090d40fbea423c24852cdd3598
