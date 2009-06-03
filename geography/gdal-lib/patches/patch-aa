@@ -1,20 +1,22 @@
-$NetBSD: patch-aa,v 1.2 2007/02/23 22:22:38 gdt Exp $
+$NetBSD: patch-aa,v 1.3 2009/06/03 17:28:31 hasso Exp $
 
---- configure.orig	2007-02-16 08:57:36.000000000 -0700
-+++ configure
-@@ -28245,13 +28245,13 @@ fi
+--- GNUmakefile.orig	2009-06-03 16:37:58 +0300
++++ GNUmakefile	2009-06-03 16:38:31 +0300
+@@ -148,7 +148,7 @@ man:
+ # Generate man pages
+ 	(cat Doxyfile ; echo "ENABLED_SECTIONS=man"; echo "INPUT=doc ogr apps"; echo "FILE_PATTERNS=*utilities.dox gdalwarp.cpp"; echo "GENERATE_HTML=NO"; echo "GENERATE_MAN=YES") | doxygen -
  
- echo "$as_me:$LINENO: checking for special pymod link hacks" >&5
- echo $ECHO_N "checking for special pymod link hacks... $ECHO_C" >&6
--if test ! -z "`uname | grep Darwin`" -a ${with_libtool} == no ; then
-+if test ! -z "`uname | grep Darwin`" -a ${with_libtool} = no ; then
-     echo "$as_me:$LINENO: result: darwin-nonlibtool" >&5
- echo "${ECHO_T}darwin-nonlibtool" >&6
+-all:	default ogr-all
++all:	default ogr-all man
  
-     PY_LD_SHARED='g++ -bundle -framework Python'
-     PY_SO_EXT='so'
--elif test ! -z "`uname | grep Darwin`" -a ${with_libtool} == yes ; then
-+elif test ! -z "`uname | grep Darwin`" -a ${with_libtool} = yes ; then
-     echo "$as_me:$LINENO: result: darwin-libtool" >&5
- echo "${ECHO_T}darwin-libtool" >&6
+ install-docs:
+ 	(cd ogr; $(MAKE) install-docs)
+@@ -162,7 +162,7 @@ install-man:
+ web-update:	docs
+ 	cp html/*.* $(WEB_DIR)
  
+-install:	default install-actions
++install:	default install-actions install-man
+ 
+ install-actions: install-lib
+ 	$(INSTALL_DIR) $(DESTDIR)$(INST_BIN)
