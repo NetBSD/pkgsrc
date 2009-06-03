@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2009/06/03 06:03:50 hasso Exp $
+
+--- configure.ac.orig	2009-06-03 05:59:44 +0300
++++ configure.ac	2009-06-03 06:03:54 +0300
+@@ -333,6 +333,10 @@ AC_CHECK_FUNCS([isnan _isnan],[have_isna
+ AC_CHECK_FUNCS([finite _finite isfinite],[have_finite=yes])
+ AC_CHECK_FUNCS([copysign _copysign],[have_copysign=yes])
+ 
++if test $have_isnan = no; then
++    AC_CHECK_DECLS([isnan],[have_isnan=yes],,[#include <math.h>])
++fi
++
+ dnl -- when using double isnan/finite must be available
+ if test $ac_cv_sizeof_float -ne 8; then
+     test $have_isnan = no && missing_funcs="$missing_funcs isnan";
