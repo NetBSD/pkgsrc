@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2009/05/26 16:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.131 2009/06/03 12:40:32 obache Exp $
 
 DISTNAME=		pango-1.24.2
 CATEGORIES=		devel fonts
@@ -39,6 +39,10 @@ PLIST_VARS+=		carbon
 
 .include "options.mk"
 
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=	gtkdoc-rebase
+
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.17.3
 .include "../../devel/glib2/buildlink3.mk"
 # XXX: later maybe add an option for libthai to provide pango-thai-lang.la?
@@ -50,5 +54,4 @@ BUILDLINK_API_DEPENDS.fontconfig+=	fontconfig>=2.5.0
 .include "../../fonts/fontconfig/buildlink3.mk"
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

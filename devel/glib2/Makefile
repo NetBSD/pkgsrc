@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.160 2009/05/26 16:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.161 2009/06/03 12:40:32 obache Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -74,10 +74,9 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
 .endif
 
-# Workaround for Bug#562310
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
 TOOLS_NOOP+=		gtkdoc-rebase
-.endif
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=yes
@@ -107,5 +106,4 @@ CONFIGURE_ARGS+=	--disable-threads
 BUILDLINK_API_DEPENDS.pcre+= pcre>=7.4nb1
 .include "../../devel/pcre/buildlink3.mk"
 
-.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
