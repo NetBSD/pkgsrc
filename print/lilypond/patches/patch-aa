@@ -1,14 +1,12 @@
-$NetBSD: patch-aa,v 1.7 2008/06/18 20:29:32 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2009/06/03 19:52:33 hasso Exp $
 
---- configure.orig	2007-09-19 16:21:59.000000000 +0200
-+++ configure
-@@ -9213,7 +9213,8 @@ echo $ECHO_N "checking $r version... $EC
- echo "${ECHO_T}$ver" >&6; }
-     if test "$num" -lt "$req"; then
+--- scripts/auxiliar/build-profile.sh.orig
++++ scripts/auxiliar/build-profile.sh
+@@ -1,6 +1,6 @@
+ #!/bin/sh
  
--    eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 20050624 (installed: $ver)"\"`\"
-+    :
-+    #eval "REQUIRED"=\"`eval echo \"'$'REQUIRED\" \""$r >= 20050624 (installed: $ver)"\"`\"
+-if test "$1" == "--fresh"; then
++if test "$1" = "--fresh"; then
+   fresh=yes
+ fi
  
-     fi
-     vervar="`echo FONTFORGE | tr 'a-z' 'A-Z'`_VERSION"

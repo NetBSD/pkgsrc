@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2009/06/03 19:52:33 hasso Exp $
+
+--- scripts/auxiliar/build-coverage.sh.orig
++++ scripts/auxiliar/build-coverage.sh
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if test "$1" == "--fresh"; then
++if test "$1" = "--fresh"; then
+   fresh=yes
+ fi
+ 
