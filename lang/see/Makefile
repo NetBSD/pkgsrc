@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/03 06:03:50 hasso Exp $
 #
 
 DISTNAME=	see-3.0.1376
@@ -15,11 +15,14 @@ INSTALLATION_DIRS+=	share/doc/see
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config perl
+USE_TOOLS+=		pkg-config perl aclocal autoconf automake
 
 CONFIGURE_ARGS+=	--with-readline
 
 PKGCONFIG_OVERRIDE+=	libsee/see.pc.in
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -vif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/USAGE.html ${DESTDIR}${PREFIX}/share/doc/see/
