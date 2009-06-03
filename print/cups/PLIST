@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2008/10/22 21:48:16 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/03 10:20:59 wiz Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -48,7 +48,7 @@ libexec/cups/filter/gziptoany
 libexec/cups/filter/hpgltops
 libexec/cups/filter/imagetops
 libexec/cups/filter/imagetoraster
-libexec/cups/filter/pdftops
+${PLIST.pdftops}libexec/cups/filter/pdftops
 libexec/cups/filter/pstops
 libexec/cups/filter/rastertodymo
 libexec/cups/filter/rastertoepson
@@ -134,6 +134,7 @@ share/cups/charmaps/iso-8859-6.txt
 share/cups/charmaps/iso-8859-7.txt
 share/cups/charmaps/iso-8859-8.txt
 share/cups/charmaps/iso-8859-9.txt
+share/cups/charmaps/jis-x0213.txt
 share/cups/charmaps/koi8-r.txt
 share/cups/charmaps/koi8-u.txt
 share/cups/charmaps/mac-roman.txt
