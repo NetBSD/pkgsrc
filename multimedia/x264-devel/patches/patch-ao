@@ -1,0 +1,22 @@
+$NetBSD: patch-ao,v 1.1 2009/06/03 09:08:31 drochner Exp $
+
+--- common/ppc/pixel.c.orig	2009-03-26 22:45:08.000000000 +0100
++++ common/ppc/pixel.c
+@@ -1905,7 +1905,7 @@ static uint64_t pixel_hadamard_ac_altive
+     vec_u16_t addabs67 = vec_add( VEC_ABSOLUTE(pix16_d6), VEC_ABSOLUTE(pix16_d7) );
+ 
+     vec_u16_t sum4_v = vec_add(vec_add(addabs01, addabs23), vec_add(addabs45, addabs67));
+-    vec_ste(vec_sums(vec_sum4s(sum4_v, zero_s32v), zero_s32v), 12, sum4_tab);
++    vec_ste(vec_sums(vec_sum4s((vec_s16_t)sum4_v, zero_s32v), zero_s32v), 12, sum4_tab);
+ 
+     vec_s16_t tmpi0 = vec_add(pix16_d0, pix16_d4);
+     vec_s16_t tmpi4 = vec_sub(pix16_d0, pix16_d4);
+@@ -1933,7 +1933,7 @@ static uint64_t pixel_hadamard_ac_altive
+                                   VEC_ABSOLUTE( vec_sub(pix16_d3, pix16_d7) ) );
+ 
+     vec_u16_t sum8_v = vec_add( vec_add(addsum04, addsum15), vec_add(addsum26, addsum37) );
+-    vec_ste(vec_sums( vec_sum4s(sum8_v, zero_s32v), zero_s32v), 12, sum8_tab);
++    vec_ste(vec_sums(vec_sum4s((vec_s16_t)sum8_v, zero_s32v), zero_s32v), 12, sum8_tab);
+ 
+     int sum8 = sum8_tab[3];
+ 
