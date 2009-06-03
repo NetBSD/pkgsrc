@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2009/01/07 07:24:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.49 2009/06/03 10:13:26 wiz Exp $
 # used by www/links/Makefile
 
 DISTNAME=	links-2.2
@@ -13,7 +13,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--enable-javascript
 
 PLIST_SRC=		${.CURDIR}/../../www/links/PLIST
 PATCHDIR=		${.CURDIR}/../../www/links/patches
