@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2009/05/20 00:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2009/06/03 19:52:33 hasso Exp $
 #
 
-DISTNAME=	lilypond-2.10.33
-PKGREVISION=	3
+DISTNAME=	lilypond-2.12.2
 CATEGORIES=	print
-MASTER_SITES=	http://lilypond.org/download/sources/v2.10/
+MASTER_SITES=	http://lilypond.org/download/sources/v2.12/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/web/
@@ -24,7 +23,7 @@ MAKE_FILE=		GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
 
-TEXINFO_REQD=		4.8
+TEXINFO_REQD=		4.11
 GCC_REQD+=		3.0.5
 
 GNU_CONFIGURE_INFODIR=	${PREFIX}/${PKGINFODIR}
