@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/05/27 06:11:23 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2009/06/03 06:09:11 minskim Exp $
 
 --- Makefile.orig	2009-04-27 17:38:18.000000000 +0200
 +++ Makefile
@@ -28,3 +28,15 @@ $NetBSD: patch-aa,v 1.3 2009/05/27 06:11:23 minskim Exp $
  .endif
  
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
+@@ -152,7 +158,7 @@ update-index.html:
+ 		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
+ 
+ install:	all
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/bin
+-		${INSTALLBIN} ${PROG} ${DESTDIR}${PREFIX}/bin/
+-		${INSTALLDIR} ${DESTDIR}${PREFIX}/man/man1
+-		${INSTALLMAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1/
++		${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
++		${BSD_INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin/
++		${BSD_INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/man/man1
++		${BSD_INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1/
