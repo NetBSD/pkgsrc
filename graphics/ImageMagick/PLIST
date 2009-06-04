@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2009/01/07 08:58:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.61 2009/06/04 12:50:58 adam Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -81,6 +81,7 @@ include/ImageMagick/magick/montage.h
 include/ImageMagick/magick/option.h
 include/ImageMagick/magick/paint.h
 include/ImageMagick/magick/pixel.h
+include/ImageMagick/magick/policy.h
 include/ImageMagick/magick/prepress.h
 include/ImageMagick/magick/profile.h
 include/ImageMagick/magick/property.h
@@ -135,8 +136,8 @@ lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/delegates.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/english.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/francais.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/locale.xml
+lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/policy.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-ghostscript.xml
-lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-solaris.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type-windows.xml
 lib/ImageMagick-${IM_MAJOR_LIB_VER}/config/type.xml
 lib/libMagick++.la
@@ -183,20 +184,16 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_clipped.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_darker.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_lin.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/bluebells_log.jpg
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/business+directory.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/button.gif
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/button_kmvu.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/configure.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/definitive-guide.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/difference.png
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/dogwaffle.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/examples.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/frame.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/fuzzy-magick.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/gaussian-blur.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/granite.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/imade_art2.jpg
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/ivedc.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/label.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.eps
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/logo.jpg
@@ -219,7 +216,6 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/images/smile.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sponsor.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/sprite.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/t-shirt.png
-share/doc/ImageMagick-${IM_MAJOR_VER}/images/travelsur.gif
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/tricks.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/wand.ico
 share/doc/ImageMagick-${IM_MAJOR_VER}/images/white-highlight.png
@@ -255,6 +251,7 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/README.txt
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/STL.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/TypeMetric.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/index.html
+share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/magick.css
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/montage-sample-framed.jpg
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/right_triangle.png
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++/thumbnail-anatomy-framed.fig
