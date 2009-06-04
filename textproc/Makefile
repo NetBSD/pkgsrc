@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.482 2009/06/01 18:50:24 sno Exp $
+# $NetBSD: Makefile,v 1.483 2009/06/04 19:34:06 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -240,8 +240,8 @@ SUBDIR+=	p5-String-CRC32
 SUBDIR+=	p5-String-Koremutake
 SUBDIR+=	p5-String-ShellQuote
 SUBDIR+=	p5-Template-Declare
-SUBDIR+=	p5-Template-Plugin-Number-Format
 SUBDIR+=	p5-Template-Plugin-Latex
+SUBDIR+=	p5-Template-Plugin-Number-Format
 SUBDIR+=	p5-Text-Aspell
 SUBDIR+=	p5-Text-Autoformat
 SUBDIR+=	p5-Text-Balanced
