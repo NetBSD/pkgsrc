@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/06/04 10:57:59 drochner Exp $
+
+--- Merkaartor.pro.orig	2009-06-03 19:58:54.000000000 +0200
++++ Merkaartor.pro
+@@ -85,7 +85,7 @@ BINTRANSLATIONS += \
+ 	translations/merkaartor_ar.qm \
+ 	translations/merkaartor_cs.qm \
+ 	translations/merkaartor_de.qm \
+-	translations/merkaartor_es.ts \
++	translations/merkaartor_es.qm \
+ 	translations/merkaartor_fr.qm \
+ 	translations/merkaartor_it.qm \
+ 	translations/merkaartor_pl.qm \
