@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2156 2009/06/04 08:52:11 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2157 2009/06/04 12:55:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2881,3 +2881,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/acroread8 to 8.1.4 [obache 2009-06-04]
 	Updated print/acroread8 to 8.1.5 [obache 2009-06-04]
 	Updated www/apache22 to 2.2.11nb4 [tron 2009-06-04]
+	Updated graphics/ImageMagick to 6.5.3.2 [adam 2009-06-04]
