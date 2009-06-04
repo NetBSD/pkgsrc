@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/29 09:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/04 09:56:20 hasso Exp $
 #
 
 DISTNAME=	xcb-proto-1.5
@@ -13,6 +13,8 @@ COMMENT=	XCB protocol descriptions (in XML)
 
 CONFLICTS+=	xcb-proto<1.4nb1
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
