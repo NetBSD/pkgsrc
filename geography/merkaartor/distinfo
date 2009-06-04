@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/04 10:57:59 drochner Exp $
+
+SHA1 (merkaartor-0.13.2.tar.bz2) = e8e0d006ba6a4859425cccefacbf2bfc4352d883
+RMD160 (merkaartor-0.13.2.tar.bz2) = 809139ef9a9361882802a813b0a90ba1988e2eac
+Size (merkaartor-0.13.2.tar.bz2) = 3010664 bytes
+SHA1 (patch-aa) = 971072299821af8388923d66c90ba445d804319e
