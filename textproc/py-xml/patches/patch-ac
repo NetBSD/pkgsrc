@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2009/06/04 09:31:04 hasso Exp $
+
+--- ./xml/xpath/ParsedAbbreviatedRelativeLocationPath.py.orig	2009-06-04 12:06:29 +0300
++++ ./xml/xpath/ParsedAbbreviatedRelativeLocationPath.py	2009-06-04 12:06:43 +0300
+@@ -28,8 +28,8 @@ class ParsedAbbreviatedRelativeLocationP
+         self._right = right
+         nt = ParsedNodeTest.ParsedNodeTest('node','')
+         ppl = ParsedPredicateList.ParsedPredicateList([])
+-        as = ParsedAxisSpecifier.ParsedAxisSpecifier('descendant-or-self')
+-        self._middle = ParsedStep.ParsedStep(as, nt, ppl)
++        pas = ParsedAxisSpecifier.ParsedAxisSpecifier('descendant-or-self')
++        self._middle = ParsedStep.ParsedStep(pas, nt, ppl)
+ 
+     def evaluate(self, context):
+         res = []
