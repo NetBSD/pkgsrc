@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2009/05/20 12:00:17 tnn Exp $
+$NetBSD: distinfo,v 1.27 2009/06/04 00:05:19 reed Exp $
 
 SHA1 (inkscape-0.46.tar.bz2) = ca68fc9bf539d7bcfc31f36d24f884255b2154e7
 RMD160 (inkscape-0.46.tar.bz2) = c90713493557bdc17515de1287c9af401a4a3e26
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 6b6000f3940ec6db9404a206f9757928c1d5740b
 SHA1 (patch-ah) = 964e51dca7e1212037a9f0122fa0ef812bf8f46c
 SHA1 (patch-ai) = 56271685b207f4056952929895f1fdd2ec74e3ef
 SHA1 (patch-aj) = ae258d2b4f3d5bdbfbc6d76d13361b6e672de73c
+SHA1 (patch-ak) = 7ce80942f955a63dd6f6e772cbf03cf7b89db2c0
