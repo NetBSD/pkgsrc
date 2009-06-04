@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2161 2009/06/04 16:35:18 joerg Exp $
+$NetBSD: CHANGES-2009,v 1.2162 2009/06/04 18:40:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2887,3 +2887,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/postfix-current to 2.7.20090528 [martti 2009-06-04]
 	Updated mail/postfix to 2.6.2 [martti 2009-06-04]
 	Updated print/epdfview to 0.1.7 [joerg 2009-06-04]
+	Updated security/gsasl to 1.1 [adam 2009-06-04]
