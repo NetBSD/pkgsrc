@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2009/06/04 08:24:45 obache Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/04 08:32:46 obache Exp $
 
 DISTNAME=	acroread8	# overridden below
-PKGNAME=	acroread8-8.1.4
+PKGNAME=	acroread8-8.1.5
 CATEGORIES=	print
-MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.4/enu/
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.5/enu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
@@ -34,7 +34,7 @@ EMUL_REQD=		suse>=10.0
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=	AdobeReader_enu-8.1.4-1.i486
+DISTNAME=	AdobeReader_enu-8.1.5-1.i486
 PLATFORM=	intellinux
 .else
 PLATFORM=	unknown
