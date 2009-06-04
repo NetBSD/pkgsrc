@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.39 2009/06/04 08:57:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.40 2009/06/04 16:50:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -123,3 +123,5 @@ Pullup ticket #2783 - requested by joerg
 mk/flavor/pkg: fix update of packages that need to be preserved
 Pullup ticket #2780 - requested by tron
 cscope: security update
+Pullup ticket #2784 - requested by markd
+kdegraphics3: security patch
