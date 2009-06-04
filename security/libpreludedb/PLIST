@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/08/27 22:37:09 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/04 11:19:01 hasso Exp $
 bin/libpreludedb-config
 bin/preludedb-admin
 include/libpreludedb/preludedb-error.h
@@ -12,10 +12,10 @@ include/libpreludedb/preludedb.h
 lib/libpreludedb.la
 lib/libpreludedb/plugins/formats/classic.la
 lib/libpreludedb/plugins/sql/mysql.la
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/.packlist
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.bs
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.so
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PreludeDB.pm
+lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/.packlist
+lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.bs
+lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB/PreludeDB.so
+lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/PreludeDB.pm
 ${PYSITELIB}/_preludedb.so
 ${PYSITELIB}/preludedb.py
 ${PYSITELIB}/preludedb.pyc
@@ -68,7 +68,7 @@ share/libpreludedb/classic/sqlite-update-14-6.sql
 @dirrm share/gtk-doc/html/libpreludedb
 @dirrm share/gtk-doc/html
 @dirrm share/gtk-doc
-@dirrm lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB
+@dirrm lib/perl5/site_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/PreludeDB
 @dirrm lib/libpreludedb/plugins/sql
 @dirrm lib/libpreludedb/plugins/formats
 @dirrm lib/libpreludedb/plugins
