@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.10 2009/06/04 07:40:58 hasso Exp $
+
+--- libffi/configure.orig	2009-06-03 10:15:20 +0300
++++ libffi/configure	2009-06-03 10:16:38 +0300
+@@ -9623,7 +9623,7 @@ case "$host" in
+ 	TARGET=PA_HPUX; TARGETDIR=pa
+ 	;;
+ 
+-  i386-*-freebsd* | i386-*-openbsd*)
++  i386-*-freebsd* | i386-*-openbsd* | i386-*-dragonfly*)
+ 	TARGET=X86_FREEBSD; TARGETDIR=x86
+ 	;;
+   i?86-win32* | i?86-*-cygwin* | i?86-*-mingw*)
