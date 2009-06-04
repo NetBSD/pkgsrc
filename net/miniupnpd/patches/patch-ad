@@ -1,0 +1,21 @@
+$NetBSD: patch-ad,v 1.1 2009/06/04 07:54:26 hasso Exp $
+
+--- pf/obsdrdr.c.orig	2008-08-24 22:54:57 +0300
++++ pf/obsdrdr.c	2009-06-04 10:35:24 +0300
+@@ -7,11 +7,16 @@
+ 
+ #include <sys/types.h>
+ #include <sys/socket.h>
++#include <sys/param.h>
+ #include <net/if.h>
+ #include <netinet/in.h>
+ #include <netinet/tcp.h>
+ #include <arpa/inet.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <unistd.h>
