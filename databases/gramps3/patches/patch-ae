@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.2 2008/09/18 17:11:01 drochner Exp $
+$NetBSD: patch-ae,v 1.3 2009/06/04 17:29:41 drochner Exp $
 
---- src/gen/db/dbdir.py.orig	2008-05-17 22:14:29.000000000 +0200
+--- src/gen/db/dbdir.py.orig	2008-12-07 07:17:53.000000000 +0100
 +++ src/gen/db/dbdir.py
 @@ -36,7 +36,7 @@ import time
  from types import InstanceType
@@ -11,39 +11,3 @@ $NetBSD: patch-ae,v 1.2 2008/09/18 17:11:01 drochner Exp $
  import logging
  
  _LOG = logging.getLogger(".GrampsDb")
-@@ -480,7 +480,7 @@ class GrampsDBDir(GrampsDbBase, UpdateCa
-         # These env settings are only needed for Txn environment
-         self.env.set_lk_max_locks(25000)
-         self.env.set_lk_max_objects(25000)
--        self.env.set_flags(db.DB_LOG_AUTOREMOVE, 1)  # clean up unused logs
-+        self.env.set_flags(db.DB_LOG_AUTO_REMOVE, 1)  # clean up unused logs
- 
-         # The DB_PRIVATE flag must go if we ever move to multi-user setup
-         env_flags = db.DB_CREATE | db.DB_PRIVATE |\
-@@ -1556,7 +1556,7 @@ class GrampsDBDir(GrampsDbBase, UpdateCa
-         transaction = BdbTransaction(msg, self.undodb, batch, no_magic)
-         if transaction.batch:
-             self.env.txn_checkpoint()
--            self.env.set_flags(db.DB_TXN_NOSYNC, 1)      # async txn
-+#            self.env.set_flags(db.DB_TXN_NOSYNC, 1)      # async txn
- 
-             if self.secondary_connected and not transaction.no_magic:
-                 # Disconnect unneeded secondary indices
-@@ -1594,7 +1594,7 @@ class GrampsDBDir(GrampsDbBase, UpdateCa
-         self.txn.commit()
-         if transaction.batch:
-             self.env.txn_checkpoint()
--            self.env.set_flags(db.DB_TXN_NOSYNC, 0)      # sync txn
-+#            self.env.set_flags(db.DB_TXN_NOSYNC, 0)      # sync txn
- 
-             if not transaction.no_magic:
-                 # create new secondary indices to replace the ones removed
-@@ -1697,7 +1697,7 @@ class GrampsDBDir(GrampsDbBase, UpdateCa
-         # These env settings are only needed for Txn environment
-         self.env.set_lk_max_locks(25000)
-         self.env.set_lk_max_objects(25000)
--        self.env.set_flags(db.DB_LOG_AUTOREMOVE, 1)  # clean up unused logs
-+        self.env.set_flags(db.DB_LOG_AUTO_REMOVE, 1)  # clean up unused logs
- 
-         # The DB_PRIVATE flag must go if we ever move to multi-user setup
-         env_flags = db.DB_CREATE | db.DB_PRIVATE |\
