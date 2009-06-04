@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.9 2009/06/04 19:15:47 tron Exp $
+
+Deal with the kqueue(2) API differences between NetBSD and the other BSDs.
+
+--- src/torrent/poll_kqueue.cc.orig	2008-05-07 13:19:13.000000000 +0100
++++ src/torrent/poll_kqueue.cc	2009-06-04 18:10:50.000000000 +0100
+@@ -57,6 +57,12 @@
+ 
+ #ifdef USE_KQUEUE
+ 
++#ifdef __NetBSD__
++typedef uintptr_t kevent_udata_t;
++#else
++typedef void *kevent_udata_t;
++#endif
++
+ inline uint32_t
+ PollKQueue::event_mask(Event* e) {
+   return m_table[e->file_descriptor()];
+@@ -83,7 +89,7 @@
+ 
+   struct kevent* itr = m_changes + (m_changedEvents++);
+ 
+-  EV_SET(itr, event->file_descriptor(), mask, op, 0, 0, event);
++  EV_SET(itr, event->file_descriptor(), mask, op, 0, 0, (kevent_udata_t)event);
+ }
+ 
+ PollKQueue*
+@@ -146,10 +152,10 @@
+ 
+     // Also check current mask.
+ 
+-    if (itr->filter == EVFILT_READ && itr->udata != NULL && event_mask((Event*)itr->udata) & flag_read)
++    if (itr->filter == EVFILT_READ && itr->udata != (kevent_udata_t)NULL && event_mask((Event*)itr->udata) & flag_read)
+       ((Event*)itr->udata)->event_read();
+ 
+-    if (itr->filter == EVFILT_WRITE && itr->udata != NULL && event_mask((Event*)itr->udata) & flag_write)
++    if (itr->filter == EVFILT_WRITE && itr->udata != (kevent_udata_t)NULL && event_mask((Event*)itr->udata) & flag_write)
+       ((Event*)itr->udata)->event_write();
+   }
+ 
+@@ -173,10 +179,12 @@
+     throw internal_error("PollKQueue::close(...) called but the file descriptor is active");
+ 
+   for (struct kevent *itr = m_events, *last = m_events + m_waitingEvents; itr != last; ++itr)
+-    if (itr->udata == event)
+-      itr->udata = NULL;
++    if (itr->udata == (kevent_udata_t)event)
++      itr->udata = (kevent_udata_t)NULL;
++
++  struct kevent *oitr = m_changes;
+ 
+-  m_changedEvents = std::remove_if(m_changes, m_changes + m_changedEvents, rak::equal(event, rak::mem_ref(&kevent::udata))) - m_changes;
++  m_changedEvents = std::remove_if(m_changes, m_changes + m_changedEvents, rak::equal((kevent_udata_t)event, rak::mem_ref(&kevent::udata))) - m_changes;
+ }
+ 
+ // Use custom defines for EPOLL* to make the below code compile with
