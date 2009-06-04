@@ -1,0 +1,35 @@
+$NetBSD: patch-ba,v 1.1 2009/06/04 08:51:52 tron Exp $
+
+Patch for CVE-2009-1195 taken from:
+
+http://svn.apache.org/viewvc/httpd/httpd/trunk/include/http_core.h?r1=739382&r2=772997&pathrev=772997
+
+--- include/http_core.h.orig	2008-02-26 19:47:51.000000000 +0000
++++ include/http_core.h	2009-06-04 09:39:58.000000000 +0100
+@@ -65,7 +65,7 @@
+ #define OPT_NONE 0
+ /** Indexes directive */
+ #define OPT_INDEXES 1
+-/**  Includes directive */
++/** SSI is enabled without exec= permission  */
+ #define OPT_INCLUDES 2
+ /**  FollowSymLinks directive */
+ #define OPT_SYM_LINKS 4
+@@ -73,14 +73,14 @@
+ #define OPT_EXECCGI 8
+ /**  directive unset */
+ #define OPT_UNSET 16
+-/**  IncludesNOEXEC directive */
+-#define OPT_INCNOEXEC 32
++/**  SSI exec= permission is permitted, iff OPT_INCLUDES is also set */
++#define OPT_INC_WITH_EXEC 32
+ /** SymLinksIfOwnerMatch directive */
+ #define OPT_SYM_OWNER 64
+ /** MultiViews directive */
+ #define OPT_MULTI 128
+ /**  All directives */
+-#define OPT_ALL (OPT_INDEXES|OPT_INCLUDES|OPT_SYM_LINKS|OPT_EXECCGI)
++#define OPT_ALL (OPT_INDEXES|OPT_INCLUDES|OPT_INC_WITH_EXEC|OPT_SYM_LINKS|OPT_EXECCGI)
+ /** @} */
+ 
+ /**
