@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2153 2009/06/03 19:54:50 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2154 2009/06/04 08:25:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated shells/mksh to 38b [ahoka 2009-06-03]
 	Updated geography/gdal-lib to 1.6.1 [hasso 2009-06-03]
 	Updated print/lilypond to 2.12.2 [hasso 2009-06-03]
+	Updated print/acroread8 to 8.1.4 [obache 2009-06-04]
