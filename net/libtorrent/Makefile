@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2009/06/04 14:04:08 tron Exp $
+# $NetBSD: Makefile,v 1.33 2009/06/04 19:15:46 tron Exp $
 
 DISTNAME=	libtorrent-0.12.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	${HOMEPAGE:=downloads/}
 
@@ -21,7 +21,7 @@ GCC_REQD+=		3.3
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--with-kqueue
 .endif
 
