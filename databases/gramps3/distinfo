@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.3 2008/09/18 17:11:01 drochner Exp $
+$NetBSD: distinfo,v 1.4 2009/06/04 17:29:41 drochner Exp $
 
-SHA1 (gramps-3.0.1.tar.gz) = 371ffba136fe596a3a1a853cd63fd8cd68d0d02b
-RMD160 (gramps-3.0.1.tar.gz) = a76e88bc51e50ae52440cde0779e5b04657a8524
-Size (gramps-3.0.1.tar.gz) = 5932971 bytes
+SHA1 (gramps-3.1.1.tar.gz) = 1cfd0ffcec6507a0cb2ec4a703b7e8253ca38871
+RMD160 (gramps-3.1.1.tar.gz) = 56cd774a5145a629d136988d76b9571113729b42
+Size (gramps-3.1.1.tar.gz) = 6794185 bytes
 SHA1 (patch-aa) = 533b40da349023d63b17fffd24bc40b9b7c173ed
-SHA1 (patch-ab) = d10c2b4627c8566d2bc3a24a422daf49c367c123
+SHA1 (patch-ab) = 111d1b09152d75b04d5c577de445949c08b0f9ab
 SHA1 (patch-ac) = b20d68c4626ec4699880b2932728ddd713582ab5
 SHA1 (patch-ad) = 1eaaf42ecc527b797a1889945740a3fd1511aa12
-SHA1 (patch-ae) = b2d05c9a27d5f9d6e354db126c13b5ccf389ce0e
-SHA1 (patch-af) = fca8975e8db9841b23065a52b90e92a958077021
+SHA1 (patch-ae) = eca1ddafdf1532a44cf4f19662f18656fa376302
+SHA1 (patch-ag) = 8870e1fa3b8cc9bc32d7b9b36d2eb3b22903e910
 SHA1 (patch-ba) = 5e64b42eda21faec1fdd5fdd1020f5e73eea73ea
-SHA1 (patch-bb) = 74f6c13b93618ba7e6d80ca0560f950da4ee476d
+SHA1 (patch-bb) = 5627f005dc239ffe9fc6d7bdaeac95cd2cdc687d
 SHA1 (patch-bc) = 0f42bdec326945b1cc48ee120bc744be85b176ef

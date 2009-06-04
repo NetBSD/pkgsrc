@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/06/18 22:21:13 gdt Exp $
+$NetBSD: patch-ab,v 1.2 2009/06/04 17:29:41 drochner Exp $
 
---- src/GrampsDbUtils/_GrampsBSDDB.py.orig	2008-05-17 16:15:28.000000000 -0400
-+++ src/GrampsDbUtils/_GrampsBSDDB.py
-@@ -35,7 +35,7 @@ import cPickle as pickle
- import os
- import time
- from gettext import gettext as _
--from bsddb import dbshelve, db
-+from bsddb3 import dbshelve, db
- import logging
- __LOG = logging.getLogger(".GrampsDb")
- 
+--- src/DbManager.py.orig	2009-03-10 07:13:34.000000000 +0100
++++ src/DbManager.py
+@@ -129,7 +129,7 @@ class CLIDbManager:
+         Returns (people_count, version_number) of current DB.
+         Returns ("Unknown", "Unknown") if invalid DB or other error.
+         """
+-        from bsddb import dbshelve, db
++        from bsddb3 import dbshelve, db
+         from gen.db import META, PERSON_TBL
+         env = db.DBEnv()
+         flags = db.DB_CREATE | db.DB_PRIVATE |\
