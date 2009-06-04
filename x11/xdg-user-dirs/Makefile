@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/16 19:06:56 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/04 11:40:24 hasso Exp $
 #
 
 DISTNAME=	xdg-user-dirs-0.10
@@ -11,6 +11,7 @@ COMMENT=	Tool to manage "well known" user directories
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 
 EGDIR=	${PREFIX}/share/examples/xdg
 
@@ -19,4 +20,5 @@ CONF_FILES+=	${EGDIR}/user-dirs.conf \
 CONF_FILES+=	${EGDIR}/user-dirs.defaults \
 		${PKG_SYSCONFDIR}/xdg/user-dirs.defaults
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
