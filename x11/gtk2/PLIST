@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.63 2009/04/16 18:54:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.64 2009/06/04 11:16:56 drochner Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -319,11 +319,6 @@ ${PLIST.quartz}lib/pkgconfig/gtk+-quartz-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-x11-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-2.0.pc
 libdata/gtk-2.0/im-multipress.conf
-man/man1/gdk-pixbuf-csource.1
-man/man1/gdk-pixbuf-query-loaders.1
-man/man1/gtk-builder-convert.1
-man/man1/gtk-query-immodules-2.0.1
-man/man1/gtk-update-icon-cache.1
 share/aclocal/gtk-2.0.m4
 share/gtk-2.0/demo/alphatest.png
 share/gtk-2.0/demo/apple-red.png
