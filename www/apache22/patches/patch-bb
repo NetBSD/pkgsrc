@@ -1,0 +1,17 @@
+$NetBSD: patch-bb,v 1.1 2009/06/04 08:51:52 tron Exp $
+
+Patch for CVE-2009-1195 taken from:
+
+http://svn.apache.org/viewvc/httpd/httpd/trunk/modules/filters/mod_include.c?r1=758929&r2=772997&pathrev=772997
+
+--- modules/filters/mod_include.c.orig	2008-03-17 14:32:47.000000000 +0000
++++ modules/filters/mod_include.c	2009-06-04 09:41:46.000000000 +0100
+@@ -3573,7 +3573,7 @@
+         intern->seen_eos = 0;
+         intern->state = PARSE_PRE_HEAD;
+         ctx->flags = (SSI_FLAG_PRINTING | SSI_FLAG_COND_TRUE);
+-        if (ap_allow_options(r) & OPT_INCNOEXEC) {
++        if ((ap_allow_options(r) & OPT_INC_WITH_EXEC) == 0) {
+             ctx->flags |= SSI_FLAG_NO_EXEC;
+         }
+         intern->accessenable = conf->accessenable;
