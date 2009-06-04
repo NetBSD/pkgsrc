@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.11.2.2 2009/06/04 16:49:30 tron Exp $
+
+xpdf 3.02pl3 by way of poppler git 9f1312f3d7dfa7e536606a7c7296b7c876b11c00
+
+--- kpdf/xpdf/xpdf/JBIG2Stream.h.orig	2007-05-14 19:39:30.000000000 +1200
++++ kpdf/xpdf/xpdf/JBIG2Stream.h
+@@ -78,6 +78,10 @@ private:
+ 			     Guint *refSegs, Guint nRefSegs);
+   void readGenericRegionSeg(Guint segNum, GBool imm,
+ 			    GBool lossless, Guint length);
++  void mmrAddPixels(int a1, int blackPixels,
++		    int *codingLine, int *a0i, int w);
++  void mmrAddPixelsNeg(int a1, int blackPixels,
++		       int *codingLine, int *a0i, int w);
+   JBIG2Bitmap *readGenericBitmap(GBool mmr, int w, int h,
+ 				 int templ, GBool tpgdOn,
+ 				 GBool useSkip, JBIG2Bitmap *skip,
