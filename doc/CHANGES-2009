@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2162 2009/06/04 18:40:23 adam Exp $
+$NetBSD: CHANGES-2009,v 1.2163 2009/06/04 19:16:08 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2883,8 +2883,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/apache22 to 2.2.11nb4 [tron 2009-06-04]
 	Updated graphics/ImageMagick to 6.5.3.2 [adam 2009-06-04]
 	Updated databases/sqlite3 to 3.6.14.2 [adam 2009-06-04]
-	Updated net/libtorrent to 0.12.2nb1 [tron 2009-06-04]
 	Updated mail/postfix-current to 2.7.20090528 [martti 2009-06-04]
 	Updated mail/postfix to 2.6.2 [martti 2009-06-04]
 	Updated print/epdfview to 0.1.7 [joerg 2009-06-04]
 	Updated security/gsasl to 1.1 [adam 2009-06-04]
+	Updated net/libtorrent to 0.12.2nb2 [tron 2009-06-04]
