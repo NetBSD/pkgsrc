@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2160 2009/06/04 14:09:11 martti Exp $
+$NetBSD: CHANGES-2009,v 1.2161 2009/06/04 16:35:18 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libtorrent to 0.12.2nb1 [tron 2009-06-04]
 	Updated mail/postfix-current to 2.7.20090528 [martti 2009-06-04]
 	Updated mail/postfix to 2.6.2 [martti 2009-06-04]
+	Updated print/epdfview to 0.1.7 [joerg 2009-06-04]
