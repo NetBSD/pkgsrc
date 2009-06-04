@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.106 2009/05/20 07:45:40 martti Exp $
+# $NetBSD: Makefile,v 1.107 2009/06/04 14:08:06 martti Exp $
 
-DISTNAME=	postfix-2.7-20090519
-PKGNAME=	postfix-2.7.20090519
+DISTNAME=	postfix-2.7-20090528
+PKGNAME=	postfix-2.7.20090528
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
 MASTER_SITES+=	http://postfix.it-austria.net/releases/experimental/
