@@ -1,0 +1,16 @@
+$NetBSD: patch-em,v 1.1 2009/06/04 13:51:00 hasso Exp $
+
+--- layout/build/Makefile.in.orig	2009-06-04 15:19:02 +0300
++++ layout/build/Makefile.in	2009-06-04 15:20:14 +0300
+@@ -240,6 +240,11 @@ EXTRA_DSO_LDOPTS += \
+ 	$(NULL)
+ endif
+ 
++ifdef MOZ_ENABLE_XFT
++EXTRA_DSO_LDOPTS += $(MOZ_XFT_LIBS) \
++		    $(NULL)
++endif
++
+ include $(topsrcdir)/config/rules.mk
+ 
+ LOCAL_INCLUDES	+= -I$(srcdir)/../base \
