@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/04/19 03:14:59 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2009/06/04 16:34:36 joerg Exp $
 
-SHA1 (epdfview-0.1.6.tar.bz2) = 1bb3a1d85b1d5b13c24a38c144910ddc329e0f0e
-RMD160 (epdfview-0.1.6.tar.bz2) = 69484cd68c1d344dfc38d321abd1e07fd22521e3
-Size (epdfview-0.1.6.tar.bz2) = 406037 bytes
+SHA1 (epdfview-0.1.7.tar.bz2) = ff46942c285b8e2c28766a38cdfce1a018b4a015
+RMD160 (epdfview-0.1.7.tar.bz2) = 485399d1982a3f8128322ee7e13d46225573bae3
+Size (epdfview-0.1.7.tar.bz2) = 443609 bytes
