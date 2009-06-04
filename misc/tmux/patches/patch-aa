@@ -1,21 +1,28 @@
-$NetBSD: patch-aa,v 1.4 2009/06/03 06:09:11 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2009/06/04 21:49:18 minskim Exp $
 
---- Makefile.orig	2009-04-27 17:38:18.000000000 +0200
+--- Makefile.orig	2009-04-21 13:10:22.000000000 -0700
 +++ Makefile
-@@ -81,6 +81,12 @@ LDFLAGS+= -pg
+@@ -79,7 +79,18 @@ LDFLAGS+= -L/usr/local/lib
+ .ifdef PROFILE
+ LDFLAGS+= -pg
  .endif
- LIBS+= -lutil -lncurses
- 
+-LIBS+= -lutil -lncurses
++.if ${OS} == "SunOS"
++LIBS+= -lsocket -lnsl
++.else
++LIBS+= -lutil
++.endif
++LIBS+= -lncurses
++
 +# Darwin
 +.if ${OS} == "Darwin"
 +SRCS+= compat/strtonum.c compat/vis.c
 +CFLAGS+= -DNO_SETPROCTITLE -DNO_STRTONUM -DNO_QUEUE_H -DNO_TREE_H
 +.endif
-+
+ 
  # FreeBSD and DragonFly
  .if ${OS} == "FreeBSD" || ${OS} == "DragonFly"
- INCDIRS+= -Icompat
-@@ -91,10 +97,10 @@ LIBS+= -lcrypt
+@@ -91,10 +102,21 @@ LIBS+= -lcrypt
  
  # NetBSD
  .if ${OS} == "NetBSD"
@@ -25,10 +32,21 @@ $NetBSD: patch-aa,v 1.4 2009/06/03 06:09:11 minskim Exp $
  LIBS+= -lcrypt
 -CFLAGS+=-DNO_STRTONUM
 +CFLAGS+=-DNO_STRTONUM -DNO_QUEUE_H -DNO_TREE_H
++.endif
++
++# SunOS
++.if ${OS} == "SunOS"
++INCDIRS+= -Icompat
++SRCS+= compat/asprintf.c compat/daemon.c compat/fgetln.c \
++	compat/forkpty-sunos.c compat/getopt_long.c compat/strtonum.c \
++	compat/vis.c
++CFLAGS+= -DNO_ASPRINTF -DNO_CDEFS_H -DNO_DAEMON -DNO_FGETLN -DNO_FORKPTY \
++	-DNO_PATHS_H -DNO_PROGNAME -DNO_QUEUE_H -DNO_SETPROCTITLE \
++	-DNO_STRTONUM -DNO_TREE_H
  .endif
  
  OBJS= ${SRCS:S/.c/.o/:S/.y/.o/}
-@@ -152,7 +158,7 @@ update-index.html:
+@@ -152,7 +174,7 @@ update-index.html:
  		sed "s/%%VERSION%%/${VERSION}/g" index.html.in >index.html
  
  install:	all
