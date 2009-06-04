@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.40 2009/06/04 16:50:01 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.41 2009/06/04 20:42:50 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -125,3 +125,5 @@ Pullup ticket #2780 - requested by tron
 cscope: security update
 Pullup ticket #2784 - requested by markd
 kdegraphics3: security patch
+Pullup ticket #2786 - requested by tron
+apache22: security update
