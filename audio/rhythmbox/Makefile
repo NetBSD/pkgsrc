@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2009/05/26 20:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2009/06/04 11:44:24 drochner Exp $
 #
 
-DISTNAME=	rhythmbox-0.12.1
+DISTNAME=	rhythmbox-0.12.2
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.12/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,7 +36,6 @@ BUILDLINK_API_DEPENDS.musicbrainz+=	musicbrainz>=2.1.0
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libsexy/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
