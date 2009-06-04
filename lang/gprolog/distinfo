@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2008/09/07 04:35:41 dholland Exp $
+$NetBSD: distinfo,v 1.9 2009/06/04 05:29:33 hasso Exp $
 
 SHA1 (gprolog-1.3.0.tar.gz) = 1ad7b7764c8e8d92f4f18619f29155001fe7d78f
 RMD160 (gprolog-1.3.0.tar.gz) = 56a7e6f0dab343d162620bccb177e67bca639797
 Size (gprolog-1.3.0.tar.gz) = 3016665 bytes
-SHA1 (patch-aa) = 5a277c8653e6df10ef2fd6a7e0edc6a6a3b5e606
-SHA1 (patch-ab) = b4b2183c6054061ac68c2904527b63482174534c
+SHA1 (patch-aa) = 6c63d651aee30a9933a302469018e39b06cb7a0a
+SHA1 (patch-ab) = 41863a6f02d675a2526966fdb7a7354df161c657
 SHA1 (patch-ac) = edd1fbe7816fd07cf377dc513cd48c11aaf9470d
 SHA1 (patch-ad) = bf95eace095f8a0ce92f678b0401c86db4f89ffa
 SHA1 (patch-ae) = 10d1af60aed05009a08f95c90e7c8607d64c7b9b
