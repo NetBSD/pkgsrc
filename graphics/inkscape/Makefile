@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2009/05/20 12:00:17 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2009/06/04 00:05:19 reed Exp $
 
 DISTNAME=	inkscape-0.46
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,6 +30,7 @@ REPLACE_PERL+=		share/extensions/*.p[lm]
 REPLACE_PERL+=		share/extensions/svg_dropshadow
 
 BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
+BUILDLINK_API_DEPENDS.poppler+=		poppler>=0.5.9
 
 UNLIMIT_RESOURCES=	datasize
 
@@ -40,6 +41,8 @@ UNLIMIT_RESOURCES=	datasize
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../print/poppler-glib/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"

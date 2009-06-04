@@ -8,7 +8,8 @@ The goal is to be a fully XML, SVG, and CSS2 compliant extensible
 drawing tool. It has a GNOME-style interface.
 
 Inkscape can be used for slideshows, printing, converting image
-formats, and can be used without a GUI for some features.
+formats, and can be used without a GUI for some features.  It offers
+PDF import and export.
 
 This package also includes inkview, a slideshow program which uses
 SVG files.
