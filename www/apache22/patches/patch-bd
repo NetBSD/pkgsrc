@@ -1,0 +1,62 @@
+$NetBSD: patch-bd,v 1.1 2009/06/04 08:51:52 tron Exp $
+
+Patch for CVE-2009-1195 taken from:
+
+http://svn.apache.org/viewvc/httpd/httpd/trunk/server/core.c?r1=759699&r2=772997&pathrev=772997
+
+--- server/core.c.orig	2008-06-02 22:18:18.000000000 +0100
++++ server/core.c	2009-06-04 09:46:04.000000000 +0100
+@@ -108,8 +108,7 @@
+     conf->opts = dir ? OPT_UNSET : OPT_UNSET|OPT_ALL;
+     conf->opts_add = conf->opts_remove = OPT_NONE;
+     conf->override = dir ? OR_UNSET : OR_UNSET|OR_ALL;
+-    conf->override_opts = OPT_UNSET | OPT_ALL | OPT_INCNOEXEC | OPT_SYM_OWNER
+-                          | OPT_MULTI;
++    conf->override_opts = OPT_UNSET | OPT_ALL | OPT_SYM_OWNER | OPT_MULTI;
+ 
+     conf->content_md5 = 2;
+     conf->accept_path_info = 3;
+@@ -242,8 +241,13 @@
+         conf->opts_remove = (conf->opts_remove & ~new->opts_add)
+                             | new->opts_remove;
+         conf->opts = (conf->opts & ~conf->opts_remove) | conf->opts_add;
+-        if ((base->opts & OPT_INCNOEXEC) && (new->opts & OPT_INCLUDES)) {
+-            conf->opts = (conf->opts & ~OPT_INCNOEXEC) | OPT_INCLUDES;
++
++        /* if Includes was enabled without exec in the new config, but
++         * was enabled with exec in the base, then disable exec in the
++         * resulting options. */
++        if ((base->opts & OPT_INC_WITH_EXEC) 
++            && (new->opts & OPT_INC_WITH_EXEC) == 0) {
++            conf->opts &= ~OPT_INC_WITH_EXEC;
+         }
+     }
+     else {
+@@ -1304,10 +1308,12 @@
+             opt = OPT_INDEXES;
+         }
+         else if (!strcasecmp(w, "Includes")) {
+-            opt = OPT_INCLUDES;
++            /* If Includes is permitted, both Includes and
++             * IncludesNOEXEC may be changed. */
++            opt = (OPT_INCLUDES | OPT_INC_WITH_EXEC);
+         }
+         else if (!strcasecmp(w, "IncludesNOEXEC")) {
+-            opt = (OPT_INCLUDES | OPT_INCNOEXEC);
++            opt = OPT_INCLUDES;
+         }
+         else if (!strcasecmp(w, "FollowSymLinks")) {
+             opt = OPT_SYM_LINKS;
+@@ -1428,10 +1434,10 @@
+             opt = OPT_INDEXES;
+         }
+         else if (!strcasecmp(w, "Includes")) {
+-            opt = OPT_INCLUDES;
++            opt = (OPT_INCLUDES | OPT_INC_WITH_EXEC);
+         }
+         else if (!strcasecmp(w, "IncludesNOEXEC")) {
+-            opt = (OPT_INCLUDES | OPT_INCNOEXEC);
++            opt = OPT_INCLUDES;
+         }
+         else if (!strcasecmp(w, "FollowSymLinks")) {
+             opt = OPT_SYM_LINKS;
