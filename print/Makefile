@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2009/05/17 10:35:44 sno Exp $
+# $NetBSD: Makefile,v 1.256 2009/06/04 19:33:25 jnemeth Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -256,6 +256,7 @@ SUBDIR+=	tex-tools-doc
 SUBDIR+=	tex-ucs
 SUBDIR+=	tex-ukrhyph
 SUBDIR+=	tex-xkeyval
+#SUBDIR+=	texlive				# place holder directory
 SUBDIR+=	texlive-tetex
 SUBDIR+=	texmf-dirs
 SUBDIR+=	transfig
