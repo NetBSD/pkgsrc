@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
+
+--- Makefile.in	2009-05-04 01:13:20.000000000 +0000
++++ Makefile.in
+@@ -403,7 +403,7 @@ $(srcdir)/src/stamp-h.in: $(AUTOCONF_INP
+ install: all install-arch-indep install-arch-dep install-leim blessmail
+ 	@true
+ 
+-MV_DIRS = for i in $$dir; do rm -fr `basename "$$i"` ; mv "$$i" . ; done
++MV_DIRS = for i in $$dir; do if test -e $$i ; then rm -fr `basename "$$i"` ; mv "$$i" . ; fi; done
+ 
+ ### Install the executables that were compiled specifically for this machine.
+ ### It would be nice to do something for a parallel make
