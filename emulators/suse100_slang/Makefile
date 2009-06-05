@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/29 05:18:58 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/05 11:20:27 abs Exp $
 
 DISTNAME=	suse_slang-${SUSE_VERSION}
 PKGREVISION=	3
@@ -14,7 +14,8 @@ EMUL_MODULES.linux=	base
 CHECK_FILES_SKIP+=	${EMULDIR}/usr/${LINUX_LIBSUBDIR}/libslang.so.1
 
 post-install:
-	cd ${EMULDIR}/usr/lib && ${LN} -fs libslang-utf8.so.1 libslang.so.1
+	cd ${DESTDIR}${EMULDIR}/usr/lib && \
+		${LN} -fs libslang-utf8.so.1 libslang.so.1
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
