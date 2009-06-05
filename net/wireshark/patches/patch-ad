@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 2009/06/05 16:05:55 drochner Exp $
+
+--- epan/dissectors/packet-ssl-utils.h.orig	2009-06-05 16:47:40.000000000 +0200
++++ epan/dissectors/packet-ssl-utils.h
+@@ -38,7 +38,6 @@
+ #include <gcrypt.h>
+ #include <gnutls/x509.h>
+ #include <gnutls/pkcs12.h>
+-#include <gnutls/openssl.h>
+ 
+ #include <epan/conversation.h>
+ 
