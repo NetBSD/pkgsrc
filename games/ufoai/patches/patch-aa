@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/06/05 07:08:42 hasso Exp $
+
+--- configure.orig	2009-06-05 03:03:17 +0300
++++ configure	2009-06-05 03:04:44 +0300
+@@ -2131,6 +2131,10 @@ elif test `echo $target_os | sed "s/\(fr
+ then
+ 	TARGET_OS=freebsd
+ 
++elif test `echo $target_os | sed "s/\(dragonfly\).*/\1/"` = "dragonfly"
++then
++	TARGET_OS=freebsd
++
+ elif test `echo $target_os | sed "s/\(netbsd\).*/\1/"` = "netbsd"
+ then
+ 	TARGET_OS=netbsd
