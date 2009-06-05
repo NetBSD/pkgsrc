@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2008/09/04 11:53:48 obache Exp $
+# $NetBSD: Makefile.common,v 1.21 2009/06/05 11:20:27 abs Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
@@ -18,6 +18,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-powerpc
 ONLY_FOR_PLATFORM+=	NetBSD-3.99*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[4-9]*-x86_64
 .endif
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -81,7 +83,7 @@ BUILD_DIRS?=		# empty
 MANCOMPRESSED?=		yes
 
 EMUL_PKG_FMT?=		rpm
-RPM2PKG_PREFIX?=	${PREFIX}
+RPM2PKG_PREFIX?=	${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX?=	${EMULSUBDIR}
 RPM2PKG_STAGE?=		do-install
 
