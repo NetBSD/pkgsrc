@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: util.h,v 1.15 2005/06/20 07:14:06 otto Exp $
  * $DragonFly: src/usr.bin/patch/util.h,v 1.2 2007/09/29 23:11:10 swildner Exp $
- * $NetBSD: util.h,v 1.1.1.1 2008/09/10 11:03:22 joerg Exp $
+ * $NetBSD: util.h,v 1.2 2009/06/05 19:43:12 joerg Exp $
  */
 
 /*
@@ -35,14 +35,10 @@ char		*checked_in(char *);
 int		backup_file(const char *);
 int		move_file(const char *, const char *);
 int		copy_file(const char *, const char *);
-void		say(const char *, ...)
-		    __attribute__((__format__(__printf__, 1, 2)));
-void		fatal(const char *, ...)
-		    __attribute__((__format__(__printf__, 1, 2)));
-void		pfatal(const char *, ...)
-		    __attribute__((__format__(__printf__, 1, 2)));
-void		ask(const char *, ...)
-		    __attribute__((__format__(__printf__, 1, 2)));
+void		say(const char *, ...);
+void		fatal(const char *, ...);
+void		pfatal(const char *, ...);
+void		ask(const char *, ...);
 char		*savestr(const char *);
 void		set_signals(int);
 void		ignore_signals(void);
