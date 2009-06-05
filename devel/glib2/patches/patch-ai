@@ -1,35 +1,10 @@
-$NetBSD: patch-ai,v 1.17 2009/05/20 13:07:36 wiz Exp $
+$NetBSD: patch-ai,v 1.18 2009/06/05 16:08:25 drochner Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=583321
-http://bugzilla.gnome.org/show_bug.cgi?id=583324
 
---- glib/gmain.c.orig	2008-11-24 06:45:23.000000000 +0100
+--- glib/gmain.c.orig	2009-05-29 07:18:56.000000000 +0200
 +++ glib/gmain.c
-@@ -2720,13 +2720,13 @@ g_main_context_iterate (GMainContext *co
-     {
-       gboolean got_ownership;
-       
-+      LOCK_CONTEXT (context);
-+
-       g_return_val_if_fail (g_thread_supported (), FALSE);
- 
-       if (!block)
- 	return FALSE;
- 
--      LOCK_CONTEXT (context);
--      
-       if (!context->cond)
- 	context->cond = g_cond_new ();
-           
-@@ -2736,7 +2736,6 @@ g_main_context_iterate (GMainContext *co
- 
-       if (!got_ownership)
- 	{
--	  UNLOCK_CONTEXT (context);
- 	  return FALSE;
- 	}
-     }
-@@ -4039,7 +4038,11 @@ g_child_watch_source_init_multi_threaded
+@@ -3713,7 +3713,11 @@ g_child_watch_source_init_multi_threaded
   
    action.sa_handler = g_child_watch_signal_handler;
    sigemptyset (&action.sa_mask);
