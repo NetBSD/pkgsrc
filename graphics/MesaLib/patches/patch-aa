@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.10 2008/08/17 09:41:35 bjs Exp $
+$NetBSD: patch-aa,v 1.11 2009/06/05 11:10:35 wiz Exp $
 
---- src/mesa/drivers/dri/mach64/mach64_context.h.orig	2008-07-18 10:39:12.000000000 -0400
-+++ src/mesa/drivers/dri/mach64/mach64_context.h
-@@ -296,7 +296,14 @@ extern GLboolean mach64UnbindContext( __
+--- src/mesa/drivers/dri/mach64/mach64_context.h.orig	2009-01-22 19:38:33 +0200
++++ src/mesa/drivers/dri/mach64/mach64_context.h	2009-05-19 12:13:08 +0300
+@@ -294,12 +294,19 @@ extern GLboolean mach64UnbindContext( __
  #define LE32_OUT( x, y )	do { *(GLuint *)(x) = (y); } while (0)
  #define LE32_OUT_FLOAT( x, y )	do { *(GLfloat *)(x) = (y); } while (0)
  #else
@@ -12,8 +12,13 @@ $NetBSD: patch-aa,v 1.10 2008/08/17 09:41:35 bjs Exp $
 +#include <machine/byteswap.h>
 +#define bswap_32 bswap32
 +#else
+ #ifndef __OpenBSD__
  #include <byteswap.h>
+ #else
+ #include <machine/endian.h>
+ #define bswap_32 bswap32
+ #endif
 +#endif
+ 
  #define LE32_IN( x )		bswap_32( *(GLuint *)(x) )
  #define LE32_IN_FLOAT( x )						\
- ({									\

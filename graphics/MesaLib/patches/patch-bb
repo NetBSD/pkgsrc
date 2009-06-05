@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2009/06/05 11:10:35 wiz Exp $
+
+--- src/mesa/drivers/dri/swrast/Makefile.orig	2009-05-19 10:25:12 +0300
++++ src/mesa/drivers/dri/swrast/Makefile	2009-05-19 10:25:27 +0300
+@@ -16,7 +16,6 @@ C_SOURCES = \
+ ASM_SOURCES =
+ 
+ SWRAST_COMMON_SOURCES = \
+-	../../common/driverfuncs.c \
+ 	../common/utils.c
+ 
+ include ../Makefile.template
