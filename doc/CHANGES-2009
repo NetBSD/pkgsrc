@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2165 2009/06/05 07:14:52 stacktic Exp $
+$NetBSD: CHANGES-2009,v 1.2166 2009/06/05 11:10:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2890,3 +2890,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/libtorrent to 0.12.2nb2 [tron 2009-06-04]
 	Added editors/emacs-snapshot version 23.0.94.20090604 [minskim 2009-06-05]
 	Updated filesystems/fs-utils to 20090527 [stacktic 2009-06-05]
+	Updated graphics/MesaLib to 7.4.2 [wiz 2009-06-05]
