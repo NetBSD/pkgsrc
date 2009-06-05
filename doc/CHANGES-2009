@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2164 2009/06/05 02:59:50 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2165 2009/06/05 07:14:52 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/gsasl to 1.1 [adam 2009-06-04]
 	Updated net/libtorrent to 0.12.2nb2 [tron 2009-06-04]
 	Added editors/emacs-snapshot version 23.0.94.20090604 [minskim 2009-06-05]
+	Updated filesystems/fs-utils to 20090527 [stacktic 2009-06-05]
