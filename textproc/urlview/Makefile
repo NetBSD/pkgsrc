@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2008/04/17 08:42:39 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2009/06/05 23:09:53 zafer Exp $
 
 DISTNAME=	urlview-0.9
 PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.mutt.org/pub/mutt/contrib/ \
-		ftp://ftp.funet.fi/pub/unix/mail/mutt/contrib/ \
 		ftp://ftp.uib.no/pub/mutt/contrib/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
