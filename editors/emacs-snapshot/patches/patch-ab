@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
+
+--- configure.orig	2009-04-28 02:45:09.000000000 +0000
++++ configure
+@@ -1856,7 +1856,7 @@ archlibdir='${libexecdir}/emacs/${versio
+ docdir='${datadir}/emacs/${version}/etc'
+ gamedir='${localstatedir}/games/emacs'
+ 
+-gameuser=games
++gameuser=${GAMEOWN}
+ 
+ 
+ 
+@@ -9405,9 +9405,9 @@ if test "${HAVE_NS}" = yes; then
+   window_system=nextstep
+   with_xft=no
+   # set up packaging dirs
+-  exec_prefix=${ns_appbindir}
+-  libexecdir=${ns_appbindir}/libexec
+   if test "${EN_NS_SELF_CONTAINED}" = yes; then
++     exec_prefix=${ns_appbindir}
++     libexecdir=${ns_appbindir}/libexec
+      prefix=${ns_appresdir}
+   fi
+ fi
