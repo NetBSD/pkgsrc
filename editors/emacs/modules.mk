@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.4 2008/10/28 00:17:31 uebayasi Exp $
+# $NetBSD: modules.mk,v 1.5 2009/06/05 21:18:02 minskim Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -41,7 +41,9 @@
 #			The user's favourite Emacs version.  The default
 #			value is set in mk/defaults/mk.conf.
 #		Possible values:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs21, emacs21nox, emacs22, emacs22nox,
+#			emacs23, emacs20,
+#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
 #			emacs22
 #
@@ -60,9 +62,13 @@
 #		Description:
 #			Versions the ELP accepts (supports).
 #		Possible values:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs21, emacs21nox, emacs22, emacs22nox,
+#			emacs23, emacs20,
+#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #		Default value:
-#			emacs21, emacs21nox, emacs22, emacs22nox, emacs20, xemacs215, xemacs215nox, xemacs214, xemacs214nox
+#			emacs21, emacs21nox, emacs22, emacs22nox,
+#			emacs23, emacs20,
+#			xemacs215, xemacs215nox, xemacs214, xemacs214nox
 #
 #	EMACS_BUILDLINK
 #		Description:
@@ -165,10 +171,10 @@
 #		Possible values:
 #			XXX
 #
-#	FOR_{emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	FOR_{emacs21,emacs21nox,emacs22,emacs22nox,emacs23,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	FOR_{emacs,xemacs}
 #	FOR_{emacs_x,emacs_nox}
-#	NOTFOR_{emacs21,emacs21nox,emacs22,emacs22nox,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
+#	NOTFOR_{emacs21,emacs21nox,emacs22,emacs22nox,emacs23,emacs20,xemacs215,xemacs215nox,xemacs214,xemacs214nox}
 #	NOTFOR_{emacs,xemacs}
 #	NOTFOR_{emacs_x,emacs_nox}
 #		Description:
@@ -206,7 +212,7 @@ BUILD_DEFS_EFFECTS+=	${_SYS_VARS.emacs}
 #
 
 _EMACS_VERSIONS_ALL= \
-	emacs20 emacs21 emacs21nox emacs22 emacs22nox \
+	emacs20 emacs21 emacs21nox emacs22 emacs22nox emacs23 \
 	xemacs214 xemacs214nox xemacs215 xemacs215nox
 
 _EMACS_PKGDIR_MAP= \
@@ -215,6 +221,7 @@ _EMACS_PKGDIR_MAP= \
 	emacs21nox@../../editors/emacs21-nox11 \
 	emacs22@../../editors/emacs \
 	emacs22nox@../../editors/emacs-nox11 \
+	emacs23@../../editors/emacs-snapshot \
 	xemacs214@../../editors/xemacs \
 	xemacs214nox@../../editors/xemacs-nox11 \
 	xemacs215@../../editors/xemacs-current \
