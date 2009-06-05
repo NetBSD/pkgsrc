@@ -1,0 +1,23 @@
+$NetBSD: patch-ba,v 1.1 2009/06/05 11:10:35 wiz Exp $
+
+--- src/mesa/drivers/dri/intel/intel_fbo.c.orig	2009-05-18 15:03:52 +0300
++++ src/mesa/drivers/dri/intel/intel_fbo.c	2009-05-18 15:04:28 +0300
+@@ -619,8 +619,7 @@ intel_render_texture(GLcontext * ctx,
+        return;
+    }
+ 
+-   DBG("Begin render texture tid %x tex=%u w=%d h=%d refcount=%d\n",
+-       _glthread_GetID(),
++   DBG("Begin render texture tex=%u w=%d h=%d refcount=%d\n",
+        att->Texture->Name, newImage->Width, newImage->Height,
+        irb->Base.RefCount);
+ 
+@@ -660,7 +659,7 @@ intel_finish_render_texture(GLcontext * 
+ {
+    struct intel_renderbuffer *irb = intel_renderbuffer(att->Renderbuffer);
+ 
+-   DBG("End render texture (tid %x) tex %u\n", _glthread_GetID(), att->Texture->Name);
++   DBG("End render texture tex %u\n", att->Texture->Name);
+ 
+    if (irb) {
+       /* just release the region */

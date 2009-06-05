@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/09/06 13:00:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/05 11:10:35 wiz Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -12,9 +12,6 @@ include/GL/glxext.h
 include/GL/internal/dri_interface.h
 include/GL/internal/sarea.h
 include/GL/osmesa.h
-include/GL/xmesa.h
-include/GL/xmesa_x.h
-include/GL/xmesa_xf86.h
 lib/libGL.la
 lib/libGLw.la
 ${PLIST.nodri}lib/libOSMesa.la
@@ -29,6 +26,7 @@ ${PLIST.dri}lib/dri/r300_dri.la
 ${PLIST.dri}lib/dri/radeon_dri.la
 ${PLIST.dri}lib/dri/savage_dri.la
 ${PLIST.dri}lib/dri/sis_dri.la
+${PLIST.dri}lib/dri/swrast_dri.la
 ${PLIST.dri}lib/dri/tdfx_dri.la
 ${PLIST.dri}lib/dri/unichrome_dri.la
 lib/pkgconfig/gl.pc
