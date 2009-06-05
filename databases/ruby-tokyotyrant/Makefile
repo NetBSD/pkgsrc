@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2009/05/24 12:42:44 obache Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/05 12:07:49 obache Exp $
 #
 
-DISTNAME=	tokyotyrant-ruby-1.7
+DISTNAME=	tokyotyrant-ruby-1.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
 CATEGORIES=	databases ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
