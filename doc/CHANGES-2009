@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2163 2009/06/04 19:16:08 tron Exp $
+$NetBSD: CHANGES-2009,v 1.2164 2009/06/05 02:59:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2888,3 +2888,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/epdfview to 0.1.7 [joerg 2009-06-04]
 	Updated security/gsasl to 1.1 [adam 2009-06-04]
 	Updated net/libtorrent to 0.12.2nb2 [tron 2009-06-04]
+	Added editors/emacs-snapshot version 23.0.94.20090604 [minskim 2009-06-05]
