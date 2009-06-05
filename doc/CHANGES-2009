@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2170 2009/06/05 21:39:04 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2171 2009/06/05 23:33:46 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2895,3 +2895,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated databases/ruby-tokyotyrant to 1.8 [obache 2009-06-05]
 	Updated archivers/lzma to 4.65 [jakllsch 2009-06-05]
 	Updated print/tex-bin-latex to 2008.12778nb3 [minskim 2009-06-05]
+	Updated shells/bash to 4.0.24 [hasso 2009-06-06]
