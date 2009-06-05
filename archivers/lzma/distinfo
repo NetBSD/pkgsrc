@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/17 12:07:28 obache Exp $
+$NetBSD: distinfo,v 1.2 2009/06/05 18:52:46 jakllsch Exp $
 
-SHA1 (lzma443.tar.bz2) = 1667abfb40da82d53fa2690f3cd58a0e7e751e55
-RMD160 (lzma443.tar.bz2) = f4f19c9f9bd8ded26318208e75ac14c8869c4ef8
-Size (lzma443.tar.bz2) = 178493 bytes
+SHA1 (lzma465.tar.bz2) = 5ec1c4606fec88c770a9712073e83916f8aed173
+RMD160 (lzma465.tar.bz2) = 70953d4ee8542addf566953e0ed62e9c75a016b5
+Size (lzma465.tar.bz2) = 288122 bytes
