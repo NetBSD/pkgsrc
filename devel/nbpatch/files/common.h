@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/common.h,v 1.5 2008/08/10 23:50:12 joerg Exp $
- * $NetBSD: common.h,v 1.2 2008/10/08 21:35:56 joerg Exp $
+ * $NetBSD: common.h,v 1.3 2009/06/05 20:00:26 joerg Exp $
  */
 
 /*
@@ -32,7 +32,7 @@
 
 #include <sys/types.h>
 
-#include <stdbool.h>
+#include <nbcompat/stdbool.h>
 #if HAVE_STDINT_H
 #include <stdint.h>
 #endif
