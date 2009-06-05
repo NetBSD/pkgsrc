@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/07/30 22:01:11 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/05 11:20:27 abs Exp $
 
 DISTNAME=	suse_base-${SUSE_VERSION}
 PKGREVISION=	5
@@ -24,7 +24,7 @@ RPMIGNOREPATH=		./etc/bash.bashrc ./etc/bash_completion.d \
 LINUX_LDD=		${EMULDIR}/usr/bin/ldd
 LINUX_LDCONFIG=		${EMULDIR}/usr/sbin/ldconfig
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS+=	sbin emul/linux/etc
 OWN_DIRS+=		${EMULSUBDIR}
 
 SUBST_CLASSES+=		suse
@@ -35,7 +35,7 @@ SUBST_VARS.suse=	EMULDIR LINUX_BASE SUSE_ARCH SUSE_VERSION
 # Some platforms, e.g. FreeBSD, need to "brand" the ELF binaries to
 # the correct type.
 #
-BRANDELF_CMD=	${BRANDELF:D${BRANDELF} -t Linux ${LINUX_LDCONFIG}:U${TRUE}}
+BRANDELF_CMD=	${BRANDELF:D${BRANDELF} -t Linux ${DESTDIR}${LINUX_LDCONFIG}:U${TRUE}}
 
 post-extract:
 	${CP} ${FILESDIR}/SuSE-release ${WRKSRC}
@@ -43,14 +43,14 @@ post-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/linux-mkpwd.sh \
-		${PREFIX}/sbin/${LINUX_BASE}-mkpwd
-	${INSTALL_DATA} ${WRKSRC}/SuSE-release ${EMULDIR}/etc
+		${DESTDIR}${PREFIX}/sbin/${LINUX_BASE}-mkpwd
+	${INSTALL_DATA} ${WRKSRC}/SuSE-release ${DESTDIR}${EMULDIR}/etc
 	${BRANDELF_CMD}
 	${SED}	-e 's:#! :#! ${EMULDIR}:' \
 		-e 's:^RTLD=:RTLD=/${EMULSUBDIR}:' \
-		${LINUX_LDD} > ${LINUX_LDD}.new
-	${MV} ${LINUX_LDD}.new ${LINUX_LDD}
-	${CHMOD} +x ${LINUX_LDD}
+		${DESTDIR}${LINUX_LDD} > ${DESTDIR}${LINUX_LDD}.new
+	${MV} ${DESTDIR}${LINUX_LDD}.new ${DESTDIR}${LINUX_LDD}
+	${CHMOD} +x ${DESTDIR}${LINUX_LDD}
 
 .include "../../emulators/suse100_linux/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
