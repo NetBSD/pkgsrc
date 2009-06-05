@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/11/23 17:24:55 jmcneill Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/05 11:20:27 abs Exp $
 
 DISTNAME=	suse_fontconfig-${SUSE_VERSION}
 PKGREVISION=	6
@@ -21,6 +21,6 @@ do-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/local.conf				\
-		${PREFIX}/${EMULSUBDIR}/etc/fonts/local.conf
+		${DESTDIR}${PREFIX}/${EMULSUBDIR}/etc/fonts/local.conf
 
 .include "../../mk/bsd.pkg.mk"
