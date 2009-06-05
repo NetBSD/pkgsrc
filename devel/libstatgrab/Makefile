@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2009/05/19 08:59:10 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2009/06/05 23:33:02 zafer Exp $
 
 DISTNAME=	libstatgrab-0.16
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
 		ftp://ftp.i-scream.org/pub/i-scream/libstatgrab/ \
 		http://ftp.i-scream.org/pub/i-scream/libstatgrab/ \
-		http://ftp.uk.i-scream.org/pub/i-scream/libstatgrab/ \
+		http://www.mirrorservice.org/sites/ftp.i-scream.org/pub/i-scream/libstatgrab/ \
 		http://dl.ambiweb.de/mirrors/ftp.i-scream.org/libstatgrab/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
