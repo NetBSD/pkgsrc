@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2009/06/05 10:48:38 drochner Exp $
+$NetBSD: patch-ad,v 1.6 2009/06/05 11:14:16 wiz Exp $
+
+Fix for SA35205 from upstream CVS.
 
 --- ext/libpng/gstpngdec.c.orig	2009-05-12 02:00:06.000000000 +0200
 +++ ext/libpng/gstpngdec.c
