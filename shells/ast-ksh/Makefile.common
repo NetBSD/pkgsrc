@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.common,v 1.23 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile.common,v 1.24 2009/06/05 23:57:47 zafer Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
 CATEGORIES=	shells
-MASTER_SITES=	\
-		http://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
-		ftp://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
-		http://www.research.att.com/~gsf/download/tgz/
+MASTER_SITES=	http://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/ \
+		ftp://ftp.ntua.gr/pub/linux/openpkg/sources/DST/ksh/
 DISTFILES=	INIT.${ASTKSH_VERSION}.tgz ast-ksh.${ASTKSH_VERSION}.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
