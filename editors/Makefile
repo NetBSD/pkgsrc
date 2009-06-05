@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2009/02/26 20:37:34 drochner Exp $
+# $NetBSD: Makefile,v 1.131 2009/06/05 02:59:50 minskim Exp $
 #
 
 COMMENT=	Editors
@@ -23,6 +23,7 @@ SUBDIR+=	elvis-x11
 SUBDIR+=	emacs
 SUBDIR+=	emacs-nox11
 SUBDIR+=	emacs-packages
+SUBDIR+=	emacs-snapshot
 SUBDIR+=	emacs20
 SUBDIR+=	emacs21
 SUBDIR+=	emacs21-nox11
