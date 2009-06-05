@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/17 18:35:15 stacktic Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/05 07:14:18 stacktic Exp $
 bin/fsu_cat
 bin/fsu_chflags
 bin/fsu_chmod
@@ -49,3 +49,26 @@ man/man1/fsu_mv.1
 man/man1/fsu_rm.1
 man/man1/fsu_rmdir.1
 man/man1/fsu_touch.1
+man/man3/fsu_clearerr.3
+man/man3/fsu_fclose.3
+man/man3/fsu_feof.3
+man/man3/fsu_ferror.3
+man/man3/fsu_fflush.3
+man/man3/fsu_fgetc.3
+man/man3/fsu_fopen.3
+man/man3/fsu_fputc.3
+man/man3/fsu_fread.3
+man/man3/fsu_fseek.3
+man/man3/fsu_fseeko.3
+man/man3/fsu_ftell.3
+man/man3/fsu_ftello.3
+man/man3/fsu_fts.3
+man/man3/fsu_fts_children.3
+man/man3/fsu_fts_close.3
+man/man3/fsu_fts_open.3
+man/man3/fsu_fts_read.3
+man/man3/fsu_fts_set.3
+man/man3/fsu_fwrite.3
+man/man3/fsu_mount.3
+man/man3/fsu_rewind.3
+man/man3/fsu_utils.3
