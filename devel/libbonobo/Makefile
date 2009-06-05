@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2009/03/06 14:08:23 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2009/06/05 07:09:31 obache Exp $
 
 DISTNAME=		libbonobo-2.24.1
 CATEGORIES=		devel gnome
@@ -23,6 +23,10 @@ PKGCONFIG_OVERRIDE+=	bonobo-activation/bonobo-activation-2.0.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		PERL_PATH=${TOOLS_PERL5:Q}
+
+# Workaround for Upstream Bug#562310.
+# for more detail, see also PR#41475.
+TOOLS_NOOP+=		gtkdoc-rebase
 
 PKG_SYSCONFSUBDIR=	bonobo-activation
 EGDIR=			${PREFIX}/share/examples/bonobo-activation
