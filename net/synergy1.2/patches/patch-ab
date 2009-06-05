@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2009/06/05 09:49:53 hasso Exp $
+
+--- lib/arch/CArchNetworkBSD.cpp.orig	2009-06-05 12:09:52 +0300
++++ lib/arch/CArchNetworkBSD.cpp	2009-06-05 12:11:02 +0300
+@@ -50,6 +50,8 @@
+ #if HAVE_ALLOCA_H
+ #	define freea(x_)
+ #else
++#	undef alloca
++#	undef freea
+ #	define alloca(x_) malloc(x_)
+ #	define freea(x_) free(x_)
+ #endif
