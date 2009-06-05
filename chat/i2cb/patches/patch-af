@@ -1,7 +1,16 @@
-$NetBSD: patch-af,v 1.2 2004/04/13 21:19:48 hubertf Exp $
+$NetBSD: patch-af,v 1.3 2009/06/05 09:36:15 hasso Exp $
 
---- src/contoport.c.orig	Tue Apr 13 22:29:28 2004
-+++ src/contoport.c
+--- src/contoport.c.orig	2000-03-16 00:13:28 +0200
++++ src/contoport.c	2009-06-05 11:30:39 +0300
+@@ -6,7 +6,7 @@
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/socket.h>
+-#include <strings.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <netinet/in.h>
+ #include <netdb.h>
 @@ -14,14 +14,15 @@
  #include "icb.h"
  #include "externs.h"
