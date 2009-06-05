@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/11/10 17:21:36 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2009/06/05 10:10:28 wiz Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -18,6 +18,7 @@ HOMEPAGE=	http://gmt.soest.hawaii.edu/
 COMMENT=	Generic Mapping Tools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	${DISTNAME}
