@@ -1,21 +1,21 @@
-$NetBSD: patch-ax,v 1.1 2008/07/27 00:03:42 bjs Exp $
+$NetBSD: patch-ax,v 1.2 2009/06/05 11:10:35 wiz Exp $
 
---- src/glu/Makefile.orig	2008-07-18 10:39:12.000000000 -0400
-+++ src/glu/Makefile
-@@ -22,10 +22,12 @@ glu.pc: glu.pc.in
+--- src/glu/Makefile.orig	2009-01-22 19:38:33 +0200
++++ src/glu/Makefile	2009-05-17 16:10:41 +0300
+@@ -27,10 +27,12 @@ glu.pc: glu.pc.in
  	$(pcedit) $< > $@
  
  install: glu.pc
--	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
--	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
--	$(INSTALL) $(TOP)/$(LIB_DIR)/libGLU.* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
--	$(INSTALL) -m 644 glu.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
-+	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
+-	$(INSTALL) $(TOP)/$(LIB_DIR)/$(GLU_LIB_GLOB) $(DESTDIR)$(INSTALL_LIB_DIR)
+-	$(INSTALL) -m 644 glu.pc $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/lib
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
 +	$(LIBTOOL) --mode=install \
 +		$(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/libGLU.la \
-+		$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
-+	$(BSD_INSTALL_DATA) glu.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++		$(DESTDIR)$(INSTALL_DIR)/lib
++	$(BSD_INSTALL_DATA) glu.pc $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
  
  clean:
- 	@for dir in $(SUBDIRS) ; do \
+ 	-@for dir in $(SUBDIRS) ; do \

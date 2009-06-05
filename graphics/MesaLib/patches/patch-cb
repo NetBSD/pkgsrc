@@ -1,20 +1,19 @@
-$NetBSD: patch-cb,v 1.2 2008/04/24 07:40:24 bjs Exp $
+$NetBSD: patch-cb,v 1.3 2009/06/05 11:10:35 wiz Exp $
 
---- src/mesa/x86-64/Makefile.orig	2007-06-21 18:10:54.000000000 -0400
-+++ src/mesa/x86-64/Makefile
-@@ -23,7 +23,14 @@ clean:
+--- src/mesa/x86-64/Makefile.orig	2009-05-19 11:53:27 +0300
++++ src/mesa/x86-64/Makefile	2009-05-19 11:55:54 +0300
+@@ -23,7 +23,13 @@ clean:
  
  
  # need some special rules here, unfortunately
-+ifdef CROSS_COMPILING
++#ifdef CROSS_COMPILING
  matypes.h: ../main/mtypes.h ../tnl/t_context.h ../x86/gen_matypes
--	../x86/gen_matypes | grep -v '#include "assyntax.h' > matypes.h
+-	../x86/gen_matypes > matypes.h
 +	CFLAGS="${INCLUDE_DIRS} ${CFLAGS}" $(LIBTOOL) --mode=execute \
-+	../x86/gen_matypes.sh | grep -v '#include "assyntax.h"' > matypes.h
-+else
++	../x86/gen_matypes.sh > matypes.h
++#else
 +matypes.h: ../main/mtypes.h ../tnl/t_context.h ../x86/gen_matypes
-+	$(LIBTOOL) --mode=execute ../x86/gen_matypes | \
-+	grep -v '#include "assyntax.h"' > matypes.h
-+endif
++	$(LIBTOOL) --mode=execute ../x86/gen_matypes > matypes.h
++#endif
  
  xform4.o: matypes.h
