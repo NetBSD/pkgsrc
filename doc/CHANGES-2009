@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2167 2009/06/05 12:07:21 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2168 2009/06/05 12:08:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2892,3 +2892,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated filesystems/fs-utils to 20090527 [stacktic 2009-06-05]
 	Updated graphics/MesaLib to 7.4.2 [wiz 2009-06-05]
 	Updated databases/p5-tokyotyrant to 1.12 [obache 2009-06-05]
+	Updated databases/ruby-tokyotyrant to 1.8 [obache 2009-06-05]
