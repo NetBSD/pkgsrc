@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: inp.c,v 1.34 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/inp.c,v 1.6 2007/09/29 23:11:10 swildner Exp $
- * $NetBSD: inp.c,v 1.4 2009/05/11 22:43:50 joerg Exp $
+ * $NetBSD: inp.c,v 1.5 2009/06/05 20:00:26 joerg Exp $
  */
 
 /*
@@ -41,6 +41,7 @@
 #include <sys/mman.h>
 
 #include <ctype.h>
+#include <fcntl.h>
 #include <libgen.h>
 #include <limits.h>
 #if HAVE_STDDEF_H
