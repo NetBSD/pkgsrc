@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2009/06/05 11:10:35 wiz Exp $
+
+http://bugs.freedesktop.org/show_bug.cgi?id=21053
+
+--- src/glx/x11/drisw_glx.c.orig	2009-05-19 12:00:40 +0300
++++ src/glx/x11/drisw_glx.c	2009-05-19 12:01:16 +0300
+@@ -405,6 +405,8 @@ driCreateScreen(__GLXscreenConfigs * psc
+    psp->createContext = driCreateContext;
+    psp->createDrawable = driCreateDrawable;
+    psp->swapBuffers = driSwapBuffers;
++   psp->waitX = NULL;
++   psp->waitGL = NULL;
+ 
+    return psp;
+ 

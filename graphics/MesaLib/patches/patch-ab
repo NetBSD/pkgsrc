@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.16 2008/07/27 00:03:42 bjs Exp $
+$NetBSD: patch-ab,v 1.17 2009/06/05 11:10:35 wiz Exp $
 
---- src/glu/sgi/Makefile.orig	2008-07-18 10:39:12.000000000 -0400
-+++ src/glu/sgi/Makefile
+--- src/glu/sgi/Makefile.orig	2008-08-25 17:46:42 +0300
++++ src/glu/sgi/Makefile	2009-05-17 16:59:39 +0300
 @@ -8,7 +8,8 @@ include $(TOP)/configs/current
  
  GLU_MAJOR = 1
@@ -27,21 +27,21 @@ $NetBSD: patch-ab,v 1.16 2008/07/27 00:03:42 bjs Exp $
  
  
  ##### TARGETS #####
-@@ -136,11 +139,12 @@ $(TOP)/$(LIB_DIR):
+@@ -136,12 +139,11 @@ $(TOP)/$(LIB_DIR):
  
  # Make the library:
  $(TOP)/$(LIB_DIR)/$(GLU_LIB_NAME): $(OBJECTS)
--	$(TOP)/bin/mklib -o $(GLU_LIB) -linker '$(CXX)' -ldflags '$(LDFLAGS)' \
+-	$(MKLIB) -o $(GLU_LIB) -linker '$(CXX)' -ldflags '$(LDFLAGS)' \
 -		-major $(GLU_MAJOR) -minor $(GLU_MINOR) -patch $(GLU_TINY) \
 -		-cplusplus $(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
--		-exports glu.exports \
+-		-exports glu.exports -id $(INSTALL_LIB_DIR)/lib$(GLU_LIB).$(GLU_MAJOR).dylib \
 -		$(GLU_LIB_DEPS) $(OBJECTS)
+-
 +	$(LIBTOOL) --mode=link $(CXX) \
 +		-o $(TOP)/$(LIB_DIR)/$(GLU_LIB_NAME:.so=.la) $(LDFLAGS) \
 +		-rpath $(PREFIX)/lib $(GLU_LIB_DEPS) $(OBJECTS:.o=.lo) \
 +		-version-info $(GLU_MAJOR):$(GLU_MINOR):$(GLU_TINY) \
-+		-export-symbols glu.sym
-+
- 
++		-export-symbols glu.exports
  
  clean:
+ 	-rm -f *.o */*.o */*/*.o

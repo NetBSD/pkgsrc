@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2008/10/01 22:25:53 bjs Exp $
+# $NetBSD: Makefile,v 1.35 2009/06/05 11:10:35 wiz Exp $
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
-PKGREVISION=	1
 COMMENT=	OpenGL examples and Demos
 
 
