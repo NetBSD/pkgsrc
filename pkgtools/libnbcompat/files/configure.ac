@@ -1,8 +1,8 @@
-dnl $NetBSD: configure.ac,v 1.73 2009/04/13 11:30:46 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.74 2009/06/05 19:58:04 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([libnbcompat], [20080519], [grant@NetBSD.org])
+AC_INIT([libnbcompat], [20080605], [grant@NetBSD.org])
 AC_CONFIG_HEADER(nbcompat/config.h)
 AC_ARG_PROGRAM
 
@@ -31,6 +31,7 @@ AC_CHECK_LIB(util, fparseln)
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_HEADER_TIME
+AC_HEADER_STDBOOL
 
 AC_CHECK_HEADERS([alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
 	fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
