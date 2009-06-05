@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2009/03/20 17:17:48 mishka Exp $
+# $NetBSD: Makefile,v 1.57.2.1 2009/06/05 08:50:14 tron Exp $
 
 DISTNAME=		bochs-2.3.7
 PKGREVISION=		3
@@ -22,13 +22,12 @@ CXXFLAGS+=		-DPARANOID
 
 CONFIGURE_ARGS+=	--enable-cdrom
 CONFIGURE_ARGS+=	--enable-ne2000
-CONFIGURE_ARGS+=	--with-nogui
 
 MAKE_ENV+=		GZIP_CMD=${GZIP_CMD:Q}
 MAKE_ENV+=		GUNZIP_CMD=${GUNZIP_CMD:Q}
 MAKE_ENV+=		WGET=${FETCH_CMD:Q}
 
-PLIST_VARS+=		notiny
+PLIST_VARS+=		notiny nox11 x11
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bochs
 PKG_SUPPORTED_OPTIONS+=	debug tiny x11
@@ -101,9 +100,12 @@ CONFIGURE_ARGS+=	--enable-sb16=dummy
 .endif
 
 .if empty(PKG_OPTIONS:Mx11)
+PLIST.nox11=		yes
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-x11
 CONFIGURE_ARGS+=	--with-term
+.else
+PLIST.x11=		yes
 .endif
 
 .if ${OPSYS} == "Linux"
