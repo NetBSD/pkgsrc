@@ -1,11 +1,11 @@
-# $NetBSD: default,v 1.2 2008/07/27 00:03:42 bjs Exp $
+# $NetBSD: default,v 1.3 2009/06/05 11:10:35 wiz Exp $
 
 CONFIG_NAME = default
 
 # Version info
 MESA_MAJOR=	7
-MESA_MINOR=	0
-MESA_TINY=	3
+MESA_MINOR=	4
+MESA_TINY=	2
 
 GLU_CFLAGS=	# defined
 

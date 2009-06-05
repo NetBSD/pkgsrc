@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.10 2008/04/24 07:40:24 bjs Exp $
+$NetBSD: patch-ae,v 1.11 2009/06/05 11:10:35 wiz Exp $
 
---- src/glw/Makefile.orig	2007-09-28 20:43:28.000000000 -0400
-+++ src/glw/Makefile
+--- src/glw/Makefile.orig	2009-03-13 05:28:49 +0200
++++ src/glw/Makefile	2009-05-17 11:36:19 +0300
 @@ -17,7 +17,8 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
  ##### RULES #####
  
@@ -12,43 +12,44 @@ $NetBSD: patch-ae,v 1.10 2008/04/24 07:40:24 bjs Exp $
  
  
  
-@@ -34,12 +35,16 @@ glw.pc: glw.pc.in
+@@ -38,12 +39,16 @@ glw.pc: glw.pc.in
  	$(pcedit) $< > $@
  
  install: glw.pc
--	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/include/GL
--	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
--	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
--	$(INSTALL) -m 644 *.h $(DESTDIR)$(INSTALL_DIR)/include/GL
--	$(INSTALL) $(TOP)/$(LIB_DIR)/libGLw.* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
--	$(INSTALL) -m 644 glw.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_INC_DIR)/GL
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 644 *.h $(DESTDIR)$(INSTALL_INC_DIR)/GL
+-	$(INSTALL) $(TOP)/$(LIB_DIR)/$(GLW_LIB_GLOB) $(DESTDIR)$(INSTALL_LIB_DIR)
+-	$(INSTALL) -m 644 glw.pc $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/include/GL
-+	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/lib
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
 +	@for fn in *.h; do \
 +		$(BSD_INSTALL_DATA) $$fn $(DESTDIR)$(INSTALL_DIR)/include/GL; \
 +	done
 +	$(LIBTOOL) --mode=install \
 +		$(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/libGLw.la \
-+			$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
-+	$(BSD_INSTALL_DATA) glw.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++			$(DESTDIR)$(INSTALL_DIR)/lib
++	$(BSD_INSTALL_DATA) glw.pc $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
  
  clean:
- 	-rm depend depend.bak
-@@ -48,10 +53,12 @@ clean:
+ 	-rm -f depend depend.bak
+@@ -52,12 +57,11 @@ clean:
  
  # Make the library
  $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
--	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-	$(MKLIB) -o $(GLW_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
 -		-major $(MAJOR) -minor $(MINOR) -patch $(TINY) \
 -		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
+-		-id $(INSTALL_LIB_DIR)/lib$(GLW_LIB).$(MAJOR).dylib \
 -		$(GLW_LIB_DEPS) $(OBJECTS)
+-
 +	$(LIBTOOL) --mode=link $(CC) \
 +		-o $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME:.so=.la) \
 +		-rpath $(PREFIX)/lib $(LDFLAGS) \
 +		-version-info $(MAJOR):$(MINOR):$(TINY) \
 +		$(GLW_LIB_DEPS) $(OBJECTS:.o=.lo)
-+
- 
  
  #
+ # Run 'make depend' to update the dependencies if you change what's included
