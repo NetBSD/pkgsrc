@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2184 2009/06/06 22:05:01 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2185 2009/06/06 22:07:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2909,3 +2909,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/chmlib to 0.40 [wiz 2009-06-06]
 	Updated time/etm to 286 [wiz 2009-06-06]
 	Updated games/ioquake3 to 1.36 [wiz 2009-06-06]
+	Updated www/surfraw to 2.2.5 [wiz 2009-06-06]
