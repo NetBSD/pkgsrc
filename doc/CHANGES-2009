@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2173 2009/06/06 10:28:55 manu Exp $
+$NetBSD: CHANGES-2009,v 1.2174 2009/06/06 11:26:42 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated shells/bash to 4.0.24 [hasso 2009-06-06]
 	Updated x11/kdebase3 to 3.5.10nb3 [hasso 2009-06-06]
 	Updated www/ap2-auth-mellon to 0.2.1 [manu 2009-06-06]
+	Updated security/base to 1.4.3.1 [adrianp 2009-06-06]
