@@ -1,0 +1,15 @@
+$NetBSD: patch-am,v 1.1 2009/06/06 00:48:39 abs Exp $
+
+--- doc/Makefile.real.orig	1995-05-21 00:35:25.000000000 +0100
++++ doc/Makefile.real
+@@ -45,8 +45,8 @@ doc:
+ install:
+ 
+ install.man: rdist.man rdistd.man
+-	${INSTALL} ${INSTALL_ARGS} rdist.man ${CLIENT_DEST}
+-	${INSTALL} ${INSTALL_ARGS} rdistd.man ${SERVER_DEST}
++	${INSTALL} ${INSTALL_ARGS} rdist.man $(DESTDIR)${CLIENT_DEST}
++	${INSTALL} ${INSTALL_ARGS} rdistd.man $(DESTDIR)${SERVER_DEST}
+ 
+ clean:
+ 	rm -f ${CLEANFILES}
