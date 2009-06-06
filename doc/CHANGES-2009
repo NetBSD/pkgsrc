@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2180 2009/06/06 21:21:44 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2181 2009/06/06 21:42:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2905,3 +2905,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/apache-tomcat6 to 6.0.20 [adrianp 2009-06-06]
 	Updated graphics/png to 1.2.37 [wiz 2009-06-06]
 	Updated emulators/sdlmame to 0.131 [wiz 2009-06-06]
+	Updated emulators/sdlmess to 0.131 [wiz 2009-06-06]
