@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
+$NetBSD: patch-ad,v 1.2 2009/06/06 22:04:50 wiz Exp $
 
---- code/qcommon/vm_x86_64.c.orig	2009-01-12 18:50:39.000000000 -0500
+--- code/qcommon/vm_x86_64.c.orig	2008-08-06 16:09:29.000000000 +0000
 +++ code/qcommon/vm_x86_64.c
 @@ -58,6 +58,10 @@ void assemble_line(const char* input, si
  #endif
@@ -13,3 +13,12 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/01/13 00:12:29 jmcneill Exp $
  static void VM_Destroy_Compiled(vm_t* self);
  
  /*
+@@ -246,7 +250,7 @@ void emit(const char* fmt, ...)
+ #else
+ #define JMPIARG \
+ 	emit("movq $%lu, %%rax", vm->codeBase+vm->instructionPointers[iarg]); \
+-	emit("jmpq *%rax");
++	emit("jmpq *%%rax");
+ #endif
+  
+ // integer compare and jump
