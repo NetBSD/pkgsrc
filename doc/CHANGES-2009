@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2177 2009/06/06 17:02:46 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2178 2009/06/06 17:34:23 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2902,3 +2902,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/amule to 2.2.5 [obache 2009-06-06]
 	Updated www/firefox-bin to 2.0.0.20 [obache 2009-06-06]
 	Updated chat/inspircd12 to 1.2.0rc3 [adrianp 2009-06-06]
+	Updated www/apache-tomcat6 to 6.0.20 [adrianp 2009-06-06]
