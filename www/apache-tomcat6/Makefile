@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/14 12:02:08 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/06 17:34:08 adrianp Exp $
 #
 
 DISTNAME=	apache-tomcat-${TOMCAT_VER}
@@ -22,7 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-TOMCAT_VER=		6.0.18
+TOMCAT_VER=		6.0.20
 TOMCAT_HOME=		${PREFIX}/share/tomcat
 EGDIR=			${PREFIX}/share/examples/tomcat
 DOCDIR=			${PREFIX}/share/doc/tomcat
