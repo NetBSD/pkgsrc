@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2009/03/01 14:57:33 wiz Exp $
+$NetBSD: distinfo,v 1.15 2009/06/06 22:07:43 wiz Exp $
 
-SHA1 (surfraw-2.2.4.tar.gz) = 22072499beed6b9bc79dd3928620548f4dca9af5
-RMD160 (surfraw-2.2.4.tar.gz) = 78cd6d8892fd205523c8fdeea5c24b48cbf68061
-Size (surfraw-2.2.4.tar.gz) = 147292 bytes
+SHA1 (surfraw-2.2.5.tar.gz) = 3da861c0a98a9d197e84a8995bc286ca4b885d62
+RMD160 (surfraw-2.2.5.tar.gz) = ff7c0ee495374400d205f684c3cf7b78fdbfcc77
+Size (surfraw-2.2.5.tar.gz) = 148858 bytes
 SHA1 (patch-ab) = 25560169f13c1a635ee0bd59760a9ecec58eea6c
