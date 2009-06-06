@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.4 2009/02/21 16:44:29 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2009/06/06 22:37:28 wiz Exp $
 
---- src/util/Makefile.in.orig	2009-02-17 15:11:02.000000000 +0000
+--- src/util/Makefile.in.orig	2009-04-07 22:40:59.000000000 +0000
 +++ src/util/Makefile.in
 @@ -34,7 +34,8 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.4 2009/02/21 16:44:29 wiz Exp $
 +xmakekeys_SOURCES = xmakekeys.c
 +xmakekeys_OBJECTS = xmakekeys.$(OBJEXT)
 +xmakekeys_LDADD = $(LDADD)
- DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/src -I$(top_builddir)/include/X11
+ DEFAULT_INCLUDES = -I. -I$(top_builddir)/src -I$(top_builddir)/include/X11@am__isrc@
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
 @@ -62,8 +66,11 @@ CCLD = $(CC)
@@ -36,7 +36,7 @@ $NetBSD: patch-ae,v 1.4 2009/02/21 16:44:29 wiz Exp $
  ETAGS = etags
  CTAGS = ctags
  DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-@@ -282,6 +289,9 @@ clean-noinstPROGRAMS:
+@@ -279,6 +286,9 @@ clean-noinstPROGRAMS:
  makekeys$(EXEEXT): $(makekeys_OBJECTS) $(makekeys_DEPENDENCIES) 
  	@rm -f makekeys$(EXEEXT)
  	$(makekeys_LINK) $(makekeys_OBJECTS) $(makekeys_LDADD) $(LIBS)
@@ -46,7 +46,7 @@ $NetBSD: patch-ae,v 1.4 2009/02/21 16:44:29 wiz Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -290,6 +300,7 @@ distclean-compile:
+@@ -287,6 +297,7 @@ distclean-compile:
  	-rm -f *.tab.c
  
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/makekeys-makekeys.Po@am__quote@
@@ -54,7 +54,7 @@ $NetBSD: patch-ae,v 1.4 2009/02/21 16:44:29 wiz Exp $
  
  .c.o:
  @am__fastdepCC_TRUE@	$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
-@@ -508,6 +519,10 @@ uninstall-am:
+@@ -506,6 +517,10 @@ uninstall-am:
  	pdf pdf-am ps ps-am tags uninstall uninstall-am
  
  
