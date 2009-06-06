@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2174 2009/06/06 11:26:42 adrianp Exp $
+$NetBSD: CHANGES-2009,v 1.2175 2009/06/06 13:10:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2899,3 +2899,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/kdebase3 to 3.5.10nb3 [hasso 2009-06-06]
 	Updated www/ap2-auth-mellon to 0.2.1 [manu 2009-06-06]
 	Updated security/base to 1.4.3.1 [adrianp 2009-06-06]
+	Updated net/amule to 2.2.5 [obache 2009-06-06]
