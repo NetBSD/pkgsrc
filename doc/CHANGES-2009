@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2171 2009/06/05 23:33:46 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2172 2009/06/06 05:01:36 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2896,3 +2896,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated archivers/lzma to 4.65 [jakllsch 2009-06-05]
 	Updated print/tex-bin-latex to 2008.12778nb3 [minskim 2009-06-05]
 	Updated shells/bash to 4.0.24 [hasso 2009-06-06]
+	Updated x11/kdebase3 to 3.5.10nb3 [hasso 2009-06-06]
