@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/10/20 07:07:09 minoura Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/06 15:31:06 minskim Exp $
 ${EMACS_INFOPREFIX}/bbdb.info
-${FOR_emacs20}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
-${FOR_emacs21}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
-${FOR_emacs21nox}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
+${FOR_emacs}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-com.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-com.elc
 ${EMACS_LISPPREFIX}/bbdb/bbdb-ftp.el
@@ -35,11 +31,7 @@ ${EMACS_LISPPREFIX}/bbdb/bbdb-snarf.elc
 ${EMACS_LISPPREFIX}/bbdb/bbdb-srv.el
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/bbdb/bbdb-srv.elc
 ${FOR_xemacs215}${EMACS_LISPPREFIX}/bbdb/bbdb-srv.elc
-${FOR_emacs20}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
-${FOR_emacs21}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
-${FOR_emacs21nox}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
-${FOR_emacs22}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
-${FOR_emacs22nox}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
+${FOR_emacs}${EMACS_LISPPREFIX}/bbdb/bbdb-vm.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-w3.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-w3.elc
 ${EMACS_LISPPREFIX}/bbdb/bbdb-whois.el
