@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/14 15:07:25 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/06 17:02:21 adrianp Exp $
 bin/inspircd
 lib/inspircd/cmd_admin.so
 lib/inspircd/cmd_away.so
@@ -157,6 +157,7 @@ share/inspircd/modules/m_safelist.so
 share/inspircd/modules/m_sajoin.so
 share/inspircd/modules/m_samode.so
 share/inspircd/modules/m_sanick.so
+share/inspircd/modules/m_sakick.so
 share/inspircd/modules/m_sapart.so
 share/inspircd/modules/m_saquit.so
 share/inspircd/modules/m_securelist.so
