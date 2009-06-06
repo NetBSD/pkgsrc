@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2182 2009/06/06 21:52:09 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2183 2009/06/06 21:56:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2907,3 +2907,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated emulators/sdlmame to 0.131 [wiz 2009-06-06]
 	Updated emulators/sdlmess to 0.131 [wiz 2009-06-06]
 	Updated devel/chmlib to 0.40 [wiz 2009-06-06]
+	Updated time/etm to 286 [wiz 2009-06-06]
