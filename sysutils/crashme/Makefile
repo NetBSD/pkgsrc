@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2007/08/31 21:48:37 agc Exp $
+# $NetBSD: Makefile,v 1.20 2009/06/06 22:21:15 zafer Exp $
 #
 
 DISTNAME=		crashme-2.4
 CATEGORIES=		sysutils
-MASTER_SITES=		http://ochimizu-www.jaist.ac.jp:8000/linux/vger/crashme/
-EXTRACT_SUFX=		-shar
+MASTER_SITES=	http://www.ibiblio.org/pub/historic-linux/early-ports/Sparc/crashme/
+				# ftp://ftp.std.com/pub/gjc/
+
+EXTRACT_SUFX=	-shar
 
 MAINTAINER=		agc@NetBSD.org
-HOMEPAGE=		http://people.delphi.com/gjc/crashme.html
+HOMEPAGE=		http://people.delphiforums.com/gjc/crashme.html
 COMMENT=		Try to crash machine with random arguments to random system calls
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
