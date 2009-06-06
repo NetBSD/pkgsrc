@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/03/03 10:53:15 manu Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/06 10:27:30 manu Exp $
 #
 
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
-DISTNAME=	mod_auth_mellon-0.1.0
+DISTNAME=	mod_auth_mellon-0.2.1
 CATEGORIES=	www security
 MASTER_SITES=	http://modmellon.googlecode.com/files/
 
@@ -25,7 +25,7 @@ BUILDLINK_API_DEPENDS.apache+=  apache>=2.0.47
 CONFIGURE_ENV+=		PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig
 CONFIGURE_ENV+=		OPENSSL_CFLAGS="${CPPFLAGS}"
 CONFIGURE_ENV+=		OPENSSL_LIBS="-L${PREFIX}/lib -lssl -lcrypto"
-CONFIGURE_ARGS+=        --with-apxs=${APXS:Q}
+CONFIGURE_ARGS+=        --with-apxs2=${APXS:Q}
 
 # url2pkg-marker (please do not remove this line.)
 
