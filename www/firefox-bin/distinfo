@@ -1,5 +1,11 @@
-$NetBSD: distinfo,v 1.47 2008/12/17 17:05:52 ghen Exp $
+$NetBSD: distinfo,v 1.48 2009/06/06 14:08:38 obache Exp $
 
-SHA1 (firefox/releases/2.0.0.19/linux-i686/en-US/firefox-2.0.0.19.tar.gz) = a0aa99f5e29eb442bd81751e4aaad3920eeae6f1
-RMD160 (firefox/releases/2.0.0.19/linux-i686/en-US/firefox-2.0.0.19.tar.gz) = d6c56000f343fd5aadaf2807c46398710572f9eb
-Size (firefox/releases/2.0.0.19/linux-i686/en-US/firefox-2.0.0.19.tar.gz) = 9711461 bytes
+SHA1 (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-i386-gtk1.tar.bz2) = f8853b8a2d48b282f95fbde88155da5a07ea3ec4
+RMD160 (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-i386-gtk1.tar.bz2) = 56fead689cd02a36d2b6bfd01545d23a27ddfd8d
+Size (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-i386-gtk1.tar.bz2) = 11274918 bytes
+SHA1 (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-sparc-gtk1.tar.bz2) = 8bb14c7dde7ffa58945aff04a42132333b6548f0
+RMD160 (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-sparc-gtk1.tar.bz2) = 131ba8f2433da860960d27131c37ade1d19e5781
+Size (firefox/releases/2.0.0.20/contrib/solaris_tarball/firefox-2.0.0.20.en-US.solaris8-sparc-gtk1.tar.bz2) = 12950650 bytes
+SHA1 (firefox/releases/2.0.0.20/linux-i686/en-US/firefox-2.0.0.20.tar.gz) = 4a4da438535207d88f44cf6614ea0afd5040026c
+RMD160 (firefox/releases/2.0.0.20/linux-i686/en-US/firefox-2.0.0.20.tar.gz) = 71150f277d8fb9e360d799efa5a66b06538b7326
+Size (firefox/releases/2.0.0.20/linux-i686/en-US/firefox-2.0.0.20.tar.gz) = 9710348 bytes
