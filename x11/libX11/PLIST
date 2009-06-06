@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/17 12:33:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/06 22:37:28 wiz Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -844,6 +844,9 @@ share/X11/locale/el_GR.UTF-8/XLC_LOCALE
 share/X11/locale/en_US.UTF-8/Compose
 share/X11/locale/en_US.UTF-8/XI18N_OBJS
 share/X11/locale/en_US.UTF-8/XLC_LOCALE
+share/X11/locale/fi_FI.UTF-8/Compose
+share/X11/locale/fi_FI.UTF-8/XI18N_OBJS
+share/X11/locale/fi_FI.UTF-8/XLC_LOCALE
 share/X11/locale/georgian-academy/Compose
 share/X11/locale/georgian-academy/XI18N_OBJS
 share/X11/locale/georgian-academy/XLC_LOCALE
@@ -957,6 +960,9 @@ share/X11/locale/nokhchi-1/XLC_LOCALE
 share/X11/locale/pt_BR.UTF-8/Compose
 share/X11/locale/pt_BR.UTF-8/XI18N_OBJS
 share/X11/locale/pt_BR.UTF-8/XLC_LOCALE
+share/X11/locale/ru_RU.UTF-8/Compose
+share/X11/locale/ru_RU.UTF-8/XI18N_OBJS
+share/X11/locale/ru_RU.UTF-8/XLC_LOCALE
 share/X11/locale/tatar-cyr/Compose
 share/X11/locale/tatar-cyr/XI18N_OBJS
 share/X11/locale/tatar-cyr/XLC_LOCALE
@@ -1021,6 +1027,7 @@ share/X11/locale/zh_TW/XLC_LOCALE
 @dirrm share/X11/locale/th_TH.UTF-8
 @dirrm share/X11/locale/th_TH
 @dirrm share/X11/locale/tatar-cyr
+@dirrm share/X11/locale/ru_RU.UTF-8
 @dirrm share/X11/locale/pt_BR.UTF-8
 @dirrm share/X11/locale/nokhchi-1
 @dirrm share/X11/locale/mulelao-1
@@ -1058,6 +1065,7 @@ share/X11/locale/zh_TW/XLC_LOCALE
 @dirrm share/X11/locale/ibm-cp1133
 @dirrm share/X11/locale/georgian-ps
 @dirrm share/X11/locale/georgian-academy
+@dirrm share/X11/locale/fi_FI.UTF-8
 @dirrm share/X11/locale/en_US.UTF-8
 @dirrm share/X11/locale/el_GR.UTF-8
 @dirrm share/X11/locale/armscii-8
