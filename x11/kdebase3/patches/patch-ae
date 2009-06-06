@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.10 2009/06/06 04:59:50 hasso Exp $
+
+http://websvn.kde.org/?view=rev&revision=911492
+
+--- kioslave/fish/fish.cpp.orig	2009-01-16 11:09:18 +0200
++++ kioslave/fish/fish.cpp	2009-01-16 11:10:38 +0200
+@@ -1430,7 +1430,7 @@ void fishProtocol::run() {
+                     sent();
+                 }
+             }
+-            if (FD_ISSET(childFd,&rfds)) {
++            else if (FD_ISSET(childFd,&rfds)) {
+                 rc = read(childFd,buf+offset,32768-offset);
+                 //myDebug( << "read " << rc << " bytes" << endl);
+                 if (rc > 0) {
