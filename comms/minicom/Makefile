@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/07/04 20:54:34 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2009/06/06 21:30:30 wiz Exp $
 
 DISTNAME=	minicom-2.1
 PKGREVISION=	3
@@ -12,7 +12,9 @@ COMMENT=	MS-DOS Telix serial communication program "workalike"
 DEPENDS+=	gkermit-[0-9]*:../../comms/gkermit
 DEPENDS+=	lrzsz-[0-9]*:../../comms/lrzsz
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+INSTALLATION_DIRS=	share/examples/minicom
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
@@ -44,8 +46,7 @@ SUBST_FILES.minicom=	src/rwconf.c
 SUBST_VARS.minicom=	PREFIX GKERMIT_PREFIX LRZSZ_PREFIX
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/minicom.users ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/minicom.users ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
