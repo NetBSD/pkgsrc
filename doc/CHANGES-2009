@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2172 2009/06/06 05:01:36 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2173 2009/06/06 10:28:55 manu Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2897,3 +2897,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-latex to 2008.12778nb3 [minskim 2009-06-05]
 	Updated shells/bash to 4.0.24 [hasso 2009-06-06]
 	Updated x11/kdebase3 to 3.5.10nb3 [hasso 2009-06-06]
+	Updated www/ap2-auth-mellon to 0.2.1 [manu 2009-06-06]
