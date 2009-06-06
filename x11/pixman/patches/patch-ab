@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.9 2009/04/23 08:30:53 sno Exp $
+$NetBSD: patch-ab,v 1.10 2009/06/06 22:28:41 wiz Exp $
 
---- pixman/Makefile.in.orig	2009-04-09 20:23:27.000000000 +0000
-+++ pixman/Makefile.in	2009-04-12 08:55:34.000000000 +0000
-@@ -288,7 +288,8 @@
+--- pixman/Makefile.in.orig	2009-05-31 02:07:50.000000000 +0000
++++ pixman/Makefile.in
+@@ -313,7 +313,8 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  lib_LTLIBRARIES = libpixman-1.la
  libpixman_1_la_LDFLAGS = -version-info $(LT_VERSION_INFO) \
@@ -10,5 +10,5 @@ $NetBSD: patch-ab,v 1.9 2009/04/23 08:30:53 sno Exp $
 +	-no-undefined $(am__append_2) $(am__append_7) \
 +	-export-symbols $(PIXMAN_SYMFILE)
  libpixman_1_la_LIBADD = @DEP_LIBS@ -lm $(am__append_3) $(am__append_5) \
- 	$(am__append_8) $(am__append_10)
+ 	$(am__append_8) $(am__append_10) $(am__append_12)
  libpixman_1_la_CFLAGS = -DPIXMAN_DISABLE_DEPRECATED
