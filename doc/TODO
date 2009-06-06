@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8161 2009/06/06 13:11:43 obache Exp $
+$NetBSD: TODO,v 1.8162 2009/06/06 16:43:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -862,7 +862,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libunique-1.0.8
 	o libv4l-0.5.98
 	o licq-1.3.6
-	o liferea-1.6.0rc3
+	o liferea-1.6.0rc4
 	o lighttpd-1.4.22
 	o lincvs-2.1.3 [now called CrossVC]
 	o lmbench-2.5 [http://lmbench.sourceforge.net/]
@@ -1125,7 +1125,10 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-mutagen-1.15
 	o py-psycopg-2.0.11
 	o py-pytz-2009g
+	o py-qt3-base-3.18
+	o py-qt4-4.5
 	o py-setuptools-0.6
+	o py-sip-4.8
 	o py-sqlite2-2.5.1
 	o py-subversion-1.6.2
 	o py-sybase-0.37
@@ -1138,7 +1141,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o qemu-0.10.5
 	o qnetwalk-1.3
 	o qpopper-4.0.14
-	o qt3-qscintilla-2.3.2
+	o qt3-qscintilla-2.4
 	o qt4-libs-4.5.1
 	o qvplay-0.95
 	o radiance-3.7.2
