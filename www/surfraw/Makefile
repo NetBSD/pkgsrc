@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.41 2009/03/01 14:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2009/06/06 22:07:43 wiz Exp $
 #
 
-DISTNAME=	surfraw-2.2.4
+DISTNAME=	surfraw-2.2.5
 CATEGORIES=	www
 MASTER_SITES=	http://surfraw.alioth.debian.org/dist/
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://surfraw.alioth.debian.org/
 COMMENT=	Shell Users' Revolutionary Front Rage Against the Web
+LICENSE=	public-domain
 
 CONFLICTS+=	surfaw-[0-9]*
 
