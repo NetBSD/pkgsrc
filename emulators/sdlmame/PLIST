@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/18 16:02:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/06 21:21:34 wiz Exp $
 bin/chdman
 bin/jedutil
 bin/mame
 bin/romcmp
-share/doc/sdlmame/SDLMAME.txt
+share/doc/sdlmame/sdlmame.txt
 share/doc/sdlmame/license.txt
 share/doc/sdlmame/mame.txt
 share/doc/sdlmame/windows.txt
