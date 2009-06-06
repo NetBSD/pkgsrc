@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2009/06/06 21:51:59 wiz Exp $
 #
 
-DISTNAME=	chmlib-0.39
+DISTNAME=	chmlib-0.40
 CATEGORIES=	devel
 MASTER_SITES=	http://morte.jedrea.com/~jedwin/projects/chmlib/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://morte.jedrea.com/~jedwin/projects/chmlib/
 COMMENT=	Library for dealing with Microsoft ITSS/CHM format files
+LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS=	kchm-[0-9]*
 
