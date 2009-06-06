@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/04/20 14:34:24 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/06 21:42:45 wiz Exp $
 #
 
-DISTNAME=		sdlmess0130
-PKGNAME=		sdlmess-0.130
+DISTNAME=		sdlmess0131
+PKGNAME=		sdlmess-0.131
 
 COMMENT=		Multi Emulator Super System, SDL port
 
@@ -24,6 +24,7 @@ post-build:
 	cd ${WRKSRC} && ./dat2html
 
 do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/castool ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/imgtool ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/mess ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/artwork/* \
