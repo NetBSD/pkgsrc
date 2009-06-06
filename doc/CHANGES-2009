@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2185 2009/06/06 22:07:54 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2186 2009/06/06 22:28:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2910,3 +2910,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated time/etm to 286 [wiz 2009-06-06]
 	Updated games/ioquake3 to 1.36 [wiz 2009-06-06]
 	Updated www/surfraw to 2.2.5 [wiz 2009-06-06]
+	Updated x11/pixman to 0.15.8 [wiz 2009-06-06]
