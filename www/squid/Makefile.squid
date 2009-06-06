@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.squid,v 1.6 2009/05/04 22:29:41 tron Exp $
+# $NetBSD: Makefile.squid,v 1.7 2009/06/06 22:49:50 tron Exp $
 #
 # used by www/squid26/Makefile
 # used by www/squid27/Makefile
@@ -76,6 +76,7 @@ post-install:
 		${INSTALL_DATA} ${PKGDIR}/../squid/files/$$f \
 			${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
+	${CHMOD} -w ${PREFIX}/libexec/pinger
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(							\
 	cd ${WRKSRC}/errors;					\
