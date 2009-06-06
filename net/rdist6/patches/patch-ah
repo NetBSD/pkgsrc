@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.3 2009/06/06 00:48:39 abs Exp $
+
+--- src/Makefile.real.orig	1999-08-04 16:57:32.000000000 +0100
++++ src/Makefile.real
+@@ -80,8 +80,8 @@ clean:
+ 
+ install: $(CLIENT_BIN) $(SERVER_BIN)
+ 	$(INSTALL) ${IN_ARGS} -o root -m ${RDIST_MODE} \
+-		$(CLIENT_BIN) $(BIN_DIR)/$(CLIENT)
++		$(CLIENT_BIN) $(DESTDIR)$(BIN_DIR)/$(CLIENT)
+ 	$(INSTALL) ${IN_ARGS} -o ${BIN_OWNER} -m ${RDISTD_MODE} \
+-		$(SERVER_BIN) $(BIN_DIR)/$(SERVER)
++		$(SERVER_BIN) $(DESTDIR)$(BIN_DIR)/$(SERVER)
+ 
+ install.man:
