@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2008/09/22 20:21:04 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2009/06/06 13:08:27 obache Exp $
 
-DISTNAME=	aMule-2.1.3
+DISTNAME=	aMule-2.2.5
 PKGNAME=	${DISTNAME:S/aMule/amule/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=amule/}
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tripledes@eslack.org
 HOMEPAGE=	http://www.amule.org/
 COMMENT=	Another Emule P2P client
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,17 +18,29 @@ CONFLICTS=		xmule-[0-9]*
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config perl:run
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-wx-config=${LOCALBASE}/bin/wx-config
-CONFIGURE_ENV+=		gt_cv_func_gnugettext1_libintl=yes
+CONFIGURE_ARGS+=	--with-wx-config=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
+CONFIGURE_ARGS+=	--with-crypto-prefix=${BUILDLINK_PREFIX.cryptopp}
+CONFIGURE_ARGS+=	--with-language=all
 
-LIBS+=			-lm
+.include "options.mk"
+
+REPLACE_PERL=		src/libs/ec/file_generator.pl		\
+			src/utils/scripts/kadnodescreate.pl	\
+			src/utils/scripts/stats.pl		\
+			src/utils/scripts/mldonkey_importer.pl	\
+			src/utils/xas/xas.pl
+
+LIBS+=			-lm	# for pow(3)
 
 UNLIMIT_RESOURCES+=	datasize
 
+TEST_TARGET=		check
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../x11/wxGTK26/buildlink3.mk"
+.include "../../security/crypto++/buildlink3.mk"
+.include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
