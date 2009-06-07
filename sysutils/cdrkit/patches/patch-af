@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- librols/stdio/fgetline.c.orig
++++ librols/stdio/fgetline.c
+@@ -76,7 +76,7 @@ fgetline(f, buf, len)
+ }
+ 
+ EXPORT int
+-getline(buf, len)
++get_line(buf, len)
+ 	char	*buf;
+ 	int	len;
+ {

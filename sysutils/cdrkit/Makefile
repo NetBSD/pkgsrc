@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/12/02 13:03:22 obache Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/07 22:02:24 hasso Exp $
 #
 
-DISTNAME=	cdrkit-1.1.6
-PKGREVISION=	1
+DISTNAME=	cdrkit-1.1.9
 CATEGORIES=	sysutils
 MASTER_SITES=	http://cdrkit.org/releases/
 
