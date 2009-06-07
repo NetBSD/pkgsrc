@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2199 2009/06/07 11:25:22 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2200 2009/06/07 11:32:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2931,3 +2931,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-wasy-doc version 2008.7340 [minskim 2009-06-07]
 	Updated www/squid31 to 3.1.0.8 [tron 2009-06-07]
 	Updated x11/modular-xorg-server to 1.6.1.901 [wiz 2009-06-07]
+	Updated devel/p5-Class-MOP to 0.85 [seb 2009-06-07]
+	Updated devel/p5-Moose to 0.80 [seb 2009-06-07]
