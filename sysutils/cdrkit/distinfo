@@ -1,8 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/01 00:26:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2009/06/07 22:02:24 hasso Exp $
 
-SHA1 (cdrkit-1.1.6.tar.gz) = 39fd5f9c500f4f084bd112bc103bed2785a8eb8b
-RMD160 (cdrkit-1.1.6.tar.gz) = e8d322cdef9770c0cdce3fbb9b45a5e904f20d23
-Size (cdrkit-1.1.6.tar.gz) = 1407346 bytes
+SHA1 (cdrkit-1.1.9.tar.gz) = 44c9d85c300803e6b9a415e79f3f0c9ddf1a65ee
+RMD160 (cdrkit-1.1.9.tar.gz) = ce3c62b98c82f3d524a345a6360d24e1d7ac73d7
+Size (cdrkit-1.1.9.tar.gz) = 1430065 bytes
 SHA1 (patch-aa) = b83c5b64b957db9f2c0b003b2c6088ca9d17aa9a
 SHA1 (patch-ab) = 07e110ec3165c697f80f8fc2dbb104863f2bac97
-SHA1 (patch-ac) = 21d3b2cce56dadd2195897ed0e4c8ab34e9ac884
+SHA1 (patch-ac) = c8d1387ececa092b2e652711228fba9aef612ad5
+SHA1 (patch-ad) = 07329be04bef1570c0777d8169b76077ab192794
+SHA1 (patch-ae) = b54038cf3dcd3e93d7115c8c6f590d8944d66254
+SHA1 (patch-af) = ee12df06d9ca023820d0f2fecbb205b03ae64ccb
+SHA1 (patch-ag) = 4107264722dc7985d31a1e4ad49196ca01a6f8a1
+SHA1 (patch-ah) = af9379e9690808fe7a3adc59c16a9548b9941b9f
+SHA1 (patch-ai) = f4c2c6e52e29c3fb8b00150504c58f82ce9dc161
+SHA1 (patch-aj) = bba9ac440f040bab9b12c25cffd80e07493d4011
