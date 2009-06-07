@@ -1,0 +1,31 @@
+$NetBSD: patch-aj,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- wodim/cue.c.orig
++++ wodim/cue.c
+@@ -253,7 +253,7 @@ static	char	*skipwhite(const char *s);
+ static	char	*peekword(void);
+ static	char	*lineend(void);
+ static	char	*markword(char *delim);
+-static	char	getdelim(void);
++static	char	get_delim(void);
+ static	char	*getnextitem(char *delim);
+ static	char	*neednextitem(char *delim);
+ static	char	*nextword(void);
+@@ -746,7 +746,7 @@ parse_track(track_t trackp[], state_t *s
+ 	if (kp == NULL)
+ 		cueabort("Unknown filetype '%s'", word);
+ 
+-	if (getdelim() == '/') {
++	if (get_delim() == '/') {
+ 		word = needitem();
+ 		if (*astol(++word, &secsize) != '\0')
+ 			cueabort("Not a number '%s'", word);
+@@ -1128,7 +1128,7 @@ linelen--;
+ }
+ 
+ static char 
+-getdelim()
++get_delim()
+ {
+ 	return (wordendc);
+ }

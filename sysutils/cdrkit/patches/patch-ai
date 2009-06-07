@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- readom/readom.c.orig
++++ readom/readom.c
+@@ -1605,7 +1605,7 @@ read_generic(SCSI *usalp, parm_t *parmp,
+ 		fprintf(stderr, "Copy from SCSI (%d,%d,%d) disk to file\n",
+ 					usal_scsibus(usalp), usal_target(usalp), usal_lun(usalp));
+ 		fprintf(stderr, "Enter filename [%s]: ", defname); flush();
+-		(void) getline(filename, sizeof (filename));
++		(void) get_line(filename, sizeof (filename));
+ 	}
+ 
+ 	if (askrange) {
+@@ -1772,7 +1772,7 @@ write_disk(SCSI *usalp, parm_t *parmp)
+ 		fprintf(stderr, "Copy from file to SCSI (%d,%d,%d) disk\n",
+ 					usal_scsibus(usalp), usal_target(usalp), usal_lun(usalp));
+ 		fprintf(stderr, "Enter filename [%s]: ", defname); flush();
+-		(void) getline(filename, sizeof (filename));
++		(void) get_line(filename, sizeof (filename));
+ 		fprintf(stderr, "Notice: reading from file always starts at file offset 0.\n");
+ 
+ 		getlong("Enter starting sector for copy:", &addr, 0L, end-1);
