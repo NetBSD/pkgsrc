@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2197 2009/06/07 07:32:36 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2198 2009/06/07 08:37:00 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2929,3 +2929,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-stmaryrd-doc version 2008.7340 [minskim 2009-06-07]
 	Added fonts/tex-wasy version 2008.7340 [minskim 2009-06-07]
 	Added fonts/tex-wasy-doc version 2008.7340 [minskim 2009-06-07]
+	Updated www/squid31 to 3.1.0.8 [tron 2009-06-07]
