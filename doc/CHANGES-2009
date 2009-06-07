@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2212 2009/06/07 21:47:53 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2213 2009/06/07 22:04:33 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated graphics/evas-xpm to 0.9.9.060 [joerg 2009-06-07]
 	Updated graphics/evas-xrender-x11 to 0.9.9.060 [joerg 2009-06-07]
 	Updated x11/xf86-video-vesa to 2.2.0 [sno 2009-06-07]
+	Updated sysutils/cdrkit to 1.1.9 [hasso 2009-06-08]
