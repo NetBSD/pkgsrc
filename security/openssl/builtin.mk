@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.27 2009/06/07 11:06:26 wiz Exp $
+# $NetBSD: builtin.mk,v 1.28 2009/06/07 14:24:03 joerg Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -251,6 +251,9 @@ BUILD_DEFS+=	SSLDIR SSLCERTS SSLKEYS
 .  if !empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
 BUILDLINK_TARGETS+=     openssl-fake-pc
 
+.    if !defined(HAS_OPENSSL_FAKE_PC)
+HAS_OPENSSL_FAKE_PC=
+
 openssl-fake-pc:
 	${RUN} \
 	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/libcrypto.pc; \
@@ -294,6 +297,7 @@ openssl-fake-pc:
 		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
 		} >$${dst}; \
 	fi
+.    endif
 .  endif
 
 .endif	# CHECK_BUILTIN.openssl
