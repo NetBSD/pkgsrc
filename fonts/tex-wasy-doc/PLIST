@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 07:31:30 minskim Exp $
+share/texmf-dist/doc/fonts/wasy/README
+share/texmf-dist/doc/fonts/wasy/legal.txt
+share/texmf-dist/doc/fonts/wasy/wasydoc.pdf
+share/texmf-dist/doc/fonts/wasy/wasydoc.tex
+share/texmf-dist/doc/fonts/wasy/wasyfont.2
