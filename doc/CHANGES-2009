@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2208 2009/06/07 18:35:04 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2209 2009/06/07 20:24:33 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-MooseX-MethodAttributes to 0.14 [seb 2009-06-07]
 	Updated lang/embryo to 0.9.9.060 [joerg 2009-06-07]
 	Updated x11/xrandr to 1.3.0 [wiz 2009-06-07]
+	Updated editors/emacs-snapshot to 23.0.94.20090604nb1 [hasso 2009-06-07]
