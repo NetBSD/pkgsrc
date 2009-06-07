@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 06:05:39 minskim Exp $
+share/texmf-dist/doc/generic/enctex/COPYING
+share/texmf-dist/doc/generic/enctex/COPYING.UCD
+share/texmf-dist/doc/generic/enctex/INSTALL
+share/texmf-dist/doc/generic/enctex/INSTALL.eng
+share/texmf-dist/doc/generic/enctex/README
+share/texmf-dist/doc/generic/enctex/changes.txt
+share/texmf-dist/doc/generic/enctex/encdoc-e.pdf
+share/texmf-dist/doc/generic/enctex/encdoc-e.tex
+share/texmf-dist/doc/generic/enctex/encdoc.pdf
+share/texmf-dist/doc/generic/enctex/encdoc.tex
+share/texmf-dist/doc/generic/enctex/math-example.tex
+share/texmf-dist/doc/generic/enctex/unimap.diff
+share/texmf-dist/doc/generic/enctex/unimap.py
+share/texmf-dist/doc/generic/enctex/vlna.tex
