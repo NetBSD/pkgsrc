@@ -3,6 +3,16 @@ abook			Enable abook support.
 acl			Enable POSIX ACL support.
 ads			Enable Windows's Active Directory support.
 agg			Enable agg support.
+amule-alc		Build aMule LinkCreator GUI version. 
+amule-alcc		Build aMule LinkCreator for console.
+amule-cas		Build C aMule Statistics.
+amule-cmd		Build aMule command line client.
+amule-daemon		Build aMule daemon version.
+amule-ed2k		Bulid aMule ed2k links handler.
+amule-gui		Build aMule remote GUI.
+amule-monolithic	Build monolithic aMule app.
+amule-webserver		Build aMule WebServer.
+amule-wxcas		Build aMule GUI Statistics.
 anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
@@ -446,6 +456,7 @@ unrealircd-showlistmodes	Show the modes a channel has set in the /list output.
 unrealircd-shunnotices	Notify a user when they are no longer shunned.
 unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person who set the topic.
 unrealircd-ziplinks	Compress data before transmitting it between servers.
+upnp			Enable support for UPnP.
 uucp			Enable support for uucp.
 vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
