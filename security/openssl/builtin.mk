@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.26 2008/04/25 20:06:15 jlam Exp $
+# $NetBSD: builtin.mk,v 1.27 2009/06/07 11:06:26 wiz Exp $
 
 BUILTIN_PKG:=	openssl
 
@@ -244,5 +244,56 @@ SSLCERTS=	${SSLDIR}/certs
 SSLKEYS=	${SSLDIR}/private
 
 BUILD_DEFS+=	SSLDIR SSLCERTS SSLKEYS
+
+# create pc files for builtin version; other versions assumed to contain them
+# If we are using the builtin version, check whether it has a *.pc
+# files or not.  If the latter, generate fake ones.
+.  if !empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
+BUILDLINK_TARGETS+=     openssl-fake-pc
+
+openssl-fake-pc:
+	${RUN} \
+	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/libcrypto.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/libcrypto.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: OpenSSL-libcrypto"; \
+		${ECHO} "Description: OpenSSL cryptography library"; \
+		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lcrypto"; \
+		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		} >$${dst}; \
+	fi
+	${RUN} \
+	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/libssl.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/libssl.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: OpenSSL"; \
+		${ECHO} "Description: Secure Sockets Layer and cryptography libraries"; \
+		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"; \
+		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		} >$${dst}; \
+	fi
+	${RUN} \
+	src=${BUILDLINK_PREFIX.openssl}/lib/pkgconfig/openssl.pc; \
+	dst=${BUILDLINK_DIR}/lib/pkgconfig/openssl.pc; \
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig; \
+	if ${TEST} -f $${src}; then \
+		${LN} -sf $${src} $${dst}; \
+	else \
+		{ ${ECHO} "Name: OpenSSL"; \
+		${ECHO} "Description: Secure Sockets Layer and cryptography libraries and tools"; \
+		${ECHO} "Version: ${BUILTIN_VERSION.openssl}"; \
+		${ECHO} "Libs: -L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"; \
+		${ECHO} "Cflags: -I${BUILDLINK_PREFIX.openssl}/include"; \
+		} >$${dst}; \
+	fi
+.  endif
 
 .endif	# CHECK_BUILTIN.openssl
