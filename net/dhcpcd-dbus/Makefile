@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/04/28 21:10:36 roy Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/07 20:29:58 roy Exp $
 #
 
-DISTNAME=		dhcpcd-dbus-0.4.0
+DISTNAME=		dhcpcd-dbus-0.4.1
 CATEGORIES=		net
 MASTER_SITES=		ftp://roy.marples.name/pub/dhcpcd/
 MASTER_SITES+=		http://roy.aydogan.net/dhcpcd/
@@ -10,6 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		roy@NetBSD.org
 HOMEPAGE=		http://roy.marples.name/projects/dhcpcd/
 COMMENT=		DBus binding for dhcpcd
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c99
