@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2194 2009/06/07 06:57:33 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2195 2009/06/07 07:11:50 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2923,3 +2923,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-mflogo version 2008.7340 [minskim 2009-06-07]
 	Added fonts/tex-mflogo-doc version 2008.7340 [minskim 2009-06-07]
 	Added fonts/tex-manfnt version 2008.7340 [minskim 2009-06-07]
+	Added fonts/tex-rsfs version 2008.11620 [minskim 2009-06-07]
+	Added fonts/tex-rsfs-doc version 2008.11620 [minskim 2009-06-07]
