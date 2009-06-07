@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/05 02:57:53 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/07 20:12:06 hasso Exp $
 
 DISTNAME=	emacs-snapshot_20090604.orig
 PKGNAME=	${DISTNAME:S/snapshot_/${EMACS_VERSION}./:S/.orig//}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://emacs.orebokech.com/pool/main/e/emacs-snapshot/
 
@@ -14,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
-FILESDIR=	${.CURDIR}/../../editors/emacs/files
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes
 USE_DIRS+=	xdg-1.1
@@ -51,7 +51,13 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 
+.if (${OPSYS} == "DragonFly") && exists(/usr/lib/crtn.o)
+CPPFLAGS+=		-DDFLY_CRT_USRLIB
+.endif
+
 post-extract:
-	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
+	cp ${.CURDIR}/../../editors/emacs/files/site-init.el ${WRKSRC}/lisp
+	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
+	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../mk/bsd.pkg.mk"
