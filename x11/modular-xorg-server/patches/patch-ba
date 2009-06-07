@@ -1,0 +1,22 @@
+$NetBSD: patch-ba,v 1.1 2009/06/07 11:23:47 wiz Exp $
+
+--- configure.orig	2009-05-17 00:33:36 +0300
++++ configure	2009-05-17 00:33:56 +0300
+@@ -22427,7 +22427,7 @@ _ACEOF
+ 		DRI2=yes
+ 		;;
+ esac
+- if test "x$DRI2" == xyes; then
++ if test "x$DRI2" = xyes; then
+   DRI2_TRUE=
+   DRI2_FALSE='#'
+ else
+@@ -22610,7 +22610,7 @@ $as_echo "$as_me: DRI2 AIGLX disabled, _
+ 		DRI2_AIGLX=no
+ 	fi
+ fi
+- if test "x$DRI2_AIGLX" == xyes; then
++ if test "x$DRI2_AIGLX" = xyes; then
+   DRI2_AIGLX_TRUE=
+   DRI2_AIGLX_FALSE='#'
+ else
