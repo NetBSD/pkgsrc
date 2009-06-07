@@ -1,0 +1,3 @@
+LaTeX package and font definition file to access the Knuthian mflogo
+fonts described in `The MetaFontbook' and to typeset the MetaFont logos
+in LaTeX documents.
