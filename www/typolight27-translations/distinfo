@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2009/06/02 03:05:12 taca Exp $
+$NetBSD: distinfo,v 1.12 2009/06/07 01:16:41 taca Exp $
 
 SHA1 (TYPOlight-Afrikaans-v1.zip) = 4768afb2c105acbfe98c26cc579837d2d2a8620c
 RMD160 (TYPOlight-Afrikaans-v1.zip) = 7a2d4ad7c3dda26b3c48ef30b74de6c62f2abb03
@@ -24,9 +24,9 @@ Size (TYPOlight-Danish-v6.zip) = 139447 bytes
 SHA1 (TYPOlight-Dutch-v31.zip) = b680907199541a4802429fc071a6cb0989d6bfaa
 RMD160 (TYPOlight-Dutch-v31.zip) = fd5c6301e1f926711e91192383c001ce755897df
 Size (TYPOlight-Dutch-v31.zip) = 145377 bytes
-SHA1 (TYPOlight-French-v44.zip) = 52ed1627233e202c1aa6c41bcf0f256682aad605
-RMD160 (TYPOlight-French-v44.zip) = 5e54e5646f2a2b72facdd99d54b2944690be24ba
-Size (TYPOlight-French-v44.zip) = 146988 bytes
+SHA1 (TYPOlight-French-v45.zip) = 02de9fa8b42fbe75a611575fd5f38b81a4d8a48a
+RMD160 (TYPOlight-French-v45.zip) = 9bb872662e44b6562d3d24dc90009f4e1c0169ba
+Size (TYPOlight-French-v45.zip) = 149594 bytes
 SHA1 (TYPOlight-Icelandic-v2.zip) = 2552497e412ecc708170e947b18d65c8db914043
 RMD160 (TYPOlight-Icelandic-v2.zip) = 1ea48962cba3edbece031be423607ce429281b34
 Size (TYPOlight-Icelandic-v2.zip) = 76117 bytes
@@ -60,9 +60,9 @@ Size (TYPOlight-Portuguese-v6.zip) = 154995 bytes
 SHA1 (TYPOlight-Romanian-v8.zip) = df74832094fd922f9aa9be77e2301d1c12cdd630
 RMD160 (TYPOlight-Romanian-v8.zip) = 34d5590c1ca59f5d26f53de9b108d0c7c95369a3
 Size (TYPOlight-Romanian-v8.zip) = 136805 bytes
-SHA1 (TYPOlight-Russian-v21.zip) = c6b30ba7c47bd161f54bb4330cfb26aa776a0617
-RMD160 (TYPOlight-Russian-v21.zip) = 457852f5c7e9aea2bda726bd52a967aa8a344298
-Size (TYPOlight-Russian-v21.zip) = 172350 bytes
+SHA1 (TYPOlight-Russian-v22.zip) = 613912577ac8b13804ac6890bc242c76b593fc45
+RMD160 (TYPOlight-Russian-v22.zip) = 301374d1bce97b9300c589ac5366df92ef8f2f5f
+Size (TYPOlight-Russian-v22.zip) = 172362 bytes
 SHA1 (TYPOlight-Serbian-v5.zip) = cb712c54e583b4394483fc581a81ba2484f94df4
 RMD160 (TYPOlight-Serbian-v5.zip) = b7f7e54890fd8216c03c309ec10bd5673e54027b
 Size (TYPOlight-Serbian-v5.zip) = 147463 bytes
