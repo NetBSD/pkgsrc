@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 18:56:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/07 21:12:11 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-buffer/}
 
@@ -9,7 +9,8 @@ EVAS_ENGINES=	buffer
 .include "../../graphics/evas/Makefile.common"
 
 BUILD_DIRS=	src/modules/engines/buffer
-MAKE_FLAGS+=	module_la_LIBADD=${BUILDLINK_PREFIX.evas}/lib/libevas.la
+MAKE_FLAGS+=	module_la_LIBADD=${BUILDLINK_PREFIX.evas}/lib/libevas.la \
+		module_la_DEPENDENCIES=
 
 INSTALLATION_DIRS+=	lib/pkgconfig
 PKGCONFIG_OVERRIDE=	evas-software-buffer.pc.in
