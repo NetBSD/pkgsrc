@@ -1,0 +1,3 @@
+EncTeX is a TeX extension allowing you flexible input/output
+reencoding by new encTeX primitives.  It allows full UTF-8 processing
+in standard 8-bit TeX.
