@@ -1,17 +1,19 @@
-$NetBSD: patch-aj,v 1.3 2009/05/05 07:49:48 tron Exp $
+$NetBSD: patch-aj,v 1.4 2009/06/07 08:36:36 tron Exp $
 
---- src/Makefile.in.orig	2009-04-08 12:51:29.000000000 +0200
-+++ src/Makefile.in
-@@ -4297,10 +4297,10 @@ info: info-recursive
+--- src/Makefile.in.orig	2009-05-23 13:31:24.000000000 +0100
++++ src/Makefile.in	2009-06-06 18:13:15.000000000 +0100
+@@ -4284,12 +4284,12 @@
  
  info-am:
  
 -install-data-am: install-data-local install-dataDATA
 +install-data-am: install-dataDATA
  
+ install-dvi: install-dvi-recursive
+ 
  install-exec-am: install-binPROGRAMS install-libexecPROGRAMS \
 -	install-sbinPROGRAMS install-sysconfDATA
 +	install-sbinPROGRAMS
  
- install-info: install-info-recursive
+ install-html: install-html-recursive
  
