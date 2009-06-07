@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2190 2009/06/07 05:53:21 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2191 2009/06/07 06:06:45 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2916,3 +2916,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-bibtex version 0.99c [minskim 2009-06-07]
 	Added print/tex-bibtex-doc version 0.99c [minskim 2009-06-07]
 	Added print/tex-dvips version 2008.12784 [minskim 2009-06-07]
+	Added print/tex-enctex version 2008.11913 [minskim 2009-06-07]
+	Added print/tex-enctex-doc version 2008.11913 [minskim 2009-06-07]
