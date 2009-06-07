@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 05:28:54 minskim Exp $
+share/texmf-dist/bibtex/bib/base/xampl.bib
+share/texmf-dist/bibtex/bst/base/abbrv.bst
+share/texmf-dist/bibtex/bst/base/acm.bst
+share/texmf-dist/bibtex/bst/base/alpha.bst
+share/texmf-dist/bibtex/bst/base/apalike.bst
+share/texmf-dist/bibtex/bst/base/ieeetr.bst
+share/texmf-dist/bibtex/bst/base/plain.bst
+share/texmf-dist/bibtex/bst/base/siam.bst
+share/texmf-dist/bibtex/bst/base/unsrt.bst
