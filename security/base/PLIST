@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/05 22:50:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8.4.1 2009/06/07 10:15:56 tron Exp $
 share/base/admin/base_roleadmin.php
 share/base/admin/base_useradmin.php
 share/base/admin/index.php
@@ -17,6 +17,7 @@ share/base/base_hdr1.php
 share/base/base_hdr2.php
 share/base/base_main.php
 share/base/base_maintenance.php
+share/base/base_local_rules.php
 share/base/base_logout.php
 share/base/base_payload.php
 share/base/base_qry_alert.php
