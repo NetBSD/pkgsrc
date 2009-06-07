@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2201 2009/06/07 12:37:23 seb Exp $
+$NetBSD: CHANGES-2009,v 1.2202 2009/06/07 12:57:36 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2934,3 +2934,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Class-MOP to 0.85 [seb 2009-06-07]
 	Updated devel/p5-Moose to 0.80 [seb 2009-06-07]
 	Updated devel/p5-ex-lib to 0.07 [seb 2009-06-07]
+	Added audio/cmus-unofficial version 20090605 [ahoka 2009-06-07]
