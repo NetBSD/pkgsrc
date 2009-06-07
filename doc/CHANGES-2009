@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2189 2009/06/07 05:32:29 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2190 2009/06/07 05:53:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2915,3 +2915,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/typolight27-translations to 20090605 [taca 2009-06-07]
 	Added print/tex-bibtex version 0.99c [minskim 2009-06-07]
 	Added print/tex-bibtex-doc version 0.99c [minskim 2009-06-07]
+	Added print/tex-dvips version 2008.12784 [minskim 2009-06-07]
