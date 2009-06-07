@@ -1,0 +1,5 @@
+BibTeX allows the user to store his citation data in generic form,
+while printing citations in a document in the form specified by a
+BibTeX style, to be specified in the document itself.  BibTeX itself
+is an ASCII-only program; there is, however, a version that copes with
+8-bit character sets.
