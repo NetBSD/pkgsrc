@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2009/06/07 20:25:00 spz Exp $
+
+--- ./lib/ModPerl/Code.pm.orig	2007-12-31 07:50:47.000000000 +0000
++++ ./lib/ModPerl/Code.pm
+@@ -833,6 +833,9 @@ sub constants_ifdef {
+     if ($ifdef{$name}) {
+         return ("#ifdef $name\n", "#endif /* $name */\n");
+     }
++    if ($name =~ /OPT_INCNOEXEC/) {
++	return ("#if AP_SERVER_MAJORVERSION_NUMBER==2 && AP_SERVER_MINORVERSION_NUMBER<2\n", "#endif /* AP version < 2.2 */\n");
++    }
+ 
+     ("", "");
+ }
