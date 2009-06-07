@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- include/schily.h.orig
++++ include/schily.h
+@@ -116,7 +116,7 @@ extern	int	fexecl(const char *, FILE *, 
+ extern	int	fexecle(const char *, FILE *, FILE *, FILE *, const char *, ...);
+ 		/* 6th arg not const, fexecv forces av[ac] = NULL */
+ extern	int	fexecv(const char *, FILE *, FILE *, FILE *, int, char **);
+-extern	int	fexecve(const char *, FILE *, FILE *, FILE *, char * const *, 
++extern	int	f_execve(const char *, FILE *, FILE *, FILE *, char * const *, 
+ 							  char * const *);
+ extern	int	fspawnv(FILE *, FILE *, FILE *, int, char * const *);
+ extern	int	fspawnl(FILE *, FILE *, FILE *, const char *, const char *, ...);
+@@ -190,7 +190,7 @@ extern	int	schily_error(const char *, ..
+ extern	char	*fillbytes(void *, int, char);
+ extern	char	*findbytes(const void *, int, char);
+ extern	int	findline(const char *, char, const char *, int, char **, int);
+-extern	int	getline(char *, int);
++extern	int	get_line(char *, int);
+ extern	int	getstr(char *, int);
+ extern	int	breakline(char *, char, char **, int);
+ extern	int	getallargs(int *, char * const**, const char *, ...);

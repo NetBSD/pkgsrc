@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- readom/io.c.orig
++++ readom/io.c
+@@ -130,7 +130,7 @@ BOOL getvalue(char *s, long *lp, long mi
+ 		(*prt)(s, *lp, mini, maxi, dp);
+ 		flush();
+ 		line[0] = '\0';
+-		if (getline(line, 80) == EOF)
++		if (get_line(line, 80) == EOF)
+ 			exit(EX_BAD);
+ 
+ 		linep = skipwhite(line);
+@@ -178,7 +178,7 @@ again:
+ 	vprintf(form, args);
+ 	va_end(args);
+ 	flush();
+-	if (getline(okbuf, sizeof(okbuf)) == EOF)
++	if (get_line(okbuf, sizeof(okbuf)) == EOF)
+ 		exit(EX_BAD);
+ 	if (okbuf[0] == '?') {
+ 		printf("Enter 'y', 'Y', 'yes' or 'YES' if you agree with the previous asked question.\n");
