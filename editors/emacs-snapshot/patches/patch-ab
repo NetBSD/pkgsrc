@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2009/06/07 20:12:06 hasso Exp $
 
---- configure.orig	2009-04-28 02:45:09.000000000 +0000
-+++ configure
-@@ -1856,7 +1856,7 @@ archlibdir='${libexecdir}/emacs/${versio
+--- configure.orig	2009-06-04 20:29:50 +0300
++++ configure	2009-06-07 21:41:16 +0300
+@@ -1979,7 +1979,7 @@ archlibdir='${libexecdir}/emacs/${versio
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
@@ -11,7 +11,23 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
  
  
  
-@@ -9405,9 +9405,9 @@ if test "${HAVE_NS}" = yes; then
+@@ -2529,6 +2529,15 @@ case "${canonical}" in
+     esac
+   ;;
+ 
++  ## DragonFly ports
++  *-*-dragonfly*)
++    opsys=dragonfly
++    case "${canonical}" in
++      i[3456]86-*-dragonfly*)     machine=intel386 ;;
++      amd64-*-dragonfly*|x86_64-*-dragonfly*) machine=amdx86-64 ;;
++    esac
++  ;;
++
+   ## FreeBSD kernel + glibc based userland
+   *-*-kfreebsd*gnu* )
+     opsys=gnu-kfreebsd
+@@ -9605,9 +9614,9 @@ if test "${HAVE_NS}" = yes; then
    window_system=nextstep
    with_xft=no
    # set up packaging dirs
