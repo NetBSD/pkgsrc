@@ -1,23 +1,16 @@
-# $NetBSD: Makefile,v 1.52 2009/06/07 17:59:50 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2009/06/07 18:07:00 joerg Exp $
 
-DISTNAME=	pbulk-0.38
-CATEGORIES=	pkgtools
-MASTER_SITES=	# empty
-DISTFILES=	# empty
-
-MAINTAINER=	joerg@NetBSD.org
-HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
+DISTNAME=	pbulk-0.39
 COMMENT=	Modular bulk build framework
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/pbulk
-MAKE_JOBS_SAFE=	no
+.include "../../pkgtools/pbulk/Makefile.common"
 
-USE_FEATURES=	nbcompat
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
-		mail:run sed:run tar:run groff nroff
+		mail:run sed:run tar:run
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
+DEPENDS+=	pbulk-base>=0.38:../../pkgtools/pbulk-base
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,26 +43,15 @@ CONF_FILES+=	share/examples/pbulk/pbulk.conf ${PKG_SYSCONFDIR}/pbulk.conf
 PBULK_CONFIG=		${PKG_SYSCONFDIR}/pbulk.conf
 PBULK_CONFIG_VERSION=	0.34
 
-INSTALLATION_DIRS=	bin libexec/pbulk \
-			${PKGMANDIR}/cat1 ${PKGMANDIR}/man1 \
-			share/examples/pbulk
+INSTALLATION_DIRS=	bin libexec/pbulk share/examples/pbulk
 USE_BSD_MAKEFILE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+BUILD_DIRS=	scripts
 
 do-extract:
 	${CP} -r ${FILESDIR}/pbulk ${WRKDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pbulk.conf ${DESTDIR}${PREFIX}/share/examples/pbulk/pbulk.conf
-
-.if ${OPSYS} == "SunOS"
-LDADD+=		-lsocket -lresolv
-MAKE_ENV+=	LDADD=${LDADD:Q}
-.endif
-
-.if ${OPSYS} == "Linux"
-CPPFLAGS+=	-D_GNU_SOURCE
-.endif
 
 .include "../../mk/bsd.pkg.mk"
