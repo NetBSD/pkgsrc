@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2204 2009/06/07 13:48:56 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2205 2009/06/07 14:05:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2937,3 +2937,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added audio/cmus-unofficial version 20090605 [ahoka 2009-06-07]
 	Updated databases/p5-DBIx-Class to 0.08103 [seb 2009-06-07]
 	Added sysutils/agedu version 8590 [wiz 2009-06-07]
+	Updated math/nickle to 2.68 [wiz 2009-06-07]
