@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2007/11/07 07:40:19 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2009/06/07 20:47:19 mrg Exp $
 
 DISTNAME=	onyx-${VERS}
-PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.canonware.com/download/onyx/
 EXTRACT_SUFX=	.tar.bz2
@@ -17,8 +16,10 @@ CONFIGURE_ARGS+= --with-pcre-prefix=${BUILDLINK_PREFIX.pcre}
 
 BUILDLINK_API_DEPENDS.pcre?=        pcre>=4.0
 
-VERS=		5.1.1
+VERS=		5.1.2
 PLIST_SUBST+=	VERS=${VERS:Q}
+
+MAKE_ENV+=	SHELL=/bin/sh
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} cook
