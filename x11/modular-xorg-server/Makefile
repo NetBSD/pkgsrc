@@ -1,16 +1,11 @@
-# $NetBSD: Makefile,v 1.41 2009/03/26 20:02:45 drochner Exp $
+# $NetBSD: Makefile,v 1.42 2009/06/07 11:23:46 wiz Exp $
 #
 
-DISTNAME=	xorg-server-1.4.2
+DISTNAME=	xorg-server-1.6.1.901
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
-
-PATCHFILES=	xorg-server-1.4.2-20080917.patch.gz
-PATCHFILES+=	${XSERVER_DRI_PATCHFILES}
-PATCH_SITES=	${MASTER_SITE_LOCAL:=xorg-server-patchfiles/}
 
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
@@ -54,7 +49,6 @@ CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
 CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 CONFIGURE_ARGS+=	--with-vendor-web="http://www.pkgsrc.org/"
 
-CONFIGURE_ARGS+=	--enable-dri
 CONFIGURE_ARGS+=	--enable-xorg
 
 CONFIGURE_ARGS+=	--disable-config-hal
@@ -79,25 +73,25 @@ INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.9
-BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.4.4
+BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=1.5
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.1
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.2.99.1
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9.3
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.0.4
-
-post-extract: dri-post-extract
-	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
-	${RM} -f ${WRKSRC}/Mesa-${MESA_VERSION}/docs/README.MINGW32.orig
 
 .include "options.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
 .include "../../x11/compositeproto/buildlink3.mk"
 .include "../../x11/damageproto/buildlink3.mk"
+.include "../../x11/dri2proto/buildlink3.mk"
 .include "../../x11/evieext/buildlink3.mk"
 .include "../../x11/fixesproto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
@@ -109,6 +103,7 @@ post-extract: dri-post-extract
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXfont/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXxf86misc/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
