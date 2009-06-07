@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2188 2009/06/07 01:17:52 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2189 2009/06/07 05:32:29 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2913,3 +2913,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/pixman to 0.15.8 [wiz 2009-06-06]
 	Updated x11/libX11 to 1.2.1 [wiz 2009-06-06]
 	Updated www/typolight27-translations to 20090605 [taca 2009-06-07]
+	Added print/tex-bibtex version 0.99c [minskim 2009-06-07]
+	Added print/tex-bibtex-doc version 0.99c [minskim 2009-06-07]
