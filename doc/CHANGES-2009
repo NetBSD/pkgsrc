@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2196 2009/06/07 07:22:06 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2197 2009/06/07 07:32:36 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2927,3 +2927,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added fonts/tex-rsfs-doc version 2008.11620 [minskim 2009-06-07]
 	Added fonts/tex-stmaryrd version 2008.7340 [minskim 2009-06-07]
 	Added fonts/tex-stmaryrd-doc version 2008.7340 [minskim 2009-06-07]
+	Added fonts/tex-wasy version 2008.7340 [minskim 2009-06-07]
+	Added fonts/tex-wasy-doc version 2008.7340 [minskim 2009-06-07]
