@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 06:56:38 minskim Exp $
+share/texmf-dist/fonts/afm/hoekwater/manfnt/manfnt.afm
+share/texmf-dist/fonts/map/dvips/manfnt/manfnt.map
+share/texmf-dist/fonts/type1/hoekwater/manfnt/manfnt.pfb
+share/texmf-dist/tex/latex/manfnt/manfnt.sty
