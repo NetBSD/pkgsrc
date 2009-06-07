@@ -1,0 +1,5 @@
+The fonts were originally distributed as MetaFont sources only, but
+Adobe Type 1 versions are also now available. Macro support is provided
+for use under LaTeX; the package supports the "only" option (provided by
+the somedefs package) to restrict what is loaded, for those who don't
+need the whole font.
