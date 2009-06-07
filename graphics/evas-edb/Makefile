@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 21:13:43 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/07 21:12:11 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-edb/}
 
@@ -9,7 +9,8 @@ EVAS_IMAGE_LOADERS=	edb
 .include "../../graphics/evas/Makefile.common"
 
 BUILD_DIRS=	src/modules/loaders/edb src/modules/savers/edb
-MAKE_FLAGS+=	module_la_LIBADD="\$${PNG_LIBS} ${BUILDLINK_PREFIX.evas}/lib/libevas.la"
+MAKE_FLAGS+=	module_la_LIBADD="\$${EDB_LIBS} \$${EINA_LIBS} ${BUILDLINK_PREFIX.evas}/lib/libevas.la" \
+		module_la_DEPENDENCIES=
 
 .include "../../databases/edb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
