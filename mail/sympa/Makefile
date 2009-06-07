@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/06/01 19:38:57 sno Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/07 10:44:54 hasso Exp $
 #
 
 DISTNAME=	sympa-5.4.4
@@ -22,7 +22,7 @@ DEPENDS+=	p5-MailTools>=1.51:../../mail/p5-MailTools
 DEPENDS+=	{perl>=5.10,p5-Net>=1.0}:../../net/p5-Net
 DEPENDS+=	p5-SOAP-Lite-[0-9]*:../../net/p5-SOAP-Lite
 DEPENDS+=	p5-Crypt-CipherSaber>=0.50:../../security/p5-Crypt-CipherSaber
-DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=2.00]:../../security/p5-Digest-MD5
+DEPENDS+=	{perl>=5.10,p5-Digest-MD5>=2.00}:../../security/p5-Digest-MD5
 DEPENDS+=	p5-IO-Socket-SSL>=0.90:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Net-SSLeay>=1.16:../../security/p5-Net-SSLeay
 DEPENDS+=	{perl>=5.10,p5-CGI>=2.52}:../../www/p5-CGI
