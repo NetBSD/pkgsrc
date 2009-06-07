@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.7 2009/06/07 11:49:25 hasso Exp $
+
+Fix a build with cmake 2.6.4. The patch is borrowed from Gentoo bugzilla:
+http://bugs.gentoo.org/show_bug.cgi?id=268618
+
+--- avidemux/CMakeLists.txt.orig	2008-10-03 14:05:09 +0300
++++ avidemux/CMakeLists.txt	2009-06-07 13:52:15 +0300
+@@ -84,7 +84,6 @@ ADM_audiocodec 
+ ADM_audio
+ ADM_script 
+ ADM_videoFilter
+-ADM_filter
+ ADM_video 
+ ADM_audiodevice
+ ADM_ocr  
+@@ -93,6 +92,24 @@ ADM_colorspace 
+ 
+ FOREACH(_current ${ADM_SUBDIR})
+ 	ADD_SUBDIRECTORY(${_current})
++ENDFOREACH(_current ${ADM_SUBDIR})
++
++SET(ADM_SUBDIR 
++ADM_filter
++ADM_audiofilter 
++ADM_editor
++ADM_audiocodec 
++ADM_audio
++ADM_script 
++ADM_videoFilter
++ADM_filter
++ADM_video 
++ADM_audiodevice
++ADM_ocr  
++ADM_colorspace 
++)
++
++FOREACH(_current ${ADM_SUBDIR})
+ 	add_libs_all_targets(${_current})
+ ENDFOREACH(_current ${ADM_SUBDIR})
+ 
