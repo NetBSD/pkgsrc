@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/02/27 16:44:38 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/07 21:12:12 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/evas/evas-software-x11/}
 
@@ -9,7 +9,8 @@ EVAS_ENGINES=	software-x11
 .include "../../graphics/evas/Makefile.common"
 
 BUILD_DIRS=	src/modules/engines/software_x11
-MAKE_FLAGS+=	module_la_LIBADD="\$${x_libs} ${BUILDLINK_PREFIX.evas}/lib/libevas.la"
+MAKE_FLAGS+=	module_la_LIBADD="\$${EINA_LIBS} \$${evas_engine_software_x11_libs} ${BUILDLINK_PREFIX.evas}/lib/libevas.la" \
+		module_la_DEPENDENCIES=
 
 INSTALLATION_DIRS+=	lib/pkgconfig
 PKGCONFIG_OVERRIDE=	evas-software-x11.pc.in
