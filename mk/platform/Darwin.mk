@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.37 2009/05/06 10:28:01 tron Exp $
+# $NetBSD: Darwin.mk,v 1.38 2009/06/07 11:34:27 schwarz Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -38,6 +38,10 @@ IMAKEOPTS+=	-DInstallFlags=-c		# do not set user or group
 # Use the GNU cpp, not the OS X cpp, don't look in "/usr/local/include"
 # before "/usr/include".
 CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	-isystem /usr/include
+# don't symlink to /usr/bin/gcc since the latter is a wrapper that tries
+# evoke the real (architecture-dependent) gcc binary in the same place
+# which fails when called via a symlink from a different directory
+COMPILER_USE_SYMLINKS?=	no
 .endif
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
