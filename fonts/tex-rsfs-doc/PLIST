@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 07:08:36 minskim Exp $
+share/texmf-dist/doc/fonts/rsfs/README
+share/texmf-dist/doc/fonts/rsfs/README.type1
