@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2192 2009/06/07 06:31:46 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2193 2009/06/07 06:50:07 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2920,3 +2920,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/tex-enctex-doc version 2008.11913 [minskim 2009-06-07]
 	Added textproc/tex-makeindex version 2.12 [minskim 2009-06-07]
 	Added textproc/tex-makeindex-doc version 2.12 [minskim 2009-06-07]
+	Added fonts/tex-mflogo version 2008.7340 [minskim 2009-06-07]
+	Added fonts/tex-mflogo-doc version 2008.7340 [minskim 2009-06-07]
