@@ -1,0 +1,27 @@
+$NetBSD: patch-ae,v 1.1 2009/06/07 22:02:24 hasso Exp $
+
+--- librols/fexec.c.orig
++++ librols/fexec.c
+@@ -170,7 +170,7 @@ fexecle(name, in, out, err, va_alist)
+ 	} while (p != NULL);
+ 	va_end(args);
+ 
+-	ret = fexecve(name, in, out, err, av, env);
++	ret = f_execve(name, in, out, err, av, env);
+ 	if (av != xav)
+ 		free(av);
+ 	return (ret);
+@@ -184,11 +184,11 @@ fexecv(name, in, out, err, ac, av)
+ 	char *av[];
+ {
+ 	av[ac] = NULL;			/*  force list to be null terminated */
+-	return (fexecve(name, in, out, err, av, environ));
++	return (f_execve(name, in, out, err, av, environ));
+ }
+ 
+ EXPORT int
+-fexecve(name, in, out, err, av, env)
++f_execve(name, in, out, err, av, env)
+ 	const char *name;
+ 	FILE *in, *out, *err;
+ 	char * const av[], * const env[];
