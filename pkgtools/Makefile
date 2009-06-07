@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2009/01/08 00:26:05 jmcneill Exp $
+# $NetBSD: Makefile,v 1.94 2009/06/07 18:07:00 joerg Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -22,6 +22,7 @@ SUBDIR+=	mtree
 SUBDIR+=	p5-pkgsrc-Dewey
 SUBDIR+=	packagekit
 SUBDIR+=	pbulk
+SUBDIR+=	pbulk-base
 SUBDIR+=	pkg_alternatives
 SUBDIR+=	pkg_chk
 SUBDIR+=	pkg_comp

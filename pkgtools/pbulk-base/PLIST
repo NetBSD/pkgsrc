@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2009/06/07 18:07:00 joerg Exp $
+bin/pbulk-build
+bin/pbulk-resolve
+bin/pbulk-scan
+man/cat1/pbulk-build.0
+man/cat1/pbulk-resolve.0
+man/cat1/pbulk-scan.0
+man/man1/pbulk-build.1
+man/man1/pbulk-resolve.1
+man/man1/pbulk-scan.1
