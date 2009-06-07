@@ -1,15 +1,15 @@
-$NetBSD: patch-sb,v 1.1 2007/08/16 20:10:16 joerg Exp $
+$NetBSD: patch-sb,v 1.2 2009/06/07 11:23:47 wiz Exp $
 
 Temporary disable Sbus suport.
 
---- hw/xfree86/common/xf86Configure.c.orig	2007-08-16 20:03:27.000000000 +0200
-+++ hw/xfree86/common/xf86Configure.c
-@@ -213,7 +213,7 @@ xf86AddBusDeviceToConfigure(const char *
- 	NewDevice.GDev.identifier = "ISA Adapter";
- 	NewDevice.GDev.busID = "ISA";
+--- hw/xfree86/common/xf86Configure.c.orig	2009-03-21 01:57:50 +0200
++++ hw/xfree86/common/xf86Configure.c	2009-05-19 14:36:57 +0300
+@@ -115,7 +115,7 @@ xf86AddBusDeviceToConfigure(const char *
+ 		return NULL;
+ 	isPrimary = xf86IsPrimaryPci(pVideo);
  	break;
 -#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__)
 +#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__) && !defined(__NetBSD__)
-     case BUS_SBUS: {
- 	char *promPath = NULL;
- 	NewDevice.sVideo = (sbusDevicePtr) busData;
+     case BUS_SBUS:
+ 	for (i = 0;  i < nDevToConfig;  i++)
+ 	    if (DevToConfig[i].sVideo &&
