@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/07 07:07:51 minskim Exp $
+share/texmf-dist/fonts/afm/public/rsfs/rsfs10.afm
+share/texmf-dist/fonts/afm/public/rsfs/rsfs5.afm
+share/texmf-dist/fonts/afm/public/rsfs/rsfs7.afm
+share/texmf-dist/fonts/map/dvips/rsfs/rsfs.map
+share/texmf-dist/fonts/source/public/rsfs/rsfs10.mf
+share/texmf-dist/fonts/source/public/rsfs/rsfs5.mf
+share/texmf-dist/fonts/source/public/rsfs/rsfs7.mf
+share/texmf-dist/fonts/source/public/rsfs/script.mf
+share/texmf-dist/fonts/source/public/rsfs/scriptu.mf
+share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
+share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfm
+share/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfb
+share/texmf-dist/fonts/type1/public/rsfs/rsfs5.pfm
+share/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb
+share/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfm
+share/texmf-dist/tex/plain/rsfs/scrload.tex
