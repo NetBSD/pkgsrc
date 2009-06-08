@@ -1,0 +1,4 @@
+pkgin is aimed at being an apt / yum like tool for managing
+pkgsrc binary packages. It relies on pkg_summary(5) for
+installation, removal and upgrade of packages and associated
+dependencies, using a remote repository.

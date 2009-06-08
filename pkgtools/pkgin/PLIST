@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/08 13:58:26 imil Exp $
+bin/pkgin
+man/man1/pkgin.1
+share/examples/pkgin/repositories.conf.example
+@dirrm share/examples/pkgin
+@exec ${MKDIR} %D/etc/pkgin
+@dirrm etc/pkgin
