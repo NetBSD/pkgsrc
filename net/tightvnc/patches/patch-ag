@@ -1,8 +1,18 @@
-$NetBSD: patch-ag,v 1.3 2003/11/27 17:27:29 abs Exp $
+$NetBSD: patch-ag,v 1.4 2009/06/08 15:23:26 tnn Exp $
 
---- Xvnc/programs/Xserver/Imakefile.orig	2000-06-11 13:00:51.000000000 +0100
+--- Xvnc/programs/Xserver/Imakefile.orig	2000-06-11 14:00:51.000000000 +0200
 +++ Xvnc/programs/Xserver/Imakefile
-@@ -1712,7 +1712,7 @@ XVNCOBJS = 
+@@ -11,7 +11,8 @@ XCOMM $XFree86: xc/programs/Xserver/Imak
+ INSTPGMFLAGS = 
+ #endif
+ 
+-#define PreFbLibs $(DIX) $(OS) $(FONT) $(XPDDX)
++/* XXX libos and libdix seem to cross-depend on eachother, what about ordering? */
++#define PreFbLibs $(DIX) $(OS) $(DIX) $(FONT) $(XPDDX)
+ #define BarePostFbLibs $(MFB) $(XPFBLIBS) $(MI)
+ #define PostFbLibs BarePostFbLibs $(EXTENSIONS)
+ #define NoMfbBarePostFbLibs $(XPFBLIBS) $(MI)
+@@ -1712,7 +1713,7 @@ XVNCOBJS = 
  XVNC = hw/vnc/libvnc.a $(VNCLIBS)
  XVNCLIBS = PreFbLibs $(XVNC) $(CFB) PostFbLibs
  XVNCSYSLIBS = $(SYSLIBS) $(VNCSYSLIBS)
