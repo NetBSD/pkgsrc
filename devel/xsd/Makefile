@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/07 10:50:46 hasso Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/08 19:26:29 hasso Exp $
 
 DISTNAME=		xsd-3.2.0+dep
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +9,7 @@ MASTER_SITES=		http://www.codesynthesis.com/download/xsd/3.2/
 MAINTAINER=		hasso@NetBSD.org
 HOMEPAGE=		http://www.codesynthesis.com/products/xsd/
 COMMENT=		W3C XML Schema to C++ data binding compiler
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
