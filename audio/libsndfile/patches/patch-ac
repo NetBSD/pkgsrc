@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.11 2009/06/08 09:30:17 tron Exp $
+
+Upstream fix for DoS vulnerability taken from here:
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=530831
+
+--- src/htk.c.orig	2009-03-22 19:17:14.000000000 +0000
++++ src/htk.c	2009-06-08 10:03:02.000000000 +0100
+@@ -195,10 +195,17 @@
+ 		return SFE_HTK_NOT_WAVEFORM ;
+ 
+ 	psf->sf.channels = 1 ;
+-	psf->sf.samplerate = 10000000 / sample_period ;
+ 
+-	psf_log_printf (psf, "HTK Waveform file\n  Sample Count  : %d\n  Sample Period : %d => %d Hz\n",
+-				sample_count, sample_period, psf->sf.samplerate) ;
++	if (sample_period > 0)
++	{	psf->sf.samplerate = 10000000 / sample_period ;
++		psf_log_printf (psf, "HTK Waveform file\n  Sample Count  : %d\n  Sample Period : %d => %d Hz\n",
++					sample_count, sample_period, psf->sf.samplerate) ;
++		}
++	else
++	{	psf->sf.samplerate = 16000 ;
++		psf_log_printf (psf, "HTK Waveform file\n  Sample Count  : %d\n  Sample Period : %d (should be > 0) => Guessed sample rate %d Hz\n",
++					sample_count, sample_period, psf->sf.samplerate) ;
++		} ;
+ 
+ 	psf->sf.format = SF_FORMAT_HTK | SF_FORMAT_PCM_16 ;
+ 	psf->bytewidth = 2 ;
