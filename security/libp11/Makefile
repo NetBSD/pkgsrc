@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/05 20:28:24 hasso Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/08 19:11:30 hasso Exp $
 #
 
 DISTNAME=		libp11-0.2.4
@@ -8,6 +8,7 @@ MASTER_SITES=		http://www.opensc-project.org/files/libp11/
 MAINTAINER=		hasso@NetBSD.org
 HOMEPAGE=		http://www.opensc-project.org/libp11/
 COMMENT=		Convenience library for easy PKCS\#11 implementation
+LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
