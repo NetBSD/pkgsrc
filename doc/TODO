@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8165 2009/06/08 09:04:08 obache Exp $
+$NetBSD: TODO,v 1.8166 2009/06/08 09:59:59 hasso Exp $
 
 Suggested new packages
 ======================
@@ -810,8 +810,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafpad-0.8.15
 	o less-429
 	o lft-2.5 [at http://pwhois.org/]
-	o lftp-3.7.3 [pkg/39809]
-	o lftp-3.7.12
 	o libXfont-1.4.0
 	o libarchive-2.7.0
 	o libast-0.7
