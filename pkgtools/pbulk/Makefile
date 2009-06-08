@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.53 2009/06/07 18:07:00 joerg Exp $
+# $NetBSD: Makefile,v 1.54 2009/06/08 16:02:52 joerg Exp $
 
-DISTNAME=	pbulk-0.39
+DISTNAME=	pbulk-0.40
 COMMENT=	Modular bulk build framework
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../pkgtools/pbulk/Makefile.common"
 
-USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
+USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run make:run \
 		mail:run sed:run tar:run
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 DEPENDS+=	pbulk-base>=0.38:../../pkgtools/pbulk-base
@@ -33,7 +33,7 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/compute-packages.awk scripts/create-broken-graph.awk \
 	scripts/create-report-html.awk scripts/create-report-txt.awk \
 	scripts/create-report.awk
-SUBST_VARS.tools=	AWK BZIP2 CHOWN DIGEST GZIP_CMD IDENT MAIL_CMD NEATO \
+SUBST_VARS.tools=	AWK BZIP2 CHOWN DIGEST GZIP_CMD MAIL_CMD NEATO \
 			PBULK_CONFIG PBULK_CONFIG_VERSION PKG_ADD_CMD \
 			PKG_DELETE_CMD PKG_INFO_CMD PREFIX SED SH TAR \
 			TARGET_MAKE
