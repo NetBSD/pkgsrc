@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.9.2.2 2009/06/08 21:05:22 spz Exp $
+
+Upstream fix for DoS vulnerability taken from here:
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=530831
+
+--- src/float32.c.orig	2009-03-25 02:59:47.000000000 +0000
++++ src/float32.c	2009-06-08 10:03:02.000000000 +0100
+@@ -241,7 +241,7 @@
+ 	else
+ 		psf->datalength = 0 ;
+ 
+-	psf->sf.frames = psf->datalength / psf->blockwidth ;
++	psf->sf.frames = psf->blockwidth > 0 ? psf->datalength / psf->blockwidth : 0 ;
+ 
+ 	return 0 ;
+ } /* float32_init */

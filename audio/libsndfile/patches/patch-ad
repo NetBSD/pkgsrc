@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.12.2.2 2009/06/08 21:05:22 spz Exp $
+
+Upstream fix for DoS vulnerability taken from here:
+
+http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=530831
+
+--- src/pcm.c.orig	2009-03-22 19:17:14.000000000 +0000
++++ src/pcm.c	2009-06-08 10:03:02.000000000 +0100
+@@ -271,7 +271,7 @@
+ 	else
+ 		psf->datalength = 0 ;
+ 
+-	psf->sf.frames = psf->datalength / psf->blockwidth ;
++	psf->sf.frames = psf->blockwidth > 0 ? psf->datalength / psf->blockwidth : 0 ;
+ 
+ 	return 0 ;
+ } /* pcm_init */
