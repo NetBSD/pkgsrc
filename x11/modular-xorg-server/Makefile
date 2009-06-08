@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2009/06/07 11:23:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2009/06/08 05:27:41 obache Exp $
 #
 
 DISTNAME=	xorg-server-1.6.1.901
@@ -70,6 +70,7 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
+BUILDLINK_API_DEPENDS.MesaLib+=		MesaLib>=7.1.0
 BUILDLINK_API_DEPENDS.compositeproto+=	compositeproto>=0.4
 BUILDLINK_API_DEPENDS.fixesproto+=	fixesproto>=4.0
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.9
