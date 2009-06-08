@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2221 2009/06/08 09:15:18 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2222 2009/06/08 09:30:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-vmware to 10.16.6 [obache 2009-06-08]
 	Updated x11/pixman to 0.15.10 [wiz 2009-06-08]
 	Updated net/clive to 2.1.13 [wiz 2009-06-08]
+	Updated audio/libsndfile to 1.0.20nb1 [tron 2009-06-08]
