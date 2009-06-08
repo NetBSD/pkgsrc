@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.85 2009/06/08 09:54:50 hasso Exp $
+# $NetBSD: Makefile,v 1.86 2009/06/08 10:16:22 hasso Exp $
 
 DISTNAME=		lftp-3.7.14
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.yars.free.net/pub/source/lftp/ \
-			ftp://ftp.iasi.roedu.net/pub/os/Linux/network/ftp/lftp/ \
-			http://ftp.yars.free.net/pub/source/lftp/old/
+			ftp://ftp.st.ryukoku.ac.jp/pub/network/ftp/lftp/ \
+			http://lftp.cybermirror.org/
+
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://lftp.yar.ru/
 COMMENT=		Powerful command line file transfer client
+LICENSE=		gnu-gpl-v3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
