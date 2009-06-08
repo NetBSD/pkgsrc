@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2009/04/27 18:35:30 tron Exp $
+# $NetBSD: Makefile,v 1.31 2009/06/08 15:23:26 tnn Exp $
 
-DISTNAME=		tightvnc-1.3.9
-PKGREVISION=		3
+DISTNAME=		tightvnc-1.3.10
 CATEGORIES=		net x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vnc-tight/}
 DISTFILES=		${DISTNAME}_unixsrc.tar.bz2
@@ -11,12 +10,12 @@ HOMEPAGE=		http://www.tightvnc.com/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
 CONFLICTS=		vnc-[0-9]* vncviewer-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 USE_IMAKE=		yes
 USE_TOOLS+=		perl:run
-NO_INSTALL_MANPAGES=	yes
 MAKE_JOBS_SAFE=		no
 
 BUILD_TARGET=		World
@@ -40,8 +39,9 @@ FONTPATH=		${X11BASE}/lib/X11/fonts/misc,${X11BASE}/lib/X11/fonts/75dpi
 SUBST_CLASSES+=		hpath
 SUBST_STAGE.hpath=	pre-configure
 SUBST_MESSAGE.hpath=	fixing hardcoded paths
-SUBST_FILES.hpath=	vncserver
+SUBST_FILES.hpath=	vncserver tightvncserver.conf
 SUBST_SED.hpath+=	-e 's|/usr/local/vnc/classes|${PREFIX}/share/vnc/classes|g'
+SUBST_SED.hpath+=	-e 's|/etc/tightvncserver.conf|${PKG_SYSCONFDIR}/tightvncserver.conf|g'
 
 REPLACE_PERL=		vncserver
 
@@ -50,24 +50,29 @@ post-extract:
 	 ${ECHO} "#define DefaultFontPath ${FONTPATH}")\
 	>> ${WRKSRC}/Xvnc/config/cf/site.def
 
-# We have to frob a few things, and we want our own permissions, so it's easier
-# to do the install ourselves.
-post-install:
+CONF_FILES+=		${PREFIX}/share/examples/tightvnc/tightvncserver.conf \
+			    ${PKG_SYSCONFDIR}/tightvncserver.conf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/tightvnc
+
+do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc \
-	    ${PREFIX}/bin/Xvnc
+	    ${DESTDIR}${PREFIX}/bin/Xvnc
 	${INSTALL_MAN} ${WRKSRC}/Xvnc/programs/Xserver/Xvnc.man \
-	    ${PREFIX}/${PKGMANDIR}/man1/Xvnc.1
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/Xvnc.1
 	${INSTALL_PROGRAM} ${WRKSRC}/vncconnect/vncconnect \
-	    ${PREFIX}/bin/vncconnect
+	    ${DESTDIR}${PREFIX}/bin/vncconnect
 	${INSTALL_MAN} ${WRKSRC}/vncconnect/vncconnect.man \
-	    ${PREFIX}/${PKGMANDIR}/man1/vncconnect.1
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncconnect.1
 	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd \
-	    ${PREFIX}/bin/vncpasswd
+	    ${DESTDIR}${PREFIX}/bin/vncpasswd
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
-	    ${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${PREFIX}/bin/vncserver
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${DESTDIR}${PREFIX}/bin/vncserver
 	${INSTALL_MAN} ${WRKSRC}/vncserver.man \
-	    ${PREFIX}/${PKGMANDIR}/man1/vncserver.1
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncserver.1
+	${INSTALL_DATA} ${WRKSRC}/tightvncserver.conf \
+	    ${DESTDIR}${PREFIX}/share/examples/tightvnc/tightvncserver.conf
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
