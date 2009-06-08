@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/05/11 07:21:51 obache Exp $
+$NetBSD: distinfo,v 1.5 2009/06/08 08:41:24 obache Exp $
 
-SHA1 (xf86-video-vmware-10.16.5.tar.bz2) = 0d712f913bc9dd2c432ac6242784670c1114cfee
-RMD160 (xf86-video-vmware-10.16.5.tar.bz2) = 759c391544856ac37a514734f33dc63c5a2ee62f
-Size (xf86-video-vmware-10.16.5.tar.bz2) = 278790 bytes
+SHA1 (xf86-video-vmware-10.16.6.tar.bz2) = 61d598e7e499b48d0b78495d6b3f9624ae18ba27
+RMD160 (xf86-video-vmware-10.16.6.tar.bz2) = f6e0d8838459c12cf3d1bad465c815c62bb73855
+Size (xf86-video-vmware-10.16.6.tar.bz2) = 277429 bytes
