@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2009/06/08 13:58:26 imil Exp $
+
+First steps before using pkgin.
+
+. Modify ${PREFIX}/etc/pkgin/repositories.conf to suit your platform
+. Initialize the database :
+
+	# pkgin update
+
+===========================================================================
