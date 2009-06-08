@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/26 18:00:34 hasso Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/08 18:54:20 hasso Exp $
 #
 
 PKGNAME=		akode-2.0.2
@@ -6,6 +6,7 @@ PKGREVISION=		1
 
 MAINTAINER=		hasso@NetBSD.org
 COMMENT=		Simple audio decoding framework (base package)
+LICENSE=		gnu-lgpl-v2
 
 .include "../../audio/akode/Makefile.common"
 
