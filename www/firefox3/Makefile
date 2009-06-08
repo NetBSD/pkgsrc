@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2009/04/28 09:14:25 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2009/06/08 23:19:12 ahoka Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
-COMMENT=		Lightweight gecko-based web browser
+COMMENT=		Web browser with support for extensions
 
 MOZILLA_USE_GTK2=	# yes
 MOZILLA_USE_XFT=	YES
