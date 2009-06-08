@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.11 2006/08/11 15:19:35 salo Exp $
+$NetBSD: patch-aa,v 1.12 2009/06/08 09:54:50 hasso Exp $
 
---- src/Makefile.in.orig	2006-07-28 16:12:23.000000000 +0200
-+++ src/Makefile.in	2006-08-02 23:21:16.000000000 +0200
-@@ -356,7 +356,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+--- src/Makefile.in.orig	2009-05-15 09:25:52 +0300
++++ src/Makefile.in	2009-06-08 12:21:53 +0300
+@@ -893,7 +893,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  pkgverlibdir = $(pkglibdir)/$(VERSION)
  bin_SCRIPTS = lftpget
 -pkgdata_SCRIPTS = import-ncftp import-netscape verify-file convert-netscape-cookies
@@ -11,12 +11,12 @@ $NetBSD: patch-aa,v 1.11 2006/08/11 15:19:35 salo Exp $
  noinst_SCRIPTS = ftpget
  EXTRA_DIST = $(pkgdata_SCRIPTS) $(bin_SCRIPTS) $(noinst_SCRIPTS)
  lftp_SOURCES = lftp.cc complete.h complete.cc lftp_rl.c lftp_rl.h
-@@ -907,7 +907,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
+@@ -1416,7 +1416,7 @@ all-am: Makefile $(LTLIBRARIES) $(PROGRA
  install-binPROGRAMS: install-libLTLIBRARIES
  
  installdirs:
 -	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgverlibdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
 +	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pkgdatadir)"; do \
- 	  test -z "$$dir" || $(mkdir_p) "$$dir"; \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-am
