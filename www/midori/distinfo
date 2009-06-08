@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/05/13 18:41:31 snj Exp $
+$NetBSD: distinfo,v 1.5 2009/06/08 21:17:04 ahoka Exp $
 
-SHA1 (midori-0.1.6.tar.bz2) = 4240ecad520510fda002cd3da1e3f4f5cc1fa184
-RMD160 (midori-0.1.6.tar.bz2) = 9cf3981b4abeccf2e7c1831cac4a0af364104976
-Size (midori-0.1.6.tar.bz2) = 390115 bytes
+SHA1 (midori-0.1.7.tar.bz2) = 29ee96a632eacbfd40852f9ae386ea666f7f9fdb
+RMD160 (midori-0.1.7.tar.bz2) = cd17daad777242c5f2b7e4c85c2e28b2cf22d0d9
+Size (midori-0.1.7.tar.bz2) = 463060 bytes
 SHA1 (patch-aa) = e8b1576dc4b42756d33eb260eab4d7fa88d4117b
