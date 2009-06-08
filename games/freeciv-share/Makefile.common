@@ -1,12 +1,9 @@
-# $NetBSD: Makefile.common,v 1.35 2008/12/14 19:20:54 adam Exp $
+# $NetBSD: Makefile.common,v 1.36 2009/06/08 09:24:39 ahoka Exp $
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.1.8
+FC_VERS=	2.1.9
 CATEGORIES=	games
-MASTER_SITES=	ftp://ftp.freeciv.org/pub/freeciv/stable/ \
-		http://www.freeciv.org/ftp/stable/ \
-		ftp://ftp.freeciv.org/pub/freeciv/beta/ \
-		http://www.freeciv.org/ftp/beta/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeciv/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
