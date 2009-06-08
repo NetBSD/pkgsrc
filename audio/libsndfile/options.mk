@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2008/07/24 22:39:30 obache Exp $
+# $NetBSD: options.mk,v 1.5.8.1 2009/06/08 21:05:22 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libsndfile
+PKG_SUPPORTED_OPTIONS=	octave
 PKG_OPTIONS_OPTIONAL_GROUPS=	output
 PKG_OPTIONS_GROUP.output=	oss sun
 
@@ -22,6 +23,14 @@ SNDFILE_OUTPUT.${OPSYS}?=	oss
 PKG_SUGGESTED_OPTIONS=		${SNDFILE_OUTPUT.${OPSYS}}
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Moctave)
+USE_LANGUAGES=		c c++ fortran
+USE_TOOLS+=		gmake
+.include "../../math/octave/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-octave
+.endif
 
 .if !empty(PKG_OPTIONS:Moss)
 .include "../../mk/oss.buildlink3.mk"
