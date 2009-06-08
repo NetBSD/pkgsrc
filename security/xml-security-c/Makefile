@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/10 12:23:36 hasso Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/08 19:11:30 hasso Exp $
 
 DISTNAME=		xml-security-c-1.4.0
 CATEGORIES=		security devel
@@ -7,6 +7,7 @@ MASTER_SITES=		http://santuario.apache.org/dist/c-library/
 MAINTAINER=		hasso@NetBSD.org
 HOMEPAGE=		http://santuario.apache.org/c/index.html
 COMMENT=		XML Digital Signature specification implementation
+LICENSE=		apache-2.0
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
