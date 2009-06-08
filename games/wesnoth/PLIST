@@ -1,19 +1,40 @@
-@comment $NetBSD: PLIST,v 1.27 2009/03/30 09:31:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/08 15:15:50 wiz Exp $
 bin/wesnoth
+bin/wesnothd
 man/cs/man6/wesnoth.6
+man/cs/man6/wesnothd.6
 man/de/man6/wesnoth.6
+man/de/man6/wesnothd.6
 man/en_GB/man6/wesnoth.6
+man/en_GB/man6/wesnothd.6
 man/es/man6/wesnoth.6
+man/es/man6/wesnothd.6
 man/fi/man6/wesnoth.6
+man/fi/man6/wesnothd.6
+man/fr/man6/wesnoth.6
+man/fr/man6/wesnothd.6
 man/gl/man6/wesnoth.6
 man/hu/man6/wesnoth.6
+man/hu/man6/wesnothd.6
 man/it/man6/wesnoth.6
+man/it/man6/wesnothd.6
 man/lt/man6/wesnoth.6
+man/lt/man6/wesnothd.6
 man/man6/wesnoth.6
+man/man6/wesnothd.6
 man/pl/man6/wesnoth.6
+man/pl/man6/wesnothd.6
 man/sk/man6/wesnoth.6
+man/sr/man6/wesnoth.6
+man/sr/man6/wesnothd.6
+man/sr@latin/man6/wesnoth.6
+man/sr@latin/man6/wesnothd.6
+man/sv/man6/wesnoth.6
+man/sv/man6/wesnothd.6
 man/tr/man6/wesnoth.6
+man/tr/man6/wesnothd.6
 man/zh_CN/man6/wesnoth.6
+man/zh_CN/man6/wesnothd.6
 share/applications/wesnoth.desktop
 share/applications/wesnoth_editor.desktop
 share/doc/wesnoth/manual/CMakeLists.txt
@@ -1995,7 +2016,6 @@ share/wesnoth/data/core/editor/music.cfg
 share/wesnoth/data/core/editor/terrain-groups.cfg
 share/wesnoth/data/core/editor/time-of-day.cfg
 share/wesnoth/data/core/editor/tool-hints.cfg
-share/wesnoth/data/core/fonts.cfg
 share/wesnoth/data/core/help.cfg
 share/wesnoth/data/core/hotkeys.cfg
 share/wesnoth/data/core/images/attacks/axe-crude.png
@@ -2383,6 +2403,10 @@ share/wesnoth/data/core/images/portraits/drakes/burner.png
 share/wesnoth/data/core/images/portraits/drakes/clasher.png
 share/wesnoth/data/core/images/portraits/drakes/fighter.png
 share/wesnoth/data/core/images/portraits/drakes/glider.png
+share/wesnoth/data/core/images/portraits/drakes/transparent/burner.png
+share/wesnoth/data/core/images/portraits/drakes/transparent/clasher.png
+share/wesnoth/data/core/images/portraits/drakes/transparent/fighter.png
+share/wesnoth/data/core/images/portraits/drakes/transparent/glider.png
 share/wesnoth/data/core/images/portraits/dwarves/dragonguard.png
 share/wesnoth/data/core/images/portraits/dwarves/fighter.png
 share/wesnoth/data/core/images/portraits/dwarves/gryphon-rider.png
@@ -2392,6 +2416,7 @@ share/wesnoth/data/core/images/portraits/dwarves/runemaster.png
 share/wesnoth/data/core/images/portraits/dwarves/sentinel.png
 share/wesnoth/data/core/images/portraits/dwarves/thunderer.png
 share/wesnoth/data/core/images/portraits/dwarves/transparent/dragonguard.png
+share/wesnoth/data/core/images/portraits/dwarves/transparent/fighter-2.png
 share/wesnoth/data/core/images/portraits/dwarves/transparent/fighter.png
 share/wesnoth/data/core/images/portraits/dwarves/transparent/gryphon-rider.png
 share/wesnoth/data/core/images/portraits/dwarves/transparent/guard.png
@@ -2437,6 +2462,8 @@ share/wesnoth/data/core/images/portraits/elves/transparent/shaman.png
 share/wesnoth/data/core/images/portraits/elves/transparent/shyde.png
 share/wesnoth/data/core/images/portraits/elves/transparent/sorceress.png
 share/wesnoth/data/core/images/portraits/elves/transparent/sylph.png
+share/wesnoth/data/core/images/portraits/goblins/spearman.png
+share/wesnoth/data/core/images/portraits/goblins/transparent/spearman.png
 share/wesnoth/data/core/images/portraits/humans/assassin+female.png
 share/wesnoth/data/core/images/portraits/humans/assassin.png
 share/wesnoth/data/core/images/portraits/humans/bandit.png
@@ -2450,6 +2477,7 @@ share/wesnoth/data/core/images/portraits/humans/halberdier.png
 share/wesnoth/data/core/images/portraits/humans/heavy-infantry.png
 share/wesnoth/data/core/images/portraits/humans/highwayman.png
 share/wesnoth/data/core/images/portraits/humans/horseman.png
+share/wesnoth/data/core/images/portraits/humans/huntsman.png
 share/wesnoth/data/core/images/portraits/humans/iron-mauler.png
 share/wesnoth/data/core/images/portraits/humans/javelineer.png
 share/wesnoth/data/core/images/portraits/humans/knight.png
@@ -2476,6 +2504,7 @@ share/wesnoth/data/core/images/portraits/humans/paladin.png
 share/wesnoth/data/core/images/portraits/humans/peasant.png
 share/wesnoth/data/core/images/portraits/humans/pikeman.png
 share/wesnoth/data/core/images/portraits/humans/poacher.png
+share/wesnoth/data/core/images/portraits/humans/ranger.png
 share/wesnoth/data/core/images/portraits/humans/royal-guard.png
 share/wesnoth/data/core/images/portraits/humans/sergeant.png
 share/wesnoth/data/core/images/portraits/humans/spearman.png
@@ -2491,6 +2520,7 @@ share/wesnoth/data/core/images/portraits/humans/transparent/dark-adept.png
 share/wesnoth/data/core/images/portraits/humans/transparent/general.png
 share/wesnoth/data/core/images/portraits/humans/transparent/halberdier.png
 share/wesnoth/data/core/images/portraits/humans/transparent/heavy-infantry.png
+share/wesnoth/data/core/images/portraits/humans/transparent/huntsman.png
 share/wesnoth/data/core/images/portraits/humans/transparent/iron-mauler.png
 share/wesnoth/data/core/images/portraits/humans/transparent/javelineer.png
 share/wesnoth/data/core/images/portraits/humans/transparent/lieutenant.png
@@ -2514,26 +2544,33 @@ share/wesnoth/data/core/images/portraits/humans/transparent/necromancer+female.p
 share/wesnoth/data/core/images/portraits/humans/transparent/necromancer.png
 share/wesnoth/data/core/images/portraits/humans/transparent/peasant.png
 share/wesnoth/data/core/images/portraits/humans/transparent/pikeman.png
+share/wesnoth/data/core/images/portraits/humans/transparent/ranger.png
 share/wesnoth/data/core/images/portraits/humans/transparent/royal-guard.png
 share/wesnoth/data/core/images/portraits/humans/transparent/sergeant.png
 share/wesnoth/data/core/images/portraits/humans/transparent/spearman.png
 share/wesnoth/data/core/images/portraits/humans/transparent/swordsman.png
 share/wesnoth/data/core/images/portraits/humans/transparent/thief+female.png
 share/wesnoth/data/core/images/portraits/humans/transparent/thief.png
+share/wesnoth/data/core/images/portraits/humans/transparent/trapper.png
 share/wesnoth/data/core/images/portraits/humans/transparent/woodsman.png
+share/wesnoth/data/core/images/portraits/humans/trapper.png
 share/wesnoth/data/core/images/portraits/humans/woodsman.png
 share/wesnoth/data/core/images/portraits/merfolk/fighter.png
 share/wesnoth/data/core/images/portraits/merfolk/hunter.png
 share/wesnoth/data/core/images/portraits/merfolk/initiate.png
 share/wesnoth/data/core/images/portraits/merfolk/transparent/initiate.png
 share/wesnoth/data/core/images/portraits/monsters/gryphon.png
+share/wesnoth/data/core/images/portraits/monsters/ogre.png
 share/wesnoth/data/core/images/portraits/monsters/scorpion.png
 share/wesnoth/data/core/images/portraits/monsters/sea-serpent.png
 share/wesnoth/data/core/images/portraits/monsters/transparent/gryphon.png
+share/wesnoth/data/core/images/portraits/monsters/transparent/ogre.png
 share/wesnoth/data/core/images/portraits/monsters/transparent/scorpion.png
 share/wesnoth/data/core/images/portraits/nagas/fighter+female.png
 share/wesnoth/data/core/images/portraits/nagas/fighter.png
 share/wesnoth/data/core/images/portraits/orcs/assassin.png
+share/wesnoth/data/core/images/portraits/orcs/grunt.png
+share/wesnoth/data/core/images/portraits/orcs/transparent/grunt.png
 share/wesnoth/data/core/images/portraits/orcs/warlord.png
 share/wesnoth/data/core/images/portraits/orcs/warlord2.png
 share/wesnoth/data/core/images/portraits/orcs/warlord3.png
@@ -2798,8 +2835,11 @@ share/wesnoth/data/core/images/scenery/windmill-17.png
 share/wesnoth/data/core/images/scenery/windmill-18.png
 share/wesnoth/data/core/images/scenery/wreck.png
 share/wesnoth/data/core/images/story/landscape-battlefield.jpg
+share/wesnoth/data/core/images/story/landscape-battlefield_nohumans.jpg
 share/wesnoth/data/core/images/story/landscape-bridge.jpg
+share/wesnoth/data/core/images/story/landscape-bridge_sun.jpg
 share/wesnoth/data/core/images/story/landscape-castle.jpg
+share/wesnoth/data/core/images/story/landscape-plain.jpg
 share/wesnoth/data/core/images/terrain/alpha.png
 share/wesnoth/data/core/images/terrain/alphamask.png
 share/wesnoth/data/core/images/terrain/bridge-deep-n-s-tile.png
@@ -4097,6 +4137,12 @@ share/wesnoth/data/core/images/terrain/snow-hills.png
 share/wesnoth/data/core/images/terrain/snow-hills2.png
 share/wesnoth/data/core/images/terrain/snow-hills3.png
 share/wesnoth/data/core/images/terrain/snow-mountain-tile.png
+share/wesnoth/data/core/images/terrain/snow-mountain5_1.png
+share/wesnoth/data/core/images/terrain/snow-mountain5_2.png
+share/wesnoth/data/core/images/terrain/snow-mountain5_3.png
+share/wesnoth/data/core/images/terrain/snow-mountain6_1.png
+share/wesnoth/data/core/images/terrain/snow-mountain6_2.png
+share/wesnoth/data/core/images/terrain/snow-mountain6_3.png
 share/wesnoth/data/core/images/terrain/snow-mountains.png
 share/wesnoth/data/core/images/terrain/snow-mountains2.png
 share/wesnoth/data/core/images/terrain/snow-mountains3.png
@@ -7584,6 +7630,7 @@ share/wesnoth/data/languages/he_IL.cfg
 share/wesnoth/data/languages/hr_HR.cfg
 share/wesnoth/data/languages/hu_HU.cfg
 share/wesnoth/data/languages/id_ID.cfg
+share/wesnoth/data/languages/is_IS.cfg
 share/wesnoth/data/languages/it_IT.cfg
 share/wesnoth/data/languages/ja_JP.cfg
 share/wesnoth/data/languages/ko_KR.cfg
@@ -8306,54 +8353,6 @@ share/wesnoth/images/tools/exploder/mask-castle-sw.png
 share/wesnoth/images/tools/exploder/mask-castle-w.png
 share/wesnoth/images/tools/magenta_team_color_palette.png
 share/wesnoth/images/wesnoth-icon-small.png
-share/wesnoth/locales/C@wesnoth
-share/wesnoth/locales/af_ZA@wesnoth
-share/wesnoth/locales/ar_AR@wesnoth
-share/wesnoth/locales/bg_BG@wesnoth
-share/wesnoth/locales/ca_ES@valencia@wesnoth
-share/wesnoth/locales/ca_ES@wesnoth
-share/wesnoth/locales/cs_CZ@wesnoth
-share/wesnoth/locales/da_DK@wesnoth
-share/wesnoth/locales/de_DE@wesnoth
-share/wesnoth/locales/el_GR@wesnoth
-share/wesnoth/locales/en_GB@wesnoth
-share/wesnoth/locales/eo_XX@wesnoth
-share/wesnoth/locales/es_ES@wesnoth
-share/wesnoth/locales/et_EE@wesnoth
-share/wesnoth/locales/eu_ES@wesnoth
-share/wesnoth/locales/fi_FI@wesnoth
-share/wesnoth/locales/fr_FR@wesnoth
-share/wesnoth/locales/fur_IT@wesnoth
-share/wesnoth/locales/gl_ES@wesnoth
-share/wesnoth/locales/he_IL@wesnoth
-share/wesnoth/locales/hr_HR@wesnoth
-share/wesnoth/locales/hu_HU@wesnoth
-share/wesnoth/locales/id_ID@wesnoth
-share/wesnoth/locales/it_IT@wesnoth
-share/wesnoth/locales/ja_JP@wesnoth
-share/wesnoth/locales/ko_KR@wesnoth
-share/wesnoth/locales/la_IT@wesnoth
-share/wesnoth/locales/lt_LT@wesnoth
-share/wesnoth/locales/lv_LV@wesnoth
-share/wesnoth/locales/mk_MK@wesnoth
-share/wesnoth/locales/mr_IN@wesnoth
-share/wesnoth/locales/nb_NO@wesnoth
-share/wesnoth/locales/nl_NL@wesnoth
-share/wesnoth/locales/pl_PL@wesnoth
-share/wesnoth/locales/pt_BR@wesnoth
-share/wesnoth/locales/pt_PT@wesnoth
-share/wesnoth/locales/racv@wesnoth
-share/wesnoth/locales/ro_RO@wesnoth
-share/wesnoth/locales/ru_RU@wesnoth
-share/wesnoth/locales/sk_SK@wesnoth
-share/wesnoth/locales/sl_SI@wesnoth
-share/wesnoth/locales/sr_RS@latin@wesnoth
-share/wesnoth/locales/sr_RS@wesnoth
-share/wesnoth/locales/sv_SE@wesnoth
-share/wesnoth/locales/tl_PH@wesnoth
-share/wesnoth/locales/tr_TR@wesnoth
-share/wesnoth/locales/zh_CN@wesnoth
-share/wesnoth/locales/zh_TW@wesnoth
 share/wesnoth/sounds/README
 share/wesnoth/sounds/arrive.wav
 share/wesnoth/sounds/bell.wav
@@ -8857,6 +8856,28 @@ share/wesnoth/translations/id/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/id/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/id/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/id/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-anl.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-low.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-test.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/is/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-anl.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-aoi.mo
 share/wesnoth/translations/it/LC_MESSAGES/wesnoth-did.mo
@@ -9457,6 +9478,8 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/ja
 @dirrm share/wesnoth/translations/it/LC_MESSAGES
 @dirrm share/wesnoth/translations/it
+@dirrm share/wesnoth/translations/is/LC_MESSAGES
+@dirrm share/wesnoth/translations/is
 @dirrm share/wesnoth/translations/id/LC_MESSAGES
 @dirrm share/wesnoth/translations/id
 @dirrm share/wesnoth/translations/hu/LC_MESSAGES
@@ -9503,7 +9526,6 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/af
 @dirrm share/wesnoth/translations
 @dirrm share/wesnoth/sounds
-@dirrm share/wesnoth/locales
 @dirrm share/wesnoth/images/tools/exploder
 @dirrm share/wesnoth/images/tools
 @dirrm share/wesnoth/images/misc
@@ -9607,6 +9629,7 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/data/core/images/portraits/trolls
 @dirrm share/wesnoth/data/core/images/portraits/saurians/transparent
 @dirrm share/wesnoth/data/core/images/portraits/saurians
+@dirrm share/wesnoth/data/core/images/portraits/orcs/transparent
 @dirrm share/wesnoth/data/core/images/portraits/orcs
 @dirrm share/wesnoth/data/core/images/portraits/nagas
 @dirrm share/wesnoth/data/core/images/portraits/monsters/transparent
@@ -9615,10 +9638,13 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/data/core/images/portraits/merfolk
 @dirrm share/wesnoth/data/core/images/portraits/humans/transparent
 @dirrm share/wesnoth/data/core/images/portraits/humans
+@dirrm share/wesnoth/data/core/images/portraits/goblins/transparent
+@dirrm share/wesnoth/data/core/images/portraits/goblins
 @dirrm share/wesnoth/data/core/images/portraits/elves/transparent
 @dirrm share/wesnoth/data/core/images/portraits/elves
 @dirrm share/wesnoth/data/core/images/portraits/dwarves/transparent
 @dirrm share/wesnoth/data/core/images/portraits/dwarves
+@dirrm share/wesnoth/data/core/images/portraits/drakes/transparent
 @dirrm share/wesnoth/data/core/images/portraits/drakes
 @dirrm share/wesnoth/data/core/images/portraits
 @dirrm share/wesnoth/data/core/images/misc
