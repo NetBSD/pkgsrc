@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/28 14:55:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/08 14:01:58 wiz Exp $
 #
 
 DISTNAME=	lzma-4.32.7
@@ -16,6 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-CONFLICTS=	lzma-[0-9]*
+CONFLICTS=	lzma-[0-9]* xz-utils-[0-9]*
 
 .include "../../mk/bsd.pkg.mk"
