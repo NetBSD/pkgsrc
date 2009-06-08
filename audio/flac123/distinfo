@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.5 2007/07/02 13:20:19 lkundrak Exp $
+$NetBSD: distinfo,v 1.6 2009/06/08 00:52:54 snj Exp $
 
-SHA1 (flac123-0.0.10.tar.gz) = a13f1c5ebf6818474a3b52af5daf4055d33db20d
-RMD160 (flac123-0.0.10.tar.gz) = 4eaa75223d06259c565ed31ffe44f34e667e2e74
-Size (flac123-0.0.10.tar.gz) = 69970 bytes
-SHA1 (patch-aa) = 64bd66c707bdafbd1c831791e7fe8638f6e26b2f
-SHA1 (patch-ab) = a482ae41ceb521dfd167608a443d5724a205653d
-SHA1 (patch-ac) = dc0ffe3663ffaad341bf9d85df10dcb3b40e3d90
-SHA1 (patch-ad) = f2802ebf8454ecf8d9cf47c5d5b868d277ee8697
-SHA1 (patch-ae) = 98e44d7cbccfcbdff01c0637afa4d29dfbd6ef39
+SHA1 (flac123-0.0.11.tar.gz) = a713097bb55e4c9998df32a0a33042f8a79bc6d4
+RMD160 (flac123-0.0.11.tar.gz) = b12800b31aeb4438643cf1bf1f3c1a2abb0e062c
+Size (flac123-0.0.11.tar.gz) = 71244 bytes
