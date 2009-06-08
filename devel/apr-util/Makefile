@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/06/08 13:19:20 tron Exp $
+# $NetBSD: Makefile,v 1.11 2009/06/08 13:24:57 tron Exp $
 
 DISTNAME=	apr-util-1.3.7
 CATEGORIES=	devel
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=apr/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Apache Portable Runtime utilities
+LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
