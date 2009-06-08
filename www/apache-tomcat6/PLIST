@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/14 12:02:09 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.2.1 2009/06/08 21:31:11 tron Exp $
 share/doc/tomcat/LICENSE
-share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
+share/doc/tomcat/NOTICE
 share/doc/tomcat/RUNNING.txt
 share/examples/rc.d/tomcat
 share/examples/tomcat/catalina.policy
@@ -51,7 +51,6 @@ share/tomcat/webapps/ROOT/tomcat-power.gif
 share/tomcat/webapps/ROOT/tomcat.gif
 share/tomcat/webapps/ROOT/tomcat.svg
 share/tomcat/webapps/docs/BUILDING.txt
-share/tomcat/webapps/docs/NOTICE
 share/tomcat/webapps/docs/RELEASE-NOTES.txt
 share/tomcat/webapps/docs/RUNNING.txt
 share/tomcat/webapps/docs/WEB-INF/web.xml
@@ -62,14 +61,6 @@ share/tomcat/webapps/docs/appdev/deployment.html
 share/tomcat/webapps/docs/appdev/index.html
 share/tomcat/webapps/docs/appdev/installation.html
 share/tomcat/webapps/docs/appdev/introduction.html
-share/tomcat/webapps/docs/appdev/printer/deployment.html
-share/tomcat/webapps/docs/appdev/printer/docs/appdev/build.xml.txt
-share/tomcat/webapps/docs/appdev/printer/docs/appdev/web.xml.txt
-share/tomcat/webapps/docs/appdev/printer/index.html
-share/tomcat/webapps/docs/appdev/printer/installation.html
-share/tomcat/webapps/docs/appdev/printer/introduction.html
-share/tomcat/webapps/docs/appdev/printer/processes.html
-share/tomcat/webapps/docs/appdev/printer/source.html
 share/tomcat/webapps/docs/appdev/processes.html
 share/tomcat/webapps/docs/appdev/sample/build.xml
 share/tomcat/webapps/docs/appdev/sample/docs/README.txt
@@ -85,10 +76,6 @@ share/tomcat/webapps/docs/appdev/web.xml.txt
 share/tomcat/webapps/docs/apr.html
 share/tomcat/webapps/docs/architecture/index.html
 share/tomcat/webapps/docs/architecture/overview.html
-share/tomcat/webapps/docs/architecture/printer/index.html
-share/tomcat/webapps/docs/architecture/printer/overview.html
-share/tomcat/webapps/docs/architecture/printer/requestProcess.html
-share/tomcat/webapps/docs/architecture/printer/startup.html
 share/tomcat/webapps/docs/architecture/requestProcess.html
 share/tomcat/webapps/docs/architecture/requestProcess/requestProcess.pdf
 share/tomcat/webapps/docs/architecture/requestProcess/roseModel.mdl
@@ -119,34 +106,9 @@ share/tomcat/webapps/docs/config/globalresources.html
 share/tomcat/webapps/docs/config/host.html
 share/tomcat/webapps/docs/config/http.html
 share/tomcat/webapps/docs/config/index.html
+share/tomcat/webapps/docs/config/listeners.html
 share/tomcat/webapps/docs/config/loader.html
 share/tomcat/webapps/docs/config/manager.html
-share/tomcat/webapps/docs/config/printer/ajp.html
-share/tomcat/webapps/docs/config/printer/cluster-channel.html
-share/tomcat/webapps/docs/config/printer/cluster-deployer.html
-share/tomcat/webapps/docs/config/printer/cluster-interceptor.html
-share/tomcat/webapps/docs/config/printer/cluster-listener.html
-share/tomcat/webapps/docs/config/printer/cluster-manager.html
-share/tomcat/webapps/docs/config/printer/cluster-membership.html
-share/tomcat/webapps/docs/config/printer/cluster-receiver.html
-share/tomcat/webapps/docs/config/printer/cluster-sender.html
-share/tomcat/webapps/docs/config/printer/cluster-valve.html
-share/tomcat/webapps/docs/config/printer/cluster.html
-share/tomcat/webapps/docs/config/printer/context.html
-share/tomcat/webapps/docs/config/printer/engine.html
-share/tomcat/webapps/docs/config/printer/executor.html
-share/tomcat/webapps/docs/config/printer/globalresources.html
-share/tomcat/webapps/docs/config/printer/host.html
-share/tomcat/webapps/docs/config/printer/http.html
-share/tomcat/webapps/docs/config/printer/index.html
-share/tomcat/webapps/docs/config/printer/loader.html
-share/tomcat/webapps/docs/config/printer/manager.html
-share/tomcat/webapps/docs/config/printer/realm.html
-share/tomcat/webapps/docs/config/printer/resources.html
-share/tomcat/webapps/docs/config/printer/server.html
-share/tomcat/webapps/docs/config/printer/service.html
-share/tomcat/webapps/docs/config/printer/systemprops.html
-share/tomcat/webapps/docs/config/printer/valve.html
 share/tomcat/webapps/docs/config/realm.html
 share/tomcat/webapps/docs/config/resources.html
 share/tomcat/webapps/docs/config/server.html
@@ -168,16 +130,6 @@ share/tomcat/webapps/docs/funcspecs/fs-jndi-realm.html
 share/tomcat/webapps/docs/funcspecs/fs-memory-realm.html
 share/tomcat/webapps/docs/funcspecs/index.html
 share/tomcat/webapps/docs/funcspecs/mbean-names.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-admin-apps.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-admin-objects.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-admin-opers.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-default.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-invoker.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-jdbc-realm.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-jndi-realm.html
-share/tomcat/webapps/docs/funcspecs/printer/fs-memory-realm.html
-share/tomcat/webapps/docs/funcspecs/printer/index.html
-share/tomcat/webapps/docs/funcspecs/printer/mbean-names.html
 share/tomcat/webapps/docs/html-manager-howto.html
 share/tomcat/webapps/docs/images/add.gif
 share/tomcat/webapps/docs/images/asf-logo.gif
@@ -200,41 +152,6 @@ share/tomcat/webapps/docs/manager-howto.html
 share/tomcat/webapps/docs/maven-jars.html
 share/tomcat/webapps/docs/mbeans-descriptor-howto.html
 share/tomcat/webapps/docs/monitoring.html
-share/tomcat/webapps/docs/printer/BUILDING.txt
-share/tomcat/webapps/docs/printer/NOTICE
-share/tomcat/webapps/docs/printer/RUNNING.txt
-share/tomcat/webapps/docs/printer/aio.html
-share/tomcat/webapps/docs/printer/apr.html
-share/tomcat/webapps/docs/printer/balancer-howto.html
-share/tomcat/webapps/docs/printer/building.html
-share/tomcat/webapps/docs/printer/cgi-howto.html
-share/tomcat/webapps/docs/printer/changelog.html
-share/tomcat/webapps/docs/printer/class-loader-howto.html
-share/tomcat/webapps/docs/printer/cluster-howto.html
-share/tomcat/webapps/docs/printer/connectors.html
-share/tomcat/webapps/docs/printer/default-servlet.html
-share/tomcat/webapps/docs/printer/deployer-howto.html
-share/tomcat/webapps/docs/printer/developers.html
-share/tomcat/webapps/docs/printer/extras.html
-share/tomcat/webapps/docs/printer/html-manager-howto.html
-share/tomcat/webapps/docs/printer/index.html
-share/tomcat/webapps/docs/printer/introduction.html
-share/tomcat/webapps/docs/printer/jasper-howto.html
-share/tomcat/webapps/docs/printer/jndi-datasource-examples-howto.html
-share/tomcat/webapps/docs/printer/jndi-resources-howto.html
-share/tomcat/webapps/docs/printer/logging.html
-share/tomcat/webapps/docs/printer/manager-howto.html
-share/tomcat/webapps/docs/printer/maven-jars.html
-share/tomcat/webapps/docs/printer/mbeans-descriptor-howto.html
-share/tomcat/webapps/docs/printer/monitoring.html
-share/tomcat/webapps/docs/printer/proxy-howto.html
-share/tomcat/webapps/docs/printer/realm-howto.html
-share/tomcat/webapps/docs/printer/security-manager-howto.html
-share/tomcat/webapps/docs/printer/setup.html
-share/tomcat/webapps/docs/printer/ssi-howto.html
-share/tomcat/webapps/docs/printer/ssl-howto.html
-share/tomcat/webapps/docs/printer/virtual-hosting-howto.html
-share/tomcat/webapps/docs/printer/windows-service-howto.html
 share/tomcat/webapps/docs/proxy-howto.html
 share/tomcat/webapps/docs/realm-howto.html
 share/tomcat/webapps/docs/security-manager-howto.html
@@ -621,15 +538,11 @@ share/tomcat/webapps/manager/xform.xsl
 @dirrm share/tomcat/webapps/examples/WEB-INF
 @dirrm share/tomcat/webapps/examples
 @dirrm share/tomcat/webapps/docs/tribes
-@dirrm share/tomcat/webapps/docs/printer
 @dirrm share/tomcat/webapps/docs/images
-@dirrm share/tomcat/webapps/docs/funcspecs/printer
 @dirrm share/tomcat/webapps/docs/funcspecs
-@dirrm share/tomcat/webapps/docs/config/printer
 @dirrm share/tomcat/webapps/docs/config
 @dirrm share/tomcat/webapps/docs/architecture/startup
 @dirrm share/tomcat/webapps/docs/architecture/requestProcess
-@dirrm share/tomcat/webapps/docs/architecture/printer
 @dirrm share/tomcat/webapps/docs/architecture
 @dirrm share/tomcat/webapps/docs/appdev/sample/web/images
 @dirrm share/tomcat/webapps/docs/appdev/sample/web/WEB-INF
@@ -638,9 +551,6 @@ share/tomcat/webapps/manager/xform.xsl
 @dirrm share/tomcat/webapps/docs/appdev/sample/src
 @dirrm share/tomcat/webapps/docs/appdev/sample/docs
 @dirrm share/tomcat/webapps/docs/appdev/sample
-@dirrm share/tomcat/webapps/docs/appdev/printer/docs/appdev
-@dirrm share/tomcat/webapps/docs/appdev/printer/docs
-@dirrm share/tomcat/webapps/docs/appdev/printer
 @dirrm share/tomcat/webapps/docs/appdev
 @dirrm share/tomcat/webapps/docs/api
 @dirrm share/tomcat/webapps/docs/WEB-INF
