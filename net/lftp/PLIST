@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.12 2006/08/11 15:19:35 salo Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/08 09:54:50 hasso Exp $
 bin/lftp
 bin/lftpget
 lib/lftp/${PKGVERSION}/cmd-mirror.so
 lib/lftp/${PKGVERSION}/cmd-sleep.so
-lib/lftp/${PKGVERSION}/liblftp-getdate.so
 lib/lftp/${PKGVERSION}/liblftp-network.so
 lib/lftp/${PKGVERSION}/liblftp-pty.so
 lib/lftp/${PKGVERSION}/proto-file.so
@@ -28,6 +27,7 @@ share/locale/pl/LC_MESSAGES/lftp.mo
 share/locale/pt_BR/LC_MESSAGES/lftp.mo
 share/locale/ru/LC_MESSAGES/lftp.mo
 share/locale/zh_CN/LC_MESSAGES/lftp.mo
+share/locale/zh_HK/LC_MESSAGES/lftp.mo
 share/locale/zh_TW/LC_MESSAGES/lftp.mo
 @dirrm share/lftp
 @dirrm share/examples/lftp
