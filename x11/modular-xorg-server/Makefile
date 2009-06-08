@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2009/06/08 05:27:41 obache Exp $
+# $NetBSD: Makefile,v 1.44 2009/06/08 08:31:31 obache Exp $
 #
 
 DISTNAME=	xorg-server-1.6.1.901
@@ -67,6 +67,12 @@ CONFIGURE_ARGS+=	--disable-xorgcfg	# deprecated
 CONFIGURE_ARGS+=	--with-int10=x86emu
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
+
+# Workaround for PR#41556.
+# Avoid to use bsd_kqueue_apm, force to use bsd_apm instead.
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		ac_cv_header_sys_event_h=no
+.endif
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
