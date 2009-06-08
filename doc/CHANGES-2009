@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2231 2009/06/08 15:25:10 tnn Exp $
+$NetBSD: CHANGES-2009,v 1.2232 2009/06/08 21:18:58 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated games/wesnoth to 1.6.2 [wiz 2009-06-08]
 	Updated net/tightvnc to 1.3.10 [tnn 2009-06-08]
 	Updated net/tightvncviewer to 1.3.10 [tnn 2009-06-08]
+	Updated www/midori to 0.1.7 [ahoka 2009-06-08]
