@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2009/05/13 18:41:31 snj Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/08 21:17:04 ahoka Exp $
 
-DISTNAME=	midori-0.1.6
+DISTNAME=	midori-0.1.7
 CATEGORIES=	www
 MASTER_SITES=	http://goodies.xfce.org/releases/midori/
 
@@ -39,7 +39,8 @@ SUBST_STAGE.marshal=	pre-configure
 SUBST_MESSAGE.marshal=	Gross hack (part one) in progress
 SUBST_FILES.marshal=	midori/midori-locationaction.c midori/midori-panel.c
 SUBST_FILES.marshal+=	midori/midori-view.c midori/midori-searchaction.c
-SUBST_FILES.marshal+=	katze/katze-array.c
+SUBST_FILES.marshal+=	midori/midori-browser.c
+SUBST_FILES.marshal+=	katze/katze-array.c katze/katze-arrayaction.c
 SUBST_SED.marshal=	-e 's/"marshal/"marshallocal/'
 SUBST_STAGE.marshal2=	pre-configure
 SUBST_MESSAGE.marshal2=	Gross hack (part two) in progress
@@ -61,5 +62,6 @@ BUILDLINK_API_DEPENDS.libsoup24+=libsoup24>=2.26.0
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../www/webkit-gtk/buildlink3.mk"
 .include "../../x11/libunique/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
