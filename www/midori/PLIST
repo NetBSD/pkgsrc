@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/13 18:41:31 snj Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/08 21:17:04 ahoka Exp $
 bin/midori
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
+lib/midori/libfeed-panel.so
 lib/midori/libmouse-gestures.so
 lib/midori/libpage-holder.so
 lib/midori/libstatusbar-features.so
@@ -26,6 +27,7 @@ share/icons/hicolor/32x32/status/news-feed.png
 share/icons/hicolor/48x48/apps/midori.png
 share/icons/hicolor/48x48/categories/extension.png
 share/icons/hicolor/48x48/status/news-feed.png
+share/locale/cs/LC_MESSAGES/midori.mo
 share/locale/da/LC_MESSAGES/midori.mo
 share/locale/de/LC_MESSAGES/midori.mo
 share/locale/el/LC_MESSAGES/midori.mo
@@ -42,14 +44,21 @@ share/locale/it/LC_MESSAGES/midori.mo
 share/locale/ja/LC_MESSAGES/midori.mo
 share/locale/nl/LC_MESSAGES/midori.mo
 share/locale/pl/LC_MESSAGES/midori.mo
-share/locale/pt_PT/LC_MESSAGES/midori.mo
+share/locale/pt/LC_MESSAGES/midori.mo
+share/locale/ro/LC_MESSAGES/midori.mo
 share/locale/ru/LC_MESSAGES/midori.mo
+share/locale/sk/LC_MESSAGES/midori.mo
 share/locale/sv/LC_MESSAGES/midori.mo
 share/locale/tr/LC_MESSAGES/midori.mo
 share/locale/uk/LC_MESSAGES/midori.mo
 share/locale/zh_CN/LC_MESSAGES/midori.mo
 share/locale/zh_TW/LC_MESSAGES/midori.mo
-share/midori/logo-shade.png
+share/midori/res/error.html
+share/midori/res/logo-shade.png
+share/midori/res/mootools.js
+share/midori/res/speeddial-head.html
+share/midori/res/speeddial.json
+@dirrm share/midori/res
 @dirrm share/midori
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/status
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/categories
