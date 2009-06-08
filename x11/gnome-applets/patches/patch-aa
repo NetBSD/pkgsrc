@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.8 2008/10/27 04:23:01 wiz Exp $
+$NetBSD: patch-aa,v 1.9 2009/06/08 11:05:28 drochner Exp $
 
---- battstat/sounds/Makefile.in.orig	2008-09-25 23:51:38.000000000 +0000
+--- battstat/sounds/Makefile.in.orig	2009-05-31 00:27:26.000000000 +0200
 +++ battstat/sounds/Makefile.in
-@@ -306,7 +306,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -288,7 +288,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
 -soundlistdir = $(sysconfdir)/sound/events
