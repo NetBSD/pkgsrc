@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/05/20 00:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/08 20:06:01 asau Exp $
 
 DISTNAME=		sqlite-2.8.16
 PKGREVISION=		2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.hwaci.com/sw/sqlite/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hwaci.com/sw/sqlite/
 COMMENT=		SQL Database Engine in a C Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/sqlite-build
 USE_TOOLS+=		gmake
@@ -33,11 +35,13 @@ CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 
 PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite-2.8.16/sqlite.pc.in
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
+
 post-extract:
 	${MKDIR} ${WRKSRC}
 
 post-install:
-	${INSTALL_MAN} ${WRKDIR}/sqlite-2.8.16/sqlite.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKDIR}/sqlite-2.8.16/sqlite.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
