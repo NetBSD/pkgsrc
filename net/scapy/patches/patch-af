@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2009/06/09 12:30:02 hasso Exp $
+
+--- test/run_tests.orig	2009-06-09 14:35:51 +0300
++++ test/run_tests	2009-06-09 14:36:08 +0300
+@@ -1,6 +1,6 @@
+ #! /bin/sh
+ DIR=$(dirname $0)/..
+-if [ "$*" == "" ]
++if [ "$*" = "" ]
+ then
+ PYTHONPATH=$DIR exec python ${DIR}/scapy/tools/UTscapy.py -t regression.uts -f html -o /tmp/scapy_regression_test_$(date +%Y%M%d-%H%H%S).html
+ else
