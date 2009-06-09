@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.6 2003/04/28 04:07:46 fredb Exp $
+$NetBSD: patch-af,v 1.7 2009/06/09 13:57:56 taca Exp $
 
---- etc/psf/etc2ps.sh.orig	Sun Apr 27 15:00:44 2003
-+++ etc/psf/etc2ps.sh	Sun Apr 27 19:51:31 2003
+--- etc/psf/etc2ps.sh.orig	2009-03-29 16:23:23.000000000 +0900
++++ etc/psf/etc2ps.sh
 @@ -9,15 +9,12 @@
  # tag in the case.
  #
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.6 2003/04/28 04:07:46 fredb Exp $
  case $1 in
  
  #
-@@ -39,7 +36,7 @@
+@@ -40,7 +37,7 @@ df*)
  # troff2ps is from psroff by Chris Lewis.
  #
  tf*)

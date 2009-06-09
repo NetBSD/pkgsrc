@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.11 2006/06/05 17:23:38 joerg Exp $
+$NetBSD: patch-ab,v 1.12 2009/06/09 13:57:56 taca Exp $
 
---- bin/psorder/psorder.c.orig	2006-06-05 16:54:26.000000000 +0000
+--- bin/psorder/psorder.c.orig	2009-03-29 16:23:21.000000000 +0900
 +++ bin/psorder/psorder.c
 @@ -35,6 +35,7 @@
  #include <sys/uio.h>
@@ -26,10 +26,11 @@ $NetBSD: patch-ab,v 1.11 2006/06/05 17:23:38 joerg Exp $
  	make temporary file
   */
  
+-    strncpy( tfile, template, MAXNAMLEN );
 +#if defined(NAME_MAX)
 +    (void *)strncpy( tfile, template, NAME_MAX );
 +#else
-     (void *)strncpy( tfile, template, MAXNAMLEN );
++    (void *)strncpy( tfile, template, MAXNAMLEN );
 +#endif
      if (( *tfd = mkstemp( tfile )) == -1 ) {
  	fprintf( stderr, "can't create temporary file %s\n", tfile );

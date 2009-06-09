@@ -1,25 +1,19 @@
-$NetBSD: distinfo,v 1.29 2009/02/22 07:35:16 taca Exp $
+$NetBSD: distinfo,v 1.30 2009/06/09 13:57:56 taca Exp $
 
-SHA1 (netatalk-2.0.3-cjk-2b.patch.gz) = 0c303a9d20ca7277b2914acc2cd5b12b24857629
-RMD160 (netatalk-2.0.3-cjk-2b.patch.gz) = 58b2710261e7f37e465f39f716c387447927fc69
-Size (netatalk-2.0.3-cjk-2b.patch.gz) = 25545 bytes
-SHA1 (netatalk-2.0.3.tar.bz2) = ce2d5dd123467ccae72fc62ca4ee3738019455f2
-RMD160 (netatalk-2.0.3.tar.bz2) = 29b763400a45797ac4a8e499d5328aa91a091c91
-Size (netatalk-2.0.3.tar.bz2) = 1471804 bytes
-SHA1 (patch-aa) = 0c5176e46b33667efd175c668617527aee33a05f
-SHA1 (patch-ab) = 10bf2fdd900a6c2189376757e921bb6228e0f19c
-SHA1 (patch-ac) = ba559d1b957172e77ec8eb9cc5c60d2f88044ffa
+SHA1 (netatalk-2.0.4.tar.bz2) = e4ee42849844137ed0ce1e01a77419c8dc6ae0b7
+RMD160 (netatalk-2.0.4.tar.bz2) = 4f9b009857319116b7a4dfa6ab4910533afc35e5
+Size (netatalk-2.0.4.tar.bz2) = 964106 bytes
+SHA1 (patch-aa) = 5bd27e8782527d79635df82d4e5c85633a285adb
+SHA1 (patch-ab) = 59373428e7485b88d6e9e7474bbeef9687ed1084
+SHA1 (patch-ac) = 5511ff25a2ae7e4148fb865b31f0492b0a4b79af
 SHA1 (patch-ad) = 311d00d165688d4baa1365ba6c4147bd6293f3d8
-SHA1 (patch-ae) = da46ec82296aa538c0c4ed67829dafe4454935e9
-SHA1 (patch-af) = 997909d7cf444a2481693069864da9134ce413d4
-SHA1 (patch-ag) = 1785045e56d93ea0747e264a1d1a8c743e7c798d
-SHA1 (patch-ah) = 318626f5c6d21f025ae5e08c9da76bd4c493f7e6
+SHA1 (patch-ae) = 8d26d0c91009c3147363e4efe05d89e13fcef987
+SHA1 (patch-af) = 649be7e50210e6e4156aeff74d3fc0effb90f9f2
+SHA1 (patch-ag) = 517689746d79f3f1b7c55aa6c25bf57fb184c4d9
+SHA1 (patch-ah) = 28d68c4755b1d3363fbd070eb679c6e353efc10a
 SHA1 (patch-ai) = e8f453569db891100221f27bf579c66a18a650b7
-SHA1 (patch-ak) = ee205781dffb02b558353e95a07f7f66e143614a
-SHA1 (patch-al) = df56d837eeb5698b0247fc0233448d254392fe43
 SHA1 (patch-am) = a01ab55a793c5249cc6fa0a4d98d61e43f173021
 SHA1 (patch-an) = 5472758813b927708ca178809fb89733719e67b4
 SHA1 (patch-ao) = 1b140d7b8fc1df6b44b15a181ddc625744610bb9
-SHA1 (patch-ap) = 1b208e1dca1c62b08e39dabbf962fdcf2ff91584
 SHA1 (patch-bi) = b592d058a1d61322c03d1c3d44e39b48f2ddf7c3
-SHA1 (patch-bj) = 578f4ac2fbe3e4f5d85a4ac24a778ce9d2e75045
+SHA1 (patch-bj) = 28f71df2619b6188806e187b588fc6ca9d1e14cb

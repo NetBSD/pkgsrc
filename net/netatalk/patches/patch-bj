@@ -1,26 +1,26 @@
-$NetBSD: patch-bj,v 1.1 2008/03/22 04:40:45 taca Exp $
+$NetBSD: patch-bj,v 1.2 2009/06/09 13:57:56 taca Exp $
 
---- distrib/initscripts/Makefile.in.orig	2008-03-18 00:13:18.000000000 +0900
+--- distrib/initscripts/Makefile.in.orig	2009-04-23 17:03:29.000000000 +0900
 +++ distrib/initscripts/Makefile.in
-@@ -243,7 +243,7 @@ TEMPLATES = \
+@@ -248,7 +248,7 @@ TEMPLATES = \
+ 	rc.atalk.gentoo.tmpl		\
  	rc.atalk.debian.tmpl
- 
  
 -CLEANFILES = $(GENERATED_FILES) atalk afpd atalkd papd timelord
 +CLEANFILES = $(GENERATED_FILES) atalk afpd atalkd papd timelord cnid_metad
  EXTRA_DIST = $(TEMPLATES) rc.atalk.cobalt
  
- 
-@@ -293,7 +293,7 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
- # checking for Solaris init scripts
  #
- @USE_SOLARIS_TRUE@sysvdir = /etc/init.d
+@@ -293,7 +293,7 @@ EXTRA_DIST = $(TEMPLATES) rc.atalk.cobal
+ @USE_COBALT_TRUE@sysv_SCRIPTS = atalk
+ @USE_DEBIAN_TRUE@sysv_SCRIPTS = atalk
+ @USE_GENTOO_TRUE@sysv_SCRIPTS = atalk
 -@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord
 +@USE_NETBSD_TRUE@sysv_SCRIPTS = afpd atalkd papd timelord cnid_metad
- @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
- @USE_GENTOO_TRUE@sysv_SCRIPTS = atalk
  @USE_REDHAT_TRUE@sysv_SCRIPTS = atalk
-@@ -536,6 +536,7 @@ uninstall: uninstall-startup
+ @USE_SOLARIS_TRUE@sysv_SCRIPTS = atalk
+ @USE_SUSE_TRUE@sysv_SCRIPTS = atalk
+@@ -556,6 +556,7 @@ uninstall: uninstall-startup
  
  @USE_NETBSD_TRUE@afpd: rc.afpd.netbsd
  @USE_NETBSD_TRUE@	cp -f $< $@
@@ -28,7 +28,7 @@ $NetBSD: patch-bj,v 1.1 2008/03/22 04:40:45 taca Exp $
  
  @USE_NETBSD_TRUE@atalkd: rc.atalkd.netbsd
  @USE_NETBSD_TRUE@	cp -f $< $@
-@@ -549,6 +550,10 @@ uninstall: uninstall-startup
+@@ -569,6 +570,10 @@ uninstall: uninstall-startup
  @USE_NETBSD_TRUE@	cp -f $< $@
  @USE_NETBSD_TRUE@	chmod a+x $@
  

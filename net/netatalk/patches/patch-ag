@@ -1,16 +1,7 @@
-$NetBSD: patch-ag,v 1.7 2006/12/06 17:15:22 joerg Exp $
+$NetBSD: patch-ag,v 1.8 2009/06/09 13:57:56 taca Exp $
 
---- etc/afpd/unix.h.orig	2005-01-31 17:01:00.000000000 +0000
+--- etc/afpd/unix.h.orig	2009-03-29 16:23:22.000000000 +0900
 +++ etc/afpd/unix.h
-@@ -32,7 +32,7 @@ typedef int	mode_t;
- #define f_frsize f_fsize
- #else /* TRU64 */
- /* temp fix, was: defined(HAVE_SYS_STATVFS) || defined(__svr4__) */
--#if defined(__svr4__)
-+#if defined(__svr4__) || (defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900))
- #include <sys/statvfs.h>
- #define statfs statvfs
- #else /* HAVE_SYS_STATVFS || __svr4__ */
 @@ -44,7 +44,9 @@ typedef int	mode_t;
  #include <sys/mnttab.h>
  #endif /* __svr4__ || HAVE_SYS_MNTTAB_H */
