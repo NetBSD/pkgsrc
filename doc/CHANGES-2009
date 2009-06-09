@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2266 2009/06/09 22:31:48 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2267 2009/06/09 22:40:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3045,4 +3045,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-latexconfig to 2008.12854 [minskim 2009-06-09]
 	Updated print/tex-plain to 3.14159265.12854 [minskim 2009-06-09]
 	Updated print/tex-luatex to 0.2 [minskim 2009-06-09]
-	Updated print/web2c to 7.5.7nb3 [minskim 2009-06-09]
+	Updated print/web2c to 7.5.7nb4 [minskim 2009-06-09]
