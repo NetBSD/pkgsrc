@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2262 2009/06/09 22:07:10 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2263 2009/06/09 22:15:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added print/luatex version 0.40.2 [minskim 2009-06-09]
 	Updated print/tex-pdftex to 1.40.9.12898 [minskim 2009-06-09]
 	Updated print/tex-pdftex-doc to 1.40.9.12898 [minskim 2009-06-09]
+	Updated print/tex-latexconfig to 2008.12854 [minskim 2009-06-09]
