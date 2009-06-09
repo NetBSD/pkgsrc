@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2009/06/09 08:18:39 hasso Exp $
+
+http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=97e2d125
+http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=a0d4a475
+
+--- configure.ac.orig	2006-04-08 00:48:23 +0300
++++ configure.ac	2009-06-09 10:27:54 +0300
+@@ -57,6 +57,30 @@ PKG_CHECK_MODULES(XORG, [xorg-server >= 
+ sdkdir=$(pkg-config --variable=sdkdir xorg-server)
+ 
+ # Checks for libraries.
++SAVE_CPPFLAGS="$CPPFLAGS"
++CPPFLAGS="$CPPFLAGS $XORG_CFLAGS"
++AC_CHECK_DECL(XSERVER_LIBPCIACCESS,
++              [XSERVER_LIBPCIACCESS=yes], [XSERVER_LIBPCIACCESS=no],
++              [#include "xorg-server.h"])
++AC_CHECK_HEADER(xf1bpp.h,[AC_DEFINE(HAVE_XF1BPP, 1, [Have 1bpp support])],[])
++AC_CHECK_HEADER(xf4bpp.h,[AC_DEFINE(HAVE_XF4BPP, 1, [Have 4bpp support])],[])
++CPPFLAGS="$SAVE_CPPFLAGS"
++
++SAVE_CFLAGS="$CFLAGS"
++CFLAGS="$XORG_CFLAGS"
++AC_CHECK_DECL(xf86ConfigIsaEntity,
++	      [AC_DEFINE(HAVE_ISA, 1, [Have ISA support])],
++	      [],
++	      [#include "xf86.h"])
++CFLAGS="$SAVE_CFLAGS"
++
++if test "x$XSERVER_LIBPCIACCESS" = xyes; then
++    PKG_CHECK_MODULES([PCIACCESS], [pciaccess >= 0.8.0])
++    XORG_CFLAGS="$XORG_CFLAGS $PCIACCESS_CFLAGS"
++fi
++AM_CONDITIONAL(XSERVER_LIBPCIACCESS, test "x$XSERVER_LIBPCIACCESS" = xyes)
++
++# Checks for libraries.
+ 
+ # Checks for header files.
+ AC_HEADER_STDC
