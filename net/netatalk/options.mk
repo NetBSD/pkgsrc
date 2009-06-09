@@ -1,19 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2009/02/22 07:35:16 taca Exp $
+# $NetBSD: options.mk,v 1.2 2009/06/09 13:57:56 taca Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
-PKG_SUPPORTED_OPTIONS=	cjk cups kerberos pam slp
+PKG_SUPPORTED_OPTIONS=	cups kerberos pam slp
 
 .include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Mcjk)
-# CJK(Chinese/Japanese/Korean) patch.
-#
-# http://www003.upp.so-net.ne.jp/hat/netatalk/cjk.html
-#
-PATCHFILES+=	netatalk-2.0.3-cjk-2b.patch.gz
-PATCH_SITES+=	http://www003.upp.so-net.ne.jp/hat/files/
-PATCH_DIST_STRIP.netatalk-2.0.3-cjk-2b.patch.gz=	-p1
-.endif
 
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
