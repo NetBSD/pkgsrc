@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/02/24 16:15:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/09 17:34:50 abs Exp $
 #
 
 DISTNAME=	dirvish-1.2.1
@@ -12,7 +12,7 @@ COMMENT=	Fast, disk based, rotating network backup system
 
 DEPENDS+=	rsync>=2.6.0:../../net/rsync
 DEPENDS+=	p5-Getopt-Long>=2.35:../../devel/p5-Getopt-Long
-DEPENDS+=	p5-Time>=2003.0:../../time/p5-Time
+DEPENDS+=	p5-Time-modules>=2003.0:../../time/p5-Time-modules
 DEPENDS+=	p5-Time-Period>=1.0:../../time/p5-Time-Period
 
 PKG_SYSCONFSUBDIR=	dirvish
