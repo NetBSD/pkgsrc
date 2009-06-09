@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/27 16:24:27 minskim Exp $
-# TeX Live Revision 12785
+# $NetBSD: Makefile,v 1.2 2009/06/09 22:06:07 minskim Exp $
+# TeX Live Revision 12898
 
 DISTNAME=	pdftex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.9
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.40.9.12898
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-pdftex
