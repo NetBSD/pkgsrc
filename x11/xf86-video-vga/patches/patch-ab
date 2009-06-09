@@ -1,0 +1,372 @@
+$NetBSD: patch-ab,v 1.1 2009/06/09 08:18:39 hasso Exp $
+
+http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=97e2d125
+http://cgit.freedesktop.org/xorg/driver/xf86-video-vga/commit/?id=a0d4a475
+
+--- src/generic.c.orig	2006-04-08 00:48:01 +0300
++++ src/generic.c	2009-06-09 10:27:54 +0300
+@@ -50,8 +50,13 @@
+ 
+ #include "fb.h"
+ 
++#if HAVE_XF4BPP
+ #include "xf4bpp.h"
++#endif
++
++#if HAVE_XF1BPP
+ #include "xf1bpp.h"
++#endif
+ 
+ #include "shadowfb.h"
+ 
+@@ -62,6 +67,10 @@
+ #include "xf86Resources.h"
+ #include "xf86int10.h"
+ 
++#ifdef XSERVER_LIBPCIACCESS
++#include <pciaccess.h>
++#endif
++
+ /* Some systems #define VGA for their own purposes */
+ #undef VGA
+ 
+@@ -79,10 +88,31 @@
+ #define CLOCK_TOLERANCE 2000 /* Clock matching tolerance (2MHz) */
+ #endif
+ 
++/*
++ * This structure is used to wrap the screen's CloseScreen vector.
++ */
++typedef struct _GenericRec
++{
++    Bool ShadowFB;
++    Bool KGAUniversal;
++    CARD8 * ShadowPtr;
++    CARD32 ShadowPitch;
++    CloseScreenProcPtr CloseScreen;
++    OptionInfoPtr Options;
++#ifdef XSERVER_LIBPCIACCESS
++    struct pci_device *pciInfo;
++#endif
++} GenericRec, *GenericPtr;
++
++
+ /* Forward definitions */
+ static const OptionInfoRec *GenericAvailableOptions(int chipid, int busid);
+ static void                 GenericIdentify(int);
+ static Bool                 GenericProbe(DriverPtr, int);
++#ifdef XSERVER_LIBPCIACCESS
++static Bool GenericPciProbe(DriverPtr drv, int entity_num,
++			    struct pci_device *dev, intptr_t match_data);
++#endif
+ static Bool                 GenericPreInit(ScrnInfoPtr, int);
+ static Bool                 GenericScreenInit(int, ScreenPtr, int, char **);
+ static Bool                 GenericSwitchMode(int, DisplayModePtr, int);
+@@ -90,13 +120,33 @@ static void                 GenericAdjus
+ static Bool                 GenericEnterVT(int, int);
+ static void                 GenericLeaveVT(int, int);
+ static void                 GenericFreeScreen(int, int);
++#ifdef HAVE_ISA
+ static int                  VGAFindIsaDevice(GDevPtr dev);
++#endif
+ #ifdef SPECIAL_FB_BYTE_ACCESS
+ static Bool                 GenericMapMem(ScrnInfoPtr scrp);
+ #endif
+ 
+ static ModeStatus GenericValidMode(int, DisplayModePtr, Bool, int);
+ 
++static GenericPtr GenericGetRec(ScrnInfoPtr pScreenInfo);
++
++enum GenericTypes
++{
++    CHIP_VGA_GENERIC
++};
++
++#ifdef XSERVER_LIBPCIACCESS
++static const struct pci_id_match generic_device_match[] = {
++    {
++	PCI_MATCH_ANY, PCI_MATCH_ANY, PCI_MATCH_ANY, PCI_MATCH_ANY,
++	0x00030000, 0x00ffffff, CHIP_VGA_GENERIC
++    },
++
++    { 0, 0, 0 },
++};
++#endif
++
+ /* The root of all evil... */
+ _X_EXPORT DriverRec VGA =
+ {
+@@ -106,7 +156,13 @@ _X_EXPORT DriverRec VGA =
+     GenericProbe,
+     GenericAvailableOptions,
+     NULL,
+-    0
++    0,
++    NULL,
++
++#ifdef XSERVER_LIBPCIACCESS
++    generic_device_match,
++    GenericPciProbe
++#endif
+ };
+ 
+ typedef enum
+@@ -146,8 +202,12 @@ static const char *vgahwSymbols[] =
+ #ifdef XFree86LOADER
+ static const char *miscfbSymbols[] =
+ {
++#if HAVE_XF1BPP
+     "xf1bppScreenInit",
++#endif
++#if HAVE_XF4BPP
+     "xf4bppScreenInit",
++#endif
+     NULL
+ };
+ #endif
+@@ -210,7 +270,13 @@ GenericSetup(pointer Module, pointer Opt
+     if (!Initialised)
+     {
+ 	Initialised = TRUE;
+-	xf86AddDriver(&VGA, Module, 0);
++	xf86AddDriver(&VGA, Module,
++#ifdef XSERVER_LIBPCIACCESS
++		      HaveDriverFuncs
++#else
++		      0
++#endif
++		      );
+ 	LoaderRefSymLists(vgahwSymbols, miscfbSymbols, fbSymbols,
+ 			  shadowfbSymbols, int10Symbols, NULL);
+ 	return (pointer)TRUE;
+@@ -224,11 +290,6 @@ GenericSetup(pointer Module, pointer Opt
+ #endif
+ 
+ 
+-enum GenericTypes
+-{
+-    CHIP_VGA_GENERIC
+-};
+-
+ /* Supported chipsets */
+ static SymTabRec GenericChipsets[] =
+ {
+@@ -236,17 +297,21 @@ static SymTabRec GenericChipsets[] =
+     {-1,               NULL}
+ };
+ 
++#ifndef XSERVER_LIBPCIACCESS
+ static PciChipsets GenericPCIchipsets[] =
+ {
+     {CHIP_VGA_GENERIC, PCI_CHIP_VGA, RES_SHARED_VGA},
+     {-1,               -1,           RES_UNDEFINED},
+ };
++#endif
+ 
++#ifdef HAVE_ISA
+ static IsaChipsets GenericISAchipsets[] =
+ {
+     {CHIP_VGA_GENERIC, RES_EXCLUSIVE_VGA},
+     {-1,               0}
+ };
++#endif
+ 
+ static void
+ GenericIdentify(int flags)
+@@ -267,6 +332,37 @@ GenericAvailableOptions(int chipid, int 
+  * do a minimal probe for supported hardware.
+  */
+ 
++#ifdef XSERVER_LIBPCIACCESS
++static Bool
++GenericPciProbe(DriverPtr drv, int entity_num, struct pci_device *dev,
++		intptr_t match_data)
++{
++    ScrnInfoPtr pScrn;
++
++    pScrn = xf86ConfigPciEntity(NULL, 0, entity_num, NULL,
++				NULL, NULL, NULL, NULL, NULL);
++    if (pScrn != NULL) {
++	GenericPtr pGeneric = GenericGetRec(pScrn);
++
++	pScrn->driverVersion = VGA_VERSION_CURRENT;
++	pScrn->driverName    = VGA_DRIVER_NAME;
++	pScrn->name	     = VGA_NAME;
++	pScrn->Probe	     = GenericProbe;
++	pScrn->PreInit       = GenericPreInit;
++	pScrn->ScreenInit    = GenericScreenInit;
++	pScrn->SwitchMode    = GenericSwitchMode;
++	pScrn->AdjustFrame   = GenericAdjustFrame;
++	pScrn->EnterVT       = GenericEnterVT;
++	pScrn->LeaveVT       = GenericLeaveVT;
++	pScrn->FreeScreen    = GenericFreeScreen;
++
++	pGeneric->pciInfo    = dev;
++    }
++
++    return (pScrn != NULL);
++}
++#endif
++
+ static Bool
+ GenericProbe(DriverPtr drv, int flags)
+ {
+@@ -283,6 +379,7 @@ GenericProbe(DriverPtr drv, int flags)
+     if ((numDevSections = xf86MatchDevice(VGA_NAME, &devSections)) <= 0)
+ 	return FALSE;
+ 
++#ifndef XSERVER_LIBPCIACCESS
+     /* PCI BUS */
+     if (xf86GetPciVideoInfo())
+     {
+@@ -324,7 +421,9 @@ GenericProbe(DriverPtr drv, int flags)
+ 	    xfree(usedChips);
+ 	}
+     }
++#endif
+ 
++#ifdef HAVE_ISA
+     /* Isa Bus */
+     numUsed = xf86MatchIsaInstances(VGA_NAME, GenericChipsets,
+ 				    GenericISAchipsets, drv,
+@@ -360,11 +459,13 @@ GenericProbe(DriverPtr drv, int flags)
+ 	    xfree(usedChips);
+ 	}
+     }
++#endif
+ 
+     xfree(devSections);
+     return foundScreen;
+ }
+ 
++#ifdef HAVE_ISA
+ static int
+ VGAFindIsaDevice(GDevPtr dev)
+ {
+@@ -390,20 +491,7 @@ VGAFindIsaDevice(GDevPtr dev)
+ 
+     return (int)CHIP_VGA_GENERIC;
+ }
+-
+-/*
+- * This structure is used to wrap the screen's CloseScreen vector.
+- */
+-typedef struct _GenericRec
+-{
+-    Bool ShadowFB;
+-    Bool KGAUniversal;
+-    CARD8 * ShadowPtr;
+-    CARD32 ShadowPitch;
+-    CloseScreenProcPtr CloseScreen;
+-    OptionInfoPtr Options;
+-} GenericRec, *GenericPtr;
+-
++#endif
+ 
+ static GenericPtr
+ GenericGetRec(ScrnInfoPtr pScreenInfo)
+@@ -509,8 +597,14 @@ GenericPreInit(ScrnInfoPtr pScreenInfo, 
+ 
+     switch (pScreenInfo->depth)
+     {
+-	case 1:  Module = "xf1bpp"; Sym = "xf1bppScreenInit";  break;
+-	case 4:  Module = "xf4bpp"; Sym = "xf4bppScreenInit";  break;
++	case 1:
++#if HAVE_XF1BPP
++	Module = "xf1bpp"; Sym = "xf1bppScreenInit";  break;
++#endif
++	case 4:
++#if HAVE_XF4BPP
++	Module = "xf4bpp"; Sym = "xf4bppScreenInit";  break;
++#endif
+ 	case 8:  Module = "fb";                                break;
+ 
+ 	default:
+@@ -673,6 +767,8 @@ GenericPreInit(ScrnInfoPtr pScreenInfo, 
+     /* Set display resolution */
+     xf86SetDpi(pScreenInfo, 0, 0);
+ 
++
++#if HAVE_XF1BPP && HAVE_XF4BPP
+     if (xf86ReturnOptValBool(pGenericPriv->Options, OPTION_SHADOW_FB, FALSE))
+     {
+ 	pGenericPriv->ShadowFB = TRUE;
+@@ -688,7 +784,7 @@ GenericPreInit(ScrnInfoPtr pScreenInfo, 
+ 		   "Enabling universal \"KGA\" treatment.\n");
+     }
+ 
+-#ifdef SPECIAL_FB_BYTE_ACCESS
++#  ifdef SPECIAL_FB_BYTE_ACCESS
+     if (!pGenericPriv->ShadowFB && (pScreenInfo->depth == 4))
+     {
+ 	xf86DrvMsg(pScreenInfo->scrnIndex, X_INFO,
+@@ -696,8 +792,13 @@ GenericPreInit(ScrnInfoPtr pScreenInfo, 
+ 	    "  ShadowFB enabled.\n");
+ 	pGenericPriv->ShadowFB = TRUE;
+     }
++#  endif
++
++#else
++    pGenericPriv->ShadowFB = TRUE;
+ #endif
+ 
++
+     if (pGenericPriv->ShadowFB)
+     {
+ 	pScreenInfo->bitmapBitOrder = BITMAP_BIT_ORDER;
+@@ -1378,6 +1479,7 @@ GenericScreenInit(int scrnIndex, ScreenP
+ #endif
+ 		ShadowFBInit(pScreen, GenericRefreshArea1bpp);
+ 	    }
++#if HAVE_XF1BPP
+ 	    else
+ 	    {
+ 		Inited = xf1bppScreenInit(pScreen, pvgaHW->Base,
+@@ -1386,6 +1488,7 @@ GenericScreenInit(int scrnIndex, ScreenP
+ 					  pScreenInfo->xDpi, pScreenInfo->yDpi,
+ 					  pScreenInfo->displayWidth);
+ 	    }
++#endif
+ 	    break;
+ 	case 4:
+ 	    if (pGenericPriv->ShadowFB)
+@@ -1410,6 +1513,7 @@ GenericScreenInit(int scrnIndex, ScreenP
+ #endif
+ 		ShadowFBInit(pScreen, GenericRefreshArea4bpp);
+ 	    }
++#if HAVE_XF4BPP
+ 	    else
+ 	    {
+ 		Inited = xf4bppScreenInit(pScreen, pvgaHW->Base,
+@@ -1418,6 +1522,7 @@ GenericScreenInit(int scrnIndex, ScreenP
+ 					  pScreenInfo->xDpi, pScreenInfo->yDpi,
+ 					  pScreenInfo->displayWidth);
+ 	    }
++#endif
+ 	    break;
+ 	case 8:
+ 	    Inited = fbScreenInit(pScreen, pvgaHW->Base,
+@@ -1579,6 +1684,9 @@ GenericMapMem(ScrnInfoPtr scrp)
+ {
+     vgaHWPtr hwp = VGAHWPTR(scrp);
+     int scr_index = scrp->scrnIndex;
++#ifdef XSERVER_LIBPCIACCESS
++    GenericPtr pPriv = GenericGetRec(scrp);
++#endif
+ 
+     if (hwp->Base)
+ 	return TRUE;
+@@ -1589,7 +1697,12 @@ GenericMapMem(ScrnInfoPtr scrp)
+     if (hwp->MapPhys == 0)
+ 	hwp->MapPhys = VGA_DEFAULT_PHYS_ADDR;
+ 
+-    hwp->Base = xf86MapDomainMemory(scr_index, VIDMEM_MMIO, hwp->Tag,
++    hwp->Base = xf86MapDomainMemory(scr_index, VIDMEM_MMIO,
++#ifdef XSERVER_LIBPCIACCESS
++				    pPriv->pciInfo,
++#else
++				    hwp->Tag,
++#endif
+ 				    hwp->MapPhys, hwp->MapSize);
+     return hwp->Base != NULL;
+ }
