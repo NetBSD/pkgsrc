@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8172 2009/06/09 07:25:55 hasso Exp $
+$NetBSD: TODO,v 1.8173 2009/06/09 09:21:17 hasso Exp $
 
 Suggested new packages
 ======================
@@ -1421,12 +1421,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o xerces-j-2.9.0
 	o xf86-video-amd-2.11.2 [now xf86-video-geode]
 	o xf86-video-geode-2.11.2
-	o xf86-video-i128-1.3.1
-	o xf86-video-i740-1.3.0
-	o xf86-video-mach64-6.8.1
-	o xf86-video-mga-1.4.10
 	o xf86-video-nsc-2.8.3
-	o xf86-video-s3virge-1.10.2
 	o xf86-video-tdfx-1.4.1
 	o xfce-4.6.0 [pkg/40984]
 	o xfce-4.6.1
