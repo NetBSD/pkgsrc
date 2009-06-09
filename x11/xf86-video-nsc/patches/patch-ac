@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1 2009/06/09 17:10:16 hasso Exp $
+
+http://cgit.freedesktop.org/xorg/driver/xf86-video-nsc/commit/?id=bfcfdff7
+
+--- src/nsc_driver.c.orig	2007-08-21 01:50:08 +0300
++++ src/nsc_driver.c	2009-06-09 19:06:17 +0300
+@@ -517,7 +517,9 @@ NscProbe(DriverPtr drv, int flags)
+    }
+    GeodeDebug(("NscProbe: Before MatchPciInstances!\n"));
+    /* PCI BUS */
++#ifndef XSERVER_LIBPCIACCESS
+    if (xf86GetPciVideoInfo()) {
++#endif
+       numUsed = xf86MatchPciInstances(NSC_NAME, PCI_VENDOR_ID_NS,
+ 				      GeodeChipsets, GeodePCIchipsets,
+ 				      devSections, numDevSections,
+@@ -575,7 +577,9 @@ NscProbe(DriverPtr drv, int flags)
+ 	    }
+ 	 }
+       }
++#ifndef XSERVER_LIBPCIACCESS
+    }
++#endif
+ 
+    if (usedChips)
+       xfree(usedChips);
