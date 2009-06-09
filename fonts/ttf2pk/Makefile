@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2009/03/18 18:54:10 darcy Exp $
+# $NetBSD: Makefile,v 1.22 2009/06/09 21:31:04 minskim Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../graphics/freetype-lib/Makefile.common"
 
 PKGNAME=		ttf2pk-${FT_VERS}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		print
 
 MAINTAINER=		bernhard@SDG.de

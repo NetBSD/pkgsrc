@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2009/01/14 06:35:22 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2009/06/09 21:31:04 minskim Exp $
 
 DISTNAME=	dvipdfmx-20070518
 PKGNAME=	${DISTNAME:S/-/-0.0.0./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print converters
 MASTER_SITES=	http://project.ktug.or.kr/dvipdfmx/snapshot/release/
 
