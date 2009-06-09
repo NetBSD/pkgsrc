@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2238 2009/06/09 08:40:27 imil Exp $
+$NetBSD: CHANGES-2009,v 1.2239 2009/06/09 09:21:17 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3000,3 +3000,8 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-vga to 4.1.0nb3 [hasso 2009-06-09]
 	Updated graphics/libpuzzle to 0.11 [imil 2009-06-09]
 	Updated sysutils/ftwin to 0.8.5 [imil 2009-06-09]
+	Updated x11/xf86-video-i128 to 1.3.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-i740 to 1.3.0 [hasso 2009-06-09]
+	Updated x11/xf86-video-mach64 to 6.8.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-mga to 1.4.10 [hasso 2009-06-09]
+	Updated x11/xf86-video-s3virge to 1.10.2 [hasso 2009-06-09]
