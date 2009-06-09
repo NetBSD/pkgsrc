@@ -1,14 +1,13 @@
-$NetBSD: patch-aa,v 1.3 2008/08/09 15:21:07 tnn Exp $
+$NetBSD: patch-aa,v 1.4 2009/06/09 02:46:10 obache Exp $
 
---- configure.orig	2008-03-19 18:35:58.000000000 +0100
+--- configure.orig	2008-12-22 04:26:01.000000000 +0000
 +++ configure
-@@ -21319,54 +21319,8 @@ _ACEOF
- fi
+@@ -21964,57 +21964,8 @@ fi
  
  
--# Checks for functions (often defined as inlines in compiler.h)
--{ echo "$as_me:$LINENO: checking for inb" >&5
--echo $ECHO_N "checking for inb... $ECHO_C" >&6; }
+ # Checks for functions (often defined as inlines in compiler.h)
+-{ $as_echo "$as_me:$LINENO: checking for inb" >&5
+-$as_echo_n "checking for inb... " >&6; }
 -cat >conftest.$ac_ext <<_ACEOF
 -/* confdefs.h.  */
 -_ACEOF
@@ -30,47 +29,34 @@ $NetBSD: patch-aa,v 1.3 2008/08/09 15:21:07 tnn Exp $
 -  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
 -  *) ac_try_echo=$ac_try;;
 -esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-eval ac_try_echo="\"\$as_me:$LINENO: $ac_try_echo\""
+-$as_echo "$ac_try_echo") >&5
 -  (eval "$ac_link") 2>conftest.er1
 -  ac_status=$?
 -  grep -v '^ *+' conftest.er1 >conftest.err
 -  rm -f conftest.er1
 -  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
+-  $as_echo "$as_me:$LINENO: \$? = $ac_status" >&5
 -  (exit $ac_status); } && {
 -	 test -z "$ac_c_werror_flag" ||
 -	 test ! -s conftest.err
--       } && test -s conftest$ac_exeext &&
--       $as_test_x conftest$ac_exeext; then
+-       } && test -s conftest$ac_exeext && {
+-	 test "$cross_compiling" = yes ||
+-	 $as_test_x conftest$ac_exeext
+-       }; then
 -  HAVE_INB=yes
 -else
--  echo "$as_me: failed program was:" >&5
+-  $as_echo "$as_me: failed program was:" >&5
 -sed 's/^/| /' conftest.$ac_ext >&5
 -
  	HAVE_INB=no
 -fi
  
+-rm -rf conftest.dSYM
 -rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 -      conftest$ac_exeext conftest.$ac_ext
--{ echo "$as_me:$LINENO: result: $HAVE_INB" >&5
--echo "${ECHO_T}$HAVE_INB" >&6; }
+-{ $as_echo "$as_me:$LINENO: result: $HAVE_INB" >&5
+-$as_echo "$HAVE_INB" >&6; }
   if test x$HAVE_INB = xyes; then
    BUILD_UTILS_TRUE=
    BUILD_UTILS_FALSE='#'
-@@ -21506,16 +21460,8 @@ echo $ECHO_N "checking for $XORG_SGML_PA
- if { as_var=$as_ac_File; eval "test \"\${$as_var+set}\" = set"; }; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
- else
--  test "$cross_compiling" = yes &&
--  { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
--echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
--   { (exit 1); exit 1; }; }
--if test -r "$XORG_SGML_PATH/X11/defs.ent"; then
--  eval "$as_ac_File=yes"
--else
-   eval "$as_ac_File=no"
- fi
--fi
- ac_res=`eval echo '${'$as_ac_File'}'`
- 	       { echo "$as_me:$LINENO: result: $ac_res" >&5
- echo "${ECHO_T}$ac_res" >&6; }
