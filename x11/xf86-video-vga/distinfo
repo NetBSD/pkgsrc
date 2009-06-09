@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/21 00:20:45 joerg Exp $
+$NetBSD: distinfo,v 1.2 2009/06/09 08:18:39 hasso Exp $
 
 SHA1 (xf86-video-vga-4.1.0.tar.bz2) = a3b5562e5714d956647389cc8c089fac85d7177e
 RMD160 (xf86-video-vga-4.1.0.tar.bz2) = ff87eab31181abb5aba2bc29dbb7a883392ef95b
 Size (xf86-video-vga-4.1.0.tar.bz2) = 233642 bytes
+SHA1 (patch-aa) = d1d926e4e4ccfe4f810834c33c05be388e33eb2e
+SHA1 (patch-ab) = 04c37e11b5f8234c1588196c483c3a1682831211
