@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/13 07:19:45 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/06/09 22:20:53 minskim Exp $
 
-SHA1 (tex-plain-3.14159265/plain.tar.lzma) = 6011a04d8030eb8c72a23d4c55551c5007068eca
-RMD160 (tex-plain-3.14159265/plain.tar.lzma) = ecb50bf898db3a97c63dc97c3389ccd9b8bc4ac7
-Size (tex-plain-3.14159265/plain.tar.lzma) = 41914 bytes
+SHA1 (tex-plain-3.14159265.12854/plain.tar.lzma) = e0565da9526be012ccadd9a83d06a27ad1784d13
+RMD160 (tex-plain-3.14159265.12854/plain.tar.lzma) = fc4d3b2c37f68ddf3352c9be51871576f5ddcf10
+Size (tex-plain-3.14159265.12854/plain.tar.lzma) = 41932 bytes
