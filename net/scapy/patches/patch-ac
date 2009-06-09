@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2009/06/09 12:30:02 hasso Exp $
+
+--- scapy/sendrecv.py.orig	2009-06-09 13:06:15 +0300
++++ scapy/sendrecv.py	2009-06-09 13:06:31 +0300
+@@ -116,7 +116,7 @@ def sndrcv(pks, pkt, timeout = 2, inter 
+                                 if remaintime <= 0:
+                                     break
+                             r = None
+-                            if FREEBSD or DARWIN:
++                            if FREEBSD or DARWIN or DRAGONFLY:
+                                 inp, out, err = select(inmask,[],[], 0.05)
+                                 if len(inp) == 0 or pks in inp:
+                                     r = pks.nonblock_recv()
