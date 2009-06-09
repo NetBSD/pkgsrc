@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2254 2009/06/09 17:24:32 abs Exp $
+$NetBSD: CHANGES-2009,v 1.2255 2009/06/09 17:37:45 abs Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3021,3 +3021,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/netatalk to 2.0.4 [taca 2009-06-09]
 	Updated x11/xf86-video-nsc to 2.8.3 [hasso 2009-06-09]
 	Added devel/p5-Parallel-ForkManager version 0.7.5 [abs 2009-06-09]
+	Removed time/p5-Time [abs 2009-06-09]
