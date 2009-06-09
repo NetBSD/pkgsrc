@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2009/04/30 01:01:40 minskim Exp $
+# $NetBSD: Makefile,v 1.48 2009/06/09 21:31:04 minskim Exp $
 
 DISTNAME=	tetex-src-3.0
 PKGNAME=	${DISTNAME:C/tetex/teTeX/:C/src/bin/}
-PKGREVISION=	33
+PKGREVISION=	34
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/unix/teTeX/3.0/distrib/}
 
