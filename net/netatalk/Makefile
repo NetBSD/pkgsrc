@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2009/02/22 07:35:16 taca Exp $
+# $NetBSD: Makefile,v 1.64 2009/06/09 13:57:56 taca Exp $
 
-DISTNAME=	netatalk-2.0.3
-PKGREVISION=	13
+DISTNAME=	netatalk-2.0.4
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
 COMMENT=	Netatalk appletalk file and print services
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -46,7 +46,7 @@ CONFIGURE_ARGS+=	--enable-netbsd \
 			--enable-timelord \
 			--libexecdir=${PREFIX}/libexec/netatalk \
 			--sbindir=${PREFIX}/libexec/netatalk \
-			--with-pkgconfdir=${PKG_SYSCONFDIR:Q} \
+			--with-pkgconfdir=${PKG_SYSCONFDIR} \
 			--with-message-dir=${PKG_SYSCONFDIR}/msg \
 			--localstatedir=${VARBASE}/netatalk \
 			--with-uams-path=${PREFIX}/libexec/netatalk/uams \
@@ -68,7 +68,7 @@ RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
 
 SUBST_CLASSES+=		rc
 SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
-SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_SED.rc+=		-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.rc=		pre-configure
 
 .include "options.mk"
