@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/09 21:31:03 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/09 22:31:14 minskim Exp $
 
 DISTNAME=	texlive-20080816-source
 PKGNAME=	web2c-7.5.7
@@ -40,6 +40,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl yacc
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/web2c
 
+CONFIGURE_ARGS+=	--without-luatex
 CONFIGURE_ARGS+=	--without-xetex
 CONFIGURE_ARGS+=	--with-mf-nowin
 CONFIGURE_ARGS+=	--with-system-pnglib \
