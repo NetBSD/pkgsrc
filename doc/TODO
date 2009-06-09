@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8177 2009/06/09 21:59:53 zafer Exp $
+$NetBSD: TODO,v 1.8178 2009/06/09 23:03:44 snj Exp $
 
 Suggested new packages
 ======================
@@ -1451,7 +1451,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o yafc-1.1
 	o yasm-0.8.0
 	o yodl-2.01.02
-	o youtube-dl-20090530
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
