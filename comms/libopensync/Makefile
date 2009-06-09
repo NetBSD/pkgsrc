@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/11/26 00:32:55 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/09 03:57:26 obache Exp $
 #
 
 DISTNAME=	libopensync-0.22
@@ -18,11 +18,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--disable-python
-
-DISTURL=${MASTER_SITES}${DISTNAME}${EXTRACT_SUFX}?format=raw
-pre-fetch:
-	${TEST} -f ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} || \
-	(cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}${EXTRACT_SUFX} ${DISTURL:Q})
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
