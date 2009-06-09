@@ -1,0 +1,147 @@
+$NetBSD: patch-aa,v 1.1 2009/06/09 06:32:31 obache Exp $
+
+Adapt to xorg-server>=1.6
+
+--- src/wsfb_driver.c.orig	2007-01-02 14:38:33.000000000 +0000
++++ src/wsfb_driver.c
+@@ -40,15 +40,16 @@
+ #include "config.h"
+ #endif
+ 
++#include <errno.h>
+ #include <fcntl.h>
+ #include <sys/types.h>
++#include <sys/mman.h>
+ #include <sys/time.h>
+ #include <dev/wscons/wsconsio.h>
+ 
+ /* all driver need this */
+ #include "xf86.h"
+ #include "xf86_OSproc.h"
+-#include "xf86_ansic.h"
+ 
+ #include "mipointer.h"
+ #include "mibstore.h"
+@@ -59,8 +60,12 @@
+ #include "dgaproc.h"
+ 
+ /* for visuals */
+-#include "xf1bpp.h"
+-#include "xf4bpp.h"
++#ifdef HAVE_XF1BPP
++# include "xf1bpp.h"
++#endif
++#ifdef HAVE_XF4BPP
++# include "xf4bpp.h"
++#endif
+ #include "fb.h"
+ 
+ #include "xf86Resources.h"
+@@ -70,13 +75,7 @@
+ #include "xf86xv.h"
+ #endif
+ 
+-/* #include "wsconsio.h" */
+-
+-#ifndef XFree86LOADER
+-#include <sys/mman.h>
+-#endif
+-
+-#ifdef USE_PRIVSEP
++#ifdef X_PRIVSEP
+ extern int priv_open_device(const char *);
+ #else
+ #define priv_open_device(n)    open(n,O_RDWR|O_NONBLOCK|O_EXCL)
+@@ -184,22 +183,6 @@ static const OptionInfoRec WsfbOptions[]
+ 	{ -1, NULL, OPTV_NONE, {0}, FALSE}
+ };
+ 
+-/* Symbols needed from other modules */
+-static const char *fbSymbols[] = {
+-	"fbPictureInit",
+-	"fbScreenInit",
+-	NULL
+-};
+-static const char *shadowSymbols[] = {
+-	"shadowAdd",
+-	"shadowSetup",
+-	"shadowUpdatePacked",
+-	"shadowUpdatePackedWeak",
+-	"shadowUpdateRotatePacked",
+-	"shadowUpdateRotatePackedWeak",
+-	NULL
+-};
+-
+ #ifdef XFree86LOADER
+ static XF86ModuleVersionInfo WsfbVersRec = {
+ 	"wsfb",
+@@ -237,7 +220,6 @@ WsfbSetup(pointer module, pointer opts, 
+ 	if (!setupDone) {
+ 		setupDone = TRUE;
+ 		xf86AddDriver(&WSFB, module, HaveDriverFuncs);
+-		LoaderRefSymLists(fbSymbols, shadowSymbols, NULL);
+ 		return (pointer)1;
+ 	} else {
+ 		if (errmaj != NULL)
+@@ -642,14 +624,18 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+ 
+ 	/* Load bpp-specific modules */
+ 	switch(pScrn->bitsPerPixel) {
++#ifdef HAVE_XF1BPP
+ 	case 1:
+ 		mod = "xf1bpp";
+ 		reqSym = "xf1bppScreenInit";
+ 		break;
++#endif
++#ifdef HAVE_XF4BPP
+ 	case 4:
+ 		mod = "xf4bpp";
+ 		reqSym = "xf4bppScreenInit";
+ 		break;
++#endif
+ 	default:
+ 		mod = "fb";
+ 		break;
+@@ -664,19 +650,11 @@ WsfbPreInit(ScrnInfoPtr pScrn, int flags
+ 			WsfbFreeRec(pScrn);
+ 			return FALSE;
+ 		}
+-		xf86LoaderReqSymLists(shadowSymbols, NULL);
+ 	}
+ 	if (mod && xf86LoadSubModule(pScrn, mod) == NULL) {
+ 		WsfbFreeRec(pScrn);
+ 		return FALSE;
+ 	}
+-	if (mod) {
+-		if (reqSym) {
+-			xf86LoaderReqSymbols(reqSym, NULL);
+-		} else {
+-			xf86LoaderReqSymLists(fbSymbols, NULL);
+-		}
+-	}
+ 	TRACE_EXIT("PreInit");
+ 	return TRUE;
+ }
+@@ -821,6 +799,7 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+ 	fPtr->fbstart = fPtr->fbmem;
+ 
+ 	switch (pScrn->bitsPerPixel) {
++#ifdef HAVE_XF1BPP
+ 	case 1:
+ 		ret = xf1bppScreenInit(pScreen, fPtr->fbstart,
+ 				       pScrn->virtualX, pScrn->virtualY,
+@@ -828,11 +807,14 @@ WsfbScreenInit(int scrnIndex, ScreenPtr 
+ 				       pScrn->displayWidth);
+ 		break;
+ 	case 4:
++#endif
++#ifdef HAVE_XF4BPP
+ 		ret = xf4bppScreenInit(pScreen, fPtr->fbstart,
+ 				       pScrn->virtualX, pScrn->virtualY,
+ 				       pScrn->xDpi, pScrn->yDpi,
+ 				       pScrn->displayWidth);
+ 		break;
++#endif
+ 	case 8:
+ 	case 16:
+ 	case 24:
