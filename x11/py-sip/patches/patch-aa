@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/09 13:51:57 wiz Exp $
 
---- configure.py.orig	2008-08-08 16:07:36.000000000 +0200
+--- configure.py.orig	2009-06-05 08:59:07.000000000 +0000
 +++ configure.py
-@@ -230,7 +230,7 @@ def set_platform_directories():
+@@ -198,7 +198,7 @@ def set_platform_directories():
  
          plat_py_lib_dir = lib_dir + "/config"
          plat_bin_dir = sys.exec_prefix + "/bin"
@@ -11,16 +11,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
  
  
  def create_config(module, template, macros):
-@@ -248,7 +248,7 @@ def create_config(module, template, macr
+@@ -216,7 +216,7 @@ def create_config(module, template, macr
          "sip_version":      sip_version,
          "sip_version_str":  sip_version_str,
-         "platform":         opt_platform,
--        "sip_bin":          os.path.join(opt_sipbindir, "sip"),
-+        "sip_bin":          os.path.join(opt_sipbindir, "sip%s" % sys.version[0:3]),
-         "sip_inc_dir":      opt_sipincdir,
-         "sip_mod_dir":      opt_sipmoddir,
+         "platform":         opts.platform,
+-        "sip_bin":          os.path.join(opts.sipbindir, "sip"),
++        "sip_bin":          os.path.join(opts.sipbindir, "sip%s" % sys.version[0:3]),
+         "sip_inc_dir":      opts.sipincdir,
+         "sip_mod_dir":      opts.sipmoddir,
          "default_bin_dir":  plat_bin_dir,
-@@ -282,7 +282,7 @@ def create_makefiles(macros):
+@@ -249,7 +249,7 @@ def create_makefiles(macros):
      sipconfig.ParentMakefile(
          configuration=cfg,
          subdirs=["sipgen", "siplib"],
