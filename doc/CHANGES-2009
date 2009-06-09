@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2243 2009/06/09 12:49:34 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2244 2009/06/09 13:07:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3009,3 +3009,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/fvwm-devel to 2.5.27 [martti 2009-06-09]
 	Updated net/scapy to 2.0.1 [hasso 2009-06-09]
 	Updated www/p5-WWW-Curl to 4.07 [wiz 2009-06-09]
+	Updated net/avahi to 0.6.25 [wiz 2009-06-09]
