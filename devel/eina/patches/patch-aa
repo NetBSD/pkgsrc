@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/06/09 18:27:32 hasso Exp $
+
+--- configure.orig	2009-06-09 15:32:25 +0300
++++ configure	2009-06-09 15:33:07 +0300
+@@ -15516,7 +15516,7 @@ _ACEOF
+       EINA_LIBS="${EINA_LIBS} -ldl ${EVIL_LIBS} -lm"
+       lt_enable_auto_import="-Wl,--enable-auto-import"
+    ;;
+-   *openbsd*)
++   *openbsd*|*dragonfly*)
+       EINA_LIBS="${EINA_LIBS} -lm"
+    ;;
+    *bsd*)
