@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2269 2009/06/09 22:50:40 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2270 2009/06/09 22:53:05 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3049,3 +3049,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-bin-dvipdfm to 0.13.2d.12898 [minskim 2009-06-09]
 	Updated print/tex-bin-dvipsk to 2008.12898 [minskim 2009-06-09]
 	Updated print/tex-bin-dvipsk-doc to 2008.12898 [minskim 2009-06-09]
+	Updated fonts/tex-latex-fonts to 2008.12918 [minskim 2009-06-09]
