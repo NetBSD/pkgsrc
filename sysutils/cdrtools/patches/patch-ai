@@ -1,6 +1,6 @@
-$NetBSD: patch-ai,v 1.7 2009/02/16 14:13:07 wiz Exp $
+$NetBSD: patch-ai,v 1.8 2009/06/09 18:45:13 wiz Exp $
 
---- libscg/scsi-bsd.c.orig	2009-01-20 23:29:26.000000000 +0000
+--- libscg/scsi-bsd.c.orig	2009-04-19 12:26:13.000000000 +0000
 +++ libscg/scsi-bsd.c
 @@ -44,6 +44,7 @@ static	char __sccsid[] =
  
@@ -14,8 +14,8 @@ $NetBSD: patch-ai,v 1.7 2009/02/16 14:13:07 wiz Exp $
   *	Choose your name instead of "schily" and make clear that the version
   *	string is related to a modified source.
   */
--LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.46";	/* The version for this transport*/
-+LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.46nb1";	/* The version for this transport*/
+-LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.47";	/* The version for this transport*/
++LOCAL	char	_scg_trans_version[] = "scsi-bsd.c-1.47nb1";	/* The version for this transport*/
  
  #define	MAX_SCG		16	/* Max # of SCSI controllers */
  #define	MAX_TGT		16
