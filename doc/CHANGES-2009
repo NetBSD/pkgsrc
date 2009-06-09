@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2233 2009/06/08 22:55:34 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2234 2009/06/09 02:46:27 obache Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2984,3 +2984,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/tightvncviewer to 1.3.10 [tnn 2009-06-08]
 	Updated www/midori to 0.1.7 [ahoka 2009-06-08]
 	Updated meta-pkgs/desktop-gnome to 0.2 [ahoka 2009-06-08]
+	Updated x11/xf86-video-chips to 1.2.1 [obache 2009-06-09]
