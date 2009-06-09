@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/19 17:26:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/06/09 18:27:32 hasso Exp $
 
 SHA1 (eina-0.0.2.060.tar.bz2) = 4071916e3a7b94791d361b0deb3315f250868240
 RMD160 (eina-0.0.2.060.tar.bz2) = 042872ac9b39d4187c3ac06d264a6eda6e52dfdd
 Size (eina-0.0.2.060.tar.bz2) = 368431 bytes
+SHA1 (patch-aa) = 7ab83c78347068de0a67d023baf42fbca7da40e3
