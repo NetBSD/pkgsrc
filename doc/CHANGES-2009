@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2263 2009/06/09 22:15:46 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2264 2009/06/09 22:21:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3043,3 +3043,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/tex-pdftex to 1.40.9.12898 [minskim 2009-06-09]
 	Updated print/tex-pdftex-doc to 1.40.9.12898 [minskim 2009-06-09]
 	Updated print/tex-latexconfig to 2008.12854 [minskim 2009-06-09]
+	Updated print/tex-plain to 3.14159265.12854 [minskim 2009-06-09]
