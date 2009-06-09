@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2241 2009/06/09 10:55:18 martti Exp $
+$NetBSD: CHANGES-2009,v 1.2242 2009/06/09 12:32:29 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3007,3 +3007,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-s3virge to 1.10.2 [hasso 2009-06-09]
 	Updated editors/vim-share to 7.2.196 [martti 2009-06-09]
 	Updated wm/fvwm-devel to 2.5.27 [martti 2009-06-09]
+	Updated net/scapy to 2.0.1 [hasso 2009-06-09]
