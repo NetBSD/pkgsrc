@@ -1,8 +1,11 @@
-# $NetBSD: replace.mk,v 1.24 2008/01/23 14:48:50 gdt Exp $
+# $NetBSD: replace.mk,v 1.25 2009/06/09 08:40:27 joerg Exp $
 #
 
 # _flavor-replace:
-#	Updates a package in-place on the system.
+#	Updates a package in-place on the system (USE_DESTDIR=yes).
+#
+# _flavor-destdir-replace:
+#	Updates a package in-place on the system (USE_DESTDIR=yes).
 #
 # See also:
 #	replace
@@ -20,6 +23,13 @@ _flavor-replace: \
 	deinstall \
 	install-clean \
 	install \
+	replace-fixup-required-by \
+	replace-fixup-installed-info \
+	.PHONY
+
+_flavor-destdir-replace: \
+	replace-names \
+	replace-destdir \
 	replace-fixup-required-by \
 	replace-fixup-installed-info \
 	.PHONY
@@ -172,3 +182,15 @@ replace-clean: .PHONY
 	${RM} -f ${WRKDIR}/$$newname${PKG_SUFX};			\
 	${RM} -f ${_REPLACE_OLDNAME_FILE} ${_REPLACE_NEWNAME_FILE}	\
 		${_COOKIE.replace}
+
+replace-destdir: .PHONY
+	@${PHASE_MSG} "Updating using binary package of "${PKGNAME:Q}
+.if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
+	@${MKDIR} ${_CROSS_DESTDIR}${PREFIX}
+	${PKG_ADD} -u -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${PKGFILE}
+	@${ECHO} "Fixing recorded cwd..."
+	@${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp
+	@${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS
+.else
+	${PKG_ADD} -u ${PKGFILE}
+.endif
