@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2009/05/20 00:58:29 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2009/06/09 10:54:47 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,9 +12,10 @@ COMMENT=	Development version of X11 Virtual window manager
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
-FVWM_VER=	2.5.26
+FVWM_VER=	2.5.27
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES
@@ -53,7 +53,7 @@ SUBST_SED.perl=		-e "s|${TOOLS_CMD.perl}|${PERL5}|"
 
 post-install:
 	cd ${WRKSRC}/sample.fvwmrc && ${INSTALL_DATA} \
-		`ls | grep -v Makefile` ${PREFIX}/share/examples/fvwm
+		`ls | grep -v Makefile` ${DESTDIR}${PREFIX}/share/examples/fvwm
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
