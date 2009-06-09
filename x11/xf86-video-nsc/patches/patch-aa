@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2009/06/09 17:10:16 hasso Exp $
+
+http://cgit.freedesktop.org/xorg/driver/xf86-video-nsc/commit/?id=bfcfdff7
+
+--- ./configure.ac.orig	2007-09-05 04:04:57 +0300
++++ ./configure.ac	2009-06-09 19:06:17 +0300
+@@ -60,6 +60,11 @@ PKG_CHECK_MODULES(XORG, [xorg-server >= 
+ sdkdir=$(pkg-config --variable=sdkdir xorg-server)
+ 
+ # Checks for libraries.
++if test "x$XSERVER_LIBPCIACCESS" = xyes; then
++    PKG_CHECK_MODULES([PCIACCESS], [pciaccess >= 0.8.0])
++    XORG_CFLAGS="$XORG_CFLAGS $PCIACCESS_CFLAGS"
++fi
++AM_CONDITIONAL(XSERVER_LIBPCIACCESS, test "x$XSERVER_LIBPCIACCESS" = xyes)
+ 
+ # Checks for header files.
+ AC_HEADER_STDC
