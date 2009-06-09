@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2247 2009/06/09 13:18:10 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2248 2009/06/09 13:24:01 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3013,3 +3013,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/iso-codes to 3.10 [wiz 2009-06-09]
 	Updated textproc/enchant to 1.5.0 [wiz 2009-06-09]
 	Updated devel/libidn to 1.15 [wiz 2009-06-09]
+	Updated www/webkit-gtk to 1.1.8 [ahoka 2009-06-09]
