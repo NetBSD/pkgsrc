@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2009/04/12 02:36:30 minskim Exp $
+# $NetBSD: Makefile,v 1.28 2009/06/09 21:31:04 minskim Exp $
 
 DISTNAME=	dvipdfm-0.13.2d
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://gaspra.kettering.edu/dvipdfm/
 
