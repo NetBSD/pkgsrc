@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2252 2009/06/09 13:58:46 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2253 2009/06/09 17:14:21 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3019,3 +3019,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/libgpg-error to 1.7 [wiz 2009-06-09]
 	Updated x11/py-sip to 4.8 [wiz 2009-06-09]
 	Updated net/netatalk to 2.0.4 [taca 2009-06-09]
+	Updated x11/xf86-video-nsc to 2.8.3 [hasso 2009-06-09]
