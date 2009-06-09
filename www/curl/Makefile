@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.89 2009/03/04 14:47:01 tron Exp $
+# $NetBSD: Makefile,v 1.90 2009/06/09 18:31:35 wiz Exp $
 
-DISTNAME=	curl-7.19.4
+DISTNAME=	curl-7.19.5
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://curl.haxx.se/
 COMMENT=	Client that groks URLs
+# not completely, but near enough
+LICENSE=	mit
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
