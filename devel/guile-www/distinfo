@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/03/06 15:17:24 wiz Exp $
+$NetBSD: distinfo,v 1.7 2009/06/09 19:10:34 wiz Exp $
 
-SHA1 (guile-www-2.22.tar.gz) = d775fcd5970e2412ec0153d986f1da70992684e1
-RMD160 (guile-www-2.22.tar.gz) = f444a37a5b33e5e5bef7c4b47f3f398d792fafde
-Size (guile-www-2.22.tar.gz) = 266153 bytes
+SHA1 (guile-www-2.24.tar.gz) = d83f9615dedbc9da6961664be5f7886fd028d5fe
+RMD160 (guile-www-2.24.tar.gz) = e7e2bef771f7eaafd1dacd53d9026ffca20aa658
+Size (guile-www-2.24.tar.gz) = 285122 bytes
