@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/27 16:24:27 minskim Exp $
+$NetBSD: distinfo,v 1.2 2009/06/09 22:06:07 minskim Exp $
 
-SHA1 (tex-pdftex-doc-1.40.9/pdftex.doc.tar.lzma) = 0af9b3b2b44741750eef2f2bcd9c05b23fd55280
-RMD160 (tex-pdftex-doc-1.40.9/pdftex.doc.tar.lzma) = 94e20ab724f7b117280c80cbd0d17d78b24231ac
-Size (tex-pdftex-doc-1.40.9/pdftex.doc.tar.lzma) = 6317810 bytes
+SHA1 (tex-pdftex-doc-1.40.9.12898/pdftex.doc.tar.lzma) = 77555295b29e44ce487193f236422cfe5f8db5d7
+RMD160 (tex-pdftex-doc-1.40.9.12898/pdftex.doc.tar.lzma) = c52cdc25bb54b8dda245ccdcb95677f22eeab2e9
+Size (tex-pdftex-doc-1.40.9.12898/pdftex.doc.tar.lzma) = 6317810 bytes
