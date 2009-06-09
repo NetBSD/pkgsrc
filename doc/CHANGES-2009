@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2257 2009/06/09 18:45:25 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2258 2009/06/09 18:56:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Removed time/p5-Time [abs 2009-06-09]
 	Updated www/curl to 7.19.5 [wiz 2009-06-09]
 	Updated sysutils/cdrtools to 2.01.01alpha60 [wiz 2009-06-09]
+	Updated security/gnutls to 2.8.0 [wiz 2009-06-09]
