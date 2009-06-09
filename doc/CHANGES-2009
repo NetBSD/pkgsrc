@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2235 2009/06/09 02:55:51 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2236 2009/06/09 07:13:21 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2986,3 +2986,14 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated meta-pkgs/desktop-gnome to 0.2 [ahoka 2009-06-08]
 	Updated x11/xf86-video-chips to 1.2.1 [obache 2009-06-09]
 	Updated databases/tokyocabinet to 1.4.24 [obache 2009-06-09]
+	Updated x11/xf86-video-ati to 6.12.2 [hasso 2009-06-09]
+	Updated x11/xf86-video-cirrus to 1.3.0 [hasso 2009-06-09]
+	Updated x11/xf86-video-glint to 1.2.2 [hasso 2009-06-09]
+	Updated x11/xf86-video-neomagic to 1.2.2 [hasso 2009-06-09]
+	Updated x11/xf86-video-rendition to 4.2.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-s3 to 0.6.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-siliconmotion to 1.7.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-sis to 0.10.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-tga to 1.2.0 [hasso 2009-06-09]
+	Updated x11/xf86-video-trident to 1.3.1 [hasso 2009-06-09]
+	Updated x11/xf86-video-tseng to 1.2.1 [hasso 2009-06-09]
