@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2009/06/07 06:06:45 minskim Exp $
+# $NetBSD: Makefile,v 1.260 2009/06/09 21:49:02 minskim Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -79,6 +79,7 @@ SUBDIR+=	libgnomeprintui
 SUBDIR+=	libpaper
 SUBDIR+=	libspectre
 SUBDIR+=	lilypond
+SUBDIR+=	luatex
 SUBDIR+=	magicfilter
 SUBDIR+=	mgv
 SUBDIR+=	mp

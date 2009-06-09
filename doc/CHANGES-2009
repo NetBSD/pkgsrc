@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2260 2009/06/09 21:36:26 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2261 2009/06/09 21:49:02 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3039,3 +3039,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated print/xdvik to 22.84.14nb2 [minskim 2009-06-09]
 	Updated print/dvipdfm to 0.13.2dnb1 [minskim 2009-06-09]
 	Updated fonts/ttf2pk to 1.5nb2 [minskim 2009-06-09]
+	Added print/luatex version 0.40.2 [minskim 2009-06-09]
