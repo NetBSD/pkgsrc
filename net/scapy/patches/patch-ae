@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2009/06/09 12:30:02 hasso Exp $
+
+--- setup.py.orig	2009-02-09 14:41:39 +0200
++++ setup.py	2009-06-09 14:33:59 +0300
+@@ -40,7 +40,7 @@ setup(
+     version = '2.0.1', 
+     packages=['scapy','scapy/arch', 'scapy/layers','scapy/asn1','scapy/tools','scapy/modules'],
+     scripts = ['bin/scapy','bin/UTscapy'],
+-    data_files = [('share/man/man1', ["doc/scapy.1.gz"])],
++    data_files = [('man/man1', ["doc/scapy.1.gz"])],
+ 
+     # Metadata
+     author = 'Philippe BIONDI',
