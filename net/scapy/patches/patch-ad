@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2009/06/09 12:30:02 hasso Exp $
+
+--- scapy/data.py.orig	2009-06-09 13:13:15 +0300
++++ scapy/data.py	2009-06-09 13:13:57 +0300
+@@ -97,7 +97,7 @@ def load_ethertypes(filename):
+         pass
+     return dct
+ 
+-ETHER_TYPES=load_ethertypes("/etc/ethertypes")
++ETHER_TYPES=load_ethertypes("@PKG_SYSCONFDIR@/ethertypes")
+ 
+ def load_services(filename):
+     spaces = re.compile("[ \t]+|\n")
