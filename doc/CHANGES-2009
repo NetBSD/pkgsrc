@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2242 2009/06/09 12:32:29 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2243 2009/06/09 12:49:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3008,3 +3008,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated editors/vim-share to 7.2.196 [martti 2009-06-09]
 	Updated wm/fvwm-devel to 2.5.27 [martti 2009-06-09]
 	Updated net/scapy to 2.0.1 [hasso 2009-06-09]
+	Updated www/p5-WWW-Curl to 4.07 [wiz 2009-06-09]
