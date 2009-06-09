@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2009/01/07 21:28:57 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2009/06/09 13:25:02 wiz Exp $
 
---- gobject/Makefile.in.orig	2009-01-04 21:34:58.000000000 +0100
+--- gobject/Makefile.in.orig	2009-05-24 20:37:47.000000000 +0000
 +++ gobject/Makefile.in
-@@ -693,7 +693,7 @@ info: info-am
+@@ -689,7 +689,7 @@ info: info-am
  info-am:
  
  install-data-am: install-nodist_pygobjectPYTHON \
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.5 2009/01/07 21:28:57 wiz Exp $
 +	install-pygobjectLTLIBRARIES \
  	install-pygobjectPYTHON
  
- install-exec-am:
+ install-dvi: install-dvi-am

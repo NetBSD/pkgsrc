@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.12 2009/02/22 13:59:47 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/06/09 13:25:02 wiz Exp $
 #
 # used by devel/py-gobject/Makefile
 # used by devel/py-gobject-shared/Makefile
 
-DISTNAME=		pygobject-2.16.1
+DISTNAME=		pygobject-2.18.0
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.16/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.18/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pygtk.org/
@@ -22,4 +22,5 @@ DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject/distinfo
 
 PKGCONFIG_OVERRIDE+=	pygobject-2.0.pc.in
 PY_PATCHPLIST=		yes
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
