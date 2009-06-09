@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/20 03:28:48 snj Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/09 13:08:14 ahoka Exp $
 bin/jsc
 include/webkit-1.0/JavaScriptCore/JSBase.h
 include/webkit-1.0/JavaScriptCore/JSContextRef.h
@@ -34,6 +34,12 @@ share/locale/it/LC_MESSAGES/webkit.mo
 share/locale/pt_BR/LC_MESSAGES/webkit.mo
 share/locale/ru/LC_MESSAGES/webkit.mo
 share/locale/sv/LC_MESSAGES/webkit.mo
+share/webkit-1.0/images/deleteButton.png
+share/webkit-1.0/images/missingImage.png
+share/webkit-1.0/images/nullPlugin.png
+share/webkit-1.0/images/panIcon.png
+share/webkit-1.0/images/textAreaResizeCorner.png
+share/webkit-1.0/images/urlIcon.png
 share/webkit-1.0/resources/error.html
 share/webkit-1.0/webinspector/Images/back.png
 share/webkit-1.0/webinspector/Images/checker.png
@@ -152,6 +158,7 @@ share/webkit-1.0/webinspector/localizedStrings.js
 @dirrm share/webkit-1.0/webinspector/Images
 @dirrm share/webkit-1.0/webinspector
 @dirrm share/webkit-1.0/resources
+@dirrm share/webkit-1.0/images
 @dirrm share/webkit-1.0
 @dirrm include/webkit-1.0/webkit
 @dirrm include/webkit-1.0/JavaScriptCore
