@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2259 2009/06/09 19:10:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2260 2009/06/09 21:36:26 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3026,3 +3026,16 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrtools to 2.01.01alpha60 [wiz 2009-06-09]
 	Updated security/gnutls to 2.8.0 [wiz 2009-06-09]
 	Updated devel/guile-www to 2.24 [wiz 2009-06-09]
+	Updated print/kpathsea to 5.0.0 [minskim 2009-06-09]
+	Updated print/web2c to 7.5.7nb3 [minskim 2009-06-09]
+	Updated graphics/dvipng to 1.11nb2 [minskim 2009-06-09]
+	Updated textproc/makeindexk to 2.15nb1 [minskim 2009-06-09]
+	Updated print/dviljk to 2.6.5nb1 [minskim 2009-06-09]
+	Updated print/dvipsk to 5.97nb2 [minskim 2009-06-09]
+	Updated print/texlive-tetex to 2008nb1 [minskim 2009-06-09]
+	Updated print/xetex to 0.999.6nb1 [minskim 2009-06-09]
+	Updated print/dvipdfmx to 0.0.0.20070518nb2 [minskim 2009-06-09]
+	Updated print/teTeX3-bin to 3.0nb34 [minskim 2009-06-09]
+	Updated print/xdvik to 22.84.14nb2 [minskim 2009-06-09]
+	Updated print/dvipdfm to 0.13.2dnb1 [minskim 2009-06-09]
+	Updated fonts/ttf2pk to 1.5nb2 [minskim 2009-06-09]
