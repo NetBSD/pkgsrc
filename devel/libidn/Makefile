@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.65 2009/05/19 08:59:10 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2009/06/09 13:17:58 wiz Exp $
 
-DISTNAME=	libidn-1.14
+DISTNAME=	libidn-1.15
 CATEGORIES=	devel
 MASTER_SITES=	ftp://alpha.gnu.org/pub/gnu/libidn/ \
 		http://ftp.gnu.org/gnu/libidn/
@@ -21,10 +21,11 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 CONFIGURE_ENV+=		EMACS=${FALSE}
 CONFIGURE_ARGS+=	--disable-csharp --disable-java
+CONFIGURE_ARGS=		--with-packager=pkgsrc
+CONFIGURE_ARGS=		--with-packager-bug-report=http://www.NetBSD.org/cgi-bin/sendpr.cgi?gndb=netbsd
 
 PKGCONFIG_OVERRIDE+=	libidn.pc.in
 TEST_TARGET=		check
-#LICENSE=		gnu-gplv3 gnu-gplv2 gnu-lgplv21
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
