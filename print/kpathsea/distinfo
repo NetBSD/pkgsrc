@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/04/11 19:16:33 minskim Exp $
+$NetBSD: distinfo,v 1.5 2009/06/09 21:29:17 minskim Exp $
 
-SHA1 (texlive-20080816-source.tar.lzma) = 730986c628bd658b5062face9e400f61203d6b8d
-RMD160 (texlive-20080816-source.tar.lzma) = 629784b111c0d4bc9fac9f9131f63203d6e1dd38
-Size (texlive-20080816-source.tar.lzma) = 23175835 bytes
-SHA1 (patch-aa) = 87f14f7f2fbdfeff1150290ba1faa971c9137caf
+SHA1 (luatex-beta-0.40.2.tar.bz2) = 8af574490abb5cbcf9b8c2540ad2f623ec66babe
+RMD160 (luatex-beta-0.40.2.tar.bz2) = 2a05f51fdcb869f6398d6e643373ccb99246458f
+Size (luatex-beta-0.40.2.tar.bz2) = 7475791 bytes
+SHA1 (patch-aa) = f22538ddcb94566542984216103da97885377bcf
+SHA1 (patch-ab) = 241176f612485a800ec94974ab00419c92043243
