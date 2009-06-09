@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/08/24 14:05:16 tonnerre Exp $
+# $NetBSD: Makefile,v 1.36 2009/06/09 17:34:50 abs Exp $
 
 DISTNAME=		rt-3.8.1
 PKGREVISION=		1
@@ -36,7 +36,7 @@ DEPENDS+=	p5-Email-Address-[0-9]*:../../mail/p5-Email-Address
 DEPENDS+=	p5-Net>=1.15:../../net/p5-Net
 DEPENDS+=	p5-Net-Server-[0-9]*:../../net/p5-Net-Server
 DEPENDS+=	p5-Text-Wrapper>=1.0:../../textproc/p5-Text-Wrapper
-DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
+DEPENDS+=	p5-Time-modules>=101.062101:../../time/p5-Time-modules
 DEPENDS+=	p5-Text-Autoformat>=1.04:../../textproc/p5-Text-Autoformat
 DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
