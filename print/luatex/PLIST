@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/09 21:47:52 minskim Exp $
+bin/luatex
+bin/texlua
+bin/texluac
