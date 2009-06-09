@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/04 19:22:20 imil Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/09 08:31:20 imil Exp $
 #
 
-DISTNAME=	libpuzzle-0.9
+DISTNAME=	libpuzzle-0.11
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.pureftpd.org/pub/pure-ftpd/misc/libpuzzle/releases/
 EXTRACT_SUFX=	.tar.bz2
