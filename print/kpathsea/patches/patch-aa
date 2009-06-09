@@ -1,24 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
+$NetBSD: patch-aa,v 1.5 2009/06/09 21:29:17 minskim Exp $
 
 - Set paths to texmf trees for pkgsrc.
-- Sync with TeX Live Revision 12509.
 
---- texmf.cnf.orig	2008-07-26 14:39:36.000000000 -0700
+--- texmf.cnf.orig	2009-06-03 06:07:27.000000000 -0700
 +++ texmf.cnf
-@@ -44,18 +44,18 @@
+@@ -53,15 +53,15 @@
  
  % The tree containing the runtime files closely related to the specific
  % program version used:
 -TEXMFMAIN = $SELFAUTOPARENT/texmf
-+TEXMFMAIN = $SELFAUTODIR/share/texmf
++TEXMFMAIN = @PREFIX@/share/texmf
  
  % The main distribution tree:
 -TEXMFDIST = $SELFAUTOPARENT/texmf-dist
-+TEXMFDIST = $SELFAUTODIR/share/texmf-dist
- 
- % Our documentation-only tree, arranged by language:
--TEXMFDOC = $SELFAUTOPARENT/texmf-doc
-+TEXMFDOC = $SELFAUTODIR/share/doc/texmf
++TEXMFDIST = @PREFIX@/share/texmf-dist
  
  % A place for local additions to a "standard" texmf tree.
  % This tree is not used for local configuration maintained by
@@ -28,7 +23,7 @@ $NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
  
  % TEXMFSYSVAR, where texconfig-sys stores variable runtime data.
  % With teTeX-3.0 or later, this must be set.
-@@ -63,7 +63,7 @@ TEXMFLOCAL = $SELFAUTOPARENT/../texmf-lo
+@@ -69,7 +69,7 @@ TEXMFLOCAL = $SELFAUTOPARENT/../texmf-lo
  %   TEXMFSYSVAR = $TEXMFMAIN
  % For using a separate tree:
  %   TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
@@ -37,7 +32,7 @@ $NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
  
  % TEXMFSYSCONFIG, where texconfig-sys stores configuration data.
  % With teTeX-3.0 or later, this must be set.
-@@ -71,7 +71,7 @@ TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
+@@ -77,7 +77,7 @@ TEXMFSYSVAR = $SELFAUTOPARENT/texmf-var
  %   TEXMFSYSCONFIG = $TEXMFMAIN
  % For using a separate tree:
  %   TEXMFSYSCONFIG = $SELFAUTOPARENT/texmf-config
@@ -46,7 +41,7 @@ $NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
  
  % User texmf trees are allowed as follows.
  % This used to be HOMETEXMF.
-@@ -122,7 +122,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
+@@ -128,7 +128,7 @@ SYSTEXMF = $TEXMFSYSVAR;$TEXMFMAIN;$TEXM
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
  % varfonts feature was enabled in MT_FEATURES in mktex.cnf.
@@ -55,153 +50,7 @@ $NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
  
  % Where to look for ls-R files.  There need not be an ls-R in the
  % directories in this path, but if there is one, Kpathsea will use it.
-@@ -146,7 +146,7 @@ TEXMFDBS = {!!$TEXMFSYSCONFIG,!!$TEXMFSY
- 
- 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
--% Usually you will not need to edit any of the other variables in part 1. %
-+% Usually you will not need to edit any of the following variables.
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
- % WEB2C is for Web2C specific files.  The current directory may not be
-@@ -154,12 +154,16 @@ TEXMFDBS = {!!$TEXMFSYSCONFIG,!!$TEXMFSY
- WEB2C = $TEXMF/web2c
- 
- % TEXINPUTS is for TeX input files -- i.e., anything to be found by \input
--% or \openin, including .sty, .eps, etc.
-+% or \openin, including .sty, .eps, etc.  We specify paths for all known
-+% formats, past or present.  Not all of them are built these days.
- 
- % Plain TeX.  Have the command tex check all directories as a last
- % resort, we may have plain-compatible stuff anywhere.
- TEXINPUTS.tex           = .;$TEXMF/tex/{plain,generic,}//
- 
-+% Fontinst needs to read afm files.
-+TEXINPUTS.fontinst      = .;$TEXMF/{tex,fonts/afm}//
-+
- % Other plain-based formats.
- TEXINPUTS.amstex        = .;$TEXMF/tex/{amstex,plain,generic,}//
- TEXINPUTS.csplain       = .;$TEXMF/tex/{csplain,plain,generic,}//
-@@ -168,7 +172,6 @@ TEXINPUTS.ftex          = .;$TEXMF/tex/{
- TEXINPUTS.jadetex       = .;$TEXMF/tex/{jadetex,plain,generic,}//
- TEXINPUTS.mex           = .;$TEXMF/tex/{mex,plain,generic,}//
- TEXINPUTS.texinfo       = .;$TEXMF/tex/{texinfo,plain,generic,}//
--TEXINPUTS.xetex         = .;$TEXMF/tex/{xetex,plain,generic,}//
- 
- % LaTeX 2e specific macros are stored in latex/, macros that can only be
- % used with 2.09 in latex209/.  In addition, we look in the directory
-@@ -176,12 +179,8 @@ TEXINPUTS.xetex         = .;$TEXMF/tex/{
- % mention 2e at all, but can be used with 2e.
- TEXINPUTS.cslatex       = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
- TEXINPUTS.latex         = .;$TEXMF/tex/{latex,generic,}//
--TEXINPUTS.olatex        = .;$TEXMF/tex/{latex,generic,}//
- TEXINPUTS.latex209      = .;$TEXMF/tex/{latex209,generic,latex,}//
--TEXINPUTS.xelatex       = .;$TEXMF/tex/{xelatex,latex,generic,}//
--
--% Fontinst needs to read afm files.
--TEXINPUTS.fontinst      = .;$TEXMF/{tex,fonts/afm}//
-+TEXINPUTS.olatex        = .;$TEXMF/tex/{latex,generic,}//
- 
- % MLTeX.
- TEXINPUTS.frlatex       = .;$TEXMF/tex/{french,latex,generic,}//
-@@ -189,13 +188,11 @@ TEXINPUTS.frtex         = .;$TEXMF/tex/{
- TEXINPUTS.mllatex       = .;$TEXMF/tex/{latex,generic,}//
- TEXINPUTS.mltex         = .;$TEXMF/tex/{plain,generic,}//
- 
--% e-TeX.  This form of the input paths is borrowed from teTeX.  A certain
--% variant of TDS is assumed here, unaffected by the build variables.
-+% e-TeX.
- TEXINPUTS.elatex        = .;$TEXMF/tex/{latex,generic,}//
- TEXINPUTS.etex          = .;$TEXMF/tex/{plain,generic,}//
- 
--% pdfTeX.  This form of the input paths is borrowed from teTeX.  A certain
--% variant of TDS is assumed here, unaffected by the build variables.
-+% pdfTeX.
- TEXINPUTS.pdfcslatex    = .;$TEXMF/tex/{cslatex,csplain,latex,generic,}//
- TEXINPUTS.pdfcsplain    = .;$TEXMF/tex/{csplain,plain,generic,}//
- TEXINPUTS.pdfjadetex    = .;$TEXMF/tex/{jadetex,plain,generic,}//
-@@ -212,39 +209,45 @@ TEXINPUTS.pdfetex       = .;$TEXMF/tex/{
- 
- % pdfxTeX.
- TEXINPUTS.pdfxlatex     = .;$TEXMF/tex/{latex,generic,}//
-+TEXINPUTS.pdfxmex       = .;$TEXMF/tex/{mex,plain,generic,}//
- TEXINPUTS.pdfxtex       = .;$TEXMF/tex/{plain,generic,}//
- 
--% XeTeX
-+% LuaTeX.
-+TEXINPUTS.lualatex      = .;$TEXMF/tex/{lualatex,latex,generic,}//
-+TEXINPUTS.luatex        = .;$TEXMF/tex/{luatex,plain,generic,}//
-+TEXINPUTS.pdflualatex   = .;$TEXMF/tex/{lualatex,latex,generic,}//
-+TEXINPUTS.pdfluatex     = .;$TEXMF/tex/{lualatex,latex,generic,}//
-+
-+% XeTeX.
- TEXINPUTS.xelatex       = .;$TEXMF/tex/{xelatex,latex,generic,}//
- TEXINPUTS.xeplain       = .;$TEXMF/tex/{xeplain,eplain,plain,generic,}//
- TEXINPUTS.xetex         = .;$TEXMF/tex/{xetex,plain,generic,}//
- 
--% Omega / Aleph
--TEXINPUTS.lamed         = .;$TEXMF/tex/{lamed,lambda,latex,generic,}//
-+% Omega / Aleph.
-+TEXINPUTS.aleph         = .;$TEXMF/tex/{plain,generic,}//
-+TEXINPUTS.elambda       = .;$TEXMF/tex/{lambda,latex,generic,}//
-+TEXINPUTS.eomega        = .;$TEXMF/tex/{plain,generic,}//
- TEXINPUTS.lambda        = .;$TEXMF/tex/{lambda,latex,generic,}//
-+TEXINPUTS.lamed         = .;$TEXMF/tex/{lamed,lambda,latex,generic,}//
- TEXINPUTS.omega         = .;$TEXMF/tex/{plain,generic,}//
--TEXINPUTS.aleph         = .;$TEXMF/tex/{plain,generic,}//
- 
--% ConTeXt
-+% ConTeXt.
- TEXINPUTS.context       = .;$TEXMF/tex/{context,plain,generic,}//
- 
--% odd formats needing their own paths
-+% XMLTeX.
-+TEXINPUTS.xmltex        = .;$TEXMF/tex/{xmltex,latex,generic,}//
-+TEXINPUTS.pdfxmltex     = .;$TEXMF/tex/{xmltex,latex,generic,}//
-+
-+% Miscellany, no longer built.
- TEXINPUTS.lamstex       = .;$TEXMF/tex/{lamstex,plain,generic,}//
- TEXINPUTS.lollipop      = .;$TEXMF/tex/{lollipop,plain,generic,}//
--
--% Earlier entries override later ones, so put this last.
--TEXINPUTS               = .;$TEXMF/tex/{$progname,generic,}//
--
--% extra format definitions for TeX Live
--
--TEXINPUTS.elambda       = .;$TEXMF/tex/{lambda,latex,generic,}//
--TEXINPUTS.eomega        = .;$TEXMF/tex/{plain,generic,}//
--TEXINPUTS.pdfxmex       = .;$TEXMF/tex/{mex,plain,generic,}//
- TEXINPUTS.frpdflatex    = .;$TEXMF/tex/{french,latex,generic,}//
- TEXINPUTS.frpdftex      = .;$TEXMF/tex/{french,plain,generic,}//
--TEXINPUTS.xmltex        = .;$TEXMF/tex/{xmltex,latex,generic,}//
--TEXINPUTS.pdfxmltex     = .;$TEXMF/tex/{xmltex,latex,generic,}//
- 
-+% Earlier entries override later ones, so put this generic one last.
-+TEXINPUTS               = .;$TEXMF/tex/{$progname,generic,}//
-+
-+% ttf2tfm.
- TTF2TFMINPUTS =                 .;$TEXMF/ttf2pk//
- 
- % Metafont, MetaPost inputs.
-@@ -384,14 +387,11 @@ FONTCONFIG_FILE=fonts.conf
- FONTCONFIG_PATH=$TEXMFSYSVAR/fonts/conf
- FC_CACHEDIR=$TEXMFSYSVAR/fonts/cache
- 
--% TeX documentation and source files, for use with kpsewhich.
-+% TeX documentation and source files, for use with kpsewhich (and texdoc).
- % TeX Live has a separate hierarchy with just documentation, texmf-doc,
- % in addition to the doc files in the other hierarchies.
--% Also, find the English documentation first -- better than random, when
--% there are name collisions.
--% Also, find things from man pages first, same reason.
--TEXMFDOCDIR = $TEXMFDOC/doc{/english,}
--TEXDOCS = .;$TEXMF/doc{/man,}//;$TEXMFDOCDIR//
-+TEXMFDOCDIR = $TEXMFDOC/doc
-+TEXDOCS = .;$TEXMF/doc//;$TEXMFDOCDIR//
- TEXSOURCES = .;$TEXMF/source//
- 
- % Web and CWeb input paths.
-@@ -447,7 +447,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
+@@ -455,7 +455,7 @@ RUBYINPUTS   = .;$TEXMF/scripts/{$progna
  % 
  % For security reasons, it is better not to include . in this path.
  %
@@ -210,37 +59,3 @@ $NetBSD: patch-aa,v 1.4 2009/04/11 19:16:34 minskim Exp $
  
  # kpathsea 3.5.3 and later sets these at runtime. To avoid empty
  # expansions from binaries linked against an earlier version of the
-@@ -458,11 +458,10 @@ engine = unsetengine
- 
- %  Part 2: Options.
- 
--% If this is true, `tex a.b' will look first for a.b.tex (within each
--% path element), and then for a.b, i.e., we try standard extensions
--% first.  If this is false, we first look for a.b and then a.b.tex,
--% first.  If this is false, we first look for a.b and then a.b.tex,
--% i.e., we try the name as-is first.
-+% If this option is set to true, `tex a.b' will look first for a.b.tex
-+% (within each path element), and then for a.b, i.e., we try standard
-+% extensions first.  If this is false, we first look for a.b and then
-+% a.b.tex, i.e., we try the name as-is first.
- %
- % Both names are always tried; the difference is the order in which they
- % are tried.  The setting applies to all searches, not just .tex.
-@@ -472,7 +471,7 @@ engine = unsetengine
- % always have an extension added first.
- %
- % The default is true, because we already avoid adding the standard
--% extension(s) in most common cases.  E.g., babel.sty will only look for
-+% extension(s) in the usual cases.  E.g., babel.sty will only look for
- % babel.sty, not babel.sty.tex, regardless of this setting.
- try_std_extension_first = t
- 
-@@ -612,7 +611,7 @@ buf_size = 200000
- % for all known free hyphenation patterns to be loaded simultaneously
- % (as TeX Live does).
- %
--trie_size = 600000
-+trie_size = 700000
- 
- hyph_size = 8191        % prime number of hyphenation exceptions, >610, <32767.
-                         % http://primes.utm.edu/curios/page.php/8191.html
