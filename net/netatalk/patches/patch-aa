@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.17 2009/02/22 07:35:16 taca Exp $
+$NetBSD: patch-aa,v 1.18 2009/06/09 13:57:56 taca Exp $
 
---- configure.orig	2005-05-17 18:14:29.000000000 -0400
-+++ configure	2008-04-05 21:15:47.000000000 -0400
-@@ -12464,7 +12464,7 @@
+--- configure.orig	2009-03-29 16:24:33.000000000 +0900
++++ configure
+@@ -24445,7 +24445,7 @@ done
  
  
  
@@ -10,8 +10,8 @@ $NetBSD: patch-aa,v 1.17 2009/02/22 07:35:16 taca Exp $
 +for ac_func in strlcpy strlcat getifaddrs
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
- echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -16704,7 +16704,7 @@
+ { echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -27933,7 +27933,7 @@ fi
  		LIBS="$savedLIBS"
  	fi
  
@@ -20,8 +20,8 @@ $NetBSD: patch-aa,v 1.17 2009/02/22 07:35:16 taca Exp $
  	if test x"$pam_found" = "xyes" -a "x$PAMDIR" = "xNONE"; then
  		{ echo "$as_me:$LINENO: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&5
  echo "$as_me: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&2;}
-@@ -17304,7 +17304,7 @@
- 
+@@ -28583,7 +28583,7 @@ if test "${with_spooldir+set}" = set; th
+   withval=$with_spooldir;
  
  	        if test "$withval" = "no"; then
 -        	       if test x"$spool_required" == x"yes"; then
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.17 2009/02/22 07:35:16 taca Exp $
                  	       { { echo "$as_me:$LINENO: error: *** CUPS support requires a spooldir ***" >&5
  echo "$as_me: error: *** CUPS support requires a spooldir ***" >&2;}
     { (exit 1); exit 1; }; }
-@@ -18190,7 +18190,7 @@
+@@ -29496,7 +29496,7 @@ cat >>confdefs.h <<\_ACEOF
  #define NETBSD 1
  _ACEOF
  
@@ -38,21 +38,39 @@ $NetBSD: patch-aa,v 1.17 2009/02/22 07:35:16 taca Exp $
  	need_dash_r=yes
  
  
-@@ -18961,7 +18961,7 @@
+@@ -29839,7 +29839,7 @@ IFS=$as_save_IFS
+   ;;
+ esac
+ fi
+-LIBGCRYPT_CONFIG=$ac_cv_path_LIBGCRYPT_CONFIG
++LIBGCRYPT_CONFIG=no
+ if test -n "$LIBGCRYPT_CONFIG"; then
+   { echo "$as_me:$LINENO: result: $LIBGCRYPT_CONFIG" >&5
+ echo "${ECHO_T}$LIBGCRYPT_CONFIG" >&6; }
+@@ -30286,7 +30286,7 @@ echo "${ECHO_T}yes" >&6; }
+     atalk_cv_bdb_version=no
+     maj=$atalk_cv_bdb_MAJOR
+     min=$atalk_cv_bdb_MINOR
+-    atalk_cv_bdb_try_libs="-ldb$maj$min -ldb$maj.$min -ldb-$maj$min -ldb-$maj.$min"
++    atalk_cv_bdb_try_libs="-ldb$maj$min -ldb$maj.$min -ldb-$maj$min -ldb-$maj.$min -ldb$maj-$maj.$min"
+ 
+     for lib in $atalk_cv_bdb_try_libs ; do
+         LIBS="$lib $savedlibs"
+@@ -30527,7 +30527,7 @@ case "(($ac_try" in
+   *) ac_try_echo=$ac_try;;
+ esac
+ eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
+-  (eval "$ac_cpp conftest.$ac_ext") 2>conftest.er1
++  (eval "$ac_cpp $ac_env_CPPFLAGS_value conftest.$ac_ext") 2>conftest.er1
+   ac_status=$?
+   grep -v '^ *+' conftest.er1 >conftest.err
+   rm -f conftest.er1
+@@ -30735,7 +30735,7 @@ if test "${enable_krbV_uam+set}" = set; 
  		if test x"$enableval" = x"yes"; then
  
  	FOUND_GSSAPI=no
 -	GSSAPI_LIBS=""
-+	#GSSAPI_LIBS=""
++#	GSSAPI_LIBS=""
  	GSSAPI_CFLAGS=""
  
  
-@@ -19176,7 +19176,7 @@
- #include <$ac_header>
- _ACEOF
- if { (eval echo "$as_me:$LINENO: \"$ac_cpp conftest.$ac_ext\"") >&5
--  (eval $ac_cpp conftest.$ac_ext) 2>conftest.er1
-+  (eval $ac_cpp $ac_env_CPPFLAGS_value conftest.$ac_ext) 2>conftest.er1
-   ac_status=$?
-   grep -v '^ *+' conftest.er1 >conftest.err
-   rm -f conftest.er1

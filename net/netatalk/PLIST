@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/09 13:57:56 taca Exp $
 bin/achfile
 bin/acleandir.rc
 bin/adv1tov2
@@ -32,7 +32,6 @@ bin/papstatus
 bin/psorder
 bin/showppd
 bin/single2bin
-bin/timeout
 bin/unbin
 bin/unhex
 bin/uniconv
@@ -55,10 +54,12 @@ include/atalk/pap.h
 include/atalk/paths.h
 include/atalk/rtmp.h
 include/atalk/server_child.h
+include/atalk/server_ipc.h
 include/atalk/tdb.h
 include/atalk/uam.h
 include/atalk/unicode.h
 include/atalk/util.h
+include/atalk/volinfo.h
 include/atalk/zip.h
 include/netatalk/aarp.h
 include/netatalk/at.h
@@ -129,7 +130,6 @@ man/man1/pap.1
 man/man1/papstatus.1
 man/man1/psorder.1
 man/man1/single2bin.1
-man/man1/timeout.1
 man/man1/unbin.1
 man/man1/unhex.1
 man/man1/uniconv.1
@@ -156,8 +156,8 @@ share/examples/netatalk/AppleVolumes.system
 share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
-share/examples/netatalk/papd.conf
 ${PLIST.pam}share/examples/netatalk/netatalk.pamd
+share/examples/netatalk/papd.conf
 share/examples/rc.d/afpd
 share/examples/rc.d/atalkd
 share/examples/rc.d/cnid_metad
