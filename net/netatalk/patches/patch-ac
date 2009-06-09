@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.8 2005/10/07 12:18:19 rillig Exp $
+$NetBSD: patch-ac,v 1.9 2009/06/09 13:57:56 taca Exp $
 
 The original commit message for this patch:
 
@@ -28,9 +28,9 @@ and finally, the discussion referred to in the above change:
     http://mail-index.netbsd.org/tech-net/1999/07/02/0022.html
     http://mail-index.netbsd.org/tech-net/1999/07/03/0004.html
 
---- etc/atalkd/main.c.orig	Sat Oct  5 08:20:13 2002
+--- etc/atalkd/main.c.orig	2009-03-29 16:23:22.000000000 +0900
 +++ etc/atalkd/main.c
-@@ -278,12 +278,12 @@ static void as_timer(int sig)
+@@ -280,12 +280,12 @@ static void as_timer(int sig _U_)
  		    LOG(log_info, logtype_atalkd, "config for no router" );
  		      
  		    if ( iface->i_flags & IFACE_PHASE2 ) {

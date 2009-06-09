@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2008/04/06 20:21:18 christos Exp $
+$NetBSD: patch-ae,v 1.8 2009/06/09 13:57:56 taca Exp $
 
---- config.h.in.orig	2008-04-05 21:15:49.000000000 -0400
-+++ config.h.in	2008-04-05 21:17:55.000000000 -0400
-@@ -185,8 +185,8 @@
+--- config.h.in.orig	2009-03-29 16:23:57.000000000 +0900
++++ config.h.in
+@@ -188,8 +188,8 @@
  /* Define to 1 if you have the `gettimeofday' function. */
  #undef HAVE_GETTIMEOFDAY
  
