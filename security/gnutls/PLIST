@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.33 2008/10/18 11:55:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2009/06/09 18:56:37 wiz Exp $
 bin/certtool
 bin/gnutls-cli
 bin/gnutls-cli-debug
 bin/gnutls-serv
-bin/libgnutls-config
-bin/libgnutls-extra-config
 bin/psktool
 bin/srptool
 include/gnutls/compat.h
@@ -93,6 +91,7 @@ man/man3/gnutls_certificate_set_x509_key.3
 man/man3/gnutls_certificate_set_x509_key_file.3
 man/man3/gnutls_certificate_set_x509_key_mem.3
 man/man3/gnutls_certificate_set_x509_simple_pkcs12_file.3
+man/man3/gnutls_certificate_set_x509_simple_pkcs12_mem.3
 man/man3/gnutls_certificate_set_x509_trust.3
 man/man3/gnutls_certificate_set_x509_trust_file.3
 man/man3/gnutls_certificate_set_x509_trust_mem.3
@@ -412,12 +411,17 @@ man/man3/gnutls_transport_set_push_function.3
 man/man3/gnutls_x509_crl_check_issuer.3
 man/man3/gnutls_x509_crl_deinit.3
 man/man3/gnutls_x509_crl_export.3
+man/man3/gnutls_x509_crl_get_authority_key_id.3
 man/man3/gnutls_x509_crl_get_crt_count.3
 man/man3/gnutls_x509_crl_get_crt_serial.3
 man/man3/gnutls_x509_crl_get_dn_oid.3
+man/man3/gnutls_x509_crl_get_extension_data.3
+man/man3/gnutls_x509_crl_get_extension_info.3
+man/man3/gnutls_x509_crl_get_extension_oid.3
 man/man3/gnutls_x509_crl_get_issuer_dn.3
 man/man3/gnutls_x509_crl_get_issuer_dn_by_oid.3
 man/man3/gnutls_x509_crl_get_next_update.3
+man/man3/gnutls_x509_crl_get_number.3
 man/man3/gnutls_x509_crl_get_signature.3
 man/man3/gnutls_x509_crl_get_signature_algorithm.3
 man/man3/gnutls_x509_crl_get_this_update.3
@@ -425,9 +429,11 @@ man/man3/gnutls_x509_crl_get_version.3
 man/man3/gnutls_x509_crl_import.3
 man/man3/gnutls_x509_crl_init.3
 man/man3/gnutls_x509_crl_print.3
+man/man3/gnutls_x509_crl_set_authority_key_id.3
 man/man3/gnutls_x509_crl_set_crt.3
 man/man3/gnutls_x509_crl_set_crt_serial.3
 man/man3/gnutls_x509_crl_set_next_update.3
+man/man3/gnutls_x509_crl_set_number.3
 man/man3/gnutls_x509_crl_set_this_update.3
 man/man3/gnutls_x509_crl_set_version.3
 man/man3/gnutls_x509_crl_sign.3
@@ -436,19 +442,36 @@ man/man3/gnutls_x509_crl_verify.3
 man/man3/gnutls_x509_crq_deinit.3
 man/man3/gnutls_x509_crq_export.3
 man/man3/gnutls_x509_crq_get_attribute_by_oid.3
+man/man3/gnutls_x509_crq_get_attribute_data.3
+man/man3/gnutls_x509_crq_get_attribute_info.3
+man/man3/gnutls_x509_crq_get_basic_constraints.3
 man/man3/gnutls_x509_crq_get_challenge_password.3
 man/man3/gnutls_x509_crq_get_dn.3
 man/man3/gnutls_x509_crq_get_dn_by_oid.3
 man/man3/gnutls_x509_crq_get_dn_oid.3
+man/man3/gnutls_x509_crq_get_extension_by_oid.3
+man/man3/gnutls_x509_crq_get_extension_data.3
+man/man3/gnutls_x509_crq_get_extension_info.3
+man/man3/gnutls_x509_crq_get_key_id.3
+man/man3/gnutls_x509_crq_get_key_purpose_oid.3
+man/man3/gnutls_x509_crq_get_key_rsa_raw.3
+man/man3/gnutls_x509_crq_get_key_usage.3
 man/man3/gnutls_x509_crq_get_pk_algorithm.3
+man/man3/gnutls_x509_crq_get_subject_alt_name.3
+man/man3/gnutls_x509_crq_get_subject_alt_othername_oid.3
 man/man3/gnutls_x509_crq_get_version.3
 man/man3/gnutls_x509_crq_import.3
 man/man3/gnutls_x509_crq_init.3
+man/man3/gnutls_x509_crq_print.3
 man/man3/gnutls_x509_crq_set_attribute_by_oid.3
+man/man3/gnutls_x509_crq_set_basic_constraints.3
 man/man3/gnutls_x509_crq_set_challenge_password.3
 man/man3/gnutls_x509_crq_set_dn_by_oid.3
 man/man3/gnutls_x509_crq_set_key.3
+man/man3/gnutls_x509_crq_set_key_purpose_oid.3
 man/man3/gnutls_x509_crq_set_key_rsa_raw.3
+man/man3/gnutls_x509_crq_set_key_usage.3
+man/man3/gnutls_x509_crq_set_subject_alt_name.3
 man/man3/gnutls_x509_crq_set_version.3
 man/man3/gnutls_x509_crq_sign.3
 man/man3/gnutls_x509_crq_sign2.3
@@ -493,6 +516,7 @@ man/man3/gnutls_x509_crt_get_subject_alt_name.3
 man/man3/gnutls_x509_crt_get_subject_alt_name2.3
 man/man3/gnutls_x509_crt_get_subject_alt_othername_oid.3
 man/man3/gnutls_x509_crt_get_subject_key_id.3
+man/man3/gnutls_x509_crt_get_verify_algorithm.3
 man/man3/gnutls_x509_crt_get_version.3
 man/man3/gnutls_x509_crt_import.3
 man/man3/gnutls_x509_crt_init.3
@@ -506,6 +530,7 @@ man/man3/gnutls_x509_crt_set_ca_status.3
 man/man3/gnutls_x509_crt_set_crl_dist_points.3
 man/man3/gnutls_x509_crt_set_crl_dist_points2.3
 man/man3/gnutls_x509_crt_set_crq.3
+man/man3/gnutls_x509_crt_set_crq_extensions.3
 man/man3/gnutls_x509_crt_set_dn_by_oid.3
 man/man3/gnutls_x509_crt_set_expiration_time.3
 man/man3/gnutls_x509_crt_set_extension_by_oid.3
@@ -524,6 +549,7 @@ man/man3/gnutls_x509_crt_sign.3
 man/man3/gnutls_x509_crt_sign2.3
 man/man3/gnutls_x509_crt_verify.3
 man/man3/gnutls_x509_crt_verify_data.3
+man/man3/gnutls_x509_crt_verify_hash.3
 man/man3/gnutls_x509_dn_deinit.3
 man/man3/gnutls_x509_dn_export.3
 man/man3/gnutls_x509_dn_get_rdn_ava.3
@@ -551,8 +577,6 @@ man/man3/gnutls_x509_privkey_verify_data.3
 man/man3/gnutls_x509_rdn_get.3
 man/man3/gnutls_x509_rdn_get_by_oid.3
 man/man3/gnutls_x509_rdn_get_oid.3
-share/aclocal/libgnutls-extra.m4
-share/aclocal/libgnutls.m4
 share/doc/gnutls/TODO
 share/doc/gnutls/gnutls.ps
 share/examples/gnutls/ex-alert.c
@@ -576,15 +600,16 @@ share/examples/gnutls/ex-session-info.c
 share/examples/gnutls/ex-verify.c
 share/examples/gnutls/ex-x509-info.c
 share/examples/gnutls/tcp.c
-share/locale/de/LC_MESSAGES/gnutls.mo
-share/locale/en@boldquot/LC_MESSAGES/gnutls.mo
-share/locale/en@quot/LC_MESSAGES/gnutls.mo
-share/locale/fr/LC_MESSAGES/gnutls.mo
-share/locale/ms/LC_MESSAGES/gnutls.mo
-share/locale/nl/LC_MESSAGES/gnutls.mo
-share/locale/pl/LC_MESSAGES/gnutls.mo
-share/locale/sv/LC_MESSAGES/gnutls.mo
-share/locale/vi/LC_MESSAGES/gnutls.mo
+share/locale/cs/LC_MESSAGES/libgnutls.mo
+share/locale/de/LC_MESSAGES/libgnutls.mo
+share/locale/en@boldquot/LC_MESSAGES/libgnutls.mo
+share/locale/en@quot/LC_MESSAGES/libgnutls.mo
+share/locale/fr/LC_MESSAGES/libgnutls.mo
+share/locale/ms/LC_MESSAGES/libgnutls.mo
+share/locale/nl/LC_MESSAGES/libgnutls.mo
+share/locale/pl/LC_MESSAGES/libgnutls.mo
+share/locale/sv/LC_MESSAGES/libgnutls.mo
+share/locale/vi/LC_MESSAGES/libgnutls.mo
 @dirrm share/examples/gnutls
 @dirrm share/doc/gnutls
 @dirrm include/gnutls
