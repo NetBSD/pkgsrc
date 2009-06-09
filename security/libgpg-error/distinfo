@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2008/10/14 11:32:11 adam Exp $
+$NetBSD: distinfo,v 1.9 2009/06/09 13:27:33 wiz Exp $
 
-SHA1 (libgpg-error-1.6.tar.bz2) = 2f387d0c34dd55eaf3b5f3c2570e9033eb540bc3
-RMD160 (libgpg-error-1.6.tar.bz2) = 5015a9e0a9c59fe5e9a45d203c324af3736c5d68
-Size (libgpg-error-1.6.tar.bz2) = 382110 bytes
+SHA1 (libgpg-error-1.7.tar.bz2) = bf8c6babe1e28cae7dd6374ca24ddcc42d57e902
+RMD160 (libgpg-error-1.7.tar.bz2) = 6f9004baf8e707b5995a276b5a454102405a6afc
+Size (libgpg-error-1.7.tar.bz2) = 403751 bytes
 SHA1 (patch-aa) = 04f2918c2b61250693a279cd30a94a22fa4cad0a
 SHA1 (patch-ae) = 0865909ebfc7594bb5854e9ef6f7da3718d034bf
 SHA1 (patch-af) = c3ca3a4a4f024db0ca8cae78dafe10cda1135088
