@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2009/06/07 21:12:11 joerg Exp $
+# $NetBSD: Makefile.common,v 1.4 2009/06/10 06:52:01 minskim Exp $
 
 DISTNAME=	evas-0.9.9.060
 CATEGORIES=	graphics
@@ -41,4 +41,4 @@ CONFIGURE_ARGS+=	--disable-image-loader-${mod}
 CONFIGURE_ARGS+=	--enable-cpu-altivec
 .endif
 
-PLIST_SUBST=	MODULE_ARCH=${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${NATIVE_LOWER_ARCH}-ver-pre-01
+PLIST_SUBST=	MODULE_ARCH=${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}-ver-pre-01
