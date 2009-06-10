@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2009/06/10 10:47:22 hasso Exp $
+# $NetBSD: Makefile,v 1.78 2009/06/10 17:28:06 wiz Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
+PKGREVISION=	2
 COMMENT=	Graphics library similar to SGI's OpenGL
-PKGREVISION=	1
 
 MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h	\
 		glx_mangle.h osmesa.h xmesa.h xmesa_x.h	\
@@ -14,6 +14,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		MESA_HZ
 PLIST_VARS=		dri nodri
+
+PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
+PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
+PKGCONFIG_OVERRIDE+=	src/glw/glw.pc.in
+# no configure stage
+PKGCONFIG_OVERRIDE_STAGE=	pre-build
 
 .include "glx-config.mk"
 .include "../../graphics/Mesa/Makefile.lib"
@@ -63,4 +69,6 @@ pre-install:
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs
 
+# no configure phase
+.include "../../mk/configure/pkg-config-override.mk"
 .include "../../mk/bsd.pkg.mk"
