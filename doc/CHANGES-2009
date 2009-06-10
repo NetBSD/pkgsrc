@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2280 2009/06/10 11:17:18 obache Exp $
+$NetBSD: CHANGES-2009,v 1.2281 2009/06/10 12:52:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3062,3 +3062,11 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xinput to 1.4.2 [wiz 2009-06-10]
 	Updated graphics/MesaLib to 7.4.2nb1 [hasso 2009-06-10]
 	Updated devel/aegis to 4.24.1 [obache 2009-06-10]
+	Updated lang/ruby18-base to 1.8.7.173 [taca 2009-06-10]
+	Updated databases/ruby-gdbm to 1.8.7.173 [taca 2009-06-10]
+	Updated devel/ruby-curses to 1.8.7.173 [taca 2009-06-10]
+	Updated devel/ruby-readline to 1.8.7.173 [taca 2009-06-10]
+	Updated x11/ruby-tk to 1.8.7.173 [taca 2009-06-10]
+	Updated lang/ruby18 to 1.8.7.173 [taca 2009-06-10]
+	Updated lang/ruby to 1.8.7.173 [taca 2009-06-10]
+	Updated devel/ruby-mode to 1.8.7.173 [taca 2009-06-10]
