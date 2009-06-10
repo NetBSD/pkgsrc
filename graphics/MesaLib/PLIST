@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/05 11:10:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/10 17:28:06 wiz Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -29,6 +29,7 @@ ${PLIST.dri}lib/dri/sis_dri.la
 ${PLIST.dri}lib/dri/swrast_dri.la
 ${PLIST.dri}lib/dri/tdfx_dri.la
 ${PLIST.dri}lib/dri/unichrome_dri.la
+lib/pkgconfig/dri.pc
 lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
 ${PLIST.dri}@dirrm lib/dri
