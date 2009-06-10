@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.40 2009/04/07 07:35:44 minskim Exp $
+# $NetBSD: rubygem.mk,v 1.41 2009/06/10 21:44:31 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -103,6 +103,7 @@ EXTRACT_ONLY?=	# empty
 
 # Base directory for Gems
 GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
+MAKE_ENV+=	GEM_PATH=${GEM_HOME}
 
 # Directory for the Gem to install
 GEM_NAME?=	${DISTNAME}
@@ -186,7 +187,7 @@ gem-build: _gem-${GEM_BUILD}-build
 _gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} build ${GEM_SPECFILE}
-	${RUN} test -f ${WRKSRC}/${GEM_NAME}.gem || \
+	${RUN} ${TEST} -f ${WRKSRC}/${GEM_NAME}.gem || \
 		${FAIL_MSG} "Build of ${GEM_NAME}.gem failed."
 
 BUILD_TARGET?=	gem
@@ -205,6 +206,7 @@ _RUBYGEM_INSTALL_ROOT=	${WRKDIR}/.inst
 _RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=	--install-dir ${GEM_HOME}
 _RUBYGEM_OPTIONS+=	--install-root ${_RUBYGEM_INSTALL_ROOT}
+_RUBYGEM_OPTIONS+=	--ignore-dependencies
 _RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
 _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
 
@@ -219,7 +221,7 @@ _gem-build-install-root:
 # 
 .PHONY: _gem-build-install-root-check
 _gem-build-install-root-check:
-	${RUN} test -f ${_RUBYGEM_INSTALL_ROOT}${GEM_CACHEDIR}/${GEM_NAME}.gem || \
+	${RUN} ${TEST} -f ${_RUBYGEM_INSTALL_ROOT}${GEM_CACHEDIR}/${GEM_NAME}.gem || \
 		${FAIL_MSG} "Installing ${GEM_NAME}.gem into installation root failed."
 
 .if !empty(GEM_CLEANBUILD)
@@ -235,10 +237,10 @@ _gem-build-cleanbuild:
 		esac;							\
 		[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;		\
 		if [ -d "$$file" ]; then				\
-			echo "rmdir "${GEM_LIBDIR:T}"/$$file";		\
+			${ECHO} "rmdir "${GEM_LIBDIR:T}"/$$file";	\
 			rmdir $$file;					\
 		else							\
-			echo "rm "${GEM_LIBDIR:T}"/$$file";		\
+			${ECHO} "rm "${GEM_LIBDIR:T}"/$$file";		\
 			rm -f $$file;					\
 		fi;							\
 	done

@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.3 2009/04/07 07:35:44 minskim Exp $
+$NetBSD: patch-aj,v 1.4 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems/defaults.rb.orig	2008-10-10 13:29:53.000000000 -0700
+--- lib/rubygems/defaults.rb.orig	2009-05-20 16:30:35.000000000 -0700
 +++ lib/rubygems/defaults.rb
 @@ -18,7 +18,7 @@ module Gem
  
@@ -9,5 +9,5 @@ $NetBSD: patch-aj,v 1.3 2009/04/07 07:35:44 minskim Exp $
 -      File.join File.dirname(ConfigMap[:sitedir]), 'Gems',
 +      File.join File.dirname(ConfigMap[:vendordir]), 'Gems',
                  ConfigMap[:ruby_version]
-     else
-       File.join(ConfigMap[:libdir], ruby_engine, 'gems',
+     # 1.9.2dev reverted to 1.8 style path
+     elsif RUBY_VERSION > '1.9' and RUBY_VERSION < '1.9.2' then
