@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/07 21:12:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/10 06:52:33 minskim Exp $
 #
 
 COMMENT=	Enlightened Canvas Library
@@ -6,6 +6,7 @@ COMMENT=	Enlightened Canvas Library
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-font-loader-eet
+CONFIGURE_ENV+=		EET_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.eet}/lib -L${BUILDLINK_PREFIX.eet}/lib -leet"
 
 PKGCONFIG_OVERRIDE=	evas.pc.in
 
