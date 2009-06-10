@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/10 13:33:39 obache Exp $
 bin/eggdrop
 ${PLIST.dynamic}lib/eggdrop/assoc.so
 ${PLIST.dynamic}lib/eggdrop/blowfish.so
@@ -113,6 +113,8 @@ share/eggdrop/scripts/getops.tcl
 share/eggdrop/scripts/klined.tcl
 share/eggdrop/scripts/notes2.tcl
 share/eggdrop/scripts/ques5.tcl
+share/eggdrop/scripts/quotepass.tcl
+share/eggdrop/scripts/quotepong.tcl
 share/eggdrop/scripts/sentinel.tcl
 share/eggdrop/scripts/userinfo.tcl
 share/eggdrop/scripts/weed
