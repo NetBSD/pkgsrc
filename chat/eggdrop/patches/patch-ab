@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2004/12/03 12:15:54 adam Exp $
+$NetBSD: patch-ab,v 1.5 2009/06/10 13:33:39 obache Exp $
 
 --- src/main.c.orig	2004-07-02 21:21:08.000000000 +0000
 +++ src/main.c
@@ -16,7 +16,7 @@ $NetBSD: patch-ab,v 1.4 2004/12/03 12:15:54 adam Exp $
  int use_stderr = 1;     /* Send stuff to stderr instead of logfiles?     */
  
 -char configfile[121] = "eggdrop.conf";  /* Default config file name */
-+char configfile[121] = __PKG_SYSCONFDIR__ "eggdrop.conf";  /* Default config file name */
++char configfile[121] = __PKG_SYSCONFDIR__ "/eggdrop.conf";  /* Default config file name */
  char pid_file[120];                     /* Name of the pid file     */
  char helpdir[121] = "help/";            /* Directory of help files  */
  char textdir[121] = "text/";            /* Directory for text files */
