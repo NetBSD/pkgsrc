@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2009/03/19 11:32:45 drochner Exp $
+$NetBSD: patch-ae,v 1.8 2009/06/10 14:50:39 wiz Exp $
 
---- configure.orig	2009-03-17 14:55:00.000000000 +0100
+--- configure.orig	2009-03-17 13:55:00.000000000 +0000
 +++ configure
 @@ -25874,7 +25874,7 @@ fi
  
@@ -32,7 +32,23 @@ $NetBSD: patch-ae,v 1.7 2009/03/19 11:32:45 drochner Exp $
                  else
                  	SAMBA_LIBS="-lsmbclient"
                  fi
-@@ -37509,12 +37511,12 @@ if test -n "$LIBGNOMEVFS_CFLAGS"; then
+@@ -35859,11 +35861,10 @@ rm -f core conftest.err conftest.$ac_obj
+           LIBS="$ac_save_LIBS"
+        fi
+      fi
+-     LIBGNUTLS_CFLAGS=""
+-     LIBGNUTLS_LIBS=""
+-     { { $as_echo "$as_me:$LINENO: error: Unable to find GNUTLS" >&5
+-$as_echo "$as_me: error: Unable to find GNUTLS" >&2;}
+-   { (exit 1); exit 1; }; }
++LIBGNUTLS_CFLAGS=`pkg-config gnutls --cflags`
++LIBGNUTLS_LIBS=`pkg-config gnutls --libs`
++libgnutls_config_version=`pkg-config gnutls --version`
++have_ssl=true
+   fi
+   rm -f conf.libgnutlstest
+ 
+@@ -37509,12 +37510,12 @@ if test -n "$LIBGNOMEVFS_CFLAGS"; then
      pkg_cv_LIBGNOMEVFS_CFLAGS="$LIBGNOMEVFS_CFLAGS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -48,7 +64,7 @@ $NetBSD: patch-ae,v 1.7 2009/03/19 11:32:45 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -37525,12 +37527,12 @@ if test -n "$LIBGNOMEVFS_LIBS"; then
+@@ -37525,12 +37526,12 @@ if test -n "$LIBGNOMEVFS_LIBS"; then
      pkg_cv_LIBGNOMEVFS_LIBS="$LIBGNOMEVFS_LIBS"
   elif test -n "$PKG_CONFIG"; then
      if test -n "$PKG_CONFIG" && \
@@ -64,7 +80,7 @@ $NetBSD: patch-ae,v 1.7 2009/03/19 11:32:45 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -37548,14 +37550,14 @@ else
+@@ -37548,14 +37549,14 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
@@ -82,7 +98,7 @@ $NetBSD: patch-ae,v 1.7 2009/03/19 11:32:45 drochner Exp $
  
  $LIBGNOMEVFS_PKG_ERRORS
  
-@@ -37566,7 +37568,7 @@ Alternatively, you may set the environme
+@@ -37566,7 +37567,7 @@ Alternatively, you may set the environme
  and LIBGNOMEVFS_LIBS to avoid the need to call pkg-config.
  See the pkg-config man page for more details.
  " >&5
