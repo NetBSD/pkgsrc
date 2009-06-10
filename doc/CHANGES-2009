@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2283 2009/06/10 14:00:47 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2284 2009/06/10 17:06:21 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3072,3 +3072,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/ruby-mode to 1.8.7.173 [taca 2009-06-10]
 	Updated chat/eggdrop to 1.6.19nb1 [obache 2009-06-10]
 	Updated x11/libXfont to 1.4.0 [wiz 2009-06-10]
+	Updated math/mathomatic to 14.4.4 [minskim 2009-06-10]
