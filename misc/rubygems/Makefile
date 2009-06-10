@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2009/04/07 07:35:44 minskim Exp $
+# $NetBSD: Makefile,v 1.24 2009/06/10 21:44:30 minskim Exp $
 
-DISTNAME=	rubygems-1.3.1
+DISTNAME=	rubygems-1.3.4
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/45905/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/57643/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -49,15 +49,16 @@ GENERATE_PLIST+=	\
 .include "../../lang/ruby/modules.mk"
 
 # Force the Gem repository to be under ${DESTDIR}.  This is harmless
-# because this packages depends on no other gems.
+# because this package depends on no other gems.
 #
 INSTALL_ENV+=		GEM_HOME=${DESTDIR}${GEM_HOME}
+INSTALL_ENV+=		GEM_PATH=${DESTDIR}${GEM_HOME}
 
 INSTALL_TARGET=		install
 INSTALL_TARGET+=	--vendor
 INSTALL_TARGET+=	--no-format-executable	# "bin/gem", not "bin/gem18"
 .if ${_USE_DESTDIR} != "no"
-INSTALL_TARGET+=	--destdir=${DESTDIR:Q}${PREFIX:Q}
+INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
 .endif
 
 # rubygem's setup.rb is not the typical setup.rb -- manually run the

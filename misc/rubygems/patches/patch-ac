@@ -1,14 +1,15 @@
-$NetBSD: patch-ac,v 1.3 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-ac,v 1.4 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems/install_update_options.rb.orig	2008-05-07 11:15:51.000000000 +0900
+--- lib/rubygems/install_update_options.rb.orig	2009-03-13 16:01:10.000000000 -0700
 +++ lib/rubygems/install_update_options.rb
-@@ -31,6 +31,11 @@ module Gem::InstallUpdateOptions
+@@ -34,6 +34,12 @@ module Gem::InstallUpdateOptions
        options[:bin_dir] = File.expand_path(value)
      end
  
 +    add_option(:"Install", '-B', '--install-root DIR',
 +               'Root directory for gem files on install') do |value, options|
 +      options[:install_root] = File.expand_path(value)
++      Gem.ensure_gem_subdirectories File.join options[:install_root], Gem.dir
 +    end
 +
      add_option(:"Install/Update", '-d', '--[no-]rdoc',

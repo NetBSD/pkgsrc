@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2008/09/15 08:43:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/10 21:44:31 minskim Exp $
 bin/gem
+${RUBY_VENDORLIB}/gauntlet_rubygems.rb
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
 ${RUBY_VENDORLIB}/rubygems/builder.rb
 ${RUBY_VENDORLIB}/rubygems/command.rb
@@ -24,6 +25,7 @@ ${RUBY_VENDORLIB}/rubygems/commands/query_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/rdoc_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/search_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/server_command.rb
+${RUBY_VENDORLIB}/rubygems/commands/setup_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/sources_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/specification_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/stale_command.rb
@@ -65,6 +67,7 @@ ${RUBY_VENDORLIB}/rubygems/package/tar_reader/entry.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_reader.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_writer.rb
 ${RUBY_VENDORLIB}/rubygems/package.rb
+${RUBY_VENDORLIB}/rubygems/package_task.rb
 ${RUBY_VENDORLIB}/rubygems/platform.rb
 ${RUBY_VENDORLIB}/rubygems/remote_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/require_paths_builder.rb
@@ -78,6 +81,7 @@ ${RUBY_VENDORLIB}/rubygems/source_info_cache_entry.rb
 ${RUBY_VENDORLIB}/rubygems/spec_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/specification.rb
 ${RUBY_VENDORLIB}/rubygems/test_utilities.rb
+${RUBY_VENDORLIB}/rubygems/text.rb
 ${RUBY_VENDORLIB}/rubygems/timer.rb
 ${RUBY_VENDORLIB}/rubygems/uninstaller.rb
 ${RUBY_VENDORLIB}/rubygems/user_interaction.rb

@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.4 2009/04/07 07:35:44 minskim Exp $
+$NetBSD: patch-ad,v 1.5 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems/installer.rb.orig	2008-10-10 11:22:39.000000000 -0700
+--- lib/rubygems/installer.rb.orig	2009-03-31 21:06:19.000000000 -0700
 +++ lib/rubygems/installer.rb
-@@ -80,6 +80,9 @@ class Gem::Installer
+@@ -85,6 +85,9 @@ class Gem::Installer
    #          for a signed-gems-only policy.
    # :ignore_dependencies:: Don't raise if a dependency is missing.
    # :install_dir:: The directory to install the gem into.
@@ -12,7 +12,7 @@ $NetBSD: patch-ad,v 1.4 2009/04/07 07:35:44 minskim Exp $
    # :format_executable:: Format the executable the same as the ruby executable.
    #                      If your ruby is ruby18, foo_exec will be installed as
    #                      foo_exec18.
-@@ -95,6 +98,7 @@ class Gem::Installer
+@@ -100,6 +103,7 @@ class Gem::Installer
        :exec_format  => false,
        :force        => false,
        :install_dir  => Gem.dir,
@@ -20,11 +20,11 @@ $NetBSD: patch-ad,v 1.4 2009/04/07 07:35:44 minskim Exp $
        :source_index => Gem.source_index,
      }.merge options
  
-@@ -109,6 +113,11 @@ class Gem::Installer
-     @bin_dir = options[:bin_dir]
-     @development = options[:development]
-     @source_index = options[:source_index]
-+    install_root = options[:install_root]
+@@ -114,6 +118,11 @@ class Gem::Installer
+     @bin_dir             = options[:bin_dir]
+     @development         = options[:development]
+     @source_index        = options[:source_index]
++    install_root         = options[:install_root]
 +    unless install_root.nil? or install_root == ""
 +      @install_root = File.expand_path install_root
 +      @gem_home = File.join(@install_root, @gem_home)
@@ -32,7 +32,7 @@ $NetBSD: patch-ad,v 1.4 2009/04/07 07:35:44 minskim Exp $
  
      begin
        @format = Gem::Format.from_file_by_path @gem, @security_policy
-@@ -310,7 +319,11 @@ class Gem::Installer
+@@ -312,7 +321,11 @@ class Gem::Installer
      # If the user has asked for the gem to be installed in a directory that is
      # the system gem directory, then use the system bin directory, else create
      # (or use) a new bin dir under the gem_home.
