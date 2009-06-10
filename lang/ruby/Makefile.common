@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2008/06/19 15:55:04 taca Exp $
+# $NetBSD: Makefile.common,v 1.18 2009/06/10 12:45:34 taca Exp $
 #
 # Ruby base distribution common definition
 # used by databases/ruby-gdbm/Makefile
@@ -8,6 +8,8 @@
 # used by lang/ruby18/Makefile
 # used by lang/ruby18-base/Makefile
 # used by x11/ruby-tk/Makefile
+
+LICENSE=	ruby-license # OR gnu-gpl-v2
 
 #
 # Ruby distribution sites.
