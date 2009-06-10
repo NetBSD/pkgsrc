@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/10/26 04:48:22 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2009/06/10 06:40:11 minskim Exp $
 #
 
-DISTNAME=	eet-1.1.0
+DISTNAME=	eet-1.2.0
 CATEGORIES=	devel archivers
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-09-25/
+MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	yazzy@yazzy.org
@@ -17,11 +17,9 @@ USE_TOOLS+=	pkg-config
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 
-CONFIGURE_ENV+=	OPENSSL_CFLAGS=-I${BUILDLINK_PREFIX.openssl}/include \
-		OPENSSL_LIBS="-L${BUILDLINK_PREFIX.openssl}/lib -lssl -lcrypto"
-
 PKGCONFIG_OVERRIDE=	eet.pc.in
 
+.include "../../devel/eina/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
