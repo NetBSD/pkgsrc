@@ -1,0 +1,24 @@
+$NetBSD: patch-bd,v 1.1 2009/06/10 10:47:23 hasso Exp $
+
+Fix "freeze on exit" issue with many games. The patch taken from upstream
+bugzilla: http://bugs.freedesktop.org/show_bug.cgi?id=21756
+
+--- src/mesa/main/texstate.c.orig	2009-06-10 12:59:19 +0300
++++ src/mesa/main/texstate.c	2009-06-10 13:00:26 +0300
+@@ -429,7 +429,7 @@ texture_override(GLcontext *ctx,
+       }
+       if (texObj->_Complete) {
+          texUnit->_ReallyEnabled = textureBit;
+-         texUnit->_Current = texObj;
++	 _mesa_reference_texobj(&texUnit->_Current, texObj);
+          update_texture_compare_function(ctx, texObj);
+       }
+    }
+@@ -485,7 +485,6 @@ update_texture_state( GLcontext *ctx )
+       GLbitfield enableBits;
+       GLuint tex;
+ 
+-      texUnit->_Current = NULL;
+       texUnit->_ReallyEnabled = 0;
+       texUnit->_GenFlags = 0;
+ 
