@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/10 00:26:05 minskim Exp $
+share/texmf-dist/doc/fonts/kotex-base/COPYING
+share/texmf-dist/doc/fonts/kotex-base/LICENSE
+share/texmf-dist/doc/fonts/kotex-base/MANIFEST
