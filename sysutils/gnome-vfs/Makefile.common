@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2009/03/19 11:32:45 drochner Exp $
+# $NetBSD: Makefile.common,v 1.18 2009/06/10 14:49:44 wiz Exp $
 #
 # used by audio/gnome-vfs-cdda/Makefile
 # used by net/gnome-vfs-dns-sd/Makefile
@@ -25,12 +25,10 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 
 CONFIGURE_ARGS+=	--disable-cdda
-CONFIGURE_ARGS+=	--disable-gtk
 CONFIGURE_ARGS+=	--disable-howl
 CONFIGURE_ARGS+=	--disable-openssl
 CONFIGURE_ARGS+=	--disable-samba
 CONFIGURE_ARGS+=	--enable-gnutls
-CONFIGURE_ARGS+=	--enable-platform-gnome-2
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
