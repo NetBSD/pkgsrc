@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.4 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-ah,v 1.5 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems.rb.orig	2008-06-21 04:54:57.000000000 +0900
+--- lib/rubygems.rb.orig	2009-05-21 14:44:06.000000000 -0700
 +++ lib/rubygems.rb
-@@ -230,7 +230,13 @@ module Gem
+@@ -396,7 +396,13 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
@@ -17,7 +17,7 @@ $NetBSD: patch-ah,v 1.4 2008/09/15 08:43:44 taca Exp $
      return File.join(install_dir, 'bin') unless
        install_dir.to_s == Gem.default_dir
      Gem.default_bindir
-@@ -435,12 +441,12 @@ module Gem
+@@ -637,12 +643,12 @@ module Gem
    ##
    # The index to insert activated gem paths into the $LOAD_PATH.
    #
@@ -32,7 +32,7 @@ $NetBSD: patch-ah,v 1.4 2008/09/15 08:43:44 taca Exp $
  
      $LOAD_PATH.each_with_index do |path, i|
        if path.instance_variables.include?(:@gem_prelude_index) or
-@@ -529,7 +535,8 @@ module Gem
+@@ -750,7 +756,8 @@ module Gem
    def self.prefix
      prefix = File.dirname File.expand_path(__FILE__)
  
