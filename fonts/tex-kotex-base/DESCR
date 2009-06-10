@@ -1,0 +1,4 @@
+ko.TeX is a collection of TeX macro packages to typeset Korean
+documents.  It is maintained by the Korean TeX Society.
+
+This package provides fonts for ko.TeX.
