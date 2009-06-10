@@ -1,28 +1,29 @@
-$NetBSD: patch-ab,v 1.9 2009/04/07 07:35:44 minskim Exp $
+$NetBSD: patch-ab,v 1.10 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems/dependency_installer.rb.orig	2008-08-12 14:50:22.000000000 -0700
+--- lib/rubygems/dependency_installer.rb.orig	2009-03-04 17:07:04.000000000 -0800
 +++ lib/rubygems/dependency_installer.rb
-@@ -37,13 +37,18 @@ class Gem::DependencyInstaller
+@@ -38,6 +38,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
    # :ignore_dependencies:: Don't install any dependencies.
    # :install_dir:: See Gem::Installer#install.
 +  # :install_root: See Gem::Installer#install.
+   # :prerelease:: Allow prerelease versions
    # :security_policy:: See Gem::Installer::new and Gem::Security.
    # :user_install:: See Gem::Installer.new
-   # :wrappers:: See Gem::Installer::new
+@@ -45,7 +46,11 @@ class Gem::DependencyInstaller
  
    def initialize(options = {})
      if options[:install_dir] then
 -      spec_dir = options[:install_dir], 'specifications'
 +      if options[:install_root].nil? or options[:install_root] == "" then
-+        spec_dir = options[:install_root], options[:install_dir], 'specifications'
-+      else
 +        spec_dir = options[:install_dir], 'specifications'
++      else
++        spec_dir = options[:install_root], options[:install_dir], 'specifications'
 +      end
        @source_index = Gem::SourceIndex.from_gems_in spec_dir
      else
        @source_index = Gem.source_index
-@@ -65,7 +70,12 @@ class Gem::DependencyInstaller
+@@ -68,7 +73,12 @@ class Gem::DependencyInstaller
      @installed_gems = []
  
      @install_dir = options[:install_dir] || Gem.dir
@@ -36,11 +37,11 @@ $NetBSD: patch-ab,v 1.9 2009/04/07 07:35:44 minskim Exp $
    end
  
    ##
-@@ -241,6 +251,7 @@ class Gem::DependencyInstaller
+@@ -244,6 +254,7 @@ class Gem::DependencyInstaller
                                  :format_executable   => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir         => @install_dir,
-+				:install_root        => @install_root,
++                                :install_root        => @install_root,
                                  :security_policy     => @security_policy,
                                  :source_index        => @source_index,
                                  :user_install        => @user_install,
