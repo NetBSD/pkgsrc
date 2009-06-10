@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2285 2009/06/10 17:28:20 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2286 2009/06/10 17:33:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3074,3 +3074,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/libXfont to 1.4.0 [wiz 2009-06-10]
 	Updated math/mathomatic to 14.4.4 [minskim 2009-06-10]
 	Updated graphics/MesaLib to 7.4.2nb2 [wiz 2009-06-10]
+	Updated graphics/glu to 7.4.2nb1 [wiz 2009-06-10]
