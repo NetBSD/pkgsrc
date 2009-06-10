@@ -1,24 +1,24 @@
-$NetBSD: patch-aa,v 1.1 2008/10/26 04:48:22 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/10 06:40:11 minskim Exp $
 
---- src/lib/eet_cypher.c.orig	2008-09-09 05:40:54.000000000 -0700
-+++ src/lib/eet_cypher.c
-@@ -92,8 +92,18 @@ eet_identity_print(Eet_Key *key, FILE *o
-    dh = EVP_PKEY_get1_DH(key->private_key);
-    if (dh)
-      {
-+        BIO *b;
- 	fprintf(out, "Private key (DH) :\n");
--	DHparams_print_fp(out, dh);
-+        if ((b=BIO_new(BIO_s_file())) == NULL)
-+	  {
-+	    DHerr(DH_F_DHPARAMS_PRINT_FP,ERR_R_BUF_LIB);
-+	  }
-+	else
-+	  {
-+	    BIO_set_fp(b, out, BIO_NOCLOSE);
-+	    DHparams_print(b, dh);
-+	    BIO_free(b);
-+	  }
-      }
+--- src/lib/eet_cipher.c.orig	2009-04-18 09:24:20.000000000 -0700
++++ src/lib/eet_cipher.c
+@@ -315,8 +315,18 @@ eet_identity_print(Eet_Key *key, FILE *o
+   dh = EVP_PKEY_get1_DH(key->private_key);
+   if (dh)
+     {
++      BIO *b;
+       fprintf(out, "Private key (DH):\n");
+-      DHparams_print_fp(out, dh);
++      if ((b=BIO_new(BIO_s_file())) == NULL)
++	{
++	  DHerr(DH_F_DHPARAMS_PRINT_FP,ERR_R_BUF_LIB);
++	}
++      else
++	{
++	  BIO_set_fp(b, out, BIO_NOCLOSE);
++	  DHparams_print(b, dh);
++	  BIO_free(b);
++	}
+     }
  
-    fprintf(out, "Public certificate :\n");
+   fprintf(out, "Public certificate:\n");
