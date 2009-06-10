@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.10 2009/06/10 17:28:07 wiz Exp $
+
+--- src/mesa/drivers/dri/Makefile.orig	2009-03-13 03:28:49.000000000 +0000
++++ src/mesa/drivers/dri/Makefile
+@@ -38,11 +38,11 @@ install: dri.pc
+ 			(cd $$dir && $(MAKE) install) || exit 1 ; \
+ 		fi \
+ 	done
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_INC_DIR)/GL/internal
+-	$(INSTALL) -m 0644 $(TOP)/include/GL/internal/dri_interface.h \
+-	  $(DESTDIR)$(INSTALL_INC_DIR)/GL/internal
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 0644 dri.pc $(DESTDIR)$(INSTALL_LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/include/GL/internal
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/lib
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
++	$(BSD_INSTALL_DATA) $(TOP)/include/GL/internal/dri_interface.h $(DESTDIR)$(INSTALL_DIR)/include/GL/internal
++	$(BSD_INSTALL_DATA) dri.pc $(DESTDIR)$(INSTALL_DIR)/lib/pkgconfig
+ 
+ 
+ clean:
