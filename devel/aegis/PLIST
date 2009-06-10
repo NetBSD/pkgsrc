@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/07 08:50:41 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/10 11:16:36 obache Exp $
 bin/ae-cvs-ci
 bin/ae-repo-ci
 bin/ae-sccs-put
 bin/ae_diff2htm
 bin/aeannotate
+bin/aebisect
 bin/aebuffy
 bin/aecomp
 bin/aecomplete
@@ -17,14 +18,13 @@ bin/aefinish
 bin/aeget
 bin/aeget.instal
 bin/aegis
-bin/aegis.cgi
-bin/aegis.cgi.i
 bin/aeimport
 bin/aeintegratq
 bin/aelcf
 bin/aelock
 bin/aelpf
 bin/aels
+bin/aemakegen
 bin/aemeasure
 bin/aepatch
 bin/aepromptcmd
@@ -37,6 +37,7 @@ bin/aesvt
 bin/aetar
 bin/aexml
 bin/aexver
+bin/find_sizes
 bin/tkaeca
 bin/tkaegis
 bin/tkaenc
@@ -47,9 +48,11 @@ man/man1/ae-cvs-ci.1
 man/man1/ae-repo-ci.1
 man/man1/ae-sccs-put.1
 man/man1/ae_c.1
+man/man1/ae_diff2htm.1
 man/man1/ae_p.1
 man/man1/aeannotate.1
 man/man1/aeb.1
+man/man1/aebisect.1
 man/man1/aebuffy.1
 man/man1/aeca.1
 man/man1/aecd.1
@@ -90,6 +93,7 @@ man/man1/aelic.1
 man/man1/aelock.1
 man/man1/aelpf.1
 man/man1/aels.1
+man/man1/aemakegen.1
 man/man1/aemeasure.1
 man/man1/aemt.1
 man/man1/aemtu.1
@@ -237,9 +241,11 @@ share/aegis/en/man1/ae-cvs-ci.1
 share/aegis/en/man1/ae-repo-ci.1
 share/aegis/en/man1/ae-sccs-put.1
 share/aegis/en/man1/ae_c.1
+share/aegis/en/man1/ae_diff2htm.1
 share/aegis/en/man1/ae_p.1
 share/aegis/en/man1/aeannotate.1
 share/aegis/en/man1/aeb.1
+share/aegis/en/man1/aebisect.1
 share/aegis/en/man1/aebuffy.1
 share/aegis/en/man1/aeca.1
 share/aegis/en/man1/aecd.1
@@ -280,6 +286,7 @@ share/aegis/en/man1/aelic.1
 share/aegis/en/man1/aelock.1
 share/aegis/en/man1/aelpf.1
 share/aegis/en/man1/aels.1
+share/aegis/en/man1/aemakegen.1
 share/aegis/en/man1/aemeasure.1
 share/aegis/en/man1/aemt.1
 share/aegis/en/man1/aemtu.1
@@ -429,8 +436,10 @@ share/locale/en/LC_MESSAGES/aegis.mo
 share/locale/es/LC_MESSAGES/aegis.mo
 share/locale/fr/LC_MESSAGES/aegis.mo
 share/locale/nl/LC_MESSAGES/aegis.mo
+share/locale/pt_BR/LC_MESSAGES/aegis.mo
 share/locale/ro/LC_MESSAGES/aegis.mo
 share/locale/ru/LC_MESSAGES/aegis.mo
+share/locale/vi/LC_MESSAGES/aegis.mo
 @dirrm share/examples/aegis/profile.d
 @dirrm share/examples/aegis
 @dirrm share/aegis/wish
@@ -450,6 +459,3 @@ share/locale/ru/LC_MESSAGES/aegis.mo
 @dirrm share/aegis/de
 @dirrm share/aegis/config.example
 @dirrm share/aegis
-@exec ${MKDIR} %D/com/aegis
-@dirrm com/aegis
-@dirrm com

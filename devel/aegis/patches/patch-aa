@@ -1,22 +1,22 @@
-$NetBSD: patch-aa,v 1.3 2008/06/12 02:14:21 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2009/06/10 11:16:36 obache Exp $
 
---- Makefile.in.orig	2008-06-10 14:30:39.000000000 +0000
+--- Makefile.in.orig	2008-09-24 21:48:58.000000000 +0000
 +++ Makefile.in
-@@ -7728,7 +7728,7 @@ $(RPM_BUILD_ROOT)$(datadir)/cshrc: lib/c
- $(RPM_BUILD_ROOT)$(sysconfdir)/profile.d/aegis.csh: \
- 		$(RPM_BUILD_ROOT)$(datadir)/cshrc
- 	-@mkdir -p $(RPM_BUILD_ROOT)$(sysconfdir)/profile.d
+@@ -10248,7 +10248,7 @@ $(DESTDIR)$(datadir)/cshrc: lib/cshrc li
+ 
+ $(DESTDIR)$(sysconfdir)/profile.d/aegis.csh: $(DESTDIR)$(datadir)/cshrc
+ 	-@mkdir -p $(DESTDIR)$(sysconfdir)/profile.d
 -	-ln -s $(datadir)/cshrc $@
-+	-ln -s $(RPM_BUILD_ROOT)$(datadir)/cshrc $@
++	-ln -s $(DESTDIR)$(datadir)/cshrc $@
  
- $(RPM_BUILD_ROOT)$(datadir)/db_forced.sh: lib/db_forced.sh \
- 		lib/.mkdir.datadir
-@@ -11745,7 +11745,7 @@ $(RPM_BUILD_ROOT)$(datadir)/profile: lib
- $(RPM_BUILD_ROOT)$(sysconfdir)/profile.d/aegis.sh: \
- 		$(RPM_BUILD_ROOT)$(datadir)/profile
- 	-@mkdir -p $(RPM_BUILD_ROOT)$(sysconfdir)/profile.d
+ $(DESTDIR)$(datadir)/db_forced.sh: lib/db_forced.sh lib/.mkdir.datadir
+ 	$(INSTALL_SCRIPT) lib/db_forced.sh $@
+@@ -14292,7 +14292,7 @@ $(DESTDIR)$(datadir)/profile: lib/profil
+ 
+ $(DESTDIR)$(sysconfdir)/profile.d/aegis.sh: $(DESTDIR)$(datadir)/profile
+ 	-@mkdir -p $(DESTDIR)$(sysconfdir)/profile.d
 -	-ln -s $(datadir)/profile $@
-+	-ln -s $(RPM_BUILD_ROOT)$(datadir)/profile $@
++	-ln -s $(DESTDIR)$(datadir)/profile $@
  
- $(RPM_BUILD_ROOT)$(datadir)/remind/awt_dvlp.sh: lib/remind/awt_dvlp.sh \
- 		lib/remind/.mkdir.datadir
+ lib/pt_BR/LC_MESSAGES/aegis.mo: etc/msgfmt.sh \
+ 		lib/pt_BR/LC_MESSAGES/aegis.po
