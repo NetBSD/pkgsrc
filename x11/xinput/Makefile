@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/02/25 16:10:17 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/10 09:35:10 wiz Exp $
 #
 
-DISTNAME=	xinput-1.4.0
+DISTNAME=	xinput-1.4.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
