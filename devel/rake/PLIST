@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/03/04 17:39:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/10 21:51:17 minskim Exp $
 bin/rake
 ${GEM_HOME}/cache/rake-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
@@ -33,8 +33,12 @@ ${GEM_LIBDIR}/doc/release_notes/rake-0.8.0.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.8.2.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.8.3.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.8.4.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-0.8.5.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-0.8.6.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-0.8.7.rdoc
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/rake.rb
+${GEM_LIBDIR}/lib/rake/alt_system.rb
 ${GEM_LIBDIR}/lib/rake/classic_namespace.rb
 ${GEM_LIBDIR}/lib/rake/clean.rb
 ${GEM_LIBDIR}/lib/rake/contrib/compositepublisher.rb
@@ -48,7 +52,6 @@ ${GEM_LIBDIR}/lib/rake/loaders/makefile.rb
 ${GEM_LIBDIR}/lib/rake/packagetask.rb
 ${GEM_LIBDIR}/lib/rake/rake_test_loader.rb
 ${GEM_LIBDIR}/lib/rake/rdoctask.rb
-${GEM_LIBDIR}/lib/rake/repaired_system.rb
 ${GEM_LIBDIR}/lib/rake/ruby182_test_unit_fix.rb
 ${GEM_LIBDIR}/lib/rake/runtest.rb
 ${GEM_LIBDIR}/lib/rake/tasklib.rb
@@ -56,6 +59,7 @@ ${GEM_LIBDIR}/lib/rake/testtask.rb
 ${GEM_LIBDIR}/lib/rake/win32.rb
 ${GEM_LIBDIR}/test/capture_stdout.rb
 ${GEM_LIBDIR}/test/check_expansion.rb
+${GEM_LIBDIR}/test/check_no_expansion.rb
 ${GEM_LIBDIR}/test/contrib/test_sys.rb
 ${GEM_LIBDIR}/test/data/chains/Rakefile
 ${GEM_LIBDIR}/test/data/default/Rakefile
@@ -94,6 +98,7 @@ ${GEM_LIBDIR}/test/test_multitask.rb
 ${GEM_LIBDIR}/test/test_namespace.rb
 ${GEM_LIBDIR}/test/test_package_task.rb
 ${GEM_LIBDIR}/test/test_pathmap.rb
+${GEM_LIBDIR}/test/test_pseudo_status.rb
 ${GEM_LIBDIR}/test/test_rake.rb
 ${GEM_LIBDIR}/test/test_rdoc_task.rb
 ${GEM_LIBDIR}/test/test_require.rb
