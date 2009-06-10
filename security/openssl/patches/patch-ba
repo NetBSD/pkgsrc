@@ -1,0 +1,17 @@
+$NetBSD: patch-ba,v 1.1 2009/06/10 13:57:08 tez Exp $
+
+Part of CVE-2009-1377 fix.
+
+--- ssl/d1_pkt.c.orig	2009-06-08 18:58:13.784215600 -0500
++++ ssl/d1_pkt.c
+@@ -167,6 +167,10 @@ dtls1_buffer_record(SSL *s, record_pqueu
+     DTLS1_RECORD_DATA *rdata;
+ 	pitem *item;
+ 
++	/* Limit the size of the queue to prevent DOS attacks */
++	if (pqueue_size(queue->q) >= 100)
++		return 0;
++
+ 	rdata = OPENSSL_malloc(sizeof(DTLS1_RECORD_DATA));
+ 	item = pitem_new(priority, rdata);
+ 	if (rdata == NULL || item == NULL)
