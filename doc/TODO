@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8181 2009/06/10 21:47:45 minskim Exp $
+$NetBSD: TODO,v 1.8182 2009/06/10 22:01:05 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1200,7 +1200,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-rttool-1.0.3.0
 	o ruby-sequel-2.9.0
 	o ruby-sequel-core-2.2.0
-	o ruby-tzinfo-0.3.13
 	o ruby-will-paginate-2.2.3
 	o ruby2ruby-1.2.2
 	o rudiments-0.30
