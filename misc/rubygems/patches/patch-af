@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.2 2008/09/15 08:43:44 taca Exp $
+$NetBSD: patch-af,v 1.3 2009/06/10 21:44:31 minskim Exp $
 
---- lib/rubygems/commands/uninstall_command.rb.orig	2008-02-24 11:26:47.000000000 +0900
+--- lib/rubygems/commands/uninstall_command.rb.orig	2009-03-13 16:16:55.000000000 -0700
 +++ lib/rubygems/commands/uninstall_command.rb
-@@ -40,6 +40,11 @@ module Gem
-           options[:bin_dir] = File.expand_path(value)
-         end
+@@ -49,6 +49,11 @@ class Gem::Commands::UninstallCommand < 
+       options[:user_install] = value
+     end
  
-+        add_option('-B', '--install-root DIR',
-+                   'Root directory for gem files') do |value, options|
-+          options[:install_root] = File.expand_path(value)
-+        end
++    add_option('-B', '--install-root DIR',
++               'Root directory for gem files') do |value, options|
++      options[:install_root] = File.expand_path(value)
++    end
 +
-         add_version_option
-         add_platform_option
-       end
+     add_version_option
+     add_platform_option
+   end
