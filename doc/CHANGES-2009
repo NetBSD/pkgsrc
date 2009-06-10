@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2273 2009/06/10 00:27:40 minskim Exp $
+$NetBSD: CHANGES-2009,v 1.2274 2009/06/10 06:41:13 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated net/youtube-dl to 20090530 [snj 2009-06-09]
 	Added fonts/tex-kotex-base version 0.1.1 [minskim 2009-06-10]
 	Added fonts/tex-kotex-base-doc version 0.1.1 [minskim 2009-06-10]
+	Updated devel/eet to 1.2.0 [minskim 2009-06-10]
