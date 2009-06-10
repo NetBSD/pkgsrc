@@ -1,15 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2008/09/18 21:30:52 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2009/06/10 15:58:29 seb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr-util
 PKG_SUPPORTED_OPTIONS=	db4 ldap mysql pgsql sqlite3
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		ldap mysql pgsql sqlite3
+PLIST_VARS+=		ldap mysql pgsql sqlite3 db4
 
 .if !empty(PKG_OPTIONS:Mdb4)
 CONFIGURE_ARGS+=	\
 	--with-berkeley-db=${BUILDLINK_PREFIX.db4}/include:${LOCALBASE}
+PLIST.db4=	yes
 .  include "../../databases/db4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-dbm=sdbm
