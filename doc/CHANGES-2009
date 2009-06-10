@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2277 2009/06/10 09:20:03 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2278 2009/06/10 09:35:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3059,3 +3059,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-tdfx to 1.4.1 [hasso 2009-06-10]
 	Updated shells/lshell to 0.9.4 [imil 2009-06-10]
 	Updated graphics/babl to 0.1.0 [wiz 2009-06-10]
+	Updated x11/xinput to 1.4.2 [wiz 2009-06-10]
