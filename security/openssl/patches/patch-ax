@@ -1,0 +1,24 @@
+$NetBSD: patch-ax,v 1.1 2009/06/10 13:57:08 tez Exp $
+
+Part of CVE-2009-1377 fix.
+
+--- crypto/pqueue/pqueue.c.orig	2009-06-08 18:55:59.826213100 -0500
++++ crypto/pqueue/pqueue.c
+@@ -234,3 +234,17 @@ pqueue_next(pitem **item)
+ 
+ 	return ret;
+ 	}
++
++int
++pqueue_size(pqueue_s *pq)
++{
++	pitem *item = pq->items;
++	int count = 0;
++	
++	while(item != NULL)
++	{
++		count++;
++		item = item->next;
++	}
++	return count;
++}
