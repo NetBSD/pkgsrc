@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/09 08:18:39 hasso Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/10 07:24:48 hasso Exp $
 #
 
 DISTNAME=	xf86-video-vga-4.1.0
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 USE_LIBTOOL=    yes
 GNU_CONFIGURE=  yes
 USE_TOOLS+=     autoconf autoheader automake autoreconf pkg-config
+
+BUILD_DEPENDS+=	xorg-util-macros>=1.2.0:../../devel/xorg-util-macros
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
