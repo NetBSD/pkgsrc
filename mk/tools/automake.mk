@@ -1,4 +1,4 @@
-# $NetBSD: automake.mk,v 1.18 2007/03/01 22:29:15 wiz Exp $
+# $NetBSD: automake.mk,v 1.19 2009/06/10 15:31:45 wiz Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -86,14 +86,16 @@ _TOOLS_AM_NAMES=	aclocal		aclocal-1.4			\
 					aclocal-1.7			\
 					aclocal-1.8			\
 					aclocal-1.9			\
-					aclocal-1.10
+					aclocal-1.10			\
+					aclocal-1.11
 _TOOLS_AM_NAMES+=	automake	automake-1.4			\
 					automake-1.5			\
 					automake-1.6			\
 					automake-1.7			\
 					automake-1.8			\
 					automake-1.9			\
-					automake-1.10
+					automake-1.10			\
+					automake-1.11
 
 .for _t_ in ${_TOOLS_AM_NAMES}
 _TOOLS_AM_TYPE.${_t_}?=	TOOLS_GNU_MISSING
