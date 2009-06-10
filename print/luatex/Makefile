@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/10 02:01:02 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/10 02:06:46 minskim Exp $
 
 DISTNAME=	luatex-beta-0.40.2
 PKGNAME=	${DISTNAME:S/-beta//}
@@ -20,64 +20,64 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
 CONFIGURE_ARGS+=--enable-cxx-runtime-hack \
-    --disable-afm2pl    \
-    --disable-aleph  \
-    --disable-bibtex   \
-    --disable-bibtex8   \
-    --disable-cfftot1 \
-    --disable-cjkutils  \
-    --disable-detex    \
-    --disable-devnag   \
-    --disable-dialog   \
-    --disable-dtl      \
-    --enable-dump-share  \
-    --disable-dvi2tty  \
-    --disable-dvidvi   \
-    --disable-dviljk   \
-    --disable-dvipdfm  \
-    --disable-dvipdfmx \
-    --disable-dvipos  \
-    --disable-dvipsk  \
-    --disable-gsftopk \
-    --disable-lacheck \
-    --disable-lcdf-typetools \
-    --disable-makeindexk \
-    --disable-mf  \
-    --disable-mmafm \
-    --disable-mmpfb \
-    --disable-musixflx \
-    --disable-otfinfo \
-    --disable-otftotfm  \
-    --disable-pdfopen  \
-    --disable-pdftex  \
-    --disable-ps2eps   \
-    --disable-ps2pkm \
-    --disable-psutils  \
-    --disable-seetexk \
-    --disable-t1dotlessj  \
-    --disable-t1lint \
-    --disable-t1rawafm \
-    --disable-t1reencode \
-    --disable-t1testpage \
-    --disable-t1utils  \
-    --disable-tex    \
-    --disable-tex4htk \
-    --disable-tpic2pdftex  \
-    --disable-ttf2pk \
-    --disable-ttfdump \
-    --disable-ttftotype42 \
-    --disable-vlna  \
-    --disable-web-progs \
-    --disable-xdv2pdf \
-    --disable-xdvipdfmx \
-    --disable-xetex \
-    --without-system-freetype2 \
-    --without-system-gd \
-    --without-system-teckit \
-    --without-system-t1lib \
-    --without-x \
-    --disable-shared    \
-    --disable-largefile
+		--disable-afm2pl    \
+		--disable-aleph  \
+		--disable-bibtex   \
+		--disable-bibtex8   \
+		--disable-cfftot1 \
+		--disable-cjkutils  \
+		--disable-detex    \
+		--disable-devnag   \
+		--disable-dialog   \
+		--disable-dtl      \
+		--enable-dump-share  \
+		--disable-dvi2tty  \
+		--disable-dvidvi   \
+		--disable-dviljk   \
+		--disable-dvipdfm  \
+		--disable-dvipdfmx \
+		--disable-dvipos  \
+		--disable-dvipsk  \
+		--disable-gsftopk \
+		--disable-lacheck \
+		--disable-lcdf-typetools \
+		--disable-makeindexk \
+		--disable-mf  \
+		--disable-mmafm \
+		--disable-mmpfb \
+		--disable-musixflx \
+		--disable-otfinfo \
+		--disable-otftotfm  \
+		--disable-pdfopen  \
+		--disable-pdftex  \
+		--disable-ps2eps   \
+		--disable-ps2pkm \
+		--disable-psutils  \
+		--disable-seetexk \
+		--disable-t1dotlessj  \
+		--disable-t1lint \
+		--disable-t1rawafm \
+		--disable-t1reencode \
+		--disable-t1testpage \
+		--disable-t1utils  \
+		--disable-tex    \
+		--disable-tex4htk \
+		--disable-tpic2pdftex  \
+		--disable-ttf2pk \
+		--disable-ttfdump \
+		--disable-ttftotype42 \
+		--disable-vlna  \
+		--disable-web-progs \
+		--disable-xdv2pdf \
+		--disable-xdvipdfmx \
+		--disable-xetex \
+		--without-system-freetype2 \
+		--without-system-gd \
+		--without-system-teckit \
+		--without-system-t1lib \
+		--without-x \
+		--disable-shared    \
+		--disable-largefile
 CONFIGURE_ARGS+=--with-system-kpathsea \
 		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
 		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
