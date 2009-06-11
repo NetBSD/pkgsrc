@@ -1,12 +1,17 @@
-# $NetBSD: Makefile,v 1.50 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: Makefile,v 1.51 2009/06/11 07:23:24 wiz Exp $
 
 PKGNAME=	glut-${MESA_PKGVERSION}
+PKGREVISION=	1
 COMMENT=	GLUT Graphics library similar to SGI's OpenGL
 
 CONFLICTS+=	Mesa-glx-[0-9]*
 CONFLICTS+=	Mesa<3.2.1
 
 MESA_HEADERS=	glut.h glutf90.h
+
+PKGCONFIG_OVERRIDE+=    src/glut/glx/glut.pc.in
+# no configure stage
+PKGCONFIG_OVERRIDE_STAGE=       pre-build
 
 .include "../../graphics/Mesa/Makefile.lib"
 
@@ -23,4 +28,6 @@ pre-build:
 ###	XXX why is this needed?
 	mkdir -p ${WRKSRC}/src/glut/lib
 
+# no configure phase
+.include "../../mk/configure/pkg-config-override.mk"
 .include "../../mk/bsd.pkg.mk"
