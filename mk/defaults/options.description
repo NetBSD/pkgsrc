@@ -304,6 +304,7 @@ mplayer-real		Enable usage of Real codecs.
 mplayer-runtime-cpudetection	Enable CPU detection at run time.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
+mstats			Enable memory statistics
 mutt-compressed-mbox    Enable compressed mailbox support in mutt.
 mutt-hcache		Enable header caching in mutt.
 mutt-sidebar		Enable the mutt mailbox sidebar patch.
