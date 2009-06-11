@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2291 2009/06/11 07:08:00 hasso Exp $
+$NetBSD: CHANGES-2009,v 1.2292 2009/06/11 08:09:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3081,3 +3081,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated mail/clamav to 0.95.2 [martti 2009-06-11]
 	Updated x11/xf86-video-ati to 6.12.2nb1 [hasso 2009-06-11]
 	Updated x11/xf86-video-radeonhd to 1.2.5nb2 [hasso 2009-06-11]
+	Updated x11/vte to 0.20.5 [wiz 2009-06-11]
