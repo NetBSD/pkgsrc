@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2009/06/04 16:06:48 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2009/06/11 08:10:25 wiz Exp $
 #
 
 DISTNAME=	mlview-0.9.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/mlview/0.9/}
 EXTRACT_SUFX=	.tar.bz2
