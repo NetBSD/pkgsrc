@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/05/23 21:45:45 sno Exp $
+$NetBSD: distinfo,v 1.4 2009/06/11 12:06:11 abs Exp $
 
 SHA1 (Catalyst-Action-RenderView-0.10.tar.gz) = 9963609d28f37704cf3d5adb13ace0864bf9a04e
 RMD160 (Catalyst-Action-RenderView-0.10.tar.gz) = 9cd26336b839bb483f3fa252ee2dc9f09276ec88
 Size (Catalyst-Action-RenderView-0.10.tar.gz) = 23843 bytes
-SHA1 (patch-aa) = 4623d73e0b3d7b4d11288cd41f986b1a495596fa
