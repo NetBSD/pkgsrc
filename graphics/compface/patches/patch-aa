@@ -1,17 +1,41 @@
-$NetBSD: patch-aa,v 1.4 2007/03/27 12:34:11 dmcmahill Exp $
+$NetBSD: patch-aa,v 1.5 2009/06/11 10:04:27 tnn Exp $
 
---- Makefile.in.orig	2005-10-04 08:59:49.000000000 -0400
+--- Makefile.in.orig	2005-10-04 14:59:49.000000000 +0200
 +++ Makefile.in
-@@ -74,7 +74,11 @@ dist: $(DISTFILES)
+@@ -74,19 +74,23 @@ dist: $(DISTFILES)
  		$(RM) -rf `cat .fname` .fname
  
  install: 	$(NAMEEXE) $(UNNAMEEXE) $(LIBNAME)
 -		$(INSTALL_PROGRAM) -d $(BINDIR) $(LIBDIR) $(MAN1DIR) $(MAN3DIR) $(INCLUDEDIR)
-+		$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
-+		$(BSD_INSTALL_LIB_DIR) $(LIBDIR)
-+		$(BSD_INSTALL_MAN_DIR) $(MAN1DIR)
-+		$(BSD_INSTALL_MAN_DIR) $(MAN3DIR)
-+		$(BSD_INSTALL_DATA_DIR) $(INCLUDEDIR)
- 		$(INSTALL_PROGRAM) $(srcdir)/$(NAMEEXE) $(EXECUTABLE) 
- 		-chmod 0755 $(EXECUTABLE)
- 		-strip $(EXECUTABLE)
+-		$(INSTALL_PROGRAM) $(srcdir)/$(NAMEEXE) $(EXECUTABLE) 
+-		-chmod 0755 $(EXECUTABLE)
+-		-strip $(EXECUTABLE)
+-		$(INSTALL_PROGRAM) $(srcdir)/$(UNNAMEEXE) $(UNEXECUTABLE)
+-		-chmod 0755 $(UNEXECUTABLE)
+-		-strip $(UNEXECUTABLE)
+-		$(INSTALL_DATA) $(srcdir)/$(NAME).1 $(MAN1DIR)/$(NAME).1
+-		cd $(MAN1DIR) && $(RM) ./$(UNNAME).1 && $(LN_S) $(NAME).1 $(UNNAME).1
+-		$(INSTALL_DATA) $(srcdir)/$(NAME).3 $(MAN3DIR)/$(NAME).3
+-		cd $(MAN3DIR) && $(RM) ./$(UNNAME).3 && $(LN_S) $(NAME).3 $(UNNAME).3
+-		for hdr in $(INSTALLHEADERS); do $(INSTALL_DATA) $(srcdir)/$${hdr} $(INCLUDEDIR)/$${hdr}; done
+-		$(INSTALL_DATA) $(srcdir)/$(LIBNAME) $(LIBRARY)
++		$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++		$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++		$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MAN1DIR)
++		$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(MAN3DIR)
++		$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCLUDEDIR)
++		$(INSTALL_PROGRAM) $(srcdir)/$(NAMEEXE) $(DESTDIR)$(EXECUTABLE) 
++		-chmod 0755 $(DESTDIR)$(EXECUTABLE)
++		-strip $(DESTDIR)$(EXECUTABLE)
++		$(INSTALL_PROGRAM) $(srcdir)/$(UNNAMEEXE) $(DESTDIR)$(UNEXECUTABLE)
++		-chmod 0755 $(DESTDIR)$(UNEXECUTABLE)
++		-strip $(DESTDIR)$(UNEXECUTABLE)
++		$(INSTALL_DATA) $(srcdir)/$(NAME).1 $(DESTDIR)$(MAN1DIR)/$(NAME).1
++		cd $(DESTDIR)$(MAN1DIR) && $(RM) ./$(UNNAME).1 && $(LN_S) $(NAME).1 $(UNNAME).1
++		$(INSTALL_DATA) $(srcdir)/$(NAME).3 $(DESTDIR)$(MAN3DIR)/$(NAME).3
++		cd $(DESTDIR)$(MAN3DIR) && $(RM) ./$(UNNAME).3 && $(LN_S) $(NAME).3 $(UNNAME).3
++		for hdr in $(INSTALLHEADERS); do $(INSTALL_DATA) $(srcdir)/$${hdr} $(DESTDIR)$(INCLUDEDIR)/$${hdr}; done
++		$(INSTALL_DATA) $(srcdir)/$(LIBNAME) $(DESTDIR)$(LIBRARY)
+ 
+ shar :
+ 		shar.script $(OTHERS) $(HDRS) $(SOURCES) > $(NAME).sh
