@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.3 2009/06/11 06:55:28 hasso Exp $
+
+Fix coordinate limits off-by-one error causing hardware freezes:
+http://bugs.freedesktop.org/show_bug.cgi?id=21598
+
+--- src/radeon_exa_funcs.c.orig	2009-06-10 21:36:23 +0300
++++ src/radeon_exa_funcs.c	2009-06-10 21:36:43 +0300
+@@ -532,11 +532,11 @@ Bool FUNC_NAME(RADEONDrawInit)(ScreenPtr
+     xf86DrvMsg(pScrn->scrnIndex, X_INFO, "Setting EXA maxPitchBytes\n");
+ 
+     info->accel_state->exa->maxPitchBytes = 16320;
+-    info->accel_state->exa->maxX = 8192;
++    info->accel_state->exa->maxX = 8191;
+ #else
+     info->accel_state->exa->maxX = 16320 / 4;
+ #endif
+-    info->accel_state->exa->maxY = 8192;
++    info->accel_state->exa->maxY = 8191;
+ 
+     if (xf86ReturnOptValBool(info->Options, OPTION_EXA_VSYNC, FALSE)) {
+ 	xf86DrvMsg(pScrn->scrnIndex, X_INFO, "EXA VSync enabled\n");
