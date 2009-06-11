@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/01 21:41:39 seb Exp $
+$NetBSD: distinfo,v 1.2 2009/06/11 12:06:11 abs Exp $
 
 SHA1 (Apache2-AuthCASSimple-0.10.tar.gz) = 781c7d84206aaa179bc17a45d2d75def671f979f
 RMD160 (Apache2-AuthCASSimple-0.10.tar.gz) = aa85bcbc3c5f563798021d63e611f93ff9175169
 Size (Apache2-AuthCASSimple-0.10.tar.gz) = 32850 bytes
-SHA1 (patch-aa) = 1535cfc352b72835c8a54c6eff6479ae34a10e5c
