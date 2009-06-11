@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/02/17 13:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/11 10:04:27 tnn Exp $
 
 DISTNAME=	compface-1.5.2
 PKGREVISION=	1
@@ -10,6 +10,7 @@ HOMEPAGE=	http://freshmeat.net/projects/compface/
 COMMENT=	48x48x1 image compression and decompression (X-face utility)
 
 CONFLICTS=	faces-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run
 GNU_CONFIGURE=		yes
@@ -24,6 +25,6 @@ SUBST_FILES.perlpath=	xbm2xface.pl
 SUBST_SED.perlpath+=	-e 's|/usr/bin/perl|${PERL5}|g'
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/xbm2xface.pl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/xbm2xface.pl ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
