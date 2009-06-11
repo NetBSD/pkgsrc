@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2009/05/19 08:59:20 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2009/06/11 04:38:18 martti Exp $
 
 DISTNAME=	clamav-${CLAMAV_VERSION}
 PKGNAME=	clamav-${CLAMAV_VERSION:S/-/./}
-PKGREVISION=	1
+#PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
 
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CLAMAV_VERSION=		0.95.1
+CLAMAV_VERSION=		0.95.2
 
 USE_LIBTOOL=		yes
 
