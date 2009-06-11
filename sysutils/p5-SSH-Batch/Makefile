@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/17 20:08:17 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/11 12:06:10 abs Exp $
 
 DISTNAME=	SSH-Batch-0.021
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/SSH/Batch/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-IO-tty-[0-9]*:../../devel/p5-IO-Tty

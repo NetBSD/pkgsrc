@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/01/18 22:52:42 he Exp $
+$NetBSD: distinfo,v 1.6 2009/06/11 12:06:10 abs Exp $
 
 SHA1 (JSON-Any-1.19.tar.gz) = 7792d3f94d2f9b763f48c9232ce86ada0cb36408
 RMD160 (JSON-Any-1.19.tar.gz) = b071e48b674d943f84ec1d0aa0edb13862d6c9af
 Size (JSON-Any-1.19.tar.gz) = 27023 bytes
-SHA1 (patch-aa) = dab82cda2f24e6f779b7f06b5bf43922a6bd0168

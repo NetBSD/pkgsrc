@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/01 12:43:43 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/11 12:06:10 abs Exp $
 
 DISTNAME=	DBIx-Class-TimeStamp-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PERL5_MODULE_TYPE=	Module::Install
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBIx/Class/TimeStamp/.packlist
 

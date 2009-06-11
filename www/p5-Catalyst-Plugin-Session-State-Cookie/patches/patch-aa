@@ -1,8 +1,0 @@
---- Makefile.PL.orig	2009-05-17 19:21:03.000000000 +0000
-+++ Makefile.PL	2009-05-17 19:21:11.000000000 +0000
-@@ -8,5 +8,4 @@
- requires 'Test::MockObject'          => '1.01';
- requires 'MRO::Compat';
- 
--auto_install;
- WriteAll;
