@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink-aix-xlc,v 1.12 2009/06/02 17:39:28 sno Exp $
+# $NetBSD: cmd-sink-aix-xlc,v 1.13 2009/06/11 10:38:28 sno Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -82,8 +82,20 @@ while ! queue_is_empty cmdbuf; do
 		arg=-qthreaded
 		. $buildcmd
 		;;
+	-fexceptions)
+		arg=-qstrict=exceptions
+		. $buildcmd
+		;;
 	-fpic|-fPIC)
 		arg=-qpic=large
+		. $buildcmd
+		;;
+	-Os)
+		arg=-O2
+		. $buildcmd
+		arg=-qnounroll
+		. $buildcmd
+		arg=-qnoinline
 		. $buildcmd
 		;;
 	-shared)
@@ -98,6 +110,22 @@ while ! queue_is_empty cmdbuf; do
 		arg=-Wl,-G
 		. $buildcmd
 		arg=-Wl,-bexpall
+		. $buildcmd
+		;;
+	-Wall)
+		arg=-qflag=w:w
+		. $buildcmd
+		arg=-qinfo
+		. $buildcmd
+		;;
+	-W|-Wextra)
+		arg=-qformat
+		. $buildcmd
+		arg=-qwarn64
+		. $buildcmd
+		;;
+	-Werror)
+		arg=-qhalt=w
 		. $buildcmd
 		;;
 	*)
