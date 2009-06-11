@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2009/05/19 08:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2009/06/11 10:32:29 sno Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
@@ -71,7 +71,6 @@ CONFIGURE_ARGS+=	-Darchname="${MACHINE_ARCH}-${LOWER_OPSYS}"
 CONFIGURE_ARGS+=	-Dcc=${CC:Q}
 CONFIGURE_ARGS+=	-Doptimize=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	-Ui_malloc
-CONFIGURE_ARGS+=	-Uusemymalloc
 CONFIGURE_ARGS+=	-Uinstallusrbinperl
 MAKE_ENV+=		LC_ALL="C"
 MAKE_JOBS_SAFE=		no
@@ -170,7 +169,7 @@ LIBSWANTED.Linux=	m crypt dl nsl
 LIBSWANTED.NetBSD=	m crypt
 LIBSWANTED.OpenBSD=	m crypt
 LIBSWANTED.SunOS=	m crypt dl socket nsl
-LIBSWANTED.AIX=		m crypt dl socket nsl bind c
+LIBSWANTED.AIX= 	m crypt dl socket nsl bind c
 LIBSWANTED=		${LIBSWANTED.${OPSYS}}
 
 # Nail down the directories in which the system libraries may be found.
@@ -199,19 +198,8 @@ LOCINCPATH=		${LOCALBASE}/include
 #
 .if ${OBJECT_FMT} == "a.out"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${LINKER_RPATH_FLAG} /g}
-.elif ${OBJECT_FMT} == "ELF"
+.elif ${OBJECT_FMT} == "ELF" || ${OBJECT_FMT} == "XCOFF"
 LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
-.elif ${OBJECT_FMT} == "XCOFF"
-LOCLIBRPATHFLAGS=	${LOCLIBPATH:S/^/${COMPILER_RPATH_FLAG}/g}
-.  if !empty(PKG_OPTIONS:Mthreads)
-LOCLIBRPATHFLAGS+= \
-	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi-64all/CORE \
-	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/CORE
-.  else
-LOCLIBRPATHFLAGS+= \
-	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-multi-64all/CORE \
-	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}-multi/CORE
-.  endif
 .else
 LOCLIBRPATHFLAGS=	# empty
 .endif
@@ -240,10 +228,28 @@ PKG_HACKS+=			broken-vax-pthreads
 PERL5_BUILD_THREADS_SUPPORT=	no
 .endif
 
+.include "../../mk/compiler.mk"
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.perl
-PKG_SUPPORTED_OPTIONS=		debug threads
+PKG_OPTIONS_REQUIRED_GROUPS=	perlbits
+PKG_OPTIONS_GROUP.perlbits=	64bitauto 64bitint 64bitmore 64bitall 64bitnone
+PKG_SUPPORTED_OPTIONS=		debug threads mstats
 .if !empty(PERL5_BUILD_THREADS_SUPPORT:M[yY][eE][sS])
 PKG_SUGGESTED_OPTIONS=		threads
+.endif
+
+.if ${OPSYS} == "IRIX"
+.  if defined(ABI) && ${ABI} == "64"
+PKG_SUGGESTED_OPTIONS+=		64bitint
+.  endif
+.elif ${OPSYS} == "AIX"
+.  if defined(ABI) && ${ABI} == "64"
+PKG_SUGGESTED_OPTIONS+=		64bitall
+.  else
+PKG_SUGGESTED_OPTIONS+=		64bitnone
+.  endif
+.else
+PKG_SUGGESTED_OPTIONS+=		64bitauto
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -253,24 +259,56 @@ PKG_SUGGESTED_OPTIONS=		threads
 CONFIGURE_ARGS+=	-Duseithreads
 CFLAGS+=		${PTHREAD_CFLAGS}
 LIBSWANTED+=		${PTHREAD_LIBS:M-l*:S/^-l//}
+.  if ${OBJECT_FMT} == "XCOFF"
+PERL5_RPATH_THREAD=-thread
+.  endif
 .else
 CONFIGURE_ARGS+=	-Uuseithreads
+.  if ${OBJECT_FMT} == "XCOFF"
+PERL5_RPATH_THREAD=
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CFLAGS+=		-DDEBUGGING
 .endif
 
-.if !empty(LIBSWANTED)
-CONFIGURE_ARGS+=	-Dlibswanted=${LIBSWANTED:Q}
+.if !empty(PKG_OPTIONS:Mmstats)
+CFLAGS+=		-DPERL_DEBUGGING_MSTATS
+CONFIGURE_ARGS+=	-Dusemymalloc
+.else
+CONFIGURE_ARGS+=	-Uusemymalloc
 .endif
 
-.include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "IRIX"
-.  if defined(ABI) && ${ABI} == "64"
+.if !empty(PKG_OPTIONS:M64bitint)
 CONFIGURE_ARGS+=	-Duse64bitint
-.  endif
+.if ${OBJECT_FMT} == "XCOFF"
+LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int/CORE
+.endif
+.elif !empty(PKG_OPTIONS:M64bitmore)
+CONFIGURE_ARGS+=	-Dusemorebits
+.if ${OBJECT_FMT} == "XCOFF"
+LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64int-ld/CORE
+.endif
+.elif !empty(PKG_OPTIONS:M64bitall)
+CONFIGURE_ARGS+=	-Duse64bitall
+.if ${OBJECT_FMT} == "XCOFF"
+LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi-64all/CORE
+.endif
+.elif !empty(PKG_OPTIONS:M64bitnone)
+CONFIGURE_ARGS+=	-Uuse64bitall -Uusemorebits -Uuse64bitint
+.if ${OBJECT_FMT} == "XCOFF"
+LOCLIBRPATHFLAGS+=	${COMPILER_RPATH_FLAG}${PERL5_PRIVLIB}/${MACHINE_ARCH}-${LOWER_OPSYS}${PERL5_RPATH_THREAD}-multi/CORE
+.endif
+.else
+.if ${OBJECT_FMT} == "XCOFF"
+BROKEN=		XCOFF targets need the path specified where libperl.a resides.\
+Please choose on of 64bitint 64bitmore 64bitall or 64bitnone to allow this.
+.endif
+.endif
+
+.if !empty(LIBSWANTED)
+CONFIGURE_ARGS+=	-Dlibswanted=${LIBSWANTED:Q}
 .endif
 
 # Remove a spurious workdir reference
@@ -285,6 +323,7 @@ REPLACE_PERL+=		lib/File/DosGlob.pm
 REPLACE_PERL+=		lib/version.pm
 REPLACE_PERL+=		lib/Math/BigFloat/Trace.pm
 REPLACE_PERL+=		lib/Math/BigInt/Trace.pm
+REPLACE_PERL+=		lib/unicore/mktables
 
 # And replace a perl interpreter during the pre-install stage
 # I think this may be a bootstrap script, so can't use REPLACE_PERL
