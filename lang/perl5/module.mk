@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.59 2009/05/16 07:22:04 rillig Exp $
+# $NetBSD: module.mk,v 1.60 2009/06/11 10:32:29 sno Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install perl5 modules.
@@ -26,8 +26,11 @@
 # PERL5_LDFLAGS		extra linker flags to pass on to the build
 #			process.
 #
-# PERL5_MODULE_TYPE	"MakeMaker" or "Module::Build" depending on which
-#			framework is used to build/install the module.
+# PERL5_MODULE_TYPE	"MakeMaker", "Module::Build" or "Module::Install"
+#			depending on which framework is used to build/install
+#			the module.
+
+.include "../../lang/perl5/license.mk"
 
 .if !defined(_PERL5_MODULE_MK)
 _PERL5_MODULE_MK=	# defined
@@ -37,7 +40,8 @@ _PERL5_MODULE_MK=	# defined
 PERL5_MODULE_TYPE?=		MakeMaker
 
 .if (${PERL5_MODULE_TYPE} != "MakeMaker") && \
-    (${PERL5_MODULE_TYPE} != "Module::Build")
+    (${PERL5_MODULE_TYPE} != "Module::Build") && \
+    (${PERL5_MODULE_TYPE} != "Module::Install")
 PKG_FAIL_REASON+=	"\`\`${PERL5_MODULE_TYPE}'' is not a supported PERL5_MODULE_TYPE."
 .endif
 
@@ -53,6 +57,8 @@ _PERL5_MODBUILD_DESTDIR_OPTION=--destdir ${DESTDIR:Q}
 .  else
 _PERL5_MODBUILD_DESTDIR_OPTION=
 .  endif
+.elif ${PERL5_MODULE_TYPE} == "Module::Install"
+_PERL5_MODTYPE=		modinst
 .elif ${PERL5_MODULE_TYPE} == "MakeMaker"
 _PERL5_MODTYPE=		makemaker
 .endif
@@ -72,6 +78,11 @@ BUILDLINK_DEPMETHOD.perl+=	full
 BUILD_DEPENDS+=		{perl>=5.10,p5-Module-Build>=0.2608nb1}:../../devel/p5-Module-Build
 .endif
 
+.if empty(PKGPATH:Mdevel/p5-Module-Install) && \
+    (${PERL5_MODULE_TYPE} == "Module::Install")
+BUILD_DEPENDS+=		p5-Module-Install>=0.91:../../devel/p5-Module-Install
+.endif
+
 
 ###########################################################################
 ###
@@ -88,6 +99,7 @@ MAKE_ENV+=	LC_ALL=C
 #
 MAKE_PARAMS.makemaker+=	INSTALLDIRS=vendor
 MAKE_PARAMS.modbuild+=	installdirs=vendor
+MAKE_PARAMS.modinst+=	installdirs=vendor
 
 MAKE_PARAMS+=	${MAKE_PARAMS.${_PERL5_MODTYPE}}
 
@@ -112,6 +124,21 @@ do-modbuild-configure:
 			cd "$$dir";					\
 			${SETENV} ${MAKE_ENV}				\
 				${BUILDLINK_PREFIX.perl}/bin/perl Build.PL ${MAKE_PARAMS};	\
+		fi;							\
+	done
+
+.PHONY: do-modinst-configure
+do-modinst-configure:
+	${RUN}								\
+	for dir in ${PERL5_CONFIGURE_DIRS}; do				\
+		cd ${WRKSRC};						\
+		if ${TEST} -d "$$dir"/inc/Module; then			\
+			${RM} -rf "$$dir"/inc/Module;			\
+		fi;							\
+		if ${TEST} -f "$$dir"/Makefile.PL; then			\
+			cd "$$dir";					\
+			${SETENV} ${MAKE_ENV}				\
+				${BUILDLINK_PREFIX.perl}/bin/perl Makefile.PL --skipdeps ${MAKE_PARAMS};	\
 		fi;							\
 	done
 
