@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2290 2009/06/11 04:39:21 martti Exp $
+$NetBSD: CHANGES-2009,v 1.2291 2009/06/11 07:08:00 hasso Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3079,3 +3079,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/rake to 0.8.7 [minskim 2009-06-10]
 	Updated time/ruby-tzinfo to 0.3.13 [minskim 2009-06-10]
 	Updated mail/clamav to 0.95.2 [martti 2009-06-11]
+	Updated x11/xf86-video-ati to 6.12.2nb1 [hasso 2009-06-11]
+	Updated x11/xf86-video-radeonhd to 1.2.5nb2 [hasso 2009-06-11]
