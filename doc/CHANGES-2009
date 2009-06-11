@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2296 2009/06/11 11:26:34 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2297 2009/06/11 17:03:19 agc Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.020 [sno 2009-06-11]
 	Updated devel/p5-Compress-Raw-Zlib to 2.020 [sno 2009-06-11]
 	Updated devel/p5-IO-Compress to 2.020 [sno 2009-06-11]
+	Updated security/netpgp to 20090611 [agc 2009-06-11]
