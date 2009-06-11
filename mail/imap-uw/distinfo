@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2009/05/17 16:03:08 plunky Exp $
+$NetBSD: distinfo,v 1.37 2009/06/11 08:13:05 wiz Exp $
 
 SHA1 (imap-2007e.tar.Z) = 24c63cad8d0e74aa76e4341fcfa54d24f23a8c70
 RMD160 (imap-2007e.tar.Z) = 7d6af203419975f763d7ec17b6a4544c94490b50
@@ -16,7 +16,7 @@ SHA1 (patch-aj) = d9edbd39d552b70561c8df8d1d34568cec528cf9
 SHA1 (patch-al) = f85551692a8e7e6d7bbdba9aed4850e3a434058b
 SHA1 (patch-am) = f0c5d250d69976c85537c9b8080365e8c2391c9d
 SHA1 (patch-ao) = b23f356cdeaccd996fd2d11b23da265b6b0df49f
-SHA1 (patch-ap) = b51fb011198ba699d64e399a142ae0840ef5cbec
+SHA1 (patch-ap) = 3cd56196e6bc770e4398b97ba5a73f724af2a225
 SHA1 (patch-aq) = 33399fb6dd6478d3a89ec1e967b12d93d9a8219b
 SHA1 (patch-ar) = 32f3347697566439b059811be955dc2d3f56cd74
 SHA1 (patch-as) = d07e37e0789251e703805e4d120f6df86d6f5852
