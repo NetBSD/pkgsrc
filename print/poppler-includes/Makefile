@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/20 14:32:19 dillo Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/11 22:52:56 joerg Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
 
 PKGNAME=		poppler-includes-${POPPLER_VERS}
+PKGREVISION=		1
 
 COMMENT=		Poppler Xpdf includes (unsupported)
 MAINTAINER=		dillo@NetBSD.org
@@ -30,5 +31,6 @@ do-install:
 	      ${INSTALL_DATA} ${WRKSRC}/"$$subdir/$$f" ${INCDIR}/"$$d";	\
 	     done };							\
 	done
+	${INSTALL_DATA} ${WRKSRC}/poppler/SplashOutputDev.h ${INCDIR}/poppler
 
 .include "../../mk/bsd.pkg.mk"
