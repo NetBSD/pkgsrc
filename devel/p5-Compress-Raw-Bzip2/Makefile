@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2009/05/05 05:44:33 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/11 10:53:13 sno Exp $
 
-DISTNAME=		Compress-Raw-Bzip2-2.019
+DISTNAME=		Compress-Raw-Bzip2-2.020
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Compress/}
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Compress/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Compress-Raw-Bzip2/
 COMMENT=		Perl5 low-level interface to bzip2 compression library
-LICENSE=		gnu-gpl-v2 # OR artistic
+LICENSE=		${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
