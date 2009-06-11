@@ -1,0 +1,165 @@
+$NetBSD: patch-aa,v 1.5 2009/06/11 06:55:28 hasso Exp $
+
+Accumulated cursor fixes from 6.12 branch. Should fix cursor corruption
+issues:
+
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=0ea75453
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=f2aaa708
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=998fd244
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=666b0ff9
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=fbb04716
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=cb8081a8
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=b6cd47ec
+http://cgit.freedesktop.org/xorg/driver/xf86-video-ati/commit/?h=6.12-branch&id=f2c0fa5e
+
+--- src/radeon_cursor.c.orig	2009-06-10 21:33:32 +0300
++++ src/radeon_cursor.c	2009-06-10 21:34:01 +0300
+@@ -73,14 +73,17 @@
+ #define CURSOR_SWAPPING_DECL_MMIO   unsigned char *RADEONMMIO = info->MMIO;
+ #define CURSOR_SWAPPING_START() \
+   do { \
++  if (info->ChipFamily < CHIP_FAMILY_R600) \
+     OUTREG(RADEON_SURFACE_CNTL, \
+ 	   (info->ModeReg->surface_cntl | \
+ 	     RADEON_NONSURF_AP0_SWP_32BPP | RADEON_NONSURF_AP1_SWP_32BPP) & \
+ 	   ~(RADEON_NONSURF_AP0_SWP_16BPP | RADEON_NONSURF_AP1_SWP_16BPP)); \
+   } while (0)
+-#define CURSOR_SWAPPING_END()	(OUTREG(RADEON_SURFACE_CNTL, \
+-					info->ModeReg->surface_cntl))
+-
++#define CURSOR_SWAPPING_END()	\
++  do { \
++  if (info->ChipFamily < CHIP_FAMILY_R600) \
++      OUTREG(RADEON_SURFACE_CNTL, info->ModeReg->surface_cntl); \
++  } while (0)
+ #else
+ 
+ #define CURSOR_SWAPPING_DECL_MMIO
+@@ -97,13 +100,14 @@ avivo_setup_cursor(xf86CrtcPtr crtc, Boo
+     RADEONInfoPtr  info = RADEONPTR(crtc->scrn);
+     unsigned char     *RADEONMMIO = info->MMIO;
+ 
+-    OUTREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset, 0);
++    /* always use the same cursor mode even if the cursor is disabled,
++     * otherwise you may end up with cursor curruption bands
++     */
++    OUTREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset, (AVIVO_D1CURSOR_MODE_24BPP << AVIVO_D1CURSOR_MODE_SHIFT));
+ 
+     if (enable) {
+ 	OUTREG(AVIVO_D1CUR_SURFACE_ADDRESS + radeon_crtc->crtc_offset,
+ 	       info->fbLocation + radeon_crtc->cursor_offset + pScrn->fbOffset);
+-	OUTREG(AVIVO_D1CUR_SIZE + radeon_crtc->crtc_offset,
+-	       ((CURSOR_WIDTH - 1) << 16) | (CURSOR_HEIGHT - 1));
+ 	OUTREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset,
+ 	       AVIVO_D1CURSOR_EN | (AVIVO_D1CURSOR_MODE_24BPP << AVIVO_D1CURSOR_MODE_SHIFT));
+     }
+@@ -138,9 +142,6 @@ radeon_crtc_show_cursor (xf86CrtcPtr crt
+ 
+     if (IS_AVIVO_VARIANT) {
+ 	avivo_lock_cursor(crtc, TRUE);
+-	OUTREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset,
+-	       INREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset)
+-	       | AVIVO_D1CURSOR_EN);
+ 	avivo_setup_cursor(crtc, TRUE);
+ 	avivo_lock_cursor(crtc, FALSE);
+     } else {
+@@ -171,9 +172,6 @@ radeon_crtc_hide_cursor (xf86CrtcPtr crt
+ 
+     if (IS_AVIVO_VARIANT) {
+ 	avivo_lock_cursor(crtc, TRUE);
+-	OUTREG(AVIVO_D1CUR_CONTROL+ radeon_crtc->crtc_offset,
+-	       INREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset)
+-	       & ~(AVIVO_D1CURSOR_EN));
+ 	avivo_setup_cursor(crtc, FALSE);
+ 	avivo_lock_cursor(crtc, FALSE);
+     } else {
+@@ -196,6 +194,7 @@ void
+ radeon_crtc_set_cursor_position (xf86CrtcPtr crtc, int x, int y)
+ {
+     ScrnInfoPtr pScrn = crtc->scrn;
++    RADEONEntPtr pRADEONEnt = RADEONEntPriv(pScrn);
+     RADEONCrtcPrivatePtr radeon_crtc = crtc->driver_private;
+     int crtc_id = radeon_crtc->crtc_id;
+     RADEONInfoPtr      info       = RADEONPTR(pScrn);
+@@ -210,15 +209,38 @@ radeon_crtc_set_cursor_position (xf86Crt
+     if (yorigin >= CURSOR_HEIGHT) yorigin = CURSOR_HEIGHT - 1;
+ 
+     if (IS_AVIVO_VARIANT) {
++	int w = CURSOR_WIDTH;
++
+ 	/* avivo cursor spans the full fb width */
+ 	if (crtc->rotatedData == NULL) {
+ 	    x += crtc->x;
+ 	    y += crtc->y;
+ 	}
++
++	if (pRADEONEnt->Controller[0]->enabled &&
++	    pRADEONEnt->Controller[1]->enabled) {
++	    int cursor_end, frame_end;
++
++	    cursor_end = x - xorigin + w;
++	    frame_end = crtc->x + mode->CrtcHDisplay;
++
++	    if (cursor_end >= frame_end) {
++		w = w - (cursor_end - frame_end);
++		if (!(frame_end & 0x7f))
++		    w--;
++	    } else {
++		if (!(cursor_end & 0x7f))
++		    w--;
++	    }
++	    if (w <= 0)
++		w = 1;
++	}
++
+ 	avivo_lock_cursor(crtc, TRUE);
+ 	OUTREG(AVIVO_D1CUR_POSITION + radeon_crtc->crtc_offset, ((xorigin ? 0 : x) << 16)
+ 	       | (yorigin ? 0 : y));
+ 	OUTREG(AVIVO_D1CUR_HOT_SPOT + radeon_crtc->crtc_offset, (xorigin << 16) | yorigin);
++	OUTREG(AVIVO_D1CUR_SIZE + radeon_crtc->crtc_offset, ((w - 1) << 16) | (CURSOR_HEIGHT - 1));
+ 	avivo_lock_cursor(crtc, FALSE);
+     } else {
+ 	if (mode->Flags & V_DBLSCAN)
+@@ -320,23 +342,17 @@ Bool RADEONCursorInit(ScreenPtr pScreen)
+ {
+     ScrnInfoPtr        pScrn   = xf86Screens[pScreen->myNum];
+     RADEONInfoPtr      info    = RADEONPTR(pScrn);
++    unsigned char     *RADEONMMIO = info->MMIO;
+     xf86CrtcConfigPtr  xf86_config = XF86_CRTC_CONFIG_PTR(pScrn);
+-    int                width;
+-    int		       width_bytes;
+-    int                height;
+-    int                size_bytes;
+     int                c;
+ 
+-    size_bytes  = CURSOR_WIDTH * 4 * CURSOR_HEIGHT;
+-    width       = pScrn->displayWidth;
+-    width_bytes = width * (pScrn->bitsPerPixel / 8);
+-    height      = ((size_bytes * xf86_config->num_crtc) + width_bytes - 1) / width_bytes;
+-    int align = IS_AVIVO_VARIANT ? 4096 : 256;
+-
+-    if (!info->useEXA) {
+-	for (c = 0; c < xf86_config->num_crtc; c++) {
+-	    xf86CrtcPtr crtc = xf86_config->crtc[c];
+-	    RADEONCrtcPrivatePtr radeon_crtc = crtc->driver_private;
++    for (c = 0; c < xf86_config->num_crtc; c++) {
++	xf86CrtcPtr crtc = xf86_config->crtc[c];
++	RADEONCrtcPrivatePtr radeon_crtc = crtc->driver_private;
++
++	if (!info->useEXA) {
++	    int size_bytes  = CURSOR_WIDTH * 4 * CURSOR_HEIGHT;
++	    int align = IS_AVIVO_VARIANT ? 4096 : 256;
+ 
+ 	    radeon_crtc->cursor_offset =
+ 		radeon_legacy_allocate_memory(pScrn, &radeon_crtc->cursor_mem, size_bytes, align);
+@@ -350,6 +366,10 @@ Bool RADEONCursorInit(ScreenPtr pScreen)
+ 		       c,
+ 		       (unsigned int)radeon_crtc->cursor_offset);
+ 	}
++	/* set the cursor mode the same on both crtcs to avoid corruption */
++	if (IS_AVIVO_VARIANT)
++	    OUTREG(AVIVO_D1CUR_CONTROL + radeon_crtc->crtc_offset,
++		   (AVIVO_D1CURSOR_MODE_24BPP << AVIVO_D1CURSOR_MODE_SHIFT));
+     }
+ 
+     return xf86_cursors_init (pScreen, CURSOR_WIDTH, CURSOR_HEIGHT,
