@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2293 2009/06/11 10:43:16 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2294 2009/06/11 10:54:59 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3083,3 +3083,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/xf86-video-radeonhd to 1.2.5nb2 [hasso 2009-06-11]
 	Updated x11/vte to 0.20.5 [wiz 2009-06-11]
 	Updated www/p5-Catalyst-Devel to 1.17 [sno 2009-06-11]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.020 [sno 2009-06-11]
