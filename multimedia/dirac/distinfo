@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:24:02 agc Exp $
+$NetBSD: distinfo,v 1.3 2009/06/11 17:27:02 joerg Exp $
 
-SHA1 (Dirac-0.2.0.tar.gz) = b87a0442fc199c23e90f89a280d5db8268555325
-RMD160 (Dirac-0.2.0.tar.gz) = 8152859c19a4c414c5fe17eeb4ec6793d4052cdd
-Size (Dirac-0.2.0.tar.gz) = 200203 bytes
+SHA1 (dirac-1.0.2.tar.gz) = 895aaad832a54b754e58f77c87d38c0c37752b0b
+RMD160 (dirac-1.0.2.tar.gz) = 0af65c4216230b5418667081cecb7bdcdc853d2e
+Size (dirac-1.0.2.tar.gz) = 918366 bytes

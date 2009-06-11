@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/11 17:27:02 joerg Exp $
 #
 
-DISTNAME=		Dirac-0.2.0
-PKGNAME=		${DISTNAME:S/D/d/}
+DISTNAME=		dirac-1.0.2
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dirac/}
 
@@ -13,6 +12,7 @@ COMMENT=		Open-source video codec designed at the BBC
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
+USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
