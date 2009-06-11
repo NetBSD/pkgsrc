@@ -1,15 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/05/17 20:08:17 seb Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/11 12:06:11 abs Exp $
 
 Prevent unconfigured CPAN.pm module to run its interactive
 setup
 
---- Makefile.PL.orig	2009-05-03 07:27:26.000000000 +0000
+--- Makefile.PL.orig	2009-05-03 08:27:26.000000000 +0100
 +++ Makefile.PL
-@@ -27,6 +27,6 @@ install_script      ('bin/atnodes');
- install_script      ('bin/tonodes');
- install_script      ('bin/key2nodes');
+@@ -18,7 +18,7 @@ requires            ('IO::Pty');
+ build_requires      ('IPC::Run3');
+ #build_requires      ('Test::Base' => '0.54');
  
--auto_install();
-+#auto_install();
- WriteAll();
+-use_test_base;
++#use_test_base;
+ 
+ no_index( directory => qw< t inc doc share demo > );
  

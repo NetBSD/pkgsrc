@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/01 11:59:45 sno Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/11 12:06:11 abs Exp $
 
 DISTNAME=	Catalyst-Action-RenderView-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,7 @@ BUILD_DEPENDS+=	p5-HTTP-Request-AsCGI-[0-9]*:../../www/p5-HTTP-Request-AsCGI
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Action/RenderView/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

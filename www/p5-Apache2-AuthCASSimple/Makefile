@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/01 21:41:39 seb Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/11 12:06:11 abs Exp $
 #
 
 DISTNAME=	Apache2-AuthCASSimple-0.10
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Apache2/AuthCASSimple/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 DEPENDS+=	p5-Apache-Session-Wrapper-[0-9]*:../../www/p5-Apache-Session-Wrapper
 DEPENDS+=	p5-Authen-CAS-Client-[0-9]*:../../security/p5-Authen-CAS-Client

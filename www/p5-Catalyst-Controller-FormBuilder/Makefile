@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/19 22:41:30 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/11 12:06:11 abs Exp $
 
 DISTNAME=	Catalyst-Controller-FormBuilder-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,7 @@ DEPENDS+=	p5-Catalyst-View-TT>=0.23:../../www/p5-Catalyst-View-TT
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Catalyst/Controller/FormBuilder/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
