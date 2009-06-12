@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1.2.2 2009/06/12 11:02:42 tron Exp $
+
+Part of CVE-2009-1377 fix.
+
+--- crypto/pqueue/pqueue.h.orig	2009-06-08 18:57:00.672546600 -0500
++++ crypto/pqueue/pqueue.h
+@@ -91,5 +91,6 @@ pitem *pqueue_iterator(pqueue pq);
+ pitem *pqueue_next(piterator *iter);
+ 
+ void   pqueue_print(pqueue pq);
++int    pqueue_size(pqueue pq);
+ 
+ #endif /* ! HEADER_PQUEUE_H */
