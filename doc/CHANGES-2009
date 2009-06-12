@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2313 2009/06/12 16:36:56 smb Exp $
+$NetBSD: CHANGES-2009,v 1.2314 2009/06/12 17:14:25 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3101,3 +3101,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/ffmpegthumbnailer to 1.5.3 [ahoka 2009-06-12]
 	Updated chat/pidgin to 2.5.6 [smb 2009-06-12]
 	Updated chat/libpurple to 2.5.6 [smb 2009-06-12]
+	Updated multimedia/ffmpeg to 20090611 [ahoka 2009-06-12]
+	Added multimedia/ffplay version 20090611 [ahoka 2009-06-12]
