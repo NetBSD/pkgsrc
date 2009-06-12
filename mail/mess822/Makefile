@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/30 10:40:56 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/12 18:54:32 rillig Exp $
 #
 
 DISTNAME=		mess822-0.58
@@ -29,8 +29,7 @@ CONF_FILES+=		${EGDIR}/leapsecs.dat ${PKG_SYSCONFDIR}/leapsecs.dat
 
 DJB_BUILD_TARGETS=	install instcheck
 
-INSTALLATION_DIRS=	bin include lib man ${PKGMANDIR}/cat1 ${PKGMANDIR}/cat3 ${PKGMANDIR}/cat5 ${PKGMANDIR}/cat8
-INSTALLATION_DIRS+=	man/man1 man/man3 man/man5 man/man8 share/examples/mess822
+AUTO_MKDIRS=		yes
 
 SUBST_FILES.djbware+=	cdb_seek.c leapsecs_read.c
 
