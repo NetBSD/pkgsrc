@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/06/12 11:57:21 taca Exp $
+
+--- rakefile.rb.orig	2009-06-11 12:35:13.000000000 +0000
++++ rakefile.rb
+@@ -24,8 +24,6 @@ task :publish_rdoc => [:rdoc] do
+   Rake::SshDirPublisher.new("jaycfields@rubyforge.org", "/var/www/gforge-projects/validatable", "doc").upload
+ end
+ 
+-Gem::manage_gems
+-
+ specification = Gem::Specification.new do |s|
+ 	s.name   = "validatable"
+   s.summary = "Validatable is a library for adding validations."
