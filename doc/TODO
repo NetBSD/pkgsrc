@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8182 2009/06/10 22:01:05 minskim Exp $
+$NetBSD: TODO,v 1.8183 2009/06/12 02:20:06 taca Exp $
 
 Suggested new packages
 ======================
@@ -595,6 +595,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
 	o firefox-2.0.0.20
+	o firefox-3.0.11
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
@@ -873,6 +874,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
 	o mc-4.6.2
+	o mediawiki-1.5.0
 	o memconf-2.9 [pkg/40201]
 	o memtestplus-2.11
 	o merb-1.0.8.1
