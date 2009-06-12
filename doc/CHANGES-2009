@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2312 2009/06/12 16:18:46 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2313 2009/06/12 16:36:56 smb Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3099,3 +3099,5 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated finance/ruby-activemerchant to 1.4.2 [taca 2009-06-12]
 	Updated www/typolight27-translations to 20090609 [taca 2009-06-12]
 	Updated multimedia/ffmpegthumbnailer to 1.5.3 [ahoka 2009-06-12]
+	Updated chat/pidgin to 2.5.6 [smb 2009-06-12]
+	Updated chat/libpurple to 2.5.6 [smb 2009-06-12]
