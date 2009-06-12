@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2310 2009/06/12 14:03:22 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2311 2009/06/12 14:50:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3097,3 +3097,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated www/firefox3 to 3.0.11 [tron 2009-06-12]
 	Updated databases/ruby-postgres-pr to 0.6.1 [taca 2009-06-12]
 	Updated finance/ruby-activemerchant to 1.4.2 [taca 2009-06-12]
+	Updated www/typolight27-translations to 20090609 [taca 2009-06-12]
