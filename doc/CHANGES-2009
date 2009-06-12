@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2301 2009/06/12 05:22:05 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2302 2009/06/12 07:28:37 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3089,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/netpgp to 20090611 [agc 2009-06-11]
 	Updated multimedia/dirac to 1.0.2 [joerg 2009-06-11]
 	Updated www/apache22 to 2.2.11nb5 [tron 2009-06-11]
+	Updated devel/p5-MRO-Compat to 0.11 [sno 2009-06-12]
