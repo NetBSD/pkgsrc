@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2300 2009/06/12 05:20:35 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2301 2009/06/12 05:22:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3089,4 +3089,3 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated security/netpgp to 20090611 [agc 2009-06-11]
 	Updated multimedia/dirac to 1.0.2 [joerg 2009-06-11]
 	Updated www/apache22 to 2.2.11nb5 [tron 2009-06-11]
-	Updated devel/ruby-heckle to 1.4.1nb1 [taca 2009-06-12]
