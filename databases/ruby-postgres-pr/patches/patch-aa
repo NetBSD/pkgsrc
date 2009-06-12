@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2009/06/12 11:45:23 taca Exp $
+
+Correct URL which is strictly checked by RubyGems.
+
+--- ../postgres-pr-0.6.1.gemspec.orig	2009-06-12 15:04:25.000000000 +0900
++++ ../postgres-pr-0.6.1.gemspec	2009-06-12 15:05:17.000000000 +0900
+@@ -44,7 +44,7 @@
+ - examples/og
+ - examples/og/test.rb
+ has_rdoc: false
+-homepage: postgres-pr.rubyforge.org
++homepage: http://postgres-pr.rubyforge.org/
+ licenses: 
+ post_install_message: 
+ rdoc_options: []
