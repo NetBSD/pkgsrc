@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/06/12 11:57:21 taca Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/12 13:27:12 taca Exp $
+
+Stop calling obsolete method.
 
 --- rakefile.rb.orig	2009-06-11 12:35:13.000000000 +0000
 +++ rakefile.rb
