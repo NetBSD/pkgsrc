@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.7 2009/06/12 23:02:57 minskim Exp $
+
+--- lib/rubygems/specification.rb.orig	2009-05-19 17:41:16.000000000 -0700
++++ lib/rubygems/specification.rb
+@@ -812,12 +812,12 @@ class Gem::Specification
+     end
+ 
+     @files.delete_if            do |file| File.directory? file end
+-    @test_files.delete_if       do |file| File.directory? file end
+-    @executables.delete_if      do |file|
++    @test_files and @test_files.delete_if       do |file| File.directory? file end
++    @executables and @executables.delete_if      do |file|
+       File.directory? File.join(bindir, file)
+     end
+-    @extra_rdoc_files.delete_if do |file| File.directory? file end
+-    @extensions.delete_if       do |file| File.directory? file end
++    @extra_rdoc_files and @extra_rdoc_files.delete_if do |file| File.directory? file end
++    @extensions and @extensions.delete_if       do |file| File.directory? file end
+ 
+     non_files = files.select do |file|
+       !File.file? file
