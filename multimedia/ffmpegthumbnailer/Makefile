@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/12/28 13:34:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/12 16:16:54 ahoka Exp $
 #
 
-DISTNAME=	ffmpegthumbnailer-1.3.0
+DISTNAME=	ffmpegthumbnailer-1.5.3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ffmpegthumbnailer.googlecode.com/files/
 
