@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2009/06/12 13:35:40 taca Exp $
+
+Correct URL parameter to rakefile to fix build problem with newer rake's
+strict checking.
+
+--- Rakefile.orig	2009-06-12 16:44:00.000000000 +0900
++++ Rakefile
+@@ -10,7 +10,8 @@ Hoe.new('mini_magick', MiniMagick::VERSI
+   p.email = 'probablycorey+ruby@gmail.com'
+   p.summary = 'A simple image manipulation library based on ImageMagick.'
+   p.description = p.paragraphs_of('README.txt', 2..5).join("\n\n")
+-  #p.url = p.paragraphs_of('README.txt', 0).first.split(/\n/)[1..-1]
++  p.url = [ 'http://mini_magick.rubyforge.org/',
++	    '"A ruby wrapper for ImageMagick command line.']
+   p.changes = p.paragraphs_of('History.txt', 0..1).join("\n\n")
+ end
+ 
