@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2314 2009/06/12 17:14:25 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2315 2009/06/12 22:53:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3103,3 +3103,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated chat/libpurple to 2.5.6 [smb 2009-06-12]
 	Updated multimedia/ffmpeg to 20090611 [ahoka 2009-06-12]
 	Added multimedia/ffplay version 20090611 [ahoka 2009-06-12]
+	Updated x11/dri2proto to 2.1 [wiz 2009-06-12]
