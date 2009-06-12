@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2009/03/12 07:37:51 mlelstv Exp $
+# $NetBSD: Makefile.common,v 1.26 2009/06/12 16:31:39 smb Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -6,7 +6,7 @@
 # used by chat/pidgin-sametime/Makefile
 # used by chat/pidgin-silc/Makefile
 
-PIDGIN_VERSION=	2.5.5
+PIDGIN_VERSION=	2.5.6
 DISTNAME=	pidgin-${PIDGIN_VERSION}
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin/}
