@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/31 00:10:53 he Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/12 07:33:55 sno Exp $
 #
 
-DISTNAME=	Test-YAML-Meta-0.11
+DISTNAME=	Test-YAML-Meta-0.12
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Test-YAML-Meta/
 COMMENT=	Perl 5 module to validate the META.yml file in a distribution
+LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-YAML-Valid>=0.03:../../devel/p5-Test-YAML-Valid
 
