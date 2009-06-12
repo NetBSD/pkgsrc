@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/24 15:03:14 abs Exp $
+$NetBSD: distinfo,v 1.2 2009/06/12 07:38:29 sno Exp $
 
-SHA1 (Algorithm-C3-0.07.tar.gz) = 568cb95b5517f2a34b1aac78c72bb115bb188213
-RMD160 (Algorithm-C3-0.07.tar.gz) = 4da1f8c42c7b87767f8af6edd1b82f70f1163c15
-Size (Algorithm-C3-0.07.tar.gz) = 9563 bytes
+SHA1 (Algorithm-C3-0.08.tar.gz) = a9ea20ec1bc14d83e2ab76d8f02860db6835f607
+RMD160 (Algorithm-C3-0.08.tar.gz) = ffbf15168f558f61021d7bfa1d03e5c552299e2c
+Size (Algorithm-C3-0.08.tar.gz) = 11738 bytes
