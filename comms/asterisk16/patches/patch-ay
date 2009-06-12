@@ -1,0 +1,16 @@
+$NetBSD: patch-ay,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+
+--- main/features.c.orig	2009-02-12 12:59:09.000000000 -0800
++++ main/features.c
+@@ -3602,9 +3602,9 @@ static char *handle_parkedcalls(struct a
+ 
+ 	AST_LIST_LOCK(&parkinglot);
+ 	AST_LIST_TRAVERSE(&parkinglot, cur, list) {
+-		ast_cli(a->fd, "%-10.10s %25s (%-15s %-12s %-4d) %6lds\n"
++		ast_cli(a->fd, "%-10.10s %25s (%-15s %-12s %-4d) %6jds\n"
+ 			,cur->parkingexten, cur->chan->name, cur->context, cur->exten
+-			,cur->priority, cur->start.tv_sec + (cur->parkingtime/1000) - time(NULL));
++			,cur->priority, (intmax_t) (cur->start.tv_sec + (cur->parkingtime/1000) - time(NULL)));
+ 
+ 		numparked++;
+ 	}
