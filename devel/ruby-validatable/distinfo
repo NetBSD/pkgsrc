@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/06/12 11:57:21 taca Exp $
+$NetBSD: distinfo,v 1.3 2009/06/12 13:27:11 taca Exp $
 
 SHA1 (validatable-1.6.7.gem) = a3cf58e5e441de86d5a532316fef0b264f1c8655
 RMD160 (validatable-1.6.7.gem) = a32528608fae27e37e5015c721201eb9bbf3204b
 Size (validatable-1.6.7.gem) = 15872 bytes
-SHA1 (patch-aa) = eadb4be534624ad17d3c1f3f0c006d3d38d28ff3
+SHA1 (patch-aa) = 60ce9a6a5fc5a8bd1b88587cc6a2c8d9788d5d58
