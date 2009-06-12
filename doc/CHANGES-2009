@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2308 2009/06/12 11:46:33 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2309 2009/06/12 13:08:37 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -2963,7 +2963,7 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated sysutils/cdrkit to 1.1.9 [hasso 2009-06-08]
 	Updated audio/flac123 to 0.0.11 [snj 2009-06-08]
 	Updated databases/ruby-tokyotyrant to 1.9 [obache 2009-06-08]
-	Updated archives/p7zip to 9.04 [adam 2009-06-08]
+	Updated archivers/p7zip to 9.04 [adam 2009-06-08]
 	Updated graphics/pngcrush to 1.6.19 [adam 2009-06-08]
 	Updated x11/xf86-input-vmmouse to 12.6.4 [obache 2009-06-08]
 	Updated x11/xf86-video-vmware to 10.16.6 [obache 2009-06-08]
