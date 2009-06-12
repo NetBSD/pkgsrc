@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/13 12:35:18 abs Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/12 19:09:38 rillig Exp $
 bin/rarchie
 bin/rfinger
 bin/rftp
@@ -14,12 +14,12 @@ lib/libsocks5.a
 lib/libsocks5_sh.so
 lib/libsocks5_sh.so.0
 lib/libsocks5_sh.so.0.0
-man/man1/runsocks.1.gz
-man/man1/socks5.1.gz
-man/man1/socks5_clients.1.gz
-man/man1/stopsocks.1.gz
-man/man5/libsocks5.conf.5.gz
-man/man5/socks5.conf.5.gz
+man/man1/runsocks.1
+man/man1/socks5.1
+man/man1/socks5_clients.1
+man/man1/stopsocks.1
+man/man5/libsocks5.conf.5
+man/man5/socks5.conf.5
 man/man5/socks5.passwd.5
 share/examples/rc.d/socks5
 share/examples/socks5/README

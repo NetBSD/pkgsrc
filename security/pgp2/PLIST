@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/08 22:38:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/12 19:09:38 rillig Exp $
 bin/pgp
-man/man1/pgp.1.gz
+man/man1/pgp.1
 share/pgp/config.txt
 share/pgp/de.hlp
 share/pgp/en.hlp

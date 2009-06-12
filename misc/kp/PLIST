@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:37 rillig Exp $
 bin/kp
 lib/kp/cursor.tcl
 lib/kp/bit_saddy.h
@@ -14,4 +14,4 @@ lib/kp/file.tcl
 lib/kp/entry.tcl
 lib/kp/bit_smiley.h
 @dirrm lib/kp
-man/man1/kp.1.gz
+man/man1/kp.1

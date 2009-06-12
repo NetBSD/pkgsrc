@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/18 16:39:43 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/12 19:09:36 rillig Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -102,13 +102,13 @@ lib/libILLink.a
 lib/libILSupport.a
 lib/libffi.la
 lib/libgc.la
-man/man1/al.1.gz
-man/man1/cli-unknown-ar.1.gz
-man/man1/cli-unknown-cpp.1.gz
-man/man1/cli-unknown-gcc.1.gz
-man/man1/cli-unknown-ranlib.1.gz
-man/man1/cli-unknown-size.1.gz
-man/man1/cli-unknown-strip.1.gz
+man/man1/al.1
+man/man1/cli-unknown-ar.1
+man/man1/cli-unknown-cpp.1
+man/man1/cli-unknown-gcc.1
+man/man1/cli-unknown-ranlib.1
+man/man1/cli-unknown-size.1
+man/man1/cli-unknown-strip.1
 man/man1/clrwrap.1
 man/man1/csant.1
 man/man1/cscc-cpp.1

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/26 13:40:17 pooka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:38 rillig Exp $
 bin/hackbot.pl
-man/man1/hackbot.1.gz
+man/man1/hackbot.1
 share/hackbot/cgi.db
 share/hackbot/fingerprint.db
 @dirrm share/hackbot
