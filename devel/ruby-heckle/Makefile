@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/06/12 05:19:21 taca Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/12 05:21:45 taca Exp $
 
 DISTNAME=	heckle-1.4.1
-PKGREVISION=	1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
