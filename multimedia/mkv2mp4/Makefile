@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2009/02/11 20:37:13 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/12 17:24:53 ahoka Exp $
 #
 
 SVNREV=		11
 DISTNAME=	mkv2mp4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-0.0alpha${SVNREV}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mkv2mp4.googlecode.com/svn-history/r${SVNREV}/trunk/
 NO_BUILD=	yes
