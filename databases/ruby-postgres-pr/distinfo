@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:15:57 jlam Exp $
+$NetBSD: distinfo,v 1.2 2009/06/12 11:45:23 taca Exp $
 
-SHA1 (postgres-pr-0.4.0.gem) = 6671d7aee6501334385d03c3c78d43107328e336
-RMD160 (postgres-pr-0.4.0.gem) = a9ffe2f220ff12a0834c56777eb4a86c35121739
-Size (postgres-pr-0.4.0.gem) = 12288 bytes
+SHA1 (postgres-pr-0.6.1.gem) = b7943d94ca02e9f4970211b0f7771d0099e7ac6e
+RMD160 (postgres-pr-0.6.1.gem) = c7d892da28643edbdb376f01c1e7b85187c33b34
+Size (postgres-pr-0.6.1.gem) = 12800 bytes
+SHA1 (patch-aa) = 724f1e4719ccd9036fee5164fb3b39a4c4ea4567
