@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/05/19 06:43:00 hasso Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/12 22:53:34 wiz Exp $
 #
 
-DISTNAME=		dri2proto-2.0
+DISTNAME=		dri2proto-2.1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
