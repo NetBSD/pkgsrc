@@ -1,0 +1,25 @@
+$NetBSD: patch-au,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+
+--- sounds/Makefile.orig	2009-01-09 15:17:14.000000000 -0800
++++ sounds/Makefile
+@@ -60,20 +60,6 @@ endif
+ all: $(CORE_SOUNDS) $(EXTRA_SOUNDS) $(MOH)
+ 
+ have_download:
+-	@if test "$(DOWNLOAD)" = ":" ; then \
+-		echo "**************************************************"; \
+-		echo "***                                            ***"; \
+-		echo "*** You must have either wget or fetch to be   ***"; \
+-		echo "*** able to automatically download and install ***"; \
+-		echo "*** the requested sound packages.              ***"; \
+-		echo "***                                            ***"; \
+-		echo "*** Please install one of these, or remove any ***"; \
+-		echo "*** extra sound package selections in          ***"; \
+-		echo "*** menuselecct before installing Asterisk.    ***"; \
+-		echo "***                                            ***"; \
+-		echo "**************************************************"; \
+-		exit 1; \
+-	fi
+ 
+ $(SOUNDS_DIR)/.asterisk-core-sounds-en-%: have_download
+ 	@PACKAGE=$(subst $(SOUNDS_DIR)/.asterisk,asterisk,$@).tar.gz; \
