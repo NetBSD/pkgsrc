@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2008/04/21 16:01:15 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2009/06/12 05:19:21 taca Exp $
 
---- Rakefile.orig	2008-04-21 11:57:49.000000000 -0400
+--- Rakefile.orig	2009-06-12 05:03:37.000000000 +0000
 +++ Rakefile
-@@ -8,6 +8,8 @@ require './lib/heckle.rb'
+@@ -8,9 +8,12 @@ require './lib/heckle.rb'
  
  Hoe.new('heckle', Heckle::VERSION) do |p|
    p.rubyforge_name = 'seattlerb'
@@ -11,3 +11,7 @@ $NetBSD: patch-aa,v 1.1 2008/04/21 16:01:15 jlam Exp $
    p.summary = 'Unit Test Sadism'
    p.description = p.paragraphs_of('README.txt', 2).join("\n\n")
    p.url = p.paragraphs_of('README.txt', 0).first.split(/\n/)[1..-1]
++  p.url[0].strip!
+   p.changes = p.paragraphs_of('History.txt', 0..1).join("\n\n")
+ 
+   p.extra_deps << ['ruby2ruby', '>= 1.1.0']
