@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2009/06/12 12:02:48 taca Exp $
+
+Stop calling obsolete method.
+
+--- Rakefile.orig	2009-06-12 16:36:06.000000000 +0900
++++ Rakefile
+@@ -1,5 +1,4 @@
+ require 'rubygems'
+-Gem::manage_gems
+ 
+ require 'rake/gempackagetask'
+ #require 'rake/testtask'
