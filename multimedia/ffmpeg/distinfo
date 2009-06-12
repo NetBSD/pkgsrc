@@ -1,14 +1,7 @@
-$NetBSD: distinfo,v 1.22 2009/01/29 15:02:13 tron Exp $
+$NetBSD: distinfo,v 1.23 2009/06/12 16:25:34 ahoka Exp $
 
-SHA1 (ffmpeg-2008-07-27.tar.bz2) = 103acde7a0f02aa1c32d5dab5bf187c94441c479
-RMD160 (ffmpeg-2008-07-27.tar.bz2) = e69128fc034a3f8b0fd561f1e6ecc04dd118a977
-Size (ffmpeg-2008-07-27.tar.bz2) = 2581976 bytes
-SHA1 (patch-4xm) = 179f817eae8bb2ac122a2f451e13ddb22e4c23c5
-SHA1 (patch-bktr) = dddf7149810d227f531e5a198445fc0d1893bece
-SHA1 (patch-configure) = 747593b082f428ac1f79c6d9cad8773326351a83
-SHA1 (patch-imgconvert.c) = 3c0a9f98ddb767db6f46a02fc64451c0a79b1cbc
-SHA1 (patch-libavcodec_Makefile) = 14a31e2ea9080aa1cc3999e3fbb745018ac5e4de
-SHA1 (patch-mem.c) = b31dd3c0a53da58be34e5f6c0cbf36454649a85f
-SHA1 (patch-oldx246) = 730c503422727fe4b38353f5896ce62ee6f12ebe
-SHA1 (patch-r14477) = fb68f691fe68b6dc4ddd31c4c366d0dae11ab999
-SHA1 (patch-v4l2) = ed35dbd2d08337239f051c74c414e01609fb6ef6
+SHA1 (ffmpeg-20090611.tar.bz2) = 04e67497f70c64b7a26534d4b67e3a46cdb4b219
+RMD160 (ffmpeg-20090611.tar.bz2) = 447a72cd1a416f926100c61299d9012535909d9a
+Size (ffmpeg-20090611.tar.bz2) = 2799194 bytes
+SHA1 (patch-aa) = dadd96835ffbf3a95a5de75647a72edb53171b6f
+SHA1 (patch-bktr) = dadd96835ffbf3a95a5de75647a72edb53171b6f
