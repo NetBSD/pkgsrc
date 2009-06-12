@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:35 rillig Exp $
 bin/sam
 bin/samterm
 bin/samsave
@@ -10,19 +10,19 @@ include/sam/frame.h
 lib/libXg.a
 lib/libframe.a
 lib/X11/app-defaults/Sam
-man/man1/sam.1.gz
-man/man3/add.3.gz
-man/man3/balloc.3.gz
-man/man3/bitblt.3.gz
-man/man3/cachechars.3.gz
-man/man3/event.3.gz
-man/man3/frame.3.gz
-man/man3/graphics.3.gz
-man/man3/rgbpix.3.gz
-man/man3/rune.3.gz
-man/man4/font.4.gz
-man/man4/keyboard.4.gz
-man/man4/utf.4.gz
-man/man6/bitmap.6.gz
-man/man6/regexp.6.gz
+man/man1/sam.1
+man/man3/add.3
+man/man3/balloc.3
+man/man3/bitblt.3
+man/man3/cachechars.3
+man/man3/event.3
+man/man3/frame.3
+man/man3/graphics.3
+man/man3/rgbpix.3
+man/man3/rune.3
+man/man4/font.4
+man/man4/keyboard.4
+man/man4/utf.4
+man/man6/bitmap.6
+man/man6/regexp.6
 @dirrm include/sam
