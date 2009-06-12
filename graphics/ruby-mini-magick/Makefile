@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/30 16:22:47 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/12 13:35:40 taca Exp $
 
 DISTNAME=	mini_magick-1.2.3
 PKGNAME=	${RUBYGEM_PKGPREFIX}-${DISTNAME:S/_/-/}
@@ -7,6 +7,7 @@ CATEGORIES=	graphics
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mini_magick.rubyforge.org/
 COMMENT=	Ruby wrapper for ImageMagick command line
+LICENSE=	mit
 
 # MiniMagick uses identify(1) and mogrify(1) from ImageMagick.
 DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
