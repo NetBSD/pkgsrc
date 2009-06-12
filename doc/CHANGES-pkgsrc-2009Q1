@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.50 2009/06/12 11:03:37 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.51 2009/06/12 21:40:05 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -148,3 +148,5 @@ Pullup ticket #2793 - requested by martti
 clamav: bug fix update
 Pullup ticket #2794 - requested by tez
 openssl: security patch
+Pullup ticket #2795 - requested by tron
+apache22: compatibility fix
