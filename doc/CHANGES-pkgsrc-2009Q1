@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.49 2009/06/12 10:41:40 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2009Q1,v 1.1.2.50 2009/06/12 11:03:37 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2009Q1 branch:
@@ -146,3 +146,5 @@ lang/ruby18-base: security update
 ruby-tk: security update
 Pullup ticket #2793 - requested by martti
 clamav: bug fix update
+Pullup ticket #2794 - requested by tez
+openssl: security patch
