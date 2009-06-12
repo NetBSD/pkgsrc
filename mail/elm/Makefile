@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2007/04/04 13:01:23 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2009/06/12 22:56:03 zafer Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
 PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.virginia.edu/pub/elm/
+MASTER_SITES=		http://www.instinct.org/elm/files/tarballs/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.instinct.org/elm/
