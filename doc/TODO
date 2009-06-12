@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8183 2009/06/12 02:20:06 taca Exp $
+$NetBSD: TODO,v 1.8184 2009/06/12 15:13:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -585,7 +585,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o faces-1.7.7
 	o fakeroot-1.6.5
 	o fbreader-0.10.7
-	o fd-2.09c
+	o fd-3.00d
 	o fdgw-20040609
 	o festival-1.96
 	o felt-3.07
@@ -595,7 +595,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.2
 	o firefox-2.0.0.20
-	o firefox-3.0.11
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.9.0
@@ -1463,7 +1462,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o zope34-3.4.0
 	o zopeedit-0.8
 	o zsh-4.3.10
-	o zziplib-0.13.52
+	o zziplib-0.13.54
 
 Infrastructure problems which need addressing
 =============================================
