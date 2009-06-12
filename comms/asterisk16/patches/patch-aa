@@ -1,0 +1,146 @@
+$NetBSD: patch-aa,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+
+--- Makefile.orig	2008-11-29 10:37:55.000000000 -0800
++++ Makefile
+@@ -122,20 +122,6 @@ DEBUG=-g3
+ 
+ # Define standard directories for various platforms
+ # These apply if they are not redefined in asterisk.conf 
+-ifeq ($(OSARCH),SunOS)
+-  ASTETCDIR=/var/etc/asterisk
+-  ASTLIBDIR=/opt/asterisk/lib
+-  ASTVARLIBDIR=/var/opt/asterisk
+-  ASTDBDIR=$(ASTVARLIBDIR)
+-  ASTKEYDIR=$(ASTVARLIBDIR)
+-  ASTSPOOLDIR=/var/spool/asterisk
+-  ASTLOGDIR=/var/log/asterisk
+-  ASTHEADERDIR=/opt/asterisk/include
+-  ASTBINDIR=/opt/asterisk/bin
+-  ASTSBINDIR=/opt/asterisk/sbin
+-  ASTVARRUNDIR=/var/run/asterisk
+-  ASTMANDIR=/opt/asterisk/man
+-else
+   ASTETCDIR=$(sysconfdir)/asterisk
+   ASTLIBDIR=$(libdir)/asterisk
+   ASTHEADERDIR=$(includedir)/asterisk
+@@ -145,19 +131,12 @@ else
+   ASTLOGDIR=$(localstatedir)/log/asterisk
+   ASTVARRUNDIR=$(localstatedir)/run
+   ASTMANDIR=$(mandir)
+-ifneq ($(findstring BSD,$(OSARCH)),)
+   ASTVARLIBDIR=$(prefix)/share/asterisk
+   ASTVARRUNDIR=$(localstatedir)/run/asterisk
+   ASTDBDIR=$(localstatedir)/db/asterisk
+-else
+-  ASTVARLIBDIR=$(localstatedir)/lib/asterisk
+-  ASTDBDIR=$(ASTVARLIBDIR)
+-endif
+   ASTKEYDIR=$(ASTVARLIBDIR)
+-endif
+-ifeq ($(ASTDATADIR),)
+   ASTDATADIR:=$(ASTVARLIBDIR)
+-endif
++  ASTEXAMPLEDIR=$(ASTETCDIR)
+ 
+ # Asterisk.conf is located in ASTETCDIR or by using the -C flag
+ # when starting Asterisk
+@@ -237,11 +216,6 @@ ifeq ($(AST_DEVMODE),yes)
+   ASTCFLAGS+=-Wformat=2
+ endif
+ 
+-ifneq ($(findstring BSD,$(OSARCH)),)
+-  ASTCFLAGS+=-I/usr/local/include
+-  ASTLDFLAGS+=-L/usr/local/lib
+-endif
+-
+ ifneq ($(PROC),ultrasparc)
+   ASTCFLAGS+=$(shell if $(CC) -march=$(PROC) -S -o /dev/null -xc /dev/null >/dev/null 2>&1; then echo "-march=$(PROC)"; fi)
+ endif
+@@ -457,7 +431,7 @@ distclean: $(SUBDIRS_DIST_CLEAN) _clean
+ 	rm -f build_tools/menuselect-deps
+ 
+ datafiles: _all
+-	if [ x`$(ID) -un` = xroot ]; then CFLAGS="$(ASTCFLAGS)" sh build_tools/mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
++	CFLAGS="$(ASTCFLAGS)" build_tools/mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
+ # Should static HTTP be installed during make samples or even with its own target ala
+ # webvoicemail?  There are portions here that *could* be customized but might also be
+ # improved a lot.  I'll put it here for now.
+@@ -499,9 +473,10 @@ NEWHEADERS=$(notdir $(wildcard include/a
+ OLDHEADERS=$(filter-out $(NEWHEADERS),$(notdir $(wildcard $(DESTDIR)$(ASTHEADERDIR)/*.h)))
+ 
+ installdirs:
++	mkdir -p $(DESTDIR)$(AGI_DIR)
+ 	mkdir -p $(DESTDIR)$(MODULES_DIR)
+ 	mkdir -p $(DESTDIR)$(ASTSBINDIR)
+-	mkdir -p $(DESTDIR)$(ASTETCDIR)
++	mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	mkdir -p $(DESTDIR)$(ASTBINDIR)
+ 	mkdir -p $(DESTDIR)$(ASTVARRUNDIR)
+ 	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/voicemail
+@@ -510,6 +485,7 @@ installdirs:
+ 	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
+ 	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
+ 	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
++	mkdir -p $(DESTDIR)$(ASTDBDIR)
+ 
+ bininstall: _all installdirs $(SUBDIRS_INSTALL)
+ 	$(INSTALL) -m 755 main/asterisk $(DESTDIR)$(ASTSBINDIR)/
+@@ -605,22 +581,22 @@ upgrade: bininstall
+ # XXX why *.adsi is installed first ?
+ adsi:
+ 	@echo Installing adsi config files...
+-	@mkdir -p $(DESTDIR)$(ASTETCDIR)
++	@mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	@for x in configs/*.adsi; do \
+-		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x`" ; \
++		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x`" ; \
+ 		if [ -f $${dst} ] ; then \
+ 			echo "Overwriting $$x" ; \
+ 		else \
+ 			echo "Installing $$x" ; \
+ 		fi ; \
+-		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x` ; \
++		$(INSTALL) -m 644 $$x $(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x` ; \
+ 	done
+ 
+ samples: adsi
+ 	@echo Installing other config files...
+-	@mkdir -p $(DESTDIR)$(ASTETCDIR)
++	@mkdir -p $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	@for x in configs/*.sample; do \
+-		dst="$(DESTDIR)$(ASTETCDIR)/`$(BASENAME) $$x .sample`" ;	\
++		dst="$(DESTDIR)$(ASTEXAMPLEDIR)/`$(BASENAME) $$x .sample`" ;	\
+ 		if [ -f $${dst} ]; then \
+ 			if [ "$(OVERWRITE)" = "y" ]; then \
+ 				if cmp -s $${dst} $$x ; then \
+@@ -636,10 +612,10 @@ samples: adsi
+ 		echo "Installing file $$x"; \
+ 		$(INSTALL) -m 644 $$x $${dst} ;\
+ 	done
+-	@if [ "$(OVERWRITE)" = "y" ] || [ ! -f $(DESTDIR)$(ASTCONFPATH) ]; then \
++	@if [ "$(OVERWRITE)" = "y" ] || [ ! -f $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ]; then \
+ 		echo "Creating asterisk.conf"; \
+ 		( \
+-		echo "[directories](!) ; remove the (!) to enable this" ; \
++		echo "[directories]" ; \
+ 		echo "astetcdir => $(ASTETCDIR)" ; \
+ 		echo "astmoddir => $(MODULES_DIR)" ; \
+ 		echo "astvarlibdir => $(ASTVARLIBDIR)" ; \
+@@ -692,7 +668,7 @@ samples: adsi
+ 		echo "pbx_realtime=1.6" ; \
+ 		echo "res_agi=1.6" ; \
+ 		echo "app_set=1.6" ; \
+-		) > $(DESTDIR)$(ASTCONFPATH) ; \
++		) > $(DESTDIR)$(ASTEXAMPLEDIR)/asterisk.conf ; \
+ 	else \
+ 		echo "Skipping asterisk.conf creation"; \
+ 	fi
+@@ -826,7 +802,7 @@ uninstall-all: _uninstall
+ 	rm -rf $(DESTDIR)$(ASTVARLIBDIR)
+ 	rm -rf $(DESTDIR)$(ASTDATADIR)
+ 	rm -rf $(DESTDIR)$(ASTSPOOLDIR)
+-	rm -rf $(DESTDIR)$(ASTETCDIR)
++	rm -rf $(DESTDIR)$(ASTEXAMPLEDIR)
+ 	rm -rf $(DESTDIR)$(ASTLOGDIR)
+ 
+ menuconfig: menuselect
