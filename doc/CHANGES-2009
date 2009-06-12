@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2315 2009/06/12 22:53:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2316 2009/06/12 23:03:35 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3104,3 +3104,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated multimedia/ffmpeg to 20090611 [ahoka 2009-06-12]
 	Added multimedia/ffplay version 20090611 [ahoka 2009-06-12]
 	Updated x11/dri2proto to 2.1 [wiz 2009-06-12]
+	Updated misc/rubygems to 1.3.4nb1 [minskim 2009-06-12]
