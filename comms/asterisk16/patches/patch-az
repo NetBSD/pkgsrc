@@ -1,0 +1,15 @@
+$NetBSD: patch-az,v 1.1.1.1 2009/06/12 09:04:57 jnemeth Exp $
+
+--- main/manager.c.orig	2009-02-10 13:49:14.000000000 -0800
++++ main/manager.c
+@@ -3084,8 +3084,8 @@ int __manager_event(int category, const 
+ 	if (timestampevents) {
+ 		now = ast_tvnow();
+ 		ast_str_append(&buf, 0,
+-				"Timestamp: %ld.%06lu\r\n",
+-				 now.tv_sec, (unsigned long) now.tv_usec);
++				"Timestamp: %jd.%06lu\r\n",
++				 (intmax_t) now.tv_sec, (unsigned long) now.tv_usec);
+ 	}
+ 	if (manager_debug) {
+ 		static int seq;

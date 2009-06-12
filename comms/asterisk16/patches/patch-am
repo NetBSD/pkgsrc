@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+
+--- apps/app_sms.c.orig	2008-11-02 16:39:04.000000000 -0800
++++ apps/app_sms.c
+@@ -510,7 +510,7 @@ static void packdate(unsigned char *o, t
+ 	int z;
+ 
+ 	ast_localtime(&tv, &t, NULL);
+-#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__) || defined(__CYGWIN__)
++#if defined(__FreeBSD__) || defined(__OpenBSD__) || defined( __NetBSD__ ) || defined(__APPLE__) || defined(__CYGWIN__) || defined(__DragonFly__)
+ 	z = -t.tm_gmtoff / 60 / 15;
+ #else
+ 	z = timezone / 60 / 15;
