@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2009/06/12 11:48:40 taca Exp $
+
+--- Rakefile.orig	2009-06-12 16:11:21.000000000 +0900
++++ Rakefile
+@@ -129,8 +129,6 @@ task 'examples' do
+   end
+ end
+ 
+-Gem::manage_gems
+-
+ specification = Gem::Specification.new do |s|
+   s.name   = "mocha"
+   s.summary = "Mocking and stubbing library"
