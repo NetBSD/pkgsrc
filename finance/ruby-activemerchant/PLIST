@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:19:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 14:02:30 taca Exp $
 ${GEM_HOME}/cache/activemerchant-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTERS
@@ -19,6 +19,10 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/expiry_date.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/authorize_net_cim.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/beanstream.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/beanstream/beanstream_core.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/beanstream_interac.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/bogus.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/braintree.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/card_stream.rb
@@ -28,6 +32,8 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/efsnet.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/eway.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/exact.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/linkpoint.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/modern_payments.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/modern_payments_cim.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/moneris.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/net_registry.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/netbilling.rb
@@ -44,13 +50,19 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payment_express.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal/paypal_common_api.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal/paypal_express_response.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_ca.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_express.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal_express_common.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/plugnpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/protx.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/psigate.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/psl_card.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/quickpay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/realex.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage/sage_bankcard.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage/sage_core.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage/sage_virtual_check.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_au.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/secure_pay_tech.rb
@@ -60,6 +72,7 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/trust_commerce.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/usa_epay.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/verifi.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/viaklix.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/gateways/wirecard.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/action_view_helper.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/bogus.rb
@@ -89,6 +102,9 @@ ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal/helper.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal/notification.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal/return.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/quickpay.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/quickpay/helper.rb
+${GEM_LIBDIR}/lib/active_merchant/billing/integrations/quickpay/notification.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/return.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/two_checkout.rb
 ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/two_checkout/helper.rb
@@ -104,13 +120,15 @@ ${GEM_LIBDIR}/lib/active_merchant/lib/utils.rb
 ${GEM_LIBDIR}/lib/active_merchant/lib/validateable.rb
 ${GEM_LIBDIR}/lib/certs/cacert.pem
 ${GEM_LIBDIR}/lib/support/gateway_support.rb
-${GEM_LIBDIR}/lib/tasks/cia.rb
 ${GEM_LIBDIR}/script/destroy
 ${GEM_LIBDIR}/script/generate
 ${GEM_LIBDIR}/test/extra/binding_of_caller.rb
 ${GEM_LIBDIR}/test/extra/breakpoint.rb
 ${GEM_LIBDIR}/test/fixtures.yml
+${GEM_LIBDIR}/test/remote/gateways/remote_authorize_net_cim_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_authorize_net_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_beanstream_interac_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_beanstream_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_braintree_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_card_stream_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_cyber_source_test.rb
@@ -119,6 +137,8 @@ ${GEM_LIBDIR}/test/remote/gateways/remote_efsnet_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_eway_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_exact_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_linkpoint_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_modern_payments_cim_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_modern_payments_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_moneris_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_net_registry_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_netbilling_test.rb
@@ -136,6 +156,9 @@ ${GEM_LIBDIR}/test/remote/gateways/remote_psigate_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_psl_card_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_quickpay_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_realex_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_sage_bankcard_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_sage_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_sage_virtual_check_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_secure_pay_au_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_secure_pay_tech_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_secure_pay_test.rb
@@ -145,6 +168,7 @@ ${GEM_LIBDIR}/test/remote/gateways/remote_trust_commerce_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_usa_epay_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_verifi_test.rb
 ${GEM_LIBDIR}/test/remote/gateways/remote_viaklix_test.rb
+${GEM_LIBDIR}/test/remote/gateways/remote_wirecard_test.rb
 ${GEM_LIBDIR}/test/remote/integrations/remote_gestpay_integration_test.rb
 ${GEM_LIBDIR}/test/remote/integrations/remote_paypal_integration_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
@@ -158,7 +182,10 @@ ${GEM_LIBDIR}/test/unit/credit_card_methods_test.rb
 ${GEM_LIBDIR}/test/unit/credit_card_test.rb
 ${GEM_LIBDIR}/test/unit/cvv_result_test.rb
 ${GEM_LIBDIR}/test/unit/expiry_date_test.rb
+${GEM_LIBDIR}/test/unit/gateways/authorize_net_cim_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/authorize_net_test.rb
+${GEM_LIBDIR}/test/unit/gateways/beanstream_interac_test.rb
+${GEM_LIBDIR}/test/unit/gateways/beanstream_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/bogus_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/braintree_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/card_stream_test.rb
@@ -169,6 +196,7 @@ ${GEM_LIBDIR}/test/unit/gateways/eway_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/exact_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/gateway_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/linkpoint_test.rb
+${GEM_LIBDIR}/test/unit/gateways/modern_payments_cim_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/moneris_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/net_registry_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/netbilling_test.rb
@@ -187,6 +215,8 @@ ${GEM_LIBDIR}/test/unit/gateways/psigate_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/psl_card_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/quickpay_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/realex_test.rb
+${GEM_LIBDIR}/test/unit/gateways/sage_bankcard_test.rb
+${GEM_LIBDIR}/test/unit/gateways/sage_virtual_check_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/secure_pay_au_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/secure_pay_tech_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/secure_pay_test.rb
@@ -196,6 +226,7 @@ ${GEM_LIBDIR}/test/unit/gateways/trust_commerce_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/usa_epay_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/verifi_test.rb
 ${GEM_LIBDIR}/test/unit/gateways/viaklix_test.rb
+${GEM_LIBDIR}/test/unit/gateways/wirecard_test.rb
 ${GEM_LIBDIR}/test/unit/generators/test_gateway_generator.rb
 ${GEM_LIBDIR}/test/unit/generators/test_generator_helper.rb
 ${GEM_LIBDIR}/test/unit/generators/test_integration_generator.rb
@@ -209,6 +240,7 @@ ${GEM_LIBDIR}/test/unit/integrations/helpers/gestpay_helper_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/helpers/hi_trust_helper_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/helpers/nochex_helper_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/helpers/paypal_helper_test.rb
+${GEM_LIBDIR}/test/unit/integrations/helpers/quickpay_helper_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/helpers/two_checkout_helper_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/hi_trust_module_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/nochex_module_test.rb
@@ -218,8 +250,10 @@ ${GEM_LIBDIR}/test/unit/integrations/notifications/hi_trust_notification_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/notifications/nochex_notification_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/notifications/notification_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/notifications/paypal_notification_test.rb
+${GEM_LIBDIR}/test/unit/integrations/notifications/quickpay_notification_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/notifications/two_checkout_notification_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/paypal_module_test.rb
+${GEM_LIBDIR}/test/unit/integrations/quickpay_module_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/returns/chronopay_return_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/returns/gestpay_return_test.rb
 ${GEM_LIBDIR}/test/unit/integrations/returns/hi_trust_return_test.rb
@@ -247,11 +281,10 @@ ${GEM_HOME}/specifications/activemerchant-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/extra
 @dirrm ${GEM_LIBDIR}/test
 @dirrm ${GEM_LIBDIR}/script
-@dirrm ${GEM_LIBDIR}/lib/tasks
-@dirrm ${GEM_LIBDIR}/lib/support
 @dirrm ${GEM_LIBDIR}/lib/certs
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/lib
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/two_checkout
+@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/quickpay
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/nochex
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/hi_trust
@@ -259,8 +292,10 @@ ${GEM_HOME}/specifications/activemerchant-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/chronopay
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/bogus
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations
+@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payflow
+@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/beanstream
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways
 @dirrm ${GEM_LIBDIR}/lib/active_merchant/billing
 @dirrm ${GEM_LIBDIR}/lib/active_merchant
