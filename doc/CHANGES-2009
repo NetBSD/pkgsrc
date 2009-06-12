@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2305 2009/06/12 07:46:28 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2306 2009/06/12 07:52:14 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3093,3 +3093,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Test-YAML-Meta to 0.12 [sno 2009-06-12]
 	Updated devel/p5-Algorithm-C3 to 0.08 [sno 2009-06-12]
 	Updated www/p5-CGI-Simple to 1.112 [sno 2009-06-12]
+	Updated devel/p5-Test-Simple to 0.88 [sno 2009-06-12]
