@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2009/06/12 11:52:51 taca Exp $
+
+--- Rakefile.orig	2009-06-11 12:33:04.000000000 +0000
++++ Rakefile
+@@ -110,7 +110,7 @@ else
+     #### Author and project details.
+     s.author = "Horst Duchene"
+     s.email = "hd.at.clr@hduchene.de"
+-    s.homepage = "rgl.rubyforge.org"
++    s.homepage = "http://rgl.rubyforge.org/"
+     s.rubyforge_project = "rgl"
+   end
+ 
