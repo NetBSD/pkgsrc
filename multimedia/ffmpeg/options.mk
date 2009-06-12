@@ -1,17 +1,15 @@
-# $NetBSD: options.mk,v 1.11 2008/09/15 21:24:00 sborrill Exp $
+# $NetBSD: options.mk,v 1.12 2009/06/12 16:25:34 ahoka Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	sdl theora xvid faad faac x264
-PKG_SUGGESTED_OPTIONS=	faac theora xvid x264
+PKG_SUPPORTED_OPTIONS=	theora xvid faad faac x264
+PKG_SUGGESTED_OPTIONS=	theora xvid x264
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=	sdl swscale
 
 ###
 ### faad option
@@ -22,13 +20,13 @@ CONFIGURE_ARGS+=  --enable-libfaad
 .include "../../audio/faad2/buildlink3.mk"
 .endif
 
-
 ###
 ### faac option
 ###
 
 .if !empty(PKG_OPTIONS:Mfaac)
-CONFIGURE_ARGS+=  --enable-libfaac
+CONFIGURE_ARGS+=	--enable-libfaac \
+			--enable-nonfree
 .include "../../audio/faac/buildlink3.mk"
 .endif
 

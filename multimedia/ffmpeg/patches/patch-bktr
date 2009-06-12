@@ -1,13 +1,16 @@
-$NetBSD: patch-bktr,v 1.1 2008/09/07 23:39:38 ahoka Exp $
+$NetBSD: patch-bktr,v 1.2 2009/06/12 16:25:34 ahoka Exp $
 
---- libavdevice/bktr.c.orig	2008-06-03 18:20:54.000000000 +0200
+--- libavdevice/bktr.c.orig	2009-01-19 16:46:40.000000000 +0100
 +++ libavdevice/bktr.c
-@@ -31,7 +31,7 @@
- #elif defined (HAVE_MACHINE_IOCTL_METEOR_H) && defined (HAVE_MACHINE_IOCTL_BT848_H)
- # include <machine/ioctl_meteor.h>
- # include <machine/ioctl_bt848.h>
--#elif defined (HAVE_DEV_VIDEO_METEOR_IOCTL_METEOR_H) && defined (HAVE_DEV_VIDEO_METEOR_IOCTL_BT848_H)
-+#elif defined (HAVE_DEV_VIDEO_METEOR_IOCTL_METEOR_H) && defined (HAVE_DEV_VIDEO_BKTR_IOCTL_BT848_H)
- # include <dev/video/meteor/ioctl_meteor.h>
- # include <dev/video/bktr/ioctl_bt848.h>
- #elif HAVE_DEV_IC_BT8XX_H
+@@ -24,7 +24,11 @@
+  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+  */
+ 
++/* u_short, u_int */
+ #define _BSD_SOURCE 1
++#ifdef __NetBSD__
++# define _NETBSD_SOURCE 1
++#endif
+ #include "libavformat/avformat.h"
+ #if HAVE_DEV_BKTR_IOCTL_METEOR_H && HAVE_DEV_BKTR_IOCTL_BT848_H
+ # include <dev/bktr/ioctl_meteor.h>
