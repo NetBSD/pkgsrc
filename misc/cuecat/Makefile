@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/12 22:52:03 zafer Exp $
 #
 
 DISTNAME=	cuecat-0.2.1
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	ftp://opensource.lineo.com/drivers/ \
-		http://www.flyingbuttmonkeys.com/mirrors/oss.lineo.com/drivers/
+MASTER_SITES=	http://www.blort.org/cuecat/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://opensource.lineo.com/cuecat/cuecat_driver/
