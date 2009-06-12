@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/28 12:32:15 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2009/06/12 16:16:54 ahoka Exp $
 
-SHA1 (ffmpegthumbnailer-1.3.0.tar.gz) = 8b29dde56dece30ebc351611ea40fcff83e1d317
-RMD160 (ffmpegthumbnailer-1.3.0.tar.gz) = 343ecee23543beb23030655942d381e390010454
-Size (ffmpegthumbnailer-1.3.0.tar.gz) = 322063 bytes
+SHA1 (ffmpegthumbnailer-1.5.3.tar.gz) = b1c10535b835ad6f9b759b25945e7a5710f63a31
+RMD160 (ffmpegthumbnailer-1.5.3.tar.gz) = e8a124243bbd62f91a9d2c110d0e605af495536f
+Size (ffmpegthumbnailer-1.5.3.tar.gz) = 329945 bytes
