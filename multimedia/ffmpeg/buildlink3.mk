@@ -1,22 +1,18 @@
-# $NetBSD: buildlink3.mk,v 1.12 2009/03/20 19:25:02 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2009/06/12 16:39:49 ahoka Exp $
 
 BUILDLINK_TREE+=	ffmpeg
 
 .if !defined(FFMPEG_BUILDLINK3_MK)
 FFMPEG_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=20080727
-BUILDLINK_ABI_DEPENDS.ffmpeg?=	ffmpeg>=20080727nb6
+BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=20090611
+BUILDLINK_ABI_DEPENDS.ffmpeg?=	ffmpeg>=20090611
 BUILDLINK_PKGSRCDIR.ffmpeg?=	../../multimedia/ffmpeg
 
 pkgbase := ffmpeg
 .  include "../../mk/pkg-build-options.mk"
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-.if !empty(PKG_BUILD_OPTIONS.ffmpeg:Msdl)
-.  include "../../devel/SDL/buildlink3.mk"
-.endif
 
 .if !empty(PKG_BUILD_OPTIONS.ffmpeg:Mtheora)
 .  include "../../multimedia/libtheora/buildlink3.mk"
