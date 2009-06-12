@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:58:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:38 rillig Exp $
 bin/par
-man/man1/par.1.gz
+man/man1/par.1

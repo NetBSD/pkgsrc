@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:55 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:37 rillig Exp $
 bin/dotfile
 bin/${PKGNAME}
-man/man1/dotfile.1.gz
+man/man1/dotfile.1
 share/${PKGNAME}/Generator/bitmaps/Up
 share/${PKGNAME}/Generator/bitmaps/ComboBox.xbm
 share/${PKGNAME}/Generator/bitmaps/Down

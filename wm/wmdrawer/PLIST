@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/27 14:39:33 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:39 rillig Exp $
 bin/wmdrawer
 share/doc/wmdrawer/AUTHORS
 share/doc/wmdrawer/COPYING
 share/doc/wmdrawer/ChangeLog
 share/doc/wmdrawer/README
 share/doc/wmdrawer/TODO
-man/man1/wmdrawer.1x.gz
+man/man1/wmdrawer.1x
 share/examples/wmdrawer/wmdrawerrc.example
 @dirrm share/examples/wmdrawer
 @dirrm share/doc/wmdrawer

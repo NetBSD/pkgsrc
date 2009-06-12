@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:40 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:36 rillig Exp $
 bin/chord
 bin/a2crd
-man/man1/chord.1.gz
-man/man1/a2crd.1.gz
+man/man1/chord.1
+man/man1/a2crd.1

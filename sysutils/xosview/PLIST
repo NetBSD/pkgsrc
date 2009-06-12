@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/12 19:09:38 rillig Exp $
 bin/xosview
 lib/X11/app-defaults/XOsview
-man/man1/xosview.1.gz
+man/man1/xosview.1
