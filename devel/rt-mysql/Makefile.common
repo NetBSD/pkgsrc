@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.16 2007/09/11 22:21:12 rillig Exp $
+# $NetBSD: Makefile.common,v 1.17 2009/06/13 06:46:48 rillig Exp $
+# used by devel/rt-mysql/Makefile
+# used by devel/rt-pgsql/Makefile
 
 DISTNAME=	rt-2-0-15
 CATEGORIES=	devel

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/04/24 17:15:22 sno Exp $
+# $NetBSD: Makefile,v 1.5 2009/06/13 06:46:47 rillig Exp $
 
 DISTNAME=	Test-MockObject-1.09
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,7 @@ PERL5_MODULE_TYPE=	Module::Build
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Test/MockObject/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

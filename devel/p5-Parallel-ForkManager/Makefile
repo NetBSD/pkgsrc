@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/09 17:23:20 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/13 06:46:46 rillig Exp $
 #
 
 DISTNAME=	Parallel-ForkManager-0.7.5
@@ -11,7 +11,7 @@ HOMEPAGE=	http://search.cpan.org/~dlux/Parallel-ForkManager-0.7.5/
 COMMENT=	Simple parallel processing fork manager
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-REPLACE_PERL+= 		*/*.pl
+REPLACE_PERL+=		*/*.pl
 
 PERL5_PACKLIST=	auto/Parallel/ForkManager/.packlist
 

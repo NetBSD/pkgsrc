@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/11 13:27:28 he Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/13 06:46:45 rillig Exp $
 #
 
 DISTNAME=	MooseX-Types-Path-Class-0.05
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MooseX/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MooseX-Types-Path-Class/
-COMMENT=	A Path::Class type library for Moose  
+COMMENT=	A Path::Class type library for Moose
 
 DEPENDS+=	p5-Class-MOP>=0:../../devel/p5-Class-MOP
 DEPENDS+=	p5-Moose>=0.39:../../devel/p5-Moose

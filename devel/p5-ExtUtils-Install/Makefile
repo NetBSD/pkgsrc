@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/12/20 22:07:45 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/13 06:46:45 rillig Exp $
 
 DISTNAME=	ExtUtils-Install-1.52
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/ExtUtils/Install/.packlist
 PERL5_MODULE_TYPE=	Module::Build
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

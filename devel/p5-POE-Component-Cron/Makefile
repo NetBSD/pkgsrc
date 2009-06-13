@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/17 15:03:16 abs Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/13 06:46:46 rillig Exp $
 
 DISTNAME=	POE-Component-Cron-0.019
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,8 @@ COMMENT=	Schedule POE Events using a cron spec
 
 DEPENDS+=	p5-POE>=0:../../devel/p5-POE
 DEPENDS+=	p5-DateTime-Event-Cron>=0:../../time/p5-DateTime-Event-Cron
-DEPENDS+=       p5-DateTime-Event-Random>=0:../../time/p5-DateTime-Event-Random
-DEPENDS+=       p5-DateTime>=0:../../time/p5-DateTime
+DEPENDS+=	p5-DateTime-Event-Random>=0:../../time/p5-DateTime-Event-Random
+DEPENDS+=	p5-DateTime>=0:../../time/p5-DateTime
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/POE/Component/Cron/.packlist

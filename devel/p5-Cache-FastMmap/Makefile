@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/17 18:03:39 sno Exp $
+# $NetBSD: Makefile,v 1.6 2009/06/13 06:46:43 rillig Exp $
 
 DISTNAME=	Cache-FastMmap-1.30
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2 # OR artistic
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Cache/FastMmap/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

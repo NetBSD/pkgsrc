@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2009/05/19 08:59:09 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2009/06/13 06:46:42 rillig Exp $
 
 DISTNAME=	gnustep-make-2.0.8
 PKGREVISION=	2
@@ -28,7 +28,7 @@ CONF_FILES+=		${PREFIX}/share/examples/GNUstep/GNUstep.conf \
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "pth")
-PTHREAD_LIBS+=          -lpth
+PTHREAD_LIBS+=		-lpth
 .endif
 
 CONFIGURE_ARGS+=	--with-thread-lib=${PTHREAD_LIBS:Q}

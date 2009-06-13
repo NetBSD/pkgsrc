@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/11 13:42:03 he Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/13 06:46:47 rillig Exp $
 
 DISTNAME=	Test-TempDir-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -21,7 +21,7 @@ DEPENDS+=	p5-Test-use-ok>=0:../../devel/p5-Test-use-ok
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/TempDir/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

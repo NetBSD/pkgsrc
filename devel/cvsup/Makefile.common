@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.12 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/06/13 06:46:41 rillig Exp $
+# used by devel/cvsup/Makefile
+# used by devel/cvsup-gui/Makefile
 
 DISTNAME=	cvsup-snap-16.1h
 CATEGORIES=	devel net scm

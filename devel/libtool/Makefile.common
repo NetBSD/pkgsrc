@@ -1,4 +1,7 @@
-# $NetBSD: Makefile.common,v 1.75 2009/05/19 08:59:10 wiz Exp $
+# $NetBSD: Makefile.common,v 1.76 2009/06/13 06:46:43 rillig Exp $
+# used by devel/libltdl/Makefile
+# used by devel/libtool-base/Makefile
+# used by devel/libtool-info/Makefile
 
 ###########################################################################
 ###########################################################################

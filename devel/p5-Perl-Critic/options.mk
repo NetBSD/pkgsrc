@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2009/03/10 17:59:46 sno Exp $
+# $NetBSD: options.mk,v 1.2 2009/06/13 06:46:46 rillig Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.p5-Perl-Critic
-PKG_SUPPORTED_OPTIONS=  file-homedir file-which perl-tidy pod-spell readonly-xs regexp-parser
-PKG_SUGGESTED_OPTIONS=  pod-spell readonly-xs regexp-parser
+PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Perl-Critic
+PKG_SUPPORTED_OPTIONS=	file-homedir file-which perl-tidy pod-spell readonly-xs regexp-parser
+PKG_SUGGESTED_OPTIONS=	pod-spell readonly-xs regexp-parser
 
 .include "../../mk/bsd.options.mk"
 
