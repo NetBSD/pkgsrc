@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/15 20:39:42 markd Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/13 11:55:51 hasso Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -11,6 +11,7 @@ CONFIGURE_ARGS+=	-L${QTDIR}/lib
 BUILD_QT4=		yes
 
 do-build:
+	cd ${WRKSRC}/src/tools/bootstrap && env ${MAKE_ENV} ${GMAKE}
 	cd ${WRKSRC}/src/tools/moc && env ${MAKE_ENV} ${GMAKE}
 	cd ${WRKSRC}/src/plugins/sqldrivers/mysql && env ${MAKE_ENV} ${GMAKE}
 

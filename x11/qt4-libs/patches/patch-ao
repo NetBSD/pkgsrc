@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.5 2008/10/26 14:02:33 adam Exp $
+$NetBSD: patch-ao,v 1.6 2009/06/13 11:55:51 hasso Exp $
 
---- src/corelib/codecs/qiconvcodec.cpp.orig	2008-09-27 10:58:46.000000000 +0200
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2009-02-25 22:09:21.000000000 +0100
 +++ src/corelib/codecs/qiconvcodec.cpp
-@@ -44,9 +44,14 @@
+@@ -50,9 +50,14 @@
  #include <stdio.h>
  #include <dlfcn.h>
  
@@ -18,7 +18,7 @@ $NetBSD: patch-ao,v 1.5 2008/10/26 14:02:33 adam Exp $
  #  include <langinfo.h>
  #endif
  
-@@ -63,6 +68,9 @@
+@@ -69,6 +74,9 @@
  #  else
  #    define UTF16 "UTF-16LE"
  #  endif
@@ -28,43 +28,31 @@ $NetBSD: patch-ao,v 1.5 2008/10/26 14:02:33 adam Exp $
  #else
  #  define UTF16 "UTF-16"
  #endif
-@@ -146,7 +154,7 @@ QString QIconvCodec::convertToUnicode(co
-     QByteArray ba;
-     size_t outBytesLeft = len * 2 + 2;
-     ba.resize(outBytesLeft);
+@@ -218,7 +226,7 @@ QString QIconvCodec::convertToUnicode(co
+     IconvState *state = *pstate;
+     size_t inBytesLeft = len;
+     // best case assumption, each byte is converted into one UTF-16 character, plus 2 bytes for the BOM
 -#ifdef GNU_LIBICONV
 +#if defined(GNU_LIBICONV) || defined(__NetBSD__)
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
-@@ -206,7 +214,7 @@ QByteArray QIconvCodec::convertFromUnico
-     ba.resize(outBytesLeft);
-     char *outBytes = ba.data();
+@@ -306,7 +314,7 @@ QByteArray QIconvCodec::convertFromUnico
+     char *outBytes;
+     size_t inBytesLeft;
  
 -#if defined(GNU_LIBICONV)
 +#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     const char *inBytes;
+     const char **inBytesPtr = const_cast<const char **>(&inBytes);
  #else
-     char *inBytes;
-@@ -216,7 +224,7 @@ QByteArray QIconvCodec::convertFromUnico
- #if !defined(NO_BOM)
-     // give iconv() a BOM
-     QChar bom[] = { QChar(QChar::ByteOrderMark) };
--#ifdef GNU_LIBICONV
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     // GNU doesn't disagree with POSIX :/
-     inBytes = reinterpret_cast<const char *>(bom);
+     char **inBytesPtr = &inBytes;
+@@ -454,11 +462,13 @@ iconv_t QIconvCodec::createIconv_t(const
+     static const char empty_codeset[] = "";
+     const char *codeset = empty_codeset;
+     cd = iconv_open(to ? to : codeset, from ? from : codeset);
++#elif defined(__NetBSD)
++    const char *codeset = 0;
  #else
-@@ -230,7 +238,7 @@ QByteArray QIconvCodec::convertFromUnico
- #endif // NO_BOM
- 
-     // now feed iconv() the real data
--#ifdef GNU_LIBICONV
-+#if defined(GNU_LIBICONV) || defined(__NetBSD__)
-     // GNU doesn't disagree with POSIX :/
-     inBytes = reinterpret_cast<const char *>(uc);
- #else
-@@ -296,7 +304,7 @@ iconv_t QIconvCodec::createIconv_t(const
      char *codeset = 0;
  #endif
  
