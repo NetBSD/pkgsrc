@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2320 2009/06/13 13:17:42 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2321 2009/06/13 13:49:06 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3117,3 +3117,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated x11/py-qt4 to 4.5 [hasso 2009-06-13]
 	Updated net/net6 to 1.3.9 [hasso 2009-06-13]
 	Updated chat/loudmouth to 1.4.3nb1 [ahoka 2009-06-13]
+	Updated lang/mono to 2.4nb2 [ahoka 2009-06-13]
