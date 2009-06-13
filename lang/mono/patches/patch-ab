@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.17 2009/04/28 10:31:58 hasso Exp $
+$NetBSD: patch-ab,v 1.18 2009/06/13 13:41:53 ahoka Exp $
 
---- configure.orig	2009-03-13 16:51:11 +0200
-+++ configure	2009-04-27 12:56:28 +0300
+--- configure.orig	2009-03-13 15:51:11.000000000 +0100
++++ configure
 @@ -2939,11 +2939,11 @@ _ACEOF
  		CPPFLAGS="$CPPFLAGS -DPLATFORM_BSD"
  		libmono_ldflags="-pthread"
@@ -46,12 +46,26 @@ $NetBSD: patch-ab,v 1.17 2009/04/28 10:31:58 hasso Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -40049,7 +40056,7 @@ case "$host" in
- 	LIBC="libc.so.12"
- 	INTL="libintl.so.0"
+@@ -40046,10 +40053,10 @@ case "$host" in
+ 	X11="libX11.dylib"
+ 	;;
+      *-*-*netbsd*)
+-	LIBC="libc.so.12"
+-	INTL="libintl.so.0"
++	LIBC="libc.so"
++	INTL="libintl.so"
  	;;
 -    *-*-*freebsd*)
 +    *-*-*freebsd*|*-*-*dragonfly*)
      	LIBC="libc.so"
  	INTL="libintl.so"
  	;;
+@@ -41778,6 +41785,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
