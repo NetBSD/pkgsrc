@@ -1,0 +1,22 @@
+$NetBSD: patch-av,v 1.1 2009/06/13 11:55:51 hasso Exp $
+
+--- config.tests/mac/dwarf2.test.orig	2009-03-11 15:13:41.000000000 +0100
++++ config.tests/mac/dwarf2.test
+@@ -21,7 +21,7 @@ rm -f dwarf2.c dwarf2.o
+ "$COMPILER" $WORKDIR/xcodeversion.cpp -o xcodeversion -framework Carbon;
+ ./xcodeversion
+ 
+-if [ "$?" == "1" ]; then
++if [ "$?" = "1" ]; then
+     DWARF2_SUPPORT_BROKEN=yes
+ fi
+ 
+@@ -32,7 +32,7 @@ if [ "$DWARF2_SUPPORT" != "yes" ]; then
+     [ "$VERBOSE" = "yes" ] && echo "DWARF2 debug symbols disabled."
+     exit 0
+ else
+-    if [ "$DWARF2_SUPPORT_BROKEN" == "yes" ]; then
++    if [ "$DWARF2_SUPPORT_BROKEN" = "yes" ]; then
+         [ "$VERBOSE" = "yes" ] && echo "DWARF2 debug symbols disabled."
+         exit 0
+     else

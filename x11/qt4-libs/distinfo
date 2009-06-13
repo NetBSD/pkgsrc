@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.28 2009/02/28 11:38:01 schwarz Exp $
+$NetBSD: distinfo,v 1.29 2009/06/13 11:55:51 hasso Exp $
 
-SHA1 (qt-x11-opensource-src-4.4.3.tar.bz2) = 099bcc2dfda73f093f7e80e9004114d41db40b51
-RMD160 (qt-x11-opensource-src-4.4.3.tar.bz2) = 3c73d9c549523efa0e760965c38c7876b4636861
-Size (qt-x11-opensource-src-4.4.3.tar.bz2) = 103961247 bytes
-SHA1 (patch-aa) = 7f2bd5a4052e931b1562d02eaa6a9c2966567e37
-SHA1 (patch-ab) = 0575619a679ec81a17ede2a39cdaccb938b16fcd
+SHA1 (qt-x11-opensource-src-4.5.1.tar.bz2) = 50ba9b6d2eb7056e47dc53775be509c4ff6ec015
+RMD160 (qt-x11-opensource-src-4.5.1.tar.bz2) = 702d7c6bb9787cd5602dcb8afce52bdfcfd52179
+Size (qt-x11-opensource-src-4.5.1.tar.bz2) = 114667436 bytes
+SHA1 (patch-aa) = b3a0cbdd927ef7d3e2af6a49fc87048f2cd8012c
+SHA1 (patch-ab) = b0853b2ddfa53948e91c4f93e4d089c7dd56db43
 SHA1 (patch-ac) = baab52ce87e4dcf11ae76b56851e92f58455d94b
 SHA1 (patch-ad) = bfa4b61e32b26dac23a33ab29ce68eb62d6f5fb5
 SHA1 (patch-ae) = a23a2cc4271b5613f59ab5550e9aeccca15573a9
-SHA1 (patch-af) = b43a2e4b92435f9b7a7e5b46821e2943c343a7f4
+SHA1 (patch-af) = 110abc1d7d571e09cbbbc03ba13dfff194a7367d
 SHA1 (patch-ag) = 0ae6efe5f9283a567bd069779ba36b77fa61006e
 SHA1 (patch-ah) = 62c50fe48b9ff1ce9fb757b432c8b1db7693e112
 SHA1 (patch-ai) = b15936b85b2b1946e8c9a92bf393c3d3a1fc6950
@@ -17,10 +17,10 @@ SHA1 (patch-ak) = 9aaf62149ec555f990e2216710ba5b88d532224a
 SHA1 (patch-al) = ae85006d95f8a55521219442cc642dfa4377671c
 SHA1 (patch-am) = 0d4a4f2767cad5414c8bfe4dc8485064a9be4381
 SHA1 (patch-an) = 34c50ed3a7e4e985d372b89dca9453df2f5b40e1
-SHA1 (patch-ao) = e74125f5230db3e1b339c76c06a54470dd0631db
+SHA1 (patch-ao) = 9c943f67e0c6a1a6ccf87368afc4093fb805f1b9
 SHA1 (patch-ap) = 99402ac9ef527e7fa9b1825c8e1b8a299bc4ffe7
-SHA1 (patch-aq) = 401bf595bfe3854e36b0260d24be95b712f9d6a2
+SHA1 (patch-aq) = f6d48cad9461fd40f4c54669cc275e99cdbb7a34
 SHA1 (patch-ar) = 5bc9a1d384c9a888f1295b87968a09236b48af65
-SHA1 (patch-as) = 244a3017e2780270b61ac50af000cd6fd1bb9cf5
-SHA1 (patch-at) = c8c818dcf45822c8510568bc738b819493f38b11
-SHA1 (patch-au) = 811c582bb0ad252b8b5ae91685109a7410dd662d
+SHA1 (patch-as) = 818c3d6eecab7706dde7f47b077c3c676e69d67b
+SHA1 (patch-av) = f716b571ef0f8b5c7684378a0e3772c1680c6dcf
+SHA1 (patch-ax) = 2c895f23a49be32d4605557a74ce5af34cdfc061

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/10/26 14:02:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/13 11:55:52 hasso Exp $
 lib/pkgconfig/QtAssistantClient.pc
 lib/pkgconfig/QtCLucene.pc
 lib/pkgconfig/QtDesigner.pc
@@ -152,7 +152,9 @@ qt4/mkspecs/common/mac-g++.conf
 qt4/mkspecs/common/mac-llvm.conf
 qt4/mkspecs/common/mac.conf
 qt4/mkspecs/common/qmake.conf
+qt4/mkspecs/common/qws.conf
 qt4/mkspecs/common/unix.conf
+qt4/mkspecs/common/wince.conf
 qt4/mkspecs/cygwin-g++/qmake.conf
 qt4/mkspecs/cygwin-g++/qplatformdefs.h
 qt4/mkspecs/darwin-g++/qmake.conf
@@ -170,6 +172,7 @@ qt4/mkspecs/features/designer.prf
 qt4/mkspecs/features/dll.prf
 qt4/mkspecs/features/exclusive_builds.prf
 qt4/mkspecs/features/help.prf
+qt4/mkspecs/features/include_source_dir.prf
 qt4/mkspecs/features/incredibuild_xge.prf
 qt4/mkspecs/features/lex.prf
 qt4/mkspecs/features/link_pkgconfig.prf
@@ -184,6 +187,7 @@ qt4/mkspecs/features/mac/sdk.prf
 qt4/mkspecs/features/mac/x86.prf
 qt4/mkspecs/features/mac/x86_64.prf
 qt4/mkspecs/features/moc.prf
+qt4/mkspecs/features/no_debug_info.prf
 qt4/mkspecs/features/qdbus.prf
 qt4/mkspecs/features/qmake.conf
 qt4/mkspecs/features/qt.prf
@@ -213,9 +217,11 @@ qt4/mkspecs/features/unix/x11.prf
 qt4/mkspecs/features/unix/x11inc.prf
 qt4/mkspecs/features/unix/x11lib.prf
 qt4/mkspecs/features/unix/x11sm.prf
+qt4/mkspecs/features/use_c_linker.prf
 qt4/mkspecs/features/warn_off.prf
 qt4/mkspecs/features/warn_on.prf
 qt4/mkspecs/features/win32/console.prf
+qt4/mkspecs/features/win32/default_post.prf
 qt4/mkspecs/features/win32/default_pre.prf
 qt4/mkspecs/features/win32/dumpcpp.prf
 qt4/mkspecs/features/win32/embed_manifest_dll.prf
@@ -223,7 +229,6 @@ qt4/mkspecs/features/win32/embed_manifest_exe.prf
 qt4/mkspecs/features/win32/exceptions.prf
 qt4/mkspecs/features/win32/exceptions_off.prf
 qt4/mkspecs/features/win32/opengl.prf
-qt4/mkspecs/features/win32/profiling.prf
 qt4/mkspecs/features/win32/qaxcontainer.prf
 qt4/mkspecs/features/win32/qaxserver.prf
 qt4/mkspecs/features/win32/qt_dll.prf
@@ -301,6 +306,10 @@ qt4/mkspecs/macx-g++/Info.plist.app
 qt4/mkspecs/macx-g++/Info.plist.lib
 qt4/mkspecs/macx-g++/qmake.conf
 qt4/mkspecs/macx-g++/qplatformdefs.h
+qt4/mkspecs/macx-g++42/Info.plist.app
+qt4/mkspecs/macx-g++42/Info.plist.lib
+qt4/mkspecs/macx-g++42/qmake.conf
+qt4/mkspecs/macx-g++42/qplatformdefs.h
 qt4/mkspecs/macx-icc/qmake.conf
 qt4/mkspecs/macx-icc/qplatformdefs.h
 qt4/mkspecs/macx-llvm/Info.plist.app
@@ -325,12 +334,16 @@ qt4/mkspecs/qws/freebsd-generic-g++/qmake.conf
 qt4/mkspecs/qws/freebsd-generic-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-arm-g++/qmake.conf
 qt4/mkspecs/qws/linux-arm-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-armv6-g++/qmake.conf
+qt4/mkspecs/qws/linux-armv6-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-avr32-g++/qmake.conf
 qt4/mkspecs/qws/linux-avr32-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-cellon-g++/qmake.conf
 qt4/mkspecs/qws/linux-cellon-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-dm7000-g++/qmake.conf
 qt4/mkspecs/qws/linux-dm7000-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-dm800-g++/qmake.conf
+qt4/mkspecs/qws/linux-dm800-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-generic-g++-32/qmake.conf
 qt4/mkspecs/qws/linux-generic-g++-32/qplatformdefs.h
 qt4/mkspecs/qws/linux-generic-g++/qmake.conf
@@ -341,6 +354,12 @@ qt4/mkspecs/qws/linux-lsb-g++/qmake.conf
 qt4/mkspecs/qws/linux-lsb-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-mips-g++/qmake.conf
 qt4/mkspecs/qws/linux-mips-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-ppc-g++/qmake.conf
+qt4/mkspecs/qws/linux-ppc-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-sh-g++/qmake.conf
+qt4/mkspecs/qws/linux-sh-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-sh4al-g++/qmake.conf
+qt4/mkspecs/qws/linux-sh4al-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-sharp-g++/qmake.conf
 qt4/mkspecs/qws/linux-sharp-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-x86-g++/qmake.conf
@@ -374,8 +393,12 @@ qt4/mkspecs/unixware-cc/qmake.conf
 qt4/mkspecs/unixware-cc/qplatformdefs.h
 qt4/mkspecs/unixware-g++/qmake.conf
 qt4/mkspecs/unixware-g++/qplatformdefs.h
+qt4/mkspecs/win32-borland/qmake.conf
+qt4/mkspecs/win32-borland/qplatformdefs.h
 qt4/mkspecs/win32-g++/qmake.conf
 qt4/mkspecs/win32-g++/qplatformdefs.h
+qt4/mkspecs/win32-icc/qmake.conf
+qt4/mkspecs/win32-icc/qplatformdefs.h
 qt4/mkspecs/win32-msvc.net/qmake.conf
 qt4/mkspecs/win32-msvc.net/qplatformdefs.h
 qt4/mkspecs/win32-msvc/features/incremental.prf
@@ -390,12 +413,16 @@ qt4/mkspecs/win32-msvc2005/qmake.conf
 qt4/mkspecs/win32-msvc2005/qplatformdefs.h
 qt4/mkspecs/win32-msvc2008/qmake.conf
 qt4/mkspecs/win32-msvc2008/qplatformdefs.h
+qt4/mkspecs/wince50standard-armv4i-msvc2005/default_post.prf
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-armv4i-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-armv4i-msvc2008/default_post.prf
 qt4/mkspecs/wince50standard-armv4i-msvc2008/qmake.conf
 qt4/mkspecs/wince50standard-armv4i-msvc2008/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsii-msvc2005/default_post.prf
 qt4/mkspecs/wince50standard-mipsii-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-mipsii-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsii-msvc2008/default_post.prf
 qt4/mkspecs/wince50standard-mipsii-msvc2008/qmake.conf
 qt4/mkspecs/wince50standard-mipsii-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince50standard-mipsiv-msvc2005/qmake.conf
@@ -406,26 +433,36 @@ qt4/mkspecs/wince50standard-sh4-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-sh4-msvc2005/qplatformdefs.h
 qt4/mkspecs/wince50standard-sh4-msvc2008/qmake.conf
 qt4/mkspecs/wince50standard-sh4-msvc2008/qplatformdefs.h
+qt4/mkspecs/wince50standard-x86-msvc2005/default_post.prf
 qt4/mkspecs/wince50standard-x86-msvc2005/qmake.conf
 qt4/mkspecs/wince50standard-x86-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-x86-msvc2008/default_post.prf
 qt4/mkspecs/wince50standard-x86-msvc2008/qmake.conf
 qt4/mkspecs/wince50standard-x86-msvc2008/qplatformdefs.h
 qt4/mkspecs/wince60standard-armv4i-msvc2005/qmake.conf
 qt4/mkspecs/wince60standard-armv4i-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50pocket-msvc2005/default_post.prf
 qt4/mkspecs/wincewm50pocket-msvc2005/qmake.conf
 qt4/mkspecs/wincewm50pocket-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50pocket-msvc2008/default_post.prf
 qt4/mkspecs/wincewm50pocket-msvc2008/qmake.conf
 qt4/mkspecs/wincewm50pocket-msvc2008/qplatformdefs.h
+qt4/mkspecs/wincewm50smart-msvc2005/default_post.prf
 qt4/mkspecs/wincewm50smart-msvc2005/qmake.conf
 qt4/mkspecs/wincewm50smart-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50smart-msvc2008/default_post.prf
 qt4/mkspecs/wincewm50smart-msvc2008/qmake.conf
 qt4/mkspecs/wincewm50smart-msvc2008/qplatformdefs.h
+qt4/mkspecs/wincewm60professional-msvc2005/default_post.prf
 qt4/mkspecs/wincewm60professional-msvc2005/qmake.conf
 qt4/mkspecs/wincewm60professional-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60professional-msvc2008/default_post.prf
 qt4/mkspecs/wincewm60professional-msvc2008/qmake.conf
 qt4/mkspecs/wincewm60professional-msvc2008/qplatformdefs.h
+qt4/mkspecs/wincewm60standard-msvc2005/default_post.prf
 qt4/mkspecs/wincewm60standard-msvc2005/qmake.conf
 qt4/mkspecs/wincewm60standard-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60standard-msvc2008/default_post.prf
 qt4/mkspecs/wincewm60standard-msvc2008/qmake.conf
 qt4/mkspecs/wincewm60standard-msvc2008/qplatformdefs.h
 qt4/phrasebooks/danish.qph
@@ -469,7 +506,9 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/win32-msvc/features
 @dirrm qt4/mkspecs/win32-msvc.net
 @dirrm qt4/mkspecs/win32-msvc
+@dirrm qt4/mkspecs/win32-icc
 @dirrm qt4/mkspecs/win32-g++
+@dirrm qt4/mkspecs/win32-borland
 @dirrm qt4/mkspecs/unixware-g++
 @dirrm qt4/mkspecs/unixware-cc
 @dirrm qt4/mkspecs/tru64-g++
@@ -486,14 +525,19 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/qws/linux-x86_64-g++
 @dirrm qt4/mkspecs/qws/linux-x86-g++
 @dirrm qt4/mkspecs/qws/linux-sharp-g++
+@dirrm qt4/mkspecs/qws/linux-sh4al-g++
+@dirrm qt4/mkspecs/qws/linux-sh-g++
+@dirrm qt4/mkspecs/qws/linux-ppc-g++
 @dirrm qt4/mkspecs/qws/linux-mips-g++
 @dirrm qt4/mkspecs/qws/linux-lsb-g++
 @dirrm qt4/mkspecs/qws/linux-ipaq-g++
 @dirrm qt4/mkspecs/qws/linux-generic-g++-32
 @dirrm qt4/mkspecs/qws/linux-generic-g++
+@dirrm qt4/mkspecs/qws/linux-dm800-g++
 @dirrm qt4/mkspecs/qws/linux-dm7000-g++
 @dirrm qt4/mkspecs/qws/linux-cellon-g++
 @dirrm qt4/mkspecs/qws/linux-avr32-g++
+@dirrm qt4/mkspecs/qws/linux-armv6-g++
 @dirrm qt4/mkspecs/qws/linux-arm-g++
 @dirrm qt4/mkspecs/qws/freebsd-generic-g++
 @dirrm qt4/mkspecs/qws
@@ -504,6 +548,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/macx-pbuilder
 @dirrm qt4/mkspecs/macx-llvm
 @dirrm qt4/mkspecs/macx-icc
+@dirrm qt4/mkspecs/macx-g++42
 @dirrm qt4/mkspecs/macx-g++
 @dirrm qt4/mkspecs/lynxos-g++
 @dirrm qt4/mkspecs/linux-pgcc
