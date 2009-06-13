@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2009/06/13 12:28:44 hasso Exp $
+
+--- configure.ac.orig	2009-06-12 19:09:16 +0300
++++ configure.ac	2009-06-12 19:09:53 +0300
+@@ -73,17 +73,7 @@ AM_CONDITIONAL(WIN32, test x$win32 = xtr
+ 
+ # Checks for libraries.
+ PKG_CHECK_MODULES([libnet6], [sigc++-2.0])
+-
+-AM_PATH_LIBGNUTLS( 1.0.0,, AC_MSG_ERROR([[
+-***
+-*** libgnutls was not found. You may want to get it by using the
+-*** package manager of your distribution or by compiling the source
+-*** from ftp://ftp.gnutls.org/pub/gnutls/. This dependency is
+-*** now mandatory.
+-]]))
+-addlibs="$addlibs $LIBGNUTLS_LIBS"
+-addcflags="$LIBGNUTLS_CFLAGS"
+-AC_SUBST(addcflags)
++PKG_CHECK_MODULES([LIBGNUTLS], [gnutls])
+ 
+ # gettext / i18n
+ AM_GNU_GETTEXT([external])
