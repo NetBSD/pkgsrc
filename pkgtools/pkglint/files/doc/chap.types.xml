@@ -1,4 +1,4 @@
-<!-- $NetBSD: chap.types.xml,v 1.16 2009/04/26 11:27:42 rillig Exp $ -->
+<!-- $NetBSD: chap.types.xml,v 1.17 2009/06/13 06:33:35 rillig Exp $ -->
 
 <chapter id="types">
 <title>The &pkglint; type system</title>
@@ -275,6 +275,11 @@
 	misnomer. <varname>DIST_SUFX</varname> or
 	<varname>DIST_SUFFIX</varname> would be more appropriate.</para>
 	</listitem></varlistentry>
+
+	<varlistentry><term><literal><type>EmulPlatform</type></literal></term>
+	<listitem><para>An emulated platform consists of the operating
+	system (in lowercase, as opposed to <type>PlatformTriple</type>)
+	and the hardware architecture.</para></listitem></varlistentry>
 
 	<varlistentry><term><literal><type>Filename</type></literal></term>
 	<listitem><para>A filename, as defined in <ulink
