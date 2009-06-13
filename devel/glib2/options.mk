@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2009/03/15 21:48:05 jmcneill Exp $
+# $NetBSD: options.mk,v 1.6 2009/06/13 06:46:42 rillig Exp $
 #
 # This file is *not* included for HPUX and OSF1, as they don't have
-# a working FAM implementation. 
+# a working FAM implementation.
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.glib2
 PKG_SUPPORTED_OPTIONS=	fam

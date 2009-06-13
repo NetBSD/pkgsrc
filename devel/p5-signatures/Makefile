@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/03 14:24:57 abs Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/13 06:46:48 rillig Exp $
 
 DISTNAME=	signatures-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	p5-B-Hooks-OP-PPAddr>=0:../../devel/p5-B-Hooks-OP-PPAddr
 DEPENDS+=	p5-B-Hooks-Parser>=0.07:../../devel/p5-B-Hooks-Parser
 DEPENDS+=	p5-B-Hooks-EndOfScope>=0.08:../../devel/p5-B-Hooks-EndOfScope
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/p5-B-Hooks-OP-Check/buildlink3.mk"
 .include "../../devel/p5-B-Hooks-OP-PPAddr/buildlink3.mk"

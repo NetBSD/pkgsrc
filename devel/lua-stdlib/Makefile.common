@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/12 01:45:01 minskim Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/06/13 06:46:43 rillig Exp $
 # used by devel/lua-stdlib-doc/Makefile
+# used by devel/lua-stdlib/Makefile
 
 DISTNAME=		stdlib-8
 CATEGORIES=		devel
