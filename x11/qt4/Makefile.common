@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.15 2008/10/26 14:02:33 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2009/06/13 11:55:50 hasso Exp $
 # used by x11/qt4-libs/Makefile.common
 # used by x11/qt4-tools/Makefile
 
-QTVERSION=	4.4.3
+QTVERSION=	4.5.1
 
 MAINTAINER?=	adam@NetBSD.org
 HOMEPAGE=	http://www.trolltech.com/products/qt/
