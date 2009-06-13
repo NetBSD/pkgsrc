@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2008/12/16 13:46:59 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/06/13 11:55:51 hasso Exp $
 # used by x11/qt4-libs/Makefile
 
 DISTNAME=	qt-x11-opensource-src-${QTVERSION}
 CATEGORIES=	x11
-MASTER_SITES=	ftp://ftp.trolltech.com/qt/source/ \
-		ftp://ftp.bero.org/pub/qt/source/
+MASTER_SITES=	ftp://ftp.qtsoftware.com/qt/source/
 EXTRACT_SUFX=	.tar.bz2
 
 .include "../../x11/qt4/Makefile.common"
