@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2006/10/12 18:30:22 gdt Exp $
+# $NetBSD: Makefile.common,v 1.2 2009/06/13 06:46:42 rillig Exp $
+# used by devel/py-fann/Makefile
 
 FANNVERSION=		2.1.0
 FANNDATE=		20061012

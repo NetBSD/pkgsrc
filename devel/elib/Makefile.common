@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.6 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.7 2009/06/13 06:46:41 rillig Exp $
 #
+# used by devel/emacs20-elib/Makefile
 
 DISTNAME=	elib-1.0
 CATEGORIES=	devel

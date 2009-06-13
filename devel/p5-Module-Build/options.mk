@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.2 2009/05/06 06:55:50 sno Exp $
+# $NetBSD: options.mk,v 1.3 2009/06/13 06:46:45 rillig Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.p5-Module-Build
+PKG_OPTIONS_VAR=	PKG_OPTIONS.p5-Module-Build
 
-PKG_SUPPORTED_OPTIONS=  archive-tar module-signature pod-readme
+PKG_SUPPORTED_OPTIONS=	archive-tar module-signature pod-readme
 PKG_SUPPORTED_OPTIONS+=	extutils-parsexs extutils-cbuilder extutils-install
 PKG_SUPPORTED_OPTIONS+=	yaml version
-PKG_SUGGESTED_OPTIONS=  archive-tar extutils-cbuilder extutils-parsexs
+PKG_SUGGESTED_OPTIONS=	archive-tar extutils-cbuilder extutils-parsexs
 PKG_SUGGESTED_OPTIONS+=	pod-readme yaml version
 
 .include "../../mk/bsd.options.mk"

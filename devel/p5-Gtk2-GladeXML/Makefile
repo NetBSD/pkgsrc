@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:55 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/13 06:46:45 rillig Exp $
 
 DISTNAME=		Gtk2-GladeXML-1.007
 PKGNAME=		p5-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=		Create user interfaces directly from Glade XML files
 
 PERL5_PACKLIST=		auto/Gtk2/GladeXML/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/p5-glib2/buildlink3.mk"

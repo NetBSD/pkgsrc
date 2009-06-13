@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:01 he Exp $
+# $NetBSD: Makefile,v 1.4 2009/06/13 06:46:47 rillig Exp $
 
 DISTNAME=	Test-Differences-0.4801
 PKGNAME=	p5-${DISTNAME:S/4801/48.01/}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?Test::Differences
 COMMENT=	Test strings and data structures and show differences if not ok
 
-DEPENDS+=      	p5-Text-Diff>=0.34:../../textproc/p5-Text-Diff
+DEPENDS+=	p5-Text-Diff>=0.34:../../textproc/p5-Text-Diff
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Test/Differences/.packlist

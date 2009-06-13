@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:09 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/13 06:46:47 rillig Exp $
 
 DISTNAME=	Tie-RefHash-1.38
 PKGNAME=	p5-${DISTNAME}
@@ -13,7 +13,7 @@ COMMENT=	Use references as hash keys
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Tie/RefHash/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
