@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.812 2009/05/26 21:40:42 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.813 2009/06/13 06:30:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4978,6 +4978,30 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value eq ".tar.gz") {
 			$line->log_note("${varname} is \".tar.gz\" by default, so this definition may be redundant.");
 		}
+
+	} elsif ($type eq "EmulPlatform") {
+		if ($value =~ m"^(\w+)-(\w+)$") {
+			my ($opsys, $arch) = ($1, $2);
+
+			if ($opsys !~ m"^(?:bsdos|darwin|dragonfly|freebsd|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos)$") {
+				$line->log_warning("Unknown operating system: ${opsys}");
+			}
+			# no check for $os_version
+			if ($arch !~ m"^(?:i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$") {
+				$line->log_warning("Unknown hardware architecture: ${arch}");
+			}
+
+		} else {
+			$line->log_warning("\"${value}\" is not a valid emulation platform.");
+			$line->explain_warning(
+"An emulation platform has the form <OPSYS>-<MACHINE_ARCH>.",
+"OPSYS is the lower-case name of the operating system, and MACHINE_ARCH",
+"is the hardware architecture.",
+"",
+"Examples: linux-i386, irix-mipsel.");
+		}
+
+
 
 	} elsif ($type eq "Filename") {
 		if ($value_novar =~ m"/") {
