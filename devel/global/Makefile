@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:12 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/06/13 06:46:42 rillig Exp $
 #
 
 DISTNAME=	global-5.4
@@ -18,6 +18,6 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 INFO_FILES=		YES
 USE_TOOLS+=		perl:run
 
-CONF_FILES=     ${PREFIX}/share/gtags/gtags.conf ${PKG_SYSCONFDIR}/gtags.conf
+CONF_FILES=	${PREFIX}/share/gtags/gtags.conf ${PKG_SYSCONFDIR}/gtags.conf
 
 .include "../../mk/bsd.pkg.mk"

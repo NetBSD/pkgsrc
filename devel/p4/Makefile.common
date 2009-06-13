@@ -1,5 +1,9 @@
-# $NetBSD: Makefile.common,v 1.12 2007/08/29 16:58:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.13 2009/06/13 06:46:43 rillig Exp $
 #
+# used by devel/p4/Makefile
+# used by devel/p4-docs/Makefile
+# used by devel/p4d/Makefile
+# used by devel/p4web/Makefile
 
 P4_VERS=	2006.1
 PKGNAME=	${DISTNAME}-${P4_VERS}

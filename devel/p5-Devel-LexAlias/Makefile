@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:52 he Exp $
+# $NetBSD: Makefile,v 1.3 2009/06/13 06:46:44 rillig Exp $
 
 DISTNAME=	Devel-LexAlias-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/perldoc?Devel::LexAlias
 COMMENT=	Alias lexical variables
 
-DEPENDS+=       p5-Devel-Caller>0.03:../../devel/p5-Devel-Caller
+DEPENDS+=	p5-Devel-Caller>0.03:../../devel/p5-Devel-Caller
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST= auto/Devel/LexAlias/.packlist
