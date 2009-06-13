@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8185 2009/06/12 22:00:20 zafer Exp $
+$NetBSD: TODO,v 1.8186 2009/06/13 08:15:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,14 +421,13 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o audacious-plugins-2.0.1
 	o autoconvert-0.3.16
 	o autogen-5.9.7
-	o avahi-0.6.25
 	o avcheck-0.91
 	o avl-2.0.2a
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o awesome-3.3
-	o babl-0.1.0
+	o babl-0.1.0 [wait for gegl-0.1.0]
 	o baci-20040415
 	o balance-3.42
 	o bbdb-2.35
@@ -444,7 +443,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
 	o blender-2.49
-	o bluefish-1.3.4
+	o bluefish-1.3.5
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.4
@@ -454,7 +453,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o boson-0.13
 	o botan-1.8.1
 	o byacc-20080824
-	o bzr-1.15
+	o bzr-1.15.1
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -466,13 +465,12 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cdif-1.19
 	o cdlabelgen-4.1.0
 	o cdparanoia-3.0.10.2
-	o cdrtools-2.01.01alpha60
 	o cfitsio-3181
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
 	o chemtool-1.6.11
-	o cherokee-0.99.14
+	o cherokee-0.99.16
 	o chicken-4.0.0
 	o cinepaint-0.23
 	o cint-5.16
@@ -497,8 +495,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o cryptopp-5.6.0
 	o cssc-1.2.0
 	o cuetools-1.3.1
-	o curl-7.19.5
-	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
 	o cvs2svn-2.2.0
 	o cvsd-1.0.16
@@ -526,7 +522,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o dirac-1.0.2
 	o dircproxy-devel-1.2.0.2
 	o dmenu-4.0
-	o dnsmasq-2.48
+	o dnsmasq-2.49
 	o dnstop-20070307
 	o dnstracer-1.9
 	o doxygen-1.5.9
@@ -648,7 +644,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glade3-3.6.4 [GNOME 2.26]
+	o glade3-3.6.5 [GNOME 2.26]
 	o glchess-1.0.5
 	o gle-4.2.0
 	o global-5.7.2 [pkg/39760]
@@ -671,7 +667,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o gnugo-3.8
 	o gnupg2-2.0.11
 	o gnustep-base-1.19.1
-	o gnutls-2.8.0
+	o gnutls-2.8.1
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
 	o gogo-3.11p1
@@ -751,7 +747,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irssi-0.8.13
 	o iselect-1.4.0
-	o iso-codes-3.10
 	o ispell-gaeilge-4.1
 	o ispell-german-20090107
 	o ispell-slovak-0.3.2
@@ -801,7 +796,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o leafpad-0.8.15
 	o less-429
 	o lft-2.5 [at http://pwhois.org/]
-	o libXfont-1.4.0
 	o libarchive-2.7.0
 	o libast-0.7
 	o libcanberra-0.12
@@ -825,10 +819,8 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o libgii-1.0.2
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
-	o libgpg-error-1.7
 	o libhydrogen-0.9.2
 	o libiconv-1.13
-	o libidn-1.15
 	o libjit-1.0.2
 	o libltdl-2.2.6a
 	o liblzo-2.02
@@ -916,7 +908,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o mp3blaster-3.2.3
 	o mpc-0.16
 	o mpeg4ip-1.6.1
-	o mpg123-1.7.3
+	o mpg123-1.8.0
 	o mpop-1.0.17
 	o mserv-devel-0.41
 	o msf-2.7
@@ -1097,7 +1089,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-gobject-2.18.0
 	o py-kenosis-0.96
 	o py-logging-0.4.9.6
 	o py-lxml-2.2.1
@@ -1111,7 +1102,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o py-qt3-base-3.18
 	o py-qt4-4.5
 	o py-setuptools-0.6
-	o py-sip-4.8
 	o py-sqlite2-2.5.1
 	o py-subversion-1.6.2
 	o py-sybase-0.37
@@ -1264,7 +1254,7 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ssh-askpass-1.2.4.1
 	o star-1.5
 	o statist-1.3.0
-	o stella-2.7.7
+	o stella-2.8
 	o stlport-4.6.2
 	o strace-4.5.16
 	o stratagus-2.2.2
