@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/24 08:19:11 sno Exp $
+# $NetBSD: Makefile,v 1.7 2009/06/13 06:46:44 rillig Exp $
 
 DISTNAME=	Config-Any-0.17
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	{perl>=5.10,p5-Module-Pluggable>=3.01}:../../devel/p5-Module-Pluggable
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Config/Any/.packlist
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
