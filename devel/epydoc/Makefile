@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/04/06 17:02:14 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2009/06/13 06:46:42 rillig Exp $
 
 DISTNAME=	epydoc-2.1
 PKGREVISION=	4
@@ -9,7 +9,7 @@ MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://epydoc.sourceforge.net/
 COMMENT=	Python documentation framework
 
-PKG_DESTDIR_SUPPORT=    user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
