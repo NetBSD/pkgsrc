@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/24 12:55:20 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/13 11:55:51 hasso Exp $
 lib/pkgconfig/QtDBus.pc
 qt4/bin/qdbus
 qt4/bin/qdbuscpp2xml
@@ -17,6 +17,8 @@ qt4/include/Qt/qdbusinterface.h
 qt4/include/Qt/qdbusmacros.h
 qt4/include/Qt/qdbusmessage.h
 qt4/include/Qt/qdbusmetatype.h
+qt4/include/Qt/qdbuspendingcall.h
+qt4/include/Qt/qdbuspendingreply.h
 qt4/include/Qt/qdbusreply.h
 qt4/include/Qt/qdbusserver.h
 qt4/include/QtDBus/QDBusAbstractAdaptor
@@ -30,6 +32,10 @@ qt4/include/QtDBus/QDBusInterface
 qt4/include/QtDBus/QDBusMessage
 qt4/include/QtDBus/QDBusMetaType
 qt4/include/QtDBus/QDBusObjectPath
+qt4/include/QtDBus/QDBusPendingCall
+qt4/include/QtDBus/QDBusPendingCallWatcher
+qt4/include/QtDBus/QDBusPendingReply
+qt4/include/QtDBus/QDBusPendingReplyData
 qt4/include/QtDBus/QDBusReply
 qt4/include/QtDBus/QDBusServer
 qt4/include/QtDBus/QDBusSignature
@@ -47,6 +53,8 @@ qt4/include/QtDBus/qdbusinterface.h
 qt4/include/QtDBus/qdbusmacros.h
 qt4/include/QtDBus/qdbusmessage.h
 qt4/include/QtDBus/qdbusmetatype.h
+qt4/include/QtDBus/qdbuspendingcall.h
+qt4/include/QtDBus/qdbuspendingreply.h
 qt4/include/QtDBus/qdbusreply.h
 qt4/include/QtDBus/qdbusserver.h
 qt4/lib/libQtDBus.la

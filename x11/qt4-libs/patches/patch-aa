@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.8 2008/10/26 14:02:33 adam Exp $
+$NetBSD: patch-aa,v 1.9 2009/06/13 11:55:51 hasso Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2008-09-27 10:58:43.000000000 +0200
+--- qmake/generators/unix/unixmake2.cpp.orig	2009-02-25 22:09:16.000000000 +0100
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -228,6 +228,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -232,6 +232,8 @@ UnixMakefileGenerator::writeMakeParts(QT
          if(!project->isEmpty("QMAKE_BUNDLE")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.8 2008/10/26 14:02:33 adam Exp $
          } else if(project->isEmpty("QMAKE_HPUX_SHLIB")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y.z")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
-@@ -978,8 +980,12 @@ void UnixMakefileGenerator::init2()
+@@ -992,8 +994,12 @@ void UnixMakefileGenerator::init2()
      } else if (project->isActiveConfig("staticlib")) {
          project->values("TARGET").first().prepend("lib");
          project->values("TARGET").first() += ".a";
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.8 2008/10/26 14:02:33 adam Exp $
      } else {
          project->values("TARGETA").append(project->first("DESTDIR") + "lib" + project->first("TARGET") + ".a");
          if(project->isActiveConfig("compile_libtool"))
-@@ -1430,7 +1436,7 @@ UnixMakefileGenerator::writePkgConfigFil
+@@ -1444,7 +1450,7 @@ UnixMakefileGenerator::writePkgConfigFil
              bundle = bundle.left(suffix);
          pkgConfiglibName = "-framework " + bundle + " ";
      } else {
@@ -33,4 +33,4 @@ $NetBSD: patch-aa,v 1.8 2008/10/26 14:02:33 adam Exp $
 +        pkgConfiglibDir = "-Wl,-R${libdir} -L${libdir}";
          pkgConfiglibName = "-l" + lname.left(lname.length()-Option::libtool_ext.length());
      }
-     t << pkgConfiglibDir << " " << pkgConfiglibName << " ";
+     t << pkgConfiglibDir << " " << pkgConfiglibName << " " << endl;

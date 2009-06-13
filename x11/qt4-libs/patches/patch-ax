@@ -1,0 +1,14 @@
+$NetBSD: patch-ax,v 1.1 2009/06/13 11:55:51 hasso Exp $
+
+--- src/3rdparty/webkit/JavaScriptCore/runtime/Collector.cpp.orig	2009-04-22 02:57:38 +0300
++++ src/3rdparty/webkit/JavaScriptCore/runtime/Collector.cpp	2009-05-01 19:45:48 +0300
+@@ -76,9 +76,7 @@ extern int *__libc_stack_end;
+ #include <thread.h>
+ #endif
+ 
+-#if PLATFORM(OPENBSD)
+ #include <pthread.h>
+-#endif
+ 
+ #if HAVE(PTHREAD_NP_H)
+ #include <pthread_np.h>
