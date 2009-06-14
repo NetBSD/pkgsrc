@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/22 20:04:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:06:41 joerg Exp $
 ${PLIST.opt}lib/ocaml/graphics.a
 lib/ocaml/graphics.cma
 lib/ocaml/graphics.cmi
@@ -8,5 +8,3 @@ lib/ocaml/graphicsX11.cmi
 lib/ocaml/graphicsX11.mli
 lib/ocaml/libgraphics.a
 lib/ocaml/stublibs/dllgraphics.so
-@unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}
