@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:16 joerg Exp $
 ${GEM_HOME}/cache/metaid-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/metaid.rb
 ${GEM_HOME}/specifications/metaid-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}

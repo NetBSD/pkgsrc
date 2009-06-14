@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:48:09 joerg Exp $
 share/doc/boost/boost.css
 share/doc/boost/boost.png
 share/doc/boost/index.htm
@@ -8876,5 +8876,5 @@ share/doc/boost/more/writingdoc/template/index.html
 share/doc/boost/more/writingdoc/template/overview.html
 share/doc/boost/more/writingdoc/template/rationale.html
 share/doc/boost/rst.css
-@exec ${MKDIR} %D/share/doc/boost/libs/utility/swap
-@exec ${MKDIR} %D/share/doc/boost/libs/utility/enable_if
+@pkgdir share/doc/boost/libs/utility/swap
+@pkgdir share/doc/boost/libs/utility/enable_if
