@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/10/03 01:31:12 taca Exp $
+$NetBSD: distinfo,v 1.8 2009/06/14 18:39:59 minskim Exp $
 
-SHA1 (RedCloth-4.0.4.gem) = eb34cf098d4fe1949b507d89c630ce838147bb44
-RMD160 (RedCloth-4.0.4.gem) = 2b89d818ca2e9ecf60303d8e5b24671181af39bd
-Size (RedCloth-4.0.4.gem) = 417792 bytes
+SHA1 (RedCloth-4.2.0.gem) = bbda7150e6ecb385964b6cb129ba11c694dc4ea2
+RMD160 (RedCloth-4.2.0.gem) = 83b099ec843ead17ed09a861b00eda9a3f8d2f76
+Size (RedCloth-4.2.0.gem) = 223232 bytes
