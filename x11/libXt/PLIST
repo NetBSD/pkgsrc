@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 20:50:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
 bin/makestrs
 include/X11/CallbackI.h
 include/X11/Composite.h
@@ -303,4 +303,3 @@ man/man3/XtWidgetToApplicationContext.3
 man/man3/XtWindow.3
 man/man3/XtWindowOfObject.3
 man/man3/XtWindowToWidget.3
-@comment @dirrm include/X11

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/24 21:10:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:07 joerg Exp $
 lib/tcl/BWidget-1.7.0/BWman/ArrowButton.html
 lib/tcl/BWidget-1.7.0/BWman/BWidget.html
 lib/tcl/BWidget-1.7.0/BWman/Button.html
@@ -124,9 +124,3 @@ lib/tcl/BWidget-1.7.0/utils.tcl
 lib/tcl/BWidget-1.7.0/widget.tcl
 lib/tcl/BWidget-1.7.0/wizard.tcl
 lib/tcl/BWidget-1.7.0/xpm2image.tcl
-@dirrm lib/tcl/BWidget-1.7.0/tests
-@dirrm lib/tcl/BWidget-1.7.0/lang
-@dirrm lib/tcl/BWidget-1.7.0/images
-@dirrm lib/tcl/BWidget-1.7.0/BWman
-@dirrm lib/tcl/BWidget-1.7.0/demo
-@dirrm lib/tcl/BWidget-1.7.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.noopt,v 1.1 2007/09/21 13:00:54 wiz Exp $
+@comment $NetBSD: PLIST.noopt,v 1.2 2009/06/14 18:24:57 joerg Exp $
 bin/lablgtk
 lib/ocaml/lablgtk/gBin.cmi
 lib/ocaml/lablgtk/gBin.ml
@@ -127,4 +127,3 @@ lib/ocaml/lablgtk/ml_gtk.h
 lib/ocaml/lablgtk/varcc
 lib/ocaml/lablgtk/wrappers.h
 lib/ocaml/lablgtk/xml_lexer.mli
-@dirrm lib/ocaml/lablgtk

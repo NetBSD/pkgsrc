@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/12/17 10:43:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:05 joerg Exp $
 lib/pkgconfig/Qt3Support.pc
 lib/pkgconfig/QtCore.pc
 lib/pkgconfig/QtGui.pc
@@ -33,23 +33,3 @@ qt4/plugins/imageformats/libqmng.la
 qt4/plugins/imageformats/libqsvg.la
 qt4/plugins/inputmethods/libqimsw-multi.la
 qt4/q3porting.xml
-@dirrm qt4/plugins/inputmethods
-@dirrm qt4/plugins/imageformats
-@dirrm qt4/plugins/accessible
-@dirrm qt4/plugins
-@dirrm qt4/lib
-@dirrm qt4/include/QtXml
-@dirrm qt4/include/QtWebKit
-@dirrm qt4/include/QtTest
-@dirrm qt4/include/QtSvg
-@dirrm qt4/include/QtSql
-@dirrm qt4/include/QtScript
-@dirrm qt4/include/QtOpenGL
-@dirrm qt4/include/QtNetwork
-@dirrm qt4/include/QtGui
-@dirrm qt4/include/QtCore
-@dirrm qt4/include/Qt3Support
-@dirrm qt4/include/Qt
-@dirrm qt4/include
-@dirrm qt4/bin
-@dirrm qt4

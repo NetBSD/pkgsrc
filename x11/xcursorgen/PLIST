@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/08 08:25:31 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:10 joerg Exp $
 bin/xcursorgen
 lib/X11/icons/default/index.theme
 lib/X11/icons/handhelds/cursors/08e8e1c95fe2fc01f976f1e063a24ccd
@@ -154,11 +154,3 @@ lib/X11/icons/whiteglass/cursors/ur_angle
 lib/X11/icons/whiteglass/cursors/watch
 lib/X11/icons/whiteglass/cursors/xterm
 ${IMAKE_MAN_DIR}/xcursorgen.${IMAKE_MANNEWSUFFIX}
-@dirrm lib/X11/icons/whiteglass/cursors
-@dirrm lib/X11/icons/whiteglass
-@dirrm lib/X11/icons/redglass/cursors
-@dirrm lib/X11/icons/redglass
-@dirrm lib/X11/icons/handhelds/cursors
-@dirrm lib/X11/icons/handhelds
-@dirrm lib/X11/icons/default
-@dirrm lib/X11/icons

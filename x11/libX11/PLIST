@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/06 22:37:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:24:58 joerg Exp $
 include/X11/ImUtil.h
 include/X11/XKBlib.h
 include/X11/Xcms.h
@@ -1011,67 +1011,3 @@ share/X11/locale/zh_TW.big5/XLC_LOCALE
 share/X11/locale/zh_TW/Compose
 share/X11/locale/zh_TW/XI18N_OBJS
 share/X11/locale/zh_TW/XLC_LOCALE
-@dirrm share/X11/locale/zh_TW.big5
-@dirrm share/X11/locale/zh_TW.UTF-8
-@dirrm share/X11/locale/zh_TW
-@dirrm share/X11/locale/zh_HK.big5hkscs
-@dirrm share/X11/locale/zh_HK.big5
-@dirrm share/X11/locale/zh_HK.UTF-8
-@dirrm share/X11/locale/zh_CN.gbk
-@dirrm share/X11/locale/zh_CN.gb18030
-@dirrm share/X11/locale/zh_CN.UTF-8
-@dirrm share/X11/locale/zh_CN
-@dirrm share/X11/locale/vi_VN.viscii
-@dirrm share/X11/locale/vi_VN.tcvn
-@dirrm share/X11/locale/tscii-0
-@dirrm share/X11/locale/th_TH.UTF-8
-@dirrm share/X11/locale/th_TH
-@dirrm share/X11/locale/tatar-cyr
-@dirrm share/X11/locale/ru_RU.UTF-8
-@dirrm share/X11/locale/pt_BR.UTF-8
-@dirrm share/X11/locale/nokhchi-1
-@dirrm share/X11/locale/mulelao-1
-@dirrm share/X11/locale/microsoft-cp1256
-@dirrm share/X11/locale/microsoft-cp1255
-@dirrm share/X11/locale/microsoft-cp1251
-@dirrm share/X11/locale/koi8-u
-@dirrm share/X11/locale/koi8-r
-@dirrm share/X11/locale/koi8-c
-@dirrm share/X11/locale/ko_KR.UTF-8
-@dirrm share/X11/locale/ko
-@dirrm share/X11/locale/ja_JP.UTF-8
-@dirrm share/X11/locale/ja.U90
-@dirrm share/X11/locale/ja.SJIS
-@dirrm share/X11/locale/ja.S90
-@dirrm share/X11/locale/ja.JIS
-@dirrm share/X11/locale/ja
-@dirrm share/X11/locale/iso8859-9e
-@dirrm share/X11/locale/iso8859-9
-@dirrm share/X11/locale/iso8859-8
-@dirrm share/X11/locale/iso8859-7
-@dirrm share/X11/locale/iso8859-6
-@dirrm share/X11/locale/iso8859-5
-@dirrm share/X11/locale/iso8859-4
-@dirrm share/X11/locale/iso8859-3
-@dirrm share/X11/locale/iso8859-2
-@dirrm share/X11/locale/iso8859-15
-@dirrm share/X11/locale/iso8859-14
-@dirrm share/X11/locale/iso8859-13
-@dirrm share/X11/locale/iso8859-11
-@dirrm share/X11/locale/iso8859-10
-@dirrm share/X11/locale/iso8859-1
-@dirrm share/X11/locale/isiri-3342
-@dirrm share/X11/locale/iscii-dev
-@dirrm share/X11/locale/ibm-cp1133
-@dirrm share/X11/locale/georgian-ps
-@dirrm share/X11/locale/georgian-academy
-@dirrm share/X11/locale/fi_FI.UTF-8
-@dirrm share/X11/locale/en_US.UTF-8
-@dirrm share/X11/locale/el_GR.UTF-8
-@dirrm share/X11/locale/armscii-8
-@dirrm share/X11/locale/am_ET.UTF-8
-@dirrm share/X11/locale/C
-@dirrm share/X11/locale
-@comment @dirrm share/X11
-@comment @dirrm lib/X11
-@comment @dirrm include/X11

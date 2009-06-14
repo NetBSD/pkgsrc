@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:18 joerg Exp $
 bin/xpad
 man/man1/xpad.1
 share/applications/xpad.desktop
@@ -20,13 +20,3 @@ share/locale/nl/LC_MESSAGES/xpad.mo
 share/locale/ro/LC_MESSAGES/xpad.mo
 share/locale/ru/LC_MESSAGES/xpad.mo
 share/pixmaps/xpad.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/96x96/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in xdg-dirs: @dirrm share/applications

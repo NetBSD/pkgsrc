@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:35:18 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:01 joerg Exp $
 share/icons/Industrial/48x48/apps/broken-0.png
 share/icons/Industrial/48x48/apps/dillo.png
 share/icons/Industrial/48x48/apps/gpe-bluetooth.png
@@ -181,25 +181,3 @@ share/themes/mbcrystal/matchbox/theme.xml
 share/themes/mbcrystal/matchbox/topleft.png
 share/themes/mbcrystal/matchbox/topright.png
 share/themes/mbcrystal/matchbox/toptile.png
-@dirrm share/themes/mbcrystal/matchbox
-@dirrm share/themes/mbcrystal/gtkrc-2.0
-@dirrm share/themes/mbcrystal/background
-@dirrm share/themes/mbcrystal
-@dirrm share/themes/expose/matchbox
-@dirrm share/themes/expose/gtk-2.0/icons
-@dirrm share/themes/expose/gtk-2.0
-@dirrm share/themes/expose/background
-@dirrm share/themes/expose
-@dirrm share/themes/Industrial/matchbox
-@dirrm share/themes/Industrial
-@comment in xdg-dirs: @dirrm share/themes
-@dirrm share/icons/mbcrystal/48x48/apps
-@dirrm share/icons/mbcrystal/48x48
-@dirrm share/icons/mbcrystal
-@dirrm share/icons/expose/48x48/apps
-@dirrm share/icons/expose/48x48
-@dirrm share/icons/expose
-@dirrm share/icons/Industrial/48x48/apps
-@dirrm share/icons/Industrial/48x48
-@dirrm share/icons/Industrial
-@comment in xdg-dirs: @dirrm share/icons

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/04/12 09:55:21 martti Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:00 joerg Exp $
 include/xfce4/libxfce4mcs/mcs-client-enum-types.h
 include/xfce4/libxfce4mcs/mcs-client.h
 include/xfce4/libxfce4mcs/mcs-common.h
@@ -20,5 +20,3 @@ share/doc/libxfce4mcs/libxfce4mcs.devhelp2
 share/doc/libxfce4mcs/right.png
 share/doc/libxfce4mcs/style.css
 share/doc/libxfce4mcs/up.png
-@dirrm share/doc/libxfce4mcs
-@dirrm include/xfce4/libxfce4mcs

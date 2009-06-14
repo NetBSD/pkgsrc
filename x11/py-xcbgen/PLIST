@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/04/08 13:06:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:04 joerg Exp $
 ${PYSITELIB}/xcbgen/__init__.py
 ${PYSITELIB}/xcbgen/__init__.pyc
 ${PYSITELIB}/xcbgen/__init__.pyo
@@ -17,4 +17,3 @@ ${PYSITELIB}/xcbgen/state.pyo
 ${PYSITELIB}/xcbgen/xtypes.py
 ${PYSITELIB}/xcbgen/xtypes.pyc
 ${PYSITELIB}/xcbgen/xtypes.pyo
-@dirrm ${PYSITELIB}/xcbgen

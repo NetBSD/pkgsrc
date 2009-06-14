@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 19:52:37 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:19 joerg Exp $
 bin/gvidcap
 man/man1/gvidcap.1
 share/doc/xvidcap-gtk2-${PKGVERSION}/AUTHORS
@@ -7,4 +7,3 @@ share/doc/xvidcap-gtk2-${PKGVERSION}/INSTALL
 share/doc/xvidcap-gtk2-${PKGVERSION}/NEWS
 share/doc/xvidcap-gtk2-${PKGVERSION}/README
 share/doc/xvidcap-gtk2-${PKGVERSION}/TODO
-@dirrm share/doc/xvidcap-gtk2-${PKGVERSION}

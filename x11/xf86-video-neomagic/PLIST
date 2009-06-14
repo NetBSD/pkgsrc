@@ -1,6 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 15:43:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:13 joerg Exp $
 lib/xorg/modules/drivers/neomagic_drv.la
 man/man4/neomagic.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

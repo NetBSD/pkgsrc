@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/25 16:04:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:11 joerg Exp $
 bin/vmmouse_detect
 lib/hal/hal-probe-vmmouse
 lib/xorg/modules/input/vmmouse_drv.la
@@ -9,7 +9,3 @@ share/hal/fdi/policy/20thirdparty/11-x11-vmmouse.fdi
 @unexec ${RMDIR} %D/share/hal/fdi/policy 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/hal/fdi 2> /dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/hal 2> /dev/null || ${TRUE}
-@comment @dirrm lib/xorg/modules/input
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg
-@comment @dirrm lib/hal

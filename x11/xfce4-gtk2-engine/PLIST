@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/04/12 09:55:22 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:15 joerg Exp $
 lib/gtk-2.0/2.10.0/engines/libxfce.la
 share/themes/Xfce-4.0/ICON.png
 share/themes/Xfce-4.0/README.html
@@ -54,39 +54,4 @@ share/themes/Xfce-winter/gtk-2.0/gtkrc
 share/themes/Xfce/ICON.png
 share/themes/Xfce/README.html
 share/themes/Xfce/gtk-2.0/gtkrc
-@dirrm share/themes/Xfce/gtk-2.0
-@dirrm share/themes/Xfce-winter/gtk-2.0
-@dirrm share/themes/Xfce-winter
-@dirrm share/themes/Xfce-stellar/gtk-2.0
-@dirrm share/themes/Xfce-stellar
-@dirrm share/themes/Xfce-smooth/gtk-2.0
-@dirrm share/themes/Xfce-smooth
-@dirrm share/themes/Xfce-saltlake/gtk-2.0
-@dirrm share/themes/Xfce-saltlake
-@dirrm share/themes/Xfce-redmondxp/gtk-2.0
-@dirrm share/themes/Xfce-redmondxp
-@dirrm share/themes/Xfce-orange/gtk-2.0
-@dirrm share/themes/Xfce-orange
-@dirrm share/themes/Xfce-light/gtk-2.0
-@dirrm share/themes/Xfce-light
-@dirrm share/themes/Xfce-kolors/gtk-2.0
-@dirrm share/themes/Xfce-kolors
-@dirrm share/themes/Xfce-kde2/gtk-2.0
-@dirrm share/themes/Xfce-kde2
-@dirrm share/themes/Xfce-dusk/gtk-2.0
-@dirrm share/themes/Xfce-dusk
-@dirrm share/themes/Xfce-dawn/gtk-2.0
-@dirrm share/themes/Xfce-dawn
-@dirrm share/themes/Xfce-curve/gtk-2.0
-@dirrm share/themes/Xfce-curve
-@dirrm share/themes/Xfce-cadmium/gtk-2.0
-@dirrm share/themes/Xfce-cadmium
-@dirrm share/themes/Xfce-basic/gtk-2.0
-@dirrm share/themes/Xfce-basic
-@dirrm share/themes/Xfce-b5/gtk-2.0
-@dirrm share/themes/Xfce-b5
-@dirrm share/themes/Xfce-4.2/gtk-2.0
-@dirrm share/themes/Xfce-4.2
-@dirrm share/themes/Xfce-4.0/gtk-2.0
-@dirrm share/themes/Xfce-4.0
 @unexec ${RMDIR} %D/share/themes/Xfce 2>/dev/null || ${TRUE}

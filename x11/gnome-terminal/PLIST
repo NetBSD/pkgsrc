@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/04/17 18:16:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:24:48 joerg Exp $
 bin/gnome-terminal
 share/applications/gnome-terminal.desktop
 share/gconf/schemas/gnome-terminal.schemas
@@ -180,54 +180,3 @@ share/omf/gnome-terminal/gnome-terminal-sv.omf
 share/omf/gnome-terminal/gnome-terminal-uk.omf
 share/omf/gnome-terminal/gnome-terminal-zh_CN.omf
 share/omf/gnome-terminal/gnome-terminal-zh_TW.omf
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnome-terminal
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/gnome-terminal/zh_TW/figures
-@dirrm share/gnome/help/gnome-terminal/zh_TW
-@dirrm share/gnome/help/gnome-terminal/zh_CN/figures
-@dirrm share/gnome/help/gnome-terminal/zh_CN
-@dirrm share/gnome/help/gnome-terminal/uk/figures
-@dirrm share/gnome/help/gnome-terminal/uk
-@dirrm share/gnome/help/gnome-terminal/sv/figures
-@dirrm share/gnome/help/gnome-terminal/sv
-@dirrm share/gnome/help/gnome-terminal/ru/figures
-@dirrm share/gnome/help/gnome-terminal/ru
-@dirrm share/gnome/help/gnome-terminal/ro/figures
-@dirrm share/gnome/help/gnome-terminal/ro
-@dirrm share/gnome/help/gnome-terminal/pt_BR/figures
-@dirrm share/gnome/help/gnome-terminal/pt_BR
-@dirrm share/gnome/help/gnome-terminal/oc/figures
-@dirrm share/gnome/help/gnome-terminal/oc
-@dirrm share/gnome/help/gnome-terminal/ko/figures
-@dirrm share/gnome/help/gnome-terminal/ko
-@dirrm share/gnome/help/gnome-terminal/ja/figures
-@dirrm share/gnome/help/gnome-terminal/ja
-@dirrm share/gnome/help/gnome-terminal/it/figures
-@dirrm share/gnome/help/gnome-terminal/it
-@dirrm share/gnome/help/gnome-terminal/fr/figures
-@dirrm share/gnome/help/gnome-terminal/fr
-@dirrm share/gnome/help/gnome-terminal/es/figures
-@dirrm share/gnome/help/gnome-terminal/es
-@dirrm share/gnome/help/gnome-terminal/en_GB/figures
-@dirrm share/gnome/help/gnome-terminal/en_GB
-@dirrm share/gnome/help/gnome-terminal/el/figures
-@dirrm share/gnome/help/gnome-terminal/el
-@dirrm share/gnome/help/gnome-terminal/de/figures
-@dirrm share/gnome/help/gnome-terminal/de
-@dirrm share/gnome/help/gnome-terminal/da/figures
-@dirrm share/gnome/help/gnome-terminal/da
-@dirrm share/gnome/help/gnome-terminal/cs/figures
-@dirrm share/gnome/help/gnome-terminal/cs
-@dirrm share/gnome/help/gnome-terminal/ca/figures
-@dirrm share/gnome/help/gnome-terminal/ca
-@dirrm share/gnome/help/gnome-terminal/bg/figures
-@dirrm share/gnome/help/gnome-terminal/bg
-@dirrm share/gnome/help/gnome-terminal/C/figures
-@dirrm share/gnome/help/gnome-terminal/C
-@dirrm share/gnome/help/gnome-terminal
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-terminal
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

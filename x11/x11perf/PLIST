@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 18:03:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:09 joerg Exp $
 bin/x11perf
 bin/x11perfcomp
 lib/X11/x11perfcomp/Xmark
@@ -8,4 +8,3 @@ lib/X11/x11perfcomp/perfratio
 man/man1/Xmark.1
 man/man1/x11perf.1
 man/man1/x11perfcomp.1
-@dirrm lib/X11/x11perfcomp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/25 00:36:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:24:46 joerg Exp $
 lib/bonobo/servers/GNOME_FastUserSwitchApplet.server
 libexec/fast-user-switch-applet
 share/fast-user-switch-applet/ui.glade
@@ -171,35 +171,3 @@ share/omf/fast-user-switch-applet/fast-user-switch-applet-pt_BR.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-ru.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-sr.omf
 share/omf/fast-user-switch-applet/fast-user-switch-applet-sv.omf
-@dirrm share/omf/fast-user-switch-applet
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/fast-user-switch-applet/sv/figures
-@dirrm share/gnome/help/fast-user-switch-applet/sv
-@dirrm share/gnome/help/fast-user-switch-applet/sr/figures
-@dirrm share/gnome/help/fast-user-switch-applet/sr
-@dirrm share/gnome/help/fast-user-switch-applet/ru/figures
-@dirrm share/gnome/help/fast-user-switch-applet/ru
-@dirrm share/gnome/help/fast-user-switch-applet/pt_BR/figures
-@dirrm share/gnome/help/fast-user-switch-applet/pt_BR
-@dirrm share/gnome/help/fast-user-switch-applet/pa/figures
-@dirrm share/gnome/help/fast-user-switch-applet/pa
-@dirrm share/gnome/help/fast-user-switch-applet/oc/figures
-@dirrm share/gnome/help/fast-user-switch-applet/oc
-@dirrm share/gnome/help/fast-user-switch-applet/fr/figures
-@dirrm share/gnome/help/fast-user-switch-applet/fr
-@dirrm share/gnome/help/fast-user-switch-applet/fi/figures
-@dirrm share/gnome/help/fast-user-switch-applet/fi
-@dirrm share/gnome/help/fast-user-switch-applet/es/figures
-@dirrm share/gnome/help/fast-user-switch-applet/es
-@dirrm share/gnome/help/fast-user-switch-applet/en_GB/figures
-@dirrm share/gnome/help/fast-user-switch-applet/en_GB
-@dirrm share/gnome/help/fast-user-switch-applet/ca/figures
-@dirrm share/gnome/help/fast-user-switch-applet/ca
-@dirrm share/gnome/help/fast-user-switch-applet/C/figures
-@dirrm share/gnome/help/fast-user-switch-applet/C
-@dirrm share/gnome/help/fast-user-switch-applet
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/fast-user-switch-applet
-@comment in libbonobo: @dirrm lib/bonobo/servers

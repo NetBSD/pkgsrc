@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:16 joerg Exp $
 bin/xglobe
 bin/xglobe-getcloudmap.sh
 lib/xglobe/xglobe-markers
@@ -8,5 +8,3 @@ lib/xglobe/daymap.gif
 lib/xglobe/nightmap.gif
 share/doc/xglobe/README
 share/doc/xglobe/README.maps
-@dirrm lib/xglobe
-@dirrm share/doc/xglobe

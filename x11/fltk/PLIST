@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/11/10 19:03:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:24:46 joerg Exp $
 bin/fltk-config
 bin/fluid
 include/FL/Enumerations.H
@@ -424,5 +424,3 @@ share/doc/fltk/text.gif
 share/doc/fltk/valuators.gif
 share/doc/fltk/value_slider.gif
 share/doc/fltk/widgets.html
-@dirrm share/doc/fltk
-@dirrm include/FL

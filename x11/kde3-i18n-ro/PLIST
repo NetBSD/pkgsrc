@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/02/20 10:36:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:24:55 joerg Exp $
 share/doc/kde/HTML/ro/common/1.png
 share/doc/kde/HTML/ro/common/10.png
 share/doc/kde/HTML/ro/common/2.png
@@ -698,29 +698,3 @@ share/locale/ro/LC_MESSAGES/webarchiver.mo
 share/locale/ro/charset
 share/locale/ro/entry.desktop
 share/locale/ro/flag.png
-@dirrm share/kde/apps/ktuberling/sounds/ro
-@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
-@dirrm share/doc/kde/HTML/ro/kioslave
-@dirrm share/doc/kde/HTML/ro/kinfocenter/xserver
-@dirrm share/doc/kde/HTML/ro/kinfocenter/usb
-@dirrm share/doc/kde/HTML/ro/kinfocenter/sound
-@dirrm share/doc/kde/HTML/ro/kinfocenter/scsi
-@dirrm share/doc/kde/HTML/ro/kinfocenter/samba
-@dirrm share/doc/kde/HTML/ro/kinfocenter/protocols
-@dirrm share/doc/kde/HTML/ro/kinfocenter/processor
-@dirrm share/doc/kde/HTML/ro/kinfocenter/pcmcia
-@dirrm share/doc/kde/HTML/ro/kinfocenter/pci
-@dirrm share/doc/kde/HTML/ro/kinfocenter/partitions
-@dirrm share/doc/kde/HTML/ro/kinfocenter/opengl
-@dirrm share/doc/kde/HTML/ro/kinfocenter/nics
-@dirrm share/doc/kde/HTML/ro/kinfocenter/memory
-@dirrm share/doc/kde/HTML/ro/kinfocenter/ioports
-@dirrm share/doc/kde/HTML/ro/kinfocenter/interrupts
-@dirrm share/doc/kde/HTML/ro/kinfocenter/dma
-@dirrm share/doc/kde/HTML/ro/kinfocenter/devices
-@dirrm share/doc/kde/HTML/ro/kinfocenter
-@dirrm share/doc/kde/HTML/ro/khelpcenter/visualdict
-@dirrm share/doc/kde/HTML/ro/khelpcenter/glossary
-@dirrm share/doc/kde/HTML/ro/khelpcenter
-@comment in kde: @dirrm share/doc/kde/HTML/ro/common
-@comment in kde: @dirrm share/doc/kde/HTML/ro

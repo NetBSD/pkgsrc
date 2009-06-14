@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/10/20 10:53:16 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:24:54 joerg Exp $
 share/kde/apps/katepart/syntax/logohighlightstyle.mk.xml
 share/kde/apps/kturtle/data/logokeywords.mk.xml
 share/kde/apps/kturtle/examples/mk/boiplatno.logo
@@ -554,7 +554,3 @@ share/locale/mk/LC_MESSAGES/webarchiver.mo
 share/locale/mk/charset
 share/locale/mk/entry.desktop
 share/locale/mk/flag.png
-@dirrm share/kde/apps/kturtle/examples/mk
-@comment in kde: @dirrm share/kde/apps/kturtle/examples
-@comment in kde: @dirrm share/kde/apps/kturtle/data
-@comment in kde: @dirrm share/kde/apps/katepart/syntax

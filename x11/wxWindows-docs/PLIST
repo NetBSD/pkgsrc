@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/12 22:36:34 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:09 joerg Exp $
 share/doc/wx/alignv.gif
 share/doc/wx/back.gif
 share/doc/wx/books.gif
@@ -510,4 +510,3 @@ share/doc/wx/wxwin96.htm
 share/doc/wx/wxwin97.htm
 share/doc/wx/wxwin98.htm
 share/doc/wx/wxwin99.htm
-@dirrm share/doc/wx

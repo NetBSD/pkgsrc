@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 00:32:14 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
 include/unique-1.0/unique/unique.h
 include/unique-1.0/unique/uniqueapp.h
 include/unique-1.0/unique/uniquebackend.h
@@ -22,6 +22,3 @@ share/gtk-doc/html/unique/unique-overview.html
 share/gtk-doc/html/unique/unique.devhelp
 share/gtk-doc/html/unique/unique.devhelp2
 share/gtk-doc/html/unique/up.png
-@dirrm share/gtk-doc/html/unique
-@dirrm include/unique-1.0/unique
-@dirrm include/unique-1.0

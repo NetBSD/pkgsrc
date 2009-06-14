@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/08/29 16:43:58 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:10 joerg Exp $
 bin/Xdialog
 man/man1/Xdialog.1
 share/doc/html/xdialog/2ranges.png
@@ -91,5 +91,3 @@ share/locale/pl/LC_MESSAGES/Xdialog.mo
 share/locale/pt_BR/LC_MESSAGES/Xdialog.mo
 share/locale/ru/LC_MESSAGES/Xdialog.mo
 share/locale/sv_SE/LC_MESSAGES/Xdialog.mo
-@dirrm share/examples/xdialog
-@dirrm share/doc/html/xdialog

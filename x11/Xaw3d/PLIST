@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/18 15:54:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:43 joerg Exp $
 ${INCDIR}/Xaw3d/AllWidgets.h
 ${INCDIR}/Xaw3d/AsciiSink.h
 ${INCDIR}/Xaw3d/AsciiSinkP.h
@@ -78,5 +78,3 @@ ${INCDIR}/Xaw3d/Xaw3dP.h
 ${INCDIR}/Xaw3d/XawImP.h
 ${INCDIR}/Xaw3d/XawInit.h
 share/doc/Xaw3d/README.XAW3D
-@dirrm share/doc/Xaw3d
-@dirrm ${INCDIR}/Xaw3d

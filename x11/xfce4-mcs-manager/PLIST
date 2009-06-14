@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/12/18 13:50:42 hira Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:25:15 joerg Exp $
 bin/xfce-mcs-manager
 bin/xfce-setting-show
 include/xfce4/xfce-mcs-manager/manager-plugin.h
@@ -74,7 +74,6 @@ share/xfce4/doc/it/images/smgr_from_panel.png
 share/xfce4/doc/it/images/smgr_from_root_menu.png
 share/xfce4/doc/it/images/smgr_from_setup_button.png
 share/xfce4/doc/it/xfce-mcs-manager.html
-@dirrm include/xfce4/xfce-mcs-manager
 @unexec ${RMDIR} %D/share/xfce4/doc/it/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/it 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}

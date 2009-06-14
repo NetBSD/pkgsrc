@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/05/19 11:21:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:24:50 joerg Exp $
 lib/gtk-2.0/2.10.0/engines/libclearlooks.la
 lib/gtk-2.0/2.10.0/engines/libcrux-engine.la
 lib/gtk-2.0/2.10.0/engines/libglide.la
@@ -79,18 +79,3 @@ share/themes/Industrial/gtk-2.0/gtkrc
 share/themes/Mist/gtk-2.0/gtkrc
 share/themes/Redmond/gtk-2.0/gtkrc
 share/themes/ThinIce/gtk-2.0/gtkrc
-@dirrm share/themes/ThinIce/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/ThinIce
-@dirrm share/themes/Redmond/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/Redmond
-@dirrm share/themes/Mist/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/Mist
-@dirrm share/themes/Industrial/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/Industrial
-@dirrm share/themes/Crux/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/Crux
-@dirrm share/themes/Clearlooks/gtk-2.0
-@comment in theme-dirs: @dirrm share/themes/Clearlooks
-@comment in xdg-dirs: @dirrm share/themes
-@dirrm share/gtk-engines
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/engines

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/21 13:00:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:57 joerg Exp $
 bin/lablgtk
 lib/ocaml/lablgtk/gBin.cmi
 lib/ocaml/lablgtk/gBin.cmx
@@ -175,5 +175,4 @@ lib/ocaml/lablgtk/wrappers.h
 lib/ocaml/lablgtk/xml_lexer.mli
 lib/ocaml/stublibs/dlllablgtk.so
 @unexec ${RMDIR} %D/lib/ocaml/stublibs 2>/dev/null || ${TRUE}
-@dirrm lib/ocaml/lablgtk
 @unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}

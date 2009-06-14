@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/10/20 10:52:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:24:51 joerg Exp $
 share/kde/apps/khangman/data/bg/animals.kvtml
 share/kde/apps/khangman/data/bg/easy.kvtml
 share/kde/apps/khangman/data/bg/hard.kvtml
@@ -551,5 +551,3 @@ share/locale/bg/LC_MESSAGES/webarchiver.mo
 share/locale/bg/charset
 share/locale/bg/entry.desktop
 share/locale/bg/flag.png
-@dirrm share/kde/apps/khangman/data/bg
-@comment in kde: @dirrm share/kde/apps/khangman/data

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/08 12:06:59 sketch Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:24:46 joerg Exp $
 bin/Esetroot
 bin/Etbg
 bin/Etbg_update_list
@@ -223,12 +223,3 @@ share/Eterm/themes/auto/theme.cfg
 share/Eterm/themes/trans/menus.cfg
 share/Eterm/themes/trans/pixmaps.list
 share/Eterm/themes/trans/theme.cfg
-@dirrm share/Eterm/themes/trans
-@dirrm share/Eterm/themes/auto
-@dirrm share/Eterm/themes/Eterm
-@dirrm share/Eterm/themes/Escreen
-@dirrm share/Eterm/themes
-@dirrm share/Eterm/pix/tile
-@dirrm share/Eterm/pix/scale
-@dirrm share/Eterm/pix
-@dirrm share/Eterm

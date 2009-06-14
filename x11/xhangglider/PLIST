@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:16 joerg Exp $
 bin/xhangglider
 share/xhangglider/hg_standard.dat
 share/xhangglider/pg_standard.dat
 share/xhangglider/glider.def
-@dirrm share/xhangglider

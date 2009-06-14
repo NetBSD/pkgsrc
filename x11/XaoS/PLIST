@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/05/22 20:19:19 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:43 joerg Exp $
 bin/xaos
 info/xaos.info
 man/man6/xaos.6
@@ -234,9 +234,3 @@ share/locale/fr/LC_MESSAGES/xaos.mo
 share/locale/hu/LC_MESSAGES/xaos.mo
 share/locale/it/LC_MESSAGES/xaos.mo
 share/locale/ro/LC_MESSAGES/xaos.mo
-@dirrm share/XaoS/tutorial
-@dirrm share/XaoS/help
-@dirrm share/XaoS/examples
-@dirrm share/XaoS/doc
-@dirrm share/XaoS/catalogs
-@dirrm share/XaoS

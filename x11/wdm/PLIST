@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/18 20:23:15 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:25:08 joerg Exp $
 bin/wdm
 bin/wdmLogin
 man/man1/wdm.1
@@ -35,6 +35,3 @@ share/pixmaps/wdm/GnuLinux-logo.jpg
 share/pixmaps/wdm/Stars.jpg
 share/pixmaps/wdm/StarsLogo.jpg
 share/pixmaps/wdm/gnuLogo.xpm
-@dirrm share/pixmaps/wdm
-@dirrm share/examples/wdm/authdir
-@dirrm share/examples/wdm

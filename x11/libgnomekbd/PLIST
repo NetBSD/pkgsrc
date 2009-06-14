@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/03/15 14:49:01 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:24:59 joerg Exp $
 bin/gkbd-indicator-plugins-capplet
 include/libgnomekbd/gkbd-desktop-config.h
 include/libgnomekbd/gkbd-indicator-config.h
@@ -70,9 +70,3 @@ share/locale/vi/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomekbd.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomekbd.mo
-@dirrm share/libgnomekbd/glade
-@dirrm share/libgnomekbd
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/libgnomekbd

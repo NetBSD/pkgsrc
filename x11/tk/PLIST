@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/07 15:14:10 bjs Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:25:07 joerg Exp $
 bin/wish
 bin/wish8.4
 include/tk.h
@@ -483,11 +483,3 @@ man/mann/tkwait.n
 man/mann/toplevel.n
 man/mann/winfo.n
 man/mann/wm.n
-@dirrm lib/tk8.4/msgs
-@dirrm lib/tk8.4/images
-@dirrm lib/tk8.4/demos/images
-@dirrm lib/tk8.4/demos
-@dirrm lib/tk8.4
-@dirrm include/tk/unix
-@dirrm include/tk/generic
-@dirrm include/tk

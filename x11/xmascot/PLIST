@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/11 05:24:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:17 joerg Exp $
 bin/xmascot
 lib/X11/ja_JP.eucJP/app-defaults/XMascot
 lib/X11/app-defaults/XMascot
@@ -44,4 +44,3 @@ lib/X11/xmascot/virgo.gif
 lib/X11/xmascot/yubi.xbm
 lib/X11/xmascot/yubi.xbmmsk
 ${IMAKE_MAN_DIR}/xmascot.${IMAKE_MAN_SUFFIX}
-@dirrm lib/X11/xmascot

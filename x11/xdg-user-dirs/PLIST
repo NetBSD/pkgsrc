@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/16 19:06:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:10 joerg Exp $
 bin/xdg-user-dir
 bin/xdg-user-dirs-update
 share/examples/xdg/user-dirs.conf
@@ -43,4 +43,3 @@ share/locale/uk/LC_MESSAGES/xdg-user-dirs.mo
 share/locale/zh_CN/LC_MESSAGES/xdg-user-dirs.mo
 share/locale/zh_HK/LC_MESSAGES/xdg-user-dirs.mo
 share/locale/zh_TW/LC_MESSAGES/xdg-user-dirs.mo
-@dirrm share/examples/xdg

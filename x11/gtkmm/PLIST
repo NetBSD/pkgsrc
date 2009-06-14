@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2009/03/17 22:39:33 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.34 2009/06/14 18:24:50 joerg Exp $
 bin/gtkmm-demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -2026,26 +2026,3 @@ share/gtkmm-2.4/demo/gnome-gmush.png
 share/gtkmm-2.4/demo/gnome-gsame.png
 share/gtkmm-2.4/demo/gnu-keys.png
 share/gtkmm-2.4/demo/gtk-logo-rgb.gif
-@dirrm share/gtkmm-2.4/demo
-@dirrm share/gtkmm-2.4
-@dirrm share/doc/gtkmm-2.4/docs/reference/html
-@dirrm share/doc/gtkmm-2.4/docs/reference
-@dirrm share/doc/gtkmm-2.4/docs/images
-@dirrm share/doc/gtkmm-2.4/docs
-@dirrm share/doc/gtkmm-2.4
-@dirrm share/devhelp/books/gtkmm-2.4
-@dirrm lib/gtkmm-2.4/proc/m4
-@dirrm lib/gtkmm-2.4/proc
-@dirrm lib/gtkmm-2.4/include
-@dirrm lib/gtkmm-2.4
-@dirrm lib/gdkmm-2.4/include
-@dirrm lib/gdkmm-2.4
-@dirrm include/gtkmm-2.4/gtkmm/private
-@dirrm include/gtkmm-2.4/gtkmm
-@dirrm include/gtkmm-2.4
-@dirrm include/gdkmm-2.4/gdkmm/private
-@dirrm include/gdkmm-2.4/gdkmm
-@dirrm include/gdkmm-2.4
-@dirrm include/atkmm-1.6/atkmm/private
-@dirrm include/atkmm-1.6/atkmm
-@dirrm include/atkmm-1.6

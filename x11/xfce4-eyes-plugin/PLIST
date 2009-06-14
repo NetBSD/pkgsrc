@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/27 10:48:06 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:15 joerg Exp $
 libexec/xfce4/panel-plugins/xfce4-eyes-plugin
 share/icons/hicolor/48x48/apps/xfce4-eyes.png
 share/locale/ar/LC_MESSAGES/xfce4-eyes-plugin.mo
@@ -62,11 +62,3 @@ share/xfce4/eyes/themes/Tango/config
 share/xfce4/eyes/themes/Tango/tango-eye.png
 share/xfce4/eyes/themes/Tango/tango-pupil.png
 share/xfce4/panel-plugins/eyes.desktop
-@dirrm share/xfce4/eyes/themes/Tango
-@dirrm share/xfce4/eyes/themes/Horrid
-@dirrm share/xfce4/eyes/themes/Default-tiny
-@dirrm share/xfce4/eyes/themes/Default
-@dirrm share/xfce4/eyes/themes/Bloodshot
-@dirrm share/xfce4/eyes/themes/Bizarre
-@dirrm share/xfce4/eyes/themes
-@dirrm share/xfce4/eyes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/11 19:53:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:25:03 joerg Exp $
 include/gnome-python-2.0/pygnomevfs.h
 include/gnome-python-2.0/pygnomevfsbonobo.h
 lib/gnome-vfs-2.0/modules/libpythonmethod.la
@@ -55,11 +55,3 @@ share/pygtk/2.0/defs/gconf.defs
 share/pygtk/2.0/defs/gnome-types.defs
 share/pygtk/2.0/defs/gnome.defs
 share/pygtk/2.0/defs/ui.defs
-@comment in py-gtk2: @dirrm share/pygtk/2.0/defs
-@dirrm share/pygtk/2.0/argtypes
-@dirrm share/gtk-doc/html/pygnomevfs
-@dirrm ${PYSITELIB}/gtk-2.0/gnomevfs
-@dirrm ${PYSITELIB}/gtk-2.0/gnome
-@dirrm ${PYSITELIB}/gtk-2.0/bonobo
-@comment in py-gtk2: @dirrm ${PYSITELIB}/gtk-2.0
-@dirrm include/gnome-python-2.0
