@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/21 22:34:10 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:04 joerg Exp $
 share/doc/csound4/a.html
 share/doc/csound4/abetarand.html
 share/doc/csound4/abexprnd.html
@@ -1797,6 +1797,3 @@ share/doc/csound4/zkr.html
 share/doc/csound4/zkw.html
 share/doc/csound4/zkwm.html
 share/examples/csound4
-@dirrm share/doc/csound4/examples
-@dirrm share/doc/csound4/images
-@dirrm share/doc/csound4

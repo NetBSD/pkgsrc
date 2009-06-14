@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/04/07 05:07:03 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:32:22 joerg Exp $
 bin/solfege
 man/man1/solfege.1
 share/applications/solfege.desktop
@@ -1676,43 +1676,3 @@ share/solfege/themes/svg/sing-chord.svg
 share/solfege/themes/svg/sing-interval.svg
 share/solfege/themes/svg/solfege.svg
 share/solfege/ui.xml
-@dirrm share/solfege/themes/svg
-@dirrm share/solfege/themes
-@dirrm share/solfege/src
-@dirrm share/solfege/soundcard
-@dirrm share/solfege/regression-lesson-files
-@dirrm share/solfege/mpd
-@dirrm share/solfege/lesson-files/share
-@dirrm share/solfege/lesson-files/include
-@dirrm share/solfege/lesson-files/bin
-@dirrm share/solfege/lesson-files
-@dirrm share/solfege/learningtrees
-@dirrm share/solfege/help/tr/figures
-@dirrm share/solfege/help/tr
-@dirrm share/solfege/help/ru
-@dirrm share/solfege/help/pt_BR/figures
-@dirrm share/solfege/help/pt_BR
-@dirrm share/solfege/help/nl
-@dirrm share/solfege/help/nb/figures
-@dirrm share/solfege/help/nb
-@dirrm share/solfege/help/gl
-@dirrm share/solfege/help/fr/figures
-@dirrm share/solfege/help/fr
-@dirrm share/solfege/help/C/scales/images/triads
-@dirrm share/solfege/help/C/scales/images/quadriads
-@dirrm share/solfege/help/C/scales/images/modes/scales
-@dirrm share/solfege/help/C/scales/images/modes/chords
-@dirrm share/solfege/help/C/scales/images/modes
-@dirrm share/solfege/help/C/scales/images
-@dirrm share/solfege/help/C/scales
-@dirrm share/solfege/help/C/ly
-@dirrm share/solfege/help/C/figures
-@dirrm share/solfege/help/C
-@dirrm share/solfege/help
-@dirrm share/solfege/graphics
-@dirrm share/solfege/feta
-@dirrm share/solfege/example-lesson-files
-@dirrm share/solfege
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/examples/solfege
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/03/20 18:21:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:35:53 joerg Exp $
 bin/electric
 share/electric/doc/html/images/chap01-01.png
 share/electric/doc/html/images/chap01-02.png
@@ -397,14 +397,3 @@ share/electric/lib/ui/shownode.ui
 share/electric/lib/ui/shownode_ext.ui
 share/electric/lib/ui/visiblelay.ui
 share/electric/lib/umc18.txt
-@dirrm share/electric/lib/ui
-@dirrm share/electric/lib/java
-@dirrm share/electric/lib/international/fr/LC_MESSAGES
-@dirrm share/electric/lib/international/fr
-@dirrm share/electric/lib/international
-@dirrm share/electric/lib
-@dirrm share/electric/doc/html/text
-@dirrm share/electric/doc/html/images
-@dirrm share/electric/doc/html
-@dirrm share/electric/doc
-@dirrm share/electric

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2003/03/11 13:38:50 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:43 joerg Exp $
 bin/bnc
 bin/bncchk
 bin/bncmkpasswd
 bin/bncsetup
 share/doc/bnc/README
 share/examples/bnc/bnc.conf
-@dirrm share/examples/bnc
-@dirrm share/doc/bnc

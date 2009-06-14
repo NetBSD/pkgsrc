@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2008/06/21 16:38:40 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:48 joerg Exp $
 lib/pidgin/LaTeX.so
 share/doc/pidgin-latex/README
-@dirrm share/doc/pidgin-latex
-@dirrm lib/pidgin

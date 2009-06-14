@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/07 21:35:59 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:33:11 joerg Exp $
 bin/bon_csv2html
 bin/bon_csv2txt
 man/man1/bon_csv2html.1
@@ -8,4 +8,3 @@ man/man8/zcav.8
 sbin/bonnie++
 sbin/zcav
 share/doc/bonnie++/readme.html
-@dirrm share/doc/bonnie++

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/04 10:31:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:23 joerg Exp $
 bin/taglib-config
 include/taglib/apefooter.h
 include/taglib/apeitem.h
@@ -62,4 +62,3 @@ lib/libtag.la
 lib/libtag_c.la
 lib/pkgconfig/taglib.pc
 lib/pkgconfig/taglib_c.pc
-@dirrm include/taglib

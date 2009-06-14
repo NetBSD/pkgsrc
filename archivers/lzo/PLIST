@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/14 20:02:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:17 joerg Exp $
 include/lzo/lzo1.h
 include/lzo/lzo1a.h
 include/lzo/lzo1b.h
@@ -13,4 +13,3 @@ include/lzo/lzoconf.h
 include/lzo/lzodefs.h
 include/lzo/lzoutil.h
 lib/liblzo2.la
-@dirrm include/lzo

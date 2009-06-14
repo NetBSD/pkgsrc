@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/30 19:48:54 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:35:53 joerg Exp $
 bin/eagle
 eagle/README
 eagle/bin/eagle
@@ -701,18 +701,3 @@ eagle/ulp/update-packages.ulp
 eagle/ulp/useful-routines.ulp
 eagle/ulp/warning.bmp
 @unexec ${RM} -f %D/eagle/bin/eagle.key
-@dirrm eagle/ulp
-@dirrm eagle/scr
-@dirrm eagle/projects/examples/tutorial
-@dirrm eagle/projects/examples/singlesided
-@dirrm eagle/projects/examples/hexapod
-@dirrm eagle/projects/examples
-@dirrm eagle/projects
-@dirrm eagle/man
-@dirrm eagle/lbr
-@dirrm eagle/help
-@dirrm eagle/dru
-@dirrm eagle/doc
-@dirrm eagle/cam
-@dirrm eagle/bin
-@dirrm eagle

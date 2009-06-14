@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/13 10:40:39 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:51 joerg Exp $
 ${EMACS_LISPPREFIX}/zenicb/zenicb-8ball.el
 ${EMACS_LISPPREFIX}/zenicb/zenicb-add.el
 ${EMACS_LISPPREFIX}/zenicb/zenicb-away.el
@@ -13,4 +13,3 @@ ${EMACS_LISPPREFIX}/zenicb/zenicb-trigger.el
 ${EMACS_LISPPREFIX}/zenicb/zenicb-whereis.el
 ${EMACS_LISPPREFIX}/zenicb/zenicb-yow.el
 ${EMACS_LISPPREFIX}/zenicb/zenicb.el
-@dirrm ${EMACS_LISPPREFIX}/zenicb

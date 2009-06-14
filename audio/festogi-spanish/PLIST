@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:15:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:06 joerg Exp $
 share/festival/lib/ogi_spanish/ogi_span_mx_duration.scm
 share/festival/lib/ogi_spanish/ogi_span_mx_intonation.scm
 share/festival/lib/ogi_spanish/ogi_span_mx_lexicon.scm
@@ -7,4 +7,3 @@ share/festival/lib/ogi_spanish/ogi_span_mx_phones.scm
 share/festival/lib/ogi_spanish/ogi_span_mx_phrasing.scm
 share/festival/lib/ogi_spanish/ogi_span_mx_syl.scm
 share/festival/lib/ogi_spanish/ogi_span_mx_token.scm
-@dirrm share/festival/lib/ogi_spanish
