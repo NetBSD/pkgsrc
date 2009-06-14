@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:15:50 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:25 joerg Exp $
 ${GEM_HOME}/cache/odbc-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
@@ -25,9 +25,4 @@ ${GEM_LIBDIR}/utf8/init.c
 ${GEM_LIBDIR}/utf8/odbc.c
 ${GEM_LIBDIR}/utf8/test.rb
 ${GEM_HOME}/specifications/odbc-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/utf8
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

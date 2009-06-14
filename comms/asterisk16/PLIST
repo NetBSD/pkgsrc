@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/12 09:04:56 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:38 joerg Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -1103,29 +1103,5 @@ share/examples/asterisk/users.conf
 share/examples/asterisk/voicemail.conf
 share/examples/asterisk/vpb.conf
 share/examples/rc.d/asterisk
-@dirrm share/examples/asterisk
-@dirrm libexec/agi-bin
-@dirrm libdata/asterisk/static-http/docs
-@dirrm libdata/asterisk/static-http
 @exec ${MKDIR} %D/libdata/asterisk/sounds/fr
-@dirrm libdata/asterisk/sounds/fr
 @exec ${MKDIR} %D/libdata/asterisk/sounds/es
-@dirrm libdata/asterisk/sounds/es
-@dirrm libdata/asterisk/sounds/en/silence
-@dirrm libdata/asterisk/sounds/en/phonetic
-@dirrm libdata/asterisk/sounds/en/letters
-@dirrm libdata/asterisk/sounds/en/followme
-@dirrm libdata/asterisk/sounds/en/digits
-@dirrm libdata/asterisk/sounds/en/dictate
-@dirrm libdata/asterisk/sounds/en
-@dirrm libdata/asterisk/sounds
-@dirrm libdata/asterisk/phoneprov
-@dirrm libdata/asterisk/moh
-@dirrm libdata/asterisk/keys
-@dirrm libdata/asterisk/images
-@dirrm libdata/asterisk/firmware/iax
-@dirrm libdata/asterisk/firmware
-@dirrm libdata/asterisk
-@dirrm lib/asterisk/modules
-@dirrm lib/asterisk
-@dirrm include/asterisk

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/10/23 16:03:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:36 joerg Exp $
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/JavaSim.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/arrays.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/assignment.html
@@ -1031,45 +1031,10 @@ share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/whiteball.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/yellowball.gif
 share/kde/apps/kdevdocumentation/tocs/c++_reference.toc
 share/kde/apps/kdevdocumentation/tocs/c_reference.toc
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/SYNTAX
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/EXAMPLES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/CONTRIB/GNU_STDLIB
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/CONTRIB
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/CONCEPT
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/backup
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/X_EXAMPLES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/TECHNIC
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/SYNTAX
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/PROBLEMS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/MISC/CLASSES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/MISC
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/MAN
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/LIBRARIES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/GDB
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/FUNCTIONS
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/EXAMPLES
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB/YABL
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB/SNIP
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB/SAWTELL
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB/OR_USING_C
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB/OR_PRACTICAL_C
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONTRIB
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT
-@dirrm share/doc/kde/HTML/en/kdevelop/reference/C
-@dirrm share/doc/kde/HTML/en/kdevelop/reference

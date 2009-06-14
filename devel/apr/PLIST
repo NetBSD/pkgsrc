@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/24 19:46:45 epg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:33 joerg Exp $
 bin/apr-1-config
 include/apr-1/apr.h
 include/apr-1/apr_allocator.h
@@ -44,5 +44,3 @@ libexec/apr/libtool
 libexec/apr/make_exports.awk
 libexec/apr/make_var_export.awk
 libexec/apr/mkdir.sh
-@dirrm libexec/apr
-@dirrm include/apr-1
