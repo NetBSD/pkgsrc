@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/02/23 11:33:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:17:24 joerg Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2newlatex.py
@@ -349,27 +349,3 @@ ${PYSITELIB}/roman.pyo
 ${PLIST.std}${PYSITELIB}/textwrap.py
 ${PLIST.std}${PYSITELIB}/textwrap.pyc
 ${PLIST.std}${PYSITELIB}/textwrap.pyo
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/small-white
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/small-black
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/medium-white
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/medium-black
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/default
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/big-white
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/big-black
-@dirrm ${PYSITELIB}/docutils/writers/s5_html/themes
-@dirrm ${PYSITELIB}/docutils/writers/s5_html
-@dirrm ${PYSITELIB}/docutils/writers/pep_html
-@dirrm ${PYSITELIB}/docutils/writers/newlatex2e
-@dirrm ${PYSITELIB}/docutils/writers/latex2e
-@dirrm ${PYSITELIB}/docutils/writers/html4css1
-@dirrm ${PYSITELIB}/docutils/writers
-@dirrm ${PYSITELIB}/docutils/transforms
-@dirrm ${PYSITELIB}/docutils/readers/python
-@dirrm ${PYSITELIB}/docutils/readers
-@dirrm ${PYSITELIB}/docutils/parsers/rst/languages
-@dirrm ${PYSITELIB}/docutils/parsers/rst/include
-@dirrm ${PYSITELIB}/docutils/parsers/rst/directives
-@dirrm ${PYSITELIB}/docutils/parsers/rst
-@dirrm ${PYSITELIB}/docutils/parsers
-@dirrm ${PYSITELIB}/docutils/languages
-@dirrm ${PYSITELIB}/docutils

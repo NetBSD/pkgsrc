@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/15 08:34:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:29 joerg Exp $
 bin/rd2
 bin/rdswap
 ${RUBY_VENDORLIB}/rd/block-element.rb
@@ -44,6 +44,3 @@ ${RUBY_DOC}/rd/rd-draft.html
 ${RUBY_DOC}/rd/rd-draft.html.ja
 ${RUBY_DOC}/rd/rd-draft.rd
 ${RUBY_DOC}/rd/rd-draft.rd.ja
-@dirrm ${RUBY_VENDORLIB}/rd
-@dirrm ${RUBY_EG}/rd
-@dirrm ${RUBY_DOC}/rd

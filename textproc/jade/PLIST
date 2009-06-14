@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/24 19:45:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:20 joerg Exp $
 bin/jade
 bin/nsgmls
 bin/sgmlnorm
@@ -160,6 +160,3 @@ share/sgml/jade/dsssl.dtd
 share/sgml/jade/fot.dtd
 share/sgml/jade/style-sheet.dtd
 @unexec ${RMDIR} %D/share/sgml/jade 2>/dev/null || ${TRUE}
-@comment in xmlcatmgr: @dirrm share/sgml
-@dirrm share/doc/jade
-@dirrm include/sp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/08 18:36:14 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:33 joerg Exp $
 include/uriparser/Uri.h
 include/uriparser/UriBase.h
 include/uriparser/UriDefsAnsi.h
@@ -6,4 +6,3 @@ include/uriparser/UriDefsConfig.h
 include/uriparser/UriDefsUnicode.h
 include/uriparser/UriIp4.h
 lib/liburiparser.la
-@dirrm include/uriparser

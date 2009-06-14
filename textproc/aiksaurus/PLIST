@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:54 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:12 joerg Exp $
 bin/aiksaurus
 bin/caiksaurus
 include/Aiksaurus/Aiksaurus.h
@@ -7,5 +7,3 @@ lib/libAiksaurus.la
 lib/pkgconfig/aiksaurus-1.0.pc
 share/aiksaurus/meanings.dat
 share/aiksaurus/words.dat
-@dirrm share/aiksaurus
-@dirrm include/Aiksaurus

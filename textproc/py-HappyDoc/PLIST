@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:56 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:24 joerg Exp $
 bin/happydoc${PYVERSSUFFIX}
 ${PYSITELIB}/happydoclib/CommandLineApp.py
 ${PYSITELIB}/happydoclib/CommandLineApp.pyc
@@ -186,10 +186,3 @@ ${PYSITELIB}/happydoclib/prettyast.pyo
 ${PYSITELIB}/happydoclib/trace.py
 ${PYSITELIB}/happydoclib/trace.pyc
 ${PYSITELIB}/happydoclib/trace.pyo
-@dirrm ${PYSITELIB}/happydoclib/parseinfo
-@dirrm ${PYSITELIB}/happydoclib/formatter/OpenOffice
-@dirrm ${PYSITELIB}/happydoclib/formatter
-@dirrm ${PYSITELIB}/happydoclib/docstring/StructuredText
-@dirrm ${PYSITELIB}/happydoclib/docstring
-@dirrm ${PYSITELIB}/happydoclib/docset
-@dirrm ${PYSITELIB}/happydoclib

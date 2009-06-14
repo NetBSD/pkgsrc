@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/05/06 13:34:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:19 joerg Exp $
 share/chasen/dic/ipadic/cforms.cha
 share/chasen/dic/ipadic/chadic.da
 share/chasen/dic/ipadic/chadic.dat
@@ -9,10 +9,8 @@ share/chasen/dic/ipadic/ctypes.cha
 share/chasen/dic/ipadic/grammar.cha
 share/chasen/dic/ipadic/matrix.cha
 share/chasen/dic/ipadic/table.cha
-@dirrm share/chasen/dic/ipadic
 share/doc/chasen/AUTHORS
 share/doc/chasen/COPYING
 share/doc/chasen/ChangeLog
 share/doc/chasen/NEWS
 share/doc/chasen/ipadic-ja.pdf
-@dirrm share/doc/chasen
