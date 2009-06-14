@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/10 12:23:36 hasso Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:41 joerg Exp $
 bin/c14n
 bin/checksig
 bin/cipher
@@ -154,15 +154,3 @@ include/xsec/xkms/XKMSValidateRequest.hpp
 include/xsec/xkms/XKMSValidateResult.hpp
 include/xsec/xkms/XKMSValidityInterval.hpp
 lib/libxml-security-c.la
-@dirrm include/xsec/xkms
-@dirrm include/xsec/utils/unixutils
-@dirrm include/xsec/utils
-@dirrm include/xsec/transformers
-@dirrm include/xsec/framework
-@dirrm include/xsec/enc/XSCrypt
-@dirrm include/xsec/enc/OpenSSL
-@dirrm include/xsec/enc/NSS
-@dirrm include/xsec/enc
-@dirrm include/xsec/dsig
-@dirrm include/xsec/canon
-@dirrm include/xsec

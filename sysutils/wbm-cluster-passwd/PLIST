@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:20:17 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/cluster-passwd/config
 share/webmin/cluster-passwd/CHANGELOG
 share/webmin/cluster-passwd/acl_security.pl
@@ -33,7 +33,3 @@ share/webmin/cluster-passwd/lang/nl
 share/webmin/cluster-passwd/log_parser.pl
 share/webmin/cluster-passwd/module.info
 share/webmin/cluster-passwd/save_passwd.cgi
-@dirrm share/webmin/cluster-passwd/lang
-@dirrm share/webmin/cluster-passwd/images
-@dirrm share/webmin/cluster-passwd
-@dirrm share/examples/webmin/cluster-passwd

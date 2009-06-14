@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/21 07:47:25 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:38 joerg Exp $
 bin/rcrack
 bin/rtdump
 bin/rtgen
@@ -8,5 +8,3 @@ share/doc/rainbowcrack/customcharset.htm
 share/doc/rainbowcrack/rcrackdemo.htm
 share/doc/rainbowcrack/rcracktutorial.htm
 share/rainbowcrack/charset.txt
-@dirrm share/rainbowcrack
-@dirrm share/doc/rainbowcrack

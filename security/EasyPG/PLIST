@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/08/05 08:38:26 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:25 joerg Exp $
 info/epa.info
 share/emacs/site-lisp/epg/epa-dired.el
 share/emacs/site-lisp/epg/epa-dired.elc
@@ -16,4 +16,3 @@ share/emacs/site-lisp/epg/epg-package-info.el
 share/emacs/site-lisp/epg/epg-package-info.elc
 share/emacs/site-lisp/epg/epg.el
 share/emacs/site-lisp/epg/epg.elc
-@dirrm share/emacs/site-lisp/epg
