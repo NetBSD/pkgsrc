@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.43 2009/06/14 18:12:48 minskim Exp $
+# $NetBSD: rubygem.mk,v 1.44 2009/06/14 22:34:19 minskim Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -254,9 +254,7 @@ RUBYGEM_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated." && \
 	( cd ${_RUBYGEM_INSTALL_ROOT}${PREFIX} && \
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
-		${SORT} && \
-	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
-		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
+		${SORT} );
 
 _GEM_INSTALL_TARGETS=	_gem-build-install-root
 _GEM_INSTALL_TARGETS+=	_gem-build-install-root-check
