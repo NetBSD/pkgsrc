@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/02 23:18:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:28:19 joerg Exp $
 bin/zzcat
 bin/zzdir
 bin/zzip-config
@@ -26,4 +26,3 @@ lib/pkgconfig/zzip-zlib-config.pc
 lib/pkgconfig/zziplib.pc
 lib/pkgconfig/zzipwrap.pc
 share/aclocal/zziplib.m4
-@dirrm include/zzip

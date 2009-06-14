@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/03/18 04:44:03 snj Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:37:48 joerg Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -567,41 +567,3 @@ share/pixmaps/pidgin/tray/48/tray-invisible.png
 share/pixmaps/pidgin/tray/48/tray-new-im.png
 share/pixmaps/pidgin/tray/48/tray-offline.png
 share/pixmaps/pidgin/tray/48/tray-online.png
-@dirrm share/pixmaps/pidgin/tray/48
-@dirrm share/pixmaps/pidgin/tray/32
-@dirrm share/pixmaps/pidgin/tray/22
-@dirrm share/pixmaps/pidgin/tray/16
-@dirrm share/pixmaps/pidgin/tray
-@dirrm share/pixmaps/pidgin/toolbar/22
-@dirrm share/pixmaps/pidgin/toolbar/16
-@dirrm share/pixmaps/pidgin/toolbar
-@dirrm share/pixmaps/pidgin/status/48/rtl
-@dirrm share/pixmaps/pidgin/status/48
-@dirrm share/pixmaps/pidgin/status/32/rtl
-@dirrm share/pixmaps/pidgin/status/32
-@dirrm share/pixmaps/pidgin/status/22/rtl
-@dirrm share/pixmaps/pidgin/status/22
-@dirrm share/pixmaps/pidgin/status/16/rtl
-@dirrm share/pixmaps/pidgin/status/16
-@dirrm share/pixmaps/pidgin/status/11/rtl
-@dirrm share/pixmaps/pidgin/status/11
-@dirrm share/pixmaps/pidgin/status
-@dirrm share/pixmaps/pidgin/protocols/48
-@dirrm share/pixmaps/pidgin/protocols/22
-@dirrm share/pixmaps/pidgin/protocols/16
-@dirrm share/pixmaps/pidgin/protocols
-@dirrm share/pixmaps/pidgin/emotes/small
-@dirrm share/pixmaps/pidgin/emotes/none
-@dirrm share/pixmaps/pidgin/emotes/default
-@dirrm share/pixmaps/pidgin/emotes
-@dirrm share/pixmaps/pidgin/emblems/16
-@dirrm share/pixmaps/pidgin/emblems
-@dirrm share/pixmaps/pidgin/dialogs/64
-@dirrm share/pixmaps/pidgin/dialogs/16
-@dirrm share/pixmaps/pidgin/dialogs
-@dirrm share/pixmaps/pidgin/buttons
-@dirrm share/pixmaps/pidgin/animations/16
-@dirrm share/pixmaps/pidgin/animations
-@dirrm share/pixmaps/pidgin
-@dirrm lib/pidgin
-@dirrm include/pidgin

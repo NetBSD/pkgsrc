@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:49:12 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:56 joerg Exp $
 bin/simian
 share/examples/simian/ex1
 share/examples/simian/ex10
@@ -12,4 +12,3 @@ share/examples/simian/ex6
 share/examples/simian/ex7
 share/examples/simian/ex8
 share/examples/simian/ex9
-@dirrm share/examples/simian

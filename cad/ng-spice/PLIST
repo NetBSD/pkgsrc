@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:35:55 joerg Exp $
 bin/nghelp
 bin/ngmakeidx
 bin/ngmultidec
@@ -16,7 +16,3 @@ share/ng-spice-rework/helpdir/ngspice.txt
 share/ng-spice-rework/scripts/setplot
 share/ng-spice-rework/scripts/spectrum
 share/ng-spice-rework/scripts/spinit
-@dirrm share/ng-spice-rework/scripts
-@dirrm share/ng-spice-rework/helpdir
-@dirrm share/ng-spice-rework
-@dirrm lib/ng-spice-rework

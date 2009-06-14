@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/28 16:51:05 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:18 joerg Exp $
 bin/mp3asm
 share/doc/mp3asm/README
-@dirrm share/doc/mp3asm

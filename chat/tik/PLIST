@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 19:22:36 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
 bin/tik
 libexec/tik/balloonhelp.tcl
 libexec/tik/buddylist.tcl
@@ -123,12 +123,3 @@ share/examples/tik/example.pkgrc
 share/examples/tik/example.tikpre
 share/examples/tik/example.tikrc
 share/examples/tik/example.tikstrs
-@dirrm libexec/tik/components
-@dirrm libexec/tik/media
-@dirrm libexec/tik/packages
-@dirrm libexec/tik/strs
-@dirrm libexec/tik
-@dirrm share/doc/tik/en/html
-@dirrm share/doc/tik/en
-@dirrm share/doc/tik
-@dirrm share/examples/tik

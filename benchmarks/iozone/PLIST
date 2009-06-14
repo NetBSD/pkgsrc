@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/10 11:06:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:33:11 joerg Exp $
 bin/iozone
 man/man1/iozone.1
 share/doc/IOzone/Iozone_ps.gz
-@dirrm share/doc/IOzone

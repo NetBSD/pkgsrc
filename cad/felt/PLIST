@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:47:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:53 joerg Exp $
 bin/burlap
 bin/corduroy
 bin/felt
@@ -117,6 +117,3 @@ share/examples/felt/truss_nl.flt
 share/examples/felt/truss_spec.flt
 share/examples/felt/truss_trig.flt
 share/examples/felt/wrench.flt
-@dirrm share/examples/felt
-@dirrm share/doc/felt
-@dirrm share/felt

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/04/24 08:30:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 17:37:49 joerg Exp $
 man/man5/silcd.conf.5
 man/man8/silcd.8
 sbin/silcd
@@ -19,5 +19,3 @@ share/examples/silc-server/silcalgs.conf.default
 share/examples/silc-server/silcd.conf.default
 share/examples/silc-server/silcd.prv
 share/examples/silc-server/silcd.pub
-@dirrm share/examples/silc-server
-@dirrm share/doc/silc-server

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/15 09:43:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:32:11 joerg Exp $
 bin/gtkpod
 man/man1/gtkpod.1
 share/applications/gtkpod.desktop
@@ -93,32 +93,3 @@ share/locale/ro/LC_MESSAGES/gtkpod.mo
 share/locale/ru/LC_MESSAGES/gtkpod.mo
 share/locale/sv/LC_MESSAGES/gtkpod.mo
 share/locale/zh_CN/LC_MESSAGES/gtkpod.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gtkpod/scripts
-@dirrm share/gtkpod/icons/hicolor/scalable/places
-@dirrm share/gtkpod/icons/hicolor/scalable
-@dirrm share/gtkpod/icons/hicolor/48x48/places
-@dirrm share/gtkpod/icons/hicolor/48x48
-@dirrm share/gtkpod/icons/hicolor/32x32/places
-@dirrm share/gtkpod/icons/hicolor/32x32
-@dirrm share/gtkpod/icons/hicolor/24x24/places
-@dirrm share/gtkpod/icons/hicolor/24x24
-@dirrm share/gtkpod/icons/hicolor/22x22/places
-@dirrm share/gtkpod/icons/hicolor/22x22
-@dirrm share/gtkpod/icons/hicolor/16x16/status
-@dirrm share/gtkpod/icons/hicolor/16x16/places
-@dirrm share/gtkpod/icons/hicolor/16x16
-@dirrm share/gtkpod/icons/hicolor
-@dirrm share/gtkpod/icons
-@dirrm share/gtkpod/doc/figures
-@dirrm share/gtkpod/doc
-@dirrm share/gtkpod/data
-@dirrm share/gtkpod
-@comment in xdg-dirs: @dirrm share/applications

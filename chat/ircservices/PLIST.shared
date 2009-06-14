@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.shared,v 1.1 2005/06/21 16:18:52 jlam Exp $
+@comment $NetBSD: PLIST.shared,v 1.2 2009/06/14 17:37:46 joerg Exp $
 lib/services/modules/chanserv/access-levels.so
 lib/services/modules/chanserv/access-xop.so
 lib/services/modules/chanserv/main.so
@@ -46,15 +46,3 @@ lib/services/modules/protocol/ts8.so
 lib/services/modules/protocol/undernet-p9.so
 lib/services/modules/protocol/unreal.so
 lib/services/modules/statserv/main.so
-@dirrm lib/services/modules/statserv
-@dirrm lib/services/modules/protocol
-@dirrm lib/services/modules/operserv
-@dirrm lib/services/modules/nickserv
-@dirrm lib/services/modules/misc
-@dirrm lib/services/modules/memoserv
-@dirrm lib/services/modules/mail
-@dirrm lib/services/modules/httpd
-@dirrm lib/services/modules/encryption
-@dirrm lib/services/modules/database
-@dirrm lib/services/modules/chanserv
-@dirrm lib/services/modules

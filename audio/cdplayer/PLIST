@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/19 11:43:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:03 joerg Exp $
 bin/CDPlayer
 include/CDPlayer/AudioCDProtocol.h
 lib/GNUstep/Applications/CDPlayer.app/CDPlayer
@@ -78,33 +78,3 @@ lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm/object
 lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj/Localizable.strings
 lib/GNUstep/Preferences/AudioCD.prefs/Resources/Info-gnustep.plist
 lib/GNUstep/Preferences/AudioCD.prefs/stamp.make
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj/AudioCD.gorm
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/German.lproj
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/French.lproj/AudioCD.gorm
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/French.lproj
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/English.lproj/AudioCD.gorm
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources/English.lproj
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs/Resources
-@dirrm lib/GNUstep/Preferences/AudioCD.prefs
-@comment in x11/gnustep-preferences: @dirrm lib/GNUstep/Preferences
-@dirrm lib/GNUstep/Bundles/AudioCD.bundle/Resources
-@dirrm lib/GNUstep/Bundles/AudioCD.bundle
-@comment in x11/gnustep-base: @dirrm lib/GNUstep/Bundles
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/German.lproj/TrackList.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/German.lproj/General.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/German.lproj/FreeDB.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/French.lproj/TrackList.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/French.lproj/General.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/French.lproj/FreeDB.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/French.lproj
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/English.lproj/TrackList.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/English.lproj/General.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/English.lproj/FreeDB.gorm
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources/CDPlayer.help
-@dirrm lib/GNUstep/Applications/CDPlayer.app/Resources
-@dirrm lib/GNUstep/Applications/CDPlayer.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep
-@dirrm include/CDPlayer

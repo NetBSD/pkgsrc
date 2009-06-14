@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/15 08:26:58 chap Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:35:55 joerg Exp $
 bin/qcad
 share/qcad/data/example00.dxf
 share/qcad/data/example01.dxf
@@ -92,8 +92,3 @@ share/qcad/patterns/square.dxf
 share/qcad/patterns/triangle_a.dxf
 share/qcad/patterns/triangle_b.dxf
 @exec ${MKDIR} %D/share/qcad/qm
-@dirrm share/qcad/qm
-@dirrm share/qcad/patterns
-@dirrm share/qcad/fonts
-@dirrm share/qcad/data
-@dirrm share/qcad

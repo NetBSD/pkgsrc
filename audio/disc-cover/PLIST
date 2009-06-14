@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/03 18:45:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:04 joerg Exp $
 bin/disc-cover
 man/man1/disc-cover.1
 share/disc-cover/templates/backonly
@@ -12,5 +12,3 @@ share/disc-cover/templates/tape
 share/disc-cover/templates/tdk-slim
 share/disc-cover/templates/tevion-slim
 share/disc-cover/templates/x-slim
-@dirrm share/disc-cover/templates
-@dirrm share/disc-cover

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/17 19:54:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:20 joerg Exp $
 ${PYSITELIB}/xmms/__init__.py
 ${PYSITELIB}/xmms/__init__.pyc
 ${PYSITELIB}/xmms/__init__.pyo
@@ -13,4 +13,3 @@ ${PYSITELIB}/xmms/config.pyo
 ${PYSITELIB}/xmms/control.py
 ${PYSITELIB}/xmms/control.pyc
 ${PYSITELIB}/xmms/control.pyo
-@dirrm ${PYSITELIB}/xmms
