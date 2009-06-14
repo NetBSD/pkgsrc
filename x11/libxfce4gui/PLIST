@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/12/18 13:46:51 hira Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:25:00 joerg Exp $
 include/xfce4/libxfcegui4/dialogs.h
 include/xfce4/libxfcegui4/gtk_style.h
 include/xfce4/libxfcegui4/gtktoxevent.h
@@ -140,5 +140,3 @@ share/locale/uk/LC_MESSAGES/libxfcegui4.mo
 share/locale/ur/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_CN/LC_MESSAGES/libxfcegui4.mo
 share/locale/zh_TW/LC_MESSAGES/libxfcegui4.mo
-@dirrm share/doc/libxfcegui4
-@dirrm include/xfce4/libxfcegui4

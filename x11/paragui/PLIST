@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/06 20:58:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:25:02 joerg Exp $
 bin/paragui-config
 include/paragui/paraconfig.h
 include/paragui/paraconfig_gnu.h
@@ -54,5 +54,3 @@ lib/pkgconfig/paragui.pc
 share/aclocal/paragui.m4
 share/paragui/default.zip
 share/paragui/simple.zip
-@dirrm share/paragui
-@dirrm include/paragui

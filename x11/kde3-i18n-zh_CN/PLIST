@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/02/20 10:36:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:24:56 joerg Exp $
 share/doc/kde/HTML/zh_CN/common/1.png
 share/doc/kde/HTML/zh_CN/common/10.png
 share/doc/kde/HTML/zh_CN/common/2.png
@@ -608,6 +608,3 @@ share/locale/zh_CN/LC_MESSAGES/webarchiver.mo
 share/locale/zh_CN/charset
 share/locale/zh_CN/entry.desktop
 share/locale/zh_CN/flag.png
-@dirrm share/doc/kde/HTML/zh_CN/kdevelop
-@comment in kde: @dirrm share/doc/kde/HTML/zh_CN/common
-@comment in kde: @dirrm share/doc/kde/HTML/zh_CN

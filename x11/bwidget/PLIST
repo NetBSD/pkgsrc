@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/11 23:39:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:45 joerg Exp $
 lib/bwidget/arrow.tcl
 lib/bwidget/bitmap.tcl
 lib/bwidget/button.tcl
@@ -112,7 +112,3 @@ share/doc/bwidget/contents.html
 share/doc/bwidget/index.html
 share/doc/bwidget/navtree.html
 share/doc/bwidget/options.htm
-@dirrm share/doc/bwidget
-@dirrm lib/bwidget/lang
-@dirrm lib/bwidget/images
-@dirrm lib/bwidget
