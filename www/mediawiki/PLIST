@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/07 11:09:37 martti Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:26 joerg Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/AdminSettings.sample
 share/mediawiki/COPYING
@@ -1357,56 +1357,3 @@ share/mediawiki/thumb.php
 share/mediawiki/thumb.php5
 share/mediawiki/trackback.php
 share/mediawiki/wiki.phtml
-@dirrm share/mediawiki/tests
-@dirrm share/mediawiki/t/maint
-@dirrm share/mediawiki/t/inc
-@dirrm share/mediawiki/t
-@dirrm share/mediawiki/skins/simple
-@dirrm share/mediawiki/skins/myskin
-@dirrm share/mediawiki/skins/monobook
-@dirrm share/mediawiki/skins/modern
-@dirrm share/mediawiki/skins/disabled
-@dirrm share/mediawiki/skins/common/images/icons
-@dirrm share/mediawiki/skins/common/images/cyrl
-@dirrm share/mediawiki/skins/common/images/be-tarask
-@dirrm share/mediawiki/skins/common/images/ar
-@dirrm share/mediawiki/skins/common/images
-@dirrm share/mediawiki/skins/common
-@dirrm share/mediawiki/skins/chick
-@dirrm share/mediawiki/skins
-@dirrm share/mediawiki/serialized
-@dirrm share/mediawiki/math
-@dirrm share/mediawiki/maintenance/storage
-@dirrm share/mediawiki/maintenance/sqlite
-@dirrm share/mediawiki/maintenance/postgres/archives
-@dirrm share/mediawiki/maintenance/postgres
-@dirrm share/mediawiki/maintenance/ora
-@dirrm share/mediawiki/maintenance/mssql
-@dirrm share/mediawiki/maintenance/language
-@dirrm share/mediawiki/maintenance/dtrace
-@dirrm share/mediawiki/maintenance/archives
-@dirrm share/mediawiki/maintenance
-@dirrm share/mediawiki/locale
-@dirrm share/mediawiki/languages/messages
-@dirrm share/mediawiki/languages/classes
-@dirrm share/mediawiki/languages
-@dirrm share/mediawiki/includes/zhtable
-@dirrm share/mediawiki/includes/templates
-@dirrm share/mediawiki/includes/specials
-@dirrm share/mediawiki/includes/parser
-@dirrm share/mediawiki/includes/normal
-@dirrm share/mediawiki/includes/media
-@dirrm share/mediawiki/includes/filerepo
-@dirrm share/mediawiki/includes/db
-@dirrm share/mediawiki/includes/cbt
-@dirrm share/mediawiki/includes/api
-@dirrm share/mediawiki/includes
-@dirrm share/mediawiki/images
-@dirrm share/mediawiki/extensions
-@dirrm share/mediawiki/docs/php-memcached
-@dirrm share/mediawiki/docs/html
-@dirrm share/mediawiki/docs
-@dirrm share/mediawiki/bin
-@dirrm share/examples/mediawiki
-@unexec ${RMDIR} %D/share/mediawiki/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/mediawiki 2>/dev/null || ${TRUE}

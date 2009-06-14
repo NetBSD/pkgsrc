@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2007/12/17 19:14:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/06/14 22:00:22 joerg Exp $
 bin/galeon
 bin/galeon-config-tool
 lib/bonobo/servers/GNOME_Galeon_Automation.server
@@ -224,25 +224,3 @@ share/omf/galeon/galeon-C.omf
 share/omf/galeon/galeon-es.omf
 share/pixmaps/galeon.png
 share/sounds/galeon/clicked.wav
-@dirrm share/sounds/galeon
-@comment in xdg-dirs: @dirrm share/sounds
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/galeon
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/galeon/es/figures
-@dirrm share/gnome/help/galeon/es
-@dirrm share/gnome/help/galeon/C/figures
-@dirrm share/gnome/help/galeon/C
-@dirrm share/gnome/help/galeon
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/galeon/chrome/global
-@dirrm share/galeon/chrome/branding
-@dirrm share/galeon/chrome
-@dirrm share/galeon
-@dirrm share/examples/galeon/sound/events
-@dirrm share/examples/galeon/sound
-@dirrm share/examples/galeon
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

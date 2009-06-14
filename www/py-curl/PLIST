@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/03/22 22:24:08 recht Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:31 joerg Exp $
 ${PYSITELIB}/curl/__init__.py
 ${PYSITELIB}/curl/__init__.pyc
 ${PYSITELIB}/curl/__init__.pyo
@@ -44,8 +44,3 @@ share/doc/pycurl${PYVERSSUFFIX}/tests/test_share.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_stringio.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/test_xmlrpc.py
 share/doc/pycurl${PYVERSSUFFIX}/tests/util.py
-@dirrm share/doc/pycurl${PYVERSSUFFIX}/tests
-@dirrm share/doc/pycurl${PYVERSSUFFIX}/html
-@dirrm share/doc/pycurl${PYVERSSUFFIX}/examples
-@dirrm share/doc/pycurl${PYVERSSUFFIX}
-@dirrm ${PYSITELIB}/curl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/09/22 00:59:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 22:00:24 joerg Exp $
 bin/gw-config
 bin/mtbatch
 bin/seewbmp
@@ -53,6 +53,3 @@ sbin/bearerbox
 sbin/run_kannel_box
 sbin/smsbox
 sbin/wapbox
-@dirrm lib/kannel
-@dirrm include/kannel/gwlib
-@dirrm include/kannel

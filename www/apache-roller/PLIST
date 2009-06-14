@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/12 00:26:59 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:17 joerg Exp $
 share/doc/apache-roller/LICENSE.txt
 share/doc/apache-roller/NOTICE.txt
 share/doc/apache-roller/README.txt
@@ -7,6 +7,3 @@ share/doc/apache-roller/roller-template-guide.pdf
 share/doc/apache-roller/roller-user-guide.pdf
 share/apache-roller/${PKGNAME_NOREV}.war
 share/examples/apache-roller/roller-custom.properties
-@dirrm share/examples/apache-roller
-@dirrm share/apache-roller
-@dirrm share/doc/apache-roller

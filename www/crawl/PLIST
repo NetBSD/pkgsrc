@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/18 17:46:31 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:20 joerg Exp $
 bin/crawl
 man/man1/crawl.1
 share/examples/${PKGBASE}/crawl.conf
-@dirrm share/examples/${PKGBASE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/04/06 12:54:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 22:00:29 joerg Exp $
 bin/neon-config
 include/neon/ne_207.h
 include/neon/ne_acl.h
@@ -171,6 +171,3 @@ share/locale/pl/LC_MESSAGES/neon.mo
 share/locale/ru/LC_MESSAGES/neon.mo
 share/locale/tr/LC_MESSAGES/neon.mo
 share/locale/zh_CN/LC_MESSAGES/neon.mo
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@dirrm include/neon
