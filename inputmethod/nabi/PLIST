@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/20 20:48:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:01:32 joerg Exp $
 bin/nabi
 share/locale/de/LC_MESSAGES/nabi.mo
 share/locale/ko/LC_MESSAGES/nabi.mo
@@ -37,12 +37,3 @@ share/nabi/themes/keyboard/README
 share/nabi/themes/keyboard/english.png
 share/nabi/themes/keyboard/hangul.png
 share/nabi/themes/keyboard/none.png
-@dirrm share/nabi/themes/keyboard
-@dirrm share/nabi/themes/Tux
-@dirrm share/nabi/themes/SimplyRed
-@dirrm share/nabi/themes/Onion
-@dirrm share/nabi/themes/KingSejong2
-@dirrm share/nabi/themes/KingSejong
-@dirrm share/nabi/themes/Jini
-@dirrm share/nabi/themes
-@dirrm share/nabi
