@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/02 17:12:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:36 joerg Exp $
 bin/squirm
 share/examples/squirm/squirm.local.dist
 share/examples/squirm/squirm.patterns.dist
-@dirrm share/examples/squirm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 22:00:18 joerg Exp $
 bin/anti_bins
 bin/bins
 bin/bins_cleanupgallery
@@ -265,18 +265,3 @@ share/locale/nl/LC_MESSAGES/bins.mo
 share/locale/pl/LC_MESSAGES/bins.mo
 share/locale/ru/LC_MESSAGES/bins.mo
 share/locale/zh_TW/LC_MESSAGES/bins.mo
-@dirrm share/examples/bins/templates.swigs
-@dirrm share/examples/bins/templates.satyap/static
-@dirrm share/examples/bins/templates.satyap
-@dirrm share/examples/bins/templates.petrus/static
-@dirrm share/examples/bins/templates.petrus
-@dirrm share/examples/bins/templates.mwolson/static
-@dirrm share/examples/bins/templates.mwolson
-@dirrm share/examples/bins/templates.martin/static
-@dirrm share/examples/bins/templates.martin
-@dirrm share/examples/bins/templates.marc/static
-@dirrm share/examples/bins/templates.marc
-@dirrm share/examples/bins/templates.joi/static
-@dirrm share/examples/bins/templates.joi
-@dirrm share/examples/bins
-@dirrm share/doc/html/bins

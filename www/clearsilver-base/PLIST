@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/06 01:04:29 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:19 joerg Exp $
 bin/cs
 bin/cs_static.cgi
 bin/cstest
@@ -149,7 +149,3 @@ man/man3/skipNext.3
 man/man3/skipRelease.3
 man/man3/skipSearch.3
 man/man3/wdb_keys.3
-@dirrm include/ClearSilver/util
-@dirrm include/ClearSilver/cs
-@dirrm include/ClearSilver/cgi
-@dirrm include/ClearSilver

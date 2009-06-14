@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/22 17:13:29 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:20 joerg Exp $
 libexec/cgi-bin/dansguardian.pl
 man/man8/dansguardian.8
 sbin/dansguardian
@@ -126,51 +126,3 @@ share/examples/dansguardian/pics
 share/examples/dansguardian/transparent1x1.gif
 share/examples/dansguardian/weightedphraselist
 share/examples/rc.d/dansguardian
-@dirrm share/examples/dansguardian/phraselists/webmail
-@dirrm share/examples/dansguardian/phraselists/weapons
-@dirrm share/examples/dansguardian/phraselists/warezhacking
-@dirrm share/examples/dansguardian/phraselists/violence
-@dirrm share/examples/dansguardian/phraselists/sport
-@dirrm share/examples/dansguardian/phraselists/proxies
-@dirrm share/examples/dansguardian/phraselists/pornography
-@dirrm share/examples/dansguardian/phraselists/personals
-@dirrm share/examples/dansguardian/phraselists/peer2peer
-@dirrm share/examples/dansguardian/phraselists/nudism
-@dirrm share/examples/dansguardian/phraselists/news
-@dirrm share/examples/dansguardian/phraselists/malware
-@dirrm share/examples/dansguardian/phraselists/legaldrugs
-@dirrm share/examples/dansguardian/phraselists/intolerance
-@dirrm share/examples/dansguardian/phraselists/illegaldrugs
-@dirrm share/examples/dansguardian/phraselists/gore
-@dirrm share/examples/dansguardian/phraselists/googlesearches
-@dirrm share/examples/dansguardian/phraselists/goodphrases
-@dirrm share/examples/dansguardian/phraselists/games
-@dirrm share/examples/dansguardian/phraselists/gambling
-@dirrm share/examples/dansguardian/phraselists/drugadvocacy
-@dirrm share/examples/dansguardian/phraselists/chat
-@dirrm share/examples/dansguardian/phraselists/badwords
-@dirrm share/examples/dansguardian/phraselists
-@dirrm share/examples/dansguardian/languages/ukenglish
-@dirrm share/examples/dansguardian/languages/turkish
-@dirrm share/examples/dansguardian/languages/swedish
-@dirrm share/examples/dansguardian/languages/spanish
-@dirrm share/examples/dansguardian/languages/slovak
-@dirrm share/examples/dansguardian/languages/russian-1251
-@dirrm share/examples/dansguardian/languages/portuguese
-@dirrm share/examples/dansguardian/languages/polish
-@dirrm share/examples/dansguardian/languages/mxspanish
-@dirrm share/examples/dansguardian/languages/lithuanian
-@dirrm share/examples/dansguardian/languages/italian
-@dirrm share/examples/dansguardian/languages/indonesian
-@dirrm share/examples/dansguardian/languages/hebrew
-@dirrm share/examples/dansguardian/languages/german
-@dirrm share/examples/dansguardian/languages/french
-@dirrm share/examples/dansguardian/languages/dutch
-@dirrm share/examples/dansguardian/languages/danish
-@dirrm share/examples/dansguardian/languages/czech
-@dirrm share/examples/dansguardian/languages/chinesegb2312
-@dirrm share/examples/dansguardian/languages/chinesebig5
-@dirrm share/examples/dansguardian/languages/bulgarian
-@dirrm share/examples/dansguardian/languages/arspanish
-@dirrm share/examples/dansguardian/languages
-@dirrm share/examples/dansguardian

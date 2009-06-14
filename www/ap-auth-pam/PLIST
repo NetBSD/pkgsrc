@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/03/06 19:33:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:15 joerg Exp $
 lib/httpd/mod_auth_pam.so
 share/doc/html/mod_auth_pam/configure.html
 share/doc/html/mod_auth_pam/faq.html
 share/examples/mod_auth_pam/httpd.pam
-@dirrm share/examples/mod_auth_pam
-@dirrm share/doc/html/mod_auth_pam

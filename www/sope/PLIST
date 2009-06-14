@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/01 00:14:16 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:35 joerg Exp $
 share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/PostgreSQL
 share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources/Version
@@ -550,53 +550,3 @@ share/GNUstep/Local/Tools/xmlrpc_call
 share/GNUstep/System/Library/Makefiles/Additional/ngobjweb.make
 share/GNUstep/System/Library/Makefiles/woapp.make
 share/GNUstep/System/Library/Makefiles/wobundle.make
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles/Additional
-@comment in devel/gnustep-make: @dirrm share/GNUstep/System/Library/Makefiles
-@dirrm share/GNUstep/Local/Tools
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox/Resources
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WOExtensions.wox
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox/Resources
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5/WEExtensions.wox
-@dirrm share/GNUstep/Local/Library/WOxElemBuilders-4.5
-@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp/Resources
-@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoOFS.sxp
-@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp/Resources
-@dirrm share/GNUstep/Local/Library/SoProducts-4.5/SoCore.sxp
-@dirrm share/GNUstep/Local/Library/SoProducts-4.5
-@dirrm share/GNUstep/Local/Library/SaxMappings
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/versitSaxDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/libxmlSAXDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax/Resources
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5/STXSaxDriver.sax
-@dirrm share/GNUstep/Local/Library/SaxDrivers-4.5
-@dirrm share/GNUstep/Local/Library/Libraries/Resources/NGObjWeb
-@dirrm share/GNUstep/Local/Library/Libraries/Resources
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers/XmlRpc
-@dirrm share/GNUstep/Local/Library/Headers/WOXML
-@dirrm share/GNUstep/Local/Library/Headers/WOExtensions
-@dirrm share/GNUstep/Local/Library/Headers/WEExtensions
-@dirrm share/GNUstep/Local/Library/Headers/SoOFS
-@dirrm share/GNUstep/Local/Library/Headers/SaxObjC
-@dirrm share/GNUstep/Local/Library/Headers/NGiCal
-@dirrm share/GNUstep/Local/Library/Headers/NGXmlRpc
-@dirrm share/GNUstep/Local/Library/Headers/NGStreams
-@dirrm share/GNUstep/Local/Library/Headers/NGObjWeb
-@dirrm share/GNUstep/Local/Library/Headers/NGMime
-@dirrm share/GNUstep/Local/Library/Headers/NGMail
-@dirrm share/GNUstep/Local/Library/Headers/NGLdap
-@dirrm share/GNUstep/Local/Library/Headers/NGImap4
-@dirrm share/GNUstep/Local/Library/Headers/NGHttp
-@dirrm share/GNUstep/Local/Library/Headers/NGExtensions
-@dirrm share/GNUstep/Local/Library/Headers/GDLContentStore
-@dirrm share/GNUstep/Local/Library/Headers/GDLAccess
-@dirrm share/GNUstep/Local/Library/Headers/EOControl
-@dirrm share/GNUstep/Local/Library/Headers/DOM
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor/Resources
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5/PostgreSQL.gdladaptor
-@dirrm share/GNUstep/Local/Library/GDLAdaptors-4.5
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
