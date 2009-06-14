@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/05 21:52:52 seb Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:37 joerg Exp $
 bin/tab2space
 bin/tidy
 include/tidy/buffio.h
@@ -7,4 +7,3 @@ include/tidy/tidy.h
 include/tidy/tidyenum.h
 lib/libtidy.la
 man/man1/tidy.1
-@dirrm include/tidy

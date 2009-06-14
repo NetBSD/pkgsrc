@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 20:24:43 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:29 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/ocsigen
 bin/ocsigen
 lib/ocaml/site-lib/ocsigen/META
@@ -137,10 +137,3 @@ share/examples/ocsigen/ocsigen.conf
 share/examples/ocsigen/tutorial.cmi
 share/examples/ocsigen/tutorial.cmo
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/ocsigen
-@dirrm lib/ocaml/site-lib/ocsigen
-@dirrm share/doc/ocsigen/lwt
-@dirrm share/doc/ocsigen/oc
-@dirrm share/doc/ocsigen
-@dirrm share/examples/ocsigen
-@dirrm share/ocsigen/www
-@dirrm share/ocsigen

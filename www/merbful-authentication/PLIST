@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:25:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:28 joerg Exp $
 ${GEM_HOME}/cache/merbful_authentication-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -45,55 +45,3 @@ ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/f
 ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/mailers/%singular_name%_mailer_test.rb
 ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/unit/%singular_name%_test.rb
 ${GEM_HOME}/specifications/merbful_authentication-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/unit
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/mailers
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test/functional
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates/test
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests/templates
-@dirrm ${GEM_LIBDIR}/test_unit_generators/merbful_authentication_tests
-@dirrm ${GEM_LIBDIR}/test_unit_generators
-@dirrm ${GEM_LIBDIR}/sequel_generators/merbful_authentication_model/lib
-@dirrm ${GEM_LIBDIR}/sequel_generators/merbful_authentication_model
-@dirrm ${GEM_LIBDIR}/sequel_generators
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests/templates/spec/models
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests/templates/spec/mailers
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests/templates/spec/controllers
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests/templates/spec
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests/templates
-@dirrm ${GEM_LIBDIR}/rspec_generators/merbful_authentication_tests
-@dirrm ${GEM_LIBDIR}/rspec_generators
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/lib/authenticated_system
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/lib
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/views/%model_controller_name%
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/views/%controller_name%
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/views
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/mailers/views/%singular_name%_mailer
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/mailers/views
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/mailers
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app/controllers
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates/app
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated/templates
-@dirrm ${GEM_LIBDIR}/merb_generators/authenticated
-@dirrm ${GEM_LIBDIR}/merb_generators
-@dirrm ${GEM_LIBDIR}/merb_default_generators/merbful_authentication_model
-@dirrm ${GEM_LIBDIR}/merb_default_generators
-@dirrm ${GEM_LIBDIR}/lib/merbful_authentication
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model/templates/lib/authenticated_system
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model/templates/lib
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model/templates/app/models
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model/templates/app
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model/templates
-@dirrm ${GEM_LIBDIR}/datamapper_generators/merbful_authentication_model
-@dirrm ${GEM_LIBDIR}/datamapper_generators
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/schema/migrations
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/schema
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/lib/authenticated_system
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/lib
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/app/models
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates/app
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model/templates
-@dirrm ${GEM_LIBDIR}/activerecord_generators/merbful_authentication_model
-@dirrm ${GEM_LIBDIR}/activerecord_generators
-@dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/${GEM_DOCDIR}/rdoc/classes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/06 22:07:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 22:00:36 joerg Exp $
 bin/opensearch-discover
 bin/opensearch-genquery
 bin/surfraw
@@ -97,6 +97,3 @@ man/man1/surfraw.1
 share/doc/surfraw/README
 share/examples/surfraw/surfraw.bookmarks
 share/examples/surfraw/surfraw.conf
-@dirrm share/examples/surfraw
-@dirrm share/doc/surfraw
-@dirrm lib/surfraw

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST.bsdi-i386,v 1.1 2001/11/01 20:42:28 zuntum Exp $
+@comment $NetBSD: PLIST.bsdi-i386,v 1.2 2009/06/14 22:00:28 joerg Exp $
 lib/netscape/${BINNAME}-${NS_VERS}/nls/C
 lib/netscape/${BINNAME}-${NS_VERS}/nls/nls.dir
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nls

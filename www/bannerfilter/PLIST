@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/14 12:49:45 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:18 joerg Exp $
 bin/bannerfilter-redirector.pl
 share/bannerfilter/bannerfilter.conf
 share/bannerfilter/data/banners.data
@@ -27,7 +27,3 @@ share/bannerfilter/www/test.html
 share/bannerfilter/www/xbbackground.gif
 share/bannerfilter/www/xoom.html
 share/bannerfilter/www/yahoo.html
-@dirrm share/bannerfilter/data
-@dirrm share/bannerfilter/doc
-@dirrm share/bannerfilter/www
-@dirrm share/bannerfilter

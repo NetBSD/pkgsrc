@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/23 10:36:18 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:14 joerg Exp $
 bin/album
 man/man1/album.1
 share/doc/album/Pics/Caption.gif
@@ -22,5 +22,3 @@ share/doc/album/txt_5
 share/doc/album/txt_6
 share/doc/album/txt_7
 share/doc/album/txt_8
-@dirrm share/doc/album/Pics
-@dirrm share/doc/album

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/03/15 19:16:58 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 22:00:21 joerg Exp $
 lib/epiphany/2.26/extensions/actions.ephy-extension
 lib/epiphany/2.26/extensions/adblock.ephy-extension
 lib/epiphany/2.26/extensions/auto-reload.ephy-extension
@@ -183,20 +183,3 @@ share/omf/epiphany-extensions/epiphany-extensions-C.omf
 share/omf/epiphany-extensions/epiphany-extensions-es.omf
 share/omf/epiphany-extensions/epiphany-extensions-oc.omf
 share/omf/epiphany-extensions/epiphany-extensions-sv.omf
-@dirrm share/omf/epiphany-extensions
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/epiphany-extensions/sv/figures
-@dirrm share/gnome/help/epiphany-extensions/sv
-@dirrm share/gnome/help/epiphany-extensions/oc/figures
-@dirrm share/gnome/help/epiphany-extensions/oc
-@dirrm share/gnome/help/epiphany-extensions/es/figures
-@dirrm share/gnome/help/epiphany-extensions/es
-@dirrm share/gnome/help/epiphany-extensions/C/figures
-@dirrm share/gnome/help/epiphany-extensions/C
-@dirrm share/gnome/help/epiphany-extensions
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/epiphany-extensions/xml
-@dirrm share/epiphany-extensions/glade
-@dirrm share/epiphany-extensions

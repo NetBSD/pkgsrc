@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2004/12/19 22:00:10 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:14 joerg Exp $
 bin/analog
 share/examples/analog.cfg
-@exec test -f %D/etc/analog.cfg || cp -p %D/%F %D/etc/analog.cfg
 lib/analog/images/analogo.gif
 lib/analog/images/analogo.png
 lib/analog/images/bara1.gif
@@ -370,7 +369,3 @@ share/doc/analog/wasnew4.html
 share/doc/analog/wasnew5.html
 share/doc/analog/webworks.html
 share/doc/analog/whatsnew.html
-@dirrm share/doc/analog
-@dirrm lib/analog/lang
-@dirrm lib/analog/images
-@dirrm lib/analog

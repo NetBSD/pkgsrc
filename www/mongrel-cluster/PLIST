@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:25:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:28 joerg Exp $
 bin/mongrel_cluster_ctl
 ${GEM_HOME}/cache/mongrel_cluster-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -15,9 +15,3 @@ ${GEM_LIBDIR}/mongrel_cluster.gemspec
 ${GEM_LIBDIR}/resources/defaults.yaml
 ${GEM_LIBDIR}/resources/mongrel_cluster
 ${GEM_HOME}/specifications/mongrel_cluster-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/resources
-@dirrm ${GEM_LIBDIR}/lib/mongrel_cluster
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/${GEM_DOCDIR}
