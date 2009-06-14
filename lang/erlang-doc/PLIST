@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:34:13 joerg Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -2306,4 +2306,3 @@ lib/erlang/lib/xmerl-${VERSION.xmerl}/doc/html/xmerl_xs.html
 lib/erlang/lib/xmerl-${VERSION.xmerl}/doc/html/xmerl_xs_examples.html
 lib/erlang/lib/xmerl-${VERSION.xmerl}/doc/html/xmerl_xsd.html
 lib/erlang/lib/xmerl-${VERSION.xmerl}/info
-@unexec ${RMDIR} %D/lib/erlang/lib/jinterface-${VERSION.jinterface} 2>/dev/null || ${TRUE}
