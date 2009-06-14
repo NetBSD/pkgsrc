@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2332 2009/06/14 19:42:23 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2333 2009/06/14 19:47:19 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3129,3 +3129,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated textproc/ruby-redcloth to 4.2.0 [minskim 2009-06-14]
 	Updated devel/p5-CPAN-Reporter to 1.1708 [sno 2009-06-14]
 	Updated games/gbrainy to 1.11 [wiz 2009-06-14]
+	Updated devel/p5-Task-Weaken to 1.03 [sno 2009-06-14]
