@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/06/15 23:40:00 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:11:56 joerg Exp $
 bin/ieee-copyout
 bin/latex-mk
 info/latex-mk.info
@@ -31,6 +31,3 @@ share/latex-mk/tgif.gmk
 share/latex-mk/tgif.mk
 share/latex-mk/xfig.gmk
 share/latex-mk/xfig.mk
-@dirrm share/latex-mk/example/tgif
-@dirrm share/latex-mk/example
-@dirrm share/latex-mk

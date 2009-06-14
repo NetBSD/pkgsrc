@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/11 06:13:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/igo/README
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/igo/igo.pdf
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/igo/igo.tex
@@ -152,11 +152,3 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo/igowhiteiii8.tfm
 ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo/igowhiteiii9.tfm
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/igo/igo.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/igo/repeat.tex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/igo
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/igo
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/igo
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/igo
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex

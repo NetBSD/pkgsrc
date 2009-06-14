@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/18 16:28:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:03 joerg Exp $
 share/xpdf/japanese/Adobe-Japan1.cidToUnicode
 share/xpdf/japanese/CMap/78-EUC-H
 share/xpdf/japanese/CMap/78-EUC-V
@@ -59,5 +59,3 @@ share/xpdf/japanese/CMap/WP-Symbol
 share/xpdf/japanese/EUC-JP.unicodeMap
 share/xpdf/japanese/ISO-2022-JP.unicodeMap
 share/xpdf/japanese/Shift-JIS.unicodeMap
-@dirrm share/xpdf/japanese/CMap
-@dirrm share/xpdf/japanese

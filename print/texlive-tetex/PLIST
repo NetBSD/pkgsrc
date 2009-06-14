@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/26 21:04:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:02 joerg Exp $
 bin/allcm
 bin/allec
 bin/allneeded
@@ -83,7 +83,3 @@ share/texmf/texconfig/v/vt100
 share/texmf/texconfig/x/xterm
 share/texmf/web2c/fmtutil.cnf
 share/texmf/web2c/updmap.cfg
-@dirrm share/texmf/texconfig/x
-@dirrm share/texmf/texconfig/v
-@dirrm share/texmf/texconfig/g
-@dirrm share/texmf/texconfig

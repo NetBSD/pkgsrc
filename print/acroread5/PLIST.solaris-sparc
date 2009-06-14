@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.1 2007/07/29 05:19:50 jlam Exp $
+@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/06/14 18:11:53 joerg Exp $
 Acrobat5/Reader/help/search.pdf
 Acrobat5/Reader/${PLATFORM}/plug_ins/search.api
 Acrobat5/Reader/${PLATFORM}/plug_ins/acrosrch.uid
@@ -14,7 +14,3 @@ Acrobat5/desktop/olwm/acroread.cetable
 Acrobat5/desktop/olwm/acroread.deskinstall
 Acrobat5/desktop/olwm/acroread.prog.icon
 Acrobat5/desktop/olwm/pdf.icon
-@dirrm Acrobat5/desktop/olwm
-@dirrm Acrobat5/desktop
-@dirrm Acrobat5/Reader/${PLATFORM}/plug_ins/vdkHome/language
-@dirrm Acrobat5/Reader/${PLATFORM}/plug_ins/vdkHome

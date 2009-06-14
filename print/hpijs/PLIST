@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/01/29 01:51:23 gavan Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:56 joerg Exp $
 bin/hpijs
 share/doc/html/hpijs/gs_hpijs.png
 share/doc/html/hpijs/hpijs_readme.html
@@ -407,5 +407,3 @@ share/ppd/HP_LaserJet_9050.ppd.gz
 share/ppd/HP_LaserJet_9055_9065_MFP.ppd.gz
 share/ppd/HP_Mopier_240.ppd.gz
 share/ppd/HP_Mopier_320.ppd.gz
-@dirrm share/ppd
-@dirrm share/doc/html/hpijs

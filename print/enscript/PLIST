@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/13 18:53:28 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:11:54 joerg Exp $
 bin/diffpp
 bin/enscript
 bin/mkafmmap
@@ -162,7 +162,3 @@ share/locale/ru/LC_MESSAGES/enscript.mo
 share/locale/sl/LC_MESSAGES/enscript.mo
 share/locale/sv/LC_MESSAGES/enscript.mo
 share/locale/tr/LC_MESSAGES/enscript.mo
-@dirrm share/examples/enscript
-@dirrm share/enscript/hl
-@dirrm share/enscript/afm
-@dirrm share/enscript

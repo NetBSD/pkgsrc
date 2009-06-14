@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/24 10:54:39 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:56 joerg Exp $
 bin/vfxdvi
 bin/vfxdvi.bin
 bin/vfxdviprint
@@ -9,4 +9,3 @@ ${PKG_LOCALTEXMFPREFIX}/vfxdvi/vfontmap
 ${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.dvi2ps-j
 ${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.dvips
 ${PKG_LOCALTEXMFPREFIX}/vfxdvi/xdvipaper.jdvi2kps
-@dirrm ${PKG_LOCALTEXMFPREFIX}/vfxdvi

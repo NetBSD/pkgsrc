@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/02/12 19:51:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:11:55 joerg Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -678,17 +678,4 @@ share/ghostscript/${PKGVERSION}/lib/wftopfa.ps
 share/ghostscript/${PKGVERSION}/lib/winmaps.ps
 share/ghostscript/${PKGVERSION}/lib/wrfont.ps
 share/ghostscript/${PKGVERSION}/lib/zeroline.ps
-@dirrm share/ghostscript/${PKGVERSION}/lib
-@dirrm share/ghostscript/${PKGVERSION}/examples
-@dirrm share/ghostscript/${PKGVERSION}/doc
-@dirrm share/ghostscript/${PKGVERSION}/Resource/SubstCID
-@dirrm share/ghostscript/${PKGVERSION}/Resource/Init
-@dirrm share/ghostscript/${PKGVERSION}/Resource/Font
-@dirrm share/ghostscript/${PKGVERSION}/Resource/Encoding
-@dirrm share/ghostscript/${PKGVERSION}/Resource/Decoding
-@dirrm share/ghostscript/${PKGVERSION}/Resource/ColorSpace
-@dirrm share/ghostscript/${PKGVERSION}/Resource/CMap
-@dirrm share/ghostscript/${PKGVERSION}/Resource
-@dirrm share/ghostscript/${PKGVERSION}
 @unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}
-@dirrm include/ghostscript

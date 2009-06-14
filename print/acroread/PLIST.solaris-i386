@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-i386,v 1.1 2007/07/29 05:19:49 jlam Exp $
+@comment $NetBSD: PLIST.solaris-i386,v 1.2 2009/06/14 18:11:53 joerg Exp $
 lib/netscape/plugins/nppdf.so
 Acrobat4/Reader/desktop/olwm/acroread.cetable
 Acrobat4/Reader/desktop/olwm/acroread.deskinstall
@@ -16,5 +16,3 @@ Acrobat4/Reader/${PLATFORM}/lib/libICC.so.1.0
 Acrobat4/Reader/${PLATFORM}/lib/libreadcore.so
 Acrobat4/Reader/${PLATFORM}/lib/libreadcore.so.4
 Acrobat4/Reader/${PLATFORM}/lib/libreadcore.so.4.0
-@dirrm Acrobat4/Reader/desktop/olwm
-@dirrm Acrobat4/Reader/desktop

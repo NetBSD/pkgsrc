@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/11/10 18:00:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:11:52 joerg Exp $
 bin/a2ps
 bin/card
 bin/composeglyphs
@@ -286,14 +286,3 @@ share/ogonkify/ptmb-o.ps
 share/ogonkify/ptmbi-o.ps
 share/ogonkify/ptmr-o.ps
 share/ogonkify/ptmri-o.ps
-@dirrm share/ogonkify/fonts
-@dirrm share/ogonkify/afm
-@dirrm share/ogonkify
-@dirrm share/examples/a2ps
-@dirrm share/a2ps/sheets
-@dirrm share/a2ps/ps
-@dirrm share/a2ps/ppd
-@dirrm share/a2ps/fonts
-@dirrm share/a2ps/encoding
-@dirrm share/a2ps/afm
-@dirrm share/a2ps

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:11:55 joerg Exp $
 bin/gimpprint-config
 include/gimp-print/gimp-print.h
 info/gimpprint.info
@@ -138,11 +138,3 @@ share/locale/sk/LC_MESSAGES/gimp-print.mo
 share/locale/sv/LC_MESSAGES/gimp-print.mo
 share/locale/uk/LC_MESSAGES/gimp-print.mo
 @exec ${MKDIR} %D/share/gimp-print/samples
-@dirrm share/gimp-print/samples
-@dirrm share/gimp-print/doc/manual-html
-@dirrm share/gimp-print/doc/html/stylesheet-images
-@dirrm share/gimp-print/doc/html/figures
-@dirrm share/gimp-print/doc/html
-@dirrm share/gimp-print/doc
-@dirrm share/gimp-print
-@dirrm include/gimp-print

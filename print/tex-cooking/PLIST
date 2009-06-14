@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/15 21:49:07 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:00 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking/README
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking/cooking.dvi
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking/kraut.dvi
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking/kraut.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking/cooking.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/cooking
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/cooking

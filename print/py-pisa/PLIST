@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/28 14:45:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:59 joerg Exp $
 bin/pisa
 bin/xhtml2pdf
 ${PYSITELIB}/ho/__init__.py
@@ -81,9 +81,3 @@ ${PYSITELIB}/sx/w3c/cssParser.pyo
 ${PYSITELIB}/sx/w3c/cssSpecial.py
 ${PYSITELIB}/sx/w3c/cssSpecial.pyc
 ${PYSITELIB}/sx/w3c/cssSpecial.pyo
-@dirrm ${PYSITELIB}/sx/w3c
-@dirrm ${PYSITELIB}/sx/pisa3
-@dirrm ${PYSITELIB}/sx
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/ho/pisa
-@dirrm ${PYSITELIB}/ho

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/28 14:42:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:11:59 joerg Exp $
 ${PYSITELIB}/_renderPM.so
 ${PYSITELIB}/_rl_accel.so
 ${PYSITELIB}/pyHnj.so
@@ -386,15 +386,3 @@ ${PYSITELIB}/reportlab/rl_config.py
 ${PYSITELIB}/reportlab/rl_config.pyc
 ${PYSITELIB}/reportlab/rl_config.pyo
 ${PYSITELIB}/sgmlop.so
-@dirrm ${PYSITELIB}/reportlab/platypus
-@dirrm ${PYSITELIB}/reportlab/pdfgen
-@dirrm ${PYSITELIB}/reportlab/pdfbase
-@dirrm ${PYSITELIB}/reportlab/lib
-@dirrm ${PYSITELIB}/reportlab/graphics/widgets
-@dirrm ${PYSITELIB}/reportlab/graphics/samples
-@dirrm ${PYSITELIB}/reportlab/graphics/charts
-@dirrm ${PYSITELIB}/reportlab/graphics/barcode
-@dirrm ${PYSITELIB}/reportlab/graphics
-@dirrm ${PYSITELIB}/reportlab/fonts
-@dirrm ${PYSITELIB}/reportlab/extensions
-@dirrm ${PYSITELIB}/reportlab

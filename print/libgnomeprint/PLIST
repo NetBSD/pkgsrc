@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/03/06 13:53:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/06/14 18:11:57 joerg Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -161,18 +161,3 @@ share/locale/xh/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeprint-2.2.mo
-@dirrm share/libgnomeprint/${PKGVERSION}/printers/uninstalled
-@dirrm share/libgnomeprint/${PKGVERSION}/printers
-@dirrm share/libgnomeprint/${PKGVERSION}/models/uninstalled
-@dirrm share/libgnomeprint/${PKGVERSION}/models
-@dirrm share/libgnomeprint/${PKGVERSION}
-@dirrm share/libgnomeprint
-@dirrm share/gtk-doc/html/libgnomeprint
-@dirrm lib/libgnomeprint/${PKGVERSION}/modules/transports
-@dirrm lib/libgnomeprint/${PKGVERSION}/modules/filters
-@dirrm lib/libgnomeprint/${PKGVERSION}/modules
-@dirrm lib/libgnomeprint/${PKGVERSION}
-@dirrm lib/libgnomeprint
-@dirrm include/libgnomeprint-2.2/libgnomeprint/private
-@dirrm include/libgnomeprint-2.2/libgnomeprint
-@dirrm include/libgnomeprint-2.2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/04/15 09:25:04 martti Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:11:53 joerg Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
@@ -324,18 +324,4 @@ share/doc/apsfilter/apsfilter4.png
 share/doc/apsfilter/handbook.html
 share/doc/apsfilter/paper
 @unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || ${TRUE}
-@dirrm share/apsfilter/bin
-@dirrm share/apsfilter/driver/gimp
-@dirrm share/apsfilter/driver/hpdj
-@dirrm share/apsfilter/driver/hpijs
-@dirrm share/apsfilter/driver/ijs
-@dirrm share/apsfilter/driver/omni
-@dirrm share/apsfilter/driver/pcl3
-@dirrm share/apsfilter/driver/pips
-@dirrm share/apsfilter/driver/ppa
-@dirrm share/apsfilter/driver/stp
-@dirrm share/apsfilter/driver
-@dirrm share/apsfilter/setup
-@dirrm share/apsfilter/template
 @unexec ${RMDIR} %D/share/apsfilter 2>/dev/null || ${TRUE}
-@dirrm share/doc/apsfilter

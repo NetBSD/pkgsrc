@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/03 02:45:23 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:59 joerg Exp $
 bin/rtf2latex2e
 share/doc/rtf2latex2e/INSTALL
 share/doc/rtf2latex2e/README
@@ -24,6 +24,3 @@ share/rtf2latex2e/pref/TeX-map.cp1252
 share/rtf2latex2e/pref/TeX-map.default
 share/rtf2latex2e/pref/TeX-map.german
 share/rtf2latex2e/pref/TeX-map.latin1
-@dirrm share/rtf2latex2e/pref
-@dirrm share/rtf2latex2e
-@dirrm share/doc/rtf2latex2e

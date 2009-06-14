@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/24 00:53:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:11:55 joerg Exp $
 bin/cups-calibrate
 bin/escputil
 bin/testpattern
@@ -314,23 +314,4 @@ share/locale/sv/LC_MESSAGES/gutenprint.mo
 share/locale/sv/gutenprint_sv.po
 share/locale/zh_TW/LC_MESSAGES/gutenprint.mo
 share/locale/zh_TW/gutenprint_zh_TW.po
-@dirrm share/gutenprint/samples
-@dirrm share/gutenprint/doc/reference-html
-@dirrm share/gutenprint/doc
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/weaves
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/qualitypresets
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/model
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/mediasizes
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/media
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/inputslots
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2/inks
-@dirrm share/gutenprint/${INSTALLVERSION}/xml/escp2
-@dirrm share/gutenprint/${INSTALLVERSION}/xml
-@dirrm share/gutenprint/${INSTALLVERSION}
-@dirrm share/gutenprint
 @exec ${MKDIR} %D/lib/gutenprint/${INSTALLVERSION}/modules
-@dirrm lib/gutenprint/${INSTALLVERSION}/modules
-@dirrm lib/gutenprint/${INSTALLVERSION}
-@dirrm lib/gutenprint
-@dirrm include/gutenprintui2
-@dirrm include/gutenprint

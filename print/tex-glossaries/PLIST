@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/25 11:54:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:01 joerg Exp $
 bin/makeglossaries
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/glossaries/glossaries.pdf
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries/glossaries.sty
@@ -6,5 +6,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries/glossary-hypernav.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries/glossary-list.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries/glossary-long.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries/glossary-super.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/glossaries
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/glossaries

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/12/18 14:21:43 hira Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:12:03 joerg Exp $
 ${PLIST.bsdlpr}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint4
 bin/xfprint4-manager
@@ -106,6 +106,3 @@ share/xfce4/doc/fr/images/xfprint_prettyprinting.png
 share/xfce4/doc/fr/images/xfprint_sheets.png
 share/xfce4/doc/fr/images/xfprint_virtualpages.png
 share/xfce4/doc/fr/xfprint.html
-@dirrm share/doc/libxfprint
-@dirrm lib/xfce4/xfprint-plugins
-@dirrm include/xfce4/libxfprint

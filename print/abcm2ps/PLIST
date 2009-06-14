@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/20 19:31:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:52 joerg Exp $
 bin/abcm2ps
 share/abcm2ps/fbook.fmt
 share/abcm2ps/fonts.fmt
@@ -22,5 +22,3 @@ share/doc/abcm2ps/sample3.abc
 share/doc/abcm2ps/sample3.eps
 share/doc/abcm2ps/sample4.abc
 share/doc/abcm2ps/voices.abc
-@dirrm share/doc/abcm2ps
-@dirrm share/abcm2ps

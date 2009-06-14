@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/25 14:04:00 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:03 joerg Exp $
 share/xpdf/arabic/ISO-8859-6.unicodeMap
-@dirrm share/xpdf/arabic

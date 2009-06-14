@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/19 16:36:17 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:57 joerg Exp $
 bin/mpage
 man/man1/mpage.1
 share/mpage/CP850.PC
@@ -7,4 +7,3 @@ share/mpage/ISO-8859.1
 share/mpage/ISO-8859.15
 share/mpage/ISO-Latin.1
 share/mpage/ISO-Latin.2
-@dirrm share/mpage

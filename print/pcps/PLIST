@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/12 20:57:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:58 joerg Exp $
 bin/pcps
 man/man1/pcps.1
 share/doc/pcps/pcps.man
 share/doc/pcps/license.doc
 share/doc/pcps/register.doc
 share/examples/pcps/pcps.cfg
-@dirrm share/doc/pcps
-@dirrm share/examples/pcps

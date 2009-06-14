@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/06 18:18:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:11:56 joerg Exp $
 bin/gv
 info/gv.info
 lib/gv/GV
@@ -9,4 +9,3 @@ lib/gv/gv_system.ad
 lib/gv/gv_user.ad
 lib/gv/gv_user_res.dat
 man/man1/gv.1
-@dirrm lib/gv
