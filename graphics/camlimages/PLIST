@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:05:40 joerg Exp $
 lib/ocaml/camlimages/Makefile.config
 lib/ocaml/camlimages/bitmap.cmi
 lib/ocaml/camlimages/bitmap.cmo
@@ -261,4 +261,3 @@ lib/ocaml/camlimages/xvthumb.cmo
 lib/ocaml/camlimages/xvthumb.cmx
 lib/ocaml/camlimages/xvthumb.mli
 lib/ocaml/camlimages/xvthumb.o
-@unexec ${RMDIR} %D/lib/ocaml/camlimages 2>/dev/null || ${TRUE}

@@ -1,290 +1,290 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:05:42 joerg Exp $
 share/icons/hicolor/index.theme
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/status
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/places
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/intl
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/devices
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/categories
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/apps
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/animations
-@exec ${MKDIR} %D/share/icons/hicolor/scalable/actions
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/status
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/places
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/intl
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/devices
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/categories
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/apps
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/animations
-@exec ${MKDIR} %D/share/icons/hicolor/96x96/actions
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/status
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/places
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/intl
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/devices
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/categories
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/apps
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/animations
-@exec ${MKDIR} %D/share/icons/hicolor/72x72/actions
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/status
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/places
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/intl
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/devices
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/categories
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/apps
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/animations
-@exec ${MKDIR} %D/share/icons/hicolor/64x64/actions
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/status
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/places
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/intl
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/devices
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/categories
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/apps
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/animations
-@exec ${MKDIR} %D/share/icons/hicolor/48x48/actions
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/status
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/places
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/intl
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/devices
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/categories
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/apps
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/animations
-@exec ${MKDIR} %D/share/icons/hicolor/36x36/actions
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/status
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/places
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/intl
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/devices
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/categories
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/apps
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/animations
-@exec ${MKDIR} %D/share/icons/hicolor/32x32/actions
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/status
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/places
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/intl
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/devices
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/categories
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/apps
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/animations
-@exec ${MKDIR} %D/share/icons/hicolor/24x24/actions
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/status
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/places
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/intl
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/devices
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/categories
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/apps
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/animations
-@exec ${MKDIR} %D/share/icons/hicolor/22x22/actions
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/status
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/places
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/intl
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/devices
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/categories
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/apps
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/animations
-@exec ${MKDIR} %D/share/icons/hicolor/192x192/actions
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/status
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/places
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/intl
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/devices
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/categories
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/apps
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/animations
-@exec ${MKDIR} %D/share/icons/hicolor/16x16/actions
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/text
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/table
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/object
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/net
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/navigation
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/media
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/io
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/image
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/form
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/data
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/code
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/stock/chart
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/status
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/places
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/mimetypes
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/intl
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/filesystems
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/emotes
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/emblems
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/devices
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/categories
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/apps
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/animations
-@exec ${MKDIR} %D/share/icons/hicolor/128x128/actions
+@pkgdir share/icons/hicolor/scalable/stock/text
+@pkgdir share/icons/hicolor/scalable/stock/table
+@pkgdir share/icons/hicolor/scalable/stock/object
+@pkgdir share/icons/hicolor/scalable/stock/net
+@pkgdir share/icons/hicolor/scalable/stock/navigation
+@pkgdir share/icons/hicolor/scalable/stock/media
+@pkgdir share/icons/hicolor/scalable/stock/io
+@pkgdir share/icons/hicolor/scalable/stock/image
+@pkgdir share/icons/hicolor/scalable/stock/form
+@pkgdir share/icons/hicolor/scalable/stock/data
+@pkgdir share/icons/hicolor/scalable/stock/code
+@pkgdir share/icons/hicolor/scalable/stock/chart
+@pkgdir share/icons/hicolor/scalable/status
+@pkgdir share/icons/hicolor/scalable/places
+@pkgdir share/icons/hicolor/scalable/mimetypes
+@pkgdir share/icons/hicolor/scalable/intl
+@pkgdir share/icons/hicolor/scalable/filesystems
+@pkgdir share/icons/hicolor/scalable/emotes
+@pkgdir share/icons/hicolor/scalable/emblems
+@pkgdir share/icons/hicolor/scalable/devices
+@pkgdir share/icons/hicolor/scalable/categories
+@pkgdir share/icons/hicolor/scalable/apps
+@pkgdir share/icons/hicolor/scalable/animations
+@pkgdir share/icons/hicolor/scalable/actions
+@pkgdir share/icons/hicolor/96x96/stock/text
+@pkgdir share/icons/hicolor/96x96/stock/table
+@pkgdir share/icons/hicolor/96x96/stock/object
+@pkgdir share/icons/hicolor/96x96/stock/net
+@pkgdir share/icons/hicolor/96x96/stock/navigation
+@pkgdir share/icons/hicolor/96x96/stock/media
+@pkgdir share/icons/hicolor/96x96/stock/io
+@pkgdir share/icons/hicolor/96x96/stock/image
+@pkgdir share/icons/hicolor/96x96/stock/form
+@pkgdir share/icons/hicolor/96x96/stock/data
+@pkgdir share/icons/hicolor/96x96/stock/code
+@pkgdir share/icons/hicolor/96x96/stock/chart
+@pkgdir share/icons/hicolor/96x96/status
+@pkgdir share/icons/hicolor/96x96/places
+@pkgdir share/icons/hicolor/96x96/mimetypes
+@pkgdir share/icons/hicolor/96x96/intl
+@pkgdir share/icons/hicolor/96x96/filesystems
+@pkgdir share/icons/hicolor/96x96/emotes
+@pkgdir share/icons/hicolor/96x96/emblems
+@pkgdir share/icons/hicolor/96x96/devices
+@pkgdir share/icons/hicolor/96x96/categories
+@pkgdir share/icons/hicolor/96x96/apps
+@pkgdir share/icons/hicolor/96x96/animations
+@pkgdir share/icons/hicolor/96x96/actions
+@pkgdir share/icons/hicolor/72x72/stock/text
+@pkgdir share/icons/hicolor/72x72/stock/table
+@pkgdir share/icons/hicolor/72x72/stock/object
+@pkgdir share/icons/hicolor/72x72/stock/net
+@pkgdir share/icons/hicolor/72x72/stock/navigation
+@pkgdir share/icons/hicolor/72x72/stock/media
+@pkgdir share/icons/hicolor/72x72/stock/io
+@pkgdir share/icons/hicolor/72x72/stock/image
+@pkgdir share/icons/hicolor/72x72/stock/form
+@pkgdir share/icons/hicolor/72x72/stock/data
+@pkgdir share/icons/hicolor/72x72/stock/code
+@pkgdir share/icons/hicolor/72x72/stock/chart
+@pkgdir share/icons/hicolor/72x72/status
+@pkgdir share/icons/hicolor/72x72/places
+@pkgdir share/icons/hicolor/72x72/mimetypes
+@pkgdir share/icons/hicolor/72x72/intl
+@pkgdir share/icons/hicolor/72x72/filesystems
+@pkgdir share/icons/hicolor/72x72/emotes
+@pkgdir share/icons/hicolor/72x72/emblems
+@pkgdir share/icons/hicolor/72x72/devices
+@pkgdir share/icons/hicolor/72x72/categories
+@pkgdir share/icons/hicolor/72x72/apps
+@pkgdir share/icons/hicolor/72x72/animations
+@pkgdir share/icons/hicolor/72x72/actions
+@pkgdir share/icons/hicolor/64x64/stock/text
+@pkgdir share/icons/hicolor/64x64/stock/table
+@pkgdir share/icons/hicolor/64x64/stock/object
+@pkgdir share/icons/hicolor/64x64/stock/net
+@pkgdir share/icons/hicolor/64x64/stock/navigation
+@pkgdir share/icons/hicolor/64x64/stock/media
+@pkgdir share/icons/hicolor/64x64/stock/io
+@pkgdir share/icons/hicolor/64x64/stock/image
+@pkgdir share/icons/hicolor/64x64/stock/form
+@pkgdir share/icons/hicolor/64x64/stock/data
+@pkgdir share/icons/hicolor/64x64/stock/code
+@pkgdir share/icons/hicolor/64x64/stock/chart
+@pkgdir share/icons/hicolor/64x64/status
+@pkgdir share/icons/hicolor/64x64/places
+@pkgdir share/icons/hicolor/64x64/mimetypes
+@pkgdir share/icons/hicolor/64x64/intl
+@pkgdir share/icons/hicolor/64x64/filesystems
+@pkgdir share/icons/hicolor/64x64/emotes
+@pkgdir share/icons/hicolor/64x64/emblems
+@pkgdir share/icons/hicolor/64x64/devices
+@pkgdir share/icons/hicolor/64x64/categories
+@pkgdir share/icons/hicolor/64x64/apps
+@pkgdir share/icons/hicolor/64x64/animations
+@pkgdir share/icons/hicolor/64x64/actions
+@pkgdir share/icons/hicolor/48x48/stock/text
+@pkgdir share/icons/hicolor/48x48/stock/table
+@pkgdir share/icons/hicolor/48x48/stock/object
+@pkgdir share/icons/hicolor/48x48/stock/net
+@pkgdir share/icons/hicolor/48x48/stock/navigation
+@pkgdir share/icons/hicolor/48x48/stock/media
+@pkgdir share/icons/hicolor/48x48/stock/io
+@pkgdir share/icons/hicolor/48x48/stock/image
+@pkgdir share/icons/hicolor/48x48/stock/form
+@pkgdir share/icons/hicolor/48x48/stock/data
+@pkgdir share/icons/hicolor/48x48/stock/code
+@pkgdir share/icons/hicolor/48x48/stock/chart
+@pkgdir share/icons/hicolor/48x48/status
+@pkgdir share/icons/hicolor/48x48/places
+@pkgdir share/icons/hicolor/48x48/mimetypes
+@pkgdir share/icons/hicolor/48x48/intl
+@pkgdir share/icons/hicolor/48x48/filesystems
+@pkgdir share/icons/hicolor/48x48/emotes
+@pkgdir share/icons/hicolor/48x48/emblems
+@pkgdir share/icons/hicolor/48x48/devices
+@pkgdir share/icons/hicolor/48x48/categories
+@pkgdir share/icons/hicolor/48x48/apps
+@pkgdir share/icons/hicolor/48x48/animations
+@pkgdir share/icons/hicolor/48x48/actions
+@pkgdir share/icons/hicolor/36x36/stock/text
+@pkgdir share/icons/hicolor/36x36/stock/table
+@pkgdir share/icons/hicolor/36x36/stock/object
+@pkgdir share/icons/hicolor/36x36/stock/net
+@pkgdir share/icons/hicolor/36x36/stock/navigation
+@pkgdir share/icons/hicolor/36x36/stock/media
+@pkgdir share/icons/hicolor/36x36/stock/io
+@pkgdir share/icons/hicolor/36x36/stock/image
+@pkgdir share/icons/hicolor/36x36/stock/form
+@pkgdir share/icons/hicolor/36x36/stock/data
+@pkgdir share/icons/hicolor/36x36/stock/code
+@pkgdir share/icons/hicolor/36x36/stock/chart
+@pkgdir share/icons/hicolor/36x36/status
+@pkgdir share/icons/hicolor/36x36/places
+@pkgdir share/icons/hicolor/36x36/mimetypes
+@pkgdir share/icons/hicolor/36x36/intl
+@pkgdir share/icons/hicolor/36x36/filesystems
+@pkgdir share/icons/hicolor/36x36/emotes
+@pkgdir share/icons/hicolor/36x36/emblems
+@pkgdir share/icons/hicolor/36x36/devices
+@pkgdir share/icons/hicolor/36x36/categories
+@pkgdir share/icons/hicolor/36x36/apps
+@pkgdir share/icons/hicolor/36x36/animations
+@pkgdir share/icons/hicolor/36x36/actions
+@pkgdir share/icons/hicolor/32x32/stock/text
+@pkgdir share/icons/hicolor/32x32/stock/table
+@pkgdir share/icons/hicolor/32x32/stock/object
+@pkgdir share/icons/hicolor/32x32/stock/net
+@pkgdir share/icons/hicolor/32x32/stock/navigation
+@pkgdir share/icons/hicolor/32x32/stock/media
+@pkgdir share/icons/hicolor/32x32/stock/io
+@pkgdir share/icons/hicolor/32x32/stock/image
+@pkgdir share/icons/hicolor/32x32/stock/form
+@pkgdir share/icons/hicolor/32x32/stock/data
+@pkgdir share/icons/hicolor/32x32/stock/code
+@pkgdir share/icons/hicolor/32x32/stock/chart
+@pkgdir share/icons/hicolor/32x32/status
+@pkgdir share/icons/hicolor/32x32/places
+@pkgdir share/icons/hicolor/32x32/mimetypes
+@pkgdir share/icons/hicolor/32x32/intl
+@pkgdir share/icons/hicolor/32x32/filesystems
+@pkgdir share/icons/hicolor/32x32/emotes
+@pkgdir share/icons/hicolor/32x32/emblems
+@pkgdir share/icons/hicolor/32x32/devices
+@pkgdir share/icons/hicolor/32x32/categories
+@pkgdir share/icons/hicolor/32x32/apps
+@pkgdir share/icons/hicolor/32x32/animations
+@pkgdir share/icons/hicolor/32x32/actions
+@pkgdir share/icons/hicolor/24x24/stock/text
+@pkgdir share/icons/hicolor/24x24/stock/table
+@pkgdir share/icons/hicolor/24x24/stock/object
+@pkgdir share/icons/hicolor/24x24/stock/net
+@pkgdir share/icons/hicolor/24x24/stock/navigation
+@pkgdir share/icons/hicolor/24x24/stock/media
+@pkgdir share/icons/hicolor/24x24/stock/io
+@pkgdir share/icons/hicolor/24x24/stock/image
+@pkgdir share/icons/hicolor/24x24/stock/form
+@pkgdir share/icons/hicolor/24x24/stock/data
+@pkgdir share/icons/hicolor/24x24/stock/code
+@pkgdir share/icons/hicolor/24x24/stock/chart
+@pkgdir share/icons/hicolor/24x24/status
+@pkgdir share/icons/hicolor/24x24/places
+@pkgdir share/icons/hicolor/24x24/mimetypes
+@pkgdir share/icons/hicolor/24x24/intl
+@pkgdir share/icons/hicolor/24x24/filesystems
+@pkgdir share/icons/hicolor/24x24/emotes
+@pkgdir share/icons/hicolor/24x24/emblems
+@pkgdir share/icons/hicolor/24x24/devices
+@pkgdir share/icons/hicolor/24x24/categories
+@pkgdir share/icons/hicolor/24x24/apps
+@pkgdir share/icons/hicolor/24x24/animations
+@pkgdir share/icons/hicolor/24x24/actions
+@pkgdir share/icons/hicolor/22x22/stock/text
+@pkgdir share/icons/hicolor/22x22/stock/table
+@pkgdir share/icons/hicolor/22x22/stock/object
+@pkgdir share/icons/hicolor/22x22/stock/net
+@pkgdir share/icons/hicolor/22x22/stock/navigation
+@pkgdir share/icons/hicolor/22x22/stock/media
+@pkgdir share/icons/hicolor/22x22/stock/io
+@pkgdir share/icons/hicolor/22x22/stock/image
+@pkgdir share/icons/hicolor/22x22/stock/form
+@pkgdir share/icons/hicolor/22x22/stock/data
+@pkgdir share/icons/hicolor/22x22/stock/code
+@pkgdir share/icons/hicolor/22x22/stock/chart
+@pkgdir share/icons/hicolor/22x22/status
+@pkgdir share/icons/hicolor/22x22/places
+@pkgdir share/icons/hicolor/22x22/mimetypes
+@pkgdir share/icons/hicolor/22x22/intl
+@pkgdir share/icons/hicolor/22x22/filesystems
+@pkgdir share/icons/hicolor/22x22/emotes
+@pkgdir share/icons/hicolor/22x22/emblems
+@pkgdir share/icons/hicolor/22x22/devices
+@pkgdir share/icons/hicolor/22x22/categories
+@pkgdir share/icons/hicolor/22x22/apps
+@pkgdir share/icons/hicolor/22x22/animations
+@pkgdir share/icons/hicolor/22x22/actions
+@pkgdir share/icons/hicolor/192x192/stock/text
+@pkgdir share/icons/hicolor/192x192/stock/table
+@pkgdir share/icons/hicolor/192x192/stock/object
+@pkgdir share/icons/hicolor/192x192/stock/net
+@pkgdir share/icons/hicolor/192x192/stock/navigation
+@pkgdir share/icons/hicolor/192x192/stock/media
+@pkgdir share/icons/hicolor/192x192/stock/io
+@pkgdir share/icons/hicolor/192x192/stock/image
+@pkgdir share/icons/hicolor/192x192/stock/form
+@pkgdir share/icons/hicolor/192x192/stock/data
+@pkgdir share/icons/hicolor/192x192/stock/code
+@pkgdir share/icons/hicolor/192x192/stock/chart
+@pkgdir share/icons/hicolor/192x192/status
+@pkgdir share/icons/hicolor/192x192/places
+@pkgdir share/icons/hicolor/192x192/mimetypes
+@pkgdir share/icons/hicolor/192x192/intl
+@pkgdir share/icons/hicolor/192x192/filesystems
+@pkgdir share/icons/hicolor/192x192/emotes
+@pkgdir share/icons/hicolor/192x192/emblems
+@pkgdir share/icons/hicolor/192x192/devices
+@pkgdir share/icons/hicolor/192x192/categories
+@pkgdir share/icons/hicolor/192x192/apps
+@pkgdir share/icons/hicolor/192x192/animations
+@pkgdir share/icons/hicolor/192x192/actions
+@pkgdir share/icons/hicolor/16x16/stock/text
+@pkgdir share/icons/hicolor/16x16/stock/table
+@pkgdir share/icons/hicolor/16x16/stock/object
+@pkgdir share/icons/hicolor/16x16/stock/net
+@pkgdir share/icons/hicolor/16x16/stock/navigation
+@pkgdir share/icons/hicolor/16x16/stock/media
+@pkgdir share/icons/hicolor/16x16/stock/io
+@pkgdir share/icons/hicolor/16x16/stock/image
+@pkgdir share/icons/hicolor/16x16/stock/form
+@pkgdir share/icons/hicolor/16x16/stock/data
+@pkgdir share/icons/hicolor/16x16/stock/code
+@pkgdir share/icons/hicolor/16x16/stock/chart
+@pkgdir share/icons/hicolor/16x16/status
+@pkgdir share/icons/hicolor/16x16/places
+@pkgdir share/icons/hicolor/16x16/mimetypes
+@pkgdir share/icons/hicolor/16x16/intl
+@pkgdir share/icons/hicolor/16x16/filesystems
+@pkgdir share/icons/hicolor/16x16/emotes
+@pkgdir share/icons/hicolor/16x16/emblems
+@pkgdir share/icons/hicolor/16x16/devices
+@pkgdir share/icons/hicolor/16x16/categories
+@pkgdir share/icons/hicolor/16x16/apps
+@pkgdir share/icons/hicolor/16x16/animations
+@pkgdir share/icons/hicolor/16x16/actions
+@pkgdir share/icons/hicolor/128x128/stock/text
+@pkgdir share/icons/hicolor/128x128/stock/table
+@pkgdir share/icons/hicolor/128x128/stock/object
+@pkgdir share/icons/hicolor/128x128/stock/net
+@pkgdir share/icons/hicolor/128x128/stock/navigation
+@pkgdir share/icons/hicolor/128x128/stock/media
+@pkgdir share/icons/hicolor/128x128/stock/io
+@pkgdir share/icons/hicolor/128x128/stock/image
+@pkgdir share/icons/hicolor/128x128/stock/form
+@pkgdir share/icons/hicolor/128x128/stock/data
+@pkgdir share/icons/hicolor/128x128/stock/code
+@pkgdir share/icons/hicolor/128x128/stock/chart
+@pkgdir share/icons/hicolor/128x128/status
+@pkgdir share/icons/hicolor/128x128/places
+@pkgdir share/icons/hicolor/128x128/mimetypes
+@pkgdir share/icons/hicolor/128x128/intl
+@pkgdir share/icons/hicolor/128x128/filesystems
+@pkgdir share/icons/hicolor/128x128/emotes
+@pkgdir share/icons/hicolor/128x128/emblems
+@pkgdir share/icons/hicolor/128x128/devices
+@pkgdir share/icons/hicolor/128x128/categories
+@pkgdir share/icons/hicolor/128x128/apps
+@pkgdir share/icons/hicolor/128x128/animations
+@pkgdir share/icons/hicolor/128x128/actions

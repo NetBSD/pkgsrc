@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 20:05:40 joerg Exp $
 bin/cinepaint
 bin/cinepaint-remote
 bin/cinepainttool
@@ -571,5 +571,5 @@ share/locale/zh_TW/LC_MESSAGES/cinepaint-script-fu.mo
 share/locale/zh_TW/LC_MESSAGES/cinepaint-std-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/cinepaint.mo
 share/pixmaps/cinepaint.png
-@exec ${MKDIR} %D/include/include/cinepaint/wire
-@exec ${MKDIR} %D/include/include/cinepaint/libgimp
+@pkgdir include/include/cinepaint/wire
+@pkgdir include/include/cinepaint/libgimp

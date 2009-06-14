@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:59:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 20:05:42 joerg Exp $
 bin/gri
 bin/gri_merge
 bin/gri_unpage
@@ -340,5 +340,3 @@ share/examples/gri/model.nodes
 share/gri/gri.cmd
 share/gri/logo.dat
 share/gri/startup.msg
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}

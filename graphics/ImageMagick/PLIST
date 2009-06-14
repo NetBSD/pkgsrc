@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2009/06/14 17:59:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.63 2009/06/14 20:05:40 joerg Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -1068,5 +1068,5 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
-@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
-@exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
+@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
+@pkgdir lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders

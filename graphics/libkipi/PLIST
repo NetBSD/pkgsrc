@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 20:05:43 joerg Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -62,4 +62,4 @@ share/locale/th/LC_MESSAGES/libkipi.mo
 share/locale/tr/LC_MESSAGES/libkipi.mo
 share/locale/uk/LC_MESSAGES/libkipi.mo
 share/locale/zh_CN/LC_MESSAGES/libkipi.mo
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
+@pkgdir share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
