@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:01:36 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:16 joerg Exp $
 share/doc/xjman/COPYRIGHT
 share/doc/xjman/COPYRIGHT.XJDP
 share/doc/xjman/README
-@dirrm share/doc/xjman

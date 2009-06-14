@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/03/16 23:00:17 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:25:19 joerg Exp $
 bin/gdialog
 bin/zenity
 man/man1/zenity.1
@@ -255,34 +255,3 @@ share/zenity/zenity-scale.png
 share/zenity/zenity-text.png
 share/zenity/zenity.glade
 share/zenity/zenity.png
-@dirrm share/zenity/clothes
-@dirrm share/zenity
-@dirrm share/omf/zenity
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/zenity/uk/figures
-@dirrm share/gnome/help/zenity/uk
-@dirrm share/gnome/help/zenity/sv/figures
-@dirrm share/gnome/help/zenity/sv
-@dirrm share/gnome/help/zenity/ru/figures
-@dirrm share/gnome/help/zenity/ru
-@dirrm share/gnome/help/zenity/oc/figures
-@dirrm share/gnome/help/zenity/oc
-@dirrm share/gnome/help/zenity/fr/figures
-@dirrm share/gnome/help/zenity/fr
-@dirrm share/gnome/help/zenity/fi/figures
-@dirrm share/gnome/help/zenity/fi
-@dirrm share/gnome/help/zenity/eu/figures
-@dirrm share/gnome/help/zenity/eu
-@dirrm share/gnome/help/zenity/es/figures
-@dirrm share/gnome/help/zenity/es
-@dirrm share/gnome/help/zenity/en_GB/figures
-@dirrm share/gnome/help/zenity/en_GB
-@dirrm share/gnome/help/zenity/de/figures
-@dirrm share/gnome/help/zenity/de
-@dirrm share/gnome/help/zenity/bg/figures
-@dirrm share/gnome/help/zenity/bg
-@dirrm share/gnome/help/zenity/C/figures
-@dirrm share/gnome/help/zenity/C
-@dirrm share/gnome/help/zenity
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome

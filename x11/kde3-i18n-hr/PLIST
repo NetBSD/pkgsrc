@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/02/20 10:36:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:24:53 joerg Exp $
 share/doc/kde/HTML/hr/common/1.png
 share/doc/kde/HTML/hr/common/10.png
 share/doc/kde/HTML/hr/common/2.png
@@ -509,4 +509,3 @@ share/locale/hr/LC_MESSAGES/webarchiver.mo
 share/locale/hr/charset
 share/locale/hr/entry.desktop
 share/locale/hr/flag.png
-@comment in kde: @dirrm share/doc/kde/HTML/hr/common

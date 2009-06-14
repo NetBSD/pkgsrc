@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/03/15 20:38:53 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:25:08 joerg Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
@@ -112,8 +112,3 @@ share/locale/zh_HK/LC_MESSAGES/vte.mo
 share/locale/zh_TW/LC_MESSAGES/vte.mo
 share/pygtk/2.0/defs/vte.defs
 share/vte/termcap/xterm
-@dirrm share/vte/termcap
-@dirrm share/vte
-@dirrm share/gtk-doc/html/vte
-@dirrm lib/vte
-@dirrm include/vte

@@ -1,5 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/20 15:44:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:11 joerg Exp $
 lib/xorg/modules/drivers/ast_drv.la
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

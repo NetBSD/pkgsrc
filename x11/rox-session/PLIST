@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/02 15:15:21 rxg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:25:06 joerg Exp $
 share/rox/ROX-Session/.DirIcon
 share/rox/ROX-Session/AppInfo.xml
 share/rox/ROX-Session/AppRun
@@ -63,8 +63,3 @@ share/rox/ROX-Session/utils.py
 share/rox/ROX-Session/wm.py
 share/rox/ROX-Session/xsettings.py
 share/rox/ROX-Session/xxmlrpc.py
-@dirrm share/rox/ROX-Session/tests
-@dirrm share/rox/ROX-Session/images
-@dirrm share/rox/ROX-Session/Messages
-@dirrm share/rox/ROX-Session/Help
-@dirrm share/rox/ROX-Session

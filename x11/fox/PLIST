@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/04/13 05:45:36 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:24:47 joerg Exp $
 bin/Adie.stx
 bin/PathFinder
 bin/adie
@@ -441,9 +441,3 @@ share/doc/fox-1.6/html/widgets.html
 share/doc/fox-1.6/html/win32.html
 share/doc/fox-1.6/html/window.html
 share/doc/fox-1.6/html/xml.html
-@dirrm share/doc/fox-1.6/html/screenshots
-@dirrm share/doc/fox-1.6/html/art
-@dirrm share/doc/fox-1.6/html
-@dirrm share/doc/fox-1.6
-@dirrm include/fox-1.6/chart
-@dirrm include/fox-1.6
