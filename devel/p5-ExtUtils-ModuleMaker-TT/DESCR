@@ -1,0 +1,4 @@
+This module extends ExtUtils::ModuleMaker to use Template Toolkit 2 (TT2)
+to build skeleton files for a new module. Templates may either be default
+templates supplied within the module or user-customized templates in a
+directory specified with the TEMPLATE_DIR parameter.
