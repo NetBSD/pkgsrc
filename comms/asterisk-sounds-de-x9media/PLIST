@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/28 12:01:38 mjl Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:31:59 joerg Exp $
 libdata/asterisk/sounds/de/agent-alreadyon.gsm
 libdata/asterisk/sounds/de/agent-incorrect.gsm
 libdata/asterisk/sounds/de/agent-loggedoff.gsm
@@ -287,6 +287,3 @@ libdata/asterisk/sounds/digits/de/thousand.gsm
 libdata/asterisk/sounds/digits/de/today.gsm
 libdata/asterisk/sounds/digits/de/tomorrow.gsm
 libdata/asterisk/sounds/digits/de/yesterday.gsm
-@unexec ${RMDIR} %D/libdata/asterisk/sounds/digits/de 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libdata/asterisk/sounds/de 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libdata/asterisk/sounds 2>/dev/null || ${TRUE}

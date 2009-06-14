@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:38:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:31:59 joerg Exp $
 ${GEM_HOME}/cache/termios-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/MANIFEST
@@ -15,4 +15,3 @@ ${GEM_LIBDIR}/termios.c
 ${GEM_LIBDIR}/termios.rd
 ${GEM_LIBDIR}/test/test0.rb
 ${GEM_HOME}/specifications/termios-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/termios-${PKGVERSION}
