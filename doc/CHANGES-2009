@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2357 2009/06/14 23:03:22 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2358 2009/06/14 23:20:58 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3154,3 +3154,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated wm/dwm to 5.5 [ahoka 2009-06-14]
 	Updated x11/dmenu to 4.0 [ahoka 2009-06-14]
 	Added devel/p5-ExtUtils-ModuleMaker-TT version 0.93 [sno 2009-06-14]
+	Added textproc/p5-Template-Plugin-CSV version 0.04 [sno 2009-06-14]
