@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2006/12/06 15:36:31 taca Exp $
-@dirrm share/fd
-@dirrm share/examples/fd
-@dirrm share/doc/fd/ja
-@dirrm share/doc/fd
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 18:07:21 joerg Exp $

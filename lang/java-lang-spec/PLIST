@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/13 00:47:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:34 joerg Exp $
 share/doc/java-lang-spec/15.doc.anc.gif
 share/doc/java-lang-spec/15.doc.anc1.gif
 share/doc/java-lang-spec/15.doc.anc2.gif
@@ -189,5 +189,3 @@ share/doc/java-lang-spec/typesValues.doc.anc4.gif
 share/doc/java-lang-spec/typesValues.doc.anc5.gif
 share/doc/java-lang-spec/typesValues.doc.anc7.gif
 share/doc/java-lang-spec/typesValues.doc.html
-@dirrm share/doc/java-lang-spec/chars
-@dirrm share/doc/java-lang-spec

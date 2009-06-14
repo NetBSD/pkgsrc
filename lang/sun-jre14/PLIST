@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:43:03 jlam Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:03:42 joerg Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -651,66 +651,3 @@ java/sun-1.4/plugin/desktop/sun_java.png
 java/sun-1.4/plugin/i386/ns4/libjavaplugin.so
 java/sun-1.4/plugin/i386/ns610-gcc32/libjavaplugin_oji.so
 java/sun-1.4/plugin/i386/ns610/libjavaplugin_oji.so
-@dirrm java/sun-1.4/plugin/i386/ns610-gcc32
-@dirrm java/sun-1.4/plugin/i386/ns610
-@dirrm java/sun-1.4/plugin/i386/ns4
-@dirrm java/sun-1.4/plugin/i386
-@dirrm java/sun-1.4/plugin/desktop
-@dirrm java/sun-1.4/plugin
-@dirrm java/sun-1.4/man/man1
-@dirrm java/sun-1.4/man/ja_JP.eucJP/man1
-@dirrm java/sun-1.4/man/ja_JP.eucJP
-@dirrm java/sun-1.4/man
-@dirrm java/sun-1.4/lib/zi/Pacific
-@dirrm java/sun-1.4/lib/zi/Indian
-@dirrm java/sun-1.4/lib/zi/Europe
-@dirrm java/sun-1.4/lib/zi/Etc
-@dirrm java/sun-1.4/lib/zi/Australia
-@dirrm java/sun-1.4/lib/zi/Atlantic
-@dirrm java/sun-1.4/lib/zi/Asia
-@dirrm java/sun-1.4/lib/zi/Antarctica
-@dirrm java/sun-1.4/lib/zi/America/North_Dakota
-@dirrm java/sun-1.4/lib/zi/America/Kentucky
-@dirrm java/sun-1.4/lib/zi/America/Indiana
-@dirrm java/sun-1.4/lib/zi/America/Argentina
-@dirrm java/sun-1.4/lib/zi/America
-@dirrm java/sun-1.4/lib/zi/Africa
-@dirrm java/sun-1.4/lib/zi
-@dirrm java/sun-1.4/lib/locale/zh_TW/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/zh_TW.BIG5/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/zh_TW.BIG5
-@dirrm java/sun-1.4/lib/locale/zh_TW
-@dirrm java/sun-1.4/lib/locale/zh/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/zh.GBK/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/zh.GBK
-@dirrm java/sun-1.4/lib/locale/zh
-@dirrm java/sun-1.4/lib/locale/sv/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/sv
-@dirrm java/sun-1.4/lib/locale/ko/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/ko.UTF-8/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/ko.UTF-8
-@dirrm java/sun-1.4/lib/locale/ko
-@dirrm java/sun-1.4/lib/locale/ja/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/ja
-@dirrm java/sun-1.4/lib/locale/it/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/it
-@dirrm java/sun-1.4/lib/locale/fr/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/fr
-@dirrm java/sun-1.4/lib/locale/es/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/es
-@dirrm java/sun-1.4/lib/locale/de/LC_MESSAGES
-@dirrm java/sun-1.4/lib/locale/de
-@dirrm java/sun-1.4/lib/locale
-@dirrm java/sun-1.4/lib/im
-@dirrm java/sun-1.4/lib/i386/server
-@dirrm java/sun-1.4/lib/i386/native_threads
-@dirrm java/sun-1.4/lib/i386/client
-@dirrm java/sun-1.4/lib/i386
-@dirrm java/sun-1.4/lib/fonts
-@dirrm java/sun-1.4/lib/ext
-@dirrm java/sun-1.4/lib/cmm
-@dirrm java/sun-1.4/lib/audio
-@dirrm java/sun-1.4/javaws/resources
-@dirrm java/sun-1.4/javaws
-@dirrm java/sun-1.4/bin
-@dirrm java/sun-1.4/.systemPrefs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/03 15:09:49 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:31 joerg Exp $
 bin/kismet
 bin/kismet_client
 bin/kismet_drone
@@ -17,6 +17,3 @@ share/kismet/wav/alert.wav
 share/kismet/wav/junk_traffic.wav
 share/kismet/wav/new_network.wav
 share/kismet/wav/traffic.wav
-@dirrm share/kismet/wav
-@dirrm share/kismet
-@dirrm share/examples/kismet

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/31 15:44:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:34 joerg Exp $
 ${JAVADIR}/lib/i386/libjavacomp.so
 ${JAVADIR}/lib/i386/libjavacomp_g.so
 share/doc/jbuilder-jit/README.javacomp
 share/doc/jbuilder-jit/LICENSE.javacomp
-@dirrm share/doc/jbuilder-jit
 @unexec ${RMDIR} %D/${JAVADIR}/lib/i386 2>/dev/null || ${TRUE}

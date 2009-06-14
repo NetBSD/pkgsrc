@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/08 15:23:26 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:45 joerg Exp $
 bin/Xvnc
 bin/vncconnect
 bin/vncpasswd
@@ -8,4 +8,3 @@ man/man1/vncconnect.1
 man/man1/vncpasswd.1
 man/man1/vncserver.1
 share/examples/tightvnc/tightvncserver.conf
-@dirrm share/examples/tightvnc

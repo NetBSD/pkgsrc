@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 17:46:45 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:29 joerg Exp $
 share/rox/Memo/.DirIcon
 share/rox/Memo/Alarm.py
 share/rox/Memo/AppInfo.xml
@@ -20,6 +20,3 @@ share/rox/Memo/Window.py
 share/rox/Memo/findrox.py
 share/rox/Memo/memos.py
 share/rox/Memo/pretty_time.py
-@dirrm share/rox/Memo/Messages
-@dirrm share/rox/Memo/Help
-@dirrm share/rox/Memo

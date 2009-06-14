@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/20 09:56:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:08:07 joerg Exp $
 bin/mpeg3cat
 bin/mpeg3dump
 bin/mpeg3peek
@@ -21,7 +21,3 @@ include/mpeg3/video/mpeg3video.h
 include/mpeg3/video/slice.h
 lib/libmpeg3.a
 share/doc/html/libmpeg3/index.html
-@dirrm share/doc/html/libmpeg3
-@dirrm include/mpeg3/video
-@dirrm include/mpeg3/audio
-@dirrm include/mpeg3

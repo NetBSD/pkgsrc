@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:22 joerg Exp $
 bin/gxmame
 share/applications/gxmame.desktop
 share/doc/gxmame/AUTHORS
@@ -28,8 +28,3 @@ share/locale/nl/LC_MESSAGES/gxmame.mo
 share/locale/pl/LC_MESSAGES/gxmame.mo
 share/locale/zh_CN/LC_MESSAGES/gxmame.mo
 share/locale/zh_TW/LC_MESSAGES/gxmame.mo
-@dirrm share/icons/mini
-@dirrm share/doc/gxmame/html/includes
-@dirrm share/doc/gxmame/html/gui
-@dirrm share/doc/gxmame/html
-@dirrm share/doc/gxmame

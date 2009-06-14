@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:42 joerg Exp $
 include/dcdflib.h
 lib/libdcdflib_c.a
 lib/libdcdflib_c.so
@@ -9,4 +9,3 @@ lib/libdcdflib_c_pic.a
 share/doc/dcdflib.c/README
 share/doc/dcdflib.c/dcdflib.chs
 share/doc/dcdflib.c/dcdflib.fdoc
-@dirrm share/doc/dcdflib.c

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/10 17:47:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:21 joerg Exp $
 bin/argus-config
 etc/argus/config.example
 etc/argus/locale/de_DE
@@ -76,23 +76,9 @@ sbin/arguscgi
 sbin/argusctl
 sbin/argusd
 share/examples/rc.d/argusd
-@dirrm lib/argus/DNS
-@dirrm lib/argus/Chart
-@dirrm lib/argus/Argus/SIP
-@dirrm lib/argus/Argus/RPC
-@dirrm lib/argus/Argus
-@dirrm lib/argus
 @exec ${MKDIR} %D/etc/argus/stats
-@dirrm etc/argus/stats
 @exec ${MKDIR} %D/etc/argus/perl
-@dirrm etc/argus/perl
 @exec ${MKDIR} %D/etc/argus/notify
-@dirrm etc/argus/notify
-@dirrm etc/argus/locale
 @exec ${MKDIR} %D/etc/argus/html
-@dirrm etc/argus/html
 @exec ${MKDIR} %D/etc/argus/gdata
-@dirrm etc/argus/gdata
 @exec ${MKDIR} %D/etc/argus/gcache
-@dirrm etc/argus/gcache
-@dirrm etc/argus

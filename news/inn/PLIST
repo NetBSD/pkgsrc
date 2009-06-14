@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/12/21 16:00:04 spz Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:10:06 joerg Exp $
 bin/inews
 bin/rnews
 include/inn/conffile.h
@@ -301,16 +301,3 @@ share/examples/inn/sasl.conf
 share/examples/inn/storage.conf
 share/examples/inn/subscriptions
 share/examples/rc.d/innd
-@dirrm share/examples/inn
-@dirrm share/doc/inn
-@dirrm ${INN_PATHBIN}/rnews.libexec
-@dirrm ${INN_PATHBIN}/filter
-@dirrm ${INN_PATHBIN}/control
-@dirrm ${INN_PATHBIN}/auth/resolv
-@dirrm ${INN_PATHBIN}/auth/passwd
-@dirrm ${INN_PATHBIN}/auth
-@dirrm ${INN_PATHBIN}
-@dirrm include/inn/inn
-@dirrm include/inn
-@dirrm etc/inn
-@dirrm etc/nntp

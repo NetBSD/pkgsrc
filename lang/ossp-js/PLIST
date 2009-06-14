@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:38 joerg Exp $
 bin/js
 bin/js-config
 bin/jslint
@@ -55,4 +55,3 @@ lib/pkgconfig/js.pc
 man/man1/js-config.1
 man/man1/js.1
 man/man3/js.3
-@dirrm include/js

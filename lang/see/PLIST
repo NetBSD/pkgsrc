@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 00:45:35 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:41 joerg Exp $
 bin/libsee-config
 bin/see-shell
 include/see/cfunction.h
@@ -25,5 +25,3 @@ lib/libsee.la
 lib/pkgconfig/see.pc
 lib/see/libFile.la
 share/doc/see/USAGE.html
-@dirrm lib/see
-@dirrm include/see

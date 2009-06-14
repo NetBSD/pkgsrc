@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/11/11 00:52:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:08 joerg Exp $
 share/doc/${SUBDIR}/color.html
 share/doc/${SUBDIR}/doxygen-build.stamp
 share/doc/${SUBDIR}/draft-ietf-avt-rtp-theora-00.txt
@@ -74,6 +74,3 @@ share/doc/${SUBDIR}/latex/theora_8h.tex
 share/doc/${SUBDIR}/latex/theoradec_8h.tex
 share/doc/${SUBDIR}/latex/theoraenc_8h.tex
 share/doc/${SUBDIR}/vp3-format.txt
-@dirrm share/doc/${SUBDIR}/latex
-@dirrm share/doc/${SUBDIR}/html
-@dirrm share/doc/${SUBDIR}

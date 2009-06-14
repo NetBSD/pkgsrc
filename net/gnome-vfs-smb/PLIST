@@ -1,5 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/19 23:34:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:28 joerg Exp $
 lib/gnome-vfs-2.0/modules/libsmb.la
 share/examples/gnome-vfs-2.0/modules/smb-module.conf
-@comment in gnome-vfs: @dirrm share/examples/gnome-vfs-2.0/modules
-@comment in gnome-vfs: @dirrm lib/gnome-vfs-2.0/modules

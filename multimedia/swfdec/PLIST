@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/31 12:41:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:10 joerg Exp $
 include/swfdec-0.8/swfdec-gtk/swfdec-gtk.h
 include/swfdec-0.8/swfdec-gtk/swfdec_gtk_keys.h
 include/swfdec-0.8/swfdec-gtk/swfdec_gtk_loader.h
@@ -74,7 +74,3 @@ share/gtk-doc/html/swfdec/swfdec-Version-Information.html
 share/gtk-doc/html/swfdec/swfdec.devhelp
 share/gtk-doc/html/swfdec/swfdec.devhelp2
 share/gtk-doc/html/swfdec/up.png
-@dirrm share/gtk-doc/html/swfdec
-@dirrm include/swfdec-0.8/swfdec-gtk
-@dirrm include/swfdec-0.8/swfdec
-@dirrm include/swfdec-0.8

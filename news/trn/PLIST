@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:03:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:10:07 joerg Exp $
 bin/Pnews
 bin/Rnmail
 bin/nntplist
@@ -25,10 +25,6 @@ share/trn/HelpFiles/top
 share/trn/HelpFiles/samples/access
 share/trn/HelpFiles/samples/index
 share/trn/HelpFiles/samples/trnrc
-@dirrm share/trn/HelpFiles/config
-@dirrm share/trn/HelpFiles/samples
-@dirrm share/trn/HelpFiles
-@dirrm share/trn
 man/man1/Pnews.1
 man/man1/Rnmail.1
 man/man1/rn.1

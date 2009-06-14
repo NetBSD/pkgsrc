@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/12/03 12:57:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:09:33 joerg Exp $
 include/torrent/bitfield.h
 include/torrent/chunk_manager.h
 include/torrent/common.h
@@ -41,6 +41,3 @@ include/torrent/tracker.h
 include/torrent/tracker_list.h
 lib/libtorrent.la
 lib/pkgconfig/libtorrent.pc
-@dirrm include/torrent/peer
-@dirrm include/torrent/data
-@dirrm include/torrent

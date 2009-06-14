@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/02/20 19:04:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:03:32 joerg Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -183,49 +183,21 @@ share/gforth/${PKGVERSION}/vt100key.fs
 share/gforth/${PKGVERSION}/wordinfo.fs
 share/gforth/${PKGVERSION}/wordsets.fs
 share/gforth/site-forth/siteinit.fs
-@dirrm share/gforth/${PKGVERSION}/unix
-@dirrm share/gforth/${PKGVERSION}/test
-@dirrm share/gforth/${PKGVERSION}/kernel
-@dirrm share/gforth/${PKGVERSION}/ec
-@dirrm share/gforth/${PKGVERSION}/doc
-@dirrm share/gforth/${PKGVERSION}/compat
-@dirrm share/gforth/${PKGVERSION}/asm
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/sparc
-@dirrm share/gforth/${PKGVERSION}/arch/sparc
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/shboom
-@dirrm share/gforth/${PKGVERSION}/arch/shboom
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/sharc
-@dirrm share/gforth/${PKGVERSION}/arch/sharc
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/power
-@dirrm share/gforth/${PKGVERSION}/arch/power
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/misc
-@dirrm share/gforth/${PKGVERSION}/arch/misc
-@dirrm share/gforth/${PKGVERSION}/arch/mips
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/m68k
-@dirrm share/gforth/${PKGVERSION}/arch/m68k
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/ia64
-@dirrm share/gforth/${PKGVERSION}/arch/ia64
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/hppa
-@dirrm share/gforth/${PKGVERSION}/arch/hppa
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/h8
-@dirrm share/gforth/${PKGVERSION}/arch/h8
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/generic
-@dirrm share/gforth/${PKGVERSION}/arch/generic
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/c165
-@dirrm share/gforth/${PKGVERSION}/arch/c165
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/avr
-@dirrm share/gforth/${PKGVERSION}/arch/avr
-@dirrm share/gforth/${PKGVERSION}/arch/alpha
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/8086
-@dirrm share/gforth/${PKGVERSION}/arch/8086
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/6502
-@dirrm share/gforth/${PKGVERSION}/arch/6502
 @exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/4stack
-@dirrm share/gforth/${PKGVERSION}/arch/4stack
-@dirrm share/gforth/${PKGVERSION}/arch/386
-@dirrm share/gforth/${PKGVERSION}/arch
-@dirrm share/gforth/${PKGVERSION}
-@dirrm lib/gforth/${PKGVERSION}
 @unexec ${RMDIR} %D/share/gforth/site-forth 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gforth 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/gforth/site-forth 2>/dev/null || ${TRUE}
