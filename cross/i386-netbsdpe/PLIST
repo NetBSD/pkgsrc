@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:34:00 joerg Exp $
 bin/i386-netbsdpe-addr2line
 bin/i386-netbsdpe-ar
 bin/i386-netbsdpe-as
@@ -76,4 +76,3 @@ man/man1/i386-netbsdpe-size.1
 man/man1/i386-netbsdpe-strings.1
 man/man1/i386-netbsdpe-strip.1
 man/man1/i386-netbsdpe-windres.1
-@unexec ${RMDIR} %D/lib/gcc-lib 2>/dev/null || ${TRUE}
