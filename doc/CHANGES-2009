@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2353 2009/06/14 22:38:00 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2354 2009/06/14 22:45:30 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3150,3 +3150,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-Attribute-Handlers to 0.85 [sno 2009-06-14]
 	Updated devel/p5-Config-IniFiles to 2.51 [sno 2009-06-14]
 	Added databases/p5-Tie-DBI version 1.02 [sno 2009-06-14]
+	Added databases/p5-Template-DBI version 2.64 [sno 2009-06-14]
