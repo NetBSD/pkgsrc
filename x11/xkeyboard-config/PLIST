@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/10/15 08:52:42 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:17 joerg Exp $
 share/X11/xkb/compat.dir
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
@@ -326,29 +326,3 @@ share/locale/uk/LC_MESSAGES/xkeyboard-config.mo
 share/locale/vi/LC_MESSAGES/xkeyboard-config.mo
 share/locale/zh_CN/LC_MESSAGES/xkeyboard-config.mo
 share/locale/zh_TW/LC_MESSAGES/xkeyboard-config.mo
-@dirrm share/X11/xkb/types
-@dirrm share/X11/xkb/symbols/xfree68_vndr
-@dirrm share/X11/xkb/symbols/sun_vndr
-@dirrm share/X11/xkb/symbols/sony_vndr
-@dirrm share/X11/xkb/symbols/sgi_vndr
-@dirrm share/X11/xkb/symbols/nec_vndr
-@dirrm share/X11/xkb/symbols/macintosh_vndr
-@dirrm share/X11/xkb/symbols/hp_vndr
-@dirrm share/X11/xkb/symbols/fujitsu_vndr
-@dirrm share/X11/xkb/symbols/digital_vndr
-@dirrm share/X11/xkb/symbols
-@dirrm share/X11/xkb/semantics
-@dirrm share/X11/xkb/rules
-@dirrm share/X11/xkb/keymap/sun_vndr
-@dirrm share/X11/xkb/keymap/sgi_vndr
-@dirrm share/X11/xkb/keymap/digital_vndr
-@dirrm share/X11/xkb/keymap
-@dirrm share/X11/xkb/keycodes/sgi_vndr
-@dirrm share/X11/xkb/keycodes/digital_vndr
-@dirrm share/X11/xkb/keycodes
-@dirrm share/X11/xkb/geometry/sgi_vndr
-@dirrm share/X11/xkb/geometry/digital_vndr
-@dirrm share/X11/xkb/geometry
-@dirrm share/X11/xkb/compat
-@dirrm share/X11/xkb
-@comment @dirrm share/X11

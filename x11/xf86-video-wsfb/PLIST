@@ -1,6 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 23:05:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:25:14 joerg Exp $
 lib/xorg/modules/drivers/wsfb_drv.la
 man/man4/wsfb.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

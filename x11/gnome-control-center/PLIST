@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/03/17 00:27:37 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:24:47 joerg Exp $
 ${PLIST.evolution}bin/gnome-about-me
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
@@ -241,48 +241,3 @@ share/omf/control-center/control-center-vi.omf
 share/omf/control-center/control-center-zh_CN.omf
 share/pkgconfig/gnome-default-applications.pc
 share/pkgconfig/gnome-keybindings.pc
-@dirrm share/omf/control-center
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/control-center/zh_CN
-@dirrm share/gnome/help/control-center/vi
-@dirrm share/gnome/help/control-center/uk
-@dirrm share/gnome/help/control-center/sv
-@dirrm share/gnome/help/control-center/ru
-@dirrm share/gnome/help/control-center/pt_BR
-@dirrm share/gnome/help/control-center/pt
-@dirrm share/gnome/help/control-center/pl
-@dirrm share/gnome/help/control-center/pa
-@dirrm share/gnome/help/control-center/oc
-@dirrm share/gnome/help/control-center/ja
-@dirrm share/gnome/help/control-center/it
-@dirrm share/gnome/help/control-center/fr
-@dirrm share/gnome/help/control-center/es
-@dirrm share/gnome/help/control-center/en_GB
-@dirrm share/gnome/help/control-center/de
-@dirrm share/gnome/help/control-center/cs
-@dirrm share/gnome/help/control-center/ca@valencia
-@dirrm share/gnome/help/control-center/ca
-@dirrm share/gnome/help/control-center/C
-@dirrm share/gnome/help/control-center
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome/cursor-fonts
-@dirrm share/gnome-control-center/pixmaps
-@dirrm share/gnome-control-center/keybindings
-@dirrm share/gnome-control-center/glade
-@dirrm share/gnome-control-center/default-apps
-@dirrm share/gnome-control-center
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/gnome-control-center
-@comment in xdg-dirs: @dirrm share/desktop-directories
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/window-manager-settings
-@dirrm include/gnome-window-settings-2.0

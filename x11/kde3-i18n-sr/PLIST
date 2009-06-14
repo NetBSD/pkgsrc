@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/08/27 12:37:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 18:24:55 joerg Exp $
 share/doc/kde/HTML/sr/common/1.png
 share/doc/kde/HTML/sr/common/10.png
 share/doc/kde/HTML/sr/common/2.png
@@ -646,14 +646,3 @@ share/locale/sr/LC_MESSAGES/webarchiver.mo
 share/locale/sr/charset
 share/locale/sr/entry.desktop
 share/locale/sr/flag.png
-@dirrm share/kde/apps/kturtle/examples/sr
-@comment in kde: @dirrm share/kde/apps/kturtle/examples
-@comment in kde: @dirrm share/kde/apps/kturtle/data
-@dirrm share/kde/apps/ktuberling/sounds/sr
-@comment in kde: @dirrm share/kde/apps/ktuberling/sounds
-@dirrm share/kde/apps/khangman/data/sr
-@comment in kde: @dirrm share/kde/apps/khangman/data
-@comment in kde: @dirrm share/kde/apps/katepart/syntax
-@dirrm share/doc/kde/HTML/sr/khelpcenter
-@comment in kde: @dirrm share/doc/kde/HTML/sr/common
-@comment in kde: @dirrm share/doc/kde/HTML/sr

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 21:40:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:24:59 joerg Exp $
 include/X11/extensions/Xvlib.h
 lib/libXv.la
 lib/pkgconfig/xv.pc
@@ -22,4 +22,3 @@ man/man3/XvSetPortAttribute.3
 man/man3/XvStopVideo.3
 man/man3/XvUngrabPort.3
 man/man3/XvVideoNotify.3
-@comment @dirrm include/X11/extensions

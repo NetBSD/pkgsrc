@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/18 16:38:08 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:15 joerg Exp $
 bin/exo-csource
 bin/exo-desktop-item-edit
 bin/exo-eject
@@ -181,10 +181,6 @@ share/xfce4/helpers/thunderbird.desktop
 share/xfce4/helpers/urxvt.desktop
 share/xfce4/helpers/w3m.desktop
 share/xfce4/helpers/xterm.desktop
-@dirrm share/xfce4/helpers
-@dirrm include/exo-0.3/exo-hal
-@dirrm include/exo-0.3/exo
-@dirrm include/exo-0.3
 @unexec ${RMDIR} %D/share/xfce4/doc/ja/images 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/ja 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/xfce4/doc/fr/images 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/15 03:34:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:25:06 joerg Exp $
 ${RUBY_VENDORARCHLIB}/gtk.${RUBY_DLEXT}
 ${RUBY_EG}/gtk/calendar.rb
 ${RUBY_EG}/gtk/cursor.rb
@@ -96,7 +96,3 @@ ${RUBY_EG}/gtk/testim.rb
 ${RUBY_EG}/gtk/text.rb
 ${RUBY_EG}/gtk/texthook.rb
 ${RUBY_EG}/gtk/xbm_cursor.rb
-@dirrm ${RUBY_EG}/gtk/doc
-@dirrm ${RUBY_EG}/gtk/test
-@dirrm ${RUBY_EG}/gtk/testgtk
-@dirrm ${RUBY_EG}/gtk

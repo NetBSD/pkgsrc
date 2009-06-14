@@ -1,3 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2005/07/01 01:20:28 reed Exp $
-@dirrm share/sip${PYVERSSUFFIX}/qt
-@dirrm share/sip${PYVERSSUFFIX}
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 18:25:03 joerg Exp $

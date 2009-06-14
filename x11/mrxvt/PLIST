@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/28 15:39:19 tnn Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:25:01 joerg Exp $
 bin/mrxvt
 man/man1/mrxvt.1
 share/doc/mrxvt/README.greek.bz2
@@ -26,7 +26,3 @@ share/pixmaps/mrxvt-root.png
 share/pixmaps/mrxvt-root.xpm
 share/pixmaps/mrxvt.png
 share/pixmaps/mrxvt.xpm
-@dirrm share/doc/mrxvt/etc
-@dirrm share/doc/mrxvt/scripts
-@dirrm share/doc/mrxvt
-@dirrm share/examples/mrxvt

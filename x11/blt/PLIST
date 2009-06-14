@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/06 06:26:21 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:24:44 joerg Exp $
 bin/bltsh
 bin/bltsh24
 bin/bltwish
@@ -204,11 +204,3 @@ man/mann/treeview.n
 man/mann/vector.n
 man/mann/watch.n
 man/mann/winop.n
-@dirrm lib/blt2.4/demos/scripts
-@dirrm lib/blt2.4/demos/images
-@dirrm lib/blt2.4/demos/bitmaps/hand
-@dirrm lib/blt2.4/demos/bitmaps/fish
-@dirrm lib/blt2.4/demos/bitmaps
-@dirrm lib/blt2.4/demos
-@dirrm lib/blt2.4/dd_protocols
-@dirrm lib/blt2.4
