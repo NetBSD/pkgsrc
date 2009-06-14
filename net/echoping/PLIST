@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:00:03 joerg Exp $
 bin/echoping
 include/echoping/compilation.h
 include/echoping/echoping.h
@@ -9,4 +9,3 @@ man/man1/echoping.1
 man/man1/echoping_dns.1
 man/man1/echoping_random.1
 man/man1/echoping_whois.1
-@unexec ${RMDIR} %D/lib/echoping 2>/dev/null || ${TRUE}

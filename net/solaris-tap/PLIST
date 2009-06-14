@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/01 00:43:20 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 21:00:05 joerg Exp $
 include/net/if_tun.h
 lkm/tap
 lkm/tap.conf
 lkm/tun
 lkm/tun.conf
-@unexec ${RMDIR} %D/include/net 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lkm 2>/dev/null || ${TRUE}

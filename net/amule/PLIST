@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 21:00:03 joerg Exp $
 ${PLIST.alc}bin/alc
 ${PLIST.alcc}bin/alcc
 ${PLIST.amule}bin/amule
@@ -360,5 +360,3 @@ ${PLIST.alc}share/pixmaps/alc.xpm
 ${PLIST.amule}share/pixmaps/amule.xpm
 ${PLIST.gui}share/pixmaps/amulegui.xpm
 ${PLIST.wxcas}share/pixmaps/wxcas.xpm
-@unexec ${RMDIR} %D/lib/xchat/plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/xchat 2>/dev/null || ${TRUE}

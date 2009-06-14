@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:09:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 21:00:05 joerg Exp $
 bin/achfile
 bin/acleandir.rc
 bin/adv1tov2
@@ -164,4 +164,4 @@ share/examples/rc.d/cnid_metad
 share/examples/rc.d/papd
 share/examples/rc.d/timelord
 share/netatalk/pagecount.ps
-@exec ${MKDIR} %D/libexec/psffilters
+@pkgdir libexec/psffilters

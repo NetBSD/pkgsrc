@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/06/14 18:09:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 21:00:05 joerg Exp $
 bin/snort
 lib/snort_dynamicengine/libsf_engine.la
 lib/snort_dynamicrules/lib_sfdynamic_example_rule.la
@@ -96,4 +96,3 @@ share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.c
 share/snort/src/snort_dynamicsrc/sfsnort_dynamic_detection_lib.h
 share/snort/src/snort_dynamicsrc/str_search.h
 share/snort/src/snort_dynamicsrc/stream_api.h
-@unexec ${RMDIR} %D/share/snort/rules 2>/dev/null || ${TRUE}

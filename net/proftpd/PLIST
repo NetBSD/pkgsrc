@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:09:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 21:00:05 joerg Exp $
 bin/ftpcount
 bin/ftpdctl
 bin/ftptop
@@ -57,7 +57,6 @@ include/proftpd/var.h
 include/proftpd/version.h
 include/proftpd/xferlog.h
 lib/pkgconfig/proftpd.pc
-@exec ${MKDIR} %D/lib/proftpd
 man/man1/ftpcount.1
 man/man1/ftptop.1
 man/man1/ftpwho.1
@@ -92,3 +91,4 @@ share/locale/en_US/LC_MESSAGES/proftpd.mo
 share/locale/it_IT/LC_MESSAGES/proftpd.mo
 share/locale/ru_RU/LC_MESSAGES/proftpd.mo
 share/locale/zh_CN/LC_MESSAGES/proftpd.mo
+@pkgdir lib/proftpd

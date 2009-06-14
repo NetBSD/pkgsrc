@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST.pgsql,v 1.1 2007/04/09 14:44:30 adrianp Exp $
+@comment $NetBSD: PLIST.pgsql,v 1.2 2009/06/14 21:00:03 joerg Exp $
 lib/echoping/postgresql.la
 man/man1/echoping_postgresql.1
-@unexec ${RMDIR} %D/lib/echoping 2>/dev/null || ${TRUE}

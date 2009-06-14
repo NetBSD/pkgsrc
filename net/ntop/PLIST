@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:09:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 21:00:05 joerg Exp $
 bin/ntop
 lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libcpacketPlugin.a
@@ -408,4 +408,4 @@ share/ntop/ntop/specialMAC.txt.gz
 share/ntop/perl/report.pl
 share/ntop/perl/report/basic.xml
 share/ntop/perl/test.pl
-@exec ${MKDIR} %D/lib/plugins
+@pkgdir lib/plugins
