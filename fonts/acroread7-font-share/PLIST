@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 19:01:13 joerg Exp $
 Acrobat7/Resource/CMap/83pv-RKSJ-H
 Acrobat7/Resource/CMap/90ms-RKSJ-H
 Acrobat7/Resource/CMap/90ms-RKSJ-UCS2
@@ -120,4 +120,4 @@ Acrobat7/Resource/CMap/UniJIS-UTF16-H
 Acrobat7/Resource/CMap/UniJIS-UTF16-V
 Acrobat7/Resource/CMap/UniKS-UTF16-H
 Acrobat7/Resource/CMap/UniKS-UTF16-V
-@exec ${MKDIR} %D/Acrobat7/Resource/CIDFont
+@pkgdir Acrobat7/Resource/CIDFont
