@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 20:28:05 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:48:51 ahoka Exp $
 bin/dmenu
 bin/dmenu_path
 bin/dmenu_run
