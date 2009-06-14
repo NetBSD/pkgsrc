@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2345 2009/06/14 21:03:57 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2346 2009/06/14 21:16:41 roy Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3142,3 +3142,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated converters/p5-JSON to 2.15 [sno 2009-06-14]
 	Updated converters/p5-JSON-XS to 2.240 [sno 2009-06-14]
 	Updated databases/p5-DBI to 1.609 [sno 2009-06-14]
+	Updated net/dnsmasq to 2.49 [roy 2009-06-14]
