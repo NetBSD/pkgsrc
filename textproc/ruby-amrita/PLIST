@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/15 03:33:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:27 joerg Exp $
 bin/ams
 bin/amshandler
 bin/amx
@@ -247,43 +247,3 @@ ${RUBY_EG}/amrita/tour/xhtml.rb
 ${RUBY_EG}/amrita/tour/xml1.rb
 ${RUBY_EG}/amrita/tour/xml2.rb
 ${RUBY_EG}/amrita/tour/xml3.rb
-@dirrm ${RUBY_VENDORLIB}/amrita
-@dirrm ${RUBY_DOC}/amrita/html/classes/Amrita/PartsTemplate
-@dirrm ${RUBY_DOC}/amrita/html/classes/Amrita/TagInfo
-@dirrm ${RUBY_DOC}/amrita/html/classes/Amrita
-@dirrm ${RUBY_DOC}/amrita/html/classes/Amx
-@dirrm ${RUBY_DOC}/amrita/html/classes/REXML
-@dirrm ${RUBY_DOC}/amrita/html/classes
-@dirrm ${RUBY_DOC}/amrita/html/files/docs
-@dirrm ${RUBY_DOC}/amrita/html/files/lib/amrita
-@dirrm ${RUBY_DOC}/amrita/html/files/lib
-@dirrm ${RUBY_DOC}/amrita/html/files
-@dirrm ${RUBY_DOC}/amrita/html
-@dirrm ${RUBY_DOC}/amrita
-@dirrm ${RUBY_EG}/amrita/bbs/template/2ch_en
-@dirrm ${RUBY_EG}/amrita/bbs/template/2ch_ja
-@dirrm ${RUBY_EG}/amrita/bbs/template/kari_ja
-@dirrm ${RUBY_EG}/amrita/bbs/template/simple
-@dirrm ${RUBY_EG}/amrita/bbs/template/slash_en
-@dirrm ${RUBY_EG}/amrita/bbs/template
-@dirrm ${RUBY_EG}/amrita/bbs/test
-@dirrm ${RUBY_EG}/amrita/bbs
-@dirrm ${RUBY_EG}/amrita/benchmark
-@dirrm ${RUBY_EG}/amrita/cgi
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/CheckboxPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/ConditionalPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/HeaderFooter
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/IndexPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/IntroductionPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/MainPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/RepetitionPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/SourcePage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/StringPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples/TextFieldPage
-@dirrm ${RUBY_EG}/amrita/cgikit/Examples
-@dirrm ${RUBY_EG}/amrita/cgikit/HelloWorld/MainPage
-@dirrm ${RUBY_EG}/amrita/cgikit/HelloWorld
-@dirrm ${RUBY_EG}/amrita/cgikit
-@dirrm ${RUBY_EG}/amrita/hello
-@dirrm ${RUBY_EG}/amrita/tour
-@dirrm ${RUBY_EG}/amrita

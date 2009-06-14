@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:21:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
 ${GEM_HOME}/cache/builder-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/README
@@ -21,10 +21,3 @@ ${GEM_LIBDIR}/test/testblankslate.rb
 ${GEM_LIBDIR}/test/testeventbuilder.rb
 ${GEM_LIBDIR}/test/testmarkupbuilder.rb
 ${GEM_HOME}/specifications/builder-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/scripts
-@dirrm ${GEM_LIBDIR}/lib/builder
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/doc/releases
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}

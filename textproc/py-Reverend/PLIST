@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 02:26:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:24 joerg Exp $
 ${PYSITELIB}/reverend/__init__.py
 ${PYSITELIB}/reverend/__init__.pyc
 ${PYSITELIB}/reverend/__init__.pyo
@@ -26,6 +26,3 @@ ${PYSITELIB}/reverend/ui/trainer.pyo
 ${PYSITELIB}/reverend/ui/util.py
 ${PYSITELIB}/reverend/ui/util.pyc
 ${PYSITELIB}/reverend/ui/util.pyo
-@dirrm ${PYSITELIB}/reverend/ui
-@dirrm ${PYSITELIB}/reverend/guessers
-@dirrm ${PYSITELIB}/reverend

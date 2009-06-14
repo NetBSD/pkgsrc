@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/18 14:13:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:32 joerg Exp $
 share/doc/tei-xsl/ChangeLog
 share/doc/tei-xsl/LICENSE
 share/doc/tei-xsl/customize.xml
@@ -285,25 +285,3 @@ share/xsl/tei-xsl/p5/xhtml/textcrit.xsl
 share/xsl/tei-xsl/p5/xhtml/textstructure.xsl
 share/xsl/tei-xsl/p5/xhtml/transcr.xsl
 share/xsl/tei-xsl/p5/xhtml/verse.xsl
-@dirrm share/xsl/tei-xsl/p5/xhtml
-@dirrm share/xsl/tei-xsl/p5/slides
-@dirrm share/xsl/tei-xsl/p5/odds
-@dirrm share/xsl/tei-xsl/p5/latex
-@dirrm share/xsl/tei-xsl/p5/html
-@dirrm share/xsl/tei-xsl/p5/fo
-@dirrm share/xsl/tei-xsl/p5/common
-@dirrm share/xsl/tei-xsl/p5
-@dirrm share/xsl/tei-xsl/p4/xhtml
-@dirrm share/xsl/tei-xsl/p4/slides
-@dirrm share/xsl/tei-xsl/p4/latex
-@dirrm share/xsl/tei-xsl/p4/html
-@dirrm share/xsl/tei-xsl/p4/fo
-@dirrm share/xsl/tei-xsl/p4/common
-@dirrm share/xsl/tei-xsl/p4
-@dirrm share/xsl/tei-xsl
-@dirrm share/doc/tei-xsl/xsltdoc/latex
-@dirrm share/doc/tei-xsl/xsltdoc/html
-@dirrm share/doc/tei-xsl/xsltdoc/fo
-@dirrm share/doc/tei-xsl/xsltdoc/common
-@dirrm share/doc/tei-xsl/xsltdoc
-@dirrm share/doc/tei-xsl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 09:42:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:25 joerg Exp $
 ${PYSITELIB}/enchant/__init__.py
 ${PYSITELIB}/enchant/__init__.pyc
 ${PYSITELIB}/enchant/__init__.pyo
@@ -32,7 +32,3 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/eager_resources.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/enchant/tokenize
-@dirrm ${PYSITELIB}/enchant/checker
-@dirrm ${PYSITELIB}/enchant

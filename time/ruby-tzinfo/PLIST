@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/10 22:00:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:18:00 joerg Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -620,30 +620,3 @@ ${GEM_LIBDIR}/test/tc_timezone_utc.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_LIBDIR}/test/ts_all.rb
 ${GEM_HOME}/specifications/tzinfo-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/indexes
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/US
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Pacific
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Mideast
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Mexico
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Indian
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Etc
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Chile
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Canada
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Brazil
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Australia
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Atlantic
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Arctic
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Antarctica
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/America/North_Dakota
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Kentucky
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Indiana
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Argentina
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/America
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions/Africa
-@dirrm ${GEM_LIBDIR}/lib/tzinfo/definitions
-@dirrm ${GEM_LIBDIR}/lib/tzinfo
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

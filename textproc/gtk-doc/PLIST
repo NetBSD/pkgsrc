@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/11/18 11:55:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:17:17 joerg Exp $
 bin/gtkdoc-check
 bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
@@ -31,11 +31,3 @@ share/gtk-doc/data/version-greater-or-equal.xsl
 share/omf/gtk-doc-manual/gtk-doc-manual-C.omf
 share/pkgconfig/gtk-doc.pc
 share/sgml/gtk-doc/gtk-doc.cat
-@dirrm share/sgml/gtk-doc
-@comment in xmlcatmgr: @dirrm share/sgml
-@dirrm share/omf/gtk-doc-manual
-@comment in rarian: @dirrm share/omf
-@dirrm share/gtk-doc/data
-@dirrm share/gnome/help/gtk-doc-manual/C
-@dirrm share/gnome/help/gtk-doc-manual
-@comment in gnome2-dirs: @dirrm share/gnome/help

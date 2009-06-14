@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.docs,v 1.2 2009/02/24 20:41:45 wiz Exp $
+@comment $NetBSD: PLIST.docs,v 1.3 2009/06/14 18:17:16 joerg Exp $
 share/doc/groff/${PKGVERSION}/examples/img/webpage1.png
 share/doc/groff/${PKGVERSION}/examples/img/webpage2.png
 share/doc/groff/${PKGVERSION}/examples/webpage-1.html
@@ -90,6 +90,3 @@ share/doc/groff/${PKGVERSION}/html/pic-8.html
 share/doc/groff/${PKGVERSION}/html/pic-9.html
 share/doc/groff/${PKGVERSION}/html/pic.html
 share/doc/groff/${PKGVERSION}/pdf/pdfmark.pdf
-@dirrm share/doc/groff/${PKGVERSION}/pdf
-@dirrm share/doc/groff/${PKGVERSION}/html/img
-@dirrm share/doc/groff/${PKGVERSION}/examples/img

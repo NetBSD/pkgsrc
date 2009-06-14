@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/20 13:38:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:59 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -36,6 +36,3 @@ share/doc/${PKGNAME}/recurrence.ics
 share/doc/${PKGNAME}/recurrence.txt
 share/doc/${PKGNAME}/small.ics
 share/doc/${PKGNAME}/small.txt
-@dirrm share/doc/${PKGNAME}
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/icalendar

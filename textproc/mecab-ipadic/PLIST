@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/12 13:50:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:22 joerg Exp $
 lib/mecab/dic/ipadic/char.bin
 lib/mecab/dic/ipadic/dicrc
 lib/mecab/dic/ipadic/left-id.def
@@ -8,4 +8,3 @@ lib/mecab/dic/ipadic/rewrite.def
 lib/mecab/dic/ipadic/right-id.def
 lib/mecab/dic/ipadic/sys.dic
 lib/mecab/dic/ipadic/unk.dic
-@dirrm lib/mecab/dic/ipadic
