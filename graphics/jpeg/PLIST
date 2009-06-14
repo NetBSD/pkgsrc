@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/06/05 22:07:25 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:19 joerg Exp $
 bin/cjpeg
 bin/djpeg
 bin/exifautotran
@@ -25,4 +25,3 @@ share/doc/jpeg/libjpeg.doc
 share/doc/jpeg/structure.doc
 share/doc/jpeg/usage.doc
 share/doc/jpeg/wizard.doc
-@dirrm share/doc/jpeg

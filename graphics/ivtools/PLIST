@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/02/15 18:26:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:59:18 joerg Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -839,36 +839,4 @@ man/man3/transfns.3
 man/man3/transforms.3
 man/man3/uctrls.3
 man/man3/viewcmds.3
-@dirrm lib/ivtools/config/InterViews
-@dirrm lib/ivtools/config
-@dirrm lib/ivtools
-@dirrm include/ivstd
-@dirrm include/Unidraw/Tools
-@dirrm include/Unidraw/Graphic
-@dirrm include/Unidraw/Components
-@dirrm include/Unidraw/Commands
-@dirrm include/Unidraw
-@dirrm include/UniIdraw
-@dirrm include/TopoFace
-@dirrm include/Time
-@dirrm include/TIFF
-@dirrm include/OverlayUnidraw
-@dirrm include/OS
-@dirrm include/InterViews
-@dirrm include/IVGlyph
-@dirrm include/IV-look
-@dirrm include/IV-X11
 @exec ${MKDIR} %D/include/IV-3_1
-@dirrm include/IV-3_1
-@dirrm include/IV-2_6/InterViews
-@dirrm include/IV-2_6
-@dirrm include/GraphUnidraw
-@dirrm include/FrameUnidraw
-@dirrm include/DrawServ
-@dirrm include/Dispatch
-@dirrm include/ComUtil
-@dirrm include/ComUnidraw
-@dirrm include/ComTerp
-@dirrm include/ComGlyph
-@dirrm include/Attribute
-@dirrm include/AttrGlyph

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/31 15:47:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:11 joerg Exp $
 bin/ewipe
 share/doc/ewipe/Changes.jp
 share/doc/ewipe/README
@@ -18,6 +18,3 @@ share/examples/ewipe/sample.ewp
 share/examples/ewipe/test.ewp
 share/examples/ewipe/tutorial-e.ewp
 share/examples/ewipe/tutorial.ewp
-@dirrm share/examples/ewipe
-@dirrm share/ewipe
-@dirrm share/doc/ewipe

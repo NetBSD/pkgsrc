@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/21 21:29:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:19 joerg Exp $
 bin/locod
 bin/locoe
 share/doc/jpeg_ls/README
@@ -7,5 +7,3 @@ share/examples/jpeg_ls/lena24b.jls
 share/examples/jpeg_ls/lena8b.jls
 share/examples/jpeg_ls/table24_no_red
 share/examples/jpeg_ls/table_r
-@dirrm share/examples/jpeg_ls
-@dirrm share/doc/jpeg_ls

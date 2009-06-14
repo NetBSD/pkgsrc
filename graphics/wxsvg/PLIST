@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/24 03:42:28 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:31 joerg Exp $
 bin/svgview
 include/wxSVG/Animated.h
 include/wxSVG/CSSStyleDeclaration.h
@@ -184,5 +184,3 @@ include/wxSVG/svgctrl.h
 include/wxXML/xml.h
 include/wxXML/xmlhelpr.h
 lib/libwxsvg.la
-@dirrm include/wxXML
-@dirrm include/wxSVG

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/06/12 17:27:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:59:14 joerg Exp $
 bin/gimp
 bin/gimp-1.2
 bin/gimp-config
@@ -1448,64 +1448,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp-libgimp.mo
 share/locale/zh_TW/LC_MESSAGES/gimp-script-fu.mo
 share/locale/zh_TW/LC_MESSAGES/gimp-std-plugins.mo
 share/locale/zh_TW/LC_MESSAGES/gimp.mo
-@dirrm share/gimp/1.2/tips
-@dirrm share/gimp/1.2/scripts
-@dirrm share/gimp/1.2/patterns
-@dirrm share/gimp/1.2/palettes
-@dirrm share/gimp/1.2/help/C/tools
-@dirrm share/gimp/1.2/help/C/toolbox/help
-@dirrm share/gimp/1.2/help/C/toolbox
-@dirrm share/gimp/1.2/help/C/stylesheet-images
-@dirrm share/gimp/1.2/help/C/save
-@dirrm share/gimp/1.2/help/C/paths
-@dirrm share/gimp/1.2/help/C/open
-@dirrm share/gimp/1.2/help/C/layers/stack
-@dirrm share/gimp/1.2/help/C/layers
-@dirrm share/gimp/1.2/help/C/images/tools
-@dirrm share/gimp/1.2/help/C/images/glossary
-@dirrm share/gimp/1.2/help/C/images/examples
-@dirrm share/gimp/1.2/help/C/images
-@dirrm share/gimp/1.2/help/C/image/view
-@dirrm share/gimp/1.2/help/C/image/select
-@dirrm share/gimp/1.2/help/C/image/image/transforms
-@dirrm share/gimp/1.2/help/C/image/image/mode
-@dirrm share/gimp/1.2/help/C/image/image/colors/auto
-@dirrm share/gimp/1.2/help/C/image/image/colors
-@dirrm share/gimp/1.2/help/C/image/image
-@dirrm share/gimp/1.2/help/C/image/edit
-@dirrm share/gimp/1.2/help/C/image
-@dirrm share/gimp/1.2/help/C/filters
-@dirrm share/gimp/1.2/help/C/file
-@dirrm share/gimp/1.2/help/C/dialogs/preferences
-@dirrm share/gimp/1.2/help/C/dialogs/paths
-@dirrm share/gimp/1.2/help/C/dialogs/palette_editor
-@dirrm share/gimp/1.2/help/C/dialogs/layers
-@dirrm share/gimp/1.2/help/C/dialogs/gradient_editor
-@dirrm share/gimp/1.2/help/C/dialogs/color_selectors
-@dirrm share/gimp/1.2/help/C/dialogs/channels
-@dirrm share/gimp/1.2/help/C/dialogs
-@dirrm share/gimp/1.2/help/C/channels
-@dirrm share/gimp/1.2/help/C
-@dirrm share/gimp/1.2/help
-@dirrm share/gimp/1.2/gradients
-@dirrm share/gimp/1.2/gimpressionist/Presets
-@dirrm share/gimp/1.2/gimpressionist/Paper
-@dirrm share/gimp/1.2/gimpressionist/Brushes
-@dirrm share/gimp/1.2/gimpressionist
-@dirrm share/gimp/1.2/gflare
-@dirrm share/gimp/1.2/gfig
-@dirrm share/gimp/1.2/fractalexplorer
-@dirrm share/gimp/1.2/devel-docs/html/libgimp
-@dirrm share/gimp/1.2/devel-docs/html
-@dirrm share/gimp/1.2/devel-docs
-@dirrm share/gimp/1.2/brushes
-@dirrm share/gimp/1.2
-@dirrm share/gimp
-@dirrm share/examples/gimp/1.2
-@dirrm share/examples/gimp
-@dirrm lib/gimp/1.2/plug-ins
-@dirrm lib/gimp/1.2/modules
-@dirrm lib/gimp/1.2
 @unexec ${RMDIR} %D/lib/gimp 2>/dev/null || ${TRUE}
-@dirrm include/libgimp
-@dirrm include/gck

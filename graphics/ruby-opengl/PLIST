@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/04 15:19:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:28 joerg Exp $
 ${GEM_HOME}/cache/ruby-opengl-${PKGVERSION}.gem
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/doc/build_install.txt
@@ -130,19 +130,4 @@ ${GEM_LIBDIR}/test/tc_include_gl.rb
 ${GEM_LIBDIR}/test/tc_misc.rb
 ${GEM_LIBDIR}/test/tc_require_gl.rb
 ${GEM_HOME}/specifications/ruby-opengl-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/glut
-@dirrm ${GEM_LIBDIR}/ext/glu
-@dirrm ${GEM_LIBDIR}/ext/gl
-@dirrm ${GEM_LIBDIR}/ext/common
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/examples/misc
-@dirrm ${GEM_LIBDIR}/examples/RedBook
-@dirrm ${GEM_LIBDIR}/examples/OrangeBook
-@dirrm ${GEM_LIBDIR}/examples/NeHe
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/doc/supplies
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

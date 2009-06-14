@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:28 joerg Exp $
 bin/showimg
 lib/kde3/libshowimgpart.la
 lib/libshowimgcore.la
@@ -221,54 +221,3 @@ share/locale/sv/LC_MESSAGES/showimg.mo
 share/locale/ta/LC_MESSAGES/showimg.mo
 share/locale/tr/LC_MESSAGES/showimg.mo
 share/locale/zh_CN/LC_MESSAGES/showimg.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/image
-@dirrm share/kde/apps/showimgpart
-@dirrm share/kde/apps/showimg/pics
-@dirrm share/kde/apps/showimg/icons/hicolor/64x64/mimetypes
-@dirrm share/kde/apps/showimg/icons/hicolor/64x64
-@dirrm share/kde/apps/showimg/icons/hicolor/48x48/mimetypes
-@dirrm share/kde/apps/showimg/icons/hicolor/48x48
-@dirrm share/kde/apps/showimg/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/apps/showimg/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/showimg/icons/hicolor/32x32
-@dirrm share/kde/apps/showimg/icons/hicolor/22x22/mimetypes
-@dirrm share/kde/apps/showimg/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/showimg/icons/hicolor/22x22
-@dirrm share/kde/apps/showimg/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/showimg/icons/hicolor/16x16
-@dirrm share/kde/apps/showimg/icons/hicolor
-@dirrm share/kde/apps/showimg/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/showimg/icons/crystalsvg/32x32
-@dirrm share/kde/apps/showimg/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/showimg/icons/crystalsvg/22x22
-@dirrm share/kde/apps/showimg/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/showimg/icons/crystalsvg/16x16
-@dirrm share/kde/apps/showimg/icons/crystalsvg
-@dirrm share/kde/apps/showimg/icons
-@dirrm share/kde/apps/showimg
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Graphics
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@dirrm share/doc/kde/HTML/sv/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/pt/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/it/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/et/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/showimg
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm lib/kde3

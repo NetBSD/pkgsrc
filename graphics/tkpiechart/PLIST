@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:29 joerg Exp $
 lib/tcl/tkpiechart/boxlabel.tcl
 lib/tcl/tkpiechart/canlabel.tcl
 lib/tcl/tkpiechart/labarray.tcl
@@ -9,4 +9,3 @@ lib/tcl/tkpiechart/pielabel.tcl
 lib/tcl/tkpiechart/pkgIndex.tcl
 lib/tcl/tkpiechart/selector.tcl
 lib/tcl/tkpiechart/slice.tcl
-@dirrm lib/tcl/tkpiechart

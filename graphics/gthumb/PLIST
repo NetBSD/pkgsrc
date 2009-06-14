@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/04/07 11:43:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:59:17 joerg Exp $
 bin/gthumb
 lib/bonobo/servers/GNOME_GThumb.server
 lib/gthumb/modules/libduplicates.la
@@ -188,33 +188,3 @@ share/omf/gthumb/gthumb-de.omf
 share/omf/gthumb/gthumb-es.omf
 share/omf/gthumb/gthumb-fr.omf
 share/omf/gthumb/gthumb-sv.omf
-@dirrm share/omf/gthumb
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gthumb/glade
-@dirrm share/gthumb/albumthemes/Wiki
-@dirrm share/gthumb/albumthemes/NeatRound
-@dirrm share/gthumb/albumthemes/Flicker
-@dirrm share/gthumb/albumthemes/ClassicClips
-@dirrm share/gthumb/albumthemes/Classic
-@dirrm share/gthumb/albumthemes/BestFit
-@dirrm share/gthumb/albumthemes
-@dirrm share/gthumb
-@dirrm share/gnome/help/gthumb/sv/figures
-@dirrm share/gnome/help/gthumb/sv
-@dirrm share/gnome/help/gthumb/fr/figures
-@dirrm share/gnome/help/gthumb/fr
-@dirrm share/gnome/help/gthumb/es/figures
-@dirrm share/gnome/help/gthumb/es
-@dirrm share/gnome/help/gthumb/de/figures
-@dirrm share/gnome/help/gthumb/de
-@dirrm share/gnome/help/gthumb/C/figures
-@dirrm share/gnome/help/gthumb/C
-@dirrm share/gnome/help/gthumb
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gthumb/modules
-@dirrm lib/gthumb
-@comment in libbonobo: @dirrm lib/bonobo/servers

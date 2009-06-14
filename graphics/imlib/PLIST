@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/02/16 18:09:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:18 joerg Exp $
 bin/imlib_config
 bin/imlib-config
 include/gdk_imlib.h
@@ -35,5 +35,3 @@ share/examples/imlib/imrc
 share/examples/imlib/im_palette.pal
 share/examples/imlib/im_palette-small.pal
 share/examples/imlib/im_palette-tiny.pal
-@dirrm share/examples/imlib
-@dirrm share/doc/imlib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 11:06:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:08 joerg Exp $
 include/clutter-0.8/clutter-gtk/gtk-clutter-embed.h
 include/clutter-0.8/clutter-gtk/gtk-clutter-util.h
 lib/libclutter-gtk-0.8.la
@@ -18,5 +18,3 @@ share/gtk-doc/html/clutter-gtk/license.html
 share/gtk-doc/html/clutter-gtk/right.png
 share/gtk-doc/html/clutter-gtk/style.css
 share/gtk-doc/html/clutter-gtk/up.png
-@dirrm share/gtk-doc/html/clutter-gtk
-@dirrm include/clutter-0.8/clutter-gtk

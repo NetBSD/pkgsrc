@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/12 00:46:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:25 joerg Exp $
 ${PYSITELIB}/OpenGL/AGL/__init__.py
 ${PYSITELIB}/OpenGL/AGL/__init__.pyc
 ${PYSITELIB}/OpenGL/AGL/__init__.pyo
@@ -1988,71 +1988,3 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/OpenGL/tests
-@dirrm ${PYSITELIB}/OpenGL/raw/GLX
-@dirrm ${PYSITELIB}/OpenGL/raw/GLUT
-@dirrm ${PYSITELIB}/OpenGL/raw/GLU
-@dirrm ${PYSITELIB}/OpenGL/raw/GLE
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/WIN
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/VERSION
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/SUNX
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/SUN
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/SGIX
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/SGIS
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/SGI
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/S3
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/REND
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/PGI
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/OML
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/OES
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/NV
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/MESA
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/INTEL
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/INGR
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/IBM
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/HP
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/GREMEDY
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/EXT
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/DFX
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/ATI
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/ARB
-@dirrm ${PYSITELIB}/OpenGL/raw/GL/APPLE
-@dirrm ${PYSITELIB}/OpenGL/raw/GL
-@dirrm ${PYSITELIB}/OpenGL/raw
-@dirrm ${PYSITELIB}/OpenGL/platform
-@dirrm ${PYSITELIB}/OpenGL/arrays
-@dirrm ${PYSITELIB}/OpenGL/WGL
-@dirrm ${PYSITELIB}/OpenGL/Tk
-@dirrm ${PYSITELIB}/OpenGL/GLX
-@dirrm ${PYSITELIB}/OpenGL/GLUT
-@dirrm ${PYSITELIB}/OpenGL/GLU/EXT
-@dirrm ${PYSITELIB}/OpenGL/GLU
-@dirrm ${PYSITELIB}/OpenGL/GLE
-@dirrm ${PYSITELIB}/OpenGL/GL/WIN
-@dirrm ${PYSITELIB}/OpenGL/GL/VERSION
-@dirrm ${PYSITELIB}/OpenGL/GL/SUNX
-@dirrm ${PYSITELIB}/OpenGL/GL/SUN
-@dirrm ${PYSITELIB}/OpenGL/GL/SGIX
-@dirrm ${PYSITELIB}/OpenGL/GL/SGIS
-@dirrm ${PYSITELIB}/OpenGL/GL/SGI
-@dirrm ${PYSITELIB}/OpenGL/GL/S3
-@dirrm ${PYSITELIB}/OpenGL/GL/REND
-@dirrm ${PYSITELIB}/OpenGL/GL/PGI
-@dirrm ${PYSITELIB}/OpenGL/GL/OML
-@dirrm ${PYSITELIB}/OpenGL/GL/OES
-@dirrm ${PYSITELIB}/OpenGL/GL/NV
-@dirrm ${PYSITELIB}/OpenGL/GL/MESA
-@dirrm ${PYSITELIB}/OpenGL/GL/INTEL
-@dirrm ${PYSITELIB}/OpenGL/GL/INGR
-@dirrm ${PYSITELIB}/OpenGL/GL/IBM
-@dirrm ${PYSITELIB}/OpenGL/GL/HP
-@dirrm ${PYSITELIB}/OpenGL/GL/GREMEDY
-@dirrm ${PYSITELIB}/OpenGL/GL/EXT
-@dirrm ${PYSITELIB}/OpenGL/GL/DFX
-@dirrm ${PYSITELIB}/OpenGL/GL/ATI
-@dirrm ${PYSITELIB}/OpenGL/GL/ARB
-@dirrm ${PYSITELIB}/OpenGL/GL/APPLE
-@dirrm ${PYSITELIB}/OpenGL/GL
-@dirrm ${PYSITELIB}/OpenGL/AGL
-@dirrm ${PYSITELIB}/OpenGL

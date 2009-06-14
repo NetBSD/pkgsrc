@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:19 joerg Exp $
 bin/kbarcode
 lib/kde3/kfile_kbarcode.la
 share/applications/kde/kbarcode-batch.desktop
@@ -34,14 +34,3 @@ share/locale/nl/LC_MESSAGES/kbarcode.mo
 share/locale/pl/LC_MESSAGES/kbarcode.mo
 share/locale/sv/LC_MESSAGES/kbarcode.mo
 share/locale/tr/LC_MESSAGES/kbarcode.mo
-@comment in kde: @dirrm share/kde/services
-@dirrm share/kde/apps/kbarcode
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

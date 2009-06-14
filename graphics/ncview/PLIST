@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:23 joerg Exp $
 bin/ncview
 lib/X11/app-defaults/Ncview
 libdata/ncview/3gauss.ncmap
@@ -10,4 +10,3 @@ libdata/ncview/nc_overlay.earth.lat-lon.p8deg
 libdata/ncview/nc_overlay.lat-lon-grid.10x30
 libdata/ncview/nc_overlay.lat-lon-grid.20x60
 man/man1/ncview.1
-@dirrm libdata/ncview

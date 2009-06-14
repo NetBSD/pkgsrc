@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/02 13:28:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:31 joerg Exp $
 bin/vtkpython
 ${PYSITELIB}/vtk_python/QVTKRenderWidget.py
 ${PYSITELIB}/vtk_python/QVTKRenderWidget.pyc
@@ -155,11 +155,3 @@ lib/vtk/libvtkIOPython.so
 lib/vtk/libvtkImagingPython.so
 lib/vtk/libvtkRenderingPython.so
 lib/vtk/libvtkRenderingPythonTkWidgets.so
-@dirrm ${PYSITELIB}/vtk_python/vtk/wx
-@dirrm ${PYSITELIB}/vtk_python/vtk/util
-@dirrm ${PYSITELIB}/vtk_python/vtk/tk
-@dirrm ${PYSITELIB}/vtk_python/vtk/test
-@dirrm ${PYSITELIB}/vtk_python/vtk/qt
-@dirrm ${PYSITELIB}/vtk_python/vtk/gtk
-@dirrm ${PYSITELIB}/vtk_python/vtk
-@dirrm ${PYSITELIB}/vtk_python

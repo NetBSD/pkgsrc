@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 19:26:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:11 joerg Exp $
 include/Evas_Engine_Software_16_X11.h
 lib/evas/modules/engines/software_16_x11/${MODULE_ARCH}/module.la
 lib/pkgconfig/evas-software-16-x11.pc
-@dirrm lib/evas/modules/engines/software_16_x11/${MODULE_ARCH}
-@dirrm lib/evas/modules/engines/software_16_x11

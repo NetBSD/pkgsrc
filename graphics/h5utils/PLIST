@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/10 11:19:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:18 joerg Exp $
 bin/h4fromh5
 bin/h5fromh4
 bin/h5fromtxt
@@ -34,5 +34,3 @@ share/h5utils/colormaps/vga
 share/h5utils/colormaps/winter
 share/h5utils/colormaps/yarg
 share/h5utils/colormaps/yellow
-@dirrm share/h5utils/colormaps
-@dirrm share/h5utils

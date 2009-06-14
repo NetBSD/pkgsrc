@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/01/17 01:49:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:59:27 joerg Exp $
 ${GEM_HOME}/cache/rmagick-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/ChangeLog
@@ -357,15 +357,4 @@ ${GEM_LIBDIR}/rmagick.gemspec
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/uninstall.rb
 ${GEM_HOME}/specifications/rmagick-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/rvg
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/RMagick
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/doc/scripts
-@dirrm ${GEM_LIBDIR}/doc/ex/images
-@dirrm ${GEM_LIBDIR}/doc/ex
-@dirrm ${GEM_LIBDIR}/doc/css
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

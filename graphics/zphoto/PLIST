@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:32 joerg Exp $
 bin/zphoto
 ${PLIST.wx}bin/wxzphoto
 share/locale/ja/LC_MESSAGES/zphoto.mo
@@ -7,12 +7,9 @@ share/zphoto/doc/images/wxzphoto-linux-mini.png
 share/zphoto/doc/images/wxzphoto-linux.png
 share/zphoto/doc/images/wxzphoto-mini.png
 share/zphoto/doc/images/wxzphoto.png
-@dirrm share/zphoto/doc/images
 share/zphoto/doc/zphoto-ja.html
 share/zphoto/doc/zphoto.html
-@dirrm share/zphoto/doc
 share/zphoto/fonts/EfontSerifB.fdb
-@dirrm share/zphoto/fonts
 share/zphoto/templates/default/all/.photo.html
 share/zphoto/templates/default/all/css-colors.txt
 share/zphoto/templates/default/all/flash-colors.txt
@@ -23,7 +20,6 @@ share/zphoto/templates/default/all/noflash.html.ja
 share/zphoto/templates/default/all/zoom.js.en
 share/zphoto/templates/default/all/zoom.js.ja
 share/zphoto/templates/default/all/zphoto.css
-@dirrm share/zphoto/templates/default/all
 share/zphoto/templates/default/en/.photo.html
 share/zphoto/templates/default/en/css-colors.txt
 share/zphoto/templates/default/en/flash-colors.txt
@@ -31,7 +27,6 @@ share/zphoto/templates/default/en/index.html
 share/zphoto/templates/default/en/noflash.html
 share/zphoto/templates/default/en/zoom.js
 share/zphoto/templates/default/en/zphoto.css
-@dirrm share/zphoto/templates/default/en
 share/zphoto/templates/default/ja/.photo.html
 share/zphoto/templates/default/ja/css-colors.txt
 share/zphoto/templates/default/ja/flash-colors.txt
@@ -39,7 +34,3 @@ share/zphoto/templates/default/ja/index.html
 share/zphoto/templates/default/ja/noflash.html
 share/zphoto/templates/default/ja/zoom.js
 share/zphoto/templates/default/ja/zphoto.css
-@dirrm share/zphoto/templates/default/ja
-@dirrm share/zphoto/templates/default
-@dirrm share/zphoto/templates
-@dirrm share/zphoto

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/21 16:23:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:07 joerg Exp $
 include/cairomm-1.0/cairomm/cairomm.h
 include/cairomm-1.0/cairomm/cairommconfig.h
 include/cairomm-1.0/cairomm/context.h
@@ -27,5 +27,3 @@ lib/pkgconfig/cairomm-ps-1.0.pc
 lib/pkgconfig/cairomm-svg-1.0.pc
 lib/pkgconfig/cairomm-xlib-1.0.pc
 lib/pkgconfig/cairomm-xlib-xrender-1.0.pc
-@dirrm include/cairomm-1.0/cairomm
-@dirrm include/cairomm-1.0

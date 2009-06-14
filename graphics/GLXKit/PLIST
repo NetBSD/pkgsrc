@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 00:43:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:04 joerg Exp $
 share/GNUstep/Local/Library/Headers/GLXKit/G3DGLXCamera.h
 share/GNUstep/Local/Library/Headers/GLXKit/G3DGLXKit.h
 share/GNUstep/Local/Library/Headers/GLXKit/G3DXEventHandler.h
 share/GNUstep/Local/Library/Libraries/libGLXKit.so
 share/GNUstep/Local/Library/Libraries/libGLXKit.so.0.0.1
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers/GLXKit
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Headers

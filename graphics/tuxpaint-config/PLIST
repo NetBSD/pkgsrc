@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/04 21:16:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:29 joerg Exp $
 bin/tuxpaint-config
 man/man1/tuxpaint-config.1
 share/doc/tuxpaint-config/AUTHORS.txt
@@ -18,7 +18,3 @@ share/tuxpaint-config/images/win32-icon16x16x256.png
 share/tuxpaint-config/images/win32-icon32x32x16.png
 share/tuxpaint-config/images/win32-icon32x32x256.png
 share/tuxpaint-config/images/win32-icon48x48x256.png
-@dirrm share/tuxpaint-config/images
-@dirrm share/tuxpaint-config
-@dirrm share/doc/tuxpaint-config/html
-@dirrm share/doc/tuxpaint-config

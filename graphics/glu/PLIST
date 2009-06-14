@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/24 07:40:23 bjs Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:15 joerg Exp $
 include/GL/glu.h
 include/GL/glu_mangle.h
 lib/libGLU.la
 lib/pkgconfig/glu.pc
-@comment in graphics/MesaLib: @dirrm include/GL

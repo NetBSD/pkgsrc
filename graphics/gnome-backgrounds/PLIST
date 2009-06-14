@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/03/22 15:59:36 snj Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 17:59:15 joerg Exp $
 share/gnome-background-properties/gnome-abstract.xml
 share/gnome-background-properties/gnome-nature.xml
 share/locale/af/LC_MESSAGES/gnome-backgrounds.mo
@@ -98,5 +98,3 @@ share/pixmaps/backgrounds/gnome/nature/Storm.jpg
 share/pixmaps/backgrounds/gnome/nature/TwoWings.jpg
 share/pixmaps/backgrounds/gnome/nature/Wood.jpg
 share/pixmaps/backgrounds/gnome/nature/YellowFlower.jpg
-@dirrm share/pixmaps/backgrounds/gnome/nature
-@dirrm share/pixmaps/backgrounds/gnome/abstract

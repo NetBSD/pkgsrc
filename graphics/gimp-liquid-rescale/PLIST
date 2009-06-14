@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/22 20:41:02 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:14 joerg Exp $
 lib/gimp/2.0/plug-ins/gimp-lqr-plugin
 lib/gimp/2.0/plug-ins/plug_in_lqr_iter
 share/gimp-lqr-plugin/help/en/gimp-help.xml
@@ -36,15 +36,3 @@ share/locale/ru/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/sr/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/zh_CN/LC_MESSAGES/gimp20-lqr-plugin.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-lqr-plugin.mo
-@dirrm share/gimp/2.0/scripts
-@dirrm share/gimp/2.0
-@dirrm share/gimp-lqr-plugin/help/ru
-@dirrm share/gimp-lqr-plugin/help/it
-@dirrm share/gimp-lqr-plugin/help/images
-@dirrm share/gimp-lqr-plugin/help/en
-@dirrm share/gimp-lqr-plugin/help
-@dirrm share/gimp-lqr-plugin
-@dirrm share/gimp
-@dirrm lib/gimp/2.0/plug-ins
-@dirrm lib/gimp/2.0
-@dirrm lib/gimp

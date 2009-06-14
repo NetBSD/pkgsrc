@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/08 11:06:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:08 joerg Exp $
 include/clutter-0.8/clutter-box2d/clutter-box2d-collision.h
 include/clutter-0.8/clutter-box2d/clutter-box2d-contact.h
 include/clutter-0.8/clutter-box2d/clutter-box2d-joint.h
@@ -22,6 +22,3 @@ share/gtk-doc/html/clutter-box2d/license.html
 share/gtk-doc/html/clutter-box2d/right.png
 share/gtk-doc/html/clutter-box2d/style.css
 share/gtk-doc/html/clutter-box2d/up.png
-@dirrm share/gtk-doc/html/clutter-box2d
-@dirrm include/clutter-0.8/clutter-box2d
-@comment in clutter: @dirrm include/clutter-0.8

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/18 00:50:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:59:05 joerg Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -264,21 +264,5 @@ share/doc/GraphicsMagick/www/tools.html
 share/doc/GraphicsMagick/www/tools.rst
 share/doc/GraphicsMagick/www/utilities.html
 share/doc/GraphicsMagick/www/utilities.rst
-@dirrm share/doc/GraphicsMagick/www/images
-@dirrm share/doc/GraphicsMagick/www/api
-@dirrm share/doc/GraphicsMagick/www/Magick++
-@dirrm share/doc/GraphicsMagick/www
-@dirrm share/doc/GraphicsMagick
-@dirrm share/${PKGNAME}/config
-@dirrm share/${PKGNAME}
 @exec ${MKDIR} %D/lib/${PKGNAME}/modules-Q8/filters
-@dirrm lib/${PKGNAME}/modules-Q8/filters
 @exec ${MKDIR} %D/lib/${PKGNAME}/modules-Q8/coders
-@dirrm lib/${PKGNAME}/modules-Q8/coders
-@dirrm lib/${PKGNAME}/modules-Q8
-@dirrm lib/${PKGNAME}/config
-@dirrm lib/${PKGNAME}
-@dirrm include/GraphicsMagick/wand
-@dirrm include/GraphicsMagick/magick
-@dirrm include/GraphicsMagick/Magick++
-@dirrm include/GraphicsMagick

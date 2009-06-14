@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2009/04/21 10:03:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2009/06/14 17:59:14 joerg Exp $
 bin/gimp
 bin/gimp-2.6
 bin/gimp-console
@@ -1987,61 +1987,4 @@ share/locale/zh_TW/LC_MESSAGES/gimp20-script-fu.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-std-plug-ins.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20-tips.mo
 share/locale/zh_TW/LC_MESSAGES/gimp20.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gtk-doc/html/libgimpwidgets
-@dirrm share/gtk-doc/html/libgimpthumb
-@dirrm share/gtk-doc/html/libgimpmodule
-@dirrm share/gtk-doc/html/libgimpmath
-@dirrm share/gtk-doc/html/libgimpconfig
-@dirrm share/gtk-doc/html/libgimpcolor
-@dirrm share/gtk-doc/html/libgimpbase
-@dirrm share/gtk-doc/html/libgimp
-@dirrm share/gimp/2.0/tips
-@dirrm share/gimp/2.0/themes/Small
-@dirrm share/gimp/2.0/themes/Default/images/preferences
-@dirrm share/gimp/2.0/themes/Default/images
-@dirrm share/gimp/2.0/themes/Default
-@dirrm share/gimp/2.0/themes
-@dirrm share/gimp/2.0/scripts/images
-@dirrm share/gimp/2.0/scripts
-@dirrm share/gimp/2.0/patterns
-@dirrm share/gimp/2.0/palettes
-@dirrm share/gimp/2.0/menus
-@dirrm share/gimp/2.0/images
-@dirrm share/gimp/2.0/gradients
-@dirrm share/gimp/2.0/gimpressionist/Presets
-@dirrm share/gimp/2.0/gimpressionist/Paper
-@dirrm share/gimp/2.0/gimpressionist/Brushes
-@dirrm share/gimp/2.0/gimpressionist
-@dirrm share/gimp/2.0/gflare
-@dirrm share/gimp/2.0/gfig
-@dirrm share/gimp/2.0/fractalexplorer
 @exec ${MKDIR} %D/share/gimp/2.0/fonts
-@dirrm share/gimp/2.0/fonts
-@dirrm share/gimp/2.0/brushes
-@dirrm share/gimp/2.0
-@dirrm share/gimp
-@dirrm share/examples/gimp-2.0
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gimp/2.0/plug-ins
-@dirrm lib/gimp/2.0/modules
-@dirrm lib/gimp/2.0/interpreters
-@dirrm lib/gimp/2.0/environ
-@dirrm lib/gimp/2.0
-@dirrm lib/gimp
-@dirrm include/gimp-2.0/libgimpwidgets
-@dirrm include/gimp-2.0/libgimpthumb
-@dirrm include/gimp-2.0/libgimpmodule
-@dirrm include/gimp-2.0/libgimpmath
-@dirrm include/gimp-2.0/libgimpconfig
-@dirrm include/gimp-2.0/libgimpcolor
-@dirrm include/gimp-2.0/libgimpbase
-@dirrm include/gimp-2.0/libgimp
-@dirrm include/gimp-2.0

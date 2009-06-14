@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:17 joerg Exp $
 bin/gtksee
 man/man1/gtksee.1
 share/doc/gtksee/COPYING
@@ -11,8 +11,3 @@ share/locale/pl/LC_MESSAGES/gtksee.mo
 share/locale/ru/LC_MESSAGES/gtksee.mo
 share/locale/ru_UA/LC_MESSAGES/gtksee.mo
 share/locale/zh_CN.EUC/LC_MESSAGES/gtksee.mo
-@dirrm share/locale/zh_CN.EUC/LC_MESSAGES
-@dirrm share/locale/zh_CN.EUC
-@dirrm share/locale/ru_UA/LC_MESSAGES
-@dirrm share/locale/ru_UA
-@dirrm share/doc/gtksee

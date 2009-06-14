@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/18 12:46:39 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:24 joerg Exp $
 bin/pfsabsolute
 bin/pfscat
 bin/pfsclamp
@@ -96,6 +96,3 @@ ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfssize.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview_list.m
 ${PLIST.octave}${OCT_LOCALVERFCNFILEDIR}/pfstools/pfsview_rgb.m
-${PLIST.octave}@dirrm ${OCT_LOCALVERFCNFILEDIR}/pfstools
-${PLIST.octave}@dirrm ${OCT_LOCALVEROCTFILEDIR}/pfstools
-@dirrm include/pfs-1.2

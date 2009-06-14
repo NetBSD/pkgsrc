@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:24 joerg Exp $
 bin/pgeps
 bin/pgfig
 bin/pghp
@@ -23,5 +23,3 @@ share/examples/pgraf/pgdemo.r
 share/examples/pgraf/pgraf.r
 share/examples/pgraf/radar.c
 share/examples/pgraf/surface.c
-@dirrm share/examples/pgraf
-@dirrm share/doc/pgraf

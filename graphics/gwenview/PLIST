@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:17 joerg Exp $
 bin/gwenview
 lib/kde3/gwenview.la
 lib/kde3/libgvdirpart.la
@@ -94,49 +94,3 @@ share/kde/config.kcfg/miscconfig.kcfg
 share/kde/config.kcfg/slideshowconfig.kcfg
 share/kde/services/gvdirpart.desktop
 share/kde/services/gvimagepart.desktop
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@dirrm share/kde/apps/gwenview/tools
-@dirrm share/kde/apps/gwenview/thumbnail
-@dirrm share/kde/apps/gwenview/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/scalable
-@dirrm share/kde/apps/gwenview/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/48x48
-@dirrm share/kde/apps/gwenview/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/32x32
-@dirrm share/kde/apps/gwenview/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/22x22
-@dirrm share/kde/apps/gwenview/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/gwenview/icons/hicolor/16x16
-@dirrm share/kde/apps/gwenview/icons/hicolor
-@dirrm share/kde/apps/gwenview/icons
-@dirrm share/kde/apps/gwenview/cursors
-@dirrm share/kde/apps/gwenview
-@dirrm share/kde/apps/gvimagepart
-@dirrm share/kde/apps/gvdirpart
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/apps
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/en/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

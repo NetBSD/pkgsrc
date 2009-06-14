@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:31 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:18 joerg Exp $
 bin/igmt
 share/examples/igmt/example1.dat
 share/examples/igmt/example1.ps.gz
@@ -105,6 +105,3 @@ share/igmt/sortwsm.awk
 share/igmt/volcanoes.dat
 share/igmt/wcity.dat
 share/igmt/wcity_major.dat
-@dirrm share/igmt/colormaps
-@dirrm share/igmt
-@dirrm share/examples/igmt

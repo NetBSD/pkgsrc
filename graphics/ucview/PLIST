@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/08 01:09:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:29 joerg Exp $
 bin/ucview
 include/ucview/ucview.h
 include/ucview/ucview_plugin.h
@@ -36,20 +36,4 @@ share/ucview/icons/hicolor/48x48/ucview-record-video.png
 share/ucview/icons/hicolor/48x48/ucview-save-still-image.png
 share/ucview/logo/ucview-logo.png
 share/ucview/ucview.glade
-@dirrm share/ucview/logo
-@dirrm share/ucview/icons/hicolor/48x48
-@dirrm share/ucview/icons/hicolor/32x32
-@dirrm share/ucview/icons/hicolor/24x24
-@dirrm share/ucview/icons/hicolor/16x16
-@dirrm share/ucview/icons/hicolor
-@dirrm share/ucview/icons/asus/41x41
-@dirrm share/ucview/icons/asus
-@dirrm share/ucview/icons
 @exec ${MKDIR} %D/share/ucview/glade
-@dirrm share/ucview/glade
-@dirrm share/ucview
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@dirrm lib/ucview/plugins
-@dirrm lib/ucview
-@dirrm include/ucview

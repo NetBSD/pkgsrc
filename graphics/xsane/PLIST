@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/03/08 18:24:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:32 joerg Exp $
 bin/xsane
 man/man1/xsane.1
 share/locale/ca/LC_MESSAGES/xsane.mo
@@ -177,6 +177,3 @@ share/sane/xsane/xsane-gpl.txt
 share/sane/xsane/xsane-logo.xpm
 share/sane/xsane/xsane-startimage.pnm
 share/sane/xsane/xsane-style.rc
-@dirrm share/sane/xsane/doc
-@dirrm share/sane/xsane
-@comment in sane-backends: @dirrm share/sane

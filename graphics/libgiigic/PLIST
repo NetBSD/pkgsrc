@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/25 02:52:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:21 joerg Exp $
 bin/gic2c
 include/ggi/gic-defs.h
 include/ggi/gic.h
@@ -93,6 +93,3 @@ man/man3/gic_head.3
 man/man7/libgiigic-usage.7
 man/man7/libgiigic.7
 share/examples/libgiigic/libgiigic.conf
-@dirrm share/examples/libgiigic
-@dirrm lib/ggi/gic/recognizer
-@dirrm lib/ggi/gic

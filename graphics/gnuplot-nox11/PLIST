@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/30 12:31:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:15 joerg Exp $
 bin/gnuplot
 info/gnuplot.info
 man/man1/gnuplot.1
@@ -13,8 +13,3 @@ share/gnuplot/4.2/PostScript/koi8r.ps
 share/gnuplot/4.2/PostScript/koi8u.ps
 share/gnuplot/4.2/PostScript/prologue.ps
 share/gnuplot/4.2/gnuplot.gih
-@dirrm share/gnuplot/4.2/PostScript
-@dirrm share/gnuplot/4.2
-@dirrm share/gnuplot
-@dirrm libexec/gnuplot/4.2
-@dirrm libexec/gnuplot

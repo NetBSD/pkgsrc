@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/06 18:57:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:21 joerg Exp $
 include/libkdcraw/dcrawinfocontainer.h
 include/libkdcraw/dcrawsettingswidget.h
 include/libkdcraw/kdcraw.h
@@ -35,4 +35,3 @@ share/locale/sr@Latn/LC_MESSAGES/libkdcraw.mo
 share/locale/sv/LC_MESSAGES/libkdcraw.mo
 share/locale/th/LC_MESSAGES/libkdcraw.mo
 share/locale/uk/LC_MESSAGES/libkdcraw.mo
-@dirrm include/libkdcraw

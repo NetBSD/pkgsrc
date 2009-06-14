@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:20 joerg Exp $
 bin/cube3d
 bin/ggiteleserver
 bin/monitest
@@ -216,11 +216,3 @@ man/man7/display-vgl.7
 man/man7/display-x.7
 man/man7/libggi.7
 share/examples/ggi/libggi.conf
-@comment in libgii: @dirrm share/examples/ggi
-@dirrm lib/ggi/helper
-@dirrm lib/ggi/display
-@dirrm lib/ggi/default
-@comment in libgii: @dirrm lib/ggi
-@comment in libgii: @dirrm include/ggi/internal
-@dirrm include/ggi/display
-@comment in libgii: @dirrm include/ggi

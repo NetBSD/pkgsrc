@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/13 12:35:33 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:05 joerg Exp $
 bin/ImageViewer
 lib/GNUstep/Applications/ImageViewer.app/ImageViewer
 lib/GNUstep/Applications/ImageViewer.app/Resources/AUTHORS
@@ -18,9 +18,3 @@ lib/GNUstep/Applications/ImageViewer.app/Resources/Info-gnustep.plist
 lib/GNUstep/Applications/ImageViewer.app/Resources/README
 lib/GNUstep/Applications/ImageViewer.app/Resources/genericImage.tiff
 lib/GNUstep/Applications/ImageViewer.app/stamp.make
-@dirrm lib/GNUstep/Applications/ImageViewer.app/Resources/Hungarian.lproj
-@dirrm lib/GNUstep/Applications/ImageViewer.app/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/ImageViewer.app/Resources/French.lproj
-@dirrm lib/GNUstep/Applications/ImageViewer.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/ImageViewer.app/Resources
-@dirrm lib/GNUstep/Applications/ImageViewer.app

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:25 joerg Exp $
 bin/double
 bin/graph
 bin/ode
@@ -60,7 +60,3 @@ share/tek2plot/scale.tek
 share/tek2plot/skymap.tek
 share/tek2plot/skymap2.tek
 share/tek2plot/usmap.tek
-@dirrm share/libplot
-@dirrm share/ode
-@dirrm share/pic2plot
-@dirrm share/tek2plot

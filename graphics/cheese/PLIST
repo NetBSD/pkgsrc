@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/20 15:37:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:07 joerg Exp $
 bin/cheese
 libexec/cheese/cheese-bugreport.sh
 share/applications/cheese.desktop
@@ -156,71 +156,3 @@ share/omf/cheese/cheese-pt_BR.omf
 share/omf/cheese/cheese-ru.omf
 share/omf/cheese/cheese-sv.omf
 share/omf/cheese/cheese-th.omf
-@dirrm share/omf/cheese
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/cheese/th/figures
-@dirrm share/gnome/help/cheese/th
-@dirrm share/gnome/help/cheese/sv/figures
-@dirrm share/gnome/help/cheese/sv
-@dirrm share/gnome/help/cheese/ru/figures
-@dirrm share/gnome/help/cheese/ru
-@dirrm share/gnome/help/cheese/pt_BR/figures
-@dirrm share/gnome/help/cheese/pt_BR
-@dirrm share/gnome/help/cheese/oc/figures
-@dirrm share/gnome/help/cheese/oc
-@dirrm share/gnome/help/cheese/nl/figures
-@dirrm share/gnome/help/cheese/nl
-@dirrm share/gnome/help/cheese/fr/figures
-@dirrm share/gnome/help/cheese/fr
-@dirrm share/gnome/help/cheese/es/figures
-@dirrm share/gnome/help/cheese/es
-@dirrm share/gnome/help/cheese/en_GB/figures
-@dirrm share/gnome/help/cheese/en_GB
-@dirrm share/gnome/help/cheese/el/figures
-@dirrm share/gnome/help/cheese/el
-@dirrm share/gnome/help/cheese/de/figures
-@dirrm share/gnome/help/cheese/de
-@dirrm share/gnome/help/cheese/ca/figures
-@dirrm share/gnome/help/cheese/ca
-@dirrm share/gnome/help/cheese/C/figures
-@dirrm share/gnome/help/cheese/C
-@dirrm share/gnome/help/cheese
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in dbus: @dirrm share/dbus-1
-@dirrm share/cheese/sounds
-@dirrm share/cheese/pixmaps
-@dirrm share/cheese/icons/hicolor/scalable/actions
-@dirrm share/cheese/icons/hicolor/scalable
-@dirrm share/cheese/icons/hicolor/48x48/actions
-@dirrm share/cheese/icons/hicolor/48x48
-@dirrm share/cheese/icons/hicolor/32x32/actions
-@dirrm share/cheese/icons/hicolor/32x32
-@dirrm share/cheese/icons/hicolor/24x24/actions
-@dirrm share/cheese/icons/hicolor/24x24
-@dirrm share/cheese/icons/hicolor/22x22/actions
-@dirrm share/cheese/icons/hicolor/22x22
-@dirrm share/cheese/icons/hicolor/16x16/actions
-@dirrm share/cheese/icons/hicolor/16x16
-@dirrm share/cheese/icons/hicolor
-@dirrm share/cheese/icons
-@dirrm share/cheese/effects
-@dirrm share/cheese
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/cheese

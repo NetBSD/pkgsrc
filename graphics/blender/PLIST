@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/04 19:56:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:06 joerg Exp $
 bin/blender
 bin/blender-bin
 share/blender/.bfont.ttf
@@ -173,54 +173,3 @@ share/blender/scripts/scripttemplate_object_edit.py
 share/blender/scripts/flt_filewalker.py
 share/blender/scripts/help_tutorials.py
 share/blender/scripts/x3d_export.py
-@dirrm share/blender/scripts/bpymodules/colladaImEx
-@dirrm share/blender/scripts/bpymodules
-@dirrm share/blender/scripts/bpydata/config
-@dirrm share/blender/scripts/bpydata
-@dirrm share/blender/scripts
-@dirrm share/blender/locale/zh_cn/LC_MESSAGES
-@dirrm share/blender/locale/zh_cn
-@dirrm share/blender/locale/uk/LC_MESSAGES
-@dirrm share/blender/locale/uk
-@dirrm share/blender/locale/sv/LC_MESSAGES
-@dirrm share/blender/locale/sv
-@dirrm share/blender/locale/sr@Latn/LC_MESSAGES
-@dirrm share/blender/locale/sr@Latn
-@dirrm share/blender/locale/sr/LC_MESSAGES
-@dirrm share/blender/locale/sr
-@dirrm share/blender/locale/ru/LC_MESSAGES
-@dirrm share/blender/locale/ru
-@dirrm share/blender/locale/ro/LC_MESSAGES
-@dirrm share/blender/locale/ro
-@dirrm share/blender/locale/pt_br/LC_MESSAGES
-@dirrm share/blender/locale/pt_br
-@dirrm share/blender/locale/pl/LC_MESSAGES
-@dirrm share/blender/locale/pl
-@dirrm share/blender/locale/nl/LC_MESSAGES
-@dirrm share/blender/locale/nl
-@dirrm share/blender/locale/ja/LC_MESSAGES
-@dirrm share/blender/locale/ja
-@dirrm share/blender/locale/it/LC_MESSAGES
-@dirrm share/blender/locale/it
-@dirrm share/blender/locale/hr_HR/LC_MESSAGES
-@dirrm share/blender/locale/hr_HR
-@dirrm share/blender/locale/hr/LC_MESSAGES
-@dirrm share/blender/locale/hr
-@dirrm share/blender/locale/fr/LC_MESSAGES
-@dirrm share/blender/locale/fr
-@dirrm share/blender/locale/fi/LC_MESSAGES
-@dirrm share/blender/locale/fi
-@dirrm share/blender/locale/es/LC_MESSAGES
-@dirrm share/blender/locale/es
-@dirrm share/blender/locale/de/LC_MESSAGES
-@dirrm share/blender/locale/de
-@dirrm share/blender/locale/cs/LC_MESSAGES
-@dirrm share/blender/locale/cs
-@dirrm share/blender/locale/ca/LC_MESSAGES
-@dirrm share/blender/locale/ca
-@dirrm share/blender/locale/bg/LC_MESSAGES
-@dirrm share/blender/locale/bg
-@dirrm share/blender/locale/ar/LC_MESSAGES
-@dirrm share/blender/locale/ar
-@dirrm share/blender/locale
-@dirrm share/blender

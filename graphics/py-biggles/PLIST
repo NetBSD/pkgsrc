@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 03:25:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:26 joerg Exp $
 ${PYSITELIB}/biggles/__init__.py
 ${PYSITELIB}/biggles/__init__.pyc
 ${PYSITELIB}/biggles/__init__.pyo
@@ -38,5 +38,3 @@ ${PYSITELIB}/biggles/libplot/tex2libplot.pyo
 ${PYSITELIB}/biggles/matlab.py
 ${PYSITELIB}/biggles/matlab.pyc
 ${PYSITELIB}/biggles/matlab.pyo
-@dirrm ${PYSITELIB}/biggles/libplot
-@dirrm ${PYSITELIB}/biggles

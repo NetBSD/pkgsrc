@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/04 16:15:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:30 joerg Exp $
 bin/veusz
 bin/veusz_listen
 ${PYSITELIB}/veusz/VERSION
@@ -228,13 +228,3 @@ ${PYSITELIB}/veusz/windows/simplewindow.pyo
 ${PYSITELIB}/veusz/windows/treeeditwindow.py
 ${PYSITELIB}/veusz/windows/treeeditwindow.pyc
 ${PYSITELIB}/veusz/windows/treeeditwindow.pyo
-@dirrm ${PYSITELIB}/veusz/windows/icons
-@dirrm ${PYSITELIB}/veusz/windows
-@dirrm ${PYSITELIB}/veusz/widgets/data
-@dirrm ${PYSITELIB}/veusz/widgets
-@dirrm ${PYSITELIB}/veusz/utils
-@dirrm ${PYSITELIB}/veusz/setting
-@dirrm ${PYSITELIB}/veusz/helpers
-@dirrm ${PYSITELIB}/veusz/document
-@dirrm ${PYSITELIB}/veusz/dialogs
-@dirrm ${PYSITELIB}/veusz

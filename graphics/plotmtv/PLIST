@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/02 19:47:24 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:25 joerg Exp $
 bin/ctr2mtv
 bin/drawplot2mtv
 bin/mtv2mtv
@@ -39,4 +39,3 @@ share/examples/plotmtv/test_spln.mtv
 share/examples/plotmtv/test_trictr.mtv
 share/examples/plotmtv/test_vector.mtv
 share/examples/plotmtv/test_vector2.mtv
-@dirrm share/examples/plotmtv

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/30 17:09:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:09 joerg Exp $
 bin/any2djvu
 bin/bzz
 bin/c44
@@ -42,4 +42,3 @@ man/man1/djvuxmlparser.1
 share/djvu/pubtext/DjVuMessages.dtd
 share/djvu/pubtext/DjVuOCR.dtd
 share/djvu/pubtext/DjVuXML-s.dtd
-@dirrm share/djvu/pubtext

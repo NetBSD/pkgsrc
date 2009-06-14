@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:13 joerg Exp $
 bin/gfract
 share/gfract/gfract.xpm
 share/gfract/palettes/2.map
@@ -306,5 +306,3 @@ share/gfract/palettes/yools.map
 share/gfract/palettes/zebbow2.map
 share/gfract/palettes/zebra.map
 share/gfract/palettes/zoot.map
-@dirrm share/gfract/palettes
-@dirrm share/gfract
