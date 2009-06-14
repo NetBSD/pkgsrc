@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:54 joerg Exp $
 bin/lyx
 bin/noweb2lyx
 bin/reLyX
@@ -422,19 +422,3 @@ share/lyx/xfonts/fonts.dir
 share/lyx/xfonts/fonts.scale
 share/lyx/xfonts/msam10.pfb
 share/lyx/xfonts/msbm10.pfb
-@dirrm share/lyx/xfonts
-@dirrm share/lyx/ui
-@dirrm share/lyx/tex
-@dirrm share/lyx/templates
-@dirrm share/lyx/scripts
-@dirrm share/lyx/reLyX/Text
-@dirrm share/lyx/reLyX
-@dirrm share/lyx/layouts
-@dirrm share/lyx/kbd
-@dirrm share/lyx/images
-@dirrm share/lyx/help
-@dirrm share/lyx/examples
-@dirrm share/lyx/doc
-@dirrm share/lyx/clipart
-@dirrm share/lyx/bind
-@dirrm share/lyx

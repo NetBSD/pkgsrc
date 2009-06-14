@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/10/09 10:33:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:11:59 joerg Exp $
 bin/scribus
 include/scribus/about.h
 include/scribus/actionmanager.h
@@ -1136,42 +1136,3 @@ share/scribus/translations/scribus.tr.qm
 share/scribus/translations/scribus.uk.qm
 share/scribus/translations/scribus.zh.qm
 share/scribus/translations/scribus.zh_TW.qm
-@dirrm share/scribus/translations
-@dirrm share/scribus/templates/textbased
-@dirrm share/scribus/templates/sc_presentation
-@dirrm share/scribus/templates/nl2
-@dirrm share/scribus/templates/nl1
-@dirrm share/scribus/templates/br1
-@dirrm share/scribus/templates
-@dirrm share/scribus/scripts
-@dirrm share/scribus/samples
-@dirrm share/scribus/plugins
-@dirrm share/scribus/loremipsum
-@dirrm share/scribus/icons
-@dirrm share/scribus/dtd
-@dirrm share/scribus/dicts
-@dirrm share/scribus
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/doc/${PKGNAME}/pl/tutorials/scribus-short-words
-@dirrm share/doc/${PKGNAME}/pl/tutorials
-@dirrm share/doc/${PKGNAME}/pl
-@dirrm share/doc/${PKGNAME}/fr/tutorials/scribus-short-words
-@dirrm share/doc/${PKGNAME}/fr/tutorials
-@dirrm share/doc/${PKGNAME}/fr
-@dirrm share/doc/${PKGNAME}/en/tutorials/scribus-short-words
-@dirrm share/doc/${PKGNAME}/en/tutorials
-@dirrm share/doc/${PKGNAME}/en/images
-@dirrm share/doc/${PKGNAME}/en
-@dirrm share/doc/${PKGNAME}/de
-@dirrm share/doc/${PKGNAME}/cs/tutorials/scribus-short-words
-@dirrm share/doc/${PKGNAME}/cs/tutorials
-@dirrm share/doc/${PKGNAME}/cs
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/scribus/swatches
-@dirrm lib/scribus/profiles
-@dirrm lib/scribus/plugins/gettext
-@dirrm lib/scribus/plugins
-@dirrm lib/scribus/keysets
-@dirrm lib/scribus
-@dirrm include/scribus

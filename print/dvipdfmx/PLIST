@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/14 06:35:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:11:54 joerg Exp $
 bin/dvipdfmx
 bin/xbb
 share/examples/dvipdfmx/dvipdfmx.cfg
@@ -207,4 +207,3 @@ share/texmf-dist/dvipdfm/WP-Symbol
 share/texmf-dist/dvipdfm/cid-x.map
 share/texmf-dist/dvipdfm/glyphlist.txt
 @unexec ${RM} -f %D/share/texmf-dist/dvipdfm/dvipdfmx.cfg
-@dirrm share/examples/dvipdfmx
