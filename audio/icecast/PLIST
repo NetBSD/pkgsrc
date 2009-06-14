@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/08/10 11:09:01 kim Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:32:11 joerg Exp $
 bin/icecast
 share/doc/icecast/AUTHORS
 share/doc/icecast/COPYING
@@ -46,8 +46,3 @@ share/icecast/web/status.xsl
 share/icecast/web/status2.xsl
 share/icecast/web/style.css
 share/icecast/web/tunein.png
-@dirrm share/icecast/web
-@dirrm share/icecast/admin
-@dirrm share/icecast
-@dirrm share/examples/icecast
-@dirrm share/doc/icecast

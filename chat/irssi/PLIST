@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/10/13 16:27:14 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:46 joerg Exp $
 bin/irssi
 include/irssi/config.h
 include/irssi/irssi-version.h
@@ -271,26 +271,3 @@ share/irssi/scripts/splitlong.pl
 share/irssi/scripts/usercount.pl
 share/irssi/themes/colorless.theme
 share/irssi/themes/default.theme
-@dirrm share/irssi/themes
-@dirrm share/irssi/scripts
-@dirrm share/irssi/help
-@dirrm share/irssi
-@dirrm share/examples/irssi
-@dirrm share/doc/irssi
-@dirrm lib/irssi/modules
-@dirrm lib/irssi
-@dirrm include/irssi/src/lib-popt
-@dirrm include/irssi/src/lib-config
-@dirrm include/irssi/src/irc/notifylist
-@dirrm include/irssi/src/irc/flood
-@dirrm include/irssi/src/irc/dcc
-@dirrm include/irssi/src/irc/core
-@dirrm include/irssi/src/irc
-@dirrm include/irssi/src/fe-common/irc/notifylist
-@dirrm include/irssi/src/fe-common/irc/dcc
-@dirrm include/irssi/src/fe-common/irc
-@dirrm include/irssi/src/fe-common/core
-@dirrm include/irssi/src/fe-common
-@dirrm include/irssi/src/core
-@dirrm include/irssi/src
-@dirrm include/irssi

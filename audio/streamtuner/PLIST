@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:32:23 joerg Exp $
 bin/streamtuner
 include/streamtuner/st-action-api.h
 include/streamtuner/st-category-api.h
@@ -94,17 +94,3 @@ share/streamtuner/ui/shoutcast.png
 share/streamtuner/ui/streamtuner.png
 share/streamtuner/ui/tune-in.png
 share/streamtuner/ui/xiph.png
-@dirrm share/streamtuner/ui
-${PLIST.python}@dirrm share/streamtuner/python/scripts
-${PLIST.python}@dirrm share/streamtuner/python/icons
-${PLIST.python}@dirrm share/streamtuner/python
-@dirrm share/streamtuner
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/streamtuner
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/help/streamtuner/C/figures
-@dirrm share/doc/streamtuner
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/streamtuner/plugins
-@dirrm lib/streamtuner
-@dirrm include/streamtuner

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/05/13 15:15:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:43 joerg Exp $
 bin/centerim
 bin/cimconv
 man/man1/centerim.1
@@ -26,4 +26,3 @@ share/locale/sv/LC_MESSAGES/centerim.mo
 share/locale/uk/LC_MESSAGES/centerim.mo
 share/locale/zh_CN/LC_MESSAGES/centerim.mo
 share/locale/zh_TW/LC_MESSAGES/centerim.mo
-@dirrm share/centerim

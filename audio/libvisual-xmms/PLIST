@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:16 joerg Exp $
 lib/xmms/Visualization/libvisual_xmms.la
 share/libvisual-xmms/libvisual-xmms-vis.bmp
 share/libvisual-xmms/libvisual-xmms-vis.xpm
@@ -8,4 +8,3 @@ share/locale/fr/LC_MESSAGES/libvisual-xmms.mo
 share/locale/nl/LC_MESSAGES/libvisual-xmms.mo
 share/locale/pt_BR/LC_MESSAGES/libvisual-xmms.mo
 share/locale/ru/LC_MESSAGES/libvisual-xmms.mo
-@dirrm share/libvisual-xmms

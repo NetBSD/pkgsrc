@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:47:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:53 joerg Exp $
 bin/fasthenry
 bin/zbuf
 share/examples/fasthenry/30pin.inp
@@ -34,5 +34,3 @@ share/doc/fasthenry/manual_002.ps
 share/doc/fasthenry/manual_003.ps
 share/doc/fasthenry/nonuniform_manual_1.ps
 share/doc/fasthenry/nonuniform_manual_2.ps
-@dirrm share/examples/fasthenry
-@dirrm share/doc/fasthenry

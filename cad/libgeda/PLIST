@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/01 02:34:21 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:35:54 joerg Exp $
 include/libgeda/colors.h
 include/libgeda/defines.h
 include/libgeda/funcs.h
@@ -41,6 +41,3 @@ share/mime/packages/libgeda.xml
 share/mimelnk/application/x-geda-gsch2pcb-project.desktop
 share/mimelnk/application/x-geda-schematic.desktop
 share/mimelnk/application/x-geda-symbol.desktop
-@dirrm share/gEDA/scheme
-@dirrm share/gEDA
-@dirrm include/libgeda

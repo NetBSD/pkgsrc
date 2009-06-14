@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 14:35:17 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
 bin/abc2abc
 bin/abc2midi
 bin/mftext
@@ -25,6 +25,3 @@ man/man1/mftext.1
 man/man1/midi2abc.1
 man/man1/midicopy.1
 man/man1/yaps.1
-@dirrm share/doc/abcmidi/programming
-@dirrm share/doc/abcmidi
-@dirrm share/examples/abcmidi

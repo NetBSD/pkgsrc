@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/04/09 12:46:35 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:46 joerg Exp $
 man/man8/ircd.8
 sbin/ircd
 bin/umkpasswd
@@ -23,5 +23,3 @@ share/doc/ircd/readme.who
 share/doc/ircd/readme.www
 share/examples/ircd/example.conf
 share/examples/rc.d/ircd
-@dirrm share/examples/ircd
-@dirrm share/doc/ircd

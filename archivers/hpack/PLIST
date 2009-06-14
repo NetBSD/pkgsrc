@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2004/07/27 22:07:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:28:16 joerg Exp $
 bin/hpack
 bin/keycvt
 man/man1/hpack.1
 share/doc/hpack/hpackext.doc
 share/hpack/hpack.cfg.example
 share/hpack/language.dat
-@dirrm share/doc/hpack
-@dirrm share/hpack

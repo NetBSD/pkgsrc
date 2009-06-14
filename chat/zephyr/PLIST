@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:33:58 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:52 joerg Exp $
 bin/xzwrite
 bin/zaway
 bin/zctl
@@ -43,7 +43,3 @@ share/zephyr/XZwrite
 share/zephyr/xzwrite.bitmap
 share/zephyr/zwgc.desc
 share/zephyr/zwgc_resources
-@dirrm share/zephyr
-@dirrm share/examples/zephyr
-@dirrm share/doc/zephyr
-@dirrm include/zephyr

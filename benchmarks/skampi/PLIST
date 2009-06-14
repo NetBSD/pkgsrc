@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/19 17:24:21 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:33:12 joerg Exp $
 bin/skosfile
 bin/dorep4.pl
 share/doc/skampi/skampi4_userman.ps
@@ -330,7 +330,3 @@ share/skampi/dri/mw_dummy.dri
 share/skampi/dri/p2p_dummy.dri
 share/skampi/dri/simple_dummy.dri
 share/skampi/dri/syncol_dummy.dri
-@dirrm share/examples/skampi
-@dirrm share/doc/skampi
-@dirrm share/skampi/dri
-@dirrm share/skampi

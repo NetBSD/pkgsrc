@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/23 10:51:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:50 joerg Exp $
 include/telepathy-1.0/telepathy-glib/_gen/gtypes.h
 include/telepathy-1.0/telepathy-glib/_gen/telepathy-enums.h
 include/telepathy-1.0/telepathy-glib/_gen/telepathy-interfaces.h
@@ -140,7 +140,3 @@ share/gtk-doc/html/telepathy-glib/telepathy-glib-util.html
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp
 share/gtk-doc/html/telepathy-glib/telepathy-glib.devhelp2
 share/gtk-doc/html/telepathy-glib/up.png
-@dirrm share/gtk-doc/html/telepathy-glib
-@dirrm include/telepathy-1.0/telepathy-glib/_gen
-@dirrm include/telepathy-1.0/telepathy-glib
-@dirrm include/telepathy-1.0

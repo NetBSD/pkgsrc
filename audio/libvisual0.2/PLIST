@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/03 23:29:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:16 joerg Exp $
 include/libvisual/libvisual.h
 include/libvisual/lv_actor.h
 include/libvisual/lv_audio.h
@@ -33,4 +33,3 @@ include/libvisual/lv_video.h
 include/libvisual/lvconfig.h
 lib/libvisual.la
 lib/pkgconfig/libvisual.pc
-@dirrm include/libvisual

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/06 21:26:23 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:51 joerg Exp $
 lib/xchat/plugins/GTKTray/dccalert.png
 lib/xchat/plugins/GTKTray/disconnected.png
 lib/xchat/plugins/GTKTray/goaway.png
@@ -29,6 +29,3 @@ lib/xchat/plugins/Win32Tray/xchat.ico
 lib/xchat/plugins/Win32Tray/xchatblue.ico
 lib/xchat/plugins/Win32Tray/xchatred.ico
 lib/xchat/plugins/systray.la
-@dirrm lib/xchat/plugins/Win32Tray
-@dirrm lib/xchat/plugins/Menu
-@dirrm lib/xchat/plugins/GTKTray

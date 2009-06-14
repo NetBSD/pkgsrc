@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
 bin/tkirc2
 share/doc/tkirc2/CHANGES
 share/doc/tkirc2/COPYING
@@ -11,6 +11,3 @@ share/examples/tkirc2/scripts/crazy3.tcl
 share/examples/tkirc2/scripts/examples.tcl
 share/examples/tkirc2/scripts/hilo.tcl
 share/examples/tkirc2/scripts/sound.tcl
-@dirrm share/examples/tkirc2/scripts
-@dirrm share/examples/tkirc2
-@dirrm share/doc/tkirc2

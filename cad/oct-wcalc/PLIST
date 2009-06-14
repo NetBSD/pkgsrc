@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 03:53:18 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:55 joerg Exp $
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/air_coil_calc.oct
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/air_coil_syn.oct
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/coax_calc.oct
@@ -11,5 +11,3 @@ ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/microstrip_calc.oct
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/microstrip_syn.oct
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/stripline_calc.oct
 ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}/stripline_syn.oct
-@dirrm ${OCT_LOCALVERFCNFILEDIR}/${WCALC_DIR}
-@dirrm ${OCT_LOCALVEROCTFILEDIR}/${WCALC_DIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/09/25 10:54:09 hira Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:37:45 joerg Exp $
 bin/gnomeicu
 bin/gnomeicu-client
 share/applications/GnomeICU.desktop
@@ -283,32 +283,3 @@ share/sounds/gnomeicu/Online.wav
 share/sounds/gnomeicu/URL.wav
 share/sounds/gnomeicu/contlist.wav
 share/sounds/gnomeicu/message.wav
-@dirrm share/sounds/gnomeicu
-@comment in xdg-dirs: @dirrm share/sounds
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnomeicu
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnomeicu/icons/reDubbed
-@dirrm share/gnomeicu/icons/Gradients
-@dirrm share/gnomeicu/icons/Eyeballs
-@dirrm share/gnomeicu/icons/Default
-@dirrm share/gnomeicu/icons
-@dirrm share/gnomeicu/glade
-@dirrm share/gnomeicu/emoticons/Yahoo
-@dirrm share/gnomeicu/emoticons/MSN
-@dirrm share/gnomeicu/emoticons/Default
-@dirrm share/gnomeicu/emoticons/Always
-@dirrm share/gnomeicu/emoticons/AIM
-@dirrm share/gnomeicu/emoticons
-@dirrm share/gnomeicu
-@dirrm share/gnome/help/gnomeicu/uk/figures
-@dirrm share/gnome/help/gnomeicu/uk
-@dirrm share/gnome/help/gnomeicu/C/figures
-@dirrm share/gnome/help/gnomeicu/C
-@dirrm share/gnome/help/gnomeicu
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/gnomeicu/sound/events
-@dirrm share/examples/gnomeicu/sound
-@dirrm share/examples/gnomeicu
-@comment in xdg-dirs: @dirrm share/applications

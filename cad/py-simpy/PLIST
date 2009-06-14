@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/01 14:44:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:55 joerg Exp $
 ${PYSITELIB}/SimPy/Lister.py
 ${PYSITELIB}/SimPy/Lister.pyc
 ${PYSITELIB}/SimPy/Lister.pyo
@@ -47,4 +47,3 @@ ${PYSITELIB}/SimPy/tkconsole.pyo
 ${PYSITELIB}/SimPy/tkprogressbar.py
 ${PYSITELIB}/SimPy/tkprogressbar.pyc
 ${PYSITELIB}/SimPy/tkprogressbar.pyo
-@dirrm ${PYSITELIB}/SimPy

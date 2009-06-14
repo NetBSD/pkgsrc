@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 01:09:24 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:19 joerg Exp $
 bin/paman
 share/applications/paman.desktop
 share/paman/paman.glade
-@dirrm share/paman
-@comment in xdg-dirs: @dirrm share/applications

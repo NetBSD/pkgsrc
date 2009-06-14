@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/26 18:24:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:22 joerg Exp $
 bin/sonata
 ${PYSITELIB}/mmkeys.so
 ${PYSITELIB}/sonata/__init__.py
@@ -132,9 +132,3 @@ share/sonata/CHANGELOG
 share/sonata/README
 share/sonata/TODO
 share/sonata/TRANSLATORS
-@dirrm share/sonata
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/sonata/plugins
-@dirrm ${PYSITELIB}/sonata

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.i386,v 1.3 2006/06/18 10:07:09 rillig Exp $
+@comment $NetBSD: PLIST.i386,v 1.4 2009/06/14 17:33:11 joerg Exp $
 libexec/hbench/${PLATFORM}-c/bw_bzero
 libexec/hbench/${PLATFORM}-c/bw_file_rd
 libexec/hbench/${PLATFORM}-c/bw_mem_cp
@@ -26,4 +26,3 @@ libexec/hbench/${PLATFORM}-c/lat_udp
 libexec/hbench/${PLATFORM}-c/memsize
 libexec/hbench/${PLATFORM}-c/mhz
 libexec/hbench/${PLATFORM}-c/mhz-counter
-@dirrm libexec/hbench/${PLATFORM}-c

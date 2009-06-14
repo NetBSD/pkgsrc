@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/22 20:16:58 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:28:16 joerg Exp $
 bin/arj
 bin/arj-register
 bin/arjdisp
@@ -15,5 +15,3 @@ share/doc/arj/debug.txt
 share/doc/arj/history.txt
 share/doc/arj/readme.txt
 share/doc/arj/unix.txt
-@dirrm share/doc/arj
-@dirrm lib/arj

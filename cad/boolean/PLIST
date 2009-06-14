@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/23 16:42:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:52 joerg Exp $
 bin/boolean
 bin/edit
 share/boolean/default/config/boolean.ad
@@ -591,15 +591,3 @@ share/boolean/html/winstatb_8h-source.html
 share/boolean/html/wxmatrix_8h-source.html
 share/boolean/html/wxsvg_8h-source.html
 share/boolean/html/wxwin_8h-source.html
-@dirrm share/boolean/html
-@dirrm share/boolean/gdsuser/process
-@dirrm share/boolean/gdsuser/data
-@dirrm share/boolean/gdsuser/config
-@dirrm share/boolean/gdsuser
-@dirrm share/boolean/default/process
-@dirrm share/boolean/default/gfx
-@dirrm share/boolean/default/data/democal
-@dirrm share/boolean/default/data
-@dirrm share/boolean/default/config
-@dirrm share/boolean/default
-@dirrm share/boolean

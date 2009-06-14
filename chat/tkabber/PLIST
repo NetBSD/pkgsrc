@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/08 18:57:38 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
 bin/tkabber
 share/doc/tkabber/AUTHORS
 share/doc/tkabber/COPYING
@@ -428,55 +428,3 @@ share/tkabber/trans/es.msg
 share/tkabber/trans/pl.msg
 share/tkabber/trans/ru.msg
 share/tkabber/trans/uk.msg
-@dirrm share/doc/tkabber
-@dirrm share/examples/tkabber/configs
-@dirrm share/examples/tkabber/tclCarbonNotification-1.0.0
-@dirrm share/examples/tkabber/tools
-@dirrm share/examples/tkabber/xrdb
-@dirrm share/examples/tkabber/tools
-@dirrm share/examples/tkabber
-@dirrm share/tkabber/emoticons/default
-@dirrm share/tkabber/emoticons
-@dirrm share/tkabber/ifacetk
-@dirrm share/tkabber/jabberlib-tclxml/tclxml
-@dirrm share/tkabber/jabberlib-tclxml
-@dirrm share/tkabber/mclistbox
-@dirrm share/tkabber/msgs
-@dirrm share/tkabber/pixmaps/default/docking
-@dirrm share/tkabber/pixmaps/default/roster
-@dirrm share/tkabber/pixmaps/default/services
-@dirrm share/tkabber/pixmaps/default/tkabber
-@dirrm share/tkabber/pixmaps/default
-@dirrm share/tkabber/pixmaps/default-blue/docking
-@dirrm share/tkabber/pixmaps/default-blue/roster
-@dirrm share/tkabber/pixmaps/default-blue
-@dirrm share/tkabber/pixmaps/feather16/docking
-@dirrm share/tkabber/pixmaps/feather16/roster
-@dirrm share/tkabber/pixmaps/feather16/services
-@dirrm share/tkabber/pixmaps/feather16/tkabber
-@dirrm share/tkabber/pixmaps/feather16
-@dirrm share/tkabber/pixmaps/feather22/roster
-@dirrm share/tkabber/pixmaps/feather22
-@dirrm share/tkabber/pixmaps/stars/docking
-@dirrm share/tkabber/pixmaps/stars/roster
-@dirrm share/tkabber/pixmaps/stars/services
-@dirrm share/tkabber/pixmaps/stars/tkabber
-@dirrm share/tkabber/pixmaps/stars
-@dirrm share/tkabber/pixmaps
-@dirrm share/tkabber/plugins/chat
-@dirrm share/tkabber/plugins/filetransfer
-@dirrm share/tkabber/plugins/general
-@dirrm share/tkabber/plugins/iq
-@dirrm share/tkabber/plugins/jidlink
-@dirrm share/tkabber/plugins/richtext
-@dirrm share/tkabber/plugins/roster
-@dirrm share/tkabber/plugins/search
-@dirrm share/tkabber/plugins/si
-@dirrm share/tkabber/plugins/unix
-@dirrm share/tkabber/plugins/windows
-@dirrm share/tkabber/plugins
-@dirrm share/tkabber/sounds/default
-@dirrm share/tkabber/sounds/psi
-@dirrm share/tkabber/sounds
-@dirrm share/tkabber/trans
-@dirrm share/tkabber

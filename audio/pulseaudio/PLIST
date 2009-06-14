@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/10 18:47:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:20 joerg Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -146,7 +146,3 @@ ${PLIST.avahi}lib/pkgconfig/libpulse-browse.pc
 ${PLIST.avahi}lib/pulse-0.9/modules/libavahi-wrap.so
 ${PLIST.avahi}lib/pulse-0.9/modules/module-zeroconf-discover.so
 ${PLIST.avahi}lib/pulse-0.9/modules/module-zeroconf-publish.so
-@dirrm libexec/pulse
-@dirrm lib/pulse-0.9/modules
-@dirrm lib/pulse-0.9
-@dirrm include/pulse

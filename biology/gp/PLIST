@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 03:30:00 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 bin/gp_acc
 bin/gp_adjust
 bin/gp_cdndev
@@ -47,4 +47,3 @@ share/examples/genpak/mporfs.seq
 share/examples/genpak/myco.cdn
 share/examples/genpak/sample.seq
 share/examples/genpak/standard.cdn
-@dirrm share/examples/genpak

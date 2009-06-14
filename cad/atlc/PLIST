@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/15 02:21:03 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:52 joerg Exp $
 bin/atlc
 bin/coax
 bin/create_any_bitmap
@@ -539,10 +539,3 @@ share/examples/atlc/very-odd.bmp
 share/examples/atlc/very-odd.bmp.txt
 share/examples/atlc/wide-9pixel.bmp
 share/examples/atlc/wide-9pixel.bmp.txt
-@dirrm share/examples/atlc
-@dirrm share/atlc/examples
-@dirrm share/atlc/docs/qex_december_1996
-@dirrm share/atlc/docs/html-docs/jpgs
-@dirrm share/atlc/docs/html-docs
-@dirrm share/atlc/docs
-@dirrm share/atlc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/02 21:43:34 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:43 joerg Exp $
 share/cgiirc/client-perl.cgi
 share/cgiirc/formats/dark
 share/cgiirc/formats/default
@@ -112,14 +112,3 @@ share/examples/cgiirc/identd.pl
 share/examples/cgiirc/identd.xinetd
 share/examples/cgiirc/ipaccess.example
 share/examples/cgiirc/viewconnects.pl
-@dirrm share/examples/cgiirc
-@dirrm share/doc/cgiirc
-@dirrm share/cgiirc/modules/IRC/Channel
-@dirrm share/cgiirc/modules/IRC
-@dirrm share/cgiirc/modules
-@dirrm share/cgiirc/interfaces/interface-make
-@dirrm share/cgiirc/interfaces
-@dirrm share/cgiirc/images/taras
-@dirrm share/cgiirc/images
-@dirrm share/cgiirc/formats
-@dirrm share/cgiirc

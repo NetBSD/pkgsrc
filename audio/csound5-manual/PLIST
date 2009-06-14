@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/12 17:09:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:04 joerg Exp $
 share/doc/csound5/CommandDesc.html
 share/doc/csound5/CommandFlags.html
 share/doc/csound5/CommandPreproc.html
@@ -2078,7 +2078,3 @@ share/doc/csound5/zkmod.html
 share/doc/csound5/zkr.html
 share/doc/csound5/zkw.html
 share/doc/csound5/zkwm.html
-@dirrm share/doc/csound5/images/callouts
-@dirrm share/doc/csound5/images
-@dirrm share/doc/csound5/examples
-@dirrm share/doc/csound5

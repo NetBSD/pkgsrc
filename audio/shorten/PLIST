@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/08 03:07:45 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:21 joerg Exp $
 bin/shorten
 man/man1/shorten.1
 share/doc/shorten/tr156.ps
 share/doc/shorten/tr156.tex
-@dirrm share/doc/shorten

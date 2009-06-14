@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/05/30 01:25:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:32:09 joerg Exp $
 bin/gmpc
 bin/gmpc-remote
 bin/gmpc-remote-stream
@@ -171,53 +171,4 @@ share/locale/sv/LC_MESSAGES/gmpc.mo
 share/locale/tr/LC_MESSAGES/gmpc.mo
 share/locale/zh_CN/LC_MESSAGES/gmpc.mo
 share/locale/zh_TW/LC_MESSAGES/gmpc.mo
-@dirrm share/locale/jv/LC_MESSAGES
-@dirrm share/locale/jv
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gmpc/icons/hicolor/scalable/status
-@dirrm share/gmpc/icons/hicolor/scalable/categories
-@dirrm share/gmpc/icons/hicolor/scalable/apps
 @exec ${MKDIR} %D/share/gmpc/icons/hicolor/scalable/actions
-@dirrm share/gmpc/icons/hicolor/scalable/actions
-@dirrm share/gmpc/icons/hicolor/scalable
-@dirrm share/gmpc/icons/hicolor/96x96/status
-@dirrm share/gmpc/icons/hicolor/96x96
-@dirrm share/gmpc/icons/hicolor/72x72/status
-@dirrm share/gmpc/icons/hicolor/72x72
-@dirrm share/gmpc/icons/hicolor/64x64/status
-@dirrm share/gmpc/icons/hicolor/64x64
-@dirrm share/gmpc/icons/hicolor/48x48/status
-@dirrm share/gmpc/icons/hicolor/48x48/apps
-@dirrm share/gmpc/icons/hicolor/48x48/actions
-@dirrm share/gmpc/icons/hicolor/48x48
-@dirrm share/gmpc/icons/hicolor/32x32/status
-@dirrm share/gmpc/icons/hicolor/32x32/apps
-@dirrm share/gmpc/icons/hicolor/32x32/actions
-@dirrm share/gmpc/icons/hicolor/32x32
-@dirrm share/gmpc/icons/hicolor/22x22/status
-@dirrm share/gmpc/icons/hicolor/22x22/apps
-@dirrm share/gmpc/icons/hicolor/22x22/actions
-@dirrm share/gmpc/icons/hicolor/22x22
-@dirrm share/gmpc/icons/hicolor/16x16/status
-@dirrm share/gmpc/icons/hicolor/16x16/apps
-@dirrm share/gmpc/icons/hicolor/16x16/actions
-@dirrm share/gmpc/icons/hicolor/16x16
-@dirrm share/gmpc/icons/hicolor/128x128/status
-@dirrm share/gmpc/icons/hicolor/128x128/categories
-@dirrm share/gmpc/icons/hicolor/128x128
-@dirrm share/gmpc/icons/hicolor
-@dirrm share/gmpc/icons
-@dirrm share/gmpc
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/gmpc

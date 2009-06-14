@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 13:57:49 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:12 joerg Exp $
 bin/analyseplugin
 bin/applyplugin
 bin/listplugins
@@ -8,4 +8,3 @@ lib/ladspa/delay.so
 lib/ladspa/filter.so
 lib/ladspa/noise.so
 lib/ladspa/sine.so
-@dirrm lib/ladspa

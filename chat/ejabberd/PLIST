@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/12 18:36:19 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:43 joerg Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
 ${EJABBERD_EXDIR}/ejabberdctl.cfg
 ${EJABBERD_EXDIR}/inetrc
@@ -203,13 +203,4 @@ share/examples/ejabberd/ejabberd.cfg
 share/examples/ejabberd/ejabberdctl.cfg
 share/examples/ejabberd/inetrc
 share/examples/rc.d/ejabberd
-@dirrm share/examples/ejabberd
-@dirrm share/doc/${PKGNAME}/api
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/erlang/lib/${PKGNAME}/priv/bin
-@dirrm lib/erlang/lib/${PKGNAME}/priv/msgs
-@dirrm lib/erlang/lib/${PKGNAME}/priv/lib
-@dirrm lib/erlang/lib/${PKGNAME}/priv
-@dirrm lib/erlang/lib/${PKGNAME}/ebin
-@dirrm lib/erlang/lib/${PKGNAME}
 @unexec ${RMDIR} %D/etc/ejabberd 2>/dev/null || ${TRUE}

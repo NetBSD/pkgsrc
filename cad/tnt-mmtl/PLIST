@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/18 11:48:25 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:57 joerg Exp $
 bin/bem
 @comment bin/calcCAP
 @comment bin/calcRL
@@ -120,17 +120,3 @@ share/tnt-mmtl/user-guide/up.png
 share/tnt-mmtl/user-guide/up_g.png
 share/tnt-mmtl/user-guide/user-guide.css
 share/tnt-mmtl/user-guide/user-guide.html
-@dirrm share/tnt-mmtl/user-guide
-@dirrm share/tnt-mmtl/examples
-@dirrm share/tnt-mmtl
-@dirrm lib/units1.0
-@dirrm lib/sppdgTcllib1.0/sgraph1.0
-@dirrm lib/sppdgTcllib1.0/getFilePreview1.0
-@dirrm lib/sppdgTcllib1.0/console1.1
-@dirrm lib/sppdgTcllib1.0/addressDialog1.0
-@dirrm lib/sppdgTcllib1.0
-@dirrm lib/gui2.0
-@dirrm lib/csdl1.0.1
-@comment @dirrm lib/calcrl
-@comment @dirrm lib/calccap
-@dirrm lib/bem1.0

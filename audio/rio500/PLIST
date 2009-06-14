@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
 bin/rio_add_directory
 bin/rio_add_folder
 bin/rio_add_song
@@ -45,5 +45,3 @@ share/rio500/fonts/sin.fon
 share/rio500/fonts/star.fon
 share/rio500/fonts/trek.fon
 share/rio500/fonts/triangle.fon
-@dirrm share/rio500/fonts
-@dirrm share/rio500

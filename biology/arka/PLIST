@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/03/27 13:08:45 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 bin/arka
 man/man1/arka.1
 share/doc/arka/CHANGES.TXT
@@ -9,6 +9,3 @@ share/doc/arka/TODO.TXT
 share/examples/arka/arkarc
 share/pixmaps/arka_16x16.xpm
 share/pixmaps/arka_32x32.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/examples/arka
-@dirrm share/doc/arka

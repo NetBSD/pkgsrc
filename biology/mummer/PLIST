@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/11 22:01:13 schwarz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:34:34 joerg Exp $
 bin/annotate
 bin/combineMUMs
 bin/delta-filter
@@ -101,9 +101,3 @@ share/mummer/nucmer2xfig
 share/mummer/promer
 share/mummer/run-mummer1
 share/mummer/run-mummer3
-@dirrm share/mummer
-@dirrm share/doc/mummer/web/manual
-@dirrm share/doc/mummer/web/examples/data
-@dirrm share/doc/mummer/web/examples
-@dirrm share/doc/mummer/web
-@dirrm share/doc/mummer

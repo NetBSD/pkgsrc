@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/13 23:31:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:23 joerg Exp $
 bin/randomize
 bin/tracker
 info/tracker.info
@@ -87,6 +87,3 @@ share/doc/tracker/tracker.guide
 share/doc/tracker/tracker.readme
 share/doc/tracker/tracker.texinfo
 share/examples/tracker/compression_methods
-@dirrm share/examples/tracker
-@dirrm share/doc/tracker/Html
-@dirrm share/doc/tracker

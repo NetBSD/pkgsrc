@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/19 03:13:11 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
 bin/rip
 share/doc/rip/BUGS
 share/doc/rip/CHANGELOG
@@ -6,4 +6,3 @@ share/doc/rip/COPYING
 share/doc/rip/FAQ
 share/doc/rip/INSTALLING
 share/doc/rip/README
-@dirrm share/doc/rip

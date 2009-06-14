@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/26 03:49:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:37:47 joerg Exp $
 bin/kmess
 share/applications/kde/kmess.desktop
 share/doc/kde/HTML/en/kmess/common
@@ -153,26 +153,3 @@ share/locale/zh_CN.GB18030/LC_MESSAGES/kmess.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/kmess.mo
 share/locale/zh_CN/LC_MESSAGES/kmess.mo
 share/locale/zh_TW/LC_MESSAGES/kmess.mo
-@dirrm share/locale/zh_CN.GB18030/LC_MESSAGES
-@dirrm share/locale/zh_CN.GB18030
-@comment in kde: @dirrm share/kde/sounds
-@dirrm share/kde/apps/kmess/pics
-@dirrm share/kde/apps/kmess/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/kmess/icons/hicolor/16x16
-@dirrm share/kde/apps/kmess/icons/hicolor
-@dirrm share/kde/apps/kmess/icons
-@dirrm share/kde/apps/kmess/emoticons
-@dirrm share/kde/apps/kmess
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/22x22/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@dirrm share/doc/kde/HTML/en/kmess
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde

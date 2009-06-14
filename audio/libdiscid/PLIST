@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/13 02:31:56 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:14 joerg Exp $
 include/discid/discid.h
 lib/libdiscid.la
 lib/pkgconfig/libdiscid.pc
-@dirrm include/discid

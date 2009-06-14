@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/05/28 07:38:26 gson Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:24 joerg Exp $
 bin/wavesurfer
 lib/wsurf1.8/cmdline.tcl
 lib/wsurf1.8/combobox.tcl
@@ -33,6 +33,3 @@ lib/wsurf1.8/tkcon.tcl
 lib/wsurf1.8/vtcanvas.tcl
 lib/wsurf1.8/wavebar.tcl
 lib/wsurf1.8/wsurf.tcl
-@dirrm lib/wsurf1.8/plugins
-@dirrm lib/wsurf1.8/configurations
-@dirrm lib/wsurf1.8

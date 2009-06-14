@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/01/02 15:03:06 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:37:46 joerg Exp $
 lib/services/convert-db
 lib/services/helpfiles/help
 lib/services/languages/de
@@ -36,8 +36,4 @@ share/doc/html/ircservices/faq.html
 share/doc/html/ircservices/index.html
 share/doc/html/ircservices/upgrade.html
 share/examples/rc.d/ircservices
-@dirrm share/doc/html/ircservices
-@dirrm share/examples/ircservices
-@dirrm lib/services/helpfiles
-@dirrm lib/services/languages
 @unexec ${RMDIR} %D/lib/services 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/20 00:10:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:18 joerg Exp $
 bin/mpc
 man/man1/mpc.1
 share/doc/mpc/AUTHORS
@@ -9,4 +9,3 @@ share/doc/mpc/mpc-bashrc
 share/doc/mpc/mpd-m3u-handler.sh
 share/doc/mpc/mpd-pls-handler.sh
 share/doc/mpc/mppledit
-@dirrm share/doc/mpc

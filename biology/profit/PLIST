@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 23:18:27 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:34 joerg Exp $
 bin/profit
 share/doc/html/profit/IMG_PARAMS.db
 share/doc/html/profit/ProFit.css
@@ -46,6 +46,3 @@ share/doc/html/profit/node9.html
 share/doc/profit/ProFit.dvi
 share/doc/profit/ProFit.ps
 share/doc/profit/ProFit.tex
-@dirrm share/doc/profit
-@dirrm share/doc/html/profit/l2h32434
-@dirrm share/doc/html/profit

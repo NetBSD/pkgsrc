@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/01 13:53:30 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:56 joerg Exp $
 share/qcad/doc/cad/appendix.html
 share/qcad/doc/cad/appendix_bib.html
 share/qcad/doc/cad/appendix_expressions.html
@@ -343,7 +343,3 @@ share/qcad/doc/cad/start.html
 share/qcad/doc/cad/styles.css
 share/qcad/doc/cad/view.html
 share/qcad/doc/qcaddoc.adp
-@dirrm share/qcad/doc/cad/imgs
-@dirrm share/qcad/doc/cad/img
-@dirrm share/qcad/doc/cad
-@dirrm share/qcad/doc

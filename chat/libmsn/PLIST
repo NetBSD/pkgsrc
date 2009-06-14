@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/10 08:56:39 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:47 joerg Exp $
 bin/msntest
 include/msn/authdata.h
 include/msn/buddy.h
@@ -20,4 +20,3 @@ lib/libmsn.so
 lib/libmsn.so.0.1
 lib/libmsn.so.0.1.0
 lib/pkgconfig/libmsn.pc
-@dirrm include/msn

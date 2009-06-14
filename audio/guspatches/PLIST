@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/03 14:20:03 ben Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:11 joerg Exp $
 share/guspatches/timidity.cfg
 share/guspatches/gravis.cfg
 share/guspatches/midia.cfg
@@ -201,4 +201,3 @@ share/guspatches/chris6.cfg
 share/guspatches/default.cfg
 share/guspatches/maplerag.cfg
 share/guspatches/ultramid.ini
-@dirrm share/guspatches

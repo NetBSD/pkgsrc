@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/10 13:23:07 ben Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:28:16 joerg Exp $
 bin/bicom
 share/doc/bicom/readme.txt
-@dirrm share/doc/bicom

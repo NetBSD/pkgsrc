@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/10/27 13:45:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:05 joerg Exp $
 share/eawpats/acbass.pat
 share/eawpats/accordn.pat
 share/eawpats/acguitar.pat
@@ -371,14 +371,3 @@ share/eawpats/woodblk2.pat
 share/eawpats/woodflut.pat
 share/eawpats/xgmap2.cfg
 share/eawpats/xylophon.pat
-@dirrm share/eawpats/wime
-@dirrm share/eawpats/sfx
-@dirrm share/eawpats/power
-@dirrm share/eawpats/mazpat/fx
-@dirrm share/eawpats/mazpat
-@dirrm share/eawpats/gus
-@dirrm share/eawpats/gsdrum40
-@dirrm share/eawpats/gsdrum25
-@dirrm share/eawpats/gsdrum08
-@dirrm share/eawpats/ethnic
-@dirrm share/eawpats

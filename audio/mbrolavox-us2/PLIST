@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:17:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:17 joerg Exp $
 share/mbrola/voices/us2/us2
 share/mbrola/voices/us2/us2.txt
 share/mbrola/voices/us2/license.txt
@@ -6,5 +6,3 @@ share/mbrola/voices/us2/TEST/alice.pho
 share/mbrola/voices/us2/TEST/mbrola.pho
 share/mbrola/voices/us2/TEST/babel.pho
 share/mbrola/voices/us2/TEST/mbroli.ini
-@dirrm share/mbrola/voices/us2/TEST
-@dirrm share/mbrola/voices/us2

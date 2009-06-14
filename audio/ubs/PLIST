@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:57 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:24 joerg Exp $
 bin/ubs
 bin/ubs-event
 bin/ubs-play
@@ -13,4 +13,3 @@ lib/libubs.a
 share/examples/rc.d/ubs
 share/examples/ubs/help.conf
 share/examples/ubs/ubs.conf.default
-@dirrm share/examples/ubs

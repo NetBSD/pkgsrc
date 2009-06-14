@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/14 22:58:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:47 joerg Exp $
 include/telepathy-1.0/libtelepathy/_gen-tp-constants-deprecated-aliases.h
 include/telepathy-1.0/libtelepathy/_gen-tp-constants-deprecated.h
 include/telepathy-1.0/libtelepathy/_gen-tp-constants-whitelist-aliases.h
@@ -47,5 +47,3 @@ include/telepathy-1.0/libtelepathy/tp-props-iface-gen.h
 include/telepathy-1.0/libtelepathy/tp-props-iface.h
 lib/libtelepathy.la
 lib/pkgconfig/libtelepathy.pc
-@dirrm include/telepathy-1.0/libtelepathy
-@comment in telepathy-glib: @dirrm include/telepathy-1.0

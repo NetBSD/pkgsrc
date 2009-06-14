@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/15 01:49:15 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:20 joerg Exp $
 ${PYINC}/pyogg/pyogg.h
 ${PYSITELIB}/ogg/__init__.py
 ${PYSITELIB}/ogg/__init__.pyc
 ${PYSITELIB}/ogg/__init__.pyo
 ${PYSITELIB}/ogg/_ogg.so
-@dirrm ${PYSITELIB}/ogg
-@dirrm ${PYINC}/pyogg

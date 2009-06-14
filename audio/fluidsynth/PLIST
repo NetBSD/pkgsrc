@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/25 13:53:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:08 joerg Exp $
 bin/fluidsynth
 include/fluidsynth.h
 include/fluidsynth/audio.h
@@ -21,4 +21,3 @@ include/fluidsynth/voice.h
 lib/libfluidsynth.la
 lib/pkgconfig/fluidsynth.pc
 man/man1/fluidsynth.1
-@dirrm include/fluidsynth

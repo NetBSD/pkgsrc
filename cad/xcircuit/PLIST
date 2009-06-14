@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/11/12 14:25:50 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:35:57 joerg Exp $
 bin/xcircuit
 lib/xcircuit-3.4/analog.lps
 lib/xcircuit-3.4/analoglib2.lps
@@ -156,8 +156,3 @@ share/examples/xcircuit/threestage.ps
 share/examples/xcircuit/vcoblock.ps
 share/examples/xcircuit/xcclock.ps
 share/examples/xcircuit/xcircuitrc
-@dirrm share/examples/xcircuit
-@dirrm lib/xcircuit-3.4/app-defaults
-@dirrm lib/xcircuit-3.4/pixmaps
-@dirrm lib/xcircuit-3.4/fonts
-@dirrm lib/xcircuit-3.4

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2007/05/06 16:36:06 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2009/06/14 17:32:05 joerg Exp $
 bin/esd
 bin/esd-config
 bin/esdcat
@@ -24,4 +24,3 @@ man/man1/esdrec.1
 man/man1/esdsample.1
 share/aclocal/esd.m4
 share/examples/esound/esd.conf
-@dirrm share/examples/esound
