@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:21:16 joerg Exp $
 bin/nikto
 share/doc/nikto/CHANGES.txt
 share/doc/nikto/LICENSE.txt
@@ -27,6 +27,3 @@ libdata/nikto/plugins/realms.db
 libdata/nikto/plugins/scan_database.db
 libdata/nikto/plugins/server_msgs.db
 libdata/nikto/plugins/servers.db
-@unexec ${RMDIR} %D/libdata/nikto/plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libdata/nikto/docs 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libdata/nikto 2>/dev/null || ${TRUE}
