@@ -1,0 +1,5 @@
+This module allows you to tie Perl associative arrays (hashes) to SQL
+databases using the DBI interface. The tied hash is associated with a
+table in a local or networked database. One column becomes the hash key.
+Each row of the table becomes an associative array, from which individual
+fields can be set or retrieved.
