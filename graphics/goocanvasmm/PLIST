@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/10 13:12:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:16 joerg Exp $
 include/goocanvasmm-0.1/goocanvasmm.h
 include/goocanvasmm-0.1/goocanvasmm/bounds.h
 include/goocanvasmm-0.1/goocanvasmm/canvas.h
@@ -66,10 +66,3 @@ lib/goocanvasmm-0.1/proc/m4/convert.m4
 lib/goocanvasmm-0.1/proc/m4/convert_libgoocanvasmm.m4
 lib/libgoocanvasmm-0.1.la
 lib/pkgconfig/goocanvasmm-1.0.pc
-@dirrm lib/goocanvasmm-0.1/proc/m4
-@dirrm lib/goocanvasmm-0.1/proc
-@dirrm lib/goocanvasmm-0.1/include
-@dirrm lib/goocanvasmm-0.1
-@dirrm include/goocanvasmm-0.1/goocanvasmm/private
-@dirrm include/goocanvasmm-0.1/goocanvasmm
-@dirrm include/goocanvasmm-0.1

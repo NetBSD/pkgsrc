@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:27 joerg Exp $
 radiance/bin/arch2rad
 radiance/bin/bgraph
 radiance/bin/cnt
@@ -704,38 +704,4 @@ share/doc/radiance/index.html
 share/doc/radiance/materials.pdf
 share/doc/radiance/progdiagram.pdf
 share/doc/radiance/ray.pdf
-@dirrm share/doc/radiance
 @exec ${MKDIR} %D/share/doc/html/radiance
-@dirrm share/doc/html/radiance
-@dirrm radiance/lib/source/abolite
-@dirrm radiance/lib/source/headlamp
-@dirrm radiance/lib/source/hubbell
-@dirrm radiance/lib/source/spi
-@dirrm radiance/lib/source/wellmade
-@dirrm radiance/lib/source/zumtobel
-@dirrm radiance/lib/source
-@dirrm radiance/lib/meta
-@dirrm radiance/lib/tcl
-@dirrm radiance/lib/lib
-@dirrm radiance/lib
-@dirrm radiance/obj/alpha
-@dirrm radiance/obj/cabin/anim1
-@dirrm radiance/obj/cabin/animv1
-@dirrm radiance/obj/cabin/vf
-@dirrm radiance/obj/cabin
-@dirrm radiance/obj/misc
-@dirrm radiance/obj/office
-@dirrm radiance/obj/texture
-@dirrm radiance/obj/virtual/dist
-@dirrm radiance/obj/virtual
-@dirrm radiance/obj
-@dirrm radiance/man/man1
-@dirrm radiance/man/man3
-@dirrm radiance/man/man5
-@dirrm radiance/man/cat1
-@dirrm radiance/man/cat3
-@dirrm radiance/man/cat5
-@dirrm radiance/man
-@dirrm radiance/dev
-@dirrm radiance/bin
-@dirrm radiance

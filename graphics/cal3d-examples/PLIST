@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/10 09:15:39 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:07 joerg Exp $
 bin/cal3d_cally
 bin/cal3d_miniviewer
 bin/cal3d_converter
@@ -120,8 +120,3 @@ share/cal3d-examples/data/skeleton/skeleton_upperarm_right.cmf
 share/cal3d-examples/data/skeleton/skeleton_walk.caf
 share/cal3d-examples/data/skeleton/skeleton_wave.caf
 share/cal3d-examples/data/skeleton.cfg
-@dirrm share/cal3d-examples/data/cally
-@dirrm share/cal3d-examples/data/paladin
-@dirrm share/cal3d-examples/data/skeleton
-@dirrm share/cal3d-examples/data
-@dirrm share/cal3d-examples

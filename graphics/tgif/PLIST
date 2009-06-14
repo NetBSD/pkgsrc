@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/08/19 09:19:37 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:29 joerg Exp $
 bin/tgif
 lib/X11/tgif/Copyright
 lib/X11/tgif/License
@@ -16,4 +16,3 @@ lib/X11/tgif/tgificon.obj
 lib/X11/tgif/tgificon.xbm
 lib/X11/tgif/tgificon.xpm
 ${IMAKE_MAN_DIR}/tgif.${IMAKE_MANNEWSUFFIX}
-@dirrm lib/X11/tgif

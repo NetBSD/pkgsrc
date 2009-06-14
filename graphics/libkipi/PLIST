@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/06 18:51:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:22 joerg Exp $
 include/libkipi/batchprogressdialog.h
 include/libkipi/imagecollection.h
 include/libkipi/imagecollectionselector.h
@@ -62,19 +62,4 @@ share/locale/th/LC_MESSAGES/libkipi.mo
 share/locale/tr/LC_MESSAGES/libkipi.mo
 share/locale/uk/LC_MESSAGES/libkipi.mo
 share/locale/zh_CN/LC_MESSAGES/libkipi.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@dirrm share/kde/apps/kipi/data
-@dirrm share/kde/apps/kipi
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/libkipi
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm include/libkipi

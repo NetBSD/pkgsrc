@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/19 07:57:27 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:04 joerg Exp $
 bin/Cenon
 lib/GNUstep/Applications/Cenon.app/Cenon
 lib/GNUstep/Applications/Cenon.app/Resources/Cenon.desktop
@@ -253,36 +253,3 @@ share/GNUstep/Library/Cenon/Projects/Cenon.cenon/output
 share/GNUstep/Library/Cenon/README
 share/doc/Cenon/LICENSE
 share/doc/Cenon/README
-@dirrm share/doc/Cenon
-@dirrm share/GNUstep/Library/Cenon/Projects/Cenon.cenon
-@dirrm share/GNUstep/Library/Cenon/Projects
-@dirrm share/GNUstep/Library/Cenon/Devices/hpgl
-@dirrm share/GNUstep/Library/Cenon/Devices/gerber
-@dirrm share/GNUstep/Library/Cenon/Devices/din
-@dirrm share/GNUstep/Library/Cenon/Devices
-@dirrm share/GNUstep/Library/Cenon
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Library
-@comment in devel/gnustep-make: @dirrm share/GNUstep
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Import.prefs/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Import.prefs/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Import.prefs/Resources
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Import.prefs
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/General.prefs/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/General.prefs/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/General.prefs/Resources
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/General.prefs
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Export.prefs/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Export.prefs/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Export.prefs/Resources
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/Export.prefs
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/CropMarks/rightup.cenon
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/CropMarks/middledown.cenon
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/CropMarks/leftup.cenon
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/CropMarks
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources/CharConversion
-@dirrm lib/GNUstep/Applications/Cenon.app/Resources
-@dirrm lib/GNUstep/Applications/Cenon.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

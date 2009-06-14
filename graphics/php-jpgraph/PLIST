@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/13 01:30:43 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:24 joerg Exp $
 share/doc/php-jpgraph/html/JpGraph_Logo.png
 share/doc/php-jpgraph/html/html/exframes/JpGraph_Logo.html
 share/doc/php-jpgraph/html/html/exframes/alphabarex1.html
@@ -1297,11 +1297,3 @@ share/php-jpgraph/jpgraph_radar.php
 share/php-jpgraph/jpgraph_regstat.php
 share/php-jpgraph/jpgraph_scatter.php
 share/php-jpgraph/jpgraph_stock.php
-@dirrm share/php-jpgraph
-@dirrm share/examples/php-jpgraph
-@dirrm share/doc/php-jpgraph/html/ref
-@dirrm share/doc/php-jpgraph/html/html/img
-@dirrm share/doc/php-jpgraph/html/html/exframes
-@dirrm share/doc/php-jpgraph/html/html
-@dirrm share/doc/php-jpgraph/html
-@dirrm share/doc/php-jpgraph
