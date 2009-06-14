@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:52:13 joerg Exp $
 bin/cint
 bin/hadd
 bin/makecint
@@ -2334,5 +2334,5 @@ share/root/proof/utils/pload
 share/root/proof/utils/pps
 share/root/proof/utils/proof-facility
 share/root/proof/utils/push
-@exec ${MKDIR} %D/lib/root/cint/lib/gcc3strm/sys
-@exec ${MKDIR} %D/lib/root/cint/lib/gcc3strm/bits
+@pkgdir lib/root/cint/lib/gcc3strm/sys
+@pkgdir lib/root/cint/lib/gcc3strm/bits

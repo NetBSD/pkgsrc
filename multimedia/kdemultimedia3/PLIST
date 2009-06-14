@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2009/06/14 18:08:06 joerg Exp $
+@comment $NetBSD: PLIST,v 1.29 2009/06/14 20:53:25 joerg Exp $
 bin/artsbuilder
 bin/artscontrol
 bin/juk
@@ -1084,4 +1084,4 @@ share/kde/services/krec_exportwave.desktop
 share/kde/services/videothumbnail.desktop
 share/kde/servicetypes/audiomidi.desktop
 share/kde/servicetypes/krec_exportitem.desktop
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb/html
+@pkgdir share/doc/kde/HTML/en/kdemultimedia-apidocs/libkcddb/html
