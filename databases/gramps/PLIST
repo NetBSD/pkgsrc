@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:16 joerg Exp $
 bin/gramps
 lib/gramps/grampslib.so
 man/man1/gramps.1
@@ -677,24 +677,3 @@ share/omf/gramps/gramps-manual-fr.omf
 share/omf/gramps/gramps-manual-hu.omf
 share/omf/gramps/gramps-manual-ru.omf
 share/pixmaps/gramps.png
-@dirrm share/gramps/plugins
-@dirrm share/gramps/gnome/help/gramps/ru/figures
-@dirrm share/gramps/gnome/help/gramps/ru
-@dirrm share/gramps/gnome/help/gramps/hu/figures
-@dirrm share/gramps/gnome/help/gramps/hu
-@dirrm share/gramps/gnome/help/gramps/fr/figures
-@dirrm share/gramps/gnome/help/gramps/fr
-@dirrm share/gramps/gnome/help/gramps/de/figures
-@dirrm share/gramps/gnome/help/gramps/de
-@dirrm share/gramps/gnome/help/gramps/C/figures
-@dirrm share/gramps/gnome/help/gramps/C
-@dirrm share/gramps/gnome/help/gramps
-@dirrm share/gramps/gnome/help
-@dirrm share/gramps/gnome
-@dirrm share/gramps/filters
-@dirrm share/gramps/example
-@dirrm share/gramps/docgen
-@dirrm share/gramps/data/templates
-@dirrm share/gramps/data
-@dirrm share/gramps
-@dirrm lib/gramps

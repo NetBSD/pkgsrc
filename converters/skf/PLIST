@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/15 13:03:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:11 joerg Exp $
 bin/skf
 man/ja_JP.EUC/man1/skf.1
 man/ja_JP.UTF-8/man1/skf.1
@@ -417,8 +417,3 @@ share/skf/lib/${VERSION}/oNMSUL.stb
 share/skf/lib/${VERSION}/oNMTVG.stb
 share/skf/lib/${VERSION}/oNMTVL.stb
 share/skf/lib/${VERSION}/readme.txt
-@dirrm share/skf/lib/${VERSION}
-@dirrm share/skf/lib
-@dirrm share/skf
-@dirrm share/doc/skf/doc
-@dirrm share/doc/skf

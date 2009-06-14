@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/11 21:42:43 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:38:39 joerg Exp $
 bin/console
 lib/conserver/convert
 man/man1/console.1
@@ -13,6 +13,3 @@ share/examples/conserver/conserver.cf
 share/examples/conserver/conserver.passwd
 share/examples/conserver/conserver.rc
 share/examples/rc.d/conserver8
-@dirrm share/examples/conserver
-@dirrm share/doc/conserver
-@dirrm lib/conserver

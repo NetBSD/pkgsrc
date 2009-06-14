@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:39:10 joerg Exp $
 bin/iconv
 include/iconv.h
 include/libcharset.h
@@ -17,5 +17,3 @@ share/doc/libiconv/iconv_close.3.html
 share/doc/libiconv/iconv_open.3.html
 share/doc/libiconv/iconvctl.3.html
 share/examples/libiconv/charset.alias
-@dirrm share/examples/libiconv
-@dirrm share/doc/libiconv

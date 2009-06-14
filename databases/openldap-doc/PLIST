@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/07/19 21:08:42 ghen Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:19 joerg Exp $
 share/doc/openldap/COPYRIGHT
 share/doc/openldap/LICENSE
 share/doc/openldap/README
@@ -20,6 +20,3 @@ share/doc/openldap/admin/set-memberUid.png
 share/doc/openldap/admin/set-recursivegroup.png
 share/doc/openldap/images/LDAPlogo.gif
 share/doc/openldap/images/LDAPwww.gif
-@dirrm share/doc/openldap/images
-@dirrm share/doc/openldap/admin
-@dirrm share/doc/openldap

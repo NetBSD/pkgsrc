@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/23 12:44:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:40 joerg Exp $
 bin/osyncbinary
 bin/osyncdump
 bin/osyncplugin
@@ -48,8 +48,3 @@ lib/opensync/formats/xmldoc.la
 lib/pkgconfig/opensync-1.0.pc
 lib/pkgconfig/osengine-1.0.pc
 libexec/osplugin
-@dirrm lib/opensync/formats
-@dirrm lib/opensync
-@dirrm include/opensync-1.0/osengine
-@dirrm include/opensync-1.0/opensync
-@dirrm include/opensync-1.0

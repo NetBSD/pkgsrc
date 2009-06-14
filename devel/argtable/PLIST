@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:33 joerg Exp $
 include/argtable.h
 lib/libargtable.a
 man/man3/arg_catargs.3
@@ -10,4 +10,3 @@ man/man3/arg_scanstr.3
 man/man3/arg_syntax.3
 man/man3/arg_typestr.3
 share/doc/argtable/COPYING.LIB
-@dirrm share/doc/argtable

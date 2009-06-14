@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/18 11:51:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:43:19 joerg Exp $
 bin/comp_err
 bin/innochecksum
 bin/my_print_defaults
@@ -2119,65 +2119,3 @@ share/mysql/slovak/errmsg.sys
 share/mysql/spanish/errmsg.sys
 share/mysql/swedish/errmsg.sys
 share/mysql/ukrainian/errmsg.sys
-@dirrm share/mysql/ukrainian
-@dirrm share/mysql/swedish
-@dirrm share/mysql/spanish
-@dirrm share/mysql/slovak
-@dirrm share/mysql/serbian
-@dirrm share/mysql/russian
-@dirrm share/mysql/romanian
-@dirrm share/mysql/portuguese
-@dirrm share/mysql/polish
-@dirrm share/mysql/norwegian-ny
-@dirrm share/mysql/norwegian
-@dirrm share/mysql/korean
-@dirrm share/mysql/japanese
-@dirrm share/mysql/italian
-@dirrm share/mysql/hungarian
-@dirrm share/mysql/greek
-@dirrm share/mysql/german
-@dirrm share/mysql/french
-@dirrm share/mysql/estonian
-@dirrm share/mysql/english
-@dirrm share/mysql/dutch
-@dirrm share/mysql/danish
-@dirrm share/mysql/czech
-@dirrm share/mysql/charsets
-@dirrm share/mysql-test/t
-@dirrm share/mysql-test/suite/large_tests/t
-@dirrm share/mysql-test/suite/large_tests/r
-@dirrm share/mysql-test/suite/large_tests
-@dirrm share/mysql-test/suite/manual/t
-@dirrm share/mysql-test/suite/manual/r
-@dirrm share/mysql-test/suite/manual
-@dirrm share/mysql-test/suite/jp/t
-@dirrm share/mysql-test/suite/jp/std_data
-@dirrm share/mysql-test/suite/jp/r
-@dirrm share/mysql-test/suite/jp
-@dirrm share/mysql-test/suite/funcs_2/t
-@dirrm share/mysql-test/suite/funcs_2/r
-@dirrm share/mysql-test/suite/funcs_2/lib
-@dirrm share/mysql-test/suite/funcs_2/include
-@dirrm share/mysql-test/suite/funcs_2/data
-@dirrm share/mysql-test/suite/funcs_2/charset
-@dirrm share/mysql-test/suite/funcs_2
-@dirrm share/mysql-test/suite/funcs_1/views
-@dirrm share/mysql-test/suite/funcs_1/triggers
-@dirrm share/mysql-test/suite/funcs_1/t
-@dirrm share/mysql-test/suite/funcs_1/storedproc
-@dirrm share/mysql-test/suite/funcs_1/r
-@dirrm share/mysql-test/suite/funcs_1/lib
-@dirrm share/mysql-test/suite/funcs_1/include
-@dirrm share/mysql-test/suite/funcs_1/datadict
-@dirrm share/mysql-test/suite/funcs_1/cursors
-@dirrm share/mysql-test/suite/funcs_1/bitdata
-@dirrm share/mysql-test/suite/funcs_1
-@dirrm share/mysql-test/suite
-@dirrm share/mysql-test/std_data/ndb_backup50_data_le
-@dirrm share/mysql-test/std_data/ndb_backup50_data_be
-@dirrm share/mysql-test/std_data/funcs_1
-@dirrm share/mysql-test/std_data
-@dirrm share/mysql-test/r
-@dirrm share/mysql-test/lib
-@dirrm share/mysql-test/include
-@dirrm share/mysql-test

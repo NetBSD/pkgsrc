@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:45:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:25 joerg Exp $
 ${RUBY_VENDORARCHLIB}/mod_curia.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/mod_depot.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/mod_villa.${RUBY_DLEXT}
@@ -14,5 +14,3 @@ share/doc/qdbm/ruby/rbapidoc/curia.rb.html
 share/doc/qdbm/ruby/rbapidoc/depot.rb.html
 share/doc/qdbm/ruby/rbapidoc/index.html
 share/doc/qdbm/ruby/rbapidoc/villa.rb.html
-@dirrm share/doc/qdbm/ruby/rbapidoc
-@dirrm share/doc/qdbm/ruby

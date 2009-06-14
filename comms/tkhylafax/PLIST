@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:43 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:42 joerg Exp $
 bin/tkhylafax
 share/${PKGNAME}/entryDialog.t
 share/${PKGNAME}/extract.t
@@ -18,4 +18,3 @@ share/${PKGNAME}/trace.t
 share/${PKGNAME}/viewBatch.t
 share/${PKGNAME}/tclIndex
 man/man1/tkhylafax.1
-@dirrm share/${PKGNAME}

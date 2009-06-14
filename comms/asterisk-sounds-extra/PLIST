@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/25 18:41:14 riz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:38:38 joerg Exp $
 libdata/asterisk/sounds/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/1-yes-2-no.gsm
 libdata/asterisk/sounds/T-changed-to.gsm
@@ -1324,8 +1324,5 @@ libdata/asterisk/sounds/your-msg-is-too-short.gsm
 libdata/asterisk/sounds/your-temp-greeting.gsm
 libdata/asterisk/sounds/your.gsm
 libdata/asterisk/sounds/zip-code.gsm
-@dirrm libdata/asterisk/sounds/wx
-@dirrm libdata/asterisk/sounds/silence
-@dirrm libdata/asterisk/sounds/ha
 @unexec ${RMDIR} %D/libdata/asterisk/sounds/phonetic 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/libdata/asterisk/sounds 2>/dev/null || ${TRUE}

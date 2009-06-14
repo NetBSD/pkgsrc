@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/02/03 23:05:28 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:48:36 joerg Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Auth.pm
@@ -488,65 +488,3 @@ share/doc/bugzilla/UPGRADING-pre-2.8
 share/doc/bugzilla/rel_notes.txt
 share/examples/bugzilla/bugzilla.conf
 share/examples/bugzilla/localconfig
-@dirrm share/examples/bugzilla
-@dirrm share/doc/bugzilla
-@dirrm share/bugzilla/template/en/extension
-@dirrm share/bugzilla/template/en/default/whine
-@dirrm share/bugzilla/template/en/default/search
-@dirrm share/bugzilla/template/en/default/request
-@dirrm share/bugzilla/template/en/default/reports
-@dirrm share/bugzilla/template/en/default/pages
-@dirrm share/bugzilla/template/en/default/list
-@dirrm share/bugzilla/template/en/default/global
-@dirrm share/bugzilla/template/en/default/flag
-@dirrm share/bugzilla/template/en/default/email
-@dirrm share/bugzilla/template/en/default/bug/votes
-@dirrm share/bugzilla/template/en/default/bug/process
-@dirrm share/bugzilla/template/en/default/bug/create
-@dirrm share/bugzilla/template/en/default/bug/activity
-@dirrm share/bugzilla/template/en/default/bug
-@dirrm share/bugzilla/template/en/default/attachment
-@dirrm share/bugzilla/template/en/default/admin/versions
-@dirrm share/bugzilla/template/en/default/admin/users
-@dirrm share/bugzilla/template/en/default/admin/settings
-@dirrm share/bugzilla/template/en/default/admin/products/groupcontrol
-@dirrm share/bugzilla/template/en/default/admin/products
-@dirrm share/bugzilla/template/en/default/admin/params
-@dirrm share/bugzilla/template/en/default/admin/milestones
-@dirrm share/bugzilla/template/en/default/admin/keywords
-@dirrm share/bugzilla/template/en/default/admin/groups
-@dirrm share/bugzilla/template/en/default/admin/flag-type
-@dirrm share/bugzilla/template/en/default/admin/fieldvalues
-@dirrm share/bugzilla/template/en/default/admin/components
-@dirrm share/bugzilla/template/en/default/admin/classifications
-@dirrm share/bugzilla/template/en/default/admin
-@dirrm share/bugzilla/template/en/default/account/prefs
-@dirrm share/bugzilla/template/en/default/account/password
-@dirrm share/bugzilla/template/en/default/account/email
-@dirrm share/bugzilla/template/en/default/account/auth
-@dirrm share/bugzilla/template/en/default/account
-@dirrm share/bugzilla/template/en/default
-@dirrm share/bugzilla/template/en
-@dirrm share/bugzilla/template
-@dirrm share/bugzilla/skins/standard/index
-@dirrm share/bugzilla/skins/standard/global
-@dirrm share/bugzilla/skins/standard
-@dirrm share/bugzilla/skins
-@dirrm share/bugzilla/js
-@dirrm share/bugzilla/images
-@dirrm share/bugzilla/docs/html
-@dirrm share/bugzilla/docs
-@dirrm share/bugzilla/Bugzilla/User
-@dirrm share/bugzilla/Bugzilla/Template/Plugin
-@dirrm share/bugzilla/Bugzilla/Template
-@dirrm share/bugzilla/Bugzilla/Search
-@dirrm share/bugzilla/Bugzilla/DB/Schema
-@dirrm share/bugzilla/Bugzilla/DB
-@dirrm share/bugzilla/Bugzilla/Config
-@dirrm share/bugzilla/Bugzilla/Auth/Verify
-@dirrm share/bugzilla/Bugzilla/Auth/Login/WWW/CGI
-@dirrm share/bugzilla/Bugzilla/Auth/Login/WWW
-@dirrm share/bugzilla/Bugzilla/Auth/Login
-@dirrm share/bugzilla/Bugzilla/Auth
-@dirrm share/bugzilla/Bugzilla
-@dirrm share/bugzilla

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/07/16 13:24:05 fredb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:39:53 joerg Exp $
 ${TARGET_ARCH}/include/_G_config.h
 ${TARGET_ARCH}/include/__math.h
 ${TARGET_ARCH}/include/a.out.h
@@ -687,17 +687,3 @@ lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/crtbegin.o
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/crtbeginS.o
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/crtend.o
 lib/gcc-lib/${TARGET_ARCH}/${EGCS_INTVERSION}/crtendS.o
-@dirrm ${TARGET_ARCH}/include/arpa
-@dirrm ${TARGET_ARCH}/include/gnu
-@dirrm ${TARGET_ARCH}/include/net
-@dirrm ${TARGET_ARCH}/include/netinet
-@dirrm ${TARGET_ARCH}/include/netipx
-@dirrm ${TARGET_ARCH}/include/nfs
-@dirrm ${TARGET_ARCH}/include/protocols
-@dirrm ${TARGET_ARCH}/include/rpc
-@dirrm ${TARGET_ARCH}/include/rpcsvc
-@dirrm ${TARGET_ARCH}/include/sys
-@dirrm ${TARGET_ARCH}/include/asm
-@dirrm ${TARGET_ARCH}/include/linux/modules
-@dirrm ${TARGET_ARCH}/include/linux
-@dirrm ${TARGET_ARCH}/include/scsi

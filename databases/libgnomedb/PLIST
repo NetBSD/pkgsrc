@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/10/07 07:39:52 hira Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:43:18 joerg Exp $
 bin/gnome-database-properties-3.0
 bin/gnome-db-browser
 bin/gnome-db-demo
@@ -311,20 +311,3 @@ share/pixmaps/libgnomedb-3.0/gnome-db-types_16x16.png
 share/pixmaps/libgnomedb-3.0/gnome-db-types_24x24.png
 share/pixmaps/libgnomedb-3.0/gnome-db-views_16x16.png
 share/pixmaps/libgnomedb-3.0/gnome-db-within-transaction_24x24.png
-@dirrm share/pixmaps/libgnomedb-3.0
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/libgnomedb
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gtk-doc/html/libgnomedb-3.0
-@dirrm share/gnome-db/demo
-@dirrm share/gnome-db
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/libgnomedb/plugins
-@dirrm lib/libgnomedb
-@comment in libglade: @dirrm lib/libglade/2.0
-@dirrm include/libgnomedb-3.0/libgnomedb/data-entries
-@dirrm include/libgnomedb-3.0/libgnomedb-graph
-@dirrm include/libgnomedb-3.0/libgnomedb-extra
-@dirrm include/libgnomedb-3.0/libgnomedb
-@dirrm include/libgnomedb-3.0

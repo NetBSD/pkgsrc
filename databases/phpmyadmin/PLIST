@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/11/27 15:20:47 tron Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:43:21 joerg Exp $
 share/doc/phpmyadmin/CREDITS
 share/doc/phpmyadmin/ChangeLog
 share/doc/phpmyadmin/Documentation.txt
@@ -656,32 +656,3 @@ share/phpmyadmin/libraries/tbl_triggers.lib.php
 share/phpmyadmin/phpmyadmin.css.php
 share/phpmyadmin/print.css
 share/phpmyadmin/view_create.php
-@dirrm share/phpmyadmin/themes/original/img
-@dirrm share/phpmyadmin/themes/original/css
-@dirrm share/phpmyadmin/themes/original
-@dirrm share/phpmyadmin/themes/darkblue_orange/img
-@dirrm share/phpmyadmin/themes/darkblue_orange/css
-@dirrm share/phpmyadmin/themes/darkblue_orange
-@dirrm share/phpmyadmin/themes
-@dirrm share/phpmyadmin/scripts
-@dirrm share/phpmyadmin/pmd/styles/default/images
-@dirrm share/phpmyadmin/pmd/styles/default
-@dirrm share/phpmyadmin/pmd/styles
-@dirrm share/phpmyadmin/pmd/scripts
-@dirrm share/phpmyadmin/pmd/images
-@dirrm share/phpmyadmin/pmd
-@dirrm share/phpmyadmin/libraries/transformations
-@dirrm share/phpmyadmin/libraries/tcpdf/font
-@dirrm share/phpmyadmin/libraries/tcpdf
-@dirrm share/phpmyadmin/libraries/import
-@dirrm share/phpmyadmin/libraries/export
-@dirrm share/phpmyadmin/libraries/engines
-@dirrm share/phpmyadmin/libraries/dbi
-@dirrm share/phpmyadmin/libraries/dbg
-@dirrm share/phpmyadmin/libraries/auth
-@dirrm share/phpmyadmin/libraries
-@dirrm share/phpmyadmin/lang
-@dirrm share/phpmyadmin/js
-@dirrm share/phpmyadmin
-@dirrm share/examples/phpmyadmin
-@dirrm share/doc/phpmyadmin

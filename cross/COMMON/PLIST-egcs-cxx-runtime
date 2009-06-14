@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST-egcs-cxx-runtime,v 1.1 1999/01/06 01:14:20 tv Exp $
+@comment $NetBSD: PLIST-egcs-cxx-runtime,v 1.2 2009/06/14 17:39:52 joerg Exp $
 ${TARGET_ARCH}/include/g++/algo.h
 ${TARGET_ARCH}/include/g++/algobase.h
 ${TARGET_ARCH}/include/g++/algorithm
@@ -112,5 +112,3 @@ ${TARGET_ARCH}/include/g++/utility
 ${TARGET_ARCH}/include/g++/vector
 ${TARGET_ARCH}/include/g++/vector.h
 ${TARGET_ARCH}/lib/libstdc++.a
-@dirrm ${TARGET_ARCH}/include/g++/std
-@dirrm ${TARGET_ARCH}/include/g++

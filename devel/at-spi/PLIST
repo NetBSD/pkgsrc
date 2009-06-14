@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/03/16 22:22:07 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:48:33 joerg Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -345,17 +345,3 @@ share/locale/xh/LC_MESSAGES/at-spi.mo
 share/locale/zh_CN/LC_MESSAGES/at-spi.mo
 share/locale/zh_HK/LC_MESSAGES/at-spi.mo
 share/locale/zh_TW/LC_MESSAGES/at-spi.mo
-@dirrm share/idl/at-spi-1.0
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/gtk-doc/html/at-spi-cspi
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/at-spi-1.26.0/reference/html
-@dirrm share/doc/at-spi-1.26.0/reference
-@dirrm share/doc/at-spi-1.26.0
-@comment in ORBit2: @dirrm lib/orbit-2.0
-@comment in gtk2: @dirrm lib/gtk-2.0/modules
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@dirrm include/at-spi-1.0/login-helper
-@dirrm include/at-spi-1.0/libspi
-@dirrm include/at-spi-1.0/cspi
-@dirrm include/at-spi-1.0

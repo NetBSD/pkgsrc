@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/11 23:10:16 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:16 joerg Exp $
 lib/java/${DISTNAME}-bin.jar
 share/doc/jdbc-mysql/connector-j.html
 share/doc/jdbc-mysql/README
 share/doc/jdbc-mysql/README.txt
-@dirrm share/doc/jdbc-mysql
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

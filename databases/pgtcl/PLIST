@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2005/07/07 07:54:58 cjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:20 joerg Exp $
 include/libpgtcl.h
 lib/pgtcl${PKGVERSION}/libpgtcl15.so
 lib/pgtcl${PKGVERSION}/pgtcl.tcl
 lib/pgtcl${PKGVERSION}/pkgIndex.tcl
-@dirrm lib/pgtcl${PKGVERSION}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 14:09:35 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:40 joerg Exp $
 bin/syncml-http-client
 bin/syncml-http-server
 bin/syncml-obex-client
@@ -26,5 +26,3 @@ lib/libsyncml.la
 lib/pkgconfig/libsyncml-1.0.pc
 man/man1/syncml-http-server.1
 man/man1/syncml-obex-client.1
-@dirrm include/libsyncml-1.0/libsyncml
-@dirrm include/libsyncml-1.0

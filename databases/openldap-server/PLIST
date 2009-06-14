@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/02/18 09:25:37 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:19 joerg Exp $
 libexec/slapd
 sbin/slapacl
 sbin/slapadd
@@ -31,4 +31,3 @@ share/examples/openldap/schema/pmi.schema
 share/examples/openldap/schema/ppolicy.schema
 share/examples/openldap/slapd.conf
 share/examples/rc.d/slapd
-@dirrm share/examples/openldap/schema

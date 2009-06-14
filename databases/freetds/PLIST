@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/05/08 13:28:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:43:15 joerg Exp $
 bin/bsqldb
 ${PLIST.odbc}bin/bsqlodbc
 bin/datacopy
@@ -35,4 +35,3 @@ share/doc/freetds/userguide/index.htm
 share/examples/freetds/freetds.conf
 share/examples/freetds/locales.conf
 share/examples/freetds/pool.conf
-@dirrm share/examples/freetds

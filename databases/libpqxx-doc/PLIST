@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/15 15:36:04 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:43:18 joerg Exp $
 share/doc/libpqxx/Reference/all_8h-source.html
 share/doc/libpqxx/Reference/all_8h.html
 share/doc/libpqxx/Reference/annotated.html
@@ -459,7 +459,3 @@ share/examples/libpqxx/test082.cxx
 share/examples/libpqxx/test083.cxx
 share/examples/libpqxx/test084.cxx
 share/examples/libpqxx/test085.cxx
-@dirrm share/examples/libpqxx
-@dirrm share/doc/libpqxx/Tutorial
-@dirrm share/doc/libpqxx/Reference
-@dirrm share/doc/libpqxx

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 03:07:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:30 joerg Exp $
 bin/ExmanIDE
 share/ExmanIDE/About.py
 share/ExmanIDE/About.pyc
@@ -97,5 +97,3 @@ share/ExmanIDE/timeoutsocket.pyo
 share/ExmanIDE/udplog.py
 share/ExmanIDE/udplog.pyc
 share/ExmanIDE/udplog.pyo
-@dirrm share/ExmanIDE/images
-@dirrm share/ExmanIDE

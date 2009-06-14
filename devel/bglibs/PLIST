@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/07 02:59:04 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:34 joerg Exp $
 bin/bg-installer
 bin/cli-generate
 bin/crc-gentab
@@ -132,36 +132,3 @@ lib/bglibs/unix/sig.a
 lib/bglibs/vmailmgr/client.a
 lib/bglibs/vmailmgr/vpwentry.a
 man/man1/cli-generate.1
-@dirrm lib/bglibs/vmailmgr
-@dirrm lib/bglibs/unix
-@dirrm lib/bglibs/str
-@dirrm lib/bglibs/pwcmp
-@dirrm lib/bglibs/path
-@dirrm lib/bglibs/net
-@dirrm lib/bglibs/msg
-@dirrm lib/bglibs/misc
-@dirrm lib/bglibs/iobuf
-@dirrm lib/bglibs/dict
-@dirrm lib/bglibs/crypto
-@dirrm lib/bglibs/cli
-@dirrm lib/bglibs/cdb
-@dirrm lib/bglibs/base64
-@dirrm lib/bglibs
-@dirrm include/bglibs/vmailmgr
-@dirrm include/bglibs/unix
-@dirrm include/bglibs/str
-@dirrm include/bglibs/pwcmp
-@dirrm include/bglibs/path
-@dirrm include/bglibs/net
-@dirrm include/bglibs/msg
-@dirrm include/bglibs/misc
-@dirrm include/bglibs/iobuf
-@dirrm include/bglibs/fmt
-@dirrm include/bglibs/dict
-@dirrm include/bglibs/crypto
-@dirrm include/bglibs/crc
-@dirrm include/bglibs/cli
-@dirrm include/bglibs/cdb
-@dirrm include/bglibs/base64
-@dirrm include/bglibs/adt
-@dirrm include/bglibs

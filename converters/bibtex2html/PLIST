@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/14 15:51:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:39:09 joerg Exp $
 bin/aux2bib
 bin/bib2bib
 bin/bibtex2html
@@ -7,4 +7,3 @@ man/man1/bib2bib.1
 man/man1/bibtex2html.1
 share/doc/${PKGBASE}/manual.html
 share/doc/${PKGBASE}/manual.ps
-@dirrm share/doc/${PKGBASE}

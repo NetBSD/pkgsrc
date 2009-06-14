@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/10 10:47:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:23 joerg Exp $
 ${PYSITELIB}/pysqlite2/__init__.py
 ${PYSITELIB}/pysqlite2/__init__.pyc
 ${PYSITELIB}/pysqlite2/__init__.pyo
@@ -39,5 +39,3 @@ ${PYSITELIB}/pysqlite2/test/types.pyo
 ${PYSITELIB}/pysqlite2/test/userfunctions.py
 ${PYSITELIB}/pysqlite2/test/userfunctions.pyc
 ${PYSITELIB}/pysqlite2/test/userfunctions.pyo
-@dirrm ${PYSITELIB}/pysqlite2/test
-@dirrm ${PYSITELIB}/pysqlite2

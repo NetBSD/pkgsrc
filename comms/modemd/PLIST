@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:44:25 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:38:41 joerg Exp $
 sbin/modemd
 sbin/mpoold
 man/man8/modemd.8
@@ -8,4 +8,3 @@ man/cat8/mpoold.0
 man/man5/modemcap.5
 man/cat5/modemcap.0
 share/examples/modemd/modemcap
-@dirrm share/examples/modemd

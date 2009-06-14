@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/08 19:43:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:38:41 joerg Exp $
 bin/PilotManager
 lib/pilotmgr/Backup.pm
 lib/pilotmgr/Installer.pm
@@ -23,9 +23,3 @@ lib/pilotmgr/lib/test/SyncPlan.t
 share/doc/pilotmgr/Conduit.api
 share/doc/pilotmgr/SyncPlan.help
 share/doc/pilotmgr/WelcomeMessage
-@dirrm lib/pilotmgr/lib/test
-@dirrm lib/pilotmgr/lib/perl5
-@dirrm lib/pilotmgr/lib/images
-@dirrm lib/pilotmgr/lib
-@dirrm lib/pilotmgr
-@dirrm share/doc/pilotmgr

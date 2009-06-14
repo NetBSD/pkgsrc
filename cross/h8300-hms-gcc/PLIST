@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/09/02 20:33:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:53 joerg Exp $
 bin/h8300-hms-c++
 bin/h8300-hms-cpp
 bin/h8300-hms-g++
@@ -140,24 +140,3 @@ libexec/cross-h8300-hms/share/locale/ja/LC_MESSAGES/gcc.mo
 libexec/cross-h8300-hms/share/locale/nl/LC_MESSAGES/gcc.mo
 libexec/cross-h8300-hms/share/locale/sv/LC_MESSAGES/gcc.mo
 libexec/cross-h8300-hms/share/locale/tr/LC_MESSAGES/gcc.mo
-@dirrm libexec/cross-h8300-hms/share/locale/nl/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/nl
-@dirrm libexec/cross-h8300-hms/share/locale/el/LC_MESSAGES
-@dirrm libexec/cross-h8300-hms/share/locale/el
-@dirrm libexec/cross-h8300-hms/man/man7
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/include
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/h8300s/int32
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/h8300s
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/h8300h/int32
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1/h8300h
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms/3.1
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib/h8300-hms
-@dirrm libexec/cross-h8300-hms/lib/gcc-lib
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib/h8300s/int32
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib/h8300s
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib/h8300h/int32
-@dirrm libexec/cross-h8300-hms/h8300-hms/lib/h8300h
-@dirrm libexec/cross-h8300-hms/h8300-hms/include/sys
-@dirrm libexec/cross-h8300-hms/h8300-hms/include/machine
-@dirrm libexec/cross-h8300-hms/h8300-hms/include
-@dirrm libexec/cross-h8300-hms/gcc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/01 12:24:54 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:35 joerg Exp $
 bin/bouml
 bin/projectControl
 bin/projectSynchro
@@ -1910,26 +1910,3 @@ share/icons/hicolor/48x48/apps/projectSynchro.png
 share/icons/hicolor/64x64/apps/bouml.png
 share/icons/hicolor/64x64/apps/projectControl.png
 share/icons/hicolor/64x64/apps/projectSynchro.png
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/bouml/xmi2import
-@dirrm lib/bouml/xmi2
-@dirrm lib/bouml/xmi
-@dirrm lib/bouml/usecase_wizard
-@dirrm lib/bouml/uml_projection
-@dirrm lib/bouml/sort
-@dirrm lib/bouml/sm_generator
-@dirrm lib/bouml/singleton
-@dirrm lib/bouml/rose
-@dirrm lib/bouml/html
-@dirrm lib/bouml/genpro
-@dirrm lib/bouml/empty
-@dirrm lib/bouml/deploy
-@dirrm lib/bouml/cpp_utilities
-@dirrm lib/bouml/GlobalChange
-@dirrm lib/bouml/FileControl
-@dirrm lib/bouml

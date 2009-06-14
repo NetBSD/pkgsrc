@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:48 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:43:23 joerg Exp $
 ${PYSITELIB}/_sqlite.so
 ${PYSITELIB}/sqlite/__init__.py
 ${PYSITELIB}/sqlite/__init__.pyc
@@ -6,4 +6,3 @@ ${PYSITELIB}/sqlite/__init__.pyo
 ${PYSITELIB}/sqlite/main.py
 ${PYSITELIB}/sqlite/main.pyc
 ${PYSITELIB}/sqlite/main.pyo
-@dirrm ${PYSITELIB}/sqlite

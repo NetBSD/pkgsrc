@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/01 05:17:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:38:40 joerg Exp $
 bin/kermit
 man/man1/kermit.1
 share/doc/kermit/ckaaaa.txt
@@ -11,4 +11,3 @@ share/doc/kermit/ckermit80.txt
 share/doc/kermit/ckubwr.txt
 share/doc/kermit/ckuins.txt
 share/doc/kermit/ckututor.txt
-@dirrm share/doc/kermit

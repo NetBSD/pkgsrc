@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/11/11 20:29:27 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:18 joerg Exp $
 bin/myodbc3m
 lib/libmyodbc3.la
 ${PLIST.gui}lib/libmyodbc3S.la
@@ -9,4 +9,3 @@ share/doc/mysql-connector-odbc/LICENSE.exceptions
 share/doc/mysql-connector-odbc/LICENSE.gpl
 share/doc/mysql-connector-odbc/README
 share/doc/mysql-connector-odbc/README.debug
-@dirrm share/doc/mysql-connector-odbc

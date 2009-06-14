@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/05/16 15:20:10 epg Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/14 17:48:36 joerg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -2029,51 +2029,3 @@ ${PYSITELIB}/bzrlib/xml_serializer.py
 ${PYSITELIB}/bzrlib/xml_serializer.pyc
 ${PYSITELIB}/bzrlib/xml_serializer.pyo
 man/man1/bzr.1
-@dirrm ${PYSITELIB}/bzrlib/version_info_formats
-@dirrm ${PYSITELIB}/bzrlib/util/tests
-@dirrm ${PYSITELIB}/bzrlib/util/elementtree
-@dirrm ${PYSITELIB}/bzrlib/util/effbot/org
-@dirrm ${PYSITELIB}/bzrlib/util/effbot
-@dirrm ${PYSITELIB}/bzrlib/util/configobj
-@dirrm ${PYSITELIB}/bzrlib/util
-@dirrm ${PYSITELIB}/bzrlib/ui
-@dirrm ${PYSITELIB}/bzrlib/transport/http
-@dirrm ${PYSITELIB}/bzrlib/transport/ftp
-@dirrm ${PYSITELIB}/bzrlib/transport
-@dirrm ${PYSITELIB}/bzrlib/tests/workingtree_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/tree_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/test_patches_data
-@dirrm ${PYSITELIB}/bzrlib/tests/ssl_certs
-@dirrm ${PYSITELIB}/bzrlib/tests/per_repository_reference
-@dirrm ${PYSITELIB}/bzrlib/tests/per_repository_chk
-@dirrm ${PYSITELIB}/bzrlib/tests/per_repository
-@dirrm ${PYSITELIB}/bzrlib/tests/per_lock
-@dirrm ${PYSITELIB}/bzrlib/tests/per_interbranch
-@dirrm ${PYSITELIB}/bzrlib/tests/inventory_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/intertree_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/interrepository_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/ftp_server
-@dirrm ${PYSITELIB}/bzrlib/tests/commands
-@dirrm ${PYSITELIB}/bzrlib/tests/bzrdir_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/branch_implementations
-@dirrm ${PYSITELIB}/bzrlib/tests/blackbox
-@dirrm ${PYSITELIB}/bzrlib/tests
-@dirrm ${PYSITELIB}/bzrlib/store/versioned
-@dirrm ${PYSITELIB}/bzrlib/store
-@dirrm ${PYSITELIB}/bzrlib/smart
-@dirrm ${PYSITELIB}/bzrlib/repofmt
-@dirrm ${PYSITELIB}/bzrlib/plugins/netrc_credential_store/tests
-@dirrm ${PYSITELIB}/bzrlib/plugins/netrc_credential_store
-@dirrm ${PYSITELIB}/bzrlib/plugins/launchpad
-@dirrm ${PYSITELIB}/bzrlib/plugins
-@dirrm ${PYSITELIB}/bzrlib/help_topics/en
-@dirrm ${PYSITELIB}/bzrlib/help_topics
-@dirrm ${PYSITELIB}/bzrlib/filters
-@dirrm ${PYSITELIB}/bzrlib/export
-@dirrm ${PYSITELIB}/bzrlib/doc/api
-@dirrm ${PYSITELIB}/bzrlib/doc
-@dirrm ${PYSITELIB}/bzrlib/bundle/serializer
-@dirrm ${PYSITELIB}/bzrlib/bundle
-@dirrm ${PYSITELIB}/bzrlib/benchmarks/tree_creator
-@dirrm ${PYSITELIB}/bzrlib/benchmarks
-@dirrm ${PYSITELIB}/bzrlib

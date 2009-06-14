@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.xemacs,v 1.2 2003/01/11 09:28:47 uebayasi Exp $
+@comment $NetBSD: PLIST.xemacs,v 1.3 2009/06/14 17:48:33 joerg Exp $
 ${EMACS_LISPPREFIX}/apel/alist.el
 ${EMACS_LISPPREFIX}/apel/alist.elc
 ${EMACS_LISPPREFIX}/apel/apel-ver.el
@@ -65,4 +65,3 @@ ${EMACS_LISPPREFIX}/apel/static.el
 ${EMACS_LISPPREFIX}/apel/static.elc
 ${EMACS_LISPPREFIX}/apel/timezone.el
 ${EMACS_LISPPREFIX}/apel/timezone.elc
-@dirrm ${EMACS_LISPPREFIX}/apel

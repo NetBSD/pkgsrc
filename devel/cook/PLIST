@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/09 23:29:15 mrg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:38 joerg Exp $
 bin/c_incl
 bin/cook
 bin/cook_bom
@@ -69,9 +69,3 @@ share/cook/usr
 share/cook/usr.local
 share/cook/yacc
 share/cook/yacc_many
-@dirrm share/cook/en/man1
-@dirrm share/cook/en
-@dirrm share/cook
-@dirrm lib/cook/en/LC_MESSAGES
-@dirrm lib/cook/en
-@dirrm lib/cook

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:38 joerg Exp $
 bin/sccs
 info/cssc.info
 libexec/cssc/admin
@@ -14,4 +14,3 @@ libexec/cssc/unget
 libexec/cssc/val
 libexec/cssc/what
 man/man1/sccs.1
-@dirrm libexec/cssc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/03/20 16:02:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:22 joerg Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -1753,42 +1753,3 @@ ${PG_SUBPREFIX}share/locale/zh_TW/LC_MESSAGES/psql.mo
 ${PG_SUBPREFIX}share/postgresql/pg_service.conf.sample
 ${PG_SUBPREFIX}share/postgresql/psqlrc.sample
 ${PG_DIRRM_SUBPREFIX}
-@dirrm ${PG_SUBPREFIX}share/postgresql
-@dirrm ${PG_SUBPREFIX}share/doc/postgresql/html
-@dirrm ${PG_SUBPREFIX}share/doc/postgresql/TODO.detail
-@dirrm ${PG_SUBPREFIX}share/doc/postgresql
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/utils
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/tsearch/dicts
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/tsearch
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/tcop
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/storage
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/snowball/libstemmer
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/snowball
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/rewrite
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/regex
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/postmaster
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32_msvc/sys
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32_msvc
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32/sys
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32/netinet
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32/arpa
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port/win32
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/port
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/parser
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/optimizer
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/nodes
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/mb
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/libpq
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/lib
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/executor
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/commands
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/catalog
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/bootstrap
-@dirrm ${PG_SUBPREFIX}include/postgresql/server/access
-@dirrm ${PG_SUBPREFIX}include/postgresql/server
-@dirrm ${PG_SUBPREFIX}include/postgresql/internal/libpq
-@dirrm ${PG_SUBPREFIX}include/postgresql/internal
-@dirrm ${PG_SUBPREFIX}include/postgresql/informix/esql
-@dirrm ${PG_SUBPREFIX}include/postgresql/informix
-@dirrm ${PG_SUBPREFIX}include/postgresql
-@dirrm ${PG_SUBPREFIX}include/libpq

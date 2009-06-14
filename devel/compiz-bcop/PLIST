@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 12:40:32 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:38 joerg Exp $
 bin/bcop
 share/bcop/bcop.xslt
 share/pkgconfig/bcop.pc
-@dirrm share/bcop

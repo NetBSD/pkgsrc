@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/14 19:41:54 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:19 joerg Exp $
 lib/openldap/cloak.a
 lib/openldap/cloak.la
 man/man5/slapo-cloak.5
-@dirrm lib/openldap

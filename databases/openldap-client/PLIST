@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/27 07:15:44 ghen Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:19 joerg Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -259,4 +259,3 @@ man/man8/slapindex.8
 man/man8/slappasswd.8
 man/man8/slaptest.8
 share/examples/openldap/ldap.conf
-@dirrm share/examples/openldap

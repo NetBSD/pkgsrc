@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/28 23:38:10 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:37 joerg Exp $
 bin/chrpath
 man/man1/chrpath.1
 share/doc/chrpath/AUTHORS
@@ -7,4 +7,3 @@ share/doc/chrpath/ChangeLog
 share/doc/chrpath/INSTALL
 share/doc/chrpath/NEWS
 share/doc/chrpath/README
-@dirrm share/doc/chrpath

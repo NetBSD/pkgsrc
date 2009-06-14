@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/31 16:00:55 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:20 joerg Exp $
 lib/openldap/smbk5pwd.a
 lib/openldap/smbk5pwd.la
-@dirrm lib/openldap

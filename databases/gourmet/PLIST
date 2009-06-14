@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:43:15 joerg Exp $
 bin/gourmet
 ${PYSITELIB}/gourmet/FauxActionGroups.py
 ${PYSITELIB}/gourmet/FauxActionGroups.pyc
@@ -326,9 +326,3 @@ share/locale/sv/LC_MESSAGES/gourmet.mo
 share/locale/sv_SE/LC_MESSAGES/gourmet.mo
 share/locale/tr/LC_MESSAGES/gourmet.mo
 share/pixmaps/recbox.png
-@dirrm share/gourmet
-@dirrm ${PYSITELIB}/gourmet/importers/html_plugins
-@dirrm ${PYSITELIB}/gourmet/importers
-@dirrm ${PYSITELIB}/gourmet/exporters
-@dirrm ${PYSITELIB}/gourmet/backends
-@dirrm ${PYSITELIB}/gourmet

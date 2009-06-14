@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 01:20:25 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:36 joerg Exp $
 bin/bzr-handle-patch
 bin/bzr-notify
 bin/olive-gtk
@@ -242,22 +242,3 @@ share/locale/sv/LC_MESSAGES/olive-gtk.mo
 share/olive/cmenu.ui
 share/pixmaps/bzr-icon-64.png
 share/pixmaps/olive-gtk.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/olive
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/emblems
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/bzr-gtk/icons
-@dirrm share/bzr-gtk
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/viz
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/tests
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/preferences
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/olive
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/branchview
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk/annotate
-@dirrm ${PYSITELIB}/bzrlib/plugins/gtk
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib/plugins
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib

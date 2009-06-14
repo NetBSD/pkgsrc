@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/07 17:55:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:43:22 joerg Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -662,29 +662,3 @@ ${PG_SUBPREFIX}share/postgresql/tsearch_data/swedish.stop
 ${PG_SUBPREFIX}share/postgresql/tsearch_data/synonym_sample.syn
 ${PG_SUBPREFIX}share/postgresql/tsearch_data/thesaurus_sample.ths
 ${PG_SUBPREFIX}share/postgresql/tsearch_data/turkish.stop
-@dirrm ${PG_SUBPREFIX}share/postgresql/tsearch_data
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezonesets
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/US
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Pacific
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mideast
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Mexico
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Indian
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Europe
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Etc
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Chile
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Canada
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Brazil
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Australia
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Atlantic
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Asia
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Arctic
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Antarctica
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/America/North_Dakota
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/America/Kentucky
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/America/Indiana
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/America
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone/Africa
-@dirrm ${PG_SUBPREFIX}share/postgresql/timezone
-@comment in postgresql-client: @dirrm ${PG_SUBPREFIX}share/postgresql
-@dirrm ${PG_SUBPREFIX}lib/postgresql

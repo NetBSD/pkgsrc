@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/12/11 16:26:39 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:53 joerg Exp $
 bin/avrdude
 info/avrdude.info
 man/man1/avrdude.1
@@ -25,5 +25,3 @@ share/doc/${DISTNAME}/avrdude-html/avrdude_8.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_9.html
 share/doc/${DISTNAME}/avrdude-html/avrdude_toc.html
 share/doc/${DISTNAME}/avrdude.ps
-@dirrm share/doc/${DISTNAME}/avrdude-html
-@dirrm share/doc/${DISTNAME}

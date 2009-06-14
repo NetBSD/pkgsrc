@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/22 15:54:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:31 joerg Exp $
 bin/autotest
 bin/multiruby
 bin/multiruby_setup
@@ -75,11 +75,3 @@ ${GEM_LIBDIR}/test/test_zentest.rb
 ${GEM_LIBDIR}/test/test_zentest_assertions.rb
 ${GEM_LIBDIR}/test/test_zentest_mapping.rb
 ${GEM_HOME}/specifications/ZenTest-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/test/rails
-@dirrm ${GEM_LIBDIR}/lib/test
-@dirrm ${GEM_LIBDIR}/lib/autotest
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}/articles
-@dirrm ${GEM_LIBDIR}

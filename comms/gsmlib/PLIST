@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:38:39 joerg Exp $
 bin/gsmctl
 bin/gsmpb
 bin/gsmsendsms
@@ -33,4 +33,3 @@ man/man1/gsmsmsstore.1
 man/man7/gsminfo.7
 man/man8/gsmsmsd.8
 share/locale/de/LC_MESSAGES/gsmlib.mo
-@dirrm include/gsmlib

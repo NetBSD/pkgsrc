@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/16 15:07:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:43:18 joerg Exp $
 bin/luma
 lib/luma/__init__.py
 lib/luma/__init__.pyc
@@ -432,38 +432,3 @@ share/luma/icons/warning_big.png
 share/luma/icons/world.png
 share/luma/icons/worldmedium.png
 share/man/man1/luma.1
-@dirrm share/man/man1
-@dirrm share/man
-@dirrm share/luma/icons/plugins/usermanagement
-@dirrm share/luma/icons/plugins/template_plugin
-@dirrm share/luma/icons/plugins/search_plugin
-@dirrm share/luma/icons/plugins/schemabrowser
-@dirrm share/luma/icons/plugins/mass_creation_plugin
-@dirrm share/luma/icons/plugins/browser_plugin
-@dirrm share/luma/icons/plugins/admin_utils
-@dirrm share/luma/icons/plugins/addressbook
-@dirrm share/luma/icons/plugins
-@dirrm share/luma/icons/mainwin
-@dirrm share/luma/icons/AdvancedObjectWidget
-@dirrm share/luma/icons
-@dirrm share/luma/i18n
-@dirrm share/luma/doc
-@dirrm share/luma
-@dirrm lib/luma/plugins/usermanagement
-@dirrm lib/luma/plugins/template_plugin
-@dirrm lib/luma/plugins/search_plugin
-@dirrm lib/luma/plugins/schemabrowser
-@dirrm lib/luma/plugins/mass_creation_plugin
-@dirrm lib/luma/plugins/browser_plugin
-@dirrm lib/luma/plugins/admin_utils
-@dirrm lib/luma/plugins/addressbook
-@dirrm lib/luma/plugins
-@dirrm lib/luma/environment
-@dirrm lib/luma/base/utils/gui/editors
-@dirrm lib/luma/base/utils/gui
-@dirrm lib/luma/base/utils/backend
-@dirrm lib/luma/base/utils
-@dirrm lib/luma/base/gui
-@dirrm lib/luma/base/backend
-@dirrm lib/luma/base
-@dirrm lib/luma

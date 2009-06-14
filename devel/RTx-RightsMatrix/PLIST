@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/01 09:43:11 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:31 joerg Exp $
 ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/Admin/Elements/ToolTabs/Default
 ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/User/Elements/Tabs/Default
 ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/AssetCFRightsMatrix.html
@@ -25,13 +25,3 @@ ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/User/QueueRightsMatrix.html
 ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/WhereRightComesFrom.html
 ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/autohandler
 ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/index.html
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/User
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix/Elements
-@dirrm ${RT_SHARE_DIR}/html/Admin/Tools/RightsMatrix
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/User/Elements/Tabs
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/User/Elements
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/User
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/Admin/Elements/ToolTabs
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/Admin/Elements
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix/Admin
-@dirrm ${RT_SHARE_DIR}/html/Callbacks/RTx-RightsMatrix

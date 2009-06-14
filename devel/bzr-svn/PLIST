@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/16 15:21:04 epg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:36 joerg Exp $
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
@@ -254,13 +254,3 @@ ${PYSITELIB}/bzrlib/plugins/svn/wiki.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/workingtree.py
 ${PYSITELIB}/bzrlib/plugins/svn/workingtree.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/workingtree.pyo
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/tests/mapping_implementations
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/tests/mapping3
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/tests
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/mapping3
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/layout
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/foreign
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn/cache
-@dirrm ${PYSITELIB}/bzrlib/plugins/svn
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib/plugins
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib

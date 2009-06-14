@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:15:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:24 joerg Exp $
 ${GEM_HOME}/cache/datamapper-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/FAQ
@@ -175,32 +175,3 @@ ${GEM_LIBDIR}/spec/validations/string_validator.rb
 ${GEM_LIBDIR}/spec/validations_spec.rb
 ${GEM_LIBDIR}/tasks/fixtures.rb
 ${GEM_HOME}/specifications/datamapper-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tasks
-@dirrm ${GEM_LIBDIR}/spec/validations
-@dirrm ${GEM_LIBDIR}/spec/types
-@dirrm ${GEM_LIBDIR}/spec/support
-@dirrm ${GEM_LIBDIR}/spec/models
-@dirrm ${GEM_LIBDIR}/spec/fixtures
-@dirrm ${GEM_LIBDIR}/spec/associations
-@dirrm ${GEM_LIBDIR}/spec/adapters
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/plugins/can_has_sphinx/tasks
-@dirrm ${GEM_LIBDIR}/plugins/can_has_sphinx/scripts
-@dirrm ${GEM_LIBDIR}/plugins/can_has_sphinx/lib
-@dirrm ${GEM_LIBDIR}/plugins/can_has_sphinx
-@dirrm ${GEM_LIBDIR}/plugins
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/validations
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/validatable_extensions/validations/formats
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/validatable_extensions/validations
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/validatable_extensions
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/types
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/support
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/is
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/associations
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/adapters/sql/mappings
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/adapters/sql/commands
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/adapters/sql
-@dirrm ${GEM_LIBDIR}/lib/data_mapper/adapters
-@dirrm ${GEM_LIBDIR}/lib/data_mapper
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

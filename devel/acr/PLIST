@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/26 23:33:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:32 joerg Exp $
 bin/acr
 bin/acr-recover
 bin/acr-sh
@@ -40,9 +40,3 @@ share/examples/acr/ruby.acr
 share/examples/acr/sdl.acr
 share/examples/acr/sizeof.acr
 share/examples/acr/x11.acr
-@dirrm share/examples/acr
-@dirrm share/doc/acr/developers
-@dirrm share/doc/acr
-@dirrm share/acr/vim/syntax
-@dirrm share/acr/vim/ftplugin
-@dirrm share/acr/vim

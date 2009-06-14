@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/01 10:48:22 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:33 joerg Exp $
 bin/arena
 man/man1/arena.1
 share/doc/arena/manual.asc
 share/doc/arena/transform
-@dirrm share/doc/arena

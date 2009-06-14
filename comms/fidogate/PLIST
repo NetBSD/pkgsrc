@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/03/20 03:59:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:38:39 joerg Exp $
 info/fidogate.info
 lib/fidogate/areafix.help
 lib/fidogate/bin/areasbbssync
@@ -124,13 +124,3 @@ share/examples/fidogate/point/routing
 share/examples/rc.d/fidogate
 share/fidogate/sendmail/mailer/ffx.m4
 share/fidogate/sendmail/mailer/ftn.m4
-@dirrm share/fidogate/sendmail/mailer
-@dirrm share/fidogate/sendmail
-@dirrm share/fidogate
-@dirrm share/examples/fidogate/point
-@dirrm share/examples/fidogate/orodruin
-@dirrm share/examples/fidogate/morannon
-@dirrm share/examples/fidogate
-@dirrm share/doc/fidogate
-@dirrm lib/fidogate/bin
-@dirrm lib/fidogate
