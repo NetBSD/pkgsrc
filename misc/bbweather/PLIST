@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:52:11 joerg Exp $
 bin/GrabWeather
 bin/bbweather
 man/man1/GrabWeather.1
@@ -14,4 +14,3 @@ share/doc/html/bbweather/index-3.html
 share/doc/html/bbweather/index-4.html
 share/doc/html/bbweather/index-5.html
 share/doc/html/bbweather/index.html
-@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:05:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 20:47:53 joerg Exp $
 bin/gp
 bin/gp-2.1
 bin/gphelp
@@ -76,4 +76,4 @@ share/pari/misc/gprc.dft
 share/pari/misc/new.dic
 share/pari/misc/pari.xpm
 share/pari/misc/xgp
-@exec ${MKDIR} %D/share/pari/galdata
+@pkgdir share/pari/galdata

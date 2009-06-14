@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2009/06/14 18:07:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.34 2009/06/14 20:52:12 joerg Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -1941,34 +1941,34 @@ share/kde/servicetypes/kontactplugin.desktop
 share/kde/servicetypes/korganizerpart.desktop
 share/kde/servicetypes/korgprintplugin.desktop
 share/kde/servicetypes/kpilotconduit.desktop
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkmime/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkholidays/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/libemailfunctions/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/kpilot/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kontact/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/konsolekalendar/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/knotes/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kmail/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kitchensync/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/mbox/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/imap4/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/karm/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kandy/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kalarm/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kalarm/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdepim-apidocs/akregator/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkpimidentities/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkpgp/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkmime/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkholidays/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkdepim/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libkcal/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/libemailfunctions/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kpilot/lib/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kpilot/kpilot/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kpilot/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/korganizer/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kontact/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/konsolekalendar/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/knotes/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kmail/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kitchensync/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/mbox/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/imap4/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kioslaves/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kgantt/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kdgantt/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/karm/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kandy/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kalarm/lib/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kalarm/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/kaddressbook/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/certmanager/lib/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/certmanager/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/librss/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/akregator/src/html
+@pkgdir share/doc/kde/HTML/en/kdepim-apidocs/akregator/html

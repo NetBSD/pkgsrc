@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:07:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 20:52:12 joerg Exp $
 bin/atlantikdesigner
 bin/fsview
 bin/jpegorient
@@ -380,4 +380,3 @@ share/kde/services/kuick_plugin.desktop
 share/kde/services/renaudiodlg.desktop
 share/kde/services/renimagedlg.desktop
 share/kde/services/webarchivethumbnail.desktop
-@unexec ${RMDIR} %D/share/kde/apps/knewsticker 2>/dev/null || ${TRUE}

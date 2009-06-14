@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.common_end,v 1.12 2009/06/14 18:08:11 joerg Exp $
-@exec ${MKDIR} %D/lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix
+@comment $NetBSD: PLIST.common_end,v 1.13 2009/06/14 20:53:26 joerg Exp $
+@pkgdir lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix

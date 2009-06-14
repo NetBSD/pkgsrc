@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:53:25 joerg Exp $
 bin/dump-mixers
 bin/ntsc-cc
 bin/pia
@@ -88,4 +88,3 @@ share/xawtv/pal-newzealand.list
 share/xawtv/secam-france.list
 share/xawtv/secam-russia.list
 share/xawtv/uhf.list
-@unexec ${RMDIR} %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}

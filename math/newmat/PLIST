@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:47:52 joerg Exp $
 include/newmat/boolean.h
 include/newmat/controlw.h
 include/newmat/include.h
@@ -11,5 +11,3 @@ include/newmat/newmatrc.h
 include/newmat/precisio.h
 lib/libnewmat.a
 share/doc/html/newmat/index.html
-@unexec ${RMDIR} share/doc/html 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} share/doc 2>/dev/null || ${TRUE}

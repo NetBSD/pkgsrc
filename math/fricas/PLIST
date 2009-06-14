@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:05:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 20:47:52 joerg Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -2906,4 +2906,4 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/xlpoly.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/xpoly.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/ystream.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/zerodim.spad.pamphlet
-@exec ${MKDIR} %D/lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/texmf/tex
+@pkgdir lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/texmf/tex

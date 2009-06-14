@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:05:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:47:52 joerg Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -1660,10 +1660,10 @@ share/octave/${PKGVERSION}/m/time/now.m
 share/octave/${PKGVERSION}/m/time/weekday.m
 share/octave/ls-R
 share/octave/site/m/startup/octaverc
-@exec ${MKDIR} %D/libexec/octave/site/oct/api-v32/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/libexec/octave/api-v32/site/exec/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
-@exec ${MKDIR} %D/lib/octave-${PKGVERSION}
+@pkgdir libexec/octave/site/oct/api-v32/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/api-v32/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/${PKGVERSION}/site/oct/${MACHINE_GNU_PLATFORM}
+@pkgdir libexec/octave/${PKGVERSION}/site/exec/${MACHINE_GNU_PLATFORM}
+@pkgdir lib/octave-${PKGVERSION}

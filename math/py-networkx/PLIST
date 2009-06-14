@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 20:47:53 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -288,4 +288,4 @@ share/doc/networkx-${PKGVERSION}/examples/unixemail.py
 share/doc/networkx-${PKGVERSION}/examples/words.py
 share/doc/networkx-${PKGVERSION}/examples/write_dotfile.py
 share/doc/networkx-${PKGVERSION}/examples/xgraph_weighted.py
-@exec ${MKDIR} %D/share/doc/networkx-${PKGVERSION}/data
+@pkgdir share/doc/networkx-${PKGVERSION}/data

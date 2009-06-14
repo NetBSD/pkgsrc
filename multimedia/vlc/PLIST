@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2009/06/14 18:08:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.29 2009/06/14 20:53:25 joerg Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -551,4 +551,4 @@ share/vlc/vlc32x32.xpm
 share/vlc/vlc48x48-christmas.png
 share/vlc/vlc48x48.ico
 share/vlc/vlc48x48.png
-@exec ${MKDIR} %D/share/vlc/skins2/fonts
+@pkgdir share/vlc/skins2/fonts
