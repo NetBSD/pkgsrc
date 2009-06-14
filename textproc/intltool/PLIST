@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/06/19 16:58:40 bjs Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:17:18 joerg Exp $
 bin/intltool-extract
 bin/intltool-merge
 bin/intltool-prepare
@@ -11,4 +11,3 @@ man/man8/intltool-update.8
 man/man8/intltoolize.8
 share/aclocal/intltool.m4
 share/intltool/Makefile.in.in
-@dirrm share/intltool

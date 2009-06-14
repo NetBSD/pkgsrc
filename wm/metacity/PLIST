@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/03/16 20:10:19 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 18:19:00 joerg Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -214,27 +214,3 @@ share/themes/Simple/metacity-1/maximize.png
 share/themes/Simple/metacity-1/maximized.png
 share/themes/Simple/metacity-1/metacity-theme-1.xml
 share/themes/Simple/metacity-1/minimize.png
-@dirrm share/themes/Simple/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Simple
-@dirrm share/themes/Metabox/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Metabox
-@dirrm share/themes/Esco/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Esco
-@dirrm share/themes/Crux/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Crux
-@dirrm share/themes/Bright/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Bright
-@dirrm share/themes/Atlanta/metacity-1
-@comment in theme-dirs: @dirrm share/themes/Atlanta
-@dirrm share/themes/AgingGorilla/metacity-1
-@comment in theme-dirs: @dirrm share/themes/AgingGorilla
-@dirrm share/metacity/icons
-@dirrm share/metacity
-@comment in gnome2-dirs: @dirrm share/gnome/wm-properties
-@dirrm share/gnome-control-center/keybindings
-@dirrm share/gnome/help/creating-metacity-themes/C
-@dirrm share/gnome/help/creating-metacity-themes
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/metacity-1/metacity-private
-@dirrm include/metacity-1

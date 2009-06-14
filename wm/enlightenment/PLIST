@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/07/04 07:39:33 dsieger Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:18:57 joerg Exp $
 bin/e16
 bin/edox
 bin/eesh
@@ -390,65 +390,3 @@ share/locale/pt_BR/LC_MESSAGES/e16.mo
 share/locale/ru/LC_MESSAGES/e16.mo
 share/locale/sv/LC_MESSAGES/e16.mo
 share/locale/tr/LC_MESSAGES/e16.mo
-@dirrm share/e16/themes/winter/ttfonts
-@dirrm share/e16/themes/winter/tooltips/images
-@dirrm share/e16/themes/winter/tooltips
-@dirrm share/e16/themes/winter/sound
-@dirrm share/e16/themes/winter/slideouts
-@dirrm share/e16/themes/winter/pager/images
-@dirrm share/e16/themes/winter/pager
-@dirrm share/e16/themes/winter/menustyles/images
-@dirrm share/e16/themes/winter/menustyles
-@dirrm share/e16/themes/winter/init/images
-@dirrm share/e16/themes/winter/init
-@dirrm share/e16/themes/winter/iconbox/images
-@dirrm share/e16/themes/winter/iconbox
-@dirrm share/e16/themes/winter/focuslist/images
-@dirrm share/e16/themes/winter/focuslist
-@dirrm share/e16/themes/winter/eterm/images
-@dirrm share/e16/themes/winter/eterm
-@dirrm share/e16/themes/winter/epplets/images
-@dirrm share/e16/themes/winter/epplets
-@dirrm share/e16/themes/winter/dragbar/images
-@dirrm share/e16/themes/winter/dragbar
-@dirrm share/e16/themes/winter/dock
-@dirrm share/e16/themes/winter/dialogs/images
-@dirrm share/e16/themes/winter/dialogs
-@dirrm share/e16/themes/winter/cursors
-@dirrm share/e16/themes/winter/coords
-@dirrm share/e16/themes/winter/common/images
-@dirrm share/e16/themes/winter/common
-@dirrm share/e16/themes/winter/buttons
-@dirrm share/e16/themes/winter/borders/common/images
-@dirrm share/e16/themes/winter/borders/common
-@dirrm share/e16/themes/winter/borders/TRANSIENT
-@dirrm share/e16/themes/winter/borders/SHAPED
-@dirrm share/e16/themes/winter/borders/RIGHT_PAGER_SHADE_LEFT
-@dirrm share/e16/themes/winter/borders/RIGHT_PAGER/images
-@dirrm share/e16/themes/winter/borders/RIGHT_PAGER
-@dirrm share/e16/themes/winter/borders/PAGER_SHADE_RIGHT
-@dirrm share/e16/themes/winter/borders/PAGER_AUTOSHADE
-@dirrm share/e16/themes/winter/borders/PAGER/images
-@dirrm share/e16/themes/winter/borders/PAGER
-@dirrm share/e16/themes/winter/borders/MENU_BORDER_ONLY
-@dirrm share/e16/themes/winter/borders/MENU
-@dirrm share/e16/themes/winter/borders/ICONBOX
-@dirrm share/e16/themes/winter/borders/FIXED_SIZE
-@dirrm share/e16/themes/winter/borders/DIALOG
-@dirrm share/e16/themes/winter/borders/DEFAULT
-@dirrm share/e16/themes/winter/borders/BORDER_ONLY/images
-@dirrm share/e16/themes/winter/borders/BORDER_ONLY
-@dirrm share/e16/themes/winter/borders/BORDERLESS
-@dirrm share/e16/themes/winter/borders/AUTOSHADE
-@dirrm share/e16/themes/winter/borders
-@dirrm share/e16/themes/winter/backgrounds/images
-@dirrm share/e16/themes/winter/backgrounds
-@dirrm share/e16/themes/winter/ABOUT
-@dirrm share/e16/themes/winter
-@dirrm share/e16/themes
-@dirrm share/e16/scripts
-@dirrm share/e16/misc
-@dirrm share/e16/config/pix
-@dirrm share/e16/config
-@dirrm share/e16/E-docs
-@dirrm share/e16

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/12 09:22:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:12 joerg Exp $
 bin/wishwn
 bin/wn
 bin/wnb
@@ -123,9 +123,3 @@ share/doc/WordNet/ps/wnpkgs.7.ps
 share/doc/WordNet/ps/wnsearch.3.ps
 share/doc/WordNet/ps/wnstats.7.ps
 share/doc/WordNet/ps/wnutil.3.ps
-@dirrm share/doc/WordNet/ps
-@dirrm share/doc/WordNet/pdf
-@dirrm share/doc/WordNet/html
-@dirrm share/doc/WordNet
-@dirrm lib/wnres
-@dirrm dict

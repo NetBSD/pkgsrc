@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/13 00:45:20 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:59 joerg Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -250,31 +250,4 @@ share/planner/ui/sql-plugin.ui
 share/planner/ui/task-view.ui
 share/planner/ui/time-table-view.ui
 share/planner/ui/xml-planner-plugin.ui
-@dirrm share/planner/ui
-@dirrm share/planner/stylesheets
-@dirrm share/planner/sql
-@dirrm share/planner/images
-@dirrm share/planner/glade
-@dirrm share/planner/dtd
-@dirrm share/planner
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/planner
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
 @exec ${MKDIR} %D/share/gtk-doc/html/libplanner
-@dirrm share/gtk-doc/html/libplanner
-@dirrm share/gnome/help/planner/eu/figures
-@dirrm share/gnome/help/planner/eu
-@dirrm share/gnome/help/planner/C/figures
-@dirrm share/gnome/help/planner/C
-@dirrm share/gnome/help/planner
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/planner
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/planner/storage-modules
-@dirrm lib/planner/plugins
-@dirrm lib/planner/file-modules
-@dirrm lib/planner
-@dirrm include/planner-1.0/libplanner
-@dirrm include/planner-1.0

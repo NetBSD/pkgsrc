@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:21:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
 bin/htmldiff
 bin/ldiff
 ${GEM_HOME}/cache/diff-lcs-${PKGVERSION}.gem
@@ -18,9 +18,3 @@ ${GEM_LIBDIR}/lib/diff/lcs/ldiff.rb
 ${GEM_LIBDIR}/lib/diff/lcs/string.rb
 ${GEM_LIBDIR}/tests/00test.rb
 ${GEM_HOME}/specifications/diff-lcs-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tests
-@dirrm ${GEM_LIBDIR}/lib/diff/lcs
-@dirrm ${GEM_LIBDIR}/lib/diff
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

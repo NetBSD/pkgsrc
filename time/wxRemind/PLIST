@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/17 15:56:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:18:01 joerg Exp $
 bin/wxremalert
 bin/wxremdata
 bin/wxremind
@@ -73,7 +73,3 @@ ${PYSITELIB}/wxRemind/wxRemVersion.pyo
 ${PYSITELIB}/wxRemind/wxRemind.py
 ${PYSITELIB}/wxRemind/wxRemind.pyc
 ${PYSITELIB}/wxRemind/wxRemind.pyo
-@dirrm ${PYSITELIB}/wxRemind/analogclock/lib_setup
-@dirrm ${PYSITELIB}/wxRemind/analogclock
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/wxRemind
