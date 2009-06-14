@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2003/09/23 15:06:59 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:01:29 joerg Exp $
 include/canna/RK.h
 include/canna/jrkanji.h
 include/canna/keydef.h
@@ -148,10 +148,3 @@ share/canna/sample/unix.canna
 share/canna/sample/verbose.canna
 share/canna/sample/vje.canna
 share/canna/sample/wx2+.canna
-@dirrm share/canna/sample/src
-@dirrm share/canna/sample
-@dirrm share/canna/dic/sample/src
-@dirrm share/canna/dic/sample
-@dirrm share/canna/dic
-@dirrm share/canna
-@dirrm include/canna

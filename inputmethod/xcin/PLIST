@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/28 18:12:29 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:01:33 joerg Exp $
 bin/cin2tab
 bin/xcin
 lib/libxcin.la
@@ -56,14 +56,3 @@ share/doc/xcin/modules/im_comm
 share/doc/xcin/modules/zh_hex
 share/examples/xcin/xcinrc
 share/locale/zh_TW/LC_MESSAGES/xcin.mo
-@dirrm share/examples/xcin
-@dirrm share/doc/xcin/modules
-@dirrm share/doc/xcin/internal
-@dirrm share/doc/xcin/history
-@dirrm share/doc/xcin/En/internal
-@dirrm share/doc/xcin/En
-@dirrm share/doc/xcin
-@dirrm lib/xcin/tab/${EUC_LOCALE}
-@dirrm lib/xcin/tab/big5
-@dirrm lib/xcin/tab
-@dirrm lib/xcin

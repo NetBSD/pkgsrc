@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/25 10:54:14 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:01:30 joerg Exp $
 lib/bonobo/servers/GNOME_IMHangulStatusApplet.server
 libexec/imhangul-status-applet
 share/gconf/schemas/imhangul_status.schemas
@@ -28,15 +28,3 @@ share/imhangul/themes/keyboard/none.png
 share/locale/ko/LC_MESSAGES/imhangul_status_applet.mo
 share/pixmaps/imhangul-status-applet-logo.png
 share/pixmaps/imhangul-status-applet.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/imhangul/themes/keyboard
-@dirrm share/imhangul/themes/SimplyRed
-@dirrm share/imhangul/themes/Onion
-@dirrm share/imhangul/themes/Mac
-@dirrm share/imhangul/themes/MSWindows
-@dirrm share/imhangul/themes/KingSejong
-@dirrm share/imhangul/themes
-@dirrm share/imhangul
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in libbonobo: @dirrm lib/bonobo/servers

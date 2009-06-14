@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:49:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:01:32 joerg Exp $
 ${RUBY_VENDORLIB}/prime/prime-dict-config.rb
 share/prime/dict/prime-dict
 share/prime/dict/prime-dict-en
@@ -12,6 +12,3 @@ share/prime/dict/prime-dict-pos.ary
 share/prime/dict/prime-dict-pos_literal.ary
 share/prime/dict/prime-dict.ary
 share/prime/dict/prime-dict_literal.ary
-@dirrm share/prime/dict
-@dirrm share/prime
-@dirrm ${RUBY_VENDORLIB}/prime

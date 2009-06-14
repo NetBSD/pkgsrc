@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 13:44:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:33 joerg Exp $
 bin/uim-el-agent
 bin/uim-el-helper-agent
 ${EMACS_LISPPREFIX}/uim-el/uim-candidate.el
@@ -14,5 +14,3 @@ ${EMACS_LISPPREFIX}/uim-el/uim-version.el
 ${EMACS_LISPPREFIX}/uim-el/uim.el
 share/doc/uim/emacs/README
 share/doc/uim/emacs/README.ja
-@dirrm ${EMACS_LISPPREFIX}/uim-el
-@dirrm share/doc/uim/emacs

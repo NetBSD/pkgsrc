@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/26 05:55:15 hasso Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:00:33 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/core/README
 share/doc/gnuradio-${PKGVERSION}/core/README.hacking
 share/doc/gnuradio-${PKGVERSION}/core/html/ad9862_8h-source.html
@@ -8716,6 +8716,3 @@ share/doc/gnuradio-${PKGVERSION}/core/html/vxWorks_8cc.html
 share/doc/gnuradio-${PKGVERSION}/core/html/vxWorks_8cc__incl.map
 share/doc/gnuradio-${PKGVERSION}/core/html/vxWorks_8cc__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/vxWorks_8cc__incl.png
-@dirrm share/doc/gnuradio-${PKGVERSION}/core/html
-@dirrm share/doc/gnuradio-${PKGVERSION}/core
-@dirrm share/doc/gnuradio-${PKGVERSION}

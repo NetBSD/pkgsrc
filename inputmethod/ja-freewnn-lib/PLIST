@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/05 19:37:22 kei Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:01:30 joerg Exp $
 include/wnn/commonhd.h
 include/wnn/config.h
 include/wnn/cplib.h
@@ -230,10 +230,3 @@ share/wnn/lt_LN/uumkey
 share/wnn/lt_LN/uumkey_e
 share/wnn/lt_LN/uumrc
 share/wnn/serverdefs
-@dirrm share/wnn/lt_LN/rk
-@dirrm share/wnn/lt_LN
-@dirrm share/wnn/ja_JP/rk.vi
-@dirrm share/wnn/ja_JP/rk
-@dirrm share/wnn/ja_JP
-@dirrm share/wnn
-@dirrm include/wnn

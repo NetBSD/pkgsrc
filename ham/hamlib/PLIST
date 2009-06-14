@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/12/06 08:48:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:00:34 joerg Exp $
 bin/rigctl
 bin/rigctld
 bin/rigmem
@@ -55,4 +55,3 @@ man/man8/rpc.rotd.8
 sbin/rpc.rigd
 sbin/rpc.rotd
 share/aclocal/hamlib.m4
-@dirrm include/hamlib

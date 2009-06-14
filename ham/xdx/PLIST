@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/12/29 19:58:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:00:35 joerg Exp $
 bin/xdx
 man/man1/xdx.1
 share/applications/Xdx.desktop
@@ -24,6 +24,3 @@ share/xdx/pixmaps/xdx.xpm
 share/xdx/sounds/attention.wav
 share/xdx/wwv.gnuplot
 share/xdx/wwv.gnuplot~
-@dirrm share/xdx/sounds
-@dirrm share/xdx/pixmaps
-@dirrm share/xdx

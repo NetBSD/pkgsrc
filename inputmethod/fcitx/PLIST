@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/16 13:04:07 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:01:29 joerg Exp $
 bin/createPYMB
 bin/fcitx
 bin/mb2txt
@@ -15,6 +15,3 @@ share/fcitx/data/wbx.mb
 share/fcitx/doc/cjkvinput.txt
 share/fcitx/doc/fcitx3.pdf
 share/fcitx/doc/wb_fh.htm
-@dirrm share/fcitx/doc
-@dirrm share/fcitx/data
-@dirrm share/fcitx

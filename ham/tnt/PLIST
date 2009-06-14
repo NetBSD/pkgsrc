@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:00:34 joerg Exp $
 bin/tnt
 bin/tntc
 include/tntrun.h
@@ -77,8 +77,3 @@ share/tnt/sounds/failure.au
 share/tnt/sounds/play
 share/tnt/sounds/reset.au
 share/tnt/sounds/ring.au
-@dirrm share/tnt/sounds
-@dirrm share/tnt/conf
-@dirrm share/tnt
-@dirrm share/doc/tnt
-@dirrm libexec/tnt
