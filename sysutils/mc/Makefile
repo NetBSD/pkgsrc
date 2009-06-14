@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2008/02/25 07:23:03 obache Exp $
+# $NetBSD: Makefile,v 1.74 2009/06/14 21:28:47 joerg Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	4
@@ -30,7 +30,6 @@ CONFIGURE_ARGS+=	UNZIP=${TOOLS_PATH.unzip} ZIP=${TOOLS_PATH.zip}
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 .include "options.mk"
-PLIST_SRC+=		${PKGDIR}/PLIST.end
 
 PKG_SYSCONFSUBDIR=	mc
 SUBST_CLASSES+=		conf

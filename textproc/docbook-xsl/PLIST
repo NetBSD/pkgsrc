@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:17:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/14 21:36:31 joerg Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
@@ -1587,4 +1587,3 @@ share/xsl/docbook/xhtml/toc.xsl
 share/xsl/docbook/xhtml/verbatim.xsl
 share/xsl/docbook/xhtml/xref.xsl
 @comment in xmlcatmgr: share/xml/catalog
-@unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}

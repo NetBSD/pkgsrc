@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:17:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 21:36:31 joerg Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -489,5 +489,5 @@ share/groff/${PKGVERSION}/tmac/www.tmac
 share/groff/current
 share/groff/site-tmac/man.local
 share/groff/site-tmac/mdoc.local
-@exec ${MKDIR} %D/share/groff/site-font
-@exec ${MKDIR} %D/lib/groff/site-tmac
+@pkgdir share/groff/site-font
+@pkgdir lib/groff/site-tmac

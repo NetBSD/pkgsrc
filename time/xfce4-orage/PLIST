@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:38:08 joerg Exp $
 bin/orage
 lib/xfce4/mcs-plugins/orage_plugin.la
 libexec/xfce4/panel-plugins/orageclock
@@ -458,4 +458,3 @@ share/orage/zoneinfo/Pacific/Wallis.ics
 share/orage/zoneinfo/Pacific/Yap.ics
 share/orage/zoneinfo/zones.tab
 share/xfce4/panel-plugins/orageclock.desktop
-@unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:28:48 joerg Exp $
 bin/facter
 ${GEM_HOME}/cache/facter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -78,4 +78,3 @@ ${GEM_LIBDIR}/spec/unit/util/ip.rb
 ${GEM_LIBDIR}/spec/unit/util/loader.rb
 ${GEM_LIBDIR}/spec/unit/util/resolution.rb
 ${GEM_HOME}/specifications/facter-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}

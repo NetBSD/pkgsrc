@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:17:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 21:38:08 joerg Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
@@ -367,5 +367,3 @@ share/horde/kronolith/view.php
 share/horde/kronolith/week.php
 share/horde/kronolith/workweek.php
 share/horde/kronolith/year.php
-@unexec ${RMDIR} %D/share/horde/kronolith/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/horde/kronolith 2>/dev/null || ${TRUE}

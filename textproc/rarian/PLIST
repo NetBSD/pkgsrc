@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:36:32 joerg Exp $
 bin/rarian-example
 bin/rarian-sk-config
 bin/rarian-sk-extract
@@ -41,4 +41,4 @@ share/librarian/manual/rar-lib.xhtml
 share/librarian/manual/rar-mdf.xhtml
 share/librarian/manual/rar-skcompat.xhtml
 share/librarian/rarian-sk-cl.xml
-@exec ${MKDIR} %D/share/omf
+@pkgdir share/omf

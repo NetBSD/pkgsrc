@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:36:33 joerg Exp $
 lib/java/saxon.jar
 share/doc/java/saxon/api-guide.html
 share/doc/java/saxon/changes.html
@@ -411,4 +411,3 @@ share/examples/java/saxon/styles/books-csv.xsl
 share/examples/java/saxon/styles/books-sql.xsl
 share/examples/java/saxon/styles/books-tle.xsl
 share/examples/java/saxon/styles/bible.xsl
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

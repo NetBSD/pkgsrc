@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 21:28:47 joerg Exp $
 bin/mc
 bin/mcmfmt
 bin/mcview
@@ -76,10 +76,3 @@ share/mc/mc.hlp.sr
 share/mc/mc.lib
 share/mc/mc.menu
 share/mc/mc.menu.sr
-@unexec ${RMDIR} %D/man/sr/man8 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sr/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sr 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/hu/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/hu 2>/dev/null || ${TRUE}

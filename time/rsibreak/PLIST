@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 21:38:08 joerg Exp $
 bin/rsibreak
 share/applications/kde/rsibreak.desktop
 share/doc/kde/HTML/da/rsibreak/common
@@ -81,5 +81,5 @@ share/locale/sr/LC_MESSAGES/rsibreak.mo
 share/locale/sr@Latn/LC_MESSAGES/rsibreak.mo
 share/locale/sv/LC_MESSAGES/rsibreak.mo
 share/locale/tr/LC_MESSAGES/rsibreak.mo
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html
+@pkgdir share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
+@pkgdir share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html

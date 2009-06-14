@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 21:28:47 joerg Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -114,4 +114,4 @@ share/locale/vi/LC_MESSAGES/gvfs.mo
 share/locale/zh_CN/LC_MESSAGES/gvfs.mo
 share/locale/zh_HK/LC_MESSAGES/gvfs.mo
 share/locale/zh_TW/LC_MESSAGES/gvfs.mo
-@exec ${MKDIR} %D/share/gvfs/remote-volume-monitors
+@pkgdir share/gvfs/remote-volume-monitors
