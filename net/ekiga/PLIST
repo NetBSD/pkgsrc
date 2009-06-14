@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/18 13:08:07 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:26 joerg Exp $
 bin/ekiga
 bin/ekiga-config-tool
 bin/ekiga-helper
@@ -340,61 +340,3 @@ share/sounds/ekiga/dialtone.wav
 share/sounds/ekiga/newmessage.wav
 share/sounds/ekiga/ring.wav
 share/sounds/ekiga/voicemail.wav
-@dirrm share/sounds/ekiga
-@comment in xdg-dirs: @dirrm share/sounds
-@dirrm share/pixmaps/ekiga
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/ekiga
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/72x72/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/72x72
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/ekiga/uk/figures
-@dirrm share/gnome/help/ekiga/uk
-@dirrm share/gnome/help/ekiga/sv/figures
-@dirrm share/gnome/help/ekiga/sv
-@dirrm share/gnome/help/ekiga/ru/figures
-@dirrm share/gnome/help/ekiga/ru
-@dirrm share/gnome/help/ekiga/pt_BR/figures
-@dirrm share/gnome/help/ekiga/pt_BR
-@dirrm share/gnome/help/ekiga/oc/figures
-@dirrm share/gnome/help/ekiga/oc
-@dirrm share/gnome/help/ekiga/fr/figures
-@dirrm share/gnome/help/ekiga/fr
-@dirrm share/gnome/help/ekiga/fi/figures
-@dirrm share/gnome/help/ekiga/fi
-@dirrm share/gnome/help/ekiga/eu/figures
-@dirrm share/gnome/help/ekiga/eu
-@dirrm share/gnome/help/ekiga/es/figures
-@dirrm share/gnome/help/ekiga/es
-@dirrm share/gnome/help/ekiga/en_GB/figures
-@dirrm share/gnome/help/ekiga/en_GB
-@dirrm share/gnome/help/ekiga/el/figures
-@dirrm share/gnome/help/ekiga/el
-@dirrm share/gnome/help/ekiga/de/figures
-@dirrm share/gnome/help/ekiga/de
-@dirrm share/gnome/help/ekiga/ca/figures
-@dirrm share/gnome/help/ekiga/ca
-@dirrm share/gnome/help/ekiga/bg/figures
-@dirrm share/gnome/help/ekiga/bg
-@dirrm share/gnome/help/ekiga/C/figures
-@dirrm share/gnome/help/ekiga/C
-@dirrm share/gnome/help/ekiga
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in dbus: @dirrm share/dbus-1
-@comment in xdg-dirs: @dirrm share/applications

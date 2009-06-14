@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST.kde,v 1.2 2008/04/29 20:16:08 wiz Exp $
+@comment $NetBSD: PLIST.kde,v 1.3 2009/06/14 18:08:04 joerg Exp $
 bin/kde-gnash
 lib/kde3/libklashpart.la
 share/kde/apps/klash/klashpartui.rc
 share/kde/apps/klash/pluginsinfo
 share/kde/services/klash_part.desktop
-@dirrm share/kde/apps/klash
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde

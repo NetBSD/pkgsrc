@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/19 03:36:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:45 joerg Exp $
 bin/wsbasic
 share/wsbasic/add.b
 share/wsbasic/argtest.b
@@ -22,4 +22,3 @@ share/wsbasic/runtest.b
 share/wsbasic/speed2.b
 share/wsbasic/strings.b
 share/wsbasic/while.b
-@dirrm share/wsbasic

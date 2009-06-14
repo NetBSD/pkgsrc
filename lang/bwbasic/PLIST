@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/20 10:39:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:28 joerg Exp $
 bin/bwbasic
 man/man1/bwbasic.1
 share/bwbasic/bwbtest/abs.bas
@@ -43,5 +43,3 @@ share/bwbasic/bwbtest/term.bas
 share/bwbasic/bwbtest/whilwend.bas
 share/bwbasic/bwbtest/width.bas
 share/bwbasic/bwbtest/writeinp.bas
-@dirrm share/bwbasic/bwbtest
-@dirrm share/bwbasic

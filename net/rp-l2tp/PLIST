@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/18 16:39:18 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:41 joerg Exp $
 lib/l2tp/plugins/cmd.so
 lib/l2tp/plugins/sync-pppd.so
 man/man5/l2tp.conf.5
@@ -6,5 +6,3 @@ man/man8/l2tpd.8
 sbin/l2tp-control
 sbin/l2tpd
 share/examples/l2tp.conf
-@dirrm lib/l2tp/plugins
-@dirrm lib/l2tp

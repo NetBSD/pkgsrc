@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/03/09 09:41:36 gson Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:40 joerg Exp $
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
@@ -227,7 +227,3 @@ ${PYSITELIB}/dns/version.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo
-@dirrm ${PYSITELIB}/dns/rdtypes/IN
-@dirrm ${PYSITELIB}/dns/rdtypes/ANY
-@dirrm ${PYSITELIB}/dns/rdtypes
-@dirrm ${PYSITELIB}/dns

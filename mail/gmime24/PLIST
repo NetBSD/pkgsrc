@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/24 16:37:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:34 joerg Exp $
 bin/uudecode
 bin/uuencode
 include/gmime-2.4/gmime/gmime-charset.h
@@ -135,6 +135,3 @@ share/gtk-doc/html/gmime-2.4/left.png
 share/gtk-doc/html/gmime-2.4/right.png
 share/gtk-doc/html/gmime-2.4/style.css
 share/gtk-doc/html/gmime-2.4/up.png
-@dirrm share/gtk-doc/html/gmime-2.4
-@dirrm include/gmime-2.4/gmime
-@dirrm include/gmime-2.4

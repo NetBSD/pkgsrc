@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/04/07 09:55:36 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:08:05 joerg Exp $
 lib/gstreamer-0.10/libgstasf.la
 lib/gstreamer-0.10/libgstdvdlpcmdec.la
 lib/gstreamer-0.10/libgstdvdsub.la
@@ -36,4 +36,3 @@ share/locale/tr/LC_MESSAGES/gst-plugins-ugly-0.10.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-ugly-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-ugly-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-ugly-0.10.mo
-@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/29 20:01:45 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:46 joerg Exp $
 bin/orpie
 bin/orpie-curses-keys
 man/man1/orpie-curses-keys.1
 man/man1/orpie.1
 man/man5/orpierc.5
 share/examples/orpie/orpierc
-@dirrm share/examples/orpie

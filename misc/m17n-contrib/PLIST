@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/12 08:17:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:27 joerg Exp $
 share/locale/eo/LC_MESSAGES/m17n-contrib.mo
 share/m17n/as-inscript.mim
 share/m17n/as-phonetic.mim
@@ -84,6 +84,3 @@ share/m17n/ur-phonetic.mim
 share/m17n/vi-han.mim
 share/m17n/vi-nom-vni.mim
 share/m17n/vi-nom.mim
-@dirrm share/m17n/scripts
-@dirrm share/m17n/icons
-@dirrm share/m17n

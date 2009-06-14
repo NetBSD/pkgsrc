@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/11/19 00:32:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:07:32 joerg Exp $
 bin/xchm
 share/locale/bg/LC_MESSAGES/xchm.mo
 share/locale/cs/LC_MESSAGES/xchm.mo
@@ -26,4 +26,3 @@ share/pixmaps/xchmdoc-128.xpm
 share/pixmaps/xchmdoc-16.xpm
 share/pixmaps/xchmdoc-32.xpm
 share/pixmaps/xchmdoc-48.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps

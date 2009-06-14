@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/06 12:00:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:34 joerg Exp $
 bin/imali
 bin/imcat
 bin/imcd
@@ -80,8 +80,3 @@ share/examples/im/password
 share/examples/im/scan.sbr
 share/examples/im/scan.sbr.sample1
 share/examples/im/scan.sbr.sample2
-@dirrm share/examples/im
-@dirrm share/doc/im/man/ja
-@dirrm share/doc/im/man
-@dirrm share/doc/im
-@dirrm ${PERL5_SUB_INSTALLVENDORLIB}/IM

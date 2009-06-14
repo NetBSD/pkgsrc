@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:03:31 joerg Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -263,33 +263,6 @@ share/gauche/${PKGVERSION}/template.test.scm
 @exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM} 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/share/gauche/site 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/share/gauche/site/lib 2>/dev/null || ${TRUE}
-@dirrm share/gauche/${PKGVERSION}/lib/www/cgi
-@dirrm share/gauche/${PKGVERSION}/lib/www
-@dirrm share/gauche/${PKGVERSION}/lib/util
-@dirrm share/gauche/${PKGVERSION}/lib/text
-@dirrm share/gauche/${PKGVERSION}/lib/sxml
-@dirrm share/gauche/${PKGVERSION}/lib/srfi-29
-@dirrm share/gauche/${PKGVERSION}/lib/srfi-14
-@dirrm share/gauche/${PKGVERSION}/lib/rfc
-@dirrm share/gauche/${PKGVERSION}/lib/math
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/vm
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/serializer
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/package
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/mop
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/interactive
-@dirrm share/gauche/${PKGVERSION}/lib/gauche/cgen
-@dirrm share/gauche/${PKGVERSION}/lib/gauche
-@dirrm share/gauche/${PKGVERSION}/lib/file
-@dirrm share/gauche/${PKGVERSION}/lib/dbm
-@dirrm share/gauche/${PKGVERSION}/lib/dbd
-@dirrm share/gauche/${PKGVERSION}/lib/compat
-@dirrm share/gauche/${PKGVERSION}/lib/binary
-@dirrm share/gauche/${PKGVERSION}/lib
-@dirrm share/gauche/${PKGVERSION}
-@dirrm lib/gauche/${PKGVERSION}/include/gauche
-@dirrm lib/gauche/${PKGVERSION}/include
-@dirrm lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/gauche/${PKGVERSION}
 @unexec ${RMDIR} %D/share/gauche/site/lib 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gauche/site 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/gauche 2>/dev/null || ${TRUE}

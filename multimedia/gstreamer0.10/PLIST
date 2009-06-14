@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/05/25 15:59:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:08:06 joerg Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -262,14 +262,3 @@ share/locale/uk/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/vi/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/zh_TW/LC_MESSAGES/gstreamer-0.10.mo
-@dirrm share/gtk-doc/html/gstreamer-plugins-0.10
-@dirrm share/gtk-doc/html/gstreamer-libs-0.10
-@dirrm share/gtk-doc/html/gstreamer-0.10
-@dirrm lib/gstreamer-0.10
-@dirrm include/gstreamer-0.10/gst/net
-@dirrm include/gstreamer-0.10/gst/dataprotocol
-@dirrm include/gstreamer-0.10/gst/controller
-${PLIST.gstcheck}@dirrm include/gstreamer-0.10/gst/check
-@dirrm include/gstreamer-0.10/gst/base
-@dirrm include/gstreamer-0.10/gst
-@dirrm include/gstreamer-0.10

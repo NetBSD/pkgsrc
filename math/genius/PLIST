@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/04/08 18:22:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:05:43 joerg Exp $
 bin/genius
 bin/gnome-genius
 include/genius/compil.h
@@ -117,32 +117,3 @@ share/mime-info/genius.keys
 share/mime-info/genius.mime
 share/mime/packages/genius.xml
 share/omf/genius/genius-C.omf
-@dirrm share/omf/genius
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/genius/C/figures
-@dirrm share/gnome/help/genius/C
-@dirrm share/gnome/help/genius
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/genius/plugins
-@dirrm share/genius/gtksourceview
-@dirrm share/genius/gel/symbolic
-@dirrm share/genius/gel/statistics
-@dirrm share/genius/gel/sets
-@dirrm share/genius/gel/number_theory
-@dirrm share/genius/gel/misc
-@dirrm share/genius/gel/linear_algebra
-@dirrm share/genius/gel/functions
-@dirrm share/genius/gel/equation_solving
-@dirrm share/genius/gel/combinatorics
-@dirrm share/genius/gel/calculus
-@dirrm share/genius/gel
-@dirrm share/genius
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
-@dirrm lib/genius
-@dirrm include/genius

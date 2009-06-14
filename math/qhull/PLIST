@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/19 18:00:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:48 joerg Exp $
 bin/qconvex
 bin/qdelaunay
 bin/qhalf
@@ -72,7 +72,3 @@ share/doc/qhull/qh-qhull.htm
 share/doc/qhull/qh-set.htm
 share/doc/qhull/qh-stat.htm
 share/doc/qhull/qh-user.htm
-@dirrm share/doc/qhull/html
-@dirrm share/doc/qhull/examples
-@dirrm share/doc/qhull
-@dirrm include/qhull

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/18 16:39:43 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:38 joerg Exp $
 bin/csunit
 bin/ilinstall
 bin/jsrun
@@ -128,15 +128,3 @@ lib/cscc/lib/mscorlib.dll
 lib/cscc/lib/pinvoke.map
 lib/cscc/lib/sysglobl.dll
 share/cscc/config/machine.default
-@dirrm share/cscc/config
-@dirrm share/cscc
-@dirrm lib/cscc/lib/de
-@dirrm lib/cscc/lib/ca
-@dirrm lib/cscc/lib/8.0.50727.42/de
-@dirrm lib/cscc/lib/8.0.50727.42/ca
-@dirrm lib/cscc/lib/8.0.50727.42
-@dirrm lib/cscc/lib/2.0.0.0/de
-@dirrm lib/cscc/lib/2.0.0.0/ca
-@dirrm lib/cscc/lib/2.0.0.0
-@dirrm lib/cscc/lib/0.81.0.1407
-@dirrm lib/cscc/lib

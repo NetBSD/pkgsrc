@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2009/03/21 18:25:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.43 2009/06/14 18:09:42 joerg Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -623,29 +623,3 @@ share/samba/swat/using_samba/inx.html
 share/samba/swat/using_samba/samba2_s.gif
 share/samba/swat/using_samba/samba2_xs.gif
 share/samba/swat/using_samba/toc.html
-@dirrm share/samba/swat/using_samba/figs
-@dirrm share/samba/swat/using_samba
-@dirrm share/samba/swat/lang/tr/images
-@dirrm share/samba/swat/lang/tr/help
-@dirrm share/samba/swat/lang/tr
-@dirrm share/samba/swat/lang/ja/help
-@dirrm share/samba/swat/lang/ja
-@dirrm share/samba/swat/lang
-@dirrm share/samba/swat/include
-@dirrm share/samba/swat/images
-@dirrm share/samba/swat/help/manpages
-@dirrm share/samba/swat/help/Samba3-HOWTO/images
-@dirrm share/samba/swat/help/Samba3-HOWTO
-@dirrm share/samba/swat/help/Samba3-Developers-Guide
-@dirrm share/samba/swat/help/Samba3-ByExample/images
-@dirrm share/samba/swat/help/Samba3-ByExample
-@dirrm share/samba/swat/help
-@dirrm share/samba/swat
-@dirrm share/samba
-${PLIST.pam}@dirrm share/examples/samba/pam_smbpass
-@dirrm share/examples/samba
-@dirrm share/doc/samba
-@dirrm lib/samba/vfs
-@dirrm lib/samba/charset
-@dirrm lib/samba/auth
-@dirrm lib/samba

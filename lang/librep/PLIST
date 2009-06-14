@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/04/16 18:08:32 tnn Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:03:35 joerg Exp $
 bin/rep
 bin/rep-config
 bin/rep-remote
@@ -243,37 +243,3 @@ share/rep/${PKGVERSION}/lisp/unscheme/syntax-funs.jl
 share/rep/${PKGVERSION}/lisp/unscheme/syntax-funs.jlc
 share/rep/${PKGVERSION}/lisp/unscheme/syntax.jl
 share/rep/${PKGVERSION}/lisp/unscheme/syntax.jlc
-@dirrm share/rep/${PKGVERSION}/lisp/unscheme
-@dirrm share/rep/${PKGVERSION}/lisp/scheme
-@dirrm share/rep/${PKGVERSION}/lisp/rep/xml
-@dirrm share/rep/${PKGVERSION}/lisp/rep/www
-@dirrm share/rep/${PKGVERSION}/lisp/rep/vm/compiler
-@dirrm share/rep/${PKGVERSION}/lisp/rep/vm
-@dirrm share/rep/${PKGVERSION}/lisp/rep/util
-@dirrm share/rep/${PKGVERSION}/lisp/rep/threads
-@dirrm share/rep/${PKGVERSION}/lisp/rep/test
-@dirrm share/rep/${PKGVERSION}/lisp/rep/system
-@dirrm share/rep/${PKGVERSION}/lisp/rep/net
-@dirrm share/rep/${PKGVERSION}/lisp/rep/mail
-@dirrm share/rep/${PKGVERSION}/lisp/rep/lang
-@dirrm share/rep/${PKGVERSION}/lisp/rep/io/file-handlers/remote
-@dirrm share/rep/${PKGVERSION}/lisp/rep/io/file-handlers
-@dirrm share/rep/${PKGVERSION}/lisp/rep/io
-@dirrm share/rep/${PKGVERSION}/lisp/rep/i18n
-@dirrm share/rep/${PKGVERSION}/lisp/rep/data
-@dirrm share/rep/${PKGVERSION}/lisp/rep
-@dirrm share/rep/${PKGVERSION}/lisp
-@dirrm share/rep/${PKGVERSION}
-@dirrm share/rep
-@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/vm
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/util
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/lang
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/io/db
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/io
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/i18n
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep/data
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rep
-@dirrm libexec/rep/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/rep/${PKGVERSION}
-@dirrm libexec/rep

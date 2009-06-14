@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:05:51 joerg Exp $
 bin/gist
 bin/yorick
 info/yorick.info
@@ -173,17 +173,4 @@ share/yorick/1.6/i0/matrix.i
 share/yorick/1.6/i0/paths.i
 share/yorick/1.6/i0/std.i
 share/yorick/1.6/i0/stdx.i
-@dirrm share/yorick/1.6/i0
-@dirrm share/yorick/1.6/i-start
-@dirrm share/yorick/1.6/i
-@dirrm share/yorick/1.6/g
-@dirrm share/yorick/1.6/doc
-@dirrm share/yorick/1.6
-@dirrm share/yorick
-@dirrm lib/yorick/1.6/lib
-@dirrm lib/yorick/1.6/include
 @exec ${MKDIR} %D/lib/yorick/1.6/i-start
-@dirrm lib/yorick/1.6/i-start
-@dirrm lib/yorick/1.6/bin
-@dirrm lib/yorick/1.6
-@dirrm lib/yorick

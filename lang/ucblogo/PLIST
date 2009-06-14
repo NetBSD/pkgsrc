@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/23 00:31:23 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:44 joerg Exp $
 bin/logo
 share/doc/ucblogo/html/usermanual.html
 share/doc/ucblogo/html/usermanual_1.html
@@ -475,9 +475,3 @@ share/ucblogo/logolib/until
 share/ucblogo/logolib/while
 share/ucblogo/logolib/xcor
 share/ucblogo/logolib/ycor
-@dirrm share/ucblogo/logolib
-@dirrm share/ucblogo/helpfiles
-@dirrm share/ucblogo/csls
-@dirrm share/ucblogo
-@dirrm share/doc/ucblogo/html
-@dirrm share/doc/ucblogo

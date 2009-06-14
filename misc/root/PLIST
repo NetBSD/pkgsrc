@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/21 18:10:40 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:29 joerg Exp $
 bin/cint
 bin/hadd
 bin/makecint
@@ -2334,52 +2334,5 @@ share/root/proof/utils/pload
 share/root/proof/utils/pps
 share/root/proof/utils/proof-facility
 share/root/proof/utils/push
-@dirrm share/root/proof/utils
-@dirrm share/root/proof/etc
-@dirrm share/root/proof
-@dirrm share/root/macros
-@dirrm share/root/icons
-@dirrm share/root/fonts
-@dirrm share/root
-@dirrm share/doc/root/tutorials
-@dirrm share/doc/root/test/RootShower/icons
-@dirrm share/doc/root/test/RootShower/anim
-@dirrm share/doc/root/test/RootShower
-@dirrm share/doc/root/test/ProofBench
-@dirrm share/doc/root/test
-@dirrm share/doc/root
-@dirrm lib/root/cint/stl
-@dirrm lib/root/cint/lib/xlib
-@dirrm lib/root/cint/lib/win32api
-@dirrm lib/root/cint/lib/vcstream
-@dirrm lib/root/cint/lib/vc7strm
-@dirrm lib/root/cint/lib/stream
-@dirrm lib/root/cint/lib/stdstrct
-@dirrm lib/root/cint/lib/socket
-@dirrm lib/root/cint/lib/snstream
-@dirrm lib/root/cint/lib/qt
-@dirrm lib/root/cint/lib/pthread
-@dirrm lib/root/cint/lib/prec_stl
-@dirrm lib/root/cint/lib/posix
-@dirrm lib/root/cint/lib/longlong
-@dirrm lib/root/cint/lib/ipc
-@dirrm lib/root/cint/lib/iccstrm
-@dirrm lib/root/cint/lib/gl
 @exec ${MKDIR} %D/lib/root/cint/lib/gcc3strm/sys
-@dirrm lib/root/cint/lib/gcc3strm/sys
 @exec ${MKDIR} %D/lib/root/cint/lib/gcc3strm/bits
-@dirrm lib/root/cint/lib/gcc3strm/bits
-@dirrm lib/root/cint/lib/gcc3strm
-@dirrm lib/root/cint/lib/dll_stl
-@dirrm lib/root/cint/lib/cbstream
-@dirrm lib/root/cint/lib/bcstream
-@dirrm lib/root/cint/lib/accstrm
-@dirrm lib/root/cint/lib
-@dirrm lib/root/cint/include/sys
-@dirrm lib/root/cint/include/X11
-@dirrm lib/root/cint/include/GL
-@dirrm lib/root/cint/include
-@dirrm lib/root/cint
-@dirrm lib/root
-@dirrm include/root/Math
-@dirrm include/root

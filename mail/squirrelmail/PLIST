@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/05/22 08:23:02 martti Exp $
+@comment $NetBSD: PLIST,v 1.32 2009/06/14 18:04:43 joerg Exp $
 ${PLIST.japanese}share/squirrelmail/functions/decode/iso_2022_jp.php
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
@@ -460,52 +460,3 @@ share/squirrelmail/themes/spice_of_life_lite.php
 share/squirrelmail/themes/techno_blue.php
 share/squirrelmail/themes/turquoise.php
 share/squirrelmail/themes/wood_theme.php
-@dirrm share/squirrelmail/themes/css
-@dirrm share/squirrelmail/themes
-@dirrm share/squirrelmail/src
-@dirrm share/squirrelmail/po
-@dirrm share/squirrelmail/plugins/translate
-@dirrm share/squirrelmail/plugins/test
-@dirrm share/squirrelmail/plugins/squirrelspell/modules
-@dirrm share/squirrelmail/plugins/squirrelspell/js
-@dirrm share/squirrelmail/plugins/squirrelspell/doc
-@dirrm share/squirrelmail/plugins/squirrelspell
-@dirrm share/squirrelmail/plugins/spamcop
-@dirrm share/squirrelmail/plugins/sent_subfolders
-@dirrm share/squirrelmail/plugins/newmail/sounds
-@dirrm share/squirrelmail/plugins/newmail
-@dirrm share/squirrelmail/plugins/message_details
-@dirrm share/squirrelmail/plugins/mail_fetch
-@dirrm share/squirrelmail/plugins/listcommands
-@dirrm share/squirrelmail/plugins/info
-@dirrm share/squirrelmail/plugins/fortune
-@dirrm share/squirrelmail/plugins/filters/bulkquery
-@dirrm share/squirrelmail/plugins/filters
-@dirrm share/squirrelmail/plugins/demo
-@dirrm share/squirrelmail/plugins/delete_move_next
-@dirrm share/squirrelmail/plugins/calendar
-@dirrm share/squirrelmail/plugins/bug_report
-@dirrm share/squirrelmail/plugins/administrator
-@dirrm share/squirrelmail/plugins
-@dirrm share/squirrelmail/locale
-@dirrm share/squirrelmail/include/options
-@dirrm share/squirrelmail/include
-@dirrm share/squirrelmail/images
-@dirrm share/squirrelmail/help/en_US
-@dirrm share/squirrelmail/help
-@dirrm share/squirrelmail/functions/encode
-@dirrm share/squirrelmail/functions/decode
-@dirrm share/squirrelmail/functions
-@dirrm share/squirrelmail/doc/release_notes_archive/1.4
-@dirrm share/squirrelmail/doc/release_notes_archive/1.3
-@dirrm share/squirrelmail/doc/release_notes_archive/1.2
-@dirrm share/squirrelmail/doc/release_notes_archive
-@dirrm share/squirrelmail/doc
-@dirrm share/squirrelmail/data
-@dirrm share/squirrelmail/contrib/RPM
-@dirrm share/squirrelmail/contrib
-@dirrm share/squirrelmail/class/mime
-@dirrm share/squirrelmail/class/helper
-@dirrm share/squirrelmail/class/deliver
-@dirrm share/squirrelmail/class
-@dirrm share/examples/squirrelmail

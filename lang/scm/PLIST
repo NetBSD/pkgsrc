@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/08/02 14:47:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:03:40 joerg Exp $
 bin/scm
 bin/scmlit
 include/patchlvl.h
@@ -35,4 +35,3 @@ share/scm/wbtab.scm
 share/scm/x11.scm
 share/scm/xatoms.scm
 share/scm/xevent.scm
-@dirrm share/scm

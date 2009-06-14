@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/05 13:31:09 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:06 joerg Exp $
 bin/lottanzb
 ${PYSITELIB}/lottanzb/__init__.py
 ${PYSITELIB}/lottanzb/__init__.pyc
@@ -260,28 +260,3 @@ share/omf/lottanzb/lottanzb-nl.omf
 share/mime-info/lottanzb.keys
 share/mime-info/lottanzb.mime
 share/mime/packages/lottanzb.xml
-@dirrm share/omf/lottanzb
-@comment in rarian: @dirrm share/omf
-@dirrm share/lottanzb/glade
-@dirrm share/lottanzb
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/lottanzb/nl/figures
-@dirrm share/gnome/help/lottanzb/nl
-@dirrm share/gnome/help/lottanzb/fr/figures
-@dirrm share/gnome/help/lottanzb/fr
-@dirrm share/gnome/help/lottanzb/es/figures
-@dirrm share/gnome/help/lottanzb/es
-@dirrm share/gnome/help/lottanzb/en_GB/figures
-@dirrm share/gnome/help/lottanzb/en_GB
-@dirrm share/gnome/help/lottanzb/de/figures
-@dirrm share/gnome/help/lottanzb/de
-@dirrm share/gnome/help/lottanzb/da/figures
-@dirrm share/gnome/help/lottanzb/da
-@dirrm share/gnome/help/lottanzb/C/figures
-@dirrm share/gnome/help/lottanzb/C
-@dirrm share/gnome/help/lottanzb
-@dirrm share/doc/lottanzb
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/lottanzb/modes
-@dirrm ${PYSITELIB}/lottanzb/hellalog
-@dirrm ${PYSITELIB}/lottanzb

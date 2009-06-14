@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:04 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:42 joerg Exp $
 bin/stalin
 lib/stalin/QobiScheme.sc
 lib/stalin/Scheme-to-C-compatibility.sc
@@ -14,5 +14,3 @@ share/doc/stalin/ANNOUNCEMENT
 share/doc/stalin/COPYING
 share/doc/stalin/README
 share/doc/stalin/stalin.el
-@dirrm share/doc/stalin
-@dirrm lib/stalin

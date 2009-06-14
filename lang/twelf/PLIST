@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/05 06:25:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:44 joerg Exp $
 bin/twelf-server
 bin/twelf-sml
 info/twelf.info
@@ -358,43 +358,3 @@ share/examples/twelf/tabled/tests/test4.elf
 share/examples/twelf/tabled/tests/test5.elf
 share/examples/twelf/tabled/tests/test6.elf
 share/examples/twelf/tabled/tests/test7.elf
-@dirrm share/examples/twelf/tabled/tests
-@dirrm share/examples/twelf/tabled/subtype1
-@dirrm share/examples/twelf/tabled/subtype
-@dirrm share/examples/twelf/tabled/refine
-@dirrm share/examples/twelf/tabled/poly
-@dirrm share/examples/twelf/tabled/parsing
-@dirrm share/examples/twelf/tabled/mini-ml
-@dirrm share/examples/twelf/tabled/cr
-@dirrm share/examples/twelf/tabled/ccc
-@dirrm share/examples/twelf/tabled
-@dirrm share/examples/twelf/prop-calc
-@dirrm share/examples/twelf/polylam
-@dirrm share/examples/twelf/mini-ml
-@dirrm share/examples/twelf/lp-horn
-@dirrm share/examples/twelf/lp
-@dirrm share/examples/twelf/kolm
-@dirrm share/examples/twelf/incll
-@dirrm share/examples/twelf/handbook
-@dirrm share/examples/twelf/guide
-@dirrm share/examples/twelf/fol
-@dirrm share/examples/twelf/cut-elim
-@dirrm share/examples/twelf/cpsocc
-@dirrm share/examples/twelf/compile/debruijn1
-@dirrm share/examples/twelf/compile/debruijn
-@dirrm share/examples/twelf/compile/cxm
-@dirrm share/examples/twelf/compile/cps
-@dirrm share/examples/twelf/compile/cpm
-@dirrm share/examples/twelf/compile/cls
-@dirrm share/examples/twelf/compile
-@dirrm share/examples/twelf/church-rosser
-@dirrm share/examples/twelf/ccc
-@dirrm share/examples/twelf/arith
-@dirrm share/examples/twelf
-@dirrm share/doc/twelf
-@dirrm share/doc/html/twelf
-@dirrm ${EMACS_LISPPREFIX}/twelf
-@dirrm lib/twelf/bin/.heap
-@dirrm lib/twelf/bin/.dbase
-@dirrm lib/twelf/bin
-@dirrm lib/twelf

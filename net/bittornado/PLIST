@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/21 18:52:06 veego Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:22 joerg Exp $
 bin/bt-t-make.py
 bin/btcompletedir.py
 bin/btcopyannounce.py
@@ -165,5 +165,3 @@ ${PYSITELIB}/BitTornado/torrentlistparse.pyo
 ${PYSITELIB}/BitTornado/zurllib.py
 ${PYSITELIB}/BitTornado/zurllib.pyc
 ${PYSITELIB}/BitTornado/zurllib.pyo
-@dirrm ${PYSITELIB}/BitTornado/BT1
-@dirrm ${PYSITELIB}/BitTornado
