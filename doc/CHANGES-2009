@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2352 2009/06/14 22:28:30 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2353 2009/06/14 22:38:00 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3149,3 +3149,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-AnyEvent to 4.411 [sno 2009-06-14]
 	Updated devel/p5-Attribute-Handlers to 0.85 [sno 2009-06-14]
 	Updated devel/p5-Config-IniFiles to 2.51 [sno 2009-06-14]
+	Added databases/p5-Tie-DBI version 1.02 [sno 2009-06-14]
