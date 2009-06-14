@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 01:09:31 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 21:21:16 joerg Exp $
 bin/openvas-libnasl-config
 bin/openvas-nasl
 include/openvas/nasl.h
 lib/libopenvasnasl.la
 man/man1/openvas-libnasl-config.1
 man/man1/openvas-nasl.1
-@unexec ${RMDIR} %D/include/openvas 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:13:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 21:21:16 joerg Exp $
 bin/nessus-build
 lib/nessus/plugins_factory/Makefile
 lib/nessus/plugins_factory/libtool
@@ -6,5 +6,4 @@ lib/nessus/plugins_factory/nessus.tmpl
 man/man1/nessus-build.1
 man/man8/nessus-update-plugins.8
 sbin/nessus-update-plugins
-@exec ${MKDIR} %D/lib/nessus/plugins/.desc
-@unexec ${RMDIR} %D/lib/nessus/plugins/.desc 2>/dev/null || ${TRUE}
+@pkgdir lib/nessus/plugins/.desc
