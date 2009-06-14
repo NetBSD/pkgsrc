@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2009/06/14 22:42:57 sno Exp $
+
+SHA1 (Template-DBI-2.64.tar.gz) = 9f32974f4f9b53489d818c9c8546d65fd4921f18
+RMD160 (Template-DBI-2.64.tar.gz) = e7093c7498b245fc3ab2af04e567733c93012fb9
+Size (Template-DBI-2.64.tar.gz) = 13645 bytes
+SHA1 (patch-aa) = b6318935fb553efe2536b744f782d28dfff8f4b7

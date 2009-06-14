@@ -1,0 +1,4 @@
+This Template Toolkit plugin module provides an interface to the Perl DBI/DBD
+modules, allowing to integrate SQL queries into template documents.  It also
+provides an interface via the Tie::DBI module (if installed) so that database
+records can be accessed without having to embed any SQL in templates.
