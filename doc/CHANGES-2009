@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2324 2009/06/14 07:40:45 wiz Exp $
+$NetBSD: CHANGES-2009,v 1.2325 2009/06/14 07:53:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3121,3 +3121,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added www/opengoo version 1.4.1 [taca 2009-06-14]
 	Updated textproc/tokyodystopia to 0.9.12 [obache 2009-06-14]
 	Updated emulators/sdlmame to 0.132 [wiz 2009-06-14]
+	Updated comms/conserver8 to 8.1.16nb2 [wiz 2009-06-14]
