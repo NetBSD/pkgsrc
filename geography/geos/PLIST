@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:57:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 19:12:18 joerg Exp $
 bin/geos-config
 include/geos.h
 include/geos/algorithm/LineIntersector.h
@@ -173,5 +173,5 @@ include/geos/version.h
 include/geos_c.h
 lib/libgeos.la
 lib/libgeos_c.la
-@exec ${MKDIR} %D/include/geos/index/intervalrtree
-@exec ${MKDIR} %D/include/geos/algorithm/locate
+@pkgdir include/geos/index/intervalrtree
+@pkgdir include/geos/algorithm/locate
