@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/03/06 08:37:02 ghen Exp $
+@comment $NetBSD: PLIST,v 1.8.2.1 2009/06/14 10:59:44 spz Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -152,7 +152,6 @@ lib/${MOZILLA}/modules/XPCOMUtils.jsm
 lib/${MOZILLA}/modules/debug.js
 lib/${MOZILLA}/modules/distribution.js
 lib/${MOZILLA}/modules/utils.js
-lib/${MOZILLA}/old-homepage-default.properties
 lib/${MOZILLA}/platform.ini
 lib/${MOZILLA}/res/EditorOverride.css
 lib/${MOZILLA}/res/arrow.gif
