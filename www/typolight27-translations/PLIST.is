@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.is,v 1.2 2009/05/01 14:50:37 taca Exp $
+@comment $NetBSD: PLIST.is,v 1.3 2009/06/14 22:00:38 joerg Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/is/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/is/countries.php
 ${TL_WEBDIR}/system/modules/backend/languages/is/default.php
@@ -77,14 +77,3 @@ ${TL_WEBDIR}/system/modules/rss_reader/languages/is/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/is/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/is/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/is/tl_templates.php
-@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/registration/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/news/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/is
-@dirrm ${TL_WEBDIR}/system/modules/backend/languages/is
