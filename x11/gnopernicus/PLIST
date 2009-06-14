@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/09/25 10:54:24 hira Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:24:49 joerg Exp $
 bin/gnopernicus
 bin/gnopernicus-mag-config
 bin/srcore
@@ -138,45 +138,3 @@ share/omf/gnopernicus/brlmonitor-C.omf
 share/omf/gnopernicus/brlmonitor-es.omf
 share/omf/gnopernicus/gnopernicus-C.omf
 share/omf/gnopernicus/gnopernicus-es.omf
-@dirrm share/omf/gnopernicus
-@comment in scrollkeeper: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnopernicus/presentation
-@dirrm share/gnopernicus/glade/gnopi_files/User_Properties
-@dirrm share/gnopernicus/glade/gnopi_files/Speech_Settings
-@dirrm share/gnopernicus/glade/gnopi_files/Screen_Review
-@dirrm share/gnopernicus/glade/gnopi_files/Presentation
-@dirrm share/gnopernicus/glade/gnopi_files/Magnifier_Settings
-@dirrm share/gnopernicus/glade/gnopi_files/Load_Default
-@dirrm share/gnopernicus/glade/gnopi_files/Language
-@dirrm share/gnopernicus/glade/gnopi_files/Keyboard_Mouse_Settings
-@dirrm share/gnopernicus/glade/gnopi_files/General_Settings
-@dirrm share/gnopernicus/glade/gnopi_files/Find
-@dirrm share/gnopernicus/glade/gnopi_files/Braille_Settings
-@dirrm share/gnopernicus/glade/gnopi_files/Braille_Monitor_Settings
-@dirrm share/gnopernicus/glade/gnopi_files
-@dirrm share/gnopernicus/glade
-@dirrm share/gnopernicus
-@dirrm share/gnome/help/gnopernicus/pt_BR/figures
-@dirrm share/gnome/help/gnopernicus/pt_BR
-@dirrm share/gnome/help/gnopernicus/es
-@dirrm share/gnome/help/gnopernicus/C
-@dirrm share/gnome/help/gnopernicus
-@dirrm share/gnome/help/brlmonitor/es
-@dirrm share/gnome/help/brlmonitor/C
-@dirrm share/gnome/help/brlmonitor
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/gnopernicus/translation_tables
-@dirrm share/examples/gnopernicus
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gnopernicus-1.0
-@dirrm include/gnopernicus-1.0/libsrutil
-@dirrm include/gnopernicus-1.0/libsrs
-@dirrm include/gnopernicus-1.0/libsrlow
-@dirrm include/gnopernicus-1.0/libsrconf
-@dirrm include/gnopernicus-1.0/libmag
-@dirrm include/gnopernicus-1.0/libke
-@dirrm include/gnopernicus-1.0/libbrl
-@dirrm include/gnopernicus-1.0

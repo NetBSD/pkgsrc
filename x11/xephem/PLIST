@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/05/30 17:04:05 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:25:11 joerg Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
 man/man1/xephem.1
@@ -171,13 +171,3 @@ share/xephem/help/png/wcssolver.png
 share/xephem/help/xephem.html
 share/xephem/lo/lodb.xml
 @exec ${MKDIR} %D/share/xephem/tools
-@dirrm share/xephem/tools
-@dirrm share/xephem/lo
-@dirrm share/xephem/help/png
-@dirrm share/xephem/help
-@dirrm share/xephem/gallery
-@dirrm share/xephem/fits
-@dirrm share/xephem/fifos
-@dirrm share/xephem/catalogs
-@dirrm share/xephem/auxil
-@dirrm share/xephem

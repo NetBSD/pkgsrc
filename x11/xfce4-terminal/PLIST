@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/12/18 14:07:45 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:16 joerg Exp $
 bin/Terminal
 bin/terminal
 libexec/TerminalHelp
@@ -139,11 +139,3 @@ share/locale/vi/LC_MESSAGES/Terminal.mo
 share/locale/zh_CN/LC_MESSAGES/Terminal.mo
 share/locale/zh_TW/LC_MESSAGES/Terminal.mo
 share/pixmaps/terminal.xpm
-@dirrm share/doc/Terminal/ja/images
-@dirrm share/doc/Terminal/ja
-@dirrm share/doc/Terminal/fr/images
-@dirrm share/doc/Terminal/fr
-@dirrm share/doc/Terminal/C/images
-@dirrm share/doc/Terminal/C
-@dirrm share/doc/Terminal
-@dirrm share/Terminal
