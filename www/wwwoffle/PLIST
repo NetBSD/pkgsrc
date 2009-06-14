@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2006/09/26 13:48:43 abs Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 22:00:41 joerg Exp $
 bin/wwwoffle
 bin/wwwoffle-fsck
 bin/wwwoffle-gunzip
@@ -62,12 +62,6 @@ share/doc/wwwoffle/pl/README.1st
 share/doc/wwwoffle/pl/README.lang
 share/examples/rc.d/wwwoffled
 share/examples/wwwoffle/wwwoffle.conf
-@dirrm share/doc/wwwoffle/pl
-@dirrm share/doc/wwwoffle/fr
-@dirrm share/doc/wwwoffle/es
-@dirrm share/doc/wwwoffle/de
-@dirrm share/doc/wwwoffle
-@dirrm share/examples/wwwoffle
 @exec gzip -d -c %D/libdata/wwwoffle-spool.tar.gz | tar xzCf /
 @unexec cd /var/wwwoffle && ${RM} -rf html* search*
 @unexec ${RMDIR} /var/wwwoffle/* 2>/dev/null && ${RMDIR} /var/wwwoffle 2>/dev/null || ${TRUE}
