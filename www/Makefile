@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2009/06/01 21:42:32 seb Exp $
+# $NetBSD: Makefile,v 1.650 2009/06/14 04:52:22 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -213,6 +213,7 @@ SUBDIR+=	ns-remote
 SUBDIR+=	nspluginwrapper
 SUBDIR+=	nvu
 SUBDIR+=	ocsigen
+SUBDIR+=	opengoo
 SUBDIR+=	opera
 SUBDIR+=	opera-acroread
 SUBDIR+=	opera-acroread5
