@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:10:29 joerg Exp $
 bin/cda
 bin/xmcd
 bin/xmcd_start
@@ -242,7 +242,6 @@ lib/X11/xmcd/help/Xm/TimeMode.lbl
 lib/X11/xmcd/help/Xm/Track.lbl
 lib/X11/xmcd/help/Xm/TrkTitle.lbl
 lib/X11/xmcd/help/Xm/WWWwarp.btn
-@exec ${MKDIR} %D/lib/X11/xmcd/lib-${ARCH}-${MACHINE_ARCH}
 lib/X11/xmcd/pixmaps/xmcd.icon
 lib/X11/xmcd/pixmaps/xmcd.xpm
 lib/X11/xmcd/pixmaps/xmcd_a.px
@@ -250,3 +249,4 @@ lib/X11/xmcd/pixmaps/xmcd_b.px
 lib/X11/xmcd/scripts/genidx
 man/man1/cda.1
 man/man1/xmcd.1
+@pkgdir lib/X11/xmcd/lib-${ARCH}-${MACHINE_ARCH}
