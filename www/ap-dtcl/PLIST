@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/19 18:32:37 jwise Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:15 joerg Exp $
 lib/httpd/mod_dtcl.so
 share/doc/html/mod_dtcl/asf_logo.gif
 share/doc/html/mod_dtcl/commands.html
@@ -24,6 +24,3 @@ share/examples/mod_dtcl/tests/dtcl.test
 share/examples/mod_dtcl/tests/makeconf.tcl
 share/examples/mod_dtcl/tests/runtests.tcl
 share/examples/mod_dtcl/tests/template.conf.tcl
-@dirrm share/doc/html/mod_dtcl
-@dirrm share/examples/mod_dtcl/tests
-@dirrm share/examples/mod_dtcl

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/02/23 05:16:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 22:00:17 joerg Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -615,15 +615,3 @@ share/httpd/icons/world1.gif
 share/httpd/icons/world1.png
 share/httpd/icons/world2.gif
 share/httpd/icons/world2.png
-@dirrm share/httpd/icons/small
-@dirrm share/httpd/icons
-@dirrm share/httpd/htdocs/manual/vhosts
-@dirrm share/httpd/htdocs/manual/programs
-@dirrm share/httpd/htdocs/manual/mod
-@dirrm share/httpd/htdocs/manual/misc
-@dirrm share/httpd/htdocs/manual/images
-@dirrm share/httpd/htdocs/manual/howto
-@dirrm share/httpd/htdocs/manual
-@dirrm share/examples/httpd
-@dirrm include/httpd/xml
-@dirrm include/httpd

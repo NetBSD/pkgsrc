@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:56 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:36 joerg Exp $
 lib/tcl/cgi1.3/cgi.tcl
 lib/tcl/cgi1.3/pkgIndex.tcl
 man/mann/cgi.tcl.n
@@ -42,6 +42,3 @@ share/examples/tcl/cgi-tcl/visitor.cgi
 share/examples/tcl/cgi-tcl/visitor.cnt
 share/examples/tcl/cgi-tcl/vote.cgi
 share/examples/tcl/cgi-tcl/vote.cnt
-@dirrm lib/tcl/cgi1.3
-@dirrm share/doc/tcl/cgi-tcl
-@dirrm share/examples/tcl/cgi-tcl

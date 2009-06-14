@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/03 16:53:20 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:16 joerg Exp $
 lib/httpd/mod_chroot.so
 share/doc/mod_chroot/CAVEATS
 share/doc/mod_chroot/ChangeLog
@@ -7,4 +7,3 @@ share/doc/mod_chroot/INSTALL
 share/doc/mod_chroot/LICENSE
 share/doc/mod_chroot/README
 share/doc/mod_chroot/README.Apache20
-@dirrm share/doc/mod_chroot

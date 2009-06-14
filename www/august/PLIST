@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/20 20:25:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:18 joerg Exp $
 bin/august
 share/doc/august/keyname.tcl
 share/doc/august/license.txt
 share/doc/august/readme.txt
 share/doc/august/specchars.txt
-@dirrm share/doc/august

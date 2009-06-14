@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/08/17 20:09:12 dholland Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 22:00:34 joerg Exp $
 bin/hsml
 lib/screws/BasicExec.so
 lib/screws/CleanLog.so
@@ -88,19 +88,3 @@ share/examples/screws/default.conf
 share/examples/screws/screws.conf
 share/screws/hsml-inc/include.pl.html
 share/screws/mime.types
-@dirrm share/screws/hsml-inc
-@dirrm share/screws
-@dirrm share/examples/screws
-@dirrm share/doc/screws/examples
-@dirrm share/doc/screws
-@dirrm libexec/screws/sh
-@dirrm libexec/screws/perl/htdocs/example.xslt
-@dirrm libexec/screws/perl/htdocs/example.dir/OtherDir
-@dirrm libexec/screws/perl/htdocs/example.dir
-@dirrm libexec/screws/perl/htdocs
-@dirrm libexec/screws/perl/defpages
-@dirrm libexec/screws/perl
-@dirrm libexec/screws/htdocs
-@dirrm libexec/screws/c
-@dirrm libexec/screws
-@dirrm lib/screws

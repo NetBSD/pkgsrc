@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/01 01:28:17 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:17 joerg Exp $
 lib/httpd/mod_authnz_external.so
 share/doc/authnz-external/AUTHENTICATORS
 share/doc/authnz-external/INSTALL
 share/doc/authnz-external/INSTALL.HARDCODE
 share/doc/authnz-external/TODO
 share/doc/authnz-external/UPGRADE
-@dirrm share/doc/authnz-external

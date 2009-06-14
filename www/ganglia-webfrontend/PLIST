@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/10 02:34:54 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:22 joerg Exp $
 share/httpd/htdocs/ganglia/AUTHORS
 share/httpd/htdocs/ganglia/COPYING
 share/httpd/htdocs/ganglia/ChangeLog
@@ -66,9 +66,3 @@ share/httpd/htdocs/ganglia/templates/default/physical_view.tpl
 share/httpd/htdocs/ganglia/templates/default/show_node.tpl
 share/httpd/htdocs/ganglia/version.php
 share/httpd/htdocs/ganglia/version.php.in
-@dirrm share/httpd/htdocs/ganglia/templates/default/images
-@dirrm share/httpd/htdocs/ganglia/templates/default
-@dirrm share/httpd/htdocs/ganglia/templates/Rocks/images
-@dirrm share/httpd/htdocs/ganglia/templates/Rocks
-@dirrm share/httpd/htdocs/ganglia/templates
-@dirrm share/httpd/htdocs/ganglia

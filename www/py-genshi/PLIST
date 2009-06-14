@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/01 08:38:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -67,7 +67,3 @@ ${PYSITELIB}/genshi/template/text.pyo
 ${PYSITELIB}/genshi/util.py
 ${PYSITELIB}/genshi/util.pyc
 ${PYSITELIB}/genshi/util.pyo
-@dirrm ${PYSITELIB}/genshi/template
-@dirrm ${PYSITELIB}/genshi/filters
-@dirrm ${PYSITELIB}/genshi
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

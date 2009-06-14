@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/26 19:51:55 epg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:25 joerg Exp $
 bin/serve-branches
 bin/start-loggerhead
 bin/stop-loggerhead
@@ -313,36 +313,3 @@ man/man1/serve-branches.1
 man/man1/start-loggerhead.1
 man/man1/stop-loggerhead.1
 share/doc/loggerhead/loggerhead.conf.example
-@dirrm share/doc/loggerhead
-@dirrm ${PYSITELIB}/loggerhead/templates
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/yui-base
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/yui
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/substitute
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/queue
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/oop
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/node
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/loader
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/json
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/io
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/get
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/event
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dump
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dom
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/dd
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssreset
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssgrids
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssfonts
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cssbase
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/cookie
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/base
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/attribute
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build/anim
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui/build
-@dirrm ${PYSITELIB}/loggerhead/static/javascript/yui
-@dirrm ${PYSITELIB}/loggerhead/static/javascript
-@dirrm ${PYSITELIB}/loggerhead/static/images
-@dirrm ${PYSITELIB}/loggerhead/static/css
-@dirrm ${PYSITELIB}/loggerhead/static
-@dirrm ${PYSITELIB}/loggerhead/controllers
-@dirrm ${PYSITELIB}/loggerhead/apps
-@dirrm ${PYSITELIB}/loggerhead

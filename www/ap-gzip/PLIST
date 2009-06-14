@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/22 12:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:15 joerg Exp $
 lib/httpd/mod_gzip.so
 share/doc/mod_gzip/de/browser.htm
 share/doc/mod_gzip/de/cache.htm
@@ -29,7 +29,3 @@ share/doc/mod_gzip/en/valid-css.png
 share/doc/mod_gzip/en/valid-xhtml11.png
 share/doc/mod_gzip/en/versions.htm
 share/examples/mod_gzip/httpd.conf
-@dirrm share/doc/mod_gzip/de
-@dirrm share/doc/mod_gzip/en
-@dirrm share/doc/mod_gzip
-@dirrm share/examples/mod_gzip

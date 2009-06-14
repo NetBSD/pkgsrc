@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/05 19:12:35 garbled Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:21 joerg Exp $
 bin/ffproxy
 man/man5/ffproxy.conf.5
 man/man7/ffproxy.quick.7
@@ -21,6 +21,3 @@ share/ffproxy/html/invalid
 share/ffproxy/html/post
 share/ffproxy/html/resolve
 share/ffproxy/sample.config
-@dirrm share/ffproxy/html
-@dirrm share/ffproxy/db
-@dirrm share/ffproxy

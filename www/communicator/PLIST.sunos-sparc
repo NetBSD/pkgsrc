@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.sunos-sparc,v 1.1 2001/11/01 02:24:38 zuntum Exp $
+@comment $NetBSD: PLIST.sunos-sparc,v 1.2 2009/06/14 22:00:20 joerg Exp $
 bin/${BINNAME}-${NS_VERS}_nis
 bin/netscape_nis
 lib/netscape/${BINNAME}-${NS_VERS}/netscape_nis
@@ -7,5 +7,3 @@ lib/netscape/${BINNAME}-${NS_VERS}/dynfonts/libTrueDoc.so
 lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so
 lib/netscape/${BINNAME}-${NS_VERS}/nls/C
 lib/netscape/${BINNAME}-${NS_VERS}/nls/nls.dir
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/dynfonts
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nls

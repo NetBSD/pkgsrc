@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 22:00:35 joerg Exp $
 bin/sitecopy
 man/fr/man1/sitecopy.1
 man/man1/sitecopy.1
@@ -16,5 +16,3 @@ share/locale/ru/LC_MESSAGES/sitecopy.mo
 share/locale/tr/LC_MESSAGES/sitecopy.mo
 share/sitecopy/changes.awk
 share/sitecopy/examplerc
-@dirrm share/sitecopy
-@dirrm share/doc/sitecopy

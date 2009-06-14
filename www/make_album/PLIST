@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2001/12/26 07:51:11 lukem Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:25 joerg Exp $
 bin/index_albums
 bin/ingest
 bin/make_album
@@ -8,4 +8,3 @@ lib/cameras.txt
 share/doc/make_album/CHANGES
 share/doc/make_album/README
 share/doc/make_album/TODO
-@dirrm share/doc/make_album

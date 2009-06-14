@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/03/10 09:14:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 22:00:25 joerg Exp $
 bin/lynx
 man/man1/lynx.1
 share/examples/lynx/lynx.cfg
@@ -115,11 +115,3 @@ share/lynx/lynx_help/keystrokes/xterm_help.html.gz
 share/lynx/lynx_help/lynx-dev.html.gz
 share/lynx/lynx_help/lynx_help_main.html.gz
 share/lynx/lynx_help/lynx_url_support.html.gz
-@dirrm share/lynx/lynx_help/keystrokes
-@dirrm share/lynx/lynx_help
-@dirrm share/lynx/lynx_doc/test
-@dirrm share/lynx/lynx_doc/samples
-@dirrm share/lynx/lynx_doc/docs
-@dirrm share/lynx/lynx_doc
-@dirrm share/lynx
-@dirrm share/examples/lynx

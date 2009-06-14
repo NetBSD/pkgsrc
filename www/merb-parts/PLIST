@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:24:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:27 joerg Exp $
 ${GEM_HOME}/cache/merb-parts-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -9,7 +9,3 @@ ${GEM_LIBDIR}/lib/merb-parts/merbtasks.rb
 ${GEM_LIBDIR}/lib/merb-parts/mixins/web_controller.rb
 ${GEM_LIBDIR}/lib/merb-parts/part_controller.rb
 ${GEM_HOME}/specifications/merb-parts-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/merb-parts/mixins
-@dirrm ${GEM_LIBDIR}/lib/merb-parts
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

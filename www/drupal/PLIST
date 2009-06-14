@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/15 15:54:08 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:20 joerg Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/INSTALL.mysql.txt
 share/doc/drupal/INSTALL.pgsql.txt
@@ -278,60 +278,4 @@ share/drupal/xmlrpc.php
 share/examples/drupal/default.profile
 share/examples/drupal/drupal.conf
 share/examples/drupal/settings.php
-@dirrm share/examples/drupal
-@dirrm share/drupal/themes/pushbutton
-@dirrm share/drupal/themes/garland/minnelli/color
-@dirrm share/drupal/themes/garland/minnelli
-@dirrm share/drupal/themes/garland/images
-@dirrm share/drupal/themes/garland/color
-@dirrm share/drupal/themes/garland
-@dirrm share/drupal/themes/engines/phptemplate
-@dirrm share/drupal/themes/engines
-@dirrm share/drupal/themes/chameleon/marvin
-@dirrm share/drupal/themes/chameleon
-@dirrm share/drupal/themes/bluemarine
-@dirrm share/drupal/themes
-@unexec ${RMDIR} %D/share/drupal/sites/default 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/drupal/sites/all 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/drupal/sites 2>/dev/null || ${TRUE}
-@dirrm share/drupal/scripts
-@exec ${MKDIR} %D/share/drupal/profiles/default
-@dirrm share/drupal/profiles/default
-@dirrm share/drupal/profiles
-@dirrm share/drupal/modules/watchdog
-@dirrm share/drupal/modules/user
-@dirrm share/drupal/modules/upload
-@dirrm share/drupal/modules/tracker
-@dirrm share/drupal/modules/throttle
-@dirrm share/drupal/modules/taxonomy
-@dirrm share/drupal/modules/system
-@dirrm share/drupal/modules/statistics
-@dirrm share/drupal/modules/search
-@dirrm share/drupal/modules/profile
-@dirrm share/drupal/modules/poll
-@dirrm share/drupal/modules/ping
-@dirrm share/drupal/modules/path
-@dirrm share/drupal/modules/node
-@dirrm share/drupal/modules/menu
-@dirrm share/drupal/modules/locale
-@dirrm share/drupal/modules/legacy
-@dirrm share/drupal/modules/help
-@dirrm share/drupal/modules/forum
-@dirrm share/drupal/modules/filter
-@dirrm share/drupal/modules/drupal
-@dirrm share/drupal/modules/contact
-@dirrm share/drupal/modules/comment
-@dirrm share/drupal/modules/color/images
-@dirrm share/drupal/modules/color
-@dirrm share/drupal/modules/book
-@dirrm share/drupal/modules/blogapi
-@dirrm share/drupal/modules/blog
-@dirrm share/drupal/modules/block
-@dirrm share/drupal/modules/aggregator
-@dirrm share/drupal/modules
-@dirrm share/drupal/misc/farbtastic
-@dirrm share/drupal/misc
-@dirrm share/drupal/includes
-@unexec ${RMDIR} %D/share/drupal/files 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/drupal 2>/dev/null || ${TRUE}
-@dirrm share/doc/drupal
+@pkgdir share/drupal/profiles/default

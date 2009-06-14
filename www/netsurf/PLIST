@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 15:05:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:29 joerg Exp $
 bin/netsurf
 share/netsurf/!NetSurf/!Boot,feb
 share/netsurf/!NetSurf/!Help
@@ -49,17 +49,3 @@ share/netsurf/gtk/res/netsurf.glade
 share/netsurf/gtk/res/netsurf.xpm
 share/netsurf/gtk/res/throbber.gif
 share/netsurf/nsgtk
-@dirrm share/netsurf/gtk/res/docs
-@dirrm share/netsurf/gtk/res
-@dirrm share/netsurf/gtk
-@dirrm share/netsurf/!NetSurf/Resources/nl
-@dirrm share/netsurf/!NetSurf/Resources/fr
-@dirrm share/netsurf/!NetSurf/Resources/en
-@dirrm share/netsurf/!NetSurf/Resources/de
-@dirrm share/netsurf/!NetSurf/Resources/Fonts/NSSymbol
-@dirrm share/netsurf/!NetSurf/Resources/Fonts
-@dirrm share/netsurf/!NetSurf/Resources
-@dirrm share/netsurf/!NetSurf/Docs/about
-@dirrm share/netsurf/!NetSurf/Docs
-@dirrm share/netsurf/!NetSurf
-@dirrm share/netsurf

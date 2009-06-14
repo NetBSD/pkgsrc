@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/04/07 17:13:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 22:00:33 joerg Exp $
 bin/rails
 ${GEM_HOME}/cache/rails-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -213,62 +213,3 @@ ${GEM_LIBDIR}/lib/tasks/tmp.rake
 ${GEM_LIBDIR}/lib/test_help.rb
 ${GEM_LIBDIR}/lib/webrick_server.rb
 ${GEM_HOME}/specifications/rails-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/tasks
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/scripts
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/resource
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/performance_test/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/performance_test
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/observer
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/model
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/migration/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/migration
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/metal/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/metal
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/helper/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/helper
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/controller
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/applications/app/scm
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/applications/app
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/applications
-@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators
-@dirrm ${GEM_LIBDIR}/lib/rails_generator
-@dirrm ${GEM_LIBDIR}/lib/rails/rack
-@dirrm ${GEM_LIBDIR}/lib/rails/plugin
-@dirrm ${GEM_LIBDIR}/lib/rails
-@dirrm ${GEM_LIBDIR}/lib/commands/performance
-@dirrm ${GEM_LIBDIR}/lib/commands/ncgi
-@dirrm ${GEM_LIBDIR}/lib/commands
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/html/javascripts
-@dirrm ${GEM_LIBDIR}/html/images
-@dirrm ${GEM_LIBDIR}/html
-@dirrm ${GEM_LIBDIR}/helpers
-@dirrm ${GEM_LIBDIR}/environments
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/dispatches
-@dirrm ${GEM_LIBDIR}/configs/locales
-@dirrm ${GEM_LIBDIR}/configs/initializers
-@dirrm ${GEM_LIBDIR}/configs/databases
-@dirrm ${GEM_LIBDIR}/configs
-@dirrm ${GEM_LIBDIR}/builtin/rails_info/rails
-@dirrm ${GEM_LIBDIR}/builtin/rails_info
-@dirrm ${GEM_LIBDIR}/builtin
-@dirrm ${GEM_LIBDIR}/bin/performance
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/${PKGNAME}

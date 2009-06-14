@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/11 04:22:50 dholland Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 22:00:14 joerg Exp $
 bin/amaya
 share/Amaya/amaya/Amaya.svg
 share/Amaya/amaya/AmayaPage.html
@@ -923,26 +923,4 @@ share/Amaya/resources/xrc/WinPrintDlgWX.xrc
 share/Amaya/wx/bin/amaya
 share/Amaya/wx/bin/amaya_bin
 share/Amaya/wx/bin/print
-@dirrm share/Amaya/wx/bin
-@dirrm share/Amaya/wx
-@dirrm share/Amaya/resources/xrc
-@dirrm share/Amaya/resources/icons/misc
-@dirrm share/Amaya/resources/icons/22x22
-@dirrm share/Amaya/resources/icons/16x16
-@dirrm share/Amaya/resources/icons
-@dirrm share/Amaya/resources
-@comment in REQD_DIRS: @dirrm share/Amaya/fonts
-@dirrm share/Amaya/doc/images
-@dirrm share/Amaya/doc/WX/HTML-elements
-@dirrm share/Amaya/doc/WX
-@dirrm share/Amaya/doc
-@dirrm share/Amaya/dicopar
-@exec ${MKDIR} %D/share/Amaya/davlib
-@dirrm share/Amaya/davlib
-@dirrm share/Amaya/config/libconfig
-@dirrm share/Amaya/config
-@dirrm share/Amaya/annotlib
-@dirrm share/Amaya/amaya
-@comment in REQD_DIRS: @dirrm share/Amaya
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications
+@pkgdir share/Amaya/davlib

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:24:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:27 joerg Exp $
 ${GEM_HOME}/cache/merb_param_protection-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -7,6 +7,3 @@ ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/lib/merb_param_protection.rb
 ${GEM_LIBDIR}/lib/merb_param_protection/merbtasks.rb
 ${GEM_HOME}/specifications/merb_param_protection-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/merb_param_protection
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

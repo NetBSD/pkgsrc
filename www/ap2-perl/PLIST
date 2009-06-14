@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/04/25 11:13:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 22:00:16 joerg Exp $
 include/httpd/mod_perl.h
 include/httpd/modperl_apache_compat.h
 include/httpd/modperl_apache_includes.h
@@ -265,31 +265,3 @@ share/doc/mod_perl/user/porting/code/apache_mp3_9.diff
 share/doc/mod_perl/user/porting/compat.pod
 share/doc/mod_perl/user/porting/porting.pod
 share/doc/mod_perl/user/troubleshooting/troubleshooting.pod
-@dirrm share/doc/mod_perl/user/troubleshooting
-@dirrm share/doc/mod_perl/user/porting/code
-@dirrm share/doc/mod_perl/user/porting
-@dirrm share/doc/mod_perl/user/performance
-@dirrm share/doc/mod_perl/user/intro
-@dirrm share/doc/mod_perl/user/install
-@dirrm share/doc/mod_perl/user/help
-@dirrm share/doc/mod_perl/user/handlers
-@dirrm share/doc/mod_perl/user/design
-@dirrm share/doc/mod_perl/user/config
-@dirrm share/doc/mod_perl/user/coding
-@dirrm share/doc/mod_perl/user
-@dirrm share/doc/mod_perl/os/win32
-@dirrm share/doc/mod_perl/os
-@dirrm share/doc/mod_perl/devel/porting
-@dirrm share/doc/mod_perl/devel/performance
-@dirrm share/doc/mod_perl/devel/help
-@dirrm share/doc/mod_perl/devel/debug/code
-@dirrm share/doc/mod_perl/devel/debug
-@dirrm share/doc/mod_perl/devel/core
-@dirrm share/doc/mod_perl/devel
-@dirrm share/doc/mod_perl/api/ModPerl
-@dirrm share/doc/mod_perl/api/Apache2
-@dirrm share/doc/mod_perl/api/APR
-@dirrm share/doc/mod_perl/api
-@dirrm share/doc/mod_perl
-@comment in apache: @dirrm lib/httpd
-@comment in apache: @dirrm include/httpd

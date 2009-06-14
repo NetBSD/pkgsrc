@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/02 14:33:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/jon/__init__.py
 ${PYSITELIB}/jon/__init__.pyc
 ${PYSITELIB}/jon/__init__.pyo
@@ -35,5 +35,3 @@ ${PYSITELIB}/jon/wt/rowaccess.pyo
 ${PYSITELIB}/jon/wt/textblock.py
 ${PYSITELIB}/jon/wt/textblock.pyc
 ${PYSITELIB}/jon/wt/textblock.pyo
-@dirrm ${PYSITELIB}/jon/wt
-@dirrm ${PYSITELIB}/jon

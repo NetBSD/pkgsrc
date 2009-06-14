@@ -1,23 +1,2 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2007/07/29 05:19:51 jlam Exp $
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/spell
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/plugins
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/trouble
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/shared
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/news
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/navigatr
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/messengr
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/home
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/composer
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape/collabra
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp/netscape
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/nethelp
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/movemail-src
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/java/classes/irix
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/java/classes/hpux
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/java/classes/aix
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/java/classes
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}/java
-@dirrm lib/netscape/${BINNAME}-${NS_VERS}
-@exec ${MKDIR} %D/lib/netscape/plugins
-@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 22:00:20 joerg Exp $
+@pkgdir lib/netscape/plugins

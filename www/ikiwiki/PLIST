@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/04/21 16:34:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 22:00:23 joerg Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -179,32 +179,3 @@ share/locale/gu/LC_MESSAGES/ikiwiki.mo
 share/locale/pl/LC_MESSAGES/ikiwiki.mo
 share/locale/sv/LC_MESSAGES/ikiwiki.mo
 share/locale/vi/LC_MESSAGES/ikiwiki.mo
-@dirrm share/ikiwiki/templates
-@dirrm share/ikiwiki/smiley/smileys
-@dirrm share/ikiwiki/smiley
-@dirrm share/ikiwiki/javascript
-@dirrm share/ikiwiki/examples/softwaresite/templates
-@dirrm share/ikiwiki/examples/softwaresite/news
-@dirrm share/ikiwiki/examples/softwaresite/doc
-@dirrm share/ikiwiki/examples/softwaresite/bugs
-@dirrm share/ikiwiki/examples/softwaresite
-@dirrm share/ikiwiki/examples/blog/tags
-@dirrm share/ikiwiki/examples/blog/posts
-@dirrm share/ikiwiki/examples/blog
-@dirrm share/ikiwiki/examples
-@dirrm share/ikiwiki/directives/ikiwiki/directive
-@dirrm share/ikiwiki/directives/ikiwiki
-@dirrm share/ikiwiki/directives
-@dirrm share/ikiwiki/basewiki/wikiicons
-@dirrm share/ikiwiki/basewiki/templates
-@dirrm share/ikiwiki/basewiki/ikiwiki/subpage
-@dirrm share/ikiwiki/basewiki/ikiwiki/pagespec
-@dirrm share/ikiwiki/basewiki/ikiwiki
-@dirrm share/ikiwiki/basewiki
-@dirrm share/ikiwiki
-@dirrm share/examples/ikiwiki
-${PLIST.w3m}@dirrm share/doc/ikiwiki/w3mmode
-${PLIST.w3m}@dirrm share/doc/ikiwiki
-${PLIST.w3m}@unexec ${RMDIR} %D/libexec/w3m/cgi-bin 2>/dev/null || ${TRUE}
-@dirrm lib/ikiwiki/plugins
-@dirrm lib/ikiwiki

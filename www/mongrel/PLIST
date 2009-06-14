@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/04 15:25:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:00:28 joerg Exp $
 bin/mongrel_rails
 ${GEM_HOME}/cache/mongrel-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
@@ -73,17 +73,3 @@ ${GEM_LIBDIR}/test/test_ws.rb
 ${GEM_LIBDIR}/test/testhelp.rb
 ${GEM_LIBDIR}/tools/trickletest.rb
 ${GEM_HOME}/specifications/mongrel-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tools
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/mongrel
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/http11_java/org/jruby/mongrel
-@dirrm ${GEM_LIBDIR}/ext/http11_java/org/jruby
-@dirrm ${GEM_LIBDIR}/ext/http11_java/org
-@dirrm ${GEM_LIBDIR}/ext/http11_java
-@dirrm ${GEM_LIBDIR}/ext/http11
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/examples/camping
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

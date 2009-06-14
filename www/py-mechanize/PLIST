@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/17 20:46:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:32 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -86,5 +86,3 @@ ${PYSITELIB}/mechanize/_useragent.pyo
 ${PYSITELIB}/mechanize/_util.py
 ${PYSITELIB}/mechanize/_util.pyc
 ${PYSITELIB}/mechanize/_util.pyo
-@dirrm ${PYSITELIB}/mechanize
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 20:14:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:18 joerg Exp $
 bin/bkedit
 share/bkedit/all_edit.so
 share/bkedit/galeon.so
@@ -11,4 +11,3 @@ share/bkedit/opera7.so
 share/bkedit/sitebar.so
 share/bkedit/wikilinks.so
 share/bkedit/xbel.so
-@dirrm share/bkedit

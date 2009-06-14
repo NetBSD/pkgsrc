@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/19 15:02:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 22:00:16 joerg Exp $
 lib/httpd/mod_ruby.so
 ${RUBY_VENDORLIB}/apache/erb-run.rb
 ${RUBY_VENDORLIB}/apache/eruby-debug.rb
@@ -37,7 +37,3 @@ ${RUBY_DOC}/mod_ruby/index.ja.euc.rd
 ${RUBY_DOC}/mod_ruby/install.en.rd
 ${RUBY_DOC}/mod_ruby/install.ja.euc.rd
 ${RUBY_EG}/mod_ruby/mod_ruby.conf
-@dirrm ${RUBY_VENDORLIB}/apache
-@dirrm ${RUBY_DOC}/mod_ruby/html
-@dirrm ${RUBY_DOC}/mod_ruby
-@dirrm ${RUBY_EG}/mod_ruby

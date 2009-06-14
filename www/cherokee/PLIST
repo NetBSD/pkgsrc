@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/01 07:22:29 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:19 joerg Exp $
 bin/cget
 bin/cherokee-config
 bin/cherokee-panic
@@ -151,20 +151,5 @@ share/examples/cherokee/cherokee/sites-available/example.com
 share/examples/cherokee/cherokee/sites-enabled/default
 share/examples/cherokee/pam.d/cherokee
 share/examples/rc.d/cherokee
-@dirrm share/examples/cherokee/pam.d
-@exec ${MKDIR} %D/share/examples/cherokee/cherokee/ssl
-@dirrm share/examples/cherokee/cherokee/ssl
-@dirrm share/examples/cherokee/cherokee/sites-enabled
-@dirrm share/examples/cherokee/cherokee/sites-available
-@exec ${MKDIR} %D/share/examples/cherokee/cherokee/mods-enabled
-@dirrm share/examples/cherokee/cherokee/mods-enabled
-@dirrm share/examples/cherokee/cherokee/mods-available
-@dirrm share/examples/cherokee/cherokee
-@dirrm share/examples/cherokee
-@dirrm share/doc/cherokee
-@dirrm share/cherokee/images
-@dirrm share/cherokee/icons
-@dirrm share/cherokee/deps
-@dirrm share/cherokee
-@dirrm lib/cherokee
-@dirrm include/cherokee
+@pkgdir share/examples/cherokee/cherokee/ssl
+@pkgdir share/examples/cherokee/cherokee/mods-enabled

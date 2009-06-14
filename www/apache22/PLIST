@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/04/14 18:26:34 sno Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 22:00:18 joerg Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -1165,36 +1165,6 @@ share/httpd/manual/vhosts/name-based.html.fr
 share/httpd/manual/vhosts/name-based.html.ja.utf8
 share/httpd/manual/vhosts/name-based.html.ko.euc-kr
 share/httpd/manual/vhosts/name-based.html.tr.utf8
-@unexec ${RMDIR} %D/libexec/cgi-bin 2>/dev/null || ${TRUE}
-@dirrm share/httpd/manual/vhosts
-@exec ${MKDIR} %D/share/httpd/manual/style/xsl/util
-@dirrm share/httpd/manual/style/xsl/util
-@exec ${MKDIR} %D/share/httpd/manual/style/xsl
-@dirrm share/httpd/manual/style/xsl
-@dirrm share/httpd/manual/style/latex
-@exec ${MKDIR} %D/share/httpd/manual/style/lang
-@dirrm share/httpd/manual/style/lang
-@dirrm share/httpd/manual/style/css
-@dirrm share/httpd/manual/style
-@dirrm share/httpd/manual/ssl
-@dirrm share/httpd/manual/rewrite
-@dirrm share/httpd/manual/programs
-@dirrm share/httpd/manual/platform
-@dirrm share/httpd/manual/mod
-@dirrm share/httpd/manual/misc
-@dirrm share/httpd/manual/images
-@dirrm share/httpd/manual/howto
-@dirrm share/httpd/manual/faq
-@dirrm share/httpd/manual/developer
-@dirrm share/httpd/manual
-@dirrm share/httpd/icons/small
-@dirrm share/httpd/icons
-@dirrm share/httpd/htdocs
-@dirrm share/httpd/error/include
-@dirrm share/httpd/error
-@dirrm share/httpd/build
-@dirrm share/httpd
-@dirrm share/examples/httpd/extra
-@dirrm share/examples/httpd
-@dirrm lib/httpd
-@dirrm include/httpd
+@pkgdir share/httpd/manual/style/xsl/util
+@pkgdir share/httpd/manual/style/xsl
+@pkgdir share/httpd/manual/style/lang

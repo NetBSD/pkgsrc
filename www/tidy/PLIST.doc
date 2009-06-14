@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doc,v 1.1 2009/02/05 21:52:52 seb Exp $
+@comment $NetBSD: PLIST.doc,v 1.2 2009/06/14 22:00:37 joerg Exp $
 share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
 share/doc/tidy/api/buffio_8h-source.html
@@ -72,5 +72,3 @@ share/doc/tidy/pending.html
 share/doc/tidy/release-notes.html
 share/doc/tidy/tidy.css
 share/doc/tidy/tidy.gif
-@dirrm share/doc/tidy/api
-@dirrm share/doc/tidy

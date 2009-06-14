@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/16 11:28:19 jdolecek Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:15 joerg Exp $
 lib/httpd/mod_auth_mysql.so
 share/doc/mod_auth_mysql/DIRECTIVES
 share/doc/mod_auth_mysql/USAGE
-@dirrm share/doc/mod_auth_mysql
