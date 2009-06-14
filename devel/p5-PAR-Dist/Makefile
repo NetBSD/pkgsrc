@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2009/04/12 00:53:27 sno Exp $
+# $NetBSD: Makefile,v 1.19 2009/06/14 23:43:28 sno Exp $
 #
 
-DISTNAME=	PAR-Dist-0.44
+DISTNAME=	PAR-Dist-0.45
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5moi
 CATEGORIES=	devel perl5
@@ -11,7 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PAR-Dist/
 COMMENT=	Perl module toolkit to create and manipulate PAR distributions
 
-BUILD_DEPENDS+=	p5-Archive-Zip>0:../../archivers/p5-Archive-Zip
+DEPENDS+=	p5-Archive-Zip>0:../../archivers/p5-Archive-Zip
+DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
