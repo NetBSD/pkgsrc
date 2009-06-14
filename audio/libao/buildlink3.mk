@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2009/03/20 19:23:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2009/06/14 22:57:58 joerg Exp $
 
 BUILDLINK_TREE+=	libao
 
@@ -24,8 +24,6 @@ DEPENDS+=	libao-[a-z]*-[0-9]*:../../audio/libao-${_LIBAO_DEFAULT_PLUGIN}
 .    endif
 .  endif
 
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ao\/plugins-2$$/ \
-				{ print "@comment in libao: " $$0; next }
 .endif # LIBAO_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libao

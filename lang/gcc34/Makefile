@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2009/04/22 18:59:54 hasso Exp $
+# $NetBSD: Makefile,v 1.42 2009/06/14 22:58:02 joerg Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -239,9 +239,7 @@ do-install:
 
 GENERATE_PLIST+=							\
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";		\
-	${FIND} ${GCC_PREFIX} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g";
+		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(BUILD_ADA:M[Yy][Ee][Ss])

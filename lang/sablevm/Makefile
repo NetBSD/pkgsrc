@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2009/04/08 22:43:24 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2009/06/14 22:58:03 joerg Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -25,15 +25,6 @@ JAVA_NAME=		sablevm
 JAVA_HOME=		${PREFIX}/java/sablevm
 JAVA_WRAPPERS+=		java
 JAVA_WRAPPER_BIN.java=	${JAVA_HOME}/bin/java-sablevm --classpath $${CLASSPATH}
-
-PRINT_PLIST_AWK+=     /^@dirrm java\/sablevm$$/ \
-			|| /^@dirrm java\/sablevm\/share$$/ \
-			|| /^@dirrm java\/sablevm\/include$$/ \
-			|| /^@dirrm java\/sablevm\/lib$$/ \
-			|| /^@dirrm java\/sablevm\/lib\/sablevm\/jre$$/ \
-			|| /^@dirrm java\/sablevm\/lib\/sablevm$$/ \
-			{ print "@comment in sablevm-classpath: " $$0; \
-				next; }
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${JAVA_HOME}/lib
 

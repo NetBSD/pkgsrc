@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.5 2005/12/05 20:50:40 rillig Exp $
+# $NetBSD: dirs.mk,v 1.6 2009/06/14 22:58:05 joerg Exp $
 #
 # This file is intended to be included by mk/dirs.mk, not directly by packages.
 #
@@ -37,12 +37,6 @@ THEME_DIRS+=		share/themes/Traditional
 
 .if defined(_USE_THEME_DIRS) && !empty(_USE_THEME_DIRS)
 DEPENDS+=		theme-dirs>=${_USE_THEME_DIRS}:../../misc/theme-dirs
-
-.  for dir in ${THEME_DIRS}
-PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${dir:S|/|\\/|g}$$/ \
-				{ print "@comment in theme-dirs: " $$0; next; }
-.  endfor
 .endif
 
 .endif			# !defined(DIRS_THEME_MK)

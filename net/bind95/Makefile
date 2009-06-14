@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/03/23 14:43:13 tron Exp $
+# $NetBSD: Makefile,v 1.9 2009/06/14 22:58:06 joerg Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P2/pl2/}
@@ -71,11 +71,7 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/share/doc/bind9/arm/Bv9ARM.pdf
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
 	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
-	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
-		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 	(cd ${DESTDIR}${PREFIX}; ${FIND} include/bind -type f -print ) >> ${PLIST_SRC}
-	(cd ${DESTDIR}${PREFIX}; ${FIND} include/bind -type d -print ) | \
-		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
