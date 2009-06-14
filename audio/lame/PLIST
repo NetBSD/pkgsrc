@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/09 14:45:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:13 joerg Exp $
 bin/lame
 ${PLIST.gtk}bin/mp3x
 include/lame/lame.h
@@ -14,5 +14,3 @@ share/doc/lame/lame.css
 share/doc/lame/modes.html
 share/doc/lame/node6.html
 share/doc/lame/switchs.html
-@dirrm share/doc/lame
-@dirrm include/lame

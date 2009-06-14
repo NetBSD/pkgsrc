@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2009/04/17 17:35:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2009/06/14 17:28:16 joerg Exp $
 bin/file-roller
 libexec/file-roller/isoinfo.sh
 share/applications/file-roller.desktop
@@ -225,56 +225,3 @@ share/omf/file-roller/file-roller-ru.omf
 share/omf/file-roller/file-roller-sv.omf
 share/omf/file-roller/file-roller-uk.omf
 share/omf/file-roller/file-roller-vi.omf
-@dirrm share/omf/file-roller
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/file-roller/vi/figures
-@dirrm share/gnome/help/file-roller/vi
-@dirrm share/gnome/help/file-roller/uk/figures
-@dirrm share/gnome/help/file-roller/uk
-@dirrm share/gnome/help/file-roller/sv/figures
-@dirrm share/gnome/help/file-roller/sv
-@dirrm share/gnome/help/file-roller/ru/figures
-@dirrm share/gnome/help/file-roller/ru
-@dirrm share/gnome/help/file-roller/oc/figures
-@dirrm share/gnome/help/file-roller/oc
-@dirrm share/gnome/help/file-roller/nl/figures
-@dirrm share/gnome/help/file-roller/nl
-@dirrm share/gnome/help/file-roller/it/figures
-@dirrm share/gnome/help/file-roller/it
-@dirrm share/gnome/help/file-roller/fr/figures
-@dirrm share/gnome/help/file-roller/fr
-@dirrm share/gnome/help/file-roller/fi/figures
-@dirrm share/gnome/help/file-roller/fi
-@dirrm share/gnome/help/file-roller/es/figures
-@dirrm share/gnome/help/file-roller/es
-@dirrm share/gnome/help/file-roller/en_GB/figures
-@dirrm share/gnome/help/file-roller/en_GB
-@dirrm share/gnome/help/file-roller/el/figures
-@dirrm share/gnome/help/file-roller/el
-@dirrm share/gnome/help/file-roller/de/figures
-@dirrm share/gnome/help/file-roller/de
-@dirrm share/gnome/help/file-roller/ca/figures
-@dirrm share/gnome/help/file-roller/ca
-@dirrm share/gnome/help/file-roller/bg/figures
-@dirrm share/gnome/help/file-roller/bg
-@dirrm share/gnome/help/file-roller/C/figures
-@dirrm share/gnome/help/file-roller/C
-@dirrm share/gnome/help/file-roller
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/file-roller/ui
-@dirrm share/file-roller/icons/hicolor/24x24/actions
-@dirrm share/file-roller/icons/hicolor/24x24
-@dirrm share/file-roller/icons/hicolor/16x16/actions
-@dirrm share/file-roller/icons/hicolor/16x16
-@dirrm share/file-roller/icons/hicolor
-@dirrm share/file-roller/icons
-@dirrm share/file-roller
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/file-roller

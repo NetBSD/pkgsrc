@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.11 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST.common,v 1.12 2009/06/14 17:32:25 joerg Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -86,8 +86,3 @@ share/locale/wa/LC_MESSAGES/xmms.mo
 share/locale/zh_CN/LC_MESSAGES/xmms.mo
 share/locale/zh_TW/LC_MESSAGES/xmms.mo
 share/xmms/wmxmms.xpm
-@dirrm share/xmms
-@dirrm lib/xmms/Visualization
-@dirrm lib/xmms/Input
-@dirrm lib/xmms/Effect
-@dirrm include/xmms

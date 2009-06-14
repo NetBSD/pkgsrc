@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/20 14:59:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:09 joerg Exp $
 include/goom/goom.h
 include/goom/goom_config.h
 include/goom/goom_config_param.h
@@ -13,4 +13,3 @@ include/goom/goomsl_hash.h
 include/goom/goomsl_heap.h
 lib/libgoom2.la
 lib/pkgconfig/libgoom2.pc
-@dirrm include/goom

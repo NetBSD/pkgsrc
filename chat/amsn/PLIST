@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/05 20:27:16 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:42 joerg Exp $
 bin/amsn
 bin/amsn-remote
 bin/amsn-remote-CLI
@@ -788,72 +788,3 @@ share/amsn/utils/webcamsn/pkgIndex.tcl
 share/amsn/utils/webcamsn/webcamsn.so
 share/applications/amsn.desktop
 share/pixmaps/amsn.png
-@dirrm share/amsn/utils/webcamsn
-@dirrm share/amsn/utils/uri
-@dirrm share/amsn/utils/tcl_siren
-@dirrm share/amsn/utils/snit
-@dirrm share/amsn/utils/sha1
-@dirrm share/amsn/utils/sexytile
-@dirrm share/amsn/utils/scalable-bg
-@dirrm share/amsn/utils/pixmapscroll/vertical
-@dirrm share/amsn/utils/pixmapscroll/horizontal
-@dirrm share/amsn/utils/pixmapscroll
-@dirrm share/amsn/utils/pixmapmenu
-@dirrm share/amsn/utils/log/msgs
-@dirrm share/amsn/utils/log
-@dirrm share/amsn/utils/linux/traydock
-@dirrm share/amsn/utils/linux/linflash
-@dirrm share/amsn/utils/linux
-@dirrm share/amsn/utils/http2.4
-@dirrm share/amsn/utils/framec
-@dirrm share/amsn/utils/drawboard
-@dirrm share/amsn/utils/dpbrowser
-@dirrm share/amsn/utils/contentmanager
-@dirrm share/amsn/utils/combobox
-@dirrm share/amsn/utils/bwidget1.8.0/lang
-@dirrm share/amsn/utils/bwidget1.8.0/images
-@dirrm share/amsn/utils/bwidget1.8.0
-@dirrm share/amsn/utils/base64
-@dirrm share/amsn/utils/TkCximage
-@dirrm share/amsn/utils
-@dirrm share/amsn/skins/default/winicons
-@dirrm share/amsn/skins/default/sounds
-@dirrm share/amsn/skins/default/smileys
-@dirrm share/amsn/skins/default/pixmaps
-@dirrm share/amsn/skins/default/displaypic
-@dirrm share/amsn/skins/default
-@dirrm share/amsn/skins
-@dirrm share/amsn/plugins/winks/pixmaps
-@dirrm share/amsn/plugins/winks/lang
-@dirrm share/amsn/plugins/winks
-@dirrm share/amsn/plugins/remind/lang
-@dirrm share/amsn/plugins/remind
-@dirrm share/amsn/plugins/inkdraw/pixmaps
-@dirrm share/amsn/plugins/inkdraw/pencils
-@dirrm share/amsn/plugins/inkdraw
-@dirrm share/amsn/plugins/WebcamShooter/lang
-@dirrm share/amsn/plugins/WebcamShooter
-@dirrm share/amsn/plugins/PowerTool
-@dirrm share/amsn/plugins/Nudge/lang
-@dirrm share/amsn/plugins/Nudge
-@dirrm share/amsn/plugins
-@dirrm share/amsn/lang
-@dirrm share/amsn/docs
-@dirrm share/amsn/desktop-icons/96x96/apps
-@dirrm share/amsn/desktop-icons/96x96
-@dirrm share/amsn/desktop-icons/72x72/apps
-@dirrm share/amsn/desktop-icons/72x72
-@dirrm share/amsn/desktop-icons/64x64/apps
-@dirrm share/amsn/desktop-icons/64x64
-@dirrm share/amsn/desktop-icons/48x48/apps
-@dirrm share/amsn/desktop-icons/48x48
-@dirrm share/amsn/desktop-icons/32x32/apps
-@dirrm share/amsn/desktop-icons/32x32
-@dirrm share/amsn/desktop-icons/22x22/apps
-@dirrm share/amsn/desktop-icons/22x22
-@dirrm share/amsn/desktop-icons/16x16/apps
-@dirrm share/amsn/desktop-icons/16x16
-@dirrm share/amsn/desktop-icons/128x128/apps
-@dirrm share/amsn/desktop-icons/128x128
-@dirrm share/amsn/desktop-icons
-@dirrm share/amsn

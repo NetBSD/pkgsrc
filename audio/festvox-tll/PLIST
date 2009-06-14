@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:08 joerg Exp $
 share/festival/lib/voices/english/tll_diphone/group/tll_di_resLPC.group
 share/festival/lib/voices/english/tll_diphone/festvox/tll_diphone.scm
 share/festival/lib/voices/english/tll_diphone/festvox/tlldiph.msec
 share/festival/lib/voices/english/tll_diphone/festvox/tllgain.dat
-@dirrm share/festival/lib/voices/english/tll_diphone/group
-@dirrm share/festival/lib/voices/english/tll_diphone/festvox
-@dirrm share/festival/lib/voices/english/tll_diphone

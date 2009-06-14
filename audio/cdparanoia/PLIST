@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/09/22 08:09:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:03 joerg Exp $
 bin/cdparanoia
 include/cdparanoia/cdda_interface.h
 include/cdparanoia/cdda_paranoia.h
@@ -6,4 +6,3 @@ include/cdparanoia/utils.h
 lib/libcdda_interface.la
 lib/libcdda_paranoia.la
 man/man1/cdparanoia.1
-@dirrm include/cdparanoia

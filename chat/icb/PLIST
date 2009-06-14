@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/08 19:57:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:45 joerg Exp $
 bin/icb
 libdata/icb/bartender
 libdata/icb/confuse
 libdata/icb/echofile
 share/examples/icb/icbserverdb
 share/examples/icb/sample.icbrc
-@dirrm libdata/icb

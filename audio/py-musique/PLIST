@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2005/05/21 23:20:24 augustss Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:20 joerg Exp $
 bin/pymusique
 lib/pymusique/config.py
 lib/pymusique/debug.py
@@ -14,5 +14,3 @@ share/doc/pymusique/COPYING
 share/doc/pymusique/ChangeLog
 share/doc/pymusique/README
 share/pixmaps/pymusique.png
-@dirrm lib/pymusique
-@dirrm share/doc/pymusique

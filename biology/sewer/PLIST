@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/27 23:36:34 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:35 joerg Exp $
 share/doc/html/sewer/index.html
 share/doc/html/sewer/align.htm
 share/doc/html/sewer/bookmarklet.htm
@@ -66,7 +66,3 @@ share/doc/html/sewer/styles/unix.css
 share/doc/html/sewer/styles/winie.css
 share/doc/html/sewer/styles/winns.css
 share/doc/html/sewer/tools.htm
-@dirrm share/doc/html/sewer/styles
-@dirrm share/doc/html/sewer/scripts
-@dirrm share/doc/html/sewer/images
-@dirrm share/doc/html/sewer

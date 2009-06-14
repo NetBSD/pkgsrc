@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:06 joerg Exp $
 info/festival.info
 share/doc/festival/festival.dvi
 share/doc/festival/festival.ps
@@ -181,9 +181,3 @@ share/doc/festival/user-manual/festival_7.html
 share/doc/festival/user-manual/festival_8.html
 share/doc/festival/user-manual/festival_9.html
 share/doc/festival/user-manual/festival_toc.html
-@dirrm share/doc/festival/user-manual
-@dirrm share/doc/festival/src-manual
-@dirrm share/doc/festival/speechtools/images_gen
-@dirrm share/doc/festival/speechtools/arch_doc
-@dirrm share/doc/festival/speechtools
-@dirrm share/doc/festival

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/08 19:40:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:09 joerg Exp $
 share/sounds/card_shuffle.wav
 share/sounds/email.wav
 share/sounds/error.wav
@@ -15,5 +15,3 @@ share/sounds/question.wav
 share/sounds/shutdown1.wav
 share/sounds/startup3.wav
 share/sounds/warning.wav
-@dirrm share/sounds/panel
-@dirrm share/sounds/gtk-events
