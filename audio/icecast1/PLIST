@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:10:28 joerg Exp $
 bin/icecast
 share/doc/icecast/manual.html
 share/examples/icecast/groups.aut.dist
@@ -24,4 +24,3 @@ share/icecast/templates/list_directory.html
 share/icecast/templates/manual.html
 share/icecast/templates/mountlist.html
 share/icecast/templates/statistics.html
-@exec ${MKDIR} %D/share/icecast/static

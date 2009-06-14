@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:29 joerg Exp $
 bin/lmms
 lib/lmms/libaudiofileprocessor.la
 lib/lmms/libbitinvader.la
@@ -776,4 +776,4 @@ share/locale/qt_iw.qm
 share/locale/qt_ru.qm
 share/locale/qt_sk.qm
 share/locale/ru.qm
-@exec ${MKDIR} %D/share/lmms/projects/recorded_loops
+@pkgdir share/lmms/projects/recorded_loops
