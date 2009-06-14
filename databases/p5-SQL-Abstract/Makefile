@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2009/05/17 14:24:44 sno Exp $
+# $NetBSD: Makefile,v 1.14 2009/06/14 22:00:38 sno Exp $
 #
 
-DISTNAME=	SQL-Abstract-1.55
+DISTNAME=	SQL-Abstract-1.56
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5sqa
 CATEGORIES=	databases perl5
@@ -22,6 +22,7 @@ BUILD_DEPENDS+=	{perl>=5.10,p5-Test-Simple>0}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 
 PERL5_PACKLIST=		auto/SQL/Abstract/.packlist
+PERL5_MODULE_TYPE=	Module::Install
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
