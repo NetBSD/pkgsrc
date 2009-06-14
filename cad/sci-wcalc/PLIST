@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:35 joerg Exp $
 lib/scilab-${SCIVERSION}/${WCALC_DIR}/libsci_wcalc.la
 libexec/scilab-${SCIVERSION}/${WCALC_DIR}/load_wcalc.sce
 share/${WCALC_DIR}/sci-demos/air_coil_calc.dem
@@ -42,6 +42,3 @@ share/${WCALC_DIR}/sci-man/stripline_syn.htm
 share/${WCALC_DIR}/sci-man/stripline_syn.man
 share/${WCALC_DIR}/sci-man/whatis
 share/${WCALC_DIR}/sci-man/whatis.htm
-@unexec ${RMDIR} %D/share/${WCALC_DIR} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libexec/scilab-${SCIVERSION} 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/scilab-${SCIVERSION} 2>/dev/null || ${TRUE}

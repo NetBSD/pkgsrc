@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 17:35:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 18:16:34 joerg Exp $
 bin/gschem
 bin/gschemdoc
 man/man1/gschem.1
@@ -66,6 +66,3 @@ ${PKGLOCALEDIR}/locale/ja_JP/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/nl_NL/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/geda-gschem.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/geda-gschem.mo
-@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gEDA/scheme 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}

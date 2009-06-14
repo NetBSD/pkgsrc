@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:34 joerg Exp $
 share/qcad/library/architecture/10x4simple.dxf
 share/qcad/library/architecture/acsry/bow160.dat
 share/qcad/library/architecture/acsry/bow160.dxf
@@ -9677,32 +9677,32 @@ share/qcad/library/zipf_libs/zipf_examples/16stromlauf.dat
 share/qcad/library/zipf_libs/zipf_examples/16stromlauf.dxf
 share/qcad/library/zipf_libs/zipf_examples/uebersicht.pdf
 share/qcad/library/zipf_libs/zipf_examples/uebersicht.sxw
-@exec ${MKDIR} %D/share/qcad/library/mechanical/tapers/brown\&sharpe
-@exec ${MKDIR} %D/share/qcad/library/mechanical/tapers/ansi
-@exec ${MKDIR} %D/share/qcad/library/mechanical/DIN_934/M7
-@exec ${MKDIR} %D/share/qcad/library/mechanical/DIN_931/M48
-@exec ${MKDIR} %D/share/qcad/library/mechanical/DIN_931/M2.5
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/switches
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/sources
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/resistors
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/rectifiers
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/optical
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/nomenclature
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/motors
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/misc
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/inductors
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/connectors
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/capacitors
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/ICs-Optical
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/ICs-Digital
-@exec ${MKDIR} %D/share/qcad/library/electronics/transistors/ICs-Analog
-@exec ${MKDIR} %D/share/qcad/library/electronics/motors/stepper
-@exec ${MKDIR} %D/share/qcad/library/electronics/motors/servo
-@exec ${MKDIR} %D/share/qcad/library/electronics/motors/ac
-@exec ${MKDIR} %D/share/qcad/library/electronics/diodes
-@exec ${MKDIR} %D/share/qcad/library/electronics/connectors
-@exec ${MKDIR} %D/share/qcad/library/electronics/ICs/digital
-@exec ${MKDIR} %D/share/qcad/library/electronics/ICs/analog
-@exec ${MKDIR} %D/share/qcad/library/electronics/ICs-Optical
-@exec ${MKDIR} %D/share/qcad/library/electronics/ICs-Digital
-@exec ${MKDIR} %D/share/qcad/library/electronics/ICs-Analog/comparator
+@pkgdir share/qcad/library/mechanical/tapers/brown\&sharpe
+@pkgdir share/qcad/library/mechanical/tapers/ansi
+@pkgdir share/qcad/library/mechanical/DIN_934/M7
+@pkgdir share/qcad/library/mechanical/DIN_931/M48
+@pkgdir share/qcad/library/mechanical/DIN_931/M2.5
+@pkgdir share/qcad/library/electronics/transistors/switches
+@pkgdir share/qcad/library/electronics/transistors/sources
+@pkgdir share/qcad/library/electronics/transistors/resistors
+@pkgdir share/qcad/library/electronics/transistors/rectifiers
+@pkgdir share/qcad/library/electronics/transistors/optical
+@pkgdir share/qcad/library/electronics/transistors/nomenclature
+@pkgdir share/qcad/library/electronics/transistors/motors
+@pkgdir share/qcad/library/electronics/transistors/misc
+@pkgdir share/qcad/library/electronics/transistors/inductors
+@pkgdir share/qcad/library/electronics/transistors/connectors
+@pkgdir share/qcad/library/electronics/transistors/capacitors
+@pkgdir share/qcad/library/electronics/transistors/ICs-Optical
+@pkgdir share/qcad/library/electronics/transistors/ICs-Digital
+@pkgdir share/qcad/library/electronics/transistors/ICs-Analog
+@pkgdir share/qcad/library/electronics/motors/stepper
+@pkgdir share/qcad/library/electronics/motors/servo
+@pkgdir share/qcad/library/electronics/motors/ac
+@pkgdir share/qcad/library/electronics/diodes
+@pkgdir share/qcad/library/electronics/connectors
+@pkgdir share/qcad/library/electronics/ICs/digital
+@pkgdir share/qcad/library/electronics/ICs/analog
+@pkgdir share/qcad/library/electronics/ICs-Optical
+@pkgdir share/qcad/library/electronics/ICs-Digital
+@pkgdir share/qcad/library/electronics/ICs-Analog/comparator

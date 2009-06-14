@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:35:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:16:34 joerg Exp $
 share/doc/geda-doc/nc.pdf
 share/gEDA/gafrc.d/geda-clib.scm
 share/gEDA/scheme/geda-font.scm
@@ -1638,5 +1638,4 @@ share/gEDA/sym/xilinx/XC2S50-5PQ208C.sym
 share/gEDA/sym/xilinx/XC2S50-5PQ208I.sym
 share/gEDA/sym/xilinx/XC2S50-6PQ208C.sym
 share/gEDA/sym/xilinx/XC95108-PC84.sym
-@exec ${MKDIR} %D/share/gEDA/sym/local
-@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}
+@pkgdir share/gEDA/sym/local
