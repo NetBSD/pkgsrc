@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:36:30 joerg Exp $
 share/doc/db2latex/AUTHOR
 share/doc/db2latex/COPYING
 share/doc/db2latex/COPYRIGHT
@@ -1455,4 +1455,3 @@ share/xsl/db2latex/texmath.mod.xsl
 share/xsl/db2latex/verbatim.mod.xsl
 share/xsl/db2latex/xref.mod.xsl
 share/xsl/db2latex/xsldoc.ent
-@unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}

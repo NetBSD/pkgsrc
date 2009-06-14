@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:59 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:38:08 joerg Exp $
 bin/planner
 include/planner-1.0/libplanner/mrp-application.h
 include/planner-1.0/libplanner/mrp-assignment.h
@@ -250,4 +250,4 @@ share/planner/ui/sql-plugin.ui
 share/planner/ui/task-view.ui
 share/planner/ui/time-table-view.ui
 share/planner/ui/xml-planner-plugin.ui
-@exec ${MKDIR} %D/share/gtk-doc/html/libplanner
+@pkgdir share/gtk-doc/html/libplanner

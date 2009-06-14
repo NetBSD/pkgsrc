@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:30 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:36:33 joerg Exp $
 ${GEM_HOME}/cache/xmlparser-${PKGVERSION}.gem
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README
@@ -53,4 +53,3 @@ ${GEM_LIBDIR}/lib/xmltree.rb
 ${GEM_LIBDIR}/lib/xmltreebuilder.rb
 ${GEM_LIBDIR}/lib/xmltreevisitor.rb
 ${GEM_HOME}/specifications/xmlparser-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}
