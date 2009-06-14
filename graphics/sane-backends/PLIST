@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/04/13 21:43:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:59:28 joerg Exp $
 bin/gamma4scanimage
 bin/sane-config
 bin/sane-find-scanner
@@ -319,28 +319,6 @@ share/locale/pt/LC_MESSAGES/sane-backends.mo
 share/locale/ru/LC_MESSAGES/sane-backends.mo
 share/locale/sv/LC_MESSAGES/sane-backends.mo
 @exec ${MKDIR} %D/share/sane/snapscan
-@dirrm share/sane/snapscan
 @exec ${MKDIR} %D/share/sane/gt68xx
-@dirrm share/sane/gt68xx
 @exec ${MKDIR} %D/share/sane/epjitsu
-@dirrm share/sane/epjitsu
 @exec ${MKDIR} %D/share/sane/artec_eplus48u
-@dirrm share/sane/artec_eplus48u
-@dirrm share/sane
-@dirrm share/examples/sane
-@dirrm share/doc/sane-${SANE_VERSION}/umax
-@dirrm share/doc/sane-${SANE_VERSION}/u12
-@dirrm share/doc/sane-${SANE_VERSION}/teco
-@dirrm share/doc/sane-${SANE_VERSION}/sceptre
-@dirrm share/doc/sane-${SANE_VERSION}/plustek
-@dirrm share/doc/sane-${SANE_VERSION}/niash
-@dirrm share/doc/sane-${SANE_VERSION}/mustek_usb2
-@dirrm share/doc/sane-${SANE_VERSION}/mustek_usb
-@dirrm share/doc/sane-${SANE_VERSION}/mustek
-@dirrm share/doc/sane-${SANE_VERSION}/matsushita
-@dirrm share/doc/sane-${SANE_VERSION}/leo
-@dirrm share/doc/sane-${SANE_VERSION}/gt68xx
-@dirrm share/doc/sane-${SANE_VERSION}/canon
-@dirrm share/doc/sane-${SANE_VERSION}
-@dirrm lib/sane
-@dirrm include/sane

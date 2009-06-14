@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/25 10:31:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:04 joerg Exp $
 share/GNUstep/Local/Library/Headers/GeometryKit/G3DBezier.h
 share/GNUstep/Local/Library/Headers/GeometryKit/G3DBox.h
 share/GNUstep/Local/Library/Headers/GeometryKit/G3DDefs.h
@@ -33,10 +33,3 @@ share/GNUstep/Local/Library/Headers/GeometryKit/G3DVectorFunc.h
 share/GNUstep/Local/Library/Headers/GeometryKit/GeometryKit.h
 share/GNUstep/Local/Library/Libraries/libGeometryKit.so
 share/GNUstep/Local/Library/Libraries/libGeometryKit.so.0.7.0
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
-@dirrm share/GNUstep/Local/Library/Headers/GeometryKit
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Library
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Headers
-@dirrm share/GNUstep/Local/Headers/GeometryKit
-@comment in gnustep-make: @dirrm share/GNUstep/Local/Headers

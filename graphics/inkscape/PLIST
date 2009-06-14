@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/04/25 22:35:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 17:59:18 joerg Exp $
 bin/inkscape
 bin/inkview
 man/fr/man1/inkscape.1
@@ -531,22 +531,3 @@ share/locale/vi/LC_MESSAGES/inkscape.mo
 share/locale/zh_CN/LC_MESSAGES/inkscape.mo
 share/locale/zh_TW/LC_MESSAGES/inkscape.mo
 share/pixmaps/inkscape.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/inkscape/ui
-@dirrm share/inkscape/tutorials
-@dirrm share/inkscape/templates
-@dirrm share/inkscape/screens
-@dirrm share/inkscape/patterns
-@dirrm share/inkscape/palettes
-@dirrm share/inkscape/markers
-@dirrm share/inkscape/keys
-@dirrm share/inkscape/icons
-@dirrm share/inkscape/gradients
-@dirrm share/inkscape/fonts
-@dirrm share/inkscape/extensions/xaml2svg
-@dirrm share/inkscape/extensions/Barcode
-@dirrm share/inkscape/extensions
-@dirrm share/inkscape/examples
-@dirrm share/inkscape/clipart
-@dirrm share/inkscape
-@comment in xdg-dirs: @dirrm share/applications

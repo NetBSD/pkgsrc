@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/30 23:56:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:12 joerg Exp $
 bin/f-spot
 bin/f-spot-import
 bin/f-spot-sqlite-upgrade
@@ -317,72 +317,3 @@ share/omf/f-spot/f-spot-oc.omf
 share/omf/f-spot/f-spot-pt_BR.omf
 share/omf/f-spot/f-spot-ru.omf
 share/omf/f-spot/f-spot-sv.omf
-@dirrm share/omf/f-spot
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/f-spot/sv/figures
-@dirrm share/gnome/help/f-spot/sv
-@dirrm share/gnome/help/f-spot/ru/figures
-@dirrm share/gnome/help/f-spot/ru
-@dirrm share/gnome/help/f-spot/pt_BR/figures
-@dirrm share/gnome/help/f-spot/pt_BR
-@dirrm share/gnome/help/f-spot/oc/figures
-@dirrm share/gnome/help/f-spot/oc
-@dirrm share/gnome/help/f-spot/it/figures
-@dirrm share/gnome/help/f-spot/it
-@dirrm share/gnome/help/f-spot/fr/figures
-@dirrm share/gnome/help/f-spot/fr
-@dirrm share/gnome/help/f-spot/es/figures
-@dirrm share/gnome/help/f-spot/es
-@dirrm share/gnome/help/f-spot/da/figures
-@dirrm share/gnome/help/f-spot/da
-@dirrm share/gnome/help/f-spot/C/figures
-@dirrm share/gnome/help/f-spot/C
-@dirrm share/gnome/help/f-spot
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/f-spot/icons/hicolor/scalable/status
-@dirrm share/f-spot/icons/hicolor/scalable/emblems
-@dirrm share/f-spot/icons/hicolor/scalable/apps
-@dirrm share/f-spot/icons/hicolor/scalable/actions
-@dirrm share/f-spot/icons/hicolor/scalable
-@dirrm share/f-spot/icons/hicolor/32x32/status
-@dirrm share/f-spot/icons/hicolor/32x32/emblems
-@dirrm share/f-spot/icons/hicolor/32x32/devices
-@dirrm share/f-spot/icons/hicolor/32x32/apps
-@dirrm share/f-spot/icons/hicolor/32x32/actions
-@dirrm share/f-spot/icons/hicolor/32x32
-@dirrm share/f-spot/icons/hicolor/24x24/status
-@dirrm share/f-spot/icons/hicolor/24x24/places
-@dirrm share/f-spot/icons/hicolor/24x24/emblems
-@dirrm share/f-spot/icons/hicolor/24x24/devices
-@dirrm share/f-spot/icons/hicolor/24x24/apps
-@dirrm share/f-spot/icons/hicolor/24x24/actions
-@dirrm share/f-spot/icons/hicolor/24x24
-@dirrm share/f-spot/icons/hicolor/22x22/status
-@dirrm share/f-spot/icons/hicolor/22x22/places
-@dirrm share/f-spot/icons/hicolor/22x22/emblems
-@dirrm share/f-spot/icons/hicolor/22x22/devices
-@dirrm share/f-spot/icons/hicolor/22x22/apps
-@dirrm share/f-spot/icons/hicolor/22x22/actions
-@dirrm share/f-spot/icons/hicolor/22x22
-@dirrm share/f-spot/icons/hicolor/16x16/status
-@dirrm share/f-spot/icons/hicolor/16x16/places
-@dirrm share/f-spot/icons/hicolor/16x16/emblems
-@dirrm share/f-spot/icons/hicolor/16x16/devices
-@dirrm share/f-spot/icons/hicolor/16x16/apps
-@dirrm share/f-spot/icons/hicolor/16x16/actions
-@dirrm share/f-spot/icons/hicolor/16x16
-@dirrm share/f-spot/icons/hicolor
-@dirrm share/f-spot/icons
-@dirrm share/f-spot
-@dirrm share/applications/screensavers
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/gnome-screensaver
-@dirrm lib/gio-sharp-unstable
-@dirrm lib/f-spot/extensions
-@dirrm lib/f-spot

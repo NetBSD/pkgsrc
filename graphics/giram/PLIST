@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:14 joerg Exp $
 bin/giram
 bin/povfront
 libexec/giram/plug-ins/Box
@@ -56,19 +56,4 @@ share/locale/tr/LC_MESSAGES/giram.mo
 share/locale/uk/LC_MESSAGES/giram.mo
 share/locale/zh_CN/LC_MESSAGES/giram.mo
 share/locale/zh_TW/LC_MESSAGES/giram.mo
-@dirrm share/giram/0.3/tips
-@dirrm share/giram/0.3/texture
-@dirrm share/giram/0.3/shape
-@dirrm share/giram/0.3/pigment
-@dirrm share/giram/0.3/normal
-@dirrm share/giram/0.3/modules
-@dirrm share/giram/0.3/finish
 @exec ${MKDIR} %D/share/giram/0.3/color_map
-@dirrm share/giram/0.3/color_map
-@dirrm share/giram/0.3/color
-@dirrm share/giram/0.3
-@dirrm share/giram
-@dirrm share/examples/giram
-@dirrm share/doc/giram
-@dirrm libexec/giram/plug-ins
-@dirrm libexec/giram

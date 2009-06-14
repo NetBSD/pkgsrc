@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/01/27 19:29:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:59:12 joerg Exp $
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
 include/freetype2/freetype/config/ftheader.h
@@ -50,6 +50,3 @@ include/ft2build.h
 lib/libfreetype.la
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
-@dirrm include/freetype2/freetype/config
-@dirrm include/freetype2/freetype
-@dirrm include/freetype2

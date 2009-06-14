@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/12/01 14:03:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:24 joerg Exp $
 bin/opencv-createsamples
 bin/opencv-haartraining
 bin/opencv-performance
@@ -322,13 +322,3 @@ share/opencv/samples/python/squares.py
 share/opencv/samples/python/watershed.py
 share/opencv/samples/python/watershed.py
 share/opencv/samples/python/watershed.py
-@dirrm share/opencv/samples/python
-@dirrm share/opencv/samples/c
-@dirrm share/opencv/samples
-@dirrm share/opencv/haarcascades
-@dirrm share/opencv
-@dirrm share/doc/opencv/ref/pics
-@dirrm share/doc/opencv/ref
-@dirrm share/doc/opencv/papers
-@dirrm share/doc/opencv
-@dirrm include/opencv
