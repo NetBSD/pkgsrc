@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/08 14:01:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:18 joerg Exp $
 bin/lzcat
 bin/lzcmp
 bin/lzdiff
@@ -38,4 +38,3 @@ man/man1/lzfgrep.1
 man/man1/lzgrep.1
 man/man1/lzless.1
 man/man1/lzmore.1
-@dirrm include/lzma

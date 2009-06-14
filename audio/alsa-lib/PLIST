@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 03:33:00 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -114,11 +114,3 @@ share/alsa/pcm/surround51.conf
 share/alsa/pcm/surround71.conf
 share/alsa/smixer.conf
 share/alsa/sndo-mixer.alisp
-@dirrm share/alsa/pcm
-@dirrm share/alsa/cards/SI7018
-@dirrm share/alsa/cards
-@dirrm share/alsa
-@dirrm lib/alsa-lib/smixer
-@dirrm lib/alsa-lib
-@dirrm include/alsa/sound
-@dirrm include/alsa

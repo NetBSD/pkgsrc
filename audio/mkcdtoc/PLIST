@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/26 13:20:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:18 joerg Exp $
 bin/mkcdtoc
 man/man1/mkcdtoc.1
 share/mkcdtoc/plugins/convert-flac
@@ -16,5 +16,3 @@ share/mkcdtoc/plugins/info-ogginfo
 share/mkcdtoc/plugins/info-translit-cyr
 share/mkcdtoc/plugins/input-m3u
 share/mkcdtoc/plugins/input-raw
-@dirrm share/mkcdtoc/plugins
-@dirrm share/mkcdtoc

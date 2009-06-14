@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/14 23:56:39 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:26 joerg Exp $
 lib/xmms/Visualization/FunTimeDancer/BreakMan/0.bmp
 lib/xmms/Visualization/FunTimeDancer/BreakMan/1.bmp
 lib/xmms/Visualization/FunTimeDancer/BreakMan/2.bmp
@@ -72,13 +72,3 @@ lib/xmms/Visualization/FunTimeDancer/YellowDancer/5.bmp
 lib/xmms/Visualization/FunTimeDancer/YellowDancer/6.bmp
 lib/xmms/Visualization/FunTimeDancer/YellowDancer/7.bmp
 lib/xmms/Visualization/libfuntimedancer.so
-@dirrm lib/xmms/Visualization/FunTimeDancer/YellowDancer
-@dirrm lib/xmms/Visualization/FunTimeDancer/Test-Dot
-@dirrm lib/xmms/Visualization/FunTimeDancer/Test-Digits
-@dirrm lib/xmms/Visualization/FunTimeDancer/SpaceGhost
-@dirrm lib/xmms/Visualization/FunTimeDancer/KittenSinging
-@dirrm lib/xmms/Visualization/FunTimeDancer/Kitten
-@dirrm lib/xmms/Visualization/FunTimeDancer/GreenThing
-@dirrm lib/xmms/Visualization/FunTimeDancer/Flairin
-@dirrm lib/xmms/Visualization/FunTimeDancer/BreakMan
-@dirrm lib/xmms/Visualization/FunTimeDancer

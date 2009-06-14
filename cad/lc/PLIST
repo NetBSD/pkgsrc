@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:54 joerg Exp $
 bin/lc
 bin/lcplot
 ${PLIST.lcspice}bin/lcspice
@@ -98,17 +98,3 @@ share/lc2.10/models/xvia/xvia.gif
 share/lc2.10/models/xvia/xvia.lcx
 share/lc2.10/models/xvia/xvia.wrl
 share/lc2.10/users_guide.ps
-@dirrm share/lc2.10/models/xvia
-@dirrm share/lc2.10/models/wg
-@dirrm share/lc2.10/models/twist
-@dirrm share/lc2.10/models/spheres
-@dirrm share/lc2.10/models/ms
-@dirrm share/lc2.10/models/load
-@dirrm share/lc2.10/models/link
-@dirrm share/lc2.10/models/coax
-@dirrm share/lc2.10/models/champ
-@dirrm share/lc2.10/models
-@dirrm share/lc2.10/man/cat1
-@dirrm share/lc2.10/man
-@dirrm share/lc2.10/app-defaults
-@dirrm share/lc2.10

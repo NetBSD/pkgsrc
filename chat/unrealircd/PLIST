@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/14 22:19:49 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:51 joerg Exp $
 sbin/ircd
 share/doc/unrealircd/Authors
 share/doc/unrealircd/LICENSE
@@ -176,9 +176,3 @@ share/unrealircd/networks/wazzza.network
 share/unrealircd/networks/x-irc.network
 share/unrealircd/networks/zirc.network
 share/unrealircd/spamfilter.conf
-@dirrm share/unrealircd/networks
-@dirrm share/unrealircd/modules
-@dirrm share/unrealircd/aliases
-@dirrm share/unrealircd
-@dirrm share/examples/unrealircd
-@dirrm share/doc/unrealircd

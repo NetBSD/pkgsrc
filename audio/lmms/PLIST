@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/23 11:50:25 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:17 joerg Exp $
 bin/lmms
 lib/lmms/libaudiofileprocessor.la
 lib/lmms/libbitinvader.la
@@ -776,38 +776,4 @@ share/locale/qt_iw.qm
 share/locale/qt_ru.qm
 share/locale/qt_sk.qm
 share/locale/ru.qm
-@dirrm share/lmms/track_icons
-@dirrm share/lmms/themes/default
-@dirrm share/lmms/themes/blue_scene/plugins
-@dirrm share/lmms/themes/blue_scene
-@dirrm share/lmms/themes
-@dirrm share/lmms/samples/stringsnpads
-@dirrm share/lmms/samples/shapes
-@dirrm share/lmms/samples/misc
-@dirrm share/lmms/samples/latin
-@dirrm share/lmms/samples/instruments
-@dirrm share/lmms/samples/effects
-@dirrm share/lmms/samples/drums
-@dirrm share/lmms/samples/beats
-@dirrm share/lmms/samples/bassloopes
-@dirrm share/lmms/samples/basses
-@dirrm share/lmms/samples
-@dirrm share/lmms/projects/tutorials
-@dirrm share/lmms/projects/templates
 @exec ${MKDIR} %D/share/lmms/projects/recorded_loops
-@dirrm share/lmms/projects/recorded_loops
-@dirrm share/lmms/projects/misc
-@dirrm share/lmms/projects/demos
-@dirrm share/lmms/projects/covers
-@dirrm share/lmms/projects/cool_songs
-@dirrm share/lmms/projects
-@dirrm share/lmms/presets/VeSTige
-@dirrm share/lmms/presets/TripleOscillator
-@dirrm share/lmms/presets/PluckedStringSynth
-@dirrm share/lmms/presets/Organic
-@dirrm share/lmms/presets/BitInvader
-@dirrm share/lmms/presets/AudioFileProcessor
-@dirrm share/lmms/presets
-@dirrm share/lmms/midi-maps
-@dirrm share/lmms
-@dirrm lib/lmms

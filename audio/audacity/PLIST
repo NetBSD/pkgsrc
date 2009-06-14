@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/23 03:27:40 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:02 joerg Exp $
 bin/audacity
 man/man1/audacity.1
 share/audacity/audacity-1.2-help.htb
@@ -65,7 +65,3 @@ share/locale/tr/LC_MESSAGES/audacity.mo
 share/locale/uk/LC_MESSAGES/audacity.mo
 share/locale/zh/LC_MESSAGES/audacity.mo
 share/locale/zh_TW/LC_MESSAGES/audacity.mo
-@dirrm share/audacity/nyquist
-@dirrm share/audacity/plug-ins
-@dirrm share/audacity
-@dirrm share/doc/audacity

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/21 15:43:58 mycroft Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:23 joerg Exp $
 bin/timidity
 lib/timidity/bitmaps/back.xbm
 lib/timidity/bitmaps/fwrd.xbm
@@ -13,5 +13,3 @@ lib/timidity/bitmaps/stop.xbm
 lib/timidity/bitmaps/timidity.xbm
 man/man1/timidity.1
 man/man5/timidity.cfg.5
-@dirrm lib/timidity/bitmaps
-@dirrm lib/timidity

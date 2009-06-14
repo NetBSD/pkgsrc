@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/29 20:19:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:37:47 joerg Exp $
 lib/licq/licq_qt-gui.la
 share/applications/licq.desktop
 share/licq/qt-gui/dock.console/away.xpm
@@ -724,46 +724,3 @@ share/licq/qt-gui/skin.thomas/btnDown.png
 share/licq/qt-gui/skin.thomas/btnHighlight.png
 share/licq/qt-gui/skin.thomas/btnUp.png
 share/licq/qt-gui/skin.thomas/thomas.skin
-@dirrm share/licq/qt-gui/skin.thomas
-@dirrm share/licq/qt-gui/skin.shale
-@dirrm share/licq/qt-gui/skin.pli
-@dirrm share/licq/qt-gui/skin.icq-ncb
-@dirrm share/licq/qt-gui/skin.icq
-@dirrm share/licq/qt-gui/skin.gradient
-@dirrm share/licq/qt-gui/skin.e
-@dirrm share/licq/qt-gui/skin.dim
-@dirrm share/licq/qt-gui/skin.compact
-@dirrm share/licq/qt-gui/skin.bheart
-@dirrm share/licq/qt-gui/skin.basic-ncb
-@dirrm share/licq/qt-gui/skin.basic
-@dirrm share/licq/qt-gui/skin.Mirabilis
-@dirrm share/licq/qt-gui/locale
-@dirrm share/licq/qt-gui/icons.thomas
-@dirrm share/licq/qt-gui/icons.mark
-@dirrm share/licq/qt-gui/icons.kde
-@dirrm share/licq/qt-gui/icons.icq2
-@dirrm share/licq/qt-gui/icons.icq
-@dirrm share/licq/qt-gui/icons.computer
-@dirrm share/licq/qt-gui/icons.ami
-@dirrm share/licq/qt-gui/extended.icons.thomas
-@dirrm share/licq/qt-gui/extended.icons.kde
-@dirrm share/licq/qt-gui/extended.icons.basic
-@dirrm share/licq/qt-gui/emoticons/thomas
-@dirrm share/licq/qt-gui/emoticons/phpBB
-@dirrm share/licq/qt-gui/emoticons/msn
-@dirrm share/licq/qt-gui/emoticons/ccmathteam.com
-@dirrm share/licq/qt-gui/emoticons/bugeyes
-@dirrm share/licq/qt-gui/emoticons/Mirabilis5.1
-@dirrm share/licq/qt-gui/emoticons/Mirabilis5
-@dirrm share/licq/qt-gui/emoticons/Mirabilis4
-@dirrm share/licq/qt-gui/emoticons/FeltTip4
-@dirrm share/licq/qt-gui/emoticons/Default
-@dirrm share/licq/qt-gui/emoticons
-@dirrm share/licq/qt-gui/dock.pli
-@dirrm share/licq/qt-gui/dock.kde2
-@dirrm share/licq/qt-gui/dock.glicq
-@dirrm share/licq/qt-gui/dock.flower-ns
-@dirrm share/licq/qt-gui/dock.flower
-@dirrm share/licq/qt-gui/dock.console
-@dirrm share/licq/qt-gui
-@dirrm share/licq

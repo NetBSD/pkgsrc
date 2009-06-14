@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/12 03:11:18 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:52 joerg Exp $
 bin/covered
 man/man1/covered.1
 share/covered/.coveredrc
@@ -85,9 +85,3 @@ share/covered/scripts/preferences.tcl
 share/covered/scripts/process_file.tcl
 share/covered/scripts/summary.tcl
 share/covered/scripts/toggle.tcl
-@dirrm share/covered/scripts
-@dirrm share/covered/doc/user
-@dirrm share/covered/doc/gui/images
-@dirrm share/covered/doc/gui
-@dirrm share/covered/doc
-@dirrm share/covered

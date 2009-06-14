@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:29:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:52 joerg Exp $
 bin/zircon
 share/doc/zircon/BUGS
 share/doc/zircon/COPYRIGHT
@@ -147,25 +147,3 @@ share/zircon/samples/zircon.ad
 @exec ${MKDIR} %D/share/zircon/help/Users
 @exec ${MKDIR} %D/share/zircon/scripts
 @exec ${MKDIR} %D/share/zircon/sounds
-@dirrm share/doc/zircon
-@dirrm share/zircon/help/Zircon/Windows
-@dirrm share/zircon/help/Zircon
-@dirrm share/zircon/help/Channels
-@dirrm share/zircon/help/Servers
-@dirrm share/zircon/help/Services
-@dirrm share/zircon/help/Users
-@dirrm share/zircon/help
-@dirrm share/zircon/gifs
-@dirrm share/zircon/lang
-@dirrm share/zircon/lib
-@dirrm share/zircon/look
-@dirrm share/zircon/plugins/Dcc
-@dirrm share/zircon/plugins/MsgOps
-@dirrm share/zircon/plugins/NoticeOps
-@dirrm share/zircon/plugins/Sed
-@dirrm share/zircon/plugins
-@dirrm share/zircon/samples
-@dirrm share/zircon/scripts
-@dirrm share/zircon/sounds
-@dirrm share/zircon/lib
-@dirrm share/zircon

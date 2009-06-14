@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/21 10:16:55 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:24 joerg Exp $
 bin/twolame
 include/twolame.h
 lib/libtwolame.la
@@ -23,5 +23,3 @@ share/doc/twolame/html/twolame_8h.html
 share/doc/twolame/html/vbr.html
 share/doc/twolame/psycho.txt
 share/doc/twolame/vbr.txt
-@dirrm share/doc/twolame/html
-@dirrm share/doc/twolame

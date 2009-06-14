@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/23 13:22:45 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:35:54 joerg Exp $
 bin/ghwdump
 bin/gtkwave
 bin/lxt2miner
@@ -39,5 +39,3 @@ share/gtkwave/examples/des.script
 share/gtkwave/examples/des.v
 share/gtkwave/examples/des.vzt
 share/gtkwave/gtkwave.odt
-@dirrm share/gtkwave/examples
-@dirrm share/gtkwave

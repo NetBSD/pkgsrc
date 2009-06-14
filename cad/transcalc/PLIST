@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/03/23 12:25:03 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:57 joerg Exp $
 bin/transcalc
 man/man1/transcalc.1
 share/transcalc/examples/000.trc
@@ -13,6 +13,3 @@ share/transcalc/images/c_microstrip.jpg
 share/transcalc/images/coax.jpg
 share/transcalc/images/microstrip.jpg
 share/transcalc/images/rectwaveguide.jpg
-@dirrm share/transcalc/images
-@dirrm share/transcalc/examples
-@dirrm share/transcalc

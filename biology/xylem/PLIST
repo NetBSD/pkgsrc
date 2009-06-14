@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/10/04 19:13:30 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:35 joerg Exp $
 bin/dbstat
 bin/flat2phyl
 bin/getloc
@@ -47,5 +47,3 @@ share/examples/xylem/sample.ref
 share/examples/xylem/sample.sequential.phylip
 share/examples/xylem/sample.wrp
 share/examples/xylem/testxylem.csh
-@dirrm share/examples/xylem
-@dirrm share/doc/xylem

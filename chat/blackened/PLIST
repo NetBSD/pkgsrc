@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:17 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:42 joerg Exp $
 bin/${PKGNAME}
 bin/irc
 bin/ircflush
@@ -82,7 +82,3 @@ share/blackened/1.7.1/translation/SWEDISH_NAMES_COM
 share/blackened/1.7.1/translation/SWISS
 share/blackened/1.7.1/translation/UNITED_KINGDOM
 share/blackened/1.7.1/translation/UNITED_KINGDOM_COM
-@dirrm share/blackened/1.7.1/translation
-@dirrm share/blackened/1.7.1/script
-@dirrm share/blackened/1.7.1
-@dirrm share/blackened

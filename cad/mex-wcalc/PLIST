@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 03:55:38 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:55 joerg Exp $
 libexec/matlab/${WCALC_DIR}/air_coil_calc.la
 libexec/matlab/${WCALC_DIR}/air_coil_calc.m
 libexec/matlab/${WCALC_DIR}/air_coil_syn.la
@@ -23,5 +23,3 @@ libexec/matlab/${WCALC_DIR}/stripline_calc.la
 libexec/matlab/${WCALC_DIR}/stripline_calc.m
 libexec/matlab/${WCALC_DIR}/stripline_syn.la
 libexec/matlab/${WCALC_DIR}/stripline_syn.m
-@dirrm libexec/matlab/${WCALC_DIR}
-@dirrm libexec/matlab

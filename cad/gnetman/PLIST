@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/17 23:49:25 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:53 joerg Exp $
 bin/gnetman
 share/gEDA/examples/gnetman/bustest.sch
 share/gEDA/examples/gnetman/bustest.sym
@@ -48,10 +48,5 @@ share/gEDA/sym/gnetman/vpulse-1.sym
 share/gEDA/sym/gnetman/vpwl-1.sym
 share/gEDA/sym/gnetman/vss.sym
 share/gEDA/system-gnetmanrc.tcl
-@dirrm share/gEDA/sym/gnetman
 @unexec ${RMDIR} %D/share/gEDA/sym 2>/dev/null || ${TRUE}
-@dirrm share/gEDA/sch/gnetman
-@dirrm share/gEDA/sch
-@dirrm share/gEDA/examples/gnetman
-@dirrm share/gEDA/examples
 @unexec ${RMDIR} %D/share/gEDA 2>/dev/null || ${TRUE}

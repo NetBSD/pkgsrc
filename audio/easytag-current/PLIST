@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/13 15:28:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:05 joerg Exp $
 bin/easytag
 man/man1/easytag.1
 share/applications/easytag.desktop
@@ -27,6 +27,3 @@ share/locale/uk/LC_MESSAGES/easytag.mo
 share/locale/zh_CN/LC_MESSAGES/easytag.mo
 share/locale/zh_TW/LC_MESSAGES/easytag.mo
 share/pixmaps/EasyTAG_icon.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/easytag
-@comment in xdg-dirs: @dirrm share/applications

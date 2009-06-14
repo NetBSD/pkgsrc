@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/30 01:19:31 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 bin/fluctuate
 share/doc/fluctuate/errors.doc
 share/doc/fluctuate/fluctuate.doc
 share/examples/fluctuate/bestree
 share/examples/fluctuate/infile
 share/examples/fluctuate/outfile
-@dirrm share/examples/fluctuate
-@dirrm share/doc/fluctuate

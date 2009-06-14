@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/02/21 13:20:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 17:32:15 joerg Exp $
 bin/sndfile-cmp
 bin/sndfile-convert
 bin/sndfile-info
@@ -30,5 +30,3 @@ share/doc/libsndfile1-dev/html/pkgconfig.html
 share/doc/libsndfile1-dev/html/sndfile_info.html
 share/doc/libsndfile1-dev/html/tutorial.html
 share/doc/libsndfile1-dev/html/win32.html
-@dirrm share/doc/libsndfile1-dev/html
-@dirrm share/doc/libsndfile1-dev

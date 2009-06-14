@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/11/08 21:06:46 bjs Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:22 joerg Exp $
 bin/speexdec
 bin/speexenc
 include/speex/speex.h
@@ -21,5 +21,3 @@ man/man1/speexdec.1
 man/man1/speexenc.1
 share/aclocal/speex.m4
 share/doc/speex/manual.pdf
-@dirrm share/doc/speex
-@dirrm include/speex

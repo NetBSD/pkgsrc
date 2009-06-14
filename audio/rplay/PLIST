@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:44:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:32:21 joerg Exp $
 bin/rplay
 bin/rptp
 include/rplay.h
@@ -20,4 +20,3 @@ share/examples/rplay/rplay.conf
 share/examples/rplay/rplay.helpers
 share/examples/rplay/rplay.hosts
 share/examples/rplay/rplay.servers
-@dirrm share/examples/rplay

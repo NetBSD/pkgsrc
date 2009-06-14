@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:02 joerg Exp $
 bin/beep-media-player
 include/bmp/beepctrl.h
 include/bmp/configdb.h
@@ -72,16 +72,3 @@ share/locale/uk/LC_MESSAGES/bmp.mo
 share/locale/zh_CN/LC_MESSAGES/bmp.mo
 share/locale/zh_TW/LC_MESSAGES/bmp.mo
 share/pixmaps/bmp.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/bmp/images
-@dirrm share/bmp/glade
-@dirrm share/bmp/Skins/Default
-@dirrm share/bmp/Skins
-@dirrm share/bmp
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/bmp/Visualization
-@dirrm lib/bmp/Output
-@dirrm lib/bmp/Input
-@dirrm lib/bmp
-@dirrm include/bmp

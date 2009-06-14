@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/09 20:04:38 mlelstv Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:35:56 joerg Exp $
 bin/help
 bin/multidec
 bin/nutmeg
@@ -36,7 +36,3 @@ share/spice3/mfbcap
 share/spice3/news
 share/spice3/scripts/setplot
 share/spice3/scripts/spinit
-@dirrm share/spice3/scripts
-@dirrm share/spice3/helpdir
-@dirrm share/spice3
-@dirrm share/examples/spice3

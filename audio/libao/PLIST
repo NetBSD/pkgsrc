@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2005/05/31 21:57:15 rillig Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:32:13 joerg Exp $
 include/ao/ao.h
 include/ao/os_types.h
 include/ao/plugin.h
@@ -42,8 +42,4 @@ share/doc/${PKGNAME}/overview.html
 share/doc/${PKGNAME}/plugin-api.html
 share/doc/${PKGNAME}/plugin-overview.html
 share/doc/${PKGNAME}/style.css
-@dirrm share/doc/${PKGNAME}
 @exec ${MKDIR} -p %D/lib/ao/plugins-2
-@dirrm lib/ao/plugins-2
-@dirrm lib/ao
-@dirrm include/ao

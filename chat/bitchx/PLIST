@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/06/11 21:16:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:37:42 joerg Exp $
 bin/BitchX
 bin/BitchX-1.1-final
 bin/scr-bx
@@ -967,24 +967,4 @@ share/bx/translation/SWISS.bz2
 share/bx/translation/UNITED_KINGDOM.bz2
 share/bx/translation/UNITED_KINGDOM_COM.bz2
 share/bx/wserv
-@dirrm share/bx/translation
-@dirrm share/bx/script
-@dirrm share/bx/help/8_Scripts
-@dirrm share/bx/help/7_Docs
-@dirrm share/bx/help/6_Functions
-@dirrm share/bx/help/5_Programming/on
-@dirrm share/bx/help/5_Programming
-@dirrm share/bx/help/4_Misc/window
-@dirrm share/bx/help/4_Misc/set
-@dirrm share/bx/help/4_Misc/bind
-@dirrm share/bx/help/4_Misc
-@dirrm share/bx/help/3_Operators
-@dirrm share/bx/help/2_Queries
-@dirrm share/bx/help/1_General/dcc
-@dirrm share/bx/help/1_General/ctcp
-@dirrm share/bx/help/1_General
-@dirrm share/bx/help
-@dirrm share/bx
 @exec ${MKDIR} %D/lib/bx/plugins
-@dirrm lib/bx/plugins
-@dirrm lib/bx

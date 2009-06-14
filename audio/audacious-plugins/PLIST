@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/18 22:42:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:02 joerg Exp $
 lib/audacious/Container/m3u.so
 lib/audacious/Container/pls.so
 lib/audacious/Container/xspf.so
@@ -101,15 +101,3 @@ share/locale/ro/LC_MESSAGES/audacious-plugins.mo
 share/locale/ru/LC_MESSAGES/audacious-plugins.mo
 share/locale/sk/LC_MESSAGES/audacious-plugins.mo
 share/locale/tr/LC_MESSAGES/audacious-plugins.mo
-@dirrm share/audacious/paranormal/Presets
-@dirrm share/audacious/paranormal
-@comment in audacious: @dirrm share/audacious/images
-@comment in audacious: @dirrm share/audacious
-@dirrm lib/audacious/Visualization
-@dirrm lib/audacious/Transport
-@dirrm lib/audacious/Output
-@dirrm lib/audacious/Input
-@dirrm lib/audacious/General
-@dirrm lib/audacious/Effect
-@dirrm lib/audacious/Container
-@dirrm lib/audacious

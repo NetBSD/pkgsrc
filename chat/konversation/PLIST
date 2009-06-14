@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/12 04:14:58 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:37:47 joerg Exp $
 bin/konversation
 share/applications/kde/konversation.desktop
 share/doc/kde/HTML/da/konversation/common
@@ -299,44 +299,3 @@ share/locale/sv/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
 share/locale/zh_CN/LC_MESSAGES/konversation.mo
 share/locale/zh_TW/LC_MESSAGES/konversation.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/konversation/themes/square
-@dirrm share/kde/apps/konversation/themes/smiling
-@dirrm share/kde/apps/konversation/themes/oxygen
-@dirrm share/kde/apps/konversation/themes/default
-@dirrm share/kde/apps/konversation/themes/classic
-@dirrm share/kde/apps/konversation/themes/christmas
-@dirrm share/kde/apps/konversation/themes/alternative
-@dirrm share/kde/apps/konversation/themes
-@dirrm share/kde/apps/konversation/scripts
-@dirrm share/kde/apps/konversation
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/icons/crystalsvg/scalable/actions
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/actions
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/actions
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/actions
-@dirrm share/doc/kde/HTML/sv/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/konversation
-@dirrm share/doc/kde/HTML/pt/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/it/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/et/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde

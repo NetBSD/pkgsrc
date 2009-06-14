@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/10 23:46:15 jtb Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:34:34 joerg Exp $
 bin/ppuzzle
 bin/puzzle
 share/doc/html/puzzle/ppuzzle.gif
@@ -11,6 +11,3 @@ share/examples/puzzle/atp6.a
 share/examples/puzzle/globin.a
 share/examples/puzzle/marswolf.n
 share/examples/puzzle/primates.b
-@dirrm share/doc/puzzle
-@dirrm share/doc/html/puzzle
-@dirrm share/examples/puzzle

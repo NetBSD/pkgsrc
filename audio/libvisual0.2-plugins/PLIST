@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/03 23:31:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:16 joerg Exp $
 lib/libvisual/actor/actor_JESS.la
 lib/libvisual/actor/actor_bumpscope.la
 lib/libvisual/actor/actor_corona.la
@@ -527,21 +527,3 @@ share/libvisual/actor/actor_nebulus/energy_texture.bmp
 share/libvisual/actor/actor_nebulus/tentacle_texture.bmp
 share/libvisual/actor/actor_nebulus/tunnel_texture.bmp
 share/libvisual/actor/actor_nebulus/twist_texture.bmp
-@dirrm share/libvisual/actor/actor_nebulus
-@dirrm share/libvisual/actor/actor_madspin
-@dirrm share/libvisual/actor/actor_gforce/GForceWaveShapes
-@dirrm share/libvisual/actor/actor_gforce/GForceParticles
-@dirrm share/libvisual/actor/actor_gforce/GForceDeltaFields
-@dirrm share/libvisual/actor/actor_gforce/GForceColorMaps
-@dirrm share/libvisual/actor/actor_gforce
-@dirrm share/libvisual/actor
-@dirrm share/libvisual-plugins/GForceWaveShapes
-@dirrm share/libvisual-plugins/GForceParticles
-@dirrm share/libvisual-plugins/GForceDeltaFields
-@dirrm share/libvisual-plugins/GForceColorMaps
-@dirrm share/libvisual-plugins
-@dirrm share/libvisual
-@dirrm lib/libvisual/morph
-@dirrm lib/libvisual/input
-@dirrm lib/libvisual/actor
-@dirrm lib/libvisual

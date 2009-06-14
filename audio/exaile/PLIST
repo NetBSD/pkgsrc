@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/03/28 01:06:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:32:05 joerg Exp $
 bin/exaile
 lib/exaile/exaile.py
 lib/exaile/lib/__init__.py
@@ -262,19 +262,3 @@ share/locale/uk/LC_MESSAGES/exaile.mo
 share/locale/zh_CN/LC_MESSAGES/exaile.mo
 share/locale/zh_TW/LC_MESSAGES/exaile.mo
 share/pixmaps/exaile.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/exaile/xl/plugins
-@dirrm share/exaile/xl
-@dirrm share/exaile/sql
-@dirrm share/exaile/images/default_theme
-@dirrm share/exaile/images
-@dirrm share/exaile/data
-@dirrm share/exaile
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/exaile/xl/plugins
-@dirrm lib/exaile/xl/panels
-@dirrm lib/exaile/xl/media
-@dirrm lib/exaile/xl/gui
-@dirrm lib/exaile/xl
-@dirrm lib/exaile/lib
-@dirrm lib/exaile

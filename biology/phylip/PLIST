@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/08 06:33:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:34:34 joerg Exp $
 bin/clique
 bin/consense
 bin/contml
@@ -77,12 +77,10 @@ share/doc/html/phylip/retree.html
 share/doc/html/phylip/seqboot.html
 share/doc/html/phylip/sequence.html
 share/doc/html/phylip/treedist.html
-@dirrm share/doc/html/phylip
 share/fonts/phylip/font1
 share/fonts/phylip/font2
 share/fonts/phylip/font3
 share/fonts/phylip/font4
 share/fonts/phylip/font5
 share/fonts/phylip/font6
-@dirrm share/fonts/phylip
 @unexec ${RMDIR} %D/share/fonts 2> /dev/null || ${TRUE}

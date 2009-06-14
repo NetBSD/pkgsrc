@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.perl,v 1.7 2008/07/13 12:04:11 tonnerre Exp $
+@comment $NetBSD: PLIST.perl,v 1.8 2009/06/14 17:37:49 joerg Exp $
 libexec/silc-client/scripts/autoop.pl
 libexec/silc-client/scripts/autorejoin.pl
 libexec/silc-client/scripts/buf.pl
@@ -14,5 +14,3 @@ libexec/silc-client/scripts/scriptassist.pl
 libexec/silc-client/scripts/silc.pl
 libexec/silc-client/scripts/splitlong.pl
 libexec/silc-client/scripts/usercount.pl
-@dirrm libexec/silc-client/scripts
-@dirrm libexec/silc-client

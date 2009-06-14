@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/12 03:19:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:34 joerg Exp $
 bin/pymol
 ${PYSITELIB}/chempy/__init__.py
 ${PYSITELIB}/chempy/__init__.pyc
@@ -733,46 +733,3 @@ ${PYSITELIB}/pymol/xray.pyo
 ${PYSITELIB}/pymol/xwin.py
 ${PYSITELIB}/pymol/xwin.pyc
 ${PYSITELIB}/pymol/xwin.pyo
-@dirrm ${PYSITELIB}/pymol/wizard
-@dirrm ${PYSITELIB}/pymol/pymol_path/test/ref
-@dirrm ${PYSITELIB}/pymol/pymol_path/test/inp
-@dirrm ${PYSITELIB}/pymol/pymol_path/test/dat
-@dirrm ${PYSITELIB}/pymol/pymol_path/test
-@dirrm ${PYSITELIB}/pymol/pymol_path/scripts/metaphorics
-@dirrm ${PYSITELIB}/pymol/pymol_path/scripts
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/package/redhat
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/package
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/launching
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/devel
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/cookbook
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples/chempy
-@dirrm ${PYSITELIB}/pymol/pymol_path/examples
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/tut
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/pymol/matrices
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/pymol
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/pmg_tk/bitmaps/builder
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/pmg_tk/bitmaps
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/pmg_tk
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/demo
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/chempy/tinker
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/chempy/sidechains
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/chempy/fragments
-@dirrm ${PYSITELIB}/pymol/pymol_path/data/chempy
-@dirrm ${PYSITELIB}/pymol/pymol_path/data
-@dirrm ${PYSITELIB}/pymol/pymol_path
-@dirrm ${PYSITELIB}/pymol/opengl/glut
-@dirrm ${PYSITELIB}/pymol/opengl/glu
-@dirrm ${PYSITELIB}/pymol/opengl/gl
-@dirrm ${PYSITELIB}/pymol/opengl
-@dirrm ${PYSITELIB}/pymol
-@dirrm ${PYSITELIB}/pmg_wx
-@dirrm ${PYSITELIB}/pmg_tk/startup
-@dirrm ${PYSITELIB}/pmg_tk/skins/normal
-@dirrm ${PYSITELIB}/pmg_tk/skins
-@dirrm ${PYSITELIB}/pmg_tk
-@dirrm ${PYSITELIB}/chempy/tinker
-@dirrm ${PYSITELIB}/chempy/fragments
-@dirrm ${PYSITELIB}/chempy/fast
-@dirrm ${PYSITELIB}/chempy/champ
-@dirrm ${PYSITELIB}/chempy/bmin
-@dirrm ${PYSITELIB}/chempy

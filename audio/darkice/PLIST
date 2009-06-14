@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/21 10:27:01 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:04 joerg Exp $
 bin/darkice
 man/man1/darkice.1
 man/man5/darkice.conf.5
@@ -219,5 +219,3 @@ share/doc/darkice/inherits.html
 share/doc/darkice/main_8cpp-source.html
 share/doc/darkice/main_8cpp.html
 share/examples/darkice/darkice.conf
-@dirrm share/examples/darkice
-@dirrm share/doc/darkice

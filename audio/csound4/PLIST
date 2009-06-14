@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/21 22:29:09 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:04 joerg Exp $
 bin/csound4
 lib/csound4/csound
 lib/csound4/csound-config
@@ -50,6 +50,3 @@ lib/csound4/libcsound.la
 share/csound4/csound.xmg
 share/csound4/csoundgbs.html
 share/csound4/flcsound.html
-@dirrm share/csound4
-@dirrm lib/csound4
-@dirrm include/csound4

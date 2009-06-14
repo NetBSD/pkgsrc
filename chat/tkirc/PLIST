@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:06:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
 bin/tkirc
 share/doc/tkirc/tkircrc-example
 share/doc/tkirc/README
 share/doc/tkirc/CHANGES
 share/doc/tkirc/COPYING
-@dirrm share/doc/tkirc

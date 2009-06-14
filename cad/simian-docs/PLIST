@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:49:16 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:56 joerg Exp $
 share/doc/simian/simian_man_12_98.pdf
-@dirrm share/doc/simian

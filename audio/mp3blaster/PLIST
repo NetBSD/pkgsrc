@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/11/22 17:02:04 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:18 joerg Exp $
 bin/mp3blaster
 bin/mp3tag
 bin/nmixer
@@ -13,5 +13,3 @@ share/mp3blaster/charmap/win1251
 share/mp3blaster/charmap/win2koi.tbl
 share/mp3blaster/commands.txt
 share/mp3blaster/sample.mp3blasterrc
-@dirrm share/mp3blaster/charmap
-@dirrm share/mp3blaster

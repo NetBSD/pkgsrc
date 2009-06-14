@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:27:53 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 share/examples/bioperl/blast/out/blastn.2.gz
 share/examples/bioperl/blast/out/blastn.2.wu.gz
 share/examples/bioperl/blast/out/blastp.1.gcg.gz
@@ -72,10 +72,3 @@ share/examples/bioperl/seq/seqs1.pl
 share/examples/bioperl/seq/seqs2.pl
 share/examples/bioperl/seq/seqs3.pl
 share/examples/bioperl/seq/seqtools.pl
-@dirrm share/examples/bioperl/seq
-@dirrm share/examples/bioperl/root_object/vector
-@dirrm share/examples/bioperl/root_object
-@dirrm share/examples/bioperl/blast/seq
-@dirrm share/examples/bioperl/blast/out
-@dirrm share/examples/bioperl/blast
-@dirrm share/examples/bioperl

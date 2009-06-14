@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/30 03:50:02 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:18 joerg Exp $
 bin/mserv
 bin/mservcmd
 bin/mservedit
@@ -16,5 +16,3 @@ share/mserv/webclient/main.cgi
 share/mserv/webclient/margin.cgi
 share/mserv/webclient/mserv.cgi
 share/mserv/webclient/mserv7.gif
-@dirrm share/mserv/webclient
-@dirrm share/mserv

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/15 18:44:27 tron Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:25 joerg Exp $
 bin/cda
 bin/xmcd
 bin/xmcd_start
@@ -250,26 +250,3 @@ lib/X11/xmcd/pixmaps/xmcd_b.px
 lib/X11/xmcd/scripts/genidx
 man/man1/cda.1
 man/man1/xmcd.1
-@dirrm lib/X11/xmcd/pixmaps
-@dirrm lib/X11/xmcd/help/Xm
-@dirrm lib/X11/xmcd/help/Ur
-@dirrm lib/X11/xmcd/help/Su
-@dirrm lib/X11/xmcd/help/Sg
-@dirrm lib/X11/xmcd/help/Rs
-@dirrm lib/X11/xmcd/help/Op
-@dirrm lib/X11/xmcd/help/Ms
-@dirrm lib/X11/xmcd/help/Kp
-@dirrm lib/X11/xmcd/help/Hp
-@dirrm lib/X11/xmcd/help/Dt
-@dirrm lib/X11/xmcd/help/Dp
-@dirrm lib/X11/xmcd/help/Dl
-@dirrm lib/X11/xmcd/help/Df
-@dirrm lib/X11/xmcd/help/Dd
-@dirrm lib/X11/xmcd/help/Cr
-@dirrm lib/X11/xmcd/help
-@dirrm lib/X11/xmcd/docs
-@dirrm lib/X11/xmcd/config/.tbl
-@dirrm lib/X11/xmcd/bin-${ARCH}-${MACHINE_ARCH}
-@dirrm lib/X11/xmcd/lib-${ARCH}-${MACHINE_ARCH}
-@dirrm lib/X11/xmcd/scripts
-@dirrm lib/X11/xmcd/app-defaults

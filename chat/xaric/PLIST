@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/26 13:01:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:51 joerg Exp $
 bin/xaric
 man/man1/xaric.1
 share/xaric/help/copying
 share/xaric/help/help
 share/xaric/help/warranty
-@dirrm share/xaric/help
-@dirrm share/xaric

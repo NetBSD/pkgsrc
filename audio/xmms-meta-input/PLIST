@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/08/29 05:35:27 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:26 joerg Exp $
 lib/xmms/Input/libmetainput.la
 share/doc/xmms-input/README
 share/examples/xmms-meta-input/dsp_input
@@ -8,6 +8,3 @@ share/examples/xmms-meta-input/modules
 share/examples/xmms-meta-input/mp3
 share/examples/xmms-meta-input/spc
 share/examples/xmms-meta-input/vorbis
-@dirrm share/examples/xmms-meta-input
-@dirrm share/doc/xmms-input
-@comment in xmms: @dirrm lib/xmms/Input

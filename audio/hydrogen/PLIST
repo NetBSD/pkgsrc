@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 14:52:27 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:11 joerg Exp $
 bin/hydrogen
 man/man1/hydrogen.1
 share/hydrogen/img/about/aboutLogo.png
@@ -99,12 +99,3 @@ share/hydrogen/manual/img/TutorialStart.png
 share/hydrogen/manual/manual.html
 share/hydrogen/manual/manual_en.html
 share/hydrogen/manual/manual_it.html
-@dirrm share/hydrogen/manual/img
-@dirrm share/hydrogen/manual
-@dirrm share/hydrogen/img/splash
-@dirrm share/hydrogen/img/songEditor
-@dirrm share/hydrogen/img/playerControlPanel
-@dirrm share/hydrogen/img/patternEditor
-@dirrm share/hydrogen/img/mixerPanel
-@dirrm share/hydrogen/img/about
-@dirrm share/hydrogen/img

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/07 18:38:05 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:32:19 joerg Exp $
 bin/ncmpc
 man/man1/ncmpc.1
 share/doc/ncmpc/AUTHORS
@@ -17,4 +17,3 @@ share/locale/gl/LC_MESSAGES/ncmpc.mo
 share/locale/hu/LC_MESSAGES/ncmpc.mo
 share/locale/no/LC_MESSAGES/ncmpc.mo
 share/locale/sk/LC_MESSAGES/ncmpc.mo
-@dirrm share/doc/ncmpc

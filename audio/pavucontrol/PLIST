@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/18 17:50:30 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:20 joerg Exp $
 bin/pavucontrol
 share/applications/pavucontrol.desktop
 share/locale/de/LC_MESSAGES/pavucontrol.mo
@@ -8,5 +8,3 @@ share/locale/hu/LC_MESSAGES/pavucontrol.mo
 share/locale/pl/LC_MESSAGES/pavucontrol.mo
 share/locale/sv/LC_MESSAGES/pavucontrol.mo
 share/pavucontrol/pavucontrol.glade
-@dirrm share/pavucontrol
-@comment in xdg-dirs: @dirrm share/applications

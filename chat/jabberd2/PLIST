@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/07/16 15:26:27 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:37:46 joerg Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -80,5 +80,3 @@ share/examples/rc.d/resolver
 share/examples/rc.d/router
 share/examples/rc.d/s2s
 share/examples/rc.d/sm
-@dirrm share/examples/jabberd
-@dirrm lib/jabberd

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2007/03/11 01:37:56 rmind Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:33:12 joerg Exp $
 bin/sysbench
 share/doc/sysbench/manual.html
-@dirrm share/doc/sysbench

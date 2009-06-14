@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/03 14:29:15 abs Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:01 joerg Exp $
 share/ampache/admin/access.php
 share/ampache/admin/catalog.php
 share/ampache/admin/duplicates.php
@@ -540,68 +540,3 @@ share/ampache/themes/greysme/theme.cfg.php
 share/ampache/update.php
 share/ampache/util.php
 share/examples/ampache.conf
-@dirrm share/ampache/themes/greysme/templates
-@dirrm share/ampache/themes/greysme/images/ratings
-@dirrm share/ampache/themes/greysme/images/icons
-@dirrm share/ampache/themes/greysme/images
-@dirrm share/ampache/themes/greysme
-@dirrm share/ampache/themes/classic/templates
-@dirrm share/ampache/themes/classic/images
-@dirrm share/ampache/themes/classic
-@dirrm share/ampache/themes
-@dirrm share/ampache/templates
-@dirrm share/ampache/sql
-@dirrm share/ampache/server
-@dirrm share/ampache/play
-@dirrm share/ampache/modules/validatemail
-@dirrm share/ampache/modules/prototype
-@dirrm share/ampache/modules/plugins
-@dirrm share/ampache/modules/pearxmlrpc
-@dirrm share/ampache/modules/nusoap
-@dirrm share/ampache/modules/mpd
-@dirrm share/ampache/modules/localplay
-@dirrm share/ampache/modules/kajax
-@dirrm share/ampache/modules/infotools
-@dirrm share/ampache/modules/httpq
-@dirrm share/ampache/modules/horde
-@dirrm share/ampache/modules/getid3/docs
-@dirrm share/ampache/modules/getid3
-@dirrm share/ampache/modules/flash/Original
-@dirrm share/ampache/modules/flash
-@dirrm share/ampache/modules/emulator
-@dirrm share/ampache/modules/captcha
-@dirrm share/ampache/modules/archive
-@dirrm share/ampache/modules
-@dirrm share/ampache/locale/sv_SE/LC_MESSAGES
-@dirrm share/ampache/locale/sv_SE
-@dirrm share/ampache/locale/ru_RU/LC_MESSAGES
-@dirrm share/ampache/locale/ru_RU
-@dirrm share/ampache/locale/nl_NL/LC_MESSAGES
-@dirrm share/ampache/locale/nl_NL
-@dirrm share/ampache/locale/ja_JP/LC_MESSAGES
-@dirrm share/ampache/locale/ja_JP
-@dirrm share/ampache/locale/it_IT/LC_MESSAGES
-@dirrm share/ampache/locale/it_IT
-@dirrm share/ampache/locale/fr_FR/LC_MESSAGES
-@dirrm share/ampache/locale/fr_FR
-@dirrm share/ampache/locale/es_ES/LC_MESSAGES
-@dirrm share/ampache/locale/es_ES
-@dirrm share/ampache/locale/en_GB/LC_MESSAGES
-@dirrm share/ampache/locale/en_GB
-@dirrm share/ampache/locale/el_GR/LC_MESSAGES
-@dirrm share/ampache/locale/el_GR
-@dirrm share/ampache/locale/de_DE/LC_MESSAGES
-@dirrm share/ampache/locale/de_DE
-@dirrm share/ampache/locale/ca_ES/LC_MESSAGES
-@dirrm share/ampache/locale/ca_ES
-@dirrm share/ampache/locale/base
-@dirrm share/ampache/locale
-@dirrm share/ampache/lib/class
-@dirrm share/ampache/lib
-@dirrm share/ampache/images/ratings
-@dirrm share/ampache/images
-@dirrm share/ampache/docs
-@dirrm share/ampache/config
-@dirrm share/ampache/bin
-@dirrm share/ampache/admin
-@dirrm share/ampache

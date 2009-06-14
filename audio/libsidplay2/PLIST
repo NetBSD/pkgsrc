@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/09 13:12:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:15 joerg Exp $
 @exec ${MKDIR} %D/include/libsidplay2/resid
 include/libsidplay2/sidplay/Buffer.h
 include/libsidplay2/sidplay/SidTune.h
@@ -25,10 +25,3 @@ lib/libsidutils.la
 lib/pkgconfig/libsidplay2.pc
 lib/pkgconfig/libsidutils.pc
 lib/sidplay/builders/libresid-builder.la
-@dirrm lib/sidplay/builders
-@dirrm lib/sidplay
-@dirrm include/libsidplay2/sidplay/utils
-@dirrm include/libsidplay2/sidplay/builders
-@dirrm include/libsidplay2/sidplay
-@dirrm include/libsidplay2/resid
-@dirrm include/libsidplay2

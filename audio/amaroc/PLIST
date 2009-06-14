@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/24 17:39:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
 bin/amaroc.py
 share/doc/amaroc/README
-@dirrm share/doc/amaroc

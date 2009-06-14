@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/06 21:37:28 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:54 joerg Exp $
 bin/XHelper7
 bin/ext2sim
 bin/ext2spice
@@ -161,8 +161,3 @@ man/man5/magic.5
 man/man5/net.5
 man/man5/sim.5
 man/man8/prleak.8
-@dirrm lib/magic/tutorial
-@dirrm lib/magic/sys
-@dirrm lib/magic/scm
-@dirrm lib/magic/doc
-@dirrm lib/magic

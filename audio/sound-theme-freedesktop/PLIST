@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/14 01:24:59 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:22 joerg Exp $
 share/sounds/freedesktop/index.theme
 share/sounds/freedesktop/stereo/audio-channel-front-center.ogg
 share/sounds/freedesktop/stereo/audio-channel-front-left.ogg
@@ -40,6 +40,3 @@ share/sounds/freedesktop/stereo/window-minimized.ogg
 share/sounds/freedesktop/stereo/window-move-start.ogg
 share/sounds/freedesktop/stereo/window-move-stop.ogg
 share/sounds/freedesktop/stereo/window-slide.ogg
-@dirrm share/sounds/freedesktop/stereo
-@dirrm share/sounds/freedesktop
-@comment in xdg-dirs: @dirrm share/sounds

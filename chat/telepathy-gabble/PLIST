@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/13 10:55:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:50 joerg Exp $
 libexec/telepathy-gabble
 man/man8/telepathy-gabble.8
 share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.gabble.service
@@ -9,5 +9,3 @@ share/doc/telepathy-gabble/tubes.html
 share/telepathy/managers/gabble.manager
 @unexec ${RMDIR} %D/share/telepathy/managers 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/telepathy 2>/dev/null || ${TRUE}
-@dirrm share/doc/telepathy-gabble
-@comment in dbus: @dirrm share/dbus-1/services

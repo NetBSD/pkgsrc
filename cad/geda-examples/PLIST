@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/01 02:34:24 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:35:53 joerg Exp $
 share/examples/geda/AUTHORS
 share/examples/geda/COPYING
 share/examples/geda/ChangeLog
@@ -77,13 +77,3 @@ share/examples/geda/lightning_detector/lightning.sch.bom
 share/examples/geda/lightning_detector/sym/2N4401.sym
 share/examples/geda/lightning_detector/sym/2N4403.sym
 share/examples/geda/missing
-@dirrm share/examples/geda/lightning_detector/sym
-@dirrm share/examples/geda/lightning_detector
-@dirrm share/examples/geda/gTAG
-@dirrm share/examples/geda/TwoStageAmp/sym
-@dirrm share/examples/geda/TwoStageAmp/models
-@dirrm share/examples/geda/TwoStageAmp
-@dirrm share/examples/geda/RF_Amp/sym
-@dirrm share/examples/geda/RF_Amp/model
-@dirrm share/examples/geda/RF_Amp
-@dirrm share/examples/geda

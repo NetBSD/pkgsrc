@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/30 01:57:09 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 bin/genesplicer
 share/examples/genesplicer/arabidopsis/acc1.mar
 share/examples/genesplicer/arabidopsis/acc15
@@ -136,13 +136,3 @@ share/examples/genesplicer/training_data_sets/Arabidopsis/exons.dat.nohomologs
 share/examples/genesplicer/training_data_sets/Arabidopsis/seqs.nohomologs
 share/examples/genesplicer/training_data_sets/Human/exons.dat.nohomologs
 share/examples/genesplicer/training_data_sets/Human/seqs.nohomologs
-@dirrm share/examples/genesplicer/training_data_sets/Human
-@dirrm share/examples/genesplicer/training_data_sets/Arabidopsis
-@dirrm share/examples/genesplicer/training_data_sets
-@dirrm share/examples/genesplicer/rice
-@dirrm share/examples/genesplicer/pyoelii
-@dirrm share/examples/genesplicer/malaria
-@dirrm share/examples/genesplicer/human
-@dirrm share/examples/genesplicer/drosophila
-@dirrm share/examples/genesplicer/arabidopsis
-@dirrm share/examples/genesplicer

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/10/28 22:23:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:03 joerg Exp $
 bin/beep-media-player-2
 bin/bmp-play-files-2.0
 bin/bmp-play-uris-2.0
@@ -238,37 +238,4 @@ share/locale/ru/LC_MESSAGES/bmpx.mo
 share/locale/sv/LC_MESSAGES/bmpx.mo
 share/locale/th_TH/LC_MESSAGES/bmpx.mo
 share/locale/zh_CN/LC_MESSAGES/bmpx.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in dbus: @dirrm share/dbus-1/services
-@dirrm share/bmpx/images/svg
-@dirrm share/bmpx/images/stock
-@dirrm share/bmpx/images/sources
-@dirrm share/bmpx/images/rating
-@dirrm share/bmpx/images/podcast
-@dirrm share/bmpx/images/main
-@dirrm share/bmpx/images/lastfm
-@dirrm share/bmpx/images/cdda
-@dirrm share/bmpx/images
-@dirrm share/bmpx/icons/tray-icons
-@dirrm share/bmpx/icons/themes/tango
-@dirrm share/bmpx/icons/themes/red
-@dirrm share/bmpx/icons/themes/plastic
-@dirrm share/bmpx/icons/themes/display
-@dirrm share/bmpx/icons/themes/darksphere
-@dirrm share/bmpx/icons/themes
-@dirrm share/bmpx/icons
-@dirrm share/bmpx/glade
 @exec ${MKDIR} %D/share/bmpx/data
-@dirrm share/bmpx/data
-@dirrm share/bmpx
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/bmpx/plugins/vfs/transport
-@dirrm lib/bmpx/plugins/vfs/container
-@dirrm lib/bmpx/plugins/vfs
-@dirrm lib/bmpx/plugins/taglib
-@dirrm lib/bmpx/plugins
-@dirrm lib/bmpx
-@dirrm include/bmp-2.0/bmp/types
-@dirrm include/bmp-2.0/bmp
-@dirrm include/bmp-2.0

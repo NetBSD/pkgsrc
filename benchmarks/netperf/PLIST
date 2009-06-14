@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/11/21 10:59:25 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:33:12 joerg Exp $
 netperf/netperf
 netperf/netserver
 netperf/tcp_range_script
@@ -8,7 +8,5 @@ netperf/udp_stream_script
 netperf/udp_rr_script
 netperf/snapshot_script
 share/doc/netperf/netperf.ps.gz
-@dirrm netperf
-@dirrm share/doc/netperf
 man/man1/netperf.1
 man/man1/netserver.1

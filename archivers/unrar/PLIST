@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:24:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:18 joerg Exp $
 bin/unrar
 share/doc/unrar/license.txt
 share/doc/unrar/readme.txt
-@dirrm share/doc/unrar

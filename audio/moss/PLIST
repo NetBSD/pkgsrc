@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/22 10:01:03 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:32:18 joerg Exp $
 bin/moss
 ${PYSITELIB}/moss/__init__.py
 ${PYSITELIB}/moss/__init__.pyc
@@ -33,7 +33,3 @@ share/moss/images/root.gif
 share/moss/mkpasswd.py
 share/moss/moss.conf.sample
 share/moss/templates/default.tmpl
-@dirrm share/moss/templates
-@dirrm share/moss/images
-@dirrm share/moss
-@dirrm ${PYSITELIB}/moss

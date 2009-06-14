@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/12/03 00:28:39 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:35:55 joerg Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
@@ -1881,41 +1881,3 @@ share/pcb/tools/apctools.zip
 share/pcb/tools/gerbertotk.c
 share/pcb/tools/pcb2ncap.tgz
 share/pcb/tutorial/tut1.pcb
-@dirrm share/pcb/tutorial
-@dirrm share/pcb/tools
-@dirrm share/pcb/pcblib-newlib/pci
-@dirrm share/pcb/pcblib-newlib/panasonic
-@dirrm share/pcb/pcblib-newlib/optical
-@dirrm share/pcb/pcblib-newlib/optek
-@dirrm share/pcb/pcblib-newlib/nichicon
-@dirrm share/pcb/pcblib-newlib/minicircuits
-@dirrm share/pcb/pcblib-newlib/johnstech
-@dirrm share/pcb/pcblib-newlib/gtag
-@dirrm share/pcb/pcblib-newlib/generic
-@dirrm share/pcb/pcblib-newlib/geda
-@dirrm share/pcb/pcblib-newlib/cts
-@dirrm share/pcb/pcblib-newlib/crystal
-@dirrm share/pcb/pcblib-newlib/connector
-@dirrm share/pcb/pcblib-newlib/candk
-@dirrm share/pcb/pcblib-newlib/bourns
-@dirrm share/pcb/pcblib-newlib/amphenol
-@dirrm share/pcb/pcblib-newlib/amp
-@dirrm share/pcb/pcblib-newlib
-@dirrm share/pcb/newlib/tests
-@dirrm share/pcb/newlib/sockets
-@dirrm share/pcb/newlib/not_vetted_ingo
-@dirrm share/pcb/newlib/msp430
-@dirrm share/pcb/newlib/keystone
-@dirrm share/pcb/newlib/headers
-@dirrm share/pcb/newlib/electro-optics
-@dirrm share/pcb/newlib/crystal
-@dirrm share/pcb/newlib/connectors
-@dirrm share/pcb/newlib/burr-brown
-@dirrm share/pcb/newlib/analog-devices
-@dirrm share/pcb/newlib/2_pin_thru-hole_packages
-@dirrm share/pcb/newlib
-@dirrm share/pcb/m4
-@dirrm share/pcb/examples/libraries
-@dirrm share/pcb/examples
-@dirrm share/pcb-${PKGVERSION}
-@dirrm share/pcb

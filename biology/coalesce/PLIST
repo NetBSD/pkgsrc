@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/30 01:03:56 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:34:33 joerg Exp $
 bin/coalesce
 share/doc/coalesce/coalesce.doc
 share/doc/coalesce/errors.doc
@@ -9,5 +9,3 @@ share/examples/coalesce/intree
 share/examples/coalesce/outfile
 share/examples/coalesce/parmfile
 share/examples/coalesce/seedfile
-@dirrm share/examples/coalesce
-@dirrm share/doc/coalesce

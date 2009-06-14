@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/26 03:40:54 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:35:57 joerg Exp $
 bin/gmac
 bin/tkgate
 man/man1/gmac.${IMAKE_MANNEWSUFFIX}
@@ -313,18 +313,3 @@ share/${PKGNAME}/scripts/status.tcl
 share/${PKGNAME}/scripts/tkgate.tcl
 share/${PKGNAME}/scripts/toolbar.tcl
 share/${PKGNAME}/sitename.txt
-@dirrm share/${PKGNAME}/scripts
-@dirrm share/${PKGNAME}/libexec
-@dirrm share/${PKGNAME}/gdf
-@dirrm share/${PKGNAME}/examples/tutorials
-@dirrm share/${PKGNAME}/examples/ja-tutorials
-@dirrm share/${PKGNAME}/examples/ex5
-@dirrm share/${PKGNAME}/examples/ex4
-@dirrm share/${PKGNAME}/examples/ex3
-@dirrm share/${PKGNAME}/examples/ex2
-@dirrm share/${PKGNAME}/examples/ex1
-@dirrm share/${PKGNAME}/examples
-@dirrm share/${PKGNAME}/doc/fig
-@dirrm share/${PKGNAME}/doc
-@dirrm share/${PKGNAME}/bitmaps
-@dirrm share/${PKGNAME}

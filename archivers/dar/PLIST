@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/09/16 07:33:15 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:28:16 joerg Exp $
 bin/dar
 bin/dar_cp
 bin/dar_manager
@@ -96,9 +96,3 @@ share/doc/dar/mini-howto/index.html
 share/locale/de/LC_MESSAGES/dar.mo
 share/locale/fr/LC_MESSAGES/dar.mo
 share/locale/sv/LC_MESSAGES/dar.mo
-@dirrm share/doc/dar/mini-howto
-@dirrm share/doc/dar/man
-@dirrm share/doc/dar
-@dirrm share/dar/samples
-@dirrm share/dar
-@dirrm include/dar

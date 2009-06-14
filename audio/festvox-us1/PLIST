@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:08 joerg Exp $
 @comment the next two entries are symlinks
 share/festival/lib/voices/english/us1_mbrola/us1
 share/festival/lib/voices/english/us1_mbrola/us1mrpa
 share/festival/lib/voices/english/us1_mbrola/usradio
 share/festival/lib/voices/english/us1_mbrola/festvox/us1_mbrola.scm
 share/festival/lib/voices/english/us1_mbrola/festvox/usdurtreeZ.scm
-@dirrm share/festival/lib/voices/english/us1_mbrola/festvox
-@dirrm share/festival/lib/voices/english/us1_mbrola

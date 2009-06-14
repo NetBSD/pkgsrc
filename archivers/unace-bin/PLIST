@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/03 22:27:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:28:18 joerg Exp $
 bin/unace-bin
 share/doc/unace-bin/licence
-@dirrm share/doc/unace-bin

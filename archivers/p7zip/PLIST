@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:42:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:28:17 joerg Exp $
 bin/7z
 bin/7za
 ${PLIST.dll}lib/7z/7z
@@ -66,9 +66,3 @@ share/doc/p7zip/switches/volume.htm
 share/doc/p7zip/switches/working_dir.htm
 share/doc/p7zip/switches/yes.htm
 share/doc/p7zip/syntax.htm
-@dirrm share/doc/p7zip/switches
-@dirrm share/doc/p7zip/commands
-@dirrm share/doc/p7zip
-${PLIST.dll}@dirrm lib/7z/Formats
-${PLIST.dll}@dirrm lib/7z/Codecs
-${PLIST.dll}@dirrm lib/7z

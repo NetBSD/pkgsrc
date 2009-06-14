@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/07/29 13:57:34 tron Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 17:37:51 joerg Exp $
 bin/xchat
 share/applications/xchat.desktop
 ${PLIST.dbus}share/dbus-1/services/org.xchat.service.service
@@ -34,12 +34,4 @@ share/locale/vi/LC_MESSAGES/xchat.mo
 share/locale/zh_CN/LC_MESSAGES/xchat.mo
 share/locale/zh_TW/LC_MESSAGES/xchat.mo
 share/pixmaps/xchat.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/xchat
-@comment in dbus: @dirrm share/dbus-1/services
-@comment in dbus: @dirrm share/dbus-1
-@comment in xdg-dirs: @dirrm share/applications
 @exec ${MKDIR} %D/lib/xchat/plugins
-@dirrm lib/xchat/plugins
-@dirrm lib/xchat

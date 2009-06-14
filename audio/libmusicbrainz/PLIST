@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/08 07:02:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:15 joerg Exp $
 include/musicbrainz3/artist.h
 include/musicbrainz3/artistalias.h
 include/musicbrainz3/defines.h
@@ -27,4 +27,3 @@ lib/libmusicbrainz3.so
 lib/libmusicbrainz3.so.6
 lib/libmusicbrainz3.so.6.1.0
 lib/pkgconfig/libmusicbrainz3.pc
-@dirrm include/musicbrainz3

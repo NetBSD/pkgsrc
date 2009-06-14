@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.clients,v 1.8 2007/03/24 13:45:05 markd Exp $
+@comment $NetBSD: PLIST.clients,v 1.9 2009/06/14 17:32:19 joerg Exp $
 bin/auconvert
 bin/auctl
 bin/audemo
@@ -190,4 +190,3 @@ ${IMAKE_LIBMAN_DIR}/SoundSeekFile.${IMAKE_LIBMAN_SUFFIX}
 ${IMAKE_LIBMAN_DIR}/SoundStringToFileFormat.${IMAKE_LIBMAN_SUFFIX}
 ${IMAKE_LIBMAN_DIR}/SoundTellFile.${IMAKE_LIBMAN_SUFFIX}
 ${IMAKE_LIBMAN_DIR}/SoundWriteFile.${IMAKE_LIBMAN_SUFFIX}
-@dirrm include/audio

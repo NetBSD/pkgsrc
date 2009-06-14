@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/11/24 09:06:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:12 joerg Exp $
 bin/kid3
 share/applications/kde/kid3.desktop
 share/doc/kde/HTML/de/kid3/common
@@ -19,15 +19,3 @@ share/locale/it/LC_MESSAGES/kid3.mo
 share/locale/nl/LC_MESSAGES/kid3.mo
 share/locale/pl/LC_MESSAGES/kid3.mo
 share/locale/ru/LC_MESSAGES/kid3.mo
-@dirrm share/kde/apps/kid3
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/kid3
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kid3
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@comment in kde: @dirrm share/applications/kde

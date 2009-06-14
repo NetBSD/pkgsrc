@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/13 18:53:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:37:48 joerg Exp $
 include/loudmouth-1.0/loudmouth/lm-connection.h
 include/loudmouth-1.0/loudmouth/lm-error.h
 include/loudmouth-1.0/loudmouth/lm-message-handler.h
@@ -28,6 +28,3 @@ share/gtk-doc/html/loudmouth/loudmouth.devhelp2
 share/gtk-doc/html/loudmouth/right.png
 share/gtk-doc/html/loudmouth/style.css
 share/gtk-doc/html/loudmouth/up.png
-@dirrm share/gtk-doc/html/loudmouth
-@dirrm include/loudmouth-1.0/loudmouth
-@dirrm include/loudmouth-1.0
