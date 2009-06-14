@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/31 05:37:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:02 joerg Exp $
 ${EMACS_INFOPREFIX}/pcl-cvs.info
 ${EMACS_LISPPREFIX}/pcl-cvs/cvs-compat.el
 ${EMACS_LISPPREFIX}/pcl-cvs/cvs-compat.elc
@@ -19,4 +19,3 @@ ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs-util.el
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs-util.elc
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs.el
 ${EMACS_LISPPREFIX}/pcl-cvs/pcl-cvs.elc
-@dirrm ${EMACS_LISPPREFIX}/pcl-cvs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/01 08:35:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:04 joerg Exp $
 bin/pybabel
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -507,7 +507,3 @@ ${PYSITELIB}/babel/support.pyo
 ${PYSITELIB}/babel/util.py
 ${PYSITELIB}/babel/util.pyc
 ${PYSITELIB}/babel/util.pyo
-@dirrm ${PYSITELIB}/babel/messages
-@dirrm ${PYSITELIB}/babel/localedata
-@dirrm ${PYSITELIB}/babel
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

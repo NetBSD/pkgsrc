@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/31 05:37:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:14 joerg Exp $
 ${EMACS_INFOPREFIX}/sml-mode.info
 ${EMACS_LISPPREFIX}/sml-mode/sml-compat.el
 ${EMACS_LISPPREFIX}/sml-mode/sml-defs.el
@@ -17,4 +17,3 @@ ${EMACS_LISPPREFIX}/sml-mode/README
 ${EMACS_LISPPREFIX}/sml-mode/NEWS
 ${EMACS_LISPPREFIX}/sml-mode/TODO
 ${EMACS_LISPPREFIX}/sml-mode/ChangeLog
-@dirrm ${EMACS_LISPPREFIX}/sml-mode

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:22 joerg Exp $
 bin/fe
 man/man1/fe.1
 share/doc/fe/fe.ps
 share/doc/fe/feref.ps
 share/locale/de/LC_MESSAGES/fe.mo
-@dirrm share/doc/fe

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:12 joerg Exp $
 bin/r2r_show
 ${GEM_HOME}/cache/ruby2ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.autotest
@@ -10,7 +10,3 @@ ${GEM_LIBDIR}/bin/r2r_show
 ${GEM_LIBDIR}/lib/ruby2ruby.rb
 ${GEM_LIBDIR}/test/test_ruby2ruby.rb
 ${GEM_HOME}/specifications/ruby2ruby-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

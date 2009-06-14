@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/12/22 15:12:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:50:25 joerg Exp $
 bin/nano
 bin/rnano
 info/nano.info
@@ -53,4 +53,3 @@ share/nano/python.nanorc
 share/nano/ruby.nanorc
 share/nano/sh.nanorc
 share/nano/tex.nanorc
-@dirrm share/nano

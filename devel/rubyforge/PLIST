@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/22 16:07:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:12 joerg Exp $
 bin/rubyforge
 ${GEM_HOME}/cache/rubyforge-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
@@ -13,8 +13,3 @@ ${GEM_LIBDIR}/test/test_rubyforge.rb
 ${GEM_LIBDIR}/test/test_rubyforge_client.rb
 ${GEM_LIBDIR}/test/test_rubyforge_cookie_manager.rb
 ${GEM_HOME}/specifications/rubyforge-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/rubyforge
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

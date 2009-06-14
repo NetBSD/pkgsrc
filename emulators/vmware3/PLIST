@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/02/16 19:54:56 bad Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:10 joerg Exp $
 bin/vmnet-bridge
 bin/vmnet-dhcpd
 bin/vmnet-natd
@@ -303,21 +303,4 @@ share/vmware/xkeymap/se101
 share/vmware/xkeymap/se104
 share/vmware/xkeymap/us101
 share/vmware/xkeymap/us104
-@dirrm emul/linux/etc/vmware
-@dirrm share/vmware/bin
-@dirrm share/vmware/configurator
-@dirrm share/vmware/doc
-@dirrm share/vmware/isoimages
-@dirrm share/vmware/help
 @exec ${MKDIR} -p %D/share/vmware/licenses/site
-@dirrm share/vmware/licenses/site
-@dirrm share/vmware/licenses/user
-@dirrm share/vmware/licenses
-@dirrm share/vmware/messages/chef
-@dirrm share/vmware/messages/ja
-@dirrm share/vmware/messages/jive
-@dirrm share/vmware/messages
-@dirrm share/vmware/smb/codepages
-@dirrm share/vmware/smb
-@dirrm share/vmware/xkeymap
-@dirrm share/vmware

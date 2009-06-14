@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/03/16 12:37:22 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:48:42 joerg Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
 include/eel-2/eel/eel-art-extensions.h
@@ -121,5 +121,3 @@ share/locale/xh/LC_MESSAGES/eel-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/eel-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/eel-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/eel-2.0.mo
-@dirrm include/eel-2/eel
-@dirrm include/eel-2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:44 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:56 joerg Exp $
 include/libstash/libstash.h
 include/libstash/libstash_defs.h
 include/libstash/libstash_incs.h
@@ -22,4 +22,3 @@ lib/libstash_p.a
 man/man3/libstash.3
 man/man3/libstash_buf.3
 man/man3/libstash_oh.3
-@dirrm include/libstash

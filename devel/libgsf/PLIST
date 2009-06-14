@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/24 16:46:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 17:48:53 joerg Exp $
 bin/gsf
 bin/gsf-office-thumbnailer
 bin/gsf-vba-dump
@@ -108,8 +108,3 @@ share/locale/oc/LC_MESSAGES/libgsf.mo
 share/locale/sv/LC_MESSAGES/libgsf.mo
 share/locale/zh_HK/LC_MESSAGES/libgsf.mo
 share/locale/zh_TW/LC_MESSAGES/libgsf.mo
-@dirrm share/gtk-doc/html/gsf
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm include/libgsf-1/gsf-gnome
-@dirrm include/libgsf-1/gsf
-@dirrm include/libgsf-1

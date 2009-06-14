@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/21 11:37:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:44 joerg Exp $
 bin/togit
 bin/tohg
 share/fromcvs/commitset/commitset
@@ -11,6 +11,3 @@ share/fromcvs/togit.rb
 share/fromcvs/tohg.py
 share/fromcvs/tohg.rb
 share/doc/fromcvs/README
-@dirrm share/fromcvs/commitset
-@dirrm share/fromcvs
-@dirrm share/doc/fromcvs

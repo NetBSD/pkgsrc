@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 11:20:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:12 joerg Exp $
 lib/X11/fonts/75dpi/luBIS08-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/luBIS08-ISO8859-13.pcf.gz
@@ -560,7 +560,3 @@ lib/X11/fonts/75dpi/lubR24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/lubR24-ISO8859-9.pcf.gz
 lib/X11/fonts/75dpi/lubR24.pcf.gz
 share/doc/font-bh-75dpi/COPYING
-@dirrm share/doc/font-bh-75dpi
-@comment @dirrm lib/X11/fonts/75dpi
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

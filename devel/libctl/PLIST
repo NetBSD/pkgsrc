@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:51 joerg Exp $
 bin/gen-ctl-io
 include/ctl.h
 include/ctlgeom.h
@@ -33,7 +33,3 @@ share/libctl/base/vector3.scm
 share/libctl/utils/ctl-io.scm
 share/libctl/utils/geom.c
 share/libctl/utils/geom.scm
-@dirrm share/libctl/utils
-@dirrm share/libctl/base
-@dirrm share/libctl
-@dirrm share/doc/libctl

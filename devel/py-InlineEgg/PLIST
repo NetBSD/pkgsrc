@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/19 16:16:01 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:03 joerg Exp $
 share/doc/InlineEgg/README
 share/examples/InlineEgg/example1.py
 share/examples/InlineEgg/example2.py
@@ -25,6 +25,3 @@ ${PYSITELIB}/inlineegg/inlineegg_test.pyo
 ${PYSITELIB}/inlineegg/inlineegg_win_test.py
 ${PYSITELIB}/inlineegg/inlineegg_win_test.pyc
 ${PYSITELIB}/inlineegg/inlineegg_win_test.pyo
-@dirrm share/doc/InlineEgg
-@dirrm share/examples/InlineEgg
-@dirrm ${PYSITELIB}/inlineegg

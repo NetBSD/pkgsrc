@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:11 joerg Exp $
 bin/rcov
 ${GEM_HOME}/cache/rcov-${PKGVERSION}.gem
 ${GEM_LIBDIR}/BLURB
@@ -42,10 +42,3 @@ ${GEM_LIBDIR}/test/test_FileStatistics.rb
 ${GEM_LIBDIR}/test/test_functional.rb
 ${GEM_LIBDIR}/test/turn_off_rcovrt.rb
 ${GEM_HOME}/specifications/rcov-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/rcov
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/rcovrt
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

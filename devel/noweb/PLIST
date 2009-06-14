@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/08 13:02:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:00 joerg Exp $
 bin/cpif
 bin/htmltoc
 bin/nodefs
@@ -80,6 +80,3 @@ share/noweb/unmarkup
 share/noweb/xchunks
 share/texmf/tex/noweb/noweb.sty
 share/texmf/tex/noweb/nwmac.tex
-@dirrm share/texmf/tex/noweb
-@dirrm share/noweb
-@dirrm share/examples/noweb

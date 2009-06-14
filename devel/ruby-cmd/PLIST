@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/04 15:30:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:08 joerg Exp $
 ${GEM_HOME}/cache/cmd-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGELOG
@@ -15,7 +15,3 @@ ${GEM_LIBDIR}/lib/cmd.rb
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/tc_cmd.rb
 ${GEM_HOME}/specifications/cmd-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/example
-@dirrm ${GEM_LIBDIR}
