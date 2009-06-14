@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/06 01:43:32 toshii Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:53 joerg Exp $
 Acrobat8/Adobe/Reader8/bin/UNINSTALL
 Acrobat8/Adobe/Reader8/bin/acroread
 Acrobat8/Adobe/Reader8/Reader/help/ENU/ReadMe.htm
@@ -785,81 +785,3 @@ Acrobat8/Adobe/HelpViewer/1.0/resources/help.html
 Acrobat8/Adobe/HelpViewer/1.0/resources/help.jpg
 bin/acroread
 bin/acroread8
-@dirrm Acrobat8/Adobe/HelpViewer/1.0/resources
-@dirrm Acrobat8/Adobe/HelpViewer/1.0/intellinux/bin
-@dirrm Acrobat8/Adobe/HelpViewer/1.0/intellinux
-@dirrm Acrobat8/Adobe/HelpViewer/1.0
-@dirrm Acrobat8/Adobe/HelpViewer
-@dirrm Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0/images
-@dirrm Acrobat8/Adobe/Help/en_US/Adobe Reader/8.0
-@dirrm Acrobat8/Adobe/Help/en_US/Adobe Reader
-@dirrm Acrobat8/Adobe/Help/en_US
-@dirrm Acrobat8/Adobe/Help
-@dirrm Acrobat8/Adobe/Reader8/Browser/HowTo/ENU
-@dirrm Acrobat8/Adobe/Reader8/Browser/HowTo
-@dirrm Acrobat8/Adobe/Reader8/Browser/intellinux
-@dirrm Acrobat8/Adobe/Reader8/Browser
-@dirrm Acrobat8/Adobe/Reader8/Resource/Linguistics/LanguageNames
-@dirrm Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers/Proximity
-@dirrm Acrobat8/Adobe/Reader8/Resource/Linguistics/Providers
-@dirrm Acrobat8/Adobe/Reader8/Resource/Linguistics
-@dirrm Acrobat8/Adobe/Reader8/Resource/Support
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/192x192
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/128x128
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/96x96
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/64x64
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/48x48
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/36x36
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/32x32
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/24x24
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/22x22
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/20x20
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons/16x16
-@dirrm Acrobat8/Adobe/Reader8/Resource/Icons
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode/mappings/win
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode/mappings/mac
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode/mappings/adobe
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode/mappings
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode/icu
-@dirrm Acrobat8/Adobe/Reader8/Resource/unicode
-@dirrm Acrobat8/Adobe/Reader8/Resource/CMap
-@dirrm Acrobat8/Adobe/Reader8/Resource/Font/PFM
-@dirrm Acrobat8/Adobe/Reader8/Resource/Font
-@dirrm Acrobat8/Adobe/Reader8/Resource
-@dirrm Acrobat8/Adobe/Reader8/Reader/Patch
-@dirrm Acrobat8/Adobe/Reader8/Reader/JavaScripts
-@dirrm Acrobat8/Adobe/Reader8/Reader/Cert
-@dirrm Acrobat8/Adobe/Reader8/Reader/Tracker
-@dirrm Acrobat8/Adobe/Reader8/Reader/IDTemplates/ENU
-@dirrm Acrobat8/Adobe/Reader8/Reader/IDTemplates
-@dirrm Acrobat8/Adobe/Reader8/Reader/BeyondReader/ENU/Onramp
-@dirrm Acrobat8/Adobe/Reader8/Reader/BeyondReader/ENU
-@dirrm Acrobat8/Adobe/Reader8/Reader/BeyondReader
-@dirrm Acrobat8/Adobe/Reader8/Reader/GlobalPrefs
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/mozilla
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/SPPlugins
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d/prc
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins3d
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/lib
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/bin
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Multimedia/MPP
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Multimedia
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps/ENU
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations/Stamps
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/Annotations
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm/PMP
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins/AcroForm
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux/plug_ins
-@dirrm Acrobat8/Adobe/Reader8/Reader/intellinux
-@dirrm Acrobat8/Adobe/Reader8/Reader/Legal/en_US
-@dirrm Acrobat8/Adobe/Reader8/Reader/Legal
-@dirrm Acrobat8/Adobe/Reader8/Reader/HowTo/ENU/images
-@dirrm Acrobat8/Adobe/Reader8/Reader/HowTo/ENU
-@dirrm Acrobat8/Adobe/Reader8/Reader/HowTo
-@dirrm Acrobat8/Adobe/Reader8/Reader/help/ENU
-@dirrm Acrobat8/Adobe/Reader8/Reader/help
-@dirrm Acrobat8/Adobe/Reader8/Reader
-@dirrm Acrobat8/Adobe/Reader8/bin
-@dirrm Acrobat8/Adobe/Reader8
-@dirrm Acrobat8/Adobe
-@dirrm Acrobat8

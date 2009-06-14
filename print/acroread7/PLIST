@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/13 10:28:24 salo Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:53 joerg Exp $
 Acrobat7/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat7/Browser/install_browser_plugin
 Acrobat7/Browser/${PLATFORM}/nppdf.so
@@ -287,54 +287,3 @@ Acrobat7/Resource/Support/vnd.fdf.desktop
 Acrobat7/bin/acroread
 bin/acroread
 bin/acroread7
-@dirrm Acrobat7/bin
-@dirrm Acrobat7/Resource/Support
-@dirrm Acrobat7/Resource/Linguistics/Providers/Proximity
-@dirrm Acrobat7/Resource/Linguistics/Providers
-@dirrm Acrobat7/Resource/Linguistics/LanguageNames
-@dirrm Acrobat7/Resource/Linguistics
-@dirrm Acrobat7/Resource/Icons/96x96
-@dirrm Acrobat7/Resource/Icons/64x64
-@dirrm Acrobat7/Resource/Icons/48x48
-@dirrm Acrobat7/Resource/Icons/36x36
-@dirrm Acrobat7/Resource/Icons/32x32
-@dirrm Acrobat7/Resource/Icons/24x24
-@dirrm Acrobat7/Resource/Icons/20x20
-@dirrm Acrobat7/Resource/Icons/192x192
-@dirrm Acrobat7/Resource/Icons/16x16
-@dirrm Acrobat7/Resource/Icons/128x128
-@dirrm Acrobat7/Resource/Icons
-@dirrm Acrobat7/Resource/Font/PFM
-@dirrm Acrobat7/Resource/Font
-@dirrm Acrobat7/Resource/CMap
-@dirrm Acrobat7/Resource
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations/Stamps/ENU
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations/Stamps
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/Annotations
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins/AcroForm
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins3d
-@dirrm Acrobat7/Reader/${PLATFORM}/plug_ins
-@dirrm Acrobat7/Reader/${PLATFORM}/lib
-@dirrm Acrobat7/Reader/${PLATFORM}/bin
-@dirrm Acrobat7/Reader/${PLATFORM}/SPPlugins
-@dirrm Acrobat7/Reader/${PLATFORM}
-@dirrm Acrobat7/Reader/help/ENU
-@dirrm Acrobat7/Reader/help
-@dirrm Acrobat7/Reader/WebSearch
-@dirrm Acrobat7/Reader/Patch
-@dirrm Acrobat7/Reader/Messages/ENU
-@dirrm Acrobat7/Reader/Messages
-@dirrm Acrobat7/Reader/Legal/ENU
-@dirrm Acrobat7/Reader/Legal
-@dirrm Acrobat7/Reader/JavaScripts
-@dirrm Acrobat7/Reader/HowTo/ENU/Images
-@dirrm Acrobat7/Reader/HowTo/ENU
-@dirrm Acrobat7/Reader/HowTo
-@dirrm Acrobat7/Reader/GlobalPrefs
-@dirrm Acrobat7/Reader/Cert
-@dirrm Acrobat7/Reader
-@dirrm Acrobat7/Browser/${PLATFORM}
-@dirrm Acrobat7/Browser/HowTo/ENU
-@dirrm Acrobat7/Browser/HowTo
-@dirrm Acrobat7/Browser
-@dirrm Acrobat7
