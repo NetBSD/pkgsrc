@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:53:00 joerg Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -1276,5 +1276,4 @@ share/emacs/${PKGVERSION}/lisp/zone-mode.el
 share/emacs/${PKGVERSION}/lisp/zone-mode.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@exec ${MKDIR} %D/share/emacs/${PKGVERSION}/leim
-@unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
+@pkgdir share/emacs/${PKGVERSION}/leim

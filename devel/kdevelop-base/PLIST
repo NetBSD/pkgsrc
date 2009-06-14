@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/06/14 17:48:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/06/14 18:48:12 joerg Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -1389,31 +1389,31 @@ share/kde/servicetypes/kdevelopquickopen.desktop
 share/kde/servicetypes/kdevelopsourceformatter.desktop
 share/kde/servicetypes/kdevelopvcsintegrator.desktop
 share/kde/servicetypes/kdevelopversioncontrol.desktop
-@exec ${MKDIR} %D/share/kde/apps/kdevvcsmanager
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/interfaces/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/propeditor/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/util/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extras/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/external/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extensions/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/catalog/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/interfaces/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/designer_integration/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/debugger/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/widgets/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/qmake/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/autotools/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/base/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/html
+@pkgdir share/kde/apps/kdevvcsmanager
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/src/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/parts/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/interfaces/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/propeditor/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/util/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extras/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/external/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extensions/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/lib/catalog/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/interfaces/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/designer_integration/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/debugger/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/languages/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/widgets/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/qmake/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/autotools/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/base/html
+@pkgdir share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/html
