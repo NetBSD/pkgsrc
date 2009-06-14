@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/14 04:51:35 taca Exp $
+# $NetBSD: Makefile,v 1.2 2009/06/14 11:38:34 taca Exp $
 #
 
 DISTNAME=	opengoo_${VER}
 PKGNAME=	opengoo-${VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opengoo/}
 EXTRACT_SUFX=	.zip
@@ -12,8 +13,10 @@ HOMEPAGE=	http://www.opengoo.org/
 COMMENT=	Easy to use Open Source Web Office
 LICENSE=	gnu-gpl-v3
 
-#DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.1.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
+DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.1.0:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/php-gd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 VER=		1.4.1
