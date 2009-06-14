@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:38:42 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:31:59 joerg Exp $
 bin/adr2vcf
 bin/apoconv
 bin/scmxx
@@ -17,5 +17,3 @@ share/locale/de/LC_MESSAGES/scmxx.mo
 share/locale/fr/LC_MESSAGES/scmxx.mo
 share/locale/it/LC_MESSAGES/scmxx.mo
 share/locale/ru/LC_MESSAGES/scmxx.mo
-@unexec ${RMDIR} %D/man/it/man1 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
