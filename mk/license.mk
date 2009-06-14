@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.23 2009/06/03 13:40:03 ahoka Exp $
+# $NetBSD: license.mk,v 1.24 2009/06/14 15:15:24 joerg Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -117,24 +117,50 @@ WARNINGS+=		"[license.mk] Every package should define a LICENSE."
 
 .else
 
-# Note: some bulk builders rely on the fact that they can set
-# _ACCEPTABLE to bypass license checks.  Inform them when you intend to
-# remove this variable.
-.  if defined(ACCEPTABLE_LICENSES) && !empty(ACCEPTABLE_LICENSES:M${LICENSE})
-_ACCEPTABLE=	yes
+.if defined(_ACCEPTABLE)
+WARNINGS+=	"Deprecated variable _ACCEPTABLE found, use SKIP_LICENSE_CHECK=yes"
+SKIP_LICENSE_CHECK=	yes
+.endif
+
+SKIP_LICENSE_CHECK?=	no
+
+.if !empty(SKIP_LICENSE_CHECK:M[Yy][Ee][Ss])
+_ACCEPTABLE_LICENSE=	skipped
+.else
+_ACCEPTABLE_LICENSE!=	${SETENV} \
+    PKGSRC_ACCEPTABLE_LICENSES=${ACCEPTABLE_LICENSES:Q} \
+    PKGSRC_DEFAULT_ACCEPTABLE_LICENSES=${DEFAULT_ACCEPTABLE_LICENSES:Q} \
+    ${PKG_ADMIN} check-license ${LICENSE:Q} || echo failure
+.endif
+
+.if ${_ACCEPTABLE_LICENSE} == "no"
+.  if defined(MAKECONF)
+_MAKE_CONF?=	${MAKECONF}
+.  elif ${OPSYS} == "NetBSD" && ${MAKE} == "/usr/bin/make"
+_MAKE_CONF?=	/etc/mk.conf
+.  else
+_MAKE_CONF?=	${PREFIX}/etc/mk.conf
+.endif
+.  if ${OPSYS} == "NetBSD" && ${PKG_TOOLS_BIN} == "/usr/sbin"
+_PKG_INSTALL_CONF?=	/etc/pkg_install.conf
+.  else
+_PKG_INSTALL_CONF?=	${PREFIX}/etc/pkg_install.conf
+.endif
+
+PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license condition: " \
+    "    "${LICENSE:Q} \
+    "You can mark the license \`\`license'' as acceptable by adding" \
+    "    ACCEPTABLE_LICENSES+= license" \
+    "to ${_MAKE_CONF} or by adding" \
+    "    ACCEPTABLE_LICENSES= license" \
+    "to ${_PKG_INSTALL_CONF}."
+.  if empty(LICENSE:M*[A-Z()])
+PKG_FAIL_REASON+= "The following command will show you the license text:" \
+    "    ${MAKE} show-license"
 .  endif
 
-.  if !defined(_ACCEPTABLE)
-.    if defined(MAKECONF)
-_MAKECONF?=	${MAKECONF}
-.    elif ${OPSYS} == "NetBSD" && ${MAKE} != "${PREFIX}/bin/bmake"
-_MAKECONF?=	/etc/mk.conf
-.    else
-_MAKECONF?=	${PREFIX}/etc/mk.conf
-.    endif
-PKG_FAIL_REASON+= "${PKGNAME} has an unacceptable license: ${LICENSE}." \
-	 "    To view the license, enter \"${MAKE} show-license\"." \
-	 "    To indicate acceptance, add this line to ${_MAKECONF}:" \
-	 "    ACCEPTABLE_LICENSES+=${LICENSE}"
-.  endif
+.elif ${_ACCEPTABLE_LICENSE} == "failure"
+PKG_FAIL_REASON+= "License conditions for ${PKGNAME} could not be evaluated"
+.endif
+
 .endif
