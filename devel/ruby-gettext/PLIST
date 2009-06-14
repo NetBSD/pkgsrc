@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:48:16 joerg Exp $
 bin/rgettext
 bin/rmsgfmt
 bin/rmsgmerge
@@ -1160,4 +1160,3 @@ ${GEM_LIBDIR}/test/testlib/testlib4.rb
 ${GEM_LIBDIR}/test/testlib/testlib5.rb
 ${GEM_LIBDIR}/test/testlib/testlib6.rb
 ${GEM_HOME}/specifications/gettext-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}
