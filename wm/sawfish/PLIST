@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:19:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 21:40:05 joerg Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-ui
@@ -742,5 +742,5 @@ share/sawfish/${PKGVERSION}/themes/smaker/close_inv.png
 share/sawfish/${PKGVERSION}/themes/smaker/min.png
 share/sawfish/${PKGVERSION}/themes/smaker/min_inv.png
 share/sawfish/${PKGVERSION}/themes/smaker/theme.jl
-@exec ${MKDIR} %D/share/sawfish/themes
-@exec ${MKDIR} %D/share/sawfish/sounds
+@pkgdir share/sawfish/themes
+@pkgdir share/sawfish/sounds

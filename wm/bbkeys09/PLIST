@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:40:04 joerg Exp $
 bin/bbkeys
 man/man1/bbkeys.1
 man/man5/bbkeysrc.5
@@ -11,4 +11,3 @@ share/share/doc/bbkeys/LICENSE
 share/share/doc/bbkeys/NEWS
 share/share/doc/bbkeys/README
 share/share/doc/bbkeys/TODO
-@unexec ${RMDIR} %D/share/bbtools 2>/dev/null || ${TRUE}

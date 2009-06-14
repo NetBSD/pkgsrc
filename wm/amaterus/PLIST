@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:40:04 joerg Exp $
 bin/amaterus
 share/doc/amaterus/README
 share/doc/amaterus/README.en
 share/gnome/wm-properties/Amaterus.desktop
-@unexec ${RMDIR} %D/share/gnome/wm-properties 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gnome 2>/dev/null || ${TRUE}
