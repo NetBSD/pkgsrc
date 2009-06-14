@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:01:30 joerg Exp $
 lib/gtk-2.0/immodules/im-hangul.la
 share/locale/ko/LC_MESSAGES/im-hangul.mo
-@comment in gtk2: @dirrm lib/gtk-2.0/immodules

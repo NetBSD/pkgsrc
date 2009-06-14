@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/30 16:12:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:00:32 joerg Exp $
 bin/dpgate
 bin/dpcodeconv
 bin/dpmybbs
@@ -114,13 +114,3 @@ libexec/dpbox/mkreject
 libexec/dpbox/mktrans
 libexec/dpbox/new
 libexec/dpbox/search
-@dirrm share/doc/dpbox
-@dirrm share/dpbox/language
-@dirrm share/examples/dpbox/conf/sf
-@dirrm share/examples/dpbox/conf/system
-@dirrm share/examples/dpbox/conf/crawler
-@dirrm share/examples/dpbox/conf
-@dirrm share/examples/dpbox
-@dirrm libexec/dpbox
-@dirrm share/httpd/htdocs/dpbox/pic
-@dirrm share/httpd/htdocs/dpbox
