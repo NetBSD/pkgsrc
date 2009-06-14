@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/16 19:36:32 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:19:02 joerg Exp $
 bin/weewm
 man/man1/weewm.1
 share/doc/weewm/AUTHORS
@@ -6,5 +6,3 @@ share/doc/weewm/FAQ
 share/doc/weewm/README
 share/examples/weewm/config.rc
 share/examples/weewm/keys.rc
-@dirrm share/examples/weewm
-@dirrm share/doc/weewm

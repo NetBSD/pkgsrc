@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/25 09:27:39 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:16 joerg Exp $
 bin/gdome-config
 include/libgdome/gdome-events.h
 include/libgdome/gdome-libxml-util.h
@@ -48,5 +48,3 @@ share/doc/html/gdome2-0.8.1/gdome2-module-tree-garbage-collector.html
 share/doc/html/gdome2-0.8.1/gdome2-xpath-basic-types-and-enumerations.html
 share/doc/html/gdome2-0.8.1/gdome2-xpath.html
 share/doc/html/gdome2-0.8.1/index.sgml
-@dirrm share/doc/html/gdome2-0.8.1
-@dirrm include/libgdome

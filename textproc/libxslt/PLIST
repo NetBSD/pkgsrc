@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2008/05/22 16:03:10 recht Exp $
+@comment $NetBSD: PLIST,v 1.38 2009/06/14 18:17:22 joerg Exp $
 bin/xslt-config
 bin/xsltproc
 include/libexslt/exslt.h
@@ -122,12 +122,4 @@ share/doc/libxslt/tutorial2/libxslt_pipes.xml
 share/doc/libxslt/xslt.html
 share/doc/libxslt/xsltproc.html
 share/doc/libxslt/xsltproc2.html
-@dirrm share/doc/libxslt/tutorial2
-@dirrm share/doc/libxslt/tutorial
-@dirrm share/doc/libxslt/html
-@dirrm share/doc/libxslt/EXSLT
-@dirrm share/doc/libxslt
-@dirrm include/libxslt
-@dirrm include/libexslt
 @exec ${MKDIR} %D/lib/libxslt-plugins
-@dirrm lib/libxslt-plugins

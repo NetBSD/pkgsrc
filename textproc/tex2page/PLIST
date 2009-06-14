@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/25 17:48:24 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:32 joerg Exp $
 bin/tex2page
 share/doc/tex2page/mpexample.html
 share/doc/tex2page/story.html
@@ -27,4 +27,3 @@ share/doc/tex2page/tex2page-doc-Z-H-8.html
 share/doc/tex2page/tex2page-doc-Z-H-9.html
 share/doc/tex2page/tex2page-doc.html
 share/doc/tex2page/texample.html
-@dirrm share/doc/tex2page

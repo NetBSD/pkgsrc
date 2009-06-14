@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/13 19:24:49 tonio Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:17 joerg Exp $
 bin/bibhva
 bin/esponja
 bin/hacha
@@ -134,8 +134,3 @@ share/hevea/winstyles.hva
 share/hevea/xspace.hva
 share/hevea/xxcharset.exe
 share/hevea/xxdate.exe
-@dirrm share/hevea/text
-@dirrm share/hevea/mappings
-@dirrm share/hevea/info
-@dirrm share/hevea/html
-@dirrm share/hevea

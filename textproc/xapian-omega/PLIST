@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:34 joerg Exp $
 bin/dbi2omega
 bin/htdig2omega
 bin/mbox2omega
@@ -17,6 +17,3 @@ share/examples/xapian-omega/omega.conf
 share/xapian-omega/htdig2omega.script
 share/xapian-omega/mbox2omega.script
 @unexec ${RMDIR} %D/libexec/cgi-bin 2>/dev/null || ${TRUE}
-@dirrm share/xapian-omega
-@dirrm share/examples/xapian-omega
-@dirrm share/doc/xapian-omega

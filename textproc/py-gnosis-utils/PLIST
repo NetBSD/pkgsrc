@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/20 23:16:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:25 joerg Exp $
 ${PYSITELIB}/gnosis/README
 ${PYSITELIB}/gnosis/__init__.py
 ${PYSITELIB}/gnosis/__init__.pyc
@@ -404,22 +404,3 @@ ${PYSITELIB}/gnosis/xml/validity/simple_diss.pyo
 ${PYSITELIB}/gnosis/xml/xmlcat.py
 ${PYSITELIB}/gnosis/xml/xmlcat.pyc
 ${PYSITELIB}/gnosis/xml/xmlcat.pyo
-@dirrm ${PYSITELIB}/gnosis/xml/validity
-@dirrm ${PYSITELIB}/gnosis/xml/relax
-@dirrm ${PYSITELIB}/gnosis/xml/pickle/util
-@dirrm ${PYSITELIB}/gnosis/xml/pickle/test
-@dirrm ${PYSITELIB}/gnosis/xml/pickle/parsers
-@dirrm ${PYSITELIB}/gnosis/xml/pickle/ext
-@dirrm ${PYSITELIB}/gnosis/xml/pickle/doc
-@dirrm ${PYSITELIB}/gnosis/xml/pickle
-@dirrm ${PYSITELIB}/gnosis/xml/objectify/test
-@dirrm ${PYSITELIB}/gnosis/xml/objectify/doc
-@dirrm ${PYSITELIB}/gnosis/xml/objectify
-@dirrm ${PYSITELIB}/gnosis/xml
-@dirrm ${PYSITELIB}/gnosis/util/test
-@dirrm ${PYSITELIB}/gnosis/util/convert
-@dirrm ${PYSITELIB}/gnosis/util
-@dirrm ${PYSITELIB}/gnosis/magic
-@dirrm ${PYSITELIB}/gnosis/doc
-@dirrm ${PYSITELIB}/gnosis/anon
-@dirrm ${PYSITELIB}/gnosis

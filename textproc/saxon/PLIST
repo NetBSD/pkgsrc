@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:33:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:31 joerg Exp $
 lib/java/saxon.jar
 share/doc/java/saxon/api-guide.html
 share/doc/java/saxon/changes.html
@@ -411,31 +411,4 @@ share/examples/java/saxon/styles/books-csv.xsl
 share/examples/java/saxon/styles/books-sql.xsl
 share/examples/java/saxon/styles/books-tle.xsl
 share/examples/java/saxon/styles/bible.xsl
-@dirrm share/examples/java/saxon/trax
-@dirrm share/examples/java/saxon/styles
-@dirrm share/examples/java/saxon/java
-@dirrm share/examples/java/saxon/data
-@dirrm share/examples/java/saxon
-@dirrm share/doc/java/saxon/api/com/icl/saxon/tree
-@dirrm share/doc/java/saxon/api/com/icl/saxon/trax/serialize
-@dirrm share/doc/java/saxon/api/com/icl/saxon/trax
-@dirrm share/doc/java/saxon/api/com/icl/saxon/trace
-@dirrm share/doc/java/saxon/api/com/icl/saxon/tinytree
-@dirrm share/doc/java/saxon/api/com/icl/saxon/style
-@dirrm share/doc/java/saxon/api/com/icl/saxon/sql
-@dirrm share/doc/java/saxon/api/com/icl/saxon/sort
-@dirrm share/doc/java/saxon/api/com/icl/saxon/pattern
-@dirrm share/doc/java/saxon/api/com/icl/saxon/output
-@dirrm share/doc/java/saxon/api/com/icl/saxon/om
-@dirrm share/doc/java/saxon/api/com/icl/saxon/number
-@dirrm share/doc/java/saxon/api/com/icl/saxon/handlers
-@dirrm share/doc/java/saxon/api/com/icl/saxon/functions
-@dirrm share/doc/java/saxon/api/com/icl/saxon/expr
-@dirrm share/doc/java/saxon/api/com/icl/saxon/axis
-@dirrm share/doc/java/saxon/api/com/icl/saxon/aelfred
-@dirrm share/doc/java/saxon/api/com/icl/saxon
-@dirrm share/doc/java/saxon/api/com/icl
-@dirrm share/doc/java/saxon/api/com
-@dirrm share/doc/java/saxon/api
-@dirrm share/doc/java/saxon
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

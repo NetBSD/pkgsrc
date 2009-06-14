@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/01 16:22:22 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:59 joerg Exp $
 bin/pclock
 share/doc/pclock/CREDITS
 share/doc/pclock/README
@@ -18,5 +18,3 @@ share/pclock/wmaker-tile.xpm
 share/pclock/wood-tile.xpm
 share/pclock/wristwatch.xpm
 share/pclock/yellow-diamond.xpm
-@dirrm share/doc/pclock
-@dirrm share/pclock

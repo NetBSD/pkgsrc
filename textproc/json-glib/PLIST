@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/05 13:07:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:20 joerg Exp $
 include/json-glib-1.0/json-glib/json-enum-types.h
 include/json-glib-1.0/json-glib/json-generator.h
 include/json-glib-1.0/json-glib/json-glib.h
@@ -35,6 +35,3 @@ share/gtk-doc/html/json-glib/license.html
 share/gtk-doc/html/json-glib/right.png
 share/gtk-doc/html/json-glib/style.css
 share/gtk-doc/html/json-glib/up.png
-@dirrm share/gtk-doc/html/json-glib
-@dirrm include/json-glib-1.0/json-glib
-@dirrm include/json-glib-1.0

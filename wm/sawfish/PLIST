@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/09/23 19:14:22 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:19:01 joerg Exp $
 bin/sawfish
 bin/sawfish-client
 bin/sawfish-ui
@@ -743,51 +743,4 @@ share/sawfish/${PKGVERSION}/themes/smaker/min.png
 share/sawfish/${PKGVERSION}/themes/smaker/min_inv.png
 share/sawfish/${PKGVERSION}/themes/smaker/theme.jl
 @exec ${MKDIR} %D/share/sawfish/themes
-@dirrm share/sawfish/themes
 @exec ${MKDIR} %D/share/sawfish/sounds
-@dirrm share/sawfish/sounds
-@dirrm share/sawfish/${PKGVERSION}/themes/smaker
-@dirrm share/sawfish/${PKGVERSION}/themes/simple
-@dirrm share/sawfish/${PKGVERSION}/themes/mxflat
-@dirrm share/sawfish/${PKGVERSION}/themes/mono
-@dirrm share/sawfish/${PKGVERSION}/themes/microGUI
-@dirrm share/sawfish/${PKGVERSION}/themes/gtk
-@dirrm share/sawfish/${PKGVERSION}/themes/gradient
-@dirrm share/sawfish/${PKGVERSION}/themes/get-S-tabbed
-@dirrm share/sawfish/${PKGVERSION}/themes/brushed-metal
-@dirrm share/sawfish/${PKGVERSION}/themes/absolute-e
-@dirrm share/sawfish/${PKGVERSION}/themes/Elberg-tabbed
-@dirrm share/sawfish/${PKGVERSION}/themes/Crux
-@dirrm share/sawfish/${PKGVERSION}/themes
-@dirrm share/sawfish/${PKGVERSION}/sounds
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/util
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/theming
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/state
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/session
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/placement
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/gnome
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/ext
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/commands
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm/animation
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/wm
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/ui/widgets
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/ui/layouts
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/ui
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/gtk/widgets
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish/gtk
-@dirrm share/sawfish/${PKGVERSION}/lisp/sawfish
-@dirrm share/sawfish/${PKGVERSION}/lisp
-@dirrm share/sawfish/${PKGVERSION}
-@dirrm share/sawfish
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in gnome2-dirs: @dirrm share/gnome/wm-properties
-@comment in gnome2-dirs: @dirrm share/gnome
-@dirrm libexec/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sawfish/wm/util
-@dirrm libexec/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sawfish/wm
-@dirrm libexec/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sawfish
-@dirrm libexec/sawfish/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/sawfish/${PKGVERSION}
-@dirrm libexec/sawfish
-@dirrm libexec/rep/${MACHINE_GNU_PLATFORM}/sawfish
-@comment in librep: @dirrm libexec/rep/${MACHINE_GNU_PLATFORM}
-@comment in librep: @dirrm libexec/rep

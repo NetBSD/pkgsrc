@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:21:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:27 joerg Exp $
 ${GEM_HOME}/cache/feed-normalizer-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/License.txt
@@ -20,8 +20,3 @@ ${GEM_LIBDIR}/test/test_all.rb
 ${GEM_LIBDIR}/test/test_feednormalizer.rb
 ${GEM_LIBDIR}/test/test_htmlcleaner.rb
 ${GEM_HOME}/specifications/feed-normalizer-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/parsers
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

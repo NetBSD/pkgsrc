@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/01/24 07:17:33 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:33 joerg Exp $
 bin/Xalan
 include/xalanc/DOMSupport/DOMServices.hpp
 include/xalanc/DOMSupport/DOMSupport.hpp
@@ -455,19 +455,3 @@ lib/libxalan-c.so.110.0
 lib/libxalanMsg.so
 lib/libxalanMsg.so.110
 lib/libxalanMsg.so.110.0
-@dirrm include/xalanc/XercesParserLiaison/Deprecated
-@dirrm include/xalanc/XercesParserLiaison
-@dirrm include/xalanc/XalanTransformer
-@dirrm include/xalanc/XalanSourceTree
-@dirrm include/xalanc/XalanExtensions
-@dirrm include/xalanc/XalanEXSLT
-@dirrm include/xalanc/XalanDOM
-@dirrm include/xalanc/XSLT
-@dirrm include/xalanc/XPathCAPI
-@dirrm include/xalanc/XPath
-@dirrm include/xalanc/XMLSupport
-@dirrm include/xalanc/PlatformSupport
-@dirrm include/xalanc/Include
-@dirrm include/xalanc/Harness
-@dirrm include/xalanc/DOMSupport
-@dirrm include/xalanc

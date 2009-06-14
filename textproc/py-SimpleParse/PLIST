@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/25 21:14:10 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:24 joerg Exp $
 ${PYSITELIB}/simpleparse/__init__.py
 ${PYSITELIB}/simpleparse/__init__.pyc
 ${PYSITELIB}/simpleparse/__init__.pyo
@@ -250,10 +250,3 @@ ${PYSITELIB}/simpleparse/xml/__init__.pyo
 ${PYSITELIB}/simpleparse/xml/xml_parser.py
 ${PYSITELIB}/simpleparse/xml/xml_parser.pyc
 ${PYSITELIB}/simpleparse/xml/xml_parser.pyo
-@dirrm ${PYSITELIB}/simpleparse/xml
-@dirrm ${PYSITELIB}/simpleparse/tests
-@dirrm ${PYSITELIB}/simpleparse/examples
-@dirrm ${PYSITELIB}/simpleparse/doc/pydoc
-@dirrm ${PYSITELIB}/simpleparse/doc
-@dirrm ${PYSITELIB}/simpleparse/common
-@dirrm ${PYSITELIB}/simpleparse

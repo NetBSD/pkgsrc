@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:58:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:30 joerg Exp $
 ${RUBY_VENDORLIB}/xmlscan/encoding.rb
 ${RUBY_VENDORLIB}/xmlscan/htmlscan.rb
 ${RUBY_VENDORLIB}/xmlscan/namespace.rb
@@ -34,10 +34,3 @@ ${RUBY_EG}/xmlscan/xmlbench/parser/xmlscan-0.0.10.rb
 ${RUBY_EG}/xmlscan/xmlbench/parser/xmlscan-chibixml.rb
 ${RUBY_EG}/xmlscan/xmlbench/parser/xmlscan-rexml.rb
 ${RUBY_EG}/xmlscan/xmlbench/parser/xmlscan.rb
-@dirrm ${RUBY_VENDORLIB}/xmlscan
-@dirrm ${RUBY_DOC}/xmlscan/en
-@dirrm ${RUBY_DOC}/xmlscan/ja
-@dirrm ${RUBY_DOC}/xmlscan
-@dirrm ${RUBY_EG}/xmlscan/xmlbench/parser
-@dirrm ${RUBY_EG}/xmlscan/xmlbench
-@dirrm ${RUBY_EG}/xmlscan

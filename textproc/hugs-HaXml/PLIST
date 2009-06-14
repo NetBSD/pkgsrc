@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/07 12:51:17 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:17 joerg Exp $
 bin/Canonicalise
 bin/CanonicaliseLazy
 bin/DtdToHaskell
@@ -55,22 +55,3 @@ lib/hugs/programs/Xtract/Main.hs
 lib/hugs/programs/Xtract/Paths_HaXml.hs
 lib/hugs/programs/XtractLazy/Main.hs
 lib/hugs/programs/XtractLazy/Paths_HaXml.hs
-@dirrm lib/hugs/programs/XtractLazy
-@dirrm lib/hugs/programs/Xtract
-@dirrm lib/hugs/programs/Validate
-@dirrm lib/hugs/programs/MkOneOf
-@dirrm lib/hugs/programs/DtdToHaskell
-@dirrm lib/hugs/programs/CanonicaliseLazy
-@dirrm lib/hugs/programs/Canonicalise
-@dirrm lib/hugs/programs
-@dirrm lib/hugs/packages/HaXml/packages/HaXml
-@dirrm lib/hugs/packages/HaXml/packages
-@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/Xtract
-@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/Html
-@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml/DtdToHaskell
-@dirrm lib/hugs/packages/HaXml/Text/XML/HaXml
-@dirrm lib/hugs/packages/HaXml/Text/XML
-@dirrm lib/hugs/packages/HaXml/Text/ParserCombinators
-@dirrm lib/hugs/packages/HaXml/Text
-@dirrm lib/hugs/packages/HaXml
-@comment in hugs: @dirrm lib/hugs/packages

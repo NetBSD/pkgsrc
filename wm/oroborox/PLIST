@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/02 14:58:56 rxg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:19:00 joerg Exp $
 bin/oroborox
 libexec/rox/OroboROX
 share/rox/OroboROX/.DirIcon
@@ -936,46 +936,3 @@ share/rox/OroboROX/Help/LoadTheme.sh
 share/rox/OroboROX/Help/Manual.html
 share/rox/OroboROX/Help/README.themes
 share/rox/OroboROX/defaults
-@dirrm share/rox/OroboROX/Help/Development/html
-@dirrm share/rox/OroboROX/Help/Development
-@dirrm share/rox/OroboROX/Help
-@dirrm share/rox/OroboROX/Configure/Workspaces/Messages
-@dirrm share/rox/OroboROX/Configure/Workspaces
-@dirrm share/rox/OroboROX/Configure/Windows/Messages
-@dirrm share/rox/OroboROX/Configure/Windows
-@dirrm share/rox/OroboROX/Configure/Themes/b5
-@dirrm share/rox/OroboROX/Configure/Themes/Silverado
-@dirrm share/rox/OroboROX/Configure/Themes/RiscOS
-@dirrm share/rox/OroboROX/Configure/Themes/Quinx
-@dirrm share/rox/OroboROX/Configure/Themes/Platinum
-@dirrm share/rox/OroboROX/Configure/Themes/Next
-@dirrm share/rox/OroboROX/Configure/Themes/Neweau
-@dirrm share/rox/OroboROX/Configure/Themes/Mofit
-@dirrm share/rox/OroboROX/Configure/Themes/MicroGUI
-@dirrm share/rox/OroboROX/Configure/Themes/Industrial
-@dirrm share/rox/OroboROX/Configure/Themes/Galaxy
-@dirrm share/rox/OroboROX/Configure/Themes/Elberg
-@dirrm share/rox/OroboROX/Configure/Themes/Curve
-@dirrm share/rox/OroboROX/Configure/Themes/Crux
-@dirrm share/rox/OroboROX/Configure/Themes/Caboodle
-@dirrm share/rox/OroboROX/Configure/Themes/Agualemon
-@dirrm share/rox/OroboROX/Configure/Themes
-@dirrm share/rox/OroboROX/Configure/Schemes/windows
-@dirrm share/rox/OroboROX/Configure/Schemes/steelgreen
-@dirrm share/rox/OroboROX/Configure/Schemes/rose
-@dirrm share/rox/OroboROX/Configure/Schemes/red
-@dirrm share/rox/OroboROX/Configure/Schemes/oroborus
-@dirrm share/rox/OroboROX/Configure/Schemes/none
-@dirrm share/rox/OroboROX/Configure/Schemes/coldsteel
-@dirrm share/rox/OroboROX/Configure/Schemes/brick
-@dirrm share/rox/OroboROX/Configure/Schemes/blue2
-@dirrm share/rox/OroboROX/Configure/Schemes/blue
-@dirrm share/rox/OroboROX/Configure/Schemes/beos
-@dirrm share/rox/OroboROX/Configure/Schemes
-@dirrm share/rox/OroboROX/Configure/OroboScheme/Messages
-@dirrm share/rox/OroboROX/Configure/OroboScheme/Help
-@dirrm share/rox/OroboROX/Configure/OroboScheme
-@dirrm share/rox/OroboROX/Configure/Keybindings/Messages
-@dirrm share/rox/OroboROX/Configure/Keybindings
-@dirrm share/rox/OroboROX/Configure
-@dirrm share/rox/OroboROX

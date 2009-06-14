@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/10/22 11:01:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 18:17:14 joerg Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
@@ -1587,54 +1587,4 @@ share/xsl/docbook/xhtml/toc.xsl
 share/xsl/docbook/xhtml/verbatim.xsl
 share/xsl/docbook/xhtml/xref.xsl
 @comment in xmlcatmgr: share/xml/catalog
-@dirrm share/xsl/docbook/xhtml-1_1
-@dirrm share/xsl/docbook/xhtml
-@dirrm share/xsl/docbook/website
-@dirrm share/xsl/docbook/slides/xhtml
-@dirrm share/xsl/docbook/slides/svg
-@dirrm share/xsl/docbook/slides/keynote/xsltsl
-@dirrm share/xsl/docbook/slides/keynote
-@dirrm share/xsl/docbook/slides/htmlhelp
-@dirrm share/xsl/docbook/slides/html
-@dirrm share/xsl/docbook/slides/graphics/toc
-@dirrm share/xsl/docbook/slides/graphics/inactive
-@dirrm share/xsl/docbook/slides/graphics/active
-@dirrm share/xsl/docbook/slides/graphics
-@dirrm share/xsl/docbook/slides/fo
-@dirrm share/xsl/docbook/slides/browser
-@dirrm share/xsl/docbook/slides
-@dirrm share/xsl/docbook/roundtrip
-@dirrm share/xsl/docbook/profiling
-@dirrm share/xsl/docbook/params
-@dirrm share/xsl/docbook/manpages
-@dirrm share/xsl/docbook/lib
-@dirrm share/xsl/docbook/javahelp
-@dirrm share/xsl/docbook/images/callouts
-@dirrm share/xsl/docbook/images
-@dirrm share/xsl/docbook/htmlhelp
-@dirrm share/xsl/docbook/html
-@dirrm share/xsl/docbook/highlighting
-@dirrm share/xsl/docbook/fo
-@dirrm share/xsl/docbook/epub/bin/xslt
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs/svg
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs/mathml
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs/graphics
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs/ebnf
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs/5.0
-@dirrm share/xsl/docbook/epub/bin/spec/testdocs
-@dirrm share/xsl/docbook/epub/bin/spec/files/graphics
-@dirrm share/xsl/docbook/epub/bin/spec/files/covers
-@dirrm share/xsl/docbook/epub/bin/spec/files
-@dirrm share/xsl/docbook/epub/bin/spec/examples/amasque_exploded/images
-@dirrm share/xsl/docbook/epub/bin/spec/examples/amasque_exploded/META-INF
-@dirrm share/xsl/docbook/epub/bin/spec/examples/amasque_exploded
-@dirrm share/xsl/docbook/epub/bin/spec/examples
-@dirrm share/xsl/docbook/epub/bin/spec
-@dirrm share/xsl/docbook/epub/bin/lib
-@dirrm share/xsl/docbook/epub/bin
-@dirrm share/xsl/docbook/epub
-@dirrm share/xsl/docbook/eclipse
-@dirrm share/xsl/docbook/common
-@dirrm share/xsl/docbook
 @unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}
-@dirrm share/examples/docbook-xsl

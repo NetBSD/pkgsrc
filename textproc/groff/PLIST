@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/02/24 20:41:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:17:16 joerg Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -489,36 +489,5 @@ share/groff/${PKGVERSION}/tmac/www.tmac
 share/groff/current
 share/groff/site-tmac/man.local
 share/groff/site-tmac/mdoc.local
-@dirrm share/groff/site-tmac
 @exec ${MKDIR} %D/share/groff/site-font
-@dirrm share/groff/site-font
-@dirrm share/groff/${PKGVERSION}/tmac/mm
-@dirrm share/groff/${PKGVERSION}/tmac/mdoc
-@dirrm share/groff/${PKGVERSION}/tmac
-@dirrm share/groff/${PKGVERSION}/oldfont/devps
-@dirrm share/groff/${PKGVERSION}/oldfont
-@dirrm share/groff/${PKGVERSION}/font/devutf8
-@dirrm share/groff/${PKGVERSION}/font/devps/generate
-@dirrm share/groff/${PKGVERSION}/font/devps
-@dirrm share/groff/${PKGVERSION}/font/devlj4/generate
-@dirrm share/groff/${PKGVERSION}/font/devlj4
-@dirrm share/groff/${PKGVERSION}/font/devlbp
-@dirrm share/groff/${PKGVERSION}/font/devlatin1
-@dirrm share/groff/${PKGVERSION}/font/devhtml
-@dirrm share/groff/${PKGVERSION}/font/devdvi/generate
-@dirrm share/groff/${PKGVERSION}/font/devdvi
-@dirrm share/groff/${PKGVERSION}/font/devascii
-@dirrm share/groff/${PKGVERSION}/font
-@dirrm share/groff/${PKGVERSION}
-@dirrm share/groff
-@dirrm share/doc/groff/${PKGVERSION}/html/mom
-@dirrm share/doc/groff/${PKGVERSION}/html
-@dirrm share/doc/groff/${PKGVERSION}/examples/mom
-@dirrm share/doc/groff/${PKGVERSION}/examples/hdtbl
-@dirrm share/doc/groff/${PKGVERSION}/examples
-@dirrm share/doc/groff/${PKGVERSION}
-@dirrm share/doc/groff
 @exec ${MKDIR} %D/lib/groff/site-tmac
-@dirrm lib/groff/site-tmac
-@dirrm lib/groff/groffer
-@dirrm lib/groff

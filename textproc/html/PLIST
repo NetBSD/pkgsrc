@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/20 08:59:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:17 joerg Exp $
 share/sgml/html/2.0/ISOlat1.sgml
 share/sgml/html/2.0/html-1.dtd
 share/sgml/html/2.0/html-1s.dtd
@@ -23,9 +23,3 @@ share/sgml/html/4.01/frameset.dtd
 share/sgml/html/4.01/loose.dtd
 share/sgml/html/4.01/strict.dtd
 share/sgml/html/catalog
-@dirrm share/sgml/html/4.01
-@dirrm share/sgml/html/4.0
-@dirrm share/sgml/html/3.2
-@dirrm share/sgml/html/2.0
-@dirrm share/sgml/html
-@comment in xmlcatmgr: @dirrm share/sgml

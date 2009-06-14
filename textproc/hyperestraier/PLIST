@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2008/01/03 12:50:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/14 18:17:18 joerg Exp $
 bin/estbutler
 bin/estcall
 bin/estcmd
@@ -275,34 +275,3 @@ share/hyperestraier/locale/ja/estseek.conf
 share/hyperestraier/locale/ja/estseek.help
 share/hyperestraier/locale/ja/estseek.tmpl
 share/hyperestraier/locale/ja/estseek.top
-@dirrm share/hyperestraier/locale/ja
-@dirrm share/hyperestraier/locale
-@dirrm share/hyperestraier/increm
-@dirrm share/hyperestraier/filter
-@dirrm share/hyperestraier/doc/rubypureapi/files
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure/ResultDocument.src
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure/NodeResult.src
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Node.src
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Document.src
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure/Condition.src
-@dirrm share/hyperestraier/doc/rubypureapi/classes/EstraierPure
-@dirrm share/hyperestraier/doc/rubypureapi/classes
-@dirrm share/hyperestraier/doc/rubypureapi
-@dirrm share/hyperestraier/doc/rubynativeapi/files
-@dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier/Result.src
-@dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier/Document.src
-@dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier/Database.src
-@dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier/Condition.src
-@dirrm share/hyperestraier/doc/rubynativeapi/classes/Estraier
-@dirrm share/hyperestraier/doc/rubynativeapi/classes
-@dirrm share/hyperestraier/doc/rubynativeapi
-@dirrm share/hyperestraier/doc/perlnativeapi
-@dirrm share/hyperestraier/doc/javapureapi/resources
-@dirrm share/hyperestraier/doc/javapureapi/estraier/pure
-@dirrm share/hyperestraier/doc/javapureapi/estraier
-@dirrm share/hyperestraier/doc/javapureapi
-@dirrm share/hyperestraier/doc/javanativeapi/resources
-@dirrm share/hyperestraier/doc/javanativeapi/estraier
-@dirrm share/hyperestraier/doc/javanativeapi
-@dirrm share/hyperestraier/doc
-@dirrm share/hyperestraier

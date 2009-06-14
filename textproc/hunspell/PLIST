@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/08 18:25:40 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:18 joerg Exp $
 bin/analyze
 bin/chmorph
 bin/example
@@ -37,7 +37,3 @@ man/man1/hzip.1
 man/man3/hunspell.3
 man/man4/hunspell.4
 share/locale/hu/LC_MESSAGES/hunspell.mo
-@dirrm man/hu/man4
-@dirrm man/hu/man1
-@dirrm man/hu
-@dirrm include/hunspell

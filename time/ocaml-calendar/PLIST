@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/01 12:09:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:59 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/calendar
 lib/ocaml/site-lib/calendar/META
 lib/ocaml/site-lib/calendar/calendar.cmi
@@ -32,4 +32,3 @@ lib/ocaml/site-lib/calendar/utils.mli
 lib/ocaml/site-lib/calendar/version.cmi
 lib/ocaml/site-lib/calendar/version.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/calendar
-@dirrm lib/ocaml/site-lib/calendar

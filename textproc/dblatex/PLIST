@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/21 21:32:34 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:13 joerg Exp $
 bin/dblatex
 man/man1/dblatex.1
 ${PYSITELIB}/dbtexmf/__init__.py
@@ -487,31 +487,3 @@ share/doc/dblatex/html/release-notes/sec-changes-014.html
 share/doc/dblatex/html/release-notes/changes-txt.html
 share/doc/dblatex/html/release-notes/index.html
 share/doc/dblatex/html/release-notes/manual.css
-@dirrm share/doc/dblatex
-@dirrm share/dblatex/xsl/mathml2
-@dirrm share/dblatex/xsl/common
-@dirrm share/dblatex/xsl
-@dirrm share/dblatex/latex/style
-@dirrm share/dblatex/latex/specs
-@dirrm share/dblatex/latex/scripts
-@dirrm share/dblatex/latex/misc/xelatex
-@dirrm share/dblatex/latex/misc/passivetex
-@dirrm share/dblatex/latex/misc
-@dirrm share/dblatex/latex/graphics
-@dirrm share/dblatex/latex/contrib/example
-@dirrm share/dblatex/latex/contrib/db2latex/graphics
-@dirrm share/dblatex/latex/contrib/db2latex
-@dirrm share/dblatex/latex/contrib
-@dirrm share/dblatex/latex
-@dirrm share/doc/dblatex/html/release-notes
-@dirrm share/doc/dblatex/html/manual/figures
-@dirrm share/doc/dblatex/html/manual
-@dirrm share/doc/dblatex/html
-@dirrm share/doc/dblatex
-@dirrm share/dblatex
-@dirrm ${PYSITELIB}/dbtexmf/xslt
-@dirrm ${PYSITELIB}/dbtexmf/dblatex/xetex
-@dirrm ${PYSITELIB}/dbtexmf/dblatex/grubber
-@dirrm ${PYSITELIB}/dbtexmf/dblatex
-@dirrm ${PYSITELIB}/dbtexmf/core
-@dirrm ${PYSITELIB}/dbtexmf

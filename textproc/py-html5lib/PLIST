@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/27 17:27:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:25 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -120,9 +120,3 @@ ${PYSITELIB}/html5lib/treewalkers/soup.pyo
 ${PYSITELIB}/html5lib/utils.py
 ${PYSITELIB}/html5lib/utils.pyc
 ${PYSITELIB}/html5lib/utils.pyo
-@dirrm ${PYSITELIB}/html5lib/treewalkers
-@dirrm ${PYSITELIB}/html5lib/treebuilders
-@dirrm ${PYSITELIB}/html5lib/serializer
-@dirrm ${PYSITELIB}/html5lib/filters
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/html5lib

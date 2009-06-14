@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/03 01:31:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:29 joerg Exp $
 bin/redcloth
 ${GEM_HOME}/cache/RedCloth-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
@@ -52,14 +52,4 @@ ${GEM_LIBDIR}/test/textism.yml
 ${GEM_LIBDIR}/test/threshold.yml
 ${GEM_LIBDIR}/test/validate_fixtures.rb
 ${GEM_HOME}/specifications/RedCloth-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/redcloth/formatters
-@dirrm ${GEM_LIBDIR}/lib/redcloth
-@dirrm ${GEM_LIBDIR}/lib/case_sensitive_require
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/extras
-@dirrm ${GEM_LIBDIR}/ext/redcloth_scan
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

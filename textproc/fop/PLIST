@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/02 16:10:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:16 joerg Exp $
 lib/java/fop-w3c.jar
 lib/java/fop.jar
 share/doc/java/fop/bugtests/build.xml
@@ -281,24 +281,3 @@ share/doc/java/fop/xml-docs/makedoc.sh
 share/doc/java/fop/xml-docs/readme
 share/doc/java/fop/xml-docs/xml2pdf.xsl
 share/doc/java/fop/xml-docs/xml2xml.xsl
-@dirrm share/doc/java/fop/xml-docs/fop
-@dirrm share/doc/java/fop/xml-docs
-@dirrm share/doc/java/fop/resources
-@dirrm share/doc/java/fop/html-docs/resources
-@dirrm share/doc/java/fop/html-docs/graphics
-@dirrm share/doc/java/fop/html-docs
-@dirrm share/doc/java/fop/graphics
-@dirrm share/doc/java/fop/examples/tests
-@dirrm share/doc/java/fop/examples/svg/test
-@dirrm share/doc/java/fop/examples/svg
-@dirrm share/doc/java/fop/examples/reference
-@dirrm share/doc/java/fop/examples/pagination/errors
-@dirrm share/doc/java/fop/examples/pagination
-@dirrm share/doc/java/fop/examples/fo
-@dirrm share/doc/java/fop/examples
-@dirrm share/doc/java/fop/design
-@dirrm share/doc/java/fop/bugtests/tests
-@dirrm share/doc/java/fop/bugtests/reference
-@dirrm share/doc/java/fop/bugtests/fo
-@dirrm share/doc/java/fop/bugtests
-@dirrm share/doc/java/fop

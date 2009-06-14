@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 02:39:54 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:32 joerg Exp $
 share/suikyo/conv-table/ascii-wideascii
 share/suikyo/conv-table/azik
 share/suikyo/conv-table/azik-all
@@ -30,5 +30,3 @@ share/suikyo/conv-table/tcode_reverse
 share/suikyo/conv-table/tutcode
 share/suikyo/conv-table/tutcode_reverse
 share/suikyo/conv-table/wideascii-ascii
-@dirrm share/suikyo/conv-table
-@dirrm share/suikyo

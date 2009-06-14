@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/06 21:55:38 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:19:03 joerg Exp $
 bin/wmii
 bin/wmii9menu
 bin/wmii9rc
@@ -11,4 +11,3 @@ man/man1/wmiir.1
 share/examples/wmii-${CONFVERSION}/rc.wmii
 share/examples/wmii-${CONFVERSION}/welcome
 share/examples/wmii-${CONFVERSION}/wmiirc
-@dirrm share/examples/wmii-${CONFVERSION}

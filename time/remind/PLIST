@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/10 17:46:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:00 joerg Exp $
 bin/cm2rem
 bin/rem
 bin/rem2html
@@ -15,5 +15,3 @@ share/doc/remind/README.UNIX
 share/doc/remind/WHATSNEW
 share/examples/remind/defs.rem
 share/examples/remind/remind.vim
-@dirrm share/examples/remind
-@dirrm share/doc/remind

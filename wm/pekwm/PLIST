@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/20 12:27:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:19:00 joerg Exp $
 bin/pekwm
 man/man1/pekwm.1
 share/examples/pekwm/autoproperties
@@ -43,9 +43,3 @@ share/pekwm/themes/default/top-left.png
 share/pekwm/themes/default/top-left_unfocus.png
 share/pekwm/themes/default/top-right.png
 share/pekwm/themes/default/top-right_unfocus.png
-@dirrm share/pekwm/themes/default-plain
-@dirrm share/pekwm/themes/default
-@dirrm share/pekwm/themes
-@dirrm share/pekwm/scripts
-@dirrm share/pekwm
-@dirrm share/examples/pekwm

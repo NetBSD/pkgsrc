@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/09 12:22:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:59 joerg Exp $
 bin/pck-timer
 bin/pck-summary
 lib/pclock/projclock.tcl
@@ -14,5 +14,3 @@ share/doc/pclock/INSTALL
 share/doc/pclock/README
 share/doc/pclock/TODO
 share/doc/pclock/Announce-0.7
-@dirrm share/doc/pclock
-@dirrm lib/pclock

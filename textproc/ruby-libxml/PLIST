@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/15 09:31:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:28 joerg Exp $
 ${GEM_HOME}/cache/libxml-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
@@ -163,17 +163,3 @@ ${GEM_LIBDIR}/test/tc_xpath_expression.rb
 ${GEM_LIBDIR}/test/tc_xpointer.rb
 ${GEM_LIBDIR}/test/test_suite.rb
 ${GEM_HOME}/specifications/libxml-ruby-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/model
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/xml
-@dirrm ${GEM_LIBDIR}/lib/libxml
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/vc
-@dirrm ${GEM_LIBDIR}/ext/mingw
-@dirrm ${GEM_LIBDIR}/ext/libxml
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/doc/log
-@dirrm ${GEM_LIBDIR}/doc/img
-@dirrm ${GEM_LIBDIR}/doc/css
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}

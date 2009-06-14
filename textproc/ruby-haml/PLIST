@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:21:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
 bin/css2sass
 bin/haml
 bin/html2haml
@@ -126,27 +126,3 @@ ${GEM_LIBDIR}/test/sass/templates/parent_ref.sass
 ${GEM_LIBDIR}/test/sass/templates/subdir/nested_subdir/nested_subdir.sass
 ${GEM_LIBDIR}/test/sass/templates/subdir/subdir.sass
 ${GEM_HOME}/specifications/haml-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/sass/templates/subdir/nested_subdir
-@dirrm ${GEM_LIBDIR}/test/sass/templates/subdir
-@dirrm ${GEM_LIBDIR}/test/sass/templates
-@dirrm ${GEM_LIBDIR}/test/sass/results/subdir/nested_subdir
-@dirrm ${GEM_LIBDIR}/test/sass/results/subdir
-@dirrm ${GEM_LIBDIR}/test/sass/results
-@dirrm ${GEM_LIBDIR}/test/sass
-@dirrm ${GEM_LIBDIR}/test/haml/templates
-@dirrm ${GEM_LIBDIR}/test/haml/rhtml
-@dirrm ${GEM_LIBDIR}/test/haml/results
-@dirrm ${GEM_LIBDIR}/test/haml/mocks
-@dirrm ${GEM_LIBDIR}/test/haml/markaby
-@dirrm ${GEM_LIBDIR}/test/haml
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/sass/tree
-@dirrm ${GEM_LIBDIR}/lib/sass/plugin
-@dirrm ${GEM_LIBDIR}/lib/sass/constant
-@dirrm ${GEM_LIBDIR}/lib/sass
-@dirrm ${GEM_LIBDIR}/lib/haml/template
-@dirrm ${GEM_LIBDIR}/lib/haml/helpers
-@dirrm ${GEM_LIBDIR}/lib/haml
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

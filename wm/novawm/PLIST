@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/18 22:29:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:19:00 joerg Exp $
 bin/novawm
 share/doc/novawm/AUTHORS
 share/doc/novawm/COPYING
@@ -7,4 +7,3 @@ share/doc/novawm/INSTALL
 share/doc/novawm/NEWS
 share/doc/novawm/README
 share/doc/novawm/TODO
-@dirrm share/doc/novawm

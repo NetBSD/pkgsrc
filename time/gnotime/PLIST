@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/10/28 23:38:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:58 joerg Exp $
 bin/gnotime
 bin/gnotime-remote
 man/man1/gnotime-remote.1
@@ -104,15 +104,3 @@ share/locale/wa/LC_MESSAGES/gnotime-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnotime-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnotime-2.0.mo
 share/omf/gnotime/gnotime-C.omf
-@dirrm share/omf/gnotime
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnotime/glade
-@dirrm share/gnotime/ghtml/C
-@dirrm share/gnotime/ghtml
-@dirrm share/gnotime
-@dirrm share/gnome/help/gnotime/C/figures
-@dirrm share/gnome/help/gnotime/C
-@dirrm share/gnome/help/gnotime
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

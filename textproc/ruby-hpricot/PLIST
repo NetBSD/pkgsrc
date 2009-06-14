@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:21:39 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:28 joerg Exp $
 ${GEM_HOME}/cache/hpricot-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG
@@ -44,12 +44,3 @@ ${GEM_LIBDIR}/test/test_paths.rb
 ${GEM_LIBDIR}/test/test_preserved.rb
 ${GEM_LIBDIR}/test/test_xml.rb
 ${GEM_HOME}/specifications/hpricot-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/files
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/${RUBY_ARCH}
-@dirrm ${GEM_LIBDIR}/lib/hpricot
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/extras
-@dirrm ${GEM_LIBDIR}/ext/hpricot_scan
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}

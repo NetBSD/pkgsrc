@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/10 11:24:26 hasso Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:34 joerg Exp $
 include/xercesc/dom/DOM.hpp
 include/xercesc/dom/DOMAttr.hpp
 include/xercesc/dom/DOMBuilder.hpp
@@ -507,32 +507,3 @@ lib/libxerces-c.so.28.0
 lib/libxerces-depdom.so
 lib/libxerces-depdom.so.28
 lib/libxerces-depdom.so.28.0
-@dirrm include/xercesc/validators/schema/identity
-@dirrm include/xercesc/validators/schema
-@dirrm include/xercesc/validators/datatype
-@dirrm include/xercesc/validators/common
-@dirrm include/xercesc/validators/DTD
-@dirrm include/xercesc/validators
-@dirrm include/xercesc/util/regx
-${PLIST.gnu-iconv}@dirrm include/xercesc/util/Transcoders/IconvGNU
-${PLIST.native-iconv}@dirrm include/xercesc/util/Transcoders/Iconv
-@dirrm include/xercesc/util/Transcoders
-@dirrm include/xercesc/util/Platforms/${OPSYS}
-@dirrm include/xercesc/util/Platforms
-@dirrm include/xercesc/util/NetAccessors/Socket
-@dirrm include/xercesc/util/NetAccessors
-@dirrm include/xercesc/util/MsgLoaders/InMemory
-@dirrm include/xercesc/util/MsgLoaders
-@dirrm include/xercesc/util/Compilers
-@dirrm include/xercesc/util
-@dirrm include/xercesc/sax2
-@dirrm include/xercesc/sax
-@dirrm include/xercesc/parsers
-@dirrm include/xercesc/internal
-@dirrm include/xercesc/framework/psvi
-@dirrm include/xercesc/framework
-@dirrm include/xercesc/framework
-@dirrm include/xercesc/dom/impl
-@dirrm include/xercesc/dom/deprecated
-@dirrm include/xercesc/dom
-@dirrm include/xercesc

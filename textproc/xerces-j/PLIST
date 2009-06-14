@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:36:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:34 joerg Exp $
 lib/java/xerces.jar
 share/doc/java/xerces/apiDocs/allclasses-frame.html
 share/doc/java/xerces/apiDocs/deprecated-list.html
@@ -536,38 +536,4 @@ share/examples/java/xerces/personal.dtd
 share/examples/java/xerces/personal.xml
 share/examples/java/xerces/personal.xsd
 share/examples/java/xerces/xercesSamples.jar
-@dirrm share/examples/java/xerces
-@dirrm share/doc/java/xerces/html/resources
-@dirrm share/doc/java/xerces/html/graphics
-@dirrm share/doc/java/xerces/html
-@dirrm share/doc/java/xerces/dtd
-@dirrm share/doc/java/xerces/apiDocs/org/xml/sax/helpers
-@dirrm share/doc/java/xerces/apiDocs/org/xml/sax/ext
-@dirrm share/doc/java/xerces/apiDocs/org/xml/sax
-@dirrm share/doc/java/xerces/apiDocs/org/xml
-@dirrm share/doc/java/xerces/apiDocs/org/w3c/dom/traversal
-@dirrm share/doc/java/xerces/apiDocs/org/w3c/dom/range
-@dirrm share/doc/java/xerces/apiDocs/org/w3c/dom/html
-@dirrm share/doc/java/xerces/apiDocs/org/w3c/dom/events
-@dirrm share/doc/java/xerces/apiDocs/org/w3c/dom
-@dirrm share/doc/java/xerces/apiDocs/org/w3c
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xml/serialize
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xml
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xerces/parsers
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xerces/framework
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xerces/dom/events
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xerces/dom
-@dirrm share/doc/java/xerces/apiDocs/org/apache/xerces
-@dirrm share/doc/java/xerces/apiDocs/org/apache/wml/dom
-@dirrm share/doc/java/xerces/apiDocs/org/apache/wml
-@dirrm share/doc/java/xerces/apiDocs/org/apache/html/dom
-@dirrm share/doc/java/xerces/apiDocs/org/apache/html
-@dirrm share/doc/java/xerces/apiDocs/org/apache
-@dirrm share/doc/java/xerces/apiDocs/org
-@dirrm share/doc/java/xerces/apiDocs/javax/xml/parsers
-@dirrm share/doc/java/xerces/apiDocs/javax/xml
-@dirrm share/doc/java/xerces/apiDocs/javax
-@dirrm share/doc/java/xerces/apiDocs/index-files
-@dirrm share/doc/java/xerces/apiDocs
-@dirrm share/doc/java/xerces
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/12/18 14:12:24 hira Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:19:03 joerg Exp $
 bin/xfwm4
 lib/xfce4/mcs-plugins/wmtweaks_plugin.la
 lib/xfce4/mcs-plugins/workspaces_plugin.la
@@ -1275,28 +1275,4 @@ share/xfce4/doc/it/images/workspace_margins.png
 share/xfce4/doc/it/images/xfwm_workspaces.png
 share/xfce4/doc/it/xfwm4.html
 share/xfwm4/defaults
-@dirrm share/xfwm4
-@dirrm share/themes/Wallis/xfwm4
-@dirrm share/themes/Wallis
-@dirrm share/themes/Tyrex/xfwm4
-@dirrm share/themes/Tyrex
-@dirrm share/themes/Therapy/xfwm4
-@dirrm share/themes/Therapy
-@dirrm share/themes/Stoneage/xfwm4
-@dirrm share/themes/Stoneage
-@dirrm share/themes/Sassandra/xfwm4
-@dirrm share/themes/Sassandra
-@dirrm share/themes/Moheli/xfwm4
-@dirrm share/themes/Moheli
-@dirrm share/themes/Kokodi/xfwm4
-@dirrm share/themes/Kokodi
-@dirrm share/themes/Katiola/xfwm4
-@dirrm share/themes/Katiola
-@dirrm share/themes/Default/xfwm4
-@dirrm share/themes/Default-4.2/xfwm4
-@dirrm share/themes/Default-4.2
-@dirrm share/themes/Default-4.0/xfwm4
-@dirrm share/themes/Default-4.0
-@dirrm share/themes/Daloa/xfwm4
-@dirrm share/themes/Daloa
 @unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}

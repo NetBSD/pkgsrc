@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/03/05 03:30:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:58 joerg Exp $
 bin/gdeskcal
 lib/gdeskcal/AUTHORS
 lib/gdeskcal/LICENSE
@@ -161,67 +161,3 @@ lib/gdeskcal/skins/miderat/next.png
 lib/gdeskcal/skins/miderat/prev.png
 lib/gdeskcal/skins/miderat/skin.xml
 lib/gdeskcal/skins/miderat/today.png
-@dirrm lib/gdeskcal/skins/miderat
-@dirrm lib/gdeskcal/skins/default
-@dirrm lib/gdeskcal/skins/big_and_simple
-@dirrm lib/gdeskcal/skins
-@dirrm lib/gdeskcal/po
-@dirrm lib/gdeskcal/locale/zh_CN/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/zh_CN
-@dirrm lib/gdeskcal/locale/uk/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/uk
-@dirrm lib/gdeskcal/locale/tr/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/tr
-@dirrm lib/gdeskcal/locale/sv/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/sv
-@dirrm lib/gdeskcal/locale/sr/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/sr
-@dirrm lib/gdeskcal/locale/sk/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/sk
-@dirrm lib/gdeskcal/locale/ru/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/ru
-@dirrm lib/gdeskcal/locale/pl/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/pl
-@dirrm lib/gdeskcal/locale/no/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/no
-@dirrm lib/gdeskcal/locale/nl/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/nl
-@dirrm lib/gdeskcal/locale/lt/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/lt
-@dirrm lib/gdeskcal/locale/ko/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/ko
-@dirrm lib/gdeskcal/locale/ja/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/ja
-@dirrm lib/gdeskcal/locale/it/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/it
-@dirrm lib/gdeskcal/locale/is/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/is
-@dirrm lib/gdeskcal/locale/hu/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/hu
-@dirrm lib/gdeskcal/locale/he/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/he
-@dirrm lib/gdeskcal/locale/fr/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/fr
-@dirrm lib/gdeskcal/locale/fi/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/fi
-@dirrm lib/gdeskcal/locale/es/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/es
-@dirrm lib/gdeskcal/locale/el/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/el
-@dirrm lib/gdeskcal/locale/de_AT/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/de_AT
-@dirrm lib/gdeskcal/locale/de/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/de
-@dirrm lib/gdeskcal/locale/cs/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/cs
-@dirrm lib/gdeskcal/locale/bg/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/bg
-@dirrm lib/gdeskcal/locale/ar/LC_MESSAGES
-@dirrm lib/gdeskcal/locale/ar
-@dirrm lib/gdeskcal/locale
-@dirrm lib/gdeskcal/data/gfx
-@dirrm lib/gdeskcal/data
-@dirrm lib/gdeskcal/code/planner/cal
-@dirrm lib/gdeskcal/code/planner
-@dirrm lib/gdeskcal/code
-@dirrm lib/gdeskcal

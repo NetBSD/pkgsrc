@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/18 08:04:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:13 joerg Exp $
 share/doc/db2latex/AUTHOR
 share/doc/db2latex/COPYING
 share/doc/db2latex/COPYRIGHT
@@ -1455,34 +1455,4 @@ share/xsl/db2latex/texmath.mod.xsl
 share/xsl/db2latex/verbatim.mod.xsl
 share/xsl/db2latex/xref.mod.xsl
 share/xsl/db2latex/xsldoc.ent
-@dirrm share/xsl/db2latex/slides/sample_foiltex/figures
-@dirrm share/xsl/db2latex/slides/sample_foiltex
-@dirrm share/xsl/db2latex/slides
-@dirrm share/xsl/db2latex/mathml/ent
-@dirrm share/xsl/db2latex/mathml
-@dirrm share/xsl/db2latex/figures
-@dirrm share/xsl/db2latex/common
-@dirrm share/xsl/db2latex
 @unexec ${RMDIR} %D/share/xsl 2>/dev/null || ${TRUE}
-@dirrm share/doc/db2latex/reference
-@dirrm share/doc/db2latex/images
-@dirrm share/doc/db2latex/graphics/navicons/triangle/other
-@dirrm share/doc/db2latex/graphics/navicons/triangle/current
-@dirrm share/doc/db2latex/graphics/navicons/triangle
-@dirrm share/doc/db2latex/graphics/navicons/plusminus/other
-@dirrm share/doc/db2latex/graphics/navicons/plusminus/current
-@dirrm share/doc/db2latex/graphics/navicons/plusminus
-@dirrm share/doc/db2latex/graphics/navicons/folder16/other
-@dirrm share/doc/db2latex/graphics/navicons/folder16/current
-@dirrm share/doc/db2latex/graphics/navicons/folder16
-@dirrm share/doc/db2latex/graphics/navicons/folder/other
-@dirrm share/doc/db2latex/graphics/navicons/folder/current
-@dirrm share/doc/db2latex/graphics/navicons/folder
-@dirrm share/doc/db2latex/graphics/navicons/arrow/other
-@dirrm share/doc/db2latex/graphics/navicons/arrow/current
-@dirrm share/doc/db2latex/graphics/navicons/arrow
-@dirrm share/doc/db2latex/graphics/navicons
-@dirrm share/doc/db2latex/graphics/icons
-@dirrm share/doc/db2latex/graphics
-@dirrm share/doc/db2latex/find
-@dirrm share/doc/db2latex

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/09/15 06:05:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:29 joerg Exp $
 bin/maruku
 bin/marutex
 ${GEM_HOME}/cache/maruku-${PKGVERSION}.gem
@@ -205,36 +205,4 @@ ${GEM_LIBDIR}/tests/utf8-files/simple.md
 ${GEM_LIBDIR}/unit_test_block.sh
 ${GEM_LIBDIR}/unit_test_span.sh
 ${GEM_HOME}/specifications/maruku-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tests/utf8-files
-@dirrm ${GEM_LIBDIR}/tests/unittest/references
-@dirrm ${GEM_LIBDIR}/tests/unittest/recover
-@dirrm ${GEM_LIBDIR}/tests/unittest/pending
-@dirrm ${GEM_LIBDIR}/tests/unittest/paragraph_rules
-@dirrm ${GEM_LIBDIR}/tests/unittest/notyet
-@dirrm ${GEM_LIBDIR}/tests/unittest/math
-@dirrm ${GEM_LIBDIR}/tests/unittest/encoding
-@dirrm ${GEM_LIBDIR}/tests/unittest/divs
-@dirrm ${GEM_LIBDIR}/tests/unittest/attributes
-@dirrm ${GEM_LIBDIR}/tests/unittest
-@dirrm ${GEM_LIBDIR}/tests/s5
-@dirrm ${GEM_LIBDIR}/tests/others
-@dirrm ${GEM_LIBDIR}/tests/math_usage
-@dirrm ${GEM_LIBDIR}/tests/math
-@dirrm ${GEM_LIBDIR}/tests/diagrams
-@dirrm ${GEM_LIBDIR}/tests/bugs
-@dirrm ${GEM_LIBDIR}/tests
-@dirrm ${GEM_LIBDIR}/lib/maruku/usage
-@dirrm ${GEM_LIBDIR}/lib/maruku/tests
-@dirrm ${GEM_LIBDIR}/lib/maruku/output/s5
-@dirrm ${GEM_LIBDIR}/lib/maruku/output
-@dirrm ${GEM_LIBDIR}/lib/maruku/input_textile2
-@dirrm ${GEM_LIBDIR}/lib/maruku/input
-@dirrm ${GEM_LIBDIR}/lib/maruku/ext/math/mathml_engines
-@dirrm ${GEM_LIBDIR}/lib/maruku/ext/math
-@dirrm ${GEM_LIBDIR}/lib/maruku/ext
-@dirrm ${GEM_LIBDIR}/lib/maruku
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/docs
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

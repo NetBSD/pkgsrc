@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/02/05 00:00:11 cube Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:18:59 joerg Exp $
 bin/ion
 bin/pwm2
 lib/ion/de.la
@@ -54,9 +54,3 @@ share/ion/ioncorelib.lua
 share/ion/menulib.lua
 share/ion/querylib.lua
 share/ion/welcome_message.txt
-@dirrm lib/ion/lc
-@dirrm lib/ion
-@dirrm libexec/ion
-@dirrm share/doc/ion
-@dirrm share/examples/ion
-@dirrm share/ion

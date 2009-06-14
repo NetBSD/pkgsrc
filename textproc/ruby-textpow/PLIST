@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 15:41:23 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:30 joerg Exp $
 bin/plist2syntax
 bin/plist2yaml
 ${GEM_HOME}/cache/textpow-${PKGVERSION}.gem
@@ -15,9 +15,3 @@ ${GEM_LIBDIR}/lib/textpow/syntax.rb
 ${GEM_LIBDIR}/mm/manual.mm
 ${GEM_LIBDIR}/test/test_textpow.rb
 ${GEM_HOME}/specifications/textpow-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/mm
-@dirrm ${GEM_LIBDIR}/lib/textpow
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

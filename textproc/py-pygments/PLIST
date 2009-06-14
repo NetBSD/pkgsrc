@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/12 13:45:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:25 joerg Exp $
 bin/pygmentize
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -183,9 +183,3 @@ ${PYSITELIB}/pygments/unistring.pyo
 ${PYSITELIB}/pygments/util.py
 ${PYSITELIB}/pygments/util.pyc
 ${PYSITELIB}/pygments/util.pyo
-@dirrm ${PYSITELIB}/pygments/styles
-@dirrm ${PYSITELIB}/pygments/lexers
-@dirrm ${PYSITELIB}/pygments/formatters
-@dirrm ${PYSITELIB}/pygments/filters
-@dirrm ${PYSITELIB}/pygments
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

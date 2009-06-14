@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/21 15:15:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:19:01 joerg Exp $
 bin/scrotwm
 man/man1/scrotwm.1
 share/examples/scrotwm/baraction.sh
 share/examples/scrotwm/initscreen.sh
 share/examples/scrotwm/screenshot.sh
 share/examples/scrotwm/scrotwm.conf
-@dirrm share/examples/scrotwm

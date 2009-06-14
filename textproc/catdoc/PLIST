@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/01/24 17:07:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:13 joerg Exp $
 bin/catdoc
 bin/catppt
 bin/xls2csv
@@ -55,4 +55,3 @@ share/catdoc/mac-roman.txt
 share/catdoc/tex.replchars
 share/catdoc/tex.specchars
 share/catdoc/us-ascii.txt
-@dirrm share/catdoc

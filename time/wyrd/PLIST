@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/24 23:03:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:01 joerg Exp $
 bin/wyrd
 man/man1/wyrd.1
 man/man5/wyrdrc.5
 share/examples/wyrd/wyrdrc
-@dirrm share/examples/wyrd

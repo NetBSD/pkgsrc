@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:19:02 joerg Exp $
 bin/convertfonts
 bin/get-wings-flags
 bin/get-wraster-flags
@@ -344,22 +344,5 @@ share/locale/sv/LC_MESSAGES/WindowMaker.mo
 share/locale/tr/LC_MESSAGES/WindowMaker.mo
 share/locale/zh_CN/LC_MESSAGES/WPrefs.mo
 share/locale/zh_CN/LC_MESSAGES/WindowMaker.mo
-@dirrm share/doc/WindowMaker
-@dirrm share/examples/WindowMaker
-@dirrm share/WindowMaker/Themes
-@dirrm share/WindowMaker/Styles
-@dirrm share/WindowMaker/SoundSets
-@dirrm share/WindowMaker/Sounds
-@dirrm share/WindowMaker/Pixmaps
-@dirrm share/WindowMaker/Icons
-@dirrm share/WindowMaker/IconSets
-@dirrm share/WindowMaker/Backgrounds
-@dirrm share/WindowMaker
-@dirrm share/WINGs
-@dirrm share/GNUstep/Applications/WPrefs.app/xpm
-@dirrm share/GNUstep/Applications/WPrefs.app/tiff
-@dirrm share/GNUstep/Applications/WPrefs.app
 @unexec ${RMDIR} %D/share/GNUstep/Applications 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/GNUstep 2>/dev/null || ${TRUE}
-@dirrm man/sk/man1
-@dirrm include/WINGs

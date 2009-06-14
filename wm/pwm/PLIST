@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/06/02 11:21:28 salo Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:19:01 joerg Exp $
 bin/pwm
 man/man1/pwm.1
 share/doc/pwm/LICENSE
@@ -10,5 +10,3 @@ share/examples/pwm/look-brownsteel.conf
 share/examples/pwm/look-cdelike.conf
 share/examples/pwm/menus-default.conf
 share/examples/pwm/pwm.conf.default
-@dirrm share/examples/pwm
-@dirrm share/doc/pwm

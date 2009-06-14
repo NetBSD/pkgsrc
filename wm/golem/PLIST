@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:18:59 joerg Exp $
 bin/golem
 bin/golem.install
 lib/golem/plugins/animations.so
@@ -219,55 +219,3 @@ share/golem/themes/twm/rborder_unf.xpm
 share/golem/themes/twm/rc
 share/golem/themes/twm/resize.xpm
 share/golem/themes/twm/topbar.xpm
-@dirrm share/golem/themes/twm/forplug/simple_menus
-@dirrm share/golem/themes/twm/forplug
-@dirrm share/golem/themes/twm
-@dirrm share/golem/themes/microGUI/forplug/start_slide
-@dirrm share/golem/themes/microGUI/forplug/pier
-@dirrm share/golem/themes/microGUI/forplug/pager
-@dirrm share/golem/themes/microGUI/forplug
-@dirrm share/golem/themes/microGUI
-@dirrm share/golem/themes/eBlueSteel/styles
-@dirrm share/golem/themes/eBlueSteel/images/unf
-@dirrm share/golem/themes/eBlueSteel/images/pressed
-@dirrm share/golem/themes/eBlueSteel/images/foc
-@dirrm share/golem/themes/eBlueSteel/images
-@dirrm share/golem/themes/eBlueSteel/forplug/start_slide
-@dirrm share/golem/themes/eBlueSteel/forplug/simple_menus
-@dirrm share/golem/themes/eBlueSteel/forplug/setroot
-@dirrm share/golem/themes/eBlueSteel/forplug/pier
-@dirrm share/golem/themes/eBlueSteel/forplug
-@dirrm share/golem/themes/eBlueSteel
-@dirrm share/golem/themes/MudGolem/styles
-@dirrm share/golem/themes/MudGolem/images/unf
-@dirrm share/golem/themes/MudGolem/images/pressed
-@dirrm share/golem/themes/MudGolem/images/foc
-@dirrm share/golem/themes/MudGolem/images
-@dirrm share/golem/themes/MudGolem/forplug/wmclass_defs
-@dirrm share/golem/themes/MudGolem/forplug/start_slide
-@dirrm share/golem/themes/MudGolem/forplug/simple_menus
-@dirrm share/golem/themes/MudGolem/forplug/setroot
-@dirrm share/golem/themes/MudGolem/forplug/pier
-@dirrm share/golem/themes/MudGolem/forplug/pager
-@dirrm share/golem/themes/MudGolem/forplug
-@dirrm share/golem/themes/MudGolem
-@dirrm share/golem/themes/AbsoluteE/forplug/setroot
-@dirrm share/golem/themes/AbsoluteE/forplug
-@dirrm share/golem/themes/AbsoluteE
-@dirrm share/golem/themes
-@dirrm share/golem/plugins/wmclass_defs
-@dirrm share/golem/plugins/start_slide
-${PLIST.esound}@dirrm share/golem/plugins/sound
-@dirrm share/golem/plugins/simple_menus
-@dirrm share/golem/plugins/setroot
-@dirrm share/golem/plugins/pier
-@dirrm share/golem/plugins/pager
-@dirrm share/golem/plugins/mwm_hints
-@dirrm share/golem/plugins/gnome
-@dirrm share/golem/plugins/box_iconify
-@dirrm share/golem/plugins/animations
-@dirrm share/golem/plugins
-@dirrm share/golem
-@dirrm share/examples/golem
-@dirrm lib/golem/plugins
-@dirrm lib/golem

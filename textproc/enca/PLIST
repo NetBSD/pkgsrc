@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/24 22:49:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:15 joerg Exp $
 bin/enca
 bin/enconv
 include/enca.h
@@ -19,6 +19,3 @@ share/gtk-doc/html/libenca/libenca-Auxiliary-Functions.html
 share/gtk-doc/html/libenca/libenca-Charsets-and-Surfaces.html
 share/gtk-doc/html/libenca/libenca-Typedefs-and-Constants.html
 share/gtk-doc/html/libenca/libenca.devhelp
-@dirrm share/gtk-doc/html/libenca
-@dirrm libexec/enca/extconv
-@dirrm libexec/enca

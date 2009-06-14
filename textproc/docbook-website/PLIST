@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/05 05:43:05 hrs Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:14 joerg Exp $
 share/doc/docbook-website/ChangeLog
 share/doc/docbook-website/README
 share/doc/docbook-website/RELEASE-NOTES.html
@@ -222,41 +222,3 @@ share/xml/website/xsl/website-common.xsl
 share/xml/website/xsl/website-targets.xsl
 share/xml/website/xsl/website.xsl
 share/xml/website/xsl/xbel.xsl
-@dirrm share/xml/website/xsl
-@dirrm share/xml/website/schema/relaxng
-@dirrm share/xml/website/schema/dtd
-@dirrm share/xml/website/schema
-@dirrm share/xml/website/extensions/xalan2/com/nwalsh/xalan
-@dirrm share/xml/website/extensions/xalan2/com/nwalsh
-@dirrm share/xml/website/extensions/xalan2/com
-@dirrm share/xml/website/extensions/xalan2
-@dirrm share/xml/website/extensions/saxon64/com/nwalsh/saxon
-@dirrm share/xml/website/extensions/saxon64/com/nwalsh
-@dirrm share/xml/website/extensions/saxon64/com
-@dirrm share/xml/website/extensions/saxon64
-@dirrm share/xml/website/extensions
-@dirrm share/xml/website
-@comment in xmlcatmgr: @dirrm share/xml
-@comment in xmlcatmgr: @dirrm share/sgml
-@dirrm share/examples/docbook-website/subdir
-@dirrm share/examples/docbook-website/graphics/navicons/triangle/other
-@dirrm share/examples/docbook-website/graphics/navicons/triangle/current
-@dirrm share/examples/docbook-website/graphics/navicons/triangle
-@dirrm share/examples/docbook-website/graphics/navicons/plusminus/other
-@dirrm share/examples/docbook-website/graphics/navicons/plusminus/current
-@dirrm share/examples/docbook-website/graphics/navicons/plusminus
-@dirrm share/examples/docbook-website/graphics/navicons/folder16/other
-@dirrm share/examples/docbook-website/graphics/navicons/folder16/current
-@dirrm share/examples/docbook-website/graphics/navicons/folder16
-@dirrm share/examples/docbook-website/graphics/navicons/folder/other
-@dirrm share/examples/docbook-website/graphics/navicons/folder/current
-@dirrm share/examples/docbook-website/graphics/navicons/folder
-@dirrm share/examples/docbook-website/graphics/navicons/arrow/other
-@dirrm share/examples/docbook-website/graphics/navicons/arrow/current
-@dirrm share/examples/docbook-website/graphics/navicons/arrow
-@dirrm share/examples/docbook-website/graphics/navicons
-@dirrm share/examples/docbook-website/graphics/icons
-@dirrm share/examples/docbook-website/graphics
-@dirrm share/examples/docbook-website/bookmark
-@dirrm share/examples/docbook-website
-@dirrm share/doc/docbook-website

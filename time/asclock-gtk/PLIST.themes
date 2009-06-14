@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.themes,v 1.1 2001/10/31 22:23:15 zuntum Exp $
+@comment $NetBSD: PLIST.themes,v 1.2 2009/06/14 18:17:57 joerg Exp $
 share/asclock-gtk/Freeamp/beats.xpm
 share/asclock-gtk/Freeamp/clock.xpm
 share/asclock-gtk/Freeamp/config
@@ -88,13 +88,3 @@ share/asclock-gtk/shaped/minute.xpm
 share/asclock-gtk/shaped/month.xpm
 share/asclock-gtk/shaped/second.xpm
 share/asclock-gtk/shaped/weekday.xpm
-@dirrm share/asclock-gtk/shaped
-@dirrm share/asclock-gtk/penguin
-@dirrm share/asclock-gtk/classic
-@dirrm share/asclock-gtk/beats
-@dirrm share/asclock-gtk/analog
-@dirrm share/asclock-gtk/Stone
-@dirrm share/asclock-gtk/Orb
-@dirrm share/asclock-gtk/Newstone
-@dirrm share/asclock-gtk/Freeamp
-@dirrm share/asclock-gtk

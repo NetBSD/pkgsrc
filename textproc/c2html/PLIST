@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/29 16:40:58 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:13 joerg Exp $
 bin/c2html
 share/doc/c2html/README
-@dirrm share/doc/c2html

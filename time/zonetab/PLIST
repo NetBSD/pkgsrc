@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 21:46:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:01 joerg Exp $
 share/examples/zoneinfo/zone.tab
-@dirrm share/examples/zoneinfo

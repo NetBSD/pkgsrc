@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/12 17:30:04 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:22 joerg Exp $
 bin/mxmldoc
 include/mxml.h
 lib/libmxml.la
@@ -19,4 +19,3 @@ share/doc/mxml/D.gif
 share/doc/mxml/README
 share/doc/mxml/mxml.html
 share/doc/mxml/mxmldoc.xsd
-@dirrm share/doc/mxml

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:17:19 joerg Exp $
 bin/jgrep
 bin/jegrep
 bin/jfgrep
@@ -26,4 +26,3 @@ share/locale/pt_BR/LC_MESSAGES/grep.mo
 share/locale/ru/LC_MESSAGES/grep.mo
 share/locale/sl/LC_MESSAGES/grep.mo
 share/locale/sv/LC_MESSAGES/grep.mo
-@dirrm share/doc/ja-grep

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/05/13 12:22:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:17:19 joerg Exp $
 share/doc/iso-codes/README
 share/doc/iso-codes/TODO
 share/locale/af/LC_MESSAGES/iso_3166.mo
@@ -368,7 +368,3 @@ share/xml/iso-codes/iso_3166_2.xml
 share/xml/iso-codes/iso_4217.xml
 share/xml/iso-codes/iso_639.xml
 share/xml/iso-codes/iso_639_3.xml
-@dirrm share/xml/iso-codes
-@comment in xmlcatmgr: @dirrm share/xml
-@dirrm share/iso-codes
-@dirrm share/doc/iso-codes
