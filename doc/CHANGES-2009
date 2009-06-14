@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2356 2009/06/14 22:49:35 ahoka Exp $
+$NetBSD: CHANGES-2009,v 1.2357 2009/06/14 23:03:22 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3153,3 +3153,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Added databases/p5-Template-DBI version 2.64 [sno 2009-06-14]
 	Updated wm/dwm to 5.5 [ahoka 2009-06-14]
 	Updated x11/dmenu to 4.0 [ahoka 2009-06-14]
+	Added devel/p5-ExtUtils-ModuleMaker-TT version 0.93 [sno 2009-06-14]
