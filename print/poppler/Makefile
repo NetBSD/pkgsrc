@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2009/04/17 16:08:17 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2009/06/14 21:16:22 joerg Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -47,6 +47,7 @@ CONFIGURE_ARGS+=	--disable-cms
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/poppler/
 	${INSTALL_MAN} ${WRKSRC}/README-XPDF ${DESTDIR}${PREFIX}/share/doc/poppler/
+	${RMDIR} ${DESTDIR}${PREFIX}/include/poppler || ${TRUE}
 
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

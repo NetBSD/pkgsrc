@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:12:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 21:16:22 joerg Exp $
 share/texmf-dist/LICENSE.texmfsrc
 share/texmf-dist/release-tetex-texmfsrc.txt
 share/texmf-dist/source/README
@@ -3944,5 +3944,5 @@ share/texmf-dist/source/plain/impatient/usebook.tex
 share/texmf-dist/source/plain/impatient/usermacs.tex
 share/texmf-dist/source/plain/impatient/usingtex.tex
 share/texmf-dist/source/plain/impatient/xmptext.tex
-@exec ${MKDIR} %D/share/texmf-dist/source/latex/t2/etc/cmap
-@exec ${MKDIR} %D/share/texmf-dist/source/latex/aguplus
+@pkgdir share/texmf-dist/source/latex/t2/etc/cmap
+@pkgdir share/texmf-dist/source/latex/aguplus

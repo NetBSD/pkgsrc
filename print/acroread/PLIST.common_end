@@ -1,4 +1,2 @@
-@comment $NetBSD: PLIST.common_end,v 1.3 2009/06/14 18:11:53 joerg Exp $
-@exec ${MKDIR} %D/lib/netscape/plugins
-@unexec ${RMDIR} %D/lib/netscape/plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/netscape 2>/dev/null || ${TRUE}
+@comment $NetBSD: PLIST.common_end,v 1.4 2009/06/14 21:16:21 joerg Exp $
+@pkgdir lib/netscape/plugins

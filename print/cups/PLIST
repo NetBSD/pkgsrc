@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/06/14 18:11:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/14 21:16:21 joerg Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -1717,23 +1717,23 @@ share/locale/ru/cups_ru.po
 share/locale/sv/cups_sv.po
 share/locale/zh/cups_zh.po
 share/locale/zh_TW/cups_zh_TW.po
-@exec ${MKDIR} %D/share/doc/cups/zh/images
-@exec ${MKDIR} %D/share/doc/cups/ru/images
-@exec ${MKDIR} %D/share/doc/cups/pt_BR/images
-@exec ${MKDIR} %D/share/doc/cups/pt/images
-@exec ${MKDIR} %D/share/doc/cups/no/images
-@exec ${MKDIR} %D/share/doc/cups/nl/images
-@exec ${MKDIR} %D/share/doc/cups/ko/images
-@exec ${MKDIR} %D/share/doc/cups/fi/images
-@exec ${MKDIR} %D/share/doc/cups/da/images
-@exec ${MKDIR} %D/share/cups/templates/zh
-@exec ${MKDIR} %D/share/cups/templates/ru
-@exec ${MKDIR} %D/share/cups/templates/pt_BR
-@exec ${MKDIR} %D/share/cups/templates/pt
-@exec ${MKDIR} %D/share/cups/templates/no
-@exec ${MKDIR} %D/share/cups/templates/nl
-@exec ${MKDIR} %D/share/cups/templates/ko
-@exec ${MKDIR} %D/share/cups/templates/fi
-@exec ${MKDIR} %D/share/cups/templates/da
-@exec ${MKDIR} %D/share/cups/profiles
-@exec ${MKDIR} %D/libexec/cups/driver
+@pkgdir share/doc/cups/zh/images
+@pkgdir share/doc/cups/ru/images
+@pkgdir share/doc/cups/pt_BR/images
+@pkgdir share/doc/cups/pt/images
+@pkgdir share/doc/cups/no/images
+@pkgdir share/doc/cups/nl/images
+@pkgdir share/doc/cups/ko/images
+@pkgdir share/doc/cups/fi/images
+@pkgdir share/doc/cups/da/images
+@pkgdir share/cups/templates/zh
+@pkgdir share/cups/templates/ru
+@pkgdir share/cups/templates/pt_BR
+@pkgdir share/cups/templates/pt
+@pkgdir share/cups/templates/no
+@pkgdir share/cups/templates/nl
+@pkgdir share/cups/templates/ko
+@pkgdir share/cups/templates/fi
+@pkgdir share/cups/templates/da
+@pkgdir share/cups/profiles
+@pkgdir libexec/cups/driver
