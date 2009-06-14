@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:59:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 20:05:42 joerg Exp $
 bin/comdraw
 bin/comterp
 bin/comtest
@@ -839,4 +839,4 @@ man/man3/transfns.3
 man/man3/transforms.3
 man/man3/uctrls.3
 man/man3/viewcmds.3
-@exec ${MKDIR} %D/include/IV-3_1
+@pkgdir include/IV-3_1
