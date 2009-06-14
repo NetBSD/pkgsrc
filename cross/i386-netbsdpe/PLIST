@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/03 04:23:38 kent Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:39:54 joerg Exp $
 bin/i386-netbsdpe-addr2line
 bin/i386-netbsdpe-ar
 bin/i386-netbsdpe-as
@@ -76,38 +76,4 @@ man/man1/i386-netbsdpe-size.1
 man/man1/i386-netbsdpe-strings.1
 man/man1/i386-netbsdpe-strip.1
 man/man1/i386-netbsdpe-windres.1
-@dirrm lib/gcc-lib/i386-netbsdpe/3.3.6/include
-@dirrm lib/gcc-lib/i386-netbsdpe/3.3.6
-@dirrm lib/gcc-lib/i386-netbsdpe
 @unexec ${RMDIR} %D/lib/gcc-lib 2>/dev/null || ${TRUE}
-@dirrm i386-netbsdpe/share/locale/tr/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/tr
-@dirrm i386-netbsdpe/share/locale/sv/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/sv
-@dirrm i386-netbsdpe/share/locale/rw/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/rw
-@dirrm i386-netbsdpe/share/locale/nl/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/nl
-@dirrm i386-netbsdpe/share/locale/ja/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/ja
-@dirrm i386-netbsdpe/share/locale/fr/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/fr
-@dirrm i386-netbsdpe/share/locale/es/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/es
-@dirrm i386-netbsdpe/share/locale/el/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/el
-@dirrm i386-netbsdpe/share/locale/de/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/de
-@dirrm i386-netbsdpe/share/locale/da/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/da
-@dirrm i386-netbsdpe/share/locale/ca/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/ca
-@dirrm i386-netbsdpe/share/locale/be/LC_MESSAGES
-@dirrm i386-netbsdpe/share/locale/be
-@dirrm i386-netbsdpe/share/locale
-@dirrm i386-netbsdpe/share
-@dirrm i386-netbsdpe/lib/ldscripts
-@dirrm i386-netbsdpe/lib
-@dirrm i386-netbsdpe/include
-@dirrm i386-netbsdpe/bin
-@dirrm i386-netbsdpe

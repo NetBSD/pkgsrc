@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/10/16 21:48:26 erh Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:25 joerg Exp $
 ${GEM_HOME}/cache/pg-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/COPYING.txt
@@ -13,6 +13,3 @@ ${GEM_LIBDIR}/ext/pg.c
 ${GEM_LIBDIR}/ext/pg.h
 ${GEM_LIBDIR}/lib/pg.${RUBY_DLEXT}
 ${GEM_HOME}/specifications/pg-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}

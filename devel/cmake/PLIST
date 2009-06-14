@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/05/11 08:02:09 hasso Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:48:37 joerg Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -414,9 +414,3 @@ share/doc/cmake-${CMAKE_API}/cpack.txt
 share/doc/cmake-${CMAKE_API}/ctest.docbook
 share/doc/cmake-${CMAKE_API}/ctest.html
 share/doc/cmake-${CMAKE_API}/ctest.txt
-@dirrm share/doc/cmake-${CMAKE_API}
-@dirrm share/cmake-${CMAKE_API}/include
-@dirrm share/cmake-${CMAKE_API}/Templates
-@dirrm share/cmake-${CMAKE_API}/Modules/Platform
-@dirrm share/cmake-${CMAKE_API}/Modules
-@dirrm share/cmake-${CMAKE_API}

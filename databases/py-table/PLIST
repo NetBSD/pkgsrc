@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/01/06 17:53:11 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:43:23 joerg Exp $
 ${PYSITELIB}/pytable/__init__.py
 ${PYSITELIB}/pytable/__init__.pyc
 ${PYSITELIB}/pytable/__init__.pyo
@@ -201,16 +201,3 @@ ${PYSITELIB}/pytable/viewschema.pyo
 ${PYSITELIB}/pytable/xmlgeneration.py
 ${PYSITELIB}/pytable/xmlgeneration.pyc
 ${PYSITELIB}/pytable/xmlgeneration.pyo
-@dirrm ${PYSITELIB}/pytable/tests
-@dirrm ${PYSITELIB}/pytable/pysqlite
-@dirrm ${PYSITELIB}/pytable/pypgsql
-@dirrm ${PYSITELIB}/pytable/pygresql
-@dirrm ${PYSITELIB}/pytable/psycopg
-@dirrm ${PYSITELIB}/pytable/mysql
-@dirrm ${PYSITELIB}/pytable/mk
-@dirrm ${PYSITELIB}/pytable/examples
-@dirrm ${PYSITELIB}/pytable/doc/style
-@dirrm ${PYSITELIB}/pytable/doc/pydoc
-@dirrm ${PYSITELIB}/pytable/doc
-@dirrm ${PYSITELIB}/pytable/_postgresql
-@dirrm ${PYSITELIB}/pytable

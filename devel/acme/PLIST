@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:22:14 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:32 joerg Exp $
 bin/acme
 share/acme/6502/Help.txt
 share/acme/6502/std.a
@@ -34,12 +34,3 @@ share/doc/acme/Lib.txt
 share/doc/acme/QuickRef.txt
 share/doc/acme/Source.txt
 share/doc/acme/Upgrade.txt
-@dirrm share/doc/acme
-@dirrm share/acme/Own
-@dirrm share/acme/C64
-@dirrm share/acme/C128
-@dirrm share/acme/Atari
-@dirrm share/acme/Acorn
-@dirrm share/acme/65816
-@dirrm share/acme/6502
-@dirrm share/acme

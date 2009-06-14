@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/16 07:39:41 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:33 joerg Exp $
 bin/mvn
 etc/maven/m2.conf
 etc/maven/settings.xml
@@ -7,9 +7,5 @@ lib/java/maven/maven-${PKGVERSION}-uber.jar
 share/doc/java/maven/LICENSE.txt
 share/doc/java/maven/NOTICE.txt
 share/doc/java/maven/README.txt
-@dirrm share/doc/java/maven
-@dirrm lib/java/maven/boot
-@dirrm lib/java/maven
-@dirrm etc/maven
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/doc/java 2>/dev/null || ${TRUE}

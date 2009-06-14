@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/10/09 18:21:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:34 joerg Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -57,9 +57,4 @@ share/autoconf/m4sugar/m4sh.m4f
 share/autoconf/m4sugar/m4sugar.m4
 share/autoconf/m4sugar/m4sugar.m4f
 share/autoconf/m4sugar/version.m4
-@dirrm share/autoconf/m4sugar
-@dirrm share/autoconf/autotest
-@dirrm share/autoconf/autoscan
-@dirrm share/autoconf/autoconf
-@dirrm share/autoconf/Autom4te
 @unexec ${RMDIR} %D/share/autoconf > /dev/null 2>&1 || ${TRUE}

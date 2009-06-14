@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/09/19 12:58:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:39:52 joerg Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -99,7 +99,3 @@ man/man1/avr-windres.1
 man/man1/avr-c++filt.1
 man/man1/avr-as.1
 man/man1/avr-ld.1
-@dirrm avr/lib/ldscripts
-@dirrm avr/lib
-@dirrm avr/bin
-@dirrm avr

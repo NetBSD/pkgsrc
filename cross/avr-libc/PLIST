@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/06/26 09:45:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:39:53 joerg Exp $
 avr/include/ctype.h
 avr/include/errno.h
 avr/include/inttypes.h
@@ -215,14 +215,3 @@ share/doc/avr-libc/examples/demo/demo.pdf
 share/doc/avr-libc/examples/demo/demo.srec
 share/doc/avr-libc/examples/twitest/Makefile
 share/doc/avr-libc/examples/twitest/twitest.c
-@dirrm avr/include/avr
-@dirrm avr/include/compat
-@dirrm avr/include
-@dirrm avr/lib/avr3
-@dirrm avr/lib/avr4
-@dirrm avr/lib/avr5
-@dirrm share/doc/avr-libc/avr-libc-user-manual
-@dirrm share/doc/avr-libc/examples/demo
-@dirrm share/doc/avr-libc/examples/twitest
-@dirrm share/doc/avr-libc/examples
-@dirrm share/doc/avr-libc
