@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/21 16:23:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:10 joerg Exp $
 bin/munin-cron
 lib/munin/munin-graph
 lib/munin/munin-html
@@ -19,11 +19,5 @@ share/examples/munin/templates/style.css
 www/munin/data/cgi/munin-cgi-graph
 ${PERL5_SITELIB}/Munin.pm
 @comment pkg-specific directories:
-@dirrm share/examples/munin/templates
-@dirrm share/examples/munin
-@dirrm www/munin/data/cgi
-@dirrm www/munin/data
-@dirrm www/munin
-@dirrm www
 @comment shared with munin-node
 @unexec ${RMDIR} %D/lib/munin 2>/dev/null || ${TRUE}

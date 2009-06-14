@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:00 joerg Exp $
 lib/libamserver.la
 lib/libamtape.la
 lib/librestore.la
@@ -172,4 +172,3 @@ share/examples/amanda/chg-multi.conf
 share/examples/amanda/chg-scsi.conf
 share/examples/amanda/config.site
 share/examples/amanda/disklist
-@dirrm share/examples/amanda

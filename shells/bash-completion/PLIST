@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/12 09:47:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:14:20 joerg Exp $
 share/bash-completion/bash_completion
 share/bash-completion/bash_completion.sh
 share/bash-completion/contrib/bitkeeper
@@ -30,6 +30,3 @@ share/bash-completion/contrib/svk
 share/bash-completion/contrib/unace
 share/bash-completion/contrib/unrar
 share/doc/bash-completion/README
-@dirrm share/doc/bash-completion
-@dirrm share/bash-completion/contrib
-@dirrm share/bash-completion

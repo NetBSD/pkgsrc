@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/05 16:34:34 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:26 joerg Exp $
 bin/antonym
 share/examples/antonym/README
 share/examples/antonym/dot.antonym
-@dirrm share/examples/antonym

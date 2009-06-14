@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/05 13:48:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:13:40 joerg Exp $
 bin/sudo
 bin/sudoedit
 libexec/sudo_noexec.so
@@ -12,5 +12,3 @@ share/doc/sudo/README
 share/doc/sudo/README.LDAP
 share/doc/sudo/UPGRADE
 share/examples/sudo/sudoers
-@dirrm share/examples/sudo
-@dirrm share/doc/sudo

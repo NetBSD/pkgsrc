@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/16 17:10:40 kefren Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:16 joerg Exp $
 share/examples/webmin/apache/config
 share/examples/webmin/apache/site
 share/webmin/apache/CHANGELOG
@@ -277,7 +277,3 @@ share/webmin/apache/syslog_logs.pl
 share/webmin/apache/useradmin_update.pl
 share/webmin/apache/virt_index.cgi
 share/webmin/apache/worker.pl
-@dirrm share/webmin/apache/lang
-@dirrm share/webmin/apache/images
-@dirrm share/webmin/apache
-@dirrm share/examples/webmin/apache

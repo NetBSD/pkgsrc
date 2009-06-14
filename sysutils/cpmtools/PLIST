@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/30 12:04:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:02 joerg Exp $
 bin/cpmchattr
 bin/cpmchmod
 bin/cpmcp
@@ -17,4 +17,3 @@ man/man1/fsed.cpm.1
 man/man1/mkfs.cpm.1
 man/man5/cpm.5
 share/cpmtools/diskdefs
-@dirrm share/cpmtools
