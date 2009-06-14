@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/11/21 14:30:35 is Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:10:07 joerg Exp $
 bin/slrn
 bin/slrnpull
 man/man1/slrn.1
@@ -57,7 +57,3 @@ share/slrn/slang/ttyprint.sl
 share/slrn/slang/util.sl
 share/slrn/slang/varset.sl
 share/slrn/slang/xcomment.sl
-@dirrm share/doc/slrn/slrnpull
-@dirrm share/doc/slrn
-@dirrm share/slrn/slang
-@dirrm share/slrn

@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 21:21:08 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:28 joerg Exp $
 lib/gnome-vfs-2.0/modules/libdns-sd.la
-@comment in gnome-vfs: @dirrm lib/gnome-vfs-2.0/modules

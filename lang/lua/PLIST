@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/09/07 14:03:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:03:36 joerg Exp $
 bin/lua
 bin/luac
 include/lauxlib.h
@@ -47,11 +47,4 @@ share/examples/lua/trace-calls.lua
 share/examples/lua/trace-globals.lua
 share/examples/lua/xd.lua
 @exec ${MKDIR} %D/share/lua/5.1
-@dirrm share/lua/5.1
-@dirrm share/lua
-@dirrm share/examples/lua/etc
-@dirrm share/examples/lua
-@dirrm share/doc/lua
 @exec ${MKDIR} %D/lib/lua/5.1
-@dirrm lib/lua/5.1
-@dirrm lib/lua

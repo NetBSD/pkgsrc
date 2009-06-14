@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/25 17:37:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:03:39 joerg Exp $
 bin/pyrexc
 ${PYSITELIB}/Pyrex/Compiler/Builtin.py
 ${PYSITELIB}/Pyrex/Compiler/Builtin.pyc
@@ -142,10 +142,3 @@ ${PYSITELIB}/Pyrex/Utils.pyo
 ${PYSITELIB}/Pyrex/__init__.py
 ${PYSITELIB}/Pyrex/__init__.pyc
 ${PYSITELIB}/Pyrex/__init__.pyo
-@dirrm ${PYSITELIB}/Pyrex/Unix
-@dirrm ${PYSITELIB}/Pyrex/Plex
-@dirrm ${PYSITELIB}/Pyrex/Mac
-@dirrm ${PYSITELIB}/Pyrex/DistutilsOld
-@dirrm ${PYSITELIB}/Pyrex/Distutils
-@dirrm ${PYSITELIB}/Pyrex/Compiler
-@dirrm ${PYSITELIB}/Pyrex

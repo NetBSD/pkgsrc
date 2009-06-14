@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:19:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:30 joerg Exp $
 ${GEM_HOME}/cache/daemons-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -39,10 +39,3 @@ ${GEM_LIBDIR}/lib/daemons/pidfile.rb
 ${GEM_LIBDIR}/lib/daemons/pidmem.rb
 ${GEM_LIBDIR}/setup.rb
 ${GEM_HOME}/specifications/daemons-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/daemons
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples/run
-@dirrm ${GEM_LIBDIR}/examples/daemonize
-@dirrm ${GEM_LIBDIR}/examples/call
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

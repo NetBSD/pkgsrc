@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/09/16 01:59:07 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:40 joerg Exp $
 bin/bookify
 bin/cftp
 bin/ckeygen
@@ -2285,76 +2285,3 @@ ${PYSITELIB}/twisted/words/xish/xpathparser.g
 ${PYSITELIB}/twisted/words/xish/xpathparser.py
 ${PYSITELIB}/twisted/words/xish/xpathparser.pyc
 ${PYSITELIB}/twisted/words/xish/xpathparser.pyo
-@dirrm ${PYSITELIB}/twisted/words/xish
-@dirrm ${PYSITELIB}/twisted/words/topfiles
-@dirrm ${PYSITELIB}/twisted/words/test
-@dirrm ${PYSITELIB}/twisted/words/scripts
-@dirrm ${PYSITELIB}/twisted/words/protocols/jabber
-@dirrm ${PYSITELIB}/twisted/words/protocols
-@dirrm ${PYSITELIB}/twisted/words/im
-@dirrm ${PYSITELIB}/twisted/words
-@dirrm ${PYSITELIB}/twisted/web/woven
-@dirrm ${PYSITELIB}/twisted/web/topfiles
-@dirrm ${PYSITELIB}/twisted/web/test
-@dirrm ${PYSITELIB}/twisted/web
-@dirrm ${PYSITELIB}/twisted/trial/test
-@dirrm ${PYSITELIB}/twisted/trial
-@dirrm ${PYSITELIB}/twisted/topfiles
-@dirrm ${PYSITELIB}/twisted/test
-@dirrm ${PYSITELIB}/twisted/tap
-@dirrm ${PYSITELIB}/twisted/spread/ui
-@dirrm ${PYSITELIB}/twisted/spread
-@dirrm ${PYSITELIB}/twisted/scripts/test
-@dirrm ${PYSITELIB}/twisted/scripts
-@dirrm ${PYSITELIB}/twisted/runner/topfiles
-@dirrm ${PYSITELIB}/twisted/runner
-@dirrm ${PYSITELIB}/twisted/python/zsh
-@dirrm ${PYSITELIB}/twisted/python/test
-@dirrm ${PYSITELIB}/twisted/python
-@dirrm ${PYSITELIB}/twisted/protocols/mice
-@dirrm ${PYSITELIB}/twisted/protocols/gps
-@dirrm ${PYSITELIB}/twisted/protocols
-@dirrm ${PYSITELIB}/twisted/plugins
-@dirrm ${PYSITELIB}/twisted/persisted/journal
-@dirrm ${PYSITELIB}/twisted/persisted
-@dirrm ${PYSITELIB}/twisted/pair/topfiles
-@dirrm ${PYSITELIB}/twisted/pair/test
-@dirrm ${PYSITELIB}/twisted/pair
-@dirrm ${PYSITELIB}/twisted/news/topfiles
-@dirrm ${PYSITELIB}/twisted/news/test
-@dirrm ${PYSITELIB}/twisted/news
-@dirrm ${PYSITELIB}/twisted/names/topfiles
-@dirrm ${PYSITELIB}/twisted/names/test
-@dirrm ${PYSITELIB}/twisted/names
-@dirrm ${PYSITELIB}/twisted/manhole/ui
-@dirrm ${PYSITELIB}/twisted/manhole
-@dirrm ${PYSITELIB}/twisted/mail/topfiles
-@dirrm ${PYSITELIB}/twisted/mail/test
-@dirrm ${PYSITELIB}/twisted/mail/scripts
-@dirrm ${PYSITELIB}/twisted/mail
-@dirrm ${PYSITELIB}/twisted/lore/topfiles
-@dirrm ${PYSITELIB}/twisted/lore/test
-@dirrm ${PYSITELIB}/twisted/lore/scripts
-@dirrm ${PYSITELIB}/twisted/lore
-@dirrm ${PYSITELIB}/twisted/internet/test
-@dirrm ${PYSITELIB}/twisted/internet/iocpreactor/iocpsupport
-@dirrm ${PYSITELIB}/twisted/internet/iocpreactor
-@dirrm ${PYSITELIB}/twisted/internet/cfsupport
-@dirrm ${PYSITELIB}/twisted/internet
-@dirrm ${PYSITELIB}/twisted/flow/topfiles
-@dirrm ${PYSITELIB}/twisted/flow/test
-@dirrm ${PYSITELIB}/twisted/flow
-@dirrm ${PYSITELIB}/twisted/enterprise
-@dirrm ${PYSITELIB}/twisted/cred
-@dirrm ${PYSITELIB}/twisted/conch/ui
-@dirrm ${PYSITELIB}/twisted/conch/topfiles
-@dirrm ${PYSITELIB}/twisted/conch/test
-@dirrm ${PYSITELIB}/twisted/conch/ssh
-@dirrm ${PYSITELIB}/twisted/conch/scripts
-@dirrm ${PYSITELIB}/twisted/conch/openssh_compat
-@dirrm ${PYSITELIB}/twisted/conch/insults
-@dirrm ${PYSITELIB}/twisted/conch/client
-@dirrm ${PYSITELIB}/twisted/conch
-@dirrm ${PYSITELIB}/twisted/application
-@dirrm ${PYSITELIB}/twisted
-@dirrm ${PYSITELIB}/${EGG_INFODIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/01/26 10:39:01 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:08:05 joerg Exp $
 bin/gst-visualise-0.10
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
@@ -321,21 +321,3 @@ share/locale/sv/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-base-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-base-0.10.mo
-@dirrm share/doc/gst-plugins-0.10/gst-plugins-base-plugins-0.10
-@dirrm share/doc/gst-plugins-0.10/gst-plugins-base-libs-0.10
-@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
-@dirrm include/gstreamer-0.10/gst/video
-@dirrm include/gstreamer-0.10/gst/tag
-@dirrm include/gstreamer-0.10/gst/sdp
-@dirrm include/gstreamer-0.10/gst/rtsp
-@dirrm include/gstreamer-0.10/gst/rtp
-@dirrm include/gstreamer-0.10/gst/riff
-@dirrm include/gstreamer-0.10/gst/pbutils
-@dirrm include/gstreamer-0.10/gst/netbuffer
-@dirrm include/gstreamer-0.10/gst/interfaces
-@dirrm include/gstreamer-0.10/gst/floatcast
-@dirrm include/gstreamer-0.10/gst/fft
-@dirrm include/gstreamer-0.10/gst/cdda
-@dirrm include/gstreamer-0.10/gst/audio
-@dirrm include/gstreamer-0.10/gst/app
-@comment in gstreamer0.10: @dirrm include/gstreamer-0.10/gst

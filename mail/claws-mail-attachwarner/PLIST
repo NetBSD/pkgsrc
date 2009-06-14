@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/11 03:11:37 smb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:28 joerg Exp $
 lib/claws-mail/plugins/attachwarner.la
 share/locale/ca/LC_MESSAGES/attachwarner.mo
 share/locale/cs/LC_MESSAGES/attachwarner.mo
@@ -14,4 +14,3 @@ share/locale/ru/LC_MESSAGES/attachwarner.mo
 share/locale/cs/LC_MESSAGES/attachwarner.mo
 share/locale/sk/LC_MESSAGES/attachwarner.mo
 share/locale/sr/LC_MESSAGES/attachwarner.mo
-@dirrm lib/claws-mail/plugins

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/15 21:22:54 seb Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:04:35 joerg Exp $
 bin/imapfilter
 man/man1/imapfilter.1
 man/man5/imapfilter_config.5
@@ -13,5 +13,3 @@ share/imapfilter/message.lua
 share/imapfilter/options.lua
 share/imapfilter/regex.lua
 share/imapfilter/set.lua
-@dirrm share/imapfilter
-@dirrm share/examples/imapfilter

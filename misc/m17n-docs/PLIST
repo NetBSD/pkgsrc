@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/12 08:14:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:27 joerg Exp $
 man/man1/m17n-config.1
 man/man1/m17n-db.1
 man/man3/M17NObjectHead.3m17n
@@ -409,5 +409,3 @@ share/doc/m17n/html/structMInputXIMArgIM.html
 share/doc/m17n/html/struct__MFLTFont.html
 share/doc/m17n/m17n-lib.dvi
 share/doc/m17n/m17n-lib.ps
-@dirrm share/doc/m17n/html
-@dirrm share/doc/m17n

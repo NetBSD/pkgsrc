@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:25:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:44 joerg Exp $
 bin/umb-scheme
 man/man1/umb-scheme.1
 share/umb-scheme/SLIB-for-umb-scheme.init
@@ -97,5 +97,3 @@ share/umb-scheme/slib/trnscrpt.scm
 share/umb-scheme/slib/values.scm
 share/umb-scheme/slib/withfile.scm
 share/umb-scheme/slib/yasyn.scm
-@dirrm share/umb-scheme/slib
-@dirrm share/umb-scheme

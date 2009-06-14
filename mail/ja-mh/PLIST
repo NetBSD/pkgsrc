@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/29 05:09:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:35 joerg Exp $
 bin/ali
 bin/anno
 bin/bbc
@@ -174,4 +174,3 @@ man/man8/dp.8
 man/man8/fmtdump.8
 man/man8/install-mh.8
 man/man8/post.8
-@dirrm libexec/mh

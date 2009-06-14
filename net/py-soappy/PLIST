@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/11 21:19:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:40 joerg Exp $
 ${PYSITELIB}/SOAPpy/Client.py
 ${PYSITELIB}/SOAPpy/Client.pyc
 ${PYSITELIB}/SOAPpy/Client.pyo
@@ -68,5 +68,3 @@ ${PYSITELIB}/SOAPpy/wstools/XMLname.pyo
 ${PYSITELIB}/SOAPpy/wstools/__init__.py
 ${PYSITELIB}/SOAPpy/wstools/__init__.pyc
 ${PYSITELIB}/SOAPpy/wstools/__init__.pyo
-@dirrm ${PYSITELIB}/SOAPpy/wstools
-@dirrm ${PYSITELIB}/SOAPpy

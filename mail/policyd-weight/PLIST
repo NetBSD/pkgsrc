@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/06 13:49:46 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:39 joerg Exp $
 sbin/policyd-weight
 share/doc/policyd-weight/changes.txt
 share/doc/policyd-weight/documentation.txt
 share/examples/policyd-weight/policyd-weight.conf
 share/examples/rc.d/policyd_weight
-@dirrm share/doc/policyd-weight
-@dirrm share/examples/policyd-weight

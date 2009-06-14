@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/16 02:37:11 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:41 joerg Exp $
 bin/snobol4
 bin/snobol4-${PKGVERSION}
 lib/snobol4/bq.sno
@@ -37,5 +37,3 @@ share/doc/snobol4/README
 share/doc/snobol4/design.txt
 share/doc/snobol4/load.txt
 share/doc/snobol4/tutorial.gz
-@dirrm share/doc/snobol4
-@dirrm lib/snobol4

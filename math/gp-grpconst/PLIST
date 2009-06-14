@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/01/01 18:43:27 cjep Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:05:44 joerg Exp $
 lib/gap4.3/pkg/grpconst/init.g
 lib/gap4.3/pkg/grpconst/read.g
 lib/gap4.3/pkg/grpconst/doc/answers.tex
@@ -32,6 +32,3 @@ lib/gap4.3/pkg/grpconst/gap/nocentre.gi
 lib/gap4.3/pkg/grpconst/gap/risotest.gi
 lib/gap4.3/pkg/grpconst/gap/semisim.gi
 lib/gap4.3/pkg/grpconst/gap/upext.gi
-@dirrm lib/gap4.3/pkg/grpconst/doc
-@dirrm lib/gap4.3/pkg/grpconst/gap
-@dirrm lib/gap4.3/pkg/grpconst

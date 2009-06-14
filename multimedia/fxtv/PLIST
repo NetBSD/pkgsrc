@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/23 01:06:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:03 joerg Exp $
 bin/fxtv
 lib/X11/app-defaults/Fxtv
 lib/X11/fxtv/README
@@ -11,5 +11,3 @@ lib/X11/fxtv/bitmaps/radio_off.xbm
 lib/X11/fxtv/bitmaps/radio_on.xbm
 lib/X11/fxtv/fxtv_cnvt.sh
 man/man1/fxtv.1
-@dirrm lib/X11/fxtv/bitmaps
-@dirrm lib/X11/fxtv

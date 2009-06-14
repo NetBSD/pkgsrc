@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/21 18:03:42 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:44 joerg Exp $
 bin/valac
 include/vala-1.0/ccode/valaccodeassignment.h
 include/vala-1.0/ccode/valaccodebinaryexpression.h
@@ -375,11 +375,3 @@ share/vala/vapi/vte.vapi
 share/vala/vapi/webkit-1.0.deps
 share/vala/vapi/webkit-1.0.vapi
 share/vala/vapi/zlib.vapi
-@dirrm share/vala/vapi
-@dirrm share/vala
-@dirrm share/devhelp/books/vala
-@dirrm include/vala-1.0/vala
-@dirrm include/vala-1.0/gobject
-@dirrm include/vala-1.0/gee
-@dirrm include/vala-1.0/ccode
-@dirrm include/vala-1.0

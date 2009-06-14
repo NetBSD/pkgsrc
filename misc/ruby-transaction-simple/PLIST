@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:20:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:30 joerg Exp $
 ${GEM_HOME}/cache/transaction-simple-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Install.txt
@@ -17,9 +17,3 @@ ${GEM_LIBDIR}/test/test_transaction_simple.rb
 ${GEM_LIBDIR}/test/test_transaction_simple_group.rb
 ${GEM_LIBDIR}/test/test_transaction_simple_threadsafe.rb
 ${GEM_HOME}/specifications/transaction-simple-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/transaction/simple/threadsafe
-@dirrm ${GEM_LIBDIR}/lib/transaction/simple
-@dirrm ${GEM_LIBDIR}/lib/transaction
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

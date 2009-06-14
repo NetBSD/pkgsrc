@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/10/09 16:01:23 mjl Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:37 joerg Exp $
 lib/libh323.la
 bin/simph323
 lib/pwlib/codecs/audio/gsm0610_audio_pwplugin.so
@@ -80,8 +80,3 @@ include/openh323/vpblid.h
 include/openh323/x224.h
 include/openh323/x880.h
 share/openh323/openh323u.mak
-@dirrm share/openh323
-@dirrm include/openh323
-@dirrm lib/pwlib/codecs/audio
-@dirrm lib/pwlib/codecs
-@dirrm lib/pwlib

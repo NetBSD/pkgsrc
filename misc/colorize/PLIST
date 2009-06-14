@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/16 17:48:47 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:19 joerg Exp $
 bin/colorize
 man/man1/colorize.1
 share/doc/colorize/README
@@ -7,5 +7,3 @@ share/examples/colorize/Xlog.tar.gz
 share/examples/colorize/colorize-fifo.sh
 share/examples/colorize/colorize-tail.sh
 share/examples/colorize/colorizerc
-@dirrm share/examples/colorize
-@dirrm share/doc/colorize

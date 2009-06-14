@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/03/02 22:52:17 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:03:38 joerg Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -227,26 +227,4 @@ man/man1/phpize.1
 share/examples/php/php.ini-dist
 share/examples/php/php.ini-recommended
 share/php/php.gif
-@dirrm share/php
-@dirrm share/examples/php
-@dirrm lib/php/build
-@dirrm include/php/regex
-@dirrm include/php/main/streams
-@dirrm include/php/main
-@dirrm include/php/ext/xml
-@dirrm include/php/ext/standard
-@dirrm include/php/ext/spl
-@dirrm include/php/ext/session
-@dirrm include/php/ext/pcre/pcrelib
-@dirrm include/php/ext/pcre
-@dirrm include/php/ext/libxml
-@dirrm include/php/ext/hash
-@dirrm include/php/ext/filter
-@dirrm include/php/ext/date/lib
-@dirrm include/php/ext/date
-@dirrm include/php/ext
-@dirrm include/php/include
-@dirrm include/php/Zend
-@dirrm include/php/TSRM
-@dirrm include/php
 @unexec ${RMDIR} %D/lib/php 2>/dev/null || ${TRUE}

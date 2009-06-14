@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/19 00:41:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:37 joerg Exp $
 bin/822date
 bin/822field
 bin/822header
@@ -45,4 +45,3 @@ man/man5/rewriting.5
 man/man8/ofmipd.8
 man/man8/ofmipname.8
 share/examples/mess822/leapsecs.dat
-@dirrm share/examples/mess822

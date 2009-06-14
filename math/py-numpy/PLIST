@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/19 22:04:36 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:48 joerg Exp $
 bin/f2py${PYVERSSUFFIX}
 ${PYSITELIB}/numpy/COMPATIBILITY
 ${PYSITELIB}/numpy/DEV_README.txt
@@ -927,60 +927,3 @@ ${PYSITELIB}/numpy/tests/test_ctypeslib.py
 ${PYSITELIB}/numpy/version.py
 ${PYSITELIB}/numpy/version.pyc
 ${PYSITELIB}/numpy/version.pyo
-@dirrm ${PYSITELIB}/numpy/tests
-@dirrm ${PYSITELIB}/numpy/testing/tests
-@dirrm ${PYSITELIB}/numpy/testing
-@dirrm ${PYSITELIB}/numpy/random/tests
-@dirrm ${PYSITELIB}/numpy/random
-@dirrm ${PYSITELIB}/numpy/oldnumeric
-@dirrm ${PYSITELIB}/numpy/numarray/numpy
-@dirrm ${PYSITELIB}/numpy/numarray
-@dirrm ${PYSITELIB}/numpy/ma/tests
-@dirrm ${PYSITELIB}/numpy/ma
-@dirrm ${PYSITELIB}/numpy/linalg/tests
-@dirrm ${PYSITELIB}/numpy/linalg
-@dirrm ${PYSITELIB}/numpy/lib/tests
-@dirrm ${PYSITELIB}/numpy/lib
-@dirrm ${PYSITELIB}/numpy/fft/tests
-@dirrm ${PYSITELIB}/numpy/fft
-@dirrm ${PYSITELIB}/numpy/f2py/src
-@dirrm ${PYSITELIB}/numpy/f2py/lib/src
-@dirrm ${PYSITELIB}/numpy/f2py/lib/parser
-@dirrm ${PYSITELIB}/numpy/f2py/lib/extgen
-@dirrm ${PYSITELIB}/numpy/f2py/lib
-@dirrm ${PYSITELIB}/numpy/f2py/docs/usersguide
-@dirrm ${PYSITELIB}/numpy/f2py/docs
-@dirrm ${PYSITELIB}/numpy/f2py
-@dirrm ${PYSITELIB}/numpy/doc/swig/test
-@dirrm ${PYSITELIB}/numpy/doc/swig/doc
-@dirrm ${PYSITELIB}/numpy/doc/swig
-@dirrm ${PYSITELIB}/numpy/doc/pyrex
-@dirrm ${PYSITELIB}/numpy/doc/newdtype_example/floatint
-@dirrm ${PYSITELIB}/numpy/doc/newdtype_example
-@dirrm ${PYSITELIB}/numpy/doc/html
-@dirrm ${PYSITELIB}/numpy/doc/cython
-@dirrm ${PYSITELIB}/numpy/doc
-@dirrm ${PYSITELIB}/numpy/distutils/tests/swig_ext/tests
-@dirrm ${PYSITELIB}/numpy/distutils/tests/swig_ext/src
-@dirrm ${PYSITELIB}/numpy/distutils/tests/swig_ext
-@dirrm ${PYSITELIB}/numpy/distutils/tests/pyrex_ext/tests
-@dirrm ${PYSITELIB}/numpy/distutils/tests/pyrex_ext
-@dirrm ${PYSITELIB}/numpy/distutils/tests/gen_ext/tests
-@dirrm ${PYSITELIB}/numpy/distutils/tests/gen_ext
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_f90_ext/tests
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_f90_ext/src
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_f90_ext/include
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_f90_ext
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_ext/tests
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_ext/src
-@dirrm ${PYSITELIB}/numpy/distutils/tests/f2py_ext
-@dirrm ${PYSITELIB}/numpy/distutils/tests
-@dirrm ${PYSITELIB}/numpy/distutils/fcompiler
-@dirrm ${PYSITELIB}/numpy/distutils/command
-@dirrm ${PYSITELIB}/numpy/distutils
-@dirrm ${PYSITELIB}/numpy/core/tests/data
-@dirrm ${PYSITELIB}/numpy/core/tests
-@dirrm ${PYSITELIB}/numpy/core/include/numpy
-@dirrm ${PYSITELIB}/numpy/core/include
-@dirrm ${PYSITELIB}/numpy/core
-@dirrm ${PYSITELIB}/numpy

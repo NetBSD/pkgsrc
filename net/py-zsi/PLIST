@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/18 23:22:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:40 joerg Exp $
 bin/wsdl2dispatch${PYVERSSUFFIX}
 bin/wsdl2py${PYVERSSUFFIX}
 ${PYSITELIB}/ZSI/ServiceContainer.py
@@ -124,7 +124,3 @@ ${PYSITELIB}/ZSI/wstools/c14n.pyo
 ${PYSITELIB}/ZSI/wstools/logging.py
 ${PYSITELIB}/ZSI/wstools/logging.pyc
 ${PYSITELIB}/ZSI/wstools/logging.pyo
-@dirrm ${PYSITELIB}/ZSI/wstools
-@dirrm ${PYSITELIB}/ZSI/twisted
-@dirrm ${PYSITELIB}/ZSI/generate
-@dirrm ${PYSITELIB}/ZSI

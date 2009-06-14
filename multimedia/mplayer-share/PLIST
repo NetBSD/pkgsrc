@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/12/21 11:31:14 tron Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:08:09 joerg Exp $
 man/man1/mplayer.1
 share/mplayer/DOCS/HTML/cs/advaudio.html
 share/mplayer/DOCS/HTML/cs/aspect.html
@@ -1189,41 +1189,3 @@ share/mplayer/DOCS/xml/zh_CN/mencoder.xml
 share/mplayer/DOCS/xml/zh_CN/radio.xml
 share/mplayer/codecs.conf
 share/mplayer/input.conf
-@dirrm share/mplayer/DOCS/xml/zh_CN
-@dirrm share/mplayer/DOCS/xml/xsl
-@dirrm share/mplayer/DOCS/xml/ru
-@dirrm share/mplayer/DOCS/xml/pl
-@dirrm share/mplayer/DOCS/xml/it
-@dirrm share/mplayer/DOCS/xml/hu
-@dirrm share/mplayer/DOCS/xml/fr
-@dirrm share/mplayer/DOCS/xml/es
-@dirrm share/mplayer/DOCS/xml/en
-@dirrm share/mplayer/DOCS/xml/de
-@dirrm share/mplayer/DOCS/xml/cs
-@dirrm share/mplayer/DOCS/xml
-@dirrm share/mplayer/DOCS/tech/realcodecs
-@dirrm share/mplayer/DOCS/tech/mirrors
-@dirrm share/mplayer/DOCS/tech
-@dirrm share/mplayer/DOCS/man/zh
-@dirrm share/mplayer/DOCS/man/ru
-@dirrm share/mplayer/DOCS/man/pl
-@dirrm share/mplayer/DOCS/man/it
-@dirrm share/mplayer/DOCS/man/hu
-@dirrm share/mplayer/DOCS/man/fr
-@dirrm share/mplayer/DOCS/man/es
-@dirrm share/mplayer/DOCS/man/en
-@dirrm share/mplayer/DOCS/man/de
-@dirrm share/mplayer/DOCS/man/cs
-@dirrm share/mplayer/DOCS/man
-@dirrm share/mplayer/DOCS/HTML/zh_CN
-@dirrm share/mplayer/DOCS/HTML/ru
-@dirrm share/mplayer/DOCS/HTML/pl
-@dirrm share/mplayer/DOCS/HTML/it
-@dirrm share/mplayer/DOCS/HTML/hu
-@dirrm share/mplayer/DOCS/HTML/fr
-@dirrm share/mplayer/DOCS/HTML/es
-@dirrm share/mplayer/DOCS/HTML/en
-@dirrm share/mplayer/DOCS/HTML/de
-@dirrm share/mplayer/DOCS/HTML/cs
-@dirrm share/mplayer/DOCS/HTML
-@dirrm share/mplayer/DOCS

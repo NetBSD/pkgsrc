@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/05/02 17:25:15 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:30 joerg Exp $
 bin/cue
 share/doc/cue/cue.hlp
 share/examples/cue/sample.cuerc
-@dirrm share/examples/cue
-@dirrm share/doc/cue

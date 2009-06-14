@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/12 16:54:45 hubertf Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:43 joerg Exp $
 man/man5/spop3d.conf.5
 man/man5/dot-spop3d.5
 man/man8/spop3d.8
@@ -12,5 +12,3 @@ share/doc/solid-pop3d/INSTALL
 share/doc/solid-pop3d/README
 share/doc/solid-pop3d/THANKS
 share/doc/solid-pop3d/VIRTUALS
-@dirrm share/examples/spop3d
-@dirrm share/doc/solid-pop3d

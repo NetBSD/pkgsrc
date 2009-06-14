@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/02/26 22:42:23 is Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:42 joerg Exp $
 share/examples/sr/README
 share/examples/sr/ccr2sr/1/Compiler.std
 share/examples/sr/ccr2sr/1/No_input.std
@@ -276,69 +276,3 @@ share/examples/sr/srwin/hello.sr
 share/examples/sr/srwin/mandel.sr
 share/examples/sr/srwin/qsort.sr
 share/examples/sr/srwin/winquad.sr
-@dirrm share/examples/sr/srwin
-@dirrm share/examples/sr/sranimator
-@dirrm share/examples/sr/other/wondrous
-@dirrm share/examples/sr/other/tty
-@dirrm share/examples/sr/other/remote
-@dirrm share/examples/sr/other/queens
-@dirrm share/examples/sr/other/probe
-@dirrm share/examples/sr/other/mbrot
-@dirrm share/examples/sr/other/heartbeat
-@dirrm share/examples/sr/other
-@dirrm share/examples/sr/m2sr/timer
-@dirrm share/examples/sr/m2sr/noproc
-@dirrm share/examples/sr/m2sr/nocv
-@dirrm share/examples/sr/m2sr/cscan2
-@dirrm share/examples/sr/m2sr/cscan1
-@dirrm share/examples/sr/m2sr/critsec
-@dirrm share/examples/sr/m2sr/bb2
-@dirrm share/examples/sr/m2sr/bb1
-@dirrm share/examples/sr/m2sr/barrier2
-@dirrm share/examples/sr/m2sr/barrier1
-@dirrm share/examples/sr/m2sr
-@dirrm share/examples/sr/csp2sr/wxe2
-@dirrm share/examples/sr/csp2sr/wxe1
-@dirrm share/examples/sr/csp2sr/sort2
-@dirrm share/examples/sr/csp2sr/sort1
-@dirrm share/examples/sr/csp2sr/sieve
-@dirrm share/examples/sr/csp2sr/pair3
-@dirrm share/examples/sr/csp2sr/pair2
-@dirrm share/examples/sr/csp2sr/pair1
-@dirrm share/examples/sr/csp2sr/nest
-@dirrm share/examples/sr/csp2sr/dp2
-@dirrm share/examples/sr/csp2sr/dp1
-@dirrm share/examples/sr/csp2sr/8
-@dirrm share/examples/sr/csp2sr/7
-@dirrm share/examples/sr/csp2sr/6
-@dirrm share/examples/sr/csp2sr/5
-@dirrm share/examples/sr/csp2sr/4
-@dirrm share/examples/sr/csp2sr/3
-@dirrm share/examples/sr/csp2sr/2
-@dirrm share/examples/sr/csp2sr/1
-@dirrm share/examples/sr/csp2sr
-@dirrm share/examples/sr/chap18
-@dirrm share/examples/sr/chap17
-@dirrm share/examples/sr/chap16
-@dirrm share/examples/sr/chap15
-@dirrm share/examples/sr/chap14
-@dirrm share/examples/sr/chap13
-@dirrm share/examples/sr/chap12
-@dirrm share/examples/sr/chap11
-@dirrm share/examples/sr/chap10
-@dirrm share/examples/sr/chap09
-@dirrm share/examples/sr/chap08
-@dirrm share/examples/sr/chap07
-@dirrm share/examples/sr/chap05
-@dirrm share/examples/sr/chap04
-@dirrm share/examples/sr/chap01
-@dirrm share/examples/sr/ccr2sr/twod
-@dirrm share/examples/sr/ccr2sr/rw
-@dirrm share/examples/sr/ccr2sr/oned
-@dirrm share/examples/sr/ccr2sr/5
-@dirrm share/examples/sr/ccr2sr/4
-@dirrm share/examples/sr/ccr2sr/3
-@dirrm share/examples/sr/ccr2sr/2
-@dirrm share/examples/sr/ccr2sr/1
-@dirrm share/examples/sr/ccr2sr
-@dirrm share/examples/sr
