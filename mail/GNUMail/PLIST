@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:26 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:45:10 joerg Exp $
 bin/GNUMail
 include/GNUMail
 lib/GNUstep/Applications/GNUMail.app/GNUMail
@@ -217,4 +217,4 @@ share/GNUstep/Library/GNUMail/Viewing.prefs/Resources/Info-gnustep.plist
 share/GNUstep/Library/GNUMail/Viewing.prefs/Resources/viewing.tiff
 share/GNUstep/Library/GNUMail/Viewing.prefs/Viewing
 share/GNUstep/Library/GNUMail/Viewing.prefs/stamp.make
-@exec ${MKDIR} %D/lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
+@pkgdir lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
