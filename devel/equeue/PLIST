@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/11 15:42:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:42 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/shell
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/equeue
 lib/ocaml/site-lib/equeue/META
@@ -29,5 +29,3 @@ lib/ocaml/site-lib/shell/unix_exts.cmi
 lib/ocaml/site-lib/shell/unix_exts.mli
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/equeue
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/shell
-@dirrm lib/ocaml/site-lib/shell
-@dirrm lib/ocaml/site-lib/equeue

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/04 17:52:23 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:07 joerg Exp $
 ${PERL5_SUB_INSTALLARCHLIB}/Cvs/Repository/DeltaCache.pm
 ${PERL5_SUB_INSTALLARCHLIB}/Cvs/Repository/Delta.pm
 ${PERL5_SUB_INSTALLARCHLIB}/Cvs/Repository/Exception.pm
@@ -10,6 +10,3 @@ share/doc/refinecvs/Changes
 share/doc/refinecvs/README
 share/doc/refinecvs/TODO
 share/doc/refinecvs/LICENSE
-@dirrm ${PERL5_SUB_INSTALLARCHLIB}/Cvs/Repository
-@dirrm ${PERL5_SUB_INSTALLARCHLIB}/Cvs
-@dirrm share/doc/refinecvs

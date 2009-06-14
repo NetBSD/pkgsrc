@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/03/06 07:53:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:58 joerg Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -476,30 +476,3 @@ man/man1/hg.1
 man/man5/hgignore.5
 man/man5/hgrc.5
 share/doc/mercurial/README
-@dirrm share/doc/mercurial
-@dirrm ${PYSITELIB}/mercurial/templates/static
-@dirrm ${PYSITELIB}/mercurial/templates/spartan
-@dirrm ${PYSITELIB}/mercurial/templates/rss
-@dirrm ${PYSITELIB}/mercurial/templates/raw
-@dirrm ${PYSITELIB}/mercurial/templates/paper
-@dirrm ${PYSITELIB}/mercurial/templates/monoblue
-@dirrm ${PYSITELIB}/mercurial/templates/gitweb
-@dirrm ${PYSITELIB}/mercurial/templates/coal
-@dirrm ${PYSITELIB}/mercurial/templates/atom
-@dirrm ${PYSITELIB}/mercurial/templates
-@dirrm ${PYSITELIB}/mercurial/locale/zh/LC_MESSAGES
-@dirrm ${PYSITELIB}/mercurial/locale/zh
-@dirrm ${PYSITELIB}/mercurial/locale/ja/LC_MESSAGES
-@dirrm ${PYSITELIB}/mercurial/locale/ja
-@dirrm ${PYSITELIB}/mercurial/locale/it/LC_MESSAGES
-@dirrm ${PYSITELIB}/mercurial/locale/it
-@dirrm ${PYSITELIB}/mercurial/locale/da/LC_MESSAGES
-@dirrm ${PYSITELIB}/mercurial/locale/da
-@dirrm ${PYSITELIB}/mercurial/locale
-@dirrm ${PYSITELIB}/mercurial/i18n
-@dirrm ${PYSITELIB}/mercurial/hgweb
-@dirrm ${PYSITELIB}/mercurial
-@dirrm ${PYSITELIB}/hgext/zeroconf
-@dirrm ${PYSITELIB}/hgext/highlight
-@dirrm ${PYSITELIB}/hgext/convert
-@dirrm ${PYSITELIB}/hgext

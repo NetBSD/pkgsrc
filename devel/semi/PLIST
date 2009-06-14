@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:49:14 joerg Exp $
 ${EMACS_INFOPREFIX}/mime-ui-en.info
 ${EMACS_INFOPREFIX}/mime-ui-ja.info
 ${FOR_xemacs}${EMACS_LISPPREFIX}/semi/auto-autoloads.el
@@ -47,4 +47,3 @@ ${EMACS_LISPPREFIX}/semi/signature.el
 ${EMACS_LISPPREFIX}/semi/signature.elc
 ${EMACS_LISPPREFIX}/semi/smime.el
 ${EMACS_LISPPREFIX}/semi/smime.elc
-@dirrm ${EMACS_LISPPREFIX}/semi

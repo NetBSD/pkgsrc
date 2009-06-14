@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2006/11/14 14:14:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:46 joerg Exp $
 bin/global
 bin/gozilla
 bin/gtags
@@ -49,5 +49,3 @@ share/gtags/icons/text.png
 share/gtags/icons/top.png
 share/gtags/nvi-1.79-gtags.diff
 share/gtags/style.css
-@dirrm share/gtags/icons
-@dirrm share/gtags

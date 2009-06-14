@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/02/03 20:38:01 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:54:11 joerg Exp $
 lib/X11/fonts/TTF/DejaVuSans-Bold.ttf
 lib/X11/fonts/TTF/DejaVuSans-BoldOblique.ttf
 lib/X11/fonts/TTF/DejaVuSans-ExtraLight.ttf
@@ -31,5 +31,3 @@ share/examples/dejavu-ttf/fontconfig-conf.d/20-unhint-small-dejavu-serif.conf
 share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans-mono.conf
 share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-sans.conf
 share/examples/dejavu-ttf/fontconfig-conf.d/57-dejavu-serif.conf
-@dirrm share/examples/dejavu-ttf/fontconfig-conf.d
-@dirrm share/doc/dejavu-ttf

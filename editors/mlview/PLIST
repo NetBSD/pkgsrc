@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/03/24 16:22:57 abs Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:24 joerg Exp $
 bin/mlview
 bin/mlviewctl
 lib/libmlview.la
@@ -63,6 +63,3 @@ share/mlview/xml-root.png
 share/mlview/xml-text-node.png
 share/pixmaps/mlview-app-icon.png
 share/pixmaps/mlview-app-icon.xpm
-@dirrm share/mlview
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

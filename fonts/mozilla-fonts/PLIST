@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/22 21:53:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:54:15 joerg Exp $
 lib/X11/fonts/Mozilla/cour1.pcf.gz
 lib/X11/fonts/Mozilla/cour2.pcf.gz
 lib/X11/fonts/Mozilla/cour3.pcf.gz
@@ -86,4 +86,3 @@ lib/X11/fonts/Mozilla/timesi5.pcf.gz
 lib/X11/fonts/Mozilla/timesi6.pcf.gz
 lib/X11/fonts/Mozilla/timesi7.pcf.gz
 share/doc/mozilla-fonts/README
-@dirrm share/doc/mozilla-fonts

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/06/19 22:33:25 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
 lib/libsvnjavahl-1.la
 lib/svn-javahl/svn-javahl.jar
 @exec ${MKDIR} %D/lib/svn-javahl/include
-@dirrm lib/svn-javahl/include
-@dirrm lib/svn-javahl

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/03 18:46:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:08 joerg Exp $
 bin/snes9x-gtk
 share/applications/snes9x.desktop
 share/pixmaps/snes9x.svg
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

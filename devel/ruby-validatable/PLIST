@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:12 joerg Exp $
 ${GEM_HOME}/cache/validatable-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/lib/child_validation.rb
@@ -44,9 +44,3 @@ ${GEM_LIBDIR}/test/unit/validates_presence_of_test.rb
 ${GEM_LIBDIR}/test/unit/validates_true_for_test.rb
 ${GEM_LIBDIR}/test/unit/validation_base_test.rb
 ${GEM_HOME}/specifications/validatable-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/unit
-@dirrm ${GEM_LIBDIR}/test/functional
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/validations
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

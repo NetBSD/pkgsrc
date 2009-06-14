@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/19 01:30:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:16 joerg Exp $
 share/fonts/watanabe_font/README
 share/fonts/watanabe_font/dviprt.vfn
 share/fonts/watanabe_font/mincho.vf1
 share/fonts/watanabe_font/mincho.vf2
-@dirrm share/fonts/watanabe_font
 @unexec ${RMDIR} %D/share/fonts 2> /dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 13:07:14 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:57 joerg Exp $
 bin/lincvs
 libexec/rshwrapper
 share/doc/lincvs/FAM-HOWTO.txt
@@ -31,9 +31,3 @@ share/lincvs/messages/it.qm
 share/lincvs/messages/ja.qm
 share/lincvs/messages/ru.qm
 share/lincvs/messages/vi.qm
-@dirrm share/lincvs/messages
-@dirrm share/lincvs
-@dirrm share/doc/lincvs/ru
-@dirrm share/doc/lincvs/it
-@dirrm share/doc/lincvs/de
-@dirrm share/doc/lincvs

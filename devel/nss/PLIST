@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/21 23:23:08 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:00 joerg Exp $
 include/nss/dbm/cdefs.h
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
@@ -100,7 +100,3 @@ lib/nss/libsmime3.${SO_SUFFIX}
 lib/nss/libsoftokn3.${SO_SUFFIX}
 lib/nss/libssl3.${SO_SUFFIX}
 lib/pkgconfig/nss.pc
-@dirrm include/nss/nss
-@dirrm include/nss/dbm
-@dirrm include/nss
-@dirrm lib/nss
