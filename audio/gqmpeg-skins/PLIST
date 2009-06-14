@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/12 22:52:52 tron Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:10 joerg Exp $
 share/gqmpeg/skins/2black/b-conf.png
 share/gqmpeg/skins/2black/b-min.png
 share/gqmpeg/skins/2black/b-next.png
@@ -1873,83 +1873,3 @@ share/gqmpeg/skins/yelojckt/stopbtn.png
 share/gqmpeg/skins/yelojckt/voldn.png
 share/gqmpeg/skins/yelojckt/volume.png
 share/gqmpeg/skins/yelojckt/volup.png
-@dirrm share/gqmpeg/skins/yelojckt
-@dirrm share/gqmpeg/skins/ye-olde
-@dirrm share/gqmpeg/skins/wmcool/.xvpics
-@dirrm share/gqmpeg/skins/wmcool
-@dirrm share/gqmpeg/skins/wharf
-@dirrm share/gqmpeg/skins/ufo
-@dirrm share/gqmpeg/skins/tildouf-skins
-@dirrm share/gqmpeg/skins/tauceti
-@dirrm share/gqmpeg/skins/tattered
-@dirrm share/gqmpeg/skins/swish-short
-@dirrm share/gqmpeg/skins/swish-flat
-@dirrm share/gqmpeg/skins/spiral
-@dirrm share/gqmpeg/skins/slate-alpha
-@dirrm share/gqmpeg/skins/simplistic
-@dirrm share/gqmpeg/skins/silver
-@dirrm share/gqmpeg/skins/shiny-blue
-@dirrm share/gqmpeg/skins/sg
-@dirrm share/gqmpeg/skins/sand
-@dirrm share/gqmpeg/skins/purple-preset
-@dirrm share/gqmpeg/skins/pro-player2
-@dirrm share/gqmpeg/skins/pro-player
-@dirrm share/gqmpeg/skins/pda
-@dirrm share/gqmpeg/skins/paper
-@dirrm share/gqmpeg/skins/osk-ultrabar-340x10
-@dirrm share/gqmpeg/skins/osk-ultrabar-152x20-b
-@dirrm share/gqmpeg/skins/osk-ultrabar-152x20-a
-@dirrm share/gqmpeg/skins/osk-dock-64x64-tile1
-@dirrm share/gqmpeg/skins/osk-dock-64x64-gray
-@dirrm share/gqmpeg/skins/osk-deck-279x89-gray
-@dirrm share/gqmpeg/skins/osk-deck-118x44-gray
-@dirrm share/gqmpeg/skins/odometer
-@dirrm share/gqmpeg/skins/module
-@dirrm share/gqmpeg/skins/minialum
-@dirrm share/gqmpeg/skins/line
-@dirrm share/gqmpeg/skins/kpanel-normal-horizontal
-@dirrm share/gqmpeg/skins/kpanel-dock
-@dirrm share/gqmpeg/skins/k9
-@dirrm share/gqmpeg/skins/information
-@dirrm share/gqmpeg/skins/info-mod2
-@dirrm share/gqmpeg/skins/impact
-@dirrm share/gqmpeg/skins/iMpeg
-@dirrm share/gqmpeg/skins/hfcool2
-@dirrm share/gqmpeg/skins/helix
-@dirrm share/gqmpeg/skins/grey
-@dirrm share/gqmpeg/skins/gray
-@dirrm share/gqmpeg/skins/gothic
-@dirrm share/gqmpeg/skins/freeamp
-@dirrm share/gqmpeg/skins/fortissimo_trans
-@dirrm share/gqmpeg/skins/fortissimo_green
-@dirrm share/gqmpeg/skins/fortissimo_blue
-@dirrm share/gqmpeg/skins/fortissimo_black
-@dirrm share/gqmpeg/skins/fortissimo.2.0
-@dirrm share/gqmpeg/skins/example3
-@dirrm share/gqmpeg/skins/example2
-@dirrm share/gqmpeg/skins/example-d4
-@dirrm share/gqmpeg/skins/example
-@dirrm share/gqmpeg/skins/e-theme
-@dirrm share/gqmpeg/skins/cool
-@dirrm share/gqmpeg/skins/clean
-@dirrm share/gqmpeg/skins/circle
-@dirrm share/gqmpeg/skins/car-preset
-@dirrm share/gqmpeg/skins/bubble-mim
-@dirrm share/gqmpeg/skins/bubble
-@dirrm share/gqmpeg/skins/blue-information
-@dirrm share/gqmpeg/skins/blackboard
-@dirrm share/gqmpeg/skins/black
-@dirrm share/gqmpeg/skins/bakedbabies
-@dirrm share/gqmpeg/skins/aluminotic
-@dirrm share/gqmpeg/skins/MoonIce
-@dirrm share/gqmpeg/skins/Gqofol
-@dirrm share/gqmpeg/skins/GTK
-@dirrm share/gqmpeg/skins/FlatLine
-@dirrm share/gqmpeg/skins/CoronerQ
-@dirrm share/gqmpeg/skins/BlueSteel
-@dirrm share/gqmpeg/skins/Agressive
-@dirrm share/gqmpeg/skins/Aggressive.blue
-@dirrm share/gqmpeg/skins/AZD
-@dirrm share/gqmpeg/skins/4thTry/xcf
-@dirrm share/gqmpeg/skins/4thTry
-@dirrm share/gqmpeg/skins/2black

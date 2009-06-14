@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/07/28 07:58:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:32:16 joerg Exp $
 include/vorbis/codec.h
 include/vorbis/vorbisenc.h
 include/vorbis/vorbisfile.h
@@ -112,7 +112,3 @@ share/doc/${PKGNAME}/white-ogg.png
 share/doc/${PKGNAME}/white-xifish.png
 share/doc/${PKGNAME}/window1.png
 share/doc/${PKGNAME}/window2.png
-@dirrm share/doc/${PKGNAME}/vorbisfile
-@dirrm share/doc/${PKGNAME}/vorbisenc
-@dirrm share/doc/${PKGNAME}
-@dirrm include/vorbis

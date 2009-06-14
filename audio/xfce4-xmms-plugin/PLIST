@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/04/12 09:55:08 martti Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:24 joerg Exp $
 libexec/xfce4/panel-plugins/xfce4-xmms-plugin
 share/locale/ca/LC_MESSAGES/xfce4-xmms-plugin.mo
 share/locale/cs/LC_MESSAGES/xfce4-xmms-plugin.mo
@@ -19,4 +19,3 @@ share/xfce4/xfce4-xmms-plugin/xmms-plugin-pause.png
 share/xfce4/xfce4-xmms-plugin/xmms-plugin-play.png
 share/xfce4/xfce4-xmms-plugin/xmms-plugin-prev.png
 share/xfce4/xfce4-xmms-plugin/xmms-plugin-stop.png
-@dirrm share/xfce4/xfce4-xmms-plugin

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/27 12:21:01 reed Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:37:48 joerg Exp $
 lib/pidgin/pidgin-otr.la
 share/doc/pidgin-otr/README
-@dirrm share/doc/pidgin-otr

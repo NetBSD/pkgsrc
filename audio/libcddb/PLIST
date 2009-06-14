@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/08 08:41:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:32:14 joerg Exp $
 bin/cddb_query
 include/cddb/cddb.h
 include/cddb/cddb_cmd.h
@@ -12,4 +12,3 @@ include/cddb/cddb_track.h
 include/cddb/version.h
 lib/libcddb.la
 lib/pkgconfig/libcddb.pc
-@dirrm include/cddb

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/01 16:27:47 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:23 joerg Exp $
 bin/tunapie
 man/man1/tunapie.1
 share/tunapie/fave.png
@@ -29,4 +29,3 @@ share/tunapie/tunapie2_main.py
 share/tunapie/tunapie2_main.pyc
 share/tunapie/tuner.py
 share/tunapie/tuner.pyc
-@dirrm share/tunapie

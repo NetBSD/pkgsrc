@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.netbsd-i386,v 1.1 2007/08/22 16:43:35 jlam Exp $
+@comment $NetBSD: PLIST.netbsd-i386,v 1.2 2009/06/14 17:28:17 joerg Exp $
 bin/rar
 share/doc/rar/Internet.Txt
 share/doc/rar/License.Txt
@@ -8,5 +8,3 @@ share/doc/rar/TechNote.Txt
 share/rar/default.sfx
 share/rar/dos.sfx
 share/rar/rarfiles.lst
-@dirrm share/rar
-@dirrm share/doc/rar

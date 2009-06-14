@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/05/21 16:08:32 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:37:45 joerg Exp $
 man/man8/icbd.8
 man/man8/icbdb.8
 sbin/icbd
@@ -8,4 +8,3 @@ share/examples/i2cbd/icbd_help
 share/examples/i2cbd/motd
 share/examples/i2cbd/news.1
 share/examples/rc.d/icbd
-@dirrm share/examples/i2cbd

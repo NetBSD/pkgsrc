@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/10 16:02:26 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:01 joerg Exp $
 bin/adplugdb
 include/adplug/a2m.h
 include/adplug/adl.h
@@ -58,4 +58,3 @@ info/libadplug.info
 lib/libadplug.la
 lib/pkgconfig/adplug.pc
 man/man1/adplugdb.1
-@dirrm include/adplug

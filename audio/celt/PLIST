@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/03 00:44:49 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:03 joerg Exp $
 bin/celtdec
 bin/celtenc
 include/celt/celt.h
@@ -6,4 +6,3 @@ include/celt/celt_header.h
 include/celt/celt_types.h
 lib/libcelt.la
 lib/pkgconfig/celt.pc
-@dirrm include/celt

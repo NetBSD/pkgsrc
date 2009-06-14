@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/01 08:24:13 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:05 joerg Exp $
 bin/easyh10
 man/man1/easyh10.1
 share/doc/easyh10/AUTHORS
@@ -23,6 +23,3 @@ share/easyh10/model/berlin.de.fmr
 share/easyh10/model/default.fmr
 share/easyh10/model/dublin.ie.fmr
 share/easyh10/model/tokyo.jp.fmr
-@dirrm share/easyh10/model
-@dirrm share/easyh10
-@dirrm share/doc/easyh10

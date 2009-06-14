@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/23 00:18:41 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
 bin/rtunes
 lib/librtunes.a
 man/man1/rtunes.1
@@ -6,5 +6,3 @@ man/man5/rtunes.conf.5
 share/doc/rtunes/README
 share/examples/rtunes/mplayer.diff
 share/examples/rtunes/rtunes.conf
-@dirrm share/examples/rtunes
-@dirrm share/doc/rtunes

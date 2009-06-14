@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/13 02:32:45 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:20 joerg Exp $
 bin/mb-submit-disc
 ${PYSITELIB}/musicbrainz2/__init__.py
 ${PYSITELIB}/musicbrainz2/__init__.pyc
@@ -33,5 +33,3 @@ ${PYSITELIB}/musicbrainz2/webservice.pyo
 ${PYSITELIB}/musicbrainz2/wsxml.py
 ${PYSITELIB}/musicbrainz2/wsxml.pyc
 ${PYSITELIB}/musicbrainz2/wsxml.pyo
-@dirrm ${PYSITELIB}/musicbrainz2/data
-@dirrm ${PYSITELIB}/musicbrainz2

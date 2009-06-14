@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/05 21:02:45 rillig Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:32:08 joerg Exp $
 bin/flac
 bin/metaflac
 include/FLAC++/all.h
@@ -297,11 +297,3 @@ share/doc/${PKGNAME}/html/ru/id.html
 share/doc/${PKGNAME}/html/ru/index.html
 share/doc/${PKGNAME}/html/ru/links.html
 share/doc/${PKGNAME}/html/ru/news.html
-@dirrm share/doc/${PKGNAME}/html/ru
-@dirrm share/doc/${PKGNAME}/html/images/hw
-@dirrm share/doc/${PKGNAME}/html/images
-@dirrm share/doc/${PKGNAME}/html/api
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@dirrm include/FLAC++
-@dirrm include/FLAC

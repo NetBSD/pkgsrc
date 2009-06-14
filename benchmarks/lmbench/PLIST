@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/31 18:04:08 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:33:11 joerg Exp $
 bin/run-lmbench
 libexec/lmbench/bw_file_rd
 libexec/lmbench/bw_mem
@@ -118,7 +118,3 @@ share/lmbench/webpage-lm/gifs/sgi_logo.gif
 share/lmbench/webpage-lm/gifs/snow-bg2.jpg
 share/lmbench/webpage-lm/gifs/spam-not.gif
 share/lmbench/webpage-lm/pictures/me-small.jpg
-@dirrm share/lmbench/webpage-lm/gifs
-@dirrm share/lmbench/webpage-lm/pictures
-@dirrm share/lmbench/webpage-lm
-@dirrm libexec/lmbench

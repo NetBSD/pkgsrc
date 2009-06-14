@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:18 joerg Exp $
 bin/mocp
 ${PLIST.flac}lib/moc/decoder_plugins/libflac_decoder.la
 lib/moc/decoder_plugins/libmp3_decoder.la
@@ -19,8 +19,3 @@ share/moc/themes/nightly_theme
 share/moc/themes/red_theme
 share/moc/themes/transparent-background
 share/moc/themes/yellow_red_theme
-@dirrm share/moc/themes
-@dirrm share/moc
-@dirrm share/doc/moc
-@dirrm lib/moc/decoder_plugins
-@dirrm lib/moc
