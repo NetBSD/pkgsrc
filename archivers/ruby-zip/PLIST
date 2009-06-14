@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:28:17 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:11 joerg Exp $
 ${GEM_HOME}/cache/rubyzip-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/NEWS
@@ -34,4 +34,3 @@ ${GEM_LIBDIR}/test/zipfilesystemtest.rb
 ${GEM_LIBDIR}/test/ziprequiretest.rb
 ${GEM_LIBDIR}/test/ziptest.rb
 ${GEM_HOME}/specifications/rubyzip-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}
