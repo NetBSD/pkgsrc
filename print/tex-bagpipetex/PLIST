@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/26 20:06:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:00 joerg Exp $
 share/texmf/doc/bagpipetex/README
 share/texmf/doc/bagpipetex/bagdoc.dvi
 share/texmf/doc/bagpipetex/bagdoc.ps
@@ -22,7 +22,3 @@ share/texmf/fonts/tfm/bagpipetex/musix09.tfm
 share/texmf/tex/latex/bagpipetex/bagpipe.ini
 share/texmf/tex/latex/bagpipetex/bagpipex.ini
 share/texmf/tex/latex/bagpipetex/bagpipe.tex
-@dirrm share/texmf/fonts/tfm/bagpipetex
-@dirrm share/texmf/fonts/source/bagpipetex
-@dirrm share/texmf/doc/bagpipetex/examples
-@dirrm share/texmf/doc/bagpipetex

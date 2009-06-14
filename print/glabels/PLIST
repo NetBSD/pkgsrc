@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/02/11 17:42:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:11:55 joerg Exp $
 bin/glabels
 bin/glabels-batch
 include/libglabels/category.h
@@ -102,21 +102,3 @@ share/pixmaps/glabels/ex-rect-size.png
 share/pixmaps/glabels/ex-round-size.png
 share/pixmaps/glabels/glabels-about-logo.png
 share/pixmaps/glabels/glabels-splash.png
-@dirrm share/pixmaps/glabels
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/glabels
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/gtk-doc/html/libglabels
-@dirrm share/gnome/help/glabels/C/figures
-@dirrm share/gnome/help/glabels/C
-@dirrm share/gnome/help/glabels
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/glabels/templates
-@dirrm share/glabels/glade
-@dirrm share/glabels/dtd
-@dirrm share/glabels
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
-@dirrm include/libglabels

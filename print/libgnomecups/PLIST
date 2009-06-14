@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/07 11:12:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:11:57 joerg Exp $
 include/libgnomecups-1/libgnomecups/gnome-cups-init.h
 include/libgnomecups-1/libgnomecups/gnome-cups-printer.h
 include/libgnomecups-1/libgnomecups/gnome-cups-queue.h
@@ -52,5 +52,3 @@ share/locale/wa/LC_MESSAGES/libgnomecups.mo
 share/locale/zh_CN/LC_MESSAGES/libgnomecups.mo
 share/locale/zh_HK/LC_MESSAGES/libgnomecups.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomecups.mo
-@dirrm include/libgnomecups-1/libgnomecups
-@dirrm include/libgnomecups-1

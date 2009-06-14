@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/08 15:04:23 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:37 joerg Exp $
 print-plist/foo
-@dirrm print-plist
