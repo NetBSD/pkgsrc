@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:48:10 joerg Exp $
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/JavaSim.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/arrays.html
 share/doc/kde/HTML/en/kdevelop/reference/C/CONCEPT/assignment.html
@@ -1031,10 +1031,10 @@ share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/whiteball.gif
 share/doc/kde/HTML/en/kdevelop/reference/GRAPHICS/yellowball.gif
 share/kde/apps/kdevdocumentation/tocs/c++_reference.toc
 share/kde/apps/kdevdocumentation/tocs/c_reference.toc
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/X_EXAMPLES
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/TECHNIC
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/PROBLEMS
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/MISC
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/LIBRARIES
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/GDB
+@pkgdir share/doc/kde/HTML/en/kdevelop/reference/CPLUSPLUS/FUNCTIONS

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:34 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:48:08 joerg Exp $
 bin/atf-check
 bin/atf-compile
 bin/atf-config
@@ -326,4 +326,3 @@ tests/atf/tools/t_atf_config
 tests/atf/tools/t_atf_exec
 tests/atf/tools/t_atf_report
 tests/atf/tools/t_atf_run
-@unexec ${RMDIR} %D/share/xsl >/dev/null 2>&1 || ${TRUE}

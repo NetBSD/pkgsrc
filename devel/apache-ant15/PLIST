@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:08 joerg Exp $
 bin/ant
 bin/antRun
 lib/java/ant/ant.jar
@@ -1039,5 +1039,3 @@ share/doc/java/ant/projects/antidote/index.html
 share/doc/java/ant/projects/antidote/module.html
 share/doc/java/ant/projects/index.html
 share/doc/java/ant/resources.html
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/java 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:48:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:48:11 joerg Exp $
 bin/Calculator
 bin/CurrencyConverter
 bin/GSTest
@@ -128,4 +128,3 @@ lib/GNUstep/Applications/md5Digest.app/md5Digest
 lib/GNUstep/Applications/md5Digest.app/stamp.make
 lib/GNUstep/Services/example.service/Resources/Info-gnustep.plist
 lib/GNUstep/Services/example.service/example
-@unexec ${RMDIR} -p %D/lib/GNUstep/ApplicationSupport 2>/dev/null || ${TRUE}

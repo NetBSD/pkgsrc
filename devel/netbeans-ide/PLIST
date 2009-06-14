@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:14 joerg Exp $
 bin/netbeans
 share/doc/html/netbeans-ide/CHANGES.html
 share/doc/html/netbeans-ide/CREDITS.html
@@ -620,7 +620,7 @@ share/netbeans-ide/update_tracking/org-openide-io.xml
 share/netbeans-ide/update_tracking/org-openide-src.xml
 share/netbeans-ide/update_tracking/org-openide.xml
 share/netbeans-ide/update_tracking/org-openidex-util.xml
-@exec ${MKDIR} %D/share/netbeans-ide/tomcat406/server/classes
-@exec ${MKDIR} %D/share/netbeans-ide/tomcat406/classes
-@exec ${MKDIR} %D/share/netbeans-ide/modules/ext/locale
-@exec ${MKDIR} %D/share/netbeans-ide/lib/patches
+@pkgdir share/netbeans-ide/tomcat406/server/classes
+@pkgdir share/netbeans-ide/tomcat406/classes
+@pkgdir share/netbeans-ide/modules/ext/locale
+@pkgdir share/netbeans-ide/lib/patches

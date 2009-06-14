@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/01 07:16:24 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:10 joerg Exp $
 bin/doxymacs_parser
 ${EMACS_LISPPREFIX}/doxymacs.el
 ${EMACS_LISPPREFIX}/doxymacs.elc
 ${EMACS_LISPPREFIX}/xml-parse.el
 ${EMACS_LISPPREFIX}/xml-parse.elc
-@unexec ${RMDIR} %D/${EMACS_LISPPREFIX} 2>/dev/null || ${TRUE}

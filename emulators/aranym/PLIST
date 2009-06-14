@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:54:52 joerg Exp $
 bin/aranym
 man/man1/aranym-jit.1
 man/man1/aranym-mmu.1
@@ -33,6 +33,6 @@ share/doc/aranym/emutos/changelog.txt
 share/doc/aranym/emutos/license.txt
 share/doc/aranym/emutos/readme.txt
 share/doc/aranym/emutos/status.txt
-@exec ${MKDIR} %D/share/aranym/atari/nfosmesa
-@exec ${MKDIR} %D/share/aranym/atari/nfjpeg
-@exec ${MKDIR} %D/share/aranym/atari/nfcdrom
+@pkgdir share/aranym/atari/nfosmesa
+@pkgdir share/aranym/atari/nfjpeg
+@pkgdir share/aranym/atari/nfcdrom

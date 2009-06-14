@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:15 joerg Exp $
 ${GEM_HOME}/cache/rubysdl-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/MANIFEST
@@ -103,4 +103,3 @@ ${GEM_LIBDIR}/sample/testgl.rb
 ${GEM_LIBDIR}/sample/testsprite.rb
 ${GEM_LIBDIR}/sample/transformblit.rb
 ${GEM_HOME}/specifications/rubysdl-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/rubysdl-${PKGVERSION}

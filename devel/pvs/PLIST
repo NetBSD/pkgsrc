@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:48:14 joerg Exp $
 bin/pvs
 pvs/README
 pvs/bin/pvs-platform
@@ -520,4 +520,4 @@ pvs/pvs.sty
 pvs/wish/gray.xbm
 pvs/wish/pvs-support.tcl
 pvs/wish/sequent.xbm
-@exec ${MKDIR} %D/pvs/Examples
+@pkgdir pvs/Examples

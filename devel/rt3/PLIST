@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:49:08 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:48:15 joerg Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -1075,4 +1075,4 @@ share/rt3/html/autohandler
 share/rt3/html/dhandler
 share/rt3/html/index.html
 share/rt3/html/l
-@exec ${MKDIR} %D/share/rt3/html/Callbacks
+@pkgdir share/rt3/html/Callbacks

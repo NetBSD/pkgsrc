@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:54:52 joerg Exp $
 bin/raine
 share/applications/raine.desktop
 share/pixmaps/raine.png
@@ -28,6 +28,6 @@ share/raine/languages/template.cfg
 share/raine/languages/turkish.cfg
 share/raine/raine
 share/raine/raine.dat
-@exec ${MKDIR} %D/share/raine/roms
-@exec ${MKDIR} %D/share/raine/emudx
-@exec ${MKDIR} %D/share/raine/artwork
+@pkgdir share/raine/roms
+@pkgdir share/raine/emudx
+@pkgdir share/raine/artwork

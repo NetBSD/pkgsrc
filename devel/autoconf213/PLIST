@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/30 03:44:42 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:48:09 joerg Exp $
 bin/autoconf-2.13
 bin/autoheader-2.13
 bin/autoreconf-2.13
@@ -21,4 +21,3 @@ share/autoconf/autoheader.m4
 share/autoconf/autoheader.m4f
 share/autoconf/config.guess
 share/autoconf/config.sub
-@unexec ${RMDIR} %D/share/autoconf 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:50:27 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:53:01 joerg Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -1254,6 +1254,6 @@ man/man1/gnuserv.1
 man/man1/xemacs-ctags.1
 man/man1/xemacs-etags.1
 man/man1/xemacs.1
-@exec ${MKDIR} %D/lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
-@exec ${MKDIR} %D/lib/xemacs/site-modules
-@exec ${MKDIR} %D/lib/xemacs/site-lisp
+@pkgdir lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
+@pkgdir lib/xemacs/site-modules
+@pkgdir lib/xemacs/site-lisp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2009/06/14 17:50:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.41 2009/06/14 18:53:00 joerg Exp $
 bin/fig2ps
 bin/texmacs
 include/TeXmacs.h
@@ -2290,21 +2290,21 @@ share/TeXmacs/texts/test/fonts-2.tm
 share/TeXmacs/texts/test/fonts-3.tm
 share/TeXmacs/texts/test/fonts.tm
 share/TeXmacs/texts/test/overview.tm
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/world/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/substitute/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/secure/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/prompt/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/pnambic/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/nested/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/mutator/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/multiline/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/minimal/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/menus/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/markup/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/input/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/handler/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/formula/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/dynlink/lib
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/dynlink/bin
-@exec ${MKDIR} %D/share/TeXmacs/examples/plugins/complete/bin
-@exec ${MKDIR} %D/libexec/TeXmacs/lib
+@pkgdir share/TeXmacs/examples/plugins/world/bin
+@pkgdir share/TeXmacs/examples/plugins/substitute/bin
+@pkgdir share/TeXmacs/examples/plugins/secure/bin
+@pkgdir share/TeXmacs/examples/plugins/prompt/bin
+@pkgdir share/TeXmacs/examples/plugins/pnambic/bin
+@pkgdir share/TeXmacs/examples/plugins/nested/bin
+@pkgdir share/TeXmacs/examples/plugins/mutator/bin
+@pkgdir share/TeXmacs/examples/plugins/multiline/bin
+@pkgdir share/TeXmacs/examples/plugins/minimal/bin
+@pkgdir share/TeXmacs/examples/plugins/menus/bin
+@pkgdir share/TeXmacs/examples/plugins/markup/bin
+@pkgdir share/TeXmacs/examples/plugins/input/bin
+@pkgdir share/TeXmacs/examples/plugins/handler/bin
+@pkgdir share/TeXmacs/examples/plugins/formula/bin
+@pkgdir share/TeXmacs/examples/plugins/dynlink/lib
+@pkgdir share/TeXmacs/examples/plugins/dynlink/bin
+@pkgdir share/TeXmacs/examples/plugins/complete/bin
+@pkgdir libexec/TeXmacs/lib

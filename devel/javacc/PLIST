@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:48:12 joerg Exp $
 bin/javacc
 bin/jjdoc
 bin/jjtree
@@ -149,4 +149,3 @@ share/examples/javacc/VTransformer/Main.java
 share/examples/javacc/VTransformer/README
 share/examples/javacc/VTransformer/SimpleNode.java
 share/examples/javacc/VTransformer/UnparseVisitor.java
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:49:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:48:15 joerg Exp $
 bin/rp2gen
 include/rpc2/errors.h
 include/rpc2/multi.h
@@ -10,4 +10,4 @@ include/rpc2/sftp.h
 lib/librpc2.la
 lib/libse.la
 lib/pkgconfig/rpc2.pc
-@exec ${MKDIR} %D/share/rpc2
+@pkgdir share/rpc2

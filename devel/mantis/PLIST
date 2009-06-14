@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:48:13 joerg Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
@@ -701,4 +701,3 @@ share/mantis/view_all_set.php
 share/mantis/view_filters_page.php
 share/mantis/wiki.php
 share/mantis/xmlhttprequest.php
-@unexec ${RMDIR} %D/share/mantis 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2009/06/14 17:50:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.38 2009/06/14 18:53:00 joerg Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.20/gedit/gedit-app.h
@@ -405,6 +405,6 @@ share/omf/gedit/gedit-uk.omf
 share/omf/gedit/gedit-zh_CN.omf
 share/omf/gedit/gedit-zh_HK.omf
 share/omf/gedit/gedit-zh_TW.omf
-@exec ${MKDIR} %D/share/gedit-2/plugins/sample
-@exec ${MKDIR} %D/share/gedit-2/plugins/indent
-@exec ${MKDIR} %D/share/gedit-2/plugins/changecase
+@pkgdir share/gedit-2/plugins/sample
+@pkgdir share/gedit-2/plugins/indent
+@pkgdir share/gedit-2/plugins/changecase
