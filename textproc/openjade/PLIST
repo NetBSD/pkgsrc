@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:36:32 joerg Exp $
 bin/openjade
 lib/libogrove.la
 lib/libospgrove.la
@@ -66,4 +66,3 @@ share/sgml/openjade/pubtext/html.soc
 share/sgml/openjade/pubtext/xml.dcl
 share/sgml/openjade/pubtext/xml.soc
 share/sgml/openjade/style-sheet.dtd
-@unexec ${RMDIR} %D/share/sgml 2>/dev/null || ${TRUE}

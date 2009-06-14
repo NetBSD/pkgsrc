@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 21:36:33 joerg Exp $
 lib/java/xp.jar
 share/doc/java/xp/api/.cvsignore
 share/doc/java/xp/api/AllNames.html
@@ -107,4 +107,3 @@ share/doc/java/xp/api/packages.html
 share/doc/java/xp/api/tree.html
 share/doc/java/xp/copying.txt
 share/doc/java/xp/index.html
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}
