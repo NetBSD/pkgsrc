@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.8188 2009/06/14 11:06:38 zafer Exp $
+$NetBSD: TODO,v 1.8189 2009/06/14 17:59:49 minskim Exp $
 
 Suggested new packages
 ======================
@@ -1183,7 +1183,6 @@ For possible perl packages updates, see http://www.pkgbox.org/p2c/
 	o ruby-parsetree-3.0.3
 	o ruby-postgres-pr-0.5.0
 	o ruby-racc-1.4.6
-	o ruby-rack-0.9.1
 	o ruby-redcloth-4.1.1
 	o ruby-rgl-0.4.0
 	o ruby-rspec-1.1.12
