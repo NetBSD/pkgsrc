@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2009/05/05 05:55:18 sno Exp $
+# $NetBSD: Makefile,v 1.22 2009/06/14 22:28:07 sno Exp $
 #
 
-DISTNAME=	Config-IniFiles-2.49
+DISTNAME=	Config-IniFiles-2.51
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cif
 CATEGORIES=	devel perl5
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/config-inifiles/
 #HOMEPAGE=	http://search.cpan.org/dist/Config-IniFiles/
 COMMENT=	Perl module for reading .ini-style configuration files
-LICENSE=	gnu-gpl-v2 # OR artistic
+LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
