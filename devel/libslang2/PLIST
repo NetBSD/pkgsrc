@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:56 joerg Exp $
 bin/slsh
 include/slang2/slang.h
 include/slang2/slcurses.h
@@ -87,16 +87,3 @@ share/slsh/stkcheck.sl
 share/slsh/structfuns.sl
 share/slsh/termios.sl
 share/slsh/varray.sl
-@dirrm share/slsh/scripts
-@dirrm share/slsh/rline
-@dirrm share/slsh/cmaps
-@dirrm share/slsh
-@dirrm share/examples/libslang2
-@dirrm share/doc/slsh/html
-@dirrm share/doc/slsh
-@dirrm share/doc/slang/v2
-@dirrm share/doc/slang
-@dirrm lib/slang/v2/modules
-@dirrm lib/slang/v2
-@dirrm lib/slang
-@dirrm include/slang2

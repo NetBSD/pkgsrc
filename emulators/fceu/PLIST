@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/19 18:37:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
 bin/fceu
 man/man6/fceu.6
 share/doc/fceu/cheat.html
@@ -7,4 +7,3 @@ share/doc/fceu/fceultra.html
 share/doc/fceu/fcm.txt
 share/doc/fceu/fcs.txt
 share/doc/fceu/protocol.txt
-@dirrm share/doc/fceu

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/27 00:11:15 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:09 joerg Exp $
 ${GEM_HOME}/cache/facade-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MANIFEST
@@ -7,6 +7,3 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/facade.rb
 ${GEM_LIBDIR}/test/tc_facade.rb
 ${GEM_HOME}/specifications/facade-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

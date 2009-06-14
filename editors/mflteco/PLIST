@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/28 22:29:17 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:24 joerg Exp $
 bin/te
 share/doc/mflteco/00README
 share/doc/mflteco/teco.doc
@@ -7,5 +7,3 @@ share/examples/mflteco/.tecorc
 share/examples/mflteco/pi.tec
 share/examples/mflteco/sample_tecorc.old
 share/examples/mflteco/tecorc.mch
-@dirrm share/examples/mflteco
-@dirrm share/doc/mflteco

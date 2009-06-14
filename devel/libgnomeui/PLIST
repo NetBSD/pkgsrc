@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2009/03/07 13:40:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2009/06/14 17:48:53 joerg Exp $
 include/libgnomeui-2.0/gnome.h
 include/libgnomeui-2.0/libgnomeui/gnome-about.h
 include/libgnomeui-2.0/libgnomeui/gnome-app-helper.h
@@ -258,8 +258,3 @@ share/locale/zh_HK/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnomeui-2.0.mo
 share/locale/zu/LC_MESSAGES/libgnomeui-2.0.mo
 share/pixmaps/gnome-about-logo.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/gtk-doc/html/libgnomeui
-@comment in libglade: @dirrm lib/libglade/2.0
-@dirrm include/libgnomeui-2.0/libgnomeui
-@dirrm include/libgnomeui-2.0

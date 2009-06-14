@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/12 19:57:57 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:02 joerg Exp $
 bin/pcre++-config
 include/pcre++.h
 lib/libpcre++.la
@@ -38,4 +38,3 @@ share/doc/libpcre++/search_8cc-source.html
 share/doc/libpcre++/search_8cc.html
 share/doc/libpcre++/split_8cc-source.html
 share/doc/libpcre++/split_8cc.html
-@dirrm share/doc/libpcre++

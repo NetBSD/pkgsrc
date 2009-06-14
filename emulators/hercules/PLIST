@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:05 joerg Exp $
 bin/hercules
 bin/hercifc
 bin/dasdinit
@@ -21,4 +21,3 @@ bin/hetupd
 bin/dasdlist
 share/examples/hercules/hercules.cnf
 share/examples/hercules/zzsa.cnf
-@dirrm share/examples/hercules

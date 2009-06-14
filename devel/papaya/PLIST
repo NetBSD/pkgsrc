@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/31 05:37:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:02 joerg Exp $
 bin/add-html-signature
 bin/compare-version
 bin/copy-if-changed
@@ -60,4 +60,3 @@ share/doc/papaya/plain-to-html.html
 share/doc/papaya/recursive-make.html
 share/doc/papaya/search-exec.html
 share/doc/papaya/texi2html-wrapper.html
-@dirrm share/doc/papaya

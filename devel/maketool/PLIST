@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:57 joerg Exp $
 bin/maketool
 libexec/maketool/extract_targets
 libexec/maketool/maketool_client
@@ -8,6 +8,3 @@ share/maketool/autoconf-dist.mk
 share/maketool/autoconf-maint.mk
 share/maketool/automake.mk
 share/maketool/imake.mk
-@dirrm libexec/maketool
-@dirrm share/maketool/help
-@dirrm share/maketool

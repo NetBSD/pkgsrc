@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/03 10:12:38 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:05 joerg Exp $
 ${PYSITELIB}/quixote/config.py
 ${PYSITELIB}/quixote/publish.py
 ${PYSITELIB}/quixote/wsgi.py
@@ -125,9 +125,3 @@ ${PYSITELIB}/quixote/http_request.pyo
 ${PYSITELIB}/quixote/publish1.pyo
 ${PYSITELIB}/quixote/session.pyo
 ${PYSITELIB}/quixote/__init__.pyo
-@dirrm ${PYSITELIB}/quixote/server
-@dirrm ${PYSITELIB}/quixote/ptl
-@dirrm ${PYSITELIB}/quixote/html
-@dirrm ${PYSITELIB}/quixote/demo
-@dirrm ${PYSITELIB}/quixote/form
-@dirrm ${PYSITELIB}/quixote

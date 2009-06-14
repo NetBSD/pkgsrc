@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/24 16:25:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:48 joerg Exp $
 bin/gif2hdf
 bin/h4cc
 bin/h4fc
@@ -81,4 +81,3 @@ man/man1/hdf.1
 man/man1/hdfncdump.1
 man/man1/hdfncgen.1
 man/man1/hdfunpac.1
-@dirrm include/hdf

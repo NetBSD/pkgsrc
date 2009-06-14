@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/28 11:28:31 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:46 joerg Exp $
 bin/gbf-am-parse
 bin/gbf-mkfile-parse
 include/gnome-build-1.0/gbf/gbf-backend.h
@@ -81,10 +81,3 @@ share/locale/zh_HK/LC_MESSAGES/gbf-1.mo
 share/locale/zh_TW/LC_MESSAGES/gbf-1.mo
 share/pixmaps/gbf-build.png
 share/pixmaps/gbf-install.png
-@dirrm share/gnome-build/glade
-@dirrm share/gnome-build/GBF
-@dirrm share/gnome-build
-@dirrm lib/gnome-build-1.0/backends
-@dirrm lib/gnome-build-1.0
-@dirrm include/gnome-build-1.0/gbf
-@dirrm include/gnome-build-1.0

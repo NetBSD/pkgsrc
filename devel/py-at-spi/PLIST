@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/10/31 19:52:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:04 joerg Exp $
 ${PYSITELIB}/pyatspi/__init__.py
 ${PYSITELIB}/pyatspi/__init__.pyc
 ${PYSITELIB}/pyatspi/accessible.py
@@ -11,4 +11,3 @@ ${PYSITELIB}/pyatspi/registry.py
 ${PYSITELIB}/pyatspi/registry.pyc
 ${PYSITELIB}/pyatspi/utils.py
 ${PYSITELIB}/pyatspi/utils.pyc
-@dirrm ${PYSITELIB}/pyatspi

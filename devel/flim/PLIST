@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/30 03:31:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:43 joerg Exp $
 ${EMACS_INFOPREFIX}/mime-en.info
 ${EMACS_INFOPREFIX}/mime-ja.info
 ${FOR_xemacs214}${EMACS_LISPPREFIX}/flim/auto-autoloads.el
@@ -85,4 +85,3 @@ ${EMACS_LISPPREFIX}/flim/smtp.el
 ${EMACS_LISPPREFIX}/flim/smtp.elc
 ${EMACS_LISPPREFIX}/flim/std11.el
 ${EMACS_LISPPREFIX}/flim/std11.elc
-@dirrm ${EMACS_LISPPREFIX}/flim

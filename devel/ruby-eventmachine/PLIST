@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/15 09:08:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:09 joerg Exp $
 ${GEM_HOME}/cache/eventmachine-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/DEFERRABLES
@@ -96,10 +96,3 @@ ${GEM_LIBDIR}/tests/test_timers.rb
 ${GEM_LIBDIR}/tests/test_ud.rb
 ${GEM_LIBDIR}/tests/testem.rb
 ${GEM_HOME}/specifications/eventmachine-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tests
-@dirrm ${GEM_LIBDIR}/lib/protocols
-@dirrm ${GEM_LIBDIR}/lib/evma
-@dirrm ${GEM_LIBDIR}/lib/em
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/16 13:38:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:40 joerg Exp $
 bin/ar86
 bin/as86
 bin/bcc
@@ -26,5 +26,3 @@ man/man1/bcc.1
 man/man1/elks.1
 man/man1/elksemu.1
 man/man1/ld86.1
-@dirrm lib/bcc/i386
-@dirrm lib/bcc

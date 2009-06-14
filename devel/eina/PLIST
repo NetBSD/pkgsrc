@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/19 17:26:28 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:42 joerg Exp $
 include/eina-0/Eina.h
 include/eina-0/eina/eina_accessor.h
 include/eina-0/eina/eina_array.h
@@ -37,7 +37,3 @@ lib/eina/mp/eina_fixed_bitmap.la
 lib/eina/mp/pass_through.la
 lib/libeina.la
 lib/pkgconfig/eina-0.pc
-@dirrm lib/eina/mp
-@dirrm lib/eina
-@dirrm include/eina-0/eina
-@dirrm include/eina-0

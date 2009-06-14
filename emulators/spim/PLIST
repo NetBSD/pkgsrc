@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/22 19:55:42 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:51:08 joerg Exp $
 bin/spim
 bin/xspim
 man/man1/spim.1
@@ -13,5 +13,3 @@ share/doc/spim/stack-frame.id
 share/doc/spim/status_reg.id
 share/doc/spim/xinterface.id
 share/spim/exceptions.s
-@dirrm share/spim
-@dirrm share/doc/spim

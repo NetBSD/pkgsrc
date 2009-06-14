@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/12 18:30:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:43 joerg Exp $
 include/compat_time.h
 include/doublefann.h
 include/fann.h
@@ -23,4 +23,3 @@ share/doc/fann/fixedpointusage.txt
 share/doc/fann/gettingstarted.txt
 share/doc/fann/installation.txt
 share/doc/fann/theory.txt
-@dirrm share/doc/fann

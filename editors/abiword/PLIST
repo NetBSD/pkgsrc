@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2009/04/07 16:27:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2009/06/14 17:50:20 joerg Exp $
 bin/abiword
 include/abiword-2.6/abiwidget.h
 include/abiword-2.6/xap_UnixTableWidget.h
@@ -245,11 +245,3 @@ share/abiword-2.6/templates/normal.awt-zh_TW
 share/applications/abiword.desktop
 share/icons/abiword_48.png
 share/mime-info/abiword.keys
-@comment in xdg-dirs: @dirrm share/mime-info
-@comment in xdg-dirs: @dirrm share/icons
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm share/abiword-2.6/templates
-@dirrm share/abiword-2.6/strings
-@dirrm share/abiword-2.6/glade
-@dirrm share/abiword-2.6
-@dirrm include/abiword-2.6

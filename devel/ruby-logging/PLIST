@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/logging-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
@@ -56,16 +56,3 @@ ${GEM_LIBDIR}/test/test_repository.rb
 ${GEM_LIBDIR}/test/test_root_logger.rb
 ${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_HOME}/specifications/logging-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/layouts
-@dirrm ${GEM_LIBDIR}/test/config
-@dirrm ${GEM_LIBDIR}/test/appenders
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/tasks
-@dirrm ${GEM_LIBDIR}/lib/logging/stelan
-@dirrm ${GEM_LIBDIR}/lib/logging/layouts
-@dirrm ${GEM_LIBDIR}/lib/logging/config
-@dirrm ${GEM_LIBDIR}/lib/logging/appenders
-@dirrm ${GEM_LIBDIR}/lib/logging
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/data
-@dirrm ${GEM_LIBDIR}

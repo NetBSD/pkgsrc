@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/29 23:19:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:06 joerg Exp $
 bin/m1
 share/doc/m1/m1.txt
 share/examples/m1/m1.ini
-@dirrm share/examples/m1
-@dirrm share/doc/m1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/14 06:16:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:54:16 joerg Exp $
 bin/ttf2pk
 bin/ttf2tfm
 man/man1/ttf2pk.1
@@ -24,6 +24,3 @@ share/texmf-dist/ttf2tfm/base/UKS.sfd
 share/texmf-dist/ttf2tfm/base/Unicode.sfd
 share/texmf-dist/ttf2tfm/base/VPS.rpl
 share/texmf-dist/ttf2tfm/base/ttfonts.map
-@dirrm share/texmf-dist/ttf2tfm/base
-@dirrm share/texmf-dist/ttf2tfm
-@dirrm share/texmf-dist/doc/ttf2pk

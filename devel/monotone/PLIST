@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/01/18 21:24:12 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:48:59 joerg Exp $
 bin/mtn
 bin/mtnopt
 info/monotone.info
@@ -61,8 +61,3 @@ share/monotone/contrib/monotone.bash_completion
 share/monotone/contrib/monotone.el
 share/monotone/contrib/monotone.zsh_completion
 share/monotone/contrib/mtbrowse.sh
-@dirrm share/monotone/contrib/command
-@dirrm share/monotone/contrib
-@dirrm share/monotone
-@dirrm share/doc/monotone/figures
-@dirrm share/doc/monotone

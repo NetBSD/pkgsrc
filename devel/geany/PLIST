@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/24 09:37:15 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:44 joerg Exp $
 bin/geany
 include/geany/dialogs.h
 include/geany/document.h
@@ -149,15 +149,3 @@ share/locale/vi/LC_MESSAGES/geany.mo
 share/locale/zh_CN/LC_MESSAGES/geany.mo
 share/locale/zh_TW/LC_MESSAGES/geany.mo
 share/pixmaps/geany.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/geany
-@dirrm share/doc/geany/html/images
-@dirrm share/doc/geany/html
-@dirrm share/doc/geany
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/geany
-@dirrm include/geany/tagmanager
-@dirrm include/geany/scintilla
-@dirrm include/geany

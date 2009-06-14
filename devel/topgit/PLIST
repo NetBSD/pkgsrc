@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/08 05:58:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:16 joerg Exp $
 bin/tg
 libexec/topgit/hooks/pre-commit
 libexec/topgit/tg-create
@@ -23,6 +23,3 @@ share/topgit/tg-patch.txt
 share/topgit/tg-remote.txt
 share/topgit/tg-summary.txt
 share/topgit/tg-update.txt
-@dirrm share/topgit
-@dirrm libexec/topgit/hooks
-@dirrm libexec/topgit

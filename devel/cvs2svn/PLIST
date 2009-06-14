@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/08/24 17:02:24 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:39 joerg Exp $
 bin/cvs2svn
 ${PYSITELIB}/cvs2svn_lib/__init__.py
 ${PYSITELIB}/cvs2svn_lib/__init__.pyc
@@ -222,7 +222,3 @@ share/doc/cvs2svn/issue_tracker.html
 share/doc/cvs2svn/project_license.html
 share/doc/cvs2svn/project_tools.html
 share/examples/cvs2svn/cvs2svn-example.options
-@dirrm share/examples/cvs2svn
-@dirrm share/doc/cvs2svn
-@dirrm ${PYSITELIB}/cvs2svn_rcsparse
-@dirrm ${PYSITELIB}/cvs2svn_lib

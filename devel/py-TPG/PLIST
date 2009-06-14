@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/15 22:08:35 recht Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:04 joerg Exp $
 bin/tpg
 ${PYSITELIB}/tpg/Release.py
 ${PYSITELIB}/tpg/Release.pyc
@@ -15,4 +15,3 @@ ${PYSITELIB}/tpg/codegen.pyo
 ${PYSITELIB}/tpg/parser.py
 ${PYSITELIB}/tpg/parser.pyc
 ${PYSITELIB}/tpg/parser.pyo
-@dirrm ${PYSITELIB}/tpg

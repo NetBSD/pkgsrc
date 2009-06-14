@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/05 00:33:58 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:43 joerg Exp $
 bin/fcomp
 bin/fhist
 bin/fmerge
@@ -22,6 +22,3 @@ share/doc/fhist/en/reference.txt
 share/locale/en/LC_MESSAGES/fcomp.mo
 share/locale/en/LC_MESSAGES/fhist.mo
 share/locale/en/LC_MESSAGES/fmerge.mo
-@dirrm share/doc/fhist/en/man1
-@dirrm share/doc/fhist/en
-@dirrm share/doc/fhist

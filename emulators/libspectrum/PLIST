@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/22 08:09:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:51:06 joerg Exp $
 include/libspectrum.h
 lib/libspectrum.la
 man/man3/libspectrum.3
 share/doc/libspectrum/libspectrum.txt
-@dirrm share/doc/libspectrum

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/21 08:12:03 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:17 joerg Exp $
 bin/vtcl
 lib/vtcl/images/anchor.gif
 lib/vtcl/images/anchor_c.ppm
@@ -425,33 +425,4 @@ share/examples/vtcl/sample/notebook.tcl
 share/examples/vtcl/sample/notebook_recurse.tcl
 share/examples/vtcl/sample/panedwindow.tcl
 share/examples/vtcl/sample/sampleBLT.tcl
-@dirrm share/examples/vtcl/sample
-@dirrm share/examples/vtcl/demo/tutorial/megawidgets/listviewer
-@dirrm share/examples/vtcl/demo/tutorial/megawidgets/imagelist
-@dirrm share/examples/vtcl/demo/tutorial/megawidgets/databaseview
-@dirrm share/examples/vtcl/demo/tutorial/megawidgets
-@dirrm share/examples/vtcl/demo/tutorial/core
-@dirrm share/examples/vtcl/demo/tutorial
-@dirrm share/examples/vtcl/demo/images
-@dirrm share/examples/vtcl/demo
-@dirrm share/doc/vtcl/doc
-@dirrm lib/vtcl/lib/ttd
-@dirrm lib/vtcl/lib/bwidget/lang
-@dirrm lib/vtcl/lib/bwidget/images
-@dirrm lib/vtcl/lib/bwidget
-@dirrm lib/vtcl/lib/Widgets/vtcl
 @exec ${MKDIR} %D/lib/vtcl/lib/Widgets/user
-@dirrm lib/vtcl/lib/Widgets/user
-@dirrm lib/vtcl/lib/Widgets/tix
-@dirrm lib/vtcl/lib/Widgets/tablelist
-@dirrm lib/vtcl/lib/Widgets/table
-@dirrm lib/vtcl/lib/Widgets/itcl
-@dirrm lib/vtcl/lib/Widgets/core
-@dirrm lib/vtcl/lib/Widgets/bwidget
-@dirrm lib/vtcl/lib/Widgets/blt
-@dirrm lib/vtcl/lib/Widgets
-@dirrm lib/vtcl/lib/Help
-@dirrm lib/vtcl/lib
-@dirrm lib/vtcl/images/edit
-@dirrm lib/vtcl/images
-@dirrm lib/vtcl

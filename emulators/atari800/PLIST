@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/01/08 15:24:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
 bin/atari800
 man/man1/atari800.1
 share/atari800/atari800.cfg
@@ -15,5 +15,3 @@ share/doc/atari800/NEWS
 share/doc/atari800/README
 share/doc/atari800/README.1ST
 share/doc/atari800/USAGE
-@dirrm share/doc/atari800
-@dirrm share/atari800

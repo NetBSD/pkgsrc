@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/12/03 08:26:15 ghen Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:26 joerg Exp $
 bin/texmaker
 share/texmaker/AUTHORS
 share/texmaker/CHANGELOG.txt
@@ -53,4 +53,3 @@ share/texmaker/up.gif
 share/texmaker/up_d.gif
 share/texmaker/usermanual_en.html
 share/texmaker/usermanual_fr.html
-@dirrm share/texmaker

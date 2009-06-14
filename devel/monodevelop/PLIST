@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/04/07 11:47:05 kefren Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:58 joerg Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/BackendBindings/ILAsmBinding.dll
@@ -189,31 +189,3 @@ share/locale/tr/LC_MESSAGES/monodevelop.mo
 share/locale/zh_CN/LC_MESSAGES/monodevelop.mo
 share/locale/zh_TW/LC_MESSAGES/monodevelop.mo
 share/mime/packages/monodevelop.xml
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/monodevelop/data/options
-@dirrm lib/monodevelop/data
-@dirrm lib/monodevelop/bin
-@dirrm lib/monodevelop/AddIns/WelcomePage
-@dirrm lib/monodevelop/AddIns/VersionControl
-@dirrm lib/monodevelop/AddIns/NUnit
-@dirrm lib/monodevelop/AddIns/MonoDeveloperExtensions
-@dirrm lib/monodevelop/AddIns/MonoDevelop.XmlEditor/schemas
-@dirrm lib/monodevelop/AddIns/MonoDevelop.XmlEditor
-@dirrm lib/monodevelop/AddIns/MonoDevelop.WebReferences
-@dirrm lib/monodevelop/AddIns/MonoDevelop.RegexToolkit
-@dirrm lib/monodevelop/AddIns/MonoDevelop.MsVisualStudio
-@dirrm lib/monodevelop/AddIns/MonoDevelop.GtkCore
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Gettext
-@dirrm lib/monodevelop/AddIns/MonoDevelop.DesignerSupport
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Deployment
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Debugger
-@dirrm lib/monodevelop/AddIns/MonoDevelop.CodeMetrics
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools/templates
-@dirrm lib/monodevelop/AddIns/MonoDevelop.Autotools
-@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet/Schemas
-@dirrm lib/monodevelop/AddIns/MonoDevelop.AspNet
-@dirrm lib/monodevelop/AddIns/GnomePlatform
-@dirrm lib/monodevelop/AddIns/ChangeLogAddIn
-@dirrm lib/monodevelop/AddIns/BackendBindings
-@dirrm lib/monodevelop/AddIns
-@dirrm lib/monodevelop

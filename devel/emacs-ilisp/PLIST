@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/19 12:13:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:42 joerg Exp $
 share/doc/emacs-ilisp/INSTALLATION
 share/doc/emacs-ilisp/README
 ${EMACS_LISPPREFIX}/ilisp/allegro.lisp
@@ -135,7 +135,3 @@ ${EMACS_LISPPREFIX}/ilisp/lispworks.lisp
 ${EMACS_LISPPREFIX}/ilisp/lucid.lisp
 ${EMACS_LISPPREFIX}/ilisp/mzscheme-ilisp.scm
 share/examples/emacs-ilisp/ilisp.emacs
-@dirrm share/examples/emacs-ilisp
-@dirrm ${EMACS_LISPPREFIX}/ilisp/extra
-@dirrm ${EMACS_LISPPREFIX}/ilisp
-@dirrm share/doc/emacs-ilisp

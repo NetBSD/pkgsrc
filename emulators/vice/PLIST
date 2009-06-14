@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/08/30 12:22:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:51:09 joerg Exp $
 bin/c1541
 bin/cartconv
 bin/petcat
@@ -261,14 +261,3 @@ share/vice/VIC20/win_sym.vkm
 share/vice/VIC20/x11_pos.vkm
 share/vice/VIC20/x11_sym.vkm
 share/vice/fonts/vice-cbm.pcf
-@comment in REQ_DIRS: @dirrm share/vice/fonts
-@dirrm share/vice/VIC20
-@dirrm share/vice/PRINTER
-@dirrm share/vice/PLUS4
-@dirrm share/vice/PET
-@dirrm share/vice/DRIVES
-@dirrm share/vice/CBM-II
-@dirrm share/vice/C64
-@dirrm share/vice/C128
-@comment in REQ_DIRS: @dirrm share/vice
-@dirrm share/doc/vice

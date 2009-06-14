@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
 bin/fmsx
 bin/rddsk
 bin/wrdsk
@@ -12,4 +12,3 @@ share/fmsx/MSX2P.ROM
 share/fmsx/MSX2PEXT.ROM
 share/fmsx/PAINTER.ROM
 share/doc/html/fMSX.html
-@dirrm share/fmsx

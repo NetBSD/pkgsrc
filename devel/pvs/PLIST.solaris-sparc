@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.1 2007/08/22 17:28:09 jlam Exp $
+@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/06/14 17:49:03 joerg Exp $
 pvs/bin/sun4-SunOS5/runtime/file_utils.so
 pvs/bin/sun4-SunOS5/runtime/files.bu
 pvs/bin/sun4-SunOS5/runtime/libacl623.so
@@ -7,5 +7,3 @@ pvs/bin/sun4-SunOS5/runtime/pvs-allegro6.2
 pvs/bin/sun4-SunOS5/runtime/pvs-allegro6.dxl
 pvs/bin/sun4-SunOS5/runtime/pvs-allegro6.lic
 pvs/bin/sun4-SunOS5/runtime/ws1s.so
-@dirrm pvs/bin/sun4-SunOS5/runtime
-@dirrm pvs/bin/sun4-SunOS5

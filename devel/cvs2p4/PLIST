@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/01 05:02:07 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:39 joerg Exp $
 bin/dochanges
 bin/dolabels
 bin/genchanges
@@ -8,5 +8,3 @@ lib/perl5/${PKGBASE}-util.pl
 ${DOCDIR}/NEWS
 ${DOCDIR}/README
 ${EGDIR}/config
-@dirrm ${EGDIR}
-@dirrm ${DOCDIR}

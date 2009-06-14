@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/23 15:48:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:07 joerg Exp $
 rt/WebRT/html/Admin/Elements/CreateQueueCalled
 rt/WebRT/html/Admin/Elements/CreateUserCalled
 rt/WebRT/html/Admin/Elements/EditUserComments
@@ -291,37 +291,3 @@ rt/man/man3/RT::User.3
 rt/man/man3/RT::Users.3
 rt/man/man3/RT::Watcher.3
 rt/man/man3/RT::Watchers.3
-@dirrm rt/WebRT/html/User
-@dirrm rt/WebRT/html/Ticket/Elements
-@dirrm rt/WebRT/html/Ticket/Attachment
-@dirrm rt/WebRT/html/Ticket
-@dirrm rt/WebRT/html/SelfService/Elements
-@dirrm rt/WebRT/html/SelfService/Attachment
-@dirrm rt/WebRT/html/SelfService
-@dirrm rt/WebRT/html/Search
-@dirrm rt/WebRT/html/NoAuth/images
-@dirrm rt/WebRT/html/NoAuth
-@dirrm rt/WebRT/html/Elements
-@dirrm rt/WebRT/html/Admin/Users
-@dirrm rt/WebRT/html/Admin/Queues
-@dirrm rt/WebRT/html/Admin/KeywordSelects
-@dirrm rt/WebRT/html/Admin/Keywords
-@dirrm rt/WebRT/html/Admin/Groups
-@dirrm rt/WebRT/html/Admin/Global
-@dirrm rt/WebRT/html/Admin/Elements
-@dirrm rt/WebRT/html/Admin
-@dirrm rt/WebRT/html
-@dirrm rt/man/man3
-@dirrm rt/man
-@dirrm rt/local/WebRT/html
-@dirrm rt/local/WebRT
-@dirrm rt/local
-@dirrm rt/lib/RT/Interface
-@dirrm rt/lib/RT/Condition
-@dirrm rt/lib/RT/Action
-@dirrm rt/lib/RT
-@dirrm rt/lib/auto/RT
-@dirrm rt/lib/auto
-@dirrm rt/lib
-@dirrm rt/bin/real
-@dirrm rt/bin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/05 23:29:42 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:50 joerg Exp $
 bin/kscope
 share/doc/kde/HTML/en/kscope/about.docbook
 share/doc/kde/HTML/en/kscope/autocomp_dlg.png
@@ -48,15 +48,3 @@ share/kde/apps/kscope/pics/query_locked.png
 share/kde/apps/kscope/pics/query_unlocked.png
 share/kde/apps/kscope/pics/tab_list.png
 share/kde/config/kscoperc
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kscope/pics
-@dirrm share/kde/apps/kscope
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Development
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/kscope
-@comment in kde: @dirrm share/doc/kde/HTML/en

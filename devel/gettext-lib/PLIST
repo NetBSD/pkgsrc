@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/08/19 22:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:45 joerg Exp $
 include/libintl.h
 lib/libintl.la
 share/examples/gettext/locale.alias
-@dirrm share/examples/gettext

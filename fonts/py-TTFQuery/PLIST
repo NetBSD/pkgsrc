@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/19 00:43:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:15 joerg Exp $
 ${PYSITELIB}/ttfquery/__init__.py
 ${PYSITELIB}/ttfquery/__init__.pyc
 ${PYSITELIB}/ttfquery/__init__.pyo
@@ -32,4 +32,3 @@ ${PYSITELIB}/ttfquery/metadata_query.pyo
 ${PYSITELIB}/ttfquery/ttffiles.py
 ${PYSITELIB}/ttfquery/ttffiles.pyc
 ${PYSITELIB}/ttfquery/ttffiles.pyo
-@dirrm ${PYSITELIB}/ttfquery

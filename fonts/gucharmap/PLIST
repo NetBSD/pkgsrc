@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/04/17 17:55:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:54:14 joerg Exp $
 bin/charmap
 bin/gnome-character-map
 bin/gucharmap
@@ -176,50 +176,3 @@ share/omf/gucharmap/gucharmap-sv.omf
 share/omf/gucharmap/gucharmap-vi.omf
 share/omf/gucharmap/gucharmap-zh_CN.omf
 share/omf/gucharmap/gucharmap-zh_TW.omf
-@dirrm share/omf/gucharmap
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/gucharmap/zh_TW/figures
-@dirrm share/gnome/help/gucharmap/zh_TW
-@dirrm share/gnome/help/gucharmap/zh_CN/figures
-@dirrm share/gnome/help/gucharmap/zh_CN
-@dirrm share/gnome/help/gucharmap/vi/figures
-@dirrm share/gnome/help/gucharmap/vi
-@dirrm share/gnome/help/gucharmap/sv/figures
-@dirrm share/gnome/help/gucharmap/sv
-@dirrm share/gnome/help/gucharmap/ru/figures
-@dirrm share/gnome/help/gucharmap/ru
-@dirrm share/gnome/help/gucharmap/pt_BR/figures
-@dirrm share/gnome/help/gucharmap/pt_BR
-@dirrm share/gnome/help/gucharmap/oc/figures
-@dirrm share/gnome/help/gucharmap/oc
-@dirrm share/gnome/help/gucharmap/ko/figures
-@dirrm share/gnome/help/gucharmap/ko
-@dirrm share/gnome/help/gucharmap/ja/figures
-@dirrm share/gnome/help/gucharmap/ja
-@dirrm share/gnome/help/gucharmap/it/figures
-@dirrm share/gnome/help/gucharmap/it
-@dirrm share/gnome/help/gucharmap/fr/figures
-@dirrm share/gnome/help/gucharmap/fr
-@dirrm share/gnome/help/gucharmap/fi/figures
-@dirrm share/gnome/help/gucharmap/fi
-@dirrm share/gnome/help/gucharmap/es/figures
-@dirrm share/gnome/help/gucharmap/es
-@dirrm share/gnome/help/gucharmap/en_GB/figures
-@dirrm share/gnome/help/gucharmap/en_GB
-@dirrm share/gnome/help/gucharmap/el/figures
-@dirrm share/gnome/help/gucharmap/el
-@dirrm share/gnome/help/gucharmap/de/figures
-@dirrm share/gnome/help/gucharmap/de
-@dirrm share/gnome/help/gucharmap/ca/figures
-@dirrm share/gnome/help/gucharmap/ca
-@dirrm share/gnome/help/gucharmap/bg/figures
-@dirrm share/gnome/help/gucharmap/bg
-@dirrm share/gnome/help/gucharmap/C/figures
-@dirrm share/gnome/help/gucharmap/C
-@dirrm share/gnome/help/gucharmap
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/gucharmap-2/gucharmap
-@dirrm include/gucharmap-2

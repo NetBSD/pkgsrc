@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/11 12:11:11 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:48 joerg Exp $
 bin/makerom
 bin/rplcomp
 bin/sasm
@@ -16,4 +16,3 @@ share/doc/hptools/SASM.DOC
 share/doc/hptools/SLOAD.DOC
 share/doc/hptools/masd.pdf
 share/doc/hptools/rmcrlf
-@dirrm share/doc/hptools

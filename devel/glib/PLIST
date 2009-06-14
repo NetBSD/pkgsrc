@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:45 joerg Exp $
 bin/glib-config
 include/glib/glib-1.2/glib.h
 include/glib/glib-1.2/gmodule.h
@@ -12,7 +12,4 @@ lib/pkgconfig/gmodule.pc
 lib/pkgconfig/gthread.pc
 man/man1/glib-config.1
 share/aclocal/glib.m4
-@dirrm lib/glib/include
-@dirrm lib/glib
-@dirrm include/glib/glib-1.2
 @unexec ${RMDIR} %D/include/glib 2>/dev/null || ${TRUE}

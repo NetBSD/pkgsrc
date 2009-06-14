@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/17 21:49:02 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:53 joerg Exp $
 include/libgweather/gweather-enum-types.h
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-location.h
@@ -207,7 +207,3 @@ share/locale/xh/LC_MESSAGES/libgweather.mo
 share/locale/zh_CN/LC_MESSAGES/libgweather.mo
 share/locale/zh_HK/LC_MESSAGES/libgweather.mo
 share/locale/zh_TW/LC_MESSAGES/libgweather.mo
-@dirrm share/libgweather
-@dirrm share/gtk-doc/html/libgweather
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm include/libgweather

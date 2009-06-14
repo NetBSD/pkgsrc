@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/04/07 16:27:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:50:20 joerg Exp $
 lib/abiword-2.6/plugins/libAbiApplix.la
 lib/abiword-2.6/plugins/libAbiBMP.la
 lib/abiword-2.6/plugins/libAbiBabelfish.la
@@ -38,6 +38,3 @@ share/abiword-2.6/xsltml/mmltex.xsl
 share/abiword-2.6/xsltml/scripts.xsl
 share/abiword-2.6/xsltml/tables.xsl
 share/abiword-2.6/xsltml/tokens.xsl
-@dirrm share/abiword-2.6/xsltml
-@dirrm lib/abiword-2.6/plugins
-@dirrm lib/abiword-2.6

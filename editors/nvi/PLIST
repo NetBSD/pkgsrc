@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/03 13:23:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:50:25 joerg Exp $
 bin/nex
 bin/nvi
 bin/nview
@@ -25,7 +25,4 @@ share/vi/tcl/errors.tcl
 share/vi/tcl/gnats.tcl
 share/vi/tcl/mailprocs.tcl
 share/vi/tcl/wc.tcl
-@dirrm share/vi/tcl
-@dirrm share/vi/perl
-@dirrm share/vi/catalog
 @unexec ${RMDIR} %D/share/vi 2>/dev/null || ${TRUE}

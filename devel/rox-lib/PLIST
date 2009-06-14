@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/29 17:20:03 rxg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:07 joerg Exp $
 share/rox/ROX-Lib2/.DirIcon
 share/rox/ROX-Lib2/AppInfo.xml
 share/rox/ROX-Lib2/AppRun
@@ -84,11 +84,3 @@ share/rox/ROX-Lib2/tests/python/testproxy.py
 share/rox/ROX-Lib2/tests/python/testrox.py
 share/rox/ROX-Lib2/tests/python/testsu.py
 share/rox/ROX-Lib2/tests/python/testtasks.py
-@dirrm share/rox/ROX-Lib2/tests/python
-@dirrm share/rox/ROX-Lib2/tests
-@dirrm share/rox/ROX-Lib2/python/rox
-@dirrm share/rox/ROX-Lib2/python
-@dirrm share/rox/ROX-Lib2/Messages
-@dirrm share/rox/ROX-Lib2/Help/python
-@dirrm share/rox/ROX-Lib2/Help
-@dirrm share/rox/ROX-Lib2

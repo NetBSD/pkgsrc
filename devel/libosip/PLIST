@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/25 02:49:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:55 joerg Exp $
 include/osip2/osip.h
 include/osip2/osip_condv.h
 include/osip2/osip_dialog.h
@@ -46,6 +46,3 @@ lib/libosip2.la
 lib/libosipparser2.la
 lib/pkgconfig/libosip2.pc
 man/man1/osip.1
-@dirrm include/osipparser2/headers
-@dirrm include/osipparser2
-@dirrm include/osip2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/05/05 06:21:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:49:13 joerg Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -216,21 +216,4 @@ ${PLIST.gui}share/gitk/lib/msgs/de.msg
 ${PLIST.gui}share/gitk/lib/msgs/es.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
-@dirrm share/examples/scmgit/templates/hooks
-@dirrm share/examples/scmgit/templates/info
 @exec ${MKDIR} %D/share/examples/scmgit/templates/branches
-@dirrm share/examples/scmgit/templates/branches
-@dirrm share/examples/scmgit/templates
-@dirrm share/examples/scmgit
-${PLIST.gui}@dirrm share/gitk/lib/msgs
-${PLIST.gui}@dirrm share/gitk/lib
-${PLIST.gui}@dirrm share/gitk
-${PLIST.gui}@dirrm share/git-gui/lib/msgs
-${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app/Contents/Resources/Scripts
-${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app/Contents/Resources
-${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app/Contents/MacOS
-${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app/Contents
-${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app
-${PLIST.gui}@dirrm share/git-gui/lib
-${PLIST.gui}@dirrm share/git-gui
-@dirrm libexec/git-core

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 14:50:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:13 joerg Exp $
 lib/X11/fonts/Type1/cour.afm
 lib/X11/fonts/Type1/cour.pfa
 lib/X11/fonts/Type1/courb.afm
@@ -7,6 +7,3 @@ lib/X11/fonts/Type1/courbi.afm
 lib/X11/fonts/Type1/courbi.pfa
 lib/X11/fonts/Type1/couri.afm
 lib/X11/fonts/Type1/couri.pfa
-@comment @dirrm lib/X11/fonts/Type1
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

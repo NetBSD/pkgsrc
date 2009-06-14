@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/03/15 05:00:14 dbj Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:06 joerg Exp $
 bin/abstime
 bin/mmix
 bin/mmixal
@@ -66,5 +66,3 @@ share/examples/mmix/test2.mmix
 share/examples/mmix/traffic.mms
 share/examples/mmix/valid.mms
 share/examples/mmix/zero.mms
-@dirrm share/examples/mmix
-@dirrm share/doc/mmix

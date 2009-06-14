@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/17 20:41:17 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:00 joerg Exp $
 share/doc/nspr/html/Prtyp.html
 share/doc/nspr/html/graphics/prlonga.gif
 share/doc/nspr/html/index.html
@@ -41,6 +41,3 @@ share/doc/nspr/html/prtpool.html
 share/doc/nspr/html/samples/layer.c
 share/doc/nspr/html/samples/switch.c
 share/doc/nspr/html/switch.html
-@dirrm share/doc/nspr/html/samples
-@dirrm share/doc/nspr/html/graphics
-@dirrm share/doc/nspr/html

@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/21 18:40:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:05 joerg Exp $
 include/pygtk-2.0/pygobject.h
 lib/pkgconfig/pygobject-2.0.pc
-@dirrm include/pygtk-2.0

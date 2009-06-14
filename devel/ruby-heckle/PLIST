@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 bin/heckle
 ${GEM_HOME}/cache/heckle-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
@@ -15,11 +15,3 @@ ${GEM_LIBDIR}/sample/test/test_heckled.rb
 ${GEM_LIBDIR}/test/fixtures/heckled.rb
 ${GEM_LIBDIR}/test/test_heckle.rb
 ${GEM_HOME}/specifications/heckle-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/sample/test
-@dirrm ${GEM_LIBDIR}/sample/lib
-@dirrm ${GEM_LIBDIR}/sample
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

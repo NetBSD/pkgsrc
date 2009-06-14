@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/09/14 16:43:50 recht Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:06 joerg Exp $
 ${PYSITELIB}/ZConfig/Config.py
 ${PYSITELIB}/ZConfig/Config.pyc
 ${PYSITELIB}/ZConfig/Config.pyo
@@ -62,5 +62,3 @@ ${PYSITELIB}/ZConfig/tests/test_subst.pyo
 ${PYSITELIB}/ZConfig/url.py
 ${PYSITELIB}/ZConfig/url.pyc
 ${PYSITELIB}/ZConfig/url.pyo
-@dirrm ${PYSITELIB}/ZConfig/tests
-@dirrm ${PYSITELIB}/ZConfig

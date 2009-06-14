@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/18 02:19:23 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:50 joerg Exp $
 include/libFoundation/Foundation/Foundation.h
 include/libFoundation/Foundation/NSAccount.h
 include/libFoundation/Foundation/NSAllocDebugZone.h
@@ -252,31 +252,7 @@ lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/WET
 lib/libFoundation.so
 lib/libFoundation.so.1.1.7
 share/GNUstep/Makefiles/Additional/libFoundation.make
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Makefiles/Additional
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Makefiles
-@comment in devel/gnustep-make: @dirrm share/GNUstep
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/US
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/SystemV
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Europe
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Canada
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Australia
 @exec ${MKDIR} %D/lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Asia
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Asia
 @exec ${MKDIR} %D/lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Africa
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo/Africa
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/TimeZoneInfo
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/Defaults
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation/CharacterSets
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources/libFoundation
-@dirrm lib/GNUstep/Libraries/${PKGNAME}/Resources
-@dirrm lib/GNUstep/Libraries/${PKGNAME}
 @unexec ${RMDIR} %D/lib/GNUstep/Libraries 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/GNUstep 2>/dev/null || ${TRUE}
-@dirrm include/libFoundation/${MACHINE_ARCH}/${LOWER_OPSYS}/GNU
-@dirrm include/libFoundation/${MACHINE_ARCH}/${LOWER_OPSYS}
-@dirrm include/libFoundation/${MACHINE_ARCH}
-@dirrm include/libFoundation/extensions/exceptions
-@dirrm include/libFoundation/extensions
-@dirrm include/libFoundation/Foundation/exceptions
-@dirrm include/libFoundation/Foundation
-@dirrm include/libFoundation

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/highline-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/INSTALL
@@ -29,8 +29,3 @@ ${GEM_LIBDIR}/test/tc_import.rb
 ${GEM_LIBDIR}/test/tc_menu.rb
 ${GEM_LIBDIR}/test/ts_all.rb
 ${GEM_HOME}/specifications/highline-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/highline
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:26:45 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:14 joerg Exp $
 lib/libsfio.a
 lib/libsfio_p.a
 lib/libsfio_pic.a
@@ -16,4 +16,3 @@ include/sfio/sfio.h
 include/sfio/sfio_t.h
 include/sfio/stdio.h
 man/man3/sfio.3
-@dirrm include/sfio

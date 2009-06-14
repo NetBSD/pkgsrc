@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/13 05:01:23 bjs Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:15 joerg Exp $
 bin/tailor
 ${PYSITELIB}/vcpx/__init__.py
 ${PYSITELIB}/vcpx/__init__.pyc
@@ -113,10 +113,3 @@ ${PYSITELIB}/vcpx/workdir.pyc
 ${PYSITELIB}/vcpx/workdir.pyo
 share/doc/tailor/README.html
 share/doc/tailor/README.rst
-@dirrm share/doc/tailor
-@dirrm ${PYSITELIB}/vcpx/repository/p4
-@dirrm ${PYSITELIB}/vcpx/repository/git
-@dirrm ${PYSITELIB}/vcpx/repository/darcs
-@dirrm ${PYSITELIB}/vcpx/repository/aegis
-@dirrm ${PYSITELIB}/vcpx/repository
-@dirrm ${PYSITELIB}/vcpx

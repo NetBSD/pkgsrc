@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/mkrf-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -185,33 +185,3 @@ ${GEM_LIBDIR}/test/sample_files/syck-0.55/tests/YTS.c.rb
 ${GEM_LIBDIR}/test/unit/test_availability.rb
 ${GEM_LIBDIR}/test/unit/test_generator.rb
 ${GEM_HOME}/specifications/mkrf-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/unit
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/tests
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/lib
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/yts
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/tests
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/samples
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/lib/yaml
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/lib/okay
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/lib
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/ext/syck
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby/ext
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext/ruby
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/ext
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55/config
-@dirrm ${GEM_LIBDIR}/test/sample_files/syck-0.55
-@dirrm ${GEM_LIBDIR}/test/sample_files/libxml-ruby-0.3.8/ext/xml
-@dirrm ${GEM_LIBDIR}/test/sample_files/libxml-ruby-0.3.8/ext
-@dirrm ${GEM_LIBDIR}/test/sample_files/libxml-ruby-0.3.8
-@dirrm ${GEM_LIBDIR}/test/sample_files/libtrivial/ext
-@dirrm ${GEM_LIBDIR}/test/sample_files/libtrivial
-@dirrm ${GEM_LIBDIR}/test/sample_files/cpp_bang/ext
-@dirrm ${GEM_LIBDIR}/test/sample_files/cpp_bang
-@dirrm ${GEM_LIBDIR}/test/sample_files
-@dirrm ${GEM_LIBDIR}/test/integration
-@dirrm ${GEM_LIBDIR}/test/fixtures/down_a_directory
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/mkrf
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/07/14 13:44:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:49 joerg Exp $
 bin/jgrasp
 ${PKGNAME}/README.htm
 ${PKGNAME}/README.txt
@@ -207,20 +207,3 @@ ${PKGNAME}/src/Makelinux.sh
 ${PKGNAME}/src/Makesolaris.sh
 ${PKGNAME}/src/linux_exec.c
 ${PKGNAME}/src/linux_run.c
-@dirrm ${PKGNAME}/src
-@dirrm ${PKGNAME}/jbin
-@dirrm ${PKGNAME}/help
-@dirrm ${PKGNAME}/extensions/viewers/system
-@dirrm ${PKGNAME}/extensions/viewers
-@dirrm ${PKGNAME}/extensions/classes/system/cs1
-@dirrm ${PKGNAME}/extensions/classes/system
-@dirrm ${PKGNAME}/extensions/classes
-@dirrm ${PKGNAME}/extensions
-@dirrm ${PKGNAME}/examples/tutorial/PersonalLibrary
-@dirrm ${PKGNAME}/examples/tutorial/Hello
-@dirrm ${PKGNAME}/examples/tutorial
-@dirrm ${PKGNAME}/examples
-@dirrm ${PKGNAME}/data
-@dirrm ${PKGNAME}/bin/${LOWER_OPSYS}
-@dirrm ${PKGNAME}/bin
-@dirrm ${PKGNAME}

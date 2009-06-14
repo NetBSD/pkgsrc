@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:24:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:27 joerg Exp $
 bin/xcoral
 lib/xcoral/DEPEND
 lib/xcoral/README
@@ -478,7 +478,3 @@ share/doc/xcoral/xcoral-card.ps
 share/doc/xcoral/xcoral-session.gif
 share/doc/xcoral/README
 share/doc/xcoral/xcoral-3.2.ps
-@dirrm share/doc/xcoral/HTML/icons
-@dirrm share/doc/xcoral/HTML
-@dirrm share/doc/xcoral
-@dirrm lib/xcoral

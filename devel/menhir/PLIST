@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/13 22:45:03 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:58 joerg Exp $
 bin/menhir
 lib/ocaml/site-lib/menhirLib/META
 lib/ocaml/site-lib/menhirLib/menhirLib.cmi
@@ -40,12 +40,4 @@ share/examples/menhir/demos/calc/calc.ml
 share/examples/menhir/demos/calc/lexer.mll
 share/examples/menhir/demos/calc/parser.mly
 share/examples/menhir/demos/ocamldep.wrapper
-@dirrm share/examples/menhir/demos/calc-two
-@dirrm share/examples/menhir/demos/calc-param
-@dirrm share/examples/menhir/demos/calc
-@dirrm share/examples/menhir/demos
-@dirrm share/examples/menhir
-@dirrm share/doc/menhir
-@dirrm lib/ocaml/site-lib/menhirLib
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/lwt
-@comment in ocaml: @dirrm lib/ocaml

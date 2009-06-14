@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/25 20:35:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:54:16 joerg Exp $
 lib/X11/fonts/TTF/Vera.ttf
 lib/X11/fonts/TTF/VeraBI.ttf
 lib/X11/fonts/TTF/VeraBd.ttf
@@ -13,5 +13,3 @@ share/doc/vera-ttf/COPYRIGHT.TXT
 share/doc/vera-ttf/README.TXT
 share/doc/vera-ttf/RELEASENOTES.TXT
 share/examples/vera-ttf/local.conf
-@dirrm share/examples/vera-ttf
-@dirrm share/doc/vera-ttf

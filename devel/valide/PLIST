@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/21 18:06:16 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:17 joerg Exp $
 bin/ctags-vala
 bin/valide
 include/valide-0.4/libvalide/aboutdialog.h
@@ -155,33 +155,3 @@ share/valide/template/sdl/icon.png
 share/valide/template/sdl/main.vala
 share/valide/template/sdl/template.xml
 share/valide/template/sdl/valide.bmp
-@dirrm share/valide/template/sdl
-@dirrm share/valide/template/opengl
-@dirrm share/valide/template/gtk
-@dirrm share/valide/template/gnome
-@dirrm share/valide/template/empty
-@dirrm share/valide/template/cmd
-@dirrm share/valide/template
-@dirrm share/valide/plugins/todo
-@dirrm share/valide/plugins/symbol/pixmaps
-@dirrm share/valide/plugins/symbol
-@dirrm share/valide/plugins/opened-documents
-@dirrm share/valide/plugins/file-browser
-@dirrm share/valide/plugins/completion/pixmaps
-@dirrm share/valide/plugins/completion
-@dirrm share/valide/plugins
-@dirrm share/valide/licenses
-@dirrm share/valide
-@dirrm share/vala/vapi
-@dirrm share/vala
-@dirrm share/pixmaps/valide
-@dirrm include/valide-0.4/plugins/todo
-@dirrm include/valide-0.4/plugins/symbol
-@dirrm include/valide-0.4/plugins/opened-documents
-@dirrm include/valide-0.4/plugins/file-browser
-@dirrm include/valide-0.4/plugins/completion/source-completion
-@dirrm include/valide-0.4/plugins/completion
-@dirrm include/valide-0.4/plugins
-@dirrm include/valide-0.4/libvalide/ui
-@dirrm include/valide-0.4/libvalide
-@dirrm include/valide-0.4

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/06/12 19:04:02 rillig Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 17:51:05 joerg Exp $
 bin/gxemul
 man/man1/gxemul.1
 share/doc/gxemul/20040504-ultrix45-boot1.png
@@ -132,4 +132,3 @@ share/doc/gxemul/technical.html
 share/doc/gxemul/translation.html
 share/doc/gxemul/ultrix4.5-20040706.png
 share/doc/gxemul/ultrix4.5-20040706_small.png
-@dirrm share/doc/gxemul

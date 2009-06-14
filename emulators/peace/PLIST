@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/26 17:26:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:51:07 joerg Exp $
 emul/pecoff/usr/bin/peace-setup
 emul/pecoff/usr/bin/regcomserver
 emul/pecoff/usr/bin/regimport
@@ -27,8 +27,3 @@ emul/pecoff/usr/lib/winmm.dll
 emul/pecoff/usr/lib/winspool.drv
 emul/pecoff/usr/lib/wsock32.dll
 emul/pecoff/usr/libexec/ld.so.dll
-@dirrm emul/pecoff/usr/libexec
-@dirrm emul/pecoff/usr/lib
-@dirrm emul/pecoff/usr/bin
-@dirrm emul/pecoff/usr
-@dirrm emul/pecoff

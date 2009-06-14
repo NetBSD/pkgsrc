@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/07 20:17:46 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:05 joerg Exp $
 bin/gpsim
 include/eXdbm/eXdbm.h
 include/eXdbm/eXdbmErrors.h
@@ -80,5 +80,3 @@ lib/libgpsim.la
 lib/libgpsimcli.la
 lib/libgpsim_modules.la
 lib/libgpsimgui.la
-@dirrm include/eXdbm
-@dirrm include/gpsim

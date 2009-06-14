@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/19 14:37:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:11 joerg Exp $
 ${RUBY_VENDORARCHLIB}/readline.${RUBY_DLEXT}
 ${RUBY_DOC}/readline/README
 ${RUBY_DOC}/readline/README.ja
-@dirrm ${RUBY_DOC}/readline

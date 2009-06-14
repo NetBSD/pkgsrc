@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/02 22:24:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:53:35 joerg Exp $
 share/gnome/help/gnucash/C/Help_ch_Account-Actions.xml
 share/gnome/help/gnucash/C/Help_ch_Customize.xml
 share/gnome/help/gnucash/C/Help_ch_GUIMenus.xml
@@ -244,11 +244,3 @@ share/gnome/help/gnucash/de_DE/txf-categories.xml
 share/omf/gnucash-docs/gnucash-guide-C.omf
 share/omf/gnucash-docs/gnucash-help-C.omf
 share/omf/gnucash-docs/gnucash-help-de_DE.omf
-@dirrm share/omf/gnucash-docs
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/gnucash/de_DE/figures
-@dirrm share/gnome/help/gnucash/de_DE
-@dirrm share/gnome/help/gnucash/C/figures
-@dirrm share/gnome/help/gnucash/C
-@dirrm share/gnome/help/gnucash
-@comment in gnome2-dirs: @dirrm share/gnome/help

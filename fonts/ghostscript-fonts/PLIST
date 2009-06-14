@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/10 12:34:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:54:14 joerg Exp $
 share/ghostscript/fonts/a010013l.afm
 share/ghostscript/fonts/a010013l.pfb
 share/ghostscript/fonts/a010013l.pfm
@@ -151,5 +151,4 @@ share/ghostscript/fonts/u004006t.pfm
 share/ghostscript/fonts/z003034l.afm
 share/ghostscript/fonts/z003034l.pfb
 share/ghostscript/fonts/z003034l.pfm
-@dirrm share/ghostscript/fonts
 @unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/19 21:42:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:00 joerg Exp $
 include/DatLib/datlib.h
 include/DatLib/driver.h
 include/DatLib/hash/md5.h
@@ -13,8 +13,3 @@ include/DatLib/type.h
 lib/libdatlib.a
 share/doc/DatLib/readme.txt
 share/doc/DatLib/whatsnew.txt
-@dirrm share/doc/DatLib
-@dirrm include/DatLib/hash
-@dirrm include/DatLib/mame
-@dirrm include/DatLib/misc
-@dirrm include/DatLib

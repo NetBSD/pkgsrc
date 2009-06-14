@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/18 14:18:18 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:55 joerg Exp $
 include/rlog/Error.h
 include/rlog/Lock.h
 include/rlog/Mutex.h
@@ -87,6 +87,3 @@ share/doc/rlog/html/rlog_2rlog_8h-source.html
 share/doc/rlog/html/rlog_2rloginit_8h-source.html
 share/doc/rlog/html/rlog_2rloglocation_8h-source.html
 share/doc/rlog/refman.pdf
-@dirrm share/doc/rlog/html
-@dirrm share/doc/rlog
-@dirrm include/rlog

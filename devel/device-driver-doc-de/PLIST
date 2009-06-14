@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/29 12:44:39 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:40 joerg Exp $
 share/device-driver-doc-de/treiber_schreiben.pdf
 share/device-driver-doc-de/treiber_schreiben.ps
-@dirrm share/device-driver-doc-de

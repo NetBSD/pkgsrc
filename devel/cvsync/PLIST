@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2004/06/20 16:44:45 gehenna Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:48:39 joerg Exp $
 bin/cvscan
 bin/cvsup2cvsync
 bin/cvsync
@@ -17,4 +17,3 @@ share/examples/cvsync/cvsync.conf
 share/examples/cvsync/cvsyncd-FreeBSD.conf
 share/examples/cvsync/cvsyncd-NetBSD.conf
 share/examples/cvsync/cvsyncd-OpenBSD.conf
-@dirrm share/examples/cvsync

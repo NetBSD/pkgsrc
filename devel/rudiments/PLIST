@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:49:13 joerg Exp $
 bin/rudiments-config
 include/rudiments/character.h
 include/rudiments/charstring.h
@@ -282,9 +282,3 @@ share/doc/rudiments/invisible.gif
 share/doc/rudiments/programming/baseclasses.html
 share/doc/rudiments/programming/utilclasses.html
 share/doc/rudiments/reference.html
-@dirrm share/doc/rudiments/programming
-@dirrm share/doc/rudiments/css
-@dirrm share/doc/rudiments/classes
-@dirrm share/doc/rudiments
-@dirrm include/rudiments/private
-@dirrm include/rudiments

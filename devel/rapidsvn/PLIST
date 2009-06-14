@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/29 22:16:07 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:07 joerg Exp $
 bin/rapidsvn
 include/svncpp/annotate_line.hpp
 include/svncpp/apr.hpp
@@ -21,4 +21,3 @@ include/svncpp/url.hpp
 include/svncpp/wc.hpp
 lib/libsvncpp.la
 man/man1/rapidsvn.1
-@dirrm include/svncpp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/07 13:28:19 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:00 joerg Exp $
 bin/netbeans
 share/doc/html/netbeans-ide/CHANGES.html
 share/doc/html/netbeans-ide/CREDITS.html
@@ -620,106 +620,7 @@ share/netbeans-ide/update_tracking/org-openide-io.xml
 share/netbeans-ide/update_tracking/org-openide-src.xml
 share/netbeans-ide/update_tracking/org-openide.xml
 share/netbeans-ide/update_tracking/org-openidex-util.xml
-@dirrm share/netbeans-ide/update_tracking
-@dirrm share/netbeans-ide/tomcat406/work
-@dirrm share/netbeans-ide/tomcat406/webapps/webdav/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/webdav
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/images
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/config
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/web/images
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/web/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/web
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/src/mypackage
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/src
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample/docs
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev/sample
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/appdev
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/tomcat-docs
-@dirrm share/netbeans-ide/tomcat406/webapps/manager/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/manager
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/servlets
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/snp
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/simpletag
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/sessions
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/security/protected
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/security
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/plugin/applet
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/plugin
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/num
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/mail
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/jsptoserv
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/include
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/forward
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/error
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/dates
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/colors
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/checkbox
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp/cal
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/jsp
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/images
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/jsp/applet
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/jsp
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/validators
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/sessions
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/num
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/listeners
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/filters
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/examples
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/error
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/dates
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/compressionFilters
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/colors
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/checkbox
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes/cal
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF/classes
-@dirrm share/netbeans-ide/tomcat406/webapps/examples/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/examples
-@dirrm share/netbeans-ide/tomcat406/webapps/ROOT/WEB-INF
-@dirrm share/netbeans-ide/tomcat406/webapps/ROOT
-@dirrm share/netbeans-ide/tomcat406/webapps
-@dirrm share/netbeans-ide/tomcat406/temp
-@dirrm share/netbeans-ide/tomcat406/server/lib
 @exec ${MKDIR} %D/share/netbeans-ide/tomcat406/server/classes
-@dirrm share/netbeans-ide/tomcat406/server/classes
-@dirrm share/netbeans-ide/tomcat406/server
-@dirrm share/netbeans-ide/tomcat406/logs
-@dirrm share/netbeans-ide/tomcat406/lib
-@dirrm share/netbeans-ide/tomcat406/conf
-@dirrm share/netbeans-ide/tomcat406/common/lib
-@dirrm share/netbeans-ide/tomcat406/common/classes
-@dirrm share/netbeans-ide/tomcat406/common
 @exec ${MKDIR} %D/share/netbeans-ide/tomcat406/classes
-@dirrm share/netbeans-ide/tomcat406/classes
-@dirrm share/netbeans-ide/tomcat406/bin
-@dirrm share/netbeans-ide/tomcat406
-@dirrm share/netbeans-ide/system/ParserDB
-@dirrm share/netbeans-ide/system/Modules
-@dirrm share/netbeans-ide/system/ModuleAutoDeps
-@dirrm share/netbeans-ide/system
-@dirrm share/netbeans-ide/modules/patches/org-apache-tools-ant-module
-@dirrm share/netbeans-ide/modules/patches
 @exec ${MKDIR} %D/share/netbeans-ide/modules/ext/locale
-@dirrm share/netbeans-ide/modules/ext/locale
-@dirrm share/netbeans-ide/modules/ext
-@dirrm share/netbeans-ide/modules/eager/ext
-@dirrm share/netbeans-ide/modules/eager
-@dirrm share/netbeans-ide/modules/docs
-@dirrm share/netbeans-ide/modules/bin
-@dirrm share/netbeans-ide/modules/autoload/ext
-@dirrm share/netbeans-ide/modules/autoload/docs
-@dirrm share/netbeans-ide/modules/autoload
-@dirrm share/netbeans-ide/modules
 @exec ${MKDIR} %D/share/netbeans-ide/lib/patches
-@dirrm share/netbeans-ide/lib/patches
-@dirrm share/netbeans-ide/lib/ext
-@dirrm share/netbeans-ide/lib
-@dirrm share/netbeans-ide/bin/icons
-@dirrm share/netbeans-ide/bin
-@dirrm share/netbeans-ide/beans
-@dirrm share/netbeans-ide
-@dirrm share/doc/html/netbeans-ide/org/netbeans/modules/usersguide
-@dirrm share/doc/html/netbeans-ide/org/netbeans/modules
-@dirrm share/doc/html/netbeans-ide/org/netbeans
-@dirrm share/doc/html/netbeans-ide/org
-@dirrm share/doc/html/netbeans-ide

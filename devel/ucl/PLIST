@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/06/17 15:15:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:17 joerg Exp $
 bin/uclpack
 include/ucl/ucl.h
 include/ucl/ucl_asm.h
@@ -6,5 +6,3 @@ include/ucl/uclconf.h
 lib/libucl.la
 share/examples/ucl/simple.c
 share/examples/ucl/uclpack.c
-@dirrm share/examples/ucl
-@dirrm include/ucl

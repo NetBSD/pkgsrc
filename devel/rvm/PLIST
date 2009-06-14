@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:13 joerg Exp $
 include/rvm/rds.h
 include/rvm/rvm.h
 include/rvm/rvm_segment.h
@@ -10,4 +10,3 @@ lib/librvmlwp.la
 lib/libseg.la
 sbin/rdsinit
 sbin/rvmutl
-@dirrm include/rvm

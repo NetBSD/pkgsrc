@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/05 20:29:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:23 joerg Exp $
 bin/jed
 bin/jed-script
 bin/rgrep
@@ -198,12 +198,3 @@ share/jed/lib/wmenu.sl
 share/jed/lib/wordstar.hlp
 share/jed/lib/wordstar.sl
 share/jed/lib/yankpop.sl
-@dirrm share/jed/lib/colors/Xjed
-@dirrm share/jed/lib/colors
-@dirrm share/jed/lib
-@dirrm share/jed/doc/txt
-@dirrm share/jed/doc/manual
-@dirrm share/jed/doc
-@dirrm share/jed/info
-@dirrm share/jed
-@dirrm share/examples/jed

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/13 18:34:24 cube Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:03 joerg Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptclib/asnber.h
@@ -173,13 +173,3 @@ share/ptlib/make/ptlib-config
 share/ptlib/make/ptlib.mak
 share/ptlib/make/unix.mak
 share/ptlib/version.h
-@dirrm share/ptlib/make
-@dirrm share/ptlib
-@dirrm lib/${PKGNAME}/devices/videoinput
-@dirrm lib/${PKGNAME}/devices/sound
-@dirrm lib/${PKGNAME}/devices
-@dirrm lib/${PKGNAME}
-@dirrm include/ptlib/unix/ptlib
-@dirrm include/ptlib/unix
-@dirrm include/ptlib
-@dirrm include/ptclib

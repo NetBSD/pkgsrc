@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:31:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:42 joerg Exp $
 ${EMACS_INFOPREFIX}/elib.info
 ${EMACS_LISPPREFIX}/elib/stack-f.el
 ${EMACS_LISPPREFIX}/elib/stack-f.elc
@@ -24,4 +24,3 @@ ${EMACS_LISPPREFIX}/elib/dll.el
 ${EMACS_LISPPREFIX}/elib/dll.elc
 ${EMACS_LISPPREFIX}/elib/dll-debug.el
 ${EMACS_LISPPREFIX}/elib/dll-debug.elc
-@dirrm ${EMACS_LISPPREFIX}/elib

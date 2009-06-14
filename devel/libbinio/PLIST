@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/10 15:50:11 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:51 joerg Exp $
 include/libbinio/binfile.h
 include/libbinio/binio.h
 include/libbinio/binstr.h
@@ -8,4 +8,3 @@ info/libbinio.info-1
 info/libbinio.info-2
 lib/libbinio.la
 lib/pkgconfig/libbinio.pc
-@dirrm include/libbinio

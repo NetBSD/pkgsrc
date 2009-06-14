@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/01/12 15:31:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:53 joerg Exp $
 include/libglademm-2.4/libglademm.h
 include/libglademm-2.4/libglademm/init.h
 include/libglademm-2.4/libglademm/private/xml_p.h
@@ -46,16 +46,3 @@ share/doc/gnomemm-2.6/libglademm-2.4/docs/reference/html/namespaces.html
 share/doc/gnomemm-2.6/libglademm-2.4/docs/reference/html/tabs.css
 share/doc/gnomemm-2.6/libglademm-2.4/docs/reference/html/variablesmap_8h.html
 share/doc/gnomemm-2.6/libglademm-2.4/docs/reference/html/xml_8h.html
-@dirrm share/doc/gnomemm-2.6/libglademm-2.4/docs/reference/html
-@dirrm share/doc/gnomemm-2.6/libglademm-2.4/docs/reference
-@dirrm share/doc/gnomemm-2.6/libglademm-2.4/docs
-@dirrm share/doc/gnomemm-2.6/libglademm-2.4
-@dirrm share/doc/gnomemm-2.6
-@dirrm share/devhelp/books/libglademm-2.4
-@dirrm lib/libglademm-2.4/proc/m4
-@dirrm lib/libglademm-2.4/proc
-@dirrm lib/libglademm-2.4/include
-@dirrm lib/libglademm-2.4
-@dirrm include/libglademm-2.4/libglademm/private
-@dirrm include/libglademm-2.4/libglademm
-@dirrm include/libglademm-2.4

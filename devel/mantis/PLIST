@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/04/23 10:45:21 gavan Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:48:57 joerg Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
@@ -701,41 +701,4 @@ share/mantis/view_all_set.php
 share/mantis/view_filters_page.php
 share/mantis/wiki.php
 share/mantis/xmlhttprequest.php
-@dirrm share/mantis/lang
-@dirrm share/mantis/javascript/projax
-@dirrm share/mantis/javascript/jscalendar/lang
-@dirrm share/mantis/javascript/jscalendar
-@dirrm share/mantis/javascript
-@dirrm share/mantis/images/fileicons
-@dirrm share/mantis/images
-@dirrm share/mantis/graphs
-@dirrm share/mantis/doc
-@dirrm share/mantis/css
-@dirrm share/mantis/core/projax/classes
-@dirrm share/mantis/core/projax
-@dirrm share/mantis/core/phpmailer/language
-@dirrm share/mantis/core/phpmailer
-@dirrm share/mantis/core/disposable
-@dirrm share/mantis/core/adodb/xsl
-@dirrm share/mantis/core/adodb/session/old
-@dirrm share/mantis/core/adodb/session
-@dirrm share/mantis/core/adodb/perf
-@dirrm share/mantis/core/adodb/pear/Auth/Container
-@dirrm share/mantis/core/adodb/pear/Auth
-@dirrm share/mantis/core/adodb/pear
-@dirrm share/mantis/core/adodb/lang
-@dirrm share/mantis/core/adodb/drivers
-@dirrm share/mantis/core/adodb/docs
-@dirrm share/mantis/core/adodb/datadict
-@dirrm share/mantis/core/adodb/cute_icons_for_site
-@dirrm share/mantis/core/adodb/contrib
-@dirrm share/mantis/core/adodb
-@dirrm share/mantis/core
-@dirrm share/mantis/api/soap/nusoap
-@dirrm share/mantis/api/soap
-@dirrm share/mantis/api
-@dirrm share/mantis/admin/upgrades
-@dirrm share/mantis/admin
 @unexec ${RMDIR} %D/share/mantis 2>/dev/null || ${TRUE}
-@dirrm share/examples/mantis
-@dirrm share/doc/mantis

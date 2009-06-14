@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/10 12:11:34 bjs Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:15 joerg Exp $
 bin/stg
 bin/stg-cvs
 bin/stg-dispatch
@@ -204,11 +204,3 @@ share/stgit/templates/covermail.tmpl
 share/stgit/templates/mailattch.tmpl
 share/stgit/templates/patchexport.tmpl
 share/stgit/templates/patchmail.tmpl
-@dirrm share/stgit/templates
-@dirrm share/stgit/contrib
-@dirrm share/stgit
-@dirrm share/examples/stgit
-@dirrm share/doc/stgit/html
-@dirrm share/doc/stgit
-@dirrm ${PYSITELIB}/stgit/commands
-@dirrm ${PYSITELIB}/stgit

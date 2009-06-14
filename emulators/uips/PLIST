@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/27 15:35:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
 bin/uips
 share/doc/uips/uips.txt
-@dirrm share/doc/uips

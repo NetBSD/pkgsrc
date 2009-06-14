@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/22 22:00:24 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:53 joerg Exp $
 include/libgnomemm-2.6/libgnomemm.h
 include/libgnomemm-2.6/libgnomemm/init.h
 include/libgnomemm-2.6/libgnomemm/main.h
@@ -13,10 +13,3 @@ lib/libgnomemm-2.6/include/libgnomemmconfig.h
 lib/libgnomemm-2.6/proc/m4/convert.m4
 lib/libgnomemm-2.6/proc/m4/convert_libgnomemm.m4
 lib/pkgconfig/libgnomemm-2.6.pc
-@dirrm lib/libgnomemm-2.6/proc/m4
-@dirrm lib/libgnomemm-2.6/proc
-@dirrm lib/libgnomemm-2.6/include
-@dirrm lib/libgnomemm-2.6
-@dirrm include/libgnomemm-2.6/libgnomemm/private
-@dirrm include/libgnomemm-2.6/libgnomemm
-@dirrm include/libgnomemm-2.6

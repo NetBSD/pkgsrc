@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/12/20 15:16:52 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:03 joerg Exp $
 bin/readdisk
 bin/uae
 share/doc/uae/bsdsocket.txt
@@ -10,4 +10,3 @@ share/doc/uae/joystick.txt
 share/doc/uae/keyboard.txt
 share/doc/uae/scsi.txt
 share/applications/e-uae.desktop
-@dirrm share/doc/uae

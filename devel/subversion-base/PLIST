@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/05/30 00:16:47 gdt Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:49:15 joerg Exp $
 bin/svn
 bin/svnadmin
 bin/svndumpfilter
@@ -106,11 +106,3 @@ share/locale/pt_BR/LC_MESSAGES/subversion.mo
 share/locale/sv/LC_MESSAGES/subversion.mo
 share/locale/zh_CN/LC_MESSAGES/subversion.mo
 share/locale/zh_TW/LC_MESSAGES/subversion.mo
-@dirrm share/examples/subversion/hook-scripts/mailer/tests
-@dirrm share/examples/subversion/hook-scripts/mailer
-@dirrm share/examples/subversion/hook-scripts
-@dirrm share/examples/subversion/cgi
-@dirrm share/examples/subversion/backup
-@dirrm share/examples/subversion
-@dirrm share/doc/subversion
-@dirrm include/subversion-1

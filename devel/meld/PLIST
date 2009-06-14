@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/20 10:53:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:58 joerg Exp $
 bin/meld
 lib/meld/diffutil.py
 lib/meld/diffutil.pyc
@@ -169,21 +169,3 @@ share/omf/meld/meld-C.omf
 share/omf/meld/meld-es.omf
 share/omf/meld/meld-fr.omf
 share/pixmaps/meld.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/meld
-@comment in rarian: @dirrm share/omf
-@dirrm share/meld/glade2/pixmaps
-@dirrm share/meld/glade2
-@dirrm share/meld
-@dirrm share/gnome/help/meld/fr
-@dirrm share/gnome/help/meld/es/figures
-@dirrm share/gnome/help/meld/es
-@dirrm share/gnome/help/meld/C/figures
-@dirrm share/gnome/help/meld/C
-@dirrm share/gnome/help/meld
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry
-@dirrm lib/meld/vc
-@dirrm lib/meld

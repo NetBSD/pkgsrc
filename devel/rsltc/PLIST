@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/30 08:24:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:07 joerg Exp $
 bin/rsltc
 share/emacs/site-lisp/rsl/rsl-mode.el
 share/emacs/site-lisp/rsl/rsl-mode.elc
@@ -8,4 +8,3 @@ share/emacs/site-lisp/rsl/rsltc.el
 share/emacs/site-lisp/rsl/rsltc.elc
 share/emacs/site-lisp/rsl/tokenise.el
 share/emacs/site-lisp/rsl/tokenise.elc
-@dirrm share/emacs/site-lisp/rsl

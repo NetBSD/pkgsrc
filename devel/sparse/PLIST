@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/21 20:46:43 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:14 joerg Exp $
 bin/cgcc
 bin/sparse
 include/sparse/allocate.h
@@ -22,5 +22,3 @@ lib/pkgconfig/sparse.pc
 share/doc/sparse/FAQ
 share/doc/sparse/LICENSE
 share/doc/sparse/README
-@dirrm include/sparse
-@dirrm share/doc/sparse

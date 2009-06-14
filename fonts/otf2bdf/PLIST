@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/14 01:47:29 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:15 joerg Exp $
 bin/otf2bdf
 man/man1/otf2bdf.1
 share/examples/otf2bdf/iso8859.1
@@ -7,4 +7,3 @@ share/examples/otf2bdf/iso8859.3
 share/examples/otf2bdf/iso8859.5
 share/examples/otf2bdf/koi8.r
 share/examples/otf2bdf/windows.1251
-@dirrm share/examples/otf2bdf

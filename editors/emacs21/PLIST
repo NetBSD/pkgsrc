@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:22 joerg Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -1768,29 +1768,5 @@ share/emacs/${EMACSVERSION}/lisp/xt-mouse.el
 share/emacs/${EMACSVERSION}/lisp/xt-mouse.elc
 share/emacs/${EMACSVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@dirrm share/emacs/${EMACSVERSION}/site-lisp
-@dirrm share/emacs/${EMACSVERSION}/lisp/toolbar
-@dirrm share/emacs/${EMACSVERSION}/lisp/textmodes
-@dirrm share/emacs/${EMACSVERSION}/lisp/term
-@dirrm share/emacs/${EMACSVERSION}/lisp/progmodes
-@dirrm share/emacs/${EMACSVERSION}/lisp/play
-@dirrm share/emacs/${EMACSVERSION}/lisp/obsolete
-@dirrm share/emacs/${EMACSVERSION}/lisp/net
-@dirrm share/emacs/${EMACSVERSION}/lisp/mail
-@dirrm share/emacs/${EMACSVERSION}/lisp/language
-@dirrm share/emacs/${EMACSVERSION}/lisp/international
-@dirrm share/emacs/${EMACSVERSION}/lisp/gnus
-@dirrm share/emacs/${EMACSVERSION}/lisp/eshell
-@dirrm share/emacs/${EMACSVERSION}/lisp/emulation
-@dirrm share/emacs/${EMACSVERSION}/lisp/emacs-lisp
-@dirrm share/emacs/${EMACSVERSION}/lisp/calendar
-@dirrm share/emacs/${EMACSVERSION}/lisp
-@dirrm share/emacs/${EMACSVERSION}/leim
-@dirrm share/emacs/${EMACSVERSION}/etc/e
-@dirrm share/emacs/${EMACSVERSION}/etc
-@dirrm share/emacs/${EMACSVERSION}
 @unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
-@dirrm libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/emacs/${EMACSVERSION}
-@dirrm libexec/emacs

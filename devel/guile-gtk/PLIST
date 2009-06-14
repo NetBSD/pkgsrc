@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/30 03:44:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:47 joerg Exp $
 bin/build-guile-gtk
 bin/build-guile-gtk-1.2
 include/guile-gtk.h
@@ -21,6 +21,3 @@ share/guile/gtk/gdk.scm
 share/guile/gtk/gtk.scm
 share/guile/gtk/repl.scm
 share/guile/gtk/threads.scm
-@dirrm share/guile/gtk-1.2
-@dirrm share/guile/gtk
-@dirrm share/guile-gtk

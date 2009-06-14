@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/03 23:34:46 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
 bin/TestEmu
 bin/VisualBoyAdvance
 share/doc/vba/README
-@dirrm share/doc/vba

@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 06:37:49 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:59 joerg Exp $
 bin/gstfs
 share/doc/fuse-gstfs/README
 share/examples/fuse-gstfs/mp32wav.sh
 share/examples/fuse-gstfs/ogg2mp3.sh
-@dirrm share/doc/fuse-gstfs
-@dirrm share/examples/fuse-gstfs

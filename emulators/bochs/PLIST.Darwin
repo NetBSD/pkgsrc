@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.3 2008/01/18 10:21:01 jmmv Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.4 2009/06/14 17:51:01 joerg Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -41,9 +41,3 @@ share/bochs/keymaps/x11-pc-se.map
 share/bochs/keymaps/x11-pc-si.map
 share/bochs/keymaps/x11-pc-uk.map
 share/bochs/keymaps/x11-pc-us.map
-@dirrm share/bochs/keymaps
-@dirrm share/bochs
-@dirrm libexec/bochs.app/Contents/Resources
-@dirrm libexec/bochs.app/Contents/MacOS
-@dirrm libexec/bochs.app/Contents
-@dirrm libexec/bochs.app

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/01 20:38:34 tonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:06 joerg Exp $
 ${PYSITELIB}/urwid/__init__.py
 ${PYSITELIB}/urwid/__init__.pyc
 ${PYSITELIB}/urwid/__init__.pyo
@@ -39,4 +39,3 @@ ${PYSITELIB}/urwid/web_display.pyo
 ${PYSITELIB}/urwid/widget.py
 ${PYSITELIB}/urwid/widget.pyc
 ${PYSITELIB}/urwid/widget.pyo
-@dirrm ${PYSITELIB}/urwid

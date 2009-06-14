@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/04/07 19:27:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:54:13 joerg Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -413,9 +413,3 @@ share/examples/fontconfig/conf.d/90-synthetic.conf
 share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
 share/examples/fontconfig/fonts.dtd
-@dirrm share/examples/fontconfig/conf.d
-@dirrm share/examples/fontconfig/conf.avail
-@dirrm share/examples/fontconfig
-@dirrm share/doc/fontconfig/fontconfig-devel
-@dirrm share/doc/fontconfig
-@dirrm include/fontconfig

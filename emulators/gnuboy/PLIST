@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/02/16 21:41:08 salo Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:04 joerg Exp $
 bin/xgnuboy
 share/doc/gnuboy/CHANGES
 share/doc/gnuboy/CONFIG
@@ -10,5 +10,3 @@ share/doc/gnuboy/README
 share/doc/gnuboy/README.old
 share/doc/gnuboy/WHATSNEW
 share/examples/gnuboy/sample.rc
-@dirrm share/examples/gnuboy
-@dirrm share/doc/gnuboy

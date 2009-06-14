@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:03 joerg Exp $
 bin/pilrc
 ${PLIST.pilrcui}bin/pilrcui
 share/doc/html/pilrc/archive.html
@@ -12,6 +12,3 @@ share/pilrc/palette-02.pbm
 share/pilrc/palette-04.pgm
 share/pilrc/palette-16.pgm
 share/pilrc/palette-256.ppm
-@dirrm share/pilrc
-@dirrm share/doc/html/pilrc/images
-@dirrm share/doc/html/pilrc

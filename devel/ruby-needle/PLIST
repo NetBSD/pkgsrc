@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:06 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:11 joerg Exp $
 ${GEM_HOME}/cache/needle-${PKGVERSION}.gem
 ${GEM_LIBDIR}/benchmarks/instantiability.rb
 ${GEM_LIBDIR}/benchmarks/instantiation.rb
@@ -120,22 +120,3 @@ ${GEM_LIBDIR}/test/tc_logger.rb
 ${GEM_LIBDIR}/test/tc_registry.rb
 ${GEM_LIBDIR}/test/tc_service_point.rb
 ${GEM_HOME}/specifications/needle-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/pipeline
-@dirrm ${GEM_LIBDIR}/test/models
-@dirrm ${GEM_LIBDIR}/test/lifecycle
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/needle/pipeline
-@dirrm ${GEM_LIBDIR}/lib/needle/lifecycle
-@dirrm ${GEM_LIBDIR}/lib/needle
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/doc/manual/stylesheets
-@dirrm ${GEM_LIBDIR}/doc/manual/parts
-@dirrm ${GEM_LIBDIR}/doc/manual/img
-@dirrm ${GEM_LIBDIR}/doc/manual-html/stylesheets
-@dirrm ${GEM_LIBDIR}/doc/manual-html
-@dirrm ${GEM_LIBDIR}/doc/manual
-@dirrm ${GEM_LIBDIR}/doc/images
-@dirrm ${GEM_LIBDIR}/doc/faq
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/benchmarks
-@dirrm ${GEM_LIBDIR}
