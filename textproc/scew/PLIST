@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/16 01:19:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:31 joerg Exp $
 include/scew/attribute.h
 include/scew/element.h
 include/scew/error.h
@@ -10,4 +10,3 @@ include/scew/tree.h
 include/scew/types.h
 lib/libscew.a
 lib/pkgconfig/scew.pc
-@dirrm include/scew

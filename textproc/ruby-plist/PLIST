@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 15:39:43 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:29 joerg Exp $
 ${GEM_HOME}/cache/plist-${PKGVERSION}.gem
 ${GEM_LIBDIR}/MIT-LICENSE
 ${GEM_LIBDIR}/README
@@ -21,9 +21,3 @@ ${GEM_LIBDIR}/test/test_generator_basic_types.rb
 ${GEM_LIBDIR}/test/test_generator_collections.rb
 ${GEM_LIBDIR}/test/test_parser.rb
 ${GEM_HOME}/specifications/plist-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/assets
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/plist
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/docs
-@dirrm ${GEM_LIBDIR}

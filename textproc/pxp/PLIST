@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/11 15:44:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:24 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp-lex-utf8
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/pxp-lex-iso88591
@@ -67,7 +67,3 @@ lib/ocaml/site-lib/pxp/META
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pxp-lex-iso88591
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pxp-lex-utf8
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/pxp
-@dirrm lib/ocaml/site-lib/pxp-lex-utf8
-@dirrm lib/ocaml/site-lib/pxp-lex-iso88591
-@dirrm lib/ocaml/site-lib/pxp-engine
-@dirrm lib/ocaml/site-lib/pxp

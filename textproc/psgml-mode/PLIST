@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/08 18:11:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:17:23 joerg Exp $
 ${EMACS_INFOPREFIX}/psgml-api.info
 ${EMACS_INFOPREFIX}/psgml.info
 ${EMACS_LISPPREFIX}/psgml-mode/iso88591.map
@@ -27,4 +27,3 @@ ${EMACS_LISPPREFIX}/psgml-mode/psgml-sysdep.el
 ${EMACS_LISPPREFIX}/psgml-mode/psgml-sysdep.elc
 ${EMACS_LISPPREFIX}/psgml-mode/psgml.el
 ${EMACS_LISPPREFIX}/psgml-mode/psgml.elc
-@dirrm ${EMACS_LISPPREFIX}/psgml-mode

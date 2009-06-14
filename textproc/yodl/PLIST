@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:35 joerg Exp $
 bin/striproff
 bin/yodl
 bin/yodl2dvi
@@ -55,5 +55,3 @@ share/yodl/tex.yo
 share/yodl/texinfo.yo
 share/yodl/txt.yo
 share/yodl/xlatin1.tex
-@dirrm share/yodl/chartables
-@dirrm share/yodl

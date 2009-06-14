@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/02 19:07:33 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:19:00 joerg Exp $
 bin/FvwmCommand
 bin/Xmetisse
 bin/Xwnc
@@ -365,38 +365,3 @@ share/metisse/fvwm/window/Vectors.theme
 share/metisse/shaders/blur-f.glsl
 share/metisse/shaders/shaders-files-list
 share/metisse/shaders/simple-anim-f.glsl
-@dirrm share/metisse/shaders
-@dirrm share/metisse/fvwm/window
-@dirrm share/metisse/fvwm/themes
-@dirrm share/metisse/fvwm/images/cursors
-@dirrm share/metisse/fvwm/images/buttons/redmond
-@dirrm share/metisse/fvwm/images/buttons/Ia_Ora
-@dirrm share/metisse/fvwm/images/buttons
-@dirrm share/metisse/fvwm/images/backgrounds
-@dirrm share/metisse/fvwm/images
-@dirrm share/metisse/fvwm/colours
-@dirrm share/metisse/fvwm
-@dirrm share/metisse/doc/docs
-@dirrm share/metisse/doc
-@dirrm share/metisse
-@dirrm share/fvwm-insitu/perllib/General
-@dirrm share/fvwm-insitu/perllib/FVWM/Tracker
-@dirrm share/fvwm-insitu/perllib/FVWM/Module
-@dirrm share/fvwm-insitu/perllib/FVWM
-@dirrm share/fvwm-insitu/perllib
-@dirrm share/fvwm-insitu/opale/icons/16x16/places
-@dirrm share/fvwm-insitu/opale/icons/16x16/devices
-@dirrm share/fvwm-insitu/opale/icons/16x16/categories
-@dirrm share/fvwm-insitu/opale/icons/16x16/apps
-@dirrm share/fvwm-insitu/opale/icons/16x16/actions
-@dirrm share/fvwm-insitu/opale/icons/16x16
-@dirrm share/fvwm-insitu/opale/icons
-@dirrm share/fvwm-insitu/opale/backgrounds
-@dirrm share/fvwm-insitu/opale-common
-@dirrm share/fvwm-insitu/opale
-@dirrm share/fvwm-insitu
-@dirrm libexec/fvwm-insitu/2.5.20
-@dirrm libexec/fvwm-insitu
-@dirrm lib/python2.4/site-packages
-@dirrm include/libmetisse
-@dirrm etc/X11/dm/Sessions

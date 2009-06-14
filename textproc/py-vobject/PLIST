@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/18 16:56:23 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:26 joerg Exp $
 bin/change_tz
 bin/ics_diff
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -35,5 +35,3 @@ ${PYSITELIB}/vobject/vcard.pyo
 ${PYSITELIB}/vobject/win32tz.py
 ${PYSITELIB}/vobject/win32tz.pyc
 ${PYSITELIB}/vobject/win32tz.pyo
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/vobject

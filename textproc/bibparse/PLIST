@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:56:21 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:12 joerg Exp $
 bin/bibdup
 bin/biblex
 bin/bibparse
@@ -8,5 +8,3 @@ man/man1/biblex.1
 man/man1/bibparse.1
 man/man1/bibunlex.1
 share/lib/bibdup/bibdup.awk
-@dirrm share/lib/bibdup
-@dirrm share/lib

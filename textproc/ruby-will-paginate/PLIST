@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/29 18:02:05 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:30 joerg Exp $
 ${GEM_HOME}/cache/will_paginate-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/LICENSE
@@ -43,10 +43,3 @@ ${GEM_LIBDIR}/test/lib/load_fixtures.rb
 ${GEM_LIBDIR}/test/lib/view_test_process.rb
 ${GEM_LIBDIR}/test/view_test.rb
 ${GEM_HOME}/specifications/will_paginate-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/lib
-@dirrm ${GEM_LIBDIR}/test/fixtures
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/will_paginate
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

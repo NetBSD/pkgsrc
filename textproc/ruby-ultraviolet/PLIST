@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 15:43:34 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:30 joerg Exp $
 bin/theme2latexrender
 bin/theme2xhtmlrender
 bin/uv
@@ -237,15 +237,3 @@ ${GEM_LIBDIR}/syntax/yaml.syntax
 ${GEM_LIBDIR}/syntax/yui_javascript.syntax
 ${GEM_LIBDIR}/test/test_uv.rb
 ${GEM_HOME}/specifications/ultraviolet-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/syntax
-@dirrm ${GEM_LIBDIR}/render/xhtml/files/css
-@dirrm ${GEM_LIBDIR}/render/xhtml/files
-@dirrm ${GEM_LIBDIR}/render/xhtml
-@dirrm ${GEM_LIBDIR}/render/old
-@dirrm ${GEM_LIBDIR}/render/latex
-@dirrm ${GEM_LIBDIR}/render
-@dirrm ${GEM_LIBDIR}/lib/uv
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

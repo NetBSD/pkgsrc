@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/04/17 10:32:29 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:19:00 joerg Exp $
 bin/oroborus
 man/man1/oroborus.1
 man/man5/oroborusrc.5
@@ -452,18 +452,3 @@ share/oroborus/themes/windows/top-left-active.xpm
 share/oroborus/themes/windows/top-left-inactive.xpm
 share/oroborus/themes/windows/top-right-active.xpm
 share/oroborus/themes/windows/top-right-inactive.xpm
-@dirrm share/oroborus/themes/windows
-@dirrm share/oroborus/themes/slimline
-@dirrm share/oroborus/themes/platinum
-@dirrm share/oroborus/themes/pillage
-@dirrm share/oroborus/themes/oroborus
-@dirrm share/oroborus/themes/next
-@dirrm share/oroborus/themes/gorillaworm
-@dirrm share/oroborus/themes/e017
-@dirrm share/oroborus/themes/cruxish
-@dirrm share/oroborus/themes/beos
-@dirrm share/oroborus/themes/agua
-@dirrm share/oroborus/themes/QNX
-@dirrm share/oroborus/themes
-@dirrm share/oroborus/schemes
-@dirrm share/oroborus

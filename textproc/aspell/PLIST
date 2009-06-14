@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/29 11:40:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:17:12 joerg Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -125,6 +125,3 @@ share/locale/tg/LC_MESSAGES/aspell.mo
 share/locale/uk/LC_MESSAGES/aspell.mo
 share/locale/vi/LC_MESSAGES/aspell.mo
 share/locale/wa/LC_MESSAGES/aspell.mo
-@dirrm share/aspell
-@dirrm lib/aspell
-@dirrm include/pspell

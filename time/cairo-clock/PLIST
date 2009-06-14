@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/03 16:28:37 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:57 joerg Exp $
 bin/cairo-clock
 man/man1/cairo-clock.1
 share/applications/cairo-clock.desktop
@@ -249,28 +249,3 @@ share/locale/tr/LC_MESSAGES/cairo-clock.mo
 share/locale/zh_CN/LC_MESSAGES/cairo-clock.mo
 share/locale/zh_TW/LC_MESSAGES/cairo-clock.mo
 share/pixmaps/cairo-clock.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/cairo-clock/themes/zen
-@dirrm share/cairo-clock/themes/tango
-@dirrm share/cairo-clock/themes/simple-24
-@dirrm share/cairo-clock/themes/simple
-@dirrm share/cairo-clock/themes/silvia-24
-@dirrm share/cairo-clock/themes/silvia
-@dirrm share/cairo-clock/themes/radium-24
-@dirrm share/cairo-clock/themes/radium
-@dirrm share/cairo-clock/themes/quartz-24
-@dirrm share/cairo-clock/themes/ipulse-24
-@dirrm share/cairo-clock/themes/ipulse
-@dirrm share/cairo-clock/themes/gremlin-24
-@dirrm share/cairo-clock/themes/gremlin
-@dirrm share/cairo-clock/themes/glassy
-@dirrm share/cairo-clock/themes/funky
-@dirrm share/cairo-clock/themes/fdo
-@dirrm share/cairo-clock/themes/default-24
-@dirrm share/cairo-clock/themes/default
-@dirrm share/cairo-clock/themes/antique
-@dirrm share/cairo-clock/themes
-@dirrm share/cairo-clock/pixmaps
-@dirrm share/cairo-clock/glade
-@dirrm share/cairo-clock
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:30 joerg Exp $
 ${GEM_HOME}/cache/simple-rss-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -28,13 +28,3 @@ ${GEM_LIBDIR}/test/data/rss09.rdf
 ${GEM_LIBDIR}/test/data/rss20.xml
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_HOME}/specifications/simple-rss-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test/base
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/html/files/lib
-@dirrm ${GEM_LIBDIR}/html/files
-@dirrm ${GEM_LIBDIR}/html/classes/SimpleRSS.src
-@dirrm ${GEM_LIBDIR}/html/classes
-@dirrm ${GEM_LIBDIR}/html
-@dirrm ${GEM_LIBDIR}

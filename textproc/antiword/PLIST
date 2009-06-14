@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/11/14 23:04:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:12 joerg Exp $
 bin/antiword
 bin/kantiword
 man/man1/antiword.1
@@ -45,5 +45,3 @@ share/doc/antiword/History
 share/doc/antiword/Netscape
 share/doc/antiword/QandA
 share/doc/antiword/ReadMe
-@dirrm share/antiword
-@dirrm share/doc/antiword

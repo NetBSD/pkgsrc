@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:19:02 joerg Exp $
 bin/mkpreview
 bin/wmakerconf
 man/man1/mkpreview.1
@@ -61,4 +61,3 @@ share/wmakerconf/wm-oldmenu2new.sh
 share/wmakerconf/wmaker-version
 share/wmakerconf/wmakerconf.xpm
 share/wmakerconf/workspace.xpm
-@dirrm share/wmakerconf

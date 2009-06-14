@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/27 13:58:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:24 joerg Exp $
 ${PYSITELIB}/cmTemplate.py
 ${PYSITELIB}/cmTemplate.pyc
 share/doc/${PYPKGPREFIX}-cmTemplate/cmTemplate.html
-@dirrm share/doc/${PYPKGPREFIX}-cmTemplate

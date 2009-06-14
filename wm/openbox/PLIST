@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/04/24 20:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:19:00 joerg Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/openbox
@@ -118,34 +118,3 @@ share/themes/Syscrash/openbox-3/themerc
 share/xsessions/openbox-gnome.desktop
 share/xsessions/openbox-kde.desktop
 share/xsessions/openbox.desktop
-@dirrm share/xsessions
-@dirrm share/themes/Syscrash/openbox-3
-@dirrm share/themes/Syscrash
-@dirrm share/themes/Orang/openbox-3
-@dirrm share/themes/Orang
-@dirrm share/themes/Onyx-Citrus/openbox-3
-@dirrm share/themes/Onyx-Citrus
-@dirrm share/themes/Onyx/openbox-3
-@dirrm share/themes/Onyx
-@dirrm share/themes/Natura/openbox-3
-@dirrm share/themes/Natura
-@dirrm share/themes/Mikachu/openbox-3
-@dirrm share/themes/Mikachu
-@dirrm share/themes/Clearlooks/openbox-3
-@dirrm share/themes/Clearlooks
-@dirrm share/themes/Clearlooks-Olive/openbox-3
-@dirrm share/themes/Clearlooks-Olive
-@dirrm share/themes/Bear2/openbox-3
-@dirrm share/themes/Bear2
-@dirrm share/themes/Artwiz-boxed/openbox-3
-@dirrm share/themes/Artwiz-boxed
-@comment in xdg-dirs: @dirrm share/themes
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in gnome2-dirs: @dirrm share/gnome/wm-properties
-@dirrm share/examples/openbox
-@dirrm share/doc/openbox/xbm
-@dirrm share/doc/openbox
-@dirrm lib/openbox
-@dirrm include/openbox/3.4/openbox
-@dirrm include/openbox/3.4
-@dirrm include/openbox

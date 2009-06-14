@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 22:07:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:00 joerg Exp $
 bin/rsibreak
 share/applications/kde/rsibreak.desktop
 share/doc/kde/HTML/da/rsibreak/common
@@ -81,37 +81,5 @@ share/locale/sr/LC_MESSAGES/rsibreak.mo
 share/locale/sr@Latn/LC_MESSAGES/rsibreak.mo
 share/locale/sv/LC_MESSAGES/rsibreak.mo
 share/locale/tr/LC_MESSAGES/rsibreak.mo
-@comment in kde: @dirrm share/kde/autostart
-@dirrm share/kde/apps/rsibreak/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/rsibreak/icons/hicolor/32x32
-@dirrm share/kde/apps/rsibreak/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/rsibreak/icons/hicolor/22x22
-@dirrm share/kde/apps/rsibreak/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/rsibreak/icons/hicolor/16x16
-@dirrm share/kde/apps/rsibreak/icons/hicolor
-@dirrm share/kde/apps/rsibreak/icons
-@dirrm share/kde/apps/rsibreak
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/sv/rsibreak
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt/rsibreak
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/rsibreak
-@comment in kde: @dirrm share/doc/kde/HTML/nl
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/src
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak/html
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs/rsibreak
-@dirrm share/doc/kde/HTML/en/${PKGNAME}-apidocs
-@dirrm share/doc/kde/HTML/en/rsibreak
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/rsibreak
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde

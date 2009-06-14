@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/06/19 14:55:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:17:27 joerg Exp $
 bin/eruby
 include/eruby.h
 lib/liberuby.a
@@ -16,5 +16,3 @@ ${RUBY_EG}/eruby/e2r.rb
 ${RUBY_EG}/eruby/foo.rhtml
 ${RUBY_EG}/eruby/test.rb
 ${RUBY_EG}/eruby/test.rhtml
-@dirrm ${RUBY_DOC}/eruby
-@dirrm ${RUBY_EG}/eruby

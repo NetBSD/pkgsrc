@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.7 2007/09/18 21:06:15 heinz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:23 joerg Exp $
 share/examples/p5-XML-SAX/ParserDetails.ini
-@dirrm share/examples/p5-XML-SAX

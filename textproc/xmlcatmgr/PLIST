@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2004/09/01 09:43:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:17:34 joerg Exp $
 bin/xmlcatmgr
 man/man1/xmlcatmgr.1
 share/doc/xmlcatmgr/AUTHORS
@@ -10,5 +10,3 @@ share/examples/xmlcatmgr/catalog.etc.sgml
 share/examples/xmlcatmgr/catalog.etc.xml
 share/examples/xmlcatmgr/catalog.share.sgml
 share/examples/xmlcatmgr/catalog.share.xml
-@dirrm share/examples/xmlcatmgr
-@dirrm share/doc/xmlcatmgr

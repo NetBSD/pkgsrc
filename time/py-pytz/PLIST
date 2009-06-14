@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/23 11:37:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:18:00 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -586,27 +586,3 @@ ${PYSITELIB}/pytz/zoneinfo/iso3166.tab
 ${PYSITELIB}/pytz/zoneinfo/localtime
 ${PYSITELIB}/pytz/zoneinfo/posixrules
 ${PYSITELIB}/pytz/zoneinfo/zone.tab
-@dirrm ${PYSITELIB}/pytz/zoneinfo/US
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Pacific
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Mideast
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Mexico
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Indian
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Europe
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Etc
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Chile
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Canada
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Brazil
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Australia
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Atlantic
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Asia
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Arctic
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Antarctica
-@dirrm ${PYSITELIB}/pytz/zoneinfo/America/North_Dakota
-@dirrm ${PYSITELIB}/pytz/zoneinfo/America/Kentucky
-@dirrm ${PYSITELIB}/pytz/zoneinfo/America/Indiana
-@dirrm ${PYSITELIB}/pytz/zoneinfo/America/Argentina
-@dirrm ${PYSITELIB}/pytz/zoneinfo/America
-@dirrm ${PYSITELIB}/pytz/zoneinfo/Africa
-@dirrm ${PYSITELIB}/pytz/zoneinfo
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/pytz

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/22 12:20:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:21 joerg Exp $
 include/libxml++-2.6/libxml++/attribute.h
 include/libxml++-2.6/libxml++/document.h
 include/libxml++-2.6/libxml++/dtd.h
@@ -336,18 +336,3 @@ share/doc/libxml++-2.6/docs/reference/html/textnode_8h.html
 share/doc/libxml++-2.6/docs/reference/html/textreader_8h.html
 share/doc/libxml++-2.6/docs/reference/html/validator_8h.html
 share/doc/libxml++-2.6/docs/reference/html/validity__error_8h.html
-@dirrm share/doc/libxml++-2.6/docs/reference/html
-@dirrm share/doc/libxml++-2.6/docs/reference
-@dirrm share/doc/libxml++-2.6/docs/manual/html
-@dirrm share/doc/libxml++-2.6/docs/manual
-@dirrm share/doc/libxml++-2.6/docs
-@dirrm share/doc/libxml++-2.6
-@dirrm lib/libxml++-2.6/include
-@dirrm lib/libxml++-2.6
-@dirrm include/libxml++-2.6/libxml++/validators
-@dirrm include/libxml++-2.6/libxml++/parsers
-@dirrm include/libxml++-2.6/libxml++/nodes
-@dirrm include/libxml++-2.6/libxml++/io
-@dirrm include/libxml++-2.6/libxml++/exceptions
-@dirrm include/libxml++-2.6/libxml++
-@dirrm include/libxml++-2.6

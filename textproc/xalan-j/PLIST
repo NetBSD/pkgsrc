@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/18 21:37:52 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:34 joerg Exp $
 lib/java/bsf.jar
 lib/java/xalan.jar
 share/doc/java/xalan/apidocs/allclasses-frame.html
@@ -519,37 +519,4 @@ share/examples/java/xalan/UseStylesheetParam/foo.xml
 share/examples/java/xalan/UseStylesheetParam/foo.xsl
 share/examples/java/xalan/UseStylesheetParam/readme.html
 share/examples/java/xalan/xalansamples.jar
-@dirrm share/examples/java/xalan/UseStylesheetParam
-@dirrm share/examples/java/xalan/TransformToDom
-@dirrm share/examples/java/xalan/SimpleTransform
-@dirrm share/examples/java/xalan/Servlet
-@dirrm share/examples/java/xalan/PureSAX
-@dirrm share/examples/java/xalan/Pipe
-@dirrm share/examples/java/xalan/Extensions
-@dirrm share/examples/java/xalan/ApplyXPath
-@dirrm share/examples/java/xalan/AppletXMLtoHTML
-@dirrm share/examples/java/xalan
-@dirrm share/doc/java/xalan/resources
-@dirrm share/doc/java/xalan/graphics
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/trace/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/trace
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/extensions/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/extensions
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/client/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/client
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xslt
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/xml/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/xml
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/xdom/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/xdom
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/dtm/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/dtm
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath/class-use
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan/xpath
-@dirrm share/doc/java/xalan/apidocs/org/apache/xalan
-@dirrm share/doc/java/xalan/apidocs/org/apache
-@dirrm share/doc/java/xalan/apidocs/org
-@dirrm share/doc/java/xalan/apidocs
-@dirrm share/doc/java/xalan
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/01/13 18:15:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:23 joerg Exp $
 bin/sgmlspl
 ${PERL5_SUB_INSTALLVENDORLIB}/SGMLS.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/SGMLS/Output.pm
@@ -39,7 +39,3 @@ share/doc/p5-SGMLS/sgmlspl/skel.html
 share/doc/p5-SGMLS/sgmlspl/specific.html
 share/doc/p5-SGMLS/sgmlspl/specs.html
 share/doc/p5-SGMLS/sgmlspl/terms.html
-@dirrm share/doc/p5-SGMLS/sgmlspl
-@dirrm share/doc/p5-SGMLS/SGMLSpm
-@dirrm share/doc/p5-SGMLS
-@dirrm ${PERL5_SUB_INSTALLVENDORLIB}/SGMLS

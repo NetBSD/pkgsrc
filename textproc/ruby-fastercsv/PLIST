@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/07 18:03:35 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
 ${GEM_HOME}/cache/fastercsv-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/CHANGELOG
@@ -31,7 +31,3 @@ ${GEM_LIBDIR}/test/tc_table.rb
 ${GEM_LIBDIR}/test/test_data.csv
 ${GEM_LIBDIR}/test/ts_all.rb
 ${GEM_HOME}/specifications/fastercsv-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

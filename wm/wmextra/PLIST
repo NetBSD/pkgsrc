@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 20:59:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:19:03 joerg Exp $
 share/WindowMaker/Icons/Ant.xpm
 share/WindowMaker/Icons/Antennae.xpm
 share/WindowMaker/Icons/Bee48x48.xpm
@@ -73,7 +73,3 @@ share/WindowMaker/Themes/Night.themed/SeaNight.jpeg
 share/WindowMaker/Themes/Night.themed/style
 share/WindowMaker/Themes/STEP2000.themed/BlueImage2.jpeg
 share/WindowMaker/Themes/STEP2000.themed/style
-@dirrm share/WindowMaker/Themes/Checker.themed
-@dirrm share/WindowMaker/Themes/LeetWM.themed
-@dirrm share/WindowMaker/Themes/Night.themed
-@dirrm share/WindowMaker/Themes/STEP2000.themed

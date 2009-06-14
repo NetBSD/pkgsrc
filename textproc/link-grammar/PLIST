@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/14 22:24:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:22 joerg Exp $
 bin/grammar-parse
 include/link-grammar/link-features.h
 include/link-grammar/link-includes.h
@@ -77,8 +77,3 @@ share/link-grammar/lt/4.0.affix
 share/link-grammar/lt/4.0.constituent-knowledge
 share/link-grammar/lt/4.0.dict
 share/link-grammar/lt/4.0.knowledge
-@dirrm share/link-grammar/lt
-@dirrm share/link-grammar/en/words
-@dirrm share/link-grammar/en
-@dirrm share/link-grammar
-@dirrm include/link-grammar

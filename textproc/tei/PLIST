@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/08/03 14:04:09 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:32 joerg Exp $
 share/xml/tei/dummy.dtd
 share/xml/tei/tei2.dtd
 share/xml/tei/teiana2.dtd
@@ -51,5 +51,3 @@ share/xml/tei/teivers2.dtd
 share/xml/tei/teivers2.ent
 share/xml/tei/teiwsd2.dtd
 share/xml/tei/teixlite.dec
-@dirrm share/xml/tei
-@comment in xmlcatmgr: @dirrm share/xml

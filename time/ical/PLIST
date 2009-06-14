@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/08 15:40:07 wulf Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:58 joerg Exp $
 bin/ical
 bin/ical-2.3
 lib/ical/v2.3/actions.tcl
@@ -63,7 +63,3 @@ lib/ical/v2.3/tcllib/textwin.tcl
 lib/ical/v2.3/timerange.tcl
 lib/ical/v2.3/trigger.tcl
 man/man1/ical.1
-@dirrm lib/ical/v2.3/contrib
-@dirrm lib/ical/v2.3/tcllib
-@dirrm lib/ical/v2.3
-@dirrm lib/ical

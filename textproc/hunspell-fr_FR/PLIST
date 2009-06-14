@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/19 15:02:06 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:18 joerg Exp $
 share/doc/hunspell-${DICTNAME}/README_${DICTNAME}.txt
 share/hunspell/${DICTNAME}.aff
 share/hunspell/${DICTNAME}.dic
-@dirrm share/doc/hunspell-${DICTNAME}

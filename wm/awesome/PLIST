@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/07/15 14:31:12 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:56 joerg Exp $
 bin/awesome
 bin/awesome-client
 bin/awesome-menu
@@ -33,8 +33,3 @@ share/doc/awesome/STYLE
 share/doc/awesome/UPGRADE
 share/doc/awesome/awesomerc
 share/examples/awesome/awesomerc
-@dirrm share/examples/awesome
-@dirrm share/doc/awesome
-@dirrm share/awesome/icons/layouts
-@dirrm share/awesome/icons
-@dirrm share/awesome

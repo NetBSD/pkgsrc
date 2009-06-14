@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/14 18:26:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:18:57 joerg Exp $
 include/compiz/text.h
 lib/compiz/libanimation.la
 lib/compiz/libcolorfilter.la
@@ -75,5 +75,3 @@ share/locale/pt/LC_MESSAGES/compiz-fusion-plugins-main.mo
 share/locale/sv/LC_MESSAGES/compiz-fusion-plugins-main.mo
 share/locale/tr/LC_MESSAGES/compiz-fusion-plugins-main.mo
 share/locale/zh_CN/LC_MESSAGES/compiz-fusion-plugins-main.mo
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/compiz/filters

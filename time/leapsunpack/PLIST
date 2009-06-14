@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/30 13:59:25 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:59 joerg Exp $
 bin/leapsinstall
 bin/leapsunpack
 share/doc/leapsunpack/INSTALL
-@dirrm share/doc/leapsunpack

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/01 08:29:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:31 joerg Exp $
 bin/mksary
 bin/sary
 include/sary.h
@@ -32,9 +32,3 @@ share/sary/docs/images/figure5.png
 share/sary/docs/ja/libsary.html
 share/sary/docs/ja/suffix-array.html
 share/sary/docs/sary.css
-@dirrm share/sary/docs/ja
-@dirrm share/sary/docs/images
-@dirrm share/sary/docs/en
-@dirrm share/sary/docs
-@dirrm share/sary
-@dirrm include/sary

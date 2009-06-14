@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 13:40:53 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:58 joerg Exp $
 bin/dbd
 bin/j2d
 bin/jday
@@ -12,4 +12,3 @@ share/jday/Jday.php
 share/jday/Jday.pl
 share/jday/dbd.awk
 share/jday/jday.awk
-@dirrm share/jday

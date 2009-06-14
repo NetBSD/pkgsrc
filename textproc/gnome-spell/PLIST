@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/26 00:29:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:16 joerg Exp $
 lib/bonobo/servers/GNOME_Spell.server
 lib/gnome-spell/libgnome-spell-component.la
 share/${PKGNAME}/spell-checker.glade
@@ -55,8 +55,3 @@ share/locale/vi/LC_MESSAGES/${PKGNAME}.mo
 share/locale/wa/LC_MESSAGES/${PKGNAME}.mo
 share/locale/xh/LC_MESSAGES/${PKGNAME}.mo
 share/locale/zh_CN/LC_MESSAGES/${PKGNAME}.mo
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/${PKGNAME}
-@comment in gnome2-dirs: @dirrm share/control-center-2.0/icons
-@dirrm lib/gnome-spell
-@comment in libbonobo: @dirrm lib/bonobo/servers

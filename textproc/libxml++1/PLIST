@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/20 21:03:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:21 joerg Exp $
 include/libxml++-1.0/libxml++/api_export.h
 include/libxml++-1.0/libxml++/attribute.h
 include/libxml++-1.0/libxml++/document.h
@@ -25,9 +25,3 @@ include/libxml++-1.0/libxml++/parsers/parser.h
 include/libxml++-1.0/libxml++/parsers/saxparser.h
 lib/libxml++-1.0.la
 lib/pkgconfig/libxml++-1.0.pc
-@dirrm include/libxml++-1.0/libxml++/parsers
-@dirrm include/libxml++-1.0/libxml++/nodes
-@dirrm include/libxml++-1.0/libxml++/io
-@dirrm include/libxml++-1.0/libxml++/exceptions
-@dirrm include/libxml++-1.0/libxml++
-@dirrm include/libxml++-1.0

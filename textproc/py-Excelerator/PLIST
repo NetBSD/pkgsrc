@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/08 00:32:21 mjl Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:24 joerg Exp $
 ${PYSITELIB}/pyExcelerator/BIFFRecords.py
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyc
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyo
@@ -98,6 +98,3 @@ share/examples/py-Excelerator/xls2csv-gerry.py
 share/examples/py-Excelerator/xls2csv.py
 share/examples/py-Excelerator/xls2html.py
 share/examples/py-Excelerator/xls2txt.py
-@dirrm share/examples/py-Excelerator
-@dirrm share/doc/py-Excelerator
-@dirrm ${PYSITELIB}/pyExcelerator

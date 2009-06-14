@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/06 08:56:58 kefren Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:16 joerg Exp $
 bin/gnome-subtitles
 share/gconf/schemas/gnome-subtitles.schemas
 lib/gnome-subtitles/GStreamerPlaybin.dll
@@ -37,13 +37,3 @@ share/omf/gnome-subtitles/gnome-subtitles-fr.omf
 share/omf/gnome-subtitles/gnome-subtitles-oc.omf
 share/omf/gnome-subtitles/gnome-subtitles-sv.omf
 share/pixmaps/gnome-subtitles.png
-@dirrm share/omf/gnome-subtitles
-@dirrm share/gnome/help/gnome-subtitles/C
-@dirrm share/gnome/help/gnome-subtitles/ca
-@dirrm share/gnome/help/gnome-subtitles/el
-@dirrm share/gnome/help/gnome-subtitles/es
-@dirrm share/gnome/help/gnome-subtitles/fr
-@dirrm share/gnome/help/gnome-subtitles/oc
-@dirrm share/gnome/help/gnome-subtitles/sv
-@dirrm share/gnome/help/gnome-subtitles
-@dirrm lib/gnome-subtitles

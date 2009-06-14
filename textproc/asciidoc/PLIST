@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/03/06 15:17:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:17:12 joerg Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -67,16 +67,3 @@ share/asciidoc/xhtml11-quirks.conf
 share/asciidoc/xhtml11.conf
 share/doc/asciidoc/asciidoc.html
 share/doc/asciidoc/asciidoc.txt
-@dirrm share/doc/asciidoc
-@dirrm share/asciidoc/stylesheets
-@dirrm share/asciidoc/javascripts
-@dirrm share/asciidoc/images/icons/callouts
-@dirrm share/asciidoc/images/icons
-@dirrm share/asciidoc/images
-@dirrm share/asciidoc/filters/source
-@dirrm share/asciidoc/filters/music
-@dirrm share/asciidoc/filters/graphviz
-@dirrm share/asciidoc/filters/code
-@dirrm share/asciidoc/filters
-@dirrm share/asciidoc/docbook-xsl
-@dirrm share/asciidoc

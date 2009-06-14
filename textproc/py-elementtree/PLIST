@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/21 12:13:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:25 joerg Exp $
 ${PYSITELIB}/elementtree/__init__.py
 ${PYSITELIB}/elementtree/__init__.pyc
 ${PYSITELIB}/elementtree/__init__.pyo
@@ -32,4 +32,3 @@ ${PYSITELIB}/elementtree/TidyTools.pyo
 ${PYSITELIB}/elementtree/XMLTreeBuilder.py
 ${PYSITELIB}/elementtree/XMLTreeBuilder.pyc
 ${PYSITELIB}/elementtree/XMLTreeBuilder.pyo
-@dirrm ${PYSITELIB}/elementtree

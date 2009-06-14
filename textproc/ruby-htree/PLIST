@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:55:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:28 joerg Exp $
 ${RUBY_VENDORLIB}/htree.rb
 ${RUBY_VENDORLIB}/htree/container.rb
 ${RUBY_VENDORLIB}/htree/context.rb
@@ -26,4 +26,3 @@ ${RUBY_VENDORLIB}/htree/tag.rb
 ${RUBY_VENDORLIB}/htree/template.rb
 ${RUBY_VENDORLIB}/htree/text.rb
 ${RUBY_VENDORLIB}/htree/traverse.rb
-@dirrm ${RUBY_VENDORLIB}/htree

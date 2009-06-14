@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/23 22:06:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:18:01 joerg Exp $
 bin/wmclockmon
 bin/wmclockmon-cal
 bin/wmclockmon-config
@@ -77,4 +77,3 @@ share/wmclockmon/new.pwcs
 share/wmclockmon/parts.xpm
 share/wmclockmon/parts_color.xpm
 share/wmclockmon/parts_new.xpm
-@dirrm share/wmclockmon

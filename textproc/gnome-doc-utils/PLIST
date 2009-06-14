@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/03/17 10:50:14 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:17:16 joerg Exp $
 bin/gnome-doc-prepare
 bin/gnome-doc-tool
 bin/xml2po
@@ -192,29 +192,3 @@ share/xml2po/ubuntu.py
 share/xml2po/ubuntu.pyc
 share/xml2po/xhtml.py
 share/xml2po/xhtml.pyc
-@dirrm share/xml2po
-@dirrm share/xml/gnome/xslt/gettext
-@dirrm share/xml/gnome/xslt/docbook/utils
-@dirrm share/xml/gnome/xslt/docbook/omf
-@dirrm share/xml/gnome/xslt/docbook/html
-@dirrm share/xml/gnome/xslt/docbook/common
-@dirrm share/xml/gnome/xslt/docbook
-@dirrm share/xml/gnome/xslt/common
-@dirrm share/xml/gnome/xslt
-@dirrm share/xml/gnome
-@comment in xmlcatmgr: @dirrm share/xml
-@dirrm share/omf/gnome-doc-xslt
-@dirrm share/omf/gnome-doc-make
-@comment in scrollkeeper: @dirrm share/omf
-@dirrm share/gnome/help/gnome-doc-xslt/C
-@dirrm share/gnome/help/gnome-doc-xslt
-@dirrm share/gnome/help/gnome-doc-make/C
-@dirrm share/gnome/help/gnome-doc-make
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-doc-utils/watermarks
-@dirrm share/gnome-doc-utils/templates
-@dirrm share/gnome-doc-utils/icons/hicolor/scalable
-@dirrm share/gnome-doc-utils/icons/hicolor/48x48
-@dirrm share/gnome-doc-utils/icons/hicolor
-@dirrm share/gnome-doc-utils/icons
-@dirrm share/gnome-doc-utils

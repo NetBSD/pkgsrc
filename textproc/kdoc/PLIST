@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:20 joerg Exp $
 bin/kdoc
 bin/makekdedoc
 bin/qt2kdoc
@@ -26,5 +26,3 @@ share/kdoc/kdocParsePy.pm
 share/kdoc/kdocParser.pm
 share/kdoc/kdocUtil.pm
 share/kdoc/kdoctexi.pm
-@dirrm share/kdoc
-@dirrm share/doc/kdoc

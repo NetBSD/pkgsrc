@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/05 00:13:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:57 joerg Exp $
 bin/csched
 lib/cardboard-schedule/cs/images/Logo.gif
 lib/cardboard-schedule/cs/images/Logo2.gif
@@ -7,7 +7,3 @@ lib/cardboard-schedule/stage/cs.jar
 lib/cardboard-schedule/stage/jhbasic.jar
 lib/cardboard-schedule/stage/license.txt
 lib/cardboard-schedule/stage/readme.txt
-@dirrm lib/cardboard-schedule/stage
-@dirrm lib/cardboard-schedule/cs/images
-@dirrm lib/cardboard-schedule/cs
-@dirrm lib/cardboard-schedule

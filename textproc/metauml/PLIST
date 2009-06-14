@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/01 20:41:37 tonio Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:22 joerg Exp $
 ${MPDIR}/metauml.mp
 ${MPDIR}/metauml_activity.mp
 ${MPDIR}/metauml_base.mp
@@ -32,4 +32,3 @@ ${MPDIR}/util_picture.mp
 ${MPDIR}/util_picture_stack.mp
 ${MPDIR}/util_positioning.mp
 ${MPDIR}/util_shade.mp
-@dirrm ${MPDIR}

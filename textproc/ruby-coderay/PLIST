@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:21:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:27 joerg Exp $
 bin/coderay
 bin/coderay_stylesheet
 ${GEM_HOME}/cache/coderay-${PKGVERSION}.gem
@@ -49,13 +49,3 @@ ${GEM_LIBDIR}/lib/coderay/styles/cycnus.rb
 ${GEM_LIBDIR}/lib/coderay/styles/murphy.rb
 ${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_HOME}/specifications/coderay-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/coderay/styles
-@dirrm ${GEM_LIBDIR}/lib/coderay/scanners/ruby
-@dirrm ${GEM_LIBDIR}/lib/coderay/scanners
-@dirrm ${GEM_LIBDIR}/lib/coderay/helpers
-@dirrm ${GEM_LIBDIR}/lib/coderay/encoders/html
-@dirrm ${GEM_LIBDIR}/lib/coderay/encoders
-@dirrm ${GEM_LIBDIR}/lib/coderay
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

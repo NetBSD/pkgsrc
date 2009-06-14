@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/09 18:38:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:33 joerg Exp $
 bin/tblcvt
 bin/tc2html
 bin/tc2html-toc
@@ -39,4 +39,3 @@ man/man1/troff2html.1
 man/man1/troff2rtf.1
 man/man1/troffcvt.1
 man/man1/unroff.1
-@dirrm lib/troffcvt

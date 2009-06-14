@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2007/05/03 13:19:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2009/06/14 18:17:21 joerg Exp $
 bin/xml2-config
 bin/xmlcatalog
 bin/xmllint
@@ -263,13 +263,3 @@ share/gtk-doc/html/libxml2/libxml2.devhelp
 share/gtk-doc/html/libxml2/right.png
 share/gtk-doc/html/libxml2/style.css
 share/gtk-doc/html/libxml2/up.png
-@dirrm share/gtk-doc/html/libxml2
-@dirrm share/examples/libxml2
-@dirrm share/doc/libxml2/tutorial/images/callouts
-@dirrm share/doc/libxml2/tutorial/images
-@dirrm share/doc/libxml2/tutorial
-@dirrm share/doc/libxml2/html
-@dirrm share/doc/${PKGNAME}
-@dirrm share/doc/libxml2
-@dirrm include/libxml2/libxml
-@dirrm include/libxml2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/28 18:48:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:31 joerg Exp $
 bin/stardic
 share/stardic/back.gif
 share/stardic/chinabyte.gif
@@ -20,5 +20,3 @@ share/stardic/transdic
 share/stardic/wri.gif
 share/stardic/wuhan.gif
 share/stardic/yblib
-@comment in REQD_DIRS: @dirrm share/stardic/hzfont
-@comment in REQD_DIRS: @dirrm share/stardic

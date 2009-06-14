@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/04 15:22:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:17:29 joerg Exp $
 bin/rdrt2
 bin/rt2
 ${GEM_HOME}/cache/rttool-${PKGVERSION}.gem
@@ -31,11 +31,4 @@ ${GEM_LIBDIR}/test/test-rt2html-lib.rb
 ${GEM_LIBDIR}/test/test-rtparser.rb
 ${GEM_LIBDIR}/test/test.rb
 ${GEM_HOME}/specifications/rttool-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/rt
-@dirrm ${GEM_LIBDIR}/lib/rd
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

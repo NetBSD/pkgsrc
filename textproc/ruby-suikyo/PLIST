@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:57:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:30 joerg Exp $
 ${RUBY_VENDORLIB}/suikyo/suikyo-composer.rb
 ${RUBY_VENDORLIB}/suikyo/suikyo-config.rb
 ${RUBY_VENDORLIB}/suikyo/suikyo.rb
 share/doc/suikyo/ruby/index.html
-@dirrm share/doc/suikyo/ruby
-@dirrm ${RUBY_VENDORLIB}/suikyo

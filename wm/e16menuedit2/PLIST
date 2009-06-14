@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/07 17:45:20 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:57 joerg Exp $
 bin/e16menuedit2
 share/${PKGNAME}/glade/e16menuedit2.glade
 share/gnome/help/${PKGNAME}/C/e16menuedit2.html
@@ -14,10 +14,3 @@ share/locale/fr/LC_MESSAGES/e16menuedit2.mo
 share/locale/ko/LC_MESSAGES/e16menuedit2.mo
 share/locale/tr/LC_MESSAGES/e16menuedit2.mo
 share/pixmaps/e16menuedit2-icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/gnome/help/${PKGNAME}/C/figures
-@dirrm share/gnome/help/${PKGNAME}/C
-@dirrm share/gnome/help/${PKGNAME}
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/${PKGNAME}/glade
-@dirrm share/${PKGNAME}

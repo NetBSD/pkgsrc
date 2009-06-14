@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/05 15:02:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:11 joerg Exp $
 share/GutenMark/NonUS.places.gz
 share/GutenMark/US.places.gz
 share/GutenMark/danish.words.gz
@@ -18,5 +18,3 @@ share/GutenMark/spanish.words.gz
 share/GutenMark/special.words.gz
 share/GutenMark/swedish.words.gz
 share/examples/GutenMark/GutenMark.cfg
-@dirrm share/examples/GutenMark
-@dirrm share/GutenMark

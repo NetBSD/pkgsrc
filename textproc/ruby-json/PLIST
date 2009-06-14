@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:21:43 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:17:28 joerg Exp $
 ${GEM_HOME}/cache/json-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
@@ -87,19 +87,3 @@ ${GEM_LIBDIR}/tests/test_json_unicode.rb
 ${GEM_LIBDIR}/tools/fuzz.rb
 ${GEM_LIBDIR}/tools/server.rb
 ${GEM_HOME}/specifications/json-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tools
-@dirrm ${GEM_LIBDIR}/tests/fixtures
-@dirrm ${GEM_LIBDIR}/tests
-@dirrm ${GEM_LIBDIR}/lib/json/pure
-@dirrm ${GEM_LIBDIR}/lib/json/add
-@dirrm ${GEM_LIBDIR}/lib/json
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/json/ext/parser
-@dirrm ${GEM_LIBDIR}/ext/json/ext/generator
-@dirrm ${GEM_LIBDIR}/ext/json/ext
-@dirrm ${GEM_LIBDIR}/ext/json
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/data
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}/benchmarks
-@dirrm ${GEM_LIBDIR}

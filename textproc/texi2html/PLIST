@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/06 14:34:43 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:17:33 joerg Exp $
 bin/texi2html
 info/texi2html.info
 man/man1/texi2html.1
@@ -100,7 +100,3 @@ share/texi2html/tex4ht.init
 share/texi2html/utf8.init
 share/texi2html/xhtml.init
 share/texi2html/xml.init
-@dirrm share/texi2html/images
-@dirrm share/texi2html/i18n
-@dirrm share/texi2html
-@dirrm share/doc/texi2html

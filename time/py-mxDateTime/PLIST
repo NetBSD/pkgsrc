@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/10/24 17:26:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:18:00 joerg Exp $
 ${PYSITELIB}/mx/BeeBase/BeeBase.py
 ${PYSITELIB}/mx/BeeBase/BeeBase.pyc
 ${PYSITELIB}/mx/BeeBase/BeeBase.pyo
@@ -349,30 +349,3 @@ ${PYSITELIB}/mx/Tools/mxTools/xmap.so
 ${PYSITELIB}/mx/__init__.py
 ${PYSITELIB}/mx/__init__.pyc
 ${PYSITELIB}/mx/__init__.pyo
-@dirrm ${PYSITELIB}/mx/Tools/mxTools
-@dirrm ${PYSITELIB}/mx/Tools/Examples
-@dirrm ${PYSITELIB}/mx/Tools/Doc
-@dirrm ${PYSITELIB}/mx/Tools
-@dirrm ${PYSITELIB}/mx/TextTools/mxTextTools
-@dirrm ${PYSITELIB}/mx/TextTools/Examples
-@dirrm ${PYSITELIB}/mx/TextTools/Doc
-@dirrm ${PYSITELIB}/mx/TextTools/Constants
-@dirrm ${PYSITELIB}/mx/TextTools
-@dirrm ${PYSITELIB}/mx/Stack/mxStack
-@dirrm ${PYSITELIB}/mx/Stack
-@dirrm ${PYSITELIB}/mx/Queue/mxQueue
-@dirrm ${PYSITELIB}/mx/Queue/Doc
-@dirrm ${PYSITELIB}/mx/Queue
-@dirrm ${PYSITELIB}/mx/Proxy/mxProxy
-@dirrm ${PYSITELIB}/mx/Proxy/Doc
-@dirrm ${PYSITELIB}/mx/Proxy
-@dirrm ${PYSITELIB}/mx/Misc
-@dirrm ${PYSITELIB}/mx/Doc
-@dirrm ${PYSITELIB}/mx/DateTime/mxDateTime
-@dirrm ${PYSITELIB}/mx/DateTime/Examples
-@dirrm ${PYSITELIB}/mx/DateTime/Doc
-@dirrm ${PYSITELIB}/mx/DateTime
-@dirrm ${PYSITELIB}/mx/BeeBase/mxBeeBase
-@dirrm ${PYSITELIB}/mx/BeeBase/Doc
-@dirrm ${PYSITELIB}/mx/BeeBase
-@dirrm ${PYSITELIB}/mx

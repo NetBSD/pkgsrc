@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:21:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:27 joerg Exp $
 bin/ferret-browser
 ${GEM_HOME}/cache/ferret-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -197,28 +197,3 @@ ${GEM_LIBDIR}/test/unit/utils/tc_bit_vector.rb
 ${GEM_LIBDIR}/test/unit/utils/tc_number_tools.rb
 ${GEM_LIBDIR}/test/unit/utils/tc_priority_queue.rb
 ${GEM_HOME}/specifications/ferret-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/unit/utils
-@dirrm ${GEM_LIBDIR}/test/unit/store
-@dirrm ${GEM_LIBDIR}/test/unit/search
-@dirrm ${GEM_LIBDIR}/test/unit/query_parser
-@dirrm ${GEM_LIBDIR}/test/unit/largefile
-@dirrm ${GEM_LIBDIR}/test/unit/index
-@dirrm ${GEM_LIBDIR}/test/unit/analysis
-@dirrm ${GEM_LIBDIR}/test/unit
-@dirrm ${GEM_LIBDIR}/test/threading
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/term-vector
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/term
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/home
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/help
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/error
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views/document
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/views
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser/s
-@dirrm ${GEM_LIBDIR}/lib/ferret/browser
-@dirrm ${GEM_LIBDIR}/lib/ferret
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/inc
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

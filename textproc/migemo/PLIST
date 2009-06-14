@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/07/03 08:12:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:17:22 joerg Exp $
 bin/migemo
 bin/migemo-client
 bin/migemo-grep
@@ -16,4 +16,3 @@ share/migemo/migemo-dict.idx
 share/migemo/migemo.ja.rd
 share/migemo/regex-dict.sample
 share/migemo/user-dict.sample
-@dirrm share/migemo
