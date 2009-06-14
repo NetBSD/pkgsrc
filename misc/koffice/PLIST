@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/06/14 18:07:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 20:52:13 joerg Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -4819,18 +4819,18 @@ share/kde/templates/SpreadSheet.desktop
 share/kde/templates/TextDocument.desktop
 share/locale/pl/LC_MESSAGES/kexi_add_column_gui_transl_pl.sh
 share/locale/pl/LC_MESSAGES/kexi_delete_column_gui_transl_pl.sh
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/lib/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kword/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kspread/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/krita/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kpresenter/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kplato/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/koshell/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kivio/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kformula/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kexi/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kdgantt/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/kchart/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/karbon/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/interfaces/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/koffice-apidocs/filters/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/lib/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kword/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kspread/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/krita/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kpresenter/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kplato/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/koshell/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kivio/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kformula/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kexi/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kdgantt/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/kchart/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/karbon/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/interfaces/html
+@pkgdir share/doc/kde/HTML/en/koffice-apidocs/filters/html
