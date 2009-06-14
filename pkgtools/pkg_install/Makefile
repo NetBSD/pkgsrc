@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2009/05/19 08:59:29 wiz Exp $
+# $NetBSD: Makefile,v 1.164 2009/06/14 15:08:45 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -18,6 +18,7 @@ LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 BOOTSTRAP_PKG=	yes
+SKIP_LICENSE_CHECK=	yes
 
 CONFLICTS+=		audit-packages-[0-9]*
 
