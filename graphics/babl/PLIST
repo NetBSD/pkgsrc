@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/13 08:05:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:06 joerg Exp $
 include/babl-0.0/babl/babl-component.h
 include/babl-0.0/babl/babl-conversion.h
 include/babl-0.0/babl/babl-extension.h
@@ -19,6 +19,3 @@ lib/babl-0.0/naive-CMYK.so
 lib/babl-0.0/sse-fixups.so
 lib/libbabl-0.0.la
 lib/pkgconfig/babl.pc
-@dirrm lib/babl-0.0
-@dirrm include/babl-0.0/babl
-@dirrm include/babl-0.0

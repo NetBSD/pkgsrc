@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/04 14:45:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:13 joerg Exp $
 bin/.geomview-animate
 bin/.geomview-drawbdy
 bin/anytooff
@@ -262,13 +262,3 @@ share/geomview/data/geom/xwyezed.vect
 share/geomview/data/geom/xyz.grp
 share/geomview/data/geom/xyz.vect
 share/geomview/data/geom/ztent.mesh
-@dirrm share/examples/geomview
-@dirrm share/doc/geomview
-@dirrm share/doc/html/geomview/pix
-@dirrm share/doc/html/geomview
-@dirrm share/geomview/data/geom/textured
-@dirrm share/geomview/data/geom/spherical
-@dirrm share/geomview/data/geom/polyhedra
-@dirrm share/geomview/data/geom/pieces
-@dirrm share/geomview/data/geom
-@dirrm share/geomview/data

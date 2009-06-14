@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 10:57:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:08 joerg Exp $
 include/clutter-0.8/clutter/clutter-actor.h
 include/clutter-0.8/clutter/clutter-alpha.h
 include/clutter-0.8/clutter/clutter-backend.h
@@ -160,10 +160,3 @@ share/gtk-doc/html/cogl/license.html
 share/gtk-doc/html/cogl/right.png
 share/gtk-doc/html/cogl/style.css
 share/gtk-doc/html/cogl/up.png
-@dirrm share/gtk-doc/html/cogl
-@dirrm share/gtk-doc/html/clutter
-@dirrm include/clutter-0.8/cogl
-${PLIST.x11}@dirrm include/clutter-0.8/clutter/x11
-${PLIST.x11}@dirrm include/clutter-0.8/clutter/glx
-@dirrm include/clutter-0.8/clutter
-@dirrm include/clutter-0.8

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/27 22:41:44 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:07 joerg Exp $
 share/blib-1.0/themes/bnf-144x108.xml
 share/blib-1.0/themes/bnf-288x216.xml
 share/blib-1.0/themes/bnf-576x432.xml
@@ -33,5 +33,3 @@ share/blib-1.0/themes/images/hdl-800x600-ov.png
 share/blib-1.0/themes/images/leds-166x110-bg.png
 share/blib-1.0/themes/images/leds-166x110-ov.png
 share/blib-1.0/themes/leds-166x110.xml
-@dirrm share/blib-1.0/themes/images
-@dirrm share/blib-1.0/themes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/12/30 15:00:02 ben Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:07 joerg Exp $
 bin/cdlabelgen
 man/man1/cdlabelgen.1
 share/cdlabelgen/cd.eps
@@ -14,4 +14,3 @@ share/cdlabelgen/penguin.eps
 share/cdlabelgen/recycle.eps
 share/cdlabelgen/template.ps
 share/cdlabelgen/winamp.eps
-@dirrm share/cdlabelgen
