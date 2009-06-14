@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:43:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:36:20 joerg Exp $
 share/doc/phppgadmin/CREDITS
 share/doc/phppgadmin/DEVELOPERS
 share/doc/phppgadmin/FAQ
@@ -304,6 +304,6 @@ share/phppgadmin/viewproperties.php
 share/phppgadmin/views.php
 share/phppgadmin/xloadtree/xloadtree2.js
 share/phppgadmin/xloadtree/xtree2.js
-@exec ${MKDIR} %D/share/phppgadmin/libraries/adodb/lang
-@exec ${MKDIR} %D/share/phppgadmin/classes/plugins
-@exec ${MKDIR} %D/share/phppgadmin/conf
+@pkgdir share/phppgadmin/libraries/adodb/lang
+@pkgdir share/phppgadmin/classes/plugins
+@pkgdir share/phppgadmin/conf
