@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/17 14:09:01 kefren Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/postgresql/config
 share/webmin/postgresql/CHANGELOG
 share/webmin/postgresql/acl_security.pl
@@ -264,10 +264,3 @@ share/webmin/postgresql/up.cgi
 share/webmin/postgresql/useradmin_update.pl
 share/webmin/postgresql/view-lib.pl
 share/webmin/postgresql/view_table.cgi
-@dirrm share/webmin/postgresql/old
-@dirrm share/webmin/postgresql/lang
-@dirrm share/webmin/postgresql/images
-@dirrm share/webmin/postgresql/help
-@dirrm share/webmin/postgresql
-@dirrm share/examples/webmin/postgresql
-@dirrm etc/webmin/postgresql

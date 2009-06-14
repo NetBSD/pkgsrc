@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:16:49 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:31 joerg Exp $
 bin/bfspeed
 bin/bftest
 include/blowfish.h
@@ -7,4 +7,3 @@ share/doc/blowfish/COPYRIGHT
 share/doc/blowfish/README
 share/doc/blowfish/VERSION
 share/doc/blowfish/blowfish.doc
-@dirrm share/doc/blowfish

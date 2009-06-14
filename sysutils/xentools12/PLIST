@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2004/05/08 18:24:00 cl Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:21 joerg Exp $
 bin/balloon
 bin/xc_dom_control.py
 bin/xc_dom_create.py
@@ -15,4 +15,3 @@ ${PYSITELIB}/XenoUtil.pyc
 share/examples/${PKGNAME}/defaults
 share/examples/${PKGNAME}/democd
 share/examples/${PKGNAME}/netbsd
-@dirrm share/examples/${PKGNAME}

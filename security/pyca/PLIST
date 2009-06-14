@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/18 17:06:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:37 joerg Exp $
 bin/ca2ldif.py
 bin/certs2ldap.py
 bin/copy-cacerts.py
@@ -61,9 +61,3 @@ share/examples/pyca/cacert_EmailCerts.cnf
 share/examples/pyca/cacert_Root.cnf
 share/examples/pyca/cacert_ServerCerts.cnf
 share/examples/pyca/openssl.cnf
-@dirrm share/examples/pyca
-@dirrm share/doc/html/pyca/ssi
-@dirrm share/doc/html/pyca/help
-@dirrm share/doc/html/pyca
-@dirrm lib/pyca/openssl
-@dirrm lib/pyca

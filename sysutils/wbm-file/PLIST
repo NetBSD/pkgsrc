@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:49:31 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/file/config
 share/webmin/file/ACLEditor.class
 share/webmin/file/ACLEntry.class
@@ -376,28 +376,3 @@ share/webmin/file/xinha/popups/popup.css
 share/webmin/file/xinha/popups/popup.js
 share/webmin/file/xinha/popups/select_color.html
 share/webmin/file/xinha/release-notes.txt
-@dirrm share/webmin/file/xinha/popups
-@dirrm share/webmin/file/xinha/modules/InternetExplorer
-@dirrm share/webmin/file/xinha/modules/InsertTable
-@dirrm share/webmin/file/xinha/modules/InsertImage
-@dirrm share/webmin/file/xinha/modules/GetHtml
-@dirrm share/webmin/file/xinha/modules/Gecko
-@dirrm share/webmin/file/xinha/modules/FullScreen/lang
-@dirrm share/webmin/file/xinha/modules/FullScreen
-@dirrm share/webmin/file/xinha/modules/Dialogs
-@dirrm share/webmin/file/xinha/modules/CreateLink
-@dirrm share/webmin/file/xinha/modules/ColorPicker
-@dirrm share/webmin/file/xinha/modules
-@dirrm share/webmin/file/xinha/lang
-@dirrm share/webmin/file/xinha/images/fr
-@dirrm share/webmin/file/xinha/images/de
-@dirrm share/webmin/file/xinha/images
-@dirrm share/webmin/file/xinha/examples
-@dirrm share/webmin/file/xinha/contrib
-@dirrm share/webmin/file/xinha
-@dirrm share/webmin/file/unicode
-@dirrm share/webmin/file/lang
-@dirrm share/webmin/file/images
-@dirrm share/webmin/file
-@dirrm share/examples/webmin/file
-@dirrm etc/webmin/file

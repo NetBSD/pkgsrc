@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/04/20 16:27:04 cjep Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:14:21 joerg Exp $
 share/psh/complete/debian
 share/psh/complete/perl
 share/psh/complete/standard
@@ -25,6 +25,3 @@ share/psh/themes/simple
 share/psh/themes/stereophonic
 share/psh/themes/sunos
 share/psh/themes/vms
-@dirrm share/psh/themes
-@dirrm share/psh/complete
-@dirrm share/psh

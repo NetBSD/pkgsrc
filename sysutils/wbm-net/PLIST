@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/16 17:46:01 kefren Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/net/config
 share/webmin/net/CHANGELOG
 share/webmin/net/acl_security.pl
@@ -127,7 +127,3 @@ share/webmin/net/turbo-linux-lib.pl
 share/webmin/net/united-linux-lib.pl
 share/webmin/net/unixware-lib.pl
 share/webmin/net/windows-lib.pl
-@dirrm share/webmin/net/lang
-@dirrm share/webmin/net/images
-@dirrm share/webmin/net
-@dirrm share/examples/webmin/net

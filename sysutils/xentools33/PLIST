@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/01/13 13:48:32 cegger Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:22 joerg Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -553,46 +553,3 @@ share/xen/qemu/keymaps/sl
 share/xen/qemu/keymaps/sv
 share/xen/qemu/keymaps/th
 share/xen/qemu/keymaps/tr
-@dirrm share/xen/qemu/keymaps
-@dirrm share/xen/qemu
-@dirrm share/xen
-@dirrm share/examples/xen
-@dirrm share/doc/xen
-@dirrm lib/xen/boot
-@dirrm lib/xen
-@dirrm ${PYSITELIB}/xen/xsview
-@dirrm ${PYSITELIB}/xen/xm/tests
-@dirrm ${PYSITELIB}/xen/xm
-@dirrm ${PYSITELIB}/xen/xend/xenstore/tests
-@dirrm ${PYSITELIB}/xen/xend/xenstore
-@dirrm ${PYSITELIB}/xen/xend/tests
-@dirrm ${PYSITELIB}/xen/xend/server/tests
-@dirrm ${PYSITELIB}/xen/xend/server
-@dirrm ${PYSITELIB}/xen/xend
-@dirrm ${PYSITELIB}/xen/web
-@dirrm ${PYSITELIB}/xen/util/xsm/flask
-@dirrm ${PYSITELIB}/xen/util/xsm/dummy
-@dirrm ${PYSITELIB}/xen/util/xsm/acm
-@dirrm ${PYSITELIB}/xen/util/xsm
-@dirrm ${PYSITELIB}/xen/util
-@dirrm ${PYSITELIB}/xen/sv
-@dirrm ${PYSITELIB}/xen/lowlevel
-@dirrm ${PYSITELIB}/xen
-@dirrm ${PYSITELIB}/grub
-@dirrm lib/fs/zfs
-@dirrm lib/fs/ufs
-@dirrm lib/fs/reiserfs
-@dirrm lib/fs/iso9660
-@dirrm lib/fs/fat
-@dirrm lib/fs/ext2fs
-@dirrm lib/fs
-@dirrm include/xen/xsm
-@dirrm include/xen/sys
-@dirrm include/xen/io
-@dirrm include/xen/hvm
-@dirrm include/xen/foreign
-@dirrm include/xen/arch-x86/hvm
-@dirrm include/xen/arch-x86
-@dirrm include/xen/arch-ia64/hvm
-@dirrm include/xen/arch-ia64
-@dirrm include/xen

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/11/15 18:30:22 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:09 joerg Exp $
 include/liboobs-1.0/oobs/oobs-group.h
 include/liboobs-1.0/oobs/oobs-groupsconfig.h
 include/liboobs-1.0/oobs/oobs-hostsconfig.h
@@ -74,6 +74,3 @@ share/gtk-doc/html/liboobs/liboobs.devhelp2
 share/gtk-doc/html/liboobs/right.png
 share/gtk-doc/html/liboobs/style.css
 share/gtk-doc/html/liboobs/up.png
-@dirrm share/gtk-doc/html/liboobs
-@dirrm include/liboobs-1.0/oobs
-@dirrm include/liboobs-1.0

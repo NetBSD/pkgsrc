@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/19 21:09:11 heinz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:30 joerg Exp $
 man/cat5/isakmpd.conf.0
 man/cat5/isakmpd.policy.0
 man/cat8/certpatch.0
@@ -19,4 +19,3 @@ share/examples/isakmpd/singlehost-setup.sh
 share/examples/isakmpd/singlehost-west.conf
 share/examples/isakmpd/singlehost-west.gdb
 share/examples/rc.d/isakmpd
-@dirrm share/examples/isakmpd

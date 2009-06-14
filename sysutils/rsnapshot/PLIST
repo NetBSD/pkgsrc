@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/27 08:56:47 kim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:13 joerg Exp $
 bin/${PKGBASE}
 man/man1/${PKGBASE}.1
 share/doc/${PKGBASE}/INSTALL
 share/doc/${PKGBASE}/README
-@dirrm share/doc/${PKGBASE}
 share/examples/${PKGBASE}/${PKGBASE}.conf.default
-@dirrm share/examples/${PKGBASE}

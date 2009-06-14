@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/06 18:08:56 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:07 joerg Exp $
 lib/gstreamer-0.10/libgstgio.la
-@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10

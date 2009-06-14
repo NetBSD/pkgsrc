@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/20 16:21:15 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:14:21 joerg Exp $
 bin/rssh
 libexec/rssh_chroot_helper
 man/man1/rssh.1
 man/man5/rssh.conf.5
 share/examples/rssh/rssh.conf
-@dirrm share/examples/rssh

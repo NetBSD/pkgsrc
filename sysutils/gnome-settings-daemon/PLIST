@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/03/16 16:21:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:06 joerg Exp $
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-client.h
 include/gnome-settings-daemon-2.0/gnome-settings-daemon/gnome-settings-plugin.h
 lib/gnome-settings-daemon-2.0/a11y-keyboard.gnome-settings-plugin
@@ -143,16 +143,3 @@ share/locale/zh_CN/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-settings-daemon.mo
 share/locale/zu/LC_MESSAGES/gnome-settings-daemon.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome-settings-daemon/xrdb
-@dirrm share/gnome-settings-daemon
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in dbus: @dirrm share/dbus-1/services
-@dirrm lib/gnome-settings-daemon-2.0
-@dirrm include/gnome-settings-daemon-2.0/gnome-settings-daemon
-@dirrm include/gnome-settings-daemon-2.0

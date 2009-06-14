@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/06 00:13:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:25 joerg Exp $
 bin/MyPasswordSafe
 share/MyPasswordSafe/locale/mypasswordsafe_c.qm
 share/MyPasswordSafe/locale/mypasswordsafe_en.qm
@@ -10,7 +10,3 @@ share/doc/MyPasswordSafe/sshots/mainwindow.fr.jpg
 share/doc/MyPasswordSafe/sshots/mainwindow.jpg
 share/doc/MyPasswordSafe/sshots/prefsdialog.fr.jpg
 share/doc/MyPasswordSafe/sshots/prefsdialog.jpg
-@dirrm share/doc/MyPasswordSafe/sshots
-@dirrm share/doc/MyPasswordSafe
-@dirrm share/MyPasswordSafe/locale
-@dirrm share/MyPasswordSafe

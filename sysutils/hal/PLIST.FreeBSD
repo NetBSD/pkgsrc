@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.FreeBSD,v 1.1 2008/11/24 21:13:19 hasso Exp $
+@comment $NetBSD: PLIST.FreeBSD,v 1.2 2009/06/14 18:16:07 joerg Exp $
 lib/hal/scripts/freebsd/hal-system-lcd-get-brightness-freebsd
 lib/hal/scripts/freebsd/hal-system-lcd-set-brightness-freebsd
 lib/hal/scripts/freebsd/hal-system-power-reboot-freebsd
@@ -12,4 +12,3 @@ libexec/hald-probe-scsi
 libexec/hald-probe-smbios
 libexec/hald-probe-storage
 libexec/hald-probe-volume
-@dirrm lib/hal/scripts/freebsd

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 19:02:53 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/lpadmin/config
 share/webmin/lpadmin/CHANGELOG
 share/webmin/lpadmin/acl_security.pl
@@ -137,8 +137,3 @@ share/webmin/lpadmin/test_print.cgi
 share/webmin/lpadmin/unixware-lib.pl
 share/webmin/lpadmin/view_job.cgi
 share/webmin/lpadmin/webmin-driver.pl
-@dirrm share/webmin/lpadmin/lang
-@dirrm share/webmin/lpadmin/images
-@dirrm share/webmin/lpadmin
-@dirrm share/examples/webmin/lpadmin
-@dirrm etc/webmin/lpadmin

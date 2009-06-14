@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/17 14:05:30 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/postfix/config
 share/webmin/postfix/CHANGELOG
 share/webmin/postfix/acl_security.pl
@@ -908,9 +908,3 @@ share/webmin/postfix/stop.cgi
 share/webmin/postfix/transport.cgi
 share/webmin/postfix/view_mailq.cgi
 share/webmin/postfix/virtual.cgi
-@dirrm share/webmin/postfix/lang
-@dirrm share/webmin/postfix/images
-@dirrm share/webmin/postfix/help
-@dirrm share/webmin/postfix
-@dirrm share/examples/webmin/postfix
-@dirrm etc/webmin/postfix

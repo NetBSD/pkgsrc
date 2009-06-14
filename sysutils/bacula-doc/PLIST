@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/15 10:29:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:01 joerg Exp $
 share/doc/bacula/catalog/About_this_document.html
 share/doc/bacula/catalog/Bacula-tray-monitor.png
 share/doc/bacula/catalog/Bacula_Catalo_Databa_Guide.html
@@ -611,11 +611,3 @@ share/doc/bacula/utility/win32-start.png
 share/doc/bacula/utility/win32-welcome.png
 share/doc/bacula/utility/wx-console-restore1.png
 share/doc/bacula/utility/wx-console-restore2.png
-@dirrm share/doc/bacula/utility
-@dirrm share/doc/bacula/problems
-@dirrm share/doc/bacula/install
-@dirrm share/doc/bacula/developers
-@dirrm share/doc/bacula/console
-@dirrm share/doc/bacula/concepts
-@dirrm share/doc/bacula/catalog
-@dirrm share/doc/bacula

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/08 23:25:32 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:13 joerg Exp $
 bin/facter
 ${GEM_HOME}/cache/facter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -78,22 +78,4 @@ ${GEM_LIBDIR}/spec/unit/util/ip.rb
 ${GEM_LIBDIR}/spec/unit/util/loader.rb
 ${GEM_LIBDIR}/spec/unit/util/resolution.rb
 ${GEM_HOME}/specifications/facter-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/spec/unit/util
-@dirrm ${GEM_LIBDIR}/spec/unit/data
-@dirrm ${GEM_LIBDIR}/spec/unit
-@dirrm ${GEM_LIBDIR}/spec/integration
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/lib/facter/util/plist
-@dirrm ${GEM_LIBDIR}/lib/facter/util
-@dirrm ${GEM_LIBDIR}/lib/facter
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/etc
-@dirrm ${GEM_LIBDIR}/documentation
-@dirrm ${GEM_LIBDIR}/conf/solaris
-@dirrm ${GEM_LIBDIR}/conf/redhat
-@dirrm ${GEM_LIBDIR}/conf/osx
-@dirrm ${GEM_LIBDIR}/conf
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}
-@dirrm lib/ruby

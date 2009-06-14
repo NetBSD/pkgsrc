@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/04/25 12:07:04 rh Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:01 joerg Exp $
 bin/Burn
 lib/GNUstep/Applications/Burn.app/Burn
 lib/GNUstep/Applications/Burn.app/Resources/Burn.desktop
@@ -201,79 +201,3 @@ lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm/objects.
 lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/Info-gnustep.plist
 lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/iconMkIsoFs.tiff
 lib/GNUstep/Bundles/MkIsoFs.bundle/stamp.make
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/German.lproj
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/French.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/French.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/French.lproj
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/English.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/English.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources/English.lproj
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle/Resources
-@dirrm lib/GNUstep/Bundles/MkIsoFs.bundle
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/German.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/German.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/German.lproj
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/French.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/French.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/French.lproj
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/English.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/English.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources/English.lproj
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle/Resources
-@dirrm lib/GNUstep/Bundles/CDrecord.bundle
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/German.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/German.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/German.lproj
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/French.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/French.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/French.lproj
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/English.lproj/Settings.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/English.lproj/Parameters.gorm
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources/English.lproj
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle/Resources
-@dirrm lib/GNUstep/Bundles/CDparanoia.bundle
-@comment in x11/gnustep-base: @dirrm lib/GNUstep/Bundles
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/WorkInProgress.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/TrackInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/ToolPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/ProjectWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/PreferencesWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/MediaInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/GeneralPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/GeneralParams.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/DriversPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/BurnProgress.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/BlankPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj/AudioCDInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/TrackInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/ToolPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/ProjectWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/PreferencesWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/MediaInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/GeneralPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/GeneralParams.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/DriversPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/BurnProgress.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/BlankPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj/AudioCDInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/French.lproj
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/TrackInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/ToolPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/ProjectWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/PreferencesWindow.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/MediaInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/GeneralPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/GeneralParams.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/DriversPrefs.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/BurnProgress.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/BlankPanel.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj/AudioCDInspector.gorm
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/Burn.app/Resources/Burn.help
-@dirrm lib/GNUstep/Applications/Burn.app/Resources
-@dirrm lib/GNUstep/Applications/Burn.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

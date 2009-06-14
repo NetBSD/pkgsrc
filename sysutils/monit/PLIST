@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/15 16:41:50 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:10 joerg Exp $
 bin/monit
 man/man1/monit.1
 share/docs/monit/CHANGES.txt
@@ -22,6 +22,3 @@ share/examples/monit/monitrc-gentoo
 share/examples/monit/monitrc.sample
 share/examples/monit/wap.php
 share/examples/rc.d/monit
-@dirrm share/examples/monit/MacOSX
-@dirrm share/examples/monit
-@dirrm share/docs/monit

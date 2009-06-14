@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/13 09:44:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:11 joerg Exp $
 bin/nautilus-sendto
 lib/nautilus-sendto/plugins/libnstbalsa.la
 lib/nautilus-sendto/plugins/libnstbluetooth.la
@@ -59,9 +59,3 @@ share/locale/vi/LC_MESSAGES/nautilus-sendto.mo
 share/locale/zh_CN/LC_MESSAGES/nautilus-sendto.mo
 share/locale/zh_TW/LC_MESSAGES/nautilus-sendto.mo
 share/nautilus-sendto/glade/nautilus-sendto.glade
-@dirrm share/nautilus-sendto/glade
-@dirrm share/nautilus-sendto
-@comment in pidgin: @dirrm lib/pidgin
-@comment in nautilus: @dirrm lib/nautilus/extensions-2.0
-@dirrm lib/nautilus-sendto/plugins
-@dirrm lib/nautilus-sendto

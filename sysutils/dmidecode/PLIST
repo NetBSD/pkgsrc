@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/29 15:32:04 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:03 joerg Exp $
 man/man8/biosdecode.8
 man/man8/dmidecode.8
 man/man8/ownership.8
@@ -10,4 +10,3 @@ sbin/vpddecode
 share/doc/dmidecode/AUTHORS
 share/doc/dmidecode/CHANGELOG
 share/doc/dmidecode/README
-@dirrm share/doc/dmidecode

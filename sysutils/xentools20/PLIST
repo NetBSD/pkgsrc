@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/11/08 00:47:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:21 joerg Exp $
 bin/xencons
 bin/xenperf
 include/xc.h
@@ -188,11 +188,3 @@ share/examples/xen/xend-config.sxp
 share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
-@dirrm share/examples/xen
-@dirrm ${PYSITELIB}/xen/xm
-@dirrm ${PYSITELIB}/xen/xend/server
-@dirrm ${PYSITELIB}/xen/xend
-@dirrm ${PYSITELIB}/xen/util
-@dirrm ${PYSITELIB}/xen/sv
-@dirrm ${PYSITELIB}/xen/lowlevel
-@dirrm ${PYSITELIB}/xen

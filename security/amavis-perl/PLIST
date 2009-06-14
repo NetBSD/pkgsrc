@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/11 18:12:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:13:26 joerg Exp $
 man/man1/amavis-milter.1
 man/man1/amavis.1
 man/man5/amavisd.conf.5
@@ -19,4 +19,3 @@ share/doc/amavis/amavis.m4
 share/doc/amavis/amavis.png
 share/doc/amavis/amavis.txt
 share/doc/amavis/amavisd.conf
-@dirrm share/doc/amavis

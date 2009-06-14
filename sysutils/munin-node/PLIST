@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/12/05 14:53:32 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:10 joerg Exp $
 lib/munin/plugins/acpi
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -115,7 +115,5 @@ sbin/munin-run
 share/examples/munin/munin-node.conf
 share/examples/rc.d/munin-node
 @comment pkg-specific directories:
-@dirrm share/examples/munin
-@dirrm lib/munin/plugins
 @comment shared with munin-server
 @unexec ${RMDIR} %D/lib/munin 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/09 03:23:55 manu Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:31 joerg Exp $
 share/doc/lasso/writing-a-c-sp.txt
 share/doc/lasso/writing-a-php-sp.txt
 share/doc/lasso/writing-a-java-sp.txt
@@ -13,7 +13,6 @@ share/doc/lasso/liberty-architecture.rst
 share/doc/lasso/other-profiles.rst
 share/doc/lasso/preface.rst
 share/doc/lasso/single-sign-on.rst
-@dirrm share/doc/lasso
 lib/pkgconfig/lasso.pc
 lib/liblasso.la
 include/lasso/xml/saml-2.0/saml2_action.h
@@ -300,12 +299,3 @@ include/lasso/debug.h
 include/lasso/registry-private.h
 include/lasso/registry.h
 include/lasso/utils.h
-@dirrm include/lasso/xml/saml-2.0
-@dirrm include/lasso/xml/id-wsf-2.0
-@dirrm include/lasso/xml/ws
-@dirrm include/lasso/xml
-@dirrm include/lasso/id-ff
-@dirrm include/lasso/id-wsf
-@dirrm include/lasso/saml-2.0
-@dirrm include/lasso/id-wsf-2.0
-@dirrm include/lasso

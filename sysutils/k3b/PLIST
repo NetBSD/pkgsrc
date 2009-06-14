@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/15 07:44:57 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:16:08 joerg Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -366,50 +366,3 @@ share/kde/services/videodvd.protocol
 share/kde/sounds/k3b_error1.wav
 share/kde/sounds/k3b_success1.wav
 share/kde/sounds/k3b_wait_media1.wav
-@comment in kde: @dirrm share/kde/sounds
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kde: @dirrm share/kde/apps/konqsidebartng/virtual_folders/services
-@dirrm share/kde/apps/k3b/servicemenus
-@dirrm share/kde/apps/k3b/plugins
-@dirrm share/kde/apps/k3b/pics/quant
-@dirrm share/kde/apps/k3b/pics/crystal
-@dirrm share/kde/apps/k3b/pics/RobsTheme
-@dirrm share/kde/apps/k3b/pics/73lab
-@dirrm share/kde/apps/k3b/pics
-@dirrm share/kde/apps/k3b/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/scalable
-@dirrm share/kde/apps/k3b/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/64x64
-@dirrm share/kde/apps/k3b/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/48x48
-@dirrm share/kde/apps/k3b/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/32x32
-@dirrm share/kde/apps/k3b/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/22x22
-@dirrm share/kde/apps/k3b/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/k3b/icons/hicolor/16x16
-@dirrm share/kde/apps/k3b/icons/hicolor
-@dirrm share/kde/apps/k3b/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/k3b/icons/crystalsvg/16x16
-@dirrm share/kde/apps/k3b/icons/crystalsvg
-@dirrm share/kde/apps/k3b/icons
-@dirrm share/kde/apps/k3b/extra
-@dirrm share/kde/apps/k3b/cdi
-@dirrm share/kde/apps/k3b
-@comment in kde: @dirrm share/kde/apps
-@dirrm share/kde/applnk/Settings/System
-@comment in kde: @dirrm share/kde/applnk/Settings
-@comment in kde: @dirrm share/kde/applnk/.hidden
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/k3b
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

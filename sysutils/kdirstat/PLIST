@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/26 04:37:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:16:08 joerg Exp $
 bin/kdirstat
 share/doc/kde/HTML/en/kdirstat/common
 share/doc/kde/HTML/en/kdirstat/feedback-mail.png
@@ -24,24 +24,3 @@ share/locale/fr/LC_MESSAGES/kdirstat.mo
 share/locale/hu/LC_MESSAGES/kdirstat.mo
 share/locale/it/LC_MESSAGES/kdirstat.mo
 share/locale/ja/LC_MESSAGES/kdirstat.mo
-@dirrm share/kde/apps/kdirstat/icons/locolor/16x16/actions
-@dirrm share/kde/apps/kdirstat/icons/locolor/16x16
-@dirrm share/kde/apps/kdirstat/icons/locolor
-@dirrm share/kde/apps/kdirstat/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kdirstat/icons/hicolor/48x48
-@dirrm share/kde/apps/kdirstat/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kdirstat/icons/hicolor/32x32
-@dirrm share/kde/apps/kdirstat/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kdirstat/icons/hicolor/16x16
-@dirrm share/kde/apps/kdirstat/icons/hicolor
-@dirrm share/kde/apps/kdirstat/icons
-@dirrm share/kde/apps/kdirstat
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Utilities
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/kde/HTML/en/kdirstat
-@comment in kde: @dirrm share/doc/kde/HTML/en

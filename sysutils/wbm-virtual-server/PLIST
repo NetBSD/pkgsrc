@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/10 12:19:23 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/virtual-server/config
 share/webmin/virtual-server/CHANGELOG
 share/webmin/virtual-server/IDNA/Punycode.pm
@@ -376,23 +376,3 @@ share/webmin/virtual-server/virtual_feature_api.pl
 share/webmin/virtual-server/vui-lib.pl
 share/webmin/virtual-server/warnbw-template
 share/webmin/virtual-server/writelogs.pl
-@dirrm share/webmin/virtual-server/newfeatures-all/3.57
-@dirrm share/webmin/virtual-server/newfeatures-all/3.56
-@dirrm share/webmin/virtual-server/newfeatures-all/3.55
-@dirrm share/webmin/virtual-server/newfeatures-all/3.54
-@dirrm share/webmin/virtual-server/newfeatures-all/3.53
-@dirrm share/webmin/virtual-server/newfeatures-all/3.52
-@dirrm share/webmin/virtual-server/newfeatures-all
-@dirrm share/webmin/virtual-server/IDNA
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.57
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.56
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.55
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.54
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.53
-@dirrm share/webmin/virtual-server/newfeatures-gpl/3.52
-@dirrm share/webmin/virtual-server/newfeatures-gpl
-@dirrm share/webmin/virtual-server/lang
-@dirrm share/webmin/virtual-server/images
-@dirrm share/webmin/virtual-server/help
-@dirrm share/webmin/virtual-server
-@dirrm share/examples/webmin/virtual-server

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/10/15 09:37:58 markd Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:16:08 joerg Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
@@ -256,33 +256,3 @@ share/locale/sv/LC_MESSAGES/krusader.mo
 share/locale/tr/LC_MESSAGES/krusader.mo
 share/locale/uk/LC_MESSAGES/krusader.mo
 share/locale/zh_CN/LC_MESSAGES/krusader.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/krusader/js
-@dirrm share/kde/apps/krusader/icons/crystalsvg/32x32/apps
-@dirrm share/kde/apps/krusader/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/krusader/icons/crystalsvg/32x32
-@dirrm share/kde/apps/krusader/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/krusader/icons/crystalsvg/22x22
-@dirrm share/kde/apps/krusader/icons/crystalsvg/16x16/apps
-@dirrm share/kde/apps/krusader/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/krusader/icons/crystalsvg/16x16
-@dirrm share/kde/apps/krusader/icons/crystalsvg
-@dirrm share/kde/apps/krusader/icons
-@dirrm share/kde/apps/krusader
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in kde: @dirrm share/icons/crystalsvg/64x64/apps
-@comment in kde: @dirrm share/icons/crystalsvg/48x48/apps
-@comment in kde: @dirrm share/icons/crystalsvg/32x32/apps
-@comment in kde: @dirrm share/icons/crystalsvg/22x22/apps
-@comment in kde: @dirrm share/icons/crystalsvg/16x16/apps
-@dirrm share/doc/kde/HTML/ru/krusader
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/en/krusader
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

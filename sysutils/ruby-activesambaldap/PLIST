@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 02:00:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:13 joerg Exp $
 bin/asl-groupadd
 bin/asl-groupdel
 bin/asl-groupmod
@@ -193,38 +193,3 @@ ${GEM_LIBDIR}/test/test_password.rb
 ${GEM_LIBDIR}/test/test_samba_encrypt.rb
 ${GEM_LIBDIR}/test/test_user_home_directory.rb
 ${GEM_HOME}/specifications/activesambaldap-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test-unit/test/util
-@dirrm ${GEM_LIBDIR}/test-unit/test/ui
-@dirrm ${GEM_LIBDIR}/test-unit/test/collector
-@dirrm ${GEM_LIBDIR}/test-unit/test
-@dirrm ${GEM_LIBDIR}/test-unit/sample
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/util
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/emacs
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/console
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/runner
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/collector
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test
-@dirrm ${GEM_LIBDIR}/test-unit/lib
-@dirrm ${GEM_LIBDIR}/test-unit/bin
-@dirrm ${GEM_LIBDIR}/test-unit
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates
-@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap
-@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators
-@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap
-@dirrm ${GEM_LIBDIR}/rails/plugin
-@dirrm ${GEM_LIBDIR}/rails
-@dirrm ${GEM_LIBDIR}/po/ja
-@dirrm ${GEM_LIBDIR}/po
-@dirrm ${GEM_LIBDIR}/misc
-@dirrm ${GEM_LIBDIR}/lib/samba
-@dirrm ${GEM_LIBDIR}/lib/active_samba_ldap
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/data/locale/ja/LC_MESSAGES
-@dirrm ${GEM_LIBDIR}/data/locale/ja
-@dirrm ${GEM_LIBDIR}/data/locale
-@dirrm ${GEM_LIBDIR}/data
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/09 19:16:23 degroote Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:21 joerg Exp $
 libdata/if_wpi/LICENSE.iwlwifi-3945-ucode
 libdata/if_wpi/README.iwlwifi-3945-ucode
 libdata/if_wpi/iwlwifi-3945.ucode
-@dirrm libdata/if_wpi

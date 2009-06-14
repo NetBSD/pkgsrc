@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/10/18 13:28:28 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 18:13:32 joerg Exp $
 bin/libprelude-config
 bin/prelude-adduser
 bin/prelude-admin
@@ -104,6 +104,3 @@ share/examples/libprelude/global.conf
 share/examples/libprelude/idmef-client.conf
 share/examples/libprelude/tls.conf
 man/man1/prelude-admin.1
-@dirrm share/examples/libprelude
-@dirrm share/doc/libprelude
-@dirrm include/libprelude

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/05/13 00:27:48 salo Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:39 joerg Exp $
 bin/snortsnarf.pl
 share/doc/snortsnarf/README
 share/doc/snortsnarf/Usage
@@ -32,6 +32,3 @@ share/snortsnarf/SnortSnarf/TimeFilters.pm
 share/snortsnarf/ann_xml.pl
 share/snortsnarf/web_utils.pl
 share/snortsnarf/xml_help.pl
-@dirrm share/snortsnarf/SnortSnarf
-@dirrm share/snortsnarf
-@dirrm share/doc/snortsnarf

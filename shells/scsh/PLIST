@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/03 11:39:08 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:14:21 joerg Exp $
 bin/scsh
 include/scsh.h
 include/write-barrier.h
@@ -410,20 +410,3 @@ lib/scsh/srfi/srfi-7.scm
 lib/scsh/stripped-scsh.image
 man/man1/scsh.1
 share/doc/scsh
-@dirrm lib/scsh/srfi
-@dirrm lib/scsh/scsh
-@dirrm lib/scsh/rts
-@dirrm lib/scsh/opt
-@dirrm lib/scsh/misc
-@dirrm lib/scsh/link
-@dirrm lib/scsh/env
-@dirrm lib/scsh/emacs
-@dirrm lib/scsh/doc/scsh-paper/html
-@dirrm lib/scsh/doc/scsh-paper
-@dirrm lib/scsh/doc/scsh-manual/html
-@dirrm lib/scsh/doc/scsh-manual
-@dirrm lib/scsh/doc/s48-manual/html
-@dirrm lib/scsh/doc/s48-manual
-@dirrm lib/scsh/doc
-@dirrm lib/scsh/big
-@dirrm lib/scsh

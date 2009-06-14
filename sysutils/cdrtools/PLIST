@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/07 23:23:13 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:02 joerg Exp $
 bin/btcflash
 bin/cdda2wav
 bin/cdrecord
@@ -108,9 +108,3 @@ share/doc/cdrtools/mkisofs/README.sort
 share/doc/cdrtools/mkisofs/README.sparcboot
 share/doc/cdrtools/mkisofs/README.sunx86boot
 share/examples/cdrtools/cdrecord
-@dirrm share/examples/cdrtools
-@dirrm share/doc/cdrtools/mkisofs
-@dirrm share/doc/cdrtools/cdrecord
-@dirrm share/doc/cdrtools/cdda2wav
-@dirrm share/doc/cdrtools
-@dirrm lib/siconv

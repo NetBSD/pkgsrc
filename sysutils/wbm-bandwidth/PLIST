@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 17:48:56 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:16 joerg Exp $
 share/examples/webmin/bandwidth/config
 share/webmin/bandwidth/CHANGELOG
 share/webmin/bandwidth/acl_security.pl
@@ -41,8 +41,3 @@ share/webmin/bandwidth/rotate.pl
 share/webmin/bandwidth/setup.cgi
 share/webmin/bandwidth/turnoff.cgi
 share/webmin/bandwidth/uninstall.pl
-@dirrm share/webmin/bandwidth/lang
-@dirrm share/webmin/bandwidth/images
-@dirrm share/webmin/bandwidth/help
-@dirrm share/webmin/bandwidth
-@dirrm share/examples/webmin/bandwidth

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/17 14:29:25 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/sshd/config
 share/webmin/sshd/CHANGELOG
 share/webmin/sshd/apply.cgi
@@ -147,9 +147,3 @@ share/webmin/sshd/sshd-lib.pl
 share/webmin/sshd/start.cgi
 share/webmin/sshd/stop.cgi
 share/webmin/sshd/useradmin_update.pl
-@dirrm share/webmin/sshd/lang
-@dirrm share/webmin/sshd/images
-@dirrm share/webmin/sshd/help
-@dirrm share/webmin/sshd
-@dirrm share/examples/webmin/sshd
-@dirrm etc/webmin/sshd

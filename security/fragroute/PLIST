@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/08 17:55:15 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:28 joerg Exp $
 etc/fragroute.conf
 man/man8/fragroute.8
 man/man8/fragtest.8
@@ -21,4 +21,3 @@ share/fragroute/tcp-3
 share/fragroute/tcp-5
 share/fragroute/tcp-7
 share/fragroute/tcp-9
-@dirrm share/fragroute

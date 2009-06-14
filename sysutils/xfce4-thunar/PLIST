@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/12/19 23:54:47 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:22 joerg Exp $
 bin/Thunar
 bin/thunar
 include/thunar-vfs-1/thunar-vfs/thunar-vfs-config.h
@@ -368,32 +368,3 @@ share/pixmaps/Thunar/Thunar-about-logo.png
 share/pixmaps/Thunar/Thunar-fallback-icon.png
 share/thumbnailers/thunar-vfs-font-thumbnailer-1.desktop
 share/xfce4/panel-plugins/thunar-tpa.desktop
-@dirrm share/pixmaps/Thunar
-@dirrm share/examples/Thunar
-@dirrm share/doc/Thunar/html/zh_TW/images
-@dirrm share/doc/Thunar/html/zh_TW
-@dirrm share/doc/Thunar/html/ru/images
-@dirrm share/doc/Thunar/html/ru
-@dirrm share/doc/Thunar/html/pl/images
-@dirrm share/doc/Thunar/html/pl
-@dirrm share/doc/Thunar/html/nl/images
-@dirrm share/doc/Thunar/html/nl
-@dirrm share/doc/Thunar/html/ja/images
-@dirrm share/doc/Thunar/html/ja
-@dirrm share/doc/Thunar/html/fr/images
-@dirrm share/doc/Thunar/html/fr
-@dirrm share/doc/Thunar/html/eu/images
-@dirrm share/doc/Thunar/html/eu
-@dirrm share/doc/Thunar/html/es/images
-@dirrm share/doc/Thunar/html/es
-@dirrm share/doc/Thunar/html/C/images
-@dirrm share/doc/Thunar/html/C
-@dirrm share/doc/Thunar/html
-@dirrm share/doc/Thunar
-@dirrm share/Thunar/sendto
-@dirrm share/Thunar
-@dirrm lib/thunarx-1
-@dirrm include/thunarx-1/thunarx
-@dirrm include/thunarx-1
-@dirrm include/thunar-vfs-1/thunar-vfs
-@dirrm include/thunar-vfs-1

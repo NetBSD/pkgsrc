@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/21 20:44:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:13:29 joerg Exp $
 bin/gss
 include/gss.h
 include/gss/api.h
@@ -53,4 +53,3 @@ share/locale/fr/LC_MESSAGES/gss.mo
 share/locale/pl/LC_MESSAGES/gss.mo
 share/locale/ro/LC_MESSAGES/gss.mo
 share/locale/sv/LC_MESSAGES/gss.mo
-@dirrm include/gss

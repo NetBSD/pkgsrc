@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/07 15:28:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:13:28 joerg Exp $
 bin/fcp
 bin/fsh
 bin/fshd
@@ -12,4 +12,3 @@ share/fsh/fshd.py
 share/fsh/fshlib.py
 share/fsh/fshversion.py
 share/fsh/infshd.py
-@dirrm share/fsh

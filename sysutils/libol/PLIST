@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/17 10:03:22 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:09 joerg Exp $
 bin/libol-config
 include/libol/abstract_io.h
 include/libol/abstract_io.h.x
@@ -30,4 +30,3 @@ include/libol/stream_buffer.h
 include/libol/werror.h
 include/libol/xalloc.h
 lib/libol.la
-@dirrm include/libol

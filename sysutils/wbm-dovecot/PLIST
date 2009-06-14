@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:44:25 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/dovecot/config
 share/webmin/dovecot/CHANGELOG
 share/webmin/dovecot/apply.cgi
@@ -57,7 +57,3 @@ share/webmin/dovecot/save_net.cgi
 share/webmin/dovecot/save_ssl.cgi
 share/webmin/dovecot/start.cgi
 share/webmin/dovecot/stop.cgi
-@dirrm share/webmin/dovecot/lang
-@dirrm share/webmin/dovecot/images
-@dirrm share/webmin/dovecot
-@dirrm share/examples/webmin/dovecot

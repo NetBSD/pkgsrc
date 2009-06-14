@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/12/28 14:52:05 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:14:22 joerg Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -840,13 +840,3 @@ ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuput
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zsh-newuser-install
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/scripts/newuser
 @exec ${MKDIR} %D/share/zsh/site-functions
-@dirrm share/zsh/site-functions
-${PLIST.dynamic}@dirrm share/zsh/${PKGVERSION}/scripts
-@dirrm share/zsh/${PKGVERSION}/functions
-@dirrm share/zsh/${PKGVERSION}
-@dirrm share/zsh
-@dirrm share/doc/zsh
-${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}/zsh/net
-${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}/zsh
-${PLIST.dynamic}@dirrm lib/zsh/${PKGVERSION}
-${PLIST.dynamic}@dirrm lib/zsh

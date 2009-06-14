@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:23 joerg Exp $
 bin/xuvmstat
 share/doc/xuvmstat/LICENSE
-@dirrm share/doc/xuvmstat

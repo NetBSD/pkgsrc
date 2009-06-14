@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:33:05 kefren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/status/config
 share/webmin/status/CHANGELOG
 share/webmin/status/WEBMIN-STATUS-MIB.txt
@@ -149,9 +149,3 @@ share/webmin/status/uninstall.pl
 share/webmin/status/usermin-monitor.pl
 share/webmin/status/webmin-monitor.pl
 share/webmin/status/xinetd-monitor.pl
-@dirrm share/webmin/status/services
-@dirrm share/webmin/status/lang
-@dirrm share/webmin/status/images
-@dirrm share/webmin/status
-@dirrm share/examples/webmin/status
-@dirrm etc/webmin/status

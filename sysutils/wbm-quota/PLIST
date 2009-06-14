@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:14:48 kefren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/quota/config
 share/webmin/quota/CHANGELOG
 share/webmin/quota/acl_security.pl
@@ -208,9 +208,3 @@ share/webmin/quota/user_filesys.cgi
 share/webmin/quota/user_grace_form.cgi
 share/webmin/quota/user_grace_save.cgi
 share/webmin/quota/useradmin_update.pl
-@dirrm share/webmin/quota/lang
-@dirrm share/webmin/quota/images
-@dirrm share/webmin/quota/help
-@dirrm share/webmin/quota
-@dirrm share/examples/webmin/quota
-@dirrm etc/webmin/quota

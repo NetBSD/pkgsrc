@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/05/16 17:45:26 kefren Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:16:20 joerg Exp $
 share/examples/rc.d/webmin
 share/examples/webmin/acl/config
 share/examples/webmin/config
@@ -1532,63 +1532,3 @@ share/webmin/webminlog/config.info.nl
 share/webmin/webminlog/images/star.gif
 share/webmin/webminlog/lang/cz
 share/webmin/webminlog/lang/hr
-@dirrm share/webmin/webminlog/lang
-@dirrm share/webmin/webminlog/images
-@dirrm share/webmin/webminlog
-@dirrm share/webmin/webmin/subdir
-@dirrm share/webmin/webmin/lang
-@dirrm share/webmin/webmin/images
-@dirrm share/webmin/webmin
-@dirrm share/webmin/servers/lang
-@dirrm share/webmin/servers/images
-@dirrm share/webmin/servers
-@dirrm share/webmin/proc/lang
-@dirrm share/webmin/proc/images
-@dirrm share/webmin/proc/help
-@dirrm share/webmin/proc
-@dirrm share/webmin/man/lang
-@dirrm share/webmin/man/images
-@dirrm share/webmin/man/help
-@dirrm share/webmin/man
-@dirrm share/webmin/lang
-@dirrm share/webmin/inittab/lang
-@dirrm share/webmin/inittab/images
-@dirrm share/webmin/inittab/help
-@dirrm share/webmin/inittab
-@dirrm share/webmin/init/lang
-@dirrm share/webmin/init/images
-@dirrm share/webmin/init/help
-@dirrm share/webmin/init
-@dirrm share/webmin/images
-@dirrm share/webmin/cron/lang
-@dirrm share/webmin/cron/images
-@dirrm share/webmin/cron/help
-@dirrm share/webmin/cron
-@dirrm share/webmin/acl/lang
-@dirrm share/webmin/acl/images
-@dirrm share/webmin/acl/help
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/man3
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/auto/Authen/SolarisRBAC
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/auto/Authen
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/auto
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib/Authen
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/lib
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto/Authen/SolarisRBAC
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto/Authen
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch/auto
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib/arch
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1/blib
-@dirrm share/webmin/acl/Authen-SolarisRBAC-0.1
-@dirrm share/webmin/acl
-@dirrm share/webmin/Webmin
-@dirrm share/webmin
-@dirrm share/examples/webmin/webminlog
-@dirrm share/examples/webmin/webmin
-@dirrm share/examples/webmin/servers
-@dirrm share/examples/webmin/proc
-@dirrm share/examples/webmin/man
-@dirrm share/examples/webmin/inittab
-@dirrm share/examples/webmin/init
-@dirrm share/examples/webmin/cron
-@dirrm share/examples/webmin/acl
-@dirrm share/examples/webmin

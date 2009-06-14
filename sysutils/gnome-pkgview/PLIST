@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/25 10:54:18 hira Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:05 joerg Exp $
 bin/gnome-pkgview
 share/applications/gnome-pkgview.desktop
 share/gconf/schemas/gnome-pkgview.schemas
@@ -49,7 +49,3 @@ share/pixmaps/gnome-pkgview/slackware.png
 share/pixmaps/gnome-pkgview/solaris.png
 share/pixmaps/gnome-pkgview/suse.png
 share/pixmaps/gnome-pkgview/whitebox.png
-@dirrm share/pixmaps/gnome-pkgview
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

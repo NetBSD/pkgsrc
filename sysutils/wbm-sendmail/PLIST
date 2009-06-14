@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/17 14:18:52 kefren Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:19 joerg Exp $
 share/examples/webmin/sendmail/config
 share/webmin/sendmail/CHANGELOG
 share/webmin/sendmail/access-lib.pl
@@ -470,9 +470,3 @@ share/webmin/sendmail/stop.cgi
 share/webmin/sendmail/useradmin_update.pl
 share/webmin/sendmail/view_mailq.cgi
 share/webmin/sendmail/virtusers-lib.pl
-@dirrm share/webmin/sendmail/lang
-@dirrm share/webmin/sendmail/images
-@dirrm share/webmin/sendmail/help
-@dirrm share/webmin/sendmail
-@dirrm share/examples/webmin/sendmail
-@dirrm etc/webmin/sendmail

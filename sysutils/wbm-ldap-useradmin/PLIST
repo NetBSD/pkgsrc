@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 19:00:41 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:18 joerg Exp $
 share/examples/webmin/ldap-useradmin/config
 share/webmin/ldap-useradmin/CHANGELOG
 share/webmin/ldap-useradmin/acl_security.pl
@@ -56,8 +56,3 @@ share/webmin/ldap-useradmin/save_group.cgi
 share/webmin/ldap-useradmin/save_user.cgi
 share/webmin/ldap-useradmin/search_group.cgi
 share/webmin/ldap-useradmin/search_user.cgi
-@dirrm share/webmin/ldap-useradmin/lang
-@dirrm share/webmin/ldap-useradmin/images
-@dirrm share/webmin/ldap-useradmin/help
-@dirrm share/webmin/ldap-useradmin
-@dirrm share/examples/webmin/ldap-useradmin

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/08/06 06:19:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:40 joerg Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/body_init.pl
 ${PERL5_SUB_INSTALLVENDORLIB}/bsd.pl
 ${PERL5_SUB_INSTALLVENDORLIB}/chk_binaries.pl
@@ -61,8 +61,3 @@ tct/conf/grave-robber.cf
 tct/conf/lazarus.cf
 tct/conf/paths.pl
 tct/etc/magic
-@dirrm share/doc/tct
-@dirrm tct/etc
-@dirrm tct/conf
-@dirrm tct/bin
-@dirrm tct

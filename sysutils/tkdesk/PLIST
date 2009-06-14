@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/10/26 04:29:01 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:15 joerg Exp $
 bin/cd-tkdesk
 bin/ed-tkdesk
 bin/od-tkdesk
@@ -542,15 +542,3 @@ man/man1/cd-tkdesk.1
 man/man1/ed-tkdesk.1
 man/man1/od-tkdesk.1
 man/man1/tkdesk.1
-@dirrm lib/tkdesk/sounds
-@dirrm lib/tkdesk/images/xbm
-@dirrm lib/tkdesk/images/next
-@dirrm lib/tkdesk/images/ficons32
-@dirrm lib/tkdesk/images/ficons16
-@dirrm lib/tkdesk/images/be
-@dirrm lib/tkdesk/images
-@dirrm lib/tkdesk/doc
-@dirrm lib/tkdesk/configs
-@dirrm lib/tkdesk/cb_tools/bitmaps
-@dirrm lib/tkdesk/cb_tools
-@dirrm lib/tkdesk

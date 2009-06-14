@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/13 17:37:34 bad Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:13:28 joerg Exp $
 bin/fwb_install
 bin/fwbedit
 bin/fwblookup
@@ -42,13 +42,11 @@ share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.10.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.11.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.0.11.txt
 share/doc/fwbuilder-${PKGVERSION}/PatchAcceptancePolicy.txt
-@dirrm share/doc/fwbuilder-${PKGVERSION}
 share/fwbuilder/locale/fwbuilder_de.qm
 share/fwbuilder/locale/fwbuilder_es.qm
 share/fwbuilder/locale/fwbuilder_fr.qm
 share/fwbuilder/locale/fwbuilder_ja.qm
 share/fwbuilder/locale/fwbuilder_ru.qm
-@dirrm share/fwbuilder/locale
 share/fwbuilder/objects_init.xml
 share/fwbuilder/templates.xml
 share/fwbuilder/resources.xml
@@ -61,7 +59,6 @@ share/fwbuilder/os/openbsd.xml
 share/fwbuilder/os/pix_os.xml
 share/fwbuilder/os/solaris.xml
 share/fwbuilder/os/unknown_os.xml
-@dirrm share/fwbuilder/os
 share/fwbuilder/platform/fwsm.xml
 share/fwbuilder/platform/ipf.xml
 share/fwbuilder/platform/ipfw.xml
@@ -69,8 +66,6 @@ share/fwbuilder/platform/iptables.xml
 share/fwbuilder/platform/pf.xml
 share/fwbuilder/platform/pix.xml
 share/fwbuilder/platform/unknown.xml
-@dirrm share/fwbuilder/platform
-@dirrm share/fwbuilder
 share/man/man1/fwb_compile_all.1
 share/man/man1/fwbedit.1
 share/man/man1/fwb_install.1

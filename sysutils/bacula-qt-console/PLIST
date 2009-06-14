@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/16 08:06:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:01 joerg Exp $
 bin/bat
 share/doc/bacula/html/clients.html
 share/doc/bacula/html/console.html
@@ -13,4 +13,3 @@ share/doc/bacula/html/restore.html
 share/doc/bacula/html/status.png
 share/doc/bacula/html/storage.html
 share/examples/bacula/bat.conf
-@dirrm share/doc/bacula/html

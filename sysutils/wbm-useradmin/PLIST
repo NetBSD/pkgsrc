@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 18:14:47 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:20 joerg Exp $
 share/examples/webmin/useradmin/config
 share/webmin/useradmin/CHANGELOG
 share/webmin/useradmin/acl_security.pl
@@ -589,9 +589,3 @@ share/webmin/useradmin/search_user.cgi
 share/webmin/useradmin/solaris-lib.pl
 share/webmin/useradmin/unixware-lib.pl
 share/webmin/useradmin/user-lib.pl
-@dirrm share/webmin/useradmin/lang
-@dirrm share/webmin/useradmin/images
-@dirrm share/webmin/useradmin/help
-@dirrm share/webmin/useradmin
-@dirrm share/examples/webmin/useradmin
-@dirrm etc/webmin/useradmin

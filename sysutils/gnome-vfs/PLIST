@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/03/19 11:32:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2009/06/14 18:16:06 joerg Exp $
 bin/gnomevfs-cat
 bin/gnomevfs-copy
 bin/gnomevfs-df
@@ -234,15 +234,3 @@ share/locale/zh_CN/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-vfs-2.0.mo
 share/locale/zu/LC_MESSAGES/gnome-vfs-2.0.mo
-@dirrm share/gtk-doc/html/gnome-vfs-2.0
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/gnome-vfs-2.0/modules
-@dirrm share/examples/gnome-vfs-2.0
-@comment in dbus: @dirrm share/dbus-1/services
-@dirrm lib/gnome-vfs-2.0/modules
-@dirrm lib/gnome-vfs-2.0/include
-@dirrm lib/gnome-vfs-2.0
-@dirrm include/gnome-vfs-module-2.0/libgnomevfs
-@dirrm include/gnome-vfs-module-2.0
-@dirrm include/gnome-vfs-2.0/libgnomevfs
-@dirrm include/gnome-vfs-2.0

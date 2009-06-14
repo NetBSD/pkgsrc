@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/20 19:04:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:14:21 joerg Exp $
 bin/esh
 info/esh.info
 share/doc/esh/esh.html
@@ -16,5 +16,3 @@ share/examples/esh/test4.esh
 share/examples/esh/test5.esh
 share/examples/esh/test6.esh
 share/examples/esh/test7.esh
-@dirrm share/examples/esh
-@dirrm share/doc/esh

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:40 joerg Exp $
 bin/stegclient
 bin/stegserver
 include/packetp.h
@@ -15,4 +15,3 @@ lib/libpacketp.a
 man/man1/stegclient.1
 man/man1/stegserver.1
 man/man3/packetp.3
-@dirrm include/packetp

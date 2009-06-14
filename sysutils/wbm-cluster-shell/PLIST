@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/16 18:21:44 kefren Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:17 joerg Exp $
 share/examples/webmin/cluster-shell/config
 share/webmin/cluster-shell/cluster-shell-lib.pl
 share/webmin/cluster-shell/help/intro.de.html
@@ -17,8 +17,3 @@ share/webmin/cluster-shell/lang/nl
 share/webmin/cluster-shell/log_parser.pl
 share/webmin/cluster-shell/module.info
 share/webmin/cluster-shell/run.cgi
-@dirrm share/webmin/cluster-shell/lang
-@dirrm share/webmin/cluster-shell/images
-@dirrm share/webmin/cluster-shell/help
-@dirrm share/webmin/cluster-shell
-@dirrm share/examples/webmin/cluster-shell

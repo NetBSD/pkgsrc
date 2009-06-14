@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/02/15 15:59:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:21 joerg Exp $
 bin/xcdroast
 lib/xcdroast-0.98/bin/cddbtool
 lib/xcdroast-0.98/bin/rmtool
@@ -53,8 +53,3 @@ share/locale/zh_CN/LC_MESSAGES/xcdroast.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/xcdroast.mo
 share/locale/zh_TW/LC_MESSAGES/xcdroast.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/xcdroast.mo
-@dirrm share/doc/xcdroast
-@dirrm lib/xcdroast-0.98/sound
-@dirrm lib/xcdroast-0.98/icons
-@comment in cdrecord-xcdroast: @dirrm lib/xcdroast-0.98/bin
-@comment in cdrecord-xcdroast: @dirrm lib/xcdroast-0.98

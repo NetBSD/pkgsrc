@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/12/20 17:40:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:16:08 joerg Exp $
 libdata/if_iwi/LICENSE
 libdata/if_iwi/iwi-boot.fw
 libdata/if_iwi/iwi-bss.fw
@@ -7,4 +7,3 @@ libdata/if_iwi/iwi-sniffer.fw
 libdata/if_iwi/iwi-ucode-bss.fw
 libdata/if_iwi/iwi-ucode-ibss.fw
 libdata/if_iwi/iwi-ucode-sniffer.fw
-@dirrm libdata/if_iwi
