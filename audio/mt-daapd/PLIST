@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:29 joerg Exp $
 sbin/mt-daapd
 share/examples/mt-daapd/mt-daapd.conf
 share/examples/mt-daapd/mt-daapd.playlist
@@ -20,4 +20,3 @@ share/mt-daapd/admin-root/mt-daapd.png
 share/mt-daapd/admin-root/required.gif
 share/mt-daapd/admin-root/status.html
 share/mt-daapd/admin-root/thanks.html
-@exec ${MKDIR} %D/share/examples/mt-daapd

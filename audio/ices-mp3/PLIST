@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:28 joerg Exp $
 bin/${PKGBASE}
 man/man1/${PKGBASE}.1
 share/doc/${PKGBASE}/AUTHORS
@@ -12,4 +12,3 @@ share/doc/${PKGBASE}/icesmanual.html
 share/examples/${PKGBASE}/ices.conf.dist
 share/examples/${PKGBASE}/ices.pm.dist
 share/examples/${PKGBASE}/ices.py.dist
-@exec ${MKDIR} %D/share/${PKGBASE}
