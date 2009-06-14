@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/09 19:46:36 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:06 joerg Exp $
 bin/guards
 bin/quilt
 lib/quilt/backup-files
@@ -54,11 +54,3 @@ share/quilt/top
 share/quilt/unapplied
 share/quilt/upgrade
 share/quilt/wrapper/patch
-@dirrm share/quilt/wrapper
-@dirrm share/quilt/scripts
-@dirrm share/quilt/compat
-@dirrm share/quilt
-@dirrm share/examples/quilt/bash_completion.d
-@dirrm share/examples/quilt
-@dirrm share/doc/${PKGNAME}
-@dirrm lib/quilt

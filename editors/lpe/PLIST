@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:50:24 joerg Exp $
 bin/lpe
 lib/lpe/cmode.la
 lib/lpe/cppmode.la
@@ -37,7 +37,3 @@ share/lpe/conv.sl
 share/lpe/conv.slc
 share/lpe/init.sl
 share/lpe/init.slc
-@dirrm share/lpe
-@dirrm share/examples/lpe
-@dirrm share/doc/lpe
-@dirrm lib/lpe

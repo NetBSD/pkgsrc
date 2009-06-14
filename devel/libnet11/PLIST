@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/18 18:31:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:55 joerg Exp $
 bin/libnet11-config
 include/libnet11/libnet.h
 include/libnet11/libnet/libnet-asn1.h
@@ -94,9 +94,3 @@ share/examples/libnet11/tring_tcp1.c
 share/examples/libnet11/tring_tcp2.c
 share/examples/libnet11/udp1.c
 share/examples/libnet11/udp2.c
-@dirrm share/examples/libnet11
-@dirrm share/doc/libnet11/html
-@dirrm share/doc/libnet11
-@dirrm include/libnet11/libnet
-@dirrm include/libnet11
-@dirrm lib/libnet11

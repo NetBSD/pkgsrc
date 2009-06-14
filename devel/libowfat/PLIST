@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/21 16:53:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:55 joerg Exp $
 include/libowfat/array.h
 include/libowfat/buffer.h
 include/libowfat/byte.h
@@ -357,4 +357,3 @@ man/man3/uint64_unpack_big.3
 man/man3/umult16.3
 man/man3/umult32.3
 man/man3/umult64.3
-@dirrm include/libowfat

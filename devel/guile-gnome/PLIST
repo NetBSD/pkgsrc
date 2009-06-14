@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/21 02:35:52 gdt Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:47 joerg Exp $
 bin/guile-gnome-2
 include/guile-gnome-2/guile-gnome-corba/guile-gnome-corba-generic.h
 include/guile-gnome-2/guile-gnome-corba/guile-gnome-corba-primitives.h
@@ -197,23 +197,4 @@ share/guile-gnome-2/gnome/pangocairo.scm
 share/guile-gnome-2/gnome/vfs.scm
 share/guile/site/gnome-2.scm
 @exec ${MKDIR} %D/share/guile-gnome-platform/examples/gnome-vfs
-@dirrm share/guile-gnome-platform/examples/gnome-vfs
 @exec ${MKDIR} %D/share/guile-gnome-platform/examples/gconf
-@dirrm share/guile-gnome-platform/examples/gconf
-@dirrm share/guile-gnome-platform/examples
-@dirrm share/guile-gnome-platform
-@dirrm share/guile-gnome-2/gnome/overrides
-@dirrm share/guile-gnome-2/gnome/gw/support
-@dirrm share/guile-gnome-2/gnome/gw
-@dirrm share/guile-gnome-2/gnome/gtk
-@dirrm share/guile-gnome-2/gnome/gobject
-@dirrm share/guile-gnome-2/gnome/defs
-@dirrm share/guile-gnome-2/gnome/corba
-@dirrm share/guile-gnome-2/gnome/contrib
-@dirrm share/guile-gnome-2/gnome
-@dirrm share/guile-gnome-2
-@comment in ORBit2: @dirrm lib/orbit-2.0
-@dirrm lib/guile-gnome-2
-@dirrm include/guile-gnome-2/guile-gnome-gobject
-@dirrm include/guile-gnome-2/guile-gnome-corba
-@dirrm include/guile-gnome-2

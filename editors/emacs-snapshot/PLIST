@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/05 02:57:57 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:22 joerg Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -3223,79 +3223,3 @@ share/icons/hicolor/48x48/apps/emacs.png
 share/icons/hicolor/48x48/apps/emacs22.png
 share/icons/hicolor/scalable/apps/emacs.svg
 share/icons/hicolor/scalable/mimetypes/emacs-document.svg
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/emacs/${EMACS_VERSION}/site-lisp
-@dirrm share/emacs/${EMACS_VERSION}/lisp/url
-@dirrm share/emacs/${EMACS_VERSION}/lisp/textmodes
-@dirrm share/emacs/${EMACS_VERSION}/lisp/term
-@dirrm share/emacs/${EMACS_VERSION}/lisp/progmodes
-@dirrm share/emacs/${EMACS_VERSION}/lisp/play
-@dirrm share/emacs/${EMACS_VERSION}/lisp/org
-@dirrm share/emacs/${EMACS_VERSION}/lisp/obsolete
-@dirrm share/emacs/${EMACS_VERSION}/lisp/nxml
-@dirrm share/emacs/${EMACS_VERSION}/lisp/net
-@dirrm share/emacs/${EMACS_VERSION}/lisp/mh-e
-@dirrm share/emacs/${EMACS_VERSION}/lisp/mail
-@dirrm share/emacs/${EMACS_VERSION}/lisp/language
-@dirrm share/emacs/${EMACS_VERSION}/lisp/international
-@dirrm share/emacs/${EMACS_VERSION}/lisp/gnus
-@dirrm share/emacs/${EMACS_VERSION}/lisp/eshell
-@dirrm share/emacs/${EMACS_VERSION}/lisp/erc
-@dirrm share/emacs/${EMACS_VERSION}/lisp/emulation
-@dirrm share/emacs/${EMACS_VERSION}/lisp/emacs-lisp
-@dirrm share/emacs/${EMACS_VERSION}/lisp/calendar
-@dirrm share/emacs/${EMACS_VERSION}/lisp/calc
-@dirrm share/emacs/${EMACS_VERSION}/lisp
-@dirrm share/emacs/${EMACS_VERSION}/leim/quail
-@dirrm share/emacs/${EMACS_VERSION}/leim/ja-dic
-@dirrm share/emacs/${EMACS_VERSION}/leim
-@dirrm share/emacs/${EMACS_VERSION}/etc/tutorials
-@dirrm share/emacs/${EMACS_VERSION}/etc/schema
-@dirrm share/emacs/${EMACS_VERSION}/etc/refcards
-@dirrm share/emacs/${EMACS_VERSION}/etc/nxml
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/tree-widget/folder
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/tree-widget/default
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/tree-widget
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/smilies/medium
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/smilies/grayscale
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/smilies
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/mail
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/low-color
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/scalable/mimetypes
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/scalable/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/scalable
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/48x48/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/48x48
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/32x32/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/32x32
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/24x24/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/24x24
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/16x16/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/16x16
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/128x128/apps
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor/128x128
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons/hicolor
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/icons
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/gud
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/gnus
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/ezimage
-@dirrm share/emacs/${EMACS_VERSION}/etc/images/custom
-@dirrm share/emacs/${EMACS_VERSION}/etc/images
-@dirrm share/emacs/${EMACS_VERSION}/etc/gnus
-@dirrm share/emacs/${EMACS_VERSION}/etc/e
-@dirrm share/emacs/${EMACS_VERSION}/etc/charsets
-@dirrm share/emacs/${EMACS_VERSION}/etc
-@dirrm share/emacs/${EMACS_VERSION}
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/emacs/${EMACS_VERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/emacs/${EMACS_VERSION}
-@dirrm libexec/emacs

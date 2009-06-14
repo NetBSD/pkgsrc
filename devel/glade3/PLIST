@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/15 18:19:27 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:45 joerg Exp $
 bin/glade-3
 include/libgladeui-1.0/gladeui/glade-app.h
 include/libgladeui-1.0/gladeui/glade-base-editor.h
@@ -371,24 +371,3 @@ share/locale/vi/LC_MESSAGES/glade3.mo
 share/locale/zh_CN/LC_MESSAGES/glade3.mo
 share/locale/zh_HK/LC_MESSAGES/glade3.mo
 share/locale/zh_TW/LC_MESSAGES/glade3.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gtk-doc/html/gladeui
-@dirrm share/glade3/pixmaps/hicolor/22x22/actions
-@dirrm share/glade3/pixmaps/hicolor/22x22
-@dirrm share/glade3/pixmaps/hicolor/16x16/actions
-@dirrm share/glade3/pixmaps/hicolor/16x16
-@dirrm share/glade3/pixmaps/hicolor
-@dirrm share/glade3/pixmaps
-@dirrm share/glade3/catalogs
-@dirrm share/glade3
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/glade3/modules
-@dirrm lib/glade3
-@dirrm include/libgladeui-1.0/gladeui
-@dirrm include/libgladeui-1.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2009/03/17 15:56:05 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/14 17:48:53 joerg Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -166,12 +166,3 @@ share/locale/zh_CN/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libgnome-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libgnome-2.0.mo
 share/pixmaps/backgrounds/gnome/background-default.jpg
-@dirrm share/gtk-doc/html/libgnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/examples/libgnome/sound/events
-@dirrm share/examples/libgnome/sound
-@dirrm share/examples/libgnome
-@comment in libbonobo: @dirrm lib/bonobo/servers
-@comment in libbonobo: @dirrm lib/bonobo/monikers
-@dirrm include/libgnome-2.0/libgnome
-@dirrm include/libgnome-2.0

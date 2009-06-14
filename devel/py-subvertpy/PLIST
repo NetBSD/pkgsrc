@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/02/20 02:59:50 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:06 joerg Exp $
 ${PYSITELIB}/subvertpy/__init__.py
 ${PYSITELIB}/subvertpy/__init__.pyc
 ${PYSITELIB}/subvertpy/__init__.pyo
@@ -54,5 +54,3 @@ ${PYSITELIB}/subvertpy/tests/test_wc.py
 ${PYSITELIB}/subvertpy/tests/test_wc.pyc
 ${PYSITELIB}/subvertpy/tests/test_wc.pyo
 ${PYSITELIB}/subvertpy/wc.so
-@dirrm ${PYSITELIB}/subvertpy/tests
-@dirrm ${PYSITELIB}/subvertpy

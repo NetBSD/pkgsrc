@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/16 15:40:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:14 joerg Exp $
 lib/X11/fonts/TTF/LiberationMono-Bold.ttf
 lib/X11/fonts/TTF/LiberationMono-BoldItalic.ttf
 lib/X11/fonts/TTF/LiberationMono-Italic.ttf
@@ -13,4 +13,3 @@ lib/X11/fonts/TTF/LiberationSerif-Italic.ttf
 lib/X11/fonts/TTF/LiberationSerif-Regular.ttf
 share/doc/liberation-ttf/COPYING
 share/doc/liberation-ttf/License.txt
-@dirrm share/doc/liberation-ttf

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/09/11 10:27:52 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 17:48:48 joerg Exp $
 bin/gif2h5
 bin/h52gif
 ${PLIST.cxx}bin/h5c++
@@ -715,24 +715,3 @@ ${PLIST.cxx}share/examples/hdf5/c++/h5group.cpp
 ${PLIST.cxx}share/examples/hdf5/c++/readdata.cpp
 ${PLIST.cxx}share/examples/hdf5/c++/strtype.cpp
 ${PLIST.cxx}share/examples/hdf5/c++/writedata.cpp
-${PLIST.cxx}@dirrm share/examples/hdf5/c++
-@dirrm share/examples/hdf5/c
-@dirrm share/examples/hdf5
-@dirrm share/doc/hdf5/html/fortran
-@dirrm share/doc/hdf5/html/ed_styles
-@dirrm share/doc/hdf5/html/ed_libs
-@dirrm share/doc/hdf5/html/cpplus_RM/header_files
-@dirrm share/doc/hdf5/html/cpplus_RM
-@dirrm share/doc/hdf5/html/cpplus
-@dirrm share/doc/hdf5/html/Tutor/examples/java
-@dirrm share/doc/hdf5/html/Tutor/examples
-@dirrm share/doc/hdf5/html/Tutor/Graphics
-@dirrm share/doc/hdf5/html/Tutor
-@dirrm share/doc/hdf5/html/TechNotes/TestReview
-@dirrm share/doc/hdf5/html/TechNotes
-@dirrm share/doc/hdf5/html/PSandPDF
-@dirrm share/doc/hdf5/html/Intro
-@dirrm share/doc/hdf5/html/Graphics
-@dirrm share/doc/hdf5/html/ADGuide
-@dirrm share/doc/hdf5/html
-@dirrm share/doc/hdf5

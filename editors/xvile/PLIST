@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/09 10:14:30 bjs Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:50:28 joerg Exp $
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
@@ -211,9 +211,3 @@ share/xvile/xml.keywords
 share/xvile/xres.keywords
 share/xvile/xs.keywords
 share/xvile/yacc.keywords
-@dirrm share/xvile/perl/Vile
-@dirrm share/xvile/perl
-@dirrm share/xvile/doc
-@dirrm share/xvile
-@dirrm share/examples/xvile
-@dirrm libexec/xvile

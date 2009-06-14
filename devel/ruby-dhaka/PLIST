@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:16:48 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:09 joerg Exp $
 ${GEM_HOME}/cache/dhaka-${PKGVERSION}.gem
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/dhaka.rb
@@ -87,18 +87,3 @@ ${GEM_LIBDIR}/test/core/sr_conflict_grammar.rb
 ${GEM_LIBDIR}/test/dhaka_test_helper.rb
 ${GEM_LIBDIR}/test/fake_logger.rb
 ${GEM_HOME}/specifications/dhaka-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/core
-@dirrm ${GEM_LIBDIR}/test/chittagong
-@dirrm ${GEM_LIBDIR}/test/brackets
-@dirrm ${GEM_LIBDIR}/test/arithmetic_precedence
-@dirrm ${GEM_LIBDIR}/test/arithmetic
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/dhaka/tokenizer
-@dirrm ${GEM_LIBDIR}/lib/dhaka/parser
-@dirrm ${GEM_LIBDIR}/lib/dhaka/lexer
-@dirrm ${GEM_LIBDIR}/lib/dhaka/grammar
-@dirrm ${GEM_LIBDIR}/lib/dhaka/evaluator
-@dirrm ${GEM_LIBDIR}/lib/dhaka/dot
-@dirrm ${GEM_LIBDIR}/lib/dhaka
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

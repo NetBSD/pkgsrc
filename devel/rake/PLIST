@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/06/10 21:51:17 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:49:06 joerg Exp $
 bin/rake
 ${GEM_HOME}/cache/rake-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
@@ -112,26 +112,3 @@ ${GEM_LIBDIR}/test/test_top_level_functions.rb
 ${GEM_LIBDIR}/test/test_win32.rb
 ${GEM_HOME}/specifications/rake-${PKGVERSION}.gemspec
 man/man1/rake.1
-@dirrm ${GEM_LIBDIR}/test/data/unittest
-@dirrm ${GEM_LIBDIR}/test/data/statusreturn
-@dirrm ${GEM_LIBDIR}/test/data/rbext
-@dirrm ${GEM_LIBDIR}/test/data/rakelib
-@dirrm ${GEM_LIBDIR}/test/data/namespace
-@dirrm ${GEM_LIBDIR}/test/data/multidesc
-@dirrm ${GEM_LIBDIR}/test/data/imports
-@dirrm ${GEM_LIBDIR}/test/data/file_creation_task
-@dirrm ${GEM_LIBDIR}/test/data/dryrun
-@dirrm ${GEM_LIBDIR}/test/data/default
-@dirrm ${GEM_LIBDIR}/test/data/chains
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test/contrib
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/rake/loaders
-@dirrm ${GEM_LIBDIR}/lib/rake/contrib
-@dirrm ${GEM_LIBDIR}/lib/rake
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/doc/release_notes
-@dirrm ${GEM_LIBDIR}/doc/example
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

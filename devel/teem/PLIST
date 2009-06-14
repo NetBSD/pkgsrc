@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/01 18:35:35 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:16 joerg Exp $
 bin/affine
 bin/airSanity
 bin/cubic
@@ -84,4 +84,3 @@ lib/libten.a
 lib/libten.so
 lib/libunrrdu.a
 lib/libunrrdu.so
-@dirrm include/teem

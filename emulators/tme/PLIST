@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/07 14:11:51 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:51:08 joerg Exp $
 bin/tme-sun-eeprom
 bin/tme-sun-idprom
 bin/tmesh
@@ -84,10 +84,3 @@ share/examples/tme/SUN4-75
 share/examples/tme/my-sun-macros.txt
 share/examples/tme/sun-keyboards.txt
 share/examples/tme/sun3-carrera-eeprom.txt
-@dirrm share/examples/tme
-@dirrm lib/tme
-@dirrm include/tme/scsi
-@dirrm include/tme/machine
-@dirrm include/tme/ic
-@dirrm include/tme/generic
-@dirrm include/tme

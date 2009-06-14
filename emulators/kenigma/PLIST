@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/12 12:03:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:06 joerg Exp $
 bin/kenigma
 share/applications/kde/kenigma.desktop
 share/kde/apps/kenigma/README
@@ -9,4 +9,3 @@ share/kde/apps/kenigma/rotors.rb
 share/kde/apps/kenigma/stecker.rb
 share/kde/apps/kenigma/textwindow.rb
 share/kde/apps/kenigma/xmlsettings.rb
-@dirrm share/kde/apps/kenigma

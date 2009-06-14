@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/04 15:25:37 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:15 joerg Exp $
 include/stlport/algorithm
 include/stlport/bitset
 include/stlport/cassert
@@ -348,14 +348,3 @@ share/doc/html/stlport/thanks.html
 share/doc/html/stlport/use_stlport.html
 share/doc/html/stlport/vendor_interface.html
 share/doc/html/stlport/wrappers.html
-@dirrm share/doc/html/stlport/images
-@dirrm share/doc/html/stlport
-@dirrm include/stlport/wrap_std/h
-@dirrm include/stlport/wrap_std
-@dirrm include/stlport/using/h
-@dirrm include/stlport/using
-@dirrm include/stlport/stl/wrappers
-@dirrm include/stlport/stl/debug
-@dirrm include/stlport/stl
-@dirrm include/stlport/config
-@dirrm include/stlport
