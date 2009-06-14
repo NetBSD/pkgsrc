@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:01:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:19:52 joerg Exp $
 ${PLIST.qt}bin/uim-chardict-qt
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 ${PLIST.fep}bin/uim-fep
@@ -358,4 +358,4 @@ share/uim/wnn-custom.scm
 share/uim/wnn-key-custom.scm
 share/uim/wnn.scm
 share/uim/zaurus.scm
-@exec ${MKDIR} %D/lib/uim/notify
+@pkgdir lib/uim/notify
