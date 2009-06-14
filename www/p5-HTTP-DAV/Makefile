@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/12/12 23:11:13 he Exp $
+# $NetBSD: Makefile,v 1.17 2009/06/14 20:25:50 sno Exp $
 #
 
-DISTNAME=	HTTP-DAV-0.35
+DISTNAME=	HTTP-DAV-0.38
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5htd
 CATEGORIES=	www perl5
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://webdav.org/perldav/
 #HOMEPAGE=	http://search.cpan.org/dist/HTTP-DAV/
 COMMENT=	HTTP::DAV interface and 'dave'
+LICENSE=	gnu-gpl-v2 # OR artistic
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
