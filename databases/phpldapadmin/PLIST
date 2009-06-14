@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:43:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:36:20 joerg Exp $
 share/doc/phpldapadmin/INSTALL
 share/doc/phpldapadmin/LICENSE
 share/examples/phpldapadmin/config.php.example
@@ -483,5 +483,3 @@ share/phpldapadmin/tools/po/make_po_it
 share/phpldapadmin/tools/po/make_po_ja
 share/phpldapadmin/tools/po/messages.header
 share/phpldapadmin/tools/unit_test.php
-@unexec ${RMDIR} %D/share/phpldapadmin/config 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/phpldapadmin 2>/dev/null || ${TRUE}

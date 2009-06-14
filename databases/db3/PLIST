@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:43:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:36:19 joerg Exp $
 bin/db3_archive
 bin/db3_checkpoint
 bin/db3_deadlock
@@ -774,7 +774,6 @@ share/doc/db3/reftoc.html
 share/doc/db3/sleepycat/contact.html
 share/doc/db3/sleepycat/legal.html
 share/doc/db3/sleepycat/license.html
-@exec ${MKDIR} %D/share/doc/db3/ref/splash
 share/doc/db3/utility/berkeley_db_svc.html
 share/doc/db3/utility/db_archive.html
 share/doc/db3/utility/db_checkpoint.html
@@ -787,3 +786,4 @@ share/doc/db3/utility/db_stat.html
 share/doc/db3/utility/db_upgrade.html
 share/doc/db3/utility/db_verify.html
 share/doc/db3/utility/index.html
+@pkgdir share/doc/db3/ref/splash

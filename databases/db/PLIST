@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:43:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:36:19 joerg Exp $
 bin/db2_archive
 bin/db2_checkpoint
 bin/db2_deadlock
@@ -459,6 +459,6 @@ share/doc/db2/utility/db_load.html
 share/doc/db2/utility/db_recover.html
 share/doc/db2/utility/db_stat.html
 share/doc/db2/utility/db_archive.html
-@exec ${MKDIR} %D/share/doc/db2/api_java/special
-@exec ${MKDIR} %D/share/doc/db2/api_cxx/special
-@exec ${MKDIR} %D/share/doc/db2/api_c/special
+@pkgdir share/doc/db2/api_java/special
+@pkgdir share/doc/db2/api_cxx/special
+@pkgdir share/doc/db2/api_c/special
