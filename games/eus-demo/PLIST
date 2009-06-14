@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 19:10:36 joerg Exp $
 bin/eus-demo
 lib/lokigames/eus-demo/EUS.txt
 lib/lokigames/eus-demo/eus-demo
@@ -195,5 +195,3 @@ lib/lokigames/eus-demo/sounds/win7.wav
 lib/lokigames/eus-demo/sounds/win8.wav
 lib/lokigames/eus-demo/sounds/win9.wav
 share/doc/lokigames/eus-demo-README
-@unexec ${RMDIR} -p %D/lib/lokigames 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} -p %D/share/doc/lokigames 2>/dev/null || ${TRUE}
