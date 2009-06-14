@@ -1,11 +1,10 @@
-# $NetBSD: texmf-deinstall.tmpl,v 1.1.1.1 2009/01/03 22:12:42 minskim Exp $
+# $NetBSD: texmf-deinstall.tmpl,v 1.2 2009/06/14 18:22:06 minskim Exp $
 #
 # Rebuild ls-R databases.
 #
 
 case ${STAGE} in
 POST-DEINSTALL)
-	@FIND@ -d @TEXMF_DIRS@ -type d -empty -exec @RMDIR@ {} \;
 	@MKTEXLSR@ @TEXMF_DIRS@
         ;;
 *)
