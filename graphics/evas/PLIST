@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 20:05:41 joerg Exp $
 include/Evas.h
 include/Evas_Data.h
 lib/evas/modules/engines/software_generic/${MODULE_ARCH}/module.la
 lib/libevas.la
 lib/pkgconfig/evas.pc
-@exec ${MKDIR} %D/lib/evas/modules/savers
-@exec ${MKDIR} %D/lib/evas/modules/loaders
+@pkgdir lib/evas/modules/savers
+@pkgdir lib/evas/modules/loaders
