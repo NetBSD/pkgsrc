@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/26 04:13:34 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:20 joerg Exp $
 bin/kphotobook
 share/doc/kde/HTML/en/kphotobook/common
 share/doc/kde/HTML/en/kphotobook/index.cache.bz2
@@ -87,13 +87,3 @@ share/kde/apps/kphotobook/icons/hicolor/32x32/actions/view_layout_restore.png
 share/kde/apps/kphotobook/icons/hicolor/32x32/actions/view_refresh.png
 share/kde/apps/kphotobook/kphotobookui.rc
 share/kde/mimelnk/application/x-kphotobook.desktop
-@dirrm share/kde/apps/kphotobook/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kphotobook/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kphotobook/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kphotobook/icons/hicolor/32x32
-@dirrm share/kde/apps/kphotobook/icons/hicolor/22x22
-@dirrm share/kde/apps/kphotobook/icons/hicolor/16x16
-@dirrm share/kde/apps/kphotobook/icons/hicolor
-@dirrm share/kde/apps/kphotobook/icons
-@dirrm share/kde/apps/kphotobook
-@dirrm share/doc/kde/HTML/en/kphotobook

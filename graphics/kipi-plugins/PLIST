@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/01/06 18:54:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:59:19 joerg Exp $
 bin/images2mpg
 lib/kde3/kipiplugin_acquireimages.la
 lib/kde3/kipiplugin_batchprocessimages.la
@@ -1287,82 +1287,3 @@ share/locale/zh_CN/LC_MESSAGES/kipiplugin_slideshow.mo
 share/locale/zh_CN/LC_MESSAGES/kipiplugin_timeadjust.mo
 share/locale/zh_CN/LC_MESSAGES/kipiplugin_wallpaper.mo
 share/locale/zh_CN/LC_MESSAGES/kipiplugins.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/kipiplugin_viewer/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kipiplugin_viewer/icons/hicolor/32x32
-@dirrm share/kde/apps/kipiplugin_viewer/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kipiplugin_viewer/icons/hicolor/16x16
-@dirrm share/kde/apps/kipiplugin_viewer/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_viewer/icons
-@dirrm share/kde/apps/kipiplugin_viewer
-@dirrm share/kde/apps/kipiplugin_slideshow/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kipiplugin_slideshow/icons/hicolor/22x22
-@dirrm share/kde/apps/kipiplugin_slideshow/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_slideshow/icons
-@dirrm share/kde/apps/kipiplugin_slideshow
-@dirrm share/kde/apps/kipiplugin_simpleviewerexport/simpleviewer_html
-@dirrm share/kde/apps/kipiplugin_simpleviewerexport
-@dirrm share/kde/apps/kipiplugin_rawconverter/profiles
-@dirrm share/kde/apps/kipiplugin_rawconverter/icons/hicolor/128x128/actions
-@dirrm share/kde/apps/kipiplugin_rawconverter/icons/hicolor/128x128
-@dirrm share/kde/apps/kipiplugin_rawconverter/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_rawconverter/icons
-@dirrm share/kde/apps/kipiplugin_rawconverter
-@dirrm share/kde/apps/kipiplugin_jpeglossless/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kipiplugin_jpeglossless/icons/hicolor/32x32
-@dirrm share/kde/apps/kipiplugin_jpeglossless/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_jpeglossless/icons
-@dirrm share/kde/apps/kipiplugin_jpeglossless
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/snow
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/simple
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/s0
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/matrix
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/frames
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/cleanframes
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes/classic
-@dirrm share/kde/apps/kipiplugin_htmlexport/themes
-@dirrm share/kde/apps/kipiplugin_htmlexport
-@dirrm share/kde/apps/kipiplugin_gpssync/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kipiplugin_gpssync/icons/hicolor/32x32
-@dirrm share/kde/apps/kipiplugin_gpssync/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kipiplugin_gpssync/icons/hicolor/16x16
-@dirrm share/kde/apps/kipiplugin_gpssync/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_gpssync/icons
-@dirrm share/kde/apps/kipiplugin_gpssync
-@dirrm share/kde/apps/kipiplugin_galleryexport/pics
-@dirrm share/kde/apps/kipiplugin_galleryexport
-@dirrm share/kde/apps/kipiplugin_findimages/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kipiplugin_findimages/icons/hicolor/32x32
-@dirrm share/kde/apps/kipiplugin_findimages/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_findimages/icons
-@dirrm share/kde/apps/kipiplugin_findimages
-@dirrm share/kde/apps/kipiplugin_batchprocessimages/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kipiplugin_batchprocessimages/icons/hicolor/32x32
-@dirrm share/kde/apps/kipiplugin_batchprocessimages/icons/hicolor
-@dirrm share/kde/apps/kipiplugin_batchprocessimages/icons
-@dirrm share/kde/apps/kipiplugin_batchprocessimages/data
-@dirrm share/kde/apps/kipiplugin_batchprocessimages
-@dirrm share/kde/apps/kipi/data/autorun
-@comment in libkipi: @dirrm share/kde/apps/kipi/data
-@comment in libkipi: @dirrm share/kde/apps/kipi
-@comment in kde: @dirrm share/kde/apps
-@dirrm share/doc/kde/HTML/sv/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/pt_BR/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@dirrm share/doc/kde/HTML/nl/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/et/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kipi-plugins
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@comment in kde: @dirrm lib/kde3

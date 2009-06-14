@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/01/11 09:31:09 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:06 joerg Exp $
 ${EMACS_LISPPREFIX}/artist/artist.el
 ${EMACS_LISPPREFIX}/artist/artist.elc
 share/doc/artist/BUGS
@@ -7,5 +7,3 @@ share/doc/artist/ChangeLog
 share/doc/artist/INSTALL
 share/doc/artist/README
 share/doc/artist/TODO
-@dirrm share/doc/artist
-@dirrm ${EMACS_LISPPREFIX}/artist

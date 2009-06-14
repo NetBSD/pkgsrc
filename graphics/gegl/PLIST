@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/04/15 12:25:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:13 joerg Exp $
 bin/gegl
 include/gegl-0.0/gegl-buffer.h
 include/gegl-0.0/gegl-chant.h
@@ -118,7 +118,3 @@ lib/pkgconfig/gegl.pc
 share/gtk-doc/html/gegl/gegl.css
 share/gtk-doc/html/gegl/gegl.devhelp
 share/gtk-doc/html/gegl/operations.html
-@dirrm share/gtk-doc/html/gegl
-@dirrm lib/gegl-0.0
-@dirrm include/gegl-0.0/operation
-@dirrm include/gegl-0.0

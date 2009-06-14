@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/08 01:08:37 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:30 joerg Exp $
 include/unicap/ucil.h
 include/unicap/ucil_png.h
 include/unicap/ucil_version.h
@@ -68,9 +68,3 @@ share/gtk-doc/html/libunicapgtk/up.png
 share/locale/de/LC_MESSAGES/unicap.mo
 share/locale/fr/LC_MESSAGES/unicap.mo
 share/locale/ru/LC_MESSAGES/unicap.mo
-@dirrm share/gtk-doc/html/libunicapgtk
-@dirrm share/gtk-doc/html/libunicap
-@dirrm share/gtk-doc/html/libucil
-@dirrm lib/unicap2/cpi
-@dirrm lib/unicap2
-@dirrm include/unicap

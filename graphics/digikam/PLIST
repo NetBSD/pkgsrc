@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/03/22 10:09:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:59:09 joerg Exp $
 bin/digikam
 bin/digikamthemedesigner
 bin/digitaglinktree
@@ -749,87 +749,5 @@ share/locale/uk/LC_MESSAGES/digikam.mo
 share/locale/vi/LC_MESSAGES/digikam.mo
 share/locale/zh_CN/LC_MESSAGES/digikam.mo
 share/locale/zh_TW/LC_MESSAGES/digikam.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services
-@dirrm share/kde/apps/showfoto/icons/hicolor/64x64/mimetypes
-@dirrm share/kde/apps/showfoto/icons/hicolor/64x64/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/64x64
-@dirrm share/kde/apps/showfoto/icons/hicolor/48x48/mimetypes
-@dirrm share/kde/apps/showfoto/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/48x48
-@dirrm share/kde/apps/showfoto/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/apps/showfoto/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/32x32
-@dirrm share/kde/apps/showfoto/icons/hicolor/22x22/mimetypes
-@dirrm share/kde/apps/showfoto/icons/hicolor/22x22/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/22x22
-@dirrm share/kde/apps/showfoto/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/16x16
-@dirrm share/kde/apps/showfoto/icons/hicolor/128x128/apps
-@dirrm share/kde/apps/showfoto/icons/hicolor/128x128
-@dirrm share/kde/apps/showfoto/icons/hicolor
-@dirrm share/kde/apps/showfoto/icons
-@dirrm share/kde/apps/showfoto
-@comment in kde: @dirrm share/kde/apps/konqueror/servicemenus
-@dirrm share/kde/apps/digikam/utils
-@dirrm share/kde/apps/digikam/themes
-@dirrm share/kde/apps/digikam/profiles
-@dirrm share/kde/apps/digikam/icons/hicolor/scalable/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/scalable
-@dirrm share/kde/apps/digikam/icons/hicolor/64x64/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/64x64
-@dirrm share/kde/apps/digikam/icons/hicolor/48x48/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/48x48
-@dirrm share/kde/apps/digikam/icons/hicolor/32x32/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/32x32
-@dirrm share/kde/apps/digikam/icons/hicolor/22x22/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/22x22
-@dirrm share/kde/apps/digikam/icons/hicolor/16x16/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/16x16
-@dirrm share/kde/apps/digikam/icons/hicolor/128x128/apps
-@dirrm share/kde/apps/digikam/icons/hicolor/128x128/actions
-@dirrm share/kde/apps/digikam/icons/hicolor/128x128
-@dirrm share/kde/apps/digikam/icons/hicolor
-@dirrm share/kde/apps/digikam/icons/crystalsvg/scalable/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/scalable
-@dirrm share/kde/apps/digikam/icons/crystalsvg/64x64/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/64x64
-@dirrm share/kde/apps/digikam/icons/crystalsvg/48x48/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/48x48
-@dirrm share/kde/apps/digikam/icons/crystalsvg/32x32/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/32x32
-@dirrm share/kde/apps/digikam/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/22x22
-@dirrm share/kde/apps/digikam/icons/crystalsvg/16x16/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/16x16
-@dirrm share/kde/apps/digikam/icons/crystalsvg/128x128/actions
-@dirrm share/kde/apps/digikam/icons/crystalsvg/128x128
-@dirrm share/kde/apps/digikam/icons/crystalsvg
-@dirrm share/kde/apps/digikam/icons
-@dirrm share/kde/apps/digikam/data
-@dirrm share/kde/apps/digikam/about
-@dirrm share/kde/apps/digikam
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/html
-@dirrm share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/digikam/html
-@dirrm share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/digikam/html
-@dirrm share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam/digikam
-@dirrm share/doc/kde/HTML/en/${HTMLDIR}-apidocs/digikam
-@dirrm share/doc/kde/HTML/en/${HTMLDIR}-apidocs
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3
-@dirrm include/digikam

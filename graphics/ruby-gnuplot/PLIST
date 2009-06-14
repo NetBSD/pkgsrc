@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:27 joerg Exp $
 ${GEM_HOME}/cache/gnuplot-${PKGVERSION}.gem
 ${GEM_LIBDIR}/lib/gnuplot.rb
 ${GEM_HOME}/specifications/gnuplot-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

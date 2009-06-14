@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/01/08 18:21:54 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:11 joerg Exp $
 bin/exiv2
 include/exiv2/basicio.hpp
 include/exiv2/bmpimage.hpp
@@ -53,4 +53,3 @@ share/locale/fr/LC_MESSAGES/exiv2.mo
 share/locale/pl/LC_MESSAGES/exiv2.mo
 share/locale/ru/LC_MESSAGES/exiv2.mo
 share/locale/sk/LC_MESSAGES/exiv2.mo
-@dirrm include/exiv2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/11/14 13:16:00 wennmach Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:04 joerg Exp $
 bin/GMT
 bin/backtracker
 bin/binlegs
@@ -1410,48 +1410,3 @@ share/gmt/x2sys/mgd77+.def
 share/gmt/x2sys/mgd77.def
 share/gmt/x2sys/xy.def
 share/gmt/x2sys/xyz.def
-@dirrm share/gmt/coast
-@dirrm share/gmt/cpt
-@dirrm share/gmt/custom
-@dirrm share/gmt/dbase
-@dirrm share/gmt/mgd77
-@dirrm share/gmt/mgg
-@dirrm share/gmt/pattern
-@dirrm share/gmt/pslib
-@dirrm share/gmt/time
-@dirrm share/gmt/x2sys
-@dirrm share/gmt
-@dirrm share/examples/gmt/ex01
-@dirrm share/examples/gmt/ex02
-@dirrm share/examples/gmt/ex03
-@dirrm share/examples/gmt/ex04
-@dirrm share/examples/gmt/ex05
-@dirrm share/examples/gmt/ex06
-@dirrm share/examples/gmt/ex07
-@dirrm share/examples/gmt/ex08
-@dirrm share/examples/gmt/ex09
-@dirrm share/examples/gmt/ex10
-@dirrm share/examples/gmt/ex11
-@dirrm share/examples/gmt/ex12
-@dirrm share/examples/gmt/ex13
-@dirrm share/examples/gmt/ex14
-@dirrm share/examples/gmt/ex15
-@dirrm share/examples/gmt/ex16
-@dirrm share/examples/gmt/ex17
-@dirrm share/examples/gmt/ex18
-@dirrm share/examples/gmt/ex19
-@dirrm share/examples/gmt/ex20
-@dirrm share/examples/gmt/ex21
-@dirrm share/examples/gmt/ex22
-@dirrm share/examples/gmt/ex23
-@dirrm share/examples/gmt/ex24
-@dirrm share/examples/gmt/ex25
-@dirrm share/examples/gmt/tutorial
-@dirrm share/examples/gmt
-@dirrm share/doc/html/gmt/doc/html/GMT_Docs
-@dirrm share/doc/html/gmt/doc/html/GMT_Tutorial
-@dirrm share/doc/html/gmt/doc/html
-@dirrm share/doc/html/gmt/doc
-@dirrm share/doc/html/gmt
-@dirrm share/doc/gmt
-@dirrm include/gmt

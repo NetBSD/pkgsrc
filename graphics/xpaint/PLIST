@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/13 13:35:13 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:32 joerg Exp $
 bin/xpaint
 ${IMAKE_MAN_DIR}/xpaint.${IMAKE_MAN_SUFFIX}
 lib/X11/app-defaults/XPaint
@@ -54,14 +54,3 @@ share/xpaint/include/xpaint.h
 share/xpaint/messages/Messages
 share/xpaint/messages/Messages_es
 share/xpaint/messages/Messages_fr
-@dirrm share/xpaint/messages
-@dirrm share/xpaint/include
-@dirrm share/xpaint/help
-@dirrm share/xpaint/c_scripts/procedures
-@dirrm share/xpaint/c_scripts/layers
-@dirrm share/xpaint/c_scripts/images
-@dirrm share/xpaint/c_scripts/filters
-@dirrm share/xpaint/c_scripts/3d_surfaces
-@dirrm share/xpaint/c_scripts/3d_curves
-@dirrm share/xpaint/c_scripts
-@dirrm share/xpaint

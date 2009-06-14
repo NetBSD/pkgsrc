@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:50:37 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:12 joerg Exp $
 bin/fly
 share/doc/fly/FAQ.html
 share/doc/fly/copyright.html
@@ -26,5 +26,3 @@ share/examples/fly/size.pl
 share/examples/fly/small-end.fly
 share/examples/fly/small.fly
 share/examples/fly/test.fly
-@dirrm share/examples/fly
-@dirrm share/doc/fly

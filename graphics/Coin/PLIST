@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/22 16:46:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:04 joerg Exp $
 bin/coin-config
 include/Inventor/C/base/hash.h
 include/Inventor/C/base/heap.h
@@ -704,33 +704,3 @@ share/aclocal/coin.m4
 @unexec ${RMDIR} %D/share/Coin/draggerDefaults 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/Coin/conf 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/Coin 2>/dev/null || ${TRUE}
-@dirrm include/Inventor/threads
-@dirrm include/Inventor/system
-@dirrm include/Inventor/sensors
-@dirrm include/Inventor/projectors
-@dirrm include/Inventor/nodes
-@dirrm include/Inventor/nodekits
-@dirrm include/Inventor/misc
-@dirrm include/Inventor/manips
-@dirrm include/Inventor/lock
-@dirrm include/Inventor/lists
-@dirrm include/Inventor/fields
-@dirrm include/Inventor/events
-@dirrm include/Inventor/errors
-@dirrm include/Inventor/engines
-@dirrm include/Inventor/elements
-@dirrm include/Inventor/draggers
-@dirrm include/Inventor/details
-@dirrm include/Inventor/collision
-@dirrm include/Inventor/caches
-@dirrm include/Inventor/bundles
-@dirrm include/Inventor/annex/HardCopy
-@dirrm include/Inventor/annex
-@dirrm include/Inventor/actions
-@dirrm include/Inventor/VRMLnodes
-@dirrm include/Inventor/C/threads
-@dirrm include/Inventor/C/glue
-@dirrm include/Inventor/C/errors
-@dirrm include/Inventor/C/base
-@dirrm include/Inventor/C
-@dirrm include/Inventor

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/21 09:37:28 jmc Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:27 joerg Exp $
 ${PYSITELIB}/piddle/PixMapWrapper.py
 ${PYSITELIB}/piddle/PixMapWrapper.pyc
 ${PYSITELIB}/piddle/PixMapWrapper.pyo
@@ -182,8 +182,3 @@ ${PYSITELIB}/piddle/stringformat.py
 ${PYSITELIB}/piddle/stringformat.pyc
 ${PYSITELIB}/piddle/stringformat.pyo
 ${PYSITELIB}/piddle.pth
-@dirrm ${PYSITELIB}/piddle/pilfonts
-@dirrm ${PYSITELIB}/piddle/piddleTK2
-@dirrm ${PYSITELIB}/piddle/piddleSVG
-@dirrm ${PYSITELIB}/piddle/piddleGTK
-@dirrm ${PYSITELIB}/piddle

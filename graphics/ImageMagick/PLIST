@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.61 2009/06/04 12:50:58 adam Exp $
+@comment $NetBSD: PLIST,v 1.62 2009/06/14 17:59:05 joerg Exp $
 bin/Magick++-config
 bin/Magick-config
 bin/MagickCore-config
@@ -1068,23 +1068,5 @@ share/doc/ImageMagick-${IM_MAJOR_VER}/www/sponsors.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/stream.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/subversion.html
 share/doc/ImageMagick-${IM_MAJOR_VER}/www/t-shirt.html
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/MagickWand
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/api/MagickCore
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/api
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www/Magick++
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/www
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}/images
-@dirrm share/doc/ImageMagick-${IM_MAJOR_VER}
-@dirrm share/ImageMagick-${IM_MAJOR_VER}/config
-@dirrm share/ImageMagick-${IM_MAJOR_VER}
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
-@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/filters
 @exec ${MKDIR} %D/lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
-@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16/coders
-@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/modules-Q16
-@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}/config
-@dirrm lib/ImageMagick-${IM_MAJOR_LIB_VER}
-@dirrm include/ImageMagick/wand
-@dirrm include/ImageMagick/magick
-@dirrm include/ImageMagick/Magick++
-@dirrm include/ImageMagick

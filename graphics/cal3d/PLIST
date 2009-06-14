@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/08 22:35:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:07 joerg Exp $
 include/cal3d/animation.h
 include/cal3d/animation_action.h
 include/cal3d/animation_cycle.h
@@ -41,4 +41,3 @@ include/cal3d/tinyxml.h
 include/cal3d/vector.h
 lib/libcal3d.la
 lib/pkgconfig/cal3d.pc
-@dirrm include/cal3d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:53:46 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:27 joerg Exp $
 bin/rayshade
 lib/libray.a
 lib/libshade.a
@@ -32,5 +32,3 @@ share/examples/rayshade/planet.ray
 share/examples/rayshade/pool.ray
 share/examples/rayshade/solids.ray
 share/examples/rayshade/stripe.ray
-@dirrm share/doc/rayshade
-@dirrm share/examples/rayshade

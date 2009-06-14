@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/22 21:54:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:21 joerg Exp $
 include/libgnomecanvasmm-2.6/libgnomecanvasmm.h
 include/libgnomecanvasmm-2.6/libgnomecanvasmm/affinetrans.h
 include/libgnomecanvasmm-2.6/libgnomecanvasmm/bpath.h
@@ -40,10 +40,3 @@ lib/libgnomecanvasmm-2.6/include/libgnomecanvasmmconfig.h
 lib/libgnomecanvasmm-2.6/proc/m4/convert.m4
 lib/libgnomecanvasmm-2.6/proc/m4/convert_libgnomecanvasmm.m4
 lib/pkgconfig/libgnomecanvasmm-2.6.pc
-@dirrm lib/libgnomecanvasmm-2.6/proc/m4
-@dirrm lib/libgnomecanvasmm-2.6/proc
-@dirrm lib/libgnomecanvasmm-2.6/include
-@dirrm lib/libgnomecanvasmm-2.6
-@dirrm include/libgnomecanvasmm-2.6/libgnomecanvasmm/private
-@dirrm include/libgnomecanvasmm-2.6/libgnomecanvasmm
-@dirrm include/libgnomecanvasmm-2.6

@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 18:56:19 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:10 joerg Exp $
 include/Evas_Engine_Buffer.h
 lib/evas/modules/engines/buffer/${MODULE_ARCH}/module.la
 lib/pkgconfig/evas-software-buffer.pc
-@dirrm lib/evas/modules/engines/buffer/${MODULE_ARCH}
-@dirrm lib/evas/modules/engines/buffer

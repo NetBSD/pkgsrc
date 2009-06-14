@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/02/13 09:10:10 abs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:23 joerg Exp $
 lib/netscape/plugins/cult3d/com/cult3d/BackReport.class
 lib/netscape/plugins/cult3d/com/cult3d/Cult3DMain.class
 lib/netscape/plugins/cult3d/com/cult3d/Cult3DPlugin.class
@@ -29,9 +29,3 @@ lib/netscape/plugins/cult3d/com/cult3d/world/ReadOnlyException.class
 lib/netscape/plugins/cult3d/com/cult3d/world/SpriteUtil.class
 lib/netscape/plugins/cult3d/libcult3dplugin.so
 share/doc/ns-cult3d.txt
-@dirrm lib/netscape/plugins/cult3d/com/cult3d/world
-@dirrm lib/netscape/plugins/cult3d/com/cult3d/math
-@dirrm lib/netscape/plugins/cult3d/com/cult3d/device
-@dirrm lib/netscape/plugins/cult3d/com/cult3d
-@dirrm lib/netscape/plugins/cult3d/com
-@dirrm lib/netscape/plugins/cult3d

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/21 13:00:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:20 joerg Exp $
 bin/libart2-config
 include/libart-2.0/libart_lgpl/art_affine.h
 include/libart-2.0/libart_lgpl/art_alphagamma.h
@@ -46,5 +46,3 @@ include/libart-2.0/libart_lgpl/libart-features.h
 include/libart-2.0/libart_lgpl/libart.h
 lib/libart_lgpl_2.la
 lib/pkgconfig/libart-2.0.pc
-@dirrm include/libart-2.0/libart_lgpl
-@dirrm include/libart-2.0

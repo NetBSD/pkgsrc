@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/04/19 20:14:59 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:59:09 joerg Exp $
 bin/dia
 lib/dia/libaadl_objects.la
 lib/dia/libbondgraph_objects.la
@@ -1719,53 +1719,5 @@ share/mime-info/dia.keys
 share/mime-info/dia.mime
 share/pixmaps/dia-diagram.png
 share/pixmaps/dia_gnome_icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
 @exec ${MKDIR} %D/share/omf/dia
-@dirrm share/omf/dia
-@comment in scrollkeeper: @dirrm share/omf
 @exec ${MKDIR} %D/share/oaf
-@dirrm share/oaf
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm ${DIA_HELPDIR}/pl/graphics
-@dirrm ${DIA_HELPDIR}/pl
-@dirrm ${DIA_HELPDIR}/eu/graphics
-@dirrm ${DIA_HELPDIR}/eu
-@dirrm ${DIA_HELPDIR}/en/graphics
-@dirrm ${DIA_HELPDIR}/en
-@dirrm ${DIA_HELPDIR}
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/dia/xslt
-@dirrm share/dia/ui
-@dirrm share/dia/sheets/UML
-@dirrm share/dia/sheets/KAOS
-@dirrm share/dia/sheets/Jackson
-@dirrm share/dia/sheets/Istar
-@dirrm share/dia/sheets/GRAFCET
-@dirrm share/dia/sheets/ER
-@dirrm share/dia/sheets
-@dirrm share/dia/shapes/sybase
-@dirrm share/dia/shapes/jigsaw
-@dirrm share/dia/shapes/SDL
-@dirrm share/dia/shapes/RDP
-@dirrm share/dia/shapes/Pneumatic
-@dirrm share/dia/shapes/Network
-@dirrm share/dia/shapes/Misc
-@dirrm share/dia/shapes/Map/Isometric
-@dirrm share/dia/shapes/Map
-@dirrm share/dia/shapes/MSE
-@dirrm share/dia/shapes/Logic
-@dirrm share/dia/shapes/Gane_and_Sarson
-@dirrm share/dia/shapes/Flowchart
-@dirrm share/dia/shapes/Electric
-@dirrm share/dia/shapes/Cybernetics
-@dirrm share/dia/shapes/Contact
-@dirrm share/dia/shapes/Civil
-@dirrm share/dia/shapes/Cisco
-@dirrm share/dia/shapes/Circuit
-@dirrm share/dia/shapes/ChemEng
-@dirrm share/dia/shapes/BPMN
-@dirrm share/dia/shapes/Assorted
-@dirrm share/dia/shapes
-@dirrm share/dia
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/dia

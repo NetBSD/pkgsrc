@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/10 21:04:23 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:22 joerg Exp $
 include/libv4l1.h
 include/libv4l2.h
 include/libv4lconvert.h
@@ -14,4 +14,3 @@ lib/libv4lconvert.so.0
 lib/pkgconfig/libv4l1.pc
 lib/pkgconfig/libv4l2.pc
 lib/pkgconfig/libv4lconvert.pc
-@dirrm lib/libv4l

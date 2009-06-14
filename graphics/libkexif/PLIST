@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/02 18:44:52 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:21 joerg Exp $
 include/libkexif/kexifdata.h
 include/libkexif/kexifdialog.h
 include/libkexif/kexifutils.h
@@ -43,4 +43,3 @@ share/locale/ta/LC_MESSAGES/libkexif.mo
 share/locale/tr/LC_MESSAGES/libkexif.mo
 share/locale/uk/LC_MESSAGES/libkexif.mo
 share/locale/zh_CN/LC_MESSAGES/libkexif.mo
-@dirrm include/libkexif

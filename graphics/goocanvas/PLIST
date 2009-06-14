@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/10 04:59:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:15 joerg Exp $
 include/goocanvas-1.0/goocanvas.h
 include/goocanvas-1.0/goocanvasellipse.h
 include/goocanvas-1.0/goocanvasenumtypes.h
@@ -69,5 +69,3 @@ share/gtk-doc/html/goocanvas/up.png
 share/locale/en_GB/LC_MESSAGES/goocanvas.mo
 share/locale/es/LC_MESSAGES/goocanvas.mo
 share/locale/ja/LC_MESSAGES/goocanvas.mo
-@dirrm share/gtk-doc/html/goocanvas
-@dirrm include/goocanvas-1.0

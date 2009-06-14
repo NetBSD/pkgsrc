@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/02 10:21:14 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:28 joerg Exp $
 bin/scigraphica
 lib/scigraphica/${PKGVERSION}/plugins/project/io/io.la
 lib/scigraphica/${PKGVERSION}/plugins/project/io/plugin.xml
@@ -170,13 +170,3 @@ share/scigraphica/examples/test.dat
 share/scigraphica/examples/ticks.sg
 share/scigraphica/examples/trigonometric.sg
 share/scigraphica/examples/vectors.sg
-@dirrm share/scigraphica/examples
-@dirrm share/scigraphica
-@dirrm share/pixmaps/scigraphica
-@dirrm share/gnome/help/scigraphica/C
-@dirrm share/gnome/help/scigraphica
-@dirrm lib/scigraphica/${PKGVERSION}/plugins/project/toolbars
-@dirrm lib/scigraphica/${PKGVERSION}/plugins/project/menus
-@dirrm lib/scigraphica/${PKGVERSION}/plugins/project/io
-@dirrm lib/scigraphica/${PKGVERSION}/plugins/project
-@dirrm lib/scigraphica/${PKGVERSION}/plugins

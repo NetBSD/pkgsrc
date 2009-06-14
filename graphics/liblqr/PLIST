@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/22 20:30:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:22 joerg Exp $
 include/lqr-1/lqr.h
 include/lqr-1/lqr/lqr_base.h
 include/lqr-1/lqr/lqr_carver_bias_pub.h
@@ -14,5 +14,3 @@ include/lqr-1/lqr/lqr_vmap_list_pub.h
 include/lqr-1/lqr/lqr_vmap_pub.h
 lib/liblqr-1.la
 lib/pkgconfig/lqr-1.pc
-@dirrm include/lqr-1/lqr
-@dirrm include/lqr-1

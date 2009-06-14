@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:27 joerg Exp $
 ${GEM_HOME}/cache/Imlib2-Ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
@@ -21,8 +21,3 @@ ${GEM_LIBDIR}/imlib2.c
 ${GEM_LIBDIR}/imlib2.gemspec
 ${GEM_LIBDIR}/lib/imlib2.${RUBY_DLEXT}
 ${GEM_HOME}/specifications/Imlib2-Ruby-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples/images
-@dirrm ${GEM_LIBDIR}/examples/fonts
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

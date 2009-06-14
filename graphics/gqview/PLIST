@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/11/09 20:12:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:59:16 joerg Exp $
 bin/gqview
 man/man1/gqview.1
 share/applications/gqview.desktop
@@ -86,7 +86,3 @@ share/locale/vi/LC_MESSAGES/gqview.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
 share/locale/zh_TW/LC_MESSAGES/gqview.mo
 share/pixmaps/gqview.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/doc/${PKGNAME}/html
-@dirrm share/doc/${PKGNAME}
-@comment in xdg-dirs: @dirrm share/applications

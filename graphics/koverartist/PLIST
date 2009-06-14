@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/06 11:23:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:19 joerg Exp $
 bin/koverartist
 share/doc/kde/HTML/en/koverartist/common
 share/doc/kde/HTML/en/koverartist/index.cache.bz2
@@ -27,16 +27,3 @@ share/locale/it/LC_MESSAGES/koverartist.mo
 share/locale/pl/LC_MESSAGES/koverartist.mo
 share/locale/pt/LC_MESSAGES/koverartist.mo
 share/locale/ru/LC_MESSAGES/koverartist.mo
-@comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/apps/koverartist/cases
-@dirrm share/kde/apps/koverartist
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/en/koverartist
-@comment in kde: @dirrm share/doc/kde/HTML/en

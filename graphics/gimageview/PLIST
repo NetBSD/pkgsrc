@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:13 joerg Exp $
 bin/gimv
 lib/gimageview/archiver/libgimv_lha_extarc.la
 lib/gimageview/archiver/libgimv_rar_extarc.la
@@ -118,21 +118,4 @@ share/gnome/apps/Graphics/gimageview.desktop
 share/locale/fr/LC_MESSAGES/gimageview.mo
 share/locale/ja/LC_MESSAGES/gimageview.mo
 share/pixmaps/gimv.png
-@dirrm share/gimageview/pixmaps/default
-@dirrm share/gimageview/pixmaps
-@dirrm share/gimageview
-@dirrm share/doc/gimageview/text/ja
-@dirrm share/doc/gimageview/text/C
-@dirrm share/doc/gimageview/text
-@dirrm share/doc/gimageview/html/ja
-@dirrm share/doc/gimageview/html
-@dirrm share/doc/gimageview
-@dirrm lib/gimageview/thumbnail_view
-@dirrm lib/gimageview/thumbnail
-@dirrm lib/gimageview/io_stream
 @exec ${MKDIR} %D/lib/gimageview/image_view
-@dirrm lib/gimageview/image_view
-@dirrm lib/gimageview/image_saver
-@dirrm lib/gimageview/image_loader
-@dirrm lib/gimageview/archiver
-@dirrm lib/gimageview

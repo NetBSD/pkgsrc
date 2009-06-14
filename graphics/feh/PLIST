@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/03/09 02:23:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:12 joerg Exp $
 bin/feh
 bin/feh_cam
 bin/gen_feh_cam_menu.sh
@@ -21,7 +21,3 @@ share/feh/images/menubg_default.png
 share/feh/images/menubg_pastel.png
 share/feh/images/menubg_sky.png
 share/feh/images/menubg_wood.png
-@dirrm share/feh/images
-@dirrm share/feh/fonts
-@dirrm share/feh
-@dirrm share/doc/feh

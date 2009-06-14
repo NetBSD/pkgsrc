@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/07 23:42:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:12 joerg Exp $
 bin/fotoxx
 share/doc/fotoxx/CHANGES
 share/doc/fotoxx/COPYING
@@ -103,14 +103,3 @@ share/fotoxx/locales/gl/fotoxx.po
 share/fotoxx/locales/gl/zfuncs.po
 share/fotoxx/locales/it/fotoxx.po
 share/fotoxx/locales/it/zfuncs.po
-@dirrm share/fotoxx/locales/it
-@dirrm share/fotoxx/locales/gl
-@dirrm share/fotoxx/locales/fr
-@dirrm share/fotoxx/locales/es
-@dirrm share/fotoxx/locales/el
-@dirrm share/fotoxx/locales/de
-@dirrm share/fotoxx/locales
-@dirrm share/fotoxx/icons
-@dirrm share/fotoxx
-@dirrm share/doc/fotoxx/images
-@dirrm share/doc/fotoxx

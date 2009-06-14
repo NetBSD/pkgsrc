@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/20 15:02:22 gdt Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:20 joerg Exp $
 bin/icc2ps
 bin/icclink
 bin/icctrans
@@ -17,4 +17,3 @@ man/man1/tifficc.1
 man/man1/wtpt.1
 share/doc/lcms/LCMSAPI.TXT
 share/doc/lcms/TUTORIAL.TXT
-@dirrm share/doc/lcms

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/09/20 21:36:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:22 joerg Exp $
 bin/rsvg
 bin/rsvg-convert
 bin/rsvg-view
@@ -29,9 +29,3 @@ share/gtk-doc/html/rsvg/rsvg.html
 share/gtk-doc/html/rsvg/style.css
 share/gtk-doc/html/rsvg/up.png
 share/pixmaps/svg-viewer.svg
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/gtk-doc/html/rsvg
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/loaders
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/engines
-@dirrm include/librsvg-2/librsvg
-@dirrm include/librsvg-2

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/10 13:32:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:23 joerg Exp $
 bin/mgp
 bin/mgp2ps
 bin/mgpembed
@@ -55,6 +55,3 @@ share/examples/mgp/v6-jp.mgp
 share/examples/mgp/v6.mgp
 share/examples/mgp/v6header.eps
 share/examples/mgp/v6header.jpg
-@dirrm share/examples/mgp
-@dirrm share/doc/mgp
-@dirrm lib/X11/mgp

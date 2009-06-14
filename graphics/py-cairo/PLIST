@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/15 18:25:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:26 joerg Exp $
 include/pycairo/pycairo.h
 lib/pkgconfig/pycairo.pc
 ${PYSITELIB}/cairo/__init__.py
 ${PYSITELIB}/cairo/__init__.pyc
 ${PYSITELIB}/cairo/__init__.pyo
 ${PYSITELIB}/cairo/_cairo.la
-@dirrm ${PYSITELIB}/cairo
-@dirrm include/pycairo

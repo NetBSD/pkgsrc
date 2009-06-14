@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/19 23:45:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:59:25 joerg Exp $
 bin/povray
 man/man1/povray.1
 share/doc/${POVRAY}/AUTHORS
@@ -1121,78 +1121,3 @@ share/${POVRAY}/scripts/rerunpov.sh
 share/${POVRAY}/scripts/runpov.sh
 share/examples/povray/povray.conf
 share/examples/povray/povray.ini
-@dirrm share/examples/povray
-@dirrm share/doc/${POVRAY}/html/images/tutorial
-@dirrm share/doc/${POVRAY}/html/images/reference/colors
-@dirrm share/doc/${POVRAY}/html/images/reference
-@dirrm share/doc/${POVRAY}/html/images
-@dirrm share/doc/${POVRAY}/html
-@dirrm share/doc/${POVRAY}
-@dirrm share/${POVRAY}/scripts
-@dirrm share/${POVRAY}/scenes/textures/pigments/skies
-@dirrm share/${POVRAY}/scenes/textures/pigments
-@dirrm share/${POVRAY}/scenes/textures/patterns
-@dirrm share/${POVRAY}/scenes/textures/normals
-@dirrm share/${POVRAY}/scenes/textures/finishes
-@dirrm share/${POVRAY}/scenes/textures
-@dirrm share/${POVRAY}/scenes/radiosity
-@dirrm share/${POVRAY}/scenes/qtvr
-@dirrm share/${POVRAY}/scenes/portfolio
-@dirrm share/${POVRAY}/scenes/objects/quartic
-@dirrm share/${POVRAY}/scenes/objects/csg
-@dirrm share/${POVRAY}/scenes/objects
-@dirrm share/${POVRAY}/scenes/objectmods
-@dirrm share/${POVRAY}/scenes/lights
-@dirrm share/${POVRAY}/scenes/language/macros
-@dirrm share/${POVRAY}/scenes/language/fileio
-@dirrm share/${POVRAY}/scenes/language/arrays
-@dirrm share/${POVRAY}/scenes/language
-@dirrm share/${POVRAY}/scenes/interior/media
-@dirrm share/${POVRAY}/scenes/interior
-@dirrm share/${POVRAY}/scenes/incdemo/woods
-@dirrm share/${POVRAY}/scenes/incdemo/stones
-@dirrm share/${POVRAY}/scenes/incdemo/metals
-@dirrm share/${POVRAY}/scenes/incdemo/glasses
-@dirrm share/${POVRAY}/scenes/incdemo
-@dirrm share/${POVRAY}/scenes/camera
-@dirrm share/${POVRAY}/scenes/animations/vect2
-@dirrm share/${POVRAY}/scenes/animations/vect1
-@dirrm share/${POVRAY}/scenes/animations/splinefollow
-@dirrm share/${POVRAY}/scenes/animations/speclr
-@dirrm share/${POVRAY}/scenes/animations/slinky
-@dirrm share/${POVRAY}/scenes/animations/reflect
-@dirrm share/${POVRAY}/scenes/animations/raddem
-@dirrm share/${POVRAY}/scenes/animations/quilted
-@dirrm share/${POVRAY}/scenes/animations/pentmap
-@dirrm share/${POVRAY}/scenes/animations/life
-@dirrm share/${POVRAY}/scenes/animations/l_o
-@dirrm share/${POVRAY}/scenes/animations/fractalzoom
-@dirrm share/${POVRAY}/scenes/animations/float4
-@dirrm share/${POVRAY}/scenes/animations/float3
-@dirrm share/${POVRAY}/scenes/animations/float2
-@dirrm share/${POVRAY}/scenes/animations/float1
-@dirrm share/${POVRAY}/scenes/animations/diffuse
-@dirrm share/${POVRAY}/scenes/animations/clockd
-@dirrm share/${POVRAY}/scenes/animations/camera2
-@dirrm share/${POVRAY}/scenes/animations/boing
-@dirrm share/${POVRAY}/scenes/animations/ambient
-@dirrm share/${POVRAY}/scenes/animations
-@dirrm share/${POVRAY}/scenes/advanced/teapot
-@dirrm share/${POVRAY}/scenes/advanced/piece3
-@dirrm share/${POVRAY}/scenes/advanced/piece2
-@dirrm share/${POVRAY}/scenes/advanced/ntreal
-@dirrm share/${POVRAY}/scenes/advanced/newltpot
-@dirrm share/${POVRAY}/scenes/advanced/ionic5
-@dirrm share/${POVRAY}/scenes/advanced/glasschess
-@dirrm share/${POVRAY}/scenes/advanced/fish13
-@dirrm share/${POVRAY}/scenes/advanced/drums2
-@dirrm share/${POVRAY}/scenes/advanced/cliche
-@dirrm share/${POVRAY}/scenes/advanced/cats
-@dirrm share/${POVRAY}/scenes/advanced/blocks
-@dirrm share/${POVRAY}/scenes/advanced/balcony
-@dirrm share/${POVRAY}/scenes/advanced
-@dirrm share/${POVRAY}/scenes
-@dirrm share/${POVRAY}/ini
-@dirrm share/${POVRAY}/include
-@dirrm share/${POVRAY}/icons
-@dirrm share/${POVRAY}

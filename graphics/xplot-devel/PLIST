@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/16 18:11:40 gdt Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:32 joerg Exp $
 bin/tcpdump2xplot
 bin/xplot
 man/man1/tcpdump2xplot.1
@@ -14,4 +14,3 @@ share/doc/xplot/demo.4
 share/doc/xplot/demo.5
 share/doc/xplot/demo.6
 share/doc/xplot/demo.7
-@dirrm share/doc/xplot

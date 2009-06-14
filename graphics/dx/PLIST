@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/22 08:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:09 joerg Exp $
 bin/dx
 dx/bin/dx
 dx/bin/mdf2c
@@ -2298,20 +2298,3 @@ dx/ui/testimp.net
 dx/ui/testssheet.net
 dx/ui/ui.mdf
 dx/ui/viewer.net
-@dirrm dx/ui
-@dirrm dx/man/manl
-@dirrm dx/man/catl
-@dirrm dx/man
-@dirrm dx/lib_${LOWER_OPSYS}
-@dirrm dx/lib
-@dirrm dx/include/dx
-@dirrm dx/include
-@dirrm dx/html/pages
-@dirrm dx/html/images
-@dirrm dx/html
-@dirrm dx/help
-@dirrm dx/fonts
-@dirrm dx/doc
-@dirrm dx/bin_${LOWER_OPSYS}
-@dirrm dx/bin
-@dirrm dx

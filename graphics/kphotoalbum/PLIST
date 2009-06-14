@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/01/07 13:29:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:19 joerg Exp $
 bin/kphotoalbum
 share/applications/kde/kphotoalbum-import.desktop
 share/applications/kde/kphotoalbum.desktop
@@ -375,48 +375,3 @@ share/locale/tr/LC_MESSAGES/kphotoalbum.mo
 share/locale/uk/LC_MESSAGES/kphotoalbum.mo
 share/locale/vi/LC_MESSAGES/kphotoalbum.mo
 share/locale/zh_CN/LC_MESSAGES/kphotoalbum.mo
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kphotoalbum/themes/rounded
-@dirrm share/kde/apps/kphotoalbum/themes/grey
-@dirrm share/kde/apps/kphotoalbum/themes/blue
-@dirrm share/kde/apps/kphotoalbum/themes
-@dirrm share/kde/apps/kphotoalbum/pics
-@dirrm share/kde/apps/kphotoalbum/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kphotoalbum/icons/hicolor/22x22
-@dirrm share/kde/apps/kphotoalbum/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kphotoalbum/icons/hicolor/16x16
-@dirrm share/kde/apps/kphotoalbum/icons/hicolor
-@dirrm share/kde/apps/kphotoalbum/icons
-@dirrm share/kde/apps/kphotoalbum/demo/CategoryImages
-@dirrm share/kde/apps/kphotoalbum/demo
-@dirrm share/kde/apps/kphotoalbum
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/sv/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/et/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/da/kphotoalbum
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde

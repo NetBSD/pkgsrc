@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/12/19 22:35:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:26 joerg Exp $
 ${PYSITELIB}/configobj.py
 ${PYSITELIB}/configobj.pyc
 ${PYSITELIB}/configobj.pyo
@@ -723,29 +723,3 @@ ${PYSITELIB}/mpl_toolkits/gtktools.pyo
 ${PYSITELIB}/pylab.py
 ${PYSITELIB}/pylab.pyc
 ${PYSITELIB}/pylab.pyo
-@dirrm ${PYSITELIB}/mpl_toolkits
-@dirrm ${PYSITELIB}/matplotlib/projections
-@dirrm ${PYSITELIB}/matplotlib/numerix/random_array
-@dirrm ${PYSITELIB}/matplotlib/numerix/npyma
-@dirrm ${PYSITELIB}/matplotlib/numerix/mlab
-@dirrm ${PYSITELIB}/matplotlib/numerix/ma
-@dirrm ${PYSITELIB}/matplotlib/numerix/linear_algebra
-@dirrm ${PYSITELIB}/matplotlib/numerix/fft
-@dirrm ${PYSITELIB}/matplotlib/numerix
-@dirrm ${PYSITELIB}/matplotlib/mpl-data/images
-@dirrm ${PYSITELIB}/matplotlib/mpl-data/fonts/ttf
-@dirrm ${PYSITELIB}/matplotlib/mpl-data/fonts/pdfcorefonts
-@dirrm ${PYSITELIB}/matplotlib/mpl-data/fonts/afm
-@dirrm ${PYSITELIB}/matplotlib/mpl-data/fonts
-@dirrm ${PYSITELIB}/matplotlib/mpl-data
-@dirrm ${PYSITELIB}/matplotlib/config
-@dirrm ${PYSITELIB}/matplotlib/backends/Matplotlib.nib
-@dirrm ${PYSITELIB}/matplotlib/backends
-@dirrm ${PYSITELIB}/matplotlib
-@dirrm ${PYSITELIB}/enthought/traits/ui/tk
-@dirrm ${PYSITELIB}/enthought/traits/ui/null
-@dirrm ${PYSITELIB}/enthought/traits/ui/extras
-@dirrm ${PYSITELIB}/enthought/traits/ui
-@dirrm ${PYSITELIB}/enthought/traits
-@dirrm ${PYSITELIB}/enthought/etsconfig
-@dirrm ${PYSITELIB}/enthought

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:51:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:16 joerg Exp $
 bin/grap
 man/man1/grap.1
 share/doc/grap/CHANGES
@@ -24,6 +24,3 @@ share/examples/grap/states3.d
 share/examples/grap/usapop.d
 share/grap/grap.defines
 share/grap/grap.tex.defines
-@dirrm share/grap
-@dirrm share/examples/grap
-@dirrm share/doc/grap

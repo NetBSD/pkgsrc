@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:19:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:27 joerg Exp $
 ${GEM_HOME}/cache/color-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Install.txt
@@ -32,9 +32,3 @@ ${GEM_LIBDIR}/test/test_monocontrast.rb
 ${GEM_LIBDIR}/test/test_rgb.rb
 ${GEM_LIBDIR}/test/test_yiq.rb
 ${GEM_HOME}/specifications/color-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/color/rgb
-@dirrm ${GEM_LIBDIR}/lib/color/palette
-@dirrm ${GEM_LIBDIR}/lib/color
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

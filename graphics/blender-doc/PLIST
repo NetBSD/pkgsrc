@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 21:02:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:07 joerg Exp $
 share/doc/blender/a10240.html
 share/doc/blender/a10243.html
 share/doc/blender/a10289.html
@@ -5165,30 +5165,3 @@ share/doc/blender/x9957.html
 share/doc/blender/x996.html
 share/doc/blender/x997.html
 share/doc/blender/x999.html
-@dirrm share/doc/blender/gfx/chapter_volumetrics
-@dirrm share/doc/blender/gfx/chapter_special_modelling
-@dirrm share/doc/blender/gfx/chapter_soft_animation
-@dirrm share/doc/blender/gfx/chapter_rigid_animation
-@dirrm share/doc/blender/gfx/chapter_objectmode
-@dirrm share/doc/blender/gfx/appendix_windows_buttons
-@dirrm share/doc/blender/gfx/chapter_quickstart
-@dirrm share/doc/blender/gfx/appendix_hotkeys
-@dirrm share/doc/blender/gfx/chapter_world
-@dirrm share/doc/blender/gfx/chapter_radiosity
-@dirrm share/doc/blender/gfx/chapter_python
-@dirrm share/doc/blender/gfx/chapter_sequence
-@dirrm share/doc/blender/gfx/chapter_curves_surfaces
-@dirrm share/doc/blender/gfx/chapter_saving
-@dirrm share/doc/blender/gfx/chapter_lighting
-@dirrm share/doc/blender/gfx/general
-@dirrm share/doc/blender/gfx/chapter_rendering/radiosity
-@dirrm share/doc/blender/gfx/chapter_rendering
-@dirrm share/doc/blender/gfx/chapter_plugin
-@dirrm share/doc/blender/gfx/chapter_mesh_modelling
-@dirrm share/doc/blender/gfx/chapter_materials
-@dirrm share/doc/blender/gfx/chapter_interface
-@dirrm share/doc/blender/gfx/chapter_effects
-@dirrm share/doc/blender/gfx/chapter_character_animation
-@dirrm share/doc/blender/gfx/appendix_documentation_project
-@dirrm share/doc/blender/gfx
-@dirrm share/doc/blender

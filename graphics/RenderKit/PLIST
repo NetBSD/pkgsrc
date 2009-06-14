@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/20 12:33:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:06 joerg Exp $
 share/GNUstep/System/Library/Headers/RenderKit/G3DArchiver.h
 share/GNUstep/System/Library/Headers/RenderKit/G3DArchivingInfo.h
 share/GNUstep/System/Library/Headers/RenderKit/G3DAttributeNode.h
@@ -42,9 +42,4 @@ share/GNUstep/System/Library/Headers/RenderKit/NSObject+G3DExtensions.h
 share/GNUstep/System/Library/Headers/RenderKit/RenderKit.h
 share/GNUstep/System/Library/Libraries/libRenderKit.so
 share/GNUstep/System/Library/Libraries/libRenderKit.so.0.4.1
-@comment @dirrm share/GNUstep/System/Library/Libraries
-@dirrm share/GNUstep/System/Library/Headers/RenderKit
-@comment @dirrm share/GNUstep/System/Library/Headers
 @exec ${MKDIR} %D/share/GNUstep/Local/Headers/RenderKit
-@dirrm share/GNUstep/Local/Headers/RenderKit
-@comment @dirrm share/GNUstep/Local/Headers

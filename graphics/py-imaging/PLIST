@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/03/23 20:47:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:26 joerg Exp $
 ${PYINC}/PIL/ImPlatform.h
 ${PYINC}/PIL/Imaging.h
 ${PYSITELIB}/PIL.pth
@@ -239,5 +239,3 @@ ${PYSITELIB}/PIL/__init__.pyo
 ${PYSITELIB}/PIL/_imaging.so
 ${PYSITELIB}/PIL/_imagingft.so
 ${PYSITELIB}/PIL/_imagingmath.so
-@dirrm ${PYSITELIB}/PIL
-@dirrm ${PYINC}/PIL

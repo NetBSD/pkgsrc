@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/18 17:58:35 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:30 joerg Exp $
 include/vtk/expat.h
 include/vtk/expatDllConfig.h
 include/vtk/png.h
@@ -812,8 +812,3 @@ lib/vtk/testing/FindString.tcl
 lib/vtk/testing/HeaderTesting.py
 lib/vtk/testing/PrintSelfCheck.tcl
 lib/vtk/testing/rtImageTest.tcl
-@dirrm lib/vtk/testing
-@dirrm lib/vtk/doxygen
-@dirrm lib/vtk/CMake
-@dirrm lib/vtk
-@dirrm include/vtk

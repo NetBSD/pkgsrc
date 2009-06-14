@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/11 14:47:06 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:20 joerg Exp $
 bin/3ds2m
 bin/3ds2rib
 bin/3dsdump
@@ -29,4 +29,3 @@ man/man1/3ds2m.1
 man/man1/3dsdump.1
 man/man1/lib3ds-config.1
 share/aclocal/lib3ds.m4
-@dirrm include/lib3ds

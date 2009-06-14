@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:21 joerg Exp $
 ${PLIST.ggtick}bin/ggtick
 bin/mhub
 bin/xsendbut
@@ -119,11 +119,3 @@ man/man7/libgii.7
 share/examples/ggi/filter/keytrans
 share/examples/ggi/filter/mouse
 share/examples/ggi/libgii.conf
-@dirrm share/examples/ggi/filter
-@dirrm share/examples/ggi
-@dirrm lib/ggi/input
-@dirrm lib/ggi/filter
-@dirrm lib/ggi
-@dirrm include/ggi/internal
-@dirrm include/ggi/input
-@dirrm include/ggi

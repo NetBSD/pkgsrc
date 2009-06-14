@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/05/17 21:48:57 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:59:25 joerg Exp $
 bin/libpng-config
 bin/libpng12-config
 include/libpng12/png.h
@@ -13,4 +13,3 @@ lib/pkgconfig/libpng12.pc
 man/man3/libpng.3
 man/man3/libpngpf.3
 man/man5/png.5
-@dirrm include/libpng12

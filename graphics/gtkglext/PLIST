@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/10 17:44:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 17:59:17 joerg Exp $
 include/gtkglext-1.0/gdk/gdkgl.h
 include/gtkglext-1.0/gdk/gdkglconfig.h
 include/gtkglext-1.0/gdk/gdkglcontext.h
@@ -66,11 +66,3 @@ share/gtk-doc/html/gtkglext/left.png
 share/gtk-doc/html/gtkglext/right.png
 share/gtk-doc/html/gtkglext/style.css
 share/gtk-doc/html/gtkglext/up.png
-@dirrm share/gtk-doc/html/gtkglext
-@dirrm lib/gtkglext-1.0/include
-@dirrm lib/gtkglext-1.0
-@dirrm include/gtkglext-1.0/gtk
-@dirrm include/gtkglext-1.0/gdk/x11
-@dirrm include/gtkglext-1.0/gdk/glext
-@dirrm include/gtkglext-1.0/gdk
-@dirrm include/gtkglext-1.0

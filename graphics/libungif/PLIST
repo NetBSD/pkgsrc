@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/10/25 07:08:42 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:59:22 joerg Exp $
 bin/gif2epsn
 bin/gif2ps
 bin/gif2rgb
@@ -72,5 +72,3 @@ share/doc/html/libungif/rle2gif.html
 share/doc/html/libungif/text2gif.html
 share/doc/libungif/COPYING
 share/doc/libungif/UNCOMPRESSED_GIF
-@dirrm share/doc/libungif
-@dirrm share/doc/html/libungif

@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/11 06:16:26 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:28 joerg Exp $
 bin/simage-config
 include/simage.h
 lib/libsimage.la
 share/Coin/conf/simage-default.cfg
 share/aclocal/simage.m4
-@dirrm share/Coin/conf
-@dirrm share/Coin
