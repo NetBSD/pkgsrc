@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin,v 1.6 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.7 2009/06/14 18:03:39 joerg Exp $
 lib/libpython2.4.2.dylib
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
@@ -492,14 +492,3 @@ lib/python${PY_VER_SUFFIX}/plat-mac/terminalcommand.pyo
 lib/python${PY_VER_SUFFIX}/plat-mac/videoreader.py
 lib/python${PY_VER_SUFFIX}/plat-mac/videoreader.pyc
 lib/python${PY_VER_SUFFIX}/plat-mac/videoreader.pyo
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/_builtinSuites
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/Terminal
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/SystemEvents
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/StdSuites
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/Netscape
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/Finder
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/Explorer
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages/CodeWarrior
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/lib-scriptpackages
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac/Carbon
-@dirrm lib/python${PY_VER_SUFFIX}/plat-mac

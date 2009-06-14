@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:42 joerg Exp $
 sbin/ser
 sbin/serctl
 sbin/ser_mysql.sh
@@ -71,7 +71,3 @@ share/doc/ser/README.vm
 share/doc/ser/README.xlog
 man/man8/ser.8
 man/man5/ser.cfg.5
-@dirrm share/examples/ser
-@dirrm share/doc/ser
-@dirrm lib/ser/modules
-@dirrm lib/ser

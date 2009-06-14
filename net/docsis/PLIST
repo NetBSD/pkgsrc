@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/16 22:52:37 grant Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:26 joerg Exp $
 bin/docsis
 share/docsis/config-format.html
 share/docsis/config-settings.html
@@ -39,5 +39,3 @@ share/snmp/mibs/IGMP-STD-MIB.mib
 share/snmp/mibs/PKTC-EVENT-MIB.mib
 share/snmp/mibs/PKTC-MTA-MIB.mib
 share/snmp/mibs/PKTC-SIG-MIB.mib
-@dirrm share/docsis/examples
-@dirrm share/docsis

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/29 20:50:31 sketch Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:47 joerg Exp $
 bin/cisco-decrypt
 bin/pcf2vpnc
 bin/vpnc-disconnect
@@ -9,5 +9,3 @@ sbin/vpnc
 share/doc/vpnc/README
 share/examples/vpnc/default.conf
 share/examples/vpnc/vpnc-script
-@dirrm share/examples/vpnc
-@dirrm share/doc/vpnc

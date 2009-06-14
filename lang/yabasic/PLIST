@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/02 23:19:53 jtb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:45 joerg Exp $
 bin/yabasic
 man/man1/yabasic.1
 share/doc/html/yabasic/yabasic.htm
-@dirrm share/doc/html/yabasic

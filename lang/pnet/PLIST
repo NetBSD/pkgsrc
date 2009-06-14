@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/12 19:09:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:03:38 joerg Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -164,8 +164,3 @@ share/gc/leak.html
 share/gc/scale.html
 share/gc/simple_example.html
 share/gc/tree.html
-@dirrm share/gc
-@dirrm lib/cscc/plugins
-@dirrm lib/cscc
-@dirrm include/pnet
-@dirrm include/gc

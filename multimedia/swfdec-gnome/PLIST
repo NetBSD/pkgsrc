@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/03/17 23:54:24 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:10 joerg Exp $
 bin/swfdec-player
 bin/swfdec-thumbnailer
 man/man1/swfdec-player.1
@@ -68,20 +68,3 @@ share/locale/zh_CN/LC_MESSAGES/swfdec-gnome.mo
 share/locale/zh_HK/LC_MESSAGES/swfdec-gnome.mo
 share/locale/zh_TW/LC_MESSAGES/swfdec-gnome.mo
 share/swfdec-gnome/swfdec-player.ui
-@dirrm share/swfdec-gnome
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

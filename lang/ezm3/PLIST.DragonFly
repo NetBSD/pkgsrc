@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.2 2006/01/02 23:19:41 veego Exp $
+@comment $NetBSD: PLIST.DragonFly,v 1.3 2009/06/14 18:03:31 joerg Exp $
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.generic/Udir.i3
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.generic/Uerror.i3
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.generic/Uexec.i3
@@ -23,5 +23,3 @@ ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.${MACHINE_ARCH}/Unix.i3
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.${MACHINE_ARCH}/Usignal.i3
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.${MACHINE_ARCH}/Ustat.i3
 ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.${MACHINE_ARCH}/Utypes.i3
-@dirrm ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.${MACHINE_ARCH}
-@dirrm ezm3/lib/m3/pkg/m3core/src/unix/${TARGETDIR}.generic

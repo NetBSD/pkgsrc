@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/12 13:58:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:49 joerg Exp $
 xorp/bgp/tools/xorpsh_print_peers
 xorp/bgp/tools/xorpsh_print_routes
 xorp/bgp/xorp_bgp
@@ -112,31 +112,3 @@ xorp/xrl/targets/test_xrls.xrls
 xorp/xrl/targets/vrrp.xrls
 xorp/xrl/targets/xorp_if_mib.xrls
 xorp/xrl/targets/xorpsh.xrls
-@dirrm xorp/xrl/targets
-@dirrm xorp/xrl
-@dirrm xorp/vrrp
-@dirrm xorp/static_routes
-@dirrm xorp/rip/tools
-@dirrm xorp/rip
-@dirrm xorp/rib/tools
-@dirrm xorp/rib
-@dirrm xorp/policy
-@dirrm xorp/pim
-@dirrm xorp/ospf/tools
-@dirrm xorp/ospf
-@dirrm xorp/mld6igmp
-@dirrm xorp/libxipc
-@dirrm xorp/fib2mrib
-@dirrm xorp/fea/tools
-@dirrm xorp/fea
-@dirrm xorp/etc/templates
-@dirrm xorp/etc
-@dirrm xorp/contrib/olsr/tools
-@dirrm xorp/contrib/olsr
-@dirrm xorp/contrib
-@dirrm xorp/cli/tools
-@dirrm xorp/cli
-@dirrm xorp/bin
-@dirrm xorp/bgp/tools
-@dirrm xorp/bgp
-@dirrm xorp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/27 14:24:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:24 joerg Exp $
 bin/socksify
 include/dante/socks.h
 lib/libdsocks.la
@@ -11,5 +11,3 @@ share/examples/dante/sockd.conf
 share/examples/dante/socks-simple.conf
 share/examples/dante/socks.conf
 share/examples/rc.d/sockd
-@dirrm share/examples/dante
-@dirrm include/dante

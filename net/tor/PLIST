@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/01 17:23:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:45 joerg Exp $
 bin/tor
 bin/tor-gencert
 bin/tor-resolve
@@ -11,5 +11,3 @@ share/examples/rc.d/tor
 share/examples/tor/tor-tsocks.conf
 share/examples/tor/torrc.sample
 share/tor/geoip
-@dirrm share/tor
-@dirrm share/examples/tor

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 10:17:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:29 joerg Exp $
 include/gtk-vnc-1.0/vncdisplay.h
 ${PLIST.firefox}lib/firefox/plugins/gtk-vnc-plugin.so
 lib/libgtk-vnc-1.0.la
 lib/pkgconfig/gtk-vnc-1.0.pc
 ${PLIST.python}${PYSITELIB}/gtkvnc.la
-@dirrm include/gtk-vnc-1.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/03/18 15:12:37 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:29 joerg Exp $
 bin/cdlc
 share/cdl3/include/cdl3rts.h
 share/cdl3/include/predef.h
@@ -19,6 +19,3 @@ man/man3/cdlrts.3
 man/man7/cdl-fubar-transient.7
 man/man7/cdlfubar.7
 share/cdl3/doc/cdl3-manual-${PKGVERSION}.ps
-@dirrm share/cdl3/include
-@dirrm share/cdl3/doc
-@dirrm share/cdl3/examples

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/25 07:09:49 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:45 joerg Exp $
 bin/yap
 include/Yap/YapInterface.h
 include/Yap/c_interface.h
@@ -242,18 +242,3 @@ share/Yap/trees.yap
 share/Yap/tries.yap
 share/Yap/ugraphs.yap
 share/Yap/ypp.yap
-@dirrm include/Yap
-@dirrm lib/Yap
-@dirrm share/Yap
-@dirrm share/Yap/chr
-@dirrm share/Yap/chr/examples
-@dirrm share/Yap/clpbn
-@dirrm share/Yap/clpbn/examples
-@dirrm share/Yap/clpq
-@dirrm share/Yap/clpqr
-@dirrm share/Yap/clpqr/examples
-@dirrm share/Yap/clpqr/examples/SESSION
-@dirrm share/Yap/clpqr/examples/monash
-@dirrm share/Yap/clpr
-@dirrm share/Yap/logtalk
-@dirrm share/Yap/pl

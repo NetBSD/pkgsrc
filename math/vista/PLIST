@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:34:26 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:50 joerg Exp $
 bin/vista
 share/vista/readme/copying.txt
 share/vista/readme/copyvsta.txt
@@ -350,21 +350,3 @@ share/vista/code/overlay.fsl
 share/vista/code/tranobj1.fsl
 share/vista/code/anovavis.lsp
 share/vista/statinit.lsp
-@dirrm share/vista/readme
-@dirrm share/vista/prefs
-@dirrm share/vista/examples
-@dirrm share/vista/data/princomp
-@dirrm share/vista/data/mdscale
-@dirrm share/vista/data/mulreg
-@dirrm share/vista/data/corresp
-@dirrm share/vista/data/regres
-@dirrm share/vista/data/univar/paired
-@dirrm share/vista/data/univar/single
-@dirrm share/vista/data/univar/independ
-@dirrm share/vista/data/univar
-@dirrm share/vista/data/anova
-@dirrm share/vista/data
-@dirrm share/vista/code/help
-@dirrm share/vista/code/guidance
-@dirrm share/vista/code
-@dirrm share/vista

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/05 07:48:46 martti Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:07:32 joerg Exp $
 libexec/xfce4/panel-plugins/xfce4-weather-plugin
 share/icons/hicolor/48x48/apps/xfce4-weather.png
 share/locale/ca/LC_MESSAGES/xfce4-weather-plugin.mo
@@ -70,6 +70,3 @@ share/xfce4/weather/icons/liquid/7.png
 share/xfce4/weather/icons/liquid/8.png
 share/xfce4/weather/icons/liquid/9.png
 share/xfce4/weather/icons/liquid/99.png
-@dirrm share/xfce4/weather/icons/liquid
-@dirrm share/xfce4/weather/icons
-@dirrm share/xfce4/weather

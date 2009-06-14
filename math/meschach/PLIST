@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:33:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
 include/meschach/err.h
 include/meschach/iter.h
 include/meschach/machine.h
@@ -31,6 +31,3 @@ share/meschach/tests/ztorture.c
 share/meschach/tutadv.c
 share/meschach/tutorial.c
 share/meschach/tutorial.txt
-@dirrm share/meschach/tests
-@dirrm share/meschach
-@dirrm include/meschach

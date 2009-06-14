@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:33 joerg Exp $
 man/man8/exim.8
 sbin/exicyclog
 sbin/exigrep
@@ -17,4 +17,3 @@ share/examples/exim/configure
 share/examples/exim/mailer.conf
 share/examples/rc.d/exim
 @unexec ${RMDIR} /var/log/exim 2>/dev/null || true
-@dirrm share/examples/exim

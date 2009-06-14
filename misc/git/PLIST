@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/05 23:01:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:07:21 joerg Exp $
 bin/.gitaction
 bin/git
 bin/gitaction
@@ -57,5 +57,3 @@ share/git/.gitrc.xterm
 share/git/.gitrc.xterm-color
 share/git/.gitrc.xterm-debian
 share/git/.gitrc.xterms
-@dirrm share/git
-@dirrm share/doc/git

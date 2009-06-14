@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/29 06:58:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:44 joerg Exp $
 sbin/spreadlogd
 share/examples/rc.d/spreadlogd
 share/examples/spreadlogd/spreadlogd.conf.sample
-@dirrm share/examples/spreadlogd

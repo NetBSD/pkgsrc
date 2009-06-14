@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:33 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:18 joerg Exp $
 bin/astrolog
 share/doc/astrolog/Helpfile.540
 share/doc/astrolog/README.540
 share/doc/astrolog/Update.540
-@dirrm share/doc/astrolog
 lib/astrolog/astrolog.dat
 lib/astrolog/LRZ5_24
 lib/astrolog/CHI_24
 lib/astrolog/CPJV_24
-@dirrm lib/astrolog

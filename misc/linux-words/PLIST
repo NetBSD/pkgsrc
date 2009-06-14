@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/07 23:24:24 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:26 joerg Exp $
 share/dict/words
 share/dict/linux.words
 share/doc/linux-words/README.linux.words
 share/doc/linux-words/README2.linux.words
-@dirrm share/doc/linux-words
-@dirrm share/dict

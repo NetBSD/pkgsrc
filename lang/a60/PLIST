@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:28 joerg Exp $
 bin/a60
 info/RRA60.info
 info/a60.info
@@ -18,6 +18,3 @@ share/examples/a60/teul2.a60
 share/examples/a60/whetstone.a60
 share/examples/a60/xa60.c
 share/examples/a60/xa60.man
-@dirrm share/examples/a60
-@dirrm share/doc/a60
-@dirrm share/a60

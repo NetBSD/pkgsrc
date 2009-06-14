@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/16 17:11:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:39 joerg Exp $
 share/doc/${PKGBASE}/README.ko
 ${PYSITELIB}/PyFunge/__init__.py
 ${PYSITELIB}/PyFunge/__init__.pyc
@@ -21,5 +21,3 @@ ${PYSITELIB}/PyFunge/space.pyo
 ${PYSITELIB}/PyFunge/stack.py
 ${PYSITELIB}/PyFunge/stack.pyc
 ${PYSITELIB}/PyFunge/stack.pyo
-@dirrm share/doc/${PKGBASE}
-@dirrm ${PYSITELIB}/PyFunge

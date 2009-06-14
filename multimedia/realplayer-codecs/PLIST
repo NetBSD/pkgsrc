@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/26 12:04:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:09 joerg Exp $
 lib/RealPlayer8-Codecs/14_4.so.6.0
 lib/RealPlayer8-Codecs/28_8.so.6.0
 lib/RealPlayer8-Codecs/atrc.so.6.0
@@ -10,4 +10,3 @@ lib/RealPlayer8-Codecs/drv3.so.6.0
 lib/RealPlayer8-Codecs/dspr.so.6.0
 lib/RealPlayer8-Codecs/sipr.so.6.0
 lib/RealPlayer8-Codecs/tokr.so.6.0
-@dirrm lib/RealPlayer8-Codecs

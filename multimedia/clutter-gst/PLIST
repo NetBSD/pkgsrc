@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/14 11:10:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:02 joerg Exp $
 include/clutter-0.8/clutter-gst/clutter-gst-audio.h
 include/clutter-0.8/clutter-gst/clutter-gst-shaders.h
 include/clutter-0.8/clutter-gst/clutter-gst-util.h
@@ -25,5 +25,3 @@ share/gtk-doc/html/clutter-gst/license.html
 share/gtk-doc/html/clutter-gst/right.png
 share/gtk-doc/html/clutter-gst/style.css
 share/gtk-doc/html/clutter-gst/up.png
-@dirrm share/gtk-doc/html/clutter-gst
-@dirrm include/clutter-0.8/clutter-gst

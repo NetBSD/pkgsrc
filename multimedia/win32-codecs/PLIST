@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/04/30 06:40:06 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:08:11 joerg Exp $
 lib/win32/CLRVIDDC.DLL
 lib/win32/CtWbJpg.DLL
 lib/win32/DECVW_32.DLL
@@ -113,4 +113,3 @@ lib/win32/wnvwinx.dll
 lib/win32/wvc1dmod.dll
 lib/win32/xanlib.dll
 lib/win32/zmbv.dll
-@dirrm lib/win32

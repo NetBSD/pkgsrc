@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/18 15:59:38 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:40 joerg Exp $
 share/doc/html/pymsgauth/pymsgauth.html
 share/doc/pymsgauth/BUGS
 share/doc/pymsgauth/CHANGELOG
@@ -10,7 +10,3 @@ share/pymsgauth/pymsgauth-clean
 share/pymsgauth/pymsgauth-confirm
 share/pymsgauth/pymsgauth-mail
 share/pymsgauth/pymsgauth.py
-@dirrm share/pymsgauth
-@dirrm share/examples/pymsgauth
-@dirrm share/doc/pymsgauth
-@dirrm share/doc/html/pymsgauth

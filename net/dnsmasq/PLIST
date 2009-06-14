@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/18 04:41:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:25 joerg Exp $
 man/man8/dnsmasq.8
 sbin/dnsmasq
 share/examples/dnsmasq/dnsmasq.conf.example
 share/examples/rc.d/dnsmasq
-@dirrm share/examples/dnsmasq

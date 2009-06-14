@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/20 01:23:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:28 joerg Exp $
 bin/gnome-nettool
 share/applications/gnome-nettool.desktop
 share/gnome-nettool/dialogs/gnome-nettool.glade
@@ -130,41 +130,3 @@ share/omf/gnome-nettool/gnome-nettool-sv.omf
 share/omf/gnome-nettool/gnome-nettool-uk.omf
 share/omf/gnome-nettool/gnome-nettool-vi.omf
 share/omf/gnome-nettool/gnome-nettool-zh_CN.omf
-@dirrm share/omf/gnome-nettool
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/gnome-nettool/zh_CN
-@dirrm share/gnome/help/gnome-nettool/vi
-@dirrm share/gnome/help/gnome-nettool/uk
-@dirrm share/gnome/help/gnome-nettool/sv
-@dirrm share/gnome/help/gnome-nettool/ru
-@dirrm share/gnome/help/gnome-nettool/pt_BR
-@dirrm share/gnome/help/gnome-nettool/pa
-@dirrm share/gnome/help/gnome-nettool/oc
-@dirrm share/gnome/help/gnome-nettool/fr
-@dirrm share/gnome/help/gnome-nettool/es
-@dirrm share/gnome/help/gnome-nettool/en_GB
-@dirrm share/gnome/help/gnome-nettool/el
-@dirrm share/gnome/help/gnome-nettool/de
-@dirrm share/gnome/help/gnome-nettool/da
-@dirrm share/gnome/help/gnome-nettool/cs
-@dirrm share/gnome/help/gnome-nettool/ca
-@dirrm share/gnome/help/gnome-nettool/C
-@dirrm share/gnome/help/gnome-nettool
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/gnome-nettool/pixmaps
-@dirrm share/gnome-nettool/dialogs
-@dirrm share/gnome-nettool
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in xdg-dirs: @dirrm share/applications

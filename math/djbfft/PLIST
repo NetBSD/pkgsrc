@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 16:47:52 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:42 joerg Exp $
 include/djbfft/complex4.h
 include/djbfft/complex8.h
 include/djbfft/fftc4.h
@@ -9,4 +9,3 @@ include/djbfft/fftr8.h
 include/djbfft/real4.h
 include/djbfft/real8.h
 lib/libdjbfft.a
-@dirrm include/djbfft

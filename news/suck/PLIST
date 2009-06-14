@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/02/21 13:46:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:10:07 joerg Exp $
 bin/suck
 bin/rpost
 bin/testhost
@@ -21,4 +21,3 @@ share/examples/suck/put.news.sm.pl
 share/examples/suck/suckkillfile.sample
 share/examples/suck/sucknewsrc.sample
 share/examples/suck/suckothermsgs.sample
-@dirrm share/examples/suck

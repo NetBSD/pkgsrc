@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/10/17 09:44:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:25 joerg Exp $
 share/doc/kde/HTML/et/karbon/common
 share/doc/kde/HTML/et/karbon/index.cache.bz2
 share/doc/kde/HTML/et/karbon/index.docbook
@@ -185,18 +185,3 @@ share/locale/et/LC_MESSAGES/kthesaurus.mo
 share/locale/et/LC_MESSAGES/kugar.mo
 share/locale/et/LC_MESSAGES/kword.mo
 share/locale/et/LC_MESSAGES/thesaurus_tool.mo
-@dirrm share/doc/kde/HTML/et/thesaurus
-@dirrm share/doc/kde/HTML/et/kword
-@dirrm share/doc/kde/HTML/et/kugar
-@dirrm share/doc/kde/HTML/et/kspread
-@dirrm share/doc/kde/HTML/et/krita
-@dirrm share/doc/kde/HTML/et/kpresenter
-@dirrm share/doc/kde/HTML/et/kplato
-@dirrm share/doc/kde/HTML/et/koshell
-@dirrm share/doc/kde/HTML/et/koffice
-@dirrm share/doc/kde/HTML/et/kivio
-@dirrm share/doc/kde/HTML/et/kformula
-@dirrm share/doc/kde/HTML/et/kexi
-@dirrm share/doc/kde/HTML/et/kchart
-@dirrm share/doc/kde/HTML/et/karbon
-@comment in kde: @dirrm share/doc/kde/HTML/et

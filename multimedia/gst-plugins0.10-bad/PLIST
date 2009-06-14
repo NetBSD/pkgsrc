@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/05/25 15:41:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:08:05 joerg Exp $
 include/gstreamer-0.10/gst/interfaces/photography-enumtypes.h
 include/gstreamer-0.10/gst/interfaces/photography.h
 lib/gstreamer-0.10/libgstaacparse.la
@@ -78,4 +78,3 @@ share/locale/tr/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/uk/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/vi/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/zh_CN/LC_MESSAGES/gst-plugins-bad-0.10.mo
-@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10

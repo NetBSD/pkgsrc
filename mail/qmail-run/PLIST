@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/03 15:37:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:04:41 joerg Exp $
 bin/qmail-procmail
 bin/qmail-qfilter-queue
 bin/qmail-qread-client
@@ -9,5 +9,3 @@ share/examples/rc.d/qmailpop3d
 share/examples/rc.d/qmailqread
 share/examples/rc.d/qmailsend
 share/examples/rc.d/qmailsmtpd
-@dirrm share/examples/qmail-run
-@dirrm share/doc/qmail-run

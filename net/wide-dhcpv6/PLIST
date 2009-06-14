@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/31 14:12:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:48 joerg Exp $
 man/man5/dhcp6c.conf.5
 man/man5/dhcp6s.conf.5
 man/man8/dhcp6c.8
@@ -14,4 +14,3 @@ share/examples/rc.d/dhcp6relay
 share/examples/rc.d/dhcp6s
 share/examples/wide-dhcpv6/dhcp6c.conf
 share/examples/wide-dhcpv6/dhcp6s.conf
-@dirrm share/examples/wide-dhcpv6

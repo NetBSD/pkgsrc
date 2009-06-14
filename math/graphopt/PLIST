@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/05/07 15:29:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:44 joerg Exp $
 bin/graphopt
 share/doc/graphopt/README
 share/pixmaps/graphopt/new.xpm
@@ -8,5 +8,3 @@ share/pixmaps/graphopt/save_as.xpm
 share/pixmaps/graphopt/export.xpm
 share/pixmaps/graphopt/import.xpm
 share/pixmaps/graphopt/quit.xpm
-@dirrm share/pixmaps/graphopt
-@dirrm share/doc/graphopt

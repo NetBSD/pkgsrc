@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/19 14:53:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:42 joerg Exp $
 ${RUBY_VENDORLIB}/icmp.rb
 ${RUBY_EG}/icmp/ping.rb
 ${RUBY_EG}/icmp/traceroute.rb
-@dirrm ${RUBY_EG}/icmp

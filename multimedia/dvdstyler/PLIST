@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/10/25 00:02:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:03 joerg Exp $
 bin/dvdstyler
 share/doc/dvdstyler/AUTHORS
 share/doc/dvdstyler/COPYING
@@ -80,10 +80,3 @@ share/locale/ru/LC_MESSAGES/dvdstyler.mo
 share/locale/sk/LC_MESSAGES/dvdstyler.mo
 share/locale/sr/LC_MESSAGES/dvdstyler.mo
 share/locale/sv/LC_MESSAGES/dvdstyler.mo
-@dirrm share/dvdstyler/rc
-@dirrm share/dvdstyler/objects
-@dirrm share/dvdstyler/data
-@dirrm share/dvdstyler/buttons
-@dirrm share/dvdstyler/backgrounds
-@dirrm share/dvdstyler
-@dirrm share/doc/dvdstyler

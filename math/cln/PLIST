@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:05:42 joerg Exp $
 bin/cln-config
 include/cln/GV.h
 include/cln/GV_complex.h
@@ -102,5 +102,3 @@ share/doc/cln/html/cln_9.html
 share/doc/cln/html/cln_abt.html
 share/doc/cln/html/cln_ovr.html
 share/doc/cln/html/cln_toc.html
-@dirrm share/doc/cln/html
-@dirrm include/cln

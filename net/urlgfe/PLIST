@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/08 19:19:44 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:47 joerg Exp $
 bin/urlgfe
 share/applications/urlgfe.desktop
 share/locale/fr/LC_MESSAGES/urlgfe.mo
@@ -8,5 +8,3 @@ share/locale/ru/LC_MESSAGES/urlgfe.mo
 share/locale/zh_CN/LC_MESSAGES/urlgfe.mo
 share/locale/zh_TW/LC_MESSAGES/urlgfe.mo
 share/pixmaps/urlgfe-icon.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

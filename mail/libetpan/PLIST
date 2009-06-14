@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/07 01:42:13 minskim Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:36 joerg Exp $
 bin/libetpan-config
 include/libetpan.h
 include/libetpan/acl.h
@@ -139,4 +139,3 @@ include/libetpan/pop3storage.h
 include/libetpan/uidplus.h
 include/libetpan/uidplus_types.h
 lib/libetpan.la
-@dirrm include/libetpan

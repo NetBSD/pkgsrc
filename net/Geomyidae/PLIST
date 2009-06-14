@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/06 11:50:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:20 joerg Exp $
 man/man8/Geomyidae.8
 sbin/Geomyidae
 share/doc/Geomyidae/LICENSE
 share/doc/Geomyidae/README
 share/examples/Geomyidae/index.gph
 share/examples/rc.d/Geomyidae
-@dirrm share/examples/Geomyidae
-@dirrm share/doc/Geomyidae

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/06 15:31:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:18 joerg Exp $
 ${EMACS_INFOPREFIX}/bbdb.info
 ${FOR_emacs}${EMACS_LISPPREFIX}/bbdb/bbdb-autoloads.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-com.el
@@ -40,4 +40,3 @@ ${EMACS_LISPPREFIX}/bbdb/bbdb-xemacs.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb-xemacs.elc
 ${EMACS_LISPPREFIX}/bbdb/bbdb.el
 ${EMACS_LISPPREFIX}/bbdb/bbdb.elc
-@dirrm ${EMACS_LISPPREFIX}/bbdb

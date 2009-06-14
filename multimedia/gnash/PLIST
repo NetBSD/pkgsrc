@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/22 15:20:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:08:04 joerg Exp $
 bin/dumpshm
 bin/gnash
 bin/gprocessor
@@ -30,10 +30,5 @@ share/${KDE}locale/fr/LC_MESSAGES/gnash.mo
 share/${KDE}locale/it/LC_MESSAGES/gnash.mo
 share/${KDE}locale/ja/LC_MESSAGES/gnash.mo
 share/${KDE}locale/sv/LC_MESSAGES/gnash.mo
-@dirrm share/${KDE}gnash
-@dirrm share/examples/gnash
-@dirrm share/doc/gnash/images
-@dirrm share/doc/gnash
-@dirrm lib/gnash
 @unexec ${RMDIR} %D/lib/firefox/plugins 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/firefox 2>/dev/null || ${TRUE}

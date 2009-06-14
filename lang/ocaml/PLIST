@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/01/23 20:42:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:03:37 joerg Exp $
 bin/camlp4
 bin/camlp4boot
 bin/camlp4o
@@ -519,15 +519,5 @@ man/man3/Unix.LargeFile.3o
 man/man3/Weak.3o
 man/man3/Weak.Make.3o
 man/man3/Weak.S.3o
-@dirrm lib/ocaml/vmthreads
-@dirrm lib/ocaml/threads
 @unexec ${RMDIR} %D/lib/ocaml/ocamldoc/custom 2>/dev/null || ${TRUE}
-@dirrm lib/ocaml/ocamldoc
-@dirrm lib/ocaml/ocamlbuild
-@dirrm lib/ocaml/camlp4/Camlp4Top
-@dirrm lib/ocaml/camlp4/Camlp4Printers
-@dirrm lib/ocaml/camlp4/Camlp4Parsers
-@dirrm lib/ocaml/camlp4/Camlp4Filters
-@dirrm lib/ocaml/camlp4
-@dirrm lib/ocaml/caml
 @unexec ${RMDIR} %D/lib/ocaml 2>/dev/null || ${TRUE}

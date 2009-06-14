@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/09/18 22:15:07 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.24 2009/06/14 18:09:27 joerg Exp $
 bin/radclient
 bin/radeapclient
 bin/radlast
@@ -358,12 +358,5 @@ share/freeradius/dictionary.wispr
 share/freeradius/dictionary.xedia
 share/freeradius/dictionary.xylan
 share/freeradius/dictionary.zyxel
-@dirrm share/freeradius
-@dirrm share/examples/freeradius/certs/demoCA
-@dirrm share/examples/freeradius/certs
-@dirrm share/examples/freeradius
-@dirrm share/doc/freeradius/examples
-@dirrm share/doc/freeradius/rfc
-@dirrm share/doc/freeradius
 @unexec ${RMDIR} %D/etc/raddb/certs/demoCA 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/raddb/certs 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/10 10:21:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:33 joerg Exp $
 bin/traceanon
 bin/traceconvert
 bin/tracefilter
@@ -58,4 +58,3 @@ man/man1/tracesplit.1
 man/man1/tracesplit_dir.1
 man/man1/tracestats.1
 man/man1/tracesummary.1
-@dirrm lib/libpacketdump

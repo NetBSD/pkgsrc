@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/02 02:51:41 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:39 joerg Exp $
 include/pppd/ccp.h
 include/pppd/chap-new.h
 include/pppd/chap_ms.h
@@ -26,4 +26,3 @@ sbin/chat
 sbin/pppd
 sbin/pppdump
 sbin/pppstats
-@dirrm include/pppd

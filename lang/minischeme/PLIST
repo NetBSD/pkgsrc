@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:13 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:36 joerg Exp $
 bin/miniscm
 share/minischeme/init.scm
 share/minischeme/nextleaf.scm
 share/minischeme/tools.scm
-@dirrm share/minischeme

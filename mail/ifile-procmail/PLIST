@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/13 09:46:55 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:34 joerg Exp $
 bin/ifile.inject-learn.header
 bin/ifile.inject.header
 bin/ifile.learn.mailbox
@@ -11,5 +11,3 @@ bin/ifile.test.message
 bin/ifile.unlearn.message
 share/doc/ifile/README
 share/examples/ifile/sample.procmailrc
-@dirrm share/examples/ifile
-@dirrm share/doc/ifile

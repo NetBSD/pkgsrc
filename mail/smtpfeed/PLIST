@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/03/14 19:52:16 tv Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:04:43 joerg Exp $
 libexec/smtpfeed
 man/man8/smtpfeed.8
 share/doc/smtpfeed/COPYRIGHT
@@ -18,4 +18,3 @@ share/doc/smtpfeed/RELEASE.NOTE
 share/doc/smtpfeed/SIGNAL
 share/doc/smtpfeed/SIGNAL.j
 share/doc/smtpfeed/TODO
-@dirrm share/doc/smtpfeed

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/03 15:40:31 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:08:06 joerg Exp $
 include/libdv/dv.h
 include/libdv/dv_types.h
 lib/libdv.la
 lib/pkgconfig/libdv.pc
-@dirrm include/libdv

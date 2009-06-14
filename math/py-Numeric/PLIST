@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:05:47 joerg Exp $
 ${PYINC}/Numeric/arrayobject.h
 ${PYINC}/Numeric/f2c.h
 ${PYINC}/Numeric/ranlib.h
@@ -67,10 +67,3 @@ ${PYSITELIB}/Numeric/numeric_version.pyc
 ${PYSITELIB}/Numeric/numeric_version.pyo
 ${PYSITELIB}/Numeric/ranlib.so
 ${PYSITELIB}/Numeric/umath.so
-${PLIST.blas}@dirrm ${PYSITELIB}/Numeric/dotblas
-@dirrm ${PYSITELIB}/Numeric/RNG
-@dirrm ${PYSITELIB}/Numeric/Numeric_headers
-@dirrm ${PYSITELIB}/Numeric/MA
-@dirrm ${PYSITELIB}/Numeric/FFT
-@dirrm ${PYSITELIB}/Numeric
-@dirrm ${PYINC}/Numeric

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/22 20:35:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:46 joerg Exp $
 bin/nickle
 include/nickle/builtin-namespaces.h
 include/nickle/builtin.h
@@ -62,8 +62,3 @@ share/nickle/scanf.5c
 share/nickle/socket.5c
 share/nickle/string.5c
 share/nickle/svg.5c
-@dirrm share/nickle/examples/turtle
-@dirrm share/nickle/examples/smlng
-@dirrm share/nickle/examples
-@dirrm share/nickle
-@dirrm include/nickle

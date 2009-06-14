@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/17 07:07:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:36 joerg Exp $
 bin/nicotine
 bin/nicotine-import-winconfig
 ${PYSITELIB}/pynicotine/ConfigParser.py
@@ -105,5 +105,3 @@ share/locale/it/LC_MESSAGES/nicotine.mo
 share/locale/nl/LC_MESSAGES/nicotine.mo
 share/locale/pl/LC_MESSAGES/nicotine.mo
 share/locale/sv/LC_MESSAGES/nicotine.mo
-@dirrm ${PYSITELIB}/pynicotine/gtkgui
-@dirrm ${PYSITELIB}/pynicotine

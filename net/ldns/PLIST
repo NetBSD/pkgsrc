@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/22 08:29:06 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:32 joerg Exp $
 include/ldns/buffer.h
 include/ldns/common.h
 include/ldns/dname.h
@@ -463,4 +463,3 @@ man/man3/ldns_zone_set_rrs.3
 man/man3/ldns_zone_set_soa.3
 man/man3/ldns_zone_soa.3
 man/man3/ldns_zone_sort.3
-@dirrm include/ldns

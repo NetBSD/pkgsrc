@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/05/02 20:34:02 reed Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:29 joerg Exp $
 bin/gnugk
 share/doc/gnugk/GkStatusMsgFmt.html
 share/doc/gnugk/changing_ip.txt
@@ -31,5 +31,3 @@ share/examples/gnugk/status.ini
 share/examples/gnugk/unregister_ip.pl
 share/examples/gnugk/vqueue.ini
 share/examples/rc.d/gnugk
-@dirrm share/examples/gnugk
-@dirrm share/doc/gnugk

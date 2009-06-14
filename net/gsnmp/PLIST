@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/29 09:48:31 seb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:29 joerg Exp $
 bin/gsnmp-get
 include/gsnmp/ber.h
 include/gsnmp/dispatch.h
@@ -13,4 +13,3 @@ lib/libgsnmp.la
 lib/pkgconfig/gsnmp.pc
 man/man1/gsnmp-get.1
 share/aclocal/gsnmp.m4
-@dirrm include/gsnmp

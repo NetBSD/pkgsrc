@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/10/12 11:23:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:35 joerg Exp $
 bin/kbiff
 lib/kde3/kbiff.la
 lib/libkdeinit_kbiff.la
@@ -64,22 +64,3 @@ share/locale/sv/LC_MESSAGES/kbiff.mo
 share/locale/tr/LC_MESSAGES/kbiff.mo
 share/locale/uk/LC_MESSAGES/kbiff.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/kbiff.mo
-@dirrm share/kde/apps/kbiff/pics
-@dirrm share/kde/apps/kbiff
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Internet
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/fr/kbiff
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/es/kbiff
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kbiff
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kbiff
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@comment in kde: @dirrm lib/kde3

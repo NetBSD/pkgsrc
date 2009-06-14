@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2009/06/12 16:25:34 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:08:03 joerg Exp $
 bin/ffmpeg
 bin/ffserver
 include/libavcodec/avcodec.h
@@ -93,13 +93,3 @@ share/ffmpeg/libx264-main.ffpreset
 share/ffmpeg/libx264-max.ffpreset
 share/ffmpeg/libx264-normal.ffpreset
 share/ffmpeg/libx264-slowfirstpass.ffpreset
-@dirrm share/ffmpeg
-@dirrm share/examples/ffmpeg
-@dirrm share/doc/ffmpeg
-@dirrm include/libswscale
-@dirrm include/libpostproc
-@dirrm include/libavutil
-@dirrm include/libavformat
-@dirrm include/libavfilter
-@dirrm include/libavdevice
-@dirrm include/libavcodec

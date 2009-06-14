@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/10/20 10:10:47 grant Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:34 joerg Exp $
 bin/hypermail
 bin/msg2archive
 bin/rdmsg
@@ -13,5 +13,3 @@ share/doc/html/hypermail/hypermail.html
 share/doc/html/hypermail/hypermail.png
 share/doc/html/hypermail/stars.png
 @exec ${MKDIR} %D/share/doc/html/hypermail/images
-@dirrm share/doc/html/hypermail/images
-@dirrm share/doc/html/hypermail

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/10/17 14:32:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:48 joerg Exp $
 bin/nctoh5${PYVERSSUFFIX}
 bin/ptdump${PYVERSSUFFIX}
 bin/ptrepack${PYVERSSUFFIX}
@@ -110,6 +110,3 @@ ${PYSITELIB}/tables/utils.py
 ${PYSITELIB}/tables/utils.pyc
 ${PYSITELIB}/tables/utils.pyo
 ${PYSITELIB}/tables/utilsExtension.so
-@dirrm ${PYSITELIB}/tables/scripts
-@dirrm ${PYSITELIB}/tables/nodes
-@dirrm ${PYSITELIB}/tables

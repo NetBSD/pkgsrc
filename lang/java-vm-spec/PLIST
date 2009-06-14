@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:34 joerg Exp $
 share/doc/html/java-vm-spec/ChangesAppendix.doc.html
 share/doc/html/java-vm-spec/ClassFile.doc.anc.gif
 share/doc/html/java-vm-spec/ClassFile.doc.anc1.gif
@@ -200,5 +200,3 @@ share/doc/html/java-vm-spec/chars/upsilon1.gif
 share/doc/html/java-vm-spec/chars/weierstr.gif
 share/doc/html/java-vm-spec/chars/xi.gif
 share/doc/html/java-vm-spec/chars/zeta.gif
-@dirrm share/doc/html/java-vm-spec/chars
-@dirrm share/doc/html/java-vm-spec

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2008/03/07 21:33:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.33 2009/06/14 18:05:43 joerg Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
@@ -829,68 +829,3 @@ share/pixmaps/gnumeric/right-down.png
 share/pixmaps/gnumeric/stf-druid.png
 share/pixmaps/gnumeric/win32-gnumeric.ico
 share/pixmaps/win32-gnumeric.ico
-@dirrm share/pixmaps/gnumeric
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnumeric
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnumeric/${PKGVERSION}/templates
-@dirrm share/gnumeric/${PKGVERSION}/idl
-@dirrm share/gnumeric/${PKGVERSION}/glade
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/List
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/General
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/Financial
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/Colourful
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/Classical
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates/3D
-@dirrm share/gnumeric/${PKGVERSION}/autoformat-templates
-@dirrm share/gnumeric/${PKGVERSION}
-@dirrm share/gnumeric
-@dirrm share/gnome/help/gnumeric/C/figures
-@dirrm share/gnome/help/gnumeric/C
-@dirrm share/gnome/help/gnumeric
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/xbase
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/uihello
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/sylk
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/sc
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/python-loader
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/py-func
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/plan_perfect
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/openoffice
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/oleo
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/numtheory
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/html
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-tsa
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-random
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-r
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-math
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-lookup
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-logical
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-info
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-financial
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-erlang
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-eng
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-date
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-database
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-complex
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/excel
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/dif
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/derivatives
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/corba
-@dirrm lib/gnumeric/${PKGVERSION}/plugins/applix
-@dirrm lib/gnumeric/${PKGVERSION}/plugins
-@dirrm lib/gnumeric/${PKGVERSION}/include
-@dirrm lib/gnumeric/${PKGVERSION}
-@dirrm lib/gnumeric
-@dirrm include/libspreadsheet-1.8/spreadsheet
-@dirrm include/libspreadsheet-1.8

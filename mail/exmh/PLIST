@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/20 08:15:14 dsainty Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:33 joerg Exp $
 bin/exmh
 bin/exmh-async
 bin/exmh-bg
@@ -199,5 +199,3 @@ lib/${PKGNAME}/widgets.tcl
 lib/${PKGNAME}/xns.tcl
 lib/${PKGNAME}/xnsgetmail.exp
 man/man1/exmh.1
-@dirrm lib/${PKGNAME}/html
-@dirrm lib/${PKGNAME}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/12 20:02:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:30 joerg Exp $
 include/isc-dhcp/boolean.h
 include/isc-dhcp/dst.h
 include/isc-dhcp/int.h
@@ -20,6 +20,3 @@ man/man5/dhcp-options.5
 share/doc/isc-dhcp-base/README
 share/doc/isc-dhcp-base/RELNOTES
 share/doc/isc-dhcp-base/References.txt
-@dirrm share/doc/isc-dhcp-base
-@dirrm include/isc-dhcp
-@dirrm include/omapip

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/12 21:02:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:39 joerg Exp $
 bin/pine
 bin/rpdump
 bin/rpload
@@ -17,7 +17,3 @@ share/pine/contrib/utils/sendit.sh
 share/pine/contrib/utils/sendtoall
 share/pine/contrib/utils/txtcc.sh
 share/pine/tech-notes.txt
-@dirrm share/pine/contrib/utils
-@dirrm share/pine/contrib
-@dirrm share/pine
-@dirrm share/examples/pine

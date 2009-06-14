@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:08:08 joerg Exp $
 bin/avi2raw
 bin/avidump
 bin/h264_parse
@@ -196,4 +196,3 @@ man/man3/MP4SetVerbosity.3
 man/man3/MP4SetVideoProfileLevel.3
 man/man3/MP4WriteRtpHint.3
 man/man3/MP4WriteSample.3
-@dirrm lib/mp4player_plugin

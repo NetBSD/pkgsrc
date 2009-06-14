@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/12/01 11:03:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:04:35 joerg Exp $
 bin/dmail
 bin/mailutil
 bin/mlock
@@ -106,7 +106,3 @@ share/doc/imap-uw/rfc/rfc5092.txt
 share/doc/imap-uw/rfc/rfc5161.txt
 share/doc/imap-uw/rfc/rfc5162.txt
 share/doc/imap-uw/rfc/rfc5234.txt
-@dirrm share/doc/imap-uw/rfc
-@dirrm share/doc/imap-uw/draft
-@dirrm share/doc/imap-uw
-@dirrm include/c-client

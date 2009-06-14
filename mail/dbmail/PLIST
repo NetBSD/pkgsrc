@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:03 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:31 joerg Exp $
 ${PLIST.mysql}lib/dbmail/libmysql.la
 ${PLIST.pgsql}lib/dbmail/libpgsql.la
 ${PLIST.sqlite}lib/dbmail/libsqlite.la
@@ -60,10 +60,3 @@ share/examples/rc.d/dbmailimapd
 share/examples/rc.d/dbmaillmtpd
 share/examples/rc.d/dbmailpop3d
 ${PLIST.sieve}share/examples/rc.d/dbmailtimsieved
-@dirrm share/examples/dbmail
-${PLIST.sqlite}@dirrm share/dbmail/sql/sqlite
-${PLIST.pgsql}@dirrm share/dbmail/sql/postgresql
-${PLIST.mysql}@dirrm share/dbmail/sql/mysql
-@dirrm share/dbmail/sql
-@dirrm share/doc/dbmail
-@dirrm lib/dbmail

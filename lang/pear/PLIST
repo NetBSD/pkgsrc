@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/16 12:00:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:38 joerg Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -146,51 +146,7 @@ lib/php/test/Structures_Graph/tests/README
 lib/php/test/Structures_Graph/tests/all-tests.php
 lib/php/test/Structures_Graph/tests/testCase/BasicGraph.php
 share/examples/pear/pear.conf
-@dirrm lib/php/doc/Archive_Tar/docs
-@dirrm lib/php/doc/Archive_Tar
-@dirrm lib/php/doc/PEAR
-@dirrm lib/php/data/Structures_Graph
-@dirrm lib/php/data/PEAR
 @unexec ${RMDIR} %D/lib/php/data 2>/dev/null || ${TRUE}
-@dirrm lib/php/Structures/Graph/Manipulator
-@dirrm lib/php/Structures/Graph
-@dirrm lib/php/Structures
-@dirrm lib/php/PEAR/Validator
-@dirrm lib/php/PEAR/Task/Windowseol
-@dirrm lib/php/PEAR/Task/Unixeol
-@dirrm lib/php/PEAR/Task/Replace
-@dirrm lib/php/PEAR/Task/Postinstallscript
-@dirrm lib/php/PEAR/Task
-@dirrm lib/php/PEAR/REST
-@dirrm lib/php/PEAR/PackageFile/v2
-@dirrm lib/php/PEAR/PackageFile/Parser
-@dirrm lib/php/PEAR/PackageFile/Generator
-@dirrm lib/php/PEAR/PackageFile
-@dirrm lib/php/PEAR/Installer/Role
-@dirrm lib/php/PEAR/Installer
-@dirrm lib/php/PEAR/Frontend
-@dirrm lib/php/PEAR/Downloader
-@dirrm lib/php/PEAR/Command
-@dirrm lib/php/PEAR/ChannelFile
-@dirrm lib/php/PEAR
-@dirrm lib/php/OS
-@dirrm lib/php/Console
-@dirrm lib/php/Archive
-@dirrm lib/php/test/Structures_Graph/tests/testCase
-@dirrm lib/php/test/Structures_Graph/tests
-@dirrm lib/php/test/Structures_Graph
 @unexec ${RMDIR} %D/lib/php/test 2>/dev/null || ${TRUE}
-@dirrm lib/php/doc/Structures_Graph/docs/html/Structures_Graph
-@dirrm lib/php/doc/Structures_Graph/docs/html/media
-@dirrm lib/php/doc/Structures_Graph/docs/html
-@dirrm lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph
-@dirrm lib/php/doc/Structures_Graph/docs/tutorials
-@dirrm lib/php/doc/Structures_Graph/docs
-@dirrm lib/php/doc/Structures_Graph
 @unexec ${RMDIR} %D/lib/php/doc 2>/dev/null || ${TRUE}
-@dirrm lib/php/.registry/.channel.pecl.php.net
-@dirrm lib/php/.registry/.channel.__uri
 @unexec ${RMDIR} %D/lib/php/.registry 2>/dev/null || ${TRUE}
-@dirrm lib/php/.channels/.alias
-@dirrm lib/php/.channels
-@dirrm share/examples/pear

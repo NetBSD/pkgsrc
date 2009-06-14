@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/04 08:56:49 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:35 joerg Exp $
 nasd/bin/cp_nasd
 nasd/bin/edrfs_script_client
 nasd/bin/edrfs_server
@@ -199,19 +199,3 @@ nasd/lib/libnasd_drive_client.a
 nasd/lib/libnasd_drive_client_sal.a
 nasd/lib/libnasd_edrfs_client.a
 nasd/lib/libnasd_edrfs_common.a
-@dirrm nasd/lib
-@dirrm nasd/include/nasd/vxworks
-@dirrm nasd/include/nasd/video
-@dirrm nasd/include/nasd/solaris
-@dirrm nasd/include/nasd/${LOWER_OPSYS}
-@dirrm nasd/include/nasd/linux
-@dirrm nasd/include/nasd/irix
-@dirrm nasd/include/nasd/generic
-@dirrm nasd/include/nasd/freebsd
-@dirrm nasd/include/nasd/dux
-@dirrm nasd/include/nasd
-@dirrm nasd/include/cryptolib
-@dirrm nasd/include
-@dirrm nasd/etc
-@dirrm nasd/bin
-@dirrm nasd

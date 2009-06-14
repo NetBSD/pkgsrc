@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/04/15 13:11:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:34 joerg Exp $
 bin/gmime-config
 bin/uudecode
 bin/uuencode
@@ -131,6 +131,3 @@ share/gtk-doc/html/gmime/left.png
 share/gtk-doc/html/gmime/right.png
 share/gtk-doc/html/gmime/style.css
 share/gtk-doc/html/gmime/up.png
-@dirrm share/gtk-doc/html/gmime
-@dirrm include/gmime-2.0/gmime
-@dirrm include/gmime-2.0

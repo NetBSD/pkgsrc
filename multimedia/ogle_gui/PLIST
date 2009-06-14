@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:08:09 joerg Exp $
 lib/ogle/ogle_gui
 share/locale/da/LC_MESSAGES/ogle_gui.mo
 share/locale/de/LC_MESSAGES/ogle_gui.mo
@@ -29,4 +29,3 @@ share/ogle_gui/stock_timer_stopped.xpm
 share/ogle_gui/stock_up_arrow.xpm
 share/ogle_gui/stock_volume.xpm
 share/ogle_gui/subpicture.xpm
-@dirrm share/ogle_gui

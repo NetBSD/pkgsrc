@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/05/12 09:30:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:09:39 joerg Exp $
 man/man8/pptp.8
 sbin/pptp
 share/doc/pptp/Documentation/DESIGN.CALLMGR
@@ -20,7 +20,3 @@ share/doc/pptp/Reference/rfc791.txt
 share/doc/pptp/Reference/rfc793.txt
 share/doc/pptp/USING
 share/examples/pptp/options.pptp
-@dirrm share/examples/pptp
-@dirrm share/doc/pptp/Reference
-@dirrm share/doc/pptp/Documentation
-@dirrm share/doc/pptp

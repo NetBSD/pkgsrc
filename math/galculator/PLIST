@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/25 19:50:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:43 joerg Exp $
 bin/galculator
 man/man1/galculator.1
 share/applications/galculator.desktop
@@ -27,7 +27,3 @@ share/locale/sk/LC_MESSAGES/galculator.mo
 share/pixmaps/galculator.svg
 share/pixmaps/galculator.png
 share/pixmaps/galculator.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/galculator/glade
-@dirrm share/galculator
-@comment in xdg-dirs: @dirrm share/applications

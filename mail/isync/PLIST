@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/10/29 17:12:59 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:04:35 joerg Exp $
 bin/get-cert
 bin/isync
 bin/mbsync
@@ -13,5 +13,3 @@ share/doc/isync/README
 share/doc/isync/TODO
 share/examples/isync/isyncrc.sample
 share/examples/isync/mbsyncrc.sample
-@dirrm share/examples/isync
-@dirrm share/doc/isync

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/12/20 19:02:12 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:04:44 joerg Exp $
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
@@ -446,28 +446,5 @@ sympa/static_content/icons/right.png
 sympa/static_content/icons/sound1.png
 sympa/static_content/icons/text.png
 sympa/static_content/icons/unknown.png
-@dirrm sympa/static_content/icons
-@dirrm sympa/static_content
-@dirrm sympa/bin/etc/web_tt2
-@dirrm sympa/bin/etc/scenari
-@dirrm sympa/bin/etc/mail_tt2
-@dirrm sympa/bin/etc/list_task_models
-@dirrm sympa/bin/etc/global_task_models
-@dirrm sympa/bin/etc/families
-@dirrm sympa/bin/etc/create_list_templates/public_web_forum
-@dirrm sympa/bin/etc/create_list_templates/private_working_group
-@dirrm sympa/bin/etc/create_list_templates/news-letter
-@dirrm sympa/bin/etc/create_list_templates/intranet_list
-@dirrm sympa/bin/etc/create_list_templates/html-news-letter
-@dirrm sympa/bin/etc/create_list_templates/hotline
-@dirrm sympa/bin/etc/create_list_templates/discussion_list
-@dirrm sympa/bin/etc/create_list_templates
-@dirrm sympa/bin/etc
-@dirrm sympa/bin/Marc
-@dirrm sympa/bin
-@dirrm sympa
-@dirrm share/doc/sympa
-@dirrm share/examples/sympa/sample-list
-@dirrm share/examples/sympa
 
 

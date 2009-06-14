@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/23 14:54:23 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:08:05 joerg Exp $
 bin/MP4Box
 bin/MP4Client
 lib/gpac/gm_aac_in.so
@@ -31,5 +31,3 @@ man/man1/gpac.1
 man/man1/mp4box.1
 man/man1/mp4client.1
 share/gpac/gpac.mp4
-@dirrm share/gpac
-@dirrm lib/gpac

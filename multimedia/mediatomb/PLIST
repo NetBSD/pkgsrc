@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/01/05 12:28:32 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:08:08 joerg Exp $
 bin/mediatomb
 man/man1/mediatomb.1
 share/applications/mediatomb.desktop
@@ -91,11 +91,3 @@ share/mediatomb/web/std_treelook.css
 share/mediatomb/web/top.html
 share/mediatomb/web/topleft.html
 share/mediatomb/web/topright.html
-@dirrm share/mediatomb/web/js
-@dirrm share/mediatomb/web/icons/nanotree/images
-@dirrm share/mediatomb/web/icons/nanotree
-@dirrm share/mediatomb/web/icons
-@dirrm share/mediatomb/web
-@dirrm share/mediatomb/js
-@dirrm share/mediatomb
-@dirrm share/examples/mediatomb

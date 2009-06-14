@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/05 21:59:32 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:36 joerg Exp $
 bin/spf_example
 bin/spf_example_static
 bin/spfd
@@ -22,4 +22,3 @@ include/spf2/spf_request.h
 include/spf2/spf_response.h
 include/spf2/spf_server.h
 lib/libspf2.la
-@dirrm include/spf2

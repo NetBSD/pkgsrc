@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/09/08 12:58:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:09:36 joerg Exp $
 bin/encode_keychange
 bin/fixproc
 bin/ipf-mod.pl
@@ -545,16 +545,3 @@ share/snmp/snmpconf-data/snmptrapd-data/logging
 share/snmp/snmpconf-data/snmptrapd-data/runtime
 share/snmp/snmpconf-data/snmptrapd-data/snmpconf-config
 share/snmp/snmpconf-data/snmptrapd-data/traphandle
-@dirrm share/snmp/snmpconf-data/snmptrapd-data
-@dirrm share/snmp/snmpconf-data/snmpd-data
-@dirrm share/snmp/snmpconf-data/snmp-data
-@dirrm share/snmp/snmpconf-data
-@dirrm share/snmp/mibs
-@dirrm share/snmp/mib2c-data
-@dirrm share/examples/net-snmp
-@dirrm include/ucd-snmp
-@dirrm include/net-snmp/system
-@dirrm include/net-snmp/machine
-@dirrm include/net-snmp/library
-@dirrm include/net-snmp/agent
-@dirrm include/net-snmp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/30 11:53:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:31 joerg Exp $
 bin/tellico
 share/applications/kde/tellico.desktop
 share/doc/kde/HTML/en/tellico/CMakeLists.txt
@@ -225,34 +225,3 @@ share/locale/ru/LC_MESSAGES/tellico.mo
 share/locale/sv/LC_MESSAGES/tellico.mo
 share/locale/tr/LC_MESSAGES/tellico.mo
 share/locale/uk/LC_MESSAGES/tellico.mo
-@comment in kde: @dirrm share/kde/mimelnk/application
-@dirrm share/kde/mime/packages
-@dirrm share/kde/mime
-@comment in kde: @dirrm share/kde/config.kcfg
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/tellico/report-templates
-@dirrm share/kde/apps/tellico/pics
-@dirrm share/kde/apps/tellico/entry-templates
-@dirrm share/kde/apps/tellico/data-sources
-@dirrm share/kde/apps/tellico
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/fr/tellico
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/en/tellico
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde

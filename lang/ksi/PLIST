@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:35 joerg Exp $
 bin/ksi
 bin/ksi-compile
 bin/ksi-config
@@ -43,10 +43,3 @@ share/ksi/3.4/syncase.ko
 share/ksi/3.4/zip.so
 share/ksi/app/ksi/Main.ko
 share/ksi/site/SiteInit.scm
-@dirrm share/ksi/site
-@dirrm share/ksi/app/ksi
-@dirrm share/ksi/app
-@dirrm share/ksi/3.4
-@dirrm share/ksi
-@dirrm lib/ksi
-@dirrm include/ksi

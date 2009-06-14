@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:23:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:35 joerg Exp $
 bin/kali
 include/kali.h
 lib/kali/big/array.scm
@@ -96,11 +96,4 @@ lib/kali/rts/ratnum.scm
 lib/kali/rts/recnum.scm
 lib/kali/rts/xnum.scm
 lib/kali/scheme48vm
-@dirrm lib/kali/big
-@dirrm lib/kali/env
-@dirrm lib/kali/link
-@dirrm lib/kali/misc
-@dirrm lib/kali/opt
-@dirrm lib/kali/rts
-@dirrm lib/kali
 man/man1/kali.1

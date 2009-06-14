@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2005/08/20 02:20:45 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:04:39 joerg Exp $
 libexec/nullmailer/mailq
 libexec/nullmailer/nullmailer-inject
 libexec/nullmailer/nullmailer-queue
@@ -21,6 +21,3 @@ share/doc/nullmailer/README
 share/doc/nullmailer/TODO
 share/examples/nullmailer/mailer.conf
 share/examples/rc.d/nullmailer
-@dirrm share/examples/nullmailer
-@dirrm share/doc/nullmailer
-@dirrm libexec/nullmailer

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/19 14:25:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:27 joerg Exp $
 bin/dwell-click-applet
 bin/mousetweaks
 bin/pointer-capture-applet
@@ -214,29 +214,3 @@ share/omf/mousetweaks/mousetweaks-fr.omf
 share/omf/mousetweaks/mousetweaks-it.omf
 share/omf/mousetweaks/mousetweaks-oc.omf
 share/omf/mousetweaks/mousetweaks-sv.omf
-@dirrm share/omf/mousetweaks
-@comment in rarian: @dirrm share/omf
-@dirrm share/mousetweaks
-@dirrm share/gnome/help/mousetweaks/sv/figures
-@dirrm share/gnome/help/mousetweaks/sv
-@dirrm share/gnome/help/mousetweaks/oc/figures
-@dirrm share/gnome/help/mousetweaks/oc
-@dirrm share/gnome/help/mousetweaks/it/figures
-@dirrm share/gnome/help/mousetweaks/it
-@dirrm share/gnome/help/mousetweaks/fr/figures
-@dirrm share/gnome/help/mousetweaks/fr
-@dirrm share/gnome/help/mousetweaks/es/figures
-@dirrm share/gnome/help/mousetweaks/es
-@dirrm share/gnome/help/mousetweaks/en_GB/figures
-@dirrm share/gnome/help/mousetweaks/en_GB
-@dirrm share/gnome/help/mousetweaks/el/figures
-@dirrm share/gnome/help/mousetweaks/el
-@dirrm share/gnome/help/mousetweaks/de/figures
-@dirrm share/gnome/help/mousetweaks/de
-@dirrm share/gnome/help/mousetweaks/C/figures
-@dirrm share/gnome/help/mousetweaks/C
-@dirrm share/gnome/help/mousetweaks
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in libbonobo: @dirrm lib/bonobo/servers

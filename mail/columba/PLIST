@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/08 14:27:44 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:30 joerg Exp $
 bin/columba
 share/columba/columba.jar
 share/columba/lib/clover.jar
@@ -15,6 +15,3 @@ share/doc/columba/AUTHORS
 share/doc/columba/CHANGES
 share/doc/columba/LICENSE
 share/doc/columba/README
-@dirrm share/doc/columba
-@dirrm share/columba/lib
-@dirrm share/columba

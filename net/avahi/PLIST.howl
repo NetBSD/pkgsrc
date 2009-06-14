@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.howl,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+@comment $NetBSD: PLIST.howl,v 1.2 2009/06/14 18:09:21 joerg Exp $
 include/avahi-compat-howl/corby/buffer.h
 include/avahi-compat-howl/corby/channel.h
 include/avahi-compat-howl/corby/corby.h
@@ -20,8 +20,3 @@ include/avahi-compat-howl/salt/socket.h
 include/avahi-compat-howl/salt/time.h
 lib/libhowl.la
 lib/pkgconfig/avahi-compat-howl.pc
-@dirrm include/avahi-compat-howl/salt
-@dirrm include/avahi-compat-howl/rendezvous
-@dirrm include/avahi-compat-howl/discovery
-@dirrm include/avahi-compat-howl/corby
-@dirrm include/avahi-compat-howl

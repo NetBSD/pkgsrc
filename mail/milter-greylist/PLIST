@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2005/05/02 20:34:00 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:04:38 joerg Exp $
 bin/milter-greylist
 man/man8/milter-greylist.8
 man/man5/greylist.conf.5
 share/doc/milter-greylist/README
 share/examples/milter-greylist/greylist.conf
 share/examples/rc.d/milter-greylist
-@dirrm share/examples/milter-greylist
-@dirrm share/doc/milter-greylist

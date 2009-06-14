@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 02:45:51 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:44 joerg Exp $
 bin/tcpillust
 lib/X11/tcpillust/tcpillust.tcl
 lib/X11/tcpillust/back.xbm
@@ -9,6 +9,3 @@ share/doc/tcpillust/sample/tcpclient.log
 share/doc/tcpillust/sample/tcpserver.log
 share/doc/tcpillust/README
 ${IMAKE_MAN_DIR}/tcpillust.${IMAKE_MANNEWSUFFIX}
-@dirrm lib/X11/tcpillust
-@dirrm share/doc/tcpillust/sample
-@dirrm share/doc/tcpillust

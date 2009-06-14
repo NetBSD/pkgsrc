@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2003/10/21 20:55:42 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:32 joerg Exp $
 bin/llogin
 man/man1/llogin.1
 man/man5/latd.conf.5
@@ -9,4 +9,3 @@ sbin/latcp
 sbin/latd
 sbin/moprc
 share/examples/latd/latd.conf
-@dirrm share/examples/latd

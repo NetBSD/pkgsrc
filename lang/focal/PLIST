@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/11 17:15:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:31 joerg Exp $
 bin/focal
 share/doc/focal/focal.doc
 share/doc/focal/queens.foc
 share/doc/focal/sieve.foc
-@dirrm share/doc/focal

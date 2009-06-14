@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/02 11:52:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:37 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/ocamlduce
 bin/expungeduce
 bin/ocamlduce
@@ -18,4 +18,3 @@ lib/ocaml/site-lib/ocamlduce/toploop.cmi
 lib/ocaml/site-lib/ocamlduce/topmain.cmi
 lib/ocaml/site-lib/ocamlduce/topstart.cmo
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/ocamlduce
-@dirrm lib/ocaml/site-lib/ocamlduce

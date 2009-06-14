@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/21 12:40:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:34 joerg Exp $
 bin/teredo-mire
 include/libteredo/teredo-udp.h
 include/libteredo/teredo.h
@@ -21,6 +21,3 @@ sbin/miredo-server
 share/examples/miredo/isatapd.conf
 share/examples/miredo/miredo-server.conf
 share/examples/miredo/miredo.conf
-@dirrm include/libteredo
-@dirrm include/libtun6
-@dirrm share/examples/miredo

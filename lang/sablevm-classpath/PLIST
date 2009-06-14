@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/04/17 12:21:14 tonio Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:03:40 joerg Exp $
 java/sablevm/include/jawt.h
 java/sablevm/include/jawt_md.h
 java/sablevm/include/jni_md.h
@@ -16,14 +16,3 @@ java/sablevm/lib/sablevm/lib/resources.jar
 java/sablevm/lib/security/classpath.security
 java/sablevm/share/sablevm-classpath/libclasspath.jar
 java/sablevm/share/sablevm-classpath/resources.jar
-@dirrm java/sablevm/share/sablevm-classpath
-@dirrm java/sablevm/share
-@dirrm java/sablevm/lib/security
-@dirrm java/sablevm/lib/sablevm/lib
-@dirrm java/sablevm/lib/sablevm/jre/lib
-@dirrm java/sablevm/lib/sablevm/jre
-@dirrm java/sablevm/lib/sablevm
-@dirrm java/sablevm/lib/sablevm-classpath
-@dirrm java/sablevm/lib
-@dirrm java/sablevm/include
-@dirrm java/sablevm

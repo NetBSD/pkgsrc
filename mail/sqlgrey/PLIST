@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:43 joerg Exp $
 bin/sqlgrey-logstats.pl
 man/man1/sqlgrey.1
 sbin/sqlgrey
@@ -10,4 +10,3 @@ share/examples/sqlgrey/clients_ip_whitelist
 share/examples/sqlgrey/dyn_fqdn.regexp
 share/examples/sqlgrey/smtp_server.regexp
 share/examples/sqlgrey/sqlgrey.conf
-@dirrm share/examples/sqlgrey

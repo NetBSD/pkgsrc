@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:04:45 joerg Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -265,11 +265,3 @@ ${FOR_emacs_x}share/wl/wl-summary-reply-with-citation-up.xpm
 ${FOR_emacs_x}share/wl/wl-summary-set-flags-up.xpm
 ${FOR_emacs_x}share/wl/wl-summary-sync-force-update-up.xpm
 ${FOR_emacs_x}share/wl/wl-write-current-folder-up.xpm
-@dirrm share/wl
-@dirrm share/examples/wl/ja
-@dirrm share/examples/wl/en
-@dirrm share/examples/wl
-@dirrm share/doc/wl/ja
-@dirrm share/doc/wl/en
-@dirrm share/doc/wl
-@dirrm ${EMACS_LISPPREFIX}/wl

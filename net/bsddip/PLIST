@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2006/06/30 16:17:27 tron Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:23 joerg Exp $
 sbin/dip
 sbin/diplogin
 lib/dip/dialout.dip.sample
@@ -14,4 +14,3 @@ man/cat8/dip.0
 man/cat8/diplogin.0
 man/man8/dip.8
 man/man8/diplogin.8
-@dirrm lib/dip

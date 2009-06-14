@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/02/22 19:01:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:03:43 joerg Exp $
 bin/expect
 include/expect.h
 include/expect_comm.h
@@ -40,6 +40,4 @@ share/examples/tcl/expect/weather
 share/examples/tcl/expect/xkibitz
 share/examples/tcl/expect/xkibitz.1
 share/examples/tcl/expect/xpstat
-@dirrm lib/tcl/expect5.43
-@dirrm share/examples/tcl/expect
 @unexec ${RMDIR} %D/share/examples/tcl 2>/dev/null || ${TRUE}

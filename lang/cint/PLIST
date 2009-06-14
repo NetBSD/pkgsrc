@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:29 joerg Exp $
 bin/cint
 bin/makecint
 cint/G__ci.h
@@ -323,12 +323,3 @@ man/man2/unique.2
 man/man3/array.h.3
 man/man3/fft.h.3
 man/man3/statistics.h.3
-@dirrm cint/stl
-@dirrm cint/lib/prec_stl
-@dirrm cint/lib
-@dirrm cint/include/sys
-@dirrm cint/include/X11
-@dirrm cint/include/GL
-@dirrm cint/include
-@dirrm cint
-@dirrm share/doc/cint

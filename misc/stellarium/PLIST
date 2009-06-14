@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/02/11 18:05:53 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:07:31 joerg Exp $
 bin/stellarium
 man/man1/stellarium.1
 share/locale/af/LC_MESSAGES/stellarium-skycultures.mo
@@ -566,32 +566,3 @@ share/stellarium/textures/umbriel.png
 share/stellarium/textures/uranus.png
 share/stellarium/textures/venus.png
 share/stellarium/textures/zenith.png
-@dirrm share/stellarium/textures
-@dirrm share/stellarium/stars/default
-@dirrm share/stellarium/stars
-@dirrm share/stellarium/skycultures/western
-@dirrm share/stellarium/skycultures/tupi
-@dirrm share/stellarium/skycultures/polynesian
-@dirrm share/stellarium/skycultures/norse
-@dirrm share/stellarium/skycultures/navajo
-@dirrm share/stellarium/skycultures/maori
-@dirrm share/stellarium/skycultures/lakota
-@dirrm share/stellarium/skycultures/korean
-@dirrm share/stellarium/skycultures/inuit
-@dirrm share/stellarium/skycultures/egyptian
-@dirrm share/stellarium/skycultures/chinese
-@dirrm share/stellarium/skycultures
-@dirrm share/stellarium/scripts
-@dirrm share/stellarium/nebulae/default
-@dirrm share/stellarium/nebulae
-@dirrm share/stellarium/landscapes/trees
-@dirrm share/stellarium/landscapes/ocean
-@dirrm share/stellarium/landscapes/moon
-@dirrm share/stellarium/landscapes/mars
-@dirrm share/stellarium/landscapes/hurricane
-@dirrm share/stellarium/landscapes/guereins
-@dirrm share/stellarium/landscapes/garching
-@dirrm share/stellarium/landscapes
-@dirrm share/stellarium/data/gui
-@dirrm share/stellarium/data
-@dirrm share/stellarium

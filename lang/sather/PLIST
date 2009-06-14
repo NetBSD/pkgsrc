@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/02/20 19:04:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:40 joerg Exp $
 bin/sabrowse
 bin/sacomp
 info/sather-mode.info
@@ -469,44 +469,3 @@ share/emacs/site-lisp/hl319.el
 share/emacs/site-lisp/sather-lib.el
 share/emacs/site-lisp/sather-module.el
 share/emacs/site-lisp/sather.el
-@dirrm share/doc/sather/header
-@dirrm share/doc/sather/Gui
-@dirrm share/doc/sather
-@dirrm lib/sather/System/Platforms/tcltk/init
-@dirrm lib/sather/System/Platforms/tcltk
-@dirrm lib/sather/System/Platforms/${LOWER_OPSYS}
-@dirrm lib/sather/System/Platforms/gui/TclCode
-@dirrm lib/sather/System/Platforms/gui
-@dirrm lib/sather/System/Platforms/f77
-@dirrm lib/sather/System/Platforms/dualgui
-@dirrm lib/sather/System/Platforms/X
-@dirrm lib/sather/System/Platforms
-@dirrm lib/sather/System/Debug
-@dirrm lib/sather/System/Common
-@dirrm lib/sather/System
-@dirrm lib/sather/Library/pSather
-@dirrm lib/sather/Library/System/Zones
-@dirrm lib/sather/Library/System/TclTk
-@dirrm lib/sather/Library/System/Socket/experimental/test
-@dirrm lib/sather/Library/System/Socket/experimental
-@dirrm lib/sather/Library/System/Socket
-@dirrm lib/sather/Library/System/Gui/Demos
-@dirrm lib/sather/Library/System/Gui
-@dirrm lib/sather/Library/System/DualGui
-@dirrm lib/sather/Library/System
-@dirrm lib/sather/Library/Strings
-@dirrm lib/sather/Library/Math
-@dirrm lib/sather/Library/IO
-@dirrm lib/sather/Library/Graphs
-@dirrm lib/sather/Library/Ext
-@dirrm lib/sather/Library/Containers
-@dirrm lib/sather/Library/Base
-@dirrm lib/sather/Library
-@dirrm lib/sather/Browser/Web
-@dirrm lib/sather/Browser/TkKit
-@dirrm lib/sather/Browser/Tcl
-@dirrm lib/sather/Browser/Sather
-@dirrm lib/sather/Browser/Help
-@dirrm lib/sather/Browser
-@dirrm lib/sather/Bin
-@dirrm lib/sather

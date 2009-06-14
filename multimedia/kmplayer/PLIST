@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/09/04 12:12:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 18:08:06 joerg Exp $
 bin/kmplayer
 bin/kxineplayer
 bin/kxvplayer
@@ -102,41 +102,3 @@ share/locale/tr/LC_MESSAGES/kmplayer.mo
 share/locale/uk/LC_MESSAGES/kmplayer.mo
 share/locale/xx/LC_MESSAGES/kmplayer.mo
 share/locale/zh_CN/LC_MESSAGES/kmplayer.mo
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/video
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kmplayer
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/sv/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/pt/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/et/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/da/kmplayer
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

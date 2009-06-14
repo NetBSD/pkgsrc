@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/02 09:38:50 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:20 joerg Exp $
 bin/822-date
 bin/dpkg
 bin/dpkg-architecture
@@ -229,11 +229,3 @@ share/locale/zh_CN/LC_MESSAGES/dpkg.mo
 share/locale/zh_CN/LC_MESSAGES/dselect.mo
 share/locale/zh_TW/LC_MESSAGES/dpkg.mo
 share/locale/zh_TW/LC_MESSAGES/dselect.mo
-@dirrm share/dpkg/dpkg/origins
-@dirrm share/dpkg/dpkg
-@dirrm share/dpkg
-@dirrm lib/dpkg/parsechangelog
-@dirrm lib/dpkg/methods/floppy
-@dirrm lib/dpkg/methods/disk
-@dirrm lib/dpkg/methods
-@dirrm lib/dpkg

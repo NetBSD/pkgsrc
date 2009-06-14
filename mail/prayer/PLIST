@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/06/15 23:28:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:40 joerg Exp $
 sbin/prayer
 sbin/prayer-cyclog
 sbin/prayer-db-prune
@@ -90,9 +90,3 @@ share/prayer/icons/rightright-inactive.gif
 share/prayer/icons/rightright.gif
 share/prayer/icons/tick.gif
 share/prayer/icons/univheader.gif
-@dirrm share/prayer/icons
-@dirrm share/prayer/help/prefs
-@dirrm share/prayer/help/compose
-@dirrm share/prayer/help
-@dirrm share/prayer
-@dirrm share/examples/prayer

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/05/12 17:53:29 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:03:37 joerg Exp $
 bin/cpphs
 bin/greencard-nhc98
 bin/harch
@@ -398,62 +398,3 @@ share/doc/nhc98/tprof.html
 share/doc/nhc98/tracer.html
 share/doc/nhc98/windows.html
 share/doc/nhc98/york-release.html
-@dirrm share/doc/nhc98/bugs
-@dirrm share/doc/nhc98/examples
-@dirrm share/doc/nhc98/hmake
-@dirrm share/doc/nhc98/implementation-notes
-@dirrm share/doc/nhc98/libs
-@dirrm share/doc/nhc98
-@dirrm lib/nhc98/${HARCH}
-@dirrm lib/nhc98
-@dirrm lib/hmake/${HARCH}
-@dirrm lib/hmake
-@dirrm include/nhc98/packages/parsec/Text/ParserCombinators/Parsec
-@dirrm include/nhc98/packages/parsec/Text/ParserCombinators
-@dirrm include/nhc98/packages/parsec/Text
-@dirrm include/nhc98/packages/parsec
-@dirrm include/nhc98/packages/haskell-src/Language/Haskell
-@dirrm include/nhc98/packages/haskell-src/Language
-@dirrm include/nhc98/packages/haskell-src
-@dirrm include/nhc98/packages/base/Text/Show
-@dirrm include/nhc98/packages/base/Text/Regex
-@dirrm include/nhc98/packages/base/Text/PrettyPrint
-@dirrm include/nhc98/packages/base/Text/ParserCombinators
-@dirrm include/nhc98/packages/base/Text/Html
-@dirrm include/nhc98/packages/base/Text
-@dirrm include/nhc98/packages/base/System/IO
-@dirrm include/nhc98/packages/base/System/Directory
-@dirrm include/nhc98/packages/base/System/Console
-@dirrm include/nhc98/packages/base/System
-@dirrm include/nhc98/packages/base/NHC
-@dirrm include/nhc98/packages/base/Foreign/Marshal
-@dirrm include/nhc98/packages/base/Foreign/C
-@dirrm include/nhc98/packages/base/Foreign
-@dirrm include/nhc98/packages/base/Debug
-@dirrm include/nhc98/packages/base/Data
-@dirrm include/nhc98/packages/base/Control/Monad
-@dirrm include/nhc98/packages/base/Control
-@dirrm include/nhc98/packages/base
-@dirrm include/nhc98/packages/QuickCheck/Test/QuickCheck
-@dirrm include/nhc98/packages/QuickCheck/Test
-@dirrm include/nhc98/packages/QuickCheck/Debug/QuickCheck
-@dirrm include/nhc98/packages/QuickCheck/Debug
-@dirrm include/nhc98/packages/QuickCheck
-@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml/Xtract
-@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml/Html
-@dirrm include/nhc98/packages/HaXml/Text/XML/HaXml
-@dirrm include/nhc98/packages/HaXml/Text/XML
-@dirrm include/nhc98/packages/HaXml/Text/ParserCombinators
-@dirrm include/nhc98/packages/HaXml/Text
-@dirrm include/nhc98/packages/HaXml
-@dirrm include/nhc98/packages/HUnit/Test/HUnit
-@dirrm include/nhc98/packages/HUnit/Test
-@dirrm include/nhc98/packages/HUnit
-@dirrm include/nhc98/packages/Cabal/Distribution/Simple
-@dirrm include/nhc98/packages/Cabal/Distribution/PreProcess
-@dirrm include/nhc98/packages/Cabal/Distribution/Compat
-@dirrm include/nhc98/packages/Cabal/Distribution
-@dirrm include/nhc98/packages/Cabal
-@dirrm include/nhc98/packages
-@dirrm include/nhc98/NHC
-@dirrm include/nhc98

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/02/28 12:53:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:32 joerg Exp $
 bin/dnet-config
 include/dnet.h
 include/dnet/addr.h
@@ -20,4 +20,3 @@ lib/libdnet.la
 man/man3/dnet.3
 man/man8/dnet.8
 sbin/dnet
-@dirrm include/dnet

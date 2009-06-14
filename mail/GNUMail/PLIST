@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/04/19 01:00:48 rh Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:26 joerg Exp $
 bin/GNUMail
 include/GNUMail
 lib/GNUstep/Applications/GNUMail.app/GNUMail
@@ -217,70 +217,4 @@ share/GNUstep/Library/GNUMail/Viewing.prefs/Resources/Info-gnustep.plist
 share/GNUstep/Library/GNUMail/Viewing.prefs/Resources/viewing.tiff
 share/GNUstep/Library/GNUMail/Viewing.prefs/Viewing
 share/GNUstep/Library/GNUMail/Viewing.prefs/stamp.make
-@dirrm share/GNUstep/Library/GNUMail/Viewing.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Viewing.prefs
-@dirrm share/GNUstep/Library/GNUMail/Sending.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Sending.prefs
-@dirrm share/GNUstep/Library/GNUMail/Receiving.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Receiving.prefs
-@dirrm share/GNUstep/Library/GNUMail/MIME.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/MIME.prefs
-@dirrm share/GNUstep/Library/GNUMail/Import.bundle/Resources
-@dirrm share/GNUstep/Library/GNUMail/Import.bundle
-@dirrm share/GNUstep/Library/GNUMail/Fonts.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Fonts.prefs
-@dirrm share/GNUstep/Library/GNUMail/Filtering.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Filtering.prefs
-@dirrm share/GNUstep/Library/GNUMail/Compose.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Compose.prefs
-@dirrm share/GNUstep/Library/GNUMail/Colors.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Colors.prefs
-@dirrm share/GNUstep/Library/GNUMail/Advanced.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Advanced.prefs
-@dirrm share/GNUstep/Library/GNUMail/Account.prefs/Resources
-@dirrm share/GNUstep/Library/GNUMail/Account.prefs
-@dirrm share/GNUstep/Library/GNUMail
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Library
-@comment in devel/gnustep-make: @dirrm share/GNUstep
-@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Resources
 @exec ${MKDIR} %D/lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
-@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1/Headers
-@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions/1
-@dirrm lib/GNUstep/Frameworks/GNUMail.framework/Versions
-@dirrm lib/GNUstep/Frameworks/GNUMail.framework
-@comment in x11/gnustep-base: @dirrm lib/GNUstep/Frameworks
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Turkish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Swedish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Spanish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Russian.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Turkish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Swedish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Spanish.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Russian.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/French.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Czech.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources/Arabic.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Resources
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/German.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/French.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PreferencesWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/PasswordPanel.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/NewMailboxPanel.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MessageViewWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MainMenu.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailboxInspectorPanel.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/MailWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/FindWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/EditWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/ConsoleWindow.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AddressBookPanel.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj/AboutPanel.nib
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/English.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Czech.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources/Arabic.lproj
-@dirrm lib/GNUstep/Applications/GNUMail.app/Resources
-@dirrm lib/GNUstep/Applications/GNUMail.app
-@comment in x11/gnustep-gui: @dirrm lib/GNUstep/Applications
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/13 11:29:53 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:26 joerg Exp $
 lib/lua/5.1/libosbf.so.${PKGVERSION}
 lib/lua/5.1/osbf.so
 osbf-lua/cache_report.lua
@@ -15,4 +15,3 @@ osbf-lua/spamfilter_commands.lua
 osbf-lua/spamfilter_config.lua
 osbf-lua/toer.lua
 osbf-lua/train.sample
-@dirrm osbf-lua

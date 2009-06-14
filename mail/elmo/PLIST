@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:23 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:32 joerg Exp $
 bin/elmo
 bin/elmoconf.pl
 man/man1/elmo.1
@@ -10,5 +10,3 @@ share/elmo/themes/outlook
 share/elmo/tutorial
 share/locale/de/LC_MESSAGES/elmo.mo
 share/locale/pl/LC_MESSAGES/elmo.mo
-@dirrm share/elmo/themes
-@dirrm share/elmo

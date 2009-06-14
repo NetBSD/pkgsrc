@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/02/27 22:38:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:08:07 joerg Exp $
 include/dvbpsi/cat.h
 include/dvbpsi/demux.h
 include/dvbpsi/descriptor.h
@@ -34,4 +34,3 @@ include/dvbpsi/pmt.h
 include/dvbpsi/psi.h
 include/dvbpsi/sdt.h
 lib/libdvbpsi.la
-@dirrm include/dvbpsi

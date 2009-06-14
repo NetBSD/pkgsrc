@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/04 17:48:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:40 joerg Exp $
 ${PYSITELIB}/medusa/__init__.py
 ${PYSITELIB}/medusa/__init__.pyc
 ${PYSITELIB}/medusa/__init__.pyo
@@ -80,4 +80,3 @@ ${PYSITELIB}/medusa/virtual_handler.pyo
 ${PYSITELIB}/medusa/xmlrpc_handler.py
 ${PYSITELIB}/medusa/xmlrpc_handler.pyc
 ${PYSITELIB}/medusa/xmlrpc_handler.pyo
-@dirrm ${PYSITELIB}/medusa

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/11/02 20:51:40 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:34 joerg Exp $
 bin/freepopsd
 man/man1/freepopsd.1
 share/doc/freepops/MANUAL.txt
@@ -55,10 +55,3 @@ share/freepops/lua/wel.lua
 share/freepops/lua/xml2table.lua
 share/freepops/lua/xml2tex.lua
 share/freepops/lua/yahoo.lua
-@dirrm share/freepops/lua/soap
-@dirrm share/freepops/lua/lxp
-@dirrm share/freepops/lua/browser
-@dirrm share/freepops/lua
-@dirrm share/freepops
-@dirrm share/examples/freepops
-@dirrm share/doc/freepops

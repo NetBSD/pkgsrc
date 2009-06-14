@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:24:32 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:38 joerg Exp $
 bin/pforth
 lib/pforth/pforth.dic
 share/doc/pforth/pf_ref.htm
@@ -48,7 +48,3 @@ share/pforth/utils/make_all256.fth
 share/pforth/utils/savedicd.fth
 share/pforth/utils/trace.fth
 share/pforth/wordslik.fth
-@dirrm share/pforth/utils
-@dirrm share/pforth
-@dirrm share/doc/pforth
-@dirrm lib/pforth

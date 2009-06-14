@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:31 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:46 joerg Exp $
 bin/tsclient
 lib/bonobo/servers/GNOME_TSClientApplet.server
 libexec/tsclient-applet
@@ -43,4 +43,3 @@ share/pixmaps/tsclient/program.png
 share/pixmaps/tsclient/size.png
 share/pixmaps/tsclient/sound.png
 share/pixmaps/tsclient/tsclient.png
-@dirrm share/pixmaps/tsclient

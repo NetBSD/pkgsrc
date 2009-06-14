@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/12 14:14:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:03:43 joerg Exp $
 bin/xpce
 bin/xpce-client
 lib/swi-prolog-${PKGVERSION}/Makefile
@@ -1238,50 +1238,3 @@ lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/src/itf/main.cxx
 lib/swi-prolog-${PKGVERSION}/xpce.rc
 man/man1/xpce-client.1
 man/man1/xpce.1
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/src/itf
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/xref
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/trace/icons/16x16
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/trace/icons
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/trace
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/swi
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/plot
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/math
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/man
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/http
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/english
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/emacs
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/draw
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/doc/icons
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/doc
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/dialog/bitmaps
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/dialog
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib/compatibility
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/lib
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/demo
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/contrib/rubik
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/contrib
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/prolog/boot
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/pl
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/reference/class
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/reference
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man/faq
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/man
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/include/pce
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/patterns
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/32x32
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps/16x16
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bitmaps
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/appl-help
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17/CXX
-@dirrm lib/swi-prolog-${PKGVERSION}/xpce-6.6.17
-@dirrm lib/swi-prolog-${PKGVERSION}/library/semweb
-@dirrm lib/swi-prolog-${PKGVERSION}/library/http
-@dirrm lib/swi-prolog-${PKGVERSION}/library/chr
-@dirrm lib/swi-prolog-${PKGVERSION}/library/DTD
-@dirrm lib/swi-prolog-${PKGVERSION}/library
-@dirrm lib/swi-prolog-${PKGVERSION}/lib/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
-@dirrm lib/swi-prolog-${PKGVERSION}/include
-@dirrm lib/swi-prolog-${PKGVERSION}/bin/${MACHINE_ARCH}-${LOWER_OPSYS}${APPEND_ELF}
-@dirrm lib/swi-prolog-${PKGVERSION}

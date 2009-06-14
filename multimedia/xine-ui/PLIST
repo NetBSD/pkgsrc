@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/07/16 11:20:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:08:12 joerg Exp $
 bin/fbxine
 bin/xine
 bin/xine-bugreport
@@ -132,16 +132,3 @@ share/xine/skins/xinetic/SmallArrowDown.png
 share/xine/skins/xinetic/SmallArrowUp.png
 share/xine/skins/xinetic/skinconfig
 share/xine/visuals/default.avi
-@dirrm share/xine/visuals
-@dirrm share/xine/skins/xinetic
-@dirrm share/xine/skins
-@dirrm share/xine/oxine
-@dirrm share/xine/desktop
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/xitk
-@dirrm share/doc/xine-ui

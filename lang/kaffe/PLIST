@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/07/10 21:16:43 minskim Exp $
+@comment $NetBSD: PLIST,v 1.16 2009/06/14 18:03:35 joerg Exp $
 bin/kaffe-appletviewer
 bin/kaffe-jar
 bin/kaffe-java
@@ -72,17 +72,3 @@ share/locale/de/LC_MESSAGES/kaffe.mo
 share/locale/fr/LC_MESSAGES/kaffe.mo
 share/locale/zh_CN/LC_MESSAGES/kaffe.mo
 share/locale/zh_TW/LC_MESSAGES/kaffe.mo
-@dirrm java/kaffe/share/classpath
-@dirrm java/kaffe/share
-@dirrm java/kaffe/lib/security
-@dirrm java/kaffe/lib
-@dirrm java/kaffe/jre/lib/security
-@dirrm java/kaffe/jre/lib/${MACHINE_ARCH}
-@dirrm java/kaffe/jre/lib
-@dirrm java/kaffe/jre/bin
-@dirrm java/kaffe/jre
-@dirrm java/kaffe/info
-@dirrm java/kaffe/include/kaffe
-@dirrm java/kaffe/include
-@dirrm java/kaffe/bin
-@dirrm java/kaffe

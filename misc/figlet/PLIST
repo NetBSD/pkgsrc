@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/25 14:36:09 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:21 joerg Exp $
 bin/chkfont
 bin/figlet
 bin/figlist
@@ -61,4 +61,3 @@ share/figlet/upper.flc
 share/figlet/ushebrew.flc
 share/figlet/uskata.flc
 share/figlet/utf8.flc
-@dirrm share/figlet

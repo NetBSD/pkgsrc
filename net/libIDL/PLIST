@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:32 joerg Exp $
 bin/libIDL-config-2
 include/libIDL-2.0/libIDL/IDL.h
 info/libIDL2.info
 lib/libIDL-2.la
 lib/pkgconfig/libIDL-2.0.pc
-@dirrm include/libIDL-2.0/libIDL
-@dirrm include/libIDL-2.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/24 19:28:26 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:35 joerg Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -365,18 +365,7 @@ share/nagios/stylesheets/statusmap.css
 share/nagios/stylesheets/summary.css
 share/nagios/stylesheets/tac.css
 share/nagios/stylesheets/trends.css
-@dirrm share/nagios/stylesheets
 @exec ${MKDIR} %D/share/nagios/ssi 2>/dev/null || ${TRUE}
-@dirrm share/nagios/ssi
-@dirrm share/nagios/includes
-@dirrm share/nagios/media
-@dirrm share/nagios/images/logos
-@dirrm share/nagios/images
-@dirrm share/nagios/docs/images
-@dirrm share/nagios/docs
-@dirrm share/nagios/contexthelp
-@dirrm share/nagios
-@dirrm libexec/nagios/cgi-bin
 @unexec ${RMDIR} %D/share/examples/nagios/objects 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/examples/nagios 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/libexec/nagios 2>/dev/null || ${TRUE}

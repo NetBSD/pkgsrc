@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/13 18:02:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:30 joerg Exp $
 bin/cone
 bin/leaf
 bin/mailtool
@@ -161,5 +161,3 @@ share/cone/smapusingfolders.html
 share/cone/store.html
 share/cone/synchronous.html
 share/examples/cone/cone.dist
-@dirrm share/examples/cone
-@dirrm share/cone

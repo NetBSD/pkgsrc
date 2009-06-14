@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/02 12:40:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:05:45 joerg Exp $
 bin/mprime
 share/doc/mprime/license.txt
 share/doc/mprime/readme.txt
 share/doc/mprime/stress.txt
 share/doc/mprime/undoc.txt
 share/doc/mprime/whatsnew.txt
-@dirrm share/doc/mprime

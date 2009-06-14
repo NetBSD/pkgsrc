@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/10/26 04:22:38 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:03:43 joerg Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
@@ -36,6 +36,3 @@ man/mann/itkvars.n
 man/mann/local.n
 man/mann/scope.n
 man/mann/usual.n
-@dirrm lib/tcl/itk3.2
-@dirrm lib/tcl/itcl3.2
-@comment in tcl: @dirrm lib/tcl

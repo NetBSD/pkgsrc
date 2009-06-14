@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/05/12 08:16:03 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:07:27 joerg Exp $
 bin/m17n-db
 share/locale/ja/LC_MESSAGES/m17n-db.mo
 share/locale/vi/LC_MESSAGES/m17n-db.mo
@@ -428,5 +428,3 @@ share/m17n/zh.lnm
 share/m17n/zh_Hans.lnm
 share/m17n/zh_Hant.lnm
 share/pkgconfig/m17n-db.pc
-@dirrm share/m17n/icons
-@dirrm share/m17n

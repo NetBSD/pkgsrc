@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/27 06:11:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:09:33 joerg Exp $
 include/upnp/FreeList.h
 include/upnp/LinkedList.h
 include/upnp/ThreadPool.h
@@ -273,9 +273,3 @@ share/doc/${PKGBASE}-${PKGVERSION}/html/ixml/ixmlLoadDocument.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/ixml/ixmlLoadDocumentEx.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/ixml/ixmlCloneDOMString.html
 share/doc/${PKGBASE}-${PKGVERSION}/html/ixml/ixmlFreeDOMString.html
-@dirrm share/doc/${PKGBASE}-${PKGVERSION}/html/ixml
-@dirrm share/doc/${PKGBASE}-${PKGVERSION}/html/upnp
-@dirrm share/doc/${PKGBASE}-${PKGVERSION}/html
-@dirrm share/doc/${PKGBASE}-${PKGVERSION}/examples
-@dirrm share/doc/${PKGBASE}-${PKGVERSION}
-@dirrm include/upnp

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/05 06:27:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:34 joerg Exp $
 bin/jgawk
 bin/jigawk
 info/gawk.info
@@ -20,6 +20,3 @@ share/awk/passwd.awk
 share/awk/round.awk
 share/doc/ja-gawk/OREADME.MB
 share/doc/ja-gawk/README.MB
-@dirrm share/doc/ja-gawk
-@dirrm share/awk
-@dirrm libexec/awk

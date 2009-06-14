@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/05 11:05:24 abs Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:32 joerg Exp $
 bin/ktcachecheck
 bin/ktorrent
 bin/ktshell
@@ -421,44 +421,3 @@ share/locale/tr/LC_MESSAGES/ktorrent.mo
 share/locale/uk/LC_MESSAGES/ktorrent.mo
 share/locale/zh_CN/LC_MESSAGES/ktorrent.mo
 share/locale/zh_TW/LC_MESSAGES/ktorrent.mo
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/ktorrent/www/mobile
-@dirrm share/kde/apps/ktorrent/www/default
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons/64x64
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons/48x48
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons/32x32
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons/22x22
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons/16x16
-@dirrm share/kde/apps/ktorrent/www/coldmilk/icons
-@dirrm share/kde/apps/ktorrent/www/coldmilk
-@dirrm share/kde/apps/ktorrent/icons/hicolor/64x64/filesystems
-@dirrm share/kde/apps/ktorrent/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/ktorrent/icons/hicolor/64x64
-@dirrm share/kde/apps/ktorrent/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/ktorrent/icons/hicolor/48x48
-@dirrm share/kde/apps/ktorrent/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/ktorrent/icons/hicolor/22x22
-@dirrm share/kde/apps/ktorrent/icons/hicolor
-@dirrm share/kde/apps/ktorrent/icons
-@dirrm share/kde/apps/ktorrent/geoip
-@dirrm share/kde/apps/ktorrent/www
-@dirrm share/kde/apps/ktorrent
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

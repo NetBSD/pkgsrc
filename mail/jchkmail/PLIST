@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/11 11:12:21 manu Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:35 joerg Exp $
 bin/j-scanfile
 bin/j-printstats
 sbin/j-chkmail
@@ -14,4 +14,3 @@ share/examples/jchkmail/j-host-access
 share/examples/jchkmail/j-user-access
 share/examples/jchkmail/j-regex
 share/examples/rc.d/jchkmail
-@dirrm share/examples/jchkmail

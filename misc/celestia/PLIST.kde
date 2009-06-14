@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.kde,v 1.1 2006/02/17 23:46:39 adam Exp $
+@comment $NetBSD: PLIST.kde,v 1.2 2009/06/14 18:07:19 joerg Exp $
 share/celestia/bookmarks.xml
 share/celestia/celestiaui.rc
 share/celestia/favicons/celestia_20020830192652097.png
@@ -52,5 +52,3 @@ share/kde/icons/hicolor/32x32/apps/celestia.png
 share/kde/icons/hicolor/48x48/apps/celestia.png
 share/kde/mimelnk/application/x-celestia-script.desktop
 share/kde/services/celestia.protocol
-@dirrm share/doc/kde/HTML/en/celestia
-@dirrm share/celestia/favicons

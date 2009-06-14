@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/25 14:05:31 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:27 joerg Exp $
 bin/aliascheck
 bin/dbutil
 bin/deliver
@@ -37,4 +37,3 @@ share/avenger/smtp-filter.iptables
 share/avenger/smtp-filter.pf
 share/avenger/unknown
 share/pf.os
-@dirrm share/avenger

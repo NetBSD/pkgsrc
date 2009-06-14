@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/29 06:36:32 snj Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:19 joerg Exp $
 bin/cowsay
 bin/cowthink
 man/man1/cowsay.1
@@ -49,4 +49,3 @@ share/cows/udder.cow
 share/cows/vader-koala.cow
 share/cows/vader.cow
 share/cows/www.cow
-@dirrm share/cows

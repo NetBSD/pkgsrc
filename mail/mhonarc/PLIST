@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2005/08/20 19:31:00 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:04:37 joerg Exp $
 bin/mha-dbedit
 bin/mha-dbrecover
 bin/mha-decode
@@ -472,12 +472,3 @@ share/doc/mhonarc/resources/weekdaysabr.html
 share/doc/mhonarc/ssbg75.jpg
 share/doc/mhonarc/stampwb2.png
 share/doc/mhonarc/up.png
-@dirrm share/doc/mhonarc/resources
-@dirrm share/doc/mhonarc/rcfileexs
-@dirrm share/doc/mhonarc/faq
-@dirrm share/doc/mhonarc
-@dirrm lib/mhonarc/MHonArc/UTF8
-@dirrm lib/mhonarc/MHonArc/CharEnt
-@dirrm lib/mhonarc/MHonArc/Char
-@dirrm lib/mhonarc/MHonArc
-@dirrm lib/mhonarc

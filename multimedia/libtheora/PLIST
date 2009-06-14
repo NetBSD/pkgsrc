@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/11/05 14:23:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 18:08:08 joerg Exp $
 include/theora/codec.h
 include/theora/theora.h
 include/theora/theoradec.h
@@ -9,4 +9,3 @@ lib/libtheoraenc.la
 lib/pkgconfig/theora.pc
 lib/pkgconfig/theoradec.pc
 lib/pkgconfig/theoraenc.pc
-@dirrm include/theora

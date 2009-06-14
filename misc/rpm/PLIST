@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:07:29 joerg Exp $
 bin/gendiff
 bin/rpm
 bin/rpm2cpio
@@ -25,4 +25,3 @@ share/locale/sr/LC_MESSAGES/rpm.mo
 share/locale/sv/LC_MESSAGES/rpm.mo
 share/locale/tr/LC_MESSAGES/rpm.mo
 @unexec ${RMDIR} -p %D/lib/rpm 2>/dev/null || ${TRUE}
-@dirrm include/rpm

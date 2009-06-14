@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/17 14:26:47 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:20 joerg Exp $
 bin/dtach
 man/man1/dtach.1
 share/doc/dtach/COPYING
 share/doc/dtach/README
 share/doc/dtach/dtach.spec
-@dirrm share/doc/dtach

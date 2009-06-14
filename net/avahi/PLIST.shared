@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.shared,v 1.1.1.1 2008/12/20 17:36:14 wiz Exp $
+@comment $NetBSD: PLIST.shared,v 1.2 2009/06/14 18:09:21 joerg Exp $
 @unexec ${RMDIR} %D/share/examples/avahi 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/avahi/introspection 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/avahi/interfaces 2>/dev/null || ${TRUE}
@@ -6,4 +6,3 @@
 @unexec ${RMDIR} %D/lib/avahi 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/avahi/services 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/etc/avahi 2>/dev/null || ${TRUE}
-@comment in xdg-dirs: @dirrm share/applications

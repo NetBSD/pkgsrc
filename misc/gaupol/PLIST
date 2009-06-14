@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 09:45:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:07:21 joerg Exp $
 bin/gaupol
 ${PYSITELIB}/gaupol/__init__.py
 ${PYSITELIB}/gaupol/__init__.pyc
@@ -521,25 +521,3 @@ share/locale/ca/LC_MESSAGES/gaupol.mo
 share/locale/es/LC_MESSAGES/gaupol.mo
 share/locale/pl/LC_MESSAGES/gaupol.mo
 share/locale/sv/LC_MESSAGES/gaupol.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gaupol/patterns
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm ${PYSITELIB}/gaupol/tags
-@dirrm ${PYSITELIB}/gaupol/gtk/renderers
-@dirrm ${PYSITELIB}/gaupol/gtk/dialogs
-@dirrm ${PYSITELIB}/gaupol/gtk/conf
-@dirrm ${PYSITELIB}/gaupol/gtk/agents
-@dirrm ${PYSITELIB}/gaupol/gtk/actions
-@dirrm ${PYSITELIB}/gaupol/gtk
-@dirrm ${PYSITELIB}/gaupol/files
-@dirrm ${PYSITELIB}/gaupol/agents
-@dirrm ${PYSITELIB}/gaupol
-@dirrm share/gaupol/ui
-@dirrm share/gaupol/patterns
-@dirrm share/gaupol/headers
-@dirrm share/gaupol/glade/dialogs
-@dirrm share/gaupol/glade/assistants/text
-@dirrm share/gaupol/glade/assistants
-@dirrm share/gaupol/glade
-@dirrm share/gaupol/codes
-@dirrm share/gaupol

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/10 16:35:40 roy Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:25 joerg Exp $
 libexec/dhcpcd-hooks/01-test
 libexec/dhcpcd-hooks/10-mtu
 libexec/dhcpcd-hooks/20-resolv.conf
@@ -12,4 +12,3 @@ man/man8/dhcpcd.8
 sbin/dhcpcd
 share/examples/dhcpcd.conf
 share/examples/rc.d/dhcpcd
-@dirrm libexec/dhcpcd-hooks

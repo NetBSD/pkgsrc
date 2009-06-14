@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/05 23:43:08 roy Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:25 joerg Exp $
 libexec/dhcpcd-dbus
 share/dbus-1/system-services/name.marples.roy.dhcpcd.service
 share/examples/dhcpcd-dbus/dhcpcd-dbus.conf
-@dirrm share/examples/dhcpcd-dbus

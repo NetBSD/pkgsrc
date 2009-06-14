@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/08/26 18:34:33 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:09:26 joerg Exp $
 bin/etherape
 man/man1/etherape.1
 share/applications/etherape.desktop
@@ -26,11 +26,3 @@ share/locale/nl/LC_MESSAGES/etherape.mo
 share/locale/tr/LC_MESSAGES/etherape.mo
 share/omf/etherape/etherape-C.omf
 share/pixmaps/etherape.png
-@dirrm share/omf/etherape
-@dirrm share/examples/etherape
-@dirrm share/etherape/glade
-@dirrm share/etherape/doc/etherape/C/figures
-@dirrm share/etherape/doc/etherape/C
-@dirrm share/etherape/doc/etherape
-@dirrm share/etherape/doc
-@dirrm share/etherape

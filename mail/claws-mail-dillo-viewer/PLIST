@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:46 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:28 joerg Exp $
 lib/claws-mail/plugins/dillo_viewer.la
-@dirrm lib/claws-mail/plugins

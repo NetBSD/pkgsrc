@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.esmtp,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
+@comment $NetBSD: PLIST.esmtp,v 1.2 2009/06/14 18:04:30 joerg Exp $
 bin/addcr
 libexec/courier/modules/esmtp/addcr
 libexec/courier/modules/esmtp/courieresmtp
@@ -28,4 +28,3 @@ share/examples/courier/module.esmtp
 share/examples/rc.d/courieresmtp
 share/examples/rc.d/courieresmtpmsa
 share/examples/rc.d/courieresmtps
-@dirrm libexec/courier/modules/esmtp

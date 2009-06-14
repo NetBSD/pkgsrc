@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/06/06 13:08:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:21 joerg Exp $
 ${PLIST.alc}bin/alc
 ${PLIST.alcc}bin/alcc
 ${PLIST.amule}bin/amule
@@ -360,16 +360,5 @@ ${PLIST.alc}share/pixmaps/alc.xpm
 ${PLIST.amule}share/pixmaps/amule.xpm
 ${PLIST.gui}share/pixmaps/amulegui.xpm
 ${PLIST.wxcas}share/pixmaps/wxcas.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/doc/aMule-${PKGVERSION}
-${PLIST.cas}@dirrm share/cas
-@comment in xdg-dirs: @dirrm share/applications
-${PLIST.web}@dirrm share/amule/webserver/php-default
-${PLIST.web}@dirrm share/amule/webserver/litoral
-${PLIST.web}@dirrm share/amule/webserver/default
-${PLIST.web}@dirrm share/amule/webserver/chicane
-${PLIST.web}@dirrm share/amule/webserver
-${PLIST.skins}@dirrm share/amule/skins
-${PLIST.share}@dirrm share/amule
 @unexec ${RMDIR} %D/lib/xchat/plugins 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/lib/xchat 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/03/08 23:41:33 bjs Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:09:21 joerg Exp $
 bin/aria2c
 man/man1/aria2c.1
 share/doc/aria2/README
@@ -32,4 +32,3 @@ share/locale/uk/LC_MESSAGES/aria2.mo
 share/locale/vi/LC_MESSAGES/aria2.mo
 share/locale/zh_CN/LC_MESSAGES/aria2.mo
 share/locale/zh_TW/LC_MESSAGES/aria2.mo
-@dirrm share/doc/aria2

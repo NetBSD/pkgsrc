@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/04 15:16:11 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:09:36 joerg Exp $
 bin/nmap
 man/man1/nmap.1
 share/nmap/nmap-mac-prefixes
@@ -110,6 +110,3 @@ share/nmap/scripts/skype_v2-version.nse
 share/nmap/scripts/strangeSMTPport.nse
 share/nmap/scripts/xamppDefaultPass.nse
 share/nmap/scripts/zoneTrans.nse
-@dirrm share/nmap/scripts
-@dirrm share/nmap/nselib
-@dirrm share/nmap

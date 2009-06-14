@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/26 03:08:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:07:23 joerg Exp $
 bin/kcron
 bin/kpackage
 bin/kuser
@@ -156,35 +156,3 @@ share/kde/apps/kuser/pics/user.png
 share/kde/config.kcfg/kuser.kcfg
 share/kde/services/kfile_deb.desktop
 share/kde/services/kfile_rpm.desktop
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/kuser/pics
-@dirrm share/kde/apps/kuser/icons/crystalsvg/22x22/actions
-@dirrm share/kde/apps/kuser/icons/crystalsvg/22x22
-@dirrm share/kde/apps/kuser/icons/crystalsvg
-@dirrm share/kde/apps/kuser/icons
-@dirrm share/kde/apps/kuser
-@dirrm share/kde/apps/kpackage/pics
-@dirrm share/kde/apps/kpackage
-@dirrm share/kde/apps/knetworkconf/pixmaps
-@dirrm share/kde/apps/knetworkconf/backends
-@dirrm share/kde/apps/knetworkconf
-@dirrm share/kde/apps/kcron
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@dirrm share/doc/kde/HTML/en/lilo-config
-@dirrm share/doc/kde/HTML/en/kuser
-@dirrm share/doc/kde/HTML/en/ksysv
-@dirrm share/doc/kde/HTML/en/kpackage
-@dirrm share/doc/kde/HTML/en/knetworkconf
-@dirrm share/doc/kde/HTML/en/kdat
-@dirrm share/doc/kde/HTML/en/kcron
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/05 12:43:02 cjep Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:05:50 joerg Exp $
 bin/xgap
 lib/gap4.3/pkg/xgap/bin/${GAP_PLATFORM}/xgap
 lib/gap4.3/pkg/xgap/doc/answers.tex
@@ -85,10 +85,3 @@ lib/gap4.3/pkg/xgap/lib/meataxe.gd
 lib/gap4.3/pkg/xgap/lib/menu.gd
 lib/gap4.3/pkg/xgap/lib/poset.gd
 lib/gap4.3/pkg/xgap/lib/sheet.gd
-@dirrm lib/gap4.3/pkg/xgap/lib
-@dirrm lib/gap4.3/pkg/xgap/htm
-@dirrm lib/gap4.3/pkg/xgap/examples
-@dirrm lib/gap4.3/pkg/xgap/doc
-@dirrm lib/gap4.3/pkg/xgap/bin/${GAP_PLATFORM}
-@dirrm lib/gap4.3/pkg/xgap/bin
-@dirrm lib/gap4.3/pkg/xgap

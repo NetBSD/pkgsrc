@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/25 15:54:59 is Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:03:41 joerg Exp $
 bin/ccr2sr
 bin/csp2sr
 bin/cstest
@@ -57,5 +57,3 @@ share/doc/sr/release.ps
 share/doc/sr/runtime.ps
 share/doc/sr/sranimator.ps
 share/doc/sr/srwin.ps
-@dirrm share/doc/sr
-@dirrm lib/sr

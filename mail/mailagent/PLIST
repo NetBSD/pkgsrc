@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:00:20 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:04:36 joerg Exp $
 bin/mailpatch
 bin/mailhelp
 bin/maillist
@@ -73,18 +73,6 @@ share/examples/mailagent/misc/unkit/rules
 share/examples/mailagent/misc/unkit/unkit.pl
 @exec /bin/ln -sf %D/lib/mailagent/examples %D/share/examples/mailagent/agent
 @unexec /bin/rm -f %D/share/examples/mailagent/agent
-@dirrm share/examples/mailagent/misc/unkit
-@dirrm share/examples/mailagent/misc/shell
-@dirrm share/examples/mailagent/misc/pbounce
-@dirrm share/examples/mailagent/misc/news
-@dirrm share/examples/mailagent/misc/mime
-@dirrm share/examples/mailagent/misc/getcost
-@dirrm share/examples/mailagent/misc/fakesend
-@dirrm share/examples/mailagent/misc
-@dirrm share/examples/mailagent
-@dirrm lib/mailagent/examples
-@dirrm lib/mailagent/help
-@dirrm lib/mailagent
 man/man1/edusers.1
 man/man1/mailagent.1
 man/man1/maildist.1

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/21 06:37:52 tonio Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:03:29 joerg Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5r
@@ -139,5 +139,3 @@ man/man1/camlp5sch.1
 man/man1/mkcamlp5.1
 man/man1/mkcamlp5.opt.1
 man/man1/ocpp5.1
-@dirrm lib/ocaml/camlp5
-@comment in ocaml: @dirrm lib/ocaml

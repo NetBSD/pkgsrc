@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/12 19:09:36 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:04:40 joerg Exp $
 man/man1/pulsar_crypt.1
 man/man5/pulsar.conf.5
 man/man8/pulsar.8
@@ -25,4 +25,3 @@ share/doc/${PKGNAME}/rfc2195.txt
 share/doc/${PKGNAME}/rfc2384.txt
 share/doc/${PKGNAME}/rfc2595.txt
 share/doc/${PKGNAME}/rfc822.txt
-@dirrm share/doc/${PKGNAME}

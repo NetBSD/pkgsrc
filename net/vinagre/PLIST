@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/05/27 21:37:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:47 joerg Exp $
 bin/vinagre
 lib/bonobo/servers/GNOME_VinagreApplet.server
 libexec/vinagre-applet
@@ -146,70 +146,3 @@ share/omf/vinagre/vinagre-zh_CN.omf
 share/vinagre/GNOME_VinagreApplet.xml
 share/vinagre/vinagre-ui.xml
 share/vinagre/vinagre.glade
-@dirrm share/vinagre
-@dirrm share/omf/vinagre
-@comment in rarian: @dirrm share/omf
-@comment in shared-mime-info: @dirrm share/mime/packages
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/mimetypes
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/vinagre/zh_CN/figures
-@dirrm share/gnome/help/vinagre/zh_CN
-@dirrm share/gnome/help/vinagre/th/figures
-@dirrm share/gnome/help/vinagre/th
-@dirrm share/gnome/help/vinagre/sv/figures
-@dirrm share/gnome/help/vinagre/sv
-@dirrm share/gnome/help/vinagre/sq/figures
-@dirrm share/gnome/help/vinagre/sq
-@dirrm share/gnome/help/vinagre/pt_BR/figures
-@dirrm share/gnome/help/vinagre/pt_BR
-@dirrm share/gnome/help/vinagre/pt/figures
-@dirrm share/gnome/help/vinagre/pt
-@dirrm share/gnome/help/vinagre/oc/figures
-@dirrm share/gnome/help/vinagre/oc
-@dirrm share/gnome/help/vinagre/it/figures
-@dirrm share/gnome/help/vinagre/it
-@dirrm share/gnome/help/vinagre/fr/figures
-@dirrm share/gnome/help/vinagre/fr
-@dirrm share/gnome/help/vinagre/es/figures
-@dirrm share/gnome/help/vinagre/es
-@dirrm share/gnome/help/vinagre/en_GB/figures
-@dirrm share/gnome/help/vinagre/en_GB
-@dirrm share/gnome/help/vinagre/el/figures
-@dirrm share/gnome/help/vinagre/el
-@dirrm share/gnome/help/vinagre/de/figures
-@dirrm share/gnome/help/vinagre/de
-@dirrm share/gnome/help/vinagre/cs/figures
-@dirrm share/gnome/help/vinagre/cs
-@dirrm share/gnome/help/vinagre/ca/figures
-@dirrm share/gnome/help/vinagre/ca
-@dirrm share/gnome/help/vinagre/C/figures
-@dirrm share/gnome/help/vinagre/C
-@dirrm share/gnome/help/vinagre
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/vinagre
-@comment in xdg-dirs: @dirrm share/applications
-@comment in libbonobo: @dirrm lib/bonobo/servers

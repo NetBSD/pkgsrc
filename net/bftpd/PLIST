@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/02 13:13:15 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:22 joerg Exp $
 man/man8/bftpd.8
 sbin/bftpd
 share/examples/bftpd/bftpd.conf
-@dirrm share/examples/bftpd

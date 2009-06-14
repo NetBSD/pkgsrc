@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/02 17:44:16 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:09:46 joerg Exp $
 bin/https@
 bin/sslcat
 bin/sslclient
@@ -7,4 +7,3 @@ bin/sslserver
 share/doc/ucspi-ssl/CHANGES
 share/doc/ucspi-ssl/TODO
 share/doc/ucspi-ssl/UCSPI-SSL
-@dirrm share/doc/ucspi-ssl

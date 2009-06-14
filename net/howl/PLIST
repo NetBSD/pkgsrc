@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:02 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:09:30 joerg Exp $
 bin/mDNSBrowse
 bin/mDNSPublish
 bin/mDNSQuery
@@ -43,10 +43,3 @@ share/howl/help/txt_rec_iter-summary.html
 share/howl/help/txt_rec_iter.html
 share/howl/help/txt_rec_str_iter-summary.html
 share/howl/help/txt_rec_str_iter.html
-@dirrm share/howl/help
-@dirrm share/howl
-@dirrm include/howl/salt
-@dirrm include/howl/rendezvous
-@dirrm include/howl/discovery
-@dirrm include/howl/corby
-@dirrm include/howl

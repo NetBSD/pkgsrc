@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/20 14:24:55 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:20 joerg Exp $
 ${EMACS_LISPPREFIX}/elscreen/elscreen-dired.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-dnd.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-gf.el
@@ -9,5 +9,3 @@ ${EMACS_LISPPREFIX}/elscreen/elscreen-w3m.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen-wl.el
 ${EMACS_LISPPREFIX}/elscreen/elscreen.el
 share/doc/elscreen/README
-@dirrm share/doc/elscreen
-@dirrm ${EMACS_LISPPREFIX}/elscreen

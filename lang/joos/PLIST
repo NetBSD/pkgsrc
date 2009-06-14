@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/10/04 16:39:41 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:03:35 joerg Exp $
 joos/A+/Makefile
 joos/A+/code.c
 joos/A+/code.h
@@ -382,22 +382,3 @@ joos/Progs/WIGapplets/TicTacToe.j
 joos/Progs/WIGapplets/TicTacToe.java
 joos/Progs/WIGapplets/images/cross.gif
 joos/Progs/WIGapplets/images/not.gif
-@dirrm joos/Progs/WIGapplets/images
-@dirrm joos/Progs/WIGapplets
-@dirrm joos/Progs/Threads
-@dirrm joos/Progs/Simple
-@dirrm joos/Progs/Network
-@dirrm joos/Progs/ImageDemos/images/
-@dirrm joos/Progs/ImageDemos/
-@dirrm joos/Progs/AwtDemos
-@dirrm joos/Progs/AppletGraphics
-@dirrm joos/Progs/
-@dirrm joos/Lib/joos/lib/
-@dirrm joos/Lib/joos/
-@dirrm joos/Lib/
-@dirrm joos/Extern/
-@dirrm joos/D-Java
-@dirrm joos/Bin
-@dirrm joos/A+
-@dirrm joos/A-
-@dirrm joos
