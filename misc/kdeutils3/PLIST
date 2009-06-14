@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2009/06/14 18:07:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.20 2009/06/14 20:52:12 joerg Exp $
 bin/ark
 bin/irkick
 bin/kcalc
@@ -469,6 +469,6 @@ share/kde/services/kregexpeditorgui.desktop
 share/kde/services/kwallet_config.desktop
 share/kde/services/kwalletmanager_show.desktop
 share/kde/servicetypes/kmilo/kmilopluginsvc.desktop
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeutils-apidocs/superkaramba/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeutils-apidocs/kcalc/knumber/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdeutils-apidocs/kcalc/html
+@pkgdir share/doc/kde/HTML/en/kdeutils-apidocs/superkaramba/html
+@pkgdir share/doc/kde/HTML/en/kdeutils-apidocs/kcalc/knumber/html
+@pkgdir share/doc/kde/HTML/en/kdeutils-apidocs/kcalc/html
