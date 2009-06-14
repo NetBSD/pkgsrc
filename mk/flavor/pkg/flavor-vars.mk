@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.12 2009/04/04 19:07:58 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.13 2009/06/14 15:12:56 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -36,7 +36,7 @@ PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 # Latest versions of tools required for correct pkgsrc operation.
-PKGTOOLS_REQD=		20070813
+PKGTOOLS_REQD=		20090528
 
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
