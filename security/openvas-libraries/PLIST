@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/04 01:08:52 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 21:21:16 joerg Exp $
 bin/libopenvas-config
 include/openvas/arglists.h
 include/openvas/bpf_share.h
@@ -26,4 +26,3 @@ include/openvas/www_funcs.h
 lib/libopenvas.la
 lib/libopenvas_hg.la
 man/man1/libopenvas-config.1
-@unexec ${RMDIR} %D/include/openvas 2>/dev/null || ${TRUE}
