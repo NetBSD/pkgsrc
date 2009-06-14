@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:37:50 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:28:44 joerg Exp $
 bin/mc-account
 include/libmcclient/_gen/cli-Account.h
 include/libmcclient/_gen/cli-Account_Manager.h
@@ -101,5 +101,4 @@ share/gtk-doc/html/libmissioncontrol/libmissioncontrol.devhelp2
 share/gtk-doc/html/libmissioncontrol/right.png
 share/gtk-doc/html/libmissioncontrol/style.css
 share/gtk-doc/html/libmissioncontrol/up.png
-@exec ${MKDIR} %D/lib/mission-control 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/mission-control 2>/dev/null || ${TRUE}
+@pkgdir lib/mission-control
