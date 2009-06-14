@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2327 2009/06/14 11:39:47 taca Exp $
+$NetBSD: CHANGES-2009,v 1.2328 2009/06/14 13:41:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3124,3 +3124,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated comms/conserver8 to 8.1.16nb2 [wiz 2009-06-14]
 	Updated www/analog to 6.0nb2 [wiz 2009-06-14]
 	Updated www/opengoo to 1.4.1nb1 [taca 2009-06-14]
+	Updated www/opengoo to 1.4.1nb2 [taca 2009-06-14]
