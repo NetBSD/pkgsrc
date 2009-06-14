@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:03:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 20:34:13 joerg Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -183,22 +183,18 @@ share/gforth/${PKGVERSION}/vt100key.fs
 share/gforth/${PKGVERSION}/wordinfo.fs
 share/gforth/${PKGVERSION}/wordsets.fs
 share/gforth/site-forth/siteinit.fs
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/sparc
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/shboom
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/sharc
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/power
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/misc
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/m68k
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/ia64
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/hppa
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/h8
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/generic
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/c165
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/avr
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/8086
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/6502
-@exec ${MKDIR} %D/share/gforth/${PKGVERSION}/arch/4stack
-@unexec ${RMDIR} %D/share/gforth/site-forth 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/gforth 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gforth/site-forth 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/gforth 2>/dev/null || ${TRUE}
+@pkgdir share/gforth/${PKGVERSION}/arch/sparc
+@pkgdir share/gforth/${PKGVERSION}/arch/shboom
+@pkgdir share/gforth/${PKGVERSION}/arch/sharc
+@pkgdir share/gforth/${PKGVERSION}/arch/power
+@pkgdir share/gforth/${PKGVERSION}/arch/misc
+@pkgdir share/gforth/${PKGVERSION}/arch/m68k
+@pkgdir share/gforth/${PKGVERSION}/arch/ia64
+@pkgdir share/gforth/${PKGVERSION}/arch/hppa
+@pkgdir share/gforth/${PKGVERSION}/arch/h8
+@pkgdir share/gforth/${PKGVERSION}/arch/generic
+@pkgdir share/gforth/${PKGVERSION}/arch/c165
+@pkgdir share/gforth/${PKGVERSION}/arch/avr
+@pkgdir share/gforth/${PKGVERSION}/arch/8086
+@pkgdir share/gforth/${PKGVERSION}/arch/6502
+@pkgdir share/gforth/${PKGVERSION}/arch/4stack
