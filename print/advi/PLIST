@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/19 13:13:05 tonio Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:53 joerg Exp $
 bin/advi
 man/man1/advi.1
 share/doc/advi/advi_remote.dvi
@@ -43,6 +43,3 @@ ${PKG_LOCALTEXMFPREFIX}/advi/scratch_write_splash.dvi
 ${PKG_LOCALTEXMFPREFIX}/advi/splash.dvi
 ${PKG_LOCALTEXMFPREFIX}/advi/superpose.sty
 ${PKG_LOCALTEXMFPREFIX}/advi/xwindows-colors.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/advi
-@dirrm share/doc/html/advi
-@dirrm share/doc/advi

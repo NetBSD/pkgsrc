@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/12/07 06:43:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:12:00 joerg Exp $
 ${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEabrv.bib
 ${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEexample.bib
 ${TEXMFDIST}/bibtex/bib/IEEEtran/IEEEfull.bib
@@ -28,7 +28,3 @@ ${TEXMFDIST}/doc/latex/IEEEtran/testflow_doc.pdf
 ${TEXMFDIST}/doc/latex/IEEEtran/tux.eps
 ${TEXMFDIST}/tex/latex/IEEEtran/IEEEtran.cls
 ${TEXMFDIST}/tex/latex/IEEEtran/IEEEtrantools.sty
-@dirrm ${TEXMFDIST}/tex/latex/IEEEtran
-@dirrm ${TEXMFDIST}/doc/latex/IEEEtran
-@dirrm ${TEXMFDIST}/bibtex/bst/IEEEtran
-@dirrm ${TEXMFDIST}/bibtex/bib/IEEEtran

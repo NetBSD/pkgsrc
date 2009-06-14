@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/03 19:52:33 hasso Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:11:57 joerg Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -335,27 +335,3 @@ share/omf/lilypond/${PKGVERSION}/lilypond.html.omf
 share/omf/lilypond/${PKGVERSION}/lilypond.pdf.omf
 share/omf/lilypond/${PKGVERSION}/music-glossary.html.omf
 share/omf/lilypond/${PKGVERSION}/music-glossary.pdf.omf
-@dirrm share/omf/lilypond/${PKGVERSION}
-@dirrm share/omf/lilypond
-@dirrm share/lilypond/${PKGVERSION}/vim/syntax
-@dirrm share/lilypond/${PKGVERSION}/vim/indent
-@dirrm share/lilypond/${PKGVERSION}/vim/ftplugin
-@dirrm share/lilypond/${PKGVERSION}/vim/ftdetect
-@dirrm share/lilypond/${PKGVERSION}/vim/compiler
-@dirrm share/lilypond/${PKGVERSION}/vim
-@dirrm share/lilypond/${PKGVERSION}/tex
-@dirrm share/lilypond/${PKGVERSION}/scm
-@dirrm share/lilypond/${PKGVERSION}/python
-@dirrm share/lilypond/${PKGVERSION}/ps
-@dirrm share/lilypond/${PKGVERSION}/ly
-@dirrm share/lilypond/${PKGVERSION}/fonts/type1
-@dirrm share/lilypond/${PKGVERSION}/fonts/svg
-@dirrm share/lilypond/${PKGVERSION}/fonts/source
-@dirrm share/lilypond/${PKGVERSION}/fonts/otf
-@dirrm share/lilypond/${PKGVERSION}/fonts
-@dirrm share/lilypond/${PKGVERSION}/dvips
-@dirrm share/lilypond/${PKGVERSION}
-@dirrm share/lilypond
-@dirrm lib/lilypond/${PKGVERSION}/python
-@dirrm lib/lilypond/${PKGVERSION}
-@dirrm lib/lilypond

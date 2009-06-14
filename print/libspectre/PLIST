@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/03 21:36:46 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:57 joerg Exp $
 include/libspectre/spectre-document.h
 include/libspectre/spectre-exporter.h
 include/libspectre/spectre-macros.h
@@ -9,4 +9,3 @@ include/libspectre/spectre-version.h
 include/libspectre/spectre.h
 lib/libspectre.la
 lib/pkgconfig/libspectre.pc
-@dirrm include/libspectre

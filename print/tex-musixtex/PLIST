@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/07 03:08:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 18:12:02 joerg Exp $
 bin/musixflx
 bin/musixtex
 man/man1/musixflx.1
@@ -220,7 +220,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex/musixtex.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex/musixtex.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex/musixtri.tex
 ${PKG_LOCALTEXMFPREFIX}/web2c/musixtex.fmt
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/musixtex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/musixtex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/musixtex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/musixtex
