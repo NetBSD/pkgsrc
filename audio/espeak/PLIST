@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:32:05 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:10:28 joerg Exp $
 bin/espeak
 include/speak_lib.h
 lib/libespeak.a
@@ -151,5 +151,5 @@ share/espeak-data/voices/zh
 share/espeak-data/voices/zhy
 share/espeak-data/zh_dict
 share/espeak-data/zhy_dict
-@exec ${MKDIR} %D/share/espeak-data/soundicons
-@exec ${MKDIR} %D/share/espeak-data/mbrola
+@pkgdir share/espeak-data/soundicons
+@pkgdir share/espeak-data/mbrola
