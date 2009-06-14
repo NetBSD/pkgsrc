@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:11:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 21:16:21 joerg Exp $
 bin/aps2file
 bin/apsfilter-bug
 bin/apspreview
@@ -324,4 +324,3 @@ share/doc/apsfilter/apsfilter4.png
 share/doc/apsfilter/handbook.html
 share/doc/apsfilter/paper
 @unexec ${RMDIR} %D/etc/apsfilter 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/apsfilter 2>/dev/null || ${TRUE}
