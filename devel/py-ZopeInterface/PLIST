@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/23 23:50:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:04 joerg Exp $
 ${PYSITELIB}/zope/PUBLICATION.cfg
 ${PYSITELIB}/zope/README.txt
 ${PYSITELIB}/zope/__init__.py
@@ -135,9 +135,3 @@ ${PYSITELIB}/zope/testing/loghandler.pyo
 ${PYSITELIB}/zope/testing/tests.py
 ${PYSITELIB}/zope/testing/tests.pyc
 ${PYSITELIB}/zope/testing/tests.pyo
-@dirrm ${PYSITELIB}/zope/testing
-@dirrm ${PYSITELIB}/zope/interface/tests
-@dirrm ${PYSITELIB}/zope/interface/common/tests
-@dirrm ${PYSITELIB}/zope/interface/common
-@dirrm ${PYSITELIB}/zope/interface
-@dirrm ${PYSITELIB}/zope

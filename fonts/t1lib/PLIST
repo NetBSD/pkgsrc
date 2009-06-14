@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/01/04 02:25:27 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:54:15 joerg Exp $
 bin/type1afm
 ${PLIST.x11}bin/xglyph
 include/t1lib.h
@@ -100,11 +100,3 @@ share/${PKGBASE}/Fonts/type1/dcbxti10.pfb
 share/${PKGBASE}/Fonts/type1/dcr10.pfb
 share/${PKGBASE}/Fonts/type1/dcti10.pfb
 share/${PKGBASE}/Fonts/type1/eufm10.pfb
-@dirrm share/doc/${PKGBASE}/t1dump
-@dirrm share/doc/${PKGBASE}
-@dirrm share/${PKGBASE}/Fonts/type1
-@dirrm share/${PKGBASE}/Fonts/enc
-@dirrm share/${PKGBASE}/Fonts/afm
-@dirrm share/${PKGBASE}/Fonts
-@dirrm share/${PKGBASE}
-@dirrm share/examples/${PKGBASE}

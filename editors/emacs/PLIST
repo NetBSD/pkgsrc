@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/10/11 09:56:38 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:50:21 joerg Exp $
 bin/emacs-b2m
 bin/emacs-ctags
 bin/emacs-ebrowse
@@ -2707,45 +2707,5 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
 share/emacs/site-lisp/subdirs.el
-@dirrm share/emacs/${PKGVERSION}/site-lisp
-@dirrm share/emacs/${PKGVERSION}/lisp/url
-@dirrm share/emacs/${PKGVERSION}/lisp/textmodes
-@dirrm share/emacs/${PKGVERSION}/lisp/term
-@dirrm share/emacs/${PKGVERSION}/lisp/progmodes
-@dirrm share/emacs/${PKGVERSION}/lisp/play
-@dirrm share/emacs/${PKGVERSION}/lisp/obsolete
-@dirrm share/emacs/${PKGVERSION}/lisp/net
-@dirrm share/emacs/${PKGVERSION}/lisp/mh-e
-@dirrm share/emacs/${PKGVERSION}/lisp/mail
-@dirrm share/emacs/${PKGVERSION}/lisp/language
-@dirrm share/emacs/${PKGVERSION}/lisp/international
-@dirrm share/emacs/${PKGVERSION}/lisp/gnus
-@dirrm share/emacs/${PKGVERSION}/lisp/eshell
-@dirrm share/emacs/${PKGVERSION}/lisp/erc
-@dirrm share/emacs/${PKGVERSION}/lisp/emulation
-@dirrm share/emacs/${PKGVERSION}/lisp/emacs-lisp
-@dirrm share/emacs/${PKGVERSION}/lisp/calendar
-@dirrm share/emacs/${PKGVERSION}/lisp/calc
-@dirrm share/emacs/${PKGVERSION}/lisp
-@dirrm share/emacs/${PKGVERSION}/leim/quail
-@dirrm share/emacs/${PKGVERSION}/leim/ja-dic
-@dirrm share/emacs/${PKGVERSION}/leim
-@dirrm share/emacs/${PKGVERSION}/etc/tree-widget/folder
-@dirrm share/emacs/${PKGVERSION}/etc/tree-widget/default
-@dirrm share/emacs/${PKGVERSION}/etc/tree-widget
-@dirrm share/emacs/${PKGVERSION}/etc/images/smilies
-@dirrm share/emacs/${PKGVERSION}/etc/images/mail
-@dirrm share/emacs/${PKGVERSION}/etc/images/low-color
-@dirrm share/emacs/${PKGVERSION}/etc/images/icons
-@dirrm share/emacs/${PKGVERSION}/etc/images/gud
-@dirrm share/emacs/${PKGVERSION}/etc/images/gnus
-@dirrm share/emacs/${PKGVERSION}/etc/images/ezimage
-@dirrm share/emacs/${PKGVERSION}/etc/images
-@dirrm share/emacs/${PKGVERSION}/etc/e
-@dirrm share/emacs/${PKGVERSION}/etc
-@dirrm share/emacs/${PKGVERSION}
 @unexec ${RMDIR} %D/share/emacs/site-lisp 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}
-@dirrm libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/emacs/${PKGVERSION}
-@dirrm libexec/emacs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/06/14 17:48:56 joerg Exp $
 bin/libtool
 bin/libtoolize
 ${PLIST.shlibtool}bin/shlibtool
@@ -24,5 +24,3 @@ share/libtool/libltdl/ltdl.h
 share/libtool/libltdl/ltmain.sh
 share/libtool/libltdl/missing
 share/libtool/ltmain.sh
-@dirrm share/libtool/libltdl
-@dirrm share/libtool

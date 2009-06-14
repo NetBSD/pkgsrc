@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/28 23:36:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:06 joerg Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -310,10 +310,3 @@ share/xml/qof/qsf/pilot-qsf-GnuCashInvoice.xml
 share/xml/qof/qsf/pilot-qsf-gncCustomer.xml
 share/xml/qof/qsf/qsf-map.xsd.xml
 share/xml/qof/qsf/qsf-object.xsd.xml
-@dirrm share/xml/qof/qsf
-@dirrm share/xml/qof
-@comment in xmlcatmgr: @dirrm share/xml
-@dirrm share/doc/qof/html/doxy
-@dirrm share/doc/qof/html
-@dirrm share/doc/qof
-@dirrm include/qof

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 11:24:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:12 joerg Exp $
 lib/X11/fonts/TTF/luximb.ttf
 lib/X11/fonts/TTF/luximbi.ttf
 lib/X11/fonts/TTF/luximr.ttf
@@ -12,7 +12,3 @@ lib/X11/fonts/TTF/luxisbi.ttf
 lib/X11/fonts/TTF/luxisr.ttf
 lib/X11/fonts/TTF/luxisri.ttf
 share/doc/font-bh-ttf/COPYING
-@dirrm share/doc/font-bh-ttf
-@comment @dirrm lib/X11/fonts/TTF
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

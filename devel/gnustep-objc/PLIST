@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/13 12:12:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:46 joerg Exp $
 include/objc/NXConstStr.h
 include/objc/Object.h
 include/objc/Protocol.h
@@ -13,4 +13,3 @@ include/objc/thr.h
 include/objc/typedstream.h
 lib/libobjc.so
 lib/libobjc.so.${PKGVERSION}
-@dirrm include/objc

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/13 07:37:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/linecache-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
@@ -48,8 +48,3 @@ ${GEM_LIBDIR}/test/test-linecache.rb
 ${GEM_LIBDIR}/test/test-lnum.rb
 ${GEM_LIBDIR}/test/test-tracelines.rb
 ${GEM_HOME}/specifications/linecache-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/data
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}

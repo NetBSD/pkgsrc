@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/30 10:51:48 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:23 joerg Exp $
 bin/jave
 share/jave/clipart/animals.jcf
 share/jave/clipart/chemistry.jcf
@@ -301,10 +301,3 @@ share/jave/jave.jar
 share/jave/javeplayer.jar
 share/jave/pattern/pattern.jcf
 share/jave/readme.txt
-@dirrm share/jave/clipart
-@dirrm share/jave/config/greyscaletables
-@dirrm share/jave/config
-@dirrm share/jave/fonts
-@dirrm share/jave/icons
-@dirrm share/jave/pattern
-@dirrm share/jave

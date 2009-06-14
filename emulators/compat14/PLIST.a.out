@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST.a.out,v 1.1 2007/08/21 22:49:09 jlam Exp $
+@comment $NetBSD: PLIST.a.out,v 1.2 2009/06/14 17:51:02 joerg Exp $
 ${EMULSUBDIRSLASH}usr/lib/libbfd.so.3.0
 ${EMULSUBDIRSLASH}usr/lib/libcurses.so.2.2
 ${EMULSUBDIRSLASH}usr/lib/libntp.so.0.0
 ${EMULSUBDIRSLASH}usr/lib/libpcap.so.0.0
 ${EMULSUBDIRSLASH}usr/lib/libskey.so.0.0
 ${EMULSUBDIRSLASH}usr/lib/libtelnet.so.1.0
-@dirrm ${EMULSUBDIRSLASH}usr/lib
-@dirrm ${EMULSUBDIRSLASH}usr

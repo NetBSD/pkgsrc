@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/17 07:20:23 gson Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:13 joerg Exp $
 bin/as-gbz80
 bin/as-hc08
 bin/as-z80
@@ -3216,80 +3216,6 @@ share/sdcc/sdcc/lib/z80/time.o
 share/sdcc/sdcc/lib/z80/vprintf.asm
 share/sdcc/sdcc/lib/z80/vprintf.o
 share/sdcc/sdcc/lib/z80/z80.lib
-@dirrm share/sdcc/sdcc/lib/z80
-@dirrm share/sdcc/sdcc/lib/src/z80
 @exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/small
-@dirrm share/sdcc/sdcc/lib/src/small
-@dirrm share/sdcc/sdcc/lib/src/pic16/startup
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/stack
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/lregs
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/long
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/int
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/gptr
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/float
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/fixed16x16
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc/char
-@dirrm share/sdcc/sdcc/lib/src/pic16/libsdcc
-@dirrm share/sdcc/sdcc/lib/src/pic16/libm
-@dirrm share/sdcc/sdcc/lib/src/pic16/libio/usart
-@dirrm share/sdcc/sdcc/lib/src/pic16/libio/i2c
-@dirrm share/sdcc/sdcc/lib/src/pic16/libio/adc
-@dirrm share/sdcc/sdcc/lib/src/pic16/libio
-@dirrm share/sdcc/sdcc/lib/src/pic16/libdev
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/utils
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/string
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/stdlib
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/stdio
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/delay
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc/ctype
-@dirrm share/sdcc/sdcc/lib/src/pic16/libc
-@dirrm share/sdcc/sdcc/lib/src/pic16/debug/gstack
-@dirrm share/sdcc/sdcc/lib/src/pic16/debug
-@dirrm share/sdcc/sdcc/lib/src/pic16
-@dirrm share/sdcc/sdcc/lib/src/pic/libsdcc
-@dirrm share/sdcc/sdcc/lib/src/pic/libm
-@dirrm share/sdcc/sdcc/lib/src/pic/libdev
-@dirrm share/sdcc/sdcc/lib/src/pic
 @exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/medium
-@dirrm share/sdcc/sdcc/lib/src/medium
-@dirrm share/sdcc/sdcc/lib/src/mcs51
 @exec ${MKDIR} %D/share/sdcc/sdcc/lib/src/large
-@dirrm share/sdcc/sdcc/lib/src/large
-@dirrm share/sdcc/sdcc/lib/src/hc08
-@dirrm share/sdcc/sdcc/lib/src/gbz80
-@dirrm share/sdcc/sdcc/lib/src/ds400
-@dirrm share/sdcc/sdcc/lib/src/ds390/examples
-@dirrm share/sdcc/sdcc/lib/src/ds390
-@dirrm share/sdcc/sdcc/lib/src
-@dirrm share/sdcc/sdcc/lib/small-stack-auto
-@dirrm share/sdcc/sdcc/lib/small
-@dirrm share/sdcc/sdcc/lib/pic16
-@dirrm share/sdcc/sdcc/lib/pic
-@dirrm share/sdcc/sdcc/lib/medium
-@dirrm share/sdcc/sdcc/lib/large
-@dirrm share/sdcc/sdcc/lib/hc08
-@dirrm share/sdcc/sdcc/lib/gbz80
-@dirrm share/sdcc/sdcc/lib/ds400
-@dirrm share/sdcc/sdcc/lib/ds390
-@dirrm share/sdcc/sdcc/lib
-@dirrm share/sdcc/sdcc/include/z80
-@dirrm share/sdcc/sdcc/include/pic16
-@dirrm share/sdcc/sdcc/include/pic
-@dirrm share/sdcc/sdcc/include/mcs51
-@dirrm share/sdcc/sdcc/include/hc08
-@dirrm share/sdcc/sdcc/include/asm/z80
-@dirrm share/sdcc/sdcc/include/asm/pic16
-@dirrm share/sdcc/sdcc/include/asm/pic
-@dirrm share/sdcc/sdcc/include/asm/mcs51
-@dirrm share/sdcc/sdcc/include/asm/gbz80
-@dirrm share/sdcc/sdcc/include/asm/ds390
-@dirrm share/sdcc/sdcc/include/asm/default
-@dirrm share/sdcc/sdcc/include/asm
-@dirrm share/sdcc/sdcc/include
-@dirrm share/sdcc/sdcc
-@dirrm share/sdcc
-@dirrm share/doc/sdcc/z80
-@dirrm share/doc/sdcc/ucsim
-@dirrm share/doc/sdcc/avr
-@dirrm share/doc/sdcc/aslink
-@dirrm share/doc/sdcc

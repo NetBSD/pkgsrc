@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/04 20:42:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:15 joerg Exp $
 share/mplayer/font
 share/mplayer/fonts/README-arial-cp1250
 share/mplayer/fonts/README-arial-iso-8859-1
@@ -84,21 +84,3 @@ share/mplayer/fonts/font-arial-28-iso-8859-7/iso-8859-7-a.raw
 share/mplayer/fonts/font-arial-28-iso-8859-7/iso-8859-7-b.raw
 share/mplayer/fonts/font-arial-28-iso-8859-7/osd-mplayer-a.raw
 share/mplayer/fonts/font-arial-28-iso-8859-7/osd-mplayer-b.raw
-@dirrm share/mplayer/fonts/font-arial-28-iso-8859-7
-@dirrm share/mplayer/fonts/font-arial-28-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-28-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-28-cp1250
-@dirrm share/mplayer/fonts/font-arial-24-iso-8859-7
-@dirrm share/mplayer/fonts/font-arial-24-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-24-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-24-cp1250
-@dirrm share/mplayer/fonts/font-arial-18-iso-8859-7
-@dirrm share/mplayer/fonts/font-arial-18-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-18-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-18-cp1250
-@dirrm share/mplayer/fonts/font-arial-14-iso-8859-7
-@dirrm share/mplayer/fonts/font-arial-14-iso-8859-2
-@dirrm share/mplayer/fonts/font-arial-14-iso-8859-1
-@dirrm share/mplayer/fonts/font-arial-14-cp1250
-@dirrm share/mplayer/fonts
-@dirrm share/mplayer

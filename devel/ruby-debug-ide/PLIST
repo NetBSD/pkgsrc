@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/09/15 09:05:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:09 joerg Exp $
 bin/rdebug-ide
 ${GEM_HOME}/cache/ruby-debug-ide-${PKGVERSION}.gem
 ${GEM_LIBDIR}/bin/rdebug-ide
@@ -23,9 +23,4 @@ ${GEM_LIBDIR}/lib/ruby-debug/printers.rb
 ${GEM_LIBDIR}/lib/ruby-debug/processor.rb
 ${GEM_LIBDIR}/lib/ruby-debug/xml_printer.rb
 ${GEM_HOME}/specifications/ruby-debug-ide-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/ruby-debug/commands
-@dirrm ${GEM_LIBDIR}/lib/ruby-debug
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

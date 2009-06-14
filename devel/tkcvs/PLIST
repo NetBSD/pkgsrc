@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/04/29 15:46:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:16 joerg Exp $
 bin/tkcvs
 bin/tkdiff
 lib/tkcvs/bitmaps/add.gif
@@ -108,5 +108,3 @@ lib/tkcvs/tkcvs_def.tcl
 lib/tkcvs/tooltips.tcl
 lib/tkcvs/workdir.tcl
 man/man1/tkcvs.1
-@dirrm lib/tkcvs/bitmaps
-@dirrm lib/tkcvs

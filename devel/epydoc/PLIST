@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/10/23 16:03:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:42 joerg Exp $
 bin/epydoc
 bin/epydocgui
 ${PYSITELIB}/epydoc/__init__.py
@@ -361,14 +361,3 @@ share/doc/epydoc/relatedprojects.html
 share/doc/epydoc/sflogo.png
 share/doc/epydoc/stylesheet.html
 share/doc/epydoc/using.html
-@dirrm share/doc/epydoc/examples/listed
-@dirrm share/doc/epydoc/examples/included
-@dirrm share/doc/epydoc/examples/grouped
-@dirrm share/doc/epydoc/examples
-@dirrm share/doc/epydoc/api/public
-@dirrm share/doc/epydoc/api/private
-@dirrm share/doc/epydoc/api
-@dirrm share/doc/epydoc
-@dirrm ${PYSITELIB}/epydoc/test
-@dirrm ${PYSITELIB}/epydoc/markup
-@dirrm ${PYSITELIB}/epydoc

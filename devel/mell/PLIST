@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 12:26:08 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:58 joerg Exp $
 share/doc/mell/index.html
 ${EMACS_LISPPREFIX}/init-mell.el
 ${EMACS_LISPPREFIX}/mell/mell-alist.el
@@ -10,5 +10,3 @@ ${EMACS_LISPPREFIX}/mell/mell-sign.el
 ${EMACS_LISPPREFIX}/mell/mell-split.el
 ${EMACS_LISPPREFIX}/mell/mell-string.el
 ${EMACS_LISPPREFIX}/mell/mell.el
-@dirrm ${EMACS_LISPPREFIX}/mell
-@dirrm share/doc/mell

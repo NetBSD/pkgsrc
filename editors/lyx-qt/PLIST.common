@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.16 2007/08/11 21:33:38 reed Exp $
+@comment $NetBSD: PLIST.common,v 1.17 2009/06/14 17:50:24 joerg Exp $
 bin/lyx
 bin/lyxclient
 bin/tex2lyx
@@ -1111,18 +1111,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/hollywood.cls
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/revtex.cls
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm share/lyx/ui
-@dirrm share/lyx/templates
-@dirrm share/lyx/scripts
-@dirrm share/lyx/lyx2lyx
-@dirrm share/lyx/layouts
-@dirrm share/lyx/kbd
-@dirrm share/lyx/images/math
-@dirrm share/lyx/images
-@dirrm share/lyx/examples
-@dirrm share/lyx/doc
-@dirrm share/lyx/clipart
-@dirrm share/lyx/bind
-@dirrm share/lyx

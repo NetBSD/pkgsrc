@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/24 20:47:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:55 joerg Exp $
 include/sigc++-2.0/sigc++/adaptors/adaptor_trait.h
 include/sigc++-2.0/sigc++/adaptors/adaptors.h
 include/sigc++-2.0/sigc++/adaptors/bind.h
@@ -1302,21 +1302,3 @@ share/doc/libsigc-2.0/docs/tutorial/html/ch04s02.html
 share/doc/libsigc-2.0/docs/tutorial/html/ch04s03.html
 share/doc/libsigc-2.0/docs/tutorial/html/ch05.html
 share/doc/libsigc-2.0/docs/tutorial/html/index.html
-@dirrm share/doc/libsigc-2.0/docs/tutorial/html
-@dirrm share/doc/libsigc-2.0/docs/tutorial
-@dirrm share/doc/libsigc-2.0/docs/reference/html
-@dirrm share/doc/libsigc-2.0/docs/reference
-@dirrm share/doc/libsigc-2.0/docs/images
-@dirrm share/doc/libsigc-2.0/docs
-@dirrm share/doc/libsigc-2.0
-@dirrm lib/sigc++-2.0/include
-@dirrm lib/sigc++-2.0
-@dirrm include/sigc++-2.0/sigc++/macros
-@dirrm include/sigc++-2.0/sigc++/functors/macros
-@dirrm include/sigc++-2.0/sigc++/functors
-@dirrm include/sigc++-2.0/sigc++/adaptors/macros
-@dirrm include/sigc++-2.0/sigc++/adaptors/lambda/macros
-@dirrm include/sigc++-2.0/sigc++/adaptors/lambda
-@dirrm include/sigc++-2.0/sigc++/adaptors
-@dirrm include/sigc++-2.0/sigc++
-@dirrm include/sigc++-2.0

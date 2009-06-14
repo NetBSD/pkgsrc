@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/12/08 13:54:34 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:40 joerg Exp $
 bin/runtest
 include/dejagnu.h
 man/man1/runtest.1
@@ -202,9 +202,3 @@ share/doc/dejagnu/html/x916.html
 share/doc/dejagnu/html/x935.html
 share/doc/dejagnu/html/x953.html
 share/doc/dejagnu/html/x992.html
-@dirrm share/doc/dejagnu/html
-@dirrm share/doc/dejagnu
-@dirrm share/dejagnu/libexec
-@dirrm share/dejagnu/config
-@dirrm share/dejagnu/baseboards
-@dirrm share/dejagnu

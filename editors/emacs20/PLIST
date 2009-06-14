@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/02/20 19:04:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:22 joerg Exp $
 bin/emacs
 bin/emacs-${PKGVERSION}
 bin/emacs-b2m
@@ -32,9 +32,6 @@ libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/rcs2log
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/sorted-doc
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/vcdiff
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/yow
-@dirrm libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}
-@dirrm libexec/emacs/${PKGVERSION}
-@dirrm libexec/emacs
 man/man1/emacs-ctags.1
 man/man1/emacs-etags.1
 man/man1/emacs.1
@@ -99,7 +96,6 @@ share/emacs/${PKGVERSION}/etc/copying.paper
 share/emacs/${PKGVERSION}/etc/ctags.1
 share/emacs/${PKGVERSION}/etc/e/eterm
 share/emacs/${PKGVERSION}/etc/e/eterm.ti
-@dirrm share/emacs/${PKGVERSION}/etc/e
 share/emacs/${PKGVERSION}/etc/echo.msg
 share/emacs/${PKGVERSION}/etc/edt-user.doc
 share/emacs/${PKGVERSION}/etc/emacs.1
@@ -129,7 +125,6 @@ share/emacs/${PKGVERSION}/etc/ulimit.hack
 share/emacs/${PKGVERSION}/etc/vipcard.tex
 share/emacs/${PKGVERSION}/etc/viperCard.tex
 share/emacs/${PKGVERSION}/etc/yow.lines
-@dirrm share/emacs/${PKGVERSION}/etc
 share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
 share/emacs/${PKGVERSION}/lisp/abbrev.el
@@ -1279,22 +1274,7 @@ share/emacs/${PKGVERSION}/lisp/xt-mouse.el
 share/emacs/${PKGVERSION}/lisp/xt-mouse.elc
 share/emacs/${PKGVERSION}/lisp/zone-mode.el
 share/emacs/${PKGVERSION}/lisp/zone-mode.elc
-@dirrm share/emacs/${PKGVERSION}/lisp/textmodes
-@dirrm share/emacs/${PKGVERSION}/lisp/term
-@dirrm share/emacs/${PKGVERSION}/lisp/progmodes
-@dirrm share/emacs/${PKGVERSION}/lisp/play
-@dirrm share/emacs/${PKGVERSION}/lisp/mail
-@dirrm share/emacs/${PKGVERSION}/lisp/language
-@dirrm share/emacs/${PKGVERSION}/lisp/international
-@dirrm share/emacs/${PKGVERSION}/lisp/gnus
-@dirrm share/emacs/${PKGVERSION}/lisp/emulation
-@dirrm share/emacs/${PKGVERSION}/lisp/emacs-lisp
-@dirrm share/emacs/${PKGVERSION}/lisp/calendar
-@dirrm share/emacs/${PKGVERSION}/lisp
 share/emacs/${PKGVERSION}/site-lisp/subdirs.el
-@dirrm share/emacs/${PKGVERSION}/site-lisp
 share/emacs/site-lisp/subdirs.el
 @exec ${MKDIR} %D/share/emacs/${PKGVERSION}/leim
-@dirrm share/emacs/${PKGVERSION}/leim
-@dirrm share/emacs/${PKGVERSION}
 @unexec ${RMDIR} %D/share/emacs 2>/dev/null || ${TRUE}

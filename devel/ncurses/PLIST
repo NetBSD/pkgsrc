@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/11/16 17:03:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:48:59 joerg Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -3304,47 +3304,3 @@ ${TERMINFODIR}/z/zt-1
 ${TERMINFODIR}/z/ztx
 ${TERMINFODIR}/z/ztx-1-a
 ${TERMINFODIR}/z/ztx11
-@dirrm ${TERMINFODIR}/z
-@dirrm ${TERMINFODIR}/x
-@dirrm ${TERMINFODIR}/w
-@dirrm ${TERMINFODIR}/v
-@dirrm ${TERMINFODIR}/u
-@dirrm ${TERMINFODIR}/t
-@dirrm ${TERMINFODIR}/s
-@dirrm ${TERMINFODIR}/r
-@dirrm ${TERMINFODIR}/q
-@dirrm ${TERMINFODIR}/p
-@dirrm ${TERMINFODIR}/o
-@dirrm ${TERMINFODIR}/n
-@dirrm ${TERMINFODIR}/m
-@dirrm ${TERMINFODIR}/l
-@dirrm ${TERMINFODIR}/k
-@dirrm ${TERMINFODIR}/j
-@dirrm ${TERMINFODIR}/i
-@dirrm ${TERMINFODIR}/h
-@dirrm ${TERMINFODIR}/g
-@dirrm ${TERMINFODIR}/f
-@dirrm ${TERMINFODIR}/e
-@dirrm ${TERMINFODIR}/d
-@dirrm ${TERMINFODIR}/c
-@dirrm ${TERMINFODIR}/b
-@dirrm ${TERMINFODIR}/a
-@dirrm ${TERMINFODIR}/X
-@dirrm ${TERMINFODIR}/Q
-@dirrm ${TERMINFODIR}/P
-@dirrm ${TERMINFODIR}/N
-@dirrm ${TERMINFODIR}/M
-@dirrm ${TERMINFODIR}/L
-@dirrm ${TERMINFODIR}/E
-@dirrm ${TERMINFODIR}/A
-@dirrm ${TERMINFODIR}/9
-@dirrm ${TERMINFODIR}/8
-@dirrm ${TERMINFODIR}/7
-@dirrm ${TERMINFODIR}/6
-@dirrm ${TERMINFODIR}/5
-@dirrm ${TERMINFODIR}/4
-@dirrm ${TERMINFODIR}/3
-@dirrm ${TERMINFODIR}/2
-@dirrm ${TERMINFODIR}/1
-${PLIST.not-sunos}@dirrm ${TERMINFODIR}
-@dirrm share/tabset

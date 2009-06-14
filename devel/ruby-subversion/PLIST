@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/06/19 22:33:25 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:12 joerg Exp $
 lib/libsvn_swig_ruby-1.la
 ${RUBY_VENDORARCHLIB}/svn/ext/client.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/core.${RUBY_DLEXT}
@@ -24,7 +24,3 @@ share/examples/subversion/ruby/commit-email.rb
 share/examples/subversion/ruby/svnlog2html.rb
 share/examples/subversion/ruby/svnlook.rb
 share/examples/subversion/ruby/svnshell.rb
-@dirrm share/examples/subversion/ruby
-@dirrm ${RUBY_VENDORLIB}/svn
-@dirrm ${RUBY_VENDORARCHLIB}/svn/ext
-@dirrm ${RUBY_VENDORARCHLIB}/svn

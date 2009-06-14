@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/21 19:44:30 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:17 joerg Exp $
 bin/cg_annotate
 bin/valgrind
 bin/valgrind-listener
@@ -47,9 +47,3 @@ share/doc/valgrind/mc_main.html
 share/doc/valgrind/mc_techdocs.html
 share/doc/valgrind/ms_main.html
 share/doc/valgrind/nl_main.html
-@dirrm share/doc/valgrind
-@dirrm lib/valgrind
-@dirrm include/valgrind/x86-${LOWER_OPSYS}
-@dirrm include/valgrind/x86
-@dirrm include/valgrind/${LOWER_OPSYS}
-@dirrm include/valgrind

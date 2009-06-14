@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2004/05/16 00:28:23 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:10 joerg Exp $
 bin/imgtool
 bin/xmess
 man/man6/xmess.6
 share/xmess/xmessrc
-@dirrm share/xmess

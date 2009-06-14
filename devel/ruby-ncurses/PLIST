@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/04 15:30:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:11 joerg Exp $
 ${GEM_HOME}/cache/ncurses-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/Changes
@@ -27,7 +27,4 @@ ${GEM_LIBDIR}/ncurses_wrap.h
 ${GEM_LIBDIR}/panel_wrap.c
 ${GEM_LIBDIR}/panel_wrap.h
 ${GEM_HOME}/specifications/ncurses-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}

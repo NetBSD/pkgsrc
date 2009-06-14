@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/21 12:59:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:56 joerg Exp $
 include/sigc++-1.2/sigc++/adaptor.h
 include/sigc++-1.2/sigc++/bind.h
 include/sigc++-1.2/sigc++/bind_return.h
@@ -30,8 +30,3 @@ include/sigc++-1.2/sigc++/trait.h
 lib/libsigc-1.2.la
 lib/pkgconfig/sigc++-1.2.pc
 lib/sigc++-1.2/include/sigcconfig.h
-@dirrm lib/sigc++-1.2/include
-@dirrm lib/sigc++-1.2
-@dirrm include/sigc++-1.2/sigc++/macros
-@dirrm include/sigc++-1.2/sigc++
-@dirrm include/sigc++-1.2

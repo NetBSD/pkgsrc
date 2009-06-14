@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/04/18 01:32:44 rh Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:48:46 joerg Exp $
 bin/HTMLLinker
 bin/autogsdoc
 bin/cvtenc
@@ -810,58 +810,8 @@ man/man1/sfparse.1
 man/man1/xmlparse.1
 man/man8/gdomap.8
 share/GNUstep/Makefiles/Additional/base.make
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Makefiles/Additional
-@comment in devel/gnustep-make: @dirrm share/GNUstep/Makefiles
-@comment in devel/gnustep-make: @dirrm share/GNUstep
-@dirrm lib/GNUstep/Bundles
 @exec ${MKDIR} %D/lib/GNUstep/Bundles
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/TraditionalChinese.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/Spanish.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/SSL.bundle/Resources
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/SSL.bundle
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/US
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Pacific
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Mideast
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Mexico
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Indian
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Europe
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Etc
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Chile
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Canada
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Brazil
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Australia
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Atlantic
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Asia
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Arctic
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Antarctica
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/America/North_Dakota
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/America/Kentucky
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/America/Indiana
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/America/Argentina
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/America
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones/Africa
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones/zones
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/NSTimeZones
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/Languages
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/Korean.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/Italian.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/German.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/French.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/Esperanto.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources/English.lproj
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18/Resources
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions/1.18
-@dirrm lib/GNUstep/Libraries/gnustep-base/Versions
-@dirrm lib/GNUstep/Libraries/gnustep-base
 @unexec ${RMDIR} %D/lib/GNUstep/Libraries 2>/dev/null || ${TRUE}
-@dirrm lib/GNUstep/Frameworks
 @exec ${MKDIR} %D/lib/GNUstep/Frameworks
-@dirrm lib/GNUstep/DTDs
 @unexec ${RMDIR} %D/lib/GNUstep 2>/dev/null || ${TRUE}
-@dirrm include/gnustep/unicode
-@dirrm include/gnustep/base
-@dirrm include/gnustep
 @exec ${MKDIR} %D/include/GNUstepBase/unicode
-@dirrm include/GNUstepBase/unicode
-@dirrm include/GNUstepBase
-@dirrm include/Foundation

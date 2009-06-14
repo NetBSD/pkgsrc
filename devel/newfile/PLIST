@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/27 15:58:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:00 joerg Exp $
 bin/newfile
 man/man1/newfile.1
 share/newfile/fileproc.rb
@@ -43,7 +43,3 @@ share/newfile/templates/tmpl@py
 share/newfile/templates/tmpl@rb
 share/newfile/templates/tmpl@rd
 share/newfile/templates/tmpl@sh
-@dirrm share/newfile/templates
-@dirrm share/newfile/projects
-@dirrm share/newfile/licenses
-@dirrm share/newfile

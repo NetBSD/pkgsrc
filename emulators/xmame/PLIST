@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/30 19:38:20 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:51:10 joerg Exp $
 bin/chdman
 bin/romcmp
 bin/xmame
@@ -22,6 +22,3 @@ share/doc/html/xmame/xmame-gdoc-8.html
 share/doc/html/xmame/xmame-gdoc.html
 share/doc/xmame/xmame-doc.txt
 share/xmame/xmamerc
-@dirrm share/xmame
-@dirrm share/doc/xmame
-@dirrm share/doc/html/xmame

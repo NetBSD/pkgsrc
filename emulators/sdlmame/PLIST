@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 07:40:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:07 joerg Exp $
 bin/chdman
 bin/jedutil
 bin/mame
@@ -7,4 +7,3 @@ share/doc/sdlmame/SDLMAME.txt
 share/doc/sdlmame/license.txt
 share/doc/sdlmame/mame.txt
 share/doc/sdlmame/windows.txt
-@dirrm share/doc/sdlmame

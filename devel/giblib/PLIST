@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:25 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:45 joerg Exp $
 bin/giblib-config
 include/giblib/gib_btree.h
 include/giblib/gib_debug.h
@@ -17,5 +17,3 @@ share/doc/giblib/AUTHORS
 share/doc/giblib/ChangeLog
 share/doc/giblib/README
 share/doc/giblib/TODO
-@dirrm share/doc/giblib
-@dirrm include/giblib

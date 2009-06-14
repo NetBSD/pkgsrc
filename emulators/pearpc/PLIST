@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/22 19:27:36 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:07 joerg Exp $
 bin/pearpc
 share/examples/pearpc/ppccfg.example
 share/pearpc/ppc
 share/pearpc/video.x
-@dirrm share/pearpc
-@dirrm share/examples/pearpc

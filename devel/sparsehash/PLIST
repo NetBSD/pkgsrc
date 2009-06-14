@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/08/03 19:46:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:15 joerg Exp $
 include/google/dense_hash_map
 include/google/dense_hash_set
 include/google/sparse_hash_map
@@ -16,6 +16,4 @@ share/doc/sparsehash/performance.html
 share/doc/sparsehash/sparse_hash_map.html
 share/doc/sparsehash/sparse_hash_set.html
 share/doc/sparsehash/sparsetable.html
-@dirrm include/google/sparsehash
 @unexec ${RMDIR} %D/include/google || ${TRUE}
-@dirrm share/doc/sparsehash

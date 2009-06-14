@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/02 19:42:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:43 joerg Exp $
 bin/eric3
 bin/eric3-api
 bin/eric3-doc
@@ -1666,59 +1666,4 @@ ${PYSITELIB}/eric3/uninstall.pyc
 ${PYSITELIB}/eric3config.py
 ${PYSITELIB}/sitecustomize.py
 ${PYSITELIB}/sitecustomize.pyc
-@dirrm ${PYSITELIB}/eric3/pixmaps
-@dirrm ${PYSITELIB}/eric3/icons/default
-@dirrm ${PYSITELIB}/eric3/icons
 @exec ${MKDIR} %D/lib/python2.4/site-packages/eric3/i18n
-@dirrm ${PYSITELIB}/eric3/i18n
-@dirrm ${PYSITELIB}/eric3/XML
-@dirrm ${PYSITELIB}/eric3/Wizards/QRegExpWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/PyRegExpWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/MessageBoxWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/InputDialogWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/FontDialogWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/FileDialogWizard
-@dirrm ${PYSITELIB}/eric3/Wizards/ColorDialogWizard
-@dirrm ${PYSITELIB}/eric3/Wizards
-@dirrm ${PYSITELIB}/eric3/ViewManager
-@dirrm ${PYSITELIB}/eric3/VCS/subversionPackage
-@dirrm ${PYSITELIB}/eric3/VCS/mercurialPackage
-@dirrm ${PYSITELIB}/eric3/VCS/cvsPackage
-@dirrm ${PYSITELIB}/eric3/VCS
-@dirrm ${PYSITELIB}/eric3/Utilities/ClassBrowsers
-@dirrm ${PYSITELIB}/eric3/Utilities
-@dirrm ${PYSITELIB}/eric3/UI
-@dirrm ${PYSITELIB}/eric3/Tools
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm/bike/transformer
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm/bike/refactor
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm/bike/query
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm/bike/parsing
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm/bike
-@dirrm ${PYSITELIB}/eric3/ThirdParty/brm
-@dirrm ${PYSITELIB}/eric3/ThirdParty
-@dirrm ${PYSITELIB}/eric3/Scripting
-@dirrm ${PYSITELIB}/eric3/Refactoring
-@dirrm ${PYSITELIB}/eric3/QScintilla
-@dirrm ${PYSITELIB}/eric3/PyUnit
-@dirrm ${PYSITELIB}/eric3/Project
-@dirrm ${PYSITELIB}/eric3/Preferences
-@dirrm ${PYSITELIB}/eric3/Packagers
-@dirrm ${PYSITELIB}/eric3/KdeQt
-@dirrm ${PYSITELIB}/eric3/Helpviewer
-@dirrm ${PYSITELIB}/eric3/Graphics
-@dirrm ${PYSITELIB}/eric3/Examples/Scripting
-@dirrm ${PYSITELIB}/eric3/Examples
-@dirrm ${PYSITELIB}/eric3/DocumentationTools
-@dirrm ${PYSITELIB}/eric3/Documentation/brm
-@dirrm ${PYSITELIB}/eric3/Documentation/Source
-@dirrm ${PYSITELIB}/eric3/Documentation
-@dirrm ${PYSITELIB}/eric3/DesignerTemplates
-@dirrm ${PYSITELIB}/eric3/Debugger
-@dirrm ${PYSITELIB}/eric3/DebugClients/Ruby
-@dirrm ${PYSITELIB}/eric3/DebugClients/Python/Cyclops
-@dirrm ${PYSITELIB}/eric3/DebugClients/Python
-@dirrm ${PYSITELIB}/eric3/DebugClients
-@dirrm ${PYSITELIB}/eric3/DTDs
-@dirrm ${PYSITELIB}/eric3/Checks
-@dirrm ${PYSITELIB}/eric3/CSSs
-@dirrm ${PYSITELIB}/eric3

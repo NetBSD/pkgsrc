@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:24:15 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
 bin/its4
 man/man1/its4.1
 share/its4/LICENSE
 share/its4/TODO
 share/its4/vulns.i4d
-@dirrm share/its4

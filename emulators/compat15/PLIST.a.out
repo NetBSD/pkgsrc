@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.a.out,v 1.1 2007/08/21 22:49:11 jlam Exp $
+@comment $NetBSD: PLIST.a.out,v 1.2 2009/06/14 17:51:02 joerg Exp $
 ${EMULSUBDIRSLASH}usr/lib/libamu.so.1.1
 ${EMULSUBDIRSLASH}usr/lib/libasn1.so.4.0
 ${EMULSUBDIRSLASH}usr/lib/libbz2.so.0.0
@@ -43,5 +43,3 @@ ${EMULSUBDIRSLASH}usr/lib/libusb.so.0.0
 ${EMULSUBDIRSLASH}usr/lib/libutil.so.5.2.1
 ${EMULSUBDIRSLASH}usr/lib/libwrap.so.0.2
 ${EMULSUBDIRSLASH}usr/lib/libz.so.0.2
-@dirrm ${EMULSUBDIRSLASH}usr/lib
-@dirrm ${EMULSUBDIRSLASH}usr

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/03/10 23:58:47 rillig Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:50:23 joerg Exp $
 share/doc/jde/html/bsh-ug/bsh-ug-content.html
 share/doc/jde/html/bsh-ug/bsh-ug-toc.html
 share/doc/jde/html/bsh-ug/bsh-ug.html
@@ -138,23 +138,3 @@ share/jde/java/lib/LICENSE.checkstyle
 share/jde/java/lib/bsh.jar
 share/jde/java/lib/checkstyle-all.jar
 share/jde/java/lib/jde.jar
-@dirrm share/jde/java/lib
-@dirrm share/jde/java/bsh-commands/bsh/commands
-@dirrm share/jde/java/bsh-commands/bsh
-@dirrm share/jde/java/bsh-commands
-@dirrm share/jde/java
-@dirrm share/jde
-@dirrm ${EMACS_LISPPREFIX}/jde/lisp
-@dirrm share/doc/jde/tli_rbl/txt
-@dirrm share/doc/jde/tli_rbl/img
-@dirrm share/doc/jde/tli_rbl/au
-@dirrm share/doc/jde/tli_rbl
-@dirrm share/doc/jde/html/jdebug-ug/images
-@dirrm share/doc/jde/html/jdebug-ug
-@dirrm share/doc/jde/html/jde-ug/images
-@dirrm share/doc/jde/html/jde-ug
-@dirrm share/doc/jde/html/css
-@dirrm share/doc/jde/html/bsh-ug/images
-@dirrm share/doc/jde/html/bsh-ug
-@dirrm share/doc/jde/html
-@dirrm share/doc/jde

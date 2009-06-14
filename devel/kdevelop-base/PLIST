@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2008/08/27 12:29:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.26 2009/06/14 17:48:50 joerg Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -1389,258 +1389,31 @@ share/kde/servicetypes/kdevelopquickopen.desktop
 share/kde/servicetypes/kdevelopsourceformatter.desktop
 share/kde/servicetypes/kdevelopvcsintegrator.desktop
 share/kde/servicetypes/kdevelopversioncontrol.desktop
-@comment in kde: @dirrm share/kde/servicetypes
-@comment in kde: @dirrm share/kde/services/kded
-@comment in kde: @dirrm share/kde/services
-@comment in kde: @dirrm share/kde/mimelnk/text
-@comment in kde: @dirrm share/kde/mimelnk/application
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kio_pydoc
 @exec ${MKDIR} %D/share/kde/apps/kdevvcsmanager
-@dirrm share/kde/apps/kdevvcsmanager
-@dirrm share/kde/apps/kdevvalgrind
-@dirrm share/kde/apps/kdevtrollproject
-@dirrm share/kde/apps/kdevtools
-@dirrm share/kde/apps/kdevtipofday
-@dirrm share/kde/apps/kdevsqlsupport
-@dirrm share/kde/apps/kdevsnippet
-@dirrm share/kde/apps/kdevscriptproject
-@dirrm share/kde/apps/kdevscripting
-@dirrm share/kde/apps/kdevrubysupport/pics
-@dirrm share/kde/apps/kdevrubysupport
-@dirrm share/kde/apps/kdevreplace
-@dirrm share/kde/apps/kdevregexptest
-@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor/22x22
-@dirrm share/kde/apps/kdevrbdebugger/icons/hicolor
-@dirrm share/kde/apps/kdevrbdebugger/icons
-@dirrm share/kde/apps/kdevrbdebugger
-@dirrm share/kde/apps/kdevquickopen
-@dirrm share/kde/apps/kdevpythonsupport
-@dirrm share/kde/apps/kdevphpsupport
-@dirrm share/kde/apps/kdevperlsupport
-@dirrm share/kde/apps/kdevpascalsupport
-@dirrm share/kde/apps/kdevpascalproject
-@dirrm share/kde/apps/kdevpartexplorer
-@dirrm share/kde/apps/kdevmakeview
-@dirrm share/kde/apps/kdevjavasupport
-@dirrm share/kde/apps/kdevgrepview/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdevgrepview/icons/hicolor/22x22
-@dirrm share/kde/apps/kdevgrepview/icons/hicolor
-@dirrm share/kde/apps/kdevgrepview/icons
-@dirrm share/kde/apps/kdevgrepview
-@dirrm share/kde/apps/kdevfullscreen
-@dirrm share/kde/apps/kdevfortransupport
-@dirrm share/kde/apps/kdevfilter
-@dirrm share/kde/apps/kdevfilelist
-@dirrm share/kde/apps/kdevfilecreate/file-templates
-@dirrm share/kde/apps/kdevfilecreate
-@dirrm share/kde/apps/kdevelop/profiles/KDevAssistant
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/ShellIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/RubyIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/PythonIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/PerlIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/PHPIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE/CSharpIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/ScriptingLanguageIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/DatabaseIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/PascalIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/JavaIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/HaskellIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/FortranIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/CandCppIDE/CppIDE/KDECppIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/CandCppIDE/CppIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/CandCppIDE/CIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/CandCppIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE/AdaIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE/CompiledLanguageIDE
-@dirrm share/kde/apps/kdevelop/profiles/IDE
-@dirrm share/kde/apps/kdevelop/profiles
-@dirrm share/kde/apps/kdevelop/pics
-@dirrm share/kde/apps/kdevelop/licenses
-@dirrm share/kde/apps/kdevelop/icons/hicolor/32x32/mimetypes
-@dirrm share/kde/apps/kdevelop/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kdevelop/icons/hicolor/32x32
-@dirrm share/kde/apps/kdevelop/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdevelop/icons/hicolor/22x22
-@dirrm share/kde/apps/kdevelop/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kdevelop/icons/hicolor/16x16
-@dirrm share/kde/apps/kdevelop/icons/hicolor
-@dirrm share/kde/apps/kdevelop/icons
-@dirrm share/kde/apps/kdevelop
-@dirrm share/kde/apps/kdevdoxygen
-@dirrm share/kde/apps/kdevdocumentation/tocs
-@dirrm share/kde/apps/kdevdocumentation/pics
-@dirrm share/kde/apps/kdevdocumentation/en
-@dirrm share/kde/apps/kdevdocumentation
-@dirrm share/kde/apps/kdevdistpart
-@dirrm share/kde/apps/kdevdiff
-@dirrm share/kde/apps/kdevdesignerpart/pics
-@dirrm share/kde/apps/kdevdesignerpart
-@dirrm share/kde/apps/kdevdesigner
-@dirrm share/kde/apps/kdevdebugger/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdevdebugger/icons/hicolor/22x22
-@dirrm share/kde/apps/kdevdebugger/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kdevdebugger/icons/hicolor/16x16
-@dirrm share/kde/apps/kdevdebugger/icons/hicolor
-@dirrm share/kde/apps/kdevdebugger/icons
-@dirrm share/kde/apps/kdevdebugger
-@dirrm share/kde/apps/kdevcvsservice/pics
-@dirrm share/kde/apps/kdevcvsservice
-@dirrm share/kde/apps/kdevcustomproject
-@dirrm share/kde/apps/kdevctags2
-@dirrm share/kde/apps/kdevcsharpsupport
-@dirrm share/kde/apps/kdevcppsupport/templates
-@dirrm share/kde/apps/kdevcppsupport/subclassing
-@dirrm share/kde/apps/kdevcppsupport/newclass
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/32x32
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/22x22
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor/16x16
-@dirrm share/kde/apps/kdevcppsupport/icons/hicolor
-@dirrm share/kde/apps/kdevcppsupport/icons
-@dirrm share/kde/apps/kdevcppsupport
-@dirrm share/kde/apps/kdevclassview/pics
-@dirrm share/kde/apps/kdevclassview
-@dirrm share/kde/apps/kdevbashsupport
-@dirrm share/kde/apps/kdevautoproject
-@dirrm share/kde/apps/kdevastyle
-@dirrm share/kde/apps/kdevassistant
-@dirrm share/kde/apps/kdevappwizard/templates
-@dirrm share/kde/apps/kdevappwizard/template-common
-@dirrm share/kde/apps/kdevappwizard/imports
-@dirrm share/kde/apps/kdevappwizard/importfiles
-@dirrm share/kde/apps/kdevappwizard
-@dirrm share/kde/apps/kdevappoutputview
-@dirrm share/kde/apps/kdevantproject
-@dirrm share/kde/apps/kdevadasupport
-@dirrm share/kde/apps/kdevadaproject
-@dirrm share/kde/apps/kdevabbrev/templates
-@dirrm share/kde/apps/kdevabbrev/sources
-@dirrm share/kde/apps/kdevabbrev
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/actions
-@comment in kde: @dirrm share/icons/locolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/actions
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/profileengine
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/src/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/src
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/interfaces
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts/documentation
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/parts
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/propeditor/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/propeditor/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/propeditor
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/widgets
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/util/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/util/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/util
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extras/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extras/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extras
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/external/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/external/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/external
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extensions/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extensions/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces/extensions
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/interfaces
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/lib/catalog/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/catalog/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib/catalog
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/interfaces/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/interfaces
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/designer_integration/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/designer_integration/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/designer_integration
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/debugger/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/debugger/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib/debugger
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/languages/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/languages
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/widgets/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/widgets/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/widgets
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/qmake/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/qmake/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/qmake
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/autotools/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/autotools/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers/autotools
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/parsers
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/html
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/base/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/base/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib/base
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/lib
 @exec ${MKDIR} %D/share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools/html
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs/buildtools
-@dirrm share/doc/kde/HTML/en/kdevelop-apidocs
-@dirrm share/doc/kde/HTML/en/kdevelop
-@dirrm share/doc/kde/HTML/en/kde_app_devel
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@comment in xdg-dirs: @dirrm share/desktop-directories
-@comment in kde: @dirrm share/applications/kde
-@comment in kde: @dirrm lib/kde3
-@comment in kde: @dirrm lib/kconf_update_bin
-@dirrm include/kinterfacedesigner
-@dirrm include/kdevelop/widgets
-@dirrm include/kdevelop/util
-@dirrm include/kdevelop/shell/profileengine
-@dirrm include/kdevelop/shell
-@dirrm include/kdevelop/propeditor
-@dirrm include/kdevelop/parts/documentation
-@dirrm include/kdevelop/parts
-@dirrm include/kdevelop/languages/interfaces
-@dirrm include/kdevelop/languages/designer_integration
-@dirrm include/kdevelop/languages/debugger
-@dirrm include/kdevelop/languages
-@dirrm include/kdevelop/interfaces/extras
-@dirrm include/kdevelop/interfaces/extensions/dcop
-@dirrm include/kdevelop/interfaces/extensions
-@dirrm include/kdevelop/interfaces
-@dirrm include/kdevelop/cppparser
-@dirrm include/kdevelop/catalog
-@dirrm include/kdevelop/buildtools/widgets
-@dirrm include/kdevelop/buildtools/parsers/qmake
-@dirrm include/kdevelop/buildtools/parsers
-@dirrm include/kdevelop/buildtools/base
-@dirrm include/kdevelop/buildtools
-@dirrm include/kdevelop

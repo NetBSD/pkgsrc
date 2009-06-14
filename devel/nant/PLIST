@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/07 03:01:10 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:59 joerg Exp $
 bin/nant
 share/NAnt/bin/NAnt.CompressionTasks.dll
 share/NAnt/bin/NAnt.CompressionTasks.dll.mdb
@@ -73,18 +73,3 @@ share/NAnt/bin/lib/net/2.0/nunit.framework.dll
 share/NAnt/bin/lib/net/2.0/nunit.util.dll
 share/NAnt/bin/log4net.dll
 share/NAnt/bin/scvs.exe
-@dirrm share/NAnt/bin/lib/net/2.0
-@dirrm share/NAnt/bin/lib/net/1.1
-@dirrm share/NAnt/bin/lib/net/1.0
-@dirrm share/NAnt/bin/lib/net
-@dirrm share/NAnt/bin/lib/mono/2.0
-@dirrm share/NAnt/bin/lib/mono/1.0
-@dirrm share/NAnt/bin/lib/mono
-@dirrm share/NAnt/bin/lib/common/neutral
-@dirrm share/NAnt/bin/lib/common
-@dirrm share/NAnt/bin/lib
-@dirrm share/NAnt/bin/extensions/common/2.0
-@dirrm share/NAnt/bin/extensions/common
-@dirrm share/NAnt/bin/extensions
-@dirrm share/NAnt/bin
-@dirrm share/NAnt

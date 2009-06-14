@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/02 20:36:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:47 joerg Exp $
 include/GTL/GTL.h
 include/GTL/algorithm.h
 include/GTL/bellman_ford.h
@@ -44,6 +44,3 @@ share/doc/GTL/platforms.html
 share/doc/GTL/refer.html
 share/doc/GTL/register.html
 share/doc/GTL/style.css
-@dirrm share/doc/GTL/icons
-@dirrm share/doc/GTL
-@dirrm include/GTL

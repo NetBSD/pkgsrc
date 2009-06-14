@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:25 joerg Exp $
 bin/notecase
 share/applications/notecase.desktop
 share/doc/notecase/help.ncd
@@ -37,7 +37,3 @@ share/locale/zh_CN/LC_MESSAGES/notecase.mo
 share/locale/zh_TW/LC_MESSAGES/notecase.mo
 share/mime/packages/notecase.xml
 share/pixmaps/notecase.xpm
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in shared-mime-info: @dirrm share/mime/packages
-@dirrm share/doc/notecase
-@comment in xdg-dirs: @dirrm share/applications

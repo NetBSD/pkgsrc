@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:37 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/log4r-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/examples/README
@@ -64,12 +64,3 @@ ${GEM_LIBDIR}/tests/testpatternformatter.rb
 ${GEM_LIBDIR}/tests/testxmlconf.rb
 ${GEM_LIBDIR}/tests/xml/testconf.xml
 ${GEM_HOME}/specifications/log4r-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tests/xml
-@dirrm ${GEM_LIBDIR}/tests
-@dirrm ${GEM_LIBDIR}/src/log4r/rdoc
-@dirrm ${GEM_LIBDIR}/src/log4r/outputter
-@dirrm ${GEM_LIBDIR}/src/log4r/lib
-@dirrm ${GEM_LIBDIR}/src/log4r/formatter
-@dirrm ${GEM_LIBDIR}/src/log4r
-@dirrm ${GEM_LIBDIR}/src
-@dirrm ${GEM_LIBDIR}/examples

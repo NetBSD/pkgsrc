@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/17 19:22:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:01 joerg Exp $
 bin/arcem
 share/arcem/HardImage1
 share/arcem/ROM
@@ -7,4 +7,3 @@ share/arcem/hexcmos
 @comment share/arcem/hexcmos.2
 @comment share/arcem/README
 @comment share/arcem/README.OrElse
-@dirrm share/arcem

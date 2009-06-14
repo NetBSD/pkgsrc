@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:50:21 joerg Exp $
 bin/cooledit
 bin/cooledit-gdb
 bin/coolman
@@ -60,6 +60,3 @@ share/locale/pt/LC_MESSAGES/cooledit.mo
 share/locale/ru/LC_MESSAGES/cooledit.mo
 share/locale/sl/LC_MESSAGES/cooledit.mo
 share/locale/sv/LC_MESSAGES/cooledit.mo
-@dirrm share/coolicon
-@dirrm share/cooledit/syntax
-@dirrm share/cooledit

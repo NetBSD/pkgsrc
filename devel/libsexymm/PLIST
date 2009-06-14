@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/17 19:10:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:55 joerg Exp $
 include/libsexymm/libsexymm.h
 include/libsexymm/libsexymm/icon-entry.h
 include/libsexymm/libsexymm/private/icon-entry_p.h
@@ -16,10 +16,3 @@ lib/libsexymm/include/libsexymmconfig.h
 lib/libsexymm/proc/m4/convert.m4
 lib/libsexymm/proc/m4/convert_libsexymm.m4
 lib/pkgconfig/libsexymm.pc
-@dirrm lib/libsexymm/proc/m4
-@dirrm lib/libsexymm/proc
-@dirrm lib/libsexymm/include
-@dirrm lib/libsexymm
-@dirrm include/libsexymm/libsexymm/private
-@dirrm include/libsexymm/libsexymm
-@dirrm include/libsexymm

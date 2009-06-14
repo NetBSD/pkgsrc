@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/10 09:55:40 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:41 joerg Exp $
 bin/distccmon-gnome
 share/distcc/distccmon-gnome-icon.png
 share/distcc/distccmon-gnome.desktop
-@comment in distcc: @dirrm share/distcc

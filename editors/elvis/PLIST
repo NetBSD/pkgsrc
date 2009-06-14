@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/04/22 16:23:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:21 joerg Exp $
 bin/elvfmt
 bin/elvis
 bin/elvtags
@@ -107,9 +107,3 @@ share/elvis/stubs/xpmstub.c
 share/elvis/tags
 share/elvis/themes/sand.ex
 share/elvis/themes/sand.xpm
-@dirrm share/elvis/themes
-@dirrm share/elvis/stubs
-@dirrm share/elvis/scripts
-@dirrm share/elvis/icons
-@dirrm share/doc/elvis
-@dirrm share/elvis

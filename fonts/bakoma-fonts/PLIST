@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:48:57 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:10 joerg Exp $
 share/tex-contrib/BaKoMa/BaKoMa-AMS.Fonts
 share/tex-contrib/BaKoMa/BaKoMa-CM.Fonts
 share/tex-contrib/BaKoMa/README.news
@@ -709,11 +709,3 @@ share/tex-contrib/BaKoMa/ttf/msbm6.ttf
 share/tex-contrib/BaKoMa/ttf/msbm7.ttf
 share/tex-contrib/BaKoMa/ttf/msbm8.ttf
 share/tex-contrib/BaKoMa/ttf/msbm9.ttf
-@dirrm share/tex-contrib/BaKoMa/ttf
-@dirrm share/tex-contrib/BaKoMa/tfm
-@dirrm share/tex-contrib/BaKoMa/pfm
-@dirrm share/tex-contrib/BaKoMa/pfb
-@dirrm share/tex-contrib/BaKoMa/etc
-@dirrm share/tex-contrib/BaKoMa/afm
-@dirrm share/tex-contrib/BaKoMa
-@dirrm share/tex-contrib

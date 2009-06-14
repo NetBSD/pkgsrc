@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2009/06/12 19:09:35 rillig Exp $
+@comment $NetBSD: PLIST,v 1.45 2009/06/14 17:49:01 joerg Exp $
 bin/pango-querymodules
 ${PLIST.carbon}bin/pango-view
 ${PLIST.x11}bin/pango-view
@@ -122,10 +122,3 @@ share/gtk-doc/html/pango/rotated-text.png
 share/gtk-doc/html/pango/style.css
 share/gtk-doc/html/pango/tools.html
 share/gtk-doc/html/pango/up.png
-@dirrm share/gtk-doc/html/pango
-@dirrm libdata/pango
-@dirrm lib/pango/1.6.0/modules
-@dirrm lib/pango/1.6.0
-@dirrm lib/pango
-@dirrm include/pango-1.0/pango
-@dirrm include/pango-1.0

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2006/04/12 18:30:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:49:03 joerg Exp $
 bin/ptlib-config
 include/ptbuildopts.h
 include/ptbuildopts.h.in
@@ -162,9 +162,3 @@ share/pwlib/make/pwlib.mak
 share/pwlib/make/qt.mak
 share/pwlib/make/unix.mak
 share/pwlib/make/xlib.mak
-@dirrm include/ptclib
-@dirrm include/ptlib/unix/ptlib
-@dirrm include/ptlib/unix
-@dirrm include/ptlib
-@dirrm share/pwlib/make
-@dirrm share/pwlib

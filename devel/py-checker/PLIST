@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/09/14 16:43:49 recht Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:04 joerg Exp $
 bin/pychecker${PYVERSSUFFIX}
 ${PYSITELIB}/pychecker/CodeChecks.py
 ${PYSITELIB}/pychecker/CodeChecks.pyc
@@ -45,4 +45,3 @@ ${PYSITELIB}/pychecker/utils.pyo
 ${PYSITELIB}/pychecker/warn.py
 ${PYSITELIB}/pychecker/warn.pyc
 ${PYSITELIB}/pychecker/warn.pyo
-@dirrm ${PYSITELIB}/pychecker

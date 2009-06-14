@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/04/09 02:13:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:26 joerg Exp $
 bin/Ted
 share/Ted/afm/Courier-Bold.afm
 share/Ted/afm/Courier-BoldOblique.afm
@@ -16,7 +16,3 @@ share/Ted/afm/Times-Roman.afm
 lib/X11/app-defaults/Ted
 share/doc/Ted/TedDocument-en_US.rtf
 share/Ted/ind/README.ind
-@dirrm share/Ted/afm
-@dirrm share/Ted/ind
-@dirrm share/Ted
-@dirrm share/doc/Ted

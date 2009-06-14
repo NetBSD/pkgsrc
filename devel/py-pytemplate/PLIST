@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/25 09:16:06 imil Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:05 joerg Exp $
 ${PYSITELIB}/pytemplate.py
 ${PYSITELIB}/pytemplate.pyc
 ${PYSITELIB}/pytemplate.pyo
 share/examples/pytemplate/daemonexample.py
 share/examples/pytemplate/example.py
 share/examples/pytemplate/threadexample.py
-@dirrm share/examples/pytemplate

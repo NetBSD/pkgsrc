@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/15 08:49:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/mocha-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -160,12 +160,3 @@ ${GEM_LIBDIR}/test/unit/state_machine_test.rb
 ${GEM_LIBDIR}/test/unit/string_inspect_test.rb
 ${GEM_LIBDIR}/test/unit/yield_parameters_test.rb
 ${GEM_HOME}/specifications/mocha-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/unit/parameter_matchers
-@dirrm ${GEM_LIBDIR}/test/unit
-@dirrm ${GEM_LIBDIR}/test/acceptance
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/mocha/parameter_matchers
-@dirrm ${GEM_LIBDIR}/lib/mocha
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}

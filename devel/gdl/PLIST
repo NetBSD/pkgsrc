@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/05/19 21:23:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:48:44 joerg Exp $
 include/libgdl-1.0/gdl/gdl-combo-button.h
 include/libgdl-1.0/gdl/gdl-dock-bar.h
 include/libgdl-1.0/gdl/gdl-dock-item.h
@@ -104,8 +104,3 @@ share/locale/vi/LC_MESSAGES/gdl-1.mo
 share/locale/zh_CN/LC_MESSAGES/gdl-1.mo
 share/locale/zh_HK/LC_MESSAGES/gdl-1.mo
 share/locale/zh_TW/LC_MESSAGES/gdl-1.mo
-@dirrm share/gtk-doc/html/gdl
-@dirrm share/gdl/glade
-@dirrm share/gdl
-@dirrm include/libgdl-1.0/gdl
-@dirrm include/libgdl-1.0

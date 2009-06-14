@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/30 08:23:15 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:45 joerg Exp $
 bin/gentle
 bin/reflex
 lib/grts.o
@@ -177,13 +177,3 @@ share/examples/gentle/virtual/build
 share/examples/gentle/virtual/machine.c
 share/examples/gentle/virtual/testfile
 share/examples/gentle/virtual/virtual.g
-@dirrm share/examples/gentle/virtual
-@dirrm share/examples/gentle/polish
-@dirrm share/examples/gentle/nested
-@dirrm share/examples/gentle/micro
-@dirrm share/examples/gentle/flat
-@dirrm share/examples/gentle/calc
-@dirrm share/examples/gentle
-@dirrm share/doc/html/gentle/html
-@dirrm share/doc/html/gentle
-@dirrm share/doc/gentle

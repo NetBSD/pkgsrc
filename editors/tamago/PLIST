@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:50:26 joerg Exp $
 ${EMACS_LISPPREFIX}/egg/egg-cnv.el
 ${EMACS_LISPPREFIX}/egg/egg-cnv.elc
 ${EMACS_LISPPREFIX}/egg/egg-com.el
@@ -65,6 +65,3 @@ ${EMACS_LISPPREFIX}/egg/its/zhuyin.elc
 ${EMACS_LISPPREFIX}/egg/leim-list.el
 ${EMACS_LISPPREFIX}/egg/menudiag.el
 ${EMACS_LISPPREFIX}/egg/menudiag.elc
-@dirrm ${EMACS_LISPPREFIX}/egg/egg
-@dirrm ${EMACS_LISPPREFIX}/egg/its
-@dirrm ${EMACS_LISPPREFIX}/egg

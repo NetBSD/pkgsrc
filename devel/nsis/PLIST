@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/15 17:27:19 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:00 joerg Exp $
 bin/makensis
 share/nsis/Bin/GenPat.exe
 share/nsis/Bin/LibraryLocal.exe
@@ -321,51 +321,3 @@ share/nsis/makensis
 share/nsis/makensis.exe
 share/nsis/makensisw.exe
 share/nsis/nsisconf.nsh
-@dirrm share/nsis/Stubs
-@dirrm share/nsis/Plugins
-@dirrm share/nsis/Menu/images
-@dirrm share/nsis/Menu
-@dirrm share/nsis/Include
-@dirrm share/nsis/Examples/nsExec
-@dirrm share/nsis/Examples/VPatch
-@dirrm share/nsis/Examples/UserInfo
-@dirrm share/nsis/Examples/System
-@dirrm share/nsis/Examples/StartMenu
-@dirrm share/nsis/Examples/Splash
-@dirrm share/nsis/Examples/Modern UI
-@dirrm share/nsis/Examples/Math
-@dirrm share/nsis/Examples/InstallOptions
-@dirrm share/nsis/Examples/BgImage
-@dirrm share/nsis/Examples/Banner
-@dirrm share/nsis/Examples/AdvSplash
-@dirrm share/nsis/Examples
-@dirrm share/nsis/Docs/nsExec
-@dirrm share/nsis/Docs/makensisw
-@dirrm share/nsis/Docs/VPatch
-@dirrm share/nsis/Docs/System
-@dirrm share/nsis/Docs/StrFunc
-@dirrm share/nsis/Docs/StartMenu
-@dirrm share/nsis/Docs/Splash
-@dirrm share/nsis/Docs/NSISdl
-@dirrm share/nsis/Docs/Modern UI/images
-@dirrm share/nsis/Docs/Modern UI
-@dirrm share/nsis/Docs/Math
-@dirrm share/nsis/Docs/InstallOptions
-@dirrm share/nsis/Docs/Dialer
-@dirrm share/nsis/Docs/BgImage
-@dirrm share/nsis/Docs/Banner
-@dirrm share/nsis/Docs/AdvSplash
-@dirrm share/nsis/Docs
-@dirrm share/nsis/Contrib/zip2exe
-@dirrm share/nsis/Contrib/UIs
-@dirrm share/nsis/Contrib/Modern UI/Language files
-@dirrm share/nsis/Contrib/Modern UI
-@dirrm share/nsis/Contrib/Language files
-@dirrm share/nsis/Contrib/Graphics/Wizard
-@dirrm share/nsis/Contrib/Graphics/Icons
-@dirrm share/nsis/Contrib/Graphics/Header
-@dirrm share/nsis/Contrib/Graphics/Checks
-@dirrm share/nsis/Contrib/Graphics
-@dirrm share/nsis/Contrib
-@dirrm share/nsis/Bin
-@dirrm share/nsis

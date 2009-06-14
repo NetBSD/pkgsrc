@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/05/21 16:04:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:50:21 joerg Exp $
 bin/dasher
 man/man1/dasher.1
 share/applications/dasher.desktop
@@ -442,37 +442,3 @@ share/omf/dasher/dasher-fr.omf
 share/omf/dasher/dasher-oc.omf
 share/omf/dasher/dasher-ru.omf
 share/omf/dasher/dasher-sv.omf
-@dirrm share/omf/dasher
-@comment in rarian: @dirrm share/omf
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/gnome/help/dasher/sv/figures
-@dirrm share/gnome/help/dasher/sv
-@dirrm share/gnome/help/dasher/ru/figures
-@dirrm share/gnome/help/dasher/ru
-@dirrm share/gnome/help/dasher/oc/figures
-@dirrm share/gnome/help/dasher/oc
-@dirrm share/gnome/help/dasher/fr/figures
-@dirrm share/gnome/help/dasher/fr
-@dirrm share/gnome/help/dasher/eu/figures
-@dirrm share/gnome/help/dasher/eu
-@dirrm share/gnome/help/dasher/es/figures
-@dirrm share/gnome/help/dasher/es
-@dirrm share/gnome/help/dasher/en_GB/figures
-@dirrm share/gnome/help/dasher/en_GB
-@dirrm share/gnome/help/dasher/el/figures
-@dirrm share/gnome/help/dasher/el
-@dirrm share/gnome/help/dasher/de/figures
-@dirrm share/gnome/help/dasher/de
-@dirrm share/gnome/help/dasher/C/figures
-@dirrm share/gnome/help/dasher/C
-@dirrm share/gnome/help/dasher
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/dasher
-@comment in xdg-dirs: @dirrm share/applications

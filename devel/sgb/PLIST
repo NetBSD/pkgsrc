@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/04 09:35:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:14 joerg Exp $
 include/gb_basic.h
 include/gb_books.h
 include/gb_dijk.h
@@ -34,7 +34,3 @@ share/sgb/data/lisa.dat
 share/sgb/data/miles.dat
 share/sgb/data/roget.dat
 share/sgb/data/words.dat
-@dirrm share/sgb/data
-@dirrm share/sgb
-@dirrm share/doc/sgb
-@dirrm lib/cweb

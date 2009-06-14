@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/05 21:43:34 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:24 joerg Exp $
 bin/lyx
 bin/lyxclient
 bin/tex2lyx
@@ -1249,65 +1249,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/hollywood.cls
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxchess.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/lyxskak.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx/revtex.cls
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/lyx
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm share/lyx/ui
-@dirrm share/lyx/templates
-@dirrm share/lyx/scripts
-@dirrm share/lyx/lyx2lyx
-@dirrm share/lyx/layouts
-@dirrm share/lyx/kbd
-@dirrm share/lyx/images/math
-@dirrm share/lyx/images
-@dirrm share/lyx/fonts
-@dirrm share/lyx/examples/sl
-@dirrm share/lyx/examples/ru
-@dirrm share/lyx/examples/ro
-@dirrm share/lyx/examples/pt
-@dirrm share/lyx/examples/pl
-@dirrm share/lyx/examples/nl
-@dirrm share/lyx/examples/ja
-@dirrm share/lyx/examples/it
-@dirrm share/lyx/examples/hu
-@dirrm share/lyx/examples/he
-@dirrm share/lyx/examples/gl
-@dirrm share/lyx/examples/fr
-@dirrm share/lyx/examples/fa
-@dirrm share/lyx/examples/eu
-@dirrm share/lyx/examples/es
-@dirrm share/lyx/examples/de
-@dirrm share/lyx/examples/da
-@dirrm share/lyx/examples/cs
-@dirrm share/lyx/examples/ca
-@dirrm share/lyx/examples
-@dirrm share/lyx/doc/sv
-@dirrm share/lyx/doc/sl
-@dirrm share/lyx/doc/sk
-@dirrm share/lyx/doc/ru
-@dirrm share/lyx/doc/ro
-@dirrm share/lyx/doc/pt
-@dirrm share/lyx/doc/pl
-@dirrm share/lyx/doc/nl
-@dirrm share/lyx/doc/nb
-@dirrm share/lyx/doc/it
-@dirrm share/lyx/doc/hu
-@dirrm share/lyx/doc/he
-@dirrm share/lyx/doc/gl
-@dirrm share/lyx/doc/fr/clipart
-@dirrm share/lyx/doc/fr
-@dirrm share/lyx/doc/eu
-@dirrm share/lyx/doc/es/clipart
-@dirrm share/lyx/doc/es
-@dirrm share/lyx/doc/de/clipart
-@dirrm share/lyx/doc/de
-@dirrm share/lyx/doc/da
-@dirrm share/lyx/doc/cs
-@dirrm share/lyx/doc/clipart
-@dirrm share/lyx/doc/biblio
-@dirrm share/lyx/doc
-@dirrm share/lyx/bind/sv
-@dirrm share/lyx/bind/pt
-@dirrm share/lyx/bind/fi
-@dirrm share/lyx/bind/de
-@dirrm share/lyx/bind
-@dirrm share/lyx

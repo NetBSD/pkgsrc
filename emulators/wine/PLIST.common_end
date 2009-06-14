@@ -1,14 +1,1 @@
-@comment $NetBSD: PLIST.common_end,v 1.1 2009/04/20 18:55:42 adam Exp $
-${PLIST.x11}@dirrm share/wine/fonts
-@dirrm share/wine
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm man/fr.UTF-8/man1
-@dirrm man/fr.UTF-8
-@dirrm man/de.UTF-8/man1
-@dirrm man/de.UTF-8
-@dirrm lib/wine
-@dirrm include/wine/windows/ddk
-@dirrm include/wine/windows
-@dirrm include/wine/msvcrt/sys
-@dirrm include/wine/msvcrt
-@dirrm include/wine
+@comment $NetBSD: PLIST.common_end,v 1.2 2009/06/14 17:51:10 joerg Exp $

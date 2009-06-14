@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/04/08 20:02:43 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:21 joerg Exp $
 bin/teach-ce
 share/doc/ce/FUNCTIONS
 share/doc/ce/TUTORIAL
 share/doc/ce/ce.help
-@dirrm share/doc/ce

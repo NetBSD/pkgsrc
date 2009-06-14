@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/26 06:53:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:48:45 joerg Exp $
 bin/envsubst
 bin/gettext
 bin/gettext.sh
@@ -170,4 +170,3 @@ share/locale/zh_CN/LC_MESSAGES/gettext-runtime.mo
 share/locale/zh_CN/LC_MESSAGES/gettext-tools.mo
 share/locale/zh_TW/LC_MESSAGES/gettext-runtime.mo
 share/locale/zh_TW/LC_MESSAGES/gettext-tools.mo
-@dirrm share/doc/gettext

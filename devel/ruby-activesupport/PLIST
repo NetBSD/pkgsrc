@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/04/07 17:13:26 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:49:08 joerg Exp $
 ${GEM_HOME}/cache/activesupport-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/README
@@ -340,59 +340,3 @@ ${GEM_LIBDIR}/lib/active_support/xml_mini/nokogiri.rb
 ${GEM_LIBDIR}/lib/active_support/xml_mini/rexml.rb
 ${GEM_LIBDIR}/lib/activesupport.rb
 ${GEM_HOME}/specifications/activesupport-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/active_support/xml_mini
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Pacific
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Europe
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Etc
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Australia
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Atlantic
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Asia
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/America/Indiana
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/America/Argentina
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/America
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Africa
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12/tzinfo
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/tzinfo-0.3.12
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/memcache-client-1.6.5
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test/locale
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/test
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/lib/i18n/backend
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/lib/i18n
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3/lib
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/i18n-0.1.3
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/builder-2.1.2/builder
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor/builder-2.1.2
-@dirrm ${GEM_LIBDIR}/lib/active_support/vendor
-@dirrm ${GEM_LIBDIR}/lib/active_support/values
-@dirrm ${GEM_LIBDIR}/lib/active_support/testing
-@dirrm ${GEM_LIBDIR}/lib/active_support/multibyte
-@dirrm ${GEM_LIBDIR}/lib/active_support/locale
-@dirrm ${GEM_LIBDIR}/lib/active_support/json/encoders
-@dirrm ${GEM_LIBDIR}/lib/active_support/json
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/time
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/string
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/range
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/process
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/pathname
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/object
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/numeric
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/module
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/kernel
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/integer
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/hash
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/float
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/file
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/date_time
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/date
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/class
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/cgi
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/bigdecimal
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/base64
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext/array
-@dirrm ${GEM_LIBDIR}/lib/active_support/core_ext
-@dirrm ${GEM_LIBDIR}/lib/active_support/cache/strategy
-@dirrm ${GEM_LIBDIR}/lib/active_support/cache
-@dirrm ${GEM_LIBDIR}/lib/active_support
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

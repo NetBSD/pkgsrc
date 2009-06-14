@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 21:20:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:13 joerg Exp $
 lib/X11/fonts/misc/10x20-ISO8859-1.pcf.gz
 lib/X11/fonts/misc/10x20-ISO8859-10.pcf.gz
 lib/X11/fonts/misc/10x20-ISO8859-11.pcf.gz
@@ -333,4 +333,3 @@ lib/X11/fonts/misc/9x18B-ISO8859-9.pcf.gz
 lib/X11/fonts/misc/9x18B.pcf.gz
 lib/X11/fonts/misc/k14.pcf.gz
 lib/X11/fonts/misc/nil2.pcf.gz
-@comment @dirrm lib/X11/fonts/misc

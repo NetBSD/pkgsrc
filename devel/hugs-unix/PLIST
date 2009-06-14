@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/03 18:52:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:48 joerg Exp $
 lib/hugs/packages/unix/System/Posix.hs
 lib/hugs/packages/unix/System/Posix/Directory.hs
 lib/hugs/packages/unix/System/Posix/Directory.so
@@ -28,11 +28,3 @@ lib/hugs/packages/unix/System/Posix/Unistd.so
 lib/hugs/packages/unix/System/Posix/User.hs
 lib/hugs/packages/unix/System/Posix/User.so
 lib/hugs/packages/unix/packages/unix/package.conf
-@dirrm lib/hugs/packages/unix/packages/unix
-@dirrm lib/hugs/packages/unix/packages
-@dirrm lib/hugs/packages/unix/System/Posix/Signals
-@dirrm lib/hugs/packages/unix/System/Posix/DynamicLinker
-@dirrm lib/hugs/packages/unix/System/Posix
-@dirrm lib/hugs/packages/unix/System
-@dirrm lib/hugs/packages/unix
-@comment in hugs: @dirrm lib/hugs/packages

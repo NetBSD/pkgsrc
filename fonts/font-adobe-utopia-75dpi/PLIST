@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/15 10:29:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:11 joerg Exp $
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-1.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-10.pcf.gz
 lib/X11/fonts/75dpi/UTBI__10-ISO8859-13.pcf.gz
@@ -200,7 +200,3 @@ lib/X11/fonts/75dpi/UTRG__24-ISO8859-4.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24-ISO8859-9.pcf.gz
 lib/X11/fonts/75dpi/UTRG__24.pcf.gz
 share/doc/font-adobe-utopia-75dpi/COPYING
-@dirrm share/doc/font-adobe-utopia-75dpi
-@comment @dirrm lib/X11/fonts/75dpi
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

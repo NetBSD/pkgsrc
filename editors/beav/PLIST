@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:22:35 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:21 joerg Exp $
 bin/beav
 man/man1/beav.1
 share/doc/beav/beav.txt
-@dirrm share/doc/beav

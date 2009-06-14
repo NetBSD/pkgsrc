@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/05/10 14:50:50 hasso Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:17 joerg Exp $
 bin/xsd
 include/xsd/cxx/auto-array.hxx
 include/xsd/cxx/compilers/vc-7/post.hxx
@@ -205,33 +205,3 @@ share/doc/xsd/default.css
 share/doc/xsd/future.xhtml
 share/doc/xsd/schema-authoring-guide.xhtml
 share/doc/xsd/xsd.xhtml
-@dirrm share/doc/xsd/cxx/tree/reference
-@dirrm share/doc/xsd/cxx/tree/manual
-@dirrm share/doc/xsd/cxx/tree/guide
-@dirrm share/doc/xsd/cxx/tree/dbxml
-@dirrm share/doc/xsd/cxx/tree
-@dirrm share/doc/xsd/cxx/parser/guide
-@dirrm share/doc/xsd/cxx/parser
-@dirrm share/doc/xsd/cxx
-@dirrm share/doc/xsd
-@dirrm share/doc/libxsd
-@dirrm include/xsd/cxx/xml/sax/bits
-@dirrm include/xsd/cxx/xml/sax
-@dirrm include/xsd/cxx/xml/dom/bits
-@dirrm include/xsd/cxx/xml/dom
-@dirrm include/xsd/cxx/xml/bits
-@dirrm include/xsd/cxx/xml
-@dirrm include/xsd/cxx/tree/serialization
-@dirrm include/xsd/cxx/tree/parsing
-@dirrm include/xsd/cxx/tree/bits
-@dirrm include/xsd/cxx/tree
-@dirrm include/xsd/cxx/parser/xerces
-@dirrm include/xsd/cxx/parser/validating
-@dirrm include/xsd/cxx/parser/non-validating
-@dirrm include/xsd/cxx/parser/expat
-@dirrm include/xsd/cxx/parser
-@dirrm include/xsd/cxx/compilers/vc-8
-@dirrm include/xsd/cxx/compilers/vc-7
-@dirrm include/xsd/cxx/compilers
-@dirrm include/xsd/cxx
-@dirrm include/xsd

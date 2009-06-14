@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/10/16 12:32:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 17:48:51 joerg Exp $
 bin/activation-client
 bin/bonobo-activation-run-query
 bin/bonobo-slay
@@ -260,19 +260,5 @@ share/locale/yi/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/libbonobo-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/libbonobo-2.0.mo
-@dirrm share/idl/bonobo-activation-2.0
-@dirrm share/idl/bonobo-2.0
-@comment in ORBit2: @dirrm share/idl
-@dirrm share/gtk-doc/html/libbonobo
-@dirrm share/gtk-doc/html/bonobo-activation
-@dirrm share/examples/bonobo-activation
-@comment in ORBit2: @dirrm lib/orbit-2.0
-@dirrm lib/bonobo/servers
 @unexec ${RMDIR} %D/lib/bonobo/monikers 2>/dev/null || ${TRUE}
-@dirrm lib/bonobo-2.0/samples
-@dirrm lib/bonobo-2.0
 @unexec ${RMDIR} %D/lib/bonobo 2>/dev/null || ${TRUE}
-@dirrm include/libbonobo-2.0/bonobo
-@dirrm include/libbonobo-2.0
-@dirrm include/bonobo-activation-2.0/bonobo-activation
-@dirrm include/bonobo-activation-2.0

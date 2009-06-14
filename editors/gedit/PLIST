@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/05/20 10:01:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/06/14 17:50:22 joerg Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-2.20/gedit/gedit-app.h
@@ -405,81 +405,6 @@ share/omf/gedit/gedit-uk.omf
 share/omf/gedit/gedit-zh_CN.omf
 share/omf/gedit/gedit-zh_HK.omf
 share/omf/gedit/gedit-zh_TW.omf
-@dirrm share/omf/gedit
-@comment in rarian: @dirrm share/omf
-@dirrm share/gtk-doc/html/gedit
-@dirrm share/gnome/help/gedit/zh_TW/figures
-@dirrm share/gnome/help/gedit/zh_TW
-@dirrm share/gnome/help/gedit/zh_HK/figures
-@dirrm share/gnome/help/gedit/zh_HK
-@dirrm share/gnome/help/gedit/zh_CN/figures
-@dirrm share/gnome/help/gedit/zh_CN
-@dirrm share/gnome/help/gedit/uk/figures
-@dirrm share/gnome/help/gedit/uk
-@dirrm share/gnome/help/gedit/th/figures
-@dirrm share/gnome/help/gedit/th
-@dirrm share/gnome/help/gedit/sv/figures
-@dirrm share/gnome/help/gedit/sv
-@dirrm share/gnome/help/gedit/ru/figures
-@dirrm share/gnome/help/gedit/ru
-@dirrm share/gnome/help/gedit/pt_BR/figures
-@dirrm share/gnome/help/gedit/pt_BR
-@dirrm share/gnome/help/gedit/oc/figures
-@dirrm share/gnome/help/gedit/oc
-@dirrm share/gnome/help/gedit/ko/figures
-@dirrm share/gnome/help/gedit/ko
-@dirrm share/gnome/help/gedit/ja/figures
-@dirrm share/gnome/help/gedit/ja
-@dirrm share/gnome/help/gedit/it/figures
-@dirrm share/gnome/help/gedit/it
-@dirrm share/gnome/help/gedit/hu/figures
-@dirrm share/gnome/help/gedit/hu
-@dirrm share/gnome/help/gedit/fr/figures
-@dirrm share/gnome/help/gedit/fr
-@dirrm share/gnome/help/gedit/fi/figures
-@dirrm share/gnome/help/gedit/fi
-@dirrm share/gnome/help/gedit/es/figures
-@dirrm share/gnome/help/gedit/es
-@dirrm share/gnome/help/gedit/el/figures
-@dirrm share/gnome/help/gedit/el
-@dirrm share/gnome/help/gedit/de/figures
-@dirrm share/gnome/help/gedit/de
-@dirrm share/gnome/help/gedit/da/figures
-@dirrm share/gnome/help/gedit/da
-@dirrm share/gnome/help/gedit/ca/figures
-@dirrm share/gnome/help/gedit/ca
-@dirrm share/gnome/help/gedit/bg/figures
-@dirrm share/gnome/help/gedit/bg
-@dirrm share/gnome/help/gedit/ar/figures
-@dirrm share/gnome/help/gedit/ar
-@dirrm share/gnome/help/gedit/C/figures
-@dirrm share/gnome/help/gedit/C
-@dirrm share/gnome/help/gedit
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome
-@dirrm share/gedit-2/ui
-@dirrm share/gedit-2/plugins/time
-@dirrm share/gedit-2/plugins/taglist
-${PLIST.enchant}@dirrm share/gedit-2/plugins/spell
-@dirrm share/gedit-2/plugins/sort
 @exec ${MKDIR} %D/share/gedit-2/plugins/sample
-@dirrm share/gedit-2/plugins/sample
-@dirrm share/gedit-2/plugins/modelines
 @exec ${MKDIR} %D/share/gedit-2/plugins/indent
-@dirrm share/gedit-2/plugins/indent
-@dirrm share/gedit-2/plugins/filebrowser
-@dirrm share/gedit-2/plugins/docinfo
 @exec ${MKDIR} %D/share/gedit-2/plugins/changecase
-@dirrm share/gedit-2/plugins/changecase
-@dirrm share/gedit-2/plugins
-@dirrm share/gedit-2/logo
-@dirrm share/gedit-2/icons
-@dirrm share/gedit-2
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm libexec/gedit-2
-@dirrm lib/gedit-2/plugins
-@dirrm lib/gedit-2/plugin-loaders
-@dirrm lib/gedit-2
-@dirrm include/gedit-2.20/gedit
-@dirrm include/gedit-2.20

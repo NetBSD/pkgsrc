@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/20 17:37:00 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:54:10 joerg Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -462,23 +462,4 @@ share/Adobe/Resource/rksj-cmaps/Hojo-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/KSC-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/KSC2-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
-@dirrm share/Adobe/Resource/rksj-cmaps
-@dirrm share/Adobe/Resource/pdfcorefonts/korean
-@dirrm share/Adobe/Resource/pdfcorefonts/japanese
-@dirrm share/Adobe/Resource/pdfcorefonts/chinese_t
-@dirrm share/Adobe/Resource/pdfcorefonts/chinese_s
-@dirrm share/Adobe/Resource/pdfcorefonts
-@dirrm share/Adobe/Resource/ak12/CMap
-@dirrm share/Adobe/Resource/ak12
-@dirrm share/Adobe/Resource/aj20/CMap
-@dirrm share/Adobe/Resource/aj20
-@dirrm share/Adobe/Resource/aj16/CMap
-@dirrm share/Adobe/Resource/aj16
-@dirrm share/Adobe/Resource/ai0/CMap
-@dirrm share/Adobe/Resource/ai0
-@dirrm share/Adobe/Resource/ag15/CMap
-@dirrm share/Adobe/Resource/ag15
-@dirrm share/Adobe/Resource/ac15/CMap
-@dirrm share/Adobe/Resource/ac15
-@dirrm share/Adobe/Resource/CMap
 @unexec ${RMDIR} -p %D/share/Adobe/Resource 2>/dev/null || ${TRUE}

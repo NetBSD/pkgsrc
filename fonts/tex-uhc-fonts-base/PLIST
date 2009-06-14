@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/15 19:54:20 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:15 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/gothic/ugt00.afm
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/gothic/ugt01.afm
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/gothic/ugt02.afm
@@ -4110,28 +4110,3 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/taza/wttxo6.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/taza/wttxo7.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/taza/wttxo8.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/taza/wttxo9.vf
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/map/hlatex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/taza
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/myoungjo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/gothic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc

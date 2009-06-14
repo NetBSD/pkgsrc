@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:50:23 joerg Exp $
 bin/leafpad
 share/applications/leafpad.desktop
 share/locale/bg/LC_MESSAGES/leafpad.mo
@@ -24,5 +24,3 @@ share/locale/vi/LC_MESSAGES/leafpad.mo
 share/locale/zh_CN/LC_MESSAGES/leafpad.mo
 share/locale/zh_TW/LC_MESSAGES/leafpad.mo
 share/pixmaps/leafpad.png
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/applications

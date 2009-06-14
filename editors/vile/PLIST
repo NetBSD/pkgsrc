@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/09/09 10:14:30 bjs Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:50:27 joerg Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -209,9 +209,3 @@ share/vile/xml.keywords
 share/vile/xres.keywords
 share/vile/xs.keywords
 share/vile/yacc.keywords
-@dirrm share/vile/perl/Vile
-@dirrm share/vile/perl
-@dirrm share/vile/doc
-@dirrm share/vile
-@dirrm share/examples/vile
-@dirrm libexec/vile

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/06 12:56:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:10 joerg Exp $
 bin/xhomer
 share/doc/xhomer/battery_backed_ram.html
 share/doc/xhomer/building.html
@@ -38,5 +38,3 @@ share/doc/xhomer/xhomer.html.middle
 share/doc/xhomer/xhomer.html.tail
 share/examples/xhomer/bat.ram
 share/examples/xhomer/xhomer.cfg
-@dirrm share/examples/xhomer
-@dirrm share/doc/xhomer

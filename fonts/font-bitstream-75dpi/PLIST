@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/15 13:36:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:12 joerg Exp $
 lib/X11/fonts/75dpi/charB08.pcf.gz
 lib/X11/fonts/75dpi/charB10.pcf.gz
 lib/X11/fonts/75dpi/charB12.pcf.gz
@@ -28,7 +28,3 @@ lib/X11/fonts/75dpi/techB14.pcf.gz
 lib/X11/fonts/75dpi/term14.pcf.gz
 lib/X11/fonts/75dpi/termB14.pcf.gz
 share/doc/font-bitstream-75dpi/COPYING
-@dirrm share/doc/font-bitstream-75dpi
-@comment @dirrm lib/X11/fonts/75dpi
-@comment @dirrm lib/X11/fonts
-@comment @dirrm lib/X11

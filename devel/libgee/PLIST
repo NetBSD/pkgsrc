@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/05 21:59:43 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:52 joerg Exp $
 include/gee-1.0/gee/arraylist.h
 include/gee-1.0/gee/collection.h
 include/gee-1.0/gee/hashmap.h
@@ -15,5 +15,3 @@ include/gee-1.0/gee/set.h
 lib/libgee.la
 lib/pkgconfig/gee-1.0.pc
 share/vala/vapi/gee-1.0.vapi
-@dirrm include/gee-1.0/gee
-@dirrm include/gee-1.0

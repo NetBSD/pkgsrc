@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/02/27 19:51:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:50:23 joerg Exp $
 bin/kdissert
 lib/kde3/libkdissOOOdoc.la
 lib/kde3/libkdissOOOdoc.so
@@ -78,7 +78,3 @@ share/locale/ru/LC_MESSAGES/kdissert.mo
 share/locale/sk/LC_MESSAGES/kdissert.mo
 share/locale/sv/LC_MESSAGES/kdissert.mo
 share/locale/tr/LC_MESSAGES/kdissert.mo
-@dirrm share/kde/apps/kdissertpart
-@dirrm share/kde/apps/kdissert/templatedata
-@dirrm share/kde/apps/kdissert/pics
-@dirrm share/kde/apps/kdissert

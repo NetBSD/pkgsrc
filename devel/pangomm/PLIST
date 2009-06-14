@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/17 22:10:15 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:02 joerg Exp $
 include/pangomm-1.4/pangomm.h
 include/pangomm-1.4/pangomm/attributes.h
 include/pangomm-1.4/pangomm/attriter.h
@@ -361,15 +361,3 @@ share/doc/pangomm-1.4/docs/reference/html/tabs.css
 share/doc/pangomm-1.4/docs/reference/html/types_8h.html
 share/doc/pangomm-1.4/docs/reference/widget_hierarchy.html
 share/doc/pangomm-1.4/docs/reference/widget_hierarchy.png
-@dirrm share/doc/pangomm-1.4/docs/reference/html
-@dirrm share/doc/pangomm-1.4/docs/reference
-@dirrm share/doc/pangomm-1.4/docs/images
-@dirrm share/doc/pangomm-1.4/docs
-@dirrm share/doc/pangomm-1.4
-@dirrm share/devhelp/books/pangomm-1.4
-@dirrm lib/pangomm-1.4/proc/m4
-@dirrm lib/pangomm-1.4/proc
-@dirrm lib/pangomm-1.4
-@dirrm include/pangomm-1.4/pangomm/private
-@dirrm include/pangomm-1.4/pangomm
-@dirrm include/pangomm-1.4

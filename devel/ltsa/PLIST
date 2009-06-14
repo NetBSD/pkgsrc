@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/29 22:21:19 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:57 joerg Exp $
 bin/ltsa
 lib/ltsa/jel.jar
 lib/ltsa/ltsa.jar
@@ -168,22 +168,3 @@ share/examples/ltsa/sceneanimations/xml/smallpuzzle.xml
 share/examples/ltsa/sceneanimations/xml/tictactoe.xml
 share/examples/ltsa/sceneanimations/xml/tile.xml
 share/examples/ltsa/sceneanimations/xml/window.xml
-@dirrm share/examples/ltsa/sceneanimations/xml/image
-@dirrm share/examples/ltsa/sceneanimations/xml
-@dirrm share/examples/ltsa/sceneanimations
-@dirrm share/examples/ltsa/chapter-examples/chapter9_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter8_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter7_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter6_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter5_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter4_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter3_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter2_lts/exercises
-@dirrm share/examples/ltsa/chapter-examples/chapter2_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter12_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter11_lts
-@dirrm share/examples/ltsa/chapter-examples/chapter10_lts
-@dirrm share/examples/ltsa/chapter-examples
-@dirrm share/examples/ltsa
-@dirrm share/doc/ltsa
-@dirrm lib/ltsa

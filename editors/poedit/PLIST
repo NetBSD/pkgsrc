@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:18 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:50:26 joerg Exp $
 bin/poedit
 man/man1/poedit.1
 share/gnome/apps/Development/poedit.desktop
@@ -68,25 +68,3 @@ share/poedit/help-gettext.zip
 share/poedit/help-hr.zip
 share/poedit/help.zip
 share/poedit/resources.zip
-@dirrm share/poedit
-@comment in xdg-dirs: @dirrm share/pixmaps
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/locale/tt/LC_MESSAGES
-@dirrm share/locale/tt
-@dirrm share/locale/sv_SE/LC_MESSAGES
-@dirrm share/locale/sv_SE
-@dirrm share/locale/ky/LC_MESSAGES
-@dirrm share/locale/ky
-@dirrm share/locale/fur/LC_MESSAGES
-@dirrm share/locale/fur
-@dirrm share/locale/fa_IR/LC_MESSAGES
-@dirrm share/locale/fa_IR
-@dirrm share/locale/es_PR/LC_MESSAGES
-@dirrm share/locale/es_PR
-@dirrm share/locale/ast/LC_MESSAGES
-@dirrm share/locale/ast
-@dirrm share/locale/am_ET/LC_MESSAGES
-@dirrm share/locale/am_ET
-@dirrm share/locale/af_ZA/LC_MESSAGES
-@dirrm share/locale/af_ZA
-@comment in gnome2-dirs: @dirrm share/gnome/apps/Development

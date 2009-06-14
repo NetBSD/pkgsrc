@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:16 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:45 joerg Exp $
 bin/${GNU_PROGRAM_PREFIX}indent
 bin/${GNU_PROGRAM_PREFIX}texinfo2man
 info/indent.info
@@ -21,4 +21,3 @@ share/locale/sk/LC_MESSAGES/indent.mo
 share/locale/sv/LC_MESSAGES/indent.mo
 share/locale/tr/LC_MESSAGES/indent.mo
 share/locale/zh_TW.Big5/LC_MESSAGES/indent.mo
-@dirrm share/doc/indent

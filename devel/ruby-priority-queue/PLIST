@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:11 joerg Exp $
 ${GEM_HOME}/cache/PriorityQueue-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGELOG
@@ -22,11 +22,3 @@ ${GEM_LIBDIR}/lib/priority_queue/ruby_priority_queue.rb
 ${GEM_LIBDIR}/setup.rb
 ${GEM_LIBDIR}/test/priority_queue_test.rb
 ${GEM_HOME}/specifications/PriorityQueue-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib/priority_queue
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/ext/priority_queue
-@dirrm ${GEM_LIBDIR}/ext
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}/benchmark
-@dirrm ${GEM_LIBDIR}

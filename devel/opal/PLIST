@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/18 11:58:08 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:49:01 joerg Exp $
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
 include/opal/asn/h235.h
@@ -149,22 +149,3 @@ lib/${OPALLIBDIR}/lid/vpb_lid_pwplugin.so
 lib/pkgconfig/opal.pc
 share/opal/opal_inc.mak
 share/opal/version.h
-@dirrm share/opal
-@dirrm lib/${OPALLIBDIR}/lid
-@dirrm lib/${OPALLIBDIR}/codecs/video
-@dirrm lib/${OPALLIBDIR}/codecs/audio
-@dirrm lib/${OPALLIBDIR}/codecs
-@dirrm lib/${OPALLIBDIR}
-@dirrm include/opal/zrtp
-@dirrm include/opal/t38
-@dirrm include/opal/t120
-@dirrm include/opal/sip
-@dirrm include/opal/rtp
-@dirrm include/opal/opal
-@dirrm include/opal/lids
-@dirrm include/opal/iax2
-@dirrm include/opal/h460
-@dirrm include/opal/h323
-@dirrm include/opal/codec
-@dirrm include/opal/asn
-@dirrm include/opal

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/12/16 18:10:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:48:45 joerg Exp $
 bin/glade-2
 share/applications/glade-2.desktop
 share/glade-2/gtk/autogen.sh
@@ -79,17 +79,4 @@ share/omf/glade-2/glade-faq-ro.omf
 share/omf/glade-2/glade-user-guide-C.omf
 share/pixmaps/glade-2.png
 share/pixmaps/glade-2/glade_logo.png
-@dirrm share/pixmaps/glade-2
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/glade-2
-@comment in scrollkeeper: @dirrm share/omf
 @exec ${MKDIR} %D/share/gnome/help/glade-2/ro/figures
-@dirrm share/gnome/help/glade-2/ro/figures
-@dirrm share/gnome/help/glade-2/ro
-@dirrm share/gnome/help/glade-2/C/figures
-@dirrm share/gnome/help/glade-2/C
-@dirrm share/gnome/help/glade-2
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@dirrm share/glade-2/gtk
-@dirrm share/glade-2
-@comment in xdg-dirs: @dirrm share/applications

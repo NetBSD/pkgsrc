@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:54:01 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:09 joerg Exp $
 bin/readdisk
 bin/uae
 share/doc/uae/FAQ
 share/doc/uae/README
-@dirrm share/doc/uae

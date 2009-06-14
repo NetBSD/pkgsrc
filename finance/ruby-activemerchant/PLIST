@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/12 14:02:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:53:35 joerg Exp $
 ${GEM_HOME}/cache/activemerchant-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/CONTRIBUTERS
@@ -268,36 +268,3 @@ ${GEM_LIBDIR}/test/unit/response_test.rb
 ${GEM_LIBDIR}/test/unit/utils_test.rb
 ${GEM_LIBDIR}/test/unit/validateable_test.rb
 ${GEM_HOME}/specifications/activemerchant-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test/unit/integrations/returns
-@dirrm ${GEM_LIBDIR}/test/unit/integrations/notifications
-@dirrm ${GEM_LIBDIR}/test/unit/integrations/helpers
-@dirrm ${GEM_LIBDIR}/test/unit/integrations
-@dirrm ${GEM_LIBDIR}/test/unit/generators
-@dirrm ${GEM_LIBDIR}/test/unit/gateways
-@dirrm ${GEM_LIBDIR}/test/unit
-@dirrm ${GEM_LIBDIR}/test/remote/integrations
-@dirrm ${GEM_LIBDIR}/test/remote/gateways
-@dirrm ${GEM_LIBDIR}/test/remote
-@dirrm ${GEM_LIBDIR}/test/extra
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/script
-@dirrm ${GEM_LIBDIR}/lib/certs
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/lib
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/two_checkout
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/quickpay
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/paypal
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/nochex
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/hi_trust
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/gestpay
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/chronopay
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations/bogus
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/integrations
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/sage
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/paypal
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/payflow
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways/beanstream
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing/gateways
-@dirrm ${GEM_LIBDIR}/lib/active_merchant/billing
-@dirrm ${GEM_LIBDIR}/lib/active_merchant
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

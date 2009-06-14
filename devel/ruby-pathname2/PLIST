@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/27 00:12:27 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:11 joerg Exp $
 ${GEM_HOME}/cache/pathname2-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MANIFEST
@@ -8,6 +8,3 @@ ${GEM_LIBDIR}/lib/pathname2.rb
 ${GEM_LIBDIR}/test/test_pathname.rb
 ${GEM_LIBDIR}/test/test_pathname_windows.rb
 ${GEM_HOME}/specifications/pathname2-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

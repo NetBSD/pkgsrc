@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/02/24 07:53:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 17:48:41 joerg Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -650,60 +650,3 @@ share/doc/doxygen/html/tab_r.gif
 share/doc/doxygen/html/tabs.css
 share/doc/doxygen/html/trouble.html
 share/doc/doxygen/html/xmlcmds.html
-@dirrm share/doc/doxygen/html
-@dirrm share/doc/doxygen/examples/template/html
-@dirrm share/doc/doxygen/examples/template
-@dirrm share/doc/doxygen/examples/tag/html
-@dirrm share/doc/doxygen/examples/tag
-@dirrm share/doc/doxygen/examples/structcmd/html
-@dirrm share/doc/doxygen/examples/structcmd
-@dirrm share/doc/doxygen/examples/restypedef/html
-@dirrm share/doc/doxygen/examples/restypedef
-@dirrm share/doc/doxygen/examples/relates/html
-@dirrm share/doc/doxygen/examples/relates
-@dirrm share/doc/doxygen/examples/qtstyle/html
-@dirrm share/doc/doxygen/examples/qtstyle
-@dirrm share/doc/doxygen/examples/pyexample/html
-@dirrm share/doc/doxygen/examples/pyexample
-@dirrm share/doc/doxygen/examples/par/html
-@dirrm share/doc/doxygen/examples/par
-@dirrm share/doc/doxygen/examples/page/html
-@dirrm share/doc/doxygen/examples/page
-@dirrm share/doc/doxygen/examples/overload/html
-@dirrm share/doc/doxygen/examples/overload
-@dirrm share/doc/doxygen/examples/mux/html
-@dirrm share/doc/doxygen/examples/mux
-@dirrm share/doc/doxygen/examples/memgrp/html
-@dirrm share/doc/doxygen/examples/memgrp
-@dirrm share/doc/doxygen/examples/manual/html
-@dirrm share/doc/doxygen/examples/manual
-@dirrm share/doc/doxygen/examples/jdstyle/html
-@dirrm share/doc/doxygen/examples/jdstyle
-@dirrm share/doc/doxygen/examples/include/html
-@dirrm share/doc/doxygen/examples/include
-@dirrm share/doc/doxygen/examples/group/html
-@dirrm share/doc/doxygen/examples/group
-@dirrm share/doc/doxygen/examples/func/html
-@dirrm share/doc/doxygen/examples/func
-@dirrm share/doc/doxygen/examples/file/html
-@dirrm share/doc/doxygen/examples/file
-@dirrm share/doc/doxygen/examples/example/html
-@dirrm share/doc/doxygen/examples/example
-@dirrm share/doc/doxygen/examples/enum/html
-@dirrm share/doc/doxygen/examples/enum
-@dirrm share/doc/doxygen/examples/docstring/html
-@dirrm share/doc/doxygen/examples/docstring
-@dirrm share/doc/doxygen/examples/diagrams/html
-@dirrm share/doc/doxygen/examples/diagrams
-@dirrm share/doc/doxygen/examples/define/html
-@dirrm share/doc/doxygen/examples/define
-@dirrm share/doc/doxygen/examples/class/html
-@dirrm share/doc/doxygen/examples/class
-@dirrm share/doc/doxygen/examples/autolink/html
-@dirrm share/doc/doxygen/examples/autolink
-@dirrm share/doc/doxygen/examples/author/html
-@dirrm share/doc/doxygen/examples/author
-@dirrm share/doc/doxygen/examples/afterdoc/html
-@dirrm share/doc/doxygen/examples/afterdoc
-@dirrm share/doc/doxygen/examples
-@dirrm share/doc/doxygen

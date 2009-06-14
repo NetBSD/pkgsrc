@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/15 01:16:49 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:13 joerg Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -539,14 +539,3 @@ lib/${PKGNAME}/SCons/exitfuncs.pyo
 man/man1/scons-time.1
 man/man1/scons.1
 man/man1/sconsign.1
-@dirrm lib/${PKGNAME}/SCons/compat
-@dirrm lib/${PKGNAME}/SCons/Variables
-@dirrm lib/${PKGNAME}/SCons/Tool/packaging
-@dirrm lib/${PKGNAME}/SCons/Tool
-@dirrm lib/${PKGNAME}/SCons/Script
-@dirrm lib/${PKGNAME}/SCons/Scanner
-@dirrm lib/${PKGNAME}/SCons/Platform
-@dirrm lib/${PKGNAME}/SCons/Options
-@dirrm lib/${PKGNAME}/SCons/Node
-@dirrm lib/${PKGNAME}/SCons
-@dirrm lib/${PKGNAME}

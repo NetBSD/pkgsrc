@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/03 18:44:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:06 joerg Exp $
 bin/nst
 share/doc/nestopia/README.Linux
 share/doc/nestopia/readme.html
 share/examples/nestopia/NstDatabase.xml
 share/examples/nestopia/nstcontrols
-@dirrm share/examples/nestopia
-@dirrm share/doc/nestopia

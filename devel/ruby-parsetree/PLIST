@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:11 joerg Exp $
 bin/parse_tree_abc
 bin/parse_tree_audit
 bin/parse_tree_deps
@@ -30,8 +30,3 @@ ${GEM_LIBDIR}/test/test_sexp_processor.rb
 ${GEM_LIBDIR}/test/test_unified_ruby.rb
 ${GEM_LIBDIR}/validate.sh
 ${GEM_HOME}/specifications/ParseTree-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/demo
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

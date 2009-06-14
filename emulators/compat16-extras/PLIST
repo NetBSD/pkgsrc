@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/21 22:49:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:02 joerg Exp $
 ${EMULSUBDIRSLASH}usr/X11R6/lib/libICE.so.6
 ${EMULSUBDIRSLASH}usr/X11R6/lib/libICE.so.6.3
 ${EMULSUBDIRSLASH}usr/X11R6/lib/libSM.so.6
@@ -92,9 +92,3 @@ ${EMULSUBDIRSLASH}usr/lib/libz.so.0
 ${EMULSUBDIRSLASH}usr/lib/libz.so.0.2
 ${EMULSUBDIRSLASH}usr/libexec/ld.elf_so
 ${EMULSUBDIRSLASH}usr/libexec/ld.so
-@dirrm ${EMULSUBDIRSLASH}usr/libexec
-@dirrm ${EMULSUBDIRSLASH}usr/lib/i18n
-@dirrm ${EMULSUBDIRSLASH}usr/lib
-@dirrm ${EMULSUBDIRSLASH}usr/X11R6/lib
-@dirrm ${EMULSUBDIRSLASH}usr/X11R6
-@dirrm ${EMULSUBDIRSLASH}usr

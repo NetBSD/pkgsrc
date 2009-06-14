@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2006/03/31 15:34:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:50:25 joerg Exp $
 bin/any2ps
 bin/b2m
 bin/coco
@@ -936,11 +936,3 @@ lib/mule/19.28/lisp/yow.elc
 @unexec f=%D/lib/mule/lock ; [ -d $f ] && ${RM} -rf $f
 @exec   f=%D/lib/mule/site-lisp ; [ ! -d $f ] && ${MKDIR} $f
 @unexec ${RMDIR} %D/lib/mule/site-lisp 2>/dev/null || ${TRUE}
-@dirrm lib/mule/19.28/lisp/its
-@dirrm lib/mule/19.28/lisp/quail
-@dirrm lib/mule/19.28/lisp/term
-@dirrm lib/mule/19.28/lisp
-@dirrm lib/mule/19.28/etc
-@dirrm lib/mule/19.28/${MACHINE_ARCH}--${LOWER_OPSYS}
-@dirrm lib/mule/19.28
-@dirrm lib/mule

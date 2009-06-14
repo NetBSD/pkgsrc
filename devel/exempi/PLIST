@@ -1,8 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/12 10:56:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:43 joerg Exp $
 include/exempi-2.0/exempi/xmp.h
 include/exempi-2.0/exempi/xmpconsts.h
 include/exempi-2.0/exempi/xmperrors.h
 lib/libexempi.la
 lib/pkgconfig/exempi-2.0.pc
-@dirrm include/exempi-2.0/exempi
-@dirrm include/exempi-2.0

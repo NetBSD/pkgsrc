@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:01 joerg Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/lwt
 lib/ocaml/site-lib/lwt/META
 lib/ocaml/site-lib/lwt/lwt.cma
@@ -68,5 +68,3 @@ share/doc/ocaml-lwt/type_Pqueue.OrderedType.html
 share/doc/ocaml-lwt/type_Pqueue.S.html
 share/doc/ocaml-lwt/type_Pqueue.html
 @exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/lwt
-@dirrm lib/ocaml/site-lib/lwt
-@dirrm share/doc/ocaml-lwt

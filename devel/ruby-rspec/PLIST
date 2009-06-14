@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/22 16:05:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:12 joerg Exp $
 bin/spec
 bin/spec_translator
 ${GEM_HOME}/cache/rspec-${PKGVERSION}.gem
@@ -377,77 +377,3 @@ ${GEM_LIBDIR}/stories/resources/stories/failing_story.rb
 ${GEM_LIBDIR}/stories/resources/test/spec_and_test_together.rb
 ${GEM_LIBDIR}/stories/resources/test/test_case_with_should_methods.rb
 ${GEM_HOME}/specifications/rspec-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/stories/resources/test
-@dirrm ${GEM_LIBDIR}/stories/resources/stories
-@dirrm ${GEM_LIBDIR}/stories/resources/steps
-@dirrm ${GEM_LIBDIR}/stories/resources/spec
-@dirrm ${GEM_LIBDIR}/stories/resources/matchers
-@dirrm ${GEM_LIBDIR}/stories/resources/helpers
-@dirrm ${GEM_LIBDIR}/stories/resources
-@dirrm ${GEM_LIBDIR}/stories/pending_stories
-@dirrm ${GEM_LIBDIR}/stories/mock_framework_integration
-@dirrm ${GEM_LIBDIR}/stories/interop
-@dirrm ${GEM_LIBDIR}/stories/example_groups
-@dirrm ${GEM_LIBDIR}/stories
-@dirrm ${GEM_LIBDIR}/spec/spec/story/runner
-@dirrm ${GEM_LIBDIR}/spec/spec/story/extensions
-@dirrm ${GEM_LIBDIR}/spec/spec/story
-@dirrm ${GEM_LIBDIR}/spec/spec/runner/spec_parser
-@dirrm ${GEM_LIBDIR}/spec/spec/runner/resources
-@dirrm ${GEM_LIBDIR}/spec/spec/runner/formatter/story
-@dirrm ${GEM_LIBDIR}/spec/spec/runner/formatter
-@dirrm ${GEM_LIBDIR}/spec/spec/runner
-@dirrm ${GEM_LIBDIR}/spec/spec/package
-@dirrm ${GEM_LIBDIR}/spec/spec/mocks
-@dirrm ${GEM_LIBDIR}/spec/spec/matchers
-@dirrm ${GEM_LIBDIR}/spec/spec/interop/test/unit/resources
-@dirrm ${GEM_LIBDIR}/spec/spec/interop/test/unit
-@dirrm ${GEM_LIBDIR}/spec/spec/interop/test
-@dirrm ${GEM_LIBDIR}/spec/spec/interop
-@dirrm ${GEM_LIBDIR}/spec/spec/extensions
-@dirrm ${GEM_LIBDIR}/spec/spec/expectations/extensions
-@dirrm ${GEM_LIBDIR}/spec/spec/expectations/differs
-@dirrm ${GEM_LIBDIR}/spec/spec/expectations
-@dirrm ${GEM_LIBDIR}/spec/spec/example/example_group
-@dirrm ${GEM_LIBDIR}/spec/spec/example
-@dirrm ${GEM_LIBDIR}/spec/spec
-@dirrm ${GEM_LIBDIR}/spec/autotest
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/rake_tasks
-@dirrm ${GEM_LIBDIR}/plugins/mock_frameworks
-@dirrm ${GEM_LIBDIR}/plugins
-@dirrm ${GEM_LIBDIR}/lib/spec/story/runner
-@dirrm ${GEM_LIBDIR}/lib/spec/story/extensions
-@dirrm ${GEM_LIBDIR}/lib/spec/story
-@dirrm ${GEM_LIBDIR}/lib/spec/runner/formatter/story
-@dirrm ${GEM_LIBDIR}/lib/spec/runner/formatter
-@dirrm ${GEM_LIBDIR}/lib/spec/runner
-@dirrm ${GEM_LIBDIR}/lib/spec/rake
-@dirrm ${GEM_LIBDIR}/lib/spec/mocks/extensions
-@dirrm ${GEM_LIBDIR}/lib/spec/mocks
-@dirrm ${GEM_LIBDIR}/lib/spec/matchers
-@dirrm ${GEM_LIBDIR}/lib/spec/interop/test/unit/ui/console
-@dirrm ${GEM_LIBDIR}/lib/spec/interop/test/unit/ui
-@dirrm ${GEM_LIBDIR}/lib/spec/interop/test/unit
-@dirrm ${GEM_LIBDIR}/lib/spec/interop/test
-@dirrm ${GEM_LIBDIR}/lib/spec/interop
-@dirrm ${GEM_LIBDIR}/lib/spec/extensions
-@dirrm ${GEM_LIBDIR}/lib/spec/expectations/extensions
-@dirrm ${GEM_LIBDIR}/lib/spec/expectations/differs
-@dirrm ${GEM_LIBDIR}/lib/spec/expectations
-@dirrm ${GEM_LIBDIR}/lib/spec/example
-@dirrm ${GEM_LIBDIR}/lib/spec
-@dirrm ${GEM_LIBDIR}/lib/autotest
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/failing_examples
-@dirrm ${GEM_LIBDIR}/examples/stories/steps
-@dirrm ${GEM_LIBDIR}/examples/stories/game-of-life/life
-@dirrm ${GEM_LIBDIR}/examples/stories/game-of-life/behaviour/stories
-@dirrm ${GEM_LIBDIR}/examples/stories/game-of-life/behaviour/examples
-@dirrm ${GEM_LIBDIR}/examples/stories/game-of-life/behaviour
-@dirrm ${GEM_LIBDIR}/examples/stories/game-of-life
-@dirrm ${GEM_LIBDIR}/examples/stories
-@dirrm ${GEM_LIBDIR}/examples/pure
-@dirrm ${GEM_LIBDIR}/examples
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/02/28 19:28:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:55 joerg Exp $
 bin/oil-bugreport
 include/liboil-0.3/liboil/liboil-stdint.h
 include/liboil-0.3/liboil/liboil.h
@@ -51,6 +51,3 @@ share/gtk-doc/html/liboil/liboil.devhelp2
 share/gtk-doc/html/liboil/right.png
 share/gtk-doc/html/liboil/style.css
 share/gtk-doc/html/liboil/up.png
-@dirrm share/gtk-doc/html/liboil
-@dirrm include/liboil-0.3/liboil
-@dirrm include/liboil-0.3

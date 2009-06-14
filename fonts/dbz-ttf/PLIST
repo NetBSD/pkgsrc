@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2005/09/29 13:46:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:54:11 joerg Exp $
 lib/X11/fonts/TTF/32768no.ttf
 lib/X11/fonts/TTF/7hours.ttf
 lib/X11/fonts/TTF/actionj.ttf
@@ -75,4 +75,3 @@ lib/X11/fonts/TTF/wolves.ttf
 lib/X11/fonts/TTF/yikatu.ttf
 lib/X11/fonts/TTF/zincboom.ttf
 share/doc/dbz-ttf/readme.txt
-@dirrm share/doc/dbz-ttf

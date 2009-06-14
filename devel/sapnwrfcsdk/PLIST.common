@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2009/03/09 16:53:17 sno Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2009/06/14 17:49:13 joerg Exp $
 include/sapuc.h
 include/sapdecf.h
 include/sapnwrfc.h
@@ -11,4 +11,3 @@ share/examples/sapnwrfcsdk/sapnwrfc.ini
 share/examples/sapnwrfcsdk/startrfc.h
 share/examples/sapnwrfcsdk/startrfc.cpp
 share/examples/sapnwrfcsdk/stfcDeepTableServer.c
-@dirrm share/examples/sapnwrfcsdk

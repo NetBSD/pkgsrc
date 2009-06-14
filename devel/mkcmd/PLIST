@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/11/12 19:09:19 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:58 joerg Exp $
 bin/mkcmd
 lib/mkcmd/cmd/add.m
 lib/mkcmd/cmd/add.mc
@@ -223,16 +223,3 @@ lib/mkcmd/xdr/Cstring.mh
 lib/mkcmd/xdr/Cstring.mi
 man/man1/mkcmd.1
 man/man5/mkcmd.5
-@dirrm lib/mkcmd/xdr
-@dirrm lib/mkcmd/util
-@dirrm lib/mkcmd/type
-@dirrm lib/mkcmd/time
-@dirrm lib/mkcmd/tftp
-@dirrm lib/mkcmd/std
-@dirrm lib/mkcmd/rpc
-@dirrm lib/mkcmd/glob
-@dirrm lib/mkcmd/getopt
-@dirrm lib/mkcmd/example
-@dirrm lib/mkcmd/dir
-@dirrm lib/mkcmd/cmd
-@dirrm lib/mkcmd

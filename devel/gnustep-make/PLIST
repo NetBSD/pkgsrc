@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2009/04/19 00:50:11 rh Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:48:46 joerg Exp $
 bin/debugapp
 bin/gnustep-config
 bin/openapp
@@ -126,18 +126,8 @@ man/man1/openapp.1
 man/man1/opentool.1
 man/man7/GNUstep.7
 man/man7/library-combo.7
-@dirrm share/examples/GNUstep
 @exec ${MKDIR} %D/share/GNUstep/Makefiles/${GNUSTEP_ARCH}
-@dirrm share/GNUstep/Makefiles/${GNUSTEP_ARCH}
-@dirrm share/GNUstep/Makefiles/Master
-@dirrm share/GNUstep/Makefiles/Instance/Shared
-@dirrm share/GNUstep/Makefiles/Instance/Documentation
-@dirrm share/GNUstep/Makefiles/Instance
 @exec ${MKDIR} %D/share/GNUstep/Makefiles/Auxiliary
-@dirrm share/GNUstep/Makefiles/Auxiliary
 @exec ${MKDIR} %D/share/GNUstep/Makefiles/Additional
-@dirrm share/GNUstep/Makefiles/Additional
-@dirrm share/GNUstep/Makefiles
 @unexec ${RMDIR} %D/share/GNUstep 2>/dev/null || ${TRUE}
-@dirrm share/GNUstep/Library
 @exec ${MKDIR} %D/share/GNUstep/Library

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/25 11:25:42 tnn Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:50:24 joerg Exp $
 bin/mined
 bin/minmacs
 bin/mpico
@@ -91,13 +91,3 @@ share/mined/setup_install/bin/mkicon
 share/mined/setup_install/bin/postinstall
 share/mined/setup_install/mined.desktop
 share/mined/setup_install/mined.ico
-@dirrm share/mined/setup_install/bin
-@dirrm share/mined/setup_install
-@dirrm share/mined/package_doc
-@dirrm share/mined/help
-@dirrm share/mined/doc_user
-@dirrm share/mined/conf_user/terminator
-@dirrm share/mined/conf_user/mlterm
-@dirrm share/mined/conf_user/konsole
-@dirrm share/mined/conf_user
-@dirrm share/mined

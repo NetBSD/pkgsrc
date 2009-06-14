@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/26 18:23:22 dillo Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
 bin/gens
 share/doc/gens/gens.txt
 share/gens/Gens2.ico
@@ -35,5 +35,3 @@ share/gens/resource.png
 share/gens/viewmag.png
 share/gens/viewmag1.png
 share/gens/xpaint.png
-@dirrm share/gens
-@dirrm share/doc/gens

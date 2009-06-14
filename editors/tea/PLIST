@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/14 04:49:08 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:26 joerg Exp $
 bin/tea
 share/doc/tea/AUTHORS
 share/doc/tea/COPYING
@@ -185,11 +185,3 @@ share/locale/sr/LC_MESSAGES/tea.mo
 share/locale/uk/LC_MESSAGES/tea.mo
 share/tea/pixmaps/tea_icon_v2.png
 share/tea/pixmaps/tea_logo.jpg
-@dirrm share/tea/pixmaps
-@dirrm share/tea
-@dirrm share/doc/tea/ru
-@dirrm share/doc/tea/es/img
-@dirrm share/doc/tea/es
-@dirrm share/doc/tea/en
-@dirrm share/doc/tea/cs
-@dirrm share/doc/tea

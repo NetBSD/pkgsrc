@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 10:38:01 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:51 joerg Exp $
 include/compizconfig/ccs-backend.h
 include/compizconfig/ccs.h
 lib/compiz/libccp.la
@@ -7,8 +7,3 @@ lib/libcompizconfig.la
 lib/pkgconfig/libcompizconfig.pc
 share/compizconfig/global.xml
 share/examples/compizconfig/config
-@dirrm share/examples/compizconfig
-@dirrm share/compizconfig
-@dirrm lib/compizconfig/backends
-@dirrm lib/compizconfig
-@dirrm include/compizconfig

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/13 10:14:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:12 joerg Exp $
 lib/X11/fonts/Type1/c0419bt_.afm
 lib/X11/fonts/Type1/c0419bt_.pfb
 lib/X11/fonts/Type1/c0582bt_.afm
@@ -16,4 +16,3 @@ lib/X11/fonts/Type1/c0648bt_.pfb
 lib/X11/fonts/Type1/c0649bt_.afm
 lib/X11/fonts/Type1/c0649bt_.pfb
 share/doc/font-bitstream-type1/COPYING
-@dirrm share/doc/font-bitstream-type1

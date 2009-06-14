@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/06/17 21:41:07 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:16 joerg Exp $
 bin/tla
 share/doc/tla/COPYING.html
 share/doc/tla/COPYING.txt
@@ -73,10 +73,3 @@ share/doc/tla/treedelta/rename.html
 share/doc/tla/treedelta/rename.txt
 share/doc/tla/treedelta/top-nav.html
 share/doc/tla/treedelta/top-nav.txt
-@dirrm share/doc/tla/treedelta
-@dirrm share/doc/tla/my
-@dirrm share/doc/tla/hacking
-@dirrm share/doc/tla/checkout
-@dirrm share/doc/tla/build
-@dirrm share/doc/tla/archreg
-@dirrm share/doc/tla

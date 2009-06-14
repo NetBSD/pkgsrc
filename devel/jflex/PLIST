@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/22 08:24:44 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
 bin/jflex
 lib/java/JFlex.jar
 share/doc/jflex/COPYRIGHT
@@ -72,13 +72,3 @@ share/examples/jflex/standalone/README
 share/examples/jflex/standalone/build.xml
 share/examples/jflex/standalone/sample.inp
 share/examples/jflex/standalone/standalone.flex
-@dirrm share/examples/jflex/standalone
-@dirrm share/examples/jflex/simple
-@dirrm share/examples/jflex/java
-@dirrm share/examples/jflex/interpreter
-@dirrm share/examples/jflex/cup
-@dirrm share/examples/jflex/byaccj
-@dirrm share/examples/jflex/binary
-@dirrm share/examples/jflex
-@dirrm share/doc/jflex
-@dirrm lib/java

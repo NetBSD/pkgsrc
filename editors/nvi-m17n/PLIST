@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/12/01 18:29:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:50:25 joerg Exp $
 bin/nex
 bin/nvi
 bin/nvi-big5
@@ -35,7 +35,3 @@ share/vi/tcl/errors.tcl
 share/vi/tcl/gnats.tcl
 share/vi/tcl/mailprocs.tcl
 share/vi/tcl/wc.tcl
-@dirrm share/vi/catalog
-@dirrm share/vi/perl
-@dirrm share/vi/tcl
-@dirrm share/vi

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/11/05 12:48:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:48:59 joerg Exp $
 bin/ldrdf
 bin/nasm
 bin/ndisasm
@@ -36,5 +36,3 @@ share/doc/nasm/html/nasmdocc.html
 share/doc/nasm/html/nasmdoci.html
 share/doc/nasm/nasmdoc.ps
 share/doc/nasm/nasmdoc.txt
-@dirrm share/doc/nasm/html
-@dirrm share/doc/nasm

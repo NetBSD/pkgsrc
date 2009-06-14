@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:23:09 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:25 joerg Exp $
 bin/ne
 man/man1/ne.1
 share/doc/ne/NE.spec.ascii
 share/doc/ne/NE.changes.spec
 share/doc/ne/LICENCE
-@dirrm share/doc/ne

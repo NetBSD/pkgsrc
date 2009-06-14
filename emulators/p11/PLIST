@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:51:07 joerg Exp $
 bin/p11
 ${PLIST.bpf}libexec/p11/epp_bpf
 libexec/p11/epp_fifo
@@ -16,5 +16,3 @@ share/p11/COPYRIGHT
 share/p11/boot.rom
 share/p11/mon.help
 share/p11/p11conf
-@dirrm share/p11
-@dirrm libexec/p11

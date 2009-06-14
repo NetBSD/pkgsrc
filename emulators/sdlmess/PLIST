@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/06 21:42:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:07 joerg Exp $
 bin/castool
 bin/imgtool
 bin/mess
@@ -376,8 +376,3 @@ share/mess/hash/vc4000.hsi
 share/mess/hash/vectrex.hsi
 share/mess/hash/vic20.hsi
 share/mess/hash/wswan.hsi
-@dirrm share/mess/hash
-@dirrm share/mess/artwork
-@dirrm share/mess
-@dirrm share/doc/mess/sysinfo
-@dirrm share/doc/mess
