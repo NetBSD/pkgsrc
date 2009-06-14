@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:54:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 19:01:13 joerg Exp $
 share/Adobe/Resource/CMap/78-EUC-H
 share/Adobe/Resource/CMap/78-EUC-V
 share/Adobe/Resource/CMap/78-H
@@ -462,4 +462,3 @@ share/Adobe/Resource/rksj-cmaps/Hojo-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/KSC-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/KSC2-RKSJ-H
 share/Adobe/Resource/rksj-cmaps/TCVN-RKSJ-H
-@unexec ${RMDIR} -p %D/share/Adobe/Resource 2>/dev/null || ${TRUE}
