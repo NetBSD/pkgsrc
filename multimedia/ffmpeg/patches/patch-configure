@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.5 2009/06/14 01:04:44 hasso Exp $
+
+--- configure.orig	2009-06-14 03:13:44 +0300
++++ configure	2009-06-14 03:20:42 +0300
+@@ -1632,6 +1632,8 @@ case $target_os in
+     freebsd)
+         disable need_memalign
+         ;;
++    dragonfly)
++        ;;
+     bsd/os)
+         osextralibs="-lpoll -lgnugetopt"
+         strip="strip -d"

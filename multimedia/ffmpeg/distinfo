@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.23 2009/06/12 16:25:34 ahoka Exp $
+$NetBSD: distinfo,v 1.24 2009/06/14 01:04:44 hasso Exp $
 
 SHA1 (ffmpeg-20090611.tar.bz2) = 04e67497f70c64b7a26534d4b67e3a46cdb4b219
 RMD160 (ffmpeg-20090611.tar.bz2) = 447a72cd1a416f926100c61299d9012535909d9a
 Size (ffmpeg-20090611.tar.bz2) = 2799194 bytes
-SHA1 (patch-aa) = dadd96835ffbf3a95a5de75647a72edb53171b6f
 SHA1 (patch-bktr) = dadd96835ffbf3a95a5de75647a72edb53171b6f
+SHA1 (patch-configure) = 13ca14bbcb544e7f5168517a0e2a6c6dc9826847
