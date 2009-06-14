@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:35:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:35 joerg Exp $
 ${WCALC_HTMLDIR}/AWG.html
 ${WCALC_HTMLDIR}/about.html
 ${WCALC_HTMLDIR}/air_coil.html
@@ -77,4 +77,3 @@ ${WCALC_HTMLDIR}/stdio-wcalc.html
 ${WCALC_HTMLDIR}/stripline.html
 ${WCALC_HTMLDIR}/tech.html
 ${WCALC_HTMLDIR}/units.html
-@unexec ${RMDIR} %D/${WCALC_HTMLDIR} 2>/dev/null || ${TRUE}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/31 12:48:33 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:16:34 joerg Exp $
 bin/convert_sym
 bin/garchive
 bin/gmk_sym
@@ -23,5 +23,3 @@ share/doc/geda-doc/readmes/README.gsch2pcb
 share/doc/geda-doc/readmes/README.olib
 share/doc/geda-doc/readmes/README.tragesym
 share/gEDA/system-gschlasrc
-@unexec ${RMDIR} %D/share/doc/geda-doc/readmes 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/doc/geda-doc 2>/dev/null || ${TRUE}

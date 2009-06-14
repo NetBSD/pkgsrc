@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 03:51:12 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:34 joerg Exp $
 bin/wcalc
 man/man1/wcalc.1
 share/${WCALC_DIR}/air_coil.wc
@@ -7,4 +7,3 @@ share/${WCALC_DIR}/coupled_microstrip.wc
 share/${WCALC_DIR}/ic_microstrip.wc
 share/${WCALC_DIR}/microstrip.wc
 share/${WCALC_DIR}/stripline.wc
-@unexec ${RMDIR} %D/share/${WCALC_DIR} 2>/dev/null || ${TRUE}
