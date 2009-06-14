@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2002/06/26 10:30:12 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:06:42 joerg Exp $
 bin/xdm3d
 share/xdm3d/GiveConsole
 share/xdm3d/TakeConsole
@@ -10,5 +10,5 @@ share/xdm3d/Xsetup_0
 share/xdm3d/chooser
 share/xdm3d/xdm-config
 share/xdm3d/Xresources
-@exec ${MKDIR} %D/share/xdm3d/authdir
+@pkgdir share/xdm3d/authdir
 @unexec ${RM} -rf %D/share/xdm3d
