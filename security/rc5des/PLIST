@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:39 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:13:38 joerg Exp $
 RC5/master.ini
 RC5/rc5.sh
 RC5/bin/config.guess
@@ -7,6 +7,3 @@ RC5/bin/v2.7024.409/rc5des-netbsd-arm32-1.3E
 RC5/bin/v2.7024.409/rc5des-netbsd-i386-1.2
 RC5/bin/v2.7024.409/rc5des-netbsd-i386-1.2G
 RC5/bin/v2.7024.409/rc5des-netbsd-i386-1.3.1
-@dirrm RC5/bin/v2.7024.409
-@dirrm RC5/bin
-@dirrm RC5

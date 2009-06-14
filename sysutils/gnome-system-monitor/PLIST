@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/05/26 18:47:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:16:06 joerg Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -251,33 +251,3 @@ share/omf/gnome-system-monitor/gnome-system-monitor-sv.omf
 share/pixmaps/gnome-system-monitor/download.svg
 share/pixmaps/gnome-system-monitor/side.png
 share/pixmaps/gnome-system-monitor/upload.svg
-@dirrm share/pixmaps/gnome-system-monitor
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/gnome-system-monitor
-@comment in rarian: @dirrm share/omf
-@dirrm share/gnome/help/gnome-system-monitor/sv/figures
-@dirrm share/gnome/help/gnome-system-monitor/sv
-@dirrm share/gnome/help/gnome-system-monitor/pa/figures
-@dirrm share/gnome/help/gnome-system-monitor/pa
-@dirrm share/gnome/help/gnome-system-monitor/oc/figures
-@dirrm share/gnome/help/gnome-system-monitor/oc
-@dirrm share/gnome/help/gnome-system-monitor/fr/figures
-@dirrm share/gnome/help/gnome-system-monitor/fr
-@dirrm share/gnome/help/gnome-system-monitor/es/figures
-@dirrm share/gnome/help/gnome-system-monitor/es
-@dirrm share/gnome/help/gnome-system-monitor/el/figures
-@dirrm share/gnome/help/gnome-system-monitor/el
-@dirrm share/gnome/help/gnome-system-monitor/de/figures
-@dirrm share/gnome/help/gnome-system-monitor/de
-@dirrm share/gnome/help/gnome-system-monitor/ca/figures
-@dirrm share/gnome/help/gnome-system-monitor/ca
-@dirrm share/gnome/help/gnome-system-monitor/bg/figures
-@dirrm share/gnome/help/gnome-system-monitor/bg
-@dirrm share/gnome/help/gnome-system-monitor/ar/figures
-@dirrm share/gnome/help/gnome-system-monitor/ar
-@dirrm share/gnome/help/gnome-system-monitor/C/figures
-@dirrm share/gnome/help/gnome-system-monitor/C
-@dirrm share/gnome/help/gnome-system-monitor
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications

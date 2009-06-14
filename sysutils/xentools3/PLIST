@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/03 16:45:27 hannken Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:16:21 joerg Exp $
 bin/pygrub
 bin/readnotes
 bin/xc_restore
@@ -371,25 +371,3 @@ share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
 share/xen/create.dtd
-@dirrm lib/fs/ext2fs
-@dirrm lib/fs/fat
-@dirrm lib/fs/iso9660
-@dirrm lib/fs/reiserfs
-@dirrm lib/fs/ufs
-@dirrm lib/fs
-@dirrm share/xen
-@dirrm share/examples/xen
-@dirrm ${PYSITELIB}/grub
-@dirrm ${PYSITELIB}/xen/xm/tests
-@dirrm ${PYSITELIB}/xen/xm
-@dirrm ${PYSITELIB}/xen/xend/xenstore/tests
-@dirrm ${PYSITELIB}/xen/xend/xenstore
-@dirrm ${PYSITELIB}/xen/xend/tests
-@dirrm ${PYSITELIB}/xen/xend/server/tests
-@dirrm ${PYSITELIB}/xen/xend/server
-@dirrm ${PYSITELIB}/xen/xend
-@dirrm ${PYSITELIB}/xen/web
-@dirrm ${PYSITELIB}/xen/util
-@dirrm ${PYSITELIB}/xen/sv
-@dirrm ${PYSITELIB}/xen/lowlevel
-@dirrm ${PYSITELIB}/xen

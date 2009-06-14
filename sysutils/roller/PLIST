@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/04/18 19:02:54 kim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:16:13 joerg Exp $
 sbin/logprune
 sbin/logroll
 sbin/roller
@@ -17,4 +17,3 @@ share/roller/proc-sendmail.st
 share/roller/proc-wtmp
 share/roller/proc-xferlog
 share/roller/tallyho
-@dirrm share/roller

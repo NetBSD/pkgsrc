@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/11 15:55:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:16:02 joerg Exp $
 bin/ccze
 bin/ccze-cssdump
 include/ccze.h
@@ -24,4 +24,3 @@ lib/ccze/xferlog.so
 man/man1/ccze-cssdump.1
 man/man1/ccze.1
 man/man7/ccze-plugin.7
-@dirrm lib/ccze

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/15 09:17:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:13:31 joerg Exp $
 bin/libfwbuilder-config-2.1
 include/fwb-2.1/fwbuilder/Address.h
 include/fwb-2.1/fwbuilder/AddressRange.h
@@ -129,9 +129,3 @@ share/libfwbuilder21/migration/FWObjectDatabase_2.1.6.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.7.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.8.xslt
 share/libfwbuilder21/migration/FWObjectDatabase_2.1.9.xslt
-@dirrm share/libfwbuilder21/migration
-@dirrm share/libfwbuilder21
-@dirrm share/doc/libfwbuilder-${PKGVERSION}
-@dirrm include/fwb-2.1/fwcompiler
-@dirrm include/fwb-2.1/fwbuilder
-@dirrm include/fwb-2.1

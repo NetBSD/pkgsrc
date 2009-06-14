@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2007/02/27 09:28:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:13:34 joerg Exp $
 share/Module-Signature/AUDREY2006.pub
 share/Module-Signature/PAUSE2003.pub
-@dirrm share/Module-Signature

@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2007/04/30 19:26:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2009/06/14 18:13:31 joerg Exp $
 bin/libmcrypt-config
 include/mcrypt.h
 include/mutils/mcrypt.h
 lib/libmcrypt.la
 man/man3/mcrypt.3
 share/aclocal/libmcrypt.m4
-@dirrm include/mutils

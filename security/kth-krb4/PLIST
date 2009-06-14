@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/07/27 18:47:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 18:13:31 joerg Exp $
 bin/afslog
 bin/compile_et
 bin/k4ftp
@@ -177,6 +177,3 @@ share/examples/kth-krb4/krb.conf
 share/examples/kth-krb4/krb.realms
 share/examples/kth-krb4/services-1.4.2.diff
 share/examples/kth-krb4/services-1.5.diff
-@dirrm share/examples/kth-krb4
-@dirrm include/kerberosIV/ss
-@dirrm include/kerberosIV

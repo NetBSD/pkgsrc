@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:16:04 joerg Exp $
 GNUstep/Apps/FSViewer.app/FSViewer
 GNUstep/Apps/FSViewer.app/MagicFiles
 GNUstep/Apps/FSViewer.app/tiff/FSViewer.tif
@@ -160,6 +160,3 @@ GNUstep/Apps/FSViewer.app/xpm/wmtime.xpm
 GNUstep/Apps/FSViewer.app/xpm/year.xpm
 share/locale/de/LC_MESSAGES/FSViewer.mo
 share/locale/ru/LC_MESSAGES/FSViewer.mo
-@dirrm GNUstep/Apps/FSViewer.app/xpm
-@dirrm GNUstep/Apps/FSViewer.app/tiff
-@dirrm GNUstep/Apps/FSViewer.app
