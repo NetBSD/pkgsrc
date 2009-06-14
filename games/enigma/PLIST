@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 19:10:36 joerg Exp $
 bin/enigma
 @comment include/enet/callbacks.h
 @comment include/enet/enet.h
@@ -2457,4 +2457,4 @@ share/locale/pt/LC_MESSAGES/enigma.mo
 share/locale/ru/LC_MESSAGES/enigma.mo
 share/locale/sv/LC_MESSAGES/enigma.mo
 share/pixmaps/enigma.png
-@exec ${MKDIR} %D/share/enigma/levels/enigma_stable
+@pkgdir share/enigma/levels/enigma_stable

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 19:10:35 joerg Exp $
 bin/bocursor
 bin/bodebugdialog
 bin/boinfo
@@ -1050,5 +1050,5 @@ share/kde/apps/boson/themes/ui/standard/stop.png
 share/kde/apps/boson/topui.rc
 share/kde/config/bodebug.areas
 share/kde/config/bodebugrc
-@exec ${MKDIR} %D/share/kde/apps/boson/themes/species/neutral/objects
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/boson/editor
+@pkgdir share/kde/apps/boson/themes/species/neutral/objects
+@pkgdir share/doc/kde/HTML/en/boson/editor

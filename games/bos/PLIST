@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:40 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 19:10:35 joerg Exp $
 bin/bos
 share/bos/data/graphics/elites/build/development_yard.png
 share/bos/data/graphics/elites/build/development_yard_i.png
@@ -283,67 +283,67 @@ share/bos/data/video/int_logo_bos.ogg
 share/bos/data/video/int_logo_stratagus.avi
 share/bos/data/video/int_logo_stratagus.ogg
 share/doc/bos/README.txt
-@exec ${MKDIR} %D/share/bos/data
-@exec ${MKDIR} %D/share/bos/data/campaigns
-@exec ${MKDIR} %D/share/bos/data/graphics
-@exec ${MKDIR} %D/share/bos/data/graphics/buttons
-@exec ${MKDIR} %D/share/bos/data/graphics/nature/build
-@exec ${MKDIR} %D/share/bos/data/graphics/nature/thingies
-@exec ${MKDIR} %D/share/bos/data/graphics/terras
-@exec ${MKDIR} %D/share/bos/data/graphics/terras/missile
-@exec ${MKDIR} %D/share/bos/data/graphics/terras/ui
-@exec ${MKDIR} %D/share/bos/data/graphics/terras/units
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/desert/elites
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/desert/elites/buildings
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/desert/neutral/units
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/swamp
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/wasteland
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/winter/elites
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/winter/elites/buildings
-@exec ${MKDIR} %D/share/bos/data/graphics/tilesets/winter/neutral/units
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/cursors
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/elites
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/elites/cursors
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/fonts
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/terras
-@exec ${MKDIR} %D/share/bos/data/graphics/ui/terras/cursors
-@exec ${MKDIR} %D/share/bos/data/scripts/terras
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/basic_voices
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/basic_voices/acknowledgement
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/basic_voices/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/basic_voices/help
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/basic_voices/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/cryofarm
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/units/peasant
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/units/peasant/acknowledgement
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/units/peasant/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/elites/units/peasant/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/misc
-@exec ${MKDIR} %D/share/bos/data/sounds/misc/building_explosion
-@exec ${MKDIR} %D/share/bos/data/sounds/misc/tree_chopping
-@exec ${MKDIR} %D/share/bos/data/sounds/missiles
-@exec ${MKDIR} %D/share/bos/data/sounds/missiles/sword_attack
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/buildings
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/pig
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/pig/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/pig/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/seal
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/seal/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/seal/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/sheep
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/sheep/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/sheep/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/warthog
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/warthog/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/neutral/units/warthog/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/spells
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/basic_voices
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/basic_voices/acknowledgement
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/basic_voices/annoyed
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/basic_voices/help
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/basic_voices/selected
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/buildings
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/units
-@exec ${MKDIR} %D/share/bos/data/sounds/terras/units/peon
+@pkgdir share/bos/data
+@pkgdir share/bos/data/campaigns
+@pkgdir share/bos/data/graphics
+@pkgdir share/bos/data/graphics/buttons
+@pkgdir share/bos/data/graphics/nature/build
+@pkgdir share/bos/data/graphics/nature/thingies
+@pkgdir share/bos/data/graphics/terras
+@pkgdir share/bos/data/graphics/terras/missile
+@pkgdir share/bos/data/graphics/terras/ui
+@pkgdir share/bos/data/graphics/terras/units
+@pkgdir share/bos/data/graphics/tilesets/desert/elites
+@pkgdir share/bos/data/graphics/tilesets/desert/elites/buildings
+@pkgdir share/bos/data/graphics/tilesets/desert/neutral/units
+@pkgdir share/bos/data/graphics/tilesets/swamp
+@pkgdir share/bos/data/graphics/tilesets/wasteland
+@pkgdir share/bos/data/graphics/tilesets/winter/elites
+@pkgdir share/bos/data/graphics/tilesets/winter/elites/buildings
+@pkgdir share/bos/data/graphics/tilesets/winter/neutral/units
+@pkgdir share/bos/data/graphics/ui/cursors
+@pkgdir share/bos/data/graphics/ui/elites
+@pkgdir share/bos/data/graphics/ui/elites/cursors
+@pkgdir share/bos/data/graphics/ui/fonts
+@pkgdir share/bos/data/graphics/ui/terras
+@pkgdir share/bos/data/graphics/ui/terras/cursors
+@pkgdir share/bos/data/scripts/terras
+@pkgdir share/bos/data/sounds/elites/basic_voices
+@pkgdir share/bos/data/sounds/elites/basic_voices/acknowledgement
+@pkgdir share/bos/data/sounds/elites/basic_voices/annoyed
+@pkgdir share/bos/data/sounds/elites/basic_voices/help
+@pkgdir share/bos/data/sounds/elites/basic_voices/selected
+@pkgdir share/bos/data/sounds/elites/cryofarm
+@pkgdir share/bos/data/sounds/elites/units/peasant
+@pkgdir share/bos/data/sounds/elites/units/peasant/acknowledgement
+@pkgdir share/bos/data/sounds/elites/units/peasant/annoyed
+@pkgdir share/bos/data/sounds/elites/units/peasant/selected
+@pkgdir share/bos/data/sounds/misc
+@pkgdir share/bos/data/sounds/misc/building_explosion
+@pkgdir share/bos/data/sounds/misc/tree_chopping
+@pkgdir share/bos/data/sounds/missiles
+@pkgdir share/bos/data/sounds/missiles/sword_attack
+@pkgdir share/bos/data/sounds/neutral
+@pkgdir share/bos/data/sounds/neutral/buildings
+@pkgdir share/bos/data/sounds/neutral/units
+@pkgdir share/bos/data/sounds/neutral/units/pig
+@pkgdir share/bos/data/sounds/neutral/units/pig/annoyed
+@pkgdir share/bos/data/sounds/neutral/units/pig/selected
+@pkgdir share/bos/data/sounds/neutral/units/seal
+@pkgdir share/bos/data/sounds/neutral/units/seal/annoyed
+@pkgdir share/bos/data/sounds/neutral/units/seal/selected
+@pkgdir share/bos/data/sounds/neutral/units/sheep
+@pkgdir share/bos/data/sounds/neutral/units/sheep/annoyed
+@pkgdir share/bos/data/sounds/neutral/units/sheep/selected
+@pkgdir share/bos/data/sounds/neutral/units/warthog
+@pkgdir share/bos/data/sounds/neutral/units/warthog/annoyed
+@pkgdir share/bos/data/sounds/neutral/units/warthog/selected
+@pkgdir share/bos/data/sounds/spells
+@pkgdir share/bos/data/sounds/terras/basic_voices
+@pkgdir share/bos/data/sounds/terras/basic_voices/acknowledgement
+@pkgdir share/bos/data/sounds/terras/basic_voices/annoyed
+@pkgdir share/bos/data/sounds/terras/basic_voices/help
+@pkgdir share/bos/data/sounds/terras/basic_voices/selected
+@pkgdir share/bos/data/sounds/terras/buildings
+@pkgdir share/bos/data/sounds/terras/units
+@pkgdir share/bos/data/sounds/terras/units/peon

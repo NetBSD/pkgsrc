@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:55 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 19:10:38 joerg Exp $
 lib/lokigames/rtcw/CHANGES
 lib/lokigames/rtcw/Docs/ATVIsmall.jpg
 lib/lokigames/rtcw/Docs/Dedicated Server Notes.html
@@ -229,5 +229,5 @@ lib/lokigames/rtcw/setup.data/setup.glade
 lib/lokigames/rtcw/setup.data/setup.xml
 lib/lokigames/rtcw/setup.data/splash.xpm
 lib/lokigames/rtcw/setup.sh
-@exec ${MKDIR} %D/lib/lokigames/rtcw/setup.data/bin/Linux/x86/plugins
-@exec ${MKDIR} %D/lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/plugins
+@pkgdir lib/lokigames/rtcw/setup.data/bin/Linux/x86/plugins
+@pkgdir lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/plugins

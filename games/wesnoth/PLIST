@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2009/06/14 17:56:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.30 2009/06/14 19:10:38 joerg Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnoth.6
@@ -9428,43 +9428,3 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
-@exec ${MKDIR} %D/man/zh_TW/man6
-@unexec ${RMDIR} %D/man/zh_TW/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/zh_TW 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/zh_CN/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/zh_CN 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/tr/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/tr 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/sv/man6
-@unexec ${RMDIR} %D/man/sv/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sv 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/sr@latin/man6
-@unexec ${RMDIR} %D/man/sr@latin/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sr@latin 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/sr/man6
-@unexec ${RMDIR} %D/man/sr/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sr 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sk/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/sk 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/racv/man6
-@unexec ${RMDIR} %D/man/racv/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/racv 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/nl/man6
-@unexec ${RMDIR} %D/man/nl/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/nl 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/lt/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/lt 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/ja/man6
-@unexec ${RMDIR} %D/man/ja/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/ja 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/it/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/hu/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/hu 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/gl/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/gl 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/en_GB/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/en_GB 2>/dev/null || ${TRUE}
-@exec ${MKDIR} %D/man/da/man6
-@unexec ${RMDIR} %D/man/da/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/da 2>/dev/null || ${TRUE}

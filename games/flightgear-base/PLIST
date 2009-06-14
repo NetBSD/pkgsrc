@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 19:10:36 joerg Exp $
 share/FlightGear/AI/Aircraft/737/737-Adria.xml
 share/FlightGear/AI/Aircraft/737/737-AerLingus.xml
 share/FlightGear/AI/Aircraft/737/737-Aeroflot.xml
@@ -6234,4 +6234,4 @@ share/FlightGear/mice.xml
 share/FlightGear/options.xml
 share/FlightGear/preferences.xml
 share/FlightGear/version
-@exec ${MKDIR} %D/share/FlightGear/Aircraft/Instruments-3d/mk-viii/Textures/gpws/xcf
+@pkgdir share/FlightGear/Aircraft/Instruments-3d/mk-viii/Textures/gpws/xcf
