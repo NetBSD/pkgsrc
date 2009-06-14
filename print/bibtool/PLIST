@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/03/31 03:11:56 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:54 joerg Exp $
 bin/bibtool
 lib/BibTool/braces.rsc
 lib/BibTool/check_y.rsc
@@ -16,6 +16,3 @@ share/doc/BibTool/c_lib.dvi
 share/doc/BibTool/ref_card.dvi
 share/examples/BibTool/bibtool.pl
 share/examples/BibTool/bibtool.tcl
-@dirrm share/examples/BibTool
-@dirrm share/doc/BibTool
-@dirrm lib/BibTool

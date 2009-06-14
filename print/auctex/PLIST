@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/01/17 13:18:42 tonio Exp $
+@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:11:53 joerg Exp $
 ${EMACS_INFOPREFIX}/auctex.info
 ${EMACS_LISPPREFIX}/auctex.el
 ${EMACS_LISPPREFIX}/auctex/bib-cite.el
@@ -235,7 +235,3 @@ ${EMACS_LISPPREFIX}/auctex/toolbar-x.el
 ${EMACS_LISPPREFIX}/auctex/toolbar-x.elc
 ${EMACS_LISPPREFIX}/tex-site.el
 var/auctex/.nosearch
-@dirrm var/auctex
-@dirrm ${EMACS_LISPPREFIX}/auctex/style
-@dirrm ${EMACS_LISPPREFIX}/auctex/images
-@dirrm ${EMACS_LISPPREFIX}/auctex

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/01/13 10:18:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:58 joerg Exp $
 include/poppler/poppler-link-qt3.h
 include/poppler/poppler-page-transition.h
 include/poppler/poppler-qt.h
 lib/libpoppler-qt.la
 lib/pkgconfig/poppler-qt.pc
-@comment in poppler: @dirrm include/poppler

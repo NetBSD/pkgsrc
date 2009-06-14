@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/07 03:26:16 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:12:02 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb/ocrbinfo
 ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10.mf
 ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb10e.mf
@@ -15,5 +15,3 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrb9.mf
 ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrbdef.mf
 ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb/ocrbmac.mf
 @unexec ${RM} -rf %D/${LOCALTEXMF}/fonts/tfm/ocrb || ${TRUE}
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/source/ocrb
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/fonts/ocrb

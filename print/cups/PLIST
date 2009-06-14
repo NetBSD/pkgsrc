@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2009/06/03 10:20:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2009/06/14 18:11:54 joerg Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -1717,105 +1717,23 @@ share/locale/ru/cups_ru.po
 share/locale/sv/cups_sv.po
 share/locale/zh/cups_zh.po
 share/locale/zh_TW/cups_zh_TW.po
-@dirrm share/examples/cups
-@dirrm share/doc/cups/zh_TW/images
-@dirrm share/doc/cups/zh_TW
 @exec ${MKDIR} %D/share/doc/cups/zh/images
-@dirrm share/doc/cups/zh/images
-@dirrm share/doc/cups/zh
-@dirrm share/doc/cups/sv/images
-@dirrm share/doc/cups/sv
 @exec ${MKDIR} %D/share/doc/cups/ru/images
-@dirrm share/doc/cups/ru/images
-@dirrm share/doc/cups/ru
 @exec ${MKDIR} %D/share/doc/cups/pt_BR/images
-@dirrm share/doc/cups/pt_BR/images
-@dirrm share/doc/cups/pt_BR
 @exec ${MKDIR} %D/share/doc/cups/pt/images
-@dirrm share/doc/cups/pt/images
-@dirrm share/doc/cups/pt
-@dirrm share/doc/cups/pl/images
-@dirrm share/doc/cups/pl
 @exec ${MKDIR} %D/share/doc/cups/no/images
-@dirrm share/doc/cups/no/images
-@dirrm share/doc/cups/no
 @exec ${MKDIR} %D/share/doc/cups/nl/images
-@dirrm share/doc/cups/nl/images
-@dirrm share/doc/cups/nl
 @exec ${MKDIR} %D/share/doc/cups/ko/images
-@dirrm share/doc/cups/ko/images
-@dirrm share/doc/cups/ko
-@dirrm share/doc/cups/ja/images
-@dirrm share/doc/cups/ja
-@dirrm share/doc/cups/it/images
-@dirrm share/doc/cups/it
-@dirrm share/doc/cups/images
-@dirrm share/doc/cups/id/images
-@dirrm share/doc/cups/id
-@dirrm share/doc/cups/help
-@dirrm share/doc/cups/he/images
-@dirrm share/doc/cups/he
-@dirrm share/doc/cups/fr/images
-@dirrm share/doc/cups/fr
 @exec ${MKDIR} %D/share/doc/cups/fi/images
-@dirrm share/doc/cups/fi/images
-@dirrm share/doc/cups/fi
-@dirrm share/doc/cups/et/images
-@dirrm share/doc/cups/et
-@dirrm share/doc/cups/es/images
-@dirrm share/doc/cups/es
-@dirrm share/doc/cups/de/images
-@dirrm share/doc/cups/de
 @exec ${MKDIR} %D/share/doc/cups/da/images
-@dirrm share/doc/cups/da/images
-@dirrm share/doc/cups/da
-@dirrm share/doc/cups
-@dirrm share/cups/templates/zh_TW
 @exec ${MKDIR} %D/share/cups/templates/zh
-@dirrm share/cups/templates/zh
-@dirrm share/cups/templates/sv
 @exec ${MKDIR} %D/share/cups/templates/ru
-@dirrm share/cups/templates/ru
 @exec ${MKDIR} %D/share/cups/templates/pt_BR
-@dirrm share/cups/templates/pt_BR
 @exec ${MKDIR} %D/share/cups/templates/pt
-@dirrm share/cups/templates/pt
-@dirrm share/cups/templates/pl
 @exec ${MKDIR} %D/share/cups/templates/no
-@dirrm share/cups/templates/no
 @exec ${MKDIR} %D/share/cups/templates/nl
-@dirrm share/cups/templates/nl
 @exec ${MKDIR} %D/share/cups/templates/ko
-@dirrm share/cups/templates/ko
-@dirrm share/cups/templates/ja
-@dirrm share/cups/templates/it
-@dirrm share/cups/templates/id
-@dirrm share/cups/templates/he
-@dirrm share/cups/templates/fr
 @exec ${MKDIR} %D/share/cups/templates/fi
-@dirrm share/cups/templates/fi
-@dirrm share/cups/templates/et
-@dirrm share/cups/templates/es
-@dirrm share/cups/templates/de
 @exec ${MKDIR} %D/share/cups/templates/da
-@dirrm share/cups/templates/da
-@dirrm share/cups/templates
 @exec ${MKDIR} %D/share/cups/profiles
-@dirrm share/cups/profiles
-@dirrm share/cups/model
-@dirrm share/cups/fonts
-@dirrm share/cups/data
-@dirrm share/cups/charsets
-@dirrm share/cups/charmaps
-@dirrm share/cups/banners
-@dirrm share/cups
-@dirrm libexec/cups/notifier
-@dirrm libexec/cups/monitor
-@dirrm libexec/cups/filter
 @exec ${MKDIR} %D/libexec/cups/driver
-@dirrm libexec/cups/driver
-@dirrm libexec/cups/daemon
-@dirrm libexec/cups/cgi-bin
-@dirrm libexec/cups/backend
-@dirrm libexec/cups
-@dirrm include/cups

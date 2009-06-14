@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:27 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:52 joerg Exp $
 share/doc/LPRng/LISA98.ps
 share/doc/LPRng/LPRng-HOWTO-1.html
 share/doc/LPRng/LPRng-HOWTO-10.html
@@ -37,4 +37,3 @@ share/doc/LPRng/lprng.html
 share/doc/LPRng/rfc1179.txt
 share/doc/LPRng/star1.gif
 share/doc/LPRng/y2k.txt
-@dirrm share/doc/LPRng

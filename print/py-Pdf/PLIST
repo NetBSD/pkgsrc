@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/01/27 20:32:37 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:59 joerg Exp $
 ${PYSITELIB}/pyPdf/__init__.py
 ${PYSITELIB}/pyPdf/__init__.pyc
 ${PYSITELIB}/pyPdf/__init__.pyo
@@ -17,4 +17,3 @@ ${PYSITELIB}/pyPdf/utils.pyo
 ${PYSITELIB}/pyPdf/xmp.py
 ${PYSITELIB}/pyPdf/xmp.pyc
 ${PYSITELIB}/pyPdf/xmp.pyo
-@dirrm ${PYSITELIB}/pyPdf

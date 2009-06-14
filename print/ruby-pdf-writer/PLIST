@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:20:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:59 joerg Exp $
 bin/techbook
 ${GEM_HOME}/cache/pdf-writer-${PKGVERSION}.gem
 ${GEM_LIBDIR}/ChangeLog
@@ -70,15 +70,3 @@ ${GEM_LIBDIR}/lib/pdf/writer/state.rb
 ${GEM_LIBDIR}/lib/pdf/writer/strokestyle.rb
 ${GEM_LIBDIR}/manual.pwd
 ${GEM_HOME}/specifications/pdf-writer-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/pdf/writer/object
-@dirrm ${GEM_LIBDIR}/lib/pdf/writer/lang
-@dirrm ${GEM_LIBDIR}/lib/pdf/writer/graphics
-@dirrm ${GEM_LIBDIR}/lib/pdf/writer/fonts
-@dirrm ${GEM_LIBDIR}/lib/pdf/writer
-@dirrm ${GEM_LIBDIR}/lib/pdf/charts
-@dirrm ${GEM_LIBDIR}/lib/pdf
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/images
-@dirrm ${GEM_LIBDIR}/demo
-@dirrm ${GEM_LIBDIR}/bin
-@dirrm ${GEM_LIBDIR}

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/06 09:31:59 is Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:12:02 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/AUTHORS
 ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/ChangeLog
 ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/FILES
@@ -327,54 +327,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgfcalendar.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgffor.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgfkeys.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities/pgfrcs.tex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/utilities
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/systemlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/math
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/frontendlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf/basiclayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain/pgf
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/plain
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/utilities
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/systemlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/math
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/frontendlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/compatibility
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf/basiclayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/pgf
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/utilities
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/systemlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/modules
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/math
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/libraries
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/frontendlayer/tikz/libraries
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/frontendlayer/tikz
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/frontendlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf/basiclayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic/pgf
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/generic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/utilities
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/systemlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/math
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/frontendlayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf/basiclayer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context/pgf
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/context
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en/plots
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex/en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-vtex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht/en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-tex4ht
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex/en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-pdftex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips/en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvips
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm/en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/version-for-dvipdfm
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en/plots
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/text-en
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/macros
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/licenses
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf/images
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic/pgf
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/generic

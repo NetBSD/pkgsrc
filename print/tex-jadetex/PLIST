@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/01/11 09:16:30 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:12:01 joerg Exp $
 bin/jadetex
 bin/pdfjadetex
 man/man1/jadetex.1
@@ -20,4 +20,3 @@ share/texmf-dist/tex/jadetex/config/pdfjadetex.ini
 share/texmf-dist/tex/jadetex/config/ucharacters.sty
 share/texmf-dist/tex/jadetex/config/unicode.sty
 share/texmf/web2c/texmf.jadetex.cnf
-@dirrm share/doc/jadetex

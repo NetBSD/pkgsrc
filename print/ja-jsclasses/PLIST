@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/29 23:54:36 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:11:56 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsarticle.cls
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsbook.cls
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/jsclasses.dtx
@@ -16,4 +16,3 @@ ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/okumacro.sty
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/okuverb.dtx
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/okuverb.ins
 ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js/okuverb.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/ptex/platex/js

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.osf1-alpha,v 1.1 2007/07/29 05:19:49 jlam Exp $
+@comment $NetBSD: PLIST.osf1-alpha,v 1.2 2009/06/14 18:11:53 joerg Exp $
 Acrobat4/Reader/help/search.pdf
 Acrobat4/Reader/${PLATFORM}/lib/XKeysymDB
 Acrobat4/Reader/${PLATFORM}/lib/libAGM.so
@@ -26,5 +26,3 @@ Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.rst
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.stc
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.stp
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.syd
-@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language
-@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome

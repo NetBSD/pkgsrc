@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:28:02 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:59 joerg Exp $
 bin/rtf2LaTeX
 man/man1/rtf2LaTeX.1
 share/rtf/ansi.code
 share/rtf/english.land
 share/rtf/german.land
 share/rtf/mac.code
-@dirrm share/rtf

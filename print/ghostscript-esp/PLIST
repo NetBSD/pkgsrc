@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 18:11:55 joerg Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -518,12 +518,4 @@ share/ghostscript/${GS_VERS}/lib/winmaps.ps
 share/ghostscript/${GS_VERS}/lib/wrfont.ps
 share/ghostscript/${GS_VERS}/lib/xlatmap
 share/ghostscript/${GS_VERS}/lib/zeroline.ps
-@dirrm share/ghostscript/${GS_VERS}/lib
-@dirrm share/ghostscript/${GS_VERS}/Resource/Decoding
-@dirrm share/ghostscript/${GS_VERS}/Resource/ColorSpace
-@dirrm share/ghostscript/${GS_VERS}/Resource/CMap
-@dirrm share/ghostscript/${GS_VERS}/Resource
-@dirrm share/ghostscript/${GS_VERS}
 @unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}
-@dirrm share/examples/ghostscript
-@dirrm share/doc/ghostscript

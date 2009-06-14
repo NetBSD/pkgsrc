@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/11/06 10:47:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 18:12:03 joerg Exp $
 bin/pdffonts
 bin/pdfimages
 bin/pdfinfo
@@ -15,4 +15,3 @@ man/man1/pdftotext.1
 man/man1/xpdf.1
 man/man5/xpdfrc.5
 share/examples/xpdf/xpdfrc
-@dirrm share/examples/xpdf

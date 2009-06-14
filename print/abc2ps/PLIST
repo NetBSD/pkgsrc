@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/01 14:32:48 ben Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:52 joerg Exp $
 bin/abc2ps
 share/doc/abc2ps/Changes
 share/doc/abc2ps/License
@@ -20,5 +20,3 @@ share/examples/abc2ps/sample.abc
 share/examples/abc2ps/scotland.abc
 share/examples/abc2ps/trio.abc
 share/examples/abc2ps/voices.abc
-@dirrm share/doc/abc2ps
-@dirrm share/examples/abc2ps

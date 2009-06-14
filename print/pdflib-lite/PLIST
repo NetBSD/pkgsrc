@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/15 20:06:03 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:58 joerg Exp $
 bin/pdfimage
 bin/pdflib-config
 bin/text2pdf
@@ -6,4 +6,3 @@ include/pdflib.h
 lib/libpdf.la
 share/doc/pdflib/PDFlib-API-reference.pdf
 share/doc/pdflib/PDFlib-Lite-license.pdf
-@dirrm share/doc/pdflib

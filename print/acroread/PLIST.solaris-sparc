@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-sparc,v 1.1 2007/07/29 05:19:49 jlam Exp $
+@comment $NetBSD: PLIST.solaris-sparc,v 1.2 2009/06/14 18:11:53 joerg Exp $
 lib/netscape/plugins/nppdf.so
 Acrobat4/Reader/desktop/olwm/acroread.cetable
 Acrobat4/Reader/desktop/olwm/acroread.deskinstall
@@ -29,7 +29,3 @@ Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.lng
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.rsd
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.rst
 Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language/vdk10.syd
-@dirrm Acrobat4/Reader/desktop/olwm
-@dirrm Acrobat4/Reader/desktop
-@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome/language
-@dirrm Acrobat4/Reader/${PLATFORM}/plug_ins/vdkHome

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/07 03:30:36 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:02 joerg Exp $
 share/doc/tex-prosper/AUTHORS
 share/doc/tex-prosper/ChangeLog
 share/doc/tex-prosper/FAQ
@@ -80,10 +80,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/img/yellow-bullet-on-blue.ps
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/img/yellow-bullet-on-white.gif
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/img/yellow-bullet-on-white.ps
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/prosper.cls
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/img
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/designer
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/contrib/img
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper/contrib
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/prosper
-@dirrm share/examples/tex-prosper
-@dirrm share/doc/tex-prosper

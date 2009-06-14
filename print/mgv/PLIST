@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:27:50 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:11:57 joerg Exp $
 bin/mgv
 man/man1/mgv.1
 share/doc/html/mgv
@@ -99,7 +99,3 @@ share/mgv/3.1.5/toolbar/pagePrev-i.xbm
 share/mgv/3.1.5/toolbar/pagePrev-i.xpm
 share/mgv/3.1.5/toolbar/pagePrev.xbm
 share/mgv/3.1.5/toolbar/pagePrev.xpm
-@dirrm share/mgv/3.1.5/help
-@dirrm share/mgv/3.1.5/toolbar
-@dirrm share/mgv/3.1.5
-@dirrm share/mgv

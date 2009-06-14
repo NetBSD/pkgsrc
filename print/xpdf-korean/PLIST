@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/01/18 16:39:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:12:04 joerg Exp $
 share/xpdf/korean/Adobe-Korea1.cidToUnicode
 share/xpdf/korean/CMap/Adobe-Korea1-0
 share/xpdf/korean/CMap/Adobe-Korea1-1
@@ -26,5 +26,3 @@ share/xpdf/korean/CMap/UniKS-UTF16-V
 share/xpdf/korean/CMap/UniKS-UTF8-H
 share/xpdf/korean/CMap/UniKS-UTF8-V
 share/xpdf/korean/ISO-2022-KR.unicodeMap
-@dirrm share/xpdf/korean/CMap
-@dirrm share/xpdf/korean

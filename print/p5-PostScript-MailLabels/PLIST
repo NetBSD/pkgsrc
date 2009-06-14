@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/11/18 15:56:12 he Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:57 joerg Exp $
 share/examples/${PKGBASE}/copyright.pl
 share/examples/${PKGBASE}/diskette.pl
 share/examples/${PKGBASE}/portuguese.pl
@@ -6,4 +6,3 @@ share/examples/${PKGBASE}/std_business.pl
 share/examples/${PKGBASE}/test5167.pl
 share/examples/${PKGBASE}/testlabels.pl
 share/examples/${PKGBASE}/test_papersize.pl
-@dirrm share/examples/${PKGBASE}

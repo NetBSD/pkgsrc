@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/28 14:07:16 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:12:00 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e.pdf
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex01.tex
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_ex02.tex
@@ -11,7 +11,3 @@ ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exfor.tex
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exrepeat.tex
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e/algorithm2e_exswitch.tex
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/algorithm2e/algorithm2e.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/algorithm2e
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/algorithm2e
-@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex

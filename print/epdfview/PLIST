@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/04 16:34:36 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:11:54 joerg Exp $
 bin/epdfview
 share/applications/epdfview.desktop
 share/epdfview/pixmaps/icon_epdfview-24.png
@@ -28,7 +28,3 @@ share/locale/sv/LC_MESSAGES/epdfview.mo
 share/locale/vi/LC_MESSAGES/epdfview.mo
 share/locale/zh_CN/LC_MESSAGES/epdfview.mo
 share/locale/zh_TW/LC_MESSAGES/epdfview.mo
-@dirrm share/epdfview/ui
-@dirrm share/epdfview/pixmaps
-@dirrm share/epdfview
-@comment in xdg-dirs: @dirrm share/applications

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/13 05:36:52 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:12:01 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/appendixtest.tex
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/doeun.bb
 ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul/doeun.png
@@ -10,5 +10,3 @@ ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memhangul-ucs.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-gremph.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-interword.sty
 ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul/memucs-setspace.sty
-@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/memhangul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/doc/latex/memhangul

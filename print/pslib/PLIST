@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:11:59 joerg Exp $
 include/libps/pslib-mp.h
 include/libps/pslib.h
 include/libps/psversion.h
@@ -8,5 +8,3 @@ share/locale/de/LC_MESSAGES/pslib.mo
 share/pslib/draft.ps
 share/pslib/exectime.ps
 share/pslib/grid.ps
-@dirrm share/pslib
-@dirrm include/libps
