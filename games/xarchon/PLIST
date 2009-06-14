@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:56:58 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 19:10:38 joerg Exp $
 bin/xarchon
 man/man6/xarchon.6
 share/xarchon/archon/NAMES
@@ -477,5 +477,5 @@ share/xarchon/logo.xpm
 share/xarchon/statistics
 share/xarchon/xarchon-palette
 share/xarchon/xarchon.default
-@exec ${MKDIR} %D/share/xarchon/archon/wav/actor/weapon
-@exec ${MKDIR} %D/share/xarchon/archon/wav/actor/piece
+@pkgdir share/xarchon/archon/wav/actor/weapon
+@pkgdir share/xarchon/archon/wav/actor/piece

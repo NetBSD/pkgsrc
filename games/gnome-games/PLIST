@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2009/06/14 17:56:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2009/06/14 19:10:36 joerg Exp $
 bin/blackjack
 bin/glchess
 bin/glines
@@ -1968,4 +1968,4 @@ share/omf/same-gnome/same-gnome-sv.omf
 share/pixmaps/glchess/board.png
 share/pixmaps/glchess/piece.png
 share/pixmaps/gnome-sudoku/footprints.png
-@exec ${MKDIR} %D/lib/ggz
+@pkgdir lib/ggz
