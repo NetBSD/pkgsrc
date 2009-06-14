@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2009/06/14 18:25:15 joerg Exp $
+@comment $NetBSD: PLIST,v 1.21 2009/06/14 22:06:42 joerg Exp $
 bin/xfce4-menueditor
 bin/xfce4-popup-menu
 bin/xfdesktop
@@ -157,7 +157,3 @@ share/xfce4/doc/fr/images/xfdesktop-editor.png
 share/xfce4/doc/fr/images/xfdesktop-list.png
 share/xfce4/doc/fr/xfdesktop.html
 share/xfce4/panel-plugins/xfce4-menu.desktop
-@unexec ${RMDIR} %D/share/xfce4/backdrops 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/pixmaps/xfce4 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/libexec/xfce4/panel-plugins 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/xfce4/modules 2>/dev/null || ${TRUE}
