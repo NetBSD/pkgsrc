@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2009,v 1.2333 2009/06/14 19:47:19 sno Exp $
+$NetBSD: CHANGES-2009,v 1.2334 2009/06/14 19:56:04 sno Exp $
 
 Changes to the packages collection and infrastructure in 2009:
 
@@ -3130,3 +3130,4 @@ Changes to the packages collection and infrastructure in 2009:
 	Updated devel/p5-CPAN-Reporter to 1.1708 [sno 2009-06-14]
 	Updated games/gbrainy to 1.11 [wiz 2009-06-14]
 	Updated devel/p5-Task-Weaken to 1.03 [sno 2009-06-14]
+	Updated devel/p5-UNIVERSAL-can to 1.14 [sno 2009-06-14]
