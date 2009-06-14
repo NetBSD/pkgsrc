@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/05/07 11:01:09 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 06:04:11 obache Exp $
 bin/dystmgr
 bin/dysttest
 bin/lapumgr
@@ -14,7 +14,7 @@ include/tcwdb.h
 lib/libtokyodystopia.a
 lib/libtokyodystopia.so
 lib/libtokyodystopia.so.1
-lib/libtokyodystopia.so.1.12.0
+lib/libtokyodystopia.so.1.13.0
 lib/pkgconfig/tokyodystopia.pc
 libexec/dystsearch.cgi
 libexec/lapusearch.cgi
