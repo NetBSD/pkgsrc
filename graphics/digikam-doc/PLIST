@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/02/20 19:49:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:09 joerg Exp $
 share/doc/kde/HTML/da/digikam/common
 share/doc/kde/HTML/da/digikam/index.cache.bz2
 share/doc/kde/HTML/da/digikam/index.docbook
@@ -736,33 +736,3 @@ share/doc/kde/HTML/sv/showfoto/introductionplugininterfaces.png
 share/doc/kde/HTML/sv/showfoto/setupgeneral.png
 share/doc/kde/HTML/sv/showfoto/setupplugins.png
 share/doc/kde/HTML/sv/showfoto/setupslideshow.png
-@dirrm share/doc/kde/HTML/sv/showfoto
-@dirrm share/doc/kde/HTML/sv/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/pt_BR/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@dirrm share/doc/kde/HTML/nl/showfoto
-@dirrm share/doc/kde/HTML/nl/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/showfoto
-@dirrm share/doc/kde/HTML/it/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/et/showfoto
-@dirrm share/doc/kde/HTML/et/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/showfoto
-@dirrm share/doc/kde/HTML/es/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/showfoto
-@dirrm share/doc/kde/HTML/en/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/showfoto
-@dirrm share/doc/kde/HTML/de/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/da/showfoto
-@dirrm share/doc/kde/HTML/da/digikam
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm share/doc/kde

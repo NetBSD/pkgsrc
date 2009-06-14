@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/01/06 23:28:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 17:59:19 joerg Exp $
 bin/imgcmp
 bin/imginfo
 bin/jasper
@@ -29,5 +29,3 @@ man/man1/jasper.1
 man/man1/jiv.1
 share/doc/jasper/jasper.pdf
 share/doc/jasper/jpeg2000.pdf
-@dirrm share/doc/jasper
-@dirrm include/jasper

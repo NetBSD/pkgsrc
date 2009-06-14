@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/25 18:17:56 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:59:30 joerg Exp $
 bin/vigra-config
 include/vigra/accessor.hxx
 include/vigra/affine_registration.hxx
@@ -755,6 +755,3 @@ share/doc/vigra/voxelneighborhood_8hxx-source.html
 share/doc/vigra/watershed_8cxx-example.html
 share/doc/vigra/watersheds3d_8hxx-source.html
 share/doc/vigra/watersheds_8hxx-source.html
-@dirrm share/doc/vigra/documents
-@dirrm share/doc/vigra
-@dirrm include/vigra

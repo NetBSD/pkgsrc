@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/10 11:48:23 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:30 joerg Exp $
 share/vtk/Baseline/Filtering/closedSplines.png
 share/vtk/Baseline/Filtering/CSpline.png
 share/vtk/Baseline/Filtering/KSpline.png
@@ -709,33 +709,3 @@ share/vtk/Data/sample.xml
 share/vtk/Data/tensors.vtk
 share/vtk/Data/tetraMesh.vtk
 share/vtk/VTKData.readme
-@dirrm share/vtk/Baseline/CVS
-@dirrm share/vtk/Baseline/Filtering/CVS
-@dirrm share/vtk/Baseline/Filtering
-@dirrm share/vtk/Baseline/Graphics/CVS
-@dirrm share/vtk/Baseline/Graphics
-@dirrm share/vtk/Baseline/Hybrid/CVS
-@dirrm share/vtk/Baseline/Hybrid
-@dirrm share/vtk/Baseline/IO/CVS
-@dirrm share/vtk/Baseline/IO
-@dirrm share/vtk/Baseline/Imaging/CVS
-@dirrm share/vtk/Baseline/Imaging
-@dirrm share/vtk/Baseline/Parallel/CVS
-@dirrm share/vtk/Baseline/Parallel
-@dirrm share/vtk/Baseline/Patented/CVS
-@dirrm share/vtk/Baseline/Patented
-@dirrm share/vtk/Baseline/Rendering/CVS
-@dirrm share/vtk/Baseline/Rendering
-@dirrm share/vtk/Baseline
-@dirrm share/vtk/CVS
-@dirrm share/vtk/Data/CVS
-@dirrm share/vtk/Data/EnSight/CVS
-@dirrm share/vtk/Data/EnSight
-@dirrm share/vtk/Data/Viewpoint/CVS
-@dirrm share/vtk/Data/Viewpoint
-@dirrm share/vtk/Data/headsq/CVS
-@dirrm share/vtk/Data/headsq
-@dirrm share/vtk/Data/libtiff/CVS
-@dirrm share/vtk/Data/libtiff
-@dirrm share/vtk/Data
-@dirrm share/vtk

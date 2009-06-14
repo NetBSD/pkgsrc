@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:59:06 joerg Exp $
 bin/autotrace
 bin/autotrace-config
 include/autotrace/autotrace.h
@@ -10,4 +10,3 @@ lib/libautotrace.la
 lib/pkgconfig/autotrace.pc
 man/man1/autotrace.1
 share/aclocal/autotrace.m4
-@dirrm include/autotrace

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/03/10 03:29:37 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:59:25 joerg Exp $
 bin/pstoedit
 include/pstoedit/base64writer.h
 include/pstoedit/cppcomp.h
@@ -32,11 +32,3 @@ share/pstoedit/safer.ps
 share/pstoedit/svg.fmp
 share/pstoedit/swffonts/default.fdb
 share/pstoedit/wemf.fmp
-@dirrm share/pstoedit/swffonts
-@dirrm share/pstoedit
-@dirrm share/doc/pstoedit
-@dirrm share/doc/html/pstoedit
-@dirrm lib/pstoedit/pstoedit
-@dirrm lib/pstoedit/pkgconfig
-@dirrm lib/pstoedit
-@dirrm include/pstoedit

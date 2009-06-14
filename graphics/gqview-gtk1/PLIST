@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:21 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:16 joerg Exp $
 bin/gqview
 man/man1/gqview.1
 share/gnome/apps/Graphics/gqview.desktop
@@ -28,4 +28,3 @@ share/locale/vi/LC_MESSAGES/gqview.mo
 share/locale/zh_CN.GB2312/LC_MESSAGES/gqview.mo
 share/locale/zh_TW/LC_MESSAGES/gqview.mo
 share/pixmaps/gqview.png
-@dirrm share/gqview

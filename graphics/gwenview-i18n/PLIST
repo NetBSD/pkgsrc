@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/02 12:55:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:59:17 joerg Exp $
 share/doc/kde/HTML/da/gwenview/common
 share/doc/kde/HTML/da/gwenview/docked_windows.docbook
 share/doc/kde/HTML/da/gwenview/external_tools.docbook
@@ -160,25 +160,3 @@ share/locale/xh/LC_MESSAGES/gwenview.mo
 share/locale/zh_CN/LC_MESSAGES/gwenview.mo
 share/locale/zh_TW/LC_MESSAGES/gwenview.mo
 share/locale/zu/LC_MESSAGES/gwenview.mo
-@dirrm share/doc/kde/HTML/sv/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/ru/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/pt_BR/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/pt_BR
-@dirrm share/doc/kde/HTML/pt/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/pl/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/pl
-@dirrm share/doc/kde/HTML/nl/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/et/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/de/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/da/gwenview
-@comment in kde: @dirrm share/doc/kde/HTML/da

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/19 13:42:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:59:28 joerg Exp $
 ${GEM_HOME}/cache/cairo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/AUTHORS
@@ -352,34 +352,4 @@ ${GEM_LIBDIR}/test/test_text_to_glyphs_data.rb
 ${GEM_LIBDIR}/test/testzlib_d.exe
 ${GEM_LIBDIR}/test/untgz_d.exe
 ${GEM_HOME}/specifications/cairo-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/test-unit/test/util
-@dirrm ${GEM_LIBDIR}/test-unit/test/ui
-@dirrm ${GEM_LIBDIR}/test-unit/test/collector
-@dirrm ${GEM_LIBDIR}/test-unit/test
-@dirrm ${GEM_LIBDIR}/test-unit/sample
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/util
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/emacs
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/console
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/runner
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/collector
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit
-@dirrm ${GEM_LIBDIR}/test-unit/lib/test
-@dirrm ${GEM_LIBDIR}/test-unit/lib
-@dirrm ${GEM_LIBDIR}/test-unit/bin
-@dirrm ${GEM_LIBDIR}/test-unit
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/src/tml/make
-@dirrm ${GEM_LIBDIR}/src/tml
-@dirrm ${GEM_LIBDIR}/src/lib/cairo/context
-@dirrm ${GEM_LIBDIR}/src/lib/cairo
-@dirrm ${GEM_LIBDIR}/src/lib
-@dirrm ${GEM_LIBDIR}/src
-@dirrm ${GEM_LIBDIR}/samples/agg
-@dirrm ${GEM_LIBDIR}/samples
-@dirrm ${GEM_LIBDIR}/misc
-@dirrm ${GEM_LIBDIR}/doc/ja
-@dirrm ${GEM_LIBDIR}/doc/en
-@dirrm ${GEM_LIBDIR}/doc
-@dirrm ${GEM_LIBDIR}
 @exec ${MKDIR} %D/${GEM_DOCDIR}
