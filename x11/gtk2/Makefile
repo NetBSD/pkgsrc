@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.175 2009/06/04 21:38:52 tron Exp $
+# $NetBSD: Makefile,v 1.176 2009/06/14 22:14:20 joerg Exp $
 
 DISTNAME=		gtk+-2.16.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -47,10 +47,6 @@ BUILD_DIRS=		. demos/gtk-demo
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\""
-
-PRINT_PLIST_AWK+=	/^@dirrm share\/themes\/Default$$/ \
-				{ print "@unexec $${RMDIR} %D/" $$2 \
-				  " 2>/dev/null || $${TRUE}"; next; }
 
 SUBST_CLASSES+=		pthread
 SUBST_STAGE.pthread=	pre-configure
