@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2009/06/05 07:09:31 obache Exp $
+# $NetBSD: Makefile,v 1.62 2009/06/14 22:58:00 joerg Exp $
 
 DISTNAME=		libbonobo-2.24.1
 CATEGORIES=		devel gnome
@@ -32,10 +32,6 @@ PKG_SYSCONFSUBDIR=	bonobo-activation
 EGDIR=			${PREFIX}/share/examples/bonobo-activation
 CONF_FILES=		${EGDIR}/bonobo-activation-config.xml \
 			${PKG_SYSCONFDIR}/bonobo-activation-config.xml
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/(bonobo|bonobo\/monikers)$$/ \
-				{ print "@unexec $${RMDIR} %D/" $$2 \
-				  " 2>/dev/null || $${TRUE}"; next; }
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 

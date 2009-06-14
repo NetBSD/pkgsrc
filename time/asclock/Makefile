@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2009/06/14 22:58:09 joerg Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -72,9 +72,7 @@ do-install:
 		${DESTDIR}${PREFIX}/share/asclock-classic/${LANGUAGE}
 	@${ECHO} share/asclock-classic/${LANGUAGE}/month.xpm >> ${PLIST_SRC}
 	@${ECHO} share/asclock-classic/${LANGUAGE}/weekday.xpm >> ${PLIST_SRC}
-	@${ECHO} @dirrm share/asclock-classic/${LANGUAGE} >> ${PLIST_SRC}
 .endfor
-	@${ECHO} @dirrm share/asclock-classic >> ${PLIST_SRC}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

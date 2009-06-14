@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/16 19:11:34 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2009/06/14 22:58:02 joerg Exp $
 #
 
 .include "../../lang/kaffe/Makefile.common"
@@ -19,8 +19,6 @@ INSTALL_DIRS=		libraries/clib/sound/esd
 
 pre-build:
 	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} BUILD_ENVIRONMENT
-
-PRINT_PLIST_AWK+=	/^@dirrm/ { print "@comment in kaffe: " $$0; next; }
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../lang/kaffe/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2009/01/04 18:48:47 shattered Exp $
+# $NetBSD: Makefile.common,v 1.17 2009/06/14 22:58:10 joerg Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -123,8 +123,6 @@ GENERATE_PLIST+=							\
 	${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM};		\
 	${FIND} ${DESTDIR}${MOZILLA_LIB} \( -type f -o -type l \) -print\
 		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";	\
-	${FIND} ${DESTDIR}${MOZILLA_LIB} -type d -print			\
-		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g"; \
-	${ECHO} "@exec ${MKDIR} %D/lib/mozilla-linux/plugins";
+	${ECHO} "@pkgdir lib/mozilla-linux/plugins";
 
 .include "../../mk/bsd.pkg.mk"
