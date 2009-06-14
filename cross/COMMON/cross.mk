@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.39 2008/05/26 02:13:16 joerg Exp $
+#	$NetBSD: cross.mk,v 1.40 2009/06/14 22:57:58 joerg Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -287,12 +287,8 @@ post-install-plist:
 	@${SED} -e 's|$${TARGET_ARCH}|${TARGET_ARCH}|' \
 		-e 's|$${EGCS_INTVERSION}|${EGCS_INTVERSION}|' \
 		${PLIST_PRE} >${PLIST_SRC}
-	@${ECHO} '@dirrm ${TARGET_ARCH}/bin' >>${PLIST_SRC}
-	@${ECHO} '@exec mkdir -p ${TARGET_ARCH}/include' >>${PLIST_SRC}
-	@${ECHO} '@dirrm ${TARGET_ARCH}/include' >>${PLIST_SRC}
-	@${ECHO} '@exec mkdir -p ${TARGET_ARCH}/lib' >>${PLIST_SRC}
-	@${ECHO} '@dirrm ${TARGET_ARCH}/lib' >>${PLIST_SRC}
-	@${ECHO} '@dirrm ${TARGET_ARCH}' >>${PLIST_SRC}
+	@${ECHO} '@pkgdir ${TARGET_ARCH}/include' >>${PLIST_SRC}
+	@${ECHO} '@pkgdir ${TARGET_ARCH}/lib' >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: dirs.mk,v 1.3 2008/11/06 11:01:21 markd Exp $
+# $NetBSD: dirs.mk,v 1.4 2009/06/14 22:58:05 joerg Exp $
 #
 
 .if !defined(DIRS_KDE4_MK)
@@ -111,12 +111,6 @@ KDE4_DIRS+=	share/kde4/servicetypes
 
 .if defined(_USE_KDE4_DIRS) && !empty(_USE_KDE4_DIRS)
 DEPENDS+=	kde4-dirs>=${_USE_KDE4_DIRS}:../../misc/kde4-dirs
-
-.  for dir in ${KDE4_DIRS}
-PRINT_PLIST_AWK+=	/^@exec \$${MKDIR} %D\/${dir:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=       /^@dirrm ${dir:S|/|\\/|g}$$/ \
-				{ print "@comment in kde: " $$0; next; }
-.  endfor
 .endif
 
 .endif		# !defined(DIRS_KDE4_MK)

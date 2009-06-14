@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/05/26 14:19:29 taca Exp $
+# $NetBSD: Makefile.common,v 1.8 2009/06/14 22:58:10 joerg Exp $
 #
 # used by www/geeklog/Makefile
 
@@ -27,41 +27,39 @@ BUILD_DEFS+=		GEEKLOG_BASE GEEKLOG_PUB GEEKLOG_SITEBASE
 GEEKLOG_SITESUBDIR=	/${GEEKLOG_SITEBASE}
 .endif
 
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GL_ADMIN:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GL_ADMIN:S|/|\\/|g}/ \
 			{ gsub(/${GL_ADMIN:S|/|\\/|g}/, "$${GL_ADMIN}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GL_TMPL:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GL_TMPL:S|/|\\/|g}/ \
 			{ gsub(/${GL_TMPL:S|/|\\/|g}/, "$${GL_TMPL}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GL_DOC:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GL_DOC:S|/|\\/|g}/ \
 			{ gsub(/${GL_DOC:S|/|\\/|g}/, "$${GL_DOC}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GL_EG:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GL_EG:S|/|\\/|g}/ \
 			{ gsub(/${GL_EG:S|/|\\/|g}/, "$${GL_EG}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${GEEKLOG_BASE:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_BASE:S|/|\\/|g}\/backups/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_BASE:S|/|\\/|g}\/backups/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_BASE:S|/|\\/|g}\/data/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_BASE:S|/|\\/|g}\/logs/ { next; }
+PRINT_PLIST_AWK+=	/^${GEEKLOG_BASE:S|/|\\/|g}\/data/ { next; }
+PRINT_PLIST_AWK+=	/^?${GEEKLOG_BASE:S|/|\\/|g}\/logs/ { next; }
 PRINT_PLIST_AWK+=	/${GEEKLOG_BASE:S|/|\\/|g}\/db-config.php/ { next; }
 PRINT_PLIST_AWK+=	/${GEEKLOG_BASE:S|/|\\/|g}\/system\/lib-custom.php/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_BASE:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_BASE:S|/|\\/|g}/ \
 			{ gsub(/${GEEKLOG_BASE:S|/|\\/|g}/, "$${GEEKLOG_BASE}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${GEEKLOG_PUB:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/admin/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/backend/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/images\/articles/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/admin/ { next; }
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/backend/ { next; }
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/images\/articles/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/images\/library/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/images\/library/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/images\/topics/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/images\/topics/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}\/images\/userphotos/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}\/images\/userphotos/ \
 			{ next; }
 PRINT_PLIST_AWK+=	/${GEEKLOG_PUB:S|/|\\/|g}\/siteconfig.php/ { next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEEKLOG_PUB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${GEEKLOG_PUB:S|/|\\/|g}/ \
 			{ gsub(/${GEEKLOG_PUB:S|/|\\/|g}/, "$${GEEKLOG_PUB}"); \
 			print; next; }

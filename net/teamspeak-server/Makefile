@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/05/19 08:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2009/06/14 22:58:07 joerg Exp $
 
 PKGNAME=		teamspeak-server-2.0.24.01
 DISTNAME=		ts2_server_rc2_202319
@@ -83,6 +83,5 @@ do-install:
 	${INSTALL_DATA} -m 644 ${WRKSRC}/INSTALL.mysql ${DESTDIR}${DOC_DIR}
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 	(cd ${DESTDIR}${PREFIX}; ${FIND} lib/teamspeak-server share/doc/teamspeak-server share/teamspeak-server -type f -print ) >> ${PLIST_SRC}
-	(cd ${DESTDIR}${PREFIX}; ${FIND} lib/teamspeak-server share/doc/teamspeak-server share/teamspeak-server -type d -print ) | ${SED} 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

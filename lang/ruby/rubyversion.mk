@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.46 2009/06/10 12:45:34 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.47 2009/06/14 22:58:03 joerg Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -305,13 +305,9 @@ RUBY_PLIST_COMMENT_CMD= \
 RUBY_PLIST_FILES_CMD= ( cd ${DESTDIR}${PREFIX}; \
 	${FIND} ${RUBY_DYNAMIC_DIRS} \( -type f -o -type l \) -print ) | \
 	${SORT} -u
-RUBY_PLIST_DIRS_CMD= ( cd ${DESTDIR}${PREFIX}; \
-	${FIND} ${RUBY_DYNAMIC_DIRS} -type d -print ) | ${SORT} -ru | \
-	${SED} -e 's|^|@dirrm |'
 RUBY_GENERATE_PLIST =	( \
 	${RUBY_PLIST_COMMENT_CMD}; \
-	${RUBY_PLIST_FILES_CMD}; \
-	${RUBY_PLIST_DIRS_CMD} ) > ${RUBY_PLIST_DYNAMIC}
+	${RUBY_PLIST_FILES_CMD} ) > ${RUBY_PLIST_DYNAMIC}
 .endif
 
 .if !empty(RUBY_NOVERSION:M[nN][oO])
@@ -327,52 +323,40 @@ RUBY_GENERATE_PLIST =	( \
 
 PRINT_PLIST_AWK+=	/\.${RUBY_DLEXT}$$/ \
 			{ gsub(/${RUBY_DLEXT}$$/, "$${RUBY_DLEXT}") }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_ARCHLIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_ARCHLIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_ARCHLIB:S|/|\\/|g}/, "$${RUBY_ARCHLIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORARCHLIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_VENDORARCHLIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_VENDORARCHLIB:S|/|\\/|g}/, "$${RUBY_VENDORARCHLIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORLIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_VENDORLIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_VENDORLIB:S|/|\\/|g}/, "$${RUBY_VENDORLIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIB:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIB:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITEARCHLIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_SITEARCHLIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SITEARCHLIB:S|/|\\/|g}/, "$${RUBY_SITEARCHLIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_SITELIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SITELIB:S|/|\\/|g}/, "$${RUBY_SITELIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIB_BASE:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^${RUBY_SITELIB_BASE:S|/|\\/|g}$$/ \
 			{ gsub(/${RUBY_SITELIB_BASE:S|/|\\/|g}/, "$${RUBY_SITELIB_BASE}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORLIB_BASE:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^${RUBY_VENDORLIB_BASE:S|/|\\/|g}$$/ \
 			{ gsub(/${RUBY_VENDORLIB_BASE:S|/|\\/|g}/, "$${RUBY_VENDORLIB_BASE}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_LIB:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_LIB:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_LIB:S|/|\\/|g}/, "$${RUBY_LIB}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOC:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOC:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_DOC:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_DOC:S|/|\\/|g}/, "$${RUBY_DOC}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EG:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EG:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_EG:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_EG:S|/|\\/|g}/, "$${RUBY_EG}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITERIDIR:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITERIDIR:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_SITERIDIR:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SITERIDIR:S|/|\\/|g}/, "$${RUBY_SITERIDIR}"); \
 			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SYSRIDIR:S|/|\\/|g}$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SYSRIDIR:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${RUBY_SYSRIDIR:S|/|\\/|g}/ \
 			{ gsub(/${RUBY_SYSRIDIR:S|/|\\/|g}/, "$${RUBY_SYSRIDIR}"); \
 			print; next; }
 

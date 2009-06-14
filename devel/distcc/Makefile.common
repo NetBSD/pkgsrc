@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2009/06/13 06:46:41 rillig Exp $
+# $NetBSD: Makefile.common,v 1.9 2009/06/14 22:57:59 joerg Exp $
 # used by devel/distcc-pump/Makefile
 # used by devel/distccmon-gnome/Makefile
 # used by devel/distccmon-gtk/Makefile
@@ -35,8 +35,6 @@ SUBST_MESSAGE.doc=	Fixing paths.
 
 .if empty(PKGNAME:Mdistcc-[0-9]*)
 DEPENDS+=		distcc>=${DISTCC_VERSION}:../../devel/distcc
-PRINT_PLIST_AWK+=	/^@dirrm share\/distcc$$/ \
-				{ print "@comment in distcc: " $$0; next }
 .endif
 
 INSTALLATION_DIRS+=	bin

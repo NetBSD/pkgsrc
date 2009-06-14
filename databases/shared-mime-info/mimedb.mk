@@ -1,4 +1,4 @@
-# $NetBSD: mimedb.mk,v 1.5 2006/06/15 22:13:58 jlam Exp $
+# $NetBSD: mimedb.mk,v 1.6 2009/06/14 22:57:59 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that install
 # mime customization files.  It takes care of registering them in the global
@@ -18,11 +18,6 @@ FILES_SUBST+=		UPDATE_MIMEDB="${BUILDLINK_PREFIX.shared-mime-info}/bin/update-mi
 
 PRINT_PLIST_AWK+=	/^share\/mime\/packages/ { print; next; }
 PRINT_PLIST_AWK+=	/^share\/mime\// { next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/mime\/packages$$/ \
-				{ print "@comment in shared-mime-info: " $$0; \
-				  next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/mime\// { next; }
-PRINT_PLIST_AWK+=	/^@dirrm share\/mime$$/ { next; }
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 

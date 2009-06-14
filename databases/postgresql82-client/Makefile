@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/20 00:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2009/06/14 22:57:59 joerg Exp $
 
 PKGNAME=	postgresql82-client-${BASE_VERS}
 PKGREVISION=	1
@@ -54,11 +54,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.postgresql82-client
 .for _file_ in pg_service.conf psqlrc
 CONF_FILES+=	${PG_DATA_DIR}/${_file_}.sample ${PG_ETC_DIR}/${_file_}
 .endfor
-.if !empty(PG_SUBPREFIX)
-PLIST_SUBST+=	PG_DIRRM_SUBPREFIX="@dirrm ${PG_SUBPREFIX}"
-.else
-PLIST_SUBST+=	PG_DIRRM_SUBPREFIX="@comment empty line"
-.endif
 
 # XXX work around core dumps with the native libedit
 USE_GNU_READLINE=	yes

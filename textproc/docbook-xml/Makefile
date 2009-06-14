@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/11/03 19:17:39 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2009/06/14 22:58:09 joerg Exp $
 #
 
 DISTNAME=	docbook-xml-4.4
@@ -40,11 +40,6 @@ XML_ENTRIES+=	rewriteSystem http://www.oasis-open.org/docbook/xml/${ver} \
 XML_CATALOGS+= ${DTDDIR}/4.2/catalog-4.1.2
 XML_ENTRIES+=	rewriteSystem http://www.oasis-open.org/docbook/xml/4.1.2 \
 		${DTDDIR}/4.2
-
-# share/xml/docbook is shared with docbook-simple.
-PRINT_PLIST_AWK+=	/^@dirrm share\/xml\/docbook$$/ \
-			{ print "@unexec $${RMDIR} %D/share/xml/docbook" \
-			  " >/dev/null 2>&1"; next }
 
 pre-install:
 .for ver in ${VER}

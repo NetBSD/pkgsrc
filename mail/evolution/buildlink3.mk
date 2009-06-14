@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2009/03/20 19:24:54 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2009/06/14 22:58:04 joerg Exp $
 
 BUILDLINK_TREE+=	evolution
 
@@ -8,15 +8,6 @@ EVOLUTION_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.evolution+=	evolution>=2.8.0
 BUILDLINK_ABI_DEPENDS.evolution?=	evolution>=2.22.3.1nb1
 BUILDLINK_PKGSRCDIR.evolution?=	../../mail/evolution
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution\/2.10$$/ \
-				{ print "@comment in evolution: " $$0; next }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/evolution$$/ \
-				{ print "@comment in evolution: " $$0; next }
-PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution\/2.10$$/ \
-				{ print "@comment in evolution: " $$0; next }
-PRINT_PLIST_AWK+=	/^@dirrm libexec\/evolution$$/ \
-				{ print "@comment in evolution: " $$0; next }
 
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"

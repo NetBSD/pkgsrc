@@ -1,4 +1,4 @@
-# $NetBSD: ploneversion.mk,v 1.11 2008/11/15 17:24:19 taca Exp $
+# $NetBSD: ploneversion.mk,v 1.12 2009/06/14 22:58:10 joerg Exp $
 #
 
 .if !defined(_PLONEVERSION_MK)
@@ -149,7 +149,7 @@ PLIST_SUBST+=	PLONE_VERSION=${PLONE_VERSION} \
 #
 # PLONE_BASE needs to be replaced preceding to ZOPE_BASE
 #
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PLONE_BASE:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${PLONE_BASE:S|/|\\/|g}/ \
 		{ gsub(/${PLONE_BASE:S|/|\\/|g}/, "$${PLONE_BASE}"); \
 		print; next; }
 

@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.8 2009/03/18 00:08:40 abs Exp $
+# $NetBSD: moz-install,v 1.9 2009/06/14 22:58:10 joerg Exp $
 
 ${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
@@ -16,26 +16,24 @@ trap "${RM} -f ${TMP_PLIST}" 1 2 15
 
 ${SED} -e "s/\${MOZILLA}/${MOZILLA}/g" -e "s/\${SO_SUFFIX}/${SO_SUFFIX}/" -e "s/\${MOZILLA_BIN}/${MOZILLA_BIN}/g" -e "s/\${JEMALLOC}/${JEMALLOC}/g" < ${PLIST_SRC} > ${TMP_PLIST}
 
-# make directories 
-for i in `${SED} -n -e '/^@comment begin DIRS$/,/^@comment end DIRS$/p' ${TMP_PLIST} | ${EGREP} ^@dirrm | ${SED} -e 's/^@dirrm//'` ; do
-	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/$i
-done
-
 # install programs
 for i in `${SED} -n -e '/^@comment begin PROGRAMS$/,/^@comment end PROGRAMS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_PROGRAM} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install scripts
 for i in `${SED} -n -e '/^@comment begin SCRIPTS$/,/^@comment end SCRIPTS$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_SCRIPT} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install DSO
 for i in `${SED} -n -e '/^@comment begin DSO$/,/^@comment end DSO$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${MOZ_INSTALL_LIB} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
@@ -43,30 +41,35 @@ done
 ${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 for i in `${SED} -n -e '/^@comment begin PKGCONFIG$/,/^@comment end PKGCONFIG$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/pkgconfig@build/unix@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install DATA
 for i in `${SED} -n -e '/^@comment begin DATA$/,/^@comment end DATA$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@lib/${MOZILLA}@dist/bin@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install INCLUDE
 for i in `${SED} -n -e '/^@comment begin INCLUDE$/,/^@comment end INCLUDE$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/include@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install INCLUDE-PUBLIC
 for i in `${SED} -n -e '/^@comment begin INCLUDE-PUBLIC$/,/^@comment end INCLUDE-PUBLIC$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/public@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
 # install INCLUDE-SDK
 for i in `${SED} -n -e '/^@comment begin INCLUDE-SDK$/,/^@comment end INCLUDE-SDK$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
 	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/sdk/include@"`;
+	${BSD_INSTALL_DATA_DIR} `dirname ${DESTDIR}${PREFIX}/$i`
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 	

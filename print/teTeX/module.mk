@@ -1,4 +1,4 @@
-# $NetBSD: module.mk,v 1.18 2008/12/07 06:41:51 minskim Exp $
+# $NetBSD: module.mk,v 1.19 2009/06/14 22:58:08 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install TeX packages.  It takes care of rebuilding the ls-R database
@@ -29,11 +29,11 @@ FILES_SUBST+=		TEX_FONTMAPS=${TEX_FONTMAPS:Q}
 INSTALL_TEMPLATES+=	../../print/teTeX/files/texmf.tmpl
 DEINSTALL_TEMPLATES+=	../../print/teTeX/files/texmf.tmpl
 
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/ls-R)?$$/ \
+PRINT_PLIST_AWK+=	/^${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}(\/ls-R)?$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${PKG_LOCALTEXMFPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, "$${PKG_LOCALTEXMFPREFIX}"); }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${TEXMFDIST:S|${PREFIX}/||:S|/|\\/|g}/ \
+PRINT_PLIST_AWK+=	/^${TEXMFDIST:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${TEXMFDIST:S|${PREFIX}/||:S|/|\\/|g}/, "$${TEXMFDIST}"); }
 
 .include "../../mk/tex.buildlink3.mk"

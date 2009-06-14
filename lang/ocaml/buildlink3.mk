@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2009/05/16 07:22:03 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2009/06/14 22:58:02 joerg Exp $
 
 BUILDLINK_TREE+=	ocaml
 
@@ -14,9 +14,6 @@ BUILDLINK_DEPMETHOD.ocaml?=	build
 .  if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=		yes
 .  endif
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ocaml$$/ \
-				{ print "@comment in ocaml: " $$0; next }
 
 BUILDLINK_TARGETS+=	ocaml-wrappers
 OCAML_WRAPPERS=		ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \

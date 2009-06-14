@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.70 2009/04/19 15:14:19 snj Exp $
+# $NetBSD: pyversion.mk,v 1.71 2009/06/14 22:58:03 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -164,20 +164,6 @@ PYLIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_lib(0, 1, \"\")" || ${ECHO} ""
 PYSITELIB!=	${PYTHONBIN} -c "import distutils.sysconfig; \
 	print distutils.sysconfig.get_python_lib(0, 0, \"\")" || ${ECHO} ""
-
-PRINT_PLIST_AWK+=	/^@dirrm ${PYINC:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${PYSITELIB:S|/|\\/|g}$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${PYLIB:S|/|\\/|g}$$/ { next; }
-
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PYINC:S|/|\\/|g}/ \
-			{ gsub(/${PYINC:S|/|\\/|g}/, "$${PYINC}"); \
-				print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PYSITELIB:S|/|\\/|g}/ \
-			{ gsub(/${PYSITELIB:S|/|\\/|g}/, "$${PYSITELIB}"); \
-				print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${PYLIB:S|/|\\/|g}/ \
-			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}"); \
-				print; next; }
 .endif
 
 ALL_ENV+=	PYTHON=${PYTHONBIN}

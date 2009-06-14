@@ -1,4 +1,4 @@
-# $NetBSD: alternatives.mk,v 1.10 2007/09/29 15:56:04 rillig Exp $
+# $NetBSD: alternatives.mk,v 1.11 2009/06/14 22:58:05 joerg Exp $
 #
 # This Makefile fragment handles the alternatives system, registering a
 # package in the database.
@@ -61,7 +61,6 @@ ${WRKDIR}/.altdeinstall: ${ALTERNATIVES_SRC}
 	} >${WRKDIR}/.altdeinstall
 
 PRINT_PLIST_AWK+=	/^libdata\/alternatives\// { next; }
-PRINT_PLIST_AWK+=	/^@dirrm libdata\/alternatives/ { next; }
 
 EVAL_PREFIX+=			PREFIX.pkg_alternatives=pkg_alternatives
 PREFIX.alternatives_DEFAULT=	${LOCALBASE}
