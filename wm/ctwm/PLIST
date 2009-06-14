@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:18:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 21:40:05 joerg Exp $
 bin/ctwm
 lib/X11/twm/images/3D_Expand15.xpm
 lib/X11/twm/images/3D_Iconify15.xpm
@@ -98,4 +98,3 @@ share/examples/ctwm/peterc.ctwmrc
 share/examples/ctwm/system.ctwmrc
 share/examples/ctwm/system.ctwmrc.gnome
 share/xsessions/ctwm.desktop
-@unexec ${RMDIR} %D/share/xsessions 2>/dev/null || ${TRUE}

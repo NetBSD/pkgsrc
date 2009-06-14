@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2009/06/14 18:19:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 21:40:05 joerg Exp $
 bin/xfwm4
 lib/xfce4/mcs-plugins/wmtweaks_plugin.la
 lib/xfce4/mcs-plugins/workspaces_plugin.la
@@ -1275,4 +1275,3 @@ share/xfce4/doc/it/images/workspace_margins.png
 share/xfce4/doc/it/images/xfwm_workspaces.png
 share/xfce4/doc/it/xfwm4.html
 share/xfwm4/defaults
-@unexec ${RMDIR} %D/share/themes/Default 2>/dev/null || ${TRUE}

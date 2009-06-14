@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2009/06/14 18:19:03 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 21:40:05 joerg Exp $
 share/themes/Adept/xfwm4/README
 share/themes/Adept/xfwm4/bottom-active.xpm
 share/themes/Adept/xfwm4/bottom-inactive.xpm
@@ -3978,4 +3978,3 @@ share/themes/Xfce/xfwm4/top-left-active.xpm
 share/themes/Xfce/xfwm4/top-left-inactive.xpm
 share/themes/Xfce/xfwm4/top-right-active.xpm
 share/themes/Xfce/xfwm4/top-right-inactive.xpm
-@unexec ${RMDIR} %D/share/themes/Xfce 2>/dev/null || ${TRUE}
