@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 17:56:52 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 19:10:37 joerg Exp $
 bin/openttd
 man/man6/openttd.6
 share/openttd/data/openttdd.grf
@@ -86,6 +86,5 @@ share/openttd/scenario/Polopolis.scn
 share/openttd/scenario/Skadi Islands.scn
 share/openttd/scenario/Terra Incognita.scn
 share/openttd/scenario/Wales and West England.scn
-@unexec ${RMDIR} %D/share/openttd/data 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/openttd/gm 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/openttd 2>/dev/null || ${TRUE}
+@pkgdir share/openttd/data
+@pkgdir share/openttd/gm
