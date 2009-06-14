@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/13 16:06:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:56:55 joerg Exp $
 bin/quarry
 share/applications/quarry.desktop
 share/locale/en/LC_MESSAGES/quarry.mo
@@ -41,15 +41,3 @@ share/quarry/markup-themes/filled/theme.cfg
 share/quarry/markup-themes/filled/triangle.svg
 share/quarry/textures/wood1.jpg
 share/quarry/textures/wood2.jpg
-@dirrm share/quarry/textures
-@dirrm share/quarry/markup-themes/filled
-@dirrm share/quarry/markup-themes/default
-@dirrm share/quarry/markup-themes/bold
-@dirrm share/quarry/markup-themes
-@dirrm share/quarry/help/C/figures
-@dirrm share/quarry/help/C
-@dirrm share/quarry/help
-@dirrm share/quarry
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/quarry
-@comment in rarian: @dirrm share/omf

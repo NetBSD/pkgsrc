@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/15 00:33:24 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:55 joerg Exp $
 lib/lokigames/rtcw/CHANGES
 lib/lokigames/rtcw/Docs/ATVIsmall.jpg
 lib/lokigames/rtcw/Docs/Dedicated Server Notes.html
@@ -229,56 +229,5 @@ lib/lokigames/rtcw/setup.data/setup.glade
 lib/lokigames/rtcw/setup.data/setup.xml
 lib/lokigames/rtcw/setup.data/splash.xpm
 lib/lokigames/rtcw/setup.sh
-@dirrm lib/lokigames/rtcw/setup.data/locale/sv/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/sv
-@dirrm lib/lokigames/rtcw/setup.data/locale/ru/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/ru
-@dirrm lib/lokigames/rtcw/setup.data/locale/nl/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/nl
-@dirrm lib/lokigames/rtcw/setup.data/locale/it/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/it
-@dirrm lib/lokigames/rtcw/setup.data/locale/fr/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/fr
-@dirrm lib/lokigames/rtcw/setup.data/locale/es/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/es
-@dirrm lib/lokigames/rtcw/setup.data/locale/de/LC_MESSAGES
-@dirrm lib/lokigames/rtcw/setup.data/locale/de
-@dirrm lib/lokigames/rtcw/setup.data/locale
 @exec ${MKDIR} %D/lib/lokigames/rtcw/setup.data/bin/Linux/x86/plugins
-@dirrm lib/lokigames/rtcw/setup.data/bin/Linux/x86/plugins
 @exec ${MKDIR} %D/lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/plugins
-@dirrm lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1/plugins
-@dirrm lib/lokigames/rtcw/setup.data/bin/Linux/x86/glibc-2.1
-@dirrm lib/lokigames/rtcw/setup.data/bin/Linux/x86
-@dirrm lib/lokigames/rtcw/setup.data/bin/Linux
-@dirrm lib/lokigames/rtcw/setup.data/bin
-@dirrm lib/lokigames/rtcw/setup.data
-@dirrm lib/lokigames/rtcw/pb/htm
-@dirrm lib/lokigames/rtcw/pb
-@dirrm lib/lokigames/rtcw/main/scripts
-@dirrm lib/lokigames/rtcw/main
-@dirrm lib/lokigames/rtcw/bin/x86
-@dirrm lib/lokigames/rtcw/bin
-@dirrm lib/lokigames/rtcw/Docs/PunkBuster/players
-@dirrm lib/lokigames/rtcw/Docs/PunkBuster/admins
-@dirrm lib/lokigames/rtcw/Docs/PunkBuster
-@dirrm lib/lokigames/rtcw/Docs/Help/images
-@dirrm lib/lokigames/rtcw/Docs/Help/_borders
-@dirrm lib/lokigames/rtcw/Docs/Help/Readme
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/RTCW_Manual_SP
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/RTCW_Manual_IT
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/RTCW_Manual_GM
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/RTCW_Manual_FR
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/RTCW_Manual_EN
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual/Images
-@dirrm lib/lokigames/rtcw/Docs/Help/Manual
-@dirrm lib/lokigames/rtcw/Docs/Help/Credits
-@dirrm lib/lokigames/rtcw/Docs/Help/Compatibility
-@dirrm lib/lokigames/rtcw/Docs/Help/Tech Help/Customer Support
-@dirrm lib/lokigames/rtcw/Docs/Help/Tech Help/Information
-@dirrm lib/lokigames/rtcw/Docs/Help/Tech Help/vendor
-@dirrm lib/lokigames/rtcw/Docs/Help/Tech Help
-@dirrm lib/lokigames/rtcw/Docs/Help
-@dirrm lib/lokigames/rtcw/Docs
-@dirrm lib/lokigames/rtcw
-@dirrm lib/lokigames

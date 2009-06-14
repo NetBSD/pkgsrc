@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/31 21:45:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:56:52 joerg Exp $
 bin/netris
 share/doc/netris/FAQ
 share/doc/netris/README
 share/doc/netris/robot_desc
-@dirrm share/doc/netris
