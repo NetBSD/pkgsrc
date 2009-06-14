@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:04:45 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 20:45:12 joerg Exp $
 GNUstep/Apps/WMMail.app/Anims/NeXT/Mail1.xpm
 GNUstep/Apps/WMMail.app/Anims/NeXT/Mail2.xpm
 GNUstep/Apps/WMMail.app/Anims/NeXT/Mail3.xpm
@@ -42,5 +42,3 @@ GNUstep/Apps/WMMail.app/Sounds/drip.au
 GNUstep/Apps/WMMail.app/Sounds/hammer.au
 GNUstep/Apps/WMMail.app/Sounds/monkey.au
 GNUstep/Apps/WMMail.app/WMMail
-@unexec ${RMDIR} %D/GNUstep/Apps 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/GNUstep 2>/dev/null || ${TRUE}
