@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/05/05 21:35:05 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.18 2009/06/14 22:00:30 joerg Exp $
 bin/php
 bin/php-config
 bin/phpize
@@ -201,7 +201,6 @@ lib/php/build/mkdep.awk
 lib/php/build/phpize.m4
 lib/php/build/scan_makefile_in.awk
 lib/php/build/shtool
-@exec ${MKDIR} %D/lib/php/20020429
 libexec/cgi-bin/php
 man/man1/php-config.1
 man/man1/php.1
@@ -209,24 +208,4 @@ man/man1/phpize.1
 share/examples/php/php.ini-dist
 share/examples/php/php.ini-recommended
 share/php/php.gif
-@dirrm share/php
-@dirrm share/examples/php
-@dirrm lib/php/build
-@dirrm lib/php/20020429
-@dirrm lib/php
-@dirrm include/php/regex
-@dirrm include/php/main
-@dirrm include/php/include
-@dirrm include/php/ext/xml/expat
-@dirrm include/php/ext/xml
-@dirrm include/php/ext/standard
-@dirrm include/php/ext/session
-@dirrm include/php/ext/pgsql
-@dirrm include/php/ext/mbstring/libmbfl/mbfl
-@dirrm include/php/ext/mbstring/libmbfl
-@dirrm include/php/ext/mbstring
-@dirrm include/php/ext/iconv
-@dirrm include/php/ext
-@dirrm include/php/Zend
-@dirrm include/php/TSRM
-@dirrm include/php
+@pkgdir lib/php/20020429

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/23 11:22:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 22:00:16 joerg Exp $
 lib/httpd/mod_rivet.la
 lib/rivet/librivet.la
 lib/rivet/librivetparser.la
@@ -52,18 +52,4 @@ lib/rivet${PKGVERSION}/rivet-tcl/read_file.tcl
 lib/rivet${PKGVERSION}/rivet-tcl/rivet_command_document.tcl
 lib/rivet${PKGVERSION}/rivet-tcl/tclIndex
 lib/rivet${PKGVERSION}/rivet-tcl/wrap.tcl
-@dirrm lib/rivet${PKGVERSION}/rivet-tcl
-@dirrm lib/rivet${PKGVERSION}/packages/tclrivet
-@dirrm lib/rivet${PKGVERSION}/packages/simpledb
-@dirrm lib/rivet${PKGVERSION}/packages/session
-@dirrm lib/rivet${PKGVERSION}/packages/rivet_ncgi
-@exec ${MKDIR} %D/lib/rivet${PKGVERSION}/packages/rivet
-@dirrm lib/rivet${PKGVERSION}/packages/rivet
-@dirrm lib/rivet${PKGVERSION}/packages/form
-@dirrm lib/rivet${PKGVERSION}/packages/dtcl
-@dirrm lib/rivet${PKGVERSION}/packages/dio
-@dirrm lib/rivet${PKGVERSION}/packages/commserver
-@dirrm lib/rivet${PKGVERSION}/packages
-@dirrm lib/rivet${PKGVERSION}
-@dirrm lib/rivet
-@comment In www/apache: @dirrm lib/httpd
+@pkgdir lib/rivet${PKGVERSION}/packages/rivet

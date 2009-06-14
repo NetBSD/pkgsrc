@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2009/04/08 16:44:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.37 2009/06/14 22:00:25 joerg Exp $
 bin/liferea
 bin/liferea-add-feed
 bin/liferea-bin
@@ -148,19 +148,3 @@ share/locale/sk/LC_MESSAGES/liferea.mo
 share/locale/sq/LC_MESSAGES/liferea.mo
 share/locale/sv/LC_MESSAGES/liferea.mo
 share/locale/tr/LC_MESSAGES/liferea.mo
-@dirrm share/liferea/xslt
-@dirrm share/liferea/pixmaps
-@dirrm share/liferea/opml
-@dirrm share/liferea/media
-@dirrm share/liferea/dtd
-@dirrm share/liferea/doc/html
-@dirrm share/liferea/doc
-@dirrm share/liferea/css
-@dirrm share/liferea
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/liferea
