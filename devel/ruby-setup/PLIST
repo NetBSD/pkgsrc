@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/15 03:04:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:12 joerg Exp $
 bin/${RUBY_PKGPREFIX}-setup
 ${RUBY_VENDORLIB}/setup.rb
 ${RUBY_DOC}/setup/ChangeLog
@@ -22,6 +22,3 @@ ${RUBY_DOC}/setup/metaconfapi.html
 ${RUBY_DOC}/setup/news.html
 ${RUBY_DOC}/setup/usage.html
 ${RUBY_EG}/setup/add-task.rb
-@dirrm ${RUBY_EG}/setup
-@dirrm ${RUBY_DOC}/setup/ja
-@dirrm ${RUBY_DOC}/setup

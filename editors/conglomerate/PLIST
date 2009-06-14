@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/09/25 10:54:11 hira Exp $
+@comment $NetBSD: PLIST,v 1.10 2009/06/14 17:50:21 joerg Exp $
 bin/conglomerate
 share/application-registry/conglomerate.applications
 share/applications/conglomerate.desktop
@@ -293,24 +293,3 @@ share/pixmaps/conglomerate/cong-warning-48.png
 share/pixmaps/conglomerate/cong-wrapper-16.png
 share/pixmaps/conglomerate/conglomerate-icon-32.png
 share/pixmaps/conglomerate/conglomerate-logo.png
-@dirrm share/pixmaps/conglomerate
-@comment in xdg-dirs: @dirrm share/pixmaps
-@dirrm share/omf/conglomerate
-@comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/gnome/help/conglomerate/C/figures
-@dirrm share/gnome/help/conglomerate/C
-@dirrm share/gnome/help/conglomerate
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in GConf: @dirrm share/gconf/schemas
-@dirrm share/doc/conglomerate
-@dirrm share/conglomerate/templates
-@dirrm share/conglomerate/stylesheets
-@dirrm share/conglomerate/glade
-@dirrm share/conglomerate/examples
-@dirrm share/conglomerate/dtd
-@dirrm share/conglomerate/dispspecs
-@dirrm share/conglomerate/css
-@dirrm share/conglomerate
-@comment in xdg-dirs: @dirrm share/applications
-@comment in xdg-dirs: @dirrm share/application-registry

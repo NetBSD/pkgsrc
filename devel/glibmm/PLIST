@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2009/03/17 22:02:36 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:48:46 joerg Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncresult.h
@@ -935,32 +935,3 @@ share/doc/glibmm-2.4/examples/thread/dispatcher.cc
 share/doc/glibmm-2.4/examples/thread/dispatcher2.cc
 share/doc/glibmm-2.4/examples/thread/thread.cc
 share/doc/glibmm-2.4/examples/thread/threadpool.cc
-@dirrm share/doc/glibmm-2.4/examples/thread
-@dirrm share/doc/glibmm-2.4/examples/regex
-@dirrm share/doc/glibmm-2.4/examples/options
-@dirrm share/doc/glibmm-2.4/examples/markup
-@dirrm share/doc/glibmm-2.4/examples/keyfile
-@dirrm share/doc/glibmm-2.4/examples/iochannel_stream
-@dirrm share/doc/glibmm-2.4/examples/compose
-@dirrm share/doc/glibmm-2.4/examples/child_watch
-@dirrm share/doc/glibmm-2.4/examples
-@dirrm share/doc/glibmm-2.4/docs/reference/html
-@dirrm share/doc/glibmm-2.4/docs/reference
-@dirrm share/doc/glibmm-2.4/docs/images
-@dirrm share/doc/glibmm-2.4/docs
-@dirrm share/doc/glibmm-2.4
-@dirrm share/devhelp/books/glibmm-2.4
-@dirrm lib/glibmm-2.4/proc/pm
-@dirrm lib/glibmm-2.4/proc/m4
-@dirrm lib/glibmm-2.4/proc
-@dirrm lib/glibmm-2.4/include
-@dirrm lib/glibmm-2.4
-@dirrm lib/giomm-2.4/include
-@dirrm lib/giomm-2.4
-@dirrm include/glibmm-2.4/glibmm_generate_extra_defs
-@dirrm include/glibmm-2.4/glibmm/private
-@dirrm include/glibmm-2.4/glibmm
-@dirrm include/glibmm-2.4
-@dirrm include/giomm-2.4/giomm/private
-@dirrm include/giomm-2.4/giomm
-@dirrm include/giomm-2.4

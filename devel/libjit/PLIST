@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/18 16:45:21 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:53 joerg Exp $
 include/jit/jit-apply.h
 include/jit/jit-arch.h
 include/jit/jit-block.h
@@ -29,4 +29,3 @@ lib/libjit.la
 lib/libjitdynamic.la
 lib/libjitplus.la
 man/man3/libjit.3
-@dirrm include/jit

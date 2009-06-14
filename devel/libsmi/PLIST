@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/07/15 10:18:30 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:48:56 joerg Exp $
 bin/smicache
 bin/smidiff
 bin/smidump
@@ -376,17 +376,6 @@ share/libsmi/pibs/SLS-NEGOTIATION-PIB-orig
 share/libsmi/pibs/UMTS-PIB
 share/libsmi/pibs/UMTS-PIB-orig
 @exec ${MKDIR} %D/share/libsmi/pibs/tubs
-@dirrm share/libsmi/pibs/tubs
 @exec ${MKDIR} %D/share/libsmi/pibs/site
-@dirrm share/libsmi/pibs/site
 @exec ${MKDIR} %D/share/libsmi/pibs/ietf
-@dirrm share/libsmi/pibs/ietf
-@dirrm share/libsmi/pibs
-@dirrm share/libsmi/mibs/tubs
 @exec ${MKDIR} %D/share/libsmi/mibs/site
-@dirrm share/libsmi/mibs/site
-@dirrm share/libsmi/mibs/irtf
-@dirrm share/libsmi/mibs/ietf
-@dirrm share/libsmi/mibs/iana
-@dirrm share/libsmi/mibs
-@dirrm share/libsmi

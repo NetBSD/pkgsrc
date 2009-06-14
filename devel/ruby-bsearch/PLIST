@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:47:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:08 joerg Exp $
 ${RUBY_VENDORLIB}/bsearch.rb
 ${RUBY_DOC}/bsearch/bsearch.en.html
 ${RUBY_DOC}/bsearch/bsearch.en.rd
 ${RUBY_DOC}/bsearch/bsearch.ja.html
 ${RUBY_DOC}/bsearch/bsearch.ja.rd
 ${RUBY_DOC}/bsearch/bsearch.png
-@dirrm ${RUBY_DOC}/bsearch

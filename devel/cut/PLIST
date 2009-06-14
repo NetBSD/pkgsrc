@@ -1,4 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/21 11:08:33 ichiro Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:39 joerg Exp $
 bin/cutgen-${PKGVERSION}
 include/${PKGNAME}/cut.h
-@dirrm include/${PKGNAME}

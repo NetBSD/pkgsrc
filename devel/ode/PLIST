@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/10 20:35:28 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:01 joerg Exp $
 include/ode/collision.h
 include/ode/collision_space.h
 include/ode/collision_trimesh.h
@@ -21,4 +21,3 @@ include/ode/odemath.h
 include/ode/rotation.h
 include/ode/timer.h
 lib/libode.la
-@dirrm include/ode

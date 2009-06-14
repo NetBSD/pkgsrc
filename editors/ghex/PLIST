@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/02/26 20:35:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:50:22 joerg Exp $
 bin/ghex2
 include/gtkhex/gtkhex.h
 include/gtkhex/hex-document.h
@@ -101,38 +101,3 @@ share/locale/vi/LC_MESSAGES/ghex-2.0.mo
 share/locale/wa/LC_MESSAGES/ghex-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/ghex-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/ghex-2.0.mo
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/help/ghex2/zh_TW/figures
-@dirrm share/gnome/help/ghex2/zh_TW
-@dirrm share/gnome/help/ghex2/zh_CN/figures
-@dirrm share/gnome/help/ghex2/zh_CN
-@dirrm share/gnome/help/ghex2/sv/figures
-@dirrm share/gnome/help/ghex2/sv
-@dirrm share/gnome/help/ghex2/oc/figures
-@dirrm share/gnome/help/ghex2/oc
-@dirrm share/gnome/help/ghex2/ko/figures
-@dirrm share/gnome/help/ghex2/ko
-@dirrm share/gnome/help/ghex2/ja/figures
-@dirrm share/gnome/help/ghex2/ja
-@dirrm share/gnome/help/ghex2/it/figures
-@dirrm share/gnome/help/ghex2/it
-@dirrm share/gnome/help/ghex2/fr/figures
-@dirrm share/gnome/help/ghex2/fr
-@dirrm share/gnome/help/ghex2/es/figures
-@dirrm share/gnome/help/ghex2/es
-@dirrm share/gnome/help/ghex2/de/figures
-@dirrm share/gnome/help/ghex2/de
-@dirrm share/gnome/help/ghex2/C/figures
-@dirrm share/gnome/help/ghex2/C
-@dirrm share/gnome/help/ghex2
-@comment in gnome2-dirs: @dirrm share/gnome/help
-@comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
-@comment in GConf: @dirrm share/gconf/schemas
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm include/gtkhex

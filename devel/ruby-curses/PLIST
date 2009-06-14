@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:36:53 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:09 joerg Exp $
 ${RUBY_VENDORARCHLIB}/curses.${RUBY_DLEXT}
 ${RUBY_EG}/curses/hello.rb
 ${RUBY_EG}/curses/rain.rb
 ${RUBY_EG}/curses/view.rb
 ${RUBY_EG}/curses/view2.rb
-@dirrm ${RUBY_EG}/curses

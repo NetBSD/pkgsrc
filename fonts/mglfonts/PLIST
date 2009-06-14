@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:49:10 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:14 joerg Exp $
 bin/bdftomgl
 bin/mgl_fontinfo
 lib/mgl2/k12x10.fnt
@@ -27,9 +27,3 @@ share/misc/mglfonts/k16x16-bs-patch
 share/misc/mglfonts/k16x16-yen-patch
 share/misc/mglfonts/k24x24-bs-patch
 share/misc/mglfonts/k24x24-yen-patch
-@dirrm share/misc/mglfonts
-@dirrm share/doc/mglfonts/zoro
-@dirrm share/doc/mglfonts/kaname
-@dirrm share/doc/mglfonts/comment
-@dirrm share/doc/mglfonts
-@dirrm lib/mgl2

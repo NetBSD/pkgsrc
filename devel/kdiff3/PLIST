@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/24 14:22:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:50 joerg Exp $
 bin/kdiff3
 lib/kde3/libkdiff3part.la
 man/man1/kdiff3.1
@@ -216,34 +216,3 @@ share/locale/ta/LC_MESSAGES/kdiff3.mo
 share/locale/tg/LC_MESSAGES/kdiff3.mo
 share/locale/tr/LC_MESSAGES/kdiff3.mo
 share/locale/zh_CN/LC_MESSAGES/kdiff3.mo
-@comment in kde: @dirrm share/kde/services
-@dirrm share/kde/apps/kdiff3part
-@dirrm share/kde/apps/kdiff3
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/kde/applnk/Development
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/kde/HTML/sv/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/fr/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/fr
-@dirrm share/doc/kde/HTML/et/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@dirrm share/doc/kde/HTML/da/kdiff3
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/doc/kde/HTML
-@comment in kde: @dirrm lib/kde3

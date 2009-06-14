@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2004/01/25 20:34:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 17:54:15 joerg Exp $
 lib/X11/fonts/TTF/AndaleMo.ttf
 lib/X11/fonts/TTF/AriBlk.ttf
 lib/X11/fonts/TTF/Arial.ttf
@@ -30,4 +30,3 @@ lib/X11/fonts/TTF/trebuc.ttf
 lib/X11/fonts/TTF/trebucbi.ttf
 lib/X11/fonts/TTF/trebucit.ttf
 share/doc/ms-ttf/ms-ttf-license
-@dirrm share/doc/ms-ttf

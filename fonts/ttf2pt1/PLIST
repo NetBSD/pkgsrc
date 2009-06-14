@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/27 15:18:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:54:16 joerg Exp $
 bin/ttf2pt1
 bin/ttf2pt1_convert
 bin/ttf2pt1_x2gs
@@ -89,21 +89,3 @@ share/ttf2pt1/scripts/t1fdir
 share/ttf2pt1/scripts/trans
 share/ttf2pt1/scripts/unhtml
 share/ttf2pt1/scripts/x2gs
-@dirrm share/ttf2pt1/scripts
-@dirrm share/ttf2pt1/other
-@dirrm share/ttf2pt1/maps
-@dirrm share/ttf2pt1/encodings/russian
-@dirrm share/ttf2pt1/encodings/latin5
-@dirrm share/ttf2pt1/encodings/latin4
-@dirrm share/ttf2pt1/encodings/latin2
-@dirrm share/ttf2pt1/encodings/latin1
-@dirrm share/ttf2pt1/encodings/cyrillic
-@dirrm share/ttf2pt1/encodings/bulgarian
-@dirrm share/ttf2pt1/encodings/adobestd
-@dirrm share/ttf2pt1/encodings
-@dirrm share/ttf2pt1/app/netscape
-@dirrm share/ttf2pt1/app/X11
-@dirrm share/ttf2pt1/app/TeX
-@dirrm share/ttf2pt1/app/RPM
-@dirrm share/ttf2pt1/app
-@dirrm share/ttf2pt1

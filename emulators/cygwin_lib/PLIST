@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/29 02:10:48 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:51:03 joerg Exp $
 bin/cygwin1.dll
 bin/cygwin-cygpath
 bin/cygwin-ipcrm
@@ -25,5 +25,3 @@ emul/cygwin/bin/setfacl
 emul/cygwin/bin/ssp
 emul/cygwin/bin/strace
 emul/cygwin/bin/umount
-@dirrm emul/cygwin/bin
-@dirrm emul/cygwin

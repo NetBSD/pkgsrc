@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/16 14:25:34 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:04 joerg Exp $
 bin/bin2dol
 bin/gcmap
 bin/gcube
@@ -7,4 +7,3 @@ bin/tplx
 share/doc/gcube/COPYING
 share/doc/gcube/ChangeLog
 share/doc/gcube/README
-@dirrm share/doc/gcube

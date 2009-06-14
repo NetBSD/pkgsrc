@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:23:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:47 joerg Exp $
 bin/gelex
 bin/gepp
 bin/geyacc
@@ -540,64 +540,3 @@ share/gobo-eiffel/library/utility/loadpath.se
 share/gobo-eiffel/library/utility/readme.txt
 share/gobo-eiffel/library/utility/support/ut_character_codes.e
 share/gobo-eiffel/library/utility/support/ut_filename_handler.e
-@dirrm share/gobo-eiffel/library/utility/support
-@dirrm share/gobo-eiffel/library/utility/formatter
-@dirrm share/gobo-eiffel/library/utility/error
-@dirrm share/gobo-eiffel/library/utility/command
-@dirrm share/gobo-eiffel/library/utility
-@dirrm share/gobo-eiffel/library/structure/table
-@dirrm share/gobo-eiffel/library/structure/support
-@dirrm share/gobo-eiffel/library/structure/sort
-@dirrm share/gobo-eiffel/library/structure/list
-@dirrm share/gobo-eiffel/library/structure/dispenser
-@dirrm share/gobo-eiffel/library/structure/cursor
-@dirrm share/gobo-eiffel/library/structure/container
-@dirrm share/gobo-eiffel/library/structure/base
-@dirrm share/gobo-eiffel/library/structure
-@dirrm share/gobo-eiffel/library/parse/yacc
-@dirrm share/gobo-eiffel/library/parse/support
-@dirrm share/gobo-eiffel/library/parse/skeleton
-@dirrm share/gobo-eiffel/library/parse/parser
-@dirrm share/gobo-eiffel/library/parse/grammar
-@dirrm share/gobo-eiffel/library/parse/generation
-@dirrm share/gobo-eiffel/library/parse/fsm
-@dirrm share/gobo-eiffel/library/parse/error
-@dirrm share/gobo-eiffel/library/parse
-@dirrm share/gobo-eiffel/library/lexical/support
-@dirrm share/gobo-eiffel/library/lexical/skeleton
-@dirrm share/gobo-eiffel/library/lexical/scanner
-@dirrm share/gobo-eiffel/library/lexical/regexp
-@dirrm share/gobo-eiffel/library/lexical/lex
-@dirrm share/gobo-eiffel/library/lexical/generation
-@dirrm share/gobo-eiffel/library/lexical/error
-@dirrm share/gobo-eiffel/library/lexical/automaton
-@dirrm share/gobo-eiffel/library/lexical
-@dirrm share/gobo-eiffel/library/kernel/spec/ve
-@dirrm share/gobo-eiffel/library/kernel/spec/se
-@dirrm share/gobo-eiffel/library/kernel/spec/ise
-@dirrm share/gobo-eiffel/library/kernel/spec/hact
-@dirrm share/gobo-eiffel/library/kernel/spec
-@dirrm share/gobo-eiffel/library/kernel/include
-@dirrm share/gobo-eiffel/library/kernel
-@dirrm share/gobo-eiffel/library
-@dirrm share/gobo-eiffel
-@dirrm share/examples/gobo-eiffel/parse/rpcalc
-@dirrm share/examples/gobo-eiffel/parse/mcalc
-@dirrm share/examples/gobo-eiffel/parse/eiffel
-@dirrm share/examples/gobo-eiffel/parse/calc
-@dirrm share/examples/gobo-eiffel/parse
-@dirrm share/examples/gobo-eiffel/lexical/gegrep
-@dirrm share/examples/gobo-eiffel/lexical/eiffel
-@dirrm share/examples/gobo-eiffel/lexical/calculator
-@dirrm share/examples/gobo-eiffel/lexical/ascii2ps
-@dirrm share/examples/gobo-eiffel/lexical
-@dirrm share/examples/gobo-eiffel
-@dirrm share/doc/gobo-eiffel/structure/image
-@dirrm share/doc/gobo-eiffel/structure/flatshort
-@dirrm share/doc/gobo-eiffel/structure
-@dirrm share/doc/gobo-eiffel/portability
-@dirrm share/doc/gobo-eiffel/image/book
-@dirrm share/doc/gobo-eiffel/image
-@dirrm share/doc/gobo-eiffel/geyacc
-@dirrm share/doc/gobo-eiffel/gelex
-@dirrm share/doc/gobo-eiffel

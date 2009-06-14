@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/01/26 03:56:50 markd Exp $
+@comment $NetBSD: PLIST,v 1.12 2009/06/14 17:48:49 joerg Exp $
 bin/kdbg
 share/applications/kde/kdbg.desktop
 share/doc/kde/HTML/de/kdbg/argspwdenv.html
@@ -117,26 +117,3 @@ share/locale/sk/LC_MESSAGES/kdbg.mo
 share/locale/sr/LC_MESSAGES/kdbg.mo
 share/locale/sv/LC_MESSAGES/kdbg.mo
 share/locale/tr/LC_MESSAGES/kdbg.mo
-@comment in kde: @dirrm share/kde/config
-@dirrm share/kde/apps/kdbg/types
-@dirrm share/kde/apps/kdbg/pics
-@dirrm share/kde/apps/kdbg/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kdbg/icons/hicolor/22x22
-@dirrm share/kde/apps/kdbg/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kdbg/icons/hicolor/16x16
-@dirrm share/kde/apps/kdbg/icons/hicolor
-@dirrm share/kde/apps/kdbg/icons
-@dirrm share/kde/apps/kdbg
-@comment in kde: @dirrm share/kde/apps
-@comment in kde: @dirrm share/icons/locolor/32x32/apps
-@comment in kde: @dirrm share/icons/locolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@dirrm share/doc/kde/HTML/ru/kdbg
-@comment in kde: @dirrm share/doc/kde/HTML/ru
-@dirrm share/doc/kde/HTML/en/kdbg
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/de/kdbg
-@comment in kde: @dirrm share/doc/kde/HTML/de
-@comment in kde: @dirrm share/applications/kde

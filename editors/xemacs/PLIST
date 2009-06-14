@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/04/24 15:32:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2009/06/14 17:50:27 joerg Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -1254,29 +1254,6 @@ man/man1/gnuserv.1
 man/man1/xemacs-ctags.1
 man/man1/xemacs-etags.1
 man/man1/xemacs.1
-@dirrm lib/${DISTNAME}/lisp/term
-@dirrm lib/${DISTNAME}/lisp/mule
-@dirrm lib/${DISTNAME}/lisp
-@dirrm lib/${DISTNAME}/info
-@dirrm lib/${DISTNAME}/etc/toolbar
-@dirrm lib/${DISTNAME}/etc/tests/external-widget
-@dirrm lib/${DISTNAME}/etc/tests
-@dirrm lib/${DISTNAME}/etc/sparcworks
-@dirrm lib/${DISTNAME}/etc/photos
-@dirrm lib/${DISTNAME}/etc/idd
-@dirrm lib/${DISTNAME}/etc/eos
-@dirrm lib/${DISTNAME}/etc/custom/example-themes
-@dirrm lib/${DISTNAME}/etc/custom
-@dirrm lib/${DISTNAME}/etc
 @exec ${MKDIR} %D/lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
-@dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/modules
-@dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/s
-@dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include/m
-@dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}/include
-@dirrm lib/${DISTNAME}/${MACHINE_GNU_PLATFORM}
-@dirrm lib/${DISTNAME}
 @exec ${MKDIR} %D/lib/xemacs/site-modules
-@dirrm lib/xemacs/site-modules
 @exec ${MKDIR} %D/lib/xemacs/site-lisp
-@dirrm lib/xemacs/site-lisp
-@dirrm lib/xemacs

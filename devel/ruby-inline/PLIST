@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/22 16:01:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:49:10 joerg Exp $
 ${GEM_HOME}/cache/RubyInline-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
@@ -13,8 +13,3 @@ ${GEM_LIBDIR}/test/test_inline.rb
 ${GEM_LIBDIR}/tutorial/example1.rb
 ${GEM_LIBDIR}/tutorial/example2.rb
 ${GEM_HOME}/specifications/RubyInline-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/tutorial
-@dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/demo
-@dirrm ${GEM_LIBDIR}

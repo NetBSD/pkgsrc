@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/05/16 15:21:52 epg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:49:06 joerg Exp $
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.py
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/qbzr/__init__.pyo
@@ -202,44 +202,3 @@ ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sl/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sv/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/tr/LC_MESSAGES/qbzr.mo
 ${PYSITELIB}/bzrlib/plugins/qbzr/locale/uk/LC_MESSAGES/qbzr.mo
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/uk/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/uk
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/tr/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/tr
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sv/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sv
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sl/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sl
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sk/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/sk
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/ru/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/ru
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/pt_BR/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/pt_BR
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/pl/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/pl
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/nl/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/nl
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/ja/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/ja
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/it/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/it
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/he/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/he
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/gl/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/gl
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/fr/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/fr
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/es/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/es
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/en/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/en
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/de/LC_MESSAGES
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale/de
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/locale
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/lib/tests
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/lib/extra
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr/lib
-@dirrm ${PYSITELIB}/bzrlib/plugins/qbzr
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib/plugins
-@comment in bzr: @dirrm ${PYSITELIB}/bzrlib
