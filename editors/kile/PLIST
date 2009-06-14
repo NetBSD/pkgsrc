@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/11/26 10:34:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.19 2009/06/14 17:50:23 joerg Exp $
 bin/kile
 share/applications/kde/kile.desktop
 share/doc/kde/HTML/da/kile/common
@@ -1542,64 +1542,3 @@ share/locale/th/LC_MESSAGES/kile.mo
 share/locale/tr/LC_MESSAGES/kile.mo
 share/locale/uk/LC_MESSAGES/kile.mo
 share/locale/zh_CN/LC_MESSAGES/kile.mo
-@comment in kde: @dirrm share/kde/mimelnk/text
-@comment in kde: @dirrm share/kde/config.kcfg
-@dirrm share/kde/apps/kile/test
-@dirrm share/kde/apps/kile/templates
-@dirrm share/kde/apps/kile/pics
-@dirrm share/kde/apps/kile/mathsymbols/special
-@dirrm share/kde/apps/kile/mathsymbols/relation
-@dirrm share/kde/apps/kile/mathsymbols/operators
-@dirrm share/kde/apps/kile/mathsymbols/misc-text
-@dirrm share/kde/apps/kile/mathsymbols/misc-math
-@dirrm share/kde/apps/kile/mathsymbols/greek
-@dirrm share/kde/apps/kile/mathsymbols/delimiters
-@dirrm share/kde/apps/kile/mathsymbols/cyrillic
-@dirrm share/kde/apps/kile/mathsymbols/arrows
-@dirrm share/kde/apps/kile/mathsymbols
-@dirrm share/kde/apps/kile/icons/hicolor/64x64/actions
-@dirrm share/kde/apps/kile/icons/hicolor/64x64
-@dirrm share/kde/apps/kile/icons/hicolor/48x48/actions
-@dirrm share/kde/apps/kile/icons/hicolor/48x48
-@dirrm share/kde/apps/kile/icons/hicolor/32x32/actions
-@dirrm share/kde/apps/kile/icons/hicolor/32x32
-@dirrm share/kde/apps/kile/icons/hicolor/22x22/actions
-@dirrm share/kde/apps/kile/icons/hicolor/22x22
-@dirrm share/kde/apps/kile/icons/hicolor/16x16/actions
-@dirrm share/kde/apps/kile/icons/hicolor/16x16
-@dirrm share/kde/apps/kile/icons/hicolor
-@dirrm share/kde/apps/kile/icons
-@dirrm share/kde/apps/kile/help
-@dirrm share/kde/apps/kile/encodings
-@dirrm share/kde/apps/kile/complete/tex
-@dirrm share/kde/apps/kile/complete/dictionary
-@dirrm share/kde/apps/kile/complete/abbreviation
-@dirrm share/kde/apps/kile/complete
-@dirrm share/kde/apps/kile
-@comment in kde: @dirrm share/kde/apps/kconf_update
-@comment in kde: @dirrm share/kde/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/64x64/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/128x128/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/doc/kde/HTML/sv/kile
-@comment in kde: @dirrm share/doc/kde/HTML/sv
-@dirrm share/doc/kde/HTML/pt/kile
-@comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/kile
-@comment in kde: @dirrm share/doc/kde/HTML/nl
-@dirrm share/doc/kde/HTML/it/kile
-@comment in kde: @dirrm share/doc/kde/HTML/it
-@dirrm share/doc/kde/HTML/et/kile
-@comment in kde: @dirrm share/doc/kde/HTML/et
-@dirrm share/doc/kde/HTML/es/kile
-@comment in kde: @dirrm share/doc/kde/HTML/es
-@dirrm share/doc/kde/HTML/en/kile
-@comment in kde: @dirrm share/doc/kde/HTML/en
-@dirrm share/doc/kde/HTML/da/kile
-@comment in kde: @dirrm share/doc/kde/HTML/da
-@comment in kde: @dirrm share/applications/kde

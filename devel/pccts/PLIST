@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:25:47 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:02 joerg Exp $
 bin/antlr
 bin/dlg
 bin/genmk
@@ -51,5 +51,3 @@ include/pccts/PCCTSAST.cpp
 include/pccts/ast.c
 include/pccts/charptr.c
 include/pccts/slist.cpp
-@dirrm share/doc/pccts
-@dirrm include/pccts

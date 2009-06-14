@@ -1,10 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/02/14 10:34:56 rillig Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:43 joerg Exp $
 bin/etrace
 bin/etrace.pl
 share/doc/etrace/README
 share/etrace/ptrace.c
 share/examples/etrace/Makefile
 share/examples/etrace/crumble.c
-@dirrm share/examples/etrace
-@dirrm share/etrace
-@dirrm share/doc/etrace

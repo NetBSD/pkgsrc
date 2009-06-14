@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/19 14:46:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2009/06/14 17:49:08 joerg Exp $
 ${RUBY_VENDORLIB}/amstd/aliasing.rb
 ${RUBY_VENDORLIB}/amstd/benchmark.rb
 ${RUBY_VENDORLIB}/amstd/bug.rb
@@ -14,5 +14,3 @@ ${RUBY_VENDORLIB}/amstd/version.rb
 ${RUBY_DOC}/amstd/README.en
 ${RUBY_DOC}/amstd/README.ja
 ${RUBY_DOC}/amstd/manual.rd.ja
-@dirrm ${RUBY_VENDORLIB}/amstd
-@dirrm ${RUBY_DOC}/amstd

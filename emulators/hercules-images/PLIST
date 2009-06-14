@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:52:48 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:51:05 joerg Exp $
 share/data/hercules/mftipl.txt
 share/data/hercules/os360.cnf
 share/data/hercules/sysgen.txt
@@ -15,4 +15,3 @@ share/data/hercules/init2311.txt
 share/data/hercules/mftr33.150
 share/data/hercules/work01.151
 share/data/hercules/work02.192
-@dirrm share/data/hercules

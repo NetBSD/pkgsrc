@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/10 11:13:09 gson Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:49:15 joerg Exp $
 bin/st-lookupdns
 bin/st-proxy
 bin/st-server
@@ -8,6 +8,4 @@ share/doc/html/st/fig.gif
 share/doc/html/st/notes.html
 share/doc/html/st/reference.html
 share/doc/html/st/st.html
-@dirrm share/doc/html/st
 @exec ${MKDIR} %D/include/st
-@dirrm include/st

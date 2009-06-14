@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/04/17 23:10:30 rh Exp $
+@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:48:46 joerg Exp $
 include/objc_lf2/Object.h
 include/objc_lf2/Protocol.h
 include/objc_lf2/encoding.h
@@ -13,4 +13,3 @@ include/objc_lf2/thr.h
 include/objc_lf2/typedstream.h
 lib/libobjc_lf2.so
 lib/libobjc_lf2.so.2.95.3
-@dirrm include/objc_lf2

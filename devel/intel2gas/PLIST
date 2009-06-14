@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/20 19:22:53 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:48 joerg Exp $
 bin/intel2gas
 share/intel2gas/g2i/+-.01.list
 share/intel2gas/g2i/+-.02.list
@@ -98,7 +98,3 @@ share/intel2gas/m2g/size.04.list
 share/intel2gas/m2g/size.08.list
 share/intel2gas/m2g/size.10.list
 share/intel2gas/m2g/textlist.syntax
-@dirrm share/intel2gas/m2g
-@dirrm share/intel2gas/i2g
-@dirrm share/intel2gas/g2i
-@dirrm share/intel2gas

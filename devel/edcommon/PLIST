@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/04/17 22:01:19 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:48:42 joerg Exp $
 include/EDCommon
 lib/GNUstep/Frameworks/EDCommon.framework/EDCommon
 lib/GNUstep/Frameworks/EDCommon.framework/Headers
@@ -72,10 +72,3 @@ lib/GNUstep/Frameworks/EDCommon.framework/Versions/Current
 lib/GNUstep/Frameworks/EDCommon.framework/libEDCommon.so
 lib/libEDCommon.so
 lib/libEDCommon.so.0.0.1
-@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Resources
-@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0/Headers
-@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions/0
-@dirrm lib/GNUstep/Frameworks/EDCommon.framework/Versions
-@dirrm lib/GNUstep/Frameworks/EDCommon.framework
-@comment in x11/gnustep-base: @dirrm lib/GNUstep/Frameworks
-@comment in devel/gnustep-base: @dirrm lib/GNUstep

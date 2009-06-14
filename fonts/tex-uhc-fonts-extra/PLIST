@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/15 19:56:04 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:54:16 joerg Exp $
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/bom/ubm10.afm
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/bom/ubm11.afm
 ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/bom/ubm12.afm
@@ -5940,69 +5940,3 @@ ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/yetgul/wytxo6.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/yetgul/wytxo7.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/yetgul/wytxo8.vf
 ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/yetgul/wytxo9.vf
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/vf/uhc/bom
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/type1/uhc/bom
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/tfm/uhc/bom
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ovf/uhc/bom
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/ofm/uhc/bom
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/yetgul
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/vada
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/shinmun
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/pilgia
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/pilgi
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/pen
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/jamo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/gungseo
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/graphic
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/dinaru
-@dirrm ${PKG_LOCALTEXMFPREFIX}/fonts/afm/uhc/bom

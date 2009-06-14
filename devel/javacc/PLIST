@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/11 03:50:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:48:49 joerg Exp $
 bin/javacc
 bin/jjdoc
 bin/jjtree
@@ -149,24 +149,4 @@ share/examples/javacc/VTransformer/Main.java
 share/examples/javacc/VTransformer/README
 share/examples/javacc/VTransformer/SimpleNode.java
 share/examples/javacc/VTransformer/UnparseVisitor.java
-@dirrm share/examples/javacc/VTransformer
-@dirrm share/examples/javacc/Transformer
-@dirrm share/examples/javacc/SimpleExamples
-@dirrm share/examples/javacc/Obfuscator/input/package2
-@dirrm share/examples/javacc/Obfuscator/input/package1
-@dirrm share/examples/javacc/Obfuscator/input
-@dirrm share/examples/javacc/Obfuscator
-@dirrm share/examples/javacc/MailProcessing
-@dirrm share/examples/javacc/Lookahead
-@dirrm share/examples/javacc/JavaGrammars/1.5
-@dirrm share/examples/javacc/JavaGrammars
-@dirrm share/examples/javacc/JavaCCGrammar
-@dirrm share/examples/javacc/JJTreeExamples
-@dirrm share/examples/javacc/Interpreter
-@dirrm share/examples/javacc/GUIParsing/TokenMgrVersion
-@dirrm share/examples/javacc/GUIParsing/ParserVersion
-@dirrm share/examples/javacc/GUIParsing
-@dirrm share/examples/javacc/CORBA-IDL
-@dirrm share/examples/javacc
-@dirrm share/doc/javacc
 @unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

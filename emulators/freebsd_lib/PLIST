@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/09/09 19:03:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:51:04 joerg Exp $
 emul/freebsd/usr/lib/compat/libgnumalloc.so.2.0
 emul/freebsd/usr/lib/compat/libresolv.so.2.0
 emul/freebsd/usr/lib/compat/liby.so.2.0
@@ -53,12 +53,3 @@ emul/freebsd/usr/X11R6/lib/libXt.so.6.0
 emul/freebsd/usr/X11R6/lib/libXtst.so.6.1
 emul/freebsd/usr/X11R6/lib/liboldX.so.6.0
 emul/freebsd/var/run/ld.so.hints
-@dirrm emul/freebsd/var/run
-@dirrm emul/freebsd/var
-@dirrm emul/freebsd/usr/X11R6/lib
-@dirrm emul/freebsd/usr/X11R6
-@dirrm emul/freebsd/usr/libexec
-@dirrm emul/freebsd/usr/lib/compat
-@dirrm emul/freebsd/usr/lib
-@dirrm emul/freebsd/usr
-@dirrm emul/freebsd

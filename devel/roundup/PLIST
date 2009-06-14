@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/09/28 02:47:46 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:49:07 joerg Exp $
 bin/roundup-admin
 bin/roundup-demo
 bin/roundup-gettext
@@ -387,23 +387,3 @@ share/roundup/templates/minimal/html/user.register.html
 share/roundup/templates/minimal/html/user.rego_progress.html
 share/roundup/templates/minimal/initial_data.py
 share/roundup/templates/minimal/schema.py
-@dirrm share/roundup/templates/minimal/html
-@dirrm share/roundup/templates/minimal/extensions
-@dirrm share/roundup/templates/minimal/detectors
-@dirrm share/roundup/templates/minimal
-@dirrm share/roundup/templates/classic/html
-@dirrm share/roundup/templates/classic/extensions
-@dirrm share/roundup/templates/classic/detectors
-@dirrm share/roundup/templates/classic
-@dirrm share/roundup/templates
-@dirrm share/roundup/cgi-bin
-@dirrm share/roundup
-@dirrm share/doc/roundup/images
-@dirrm share/doc/roundup
-@dirrm ${PYSITELIB}/roundup/scripts
-@dirrm ${PYSITELIB}/roundup/cgi/ZTUtils
-@dirrm ${PYSITELIB}/roundup/cgi/TAL
-@dirrm ${PYSITELIB}/roundup/cgi/PageTemplates
-@dirrm ${PYSITELIB}/roundup/cgi
-@dirrm ${PYSITELIB}/roundup/backends
-@dirrm ${PYSITELIB}/roundup

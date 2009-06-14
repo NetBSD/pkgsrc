@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/09/06 13:13:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 17:48:47 joerg Exp $
 bin/info
 bin/infokey
 bin/install-info
@@ -23,4 +23,3 @@ man/man5/texinfo.5
 share/texinfo/texinfo.cat
 share/texinfo/texinfo.dtd
 share/texinfo/texinfo.xsl
-@dirrm share/texinfo

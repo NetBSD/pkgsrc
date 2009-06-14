@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/05/25 12:54:48 mishka Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 17:51:01 joerg Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -60,8 +60,3 @@ share/doc/bochs/COPYING
 share/doc/bochs/README
 share/doc/bochs/TODO
 share/doc/bochs/bochsrc-sample.txt
-@dirrm share/doc/bochs
-@dirrm share/bochs/keymaps
-@dirrm share/bochs
-${PLIST.notiny}@dirrm lib/bochs/plugins
-${PLIST.notiny}@dirrm lib/bochs

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/10 00:34:46 snj Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:06 joerg Exp $
 ${PYSITELIB}/xdg/BaseDirectory.py
 ${PYSITELIB}/xdg/BaseDirectory.pyc
 ${PYSITELIB}/xdg/BaseDirectory.pyo
@@ -35,4 +35,3 @@ ${PYSITELIB}/xdg/RecentFiles.pyo
 ${PYSITELIB}/xdg/__init__.py
 ${PYSITELIB}/xdg/__init__.pyc
 ${PYSITELIB}/xdg/__init__.pyo
-@dirrm ${PYSITELIB}/xdg

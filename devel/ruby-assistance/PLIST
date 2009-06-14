@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:16:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:49:08 joerg Exp $
 ${GEM_HOME}/cache/assistance-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -23,7 +23,3 @@ ${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/time_calculations_spec.rb
 ${GEM_LIBDIR}/spec/validation_spec.rb
 ${GEM_HOME}/specifications/assistance-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/spec
-@dirrm ${GEM_LIBDIR}/lib/assistance
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}
