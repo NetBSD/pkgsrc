@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2002/11/19 23:03:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 22:00:16 joerg Exp $
 lib/httpd/mod_ssl.so
 sbin/mkcert
 share/doc/mod_ssl/README.mkcert
@@ -73,12 +73,3 @@ share/mod_ssl/cca.sh
 share/mod_ssl/gid-mkcert.sh
 share/mod_ssl/loadcacert.cgi
 share/mod_ssl/sign.sh
-@dirrm share/mod_ssl
-@dirrm share/httpd/htdocs/manual/mod/mod_ssl
-@dirrm share/examples/mod_ssl/ssl.prm
-@dirrm share/examples/mod_ssl/ssl.key
-@dirrm share/examples/mod_ssl/ssl.csr
-@dirrm share/examples/mod_ssl/ssl.crt
-@dirrm share/examples/mod_ssl/ssl.crl
-@dirrm share/examples/mod_ssl
-@dirrm share/doc/mod_ssl

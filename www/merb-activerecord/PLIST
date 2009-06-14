@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:23:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:26 joerg Exp $
 ${GEM_HOME}/cache/merb_activerecord-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
@@ -29,29 +29,3 @@ ${GEM_LIBDIR}/lib/merb_activerecord.rb
 ${GEM_LIBDIR}/specs/merb_active_record_spec.rb
 ${GEM_LIBDIR}/specs/spec_helper.rb
 ${GEM_HOME}/specifications/merb_activerecord-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/specs
-@dirrm ${GEM_LIBDIR}/lib/merb/session
-@dirrm ${GEM_LIBDIR}/lib/merb/orms/active_record
-@dirrm ${GEM_LIBDIR}/lib/merb/orms
-@dirrm ${GEM_LIBDIR}/lib/merb
-@dirrm ${GEM_LIBDIR}/lib/active_record
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates/app/views/%controller_file_name%
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates/app/views
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates/app/helpers
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates/app/controllers
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates/app
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller/templates
-@dirrm ${GEM_LIBDIR}/activerecord_generators/resource_controller
-@dirrm ${GEM_LIBDIR}/activerecord_generators/model/templates/app/models
-@dirrm ${GEM_LIBDIR}/activerecord_generators/model/templates/app
-@dirrm ${GEM_LIBDIR}/activerecord_generators/model/templates
-@dirrm ${GEM_LIBDIR}/activerecord_generators/model
-@dirrm ${GEM_LIBDIR}/activerecord_generators/migration/templates/schema/migrations
-@dirrm ${GEM_LIBDIR}/activerecord_generators/migration/templates/schema
-@dirrm ${GEM_LIBDIR}/activerecord_generators/migration/templates
-@dirrm ${GEM_LIBDIR}/activerecord_generators/migration
-@dirrm ${GEM_LIBDIR}/activerecord_generators/database_sessions_migration/templates
-@dirrm ${GEM_LIBDIR}/activerecord_generators/database_sessions_migration
-@dirrm ${GEM_LIBDIR}/activerecord_generators
-@dirrm ${GEM_LIBDIR}

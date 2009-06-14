@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/04 02:11:07 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:25 joerg Exp $
 bin/proxy
 include/proxy.h
 lib/libproxy.la
@@ -6,6 +6,3 @@ lib/libproxy/${PKGVERSION}/plugins/envvar.so
 lib/libproxy/${PKGVERSION}/plugins/file.so
 lib/pkgconfig/libproxy-1.0.pc
 ${PYSITELIB}/libproxy.py
-@dirrm lib/libproxy/${PKGVERSION}/plugins
-@dirrm lib/libproxy/${PKGVERSION}
-@dirrm lib/libproxy

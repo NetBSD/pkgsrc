@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2009/06/08 21:17:04 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/06/14 22:00:28 joerg Exp $
 bin/midori
 lib/midori/libcolorful-tabs.so
 lib/midori/libcookie-manager.so
@@ -58,28 +58,3 @@ share/midori/res/logo-shade.png
 share/midori/res/mootools.js
 share/midori/res/speeddial-head.html
 share/midori/res/speeddial.json
-@dirrm share/midori/res
-@dirrm share/midori
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/categories
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/categories
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/categories
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/status
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/categories
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16
-@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in xdg-dirs: @dirrm share/icons
-@dirrm share/examples/midori
-@dirrm share/doc/midori/user
-@dirrm share/doc/midori
-@comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/midori

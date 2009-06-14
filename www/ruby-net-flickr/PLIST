@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:26:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/06/14 22:00:34 joerg Exp $
 ${GEM_HOME}/cache/net-flickr-${PKGVERSION}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/lib/net/flickr.rb
@@ -12,7 +12,3 @@ ${GEM_LIBDIR}/lib/net/flickr/photolist.rb
 ${GEM_LIBDIR}/lib/net/flickr/photos.rb
 ${GEM_LIBDIR}/lib/net/flickr/tag.rb
 ${GEM_HOME}/specifications/net-flickr-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib/net/flickr
-@dirrm ${GEM_LIBDIR}/lib/net
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}
