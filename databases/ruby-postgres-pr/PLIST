@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:43:25 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:36:20 joerg Exp $
 ${GEM_HOME}/cache/postgres-pr-${PKGVERSION}.gem
 ${GEM_LIBDIR}/examples/client.rb
 ${GEM_LIBDIR}/examples/og/test.rb
@@ -19,4 +19,3 @@ ${GEM_LIBDIR}/lib/postgres-pr/version.rb
 ${GEM_LIBDIR}/lib/postgres.rb
 ${GEM_LIBDIR}/test/TC_message.rb
 ${GEM_HOME}/specifications/postgres-pr-${PKGVERSION}.gemspec
-@exec ${MKDIR} %D/${GEM_DOCDIR}
