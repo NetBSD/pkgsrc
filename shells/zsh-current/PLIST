@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/06/14 18:14:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2009/06/14 21:21:54 joerg Exp $
 bin/${PKGNAME}
 bin/zsh
 info/zsh.info
@@ -839,4 +839,4 @@ ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuget
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zfuput
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zsh-newuser-install
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/scripts/newuser
-@exec ${MKDIR} %D/share/zsh/site-functions
+@pkgdir share/zsh/site-functions
