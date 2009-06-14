@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:07:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2009/06/14 20:52:12 joerg Exp $
 include/libgoffice-0.6/goffice/app/error-info.h
 include/libgoffice-0.6/goffice/app/file.h
 include/libgoffice-0.6/goffice/app/go-cmd-context-impl.h
@@ -448,6 +448,3 @@ share/pixmaps/goffice/${PKGVERSION}/radar.xpm
 share/pixmaps/goffice/${PKGVERSION}/scatter.xpm
 share/pixmaps/goffice/${PKGVERSION}/stock.xpm
 share/pixmaps/goffice/${PKGVERSION}/surface.xpm
-@unexec ${RMDIR} %D/share/pixmaps/goffice 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/share/goffice 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/lib/goffice 2>/dev/null || ${TRUE}
