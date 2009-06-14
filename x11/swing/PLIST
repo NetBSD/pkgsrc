@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:06:42 joerg Exp $
 lib/java/swing/beaninfo.jar
 lib/java/swing/mac.jar
 lib/java/swing/motif.jar
@@ -1975,4 +1975,3 @@ share/examples/swing/TableExample/src/TableExample3.java
 share/examples/swing/TableExample/src/TableExample4.java
 share/examples/swing/TableExample/src/TableMap.java
 share/examples/swing/TableExample/src/TableSorter.java
-@unexec ${RMDIR} %D/lib/java 2>/dev/null || ${TRUE}

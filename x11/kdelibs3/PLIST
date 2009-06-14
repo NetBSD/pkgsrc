@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2009/06/14 18:24:56 joerg Exp $
+@comment $NetBSD: PLIST,v 1.44 2009/06/14 22:06:40 joerg Exp $
 bin/artsmessage
 bin/checkXML
 ${PLIST.cups}bin/cupsdconf
@@ -5214,46 +5214,46 @@ share/kde/servicetypes/renamedlgplugin.desktop
 share/kde/servicetypes/scriptinterface.desktop
 share/locale/all_languages
 @comment in xmlcatmgr: share/sgml/catalog
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/kmdi/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/dnssd/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
-@exec ${MKDIR} %D/share/doc/kde/HTML/en/kdelibs-apidocs/arts/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/libkscreensaver/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/libkmid/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kwallet/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kutils/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kunittest/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kspell2/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kresources/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kparts/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/knewstuff/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/kmdi/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kmdi/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kjs/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/http/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kioslave/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/kssl/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/kpasswdserver/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/kioexec/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/kio/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/kfile/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/httpfilter/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kio/bookmarks/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kinit/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kimgio/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/khtml/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdoctools/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdeui/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdesu/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdeprint/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdefx/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kded/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kdecore/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kcmshell/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kate/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/kabc/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/ktexteditor/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kspeech/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/library/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/kimproxy/interface/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/interfaces/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/dnssd/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/dcop/html
+@pkgdir share/doc/kde/HTML/en/kdelibs-apidocs/arts/html

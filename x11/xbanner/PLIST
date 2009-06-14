@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 18:25:09 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2009/06/14 22:06:42 joerg Exp $
 bin/freetemp
 bin/random_effect
 bin/xb_check
@@ -15,4 +15,3 @@ share/doc/xbanner/red_line.gif
 share/doc/xbanner/rnd_doc.html
 share/doc/xbanner/stars.gif
 share/doc/xbanner/xb_check.html
-@unexec ${RMDIR} -p %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}

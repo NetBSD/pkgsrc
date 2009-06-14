@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/06/14 18:25:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2009/06/14 22:06:43 joerg Exp $
 bin/xfce4-autostart-editor
 bin/xfce4-session
 bin/xfce4-session-logout
@@ -100,4 +100,3 @@ share/xfce4/doc/fr/images/xfsm-splash.png
 share/xfce4/doc/fr/xfce4-session.html
 share/xfce4/tips/tips
 share/xfce4/tips/tips.dat
-@unexec ${RMDIR} %D/etc/xdg 2>/dev/null || ${TRUE}
